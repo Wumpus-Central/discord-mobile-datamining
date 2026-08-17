@@ -1,17 +1,19 @@
 // discord_app/modules/gateway/getCachedUseAltGateway.native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 502 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/gateway/getCachedUseAltGateway.native.tsx");
 
 export default function getCachedUseAltGateway() {
   if (obj.isAndroid()) {
-    let flag2 = enforcing.getConstants().useAltGateway;
+    let flag2 = enforcingDefault.getConstants().useAltGateway;
     if (flag2 == null) {
       flag2 = false;
     }
     let flag = flag2;
-    const obj2 = enforcing;
+    const obj2 = enforcingDefault;
   } else {
     flag = NativeModules.DCDFastConnectManager.useAltGateway;
     if (flag == null) {

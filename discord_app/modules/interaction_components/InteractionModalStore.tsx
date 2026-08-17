@@ -1,9 +1,11 @@
 // discord_app/modules/interaction_components/InteractionModalStore.tsx
-import { Store } from "initialize";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
 
 const require = arg1;
 let obj = { IN_FLIGHT: 0, [0]: "IN_FLIGHT", ERRORED: 1, [1]: "ERRORED", SUCCEEDED: 2, [2]: "SUCCEEDED" };
+const Store = initializeDefault.Store;
 class InteractionModalStore extends Store {
 }
 InteractionModalStore.prototype["getModalState"] = function getModalState(first) {
@@ -16,36 +18,34 @@ InteractionModalStore.prototype["getModalState"] = function getModalState(first)
 InteractionModalStore.displayName = "InteractionModalStore";
 obj = {
   LOGOUT: function handleInit() {
-    let c3 = null;
-    let c4 = null;
-    let c5 = null;
-    let c6 = null;
-    let c7 = null;
+    c3 = null;
+    c4 = null;
+    c5 = null;
+    c6 = null;
+    c7 = null;
     return true;
   },
   INTERACTION_MODAL_CREATE: function handleInteractionModalCreate(nonce) {
     if (nonce.nonce === c7) {
-      trackInvite.deleteMessage(c6, c5, true);
+      trackInviteDefault.deleteMessage(c6, c5, true);
       c5 = null;
       c6 = null;
       c7 = null;
-      const obj = trackInvite;
+      obj = trackInviteDefault;
     }
     return false;
   },
   INTERACTION_IFRAME_MODAL_CREATE: function handleInteractionIframeModalCreate(nonce) {
     if (nonce.nonce === c7) {
-      trackInvite.deleteMessage(c6, c5, true);
+      trackInviteDefault.deleteMessage(c6, c5, true);
       c5 = null;
       c6 = null;
       c7 = null;
-      const obj = trackInvite;
+      obj = trackInviteDefault;
     }
     return false;
   },
   INTERACTION_QUEUE: function handleInteractionQueue(nonce) {
-    let data;
-    let preflight;
     nonce = nonce.nonce;
     ({ data, preflight } = nonce);
     let startTimeout;
@@ -70,57 +70,57 @@ obj = {
       if (null != preflight) {
         const _setTimeout2 = setTimeout;
         let timerId = setTimeout(() => {
-          let tmp2 = outer1_3 === closure_0;
+          let tmp2 = closure_1_3 === closure_0;
           if (tmp2) {
-            tmp2 = outer1_4 === outer1_8.IN_FLIGHT;
+            tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
           }
           if (tmp2) {
-            outer1_0(outer1_2[2]).setFailed(closure_0);
-            const obj = outer1_0(outer1_2[2]);
+            closure_1_0(closure_1_2[2]).setFailed(closure_0);
+            obj = closure_1_0(closure_1_2[2]);
           }
         }, 2 * tmp3(687).Millis.MINUTE);
         preflight.then(() => {
-          const result = 10 * startTimeout(outer1_2[3]).Millis.SECOND;
+          const result = 10 * startTimeout(closure_1_2[3]).Millis.SECOND;
           if (typeof startTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const timerId = setTimeout(() => {
-            let tmp2 = outer1_3 === closure_0;
+            let tmp2 = closure_1_3 === closure_0;
             if (tmp2) {
-              tmp2 = outer1_4 === outer1_8.IN_FLIGHT;
+              tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
             }
             if (tmp2) {
-              outer1_0(outer1_2[2]).setFailed(closure_0);
-              const obj = outer1_0(outer1_2[2]);
+              closure_1_0(closure_1_2[2]).setFailed(closure_0);
+              obj = closure_1_0(closure_1_2[2]);
             }
           }, result);
-        }).catch(() => nonce(outer1_2[2]).setFailed(nonce));
+        }).catch(() => nonce(closure_1_2[2]).setFailed(nonce));
         const nextPromise = preflight.then(() => {
-          const result = 10 * startTimeout(outer1_2[3]).Millis.SECOND;
+          const result = 10 * startTimeout(closure_1_2[3]).Millis.SECOND;
           if (typeof startTimeout !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const timerId = setTimeout(() => {
-            let tmp2 = outer1_3 === closure_0;
+            let tmp2 = closure_1_3 === closure_0;
             if (tmp2) {
-              tmp2 = outer1_4 === outer1_8.IN_FLIGHT;
+              tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
             }
             if (tmp2) {
-              outer1_0(outer1_2[2]).setFailed(closure_0);
-              const obj = outer1_0(outer1_2[2]);
+              closure_1_0(closure_1_2[2]).setFailed(closure_0);
+              obj = closure_1_0(closure_1_2[2]);
             }
           }, result);
         });
       } else {
         const _setTimeout = setTimeout;
         const timerId1 = setTimeout(() => {
-          let tmp2 = outer1_3 === closure_0;
+          let tmp2 = closure_1_3 === closure_0;
           if (tmp2) {
-            tmp2 = outer1_4 === outer1_8.IN_FLIGHT;
+            tmp2 = closure_1_4 === closure_1_8.IN_FLIGHT;
           }
           if (tmp2) {
-            outer1_0(outer1_2[2]).setFailed(closure_0);
-            const obj = outer1_0(outer1_2[2]);
+            closure_1_0(closure_1_2[2]).setFailed(closure_0);
+            obj = closure_1_0(closure_1_2[2]);
           }
         }, 10 * tmp3(687).Millis.SECOND);
       }
@@ -155,8 +155,8 @@ obj = {
     return flag;
   }
 };
-const interactionModalStore = new InteractionModalStore(require("dispatcher"), obj);
-let result = require("_fetchMessageInteractionData").fileFinishedImporting("modules/interaction_components/InteractionModalStore.tsx");
+const interactionModalStore = new InteractionModalStore(dispatcherDefault, obj);
+let result = require("set").fileFinishedImporting("modules/interaction_components/InteractionModalStore.tsx");
 
 export default interactionModalStore;
 export const InteractionModalState = obj;

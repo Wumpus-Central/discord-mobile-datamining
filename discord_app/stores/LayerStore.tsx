@@ -1,10 +1,12 @@
 // discord_app/stores/LayerStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function handlePopAllLayers() {
-  let closure_0 = [];
+  closure_0 = [];
 }
 let closure_0 = [];
+const Store = initializeDefault.Store;
 class LayerStore extends Store {
 }
 const prototype = LayerStore.prototype;
@@ -15,7 +17,7 @@ prototype["getLayers"] = function getLayers() {
   return closure_0;
 };
 LayerStore.displayName = "LayerStore";
-const layerStore = new LayerStore(require("dispatcher"), {
+const layerStore = new LayerStore(dispatcherDefault, {
   LAYER_PUSH: function handleAddLayer(component) {
     component = component.component;
     if (items.indexOf(component) >= 0) {

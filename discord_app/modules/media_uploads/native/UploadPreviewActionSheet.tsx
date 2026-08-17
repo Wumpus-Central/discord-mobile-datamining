@@ -1,53 +1,43 @@
 // discord_app/modules/media_uploads/native/UploadPreviewActionSheet.tsx
-import getSystemLocale from "getSystemLocale";
-import useCanSetThumbnail from "useCanSetThumbnail";
-import get_ActivityIndicator from "CircleErrorIcon";
-import { DraftType } from "handleChanged";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "Background";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { contentContainer: { padding: 16 }, imageWrap: null, imageContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.md, width: "100%" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, width: "100%" };
 createCacheKey[1] = createCacheKey;
-let obj1 = { overflow: "hidden", alignSelf: "center", borderRadius: null };
-obj1[2] = require("Themes").radii.md - require("Themes").space.PX_4;
-createCacheKey[2] = obj1;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
+createCacheKey[2] = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { overflow: "hidden", alignSelf: "center", borderRadius: ThemesDefault.radii.md - ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/media_uploads/native/UploadPreviewActionSheet.tsx");
 
 export default function UploadPreviewActionSheet(onAdd) {
-  let c11;
-  let useCanSetThumbnail;
-  let disableAddDescription;
-  let isImage;
-  let isThumbnail;
-  let tmp18;
   onAdd = onAdd.onAdd;
   const onEdit = onAdd.onEdit;
   const onRemove = onAdd.onRemove;
   const channelId = onAdd.channelId;
-  ({ onClose: useCanSetThumbnail, disableAddDescription } = onAdd);
+  ({ onClose: closure_4, disableAddDescription } = onAdd);
   if (disableAddDescription === undefined) {
     disableAddDescription = false;
   }
   const upload = onAdd.upload;
-  let c5;
+  closure_5 = undefined;
   let id;
   let isVideo;
   let item;
   let spoiler;
   let width;
-  let createCacheKey;
-  const tmp = createCacheKey();
-  c5 = tmp;
+  let callback;
+  const tmp = callback();
+  closure_5 = tmp;
   id = upload.id;
   isVideo = upload.isVideo;
   ({ isImage, isThumbnail } = upload);
@@ -57,17 +47,15 @@ export default function UploadPreviewActionSheet(onAdd) {
   width = onEdit(onRemove[10])().width;
   const bottom = onEdit(onRemove[11])().bottom;
   onEdit(onRemove[12])(() => () => {
-    if (useCanSetThumbnail != null) {
+    if (closure_4 != null) {
       tmp();
     }
   });
   let obj = React;
   const items = [width, item, tmp];
   const size = React.useMemo(() => {
-    let height;
-    let width;
     ({ height, width } = item);
-    width = Math.min(width, item) - 2 * _undefined.contentContainer.padding - 2 * _undefined.imageWrap.padding;
+    width = Math.min(width, item) - 2 * closure_5.contentContainer.padding - 2 * closure_5.imageWrap.padding;
     if (null != height) {
       if (null != width) {
         if (0 !== height) {
@@ -87,7 +75,7 @@ export default function UploadPreviewActionSheet(onAdd) {
   }, items);
   const items1 = [onRemove, id];
   const items2 = [onAdd];
-  const callback = React.useCallback(() => {
+  callback = React.useCallback(() => {
     onEdit(onRemove[13]).hideActionSheet();
     if (onRemove != null) {
       tmp2(id);
@@ -102,9 +90,6 @@ export default function UploadPreviewActionSheet(onAdd) {
   }, items2);
   const items4 = [isVideo, item];
   const callback2 = React.useCallback(() => {
-    let height;
-    let uri;
-    let width;
     let obj = onEdit(onRemove[13]);
     obj.hideActionSheet();
     ({ width, height, uri } = item);
@@ -123,8 +108,8 @@ export default function UploadPreviewActionSheet(onAdd) {
     const launchCropperResult = onEdit(onRemove[14]).launchCropper(obj);
     onEdit(onRemove[14]).launchCropper(obj).then((path) => {
       if (closure_1 != null) {
-        tmp(outer1_0(outer1_2[15]).cropResultToUploadItem(path));
-        const obj = outer1_0(outer1_2[15]);
+        tmp(closure_1_0(closure_1_2[15]).cropResultToUploadItem(path));
+        const obj = closure_1_0(closure_1_2[15]);
       }
     }).catch((code) => {
       if ("E_PICKER_CANCELLED" !== code.code) {
@@ -163,14 +148,12 @@ export default function UploadPreviewActionSheet(onAdd) {
   }
   obj = { scrollable: true, startHeight: sum2, children: null };
   obj = { contentContainerStyle: null, children: null };
-  const obj1 = { padding: null, paddingBottom: null };
-  obj1[0] = onEdit(onRemove[7]).space.PX_16;
-  obj1[1] = bottom;
-  obj[0] = obj1;
+  const tmp17 = channelId(obj.useState(undefined), 2);
+  obj[0] = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
   let obj2 = {
     spacing: 16,
     onLayout(nativeEvent) {
-      _undefined2(nativeEvent.nativeEvent.layout.height);
+      _undefined(nativeEvent.nativeEvent.layout.height);
     },
     children: null
   };
@@ -178,8 +161,8 @@ export default function UploadPreviewActionSheet(onAdd) {
   const obj4 = { style: tmp.imageWrap, children: null };
   const obj5 = { style: items6, children: null };
   items6 = [tmp.imageContainer, { width: size.width, height: size.height }];
+  obj1 = { padding: onEdit(onRemove[7]).space.PX_16, paddingBottom: bottom };
   const obj3 = { variant: "text-md/semibold", children: item.filename };
-  const tmp17 = channelId(obj.useState(undefined), 2);
   if (tmp6Result.isIOS()) {
     if (isVideo) {
       const uri = item.uri;
@@ -293,5 +276,5 @@ export default function UploadPreviewActionSheet(onAdd) {
       tmp23Result = tmp23(tmp6(tmp4[28]).TableRowGroup, obj16);
     }
   }
-  tmp22Result = tmp22(c5, { style: { width: size.width, height: size.height }, source: item });
+  tmp22Result = tmp22(closure_5, { style: { width: size.width, height: size.height }, source: item });
 };

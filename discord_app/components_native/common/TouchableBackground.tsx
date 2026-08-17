@@ -1,37 +1,29 @@
 // discord_app/components_native/common/TouchableBackground.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
 ({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
 createCacheKey = { default: null };
-createCacheKey = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/common/TouchableBackground.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("components_native/common/TouchableBackground.tsx");
 
 export default function TouchableBackground(onPressOut) {
-  let activeBackgroundColor;
-  let c2;
-  let children;
-  let onPressIn;
-  let pressableStyle;
-  let style;
-  let tmp4;
   ({ activeBackgroundColor, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   ({ pressableStyle, style, children } = onPressOut);
   const merged = Object.assign(onPressOut, Object.create(null));
   c2 = undefined;
-  const tmp2 = createCacheKey();
+  const tmp2 = callback();
   [tmp4, c2] = onPressIn(onPressOut.useState(false), 2);
   const items = [onPressIn];
   const items1 = [onPressOut];
-  const callback = onPressOut.useCallback((arg0) => {
+  callback = onPressOut.useCallback((arg0) => {
     _undefined(true);
     if (onPressIn != null) {
       tmp2(arg0);

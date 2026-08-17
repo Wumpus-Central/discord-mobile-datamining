@@ -1,28 +1,23 @@
 // discord_common/js/packages/media-engine/BaseConnection.tsx
-import BaseConnectionEvent from "BaseConnectionEvent";
-import DesktopSources from "DesktopSources";
-import "on";
-import { cloneDeep } from "../../../../_runtime/04585_cloneDeep.js";
-import { flatRest } from "../../../../_runtime/04614_flatRest.js";
-import { BaseConnectionEvent } from "BaseConnectionEvent.tsx";
-import { WantsVideoQuality } from "VideoQualityManager.tsx";
+import onDefault from "on" /* 4572 */;
+import WantsVideoQuality from "WantsVideoQuality" /* 4581 */;
+import logger2 from "logger" /* 4583 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4584 */;
+import cloneDeepDefault from "cloneDeep" /* 4585 */;
+import flatRestDefault from "flatRest" /* 4614 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: metroImportAll, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);
+require = arg1;
+({ ConnectionStates: c4, DEFAULT_VOICE_BITRATE: c5, MediaTypes: closure_6, ResolutionTypes: error, MediaEngineContextTypes: closure_8, VIDEO_QUALITY_FRAMERATE: c9, SIMULCAST_HQ_QUALITY: c10 } = DesktopSources);
 let c11 = 0;
+onDefault;
 class BaseConnection extends tmp3 {
   constructor(arg0, arg1) {
     tmp4 = new BaseConnection(tmp3, tmp2, global, tmp);
     // ThrowIfThisInitialized (0x7c)
-    tmp5 = +c11;
-    c11 = tmp5 + 1;
+    tmp5 = +closure_11;
+    closure_11 = tmp5 + 1;
     tmp4.mediaEngineConnectionId = `WebRTC-${tmp5}`;
     tmp4.destroyed = false;
     tmp4.audioSSRC = 0;
@@ -144,7 +139,7 @@ prototype["presentDesktopSourcePicker"] = function presentDesktopSourcePicker(ar
 
 };
 prototype["getStreamParameters"] = function getStreamParameters() {
-  return cloneDeep(this.videoStreamParameters);
+  return cloneDeepDefault(this.videoStreamParameters);
 };
 prototype["setExperimentFlag"] = function setExperimentFlag(arg0, arg1) {
   const experimentFlags = this.experimentFlags;
@@ -161,12 +156,6 @@ prototype["setConnectionState"] = function setConnectionState(DISCONNECTED) {
   this.emit(BaseConnectionEvent.BaseConnectionEvent.ConnectionStateChange, this.connectionState);
 };
 prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
-  let bitrateTarget;
-  let bitrateTarget2;
-  let constraints;
-  let constraints2;
-  let quality;
-  let quality2;
   const self = this;
   const videoStreamParameters = this.videoStreamParameters;
   let num = videoStreamParameters.findIndex((quality) => 100 === quality.quality);
@@ -175,7 +164,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   }
   const result = self.applyQualityConstraints({}, self.videoStreamParameters[num].ssrc);
   ({ quality, constraints } = result);
-  const tmp2 = cloneDeep(self.videoStreamParameters);
+  const tmp2 = cloneDeepDefault(self.videoStreamParameters);
   if (null != quality) {
     ({ bitrateMax: tmp2[num].maxBitrate, bitrateMin: tmp2[num].minBitrate, bitrateTarget } = quality);
     if (bitrateTarget == null) {
@@ -228,7 +217,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
       tmp6 = tmp11;
     } while (num2 < self.videoStreamParameters.length);
   }
-  tmp5.streamParameters = cloneDeep(self.videoStreamParameters);
+  tmp5.streamParameters = cloneDeepDefault(self.videoStreamParameters);
   const prop = self.videoStreamParameters;
   const items = [
     ...prop.map((maxPixelCount) => {
@@ -241,7 +230,7 @@ prototype["updateVideoQuality"] = function updateVideoQuality(closure_8) {
   ];
   tmp5.remoteSinkWantsPixelCount = Math.max.apply(items);
   if (null != closure_8) {
-    let obj = flatRest(tmp5, closure_8);
+    let obj = flatRestDefault(tmp5, closure_8);
   } else {
     obj = {};
     const merged = Object.assign(tmp5);
@@ -294,7 +283,7 @@ prototype["initializeStreamParameters"] = function initializeStreamParameters(it
       framerate = capture.framerate;
     }
     obj[7] = framerate;
-    obj = { type: outer1_7.FIXED, width: null, height: null };
+    obj = { type: closure_1_7.FIXED, width: null, height: null };
     const capture2 = quality.capture;
     let width;
     if (capture2 != null) {
@@ -314,12 +303,12 @@ prototype["initializeStreamParameters"] = function initializeStreamParameters(it
 prototype["getLocalWant"] = function getLocalWant(arg0) {
   const self = this;
   let num = arg0;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const videoStreamParameters = this.videoStreamParameters;
   let someResult = videoStreamParameters.some((ssrc) => {
     let tmp = ssrc.ssrc === closure_0;
     if (tmp) {
-      tmp = ssrc.quality === outer1_10;
+      tmp = ssrc.quality === closure_1_10;
     }
     return tmp;
   });
@@ -374,11 +363,11 @@ prototype["getRemoteVideoSinkPixelCount"] = function getRemoteVideoSinkPixelCoun
 prototype["emitStats"] = function emitStats() {
   const self = this;
   return callback(function*() {
-    let closure_1 = tmp5;
-    let closure_0 = tmp2;
-    closure_0 = yield outer1_0.getStats();
+    closure_1 = tmp5;
+    closure_0 = tmp2;
+    closure_0 = yield closure_1_0.getStats();
     if (null != closure_0) {
-      closure_0.emit(outer1_0(table[5]).BaseConnectionEvent.Stats, closure_0);
+      closure_0.emit(closure_1_0(table[5]).BaseConnectionEvent.Stats, closure_0);
     }
     return closure_0;
   })();
@@ -397,7 +386,7 @@ prototype["setSpatialAudioEnabled"] = function setSpatialAudioEnabled(arg0) {
 prototype["setCalcMaxBitrateFunc"] = function setCalcMaxBitrateFunc(calcMaxBitrateFunc) {
   this.calcMaxBitrateFunc = calcMaxBitrateFunc;
 };
-let result = require("on").fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/BaseConnection.tsx");
 
 export default BaseConnection;
 export const BaseConnectionEvent = require("BaseConnectionEvent").BaseConnectionEvent;

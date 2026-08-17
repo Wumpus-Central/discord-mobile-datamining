@@ -1,22 +1,19 @@
 // discord_app/modules/screen/native/DimensionsStore.android.tsx
-import { Dimensions } from "get ActivityIndicator";
-import keys from "keys";
-import importDefaultResult from "subscribeToKeyboardUIStore";
-import importDefaultResult1 from "module_1630";
-import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { APP_ENTRY_KEYS } from "../../window/native/AppEntryKey.tsx";
-import { readWindowSizeForAppEntry } from "readAppEntryWindowMetrics.android.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import batchUpdates from "batchUpdates" /* 705 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
+import APP_ENTRY_KEYS from "APP_ENTRY_KEYS" /* 1642 */;
+import readWindowSizeForAppEntry from "readWindowSizeForAppEntry" /* 1894 */;
+import keys from "keys" /* 644 */;
+import importDefaultResult from "subscribeToKeyboardUIStore" /* 1496 */;
+import importDefaultResult1 from "module_1630" /* 1630 */;
 
 function getDimensionsStoreStateForEntry(appEntryKey) {
-  let height;
-  let height2;
-  let width2;
-  let width4;
   const size = {};
-  let obj = Dimensions;
+  obj = Dimensions;
   const merged = Object.assign(Dimensions.get("window"));
-  let obj1 = readWindowSizeForAppEntry;
+  obj1 = readWindowSizeForAppEntry;
   const merged1 = Object.assign(obj1.readWindowSizeForAppEntry(appEntryKey));
   let obj2 = readWindowSizeForAppEntry;
   let size2 = obj2.readScreenSizeForAppEntry(appEntryKey);
@@ -92,7 +89,7 @@ function getDimensionsStoreStateForEntry(appEntryKey) {
 }
 function getDimensionsStoreState(arg0) {
   let tmp = arg0;
-  let obj = {};
+  obj = {};
   let flag = null != arg0;
   const iter = APP_ENTRY_KEYS.APP_ENTRY_KEYS[Symbol.iterator]();
   const nextResult = iter.next();
@@ -126,8 +123,9 @@ function getDimensionsStoreState(arg0) {
   }
   return tmp;
 }
+const Dimensions = get_ActivityIndicator.Dimensions;
 let obj = keys.create(() => getDimensionsStoreState(undefined));
-const subscription = require("module_1630").subscribe(() => {
+const subscription = importDefaultResult1.subscribe(() => {
   batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
 importDefaultResult(() => {
@@ -136,6 +134,6 @@ importDefaultResult(() => {
 const listener = Dimensions.addEventListener("change", () => {
   batchUpdates.batchUpdates(() => state.setState((arg0) => callback(arg0)));
 });
-const result = require("readWindowSizeForAppEntry").fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
+const result = set.fileFinishedImporting("modules/screen/native/DimensionsStore.android.tsx");
 
 export default obj;

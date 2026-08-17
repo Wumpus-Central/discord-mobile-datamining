@@ -1,10 +1,11 @@
 // discord_app/modules/age_gate/AgeGateConstants.tsx
-import set from "set";
+import setDefault from "set" /* 687 */;
+import set from "set" /* 2 */;
 
 const obj = { AUTH: "Register Age Gate", NEW_USER_FLOW: "NUF", CLAIM_ACCOUNT: "Claim Age Gate", NSFW_CHANNEL: "NSFW Channel", NSFW_SERVER: "NSFW Server", NSFW_SERVER_INVITE: "NSFW Server Invite", NSFW_SERVER_INVITE_EMBED: "NSFW Server Invite Embed", NSFW_VOICE_CHANNEL: "NSFW Voice Channel", LARGE_GUILD: "Large Guild", ACCESS_LARGE_GUILD_UNDERAGE: "Access Large Guild Access Underage", JOIN_LARGE_GUILD_UNDERAGE: "Join Large Guild Underage", FAMILY_CENTER: "Family Center", REGISTER: "Register", DEEP_LINK_PROMPT: "Deep Link Prompt", UNSPECIFIED: "Unspecified" };
 const items = [, , ];
 ({ NSFW_CHANNEL: arr[0], NSFW_VOICE_CHANNEL: arr[1], NSFW_SERVER: arr[2] } = obj);
-const result = 2 * require("set").Millis.HOUR;
+const result = 2 * setDefault.Millis.HOUR;
 let set = new Set(items);
 const result1 = set.fileFinishedImporting("modules/age_gate/AgeGateConstants.tsx");
 

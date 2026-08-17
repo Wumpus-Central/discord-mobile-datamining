@@ -1,13 +1,14 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx
-import updateAveragedStatsHelper from "updateAveragedStatsHelper";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import { mapped } from "../AVError.tsx";
-import { getVoiceChannelErrorContext } from "../AVErrorContext.tsx";
+import setDefault from "set" /* 687 */;
+import mapped from "mapped" /* 9668 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
+import closure_2 from "updateAveragedStatsHelper" /* 4557 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
 
-const require = arg1;
-let closure_5 = 10 * require("set").Millis.SECOND;
-const result = require("createRTCConnection").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
+require = arg1;
+let closure_5 = 10 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorAudioCaptureSampleRateMismatch.tsx");
 
 export const AVErrorAudioCaptureSampleRateMismatchDefinition = {
   getActiveErrors() {

@@ -1,9 +1,8 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import ME from "ME";
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
 const require = arg1;
 function newMemberActionFromServer(channelId) {
   let obj = { channelId: channelId.channel_id, actionType: channelId.action_type, title: channelId.title, description: channelId.description, emoji: null, icon: null };
@@ -87,7 +86,7 @@ function isSettingsEmpty(welcomeMessage) {
   return tmp;
 }
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("isDiscordFrontendDevelopment").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeTypes.tsx");
 
 export const WELCOME_MESSAGE_MIN_LENGTH = 7;
 export const WELCOME_MESSAGE_MAX_LENGTH = 300;
@@ -105,9 +104,6 @@ export const NewMemberActionTypes = { VIEW: 0, [0]: "VIEW", CHAT: 1, [1]: "CHAT"
 export { newMemberActionFromServer };
 export { resourceChannelFromServer };
 export const settingsFromServer = function settingsFromServer(body) {
-  let new_member_actions;
-  let resource_channels;
-  let welcome_message;
   if (null == body) {
     return null;
   } else {
@@ -125,9 +121,6 @@ export const settingsFromServer = function settingsFromServer(body) {
   }
 };
 export const settingsToServer = function settingsToServer(arg0, enabled) {
-  let newMemberActions;
-  let resourceChannels;
-  let welcomeMessage;
   if (null == enabled) {
     return null;
   } else {
@@ -277,7 +270,7 @@ export const isSettingsValid = function isSettingsValid(welcomeMessage) {
                     if (null != channel) {
                       let tmp8 = importAll;
                       let tmp9 = dependencyMap;
-                      let obj2 = importAll(4026);
+                      let obj2 = applyOverwritesAll;
                       let tmp10 = constants2;
                       let tmp11 = channel;
                     }
@@ -302,12 +295,12 @@ export const isSettingsValid = function isSettingsValid(welcomeMessage) {
 export const isChannelValidForResourceChannel = function isChannelValidForResourceChannel(type) {
   let canEveryoneRoleResult = type.type === constants.GUILD_TEXT;
   if (canEveryoneRoleResult) {
-    canEveryoneRoleResult = !importAll(4026).canEveryoneRole(constants2.SEND_MESSAGES, type);
-    const obj = importAll(4026);
+    canEveryoneRoleResult = !applyOverwritesAll.canEveryoneRole(constants2.SEND_MESSAGES, type);
+    const obj = applyOverwritesAll;
   }
   if (canEveryoneRoleResult) {
-    canEveryoneRoleResult = importAll(4026).canEveryoneRole(constants2.VIEW_CHANNEL, type);
-    const obj2 = importAll(4026);
+    canEveryoneRoleResult = applyOverwritesAll.canEveryoneRole(constants2.VIEW_CHANNEL, type);
+    const obj2 = applyOverwritesAll;
   }
   return canEveryoneRoleResult;
 };
@@ -322,6 +315,6 @@ export const isChannelValidForNewMemberAction = function isChannelValidForNewMem
       }
     }
   }
-  return importAll(4026).canEveryoneRole(constants2.VIEW_CHANNEL, type);
+  return applyOverwritesAll.canEveryoneRole(constants2.VIEW_CHANNEL, type);
 };
 export const ChannelEditBlockTypes = { DEFAULT: 0, [0]: "DEFAULT", TODO: 1, [1]: "TODO", RESOURCE: 2, [2]: "RESOURCE", RULES: 3, [3]: "RULES", UPDATES: 4, [4]: "UPDATES" };

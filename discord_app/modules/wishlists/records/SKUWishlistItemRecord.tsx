@@ -1,7 +1,8 @@
 // discord_app/modules/wishlists/records/SKUWishlistItemRecord.tsx
-import createFromServer from "createFromServer";
-import "fromServer";
+import fromServerDefault from "fromServer" /* 9188 */;
+import closure_0 from "createFromServer" /* 4515 */;
 
+fromServerDefault;
 let prototype;
 prototype = function SKUWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target);
@@ -13,10 +14,10 @@ prototype = function SKUWishlistItemRecord(sku) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(sku) {
-  const fromServer = createFromServer.createFromServer(sku.sku);
+  const fromServer = closure_0.createFromServer(sku.sku);
   if (null == fromServer) {
     const _Error = Error;
-    const error = new Error("SKU not found");
+    error = new Error("SKU not found");
     throw error;
   } else {
     const obj = { sku: fromServer };
@@ -32,7 +33,6 @@ prototype["fromServer"] = function fromServer(sku) {
   }
 };
 prototype["fromSKU"] = function fromSKU(arg0) {
-  let name;
   let tmp = null;
   if (null != arg0) {
     const obj = { sku_id: null, sku_product_line: null, sku_name: null, sku: null };

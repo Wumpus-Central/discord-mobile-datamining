@@ -1,10 +1,11 @@
 // discord_app/modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
+import noopAll from "noop" /* 19 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9104 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("ThirdPartyGameApplicationWebsiteCategory").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileStoreWebsiteData.tsx");
 
 export default function getGameProfileStoreWebsiteData(category) {
   category = category.category;
@@ -25,7 +26,7 @@ export default function getGameProfileStoreWebsiteData(category) {
     obj[3] = category.url;
     return obj;
   } else if (tmp(9104).ThirdPartyGameApplicationWebsiteCategory.ROBLOX === category) {
-    const obj1 = { icon: null, action: null, title: null, url: null };
+    obj1 = { icon: null, action: null, title: null, url: null };
     obj1[0] = jsx(tmp(9113).RobloxNeutralIcon, { size: "md" });
     obj1[1] = tmp(9101).GameProfileTrackActionActions.RobloxStoreLink;
     const intl5 = tmp(1236).intl;

@@ -1,23 +1,25 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx
-import "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { PremiumGiftStyles } from "GuildFeatures";
-import { jsx } from "jsxProd";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { play } from "../../../../components_native/common/LottieAnimationView.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import t from "t" /* 4486 */;
+import playDefault from "play" /* 7130 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { PremiumGiftStyles } from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("GuildFeatures").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftBoxAnimation.tsx");
 
 export default function GiftBoxAnimation(giftStyle) {
   giftStyle = giftStyle.giftStyle;
   initialize;
-  [][0] = maybeApplyNoTextColorForLightCustomTheme;
+  [][0] = closure_3;
   if (null == giftStyle) {
     return null;
   } else {
-    const match = tmp(4486).match(giftStyle);
-    const str = tmp(4486);
+    const match = t.match(giftStyle);
+    const str = t;
     const withResult = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656));
     const withResult1 = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656)).with(PremiumGiftStyles.BOX, () => callback(10657));
     const withResult2 = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656)).with(PremiumGiftStyles.BOX, () => callback(10657)).with(PremiumGiftStyles.CUP, () => callback(10658));
@@ -33,7 +35,7 @@ export default function GiftBoxAnimation(giftStyle) {
     obj[0] = match.with(PremiumGiftStyles.SNOWGLOBE, () => callback(10656)).with(PremiumGiftStyles.BOX, () => callback(10657)).with(PremiumGiftStyles.CUP, () => callback(10658)).with(PremiumGiftStyles.STANDARD_BOX, () => callback(9603)).with(PremiumGiftStyles.COFFEE, () => callback(9612)).with(PremiumGiftStyles.CHEST, () => callback(9609)).with(PremiumGiftStyles.CAKE, () => callback(9606)).with(PremiumGiftStyles.SEASONAL_STANDARD_BOX, () => callback(9615)).with(PremiumGiftStyles.SEASONAL_CAKE, () => callback(9618)).with(PremiumGiftStyles.SEASONAL_CHEST, () => callback(9621)).with(PremiumGiftStyles.SEASONAL_COFFEE, () => callback(9624)).otherwise(() => callback(9603));
     obj[1] = !tmp4;
     obj[2] = { width: 320, height: 212 };
-    return jsx(play, { source: null, autoPlay: null, style: null });
+    return jsx(playDefault, { source: null, autoPlay: null, style: null });
   }
-  tmp = require;
+  const tmp = require;
 };

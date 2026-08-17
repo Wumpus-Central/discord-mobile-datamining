@@ -1,16 +1,14 @@
 // discord_app/stores/PermissionVADStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import createRTCConnection from "createRTCConnection";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import { Store } from "initialize";
-import { dispatcher } from "../Dispatcher.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let metroImportAll;
 function handleUpdateVADPermission() {
   channelId = channelId.getChannelId();
   let flag = true;
@@ -23,7 +21,7 @@ function handleUpdateVADPermission() {
     voiceState = voiceState.getVoiceState(guildId, id.getId());
     let canResult = mode.getMode() !== constants.VOICE_ACTIVITY || null == channel || channel.isPrivate() || channel.isGuildStageVoice();
     if (!canResult) {
-      canResult = getUncachedChannelPermissions.can(constants2.USE_VAD, channel);
+      canResult = closure_5.can(constants2.USE_VAD, channel);
     }
     if (!canResult) {
       canResult = null == voiceState || voiceState.suppress || null != voiceState.requestToSpeakTimestamp;
@@ -35,20 +33,21 @@ function handleUpdateVADPermission() {
   if (flag2) {
     const obj = { type: "SET_VAD_PERMISSION", hasPermission: null };
     obj[1] = flag;
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
     flag2 = true;
-    const obj2 = dispatcher;
+    const obj2 = dispatcherDefault;
   }
   return flag2;
 }
-({ InputModes: metroImportAll, Permissions: c9 } = ME);
+({ InputModes: closure_8, Permissions: c9 } = ME);
 let c10 = true;
 let c11 = true;
+const Store = initializeDefault.Store;
 class PermissionVADStore extends Store {
 }
 const prototype = PermissionVADStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded, _detectH265HardwareDecode, getUncachedChannelPermissions, createRTCConnection, updateVoiceState);
+  this.waitFor(closure_2, closure_3, closure_4, closure_5, closure_6, closure_7);
 };
 prototype["shouldShowWarning"] = function shouldShowWarning() {
   return !c11;
@@ -57,7 +56,7 @@ prototype["canUseVoiceActivity"] = function canUseVoiceActivity() {
   return c10;
 };
 PermissionVADStore.displayName = "PermissionVADStore";
-const permissionVADStore = new PermissionVADStore(require("dispatcher"), {
+const permissionVADStore = new PermissionVADStore(dispatcherDefault, {
   RTC_CONNECTION_STATE: handleUpdateVADPermission,
   MEDIA_ENGINE_SET_AUDIO_ENABLED: handleUpdateVADPermission,
   AUDIO_SET_MODE: handleUpdateVADPermission,
@@ -78,12 +77,12 @@ const permissionVADStore = new PermissionVADStore(require("dispatcher"), {
     });
   },
   AUDIO_TOGGLE_SELF_MUTE: function handleUnclearWarning() {
-    let closure_11 = c10;
+    closure_11 = c10;
   },
   PERMISSION_CLEAR_VAD_WARNING: function handleClearWarning() {
-    let c11 = true;
+    c11 = true;
   }
 });
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("stores/PermissionVADStore.tsx");
+const result = require("set").fileFinishedImporting("stores/PermissionVADStore.tsx");
 
 export default permissionVADStore;

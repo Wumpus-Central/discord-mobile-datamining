@@ -1,14 +1,13 @@
 // discord_app/modules/frames/FramesManager.tsx
-import map from "map";
-import ME from "ME";
-import { TransportTypes } from "RPC_SCOPE_CONFIG";
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "map" /* 8708 */;
+import ME from "ME" /* 676 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
 
-let c4;
-let c5;
 let require = arg1;
 ({ AnalyticEvents: c4, RPCCloseCodes: c5 } = ME);
+initializeDefault;
 class FramesManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -28,20 +27,18 @@ class FramesManager extends tmp3 {
           }
     };
     applyArgumentsResult.handleRPCDisconnect = function handleRPCDisconnect(arg0) {
-      let reason;
-      let source;
       ({ reason, source } = arg0);
       if (null != reason) {
-        if (source.type === outer1_6.POST_MESSAGE) {
-          const frameByIframeId = outer1_3.getFrameByIframeId(source.iframeId);
+        if (source.type === closure_1_6.POST_MESSAGE) {
+          const frameByIframeId = closure_1_3.getFrameByIframeId(source.iframeId);
           if (null != frameByIframeId) {
             applyArgumentsResult.leaveFrame(frameByIframeId.id);
-            if (reason.code !== outer1_5.CLOSE_NORMAL) {
-              let obj = outer1_1(outer1_2[6]);
+            if (reason.code !== closure_1_5.CLOSE_NORMAL) {
+              let obj = closure_1_1(closure_1_2[6]);
               obj = { rpc_close_code: null, rpc_message: null, application_id: null };
               ({ code: obj2[0], message: obj2[1] } = reason);
               obj[2] = frameByIframeId.applicationId;
-              obj.track(outer1_4.ACTIVITY_CLOSED_RPC_ERROR, obj);
+              obj.track(closure_1_4.ACTIVITY_CLOSED_RPC_ERROR, obj);
               const result = obj3.showRPCDisconnectErrorUI(reason);
             }
             obj3 = applyArgumentsResult;
@@ -55,13 +52,13 @@ class FramesManager extends tmp3 {
 FramesManager.prototype["leaveFrame"] = function leaveFrame(closure_0) {
   frame = frame.getFrame(closure_0);
   if (null != frame) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "FRAME_STOP", applicationId: null, frameId: null };
     ({ applicationId: obj2[1], id: obj2[2] } = frame);
     obj.dispatch(obj);
   }
 };
 FramesManager.displayName = "FramesManager";
-let result = require("RPC_SCOPE_CONFIG").fileFinishedImporting("modules/frames/FramesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/frames/FramesManager.tsx");
 
 export default FramesManager;

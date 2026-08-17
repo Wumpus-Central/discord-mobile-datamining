@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "markAllUserIdListsStale" /* 4030 */;
+import createToggle from "createToggle" /* 10669 */;
 import { BlockedUsersList } from "../../content_and_social/native/BlockedUsersListV2.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.PFOUKW);
   },
   useDescription: function useAccountBlockedUsersSettingDescription() {
-    const items = [markAllUserIdListsStale];
+    const items = [closure_2];
     const numberOfBlockedUsers = initialize.useStateFromStores(items, () => "" + blockedIDs.getBlockedIDs().length);
     const intl = getSystemLocale.intl;
     return intl.format(getSystemLocale.t["r91W/h"], { numberOfBlockedUsers });
@@ -28,7 +28,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountBlockedUsersSetting.tsx");
 
 export default createToggle;
 export const AccountBlockedUsersSettingV2 = createToggle;

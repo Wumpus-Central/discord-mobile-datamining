@@ -1,27 +1,27 @@
 // discord_app/modules/collectibles/profile_effects/useProfileEffect.tsx
-import noop from "noop";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import map from "map";
-import { isProfileEffectRecord } from "fromServer";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "map" /* 5324 */;
+import { isProfileEffectRecord } from "fromServer" /* 5307 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("map").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/useProfileEffect.tsx");
 
 export default function useProfileEffect(arg0) {
   const _require = arg0;
-  const items = [updateCategoriesAndProducts, map];
+  const items = [closure_3, closure_4];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
-      const product = outer1_3.getProduct(tmp);
+      const product = closure_1_3.getProduct(tmp);
       let first;
       if (product != null) {
         first = product.items[0];
       }
-      if (outer1_5(first)) {
+      if (closure_1_5(first)) {
         return product.items[0];
       } else {
-        const purchase = outer1_4.getPurchase(tmp);
+        const purchase = closure_1_4.getPurchase(tmp);
         let first1;
         if (purchase != null) {
           first1 = purchase.items[0];
@@ -34,12 +34,12 @@ export default function useProfileEffect(arg0) {
       }
     }
   });
-  const dependencyMap = tmp2;
+  dependencyMap = tmp2;
   const items1 = [null != arg0 && null == stateFromStores, arg0];
   const effect = React.useEffect(() => {
-    if (tmp2) {
-      const result = callback(tmp2[5]).maybeFetchCollectiblesProduct(callback);
-      const obj = callback(tmp2[5]);
+    if (table) {
+      const result = callback(table[5]).maybeFetchCollectiblesProduct(callback);
+      const obj = callback(table[5]);
     }
   }, items1);
   return stateFromStores;

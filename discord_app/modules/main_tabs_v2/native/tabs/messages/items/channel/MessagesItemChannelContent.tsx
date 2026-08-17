@@ -1,39 +1,30 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx
-import { View } from "useMessagePreview";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "DISCORD_EPOCH";
-import createCacheKey from "createCacheKey";
-import importAllResult from "isChangelogChannel";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../../_runtime/08606_registerAsset.js";
-import { registerAsset } from "../../../../../../../../_runtime/08942_registerAsset.js";
-import { registerAsset } from "../../../../../../../../_runtime/09994_registerAsset.js";
-import { registerAsset } from "../../../../../../../../_runtime/10086_registerAsset.js";
-import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../../../../design/void/native.tsx";
-import { useTheme } from "../../../../../../../hooks/useTheme.tsx";
-import { computeChannelName } from "../../../../../../channel/useChannelName.tsx";
-import { usePrivateChannelWave } from "../../../../../../channel/usePrivateChannelWave.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useMessagePreview } from "../../../../../useMessagePreviews.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import registerAssetDefault from "registerAsset" /* 8606 */;
+import registerAssetDefault2 from "registerAsset" /* 8942 */;
+import registerAssetDefault3 from "registerAsset" /* 9994 */;
+import registerAssetDefault4 from "registerAsset" /* 10086 */;
+import useMessagePreviewDefault from "useMessagePreview" /* 14663 */;
+import usePrivateChannelWaveDefault from "usePrivateChannelWave" /* 15302 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10055 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function MessagesItemChannelContentIcon(selected) {
-  let blocked;
-  let favorite;
-  let ignored;
-  let muted;
   ({ muted, favorite, ignored, blocked } = selected);
   const tmp = callback4(selected.selected);
   if (blocked) {
     let obj = { source: null, size: null, style: null };
-    obj[0] = registerAsset;
+    obj[0] = registerAssetDefault2;
     obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
     const items = [, ];
     ({ channelIcon: arr4[0], channelMutedIcon: arr4[1] } = tmp);
@@ -41,15 +32,15 @@ function MessagesItemChannelContentIcon(selected) {
     let tmp2 = callback(Button.Icon, obj);
   } else if (ignored) {
     obj = { source: null, size: null, style: null };
-    obj[0] = registerAsset;
+    obj[0] = registerAssetDefault;
     obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
     const items1 = [, ];
     ({ channelIcon: arr3[0], channelIgnoredIcon: arr3[1] } = tmp);
     obj[2] = items1;
     tmp2 = callback(Button.Icon, obj);
   } else if (muted) {
-    const obj1 = { source: null, size: null, style: null };
-    obj1[0] = registerAsset;
+    obj1 = { source: null, size: null, style: null };
+    obj1[0] = registerAssetDefault4;
     obj1[1] = Button.Icon.Sizes.EXTRA_SMALL;
     const items2 = [, ];
     ({ channelIcon: arr2[0], channelMutedIcon: arr2[1] } = tmp);
@@ -59,7 +50,7 @@ function MessagesItemChannelContentIcon(selected) {
     tmp2 = null;
     if (favorite) {
       obj = { source: null, size: null, style: null };
-      obj[0] = registerAsset;
+      obj[0] = registerAssetDefault3;
       obj[1] = Button.Icon.Sizes.EXTRA_SMALL;
       const items3 = [, ];
       ({ channelIcon: arr[0], channelFavoriteIcon: arr[1] } = tmp);
@@ -69,30 +60,30 @@ function MessagesItemChannelContentIcon(selected) {
   }
   return tmp2;
 }
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let obj = { content: { flex: 1 }, channelIcon: { alignSelf: "center" }, channelNameAndAccessories: { flexDirection: "row", alignItems: "center", width: "100%" }, channelIcons: { flexDirection: "row", alignItems: "center" }, channelAccessoriesContainer: null, channelAccessories: null, channelNameAndBadge: null, botTag: null, contentPadded: null };
-obj = { flexDirection: "row", justifyContent: "flex-end", marginLeft: require("Themes").space.PX_4 };
+obj = { flexDirection: "row", justifyContent: "flex-end", marginLeft: ThemesDefault.space.PX_4 };
 obj[4] = obj;
-createCacheKey = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", borderRadius: require("Themes").radii.xs, paddingHorizontal: require("Themes").space.PX_4, paddingVertical: 1 };
+createCacheKey = { flexDirection: "row", justifyContent: "flex-end", alignItems: "center", borderRadius: ThemesDefault.radii.xs, paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1 };
 obj[5] = createCacheKey;
-obj[6] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4, flex: 1, minWidth: 0 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4, flex: 1, minWidth: 0 };
-obj[7] = { marginRight: require("Themes").space.PX_4 };
-let obj3 = { marginRight: require("Themes").space.PX_4 };
-obj[8] = { paddingRight: require("Themes").space.PX_40 };
+obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, flex: 1, minWidth: 0 };
+let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, flex: 1, minWidth: 0 };
+obj[7] = { marginRight: ThemesDefault.space.PX_4 };
+let obj3 = { marginRight: ThemesDefault.space.PX_4 };
+obj[8] = { paddingRight: ThemesDefault.space.PX_40 };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   if (arg2) {
-    let MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.TEXT_MUTED;
+    let MOBILE_TEXT_HEADING_PRIMARY = ThemesDefault.colors.TEXT_MUTED;
     let tmp5 = importDefault;
   } else {
     if (!arg0) {
       if (!arg1) {
-        MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.MESSAGES_ITEM_CHANNEL_TEXT_DEFAULT;
+        MOBILE_TEXT_HEADING_PRIMARY = ThemesDefault.colors.MESSAGES_ITEM_CHANNEL_TEXT_DEFAULT;
         tmp5 = importDefault;
       }
     }
-    MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    MOBILE_TEXT_HEADING_PRIMARY = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
     tmp5 = importDefault;
   }
   let obj = { channelText: { color: MOBILE_TEXT_HEADING_PRIMARY }, channelName: { flexShrink: 1 }, timestamp: null };
@@ -108,7 +99,7 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   if (arg4) {
     obj = { color: null };
     obj[0] = tmp5(712).colors.TEXT_SUBTLE;
-    let obj1 = obj;
+    obj1 = obj;
   } else {
     obj1 = {};
   }
@@ -118,9 +109,9 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
 });
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { channelIcon: null, channelMutedIcon: null, channelFavoriteIcon: null, channelIgnoredIcon: null };
-  obj = { marginRight: Themes.space.PX_4 };
+  obj = { marginRight: ThemesDefault.space.PX_4 };
   obj[0] = obj;
-  const colors = Themes.colors;
+  const colors = ThemesDefault.colors;
   obj[1] = { tintColor: arg0 ? colors.ICON_SUBTLE : colors.ICON_MUTED };
   const colors2 = tmp(712).colors;
   obj[2] = { tintColor: arg0 ? colors2.ICON_SUBTLE : colors2.ICON_MUTED };
@@ -128,22 +119,13 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[3] = { tintColor: arg0 ? colors3.ICON_SUBTLE : colors3.ICON_MUTED };
   return obj;
 });
-let obj4 = { paddingRight: require("Themes").space.PX_40 };
+let obj4 = { paddingRight: ThemesDefault.space.PX_40 };
 const memoResult = importAllResult.memo(function MessagesItemChannelContent(channel) {
-  let blocked;
-  let channelSelected;
-  let favorite;
-  let hasActivity;
-  let hasNameplate;
-  let hasUnreadMessages;
-  let ignored;
-  let muted;
-  let resolvedUnreadSetting;
   channel = channel.channel;
   ({ channelSelected, muted, ignored, blocked, hasUnreadMessages, hasNameplate } = channel);
   ({ favorite, hasActivity, resolvedUnreadSetting } = channel);
   let obj = channel(1364);
-  const isThemeLightResult = obj.isThemeLight(useTheme());
+  const isThemeLightResult = obj.isThemeLight(useThemeDefault());
   let tmp6 = hasUnreadMessages;
   if (hasUnreadMessages) {
     tmp6 = resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES;
@@ -159,11 +141,11 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     tmp8 = !channelSelected;
   }
   const tmp9 = callback2();
-  const tmp10 = callback3(channelSelected, tmp6, tmp8, hasNameplate, useIsMobileVisualRefreshExperimentEnabled("MessagesItemChannelContent"));
+  const tmp10 = callback3(channelSelected, tmp6, tmp8, hasNameplate, useIsMobileVisualRefreshExperimentEnabledDefault("MessagesItemChannelContent"));
   let tmpResult = tmp(589);
-  const items = [generateOldThreadCutoff];
-  const stateFromStores = tmpResult.useStateFromStores(items, () => outer1_4.lastMessageId(channel.id));
-  const tmp12 = useMessagePreview(channel, { unread: hasUnreadMessages });
+  const items = [closure_4];
+  const stateFromStores = tmpResult.useStateFromStores(items, () => closure_1_4.lastMessageId(channel.id));
+  const tmp12 = useMessagePreviewDefault(channel, { unread: hasUnreadMessages });
   let tmp13 = null != tmp12;
   if (tmp13) {
     let obj2 = tmp3(3975)();
@@ -185,16 +167,16 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
   if (tmp16) {
     tmp16 = channel.recipients.length > 0;
   }
-  const tmp17 = computeChannelName(channel);
-  const tmp18 = usePrivateChannelWave(channel, stateFromStores);
+  const tmp17 = computeChannelNameDefault(channel);
+  const tmp18 = usePrivateChannelWaveDefault(channel, stateFromStores);
   const waveShouldShow = tmp18.waveShouldShow;
   obj = { variant: null, style: null, lineClamp: 1, ellipsizeMode: "tail" };
-  const tmp5 = useIsMobileVisualRefreshExperimentEnabled("MessagesItemChannelContent");
-  obj[0] = channel(4097).useToken(Themes.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
+  const tmp5 = useIsMobileVisualRefreshExperimentEnabledDefault("MessagesItemChannelContent");
+  obj[0] = channel(4097).useToken(ThemesDefault.modules.mobile.MESSAGES_ITEM_CHANNEL_NAME_TEXT_STYLE);
   const items1 = [, ];
   ({ channelText: arr2[0], channelName: arr2[1] } = tmp10);
   obj[1] = items1;
-  const obj1 = { style: tmp9.content, children: null };
+  obj1 = { style: tmp9.content, children: null };
   obj2 = { style: tmp9.channelNameAndAccessories, children: null };
   const obj3 = { style: tmp9.channelNameAndBadge, children: null };
   if (channel.isDM()) {
@@ -358,6 +340,6 @@ const memoResult = importAllResult.memo(function MessagesItemChannelContent(chan
     obj20[0] = combined;
   }
 });
-const result = require("generateOldThreadCutoff").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelContent.tsx");
 
 export default memoResult;

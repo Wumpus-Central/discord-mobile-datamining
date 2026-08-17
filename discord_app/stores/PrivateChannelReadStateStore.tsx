@@ -1,12 +1,13 @@
 // discord_app/stores/PrivateChannelReadStateStore.tsx
-import { isPrivate } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import handleConnectionOpen from "handleConnectionOpen";
-import makeSortedChannel from "makeSortedChannel";
-import { Store } from "initialize";
-import set from "generateOldThreadCutoff";
-import { areArraysShallowlyEqual } from "../utils/FunctionUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "makeSortedChannel" /* 5388 */;
+import set from "set" /* 2 */;
 
 function rebuildUnreads() {
   const privateChannelIds = store2.getPrivateChannelIds();
@@ -18,7 +19,7 @@ function rebuildUnreads() {
   let flag = !result;
   if (!result) {
     const _Set = Set;
-    const set = new Set(found);
+    set = new Set(found);
     flag = true;
   }
   return flag;
@@ -33,7 +34,7 @@ function handleConnectionOpen() {
   let flag = !result;
   if (!result) {
     const _Set = Set;
-    const set = new Set(found);
+    set = new Set(found);
     flag = true;
   }
   return flag;
@@ -55,7 +56,7 @@ function handleGenericUpdate(channelId) {
     let flag = !result;
     if (!result) {
       const _Set = Set;
-      const set = new Set(found);
+      set = new Set(found);
       flag = true;
     }
     tmp4 = flag;
@@ -63,19 +64,21 @@ function handleGenericUpdate(channelId) {
   }
   return tmp4;
 }
+const isPrivate = createChannelRecord.isPrivate;
 let closure_7 = [];
 let set = new Set();
+const Store = initializeDefault.Store;
 class PrivateChannelReadStateStore extends Store {
 }
 const prototype = PrivateChannelReadStateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(makeSortedChannel, ensureGuildLoaded, handleConnectionOpen, generateOldThreadCutoff);
+  this.waitFor(closure_6, closure_3, closure_5, closure_4);
 };
 prototype["getUnreadPrivateChannelIds"] = function getUnreadPrivateChannelIds() {
   return closure_7;
 };
 PrivateChannelReadStateStore.displayName = "PrivateChannelReadStateStore";
-const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("dispatcher"), {
+const privateChannelReadStateStore = new PrivateChannelReadStateStore(dispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   MESSAGE_CREATE: handleGenericUpdate,
@@ -97,7 +100,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        const set = new Set(found);
+        set = new Set(found);
         flag = true;
       }
       tmp4 = flag;
@@ -142,7 +145,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        const set = new Set(found);
+        set = new Set(found);
         flag = true;
       }
       tmp4 = flag;
@@ -167,7 +170,7 @@ const privateChannelReadStateStore = new PrivateChannelReadStateStore(require("d
       let flag = !result;
       if (!result) {
         const _Set = Set;
-        const set = new Set(found);
+        set = new Set(found);
         flag = true;
       }
       tmp4 = flag;

@@ -1,9 +1,11 @@
 // discord_app/modules/stage_channels/StageChannelsConstants.tsx
-import { HelpdeskArticles } from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
 
-const result = require("combined").fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
+const HelpdeskArticles = ME.HelpdeskArticles;
+const result = set.fileFinishedImporting("modules/stage_channels/StageChannelsConstants.tsx");
 
 export const MAX_STAGE_TOPIC_LENGTH = 240;
 export const MAX_AUDIENCE_ROW_LIMIT = 4;
@@ -26,8 +28,7 @@ export const getStagePublicInfoText = function getStagePublicInfoText() {
   const intl2 = getSystemLocale.intl;
   items[1] = intl2.string(getSystemLocale.t.lF0IbB);
   const intl3 = getSystemLocale.intl;
-  const obj = { articleURL: null };
-  obj[0] = combined.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
+  const obj = { articleURL: combinedDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
   items[2] = intl3.format(getSystemLocale.t.q2jZ6N, obj);
   const intl4 = getSystemLocale.intl;
   items[3] = intl4.string(getSystemLocale.t.xfb7ZU);

@@ -1,6 +1,8 @@
 // discord_app/utils/web/WindowIdUtils.tsx
-import { apply } from "../../../_runtime/00012_apply.js";
-const result = require("set").fileFinishedImporting("utils/web/WindowIdUtils.tsx");
+import set from "set" /* 2 */;
+import apply from "apply" /* 12 */;
+
+const result = set.fileFinishedImporting("utils/web/WindowIdUtils.tsx");
 
 export const getWindowId = function getWindowId(defaultView) {
   return defaultView.__DISCORD_WINDOW_ID;

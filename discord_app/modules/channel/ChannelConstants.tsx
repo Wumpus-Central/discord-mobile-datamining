@@ -1,5 +1,5 @@
 // discord_app/modules/channel/ChannelConstants.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 let obj = { VIBEGRATIONS: "conjuring", ROLE_SUBSCRIPTIONS: "role-subscriptions", SERVER_MONETIZATION_ONBOARDING: "server-monetization-onboarding", GAME_SHOP: "game-shop", GUILD_SHOP: "shop", MEMBER_APPLICATIONS: "member-applications", GUILD_HOME: "@home", CHANNEL_BROWSER: "channel-browser", GUILD_ONBOARDING: "onboarding", CUSTOMIZE_COMMUNITY: "customize-community", MEMBER_SAFETY: "member-safety", GUILD_BOOSTS: "boosts", GAME_SERVERS: "game-servers", REPORT_TO_MOD: "report-to-mod", GUILD_OFFICIAL_MESSAGES: "official-messages", GUILD_SPACE: "guild-space" };
 let set = new Set(Object.values(obj));

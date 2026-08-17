@@ -1,32 +1,32 @@
 // discord_app/modules/themes/native/useNativeThemeUpdater.tsx
-import noop from "noop";
-import handleThemeChange from "handleThemeChange";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../experiments/MobileVisualRefreshExperiment.tsx";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
 
-let require = arg1;
-const result = require("useIsMobileVisualRefreshExperimentEnabled").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/themes/native/useNativeThemeUpdater.tsx");
 
 export default function useNativeThemeUpdater() {
-  const tmp = useIsMobileVisualRefreshExperimentEnabled("useNativeThemeUpdater");
-  const require = tmp;
+  const tmp = useIsMobileVisualRefreshExperimentEnabledDefault("useNativeThemeUpdater");
+  closure_0 = tmp;
   importDefault = React.useRef(theme.theme);
   const items = [tmp];
   const layoutEffect = React.useLayoutEffect(() => {
-    tmp(outer1_2[3]).updateVisualRefresh(tmp);
+    callback(closure_1_2[3]).updateVisualRefresh(callback);
   }, items);
   const layoutEffect1 = React.useLayoutEffect(() => {
     function handleThemeUpdate(arg0) {
-      const theme = outer1_4.theme;
+      const theme = closure_1_4.theme;
       if (theme !== ref.current) {
         ref.current = theme;
-        handleThemeUpdate(outer1_2[4]).updateTheme(theme);
-        const obj = handleThemeUpdate(outer1_2[4]);
+        handleThemeUpdate(closure_1_2[4]).updateTheme(theme);
+        const obj = handleThemeUpdate(closure_1_2[4]);
       }
     }
-    tmp(outer1_2[4]).updateTheme(outer1_4.theme);
-    outer1_4.addChangeListener(handleThemeUpdate);
+    callback(closure_1_2[4]).updateTheme(closure_1_4.theme);
+    closure_1_4.addChangeListener(handleThemeUpdate);
     return () => {
-      outer2_4.removeChangeListener(handleThemeUpdate);
+      closure_2_4.removeChangeListener(handleThemeUpdate);
     };
   }, []);
 };

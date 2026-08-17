@@ -1,9 +1,9 @@
 // discord_app/modules/unique_usernames/useUsernameLiveCheck.tsx
-import noop from "noop";
-import isRateLimited from "isRateLimited";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "isRateLimited" /* 14119 */;
 
 const require = arg1;
-let result = require("defaultAreStatesEqual").fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
+let result = require("set").fileFinishedImporting("modules/unique_usernames/useUsernameLiveCheck.tsx");
 
 export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, flag2) {
   const _require = arg0;
@@ -32,7 +32,7 @@ export const useUsernameLiveCheck = function useUsernameLiveCheck(arg0, flag, fl
     if (closure_2) {
       str = "registration";
     }
-    return outer1_1(outer1_2[4]).attemptUsername(arg0, str, closure_2, noop);
+    return closure_1_1(closure_1_2[4]).attemptUsername(arg0, str, closure_2, closure_3);
   }, 800), items3);
   const items4 = [flag, stateFromStores1, stateFromStores, arg0, memo];
   const effect = flag3.useEffect(() => {

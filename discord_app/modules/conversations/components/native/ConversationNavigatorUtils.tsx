@@ -1,7 +1,9 @@
 // discord_app/modules/conversations/components/native/ConversationNavigatorUtils.tsx
-import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { transitionToChannel } from "../../../routing/transitionToChannel.tsx";
-const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
+import set from "set" /* 2 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import transitionToChannel from "transitionToChannel" /* 4768 */;
+
+const result = set.fileFinishedImporting("modules/conversations/components/native/ConversationNavigatorUtils.tsx");
 
 export const closeConversationsAndJumpToMessage = function closeConversationsAndJumpToMessage(channelId, id) {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();

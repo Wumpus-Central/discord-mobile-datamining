@@ -1,13 +1,13 @@
 // discord_app/modules/app_database/modules/messages/withFallbacks.tsx
-import _slicedToArray from "_slicedToArray";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { ChannelTypes } from "ME";
-import { totalLength } from "../../util/ExtendedMemoryLru.tsx";
-import { LIMITED_GUILD_MEMBER_THRESHOLD } from "isLimitedChannel.tsx";
-import { isReadableChannel } from "isReadableChannel.tsx";
+import totalLength from "totalLength" /* 5071 */;
+import isReadableChannel from "isReadableChannel" /* 5075 */;
+import LIMITED_GUILD_MEMBER_THRESHOLD from "LIMITED_GUILD_MEMBER_THRESHOLD" /* 5076 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "insertUnsortedGuilds" /* 5078 */;
+import { ChannelTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function isSaveableChannel(item10025) {
   return item10025.type === ChannelTypes.DM || item10025.type === ChannelTypes.GROUP_DM || item10025.type === ChannelTypes.GUILD_TEXT;
 }
@@ -29,7 +29,7 @@ function mergeInto(extendedMemoryLru, allEntries) {
   }
   return extendedMemoryLru;
 }
-const result = require("insertUnsortedGuilds").fileFinishedImporting("modules/app_database/modules/messages/withFallbacks.tsx");
+const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/withFallbacks.tsx");
 
 export const withFallbacks = function withFallbacks(extendedMemoryLru, arg1) {
   if (extendedMemoryLru.totalLength >= arg1) {

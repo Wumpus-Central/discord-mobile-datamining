@@ -1,8 +1,8 @@
 // discord_app/design/components/Navigator/native/useFocusRefOnNavigation.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("runAfterInteractions").fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/useFocusRefOnNavigation.tsx");
 
 export default function useFocusRefOnNavigation(inputRef) {
   inputRef = inputRef.inputRef;
@@ -14,10 +14,10 @@ export default function useFocusRefOnNavigation(inputRef) {
   isFocused = inputRef(flag[1]).useIsFocused();
   const items = [flag, inputRef, isFocused];
   const effect = isFocused.useEffect(() => {
-    let closure_0 = inputRef(flag[2]).runAfterInteractions(() => {
+    closure_0 = inputRef(flag[2]).runAfterInteractions(() => {
       let tmp = closure_1;
       if (closure_1) {
-        tmp = noop;
+        tmp = closure_2;
       }
       if (tmp) {
         const current = ref.current;

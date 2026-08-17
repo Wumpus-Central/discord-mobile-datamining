@@ -1,26 +1,21 @@
 // discord_app/modules/remote_auth/components/native/CompanionRemoteAuth.tsx
-import noop from "noop";
-import { View } from "AuthFormView";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ AnalyticEvents: c5, LoginSuccessfulSources: closure_6 } = ME);
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ statusContainer: { alignItems: "center", marginTop: 32 }, avatar: { marginBottom: 16 }, statusText: { textAlign: "center", marginTop: 16, marginBottom: 24, paddingHorizontal: 32 }, buttonContainer: { width: "100%", paddingHorizontal: 16, marginTop: 16 } });
-const result = require("ME").fileFinishedImporting("modules/remote_auth/components/native/CompanionRemoteAuth.tsx");
+const result = require("set").fileFinishedImporting("modules/remote_auth/components/native/CompanionRemoteAuth.tsx");
 
 export const CompanionRemoteAuth = function CompanionRemoteAuth() {
   let tmp = callback2();
   let obj = navigation(1500);
   navigation = obj.useNavigation();
-  let obj1 = React;
+  obj1 = React;
   const context = React.useContext(fingerprint(4818));
   const callback = React.useCallback((arg0) => {
     let tmp = arg0;
@@ -46,12 +41,12 @@ export const CompanionRemoteAuth = function CompanionRemoteAuth() {
   const effect = obj1.useEffect(() => {
     if (null != fingerprint) {
       const _HermesInternal = HermesInternal;
-      const obj = fingerprint(outer1_2[16]);
-      fingerprint(outer1_2[16]).sendAuthUrl("https://discord.com/ra/" + tmp).catch(() => {
-        const error = new Error("Failed to initialize authentication");
+      const obj = fingerprint(closure_1_2[16]);
+      fingerprint(closure_1_2[16]).sendAuthUrl("https://discord.com/ra/" + tmp).catch(() => {
+        error = new Error("Failed to initialize authentication");
         throw error;
       });
-      const sendAuthUrlResult = fingerprint(outer1_2[16]).sendAuthUrl("https://discord.com/ra/" + tmp);
+      const sendAuthUrlResult = fingerprint(closure_1_2[16]).sendAuthUrl("https://discord.com/ra/" + tmp);
     }
   }, items1);
   obj = { headerText: null, children: null };

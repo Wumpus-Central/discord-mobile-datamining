@@ -1,15 +1,14 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { ManaContext } from "../../../../../../discord_common/js/packages/design/native.tsx";
+import noopAll from "noop" /* 19 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelRiveMicButton.tsx");
 
 export const VoicePanelRiveMicButton = function VoicePanelRiveMicButton(arg0) {
-  let color;
-  let muted;
   ({ color, muted } = arg0);
   let obj = { style: { width: 24, height: 24, pointerEvents: "none" }, children: null };
   obj = { dataBinding: obj, defaultViewModelInstance: null, fallback: null };

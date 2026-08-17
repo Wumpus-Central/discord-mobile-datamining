@@ -1,23 +1,20 @@
 // discord_app/modules/collectibles/native/tooling/CollectiblesTool.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import map from "map";
-import { useFramePreviewOverrideStore as closure_9 } from "measure";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import CollectiblesShopCardInternalV2Default from "CollectiblesShopCardInternalV2" /* 9172 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_8 from "map" /* 5324 */;
+import { useFramePreviewOverrideStore as closure_9 } from "measure" /* 8947 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { CollectiblesShopCardInternalV2 } from "../CollectiblesShopCardV2.tsx";
 
-let c10;
-let c5;
-let closure_6;
-let unpackModuleId;
-let require = arg1;
+const require = arg1;
 function FramePreviewOverrideSection() {
-  const tmp = createCacheKey();
+  const tmp = callback5();
   const tmp2 = callback2((override) => override.override);
   const tmp3 = callback2((status) => status.status);
   let str = callback2((error) => error.error);
@@ -36,7 +33,7 @@ function FramePreviewOverrideSection() {
     obj[1] = tmp.sectionTitle;
     obj[1] = callback3(_Text.Text, obj);
     const items = [callback3(closure_6, obj), , , , ];
-    const obj1 = { variant: "text-sm/normal", style: null, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
+    obj1 = { variant: "text-sm/normal", style: null, children: "Overrides every profile-frame preview with a frame pushed to this device. Tap Load after Cap (or pushFrameOverride.mjs) pushes one." };
     obj1[1] = tmp.description;
     items[1] = callback3(_Text.Text, obj1);
     const obj2 = { variant: "text-xs/normal", style: null, children: null };
@@ -81,80 +78,76 @@ function FramePreviewOverrideSection() {
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { container: null, scrollContainer: null, section: null, sectionHeader: null, sectionTitle: null, inputContainer: null, inputWrapper: null, inputLabel: null, statusText: null, statusSuccess: null, statusError: null, statusLoading: null, previewContainer: null, previewButton: null, secondaryButton: null, description: null, placeholder: null, placeholderText: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_32 };
-let obj1 = { padding: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_32 };
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, padding: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_16, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, padding: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_16, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginBottom: require("Themes").space.PX_16 };
-let obj3 = { flexDirection: "row", alignItems: "center", marginBottom: require("Themes").space.PX_16 };
-createCacheKey[4] = { flex: 1, color: require("Themes").colors.TEXT_DEFAULT };
-let obj4 = { flex: 1, color: require("Themes").colors.TEXT_DEFAULT };
-createCacheKey[5] = { marginBottom: require("Themes").space.PX_16 };
-let obj5 = { marginBottom: require("Themes").space.PX_16 };
-createCacheKey[6] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.md, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED, padding: require("Themes").space.PX_4 };
-const obj6 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.md, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED, padding: require("Themes").space.PX_4 };
-createCacheKey[7] = { marginBottom: require("Themes").space.PX_8, color: require("Themes").colors.TEXT_DEFAULT, fontWeight: "600" };
-let obj7 = { marginBottom: require("Themes").space.PX_8, color: require("Themes").colors.TEXT_DEFAULT, fontWeight: "600" };
-createCacheKey[8] = { marginTop: require("Themes").space.PX_8, fontSize: 12, fontWeight: "500" };
-let obj8 = { marginTop: require("Themes").space.PX_8, fontSize: 12, fontWeight: "500" };
-createCacheKey[9] = { color: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
-let obj9 = { color: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
-createCacheKey[10] = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-let obj10 = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-createCacheKey[11] = { color: require("Themes").colors.TEXT_MUTED };
-let obj11 = { color: require("Themes").colors.TEXT_MUTED };
-createCacheKey[12] = { marginBottom: require("Themes").space.PX_16 };
-let obj12 = { marginBottom: require("Themes").space.PX_16 };
-createCacheKey[13] = { backgroundColor: "#23a55a", borderRadius: require("Themes").radii.md, paddingVertical: require("Themes").space.PX_12, alignItems: "center" };
-let obj13 = { backgroundColor: "#23a55a", borderRadius: require("Themes").radii.md, paddingVertical: require("Themes").space.PX_12, alignItems: "center" };
-createCacheKey[14] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.md, paddingVertical: require("Themes").space.PX_12, alignItems: "center", marginTop: require("Themes").space.PX_8 };
-let obj14 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.md, paddingVertical: require("Themes").space.PX_12, alignItems: "center", marginTop: require("Themes").space.PX_8 };
-createCacheKey[15] = { color: require("Themes").colors.TEXT_MUTED, marginBottom: require("Themes").space.PX_12 };
-let obj15 = { color: require("Themes").colors.TEXT_MUTED, marginBottom: require("Themes").space.PX_12 };
-createCacheKey[16] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.md, borderWidth: 2, borderStyle: "dashed", borderColor: require("Themes").colors.BORDER_MUTED, padding: require("Themes").space.PX_32, alignItems: "center", justifyContent: "center", minHeight: 120 };
-let obj16 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.md, borderWidth: 2, borderStyle: "dashed", borderColor: require("Themes").colors.BORDER_MUTED, padding: require("Themes").space.PX_32, alignItems: "center", justifyContent: "center", minHeight: 120 };
-createCacheKey[17] = { color: require("Themes").colors.TEXT_MUTED, textAlign: "center", fontSize: 14 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
+let obj1 = { padding: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj3 = { flexDirection: "row", alignItems: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { flex: 1, color: ThemesDefault.colors.TEXT_DEFAULT };
+let obj4 = { flex: 1, color: ThemesDefault.colors.TEXT_DEFAULT };
+createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj5 = { marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_4 };
+const obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_4 };
+createCacheKey[7] = { marginBottom: ThemesDefault.space.PX_8, color: ThemesDefault.colors.TEXT_DEFAULT, fontWeight: "600" };
+let obj7 = { marginBottom: ThemesDefault.space.PX_8, color: ThemesDefault.colors.TEXT_DEFAULT, fontWeight: "600" };
+createCacheKey[8] = { marginTop: ThemesDefault.space.PX_8, fontSize: 12, fontWeight: "500" };
+let obj8 = { marginTop: ThemesDefault.space.PX_8, fontSize: 12, fontWeight: "500" };
+createCacheKey[9] = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
+let obj9 = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
+createCacheKey[10] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj10 = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+createCacheKey[11] = { color: ThemesDefault.colors.TEXT_MUTED };
+let obj11 = { color: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[12] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj12 = { marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[13] = { backgroundColor: "#23a55a", borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center" };
+let obj13 = { backgroundColor: "#23a55a", borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center" };
+createCacheKey[14] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center", marginTop: ThemesDefault.space.PX_8 };
+let obj14 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, paddingVertical: ThemesDefault.space.PX_12, alignItems: "center", marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[15] = { color: ThemesDefault.colors.TEXT_MUTED, marginBottom: ThemesDefault.space.PX_12 };
+let obj15 = { color: ThemesDefault.colors.TEXT_MUTED, marginBottom: ThemesDefault.space.PX_12 };
+createCacheKey[16] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "dashed", borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", minHeight: 120 };
+let obj16 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 2, borderStyle: "dashed", borderColor: ThemesDefault.colors.BORDER_MUTED, padding: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", minHeight: 120 };
+createCacheKey[17] = { color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center", fontSize: 14 };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
 function UnpurchasedCollectiblesShopCardV2(arg0) {
-  let require;
-  let tmp2;
   [tmp2, require] = callback(React.useState(0), 2);
   const layoutEffect = React.useLayoutEffect(() => {
-    const getPurchase = outer1_8.getPurchase;
-    outer1_8.getPurchase = () => {
+    const getPurchase = closure_1_8.getPurchase;
+    closure_1_8.getPurchase = () => {
 
     };
-    outer1_8.emitChange();
+    closure_1_8.emitChange();
     getPurchase(1);
     return () => {
-      outer1_8.getPurchase = getPurchase;
-      outer1_8.emitChange();
+      closure_1_8.getPurchase = getPurchase;
+      closure_1_8.emitChange();
     };
   }, []);
   const obj = {};
   const tmp = callback(React.useState(0), 2);
   const merged = Object.assign(arg0);
-  return callback3(CollectiblesShopCardInternalV2, obj, tmp2);
+  return callback3(CollectiblesShopCardInternalV2Default, obj, tmp2);
 }
-const obj17 = { color: require("Themes").colors.TEXT_MUTED, textAlign: "center", fontSize: 14 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/collectibles/native/tooling/CollectiblesTool.tsx");
+const obj17 = { color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center", fontSize: 14 };
+const result = require("set").fileFinishedImporting("modules/collectibles/native/tooling/CollectiblesTool.tsx");
 
 export default function _default() {
-  let categories;
-  let isFetching;
-  const tmp = createCacheKey();
-  let obj = require(first[12]);
-  const items = [updateCategoriesAndProducts];
-  const stateFromStores = obj.useStateFromStores(items, () => updateCategoriesAndProducts.categories);
-  let obj1 = require(first[12]);
-  const items1 = [map];
+  const tmp = callback5();
+  let obj = _require(first[12]);
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_7.categories);
+  obj1 = _require(first[12]);
+  const items1 = [closure_8];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => purchases.purchases);
-  let obj2 = require(first[12]);
-  const items2 = [updateCategoriesAndProducts];
+  let obj2 = _require(first[12]);
+  const items2 = [closure_7];
   let tmp7 = stateFromStores.size > 0;
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => updateCategoriesAndProducts.lastSuccessfulFetch);
+  const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_7.lastSuccessfulFetch);
   if (tmp7) {
     tmp7 = stateFromStores1.size > 0;
   }
@@ -173,7 +166,7 @@ export default function _default() {
     }
     tmp18Result = tmp12;
   }
-  require = tmp18Result;
+  _require = tmp18Result;
   const tmp13 = callback(React.useState(""), 2);
   str = tmp13[0];
   const tmp14 = callback(React.useState(null), 2);
@@ -185,8 +178,8 @@ export default function _default() {
   const effect = React.useEffect(() => {
     if ("" !== str.trim()) {
       if (closure_0) {
-        const product = outer1_7.getProduct(tmp);
-        const categoryForProduct = outer1_7.getCategoryForProduct(tmp);
+        const product = closure_1_7.getProduct(tmp);
+        const categoryForProduct = closure_1_7.getCategoryForProduct(tmp);
         if (null != product) {
           if (null != categoryForProduct) {
             callback(product);
@@ -204,7 +197,7 @@ export default function _default() {
   obj = { contentContainerStyle: tmp.scrollContainer, showsVerticalScrollIndicator: false, children: null };
   obj1 = { style: tmp.section, children: null };
   obj2 = { style: tmp.sectionHeader, children: callback3(tmp2(tmp3[10]).Text, obj3) };
-  const items4 = [callback3(closure_6, obj2), callback3(require(first[14]).ShopSkipCategoriesFilter, {})];
+  const items4 = [callback3(closure_6, obj2), callback3(_require(first[14]).ShopSkipCategoriesFilter, {})];
   obj1[1] = items4;
   const items5 = [callback4(closure_6, obj1), , , ];
   const obj4 = { style: tmp.section, children: null };
@@ -212,15 +205,15 @@ export default function _default() {
   const tmp10 = str(first[13])({ logPerf: false, stalePurchasesOK: true, noOp: tmp7 });
   const tmp21 = closure_5;
   const tmp9 = str;
-  const items6 = [callback3(closure_6, { style: tmp.sectionHeader, children: callback3(require(first[10]).Text, obj6) }), ];
+  const items6 = [callback3(closure_6, { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj6) }), ];
   const obj7 = { style: tmp.inputContainer, children: null };
-  const items7 = [callback3(require(first[10]).Text, { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" }), , , , ];
+  const items7 = [callback3(_require(first[10]).Text, { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" }), , , , ];
   const obj9 = { style: tmp.inputWrapper, children: null };
   const obj10 = { value: str, onChangeText: tmp13[1], placeholder: "Enter product SKU ID (e.g., 1366494385482502184)", returnKeyType: "done", style: null };
-  const obj11 = { fontSize: 14, padding: null };
-  obj11[1] = tmp9(first[8]).space.PX_12;
-  obj10[4] = obj11;
-  obj9[1] = callback3(require(first[15]).TextInput, obj10);
+  const obj5 = { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj6) };
+  const obj8 = { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" };
+  obj10[4] = { fontSize: 14, padding: tmp9(first[8]).space.PX_12 };
+  obj9[1] = callback3(_require(first[15]).TextInput, obj10);
   items7[1] = callback3(closure_6, obj9);
   tmp18Result = !tmp18Result;
   if (!tmp18Result) {
@@ -264,9 +257,8 @@ export default function _default() {
   obj4[1] = items6;
   items5[1] = callback4(closure_6, obj4);
   const obj15 = { style: tmp.section, children: null };
-  const obj5 = { style: tmp.sectionHeader, children: callback3(require(first[10]).Text, obj6) };
-  const obj8 = { variant: "text-md/semibold", style: tmp.inputLabel, children: "Primary Product SKU ID" };
-  const items12 = [callback3(closure_6, { style: tmp.sectionHeader, children: callback3(require(first[10]).Text, obj17) }), ];
+  const obj11 = { fontSize: 14, padding: tmp9(first[8]).space.PX_12 };
+  const items12 = [callback3(closure_6, { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj17) }), ];
   if (null != first) {
     if (null != tmp16[0]) {
       const obj18 = { children: null };
@@ -298,6 +290,6 @@ export default function _default() {
     obj[1] = tmp20(tmp21, obj);
     return tmp18(tmp19, obj);
   }
-  const obj16 = { style: tmp.sectionHeader, children: callback3(require(first[10]).Text, obj17) };
-  tmp20Result = tmp18(tmp19, { style: tmp.placeholder, children: callback4(require(first[10]).Text, obj23) });
+  const obj16 = { style: tmp.sectionHeader, children: callback3(_require(first[10]).Text, obj17) };
+  tmp20Result = tmp18(tmp19, { style: tmp.placeholder, children: callback4(_require(first[10]).Text, obj23) });
 };

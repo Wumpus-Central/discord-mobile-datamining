@@ -1,21 +1,17 @@
 // discord_app/design/components/Sheet/native/BottomSheetTitleHeader.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useHeaderDebugOverlay } from "../../../../modules/devtools/design_toggles/HeaderDebugOverlay.native.tsx";
-import { useWindowDimensions } from "../../../../modules/screen/useWindowDimensions.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import Text from "Text" /* 4734 */;
+import useHeaderDebugOverlayDefault from "useHeaderDebugOverlay" /* 6315 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { map } from "../../../tokens/native/useToken.tsx";
-import { Text } from "../../Text/native/Text.tsx";
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function RedesignBottomSheetTitleHeaderBase(children) {
   const subtitle = children.subtitle;
   const tmp = callback4();
@@ -34,9 +30,6 @@ function RedesignBottomSheetTitleHeaderBase(children) {
   return callback2(View, obj);
 }
 function RedesignBottomSheetTitleHeaderStacked(subtitle) {
-  let leading;
-  let title;
-  let trailing;
   subtitle = subtitle.subtitle;
   ({ title, leading, trailing } = subtitle);
   const tmp = callback4();
@@ -63,19 +56,13 @@ function RedesignBottomSheetTitleHeaderStacked(subtitle) {
   return callback3(View, obj);
 }
 function RedesignBottomSheetTitleHeaderComplex(subtitle) {
-  let c0;
-  let leading;
-  let onTitleTextLayout;
-  let title;
-  let tmp5;
-  let trailing;
   subtitle = subtitle.subtitle;
   let _require;
   ({ title, leading, trailing, onTitleTextLayout } = subtitle);
   const tmp = callback4();
   const tmp2 = callback6();
   let obj = _map;
-  const diff = useWindowDimensions().width - 2 * obj.useToken(Themes.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
+  const diff = useWindowDimensionsDefault().width - 2 * obj.useToken(ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL);
   [tmp5, c0] = callback(React.useState(undefined), 2);
   callback = React.useCallback((nativeEvent) => {
     const width = nativeEvent.nativeEvent.layout.width;
@@ -93,7 +80,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
   const items1 = [callback2(Title, { onTextLayout: onTitleTextLayout, lineClamp: 3, children: title }), ];
   let tmp9Result = null;
   if (null != subtitle) {
-    const obj1 = { children: null };
+    obj1 = { children: null };
     obj1[0] = subtitle;
     tmp9Result = tmp9(Subtitle, obj1);
   }
@@ -115,7 +102,7 @@ function RedesignBottomSheetTitleHeaderComplex(subtitle) {
 }
 function Title(arg0) {
   let str = "redesign/heading-18/bold";
-  if (useIsMobileVisualRefreshExperimentEnabled("BottomSheetTitleHeader")) {
+  if (useIsMobileVisualRefreshExperimentEnabledDefault("BottomSheetTitleHeader")) {
     str = "redesign/heading-18/semibold";
   }
   const tmp = callback4();
@@ -123,7 +110,7 @@ function Title(arg0) {
   return callback2(Text.Text, { variant: str, color: "mobile-text-heading-primary", accessibilityRole: "header", style: callback4().title });
 }
 function Subtitle(children) {
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("BottomSheetTitleHeader");
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("BottomSheetTitleHeader");
   let str = "text-default";
   if (tmp3) {
     str = "text-muted";
@@ -138,7 +125,7 @@ function Subtitle(children) {
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles(() => {
   let obj = { container: null, titles: null, subtitle: null, title: null };
-  obj = { paddingHorizontal: Themes.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
+  obj = { paddingHorizontal: ThemesDefault.modules.mobile.SHEET_HEADER_PADDING_HORIZONTAL, flexDirection: "row", gap: 4, position: "relative" };
   obj[0] = obj;
   obj[1] = { flexGrow: 1, flexShrink: 1, gap: 2 };
   obj[2] = { textAlign: "center" };
@@ -148,22 +135,20 @@ let closure_8 = createCacheKey.createStyles(() => {
 let closure_10 = createCacheKey.createStyles(() => ({ container: { flexDirection: "column" }, accessories: { flexDirection: "row", justifyContent: "space-between" }, item: { flexShrink: 0 } }));
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { accessory: { position: "absolute", top: 0, bottom: 0, flexShrink: 0, flexDirection: "row", flexGrow: 1 }, leading: null, trailing: null };
-  obj = { left: Themes.space.PX_16, justifyContent: "flex-start" };
+  obj = { left: ThemesDefault.space.PX_16, justifyContent: "flex-start" };
   obj[1] = obj;
-  obj = { right: Themes.space.PX_16, justifyContent: "flex-end" };
+  obj = { right: ThemesDefault.space.PX_16, justifyContent: "flex-end" };
   obj[2] = obj;
   return obj;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Sheet/native/BottomSheetTitleHeader.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetTitleHeader.native.tsx");
 
 export const BottomSheetTitleHeader = function BottomSheetTitleHeader(arg0) {
-  let leading;
-  let trailing;
   let merged = arg0;
   ({ leading, trailing } = arg0);
   const tmp2 = callback(React.useState(false), 2);
-  let closure_0 = tmp2[1];
-  const tmp3 = useHeaderDebugOverlay("sheet");
+  closure_0 = tmp2[1];
+  const tmp3 = useHeaderDebugOverlayDefault("sheet");
   if (null != leading) {
     if (tmp2[0]) {
       let obj = {};
@@ -183,7 +168,7 @@ export const BottomSheetTitleHeader = function BottomSheetTitleHeader(arg0) {
   const tmp5 = callback2(RedesignBottomSheetTitleHeaderBase, obj);
   let tmp16 = tmp5;
   if (null != tmp3) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = { position: "relative" };
     const items = [tmp5, tmp3];
     obj1[1] = items;

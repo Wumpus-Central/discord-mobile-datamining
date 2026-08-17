@@ -1,19 +1,19 @@
 // discord_app/modules/create_guild/CreateGuildActionCreators.tsx
-import set from "set";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _createGuildFromTemplate() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let set = arg3;
-    let closure_4 = arg4;
-    let c9 = 0;
-    let c10 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    closure_4 = arg4;
+    c9 = 0;
+    c10 = 0;
+    c8 = 0;
     return (function*(arg0, body) {
       if (c10 === 2) {
         c10 = 3;
@@ -41,10 +41,10 @@ function _createGuildFromTemplate() {
               obj[0] = body;
               return obj;
             } else {
-              let closure_6 = tmp3;
-              let closure_5 = tmp7;
-              let c8 = 1;
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+              closure_6 = tmp3;
+              closure_5 = tmp7;
+              c8 = 1;
+              obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj1[0] = constants.GUILDS;
               const obj2 = { name: null, icon: null, channels: null, system_channel_id: null, roles: null, guild_template_code: null, staff_only: null };
               obj2[0] = callback;
@@ -56,7 +56,7 @@ function _createGuildFromTemplate() {
               obj3[0] = callback(503).NetworkActionNames.GUILD_CREATE;
               const obj4 = { template_name: null, is_community_intent: null };
               obj4[0] = dependencyMap.id;
-              obj4[1] = set;
+              obj4[1] = closure_3;
               obj3[1] = obj4;
               obj1[2] = obj3;
               c9 = 2;
@@ -98,7 +98,7 @@ function _createGuildFromTemplate() {
       }
     })();
   });
-  const _createGuildFromTemplate = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -107,10 +107,10 @@ function _createGuildFromTemplate() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_5227").fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/create_guild/CreateGuildActionCreators.tsx");
 
 export default {
-  createGuildFromTemplate(c4, c5, outer1_1, c3, outer1_9) {
+  createGuildFromTemplate(c4, c5, id, c3, closure_1_9) {
     const self = this;
     const apply = _createGuildFromTemplate.apply;
     if (typeof apply === "unknown") {

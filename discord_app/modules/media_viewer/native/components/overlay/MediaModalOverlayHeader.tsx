@@ -1,48 +1,36 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx
-import "ContextMenu";
-import get_ActivityIndicator from "Text";
-import { SHARE_PREPARING_MODAL_KEY } from "SHARE_PREPARING_MODAL_KEY";
-import jsxProd from "MoreVerticalIcon";
-import createCacheKey from "createCacheKey";
-import { useShouldHideMediaOptions } from "../../../../media_channel/useShouldHideMediaOptions.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { MediaViewerOverlayButton } from "MediaViewerOverlayButton.tsx";
+import noopAll from "noop" /* 19 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import _modDef9075 from "module_9075" /* 9075 */;
+import useShouldHideMediaOptionsDefault from "useShouldHideMediaOptions" /* 10852 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { SHARE_PREPARING_MODAL_KEY } from "SHARE_PREPARING_MODAL_KEY" /* 9070 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ navbarInner: { flex: 1, justifyContent: "space-between" }, navbarLeft: { flexShrink: 1, flexDirection: "row", marginRight: 8 }, navbarRight: { flexShrink: 0, justifyContent: "flex-end", flexDirection: "row", gap: 8 }, navbarName: { flexShrink: 1, alignItems: "center", height: 40, marginLeft: 8 }, navbarNameInner: { borderRadius: 20, justifyContent: "center", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.7)", flex: 1, flexDirection: "row", paddingHorizontal: 18 }, navbarNameShrinkWrapper: { flexShrink: 1 }, contextIcon: { width: 18, height: 18, marginRight: 6 } });
 let closure_9 = { code: "function MediaModalOverlayHeaderTsx1(){const{withTiming,isPreparing}=this.__closure;return{opacity:withTiming(isPreparing?0:1)};}" };
-const result = require("SHARE_PREPARING_MODAL_KEY").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayHeader.tsx");
 
 export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
-  let animationDriver;
-  let channelId;
-  let contextIcon;
-  let contextName;
-  let disableDownload;
-  let disableMediaOverlayButton;
-  let onClose;
-  let shareable;
-  let source;
   ({ source, contextName, contextIcon } = arg0);
   let isModalOpen;
   ({ onClose, disableDownload, disableMediaOverlayButton, shareable, animationDriver, channelId } = arg0);
   const tmp = callback();
   let obj = isModalOpen(12056);
   const headerLayoutAnimation = obj.useHeaderLayoutAnimation(animationDriver);
-  let obj1 = isModalOpen(9043);
+  obj1 = isModalOpen(9043);
   const mediaShareActions = obj1.useMediaShareActions({ source, disableDownload, shareable });
-  const tmp7 = useShouldHideMediaOptions(channelId);
+  const tmp7 = useShouldHideMediaOptionsDefault(channelId);
   let obj2 = isModalOpen(4229);
   isModalOpen = obj2.useIsModalOpen(SHARE_PREPARING_MODAL_KEY);
   let obj3 = isModalOpen(4115);
   const fn = function w() {
-    let obj = isModalOpen(outer1_2[10]);
+    let obj = isModalOpen(closure_1_2[10]);
     let num = 1;
     if (isModalOpen) {
       num = 0;
@@ -74,7 +62,7 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   obj5[0] = intl.string(isModalOpen(1236).t.cpT0Cq);
   obj5[1] = closure_6(isModalOpen(6368).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj5[2] = onClose;
-  const items1 = [closure_6(MediaViewerOverlayButton, obj5), ];
+  const items1 = [closure_6(_modDef9075, obj5), ];
   let tmp10Result = null != contextName;
   if (tmp10Result) {
     const obj6 = { style: null, children: null };
@@ -140,6 +128,6 @@ export const MediaModalOverlayHeader = function MediaModalOverlayHeader(arg0) {
   items3[1] = tmp12Result;
   obj3[1] = items3;
   obj2[2] = closure_7(isModalOpen(9074).MediaModalOverlayHeaderWrapper, obj3);
-  obj[1] = closure_6(ReanimatedRexport.View, obj2);
-  return closure_6(ReanimatedRexport.View, obj);
+  obj[1] = closure_6(_modDef4115.View, obj2);
+  return closure_6(_modDef4115.View, obj);
 };

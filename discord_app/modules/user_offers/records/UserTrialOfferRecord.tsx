@@ -1,7 +1,8 @@
 // discord_app/modules/user_offers/records/UserTrialOfferRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_0 from "createFromServer" /* 7426 */;
 
+toJSDefault;
 let UserTrialOfferRecord;
 class UserTrialOfferRecord extends tmp2 {
   constructor(arg0) {
@@ -37,9 +38,6 @@ class UserTrialOfferRecord extends tmp2 {
 }
 const prototype = UserTrialOfferRecord.prototype;
 UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at) {
-  let id;
-  let trial_id;
-  let user_id;
   ({ id, user_id, trial_id } = expires_at);
   let date = null;
   if (null != expires_at.expires_at) {
@@ -56,8 +54,8 @@ UserTrialOfferRecord["createFromServer"] = function createFromServer(expires_at)
   }
   let fromServer = null;
   if (null != expires_at.subscription_trial) {
-    let _Date2 = createFromServer;
-    fromServer = createFromServer.createFromServer(expires_at.subscription_trial);
+    let _Date2 = closure_0;
+    fromServer = closure_0.createFromServer(expires_at.subscription_trial);
   }
   let date1 = null;
   if (null != expires_at.redeemed_at) {

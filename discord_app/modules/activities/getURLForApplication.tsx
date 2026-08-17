@@ -1,6 +1,6 @@
 // discord_app/modules/activities/getURLForApplication.tsx
-import reset from "reset";
-import initialize from "initialize";
+import closure_0 from "reset" /* 7874 */;
+import closure_1 from "initialize" /* 7872 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/getURLForApplication.tsx");
 
@@ -16,7 +16,7 @@ export default function getURLForApplication(arg0) {
   if (useActivityUrlOverride) {
     let activityUrlOverride = store.getState().activityUrlOverride;
   } else {
-    if (reset.inTestModeForEmbeddedApplication(arg0)) {
+    if (closure_0.inTestModeForEmbeddedApplication(arg0)) {
       activityUrlOverride = tmp4.testModeOriginURL;
     } else {
       const _window = window;
@@ -35,7 +35,7 @@ export default function getURLForApplication(arg0) {
         }
       }
     }
-    tmp4 = reset;
+    tmp4 = closure_0;
   }
   return activityUrlOverride;
 };

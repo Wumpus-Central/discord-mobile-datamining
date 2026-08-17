@@ -1,43 +1,30 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPicker.tsx
-import importAllResult from "hexToRgba";
-import get_ActivityIndicator from "openEmojiActionSheet";
-import ME from "ME";
-import { EmojiIntention } from "set";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ AnalyticEvents: c5, ChatInputComponentViewedTypes: closure_6, VerticalGradient: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { container: { flex: 1 }, list: { overflow: "hidden", flex: 1 }, header: null, headerGradientColor: null, headerGradient: null };
-obj = { flexDirection: "row", paddingTop: require("Themes").space.PX_8, paddingBottom: 1, gap: require("Themes").space.PX_12 };
+obj = { flexDirection: "row", paddingTop: ThemesDefault.space.PX_8, paddingBottom: 1, gap: ThemesDefault.space.PX_12 };
 obj[2] = obj;
-createCacheKey = { color: require("Themes").colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT };
 obj[3] = createCacheKey;
 let obj2 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.height = require("Themes").space.PX_8 + 1;
+obj2.height = ThemesDefault.space.PX_8 + 1;
 obj2.bottom = undefined;
 obj2.top = -1;
 obj[4] = obj2;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
-  let bottomSheetIndex;
-  let bottomSheetRef;
-  let channel;
-  let onBackspace;
-  let onPressEmoji;
-  let safeAreaBottomKeyboardAware;
-  let safeAreaStyle;
   ({ bottomSheetIndex, channel } = inPortalKeyboard);
   inPortalKeyboard = inPortalKeyboard.inPortalKeyboard;
   let ref1;
@@ -48,12 +35,12 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   ({ id: arr[0], guild_id: arr[1] } = channel);
   const effect = importAllResult.useEffect(() => {
     let obj = ref1(handleTextChange[7]);
-    obj = { type: outer1_6.EMOJI, channel_id: channel.id, guild_id: channel.guild_id };
-    obj.track(outer1_5.CHAT_INPUT_COMPONENT_VIEWED, obj);
+    obj = { type: closure_1_6.EMOJI, channel_id: channel.id, guild_id: channel.guild_id };
+    obj.track(closure_1_5.CHAT_INPUT_COMPONENT_VIEWED, obj);
   }, items);
   let obj = channel(handleTextChange[8]);
   const sharedValue = obj.useSharedValue(0);
-  let obj1 = channel(handleTextChange[9]);
+  obj1 = channel(handleTextChange[9]);
   const emojiCategories = obj1.useEmojiCategories(EmojiIntention.CHAT, channel);
   const ref = importAllResult.useRef(null);
   ref1 = importAllResult.useRef(null);
@@ -63,8 +50,8 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   const items2 = [handleTextChange];
   const callback = importAllResult.useCallback(() => {
     let obj = ref1(handleTextChange[7]);
-    obj = { type: outer1_6.EMOJI_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
-    obj.track(outer1_5.CHAT_INPUT_COMPONENT_VIEWED, obj);
+    obj = { type: closure_1_6.EMOJI_SEARCH, channel_id: channel.id, guild_id: channel.guild_id };
+    obj.track(closure_1_5.CHAT_INPUT_COMPONENT_VIEWED, obj);
   }, items1);
   const callback1 = importAllResult.useCallback(() => {
     const current = ref1.current;
@@ -110,6 +97,6 @@ const memoResult = importAllResult.memo(function EmojiPicker(inPortalKeyboard) {
   obj[1] = callback2(closure_4, obj);
   return callback(channel(handleTextChange[10]).AnalyticsLocationProvider, obj);
 });
-const result = require("ME").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPicker.tsx");
 
 export default memoResult;

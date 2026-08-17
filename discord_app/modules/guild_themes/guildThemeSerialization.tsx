@@ -1,8 +1,9 @@
 // discord_app/modules/guild_themes/guildThemeSerialization.tsx
-const result = require("set").fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_themes/guildThemeSerialization.tsx");
 
 export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSettings) {
-  let customUserThemeSettings;
   let tmp = null;
   if (null != themeSettings) {
     let obj = { presetId: null, customUserThemeSettings: null };
@@ -29,8 +30,6 @@ export const cloneGuildThemeSettings = function cloneGuildThemeSettings(themeSet
   return tmp;
 };
 export const cloneGuildTheme = function cloneGuildTheme(guildTheme) {
-  let customUserThemeSettings;
-  let themeSettings;
   let tmp = null;
   if (null != guildTheme) {
     let obj = { enabled: null, themeSettings: null };
@@ -105,7 +104,6 @@ export const toServerGuildThemeSettings = function toServerGuildThemeSettings(th
   return obj;
 };
 export const fromServerGuildThemeSettings = function fromServerGuildThemeSettings(preset_id) {
-  let gradient_color_stops;
   let tmp = null;
   if (null != preset_id) {
     if (null != preset_id.preset_id) {
@@ -145,7 +143,6 @@ export const fromServerGuildThemeSettings = function fromServerGuildThemeSetting
   return tmp;
 };
 export const fromServerGuildTheme = function fromServerGuildTheme(theme) {
-  let gradient_color_stops;
   let tmp = null;
   if (null != theme) {
     let obj = { enabled: null, themeSettings: null };

@@ -1,16 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const jsx = jsxProd.jsx;
 let obj = { scrim: null };
 obj = {};
-const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
+const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
 obj.zIndex = 5;
-obj.backgroundColor = require("Themes").colors.BACKGROUND_SCRIM;
+obj.backgroundColor = ThemesDefault.colors.BACKGROUND_SCRIM;
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
 let closure_5 = { code: "function MainTabsContentScrimTsx1(){const{interpolate,translateX,maxWidth,Extrapolation}=this.__closure;return{opacity:interpolate(translateX.get(),[maxWidth,0],[0,0.5],Extrapolation.CLAMP)};}" };
-const result = require("createCacheKey").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsContentScrim.tsx");
 
 export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
   translateX = translateX.translateX;
@@ -20,7 +24,7 @@ export const MainTabsContentScrim = function MainTabsContentScrim(translateX) {
     const obj = { opacity: null };
     const value = translateX.get();
     const items = [maxWidth, 0];
-    obj[0] = translateX(outer1_2[4]).interpolate(value, items, [0, 0.5], translateX(outer1_2[4]).Extrapolation.CLAMP);
+    obj[0] = translateX(closure_1_2[4]).interpolate(value, items, [0, 0.5], translateX(closure_1_2[4]).Extrapolation.CLAMP);
     return obj;
   };
   obj = { interpolate: translateX(4115).interpolate, translateX, maxWidth, Extrapolation: translateX(4115).Extrapolation };

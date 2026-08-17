@@ -1,7 +1,9 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventsConstants.tsx
-import { ChannelTypes } from "ME";
-import set from "set";
+import ME from "ME" /* 676 */;
+import setDefault from "set" /* 687 */;
+import set from "set" /* 2 */;
 
+const ChannelTypes = ME.ChannelTypes;
 let obj = { SCHEDULED: 1, [1]: "SCHEDULED", ACTIVE: 2, [2]: "ACTIVE", COMPLETED: 3, [3]: "COMPLETED", CANCELED: 4, [4]: "CANCELED" };
 const items = [, ];
 ({ COMPLETED: arr[0], CANCELED: arr[1] } = obj);
@@ -15,8 +17,8 @@ const set1 = new Set(items1);
 const items3 = [, ];
 ({ STAGE_INSTANCE: arr4[0], VOICE: arr4[1] } = obj);
 const set2 = new Set(items2);
-const result = 2 * require("set").Millis.DAY;
-const result1 = 12 * require("set").Millis.HOUR;
+const result = 2 * setDefault.Millis.DAY;
+const result1 = 12 * setDefault.Millis.HOUR;
 const result2 = set.fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventsConstants.tsx");
 
 export const GUILD_EVENT_MAX_NAME_LENGTH = 100;

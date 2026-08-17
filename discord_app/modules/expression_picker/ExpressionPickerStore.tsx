@@ -1,10 +1,13 @@
 // discord_app/modules/expression_picker/ExpressionPickerStore.tsx
-import { ExpressionPickerViewType } from "ExpressionPickerViewType";
-import identity from "identity";
-import createJSONStorage from "createJSONStorage";
+import set from "set" /* 2 */;
+import ExpressionPickerViewType2 from "ExpressionPickerViewType" /* 1338 */;
+import uniqueIdDefault from "uniqueId" /* 5261 */;
+import identity from "identity" /* 700 */;
+import createJSONStorage from "createJSONStorage" /* 4242 */;
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-let obj = { activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, searchQuery: "", isSearchSuggestion: false, pickerId: require("uniqueId")("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false };
+let ExpressionPickerViewType = ExpressionPickerViewType2.ExpressionPickerViewType;
+let obj = { activeView: null, lastActiveView: null, activeViewType: null, activeChannelId: null, searchQuery: "", isSearchSuggestion: false, pickerId: uniqueIdDefault("uid_"), isNitroLockedSectionVisible: false, areOnlyNitroLockedSectionsVisible: false };
 let closure_3 = Object.freeze(obj);
 identity = identity.createWithEqualityFn();
 obj = {
@@ -15,13 +18,13 @@ obj = {
 };
 const withEqualityFnResult = identity(createJSONStorage.persist(() => closure_3, obj));
 let c4 = withEqualityFnResult;
-const result = require("identity").fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
+const result = set.fileFinishedImporting("modules/expression_picker/ExpressionPickerStore.tsx");
 
 export const openExpressionPicker = function openExpressionPicker(arg0, arg1, arg2) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  let closure_2 = arg2;
-  _batchUpdates.batchUpdates(() => outer1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: outer1_4.getState().activeView }));
+  dependencyMap = arg1;
+  closure_2 = arg2;
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
 };
 export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) {
   const state = withEqualityFnResult.getState();
@@ -32,7 +35,7 @@ export const closeExpressionPicker = function closeExpressionPicker(arg0, arg1) 
   }
   if (!tmp2) {
     if (null !== state.activeView) {
-      state(705).batchUpdates(() => outer1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
+      state(705).batchUpdates(() => closure_1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
       const obj = state(705);
     }
   }
@@ -45,9 +48,9 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
       EMOJI = ExpressionPickerViewType.EMOJI;
     }
     let activeView = EMOJI;
-    let dependencyMap = arg0;
+    dependencyMap = arg0;
     ExpressionPickerViewType = arg1;
-    activeView(705).batchUpdates(() => outer1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: outer1_4.getState().activeView }));
+    activeView(705).batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
     const obj3 = activeView(705);
   } else {
     if (state.activeViewType === arg0) {
@@ -55,7 +58,7 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
         const state1 = withEqualityFnResult.getState();
         activeView = state1;
         if (null !== state1.activeView) {
-          activeView(705).batchUpdates(() => outer1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
+          activeView(705).batchUpdates(() => closure_1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
           const obj4 = activeView(705);
         }
       }
@@ -63,7 +66,7 @@ export const toggleMultiExpressionPicker = function toggleMultiExpressionPicker(
     activeView = state.activeView;
     dependencyMap = arg0;
     ExpressionPickerViewType = arg1;
-    activeView(705).batchUpdates(() => outer1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: outer1_4.getState().activeView }));
+    activeView(705).batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
     const obj2 = activeView(705);
   }
 };
@@ -75,20 +78,20 @@ export const toggleExpressionPicker = function toggleExpressionPicker(arg0, arg1
         const state1 = withEqualityFnResult.getState();
         let _require = state1;
         if (null !== state1.activeView) {
-          _batchUpdates.batchUpdates(() => outer1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
+          _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: null, activeViewType: null, activeChannelId: null, lastActiveView: activeView.activeView }));
           const obj3 = _batchUpdates;
         }
       }
     }
   }
   _require = arg0;
-  const dependencyMap = arg1;
-  let closure_2 = arg2;
-  _batchUpdates.batchUpdates(() => outer1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: outer1_4.getState().activeView }));
+  dependencyMap = arg1;
+  closure_2 = arg2;
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: closure_0, activeViewType: closure_1, activeChannelId: closure_2, lastActiveView: closure_1_4.getState().activeView }));
 };
 export const setExpressionPickerView = function setExpressionPickerView(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => outer1_4.setState({ activeView: closure_0, lastActiveView: outer1_4.getState().activeView }));
+  _batchUpdates.batchUpdates(() => closure_1_4.setState({ activeView: closure_0, lastActiveView: closure_1_4.getState().activeView }));
 };
 export const setSearchQuery = function setSearchQuery(arg0) {
   const _require = arg0;
@@ -96,6 +99,6 @@ export const setSearchQuery = function setSearchQuery(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  _require(flag[4]).batchUpdates(() => outer1_4.setState({ searchQuery: closure_0, isSearchSuggestion: flag }));
+  _require(flag[4]).batchUpdates(() => closure_1_4.setState({ searchQuery: closure_0, isSearchSuggestion: flag }));
 };
 export const useExpressionPickerStore = withEqualityFnResult;

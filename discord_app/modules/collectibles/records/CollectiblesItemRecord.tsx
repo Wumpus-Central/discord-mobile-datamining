@@ -1,19 +1,16 @@
 // discord_app/modules/collectibles/records/CollectiblesItemRecord.tsx
-import fromServer from "fromServer";
-import closure_3 from "fromServer";
-import closure_4 from "fromServer";
-import closure_5 from "fromServer";
-import closure_6 from "fromServer";
-import ME from "ME";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import closure_2 from "fromServer" /* 5306 */;
+import closure_3 from "fromServer" /* 1947 */;
+import closure_4 from "fromServer" /* 5307 */;
+import closure_5 from "fromServer" /* 5308 */;
+import closure_6 from "fromServer" /* 5309 */;
+import ME from "ME" /* 676 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
-({ SKUProductLines: error, SKUTypes: metroImportAll } = ME);
-const result = require("fromServer").fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
+require = arg1;
+({ SKUProductLines: error, SKUTypes: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesItemRecord.tsx");
 function transformSKUToCollectiblesItem(productLine) {
-  let effects;
   if (productLine.productLine === constants.COLLECTIBLES) {
     if (productLine.type === constants2.BUNDLE) {
       const items = [];
@@ -57,10 +54,10 @@ function transformSKUToCollectiblesItem(productLine) {
         type = item.type;
         if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
           obj = { type: "single", item: null };
-          const obj1 = { skuId: null, type: null, asset: null, label: null };
+          obj1 = { skuId: null, type: null, asset: null, label: null };
           obj1[0] = productLine.id;
           ({ type: obj8[1], asset: obj8[2], label: obj8[3] } = item);
-          const tmp28 = new fromServer(obj1);
+          const tmp28 = new closure_2(obj1);
           obj[1] = tmp28;
           return obj;
         } else if (tmp4(1949).CollectiblesItemType.NAMEPLATE === type) {
@@ -106,7 +103,7 @@ export const createCollectiblesItemsFromServerResponse = function createCollecti
     items = arr.reduce((arr, type) => {
       type = type.type;
       if (callback(table[6]).CollectiblesItemType.AVATAR_DECORATION === type) {
-        arr.push(fromServer.fromServer(type));
+        arr.push(closure_2.fromServer(type));
       } else if (tmp(tmp2[6]).CollectiblesItemType.NAMEPLATE === type) {
         arr.push(closure_3.fromServer(type));
       } else if (tmp(tmp2[6]).CollectiblesItemType.PROFILE_EFFECT === type) {

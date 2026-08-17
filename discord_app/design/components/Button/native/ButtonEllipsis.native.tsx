@@ -1,37 +1,34 @@
 // discord_app/design/components/Button/native/ButtonEllipsis.native.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { Easing } from "module_4115";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../animation/reanimated/timing/timing.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING" /* 4664 */;
+import jsxProd from "jsxProd" /* 21 */;
+import { Easing } from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 function EllipsisCircle(offset) {
-  let size;
-  let variant;
   offset = offset.offset;
   let sharedValue;
   let sharedValue1;
   ({ variant, size } = offset);
-  let obj = offset(sharedValue1[6]);
+  obj = offset(sharedValue1[6]);
   const tmp = callback3(size, offset, offset(sharedValue1[6]).useForegroundColor(variant));
   sharedValue = offset(sharedValue1[2]).useSharedValue(0.4);
   let obj2 = offset(sharedValue1[2]);
   sharedValue1 = offset(sharedValue1[2]).useSharedValue(0.75);
   let obj3 = offset(sharedValue1[2]);
   const mountLayoutEffect = offset(sharedValue1[7]).useMountLayoutEffect(() => {
-    if (typeof outer1_7 !== "function") {
+    if (typeof closure_1_7 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const result = 166.66666666666666 * tmp3;
-    let obj = offset(sharedValue1[2]);
-    const tmp2 = outer1_7;
+    obj = offset(sharedValue1[2]);
+    const tmp2 = closure_1_7;
     const obj2 = offset(sharedValue1[2]);
-    const result1 = sharedValue.set(obj.withDelay(result, obj2.withRepeat(offset(sharedValue1[5]).withTiming(1, outer1_5, "animate-always"), -1, true)));
+    const result1 = sharedValue.set(obj.withDelay(result, obj2.withRepeat(offset(sharedValue1[5]).withTiming(1, closure_1_5, "animate-always"), -1, true)));
     if (typeof tmp2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -39,17 +36,17 @@ function EllipsisCircle(offset) {
     const result2 = 166.66666666666666 * tmp3;
     tmp4Result = tmp4(tmp5[2]);
     const obj3 = offset(sharedValue1[5]);
-    const tmp7 = outer1_5;
+    const tmp7 = closure_1_5;
     const result3 = sharedValue1.set(tmp4Result.withDelay(result2, tmp4Result.withRepeat(offset(sharedValue1[5]).withTiming(1, tmp7, "animate-always"), -1, true)));
     return () => {
-      outer1_0(outer1_2[2]).cancelAnimation(closure_1);
-      const obj = outer1_0(outer1_2[2]);
-      outer1_0(outer1_2[2]).cancelAnimation(closure_2);
+      closure_1_0(closure_1_2[2]).cancelAnimation(closure_1);
+      obj = closure_1_0(closure_1_2[2]);
+      closure_1_0(closure_1_2[2]).cancelAnimation(closure_2);
     };
   });
   const obj4 = offset(sharedValue1[7]);
   const fn = function w() {
-    let obj = { opacity: sharedValue.get(), transform: null };
+    obj = { opacity: sharedValue.get(), transform: null };
     obj = { scale: sharedValue1.get() };
     const items = [obj];
     obj[1] = items;
@@ -62,6 +59,7 @@ function EllipsisCircle(offset) {
   const style = [tmp.circle, animatedStyle];
   return callback(sharedValue(sharedValue1[2]).View, { style });
 }
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { duration: 500, easing: null };
 obj[1] = Easing.inOut(require("module_4115").Easing.quad);
@@ -82,7 +80,7 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
     num = 4;
     num2 = 6;
   }
-  const circle = { width: num2, height: num2, borderRadius: Themes.radii.round, marginEnd: null, backgroundColor: null };
+  const circle = { width: num2, height: num2, borderRadius: ThemesDefault.radii.round, marginEnd: null, backgroundColor: null };
   let num3 = 0;
   if (2 !== arg1) {
     num3 = num;
@@ -92,9 +90,9 @@ let closure_6 = createCacheKey.createStyles((arg0, arg1, arg2) => {
   return { circle };
 });
 function withEllipsisAnimation(arg0, value) {
-  const obj = ReanimatedRexport;
+  obj = _mod4115;
   const result = 166.66666666666666 * arg0;
-  const obj2 = ReanimatedRexport;
+  const obj2 = _mod4115;
   return obj.withDelay(result, obj2.withRepeat(CONFIG_NEVER_ANIMATE_TIMING.withTiming(value, obj, "animate-always"), -1, true));
 }
 obj = { ELLIPSIS_APPEAR_DURATION: 500, withDelay: require("module_4115").withDelay, withRepeat: require("module_4115").withRepeat, withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, ELLIPSIS_APPEAR_TIMING: obj };
@@ -102,10 +100,10 @@ withEllipsisAnimation.__closure = obj;
 withEllipsisAnimation.__workletHash = 2181731162311;
 withEllipsisAnimation.__initData = { code: "function withEllipsisAnimation_ButtonEllipsisNativeTsx1(offset,value){const{ELLIPSIS_APPEAR_DURATION,withDelay,withRepeat,withTiming,ELLIPSIS_APPEAR_TIMING}=this.__closure;const animationTimeMs=ELLIPSIS_APPEAR_DURATION;const animationStaggerTimeMs=animationTimeMs/3;return withDelay(offset*animationStaggerTimeMs,withRepeat(withTiming(value,ELLIPSIS_APPEAR_TIMING,'animate-always'),-1,true));}" };
 let closure_8 = { code: "function ButtonEllipsisNativeTsx2(){const{opacity,scale}=this.__closure;return{opacity:opacity.get(),transform:[{scale:scale.get()}]};}" };
-let result = require("module_4115").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Button/native/ButtonEllipsis.native.tsx");
 
 export const Ellipsis = function Ellipsis(arg0) {
-  let obj = { style: { flexDirection: "row" }, children: null };
+  obj = { style: { flexDirection: "row" }, children: null };
   obj = { offset: 0 };
   const merged = Object.assign(arg0);
   const items = [callback(EllipsisCircle, obj), , ];
@@ -115,5 +113,5 @@ export const Ellipsis = function Ellipsis(arg0) {
   const merged2 = Object.assign(arg0);
   items[2] = callback(EllipsisCircle, { offset: 2 });
   obj[1] = items;
-  return callback2(ReanimatedRexport.View, obj);
+  return callback2(_modDef4115.View, obj);
 };

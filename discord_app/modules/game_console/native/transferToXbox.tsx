@@ -1,17 +1,17 @@
 // discord_app/modules/game_console/native/transferToXbox.tsx
-import set from "set";
-import "noop";
-import { Linking } from "get ActivityIndicator";
-import { PlatformTypes } from "ME";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import { Linking } from "get ActivityIndicator" /* 17 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function _transferToXbox() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -45,8 +45,8 @@ function _transferToXbox() {
               callback2 = undefined;
               dependencyMap = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(9848).maybeShowPTTAlert(outer1_6.XBOX);
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_1(9848).maybeShowPTTAlert(closure_1_6.XBOX);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -123,7 +123,7 @@ function _transferToXbox() {
             const obj10 = { importer: null };
             obj10[0] = function importer() {
               return callback(paths[10])(paths[9], paths.paths).then((arg0) => {
-                let closure_0 = arg0.default;
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             };
@@ -139,7 +139,7 @@ function _transferToXbox() {
       }
     })();
   });
-  const _transferToXbox = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -148,7 +148,8 @@ function _transferToXbox() {
   }
   return applyArgumentsResult;
 }
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");
 
 export default function transferToXbox() {
   const self = this;

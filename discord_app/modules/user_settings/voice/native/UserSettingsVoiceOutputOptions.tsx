@@ -1,28 +1,26 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { MediaEngineContextTypes } from "DesktopSources";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { VolumeSlider } from "../../../../components_native/common/VolumeSlider.tsx";
+import VolumeSliderDefault from "VolumeSlider" /* 12139 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ slider: { marginTop: 4 } });
-const result = require("reset").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceOutputOptions.tsx");
 
 export default function UserSettingsVoiceOutputOptions() {
   const tmp = callback2();
   let obj = stateFromStores1(589);
-  const items = [_detectH265HardwareDecode];
+  const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => outputVolume.getOutputVolume());
-  let obj1 = stateFromStores1(589);
-  const items1 = [reset, fetchFingerprint];
+  obj1 = stateFromStores1(589);
+  const items1 = [closure_5, closure_6];
   stateFromStores1 = obj1.useStateFromStores(items1, () => {
     lastActiveStream = lastActiveStream.getLastActiveStream();
     let tmp2 = null;
@@ -35,18 +33,18 @@ export default function UserSettingsVoiceOutputOptions() {
     return tmp2;
   });
   let obj2 = stateFromStores1(589);
-  const items2 = [_detectH265HardwareDecode];
+  const items2 = [closure_7];
   const items3 = [stateFromStores1];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores1) {
-      num = outer1_7.getLocalVolume(tmp.ownerId, outer1_8.STREAM);
+      num = closure_1_7.getLocalVolume(tmp.ownerId, closure_1_8.STREAM);
     }
     return num;
   });
   const callback = React.useCallback((arg0) => {
-    outer1_1(outer1_2[9])(null != stateFromStores1, "Can not set stream volume without active stream");
-    outer1_1(outer1_2[10]).setLocalVolume(stateFromStores1.ownerId, arg0, outer1_8.STREAM);
+    closure_1_1(closure_1_2[9])(null != stateFromStores1, "Can not set stream volume without active stream");
+    closure_1_1(closure_1_2[10]).setLocalVolume(stateFromStores1.ownerId, arg0, closure_1_8.STREAM);
   }, items3);
   obj = { title: null, hasIcons: false, children: null };
   const intl = stateFromStores1(1236).intl;
@@ -54,7 +52,7 @@ export default function UserSettingsVoiceOutputOptions() {
   obj = { label: null, subLabel: null };
   const intl2 = stateFromStores1(1236).intl;
   obj[0] = intl2.string(stateFromStores1(1236).t.xPHVBs);
-  obj1 = { style: tmp.slider, children: callback(VolumeSlider, obj2) };
+  obj1 = { style: tmp.slider, children: callback(VolumeSliderDefault, obj2) };
   obj2 = {
     style: tmp.slider,
     value: stateFromStores,
@@ -74,7 +72,7 @@ export default function UserSettingsVoiceOutputOptions() {
     const obj5 = { value: null, onValueChange: null };
     obj5[0] = stateFromStores2;
     obj5[1] = callback;
-    obj4[1] = tmp9(VolumeSlider, obj5);
+    obj4[1] = tmp9(VolumeSliderDefault, obj5);
     obj3[1] = tmp9(View, obj4);
     tmp9Result = tmp9(tmp2(6291).TableRow, obj3);
   }

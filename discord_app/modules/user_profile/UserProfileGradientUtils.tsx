@@ -1,14 +1,13 @@
 // discord_app/modules/user_profile/UserProfileGradientUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { ThemeTypes } from "ME";
-import apply from "apply";
-import apply from "apply";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { n } from "../../../_runtime/00689_n.js";
-import { int2hslRaw } from "../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import apply2 from "apply" /* 12 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import nDefault from "n" /* 689 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { ThemeTypes } from "ME" /* 676 */;
+import apply from "apply" /* 12 */;
 
-const require = arg1;
+require = arg1;
 const memoizeResult = apply.memoize((arg0) => {
   let obj = AccessibilityAnnouncer;
   obj = { base: "#ffffff", contrastRatio: AccessibilityAnnouncer.WCAGContrastRatios.HighContrastText };
@@ -29,22 +28,22 @@ const memoizeResult1 = apply.memoize((hex2intResult) => {
       obj = int2hslRaw;
     }
   }
-  const obj2 = n;
+  const obj2 = nDefault;
   const tmp8 = importDefault;
-  const mixResult = obj2.mix(n(hex2intResult), n(arg1), 0.5, "lab");
+  const mixResult = obj2.mix(nDefault(hex2intResult), nDefault(arg1), 0.5, "lab");
   const result = Math.round(100 * mixResult.get("hsl.l")) / 100;
   if (tmp !== ThemeTypes.LIGHT) {
-    let clampResult = apply.clamp(result, 0, 0.1);
-    const obj5 = apply;
+    let clampResult = apply2.clamp(result, 0, 0.1);
+    const obj5 = apply2;
   } else {
-    clampResult = apply.clamp(result, 0.8, 1);
-    const obj4 = apply;
+    clampResult = apply2.clamp(result, 0.8, 1);
+    const obj4 = apply2;
   }
-  const tmp10 = n(hex2intResult);
-  const result1 = tmp8(689)(mixResult).set("hsl.l", clampResult);
+  const tmp10 = nDefault(hex2intResult);
+  const result1 = nDefault(mixResult).set("hsl.l", clampResult);
   return result1.num();
 }, (arg0, arg1, arg2) => "" + arg0 + "-" + arg1 + "-" + arg2);
-let result = require("int2hslRaw").fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/UserProfileGradientUtils.tsx");
 
 export const getProfileTheme = function getProfileTheme(first) {
   if (null == first) {
@@ -65,9 +64,6 @@ export const getValueInColorGradientByPercentage = function getValueInColorGradi
   return items;
 };
 export const calculateOverlayedColor = function calculateOverlayedColor(secondaryColor, overlay) {
-  let tmp10;
-  let tmp8;
-  let tmp9;
   const obj = items1(688);
   const tmp = items1;
   if (null == overlay) {

@@ -1,25 +1,24 @@
 // discord_app/modules/parent_tools/hooks/useSelectedTab.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import items from "items";
-import { AnalyticEvents } from "ME";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import items from "items" /* 5297 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-let FamilyCenterSubPages;
-let c4;
-const require = arg1;
+require = arg1;
 ({ FamilyCenterAction: c4, FamilyCenterSubPages } = items);
-const result = require("ME").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useSelectedTab.tsx");
 
 export default function useSelectedMyFamilyTab() {
-  let obj = { selectedTab: null, handleTabChange: null };
-  const items = [freshTeenActivityWithMap];
-  obj[0] = defaultAreStatesEqual.useStateFromStores(items, () => selectedTab.getSelectedTab());
-  obj[1] = function handleTabChange(tab) {
-    let obj = callback(5298);
-    tab = obj.selectTab(tab);
-    obj = { action: TabChange.TabChange, tab };
-    callback(698).track(constants.FAMILY_CENTER_ACTION, obj);
+  let obj = {
+    selectedTab: defaultAreStatesEqual.useStateFromStores(items, () => selectedTab.getSelectedTab()),
+    handleTabChange(tab) {
+      let obj = callback(5298);
+      tab = obj.selectTab(tab);
+      obj = { action: TabChange.TabChange, tab };
+      callback(698).track(constants.FAMILY_CENTER_ACTION, obj);
+    }
   };
+  items = [closure_3];
   return obj;
 };
 export const FAMILY_CENTER_TAB_ANALYTICS_LABELS = { [FamilyCenterSubPages.ACTIVITY]: "family_center_activity_tab", [FamilyCenterSubPages.REQUESTS]: "family_center_requests_tab", [FamilyCenterSubPages.SETTINGS]: "family_center_settings_tab", [FamilyCenterSubPages.CONTENT_AND_SOCIAL]: "family_center_content_and_social_panel", [FamilyCenterSubPages.DATA_AND_PRIVACY]: "family_center_data_and_privacy_panel", [FamilyCenterSubPages.SCREEN_TIME_CONTROLS]: "family_center_screen_time_controls_panel" };

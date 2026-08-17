@@ -1,31 +1,24 @@
 // discord_app/modules/virtual_currency/native/BalanceWidgetActionSheet.tsx
-import preload from "preload";
-import get_ActivityIndicator from "ManaContext";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "ActionSheetHeaderBar";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 ({ View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: closure_6, Fonts: error, HelpdeskArticles: metroImportAll } = ME);
+({ AnalyticEvents: closure_6, Fonts: error, HelpdeskArticles: closure_8 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((color) => {
   let obj = { actions: null, balanceHeader: null, balanceText: null, content: null, header: null, infoIconBackground: null, infoIconContainer: null, promotionalBackground: null, promotionalBackgroundContainer: null, promotionalBannerAsset: null, promotionalBannerContainer: null, promotionalBannerText: null };
-  obj = { flex: 1, flexDirection: "column", gap: Themes.space.PX_12, minWidth: "100%", paddingTop: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16 };
+  obj = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_12, minWidth: "100%", paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[0] = obj;
-  obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: Themes.space.PX_8, flexWrap: "wrap" };
+  obj = { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
   obj[1] = obj;
-  const obj1 = { color, fontSize: 36, lineHeight: null, textAlignVertical: "center" };
+  obj1 = { color, fontSize: 36, lineHeight: null, textAlignVertical: "center" };
   let obj4 = set;
   let num = 44;
   if (obj4.isAndroid()) {
@@ -33,29 +26,25 @@ let closure_12 = createCacheKey.createStyles((color) => {
   }
   obj1[2] = num;
   obj[2] = obj1;
-  obj[3] = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: Themes.space.PX_16 };
-  const obj2 = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: Themes.space.PX_16 };
-  obj[4] = { width: "100%", paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
+  obj[3] = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: ThemesDefault.space.PX_16 };
+  const obj2 = { width: "100%", height: "100%", alignItems: "center", flex: 1, marginBottom: ThemesDefault.space.PX_16 };
+  obj[4] = { width: "100%", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
   obj4 = { width: 32, height: 32, backgroundColor: tmp(712).colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, borderRadius: tmp(712).radii.round, justifyContent: "center", alignItems: "center" };
   obj[5] = obj4;
-  const obj3 = { width: "100%", paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
-  obj[6] = { position: "absolute", left: Themes.space.PX_16, top: Themes.space.PX_16, zIndex: 10 };
-  const obj5 = { position: "absolute", left: Themes.space.PX_16, top: Themes.space.PX_16, zIndex: 10 };
-  obj[7] = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: Themes.radii.xl, bottom: -100 };
+  const obj3 = { width: "100%", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center", position: "relative", flexDirection: "column" };
+  obj[6] = { position: "absolute", left: ThemesDefault.space.PX_16, top: ThemesDefault.space.PX_16, zIndex: 10 };
+  const obj5 = { position: "absolute", left: ThemesDefault.space.PX_16, top: ThemesDefault.space.PX_16, zIndex: 10 };
+  obj[7] = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: ThemesDefault.radii.xl, bottom: -100 };
   obj[8] = { flex: 1, height: 428 };
   obj[9] = { width: "100%", height: "100%" };
-  const obj6 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: Themes.radii.xl, bottom: -100 };
-  obj[10] = { width: "100%", height: 144, gap: Themes.space.PX_12, marginBottom: Themes.space.PX_64 };
+  const obj6 = { position: "absolute", top: 0, left: 0, right: 0, borderRadius: ThemesDefault.radii.xl, bottom: -100 };
+  obj[10] = { width: "100%", height: 144, gap: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_64 };
   obj[11] = { color, fontFamily: constants.PRIMARY_BOLD, fontWeight: "600", fontSize: 16, lineHeight: 20, textAlign: "center" };
   return obj;
 });
-let result = require("ME").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/virtual_currency/native/BalanceWidgetActionSheet.tsx");
 
 export default function _default(balance) {
-  let importDefault;
-  let primaryButtonConfig;
-  let secondaryButtonConfig;
-  let themeOverride;
   let num = balance.balance;
   ({ themeOverride, primaryButtonConfig, secondaryButtonConfig, source: importDefault } = balance);
   let ref;
@@ -89,12 +78,12 @@ export default function _default(balance) {
   const token = num(ref[12]).useToken(importDefault(tmp4[13]).colors.MOBILE_TEXT_HEADING_PRIMARY, themeOverride);
   const tmp9 = callback(token);
   const effect = obj.useEffect(() => {
-    let obj = outer1_1(ref[14]);
+    let obj = closure_1_1(ref[14]);
     obj = { type: "VIEW", source: closure_1, balance: num };
-    obj.track(outer1_6.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
+    obj.track(closure_1_6.ORB_BALANCE_ACTION_SHEET_ACTION, obj);
     if (!obj3.UNSAFE_isDismissibleContentDismissed(num(ref[16]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL)) {
       obj = { dismissAction: null };
-      obj[0] = outer1_9.AUTO_DISMISS;
+      obj[0] = closure_1_9.AUTO_DISMISS;
       const result = tmp3(tmp[15]).UNSAFE_markDismissibleContentAsDismissed(tmp3(tmp[16]).DismissibleContent.VIRTUAL_CURRENCY_MOBILE_ONBOARDING_PILL, obj);
       const tmp3Result = tmp3(tmp[15]);
     }
@@ -120,7 +109,7 @@ export default function _default(balance) {
   if (promotionalBackgroundContainer) {
     promotionalBackgroundContainer = tmp9.promotionalBackgroundContainer;
   }
-  const obj1 = { style: items1, children: null };
+  obj1 = { style: items1, children: null };
   items1[1] = promotionalBackgroundContainer;
   if (!(null != memo && null != memo.backgroundVideo && null != memo.backgroundImage)) {
     const items2 = [tmp14, , , , , ];

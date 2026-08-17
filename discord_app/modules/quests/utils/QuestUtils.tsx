@@ -1,21 +1,18 @@
 // discord_app/modules/quests/utils/QuestUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import updateVoiceState from "updateVoiceState";
-import keys from "keys";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { QuestSharePolicy } from "../../../../discord_common/js/shared/shared-constants/QuestSharePolicy.tsx";
-import { QuestType } from "../../../../discord_common/js/shared/shared-constants/QuestType.tsx";
-import { canStreamInChannel } from "../../go_live/utils/StreamPermissionUtils.tsx";
-import { getQuestContentName } from "../lib/analytics/AnalyticsTypes.tsx";
-import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
+import QuestSharePolicy from "QuestSharePolicy" /* 7477 */;
+import canStreamInChannel from "canStreamInChannel" /* 7478 */;
+import QuestType2 from "QuestType" /* 7479 */;
+import getQuestContentName from "getQuestContentName" /* 7480 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "set" /* 4540 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "updateVoiceState" /* 4542 */;
+import closure_7 from "keys" /* 7475 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
-let c10;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function isSponsoredPlayQuest(quest) {
   if (null == quest) {
     return false;
@@ -31,8 +28,8 @@ function isSponsoredPlayQuest(quest) {
 function hasVariant(nextResult, NON_GAMING_PLAY_QUEST) {
   return new Set(nextResult.config.features).has(NON_GAMING_PLAY_QUEST);
 }
-({ DISCORD_APPLICATION_ID: metroImportAll, QuestVariants: c9, RewardFilterTypes: c10 } = QuestsExperimentLocations);
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
+({ DISCORD_APPLICATION_ID: closure_8, QuestVariants: c9, RewardFilterTypes: c10 } = QuestsExperimentLocations);
+let result = require("set").fileFinishedImporting("modules/quests/utils/QuestUtils.tsx");
 
 export { isSponsoredPlayQuest };
 export const isPlayAnyActivityQuest = function isPlayAnyActivityQuest(quest) {
@@ -47,9 +44,7 @@ export const canLaunchActivity = function canLaunchActivity(quest) {
   }
   return hasPlayActivityTaskResult;
 };
-export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, outer1_15) {
-  let tmp5;
-  let tmp6;
+export const filterQuestsForSocialEntrypoints = function filterQuestsForSocialEntrypoints(stateFromStores, closure_1_15) {
   const map = new Map();
   while (tmp !== undefined) {
     let tmp3 = callback;
@@ -93,14 +88,14 @@ export const isStreamingAndCanWatch = function isStreamingAndCanWatch(arg0, stat
   let first = null != arg0 && null != stateFromStores;
   if (first) {
     const obj = canStreamInChannel;
-    first = obj.canWatchStream(stateFromStores, updateVoiceState, createGuildRecordFromRust, getUncachedChannelPermissions, set)[0];
+    first = obj.canWatchStream(stateFromStores, closure_6, closure_4, closure_5, closure_3)[0];
   }
   return first;
 };
 export const getQuestType = function getQuestType(config) {
   let obj = getApplicationIdsByTaskTypes;
   obj = { config };
-  const QuestType = QuestType.QuestType;
+  const QuestType = QuestType2.QuestType;
   return obj.hasWatchVideoTasks(obj) ? QuestType.VIDEO : QuestType.GAMEPLAY;
 };
 export const isQuestFeaturedByHero = function isQuestFeaturedByHero(questHomeHero, id) {
@@ -136,13 +131,8 @@ export const shouldShowBountiesGivenFilters = function shouldShowBountiesGivenFi
   return tmp2;
 };
 export const setQuestHomeUtmContext = function setQuestHomeUtmContext(arg0) {
-  let fromContent;
-  let questId;
-  let utmMedium;
-  let utmSource;
   ({ questId, fromContent, utmSource, utmMedium } = arg0);
   state = state.getState();
-  const obj = { utmSourceCurrent: utmSource, utmMediumCurrent: utmMedium, utmCampaignCurrent: questId, utmContentCurrent: null };
-  obj[3] = getQuestContentName.getQuestContentName(fromContent);
+  const obj = { utmSourceCurrent: utmSource, utmMediumCurrent: utmMedium, utmCampaignCurrent: questId, utmContentCurrent: getQuestContentName.getQuestContentName(fromContent) };
   state.setUtmCurrentContext(obj);
 };

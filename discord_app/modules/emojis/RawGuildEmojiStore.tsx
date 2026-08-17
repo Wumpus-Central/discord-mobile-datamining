@@ -1,11 +1,11 @@
 // discord_app/modules/emojis/RawGuildEmojiStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { TypeTag } from "TypeTag";
-import { LibdiscoreStore } from "identity";
-import { LibdiscoreBatchStoreRefactorExperiment } from "items";
-import { EmojiTypes } from "EmojiTypes.tsx";
+import EmojiTypes from "EmojiTypes" /* 4037 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { TypeTag } from "TypeTag" /* 1432 */;
+import { LibdiscoreStore } from "identity" /* 1911 */;
+import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1914 */;
 
-const require = arg1;
+require = arg1;
 function fromServer(guildId) {
   let obj = {};
   const iter = arg1[Symbol.iterator]();
@@ -79,8 +79,6 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     return clear.clear();
   },
   CONNECTION_OPEN(arg0, getPartitionKeys) {
-    let guilds;
-    let unavailableGuilds;
     ({ guilds, unavailableGuilds } = arg0);
     const set = new Set(guilds.map((id) => id.id));
     for (const item10017 of unavailableGuilds) {
@@ -105,14 +103,12 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     }
   },
   OVERLAY_INITIALIZE(emojis, clear) {
-    let closure_0 = clear;
+    closure_0 = clear;
     clear.clear();
     const entries = Object.entries(emojis.emojis);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
-      partition.setPartition(tmp, outer1_4(tmp, tmp2));
+      partition.setPartition(tmp, closure_1_4(tmp, tmp2));
     });
   },
   CACHED_EMOJIS_LOADED(arg0, setPartition) {
@@ -138,6 +134,6 @@ const rawGuildEmojiStore = new RawGuildEmojiStore({
     removePartition.removePartition(guild.guild.id);
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-const result = require("identity").fileFinishedImporting("modules/emojis/RawGuildEmojiStore.tsx");
+const result = require("set").fileFinishedImporting("modules/emojis/RawGuildEmojiStore.tsx");
 
 export default rawGuildEmojiStore;

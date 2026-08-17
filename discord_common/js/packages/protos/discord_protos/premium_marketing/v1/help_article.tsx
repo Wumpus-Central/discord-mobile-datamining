@@ -1,10 +1,10 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/help_article.tsx
-import _slicedToArray from "_slicedToArray";
-import { MessageType } from "module_1307";
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
-import { create } from "../../common/v1/localized_string.tsx";
+import _mod1307 from "module_1307" /* 1307 */;
+import create from "create" /* 7633 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { MessageType } from "module_1307" /* 1307 */;
 
-const require = arg1;
+require = arg1;
 class HelpArticle$Type extends MessageType {
   constructor() {
     items = [, , ];
@@ -28,16 +28,14 @@ prototype["create"] = function create(arr) {
   let obj = { id: "", linkText: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = 01307__.reflectionMergePartial(this, obj, arr);
-    const tmpResult = 01307__;
+    const result = _mod1307.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1307;
   }
   return obj;
 };
 prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
-  let tmp5;
-  let tmp6;
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -74,7 +72,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           let tmp21 = error;
           throw error;
         } else {
@@ -83,7 +81,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = 01307__.UnknownFieldHandler.onRead;
+              onRead = _mod1307.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -99,23 +97,23 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(id, tag, writeUnknownFields) {
   if ("" !== id.id) {
-    tag.tag(1, 01307__.WireType.LengthDelimited).string(id.id);
-    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
+    tag.tag(1, _mod1307.WireType.LengthDelimited).string(id.id);
+    const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
   }
   if ("" !== id.linkText) {
-    tag.tag(2, 01307__.WireType.LengthDelimited).string(id.linkText);
-    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
+    tag.tag(2, _mod1307.WireType.LengthDelimited).string(id.linkText);
+    const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
   }
   if (id.linkTextLocalized) {
     const LocalizedString = create.LocalizedString;
-    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
-    const joined = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, 01307__.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
+    const joined = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = LocalizedString.internalBinaryWrite(id.linkTextLocalized, tag.tag(3, _mod1307.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = 01307__.UnknownFieldHandler.onWrite;
+      onWrite = _mod1307.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, id, tag);
@@ -136,6 +134,6 @@ let items = [
 ];
 prototype = new prototype("discord_protos.premium_marketing.v1.HelpArticle", items, tmp, HelpArticle$Type, prototype, items, arg1);
 // ThrowIfThisInitialized (0x7c)
-let result = require("create").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/help_article.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/help_article.tsx");
 
 export const HelpArticle = prototype;

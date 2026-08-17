@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/CreateBugReportSetting.tsx
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { setDeveloperOptionSettings } from "../../../../actions/DeveloperOptionsActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { showNotification } from "../../../bug_reporter/native/BugReportManager.tsx";
+import initialize from "initialize" /* 589 */;
+import setDeveloperOptionSettings2 from "setDeveloperOptionSettings" /* 708 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import showNotificationDefault from "showNotification" /* 10155 */;
+import closure_3 from "refreshSourceMapCookie" /* 706 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -15,19 +15,19 @@ createToggle = {
   parent: null,
   IconComponent: require("WrenchIcon").WrenchIcon,
   onValueChange: function handleCreateBugReportSettingToggle(arg0) {
-    const setDeveloperOptionSettings = setDeveloperOptionSettings.setDeveloperOptionSettings;
+    const setDeveloperOptionSettings = setDeveloperOptionSettings2.setDeveloperOptionSettings;
     if (arg0) {
       const result = setDeveloperOptionSettings({ bugReporterEnabled: true });
-      showNotification.initialize();
-      const obj2 = showNotification;
+      showNotificationDefault.initialize();
+      const obj2 = showNotificationDefault;
     } else {
       const result1 = setDeveloperOptionSettings({ bugReporterEnabled: false });
-      showNotification.terminate(true);
-      const obj = showNotification;
+      showNotificationDefault.terminate(true);
+      const obj = showNotificationDefault;
     }
   },
   useValue: function useCreateBugReportSettingToggleValue() {
-    const items = [refreshSourceMapCookie];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => isBugReporterEnabled.isBugReporterEnabled);
   },
   useDescription: function useCreateBugReportSettingDescription() {
@@ -36,6 +36,6 @@ createToggle = {
   usePredicate: require("useBugReporterExperimentSettingPredicate").useBugReporterExperimentSettingPredicate
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("showNotification").fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CreateBugReportSetting.tsx");
 
 export default createToggle;

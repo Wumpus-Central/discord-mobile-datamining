@@ -1,7 +1,9 @@
 // discord_common/js/packages/design/hooks/useA11yRolesNative.tsx
-import { Platform } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx");
+const Platform = get_ActivityIndicator.Platform;
+const result = set.fileFinishedImporting("../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx");
 
 export const useCheckboxA11yNative = function useCheckboxA11yNative(checked) {
   checked = checked.checked;

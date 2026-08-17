@@ -1,6 +1,6 @@
 // discord_app/utils/AnalyticsFeedItemSeenManager.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let obj = { IMMEDIATE: 0, [0]: "IMMEDIATE", IMMEDIATE_WITH_COOLDOWN: 1, [1]: "IMMEDIATE_WITH_COOLDOWN", IMMEDIATE_WITH_DELAY: 2, [2]: "IMMEDIATE_WITH_DELAY" };
 class TrackedFeedItem {
@@ -18,7 +18,7 @@ prototype["maybeMarkSeen"] = function maybeMarkSeen(arg0) {
   }
   if (flag) {
     const seenIntervals = this.seenIntervals;
-    const obj = { startTimeMillis: null };
+    obj = { startTimeMillis: null };
     obj[0] = arg0;
     seenIntervals.push(obj);
     flag = true;
@@ -62,7 +62,7 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
         let tmp8 = num;
         let tmp9 = nextResult;
         num = num + (timestamp - tmp2.startTimeMillis);
-        let obj = { startTimeMillis: null };
+        obj = { startTimeMillis: null };
         obj[0] = timestamp;
         let arr = items.push(obj);
       } else {
@@ -76,11 +76,11 @@ prototype["computeSeenTimeDestructive"] = function computeSeenTimeDestructive(is
     }
     continue;
   }
-  00038__(items.length < 2, "there should only be a single left over data");
+  _modDef38(items.length < 2, "there should only be a single left over data");
   this.seenIntervals = items;
   return Math.round(num);
 };
-let result = require("dispatcher").fileFinishedImporting("utils/AnalyticsFeedItemSeenManager.tsx");
+let result = require("set").fileFinishedImporting("utils/AnalyticsFeedItemSeenManager.tsx");
 class AnalyticsFeedItemSeenManager {
   constructor(arg0) {
     flag = global.isPaused;
@@ -88,36 +88,36 @@ class AnalyticsFeedItemSeenManager {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.initialize = function initialize() {
-      obj = obj(outer1_1[2]);
+      obj = obj(closure_1_1[2]);
       const subscription = obj.subscribe("ANALYTICS_FEED_ITEM_SEEN", obj.handleFeedItemSeen);
-      const subscription1 = obj(outer1_1[2]).subscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
-      const obj2 = obj(outer1_1[2]);
-      const subscription2 = obj(outer1_1[2]).subscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
-      const obj3 = obj(outer1_1[2]);
-      const subscription3 = obj(outer1_1[2]).subscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
-      const obj4 = obj(outer1_1[2]);
-      const subscription4 = obj(outer1_1[2]).subscribe("WINDOW_FOCUS", obj.handleWindowFocus);
+      const subscription1 = obj(closure_1_1[2]).subscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
+      const obj2 = obj(closure_1_1[2]);
+      const subscription2 = obj(closure_1_1[2]).subscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
+      const obj3 = obj(closure_1_1[2]);
+      const subscription3 = obj(closure_1_1[2]).subscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
+      const obj4 = obj(closure_1_1[2]);
+      const subscription4 = obj(closure_1_1[2]).subscribe("WINDOW_FOCUS", obj.handleWindowFocus);
       const onInitialize = obj.onInitialize;
       if (onInitialize != null) {
         onInitialize();
       }
     };
     obj.terminate = function terminate() {
-      obj = obj(outer1_1[2]);
+      obj = obj(closure_1_1[2]);
       obj.unsubscribe("ANALYTICS_FEED_ITEM_SEEN", obj.handleFeedItemSeen);
-      obj(outer1_1[2]).unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
+      obj(closure_1_1[2]).unsubscribe("ANALYTICS_FEED_ITEM_UNSEEN", obj.handleFeedItemUnseen);
       const obj2 = obj;
-      const obj3 = obj(outer1_1[2]);
-      obj(outer1_1[2]).unsubscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
-      const obj4 = obj(outer1_1[2]);
-      obj(outer1_1[2]).unsubscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
-      const obj5 = obj(outer1_1[2]);
-      obj(outer1_1[2]).unsubscribe("WINDOW_FOCUS", obj.handleWindowFocus);
+      const obj3 = obj(closure_1_1[2]);
+      obj(closure_1_1[2]).unsubscribe("ANALYTICS_FEED_FLUSH", obj.handleFeedItemFlush);
+      const obj4 = obj(closure_1_1[2]);
+      obj(closure_1_1[2]).unsubscribe("APP_STATE_UPDATE", obj.handleAppStateUpdate);
+      const obj5 = obj(closure_1_1[2]);
+      obj(closure_1_1[2]).unsubscribe("WINDOW_FOCUS", obj.handleWindowFocus);
       const onTerminate = obj.onTerminate;
       if (onTerminate != null) {
         onTerminate();
       }
-      obj2.maybeFlushSeenItems(outer1_3.IMMEDIATE);
+      obj2.maybeFlushSeenItems(closure_1_3.IMMEDIATE);
     };
     obj.handleFeedItemFlush = function handleFeedItemFlush(id) {
       if (obj._id === id.id) {
@@ -156,13 +156,13 @@ class AnalyticsFeedItemSeenManager {
     };
     obj.getTrackedFeedItem = function getTrackedFeedItem(feedItemId) {
       if (null == obj.trackedFeedItems[feedItemId]) {
-        if (typeof outer1_4 !== "function") {
+        if (typeof closure_1_4 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        obj = Object.create(outer1_4.prototype);
+        obj = Object.create(closure_1_4.prototype);
         obj.seenIntervals = [];
         tmp.trackedFeedItems[feedItemId] = obj;
-        const tmp2 = outer1_4;
+        const tmp2 = closure_1_4;
       }
       return obj.trackedFeedItems[feedItemId];
     };
@@ -189,7 +189,7 @@ class AnalyticsFeedItemSeenManager {
         if (obj._isReactNavigationFocused) {
           obj.pause();
         }
-        obj.maybeFlushSeenItems(outer1_3.IMMEDIATE);
+        obj.maybeFlushSeenItems(closure_1_3.IMMEDIATE);
       }
     };
     obj.clearPausedFeedItemIds = function clearPausedFeedItemIds() {
@@ -262,7 +262,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
     }
   }
   const flushSeenItemsFunction = self.createFlushSeenItemsFunction(IMMEDIATE);
-  let closure_0 = flushSeenItemsFunction;
+  closure_0 = flushSeenItemsFunction;
   if (null == flushSeenItemsFunction) {
     let resolved = Promise.resolve();
   } else {
@@ -271,8 +271,8 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
     if (IMMEDIATE !== tmp2.IMMEDIATE) {
       if (IMMEDIATE !== tmp2.IMMEDIATE_WITH_COOLDOWN) {
         resolved = new Promise((arg0) => {
-          let closure_0 = arg0;
-          const timerId = setTimeout(outer1_2(function*() {
+          closure_0 = arg0;
+          const timerId = setTimeout(closure_1_2(function*() {
             if (c2 === 2) {
               c2 = 3;
               HermesBuiltin.throwTypeError();
@@ -280,7 +280,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
               if (arg0 === 1) {
                 throw arg1;
               } else if (arg0 === 2) {
-                let obj = { value: null, done: true };
+                obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
               } else {
@@ -302,8 +302,8 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                     const callback = tmp4;
                     c1 = 1;
                     c2 = 1;
-                    const obj1 = { value: null, done: false };
-                    obj1[0] = outer1_0();
+                    obj1 = { value: null, done: false };
+                    obj1[0] = closure_1_0();
                     return obj1;
                   }
                 } else if (arg0 === 1) {
@@ -330,9 +330,9 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
     }
     closure_0 = undefined;
     closure_0 = callback((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c3 = 0;
+      closure_0 = arg0;
+      c2 = 0;
+      c3 = 0;
       return (function*(arg0) {
         if (c3 === 2) {
           c3 = 3;
@@ -341,7 +341,7 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
           if (arg0 === 1) {
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
+            obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
@@ -360,10 +360,10 @@ AnalyticsFeedItemSeenManager.prototype["maybeFlushSeenItems"] = function maybeFl
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp2;
+                closure_1 = tmp2;
                 c2 = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = callback();
                 return obj1;
               }

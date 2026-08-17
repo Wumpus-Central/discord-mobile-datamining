@@ -1,10 +1,10 @@
 // discord_app/modules/collectibles/profile_effects/utils.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { apply } from "../../../../_runtime/00012_apply.js";
 
 const require = arg1;
-const result = require("apply").fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/utils.tsx");
 
 export const sortEffectLayers = function sortEffectLayers(effects) {
   return effects.sort((zIndex, zIndex2) => {
@@ -20,10 +20,6 @@ export const sortEffectLayers = function sortEffectLayers(effects) {
   });
 };
 export const usePotentiallyRandomizedProfileEffect = function usePotentiallyRandomizedProfileEffect(arg0) {
-  let tmp4;
-  let tmp5;
-  let tmp8;
-  let tmp9;
   let _require;
   let tmp6 = arg0;
   [tmp4, tmp5] = callback(React.useState(arg0), 2);

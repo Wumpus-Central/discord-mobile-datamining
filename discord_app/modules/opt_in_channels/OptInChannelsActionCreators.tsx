@@ -1,31 +1,34 @@
 // discord_app/modules/opt_in_channels/OptInChannelsActionCreators.tsx
-import closure_3 from "MAX_FAVORITES";
-import initialize from "initialize";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { AnalyticEvents } from "ME";
-import MAX_FAVORITES from "MAX_FAVORITES";
-import apply from "collectGuildAnalyticsMetadata";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import updateImpersonating from "updateImpersonating" /* 6792 */;
+import UserNotificationSettings from "UserNotificationSettings" /* 6795 */;
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 6797 */;
+import _modDef6798 from "module_6798" /* 6798 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 1982 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import apply from "apply" /* 12 */;
 import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { NotificationSettingsModalActionCreators } from "../../actions/NotificationSettingsModalActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { UserNotificationSettings } from "../../utils/NotificationSettingsUtils.tsx";
 import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 import { updateImpersonating } from "../impersonate/ImpersonateActionCreators.tsx";
-import { handleConnectionOpen } from "../user_settings/UserGuildSettingsManager.tsx";
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _persistOptInChannelUpdates2() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -53,12 +56,12 @@ function _persistOptInChannelUpdates2() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp5;
+              closure_3 = tmp5;
               const table = tmp2;
               if (null != closure_0) {
                 if (!fullServerPreview.isFullServerPreview(tmp22)) {
-                  let obj3 = callback(outer1_2[9]);
-                  const obj1 = {};
+                  let obj3 = callback(closure_1_2[9]);
+                  obj1 = {};
                   const obj2 = { channel_overrides: null };
                   obj2[0] = tmp23;
                   obj1[tmp22] = obj2;
@@ -92,7 +95,7 @@ function _persistOptInChannelUpdates2() {
       }
     })();
   });
-  const _persistOptInChannelUpdates2 = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -101,7 +104,7 @@ function _persistOptInChannelUpdates2() {
   }
   return applyArgumentsResult;
 }
-({ ChannelNotificationSettingsFlags: metroImportAll, GuildNotificationSettingsFlags: c9 } = MAX_FAVORITES);
+({ ChannelNotificationSettingsFlags: closure_8, GuildNotificationSettingsFlags: c9 } = MAX_FAVORITES);
 const debounceResult = apply.debounce((arg0, arg1) => (function _persistOptInChannelUpdates(arg0, arg1) {
   const self = this;
   const apply = closure_10.apply;
@@ -112,11 +115,11 @@ const debounceResult = apply.debounce((arg0, arg1) => (function _persistOptInCha
   }
   return applyArgumentsResult;
 })(arg0, arg1), 1000);
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/opt_in_channels/OptInChannelsActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/opt_in_channels/OptInChannelsActionCreators.tsx");
 
 export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, location) {
   if (null != guildId1) {
-    if (initialize.isFullServerPreview(guildId1)) {
+    if (closure_4.isFullServerPreview(guildId1)) {
       if (arg2) {
         const items = [id];
         let items1 = items;
@@ -137,12 +140,12 @@ export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, loca
         let obj = hasFlag;
         setFlagResult = obj.setFlag(channelIdFlags, constants.FAVORITED, false);
       }
-      let obj1 = UserNotificationSettings;
+      obj1 = UserNotificationSettings;
       obj = { flags: null };
       const currentChannelSettings = obj1.getCurrentChannelSettings(guildId1, id);
       let obj3 = hasFlag;
       obj[0] = obj3.setFlag(setFlagResult, constants.OPT_IN_ENABLED, arg2);
-      let obj4 = handleConnectionOpen;
+      let obj4 = handleConnectionOpenDefault;
       obj = {};
       obj1 = { channel_overrides: null };
       const obj2 = {};
@@ -154,8 +157,8 @@ export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, loca
       obj3[1] = guildId1;
       obj3[2] = id;
       obj3[3] = obj;
-      dispatcher.dispatch(obj3);
-      const obj9 = dispatcher;
+      dispatcherDefault.dispatch(obj3);
+      const obj9 = dispatcherDefault;
       obj4 = { guildId: null, channelId: null, change: null, previous: null, label: null, location: null };
       obj4[0] = guildId1;
       obj4[1] = id;
@@ -184,7 +187,7 @@ export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, loca
       }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
       const obj13 = updateUserGuildSettings;
       const obj5 = {};
-      const obj14 = expandEventProperties;
+      const obj14 = expandEventPropertiesDefault;
       const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId1));
       const obj16 = collectGuildAnalyticsMetadata;
       const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(store.getChannel(id)));
@@ -201,7 +204,7 @@ export const setOptInChannel = function setOptInChannel(guildId1, id, arg2, loca
 };
 export const updateOptInChannelsImmediate = function updateOptInChannelsImmediate(closure_0, id, arg2, location) {
   if (null != closure_0) {
-    if (initialize.isFullServerPreview(closure_0)) {
+    if (closure_4.isFullServerPreview(closure_0)) {
       if (arg2) {
         const items = [id];
         let items1 = items;
@@ -222,7 +225,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       const channelIdFlags = store2.getChannelIdFlags(closure_0, id);
       let setFlagResult = channelIdFlags;
       if (!arg2) {
-        let obj1 = hasFlag;
+        obj1 = hasFlag;
         setFlagResult = obj1.setFlag(channelIdFlags, constants.FAVORITED, false);
       }
       let obj2 = UserNotificationSettings;
@@ -240,14 +243,14 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
         obj1[0] = obj2;
         obj1[1] = setFlagResult1;
         obj[closure_0] = obj1;
-        const result2 = handleConnectionOpen.saveUserGuildSettingsBulk(obj);
-        const obj7 = handleConnectionOpen;
+        const result2 = handleConnectionOpenDefault.saveUserGuildSettingsBulk(obj);
+        const obj7 = handleConnectionOpenDefault;
       }
       const obj3 = { type: "USER_GUILD_SETTINGS_CHANNEL_UPDATE", guildId: null, channelId: null, settings: null };
       obj3[1] = closure_0;
       obj3[2] = id;
       obj3[3] = obj;
-      dispatcher.dispatch(obj3);
+      dispatcherDefault.dispatch(obj3);
       tmp6Result = tmp6(6795);
       obj4 = { guildId: null, channelId: null, change: null, previous: null, label: null, location: null };
       obj4[0] = closure_0;
@@ -258,7 +261,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       obj4[4] = NotificationLabel.optedIn(arg2);
       obj4[5] = location;
       const result3 = tmp6Result.trackChannelNotificationSettingsUpdate(obj4);
-      const obj11 = dispatcher;
+      const obj11 = dispatcherDefault;
       const result4 = updateUserGuildSettings.updateUserGuildSettings(closure_0, (guildOnboardingProgress) => {
         let hasFlagResult = callback(1403).hasFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED);
         if (hasFlagResult) {
@@ -277,7 +280,7 @@ export const updateOptInChannelsImmediate = function updateOptInChannelsImmediat
       }, tmp6(1374).UserSettingsDelay.INFREQUENT_USER_ACTION);
       const tmp6Result1 = updateUserGuildSettings;
       const obj5 = {};
-      const obj16 = expandEventProperties;
+      const obj16 = expandEventPropertiesDefault;
       const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(closure_0));
       const tmp6Result2 = collectGuildAnalyticsMetadata;
       const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(store.getChannel(id)));
@@ -301,7 +304,7 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
   }
   let obj;
   if (null != id) {
-    if (initialize.isFullServerPreview(id)) {
+    if (closure_4.isFullServerPreview(id)) {
       const result = _updateImpersonating.updateImpersonatedChannels(id, arr, []);
       if (flag) {
         const result1 = _updateImpersonating.updateImpersonatedData(id, { optInEnabled: true });
@@ -310,9 +313,9 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
     } else {
       obj = {};
       const item = arr.forEach((id) => {
-        const obj = { flags: null };
-        const channelIdFlags = outer1_6.getChannelIdFlags(id, id);
-        obj[0] = id(outer1_2[7]).setFlag(channelIdFlags, outer1_8.OPT_IN_ENABLED, true);
+        obj = { flags: null };
+        const channelIdFlags = closure_1_6.getChannelIdFlags(id, id);
+        obj[0] = id(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, true);
         obj[id] = obj;
       });
       if (flag) {
@@ -331,7 +334,7 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
         obj9.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj);
         const obj11 = _collectGuildAnalyticsMetadata;
       } else {
-        let obj1 = obj(6798);
+        obj1 = obj(6798);
         const result3 = obj1.updateChannelOverrideSettingsBulk(id, obj, _UserNotificationSettings.NotificationLabels.OptedIn);
         obj1 = {};
         const obj3 = obj(698);
@@ -347,15 +350,15 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2, locat
 export const bulkOptOutChannels = function bulkOptOutChannels(closure_0, arr, location) {
   const _require = closure_0;
   if (null != closure_0) {
-    if (initialize.isFullServerPreview(closure_0)) {
+    if (closure_4.isFullServerPreview(closure_0)) {
       const result = _updateImpersonating.updateImpersonatedChannels(closure_0, [], arr);
       const obj6 = _updateImpersonating;
     } else {
       let obj = {};
       const item = arr.forEach((id) => {
-        const obj = { flags: null };
-        const channelIdFlags = outer1_6.getChannelIdFlags(callback, id);
-        obj[0] = callback(outer1_2[7]).setFlag(channelIdFlags, outer1_8.OPT_IN_ENABLED, false);
+        obj = { flags: null };
+        const channelIdFlags = closure_1_6.getChannelIdFlags(callback, id);
+        obj[0] = callback(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, false);
         obj[id] = obj;
       });
       const result1 = obj(6798).updateChannelOverrideSettingsBulk(closure_0, obj, _UserNotificationSettings.NotificationLabels.OptedOut);
@@ -371,21 +374,21 @@ export const bulkOptOutChannels = function bulkOptOutChannels(closure_0, arr, lo
   }
 };
 export const setGuildOptIn = function setGuildOptIn(id, arg1) {
-  if (initialize.isFullServerPreview(id)) {
+  if (closure_4.isFullServerPreview(id)) {
     let obj = { optInEnabled: null };
     obj[0] = arg1;
     const result = updateImpersonating.updateImpersonatedData(id, obj);
     const obj7 = updateImpersonating;
   } else {
     const guildFlags = store2.getGuildFlags(id);
-    obj = NotificationSettingsModalActionCreators;
+    obj = _modDef6798;
     obj = { flags: null };
     obj[0] = hasFlag.setFlag(guildFlags, constants2.OPT_IN_CHANNELS_ON, arg1);
     const NotificationLabel = UserNotificationSettings.NotificationLabel;
     const result1 = obj.updateGuildNotificationSettings(id, obj, NotificationLabel.optedIn(arg1));
     const obj3 = hasFlag;
-    const obj1 = {};
-    const obj4 = expandEventProperties;
+    obj1 = {};
+    const obj4 = expandEventPropertiesDefault;
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(id));
     let str = "guild_disabled";
     if (arg1) {
@@ -399,7 +402,7 @@ export const setGuildOptIn = function setGuildOptIn(id, arg1) {
 };
 export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location) {
   if (null != guildId1) {
-    if (!initialize.isFullServerPreview(guildId1)) {
+    if (!closure_4.isFullServerPreview(guildId1)) {
       const channelIdFlags = store2.getChannelIdFlags(guildId1, id);
       let obj = hasFlag;
       const hasFlagResult = obj.hasFlag(channelIdFlags, constants.OPT_IN_ENABLED);
@@ -412,14 +415,14 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
         let tmp5Result = tmp5(1403);
         setFlagResult = tmp5Result.setFlag(channelIdFlags, tmp7.OPT_IN_ENABLED, true);
       }
-      const obj3 = NotificationSettingsModalActionCreators;
+      const obj3 = _modDef6798;
       obj = { flags: null };
       tmp5Result = tmp5(1403);
       obj[0] = tmp5Result.setFlag(setFlagResult, constants.FAVORITED, arg2);
       const NotificationLabel = tmp5(6795).NotificationLabel;
       const result = obj3.updateChannelOverrideSettings(guildId1, id, obj, NotificationLabel.favorited(arg2));
       obj = {};
-      const obj6 = expandEventProperties;
+      const obj6 = expandEventPropertiesDefault;
       const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId1));
       let str = "unfavorited";
       if (arg2) {
@@ -434,9 +437,8 @@ export const setIsFavorite = function setIsFavorite(guildId1, id, arg2, location
 };
 export const setMessagesFavorite = function setMessagesFavorite(id, arg1) {
   const channelIdFlags = store2.getChannelIdFlags(null, id);
-  let obj = NotificationSettingsModalActionCreators;
-  obj = { flags: null };
-  obj[0] = hasFlag.setFlag(channelIdFlags, constants.FAVORITED, arg1);
+  let obj = _modDef6798;
+  obj = { flags: hasFlag.setFlag(channelIdFlags, constants.FAVORITED, arg1) };
   const NotificationLabel = UserNotificationSettings.NotificationLabel;
   const result = obj.updateChannelOverrideSettings(null, id, obj, NotificationLabel.favorited(arg1));
 };
@@ -471,19 +473,19 @@ export const dismissGuildNotice = function dismissGuildNotice(closure_0) {
   }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const clearGuildNotice = function clearGuildNotice(closure_0) {
-  const items = [...updateUserGuildSettingsInternal.getOptedInChannels(closure_0)];
+  const items = [...closure_6.getOptedInChannels(closure_0)];
   const _require = closure_0;
   let obj;
   if (null != closure_0) {
-    if (initialize.isFullServerPreview(closure_0)) {
+    if (closure_4.isFullServerPreview(closure_0)) {
       const result = _updateImpersonating.updateImpersonatedChannels(closure_0, [], items);
       const obj6 = _updateImpersonating;
     } else {
       obj = {};
       const item = items.forEach((id) => {
-        const obj = { flags: null };
-        const channelIdFlags = outer1_6.getChannelIdFlags(callback, id);
-        obj[0] = callback(outer1_2[7]).setFlag(channelIdFlags, outer1_8.OPT_IN_ENABLED, false);
+        obj = { flags: null };
+        const channelIdFlags = closure_1_6.getChannelIdFlags(callback, id);
+        obj[0] = callback(closure_1_2[7]).setFlag(channelIdFlags, closure_1_8.OPT_IN_ENABLED, false);
         obj[id] = obj;
       });
       const result1 = obj(6798).updateChannelOverrideSettingsBulk(closure_0, obj, _UserNotificationSettings.NotificationLabels.OptedOut);
@@ -499,18 +501,18 @@ export const clearGuildNotice = function clearGuildNotice(closure_0) {
   }
   const result2 = _updateUserGuildSettings.updateUserGuildSettings(closure_0, (guildOnboardingProgress) => {
     guildOnboardingProgress.guildOnboardingProgress = callback(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_SHOWN, false);
-    const obj = callback(1403);
+    obj = callback(1403);
     guildOnboardingProgress.guildOnboardingProgress = callback(1403).setFlag(guildOnboardingProgress.guildOnboardingProgress, callback(1306).GuildOnboardingProgress.GUILD_NOTICE_CLEARED, false);
     return true;
   }, _updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 };
 export const dimissFavoriteSuggestion = function dimissFavoriteSuggestion(guildId, channelId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "DISMISS_FAVORITE_SUGGESTION", guildId, channelId };
   obj.dispatch(obj);
 };
 export const setRecentlyActiveCollapsed = function setRecentlyActiveCollapsed(guildId, collapsed) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "SET_RECENTLY_ACTIVE_COLLAPSED", guildId, collapsed };
   obj.dispatch(obj);
 };

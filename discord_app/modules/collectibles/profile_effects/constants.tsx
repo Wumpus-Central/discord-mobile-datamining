@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/profile_effects/constants.tsx
-const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/collectibles/profile_effects/constants.tsx");
 
 export const PROFILE_EFFECT_INTRO_MINIMUM_DELAY = 0.1;
 export const PROFILE_EFFECT_INTRO_DELAY = 500;

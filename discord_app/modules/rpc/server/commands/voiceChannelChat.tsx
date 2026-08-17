@@ -1,14 +1,16 @@
 // discord_app/modules/rpc/server/commands/voiceChannelChat.tsx
-import ME from "ME";
-import { toggleVoiceChannelChat } from "../../../calls/toggleVoiceChannelChat.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
+import set from "set" /* 2 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import toggleVoiceChannelChat from "toggleVoiceChannelChat" /* 13879 */;
+import ME from "ME" /* 676 */;
 
 const RPCErrors = ME.RPCErrors;
 let obj = {
-  scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
+  scope: RPC_SCOPE_CONFIG.RPC_LOCAL_SCOPE,
   validation(boolean) {
-    let obj = createRpcJoiSchemaObject(boolean);
+    let obj = createRpcJoiSchemaObjectDefault(boolean);
     obj = { open: boolean.boolean() };
     return obj.keys(obj);
   },
@@ -18,7 +20,7 @@ let obj = {
     if (null == result) {
       obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_CHANNEL;
-      const tmp8 = new prototype(obj, "Not connected to a guild voice channel");
+      const tmp8 = new prototypeDefault(obj, "Not connected to a guild voice channel");
       throw tmp8;
     } else {
       obj = { channel_id: null, chat_open: null };
@@ -27,6 +29,6 @@ let obj = {
     }
   }
 };
-let result = require("createRpcJoiSchemaObject").fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
+let result = set.fileFinishedImporting("modules/rpc/server/commands/voiceChannelChat.tsx");
 
 export default { [ME.RPCCommands.TOGGLE_VOICE_CHANNEL_CHAT]: obj };

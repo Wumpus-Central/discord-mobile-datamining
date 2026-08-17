@@ -1,25 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/NewGroupDMScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import performQuery from "performQuery";
-import getGroupDMRecipientLimit from "getGroupDMRecipientLimit";
-import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_9 from "performQuery";
-import createRTCConnection from "createRTCConnection";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserRowModes } from "UserRowModes";
-import ME from "ME";
-import jsxProd from "dispatcher";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "performQuery" /* 13303 */;
+import closure_10 from "createRTCConnection" /* 4539 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_6;
-let error;
-let map1;
 const require = arg1;
 function handleOneRecipientInDM() {
   const self = this;
@@ -34,14 +27,14 @@ function handleOneRecipientInDM() {
 function _handleOneRecipientInDM() {
   const self = this;
   const tmp = callback2((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       const table = tmp2;
-      const obj5 = callback(outer1_2[13]);
-      const obj1 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
+      const obj5 = callback(closure_1_2[13]);
+      obj1 = { recipientIds: null, location: "New Group DM", onBeforeTransition: null };
       obj1[0] = [];
       obj1[2] = callback;
       callback = yield obj5.openPrivateChannel(obj1);
@@ -50,7 +43,7 @@ function _handleOneRecipientInDM() {
       return arg1;
     })();
   });
-  const _handleOneRecipientInDM = tmp;
+  closure_21 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -62,11 +55,11 @@ function _handleOneRecipientInDM() {
 function _handleInviteUsers() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -95,14 +88,14 @@ function _handleInviteUsers() {
               return obj;
             } else {
               const callback = tmp2;
-              let _slicedToArray = tmp5;
+              closure_3 = tmp5;
               let arr;
-              let dependencyMap;
+              dependencyMap = undefined;
               if (arr === undefined) {
                 const _Array = Array;
-                arr = Array.from(outer1_9.getSelectedUsers());
+                arr = Array.from(closure_1_9.getSelectedUsers());
               }
-              _slicedToArray = undefined;
+              closure_3 = undefined;
               c5 = 1;
               c6 = 1;
               return { value: "ct", done: true };
@@ -114,7 +107,7 @@ function _handleInviteUsers() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c6 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -168,19 +161,19 @@ function _handleInviteUsers() {
                                 obj[0] = arg1;
                                 return obj;
                               } else {
-                                let closure_0 = tmp4;
+                                closure_0 = tmp4;
                                 if (1 === v0.length) {
                                   v0 = 2;
                                   dependencyMap = 1;
-                                  const obj1 = { value: null, done: false };
-                                  obj1[0] = outer1_20(tmp33, dependencyMap);
+                                  obj1 = { value: null, done: false };
+                                  obj1[0] = closure_1_20(tmp33, dependencyMap);
                                   return obj1;
                                 } else {
                                   let obj5 = v0(4770);
                                   v0 = 1;
                                   dependencyMap = 1;
                                   let obj2 = { value: null, done: false };
-                                  obj2[0] = obj5.addRecipients(outer1_0.id, tmp33, undefined, dependencyMap);
+                                  obj2[0] = obj5.addRecipients(closure_1_0.id, tmp33, undefined, dependencyMap);
                                   return obj2;
                                 }
                               }
@@ -221,12 +214,12 @@ function _handleInviteUsers() {
                                 } else {
                                   call(tmp9, false, true);
                                 }
-                                v0(8734)(_slicedToArray);
+                                v0(8734)(closure_3);
                                 dependencyMap = 3;
-                                tmp9 = _slicedToArray;
+                                tmp9 = closure_3;
                               }
-                              _slicedToArray = arg1;
-                              obj2 = outer1_0(8663);
+                              closure_3 = arg1;
+                              obj2 = closure_1_0(8663);
                               v0 = 3;
                               dependencyMap = 1;
                               obj5 = { value: null, done: false };
@@ -291,22 +284,22 @@ function _handleInviteUsers() {
                     obj9[0] = arg1;
                     return obj9;
                   } else {
-                    _slicedToArray = arg1;
+                    closure_3 = arg1;
                   }
                 } else if (arg0 === 1) {
                   c6 = 3;
                   throw arg1;
                 } else if (arg0 !== 2) {
-                  _slicedToArray = arg1;
+                  closure_3 = arg1;
                   obj = arr(9735);
-                  obj.ring(_slicedToArray, arr, "gdm_invite");
+                  obj.ring(closure_3, arr, "gdm_invite");
                 }
                 c6 = 3;
                 obj10 = { value: null, done: true };
                 obj10[0] = arg1;
                 return obj10;
               }
-              _slicedToArray = arg1;
+              closure_3 = arg1;
             }
             arr(4342).hideActionSheet(closure_16);
             c6 = 3;
@@ -321,7 +314,7 @@ function _handleInviteUsers() {
     iter.next();
     return iter;
   });
-  const _handleInviteUsers = tmp;
+  closure_22 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -334,23 +327,19 @@ function _handleInviteUsers() {
 ({ InstantInviteSources: map1, AnalyticEvents: closure_14, AnalyticsSections: closure_15, NEW_GROUP_DM_POPOUT_ID: closure_16 } = ME);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 createCacheKey = { button: null, container: null, instantInviteView: null, nameInputContainer: null, nameInput: null };
-createCacheKey = { color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: "100%", display: "flex" };
-createCacheKey[2] = { flexShrink: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let obj1 = { flexShrink: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[3] = { paddingHorizontal: 16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj2 = { paddingHorizontal: 16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
-let result = require("noop").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewGroupDMScreen.tsx");
+createCacheKey[2] = { flexShrink: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj1 = { flexShrink: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[3] = { paddingHorizontal: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = { paddingHorizontal: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
+let closure_19 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: 8, height: 40, width: "100%" };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/NewGroupDMScreen.tsx");
 
 export default function NewGroupDMScreen(navigation) {
-  let c15;
-  let c16;
-  let importDefault;
-  let locationPage;
   navigation = navigation.navigation;
   let _require = navigation;
   const params = navigation.route.params;
@@ -363,17 +352,17 @@ export default function NewGroupDMScreen(navigation) {
   let stateFromStores;
   let stateFromStores1;
   let first;
-  let closure_7;
+  closure_7 = undefined;
   let first1;
-  let closure_9;
+  closure_9 = undefined;
   let first2;
   let memo;
-  let UserRowModes;
-  let c13;
+  UserRowModes = undefined;
+  closure_13 = undefined;
   callback = undefined;
   c15 = undefined;
   c16 = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   callback = tmp;
   let obj = _require(locationPage[18]);
   let items = [first1];
@@ -408,10 +397,10 @@ export default function NewGroupDMScreen(navigation) {
   const sum = first.length + (num + 1);
   UserRowModes = sum;
   const tmp13 = sum > importDefault(locationPage[19])(stateFromStores);
-  c13 = tmp13;
+  closure_13 = tmp13;
   const items3 = [locationPage];
   const effect = obj3.useEffect(() => {
-    let obj = outer1_1(locationPage[20]);
+    let obj = closure_1_1(locationPage[20]);
     obj = { type: _undefined.DM_INVITE, location: obj };
     obj = { page: locationPage };
     obj.track(callback.OPEN_POPOUT, obj);
@@ -444,16 +433,16 @@ export default function NewGroupDMScreen(navigation) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp7;
+            closure_1 = tmp3;
+            closure_0 = tmp7;
             closure_0 = undefined;
-            outer1_9(true);
-            let c3 = 1;
+            closure_1_9(true);
+            c3 = 1;
             const items = [];
-            HermesBuiltin.arraySpread(outer1_11, HermesBuiltin.arraySpread(outer1_6, 0));
+            HermesBuiltin.arraySpread(closure_1_11, HermesBuiltin.arraySpread(closure_1_6, 0));
             c4 = 2;
             c5 = 1;
-            let obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = (function handleInviteUsers(c4, items, arg2) {
               const self = this;
               const apply = closure_22.apply;
@@ -471,10 +460,10 @@ export default function NewGroupDMScreen(navigation) {
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          let obj4 = outer1_1(outer1_2[21]);
+          let obj4 = closure_1_1(closure_1_2[21]);
           const obj2 = { key: "GROUP_DM_ADD_ERROR", content: null };
-          const intl = outer1_0(outer1_2[22]).intl;
-          obj2[1] = intl.string(outer1_0(outer1_2[22]).t["N/9OFy"]);
+          const intl = closure_1_0(closure_1_2[22]).intl;
+          obj2[1] = intl.string(closure_1_0(closure_1_2[22]).t["N/9OFy"]);
           obj4.open(obj2);
           callback(false);
           c5 = 3;
@@ -500,14 +489,14 @@ export default function NewGroupDMScreen(navigation) {
                 tmp10 = null != closure_0;
               }
               if (tmp10) {
-                tmp10 = "" !== createRTCConnection;
+                tmp10 = "" !== closure_10;
               }
               if (tmp10) {
-                obj1 = outer1_1(outer1_2[13]);
+                obj1 = closure_1_1(closure_1_2[13]);
                 c4 = 3;
                 c5 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = obj1.setName(closure_0, createRTCConnection);
+                obj5[0] = obj1.setName(closure_0, closure_10);
                 return obj5;
               }
             }
@@ -524,7 +513,7 @@ export default function NewGroupDMScreen(navigation) {
           return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp37) {
-        let closure_2 = tmp37;
+        closure_2 = tmp37;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp37;
@@ -554,10 +543,9 @@ export default function NewGroupDMScreen(navigation) {
       obj.isGroupDM();
     }
     const intl2 = options(locationPage[22]).intl;
-    obj = { numMembers: c12, maxMemberLimit: null };
-    obj[1] = outer1_1(locationPage[19])(obj);
+    obj = { numMembers: c12, maxMemberLimit: closure_1_1(locationPage[19])(obj) };
     const formatToPlainStringResult = intl2.formatToPlainString(options(locationPage[22]).t.YUhnoy, obj);
-    let closure_1 = formatToPlainStringResult;
+    closure_1 = formatToPlainStringResult;
     obj = {
       title: "" + stringResult + " (" + formatToPlainStringResult + ")",
       headerTitle(arg0) {
@@ -570,22 +558,22 @@ export default function NewGroupDMScreen(navigation) {
           obj.title = stringResult;
           obj.subtitle = closure_1;
           let str = "mobile-text-heading-primary";
-          if (outer1_13) {
+          if (closure_1_13) {
             str = "text-feedback-critical";
           }
           obj.color = str;
-          return outer2_17(stringResult(locationPage[23]).GenericHeaderTitle, obj);
+          return closure_2_17(stringResult(locationPage[23]).GenericHeaderTitle, obj);
         }
       },
       headerRight(arg0) {
-        if (outer1_8) {
+        if (closure_1_8) {
           let obj = { color: null, size: "small" };
-          obj[0] = outer1_3.button.color;
-          let result = outer2_17(first, obj);
+          obj[0] = closure_1_3.button.color;
+          let result = closure_2_17(first, obj);
         } else {
-          obj = outer1_4;
+          obj = closure_1_4;
           let isGroupDMResult;
-          if (outer1_4 != null) {
+          if (closure_1_4 != null) {
             isGroupDMResult = obj.isGroupDM();
           }
           const getRenderHeaderTextButton = stringResult(locationPage[23]).getRenderHeaderTextButton;
@@ -596,31 +584,31 @@ export default function NewGroupDMScreen(navigation) {
             stringResult = string(t.OYkgVk);
             obj = {};
             const renderHeaderTextButton = getRenderHeaderTextButton(stringResult, stateFromStores(function*() {
-              yield outer1_14();
+              yield closure_1_14();
               return arg1;
             }));
             const merged = Object.assign(arg0);
-            let tmp25 = outer1_13;
-            if (!outer1_13) {
+            let tmp25 = closure_1_13;
+            if (!closure_1_13) {
               let isGroupDMResult1;
               if (obj != null) {
                 isGroupDMResult1 = obj.isGroupDM();
               }
               if (isGroupDMResult1) {
-                isGroupDMResult1 = outer1_6.length <= 0;
+                isGroupDMResult1 = closure_1_6.length <= 0;
               }
               tmp25 = isGroupDMResult1;
             }
             obj.disabled = tmp25;
             result = renderHeaderTextButton(obj);
           } else {
-            const obj1 = {};
+            obj1 = {};
             const renderHeaderTextButton1 = getRenderHeaderTextButton(string(t.CumH4u), stateFromStores(function*() {
-              yield outer1_14();
+              yield closure_1_14();
               return arg1;
             }));
             const merged1 = Object.assign(arg0);
-            obj1.disabled = outer1_13;
+            obj1.disabled = closure_1_13;
             result = renderHeaderTextButton1(obj1);
             const stringResult1 = string(t.CumH4u);
           }
@@ -632,7 +620,7 @@ export default function NewGroupDMScreen(navigation) {
     options.setOptions(obj);
   }, items5);
   const callback1 = obj3.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     callback((arr) => {
       const index = arr.indexOf(id.id);
       const items = [...arr];
@@ -662,12 +650,12 @@ export default function NewGroupDMScreen(navigation) {
   if (isGroupDMResult) {
     obj = { style: null, children: null };
     obj[0] = tmp.instantInviteView;
-    let obj1 = { onItemPressed: null };
+    obj1 = { onItemPressed: null };
     _require = undefined;
     _require = tmp15((arg0) => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+      closure_0 = arg0;
+      c3 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (c4 === 2) {
           c4 = 3;
@@ -695,14 +683,14 @@ export default function NewGroupDMScreen(navigation) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp5;
-                let closure_1 = tmp2;
+                closure_2 = tmp5;
+                closure_1 = tmp2;
                 closure_1 = undefined;
-                if (outer1_15) {
+                if (closure_1_15) {
                   c4 = 3;
                 } else {
-                  outer1_16(true);
-                  let obj1 = outer2_1(locationPage[26]);
+                  closure_1_16(true);
+                  obj1 = closure_2_1(locationPage[26]);
                   c3 = 1;
                   c4 = 1;
                   obj1 = { value: null, done: false };
@@ -721,13 +709,13 @@ export default function NewGroupDMScreen(navigation) {
                 obj2[1] = closure_1;
                 const intl = callback(locationPage[22]).intl;
                 const obj3 = { username: null, link: null };
-                obj3[0] = outer1_5.username;
-                obj3[1] = outer2_1(locationPage[27])(closure_1);
+                obj3[0] = closure_1_5.username;
+                obj3[1] = closure_2_1(locationPage[27])(closure_1);
                 obj2[2] = intl.formatToPlainString(callback(locationPage[22]).t["+zWvOQ"], obj3);
                 obj2[3] = constants.GROUP_DM;
                 callback(obj2);
               }
-              outer1_16(false);
+              closure_1_16(false);
             }
             c4 = 3;
             obj = { value: null, done: true };

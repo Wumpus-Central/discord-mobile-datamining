@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/InGameDMsSetting.tsx
-import noop from "noop";
-import createToggle from "createToggle";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import closure_2 from "noop" /* 19 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -48,6 +48,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/defs/native/InGameDMsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InGameDMsSetting.tsx");
 
 export default createToggle;

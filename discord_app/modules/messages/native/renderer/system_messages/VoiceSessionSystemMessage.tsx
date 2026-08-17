@@ -1,25 +1,23 @@
 // discord_app/modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import { getSortedVoiceSessionParticipants } from "../../../VoiceSessionUtils.tsx";
 import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
 
 const require = arg1;
-const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/VoiceSessionSystemMessage.tsx");
 
 export const createVoiceSessionSystemMessage = function createVoiceSessionSystemMessage(message) {
-  let roleStyle;
   ({ message, roleStyle } = message);
   let _require;
   _require = channel.getChannel(message.channel_id);
-  const tmp3 = getHumanizedCallDuration(message);
+  const tmp3 = getHumanizedCallDurationDefault(message);
   let obj = _getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let obj1 = _getSortedVoiceSessionParticipants;
+  obj1 = _getSortedVoiceSessionParticipants;
   const sortedVoiceSessionParticipants = obj1.getSortedVoiceSessionParticipants(message);
   const mapped = sortedVoiceSessionParticipants.map((user) => {
-    const obj = { user, messageAuthor: null };
-    obj[1] = callback(outer1_2[2]).getUserAuthorWithProcessedColor(user, callback);
+    const obj = { user, messageAuthor: callback(closure_1_2[2]).getUserAuthorWithProcessedColor(user, callback) };
     return obj;
   });
   if (null == tmp3) {

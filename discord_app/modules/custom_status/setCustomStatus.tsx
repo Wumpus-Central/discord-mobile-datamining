@@ -1,21 +1,17 @@
 // discord_app/modules/custom_status/setCustomStatus.tsx
-import { ClearAfterValues } from "StatusTypes";
-import { AnalyticEvents } from "ME";
-import { t } from "../../../_runtime/03975_t.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { getClearAfterDuration } from "utils/getClearAfterDuration.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import tDefault from "t" /* 3975 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import StatusTypes from "StatusTypes" /* 9292 */;
+import getClearAfterDurationDefault from "getClearAfterDuration" /* 9296 */;
 
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
+const ClearAfterValues = StatusTypes.ClearAfterValues;
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/custom_status/setCustomStatus.tsx");
 
 export default function setCustomStatus(arg0) {
-  let _prompt;
-  let analyticsContext;
-  let analyticsLocations;
-  let clearAfter;
-  let createdAtMs;
-  let emojiInfo;
-  let text;
   ({ text, emojiInfo, clearAfter, analyticsContext, createdAtMs, prompt: _prompt, analyticsLocations } = arg0);
   const trimmed = text.trim();
   if (trimmed.length <= 0) {
@@ -35,10 +31,10 @@ export default function setCustomStatus(arg0) {
     str2 = "0";
     if (clearAfter !== ClearAfterValues.DONT_CLEAR) {
       const _String = String;
-      const obj2 = t();
-      const addResult = t().add(getClearAfterDuration(clearAfter), "ms");
-      str2 = String(t().add(getClearAfterDuration(clearAfter), "ms").toDate().getTime());
-      const toDateResult = t().add(getClearAfterDuration(clearAfter), "ms").toDate();
+      const obj2 = tDefault();
+      const addResult = tDefault().add(getClearAfterDurationDefault(clearAfter), "ms");
+      str2 = String(tDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate().getTime());
+      const toDateResult = tDefault().add(getClearAfterDurationDefault(clearAfter), "ms").toDate();
     }
   }
   obj[1] = str2;
@@ -56,9 +52,9 @@ export default function setCustomStatus(arg0) {
   }
   obj[3] = str5;
   if (createdAtMs == null) {
-    const obj5 = t();
-    createdAtMs = t().toDate().getTime();
-    const toDateResult1 = t().toDate();
+    const obj5 = tDefault();
+    createdAtMs = tDefault().toDate().getTime();
+    const toDateResult1 = tDefault().toDate();
   }
   obj[4] = String(createdAtMs);
   const updateSettingResult = CustomStatusSetting2.updateSetting(obj);
@@ -89,6 +85,6 @@ export default function setCustomStatus(arg0) {
   }
   obj[4] = value;
   obj[5] = analyticsLocations;
-  expandEventProperties.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
+  expandEventPropertiesDefault.track(AnalyticEvents.CUSTOM_STATUS_UPDATED, obj);
   return updateSettingResult;
 };

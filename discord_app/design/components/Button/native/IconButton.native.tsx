@@ -1,18 +1,16 @@
 // discord_app/design/components/Button/native/IconButton.native.tsx
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
-import { BaseButton } from "BaseButton.native.tsx";
-import { BaseIconButton } from "BaseIconButton.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import BaseButton from "BaseButton" /* 4752 */;
+import BaseIconButton from "BaseIconButton" /* 8036 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles((arg0) => {
-  const labelPressable = { paddingBottom: Themes.space.PX_4, gap: Themes.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
+  const labelPressable = { paddingBottom: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center", flexGrow: null };
   let num = 0;
   if (arg0) {
     num = 1;
@@ -20,11 +18,7 @@ let closure_5 = createCacheKey.createStyles((arg0) => {
   labelPressable[4] = num;
   return { labelPressable, label: { textAlign: "center" } };
 });
-const forwardRefResult = require("noop").forwardRef((grow) => {
-  let accessibilityHint;
-  let accessibilityLabel;
-  let label;
-  let maxFontSizeMultiplier;
+const forwardRefResult = importAllResult.forwardRef((grow) => {
   ({ label, accessibilityLabel, maxFontSizeMultiplier, accessibilityHint } = grow);
   const merged = Object.assign(grow, Object.create(null));
   const tmp2 = callback3(grow.grow);
@@ -43,7 +37,7 @@ const forwardRefResult = require("noop").forwardRef((grow) => {
     obj.size = "lg";
     obj.maxFontSizeMultiplier = maxFontSizeMultiplier;
     const items = [callback(BaseIconButton.BaseIconButton, obj), ];
-    const obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
+    obj1 = { style: null, variant: "text-xs/medium", color: "interactive-text-default", maxFontSizeMultiplier: null, children: null };
     obj1[0] = tmp2.label;
     obj1[3] = maxFontSizeMultiplier;
     obj1[4] = label;
@@ -61,6 +55,6 @@ const forwardRefResult = require("noop").forwardRef((grow) => {
   }
   return tmp9;
 });
-const result = require("createCacheKey").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Button/native/IconButton.native.tsx");
 
 export const IconButton = forwardRefResult;

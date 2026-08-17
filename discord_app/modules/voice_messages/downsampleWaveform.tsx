@@ -1,9 +1,11 @@
 // discord_app/modules/voice_messages/downsampleWaveform.tsx
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-const result = require("set").fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+
+const result = set.fileFinishedImporting("modules/voice_messages/downsampleWaveform.tsx");
 
 export default function downsampleWaveform(arg0, arg1) {
-  00038__(arg0.length >= arg1, "Waveform smaller than samples");
+  _modDef38(arg0.length >= arg1, "Waveform smaller than samples");
   if (arg0.length === arg1) {
     return arg0;
   } else {

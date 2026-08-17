@@ -1,15 +1,15 @@
 // discord_app/modules/user_profile/ProfileUpdateRequestUtils.tsx
-import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { AssetOriginTypes } from "../profile_customization/ProfilePendingImageTypes.tsx";
-import { getCurrentUserProfile } from "utils/getCurrentUserProfile.tsx";
-const result = require("CollectiblesItemType").fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
+import set from "set" /* 2 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
+import getCurrentUserProfileDefault from "getCurrentUserProfile" /* 10398 */;
 
-export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(outer1_0, id) {
-  let pendingProfileEffect;
-  let pendingProfileFrame;
+const result = set.fileFinishedImporting("modules/user_profile/ProfileUpdateRequestUtils.tsx");
+
+export const getProfileChangesForUpdateRequest = function getProfileChangesForUpdateRequest(closure_1_0, id) {
   let obj = {};
-  if (undefined !== outer1_0.pendingBanner) {
-    const pendingBanner = outer1_0.pendingBanner;
+  if (undefined !== closure_1_0.pendingBanner) {
+    const pendingBanner = closure_1_0.pendingBanner;
     let imageUri;
     if (pendingBanner != null) {
       imageUri = pendingBanner.imageUri;
@@ -18,27 +18,27 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
       imageUri = null;
     }
     obj.banner = imageUri;
-    if (null !== outer1_0.pendingBanner) {
-      let originalMd5 = outer1_0.pendingBanner.originalMd5;
+    if (null !== closure_1_0.pendingBanner) {
+      let originalMd5 = closure_1_0.pendingBanner.originalMd5;
       if (originalMd5 == null) {
         originalMd5 = null;
       }
       obj.bannerOriginalMd5 = originalMd5;
     }
   }
-  if (null != outer1_0.pendingBio) {
-    obj.bio = outer1_0.pendingBio;
+  if (null != closure_1_0.pendingBio) {
+    obj.bio = closure_1_0.pendingBio;
   }
-  if (null != outer1_0.pendingPronouns) {
-    obj.pronouns = outer1_0.pendingPronouns;
+  if (null != closure_1_0.pendingPronouns) {
+    obj.pronouns = closure_1_0.pendingPronouns;
   }
-  if (undefined !== outer1_0.pendingAccentColor) {
-    obj.accent_color = outer1_0.pendingAccentColor;
+  if (undefined !== closure_1_0.pendingAccentColor) {
+    obj.accent_color = closure_1_0.pendingAccentColor;
   }
-  if (undefined !== outer1_0.pendingThemeColors) {
-    obj.theme_colors = outer1_0.pendingThemeColors;
+  if (undefined !== closure_1_0.pendingThemeColors) {
+    obj.theme_colors = closure_1_0.pendingThemeColors;
   }
-  ({ pendingProfileEffect, pendingProfileFrame } = outer1_0);
+  ({ pendingProfileEffect, pendingProfileFrame } = closure_1_0);
   if (undefined === pendingProfileEffect) {
     if (undefined === pendingProfileFrame) {
       obj = {};
@@ -48,7 +48,7 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
     }
     return obj;
   }
-  const tmp5 = getCurrentUserProfile(id);
+  const tmp5 = getCurrentUserProfileDefault(id);
   let collectibles;
   if (tmp5 != null) {
     collectibles = tmp5.collectibles;
@@ -79,16 +79,16 @@ export const getProfileChangesForUpdateRequest = function getProfileChangesForUp
   }
   obj = { collectibles_sku_ids: arr5.map((skuId) => skuId.skuId) };
 };
-export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(outer1_0) {
+export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpdateRequest(closure_1_0) {
   const obj = {};
-  if (undefined !== outer1_0.pendingGlobalName) {
-    obj.globalName = outer1_0.pendingGlobalName;
+  if (undefined !== closure_1_0.pendingGlobalName) {
+    obj.globalName = closure_1_0.pendingGlobalName;
   }
-  if (undefined !== outer1_0.pendingNameplate) {
-    obj.nameplate = outer1_0.pendingNameplate;
+  if (undefined !== closure_1_0.pendingNameplate) {
+    obj.nameplate = closure_1_0.pendingNameplate;
   }
-  if (undefined !== outer1_0.pendingAvatar) {
-    const pendingAvatar = outer1_0.pendingAvatar;
+  if (undefined !== closure_1_0.pendingAvatar) {
+    const pendingAvatar = closure_1_0.pendingAvatar;
     if (null === pendingAvatar) {
       obj.avatar = null;
     } else if (pendingAvatar.assetOrigin === AssetOriginTypes.AssetOriginTypes.ARCHIVED_ASSET) {
@@ -97,11 +97,11 @@ export const getAccountUpdateForUpdateRequest = function getAccountUpdateForUpda
       ({ imageUri: obj.avatar, description: obj.avatarDescription, originalMd5: obj.avatarOriginalMd5 } = pendingAvatar);
     }
   }
-  if (undefined !== outer1_0.pendingAvatarDecoration) {
-    obj.avatarDecoration = outer1_0.pendingAvatarDecoration;
+  if (undefined !== closure_1_0.pendingAvatarDecoration) {
+    obj.avatarDecoration = closure_1_0.pendingAvatarDecoration;
   }
-  if (undefined !== outer1_0.pendingDisplayNameStyles) {
-    obj.displayNameStyles = outer1_0.pendingDisplayNameStyles;
+  if (undefined !== closure_1_0.pendingDisplayNameStyles) {
+    obj.displayNameStyles = closure_1_0.pendingDisplayNameStyles;
   }
   return obj;
 };
@@ -135,10 +135,10 @@ export const getGuildMemberChangesForUpdateRequest = function getGuildMemberChan
   }
   return obj;
 };
-export const getPrimaryGuildChangesForUpdateRequest = function getPrimaryGuildChangesForUpdateRequest(outer1_0) {
+export const getPrimaryGuildChangesForUpdateRequest = function getPrimaryGuildChangesForUpdateRequest(closure_1_0) {
   const obj = {};
-  if (undefined !== outer1_0.pendingPrimaryGuildId) {
-    obj.primaryGuildId = outer1_0.pendingPrimaryGuildId;
+  if (undefined !== closure_1_0.pendingPrimaryGuildId) {
+    obj.primaryGuildId = closure_1_0.pendingPrimaryGuildId;
   }
   return obj;
 };

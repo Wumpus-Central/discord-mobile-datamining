@@ -1,24 +1,17 @@
 // discord_app/modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx
-import _slicedToArray from "_slicedToArray";
-import zustandStore from "zustandStore";
-import setContent from "setContent";
-import { MEDIA_MODAL_KEY } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "setContent" /* 4086 */;
+import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
 
 const require = arg1;
 function _openAppStoreOverlayMediaModal() {
   const self = this;
   let tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let initialIndex;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -54,15 +47,15 @@ function _openAppStoreOverlayMediaModal() {
               c4 = undefined;
               c5 = undefined;
               c6 = undefined;
-              let closure_7;
+              closure_7 = undefined;
               ({ originViewOrOriginLayout: c0, initialIndex } = callback);
               if (initialIndex === undefined) {
                 initialIndex = 0;
               }
               ({ initialSources: c2, analyticsSource: c3, channelId: c4, onGetGamePress: c5, onClose: c6 } = callback);
               closure_7 = Object.assign(tmp45, Object.create(null));
-              let closure_8;
-              let dependencyMap;
+              closure_8 = undefined;
+              dependencyMap = undefined;
               let setMediaViewerSources;
               let MediaViewerAnalytics;
               let initVideoStateStore;
@@ -107,7 +100,7 @@ function _openAppStoreOverlayMediaModal() {
             obj4[1] = c5;
             const result = callback(c2[9]).setMediaModalFooterAction(obj4);
             (function getMeasureInWindowFunction(c0) {
-              let closure_0 = c0;
+              closure_0 = c0;
               if (null != c0) {
                 if ("measureInWindow" in c0) {
                   const measureInWindow = c0.measureInWindow;
@@ -119,11 +112,11 @@ function _openAppStoreOverlayMediaModal() {
                 let size = c0;
                 if (c0 == null) {
                   const obj = { x: 0, y: 0, width: null, height: null };
-                  obj[2] = c0(outer1_2[4]).getWindowDimensions().width;
-                  const obj2 = c0(outer1_2[4]);
-                  obj[3] = c0(outer1_2[4]).getWindowDimensions().height;
+                  obj[2] = c0(closure_1_2[4]).getWindowDimensions().width;
+                  const obj2 = c0(closure_1_2[4]);
+                  obj[3] = c0(closure_1_2[4]).getWindowDimensions().height;
                   size = obj;
-                  const obj3 = c0(outer1_2[4]);
+                  const obj3 = c0(closure_1_2[4]);
                 }
                 arg0(size.x, size.y, size.width, size.height, size.resizeMode);
               };
@@ -155,7 +148,7 @@ function _openAppStoreOverlayMediaModal() {
     iter.next();
     return iter;
   });
-  const _openAppStoreOverlayMediaModal = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -164,7 +157,7 @@ function _openAppStoreOverlayMediaModal() {
   }
   return applyArgumentsResult;
 }
-let result = require("setContent").fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/openAppStoreOverlayMediaModal.tsx");
 
 export const openAppStoreOverlayMediaModal = function openAppStoreOverlayMediaModal(arg0) {
   const self = this;

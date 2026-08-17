@@ -1,18 +1,18 @@
 // discord_app/modules/guild_member_verification/hooks/useOtherGuildJoinRequestsForUser.tsx
-import noop from "noop";
-import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/guild_member_verification/hooks/useOtherGuildJoinRequestsForUser.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useOtherGuildJoinRequestsForUser.tsx");
 
 export const useOtherGuildJoinRequestsForUser = function useOtherGuildJoinRequestsForUser(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const selectedJoinRequestId = guildId.selectedJoinRequestId;
   let stateFromStores;
-  let items = [updateSubmittedGuildJoinRequestTotal];
+  let items = [closure_4];
   const items1 = [guildId, userId];
-  stateFromStores = guildId(selectedJoinRequestId[2]).useStateFromStores(items, () => outer1_4.getRequestsForUser(guildId, userId), items1);
+  stateFromStores = guildId(selectedJoinRequestId[2]).useStateFromStores(items, () => closure_1_4.getRequestsForUser(guildId, userId), items1);
   const items2 = [guildId, userId, stateFromStores];
   const effect = stateFromStores.useEffect(() => {
     if (null == stateFromStores) {

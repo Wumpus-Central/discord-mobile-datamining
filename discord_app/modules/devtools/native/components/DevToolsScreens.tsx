@@ -1,34 +1,35 @@
 // discord_app/modules/devtools/native/components/DevToolsScreens.tsx
-import "LanguageIcon";
-import { jsx } from "DownloadIcon";
-import { FramePreviewOverrideSection } from "../../../collectibles/native/tooling/CollectiblesTool.tsx";
-import { MultiGuildDevTools } from "../../../game_community_upsell/native/GameCommunityUpsellDevTools.tsx";
-import { TestLocaleSelector } from "../../../intl/native/IntlTestingSettingsPage.tsx";
-import { SurveyOverrideInfoActionSheet } from "../../../user_settings/changelog/native/UserSettingsSurveyChangelogOverride.tsx";
-import { SettingsDesignSystemsScreen } from "../../../user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx";
-import { DevToolsAccountLinkingScreen } from "screens/DevToolsAccountLinkingScreen.tsx";
-import { ActionSheetSelector } from "screens/DevToolsActionSheetsScreen.tsx";
-import { showAgeVerificationTestModal } from "screens/DevToolsAgeVerificationScreen.tsx";
-import { CommonProperty } from "screens/DevToolsAnalyticsScreen.tsx";
-import { jsx } from "screens/DevToolsBuildOverrideScreen.tsx";
-import { Select } from "screens/DevToolsComponentsTestingScreen.tsx";
-import { DevToolsPersistedStoresActionSheet } from "screens/DevToolsDataStorageScreen.tsx";
-import { DismissableContentsEmpty } from "screens/DevToolsDismissableContentsScreen.tsx";
-import { effectName } from "screens/DevToolsDisplayNameEffectsBenchmarkScreen.tsx";
-import { UserExperimentDebugView } from "screens/DevToolsExperimentsScreen.tsx";
-import { PoolIdInput } from "screens/DevToolsGeneratedTestUsersScreen.tsx";
-import { getSelectedGuildChannel } from "screens/DevToolsInAppNotificationTestingScreen.tsx";
-import { CacheLogEntry } from "screens/DevToolsLocalMessageCache.tsx";
-import { DevToolsLoggingFlagsScreen } from "screens/DevToolsLoggingFlagsScreen.tsx";
-import { OtaVerificationActionSheet } from "screens/DevToolsOTATestScreen.tsx";
-import { DevToolsPerformanceTestingScreen } from "screens/DevToolsPerformanceTestingScreen.tsx";
-import { DevToolsProfilingScreen } from "screens/DevToolsProfilingScreen.tsx";
-import { handleNewUserOnboarding } from "screens/DevToolsQuickActionsScreen.tsx";
-import { describeServerError } from "screens/DevToolsRevenuePlaygroundScreen.tsx";
-import { DevToolsShopScreen } from "screens/DevToolsShopScreen.tsx";
-import { fuzzySearchToggle } from "screens/DevToolsTogglesScreen.tsx";
+import noopAll from "noop" /* 19 */;
+import UserExperimentDebugView from "UserExperimentDebugView" /* 10991 */;
+import CommonProperty from "CommonProperty" /* 13950 */;
+import jsx2 from "jsx" /* 13954 */;
+import DevToolsLoggingFlagsScreen from "DevToolsLoggingFlagsScreen" /* 13959 */;
+import CacheLogEntry from "CacheLogEntry" /* 13960 */;
+import PoolIdInput from "PoolIdInput" /* 13961 */;
+import DevToolsPersistedStoresActionSheet from "DevToolsPersistedStoresActionSheet" /* 13989 */;
+import SettingsDesignSystemsScreen from "SettingsDesignSystemsScreen" /* 13990 */;
+import DismissableContentsEmpty from "DismissableContentsEmpty" /* 15069 */;
+import MultiGuildDevTools from "MultiGuildDevTools" /* 15073 */;
+import TestLocaleSelector from "TestLocaleSelector" /* 15076 */;
+import OtaVerificationActionSheet from "OtaVerificationActionSheet" /* 15111 */;
+import DevToolsProfilingScreen from "DevToolsProfilingScreen" /* 15114 */;
+import handleNewUserOnboarding from "handleNewUserOnboarding" /* 15117 */;
+import describeServerError from "describeServerError" /* 15140 */;
+import SurveyOverrideInfoActionSheet from "SurveyOverrideInfoActionSheet" /* 15159 */;
+import fuzzySearchToggle from "fuzzySearchToggle" /* 15160 */;
+import showAgeVerificationTestModal from "showAgeVerificationTestModal" /* 15163 */;
+import Select from "Select" /* 15164 */;
+import DevToolsShopScreen from "DevToolsShopScreen" /* 15171 */;
+import FramePreviewOverrideSection from "FramePreviewOverrideSection" /* 15172 */;
+import ActionSheetSelector from "ActionSheetSelector" /* 15174 */;
+import DevToolsAccountLinkingScreen from "DevToolsAccountLinkingScreen" /* 15177 */;
+import _mod15178 from "module_15178" /* 15178 */;
+import getSelectedGuildChannel from "getSelectedGuildChannel" /* 15179 */;
+import effectName from "effectName" /* 15180 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let obj = { analytics: null, buildOverride: null, experiments: null, loggingFlags: null, cacheStats: null, generatedTestUsers: null, dataStorage: null, designSystems: null, dismissibleContent: null, gameCommunityUpsell: null, i18n: null, otatest: null, profiling: null, quickActions: null, revenuePlayground: null, surveyOverride: null, toggles: null, ageVerification: null, components: null, shop: null, shopProductPreview: null, actionSheets: null, accountLinking: null, performanceTesting: null, inAppNotificationTesting: null };
 obj = {
   headerTitle: "Analytics",
@@ -42,7 +43,7 @@ obj = {
   headerTitle: "Build Override",
   Icon: require("RefreshIcon").RefreshIcon,
   render() {
-    return jsx(jsx.default, {});
+    return jsx(jsx2.default, {});
   }
 };
 obj[1] = obj;
@@ -350,14 +351,14 @@ obj[23] = {
   headerTitle: "Performance Testing",
   Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(DevToolsPerformanceTestingScreen.default, {});
+    return jsx(_mod15178.default, {});
   }
 };
 const obj22 = {
   headerTitle: "Performance Testing",
   Icon: require("SpeedometerIcon").SpeedometerIcon,
   render() {
-    return jsx(DevToolsPerformanceTestingScreen.default, {});
+    return jsx(_mod15178.default, {});
   }
 };
 obj[24] = {
@@ -389,7 +390,7 @@ const obj25 = {
     return jsx(effectName.default, {});
   }
 };
-const result = require("ClipboardListIcon").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/DevToolsScreens.tsx");
 
 export const DevToolsScreens = obj;
 export const PerformanceTestingScreens = obj24;

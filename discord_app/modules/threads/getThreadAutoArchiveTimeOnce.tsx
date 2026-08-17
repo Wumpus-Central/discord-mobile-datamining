@@ -1,23 +1,23 @@
 // discord_app/modules/threads/getThreadAutoArchiveTimeOnce.tsx
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { set } from "../../utils/Durations.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import setDefault from "set" /* 687 */;
+import closure_2 from "generateOldThreadCutoff" /* 4772 */;
 
-let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
+let result = require("set").fileFinishedImporting("modules/threads/getThreadAutoArchiveTimeOnce.tsx");
 
 export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
   if (null == threadMetadata.threadMetadata) {
     return 0;
   } else {
     let num3 = 0;
-    const result = threadMetadata.threadMetadata.autoArchiveDuration * set.Millis.MINUTE;
+    const result = threadMetadata.threadMetadata.autoArchiveDuration * setDefault.Millis.MINUTE;
     if (null != threadMetadata.threadMetadata) {
-      let id = generateOldThreadCutoff.lastMessageId(threadMetadata.id);
+      let id = closure_2.lastMessageId(threadMetadata.id);
       if (id == null) {
         id = threadMetadata.id;
       }
       let num = 0;
-      const tmp12Result = DISCORD_EPOCH;
+      const tmp12Result = DISCORD_EPOCHDefault;
       if (null != threadMetadata.lastNonMessageActivityTimestamp) {
         const _Date = Date;
         const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
@@ -30,8 +30,8 @@ export default function getThreadAutoArchiveTimeOnce(threadMetadata) {
         num2 = date1.getTime();
       }
       const _Math = Math;
-      num3 = Math.max(DISCORD_EPOCH.extractTimestamp(id), num, num2);
-      const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id);
+      num3 = Math.max(DISCORD_EPOCHDefault.extractTimestamp(id), num, num2);
+      const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id);
     }
     return num3 + result;
   }
@@ -40,12 +40,12 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
   if (null == threadMetadata.threadMetadata) {
     return 0;
   } else {
-    let id = generateOldThreadCutoff.lastMessageId(threadMetadata.id);
+    let id = closure_2.lastMessageId(threadMetadata.id);
     if (id == null) {
       id = threadMetadata.id;
     }
     let num = 0;
-    const obj = DISCORD_EPOCH;
+    const obj = DISCORD_EPOCHDefault;
     if (null != threadMetadata.lastNonMessageActivityTimestamp) {
       const _Date = Date;
       const date = new Date(threadMetadata.lastNonMessageActivityTimestamp);
@@ -58,6 +58,6 @@ export const getThreadLastActivityTime = function getThreadLastActivityTime(thre
       num2 = date1.getTime();
     }
     const _Math = Math;
-    return Math.max(DISCORD_EPOCH.extractTimestamp(id), num, num2);
+    return Math.max(DISCORD_EPOCHDefault.extractTimestamp(id), num, num2);
   }
 };

@@ -1,15 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import preloadDefault from "preload" /* 5449 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function EligibilityChecklistRow(item) {
   item = item.item;
   const tmp = callback2();
@@ -27,7 +24,7 @@ function EligibilityChecklistRow(item) {
     tmp6Result = tmp6(16914);
   }
   obj[1] = tmp6Result;
-  const items1 = [closure_4(preload, obj), ];
+  const items1 = [closure_4(preloadDefault, obj), ];
   obj = { style: tmp.rowTextColumn, children: null };
   const items2 = [closure_4(Text.Text, { style: tmp.rowLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: item.checked ? item.checkedLabel : item.uncheckedLabel }), closure_4(Text.Text, { variant: "text-sm/normal", color: "interactive-text-default", children: item.description }), ];
   let tmp5Result = null != item.actionHandler && null != item.actionLabel;
@@ -54,9 +51,10 @@ function EligibilityChecklistRow(item) {
   children[1] = tmp5Result;
   return closure_5(closure_6, { children });
 }
+noopAll;
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ row: { paddingHorizontal: 24, paddingTop: 16, flex: 0, flexDirection: "row" }, eligibleRow: { opacity: 0.8 }, rowStatusIcon: { height: 20, width: 20, marginRight: 16 }, rowTextColumn: { flex: 1, flexDirection: "column" }, rowLabel: { marginBottom: 4 }, actionButtonWrapper: { marginTop: 12 }, divider: { marginHorizontal: 24 } });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EligibilityChecklist.tsx");
 
 export default function EligibilityChecklist(items) {
   items = items.items;
@@ -65,7 +63,7 @@ export default function EligibilityChecklist(items) {
   } else {
     const obj = { style: null, children: null };
     obj[0] = tmp;
-    obj[1] = items.map((checkedLabel) => outer1_4(outer1_8, { item: checkedLabel, isLast: arg1 === items.length - 1 }, checkedLabel.checkedLabel));
+    obj[1] = items.map((checkedLabel) => closure_1_4(closure_1_8, { item: checkedLabel, isLast: arg1 === items.length - 1 }, checkedLabel.checkedLabel));
     return callback(View, obj);
   }
 };

@@ -1,11 +1,12 @@
 // discord_app/modules/push_notifications/native/PushNotificationCacheManager.tsx
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "initialize" /* 11585 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
+initializeDefault;
 let prototype = function PushNotificationCacheManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const importDefault = applyArgumentsResult;
+  importDefault = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handleUserUpdate();
@@ -17,7 +18,7 @@ let prototype = function PushNotificationCacheManager() {
       return applyArgumentsResult.handleLogout();
     }
   };
-  const items = [initialize, () => applyArgumentsResult.syncMultiAccountUsers()];
+  const items = [closure_2, () => applyArgumentsResult.syncMultiAccountUsers()];
   const items1 = [items];
   applyArgumentsResult.stores = new Map(items1);
   applyArgumentsResult.handleUserUpdate = function handleUserUpdate() {
@@ -40,7 +41,7 @@ let prototype = function PushNotificationCacheManager() {
       } else {
         obj = {};
         const item = validUsers.forEach((id) => {
-          obj = obj(outer1_1[2]);
+          obj = obj(closure_1_1[2]);
           obj[id.id] = obj.getUserTag(id, { identifiable: "always" });
         });
       }
@@ -50,7 +51,7 @@ let prototype = function PushNotificationCacheManager() {
     obj.setMultiAccountUsers(obj);
   };
   applyArgumentsResult.handleLogout = function handleLogout() {
-    const result = applyArgumentsResult(outer1_1[4]).clearPushNotificationLogs();
+    const result = applyArgumentsResult(closure_1_1[4]).clearPushNotificationLogs();
     applyArgumentsResult.handleUserUpdate();
   };
   return applyArgumentsResult;
@@ -58,6 +59,6 @@ let prototype = function PushNotificationCacheManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("nameFromUser").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
+let result = require("set").fileFinishedImporting("modules/push_notifications/native/PushNotificationCacheManager.tsx");
 
 export default prototype;

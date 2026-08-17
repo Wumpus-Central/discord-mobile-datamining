@@ -1,8 +1,10 @@
 // discord_app/modules/custom_status/Constants.tsx
-import { StatusTypes } from "sum";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import nameFromUser from "nameFromUser" /* 4219 */;
 
+const StatusTypes = sum.StatusTypes;
 const frozen = Object.freeze({ MINUTES_30: 1800000, HOURS_1: 3600000, HOURS_4: 14400000, TODAY: "TODAY", DONT_CLEAR: "DONT_CLEAR" });
 let obj = {
   value: StatusTypes.ONLINE,
@@ -268,7 +270,7 @@ const items2 = [
     }
   }
 ];
-const result = require("getSystemLocale").fileFinishedImporting("modules/custom_status/Constants.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/Constants.tsx");
 
 export const STATUS_MAX_LENGTH = 128;
 export const ClearAfterValues = frozen;

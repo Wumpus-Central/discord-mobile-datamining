@@ -1,32 +1,27 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx
-import { StyleSheet } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import importAllResult from "noop";
-import set from "jsxProd";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
-import { set } from "../../../core/native/ReanimatedNativeView.tsx";
-import { animatedComponent } from "../../../visual_effect_view/native/VisualEffectViewAnimated.tsx";
+import useThemeDefault from "useTheme" /* 4310 */;
+import animatedComponentDefault from "animatedComponent" /* 4724 */;
+import setDefault from "set" /* 7190 */;
+import setDefault2 from "set" /* 8125 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { position: "absolute", left: 0, right: 0, bottom: -StyleSheet.hairlineWidth, height: StyleSheet.hairlineWidth };
 obj = { height: StyleSheet.hairlineWidth, opacity: 0.15, backgroundColor: "white" };
 createCacheKey = { height: StyleSheet.hairlineWidth, opacity: 0.8, backgroundColor: "black" };
 let closure_6 = createCacheKey.createStyles({ blur: { position: "absolute", top: 0, left: 0, right: 0 }, strokeContainer: obj, stroke: obj, strokeAlt: createCacheKey, strokeAltLight: { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" } });
-set = set.isAndroid();
+let closure_7 = set.isAndroid();
 let closure_8 = { code: "function VoicePanelHeaderGlassBlurTsx1(){const{shown,IS_ANDROID}=this.__closure;return{opacity:shown.get()?IS_ANDROID?0.7:1:0};}" };
 let closure_9 = { code: "function VoicePanelHeaderGlassBlurTsx2(){const{withSpring,shown}=this.__closure;return{blurAmount:withSpring(shown.get()?0.3:0)};}" };
 let obj2 = { height: StyleSheet.hairlineWidth, opacity: 0.2, backgroundColor: "black" };
 const result = set.fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelHeaderGlassBlur.tsx");
 
-export default require("noop").memo(function HeaderGlassBlur(shown) {
-  let blurStyle;
-  let style;
+export default importAllResult.memo(function HeaderGlassBlur(shown) {
   shown = shown.shown;
   ({ blurStyle, style } = shown);
   const tmp = callback();
@@ -35,21 +30,21 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
     let opacity = 0;
     if (shown.get()) {
       let num2 = 1;
-      if (outer1_7) {
+      if (closure_1_7) {
         num2 = 0.7;
       }
       opacity = num2;
     }
     return { opacity };
   };
-  obj = { shown, IS_ANDROID: set };
+  obj = { shown, IS_ANDROID: closure_7 };
   fn.__closure = obj;
   fn.__workletHash = 3451055086565;
   fn.__initData = closure_8;
   const animatedStyle = obj.useAnimatedStyle(fn);
   let obj2 = shown(4115);
   const fn2 = function p() {
-    let obj = shown(outer1_2[6]);
+    let obj = shown(closure_1_2[6]);
     let num = 0;
     if (shown.get()) {
       num = 0.3;
@@ -62,12 +57,12 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   fn2.__workletHash = 5642055202507;
   fn2.__initData = closure_9;
   const animatedProps = obj2.useAnimatedProps(fn2);
-  const tmp7 = useTheme();
-  const obj1 = { style: items, children: null };
+  const tmp7 = useThemeDefault();
+  obj1 = { style: items, children: null };
   items = [tmp.blur, style, animatedStyle];
   const tmp2 = shown;
-  const tmp9 = set;
-  const tmp11 = animatedComponent;
+  const tmp9 = setDefault2;
+  const tmp11 = animatedComponentDefault;
   let str = "light";
   if (obj6.isThemeDark(tmp7)) {
     str = "dark";
@@ -76,7 +71,7 @@ export default require("noop").memo(function HeaderGlassBlur(shown) {
   const items2 = [closure_4(tmp11, { blurStyle: "ultra-thin", blurTheme: str, style: items1, animatedProps }), ];
   obj2 = { style: tmp.strokeContainer, children: null };
   let tmp6Result = tmp6(7190);
-  const items3 = [closure_4(set, { style: tmp.stroke }), ];
+  const items3 = [closure_4(setDefault, { style: tmp.stroke }), ];
   tmp6Result = tmp6(7190);
   const obj3 = { style: tmp.stroke };
   obj6 = shown(1363);

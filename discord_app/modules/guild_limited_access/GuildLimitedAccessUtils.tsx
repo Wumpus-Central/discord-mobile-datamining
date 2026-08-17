@@ -1,7 +1,9 @@
 // discord_app/modules/guild_limited_access/GuildLimitedAccessUtils.tsx
-import { AbortCodes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessUtils.tsx");
+const AbortCodes = ME.AbortCodes;
+const result = set.fileFinishedImporting("modules/guild_limited_access/GuildLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = 403 === arg0;

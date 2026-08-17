@@ -1,9 +1,9 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuConstants.native.tsx
-import set from "set";
-import { HapticFeedbackTypes } from "HapticFeedbackTypes";
-import set from "set";
+import HapticFeedbackTypes2 from "HapticFeedbackTypes" /* 4343 */;
+import set from "set" /* 500 */;
 
 set = set.isIOS();
+const HapticFeedbackTypes = HapticFeedbackTypes2.HapticFeedbackTypes;
 const result = set.fileFinishedImporting("design/components/ContextMenu/native/ContextMenuConstants.native.tsx");
 
 export const CONTEXT_MENU_LONG_PRESS_DURATION_MS = 300;

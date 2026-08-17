@@ -1,21 +1,20 @@
 // discord_app/modules/notification_center/native/ForYouLoadMore.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import _validate from "_validate";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import noopAll from "noop" /* 19 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_4 from "_validate" /* 4801 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ ActivityIndicator: obj1, View: c3 } = get_ActivityIndicator);
 let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", flexDirection: "row", justifyContent: "center", marginTop: 8, marginBottom: 24, marginHorizontal: 16, height: 42 } });
-const result = require("_validate").fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
+const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouLoadMore.tsx");
 
 export const ForYouLoadMore = function ForYouLoadMore(onPressLoad) {
   let obj = defaultAreStatesEqual;
-  const items = [_validate];
+  const items = [closure_4];
   obj = { style: callback().container, children: null };
   if (obj.useStateFromStores(items, () => loading.loading)) {
     let tmp4Result = tmp4(closure_2, {});

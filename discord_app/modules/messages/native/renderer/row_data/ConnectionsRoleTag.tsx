@@ -1,22 +1,25 @@
 // discord_app/modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx
-import { processColor } from "get ActivityIndicator";
-import { DEFAULT_ROLE_COLOR_HEX } from "ME";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { int2hslRaw } from "../../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import ThemesDefault from "Themes" /* 712 */;
 
-const result = require("Themes").fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
+const processColor = get_ActivityIndicator.processColor;
+const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/ConnectionsRoleTag.tsx");
 
 export const createConnectionsRoleTag = function createConnectionsRoleTag(merged) {
   let colorString = merged.colorString;
   if (colorString == null) {
     colorString = DEFAULT_ROLE_COLOR_HEX;
   }
-  let PRIMARY_630 = Themes.unsafe_rawColors.WHITE;
+  let PRIMARY_630 = ThemesDefault.unsafe_rawColors.WHITE;
   let obj = int2hslRaw;
   const hex2intResult = obj.hex2int(colorString);
   const tmp = importDefault;
   if (obj2.getDarkness(hex2intResult) < 0.3) {
-    PRIMARY_630 = tmp(712).unsafe_rawColors.PRIMARY_630;
+    PRIMARY_630 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
   }
   obj = { id: merged.id, name: merged.name, backgroundColor: processColor(colorString), iconColor: processColor(PRIMARY_630) };
   return obj;

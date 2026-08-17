@@ -1,20 +1,20 @@
 // discord_app/modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx");
 
 export default function useHasEnhancedRoleColors(arg0) {
   const _require = arg0;
-  const items = [createGuildRecordFromRust];
+  const items = [closure_2];
   return _initialize.useStateFromStores(items, () => {
-    const guild = outer1_2.getGuild(closure_0);
+    const guild = closure_1_2.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
-      hasItem = features.has(outer1_3.ENHANCED_ROLE_COLORS);
+      hasItem = features.has(closure_1_3.ENHANCED_ROLE_COLORS);
     }
     return hasItem;
   });
@@ -34,13 +34,13 @@ export const getHasEnhancedRoleColors = function getHasEnhancedRoleColors(guildI
 };
 export const useHasEnhancedRoleColorsForRole = function useHasEnhancedRoleColorsForRole(guildId, role) {
   const _require = guildId;
-  const items = [createGuildRecordFromRust];
+  const items = [closure_2];
   return _initialize.useStateFromStores(items, () => {
-    const guild = outer1_2.getGuild(closure_0);
+    const guild = closure_1_2.getGuild(closure_0);
     let hasItem = null != guild;
     if (hasItem) {
       const features = guild.features;
-      hasItem = features.has(outer1_3.ENHANCED_ROLE_COLORS);
+      hasItem = features.has(closure_1_3.ENHANCED_ROLE_COLORS);
     }
     return hasItem;
   });

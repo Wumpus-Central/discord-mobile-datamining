@@ -1,5 +1,5 @@
 // discord_app/modules/application_storefront/storefrontMessageEmbedCodedLink.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/application_storefront/storefrontMessageEmbedCodedLink.tsx");
 

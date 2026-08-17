@@ -1,16 +1,18 @@
 // discord_app/modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../design/void/native.tsx";
+import setDefault from "set" /* 687 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import preloadDefault from "preload" /* 5449 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function Emoji(url) {
   url = url.url;
-  const tmp = createCacheKey();
+  const tmp = callback();
   if ("" !== url) {
     let obj = { resizeMode: "contain", style: null, source: null };
     const items = [tmp.imageEmoji];
@@ -18,7 +20,7 @@ function Emoji(url) {
     obj = { uri: null };
     obj[0] = url;
     obj[2] = obj;
-    let tmp5 = jsx(preload, { uri: null });
+    let tmp5 = jsx(preloadDefault, { uri: null });
   } else {
     obj = { style: null, allowFontScaling: false, children: null };
     const items1 = [tmp.textEmoji];
@@ -28,24 +30,20 @@ function Emoji(url) {
   }
   return tmp5;
 }
-let closure_7 = 6 * require("set").Millis.SECOND;
-let closure_8 = 2 * require("set").Millis.SECOND;
+let closure_7 = 6 * setDefault.Millis.SECOND;
+let closure_8 = 2 * setDefault.Millis.SECOND;
 createCacheKey = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.round, position: "absolute", right: 16, top: 16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round, position: "absolute", right: 16, top: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { right: "auto", left: 16 };
 createCacheKey[2] = { padding: 12 };
 createCacheKey[3] = { fontSize: 32, lineHeight: 38, alignContent: "center", justifyContent: "center", display: "flex", width: 32, height: 32 };
 createCacheKey[4] = { width: 32, height: 32 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function AnimatedEffectEmojiTsx1(){const{withSequence,withTiming,ANIMATION_ROTATION_DEG,withDelay,useReducedMotion,STANDARD_EASING}=this.__closure;const rotate=withSequence(withTiming(ANIMATION_ROTATION_DEG+\"deg\",{duration:0}),withDelay(100,withTiming('0deg',{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));const scale=withSequence(withTiming(0,{duration:0}),withDelay(100,withTiming(1,{duration:useReducedMotion?0:300,easing:STANDARD_EASING})));return{transform:[{scale:scale},{rotate:rotate}]};}" };
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_channel_effects/native/AnimatedEffectEmoji.tsx");
 
 export default function AnimatedEffectEmoji(onComplete) {
-  let emoji;
-  let hasNotch;
-  let sentAt;
-  let voiceChannelEffect;
   ({ voiceChannelEffect, hasNotch } = onComplete);
   if (hasNotch === undefined) {
     hasNotch = false;
@@ -53,14 +51,14 @@ export default function AnimatedEffectEmoji(onComplete) {
   onComplete = onComplete.onComplete;
   sentAt = undefined;
   let stateFromStores;
-  const tmp = createCacheKey();
+  const tmp = callback();
   ({ emoji, sentAt } = voiceChannelEffect);
   let obj = onComplete(stateFromStores[9]);
-  let items = [maybeApplyNoTextColorForLightCustomTheme];
+  let items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const items1 = [sentAt, onComplete.userId, onComplete];
   const effect = React.useEffect(() => {
-    if (Date.now() - sentAt >= outer1_8) {
+    if (Date.now() - sentAt >= closure_1_8) {
       if (timeout != null) {
         tmp2();
       }
@@ -70,7 +68,7 @@ export default function AnimatedEffectEmoji(onComplete) {
         if (closure_0 != null) {
           tmp();
         }
-      }, outer1_7);
+      }, closure_1_7);
     }
     return () => {
       if (null != closure_0) {
@@ -83,16 +81,16 @@ export default function AnimatedEffectEmoji(onComplete) {
   class N {
     constructor() {
       tmp = onComplete;
-      tmp2 = useStateFromStores;
-      obj = onComplete(useStateFromStores[10]);
-      obj2 = onComplete(useStateFromStores[11]);
+      tmp2 = closure_2;
+      obj = onComplete(closure_2[10]);
+      obj2 = onComplete(closure_2[11]);
       withTimingResult = obj2.withTiming("-120deg", { duration: 0 });
-      obj3 = onComplete(useStateFromStores[10]);
-      obj4 = onComplete(useStateFromStores[11]);
+      obj3 = onComplete(closure_2[10]);
+      obj4 = onComplete(closure_2[11]);
       num = 300;
       num2 = 300;
-      tmp4 = useStateFromStores;
-      if (useStateFromStores) {
+      tmp4 = closure_2;
+      if (closure_2) {
         num2 = 0;
       }
       obj = { duration: num2, easing: tmp(tmp2[8]).STANDARD_EASING };
@@ -132,7 +130,7 @@ export default function AnimatedEffectEmoji(onComplete) {
     obj = { style: null, children: null };
     items2[3] = hasNotch;
     obj[0] = items2;
-    let obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.voiceChannelEffectEmoji;
     let obj2 = { url: null, surrogates: null };
     tmp2Result = tmp2(tmp3[12]);

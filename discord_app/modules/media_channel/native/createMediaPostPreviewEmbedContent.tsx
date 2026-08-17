@@ -1,20 +1,20 @@
 // discord_app/modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx
-import get_ActivityIndicator from "MAX_THUMBNAIL_COUNT";
-import getUserAgnosticState from "getUserAgnosticState";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getMediaPostEmbed from "getMediaPostEmbed";
-import { FetchState } from "getMediaPostEmbed";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { formatUsernameOnClick } from "../../messages/native/renderer/system_messages/formatUsernameOnClick.tsx";
-import { getMediaPostEmbedCommonData } from "../MediaPostEmbedUtils.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getMediaPostEmbedCommonData from "getMediaPostEmbedCommonData" /* 4982 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import getMediaPostEmbed from "getMediaPostEmbed" /* 10639 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "getUserAgnosticState" /* 4737 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "handleConnectionOpen" /* 4197 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "getMediaPostEmbed" /* 10639 */;
 
-let c3;
-let c4;
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx");
+const FetchState = getMediaPostEmbed.FetchState;
+let result = set.fileFinishedImporting("modules/media_channel/native/createMediaPostPreviewEmbedContent.tsx");
 
 export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
   let flag = arg3;
@@ -67,23 +67,23 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 const intl6 = tmp(1236).intl;
                 obj = { username: null, usernameOnClick: null, channelName: null };
                 obj[0] = mediaPostEmbedCommonData.authorName;
-                const obj1 = { userId: null, message: null, author: null, roleStyle: null, messageChannelId: null };
+                obj1 = { userId: null, message: null, author: null, roleStyle: null, messageChannelId: null };
                 obj1[0] = user.id;
                 obj1[1] = arg0;
                 obj1[2] = userAuthorWithProcessedColor;
                 obj1[3] = arg1;
                 obj1[4] = mediaPostEmbedCommonData.threadId;
-                obj[1] = formatUsernameOnClick(obj1);
+                obj[1] = formatUsernameOnClickDefault(obj1);
                 obj[2] = mediaPostEmbedCommonData.channelName;
                 let formatToPartsResult = intl6.formatToParts(tmp(1236).t.mCytFr, obj);
                 const tmpResult1 = tmp(8185);
               }
               if (false === mediaPostEmbedCommonData.canAccess) {
-                let tmp11 = callback(Themes.unsafe_rawColors.TEAL_430);
+                let tmp11 = callback(ThemesDefault.unsafe_rawColors.TEAL_430);
                 let tmp10 = importDefault;
               } else {
                 tmp10 = importDefault;
-                tmp11 = callback(Themes.unsafe_rawColors.BRAND_500);
+                tmp11 = callback(ThemesDefault.unsafe_rawColors.BRAND_500);
               }
               let isAnimatedImageUrlResult = null != mediaPostEmbedCommonData.coverImage;
               if (isAnimatedImageUrlResult) {
@@ -102,7 +102,7 @@ export default function createMediaPostPreviewEmbedContent(arg0, arg1, url) {
                 obj2.ctaButtonColor = tmp11;
                 return obj2;
               } else {
-                let value = getUserAgnosticState.get("obscure_blur_effect_explicit_content_enabled");
+                let value = closure_5.get("obscure_blur_effect_explicit_content_enabled");
                 if (!value) {
                   value = obj7.get("obscure_blur_effect_gore_content_enabled");
                 }

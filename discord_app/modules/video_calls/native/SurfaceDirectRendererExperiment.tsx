@@ -1,13 +1,13 @@
 // discord_app/modules/video_calls/native/SurfaceDirectRendererExperiment.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ApexExperiment from "ApexExperiment";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enableSurfaceDirectRenderer: true };
 let closure_3 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-surface-direct-renderer", defaultConfig: { enableSurfaceDirectRenderer: false }, variations: ApexExperiment });
-const result = require("initialize").fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/SurfaceDirectRendererExperiment.tsx");
 
 export const ANDROID_SURFACE_DIRECT_RENDERER_EXPERIMENT = "2026-03-surface-direct-renderer";
 export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirectRendererExperimentEnabled() {
@@ -15,8 +15,8 @@ export const isSurfaceDirectRendererExperimentEnabled = function isSurfaceDirect
 };
 export const useSurfaceDirectRendererExperiment = function useSurfaceDirectRendererExperiment(userId, location) {
   const _require = userId;
-  const items = [fetchFingerprint];
+  const items = [closure_2];
   const items1 = [userId];
   const obj = _initialize;
-  return null != userId && !_initialize.useStateFromStores(items, () => closure_0 === outer1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
+  return null != userId && !_initialize.useStateFromStores(items, () => closure_0 === closure_1_2.getId(), items1) && closure_3.useConfig(location).enableSurfaceDirectRenderer;
 };

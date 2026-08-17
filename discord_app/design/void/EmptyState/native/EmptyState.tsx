@@ -1,32 +1,26 @@
 // discord_app/design/void/EmptyState/native/EmptyState.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AccessibilityAnnouncer } from "../../../shared.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: obj1, Image: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, emptyImage: null, emptyTitle: null, emptyBody: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 36, paddingBottom: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, maxWidth: 300, maxHeight: 200 };
 createCacheKey[2] = { marginTop: 20, textTransform: "uppercase" };
 createCacheKey[3] = { textAlign: "center", marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/void/EmptyState/native/EmptyState.tsx");
 
 export default function EmptyState(Illustration) {
-  let body;
-  let bodyStyle;
-  let children;
-  let title;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   AccessibilityAnnouncer;
   if (null != Illustration.Illustration) {
     let obj = { accessible: false, importantForAccessibility: "no", accessibilityRole: "none", resizeMode: "contain", style: null };
@@ -48,7 +42,7 @@ export default function EmptyState(Illustration) {
     tmp6 = null != Illustration.lightSource && null != Illustration.darkSource;
   }
   ({ body, title } = Illustration);
-  const obj1 = { style: items2, accessible: true, children: null };
+  obj1 = { style: items2, accessible: true, children: null };
   items2 = [tmp.container, Illustration.style];
   const items3 = [tmp8Result, , , ];
   let tmp14 = null;

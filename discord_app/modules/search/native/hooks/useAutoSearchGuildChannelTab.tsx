@@ -1,13 +1,13 @@
 // discord_app/modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx
-import noop from "noop";
-import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_4 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
+import closure_3 from "noop" /* 19 */;
+import { SEARCH_TEXT_INPUT_DEBOUNCE_TIME as closure_4 } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11524 */;
 
 const require = arg1;
-let result = require("SearchTokenTypes").fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoSearchGuildChannelTab.tsx");
 
 export const useAutoSearchGuildChannelTab = function useAutoSearchGuildChannelTab(searchContext, arg1) {
-  let closure_0 = searchContext;
-  let closure_1 = arg1;
+  closure_0 = searchContext;
+  closure_1 = arg1;
   const items = [searchContext];
   const callback = React.useCallback((arg0) => {
     let obj = searchContext(callback[2]);
@@ -31,12 +31,12 @@ export const useAutoSearchGuildChannelTab = function useAutoSearchGuildChannelTa
   const effect1 = React.useEffect(() => {
     if (!callback) {
       const obj = searchContext(callback[4]);
-      const debounceResult = searchContext(callback[4]).debounce(callback, outer1_4);
+      const debounceResult = searchContext(callback[4]).debounce(callback, closure_1_4);
       return callback(callback[5]).subscribeTextInputValue(searchContext, debounceResult, true);
     }
   }, items2);
   const items3 = [searchContext];
   const effect2 = React.useEffect(() => () => {
-    const result = outer1_1(outer1_2[3]).cleanupGuildChannelTab(closure_0);
+    const result = closure_1_1(closure_1_2[3]).cleanupGuildChannelTab(closure_0);
   }, items3);
 };

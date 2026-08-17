@@ -1,13 +1,13 @@
 // discord_app/lib/websocketTelemetryHook.android.tsx
-const result = require("set").fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("lib/websocketTelemetryHook.android.tsx");
 
 export const installWebsocketTelemetryHook = function installWebsocketTelemetryHook(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   function handleMessage(arg0, str) {
     const obj = {};
     const tmp = (function sanitizeUrl(arg0) {
-      let hostname;
-      let pathname;
       try {
         const _URL = URL;
         const uRL = new URL(arg0);
@@ -130,7 +130,7 @@ export const installWebsocketTelemetryHook = function installWebsocketTelemetryH
               if (data != null) {
                 data = data.data;
               }
-              outer1_2(str, data);
+              closure_1_2(str, data);
             });
           }
           return obj;

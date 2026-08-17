@@ -1,13 +1,13 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildResetAction.tsx
-import noop from "noop";
-import handleConnectionOpen from "handleConnectionOpen";
-import { Routes } from "ME";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { useFavoritesAccess } from "../FavoritesHooks.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
+import messagesProxyDefault from "messagesProxy" /* 3079 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import { Routes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildResetAction.tsx");
 
 export default function useFavoritesGuildResetAction() {
   const DeveloperMode = explicitContentFromProto.DeveloperMode;
@@ -26,9 +26,9 @@ export default function useFavoritesGuildResetAction() {
   }
   obj = { isAvailable: hasAccess, label: null, subLabel: null, perform: null };
   const intl = tmp(1236).intl;
-  obj[1] = intl.string(messagesProxy.YkET6R);
+  obj[1] = intl.string(messagesProxyDefault.YkET6R);
   const intl2 = tmp(1236).intl;
-  obj[2] = intl2.string(messagesProxy.ZzcwNk);
+  obj[2] = intl2.string(messagesProxyDefault.ZzcwNk);
   obj[3] = callback;
   return obj;
 };

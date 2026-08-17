@@ -1,32 +1,32 @@
 // discord_app/modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import reset from "reset";
-import emitChanges from "emitChanges";
-import { PremiumTypes } from "GuildFeatures";
-import { AnalyticsObjectTypes } from "ME";
-import { context } from "../../../../app_analytics/useAnalyticsLocations.tsx";
+import contextDefault from "context" /* 7139 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "reset" /* 4045 */;
+import closure_7 from "emitChanges" /* 7421 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { AnalyticsObjectTypes } from "ME" /* 676 */;
 
 const require = arg1;
-let result = require("reset").fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
 
 export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) {
-  let closure_0 = arg0;
-  const importDefault = arg1;
-  let closure_2 = arg2;
-  const dependencyMap = arg3;
+  closure_0 = arg0;
+  importDefault = arg1;
+  closure_2 = arg2;
+  dependencyMap = arg3;
   let items = arg4;
   if (arg4 === undefined) {
     items = [];
   }
   let callback;
   let analyticsLocations;
-  let reset;
+  closure_6 = undefined;
   let onPress;
   const loading = callback(analyticsLocations.useState(false), 2);
   callback = loading[1];
-  analyticsLocations = context(items).analyticsLocations;
-  reset = analyticsLocations.useRef(0);
+  analyticsLocations = contextDefault(items).analyticsLocations;
+  closure_6 = analyticsLocations.useRef(0);
   const items1 = [arg2, analyticsLocations, arg1, arg0, arg3];
   onPress = analyticsLocations.useCallback(() => {
     const premiumTypeSubscription = ref.getPremiumTypeSubscription(false);
@@ -44,10 +44,10 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, arg2, arg3) 
           obj = { analyticsLocation: null, analyticsLocations: null, premiumType: null };
           obj = { page: null, objectType: null };
           obj[0] = closure_2;
-          obj[1] = outer1_9.BUY;
+          obj[1] = closure_1_9.BUY;
           obj[0] = obj;
           obj[1] = analyticsLocations;
-          obj[2] = callback ? outer1_8.TIER_0 : outer1_8.TIER_2;
+          obj[2] = callback ? closure_1_8.TIER_0 : closure_1_8.TIER_2;
           callback2(7393)(obj, dependencyMap);
         }
       }

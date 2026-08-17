@@ -1,29 +1,24 @@
 // discord_app/modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { useOtherGuildJoinRequestsForUser } from "../../hooks/useOtherGuildJoinRequestsForUser.tsx";
-import { MAX_RESULTS_PER_PAGE } from "../../MemberVerificationTypes.tsx";
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ApplicationStatusIcon(status) {
   status = status.status;
   if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.APPROVED === status) {
     let obj = { size: "sm", color: null, secondaryColor: null };
-    obj[1] = Themes.colors.STATUS_POSITIVE_BACKGROUND;
-    obj[2] = Themes.colors.STATUS_POSITIVE_TEXT;
+    obj[1] = ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND;
+    obj[2] = ThemesDefault.colors.STATUS_POSITIVE_TEXT;
     return callback(tmp(4335).CircleCheckIcon, obj);
   } else if (tmp(4200).GuildJoinRequestApplicationStatuses.REJECTED === status) {
     obj = { size: "sm", color: null, secondaryColor: null };
-    obj[1] = Themes.colors.ICON_FEEDBACK_CRITICAL;
-    obj[2] = Themes.colors.WHITE;
+    obj[1] = ThemesDefault.colors.ICON_FEEDBACK_CRITICAL;
+    obj[2] = ThemesDefault.colors.WHITE;
     return callback(tmp(7341).CircleXIcon, obj);
   } else {
     return null;
@@ -31,18 +26,15 @@ function ApplicationStatusIcon(status) {
 }
 let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let obj = { label: { marginHorizontal: 16, marginBottom: 8 }, container: null, row: null, divider: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: require("Themes").radii.md };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: ThemesDefault.radii.md };
 obj[1] = obj;
 obj[2] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 16 };
-createCacheKey = { width: "100%", height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[3] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
-  let guildId;
-  let selectedJoinRequestId;
-  let userId;
   let _require;
   ({ guildId, userId, selectedJoinRequestId } = arg0);
   const tmp = callback3();
@@ -57,34 +49,34 @@ const memoResult = importAllResult.memo((arg0) => {
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["hxa+G3"]);
     let items = [callback(tmp2(4734).Text, obj), ];
-    let obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.container;
     obj1[1] = otherGuildJoinRequestsForUser.map((createdAt) => {
-      const _undefined = createdAt;
+      const lib = createdAt;
       let tmp2 = arg1 > 0;
       if (tmp2) {
         let obj = { style: null };
-        obj[0] = _undefined.divider;
-        tmp2 = outer1_6(outer1_5, obj);
+        obj[0] = lib.divider;
+        tmp2 = closure_1_6(closure_1_5, obj);
       }
       obj = { children: null };
       const items = [tmp2, ];
       obj = {
         accessibilityRole: "button",
-        style: _undefined.row,
+        style: lib.row,
         onPress() {
-          return outer1_1(outer1_2[11])(closure_0);
+          return closure_1_1(closure_1_2[11])(closure_0);
         },
         children: null
       };
-      const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
-      const obj5 = _undefined(outer1_2[12]);
+      obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
+      const obj5 = lib(closure_1_2[12]);
       obj1[2] = obj5.dateFormat(new Date(createdAt.createdAt), "LL");
-      const items1 = [outer1_6(_undefined(outer1_2[9]).Text, obj1), outer1_6(outer1_10, { status: createdAt.applicationStatus })];
+      const items1 = [closure_1_6(lib(closure_1_2[9]).Text, obj1), closure_1_6(closure_1_10, { status: createdAt.applicationStatus })];
       obj[3] = items1;
-      items[1] = outer1_7(outer1_4, obj);
+      items[1] = closure_1_7(closure_1_4, obj);
       obj[0] = items;
-      return outer1_7(outer1_3.Fragment, obj, createdAt.joinRequestId);
+      return closure_1_7(closure_1_3.Fragment, obj, createdAt.joinRequestId);
     });
     items[1] = callback(closure_5, obj1);
     obj[0] = items;
@@ -92,6 +84,6 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   return tmp4;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestOtherApplications.tsx");
 
 export default memoResult;

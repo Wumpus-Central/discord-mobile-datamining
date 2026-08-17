@@ -1,23 +1,18 @@
 // discord_app/modules/replies/native/replyToMessage.tsx
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getState from "getState";
-import { AnalyticEvents } from "ME";
-import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { handleEdit } from "../../messages/native/long_press/LongPressMessageActionSheetUtils.tsx";
-import { createPendingReply } from "../PendingReplyActionCreators.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import handleEdit from "handleEdit" /* 10857 */;
+import createPendingReply from "createPendingReply" /* 10859 */;
+import closure_3 from "initialize" /* 7435 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "getState" /* 7434 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("getState").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/replies/native/replyToMessage.tsx");
 
 export default function longPressMessageHandleReply(arg0) {
-  let actionSource;
-  let channel;
-  let chatInputRef;
-  let invertible;
-  let message;
   ({ message, channel, chatInputRef, actionSource, invertible } = arg0);
   if (invertible === undefined) {
     invertible = false;
@@ -28,13 +23,13 @@ export default function longPressMessageHandleReply(arg0) {
     let obj = { message_id: null, channel_id: null, guild_id: null, context_action: "edit", reason: null, is_own_message: null };
     obj[0] = message.id;
     ({ id: obj11[1], guild_id: obj11[2] } = channel);
-    const obj10 = expandEventProperties;
+    const obj10 = expandEventPropertiesDefault;
     obj[4] = handleEdit.getContextBarCancelReason("edit", actionSource);
     obj[5] = null != currentUser && currentUser.id === editingMessage.author.id;
     obj10.track(AnalyticEvents.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj);
     const obj12 = handleEdit;
   }
-  obj = trackInvite;
+  obj = trackInviteDefault;
   obj.endEditMessage(channel.id);
   pendingReply = pendingReply.getPendingReply(channel.id);
   if (invertible) {
@@ -75,7 +70,7 @@ export default function longPressMessageHandleReply(arg0) {
   }
   tmp3Result = tmp3(698);
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(channel.guild_id));
-  const obj1 = { source: actionSource };
+  obj1 = { source: actionSource };
   const obj4 = collectGuildAnalyticsMetadata;
   const tmp7 = require;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(channel));
@@ -90,7 +85,7 @@ export default function longPressMessageHandleReply(arg0) {
     tmp13 = message.author.id !== currentUser2.id;
   }
   const obj5 = collectGuildAnalyticsMetadata;
-  const pendingReply1 = tmp7(10859).createPendingReply({ message, channel, shouldMention: tmp13, source: actionSource });
+  const pendingReply1 = createPendingReply.createPendingReply({ message, channel, shouldMention: tmp13, source: actionSource });
   if (chatInputRef != null) {
     const current3 = chatInputRef.current;
     if (current3 != null) {

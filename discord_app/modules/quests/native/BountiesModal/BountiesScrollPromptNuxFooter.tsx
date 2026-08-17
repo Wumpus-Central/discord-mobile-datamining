@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollPromptNuxFooter.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
+const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles(() => ({ root: { alignItems: "center", gap: 2 }, titleText: { textAlign: "center" }, swipeText: { textAlign: "center", textTransform: "uppercase" } }));
-const result = require("createCacheKey").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollPromptNuxFooter.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollPromptNuxFooter.tsx");
 
 export default function BountiesScrollPromptFooter() {
   const tmp = callback3();

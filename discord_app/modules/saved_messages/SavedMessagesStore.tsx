@@ -1,11 +1,12 @@
 // discord_app/modules/saved_messages/SavedMessagesStore.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Store } from "initialize";
-import set from "SavedMessageSortTypes";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { SavedMessageSortTypes } from "SavedMessagesTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function getTimeSafe(dueAt) {
   if (null == dueAt) {
     return c3;
@@ -17,7 +18,7 @@ function getTimeSafe(dueAt) {
     } catch (err) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Invalid date given (" + tmp + ")");
+      error = new Error("Invalid date given (" + tmp + ")");
       throw error;
     }
   }
@@ -35,12 +36,12 @@ function upsertSavedMessage(saveData) {
   const combined = "" + saveData.channelId + "-" + saveData.messageId;
   if (null == secondaryIndexMap.get(combined)) {
     const _Date = Date;
-    let closure_7 = Date.now();
+    closure_7 = Date.now();
   }
   const result = secondaryIndexMap.set(combined, saveData);
   const messageId = saveData.saveData.messageId;
   const channelId = saveData.saveData.channelId;
-  let set = map.get(channelId);
+  set = map.get(channelId);
   if (set == null) {
     const _Set = Set;
     set = new Set();
@@ -112,11 +113,12 @@ let c7 = 0;
 let set = new Set();
 const set1 = new Set();
 const map = new Map();
+const Store = initializeDefault.Store;
 class SavedMessagesStore extends Store {
 }
 const prototype = SavedMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(mergeGuildAvatar);
+  this.waitFor(closure_2);
 };
 prototype["getSavedMessages"] = function getSavedMessages() {
   return secondaryIndexMap.values(SavedMessageSortTypes.SavedMessageSortTypes.ALL);
@@ -173,18 +175,18 @@ prototype["isMessageReminder"] = function isMessageReminder(id, id2) {
   return null != value && null != value.saveData.dueAt;
 };
 SavedMessagesStore.displayName = "SavedMessagesStore";
-const savedMessagesStore = new SavedMessagesStore(require("dispatcher"), {
+const savedMessagesStore = new SavedMessagesStore(dispatcherDefault, {
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
-    let c6 = true;
+    c6 = true;
   },
   LOGOUT: function handleLogout() {
-    let c6 = true;
+    c6 = true;
     secondaryIndexMap.clear();
     map.clear();
     set1.clear();
   },
   SAVED_MESSAGES_UPDATE: function handleUpdate(arg0) {
-    let c6 = false;
+    c6 = false;
     secondaryIndexMap.clear();
     map.clear();
     set1.clear();
@@ -211,7 +213,7 @@ const savedMessagesStore = new SavedMessagesStore(require("dispatcher"), {
       set1.delete(messageId);
       set.delete(messageId);
       const _Date = Date;
-      let closure_7 = Date.now();
+      closure_7 = Date.now();
     }
     return false;
   },
@@ -287,7 +289,6 @@ const savedMessagesStore = new SavedMessagesStore(require("dispatcher"), {
     return tmp2;
   },
   CHANNEL_UPDATES: function handleChannelUpdates(channels) {
-    let c6;
     channels = channels.channels;
     if (0 === set1.size) {
       return false;

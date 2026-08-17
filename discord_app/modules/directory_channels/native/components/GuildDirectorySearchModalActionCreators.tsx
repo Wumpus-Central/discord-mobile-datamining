@@ -1,14 +1,16 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+
 const GUILD_DIRECTORY_SEARCH_MODAL_KEY = "GUILD_DIRECTORY_SEARCH_MODAL_KEY";
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/directory_channels/native/components/GuildDirectorySearchModalActionCreators.tsx");
 
 export default {
   open(channel) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(11468, dependencyMap.paths), { channel: channel.channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    _modDef5260.pushLazy(asyncRequireImpl(11468, dependencyMap.paths), { channel: channel.channel }, GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   },
   close() {
-    ModalActionCreators.popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);
+    _modDef5260.popWithKey(GUILD_DIRECTORY_SEARCH_MODAL_KEY);
   }
 };

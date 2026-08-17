@@ -1,14 +1,14 @@
 // discord_app/modules/connections/authorizeConnection.native.tsx
-import { GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE as closure_3 } from "OperatorTypes";
-import { PlatformTypes } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import OperatorTypes from "OperatorTypes" /* 5225 */;
 
-const result = require("dispatcher").fileFinishedImporting("modules/connections/authorizeConnection.native.tsx");
+let closure_3 = OperatorTypes.GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE;
+const PlatformTypes = ME.PlatformTypes;
+const result = set.fileFinishedImporting("modules/connections/authorizeConnection.native.tsx");
 
 export default function authorizeConnection(overrideUrl) {
-  let _location;
-  let onClose;
-  let platformType;
   ({ platformType, location: _location, onClose } = overrideUrl);
   let handleModalClose5 = onClose;
   overrideUrl = overrideUrl.overrideUrl;
@@ -30,7 +30,7 @@ export default function authorizeConnection(overrideUrl) {
         if (handleModalClose5 != null) {
           tmp();
         }
-        dispatcher.unsubscribe("MODAL_POP", handleModalClose5);
+        dispatcherDefault.unsubscribe("MODAL_POP", handleModalClose5);
       }
       handleModalClose5 = handleModalClose;
       const subscription = tmp23(709).subscribe("MODAL_POP", handleModalClose);
@@ -51,7 +51,7 @@ export default function authorizeConnection(overrideUrl) {
               if (handleModalClose5 != null) {
                 tmp();
               }
-              dispatcher.unsubscribe("MODAL_POP", handleModalClose5);
+              dispatcherDefault.unsubscribe("MODAL_POP", handleModalClose5);
             };
             handleModalClose5 = handleModalClose4;
             const subscription1 = tmp15(709).subscribe("MODAL_POP", handleModalClose4);
@@ -71,7 +71,7 @@ export default function authorizeConnection(overrideUrl) {
               if (handleModalClose5 != null) {
                 tmp();
               }
-              dispatcher.unsubscribe("MODAL_POP", handleModalClose5);
+              dispatcherDefault.unsubscribe("MODAL_POP", handleModalClose5);
             };
             handleModalClose5 = handleModalClose3;
             const subscription2 = tmp10(709).subscribe("MODAL_POP", handleModalClose3);
@@ -98,7 +98,7 @@ export default function authorizeConnection(overrideUrl) {
                 if (handleModalClose5 != null) {
                   tmp();
                 }
-                dispatcher.unsubscribe("MODAL_POP", handleModalClose5);
+                dispatcherDefault.unsubscribe("MODAL_POP", handleModalClose5);
               };
               handleModalClose5 = handleModalClose2;
               const subscription3 = tmp28(709).subscribe("MODAL_POP", handleModalClose2);
@@ -108,10 +108,10 @@ export default function authorizeConnection(overrideUrl) {
             if (null != overrideUrl) {
               if (platformType === closure_3) {
                 let obj2 = handleModalClose5(8775);
-                const obj1 = { shouldConfirm: true, href: null, onConfirm: null };
+                obj1 = { shouldConfirm: true, href: null, onConfirm: null };
                 obj1[1] = overrideUrl;
                 obj1[2] = function onConfirm() {
-                  overrideUrl(outer1_2[13]).openURL(overrideUrl);
+                  overrideUrl(closure_1_2[13]).openURL(overrideUrl);
                 };
                 obj2.handleClick(obj1);
               }
@@ -144,7 +144,7 @@ export default function authorizeConnection(overrideUrl) {
         if (handleModalClose5 != null) {
           tmp();
         }
-        dispatcher.unsubscribe("MODAL_POP", handleModalClose5);
+        dispatcherDefault.unsubscribe("MODAL_POP", handleModalClose5);
       };
       const subscription4 = tmp19(709).subscribe("MODAL_POP", handleModalClose5);
       const tmp19Result = tmp19(709);

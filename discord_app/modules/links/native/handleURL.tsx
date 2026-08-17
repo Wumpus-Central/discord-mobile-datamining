@@ -1,8 +1,9 @@
 // discord_app/modules/links/native/handleURL.tsx
-import LinkingModule from "LinkingModule.tsx";
-import { Linking } from "handleSupportedURL";
-import setContent from "setContent";
-import { WebBrowserType } from "ME";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Linking } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "setContent" /* 4086 */;
+import { WebBrowserType } from "ME" /* 676 */;
 
 const require = arg1;
 function sanitizeURLPart(str) {
@@ -15,12 +16,12 @@ function sanitizeURLPart(str) {
 function _handleURL() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_7 = 0;
+    c8 = 0;
+    c6 = 0;
     let iter = (function*(arg0, arg1) {
       if (v0 === 2) {
         v0 = 3;
@@ -52,7 +53,7 @@ function _handleURL() {
               let flag2 = tmp5;
               let flag;
               flag2 = undefined;
-              let obj1 = flag;
+              obj1 = flag;
               if (flag === undefined) {
                 obj1 = {};
               }
@@ -64,11 +65,11 @@ function _handleURL() {
               if (flag2 === undefined) {
                 flag2 = false;
               }
-              let setContent;
+              closure_5 = undefined;
               let payload;
               c7 = undefined;
               v0 = undefined;
-              let closure_9;
+              closure_9 = undefined;
               openInBrowser = function openInBrowser() {
                 if (null != obj.sanitizeUrl(lib)) {
                   let SAFARI = constants.SAFARI;
@@ -97,8 +98,8 @@ function _handleURL() {
                   if (constants.IN_APP === SAFARI) {
                     const result = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.IN_APP);
                     result.catch(() => {
-                      const intl = outer1_0(outer1_2[11]).intl;
-                      outer1_0(outer1_2[10]).presentFailedToast("" + intl.string(outer1_0(outer1_2[11]).t.HryVrx) + " " + closure_0);
+                      const intl = closure_1_0(closure_1_2[11]).intl;
+                      closure_1_0(closure_1_2[10]).presentFailedToast("" + intl.string(closure_1_0(closure_1_2[11]).t.HryVrx) + " " + closure_0);
                     });
                     const obj7 = lib(tmp2[12]);
                     let isIOSResult = lib(tmp2[13]).isIOS();
@@ -113,8 +114,8 @@ function _handleURL() {
                   } else if (tmp5.CHROME === SAFARI) {
                     const result1 = lib(tmp2[12]).browserManagerOpenUrl(lib, tmp5.CHROME);
                     result1.catch(() => {
-                      const intl = outer1_0(outer1_2[11]).intl;
-                      outer1_0(outer1_2[10]).presentFailedToast("" + intl.string(outer1_0(outer1_2[11]).t.HryVrx) + " " + closure_0);
+                      const intl = closure_1_0(closure_1_2[11]).intl;
+                      closure_1_0(closure_1_2[10]).presentFailedToast("" + intl.string(closure_1_0(closure_1_2[11]).t.HryVrx) + " " + closure_0);
                     });
                     const obj6 = lib(tmp2[12]);
                   } else {
@@ -142,8 +143,8 @@ function _handleURL() {
                 let obj2 = { value: null, done: true };
                 obj2[0] = arg1;
                 return obj2;
-              } else if (outer1_3) {
-                outer1_4();
+              } else if (closure_1_3) {
+                closure_1_4();
               } else {
                 let obj5 = /^[a-zA-Z0-9+-.]+:/;
                 if (!obj5.test(closure_0)) {
@@ -153,12 +154,12 @@ function _handleURL() {
                 if (obj6.test(closure_0)) {
                   payload = 1;
                   let obj7 = callback(flag[15]);
-                  setContent = obj7.parse(closure_0);
-                  setContent.pathname = v0(setContent.pathname);
-                  setContent.search = v0(setContent.search);
-                  setContent.hash = v0(setContent.hash);
+                  closure_5 = obj7.parse(closure_0);
+                  closure_5.pathname = v0(closure_5.pathname);
+                  closure_5.search = v0(closure_5.search);
+                  closure_5.hash = v0(closure_5.hash);
                   let obj8 = callback(flag[15]);
-                  closure_0 = obj8.format(setContent);
+                  closure_0 = obj8.format(closure_5);
                   payload = 0;
                 }
                 payload = callback(flag[16])(closure_0).payload;
@@ -171,8 +172,8 @@ function _handleURL() {
                     const obj4 = { value: null, done: false };
                     obj4[0] = (function tryHandleUniversalLink(closure_0) {
                       return new Promise((closure_0) => {
-                        const result = outer1_1(outer1_2[5]).tryOpenUrlAsUniversalLink(closure_0);
-                        const obj = outer1_1(outer1_2[5]);
+                        const result = closure_1_1(closure_1_2[5]).tryOpenUrlAsUniversalLink(closure_0);
+                        const obj = closure_1_1(closure_1_2[5]);
                         result.then(() => { ... }).catch(() => { ... });
                       });
                     })(closure_0);
@@ -195,14 +196,12 @@ function _handleURL() {
                   obj5[0] = arg1;
                   return obj5;
                 } else {
-                  c7 = arg1;
-                  if (!c7) {
+                  closure_7 = arg1;
+                  if (!closure_7) {
                     c7 = 4;
                     v0 = 1;
                     obj6 = { value: null, done: false };
                     obj6[0] = (function tryHandleCustomScheme(closure_0) {
-                      let protocol;
-                      let regex;
                       let arr = closure_0;
                       let lib = closure_0;
                       const iter = lib(flag[6]).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
@@ -231,9 +230,9 @@ function _handleURL() {
                         if ("https" !== first) {
                           logger.info("tryHandleCustomScheme", arr);
                           let promise = new Promise((closure_0) => {
-                            const obj = outer1_1(outer1_2[5]);
-                            const tryOpenSchemeResult = outer1_1(outer1_2[5]).tryOpenScheme(closure_0);
-                            outer1_1(outer1_2[5]).tryOpenScheme(closure_0).then(() => { ... }).catch(() => { ... });
+                            const obj = closure_1_1(closure_1_2[5]);
+                            const tryOpenSchemeResult = closure_1_1(closure_1_2[5]).tryOpenScheme(closure_0);
+                            closure_1_1(closure_1_2[5]).tryOpenScheme(closure_0).then(() => { ... }).catch(() => { ... });
                           });
                         }
                         return promise;
@@ -264,7 +263,7 @@ function _handleURL() {
                     obj8[0] = (function tryHandleWhitelistedURL(closure_0) {
                       const lib = closure_0;
                       function _loop(protocol) {
-                        let closure_0 = protocol;
+                        closure_0 = protocol;
                         let num = 0;
                         if (null !== regex.exec(closure_0)) {
                           let obj = { v: null };
@@ -314,7 +313,7 @@ function _handleURL() {
             v0 = 3;
           }
         } catch (tmp53) {
-          setContent = tmp53;
+          closure_5 = tmp53;
           if (tmp4 === payload) {
             v0 = tmp2;
             throw tmp53;
@@ -327,7 +326,7 @@ function _handleURL() {
     iter.next();
     return iter;
   });
-  const _handleURL = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -336,9 +335,9 @@ function _handleURL() {
   }
   return applyArgumentsResult;
 }
-const error = new require("ME")("handleURL");
-let tmp2 = new require("ME")("handleURL");
-let result = require("setContent").fileFinishedImporting("modules/links/native/handleURL.tsx");
+let closure_7 = new timestampDefault("handleURL");
+let tmp2 = new timestampDefault("handleURL");
+let result = require("set").fileFinishedImporting("modules/links/native/handleURL.tsx");
 
 export default function handleURL(arg0, arg1) {
   const self = this;

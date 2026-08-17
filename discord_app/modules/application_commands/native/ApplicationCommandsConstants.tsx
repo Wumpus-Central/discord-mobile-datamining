@@ -1,6 +1,5 @@
 // discord_app/modules/application_commands/native/ApplicationCommandsConstants.tsx
-import set from "set";
-import set from "set";
+import set from "set" /* 500 */;
 
 let num = 56;
 if (set.isAndroid()) {

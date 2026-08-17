@@ -1,20 +1,17 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("jsxProd").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingUseStateFromStores.tsx");
 
 export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUseStateFromStores() {
   let obj = first(str[3]);
   const tmp3 = callback(str2.useState(obj.getUseStateFromStoresDebuggingEnabled()), 2);
   first = tmp3[0];
-  let obj1 = first(str[3]);
+  obj1 = first(str[3]);
   const tmp5 = callback(str2.useState(obj1.getUseStateFromStoresExecutionWindowThresholdMs()), 2);
   str = tmp5[0];
   callback = tmp5[1];
@@ -25,11 +22,11 @@ export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUse
   let obj3 = first(str[3]);
   const tmp7 = callback(str2.useState(obj3.getUseStateFromStoresExecutionCountWarningThreshold()), 2);
   const str3 = tmp7[0];
-  let closure_6 = tmp7[1];
+  closure_6 = tmp7[1];
   let obj4 = first(str[3]);
   const tmp8 = callback(str2.useState(obj4.getUseStateFromStoresSpecificHookFilter()), 2);
   const first1 = tmp8[0];
-  let closure_8 = tmp8[1];
+  closure_8 = tmp8[1];
   const items = [first];
   const effect = str2.useEffect(() => {
     const result = first(str[3]).setUseStateFromStoresDebuggingEnabled(first);
@@ -51,8 +48,7 @@ export const DevToolsProfilingUseStateFromStores = function DevToolsProfilingUse
     const result = first(str[3]).setUseStateFromStoresSpecificHookFilter(first1);
   }, items4);
   const ref = str2.useRef(null);
-  obj = { title: "useStateFromStores Profiling", hasIcons: false, children: null };
-  obj[2] = callback2(first(str[6]).TableSwitchRow, { label: "Enable useStateFromStores profiling", subLabel: "May require app restart after changes.", onValueChange: tmp3[1], value: first });
+  obj = { title: "useStateFromStores Profiling", hasIcons: false, children: callback2(first(str[6]).TableSwitchRow, { label: "Enable useStateFromStores profiling", subLabel: "May require app restart after changes.", onValueChange: tmp3[1], value: first }) };
   const children = [callback2(first(str[5]).TableRowGroup, obj), ];
   let tmp16Result = null;
   if (first) {

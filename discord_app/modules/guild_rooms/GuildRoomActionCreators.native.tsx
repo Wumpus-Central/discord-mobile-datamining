@@ -1,22 +1,22 @@
 // discord_app/modules/guild_rooms/GuildRoomActionCreators.native.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _guildRoomConnect() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let c4 = 0;
-    let c3 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      let c6 = 1;
-      const obj1 = callback(table[1]);
-      yield obj1.guildRoomConnect(callback, table, asyncGeneratorStep);
+      c6 = 1;
+      obj1 = callback(table[1]);
+      yield obj1.guildRoomConnect(callback, table, closure_2);
       if (1 === tmp6) {
         c6 = 0;
-        let c3 = 3;
+        c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
         throw arg1;
@@ -27,7 +27,7 @@ function _guildRoomConnect() {
       return arg1;
     })();
   });
-  const _guildRoomConnect = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -39,19 +39,19 @@ function _guildRoomConnect() {
 function _guildRoomUpdate() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let c4 = 0;
-    let c3 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      let c6 = 1;
-      const obj1 = callback(table[1]);
-      yield obj1.guildRoomUpdate(callback, table, asyncGeneratorStep);
+      c6 = 1;
+      obj1 = callback(table[1]);
+      yield obj1.guildRoomUpdate(callback, table, closure_2);
       if (1 === tmp6) {
         c6 = 0;
-        let c3 = 3;
+        c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
         throw arg1;
@@ -62,7 +62,7 @@ function _guildRoomUpdate() {
       return arg1;
     })();
   });
-  const _guildRoomUpdate = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

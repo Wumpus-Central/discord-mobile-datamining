@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/QuestContent.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { DISMISSIBLE: null, TARGETED: null, DESKTOP_DELIVERY: null, MOBILE_DELIVERY: null };
 let set = new Set([0, 1, 4, 5, 10, 13]);

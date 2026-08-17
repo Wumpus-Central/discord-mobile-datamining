@@ -1,22 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import processChannel from "processChannel";
-import closure_6 from "processChannel";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/11917_registerAsset.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { ButtonBadge } from "IconActionButton.tsx";
+import initialize from "initialize" /* 589 */;
+import registerAssetDefault from "registerAsset" /* 11917 */;
+import ButtonBadgeDefault from "ButtonBadge" /* 12700 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "processChannel" /* 4799 */;
+import closure_6 from "processChannel" /* 4800 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function MessageRequestAnimation(color) {
   let ref;
   let stateFromStores;
   ref = React.useRef(null);
-  const items = [processChannel];
+  const items = [closure_5];
   stateFromStores = ref(589).useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
   const obj = ref(589);
   const items1 = [closure_6];
@@ -34,9 +32,9 @@ function MessageRequestAnimation(color) {
   }, items2);
   return callback(ref(15294).MessageRequestLottie, { ref, color: color.color, size: "sm", autoPlay: true });
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ buttonContainer: { position: "relative" } });
-const result = require("processChannel").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/MessageRequestsButton.tsx");
 
 export default function MessageRequestsButton(alternateVariant) {
   let flag = alternateVariant.alternateVariant;
@@ -45,9 +43,9 @@ export default function MessageRequestsButton(alternateVariant) {
   }
   const merged = Object.assign(alternateVariant, Object.create(null));
   let obj = initialize;
-  const items = [processChannel];
+  const items = [closure_5];
   let str = obj.useStateFromStores(items, () => messageRequestsCount.getMessageRequestsCount());
-  let obj1 = initialize;
+  obj1 = initialize;
   const items1 = [closure_6];
   if (0 === str) {
     if (0 === obj1.useStateFromStores(items1, () => spamChannelsCount.getSpamChannelsCount())) {
@@ -84,7 +82,7 @@ export default function MessageRequestsButton(alternateVariant) {
     return closure_8(View, obj);
   } else {
     const obj2 = { source: null, IconComponent: null, accessibilityLabel: null, buttonText: null, badge: null, badgePosition: "right" };
-    obj2[0] = registerAsset;
+    obj2[0] = registerAssetDefault;
     obj2[1] = MessageRequestAnimation;
     const intl = tmp3(1236).intl;
     obj2[2] = intl.string(tmp3(1236).t.e7GWjQ);
@@ -95,7 +93,7 @@ export default function MessageRequestsButton(alternateVariant) {
     obj2[3] = str1;
     obj2[4] = str > 0;
     const merged3 = Object.assign(merged);
-    return callback(ButtonBadge, obj2);
+    return callback(ButtonBadgeDefault, obj2);
   }
   tmp2 = callback2();
 };

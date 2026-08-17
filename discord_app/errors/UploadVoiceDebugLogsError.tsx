@@ -1,5 +1,7 @@
 // discord_app/errors/UploadVoiceDebugLogsError.tsx
+import set from "set" /* 2 */;
 import { getSystemLocale } from "../intl/index.native.tsx";
+
 let obj = { GENERAL: 0, [0]: "GENERAL", NO_FILE: 1, [1]: "NO_FILE", PROGRESS: 2, [2]: "PROGRESS", UPLOAD: 3, [3]: "UPLOAD", READ: 4, [4]: "READ" };
 class UploadVoiceDebugLogsError {
   constructor(arg0) {
@@ -31,7 +33,7 @@ Object.defineProperty(UploadVoiceDebugLogsError.prototype, "displayMessage", {
   },
   set: undefined
 });
-const result = require("set").fileFinishedImporting("errors/UploadVoiceDebugLogsError.tsx");
+const result = set.fileFinishedImporting("errors/UploadVoiceDebugLogsError.tsx");
 
 export default UploadVoiceDebugLogsError;
 export const UploadErrorCodes = obj;

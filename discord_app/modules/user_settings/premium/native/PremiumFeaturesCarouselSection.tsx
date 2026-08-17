@@ -1,27 +1,24 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx
-import _slicedToArray from "_slicedToArray";
-import isMetaQuest from "isMetaQuest";
-import get_ActivityIndicator from "registerAsset";
-import { AnalyticEvents } from "ME";
-import { Gradients } from "items";
-import { PremiumTypes } from "GuildFeatures";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Pagination } from "../../../../../_runtime/10311_Pagination.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import keys from "keys" /* 691 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import preloadDefault from "preload" /* 5449 */;
+import PaginationDefault from "Pagination" /* 10311 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { Gradients } from "items" /* 7403 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_6;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class PremiumFeaturesCardBackground {
   constructor(arg0) {
     ({ style, children } = global);
-    tmp = PX_12();
+    tmp = closure_15();
     obj = { style: tmp.cardContainer, children: null };
     obj = { style: items, start: null, end: null, colors: null, children: null };
     items = [, ];
@@ -37,30 +34,24 @@ class PremiumFeaturesCardBackground {
   }
 }
 function CarouselCard(arg0) {
-  let imageSrc;
-  let imageStyle;
-  let style;
-  let title;
   ({ style, title, imageSrc, imageStyle } = arg0);
-  const tmp = callback4();
+  const tmp = callback5();
   let obj = { style, children: null };
   obj = { variant: "heading-md/extrabold", color: "text-overlay-light", style: tmp.cardTitle, children: title };
   const items = [callback2(Text.Text, obj), ];
   const items1 = [tmp.image, imageStyle];
-  items[1] = callback2(preload, { source: imageSrc, style: items1, resizeMode: "contain" });
+  items[1] = callback2(preloadDefault, { source: imageSrc, style: items1, resizeMode: "contain" });
   obj[1] = items;
   return callback3(PremiumFeaturesCardBackground, obj);
 }
 function PremiumFeaturesCarousel(arg0) {
-  let onEndReached;
-  let width;
   ({ width, onEndReached } = arg0);
   width = onEndReached;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let mapped;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = width(4721);
   const isScreenReaderEnabled = obj.useIsScreenReaderEnabled();
   const tmp5 = mapped(React.useState(0), 2);
@@ -68,41 +59,41 @@ function PremiumFeaturesCarousel(arg0) {
   importDefault = first;
   dependencyMap = tmp7;
   importDefault = undefined;
-  const tmp8 = callback5();
+  const tmp8 = callback6();
   importDefault = tmp8;
   let items = [tmp8];
   const memo = React.useMemo(() => {
     let obj = { title: null, imageSrc: null, imageStyle: null, premiumTypes: null };
-    const intl = width(_undefined2[13]).intl;
-    obj[0] = intl.string(width(_undefined2[13]).t["3cyhe3"]);
-    obj[1] = _undefined(_undefined2[14]);
-    obj[2] = _undefined.emojiImage;
+    const intl = width(1236).intl;
+    obj[0] = intl.string(width(1236).t["3cyhe3"]);
+    obj[1] = lib(7941);
+    obj[2] = lib.emojiImage;
     const items = [, ];
-    ({ TIER_0: arr[0], TIER_2: arr[1] } = outer1_9);
+    ({ TIER_0: arr[0], TIER_2: arr[1] } = closure_1_9);
     obj[3] = new Set(items);
     const items1 = [obj, , , ];
     obj = { title: null, imageSrc: null, premiumTypes: null };
-    const intl2 = width(_undefined2[13]).intl;
-    obj[0] = intl2.string(width(_undefined2[13]).t["8AhJqy"]);
-    obj[1] = _undefined(_undefined2[15]);
+    const intl2 = width(1236).intl;
+    obj[0] = intl2.string(width(1236).t["8AhJqy"]);
+    obj[1] = lib(7944);
     const items2 = [, ];
-    ({ TIER_0: arr3[0], TIER_2: arr3[1] } = outer1_9);
+    ({ TIER_0: arr3[0], TIER_2: arr3[1] } = closure_1_9);
     const set = new Set(items);
     obj[2] = new Set(items2);
     items1[1] = obj;
     obj = { title: null, imageSrc: null, premiumTypes: null };
-    const intl3 = width(_undefined2[13]).intl;
-    obj[0] = intl3.string(width(_undefined2[13]).t["t/Mvdj"]);
-    obj[1] = _undefined(_undefined2[16]);
-    const items3 = [outer1_9.TIER_2];
+    const intl3 = width(1236).intl;
+    obj[0] = intl3.string(width(1236).t["t/Mvdj"]);
+    obj[1] = lib(7978);
+    const items3 = [closure_1_9.TIER_2];
     const set1 = new Set(items2);
     obj[2] = new Set(items3);
     items1[2] = obj;
-    const obj1 = { title: null, imageSrc: null, premiumTypes: null };
-    const intl4 = width(_undefined2[13]).intl;
-    obj1[0] = intl4.string(width(_undefined2[13]).t["n+DGY/"]);
-    obj1[1] = _undefined(_undefined2[17]);
-    const items4 = [outer1_9.TIER_2];
+    obj1 = { title: null, imageSrc: null, premiumTypes: null };
+    const intl4 = width(1236).intl;
+    obj1[0] = intl4.string(width(1236).t["n+DGY/"]);
+    obj1[1] = lib(7981);
+    const items4 = [closure_1_9.TIER_2];
     const set2 = new Set(items3);
     obj1[2] = new Set(items4);
     items1[3] = obj1;
@@ -110,13 +101,13 @@ function PremiumFeaturesCarousel(arg0) {
   }, items);
   mapped = memo.map((arg0, arg1) => {
     obj = { style: obj };
-    obj = { width: width * outer1_12 };
+    obj = { width: width * closure_1_12 };
     const merged = Object.assign(arg0);
-    return outer1_10(outer1_18, obj, arg1);
+    return closure_1_10(closure_1_18, obj, arg1);
   });
   let items1 = [first, mapped.length, onEndReached];
   const effect = React.useEffect(() => {
-    if (c1 === mapped.length - 1) {
+    if (closure_1 === mapped.length - 1) {
       if (width != null) {
         tmp();
       }
@@ -129,7 +120,7 @@ function PremiumFeaturesCarousel(arg0) {
   const bound = Math.max(0, (width - result) / 2);
   obj = { style: tmp.carouselContainer, children: null };
   const callback = React.useCallback((nativeEvent) => {
-    _undefined2(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
+    dependencyMap(Math.max(0, Math.min(mapped.length - 1, Math.round(nativeEvent.nativeEvent.contentOffset.x / c4))));
   }, items2);
   if (!width(1625).isThumbstickScrollDevice) {
     if (!isScreenReaderEnabled) {
@@ -146,10 +137,10 @@ function PremiumFeaturesCarousel(arg0) {
       };
       obj[8] = { parallaxScrollingScale: 1, parallaxScrollingOffset: 45 };
       obj[9] = tmp7;
-      let tmp19 = callback2(Pagination, obj);
+      let tmp19 = callback2(PaginationDefault, obj);
     }
     let items3 = [tmp19, ];
-    let obj1 = { containerStyle: null, numberOfItems: null, currentIndex: null };
+    obj1 = { containerStyle: null, numberOfItems: null, currentIndex: null };
     obj1[0] = tmp.indicators;
     obj1[1] = mapped.length;
     obj1[2] = first;
@@ -163,30 +154,30 @@ function PremiumFeaturesCarousel(arg0) {
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let c12 = 0.85;
-const PX_12 = require("Themes").space.PX_12;
+const PX_12 = ThemesDefault.space.PX_12;
 createCacheKey = { container: { flex: 1 }, headerText: { textAlign: "center" }, carouselContainer: null, carousel: null, indicators: null };
-createCacheKey = { flex: 1, marginTop: require("Themes").space.PX_16 };
+createCacheKey = { flex: 1, marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flex: 1, minHeight: 262 };
-createCacheKey[4] = { marginBottom: -require("Themes").space.PX_48 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[4] = { marginBottom: -ThemesDefault.space.PX_48 };
+let closure_14 = createCacheKey.createStyles(createCacheKey);
 const obj2 = { cardContainer: { flex: 1 }, card: null, image: null, cardTitle: null };
-let obj1 = { marginBottom: -require("Themes").space.PX_48 };
-obj2[1] = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: require("Themes").radii.lg, overflow: "hidden" };
+let obj1 = { marginBottom: -ThemesDefault.space.PX_48 };
+obj2[1] = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 obj2[2] = { alignSelf: "center" };
-createCacheKey = { marginTop: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_24 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
 obj2[3] = createCacheKey;
 let closure_15 = createCacheKey.createStyles(obj2);
 let closure_16 = createCacheKey.createStyles({ emojiImage: { alignSelf: "flex-end" } });
-const obj3 = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: require("Themes").radii.lg, overflow: "hidden" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
+const obj3 = { flex: 1, alignSelf: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesCarouselSection.tsx");
 
 export default function PremiumFeaturesCarouselSection(style) {
   let analyticsLocations;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   analyticsLocations = first(7139)().analyticsLocations;
   const tmp2 = callback(React.useState(false), 2);
   first = tmp2[0];
@@ -208,7 +199,7 @@ export default function PremiumFeaturesCarouselSection(style) {
       let obj = first(698);
       obj = { location_stack: null };
       obj[0] = analyticsLocations;
-      obj.track(outer1_7.PREMIUM_MARKETING_SCROLLED_TO_LAST, obj);
+      obj.track(closure_1_7.PREMIUM_MARKETING_SCROLLED_TO_LAST, obj);
       dependencyMap(true);
     }
   }, items);

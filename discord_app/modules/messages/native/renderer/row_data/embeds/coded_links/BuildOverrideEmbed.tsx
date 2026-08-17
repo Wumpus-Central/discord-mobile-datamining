@@ -1,18 +1,22 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx
-import { Image } from "get ActivityIndicator";
-import getCurrentBuildOverride from "getCurrentBuildOverride";
-import { State } from "getCurrentBuildOverride";
-import { InviteTypes } from "InviteSendStates";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-import { processColorOrThrow } from "../../../RowGeneratorStyleSheet.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getConstantsAll from "getConstants" /* 1626 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
+import processColorOrThrow from "processColorOrThrow" /* 8161 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import getCurrentBuildOverride from "getCurrentBuildOverride" /* 10638 */;
+import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 10968 */;
+import closure_5 from "getCurrentBuildOverride" /* 10638 */;
 
-const result = require("InviteSendStates").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx");
+const Image = get_ActivityIndicator.Image;
+const State = getCurrentBuildOverride.State;
+const InviteTypes = InviteSendStates.InviteTypes;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/BuildOverrideEmbed.tsx");
 
 export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, closure_2) {
-  let baseColors;
-  let colors;
-  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
   const currentBuildOverride = store.getCurrentBuildOverride();
   const buildOverride = store.getBuildOverride(code);
   if (buildOverride.state === State.Resolving) {
@@ -27,7 +31,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     if (override2 != null) {
       const targetBuildOverride = override2.targetBuildOverride;
       if (targetBuildOverride != null) {
-        const tmp9 = targetBuildOverride[require(undefined, 10968) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+        const tmp9 = targetBuildOverride[setBuildOverrideForBranch.DEVICE_FIELD];
         if (tmp9 != null) {
           id = tmp9.id;
         }
@@ -38,7 +42,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       const overrides = currentBuildOverride.overrides;
       let id1;
       if (overrides != null) {
-        const tmp13 = overrides[require(undefined, 10968) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+        const tmp13 = overrides[setBuildOverrideForBranch.DEVICE_FIELD];
         if (tmp13 != null) {
           id1 = tmp13.id;
         }
@@ -46,7 +50,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
       tmp10 = id === id1;
     }
     let tmpResult = tmp(12772);
-    obj = importAll(1626);
+    obj = getConstantsAll;
     const tmpResultResult = tmpResult(buildOverride.override, ["discord_ios", "discord_android"], obj.getConstants().Version);
     if (currentBuildOverride.state !== tmp6.Invalid) {
       if (buildOverride.state !== tmp6.Invalid) {
@@ -104,7 +108,7 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
         }
       }
     }
-    const obj1 = {};
+    obj1 = {};
     const merged2 = Object.assign(baseColors);
     const intl = getSystemLocale.intl;
     obj1.headerText = intl.string(getSystemLocale.t.d34xi4).toLocaleUpperCase();
@@ -134,5 +138,5 @@ export const createBuildOverrideEmbed = function createBuildOverrideEmbed(code, 
     obj1.type = InviteTypes.GUILD;
     return obj1;
   }
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
 };

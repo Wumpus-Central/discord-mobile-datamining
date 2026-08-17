@@ -1,21 +1,22 @@
 // discord_app/modules/user_settings/defs/native/AppearanceSetting.tsx
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import { ActiveThemeType } from "SystemThemeState";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getThemeForColor } from "../../../client_themes/ClientThemesUtils.tsx";
-import { useActiveThemeType } from "../../../client_themes/native/useActiveTheme.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getThemeForColor from "getThemeForColor" /* 1347 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import messagesProxyDefault from "messagesProxy" /* 2533 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import useActiveThemeType from "useActiveThemeType" /* 8503 */;
+import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
+import { ActiveThemeType } from "SystemThemeState" /* 1305 */;
+import createToggle from "createToggle" /* 10669 */;
 import { SettingsAppearanceScreen } from "../../appearance/native/SettingsAppearanceScreen.tsx";
 
-const require = arg1;
+require = arg1;
 function useAppearanceSettingTrailing() {
   const tmp = importDefault;
-  const tmp3 = useTheme();
-  const tmp4 = useIsMobileVisualRefreshExperimentEnabled("AppearanceSettingTrailing");
-  const items = [isSyncedModeThemesEnabled];
+  const tmp3 = useThemeDefault();
+  const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("AppearanceSettingTrailing");
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   const obj = initialize;
   const themeName = getThemeForColor.getThemeName(tmp3, tmp4);
@@ -23,7 +24,7 @@ function useAppearanceSettingTrailing() {
   const activeThemeType = useActiveThemeType.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = tmp5(1236).intl;
-    return intl2.string(tmp(2533).KSBBpC);
+    return intl2.string(messagesProxyDefault.KSBBpC);
   } else if (tmp9.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -61,7 +62,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceSetting.tsx");
 
 export default createToggle;
 export { useAppearanceSettingTrailing };

@@ -1,17 +1,14 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
-import importAllResult from "noop";
-import { GuildsNodeType } from "insertUnsortedGuilds";
-import withEqualityFn from "withEqualityFn";
-import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { isIterable } from "../../../../_runtime/04006_isIterable.js";
+import isIterable from "isIterable" /* 4006 */;
+import importAllResult from "noop" /* 19 */;
+import { GuildsNodeType } from "insertUnsortedGuilds" /* 5078 */;
+import closure_5 from "withEqualityFn" /* 15547 */;
+import { GUILD_ITEM_INSET_LEFT } from "GUILD_ITEM_SIZE" /* 15548 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function PreviewItem(dragRegion) {
-  let draggedNode;
-  let dropComplete;
   dragRegion = dragRegion.dragRegion;
   const draggedHeight = dragRegion.draggedHeight;
   ({ draggedNode, dropComplete } = dragRegion);
@@ -27,7 +24,7 @@ function PreviewItem(dragRegion) {
   let tmp = windowSize();
   let obj = dragRegion(dropComplete[6]);
   const isHomeDrawerEnabled = obj.useIsHomeDrawerEnabled();
-  let obj1 = dragRegion(dropComplete[7]);
+  obj1 = dragRegion(dropComplete[7]);
   let fn = function x() {
     const value = scrollPosition.get();
     let num = 0;
@@ -84,24 +81,24 @@ function PreviewItem(dragRegion) {
           tmp8 = globalThis;
           _Math = Math;
           _Math2 = Math;
-          tmp9 = c10;
-          tmp11 = dragRegion;
-          bound = Math.max(diff, c10.get());
-          bound1 = Math.min(bound, dragRegion.get());
+          tmp9 = closure_10;
+          tmp11 = closure_11;
+          bound = Math.max(diff, closure_10.get());
+          bound1 = Math.min(bound, closure_11.get());
         }
         obj = { top: null };
         tmp12 = dragRegion;
         tmp13 = dropComplete;
         obj2 = dragRegion(dropComplete[8]);
-        tmp14 = c10;
+        tmp14 = closure_10;
         fn = function t(arg0) {
           let tmp = arg0;
           if (arg0) {
             tmp = null != closure_9;
           }
           if (tmp) {
-            outer1_0(outer1_2[7]).runOnJS(closure_2)();
-            const obj = outer1_0(outer1_2[7]);
+            closure_1_0(closure_1_2[7]).runOnJS(closure_2)();
+            const obj = closure_1_0(closure_1_2[7]);
           }
         };
         obj = { dropPosition: null, runOnJS: null, dropComplete: null };
@@ -112,13 +109,13 @@ function PreviewItem(dragRegion) {
         fn.__closure = obj;
         num2 = 12640145939434;
         fn.__workletHash = 12640145939434;
-        tmp16 = outer1_14;
-        fn.__initData = outer1_14;
+        tmp16 = closure_1_14;
+        fn.__initData = closure_1_14;
         str = "animate-always";
         tmp17 = obj2;
         tmp18 = bound1;
         tmp19 = fn;
-        obj[0] = obj2.withSpring(bound1, c10, "animate-always", fn);
+        obj[0] = obj2.withSpring(bound1, closure_10, "animate-always", fn);
         return obj;
       }
       tmp6 = -draggedHeight;
@@ -169,15 +166,13 @@ function renderAnimatedItemPreview(arg0, node, transitionState, cleanUp) {
   return <AnimatedItemPreview key={arg0} node={arg1} transitionState={arg2} cleanUp={arg3} />;
 }
 function AnimatedItemPreview(cleanUp) {
-  let node;
-  let transitionState;
   ({ node, transitionState } = cleanUp);
   cleanUp = cleanUp.cleanUp;
   let sharedValue;
-  let importAllResult;
+  importAllResult = undefined;
   let obj = transitionState(sharedValue[11]);
   let tmp = callback2();
-  let obj1 = transitionState(sharedValue[6]);
+  obj1 = transitionState(sharedValue[6]);
   let isHomeDrawerEnabled = obj1.useIsHomeDrawerEnabled();
   let obj2 = transitionState(sharedValue[7]);
   let num = 1;
@@ -192,11 +187,9 @@ function AnimatedItemPreview(cleanUp) {
   const tmp5 = callback3(GUILD_ITEM_INSET_LEFT + obj.useToken(cleanUp(sharedValue[12]).modules.mobile.GUILD_BAR_ITEM_SIZE) / 2);
   const tmp8 = GuildsNodeType;
   let fn = function _() {
-    let translateX;
-    let translateY;
     const value = sharedValue.get();
     let num = 1;
-    if (c3) {
+    if (closure_3) {
       let num3 = 0.3;
       if (num === value) {
         num3 = num;
@@ -210,7 +203,7 @@ function AnimatedItemPreview(cleanUp) {
       }
       obj = tmp2;
     }
-    if (!c3) {
+    if (!closure_3) {
       if (num !== obj.get()) {
         obj = { translateX: 10, translateY: -10 };
       }
@@ -221,26 +214,26 @@ function AnimatedItemPreview(cleanUp) {
       }
       obj = { zIndex: null, transform: null, opacity: null };
       obj[0] = num4;
-      const obj1 = { translateY: null };
+      obj1 = { translateY: null };
       let obj4 = transitionState(sharedValue[8]);
-      obj1[0] = obj4.withSpring(translateY, outer1_10, "animate-always");
+      obj1[0] = obj4.withSpring(translateY, closure_1_10, "animate-always");
       const items = [obj1, , ];
       const obj2 = { translateX: null };
-      obj2[0] = transitionState(sharedValue[8]).withSpring(translateX, outer1_10, "animate-always");
+      obj2[0] = transitionState(sharedValue[8]).withSpring(translateX, closure_1_10, "animate-always");
       items[1] = obj2;
       const obj3 = { scale: null };
       const obj9 = transitionState(sharedValue[8]);
       const fn = function t(arg0) {
         let tmp = arg0;
         if (arg0) {
-          tmp = closure_0 === outer1_0(outer1_2[10]).TransitionStates.YEETED;
+          tmp = closure_0 === closure_1_0(closure_1_2[10]).TransitionStates.YEETED;
         }
         if (tmp) {
           tmp = closure_3;
         }
         if (tmp) {
-          outer1_0(outer1_2[7]).runOnJS(closure_1)();
-          const obj = outer1_0(outer1_2[7]);
+          closure_1_0(closure_1_2[7]).runOnJS(closure_1)();
+          const obj = closure_1_0(closure_1_2[7]);
         }
       };
       obj4 = { transitionState: null, TransitionStates: null, isFolder: null, runOnJS: null, cleanUp: null };
@@ -251,12 +244,12 @@ function AnimatedItemPreview(cleanUp) {
       obj4[4] = cleanUp;
       fn.__closure = obj4;
       fn.__workletHash = 9409925192880;
-      fn.__initData = outer1_19;
-      obj3[0] = obj9.withSpring(num2, outer1_10, "animate-always", fn);
+      fn.__initData = closure_1_19;
+      obj3[0] = obj9.withSpring(num2, closure_1_10, "animate-always", fn);
       items[2] = obj3;
       obj[1] = items;
       const obj7 = transitionState(sharedValue[8]);
-      const tmp6 = outer1_10;
+      const tmp6 = closure_1_10;
       if (tmp) {
         num = obj.get();
       }
@@ -320,15 +313,6 @@ let closure_18 = { code: "function GuildsBarDragPreviewTsx5(){const{isFolder,vis
 let closure_19 = { code: "function GuildsBarDragPreviewTsx6(finished){const{transitionState,TransitionStates,isFolder,runOnJS,cleanUp}=this.__closure;if(finished&&transitionState===TransitionStates.YEETED&&isFolder){runOnJS(cleanUp)();}}" };
 const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
   const tmp = callback((arg0) => {
-    let dragRegion;
-    let dragSpecs;
-    let dropComplete;
-    let dropSpecs;
-    let gestureState;
-    let listInsets;
-    let overSpecs;
-    let scrollPosition;
-    let windowSize;
     ({ dragSpecs, overSpecs, gestureState, scrollPosition, dragRegion, windowSize, dropComplete, listInsets, dropSpecs } = arg0);
     if (null != dropSpecs) {
       const overState = dropSpecs.overState;
@@ -380,6 +364,6 @@ const memoResult = importAllResult.memo(function GuildsBarDragPreview() {
   }
   return tmp2;
 });
-let result = require("withEqualityFn").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDragPreview.tsx");
 
 export default memoResult;

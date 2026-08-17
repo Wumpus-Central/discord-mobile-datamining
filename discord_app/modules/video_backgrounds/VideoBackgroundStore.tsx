@@ -1,23 +1,24 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Store } from "initialize";
-import { BaseConnectionEvent } from "../../../discord_common/js/packages/media-engine/index.tsx";
-import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9661 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 function handleSyncedStoresUpdate() {
   if (voiceChannelId !== store.getVoiceChannelId()) {
-    let c8 = false;
-    let c10 = false;
-    let c11 = false;
+    c8 = false;
+    c10 = false;
+    c11 = false;
   }
   const currentUser = authStore.getCurrentUser();
   let flag2 = false;
   if (null != currentUser) {
-    const voiceAndVideo = handleConnectionClosedOrResumed.settings.voiceAndVideo;
+    const voiceAndVideo = closure_2.settings.voiceAndVideo;
     let prop;
     if (voiceAndVideo != null) {
       prop = voiceAndVideo.videoBackgroundFilterDesktop;
@@ -25,7 +26,7 @@ function handleSyncedStoresUpdate() {
     const videoBackgroundOptionFromProto = isAnimatedBackgroundOption.getVideoBackgroundOptionFromProto(prop, currentUser.id);
     let isVideoEnabledResult = null != obj.getVoiceChannelId();
     if (isVideoEnabledResult) {
-      isVideoEnabledResult = _detectH265HardwareDecode.isVideoEnabled();
+      isVideoEnabledResult = closure_3.isVideoEnabled();
     }
     if (isVideoEnabledResult) {
       isVideoEnabledResult = null != videoBackgroundOptionFromProto;
@@ -44,12 +45,13 @@ let c8 = false;
 let closure_9 = {};
 let c10 = false;
 let c11 = false;
+const Store = initializeDefault.Store;
 class VideoBackgroundStore extends Store {
 }
 const prototype = VideoBackgroundStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(_detectH265HardwareDecode, handleConnectionOpen, handleConnectionClosedOrResumed, mergeGuildAvatar);
-  const items = [handleConnectionOpen, _detectH265HardwareDecode];
+  this.waitFor(closure_3, closure_4, closure_2, closure_5);
+  const items = [closure_4, closure_3];
   this.syncWith(items, handleSyncedStoresUpdate);
 };
 Object.defineProperty(prototype, "videoFilterAssets", {
@@ -83,7 +85,7 @@ Object.defineProperty(prototype, "videoBackgroundPreviewUnavailable", {
   set: undefined
 });
 VideoBackgroundStore.displayName = "VideoBackgroundStore";
-const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
+const videoBackgroundStore = new VideoBackgroundStore(dispatcherDefault, {
   VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function handleVideoFilterAssetFetchSuccess(assets) {
     assets = assets.assets;
     const obj = {};
@@ -110,7 +112,7 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
     let flag = false;
     if (null != currentUser) {
       if (backgroundOption == null) {
-        const voiceAndVideo = handleConnectionClosedOrResumed.settings.voiceAndVideo;
+        const voiceAndVideo = closure_2.settings.voiceAndVideo;
         let prop;
         if (voiceAndVideo != null) {
           prop = voiceAndVideo.videoBackgroundFilterDesktop;
@@ -120,7 +122,7 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
       }
       let isVideoEnabledResult = null != store.getVoiceChannelId();
       if (isVideoEnabledResult) {
-        isVideoEnabledResult = _detectH265HardwareDecode.isVideoEnabled();
+        isVideoEnabledResult = closure_3.isVideoEnabled();
       }
       if (isVideoEnabledResult) {
         isVideoEnabledResult = null != backgroundOption;
@@ -128,35 +130,35 @@ const videoBackgroundStore = new VideoBackgroundStore(require("dispatcher"), {
       flag = isVideoEnabledResult;
     }
     if (flag) {
-      let c8 = true;
+      c8 = true;
     }
   },
   MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function handleApplyMediaFilterSettings(settings) {
     settings = settings.settings;
     if (BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_LIVE in settings) {
-      let c6 = true;
-      let c10 = false;
+      c6 = true;
+      c10 = false;
     }
     if (BaseConnectionEvent.FilterSettingsKey.CAMERA_BACKGROUND_PREVIEW in settings) {
-      let c11 = false;
+      c11 = false;
     }
   },
   MEDIA_ENGINE_VIDEO_FILTER_ERROR: function handleVideoFilterError(target) {
     if ("live" === target.target) {
-      let c10 = true;
+      c10 = true;
     } else {
-      let c11 = true;
+      c11 = true;
     }
   },
   LOGOUT: function handleLogout() {
-    let c6 = false;
-    let c8 = false;
-    let c7 = null;
-    let closure_9 = {};
-    let c10 = false;
-    let c11 = false;
+    c6 = false;
+    c8 = false;
+    c7 = null;
+    closure_9 = {};
+    c10 = false;
+    c11 = false;
   }
 });
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundStore.tsx");
+const result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundStore.tsx");
 
 export default videoBackgroundStore;

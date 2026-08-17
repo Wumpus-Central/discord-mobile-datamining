@@ -1,19 +1,20 @@
 // discord_app/modules/premium/promotions/MarketingComponentHooks.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
+import initialize from "initialize" /* 589 */;
+import isThemeLight from "isThemeLight" /* 1364 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/promotions/MarketingComponentHooks.tsx");
 
 export const useThemeAndReducedMotionAwareAssetUrl = function useThemeAndReducedMotionAwareAssetUrl(asset, arg1) {
-  const tmp2 = useTheme();
+  const tmp2 = useThemeDefault();
   const tmp3 = require;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   if (null == asset) {
     return null;
   } else {
-    const tmp3Result = tmp3(1364);
+    const tmp3Result = isThemeLight;
   }
 };

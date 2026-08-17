@@ -1,14 +1,16 @@
 // discord_app/modules/sound_playback/SoundUtils.tsx
-import Soundpacks from "Soundpacks";
-import initialize from "initialize";
-import { SoundOutputChannel } from "SoundOutputChannel";
-import { getSoundPack } from "../soundpacks/getSoundsForPack.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import getSoundPackDefault from "getSoundPack" /* 10043 */;
+import _createSound from "_createSound" /* 10044 */;
+import closure_3 from "Soundpacks" /* 10041 */;
+import closure_4 from "initialize" /* 4220 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
 import { _createSound } from "native/SoundUtils.tsx";
 
-const require = arg1;
-let closure_6 = new require("timestamp")("SoundUtils");
-const tmp2 = new require("timestamp")("SoundUtils");
-const result = require("SoundOutputChannel").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
+require = arg1;
+let closure_6 = new timestampDefault("SoundUtils");
+const tmp2 = new timestampDefault("SoundUtils");
+const result = require("set").fileFinishedImporting("modules/sound_playback/SoundUtils.tsx");
 
 export const createSoundForPack = function createSoundForPack(call_calling, soundpack) {
   let num = arg2;
@@ -19,7 +21,7 @@ export const createSoundForPack = function createSoundForPack(call_calling, soun
   if (arg3 === undefined) {
     DEFAULT = SoundOutputChannel.DEFAULT;
   }
-  let tmp3 = getSoundPack(soundpack)[call_calling];
+  let tmp3 = getSoundPackDefault(soundpack)[call_calling];
   if (tmp3 == null) {
     tmp3 = call_calling;
   }
@@ -59,10 +61,10 @@ export const playSound = function playSound(arg0, arg1, arg2, arg3, outputChanne
     if (arg3 == null) {
       soundpack = soundpack.getSoundpack();
     }
-    const tmp4Result = getSoundPack(soundpack);
+    const tmp4Result = getSoundPackDefault(soundpack);
     if (null == tmp4Result) {
       const _HermesInternal = HermesInternal;
-      tmp2.log("Unable to find sound for pack name: " + arg3);
+      logger.log("Unable to find sound for pack name: " + arg3);
     }
     let tmp13 = tmp4Result[arg0];
     if (tmp13 == null) {

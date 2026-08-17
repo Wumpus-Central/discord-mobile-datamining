@@ -1,43 +1,36 @@
 // discord_app/modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx
-import _slicedToArray from "_slicedToArray";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import { unsafe_rawColors } from "Themes";
-import importAllResult from "noop";
-import set from "get ActivityIndicator";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useMediaItemSpoilerState } from "../useMediaItemSpoilerState.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import useMediaItemSpoilerState from "useMediaItemSpoilerState" /* 12058 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { spoilerOverlayContainer: { justifyContent: "center", alignContent: "center", flex: 1 }, obscureContentContainer: null, spoilerOverlayBackground: null };
-obj = { gap: require("Themes").space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" };
+obj = { gap: ThemesDefault.space.PX_4, justifyContent: "center", alignItems: "center", alignSelf: "center" };
 obj[1] = obj;
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, borderRadius: require("Themes").radii.lg, height: require("Themes").space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, height: ThemesDefault.space.PX_32, backgroundColor: null, flexGrow: 0, justifyContent: "center", alignItems: "center", alignSelf: "center" };
 set = set.isAndroid();
+const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
 createCacheKey[3] = set ? unsafe_rawColors.PRIMARY_800 : unsafe_rawColors.PRIMARY_600;
 obj[2] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(obj);
 const result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaModalSpoilerOverlay.tsx");
 
-export default require("noop").memo(function MediaModalSpoilerOverlay(source) {
-  let index;
-  let style;
+export default importAllResult.memo(function MediaModalSpoilerOverlay(source) {
   source = source.source;
   ({ style, index } = source);
   let items2 = callback2();
   let stringResult = dependencyMap;
   let obj = map;
-  const token = obj.useToken(Themes.colors.SPOILER_HIDDEN_BACKGROUND);
-  let obj1 = useMediaItemSpoilerState;
+  const token = obj.useToken(ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND);
+  obj1 = useMediaItemSpoilerState;
   if (!tmp5[0]) {
     return null;
   } else {

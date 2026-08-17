@@ -1,12 +1,12 @@
 // discord_app/components_native/common/CountDown.tsx
-import { jsx } from "jsxProd";
-import { Component } from "noop";
-import importAllResult from "noop";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
+const Component = importAllResult.Component;
 class CountDown extends Component {
 }
 const prototype = CountDown.prototype;
@@ -24,9 +24,6 @@ prototype["clearRefreshInterval"] = function clearRefreshInterval() {
   }
 };
 prototype["render"] = function render() {
-  let deadline;
-  let freezeAtRemainingSeconds;
-  let postDeadlineText;
   const self = this;
   const style = this.props;
   ({ postDeadlineText, deadline, freezeAtRemainingSeconds } = style);
@@ -44,15 +41,15 @@ prototype["render"] = function render() {
     }
     if (result < 0) {
       const _Math = Math;
-      const items = [Math.floor(result / set.Seconds.DAY), , , ];
+      const items = [Math.floor(result / setDefault.Seconds.DAY), , , ];
       const _Math2 = Math;
-      const result1 = result % set.Seconds.DAY;
-      items[1] = Math.floor(result1 / set.Seconds.HOUR);
+      const result1 = result % setDefault.Seconds.DAY;
+      items[1] = Math.floor(result1 / setDefault.Seconds.HOUR);
       const _Math3 = Math;
-      const result2 = result1 % set.Seconds.HOUR;
-      items[2] = Math.floor(result2 / set.Seconds.MINUTE);
+      const result2 = result1 % setDefault.Seconds.HOUR;
+      items[2] = Math.floor(result2 / setDefault.Seconds.MINUTE);
       const _Math4 = Math;
-      items[3] = Math.floor(result2 % set.Seconds.MINUTE);
+      items[3] = Math.floor(result2 % setDefault.Seconds.MINUTE);
       let num = 0;
       if (0 === items[0]) {
         items.shift();
@@ -110,6 +107,6 @@ prototype["render"] = function render() {
   }
   return jsx(Text.Text, { tabularNumbers: true, variant: "text-md/semibold", style: style.style, children });
 };
-let result = require("getSystemLocale").fileFinishedImporting("components_native/common/CountDown.tsx");
+let result = require("set").fileFinishedImporting("components_native/common/CountDown.tsx");
 
 export default CountDown;

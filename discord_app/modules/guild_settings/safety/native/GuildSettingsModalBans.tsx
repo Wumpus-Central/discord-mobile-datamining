@@ -1,28 +1,24 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalBans.tsx
-import _slicedToArray from "_slicedToArray";
-import _copy from "_copy";
-import get_ActivityIndicator from "TableRowArrow";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFormInit from "handleFormInit";
-import jsxProd from "showSimpleActionSheet";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "handleFormInit" /* 8875 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let unpackModuleId;
 const require = arg1;
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { containerInner: null, searchField: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_12, flex: 1 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingVertical: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingVertical: require("Themes").space.PX_16 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalBans.tsx");
+createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalBans.tsx");
 
 export default function ConnectedGuildSettingsModalBans(guildId) {
   guildId = guildId.guildId;
@@ -31,12 +27,12 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
   let searchQuery;
   let setting;
   let users;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = guildId(bans[9]);
-  let items = [createGuildRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuild(guildId));
-  let obj1 = guildId(bans[9]);
-  let items1 = [handleFormInit];
+  let items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
+  obj1 = guildId(bans[9]);
+  let items1 = [closure_9];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
     props = props.getProps();
     const obj = { bans: props.bans, searchQuery: null, bansVersion: null };
@@ -63,15 +59,15 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
   setting = DeveloperMode.useSetting();
   const items2 = [bans, stateFromStoresObject.bansVersion, searchQuery];
   const memo = setting.useMemo(() => {
-    const users = [];
+    users = [];
     let items1 = bans;
     if (bans == null) {
       items1 = [];
     }
     while (tmp !== undefined) {
       let tmp3 = searchQuery;
-      let tmp4 = outer1_8;
-      let user = outer1_8.getUser(searchQuery(tmp2, 1)[0]);
+      let tmp4 = closure_1_8;
+      let user = closure_1_8.getUser(searchQuery(tmp2, 1)[0]);
       let tmp6 = user;
       if (null != user) {
         let str3 = searchQuery;
@@ -123,13 +119,13 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
   }, items3);
   const items4 = [bans, setting, stateFromStores, users];
   const callback = setting.useCallback((arg0, arg1) => {
-    const guildId = tmp;
+    closure_0 = tmp;
     let obj = bans;
     let value;
     if (bans != null) {
       value = obj.get(tmp.id);
     }
-    const stateFromStores = value;
+    stateFromStores = value;
     let tmp4Result = null;
     if (null != value) {
       obj = { start: null, end: null, icon: null, label: null, subLabel: null, trailing: null, onPress: null };
@@ -143,7 +139,7 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
         id = stateFromStores.id;
       }
       obj[2] = id;
-      obj[2] = outer1_10(guildId(bans[16]).Avatar, obj);
+      obj[2] = closure_1_10(guildId(bans[16]).Avatar, obj);
       let username = tmp.globalName;
       if (username == null) {
         username = tmp.username;
@@ -154,31 +150,31 @@ export default function ConnectedGuildSettingsModalBans(guildId) {
         username = tmp.username;
       }
       obj[4] = username;
-      obj[5] = outer1_10(guildId(bans[17]).TableRowArrow, {});
+      obj[5] = closure_1_10(guildId(bans[17]).TableRowArrow, {});
       obj[6] = function onPress() {
         if (null != value) {
           let obj = { label: null, isDestructive: true, onPress: null };
           const intl4 = guildId(bans[18]).intl;
           obj[0] = intl4.string(guildId(bans[18]).t.Mp6Z2l);
           obj[2] = function onPress() {
-            value(outer2_2[13]).unbanUser(outer1_1.id, lib.id);
+            value(closure_2_2[13]).unbanUser(closure_1_1.id, lib.id);
           };
           const items = [obj];
-          if (outer1_4) {
+          if (closure_1_4) {
             obj = { label: null, onPress: null };
             const intl = tmp6(tmp7[18]).intl;
             obj[0] = intl.string(tmp6(tmp7[18]).t["/AXYnE"]);
             obj[1] = function onPress() {
-              lib(outer2_2[19]).copy(lib.id);
-              const obj = lib(outer2_2[19]);
-              lib(outer2_2[20]).presentIdCopied();
+              lib(closure_2_2[19]).copy(lib.id);
+              const obj = lib(closure_2_2[19]);
+              lib(closure_2_2[20]).presentIdCopied();
             };
             items.push(obj);
           }
           obj = { title: null, subtitle: null };
           const intl2 = tmp6(tmp7[18]).intl;
-          const obj1 = { user: null };
-          obj1[0] = tmp.username;
+          obj1 = { user: null };
+          obj1[0] = user.username;
           obj[0] = intl2.formatToPlainString(guildId(bans[18]).t.XvAG5t, obj1);
           const string = tmp6(tmp7[18]).intl.string;
           let result = value;

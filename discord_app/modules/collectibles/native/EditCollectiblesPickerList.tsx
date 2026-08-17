@@ -1,14 +1,12 @@
 // discord_app/modules/collectibles/native/EditCollectiblesPickerList.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import Text from "Text" /* 4734 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 let obj = { list: { flex: 1, marginTop: 12 }, listContent: { paddingBottom: 88 }, loadingContainer: { paddingVertical: 80, alignItems: "center" }, header: null };
@@ -16,11 +14,9 @@ obj = { paddingHorizontal: require("useCollectibleListLayout").GUTTER_SIZE, padd
 obj[3] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 let closure_8 = importAllResult.memo((children) => <closure_5 style={callback().header}>{jsx(Text.Heading, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: arg0.header })}</closure_5>);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/EditCollectiblesPickerList.tsx");
 
 export const EditCollectiblesPickerList = function EditCollectiblesPickerList(sections) {
-  let c4;
-  let tmp3;
   sections = sections.sections;
   const selectedSkuId = sections.selectedSkuId;
   const renderRow = sections.renderRow;
@@ -50,11 +46,11 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
       return items;
     } else {
       let item = items.forEach((header) => {
-        const items = header;
+        items = header;
         items.push({ type: "header", key: "header-" + header.section, header: header.header });
         const obj = { type: "header", key: "header-" + header.section, header: header.header };
-        const obj2 = items(outer1_1[7]);
-        const item = items(outer1_1[7]).chunk(header.items, items(outer1_1[5]).ROW_SIZE).forEach((items) => {
+        const obj2 = items(closure_1_1[7]);
+        const item = items(closure_1_1[7]).chunk(header.items, items(closure_1_1[5]).ROW_SIZE).forEach((items) => {
           header.push({ type: "row", key: "row-" + header.section + "-" + arg1, items });
         });
       });
@@ -66,7 +62,7 @@ export const EditCollectiblesPickerList = function EditCollectiblesPickerList(se
     if ("header" === item.type) {
       let obj = { header: null };
       obj[0] = item.header;
-      let tmp4 = outer1_6(outer1_8, obj);
+      let tmp4 = closure_1_6(closure_1_8, obj);
     } else {
       obj = { items: null, size: null, selectedSkuId: null };
       obj[0] = item.items;

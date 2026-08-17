@@ -1,21 +1,16 @@
 // discord_app/components_native/StreamPreview.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import handleThemeChange from "handleThemeChange";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { PressableBase } from "../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { useFetchStreamPreview } from "../modules/go_live/useFetchStreamPreview.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12138 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleThemeChange" /* 1302 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let closure_6;
-let error;
-let require = arg1;
+require = arg1;
 ({ Image: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { wrapper: null, text: null, fallbackImage: null };
@@ -26,14 +21,14 @@ createCacheKey.justifyContent = "center";
 createCacheKey.paddingLeft = 20;
 createCacheKey.paddingRight = 20;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: require("Themes").colors.TEXT_MUTED };
+createCacheKey[1] = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[2] = { width: "100%" };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class DefaultFallback extends PureComponent {
 }
 DefaultFallback.prototype["render"] = function render() {
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   let obj = { style: tmp.wrapper, children: null };
   obj = { resizeMode: "contain", style: tmp.fallbackImage, source: null };
   if (obj3.isThemeDark(this.props.theme)) {
@@ -48,9 +43,9 @@ DefaultFallback.prototype["render"] = function render() {
 DefaultFallback.contextType = require("ManaContext").ThemeContext;
 const obj2 = { touchable: null, imageContainer: null, image: null };
 const obj3 = { flex: 1, width: "100%", height: "View", aspectRatio: true, backgroundColor: true };
-obj3[4] = require("Themes").colors.BACKGROUND_BASE_LOWEST;
+obj3[4] = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
 obj2[0] = obj3;
-createCacheKey = { flex: 1, backgroundColor: require("Themes").unsafe_rawColors.BLACK };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.unsafe_rawColors.BLACK };
 obj2[1] = createCacheKey;
 obj2[2] = { flex: 1 };
 let closure_10 = createCacheKey.createLegacyClassComponentStyles(obj2);
@@ -73,11 +68,7 @@ class StreamPreview extends PureComponent2 {
   }
 }
 StreamPreview.prototype["render"] = function render() {
-  let isFetching;
-  let renderFallback;
-  let theme;
-  let url;
-  const tmp = callback3(this.context);
+  const tmp = callback4(this.context);
   ({ url, isFetching, renderFallback, theme } = this.props);
   if (null != url) {
     if (!isFetching) {
@@ -103,7 +94,7 @@ StreamPreview.prototype["render"] = function render() {
       obj[3] = items;
       obj[4] = tmp6;
       obj[5] = tmp5;
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp.imageContainer;
       const items1 = [tmp8, tmp12];
       obj1[1] = items1;
@@ -134,19 +125,14 @@ StreamPreview.defaultProps = {
     return closure_6(DefaultFallback, obj);
   }
 };
-let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: require("Themes").colors.TEXT_MUTED };
-const result = require("handleThemeChange").fileFinishedImporting("components_native/StreamPreview.tsx");
+let obj1 = { textAlign: "center", fontSize: 14, lineHeight: 18, marginTop: 16, color: ThemesDefault.colors.TEXT_MUTED };
+const result = require("set").fileFinishedImporting("components_native/StreamPreview.tsx");
 
 export default function ConnectedStreamPreview(stream) {
-  let channelId;
-  let guildId;
-  let isLoading;
-  let ownerId;
-  let previewUrl;
   ({ guildId, channelId, ownerId } = stream.stream);
-  ({ previewUrl, isLoading } = useFetchStreamPreview(guildId, channelId, ownerId));
+  ({ previewUrl, isLoading } = useFetchStreamPreviewDefault(guildId, channelId, ownerId));
   let obj = initialize;
-  const items = [handleThemeChange];
+  const items = [closure_5];
   obj = {};
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
   const merged = Object.assign(stream);

@@ -1,24 +1,21 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx
-import _slicedToArray from "_slicedToArray";
-import apply from "apply";
-import get_ActivityIndicator from "useInvitesDisabledPermission";
-import computeAlertSettings from "computeAlertSettings";
-import importDefaultResult from "createFromServer";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleFormInit from "handleFormInit";
-import ME from "ME";
-import jsxProd from "DATE_CONFIG";
-import createCacheKey from "createCacheKey";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import registerAssetDefault from "registerAsset" /* 8555 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 8558 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "computeAlertSettings" /* 10014 */;
+import importDefaultResult from "createFromServer" /* 8044 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "handleFormInit" /* 8875 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Platform;
-let c10;
-let c5;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class InvitesDisabledRow {
   constructor(arg0) {
     invitesDisabled = global.invitesDisabled;
@@ -38,8 +35,7 @@ class InvitesDisabledRow {
       stringResult1 = intl2.format(require("getSystemLocale").t.IFBHag, obj);
     }
     tmp7 = jsx;
-    obj = { label: stringResult, subLabel: null, icon: null, checked: null, onPress: null, start: true, end: true };
-    obj[1] = jsx(require("Text").Text, { variant: "text-xs/medium", children: stringResult1 });
+    obj = { label: stringResult, subLabel: jsx(require("Text").Text, { variant: "text-xs/medium", children: stringResult1 }), icon: null, checked: null, onPress: null, start: true, end: true };
     tmp7Result = null;
     if (invitesDisabled) {
       obj1 = { source: null };
@@ -64,15 +60,15 @@ function GuildSettingsModalInstantInvites(invites) {
   let stateFromStores;
   let hasItem;
   let first;
-  let ensureGuildLoaded;
-  let createGuildRecordFromRust;
+  closure_7 = undefined;
+  closure_8 = undefined;
   let memo;
   let stateFromStoresArray;
   let callback1;
   const tmp = callback3();
   let obj = invites(flag[17]);
   invitesDisabledPermission = obj.useInvitesDisabledPermission(guild);
-  let obj1 = invites(flag[18]);
+  obj1 = invites(flag[18]);
   let items = [first];
   stateFromStores = obj1.useStateFromStores(items, () => first.getGuildIncident(guild.id));
   const features = guild.features;
@@ -95,9 +91,9 @@ function GuildSettingsModalInstantInvites(invites) {
   }
   const tmp19 = invitesDisabledPermission(stateFromStores.useState(false), 2);
   first = tmp19[0];
-  ensureGuildLoaded = tmp19[1];
+  closure_7 = tmp19[1];
   const tmp21 = invitesDisabledPermission(stateFromStores.useState(21), 2);
-  createGuildRecordFromRust = tmp21[1];
+  closure_8 = tmp21[1];
   const items1 = [invites, invitesDisabledPermission, flag];
   memo = stateFromStores.useMemo(() => {
     const sortByResult = guild(flag[19]).sortBy(invites, (channel) => {
@@ -124,11 +120,11 @@ function GuildSettingsModalInstantInvites(invites) {
       return str;
     });
     if (invitesDisabledPermission) {
-      sortByResult.unshift(outer1_17);
+      sortByResult.unshift(closure_1_17);
     }
     return sortByResult;
   }, items1);
-  const items2 = [ensureGuildLoaded];
+  const items2 = [closure_7];
   stateFromStoresArray = invites(flag[18]).useStateFromStoresArray(items2, () => sortedLinkedChannelsForGuild.getSortedLinkedChannelsForGuild(guild.id));
   const items3 = [memo, stateFromStoresArray];
   const memo1 = stateFromStores.useMemo(() => {
@@ -208,15 +204,15 @@ let closure_15 = createCacheKey.createStyles({ list: { paddingTop: 8 }, content:
 const pause_invites = "pause_invites";
 importDefaultResult = new importDefaultResult({ code: "pause_invites" });
 let closure_18 = {};
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalInstantInvites.tsx");
 
 export default function ConnectedGuildSettingsModalInstantInvites(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(guildId));
+  const items = [closure_8];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
   guildId(589);
-  [][0] = handleFormInit;
+  [][0] = closure_9;
   let tmp6 = null;
   if (null != stateFromStores) {
     obj = { children: null };

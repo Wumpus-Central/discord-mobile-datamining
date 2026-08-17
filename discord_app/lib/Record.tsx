@@ -1,4 +1,6 @@
 // discord_app/lib/Record.tsx
+import set from "set" /* 2 */;
+
 let Record;
 class Record {
 }
@@ -111,7 +113,7 @@ prototype["update"] = function update(arg0, arg1, arg2) {
     }
   }
 };
-const result = require("set").fileFinishedImporting("lib/Record.tsx");
+const result = set.fileFinishedImporting("lib/Record.tsx");
 class TypedRecord {
 }
 const prototype2 = TypedRecord.prototype;

@@ -1,44 +1,41 @@
 // discord_app/design/components/Forms/native/FormSwitch.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import IconSizes from "IconSizes";
-import importDefaultResult1 from "module_4115";
-import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
-import { SUBTLE_SPRING } from "../../../animation/reanimated/spring/springPresets.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
+import IconSizesDefault from "IconSizes" /* 4747 */;
+import SUBTLE_SPRING from "SUBTLE_SPRING" /* 4748 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
-let closure_6 = require("module_4115").createAnimatedComponent(require("set").Pressable);
+require = arg1;
+let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").Pressable);
 let obj = { switch: null, unselectedBackground: null, unselectedIcon: null, selectedIcon: null, selected: null, knob: null };
-obj = { width: require("Themes").modules.mobile.CONTROL_SWITCH_WIDTH, height: require("Themes").modules.mobile.CONTROL_SWITCH_HEIGHT, padding: require("Themes").space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: require("Themes").radii.lg, borderWidth: 1 };
+obj = { width: ThemesDefault.modules.mobile.CONTROL_SWITCH_WIDTH, height: ThemesDefault.modules.mobile.CONTROL_SWITCH_HEIGHT, padding: ThemesDefault.space.PX_4 - 1, flexGrow: 0, flexShrink: 0, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
 obj[0] = obj;
-createCacheKey = { tintColor: require("Themes").colors.SWITCH_BACKGROUND_DEFAULT, borderColor: require("Themes").colors.SWITCH_BORDER_DEFAULT };
+createCacheKey = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_DEFAULT };
 obj[1] = createCacheKey;
-obj[2] = { tintColor: require("Themes").colors.SWITCH_THUMB_ICON_DEFAULT };
-let obj2 = { tintColor: require("Themes").colors.SWITCH_THUMB_ICON_DEFAULT };
-obj[3] = { tintColor: require("Themes").colors.SWITCH_THUMB_ICON_ACTIVE };
-let obj3 = { tintColor: require("Themes").colors.SWITCH_THUMB_ICON_ACTIVE };
-obj[4] = { tintColor: require("Themes").colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: require("Themes").colors.SWITCH_BORDER_SELECTED_DEFAULT };
-let obj4 = { tintColor: require("Themes").colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: require("Themes").colors.SWITCH_BORDER_SELECTED_DEFAULT };
-obj[5] = { height: require("Themes").modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: require("Themes").modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round };
+obj[2] = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
+let obj2 = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_DEFAULT };
+obj[3] = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
+let obj3 = { tintColor: ThemesDefault.colors.SWITCH_THUMB_ICON_ACTIVE };
+obj[4] = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_SELECTED_DEFAULT };
+let obj4 = { tintColor: ThemesDefault.colors.SWITCH_BACKGROUND_SELECTED_DEFAULT, borderColor: ThemesDefault.colors.SWITCH_BORDER_SELECTED_DEFAULT };
+obj[5] = { height: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj5 = { height: require("Themes").modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: require("Themes").modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round };
+let obj5 = { height: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, width: ThemesDefault.modules.mobile.CONTROL_SWITCH_KNOB_SIZE, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
+let closure_8 = importDefaultResult.createAnimatedComponent(IconSizesDefault);
 let closure_9 = { code: "function FormSwitchNativeTsx1(){const{withSpring,checked,selected,unselectedBackground,SUBTLE_SPRING}=this.__closure;return{backgroundColor:withSpring(checked?selected.tintColor:unselectedBackground.tintColor,SUBTLE_SPRING,'animate-always'),borderColor:withSpring(checked?selected.borderColor:unselectedBackground.borderColor,SUBTLE_SPRING,'animate-always')};}" };
 let closure_10 = { code: "function FormSwitchNativeTsx2(){const{withSpring,checked,knobCheckedLeft,SUBTLE_SPRING,knobSelectedBackgroundColor,knobBackgroundColor}=this.__closure;return{left:withSpring(checked?knobCheckedLeft:0,SUBTLE_SPRING,'animate-always'),backgroundColor:withSpring(checked?knobSelectedBackgroundColor:knobBackgroundColor,SUBTLE_SPRING,'animate-always')};}" };
 let closure_11 = { code: "function FormSwitchNativeTsx3(){const{useReducedMotion,checked,on,off,withSpring,SUBTLE_SPRING}=this.__closure;const scale=useReducedMotion?1:checked?on:off;return{opacity:withSpring(checked?on:off,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(scale,SUBTLE_SPRING)}]};}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
+const importDefaultResult1 = importDefaultResult;
+let result = require("set").fileFinishedImporting("design/components/Forms/native/FormSwitch.native.tsx");
 
 export const FormSwitch = function FormSwitch(onValueChange) {
-  let accessibilityHint;
-  let accessibilityLabel;
-  let disabled;
-  let tmp;
-  let value;
   ({ disabled, value } = onValueChange);
   let _require = value;
-  let importDefault = onValueChange.onValueChange;
+  importDefault = onValueChange.onValueChange;
   ({ accessibilityLabel, accessibilityHint, aria-hidden: tmp } = onValueChange);
   const context = React.useContext(_require(enabled[8]).AccessibilityPreferencesContext);
   enabled = context.reducedMotion.enabled;
@@ -50,7 +47,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
     callback(c0);
   }, items);
   const tmp8 = importDefault(enabled[9])("FormSwitch");
-  const jsx = tmp8;
+  jsx = tmp8;
   const tmp9 = unselectedBackground();
   const selected = tmp9.selected;
   unselectedBackground = tmp9.unselectedBackground;
@@ -60,8 +57,8 @@ export const FormSwitch = function FormSwitch(onValueChange) {
       tmp = c0;
       tmp2 = enabled;
       obj = c0(enabled[10]);
-      tmp3 = _slicedToArray;
-      if (_slicedToArray) {
+      tmp3 = closure_3;
+      if (closure_3) {
         tmp5 = selected;
         tintColor = selected.tintColor;
       } else {
@@ -99,8 +96,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
     if (first) {
       num = token;
     }
-    obj = { left: obj.withSpring(num, tmp(tmp2[11]).SUBTLE_SPRING, "animate-always"), backgroundColor: null };
-    obj[1] = v0(enabled[10]).withSpring(first ? token2 : token1, v0(enabled[11]).SUBTLE_SPRING, "animate-always");
+    obj = { left: obj.withSpring(num, tmp(tmp2[11]).SUBTLE_SPRING, "animate-always"), backgroundColor: v0(enabled[10]).withSpring(first ? token2 : token1, v0(enabled[11]).SUBTLE_SPRING, "animate-always") };
     return obj;
   };
   obj = { withSpring: _require(enabled[10]).withSpring, checked: first, knobCheckedLeft: token, SUBTLE_SPRING: _require(enabled[11]).SUBTLE_SPRING, knobSelectedBackgroundColor: token2, knobBackgroundColor: token1 };
@@ -129,7 +125,7 @@ export const FormSwitch = function FormSwitch(onValueChange) {
   _require = 0;
   importDefault = 1;
   const animatedStyle2 = obj8.useAnimatedStyle(fn2);
-  const obj1 = { useReducedMotion: enabled, checked: first, on: 1, off: 0, withSpring: _require(enabled[10]).withSpring, SUBTLE_SPRING: _require(enabled[11]).SUBTLE_SPRING };
+  obj1 = { useReducedMotion: enabled, checked: first, on: 1, off: 0, withSpring: _require(enabled[10]).withSpring, SUBTLE_SPRING: _require(enabled[11]).SUBTLE_SPRING };
   const fn3 = function n() {
     if (enabled) {
       let obj = CONFIG_NEVER_ANIMATE;

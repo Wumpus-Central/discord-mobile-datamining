@@ -1,6 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx
-import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
-const result = require("CommonActions").fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
+import set from "set" /* 2 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/panels/PanelsNavigationUtils.tsx");
 
 export const convertPortraitToLandscapeScreens = function convertPortraitToLandscapeScreens() {
   let obj = getRootNavigationRef;
@@ -108,7 +110,7 @@ export const convertLandscapeToPortraitScreens = function convertLandscapeToPort
               if (params != null) {
                 channelId1 = params.channelId;
               }
-              const obj1 = { channelId: null, guildId: null };
+              obj1 = { channelId: null, guildId: null };
               obj1[0] = channelId1;
               const params2 = coerceGuildsRouteResult.params;
               let guildId;

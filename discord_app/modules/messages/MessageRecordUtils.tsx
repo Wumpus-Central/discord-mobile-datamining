@@ -1,29 +1,24 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
-import createFromServer from "createFromServer";
-import hasFlag from "hasFlag";
-import closure_6 from "hasFlag";
-import importDefaultResult from "createdAt";
-import fetchFingerprint from "fetchFingerprint";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { t } from "../../../_runtime/03975_t.js";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import tDefault from "t" /* 3975 */;
+import trimTrailingPunctuationDefault from "trimTrailingPunctuation" /* 4358 */;
+import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import isMentionedDefault from "isMentioned" /* 4819 */;
+import transformMessagePollDefault from "transformMessagePoll" /* 4820 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import closure_3 from "createFromServer" /* 4804 */;
+import hasFlag from "hasFlag" /* 4031 */;
+import closure_6 from "hasFlag" /* 4031 */;
+import importDefaultResult from "createdAt" /* 1930 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import closure_9 from "markAllUserIdListsStale" /* 4030 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 import { getEffectiveVideoProvider } from "../../utils/EmbedUtils.tsx";
-import { _resolveGiftCode } from "../../utils/GiftCodeUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { trimTrailingPunctuation } from "../coded_links/findCodedLinks.tsx";
 import { flattenComponents } from "../interaction_components/InteractionComponentUtils.tsx";
-import { transformMessagePoll } from "../polls/transformMessagPoll.tsx";
-import { getStickerExtensionFromFormatType } from "../stickers/StickersUtils.tsx";
-import { isMentioned } from "isMessageMentioned.tsx";
-import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 
-let c4;
-let c5;
-let closure_12;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function createMinimalMessageRecord(timestamp) {
   const obj = {};
   let tmp = closure_5;
@@ -45,7 +40,7 @@ function createMinimalMessageRecord(timestamp) {
     let items = [];
   } else {
     const embeds = timestamp.embeds;
-    const mapped = embeds.map((footer) => message2(outer1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
+    const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
     items = _getEffectiveVideoProvider.mergeEmbedsOnURL(mapped);
     const obj2 = _getEffectiveVideoProvider;
   }
@@ -60,21 +55,19 @@ function createMinimalMessageRecord(timestamp) {
   if (NON_PARSED.has(timestamp.type)) {
     let items1 = [];
   } else {
-    items1 = trimTrailingPunctuation(timestamp.content);
+    items1 = trimTrailingPunctuationDefault(timestamp.content);
   }
   obj.codedLinks = items1;
   tmp = new tmp(obj);
   return tmp;
 }
 function createMessageRecord(message, message) {
-  let interactionData;
-  let reactions;
   let obj = message;
   if (message === undefined) {
     obj = {};
   }
   ({ reactions, interactionData } = obj);
-  let obj1 = createMinimalMessageRecord(message);
+  obj1 = createMinimalMessageRecord(message);
   const mentions = message.mentions;
   let mapped;
   if (mentions != null) {
@@ -109,7 +102,7 @@ function createMessageRecord(message, message) {
   }
   let fromServer = null;
   if (null != message.interaction) {
-    fromServer = createFromServer.createFromServer(message.interaction);
+    fromServer = closure_3.createFromServer(message.interaction);
   }
   if (message.type === constants2.THREAD_STARTER_MESSAGE) {
     const referenced_message = message.referenced_message;
@@ -130,7 +123,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp17 = content;
-    obj5 = DISCORD_EPOCH;
+    obj5 = DISCORD_EPOCHDefault;
   }
   let tmp20;
   if (message.type === constants2.PREMIUM_GROUP_INVITE) {
@@ -140,7 +133,7 @@ function createMessageRecord(message, message) {
     }
     str = "";
     tmp20 = content1;
-    obj6 = DISCORD_EPOCH;
+    obj6 = DISCORD_EPOCHDefault;
   }
   obj = {};
   let tmp23 = closure_6;
@@ -199,13 +192,13 @@ function createMessageRecord(message, message) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp39Result = t(date);
-      const tmp39 = t;
+      tmp39Result = tDefault(date);
+      const tmp39 = tDefault;
     }
     let durationResult = null;
     if (null != tmp39Result) {
-      durationResult = t.duration(tmp39Result.diff(tmp35));
-      const obj12 = t;
+      durationResult = tDefault.duration(tmp39Result.diff(tmp35));
+      const obj12 = tDefault;
     }
     obj2 = { participants: null, endedTimestamp: null, duration: null };
     obj2[0] = call.participants;
@@ -245,7 +238,7 @@ function createMessageRecord(message, message) {
     ({ interaction_metadata: obj7.interactionMetadata, role_subscription_data: obj7.roleSubscriptionData, purchase_notification: obj7.purchaseNotification } = message);
     let tmp50;
     if (null != message.poll) {
-      tmp50 = transformMessagePoll(message.poll);
+      tmp50 = transformMessagePollDefault(message.poll);
     }
     obj.poll = tmp50;
     obj.sharedClientTheme = message.shared_client_theme;
@@ -310,7 +303,7 @@ function createMessageRecord(message, message) {
 const error = importDefaultResult;
 ({ MessageFlags: unpackModuleId, MessageTypes: closure_12, MessageTypesSets: map1 } = ME);
 importDefaultResult = new importDefaultResult({ id: "???", username: "???" });
-let result = require("createdAt").fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/MessageRecordUtils.tsx");
 
 export { createMessageRecord };
 export const updateServerMessage = function updateServerMessage(message, message2) {
@@ -340,12 +333,12 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = t(date);
-          const tmp4 = t;
+          tmp = tDefault(date);
+          const tmp4 = tDefault;
         }
         let durationResult = null;
         if (null != tmp) {
-          obj = t;
+          obj = tDefault;
           durationResult = obj.duration(tmp.diff(tmp46));
         }
         obj = { participants: null, endedTimestamp: null, duration: null };
@@ -403,7 +396,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null == message2.reactions) {
           let result10 = result9;
           if (null != message2.poll) {
-            result10 = result9.set("poll", transformMessagePoll(message2.poll));
+            result10 = result9.set("poll", transformMessagePollDefault(message2.poll));
           }
           let flag = false;
           let result11 = result10;
@@ -424,11 +417,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
           }
           let result14 = result13;
           if (flag) {
-            const obj1 = { message: null, userId: null };
+            obj1 = { message: null, userId: null };
             obj1[0] = result13;
             obj1[1] = store.getId();
-            result14 = result13.set("mentioned", isMentioned(obj1));
-            const tmp43 = isMentioned;
+            result14 = result13.set("mentioned", isMentionedDefault(obj1));
+            const tmp43 = isMentionedDefault;
           }
           return result14;
         } else {
@@ -491,7 +484,7 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         let items3 = [];
       } else {
         const embeds = message2.embeds;
-        const mapped = embeds.map((footer) => message2(outer1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
+        const mapped = embeds.map((footer) => message2(closure_1_2[15]).sanitizeEmbed(message2.channel_id, message2.id, footer));
         items3 = _getEffectiveVideoProvider.mergeEmbedsOnURL(mapped);
         const obj9 = _getEffectiveVideoProvider;
       }

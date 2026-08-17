@@ -1,8 +1,10 @@
 // discord_app/modules/summaries/SummaryConstants.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const require = arg1;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+require = arg1;
 let obj = { DUPLICATED: "DUPLICATED", TOO_GENERIC: "TOO_GENERIC", TOO_MANY: "TOO_MANY", INACCURATE: "INACCURATE", NOT_USEFUL: "NOT_USEFUL", OTHER: "OTHER" };
-const result = 5 * require("set").Millis.SECOND;
+const result = 5 * setDefault.Millis.SECOND;
 const result1 = require("set").fileFinishedImporting("modules/summaries/SummaryConstants.tsx");
 
 export const SUMMARY_POLL_INTERVAL = result;
@@ -22,7 +24,7 @@ export const getSummaryFeedbackReasons = function getSummaryFeedbackReasons() {
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t.xnKDnv);
   items[2] = obj;
-  const obj1 = { value: obj.INACCURATE, label: null };
+  obj1 = { value: obj.INACCURATE, label: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t.JW5VFj);
   items[3] = obj1;

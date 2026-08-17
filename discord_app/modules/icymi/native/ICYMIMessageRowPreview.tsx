@@ -1,24 +1,19 @@
 // discord_app/modules/icymi/native/ICYMIMessageRowPreview.tsx
-import importAllResult from "noop";
-import { MessageEmbedTypes } from "ME";
-import { jsx } from "jsxProd";
-import { createCacheKey } from "../../../design/components/Styles/native/createStyles.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
+import { MessageEmbedTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function ICYMIMessageRowPreview(pointerEvents) {
-  let maxHeight;
-  let message;
-  let messageOptions;
-  let messageSizeCacheRef;
-  let require;
   ({ lineClamp: require, messageOptions } = pointerEvents);
   let str = pointerEvents.pointerEvents;
   ({ message, messageSizeCacheRef, maxHeight } = pointerEvents);
   if (str === undefined) {
     str = "none";
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   let setting;
   let setting1;
   let setting2;
@@ -43,7 +38,7 @@ function ICYMIMessageRowPreview(pointerEvents) {
     pointerEvents: str,
     horizontalOffset: 0,
     modifyRow(arg0) {
-      arg0.contextType = outer1_0(seeMoreLabelColor[13]).MessageContextType.SEARCH;
+      arg0.contextType = closure_1_0(seeMoreLabelColor[13]).MessageContextType.SEARCH;
       if (null != closure_0) {
         const obj = { numberOfLines: null, expandable: false, seeMoreLabel: null, seeMoreLabelColor: null };
         obj[0] = tmp3;
@@ -156,7 +151,7 @@ const memoResult2 = importAllResult.memo((message) => {
   const items = [message, , , ];
   ({ lineClamp: arr[1], muted: arr[2], pointerEvents: arr[3] } = merged);
   const memo = importAllResult.useMemo(() => {
-    const obj = { message, lineClamp: merged.lineClamp, layout: message(outer1_2[4]).ChannelListLayoutTypes.COZY, muted: null, pointerEvents: null };
+    const obj = { message, lineClamp: merged.lineClamp, layout: message(closure_1_2[4]).ChannelListLayoutTypes.COZY, muted: null, pointerEvents: null };
     let flag = merged.muted;
     if (flag == null) {
       flag = false;
@@ -186,7 +181,7 @@ const memoResult2 = importAllResult.memo((message) => {
   obj.seeMoreLabel = "...";
   return <ICYMIMessageRowPreview />;
 });
-let result = require("jsxProd").fileFinishedImporting("modules/icymi/native/ICYMIMessageRowPreview.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIMessageRowPreview.tsx");
 
 export const MediaOnlyRowPreview = memoResult;
 export const NonMediaEmbedsRowPreview = memoResult1;

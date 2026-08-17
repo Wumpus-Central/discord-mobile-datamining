@@ -1,17 +1,17 @@
 // discord_app/modules/activities/panel/native/ActivityPanelContainer.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import participantFromServer from "participantFromServer";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { BaseActivityPanelController } from "ActivityPanelController.tsx";
-import { renderActivityOrPIP } from "ActivityPanelUI.tsx";
+import initialize from "initialize" /* 589 */;
+import BaseActivityPanelControllerDefault from "BaseActivityPanelController" /* 16226 */;
+import renderActivityOrPIPDefault from "renderActivityOrPIP" /* 16235 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo(function ActivityPanelContainer() {
+require = arg1;
+const memoResult = importAllResult.memo(function ActivityPanelContainer() {
   let obj = initialize;
-  const items = [participantFromServer, ensureGuildLoaded, handleConnectionOpen];
+  const items = [closure_5, closure_3, closure_4];
   let tmp2 = null;
   if (obj.useStateFromStores(items, () => {
     connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
@@ -47,12 +47,12 @@ const memoResult = require("noop").memo(function ActivityPanelContainer() {
     }
   }, [])) {
     obj = { children: null };
-    obj[0] = jsx(renderActivityOrPIP, {});
-    tmp2 = jsx(BaseActivityPanelController, { children: null });
-    const tmp5 = BaseActivityPanelController;
+    obj[0] = jsx(renderActivityOrPIPDefault, {});
+    tmp2 = jsx(BaseActivityPanelControllerDefault, { children: null });
+    const tmp5 = BaseActivityPanelControllerDefault;
   }
   return tmp2;
 });
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelContainer.tsx");
 
 export default memoResult;

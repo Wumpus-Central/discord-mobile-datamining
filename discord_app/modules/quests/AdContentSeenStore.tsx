@@ -1,11 +1,12 @@
 // discord_app/modules/quests/AdContentSeenStore.tsx
-import _slicedToArray from "_slicedToArray";
-import initializeState from "initializeState";
-import { PersistedStore } from "initialize";
-import { AdCreativeType } from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import { getQuestDeliveryDataForPlacement } from "utils/QuestDataUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
+import AdCreativeType from "AdCreativeType" /* 7469 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "initializeState" /* 7453 */;
 
-const require = arg1;
+require = arg1;
 function getOrCreateSet(QUEST) {
   let value = map.get(QUEST);
   if (null == value) {
@@ -17,8 +18,6 @@ function getOrCreateSet(QUEST) {
   return value;
 }
 function syncWithQuestStore() {
-  let tmp5;
-  let tmp7;
   const quests = lastFetchedQuestHomeHero.quests;
   const obj = getOrCreateSet(AdCreativeType.AdCreativeType.QUEST);
   let flag = false;
@@ -111,13 +110,14 @@ function syncWithQuestStore() {
   return flag;
 }
 let map = new Map();
+const PersistedStore = initializeDefault.PersistedStore;
 class AdContentSeenStore extends PersistedStore {
 }
 const prototype = AdContentSeenStore.prototype;
 prototype["initialize"] = function initialize(seenContentIds) {
   const self = this;
-  this.waitFor(initializeState);
-  const map = new Map();
+  this.waitFor(closure_3);
+  map = new Map();
   if (null != seenContentIds) {
     const _Object = Object;
     const entries = Object.entries(seenContentIds.seenContentIds);
@@ -139,7 +139,7 @@ prototype["initialize"] = function initialize(seenContentIds) {
       continue;
     }
   }
-  const items = [initializeState];
+  const items = [closure_3];
   self.syncWith(items, syncWithQuestStore);
 };
 prototype["getState"] = function getState() {
@@ -166,7 +166,7 @@ prototype["hasSeen"] = function hasSeen(arg0, arg1) {
 };
 AdContentSeenStore.displayName = "AdContentSeenStore";
 AdContentSeenStore.persistKey = "AdContentSeenStore";
-const adContentSeenStore = new AdContentSeenStore(require("dispatcher"), {
+const adContentSeenStore = new AdContentSeenStore(dispatcherDefault, {
   AD_CONTENT_MARK_SEEN: function handleMarkSeen(adCreativeType) {
     const obj = getOrCreateSet(adCreativeType.adCreativeType);
     let flag = false;
@@ -201,6 +201,6 @@ const adContentSeenStore = new AdContentSeenStore(require("dispatcher"), {
     }
   }
 });
-let result = require("AdCreativeType").fileFinishedImporting("modules/quests/AdContentSeenStore.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/AdContentSeenStore.tsx");
 
 export default adContentSeenStore;

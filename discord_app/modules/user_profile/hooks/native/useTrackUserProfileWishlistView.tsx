@@ -1,11 +1,10 @@
 // discord_app/modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx
-import noop from "noop";
-import get from "get";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "get" /* 9186 */;
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useRef: c3 } = noop);
-const result = require("initialize").fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/hooks/native/useTrackUserProfileWishlistView.tsx");
 
 export default function useTrackUserProfileWishlistView(wishlistId) {
   wishlistId = wishlistId.wishlistId;
@@ -16,7 +15,7 @@ export default function useTrackUserProfileWishlistView(wishlistId) {
     flag = true;
   }
   let stateFromStores;
-  let closure_5;
+  closure_5 = undefined;
   const items = [stateFromStores];
   stateFromStores = wishlistId(onAction[2]).useStateFromStores(items, () => stateFromStores.isFetching(wishlistId));
   closure_5 = flag(false);

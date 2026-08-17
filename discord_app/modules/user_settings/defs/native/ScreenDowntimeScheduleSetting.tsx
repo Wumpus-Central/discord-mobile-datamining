@@ -1,10 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../parent_tools/FamilyCenterV3Experiment.tsx";
-import { useUserIsTeenAgeGroup } from "../../../parent_tools/hooks/useUserIsTeenAgeGroup.tsx";
-import { useUserIdsForLinkStatus } from "../../../parent_tools/hooks/useUserLinks.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import apexExperiment from "apexExperiment" /* 5364 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import useUserIsTeenAgeGroupDefault from "useUserIsTeenAgeGroup" /* 14268 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -15,8 +17,8 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/071J7"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableScreenDowntimeScheduleNotifications.useSetting,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
     const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
@@ -24,7 +26,7 @@ const toggle = createToggle.createToggle({
   usePredicate() {
     let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
     const obj = apexExperiment;
-    const tmp2 = useUserIsTeenAgeGroup();
+    const tmp2 = useUserIsTeenAgeGroupDefault();
     const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
@@ -44,8 +46,8 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/071J7"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableScreenDowntimeScheduleNotifications.useSetting,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableScreenDowntimeScheduleNotifications.useSetting,
   onValueChange(arg0) {
     const EnableScreenDowntimeScheduleNotifications = explicitContentFromProto.EnableScreenDowntimeScheduleNotifications;
     return EnableScreenDowntimeScheduleNotifications.updateSetting(arg0);
@@ -53,7 +55,7 @@ let obj = {
   usePredicate() {
     let isFamilyCenterV3Enabled = apexExperiment.useIsFamilyCenterV3Enabled({ location: "ScreenDowntimeScheduleSetting" });
     const obj = apexExperiment;
-    const tmp2 = useUserIsTeenAgeGroup();
+    const tmp2 = useUserIsTeenAgeGroupDefault();
     const hasActiveParentLinks = useUserIdsForLinkStatus.useHasActiveParentLinks();
     if (isFamilyCenterV3Enabled) {
       isFamilyCenterV3Enabled = tmp2;
@@ -64,6 +66,6 @@ let obj = {
     return isFamilyCenterV3Enabled;
   }
 };
-const result = require("useUserIsTeenAgeGroup").fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ScreenDowntimeScheduleSetting.tsx");
 
 export default toggle;

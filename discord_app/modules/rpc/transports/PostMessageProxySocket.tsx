@@ -1,8 +1,12 @@
 // discord_app/modules/rpc/transports/PostMessageProxySocket.tsx
-import { RPCCloseCodes } from "ME";
-import "checkRpcVersion";
-import { HANDSHAKE } from "../RPCOpcodes.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import HANDSHAKEDefault from "HANDSHAKE" /* 8751 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import checkRpcVersionDefault from "checkRpcVersion" /* 8762 */;
 
+const RPCCloseCodes = ME.RPCCloseCodes;
+checkRpcVersionDefault;
 class WindowProxySocket extends tmp2 {
   constructor(arg0) {
     ({ postMessageToRPCClient, encoding, logger } = global);
@@ -61,7 +65,7 @@ prototype["send"] = function send(arg0) {
   if (onSendingToRPCClient != null) {
     onSendingToRPCClient(arg0, self.id);
   }
-  const items = [HANDSHAKE.FRAME, arg0];
+  const items = [HANDSHAKEDefault.FRAME, arg0];
   const result = self.postMessageToRPCClient(items, self.source.origin);
 };
 prototype["close"] = function close(arg0, arg1) {
@@ -74,6 +78,6 @@ prototype["close"] = function close(arg0, arg1) {
   }
   self.closed = true;
 };
-let result = require("prototype").fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
+let result = set.fileFinishedImporting("modules/rpc/transports/PostMessageProxySocket.tsx");
 
 export default WindowProxySocket;

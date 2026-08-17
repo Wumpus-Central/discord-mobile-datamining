@@ -1,12 +1,10 @@
 // discord_app/modules/payments/hooks/useSubscriptionSelection.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/payments/hooks/useSubscriptionSelection.tsx");
 
 export default function useSubscriptionSelection() {
-  let tmp2;
-  let tmp3;
   [tmp2, tmp3] = callback(React.useState(undefined), 2);
   const tmp4 = callback(React.useState(undefined), 2);
   return { selectedSkuId: tmp2, setSelectedSkuId: tmp3, selectedPlanId: tmp4[0], setSelectedPlanId: tmp4[1] };

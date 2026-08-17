@@ -1,14 +1,13 @@
 // discord_app/modules/game_profile/native/components/GameProfileShopCarousel.tsx
-import noop from "noop";
-import { View } from "noop";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { CollectiblesShopCardInternalV2 } from "../../../collectibles/native/CollectiblesShopCardV2.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9172 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function HorizontalSpacing() {
   let obj = { style: null };
   obj = { width: CollectiblesShopCardInternalV2.COLLECTIBLES_SHOP_CARD_GAP };
@@ -16,20 +15,18 @@ function HorizontalSpacing() {
   return callback(View, obj);
 }
 function GameProfileShopCarouselContent(trackAction) {
-  let closeModal;
-  let collectionId;
   ({ collectionId, closeModal } = trackAction);
   trackAction = trackAction.trackAction;
-  let dependencyMap;
+  dependencyMap = undefined;
   let gameProfileShopCollection;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   dependencyMap = tmp;
   let obj = closeModal(12009);
   gameProfileShopCollection = obj.useGameProfileShopCollection(collectionId);
-  let obj1 = closeModal(12010);
+  obj1 = closeModal(12010);
   const fetchCollectiblesProducts = obj1.useFetchCollectiblesProducts(gameProfileShopCollection);
   let obj2 = closeModal(647);
-  let items = [updateCategoriesAndProducts];
+  let items = [closure_5];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items, () => {
     const mapped = gameProfileShopCollection.map((arg0) => product.getProduct(arg0));
     return mapped.filter((arg0) => null != arg0);
@@ -57,14 +54,14 @@ function GameProfileShopCarouselContent(trackAction) {
     obj3[1] = stateFromStoresArray;
     obj3[2] = function renderItem(item) {
       item = item.item;
-      return outer1_6(trackAction(_undefined[6]), {
+      return closure_1_6(trackAction(card[6]), {
         solidBackground: true,
-        cardStyle: _undefined.card,
+        cardStyle: card.card,
         product: item,
         hideWishlistButton: true,
         hidePrice: true,
         onPress() {
-          outer1_1(closeModal(9101).GameProfileTrackActionActions.DiscordCollectiblesShop);
+          closure_1_1(closeModal(9101).GameProfileTrackActionActions.DiscordCollectiblesShop);
           item();
           let obj = closeModal(5300);
           obj = { analyticsLocations: null, analyticsSource: null, initialProductSkuId: null };
@@ -88,18 +85,16 @@ function GameProfileShopCarouselContent(trackAction) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, header: null, card: null };
-createCacheKey = { gap: require("Themes").space.PX_8, marginHorizontal: -1 * require("Themes").space.PX_16 };
+createCacheKey = { gap: ThemesDefault.space.PX_8, marginHorizontal: -1 * ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_16 };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_16 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.lg };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: require("Themes").radii.lg };
-const result = require("updateCategoriesAndProducts").fileFinishedImporting("modules/game_profile/native/components/GameProfileShopCarousel.tsx");
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderRadius: ThemesDefault.radii.lg };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileShopCarousel.tsx");
 
 export default function GameProfileShopCarousel(game) {
-  let closeModal;
-  let trackAction;
   game = game.game;
   let first;
   ({ closeModal, trackAction } = game);

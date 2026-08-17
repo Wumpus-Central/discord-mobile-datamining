@@ -1,13 +1,13 @@
 // discord_common/js/shared/hooks/useStableCallback.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useStableCallback.tsx");
 
 export default function useStableCallback(stateFromStores) {
   const React = stateFromStores;
-  let closure_1 = React.useRef(stateFromStores);
+  closure_1 = React.useRef(stateFromStores);
   const insertionEffect = React.useInsertionEffect(() => {
-    closure_1.current = noop;
+    closure_1.current = closure_0;
   });
   return React.useCallback(() => {
     const items = [...HermesBuiltin.copyRestArgs()];

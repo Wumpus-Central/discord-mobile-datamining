@@ -1,31 +1,24 @@
 // discord_app/utils/AnalyticsUtils.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import withEqualityFn from "withEqualityFn";
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import ME from "ME";
-import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags";
-import { ApplicationTypes } from "ApplicationTypes";
-import isBlockedDomain from "isBlockedDomain";
-import importAllResult from "noop";
-import encodeProperties from "encodeProperties";
-import importAllResult1 from "encodeProperties";
-import encodeProperties from "encodeProperties";
-import merged from "encodeProperties";
-import { v1 } from "../../_runtime/00514_v1.js";
-import { IGNORE_ANALYTICS_BREADCRUMB_EVENTS } from "../modules/errors/CommonSentryInitUtils.tsx";
-import { getHermesInstrumentedStatsSummary } from "ProcessUtils.native.tsx";
-import { SentryUtils.native } from "SentryUtils.native.tsx";
+import reportAll from "report" /* 7 */;
+import v1 from "v1" /* 514 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
+import IGNORE_ANALYTICS_BREADCRUMB_EVENTS2 from "IGNORE_ANALYTICS_BREADCRUMB_EVENTS" /* 13568 */;
+import MEAll from "ME" /* 13571 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import withEqualityFn from "withEqualityFn" /* 699 */;
+import closure_9 from "refreshSourceMapCookie" /* 706 */;
+import ME from "ME" /* 676 */;
+import { AccessibilityFeatureFlags } from "AccessibilityFeatureFlags" /* 13570 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import importAllResult from "noop" /* 19 */;
+import encodeProperties from "encodeProperties" /* 503 */;
+import importAllResult1 from "encodeProperties" /* 503 */;
 
-let AnalyticEvents;
-let c10;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function expandEventProperties(arg0) {
-  let utmCampaign;
-  let utmContent;
-  let utmMedium;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
@@ -33,18 +26,18 @@ function expandEventProperties(arg0) {
   let obj2 = obj;
   if (null == obj.location) {
     if (null == obj.source) {
-      tmp.client_performance_cpu = getHermesInstrumentedStatsSummary.getCurrentCPUUsagePercent();
-      const obj6 = getHermesInstrumentedStatsSummary;
-      tmp.client_performance_memory = getHermesInstrumentedStatsSummary.getCurrentMemoryUsageKB();
-      const obj7 = getHermesInstrumentedStatsSummary;
-      tmp.cpu_core_count = getHermesInstrumentedStatsSummary.getCPUCoreCount();
+      tmp.client_performance_cpu = getHermesInstrumentedStatsSummaryDefault.getCurrentCPUUsagePercent();
+      const obj6 = getHermesInstrumentedStatsSummaryDefault;
+      tmp.client_performance_memory = getHermesInstrumentedStatsSummaryDefault.getCurrentMemoryUsageKB();
+      const obj7 = getHermesInstrumentedStatsSummaryDefault;
+      tmp.cpu_core_count = getHermesInstrumentedStatsSummaryDefault.getCPUCoreCount();
       tmp.accessibility_features = getAccessibilityFeatures();
       tmp.rendered_locale = obj2(1236).intl.currentLocale;
       const _Math = Math;
       const _performance = performance;
       tmp.uptime_app = Math.floor((performance.now() - closure_18) / c15);
-      const obj8 = getHermesInstrumentedStatsSummary;
-      const processUptime = getHermesInstrumentedStatsSummary.getProcessUptime();
+      const obj8 = getHermesInstrumentedStatsSummaryDefault;
+      const processUptime = getHermesInstrumentedStatsSummaryDefault.getProcessUptime();
       if (null != processUptime) {
         const _Math2 = Math;
         tmp.uptime_process_renderer = Math.floor(processUptime);
@@ -80,7 +73,7 @@ function expandEventProperties(arg0) {
       if (typeof source === "string") {
         obj = { source: null };
         obj[0] = source;
-        let obj1 = obj;
+        obj1 = obj;
       } else {
         obj1 = { source_page: null, source_section: null, source_object: null, source_object_type: null, source_promotion_id: null };
         ({ page: obj5[0], section: obj5[1], object: obj5[2], objectType: obj5[3], promotionId: obj5[4] } = source);
@@ -105,13 +98,13 @@ function expandEventProperties(arg0) {
 }
 let closure_4 = ["location"];
 let closure_5 = ["source"];
-({ setDebugTrackedData: error, getLocation: metroImportAll } = withEqualityFn);
+({ setDebugTrackedData: error, getLocation: closure_8 } = withEqualityFn);
 ({ AnalyticEvents, AnalyticsObjectTypes: c10, AnalyticsSections: unpackModuleId } = ME);
 let closure_14 = {};
 let c15 = 1000;
 let c16 = 60000;
 let c17 = 900000;
-const context = require("noop").createContext({ location: {} });
+const context = importAllResult.createContext({ location: {} });
 let closure_18 = performance.now();
 let launchSignature = null;
 if (isBlockedDomain.isLibdiscoreInitialized()) {
@@ -120,9 +113,9 @@ if (isBlockedDomain.isLibdiscoreInitialized()) {
   launchSignature = obj2.generateLaunchSignature(obj3.getGlobalObject());
 }
 function addBreadcrumb(arg0) {
-  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
+  const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = IGNORE_ANALYTICS_BREADCRUMB_EVENTS2.IGNORE_ANALYTICS_BREADCRUMB_EVENTS;
   if (!IGNORE_ANALYTICS_BREADCRUMB_EVENTS.includes(arg0)) {
-    let obj = SentryUtils.native;
+    let obj = _modDef1208;
     obj = { category: "analytics", message: null };
     obj[1] = arg0;
     obj.addBreadcrumb(obj);
@@ -143,14 +136,14 @@ function debugLogEvent(name, result) {
   if (arg2 === undefined) {
     flag = false;
   }
-  const report = importAll(7).report;
+  const report = reportAll.report;
   if (flag) {
     report("Analytics", name, result);
   } else {
     report("Analytics", name);
   }
 }
-const result = require("encodeProperties").extendSuperProperties({ launch_signature: launchSignature });
+const result = importAllResult1.extendSuperProperties({ launch_signature: launchSignature });
 let closure_20 = [];
 obj = {
   [AnalyticEvents.APP_OPENED]: obj,
@@ -298,7 +291,6 @@ obj13 = {
 obj14 = {
   throttlePeriod: 120000,
   throttleKeys(arg0) {
-    let source_class_list;
     const items = [, ];
     ({ shortcut_name: arr[0], location_object: arr[1], source_class_list } = arg0);
     if (source_class_list == null) {
@@ -657,15 +649,16 @@ obj9 = {
     return items;
   }
 };
-let closure_22 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: require("dispatcher"), TRACK_ACTION_NAME: "TRACK" });
+let closure_22 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 let c24 = false;
 let closure_25 = {};
-const obj57 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: require("dispatcher"), TRACK_ACTION_NAME: "TRACK" };
-let closure_26 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: require("dispatcher"), TRACK_ACTION_NAME: "TRACK" });
+const obj57 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+let closure_26 = encodeProperties.trackMaker({ addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" });
 const obj59 = {};
+let merged = Object.assign(importAllResult1);
 obj59.getCampaignParams = require("encodeProperties").getCampaignParams;
 obj59.setSystemAccessibilityFeatures = function setSystemAccessibilityFeatures(getActiveFeatures) {
-  let closure_21 = getActiveFeatures;
+  closure_21 = getActiveFeatures;
 };
 obj59.expandEventProperties = expandEventProperties;
 obj59.track = function track(arg0, arg1) {
@@ -697,7 +690,7 @@ obj59.track = function track(arg0, arg1) {
   if (flag === undefined) {
     flag = false;
   }
-  const report = importAll(7).report;
+  const report = reportAll.report;
   if (flag) {
     report("Analytics", StringResult, tmp5);
   } else {
@@ -706,8 +699,8 @@ obj59.track = function track(arg0, arg1) {
   obj = { flush: obj.flush, fingerprint: obj.fingerprint };
   return callback4(arg0, tmp5, obj);
 };
-const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: require("dispatcher"), TRACK_ACTION_NAME: "TRACK" };
-const result1 = require("withEqualityFn").fileFinishedImporting("utils/AnalyticsUtils.tsx");
+const obj58 = { addBreadcrumb, analyticEventConfigs: obj, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+const result1 = require("set").fileFinishedImporting("utils/AnalyticsUtils.tsx");
 
 export default obj59;
 export const AnalyticsContext = context;
@@ -718,16 +711,16 @@ export const addExtraAnalyticsDecorator = function addExtraAnalyticsDecorator(ar
 export const AnalyticEventConfigs = obj;
 export { expandLocation };
 export function setUTMContext(arg0) {
-  let closure_14 = arg0;
+  closure_14 = arg0;
   return arg0;
 }
 export { expandEventProperties };
 export { debugLogEvent };
 export function startRecordingAnalyticsEvents() {
-  let c24 = true;
+  c24 = true;
 }
 export function stopRecordingAnalyticsEvents() {
-  let c24 = false;
+  c24 = false;
 }
 export function getAnalyticsEventsRecording() {
   return closure_25;
@@ -748,10 +741,10 @@ export const trackNetworkAction = function trackNetworkAction(event, arg1) {
   const merged1 = Object.assign(arg1);
   callback2(event, obj);
   const tmp2 = expandEventProperties(obj);
-  importAll(7).report("Analytics", event);
+  reportAll.report("Analytics", event);
   callback5(event, tmp2);
 };
 export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
   return v1.v4();
 };
-export const AnalyticsSchema = require("ME");
+export const AnalyticsSchema = MEAll;

@@ -1,14 +1,14 @@
 // discord_app/design/components/Icon/native/CutoutBackgroundContext.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { n } from "../../../../../_runtime/00689_n.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { flattenColorOverOpaqueBackground } from "../../../utils/shared/colors.tsx";
+import nDefault from "n" /* 689 */;
+import ThemesDefault from "Themes" /* 712 */;
+import flattenColorOverOpaqueBackground from "flattenColorOverOpaqueBackground" /* 8404 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 let context = importAllResult.createContext(undefined);
-const result = require("n").fileFinishedImporting("design/components/Icon/native/CutoutBackgroundContext.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/CutoutBackgroundContext.tsx");
 
 export const useCutoutBackgroundColor = function useCutoutBackgroundColor() {
   return importAllResult.useContext(closure_5);
@@ -16,7 +16,7 @@ export const useCutoutBackgroundColor = function useCutoutBackgroundColor() {
 export const CutoutBackgroundProvider = function CutoutBackgroundProvider(children) {
   const backgroundColor = children.backgroundColor;
   const context = importAllResult.useContext(closure_5);
-  const internal = Themes.internal;
+  const internal = ThemesDefault.internal;
   if (internal.isSemanticColor(backgroundColor)) {
     const tmp5 = backgroundColor;
   }
@@ -35,7 +35,7 @@ export const CutoutBackgroundProvider = function CutoutBackgroundProvider(childr
         const tmp6Result = flattenColorOverOpaqueBackground;
       }
     }
-    obj2 = n(token);
+    obj2 = nDefault(token);
   } else if (undefined === token) {
     value = context;
   }

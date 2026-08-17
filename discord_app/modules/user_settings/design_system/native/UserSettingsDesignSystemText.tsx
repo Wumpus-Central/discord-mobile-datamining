@@ -1,25 +1,24 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TEXT_VARIANT } from "../../../../../discord_common/js/packages/tokens/typography/generated/TextVariants.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import Stack from "Stack" /* 4733 */;
+import TEXT_VARIANT2 from "TEXT_VARIANT" /* 4735 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemText.tsx");
 
 export default function UserSettingsDesignSystemText() {
   let obj = map;
   obj = { children: null };
-  const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_PADDING);
-  obj = { spacing: null, style: null, children: null };
-  obj[0] = Themes.space.PX_24;
-  obj[1] = { paddingHorizontal: token };
-  const obj1 = { title: "Text Variants", hasIcons: false, children: null };
-  const TEXT_VARIANT = TEXT_VARIANT.TEXT_VARIANT;
+  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
+  obj = { spacing: ThemesDefault.space.PX_24, style: { paddingHorizontal: token }, children: null };
+  obj1 = { title: "Text Variants", hasIcons: false, children: null };
+  const TEXT_VARIANT = TEXT_VARIANT2.TEXT_VARIANT;
   obj1[2] = TEXT_VARIANT.map((arg0) => {
     let tmp = null;
     if ("code" !== arg0) {
@@ -33,6 +32,6 @@ export default function UserSettingsDesignSystemText() {
     return tmp;
   });
   obj[2] = jsx(TableRowGroupTitle.TableRowGroup, { title: "Text Variants", hasIcons: false, children: null });
-  obj[0] = jsx(Stack.Stack, { spacing: null, style: null, children: null });
-  return <ScrollView spacing={null} style={null}>{null}</ScrollView>;
+  obj[0] = jsx(Stack.Stack, { spacing: ThemesDefault.space.PX_24, style: { paddingHorizontal: token }, children: null });
+  return <ScrollView spacing={ThemesDefault.space.PX_24} style={{ paddingHorizontal: token }}>{null}</ScrollView>;
 };

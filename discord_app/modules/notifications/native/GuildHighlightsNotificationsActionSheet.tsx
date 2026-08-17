@@ -1,29 +1,25 @@
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import combined from "combined";
-import { View } from "Background";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import ME from "ME";
-import { FeedbackRating } from "FeedbackRating";
-import jsxProd from "PressableCard";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
+import ME from "ME" /* 676 */;
+import { FeedbackRating } from "FeedbackRating" /* 10811 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function GuildPill(guild) {
   guild = guild.guild;
-  const tmp = callback3();
+  const tmp = callback4();
   let obj = { style: tmp.guildPill, children: null };
-  obj = { guild, size: null, animate: true };
-  obj[1] = GuildIconSizes.GuildIconSizes.SMALL_32;
-  const items = [callback(GuildIconSizes, obj), ];
+  obj = { guild, size: GuildIconSizes.GuildIconSizes.SMALL_32, animate: true };
+  const items = [callback(GuildIconSizesDefault, obj), ];
   obj = { style: tmp.guildName, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   let name;
   if (guild != null) {
@@ -34,42 +30,40 @@ function GuildPill(guild) {
   obj[1] = items;
   return closure_12(View, obj);
 }
-({ HelpdeskArticles: metroImportAll, HighlightSettings: c9 } = ME);
+({ HelpdeskArticles: closure_8, HighlightSettings: c9 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { contentContainer: { padding: 24, alignItems: "center", justifyContent: "center" }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginBottom: 4 }, centerText: { textAlign: "center" }, feedback: { marginTop: 16, alignItems: "stretch", alignSelf: "stretch", paddingBottom: 16 }, thanks: { height: 40, textAlign: "center", textAlignVertical: "center" }, settings: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginVertical: 8, padding: 0 };
 createCacheKey[6] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { guildPill: null, guildName: null };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
-obj1[0] = { flexDirection: "row", padding: 8, marginBottom: 16, backgroundColor: require("Themes").colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
+obj1[0] = { flexDirection: "row", padding: 8, marginBottom: 16, backgroundColor: ThemesDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
 obj1[1] = { paddingHorizontal: 8 };
 let closure_14 = createCacheKey.createStyles(obj1);
-let obj2 = { flexDirection: "row", padding: 8, marginBottom: 16, backgroundColor: require("Themes").colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx");
+let obj2 = { flexDirection: "row", padding: 8, marginBottom: 16, backgroundColor: ThemesDefault.colors.GUILD_NOTIFICATIONS_BOTTOM_SHEET_PILL_BACKGROUND, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round };
+let result = require("set").fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionSheet.tsx");
 
 export default function SummaryFeedbackActionSheet(guildId) {
-  let guild;
-  let notifyHighlights;
   guildId = guildId.guildId;
   const feedbackSettings = guildId.feedbackSettings;
   let ref;
   let first;
   let React;
   let first1;
-  let createGuildRecordFromRust;
-  let updateUserGuildSettingsInternal;
+  closure_6 = undefined;
+  closure_7 = undefined;
   let callback;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   ref = React.useRef(null);
   const tmp3 = first(React.useState(undefined), 2);
   first = tmp3[0];
   React = tmp3[1];
   let tmp4 = first(React.useState(false), 2);
   first1 = tmp4[0];
-  createGuildRecordFromRust = tmp4[1];
+  closure_6 = tmp4[1];
   const tmp6 = first(React.useState(false), 2);
-  updateUserGuildSettingsInternal = tmp6[1];
+  closure_7 = tmp6[1];
   const items = [first1, feedbackSettings];
   callback = React.useCallback((rating) => {
     let tmp = first1;
@@ -95,7 +89,7 @@ export default function SummaryFeedbackActionSheet(guildId) {
   }, items);
   const items1 = [first, callback];
   const effect = React.useEffect(() => () => {
-    callback(_slicedToArray);
+    callback(closure_3);
   }, items1);
   const items2 = [callback];
   const callback1 = React.useCallback((arg0) => {
@@ -119,8 +113,8 @@ export default function SummaryFeedbackActionSheet(guildId) {
     }
     lib(false);
   }, []);
-  let obj1 = guildId(ref[13]);
-  const items3 = [updateUserGuildSettingsInternal, createGuildRecordFromRust];
+  obj1 = guildId(ref[13]);
+  const items3 = [closure_7, closure_6];
   const items4 = [guildId];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items3, () => ({ guild: guild.getGuild(guildId), muted: lib.isMuted(guildId), notifyHighlights: lib.getNotifyHighlights(guildId) }), items4);
   let muted = stateFromStoresObject.muted;

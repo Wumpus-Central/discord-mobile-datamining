@@ -1,19 +1,15 @@
 // discord_app/modules/build_overrides/validateBuildOverride.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BUILD_OVERRIDE_TARGET_NAMES";
-import { PublicReleaseChannels } from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import applyDefault from "apply" /* 12 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import { BUILD_OVERRIDE_TARGET_NAMES as closure_5 } from "BUILD_OVERRIDE_TARGET_NAMES" /* 4291 */;
+import { PublicReleaseChannels } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("BUILD_OVERRIDE_TARGET_NAMES").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/build_overrides/validateBuildOverride.tsx");
 
 export default function validateBuildOverride(targetBuildOverride, items1) {
-  let allowedVersions;
-  let expiresAt;
-  let releaseChannel;
-  let validForUserIds;
   if (null != targetBuildOverride) {
     if (null != items1) {
       ({ releaseChannel, expiresAt, validForUserIds, allowedVersions } = targetBuildOverride);
@@ -45,7 +41,7 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
               formatted = "" + formatted1 + releaseChannel.slice(1);
               const str5 = releaseChannel.charAt(0);
             }
-            const obj1 = { valid: false, reason: null };
+            obj1 = { valid: false, reason: null };
             const intl4 = getSystemLocale.intl;
             const obj2 = { releaseChannel: null };
             obj2[0] = formatted;
@@ -113,7 +109,7 @@ export default function validateBuildOverride(targetBuildOverride, items1) {
         }
         obj5 = { valid: true };
       }
-      obj12 = apply;
+      obj12 = applyDefault;
     }
   }
   const obj6 = { valid: false, reason: null };

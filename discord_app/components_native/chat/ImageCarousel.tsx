@@ -1,17 +1,13 @@
 // discord_app/components_native/chat/ImageCarousel.tsx
-import importAllResult from "Text";
-import get_ActivityIndicator from "registerAsset";
-import { DraftType } from "handleChanged";
-import map from "map";
-import IMAGE_CAROUSEL_TILE_HEIGHT from "IMAGE_CAROUSEL_TILE_HEIGHT";
-import jsxProd from "PlayIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_7 from "map" /* 4824 */;
+import IMAGE_CAROUSEL_TILE_HEIGHT from "IMAGE_CAROUSEL_TILE_HEIGHT" /* 10266 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function Tile(onEdit) {
   onEdit = onEdit.onEdit;
@@ -23,7 +19,7 @@ function Tile(onEdit) {
     flag = false;
   }
   let upload = onEdit.upload;
-  let c4;
+  closure_4 = undefined;
   let description;
   let id;
   let item;
@@ -36,7 +32,7 @@ function Tile(onEdit) {
   let callback1;
   let animatedStyle;
   let tmp = callback();
-  c4 = tmp;
+  closure_4 = tmp;
   description = upload.description;
   id = upload.id;
   item = upload.item;
@@ -50,8 +46,8 @@ function Tile(onEdit) {
   let tmp5Result = tmp5(tmp3[14]);
   let items = [item];
   stateFromStores = tmp5Result.useStateFromStores(items, () => {
-    const upload = item.getUpload(channelId, id, id.ChannelMessage);
-    let flag;
+    upload = item.getUpload(channelId, id, id.ChannelMessage);
+    flag = undefined;
     if (upload != null) {
       flag = upload.spoiler;
     }
@@ -60,7 +56,7 @@ function Tile(onEdit) {
     }
     return flag;
   });
-  let obj1 = upload;
+  obj1 = upload;
   let items1 = [isVideo, isImage, flag];
   callback = upload.useCallback(() => {
     const width = isThumbnail;
@@ -145,27 +141,24 @@ function Tile(onEdit) {
   items6[9] = tmp;
   obj = { name: "remove", label: null };
   const callback4 = obj1.useCallback(() => {
-    let height;
-    let width;
     const tmp = callback();
     ({ width, height } = tmp);
     let obj = { style: items, children: null };
-    items = [_undefined.tileContainer, { width, height }, animatedStyle];
-    obj = { uri: item.uri, isImage, isVideo, width, height, maxFileWidth: tmp.maxWidth, fileName: item.filename, borderRadius: null };
-    obj[7] = onRemove(channelId[7]).radii.md;
+    items = [tileContainer.tileContainer, { width, height }, animatedStyle];
+    obj = { uri: item.uri, isImage, isVideo, width, height, maxFileWidth: tmp.maxWidth, fileName: item.filename, borderRadius: onRemove(channelId[7]).radii.md };
     const items1 = [flag(onRemove(channelId[16]), obj), , ];
     let tmp6Result = null;
     if (isThumbnail) {
       obj = { style: null, children: null };
       obj[0] = tmp5.footerRightContainer;
-      const obj1 = { source: null, size: null };
+      obj1 = { source: null, size: null };
       obj1[0] = tmp3(tmp4[17]);
       obj1[1] = sharedValue(tmp4[10]).Icon.Sizes.SMALL_14;
       obj[1] = tmp6(sharedValue(tmp4[10]).Icon, obj1);
-      tmp6Result = tmp6(_undefined, obj);
+      tmp6Result = tmp6(tileContainer, obj);
     }
     items1[1] = tmp6Result;
-    const obj2 = { style: _undefined.decorationsContainer, children: null };
+    const obj2 = { style: tileContainer.decorationsContainer, children: null };
     tmp6Result = null;
     if (stateFromStores) {
       const obj3 = { style: null };
@@ -197,7 +190,7 @@ function Tile(onEdit) {
       tmp6Result2 = tmp6(tmp12, obj5);
     }
     items3[1] = tmp6Result2;
-    items2[1] = stateFromStores(_undefined, { children: items3 });
+    items2[1] = stateFromStores(tileContainer, { children: items3 });
     let tmp6Result3 = null;
     if (stateFromStores) {
       const obj6 = { style: null, children: null };
@@ -207,7 +200,7 @@ function Tile(onEdit) {
     }
     items2[2] = tmp6Result3;
     obj2[1] = items2;
-    items1[2] = stateFromStores(_undefined, obj2);
+    items1[2] = stateFromStores(tileContainer, obj2);
     obj[1] = items1;
     return stateFromStores(onRemove(channelId[8]).View, obj);
   }, items6);
@@ -247,20 +240,18 @@ function Tile(onEdit) {
   let obj3 = { accessibilityRole: "button", accessibilityLabel: intl4.formatToPlainString(sharedValue(channelId[20]).t.FxKgb3, { name: str2 }), style: tmp.closeButton, onPress: callback1, hitSlop: { top: 4, bottom: 4, left: 4, right: 4 }, children: null };
   let obj4 = { style: items10, children: null };
   items10 = [tmp.closeContainer, animatedStyle];
-  let obj5 = { source: null, size: null, color: null, style: null };
-  obj5[0] = onRemove(channelId[24]);
-  obj5[1] = sharedValue(channelId[10]).Icon.Sizes.MEDIUM;
-  obj5[2] = onRemove(channelId[7]).unsafe_rawColors.PRIMARY_500;
-  obj5[3] = tmp.closeButtonIcon;
-  obj4[1] = flag(sharedValue(channelId[10]).Icon, obj5);
+  const tmp16 = stateFromStores;
+  const tmp17 = closure_4;
+  const tmp5Result1 = sharedValue(channelId[8]);
+  obj4[1] = flag(sharedValue(channelId[10]).Icon, { source: onRemove(channelId[24]), size: sharedValue(channelId[10]).Icon.Sizes.MEDIUM, color: onRemove(channelId[7]).unsafe_rawColors.PRIMARY_500, style: tmp.closeButtonIcon });
   obj3[5] = flag(onRemove(channelId[8]).View, obj4);
   items9[1] = flag(sharedValue(channelId[23]).PressableOpacity, obj3);
   obj2[0] = items9;
-  return stateFromStores(c4, obj2);
+  return tmp16(tmp17, obj2);
 }
 function CustomScrollView(arg0) {
-  let closure_0 = importAllResult.useRef(0);
-  let closure_1 = importAllResult.useRef(0);
+  closure_0 = importAllResult.useRef(0);
+  closure_1 = importAllResult.useRef(0);
   const ref = importAllResult.useRef(null);
   const callback = importAllResult.useCallback((current) => {
     const obj = ref(ref[25]);
@@ -292,7 +283,7 @@ const IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING = IMAGE_CAROUSEL_TILE_HEIGHT.IMAG
 let closure_10 = IMAGE_CAROUSEL_TILE_HEIGHT.IMAGE_CAROUSEL_TILE_HEIGHT;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let obj = { container: { width: "100%" }, pressableContainer: { marginHorizontal: 4 }, tileContainer: null, decorationsContainer: null, highlightedTileContainer: null, closeButton: null, scrollview: null, closeContainer: null, closeButtonIcon: null, altTagText: null, iconContainer: null, spoilerOverlay: null, footerRightContainer: null };
-obj = { position: "relative", minWidth: 60, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: require("Themes").radii.md - 1 };
+obj = { position: "relative", minWidth: 60, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: ThemesDefault.radii.md - 1 };
 obj[2] = obj;
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -302,38 +293,34 @@ createCacheKey.justifyContent = "space-between";
 createCacheKey.alignItems = "flex-end";
 createCacheKey.padding = 4;
 obj[3] = createCacheKey;
-obj[4] = { borderColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
+obj[4] = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
 obj[5] = { position: "absolute", top: -1 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN, right: 2 };
 obj[6] = { paddingTop: IMAGE_CAROUSEL_TILE_CLOSE_BUTTON_PADDING };
-let obj2 = { borderColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
+let obj2 = { borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, borderStyle: "solid", borderWidth: 2, borderRadius: 10 };
 let obj3 = { position: "absolute", top: -1 * IMAGE_CAROUSEL_EXPERIMENT_TILE_MARGIN, right: 2 };
-obj[7] = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_SCRIM_LIGHTBOX };
-let obj4 = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_SCRIM_LIGHTBOX };
-obj[8] = { borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let obj5 = { borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-obj[9] = { paddingHorizontal: require("Themes").space.PX_4, lineHeight: 20, backgroundColor: require("Themes").colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: require("Themes").radii.xs, textTransform: "uppercase" };
-let obj6 = { paddingHorizontal: require("Themes").space.PX_4, lineHeight: 20, backgroundColor: require("Themes").colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: require("Themes").radii.xs, textTransform: "uppercase" };
-obj[10] = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: require("Themes").radii.sm, padding: require("Themes").space.PX_4 };
+obj[7] = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX };
+let obj4 = { height: 20, width: 20, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX };
+obj[8] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj5 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+obj[9] = { paddingHorizontal: ThemesDefault.space.PX_4, lineHeight: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.xs, textTransform: "uppercase" };
+let obj6 = { paddingHorizontal: ThemesDefault.space.PX_4, lineHeight: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.xs, textTransform: "uppercase" };
+obj[10] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_4 };
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj[11] = {};
-const obj7 = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: require("Themes").radii.sm, padding: require("Themes").space.PX_4 };
+const obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, borderRadius: ThemesDefault.radii.sm, padding: ThemesDefault.space.PX_4 };
 const obj8 = {};
-obj[12] = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
+obj[12] = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = { code: "function ImageCarouselTsx1(){const{withTiming,animatedStylePropValue,STANDARD_EASING,withSpring}=this.__closure;return{opacity:withTiming(animatedStylePropValue.get(),{duration:300,easing:STANDARD_EASING},'respect-motion-settings'),transform:[{scale:withSpring(animatedStylePropValue.get(),{stiffness:80,damping:6,mass:0.3},'respect-motion-settings')}]};}" };
-const obj9 = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
+const obj9 = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "center", alignContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 4, borderRadius: 20, opacity: 0.85 };
 const memoResult = importAllResult.memo((arg0) => {
-  let attachments;
-  let channelId;
-  let headerElement;
-  let highlightThumbnails;
   ({ attachments, channelId } = arg0);
   ({ headerElement, highlightThumbnails } = arg0);
   if (highlightThumbnails === undefined) {
     highlightThumbnails = false;
   }
   let callback;
-  let importAllResult;
+  importAllResult = undefined;
   let tmp2 = null != attachments;
   if (tmp2) {
     tmp2 = attachments.length > 0;
@@ -343,7 +330,7 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   let items = [channelId];
   callback = importAllResult.useCallback((arg0) => {
-    highlightThumbnails(callback[26]).remove(channelId, arg0, outer1_6.ChannelMessage);
+    highlightThumbnails(callback[26]).remove(channelId, arg0, closure_1_6.ChannelMessage);
   }, items);
   const items1 = [channelId, callback];
   importAllResult = importAllResult.useCallback((arg0, arg1) => {
@@ -379,14 +366,14 @@ const memoResult = importAllResult.memo((arg0) => {
   if (null != attachments) {
     const _Object = Object;
     const values = Object.values(attachments);
-    mapped = values.map((uniqueId) => outer1_11(outer1_15, { channelId, highlightThumbnails, onEdit: closure_3, onRemove: callback, upload: uniqueId }, uniqueId.uniqueId));
+    mapped = values.map((uniqueId) => closure_1_11(closure_1_15, { channelId, highlightThumbnails, onEdit: closure_3, onRemove: callback, upload: uniqueId }, uniqueId.uniqueId));
   }
   items3[1] = mapped;
   obj[5] = items3;
   obj[1] = closure_12(CustomScrollView, obj);
   return closure_11(closure_4, obj);
 });
-let result = require("handleChanged").fileFinishedImporting("components_native/chat/ImageCarousel.tsx");
+let result = require("set").fileFinishedImporting("components_native/chat/ImageCarousel.tsx");
 
 export default memoResult;
 export const useTileEntranceAnimatedStyle = function useTileEntranceAnimatedStyle(arg0) {

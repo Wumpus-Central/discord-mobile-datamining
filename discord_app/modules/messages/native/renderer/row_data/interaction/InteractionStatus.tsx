@@ -1,7 +1,9 @@
 // discord_app/modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx
-import { _executeMessageComponentInteraction } from "../../../../../interactions/InteractionUtils.tsx";
+import set from "set" /* 2 */;
+import _executeMessageComponentInteraction from "_executeMessageComponentInteraction" /* 8330 */;
+
 let closure_2 = { LOADING: 0, [0]: "LOADING", FAILED: 1, [1]: "FAILED", EPHEMERAL_SUCCESS: 999, [999]: "EPHEMERAL_SUCCESS" };
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/InteractionStatus.tsx");
 
 export const createInteractionStatus = function createInteractionStatus(message, interaction) {
   let obj = _executeMessageComponentInteraction;
@@ -15,7 +17,7 @@ export const createInteractionStatus = function createInteractionStatus(message,
   } else if (tmp(8330).InteractionStatusViewState.CREATED === interactionStatusViewState) {
     obj = { text: null, state: null };
     const intl3 = tmp(1236).intl;
-    const obj1 = { applicationName: null };
+    obj1 = { applicationName: null };
     obj1[0] = message.author.username;
     obj[0] = intl3.formatToPlainString(tmp(1236).t["7ePV4t"], obj1);
     obj[1] = constants.LOADING;

@@ -1,23 +1,21 @@
 // discord_app/modules/collectibles/nameplates/native/NameplatePreview.tsx
-import noop from "noop";
-import { View } from "Text";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
-    num = Themes.radii.sm;
+    num = ThemesDefault.radii.sm;
   }
   let obj = { container: null, nameplate: null, avatar: null, content: null };
-  obj = { borderRadius: num, padding: Themes.space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST };
+  obj = { borderRadius: num, padding: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
   obj[0] = obj;
   let num2 = 0;
   if (arg0) {
@@ -26,17 +24,12 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[1] = { borderRadius: num2 };
   obj = { borderRadius: tmp3(712).radii.round, marginRight: tmp3(712).space.PX_8 };
   obj[2] = obj;
-  obj[3] = { flex: 1, paddingRight: Themes.space.PX_40 };
+  obj[3] = { flex: 1, paddingRight: ThemesDefault.space.PX_40 };
   return obj;
 });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplatePreview.tsx");
 
 export const NameplatePreview = function NameplatePreview(aria_hidden) {
-  let nameplate;
-  let nameplateData;
-  let pendingDisplayNameStyles;
-  let pendingGlobalName;
-  let user;
   ({ nameplate, nameplateData, user } = aria_hidden);
   let flag = aria_hidden.hasRoundedCorners;
   if (flag === undefined) {
@@ -48,29 +41,29 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   }
   const guildId = aria_hidden.guildId;
   ({ pendingDisplayNameStyles, pendingGlobalName } = aria_hidden);
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
-  let c4;
+  let pendingAvatarDecoration;
   const tmp = callback2(flag);
   dependencyMap = tmp;
   if (null != nameplate) {
     let obj = user(1946);
     nameplateData = obj.getNameplateData(nameplate);
   }
-  let obj1 = user(4797);
+  obj1 = user(4797);
   const avatarDecoration = obj1.useAvatarDecoration(user, guildId);
-  const pendingAvatarDecoration = guildId(8369)({ guildId }).pendingAvatarDecoration;
+  pendingAvatarDecoration = guildId(8369)({ guildId }).pendingAvatarDecoration;
   let obj2 = user(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   stateFromStores = obj2.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj3 = user(589);
-  const items1 = [trackCommunicationDisabled];
+  const items1 = [closure_6];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => {
     let member = null;
     if (null != guildId) {
       member = null;
       if (null != user) {
-        member = outer1_6.getMember(tmp, tmp3.id);
+        member = closure_1_6.getMember(tmp, tmp3.id);
       }
     }
     return member;
@@ -99,22 +92,16 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   if (undefined !== pendingAvatarDecoration) {
     tmp14 = pendingAvatarDecoration;
   }
-  c4 = tmp14;
+  pendingAvatarDecoration = tmp14;
   obj = { userId: user.id, guildId, pendingDisplayNameStyles };
   const tmp15 = guildId(4815)(obj);
   const items2 = [tmp.avatar, user, guildId, tmp14, stateFromStores];
   obj = { style: tmp.container, "aria-hidden": aria_hidden["aria-hidden"], children: null };
-  const memo = stateFromStores.useMemo(() => {
-    const obj = { style: _undefined.avatar, user, guildId, size: null, avatarDecoration: null, animate: null, autoStatusCutout: true, "aria-hidden": true };
-    obj[3] = user(_undefined[13]).AvatarSizes.NORMAL;
-    obj[4] = c4;
-    obj[5] = !stateFromStores;
-    return outer1_7(user(_undefined[13]).Avatar, obj);
-  }, items2);
+  const memo = stateFromStores.useMemo(() => closure_1_7(user(user[13]).Avatar, { style: user.avatar, user, guildId, size: user(user[13]).AvatarSizes.NORMAL, avatarDecoration: pendingAvatarDecoration, animate: !stateFromStores, autoStatusCutout: true, "aria-hidden": true }), items2);
   obj1 = { nameplate: nameplateData, style: tmp.nameplate, fullOpacity: true, animate: flag2 };
   const items3 = [callback(guildId(9221), obj1), , ];
   obj2 = { style: tmp.avatar, children: memo };
-  items3[1] = callback(c4, obj2);
+  items3[1] = callback(pendingAvatarDecoration, obj2);
   obj3 = { style: tmp.content, children: null };
   let tmp19Result = null != tmp15;
   if (tmp19Result) {
@@ -136,7 +123,7 @@ export const NameplatePreview = function NameplatePreview(aria_hidden) {
   }
   items4[1] = tmp19Result;
   obj3[1] = items4;
-  items3[2] = closure_8(c4, obj3);
+  items3[2] = closure_8(pendingAvatarDecoration, obj3);
   obj[2] = items3;
-  return closure_8(c4, obj);
+  return closure_8(pendingAvatarDecoration, obj);
 };

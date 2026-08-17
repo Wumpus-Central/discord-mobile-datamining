@@ -1,6 +1,10 @@
 // discord_app/modules/libdiscore/timerUtils.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import debounceDefault from "debounce" /* 636 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import setTimeoutAll from "setTimeout" /* 1921 */;
 
 function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTime) {
   let obj = { timerId, expectedDelay, actualDelay, executionTime };
@@ -8,25 +12,26 @@ function onTimersDelayCallback(timerId, expectedDelay, actualDelay, executionTim
   if (arr.length >= 10) {
     if (0 !== arr.length) {
       const _HermesInternal = HermesInternal;
-      tmp2.warn("[libdiscore.timers] Flushing " + arr.length + " delay logs", arr);
+      logger.warn("[libdiscore.timers] Flushing " + arr.length + " delay logs", arr);
       obj = { delay_reports: null };
       const _JSON = JSON;
       obj[0] = JSON.stringify(arr);
-      expandEventProperties.track(AnalyticEvents.LIBDISCORE_SLOW_TIMERS, obj);
+      expandEventPropertiesDefault.track(AnalyticEvents.LIBDISCORE_SLOW_TIMERS, obj);
       arr = [];
-      const obj2 = expandEventProperties;
+      const obj2 = expandEventPropertiesDefault;
     }
   } else {
     callback();
   }
 }
-let c4 = new require("debounce")("libdiscore.timers");
+const AnalyticEvents = ME.AnalyticEvents;
+let closure_4 = new timestampDefault("libdiscore.timers");
 let closure_5 = [];
-let closure_6 = require("debounce")(function flushDelayLogs() {
+let closure_6 = debounceDefault(function flushDelayLogs() {
   if (0 !== arr.length) {
     const _HermesInternal = HermesInternal;
-    arr.warn("[libdiscore.timers] Flushing " + arr.length + " delay logs", arr);
-    let obj = expandEventProperties;
+    logger.warn("[libdiscore.timers] Flushing " + arr.length + " delay logs", arr);
+    let obj = expandEventPropertiesDefault;
     obj = { delay_reports: null };
     const _JSON = JSON;
     obj[0] = JSON.stringify(arr);
@@ -34,9 +39,9 @@ let closure_6 = require("debounce")(function flushDelayLogs() {
     arr = [];
   }
 }, 5000);
-const tmp2 = new require("debounce")("libdiscore.timers");
-let result = require("expandEventProperties").fileFinishedImporting("modules/libdiscore/timerUtils.tsx");
+const tmp2 = new timestampDefault("libdiscore.timers");
+let result = set.fileFinishedImporting("modules/libdiscore/timerUtils.tsx");
 
 export const setupLibdiscoreTimersMonitor = function setupLibdiscoreTimersMonitor() {
-  const result = importAll(1921).setTimersMonitorCallback(onTimersDelayCallback);
+  const result = setTimeoutAll.setTimersMonitorCallback(onTimersDelayCallback);
 };

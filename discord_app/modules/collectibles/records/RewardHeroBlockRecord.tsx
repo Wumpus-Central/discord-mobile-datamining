@@ -1,8 +1,9 @@
 // discord_app/modules/collectibles/records/RewardHeroBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function RewardHeroBlockRecord(unpublished_at) {
-  let summary;
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.REWARD_HERO;
   ({ category_sku_id: tmp.categorySkuId, name: tmp.name, summary } = unpublished_at);
@@ -24,6 +25,6 @@ prototype = function RewardHeroBlockRecord(unpublished_at) {
 prototype["fromServer"] = function fromServer(arg0) {
   return new prototype(arg0);
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/RewardHeroBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/RewardHeroBlockRecord.tsx");
 
 export const RewardHeroBlockRecord = prototype;

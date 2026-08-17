@@ -1,40 +1,26 @@
 // discord_app/utils/GuildBoostingUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
-import reset from "reset";
-import ME from "ME";
-import set from "set";
-import GuildFeatures from "GuildFeatures";
-import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes";
-import importDefaultResult from "combined";
-import set from "handleGuildBoostsUpdate";
-import { apply } from "../../_runtime/00012_apply.js";
-import { t } from "../../_runtime/03975_t.js";
-import { PremiumGuildOverrides } from "../../discord_common/js/shared/shared-constants/PremiumGuildOverrides.tsx";
-import { _fetchAppliedGuildBoostsForGuild } from "../actions/BoostingActionCreators.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { useGuildAppliedBoostCount } from "../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
-import { combined } from "HelpdeskUtils.tsx";
-import { SentryUtils.native } from "SentryUtils.native.tsx";
+import _modDef1208 from "module_1208" /* 1208 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import combinedDefault from "combined" /* 1993 */;
+import messagesProxyDefault from "messagesProxy" /* 2917 */;
+import tDefault from "t" /* 3975 */;
+import getPremiumPlanItemAll from "getPremiumPlanItem" /* 4039 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 4268 */;
+import formatSize from "formatSize" /* 4269 */;
+import _fetchAppliedGuildBoostsForGuild from "_fetchAppliedGuildBoostsForGuild" /* 4270 */;
+import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4281 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_7 from "reset" /* 4045 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 1925 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { getPremiumGroupProductName as closure_25 } from "SubscriptionStatusTypes" /* 4053 */;
+import importDefaultResult from "apply" /* 12 */;
 
-let AppliedGuildBoostsRequiredForBoostedGuildTier;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_24;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getGuildTierFromGuild(arg0) {
   const guild = store.getGuild(arg0);
   let premiumTier;
@@ -46,7 +32,7 @@ function getGuildTierFromGuild(arg0) {
   }
   return premiumTier;
 }
-({ AnalyticsObjectTypes: metroImportAll, AppliedGuildBoostsRequiredForBoostedGuildTier } = ME);
+({ AnalyticsObjectTypes: closure_8, AppliedGuildBoostsRequiredForBoostedGuildTier } = ME);
 const BoostedGuildTiers = ME.BoostedGuildTiers;
 ({ GuildFeatures: unpackModuleId, HelpdeskArticles: closure_12, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: map1, MAX_STAGE_VIDEO_USER_LIMIT_TIER3: closure_14, SubscriptionStatusTypes: closure_15 } = ME);
 ({ DEFAULT_EMOJI_SLOTS: closure_16, EMOJI_MAX_SLOTS_MORE: closure_17 } = set);
@@ -67,7 +53,7 @@ export const PerkIcons = obj;
 export const OrderedTiers = items;
 export const ReverseOrderedTiers = reversed;
 export const getNextTier = function getNextTier(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   if (arg0 === BoostedGuildTiers.NONE) {
     let nextTier = BoostedGuildTiers.TIER_1;
   } else {
@@ -111,7 +97,7 @@ export const getIncrementalSoundboardSoundCountForTier = function getIncremental
   }
 };
 export const getTiers = (arg0) => {
-  let obj = { tier: BoostedGuildTiers.TIER_1, title: null, perks: null };
+  obj = { tier: BoostedGuildTiers.TIER_1, title: null, perks: null };
   const tmp2 = require;
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["lK+WOT"]);
@@ -122,8 +108,8 @@ export const getTiers = (arg0) => {
   const intl3 = getSystemLocale.intl;
   obj[1] = intl3.string(getSystemLocale.t["/Guvxs"]);
   obj[2] = obj.EMOJI;
-  const items = [obj, , , , , , ];
-  const obj1 = { title: null, description: null, icon: null };
+  items = [obj, , , , , , ];
+  obj1 = { title: null, description: null, icon: null };
   const intl4 = getSystemLocale.intl;
   obj1[0] = intl4.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_1], total: dependencyMap4[BoostedGuildTiers.TIER_1] });
   const intl5 = getSystemLocale.intl;
@@ -140,208 +126,208 @@ export const getTiers = (arg0) => {
     diff = dependencyMap3[TIER_1] - dependencyMap3[items[items.indexOf(items, TIER_1) - 1]];
   }
   const obj3 = { title: intl6.formatToPlainString(getSystemLocale.t.NRuk5m, obj4), description: null, icon: null };
-  const intl7 = tmp2(1236).intl;
-  obj3[1] = intl7.string(tmp2(1236).t.Oq7OVl);
+  const intl7 = getSystemLocale.intl;
+  obj3[1] = intl7.string(getSystemLocale.t.Oq7OVl);
   obj3[2] = obj.SOUNDBOARD;
   items[2] = obj3;
   const obj5 = { title: null, description: null, icon: null };
-  const intl8 = tmp2(1236).intl;
-  obj5[0] = intl8.formatToPlainString(tmp2(1236).t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
-  const intl9 = tmp2(1236).intl;
-  obj5[1] = intl9.string(tmp2(1236).t["8a03jk"]);
+  const intl8 = getSystemLocale.intl;
+  obj5[0] = intl8.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_1].limits.bitrate / 1000 });
+  const intl9 = getSystemLocale.intl;
+  obj5[1] = intl9.string(getSystemLocale.t["8a03jk"]);
   obj5[2] = obj.AUDIO;
   items[3] = obj5;
   const obj7 = { title: null, description: null, icon: null };
-  const intl10 = tmp2(1236).intl;
-  obj7[0] = intl10.string(tmp2(1236).t.h0s84V);
-  const intl11 = tmp2(1236).intl;
-  obj7[1] = intl11.format(tmp2(1236).t["t+0cbk"], {});
+  const intl10 = getSystemLocale.intl;
+  obj7[0] = intl10.string(getSystemLocale.t.h0s84V);
+  const intl11 = getSystemLocale.intl;
+  obj7[1] = intl11.format(getSystemLocale.t["t+0cbk"], {});
   obj7[2] = obj.ANIMATED;
   items[4] = obj7;
   const obj8 = { title: null, description: null, icon: null };
-  const intl12 = tmp2(1236).intl;
-  obj8[0] = intl12.string(tmp2(1236).t.vjPGPp);
-  const intl13 = tmp2(1236).intl;
-  obj8[1] = intl13.string(tmp2(1236).t.tG4MMU);
+  const intl12 = getSystemLocale.intl;
+  obj8[0] = intl12.string(getSystemLocale.t.vjPGPp);
+  const intl13 = getSystemLocale.intl;
+  obj8[1] = intl13.string(getSystemLocale.t.tG4MMU);
   obj8[2] = obj.CUSTOMIZATION;
   items[5] = obj8;
   const obj9 = { title: null, description: null, icon: null };
-  const intl14 = tmp2(1236).intl;
-  obj9[0] = intl14.string(tmp2(1236).t.cObMZD);
-  const intl15 = tmp2(1236).intl;
-  obj9[1] = intl15.string(tmp2(1236).t["puH/9R"]);
+  const intl14 = getSystemLocale.intl;
+  obj9[0] = intl14.string(getSystemLocale.t.cObMZD);
+  const intl15 = getSystemLocale.intl;
+  obj9[1] = intl15.string(getSystemLocale.t["puH/9R"]);
   obj9[2] = obj.STREAM;
   items[6] = obj9;
-  obj[2] = items.filter(tmp2(1370).isNotNullish);
-  const items1 = [obj, , ];
+  obj[2] = items.filter(isDiscordFrontendDevelopment.isNotNullish);
+  items1 = [obj, , ];
   const obj10 = { tier: BoostedGuildTiers.TIER_2, title: null, perks: null };
-  const intl16 = tmp2(1236).intl;
-  obj10[1] = intl16.string(tmp2(1236).t["34GpBc"]);
+  const intl16 = getSystemLocale.intl;
+  obj10[1] = intl16.string(getSystemLocale.t["34GpBc"]);
   const obj11 = { title: null, description: null, icon: null };
-  const intl17 = tmp2(1236).intl;
-  obj11[0] = intl17.formatToPlainString(tmp2(1236).t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji });
-  const intl18 = tmp2(1236).intl;
-  obj11[1] = intl18.string(tmp2(1236).t.fRiNhw);
+  const intl17 = getSystemLocale.intl;
+  obj11[0] = intl17.formatToPlainString(getSystemLocale.t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_1].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji });
+  const intl18 = getSystemLocale.intl;
+  obj11[1] = intl18.string(getSystemLocale.t.fRiNhw);
   obj11[2] = obj.EMOJI;
   const items2 = [obj11, , , , , , , , ];
   const obj13 = { title: null, description: null, icon: null };
-  const intl19 = tmp2(1236).intl;
-  obj13[0] = intl19.formatToPlainString(tmp2(1236).t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_2], total: dependencyMap4[BoostedGuildTiers.TIER_2] });
-  const intl20 = tmp2(1236).intl;
-  obj13[1] = intl20.string(tmp2(1236).t.t4TM28);
+  const intl19 = getSystemLocale.intl;
+  obj13[0] = intl19.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_2], total: dependencyMap4[BoostedGuildTiers.TIER_2] });
+  const intl20 = getSystemLocale.intl;
+  obj13[1] = intl20.string(getSystemLocale.t.t4TM28);
   obj13[2] = obj.STICKER;
   items2[1] = obj13;
-  const intl21 = tmp2(1236).intl;
+  const intl21 = getSystemLocale.intl;
   const TIER_2 = tmp.TIER_2;
   if (TIER_2 === BoostedGuildTiers.NONE) {
     let diff1 = tmp9[TIER_2];
   } else {
     diff1 = tmp9[TIER_2] - tmp9[items[items.indexOf(items, TIER_2) - 1]];
   }
-  const obj15 = { title: intl21.formatToPlainString(tmp2(1236).t.NRuk5m, obj16), description: null, icon: null };
-  const intl22 = tmp2(1236).intl;
-  obj15[1] = intl22.string(tmp2(1236).t.pEYlPZ);
+  const obj15 = { title: intl21.formatToPlainString(getSystemLocale.t.NRuk5m, obj16), description: null, icon: null };
+  const intl22 = getSystemLocale.intl;
+  obj15[1] = intl22.string(getSystemLocale.t.pEYlPZ);
   obj15[2] = obj.SOUNDBOARD;
   items2[2] = obj15;
   const obj17 = { title: null, description: null, icon: null };
-  const intl23 = tmp2(1236).intl;
-  obj17[0] = intl23.formatToPlainString(tmp2(1236).t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
-  const intl24 = tmp2(1236).intl;
-  obj17[1] = intl24.string(tmp2(1236).t["nzRo/I"]);
+  const intl23 = getSystemLocale.intl;
+  obj17[0] = intl23.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_2].limits.bitrate / 1000 });
+  const intl24 = getSystemLocale.intl;
+  obj17[1] = intl24.string(getSystemLocale.t["nzRo/I"]);
   obj17[2] = obj.AUDIO;
   items2[3] = obj17;
   const obj19 = { title: null, description: null, icon: null };
-  const intl25 = tmp2(1236).intl;
-  obj19[0] = intl25.string(tmp2(1236).t["+KhQKM"]);
-  const intl26 = tmp2(1236).intl;
-  obj19[1] = intl26.string(tmp2(1236).t.ZWf10P);
+  const intl25 = getSystemLocale.intl;
+  obj19[0] = intl25.string(getSystemLocale.t["+KhQKM"]);
+  const intl26 = getSystemLocale.intl;
+  obj19[1] = intl26.string(getSystemLocale.t.ZWf10P);
   obj19[2] = obj.CUSTOMIZATION;
   items2[4] = obj19;
   const obj20 = { title: null, description: null, icon: null };
-  const intl27 = tmp2(1236).intl;
+  const intl27 = getSystemLocale.intl;
   const obj21 = { fileSize: null };
-  let tmp2Result = tmp2(4269);
+  let tmp2Result = formatSize;
   obj21[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_2].limits.fileSize / 1024, { useKibibytes: true });
-  obj20[0] = intl27.formatToPlainString(tmp2(1236).t.t95LnM, obj21);
-  const intl28 = tmp2(1236).intl;
-  obj20[1] = intl28.format(tmp2(1236).t.yvht65, {});
+  obj20[0] = intl27.formatToPlainString(getSystemLocale.t.t95LnM, obj21);
+  const intl28 = getSystemLocale.intl;
+  obj20[1] = intl28.format(getSystemLocale.t.yvht65, {});
   obj20[2] = obj.UPLOAD;
   items2[5] = obj20;
   const obj22 = { title: null, description: null, icon: null };
-  const intl29 = tmp2(1236).intl;
-  obj22[0] = intl29.string(tmp2(1236).t.bmaoNI);
-  const intl30 = tmp2(1236).intl;
-  obj22[1] = intl30.string(tmp2(1236).t.WZW2Bj);
+  const intl29 = getSystemLocale.intl;
+  obj22[0] = intl29.string(getSystemLocale.t.bmaoNI);
+  const intl30 = getSystemLocale.intl;
+  obj22[1] = intl30.string(getSystemLocale.t.WZW2Bj);
   obj22[2] = obj.STREAM;
   items2[6] = obj22;
   const obj23 = { title: null, description: null, icon: null };
-  const intl31 = tmp2(1236).intl;
-  obj23[0] = intl31.string(tmp2(1236).t.BHtqcV);
-  const intl32 = tmp2(1236).intl;
-  obj23[1] = intl32.string(tmp2(1236).t.ukVcEe);
+  const intl31 = getSystemLocale.intl;
+  obj23[0] = intl31.string(getSystemLocale.t.BHtqcV);
+  const intl32 = getSystemLocale.intl;
+  obj23[1] = intl32.string(getSystemLocale.t.ukVcEe);
   obj23[2] = obj.CUSTOM_ROLE_ICON;
   items2[7] = obj23;
   let tmp14 = null;
   if (arg0) {
     const obj24 = { title: null, description: null, icon: null };
-    const intl33 = tmp2(1236).intl;
+    const intl33 = getSystemLocale.intl;
     const obj25 = { limit: null };
     obj25[0] = closure_13;
-    obj24[0] = intl33.formatToPlainString(tmp2(1236).t.T8P3TH, obj25);
-    const intl34 = tmp2(1236).intl;
+    obj24[0] = intl33.formatToPlainString(getSystemLocale.t.T8P3TH, obj25);
+    const intl34 = getSystemLocale.intl;
     const obj26 = { limit: null };
     obj26[0] = closure_13;
-    obj24[1] = intl34.formatToPlainString(tmp2(1236).t.T8P3TH, obj26);
+    obj24[1] = intl34.formatToPlainString(getSystemLocale.t.T8P3TH, obj26);
     obj24[2] = tmp5.STAGE_VIDEO;
     tmp14 = obj24;
   }
   items2[8] = tmp14;
-  obj10[2] = items2.filter(tmp2(1370).isNotNullish);
+  obj10[2] = items2.filter(isDiscordFrontendDevelopment.isNotNullish);
   items1[1] = obj10;
   const obj27 = { tier: BoostedGuildTiers.TIER_3, title: null, perks: null };
-  const intl35 = tmp2(1236).intl;
-  obj27[1] = intl35.string(tmp2(1236).t.P7LdcQ);
+  const intl35 = getSystemLocale.intl;
+  obj27[1] = intl35.string(getSystemLocale.t.P7LdcQ);
   const obj28 = { title: null, description: null, icon: null };
-  const intl36 = tmp2(1236).intl;
-  obj28[0] = intl36.formatToPlainString(tmp2(1236).t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji });
-  const intl37 = tmp2(1236).intl;
-  obj28[1] = intl37.string(tmp2(1236).t.AfJxnV);
+  const intl36 = getSystemLocale.intl;
+  obj28[0] = intl36.formatToPlainString(getSystemLocale.t.dnLAwl, { adding: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji - dependencyMap[BoostedGuildTiers.TIER_2].limits.emoji, total: dependencyMap[BoostedGuildTiers.TIER_3].limits.emoji });
+  const intl37 = getSystemLocale.intl;
+  obj28[1] = intl37.string(getSystemLocale.t.AfJxnV);
   obj28[2] = obj.EMOJI;
   const items3 = [obj28, , , , , , , ];
   const obj30 = { title: null, description: null, icon: null };
-  const intl38 = tmp2(1236).intl;
-  obj30[0] = intl38.formatToPlainString(tmp2(1236).t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] });
-  const intl39 = tmp2(1236).intl;
-  obj30[1] = intl39.string(tmp2(1236).t["+ZI4QZ"]);
+  const intl38 = getSystemLocale.intl;
+  obj30[0] = intl38.formatToPlainString(getSystemLocale.t["/9p2/g"], { adding: dependencyMap2[BoostedGuildTiers.TIER_3], total: dependencyMap4[BoostedGuildTiers.TIER_3] });
+  const intl39 = getSystemLocale.intl;
+  obj30[1] = intl39.string(getSystemLocale.t["+ZI4QZ"]);
   obj30[2] = obj.STICKER;
   items3[1] = obj30;
-  const intl40 = tmp2(1236).intl;
+  const intl40 = getSystemLocale.intl;
   const TIER_3 = tmp.TIER_3;
   if (TIER_3 === BoostedGuildTiers.NONE) {
     let diff2 = tmp9[TIER_3];
   } else {
     diff2 = tmp9[TIER_3] - tmp9[items[items.indexOf(items, TIER_3) - 1]];
   }
-  const obj32 = { title: intl40.formatToPlainString(tmp2(1236).t.NRuk5m, obj33), description: null, icon: null };
-  const intl41 = tmp2(1236).intl;
-  obj32[1] = intl41.string(tmp2(1236).t["8omJSY"]);
+  const obj32 = { title: intl40.formatToPlainString(getSystemLocale.t.NRuk5m, obj33), description: null, icon: null };
+  const intl41 = getSystemLocale.intl;
+  obj32[1] = intl41.string(getSystemLocale.t["8omJSY"]);
   obj32[2] = obj.SOUNDBOARD;
   items3[2] = obj32;
   const obj34 = { title: null, description: null, icon: null };
-  const intl42 = tmp2(1236).intl;
-  obj34[0] = intl42.formatToPlainString(tmp2(1236).t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
-  const intl43 = tmp2(1236).intl;
-  obj34[1] = intl43.string(tmp2(1236).t["cOkbp/"]);
+  const intl42 = getSystemLocale.intl;
+  obj34[0] = intl42.formatToPlainString(getSystemLocale.t.zoT1ZE, { bitrate: dependencyMap[BoostedGuildTiers.TIER_3].limits.bitrate / 1000 });
+  const intl43 = getSystemLocale.intl;
+  obj34[1] = intl43.string(getSystemLocale.t["cOkbp/"]);
   obj34[2] = obj.AUDIO;
   items3[3] = obj34;
   const obj36 = { title: null, description: null, icon: null };
-  const intl44 = tmp2(1236).intl;
-  obj36[0] = intl44.string(tmp2(1236).t.C2w2cM);
-  const intl45 = tmp2(1236).intl;
+  const intl44 = getSystemLocale.intl;
+  obj36[0] = intl44.string(getSystemLocale.t.C2w2cM);
+  const intl45 = getSystemLocale.intl;
   const obj37 = { helpdeskArticle: null };
-  let obj41 = combined;
+  let obj41 = combinedDefault;
   obj37[0] = obj41.getArticleURL(constants.GUILD_VANITY_URL);
-  obj36[1] = intl45.format(tmp2(1236).t["3Reosx"], obj37);
+  obj36[1] = intl45.format(getSystemLocale.t["3Reosx"], obj37);
   obj36[2] = obj.VANITY;
   items3[4] = obj36;
   const obj38 = { title: null, description: null, icon: null };
-  const intl46 = tmp2(1236).intl;
+  const intl46 = getSystemLocale.intl;
   const obj39 = { fileSize: null };
-  tmp2Result = tmp2(4269);
+  tmp2Result = formatSize;
   obj39[0] = tmp2Result.formatSize(dependencyMap[BoostedGuildTiers.TIER_3].limits.fileSize / 1024, { useKibibytes: true });
-  obj38[0] = intl46.formatToPlainString(tmp2(1236).t.t95LnM, obj39);
-  const intl47 = tmp2(1236).intl;
-  obj38[1] = intl47.format(tmp2(1236).t.IwDqSL, {});
+  obj38[0] = intl46.formatToPlainString(getSystemLocale.t.t95LnM, obj39);
+  const intl47 = getSystemLocale.intl;
+  obj38[1] = intl47.format(getSystemLocale.t.IwDqSL, {});
   obj38[2] = obj.UPLOAD;
   items3[5] = obj38;
   const obj40 = { title: null, description: null, icon: null };
-  const intl48 = tmp2(1236).intl;
-  obj40[0] = intl48.string(tmp2(1236).t.z0GtBG);
-  const intl49 = tmp2(1236).intl;
-  obj40[1] = intl49.string(tmp2(1236).t.v92GNV);
+  const intl48 = getSystemLocale.intl;
+  obj40[0] = intl48.string(getSystemLocale.t.z0GtBG);
+  const intl49 = getSystemLocale.intl;
+  obj40[1] = intl49.string(getSystemLocale.t.v92GNV);
   obj40[2] = obj.ANIMATED;
   items3[6] = obj40;
   let tmp18 = null;
   if (arg0) {
     obj41 = { title: null, description: null, icon: null };
-    const intl50 = tmp2(1236).intl;
+    const intl50 = getSystemLocale.intl;
     const obj42 = { limit: null };
     obj42[0] = closure_14;
-    obj41[0] = intl50.formatToPlainString(tmp2(1236).t.T8P3TH, obj42);
-    const intl51 = tmp2(1236).intl;
+    obj41[0] = intl50.formatToPlainString(getSystemLocale.t.T8P3TH, obj42);
+    const intl51 = getSystemLocale.intl;
     const obj43 = { limit: null };
     obj43[0] = closure_14;
-    obj41[1] = intl51.formatToPlainString(tmp2(1236).t.T8P3TH, obj43);
+    obj41[1] = intl51.formatToPlainString(getSystemLocale.t.T8P3TH, obj43);
     obj41[2] = tmp5.STAGE_VIDEO;
     tmp18 = obj41;
   }
   items3[7] = tmp18;
-  obj27[2] = items3.filter(tmp2(1370).isNotNullish);
+  obj27[2] = items3.filter(isDiscordFrontendDevelopment.isNotNullish);
   items1[2] = obj27;
   return items1;
 };
 export const getTierName = function getTierName(tier, arg1) {
-  let obj = arg1;
+  obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -367,7 +353,7 @@ export const getTierName = function getTierName(tier, arg1) {
     return intl.string(getSystemLocale.t.BfF6ED);
   } else {
     const _Error = Error;
-    const error = new Error("Not a valid tier type");
+    error = new Error("Not a valid tier type");
     throw error;
   }
   tmp = undefined === useLevels || useLevels;
@@ -387,11 +373,11 @@ export const getShortenedTierName = function getShortenedTierName(arg0) {
     return intl.string(getSystemLocale.t.avGxmk);
   } else {
     const _Error = Error;
-    const error = new Error("Not a valid tier type");
+    error = new Error("Not a valid tier type");
     throw error;
   }
 };
-export const minimumRequiredTierForGuildFeature = require("combined").memoize((arg0) => {
+export const minimumRequiredTierForGuildFeature = importDefaultResult.memoize((arg0) => {
   const features = dependencyMap[BoostedGuildTiers.TIER_1].features;
   if (features.includes(arg0)) {
     let TIER_1 = tmp2.TIER_1;
@@ -435,7 +421,7 @@ export const getNextGuildTierFromGuild = function getNextGuildTierFromGuild(id) 
   return BoostedGuildTiers.TIER_1;
 };
 export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(arg0) {
-  let num = t().diff(t(arg0), "months");
+  let num = tDefault().diff(tDefault(arg0), "months");
   if (num == null) {
     num = 1;
   }
@@ -443,7 +429,7 @@ export const getAppliedGuildBoostMonths = function getAppliedGuildBoostMonths(ar
 };
 export const getUserLevel = function getUserLevel(arg0) {
   let num = 1;
-  const obj = t();
+  obj = tDefault();
   const keys = Object.keys(table);
   for (const item10021 of keys) {
     let tmp4 = table;
@@ -473,7 +459,7 @@ export const isTierUnlocked = function isTierUnlocked(premiumTier) {
   return tmp;
 };
 export const getAvailableGuildBoostSlots = function getAvailableGuildBoostSlots(boostSlots) {
-  const values = apply.values(boostSlots);
+  const values = importDefaultResult.values(boostSlots);
   return values.filter((isAvailable) => isAvailable.isAvailable());
 };
 export const generateBlockGuildSubscriptionPurchasesNode = function generateBlockGuildSubscriptionPurchasesNode(fractionalState) {
@@ -483,7 +469,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     const guildBoostSlots = _fetchAppliedGuildBoostsForGuild.fetchGuildBoostSlots();
     const obj2 = _fetchAppliedGuildBoostsForGuild;
   }
-  let values = apply.values(tmp2.boostSlots);
+  let values = importDefaultResult.values(tmp2.boostSlots);
   let prop;
   const found = values.filter((isAvailable) => isAvailable.isAvailable());
   if (premiumTypeSubscription != null) {
@@ -503,9 +489,9 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   }
   if (isPremiumGroupMemberResult) {
     const intl7 = getSystemLocale.intl;
-    const obj = { premiumGroupProductName: null };
+    obj = { premiumGroupProductName: null };
     obj[0] = callback();
-    return intl7.formatToPlainString(tmp7(2917)["5xN/C1"], obj);
+    return intl7.formatToPlainString(messagesProxyDefault["5xN/C1"], obj);
   } else {
     const _Object = Object;
     values = Object.values(tmp2.boostSlots);
@@ -537,8 +523,8 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
         } else if (null == premiumTypeSubscription.renewalMutations) {
           return null;
         } else {
-          const numPremiumGuildSubscriptions = importAll(4039).getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
-          const obj5 = importAll(4039);
+          const numPremiumGuildSubscriptions = getPremiumPlanItemAll.getNumPremiumGuildSubscriptions(premiumTypeSubscription.renewalMutations.additionalPlans);
+          const obj5 = getPremiumPlanItemAll;
           if (obj6.getNumPremiumGuildSubscriptions(premiumTypeSubscription.additionalPlans) > numPremiumGuildSubscriptions) {
             const intl3 = getSystemLocale.intl;
             let stringResult = intl3.string(getSystemLocale.t.x25mZR);
@@ -552,9 +538,9 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
     }
     return null;
   }
-  const obj3 = apply;
+  const obj3 = importDefaultResult;
   tmp3 = hasFetched.hasFetched || hasFetched.isFetching;
-  tmp7 = importDefault;
+  const tmp7 = importDefault;
 };
 export const isAppliedGuildBoostActive = function isAppliedGuildBoostActive(ended) {
   ended = ended.ended;
@@ -616,7 +602,7 @@ export const appliedGuildBoostsRequiredForPerks = function appliedGuildBoostsReq
 };
 export const GuildTierSubscriptionsOrdered = items1;
 export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr) {
-  let obj = store;
+  obj = store;
   const guild = store.getGuild(arg1);
   let hasItem;
   if (guild != null) {
@@ -666,8 +652,8 @@ export const getGracePeriodEndingDate = function getGracePeriodEndingDate(arr) {
       obj[1] = AppliedGuildBoostsRequiredForBoostedGuildTier[premiumTier1];
       obj[2] = found.length;
       obj[2] = obj;
-      SentryUtils.native.addBreadcrumb(obj);
-      const obj3 = SentryUtils.native;
+      _modDef1208.addBreadcrumb(obj);
+      const obj3 = _modDef1208;
       const tmp17 = AppliedGuildBoostsRequiredForBoostedGuildTier;
     }
     const _Math = Math;
@@ -763,16 +749,16 @@ export const isGuildBoostSlotCanceled = function isGuildBoostSlotCanceled(subscr
   return status === constants2.CANCELED || subscription.canceled;
 };
 export const getTheoreticalPremiumTierForSubscriberCount = function getTheoreticalPremiumTierForSubscriberCount(arg0) {
-  let closure_0 = arg0;
-  let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= outer1_9[arg0]);
+  closure_0 = arg0;
+  let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;
   }
   return NONE;
 };
 export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierForSubscriberCount(arg0) {
-  let closure_0 = arg0;
-  let TIER_3 = items.find((arg0) => totalAvailableBoostsCount < outer1_9[arg0]);
+  closure_0 = arg0;
+  let TIER_3 = items.find((arg0) => totalAvailableBoostsCount < closure_1_9[arg0]);
   if (TIER_3 == null) {
     TIER_3 = BoostedGuildTiers.TIER_3;
   }
@@ -781,11 +767,11 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 export const TierMarkerPositions = obj1;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
   totalAvailableBoostsCount = totalAvailableBoostsCount(4300).getGuildPowerupBoostLevelProgress(guild.id);
-  let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= outer1_9[arg0]);
+  let NONE = reversed.find((arg0) => totalAvailableBoostsCount >= closure_1_9[arg0]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;
   }
-  let TIER_3 = items.find((arg0) => totalAvailableBoostsCount < outer1_9[arg0]);
+  let TIER_3 = items.find((arg0) => totalAvailableBoostsCount < closure_1_9[arg0]);
   if (TIER_3 == null) {
     TIER_3 = BoostedGuildTiers.TIER_3;
   }

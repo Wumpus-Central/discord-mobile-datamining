@@ -1,13 +1,15 @@
 // discord_app/lib/SystemResponsiveness.tsx
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
-const result = require("apply").fileFinishedImporting("lib/SystemResponsiveness.tsx");
+import set from "set" /* 2 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+
+const result = set.fileFinishedImporting("lib/SystemResponsiveness.tsx");
 class SystemResponsiveness {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.sampleStats = function sampleStats(rtp) {
       if (null != rtp) {
-        const item = outer1_1(outer1_2[2]).forEach(rtp.rtp.outbound, (type) => {
+        const item = closure_1_1(closure_1_2[2]).forEach(rtp.rtp.outbound, (type) => {
           if ("audio" === type.type) {
             let prop = type.pttQueueLatencyMicrosSamples;
             if (prop == null) {
@@ -22,7 +24,7 @@ class SystemResponsiveness {
             }
           }
         });
-        const arr = outer1_1(outer1_2[2]);
+        const arr = closure_1_1(closure_1_2[2]);
       }
     };
     obj.connection = global;

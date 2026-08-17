@@ -1,7 +1,7 @@
 // discord_app/design/components/TransitionGroup/TransitionGroup.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 function wrapChildrenDefault(arg0) {
   return arg0;
@@ -13,22 +13,22 @@ class TransitionGroup {
     getItemKey = global.getItemKey;
     wrapChildren = global.wrapChildren;
     if (wrapChildren === undefined) {
-      wrapChildren = f75887;
+      wrapChildren = closure_5;
     }
     lazyCleanUpDelay = global.lazyCleanUpDelay;
-    c4 = undefined;
-    f75887 = undefined;
-    useRef = undefined;
-    useMemo = undefined;
-    c4 = require("module_4294967295");
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
+    closure_4 = require("module_4294967295");
     layoutEffect = renderItem.useLayoutEffect(() => {
       if (-1 !== ref.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(tmp.current);
       }
     }, []);
-    f75887 = items(renderItem.useState(c4), 2)[1];
-    useRef = renderItem.useRef(null);
+    closure_5 = items(renderItem.useState(closure_4), 2)[1];
+    closure_6 = renderItem.useRef(null);
     items = [, , , ];
     items[0] = items;
     items[1] = getItemKey;
@@ -44,33 +44,33 @@ class TransitionGroup {
       const map = new Map(ref2.current);
       function _loop() {
         const tmp2 = callback(callback);
-        let obj = map;
+        obj = map;
         let value = map.get(tmp2);
         if (null == value) {
-          if (null != outer1_6.current) {
+          if (null != closure_1_6.current) {
             let MOUNTED = lazyCleanUpDelay.ENTERED;
           } else {
             MOUNTED = lazyCleanUpDelay.MOUNTED;
           }
           function _cleanUp2() {
-            const current = outer1_6.current;
+            const current = closure_1_6.current;
             let value;
             if (current != null) {
-              value = current.get(_slicedToArray);
+              value = current.get(closure_0);
             }
             if (null != value) {
-              if (value.state === outer2_3.YEETED) {
-                const current2 = outer1_6.current;
+              if (value.state === closure_2_3.YEETED) {
+                const current2 = closure_1_6.current;
                 if (current2 != null) {
-                  current2.delete(_slicedToArray);
+                  current2.delete(closure_0);
                 }
-                if (null != outer1_3) {
+                if (null != closure_1_3) {
                   const _clearTimeout = clearTimeout;
-                  clearTimeout(outer1_4.current);
+                  clearTimeout(closure_1_4.current);
                   const _setTimeout = setTimeout;
-                  outer1_4.current = setTimeout(() => callback({}), tmp7);
+                  closure_1_4.current = setTimeout(() => callback({}), tmp7);
                 } else {
-                  outer1_5({});
+                  closure_1_5({});
                 }
               }
             }
@@ -105,7 +105,7 @@ class TransitionGroup {
       }
       const iter = set[Symbol.iterator]();
       while (iter !== undefined) {
-        let closure_2 = iter.next();
+        closure_2 = iter.next();
         let _loopResult = _loop();
         continue;
       }
@@ -126,7 +126,7 @@ class TransitionGroup {
             }
           }
           let tmp15 = value;
-          let obj = { item: null, children: null, state: null, cleanUp: null, renderItem: null };
+          obj = { item: null, children: null, state: null, cleanUp: null, renderItem: null };
           obj[0] = tmp9.item;
           let tmp16 = map;
           let tmp17 = item10035;
@@ -147,7 +147,7 @@ class TransitionGroup {
       }
       return map;
     }, items);
-    useMemo = memo;
+    closure_7 = memo;
     items1 = [];
     items1[0] = memo;
     insertionEffect = renderItem.useInsertionEffect(() => {
@@ -179,7 +179,7 @@ function getSingleItemKey() {
 }
 let obj = { MOUNTED: 0, [0]: "MOUNTED", ENTERED: 1, [1]: "ENTERED", YEETED: 2, [2]: "YEETED" };
 let closure_4 = {};
-let result = require("jsxProd").fileFinishedImporting("design/components/TransitionGroup/TransitionGroup.tsx");
+let result = require("set").fileFinishedImporting("design/components/TransitionGroup/TransitionGroup.tsx");
 
 export const TransitionStates = obj;
 export { TransitionGroup };

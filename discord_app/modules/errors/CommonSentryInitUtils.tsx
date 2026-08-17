@@ -1,12 +1,12 @@
 // discord_app/modules/errors/CommonSentryInitUtils.tsx
-const result = require("set").fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/errors/CommonSentryInitUtils.tsx");
 
 export const IGNORE_ANALYTICS_BREADCRUMB_EVENTS = ["notification_clicked", "experiment_user_triggered", "experiment_dm_triggered", "experiment_guild_triggered", "device_event", "react_soft_exception", "network_capabilities_changed", "foreground_service", "app_lifecycle", "ui_lifecycle", "touch_event", "http_request", "websocket_message_received"];
 export const filterThrottle = function filterThrottle(arg0) {
-  let closure_0;
-  let closure_1;
   ({ maxBudgetMinute: closure_0, maxBudgetHour: closure_1 } = arg0);
-  let closure_2 = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };
+  closure_2 = { minute: { slot: 0, budgetUsed: 0 }, hour: { slot: 0, budgetUsed: 0 } };
   return () => {
     const timestamp = Date.now();
     const rounded = Math.round(timestamp / 1000 / 60);

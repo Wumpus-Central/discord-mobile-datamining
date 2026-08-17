@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import closure_2 from "generateOldThreadCutoff" /* 4772 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("expandEventProperties").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/trackVoicePanelTabOpened.tsx");
 
 export default function trackVoicePanelTabOpened(arg0, tab, source) {
-  let obj = generateOldThreadCutoff;
-  let hasUnreadResult = generateOldThreadCutoff.hasUnread(arg0);
+  let obj = closure_2;
+  let hasUnreadResult = closure_2.hasUnread(arg0);
   if (!hasUnreadResult) {
     hasUnreadResult = obj.getMentionCount(arg0) > 0;
   }
   obj = { tab, source, is_chat_badged: hasUnreadResult };
-  expandEventProperties.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
+  expandEventPropertiesDefault.track(AnalyticEvents.VOICE_PANEL_TAB_OPENED, obj);
 };
 export const VoicePanelTabAnalyticsSources = { STORE: "store", GESTURE: "gesture", PREJOIN_BUTTON: "prejoin button", CONNECTED_BUTTON: "connected button", VOICE_CONTROLS: "voice controls", HEADER_BUTTON: "header button" };

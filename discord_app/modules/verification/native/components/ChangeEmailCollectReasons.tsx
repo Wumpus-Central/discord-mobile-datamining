@@ -1,52 +1,47 @@
 // discord_app/modules/verification/native/components/ChangeEmailCollectReasons.tsx
-import noop from "noop";
-import get_ActivityIndicator from "Button";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ChangeEmailReasons from "ChangeEmailReasons";
-import { AnalyticEvents } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ChangeEmailReasons from "ChangeEmailReasons" /* 8565 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ CHANGE_EMAIL_REASONS_ORDER: error, SUSPICIOUS_CHANGE_EMAIL_REASONS: metroImportAll } = ChangeEmailReasons);
+({ CHANGE_EMAIL_REASONS_ORDER: error, SUSPICIOUS_CHANGE_EMAIL_REASONS: closure_8 } = ChangeEmailReasons);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { background: null, container: null, radioGroup: null, title: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-let obj1 = { paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[2] = { paddingTop: require("Themes").space.PX_16, paddingBottom: 38 };
+createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
 createCacheKey[3] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingTop: require("Themes").space.PX_16, paddingBottom: 38 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 38 };
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailCollectReasons.tsx");
 
 export default function ChangeEmailCollectReasons(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   const setChangeEmailReason = changeEmailReason.setChangeEmailReason;
   let navigation;
   let callback1;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = changeEmailReason(navigation[8]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = changeEmailReason(navigation[9]);
+  obj1 = changeEmailReason(navigation[9]);
   navigation = obj1.useNavigation();
   const items1 = [navigation, changeEmailReason];
   const items2 = [setChangeEmailReason];
   const callback = callback1.useCallback(() => {
     let obj = setChangeEmailReason(navigation[10]);
     obj = { change_email_reason_enum: changeEmailReason };
-    obj.track(outer1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, obj);
+    obj.track(closure_1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_CONTINUE, obj);
     if (null != changeEmailReason) {
-      if (outer1_8.has(changeEmailReason)) {
+      if (closure_1_8.has(changeEmailReason)) {
         navigation.push(changeEmailReason(tmp[11]).VerificationModalScenes.CHANGE_EMAIL_WARNING);
       }
     }
@@ -55,7 +50,7 @@ export default function ChangeEmailCollectReasons(changeEmailReason) {
   callback1 = callback1.useCallback((change_email_reason_enum) => {
     let obj = setChangeEmailReason(navigation[10]);
     obj = { change_email_reason_enum };
-    obj.track(outer1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, obj);
+    obj.track(closure_1_9.USER_ACCOUNT_EMAIL_CHANGE_REASON_SELECTED, obj);
     setChangeEmailReason(change_email_reason_enum);
   }, items2);
   const items3 = [changeEmailReason, callback1];

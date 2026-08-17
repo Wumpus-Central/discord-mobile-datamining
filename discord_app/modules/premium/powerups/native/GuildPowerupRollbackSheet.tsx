@@ -1,18 +1,13 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx
-import { jsx } from "jsxProd";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { PromoSheet } from "../../../../design/components/Sheet/native/PromoSheet.native.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import Button from "Button" /* 4745 */;
+import PromoSheet from "PromoSheet" /* 8017 */;
 
-const result = require("Button").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupRollbackSheet.tsx");
 
 export default function GuildPowerupRollbackSheet(arg0) {
-  let body;
-  let ctaText;
-  let header;
-  let onCtaPress;
-  let onDismiss;
   ({ header, body, ctaText, onCtaPress, onDismiss } = arg0);
-  const obj = { title: header, description: body, onDismiss, actions: null };
-  obj[3] = jsx(Button.Button, { variant: "primary", text: ctaText, onPress: onCtaPress });
-  return jsx(PromoSheet.PromoSheet, { title: header, description: body, onDismiss, actions: null });
+  return jsx(PromoSheet.PromoSheet, { title: header, description: body, onDismiss, actions: jsx(Button.Button, { variant: "primary", text: ctaText, onPress: onCtaPress }) });
 };

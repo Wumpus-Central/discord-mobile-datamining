@@ -1,11 +1,11 @@
 // discord_app/modules/mfa/native/screens/TotpScreen.tsx
-import MFAOptionScreen from "MFAOptionScreen";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
+import finishMFACheck from "finishMFACheck" /* 15129 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function isValidClipboardCode(arg0) {
   let isMatch = arg0.length === finishMFACheck.TOTP_CODE_LENGTH;
   if (isMatch) {
@@ -14,18 +14,12 @@ function isValidClipboardCode(arg0) {
   }
   return isMatch;
 }
-const result = require("noop").fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/TotpScreen.tsx");
 
 export default function TotpScreen(finish) {
-  let c1;
-  let c4;
-  let c5;
-  let tmp2;
-  let tmp5;
-  let tmp7;
   finish = finish.finish;
   let _require = finish;
-  let importDefault;
+  importDefault = undefined;
   let first;
   let callback;
   let callback2;
@@ -41,10 +35,10 @@ export default function TotpScreen(finish) {
   [tmp7, c5] = callback2(React.useState(false), 2);
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -73,15 +67,15 @@ export default function TotpScreen(finish) {
               obj[0] = arg1;
               return obj;
             } else {
-              let MFAOptionScreen = tmp3;
-              let closure_2 = tmp7;
-              outer1_3(lib);
-              tmp7 = outer2_7(lib);
+              closure_3 = tmp3;
+              closure_2 = tmp7;
+              closure_1_3(lib);
+              tmp7 = closure_2_7(lib);
               if (tmp7) {
-                outer1_4(undefined);
-                outer1_1(true);
+                closure_1_4(undefined);
+                closure_1_1(true);
                 let v0 = 1;
-                const obj1 = { mfaType: "totp", data: null };
+                obj1 = { mfaType: "totp", data: null };
                 obj1[1] = tmp37;
                 c6 = 2;
                 c7 = 1;
@@ -94,7 +88,7 @@ export default function TotpScreen(finish) {
           } else {
             if (1 === tmp7) {
               v0 = 0;
-              lib = _slicedToArray;
+              lib = closure_4;
               let message;
               if (lib != null) {
                 const body = lib.body;
@@ -105,8 +99,8 @@ export default function TotpScreen(finish) {
               if (message == null) {
                 message = lib.message;
               }
-              outer1_4(message);
-              const tmp15 = outer1_4;
+              closure_1_4(message);
+              const tmp15 = closure_1_4;
             } else if (arg0 === 1) {
               c7 = 3;
               throw arg1;
@@ -120,11 +114,11 @@ export default function TotpScreen(finish) {
               v0(true);
               v0 = 0;
             }
-            tmp7 = outer1_1(false);
+            tmp7 = closure_1_1(false);
           }
           c7 = 3;
         } catch (tmp28) {
-          _slicedToArray = tmp28;
+          closure_4 = tmp28;
           if (tmp4 === v0) {
             c7 = tmp2;
             throw tmp28;

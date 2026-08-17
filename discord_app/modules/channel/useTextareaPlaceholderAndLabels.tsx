@@ -1,16 +1,13 @@
 // discord_app/modules/channel/useTextareaPlaceholderAndLabels.tsx
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { computeChannelName } from "useChannelName.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ ChannelTypes: c3, ChannelTypesSets: c4 } = ME);
-const result = require("getSystemLocale").fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
+const result = set.fileFinishedImporting("modules/channel/useTextareaPlaceholderAndLabels.tsx");
 
 export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
-  let channel;
-  let isReadonly;
   ({ channel, isReadonly } = isCreatingThread);
   if (isReadonly === undefined) {
     isReadonly = false;
@@ -19,8 +16,8 @@ export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = computeChannelName(channel, true);
-  const tmp3 = computeChannelName(channel, false);
+  const tmp2 = computeChannelNameDefault(channel, true);
+  const tmp3 = computeChannelNameDefault(channel, false);
   if (null != channel) {
     if (null != tmp2) {
       if (flag) {
@@ -38,7 +35,7 @@ export default function useTextareaPlaceholderAndLabels(isCreatingThread) {
         obj[1] = intl8.string(getSystemLocale.t["RRvRp/"]);
         obj9 = obj;
       } else if (channel.isForumPost()) {
-        const obj1 = { placeholder: null, accessibilityLabel: null };
+        obj1 = { placeholder: null, accessibilityLabel: null };
         const intl5 = getSystemLocale.intl;
         const obj2 = { channel: null };
         obj2[0] = tmp2;

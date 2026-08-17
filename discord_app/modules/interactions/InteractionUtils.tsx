@@ -1,36 +1,23 @@
 // discord_app/modules/interactions/InteractionUtils.tsx
-import patchThread from "patchThread";
-import fetchFingerprint from "fetchFingerprint";
-import deleteNonce from "deleteNonce";
-import ME from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { _fetchMessageInteractionData } from "InteractionActionCreators.tsx";
-import { getFirstSkemaFieldError } from "SkemaUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import _fetchMessageInteractionData from "_fetchMessageInteractionData" /* 8331 */;
+import getFirstSkemaFieldError from "getFirstSkemaFieldError" /* 8332 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "deleteNonce" /* 8165 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _executeMessageComponentInteraction() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -38,7 +25,7 @@ function _executeMessageComponentInteraction() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -57,7 +44,7 @@ function _executeMessageComponentInteraction() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
@@ -69,7 +56,7 @@ function _executeMessageComponentInteraction() {
               c7 = undefined;
               c8 = undefined;
               ({ componentType: c0, messageId: c1, messageFlags: c2, customId: c3, componentId: c4, applicationId: c5, channelId: c6, guildId: c7, localState: c8 } = callback);
-              let closure_9;
+              closure_9 = undefined;
               let obj6;
               sessionId = 1;
               c5 = 1;
@@ -82,7 +69,7 @@ function _executeMessageComponentInteraction() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c5 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -130,7 +117,7 @@ function _executeMessageComponentInteraction() {
                   }
                   if (tmp2) {
                     _undefined(_undefined2[9]).sendClydeError(c6, code);
-                    const obj = _undefined(_undefined2[9]);
+                    obj = _undefined(_undefined2[9]);
                   }
                 };
                 callback(8331).addQueued(closure_9, obj4);
@@ -162,7 +149,7 @@ function _executeMessageComponentInteraction() {
                 c5 = 1;
                 const obj9 = { value: null, done: false };
                 obj9[0] = HTTP.post(obj8, (arg0) => {
-                  outer1_12(closure_9, arg0, c5, c6, c7);
+                  closure_1_12(closure_9, arg0, c5, c6, c7);
                 });
                 return obj9;
               }
@@ -191,7 +178,7 @@ function _executeMessageComponentInteraction() {
     iter.next();
     return iter;
   });
-  const _executeMessageComponentInteraction = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -223,7 +210,7 @@ function mapMessageComponentLocalStateForAPI(type) {
                   }
                 }
                 const selectedOptions = type.selectedOptions;
-                const obj = { type: null, values: null };
+                obj = { type: null, values: null };
                 obj[0] = type.type;
                 obj[1] = selectedOptions.map((value) => value.value);
                 return obj;
@@ -258,15 +245,15 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                   tmp28 = tmp29;
                 }
                 if (!tmp28) {
-                  let obj = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId: null, channelId: null, guildId: null };
+                  obj = { type: "APPLICATION_COMMAND_EXECUTE_BAD_VERSION", applicationId: null, channelId: null, guildId: null };
                   obj[1] = applicationId;
                   obj[2] = channelId;
                   if (tmp9 == null) {
                     tmp9 = null;
                   }
                   obj[3] = tmp9;
-                  dispatcher.dispatch(obj);
-                  const obj7 = dispatcher;
+                  dispatcherDefault.dispatch(obj);
+                  const obj7 = dispatcherDefault;
                 }
                 const obj6 = getFirstSkemaFieldError;
                 const tmp24 = require;
@@ -286,8 +273,8 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
                 tmp20 = null;
               }
               obj[3] = tmp20;
-              dispatcher.dispatch(obj);
-              const obj3 = dispatcher;
+              dispatcherDefault.dispatch(obj);
+              const obj3 = dispatcherDefault;
               _fetchMessageInteractionData.setFailed(nonce, undefined, ok.body.message);
               const obj5 = _fetchMessageInteractionData;
             } else {
@@ -308,17 +295,17 @@ function handleInteractionResponse(nonce, ok, applicationId, channelId, guildId)
     }
   }
 }
-({ Endpoints: closure_6, AbortCodes: error, MessageStates: metroImportAll, MessageFlags: c9 } = ME);
+({ Endpoints: closure_6, AbortCodes: error, MessageStates: closure_8, MessageFlags: c9 } = ME);
 let obj = { SENDING: 0, [0]: "SENDING", CREATED: 1, [1]: "CREATED", FAILED: 2, [2]: "FAILED", TIMED_OUT: 3, [3]: "TIMED_OUT", EPHEMERAL_SUCCESS: 4, [4]: "EPHEMERAL_SUCCESS" };
-let result = require("deleteNonce").fileFinishedImporting("modules/interactions/InteractionUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/interactions/InteractionUtils.tsx");
 
 export const getInteractionTimeoutTimestamp = function getInteractionTimeoutTimestamp(arg0) {
   if (null != arg0) {
     if ("" !== arg0) {
       const _Number = Number;
       if (!Number.isNaN(arg0)) {
-        let sum = DISCORD_EPOCH.extractTimestamp(arg0) + 900000;
-        const obj = DISCORD_EPOCH;
+        let sum = DISCORD_EPOCHDefault.extractTimestamp(arg0) + 900000;
+        obj = DISCORD_EPOCHDefault;
       }
       return sum;
     }
@@ -330,8 +317,8 @@ export const getInteractionInitialResponseDeadlineTimestamp = function getIntera
     if ("" !== arg0) {
       const _Number = Number;
       if (!Number.isNaN(arg0)) {
-        let sum = DISCORD_EPOCH.extractTimestamp(arg0) + 3000;
-        const obj = DISCORD_EPOCH;
+        let sum = DISCORD_EPOCHDefault.extractTimestamp(arg0) + 3000;
+        obj = DISCORD_EPOCHDefault;
       }
       return sum;
     }
@@ -392,8 +379,8 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
         if ("" !== id2) {
           const _Number2 = Number;
           if (!Number.isNaN(id2)) {
-            let sum = DISCORD_EPOCH.extractTimestamp(id2) + 3000;
-            const obj2 = DISCORD_EPOCH;
+            let sum = DISCORD_EPOCHDefault.extractTimestamp(id2) + 3000;
+            const obj2 = DISCORD_EPOCHDefault;
           }
           const _Date4 = Date;
           sum < Date.now();
@@ -408,7 +395,7 @@ export const getInteractionStatusViewState = function getInteractionStatusViewSt
       if ("" !== id) {
         const _Number = Number;
         if (!Number.isNaN(id)) {
-          obj = DISCORD_EPOCH;
+          obj = DISCORD_EPOCHDefault;
           let sum1 = obj.extractTimestamp(id) + 900000;
         }
         const _Date2 = Date;

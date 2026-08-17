@@ -1,14 +1,14 @@
 // discord_app/modules/quests/native/QuestAccessSuspendedBottomSheet.tsx
-import noop from "noop";
-import { UserSettingsSections } from "ME";
-import { AccountSettingsTabs } from "AccountSettingsTabs";
-import { jsx } from "jsxProd";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import PromoSheet from "PromoSheet" /* 8017 */;
+import closure_3 from "noop" /* 19 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("AccountSettingsTabs").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestAccessSuspendedBottomSheet.tsx");
 
 export default function QuestAccessSuspendedBottomSheet() {
   const callback = React.useCallback(() => {

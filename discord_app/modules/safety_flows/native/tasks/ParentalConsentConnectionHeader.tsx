@@ -1,31 +1,31 @@
 // discord_app/modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { messagesProxy } from "../../SafetyFlows.messages.js";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import messagesProxyDefault from "messagesProxy" /* 2597 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { row: null, logOut: null };
-createCacheKey = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", left: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", left: require("Themes").space.PX_16 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
+createCacheKey[1] = { position: "absolute", left: ThemesDefault.space.PX_16 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { position: "absolute", left: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ParentalConsentConnectionHeader.tsx");
 
 export const ParentalConsentConnectionNavbar = function ParentalConsentConnectionNavbar() {
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let username;
@@ -34,9 +34,9 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     }
     return username;
   });
-  obj = { style: { paddingTop: useSafeAreaInsets().top }, children: null };
+  obj = { style: { paddingTop: useSafeAreaInsetsDefault().top }, children: null };
   obj = { style: tmp.row, children: null };
-  const obj1 = {
+  obj1 = {
     accessibilityRole: "button",
     variant: "text-md/medium",
     color: "text-link",
@@ -47,7 +47,7 @@ export const ParentalConsentConnectionNavbar = function ParentalConsentConnectio
     children: null
   };
   const intl = getSystemLocale.intl;
-  obj1[5] = intl.string(messagesProxy["3HuGuY"]);
+  obj1[5] = intl.string(messagesProxyDefault["3HuGuY"]);
   const items1 = [callback(Text.Text, obj1), ];
   let tmp5Result = null != stateFromStores;
   if (tmp5Result) {

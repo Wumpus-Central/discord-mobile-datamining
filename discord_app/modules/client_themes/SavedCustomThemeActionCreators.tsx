@@ -1,15 +1,15 @@
 // discord_app/modules/client_themes/SavedCustomThemeActionCreators.tsx
-import validateSavedTheme from "validateSavedTheme";
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "validateSavedTheme" /* 4308 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("dispatcher").fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/client_themes/SavedCustomThemeActionCreators.tsx");
 
 export const fetchUserCustomThemes = function fetchUserCustomThemes() {
   if (!fetching.isFetching()) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj.dispatch({ type: "SAVED_CUSTOM_THEMES_FETCH_START" });
     const HTTP = sendRequest.HTTP;
     obj = { url: null, oldFormErrors: true, rejectWithError: true };

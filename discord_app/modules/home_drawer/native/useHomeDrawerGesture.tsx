@@ -1,15 +1,13 @@
 // discord_app/modules/home_drawer/native/useHomeDrawerGesture.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "createFakeSharedValue";
-import withEqualityFn from "withEqualityFn";
-import { computeMaxX } from "withEqualityFn";
-import keys from "keys";
-import { AnalyticEvents } from "ME";
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
-import { Gesture } from "LegacyBaseButton";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "withEqualityFn" /* 15289 */;
+import { computeMaxX } from "withEqualityFn" /* 15289 */;
+import closure_7 from "keys" /* 15290 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import { Gesture } from "LegacyBaseButton" /* 6377 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -38,18 +36,16 @@ obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, pane
 obj[0] = Gesture.Pan();
 obj[1] = {};
 obj[2] = createFakeSharedValue.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-obj[3] = require("_slicedToArray");
-obj[4] = require("_slicedToArray");
+obj[3] = require("module_0");
+obj[4] = require("module_0");
 obj[5] = {};
 obj[6] = {};
 obj[7] = {};
 const context = importAllResult.createContext({ homeDrawerState: obj, enableHome: false });
-let result = require("withEqualityFn").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGesture.tsx");
+let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGesture.tsx");
 
 export const HOME_DRAWER_FLING_PHYSICS = obj;
 export const useHomeGesture = function useHomeGesture() {
-  let enablePeekHint;
-  let landOnHome;
   const MobileHomeDrawerExperiment = panelX(updateMaxX[6]).MobileHomeDrawerExperiment;
   const config = MobileHomeDrawerExperiment.useConfig({ location: "gesture" });
   let enableHome = config.enableHome;
@@ -62,22 +58,22 @@ export const useHomeGesture = function useHomeGesture() {
   const setPanelX = tmp4.setPanelX;
   isPanelTouchActive = tmp4.isPanelTouchActive;
   const noteInteraction = tmp4.noteInteraction;
-  let obj = panelX(updateMaxX[7]);
+  obj = panelX(updateMaxX[7]);
   const sharedValue = obj.useSharedValue(0);
-  let obj1 = panelX(updateMaxX[7]);
+  obj1 = panelX(updateMaxX[7]);
   const sharedValue1 = obj1.useSharedValue(false);
   let obj2 = panelX(updateMaxX[8]);
   const navigation = obj2.useNavigation();
   let obj4 = setPanelX;
   const callback = setPanelX.useCallback((action) => {
-    let obj = gestureState(updateMaxX[9]);
+    obj = gestureState(updateMaxX[9]);
     obj = { action };
     obj.track(sharedValue1.SERVER_DRAWER_INTERACT, obj);
   }, []);
   let obj5 = panelX(updateMaxX[7]);
   class G {
     constructor() {
-      return keys.get() >= useConfig;
+      return closure_7.get() >= closure_10;
     }
   }
   obj = { dragOffsetX: sharedValue, INITIAL_OPEN_WIDTH: callback };
@@ -119,9 +115,9 @@ export const useHomeGesture = function useHomeGesture() {
   F.__initData = derivedValue;
   const animatedReaction = obj5.useAnimatedReaction(G, F);
   let tmp9 = gestureState(updateMaxX[11])();
-  let closure_11 = tmp9;
+  closure_11 = tmp9;
   const tmp10 = gestureState(updateMaxX[12])();
-  obj = tmp10;
+  closure_12 = tmp10;
   const tmp11 = gestureState(updateMaxX[14])();
   if (enableHome) {
     enableHome = !tmp12;
@@ -149,7 +145,7 @@ export const useHomeGesture = function useHomeGesture() {
   }
   ue.__closure = { panelX, peekX: sharedValue2 };
   ue.__workletHash = 4654854314200;
-  ue.__initData = closure_17;
+  ue.__initData = drawerOpen;
   derivedValue = panelX(updateMaxX[7]).useDerivedValue(ue);
   let state = navigation.getState();
   const tmpResult2 = panelX(updateMaxX[7]);
@@ -170,7 +166,7 @@ export const useHomeGesture = function useHomeGesture() {
   let coerceGuildsRouteResult = panelX(updateMaxX[16]).coerceGuildsRoute(tmp19);
   let tmp21 = enableHome;
   if (enableHome) {
-    let drawerOpen;
+    drawerOpen = undefined;
     if (coerceGuildsRouteResult != null) {
       let params = coerceGuildsRouteResult.params;
       if (params != null) {
@@ -182,7 +178,7 @@ export const useHomeGesture = function useHomeGesture() {
     }
     tmp21 = drawerOpen;
   }
-  closure_17 = tmp21;
+  drawerOpen = tmp21;
   let num2 = 0;
   if (tmp21) {
     num2 = noteInteraction(tmp9, tmp10);
@@ -200,7 +196,7 @@ export const useHomeGesture = function useHomeGesture() {
     if (!enableHome) {
       const result = panelX.set(0);
       panelX(updateMaxX[16]).setHomeDrawerState(false);
-      const obj = panelX(updateMaxX[16]);
+      obj = panelX(updateMaxX[16]);
     }
   }, items1);
   const items2 = [navigation, setPanelX, enableHome];
@@ -221,11 +217,11 @@ export const useHomeGesture = function useHomeGesture() {
           tmp = routes[num];
         }
       }
-      const coerceGuildsRouteResult = handleStateChange(outer1_2[16]).coerceGuildsRoute(tmp);
+      const coerceGuildsRouteResult = handleStateChange(closure_1_2[16]).coerceGuildsRoute(tmp);
       if (null != coerceGuildsRouteResult) {
         if (closure_13) {
           const params = coerceGuildsRouteResult.params;
-          let drawerOpen;
+          drawerOpen = undefined;
           if (params != null) {
             drawerOpen = params.drawerOpen;
           }
@@ -234,7 +230,7 @@ export const useHomeGesture = function useHomeGesture() {
             str = "open";
           }
           closure_4(str);
-          state = outer1_7.getState();
+          state = closure_1_7.getState();
           if (true === drawerOpen) {
             state.startTimer();
           } else {
@@ -246,12 +242,12 @@ export const useHomeGesture = function useHomeGesture() {
     }
     navigation.addListener("state", handleStateChange);
     return () => {
-      outer1_9.removeListener("state", handleStateChange);
+      closure_1_9.removeListener("state", handleStateChange);
       const state = sharedValue.getState();
       state.stopTimer();
     };
   }, items2);
-  let closure_19 = obj4.useRef(false);
+  closure_19 = obj4.useRef(false);
   const items3 = [enableHome, tmp21, num2, panelX];
   const layoutEffect = obj4.useLayoutEffect(() => {
     let tmp = enableHome;
@@ -260,7 +256,7 @@ export const useHomeGesture = function useHomeGesture() {
     }
     if (tmp) {
       const result = panelX.set(num2);
-      if (closure_17) {
+      if (drawerOpen) {
         const state = sharedValue.getState();
         state.startTimer();
       }
@@ -284,14 +280,14 @@ export const useHomeGesture = function useHomeGesture() {
         tmp5 = gestureState;
         value = panelX.get();
         str = "animate-always";
-        withSpringResult = obj.withSpring(value, gestureState.get().active ? outer1_11 : HapticFeedbackTypes, "animate-always");
+        withSpringResult = obj.withSpring(value, gestureState.get().active ? closure_11 : closure_12, "animate-always");
       } else {
-        return c18;
+        return closure_18;
       }
       return;
     }
   }
-  obj1 = { isDrawerInitialized: sharedValue1, initialPanelX: num2, withSpring: tmp(tmp2[17]).withSpring, panelX, gestureState, HOME_GESTURE_DRAG_PHYSICS: closure_11, HOME_DRAWER_FLING_PHYSICS: obj };
+  obj1 = { isDrawerInitialized: sharedValue1, initialPanelX: num2, withSpring: tmp(tmp2[17]).withSpring, panelX, gestureState, HOME_GESTURE_DRAG_PHYSICS: closure_11, HOME_DRAWER_FLING_PHYSICS: closure_12 };
   De.__closure = obj1;
   De.__workletHash = 11078734703352;
   De.__initData = num2;
@@ -300,7 +296,7 @@ export const useHomeGesture = function useHomeGesture() {
   class Ae {
     constructor() {
       value = closure_20.get();
-      return value + GESTURE_FULL.get();
+      return value + closure_15.get();
     }
   }
   Ae.__closure = { panelGestureSpringX: derivedValue1, peekX: sharedValue2 };
@@ -310,8 +306,8 @@ export const useHomeGesture = function useHomeGesture() {
   const tmpResult5 = panelX(updateMaxX[7]);
   class Ee {
     constructor() {
-      obj = { flex: 1, marginTop: HapticFeedbackTypes.top, transform: null };
-      obj = { translateX: GESTURE_FULL.get() };
+      obj = { flex: 1, marginTop: closure_12.top, transform: null };
+      obj = { translateX: closure_21.get() };
       items = [];
       items[0] = obj;
       obj[2] = items;
@@ -324,7 +320,7 @@ export const useHomeGesture = function useHomeGesture() {
   const animatedStyle = panelX(updateMaxX[7]).useAnimatedStyle(Ee);
   const tmpResult6 = panelX(updateMaxX[7]);
   function pe() {
-    let obj = derivedValue;
+    obj = derivedValue;
     let num = 0;
     if (derivedValue.get() < enableHome) {
       const _Math = Math;
@@ -336,10 +332,9 @@ export const useHomeGesture = function useHomeGesture() {
       num3 = 1;
     }
     obj = { transform: null, opacity: null };
-    obj = { translateX: null };
-    obj[0] = panelX(updateMaxX[17]).withSpring(num, closure_12);
+    obj = { translateX: panelX(updateMaxX[17]).withSpring(num, closure_12) };
     const items = [obj, ];
-    const obj1 = { scale: null };
+    obj1 = { scale: null };
     const obj4 = panelX(updateMaxX[17]);
     obj1[0] = panelX(updateMaxX[17]).withSpring(num3, closure_12);
     items[1] = obj1;
@@ -349,17 +344,17 @@ export const useHomeGesture = function useHomeGesture() {
     obj[1] = obj7.withSpring(panelX(updateMaxX[7]).clamp(result, 0, 1), closure_12);
     return obj;
   }
-  obj2 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, GUILD_DESCRIPTION_ANIMATION_DISTANCE: 12, MIN_HOME_DRAWER_TEXT_OPACITY: 0, MIN_HOME_DRAWER_OPEN_WIDTH: 150, GUILD_LABEL_UNSNAPPED_SCALE: 0.98, withSpring: tmp(tmp2[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: obj, clamp: tmp(tmp2[7]).clamp };
+  obj2 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, GUILD_DESCRIPTION_ANIMATION_DISTANCE: 12, MIN_HOME_DRAWER_TEXT_OPACITY: 0, MIN_HOME_DRAWER_OPEN_WIDTH: 150, GUILD_LABEL_UNSNAPPED_SCALE: 0.98, withSpring: tmp(tmp2[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12, clamp: tmp(tmp2[7]).clamp };
   pe.__closure = obj2;
   pe.__workletHash = 11639414708115;
   pe.__initData = derivedValue2;
-  let closure_23 = panelX(updateMaxX[7]).useAnimatedStyle(pe);
+  closure_23 = panelX(updateMaxX[7]).useAnimatedStyle(pe);
   const tmpResult7 = panelX(updateMaxX[7]);
   class Oe {
     constructor() {
       obj = closure_16;
       num = 0;
-      if (closure_16.get() < enableHome) {
+      if (closure_16.get() < closure_13) {
         tmp2 = globalThis;
         _Math = Math;
         num2 = 8;
@@ -368,7 +363,7 @@ export const useHomeGesture = function useHomeGesture() {
       obj = { transform: null };
       obj1 = { translateX: null };
       obj4 = panelX(updateMaxX[17]);
-      obj1[0] = obj4.withSpring(num, HapticFeedbackTypes);
+      obj1[0] = obj4.withSpring(num, closure_12);
       items = [];
       items[0] = obj1;
       obj[0] = items;
@@ -376,16 +371,16 @@ export const useHomeGesture = function useHomeGesture() {
     }
   }
   const tmpResult8 = panelX(updateMaxX[7]);
-  Oe.__closure = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, MAX_HOME_DRAWER_ICON_DISTANCE: 8, withSpring: panelX(updateMaxX[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: obj };
+  Oe.__closure = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, MAX_HOME_DRAWER_ICON_DISTANCE: 8, withSpring: panelX(updateMaxX[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12 };
   Oe.__workletHash = 16360618332998;
   Oe.__initData = animatedStyle;
-  let closure_24 = tmpResult8.useAnimatedStyle(Oe);
-  let obj3 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, MAX_HOME_DRAWER_ICON_DISTANCE: 8, withSpring: panelX(updateMaxX[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: obj };
+  closure_24 = tmpResult8.useAnimatedStyle(Oe);
+  let obj3 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, MAX_HOME_DRAWER_ICON_DISTANCE: 8, withSpring: panelX(updateMaxX[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12 };
   class Te {
     constructor() {
       obj = closure_16;
       num = 0;
-      if (closure_16.get() < enableHome) {
+      if (closure_16.get() < closure_13) {
         tmp2 = globalThis;
         _Math = Math;
         num2 = 4;
@@ -394,38 +389,38 @@ export const useHomeGesture = function useHomeGesture() {
       obj = { transform: null };
       obj1 = { translateX: null };
       obj4 = panelX(updateMaxX[17]);
-      obj1[0] = obj4.withSpring(num, HapticFeedbackTypes);
+      obj1[0] = obj4.withSpring(num, closure_12);
       items = [];
       items[0] = obj1;
       obj[0] = items;
       return obj;
     }
   }
-  obj4 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, UNREAD_INDICATOR_ANIMATION_DISTANCE: 4, withSpring: tmp(tmp2[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: obj };
+  obj4 = { drawerRevealX: derivedValue, MAX_HOME_DRAWER_ANIMATING_WIDTH: enableHome, UNREAD_INDICATOR_ANIMATION_DISTANCE: 4, withSpring: tmp(tmp2[17]).withSpring, HOME_DRAWER_FLING_PHYSICS: closure_12 };
   Te.__closure = obj4;
   Te.__workletHash = 8561772429103;
   Te.__initData = closure_23;
-  let closure_25 = panelX(updateMaxX[7]).useAnimatedStyle(Te);
+  closure_25 = panelX(updateMaxX[7]).useAnimatedStyle(Te);
   const items5 = [gestureState, panelX, sharedValue, isFocused, maxX, isPanelTouchActive, noteInteraction, callback];
   const memo = obj4.useMemo(() => {
     function settleDrawer(arg0) {
       let num = 0;
       if (arg0) {
-        num = _slicedToArray;
+        num = closure_3;
       }
       const result = settleDrawer.set(num);
-      settleDrawer(outer1_2[7]).runOnJS(settleDrawer(outer1_2[16]).setHomeDrawerState)(arg0);
+      settleDrawer(closure_1_2[7]).runOnJS(settleDrawer(closure_1_2[16]).setHomeDrawerState)(arg0);
     }
-    let obj = { panelX: settleDrawer, maxX, runOnJS: panelX(updateMaxX[7]).runOnJS, setHomeDrawerState: panelX(updateMaxX[16]).setHomeDrawerState };
+    obj = { panelX: settleDrawer, maxX, runOnJS: panelX(updateMaxX[7]).runOnJS, setHomeDrawerState: panelX(updateMaxX[16]).setHomeDrawerState };
     settleDrawer.__closure = obj;
     settleDrawer.__workletHash = 8226756372642;
     settleDrawer.__initData = closure_24;
     function shouldOpenFromPosition() {
       let tmp = 0 !== settleDrawer.get();
       if (tmp) {
-        let tmp3 = obj.get() > 0.5 * _slicedToArray;
+        let tmp3 = obj.get() > 0.5 * closure_3;
         if (!tmp3) {
-          let tmp5 = obj.get() >= outer1_10;
+          let tmp5 = obj.get() >= closure_1_10;
           if (tmp5) {
             tmp5 = store.get() > 0;
           }
@@ -445,16 +440,16 @@ export const useHomeGesture = function useHomeGesture() {
     let result = Gesture.Pan().enabled(isFocused).manualActivation(true).shouldCancelWhenOutside(false);
     const manualActivationResult = Gesture.Pan().enabled(isFocused).manualActivation(true);
     const fn = function _(absoluteX) {
-      const result = withEqualityFn.set(true);
+      const result = closure_5.set(true);
       const result1 = shouldOpenFromPosition.set({ active: false, initialX: absoluteX.absoluteX, initialY: absoluteX.absoluteY, panelX: settleDrawer.get() });
     };
     obj = { isPanelTouchActive, gestureState: shouldOpenFromPosition, panelX: settleDrawer };
     fn.__closure = obj;
     fn.__workletHash = 8825829705900;
-    fn.__initData = outer1_30;
+    fn.__initData = closure_1_30;
     const maxPointersResult = result.maxPointers(1);
     const fn2 = function s(arg0, activate) {
-      let obj = shouldOpenFromPosition;
+      obj = shouldOpenFromPosition;
       if (!shouldOpenFromPosition.get().active) {
         const absoluteX = arg0.changedTouches[0].absoluteX;
         const _Math = Math;
@@ -481,7 +476,7 @@ export const useHomeGesture = function useHomeGesture() {
     };
     fn2.__closure = { gestureState: shouldOpenFromPosition, panelX: settleDrawer, ACTIVATION_MIN_DISTANCE: 10 };
     fn2.__workletHash = 7484113391171;
-    fn2.__initData = outer1_29;
+    fn2.__initData = closure_1_29;
     const onBeginResult = result.maxPointers(1).onBegin(fn);
     const fn3 = function n(absoluteX) {
       if (shouldOpenFromPosition.get().active) {
@@ -490,7 +485,7 @@ export const useHomeGesture = function useHomeGesture() {
         const sum = diff + obj.get().panelX;
         if (0 === obj.get().panelX) {
           if (diff >= 0) {
-            if (diff < outer1_10) {
+            if (diff < closure_1_10) {
               const _Math2 = Math;
               const result1 = settleDrawer.set(Math.max(sum / 3, 0));
             }
@@ -502,13 +497,13 @@ export const useHomeGesture = function useHomeGesture() {
     };
     fn3.__closure = { gestureState: shouldOpenFromPosition, dragOffsetX: sharedValue, INITIAL_OPEN_WIDTH: callback, panelX: settleDrawer, DRAWER_RESISTANCE: 3 };
     fn3.__workletHash = 15118338555898;
-    fn3.__initData = outer1_28;
+    fn3.__initData = closure_1_28;
     const onTouchesMoveResult = result.maxPointers(1).onBegin(fn).onTouchesMove(fn2);
     const fn4 = function t(velocityX) {
       if (velocityX.velocityX > 50) {
-        if (outer1_7.get() > 40) {
+        if (closure_1_7.get() > 40) {
           let flag = true;
-          if (outer1_7.get() < callback) {
+          if (closure_1_7.get() < callback) {
             const obj2 = panelX(updateMaxX[7]);
             panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback)(panelX(updateMaxX[10]).HapticFeedbackTypes.IMPACT_MEDIUM);
             flag = true;
@@ -520,26 +515,26 @@ export const useHomeGesture = function useHomeGesture() {
         }
         let num5 = 0;
         if (flag) {
-          num5 = outer1_3;
+          num5 = closure_1_3;
         }
         const result = settleDrawer.set(num5);
         panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[16]).setHomeDrawerState)(flag);
         const tmp37 = shouldOpenFromPosition.get().panelX > 0;
         if (flag) {
           if (!tmp37) {
-            panelX(updateMaxX[7]).runOnJS(outer1_10)(isFocused.OPEN);
+            panelX(updateMaxX[7]).runOnJS(closure_1_10)(isFocused.OPEN);
             const obj4 = panelX(updateMaxX[7]);
           }
         }
         if (!tmp37) {
-          panelX(updateMaxX[7]).runOnJS(outer1_10)(isFocused.PEEK);
+          panelX(updateMaxX[7]).runOnJS(closure_1_10)(isFocused.PEEK);
           const obj5 = panelX(updateMaxX[7]);
         }
         const obj3 = panelX(updateMaxX[7]);
       }
       if (velocityX.velocityX < -50) {
-        if (outer1_7.get() < -40) {
-          const obj = panelX(updateMaxX[7]);
+        if (closure_1_7.get() < -40) {
+          obj = panelX(updateMaxX[7]);
           panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback)(panelX(updateMaxX[10]).HapticFeedbackTypes.SOFT);
           flag = false;
           const runOnJSResult1 = panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[10]).triggerHapticFeedback);
@@ -550,11 +545,11 @@ export const useHomeGesture = function useHomeGesture() {
       }
       flag = 0 !== settleDrawer.get();
       if (flag) {
-        let tmp5 = settleDrawer.get() > 0.5 * outer1_3;
+        let tmp5 = settleDrawer.get() > 0.5 * closure_1_3;
         if (!tmp5) {
           let tmp8 = settleDrawer.get() >= callback;
           if (tmp8) {
-            tmp8 = outer1_7.get() > 0;
+            tmp8 = closure_1_7.get() > 0;
           }
           tmp5 = tmp8;
         }
@@ -565,11 +560,11 @@ export const useHomeGesture = function useHomeGesture() {
     fn4.__closure = { FLING_MIN_VELOCITY: 50, dragOffsetX: sharedValue, FLING_MIN_DISTANCE: 40, INITIAL_OPEN_WIDTH: callback, runOnJS: panelX(updateMaxX[7]).runOnJS, triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback, HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, gestureState: shouldOpenFromPosition, trackServerDrawerInteract: callback, ServerDrawerInteractAction: isFocused };
     fn4.__workletHash = 10902226233549;
     fn4.__initData = first;
-    const obj1 = { FLING_MIN_VELOCITY: 50, dragOffsetX: sharedValue, FLING_MIN_DISTANCE: 40, INITIAL_OPEN_WIDTH: callback, runOnJS: panelX(updateMaxX[7]).runOnJS, triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback, HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, gestureState: shouldOpenFromPosition, trackServerDrawerInteract: callback, ServerDrawerInteractAction: isFocused };
+    obj1 = { FLING_MIN_VELOCITY: 50, dragOffsetX: sharedValue, FLING_MIN_DISTANCE: 40, INITIAL_OPEN_WIDTH: callback, runOnJS: panelX(updateMaxX[7]).runOnJS, triggerHapticFeedback: panelX(updateMaxX[10]).triggerHapticFeedback, HapticFeedbackTypes: panelX(updateMaxX[10]).HapticFeedbackTypes, shouldOpenFromPosition, settleDrawer, gestureState: shouldOpenFromPosition, trackServerDrawerInteract: callback, ServerDrawerInteractAction: isFocused };
     const fn5 = function e() {
       let tmp = settleDrawer.get() > 0;
       if (tmp) {
-        tmp = obj.get() < outer1_3;
+        tmp = obj.get() < closure_1_3;
       }
       if (tmp) {
         if (typeof shouldOpenFromPosition !== "function") {
@@ -577,11 +572,11 @@ export const useHomeGesture = function useHomeGesture() {
         }
         let tmp5 = 0 !== obj.get();
         if (tmp5) {
-          let tmp7 = obj.get() > 0.5 * outer1_3;
+          let tmp7 = obj.get() > 0.5 * closure_1_3;
           if (!tmp7) {
             let tmp9 = obj.get() >= callback;
             if (tmp9) {
-              tmp9 = outer1_7.get() > 0;
+              tmp9 = closure_1_7.get() > 0;
             }
             tmp7 = tmp9;
           }
@@ -590,19 +585,19 @@ export const useHomeGesture = function useHomeGesture() {
         if (typeof tmp3 !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        let num2 = 0;
+        num2 = 0;
         if (tmp5) {
-          num2 = outer1_3;
+          num2 = closure_1_3;
         }
         const result = obj.set(num2);
         panelX(updateMaxX[7]).runOnJS(panelX(updateMaxX[16]).setHomeDrawerState)(tmp5);
         const obj2 = panelX(updateMaxX[7]);
         tmp3 = settleDrawer;
       }
-      const result1 = outer1_5.set(false);
-      panelX(updateMaxX[7]).runOnJS(outer1_6)();
+      const result1 = closure_1_5.set(false);
+      panelX(updateMaxX[7]).runOnJS(closure_1_6)();
       const result2 = shouldOpenFromPosition.set({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-      const result3 = outer1_7.set(0);
+      const result3 = closure_1_7.set(0);
     };
     const onEndResult = onChangeResult.onEnd(fn4);
     fn5.__closure = { panelX: settleDrawer, maxX, settleDrawer, shouldOpenFromPosition, isPanelTouchActive, runOnJS: panelX(updateMaxX[7]).runOnJS, noteInteraction, gestureState: shouldOpenFromPosition, dragOffsetX: sharedValue };

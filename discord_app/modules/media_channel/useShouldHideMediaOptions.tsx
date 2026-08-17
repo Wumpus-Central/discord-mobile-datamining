@@ -1,16 +1,16 @@
 // discord_app/modules/media_channel/useShouldHideMediaOptions.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ChannelFlags } from "set";
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import { ChannelFlags } from "set" /* 1398 */;
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
+const result = require("set").fileFinishedImporting("modules/media_channel/useShouldHideMediaOptions.tsx");
 
 export default function useShouldHideMediaOptions(arg0) {
   const _require = arg0;
-  const items = [ensureGuildLoaded];
+  const items = [closure_2];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
-    const channel = outer1_2.getChannel(closure_0);
+    const channel = closure_1_2.getChannel(closure_0);
     let parent_id;
     if (channel != null) {
       parent_id = channel.parent_id;
@@ -23,7 +23,7 @@ export default function useShouldHideMediaOptions(arg0) {
         if (channel != null) {
           parent_id1 = channel.parent_id;
         }
-        channel1 = outer1_2.getChannel(parent_id1);
+        channel1 = closure_1_2.getChannel(parent_id1);
       }
     }
     return channel1;

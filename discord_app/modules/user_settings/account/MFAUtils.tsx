@@ -1,19 +1,16 @@
 // discord_app/modules/user_settings/account/MFAUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { _crypto } from "../../../utils/MFAUtils.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _crypto from "_crypto" /* 8588 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ GuildFeatures: c5, Permissions: closure_6, UserFlags: error } = ME);
 let obj = { AVAILABLE: "available", UNAVAILABLE_NO_CRYPTO: "unavailable_no_crypto", UNAVAILABLE_UNVERIFIED: "unavailable_unverified" };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/MFAUtils.tsx");
 
 export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(stateFromStores) {
   let flag = arg1;
@@ -54,7 +51,7 @@ export const getSMSBackupDisabledMessage = function getSMSBackupDisabledMessage(
   }
 };
 export const useIsMFAEnabled = function useIsMFAEnabled() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   return defaultAreStatesEqual.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     return null != currentUser && currentUser.mfaEnabled;
@@ -62,8 +59,8 @@ export const useIsMFAEnabled = function useIsMFAEnabled() {
 };
 export const MFAAvailability = obj;
 export const useMFAAvailability = function useMFAAvailability() {
-  const obj = defaultAreStatesEqual;
-  const items = [mergeGuildAvatar];
+  obj = defaultAreStatesEqual;
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let verified;
@@ -87,17 +84,17 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
   if (arg0 === undefined) {
     flag = false;
   }
-  const items = [createGuildRecordFromRust, getUncachedChannelPermissions, mergeGuildAvatar];
+  const items = [closure_2, closure_3, closure_4];
   return flag(647).useStateFromStores(items, () => {
-    const currentUser = outer1_4.getCurrentUser();
+    const currentUser = closure_1_4.getCurrentUser();
     let hasAnyStaffLevelResult;
     if (currentUser != null) {
       hasAnyStaffLevelResult = currentUser.hasAnyStaffLevel();
     }
     if (hasAnyStaffLevelResult) {
-      const intl2 = flag(outer1_1[4]).intl;
+      const intl2 = flag(closure_1_1[4]).intl;
       const string2 = intl2.string;
-      let hxf9fX = flag(outer1_1[4]).t;
+      let hxf9fX = flag(closure_1_1[4]).t;
       if (flag) {
         hxf9fX = hxf9fX.hxf9fX;
         let string2Result = string2(hxf9fX);
@@ -105,20 +102,20 @@ export const use2FARemoveDisableReason = function use2FARemoveDisableReason() {
         string2Result = string2(hxf9fX["3iKih7"]);
       }
     } else {
-      const guildsArray = outer1_2.getGuildsArray();
+      const guildsArray = closure_1_2.getGuildsArray();
       if (!guildsArray.some((features) => {
         features = features.features;
         let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE);
         if (hasItem) {
-          hasItem = getUncachedChannelPermissions.can(constants2.ADMINISTRATOR, features);
+          hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
         }
         return hasItem;
       })) {
         return null;
       } else {
-        const intl = flag(outer1_1[4]).intl;
+        const intl = flag(closure_1_1[4]).intl;
         const string = intl.string;
-        let OYTCUh = flag(outer1_1[4]).t;
+        let OYTCUh = flag(closure_1_1[4]).t;
         if (flag) {
           OYTCUh = OYTCUh.OYTCUh;
           let stringResult = string(OYTCUh);

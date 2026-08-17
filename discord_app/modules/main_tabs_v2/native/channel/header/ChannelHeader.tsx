@@ -1,21 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx
-import "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ComponentActions } from "ME";
-import { StaticChannelRoute } from "set";
-import { jsx } from "jsxProd";
-import { set } from "../../../../../utils/PlatformUtils.tsx";
-import { GuildRoleSubscriptionsChannelHeader } from "../../../../guild_role_subscriptions/native/overview_tab/GuildRoleSubscriptionsChannelHeader.tsx";
-import { HomeChannelHeader } from "HomeChannelHeader.tsx";
-import { GroupDmMemberCount } from "PrivateChannelHeader.tsx";
+import noopAll from "noop" /* 19 */;
+import set from "set" /* 500 */;
+import _modDef12706 from "module_12706" /* 12706 */;
+import _modDef12707 from "module_12707" /* 12707 */;
+import GroupDmMemberCountDefault from "GroupDmMemberCount" /* 12708 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import { ComponentActions } from "ME" /* 676 */;
+import { StaticChannelRoute } from "set" /* 1398 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/ChannelHeader.tsx");
 
 export default function ChannelHeader(channelId) {
-  let isNavigationScreen;
-  let pressable;
-  let screenIndex;
   channelId = channelId.channelId;
   ({ screenIndex, isNavigationScreen, pressable } = channelId);
   if (pressable === undefined) {
@@ -30,17 +28,17 @@ export default function ChannelHeader(channelId) {
     flag2 = false;
   }
   let obj = channelId(647);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getChannel(channelId));
+  const items = [closure_3];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(channelId));
   const isChannelContentGated = channelId(5252).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
   }
   if (channelId === StaticChannelRoute.ROLE_SUBSCRIPTIONS) {
-    let tmp8Result = jsx(GuildRoleSubscriptionsChannelHeader, {});
+    let tmp8Result = jsx(_modDef12706, {});
   } else if (channelId === tmp5.GUILD_HOME) {
-    tmp8Result = jsx(HomeChannelHeader, {});
+    tmp8Result = jsx(_modDef12707, {});
   } else {
     let isPrivateResult;
     if (stateFromStores != null) {
@@ -51,7 +49,7 @@ export default function ChannelHeader(channelId) {
       obj[0] = channelId;
       obj[1] = tmp4;
       obj[2] = screenIndex;
-      tmp8Result = jsx(GroupDmMemberCount, { channelId: null, pressable: null, screenIndex: null });
+      tmp8Result = jsx(GroupDmMemberCountDefault, { channelId: null, pressable: null, screenIndex: null });
     } else {
       let isForumLikeChannelResult;
       if (stateFromStores != null) {
@@ -78,7 +76,7 @@ export default function ChannelHeader(channelId) {
         obj[6] = stringResult;
         tmp8Result = tmp8(tmp9Result, obj);
       } else {
-        const obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
+        obj1 = { channelId: null, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, showCreateThread: null };
         obj1[0] = channelId;
         let guild_id1;
         tmp9Result = tmp9(12716);

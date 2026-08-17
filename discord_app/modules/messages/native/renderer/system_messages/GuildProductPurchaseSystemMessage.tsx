@@ -1,20 +1,20 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx
-import hasFlag from "hasFlag";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { MessageTypes } from "ME";
-import { ensureAvatarSource } from "../../../../../utils/native/AvatarUtils.tsx";
-import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import closure_3 from "hasFlag" /* 4031 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { MessageTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildProductPurchaseSystemMessage.tsx");
 
 export const createGuildProductPurchaseSystemMessage = function createGuildProductPurchaseSystemMessage(message) {
   let obj = {};
   const merged = Object.assign(message);
-  obj.message = new hasFlag(message.message);
+  obj.message = new closure_3(message.message);
   obj.message.type = MessageTypes.ROLE_SUBSCRIPTION_PURCHASE;
   const purchaseNotification = obj.message.purchaseNotification;
   let product_name;
@@ -33,7 +33,7 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
     if (channel != null) {
       const guildId = channel.getGuildId();
     }
-    let obj1 = useNullableMessageAuthor;
+    obj1 = useNullableMessageAuthor;
     const guildMemberAvatar = obj1.getMessageAuthor(message).guildMemberAvatar;
     let obj2 = getMessageAuthorWithProcessedColor;
     const messageAuthorWithProcessedColor = obj2.getMessageAuthorWithProcessedColor(message);
@@ -55,14 +55,14 @@ export const createGuildProductPurchaseSystemMessage = function createGuildProdu
       obj2[0] = message;
       obj2[1] = messageAuthorWithProcessedColor;
       obj2[2] = message.roleStyle;
-      obj1[1] = formatUsernameOnClick(obj2);
+      obj1[1] = formatUsernameOnClickDefault(obj2);
       obj1[2] = product_name;
       obj[0] = tmp5Result.getGuildProductPurchaseSystemMessageContentMobile(obj1);
       obj[2] = messageAuthorWithProcessedColor.nick;
       obj[3] = tmp9(guildMemberAvatarSource).uri;
       const intl = tmp5(1236).intl;
       obj[4] = intl.string(tmp5(1236).t.s2N5HS);
-      const merged1 = Object.assign(createCommonMessage(obj));
+      const merged1 = Object.assign(createCommonMessageDefault(obj));
       return obj;
     }
     guildMemberAvatarSource = author.getAvatarSource(undefined);

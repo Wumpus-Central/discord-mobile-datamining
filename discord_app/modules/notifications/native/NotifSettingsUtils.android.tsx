@@ -1,12 +1,10 @@
 // discord_app/modules/notifications/native/NotifSettingsUtils.android.tsx
-import items2 from "items2";
-import { NativeNotifSettingsModule } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeNotifSettingsModule.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import set from "set" /* 2 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import NativeNotifSettingsModuleDefault from "NativeNotifSettingsModule" /* 13825 */;
+import items2 from "items2" /* 13820 */;
 
-let c3;
-let c4;
-let c5;
 function inferImportanceFromBehavior(visibility) {
   if (!("ringtone" in visibility)) {
     if ("popup" !== visibility.visibility) {
@@ -55,13 +53,11 @@ function formatSetting(item10022, arg1) {
   }
 }
 function buildChannelsAndMapping() {
-  let mappings;
-  let settings;
   let obj = map(13826);
   const assignedNotifSettingsAndMappings = obj.getAssignedNotifSettingsAndMappings();
   ({ settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
-    const map = new Map();
+    map = new Map();
     const tmp = callback(table[2]);
     let prop;
     if (tmp != null) {
@@ -71,7 +67,7 @@ function buildChannelsAndMapping() {
       return map;
     } else {
       const _Map2 = Map;
-      const map1 = new Map();
+      map1 = new Map();
       const propResult = prop();
       for (const item10020 of propResult) {
         let result = map1.set(item10020.channelId, item10020.importance);
@@ -152,13 +148,11 @@ function buildChannelsAndMapping() {
 }
 ({ NOTIF_CATEGORIES: c3, NOTIF_SETTING_MAPPING: c4, NOTIF_SETTINGS: c5 } = items2);
 let closure_6 = { NONE: 0, [0]: "NONE", MIN: 1, [1]: "MIN", LOW: 2, [2]: "LOW", DEFAULT: 3, [3]: "DEFAULT", HIGH: 4, [4]: "HIGH" };
-let result = require("NativeNotifSettingsModule").fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
+let result = set.fileFinishedImporting("modules/notifications/native/NotifSettingsUtils.android.tsx");
 
 export default {
   clear() {
-    let registerAndroidNotifGroupsAndChannels;
-    let registerAndroidNotifTypeMappings;
-    let obj = NativeNotifSettingsModule;
+    let obj = NativeNotifSettingsModuleDefault;
     if (obj == null) {
       obj = {};
     }
@@ -171,12 +165,7 @@ export default {
     }
   },
   registerDeclarativeNotificationCategories() {
-    let channels;
-    let inheritedImportances;
-    let mapping;
-    let registerAndroidNotifGroupsAndChannels;
-    let registerAndroidNotifTypeMappings;
-    let obj = NativeNotifSettingsModule;
+    let obj = NativeNotifSettingsModuleDefault;
     if (obj == null) {
       obj = {};
     }
@@ -189,10 +178,8 @@ export default {
         obj = { channels: null, inheritedImportances: null };
         obj[0] = channels.map((id) => id.id);
         const _Array = Array;
-        const tmpResult = SentryUtils.native;
+        const tmpResult = _modDef1208;
         obj[1] = Array.from(inheritedImportances.entries()).map((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           return "NotifSettings#" + tmp + " -> " + tmp2;
         });

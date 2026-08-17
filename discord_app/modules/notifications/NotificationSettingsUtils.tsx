@@ -1,13 +1,11 @@
 // discord_app/modules/notifications/NotificationSettingsUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import items2 from "items2";
-import { knownExperimentConfigs } from "NotificationSettingsExperiments.tsx";
+import knownExperimentConfigs from "knownExperimentConfigs" /* 13827 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import items2 from "items2" /* 13820 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ NOTIF_SETTING_MAPPING: c3, NOTIF_SETTINGS: c4 } = items2);
-const result = require("knownExperimentConfigs").fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/NotificationSettingsUtils.tsx");
 
 export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSettingsAndMappings() {
   const settings = [];
@@ -30,7 +28,7 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
         let str2 = "Experiment called ";
         let tmp13 = new.target;
         let tmp14 = new.target;
-        let error = new Error("Experiment called " + tmp7.definition.name + " assigned to name " + nextResult.experiment);
+        error = new Error("Experiment called " + tmp7.definition.name + " assigned to name " + nextResult.experiment);
         let tmp16 = error;
         throw error;
       } else {

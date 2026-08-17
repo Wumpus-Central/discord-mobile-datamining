@@ -1,7 +1,7 @@
 // discord_app/modules/rpc/helpers/activityInstanceConnectedParticipants.tsx
-import participantFromServer from "participantFromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
 import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
 import { getEmbeddedActivityLocationChannelId } from "../../activities/utils/embeddedActivityLocationUtils.tsx";
 
@@ -12,8 +12,6 @@ obj = {
   scope: obj,
   handler() {
     return (arg0) => {
-      let dispatch;
-      let prevState;
       let callback;
       let callback2;
       ({ prevState, dispatch } = arg0);
@@ -29,23 +27,23 @@ obj = {
         const _Array = Array;
         const obj5 = callback(4011);
         obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-          const user = outer1_4.getUser(arg0);
+          const user = closure_1_4.getUser(arg0);
           if (null != user) {
-            let obj = callback(outer1_2[4]);
+            let obj = callback(closure_1_2[4]);
             const nickname = obj.getNickname(callback, callback2, user);
             obj = {};
-            const merged = Object.assign(callback2(outer1_2[5])(user));
+            const merged = Object.assign(callback2(closure_1_2[5])(user));
             obj.nickname = nickname;
             return obj;
           }
         }).filter(callback(1370).isNotNullish);
         const arr = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-          const user = outer1_4.getUser(arg0);
+          const user = closure_1_4.getUser(arg0);
           if (null != user) {
-            let obj = callback(outer1_2[4]);
+            let obj = callback(closure_1_2[4]);
             const nickname = obj.getNickname(callback, callback2, user);
             obj = {};
-            const merged = Object.assign(callback2(outer1_2[5])(user));
+            const merged = Object.assign(callback2(closure_1_2[5])(user));
             obj.nickname = nickname;
             return obj;
           }
@@ -58,7 +56,7 @@ obj = {
     };
   }
 };
-const result = require("RPC_SCOPE_CONFIG").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/helpers/activityInstanceConnectedParticipants.tsx");
 
 export const activityInstanceConnectedParticipants = function activityInstanceConnectedParticipants() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
@@ -74,12 +72,12 @@ export const activityInstanceConnectedParticipants = function activityInstanceCo
     const _Array = Array;
     const obj3 = _getEmbeddedActivityLocationChannelId;
     obj[0] = Array.from(currentEmbeddedActivity.userIds, (arg0) => {
-      const user = outer1_4.getUser(arg0);
+      const user = closure_1_4.getUser(arg0);
       if (null != user) {
-        let obj = callback(outer1_2[4]);
+        let obj = callback(closure_1_2[4]);
         const nickname = obj.getNickname(callback, callback2, user);
         obj = {};
-        const merged = Object.assign(callback2(outer1_2[5])(user));
+        const merged = Object.assign(callback2(closure_1_2[5])(user));
         obj.nickname = nickname;
         return obj;
       }

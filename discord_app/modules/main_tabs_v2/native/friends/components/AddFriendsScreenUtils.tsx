@@ -1,21 +1,21 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx
-import ChannelActionCreators from "../../../../../actions/ChannelActionCreators.tsx";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { AnalyticsSections } from "ME";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { handleRelationshipAddError } from "../../../../../actions/RelationshipActionCreators.tsx";
-import { PeopleUtils } from "../../../../people/PeopleUtils.tsx";
+import handleRelationshipAddErrorDefault from "handleRelationshipAddError" /* 9736 */;
+import _modDef9887 from "module_9887" /* 9887 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
 const require = arg1;
 function _sendWave() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -46,7 +46,7 @@ function _sendWave() {
               const dMFromUserId = tmp4;
               let dMFromUserId2 = tmp8;
               let flag;
-              let dependencyMap;
+              dependencyMap = undefined;
               if (flag === undefined) {
                 flag = true;
               }
@@ -62,7 +62,7 @@ function _sendWave() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c8 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -145,7 +145,7 @@ function _sendWave() {
             return obj9;
           }
         } catch (tmp57) {
-          let closure_5 = tmp57;
+          closure_5 = tmp57;
           if (tmp5 === constants) {
             c8 = tmp3;
             throw tmp57;
@@ -160,7 +160,7 @@ function _sendWave() {
     iter.next();
     return iter;
   });
-  const _sendWave = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -169,21 +169,17 @@ function _sendWave() {
   }
   return applyArgumentsResult;
 }
-let result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/AddFriendsScreenUtils.tsx");
 
 export const dismissIncomingRequest = function dismissIncomingRequest(arg0) {
-  let applicationId;
-  let userId;
   ({ userId, applicationId } = arg0);
-  let obj = PeopleUtils;
+  let obj = _modDef9887;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.cancelFriendRequest(obj);
 };
 export const acceptIncomingRequest = function acceptIncomingRequest(arg0) {
-  let applicationId;
-  let userId;
   ({ userId, applicationId } = arg0);
-  let obj = PeopleUtils;
+  let obj = _modDef9887;
   obj = { userId, applicationId, location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   const result = obj.maybeConfirmFriendRequestAccept(obj);
 };
@@ -198,7 +194,7 @@ export const sendWave = function sendWave(id, arg1, arg2) {
   return applyArgumentsResult;
 };
 export const addContactSuggestion = function addContactSuggestion(user) {
-  let obj = handleRelationshipAddError;
+  let obj = handleRelationshipAddErrorDefault;
   obj = { userId: user.id, context: obj, type: "HermesInternal", fromFriendSuggestion: null };
   obj = { location: AnalyticsSections.FRIENDS_ADD_FRIENDS_MODAL };
   obj.addRelationship(obj);

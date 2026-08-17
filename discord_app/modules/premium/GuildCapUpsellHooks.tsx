@@ -1,25 +1,25 @@
 // discord_app/modules/premium/GuildCapUpsellHooks.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MAX_USER_GUILDS } from "ME";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { HotspotStore } from "../hotspot/index.tsx";
+import initialize from "initialize" /* 589 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import HotspotStore2 from "HotspotStore" /* 7193 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { MAX_USER_GUILDS } from "ME" /* 676 */;
 
-const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/GuildCapUpsellHooks.tsx");
 
 export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGuildCapUpsell() {
-  const items = [createGuildRecordFromRust];
+  const items = [closure_3];
   let stateFromStores = initialize.useStateFromStores(items, () => guildCount.getGuildCount() >= 95);
   const obj = initialize;
-  const items1 = [HotspotStore.HotspotStore];
+  const items1 = [HotspotStore2.HotspotStore];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => {
     const HotspotStore = callback(7193).HotspotStore;
     return HotspotStore.hasHotspot(callback(7193).HotspotLocations.GUILD_CAP_INLINE_UPSELL);
   });
   const obj2 = initialize;
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_4];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items2, () => !callback2(4039).isPremium(currentUser.getCurrentUser()));
   if (stateFromStores) {
     stateFromStores = stateFromStores1;
@@ -30,10 +30,10 @@ export const useShouldShowInlineGuildCapUpsell = function useShouldShowInlineGui
   return stateFromStores;
 };
 export const hideInlineGuildCapUpsell = function hideInlineGuildCapUpsell() {
-  HotspotStore.hideHotspot(HotspotStore.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
+  HotspotStore2.hideHotspot(HotspotStore2.HotspotLocations.GUILD_CAP_INLINE_UPSELL);
 };
 export const hasIncreasedGuildCap = function hasIncreasedGuildCap(currentUser) {
-  let result = getPremiumPlanItem.canUseIncreasedGuildCap(currentUser);
+  let result = getPremiumPlanItemDefault.canUseIncreasedGuildCap(currentUser);
   if (!result) {
     let isStaffResult;
     if (currentUser != null) {
@@ -47,7 +47,7 @@ export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
   let tmp = guildCount.getGuildCount() >= MAX_USER_GUILDS;
   if (tmp) {
     currentUser = currentUser.getCurrentUser();
-    let result = getPremiumPlanItem.canUseIncreasedGuildCap(currentUser);
+    let result = getPremiumPlanItemDefault.canUseIncreasedGuildCap(currentUser);
     if (!result) {
       let isStaffResult;
       if (currentUser != null) {
@@ -56,7 +56,7 @@ export const isAtGuildCapAndNonPremium = function isAtGuildCapAndNonPremium() {
       result = true === isStaffResult;
     }
     tmp = !result;
-    const obj2 = getPremiumPlanItem;
+    const obj2 = getPremiumPlanItemDefault;
   }
   return tmp;
 };

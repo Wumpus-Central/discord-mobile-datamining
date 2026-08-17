@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function useEnableSwitchIconsSettingValue() {
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   return initialize.useStateFromStores(items, () => isSwitchIconsEnabled.isSwitchIconsEnabled);
 }
 createToggle = {
@@ -19,12 +19,12 @@ createToggle = {
   useValue: useEnableSwitchIconsSettingValue,
   onValueChange: require("setFontSize").setSwitchIconsEnabled,
   usePredicate: function useShowSwitchIconsSetting() {
-    return useIsMobileVisualRefreshExperimentEnabled("SettingsAccessibilityScreen");
+    return useIsMobileVisualRefreshExperimentEnabledDefault("SettingsAccessibilityScreen");
   },
   hasIcon: true
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EnableSwitchIconsSetting.tsx");
 
 export default createToggle;
 export { useEnableSwitchIconsSettingValue };

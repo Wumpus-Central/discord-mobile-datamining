@@ -1,9 +1,9 @@
 // discord_app/modules/notification_center/useRelativeTimestamp.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("getRelativeTimestamp").fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
+const result = require("set").fileFinishedImporting("modules/notification_center/useRelativeTimestamp.tsx");
 
 export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   timestamp = timestamp.timestamp;
@@ -11,7 +11,7 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
   if (flag === undefined) {
     flag = true;
   }
-  let closure_2;
+  closure_2 = undefined;
   const tmp = callback(React.useState(() => timestamp(4967).getRelativeTimestamp(timestamp, flag)), 2);
   closure_2 = tmp[1];
   const items = [timestamp, flag];
@@ -26,7 +26,7 @@ export const useRelativeTimestamp = function useRelativeTimestamp(timestamp) {
       }
       const _setInterval = setInterval;
       interval = setInterval(() => {
-        callback2(callback(outer1_2[2]).getRelativeTimestamp(callback, closure_1));
+        callback2(callback(closure_1_2[2]).getRelativeTimestamp(callback, closure_1));
       }, MINUTE, MINUTE - diff % MINUTE);
       return () => clearInterval(closure_0);
     }

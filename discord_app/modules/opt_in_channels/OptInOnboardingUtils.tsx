@@ -1,17 +1,15 @@
 // discord_app/modules/opt_in_channels/OptInOnboardingUtils.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import comparator from "comparator";
-import closure_6 from "comparator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { GuildMemberFlags } from "GuildMemberFlags";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
+import create from "create" /* 1306 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 5282 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import comparator from "comparator" /* 1980 */;
+import closure_6 from "comparator" /* 1980 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function optIntoAllChannelsForExistingMember(id, arg1) {
   let obj = arg1;
   if (arg1 === undefined) {
@@ -45,7 +43,7 @@ function optIntoAllChannelsForExistingMember(id, arg1) {
   const result = obj2.onboardExistingMember(id, new Set(mapped));
 }
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c4, GUILD_VOCAL_CHANNELS_KEY: c5 } = comparator);
-let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/opt_in_channels/OptInOnboardingUtils.tsx");
 
 export const hasNotSetUpChannelOptIn = function hasNotSetUpChannelOptIn(guildId) {
   const result = useOptInEnabledForGuild.isOptInEnabledForGuild(guildId);
@@ -103,7 +101,7 @@ export { optIntoAllChannelsForExistingMember };
 export const hasClearedGuildOnboardingNotice = function hasClearedGuildOnboardingNotice(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    tmp = handleConnectionClosedOrResumed;
+    tmp = closure_3;
   }
   let hasFlagResult = null != arg0;
   if (hasFlagResult) {

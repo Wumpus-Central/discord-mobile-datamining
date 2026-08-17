@@ -1,31 +1,31 @@
 // discord_app/modules/discord_md5/DiscordMd5.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { 04859__ } from "../../../_runtime/metro/04859__.js";
+import _modDef4859 from "module_4859" /* 4859 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let prototype;
 prototype = function DiscordMd5() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromBlob"] = function fromBlob(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return callback(function*() {
-    yield outer1_0.arrayBuffer();
+    yield closure_1_0.arrayBuffer();
     return fromArrayBuffer(arg1);
   })();
 };
 prototype["fromArrayBuffer"] = function fromArrayBuffer(arg0) {
-  const _ArrayBuffer = 04859__.ArrayBuffer;
+  const _ArrayBuffer = _modDef4859.ArrayBuffer;
   return _ArrayBuffer.hash(arg0);
 };
 prototype["fromDataURI"] = function fromDataURI(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const resolved = Promise.resolve();
   return resolved.then(() => {
     let length;
     const match = /^data:[^;]*;base64,(.*)$/.exec(callback);
     if (null == match) {
       const _Error = Error;
-      const error = new Error("Not a base64 data URI");
+      error = new Error("Not a base64 data URI");
       throw error;
     } else {
       const _atob = atob;
@@ -42,7 +42,7 @@ prototype["fromDataURI"] = function fromDataURI(arg0) {
           length = atobResult.length;
         } while (num < length);
       }
-      const _ArrayBuffer = callback(outer1_1[1]).ArrayBuffer;
+      const _ArrayBuffer = callback(closure_1_1[1]).ArrayBuffer;
       return _ArrayBuffer.hash(arrayBuffer);
     }
     const obj = /^data:[^;]*;base64,(.*)$/;

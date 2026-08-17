@@ -1,33 +1,22 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx
-import _slicedToArray from "_slicedToArray";
-import AccessibilityAnnouncer from "AccessibilityAnnouncer";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { isGuildScheduledEventActive as closure_8 } from "scheduledEventSort";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import ME from "ME";
-import jsxProd from "EditGuildEventStepHeader";
-import createCacheKey from "createCacheKey";
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import { isGuildScheduledEventActive as closure_8 } from "scheduledEventSort" /* 4370 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: c9, GuildScheduledEventEntityTypes: c10 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ Permissions: unpackModuleId, GuildSettingsSections: closure_12 } = ME);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = createCacheKey.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventWhere.tsx");
 
 export default function EditGuildEventWhere(guild) {
-  let c4;
-  let guildEventId;
-  let initialGuildEvent;
-  let tmp8;
   guild = guild.guild;
   const guildEvent = guild.guildEvent;
   const onChange = guild.onChange;
@@ -38,13 +27,13 @@ export default function EditGuildEventWhere(guild) {
   const tmp = callback3();
   ref = React.useRef(null);
   let obj = guild(ref[11]);
-  const items = [ensureGuildLoaded];
+  const items = [closure_6];
   const items1 = [guildEvent.channelId];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(guildEvent.channelId), items1);
-  let obj1 = guild(ref[11]);
-  const items2 = [getUncachedChannelPermissions];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(guildEvent.channelId), items1);
+  obj1 = guild(ref[11]);
+  const items2 = [closure_7];
   const items3 = [guild];
-  let stateFromStores1 = obj1.useStateFromStores(items2, () => outer1_7.can(outer1_11.MANAGE_ROLES, guild), items3);
+  let stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_7.can(closure_1_11.MANAGE_ROLES, guild), items3);
   [tmp8, c4] = callback(React.useState(null), 2);
   let obj2 = guild(ref[12]);
   React = obj2.useNavigation();
@@ -106,7 +95,7 @@ export default function EditGuildEventWhere(guild) {
         if (entityType === constants.NONE) {
           const _Error3 = Error;
           const intl3 = callback(1236).intl;
-          const error = new Error(intl3.string(callback(1236).t.C4KzmQ));
+          error = new Error(intl3.string(callback(1236).t.C4KzmQ));
           throw error;
         } else {
           if (entityType === tmp2.EXTERNAL) {
@@ -156,7 +145,7 @@ export default function EditGuildEventWhere(guild) {
       onChange(entityType) {
         _undefined(null);
         const obj = { entityType, scheduledEndTime: "a" };
-        if (entityType === outer1_10.EXTERNAL) {
+        if (entityType === closure_1_10.EXTERNAL) {
           let obj2 = guildEvent(ref[22])(guildEvent.scheduledStartTime);
           if (obj2 == null) {
             obj2 = tmp2(tmp3[22])();
@@ -180,7 +169,7 @@ export default function EditGuildEventWhere(guild) {
     onChange(entityType) {
       _undefined(null);
       const obj = { entityType, scheduledEndTime: "a" };
-      if (entityType === outer1_10.EXTERNAL) {
+      if (entityType === closure_1_10.EXTERNAL) {
         let obj2 = guildEvent(ref[22])(guildEvent.scheduledStartTime);
         if (obj2 == null) {
           obj2 = tmp2(tmp3[22])();
@@ -202,7 +191,7 @@ export default function EditGuildEventWhere(guild) {
     const intl4 = tmp3(tmp4[9]).intl;
     const obj8 = { onClick: null };
     obj8[0] = function onClick() {
-      guildEvent(ref[24]).open(guild.id, outer1_12.ROLES);
+      guildEvent(ref[24]).open(guild.id, closure_1_12.ROLES);
     };
     obj7[3] = intl4.format(tmp3(tmp4[9]).t["K+DH2o"], obj8);
     stateFromStores1 = tmp10(tmp3(tmp4[15]).Text, obj7);

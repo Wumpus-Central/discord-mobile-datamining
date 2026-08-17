@@ -1,49 +1,49 @@
 // discord_app/modules/favorites/native/FavoritesGuildChannels.tsx
-import "noop";
-import { useFavoritesGuildSuggestionCount as closure_3 } from "items";
-import jsxProd from "jsxProd";
-import { useScaledRowHeight } from "../../main_tabs_v2/native/shared_components/user_list/useScaledRowHeight.tsx";
-import { getFontScale } from "../../screen/native/useFontScale.tsx";
-import { getMissingFavoriteThreadIds } from "../FavoritesGuildChannelList.tsx";
+import noopAll from "noop" /* 19 */;
+import getFontScale from "getFontScale" /* 4751 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 8633 */;
+import ChannelListStickyHeaderDefault from "ChannelListStickyHeader" /* 15397 */;
+import PX_8Default from "PX_8" /* 15463 */;
+import ChannelListPanelBackdropDefault from "ChannelListPanelBackdrop" /* 15502 */;
+import getMissingFavoriteThreadIds from "getMissingFavoriteThreadIds" /* 15535 */;
+import FavoritesGuildSuggestionsLoaderInnerDefault from "FavoritesGuildSuggestionsLoaderInner" /* 15536 */;
+import EmptyBodyDefault from "EmptyBody" /* 15541 */;
+import { useFavoritesGuildSuggestionCount as closure_3 } from "items" /* 15464 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildChannels.tsx");
 
 export default function FavoritesGuildChannels(arg0) {
-  let guildChannels;
-  let hasNoChannels;
-  let shouldShowEmptyState;
   const tmp = callback();
   let tmp2 = importDefault;
   let obj = dependencyMap;
-  let obj1 = getFontScale;
+  obj1 = getFontScale;
   const fontScale = obj1.useFontScale();
   let obj2 = getMissingFavoriteThreadIds;
   obj = { withSuggestionsNotice: tmp > 0 };
   const favoritesGuildChannelList = obj2.useFavoritesGuildChannelList(obj);
   ({ guildChannels, shouldShowEmptyState, hasNoChannels } = favoritesGuildChannelList);
-  const tmp3 = useScaledRowHeight();
+  const tmp3 = useScaledRowHeightDefault();
   if (!obj5.useShouldRenderChannelList()) {
     return null;
   } else {
     let tmp2Result = arg0;
-    const items = [callback2(tmp2(15536), {}), ];
+    const items = [callback2(FavoritesGuildSuggestionsLoaderInnerDefault, {}), ];
     if (hasNoChannels) {
       obj = { style: null, contentInset: null, children: null };
       ({ style: obj8[0], contentInset: obj8[1] } = tmp2Result);
-      tmp2Result = tmp2(15502);
+      tmp2Result = ChannelListPanelBackdropDefault;
       obj1 = { guild: null, showExtraButtons: false, canOpenGuildActionSheet: false };
       obj1[0] = tmp2Result.guild;
-      const items1 = [tmp10(tmp2(15397), obj1), , ];
-      tmp2Result = tmp2(15463);
+      const items1 = [tmp10(ChannelListStickyHeaderDefault, obj1), , ];
+      tmp2Result = PX_8Default;
       items1[1] = tmp10(tmp2Result, {});
       let tmp10Result = null;
       if (shouldShowEmptyState) {
-        tmp2 = tmp2(15541);
+        tmp2 = EmptyBodyDefault;
         obj = {};
         tmp10Result = tmp10(tmp2, obj);
       }

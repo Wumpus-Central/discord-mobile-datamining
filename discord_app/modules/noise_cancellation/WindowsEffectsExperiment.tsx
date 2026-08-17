@@ -1,6 +1,6 @@
 // discord_app/modules/noise_cancellation/WindowsEffectsExperiment.tsx
-import initialize from "initialize";
-import ApexExperiment from "ApexExperiment";
+import closure_2 from "initialize" /* 1212 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const require = arg1;
 let obj = { preferSystemEffects: false };
@@ -12,13 +12,13 @@ ApexExperiment.preferSystemEffects = true;
 obj[1] = ApexExperiment;
 obj[3] = obj;
 let closure_3 = ApexExperiment.createApexExperiment(obj);
-const result = require("initialize").fileFinishedImporting("modules/noise_cancellation/WindowsEffectsExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/noise_cancellation/WindowsEffectsExperiment.tsx");
 
 export const getWindowsAudioEffectsExperimentConfig = function getWindowsAudioEffectsExperimentConfig(location) {
   return config.getConfig({ location: location.location });
 };
 export const useWindowsAudioEffectsExperimentConfig = function useWindowsAudioEffectsExperimentConfig(location) {
   location = location.location;
-  const items = [initialize];
-  return location(589).useStateFromStores(items, () => outer1_3.getConfig({ location }));
+  const items = [closure_2];
+  return location(589).useStateFromStores(items, () => closure_1_3.getConfig({ location }));
 };

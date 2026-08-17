@@ -1,10 +1,11 @@
 // discord_app/modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
+import noopAll from "noop" /* 19 */;
+import Background from "Background" /* 6950 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Background").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ScrollHandlingActionSheet.tsx");
 
 export default function ScrollHandlingActionSheet(children) {
   const merged = Object.assign(children, Object.create(null));

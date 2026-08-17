@@ -1,6 +1,8 @@
 // discord_app/lib/StateManager.tsx
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
-const result = require("set").fileFinishedImporting("lib/StateManager.tsx");
+import set from "set" /* 2 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+
+const result = set.fileFinishedImporting("lib/StateManager.tsx");
 class StateManager {
   constructor() {
     flag = global;
@@ -44,8 +46,8 @@ prototype["update"] = function update() {
   const merged1 = Object.assign(obj);
   const nextState = this.getNextState(obj);
   if (flag) {
-    self.dirty = !isUndefinedOrNull(nextState, self.getInitialState());
-    const tmp14 = isUndefinedOrNull;
+    self.dirty = !isUndefinedOrNullDefault(nextState, self.getInitialState());
+    const tmp14 = isUndefinedOrNullDefault;
   } else {
     const _Object = Object;
     const keys = Object.keys(nextState);
@@ -56,7 +58,7 @@ prototype["update"] = function update() {
         let tmp9 = importDefault;
         let tmp10 = dependencyMap;
         let tmp11 = item10021;
-        dirty = !isUndefinedOrNull(self.state[tmp8], nextState[tmp8]);
+        dirty = !isUndefinedOrNullDefault(self.state[tmp8], nextState[tmp8]);
       }
       self.dirty = dirty;
       continue;

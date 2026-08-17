@@ -1,48 +1,32 @@
 // discord_app/modules/messages/MessageParser.tsx
-import getEmojiToGroupId from "getEmojiToGroupId";
-import rebuild from "rebuild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { GAME_MENTION_SENTINEL } from "regExp";
-import { EmojiIntention } from "set";
-import importDefaultResult from "t";
-import importDefaultResult1 from "t";
-import importDefaultResult2 from "t";
-import importDefaultResult3 from "t";
-import merged from "textRegexp";
-import importDefaultResult4 from "t";
-import importDefaultResult5 from "t";
-import importDefaultResult6 from "t";
-import importDefaultResult7 from "t";
-import importDefaultResult8 from "t";
-import importDefaultResult9 from "t";
-import merged2 from "textRegexp";
-import importDefaultResult10 from "t";
-import importDefaultResult11 from "t";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { parseLink } from "../markup/MarkupRules.tsx";
-import { textRegexp } from "../markup/MarkupTextRule.tsx";
+import applyDefault from "apply" /* 12 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import parseLinkDefault from "parseLink" /* 6809 */;
+import textRegexpDefault from "textRegexp" /* 6815 */;
+import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import closure_4 from "rebuild" /* 5251 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "comparator" /* 1980 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_7 } from "comparator" /* 1980 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_12 from "markAllUserIdListsStale" /* 4030 */;
+import closure_13 from "initialize" /* 4220 */;
+import closure_14 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { GAME_MENTION_SENTINEL } from "regExp" /* 6810 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import importDefaultResult from "t" /* 4092 */;
 
-let MARKDOWN_SPOILER_REGEXP;
-let MARKDOWN_STATIC_ROUTE_NAME_REGEXP;
-let closure_15;
 let str7 = arg1;
 function rebuild(arr) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
-  let closure_2 = arg3;
-  let c3 = "";
+  closure_0 = arg1;
+  closure_1 = arg2;
+  closure_2 = arg3;
+  c3 = "";
   const items = [];
   const item = arr.forEach((content) => {
     (function handleEmoji(closure_0, type, f79922) {
@@ -83,7 +67,7 @@ function rebuild(arr) {
           const obj = callback(4034);
         }
       }
-    })(getGuildId, content, f79922);
+    })(callback, content, f79922);
     if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
@@ -108,8 +92,8 @@ function rebuild(arr) {
           }
         }
         if (true === tmp.isNotification) {
-          _var = _var + getGuildId(f79922[26]).isolate(content.content);
-          let obj2 = getGuildId(f79922[26]);
+          _var = _var + callback(f79922[26]).isolate(content.content);
+          let obj2 = callback(f79922[26]);
         } else {
           _var = _var + content.content;
         }
@@ -117,7 +101,7 @@ function rebuild(arr) {
     } else {
       const _Array = Array;
       if (content.content.constructor === Array) {
-        const tmp24 = outer1_23(content.content, tmp, lib, tmp2);
+        const tmp24 = closure_1_23(content.content, tmp, lib, tmp2);
         const emoji = tmp24.emoji;
         for (const item10008 of emoji) {
           let tmp5 = arr;
@@ -143,7 +127,7 @@ function createParserState(getGuildId, arr) {
   if (null != guildId) {
     guild = store4.getGuild(guildId);
   }
-  const importDefault = getUncachedChannelPermissions.can(constants.MENTION_EVERYONE, getGuildId);
+  importDefault = closure_11.can(constants.MENTION_EVERYONE, getGuildId);
   let isPrivateResult;
   if (getGuildId != null) {
     isPrivateResult = getGuildId.isPrivate();
@@ -165,8 +149,8 @@ function createParserState(getGuildId, arr) {
   } else {
     mapped1 = [];
   }
-  const tmp11 = apply;
-  const tmp11Result = apply(mapped1.reduce((arr, userId) => {
+  const tmp11 = applyDefault;
+  const tmp11Result = applyDefault(mapped1.reduce((arr, userId) => {
     userId = userId.userId;
     user = user.getUser(userId);
     if (null != user) {
@@ -182,8 +166,8 @@ function createParserState(getGuildId, arr) {
   } else {
     sortedRoles = [];
   }
-  const tmp13 = apply;
-  const found = apply(sortedRoles).filter((mentionable) => {
+  const tmp13 = applyDefault;
+  const found = applyDefault(sortedRoles).filter((mentionable) => {
     mentionable = closure_1;
     if (!closure_1) {
       mentionable = mentionable.mentionable;
@@ -192,18 +176,18 @@ function createParserState(getGuildId, arr) {
   });
   const mapped2 = found.map((id) => ({ id: id.id, text: id.name }));
   let tmp9Result = tmp9(12);
-  const tmp13Result = apply(sortedRoles);
+  const tmp13Result = applyDefault(sortedRoles);
   const mapped3 = tmp9Result(textChannelNameDisambiguations.getTextChannelNameDisambiguations(guildId)).map((id) => ({ id: id.id, text: id.name }));
   if (null != guildId) {
     tmp9Result = tmp9(12);
     const found1 = tmp9Result(guildId(6714).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS).filter((arg0) => arg0 !== closure_7);
     const tmp9Result1Result = tmp9Result(guildId(6714).COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS);
-    const flatMapResult = found1.flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => {
+    const flatMapResult = found1.flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
         const obj = { id: null, text: null };
         obj[0] = channel.channel.id;
-        obj[1] = callback(table[14]).computeChannelName(channel.channel, mergeGuildAvatar, markAllUserIdListsStale);
+        obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
         let tmp3 = obj;
         const obj2 = callback(table[14]);
       } else {
@@ -211,12 +195,12 @@ function createParserState(getGuildId, arr) {
       }
       return tmp3;
     }));
-    let items = found1.flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => {
+    let items = found1.flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
         const obj = { id: null, text: null };
         obj[0] = channel.channel.id;
-        obj[1] = callback(table[14]).computeChannelName(channel.channel, mergeGuildAvatar, markAllUserIdListsStale);
+        obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
         let tmp3 = obj;
         const obj2 = callback(table[14]);
       } else {
@@ -224,12 +208,12 @@ function createParserState(getGuildId, arr) {
       }
       return tmp3;
     })).filter(guildId(1370).isNotNullish).value();
-    const iter = found1.flatMap((arg0) => outer1_6.getChannels(guildId)[arg0].map((channel) => {
+    const iter = found1.flatMap((arg0) => closure_1_6.getChannels(guildId)[arg0].map((channel) => {
       channel = channel.channel;
       if (!channel.isCategory()) {
         const obj = { id: null, text: null };
         obj[0] = channel.channel.id;
-        obj[1] = callback(table[14]).computeChannelName(channel.channel, mergeGuildAvatar, markAllUserIdListsStale);
+        obj[1] = callback(table[14]).computeChannelName(channel.channel, closure_14, closure_12);
         let tmp3 = obj;
         const obj2 = callback(table[14]);
       } else {
@@ -240,10 +224,9 @@ function createParserState(getGuildId, arr) {
   } else {
     items = [];
   }
-  const allActiveJoinedThreads = rebuild.computeAllActiveJoinedThreads(guildId);
+  const allActiveJoinedThreads = closure_4.computeAllActiveJoinedThreads(guildId);
   const mapped4 = allActiveJoinedThreads.map((id) => {
-    const obj = { id: id.id, text: null };
-    obj[1] = guildId(table[14]).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale);
+    const obj = { id: id.id, text: guildId(table[14]).computeChannelName(id, closure_14, closure_12) };
     return obj;
   });
   const disambiguatedEmojiContext = store.getDisambiguatedEmojiContext(guildId);
@@ -258,8 +241,8 @@ function createParserState(getGuildId, arr) {
   } else {
     arr = [];
   }
-  const tmp9Result1 = apply;
-  obj[4] = apply(arr).map((id) => ({ id: id.id, text: id.name }));
+  const tmp9Result1 = applyDefault;
+  obj[4] = applyDefault(arr).map((id) => ({ id: id.id, text: id.name }));
   const combined = mapped3.concat(items);
   obj[5] = combined.concat(mapped4);
   obj[6] = disambiguatedEmojiContext;
@@ -294,8 +277,8 @@ function unparseWithMeta(content, id, isNotification) {
   }
   let obj = { inline: true, guild, channelId: id, isNotification };
   const obj4 = translateSurrogatesToInlineEmoji(4092);
-  let dependencyMap;
-  let c3 = "";
+  dependencyMap = undefined;
+  c3 = "";
   const items = [];
   const item = translateSurrogatesToInlineEmoji(4092).parserFor(omitResult)(content, obj).forEach((content) => {
     (function handleEmoji(closure_0, type, f79922) {
@@ -336,7 +319,7 @@ function unparseWithMeta(content, id, isNotification) {
           const obj = callback(4034);
         }
       }
-    })(getGuildId, content, f79922);
+    })(callback, content, f79922);
     if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
@@ -361,8 +344,8 @@ function unparseWithMeta(content, id, isNotification) {
           }
         }
         if (true === tmp.isNotification) {
-          _var = _var + getGuildId(f79922[26]).isolate(content.content);
-          let obj2 = getGuildId(f79922[26]);
+          _var = _var + callback(f79922[26]).isolate(content.content);
+          let obj2 = callback(f79922[26]);
         } else {
           _var = _var + content.content;
         }
@@ -370,7 +353,7 @@ function unparseWithMeta(content, id, isNotification) {
     } else {
       const _Array = Array;
       if (content.content.constructor === Array) {
-        const tmp24 = outer1_23(content.content, tmp, lib, tmp2);
+        const tmp24 = closure_1_23(content.content, tmp, lib, tmp2);
         const emoji = tmp24.emoji;
         for (const item10008 of emoji) {
           let tmp5 = arr;
@@ -396,7 +379,7 @@ let tmp6 = /^<a?:(\w+):(\d+)>/;
 const re18 = /(@everyone|@here|@Clyde)\b/;
 const re19 = /^[^\s]+@[^\s]+\.[^\s.]+/;
 let obj = { link: null, autolink: null, url: null, inlineCode: null, codeBlock: null, rawUserMention: null, rawRoleMention: null, rawChannelMention: null, rawEmoji: null, mention: null, channel: null, emoticon: null, emoji: null, customEmoticons: null, text: null };
-let str = require("t").defaultRules.link;
+let str = importDefaultResult.defaultRules.link;
 str7 = str;
 obj[0] = {
   order: str.order,
@@ -405,7 +388,7 @@ obj[0] = {
     return { type: str7.type, content: content[0] };
   }
 };
-let str2 = require("t").defaultRules.autolink;
+let str2 = importDefaultResult.defaultRules.autolink;
 str7 = str2;
 obj[1] = {
   order: str2.order,
@@ -414,7 +397,7 @@ obj[1] = {
     return { type: str7.type, content: content[0] };
   }
 };
-const str3 = require("t").defaultRules.url;
+const str3 = importDefaultResult.defaultRules.url;
 str7 = str3;
 obj[2] = {
   order: str3.order,
@@ -423,7 +406,7 @@ obj[2] = {
     return { type: str7.type, content: content[0] };
   }
 };
-let str4 = require("parseLink").RULES.inlineCode;
+let str4 = parseLinkDefault.RULES.inlineCode;
 str7 = str4;
 obj[3] = {
   order: str4.order,
@@ -432,7 +415,7 @@ obj[3] = {
     return { type: str7.type, content: content[0] };
   }
 };
-let str5 = require("parseLink").RULES.codeBlock;
+let str5 = parseLinkDefault.RULES.codeBlock;
 str7 = str5;
 obj[4] = {
   order: str5.order,
@@ -441,26 +424,29 @@ obj[4] = {
     return { type: str7.type, content: content[0] };
   }
 };
-obj = { match: null, parse: null };
-obj[0] = require("t").anyScopeRegex(tmp3);
-obj[1] = function parse(content) {
-  return { type: "text", content: content[0] };
+obj = {
+  match: importDefaultResult.anyScopeRegex(tmp3),
+  parse(content) {
+    return { type: "text", content: content[0] };
+  }
 };
 obj[5] = obj;
 obj = { match: null, parse: null };
-obj[0] = require("t").anyScopeRegex(tmp4);
+obj[0] = importDefaultResult.anyScopeRegex(tmp4);
 obj[1] = function parse(content) {
   return { type: "text", content: content[0] };
 };
 obj[6] = obj;
 let obj1 = { match: null, parse: null };
-obj1[0] = require("t").anyScopeRegex(tmp5);
+const importDefaultResult1 = importDefaultResult;
+obj1[0] = importDefaultResult.anyScopeRegex(tmp5);
 obj1[1] = function parse(content) {
   return { type: "text", content: content[0] };
 };
 obj[7] = obj1;
 let obj2 = { match: null, parse: null };
-obj2[0] = require("t").anyScopeRegex(tmp6);
+const importDefaultResult2 = importDefaultResult;
+obj2[0] = importDefaultResult.anyScopeRegex(tmp6);
 obj2[1] = function parse(content) {
   return { type: "text", content: content[0] };
 };
@@ -472,13 +458,13 @@ obj[9] = {
       return null;
     } else {
       games = games.games;
-      let str7 = GAME_MENTION_SENTINEL;
-      let closure_1 = str;
+      str7 = GAME_MENTION_SENTINEL;
+      closure_1 = str;
       let mention = "gameMention";
-      let getEmojiToGroupId;
+      closure_3 = undefined;
       let firstResult;
       if (str[0] === GAME_MENTION_SENTINEL) {
-        getEmojiToGroupId = str.substring(arr2.length);
+        closure_3 = str.substring(arr2.length);
         const found = games.sortBy((text) => -text.text.length).filter((text) => {
           const formatted = closure_1.toLowerCase();
           return 1 === formatted.indexOf(text.text.toLowerCase());
@@ -486,7 +472,7 @@ obj[9] = {
         const sortByResult = games.sortBy((text) => -text.text.length);
         const mapped = found.sortBy((text) => {
           let num = 1;
-          if (text.text === getEmojiToGroupId) {
+          if (text.text === closure_3) {
             num = 0;
           }
           return num;
@@ -497,7 +483,7 @@ obj[9] = {
         firstResult = mapped.first();
         const sortByResult1 = found.sortBy((text) => {
           let num = 1;
-          if (text.text === getEmojiToGroupId) {
+          if (text.text === closure_3) {
             num = 0;
           }
           return num;
@@ -510,10 +496,10 @@ obj[9] = {
         str7 = "@";
         closure_1 = str;
         mention = "mention";
-        getEmojiToGroupId = undefined;
+        closure_3 = undefined;
         let firstResult1;
         if (str[0] === "@") {
-          getEmojiToGroupId = str.substring("@".length);
+          closure_3 = str.substring("@".length);
           const found1 = users.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
             return 1 === formatted.indexOf(text.text.toLowerCase());
@@ -521,7 +507,7 @@ obj[9] = {
           const sortByResult2 = users.sortBy((text) => -text.text.length);
           const mapped1 = found1.sortBy((text) => {
             let num = 1;
-            if (text.text === getEmojiToGroupId) {
+            if (text.text === closure_3) {
               num = 0;
             }
             return num;
@@ -532,7 +518,7 @@ obj[9] = {
           firstResult1 = mapped1.first();
           const sortByResult3 = found1.sortBy((text) => {
             let num = 1;
-            if (text.text === getEmojiToGroupId) {
+            if (text.text === closure_3) {
               num = 0;
             }
             return num;
@@ -545,10 +531,10 @@ obj[9] = {
           str7 = "@";
           closure_1 = str;
           mention = "roleMention";
-          getEmojiToGroupId = undefined;
+          closure_3 = undefined;
           let firstResult2;
           if (str[0] === "@") {
-            getEmojiToGroupId = str.substring("@".length);
+            closure_3 = str.substring("@".length);
             const found2 = mentionableRoles.sortBy((text) => -text.text.length).filter((text) => {
               const formatted = closure_1.toLowerCase();
               return 1 === formatted.indexOf(text.text.toLowerCase());
@@ -556,7 +542,7 @@ obj[9] = {
             const sortByResult4 = mentionableRoles.sortBy((text) => -text.text.length);
             const mapped2 = found2.sortBy((text) => {
               let num = 1;
-              if (text.text === getEmojiToGroupId) {
+              if (text.text === closure_3) {
                 num = 0;
               }
               return num;
@@ -567,7 +553,7 @@ obj[9] = {
             firstResult2 = mapped2.first();
             const sortByResult5 = found2.sortBy((text) => {
               let num = 1;
-              if (text.text === getEmojiToGroupId) {
+              if (text.text === closure_3) {
                 num = 0;
               }
               return num;
@@ -586,10 +572,10 @@ obj[9] = {
             str7 = "@";
             closure_1 = str;
             mention = "mention";
-            getEmojiToGroupId = undefined;
+            closure_3 = undefined;
             let firstResult3;
             if (str[0] === "@") {
-              getEmojiToGroupId = str.substring("@".length);
+              closure_3 = str.substring("@".length);
               const found3 = mapped3.sortBy((text) => -text.text.length).filter((text) => {
                 const formatted = closure_1.toLowerCase();
                 return 1 === formatted.indexOf(text.text.toLowerCase());
@@ -597,7 +583,7 @@ obj[9] = {
               const sortByResult6 = mapped3.sortBy((text) => -text.text.length);
               const mapped4 = found3.sortBy((text) => {
                 let num = 1;
-                if (text.text === getEmojiToGroupId) {
+                if (text.text === closure_3) {
                   num = 0;
                 }
                 return num;
@@ -608,7 +594,7 @@ obj[9] = {
               firstResult3 = mapped4.first();
               const sortByResult7 = found3.sortBy((text) => {
                 let num = 1;
-                if (text.text === getEmojiToGroupId) {
+                if (text.text === closure_3) {
                   num = 0;
                 }
                 return num;
@@ -640,8 +626,6 @@ obj[9] = {
     }
   },
   parse(arg0) {
-    let tmp;
-    let tmp2;
     [, tmp, tmp2] = arg0;
     if ("gameMention" === tmp2) {
       let obj = { type: null, content: null };
@@ -665,8 +649,8 @@ obj[9] = {
 obj[10] = {
   match(str, channels) {
     channels = channels.channels;
-    let str7;
-    let closure_1;
+    str7 = undefined;
+    closure_1 = undefined;
     let firstResult1;
     if (str[0] === "#") {
       if ("\"" !== str[1]) {
@@ -675,7 +659,7 @@ obj[10] = {
         const channel = "channel";
         let firstResult;
         if (str[0] === "#") {
-          let getEmojiToGroupId = str.substring("#".length);
+          closure_3 = str.substring("#".length);
           const found = channels.sortBy((text) => -text.text.length).filter((text) => {
             const formatted = closure_1.toLowerCase();
             return 1 === formatted.indexOf(text.text.toLowerCase());
@@ -683,7 +667,7 @@ obj[10] = {
           const sortByResult = channels.sortBy((text) => -text.text.length);
           const mapped = found.sortBy((text) => {
             let num = 1;
-            if (text.text === getEmojiToGroupId) {
+            if (text.text === closure_3) {
               num = 0;
             }
             return num;
@@ -694,7 +678,7 @@ obj[10] = {
           firstResult = mapped.first();
           const sortByResult1 = found.sortBy((text) => {
             let num = 1;
-            if (text.text === getEmojiToGroupId) {
+            if (text.text === closure_3) {
               num = 0;
             }
             return num;
@@ -754,7 +738,7 @@ obj[11] = {
         }
         obj = /\s$/;
       }
-      const EMOJI_SHORTCUT_RE = parseRawEmojiObject.EMOJI_SHORTCUT_RE;
+      const EMOJI_SHORTCUT_RE = parseRawEmojiObjectDefault.EMOJI_SHORTCUT_RE;
       const match = EMOJI_SHORTCUT_RE.exec(arg0);
       let tmp9 = null;
       if (null != match) {
@@ -771,20 +755,18 @@ obj[11] = {
     }
   },
   parse(arg0) {
-    const obj = { type: "emoticon", content: null, isShortcut: true };
-    obj[1] = parseRawEmojiObject.convertShortcutToName(arg0[1]);
+    const obj = { type: "emoticon", content: parseRawEmojiObjectDefault.convertShortcutToName(arg0[1]), isShortcut: true };
     return obj;
   }
 };
+const importDefaultResult3 = importDefaultResult;
 obj[12] = {
-  order: require("parseLink").RULES.emoji.order,
+  order: parseLinkDefault.RULES.emoji.order,
   match(arg0) {
-    const EMOJI_NAME_RE = parseRawEmojiObject.EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = parseRawEmojiObjectDefault.EMOJI_NAME_RE;
     return EMOJI_NAME_RE.exec(arg0);
   },
   parse(arg0, arg1, customEmoji) {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     customEmoji = customEmoji.customEmoji;
     let value = customEmoji.get(tmp2);
@@ -824,8 +806,6 @@ obj[13] = {
     return match;
   },
   parse(arg0, arg1, emojiContext) {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     emojiContext = emojiContext.emojiContext;
     const emoticonByName = emojiContext.getEmoticonByName(tmp2);
@@ -846,6 +826,7 @@ obj[13] = {
   }
 };
 let obj4 = {};
+let merged = Object.assign(textRegexpDefault);
 obj4.match = function match(arg0, textExclusions) {
   if (typeof textExclusions.textExclusions === "string") {
     if ("" !== textExclusions.textExclusions) {
@@ -856,14 +837,14 @@ obj4.match = function match(arg0, textExclusions) {
     return match;
   }
   match = null;
-  if (null != textRegexp.match) {
-    match = textRegexp.match(arg0, textExclusions, "");
-    const str = textRegexp;
+  if (null != textRegexpDefault.match) {
+    match = textRegexpDefault.match(arg0, textExclusions, "");
+    const str = textRegexpDefault;
   }
 };
 obj[14] = obj4;
 const obj5 = { inlineCode: null, codeBlock: null, mention: null, roleMention: null, channel: null, emoji: null, soundboard: null, spoiler: null, staticRouteLink: null, timestamp: null, text: null };
-const str6 = require("parseLink").RULES.inlineCode;
+const str6 = parseLinkDefault.RULES.inlineCode;
 str7 = str6;
 obj5[0] = {
   order: str6.order,
@@ -872,7 +853,7 @@ obj5[0] = {
     return { type: str7.type, content: content[0] };
   }
 };
-str7 = require("parseLink").RULES.codeBlock;
+str7 = parseLinkDefault.RULES.codeBlock;
 obj5[1] = {
   order: str7.order,
   match: str7.match,
@@ -882,14 +863,12 @@ obj5[1] = {
 };
 const obj6 = { match: null, parse: null };
 const obj3 = {
-  order: require("parseLink").RULES.emoji.order,
+  order: parseLinkDefault.RULES.emoji.order,
   match(arg0) {
-    const EMOJI_NAME_RE = parseRawEmojiObject.EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = parseRawEmojiObjectDefault.EMOJI_NAME_RE;
     return EMOJI_NAME_RE.exec(arg0);
   },
   parse(arg0, arg1, customEmoji) {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     customEmoji = customEmoji.customEmoji;
     let value = customEmoji.get(tmp2);
@@ -916,12 +895,10 @@ const obj3 = {
     return obj;
   }
 };
-obj6[0] = require("t").anyScopeRegex(tmp3);
+obj6[0] = importDefaultResult.anyScopeRegex(tmp3);
 obj6[1] = function parse(arg0, arg1, channelId) {
-  let guild;
-  let isNotification;
   ({ isNotification, guild } = channelId);
-  let closure_0;
+  closure_0 = undefined;
   const user = authStore.getUser(arg0[1]);
   if (null == user) {
     let obj = { content: null };
@@ -937,7 +914,7 @@ obj6[1] = function parse(arg0, arg1, channelId) {
     }
     obj = { identifiable: null };
     obj[0] = str;
-    const str2 = nameFromUser.getUserTag(user, obj);
+    const str2 = nameFromUserDefault.getUserTag(user, obj);
     if (isNotification) {
       let tmp13Result = tmp13(4796);
       let id;
@@ -960,7 +937,7 @@ obj6[1] = function parse(arg0, arg1, channelId) {
       obj[0] = combined;
       return obj;
     } else if (user.bot) {
-      const obj1 = { content: null };
+      obj1 = { content: null };
       const _HermesInternal4 = HermesInternal;
       obj1[0] = "@" + str2;
       return obj1;
@@ -987,12 +964,13 @@ obj6[1] = function parse(arg0, arg1, channelId) {
       obj2[0] = "@" + str2 + str4;
       return obj2;
     }
-    const obj10 = nameFromUser;
+    const obj10 = nameFromUserDefault;
   }
 };
 obj5[2] = obj6;
 const obj7 = { match: null, parse: null };
-obj7[0] = require("t").anyScopeRegex(tmp4);
+const importDefaultResult4 = importDefaultResult;
+obj7[0] = importDefaultResult.anyScopeRegex(tmp4);
 obj7[1] = function parse(content, arg1, guild) {
   guild = guild.guild;
   if (null != guild) {
@@ -1009,23 +987,23 @@ obj7[1] = function parse(content, arg1, guild) {
 };
 obj5[3] = obj7;
 const obj8 = { match: null, parse: null };
-obj8[0] = require("t").anyScopeRegex(tmp5);
+const importDefaultResult5 = importDefaultResult;
+obj8[0] = importDefaultResult.anyScopeRegex(tmp5);
 obj8[1] = function parse(arg0) {
   const channel = store2.getChannel(arg0[1]);
   if (null == channel) {
     let content = arg0[0];
   } else {
     const obj = str7(4984);
-    content = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true, true);
+    content = obj.computeChannelName(channel, closure_14, closure_12, true, true);
   }
   return { content };
 };
 obj5[4] = obj8;
 const obj9 = { match: null, parse: null };
-obj9[0] = require("t").anyScopeRegex(tmp6);
+const importDefaultResult6 = importDefaultResult;
+obj9[0] = importDefaultResult.anyScopeRegex(tmp6);
 obj9[1] = function parse(arg0, arg1, guild) {
-  let name;
-  let tmp;
   [, name, tmp] = arg0;
   guild = guild.guild;
   let id = null;
@@ -1041,16 +1019,16 @@ obj9[1] = function parse(arg0, arg1, guild) {
 };
 obj5[5] = obj9;
 let obj10 = { match: null, parse: null };
-obj10[0] = require("t").anyScopeRegex(require("getSoundmojiASTFromString").soundmojiRawFormatRegex);
+const importDefaultResult7 = importDefaultResult;
+obj10[0] = importDefaultResult.anyScopeRegex(require("getSoundmojiASTFromString").soundmojiRawFormatRegex);
 obj10[1] = function parse(arg0) {
-  let tmp;
-  let tmp2;
   [, tmp, tmp2] = arg0;
   return { content: "<sound:" + tmp + ":" + tmp2 + ">" };
 };
 obj5[6] = obj10;
 const obj11 = { match: null, parse: null };
-obj11[0] = require("t").anyScopeRegex(MARKDOWN_SPOILER_REGEXP);
+const importDefaultResult8 = importDefaultResult;
+obj11[0] = importDefaultResult.anyScopeRegex(MARKDOWN_SPOILER_REGEXP);
 obj11[1] = function parse() {
   const obj = { content: null };
   const intl = str7(1236).intl;
@@ -1059,16 +1037,17 @@ obj11[1] = function parse() {
 };
 obj5[7] = obj11;
 const obj12 = { match: null, parse: null };
-obj12[0] = require("t").anyScopeRegex(MARKDOWN_STATIC_ROUTE_NAME_REGEXP);
+const importDefaultResult9 = importDefaultResult;
+obj12[0] = importDefaultResult.anyScopeRegex(MARKDOWN_STATIC_ROUTE_NAME_REGEXP);
 obj12[1] = function parse(arg0) {
   return { content: "<id:" + arg0[1] + ">" };
 };
 obj5[8] = obj12;
 const obj13 = {};
-const merged1 = Object.assign(require("parseLink").RULES.timestamp);
+const merged1 = Object.assign(parseLinkDefault.RULES.timestamp);
 obj13.parse = function parse() {
   const items = [...arguments];
-  const timestamp = parseLink.RULES.timestamp;
+  const timestamp = parseLinkDefault.RULES.timestamp;
   const items1 = [...items];
   const applyResult = timestamp.parse.apply(items1);
   if ("text" === applyResult.type) {
@@ -1081,23 +1060,26 @@ obj13.parse = function parse() {
   return obj;
 };
 obj5[9] = obj13;
+const merged2 = Object.assign(textRegexpDefault);
 obj5[10] = {};
 let items = [obj, obj5];
 let item = items.forEach((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const keys = Object.keys(arg0);
   const item = keys.forEach((arg0, order) => {
     table[arg0].order = order;
   });
 });
+const importDefaultResult10 = importDefaultResult;
 const obj14 = {};
-let closure_21 = require("t").parserFor(obj);
+let closure_21 = importDefaultResult.parserFor(obj);
 const re22 = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
+const importDefaultResult11 = importDefaultResult;
 const obj15 = {
   parse(getGuildId, content, arg2, arr) {
-    let closure_0 = getGuildId;
+    closure_0 = getGuildId;
     let tmp = arg2;
-    let importDefault;
+    importDefault = undefined;
     if (tmp == null) {
       tmp = createParserState(getGuildId, arr);
     }
@@ -1107,7 +1089,7 @@ const obj15 = {
     importDefault = importDefault(f79922[19]).translateInlineEmojiToSurrogates;
     f79922 = (emoji) => {
       let obj = lib(f79922[29]);
-      obj = { emoji, channel: closure_0, intention: outer1_17.CHAT };
+      obj = { emoji, channel: closure_0, intention: closure_1_17.CHAT };
       if (obj.isEmojiPremiumLocked(obj)) {
         const invalidEmojis = lib.invalidEmojis;
         invalidEmojis.push(emoji);
@@ -1116,8 +1098,8 @@ const obj15 = {
         prop.push(emoji);
       }
     };
-    let c3 = "";
-    let rebuild = [];
+    c3 = "";
+    closure_4 = [];
     const item = callback(obj.content, tmp).forEach((content) => {
       (function handleEmoji(closure_0, type, f79922) {
         if (null != f79922) {
@@ -1157,7 +1139,7 @@ const obj15 = {
             const obj = callback(4034);
           }
         }
-      })(getGuildId, content, f79922);
+      })(callback, content, f79922);
       if (typeof content.content === "string") {
         const type = content.type;
         if ("emoji" === type) {
@@ -1182,8 +1164,8 @@ const obj15 = {
             }
           }
           if (true === tmp.isNotification) {
-            _var = _var + getGuildId(f79922[26]).isolate(content.content);
-            let obj2 = getGuildId(f79922[26]);
+            _var = _var + callback(f79922[26]).isolate(content.content);
+            let obj2 = callback(f79922[26]);
           } else {
             _var = _var + content.content;
           }
@@ -1191,7 +1173,7 @@ const obj15 = {
       } else {
         const _Array = Array;
         if (content.content.constructor === Array) {
-          const tmp24 = outer1_23(content.content, tmp, lib, tmp2);
+          const tmp24 = closure_1_23(content.content, tmp, lib, tmp2);
           const emoji = tmp24.emoji;
           for (const item10008 of emoji) {
             let tmp5 = arr;
@@ -1217,15 +1199,15 @@ const obj15 = {
   },
   unparseWithMeta
 };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/messages/MessageParser.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/MessageParser.tsx");
 
 export default obj15;
 export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
-  let closure_0 = arg1;
-  importDefault = parseRawEmojiObject.translateInlineEmojiToSurrogates;
-  const dependencyMap = arg2;
-  let c3 = "";
-  let rebuild = [];
+  closure_0 = arg1;
+  importDefault = parseRawEmojiObjectDefault.translateInlineEmojiToSurrogates;
+  dependencyMap = arg2;
+  c3 = "";
+  closure_4 = [];
   const item = callback(arg0, arg1).forEach((content) => {
     (function handleEmoji(closure_0, type, f79922) {
       if (null != f79922) {
@@ -1265,7 +1247,7 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
           const obj = callback(4034);
         }
       }
-    })(getGuildId, content, f79922);
+    })(callback, content, f79922);
     if (typeof content.content === "string") {
       const type = content.type;
       if ("emoji" === type) {
@@ -1290,8 +1272,8 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
           }
         }
         if (true === tmp.isNotification) {
-          _var = _var + getGuildId(f79922[26]).isolate(content.content);
-          let obj2 = getGuildId(f79922[26]);
+          _var = _var + callback(f79922[26]).isolate(content.content);
+          let obj2 = callback(f79922[26]);
         } else {
           _var = _var + content.content;
         }
@@ -1299,7 +1281,7 @@ export const parseAndRebuild = function parseAndRebuild(arg0, arg1, arg2) {
     } else {
       const _Array = Array;
       if (content.content.constructor === Array) {
-        const tmp24 = outer1_23(content.content, tmp, lib, tmp2);
+        const tmp24 = closure_1_23(content.content, tmp, lib, tmp2);
         const emoji = tmp24.emoji;
         for (const item10008 of emoji) {
           let tmp5 = arr;

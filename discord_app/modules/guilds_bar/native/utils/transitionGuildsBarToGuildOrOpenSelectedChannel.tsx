@@ -1,11 +1,11 @@
 // discord_app/modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_3 from "handleConnectionOpen";
-import { ME } from "ME";
-import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import closure_2 from "handleConnectionOpen" /* 1979 */;
+import closure_3 from "handleConnectionOpen" /* 4197 */;
+import { ME } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/transitionGuildsBarToGuildOrOpenSelectedChannel.tsx");
 
 export default function transitionGuildsBarToGuildOrOpenSelectedChannel(arg0) {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();

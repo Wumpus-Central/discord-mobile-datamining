@@ -1,13 +1,16 @@
 // discord_app/modules/app_database/stores/BasicChannelCacheStore.tsx
-import _slicedToArray from "_slicedToArray";
-import allGuildIds from "allGuildIds";
-import { Store } from "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "allGuildIds" /* 1393 */;
 
 let object = importDefault;
-new require("initialize")("BasicChannelCacheStore");
+new timestampDefault("BasicChannelCacheStore");
+const Store = initializeDefault.Store;
 class BasicChannelCacheStore extends Store {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {
       CACHE_LOADED_LAZY_NO_CACHE(arg0) {
             return obj.handleCacheLoadedLazyNoCache(arg0);
@@ -24,7 +27,7 @@ class BasicChannelCacheStore extends Store {
     };
     tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp2;
+    closure_0 = tmp2;
     map = new Map();
     tmp2.channels = map;
     map1 = new Map();
@@ -64,14 +67,14 @@ prototype["restored"] = function restored(id) {
   this.delete(id);
 };
 prototype["initialize"] = function initialize() {
-  this.waitFor(allGuildIds);
+  this.waitFor(closure_3);
 };
 prototype["handleCacheLoadedLazy"] = function handleCacheLoadedLazy(arg0) {
   const self = this;
   this.guilds = new Map();
   const map = new Map();
   this.channels = new Map();
-  const map1 = new Map();
+  map1 = new Map();
   while (tmp3 !== undefined) {
     let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
@@ -135,7 +138,7 @@ const _delete = function delete(arg0) {
 };
 prototype["delete"] = _delete;
 object = undefined;
-object = new Object(require("dispatcher"), {
+object = new Object(dispatcherDefault, {
   CACHE_LOADED_LAZY_NO_CACHE(arg0) {
     return obj.handleCacheLoadedLazyNoCache(arg0);
   },
@@ -168,6 +171,6 @@ let obj = {
 };
 object.guilds = new Map();
 let map1 = new Map();
-let result = require("timestamp").fileFinishedImporting("modules/app_database/stores/BasicChannelCacheStore.tsx");
+let result = require("set").fileFinishedImporting("modules/app_database/stores/BasicChannelCacheStore.tsx");
 
 export default object;

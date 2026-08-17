@@ -1,16 +1,16 @@
 // discord_app/stores/SpeakingStore.tsx
-import _slicedToArray from "_slicedToArray";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import handleConnectionOpen from "handleConnectionOpen";
-import { Permissions } from "ME";
-import DesktopSources from "DesktopSources";
-import { Store } from "initialize";
-import { getUnitId } from "../modules/calls/ProportionalVadIndicatorExperiment.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import getUnitIdDefault from "getUnitId" /* 4775 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "handleConnectionOpen" /* 1979 */;
+import { Permissions } from "ME" /* 676 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let c10;
-let c9;
 function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
   let flag = arg2;
   if (arg2 === undefined) {
@@ -46,7 +46,7 @@ function anyoneHasFlagInContext(DEFAULT, VOICE, arg2) {
 function handleConnectionOpen(user) {
   const id = user.user.id;
   const sessionId = user.sessionId;
-  let c14 = null;
+  c14 = null;
 }
 ({ SpeakingFlags: c9, MediaEngineContextTypes: c10 } = DesktopSources);
 let map = new Map();
@@ -54,6 +54,7 @@ let c12 = null;
 let c13 = null;
 let c14 = null;
 let c15 = false;
+const Store = initializeDefault.Store;
 class SpeakingStore extends Store {
 }
 const prototype = SpeakingStore.prototype;
@@ -65,7 +66,7 @@ prototype["initialize"] = function initialize() {
     }
     return tmp;
   });
-  this.waitFor(ensureGuildLoaded, _detectH265HardwareDecode, createRTCConnection, handleConnectionOpen);
+  this.waitFor(closure_4, closure_5, closure_6, closure_7);
 };
 prototype["getSpeakingDuration"] = function getSpeakingDuration(id, timestamp) {
   let DEFAULT = arg2;
@@ -100,8 +101,8 @@ prototype["getSpeakers"] = function getSpeakers() {
     keys = [];
   }
   return Array.from(keys).filter((arg0) => {
-    const VOICE = outer1_9.VOICE;
-    let value = outer1_11.get(DEFAULT);
+    const VOICE = closure_1_9.VOICE;
+    let value = closure_1_11.get(DEFAULT);
     let flags;
     if (value != null) {
       value = value.get(arg0);
@@ -110,7 +111,7 @@ prototype["getSpeakers"] = function getSpeakers() {
       }
     }
     if (flags == null) {
-      flags = outer1_9.NONE;
+      flags = closure_1_9.NONE;
     }
     return (flags & VOICE) === VOICE;
   });
@@ -226,7 +227,7 @@ prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
   if (arg1 === undefined) {
     DEFAULT = constants2.DEFAULT;
   }
-  const config = getUnitId.getConfig({ location: "SpeakingStore" });
+  const config = getUnitIdDefault.getConfig({ location: "SpeakingStore" });
   let num = -Infinity;
   if (config.enabled) {
     num = -Infinity;
@@ -248,20 +249,16 @@ prototype["getVoiceVolume"] = function getVoiceVolume(arg0) {
   return num;
 };
 SpeakingStore.displayName = "SpeakingStore";
-const speakingStore = new SpeakingStore(require("dispatcher"), {
+const speakingStore = new SpeakingStore(dispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   SPEAKING: function handleSpeaking(arg0) {
-    let context;
-    let speakingFlags;
-    let userId;
-    let voiceDb;
     ({ context, userId, speakingFlags, voiceDb } = arg0);
     let num = speakingFlags;
     if ((speakingFlags & constants.PRIORITY) === constants.PRIORITY) {
       channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
       if (null != channel) {
-        let obj = importAll(4026);
+        let obj = applyOverwritesAll;
         obj = { permission: null, user: null, context: null };
         obj[0] = Permissions.PRIORITY_SPEAKER;
         obj[1] = userId;
@@ -338,9 +335,6 @@ const speakingStore = new SpeakingStore(require("dispatcher"), {
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((arg0, arg1) => {
-      let channelId;
-      let sessionId;
-      let userId;
       ({ userId, channelId, sessionId } = arg1);
       let tmp2 = userId === closure_12;
       if (tmp2) {
@@ -352,11 +346,11 @@ const speakingStore = new SpeakingStore(require("dispatcher"), {
         if (channelId == null) {
           tmp6 = null;
         }
-        let closure_14 = tmp6;
+        c14 = tmp6;
         tmp4 = tmp6;
       }
       let flag = false;
-      if (closure_14 !== tmp4) {
+      if (c14 !== tmp4) {
         flag = store.delete(constants.DEFAULT) || false;
         const tmp9 = store.delete(constants.DEFAULT) || false;
       }
@@ -422,6 +416,6 @@ const speakingStore = new SpeakingStore(require("dispatcher"), {
     isActive = isActive.isActive;
   }
 });
-let result = require("_detectH265HardwareDecode").fileFinishedImporting("stores/SpeakingStore.tsx");
+let result = require("set").fileFinishedImporting("stores/SpeakingStore.tsx");
 
 export default speakingStore;

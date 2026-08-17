@@ -1,8 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/message_requests/screens/MessageRequestsSpamScreen.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("PendingSpamMessageRequestRow").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsSpamScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/message_requests/screens/MessageRequestsSpamScreen.tsx");
 
 export default function MessageRequestsScreen(navigation) {
   navigation = navigation.navigation;

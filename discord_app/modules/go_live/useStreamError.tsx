@@ -1,23 +1,23 @@
 // discord_app/modules/go_live/useStreamError.tsx
-import isAVErrorContextOfType from "isAVErrorContextOfType";
+import closure_2 from "isAVErrorContextOfType" /* 12440 */;
 
 const require = arg1;
 let closure_3 = { [arg1(9668).AVError.STREAM_SOUNDSHARE_FAILED]: 0, [arg1(9668).AVError.STREAM_SEND_HIGH_PACKET_LOSS]: 1, [arg1(9668).AVError.STREAM_VIEW_HIGH_PACKET_LOSS]: 1, [arg1(9668).AVError.STREAM_SEND_LOW_FPS]: 2, [arg1(9668).AVError.STREAM_VIEW_LOW_FPS]: 2, [arg1(9668).AVError.STREAM_BAD_NETWORK_QUALITY]: 3 };
-const result = require("initialize").fileFinishedImporting("modules/go_live/useStreamError.tsx");
+const result = require("set").fileFinishedImporting("modules/go_live/useStreamError.tsx");
 
 export default function useStreamError(id) {
   id = id.id;
-  const items = [isAVErrorContextOfType];
+  const items = [closure_2];
   const items1 = [id];
   return id(589).useStateFromStores(items, () => {
-    const activeErrors = outer1_2.getActiveErrors();
+    const activeErrors = closure_1_2.getActiveErrors();
     const found = Array.from(activeErrors.values()).filter((streamKey) => {
       let tmp = "streamKey" in streamKey;
       if (tmp) {
         tmp = streamKey.streamKey === closure_0;
       }
       if (tmp) {
-        tmp = null != outer1_3[streamKey.type];
+        tmp = null != closure_1_3[streamKey.type];
       }
       return tmp;
     });

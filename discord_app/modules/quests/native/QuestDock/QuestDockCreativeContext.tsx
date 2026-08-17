@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockCreativeContext.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { AdCreativeType } from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
+import AdCreativeType from "AdCreativeType" /* 7469 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let context = importAllResult.createContext(null);
-const result = require("AdCreativeType").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockCreativeContext.tsx");
 
 export const getDeliveredQuest = function getDeliveredQuest(type) {
   let quest = null;
@@ -21,7 +21,7 @@ export const useQuestCreative = function useQuestCreative() {
   const context = importAllResult.useContext(closure_4);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useQuestCreative requires a QuestDockQuestProvider ancestor");
+    error = new Error("useQuestCreative requires a QuestDockQuestProvider ancestor");
     throw error;
   } else {
     return context;

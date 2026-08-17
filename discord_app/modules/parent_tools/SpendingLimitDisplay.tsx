@@ -1,13 +1,13 @@
 // discord_app/modules/parent_tools/SpendingLimitDisplay.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import { SubscriptionIntervalTypes } from "GuildFeatures";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { formatSingleCurrencyPrice } from "../../utils/PriceUtils.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
-import { spendingLimitEqual } from "SpendingLimitUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
+import spendingLimitEqual from "spendingLimitEqual" /* 14184 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
+import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
+require = arg1;
 function getSpendingLimitDisplayState(amount) {
   if (null == amount) {
     return { kind: "off" };
@@ -31,9 +31,9 @@ function getSpendingLimitDisplayState(amount) {
         obj = { kind: "close-to-limit", monthlyText: null, remainingText: null };
         obj[1] = formatRateResult;
         const intl = tmp5(1236).intl;
-        const obj1 = { amount: null };
+        obj1 = { amount: null };
         obj1[0] = tmp5(5316).formatPrice(diff, currency);
-        obj[2] = intl.formatToPlainString(messagesProxy["+Q+bU1"], obj1);
+        obj[2] = intl.formatToPlainString(messagesProxyDefault["+Q+bU1"], obj1);
         const tmp5Result = tmp5(5316);
       } else {
         obj = { kind: "on", monthlyText: null };
@@ -44,10 +44,10 @@ function getSpendingLimitDisplayState(amount) {
     const obj7 = formatSingleCurrencyPrice;
   }
 }
-const result = require("GuildFeatures").fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/SpendingLimitDisplay.tsx");
 
 export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUserSettings() {
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_3];
   return initialize.useStateFromStores(items, () => {
     const safetySettings = settings.settings.safetySettings;
     let oneTimePurchaseLimit;
@@ -71,7 +71,7 @@ export const useSpendingLimitFromUserSettings = function useSpendingLimitFromUse
 export const CLOSE_TO_LIMIT_THRESHOLD_MAJOR_UNITS = 10;
 export { getSpendingLimitDisplayState };
 export const useSpendingLimitDisplayState = function useSpendingLimitDisplayState(cap) {
-  const items = [freshTeenActivityWithMap];
+  const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => monthlyPurchases.getMonthlyPurchases());
   let num;
   if (stateFromStores != null) {

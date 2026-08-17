@@ -1,12 +1,12 @@
 // discord_app/modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx
-import _getCurrentTask from "_getCurrentTask";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { Pressable } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/ResendVerificationCodeButton.tsx");
 
 export default function ResendVerificationCodeButton(flowId) {
   flowId = flowId.flowId;
@@ -55,28 +55,28 @@ export default function ResendVerificationCodeButton(flowId) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
-              if (outer1_2 > 0) {
+              closure_0 = tmp4;
+              if (closure_1_2 > 0) {
                 c4 = 3;
               } else {
                 v0(true);
                 let v02 = 2;
                 v0 = 3;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0(outer1_2[5]).resendVerificationCode(outer1_0);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(closure_1_2[5]).resendVerificationCode(closure_1_0);
                 return obj1;
               }
             }
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               v02 = 1;
-              let obj2 = v0(outer1_2[7]);
+              let obj2 = v0(closure_1_2[7]);
               obj2 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null, icon: null, IconComponent: null, iconColor: "icon-feedback-critical" };
-              const intl = outer1_0(outer1_2[8]).intl;
-              obj2[1] = intl.string(v0(outer1_2[9])["3AXMYu"]);
-              obj2[2] = v0(outer1_2[10]);
-              obj2[3] = outer1_0(outer1_2[11]).XLargeIcon;
+              const intl = closure_1_0(closure_1_2[8]).intl;
+              obj2[1] = intl.string(v0(closure_1_2[9])["3AXMYu"]);
+              obj2[2] = v0(closure_1_2[10]);
+              obj2[3] = closure_1_0(closure_1_2[11]).XLargeIcon;
               obj2.open(obj2);
             } else if (arg0 === 1) {
               c4 = 3;
@@ -89,7 +89,7 @@ export default function ResendVerificationCodeButton(flowId) {
               obj3[0] = arg1;
               return obj3;
             } else {
-              obj = outer1_0(outer1_2[6]);
+              obj = closure_1_0(closure_1_2[6]);
               obj.showVerificationSent();
               v02(30);
               v02 = 1;

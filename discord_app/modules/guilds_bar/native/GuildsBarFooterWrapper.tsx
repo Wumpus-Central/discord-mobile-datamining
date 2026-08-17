@@ -1,21 +1,24 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFooterWrapper.tsx
-import { GUILD_ITEM_HIT_SLOP } from "GUILD_ITEM_SIZE";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { set } from "../../core/native/NativeView.tsx";
-import { context } from "../../home_drawer/native/useHomeDrawerGesture.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import setDefault from "set" /* 7190 */;
+import context from "context" /* 15288 */;
+import GUILD_ITEM_SIZE from "GUILD_ITEM_SIZE" /* 15548 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const GUILD_ITEM_HIT_SLOP = GUILD_ITEM_SIZE.GUILD_ITEM_HIT_SLOP;
+const jsx = jsxProd.jsx;
 let obj = { footerWrapper: null };
-obj = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: require("Themes").modules.mobile.GUILD_BAR_ITEM_PADDING };
+obj = { display: "flex", alignSelf: "stretch", alignItems: "center", gap: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_PADDING };
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
+const result = set.fileFinishedImporting("modules/guilds_bar/native/GuildsBarFooterWrapper.tsx");
 
 export default function GuildsBarFooterWrapper(children) {
   let obj = map;
-  const token = obj.useToken(Themes.modules.mobile.GUILD_BAR_ITEM_SIZE);
+  const token = obj.useToken(ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE);
   const tmp2 = callback();
   const isHomeDrawerEnabled = context.useIsHomeDrawerEnabled();
   const style = [tmp2.footerWrapper, ];
@@ -28,5 +31,5 @@ export default function GuildsBarFooterWrapper(children) {
     tmp6 = obj;
   }
   style[1] = tmp6;
-  return tmp4(set, { style, children: children.children });
+  return tmp4(setDefault, { style, children: children.children });
 };

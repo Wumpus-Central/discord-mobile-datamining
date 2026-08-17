@@ -1,12 +1,10 @@
 // discord_app/actions/native/GiftCodeActionCreators.tsx
-import sendRequest from "sendRequest";
-import ME from "ME";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../ModalActionCreators.tsx";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function redeemGiftCode(arg0) {
   const self = this;
   const apply = _redeemGiftCode.apply;
@@ -20,15 +18,11 @@ function redeemGiftCode(arg0) {
 function _redeemGiftCode() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c2;
-      let c3;
-      let options;
       if (paymentSource === 2) {
         paymentSource = 3;
         HermesBuiltin.throwTypeError();
@@ -55,7 +49,7 @@ function _redeemGiftCode() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               options = tmp7;
               let callback;
               options = undefined;
@@ -70,7 +64,7 @@ function _redeemGiftCode() {
               constants = undefined;
               paymentSource = undefined;
               let id;
-              let closure_8;
+              closure_8 = undefined;
               let billingError;
               constants = 1;
               paymentSource = 1;
@@ -82,7 +76,7 @@ function _redeemGiftCode() {
               throw arg1;
             } else if (arg0 === 2) {
               paymentSource = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -129,7 +123,7 @@ function _redeemGiftCode() {
             }
           } else if (2 === tmp7) {
             channelId = 0;
-            let closure_10 = c3;
+            closure_10 = c3;
             billingError = new callback(4273).BillingError(closure_10);
             obj3 = options(709);
             obj6 = { type: "GIFT_CODE_REDEEM_FAILURE", code: null, error: null };
@@ -184,7 +178,7 @@ function _redeemGiftCode() {
     iter.next();
     return iter;
   });
-  const _redeemGiftCode = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -194,13 +188,13 @@ function _redeemGiftCode() {
   return applyArgumentsResult;
 }
 function openGiftCodeRedeemModal(code) {
-  let obj = ModalActionCreators;
+  let obj = _modDef5260;
   obj = { code };
   obj.pushLazy(asyncRequireImpl(10645, dependencyMap.paths), obj, "GIFT_CODE_REDEEM_MODAL_KEY");
 }
 ({ Endpoints: c4, AnalyticEvents: c5 } = ME);
 let closure_6 = Object.freeze({});
-const result = require("useBlockedPaymentsConfig").fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/native/GiftCodeActionCreators.tsx");
 
 export default { redeemGiftCode, openGiftCodeRedeemModal };
 export { redeemGiftCode };

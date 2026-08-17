@@ -1,36 +1,20 @@
 // discord_app/components_native/common/SortableListView.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let Dimensions;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c3, Animated: c4, Dimensions, PanResponder: c5, FlatList: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let height = Dimensions.get("window").height;
 let c10 = -5;
 let closure_11 = { x: 0, y: 0 };
 let closure_12 = importAllResult.memo((stateFromStores) => {
-  let active;
-  let hideContent;
-  let hovering;
-  let index;
-  let item;
-  let onPressOut;
-  let renderActiveDivider;
-  let renderRow;
-  let rowData;
-  let closure_0 = stateFromStores;
+  closure_0 = stateFromStores;
   ({ hovering, rowData, active, renderActiveDivider, hideContent, renderRow, onPressOut } = stateFromStores);
-  let closure_1 = ref.useRef(stateFromStores);
+  closure_1 = ref.useRef(stateFromStores);
   ref = ref.useRef(null);
-  let closure_3 = ref.useRef(null);
+  closure_3 = ref.useRef(null);
   const effect = ref.useEffect(() => {
     closure_1.current = closure_0;
   });
@@ -47,7 +31,7 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
   }, []);
   const callback1 = ref.useCallback((nativeEvent) => {
     const obj = { x: nativeEvent.nativeEvent.layout.x, y: nativeEvent.nativeEvent.layout.y, width: nativeEvent.nativeEvent.layout.width, height: null };
-    let height = ref.current;
+    height = ref.current;
     if (height == null) {
       height = nativeEvent.nativeEvent.layout.height;
     }
@@ -55,17 +39,17 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
     let current = ref.current;
     if (current != null) {
       current.measure((arg0, arg1, arg2, current) => {
-        let tmp2 = null == outer1_3.current;
+        let tmp2 = null == closure_1_3.current;
         if (tmp2) {
           tmp2 = current > 0;
         }
         if (tmp2) {
-          outer1_3.current = current;
+          closure_1_3.current = current;
         }
-        current = outer1_1.current;
+        current = closure_1_1.current;
         const onRowLayout = current.onRowLayout;
         if (onRowLayout != null) {
-          onRowLayout(outer1_1.current.index, obj);
+          onRowLayout(closure_1_1.current.index, obj);
         }
       });
     }
@@ -88,11 +72,6 @@ let closure_12 = importAllResult.memo((stateFromStores) => {
   return closure_8(closure_3, obj);
 });
 let closure_13 = importAllResult.memo((listPageY) => {
-  let frameHeight;
-  let pan;
-  let renderRow;
-  let rowData;
-  let sortRowStyle;
   ({ rowData, pan, frameHeight } = listPageY);
   listPageY = listPageY.listPageY;
   const wrapperPageY = listPageY.wrapperPageY;
@@ -107,11 +86,11 @@ let closure_13 = importAllResult.memo((listPageY) => {
 const Component = importAllResult.Component;
 class SortableListView extends Component {
   constructor(arg0) {
-    c1 = undefined;
+    closure_1 = undefined;
     tmp2 = new tmp2(global, tmp5, tmp4, tmp3, new.target, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)
-    c1 = tmp2;
-    handleRowActive = tmp2;
+    closure_1 = tmp2;
+    closure_0 = tmp2;
     tmp2.memoedRowData = {};
     tmp2.firstRowY = undefined;
     tmp2.layoutMap = {};
@@ -123,7 +102,7 @@ class SortableListView extends Component {
     tmp2._listRef = closure_2.createRef();
     tmp2.scrollContainerHeight = height;
     obj = { active: null, hovering: false, hoverIndex: c10, pan: null };
-    valueXY = new Animated.ValueXY(height);
+    valueXY = new Animated.ValueXY(closure_11);
     obj[3] = valueXY;
     tmp2.state = obj;
     tmp2.renderActive = function renderActive() {
@@ -165,7 +144,7 @@ class SortableListView extends Component {
         }
         obj[6] = num3;
         obj[7] = tmp;
-        return outer1_7(outer1_13, obj);
+        return closure_1_7(closure_1_13, obj);
       }
     };
     tmp2.renderActiveDivider = function renderActiveDivider() {
@@ -181,7 +160,7 @@ class SortableListView extends Component {
         obj = { height: null };
         obj[0] = frameHeight;
         obj[0] = obj;
-        renderActiveDividerResult = outer1_7(outer1_3, obj);
+        renderActiveDividerResult = closure_1_7(closure_1_3, obj);
       }
       return renderActiveDividerResult;
     };
@@ -189,14 +168,6 @@ class SortableListView extends Component {
       lib._updateLayoutMap(arg0, arg1);
     };
     tmp2.renderItem = function renderItem(item) {
-      let active;
-      let disableSorting;
-      let hoverIndex;
-      let index;
-      let pan;
-      let props;
-      let renderRow;
-      let state;
       ({ index, active } = item);
       let obj = closure_0;
       ({ props, state } = closure_0);
@@ -230,7 +201,7 @@ class SortableListView extends Component {
       obj[9] = obj.renderActiveDivider;
       obj[10] = renderRow;
       obj[11] = obj.getMemoedRowData(index, item.item);
-      return outer1_7(outer1_12, obj);
+      return closure_1_7(closure_1_12, obj);
     };
     tmp2.handleScroll = function handleScroll(nativeEvent) {
       lib.scrollValue = nativeEvent.nativeEvent.contentOffset.y;
@@ -291,18 +262,18 @@ class SortableListView extends Component {
         sum = bound + 1;
       }
       if (sum !== obj.state.hoverIndex) {
-        const result = lib(_undefined[3]).DeprecatedLayoutAnimation();
+        const result = lib(5443).DeprecatedLayoutAnimation();
         obj = { hovering: true, hoverIndex: null };
         obj[1] = sum;
         obj.setState(obj);
-        const obj2 = lib(_undefined[3]);
+        const obj2 = lib(5443);
       }
     };
     tmp2.cancel = function cancel() {
       let obj = lib;
       if (!lib.moved) {
         obj = { active: null, hovering: false, hoverIndex: null };
-        obj[2] = outer1_10;
+        obj[2] = closure_1_10;
         obj.setState(obj);
       }
     };
@@ -397,7 +368,7 @@ class SortableListView extends Component {
     obj = { dx: tmp2.state.pan.x, dy: tmp2.state.pan.y };
     items = [null];
     items[1] = obj;
-    handleRowActive = Animated.event(items, { useNativeDriver: false });
+    closure_0 = Animated.event(items, { useNativeDriver: false });
     obj1 = {
       onStartShouldSetPanResponder() {
             return true;
@@ -419,9 +390,9 @@ class SortableListView extends Component {
       onPanResponderGrant() {
             tmp2.moved = true;
             const pan = tmp.state.pan;
-            pan.setOffset(outer1_11);
+            pan.setOffset(closure_1_11);
             const pan2 = tmp.state.pan;
-            pan2.setValue(outer1_11);
+            pan2.setValue(closure_1_11);
             const props = tmp.props;
             const onMoveStart = props.onMoveStart;
             if (onMoveStart != null) {
@@ -429,7 +400,7 @@ class SortableListView extends Component {
             }
           },
       onPanResponderTerminate() {
-            const obj = { active: null, hovering: false, hoverIndex: outer1_10 };
+            const obj = { active: null, hovering: false, hoverIndex: closure_1_10 };
             obj.setState(obj);
           },
       onPanResponderRelease() {
@@ -442,7 +413,7 @@ class SortableListView extends Component {
             if (null == obj.state.active) {
               if (obj.state.hovering) {
                 obj = { hovering: false, hoverIndex: null };
-                obj[1] = outer1_10;
+                obj[1] = closure_1_10;
                 obj.setState(obj);
               }
               obj.moveY = null;
@@ -450,7 +421,7 @@ class SortableListView extends Component {
               const index = obj.state.active.rowData.index;
               if (false === obj.state.hovering) {
                 obj = { active: null, hoverIndex: null };
-                obj[1] = outer1_10;
+                obj[1] = closure_1_10;
                 return obj.setState(obj);
               } else {
                 const hoverIndex = obj.state.hoverIndex;
@@ -458,7 +429,7 @@ class SortableListView extends Component {
                 if (hoverIndex > index) {
                   diff = hoverIndex - 1;
                 }
-                let obj1 = lib(_undefined[3]);
+                obj1 = lib(5443);
                 const result = obj1.DeprecatedLayoutAnimation({ duration: 0 });
                 const props2 = obj.props;
                 const onRowMoved = props2.onRowMoved;
@@ -470,7 +441,7 @@ class SortableListView extends Component {
                   onRowMoved(obj1);
                 }
                 const obj2 = { active: null, hovering: false, hoverIndex: null };
-                obj2[2] = outer1_10;
+                obj2[2] = closure_1_10;
                 obj.setState(obj2);
                 const _Math = Math;
                 const bound = Math.max(0, obj.scrollContainerHeight - obj.listLayout.height + tmp16);
@@ -529,13 +500,6 @@ prototype["getMemoedRowData"] = function getMemoedRowData(index, item) {
   return tmp;
 };
 prototype["render"] = function render() {
-  let contentContainerStyle;
-  let data;
-  let footer;
-  let header;
-  let keyboardShouldPersistTaps;
-  let scrollEnabled;
-  let scrollEventThrottle;
   const self = this;
   const props = this.props;
   let obj = { ref: this._wrapperRef, style: items, children: null };
@@ -568,6 +532,6 @@ prototype["render"] = function render() {
   return closure_8(closure_3, obj);
 };
 SortableListView.defaultProps = { disableSorting: false };
-let result = require("jsxProd").fileFinishedImporting("components_native/common/SortableListView.tsx");
+let result = require("set").fileFinishedImporting("components_native/common/SortableListView.tsx");
 
 export default SortableListView;

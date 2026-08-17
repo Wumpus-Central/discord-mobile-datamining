@@ -1,14 +1,15 @@
 // discord_app/modules/app_database/app/TryLoad.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _tryLoadAsync() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -36,12 +37,12 @@ function _tryLoadAsync() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp3;
-              let closure_1 = tmp7;
-              let c4 = 1;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
+              c4 = 1;
               c5 = 2;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = callback();
               return obj1;
             }
@@ -79,7 +80,7 @@ function _tryLoadAsync() {
       }
     })();
   });
-  const _tryLoadAsync = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -91,12 +92,12 @@ function _tryLoadAsync() {
 function _tryLoadOrResetCacheGatewayAsync() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
@@ -124,13 +125,13 @@ function _tryLoadOrResetCacheGatewayAsync() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_5 = tmp3;
-              let closure_4 = tmp5;
-              const dependencyMap = stack;
-              let c7 = 1;
+              closure_5 = tmp3;
+              closure_4 = tmp5;
+              dependencyMap = stack;
+              c7 = 1;
               c8 = 2;
               c9 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = dependencyMap();
               return obj1;
             }
@@ -183,7 +184,7 @@ function _tryLoadOrResetCacheGatewayAsync() {
       }
     })();
   });
-  const _tryLoadOrResetCacheGatewayAsync = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -192,15 +193,15 @@ function _tryLoadOrResetCacheGatewayAsync() {
   }
   return applyArgumentsResult;
 }
-let c3 = new require("set")("TryLoad");
-const tmp2 = new require("set")("TryLoad");
-const result = require("dispatcher").fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
+let closure_3 = new timestampDefault("TryLoad");
+const tmp2 = new timestampDefault("TryLoad");
+const result = require("set").fileFinishedImporting("modules/app_database/app/TryLoad.tsx");
 
 export const tryLoad = function tryLoad(arg0) {
   try {
     return arg0();
   } catch (tmp2) {
-    tmp2.log("database load failed.", tmp2);
+    logger.log("database load failed.", tmp2);
     return null;
   }
 };
@@ -220,8 +221,8 @@ export const tryLoadOrResetCacheGateway = function tryLoadOrResetCacheGateway(ar
   } catch (tmp2) {
     let tmp4 = ensureGuildLoaded;
     const _HermesInternal = HermesInternal;
-    tmp2.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
-    let obj = dispatcher;
+    logger.log("" + arg0 + ": exception thrown, resetting socket.", tmp2, tmp2.stack);
+    let obj = dispatcherDefault;
     obj = { error: null, action: null, metricAction: null };
     obj[0] = tmp2;
     const _HermesInternal2 = HermesInternal;

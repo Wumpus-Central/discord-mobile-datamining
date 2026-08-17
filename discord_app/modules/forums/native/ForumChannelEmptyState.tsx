@@ -1,21 +1,17 @@
 // discord_app/modules/forums/native/ForumChannelEmptyState.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import Text from "Text" /* 4734 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
-const memoResult = require("noop").memo((topViewHeight) => {
+const memoResult = importAllResult.memo((topViewHeight) => {
   let num = topViewHeight.topViewHeight;
   if (num === undefined) {
     num = 0;
@@ -23,7 +19,7 @@ const memoResult = require("noop").memo((topViewHeight) => {
   const tagFilter = topViewHeight.tagFilter;
   const tmp = callback();
   let obj = AccessibilityAnnouncer;
-  const rect = useSafeAreaInsets();
+  const rect = useSafeAreaInsetsDefault();
   obj = { style: items, children: null };
   items = [tmp.container, { marginBottom: rect.bottom + rect.top + num }];
   let obj2 = AccessibilityAnnouncer;
@@ -34,7 +30,7 @@ const memoResult = require("noop").memo((topViewHeight) => {
   }
   obj = { source: tmp4Result, style: tmp.image };
   const items1 = [closure_5(closure_4, obj), , ];
-  const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = tmp2(1236).intl;
   if (tagFilter.size > 0) {
     obj2 = { numTags: null };
@@ -63,6 +59,6 @@ const memoResult = require("noop").memo((topViewHeight) => {
   obj[1] = items1;
   return closure_6(closure_3, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/ForumChannelEmptyState.tsx");
 
 export default memoResult;

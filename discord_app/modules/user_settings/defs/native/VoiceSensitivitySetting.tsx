@@ -1,39 +1,41 @@
 // discord_app/modules/user_settings/defs/native/VoiceSensitivitySetting.tsx
-import { View } from "get ActivityIndicator";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createToggle from "createToggle";
-import { VoiceSensitivity } from "../../../../components_native/common/VoiceSensitivity.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import VoiceSensitivityDefault from "VoiceSensitivity" /* 12551 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import createToggle from "createToggle" /* 10669 */;
 
+const View = get_ActivityIndicator.View;
+const jsx = jsxProd.jsx;
 let closure_6 = createCacheKey.createStyles({ slider: { marginTop: 8 } });
 let obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["sqUm+k"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: MobileUserSettings.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
-    let vadAutoThreshold;
-    let vadThreshold;
     let obj = inputMode(589);
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_4];
     const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: callback().slider, children: jsx(VoiceSensitivity, obj) };
+    obj = { style: callback().slider, children: jsx(VoiceSensitivityDefault, obj) };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     obj = {
       auto: vadAutoThreshold,
       threshold: vadThreshold,
       onThresholdChange(threshold) {
-        let obj = outer1_1(outer1_2[7]);
+        let obj = closure_1_1(closure_1_2[7]);
         obj = { threshold };
         return obj.setMode(inputMode, obj);
       }
     };
     return <View auto={vadAutoThreshold} threshold={vadThreshold} onThresholdChange={function onThresholdChange(threshold) {
-      let obj = outer1_1(outer1_2[7]);
+      let obj = closure_1_1(closure_1_2[7]);
       obj = { threshold };
       return obj.setMode(inputMode, obj);
     }} />;
@@ -49,27 +51,25 @@ const createStaticResult = createToggle.createStatic({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["sqUm+k"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: MobileUserSettings.MobileUserSettings.VOICE,
   useDescription: function useVoiceSensitivitySettingDescription() {
-    let vadAutoThreshold;
-    let vadThreshold;
     let obj = inputMode(589);
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_4];
     const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ inputMode: store.getMode(), vadThreshold: store.getModeOptions().threshold, vadAutoThreshold: store.getModeOptions().autoThreshold }));
     inputMode = stateFromStoresObject.inputMode;
-    obj = { style: callback().slider, children: jsx(VoiceSensitivity, obj) };
+    obj = { style: callback().slider, children: jsx(VoiceSensitivityDefault, obj) };
     ({ vadThreshold, vadAutoThreshold } = stateFromStoresObject);
     obj = {
       auto: vadAutoThreshold,
       threshold: vadThreshold,
       onThresholdChange(threshold) {
-        let obj = outer1_1(outer1_2[7]);
+        let obj = closure_1_1(closure_1_2[7]);
         obj = { threshold };
         return obj.setMode(inputMode, obj);
       }
     };
     return <View auto={vadAutoThreshold} threshold={vadThreshold} onThresholdChange={function onThresholdChange(threshold) {
-      let obj = outer1_1(outer1_2[7]);
+      let obj = closure_1_1(closure_1_2[7]);
       obj = { threshold };
       return obj.setMode(inputMode, obj);
     }} />;
@@ -80,6 +80,6 @@ const createStaticResult = createToggle.createStatic({
     return items;
   }
 });
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/VoiceSensitivitySetting.tsx");
 
 export default createStaticResult;

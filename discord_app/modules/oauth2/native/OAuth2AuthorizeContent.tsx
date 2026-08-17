@@ -1,55 +1,40 @@
 // discord_app/modules/oauth2/native/OAuth2AuthorizeContent.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { fill: { flex: 1 }, scrollView: null, scrollViewContentLandscape: null, scrollViewContentPortrait: null, header: null, bodyContainer: null, bodyContainerBackground: null, footerPortrait: null, separator: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", width: "100%", flexGrow: 1, gap: 16 };
 createCacheKey[3] = { flexDirection: "column", width: "100%", flexGrow: 1, gap: 16 };
 createCacheKey[4] = { paddingTop: 24 };
 createCacheKey[5] = { flexDirection: "column", gap: 16, padding: 16 };
-createCacheKey[6] = { marginHorizontal: 16, backgroundColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.lg };
+createCacheKey[6] = { marginHorizontal: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[7] = { flexDirection: "column", padding: 16, gap: 16 };
-let obj1 = { marginHorizontal: 16, backgroundColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.lg };
-createCacheKey[8] = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
+let obj1 = { marginHorizontal: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.lg };
+createCacheKey[8] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/OAuth2AuthorizeContent.tsx");
 
 export default function OAuth2AuthorizeContent(onScroll) {
-  let appDetails;
-  let body;
-  let bottom;
-  let centerContent;
-  let footer;
-  let hasContentBackground;
-  let header;
-  let left;
-  let obscured;
-  let right;
-  let setAllContentSeen;
   ({ header, footer, appDetails, setAllContentSeen } = onScroll);
   onScroll = onScroll.onScroll;
   let ref;
   let first;
-  let closure_4;
+  closure_4 = undefined;
   let first1;
-  let closure_6;
-  let closure_7;
-  let c8;
+  closure_6 = undefined;
+  closure_7 = undefined;
+  closure_8 = undefined;
   ({ body, centerContent, hasContentBackground, obscured } = onScroll);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = first;
   ref = first.useRef(null);
   const size = setAllContentSeen(onScroll[6])();
@@ -70,10 +55,10 @@ export default function OAuth2AuthorizeContent(onScroll) {
     tmp12 = null == footer || tmp11[0] >= 0;
     const tmp13 = null == footer || tmp11[0] >= 0;
   }
-  c8 = tmp12;
+  closure_8 = tmp12;
   const items = [first, tmp12, first1, setAllContentSeen];
   const layoutEffect = obj.useLayoutEffect(() => {
-    if (c8) {
+    if (closure_8) {
       let obj = { layoutMeasurement: null, contentSize: null };
       obj = { height: null };
       obj[0] = first1;
@@ -132,7 +117,7 @@ export default function OAuth2AuthorizeContent(onScroll) {
   items2 = [tmp.scrollView, { paddingLeft: left, paddingRight: right }];
   items3 = [size.width > size.height ? tmp.scrollViewContentLandscape : tmp.scrollViewContentPortrait];
   let tmp3Result = tmp3(tmp4[8]);
-  const obj1 = { obscured, children: null };
+  obj1 = { obscured, children: null };
   let tmp17Result = null;
   tmp3Result = tmp3(tmp4[9]);
   if (null != header) {
@@ -165,9 +150,9 @@ export default function OAuth2AuthorizeContent(onScroll) {
   }
   items6[1] = tmp15Result;
   obj3[1] = items6;
-  items4[1] = c8(closure_4, obj3);
+  items4[1] = closure_8(closure_4, obj3);
   obj1[1] = items4;
-  obj[8] = c8(tmp3Result, obj1);
+  obj[8] = closure_8(tmp3Result, obj1);
   const items8 = [closure_6(first1, obj), ];
   tmp17Result = null;
   if (null != footer) {
@@ -181,5 +166,5 @@ export default function OAuth2AuthorizeContent(onScroll) {
   }
   items8[1] = tmp17Result;
   obj[1] = items8;
-  return c8(tmp3Result, obj);
+  return closure_8(tmp3Result, obj);
 };

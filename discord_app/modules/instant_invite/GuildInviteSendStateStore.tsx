@@ -1,17 +1,18 @@
 // discord_app/modules/instant_invite/GuildInviteSendStateStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 let obj = keys.create(() => ({}));
-const result = require("set").fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
+const result = set.fileFinishedImporting("modules/instant_invite/GuildInviteSendStateStore.tsx");
 
 export const setSendState = function setSendState(arg0, arg1, arg2) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  let closure_2 = arg2;
+  dependencyMap = arg1;
+  closure_2 = arg2;
   _batchUpdates.batchUpdates(() => {
     state.setState((arg0) => {
-      let obj = {};
+      obj = {};
       const merged = Object.assign(arg0);
       obj = {};
       const merged1 = Object.assign(arg0[closure_0]);

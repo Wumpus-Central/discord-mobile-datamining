@@ -1,13 +1,11 @@
 // discord_app/modules/rpc/server/commands/invites.tsx
-import closure_2 from "sum";
-import participantFromServer from "participantFromServer";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { InstantInviteSources } from "ME";
-import sum from "sum";
-import createRPCCommand from "createRPCCommand";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { InstantInviteSources } from "ME" /* 676 */;
+import sum from "sum" /* 505 */;
+import createRPCCommand from "createRPCCommand" /* 13846 */;
 
-let RPCCommands;
-let closure_6;
 const require = arg1;
 ({ RPCCommands, RPCErrors: closure_6 } = sum);
 let obj = {};
@@ -17,10 +15,6 @@ const items = [require("set").OAuth2Scopes.DM_CHANNELS_MESSAGES_WRITE, require("
 obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler(arg0) {
-  let args;
-  let closure_2;
-  let dependencyMap;
-  let require;
   ({ socket: require, args } = arg0);
   ({ user_id: dependencyMap, content: closure_2 } = args);
   return callback(function*() {
@@ -50,54 +44,54 @@ obj[1] = function handler(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
-            const id = outer1_0.application.id;
+            closure_0 = tmp3;
+            const id = closure_1_0.application.id;
             if (null == id) {
-              const obj1 = { errorCode: null };
-              obj1[0] = outer1_6.INVALID_COMMAND;
-              const rPCError = new outer1_0(8753).RPCError(obj1, "No application.");
+              obj1 = { errorCode: null };
+              obj1[0] = closure_1_6.INVALID_COMMAND;
+              const rPCError = new closure_1_0(8753).RPCError(obj1, "No application.");
               throw rPCError;
             } else {
               connectedActivityLocation = connectedActivityLocation.getConnectedActivityLocation();
               if (null == connectedActivityLocation) {
                 const obj2 = { errorCode: null };
-                obj2[0] = outer1_6.NO_ELIGIBLE_ACTIVITY;
-                const rPCError1 = new outer1_0(8753).RPCError(obj2, "No eligible activity for application. Ensure an activity was set using setActivity.");
+                obj2[0] = closure_1_6.NO_ELIGIBLE_ACTIVITY;
+                const rPCError1 = new closure_1_0(8753).RPCError(obj2, "No eligible activity for application. Ensure an activity was set using setActivity.");
                 throw rPCError1;
               } else {
                 const kind = connectedActivityLocation.kind;
-                if (outer1_0(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
-                  if (outer1_0(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
-                    if (outer1_0(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
-                      if (outer1_0(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
+                if (closure_1_0(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL !== kind) {
+                  if (closure_1_0(8738).EmbeddedActivityLocationKind.GUILD_CHANNEL_MESSAGE !== kind) {
+                    if (closure_1_0(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL !== kind) {
+                      if (closure_1_0(8738).EmbeddedActivityLocationKind.PRIVATE_CHANNEL_MESSAGE !== kind) {
                         const obj3 = { errorCode: null };
-                        obj3[0] = outer1_6.NO_ELIGIBLE_ACTIVITY;
-                        const rPCError2 = new outer1_0(8753).RPCError(obj3, "Unsupported activity location");
+                        obj3[0] = closure_1_6.NO_ELIGIBLE_ACTIVITY;
+                        const rPCError2 = new closure_1_0(8753).RPCError(obj3, "Unsupported activity location");
                         throw rPCError2;
                       }
                     }
-                    let channel = outer1_4.getChannel(connectedActivityLocation.channel_id);
+                    let channel = closure_1_4.getChannel(connectedActivityLocation.channel_id);
                     if (null == channel) {
                       let obj4 = { errorCode: null };
-                      obj4[0] = outer1_6.INVALID_CHANNEL;
-                      const rPCError3 = new outer1_0(8753).RPCError(obj4, "Invalid channel");
+                      obj4[0] = closure_1_6.INVALID_CHANNEL;
+                      const rPCError3 = new closure_1_0(8753).RPCError(obj4, "Invalid channel");
                       throw rPCError3;
-                    } else if (channel.type === outer1_0(692).ChannelTypes.DM) {
+                    } else if (channel.type === closure_1_0(692).ChannelTypes.DM) {
                       let obj5 = { errorCode: null };
-                      obj5[0] = outer1_6.INVALID_CHANNEL;
-                      const rPCError4 = new outer1_0(8753).RPCError(obj5, "Cannot send invite to a DM");
+                      obj5[0] = closure_1_6.INVALID_CHANNEL;
+                      const rPCError4 = new closure_1_0(8753).RPCError(obj5, "Cannot send invite to a DM");
                       throw rPCError4;
                     }
                   }
-                  let c2 = 1;
-                  obj5 = outer1_0(8701);
+                  c2 = 1;
+                  obj5 = closure_1_0(8701);
                   const obj6 = { channelId: null, applicationId: null, userId: null, prefixedContent: null, location: "RPC_ACTIVITY_INVITE_USER", inviteAnalyticsMetadata: null };
                   obj6[0] = channel.id;
                   obj6[1] = id;
                   obj6[2] = dependencyMap;
                   obj6[3] = c2;
                   const obj7 = { source: null };
-                  obj7[0] = outer1_5.ACTIVITY_INVITE;
+                  obj7[0] = closure_1_5.ACTIVITY_INVITE;
                   obj6[5] = obj7;
                   dependencyMap = 2;
                   connectedActivityLocation = 1;
@@ -105,7 +99,7 @@ obj[1] = function handler(arg0) {
                   obj8[0] = obj5.sendEmbeddedActivityInviteUser(obj6);
                   return obj8;
                 }
-                obj4 = outer1_0(13849);
+                obj4 = closure_1_0(13849);
                 channel = obj4.validateOpenInviteDialog(tmp69).channel;
               }
             }
@@ -113,8 +107,8 @@ obj[1] = function handler(arg0) {
         } else if (1 === tmp7) {
           c2 = 0;
           const obj9 = { errorCode: null };
-          obj9[0] = outer1_6.UNKNOWN_ERROR;
-          const rPCError5 = new outer1_0(8753).RPCError(obj9, "Failed to invite user");
+          obj9[0] = closure_1_6.UNKNOWN_ERROR;
+          const rPCError5 = new closure_1_0(8753).RPCError(obj9, "Failed to invite user");
           throw rPCError5;
         } else if (arg0 === 1) {
           connectedActivityLocation = 3;
@@ -142,6 +136,6 @@ obj[1] = function handler(arg0) {
   })();
 };
 obj[RPCCommands.INVITE_USER_EMBEDDED] = createRPCCommand.createRPCCommand(RPCCommands.INVITE_USER_EMBEDDED, obj);
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/commands/invites.tsx");
 
 export default obj;

@@ -1,17 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx
-import clearDismissUntil from "clearDismissUntil";
-import { NoticeTypes } from "ME";
-import { PremiumSubscriptionSKUs } from "GuildFeatures";
-import { defaultAreStatesEqual } from "../../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useCountdown } from "../../../../../../hooks/useCountdown.tsx";
-import { usePremiumTrialOffer } from "../../../../../premium/hooks/usePremiumTrialOffer.android.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import setDefault from "set" /* 687 */;
+import useCountdownDefault from "useCountdown" /* 7410 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
+import closure_3 from "clearDismissUntil" /* 13270 */;
+import { NoticeTypes } from "ME" /* 676 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-let closure_6 = 10 * require("set").Millis.SECOND;
-const result = require("GuildFeatures").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
+require = arg1;
+let closure_6 = 10 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/hooks/useShouldShowExpiringTrialOfferCard.tsx");
 
 export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpiringTrialOfferCard() {
-  const items = [clearDismissUntil];
+  const items = [closure_3];
   const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => noticeType.getNoticeType());
   const obj = defaultAreStatesEqual;
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
@@ -25,7 +26,7 @@ export const useShouldShowExpiringTrialOfferCard = function useShouldShowExpirin
     }
   }
   let tmp5 = null != premiumTrialOffer;
-  const tmp3 = useCountdown;
+  const tmp3 = useCountdownDefault;
   if (tmp5) {
     tmp5 = null != stateFromStores;
   }

@@ -1,8 +1,9 @@
 // discord_app/modules/collectibles/records/NameplateRecord.tsx
-import "fromServer";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import fromServerDefault from "fromServer" /* 1948 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
-const require = arg1;
+require = arg1;
+fromServerDefault;
 let prototype;
 prototype = function NameplateRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);

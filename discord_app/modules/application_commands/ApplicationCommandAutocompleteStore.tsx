@@ -1,21 +1,20 @@
 // discord_app/modules/application_commands/ApplicationCommandAutocompleteStore.tsx
-import handleInit from "handleInit";
-import { AnalyticEvents } from "ME";
-import set from "set";
-import { Store } from "initialize";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import closure_2 from "handleInit" /* 7527 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import set from "set" /* 500 */;
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
 import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function handleInit() {
   map.clear();
   map1.clear();
   return true;
 }
 function handleSetActiveCommand(arg0) {
-  let channelId;
-  let command;
   ({ channelId, command } = arg0);
   if (command != null) {
     const id = command.id;
@@ -47,12 +46,13 @@ function handleSetActiveCommand(arg0) {
 let map = new Map();
 let map1 = new Map();
 let map2 = new Map();
-set = set.isDesktop();
+let closure_7 = set.isDesktop();
+const Store = initializeDefault.Store;
 class ApplicationCommandAutocompleteStore extends Store {
 }
 const prototype = ApplicationCommandAutocompleteStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(handleInit);
+  this.waitFor(closure_2);
 };
 prototype["getLastErrored"] = function getLastErrored(id) {
   let obj = map1;
@@ -66,13 +66,13 @@ prototype["getLastErrored"] = function getLastErrored(id) {
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
     const _Map = Map;
-    const map = new Map();
+    map = new Map();
     obj[2] = map;
     const _Map2 = Map;
     map1 = new Map();
     obj[3] = map1;
     const _Map3 = Map;
-    const map2 = new Map();
+    map2 = new Map();
     obj[4] = map2;
     const _Map4 = Map;
     const map3 = new Map();
@@ -94,13 +94,13 @@ prototype["getAutocompleteChoices"] = function getAutocompleteChoices(id, name, 
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
     const _Map = Map;
-    const map = new Map();
+    map = new Map();
     obj[2] = map;
     const _Map2 = Map;
     map1 = new Map();
     obj[3] = map1;
     const _Map3 = Map;
-    const map2 = new Map();
+    map2 = new Map();
     obj[4] = map2;
     const _Map4 = Map;
     const map3 = new Map();
@@ -128,13 +128,13 @@ prototype["getAutocompleteLastChoices"] = function getAutocompleteLastChoices(id
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
     const _Map = Map;
-    const map = new Map();
+    map = new Map();
     obj[2] = map;
     const _Map2 = Map;
     map1 = new Map();
     obj[3] = map1;
     const _Map3 = Map;
-    const map2 = new Map();
+    map2 = new Map();
     obj[4] = map2;
     const _Map4 = Map;
     const map3 = new Map();
@@ -156,13 +156,13 @@ prototype["getLastResponseNonce"] = function getLastResponseNonce(id) {
     obj[0] = id;
     obj[1] = store.getActiveOptionName(id);
     const _Map = Map;
-    const map = new Map();
+    map = new Map();
     obj[2] = map;
     const _Map2 = Map;
     map1 = new Map();
     obj[3] = map1;
     const _Map3 = Map;
-    const map2 = new Map();
+    map2 = new Map();
     obj[4] = map2;
     const _Map4 = Map;
     const map3 = new Map();
@@ -178,10 +178,6 @@ set = {
   LOGOUT: handleInit,
   CHANNEL_SELECT: handleInit,
   APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST: function handleApplicationCommandAutocompleteRequest(arg0) {
-    let channelId;
-    let name;
-    let nonce;
-    let query;
     ({ nonce, channelId, query, name } = arg0);
     let obj = map1;
     if (!map1.has(channelId)) {
@@ -194,13 +190,13 @@ set = {
       obj[0] = id;
       obj[1] = store.getActiveOptionName(channelId);
       const _Map = Map;
-      const map = new Map();
+      map = new Map();
       obj[2] = map;
       const _Map2 = Map;
       map1 = new Map();
       obj[3] = map1;
       const _Map3 = Map;
-      const map2 = new Map();
+      map2 = new Map();
       obj[4] = map2;
       const _Map4 = Map;
       const map3 = new Map();
@@ -251,8 +247,6 @@ set = {
     }
   },
   APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE: function handleApplicationCommandAutocompleteResponse(arg0) {
-    let choices;
-    let nonce;
     ({ choices, nonce } = arg0);
     let _require;
     let obj = map;
@@ -278,7 +272,7 @@ set = {
         map1 = new Map();
         obj[3] = map1;
         const _Map3 = Map;
-        const map2 = new Map();
+        map2 = new Map();
         obj[4] = map2;
         const _Map4 = Map;
         const map3 = new Map();
@@ -294,8 +288,8 @@ set = {
         const map4 = new Map();
         const result1 = optionNameToAutocompleteQueries2.set(value.name, map4);
       }
-      let tmp29 = set;
-      if (set) {
+      let tmp29 = closure_7;
+      if (closure_7) {
         const activeOption = store.getActiveOption(value.channelId);
         let type;
         if (activeOption != null) {
@@ -307,16 +301,13 @@ set = {
       let mapped;
       if (choices != null) {
         mapped = choices.map((arg0) => {
-          let name;
-          let name_localized;
-          let value;
           ({ value, name_localized, name } = arg0);
           if (name_localized == null) {
             name_localized = name;
           }
           const obj = { displayName: name_localized, name, value: null };
           let NumberResult = value;
-          if (c0) {
+          if (closure_0) {
             const _Number = Number;
             NumberResult = Number(value);
           }
@@ -411,8 +402,6 @@ set = {
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: handleSetActiveCommand,
   APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function handleUpdateChannelState(arg0) {
-    let channelId;
-    let command;
     ({ channelId, command } = arg0);
     if (command != null) {
       const id = command.id;
@@ -442,7 +431,7 @@ set = {
     }
   }
 };
-const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(require("dispatcher"), set);
+const applicationCommandAutocompleteStore = new ApplicationCommandAutocompleteStore(dispatcherDefault, set);
 let result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandAutocompleteStore.tsx");
 
 export default applicationCommandAutocompleteStore;

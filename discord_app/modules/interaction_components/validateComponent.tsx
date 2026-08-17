@@ -1,23 +1,14 @@
 // discord_app/modules/interaction_components/validateComponent.tsx
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-const result = require("getSystemLocale").fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+
+const result = set.fileFinishedImporting("modules/interaction_components/validateComponent.tsx");
 
 export default function validateComponent(type, arg1, modal) {
-  let length;
-  let maxLength;
-  let maxValues;
-  let maxValues2;
-  let maxValues3;
-  let minLength;
-  let minValues;
-  let minValues2;
-  let minValues3;
-  let required;
-  let values;
   values = arg1;
   if (null != arg1) {
-    00038__(values.type === type.type, "component type matches state");
+    _modDef38(values.type === type.type, "component type matches state");
   }
   type = type.type;
   if (PermissionOverwriteType.ComponentType.BUTTON === type) {
@@ -75,7 +66,7 @@ export default function validateComponent(type, arg1, modal) {
                   formatToPlainStringResult1 = null;
                   if (num3 > maxValues2) {
                     const intl5 = tmp4(1236).intl;
-                    const obj1 = { maxValues: null };
+                    obj1 = { maxValues: null };
                     obj1[0] = maxValues2;
                     formatToPlainStringResult1 = intl5.formatToPlainString(tmp4(1236).t.dy6viJ, obj1);
                   }
@@ -126,7 +117,7 @@ export default function validateComponent(type, arg1, modal) {
               } else if (tmp4(1954).ComponentType.CHECKBOX === type) {
                 return null;
               } else {
-                00038__(false, "missing validator for this component");
+                _modDef38(false, "missing validator for this component");
               }
             }
           }

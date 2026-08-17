@@ -1,6 +1,8 @@
 // discord_app/modules/native_permissions/NativePermissionUtils.null.tsx
-import { NativePermissionBaseUtils } from "requestAuthorization";
+import set from "set" /* 2 */;
+import requestAuthorization from "requestAuthorization" /* 4844 */;
 
+const NativePermissionBaseUtils = requestAuthorization.NativePermissionBaseUtils;
 class NativePermissionDesktopNullUtils extends NativePermissionBaseUtils {
 }
 const prototype = NativePermissionDesktopNullUtils.prototype;
@@ -20,6 +22,6 @@ prototype["openAlertModal"] = function openAlertModal() {
 
 };
 const nativePermissionDesktopNullUtils = new NativePermissionDesktopNullUtils();
-const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
+const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionUtils.null.tsx");
 
 export default nativePermissionDesktopNullUtils;

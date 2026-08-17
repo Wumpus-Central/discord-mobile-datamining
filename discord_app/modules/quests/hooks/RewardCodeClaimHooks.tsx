@@ -1,14 +1,14 @@
 // discord_app/modules/quests/hooks/RewardCodeClaimHooks.tsx
-import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/quests/hooks/RewardCodeClaimHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/hooks/RewardCodeClaimHooks.tsx");
 
 export const useClaimOrFetchRewardCode = function useClaimOrFetchRewardCode(isClaimingReward) {
   isClaimingReward = isClaimingReward.isClaimingReward;
-  let closure_0 = isClaimingReward;
+  closure_0 = isClaimingReward;
   const isFetchingRewardCode = isClaimingReward.isFetchingRewardCode;
   const questContent = isClaimingReward.questContent;
   const quest = isClaimingReward.quest;
@@ -19,32 +19,32 @@ export const useClaimOrFetchRewardCode = function useClaimOrFetchRewardCode(isCl
   const setHasError = tmp[1];
   const tmp4 = rewardCode(preview.useState(false), 2);
   const first1 = tmp4[0];
-  let closure_9 = tmp4[1];
+  closure_9 = tmp4[1];
   closure_0 = undefined;
   closure_0 = quest((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c7 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c7 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      let useTrackQuestEventWithImpression = tmp3;
-      let c6 = 1;
-      outer1_9(true);
-      const obj1 = callback(questContent[3]);
+      closure_3 = tmp3;
+      c6 = 1;
+      closure_1_9(true);
+      obj1 = callback(questContent[3]);
       yield obj1.claimQuestReward(callback, closure_1, closure_2);
       if (1 === tmp7) {
         c6 = 0;
         v0(true);
-        outer1_9(false);
+        closure_1_9(false);
         v0 = 3;
       } else if (arg0 === 1) {
         v0 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         v0(false);
-        outer1_9(false);
+        closure_1_9(false);
         c6 = 0;
       }
       c6 = 0;
@@ -155,7 +155,7 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
         obj[3] = questContentPosition2;
         obj[4] = sourceQuestContent2;
         trackQuestContentClickedWithImpression1(obj);
-        const obj1 = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, sourceQuestContent: null };
+        obj1 = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, sourceQuestContent: null };
         obj1[0] = quest2.id;
         obj1[1] = questContent2;
         obj1[2] = tmp18(tmp17[11]).QuestContentCTA.VISIT_REDEMPTION_LINK;
@@ -169,7 +169,6 @@ export const useHandleRedemptionLinkClick = function useHandleRedemptionLinkClic
   }, items);
 };
 export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardCodePrimaryCtaClickHandler(claimCode) {
-  let userStatus;
   claimCode = claimCode.claimCode;
   let quest2 = claimCode;
   const fetchCode = claimCode.fetchCode;
@@ -244,7 +243,7 @@ export const useClaimRewardCodePrimaryCtaClickHandler = function useClaimRewardC
         obj[3] = questContentPosition2;
         obj[4] = sourceQuestContent2;
         trackQuestContentClickedWithImpression1(obj);
-        const obj1 = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, sourceQuestContent: null };
+        obj1 = { questId: null, questContent: null, questContentCTA: null, questContentPosition: null, sourceQuestContent: null };
         obj1[0] = quest2.id;
         obj1[1] = questContent2;
         obj1[2] = tmp18(tmp17[11]).QuestContentCTA.VISIT_REDEMPTION_LINK;

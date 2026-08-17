@@ -1,18 +1,18 @@
 // discord_app/design/components/Button/native/ButtonHooks.native.tsx
-import noop from "noop";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import closure_3 from "noop" /* 19 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
 import { SUBTLE_SPRING } from "../../../animation/reanimated/spring/springPresets.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
 
-const require = arg1;
+require = arg1;
 let c4 = "rgba(0,0,0,0.001)";
 let closure_5 = createCacheKey.experimental_createToken(() => "#161CBB");
 let closure_6 = createCacheKey.experimental_createToken(() => "#1318A0");
-createCacheKey = { primary: require("Themes").colors.CONTROL_PRIMARY_TEXT_DEFAULT, "experimental_welcome-secondary": require("Themes").unsafe_rawColors.WHITE, secondary: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT, tertiary: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_TEXT, destructive: require("Themes").colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-primary": require("Themes").colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-secondary": require("Themes").colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, active: require("Themes").colors.CONTROL_CONNECTED_TEXT_DEFAULT, "primary-overlay": require("Themes").colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, "secondary-overlay": require("Themes").colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, "experimental_premium-primary": require("Themes").colors.WHITE, "experimental_premium-basic": require("Themes").colors.WHITE, "experimental_premium-secondary": require("Themes").colors.TEXT_BRAND, "icon-only": require("Themes").colors.CONTROL_ICON_ONLY_ICON_DEFAULT, expressive: require("Themes").colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
+createCacheKey = { primary: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT, "experimental_welcome-secondary": ThemesDefault.unsafe_rawColors.WHITE, secondary: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, tertiary: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT, destructive: ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-primary": ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_TEXT_DEFAULT, "critical-secondary": ThemesDefault.colors.CONTROL_CRITICAL_SECONDARY_TEXT_DEFAULT, active: ThemesDefault.colors.CONTROL_CONNECTED_TEXT_DEFAULT, "primary-overlay": ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT, "secondary-overlay": ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT, "experimental_premium-primary": ThemesDefault.colors.WHITE, "experimental_premium-basic": ThemesDefault.colors.WHITE, "experimental_premium-secondary": ThemesDefault.colors.TEXT_BRAND, "icon-only": ThemesDefault.colors.CONTROL_ICON_ONLY_ICON_DEFAULT, expressive: ThemesDefault.colors.CONTROL_EXPRESSIVE_TEXT_DEFAULT };
 const styleProperties = createCacheKey.createStyleProperties((arg0) => {
   const obj = { backgroundInactive: null, backgroundPressed: null, borderInactive: null, borderPressed: null };
   switch (obj) {
@@ -2133,7 +2133,7 @@ const styleProperties = createCacheKey.createStyleProperties((arg0) => {
 });
 let closure_9 = { code: "function ButtonHooksNativeTsx1(){const{themedStyles,colors,interpolateColor,pressed}=this.__closure;var _themedStyles$backgro,_themedStyles,_themedStyles$borderC,_themedStyles2;const backgroundColor=(_themedStyles$backgro=(_themedStyles=themedStyles)===null||_themedStyles===void 0?void 0:_themedStyles.backgroundColor)!==null&&_themedStyles$backgro!==void 0?_themedStyles$backgro:[colors.backgroundInactive,colors.backgroundPressed];const borderColor=(_themedStyles$borderC=(_themedStyles2=themedStyles)===null||_themedStyles2===void 0?void 0:_themedStyles2.borderColor)!==null&&_themedStyles$borderC!==void 0?_themedStyles$borderC:[colors.borderInactive,colors.borderPressed];return{backgroundColor:interpolateColor(pressed.get(),[0,1],backgroundColor),borderColor:interpolateColor(pressed.get(),[0,1],borderColor)};}" };
 let closure_10 = { code: "function ButtonHooksNativeTsx2(){const{width,scaleAmountInPx,withSpring,interpolate,pressed,ON_PRESS_SPRING}=this.__closure;const scale=width.get()>0?(width.get()-scaleAmountInPx)/width.get():1;return{transform:[{scale:withSpring(interpolate(pressed.get(),[0,1],[1,scale]),ON_PRESS_SPRING,'animate-always')}]};}" };
-let result = require("ManaContext").fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Button/native/ButtonHooks.native.tsx");
 
 export const SAFE_TRANSPARENT_COLOR = "rgba(0,0,0,0.001)";
 export const useProfileThemedButtonStyles = function useProfileThemedButtonStyles(arg0) {
@@ -2146,13 +2146,13 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(theme[3]).unsafe_rawColors.WHITE;
+      const WHITE = memo(712).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
-      obj[1] = variant(theme[2]).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(theme[2]).getContrastingColor(tmp, obj);
-      const obj8 = variant(theme[2]);
-      const darkenColorResult = variant(theme[2]).darkenColor(contrastingColor, 0.5);
+      obj[1] = variant(4104).WCAGContrastRatios.HighContrastText;
+      const contrastingColor = variant(4104).getContrastingColor(tmp, obj);
+      const obj8 = variant(4104);
+      const darkenColorResult = variant(4104).darkenColor(contrastingColor, 0.5);
       obj = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
       obj[0] = items;
@@ -2161,45 +2161,45 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(theme[4]);
-      const tmp20 = theme;
-      const isThemeLightResult = variant(theme[4]).isThemeLight(theme);
-      const setColorOpacity2 = variant(theme[2]).setColorOpacity;
+      const obj5 = variant(1363);
+      const tmp20 = dependencyMap;
+      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const setColorOpacity2 = variant(4104).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(theme[2]);
-      const obj6 = variant(theme[4]);
-      const isThemeLightResult1 = variant(theme[4]).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(theme[2]).setColorOpacity;
+      const tmp24 = variant(4104);
+      const obj6 = variant(1363);
+      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const setColorOpacity3 = variant(4104).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      let obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
-      const items3 = [outer1_4, outer1_4];
+      const items3 = [closure_1_4, closure_1_4];
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(theme[4]);
-      const isThemeLightResult2 = obj.isThemeLight(theme);
-      const tmp4 = theme;
-      const setColorOpacity = variant(theme[2]).setColorOpacity;
+      obj = variant(1363);
+      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
+      const tmp4 = dependencyMap;
+      const setColorOpacity = variant(4104).setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(theme[4]);
-      const tmp8 = variant(theme[2]);
-      let obj2 = variant(theme[2]);
+      obj1 = variant(1363);
+      const tmp8 = variant(4104);
+      let obj2 = variant(4104);
       if (isThemeLightResult3) {
         let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
       } else {
@@ -2208,7 +2208,7 @@ export const useProfileThemedButtonStyles = function useProfileThemedButtonStyle
       obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
-      const items5 = [outer1_4, outer1_4];
+      const items5 = [closure_1_4, closure_1_4];
       obj2[1] = items5;
       return obj2;
     } else {
@@ -2230,13 +2230,13 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(theme[3]).unsafe_rawColors.WHITE;
+      const WHITE = memo(712).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
-      obj[1] = variant(theme[2]).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(theme[2]).getContrastingColor(tmp, obj);
-      const obj8 = variant(theme[2]);
-      const darkenColorResult = variant(theme[2]).darkenColor(contrastingColor, 0.5);
+      obj[1] = variant(4104).WCAGContrastRatios.HighContrastText;
+      const contrastingColor = variant(4104).getContrastingColor(tmp, obj);
+      const obj8 = variant(4104);
+      const darkenColorResult = variant(4104).darkenColor(contrastingColor, 0.5);
       obj = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
       obj[0] = items;
@@ -2245,45 +2245,45 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(theme[4]);
-      const tmp20 = theme;
-      const isThemeLightResult = variant(theme[4]).isThemeLight(theme);
-      const setColorOpacity2 = variant(theme[2]).setColorOpacity;
+      const obj5 = variant(1363);
+      const tmp20 = dependencyMap;
+      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const setColorOpacity2 = variant(4104).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(theme[2]);
-      const obj6 = variant(theme[4]);
-      const isThemeLightResult1 = variant(theme[4]).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(theme[2]).setColorOpacity;
+      const tmp24 = variant(4104);
+      const obj6 = variant(1363);
+      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const setColorOpacity3 = variant(4104).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      let obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
-      const items3 = [outer1_4, outer1_4];
+      const items3 = [closure_1_4, closure_1_4];
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(theme[4]);
-      const isThemeLightResult2 = obj.isThemeLight(theme);
-      const tmp4 = theme;
-      const setColorOpacity = variant(theme[2]).setColorOpacity;
+      obj = variant(1363);
+      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
+      const tmp4 = dependencyMap;
+      const setColorOpacity = variant(4104).setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(theme[4]);
-      const tmp8 = variant(theme[2]);
-      let obj2 = variant(theme[2]);
+      obj1 = variant(1363);
+      const tmp8 = variant(4104);
+      let obj2 = variant(4104);
       if (isThemeLightResult3) {
         let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
       } else {
@@ -2292,7 +2292,7 @@ export const useButtonTextColorStyles = function useButtonTextColorStyles(style)
       obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
-      const items5 = [outer1_4, outer1_4];
+      const items5 = [closure_1_4, closure_1_4];
       obj2[1] = items5;
       return obj2;
     } else {
@@ -2320,13 +2320,13 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(theme[3]).unsafe_rawColors.WHITE;
+      const WHITE = memo(712).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
-      obj[1] = variant(theme[2]).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(theme[2]).getContrastingColor(tmp, obj);
-      const obj8 = variant(theme[2]);
-      const darkenColorResult = variant(theme[2]).darkenColor(contrastingColor, 0.5);
+      obj[1] = variant(4104).WCAGContrastRatios.HighContrastText;
+      const contrastingColor = variant(4104).getContrastingColor(tmp, obj);
+      const obj8 = variant(4104);
+      const darkenColorResult = variant(4104).darkenColor(contrastingColor, 0.5);
       obj = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
       obj[0] = items;
@@ -2335,45 +2335,45 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(theme[4]);
-      const tmp20 = theme;
-      const isThemeLightResult = variant(theme[4]).isThemeLight(theme);
-      const setColorOpacity2 = variant(theme[2]).setColorOpacity;
+      const obj5 = variant(1363);
+      const tmp20 = dependencyMap;
+      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const setColorOpacity2 = variant(4104).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(theme[2]);
-      const obj6 = variant(theme[4]);
-      const isThemeLightResult1 = variant(theme[4]).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(theme[2]).setColorOpacity;
+      const tmp24 = variant(4104);
+      const obj6 = variant(1363);
+      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const setColorOpacity3 = variant(4104).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      let obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
-      const items3 = [outer1_4, outer1_4];
+      const items3 = [closure_1_4, closure_1_4];
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(theme[4]);
-      const isThemeLightResult2 = obj.isThemeLight(theme);
-      const tmp4 = theme;
-      const setColorOpacity = variant(theme[2]).setColorOpacity;
+      obj = variant(1363);
+      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
+      const tmp4 = dependencyMap;
+      const setColorOpacity = variant(4104).setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(theme[4]);
-      const tmp8 = variant(theme[2]);
-      let obj2 = variant(theme[2]);
+      obj1 = variant(1363);
+      const tmp8 = variant(4104);
+      let obj2 = variant(4104);
       if (isThemeLightResult3) {
         let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
       } else {
@@ -2382,7 +2382,7 @@ export const useIconTintStyles = function useIconTintStyles(arg0) {
       obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
-      const items5 = [outer1_4, outer1_4];
+      const items5 = [closure_1_4, closure_1_4];
       obj2[1] = items5;
       return obj2;
     } else {
@@ -2405,23 +2405,24 @@ export const useGradientPillStyles = function useGradientPillStyles(variant) {
 };
 export const useButtonPillStyles = function useButtonPillStyles(variant, pressed) {
   const _require = variant;
-  let obj = _require(theme[2]);
+  let obj = _ManaContext;
   const themeContext = obj.useThemeContext();
   const primaryColor = themeContext.primaryColor;
   let memo = primaryColor;
-  theme = themeContext.theme;
+  const theme = themeContext.theme;
+  dependencyMap = theme;
   let items = [theme, primaryColor, variant];
   memo = React.useMemo(() => {
     if (null == memo) {
       return null;
     } else if ("primary" === variant) {
-      const WHITE = memo(theme[3]).unsafe_rawColors.WHITE;
+      const WHITE = memo(712).unsafe_rawColors.WHITE;
       let obj = { base: null, contrastRatio: null };
       obj[0] = WHITE;
-      obj[1] = variant(theme[2]).WCAGContrastRatios.HighContrastText;
-      const contrastingColor = variant(theme[2]).getContrastingColor(tmp, obj);
-      const obj8 = variant(theme[2]);
-      const darkenColorResult = variant(theme[2]).darkenColor(contrastingColor, 0.5);
+      obj[1] = variant(4104).WCAGContrastRatios.HighContrastText;
+      const contrastingColor = variant(4104).getContrastingColor(tmp, obj);
+      const obj8 = variant(4104);
+      const darkenColorResult = variant(4104).darkenColor(contrastingColor, 0.5);
       obj = { backgroundColor: null, borderColor: null, color: null };
       const items = [contrastingColor, darkenColorResult];
       obj[0] = items;
@@ -2430,45 +2431,45 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       obj[2] = WHITE;
       return obj;
     } else if ("secondary" === tmp45) {
-      const obj5 = variant(theme[4]);
-      const tmp20 = theme;
-      const isThemeLightResult = variant(theme[4]).isThemeLight(theme);
-      const setColorOpacity2 = variant(theme[2]).setColorOpacity;
+      const obj5 = variant(1363);
+      const tmp20 = dependencyMap;
+      const isThemeLightResult = variant(1363).isThemeLight(dependencyMap);
+      const setColorOpacity2 = variant(4104).setColorOpacity;
       if (isThemeLightResult) {
         let setColorOpacity2Result = setColorOpacity2("white", 0.72);
       } else {
         setColorOpacity2Result = setColorOpacity2("white", 0.24);
       }
       const items2 = [setColorOpacity2Result, ];
-      const tmp24 = variant(theme[2]);
-      const obj6 = variant(theme[4]);
-      const isThemeLightResult1 = variant(theme[4]).isThemeLight(tmp20);
-      const setColorOpacity3 = variant(theme[2]).setColorOpacity;
+      const tmp24 = variant(4104);
+      const obj6 = variant(1363);
+      const isThemeLightResult1 = variant(1363).isThemeLight(tmp20);
+      const setColorOpacity3 = variant(4104).setColorOpacity;
       if (isThemeLightResult1) {
         let setColorOpacity3Result = setColorOpacity3("white", 0.62);
       } else {
         setColorOpacity3Result = setColorOpacity3("white", 0.34);
       }
-      let obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
+      obj1 = { backgroundColor: null, borderColor: null, color: "Array" };
       items2[1] = setColorOpacity3Result;
       obj1[0] = items2;
-      const items3 = [outer1_4, outer1_4];
+      const items3 = [closure_1_4, closure_1_4];
       obj1[1] = items3;
       return obj1;
     } else if ("tertiary" === tmp45) {
-      obj = variant(theme[4]);
-      const isThemeLightResult2 = obj.isThemeLight(theme);
-      const tmp4 = theme;
-      const setColorOpacity = variant(theme[2]).setColorOpacity;
+      obj = variant(1363);
+      const isThemeLightResult2 = obj.isThemeLight(dependencyMap);
+      const tmp4 = dependencyMap;
+      const setColorOpacity = variant(4104).setColorOpacity;
       if (isThemeLightResult2) {
         let setColorOpacityResult = setColorOpacity(tmp, 0.4);
       } else {
         setColorOpacityResult = setColorOpacity("white", 0.1);
       }
       const items4 = [setColorOpacityResult, ];
-      obj1 = variant(theme[4]);
-      const tmp8 = variant(theme[2]);
-      let obj2 = variant(theme[2]);
+      obj1 = variant(1363);
+      const tmp8 = variant(4104);
+      let obj2 = variant(4104);
       if (isThemeLightResult3) {
         let darkenColorResult1 = obj2.darkenColor(setColorOpacityResult, 0.3);
       } else {
@@ -2477,7 +2478,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
       obj2 = { backgroundColor: null, borderColor: null, color: "Array" };
       items4[1] = darkenColorResult1;
       obj2[0] = items4;
-      const items5 = [outer1_4, outer1_4];
+      const items5 = [closure_1_4, closure_1_4];
       obj2[1] = items5;
       return obj2;
     } else {
@@ -2485,7 +2486,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
     }
   }, items);
   const tmp3 = styleProperties(variant);
-  theme = tmp3;
+  dependencyMap = tmp3;
   const fn = function s() {
     let backgroundColor;
     if (memo != null) {
@@ -2493,7 +2494,7 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
     }
     if (backgroundColor == null) {
       const items = [, ];
-      ({ backgroundInactive: arr[0], backgroundPressed: arr[1] } = theme);
+      ({ backgroundInactive: arr[0], backgroundPressed: arr[1] } = dependencyMap);
       backgroundColor = items;
     }
     let borderColor;
@@ -2502,29 +2503,28 @@ export const useButtonPillStyles = function useButtonPillStyles(variant, pressed
     }
     if (borderColor == null) {
       const items1 = [, ];
-      ({ borderInactive: arr2[0], borderPressed: arr2[1] } = theme);
+      ({ borderInactive: arr2[0], borderPressed: arr2[1] } = dependencyMap);
       borderColor = items1;
     }
-    const obj = { backgroundColor: null, borderColor: null };
-    obj[0] = variant(theme[6]).interpolateColor(variant.get(), [0, 1], backgroundColor);
-    const obj2 = variant(theme[6]);
-    obj[1] = variant(theme[6]).interpolateColor(variant.get(), [0, 1], borderColor);
+    const obj = { backgroundColor: variant(4115).interpolateColor(variant.get(), [0, 1], backgroundColor), borderColor: null };
+    const obj2 = variant(4115);
+    obj[1] = variant(4115).interpolateColor(variant.get(), [0, 1], borderColor);
     return obj;
   };
-  obj = { themedStyles: memo, colors: tmp3, interpolateColor: _require(theme[6]).interpolateColor, pressed };
+  obj = { themedStyles: memo, colors: tmp3, interpolateColor: _ReanimatedRexport.interpolateColor, pressed };
   fn.__closure = obj;
   fn.__workletHash = 2383933325137;
   fn.__initData = closure_9;
-  return _require(theme[6]).useAnimatedStyle(fn);
+  return _ReanimatedRexport.useAnimatedStyle(fn);
 };
 export const useButtonScaleStyles = function useButtonScaleStyles(pressed, width, scaleAmountInPx) {
   const _require = pressed;
-  let closure_1 = width;
-  const dependencyMap = scaleAmountInPx;
+  closure_1 = width;
+  dependencyMap = scaleAmountInPx;
   let obj = _ReanimatedRexport;
   const fn = function n() {
     let obj = sharedValue1;
-    let num = 1;
+    num = 1;
     if (sharedValue1.get() > 0) {
       const diff = obj.get() - num;
       num = diff / obj.get();
@@ -2586,7 +2586,7 @@ export const useButtonPressAnimationProps = function useButtonPressAnimationProp
   tmpResult = tmp(4115);
   const fn = function n() {
     let obj = sharedValue1;
-    let num = 1;
+    num = 1;
     if (sharedValue1.get() > 0) {
       const diff = obj.get() - num;
       num = diff / obj.get();

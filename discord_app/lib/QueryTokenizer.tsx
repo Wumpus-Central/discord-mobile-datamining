@@ -1,4 +1,6 @@
 // discord_app/lib/QueryTokenizer.tsx
+import set from "set" /* 2 */;
+
 function getMatch(str, arg1, index) {
   let tmp3;
   if (null == arg1) {
@@ -156,8 +158,6 @@ prototype["reset"] = function reset() {
   this._nonTokenType = NON_TOKEN;
 };
 prototype["addRule"] = function addRule(type) {
-  let follows;
-  let validator;
   const self = this;
   type = type.type;
   ({ follows, validator } = type);
@@ -194,8 +194,6 @@ prototype["addRule"] = function addRule(type) {
   }
 };
 prototype["tokenize"] = function tokenize(errorcode) {
-  let _data;
-  let _data2;
   const self = this;
   let str = errorcode;
   const items = [];
@@ -453,7 +451,7 @@ prototype2["getData"] = function getData(arg0) {
 };
 QueryTokenizer.NON_TOKEN_TYPE = "NON_TOKEN";
 QueryTokenizer.Token = Token;
-let result = require("set").fileFinishedImporting("lib/QueryTokenizer.tsx");
+let result = set.fileFinishedImporting("lib/QueryTokenizer.tsx");
 
 export default QueryTokenizer;
 export const NON_TOKEN_TYPE = "NON_TOKEN";

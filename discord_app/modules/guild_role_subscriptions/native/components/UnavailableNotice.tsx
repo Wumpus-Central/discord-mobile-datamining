@@ -1,41 +1,38 @@
 // discord_app/modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15506_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import preloadDefault from "preload" /* 5449 */;
+import registerAssetDefault from "registerAsset" /* 15506 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, brightTitle: null, unavailableContainer: null, unavailableInfo: null, unavailableDescription: null, joinCtaTitle: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[1] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[2] = { justifyContent: "center" };
 createCacheKey[3] = { alignItems: "center", justifyContent: "center" };
 createCacheKey[4] = { marginTop: 8, marginHorizontal: 16, textAlign: "center" };
 createCacheKey[5] = { alignSelf: "center", marginTop: 16, paddingHorizontal: 24, textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/UnavailableNotice.tsx");
 
 export default function UnavailableNotice(brightTitle) {
-  let description;
-  let title;
   brightTitle = brightTitle.brightTitle;
   ({ title, description } = brightTitle);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: items, children: null };
   items = [, ];
   ({ container: arr[0], unavailableContainer: arr[1] } = tmp);
   obj = { style: tmp.unavailableInfo, children: null };
-  obj = { source: null };
-  obj[0] = registerAsset;
-  const items1 = [callback(preload, obj), , ];
+  obj = { source: registerAssetDefault };
+  const items1 = [callback(preloadDefault, obj), , ];
   const items2 = [tmp.joinCtaTitle, ];
   if (brightTitle) {
     brightTitle = tmp.brightTitle;

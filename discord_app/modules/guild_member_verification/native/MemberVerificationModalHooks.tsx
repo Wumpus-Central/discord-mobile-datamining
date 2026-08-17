@@ -1,22 +1,22 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalHooks.tsx
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import map from "map";
-import { setInitialVerification } from "map";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "map" /* 8527 */;
+import { setInitialVerification } from "map" /* 8527 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("map").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalHooks.tsx");
 
 export const useSetInitialVerificationEffect = function useSetInitialVerificationEffect(guildId) {
   let _require = guildId;
-  let obj = { initial: null, current: null };
+  obj = { initial: _require(obj[3]).useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1), current: null };
   _require = guildId;
-  const items = [map];
-  const items1 = [guildId];
-  obj[0] = _require(obj[3]).useStateFromStores(items, () => outer1_4.getInitialVerificationState(closure_0), items1);
+  items = [closure_4];
+  items1 = [guildId];
   const obj2 = _require(obj[3]);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_3];
   obj[1] = _require(obj[3]).useStateFromStoresObject(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -26,7 +26,7 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
     if (flag == null) {
       flag = false;
     }
-    const obj = {};
+    obj = {};
     obj[guildId(obj[4]).UserVerificationFieldPlatforms.EMAIL] = flag;
     let flag2;
     if (currentUser != null) {
@@ -40,18 +40,18 @@ export const useSetInitialVerificationEffect = function useSetInitialVerificatio
   });
   React = React.useRef(obj);
   const effect = React.useEffect(() => {
-    noop.current = obj;
+    closure_2.current = obj;
   });
   const items3 = [guildId];
   const effect1 = React.useEffect(() => {
     if (null == ref.current.initial) {
-      outer1_5(closure_0, tmp);
+      closure_1_5(closure_0, tmp);
     }
   }, items3);
   return obj.initial;
 };
 export const useUserVerificationState = function useUserVerificationState() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   return initialize.useStateFromStoresObject(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -61,7 +61,7 @@ export const useUserVerificationState = function useUserVerificationState() {
     if (flag == null) {
       flag = false;
     }
-    const obj = {};
+    obj = {};
     obj[guildId(obj[4]).UserVerificationFieldPlatforms.EMAIL] = flag;
     let flag2;
     if (currentUser != null) {
@@ -76,7 +76,7 @@ export const useUserVerificationState = function useUserVerificationState() {
 };
 export const useInitialVerification = function useInitialVerification(id) {
   const _require = id;
-  const items = [map];
+  const items = [closure_4];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => outer1_4.getInitialVerificationState(closure_0), items1);
+  return _initialize.useStateFromStores(items, () => closure_1_4.getInitialVerificationState(closure_0), items1);
 };

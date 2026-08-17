@@ -1,17 +1,17 @@
 // discord_app/modules/activities/useFetchDeveloperActivityShelfItems.tsx
-import noop from "noop";
-import initialize from "initialize";
-import { DevShelfFetchState } from "initialize";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "initialize" /* 7872 */;
+import { DevShelfFetchState } from "initialize" /* 7872 */;
 
 const require = arg1;
-const result = require("useIsActivitiesEnabledForCurrentPlatform").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useFetchDeveloperActivityShelfItems.tsx");
 
 export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperActivityShelfItems() {
   isActivitiesEnabledForCurrentPlatform = isActivitiesEnabledForCurrentPlatform(setting[2]).useIsActivitiesEnabledForCurrentPlatform();
   const DeveloperMode = isActivitiesEnabledForCurrentPlatform(setting[3]).DeveloperMode;
   setting = DeveloperMode.getSetting();
   let obj = isActivitiesEnabledForCurrentPlatform(setting[2]);
-  const items = [initialize];
+  const items = [closure_3];
   const stateFromStores = isActivitiesEnabledForCurrentPlatform(setting[4]).useStateFromStores(items, () => fetchState.getFetchState(), []);
   const items1 = [isActivitiesEnabledForCurrentPlatform, stateFromStores, setting];
   const effect = stateFromStores.useEffect(() => {
@@ -20,7 +20,7 @@ export const useFetchDeveloperActivityShelfItems = function useFetchDeveloperAct
       tmp = setting;
     }
     if (tmp) {
-      tmp = stateFromStores === outer1_4.INITIALIZED;
+      tmp = stateFromStores === closure_1_4.INITIALIZED;
     }
     if (tmp) {
       const developerApplications = isActivitiesEnabledForCurrentPlatform(setting[5]).fetchDeveloperApplications();

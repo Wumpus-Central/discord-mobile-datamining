@@ -1,46 +1,42 @@
 // discord_app/modules/forums/native/posts/list/ForumPostListFooter.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { AnalyticsObjects } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useTypingUserIds } from "../../../../chat/useTypingUsersIds.tsx";
-import { num2 } from "../ForumPostMessageCount.tsx";
-import { ForumPostTypingUsers } from "../ForumPostTypingUsers.tsx";
-import { MaxForumPostReactions } from "../reactions/ForumPostReactions.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import MaxForumPostReactions from "MaxForumPostReactions" /* 10627 */;
+import useTypingUserIds from "useTypingUserIds" /* 11151 */;
+import num2Default from "num2" /* 11194 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 11195 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { AnalyticsObjects } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start" }, dot: null };
-createCacheKey = { height: 4, width: 4, borderRadius: 2, backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginHorizontal: 8 };
+createCacheKey = { height: 4, width: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ME").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/list/ForumPostListFooter.tsx");
 
 export default function ForumPostListFooter(parentChannel) {
-  let firstMessage;
-  let hasUnreads;
-  let thread;
   ({ thread, firstMessage, hasUnreads } = parentChannel);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = useTypingUserIds;
   const typingUserIds = obj.useTypingUserIds(thread.id);
   let tmp5Result = typingUserIds.length > 0;
   obj = { style: tmp.footer, children: null };
-  const items = [callback(num2, { thread, hasUnreads }), , ];
+  const items = [callback(num2Default, { thread, hasUnreads }), , ];
   if (tmp5Result) {
     obj = { children: null };
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp.dot;
     const items1 = [tmp7(tmp6, obj1), ];
     const obj2 = { thread: null, typingUserIds: null, hasUnreads: null };
     obj2[0] = thread;
     obj2[1] = typingUserIds;
     obj2[2] = hasUnreads;
-    items1[1] = tmp7(ForumPostTypingUsers, obj2);
+    items1[1] = tmp7(ForumPostTypingUsersDefault, obj2);
     obj[0] = items1;
     tmp5Result = tmp5(closure_6, obj);
   }

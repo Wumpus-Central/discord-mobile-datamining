@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/voice/AudioSettingsPending.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 let closure_1 = {};
 const result = require("set").fileFinishedImporting("modules/user_settings/voice/AudioSettingsPending.tsx");
 
-export const getPendingAudioSettings = function getPendingAudioSettings(_slicedToArray, _slicedToArray) {
-  return dependencyMap["" + _slicedToArray + ":" + _slicedToArray];
+export const getPendingAudioSettings = function getPendingAudioSettings(closure_0, closure_0) {
+  return dependencyMap["" + closure_0 + ":" + closure_0];
 };
 export const updatePendingSettings = function updatePendingSettings(context, userId, arg2) {
   const combined = "" + context + ":" + userId;

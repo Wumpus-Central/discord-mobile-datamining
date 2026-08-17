@@ -1,20 +1,19 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { MediaKeyboardBottomSheetHandle } from "MediaKeyboardBottomSheetHandle.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef10275 from "module_10275" /* 10275 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 let obj = { headerHandleOnlyWrap: null };
-obj = { height: require("DRAG_HANDLE").HEADER_HANDLE_HEIGHT, paddingBottom: require("Themes").space.PX_4 };
+obj = { height: require("DRAG_HANDLE").HEADER_HANDLE_HEIGHT, paddingBottom: ThemesDefault.space.PX_4 };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
-  let animatedIndex;
-  let onPress;
+const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHeaderSimple(arg0) {
   ({ animatedIndex, onPress } = arg0);
-  return <View style={callback().headerHandleOnlyWrap}>{jsx(MediaKeyboardBottomSheetHandle, { animatedIndex, onPress })}</View>;
+  return <View style={callback().headerHandleOnlyWrap}>{jsx(_modDef10275, { animatedIndex, onPress })}</View>;
 });
-const result = require("DRAG_HANDLE").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHeaderSimple.tsx");
 
 export default memoResult;

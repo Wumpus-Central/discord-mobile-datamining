@@ -1,11 +1,13 @@
 // discord_app/modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx
-import { EMOJI_URL_BASE_SIZE } from "set";
-import { parsePollResultSystemMessageEmbed } from "../../../../polls/parsePollResultSystemMessageEmbed.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 1925 */;
+import parsePollResultSystemMessageEmbedDefault from "parsePollResultSystemMessageEmbed" /* 8261 */;
 
-const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
+const EMOJI_URL_BASE_SIZE = set2.EMOJI_URL_BASE_SIZE;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/PollResultSystemMessage.tsx");
 
 export const createPollResultSystemMessage = function createPollResultSystemMessage(message) {
-  const tmp3 = parsePollResultSystemMessageEmbed(message.message.embeds[0]);
+  const tmp3 = parsePollResultSystemMessageEmbedDefault(message.message.embeds[0]);
   if (null == tmp3) {
     return null;
   } else if (null == message.message.messageReference) {
@@ -21,7 +23,7 @@ export const createPollResultSystemMessage = function createPollResultSystemMess
     obj[2] = message.roleStyle;
     obj[1] = tmp(8187)(obj);
     obj[2] = tmp3.questionText;
-    const obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
+    obj1 = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
     obj1[1] = message.messageReference.channel_id;
     obj1[2] = message.messageReference.message_id;
     obj[3] = obj1;

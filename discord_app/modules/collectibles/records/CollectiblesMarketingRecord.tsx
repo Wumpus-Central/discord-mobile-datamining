@@ -1,9 +1,13 @@
 // discord_app/modules/collectibles/records/CollectiblesMarketingRecord.tsx
-import { CollectiblesMarketingBadgeRecord as closure_2 } from "fromServer";
-import { CollectiblesMarketingBannerRecord as closure_3 } from "fromServer";
-import { CollectiblesMarketingCoachmarkRecord as closure_4 } from "fromServer";
-import fromServer from "fromServer";
+import set from "set" /* 2 */;
+import fromServer from "fromServer" /* 5331 */;
+import fromServer2 from "fromServer" /* 5333 */;
+import fromServer3 from "fromServer" /* 5334 */;
+import closure_5 from "fromServer" /* 5335 */;
 
+let closure_2 = fromServer.CollectiblesMarketingBadgeRecord;
+let closure_3 = fromServer2.CollectiblesMarketingBannerRecord;
+let closure_4 = fromServer3.CollectiblesMarketingCoachmarkRecord;
 let prototype;
 prototype = function CollectiblesMarketingsRecord(marketingsBySurfaces) {
   const obj = Object.create(new.target.prototype);
@@ -24,8 +28,6 @@ prototype["fromServer"] = function fromServer(marketings) {
   }
   const obj = Object.create(prototype.prototype);
   obj.marketingsBySurfaces = Object.fromEntries(entries.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     let type;
     if (tmp2 != null) {
@@ -41,7 +43,7 @@ prototype["fromServer"] = function fromServer(marketings) {
       const items2 = [tmp, closure_4.fromServer(tmp2)];
       return items2;
     } else if (tmp4(tmp5[4]).CollectiblesMarketingType.TAB_TOOLTIP === type) {
-      const items3 = [tmp, fromServer.fromServer(tmp2)];
+      const items3 = [tmp, closure_5.fromServer(tmp2)];
       return items3;
     } else {
       const items4 = [tmp, undefined];
@@ -50,6 +52,6 @@ prototype["fromServer"] = function fromServer(marketings) {
   }));
   return obj;
 };
-const result = require("fromServer").fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/CollectiblesMarketingRecord.tsx");
 
 export const CollectiblesMarketingsRecord = prototype;

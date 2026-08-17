@@ -1,5 +1,7 @@
 // discord_app/modules/search/native/message_parsers/CachedSearchResultParser.tsx
-let result = require("set").fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("modules/search/native/message_parsers/CachedSearchResultParser.tsx");
 
 export const CachedSearchResultParser = function CachedSearchResultParser() {
   const obj = Object.create(new.target.prototype);

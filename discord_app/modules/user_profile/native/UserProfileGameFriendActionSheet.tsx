@@ -1,23 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfileGameFriendActionSheet.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF";
-import get_ActivityIndicator from "handleRelationshipAddError";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
-import jsxProd from "RedesignBottomSheetTitleHeaderBase";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 function GameFriendApplicationRow(application) {
   application = application.application;
   const userId = application.userId;
   const userDisplayName = application.userDisplayName;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const items = [, , , ];
   ({ id: arr[0], name: arr[1] } = application);
   items[2] = userDisplayName;
@@ -27,8 +24,7 @@ function GameFriendApplicationRow(application) {
     obj = { userDisplayName, userId, applicationId: application.id, gameName: application.name };
     const result = obj.confirmRemoveGameFriend(obj);
   }, items);
-  let obj = { trailing: null, label: null, onPress: null };
-  obj[0] = callback3(application(userDisplayName[11]).XSmallIcon, { size: "md", color: "redesign-button-tertiary-text" });
+  let obj = { trailing: callback3(application(userDisplayName[11]).XSmallIcon, { size: "md", color: "redesign-button-tertiary-text" }), label: null, onPress: null };
   obj = { style: tmp.applicationNameWrapper, children: null };
   obj = { style: tmp.gameIcon, resizeMode: "contain", source: null, disableColor: true };
   let str = application.getIconURL(32);
@@ -45,16 +41,12 @@ function GameFriendApplicationRow(application) {
 ({ ActivityIndicator: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
-createCacheKey = { width: 32, height: 32, borderRadius: require("Themes").radii.sm };
+createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("noop").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendActionSheet.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendActionSheet.tsx");
 
 export default function UserProfileGameFriendActionSheet(user) {
-  let c4;
-  let channelId;
-  let guildId;
-  let tmp7;
   user = user.user;
   let gameFriendsForUser;
   let memo;
@@ -66,13 +58,13 @@ export default function UserProfileGameFriendActionSheet(user) {
   gameFriendsForUser = obj.useGameFriendsForUser(user.id);
   const items = [gameFriendsForUser];
   memo = React.useMemo(() => gameFriendsForUser.map((applicationId) => applicationId.applicationId), items);
-  let obj1 = gameFriendsForUser(memo[16]);
+  obj1 = gameFriendsForUser(memo[16]);
   callback = obj1.useName(guildId, channelId, user);
   let first = callback2(React.useState(() => {
-    if (!outer1_8.isFriend(user.id)) {
+    if (!closure_1_8.isFriend(user.id)) {
       if (!obj.isBlockedOrIgnored(tmp.id)) {
         const relationshipType = obj.getRelationshipType(tmp.id);
-        return relationshipType !== outer1_9.PENDING_OUTGOING && relationshipType !== outer1_9.PENDING_INCOMING;
+        return relationshipType !== closure_1_9.PENDING_OUTGOING && relationshipType !== closure_1_9.PENDING_INCOMING;
       }
     }
     return false;
@@ -110,13 +102,13 @@ export default function UserProfileGameFriendActionSheet(user) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
+            closure_0 = tmp4;
             v02(true);
-            outer1_5(true);
-            let c3 = 2;
-            let obj2 = v0(outer1_2[17]);
-            const obj1 = { userId: null, context: null };
-            obj1[0] = outer1_0.id;
+            closure_1_5(true);
+            c3 = 2;
+            let obj2 = v0(closure_1_2[17]);
+            obj1 = { userId: null, context: null };
+            obj1[0] = closure_1_0.id;
             obj1[1] = { location: "User Profile Action Sheet" };
             v0 = 3;
             v02 = 1;
@@ -133,18 +125,18 @@ export default function UserProfileGameFriendActionSheet(user) {
             c3 = 1;
             v02(false);
             c3 = 0;
-            outer1_5(false);
+            closure_1_5(false);
             v02 = 3;
           } else if (arg0 === 1) {
             v02 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            obj = outer1_0(outer1_2[18]);
+            obj = closure_1_0(closure_1_2[18]);
             const result = obj.presentAddedFriendToast();
             c3 = 1;
           }
           c3 = 0;
-          outer1_5(false);
+          closure_1_5(false);
           v02 = 3;
           const obj3 = { value: null, done: true };
           obj3[0] = arg1;
@@ -182,9 +174,9 @@ export default function UserProfileGameFriendActionSheet(user) {
     if (tmp) {
       const obj = { application: null, userDisplayName: null, userId: null };
       obj[0] = id;
-      obj[1] = ME;
+      obj[1] = closure_3;
       obj[2] = user.id;
-      tmp = outer1_10(outer1_13, obj, id.id);
+      tmp = closure_1_10(closure_1_13, obj, id.id);
     }
     return tmp;
   });

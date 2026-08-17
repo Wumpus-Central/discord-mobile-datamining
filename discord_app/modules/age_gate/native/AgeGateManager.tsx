@@ -1,21 +1,18 @@
 // discord_app/modules/age_gate/native/AgeGateManager.tsx
-import closure_3 from "ME";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_6 from "handleConnectionOpen";
-import result from "result";
-import ME from "ME";
-import "initialize";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../AgeGateUtils.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "handleConnectionOpen" /* 4197 */;
+import result from "result" /* 1221 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ EXISTING_USER_AGE_GATE_MODAL_KEY: error, AgeGateSource: metroImportAll } = result);
+require = arg1;
+({ EXISTING_USER_AGE_GATE_MODAL_KEY: error, AgeGateSource: closure_8 } = result);
 ({ ChannelTypes: c9, GuildNSFWContentLevel: c10 } = ME);
+initializeDefault;
 class AgeGateManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -30,8 +27,6 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   shouldShowAgeGateForVoiceChannel.maybeShowAgeGate(guildId, channelId);
 };
 prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
-  let channelId;
-  let guildId;
   ({ guildId, channelId } = arg0);
   channel = channel.getChannel(channelId);
   let tmp2 = null != guildId;
@@ -49,21 +44,21 @@ prototype["handleChannelSelect"] = function handleChannelSelect(arg0) {
 };
 prototype["handleAgeGateModalOpen"] = function handleAgeGateModalOpen(source) {
   source = source.source;
-  ModalActionCreators.pushLazy(callback(function*() {
-    let closure_1 = tmp5;
-    let closure_0 = tmp2;
-    yield outer1_0(paths[10])(paths[9], paths.paths);
+  _modDef5260.pushLazy(callback(function*() {
+    closure_1 = tmp5;
+    closure_0 = tmp2;
+    yield closure_1_0(paths[10])(paths[9], paths.paths);
     closure_0 = arg1.default;
-    if (closure_0 === outer1_8.AUTH) {
+    if (closure_0 === closure_1_8.AUTH) {
       const obj = { animation: null };
-      obj[0] = outer1_0(paths[11]).ModalAnimation.SLIDE_IN_OUT;
-      outer1_0.modalConfig = obj;
+      obj[0] = closure_1_0(paths[11]).ModalAnimation.SLIDE_IN_OUT;
+      closure_1_0.modalConfig = obj;
     }
-    return outer1_0;
+    return closure_1_0;
   }), { source }, closure_7);
 };
 prototype["handleAgeGateModalClose"] = function handleAgeGateModalClose() {
-  ModalActionCreators.popWithKey(closure_7);
+  _modDef5260.popWithKey(closure_7);
 };
 prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   guild = guild.guild;
@@ -78,6 +73,6 @@ prototype["handleGuildUpdate"] = function handleGuildUpdate(guild) {
   }
 };
 const ageGateManager = new AgeGateManager();
-result = require("handleConnectionOpen").fileFinishedImporting("modules/age_gate/native/AgeGateManager.tsx");
+result = require("set").fileFinishedImporting("modules/age_gate/native/AgeGateManager.tsx");
 
 export default ageGateManager;

@@ -1,10 +1,12 @@
 // discord_app/modules/custom_status/utils/computeInitialClearAfter.tsx
-import { ClearAfterValues } from "StatusTypes";
+import set from "set" /* 2 */;
+import StatusTypes from "StatusTypes" /* 9292 */;
 import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
 
+const ClearAfterValues = StatusTypes.ClearAfterValues;
 const items = [, , ];
 ({ MINUTES_30: arr[0], HOURS_1: arr[1], HOURS_4: arr[2] } = ClearAfterValues);
-const result = require("set").fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/utils/computeInitialClearAfter.tsx");
 
 export default function computeInitialClearAfter() {
   const CustomStatusSetting = _explicitContentFromProto.CustomStatusSetting;

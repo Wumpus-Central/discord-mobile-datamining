@@ -1,5 +1,7 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelConstants.tsx
-const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelConstants.tsx");
 
 export const MediaPlaybackPanelModes = { DISMISSED: "dismissed", PIP: "pip" };
 export const PLAYBACK_COMPLETION_DETECTION_TOLERANCE = 100;

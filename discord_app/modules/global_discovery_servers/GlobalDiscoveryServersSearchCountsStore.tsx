@@ -1,8 +1,9 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx
-import { Store } from "initialize";
-import { V6OrEarlierAPIError } from "../../errors/index.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
 
-const require = arg1;
+require = arg1;
 const map = new Map();
 class SearchCountState {
 }
@@ -21,6 +22,7 @@ prototype["handleSearchCountFailure"] = function handleSearchCountFailure(error)
   this.error = aPIError;
   this.isFetching = false;
 };
+const Store = initializeDefault.Store;
 class GlobalDiscoveryServersSearchCountStore extends Store {
 }
 const prototype2 = GlobalDiscoveryServersSearchCountStore.prototype;
@@ -49,7 +51,7 @@ prototype2["getCounts"] = function getCounts(query) {
   return counts;
 };
 GlobalDiscoveryServersSearchCountStore.displayName = "GlobalDiscoveryServersSearchCountStore";
-const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchCountStore(require("dispatcher"), {
+const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchCountStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },
@@ -100,11 +102,11 @@ const globalDiscoveryServersSearchCountStore = new GlobalDiscoveryServersSearchC
     set = new Set(ignoreQueries.ignoreQueries);
     const item = map.forEach((arg0, arg1) => {
       if (!set.has(arg1)) {
-        outer1_2.delete(arg1);
+        closure_1_2.delete(arg1);
       }
     });
   }
 });
-let result = require("dispatcher").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersSearchCountsStore.tsx");
 
 export default globalDiscoveryServersSearchCountStore;

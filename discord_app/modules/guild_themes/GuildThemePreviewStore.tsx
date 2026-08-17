@@ -1,13 +1,12 @@
 // discord_app/modules/guild_themes/GuildThemePreviewStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import GuildThemePreviewOrigin from "GuildThemePreviewOrigin";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { cloneGuildThemeSettings } from "guildThemeSerialization.tsx";
+import apply from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import GuildThemePreviewOrigin from "GuildThemePreviewOrigin" /* 4258 */;
 
-let GuildThemePreviewOrigin;
-let GuildThemePreviewOwner;
-const require = arg1;
+require = arg1;
 function handleEnd() {
   let tmp = null == closure_5.guildId;
   if (tmp) {
@@ -24,11 +23,12 @@ function handleEnd() {
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewOrigin);
 const timeout = new require("start").Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
+const Store = initializeDefault.Store;
 class GuildThemePreviewStore extends Store {
 }
 const prototype = GuildThemePreviewStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint);
+  this.waitFor(closure_3);
 };
 Object.defineProperty(prototype, "guildId", {
   get: function guildId() {
@@ -109,19 +109,12 @@ prototype["hasChanges"] = function hasChanges() {
   return tmp;
 };
 GuildThemePreviewStore.displayName = "GuildThemePreviewStore";
-const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"), {
+const guildThemePreviewStore = new GuildThemePreviewStore(dispatcherDefault, {
   GUILD_THEME_PREVIEW_START: function handleStart(owner) {
-    let draft;
-    let draftEnabled;
-    let guildId;
-    let origin;
-    let original;
-    let originalEnabled;
     owner = owner.owner;
     ({ guildId, draft, original, draftEnabled, originalEnabled, origin } = owner);
     timeout.stop();
-    const obj = { guildId, draft: null, original: null, draftEnabled: null, originalEnabled: null, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
-    obj[1] = cloneGuildThemeSettings.cloneGuildThemeSettings(draft);
+    const obj = { guildId, draft: cloneGuildThemeSettings.cloneGuildThemeSettings(draft), original: null, draftEnabled: null, originalEnabled: null, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
     const obj2 = cloneGuildThemeSettings;
     obj[2] = cloneGuildThemeSettings.cloneGuildThemeSettings(original);
     obj[3] = draftEnabled;
@@ -406,7 +399,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(require("dispatcher"),
   },
   LOGOUT: handleEnd
 });
-const result = require("start").fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemePreviewStore.tsx");
 
 export default guildThemePreviewStore;
 export { GuildThemePreviewOrigin };

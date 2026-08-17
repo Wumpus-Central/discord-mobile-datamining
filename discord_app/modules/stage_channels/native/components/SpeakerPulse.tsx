@@ -1,34 +1,32 @@
 // discord_app/modules/stage_channels/native/components/SpeakerPulse.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let c9 = 0.16;
 createCacheKey = { pulse: null, border: null };
-createCacheKey = { backgroundColor: require("Themes").colors.WHITE };
+createCacheKey = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.STATUS_SPEAKING };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.STATUS_SPEAKING };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function SpeakerPulseTsx1(){const{animatedInnerOpacity}=this.__closure;return{opacity:animatedInnerOpacity.get()};}" };
 let closure_12 = { code: "function SpeakerPulseTsx2(){const{animatedOuterOpacity}=this.__closure;return{opacity:animatedOuterOpacity.get()};}" };
-const obj1 = { backgroundColor: require("Themes").colors.STATUS_SPEAKING };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
+const obj1 = { backgroundColor: ThemesDefault.colors.STATUS_SPEAKING };
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerPulse.tsx");
 
 export default function SpeakerPulse(style) {
   style = style.style;
   let stateFromStores;
   let sharedValue;
   let sharedValue1;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = stateFromStores(sharedValue1[6]);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => !useReducedMotion.useReducedMotion, []);
   sharedValue = stateFromStores(sharedValue1[7]).useSharedValue(c9);
   let obj2 = stateFromStores(sharedValue1[7]);
@@ -42,7 +40,7 @@ export default function SpeakerPulse(style) {
       const obj3 = stateFromStores(sharedValue1[7]);
       const obj4 = stateFromStores(sharedValue1[7]);
       const obj5 = stateFromStores(sharedValue1[8]);
-      const withDelayResult = obj4.withDelay(100, stateFromStores(sharedValue1[8]).withTiming(outer1_9, { duration: 250 }));
+      const withDelayResult = obj4.withDelay(100, stateFromStores(sharedValue1[8]).withTiming(closure_1_9, { duration: 250 }));
       const obj6 = stateFromStores(sharedValue1[7]);
       const obj7 = stateFromStores(sharedValue1[8]);
       const withRepeatResult = obj2.withRepeat(obj3.withSequence(withDelayResult, obj6.withDelay(250, stateFromStores(sharedValue1[8]).withTiming(0, { duration: 500 }))), -1, false);
@@ -50,20 +48,20 @@ export default function SpeakerPulse(style) {
       const obj9 = stateFromStores(sharedValue1[7]);
       const obj10 = stateFromStores(sharedValue1[7]);
       const obj11 = stateFromStores(sharedValue1[8]);
-      const withDelayResult1 = obj10.withDelay(350, stateFromStores(sharedValue1[8]).withTiming(outer1_9, { duration: 250 }));
+      const withDelayResult1 = obj10.withDelay(350, stateFromStores(sharedValue1[8]).withTiming(closure_1_9, { duration: 250 }));
       const obj12 = stateFromStores(sharedValue1[8]);
       const result2 = sharedValue.set(withRepeatResult);
       const result3 = sharedValue1.set(obj8.withRepeat(obj9.withSequence(withDelayResult1, stateFromStores(sharedValue1[8]).withTiming(0, { duration: 500 })), -1, false));
       const withRepeatResult1 = obj8.withRepeat(obj9.withSequence(withDelayResult1, stateFromStores(sharedValue1[8]).withTiming(0, { duration: 500 })), -1, false);
     } else {
-      const result4 = set(outer1_9);
-      const result5 = sharedValue1.set(outer1_9);
+      const result4 = set(closure_1_9);
+      const result5 = sharedValue1.set(closure_1_9);
     }
   }, items1);
   let obj3 = stateFromStores(sharedValue1[7]);
   class T {
     constructor() {
-      obj = { opacity: c1.get() };
+      obj = { opacity: closure_1.get() };
       return obj;
     }
   }

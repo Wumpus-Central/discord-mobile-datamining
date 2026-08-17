@@ -1,15 +1,12 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndCard.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { BountiesEndCardPressableCta } from "BountiesEndCardPressableCta.tsx";
+import set from "set" /* 2 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import BountiesEndCardPressableCtaDefault from "BountiesEndCardPressableCta" /* 14397 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => {
@@ -24,22 +21,20 @@ let closure_7 = createCacheKey.createStyles(() => {
   return obj;
 });
 let closure_8 = { code: "function BountiesModalEndCardTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
-const result = require("createCacheKey").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
+const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndCard.tsx");
 
 export default function BountiesModalEndCard(visible) {
-  let bounty;
-  let sourceQuestContent;
   visible = visible.visible;
   ({ bounty, sourceQuestContent } = visible);
   const tmp = callback3();
   visible(4115);
   const fn = function y() {
-    let obj = visible(outer1_2[4]);
+    let obj = visible(closure_1_2[4]);
     let num = 0;
     if (visible) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, visible(outer1_2[5]).timingStandard) };
+    obj = { opacity: obj.withTiming(num, visible(closure_1_2[5]).timingStandard) };
     return obj;
   };
   let obj = { withTiming: visible(4664).withTiming, visible, timingStandard: visible(4667).timingStandard };
@@ -53,17 +48,17 @@ export default function BountiesModalEndCard(visible) {
     obj = { style: null };
     obj[0] = tmp.backdropTint;
     const items1 = [callback(closure_4, obj), , ];
-    const obj1 = { colors: null, locations: null, style: null };
+    obj1 = { colors: null, locations: null, style: null };
     obj1[0] = ["rgba(0, 0, 0, 0.60)", "rgba(0, 0, 0, 1)"];
     obj1[1] = [0, 0.841];
     obj1[2] = tmp.backdropGradient;
-    items1[1] = callback(LinearGradient, obj1);
+    items1[1] = callback(LinearGradientDefault, obj1);
     const obj2 = { bounty: null, sourceQuestContent: null };
     obj2[0] = bounty;
     obj2[1] = sourceQuestContent;
-    items1[2] = callback(BountiesEndCardPressableCta, obj2);
+    items1[2] = callback(BountiesEndCardPressableCtaDefault, obj2);
     obj[2] = items1;
-    visible = callback2(ReanimatedRexport.View, obj);
+    visible = callback2(_modDef4115.View, obj);
   }
   return visible;
 };

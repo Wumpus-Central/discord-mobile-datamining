@@ -1,20 +1,20 @@
 // discord_app/design/components/mana-assets/native/generated/DiscordNitroLockupLogo.native.tsx
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/DiscordNitroLockupLogo-2x.png.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../tokens/native/useToken.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import metadataDefault from "metadata" /* 5645 */;
 
-const result = require("Themes").fileFinishedImporting("design/components/mana-assets/native/generated/DiscordNitroLockupLogo.native.tsx");
+const Image = get_ActivityIndicator.Image;
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/DiscordNitroLockupLogo.native.tsx");
 
 export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
-  let accessibilityLabel;
-  let accessible;
-  let resizeMode;
   let ICON_STRONG = color.color;
   ({ accessible, accessibilityLabel, resizeMode } = color);
   if (ICON_STRONG === undefined) {
-    ICON_STRONG = Themes.colors.ICON_STRONG;
+    ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
   }
   let num = color.width;
   if (num === undefined) {
@@ -42,12 +42,7 @@ export const DiscordNitroLockupLogo = function DiscordNitroLockupLogo(color) {
     }
     tmp5 = null != ICON_STRONG && typeof ICON_STRONG === "string";
   }
-  const obj1 = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj1[1] = { uri: metadata };
-  const items = [{ width: num * num3, height: num2 * num3 }, tmp6];
-  obj1[2] = items;
-  obj1[3] = accessible;
-  obj1[4] = accessibilityLabel;
-  obj1[5] = resizeMode;
-  return <Image fadeDuration={0} source={null} style={null} accessible={null} accessibilityLabel={null} resizeMode={null} />;
+  obj1 = { fadeDuration: 0, source: { uri: metadataDefault }, style: items, accessible, accessibilityLabel, resizeMode };
+  items = [{ width: num * num3, height: num2 * num3 }, tmp6];
+  return <Image fadeDuration={0} source={{ uri: metadataDefault }} style={items} accessible={accessible} accessibilityLabel={accessibilityLabel} resizeMode={resizeMode} />;
 };

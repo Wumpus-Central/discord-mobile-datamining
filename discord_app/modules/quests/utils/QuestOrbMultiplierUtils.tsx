@@ -1,11 +1,13 @@
 // discord_app/modules/quests/utils/QuestOrbMultiplierUtils.tsx
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { parseServerPerkConfigKind } from "../../premium/perks_state/PerksStateUtils.tsx";
+import set from "set" /* 2 */;
+import parseServerPerkConfigKind from "parseServerPerkConfigKind" /* 1938 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+
 let obj = { UPSELL: "UPSELL", NITRO: "NITRO", CREPE: "CREPE", INELIGIBLE: "INELIGIBLE" };
 obj = { NITRO: "nitro", CREPE: "crepe" };
 const items = [, ];
 ({ CREPE: arr[0], NITRO: arr[1] } = obj);
-const result = require("create").fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
+const result = set.fileFinishedImporting("modules/quests/utils/QuestOrbMultiplierUtils.tsx");
 
 export const QuestOrbMultiplierEligibilityType = obj;
 export const QuestOrbMultiplierSource = obj;
@@ -13,7 +15,7 @@ export const shouldReceiveQuestOrbMultiplier = function shouldReceiveQuestOrbMul
   return items.includes(questOrbMultiplierEligibilityForUser);
 };
 export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(perks) {
-  const obj = getPremiumPlanItem;
+  obj = getPremiumPlanItemDefault;
   if (obj.canUseMoreQuestOrbs(perks)) {
     if (tmpResult.canUseQuestOrbMultiplier(perks)) {
       return obj.NITRO;
@@ -45,9 +47,9 @@ export const getQuestOrbMultiplierSource = function getQuestOrbMultiplierSource(
       }
       return NITRO;
     }
-    tmpResult = tmp(4039);
+    tmpResult = getPremiumPlanItemDefault;
   } else {
     return null;
   }
-  tmp = importDefault;
+  const tmp = importDefault;
 };

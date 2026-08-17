@@ -1,6 +1,8 @@
 // discord_common/js/packages/kv-storage/js/api/EntityDao.tsx
-import { TableId } from "../types/index.tsx";
-import { fromDatabaseTransaction } from "Table.tsx";
+import set from "set" /* 2 */;
+import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
+import TableId from "TableId" /* 1962 */;
+
 let EntityDao;
 class EntityDao {
   constructor(arg0, arg1, arg2) {
@@ -85,21 +87,21 @@ prototype["putAll"] = function putAll(arg0) {
   return this.transaction((putAll) => putAll.putAll(closure_0, Replace), "" + this.prefix + " putAll");
 };
 prototype["replaceAll"] = function replaceAll(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return this.transaction((str) => str.replaceAll(closure_0), "" + this.prefix + " replaceAll");
 };
 prototype["delete"] = function delete(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return this.transaction((arg0) => arg0.delete(closure_0), "" + this.prefix + " delete");
 };
 prototype["transaction"] = function transaction(arg0, arg1) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_3 !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(outer1_3.prototype);
+    const obj = Object.create(closure_1_3.prototype);
     obj.transaction = transaction;
     return closure_0(obj);
   }, arg1);
@@ -179,7 +181,7 @@ prototype2["deleteAllExcept"] = function deleteAllExcept(arg0) {
   const transaction = this.transaction;
   transaction.deleteAllExcept([], arg0);
 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/EntityDao.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/EntityDao.tsx");
 
 export { EntityDao };
 export { EntityDaoTransaction };

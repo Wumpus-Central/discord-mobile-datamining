@@ -1,7 +1,7 @@
 // discord_app/modules/opt_in_channels/useShowChannelOptInNotice.tsx
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { NULL_STRING_GUILD_ID } from "ME";
-import { ChannelFlags } from "set";
+import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { NULL_STRING_GUILD_ID } from "ME" /* 676 */;
+import { ChannelFlags } from "set" /* 1398 */;
 import { useOptInEnabledForGuild } from "isOptInEnabled.tsx";
 
 const require = arg1;
@@ -15,11 +15,11 @@ export default function useShowChannelOptInNotice(getGuildId) {
   }
   let optInEnabledForGuild = _useOptInEnabledForGuild.useOptInEnabledForGuild(null != guildId ? getGuildId.guild_id : NULL_STRING_GUILD_ID);
   let tmpResult = tmp(589);
-  const items = [updateUserGuildSettingsInternal];
+  const items = [closure_2];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     let result = null != closure_0;
     if (result) {
-      result = outer1_2.isChannelRecordOrParentOptedIn(tmp);
+      result = closure_1_2.isChannelRecordOrParentOptedIn(tmp);
     }
     return result;
   });

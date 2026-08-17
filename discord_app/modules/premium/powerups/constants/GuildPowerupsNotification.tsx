@@ -1,5 +1,7 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsNotification.tsx
-const result = require("set").fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsNotification.tsx");
 
 export const GUILD_POWERUP_NOTIFICATION_COOLDOWN = 21600000;
 export const BOOST_TO_UNLOCK_COACHMARK_COOLDOWN = 2592000000;

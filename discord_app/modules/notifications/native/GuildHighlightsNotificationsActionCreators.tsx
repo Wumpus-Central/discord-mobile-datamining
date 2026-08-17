@@ -1,22 +1,25 @@
 // discord_app/modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx
-import { NotificationUserFeedbackReasons as closure_3 } from "NotificationUserFeedbackReasons";
-import { AnalyticEvents } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import NotificationUserFeedbackReasons from "NotificationUserFeedbackReasons" /* 10809 */;
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
-const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
+let closure_3 = NotificationUserFeedbackReasons.NotificationUserFeedbackReasons;
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/notifications/native/GuildHighlightsNotificationsActionCreators.tsx");
 
 export const openGuildHighlightNotificationForPush = function openGuildHighlightNotificationForPush(guildId, arg1, TRENDING_CONTENT_PUSH, NOTIFICATION_CENTER, arg4) {
   const _require = guildId;
-  const importDefault = arg1;
-  const dependencyMap = TRENDING_CONTENT_PUSH;
+  importDefault = arg1;
+  dependencyMap = TRENDING_CONTENT_PUSH;
   const constants = NOTIFICATION_CENTER;
-  let closure_4 = arg4;
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  closure_4 = arg4;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { guildId, feedbackSettings: null };
   obj = { reasons: null, onFeedbackShown: null, onFeedbackCompleted: null };
-  const obj1 = { value: constants.TOO_MANY, label: null };
+  obj1 = { value: constants.TOO_MANY, label: null };
   const intl = _getSystemLocale.intl;
   obj1[1] = intl.string(_getSystemLocale.t.pLeQp0);
   const items = [obj1, , , , ];

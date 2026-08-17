@@ -1,21 +1,19 @@
 // discord_app/modules/guild_mod_dash_member_safety/PrunePreviewStore.tsx
-import _slicedToArray from "_slicedToArray";
-import keys from "keys";
+import closure_0 from "_slicedToArray" /* 32 */;
+import keys from "keys" /* 644 */;
 
 let c1 = 3600000;
 keys = keys.create((arg0) => {
-  let _slicedToArray = arg0;
+  closure_0 = arg0;
   return {
     entries: {},
     setPreview(arg0, arg1, arg2, arg3, arg4) {
       const callback = arg3;
-      let closure_1 = arg4;
+      closure_1 = arg4;
       const items = [...arg2];
       const sorted = items.sort();
-      let closure_2 = "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
+      closure_2 = "" + arg0 + ":" + arg1 + ":" + sorted.join(",");
       callback((arg0) => {
-        let tmp8;
-        let tmp9;
         let entries = {};
         const merged = Object.assign(arg0.entries);
         entries = {};
@@ -72,13 +70,13 @@ export const clearAllPrunePreviews = function clearAllPrunePreviews() {
   state.clear();
 };
 export const usePrunePreview = function usePrunePreview(arg0, arg1, arg2) {
-  let _slicedToArray = arg0;
-  let closure_1 = arg1;
-  const keys = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  keys = arg2;
   let tmp = keys((arg0) => {
     const items = [...closure_2];
     const sorted = items.sort();
-    const tmp = arg0.entries["" + _slicedToArray + ":" + closure_1 + ":" + sorted.join(sorted, ",")];
+    const tmp = arg0.entries["" + closure_0 + ":" + closure_1 + ":" + sorted.join(sorted, ",")];
     let tmp2 = null;
     if (null != tmp) {
       const _Date = Date;

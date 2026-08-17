@@ -1,21 +1,21 @@
 // discord_app/modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx
-import reset from "reset";
-import handleThemeChange from "handleThemeChange";
-import { SystemThemeState } from "SystemThemeState";
-import { AnalyticEvents } from "ME";
-import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_7 } from "ThemeTypes";
-import { AnalyticsPremiumFeatureNames as closure_8 } from "GuildFeatures";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { ClientThemeType } from "../../../client_themes/ClientThemesTypes.tsx";
-import { setSystemTheme } from "../../ThemeActionCreators.tsx";
-import { enableSameAsDeviceTheme } from "../SameAsDeviceThemeUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import ClientThemeType from "ClientThemeType" /* 1349 */;
+import setSystemTheme from "setSystemTheme" /* 4222 */;
+import enableSameAsDeviceTheme from "enableSameAsDeviceTheme" /* 14530 */;
+import closure_3 from "reset" /* 1346 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import { SystemThemeState } from "SystemThemeState" /* 1305 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { BACKGROUND_GRADIENT_PRESETS_MOBILE as closure_7 } from "ThemeTypes" /* 1348 */;
+import { AnalyticsPremiumFeatureNames as closure_8 } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-let result = require("SystemThemeState").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
 export const handleSaveTheme = function handleSaveTheme(found, analyticsLocations, isSynced) {
   if (found.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
     obj[0] = constants.CLIENT_THEME;
     obj[1] = "custom theme";
@@ -38,7 +38,7 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
       const tmpResult3 = tmp(14529);
       tmp(11135).updateCustomTheme(found.customThemeSettings, customThemeBaseTheme);
       const tmpResult4 = tmp(11135);
-      const obj1 = { customUserThemeSettings: null, theme: null };
+      obj1 = { customUserThemeSettings: null, theme: null };
       obj1[0] = found.customThemeSettings;
       obj1[1] = customThemeBaseTheme;
       return tmp(9365).saveClientTheme(obj1);
@@ -74,7 +74,7 @@ export const handleSaveTheme = function handleSaveTheme(found, analyticsLocation
 export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(theme, systemTheme, analyticsLocations) {
   if ("system" !== theme.theme) {
     if (theme.type === ClientThemeType.ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-      let obj = expandEventProperties;
+      let obj = expandEventPropertiesDefault;
       obj = { feature_name: null, theme_name: null, is_persisted: null, is_synced: null, location_stack: null };
       obj[0] = constants.CLIENT_THEME;
       obj[1] = "custom theme";
@@ -93,7 +93,7 @@ export const handleSaveSyncedModeTheme = function handleSaveSyncedModeTheme(them
       obj[systemTheme] = theme;
       const result = tmp14Result.updateThemePreferences(obj);
       if (theme.type === tmp14(1349).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT) {
-        const obj1 = { customUserThemeSettings: null };
+        obj1 = { customUserThemeSettings: null };
         obj1[0] = theme.customThemeSettings;
         const result1 = tmp14(4222).updateSyncedClientTheme(systemTheme, obj1);
         const tmp14Result1 = tmp14(4222);
@@ -134,7 +134,7 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
   }
   if (null != prop1) {
     const findIndexResult1 = memo2.findIndex((type) => {
-      let tmp = type.type === syncedClientTheme(outer1_2[6]).ClientThemeType.BACKGROUND_GRADIENT_PRESET;
+      let tmp = type.type === syncedClientTheme(closure_1_2[6]).ClientThemeType.BACKGROUND_GRADIENT_PRESET;
       if (tmp) {
         tmp = type.id === syncedClientTheme.backgroundGradientPresetId;
       }
@@ -144,7 +144,7 @@ export const getSyncedModeThemeIndex = function getSyncedModeThemeIndex(memo2, c
       return findIndexResult1;
     }
   }
-  let closure_1 = syncedClientTheme.themePreferenceForSystemTheme(closure_0);
+  closure_1 = syncedClientTheme.themePreferenceForSystemTheme(closure_0);
   const findIndexResult2 = memo2.findIndex((theme) => theme.theme === closure_1);
   let num3 = 0;
   if (findIndexResult2 >= 0) {
@@ -161,17 +161,13 @@ export const disableSameAsDeviceTheme = function disableSameAsDeviceTheme() {
   const result = setSystemTheme.clearSyncedClientThemes();
 };
 export const trackClientThemeUpdated = function trackClientThemeUpdated(arg0) {
-  let analyticsLocations;
-  let isPersisted;
-  let isSynced;
-  let themeName;
   ({ isPersisted, isSynced, themeName, analyticsLocations } = arg0);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { feature_name: constants.CLIENT_THEME, theme_name: themeName, is_persisted: isPersisted, is_synced: isSynced, location_stack: analyticsLocations };
   obj.track(AnalyticEvents.CLIENT_THEME_UPDATED, obj);
 };
 export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo1, c3, c4) {
-  let closure_0 = userPreset;
+  closure_0 = userPreset;
   if (null != userPreset) {
     const findIndexResult = memo1.findIndex((type) => type.type === userPreset(1349).ClientThemeType.BACKGROUND_GRADIENT_PRESET);
     const findIndexResult1 = closure_7.findIndex((id) => id.id === userPreset.id);

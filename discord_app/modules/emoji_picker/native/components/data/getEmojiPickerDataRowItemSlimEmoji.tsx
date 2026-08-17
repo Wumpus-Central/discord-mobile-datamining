@@ -1,6 +1,8 @@
 // discord_app/modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx
+import set from "set" /* 2 */;
 import { useEmojiPickerData } from "useEmojiPickerData.tsx";
-const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
+
+const result = set.fileFinishedImporting("modules/emoji_picker/native/components/data/getEmojiPickerDataRowItemSlimEmoji.tsx");
 
 export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked) {
   const _require = isSectionNitroLocked;
@@ -8,7 +10,7 @@ export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked)
   return {
     type: _useEmojiPickerData.EmojiPickerItemType.EMOJI_ROW_SLIM,
     emojis: emojis.map((type) => {
-      if (type.type === isSectionNitroLocked(outer1_1[1]).EmojiTypes.UNICODE) {
+      if (type.type === isSectionNitroLocked(closure_1_1[1]).EmojiTypes.UNICODE) {
         let obj = { name: null, surrogates: null };
         ({ name: obj5[0], surrogates: obj5[1] } = type);
         return obj;
@@ -25,7 +27,7 @@ export default function getEmojiPickerDataRowItemSlimEmoji(isSectionNitroLocked)
         if (type.animated) {
           ({ id: obj3[0], name: obj3[1] } = type);
           obj = { id: null, name: null, animated: true };
-          const obj1 = { id: null, name: null, animated: true };
+          obj1 = { id: null, name: null, animated: true };
         } else if (hasItem) {
           const obj2 = { id: null, name: null, disabled: true };
           ({ id: obj2[0], name: obj2[1] } = type);

@@ -1,25 +1,25 @@
 // discord_app/modules/app_analytics/clickstream/Clickstream.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import createRTCConnection from "createRTCConnection";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { getClickstreamDrainEvent } from "ClickstreamEvents.tsx";
-import { clickstreamExperimentEnabled } from "ClickstreamExperiment.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import clickstreamExperimentEnabled from "clickstreamExperimentEnabled" /* 5058 */;
+import getClickstreamDrainEvent from "getClickstreamDrainEvent" /* 5059 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "createRTCConnection" /* 4539 */;
 
-const require = arg1;
+require = arg1;
 function isClickstreamEnabled(flag) {
   if (flag === undefined) {
     flag = true;
   }
   if (flag) {
-    const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(store.getId());
+    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(store.getId());
     if (extractTimestampResult !== c7) {
       drainClickstream(false);
       c7 = extractTimestampResult;
     }
-    const obj = DISCORD_EPOCH;
-    let closure_8 = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
+    const obj = DISCORD_EPOCHDefault;
+    closure_8 = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
     const obj2 = clickstreamExperimentEnabled;
   }
   return closure_8;
@@ -36,7 +36,7 @@ function drainClickstream(flag) {
       let first = tmp8[0];
       let tmp10 = importDefault;
       let tmp11 = dependencyMap;
-      let obj2 = expandEventProperties;
+      let obj2 = expandEventPropertiesDefault;
       let tmp12 = require;
       let obj3 = getClickstreamDrainEvent;
       let trackResult = obj2.track(first, obj3.getClickstreamDrainEvent(first, tmp8[1]));
@@ -50,17 +50,17 @@ function drainClickstream(flag) {
 const map = new Map();
 let c7 = -1;
 let c8 = false;
-let result = require("createRTCConnection").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
+let result = require("set").fileFinishedImporting("modules/app_analytics/clickstream/Clickstream.tsx");
 
 export const trackClickstream = function trackClickstream(GUILD_VIEWED_CLICKSTREAM, arg1) {
-  let obj = DISCORD_EPOCH;
+  let obj = DISCORD_EPOCHDefault;
   const extractTimestampResult = obj.extractTimestamp(store.getId());
   if (extractTimestampResult !== c7) {
     drainClickstream(false);
     c7 = extractTimestampResult;
   }
   const result = clickstreamExperimentEnabled.clickstreamExperimentEnabled();
-  let c8 = result;
+  c8 = result;
   if (result) {
     if (!map.has(GUILD_VIEWED_CLICKSTREAM)) {
       const result1 = obj3.set(GUILD_VIEWED_CLICKSTREAM, []);

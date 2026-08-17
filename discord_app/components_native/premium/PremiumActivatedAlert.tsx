@@ -1,27 +1,21 @@
 // discord_app/components_native/premium/PremiumActivatedAlert.tsx
-import "registerAsset";
-import get_ActivityIndicator from "registerAsset";
-import { SubscriptionStatusTypes } from "ME";
-import jsxProd from "AccessibilityAnnouncer";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { useTheme } from "../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { SubscriptionStatusTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: c3, ImageBackground: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { alert: { overflow: "hidden", paddingBottom: 24 }, header: { alignSelf: "stretch", margin: -16, padding: 16, height: 100, position: "relative" }, headerImage: { position: "absolute", left: "50%" }, body: { paddingHorizontal: 16, marginTop: 40, maxWidth: 300, alignSelf: "center", alignItems: "center" }, logoPlusPremiumGuild: { marginTop: 3, width: 101, height: 19 }, description: null };
 createCacheKey = { fontSize: 14, lineHeight: 16, textAlign: "center", marginTop: 20, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 createCacheKey[5] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = createCacheKey.createStyles((arg0) => {
   if (getPremiumPlanItem.Branding.TIER_0 === arg0) {
     let obj = { headerImage: null };
@@ -32,7 +26,7 @@ let closure_10 = createCacheKey.createStyles((arg0) => {
     obj[0] = { marginLeft: -27, width: 87, top: 18 };
     return obj;
   } else if (tmp(4039).Branding.BUNDLE === arg0) {
-    const obj1 = { headerImage: null };
+    obj1 = { headerImage: null };
     obj1[0] = { marginLeft: -29.5, width: 91, top: 18 };
     return obj1;
   } else if (tmp(4039).Branding.TIER_2 === arg0) {
@@ -67,11 +61,11 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
     return obj;
   }
 });
-const result = require("ME").fileFinishedImporting("components_native/premium/PremiumActivatedAlert.tsx");
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumActivatedAlert.tsx");
 
 export default function PremiumActivatedAlert(onClose) {
   const subscription = onClose.subscription;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let renewalMutations = subscription;
   if (null != subscription.renewalMutations) {
     const _Object = Object;
@@ -86,7 +80,7 @@ export default function PremiumActivatedAlert(onClose) {
       }
     }
   }
-  const tmp6 = useTheme();
+  const tmp6 = useThemeDefault();
   let obj = getPremiumPlanItem;
   const premiumBranding = obj.getPremiumBranding(renewalMutations);
   if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {
@@ -101,7 +95,7 @@ export default function PremiumActivatedAlert(onClose) {
     if (tmp7(4039).Branding.BUNDLE !== premiumBranding) {
       if (tmp7(4039).Branding.TIER_2 !== premiumBranding) {
         if (tmp7(4039).Branding.PREMIUM_GUILD === premiumBranding) {
-          const obj1 = { logo: null };
+          obj1 = { logo: null };
           obj1[0] = { width: 82, height: 18 };
           tmp9 = obj1;
         }
@@ -111,7 +105,7 @@ export default function PremiumActivatedAlert(onClose) {
     obj2[0] = { width: 79, height: 32 };
     tmp9 = obj2;
   }
-  const tmp10 = callback(premiumBranding);
+  const tmp10 = callback2(premiumBranding);
   const obj3 = { onClose: onClose.onClose, confirmText: null, style: null, children: null };
   let tmp4Result = tmp4(4763);
   const intl = tmp7(1236).intl;
@@ -170,7 +164,7 @@ export default function PremiumActivatedAlert(onClose) {
   const items2 = [closure_8(closure_4, obj4), ];
   const obj7 = { style: tmp.body, children: null };
   const obj5 = { source: tmp4Result1, style: tmp9.logo };
-  const tmp11 = callback2(premiumBranding);
+  const tmp11 = callback3(premiumBranding);
   const tmp14 = closure_4;
   const tmp21 = closure_5;
   if (getPremiumPlanItem.Branding.TIER_0 === premiumBranding) {

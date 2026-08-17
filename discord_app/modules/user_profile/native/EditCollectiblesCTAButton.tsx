@@ -1,10 +1,10 @@
 // discord_app/modules/user_profile/native/EditCollectiblesCTAButton.tsx
-import importAllResult from "set";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { CollectiblesMobileShopScreen as closure_5 } from "items";
-import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_6 } from "DRAG_HANDLE";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 678 */;
+import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_6 } from "DRAG_HANDLE" /* 1624 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -13,10 +13,6 @@ let closure_9 = { code: "function EditCollectiblesCTAButtonTsx1(){const{shouldSh
 let closure_10 = { code: "function EditCollectiblesCTAButtonTsx2(){const{shouldShowButton}=this.__closure;return{pointerEvents:shouldShowButton.get()?'box-none':'none'};}" };
 let closure_11 = { code: "function EditCollectiblesCTAButtonTsx3(){const{shouldShowButton,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=shouldShowButton.get()?1:0;return{opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,{...MEDIA_PICKER_SEND_BUTTON_SPRING,overshootClamping:true})};}" };
 const memoResult = importAllResult.memo((user) => {
-  let isTryItOut;
-  let onApply;
-  let product;
-  let purchase;
   user = user.user;
   const currentSkuId = user.currentSkuId;
   const selectedSkuId = user.selectedSkuId;
@@ -25,14 +21,14 @@ const memoResult = importAllResult.memo((user) => {
   const analyticsSource = user.analyticsSource;
   let stateFromStores;
   let sharedValue;
-  let callback;
-  let c9;
-  const tmp = callback();
+  isTryItOut = undefined;
+  c9 = undefined;
+  const tmp = isTryItOut();
   let obj = user(selectedSkuId[7]);
   const items = [analyticsLocations];
   stateFromStores = obj.useStateFromStores(items, () => analyticsLocations.useReducedMotion);
   ({ purchase, product } = currentSkuId(selectedSkuId[8])(selectedSkuId));
-  let obj1 = user(selectedSkuId[9]);
+  obj1 = user(selectedSkuId[9]);
   sharedValue = obj1.useSharedValue(false);
   let obj2 = onApply;
   const items1 = [selectedSkuId, currentSkuId, sharedValue];
@@ -42,9 +38,9 @@ const memoResult = importAllResult.memo((user) => {
   const tmp6 = currentSkuId(selectedSkuId[8])(selectedSkuId);
   class O {
     constructor() {
-      obj = c7;
+      obj = closure_7;
       num = 60;
-      if (c7.get()) {
+      if (closure_7.get()) {
         num = 0;
       }
       num2 = 0.9;
@@ -52,13 +48,13 @@ const memoResult = importAllResult.memo((user) => {
         num2 = 1;
       }
       withSpringResult = num;
-      tmp = c6;
-      if (!c6) {
+      tmp = closure_6;
+      if (!closure_6) {
         tmp3 = user;
         tmp4 = selectedSkuId;
         obj2 = user(selectedSkuId[10]);
-        tmp5 = c6;
-        withSpringResult = obj2.withSpring(num, c6);
+        tmp5 = closure_6;
+        withSpringResult = obj2.withSpring(num, closure_6);
       }
       items = [, ];
       items[0] = { translateY: withSpringResult };
@@ -67,8 +63,8 @@ const memoResult = importAllResult.memo((user) => {
         tmp7 = user;
         tmp8 = selectedSkuId;
         obj3 = user(selectedSkuId[10]);
-        tmp9 = c6;
-        withSpringResult1 = obj3.withSpring(num2, c6);
+        tmp9 = closure_6;
+        withSpringResult1 = obj3.withSpring(num2, closure_6);
       }
       items[1] = { scale: withSpringResult1 };
       return { transform: items };
@@ -83,7 +79,7 @@ const memoResult = importAllResult.memo((user) => {
   class M {
     constructor() {
       pointerEvents = "none";
-      if (c7.get()) {
+      if (closure_7.get()) {
         pointerEvents = "box-none";
       }
       return { pointerEvents };
@@ -97,18 +93,18 @@ const memoResult = importAllResult.memo((user) => {
   class R {
     constructor() {
       num = 0;
-      if (c7.get()) {
+      if (closure_7.get()) {
         num = 1;
       }
       withSpringResult = num;
-      if (!c6) {
+      if (!closure_6) {
         tmp2 = user;
         tmp3 = selectedSkuId;
         obj = user(selectedSkuId[10]);
         obj = {};
-        tmp4 = c6;
+        tmp4 = closure_6;
         tmp5 = obj;
-        merged = Object.assign(c6);
+        merged = Object.assign(closure_6);
         flag = true;
         obj.overshootClamping = true;
         withSpringResult = obj.withSpring(num, obj);
@@ -146,7 +142,7 @@ const memoResult = importAllResult.memo((user) => {
     }
     tmp15 = tmp17;
   }
-  callback = tmp15;
+  isTryItOut = tmp15;
   if (result) {
     result = !canUseCollectiblesResult;
   }
@@ -157,7 +153,7 @@ const memoResult = importAllResult.memo((user) => {
   const items2 = [tmp15, result, user];
   const items3 = [tmp15, onApply, result, analyticsLocations, analyticsSource, selectedSkuId];
   const memo = obj2.useMemo(() => {
-    if (c8) {
+    if (isTryItOut) {
       const intl3 = user(selectedSkuId[13]).intl;
       let stringResult = intl3.string(user(selectedSkuId[13]).t.Jh8fJz);
     } else if (c9) {
@@ -178,8 +174,8 @@ const memoResult = importAllResult.memo((user) => {
     }
     return stringResult;
   }, items2);
-  callback = obj2.useCallback(() => {
-    if (c8) {
+  const callback = obj2.useCallback(() => {
+    if (isTryItOut) {
       const result = user(selectedSkuId[14]).triggerHapticFeedback(user(selectedSkuId[14]).HapticFeedbackTypes.IMPACT_MEDIUM);
       onApply();
       const obj4 = user(selectedSkuId[14]);
@@ -209,6 +205,6 @@ const memoResult = importAllResult.memo((user) => {
   obj1[2] = sharedValue(currentSkuId(selectedSkuId[9]).View, obj2);
   return sharedValue(currentSkuId(selectedSkuId[9]).View, obj1);
 });
-let result = require("items").fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesCTAButton.tsx");
 
 export default memoResult;

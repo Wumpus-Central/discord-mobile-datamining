@@ -1,28 +1,25 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionWaitlist.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, header: { marginBottom: 16 }, title: null, description: null, redesignButton: null };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
+createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { textAlign: "center", marginBottom: 16 };
 createCacheKey[4] = { paddingHorizontal: 16, width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ME").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionWaitlist.tsx");
 
 export default function HubEmailConnectionWaitlist(school) {
   const onClose = school.onClose;
   let navigation;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = onClose(1500);
   navigation = obj.useNavigation();
   const items = [navigation, onClose];
@@ -30,17 +27,17 @@ export default function HubEmailConnectionWaitlist(school) {
     navigation.setOptions({
       headerLeft() {
         const obj = { text: null, onPress: null };
-        const intl = outer1_0(outer1_2[8]).intl;
-        obj[0] = intl.string(outer1_0(outer1_2[8]).t.cpT0Cq);
+        const intl = closure_1_0(closure_1_2[8]).intl;
+        obj[0] = intl.string(closure_1_0(closure_1_2[8]).t.cpT0Cq);
         obj[1] = closure_0;
-        return outer1_6(outer1_0(outer1_2[7]).HeaderActionButton, obj);
+        return closure_1_6(closure_1_0(closure_1_2[7]).HeaderActionButton, obj);
       }
     });
   }, items);
   obj = { style: tmp.container, children: null };
   obj = { source: navigation(11913), style: tmp.header };
   const items1 = [callback(closure_5, obj), , , ];
-  const obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
+  obj1 = { style: tmp.title, accessibilityRole: "header", children: null };
   let intl = onClose(1236).intl;
   obj1[2] = intl.string(onClose(1236).t.OaloU5);
   items1[1] = callback(onClose(1297).LegacyText, obj1);

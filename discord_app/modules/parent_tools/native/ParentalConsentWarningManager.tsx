@@ -1,17 +1,15 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningManager.tsx
-import setContent from "setContent";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import initialize from "initialize";
-import items from "items";
-import { AppStates } from "ME";
-import "initialize";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { frozen } from "../ParentalConsentWarningTypes.tsx";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import initializeDefault from "initialize" /* 5038 */;
+import frozen from "frozen" /* 14225 */;
+import closure_4 from "setContent" /* 4086 */;
+import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import closure_6 from "initialize" /* 14224 */;
+import items from "items" /* 5297 */;
+import { AppStates } from "ME" /* 676 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function maybePresentModal(daysRemaining) {
   daysRemaining = undefined;
   if (daysRemaining != null) {
@@ -29,7 +27,7 @@ function maybePresentModal(daysRemaining) {
     tmp5 = daysRemaining >= 0;
   }
   if (tmp5) {
-    tmp5 = !initialize.hasShownModalToday();
+    tmp5 = !closure_6.hasShownModalToday();
   }
   if (tmp5) {
     const _Object = Object;
@@ -48,11 +46,12 @@ function maybePresentModal(daysRemaining) {
   if (tmp5) {
     const obj = { daysRemaining: null };
     obj[0] = daysRemaining;
-    ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(16680, dependencyMap.paths), "ParentalConsentWarningModal", obj);
-    const obj2 = ACTION_SHEET_HEIGHT_HALF;
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(16680, dependencyMap.paths), "ParentalConsentWarningModal", obj);
+    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   }
 }
-({ UserLinkStatus: error, UserLinkType: metroImportAll } = items);
+({ UserLinkStatus: error, UserLinkType: closure_8 } = items);
+initializeDefault;
 let prototype = function ParentalConsentWarningManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -61,7 +60,7 @@ let prototype = function ParentalConsentWarningManager() {
     },
     POST_CONNECTION_OPEN() {
       const values = Object.values(linkedUsers.getLinkedUsers());
-      let closure_3 = values.some((link_status) => {
+      closure_3 = values.some((link_status) => {
         let tmp = link_status.link_status === constants.ACTIVE;
         if (tmp) {
           tmp = link_status.link_type === constants2.PARENT;
@@ -69,18 +68,18 @@ let prototype = function ParentalConsentWarningManager() {
         return tmp;
       });
       callback(16682).maybeFetchWarning();
-      if (!initialize.shouldFetchToday()) {
-        callback2(initialize.getWarning());
+      if (!closure_6.shouldFetchToday()) {
+        callback2(closure_6.getWarning());
       }
     },
     APP_STATE_UPDATE(state) {
       if (state.state === constants.ACTIVE) {
         callback(16682).maybeFetchWarning();
-        if (!initialize.shouldFetchToday()) {
+        if (!closure_6.shouldFetchToday()) {
           callback2(obj2.getWarning());
         }
         const obj = callback(16682);
-        obj2 = initialize;
+        obj2 = closure_6;
       }
     },
     CURRENT_USER_UPDATE(user) {
@@ -94,10 +93,10 @@ let prototype = function ParentalConsentWarningManager() {
           }
           return tmp;
         });
-        let closure_3 = someResult;
+        closure_3 = someResult;
         if (tmp) {
           if (someResult) {
-            const warning = initialize.getWarning();
+            const warning = closure_6.getWarning();
             let hasItem;
             if (warning != null) {
               const surfaces = warning.surfaces;
@@ -118,7 +117,7 @@ let prototype = function ParentalConsentWarningManager() {
       }
     },
     LOGOUT() {
-      let c3;
+      c3 = undefined;
       callback(16682).resetFetchState();
     }
   };
@@ -127,6 +126,6 @@ let prototype = function ParentalConsentWarningManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = require("initialize").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningManager.tsx");
 
 export default prototype;

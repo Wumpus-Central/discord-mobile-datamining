@@ -1,13 +1,11 @@
 // discord_app/modules/messages/native/handlers/handleMessagesLongPressChannel.tsx
-import { allowChannelAccess } from "../../../../utils/ChannelUtils.tsx";
-import { showLongPressURLActionSheet } from "../../../links/native/showLongPressURLActionSheet.tsx";
-const result = require("set").fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
+import set from "set" /* 2 */;
+import allowChannelAccess from "allowChannelAccess" /* 4979 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/handlers/handleMessagesLongPressChannel.tsx");
 
 export const handleMessagesLongPressChannel = function handleMessagesLongPressChannel(data) {
-  let channelId;
-  let guildId;
-  let messageId;
-  let originalLink;
   ({ guildId, channelId, messageId, originalLink } = data.data);
   if (null != channelId) {
     if (originalLink == null) {
@@ -20,7 +18,7 @@ export const handleMessagesLongPressChannel = function handleMessagesLongPressCh
       obj[1] = guildId;
       obj[2] = channelId;
       obj[3] = messageId;
-      showLongPressURLActionSheet(obj);
+      showLongPressURLActionSheetDefault(obj);
     }
   }
 };

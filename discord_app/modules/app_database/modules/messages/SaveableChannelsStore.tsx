@@ -1,10 +1,10 @@
 // discord_app/modules/app_database/modules/messages/SaveableChannelsStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleInviteData from "handleInviteData";
-import "clearAll";
-import handleConnectionOpen from "handleConnectionOpen";
-import result from "result";
-import bound from "module_25";
+import clearAllDefault from "clearAll" /* 1220 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "handleInviteData" /* 4295 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "result" /* 5070 */;
+import bound from "module_25" /* 25 */;
 
 let prototype = arg1;
 function handleSelectedChannelStoreChanged() {
@@ -71,11 +71,12 @@ function handleGuildDelete(guild) {
 function handleLoginSuccess() {
   extendedMemoryLru.clear();
   lru.clear();
-  let c9 = false;
+  c9 = false;
 }
 function handleCacheLoadedLazyNoCache() {
-  let c9 = true;
+  c9 = true;
 }
+clearAllDefault;
 let c6 = null;
 let extendedMemoryLru = new require("totalLength").ExtendedMemoryLru(750, 500);
 let lru = new require("length").Lru(15);
@@ -83,7 +84,7 @@ let c9 = false;
 let SaveableChannelsStore;
 class SaveableChannelsStore extends tmp3 {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {
       CACHE_LOADED_LAZY_NO_CACHE: handleCacheLoadedLazyNoCache,
       CACHE_LOADED_LAZY() {
@@ -99,24 +100,24 @@ class SaveableChannelsStore extends tmp3 {
     };
     tmp = new tmp(obj, handleThreadDelete, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp;
+    closure_0 = tmp;
     return tmp;
   }
 }
 prototype = SaveableChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded);
-  this.waitFor(handleConnectionOpen);
-  this.waitFor(handleInviteData);
-  const items = [result];
+  this.waitFor(closure_2);
+  this.waitFor(closure_4);
+  this.waitFor(closure_3);
+  const items = [closure_5];
   this.syncWith(items, () => true);
-  const items1 = [handleConnectionOpen];
+  const items1 = [closure_4];
   this.syncWith(items1, handleSelectedChannelStoreChanged);
 };
 prototype["loadCache"] = function loadCache() {
   const snapshot = this.readSnapshot(SaveableChannelsStore.LATEST_SNAPSHOT_VERSION);
   if (null != snapshot) {
-    let c9 = true;
+    c9 = true;
     SaveableChannelsStore.mergeSnapshot(snapshot);
   }
 };
@@ -161,11 +162,8 @@ prototype["getSaveableChannels"] = function getSaveableChannels() {
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
   let obj = { version: SaveableChannelsStore.LATEST_SNAPSHOT_VERSION, data: null };
-  obj = { channels: null, penalized: null, lastChannel: null };
-  const items = [...extendedMemoryLru.allValues()];
-  obj[0] = items.filter((fallback) => !fallback.fallback);
-  obj[1] = [...lru.keys()];
-  obj[2] = c6;
+  obj = { channels: items.filter((fallback) => !fallback.fallback), penalized: [...lru.keys()], lastChannel: c6 };
+  items = [...extendedMemoryLru.allValues()];
   obj[1] = obj;
   return obj;
 };
@@ -277,7 +275,7 @@ SaveableChannelsStore["deleteUnreadableGuildChannels"] = function deleteUnreadab
   }
 };
 SaveableChannelsStore["replaceLru"] = function replaceLru(arg0) {
-  let closure_7 = arg0;
+  closure_7 = arg0;
 };
 SaveableChannelsStore.displayName = "SaveableChannelsStore";
 SaveableChannelsStore.LATEST_SNAPSHOT_VERSION = 1;
@@ -298,7 +296,7 @@ obj[7] = handleThreadDelete;
 obj[8] = handleThreadUpdate;
 prototype = new prototype(obj, 500, tmp, Object, CACHE_LOADED_LAZY, handleChannelDelete, handleChannelUpdates, handleConnectionOpenSupplemental, handleGuildDelete, handleLoginSuccess, handleThreadDelete, SaveableChannelsStore, prototype, new.target);
 // ThrowIfThisInitialized (0x7c)
-let result = require("clearAll").fileFinishedImporting("modules/app_database/modules/messages/SaveableChannelsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/app_database/modules/messages/SaveableChannelsStore.tsx");
 
 export default prototype;
 export const MAXIMUM_MESSAGES_PER_CHANNEL_DM = 25;

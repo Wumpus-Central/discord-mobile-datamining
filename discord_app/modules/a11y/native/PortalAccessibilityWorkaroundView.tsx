@@ -1,19 +1,19 @@
 // discord_app/modules/a11y/native/PortalAccessibilityWorkaroundView.tsx
-import "noop";
-import { View as _default } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import set from "set";
-import set from "jsxProd";
-import { set } from "../../../utils/PlatformUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import set2 from "set" /* 500 */;
+import { View as _default } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 if (set.isIOS()) {
   _default = require("__INTERNAL_VIEW_CONFIG").default;
 }
 const result = set.fileFinishedImporting("modules/a11y/native/PortalAccessibilityWorkaroundView.tsx");
 
 export default function PortalAccessibilityWorkaroundView(arg0) {
-  let obj = set;
+  let obj = set2;
   obj = null;
   if (obj.isIOS()) {
     obj = { accessibilityLabel: " ", accessible: false };

@@ -1,17 +1,17 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx
-import importAllResult from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { GuildMemberFlags } from "GuildMemberFlags";
-import { jsx } from "jsxProd";
-import { ChatInputGuard } from "ChatInputGuard.tsx";
+import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfileQuarantine(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(589);
-  const items = [fetchFingerprint, trackCommunicationDisabled];
+  const items = [closure_4, closure_5];
   const items1 = [guildId];
   const items2 = [guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
@@ -20,12 +20,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
       const set = new Set();
       return set;
     } else {
-      const id = outer1_4.getId();
-      return guildId(outer1_2[6]).getAutomodQuarantinedGuildMemberFlags(outer1_5.getMember(tmp, id));
+      const id = closure_1_4.getId();
+      return guildId(closure_1_2[6]).getAutomodQuarantinedGuildMemberFlags(closure_1_5.getMember(tmp, id));
     }
   }, items1);
   const callback = importAllResult.useCallback(() => {
-    const result = guildId(outer1_2[7]).openAutomodProfileQuarantineAlert(guildId);
+    const result = guildId(closure_1_2[7]).openAutomodProfileQuarantineAlert(guildId);
   }, items2);
   const automodReason = guildId(4027).getAutomodReason(stateFromStores);
   if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
@@ -47,8 +47,8 @@ const memoResult = importAllResult.memo(function ChatInputGuardAutomodUserProfil
   tmp6 = GuildMemberFlags;
   obj[3] = jsx(guildId(11633).ChatXIcon, {});
   obj[4] = stringResult1;
-  return jsx(ChatInputGuard, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
+  return jsx(ChatInputGuardDefault, { type: "simple-action", actionOnPress: callback, actionLabel: stringResult, icon: null, message: null });
 });
-let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardAutomodUserProfileQuarantine.tsx");
 
 export default memoResult;

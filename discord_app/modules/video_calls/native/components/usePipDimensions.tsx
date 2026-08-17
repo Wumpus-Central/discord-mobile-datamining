@@ -1,9 +1,9 @@
 // discord_app/modules/video_calls/native/components/usePipDimensions.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 let c4 = 0.5625;
-const result = require("useWindowDimensions").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/usePipDimensions.tsx");
 
 export default function usePipDimensions(channelId) {
   let forcedOrientation = channelId.forcedOrientation;
@@ -35,7 +35,7 @@ export default function usePipDimensions(channelId) {
         if (!tmp7) {
           const _Math = Math;
           const bound = Math.min(0.25 * tmp2, 300);
-          width = bound * outer1_4;
+          width = bound * closure_1_4;
           height = bound;
         }
       }
@@ -43,7 +43,7 @@ export default function usePipDimensions(channelId) {
         if (tmp7) {
           const _Math2 = Math;
           const bound1 = Math.min(0.5 * tmp, 400);
-          height = bound1 * outer1_4;
+          height = bound1 * closure_1_4;
           width = bound1;
         }
       }
@@ -51,7 +51,7 @@ export default function usePipDimensions(channelId) {
         if (tmp7) {
           const _Math4 = Math;
           const bound2 = Math.min(0.25 * tmp, 400);
-          height = bound2 * outer1_4;
+          height = bound2 * closure_1_4;
           width = bound2;
         }
       }
@@ -63,7 +63,7 @@ export default function usePipDimensions(channelId) {
       if (tmp3) {
         const _Math3 = Math;
         const bound3 = Math.min(0.5 * tmp2, 300);
-        width = bound3 * outer1_4;
+        width = bound3 * closure_1_4;
         height = bound3;
       }
     }

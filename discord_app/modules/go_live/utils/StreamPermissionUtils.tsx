@@ -1,19 +1,19 @@
 // discord_app/modules/go_live/utils/StreamPermissionUtils.tsx
-import set from "set";
-import { ChannelRecordBase } from "createChannelRecord";
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import updateVoiceState from "updateVoiceState";
-import { Permissions } from "ME";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import allowChannelAccess from "allowChannelAccess" /* 4979 */;
+import canJoinVoiceChannelDefault from "canJoinVoiceChannel" /* 4987 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import closure_3 from "set" /* 4540 */;
+import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "updateVoiceState" /* 4542 */;
+import { Permissions } from "ME" /* 676 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { allowChannelAccess } from "../../../utils/ChannelUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../../age_gate/AgeGateUtils.tsx";
-import { canJoinVoiceChannel } from "../../channel/canJoinVoiceChannel.tsx";
 
-const require = arg1;
-function canStreamInChannel(channel, closure_2, set, arg3) {
+require = arg1;
+function canStreamInChannel(channel, closure_1_2, closure_1_3, arg3) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
@@ -21,7 +21,7 @@ function canStreamInChannel(channel, closure_2, set, arg3) {
   if (channel.isPrivate()) {
     return true;
   } else {
-    const guild = closure_2.getGuild(channel.getGuildId());
+    const guild = closure_1_2.getGuild(channel.getGuildId());
     let num;
     if (guild != null) {
       num = guild.maxStageVideoChannelUsers;
@@ -36,11 +36,11 @@ function canStreamInChannel(channel, closure_2, set, arg3) {
     let tmp5 = !isGuildStageVoiceResult;
     if (!isGuildStageVoiceResult) {
       if (flag) {
-        flag = !canJoinVoiceChannel(channel, set);
+        flag = !canJoinVoiceChannelDefault(channel, closure_1_3);
       }
       let tmp9 = !flag;
       if (!flag) {
-        let canResult = set.can(Permissions.STREAM, channel);
+        let canResult = closure_1_3.can(Permissions.STREAM, channel);
         if (canResult) {
           canResult = null != guild && guild.afkChannelId !== channel.id;
           const tmp12 = null != guild && guild.afkChannelId !== channel.id;
@@ -52,7 +52,7 @@ function canStreamInChannel(channel, closure_2, set, arg3) {
     return tmp5;
   }
 }
-function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, updateVoiceState) {
+function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, closure_8) {
   if (null == basicChannel1) {
     const items = [false, obj.NO_PERMISSION];
     return items;
@@ -63,8 +63,8 @@ function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, updat
       obj = allowChannelAccess;
       isChannelFullResult = obj.isChannelFull(basicChannel1, closure_17, closure_12);
     }
-    let tmp9 = canJoinVoiceChannel(basicChannel1, closure_14);
-    const tmp10 = null != updateVoiceState.getAwaitingRemoteSessionInfo() || null != updateVoiceState.getRemoteSessionId();
+    let tmp9 = canJoinVoiceChannelDefault(basicChannel1, closure_14);
+    const tmp10 = null != closure_8.getAwaitingRemoteSessionInfo() || null != closure_8.getRemoteSessionId();
     let result = shouldShowAgeGateForVoiceChannel.shouldAgeVerifyForAgeGate();
     if (result) {
       result = shouldShowAgeGateForVoiceChannel.shouldShowAgeGateForChannelId(basicChannel1.id);
@@ -106,7 +106,7 @@ function canWatchStream(basicChannel1, closure_17, closure_12, closure_14, updat
   }
 }
 let obj = { REMOTE_MODE: 0, [0]: "REMOTE_MODE", CHANNEL_FULL: 1, [1]: "CHANNEL_FULL", NO_PERMISSION: 2, [2]: "NO_PERMISSION", AGE_RESTRICTED: 3, [3]: "AGE_RESTRICTED" };
-let result = require("comparator").fileFinishedImporting("modules/go_live/utils/StreamPermissionUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/go_live/utils/StreamPermissionUtils.tsx");
 
 export { canStreamInChannel };
 export const getStreamCTAString = function getStreamCTAString(arg0) {
@@ -159,10 +159,10 @@ export const StreamUnavailableReasons = obj;
 export { canWatchStream };
 export const useCanWatchStream = function useCanWatchStream(stateFromStores) {
   const _require = stateFromStores;
-  const items = [updateVoiceState, createGuildRecordFromRust, getUncachedChannelPermissions, set];
-  return _initialize.useStateFromStoresArray(items, () => outer1_12(closure_0, outer1_8, outer1_6, outer1_7, outer1_3));
+  const items = [closure_8, closure_6, closure_7, closure_3];
+  return _initialize.useStateFromStoresArray(items, () => closure_1_12(closure_0, closure_1_8, closure_1_6, closure_1_7, closure_1_3));
 };
-export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, closure_2, set) {
+export const getStreamEligibleChannels = function getStreamEligibleChannels(arg0, closure_1_2, closure_1_3) {
   const items = [];
   for (const item10011 of tmp) {
     let channel = item10011.channel;

@@ -1,22 +1,19 @@
 // discord_app/modules/content_inventory/ContentInventoryActivityImageUtils.tsx
-import { useEffect } from "noop";
-import addApplication from "addApplication";
-import ME from "ME";
-import { ImageSizes } from "items3";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { isCrunchyrollActivity } from "../activities/utils/isCrunchyrollActivity.tsx";
-import { isOnXbox } from "../activities/utils/isOnXbox.tsx";
-import { useGetOrFetchApplications } from "../applications/useGetOrFetchApplications.tsx";
-import { importDefaultResult1 } from "../games/hooks/useGame.tsx";
-import { unpackStageChannelParty } from "../stage_channels/StageChannelRichPresenceUtils.tsx";
-import { useEntryActivityAndApplication } from "useEntryActivityAndApplication.tsx";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import items3 from "items3" /* 4481 */;
+import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
+import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
+import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 9051 */;
+import useEntryActivityAndApplicationDefault from "useEntryActivityAndApplication" /* 12097 */;
+import isOnXboxDefault from "isOnXbox" /* 12099 */;
+import closure_4 from "addApplication" /* 4478 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
 function useComputedImagesForActivity(activity, getIconURL) {
-  let largeImage;
-  let smallImage;
   ({ largeImage, smallImage } = useRichImageForActivity(activity, getIconURL));
   if (null != largeImage) {
     let obj = { largeImage: null, smallImage: null };
@@ -39,12 +36,12 @@ function useComputedImagesForActivity(activity, getIconURL) {
         }
         obj[1] = small_image;
         obj[2] = ImageSizes.SMALL;
-        guildIconURL = getAvatarURL.getGuildIconURL(obj);
-        const obj12 = getAvatarURL;
+        guildIconURL = getAvatarURLDefault.getGuildIconURL(obj);
+        const obj12 = getAvatarURLDefault;
       }
       let tmp14;
       if (null != guildIconURL) {
-        const obj1 = { src: null };
+        obj1 = { src: null };
         obj1[0] = guildIconURL;
         tmp14 = obj1;
       }
@@ -52,7 +49,7 @@ function useComputedImagesForActivity(activity, getIconURL) {
       obj2[0] = tmp14;
       obj8 = obj2;
       const tmp15Result = tmp15(7254);
-    } else if (isOnXbox(activity)) {
+    } else if (isOnXboxDefault(activity)) {
       const obj3 = { largeImage: null, smallImage: "a" };
       const obj4 = { src: null, alt: null };
       let tmp2Result = tmp2(5097);
@@ -111,33 +108,29 @@ function useComputedImagesForActivity(activity, getIconURL) {
   return obj8;
 }
 function useTrackActivityDefaultIcon(arg0) {
-  let activity;
-  let application;
-  let largeImageSrc;
-  let trackingSource;
   ({ activity, trackingSource } = arg0);
   let application_id;
-  let dependencyMap;
-  let useEffect;
-  let c4;
+  let stateFromStores;
+  useEffect = undefined;
+  closure_4 = undefined;
   let name;
   let type;
   let session_id;
-  let c8;
-  let c9;
+  closure_8 = undefined;
+  closure_9 = undefined;
   application_id = undefined;
   ({ application, largeImageSrc } = arg0);
   if (activity != null) {
     application_id = activity.application_id;
   }
-  const getOrFetchApplication = trackingSource(7145).useGetOrFetchApplication(application_id);
-  let obj = trackingSource(7145);
-  const items = [c4];
+  const getOrFetchApplication = trackingSource(stateFromStores[14]).useGetOrFetchApplication(application_id);
+  let obj = trackingSource(stateFromStores[14]);
+  const items = [closure_4];
   let tmp4 = null == application_id;
-  const stateFromStores = trackingSource(589).useStateFromStores(items, () => {
+  stateFromStores = trackingSource(stateFromStores[15]).useStateFromStores(items, () => {
     let result = null != application_id;
     if (result) {
-      result = _undefined2.didFetchingApplicationFail(tmp);
+      result = closure_4.didFetchingApplicationFail(tmp);
     }
     return result;
   });
@@ -147,9 +140,9 @@ function useTrackActivityDefaultIcon(arg0) {
   if (!tmp4) {
     tmp4 = stateFromStores;
   }
-  dependencyMap = tmp4;
+  stateFromStores = tmp4;
   useEffect = tmp5;
-  c4 = tmp6;
+  closure_4 = tmp6;
   name = undefined;
   if (activity != null) {
     name = activity.name;
@@ -180,27 +173,27 @@ function useTrackActivityDefaultIcon(arg0) {
     }
     tmp11 = null != small_image;
   }
-  c8 = tmp11;
-  c9 = tmp13;
+  closure_8 = tmp11;
+  closure_9 = tmp13;
   const items1 = [trackingSource, null != activity, tmp4, null == largeImageSrc, application_id, name, type, session_id, null != getOrFetchApplication || null != application, tmp11];
   useEffect(() => {
-    let tmp = c9;
-    if (c9) {
-      tmp = _undefined;
+    let tmp = closure_9;
+    if (closure_9) {
+      tmp = stateFromStores;
     }
     if (tmp) {
-      tmp = c4;
+      tmp = closure_4;
     }
     if (tmp) {
-      let obj = application_id(_undefined[16]);
+      let obj = application_id(stateFromStores[16]);
       obj = { source: null, application_id: null, activity_name: null, activity_type: null, activity_session_id: null, application_found: null, has_rich_assets: null };
       obj[0] = trackingSource;
       obj[1] = application_id;
       obj[2] = name;
       obj[3] = type;
       obj[4] = session_id;
-      obj[5] = c3;
-      obj[6] = c8;
+      obj[5] = closure_3;
+      obj[6] = closure_8;
       obj.track(name.ACTIVITY_DEFAULT_ICON_SHOWN, obj);
     }
   }, items1);
@@ -244,7 +237,7 @@ function useRichImageForActivity(activity, activityApplication) {
       tmp5 = obj;
     }
     let tmp10;
-    if (!isCrunchyrollActivity(activity)) {
+    if (!isCrunchyrollActivityDefault(activity)) {
       let small_image;
       if (activity != null) {
         const assets4 = activity.assets;
@@ -297,7 +290,7 @@ function useRichImageForActivity(activity, activityApplication) {
           let stringResult = intl2.string(_2B_phM);
         } else {
           const intl = tmp(1236).intl;
-          const obj1 = { applicationName: null };
+          obj1 = { applicationName: null };
           obj1[0] = name;
           stringResult = intl.formatToPlainString(tmp(1236).t.tiKyYg, obj1);
         }
@@ -310,8 +303,10 @@ function useRichImageForActivity(activity, activityApplication) {
     return obj2;
   }
 }
+let useEffect = noop.useEffect;
 ({ AnalyticEvents: c5, PlatformTypes: closure_6 } = ME);
-let result = require("ME").fileFinishedImporting("modules/content_inventory/ContentInventoryActivityImageUtils.tsx");
+const ImageSizes = items3.ImageSizes;
+let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryActivityImageUtils.tsx");
 
 export const getApplicationImage = function getApplicationImage(getIconURL) {
   let iconURL;
@@ -338,16 +333,11 @@ export const getApplicationImage = function getApplicationImage(getIconURL) {
   }
 };
 export const useImageForContentEntry = function useImageForContentEntry(trackingSource) {
-  let activity;
-  let activityApplication;
-  let entry;
-  let fallbackApplication;
-  let showCoverImage;
   ({ entry, showCoverImage } = trackingSource);
   if (showCoverImage === undefined) {
     showCoverImage = true;
   }
-  ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplication(entry));
+  ({ activity, activityApplication, fallbackApplication } = useEntryActivityAndApplicationDefault(entry));
   let obj = fallbackApplication;
   if (fallbackApplication == null) {
     obj = activityApplication;
@@ -358,7 +348,7 @@ export const useImageForContentEntry = function useImageForContentEntry(tracking
   if (obj != null) {
     canonicalGameId = obj.getCanonicalGameId();
   }
-  let obj1 = importDefaultResult1;
+  obj1 = importDefaultResult1;
   const data = obj1.useGame(canonicalGameId).data;
   if (data != null) {
     const coverURL = data.getCoverURL();

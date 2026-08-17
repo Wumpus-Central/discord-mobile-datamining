@@ -1,11 +1,14 @@
 // discord_app/modules/virtual_currency/native/OrbOnboardingPill.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import OrbsIcon from "OrbsIcon" /* 9238 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
 class OrbOnboardingPill {
   constructor(arg0) {
     flag = global.accessible;
@@ -14,7 +17,7 @@ class OrbOnboardingPill {
     }
     tmp3 = closure_0;
     tmp4 = closure_1;
-    tmp = OrbOnboardingPill();
+    tmp = closure_4();
     tmp2 = jsxs;
     obj = { onPress: global.onPress, style: tmp.container, accessibilityRole: "button", activeOpacity: 0.8, accessible: flag, accessibilityElementsHidden: !flag, importantForAccessibility: null, children: null };
     str = "no";
@@ -32,13 +35,14 @@ class OrbOnboardingPill {
     return tmp2(require("PressableBase").PressableOpacity, obj);
   }
 }
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 OrbOnboardingPill.displayName = "OrbOnboardingPill";
 createCacheKey = { container: null };
-createCacheKey = { height: 36, borderRadius: require("Themes").radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: require("Themes").space.PX_12, paddingVertical: require("Themes").space.PX_4, backgroundColor: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
+createCacheKey = { height: 36, borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexDirection: "row", paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND, flexShrink: 0, gap: 4 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("PressableBase").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbOnboardingPill.tsx");
 
 export default OrbOnboardingPill;
 export { OrbOnboardingPill };

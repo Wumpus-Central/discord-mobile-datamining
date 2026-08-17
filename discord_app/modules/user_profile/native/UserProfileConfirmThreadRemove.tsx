@@ -1,22 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfileConfirmThreadRemove.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("nameFromUser").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmThreadRemove.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmThreadRemove.tsx");
 
 export default function UserProfileConfirmThreadRemove(isForumPost) {
-  let onConfirm;
-  let user;
   isForumPost = isForumPost.isForumPost;
   ({ user, onConfirm } = isForumPost);
-  let obj = nameFromUser;
+  let obj = nameFromUserDefault;
   const name = obj.useName(user);
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
@@ -25,7 +22,7 @@ export default function UserProfileConfirmThreadRemove(isForumPost) {
   const t2 = tmp4(1236).t;
   obj[1] = intl2.formatToPlainString(isForumPost ? t2["6UGfnx"] : t2["hL+Znb"], { user: name });
   obj = { children: null };
-  const obj1 = { variant: "destructive", text: null, onPress: null };
+  obj1 = { variant: "destructive", text: null, onPress: null };
   const intl3 = tmp4(1236).intl;
   obj1[1] = intl3.string(getSystemLocale.t.N86XcP);
   obj1[2] = onConfirm;

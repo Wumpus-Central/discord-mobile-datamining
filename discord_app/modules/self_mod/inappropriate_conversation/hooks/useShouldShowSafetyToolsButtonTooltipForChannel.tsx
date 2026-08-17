@@ -1,11 +1,15 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx
-import { SafetyWarningTypes } from "handleConnectionOpen";
-import { useInappropriateConversationSafetyToolsWarningForChannel } from "useInappropriateConversationSafetyToolsWarningForChannel.tsx";
-import { useInappropriateConversationWarningsForChannel } from "useInappropriateConversationWarningsForChannel.tsx";
+import set from "set" /* 2 */;
+import setDefault from "set" /* 687 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
+import useInappropriateConversationSafetyToolsWarningForChannel from "useInappropriateConversationSafetyToolsWarningForChannel" /* 10608 */;
+import getSafetyAlertsSettingOrDefault from "getSafetyAlertsSettingOrDefault" /* 10610 */;
 
-const HOUR = require("set").Millis.HOUR;
-let closure_4 = 12 * require("set").Millis.HOUR;
-const result = require("useInappropriateConversationSafetyToolsWarningForChannel").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
+const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
+const HOUR = setDefault.Millis.HOUR;
+let closure_4 = 12 * setDefault.Millis.HOUR;
+const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useShouldShowSafetyToolsButtonTooltipForChannel.tsx");
 
 export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButtonTooltipForChannel(channelId) {
   const inappropriateConversationSafetyToolsWarningForChannel = useInappropriateConversationSafetyToolsWarningForChannel.useInappropriateConversationSafetyToolsWarningForChannel(channelId);
@@ -51,7 +55,7 @@ export const useSafetyToolsButtonTooltipForChannel = function useSafetyToolsButt
           }
         }
       }
-      tmpResult = tmp(10610);
+      tmpResult = getSafetyAlertsSettingOrDefault;
     }
   }
 };

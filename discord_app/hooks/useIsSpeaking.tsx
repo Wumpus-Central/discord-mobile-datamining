@@ -1,15 +1,13 @@
 // discord_app/hooks/useIsSpeaking.tsx
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
-import handleConnectionOpen from "handleConnectionOpen";
-import anyoneHasFlagInContext from "anyoneHasFlagInContext";
-import updateVoiceState from "updateVoiceState";
+import closure_2 from "handleSoundCreateOrUpdate" /* 4780 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "anyoneHasFlagInContext" /* 4774 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
 
 const require = arg1;
-const result = require("anyoneHasFlagInContext").fileFinishedImporting("hooks/useIsSpeaking.tsx");
+const result = require("set").fileFinishedImporting("hooks/useIsSpeaking.tsx");
 
 export default function useIsSpeaking(checkSoundboardSounds) {
-  let checkSoundSharing;
-  let require;
   ({ userId: require, checkSoundSharing } = checkSoundboardSounds);
   if (checkSoundSharing === undefined) {
     checkSoundSharing = false;
@@ -24,12 +22,12 @@ export default function useIsSpeaking(checkSoundboardSounds) {
   }
   const context = checkSoundboardSounds.context;
   flag2 = undefined;
-  const items = [updateVoiceState, context];
+  const items = [closure_5, context];
   const stateFromStores = require(checkSoundSharing[4]).useStateFromStores(items, () => {
     const voiceChannelId = context.getVoiceChannelId();
     let voiceStateForChannel = null;
     if (null != voiceChannelId) {
-      voiceStateForChannel = outer1_5.getVoiceStateForChannel(voiceChannelId, closure_0);
+      voiceStateForChannel = closure_1_5.getVoiceStateForChannel(voiceChannelId, closure_0);
     }
     return voiceStateForChannel;
   });
@@ -70,12 +68,6 @@ export default function useIsSpeaking(checkSoundboardSounds) {
   return stateFromStores1;
 };
 export const getIsSpeaking = function getIsSpeaking(checkSoundboardSounds) {
-  let checkSoundSharing;
-  let obj;
-  let obj2;
-  let obj3;
-  let obj4;
-  let userId;
   ({ userId, checkSoundSharing } = checkSoundboardSounds);
   if (checkSoundSharing === undefined) {
     checkSoundSharing = false;
@@ -90,7 +82,7 @@ export const getIsSpeaking = function getIsSpeaking(checkSoundboardSounds) {
   }
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [updateVoiceState, handleConnectionOpen, anyoneHasFlagInContext, handleSoundCreateOrUpdate];
+    const items = [closure_5, closure_3, closure_4, closure_2];
     tmp = items;
   }
   [obj, obj2, obj3, obj4] = tmp;

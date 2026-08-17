@@ -1,23 +1,18 @@
 // discord_app/modules/auth/native/components/PromotionalEmailCheckBox.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import setPromoEmailConsentState from "setPromoEmailConsentState";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import setPromoEmailConsentState from "setPromoEmailConsentState" /* 5257 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let obj1;
 const require = arg1;
+noopAll;
 ({ View: obj1, Pressable: c3 } = get_ActivityIndicator);
 ({ usePromoEmailConsentStore: c4, setPromoEmailConsentChecked: c5 } = setPromoEmailConsentState);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, checkboxLabel: { flex: 1 } });
-const result = require("setPromoEmailConsentState").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
 
 export default function PromotionalEmailCheckBox(style) {
   let _require;
@@ -36,10 +31,10 @@ export default function PromotionalEmailCheckBox(style) {
     obj[1] = intl.string(tmp4(1236).t.ylFCLt);
     obj[2] = tmp8;
     obj[3] = function onPress() {
-      return outer1_5(!c0);
+      return closure_1_5(!closure_0);
     };
     obj[4] = tmp.checkboxRow;
-    const obj1 = { checked: null };
+    obj1 = { checked: null };
     obj1[0] = tmp3;
     const items = [callback2(tmp4(8085).FormCheckbox, obj1), ];
     const obj2 = { variant: "text-xs/medium", color: "text-muted", style: null, children: null };

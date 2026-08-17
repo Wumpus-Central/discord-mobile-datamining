@@ -1,17 +1,17 @@
 // discord_app/modules/game_server/hooks/useGameServerPowerupStatus.tsx
-import noop from "noop";
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleGameServerInstanceCreated" /* 4282 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerPowerupStatus.tsx");
 
 export default function useGameServerPowerupStatus(arg0) {
   const _require = arg0;
-  const items = [handleGameServerInstanceCreated];
+  const items = [closure_4];
   const items1 = [arg0];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
-    const stateForGuild = outer1_4.getStateForGuild(closure_0);
+    const stateForGuild = closure_1_4.getStateForGuild(closure_0);
     let entitlements;
     if (stateForGuild != null) {
       entitlements = stateForGuild.entitlements;
@@ -19,7 +19,7 @@ export default function useGameServerPowerupStatus(arg0) {
     return entitlements;
   }, items1);
   const tmp2 = stateFromStores(11728)(arg0);
-  const dependencyMap = tmp2;
+  dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return React.useMemo(() => {
     let obj = stateFromStores;
@@ -27,13 +27,13 @@ export default function useGameServerPowerupStatus(arg0) {
       obj = {};
     }
     if (0 !== Object.values(obj).length) {
-      if (tmp2.length > 0) {
+      if (length.length > 0) {
         obj = { type: "expiring", expiringAt: null };
         obj[1] = tmp[0].ends_at;
       } else {
         obj = { type: "active", statusText: null };
-        const intl = callback(tmp2[4]).intl;
-        obj[1] = intl.string(stateFromStores(callback[5]).FFLkmx);
+        const intl = callback(length[4]).intl;
+        obj[1] = intl.string(stateFromStores(length[5]).FFLkmx);
       }
       return obj;
     }

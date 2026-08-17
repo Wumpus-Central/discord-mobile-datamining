@@ -1,24 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileGameFriendsCard.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
+import noopAll from "noop" /* 19 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7145 */;
+import DividerDefault from "Divider" /* 7185 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ card: { flexDirection: "column" } });
-const result = require("createCacheKey").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileGameFriendsCard.tsx");
 
 export default function UserProfileGameFriendsCard(arg0) {
-  let applicationIds;
-  let style;
   let found;
-  let importDefault;
-  let dependencyMap;
-  let jsx;
+  importDefault = undefined;
+  dependencyMap = undefined;
+  jsx = undefined;
   ({ applicationIds, style } = arg0);
   const tmp = callback();
   const tmp2 = importDefault;
-  found = useGetOrFetchApplications(applicationIds).filter((arg0) => null != arg0);
+  found = useGetOrFetchApplicationsDefault(applicationIds).filter((arg0) => null != arg0);
   if (0 === found.length) {
     return null;
   } else {
@@ -48,7 +48,7 @@ export default function UserProfileGameFriendsCard(arg0) {
       const intl4 = found(1236).intl;
       obj = { applications: null, applicationNameLast: null };
       obj[0] = function applications(arg0) {
-        return lib.map((application) => outer1_3(outer1_1(outer1_2[5]), { application, useComma: true, textVariant: closure_1, iconSize: 16 }, application.id));
+        return lib.map((application) => closure_1_3(closure_1_1(closure_1_2[5]), { application, useComma: true, textVariant: closure_1, iconSize: 16 }, application.id));
       };
       obj[1] = function applicationNameLast() {
         return lib(textmdnormal(11799), { application: dependencyMap, textVariant: textmdnormal, iconSize: 16 });
@@ -56,7 +56,7 @@ export default function UserProfileGameFriendsCard(arg0) {
       formatResult = intl4.format(found(1236).t.UxpwAh, obj);
       tmp6 = found;
     }
-    const obj1 = { style: null, title: null, children: null };
+    obj1 = { style: null, title: null, children: null };
     const items = [tmp.card, style];
     obj1[0] = items;
     const intl3 = tmp6(1236).intl;
@@ -64,7 +64,7 @@ export default function UserProfileGameFriendsCard(arg0) {
     const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
     obj2[2] = formatResult;
     obj1[2] = jsx(tmp6(4734).Text, { variant: "text-md/normal", color: "text-default", children: null });
-    return jsx(tmp2(7185), { style: null, title: null, children: null });
+    return jsx(DividerDefault, { style: null, title: null, children: null });
   }
-  const arr = useGetOrFetchApplications(applicationIds);
+  const arr = useGetOrFetchApplicationsDefault(applicationIds);
 };

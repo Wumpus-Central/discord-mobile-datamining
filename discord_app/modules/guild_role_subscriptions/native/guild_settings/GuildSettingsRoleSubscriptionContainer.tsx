@@ -1,27 +1,20 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useOnboardingMonetizationEnableFlow } from "../../../creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx";
-import { useGroupListingsFetchContext } from "../../GroupListingsFetchContext.tsx";
-import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
+import noopAll from "noop" /* 19 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14559 */;
+import useOnboardingMonetizationEnableFlowDefault from "useOnboardingMonetizationEnableFlow" /* 16931 */;
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 16945 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ApplicationRejectedNotice(guildId) {
-  let reapplyNoticeText;
-  let requestRejectedNoticeText;
-  let resubmissionError;
   guildId = guildId.guildId;
   let obj = guildId(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(guildId));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(guildId));
   if (stateFromStores != null) {
     const features = stateFromStores.features;
     const hasItem = features.has(GuildFeatures.CREATOR_MONETIZABLE_RESTRICTED);
@@ -31,7 +24,7 @@ function ApplicationRejectedNotice(guildId) {
     const hasItem1 = features2.has(GuildFeatures.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
   }
   const tmp = callback3();
-  ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlow(stateFromStores));
+  ({ resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = useOnboardingMonetizationEnableFlowDefault(stateFromStores));
   if (null != resubmissionError) {
     obj = { children: null };
     let tmp9Result = tmp9(11384);
@@ -42,7 +35,7 @@ function ApplicationRejectedNotice(guildId) {
     obj[0] = requestRejectedNoticeText;
     tmp14 = callback(tmp9(16904), obj);
   } else if (tmp13) {
-    const obj1 = { notice: null };
+    obj1 = { notice: null };
     tmp9Result = tmp9(16904);
     const intl3 = tmp2(1236).intl;
     obj1[0] = intl3.string(tmp2(1236).t.MyJpJT);
@@ -82,8 +75,6 @@ function ApplicationRejectedNotice(guildId) {
   return tmp24;
 }
 function GuildSettingsRoleSubscription(arg0) {
-  let children;
-  let guildId;
   ({ guildId, children } = arg0);
   const tmp = callback3();
   let obj = useGroupListingsFetchContext;
@@ -96,17 +87,18 @@ function GuildSettingsRoleSubscription(arg0) {
     obj[1] = items;
     let tmp5 = callback2(closure_4, obj);
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.spinner;
     obj1[1] = callback(closure_3, {});
     tmp5 = callback(closure_4, obj1);
   }
   return tmp5;
 }
+noopAll;
 ({ ActivityIndicator: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flex: 1 }, warningBlockContainer: { marginHorizontal: 16, marginTop: 16 }, spinner: { marginTop: 12 } });
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionContainer.tsx");
 
 export default function GuildSettingsRoleSubscriptionContainer(guildId) {
   let obj = { guildId: guildId.guildId, refetchOnMount: true, children: null };

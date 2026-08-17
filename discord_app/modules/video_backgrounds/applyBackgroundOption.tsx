@@ -1,22 +1,20 @@
 // discord_app/modules/video_backgrounds/applyBackgroundOption.tsx
-import 00038__ from "../../../_runtime/metro/00038__.js";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
-import VideoFilterType from "VideoFilterType";
-import { NOOP } from "ME";
-import { isVideoBackgroundSupported } from "isVideoBackgroundSupported.tsx";
-import { getLastUsedVideoBackgroundOption } from "LastUsedVideoBackgroundOption.tsx";
-import { _fetchVideoFilterAssets } from "VideoBackgroundActionCreators.tsx";
+import _fetchVideoFilterAssets from "_fetchVideoFilterAssets" /* 9662 */;
+import getLastUsedVideoBackgroundOption from "getLastUsedVideoBackgroundOption" /* 9664 */;
+import isVideoBackgroundSupportedDefault from "isVideoBackgroundSupported" /* 9666 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "handleSyncedStoresUpdate" /* 9660 */;
+import VideoFilterType from "VideoFilterType" /* 8381 */;
+import { NOOP } from "ME" /* 676 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function _getFilterBlob() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const _fetch = fetch;
       closure_0 = yield fetch(closure_0);
@@ -27,7 +25,7 @@ function _getFilterBlob() {
       return tmp9;
     })();
   });
-  const _getFilterBlob = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -54,12 +52,12 @@ function applyBackgroundOption() {
 function _applyBackgroundOption() {
   let self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
@@ -87,18 +85,18 @@ function _applyBackgroundOption() {
               obj[0] = arg1;
               return obj;
             } else {
-              let c5 = tmp3;
-              let c4 = tmp30;
+              c5 = tmp3;
+              c4 = tmp30;
               let source;
               c4 = undefined;
               c5 = undefined;
-              let module_38 = false;
+              closure_3 = false;
               if (null == source) {
-                outer1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.NONE);
+                closure_1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.NONE);
                 c9 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else if (tmp59 === c7) {
-                outer1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.BACKGROUND_BLUR);
+                closure_1_10(tmp57, tmp58, callback(4569).FilterSettingsGraph.BACKGROUND_BLUR);
                 c9 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
@@ -110,12 +108,12 @@ function _applyBackgroundOption() {
                       let obj3 = callback(1435);
                       isAnimatedIconHashResult = obj3.isVideoAssetHash(asset);
                     }
-                    module_38 = isAnimatedIconHashResult;
+                    closure_3 = isAnimatedIconHashResult;
                     let obj4 = callback(1435);
-                    const obj1 = { userId: null, assetId: null, assetHash: null, size: null };
+                    obj1 = { userId: null, assetId: null, assetHash: null, size: null };
                     ({ user_id: obj6[0], id: obj6[1] } = tmp59);
                     obj1[2] = asset;
-                    obj1[3] = outer1_6.width;
+                    obj1[3] = closure_1_6.width;
                     let videoFilterAssetURL = obj4.getVideoFilterAssetURL(obj1);
                     source = videoFilterAssetURL;
                     const obj11 = callback(1435);
@@ -124,7 +122,7 @@ function _applyBackgroundOption() {
                     c7 = 1;
                     if (isAnimatedIconHashResult) {
                       c4 = tmp9;
-                      if (module_38) {
+                      if (closure_3) {
                         c8 = 3;
                         c9 = 1;
                         let obj2 = { value: null, done: false };
@@ -150,10 +148,10 @@ function _applyBackgroundOption() {
                       c9 = 1;
                       obj3 = { value: null, done: false };
                       obj3[0] = (function getFilterImage(videoFilterAssetURL) {
-                        let closure_0 = videoFilterAssetURL;
+                        closure_0 = videoFilterAssetURL;
                         return new Promise((arg0, arg1) => {
-                          let closure_0 = arg0;
-                          let closure_1 = arg1;
+                          closure_0 = arg0;
+                          closure_1 = arg1;
                           const image = new globalThis.Image();
                           image.crossOrigin = "anonymous";
                           image.onload = function onload() { ... };
@@ -167,12 +165,12 @@ function _applyBackgroundOption() {
                 }
                 const tmp24 = callback2(9665)()[tmp59];
                 const isVideo = tmp24.isVideo;
-                module_38 = isVideo;
+                closure_3 = isVideo;
                 if (isVideo == null) {
-                  module_38 = false;
+                  closure_3 = false;
                 }
                 source = tmp24.source;
-                isAnimatedIconHashResult = module_38;
+                isAnimatedIconHashResult = closure_3;
                 videoFilterAssetURL = source;
               }
             }
@@ -209,7 +207,7 @@ function _applyBackgroundOption() {
           }
           c9 = 3;
         } catch (tmp48) {
-          let closure_6 = tmp48;
+          closure_6 = tmp48;
           if (tmp4 === c7) {
             c9 = tmp2;
             throw tmp48;
@@ -220,7 +218,7 @@ function _applyBackgroundOption() {
       }
     })();
   });
-  const _applyBackgroundOption = tmp;
+  closure_12 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -242,10 +240,10 @@ function applyBackgroundOptionLive(lastUsedVideoBackgroundOption, arg1) {
 function _applyBackgroundOptionLive() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -273,7 +271,7 @@ function _applyBackgroundOptionLive() {
               obj[0] = arg1;
               return obj;
             } else {
-              let module_38 = tmp5;
+              closure_3 = tmp5;
               let location = tmp2;
               let flag;
               location = undefined;
@@ -292,7 +290,7 @@ function _applyBackgroundOptionLive() {
               throw arg1;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -329,7 +327,7 @@ function _applyBackgroundOptionLive() {
     iter.next();
     return iter;
   });
-  const _applyBackgroundOptionLive = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -341,11 +339,11 @@ function _applyBackgroundOptionLive() {
 function _applyBackgroundOptionPreview() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -373,7 +371,7 @@ function _applyBackgroundOptionPreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let mergeGuildAvatar = tmp5;
+              closure_4 = tmp5;
               let location = tmp2;
               let flag;
               location = undefined;
@@ -392,7 +390,7 @@ function _applyBackgroundOptionPreview() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -431,7 +429,7 @@ function _applyBackgroundOptionPreview() {
     iter.next();
     return iter;
   });
-  const _applyBackgroundOptionPreview = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -441,7 +439,7 @@ function _applyBackgroundOptionPreview() {
   return applyArgumentsResult;
 }
 ({ BACKGROUND_REPLACEMENT_SIZE: closure_6, BLUR_BACKGROUND_OPTION: error } = VideoFilterType);
-let result = require("handleSyncedStoresUpdate").fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
+let result = require("set").fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
 
 export { applyBackgroundOptionLive };
 export const applyBackgroundOptionPreview = function applyBackgroundOptionPreview() {
@@ -458,7 +456,7 @@ export const applyInitialVideoBackgroundOption = function applyInitialVideoBackg
   currentUser = currentUser.getCurrentUser();
   if (null != currentUser) {
     const lastUsedVideoBackgroundOption = getLastUsedVideoBackgroundOption.getLastUsedVideoBackgroundOption(currentUser);
-    let tmp6 = isVideoBackgroundSupported();
+    let tmp6 = isVideoBackgroundSupportedDefault();
     if (tmp6) {
       tmp6 = !hasBeenApplied.hasBeenApplied;
     }

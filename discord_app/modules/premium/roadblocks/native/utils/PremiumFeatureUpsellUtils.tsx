@@ -1,8 +1,10 @@
 // discord_app/modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx
-import { 00038__ } from "../../../../../../_runtime/metro/00038__.js";
-import { EntitlementFeatureNames } from "../../../../../../discord_common/js/shared/shared-constants/EntitlementFeatureNames.tsx";
-import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
-const result = require("keys").fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import SoundButtonOverlay from "SoundButtonOverlay" /* 6824 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8482 */;
+
+const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/PremiumFeatureUpsellUtils.tsx");
 
 export const isSoundboardSectionNitroLocked = function isSoundboardSectionNitroLocked(guild_id, categoryInfo) {
   let tmp = categoryInfo.type === SoundButtonOverlay.SoundboardSoundGridSectionType.GUILD;
@@ -30,6 +32,6 @@ export const getUpsellType = function getUpsellType(featureName) {
     return tmp(691).UpsellTypes.STREAM_HIGH_QUALITY;
   } else {
     const _HermesInternal = HermesInternal;
-    00038__(false, "Missing featureName: " + featureName);
+    _modDef38(false, "Missing featureName: " + featureName);
   }
 };

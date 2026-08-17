@@ -1,15 +1,12 @@
 // discord_app/actions/GiftCodeActionCreators.tsx
-import GuildFeatures from "GuildFeatures";
-import addApplication from "addApplication";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer";
-import ME from "ME";
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures";
-import { CodedLinkActionCreators } from "../modules/coded_links/web/CodedLinkActionCreators.tsx";
+import _modDef10643 from "module_10643" /* 10643 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import { isUnknownCollectiblesItemRecord as closure_6 } from "fromServer" /* 5309 */;
+import ME from "ME" /* 676 */;
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_10 } from "GuildFeatures" /* 1924 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function resolveGiftCode() {
   const self = this;
@@ -24,12 +21,12 @@ function resolveGiftCode() {
 function _resolveGiftCode() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -58,7 +55,7 @@ function _resolveGiftCode() {
               return obj;
             } else {
               let application = tmp4;
-              let GuildFeatures = tmp9;
+              closure_3 = tmp9;
               let flag;
               let flag2;
               if (flag === undefined) {
@@ -67,7 +64,7 @@ function _resolveGiftCode() {
               if (flag2 === undefined) {
                 flag2 = false;
               }
-              GuildFeatures = undefined;
+              closure_3 = undefined;
               application = undefined;
               c7 = 1;
               c8 = 1;
@@ -79,14 +76,14 @@ function _resolveGiftCode() {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               let obj2 = { type: "GIFT_CODE_RESOLVE", code: null };
               obj2[1] = callback;
               flag(flag2[6]).dispatch(obj2);
-              let c6 = 1;
+              c6 = 1;
               const obj18 = flag(flag2[6]);
               c7 = 3;
               c8 = 1;
@@ -114,16 +111,16 @@ function _resolveGiftCode() {
                 obj5[0] = arg1;
                 return obj5;
               } else {
-                GuildFeatures = arg1;
-                if (null != GuildFeatures.application_id) {
-                  if (GuildFeatures.application_id !== closure_10) {
-                    if (null == application.getApplication(GuildFeatures.application_id)) {
+                closure_3 = arg1;
+                if (null != closure_3.application_id) {
+                  if (closure_3.application_id !== closure_10) {
+                    if (null == application.getApplication(closure_3.application_id)) {
                       c6 = 2;
                       let obj8 = flag(flag2[8]);
                       c7 = 5;
                       c8 = 1;
                       let obj6 = { value: null, done: false };
-                      obj6[0] = obj8.fetchApplication(GuildFeatures.application_id);
+                      obj6[0] = obj8.fetchApplication(closure_3.application_id);
                       return obj6;
                     }
                   }
@@ -155,7 +152,7 @@ function _resolveGiftCode() {
                 obj[0] = arg1;
                 return obj;
               } else {
-                application = product.getProduct(GuildFeatures.sku_id);
+                application = product.getProduct(closure_3.sku_id);
                 let someResult;
                 if (application != null) {
                   const items = tmp67.items;
@@ -168,22 +165,22 @@ function _resolveGiftCode() {
               }
               obj2 = flag(flag2[6]);
               obj8 = { type: "GIFT_CODE_RESOLVE_SUCCESS", giftCode: null };
-              obj8[1] = GuildFeatures;
+              obj8[1] = closure_3;
               obj2.dispatch(obj8);
               const obj9 = { giftCode: null };
-              obj9[0] = GuildFeatures;
+              obj9[0] = closure_3;
               c6 = 0;
               c8 = 3;
               const obj10 = { value: null, done: true };
               obj10[0] = obj9;
               return obj10;
             }
-            if (GuildFeatures.application_id === c7) {
+            if (closure_3.application_id === c7) {
               obj6 = callback(flag2[9]);
               c7 = 6;
               c8 = 1;
               obj11 = { value: null, done: false };
-              obj11[0] = obj6.fetchCollectiblesProduct(GuildFeatures.sku_id);
+              obj11[0] = obj6.fetchCollectiblesProduct(closure_3.sku_id);
               return obj11;
             }
           }
@@ -203,7 +200,7 @@ function _resolveGiftCode() {
     iter.next();
     return iter;
   });
-  const _resolveGiftCode = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -212,48 +209,48 @@ function _resolveGiftCode() {
   }
   return applyArgumentsResult;
 }
-({ COLLECTIBLES_APPLICATION_ID: error, Endpoints: metroImportAll, RPCCommands: c9 } = ME);
+({ COLLECTIBLES_APPLICATION_ID: error, Endpoints: closure_8, RPCCommands: c9 } = ME);
 const merged = Object.assign(require("redeemGiftCode").default);
-const result = require("updateCategoriesAndProducts").fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/GiftCodeActionCreators.tsx");
 
 export default {
   resolveGiftCode,
   fetchUserGiftCodesForSKU(skuId, subscriptionPlanId) {
-    let closure_0 = skuId;
+    closure_0 = skuId;
     let tmp = subscriptionPlanId;
     if (subscriptionPlanId === undefined) {
       tmp = null;
     }
-    const importDefault = tmp;
+    c1 = tmp;
     return callback(function*() {
-      let closure_1 = tmp3;
-      const obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
-      obj1[1] = outer1_0;
-      obj1[2] = outer1_1;
-      outer1_1(outer1_2[6]).dispatch(obj1);
-      let c3 = 1;
-      const HTTP = outer1_0(outer1_2[11]).HTTP;
+      closure_1 = tmp3;
+      obj1 = { type: "GIFT_CODES_FETCH", skuId: null, subscriptionPlanId: null };
+      obj1[1] = closure_1_0;
+      obj1[2] = closure_1_1;
+      closure_1_1(closure_1_2[6]).dispatch(obj1);
+      c3 = 1;
+      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
       const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = outer1_8.USER_GIFT_CODES;
+      obj2[0] = closure_1_8.USER_GIFT_CODES;
       let obj3 = { sku_id: null, subscription_plan_id: null };
-      obj3[0] = outer1_0;
-      obj3[1] = outer1_1;
+      obj3[0] = closure_1_0;
+      obj3[1] = closure_1_1;
       obj2[1] = obj3;
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c3 = 0;
-        obj3 = outer1_1(outer1_2[6]);
+        obj3 = closure_1_1(closure_1_2[6]);
         const obj5 = { type: "GIFT_CODES_FETCH_FAILURE", skuId: null, subscriptionPlanId: null };
         obj5[1] = body;
         obj5[2] = closure_1;
         obj3.dispatch(obj5);
-        let c5 = 3;
+        c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         body = arg1;
-        const obj = outer1_1(outer1_2[6]);
+        const obj = closure_1_1(closure_1_2[6]);
         const obj6 = { type: "GIFT_CODES_FETCH_SUCCESS", giftCodes: null, skuId: null, subscriptionPlanId: null };
         obj6[1] = body.body;
         obj6[2] = body;
@@ -266,41 +263,41 @@ export default {
     })();
   },
   createGiftCode(skuId, subscriptionPlanId, giftStyle) {
-    let closure_0 = skuId;
+    closure_0 = skuId;
     let tmp = subscriptionPlanId;
     if (subscriptionPlanId === undefined) {
       tmp = null;
     }
-    const importDefault = tmp;
+    c1 = tmp;
     let tmp2 = giftStyle;
     if (giftStyle === undefined) {
       tmp2 = null;
     }
-    const dependencyMap = tmp2;
+    c2 = tmp2;
     return callback(function*() {
-      let closure_1 = tmp3;
-      const obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
-      obj1[1] = outer1_0;
-      obj1[2] = outer1_1;
-      outer1_1(outer1_2[6]).dispatch(obj1);
-      let c3 = 1;
-      const HTTP = outer1_0(outer1_2[11]).HTTP;
+      closure_1 = tmp3;
+      obj1 = { type: "GIFT_CODE_CREATE_START", skuId: null, subscriptionPlanId: null };
+      obj1[1] = closure_1_0;
+      obj1[2] = closure_1_1;
+      closure_1_1(closure_1_2[6]).dispatch(obj1);
+      c3 = 1;
+      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
       const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = outer1_8.USER_GIFT_CODE_CREATE;
+      obj2[0] = closure_1_8.USER_GIFT_CODE_CREATE;
       const obj3 = { sku_id: null, subscription_plan_id: null, gift_style: null };
-      obj3[0] = outer1_0;
-      obj3[1] = outer1_1;
-      obj3[2] = outer1_2;
+      obj3[0] = closure_1_0;
+      obj3[1] = closure_1_1;
+      obj3[2] = closure_1_2;
       obj2[1] = obj3;
       yield HTTP.post(obj2);
       c3 = 0;
-      const obj4 = outer1_1(outer1_2[6]);
+      const obj4 = closure_1_1(closure_1_2[6]);
       const obj5 = { type: "GIFT_CODE_CREATE_FAILURE", skuId: null, subscriptionPlanId: null };
       obj5[1] = closure_0;
       obj5[2] = closure_1;
       obj4.dispatch(obj5);
       closure_0 = yield "HermesInternal";
-      const obj = outer1_1(outer1_2[6]);
+      const obj = closure_1_1(closure_1_2[6]);
       const obj7 = { type: "GIFT_CODE_CREATE_SUCCESS", giftCode: null };
       obj7[1] = closure_0.body;
       obj.dispatch(obj7);
@@ -309,29 +306,29 @@ export default {
     })();
   },
   revokeGiftCode(code) {
-    let closure_0 = code;
+    closure_0 = code;
     return callback(function*() {
-      let closure_0 = tmp3;
-      const obj1 = { type: "GIFT_CODE_REVOKE", code: null };
-      obj1[1] = outer1_0;
-      v0(outer1_2[6]).dispatch(obj1);
-      let c3 = 1;
-      const HTTP = outer1_0(outer1_2[11]).HTTP;
+      closure_0 = tmp3;
+      obj1 = { type: "GIFT_CODE_REVOKE", code: null };
+      obj1[1] = closure_1_0;
+      v0(closure_1_2[6]).dispatch(obj1);
+      c3 = 1;
+      const HTTP = closure_1_0(closure_1_2[11]).HTTP;
       const obj2 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj2[0] = outer1_8.USER_GIFT_CODE_REVOKE(outer1_0);
+      obj2[0] = closure_1_8.USER_GIFT_CODE_REVOKE(closure_1_0);
       yield HTTP.del(obj2);
       if (1 === tmp7) {
         c3 = 0;
-        const obj3 = v0(outer1_2[6]);
+        const obj3 = v0(closure_1_2[6]);
         const obj4 = { type: "GIFT_CODE_REVOKE_FAILURE", code: null };
         obj4[1] = closure_0;
         obj3.dispatch(obj4);
-        let c4 = 3;
+        c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = v0(outer1_2[6]);
+        const obj = v0(closure_1_2[6]);
         const obj5 = { type: "GIFT_CODE_REVOKE_SUCCESS", code: null };
         obj5[1] = closure_0;
         obj.dispatch(obj5);
@@ -342,7 +339,7 @@ export default {
     })();
   },
   openNativeGiftCodeModal(arg0) {
-    CodedLinkActionCreators.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
+    _modDef10643.openNativeAppModal(arg0, constants.GIFT_CODE_BROWSER);
   }
 };
 export { resolveGiftCode };

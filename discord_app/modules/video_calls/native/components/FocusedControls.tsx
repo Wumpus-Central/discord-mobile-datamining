@@ -1,29 +1,23 @@
 // discord_app/modules/video_calls/native/components/FocusedControls.tsx
-import importAllResult from "FocusedControlsExpanded";
-import get_ActivityIndicator from "QUICK_SWITCHER";
-import { AnalyticEvents } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
-import { nativeEventEmitter } from "../../../connectivity/native/components/GlobalStatusIndicator.tsx";
-import { useGlobalStatusIndicatorState } from "../../../connectivity/native/useGlobalStatusIndicatorState.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { useRevealProviderValue } from "RevealProvider.tsx";
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import useRevealProviderValue from "useRevealProviderValue" /* 8678 */;
+import useGlobalStatusIndicatorState from "useGlobalStatusIndicatorState" /* 12495 */;
+import nativeEventEmitter from "nativeEventEmitter" /* 12498 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function FocusedControlsHeader(reveal) {
-  let header;
-  let isTouchingLeftScreenEdge;
   reveal = reveal.reveal;
   let derivedValue;
   ({ header, isTouchingLeftScreenEdge } = reveal);
-  let obj = reveal(4115);
+  obj = reveal(4115);
   const fn = function l() {
     let num = -54;
     if (reveal) {
@@ -36,11 +30,10 @@ function FocusedControlsHeader(reveal) {
   fn.__initData = closure_11;
   derivedValue = obj.useDerivedValue(fn);
   const tmp = callback3();
-  let obj1 = reveal(4115);
+  obj1 = reveal(4115);
   const fn2 = function c() {
-    let obj = { transform: null };
-    obj = { translateY: null };
-    obj[0] = reveal(outer1_2[8]).withTiming(derivedValue.get(), outer1_10);
+    obj = { transform: null };
+    obj = { translateY: reveal(closure_1_2[8]).withTiming(derivedValue.get(), closure_1_10) };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -51,18 +44,17 @@ function FocusedControlsHeader(reveal) {
   fn2.__initData = closure_12;
   const animatedStyle = obj1.useAnimatedStyle(fn2);
   obj = { style: animatedStyle, children: null };
-  obj1 = { top: !derivedValue(12494)(), left: isTouchingLeftScreenEdge, right: true, children: null };
-  obj1[3] = callback(closure_5, { style: tmp.headerContainer, children: header });
+  obj1 = { top: !derivedValue(12494)(), left: isTouchingLeftScreenEdge, right: true, children: callback(closure_5, obj2) };
   obj[1] = callback(reveal(6803).SafeAreaPaddingView, obj1);
   return callback(derivedValue(4115).View, obj);
 }
 function FocusedControlsHeaderGradient() {
-  const width = useWindowDimensions().width;
-  let obj = { style: items, children: null };
+  const width = useWindowDimensionsDefault().width;
+  obj = { style: items, children: null };
   items = [callback3().backgroundGradient, { width }];
   obj = { height: "100%", width, children: null };
   obj = { children: null };
-  const obj1 = { id: "grad", y1: "0%", x1: "0", x2: "0", y2: "100%", children: null };
+  obj1 = { id: "grad", y1: "0%", x1: "0", x2: "0", y2: "100%", children: null };
   const items1 = [callback(inlineStyles.Stop, { offset: "0%", stopColor: "black", stopOpacity: ".8" }), callback(inlineStyles.Stop, { offset: "66%", stopColor: "black", stopOpacity: ".51" }), callback(inlineStyles.Stop, { offset: "100%", stopColor: "black", stopOpacity: "0" })];
   obj1[5] = items1;
   obj[0] = callback2(inlineStyles.LinearGradient, obj1);
@@ -73,7 +65,7 @@ function FocusedControlsHeaderGradient() {
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ backgroundGradient: { position: "absolute", left: 0, right: 0, top: 0, height: 130 }, headerContainer: { position: "relative", height: 54 } });
 let obj = { easing: require("Button").STANDARD_EASING, duration: 250 };
 let closure_11 = { code: "function FocusedControlsTsx1(){const{reveal,FOCUSED_CONTROLS_HEADER_HEIGHT}=this.__closure;return reveal?0:-FOCUSED_CONTROLS_HEADER_HEIGHT;}" };
@@ -82,17 +74,6 @@ let closure_15 = { code: "function FocusedControlsTsx3(){const{isInvitedToSpeak,
 let closure_16 = { code: "function FocusedControlsTsx4(){const{reveal}=this.__closure;return reveal?1:0;}" };
 let closure_17 = { code: "function FocusedControlsTsx5(){const{withTiming,top,TIMING_CONFIG,revealOpacity}=this.__closure;return{top:withTiming(top.get(),TIMING_CONFIG),opacity:withTiming(revealOpacity.get(),TIMING_CONFIG)};}" };
 const memoResult = importAllResult.memo((disableGradient) => {
-  let actionBar;
-  let bottomHeader;
-  let children;
-  let containerStyle;
-  let expandedControls;
-  let forceReveal;
-  let header;
-  let isTouchingLeftScreenEdge;
-  let omitPTT;
-  let onDrawerClose;
-  let require;
   ({ expandedControls, actionBar, forceReveal } = disableGradient);
   ({ header, children } = disableGradient);
   if (forceReveal === undefined) {
@@ -104,16 +85,16 @@ const memoResult = importAllResult.memo((disableGradient) => {
   }
   ({ containerStyle, channel: require } = disableGradient);
   let globalStatusIndicatorHeightSharedValue;
-  let dependencyMap;
+  dependencyMap = undefined;
   let reveal;
   let derivedValue;
   let derivedValue1;
   let analyticsLocations;
   let callback;
   ({ omitPTT, bottomHeader, onDrawerClose, isTouchingLeftScreenEdge } = disableGradient);
-  let obj = useGlobalStatusIndicatorState;
+  obj = useGlobalStatusIndicatorState;
   const globalStatusIndicatorState = obj.useGlobalStatusIndicatorState();
-  let obj1 = nativeEventEmitter;
+  obj1 = nativeEventEmitter;
   globalStatusIndicatorHeightSharedValue = obj1.useGlobalStatusIndicatorHeightSharedValue(globalStatusIndicatorState);
   const tmp6 = globalStatusIndicatorHeightSharedValue(12494)();
   dependencyMap = tmp6;
@@ -129,9 +110,9 @@ const memoResult = importAllResult.memo((disableGradient) => {
   class D {
     constructor() {
       num = 0;
-      if (c2) {
-        tmp = c1;
-        num = c1.get();
+      if (closure_2) {
+        tmp = closure_1;
+        num = closure_1.get();
       }
       return num;
     }
@@ -144,7 +125,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   class F {
     constructor() {
       num = 0;
-      if (reveal) {
+      if (closure_3) {
         num = 1;
       }
       return num;
@@ -156,18 +137,17 @@ const memoResult = importAllResult.memo((disableGradient) => {
   derivedValue1 = tmpResult.useDerivedValue(F);
   const obj3 = SCREEN_READER_ENABLED_GETTER;
   const fn = function y() {
-    const obj = { top: null, opacity: null };
-    obj[0] = outer1_0(_undefined[8]).withTiming(derivedValue.get(), outer1_10);
-    const obj2 = outer1_0(_undefined[8]);
-    obj[1] = outer1_0(_undefined[8]).withTiming(derivedValue1.get(), outer1_10);
+    obj = { top: closure_1_0(4664).withTiming(derivedValue.get(), closure_1_10), opacity: null };
+    const obj2 = closure_1_0(4664);
+    obj[1] = closure_1_0(4664).withTiming(derivedValue1.get(), closure_1_10);
     return obj;
   };
   obj = { withTiming: tmp(4664).withTiming, top: derivedValue, TIMING_CONFIG: obj, revealOpacity: derivedValue1 };
   fn.__closure = obj;
   fn.__workletHash = 8532538341439;
   fn.__initData = closure_17;
-  const animatedStyle = ReanimatedRexport.useAnimatedStyle(fn);
-  const tmpResult1 = ReanimatedRexport;
+  const animatedStyle = _mod4115.useAnimatedStyle(fn);
+  const tmpResult1 = _mod4115;
   analyticsLocations = globalStatusIndicatorHeightSharedValue(7139)(tmp5(7159).FOCUSED_VOICE_CONTROLS).analyticsLocations;
   callback = tmp5(11234)();
   if (containerStyle == null) {
@@ -191,7 +171,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
     if (null != expandedControls) {
       obj1 = { onDrawerOpen: null, omitPTT: null, actionBar: null, expandedControls: null, header: null, onDrawerClose: null, reveal: null, children: null };
       obj1[0] = function onDrawerOpen() {
-        let obj = globalStatusIndicatorHeightSharedValue(_undefined[20]);
+        obj = globalStatusIndicatorHeightSharedValue(698);
         obj = { channel_id: closure_0.id, guild_id: closure_0.guild_id, application_id: null, activity_session_id: null, location_stack: null };
         let applicationId;
         if (closure_7 != null) {
@@ -220,7 +200,7 @@ const memoResult = importAllResult.memo((disableGradient) => {
   obj[2] = items1;
   return closure_8(globalStatusIndicatorHeightSharedValue(4115).View, obj);
 });
-const result = require("ME").fileFinishedImporting("modules/video_calls/native/components/FocusedControls.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/FocusedControls.tsx");
 
 export default memoResult;
 export const FOCUSED_CONTROLS_HEADER_HEIGHT = 54;

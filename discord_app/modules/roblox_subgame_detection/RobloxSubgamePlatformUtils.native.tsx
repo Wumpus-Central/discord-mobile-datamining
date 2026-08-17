@@ -1,8 +1,8 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
-let result = require("ROBLOX_PROTOCOL_URL").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
+let result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgamePlatformUtils.native.tsx");
 
 export default {
   getRobloxSubgameURL(closure_0) {
@@ -33,11 +33,11 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
-              let obj2 = outer1_0(4646);
+              closure_0 = tmp4;
+              let obj2 = closure_1_0(4646);
               dependencyMap = 1;
               c2 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj2.canOpenUrlScheme("roblox");
               return obj1;
             }
@@ -50,7 +50,7 @@ export default {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4644);
+            obj = closure_1_0(4644);
             if (arg1) {
               obj.ROBLOX_PROTOCOL_URL(closure_0);
             } else {

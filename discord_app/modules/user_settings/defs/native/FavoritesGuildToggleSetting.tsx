@@ -1,38 +1,41 @@
 // discord_app/modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useFavoritesAccess } from "../../../favorites/FavoritesHooks.tsx";
-import { computeIsFavoritesGuildVisible } from "../../../favorites/hooks/useIsFavoritesGuildVisible.tsx";
-import { messagesProxy } from "../../../favorites/intl/FavoritesGuild.messages.js";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 3079 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import getNextPositionFromChannels from "getNextPositionFromChannels" /* 9978 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+import computeIsFavoritesGuildVisibleDefault from "computeIsFavoritesGuildVisible" /* 14671 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.OT1NK5);
+    return intl.string(messagesProxyDefault.OT1NK5);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
   usePredicate() {
     return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
   useValue() {
-    return computeIsFavoritesGuildVisible(false);
+    return computeIsFavoritesGuildVisibleDefault(false);
   },
-  onValueChange: require("getNextPositionFromChannels").setFavoritesGuildVisibilityFromSettings
+  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings
 });
 const obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.OT1NK5);
+    return intl.string(messagesProxyDefault.OT1NK5);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
+  parent: MobileUserSettings.MobileUserSettings.APPEARANCE,
   usePredicate() {
     return useFavoritesAccess.useFavoritesAccess("FavoritesGuildToggleSetting").hasAccess;
   },
   useValue() {
-    return computeIsFavoritesGuildVisible(false);
+    return computeIsFavoritesGuildVisibleDefault(false);
   },
-  onValueChange: require("getNextPositionFromChannels").setFavoritesGuildVisibilityFromSettings
+  onValueChange: getNextPositionFromChannels.setFavoritesGuildVisibilityFromSettings
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/FavoritesGuildToggleSetting.tsx");
 
 export default toggle;

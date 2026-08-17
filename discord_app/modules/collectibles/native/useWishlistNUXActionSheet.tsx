@@ -1,23 +1,23 @@
 // discord_app/modules/collectibles/native/useWishlistNUXActionSheet.tsx
-import noop from "noop";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import fetchFingerprint from "fetchFingerprint";
-import { ContentDismissActionType } from "ContentDismissActionType";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createUserWidgetFromServer" /* 5365 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("fetchFingerprint").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/useWishlistNUXActionSheet.tsx");
 
 export default function useWishlistNUXActionSheet() {
   let obj = _initialize;
-  const items = [fetchFingerprint];
+  const items = [closure_5];
   _require = obj.useStateFromStores(items, () => id.getId());
-  const items1 = [createUserWidgetFromServer];
-  const stateFromStores = _initialize.useStateFromStores(items1, () => outer1_4.getFirstWishlistId(closure_0));
+  const items1 = [closure_4];
+  const stateFromStores = _initialize.useStateFromStores(items1, () => closure_1_4.getFirstWishlistId(closure_0));
   let obj2 = _initialize;
-  const items2 = [createUserWidgetFromServer];
+  const items2 = [closure_4];
   let stateFromStores1 = _initialize.useStateFromStores(items2, () => {
-    const userProfile = outer1_4.getUserProfile(closure_0);
+    const userProfile = closure_1_4.getUserProfile(closure_0);
     let tmp2 = null != userProfile;
     if (tmp2) {
       tmp2 = userProfile.fetchEndedAt > 0;
@@ -46,15 +46,15 @@ export default function useWishlistNUXActionSheet() {
   return obj;
 };
 export const useHasNeverWishlisted = function useHasNeverWishlisted() {
-  const items = [fetchFingerprint];
+  const items = [closure_5];
   _require = _initialize.useStateFromStores(items, () => id.getId());
   const obj = _initialize;
-  const items1 = [createUserWidgetFromServer];
-  const stateFromStores = _initialize.useStateFromStores(items1, () => outer1_4.getFirstWishlistId(closure_0));
+  const items1 = [closure_4];
+  const stateFromStores = _initialize.useStateFromStores(items1, () => closure_1_4.getFirstWishlistId(closure_0));
   const obj2 = _initialize;
-  const items2 = [createUserWidgetFromServer];
+  const items2 = [closure_4];
   let stateFromStores1 = _initialize.useStateFromStores(items2, () => {
-    const userProfile = outer1_4.getUserProfile(closure_0);
+    const userProfile = closure_1_4.getUserProfile(closure_0);
     let tmp2 = null != userProfile;
     if (tmp2) {
       tmp2 = userProfile.fetchEndedAt > 0;

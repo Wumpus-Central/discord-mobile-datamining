@@ -1,12 +1,11 @@
 // discord_app/modules/stage_channels/native/components/AudienceGridRow.tsx
-import { View } from "get ActivityIndicator";
-import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import _modDef12624 from "module_12624" /* 12624 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
 class BlankAudience {
   constructor(arg0) {
     count = global.count;
@@ -22,10 +21,7 @@ class BlankAudience {
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ rowContainer: { flex: 1, flexDirection: "row", marginVertical: 16, paddingHorizontal: 4, justifyContent: "space-between" } });
-const memoResult = require("noop").memo((theme) => {
-  let importDefault;
-  let participants;
-  let renderBlankAudience;
+const memoResult = importAllResult.memo((theme) => {
   ({ channel: importDefault, participants, renderBlankAudience } = theme);
   if (renderBlankAudience === undefined) {
     renderBlankAudience = true;
@@ -42,7 +38,7 @@ const memoResult = require("noop").memo((theme) => {
   }
   let obj = { style: items, children: null };
   items[1] = { justifyContent: str };
-  const items1 = [participants.map((id) => outer1_4(outer1_0(theme[6]), { theme, channel: closure_0, participant: id }, id.id)), ];
+  const items1 = [participants.map((id) => closure_1_4(closure_1_0(theme[6]), { theme, channel: closure_0, participant: id }, id.id)), ];
   let tmp5 = null;
   if (num > 0) {
     obj = { count: null };
@@ -53,7 +49,7 @@ const memoResult = require("noop").memo((theme) => {
   obj[1] = items1;
   return closure_5(View, obj);
 });
-const result = require("MAX_STAGE_TOPIC_LENGTH").fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/AudienceGridRow.tsx");
 
 export default memoResult;
 export { BlankAudience };

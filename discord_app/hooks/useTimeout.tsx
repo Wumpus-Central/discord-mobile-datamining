@@ -1,16 +1,15 @@
 // discord_app/hooks/useTimeout.tsx
-import noop from "noop";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
 
-let c0;
-let closure_1;
 ({ useEffect: c0, useRef: closure_1 } = noop);
-const result = require("set").fileFinishedImporting("hooks/useTimeout.tsx");
+const result = set.fileFinishedImporting("hooks/useTimeout.tsx");
 
 export default function useTimeout(arg0, arg1) {
   const callback = arg0;
   const callback2 = arg1;
   const tmp = callback2(arg0);
-  let closure_2 = tmp;
+  closure_2 = tmp;
   const items = [arg0];
   callback(() => {
     closure_2.current = closure_0;

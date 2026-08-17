@@ -1,13 +1,13 @@
 // discord_app/modules/experiments/apex/ApexExperiment.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import initialize from "initialize";
-import { logger } from "../../../../discord_common/js/packages/apex/ApexExperiment.tsx";
-import { extractId } from "../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import extractId from "extractId" /* 513 */;
+import initialize from "initialize" /* 589 */;
+import loggerDefault from "logger" /* 1369 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "initialize" /* 1212 */;
 
-const require = arg1;
+require = arg1;
 function getUnitId(arg0, guildId) {
   if ("guild" === arg0) {
     return guildId.guildId;
@@ -24,7 +24,7 @@ function getUnitId(arg0, guildId) {
   }
 }
 function useUnitId(arg0, guildId) {
-  let items = [fetchFingerprint];
+  let items = [closure_4];
   callback(initialize.useStateFromStoresArray(items, () => {
     const items = [store.getId(), store.getInstallationForTracking()];
     return items;
@@ -46,10 +46,10 @@ function useUnitId(arg0, guildId) {
   }
   const obj = initialize;
 }
-const result = require("initialize").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexExperiment.tsx");
 
 export default function createApexExperiment(ApexExperiment) {
-  return logger(ApexExperiment, initialize, getUnitId, useUnitId);
+  return loggerDefault(ApexExperiment, closure_5, getUnitId, useUnitId);
 };
 export const ApexExperiment = require("logger").ApexExperiment;
 export { getUnitId };

@@ -1,14 +1,19 @@
 // discord_app/modules/app_database/stores/FileSystemStore.tsx
-import items from "items";
-import { Store } from "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import itemsDefault from "items" /* 1955 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-let c0 = importDefault;
-let c3 = new require("initialize")("FileSystemStore");
-const result = 10 * require("set").Millis.MINUTE;
+let closure_0 = importDefault;
+let closure_3 = new timestampDefault("FileSystemStore");
+const result = 10 * setDefault.Millis.MINUTE;
 let c4 = result;
+const Store = initializeDefault.Store;
 class FileSystemStore extends Store {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {
       APP_STATE_UPDATE(arg0) {
             return obj.handleAppStateUpdate(arg0);
@@ -17,13 +22,13 @@ class FileSystemStore extends Store {
             return obj.handlePostConnectionOpen();
           }
     };
-    tmp3 = new tmp3(require("dispatcher"), obj, new.target, tmp3, tmp2, new.target, c0, undefined, tmp, closure_1);
+    tmp3 = new tmp3(require("dispatcher"), obj, new.target, tmp3, tmp2, new.target, closure_0, undefined, tmp, closure_1);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp3;
+    closure_0 = tmp3;
     tmp3.isLowDisk = false;
     refreshResult = tmp3.refresh();
     waitForResult = tmp3.waitFor(require("items"));
-    timerId = setInterval(() => obj.refresh(), c4);
+    timerId = setInterval(() => obj.refresh(), closure_4);
     return tmp3;
   }
 }
@@ -41,7 +46,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 };
 function refresh() {
   const self = this;
-  return callback(function*() {
+  return callback2(function*() {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -58,7 +63,7 @@ function refresh() {
     } else {
       try {
         c3 = 2;
-        if (0 === c2) {
+        if (0 === closure_2) {
           if (arg0 === 1) {
             c3 = 3;
             throw arg1;
@@ -68,13 +73,13 @@ function refresh() {
             obj[0] = arg1;
             return obj;
           } else {
-            let c1 = tmp4;
-            let closure_0 = tmp4;
+            closure_1 = tmp4;
+            closure_0 = tmp4;
             closure_0 = undefined;
-            c1 = undefined;
-            c2 = undefined;
+            closure_1 = undefined;
+            closure_2 = undefined;
             c3 = undefined;
-            const databaseResult = outer1_0(outer1_1[5]).database();
+            const databaseResult = closure_1_0(closure_1_1[5]).database();
             let catchPromise;
             if (databaseResult != null) {
               const fsInfoResult = databaseResult.fsInfo();
@@ -82,9 +87,9 @@ function refresh() {
                 catchPromise = fsInfoResult.catch((arg0) => logger.warn("couldn't get fs info", arg0));
               }
             }
-            c2 = 1;
+            closure_2 = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = catchPromise;
             return obj1;
           }
@@ -106,7 +111,7 @@ function refresh() {
             if (!tmp8) {
               tmp8 = closure_0.fs.available < 2 * closure_0.database.total;
             }
-            c1 = tmp8;
+            closure_1 = tmp8;
             let tmp14 = closure_0.fs.available > 805306368;
             if (tmp14) {
               tmp14 = closure_0.fs.available > 4 * closure_0.database.used;
@@ -114,11 +119,11 @@ function refresh() {
             if (tmp14) {
               tmp14 = closure_0.fs.available > 4 * closure_0.database.total;
             }
-            c2 = tmp14;
-            let tmp23 = c1;
+            closure_2 = tmp14;
+            let tmp23 = closure_1;
             if (!tmp23) {
-              let tmp25 = !c2;
-              if (!c2) {
+              let tmp25 = !closure_2;
+              if (!closure_2) {
                 tmp25 = null;
               }
               tmp23 = tmp25;
@@ -144,8 +149,8 @@ function refresh() {
   })();
 }
 prototype["refresh"] = refresh;
-c0 = undefined;
-tmp = new tmp(require("dispatcher"), {
+closure_0 = undefined;
+tmp = new tmp(dispatcherDefault, {
   APP_STATE_UPDATE(arg0) {
     return obj.handleAppStateUpdate(arg0);
   },
@@ -154,10 +159,10 @@ tmp = new tmp(require("dispatcher"), {
   }
 }, tmp2, FileSystemStore, tmp, Object, importDefault, new.target, undefined, globalThis, refresh, dependencyMap);
 // ThrowIfThisInitialized (0x7c)
-c0 = tmp;
+closure_0 = tmp;
 tmp.isLowDisk = false;
 tmp.refresh();
-tmp.waitFor(require("items"));
+tmp.waitFor(itemsDefault);
 let timerId = setInterval(() => obj.refresh(), result);
 let obj = {
   APP_STATE_UPDATE(arg0) {
@@ -167,7 +172,7 @@ let obj = {
     return obj.handlePostConnectionOpen();
   }
 };
-const tmp4 = new require("initialize")("FileSystemStore");
+const tmp4 = new timestampDefault("FileSystemStore");
 const result1 = require("set").fileFinishedImporting("modules/app_database/stores/FileSystemStore.tsx");
 
 export default tmp;

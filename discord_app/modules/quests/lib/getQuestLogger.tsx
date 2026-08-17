@@ -1,13 +1,11 @@
 // discord_app/modules/quests/lib/getQuestLogger.tsx
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import { NOOP } from "sum";
-import { timestamp } from "../../debug/Logger.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "refreshSourceMapCookie" /* 706 */;
+import { NOOP } from "sum" /* 505 */;
 
-const result = require("timestamp").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 
 export const getQuestLogger = function getQuestLogger(getQuestLogger) {
-  let _location;
-  let quest;
   let obj = getQuestLogger;
   if (getQuestLogger === undefined) {
     obj = {};
@@ -28,7 +26,7 @@ export const getQuestLogger = function getQuestLogger(getQuestLogger) {
     const _HermesInternal2 = HermesInternal;
     str = "-" + questName + ")";
   }
-  let tmp4 = timestamp;
+  let tmp4 = timestampDefault;
   tmp4 = new tmp4("QuestLogger" + str2 + str);
   obj = { log: isLoggingQuestEvents ? tmp4.log : NOOP, warn: isLoggingQuestEvents ? tmp4.warn : NOOP, error: isLoggingQuestEvents ? tmp4.error : NOOP, info: isLoggingQuestEvents ? tmp4.info : NOOP, verbose: isLoggingQuestEvents ? tmp4.verbose : NOOP, trace: isLoggingQuestEvents ? tmp4.trace : NOOP };
   return obj;

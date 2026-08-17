@@ -1,9 +1,9 @@
 // discord_app/modules/parent_tools/hooks/useHelpLineVisibility.tsx
-import noop from "noop";
-import _getSystemLocale from "_getSystemLocale";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import set from "freshTeenActivityWithMap";
-import { useIsInAdultAgeGroup } from "useIsInAdultAgeGroup.tsx";
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 let set = new Set(["US"]);
@@ -11,17 +11,17 @@ const set1 = new Set(["en-US", "es-ES"]);
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useHelpLineVisibility.tsx");
 
 export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
-  const tmp = useIsInAdultAgeGroup();
-  const items = [freshTeenActivityWithMap];
+  const tmp = useIsInAdultAgeGroupDefault();
+  const items = [closure_5];
   stateFromStores = stateFromStores(647).useStateFromStores(items, () => userCountry.getUserCountry());
   const obj = stateFromStores(647);
-  const items1 = [_getSystemLocale];
+  const items1 = [closure_4];
   const items2 = [stateFromStores];
   const stateFromStores1 = stateFromStores(647).useStateFromStores(items1, () => locale.locale);
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(outer1_2[5]).fetchUserCountryCode();
-      const obj = stateFromStores(outer1_2[5]);
+      const userCountryCode = stateFromStores(closure_1_2[5]).fetchUserCountryCode();
+      const obj = stateFromStores(closure_1_2[5]);
     }
   }, items2);
   let hasItem = !tmp;
@@ -37,19 +37,19 @@ export const useShouldShowHelplineLink = function useShouldShowHelplineLink() {
   return hasItem;
 };
 export const useShouldShowThroughlineLink = function useShouldShowThroughlineLink() {
-  const tmp = useIsInAdultAgeGroup();
+  const tmp = useIsInAdultAgeGroupDefault();
   let stateFromStores;
-  const tmp2 = useIsInAdultAgeGroup();
-  const items = [freshTeenActivityWithMap];
+  const tmp2 = useIsInAdultAgeGroupDefault();
+  const items = [closure_5];
   stateFromStores = stateFromStores(647).useStateFromStores(items, () => userCountry.getUserCountry());
   let obj = stateFromStores(647);
-  const items1 = [_getSystemLocale];
+  const items1 = [closure_4];
   const items2 = [stateFromStores];
   const stateFromStores1 = stateFromStores(647).useStateFromStores(items1, () => locale.locale);
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {
-      const userCountryCode = stateFromStores(outer1_2[5]).fetchUserCountryCode();
-      const obj = stateFromStores(outer1_2[5]);
+      const userCountryCode = stateFromStores(closure_1_2[5]).fetchUserCountryCode();
+      const obj = stateFromStores(closure_1_2[5]);
     }
   }, items2);
   let hasItem = !tmp2;

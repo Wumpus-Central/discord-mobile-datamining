@@ -1,13 +1,13 @@
 // discord_app/modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _handleFavoritesGuildAddSuggestedChannel() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -35,13 +35,13 @@ function _handleFavoritesGuildAddSuggestedChannel() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp5;
-              const dependencyMap = tmp2;
+              closure_2 = tmp5;
+              dependencyMap = tmp2;
               let callback;
               c3 = 1;
               c4 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = callback(outer1_1[1]).getOrResolveChannelIdFromDestinationId(callback);
+              obj1 = { value: null, done: false };
+              obj1[0] = callback(closure_1_1[1]).getOrResolveChannelIdFromDestinationId(callback);
               return obj1;
             }
           } else {
@@ -89,7 +89,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
       }
     })();
   });
-  const _handleFavoritesGuildAddSuggestedChannel = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -98,7 +98,7 @@ function _handleFavoritesGuildAddSuggestedChannel() {
   }
   return applyArgumentsResult;
 }
-const result = require("getNextPositionFromChannels").fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/onboarding/handleFavoritesGuildAddSuggestedChannel.tsx");
 
 export default function handleFavoritesGuildAddSuggestedChannel() {
   const self = this;

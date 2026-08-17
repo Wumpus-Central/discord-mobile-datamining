@@ -1,17 +1,15 @@
 // discord_app/modules/messages/native/renderer/row_data/ForumPostActions.tsx
-import { HelpdeskArticles } from "ME";
-import { getAvatarURL } from "../../../../../utils/AvatarUtils.tsx";
-import { getEmojiUnavailableReason } from "../../../../../utils/EmojiUtils.tsx";
-import { apexExperiment } from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
-import { frozen } from "../EmbedUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
+import frozen from "frozen" /* 8171 */;
+import apexExperiment from "apexExperiment" /* 8177 */;
 
-let result = require("registerAsset").fileFinishedImporting("modules/messages/native/renderer/row_data/ForumPostActions.tsx");
+const HelpdeskArticles = ME.HelpdeskArticles;
+let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/ForumPostActions.tsx");
 
 export const createDefaultReaction = function createDefaultReaction(arg0) {
-  let customGuildEmoji;
-  let defaultReactionEmoji;
-  let emojiId;
-  let emojiName;
   ({ defaultReactionEmoji, customGuildEmoji } = arg0);
   let obj = apexExperiment;
   const result = obj.shouldSkipAccessibilityLabels();
@@ -30,11 +28,11 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         obj = { id: null, animated: null, size: 48 };
         obj[0] = emojiId;
         obj[1] = customGuildEmoji.animated;
-        obj[3] = getAvatarURL.getEmojiURL(obj);
+        obj[3] = getAvatarURLDefault.getEmojiURL(obj);
         let accessibleEmojiDisplayName = str2;
         if (!result) {
           let tmpResult = tmp(4032);
-          const obj1 = { id: null, name: null, animated: null };
+          obj1 = { id: null, name: null, animated: null };
           obj1[0] = emojiId;
           obj1[1] = str2;
           obj1[2] = customGuildEmoji.animated;
@@ -42,7 +40,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
         }
         obj[4] = accessibleEmojiDisplayName;
         tmp4 = obj;
-        const obj7 = getAvatarURL;
+        const obj7 = getAvatarURLDefault;
       }
     }
     if (null != emojiName) {
@@ -52,7 +50,7 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
       }
       let obj2 = { id: "Array", name: false, animated: null, src: null, displayName: 0 };
       obj2[1] = emojiName;
-      obj2 = getEmojiUnavailableReason;
+      obj2 = getEmojiUnavailableReasonDefault;
       obj2[3] = obj2.getURL(emojiName);
       let accessibleEmojiDisplayName1 = str;
       if (!result) {
@@ -74,10 +72,6 @@ export const createDefaultReaction = function createDefaultReaction(arg0) {
   return tmp9;
 };
 export const createForumPostActions = function createForumPostActions(arg0) {
-  let defaultReaction;
-  let hasReactions;
-  let isFollowing;
-  let showMediaPostSharePrompt;
   ({ isFollowing, defaultReaction } = arg0);
   ({ hasReactions, showMediaPostSharePrompt } = arg0);
   const getAssetUriForEmbed = frozen.getAssetUriForEmbed;
@@ -111,7 +105,7 @@ export const createForumPostActions = function createForumPostActions(arg0) {
       obj[0] = intl2.string(tmp8(1236).t["5uAO7d"]);
       const intl3 = tmp8(1236).intl;
       obj = { helpArticleUrl: null };
-      const obj1 = { url: null };
+      obj1 = { url: null };
       let tmp6Result = tmp6(1993);
       obj1[0] = tmp6Result.getCreatorSupportArticleURL(HelpdeskArticles.MEDIA_CHANNEL);
       obj[0] = obj1;

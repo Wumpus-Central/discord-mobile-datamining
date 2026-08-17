@@ -1,29 +1,20 @@
 // discord_app/records/SubscriptionRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
-import closure_4 from "createFromServer";
-import ME from "ME";
-import set from "set";
-import GuildFeatures from "GuildFeatures";
-import set from "createFromServer";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_3 from "createFromServer" /* 4047 */;
+import closure_4 from "createFromServer" /* 4048 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 4050 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { 00038__ } from "../../_runtime/metro/00038__.js";
 import { isPremiumGiftingSupported } from "../modules/device/BillingPlatformUtils.tsx";
 import { set } from "../utils/PlatformUtils.tsx";
 
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 function createSubscriptionItemFromServer(id) {
   return { id: id.id, planId: id.plan_id, quantity: id.quantity };
 }
-({ PaymentGateways: c5, SubscriptionStatusTypes: closure_6, SubscriptionStatusTypesSets: error, SubscriptionTypes: metroImportAll } = ME);
+toJSDefault;
+({ PaymentGateways: c5, SubscriptionStatusTypes: closure_6, SubscriptionStatusTypesSets: error, SubscriptionTypes: closure_8 } = ME);
 ({ SubscriptionPauseReason: c9, SubscriptionPauseReasonSets: c10 } = set);
 ({ PREMIUM_PLANS: unpackModuleId, SubscriptionPlanInfo: closure_12, SubscriptionPlans: map1 } = GuildFeatures);
 let SubscriptionRecord;
@@ -34,16 +25,16 @@ class SubscriptionRecord extends tmp2 {
     ({ id: tmp7.id, type: tmp7.type, items: tmp7.items, createdAt: tmp7.createdAt, canceledAt: tmp7.canceledAt, currentPeriodStart: tmp7.currentPeriodStart, currentPeriodEnd: tmp7.currentPeriodEnd, status: tmp7.status, paymentSourceId: tmp7.paymentSourceId, paymentGateway: tmp7.paymentGateway, paymentGatewayPlanId: tmp7.paymentGatewayPlanId, paymentGatewaySubscriptionId: tmp7.paymentGatewaySubscriptionId, trialId: tmp7.trialId, trialEndsAt: tmp7.trialEndsAt, renewalMutations: tmp7.renewalMutations, currency: tmp7.currency, pauseEndsAt: tmp7.pauseEndsAt, pauseReason: tmp7.pauseReason, metadata: tmp7.metadata, latestInvoice: tmp7.latestInvoice, useStorekitResubscribe: tmp7.useStorekitResubscribe, price: tmp7.price, userId: tmp7.userId, streakStartedAt: tmp7.streakStartedAt, eligiblePaymentGateways: tmp7.eligiblePaymentGateways, priceChange: tmp7.priceChange } = global);
     renewalMutations = tmp7.renewalMutations;
     planId = global.items[0].planId;
-    items = planId;
+    closure_0 = planId;
     planId = null;
     if (global.type === SubscriptionTypes.PREMIUM) {
       tmp11 = SubscriptionPlanInfo;
       ({ interval, intervalCount } = SubscriptionPlanInfo[global.items[0].planId]);
-      tmp12 = items;
+      tmp12 = closure_0;
       tmp13 = closure_2;
       obj = require("getNonePlanIdForIntervalType");
       basePlanIdForSubscriptionItems = obj.getBasePlanIdForSubscriptionItems(global.items, interval, intervalCount);
-      items = basePlanIdForSubscriptionItems;
+      closure_0 = basePlanIdForSubscriptionItems;
       tmp9 = null;
       tmp10 = basePlanIdForSubscriptionItems;
       if (null != renewalMutations) {
@@ -82,8 +73,7 @@ class SubscriptionRecord extends tmp2 {
 }
 const prototype = SubscriptionRecord.prototype;
 SubscriptionRecord["createFromServer"] = function createFromServer(id) {
-  let obj = { id: id.id, type: id.type, createdAt: null, canceledAt: null, currentPeriodStart: null, currentPeriodEnd: null, status: null, paymentSourceId: null, paymentGateway: null, paymentGatewayPlanId: null, paymentGatewaySubscriptionId: null, trialId: null, trialEndsAt: null, items: null, renewalMutations: null, streakStartedAt: null, currency: null, pauseEndsAt: null, pauseReason: null, metadata: null, useStorekitResubscribe: null, price: null, userId: null };
-  obj[2] = new Date(id.created_at);
+  let obj = { id: id.id, type: id.type, createdAt: new Date(id.created_at), canceledAt: null, currentPeriodStart: null, currentPeriodEnd: null, status: null, paymentSourceId: null, paymentGateway: null, paymentGatewayPlanId: null, paymentGatewaySubscriptionId: null, trialId: null, trialEndsAt: null, items: null, renewalMutations: null, streakStartedAt: null, currency: null, pauseEndsAt: null, pauseReason: null, metadata: null, useStorekitResubscribe: null, price: null, userId: null };
   let date1 = null;
   if (null != id.canceled_at) {
     const _Date = Date;
@@ -130,7 +120,7 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   if (null != id.latest_invoice) {
     obj = { latestInvoice: null };
     obj[0] = closure_4.createInvoiceFromServer(id.latest_invoice);
-    let obj1 = obj;
+    obj1 = obj;
   } else {
     obj1 = {};
   }
@@ -142,13 +132,13 @@ SubscriptionRecord["createFromServer"] = function createFromServer(id) {
   obj.eligiblePaymentGateways = prop;
   let fromServer = null;
   if (null != id.price_change) {
-    fromServer = createFromServer.createFromServer(id.price_change);
+    fromServer = closure_3.createFromServer(id.price_change);
   }
   obj.priceChange = fromServer;
   return new tmp(obj);
 };
 prototype["getCurrentSubscriptionPlanIdForGroup"] = function getCurrentSubscriptionPlanIdForGroup(items) {
-  let closure_0 = items;
+  closure_0 = items;
   items = this.items;
   const found = items.find((planId) => items.includes(planId.planId));
   let planId;
@@ -430,11 +420,11 @@ Object.defineProperty(prototype, "hasAnyPremiumGroup", {
   set: undefined
 });
 prototype["hasPremiumAtLeast"] = function hasPremiumAtLeast(TIER_2) {
-  let closure_0 = TIER_2;
+  closure_0 = TIER_2;
   let someResult = this.isPremium;
   if (someResult) {
     const items = this.items;
-    someResult = items.some((arg0) => TIER_2(outer1_2[10]).isPremiumAtLeast(outer1_12[arg0.planId].premiumType, TIER_2));
+    someResult = items.some((arg0) => TIER_2(closure_1_2[10]).isPremiumAtLeast(closure_1_12[arg0.planId].premiumType, TIER_2));
   }
   return someResult;
 };

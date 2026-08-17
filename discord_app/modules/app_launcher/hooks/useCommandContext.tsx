@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/hooks/useCommandContext.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import closure_0 from "noop" /* 19 */;
+import closure_1 from "createGuildRecordFromRust" /* 1910 */;
 
 const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useCommandContext.tsx");
 
@@ -23,7 +23,7 @@ export const useCommandContext = function useCommandContext(context) {
     } else {
       obj = { channel: null, guild: null };
       obj[0] = tmp.channel;
-      obj[1] = outer1_1.getGuild(tmp.channel.guild_id);
+      obj[1] = closure_1_1.getGuild(tmp.channel.guild_id);
     }
     return obj;
   }, items);

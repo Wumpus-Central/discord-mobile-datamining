@@ -1,18 +1,20 @@
 // discord_app/modules/custom_status/utils/formatClearAfterOption.tsx
-import { ClearAfterValues } from "StatusTypes";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { resetCache } from "../../../utils/DateUtils.tsx";
-import { set } from "../../../utils/Durations.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import set from "set" /* 2 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import resetCache from "resetCache" /* 4063 */;
+import StatusTypes from "StatusTypes" /* 9292 */;
 
-let result = require("getSystemLocale").fileFinishedImporting("modules/custom_status/utils/formatClearAfterOption.tsx");
+const ClearAfterValues = StatusTypes.ClearAfterValues;
+let result = set.fileFinishedImporting("modules/custom_status/utils/formatClearAfterOption.tsx");
 
 export default function formatClearAfterOption(arg0) {
   if (ClearAfterValues.TODAY === arg0) {
     const intl8 = getSystemLocale.intl;
     const formatToPlainStringResult = intl8.formatToPlainString(getSystemLocale.t.Rea2gR, { hours: 24 });
     const _Date10 = Date;
-    const sum = Date.now() + set.Millis.DAY;
+    const sum = Date.now() + setDefault.Millis.DAY;
     const _Date11 = Date;
     const date = new Date();
     const _Date12 = Date;
@@ -34,7 +36,7 @@ export default function formatClearAfterOption(arg0) {
     const intl6 = getSystemLocale.intl;
     const formatToPlainStringResult1 = intl6.formatToPlainString(getSystemLocale.t.Rea2gR, { hours: 4 });
     const _Date7 = Date;
-    const result = 4 * set.Millis.HOUR;
+    const result = 4 * setDefault.Millis.HOUR;
     const sum1 = Date.now() + result;
     const _Date8 = Date;
     const date2 = new Date();
@@ -57,7 +59,7 @@ export default function formatClearAfterOption(arg0) {
     const intl4 = getSystemLocale.intl;
     const formatToPlainStringResult2 = intl4.formatToPlainString(getSystemLocale.t.Rea2gR, { hours: 1 });
     const _Date4 = Date;
-    const sum2 = Date.now() + set.Millis.HOUR;
+    const sum2 = Date.now() + setDefault.Millis.HOUR;
     const _Date5 = Date;
     const date4 = new Date();
     const _Date6 = Date;
@@ -68,7 +70,7 @@ export default function formatClearAfterOption(arg0) {
       const data4 = intl5.data;
       let formatTimeResult2 = data4.formatTime(sum2, { format: "short" });
     } else {
-      let obj1 = { time: null };
+      obj1 = { time: null };
       const data3 = tmp27(1236).intl.data;
       obj1[0] = data3.formatTime(sum2, { format: "short" });
       formatTimeResult2 = intl5.formatToPlainString(tmp27(1236).t.DN91Jz, obj1);
@@ -79,7 +81,7 @@ export default function formatClearAfterOption(arg0) {
     const intl2 = getSystemLocale.intl;
     const formatToPlainStringResult3 = intl2.formatToPlainString(getSystemLocale.t.TS3eJb, { minutes: 30 });
     const _Date = Date;
-    const result1 = 30 * set.Millis.MINUTE;
+    const result1 = 30 * setDefault.Millis.MINUTE;
     const sum3 = Date.now() + result1;
     obj1 = resetCache;
     const _Date2 = Date;

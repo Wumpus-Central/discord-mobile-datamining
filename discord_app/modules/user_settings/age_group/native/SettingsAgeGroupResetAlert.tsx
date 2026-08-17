@@ -1,21 +1,19 @@
 // discord_app/modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx
-import presentAddedFriendToast from "presentAddedFriendToast";
-import jsxProd from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import jsxProd from "jsxProd" /* 21 */;
 import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let c6 = "settings-age-group-reset";
-const result = require("useNavigation").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/age_group/native/SettingsAgeGroupResetAlert.tsx");
 
 export default function SettingsAgeGroupResetAlert() {
   function _handleConfirm(arg0) {
     const self = this;
-    const tmp = outer1_3(function*() {
+    const tmp = closure_1_3(function*() {
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -43,20 +41,20 @@ export default function SettingsAgeGroupResetAlert() {
               return obj;
             } else {
               const navigation = tmp3;
-              let dependencyMap = 1;
+              dependencyMap = 1;
               c1 = 2;
               c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(6702).resetAgeVerification();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(6702).resetAgeVerification();
               return obj1;
             }
           } else if (1 === tmp7) {
             dependencyMap = 0;
-            let obj2 = outer1_0(4093);
-            const intl = outer1_0(1236).intl;
-            obj2.presentError(intl.string(outer1_0(1236).t.fEptJP));
+            let obj2 = closure_1_0(4093);
+            const intl = closure_1_0(1236).intl;
+            obj2.presentError(intl.string(closure_1_0(1236).t.fEptJP));
             const _Error = Error;
-            const error = new Error("Reset failed");
+            error = new Error("Reset failed");
             throw error;
           } else if (arg0 === 1) {
             c3 = 3;
@@ -68,8 +66,8 @@ export default function SettingsAgeGroupResetAlert() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = outer1_0(4657);
-            obj.dismissAlert(outer1_6);
+            obj = closure_1_0(4657);
+            obj.dismissAlert(closure_1_6);
             navigation.goBack();
             dependencyMap = 0;
             c3 = 3;
@@ -85,7 +83,7 @@ export default function SettingsAgeGroupResetAlert() {
         }
       }
     });
-    const _handleConfirm = tmp;
+    closure_1 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -102,7 +100,7 @@ export default function SettingsAgeGroupResetAlert() {
   const intl2 = _getSystemLocale.intl;
   obj[1] = intl2.string(_handleConfirm(2853).FbTAmI);
   obj = { children: null };
-  let obj1 = {
+  obj1 = {
     variant: "destructive",
     onPress: function handleConfirm() {
       const self = this;

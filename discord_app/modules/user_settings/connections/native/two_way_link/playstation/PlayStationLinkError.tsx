@@ -1,19 +1,18 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx
-import "noop";
-import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes";
-import { AbortCodes } from "ME";
-import { jsx } from "jsxProd";
-import { useNavigation } from "../../../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { TwoWayLinkError } from "../TwoWayLinkError.tsx";
-import { useConnectRetry } from "../useConnectRetry.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import useConnectRetry from "useConnectRetry" /* 9793 */;
+import TwoWayLinkError from "TwoWayLinkError" /* 9794 */;
+import { PlayStationLinkModalScenes as closure_2 } from "PlayStationLinkModalScenes" /* 9782 */;
+import { AbortCodes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkError.tsx");
 
 export const PlayStationLinkError = function PlayStationLinkError(arg0) {
-  let errorCode;
-  let onClose;
   ({ onClose, errorCode } = arg0);
   let obj = useNavigation;
   const navigation = obj.useNavigation();

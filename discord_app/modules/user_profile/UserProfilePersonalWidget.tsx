@@ -1,14 +1,14 @@
 // discord_app/modules/user_profile/UserProfilePersonalWidget.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PremiumTypes } from "GuildFeatures";
-import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
-import { PersonalWidgetSectionType } from "../../../discord_common/js/shared/shared-constants/PersonalWidgetSectionType.tsx";
-import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import WidgetType from "WidgetType" /* 5366 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 5376 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
+require = arg1;
 function isFieldEmpty(title) {
   let tmp = "" === title.title.trim();
   if (tmp) {
@@ -32,14 +32,13 @@ function isSectionEmpty(type) {
       tmp4 = null == type.image;
     }
     return tmp4;
-  } else if (tmp(5376).PersonalWidgetSectionType.FIELDS === type) {
+  } else if (PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS === type) {
     const fields = type.fields;
     return fields.every(isFieldEmpty);
   }
-  tmp = require;
+  const tmp = require;
 }
 function parseField(image) {
-  let is_animated;
   image = image.image;
   let tmp;
   if (null != image) {
@@ -54,7 +53,7 @@ function parseField(image) {
     }
   }
   obj = { key: `field-${tmp2}`, title: null, description: null, image: null, hideImage: null };
-  let closure_5 = tmp2 + 1;
+  closure_5 = tmp2 + 1;
   let str2 = image.title;
   if (str2 == null) {
     str2 = "";
@@ -70,7 +69,6 @@ function parseField(image) {
   return obj;
 }
 function serializeSection(type) {
-  let image;
   type = type.type;
   if (PersonalWidgetSectionType.PersonalWidgetSectionType.COVER === type) {
     let obj = { type: null, title: null, subtitle: null, image: null };
@@ -82,7 +80,7 @@ function serializeSection(type) {
       obj = { filename: null };
       image = image.filename;
       obj[0] = image;
-      let obj1 = obj;
+      obj1 = obj;
     } else {
       obj1 = { file_id: null, width: null, height: null, is_animated: null };
       ({ fileId: obj3[0], width: obj3[1], height: obj3[2], isAnimated: obj3[3] } = image);
@@ -223,7 +221,7 @@ prototype["isEqual"] = function isEqual(header) {
             if (tmp13) {
               image2 = image2.image;
               image = image.image;
-              tmp13 = isUndefinedOrNull(image2, image);
+              tmp13 = isUndefinedOrNullDefault(image2, image);
             }
             flag = false;
             sum = sum + 1;
@@ -250,7 +248,7 @@ prototype["isEqual"] = function isEqual(header) {
               if (tmp8) {
                 let tmp10 = importDefault;
                 let tmp11 = dependencyMap;
-                tmp8 = isUndefinedOrNull(tmp6.image, tmp7.image);
+                tmp8 = isUndefinedOrNullDefault(tmp6.image, tmp7.image);
               }
               flag2 = false;
               if (!tmp8) {
@@ -281,33 +279,30 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = require("PersonalWidgetSectionType").fileFinishedImporting("modules/user_profile/UserProfilePersonalWidget.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/UserProfilePersonalWidget.tsx");
 
 export const createDefaultCoverSection = function createDefaultCoverSection() {
   return { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
 };
 export const createDefaultField = function createDefaultField() {
-  let closure_5 = tmp + 1;
+  closure_5 = tmp + 1;
   return { key: `field-${+closure_5}`, title: "", description: "" };
 };
 export const createDefaultFieldsSection = function createDefaultFieldsSection() {
   let obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS, fields: items };
   obj = { key: `field-${tmp}`, title: "", description: "" };
-  let closure_5 = tmp + 1;
+  closure_5 = tmp + 1;
   items = [obj];
   return obj;
 };
 export const createDefaultPersonalWidget = function createDefaultPersonalWidget() {
-  let header;
-  let id;
-  let sections;
   let obj = { header: null, sections: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.QxKl9A);
   obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.COVER, title: "", subtitle: "" };
   const items = [obj, ];
   obj = { type: PersonalWidgetSectionType.PersonalWidgetSectionType.FIELDS, fields: items1 };
-  let closure_5 = tmp4 + 1;
+  closure_5 = tmp4 + 1;
   items1 = [{ key: `field-${+closure_5}`, title: "", description: "" }];
   items[1] = obj;
   obj[1] = items;
@@ -333,9 +328,6 @@ export const parsePersonalWidgetSections = function parsePersonalWidgetSections(
     let items = [];
   } else {
     const mapped = sections.map((type) => {
-      let fields;
-      let is_animated;
-      let title;
       type = type.type;
       if (callback(5376).PersonalWidgetSectionType.COVER === type) {
         let obj = { type: null, title: null, subtitle: null, image: null };

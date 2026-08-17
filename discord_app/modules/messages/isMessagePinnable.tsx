@@ -1,22 +1,20 @@
 // discord_app/modules/messages/isMessagePinnable.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
-import { isSystemMessage } from "isSystemMessage.tsx";
+import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("isSystemMessage").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/isMessagePinnable.tsx");
 
 export default function isMessagePinnable(arg0, isSystemDM) {
   const isSystemDMResult = isSystemDM.isSystemDM();
   let isActiveChannelOrUnarchivableThread = !isSystemDMResult;
   if (!isSystemDMResult) {
-    isActiveChannelOrUnarchivableThread = !isSystemMessage(arg0);
+    isActiveChannelOrUnarchivableThread = !isSystemMessageDefault(arg0);
   }
-  let isPrivateResult = getUncachedChannelPermissions.can(constants2.PIN_MESSAGES, isSystemDM) && getUncachedChannelPermissions.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
+  let isPrivateResult = closure_3.can(constants2.PIN_MESSAGES, isSystemDM) && closure_3.can(constants2.READ_MESSAGE_HISTORY, isSystemDM);
   if (isActiveChannelOrUnarchivableThread) {
     if (!isPrivateResult) {
       isPrivateResult = isSystemDM.isPrivate();

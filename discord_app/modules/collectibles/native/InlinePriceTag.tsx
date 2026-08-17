@@ -1,39 +1,27 @@
 // discord_app/modules/collectibles/native/InlinePriceTag.tsx
-import "useVirtualCurrencyData";
-import get_ActivityIndicator from "useProductDisableState";
-import updateProduct from "updateProduct";
-import { ShopCtaEnum } from "items";
-import ME from "ME";
-import jsxProd from "useCanPurchaseFrames";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
-import { useCanPurchaseFrames } from "../hooks/useCanPurchaseFrames.tsx";
-import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
-import { useProductDisableState } from "../hooks/useProductDisableState.tsx";
-import { hasAtLeastOneGPlaySynced } from "CollectiblesUtils.tsx";
-import { useVirtualCurrencyData } from "hooks/useVirtualCurrencyData.tsx";
-import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
+import noopAll from "noop" /* 19 */;
+import set from "set" /* 500 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import Text from "Text" /* 4734 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import useCurrentUser from "useCurrentUser" /* 9176 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9249 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9581 */;
+import useProductDisableState from "useProductDisableState" /* 9582 */;
+import useVirtualCurrencyData from "useVirtualCurrencyData" /* 9583 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "updateProduct" /* 5319 */;
+import { ShopCtaEnum } from "items" /* 678 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c3;
-let c4;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function PriceTag(accessibilityLabel) {
-  let icon;
-  let priceFormatted;
-  let style;
-  let variant;
   let str = accessibilityLabel.color;
   ({ priceFormatted, style } = accessibilityLabel);
   if (str === undefined) {
@@ -45,21 +33,15 @@ function PriceTag(accessibilityLabel) {
   }
   const obj = { children: null };
   const items = [icon, ];
-  const items1 = [createCacheKey().priceTag, style];
+  const items1 = [callback3().priceTag, style];
   items[1] = callback(Text.Text, { variant, style: items1, color: str, accessibilityLabel: accessibilityLabel.accessibilityLabel, children: priceFormatted });
   obj[0] = items;
   return callback2(closure_10, obj);
 }
 function OrbsPriceTag(arg0) {
-  let discountPercentage;
-  let eligibleForShopDiscount;
-  let isProductDisabled;
-  let original;
-  let product;
-  let vcData;
   ({ vcData, product } = arg0);
   ({ isProductDisabled, eligibleForShopDiscount } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (null == vcData.price) {
     return null;
   } else {
@@ -91,7 +73,7 @@ function OrbsPriceTag(arg0) {
       obj = { priceFormatted: null, variant: "text-md/medium", style: null, icon: null, accessibilityLabel: null };
       obj[0] = original.toString();
       obj[2] = tmp.strikedOrbPrice;
-      const obj1 = { color: "interactive-text-active", size: "sm", style: null };
+      obj1 = { color: "interactive-text-active", size: "sm", style: null };
       obj1[2] = tmp.orbsIcon;
       obj[3] = callback(tmp16(9238).OrbsIcon, obj1);
       const intl = tmp16(1236).intl;
@@ -152,18 +134,19 @@ function BundleDiscountV2(discountPercentage) {
   }
   return tmp4;
 }
+noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
-({ AnalyticsSections: error, CurrencyCodes: metroImportAll } = ME);
+({ AnalyticsSections: error, CurrencyCodes: closure_8 } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { priceTag: { flexDirection: "row", alignItems: "center" }, strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 }, strikedOrbPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7, marginRight: 4 }, regularPrice: {}, nitroIcon: { width: 20, height: 20, marginLeft: 8, marginRight: 4 }, nitroIconSubscribeNow: { marginLeft: 0 }, container: { flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between" }, priceTagRow: { flexDirection: "row", alignItems: "center" }, priceTagColumn: { flexDirection: "column", alignItems: "flex-start", flexShrink: 1 }, underline: { textDecorationLine: "underline" }, subscribeNowPressable: null, androidTextPadding: null, orbsIcon: null, disabled: null };
-createCacheKey = { marginBottom: -2, marginTop: require("Themes").space.PX_8, flexDirection: "row", alignItems: "center" };
+createCacheKey = { marginBottom: -2, marginTop: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createCacheKey[10] = createCacheKey;
 createCacheKey[11] = { paddingBottom: 2 };
 createCacheKey[12] = { marginRight: 4 };
 createCacheKey[13] = { opacity: 0.5 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_15 = createCacheKey.createStyles(() => {
-  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: Themes.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
+  const discount = { backgroundColor: "rgba(46, 204, 113, 0.25)", flexDirection: "row", flexShrink: 1, borderRadius: ThemesDefault.radii.xs - 1, paddingHorizontal: 6, marginLeft: 6, paddingTop: null, paddingBottom: null };
   let num;
   if (obj2.isAndroid()) {
     num = 0;
@@ -178,23 +161,21 @@ let closure_15 = createCacheKey.createStyles(() => {
   discount[7] = num2;
   return { discount };
 });
-let result = require("updateProduct").fileFinishedImporting("modules/collectibles/native/InlinePriceTag.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/InlinePriceTag.tsx");
 
 export default function InlinePriceTag(arg0) {
-  let product;
-  let require;
   ({ product, onTrackPress: require } = arg0);
-  let importDefault;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  dependencyMap = undefined;
+  const tmp = callback3();
   importDefault = tmp;
   let obj = useCurrentUser;
   const currentUser = obj.useCurrentUser();
-  let obj1 = getItemRecordsFromPurchases;
+  obj1 = getItemRecordsFromPurchases;
   const shopDiscountSource = obj1.getShopDiscountSource(currentUser);
-  let obj2 = getPremiumPlanItem;
+  let obj2 = getPremiumPlanItemDefault;
   const canUseShopDiscountsResult = obj2.canUseShopDiscounts(currentUser);
-  dependencyMap = useOpenNitroSubscribeActionSheet(constants.SHOP_PRODUCT_DETAILS);
+  dependencyMap = useOpenNitroSubscribeActionSheetDefault(constants.SHOP_PRODUCT_DETAILS);
   let obj3 = useProductDisableState;
   const isDisabled = obj3.useProductDisableState(product.skuId).isDisabled;
   let obj4 = hasAtLeastOneGPlaySynced;
@@ -202,7 +183,7 @@ export default function InlinePriceTag(arg0) {
   let obj5 = useVirtualCurrencyData;
   const virtualCurrencyData = obj5.useVirtualCurrencyData(product, canUseShopDiscountsResult);
   let obj6 = initialize;
-  const items = [updateProduct];
+  const items = [closure_5];
   const stateFromStores = obj6.useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
   let obj7 = useCanPurchaseFrames;
   const isProfileFramesEarlyAccessPhase = obj7.useIsProfileFramesEarlyAccessPhase("InlinePriceTag");
@@ -266,7 +247,7 @@ export default function InlinePriceTag(arg0) {
         obj7 = { onPress: null, style: null, accessibilityRole: "button", children: null };
         obj7[0] = function onPress() {
           if (closure_0 != null) {
-            tmp(outer1_6.SUBSCRIBE_NOW);
+            tmp(closure_1_6.SUBSCRIBE_NOW);
           }
           dependencyMap();
         };
@@ -286,7 +267,7 @@ export default function InlinePriceTag(arg0) {
         const obj10 = { price: null, subscribeNowHook: null };
         obj10[0] = formattedPriceForCollectiblesProduct1;
         obj10[1] = function subscribeNowHook(children) {
-          return outer1_9(outer1_0(4734).Text, { variant: "text-md/normal", style: _undefined.underline, children }, arg1);
+          return closure_1_9(closure_1_0(4734).Text, { variant: "text-md/normal", style: underline.underline, children }, arg1);
         };
         obj9[3] = intl3.format(tmp2(1236).t.Kxw2LT, obj10);
         items4[1] = tmp17(tmp2(4734).Text, obj9);

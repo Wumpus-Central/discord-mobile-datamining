@@ -1,20 +1,17 @@
 // discord_app/modules/content_inventory/ContentInventoryHttpApi.tsx
-import dispatcher from "dispatcher";
-import { ContentInventoryFeedKey } from "ContentInventoryFeedKey";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { ContentInventoryFeedKey } from "ContentInventoryFeedKey" /* 9064 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _getMyContentInventory() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
-      let c0;
-      let c1;
-      let c2;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -41,7 +38,7 @@ function _getMyContentInventory() {
               obj[0] = body;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               c1 = tmp7;
               let callback;
               c1 = undefined;
@@ -60,7 +57,7 @@ function _getMyContentInventory() {
               throw body;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
@@ -122,7 +119,7 @@ function _getMyContentInventory() {
     iter.next();
     return iter;
   });
-  const _getMyContentInventory = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -134,11 +131,11 @@ function _getMyContentInventory() {
 function _getContentInventoryOutbox() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
       if (c7 === 2) {
         c7 = 3;
@@ -166,19 +163,19 @@ function _getContentInventoryOutbox() {
               obj[0] = body;
               return obj;
             } else {
-              let dispatcher = tmp3;
-              let dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               body = undefined;
-              let c5 = 1;
-              const obj1 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_START", userId: null };
+              c5 = 1;
+              obj1 = { type: "CONTENT_INVENTORY_FETCH_OUTBOX_START", userId: null };
               obj1[1] = callback;
-              callback2(outer1_2[5]).dispatch(obj1);
-              const HTTP = callback(outer1_2[3]).HTTP;
+              callback2(closure_1_2[5]).dispatch(obj1);
+              const HTTP = callback(closure_1_2[3]).HTTP;
               const obj2 = { url: null, signal: null, rejectWithError: null };
               obj2[0] = c5.CONTENT_INVENTORY_OUTBOX(callback);
               obj2[1] = body;
-              const obj10 = callback2(outer1_2[5]);
-              obj2[2] = callback(outer1_2[3]).rejectWithMigratedError();
+              const obj10 = callback2(closure_1_2[5]);
+              obj2[2] = callback(closure_1_2[3]).rejectWithMigratedError();
               c6 = 2;
               c7 = 1;
               const obj3 = { value: null, done: false };
@@ -228,7 +225,7 @@ function _getContentInventoryOutbox() {
       }
     })();
   });
-  const _getContentInventoryOutbox = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -240,19 +237,19 @@ function _getContentInventoryOutbox() {
 function _deleteContentInventoryEntryHistory() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
-      let closure_5 = tmp3;
-      let c7 = 1;
+      closure_5 = tmp3;
+      c7 = 1;
       callback(709).dispatch({ type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START" });
       const HTTP = lib(530).HTTP;
-      const obj1 = { url: null, rejectWithError: null };
-      obj1[0] = outer1_5.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(lib.id);
+      obj1 = { url: null, rejectWithError: null };
+      obj1[0] = closure_1_5.DELETE_MY_CONTENT_INVENTORY_OUTBOX_ENTRY_HISTORY(lib.id);
       const obj9 = callback(709);
       obj1[1] = lib(530).rejectWithMigratedError();
       yield HTTP.del(obj1);
@@ -265,16 +262,16 @@ function _deleteContentInventoryEntryHistory() {
             message = body.message;
           }
         }
-        let dispatcher = message;
+        closure_3 = message;
         if (message == null) {
           const intl = lib(1236).intl;
-          dispatcher = intl.string(lib(1236).t.FMbL3s);
+          closure_3 = intl.string(lib(1236).t.FMbL3s);
         }
         let obj3 = callback(709);
         obj3 = { type: "CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE", error: null };
-        obj3[1] = dispatcher;
+        obj3[1] = closure_3;
         obj3.dispatch(obj3);
-        let c9 = 3;
+        c9 = 3;
       } else if (arg0 === 1) {
         c9 = 3;
         throw arg1;
@@ -293,7 +290,7 @@ function _deleteContentInventoryEntryHistory() {
       return arg1;
     })();
   });
-  const _deleteContentInventoryEntryHistory = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -305,11 +302,11 @@ function _deleteContentInventoryEntryHistory() {
 function _postTrackToContentInventory() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -337,18 +334,18 @@ function _postTrackToContentInventory() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dispatcher = tmp3;
+              closure_3 = tmp3;
               const table = tmp7;
               let constants = 1;
-              const HTTP = callback(outer1_2[3]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
+              const HTTP = callback(closure_1_2[3]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = constants.MY_SPOTIFY_CONTENT_INVENTORY;
               const obj2 = { connection_id: null, tracks: null };
               obj2[0] = callback;
               const items = [closure_1];
               obj2[1] = items;
               obj1[1] = obj2;
-              obj1[2] = callback(outer1_2[3]).rejectWithMigratedError();
+              obj1[2] = callback(closure_1_2[3]).rejectWithMigratedError();
               c6 = 2;
               c7 = 1;
               const obj3 = { value: null, done: false };
@@ -386,7 +383,7 @@ function _postTrackToContentInventory() {
       }
     })();
   });
-  const _postTrackToContentInventory = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -395,7 +392,7 @@ function _postTrackToContentInventory() {
   }
   return applyArgumentsResult;
 }
-const result = require("ME").fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");
+const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryHttpApi.tsx");
 
 export const getMyContentInventory = function getMyContentInventory(arg0) {
   const self = this;

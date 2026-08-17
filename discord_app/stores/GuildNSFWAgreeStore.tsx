@@ -1,16 +1,18 @@
 // discord_app/stores/GuildNSFWAgreeStore.tsx
-import { Store } from "initialize";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../modules/age_gate/AgeGateUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
 
-const require = arg1;
+require = arg1;
 const GuildNSFWAgreeStore = "GuildNSFWAgreeStore";
 let closure_3 = {};
+const Store = initializeDefault.Store;
 class GuildNSFWAgreeStore extends Store {
 }
 const prototype = GuildNSFWAgreeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   let value = Storage.get(GuildNSFWAgreeStore);
   if (value == null) {
     value = closure_3;
@@ -32,13 +34,13 @@ prototype["didAgree"] = function didAgree(arg0) {
   return tmp;
 };
 GuildNSFWAgreeStore.displayName = "GuildNSFWAgreeStore";
-const guildNSFWAgreeStore = new GuildNSFWAgreeStore(require("dispatcher"), {
+const guildNSFWAgreeStore = new GuildNSFWAgreeStore(dispatcherDefault, {
   GUILD_NSFW_AGREE: function handleGuildNSFWAgree(guildId) {
     closure_3[guildId.guildId] = true;
-    const Storage = Storage.Storage;
+    const Storage = Storage2.Storage;
     const result = Storage.set(GuildNSFWAgreeStore, closure_3);
   }
 });
-let result = require("shouldShowAgeGateForVoiceChannel").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
+let result = require("set").fileFinishedImporting("stores/GuildNSFWAgreeStore.tsx");
 
 export default guildNSFWAgreeStore;

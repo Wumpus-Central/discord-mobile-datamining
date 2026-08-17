@@ -1,61 +1,59 @@
 // discord_app/modules/collectibles/native/HeroBlock.tsx
-import useGetProductsFromSkus from "useGetProductsFromSkus";
-import get_ActivityIndicator from "map";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { CollectiblesMobileShopScreen as closure_7 } from "items";
-import ME from "ME";
-import jsxProd from "context";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
+import { CollectiblesMobileShopScreen as closure_7 } from "items" /* 678 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 function SkeletonLoading(accessibilityLabel) {
-  let obj = { style: createCacheKey().skeletonContainer, accessibilityRole: "list", accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityState: { busy: true }, accessible: true, children: null };
-  obj[5] = Array.from({ length: 10 }).map((arg0, arg1) => {
-    const obj = { width: null };
-    obj[0] = callback(9172).COLLECTIBLES_SHOP_CARD_WIDTH;
-    return callback3(callback2(14434), obj, arg1);
-  });
+  let obj = {
+    style: callback2().skeletonContainer,
+    accessibilityRole: "list",
+    accessibilityLabel: accessibilityLabel.accessibilityLabel,
+    accessibilityState: { busy: true },
+    accessible: true,
+    children: Array.from({ length: 10 }).map((arg0, arg1) => {
+      const obj = { width: callback(9172).COLLECTIBLES_SHOP_CARD_WIDTH };
+      return callback3(callback2(14434), obj, arg1);
+    })
+  };
   return callback(closure_5, obj);
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: metroImportAll, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
+({ AnalyticEvents: closure_8, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
 const result = 0.75 * require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_WIDTH;
 createCacheKey = { heroContainer: { width: "100%" }, heroBannerContainer: createCacheKey, heroBannerImage: { width: "100%", height: "100%", resizeMode: "cover" }, orbsBackgroundGradient: { position: "absolute", top: 0, left: 0, bottom: 0, right: 0 }, fadeOutGradient: { position: "absolute", bottom: 0, height: "50%", width: "100%", zIndex: 1 }, heroInfoContainer: { display: "flex", justifyContent: "center", flex: 1, minWidth: "100%", maxHeight: 240, aspectRatio: 2.2 }, innerContainer: null, heroLogoContainer: null, heroLogo: null, heroViewAllIcon: null, orbsInnerContainer: null, orbsTitle: null, productCardsContainer: null, skeletonContainer: null };
 createCacheKey = { position: "absolute", top: 0, left: 0, width: "100%", maxHeight: 240 + result, aspectRatio: 1.4883720930232558 };
-createCacheKey[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("Themes").space.PX_16, width: "100%", height: "100%" };
+createCacheKey[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16, width: "100%", height: "100%" };
 createCacheKey[7] = { flex: 1, maxWidth: "80%", maxHeight: "80%" };
 createCacheKey[8] = { resizeMode: "contain", maxHeight: "100%", maxWidth: "100%", aspectRatio: 1 };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: require("Themes").space.PX_16, width: "100%", height: "100%" };
-createCacheKey[9] = { backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.round };
-let obj2 = { backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.round };
-createCacheKey[10] = { paddingHorizontal: require("Themes").space.PX_16, alignItems: "flex-start", gap: require("Themes").space.PX_16 };
+let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: ThemesDefault.space.PX_16, width: "100%", height: "100%" };
+createCacheKey[9] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
+let obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
+createCacheKey[10] = { paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start", gap: ThemesDefault.space.PX_16 };
 createCacheKey[11] = { fontSize: 24, lineHeight: 30 };
 createCacheKey[12] = { zIndex: 1 };
-let obj3 = { paddingHorizontal: require("Themes").space.PX_16, alignItems: "flex-start", gap: require("Themes").space.PX_16 };
-createCacheKey[13] = { flexDirection: "row", gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { flexDirection: "row", gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-const result1 = require("updateCategoriesAndProducts").fileFinishedImporting("modules/collectibles/native/HeroBlock.tsx");
+let obj3 = { paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start", gap: ThemesDefault.space.PX_16 };
+createCacheKey[13] = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+const result1 = require("set").fileFinishedImporting("modules/collectibles/native/HeroBlock.tsx");
 
 export default function _default(heroBlock) {
   heroBlock = heroBlock.heroBlock;
   const preferVCPrice = heroBlock.preferVCPrice;
-  let dependencyMap;
+  dependencyMap = undefined;
   let React;
   let stateFromStores;
-  let c5;
-  let c6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   let obj = heroBlock(14961);
-  let obj1 = heroBlock(1500);
+  obj1 = heroBlock(1500);
   dependencyMap = obj1.useNavigation();
   let obj2 = heroBlock(9175);
   React = obj2.useCollectiblesAnalyticsContext();
@@ -65,12 +63,12 @@ export default function _default(heroBlock) {
   }
   const heroLogoUrl = heroBlock.heroLogoUrl;
   let tmpResult = tmp(589);
-  const items = [c6];
-  stateFromStores = tmpResult.useStateFromStores(items, () => _undefined2.getCategory(heroBlock.categorySkuId));
+  const items = [closure_6];
+  stateFromStores = tmpResult.useStateFromStores(items, () => category.getCategory(heroBlock.categorySkuId));
   tmpResult = tmp(10685);
   let isEligibleForQuests = tmpResult.getIsEligibleForQuests();
   const tmp7 = preferVCPrice(4310)();
-  const tmp8 = createCacheKey();
+  const tmp8 = callback2();
   const tmpResult1 = heroBlock(12005);
   const token = heroBlock(4097).useToken(preferVCPrice(712).colors.BACKGROUND_BASE_LOW);
   const tmpResult2 = heroBlock(4097);
@@ -79,12 +77,12 @@ export default function _default(heroBlock) {
   const hexToRgbaStringResult = tmpResult3.hexToRgbaString(heroBlock(4223).hexWithOpacity(token, 0));
   const token1 = heroBlock(4097).useToken(preferVCPrice(712).colors.BACKGROUND_BASE_LOWEST);
   const tmp12 = preferVCPrice(14426)();
-  c5 = tmp12;
+  closure_5 = tmp12;
   const items1 = [heroBlock.rankedSkuIds, tmp12];
-  const memo = React.useMemo(() => _undefined(heroBlock.rankedSkuIds), items1);
+  const memo = React.useMemo(() => callback(heroBlock.rankedSkuIds), items1);
   const tmpResult5 = heroBlock(4097);
   const filteredAndSortedProducts = heroBlock(14428).useFilteredAndSortedProducts({ products: memo, bypassAndroidUnsyncedFilter: tmp4 });
-  c6 = tmp14;
+  closure_6 = tmp14;
   const tmpResult6 = heroBlock(14428);
   let unpublishedAt;
   if (stateFromStores != null) {
@@ -137,7 +135,7 @@ export default function _default(heroBlock) {
         const tmp27 = closure_12;
       }
       obj2[1] = tmp24Result;
-      const items6 = [closure_11(c5, obj2), , ];
+      const items6 = [closure_11(closure_5, obj2), , ];
       const obj8 = { style: null, children: null };
       obj8[0] = tmp8.heroInfoContainer;
       if (tmp4) {
@@ -192,27 +190,27 @@ export default function _default(heroBlock) {
         obj14[6] = function onPress() {
           let obj = preferVCPrice(navigation[24]);
           let sessionId;
-          if (useGetProductsFromSkus != null) {
+          if (closure_3 != null) {
             sessionId = tmp2.sessionId;
           }
           obj = { collectibles_shop_session_id: sessionId, sku_id: heroBlock.categoryStoreListingId, page_type: "mobile_home", page_section: null, page_category: null, tile_type: "HERO_BLOCK", tile_position: null, cta_name: null };
           let pageSection;
-          if (useGetProductsFromSkus != null) {
+          if (closure_3 != null) {
             pageSection = tmp2.pageSection;
           }
           obj[3] = pageSection;
           let pageCategory;
-          if (useGetProductsFromSkus != null) {
+          if (closure_3 != null) {
             pageCategory = tmp2.pageCategory;
           }
           obj[4] = pageCategory;
           let tilePosition;
-          if (useGetProductsFromSkus != null) {
+          if (closure_3 != null) {
             tilePosition = tmp2.tilePosition;
           }
           obj[6] = String(tilePosition);
-          obj.track(outer1_8.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
-          navigation.navigate(outer1_9.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, { category: stateFromStores, analyticsContext: useGetProductsFromSkus });
+          obj.track(closure_1_8.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
+          navigation.navigate(closure_1_9.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, { category: stateFromStores, analyticsContext: closure_3 });
         };
         const obj17 = { style: null, children: null };
         obj17[0] = tmp8.innerContainer;
@@ -238,7 +236,7 @@ export default function _default(heroBlock) {
         tmp24Result = tmp22(tmp(5433).PressableOpacity, obj14, stateFromStores.storeListingId);
       }
       obj8[1] = tmp24Result;
-      items6[1] = closure_11(c5, obj8);
+      items6[1] = closure_11(closure_5, obj8);
       const obj22 = { style: null, children: null };
       obj22[0] = tmp8.productCardsContainer;
       if (tmp4) {
@@ -278,19 +276,19 @@ export default function _default(heroBlock) {
             let obj = { style: null };
             obj = { width: preferVCPrice(navigation[8]).space.PX_16 };
             obj[0] = obj;
-            return callback(c5, obj);
+            return callback2(closure_5, obj);
           };
           obj27[10] = function ListFooterComponent() {
             let obj = { style: null };
             obj = { width: preferVCPrice(navigation[8]).space.PX_16 };
             obj[0] = obj;
-            return callback(c5, obj);
+            return callback2(closure_5, obj);
           };
           obj27[11] = function ItemSeparatorComponent() {
             let obj = { style: null };
             obj = { width: preferVCPrice(navigation[8]).space.PX_12 };
             obj[0] = obj;
-            return callback(c5, obj);
+            return callback2(closure_5, obj);
           };
           tmp22Result4 = tmp22(tmp(8029).FlashList, obj27);
         }
@@ -302,9 +300,9 @@ export default function _default(heroBlock) {
       const obj30 = { children: null };
       obj30[0] = tmp22Result3;
       obj22[1] = closure_11(tmp(7126).LayerScope, obj30);
-      items6[2] = closure_11(c5, obj22);
+      items6[2] = closure_11(closure_5, obj22);
       obj1[1] = items6;
-      obj[2] = closure_13(c5, obj1);
+      obj[2] = closure_13(closure_5, obj1);
       obj[1] = closure_11(tmp6Result, obj);
       return closure_11(tmp(7139).AnalyticsLocationProvider, obj);
     } else {

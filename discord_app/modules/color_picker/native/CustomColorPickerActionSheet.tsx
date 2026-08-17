@@ -1,21 +1,17 @@
 // discord_app/modules/color_picker/native/CustomColorPickerActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import HSVColorPicker from "HSVColorPicker";
-import { View } from "TextInput";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 function SuggestedColors(arg0) {
-  let importDefault;
-  let require;
-  let suggestedColors;
   ({ suggestedColors, onSelect: require, color: importDefault } = arg0);
-  let c2;
-  const tmp = createCacheKey();
-  c2 = tmp;
+  closure_2 = undefined;
+  const tmp = callback2();
+  closure_2 = tmp;
   let tmp2 = null;
   if (null != suggestedColors) {
     tmp2 = null;
@@ -23,10 +19,10 @@ function SuggestedColors(arg0) {
       const obj = { style: null, children: null };
       obj[0] = tmp.suggestedColorsContainer;
       obj[1] = suggestedColors.map((color) => {
-        let closure_0 = color;
-        return outer1_6(outer1_1(_undefined[6]), {
+        closure_0 = color;
+        return closure_1_6(closure_1_1(suggestedColor[6]), {
           color,
-          style: _undefined.suggestedColor,
+          style: suggestedColor.suggestedColor,
           selected: color === closure_1,
           onSelect() {
             if (null != closure_0) {
@@ -43,29 +39,22 @@ function SuggestedColors(arg0) {
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let c8 = "#000000";
 createCacheKey = { container: null, suggestedColor: null, suggestedColorsContainer: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { minWidth: 32, height: 32, borderRadius: require("Themes").radii.xs };
+createCacheKey[1] = { minWidth: 32, height: 32, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = { flexDirection: "row", justifyContent: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { minWidth: 32, height: 32, borderRadius: require("Themes").radii.xs };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/color_picker/native/CustomColorPickerActionSheet.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { minWidth: 32, height: 32, borderRadius: ThemesDefault.radii.xs };
+let result = require("set").fileFinishedImporting("modules/color_picker/native/CustomColorPickerActionSheet.tsx");
 
 export default function CustomColorPickerActionSheet(arg0) {
-  let actionButtonVariant;
-  let color;
-  let h;
-  let onSelect;
-  let s;
-  let suggestedColors;
-  let v;
   ({ color, onSelect } = arg0);
   ({ suggestedColors, actionButtonVariant } = arg0);
   if (actionButtonVariant === undefined) {
     actionButtonVariant = "secondary";
   }
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let memo;
   let sharedValue;
   let sharedValue1;
@@ -77,8 +66,8 @@ export default function CustomColorPickerActionSheet(arg0) {
     dependencyMap(onSelect(4223).rgbToHex(hsvToRgbWorkletResult[0], hsvToRgbWorkletResult[1], hsvToRgbWorkletResult[2]));
   }
   let obj = onSelect(688);
-  let tmp = createCacheKey();
-  let obj1 = onSelect(688);
+  let tmp = callback2();
+  obj1 = onSelect(688);
   const int2hexResult = obj.int2hex(color);
   let obj2 = sharedValue;
   ({ h, s, v } = obj1.int2hsv(color));
@@ -166,8 +155,6 @@ export default function CustomColorPickerActionSheet(arg0) {
   const tmp16 = first;
   obj4[0] = first(12).uniq(combined);
   obj4[1] = function onSelect(color) {
-    let s;
-    let v;
     dependencyMap(onSelect(688).int2hex(color));
     const obj = onSelect(688);
     const int2hsvResult = onSelect(688).int2hsv(color);
@@ -190,10 +177,7 @@ export default function CustomColorPickerActionSheet(arg0) {
     value: sharedValue2,
     onPanFinalize() {
       let obj = onSelect(4115);
-      obj = { h: null, s: null, v: null };
-      obj[0] = sharedValue.get();
-      obj[1] = sharedValue1.get();
-      obj[2] = sharedValue2.get();
+      obj = { h: sharedValue.get(), s: sharedValue1.get(), v: sharedValue2.get() };
       obj.runOnJS(updateInputHexValueFromHsv)(obj);
     }
   };

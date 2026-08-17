@@ -1,6 +1,8 @@
 // discord_app/modules/content_inventory/ContentInventoryTypes.tsx
-import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
+import set from "set" /* 2 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8344 */;
+
+const result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryTypes.tsx");
 
 export const isPlayedGameEntry = function isPlayedGameEntry(content_type) {
   content_type = undefined;

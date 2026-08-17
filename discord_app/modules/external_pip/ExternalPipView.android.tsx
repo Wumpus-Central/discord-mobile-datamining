@@ -1,32 +1,30 @@
 // discord_app/modules/external_pip/ExternalPipView.android.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import AppFreezeStore from "../panels/morphable/AppFreezeStore.tsx";
-import { jsx } from "jsxProd";
-import { ExternalPipViewVideoUnavailable } from "ExternalPipViewVideo.android.tsx";
+import ExternalPipViewVideoUnavailableDefault from "ExternalPipViewVideoUnavailable" /* 16222 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "module_9010" /* 9010 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 function FreezeAfterLayoutPipView() {
-  const importDefault = React.useRef(false);
+  importDefault = React.useRef(false);
   const onLayout = React.useCallback(() => {
     if (!ref.current) {
       tmp.current = true;
-      const state = outer1_4.getState();
+      const state = closure_1_4.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: true, key: "external-pip" });
     }
   }, []);
   const effect = React.useEffect(() => () => {
     if (ref.current) {
-      const state = outer1_4.getState();
+      const state = closure_1_4.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
-  return jsx(ExternalPipViewVideoUnavailable, { onLayout });
+  return jsx(ExternalPipViewVideoUnavailableDefault, { onLayout });
 }
-const result = require("module_9010").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
+const result = require("set").fileFinishedImporting("modules/external_pip/ExternalPipView.android.tsx");
 
 export default function ExternalPipView() {
-  let c0;
-  let tmp3;
   const obj = { disabled: null };
   const tmp = importDefault(callback[4]);
   obj[0] = !importDefault(callback[5]).isSupported();
@@ -36,7 +34,7 @@ export default function ExternalPipView() {
   callback = React.useCallback((arg0) => {
     _undefined(arg0);
     if (!arg0) {
-      const state = outer1_4.getState();
+      const state = closure_1_4.getState();
       const freezeLock = state.requestFreezeLock({ lockEnabled: false, key: "external-pip" });
     }
   }, []);
@@ -50,7 +48,7 @@ export default function ExternalPipView() {
   }, items);
   const items1 = [callback];
   const effect2 = React.useEffect(() => {
-    let closure_0 = _undefined(callback[5]).addOnPipModeChangedListener((arg0) => {
+    closure_0 = _undefined(callback[5]).addOnPipModeChangedListener((arg0) => {
       callback(arg0);
     });
     return () => {
@@ -63,7 +61,7 @@ export default function ExternalPipView() {
   }, items1);
   const items2 = [callback];
   const effect3 = React.useEffect(() => {
-    let closure_0 = _undefined(callback[5]).addOnPipModeWillChangeListener(() => {
+    closure_0 = _undefined(callback[5]).addOnPipModeWillChangeListener(() => {
       callback(true);
     });
     return () => {

@@ -1,71 +1,67 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesGummyColorPickerSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import Button from "Button";
-import get_ActivityIndicator from "Background";
-import { DISPLAY_NAME_STYLES_GUMMY_PRESETS as closure_7 } from "items3";
-import { AnalyticEvents } from "ME";
-import jsxProd from "GummyStripes";
-import items from "items";
-import closure_11 from "_slicedToArray";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { DISPLAY_NAME_STYLES_GUMMY_PRESETS as closure_7 } from "items3" /* 1934 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import items from "items" /* 1933 */;
+import closure_11 from "module_0" /* 0 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c5;
-let c9;
-let closure_6;
 const require = arg1;
 ({ View: c5, Pressable: closure_6, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 items = { body: null, colorRowInset: null, optionContainer: null, swatchWrapper: null, swatch: null, swatchSelected: null, customSwatchEmpty: null, customIconOverlay: null, customIconScrim: null };
-items = { paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_12, paddingBottom: require("Themes").space.PX_16, gap: require("Themes").space.PX_16, alignItems: "center" };
+items = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16, alignItems: "center" };
 items[0] = items;
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_4, alignSelf: "stretch" };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_4, alignSelf: "stretch" };
 items[1] = createCacheKey;
 items[2] = { flexDirection: "row", flexWrap: "wrap" };
 items[3] = { width: "25%", padding: 2 };
-items[4] = { height: 40, flexDirection: "row", borderRadius: require("Themes").radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
-let obj2 = { height: 40, flexDirection: "row", borderRadius: require("Themes").radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
-items[5] = { borderColor: require("Themes").colors.BACKGROUND_BRAND };
-let obj3 = { borderColor: require("Themes").colors.BACKGROUND_BRAND };
-items[6] = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: require("Themes").colors.BORDER_NORMAL };
+items[4] = { height: 40, flexDirection: "row", borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
+let obj2 = { height: 40, flexDirection: "row", borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 2, borderColor: "transparent" };
+items[5] = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj3 = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+items[6] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_NORMAL };
 let obj5 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj5.alignItems = "center";
 obj5.justifyContent = "center";
 items[7] = obj5;
-let obj4 = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: require("Themes").colors.BORDER_NORMAL };
-items[8] = { width: 28, height: 28, borderRadius: require("Themes").radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
-items = createCacheKey.createStyles(items);
-let obj6 = { width: 28, height: 28, borderRadius: require("Themes").radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGummyColorPickerSheet.tsx");
+let obj4 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_NORMAL };
+items[8] = { width: 28, height: 28, borderRadius: ThemesDefault.radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
+let closure_12 = createCacheKey.createStyles(items);
+let obj6 = { width: 28, height: 28, borderRadius: ThemesDefault.radii.round, backgroundColor: "transparent", alignItems: "center", justifyContent: "center" };
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesGummyColorPickerSheet.tsx");
 
 export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   selectedColors = selectedColors.selectedColors;
   const onSelectColors = selectedColors.onSelectColors;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let first;
-  let closure_5;
+  closure_5 = undefined;
   let first1;
-  let closure_7;
-  let c8;
+  closure_7 = undefined;
+  c8 = undefined;
   let callback2;
-  const tmp = items();
+  const tmp = callback3();
   dependencyMap = tmp;
   let obj = selectedColors(9457);
   let tmp5 = selectedColors.length > 0;
   const displayNameStylesEffectConfig = obj.useDisplayNameStylesEffectConfig(selectedColors(1935).DisplayNameEffect.GUMMY);
   if (tmp5) {
-    tmp5 = !closure_7.some((items) => selectedColors(_undefined[11]).areArraysShallowEqual(items, selectedColors));
+    tmp5 = !closure_7.some((items) => selectedColors(closure_2[11]).areArraysShallowEqual(items, selectedColors));
   }
   callback = tmp5;
   const tmp7 = callback(first.useState(() => {
-    if (c3) {
-      let result = selectedColors(_undefined[6]).rebuildGummySourceColor(selectedColors);
-      const obj = selectedColors(_undefined[6]);
+    if (closure_3) {
+      let result = selectedColors(closure_2[6]).rebuildGummySourceColor(selectedColors);
+      const obj = selectedColors(closure_2[6]);
     } else {
-      result = outer1_11;
+      result = closure_1_11;
     }
     return result;
   }), 2);
@@ -74,28 +70,28 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   const tmp9 = callback(first.useState(() => {
     let gummyColors = selectedColors;
     if (selectedColors.length <= 0) {
-      gummyColors = selectedColors(_undefined[6]).buildGummyColors(outer1_11);
-      const obj = selectedColors(_undefined[6]);
+      gummyColors = selectedColors(closure_2[6]).buildGummyColors(closure_1_11);
+      const obj = selectedColors(closure_2[6]);
     }
     return gummyColors;
   }), 2);
   first1 = tmp9[0];
   closure_7 = tmp9[1];
   const tmp12Result = onSelectColors(14692)(selectedColors(1935).DisplayNameEffect.GUMMY);
-  const findIndexResult = tmp12Result.findIndex((colors) => selectedColors(_undefined[11]).areArraysShallowEqual(colors.colors, first1));
+  const findIndexResult = tmp12Result.findIndex((colors) => selectedColors(closure_2[11]).areArraysShallowEqual(colors.colors, first1));
   c8 = findIndexResult;
-  items = [first];
+  let items = [first];
   callback = first.useCallback(() => {
-    let obj = selectedColors(_undefined[13]);
-    const result = obj.triggerHapticFeedback(selectedColors(_undefined[13]).HapticFeedbackTypes.IMPACT_LIGHT);
+    let obj = selectedColors(closure_2[13]);
+    const result = obj.triggerHapticFeedback(selectedColors(closure_2[13]).HapticFeedbackTypes.IMPACT_LIGHT);
     obj = {
       initialColor: first,
-      onSelect(outer1_11) {
-        callback(outer1_11);
-        callback2(outer1_0(outer1_2[6]).buildGummyColors(outer1_11));
+      onSelect(closure_1_11) {
+        callback(closure_1_11);
+        callback2(closure_1_0(closure_1_2[6]).buildGummyColors(closure_1_11));
       }
     };
-    onSelectColors(_undefined[14])(obj);
+    onSelectColors(closure_2[14])(obj);
   }, items);
   callback2 = first.useCallback((arg0) => {
     const items = [...arg0];
@@ -105,20 +101,20 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
   const callback1 = first.useCallback(() => {
     const items = [...closure_7[0]];
     dependencyMap(items);
-    callback(outer1_11);
+    callback(closure_1_11);
   }, []);
   callback2 = first.useCallback(() => {
-    let obj = selectedColors(_undefined[13]);
-    const result = obj.triggerHapticFeedback(selectedColors(_undefined[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
+    let obj = selectedColors(closure_2[13]);
+    const result = obj.triggerHapticFeedback(selectedColors(closure_2[13]).HapticFeedbackTypes.IMPACT_MEDIUM);
     onSelectColors(first1);
     obj = { default: false, colors: first1 };
-    onSelectColors(_undefined[15]).track(_undefined2.DISPLAY_NAME_STYLES_COLOR_SELECTED, obj);
-    const obj2 = onSelectColors(_undefined[15]);
-    onSelectColors(_undefined[16]).hideActionSheet();
+    onSelectColors(closure_2[15]).track(_undefined.DISPLAY_NAME_STYLES_COLOR_SELECTED, obj);
+    const obj2 = onSelectColors(closure_2[15]);
+    onSelectColors(closure_2[16]).hideActionSheet();
   }, items1);
   obj = { header: null, children: null };
   obj = { title: displayNameStylesEffectConfig.name, trailing: null };
-  const obj1 = { variant: "primary", size: "sm", text: null, onPress: null };
+  obj1 = { variant: "primary", size: "sm", text: null, onPress: null };
   const intl = tmp2(1236).intl;
   obj1[2] = intl.string(selectedColors(1236).t.XqMe3N);
   obj1[3] = callback2;
@@ -160,21 +156,21 @@ export default function DisplayNameStylesGummyColorPickerSheet(selectedColors) {
     callback2(closure_5, obj4),
     tmp12Result.map((accessibilityLabel) => {
       const colors = accessibilityLabel.colors;
-      let obj = { style: _undefined.swatchWrapper, children: null };
-      const items = [_undefined.swatch, ];
+      let obj = { style: closure_2.swatchWrapper, children: null };
+      const items = [closure_2.swatch, ];
       let swatchSelected = tmp;
       if (c8 === arg1) {
-        swatchSelected = _undefined.swatchSelected;
+        swatchSelected = closure_2.swatchSelected;
       }
       obj = {
         style: items,
         onPress() {
-          return outer1_9(colors);
+          return closure_1_9(colors);
         },
         accessibilityRole: "button",
         accessibilityState: { selected: tmp },
         accessibilityLabel: accessibilityLabel.a11yLabel,
-        children: tmp2(onSelectColors(_undefined[21]), { colors })
+        children: tmp2(onSelectColors(closure_2[21]), { colors })
       };
       items[1] = swatchSelected;
       obj[1] = closure_9(first1, obj);

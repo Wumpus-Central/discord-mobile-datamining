@@ -1,28 +1,21 @@
 // discord_app/modules/quests/native/BountiesCtaHeader.tsx
-import importAllResult from "metadata";
-import get_ActivityIndicator from "BOUNTIES_MODAL_KEY";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import getOrCreateSet from "getOrCreateSet";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import { metadata } from "../../../../discord_assets/assets/quests/bounties/bounty_banner.mp4.js";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import openBountiesNuxPromoSheetDefault from "openBountiesNuxPromoSheet" /* 14418 */;
+import _modDef14438 from "module_14438" /* 14438 */;
+import metadataDefault from "metadata" /* 14439 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "getOrCreateSet" /* 14437 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
 import { items } from "../../../../discord_common/js/packages/design/shared/ThemeTypes.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useTrackQuestEventWithImpression } from "../lib/analytics/AnalyticsHooks.tsx";
-import { BountiesBannerBackground } from "BountiesBannerBackground.tsx";
-import { openBountiesNuxPromoSheet } from "openBountiesNuxPromoSheet.tsx";
 
-let StyleSheet;
-let c10;
-let c4;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function BountiesCtaDescription(isEmptyOrCompleted) {
   isEmptyOrCompleted = isEmptyOrCompleted.isEmptyOrCompleted;
   const t = getSystemLocale.t;
@@ -38,8 +31,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
   obj[2] = intl.string(AZGGo1);
   const tmp7 = callback(tmp5(4734).Text, obj);
   const intl2 = tmp5(1236).intl;
-  obj = { onClick: null };
-  obj[0] = openBountiesNuxPromoSheet;
+  obj = { onClick: openBountiesNuxPromoSheetDefault };
   const formatResult = intl2.format(tmp5(1236).t.fjSvsC, obj);
   if (isEmptyOrCompleted) {
     obj = { variant: "text-sm/medium", children: null };
@@ -47,7 +39,7 @@ function BountiesCtaDescription(isEmptyOrCompleted) {
     obj[1] = items;
     let tmp9Result = tmp9(tmp5(4734).Text, obj);
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.description;
     const items1 = [tmp7, ];
     const obj2 = { variant: "text-sm/medium", children: null };
@@ -64,15 +56,15 @@ function BountiesCtaHeaderInner(bounties) {
   if (flag === undefined) {
     flag = false;
   }
-  let importDefault;
+  importDefault = undefined;
   const tmp = callback2();
   let obj = bounties(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = bounties(589);
-  const items1 = [getOrCreateSet];
+  obj1 = bounties(589);
+  const items1 = [closure_6];
   const items2 = [bounties];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !getOrCreateSet.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => bounties.some((id) => !closure_6.hasSeen(callback(table[12]).AdCreativeType.BOUNTY, id.id)), items2);
   let obj2 = bounties(10711);
   const QuestContent = bounties(6719).QuestContent;
   const tmp6 = obj2.useBountiesExperience(constants2.QUEST_HOME_MOBILE).verticalScrollEnabled ? QuestContent.VIDEO_MODAL_MOBILE : QuestContent.QUEST_HOME_MOBILE_CAROUSEL;
@@ -80,17 +72,15 @@ function BountiesCtaHeaderInner(bounties) {
   const items3 = [bounties, tmp6];
   obj = { ref: bounties.containerRef, style: tmp.container, children: null };
   const callback = importAllResult.useCallback(() => {
-    let obj = bounties(outer1_2[15]);
-    obj = { adContentId: outer1_8, adCreativeType: bounties(outer1_2[12]).AdCreativeType.BOUNTY, questContent: bounties(outer1_2[14]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentCTA: bounties(outer1_2[16]).QuestContentCTA.START_BOUNTY, sourceQuestContent: bounties(outer1_2[14]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentPosition: 0 };
+    let obj = bounties(closure_1_2[15]);
+    obj = { adContentId: closure_1_8, adCreativeType: bounties(closure_1_2[12]).AdCreativeType.BOUNTY, questContent: bounties(closure_1_2[14]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentCTA: bounties(closure_1_2[16]).QuestContentCTA.START_BOUNTY, sourceQuestContent: bounties(closure_1_2[14]).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE, questContentPosition: 0 };
     const result = obj.trackAdContentClicked(obj);
-    obj = { bountyId: bounties[0].id, sourceQuestContent: _undefined };
-    _undefined(outer1_2[17]).showModal(obj);
+    obj = { bountyId: bounties[0].id, sourceQuestContent: callback };
+    callback(closure_1_2[17]).showModal(obj);
   }, items3);
-  obj = { uri: null, style: null, children: null };
-  obj[0] = metadata;
-  const items4 = [, ];
+  obj = { uri: metadataDefault, style: items4, children: null };
+  items4 = [, ];
   ({ header: arr5[0], headerRoundedBottom: arr5[1] } = tmp);
-  obj[1] = items4;
   let tmp11 = stateFromStores1;
   if (stateFromStores1) {
     obj1 = { variant: "text-xs/bold", containerStyle: null, textStyle: null };
@@ -115,34 +105,34 @@ function BountiesCtaHeaderInner(bounties) {
   obj2[1] = items6;
   items5[1] = closure_11(closure_4, obj2);
   obj[2] = items5;
-  const items7 = [closure_11(BountiesBannerBackground, obj), false];
+  const items7 = [closure_11(_modDef14438, obj), false];
   obj[2] = items7;
   return closure_11(closure_4, obj);
 }
 let c3 = importAllResult;
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
-({ BountyCarouselEmptyStateReason: error, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: metroImportAll, QuestsExperimentLocations: c9 } = QuestsExperimentLocations);
+({ BountyCarouselEmptyStateReason: error, DEFAULT_PLACEHOLDER_ENTRYPOINT_BOUNTY_ID: closure_8, QuestsExperimentLocations: c9 } = QuestsExperimentLocations);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { container: null, header: null, headerRoundedBottom: null, newPill: null, newPillText: null, headerTextBox: null, description: null, bottomSection: null, bottomContent: null, placeholderCards: null };
-  obj = { width: "100%", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED, borderBottomLeftRadius: Themes.radii.xxl, borderBottomRightRadius: Themes.radii.xxl, overflow: "hidden" };
+  obj = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl, overflow: "hidden" };
   obj[0] = obj;
-  obj = { width: "100%", minHeight: 296, justifyContent: "flex-end", overflow: "hidden", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
+  obj = { width: "100%", minHeight: 296, justifyContent: "flex-end", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
   obj[1] = obj;
-  obj[2] = { borderBottomLeftRadius: Themes.radii.xxl, borderBottomRightRadius: Themes.radii.xxl };
-  const obj1 = { borderBottomLeftRadius: Themes.radii.xxl, borderBottomRightRadius: Themes.radii.xxl };
-  obj[3] = { position: "absolute", top: Themes.space.PX_12, left: Themes.space.PX_12, zIndex: 1, backgroundColor: Themes.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4 };
-  const obj2 = { position: "absolute", top: Themes.space.PX_12, left: Themes.space.PX_12, zIndex: 1, backgroundColor: Themes.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4 };
-  obj[4] = { color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  const obj3 = { color: Themes.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
-  obj[5] = { paddingBottom: Themes.space.PX_24, paddingHorizontal: Themes.space.PX_20, gap: Themes.space.PX_8 };
+  obj[2] = { borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl };
+  obj1 = { borderBottomLeftRadius: ThemesDefault.radii.xxl, borderBottomRightRadius: ThemesDefault.radii.xxl };
+  obj[3] = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, zIndex: 1, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+  const obj2 = { position: "absolute", top: ThemesDefault.space.PX_12, left: ThemesDefault.space.PX_12, zIndex: 1, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
+  obj[4] = { color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  const obj3 = { color: ThemesDefault.colors.CONTROL_OVERLAY_PRIMARY_TEXT_DEFAULT };
+  obj[5] = { paddingBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_20, gap: ThemesDefault.space.PX_8 };
   obj[6] = { marginBottom: 16 };
-  const obj4 = { paddingBottom: Themes.space.PX_24, paddingHorizontal: Themes.space.PX_20, gap: Themes.space.PX_8 };
-  obj[7] = { width: "100%", overflow: "hidden", borderBottomLeftRadius: Themes.radii.xl, borderBottomRightRadius: Themes.radii.xl };
-  const obj5 = { width: "100%", overflow: "hidden", borderBottomLeftRadius: Themes.radii.xl, borderBottomRightRadius: Themes.radii.xl };
-  obj[8] = { paddingBottom: 24, paddingHorizontal: 20, gap: Themes.space.PX_12 };
-  const obj6 = { paddingBottom: 24, paddingHorizontal: 20, gap: Themes.space.PX_12 };
-  obj[9] = { alignSelf: "stretch", height: 160, borderRadius: Themes.radii.md, backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  const obj4 = { paddingBottom: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_20, gap: ThemesDefault.space.PX_8 };
+  obj[7] = { width: "100%", overflow: "hidden", borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRadius: ThemesDefault.radii.xl };
+  const obj5 = { width: "100%", overflow: "hidden", borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRadius: ThemesDefault.radii.xl };
+  obj[8] = { paddingBottom: 24, paddingHorizontal: 20, gap: ThemesDefault.space.PX_12 };
+  const obj6 = { paddingBottom: 24, paddingHorizontal: 20, gap: ThemesDefault.space.PX_12 };
+  obj[9] = { alignSelf: "stretch", height: 160, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
   return obj;
 });
 const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrCompleted) {
@@ -165,7 +155,7 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
       obj.containerRef = containerRef;
       let tmp9Result = tmp9(BountiesCtaHeaderInner, obj);
     } else {
-      const obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
+      obj1 = { adContentId: null, adCreativeType: null, questContent: null, questContentPosition: 0, overrideVisibility: null, sourceQuestContent: null, children: null };
       obj1[0] = closure_8;
       obj1[1] = tmp7(7469).AdCreativeType.BOUNTY;
       obj1[2] = tmp7(6719).QuestContent.QUEST_HOME_ENTRYPOINT_MOBILE;
@@ -175,7 +165,7 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
         const obj = {};
         const merged = Object.assign(closure_0);
         obj.containerRef = containerRef;
-        return outer1_10(outer1_14, obj);
+        return closure_1_10(closure_1_14, obj);
       };
       tmp9Result = tmp9(tmp7(10957).QuestContentImpressionTrackerNative, obj1);
     }
@@ -187,6 +177,6 @@ const memoResult = importAllResult.memo(function BountiesCtaHeader(isEmptyOrComp
     COMPLETED = constants.COMPLETED;
   }
 });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/quests/native/BountiesCtaHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesCtaHeader.tsx");
 
 export default memoResult;

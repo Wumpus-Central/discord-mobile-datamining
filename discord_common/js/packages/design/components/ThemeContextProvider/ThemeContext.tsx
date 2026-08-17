@@ -1,9 +1,7 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContext.tsx
-import importAllResult from "noop";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_1;
-let obj1;
 let c0 = importAllResult;
 ({ Fragment: closure_1, jsx: obj1 } = jsxProd);
 let obj = { theme: "light", primaryColor: null, secondaryColor: null, gradient: null, flags: 0, contrast: 1, saturation: 1, density: "compact", disableAdaptiveTheme: false, reduceAdaptiveTheme: false };
@@ -25,7 +23,7 @@ export const useThemeContext = function useThemeContext() {
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useThemeContext must be used within a ThemeContext.Provider");
+    error = new Error("useThemeContext must be used within a ThemeContext.Provider");
     throw error;
   } else {
     return context;
@@ -37,7 +35,7 @@ export const UseThemeContext = function UseThemeContext(children) {
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useThemeContext must be used within a ThemeContext.Provider");
+    error = new Error("useThemeContext must be used within a ThemeContext.Provider");
     throw error;
   } else {
     const obj = { children: null };

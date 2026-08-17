@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx
-import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+
+const result = set.fileFinishedImporting("modules/user_settings/profiles/native/maybeShowDiscardChangesAlert.tsx");
 
 export default function maybeShowDiscardChangesAlert(onHasEdits) {
-  let onConfirm;
-  let require;
   ({ resetPending: require, onConfirm } = onHasEdits);
   onHasEdits = onHasEdits.onHasEdits;
   if (onHasEdits.hasEdits) {
@@ -36,10 +36,8 @@ export default function maybeShowDiscardChangesAlert(onHasEdits) {
   return showResult;
 };
 export const showDiscardChangesAlert = function showDiscardChangesAlert(arg0) {
-  let onCancel;
-  let onConfirm;
   ({ onConfirm, onCancel } = arg0);
-  let obj = AlertActionCreators;
+  let obj = _modDef4656;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.pvRCSu);

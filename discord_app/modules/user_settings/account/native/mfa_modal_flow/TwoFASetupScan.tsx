@@ -1,23 +1,22 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flex: 1, alignItems: "center", justifyContent: "center" }, copy: null };
-createCacheKey = { color: require("Themes").colors.TEXT_BRAND };
+createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupScan.tsx");
 
 export default function TwoFASetupScan(totpSecret) {
   totpSecret = totpSecret.totpSecret;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback3();
   const tmp2 = callback(React.useState(false), 2);
   dependencyMap = tmp2[1];
   const items = [totpSecret];
@@ -34,7 +33,7 @@ export default function TwoFASetupScan(totpSecret) {
   const intl = totpSecret(1236).intl;
   obj[1] = intl.string(totpSecret(1236).t["hg/+aT"]);
   const items2 = [callback2(totpSecret(1297).LegacyText, obj), , , ];
-  const obj1 = { style: items3, children: null };
+  obj1 = { style: items3, children: null };
   items3 = [, ];
   ({ modalBody: arr4[0], text: arr4[1] } = twoFASetupStyles);
   const intl2 = totpSecret(1236).intl;

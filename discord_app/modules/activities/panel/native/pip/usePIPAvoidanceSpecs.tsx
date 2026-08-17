@@ -1,29 +1,28 @@
 // discord_app/modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx
+import set from "set" /* 2 */;
 import { cheapWorkletShallowEqual } from "../../../../reanimated/native/cheapWorkletShallowEqual.tsx";
 import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+
 let closure_3 = { code: "function usePIPAvoidanceSpecsTsx1(){const{keyboardHeight,safeArea,screenName}=this.__closure;return{keyboardHeight:keyboardHeight.get(),safeAreaBottom:safeArea.bottom,screenName:screenName.get()};}" };
 let closure_4 = { code: "function usePIPAvoidanceSpecsTsx2(props,previous){const{cheapWorkletShallowEqual,getPIPBottomOffsetForPIPMode,getAdjustedBottomOffsets,updateSharedValueIfChanged,pipAvoidanceSpecs}=this.__closure;if(cheapWorkletShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const{keyboardHeight:keyboardHeight,safeAreaBottom:safeAreaBottom,screenName:screenName}=props;const screenBottomOffset=getPIPBottomOffsetForPIPMode(screenName);const{bottomOffset:bottomOffset}=getAdjustedBottomOffsets({screenBottomOffset:screenBottomOffset,safeAreaBottom:safeAreaBottom,keyboardHeight:keyboardHeight});updateSharedValueIfChanged(pipAvoidanceSpecs,{top:0,bottom:bottomOffset});}" };
-const result = require("useScreenNameSharedValue").fileFinishedImporting("modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx");
+const result = set.fileFinishedImporting("modules/activities/panel/native/pip/usePIPAvoidanceSpecs.tsx");
 
 export default function usePIPAvoidanceSpecs(safeArea) {
   const _require = safeArea;
   let obj = _ReanimatedRexport;
   const sharedValue = obj.useSharedValue({ top: 0, bottom: 0 });
   const tmp2 = sharedValue(16184)();
-  const dependencyMap = tmp2;
+  dependencyMap = tmp2;
   const tmp3 = sharedValue(16230)();
-  let closure_3 = tmp3;
+  closure_3 = tmp3;
   const fn = function n() {
-    return { keyboardHeight: tmp2.get(), safeAreaBottom: safeArea.bottom, screenName: tmp3.get() };
+    return { keyboardHeight: closure_2.get(), safeAreaBottom: safeArea.bottom, screenName: closure_3.get() };
   };
   fn.__closure = { keyboardHeight: tmp2, safeArea, screenName: tmp3 };
   fn.__workletHash = 9790941132204;
   fn.__initData = closure_3;
   const fn2 = function f(safeAreaState, current) {
-    let keyboardHeight;
-    let safeAreaBottom;
-    let screenName;
-    let obj = safeArea(tmp2[3]);
+    let obj = safeArea(closure_2[3]);
     if (!obj.cheapWorkletShallowEqual(safeAreaState, current)) {
       ({ keyboardHeight, safeAreaBottom, screenName } = safeAreaState);
       obj = { screenBottomOffset: null, safeAreaBottom: null, keyboardHeight: null };

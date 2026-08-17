@@ -1,27 +1,22 @@
 // discord_app/modules/stage_channels/StageChannelParticipants.tsx
-import reset from "reset";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionReset from "handleConnectionReset";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateVoiceState from "updateVoiceState";
-import { getComparator } from "getVoiceStatesForGuild";
-import buildStageChannelUserRoles from "buildStageChannelUserRoles";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { getParticipantUserKey } from "../calls/getParticipantUserKey.tsx";
-import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
-import { getHighestHoistedRole } from "useGuildMemberDisplayRole.tsx";
+import version from "version" /* 4017 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 4778 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
+import getHighestHoistedRole from "getHighestHoistedRole" /* 6706 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionReset" /* 6704 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
+import { getComparator } from "getVoiceStatesForGuild" /* 4545 */;
+import closure_11 from "buildStageChannelUserRoles" /* 4990 */;
+import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
 
-const require = arg1;
+require = arg1;
 function sortKey(speaker) {
-  let connectedOn;
-  let role;
-  let type;
-  let user;
-  let userNick;
-  let voiceState;
   ({ role, connectedOn, voiceState } = speaker);
   let str = "\u0001";
   let str2 = "\u0001";
@@ -48,7 +43,7 @@ function sortKey(speaker) {
     num = 999;
   }
   const combined = "" + num;
-  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + getParticipantUserKey(userNick, user);
+  return "" + str2 + str3 + str4 + str + combined.padStart(3, "0") + connectedOn + getParticipantUserKeyDefault(userNick, user);
 }
 function requestToSpeakSortKey(user) {
   user = user.user;
@@ -63,12 +58,6 @@ function requestToSpeakSortKey(user) {
   return id;
 }
 function getParticipantIndex(arg0) {
-  let blocked;
-  let ignored;
-  let isFriend;
-  let role;
-  let rtsState;
-  let speaker;
   ({ role, rtsState } = arg0);
   ({ speaker, blocked, ignored, isFriend } = arg0);
   const items = [];
@@ -102,7 +91,7 @@ function getParticipantIndex(arg0) {
 }
 let obj = { SPEAKER: "SPEAKER", AUDIENCE: "AUDIENCE", NO_ROLE: "NO_ROLE", ALL_REQUESTED_TO_SPEAK: "ALL_REQUESTED_TO_SPEAK", REQUESTED_TO_SPEAK_ONLY: "REQUESTED_TO_SPEAK_ONLY", BLOCKED: "BLOCKED", IGNORED: "IGNORED", FRIEND: "FRIEND", SELECTED: "SELECTED", MEDIA: "MEDIA" };
 obj = { VOICE: "VOICE", STREAM: "STREAM" };
-let result = require("handleConnectionReset").fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipants.tsx");
 class StageChannelParticipants {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -112,7 +101,7 @@ class StageChannelParticipants {
     secondaryIndexMap1 = new require("version").SecondaryIndexMap(() => [], requestToSpeakSortKey);
     obj[2] = secondaryIndexMap1;
     obj.channelId = global;
-    channel = getParticipantIndex.getChannel(global);
+    channel = closure_4.getChannel(global);
     guildId = undefined;
     if (channel != null) {
       guildId = channel.getGuildId();
@@ -136,7 +125,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         isPublicResult = _public.isPublic(self.channelId);
       }
       if (isPublicResult) {
-        const member = handleConnectionReset.requestMember(self.guildId, userId);
+        const member = closure_5.requestMember(self.guildId, userId);
       }
       return items;
     } else {
@@ -153,22 +142,22 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
         nick = member1.nick;
       }
       if (nick == null) {
-        let obj = getNickname;
+        obj = getNicknameDefault;
         nick = obj.getName(self.guildId, self.channelId, user);
       }
       obj = { user: null, userNick: null, nick: null, comparator: null, voiceState: null, role: null, speaker: null, member: null, blocked: null, ignored: null, isFriend: null, connectedOn: null };
       obj[0] = user;
-      obj[1] = getNickname.getName(self.guildId, self.channelId, user);
+      obj[1] = getNicknameDefault.getName(self.guildId, self.channelId, user);
       obj[2] = nick;
       obj[3] = getComparator(voiceStateForChannel, nick);
       obj[4] = voiceStateForChannel;
-      const obj3 = getNickname;
+      const obj3 = getNicknameDefault;
       obj[5] = getHighestHoistedRole.getHighestHoistedRole(self.guildId, userId);
       obj[6] = speaker.isSpeaker(userId, self.channelId);
       obj[7] = member1;
-      obj[8] = markAllUserIdListsStale.isBlocked(user.id);
-      obj[9] = markAllUserIdListsStale.isIgnored(user.id);
-      obj[10] = markAllUserIdListsStale.isFriend(user.id);
+      obj[8] = closure_7.isBlocked(user.id);
+      obj[9] = closure_7.isIgnored(user.id);
+      obj[10] = closure_7.isFriend(user.id);
       let connectedOn;
       if (first != null) {
         connectedOn = first.connectedOn;
@@ -192,7 +181,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
           tmp11Result = tmp11(4531);
-          const obj1 = {};
+          obj1 = {};
           const merged1 = Object.assign(obj);
           obj1.id = tmp11Result.encodeStreamKey(streamForUser);
           obj1.type = obj.STREAM;
@@ -207,7 +196,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
 };
 prototype["updateParticipant"] = function updateParticipant(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let result = this._getParticipantsForUser(arg0, arr);
   let flag = null != arr;
   if (!flag) {

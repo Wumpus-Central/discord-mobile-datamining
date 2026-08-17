@@ -1,6 +1,8 @@
 // discord_app/modules/chat/native/ChatChangesetUpdateTracker.tsx
+import set from "set" /* 2 */;
+
 const weakMap = new WeakMap();
-let result = require("set").fileFinishedImporting("modules/chat/native/ChatChangesetUpdateTracker.tsx");
+let result = set.fileFinishedImporting("modules/chat/native/ChatChangesetUpdateTracker.tsx");
 
 export const getAndIncrementChangesetIdForChat = function getAndIncrementChangesetIdForChat(arg0) {
   let num = weakMap.get(arg0);

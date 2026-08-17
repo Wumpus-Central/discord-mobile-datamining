@@ -1,20 +1,17 @@
 // discord_app/design/tokens/native/SemanticColorContext.native.tsx
-import { n } from "../../../../_runtime/00689_n.js";
-import { getGradientColorByPercentage } from "../../../modules/client_themes/native/ClientThemesUtils.tsx";
-import { getGradientThemeFromFlags } from "../../components/ThemeContextProvider/native/getGradientThemeFromFlags.tsx";
-const result = require("getNodeText").fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
+import set from "set" /* 2 */;
+import nDefault from "n" /* 689 */;
+import getGradientThemeFromFlags from "getGradientThemeFromFlags" /* 4103 */;
+import getGradientColorByPercentage from "getGradientColorByPercentage" /* 4194 */;
+
+const result = set.fileFinishedImporting("design/tokens/native/SemanticColorContext.native.tsx");
 
 export const getSemanticColorContextFromThemeContext = function getSemanticColorContextFromThemeContext(themeContext) {
-  let contrast;
-  let enabledExperiments;
-  let primaryColor2;
-  let saturation;
-  let secondaryColor;
   let obj = getGradientThemeFromFlags;
   const primaryColor = themeContext.primaryColor;
   const gradientThemeFromFlags = obj.getGradientThemeFromFlags(themeContext);
   ({ contrast, saturation, enabledExperiments } = themeContext);
-  let obj1 = getGradientColorByPercentage;
+  obj1 = getGradientColorByPercentage;
   let gradientThemeMetadata = obj1.getGradientThemeMetadata(gradientThemeFromFlags, themeContext.gradient);
   if (null != primaryColor) {
     ({ primaryColor: primaryColor2, secondaryColor } = themeContext);
@@ -27,9 +24,9 @@ export const getSemanticColorContextFromThemeContext = function getSemanticColor
         secondaryColor = primaryColor2;
       }
       const int2hexResult1 = tmpResult.int2hex(secondaryColor);
-      const obj5 = n(int2hexResult);
-      const mixResult = n(int2hexResult).mix(int2hexResult1, 0.5);
-      const hexResult = n(int2hexResult).mix(int2hexResult1, 0.5).hex();
+      const obj5 = nDefault(int2hexResult);
+      const mixResult = nDefault(int2hexResult).mix(int2hexResult1, 0.5);
+      const hexResult = nDefault(int2hexResult).mix(int2hexResult1, 0.5).hex();
       let str = "dark";
       if (tmpResult1.isThemeLight(tmp10)) {
         str = "light";

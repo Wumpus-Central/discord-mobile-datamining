@@ -1,6 +1,8 @@
 // discord_app/modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx
-import { explicitContentFromProto } from "../UserSettings.tsx";
-const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
+import set from "set" /* 2 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+
+const result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/DefultGuildsRestrictedSetting.tsx");
 
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
   const DefaultGuildsRestricted = explicitContentFromProto.DefaultGuildsRestricted;

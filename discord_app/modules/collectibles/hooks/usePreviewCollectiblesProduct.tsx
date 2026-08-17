@@ -1,19 +1,16 @@
 // discord_app/modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { isAvatarDecorationRecord } from "fromServer";
-import { isNameplateRecord } from "fromServer";
-import { isProfileEffectRecord } from "fromServer";
-import { isProfileFrameRecord } from "fromServer";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { isAvatarDecorationRecord, isNameplateRecord, isProfileEffectRecord, isProfileFrameRecord } from "fromServer" /* 5306 */;
 import { firstAvatarDecoration } from "useShopProductItems.tsx";
 
 const require = arg1;
-const result = require("fromServer").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/usePreviewCollectiblesProduct.tsx");
 
 export const usePreviewCollectibleProduct = function usePreviewCollectibleProduct(product, arg1, arg2) {
   const _require = product;
-  const dependencyMap = arg1;
-  let _slicedToArray = arg2;
+  dependencyMap = arg1;
+  closure_2 = arg2;
   const shopProductItems = _firstAvatarDecoration.useShopProductItems(product);
   const firstProfileEffect = shopProductItems.firstProfileEffect;
   const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
@@ -44,7 +41,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
           if (firstProfileFrame(tmp11)) {
             obj.profileEffect = tmp11;
           } else if (!firstNameplate(tmp11)) {
-            if (outer1_7(tmp11)) {
+            if (closure_1_7(tmp11)) {
               obj.profileFrame = tmp11;
             }
           }
@@ -62,7 +59,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         objResult.setPendingChanges(obj);
       } else if (firstProfileFrame(first)) {
         objResult = obj(setPendingChangesResult[8]);
-        const obj1 = { profileEffect: null };
+        obj1 = { profileEffect: null };
         obj1[0] = first;
         objResult.setPendingChanges(obj1);
       } else if (firstNameplate(first)) {
@@ -70,7 +67,7 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
         obj2[0] = first;
         obj(setPendingChangesResult[8]).setPendingChanges(obj2);
         const objResult1 = obj(setPendingChangesResult[8]);
-      } else if (outer1_7(first)) {
+      } else if (closure_1_7(first)) {
         const obj3 = { profileFrame: null };
         obj3[0] = first;
         obj(setPendingChangesResult[8]).setPendingChanges(obj3);
@@ -78,8 +75,8 @@ export const usePreviewCollectibleProduct = function usePreviewCollectibleProduc
       }
       return () => {
         if (closure_1) {
-          outer1_0(outer1_1[8]).setPendingChanges({ avatarDecoration: "Array", profileEffect: "flex", nameplate: "y", profileFrame: "HermesInternal" });
-          const obj = outer1_0(outer1_1[8]);
+          closure_1_0(closure_1_1[8]).setPendingChanges({ avatarDecoration: "Array", profileEffect: "flex", nameplate: "y", profileFrame: "HermesInternal" });
+          const obj = closure_1_0(closure_1_1[8]);
         }
       };
     }

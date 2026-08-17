@@ -1,17 +1,19 @@
 // discord_app/modules/user_settings/defs/native/ProfilePrivacySetting.tsx
-import createToggle from "createToggle";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { apexExperiment } from "../../../user_profile/PrivateProfilesExperiment.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import apexExperiment from "apexExperiment" /* 12306 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const radio = createToggle.createRadio({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Qnf32C);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
+  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   useValue() {
     const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
     return ProfileVisibility.useSetting();
@@ -28,8 +30,8 @@ const radio = createToggle.createRadio({
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({ direction: obj4[0], affectedGuildIds: obj4[1], settingName: obj4[2], mappedActivityValue: obj4[3] } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14209, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
-        const obj3 = ACTION_SHEET_HEIGHT_HALF;
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(2007)(14209, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
+        const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
       const tmp2Result = tmp2(14208);
     }
@@ -67,7 +69,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Qnf32C);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
+  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   useValue() {
     const ProfileVisibility = explicitContentFromProto.ProfileVisibility;
     return ProfileVisibility.useSetting();
@@ -84,8 +86,8 @@ let obj = {
       if (null != profileToActivityUpsell) {
         obj = { direction: null, affectedGuildIds: null, settingName: null, mappedActivityValue: null };
         ({ direction: obj4[0], affectedGuildIds: obj4[1], settingName: obj4[2], mappedActivityValue: obj4[3] } = profileToActivityUpsell);
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(14209, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
-        const obj3 = ACTION_SHEET_HEIGHT_HALF;
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(2007)(14209, dependencyMap.paths), "ProfileToActivityPrivacyUpsellActionSheet", obj);
+        const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
       const tmp2Result = tmp2(14208);
     }
@@ -118,6 +120,6 @@ let obj = {
     return apexExperiment.useIsInPrivateProfilesExperiment("ProfilePrivacySetting");
   }
 };
-const result = require("apexExperiment").fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfilePrivacySetting.tsx");
 
 export default radio;

@@ -1,25 +1,21 @@
 // discord_app/modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_4115";
-import get_ActivityIndicator from "shallowEqual";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { getScaledChannelRowHeight } from "hairlineWidth";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "useIsWindowLarge";
-import createCacheKey from "createCacheKey";
-import { renderDefaultEmpty } from "../../../../lib/native/FastList.tsx";
-import { computeSubtitle } from "../../../guild_sidebar/ChannelListState.tsx";
-import { getFontScale } from "../../../screen/native/useFontScale.tsx";
+import getFontScale from "getFontScale" /* 4751 */;
+import computeSubtitle from "computeSubtitle" /* 5272 */;
+import renderDefaultEmpty from "renderDefaultEmpty" /* 8124 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_9 from "generateOldThreadCutoff" /* 4772 */;
+import closure_10 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { getScaledChannelRowHeight } from "hairlineWidth" /* 10055 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c5;
-let closure_14;
-let map1;
-const require = arg1;
+require = arg1;
 function shouldSkipSection(diff1) {
   if (computeSubtitle.SECTION_INDEX_CHANNEL_NOTICES !== diff1) {
     if (computeSubtitle.SECTION_INDEX_GUILD_ACTIONS !== diff1) {
@@ -54,8 +50,6 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
       })(channel);
     } else if (tmp3.UNREAD === MENTION) {
       return (function hasUnread(channel) {
-        let record;
-        let threadIds;
         ({ record, threadIds } = channel);
         const obj = threadIds[Symbol.iterator]();
         while (obj !== undefined) {
@@ -82,7 +76,7 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
           hasUnreadResult = store.hasUnread(record.id);
         }
         if (hasUnreadResult) {
-          hasUnreadResult = updateUserGuildSettingsInternal.resolveUnreadSetting(record) === constants.ALL_MESSAGES;
+          hasUnreadResult = closure_10.resolveUnreadSetting(record) === constants.ALL_MESSAGES;
         }
         return hasUnreadResult;
       })(channel);
@@ -92,8 +86,6 @@ function checkHasMentionOrUnread(getChannelFromSectionRow, section, item, MENTIO
   }
 }
 function findNearestUnreadItem(containerSize, id) {
-  let item;
-  let section;
   if (tmp) {
     let MENTION = constants.MENTION;
   } else {
@@ -240,7 +232,7 @@ function findNearestUnreadItem(containerSize, id) {
                       break;
                     }
                   }
-                  let obj1 = { afterItem: null, beforeItem: null };
+                  obj1 = { afterItem: null, beforeItem: null };
                   let obj2 = { section: null, row: null, isMention: null };
                   obj2[0] = num5;
                   obj2[1] = num6;
@@ -279,15 +271,15 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   const guildChannels = fastList.guildChannels;
   const headerHeight = fastList.headerHeight;
   let id;
-  let importAllResult;
-  let closure_5;
+  importAllResult = undefined;
+  closure_5 = undefined;
   let youBarTotalHeight;
   let beforeItem;
   let afterItem;
-  let generateOldThreadCutoff;
+  closure_9 = undefined;
   let memo;
   let scrollPosValue;
-  let c12;
+  closure_12 = undefined;
   let bannerWidth;
   let listBottom;
   let callback;
@@ -296,16 +288,16 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   let obj = importAllResult;
   importAllResult = importAllResult.useRef(-1);
   closure_5 = importAllResult.useRef(null);
-  let obj1 = fastList(headerHeight[15]);
+  obj1 = fastList(headerHeight[15]);
   youBarTotalHeight = obj1.useYouBarTotalHeight();
-  let tmp4 = id(importAllResult.useState(() => outer1_20(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
+  let tmp4 = id(importAllResult.useState(() => closure_1_20(fastList, guildChannels, headerHeight, youBarTotalHeight)), 2);
   const first = tmp4[0];
   beforeItem = first.beforeItem;
   afterItem = first.afterItem;
-  generateOldThreadCutoff = tmp4[1];
+  closure_9 = tmp4[1];
   let items = [fastList, guildChannels, headerHeight, youBarTotalHeight];
   memo = importAllResult.useMemo(() => guildChannels(headerHeight[16])(() => {
-    closure_0 = outer1_20(closure_0, closure_1, closure_2, maybeApplyNoTextColorForLightCustomTheme);
+    closure_0 = closure_1_20(closure_0, closure_1, closure_2, closure_6);
     callback((afterItem) => {
       if (afterItem === closure_0) {
         let tmp6 = afterItem;
@@ -314,29 +306,29 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
         const afterItem2 = tmp.afterItem;
         tmp6 = tmp;
         if (tmp4(afterItem, afterItem2)) {
-          const beforeItem = afterItem.beforeItem;
+          beforeItem = afterItem.beforeItem;
           const beforeItem2 = tmp.beforeItem;
           tmp6 = tmp;
           const tmp2Result = tmp2(tmp3[17]);
         }
-        tmp2 = outer1_1;
-        tmp3 = outer1_2;
-        tmp4 = outer1_1(outer1_2[17]);
+        tmp2 = closure_1_1;
+        tmp3 = closure_1_2;
+        tmp4 = closure_1_1(closure_1_2[17]);
       }
       return tmp6;
     });
   }, 100), items);
   const items1 = [memo, id];
   const effect = importAllResult.useEffect(() => {
-    const items = [afterItem, generateOldThreadCutoff];
+    const items = [afterItem, closure_9];
     const batchedStoreListener = new fastList(headerHeight[18]).BatchedStoreListener(items, () => {
-      const guildUnreadsSentinel = outer1_9.getGuildUnreadsSentinel(_slicedToArray);
-      let tmp4 = _slicedToArray === ref2.current;
+      const guildUnreadsSentinel = closure_1_9.getGuildUnreadsSentinel(closure_3);
+      let tmp4 = closure_3 === ref2.current;
       if (tmp4) {
         tmp4 = guildUnreadsSentinel === ref.current;
       }
       if (!tmp4) {
-        ref2.current = _slicedToArray;
+        ref2.current = closure_3;
         ref.current = guildUnreadsSentinel;
         callback();
       }
@@ -368,7 +360,7 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   fn.__initData = closure_22;
   const animatedReaction = obj2.useAnimatedReaction(L, fn);
   const tmp9 = callback();
-  c12 = tmp9;
+  closure_12 = tmp9;
   const tmp11 = guildChannels(headerHeight[20])(fastList.guild);
   bannerWidth = tmp11.bannerWidth;
   listBottom = tmp11.listBottom;
@@ -377,10 +369,10 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   const items2 = [tmp9.wrapper, bannerWidth, listBottom, tmp12];
   let isMention;
   const memo1 = importAllResult.useMemo(() => {
-    const items = [_undefined.wrapper, ];
+    const items = [wrapper.wrapper, ];
     const obj = { width: bannerWidth, bottom: null };
     let num = 0;
-    if (!c15) {
+    if (!closure_15) {
       num = listBottom;
     }
     obj[1] = num;
@@ -459,6 +451,6 @@ const memoResult = importAllResult.memo(function ChannelUnreadBarsComponent(fast
   return listBottom(closure_5, obj);
 });
 let obj = { wrapper: StyleSheet.absoluteFillObject };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/unread_bars/ChannelsUnreadBars.tsx");
 
 export default memoResult;

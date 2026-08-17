@@ -1,37 +1,31 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx
-import _slicedToArray from "_slicedToArray";
-import TableSwitchRow from "TableSwitchRow";
-import { View } from "module_15719";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import filterStaffGuild from "filterStaffGuild";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15716_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15717_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/15718_registerAsset.js";
-import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { generateHydrationId } from "../../ICYMIUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import useSegmentedControlState from "useSegmentedControlState" /* 8799 */;
+import generateHydrationId from "generateHydrationId" /* 9056 */;
+import SegmentedControl from "SegmentedControl" /* 10096 */;
+import registerAssetDefault from "registerAsset" /* 15716 */;
+import registerAssetDefault2 from "registerAsset" /* 15717 */;
+import registerAssetDefault3 from "registerAsset" /* 15718 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_7 from "filterStaffGuild" /* 9044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ContentSettingsControl(initialValue) {
-  let c1;
-  let disabled;
-  let require;
-  let tmp3;
   ({ onValueUpdated: require, disabled } = initialValue);
-  let importDefault;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  const tmp = callback3();
   [tmp3, c1] = callback(React.useState(initialValue.initialValue), 2);
   let obj = { label: null, id: "-1", icon: null, page: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.rdt65I);
-  obj = { source: null, style: null };
-  obj[0] = registerAsset;
+  obj = { source: registerAssetDefault, style: null };
   const items = [tmp.icon, ];
   let iconSelected = null;
   if (tmp3 === generateHydrationId.ICYMICustomScore.LESS) {
@@ -44,8 +38,7 @@ function ContentSettingsControl(initialValue) {
   obj = { label: null, id: "0", icon: null, page: null };
   const intl2 = tmp4(1236).intl;
   obj[0] = intl2.string(getSystemLocale.t.SnrG00);
-  const obj1 = { source: null, style: null };
-  obj1[0] = registerAsset;
+  obj1 = { source: registerAssetDefault2, style: null };
   const items2 = [tmp.icon, ];
   let iconSelected1 = null;
   if (tmp3 === generateHydrationId.ICYMICustomScore.DEFAULT) {
@@ -58,8 +51,7 @@ function ContentSettingsControl(initialValue) {
   const obj2 = { label: null, id: "1", icon: null, page: null };
   const intl3 = tmp4(1236).intl;
   obj2[0] = intl3.string(getSystemLocale.t.Rxe3jF);
-  const obj3 = { source: null, style: null };
-  obj3[0] = registerAsset;
+  const obj3 = { source: registerAssetDefault3, style: null };
   const items3 = [tmp.icon, ];
   let iconSelected2 = null;
   if (tmp3 === generateHydrationId.ICYMICustomScore.MORE) {
@@ -73,7 +65,7 @@ function ContentSettingsControl(initialValue) {
   const obj4 = {
     pageWidth: 0,
     onSetActiveIndex(arg0) {
-      let MORE = outer1_0(outer1_2[8]).ICYMICustomScore.DEFAULT;
+      let MORE = closure_1_0(closure_1_2[8]).ICYMICustomScore.DEFAULT;
       if (0 === arg0) {
         MORE = tmp(tmp2[8]).ICYMICustomScore.LESS;
       } else if (2 === arg0) {
@@ -107,40 +99,40 @@ function ContentSettingsControl(initialValue) {
   obj6[2] = closure_8(SegmentedControl.SegmentedControl, { variant: "experimental_Large", state: segmentedControlState });
   return closure_8(View, obj6);
 }
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { customScoreWrapper: null, warningText: null, icon: null, iconSelected: null, muted: null };
-createCacheKey = { marginVertical: require("Themes").space.PX_16 };
+createCacheKey = { marginVertical: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_12 };
-let obj1 = { marginTop: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_12 };
-createCacheKey[2] = { width: 24, height: 24, tintColor: require("Themes").colors.TEXT_MUTED };
-let obj2 = { width: 24, height: 24, tintColor: require("Themes").colors.TEXT_MUTED };
-createCacheKey[3] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
-let obj3 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginTop: require("Themes").space.PX_16 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_12 };
+let obj1 = { marginTop: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey[2] = { width: 24, height: 24, tintColor: ThemesDefault.colors.TEXT_MUTED };
+let obj2 = { width: 24, height: 24, tintColor: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16 };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { marginTop: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMIContentSettingControl.tsx");
 
 export const GuildScoreSettings = function GuildScoreSettings(guild) {
   guild = guild.guild;
   let id;
-  let c1;
+  c1 = undefined;
   id = guild.id;
   let obj = id(589);
-  const items = [filterStaffGuild];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getCustomGuildScore(id));
-  let obj1 = id(9056);
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getCustomGuildScore(id));
+  obj1 = id(9056);
   const numberToCustomScoreResult = obj1.numberToCustomScore(stateFromStores);
   c1 = numberToCustomScoreResult;
   const tmp5 = numberToCustomScoreResult === id(9056).ICYMICustomScore.MUTED;
   const items1 = [id];
   const items2 = [numberToCustomScoreResult, id];
   const callback = React.useCallback((arg0) => {
-    let obj = _undefined(outer1_2[17]);
+    let obj = _undefined(closure_1_2[17]);
     obj = { guildId: id, guildScore: null };
-    const customScoreToNumber = id(outer1_2[8]).customScoreToNumber;
-    const ICYMICustomScore = id(outer1_2[8]).ICYMICustomScore;
+    const customScoreToNumber = id(closure_1_2[8]).customScoreToNumber;
+    const ICYMICustomScore = id(closure_1_2[8]).ICYMICustomScore;
     if (arg0) {
       let customScoreToNumberResult = customScoreToNumber(ICYMICustomScore.DEFAULT);
     } else {
@@ -151,15 +143,15 @@ export const GuildScoreSettings = function GuildScoreSettings(guild) {
   }, items1);
   const callback1 = React.useCallback((DEFAULT) => {
     if (_undefined !== DEFAULT) {
-      let obj = _undefined(outer1_2[17]);
+      let obj = _undefined(closure_1_2[17]);
       obj = { guildId: null, guildScore: null };
       obj[0] = id;
-      obj[1] = id(outer1_2[8]).customScoreToNumber(DEFAULT);
+      obj[1] = id(closure_1_2[8]).customScoreToNumber(DEFAULT);
       obj.customScoreGuild(obj);
-      const obj3 = id(outer1_2[8]);
+      const obj3 = id(closure_1_2[8]);
     }
   }, items2);
-  const tmp8 = createCacheKey();
+  const tmp8 = callback3();
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(1236).intl;
   obj[2] = intl.string(id(1236).t.Clq6km);
@@ -206,19 +198,19 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
   id = channel.guild.id;
   id2 = channel.id;
   let obj = id(stateFromStores[16]);
-  let items = [filterStaffGuild, updateUserGuildSettingsInternal];
+  let items = [closure_7, closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const customChannelScore = outer1_7.getCustomChannelScore(id, id2);
+    const customChannelScore = closure_1_7.getCustomChannelScore(id, id2);
     if (customChannelScore !== id(stateFromStores[8]).ICYMICustomScore.UNKNOWN) {
       return customChannelScore;
     } else {
       const ICYMICustomScore = id(stateFromStores[8]).ICYMICustomScore;
-      const isChannelMutedResult = outer1_6.isChannelMuted(id, id2);
+      const isChannelMutedResult = closure_1_6.isChannelMuted(id, id2);
     }
   });
-  let obj1 = id(stateFromStores[16]);
-  const items1 = [filterStaffGuild];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_7.getCustomGuildScore(id));
+  obj1 = id(stateFromStores[16]);
+  const items1 = [closure_7];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getCustomGuildScore(id));
   let obj2 = id(stateFromStores[8]);
   const tmp4 = id2(stateFromStores[20])(channel, true);
   const tmp7 = obj2.numberToCustomScore(stateFromStores1) === id(stateFromStores[8]).ICYMICustomScore.MUTED;
@@ -255,7 +247,7 @@ export const ChannelScoreSettings = function ChannelScoreSettings(channel) {
     obj[1] = items;
     obj.customScoreGuild(obj);
   }, items3);
-  const tmp11 = createCacheKey();
+  const tmp11 = callback3();
   obj = { variant: "text-sm/semibold", color: "text-default", children: null };
   const intl = id(stateFromStores[9]).intl;
   obj[2] = intl.string(id(stateFromStores[9]).t["0jRosn"]);

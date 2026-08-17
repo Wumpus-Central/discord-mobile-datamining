@@ -1,19 +1,15 @@
 // discord_app/utils/native/requireNativeComponentOrDefault.native.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c0;
-let closure_1;
-let obj1;
 ({ requireNativeComponent: c0, UIManager: closure_1, View: obj1 } = get_ActivityIndicator);
-let c3 = new require("timestamp")("RequireNativeComponentOrDefault");
+let closure_3 = new timestampDefault("RequireNativeComponentOrDefault");
 const map = new Map();
-const tmp3 = new require("timestamp")("RequireNativeComponentOrDefault");
-let result = require("set").fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
+const tmp3 = new timestampDefault("RequireNativeComponentOrDefault");
+let result = set.fileFinishedImporting("utils/native/requireNativeComponentOrDefault.native.tsx");
 
 export default function requireNativeComponentOrDefault(warnWhenMissing) {
-  let componentFoundInstance;
-  let componentMissingFallbackInstance;
-  let componentName;
   ({ componentName, componentFoundInstance, componentMissingFallbackInstance } = warnWhenMissing);
   if (componentMissingFallbackInstance === undefined) {
     componentMissingFallbackInstance = closure_2;
@@ -34,7 +30,7 @@ export default function requireNativeComponentOrDefault(warnWhenMissing) {
     value = componentMissingFallbackInstance;
     if (flag) {
       const _HermesInternal = HermesInternal;
-      globalThis.warn("" + componentName + " not found, you are likely on a branch override without the native code.");
+      logger.warn("" + componentName + " not found, you are likely on a branch override without the native code.");
       value = componentMissingFallbackInstance;
     }
   }

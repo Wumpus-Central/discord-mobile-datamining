@@ -1,33 +1,33 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, borderColor: null, title: null, itemContainer: null, guildInfo: null, guildName: null, eventName: null };
-createCacheKey = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { lineHeight: 16, marginBottom: 8 };
-createCacheKey[3] = { minHeight: 40, borderRadius: require("Themes").radii.sm, borderWidth: 1, padding: 8 };
+createCacheKey[3] = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
 createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[5] = { lineHeight: 18, marginStart: 8 };
 createCacheKey[6] = { lineHeight: 20, marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { minHeight: 40, borderRadius: require("Themes").radii.sm, borderWidth: 1, padding: 8 };
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 8 };
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsGuildScheduledEventPreview.tsx");
 
 export default function GuildScheduledEventPreview(event) {
   event = event.event;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = event(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(event.guild_id));
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(event.guild_id));
   if (null == stateFromStores) {
     return null;
   } else {
@@ -39,7 +39,7 @@ export default function GuildScheduledEventPreview(event) {
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.SDTOL7);
     const items1 = [callback(tmp2(4734).Text, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     const items2 = [tmp.itemContainer, ];
     const obj2 = { borderColor: null };
     obj2[0] = tmp2(4223).hexWithOpacity(tmp.borderColor.color, 0.08);
@@ -51,7 +51,7 @@ export default function GuildScheduledEventPreview(event) {
     obj4[0] = stateFromStores;
     const hexWithOpacityResult = tmp2(4223).hexWithOpacity(tmp.borderColor.color, 0.08);
     obj4[1] = tmp2(7188).GuildIconSizes.XXSMALL;
-    const items3 = [callback(GuildIconSizes, obj4), ];
+    const items3 = [callback(GuildIconSizesDefault, obj4), ];
     const obj5 = { style: null, variant: "text-sm/medium", color: "text-default", children: null };
     obj5[0] = tmp.guildName;
     obj5[3] = stateFromStores.name;

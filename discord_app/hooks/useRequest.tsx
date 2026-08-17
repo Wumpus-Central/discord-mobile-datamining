@@ -1,24 +1,24 @@
 // discord_app/hooks/useRequest.tsx
-import set from "set";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("hooks/useRequest.tsx");
+const result = require("set").fileFinishedImporting("hooks/useRequest.tsx");
 
 export default function useRequest(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const tmp = callback2(React.useState(false), 2);
-  let closure_1 = tmp[1];
+  closure_1 = tmp[1];
   const tmp2 = callback2(React.useState(null), 2);
-  let closure_2 = tmp2[1];
+  closure_2 = tmp2[1];
   let items = [arg0];
   const items1 = [
     React.useCallback(callback(() => {
-      let closure_0 = [...arguments];
-      let c5 = 0;
-      let c6 = 0;
-      let c4 = 0;
+      closure_0 = [...arguments];
+      c5 = 0;
+      c6 = 0;
+      c4 = 0;
       const iter = (function*() {
         if (c6 === 2) {
           c6 = 3;
@@ -58,11 +58,11 @@ export default function useRequest(arg0) {
                 throw arg1;
               } else if (arg0 === 2) {
                 c6 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                let c4 = 2;
+                c4 = 2;
                 callback2(null);
                 lib(true);
                 const items = [];
@@ -76,24 +76,24 @@ export default function useRequest(arg0) {
             } else if (2 === tmp9) {
               c4 = 0;
               lib(false);
-              throw set;
+              throw closure_3;
             } else if (3 === tmp9) {
               c4 = 1;
-              lib = set;
-              const intl = callback(outer1_2[3]).intl;
-              if (lib.message === intl.string(callback(outer1_2[3]).t.N2yb9a)) {
+              lib = closure_3;
+              const intl = callback(closure_1_2[3]).intl;
+              if (lib.message === intl.string(callback(closure_1_2[3]).t.N2yb9a)) {
                 c4 = 0;
-                outer1_1(false);
+                closure_1_1(false);
                 c6 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
-                if (lib instanceof outer1_1(outer1_2[4])) {
+                if (lib instanceof closure_1_1(closure_1_2[4])) {
                   let tmp37 = lib;
                 } else {
-                  tmp37 = new outer1_1(outer1_2[4])(lib);
+                  tmp37 = new closure_1_1(closure_1_2[4])(lib);
                 }
-                outer1_2(tmp37);
-                const tmp26 = outer1_2;
+                closure_1_2(tmp37);
+                const tmp26 = closure_1_2;
               }
             } else if (arg0 === 1) {
               c6 = 3;
@@ -114,7 +114,7 @@ export default function useRequest(arg0) {
               return obj;
             }
           } catch (tmp60) {
-            set = tmp60;
+            closure_3 = tmp60;
             if (tmp5 === c4) {
               c6 = tmp3;
               throw tmp60;

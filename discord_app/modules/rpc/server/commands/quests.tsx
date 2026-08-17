@@ -1,17 +1,14 @@
 // discord_app/modules/rpc/server/commands/quests.tsx
-import initializeState from "initializeState";
-import ME from "ME";
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { questMatchesActivity } from "../../../quests/utils/QuestMatchingUtils.tsx";
-import { getApplicationIdsByTaskTypes } from "../../../quests/utils/QuestTaskUtils.tsx";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import questMatchesActivity from "questMatchesActivity" /* 10707 */;
+import closure_3 from "initializeState" /* 7453 */;
+import ME from "ME" /* 676 */;
 
-let RPCCommands;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ RPCCommands, RPCErrors: c4, AnalyticEvents: c5 } = ME);
 let obj = {};
 obj = {
@@ -50,7 +47,7 @@ obj = {
       }
     }
     obj = { errorCode: constants.INVALID_COMMAND };
-    let tmp8 = prototype;
+    let tmp8 = prototypeDefault;
     tmp8 = new tmp8(obj, "Quest not found: " + quest_id);
     throw tmp8;
   }
@@ -63,7 +60,7 @@ obj = {
     const quest_id = socket.args.quest_id;
     let obj = recurseReplaceContentTree;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = recurseReplaceContentTree;
+    obj1 = recurseReplaceContentTree;
     const validateApplicationResult = obj1.validateApplication(socket.application);
     const quest = store.getQuest(quest_id);
     let obj2 = getApplicationIdsByTaskTypes;
@@ -79,25 +76,25 @@ obj = {
           if (null == enrolledAt) {
             obj = { errorCode: null };
             obj[0] = constants.INVALID_COMMAND;
-            const tmp16 = new prototype(obj, "User is not enrolled in quest");
+            const tmp16 = new prototypeDefault(obj, "User is not enrolled in quest");
             throw tmp16;
           } else {
             obj = { application_id: null, quest_id: null };
             obj[0] = validateApplicationResult;
             obj[1] = quest_id;
-            expandEventProperties.track(constants2.RPC_QUEST_START_TIMER_CALLED, obj);
-            const obj4 = expandEventProperties;
+            expandEventPropertiesDefault.track(constants2.RPC_QUEST_START_TIMER_CALLED, obj);
+            const obj4 = expandEventPropertiesDefault;
             obj1 = { type: "QUEST_APPLICATION_START_TIMER", questId: null, applicationId: null };
             obj1[1] = quest_id;
             obj1[2] = validateApplicationResult;
-            dispatcher.dispatch(obj1);
+            dispatcherDefault.dispatch(obj1);
             return { success: true };
           }
         }
       }
     }
     obj2 = { errorCode: constants.INVALID_COMMAND };
-    let tmp18 = prototype;
+    let tmp18 = prototypeDefault;
     tmp18 = new tmp18(obj2, "Quest not found: " + quest_id);
     throw tmp18;
   }
@@ -115,7 +112,7 @@ obj[RPCCommands.GET_QUEST] = {
     if (0 === eligibleQuestsForApplicationId.length) {
       obj = { errorCode: null };
       obj[0] = constants.INVALID_COMMAND;
-      const tmp9 = new prototype(obj, "No eligible quests found");
+      const tmp9 = new prototypeDefault(obj, "No eligible quests found");
       throw tmp9;
     } else {
       const mapped = eligibleQuestsForApplicationId.map((id) => {
@@ -178,7 +175,7 @@ let obj1 = {
     if (0 === eligibleQuestsForApplicationId.length) {
       obj = { errorCode: null };
       obj[0] = constants.INVALID_COMMAND;
-      const tmp9 = new prototype(obj, "No eligible quests found");
+      const tmp9 = new prototypeDefault(obj, "No eligible quests found");
       throw tmp9;
     } else {
       const mapped = eligibleQuestsForApplicationId.map((id) => {

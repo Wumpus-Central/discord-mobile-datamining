@@ -1,34 +1,26 @@
 // discord_app/modules/guild_communication_disabled/native/GuildDisableCommunication.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "context";
-import get_ActivityIndicator from "registerAsset";
-import getFriendlyDurationString from "getFriendlyDurationString";
-import { AnalyticEvents } from "ME";
-import jsxProd from "TextArea";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { context } from "../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextArea } from "../../../design/components/TextInput/native/TextArea.native.tsx";
-import { useMountLayoutEffect } from "../../../hooks/useMountEffect.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { _calculateScrollOffset } from "../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import TextArea from "TextArea" /* 8092 */;
+import context from "context" /* 8101 */;
+import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9444 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getFriendlyDurationString from "getFriendlyDurationString" /* 1992 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let DisableCommunicationDuration;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 let c5 = importAllResult;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: metroImportAll, SET_COMMUNICATION_DISABLED_MODAL_NAME: c9 } = getFriendlyDurationString);
+({ DisableCommunicationDuration, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8, SET_COMMUNICATION_DISABLED_MODAL_NAME: c9 } = getFriendlyDurationString);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let obj = {
   value: DisableCommunicationDuration.DURATION_60_SEC,
@@ -75,24 +67,18 @@ let items = [
     }
   }
 ];
-obj = { container: null, reasonTextArea: null, buttonContainer: null };
-obj[0] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey = { marginVertical: require("Themes").space.PX_16 };
+obj = { container: { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW }, reasonTextArea: null, buttonContainer: null };
+createCacheKey = { marginVertical: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-obj[2] = { marginBottom: require("Themes").space.PX_16 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+obj[2] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_15 = createCacheKey.createStyles(obj);
-let obj3 = { marginBottom: require("Themes").space.PX_16 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0) {
-  let c3;
-  let c4;
-  let dependencyMap;
-  let importDefault;
-  let require;
   ({ user: require, guildId: importDefault, onClose: dependencyMap } = arg0);
   c3 = undefined;
   let callback;
-  let importAllResult;
+  importAllResult = undefined;
   function _handleSubmitButtonPressed() {
     const self = this;
     const tmp = _undefined(function*() {
@@ -122,12 +108,12 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp4;
-              let obj3 = outer1_1(11022);
+              closure_1 = tmp4;
+              let obj3 = closure_1_1(11022);
               dependencyMap = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj3.setCommunicationDisabledDuration(outer1_1, outer1_0.id, outer1_14[c3].value, outer1_5.current);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj3.setCommunicationDisabledDuration(closure_1_1, closure_1_0.id, closure_1_14[c3].value, closure_1_5.current);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -139,9 +125,9 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj2[0] = arg1;
             return obj2;
           } else {
-            const intl = outer1_0(1236).intl;
-            const obj8 = outer1_1(4094);
-            const name = outer1_1(4796).getName(closure_1, null, c0);
+            const intl = closure_1_0(1236).intl;
+            const obj8 = closure_1_1(4094);
+            const name = closure_1_1(4796).getName(closure_1, null, c0);
             c0 = name;
             if (name == null) {
               c0 = "";
@@ -149,8 +135,8 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
             obj = { key: "GUILD_COMMUNICATION_DISABLED_SUCCESS", content: null, icon: null };
             obj3 = { user: null };
             obj3[0] = c0;
-            obj[1] = intl.formatToPlainString(outer1_0(1236).t.O9C3Nt, obj3);
-            obj[2] = outer1_1(8764);
+            obj[1] = intl.formatToPlainString(closure_1_0(1236).t.O9C3Nt, obj3);
+            obj[2] = closure_1_1(8764);
             obj8.open(obj);
             dependencyMap();
             c3 = 3;
@@ -162,7 +148,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
         }
       }
     });
-    const _handleSubmitButtonPressed = tmp;
+    closure_6 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -176,22 +162,21 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   importAllResult = importAllResult.useRef("");
   const ref = importAllResult.useRef(null);
   const ref1 = importAllResult.useRef(null);
-  const insets = useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets;
-  const items = [{ ref: ref1, offset: { type: "toBottom" } }];
-  _calculateScrollOffset({ insets, inputs: items, scrollViewRef: ref });
-  useMountLayoutEffect(() => {
-    let obj = outer1_1(outer1_2[13]);
-    obj = { type: outer1_9, guild_id: closure_1, other_user_id: lib.id };
-    obj.track(outer1_10.OPEN_MODAL, obj);
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
+  items = [{ ref: ref1, offset: { type: "toBottom" } }];
+  _calculateScrollOffsetDefault({ insets, inputs: items, scrollViewRef: ref });
+  useMountLayoutEffectDefault(() => {
+    let obj = closure_1_1(closure_1_2[13]);
+    obj = { type: closure_1_9, guild_id: closure_1, other_user_id: lib.id };
+    obj.track(closure_1_10.OPEN_MODAL, obj);
   });
   let obj = { style: tmp.container, ref, contentContainerStyle: null, children: null };
-  obj = { paddingHorizontal: Themes.space.PX_12, paddingBottom: insets.bottom };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: insets.bottom };
   obj[2] = obj;
   obj = { children: null };
-  let obj1 = { style: null, variant: "heading-md/semibold", children: null };
-  let obj2 = { marginVertical: null };
-  obj2[0] = Themes.space.PX_16;
-  obj1[0] = obj2;
+  obj1 = { style: null, variant: "heading-md/semibold", children: null };
+  const tmp2 = callback(importAllResult.useState(0), 2);
+  obj1[0] = { marginVertical: ThemesDefault.space.PX_16 };
   let intl = getSystemLocale.intl;
   obj1[2] = intl.format(getSystemLocale.t.Ns83GT, { helpdeskArticle: closure_8 });
   const items1 = [callback2(Text.Text, obj1), , , ];
@@ -201,11 +186,7 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   obj4[2] = function onChange(arg0) {
     _undefined2(arg0);
   };
-  obj4[4] = items.map((getLabel, value) => {
-    const obj = { value, label: null };
-    obj[1] = getLabel.getLabel();
-    return callback(lib(table[20]).TableRadioRow, obj, value);
-  });
+  obj4[4] = items.map((getLabel, value) => callback(lib(table[20]).TableRadioRow, { value, label: getLabel.getLabel() }, value));
   items1[1] = callback2(context.TableRadioGroup, obj4);
   const obj5 = { ref: ref1, containerStyle: tmp.reasonTextArea, placeholder: null, label: null, maxLength: 512, onChange: null };
   const intl3 = getSystemLocale.intl;
@@ -236,6 +217,6 @@ const memoResult = importAllResult.memo(function GuildDisableCommunication(arg0)
   obj[3] = callback3(closure_12, obj);
   return callback2(closure_7, obj);
 });
-const result = require("noop").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunication.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunication.tsx");
 
 export default memoResult;

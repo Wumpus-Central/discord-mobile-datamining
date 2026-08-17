@@ -1,7 +1,9 @@
 // discord_app/modules/conversations/ConversationVisibilityStore.tsx
-import { DeviceSettingsStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = true;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ConversationVisibilityStore extends DeviceSettingsStore {
 }
 const prototype = ConversationVisibilityStore.prototype;
@@ -25,7 +27,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 ConversationVisibilityStore.displayName = "ConversationVisibilityStore";
 ConversationVisibilityStore.persistKey = "ConversationVisibilityStore";
-const conversationVisibilityStore = new ConversationVisibilityStore(require("dispatcher"), {
+const conversationVisibilityStore = new ConversationVisibilityStore(dispatcherDefault, {
   CONVERSATIONS_TOGGLE_HIGHLIGHTING: function handleToggleHighlighting() {
     closure_0 = !closure_0;
   }

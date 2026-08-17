@@ -1,18 +1,20 @@
 // discord_app/modules/core/web/UID.tsx
-import { uniqueId } from "../../../../_runtime/05261_uniqueId.js";
-import { useInitialValue } from "../../../hooks/useInitialValue.tsx";
-const result = require("set").fileFinishedImporting("modules/core/web/UID.tsx");
+import set from "set" /* 2 */;
+import uniqueIdDefault from "uniqueId" /* 5261 */;
+import useInitialValueDefault from "useInitialValue" /* 7127 */;
+
+const result = set.fileFinishedImporting("modules/core/web/UID.tsx");
 
 export const uid = function uid() {
   let str = arg0;
   if (arg0 === undefined) {
     str = "uid_";
   }
-  return uniqueId(str);
+  return uniqueIdDefault(str);
 };
 export const useUID = function useUID() {
-  return useInitialValue(() => callback(table[0])("uid_"));
+  return useInitialValueDefault(() => callback(table[0])("uid_"));
 };
 export const UID = function UID(children) {
-  return children.children(useInitialValue(() => callback(table[0])("uid_")));
+  return children.children(useInitialValueDefault(() => callback(table[0])("uid_")));
 };

@@ -1,28 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileMutuals.tsx
-import "GuildIconPile";
-import { View } from "Text";
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
-import { DIVIDER_DOT } from "ARBITRARY_LARGE_OFFSET";
-import jsxProd from "getMutualGuildsLabel";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import { DIVIDER_DOT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "text-default";
 let closure_10 = createCacheKey.createStyles({ container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" }, section: { flexDirection: "row", alignItems: "center", columnGap: 6 } });
-const result = require("USER_PROFILE_TOOLTIP_DELAY").fileFinishedImporting("modules/user_profile/native/UserProfileMutuals.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutuals.tsx");
 
 export default function UserProfileMutuals(user) {
-  let c2;
-  let c3;
-  let mutualFriends;
-  let mutualGuilds;
   user = user.user;
   const guildId = user.guildId;
-  let dependencyMap;
+  dependencyMap = undefined;
   c3 = undefined;
   const tmp = callback2();
   let obj = user(8934);
@@ -52,7 +47,7 @@ export default function UserProfileMutuals(user) {
       obj = { style: null, accessibilityRole: "button", onPress: null, children: null };
       obj[0] = tmp.section;
       obj[2] = function onPress() {
-        const MUTUAL_FRIENDS = outer1_4.MUTUAL_FRIENDS;
+        const MUTUAL_FRIENDS = closure_1_4.MUTUAL_FRIENDS;
         _undefined2({ action: "PRESS_SECTION", section: MUTUAL_FRIENDS });
         let obj = guildId(_undefined[9]);
         obj = {
@@ -64,28 +59,24 @@ export default function UserProfileMutuals(user) {
             const obj = {};
             const merged = Object.assign(closure_2);
             obj.userId = userId;
-            outer1_1(outer1_2[12])(obj);
+            closure_1_1(closure_1_2[12])(obj);
           },
           onPressMutualGuild(arg0) {
             callback({ action: "PRESS_MUTUAL_GUILD" });
-            outer1_0(outer1_2[13]).transitionToGuild(arg0);
-            const obj = outer1_0(outer1_2[13]);
-            outer1_1(outer1_2[9]).hideActionSheet();
-            const obj2 = outer1_1(outer1_2[9]);
-            outer1_1(outer1_2[9]).hideActionSheet();
+            closure_1_0(closure_1_2[13]).transitionToGuild(arg0);
+            const obj = closure_1_0(closure_1_2[13]);
+            closure_1_1(closure_1_2[9]).hideActionSheet();
+            const obj2 = closure_1_1(closure_1_2[9]);
+            closure_1_1(closure_1_2[9]).hideActionSheet();
           }
         };
         obj.openLazy(user(_undefined[11])(_undefined[10], _undefined.paths), "UserProfileMutualsActionSheet", obj, "stack");
       };
-      const obj1 = { size: null, totalCount: null, names: null, children: null };
+      obj1 = { size: null, totalCount: null, names: null, children: null };
       obj1[0] = tmp2(1297).AvatarSizes.SIZE_16;
       obj1[1] = mapped.length;
       obj1[2] = mapped.map((username) => username.username);
-      obj1[3] = mapped.map((id) => {
-        const obj = { user: id, size: null, guildId: "Array" };
-        obj[1] = user(_undefined[16]).AvatarSizes.SIZE_16;
-        return callback(user(_undefined[16]).Avatar, obj, id.id);
-      });
+      obj1[3] = mapped.map((id) => callback(user(_undefined[16]).Avatar, { user: id, size: user(_undefined[16]).AvatarSizes.SIZE_16, guildId: "Array" }, id.id));
       const items = [callback(tmp2(12124).AvatarPile, obj1), ];
       let obj2 = { variant: null, color: null, children: null };
       obj2[0] = c8;
@@ -115,7 +106,7 @@ export default function UserProfileMutuals(user) {
       const obj4 = { style: null, accessibilityRole: "button", onPress: null, children: null };
       obj4[0] = tmp.section;
       obj4[2] = function onPress() {
-        const MUTUAL_GUILDS = outer1_4.MUTUAL_GUILDS;
+        const MUTUAL_GUILDS = closure_1_4.MUTUAL_GUILDS;
         _undefined2({ action: "PRESS_SECTION", section: MUTUAL_GUILDS });
         let obj = guildId(_undefined[9]);
         obj = {
@@ -127,15 +118,15 @@ export default function UserProfileMutuals(user) {
             const obj = {};
             const merged = Object.assign(closure_2);
             obj.userId = userId;
-            outer1_1(outer1_2[12])(obj);
+            closure_1_1(closure_1_2[12])(obj);
           },
           onPressMutualGuild(arg0) {
             callback({ action: "PRESS_MUTUAL_GUILD" });
-            outer1_0(outer1_2[13]).transitionToGuild(arg0);
-            const obj = outer1_0(outer1_2[13]);
-            outer1_1(outer1_2[9]).hideActionSheet();
-            const obj2 = outer1_1(outer1_2[9]);
-            outer1_1(outer1_2[9]).hideActionSheet();
+            closure_1_0(closure_1_2[13]).transitionToGuild(arg0);
+            const obj = closure_1_0(closure_1_2[13]);
+            closure_1_1(closure_1_2[9]).hideActionSheet();
+            const obj2 = closure_1_1(closure_1_2[9]);
+            closure_1_1(closure_1_2[9]).hideActionSheet();
           }
         };
         obj.openLazy(user(_undefined[11])(_undefined[10], _undefined.paths), "UserProfileMutualsActionSheet", obj, "stack");
@@ -147,8 +138,7 @@ export default function UserProfileMutuals(user) {
         obj5[1] = mapped1.length;
         obj5[2] = mapped1.map((name) => name.name);
         obj5[3] = mapped1.map((guild) => {
-          const obj = { guild, size: null };
-          obj[1] = user(_undefined[20]).GuildIconSizes.XXSMALL;
+          const obj = { guild, size: user(_undefined[20]).GuildIconSizes.XXSMALL };
           return callback(guildId(_undefined[20]), obj, guild.id);
         });
         tmp21 = callback(tmp2(11787).GuildIconPile, obj5);

@@ -1,31 +1,30 @@
 // discord_app/modules/stage_channels/native/modals/StartStageChannelModal.tsx
-import closure_4 from "MAX_STAGE_TOPIC_LENGTH";
-import GuildStageChannelSelection from "GuildStageChannelSelection";
-import importAllResult from "HotspotStore";
-import get_ActivityIndicator from "GuildIconSizes";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
-import { AnalyticEvents } from "ME";
-import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08176_registerAsset.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
-import { StageSparkleInner } from "../components/StageSparkle.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import HotspotStore2 from "HotspotStore" /* 7193 */;
+import StageSparkleInnerDefault from "StageSparkleInner" /* 8068 */;
+import Form from "Form" /* 8083 */;
+import registerAssetDefault from "registerAsset" /* 8176 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { GuildScheduledEventPrivacyLevel as closure_13 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_14;
-let closure_15;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function closeModal() {
-  ModalActionCreators.popWithKey(closure_11);
+  _modDef5260.popWithKey(closure_11);
 }
 function NavigationBar(guild) {
   let tmp2 = null;
@@ -39,7 +38,7 @@ function NavigationBar(guild) {
     obj[1] = intl.string(getSystemLocale.t.cpT0Cq);
     obj[2] = closeModal;
     obj = { source: null };
-    obj[0] = registerAsset;
+    obj[0] = registerAssetDefault;
     obj[3] = callback2(Button.Icon, obj);
     obj[1] = callback2(PressableBase.PressableOpacity, obj);
     tmp2 = callback2(closure_7, obj);
@@ -49,21 +48,21 @@ function NavigationBar(guild) {
 function HeaderIcon(guild) {
   guild = guild.guild;
   if (null == guild) {
-    let tmp7 = callback2(StageSparkleInner, {});
+    let tmp7 = callback2(StageSparkleInnerDefault, {});
   } else {
     const obj = { style: null, size: null, guild: null };
     obj[0] = tmp.guildIcon;
     obj[1] = GuildIconSizes.GuildIconSizes.LARGE;
     obj[2] = guild;
-    tmp7 = callback2(GuildIconSizes, obj);
-    const tmp5 = GuildIconSizes;
+    tmp7 = callback2(GuildIconSizesDefault, obj);
+    const tmp5 = GuildIconSizesDefault;
   }
   return tmp7;
 }
 class NotificationToggle {
   constructor(arg0) {
     ({ sendStartNotification, onToggle } = global);
-    tmp = jsxs();
+    tmp = closure_16();
     tmp2 = closure_0;
     tmp3 = closure_3;
     obj = require("initialize");
@@ -102,58 +101,49 @@ class NotificationToggle {
     return tmp5(require("Form").FormRow, obj);
   }
 }
-({ View: error, ScrollView: metroImportAll } = get_ActivityIndicator);
+({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ MAX_STAGE_TOPIC_LENGTH: c10, START_STAGE_CHANNEL_EVENT_MODAL_KEY: unpackModuleId } = MAX_STAGE_TOPIC_LENGTH);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = { keyboardAwareView: { flex: 1 }, closeButtonContainer: { right: 10 }, container: null, contentContainer: null, contentTopSpacing: null, header: null, headerTitle: null, headerSubtitle: null, textInput: null, startButton: null, error: null, optionExplanation: null, guildIcon: null, label: null, pill: null, pillLabel: null, notificationToggle: null, ageVerificationNotice: null };
-obj = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = obj;
 obj[3] = { paddingHorizontal: 16 };
 obj[4] = { paddingTop: 16 };
 obj[5] = { alignItems: "center", paddingBottom: 24 };
 obj[6] = { marginTop: 16, marginBottom: 8 };
 obj[7] = { textAlign: "center" };
-createCacheKey = { padding: 12, width: "100%", borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
+createCacheKey = { padding: 12, width: "100%", borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 16 };
 obj[8] = createCacheKey;
 obj[9] = { marginTop: 16 };
 obj[10] = { paddingTop: 8 };
 obj[11] = { lineHeight: 16, paddingTop: 8 };
-obj[12] = { borderRadius: require("Themes").radii.md };
+obj[12] = { borderRadius: ThemesDefault.radii.md };
 obj[13] = { display: "flex", alignItems: "center", flexDirection: "row" };
-let obj2 = { borderRadius: require("Themes").radii.md };
-obj[14] = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: require("Themes").radii.xs };
+let obj2 = { borderRadius: ThemesDefault.radii.md };
+obj[14] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: ThemesDefault.radii.xs };
 obj[15] = { textTransform: "uppercase" };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: require("Themes").radii.xs };
-obj[16] = { marginTop: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.sm };
-let obj4 = { marginTop: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.sm };
-obj[17] = { marginBottom: require("Themes").space.PX_16 };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingHorizontal: 4, paddingVertical: 2, marginStart: 8, borderRadius: ThemesDefault.radii.xs };
+obj[16] = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+let obj4 = { marginTop: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm };
+obj[17] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_16 = createCacheKey.createStyles(obj);
-let obj5 = { marginBottom: require("Themes").space.PX_16 };
+let obj5 = { marginBottom: ThemesDefault.space.PX_16 };
 const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
-  let c16;
-  let c8;
-  let c9;
-  let guild;
-  let helpText;
-  let importDefault;
-  let obj2;
-  let require;
-  let tmp14;
   ({ guild, onStageStarted: require, onClose: importDefault } = channel);
   let first;
   let memo;
   let first1;
   let callback;
   let first2;
-  let closure_7;
+  closure_7 = undefined;
   c8 = undefined;
   c9 = undefined;
-  let c10;
+  let canSendStageStartNotification;
   let first3;
-  let closure_12;
+  closure_12 = undefined;
   let constants;
   let obj;
-  let closure_15;
+  closure_15 = undefined;
   let callback3;
   function _handleSave() {
     const self = this;
@@ -165,7 +155,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -184,28 +174,28 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let aPIError = tmp7;
               aPIError = undefined;
               if ("" !== c4) {
-                if (null != outer1_6) {
-                  outer1_8(true);
-                  outer1_9(null);
-                  let obj3 = outer1_2(1892);
+                if (null != closure_1_6) {
+                  closure_1_8(true);
+                  closure_1_9(null);
+                  let obj3 = closure_1_2(1892);
                   const result = obj3.dismissGlobalKeyboard();
-                  let dependencyMap = 1;
+                  dependencyMap = 1;
                   if (null != dependencyMap) {
                     c4 = 3;
                     c5 = 1;
-                    let obj1 = { value: null, done: false };
-                    obj1[0] = outer1_2(8062).editStage(outer1_2, tmp76, tmp47);
+                    obj1 = { value: null, done: false };
+                    obj1[0] = closure_1_2(8062).editStage(closure_1_2, tmp76, tmp47);
                     return obj1;
                   } else {
-                    const obj5 = outer1_2(8062);
+                    const obj5 = closure_1_2(8062);
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = obj5.startStage(outer1_2, tmp76, tmp47, outer1_11);
+                    obj2[0] = obj5.startStage(closure_1_2, tmp76, tmp47, closure_1_11);
                     return obj2;
                   }
                 }
@@ -215,9 +205,9 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
             if (1 === tmp7) {
               dependencyMap = 0;
               closure_1 = closure_2;
-              aPIError = new outer1_0(4273).APIError(closure_1);
-              outer1_9(aPIError);
-              outer1_8(false);
+              aPIError = new closure_1_0(4273).APIError(closure_1);
+              closure_1_9(aPIError);
+              closure_1_8(false);
             } else {
               if (2 === tmp7) {
                 if (arg0 === 1) {
@@ -229,8 +219,8 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                     tmp8 = closure_13;
                   }
                   if (tmp8) {
-                    obj1 = outer1_2(7196);
-                    obj1.hideHotspot(outer1_0(7193).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
+                    obj1 = closure_1_2(7196);
+                    obj1.hideHotspot(closure_1_0(7193).HotspotLocations.LIVE_STAGE_NOTIFICATION_BADGE);
                   }
                 }
               } else if (arg0 === 1) {
@@ -243,15 +233,15 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
                 obj[0] = arg1;
                 return obj;
               }
-              outer1_8(false);
-              outer1_9(null);
-              if (null != outer1_1) {
-                outer1_1();
+              closure_1_8(false);
+              closure_1_9(null);
+              if (null != closure_1_1) {
+                closure_1_1();
               } else {
-                outer1_17();
+                closure_1_17();
               }
-              if (outer1_0 != null) {
-                tmp27(outer1_2);
+              if (closure_1_0 != null) {
+                tmp27(closure_1_2);
               }
               dependencyMap = 0;
             }
@@ -273,7 +263,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
         }
       }
     });
-    const _handleSave = tmp;
+    closure_17 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -286,19 +276,19 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   obj = first2;
   const imperativeHandle = first2.useImperativeHandle(ref, () => ({
     renderRightButton: function RightButton() {
-      const obj = { style: outer1_16().closeButtonContainer, accessibilityRole: "button", accessibilityLabel: null, source: null, onPress: null, disableColor: true };
-      const tmp = outer1_16();
-      const intl = outer1_0(outer1_3[13]).intl;
-      obj[2] = intl.string(outer1_0(outer1_3[13]).t.cpT0Cq);
-      obj[3] = outer1_1(outer1_3[15]);
+      obj = { style: closure_1_16().closeButtonContainer, accessibilityRole: "button", accessibilityLabel: null, source: null, onPress: null, disableColor: true };
+      const tmp = closure_1_16();
+      const intl = closure_1_0(closure_1_3[13]).intl;
+      obj[2] = intl.string(closure_1_0(closure_1_3[13]).t.cpT0Cq);
+      obj[3] = closure_1_1(closure_1_3[15]);
       obj[4] = closure_1;
-      return outer1_14(outer1_1(outer1_3[22]), obj);
+      return closure_1_14(closure_1_1(closure_1_3[22]), obj);
     }
   }));
   const tmp4 = callback(first2.useState(channel.channel), 2);
   first = tmp4[0];
   const items = [first.id];
-  memo = first2.useMemo(() => _undefined2.getStageInstanceByChannel(first.id), items);
+  memo = first2.useMemo(() => _undefined.getStageInstanceByChannel(first.id), items);
   let str;
   if (memo != null) {
     str = memo.topic;
@@ -324,14 +314,14 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const tmp3Result1 = callback(obj.useState(false), 2);
   [obj2, c9] = callback(obj.useState(null), 2);
   obj2 = require(memo[23]);
-  const canSendStageStartNotification = obj2.useCanSendStageStartNotification(first);
+  canSendStageStartNotification = obj2.useCanSendStageStartNotification(first);
   let obj3 = require(memo[23]);
   let tmp20 = null == memo;
   const defaultSendStartStageNotificationToggle = obj3.useDefaultSendStartStageNotificationToggle(first);
   if (tmp20) {
     tmp20 = canSendStageStartNotification;
   }
-  c10 = tmp20;
+  canSendStageStartNotification = tmp20;
   let tmp21 = tmp20;
   if (tmp20) {
     tmp21 = defaultSendStartStageNotificationToggle;
@@ -363,13 +353,13 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
     }
     closure_7(privacy_level);
     if (null != stageInstance) {
-      _undefined(stageInstance.topic);
+      callback2(stageInstance.topic);
     }
   }, items2);
   const tmp16Result = require(memo[18]);
   ({ helpText, publicDisabled: c16 } = importDefault(memo[24])(first, memo, first2));
   importDefault(memo[25])(() => {
-    let obj = outer1_1(memo[26]);
+    obj = closure_1_1(memo[26]);
     let id;
     if (memo != null) {
       id = memo.id;
@@ -379,7 +369,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   });
   obj = { style: tmp.header, children: null };
   const items3 = [obj(HeaderIcon, { guild }), , ];
-  let obj1 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj1 = { style: tmp.headerTitle, accessibilityRole: "header", variant: "text-lg/semibold", color: "mobile-text-heading-primary", children: null };
   if (null == memo) {
     const intl2 = tmp16(tmp17[13]).intl;
     let stringResult = intl2.string(tmp16(tmp17[13]).t.DDF0cJ);
@@ -415,7 +405,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   const intl5 = tmp16(tmp17[13]).intl;
   obj4[0] = intl5.string(require(memo[13]).t["5FPBOB"]);
   items5[1] = obj(tmp26Result, obj4);
-  let obj5 = { style: tmp.textInput, showBorder: false, showTopContainer: false, multiline: false, maxLength: c10, value: first1, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
+  let obj5 = { style: tmp.textInput, showBorder: false, showTopContainer: false, multiline: false, maxLength: canSendStageStartNotification, value: first1, placeholder: null, onChange: null, autoFocus: true, clearButtonVisibility: null };
   const intl6 = tmp16(tmp17[13]).intl;
   obj5[6] = intl6.string(require(memo[13]).t.ZwWruY);
   obj5[7] = tmp3Result[1];
@@ -500,7 +490,7 @@ const forwardRefResult = importAllResult.forwardRef((channel, ref) => {
   }
   return tmp31Result3;
 });
-let result = require("noop").fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/modals/StartStageChannelModal.tsx");
 
 export default forwardRefResult;
 export { NotificationToggle };

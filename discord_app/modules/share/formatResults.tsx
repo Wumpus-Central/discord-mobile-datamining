@@ -1,17 +1,15 @@
 // discord_app/modules/share/formatResults.tsx
-import ALLOWED_TYPES from "ALLOWED_TYPES";
-import handleConnectionOpen from "handleConnectionOpen";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { isAllowedType } from "ALLOWED_TYPES";
-import ME from "ME";
-import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
-import { sortByMatchScore } from "../autocompleter/index.tsx";
+import sortByMatchScore from "sortByMatchScore" /* 7593 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 7604 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleConnectionOpen" /* 7592 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { isAllowedType } from "ALLOWED_TYPES" /* 7606 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c9;
-const require = arg1;
+require = arg1;
 function getChannelIdFromDestinationId(type) {
   if ("channel" === type.type) {
     return type.id;
@@ -27,10 +25,10 @@ function getChannelIdFromDestinationId(type) {
 function _getOrResolveChannelIdFromDestinationId() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -58,14 +56,14 @@ function _getOrResolveChannelIdFromDestinationId() {
               obj[0] = arg1;
               return obj;
             } else {
-              const tmp21 = outer1_11(closure_0);
+              const tmp21 = closure_1_11(closure_0);
               if (null != tmp21) {
                 v0 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = tmp21;
                 return obj1;
               } else if ("user" === tmp19.type) {
-                let c4 = 1;
+                c4 = 1;
                 let obj2 = v0(table[8]);
                 table = 2;
                 v0 = 1;
@@ -98,7 +96,7 @@ function _getOrResolveChannelIdFromDestinationId() {
             return obj;
           }
         } catch (tmp10) {
-          let ALLOWED_TYPES = tmp10;
+          closure_3 = tmp10;
           if (tmp3 === c4) {
             v0 = tmp2;
             throw tmp10;
@@ -109,7 +107,7 @@ function _getOrResolveChannelIdFromDestinationId() {
       }
     })();
   });
-  const _getOrResolveChannelIdFromDestinationId = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -130,10 +128,10 @@ function canShareToChannel(type) {
     if (!tmp7) {
       let tmp4 = type.record.type !== constants2.GUILD_FORUM && type.record.type !== tmp3.GUILD_MEDIA;
       if (tmp4) {
-        tmp4 = getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, type.record) && getUncachedChannelPermissions.can(constants.SEND_MESSAGES, type.record);
-        const obj = getUncachedChannelPermissions;
+        tmp4 = closure_6.can(constants.VIEW_CHANNEL, type.record) && closure_6.can(constants.SEND_MESSAGES, type.record);
+        const obj = closure_6;
         const tmp5 = constants;
-        const tmp6 = getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, type.record) && getUncachedChannelPermissions.can(constants.SEND_MESSAGES, type.record);
+        const tmp6 = closure_6.can(constants.VIEW_CHANNEL, type.record) && closure_6.can(constants.SEND_MESSAGES, type.record);
       }
       tmp7 = tmp4;
     }
@@ -182,22 +180,13 @@ function mergeAndDedupeResultsWithHeaders(found, items1) {
   return items;
 }
 ({ Permissions: c9, ChannelTypes: c10 } = ME);
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/share/formatResults.tsx");
+const result = require("set").fileFinishedImporting("modules/share/formatResults.tsx");
 
 export default function formatResults(hasQuery) {
-  let channelFilter;
-  let frequentChannels;
-  let includeMissingDMs;
-  let originDestination;
-  let pinnedDestinations;
-  let queryMode;
-  let results;
-  let selectedDestinations;
-  let targetDestination;
   ({ results, queryMode } = hasQuery);
   includeMissingDMs = queryMode;
   ({ frequentChannels, targetDestination, selectedDestinations, pinnedDestinations, originDestination } = hasQuery);
-  let importDefault = originDestination;
+  importDefault = originDestination;
   ({ channelFilter, includeMissingDMs } = hasQuery);
   if (hasQuery.hasQuery) {
     if (channelFilter === undefined) {
@@ -205,13 +194,13 @@ export default function formatResults(hasQuery) {
     }
     importDefault = channelFilter;
     return mergeAndDedupeResultsWithHeaders(results.filter((type) => {
-      let isNotNullishResult = includeMissingDMs(outer1_2[11]).isNotNullish(type);
+      let isNotNullishResult = includeMissingDMs(closure_1_2[11]).isNotNullish(type);
       if (isNotNullishResult) {
-        let tmp4 = type.type === includeMissingDMs(outer1_2[7]).AutocompleterResultTypes.HEADER;
+        let tmp4 = type.type === includeMissingDMs(closure_1_2[7]).AutocompleterResultTypes.HEADER;
         if (!tmp4) {
-          let tmp6 = outer1_8(type);
+          let tmp6 = closure_1_8(type);
           if (tmp6) {
-            tmp6 = _undefined(type, includeMissingDMs);
+            tmp6 = callback(type, includeMissingDMs);
           }
           tmp4 = tmp6;
         }
@@ -234,19 +223,19 @@ export default function formatResults(hasQuery) {
             }
             let tmp3 = tmp6;
           } else {
-            tmp3 = _undefined(7604)(type.id);
+            tmp3 = callback(7604)(type.id);
           }
           return tmp3;
         });
       }
       channelHistory = channelHistory.getChannelHistory();
       if (channelHistory.length > 0) {
-        let mapped1 = channelHistory.map((arg0) => _undefined(7604)(arg0));
+        let mapped1 = channelHistory.map((arg0) => callback(7604)(arg0));
       } else {
         mapped1 = [];
       }
       if (frequentChannels.length > 0) {
-        let mapped2 = frequentChannels.map((id) => _undefined(7604)(id.id));
+        let mapped2 = frequentChannels.map((id) => callback(7604)(id.id));
       } else {
         mapped2 = [];
       }
@@ -262,13 +251,13 @@ export default function formatResults(hasQuery) {
         }
         importDefault = tmp20;
         const found = items.filter((type) => {
-          let isNotNullishResult = includeMissingDMs(outer1_2[11]).isNotNullish(type);
+          let isNotNullishResult = includeMissingDMs(closure_1_2[11]).isNotNullish(type);
           if (isNotNullishResult) {
-            let tmp4 = type.type === includeMissingDMs(outer1_2[7]).AutocompleterResultTypes.HEADER;
+            let tmp4 = type.type === includeMissingDMs(closure_1_2[7]).AutocompleterResultTypes.HEADER;
             if (!tmp4) {
-              let tmp6 = outer1_8(type);
+              let tmp6 = closure_1_8(type);
               if (tmp6) {
-                tmp6 = _undefined(type, includeMissingDMs);
+                tmp6 = callback(type, includeMissingDMs);
               }
               tmp4 = tmp6;
             }
@@ -277,7 +266,7 @@ export default function formatResults(hasQuery) {
           return isNotNullishResult;
         });
         if (selectedDestinations != null) {
-          const found1 = selectedDestinations.find((arg0) => includeMissingDMs(outer1_2[12]).isEqual(arg0, c1));
+          const found1 = selectedDestinations.find((arg0) => includeMissingDMs(closure_1_2[12]).isEqual(arg0, closure_1));
         }
         if (null != originDestination) {
           if (null == found1) {
@@ -303,7 +292,7 @@ export default function formatResults(hasQuery) {
         }
         let tmp9 = targetDestination;
       } else {
-        tmp9 = createAutocompleterResultForChannelId(targetDestination.id);
+        tmp9 = createAutocompleterResultForChannelIdDefault(targetDestination.id);
       }
     }
     mapped = [];
@@ -350,11 +339,6 @@ export const getOrResolveChannelIdFromDestinationId = function getOrResolveChann
   return applyArgumentsResult;
 };
 export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNonEmptyQuery) {
-  let frequentChannels;
-  let queryMode;
-  let results;
-  let selectedChannelId;
-  let selectedResult;
   ({ results, selectedResult, queryMode } = hasNonEmptyQuery);
   ({ selectedChannelId, frequentChannels } = hasNonEmptyQuery);
   if (null != selectedResult) {
@@ -382,14 +366,14 @@ export const formatResultsWithHeaders = function formatResultsWithHeaders(hasNon
       items4 = [tmp(7593).createHeaderResult(intl2.string(tmp(1236).t["80lOZ1"])), , ];
       let tmp13 = null;
       if (null != selectedChannelId) {
-        const tmp7 = createAutocompleterResultForChannelId(selectedChannelId);
+        const tmp7 = createAutocompleterResultForChannelIdDefault(selectedChannelId);
         let tmp8 = null;
         if (null != tmp7) {
           let tmp9 = null;
           if (isAllowedType(tmp7)) {
             let canResult = tmp7.type === tmp(7593).AutocompleterResultTypes.USER;
             if (!canResult) {
-              canResult = getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, tmp7.record);
+              canResult = closure_6.can(constants.VIEW_CHANNEL, tmp7.record);
             }
             tmp9 = null;
             if (canResult) {

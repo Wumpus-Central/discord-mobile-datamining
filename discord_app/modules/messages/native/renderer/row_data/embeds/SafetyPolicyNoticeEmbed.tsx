@@ -1,13 +1,17 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx
-import { Image } from "get ActivityIndicator";
-import { MessageEmbedTypes } from "ME";
-import { SafetyHubPolicyNoticeKeys } from "SafetyHubView";
-import { t } from "../../../../../../../_runtime/03975_t.js";
-import { registerAsset } from "../../../../../../../_runtime/08079_registerAsset.js";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { frozen } from "../../EmbedUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import SafetyHubView from "SafetyHubView" /* 5438 */;
+import registerAssetDefault from "registerAsset" /* 8079 */;
+import frozen from "frozen" /* 8171 */;
 
-const result = require("SafetyHubView").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
+const Image = get_ActivityIndicator.Image;
+const MessageEmbedTypes = ME.MessageEmbedTypes;
+const SafetyHubPolicyNoticeKeys = SafetyHubView.SafetyHubPolicyNoticeKeys;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/SafetyPolicyNoticeEmbed.tsx");
 
 export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEmbed(message) {
   if (null != message.embeds) {
@@ -49,12 +53,12 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             let obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
             const intl = getSystemLocale.intl;
             obj[0] = intl.string(getSystemLocale.t["4CxGXi"]);
-            obj[1] = frozen.getAssetUriForEmbed(Image.resolveAssetSource(registerAsset));
+            obj[1] = frozen.getAssetUriForEmbed(Image.resolveAssetSource(registerAssetDefault));
             const intl2 = getSystemLocale.intl;
             obj = { daysAgo: null };
             const obj2 = frozen;
-            const obj4 = t();
-            obj[0] = obj4.diff(t.unix(parsed), "days");
+            const obj4 = tDefault();
+            obj[0] = obj4.diff(tDefault.unix(parsed), "days");
             obj[2] = intl2.formatToPlainString(getSystemLocale.t.eevFb6, obj);
             const intl3 = getSystemLocale.intl;
             obj[3] = intl3.string(getSystemLocale.t["5CLb0A"]);

@@ -1,29 +1,20 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import ReactionIcon from "ReactionIcon";
-import importAllResult from "getStickerExtensionFromFormatType";
-import get_ActivityIndicator from "showGuildSettingsStickerError";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import closure_9 from "loadSavedGuildStickers";
-import ME from "ME";
-import set from "set";
-import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import set from "noop";
-import { useInitialValue } from "../../../../../hooks/useInitialValue.tsx";
-import { _calculateScrollOffset } from "../../../../safe_area/useSafeAreaAvoidingInputs.native.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import _calculateScrollOffsetDefault from "_calculateScrollOffset" /* 9444 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "getEmojiToGroupId" /* 6727 */;
+import closure_9 from "loadSavedGuildStickers" /* 6769 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 1925 */;
+import { MAX_STICKER_FILE_SIZE } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
 const require = arg1;
 let c5 = importAllResult;
 ({ Image: closure_6, ScrollView: error } = get_ActivityIndicator);
@@ -31,66 +22,58 @@ let c5 = importAllResult;
 ({ EMOJI_URL_BASE_SIZE: closure_12, EmojiIntention: map1 } = set);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let obj = { container: null, title: null, description: null, help: null, stack: null, emojiPreview: null, stickerPreviewLabel: null, stickerPreview: null, stickerPreviewImage: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createCacheKey = { marginTop: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_8 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
-obj[2] = { marginBottom: require("Themes").space.PX_16 };
-let obj2 = { marginBottom: require("Themes").space.PX_16 };
-obj[3] = { marginBottom: require("Themes").space.PX_16 };
-let obj3 = { marginBottom: require("Themes").space.PX_16 };
-obj[4] = { marginTop: require("Themes").space.PX_8 };
-let obj4 = { marginTop: require("Themes").space.PX_8 };
-obj[5] = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_4, borderRadius: require("Themes").radii.lg, flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-let obj5 = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_4, borderRadius: require("Themes").radii.lg, flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-obj[6] = { marginTop: require("Themes").space.PX_8 };
-let obj6 = { marginTop: require("Themes").space.PX_8 };
-obj[7] = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, marginBottom: require("Themes").space.PX_8, height: 2 * require("Themes").space.PX_64, width: 2 * require("Themes").space.PX_64, borderRadius: require("Themes").radii.lg, justifyContent: "center", alignItems: "center" };
-let obj7 = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, marginBottom: require("Themes").space.PX_8, height: 2 * require("Themes").space.PX_64, width: 2 * require("Themes").space.PX_64, borderRadius: require("Themes").radii.lg, justifyContent: "center", alignItems: "center" };
-obj[8] = { width: require("Themes").space.PX_96, height: require("Themes").space.PX_96 };
+obj[2] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj2 = { marginBottom: ThemesDefault.space.PX_16 };
+obj[3] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_16 };
+obj[4] = { marginTop: ThemesDefault.space.PX_8 };
+let obj4 = { marginTop: ThemesDefault.space.PX_8 };
+obj[5] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+let obj5 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+obj[6] = { marginTop: ThemesDefault.space.PX_8 };
+let obj6 = { marginTop: ThemesDefault.space.PX_8 };
+obj[7] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginBottom: ThemesDefault.space.PX_8, height: 2 * ThemesDefault.space.PX_64, width: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center" };
+let obj7 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, marginBottom: ThemesDefault.space.PX_8, height: 2 * ThemesDefault.space.PX_64, width: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center" };
+obj[8] = { width: ThemesDefault.space.PX_96, height: ThemesDefault.space.PX_96 };
 let closure_18 = createCacheKey.createStyles(obj);
-let obj8 = { width: require("Themes").space.PX_96, height: require("Themes").space.PX_96 };
+let obj8 = { width: ThemesDefault.space.PX_96, height: ThemesDefault.space.PX_96 };
 let result = set.fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreate.tsx");
 
 export default importAllResult.forwardRef((stickerId, ref) => {
-  let c12;
-  let c13;
-  let c6;
-  let c8;
-  let dependencyMap;
-  let importDefault;
-  let tmp6;
-  let tmp8;
   stickerId = stickerId.stickerId;
   ({ guildId: importDefault, onFinish: dependencyMap } = stickerId);
   ref = undefined;
   let ref1;
   let ref2;
   c6 = undefined;
-  let c7;
+  c7 = undefined;
   c8 = undefined;
   let stickerById;
   let first;
-  let closure_11;
+  closure_11 = undefined;
   c12 = undefined;
   c13 = undefined;
   let first1;
   let callback;
-  let c16;
-  let c17;
+  closure_16 = undefined;
+  closure_17 = undefined;
   function hasUnsavedChanges(arg0) {
     let flag = arg0;
     if (arg0 === undefined) {
       flag = true;
     }
-    if (null != c16) {
+    if (null != closure_16) {
       let tmp12 = null != c6 && tmp11 !== tmp.name;
       if (!tmp12) {
         let tmp14 = null != c8 && tmp13 !== tmp.description;
         if (!tmp14) {
           let tmp16 = null == first1;
           if (!tmp16) {
-            tmp16 = tmp15 === c17;
+            tmp16 = tmp15 === closure_17;
           }
           tmp14 = !tmp16;
         }
@@ -166,16 +149,16 @@ export default importAllResult.forwardRef((stickerId, ref) => {
               return obj;
             } else {
               let base64 = tmp3;
-              let closure_0 = tmp7;
+              closure_0 = tmp7;
               closure_0 = undefined;
               base64 = undefined;
               let mimeType;
               let errorStr;
               originalMd5 = undefined;
               errorStr = 1;
-              let obj2 = outer1_1(outer1_2[16]);
-              let obj1 = { size: null, preferredMimeType: "image/png" };
-              obj1[0] = outer1_11;
+              let obj2 = closure_1_1(closure_1_2[16]);
+              obj1 = { size: null, preferredMimeType: "image/png" };
+              obj1[0] = closure_1_11;
               originalMd5 = 2;
               c5 = 1;
               obj2 = { value: null, done: false };
@@ -185,7 +168,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
           } else {
             if (1 === tmp7) {
               errorStr = 0;
-              obj1 = outer1_0(outer1_2[17]);
+              obj1 = closure_1_0(closure_1_2[17]);
               const result = obj1.showGuildSettingsStickerError();
               c5 = 3;
             } else if (arg0 === 1) {
@@ -216,7 +199,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
               }
             }
             const _Error = Error;
-            const error = new Error("Invalid image type, only PNG is supported.");
+            error = new Error("Invalid image type, only PNG is supported.");
             throw error;
           }
         } catch (tmp31) {
@@ -230,7 +213,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
         }
       }
     });
-    const _handleImagePicker = tmp;
+    closure_19 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -269,23 +252,23 @@ export default importAllResult.forwardRef((stickerId, ref) => {
               return obj;
             } else {
               const callback = tmp3;
-              let c5 = 1;
-              if (null == outer1_0) {
+              c5 = 1;
+              if (null == closure_1_0) {
                 if (null != c6) {
-                  if (null != outer1_14) {
-                    if (null != outer1_10) {
-                      const obj1 = { guildId: null, name: null, tags: null, description: null, uri: null, mimeType: "image/png", platform: "mobile", originalMd5: null };
-                      obj1[0] = outer1_1;
+                  if (null != closure_1_14) {
+                    if (null != closure_1_10) {
+                      obj1 = { guildId: null, name: null, tags: null, description: null, uri: null, mimeType: "image/png", platform: "mobile", originalMd5: null };
+                      obj1[0] = closure_1_1;
                       obj1[1] = tmp26;
-                      const obj13 = outer1_0(outer1_2[18]);
-                      obj1[2] = outer1_0(outer1_2[19]).getStickerTagForEmoji(tmp47);
-                      let c0 = outer1_8;
-                      if (outer1_8 == null) {
+                      const obj13 = closure_1_0(closure_1_2[18]);
+                      obj1[2] = closure_1_0(closure_1_2[19]).getStickerTagForEmoji(tmp47);
+                      c0 = closure_1_8;
+                      if (closure_1_8 == null) {
                         c0 = "";
                       }
                       obj1[3] = c0;
                       obj1[4] = tmp48;
-                      obj1[7] = outer1_12;
+                      obj1[7] = closure_1_12;
                       c3 = 2;
                       c6 = 1;
                       let obj2 = { value: null, done: false };
@@ -299,14 +282,14 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 if (null != c6) {
-                  if (null != outer1_14) {
+                  if (null != closure_1_14) {
                     const obj3 = { name: null, tags: null, description: null };
                     obj3[0] = tmp39;
-                    const obj10 = outer1_0(outer1_2[18]);
-                    const tmp43 = outer1_1;
-                    obj3[1] = outer1_0(outer1_2[19]).getStickerTagForEmoji(tmp40);
-                    let c1 = outer1_8;
-                    if (outer1_8 == null) {
+                    const obj10 = closure_1_0(closure_1_2[18]);
+                    const tmp43 = closure_1_1;
+                    obj3[1] = closure_1_0(closure_1_2[19]).getStickerTagForEmoji(tmp40);
+                    c1 = closure_1_8;
+                    if (closure_1_8 == null) {
                       c1 = "";
                     }
                     obj3[2] = c1;
@@ -325,7 +308,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
           } else {
             if (1 === tmp7) {
               c5 = 0;
-              obj4 = outer1_0(outer1_2[17]);
+              obj4 = closure_1_0(closure_1_2[17]);
               const result = obj4.showGuildSettingsStickerError();
               c6 = 3;
             } else {
@@ -334,8 +317,8 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                   c6 = 3;
                   throw arg1;
                 } else if (arg0 !== 2) {
-                  outer1_2();
-                  obj2 = outer1_0(outer1_2[17]);
+                  closure_1_2();
+                  obj2 = closure_1_0(closure_1_2[17]);
                   const result1 = obj2.showGuildSettingsStickerSuccess();
                 }
               } else if (arg0 === 1) {
@@ -349,7 +332,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
                 return obj5;
               } else {
                 callback();
-                obj = outer1_0(outer1_2[17]);
+                obj = closure_1_0(closure_1_2[17]);
                 const result2 = obj.showGuildSettingsStickerSuccess();
               }
               c5 = 0;
@@ -361,7 +344,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
             return obj6;
           }
         } catch (tmp29) {
-          let ReactionIcon = tmp29;
+          closure_4 = tmp29;
           if (tmp4 === c5) {
             c6 = tmp2;
             throw tmp29;
@@ -371,7 +354,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
         }
       }
     });
-    const _handleSave = tmp;
+    closure_20 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -398,9 +381,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   let tmp12 = ref1(ref2.useState(undefined), 2);
   first1 = tmp12[0];
   callback = tmp12[1];
-  const insets = useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets;
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2 } }, { ref: ref2, offset: { type: "toBottom" } }];
-  const onFocus = _calculateScrollOffset({ insets, inputs: items, scrollViewRef: ref }).onFocus;
+  const onFocus = _calculateScrollOffsetDefault({ insets, inputs: items, scrollViewRef: ref }).onFocus;
   stickerById = undefined;
   const tmp11 = ref1(ref2.useState(undefined), 2);
   if (null != stickerId) {
@@ -416,11 +399,11 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     }
     return applyArgumentsResult;
   }
-  const tmp16Result = useInitialValue(stickerById);
-  c16 = tmp16Result;
-  const tmp20 = useInitialValue(() => {
-    let tags = c16;
-    if (null != c16) {
+  const tmp16Result = useInitialValueDefault(stickerById);
+  closure_16 = tmp16Result;
+  const tmp20 = useInitialValueDefault(() => {
+    let tags = closure_16;
+    if (null != closure_16) {
       let customEmojiById = null;
       if (null != tags.tags) {
         customEmojiById = _undefined2.getCustomEmojiById(tags.tags);
@@ -430,9 +413,9 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       } else if (null == tags.tags) {
         let tmp8;
         if (null != undefined) {
-          const byName = outer1_1(outer1_2[15]).getByName(undefined);
+          const byName = closure_1_1(closure_1_2[15]).getByName(undefined);
           tmp8 = byName;
-          const obj3 = outer1_1(outer1_2[15]);
+          const obj3 = closure_1_1(closure_1_2[15]);
         }
         let tmp12;
         if (null != tmp8) {
@@ -442,27 +425,27 @@ export default importAllResult.forwardRef((stickerId, ref) => {
       } else {
         if (obj.hasSurrogates(tags.tags)) {
           tags = tags.tags;
-          let tags2 = outer1_1(outer1_2[15]).convertSurrogateToName(tags, false);
-          const obj2 = outer1_1(outer1_2[15]);
+          let tags2 = closure_1_1(closure_1_2[15]).convertSurrogateToName(tags, false);
+          const obj2 = closure_1_1(closure_1_2[15]);
         } else {
           tags2 = tags.tags;
         }
-        obj = outer1_1(outer1_2[15]);
+        obj = closure_1_1(closure_1_2[15]);
       }
     }
   });
-  c17 = tmp20;
+  closure_17 = tmp20;
   const imperativeHandle = obj.useImperativeHandle(ref, () => ({ hasUnsavedChanges }));
   const items1 = [stickerId, tmp16Result, tmp20];
   const effect = obj.useEffect(() => {
     let tmp = null != stickerId;
     if (tmp) {
-      tmp = null != _undefined5;
+      tmp = null != closure_16;
     }
     if (tmp) {
-      callback(c17);
-      _undefined(_undefined5.name);
-      _undefined3(_undefined5.description);
+      callback(closure_17);
+      _undefined(closure_16.name);
+      _undefined3(closure_16.description);
       const current = ref1.current;
       if (current != null) {
         current.setText(tmp7.name);
@@ -482,7 +465,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   obj[3] = obj;
   let tmp23Result = null;
   if (null == stickerId) {
-    let obj1 = { variant: "heading-md/semibold", style: null, children: null };
+    obj1 = { variant: "heading-md/semibold", style: null, children: null };
     obj1[1] = tmp.title;
     const intl = stickerId(1236).intl;
     obj1[2] = intl.string(stickerId(1236).t["9N2OWD"]);
@@ -515,8 +498,8 @@ export default importAllResult.forwardRef((stickerId, ref) => {
     obj6[2] = str;
     items2[3] = callback(stickerId(4745).Button, obj6);
     obj7[0] = items2;
-    tmp23Result = tmp23(c16, obj7);
-    const tmp26 = c16;
+    tmp23Result = tmp23(closure_16, obj7);
+    const tmp26 = closure_16;
     const tmp27 = callback;
   }
   const items3 = [tmp23Result, ];
@@ -553,7 +536,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   const obj15 = {
     style: tmp.emojiPreview,
     onPress() {
-      let obj = stickerId(outer1_2[29]);
+      let obj = stickerId(closure_1_2[29]);
       obj = { pickerIntention: _undefined4.GUILD_STICKER_RELATED_EMOJI, guildId: closure_1, onPressEmoji: closure_15 };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
@@ -587,7 +570,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   }
   items5[1] = callback(stickerId(4734).Text, { variant: "text-md/semibold", color: "input-placeholder-text-default", children: combined });
   obj15[2] = items5;
-  items4[3] = c17(stickerId(5433).PressableHighlight, obj15);
+  items4[3] = closure_17(stickerId(5433).PressableHighlight, obj15);
   const obj18 = { ref: ref1, label: null, placeholder: null, onChange: null, onFocus: null, onSubmitEditing: null, isDisabled: false, isClearable: true, returnKeyType: "next", submitBehavior: "submit" };
   const intl9 = tmp31(1236).intl;
   obj18[1] = intl9.string(stickerId(1236).t["0VRh6n"]);
@@ -640,7 +623,7 @@ export default importAllResult.forwardRef((stickerId, ref) => {
   obj20[3] = !hasUnsavedChanges(false);
   items4[6] = callback(stickerId(4745).Button, obj20);
   obj8[1] = items4;
-  items3[1] = c17(stickerId(4733).Stack, obj8);
+  items3[1] = closure_17(stickerId(4733).Stack, obj8);
   obj[4] = items3;
-  return c17(c7, obj);
+  return closure_17(c7, obj);
 });

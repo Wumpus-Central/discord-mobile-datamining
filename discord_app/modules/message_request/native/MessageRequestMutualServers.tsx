@@ -1,21 +1,16 @@
 // discord_app/modules/message_request/native/MessageRequestMutualServers.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, label: { flexShrink: 1 } });
-const result = require("jsxProd").fileFinishedImporting("modules/message_request/native/MessageRequestMutualServers.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestMutualServers.tsx");
 
 export default function MessageRequestMutualServers(textVariant) {
-  let iconSize;
-  let onPress;
-  let style;
-  let userId;
   ({ onPress, iconSize } = textVariant);
   ({ userId, style } = textVariant);
   if (iconSize === undefined) {
@@ -43,10 +38,10 @@ export default function MessageRequestMutualServers(textVariant) {
   items = [tmp3.container, style];
   let tmp9 = length > 0;
   if (tmp9) {
-    const obj1 = { size: null, names: null, children: null };
+    obj1 = { size: null, names: null, children: null };
     obj1[0] = iconSize;
     obj1[1] = substr.map((name) => name.name);
-    obj1[2] = substr.map((guild) => outer1_4(outer1_1(outer1_2[4]), { guild, size: iconSize }, guild.id));
+    obj1[2] = substr.map((guild) => closure_1_4(closure_1_1(closure_1_2[4]), { guild, size: iconSize }, guild.id));
     tmp9 = callback(tmp4(11787).GuildIconPile, obj1);
   }
   const items1 = [tmp9, ];

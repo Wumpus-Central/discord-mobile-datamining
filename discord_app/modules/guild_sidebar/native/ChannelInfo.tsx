@@ -1,38 +1,31 @@
 // discord_app/modules/guild_sidebar/native/ChannelInfo.tsx
-import "useStageHasMedia";
-import guildHasCommunity from "guildHasCommunity";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import { jsx } from "ConnectedUserLimit";
-import createCacheKey from "createCacheKey";
-import { useEmbeddedApps } from "../../activities/useEmbeddedAppsForChannel.tsx";
-import { useStartTime } from "../../channel/useVoiceChannelStartTime.tsx";
-import { ActiveTimestamp } from "../../icymi/native/content_inventory/Badges.tsx";
-import { showChannelBadge } from "../showChannelBadge.tsx";
+import noopAll from "noop" /* 19 */;
+import useEmbeddedAppsDefault from "useEmbeddedApps" /* 11233 */;
+import ActiveTimestamp from "ActiveTimestamp" /* 12105 */;
+import showChannelBadgeDefault from "showChannelBadge" /* 15488 */;
+import useStartTime from "useStartTime" /* 15493 */;
+import closure_3 from "guildHasCommunity" /* 5276 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "generateOldThreadCutoff" /* 4772 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function LimitAndDurationInfo(channel) {
-  let hasMedia;
-  let hasVideo;
-  let selected;
-  let voiceStatesCount;
   channel = channel.channel;
   ({ voiceStatesCount, selected } = channel);
   let obj = channel(589);
-  const items = [updateVoiceState, getUncachedChannelPermissions];
+  const items = [closure_7, closure_5];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let isGuildStageVoiceResult = channel.isGuildStageVoice();
     if (isGuildStageVoiceResult) {
-      let obj = channel(outer1_2[19]);
+      let obj = channel(closure_1_2[19]);
       isGuildStageVoiceResult = obj.getStageHasMedia(tmp.id);
     }
-    obj = { isLocked: !outer1_5.can(outer1_9.CONNECT, tmp), hasVideo: outer1_7.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
+    obj = { isLocked: !closure_1_5.can(closure_1_9.CONNECT, tmp), hasVideo: closure_1_7.hasVideo(channel.id), hasMedia: isGuildStageVoiceResult };
     return obj;
   });
   ({ hasVideo, hasMedia } = stateFromStoresObject);
@@ -53,7 +46,7 @@ function LimitAndDurationInfo(channel) {
     obj[2] = channel;
     let tmp6Result = tmp6(channel(15381).ConnectedUserLimit, obj);
   } else {
-    const obj1 = { channel: null };
+    obj1 = { channel: null };
     obj1[0] = channel;
     tmp6Result = tmp6(DurationInfo, obj1);
   }
@@ -73,32 +66,23 @@ function DurationInfo(channel) {
   }
   return tmp5;
 }
-({ GuildFeatures: metroImportAll, Permissions: c9, Fonts } = ME);
+noopAll;
+({ GuildFeatures: closure_8, Permissions: c9, Fonts } = ME);
 createCacheKey = { fontFamily: Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 16 };
 let closure_11 = createCacheKey.createStyles({ activeTimestamp: createCacheKey });
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ChannelInfo.tsx");
 
 export default function ChannelInfo(channel) {
-  let enableActivities;
-  let enableConnectedUserLimit;
-  let guild;
-  let isChannelCollapsed;
-  let isNewChannel;
-  let isSubscriptionGated;
-  let mentionsCount;
-  let muted;
-  let needSubscriptionToAccess;
-  let voiceStates;
   channel = channel.channel;
   ({ isChannelCollapsed, voiceStates, enableConnectedUserLimit, enableActivities, muted, isSubscriptionGated, needSubscriptionToAccess } = channel);
   let obj = channel(589);
-  const items = [createGuildRecordFromRust, generateOldThreadCutoff, guildHasCommunity];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guild: outer1_4.getGuild(channel.guild_id), mentionsCount: outer1_6.getMentionCount(channel.id), isMentionLowImportance: outer1_6.getIsMentionLowImportance(channel.id), isNewChannel: outer1_3.shouldIndicateNewChannel(channel.guild_id, channel.id) }));
+  const items = [closure_4, closure_6, closure_3];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ guild: closure_1_4.getGuild(channel.guild_id), mentionsCount: closure_1_6.getMentionCount(channel.id), isMentionLowImportance: closure_1_6.getIsMentionLowImportance(channel.id), isNewChannel: closure_1_3.shouldIndicateNewChannel(channel.guild_id, channel.id) }));
   ({ guild, mentionsCount, isNewChannel } = stateFromStoresObject);
-  const tmp5 = useEmbeddedApps(channel);
-  let obj1 = channel(8513);
+  const tmp5 = useEmbeddedAppsDefault(channel);
+  obj1 = channel(8513);
   const postsWithUnreadsCount = obj1.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
-  if (showChannelBadge({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
+  if (showChannelBadgeDefault({ mentionsCount, isNewChannel, postsWithUnreadsCount, muted })) {
     obj = { mentionCount: null, isMentionLowImportance: null, isNewChannel: null, postsWithUnreadsCount: null, muted: null };
     obj[0] = mentionsCount;
     obj[1] = stateFromStoresObject.isMentionLowImportance;

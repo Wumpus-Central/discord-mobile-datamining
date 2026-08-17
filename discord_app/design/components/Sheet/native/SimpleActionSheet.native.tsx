@@ -1,10 +1,10 @@
 // discord_app/design/components/Sheet/native/SimpleActionSheet.native.tsx
-import "noop";
-import jsxProd from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import ActionSheet from "ActionSheet" /* 7175 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
 class SimpleActionSheet {
   constructor(arg0) {
     ({ hideActionSheet, header, options } = global);
@@ -28,41 +28,39 @@ class SimpleActionSheet {
     obj1 = { children: null };
     items = [, ];
     items[0] = tmp5Result1;
-    obj2 = { hasIcons: global.hasIcons, children: null };
-    obj2[1] = options.map((arg0, arg1) => {
-      let IconComponent;
-      let closure_0;
-      let icon;
-      let isDestructive;
-      let label;
-      ({ icon, IconComponent, onPress: closure_0 } = arg0);
-      ({ label, isDestructive } = arg0);
-      if (null != icon) {
-        let obj = { source: null, IconComponent: null };
-        obj[0] = icon;
-        obj[1] = IconComponent;
-        const tmp = outer1_2(outer1_0(outer1_1[5]).ActionSheetRow.Icon, obj);
-      }
-      obj = { icon: tmp, variant: null, label: null, onPress: null };
-      let str = "default";
-      if (isDestructive) {
-        str = "danger";
-      }
-      obj[1] = str;
-      obj[2] = label;
-      obj[3] = function onPress() {
-        outer1_0();
-        callback();
-      };
-      return outer1_2(outer1_0(outer1_1[5]).ActionSheetRow, obj, arg1);
-    });
+    obj2 = {
+      hasIcons: global.hasIcons,
+      children: options.map((arg0, arg1) => {
+            ({ icon, IconComponent, onPress: closure_0 } = arg0);
+            ({ label, isDestructive } = arg0);
+            if (null != icon) {
+              let obj = { source: null, IconComponent: null };
+              obj[0] = icon;
+              obj[1] = IconComponent;
+              const tmp = closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow.Icon, obj);
+            }
+            obj = { icon: tmp, variant: null, label: null, onPress: null };
+            let str = "default";
+            if (isDestructive) {
+              str = "danger";
+            }
+            obj[1] = str;
+            obj[2] = label;
+            obj[3] = function onPress() {
+              closure_1_0();
+              callback();
+            };
+            return closure_1_2(closure_1_0(closure_1_1[5]).ActionSheetRow, obj, arg1);
+          })
+    };
     items[1] = jsx(require("ActionSheetRowIcon").ActionSheetRow.Group, obj2);
     obj1[0] = items;
     return tmp(require("ActionSheet").ActionSheet, obj1);
   }
 }
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("ActionSheet").fileFinishedImporting("design/components/Sheet/native/SimpleActionSheet.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/SimpleActionSheet.native.tsx");
 
 export default SimpleActionSheet;
 export { SimpleActionSheet };

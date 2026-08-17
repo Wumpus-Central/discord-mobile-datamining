@@ -1,13 +1,12 @@
 // discord_app/modules/profile_customization/native/ProfileCustomizationUtils.tsx
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { useDominantRGBFromImage } from "../../calls/native/VideoBackground.tsx";
-const result = require("int2hslRaw").fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
+import set from "set" /* 2 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import getAvatarURL2 from "getAvatarURL" /* 1435 */;
+import useDominantRGBFromImage from "useDominantRGBFromImage" /* 8413 */;
+
+const result = set.fileFinishedImporting("modules/profile_customization/native/ProfileCustomizationUtils.tsx");
 
 export const useUserProfileBannerBackgroundColor = function useUserProfileBannerBackgroundColor(arg0) {
-  let displayProfile;
-  let pendingAvatarSrc;
-  let user;
   ({ user, pendingAvatarSrc, displayProfile } = arg0);
   if (null == user) {
     const obj3 = useDominantRGBFromImage;
@@ -25,7 +24,7 @@ export const useUserProfileBannerBackgroundColor = function useUserProfileBanner
   } else if (null == pendingAvatarSrc) {
     pendingAvatarSrc = user.getAvatarURL(tmp, 80);
   } else if (pendingAvatarSrc == null) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURL2;
     obj = {};
     const merged = Object.assign(user);
     obj.avatar = null;

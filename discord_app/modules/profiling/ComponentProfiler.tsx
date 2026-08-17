@@ -1,6 +1,6 @@
 // discord_app/modules/profiling/ComponentProfiler.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_0 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 class StatCollector {
 }
@@ -34,8 +34,6 @@ let c4 = true;
 const result = require("set").fileFinishedImporting("modules/profiling/ComponentProfiler.tsx");
 
 export default function ComponentProfiler(arg0) {
-  let children;
-  let id;
   ({ id, children } = arg0);
   return <React.Profiler id={id} onRender={React.useCallback((arg0, arg1, arg2) => {
     if (closure_4) {
@@ -71,7 +69,7 @@ export default function ComponentProfiler(arg0) {
 };
 export { StatCollector };
 export function clearComponentRenderStats() {
-  let closure_3 = {};
+  closure_3 = {};
 }
 export function getComponentRenderStats() {
   return closure_3;
@@ -133,8 +131,6 @@ export const serializeComponentRenderAverages = function serializeComponentRende
     const entries = Object.entries(closure_3);
     str = `Component Render Stats (microseconds):
   ${"|" + tmp + "|" + tmp2 + "|" + tmp3 + "|" + tmp4 + "|" + tmp5 + "|" + tmp6 + "|" + obj7.padEnd(20, " ") + "|\n"}${arr.map((arg0) => {
-      let arr;
-      let tmp;
       [arr, tmp] = arg0;
       let num = 20;
       if (arr.length <= 20) {
@@ -194,13 +190,13 @@ export const serializeComponentRenderAverages = function serializeComponentRende
   return str;
 };
 export function resetComponentProfiler() {
-  let closure_3 = {};
+  closure_3 = {};
 }
 export function pauseComponentProfiler() {
-  let c4 = false;
+  c4 = false;
 }
 export function resumeComponentProfiler() {
-  let c4 = true;
+  c4 = true;
 }
 export function dumpStats() {
   return closure_3;

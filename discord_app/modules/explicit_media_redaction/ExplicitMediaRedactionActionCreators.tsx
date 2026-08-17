@@ -1,8 +1,10 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionActionCreators.tsx");
 
 export const reportFalsePositive = function reportFalsePositive(channel_id, message_id, attachment_ids, embed_ids) {
   const HTTP = sendRequest.HTTP;

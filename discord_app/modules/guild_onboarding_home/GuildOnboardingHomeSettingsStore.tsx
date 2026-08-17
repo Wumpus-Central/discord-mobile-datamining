@@ -1,10 +1,9 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx
-import { Store } from "initialize";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 function handleSettingsLoadSuccess(arg0) {
-  let guildId;
-  let homeSettings;
   ({ homeSettings, guildId } = arg0);
   if (null != guildId) {
     if (null == homeSettings) {
@@ -26,6 +25,7 @@ let closure_1 = [];
 let closure_2 = {};
 let set = new Set();
 let closure_4 = {};
+const Store = initializeDefault.Store;
 class GuildOnboardingHomeSettingsStore extends Store {
 }
 const prototype = GuildOnboardingHomeSettingsStore.prototype;
@@ -72,7 +72,7 @@ prototype["getNewMemberActions"] = function getNewMemberActions(closure_0) {
   return tmp2;
 };
 prototype["getActionForChannel"] = function getActionForChannel(c0, c1) {
-  let closure_0 = c1;
+  closure_0 = c1;
   const settings = this.getSettings(c0);
   let found = null;
   if (null != settings) {
@@ -149,7 +149,7 @@ prototype["getEnabled"] = function getEnabled(arg0) {
   return tmp;
 };
 prototype["getNewMemberAction"] = function getNewMemberAction(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let tmp = null;
   if (null != arg0) {
     tmp = null;
@@ -200,7 +200,7 @@ obj = {
       const findIndexResult = resourceChannels.findIndex((channelId) => channelId.channelId === resourceChannel.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(resourceChannel);
         tmp.resourceChannels[findIndexResult] = obj;
         flag = true;
@@ -222,7 +222,7 @@ obj = {
       const findIndexResult = newMemberActions.findIndex((channelId) => channelId.channelId === action.channelId);
       let flag = -1 !== findIndexResult;
       if (flag) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(action);
         tmp.newMemberActions[findIndexResult] = obj;
         flag = true;
@@ -242,7 +242,7 @@ obj = {
     }
   }
 };
-const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(require("dispatcher"), obj);
+const guildOnboardingHomeSettingsStore = new GuildOnboardingHomeSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingHomeSettingsStore.tsx");
 
 export default guildOnboardingHomeSettingsStore;

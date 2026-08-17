@@ -1,4 +1,7 @@
 // discord_app/modules/core/native/usePressability.tsx
-const result = require("set").fileFinishedImporting("modules/core/native/usePressability.tsx");
+import set from "set" /* 2 */;
+import usePressabilityDefault from "usePressability" /* 301 */;
 
-export { default } from "usePressability";
+const result = set.fileFinishedImporting("modules/core/native/usePressability.tsx");
+
+export default usePressabilityDefault;

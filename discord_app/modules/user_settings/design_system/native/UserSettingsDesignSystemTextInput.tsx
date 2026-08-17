@@ -1,38 +1,34 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx
-import _slicedToArray from "_slicedToArray";
-import SettingsIcon from "SettingsIcon";
-import { ScrollView } from "SearchField";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { AtIcon } from "../../../../design/components/Icon/native/redesign/generated/AtIcon.tsx";
-import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { TextIcon } from "../../../../design/components/Icon/native/redesign/generated/TextIcon.tsx";
-import { Input } from "../../../../design/components/Input/native/Input.native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { SplitTextInput } from "../../../../design/components/SplitTextInput/native/SplitTextInput.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import { TextField } from "../../../../design/components/TextField/native/TextField.native.tsx";
-import { GhostInput } from "../../../../design/components/TextInput/native/GhostInput.native.tsx";
-import { TextArea } from "../../../../design/components/TextInput/native/TextArea.native.tsx";
-import { TextInput } from "../../../../design/components/TextInput/native/TextInput.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import TextIcon from "TextIcon" /* 6876 */;
+import AtIcon from "AtIcon" /* 6885 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import SearchField from "SearchField" /* 7337 */;
+import TextField from "TextField" /* 7338 */;
+import SettingsIcon from "SettingsIcon" /* 7355 */;
+import IconButton from "IconButton" /* 8035 */;
+import TextInput from "TextInput" /* 8071 */;
+import Input from "Input" /* 8072 */;
+import TextArea from "TextArea" /* 8092 */;
+import SplitTextInput from "SplitTextInput" /* 8603 */;
+import GhostInput from "GhostInput" /* 13534 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function Sample(children) {
-  const obj = { shadow: "low", style: createCacheKey().sample, children: null };
-  obj[2] = callback2(Stack.Stack, { spacing: 24, children: children.children });
-  return callback2(PressableCard.Card, obj);
+  const tmp = callback4();
+  return callback2(PressableCard.Card, { shadow: "low", style: callback4().sample, children: callback2(Stack.Stack, { spacing: 24, children: children.children }) });
 }
 function InputUsername(defaultValue) {
-  let require;
-  let tmp4;
   defaultValue = defaultValue.defaultValue;
   let hasItem;
   if (defaultValue != null) {
@@ -63,8 +59,6 @@ function InputUsername(defaultValue) {
   return closure_6(TextInput.TextInput, obj);
 }
 function GhostInputUsername(defaultValue) {
-  let require;
-  let tmp4;
   defaultValue = defaultValue.defaultValue;
   let hasItem;
   if (defaultValue != null) {
@@ -96,8 +90,7 @@ function GhostInputActionSheet() {
   let obj = { children: null };
   const items = [callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "Ghost Input - Centered" }), ];
   obj = { style: { padding: 12 }, children: null };
-  obj = { children: null };
-  obj[0] = callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters" });
+  obj = { children: callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters" }) };
   obj[1] = callback2(Sample, obj);
   items[1] = callback2(Stack.Stack, obj);
   obj[0] = items;
@@ -107,18 +100,13 @@ function GhostInputActionSheetLeftAligned() {
   let obj = { children: null };
   const items = [callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { title: "Ghost Input - Left Aligned" }), ];
   obj = { style: { padding: 12 }, children: null };
-  obj = { children: null };
-  obj[0] = callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", isCentered: false, size: "md" });
+  obj = { children: callback2(GhostInputUsername, { placeholder: "@wumpus", description: "You can use up to 16 alpha-numeric characters", isCentered: false, size: "md" }) };
   obj[1] = callback2(Sample, obj);
   items[1] = callback2(Stack.Stack, obj);
   obj[0] = items;
   return callback3(Background.BottomSheet, obj);
 }
 function CustomAttachmentExample() {
-  let importDefault;
-  let require;
-  let tmp2;
-  let tmp4;
   [tmp2, require] = callback(React.useState("default"), 2);
   const tmp = callback(React.useState("default"), 2);
   [tmp4, importDefault] = callback(React.useState(""), 2);
@@ -148,41 +136,38 @@ function CustomAttachmentExample() {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { padding: 16 }, sample: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.xl };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTextInput.tsx");
 
 export default function UserSettingsDesignSystemTextInput() {
   let obj = { children: null };
-  obj = { spacing: 24, style: createCacheKey().container, children: null };
+  obj = { spacing: 24, style: callback4().container, children: null };
   obj = { children: null };
   const items = [callback2(TextInput.TextInput, { label: "Input Label", placeholder: "Placeholder text", description: "Descriptions give context for the input.", errorMessage: "Error messages communicate invalid states." }), callback2(TextArea.TextArea, { label: "Text Area", maxLength: 100, placeholder: "Multiline inputs use TextArea" }), callback2(TextInput.TextInput, { label: "Password", secureTextEntry: true, placeholder: "Password", isClearable: true }), callback2(TextInput.TextInput, { label: "Required Field", placeholder: "Placeholder", description: "Required inputs are indicated with an asterisk.", required: true })];
   obj[0] = items;
   const items1 = [callback3(Sample, obj), callback2(Text.Text, { variant: "heading-lg/bold", children: "Sizing" }), callback2(Text.Text, { variant: "text-md/normal", children: "All inputs except TextArea accept a size prop, either sm, md, or lg. By default, inputs will use the large variant." }), , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ];
-  const obj1 = { children: null };
+  obj1 = { children: null };
   const items2 = [callback2(TextInput.TextInput, { label: "Small", size: "sm" }), callback2(TextInput.TextInput, { label: "Medium", size: "md" }), callback2(TextInput.TextInput, { label: "Large (default)" })];
   obj1[0] = items2;
   items1[3] = callback3(Sample, obj1);
   items1[4] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Attachments" });
   items1[5] = callback2(Text.Text, { variant: "text-md/normal", children: "Inputs can have either text and icon attachments, either on the leading or trailing edge. If both text and icon are given for a single side, the icon will take precedence." });
   const obj2 = { children: null };
-  const obj3 = { label: "Leading icon", leadingIcon: null };
-  obj3[1] = TextIcon.TextIcon;
-  const items3 = [callback2(TextInput.TextInput, obj3), , , ];
-  const obj4 = { label: "Trailing icon", trailingIcon: null };
-  obj4[1] = TextIcon.TextIcon;
-  items3[1] = callback2(TextInput.TextInput, obj4);
+  const tmp = callback4();
+  const items3 = [callback2(TextInput.TextInput, { label: "Leading icon", leadingIcon: TextIcon.TextIcon }), , , ];
+  const obj3 = { label: "Leading icon", leadingIcon: TextIcon.TextIcon };
+  items3[1] = callback2(TextInput.TextInput, { label: "Trailing icon", trailingIcon: TextIcon.TextIcon });
   items3[2] = callback2(TextInput.TextInput, { label: "Leading text", leadingText: "To:" });
-  const obj5 = { label: "Combination", leadingText: "To:", trailingIcon: null };
-  obj5[2] = AtIcon.AtIcon;
-  items3[3] = callback2(TextInput.TextInput, obj5);
+  const obj4 = { label: "Trailing icon", trailingIcon: TextIcon.TextIcon };
+  items3[3] = callback2(TextInput.TextInput, { label: "Combination", leadingText: "To:", trailingIcon: AtIcon.AtIcon });
   obj2[0] = items3;
   items1[6] = callback3(Sample, obj2);
   items1[7] = callback2(Text.Text, { variant: "text-md/normal", children: "Text attachments should be kept as short as possible to preserve space for the user to see their input value while editing." });
   items1[8] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Pressable Attachments" });
   items1[9] = callback2(Text.Text, { variant: "text-md/normal", children: "Inputs do not allow custom nodes to be passed as leading or trailing attachments, but they can be made interactive by passing `*PressableProps` respectively. If given, the attachment will be wrapped by a Pressable and have the props passed to it." });
-  const tmp = createCacheKey();
+  const obj5 = { label: "Combination", leadingText: "To:", trailingIcon: AtIcon.AtIcon };
   items1[10] = callback2(Sample, { children: callback2(CustomAttachmentExample, {}) });
   items1[11] = callback2(Text.Text, { variant: "text-md/normal", children: "Note that the props do not allow for changing the styling of the pressable. Styling is instead handled by the Input itself." });
   items1[12] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Rounding" });
@@ -190,12 +175,15 @@ export default function UserSettingsDesignSystemTextInput() {
   const obj7 = { children: null };
   const obj8 = { children: null };
   const items4 = [callback2(SearchField.SearchField, { size: "md", isRound: true }), ];
-  const obj9 = { icon: null, accessibilityLabel: "Settings", onPress: null, variant: "tertiary" };
-  obj9[0] = callback2(SettingsIcon.SettingsIcon, { size: "sm" });
-  obj9[2] = function onPress() {
-    return null;
-  };
-  items4[1] = callback2(IconButton.IconButton, obj9);
+  const obj6 = { children: callback2(CustomAttachmentExample, {}) };
+  items4[1] = callback2(IconButton.IconButton, {
+    icon: callback2(SettingsIcon.SettingsIcon, { size: "sm" }),
+    accessibilityLabel: "Settings",
+    onPress() {
+      return null;
+    },
+    variant: "tertiary"
+  });
   obj8[0] = items4;
   obj7[0] = callback3(Input.Input, obj8);
   items1[14] = callback2(Sample, obj7);
@@ -207,7 +195,14 @@ export default function UserSettingsDesignSystemTextInput() {
   items1[17] = callback3(Sample, obj10);
   items1[18] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Clearable" });
   items1[19] = callback2(Text.Text, { variant: "text-md/normal", children: "Inputs can use the isClearable prop to let users immediately empty the input value with a button. The button is automatically rendered when the input contains a non-empty value. When pressed, the onClear callback is called, as well as the onChange with the new empty value." });
-  const obj6 = { children: callback2(CustomAttachmentExample, {}) };
+  const obj9 = {
+    icon: callback2(SettingsIcon.SettingsIcon, { size: "sm" }),
+    accessibilityLabel: "Settings",
+    onPress() {
+      return null;
+    },
+    variant: "tertiary"
+  };
   items1[20] = callback2(Sample, { children: callback2(TextField.TextField, { defaultValue: "Clear this text", isClearable: true }) });
   items1[21] = callback2(Text.Text, { variant: "text-md/normal", children: "Certain input types automatically control the isClearable prop. For example, SearchInput is always clearable. Most inputs will also replace any trailing attachment with the clear button when it is present." });
   items1[22] = callback2(Text.Text, { variant: "heading-lg/bold", children: "Disableable" });

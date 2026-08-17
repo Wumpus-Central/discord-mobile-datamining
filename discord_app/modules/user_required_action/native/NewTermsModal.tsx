@@ -1,25 +1,19 @@
 // discord_app/modules/user_required_action/native/NewTermsModal.tsx
-import closure_3 from "ME";
-import _slicedToArray from "_slicedToArray";
-import Button from "Button";
-import get_ActivityIndicator from "encodeProperties";
-import handleRequiredAction from "handleRequiredAction";
-import ME from "ME";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { showSimpleActionSheet } from "../../action_sheet/native/showSimpleActionSheet.tsx";
-import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7172 */;
+import trackImpressionDefault from "trackImpression" /* 9177 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "handleRequiredAction" /* 1385 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function handleTouch() {
   closure_7.dismiss();
 }
@@ -36,36 +30,36 @@ function handleMoreActions() {
   obj[1] = items;
   const result = obj.showSimpleActionSheet(obj);
 }
-({ View: closure_6, Keyboard: error, ScrollView: metroImportAll } = get_ActivityIndicator);
+({ View: closure_6, Keyboard: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ MarketingURLs: c10, UserRequiredActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { contentContainer: null, scrollView: null, container: null, description: null, agreementDescription: null, navbarRight: null, stickyFooter: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
-createCacheKey[3] = { marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_24 };
-let obj2 = { marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_24 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_24 };
-let obj3 = { marginTop: require("Themes").space.PX_24 };
-createCacheKey[5] = { position: "absolute", right: 0, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let obj4 = { position: "absolute", right: 0, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[6] = { paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_16, marginTop: require("Themes").space.PX_24, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_16, marginTop: require("Themes").space.PX_24, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-let result = require("noop").fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey[3] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_24 };
+let obj3 = { marginTop: ThemesDefault.space.PX_24 };
+createCacheKey[5] = { position: "absolute", right: 0, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj4 = { position: "absolute", right: 0, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[6] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/user_required_action/native/NewTermsModal.tsx");
 
 export default function NewTermsModal() {
-  const tmp = createCacheKey();
-  const rect = useSafeAreaInsets();
+  const tmp = callback5();
+  const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
   const memo = React.useMemo(() => action.getAction(), []);
   const tmp5 = callback2(React.useState(false), 2);
   importDefault = tmp5[1];
   let obj = memo(6318);
   obj.useNavigatorBackPressHandler(memo(4732).BackPressHandler.minimize);
-  const dependencyMap = React.useCallback(callback(function*() {
+  dependencyMap = React.useCallback(callback(function*() {
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -93,10 +87,10 @@ export default function NewTermsModal() {
             return obj;
           } else {
             const callback = tmp5;
-            let closure_0 = tmp2;
+            closure_0 = tmp2;
             closure_0 = undefined;
-            outer1_1(true);
-            let obj1 = outer1_0(table[15]);
+            closure_1_1(true);
+            obj1 = closure_1_0(table[15]);
             table = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
@@ -123,16 +117,13 @@ export default function NewTermsModal() {
       }
     }
   }), []);
-  obj = { type: null, name: null, properties: null };
-  obj[0] = memo(503).ImpressionTypes.VIEW;
-  obj[1] = memo(503).ImpressionNames.USER_AGREEMENTS;
-  obj[2] = { required_action: memo };
-  trackImpression(obj, {}, []);
+  obj = { type: memo(503).ImpressionTypes.VIEW, name: memo(503).ImpressionNames.USER_AGREEMENTS, properties: { required_action: memo } };
+  trackImpressionDefault(obj, {}, []);
   let tmp10 = null;
   if (null != memo) {
     obj = { style: null, children: null };
     const items = [tmp.container, ];
-    let obj1 = { paddingTop: null, paddingBottom: null };
+    obj1 = { paddingTop: null, paddingBottom: null };
     obj1[0] = top;
     obj1[1] = rect.bottom;
     items[1] = obj1;
@@ -189,7 +180,7 @@ export default function NewTermsModal() {
     const obj16 = { loading: null, onPress: null, text: null };
     obj16[0] = tmp5[0];
     obj16[1] = function onPress() {
-      if (memo === outer1_11.AGREEMENTS) {
+      if (memo === closure_1_11.AGREEMENTS) {
         callback();
       }
     };

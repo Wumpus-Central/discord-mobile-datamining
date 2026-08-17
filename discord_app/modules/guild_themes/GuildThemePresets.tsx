@@ -1,9 +1,10 @@
 // discord_app/modules/guild_themes/GuildThemePresets.tsx
-import { ThemeTypes } from "sum";
-import set from "items";
-import { n } from "../../../_runtime/00689_n.js";
-import { items } from "../client_themes/CustomThemesRandomUtils.tsx";
+import sum from "sum" /* 505 */;
+import nDefault from "n" /* 689 */;
+import items21 from "items" /* 4227 */;
+import set from "set" /* 2 */;
 
+const ThemeTypes = sum.ThemeTypes;
 let obj = { TWILIGHT: 1, PLUM: 2, FIRE: 3, GOLD_DUST: 4, MOSS: 5, JADE: 6, OBSIDIAN: 7, OCEAN: 8, DENIM: 9, BLURPLE: 10 };
 let items = [, , , , , , , , , ];
 ({ TWILIGHT: arr[0], DENIM: arr[1], OCEAN: arr[2], BLURPLE: arr[3], OBSIDIAN: arr[4], PLUM: arr[5], FIRE: arr[6], GOLD_DUST: arr[7], MOSS: arr[8], JADE: arr[9] } = obj);
@@ -61,16 +62,16 @@ export const getGuildThemePresetAppearance = function getGuildThemePresetAppeara
 export const getLinearGradientForGuildThemePreset = function getLinearGradientForGuildThemePreset(lightAppearance) {
   const tmp = arg1 === ThemeTypes.LIGHT ? lightAppearance.lightAppearance : lightAppearance.darkAppearance;
   const colors = tmp.colors;
-  const mapped = colors.map((hex) => "" + hex.hex + " " + hex.stop + "%");
+  mapped = colors.map((hex) => "" + hex.hex + " " + hex.stop + "%");
   return "linear-gradient(" + tmp.angle + "deg, " + mapped.join(", ") + ")";
 };
 export const getSingleColorGuildThemeGradientColors = function getSingleColorGuildThemeGradientColors(first, theme) {
   const tmp2 = theme === ThemeTypes.LIGHT ? { minTone: 55, maxTone: 75 } : { minTone: 15, maxTone: 35 };
   const minTone = tmp2.minTone;
-  const obj = n(first);
+  const obj = nDefault(first);
   const result = obj.set("hsl.l", (minTone + (Math.max(15, Math.min(75, 100 * obj.get("hsl.l"))) - 15) / 60 * (tmp2.maxTone - minTone)) / 100);
   const hexResult = result.hex();
-  const obj3 = n(hexResult);
+  const obj3 = nDefault(hexResult);
   let num = -0.2;
   if (theme === ThemeTypes.LIGHT) {
     num = 0.2;
@@ -81,25 +82,25 @@ export const getSingleColorGuildThemeGradientColors = function getSingleColorGui
   return items;
 };
 export const getRandomSingleColorGuildTheme = function getRandomSingleColorGuildTheme() {
-  const diff = items.COLOR_PALETTE.length - 1;
-  const tmp2 = items.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
+  const diff = items21.COLOR_PALETTE.length - 1;
+  const tmp2 = items21.COLOR_PALETTE[Math.floor(Math, Math.random(Math) * (diff + 1))];
   const obj = { color: null, baseMix: null };
-  const bound = Math.min(45, Math.round(100 * n(tmp2).get("hsl.l")));
-  const obj2 = n(tmp2);
-  const result = n(tmp2).set("hsl.l", Math.max(0.15, Math.min(0.75, bound / 100)));
-  const obj3 = n(tmp2);
+  const bound = Math.min(45, Math.round(100 * nDefault(tmp2).get("hsl.l")));
+  const obj2 = nDefault(tmp2);
+  const result = nDefault(tmp2).set("hsl.l", Math.max(0.15, Math.min(0.75, bound / 100)));
+  const obj3 = nDefault(tmp2);
   const hexResult = result.hex();
-  const result1 = n(result.hex()).set("hsl.s", 0.4);
+  const result1 = nDefault(result.hex()).set("hsl.s", 0.4);
   obj[0] = result1.hex();
   obj[1] = Math.floor(Math.random() * 11) + 70;
   return obj;
 };
 export const getSaturationPinnedColor = function getSaturationPinnedColor(arg0) {
-  const result = n(arg0).set("hsl.s", 0.4);
+  const result = nDefault(arg0).set("hsl.s", 0.4);
   return result.hex();
 };
 export const getToneAdjustedColor = function getToneAdjustedColor(arg0, arg1) {
-  const result = n(arg0).set("hsl.l", Math.max(0.15, Math.min(0.75, arg1 / 100)));
+  const result = nDefault(arg0).set("hsl.l", Math.max(0.15, Math.min(0.75, arg1 / 100)));
   return result.hex();
 };
 export const getGuildThemeToneRange = function getGuildThemeToneRange(arg0) {
@@ -108,11 +109,11 @@ export const getGuildThemeToneRange = function getGuildThemeToneRange(arg0) {
 export const getThemeAdjustedToneColor = function getThemeAdjustedToneColor(arg0, arg1) {
   const tmp = arg1 === ThemeTypes.LIGHT ? { minTone: 55, maxTone: 75 } : { minTone: 15, maxTone: 35 };
   const minTone = tmp.minTone;
-  const obj = n(arg0);
+  const obj = nDefault(arg0);
   const result = obj.set("hsl.l", (minTone + (Math.max(15, Math.min(75, 100 * obj.get("hsl.l"))) - 15) / 60 * (tmp.maxTone - minTone)) / 100);
   return result.hex();
 };
 export const getHueAdjustedColor = function getHueAdjustedColor(arg0, arg1) {
-  const result = n(arg0).set("hsl.h", arg1);
+  const result = nDefault(arg0).set("hsl.h", arg1);
   return result.hex();
 };

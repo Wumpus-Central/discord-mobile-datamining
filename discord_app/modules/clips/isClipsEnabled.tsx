@@ -1,10 +1,10 @@
 // discord_app/modules/clips/isClipsEnabled.tsx
-import _migrateDefaultStorage from "_migrateDefaultStorage";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { apexExperiment } from "ClipsExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import apexExperiment from "apexExperiment" /* 4527 */;
+import closure_2 from "_migrateDefaultStorage" /* 4503 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/clips/isClipsEnabled.tsx");
 
 export const isClipsEnabled = function isClipsEnabled() {
   let decoupledClipsEnabled = apexExperiment.areClipsAvailable();
@@ -19,10 +19,10 @@ export const isClipsEnabled = function isClipsEnabled() {
 export const useIsClipsEnabled = function useIsClipsEnabled() {
   let isClipsAvailable = apexExperiment.useIsClipsAvailable();
   const obj = apexExperiment;
-  const items = [_migrateDefaultStorage];
+  const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => store.getState().clipsSettings.clipsEnabled);
   const obj2 = initialize;
-  const items1 = [_migrateDefaultStorage];
+  const items1 = [closure_2];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getState().clipsSettings.decoupledClipsEnabled);
   if (isClipsAvailable) {
     isClipsAvailable = stateFromStores;
@@ -52,10 +52,10 @@ export const useIsDecoupledClipsEnabled = function useIsDecoupledClipsEnabled() 
   let isClipsAvailable = apexExperiment.useIsClipsAvailable();
   const obj = apexExperiment;
   const tmp = require;
-  const items = [_migrateDefaultStorage];
+  const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => store.getState().clipsSettings.clipsEnabled);
   const obj2 = initialize;
-  const items1 = [_migrateDefaultStorage];
+  const items1 = [closure_2];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getState().clipsSettings.decoupledClipsEnabled);
   if (isClipsAvailable) {
     isClipsAvailable = stateFromStores;

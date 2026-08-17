@@ -1,24 +1,15 @@
 // discord_app/modules/guild_automod/AutomodRuleUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import { getRuleCountByTriggerType } from "withEqualityFn";
-import AutomodEventType from "AutomodEventType";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { buildCommand } from "../application_commands/ApplicationCommandUtils.tsx";
-import { getRuleDefaultActionsFromConfig } from "AutomodActionUtils.tsx";
-import { AutomodTriggerType } from "AutomodTriggerConfigs.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import buildCommand from "buildCommand" /* 5245 */;
+import AutomodTriggerType from "AutomodTriggerType" /* 16764 */;
+import getRuleDefaultActionsFromConfig from "getRuleDefaultActionsFromConfig" /* 16765 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import { getRuleCountByTriggerType } from "withEqualityFn" /* 16762 */;
+import AutomodEventType from "AutomodEventType" /* 11042 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
-({ AutomodTriggerType: c4, MAX_KEYWORDS_PER_KEYWORD_FILTER: c5, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6, MAX_CHARACTERS_PER_KEYWORD: error, MIN_CHARACTERS_PER_KEYWORD: metroImportAll, MIN_REGEX_PATTERN_LENGTH: c9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: unpackModuleId, AutomodEventType: closure_12 } = AutomodEventType);
-const result = require("AutomodEventType").fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
+require = arg1;
+({ AutomodTriggerType: c4, MAX_KEYWORDS_PER_KEYWORD_FILTER: c5, MAX_REGEX_PATTERNS_PER_KEYWORD_FILTER: closure_6, MAX_CHARACTERS_PER_KEYWORD: error, MIN_CHARACTERS_PER_KEYWORD: closure_8, MIN_REGEX_PATTERN_LENGTH: c9, MAX_REGEX_PATTERN_LENGTH: c10, AutomodActionType: unpackModuleId, AutomodEventType: closure_12 } = AutomodEventType);
+const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodRuleUtils.tsx");
 
 export const getNewAutomodRuleMockId = function getNewAutomodRuleMockId(arg0, arg1) {
   return "" + arg0 + "-" + arg1 + "-new-rule";
@@ -90,7 +81,7 @@ export const createDefaultRule = function createDefaultRule(arg0, arg1) {
   if (obj5.isSnowflake(str)) {
     const _Error = Error;
     const intl = tmp(1236).intl;
-    const error = new Error(intl.string(tmp(1236).t["A/nX8D"]));
+    error = new Error(intl.string(tmp(1236).t["A/nX8D"]));
     throw error;
   } else {
     const tmp7 = getRuleCountByTriggerType(arg0, arg1);
@@ -108,7 +99,7 @@ export const validateKeywordsOrThrow = function validateKeywordsOrThrow(arr) {
     const intl = getSystemLocale.intl;
     const obj = { limit: null };
     obj[0] = arg1;
-    const error = new Error(intl.formatToPlainString(getSystemLocale.t.mee4qd, obj));
+    error = new Error(intl.formatToPlainString(getSystemLocale.t.mee4qd, obj));
     throw error;
   } else {
     const item = arr.forEach((keyword) => {
@@ -124,7 +115,7 @@ export const validateRegexPatternsOrThrow = function validateRegexPatternsOrThro
     const intl = getSystemLocale.intl;
     const obj = { limit: null };
     obj[0] = tmp;
-    const error = new Error(intl.formatToPlainString(getSystemLocale.t.tDjhF1, obj));
+    error = new Error(intl.formatToPlainString(getSystemLocale.t.tDjhF1, obj));
     throw error;
   } else {
     const item = arr.forEach((regex) => {
@@ -152,7 +143,7 @@ export const validateRuleBeforeSaveOrThrow = function validateRuleBeforeSaveOrTh
       if (0 === regexPatterns.length) {
         const _Error4 = Error;
         const intl4 = getSystemLocale.intl;
-        const error = new Error(intl4.string(getSystemLocale.t.kz2Av3));
+        error = new Error(intl4.string(getSystemLocale.t.kz2Av3));
         throw error;
       }
     }

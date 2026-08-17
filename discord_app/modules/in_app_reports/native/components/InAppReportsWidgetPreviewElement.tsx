@@ -1,35 +1,33 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PersonalWidgetText } from "../../../user_profile/native/UserProfilePersonalWidgetCard.tsx";
-import { useSharedStyles } from "../../../user_profile/native/UserProfileSharedStyles.tsx";
-import { isFieldEmpty } from "../../../user_profile/UserProfilePersonalWidget.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import isFieldEmpty from "isFieldEmpty" /* 5375 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
+import PersonalWidgetTextDefault from "PersonalWidgetText" /* 12291 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { alignSelf: "stretch", marginHorizontal: 16, marginBottom: 16 }, title: { lineHeight: 16, marginBottom: 8 }, card: null };
-createCacheKey = { backgroundColor: require("Themes").colors.USER_PROFILE_CONTAINER_BACKGROUND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.USER_PROFILE_CONTAINER_BACKGROUND };
 createCacheKey[2] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsWidgetPreviewElement.tsx");
 
 export default function WidgetPreview(arg0) {
-  let userId;
-  let widget;
   ({ widget, userId } = arg0);
-  const tmp = createCacheKey();
-  const tmp4 = useSharedStyles();
+  const tmp = callback3();
+  const tmp4 = useSharedStylesDefault();
   if (widget instanceof isFieldEmpty.UserProfilePersonalWidget) {
     let obj = { userId: null, widget: null, disableInteraction: true, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
     const items = [tmp4.card, tmp.card];
     obj[3] = items;
-    let tmp6 = callback(PersonalWidgetText, obj);
+    let tmp6 = callback(PersonalWidgetTextDefault, obj);
   } else {
     tmp6 = null;
     if (tmp5Result.isGameWidget(widget)) {
@@ -47,7 +45,7 @@ export default function WidgetPreview(arg0) {
   }
   let tmp9 = null;
   if (null !== tmp6) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.container;
     const obj2 = { style: null, accessibilityRole: "header", variant: "text-xs/bold", children: null };
     obj2[0] = tmp.title;

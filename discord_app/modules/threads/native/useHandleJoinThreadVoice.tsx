@@ -1,12 +1,12 @@
 // discord_app/modules/threads/native/useHandleJoinThreadVoice.tsx
-import patchThread from "patchThread";
-import storeThread from "storeThread";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "storeThread" /* 4023 */;
 
 const require = arg1;
-const result = require("shouldShowMembershipVerificationGate").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/native/useHandleJoinThreadVoice.tsx");
 
 export default function useHandleJoinThreadVoice(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return callback(function*() {
     if (c3 === 2) {
       c3 = 3;
@@ -34,24 +34,24 @@ export default function useHandleJoinThreadVoice(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             let guildId = tmp5;
             guildId = undefined;
-            guildId = outer1_0.getGuildId();
+            guildId = closure_1_0.getGuildId();
             if (null != guildId) {
-              let obj8 = outer1_0(c2[2]);
+              let obj8 = closure_1_0(c2[2]);
               if (obj8.shouldShowMembershipVerificationGate(guildId)) {
                 c2 = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0(c2[4])(c2[3], c2.paths);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(c2[4])(c2[3], c2.paths);
                 return obj1;
               }
             }
             c2 = 2;
             c3 = 1;
             let obj2 = { value: null, done: false };
-            obj2[0] = outer1_1(c2[5]).unarchiveThreadIfNecessary(outer1_0.id);
+            obj2[0] = closure_1_1(c2[5]).unarchiveThreadIfNecessary(closure_1_0.id);
             return obj2;
           }
         } else if (1 === tmp5) {
@@ -79,8 +79,8 @@ export default function useHandleJoinThreadVoice(arg0) {
               const obj5 = { value: null, done: true };
               obj5[0] = arg1;
               return obj5;
-            } else if (!outer1_4.hasJoined(guildId.id)) {
-              obj2 = outer1_1(c2[5]);
+            } else if (!closure_1_4.hasJoined(guildId.id)) {
+              obj2 = closure_1_1(c2[5]);
               c2 = 3;
               c3 = 1;
               const obj6 = { value: null, done: false };
@@ -113,7 +113,7 @@ export default function useHandleJoinThreadVoice(arg0) {
           c2 = 4;
           c3 = 1;
           obj8 = { value: null, done: false };
-          obj8[0] = outer1_0(c2[4])(c2[6], c2.paths);
+          obj8[0] = closure_1_0(c2[4])(c2[6], c2.paths);
           return obj8;
         }
       } catch (tmp29) {

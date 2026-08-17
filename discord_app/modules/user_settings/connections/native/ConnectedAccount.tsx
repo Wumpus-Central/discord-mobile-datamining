@@ -1,56 +1,47 @@
 // discord_app/modules/user_settings/connections/native/ConnectedAccount.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import combined from "combined";
-import importAllResult from "getPlatformUserUrl";
-import { View } from "Text";
-import set from "set";
-import closure_8 from "createGuildRecordFromRust";
-import ME from "ME";
-import { MetadataFields } from "OperatorTypes";
-import jsxProd from "ManaContext";
-import createCacheKey from "createCacheKey";
-import Button from "Button";
-import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/08143_registerAsset.js";
-import { callback } from "../../../../actions/ConnectedAccountsActionCreators.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../../../lib/Platforms.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
-import { PlayStationTwoWayLinkUpsell } from "two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx";
-import { XboxTwoWayLinkUpsell } from "two_way_link/xbox/XboxTwoWayLinkUpsell.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button2 from "Button" /* 1297 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import Text from "Text" /* 4734 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import callbackDefault from "callback" /* 5223 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import XboxTwoWayLinkUpsell from "XboxTwoWayLinkUpsell" /* 14322 */;
+import PlayStationTwoWayLinkUpsell from "PlayStationTwoWayLinkUpsell" /* 14325 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "set" /* 5221 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
+import { MetadataFields } from "OperatorTypes" /* 5225 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import Button from "Button" /* 1297 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let Fonts;
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function Integration(integration) {
-  let c1;
-  let tmp5;
   integration = integration.integration;
-  let importDefault;
+  importDefault = undefined;
   let obj = integration(4661);
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createCacheKey);
   [tmp5, c1] = callback2(importAllResult.useState(), 2);
-  let obj1 = integration(589);
-  const items = [set];
+  obj1 = integration(589);
+  const items = [closure_7];
   const items1 = [integration.id];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_7.isJoining(integration.id), items1);
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.isJoining(integration.id), items1);
   let obj2 = integration(589);
   const items2 = [closure_8];
   const items3 = [integration.guild.id];
-  const tmp7 = null == obj2.useStateFromStores(items2, () => outer1_8.getGuild(integration.guild.id), items3);
+  const tmp7 = null == obj2.useStateFromStores(items2, () => closure_1_8.getGuild(integration.guild.id), items3);
   if (!tmp7) {
     let tmp12 = tmp5 === integration.id;
     if (tmp12) {
@@ -68,15 +59,15 @@ function Integration(integration) {
     obj2[0] = integration.guild;
     obj2[1] = tmp(7188).GuildIconSizes.SMALL;
     obj2[2] = legacyClassComponentStyles.integrationGuildIcon;
-    const items4 = [callback3(GuildIconSizes, obj2), , ];
+    const items4 = [callback3(GuildIconSizesDefault, obj2), , ];
     const obj3 = { style: null, children: null };
     obj3[0] = legacyClassComponentStyles.integrationTextRowContainer;
     const obj4 = { lineClamp: 1, variant: "text-sm/medium", children: null };
     obj4[2] = integration.guild.name;
     const items5 = [callback3(tmp(4734).Text, obj4), ];
     const tmp16 = callback3;
-    const tmp18 = GuildIconSizes;
-    const value = getPlatformUserUrl.get(integration.type);
+    const tmp18 = GuildIconSizesDefault;
+    const value = getPlatformUserUrlDefault.get(integration.type);
     let platformUserUrl;
     if (value != null) {
       const getPlatformUserUrl = value.getPlatformUserUrl;
@@ -99,7 +90,7 @@ function Integration(integration) {
     obj6[0] = legacyClassComponentStyles.integrationJoinButton;
     let obj7 = { size: "sm", variant: "secondary", onPress: null, disabled: null, text: null };
     obj7[2] = function onPress() {
-      _undefined(outer1_2[13]).joinServer(integration.id, () => {
+      _undefined(closure_1_2[13]).joinServer(integration.id, () => {
         callback(id.id);
       });
     };
@@ -132,29 +123,29 @@ createCacheKey = { platformIcon: { marginRight: 4 }, connectedApplicationIdentit
 createCacheKey = { borderRadius: null, marginRight: 4 };
 createCacheKey[0] = Button.getIconSize(require("Button").Icon.Sizes.LARGE);
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginRight: 10, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[2] = { marginRight: 10, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[3] = { marginHorizontal: 8, marginVertical: 4 };
-let obj1 = { marginRight: 10, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[4] = { borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-Button = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS };
+let obj1 = { marginRight: 10, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[4] = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+Button = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopLeftRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopRightRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
 createCacheKey[5] = Button;
 createCacheKey[6] = { marginTop: 8, gap: 8 };
-let obj2 = { borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
-createCacheKey[7] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
+let obj2 = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden" };
+createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
 createCacheKey[8] = { alignItems: "center", flexDirection: "row" };
 createCacheKey[9] = { alignItems: "flex-start", flexDirection: "column", flex: 1 };
 createCacheKey[10] = { alignItems: "center", marginTop: 4, marginBottom: 8 };
 createCacheKey[11] = { marginVertical: 0 };
 createCacheKey[12] = { margin: 8 };
 createCacheKey[13] = { alignSelf: "center", marginEnd: 8, marginStart: 8 };
-let obj4 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
-createCacheKey[14] = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
+let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginTop: 12, paddingVertical: 4, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, flexDirection: "column", alignItems: "center" };
+createCacheKey[14] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
 createCacheKey[15] = { marginTop: 8 };
-let obj5 = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
+let obj5 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, height: 1, marginVertical: 8, marginHorizontal: 16 };
 let obj6 = { marginTop: 16 };
-let merged = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_DEFAULT, 16));
+let merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 16));
 createCacheKey[16] = obj6;
-createCacheKey[17] = { display: "flex", flexDirection: "row", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
+createCacheKey[17] = { display: "flex", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
 createCacheKey[18] = { display: "flex", flexDirection: "row", flexWrap: "wrap", alignItems: "center", alignContent: "flex-start", paddingRight: 8, flexShrink: 1 };
 createCacheKey[19] = { alignSelf: "center", marginLeft: "auto" };
 createCacheKey[20] = { opacity: 0.5 };
@@ -164,32 +155,32 @@ createCacheKey[23] = { marginRight: 4 };
 createCacheKey[24] = { flexBasis: "100%", height: 12 };
 createCacheKey[25] = { paddingHorizontal: 16, flexGrow: 0, marginRight: 12 };
 createCacheKey[26] = { paddingHorizontal: 16, flexGrow: 0 };
-let obj7 = { display: "flex", flexDirection: "row", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
-createCacheKey[27] = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: require("Themes").radii.round };
+let obj7 = { display: "flex", flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginLeft: 16, marginRight: 16 };
+createCacheKey[27] = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round };
 createCacheKey[28] = { marginTop: 8 };
 createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class ConnectedAccount extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    f111401 = applyArgumentsResult;
+    closure_0 = applyArgumentsResult;
     obj = { isVisible: 1 === applyArgumentsResult.props.account.visibility, isMetadataVisible: 1 === applyArgumentsResult.props.account.metadataVisibility, inProgressVisibility: null, inProgressMetadataVisibility: null, showActivity: applyArgumentsResult.props.account.showActivity, friendSync: applyArgumentsResult.props.account.friendSync, metadataRefreshing: false, metadataAlreadyRefreshed: false };
     applyArgumentsResult.state = obj;
     applyArgumentsResult.handleDisconnect = function handleDisconnect() {
-      const tmp2 = outer1_16(lib.context);
+      const tmp2 = closure_1_16(lib.context);
       const account = lib.props.account;
-      let obj = applyArgumentsResult(outer1_2[19]);
+      let obj = applyArgumentsResult(closure_1_2[19]);
       const value = obj.get(account.type);
-      const intl = lib(outer1_2[16]).intl;
+      const intl = lib(closure_1_2[16]).intl;
       obj = { provider: value.name };
-      const formatResult = intl.format(lib(outer1_2[16]).t.VgqIPj, obj);
+      const formatResult = intl.format(lib(closure_1_2[16]).t.VgqIPj, obj);
       let tmp8;
-      if (applyArgumentsResult(outer1_2[22])(account)) {
+      if (applyArgumentsResult(closure_1_2[22])(account)) {
         obj = { children: null };
-        const obj1 = { style: null, variant: "text-md/medium", children: null };
+        obj1 = { style: null, variant: "text-md/medium", children: null };
         obj1[0] = tmp2.alertBodyText;
         obj1[2] = formatResult;
-        const items = [outer1_14(tmp6(tmp4[17]).Text, obj1), ];
+        const items = [closure_1_14(tmp6(tmp4[17]).Text, obj1), ];
         const obj2 = { style: null, children: null };
         obj2[0] = tmp2.alertInfoBox;
         let tmp3Result = tmp3(tmp4[23]);
@@ -197,51 +188,51 @@ class ConnectedAccount extends PureComponent {
         const obj3 = { platformName: null };
         obj3[0] = value.name;
         obj2[1] = intl2.format(tmp6(tmp4[16]).t.COW3Xn, obj3);
-        items[1] = outer1_14(tmp3Result, obj2);
+        items[1] = closure_1_14(tmp3Result, obj2);
         obj[0] = items;
-        tmp8 = outer1_15(outer1_6, obj);
+        tmp8 = closure_1_15(closure_1_6, obj);
       }
       tmp3Result = tmp3(tmp4[24]);
       const obj4 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
       const intl3 = tmp6(tmp4[16]).intl;
-      obj4[0] = intl3.formatToPlainString(lib(outer1_2[16]).t.U5x12f, { name: value.name });
+      obj4[0] = intl3.formatToPlainString(lib(closure_1_2[16]).t.U5x12f, { name: value.name });
       obj4[1] = formatResult;
       const intl4 = tmp6(tmp4[16]).intl;
-      obj4[2] = intl4.string(lib(outer1_2[16]).t["ETE/oC"]);
+      obj4[2] = intl4.string(lib(closure_1_2[16]).t["ETE/oC"]);
       obj4[3] = tmp8;
       const intl5 = tmp6(tmp4[16]).intl;
-      obj4[4] = intl5.string(lib(outer1_2[16]).t.ppppRJ);
+      obj4[4] = intl5.string(lib(closure_1_2[16]).t.ppppRJ);
       obj4[5] = lib.handleConfirmDisconnectAccount;
-      obj4[6] = applyArgumentsResult(outer1_2[25]).Colors.RED;
+      obj4[6] = applyArgumentsResult(closure_1_2[25]).Colors.RED;
       tmp3Result.show(obj4);
     };
     applyArgumentsResult.handleConfirmDisconnectAccount = function handleConfirmDisconnectAccount() {
       const account = lib.props.account;
-      applyArgumentsResult(outer1_2[13]).disconnect(account.type, account.id);
+      applyArgumentsResult(closure_1_2[13]).disconnect(account.type, account.id);
     };
-    f111401 = undefined;
+    closure_0 = undefined;
     closure_1 = applyArgumentsResult;
-    f111401 = RowSwitch((arg0) => {
-      let closure_0 = arg0;
-      let c4 = 0;
-      let c5 = 0;
-      let c3 = 0;
+    closure_0 = closure_3((arg0) => {
+      closure_0 = arg0;
+      c4 = 0;
+      c5 = 0;
+      c3 = 0;
       return (function*(arg0) {
-        let closure_2 = tmp3;
-        const account = outer1_1.props.account;
+        closure_2 = tmp3;
+        const account = closure_1_1.props.account;
         let num5 = 0;
         if (closure_0) {
           num5 = 1;
         }
         if (closure_0) {
           if (!account.verified) {
-            const obj1 = { inProgressVisibility: null };
+            obj1 = { inProgressVisibility: null };
             obj1[0] = num5;
-            outer1_1.setState(obj1);
+            closure_1_1.setState(obj1);
             const obj2 = { platformType: null };
             obj2[0] = account.type;
-            outer1_1(outer1_2[26])(obj2);
-            let c5 = 3;
+            closure_1_1(closure_1_2[26])(obj2);
+            c5 = 3;
             const obj3 = { value: null, done: true };
             obj3[0] = undefined;
             return obj3;
@@ -249,9 +240,9 @@ class ConnectedAccount extends PureComponent {
         }
         const obj4 = { isVisible: null };
         obj4[0] = closure_0;
-        outer1_1.setState(obj4);
-        let c3 = 1;
-        let obj6 = outer1_1(outer1_2[13]);
+        closure_1_1.setState(obj4);
+        c3 = 1;
+        let obj6 = closure_1_1(closure_1_2[13]);
         yield obj6.setVisibility(account.type, account.id, num5);
         if (1 === tmp7) {
           c3 = 0;
@@ -273,35 +264,35 @@ class ConnectedAccount extends PureComponent {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
     };
-    f111401 = undefined;
+    closure_0 = undefined;
     closure_1 = applyArgumentsResult;
-    f111401 = RowSwitch((arg0) => {
-      let closure_0 = arg0;
-      let c4 = 0;
-      let c5 = 0;
-      let c3 = 0;
+    closure_0 = closure_3((arg0) => {
+      closure_0 = arg0;
+      c4 = 0;
+      c5 = 0;
+      c3 = 0;
       return (function*(arg0) {
-        let closure_2 = tmp3;
-        const account = outer1_1.props.account;
+        closure_2 = tmp3;
+        const account = closure_1_1.props.account;
         let num5 = 0;
         if (closure_0) {
           num5 = 1;
         }
         if (closure_0) {
           if (!account.verified) {
-            const obj1 = { inProgressMetadataVisibility: null };
+            obj1 = { inProgressMetadataVisibility: null };
             obj1[0] = num5;
-            outer1_1.setState(obj1);
+            closure_1_1.setState(obj1);
             const obj2 = { platformType: null };
             obj2[0] = account.type;
-            outer1_1(outer1_2[26])(obj2);
-            let c5 = 3;
+            closure_1_1(closure_1_2[26])(obj2);
+            c5 = 3;
             const obj3 = { value: null, done: true };
             obj3[0] = undefined;
             return obj3;
@@ -309,9 +300,9 @@ class ConnectedAccount extends PureComponent {
         }
         const obj4 = { isMetadataVisible: null };
         obj4[0] = closure_0;
-        outer1_1.setState(obj4);
-        let c3 = 1;
-        let obj6 = outer1_1(outer1_2[13]);
+        closure_1_1.setState(obj4);
+        c3 = 1;
+        let obj6 = closure_1_1(closure_1_2[13]);
         yield obj6.setMetadataVisibility(account.type, account.id, num5);
         if (1 === tmp7) {
           c3 = 0;
@@ -333,33 +324,33 @@ class ConnectedAccount extends PureComponent {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
     };
-    f111401 = undefined;
+    closure_0 = undefined;
     closure_1 = applyArgumentsResult;
-    f111401 = RowSwitch((arg0) => {
-      let closure_0 = arg0;
-      let c4 = 0;
-      let c5 = 0;
-      let c3 = 0;
+    closure_0 = closure_3((arg0) => {
+      closure_0 = arg0;
+      c4 = 0;
+      c5 = 0;
+      c3 = 0;
       return (function*(arg0) {
-        let closure_2 = tmp3;
-        const account = outer1_1.props.account;
-        const obj1 = { friendSync: null };
+        closure_2 = tmp3;
+        const account = closure_1_1.props.account;
+        obj1 = { friendSync: null };
         obj1[0] = closure_0;
-        outer1_1.setState(obj1);
-        let c3 = 1;
-        yield outer1_1(outer1_2[13]).setFriendSync(account.type, account.id, closure_0);
+        closure_1_1.setState(obj1);
+        c3 = 1;
+        yield closure_1_1(closure_1_2[13]).setFriendSync(account.type, account.id, closure_0);
         if (1 === tmp7) {
           c3 = 0;
           const obj3 = { friendSync: null };
           obj3[0] = !closure_0;
           state.setState(obj3);
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
@@ -374,33 +365,33 @@ class ConnectedAccount extends PureComponent {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
       return applyArgumentsResult;
     };
-    f111401 = undefined;
+    closure_0 = undefined;
     closure_1 = applyArgumentsResult;
-    f111401 = RowSwitch((arg0) => {
-      let closure_0 = arg0;
-      let c4 = 0;
-      let c5 = 0;
-      let c3 = 0;
+    closure_0 = closure_3((arg0) => {
+      closure_0 = arg0;
+      c4 = 0;
+      c5 = 0;
+      c3 = 0;
       return (function*(arg0) {
-        let closure_2 = tmp3;
-        const account = outer1_1.props.account;
-        const obj1 = { showActivity: null };
+        closure_2 = tmp3;
+        const account = closure_1_1.props.account;
+        obj1 = { showActivity: null };
         obj1[0] = closure_0;
-        outer1_1.setState(obj1);
-        let c3 = 1;
-        yield outer1_1(outer1_2[13]).setShowActivity(account.type, account.id, closure_0);
+        closure_1_1.setState(obj1);
+        c3 = 1;
+        yield closure_1_1(closure_1_2[13]).setShowActivity(account.type, account.id, closure_0);
         if (1 === tmp7) {
           c3 = 0;
           const obj3 = { showActivity: null };
           obj3[0] = !closure_0;
           state.setState(obj3);
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
@@ -415,7 +406,7 @@ class ConnectedAccount extends PureComponent {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
@@ -426,8 +417,6 @@ class ConnectedAccount extends PureComponent {
 }
 const prototype = ConnectedAccount.prototype;
 prototype["componentDidUpdate"] = function componentDidUpdate(account) {
-  let inProgressMetadataVisibility;
-  let inProgressVisibility;
   const self = this;
   account = this.props.account;
   if (account.account !== account) {
@@ -441,14 +430,14 @@ prototype["componentDidUpdate"] = function componentDidUpdate(account) {
       if (null != inProgressVisibility) {
         obj.isVisible = 1 === inProgressVisibility;
         obj.inProgressVisibility = null;
-        obj = callback;
+        obj = callbackDefault;
         obj.setVisibility(account.type, account.id, inProgressVisibility);
       }
       if (null != inProgressMetadataVisibility) {
         obj.isMetadataVisible = 1 === inProgressMetadataVisibility;
         obj.inProgressMetadataVisibility = null;
-        const result = callback.setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
-        const obj2 = callback;
+        const result = callbackDefault.setMetadataVisibility(account.type, account.id, inProgressMetadataVisibility);
+        const obj2 = callbackDefault;
       }
     }
     self.setState(obj);
@@ -476,10 +465,8 @@ prototype["renderVisibilityCheckRow"] = function renderVisibilityCheckRow() {
   return callback3(RowSwitch, obj);
 };
 prototype["renderMetadataVisibilityCheckRow"] = function renderMetadataVisibilityCheckRow() {
-  let isMetadataVisible;
-  let isVisible;
   const self = this;
-  let obj = getPlatformUserUrl;
+  let obj = getPlatformUserUrlDefault;
   const value = obj.get(this.props.account.type);
   let hasMetadata;
   if (value != null) {
@@ -509,7 +496,7 @@ prototype["renderMetadata"] = function renderMetadata() {
     metadata = {};
   }
   let stringResult = dependencyMap;
-  let obj1 = account(5224);
+  obj1 = account(5224);
   const createdAtDate = obj1.getCreatedAtDate(metadata[MetadataFields.CREATED_AT], props.locale);
   const type = account.type;
   if (constants.REDDIT === type) {
@@ -552,8 +539,8 @@ prototype["renderMetadata"] = function renderMetadata() {
   let intl2 = self.state.metadataRefreshing || self.state.metadataAlreadyRefreshed;
   function handleRefresh() {
     self.setState({ metadataRefreshing: true });
-    const obj = self(outer1_2[13]);
-    self(outer1_2[13]).refresh(account.type, account.id).finally(() => {
+    const obj = self(closure_1_2[13]);
+    self(closure_1_2[13]).refresh(account.type, account.id).finally(() => {
       const timerId = setTimeout(() => {
         state.setState({ metadataRefreshing: false, metadataAlreadyRefreshed: true });
       }, 2000);
@@ -657,7 +644,7 @@ prototype["renderMetadata"] = function renderMetadata() {
   }
 };
 prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
-  let obj = getPlatformUserUrl;
+  let obj = getPlatformUserUrlDefault;
   let tmp2 = null;
   if (set.has(obj.get(this.props.account.type).type)) {
     obj = { label: null, value: null, onValueChange: null };
@@ -670,7 +657,7 @@ prototype["renderFriendSyncCheckRow"] = function renderFriendSyncCheckRow() {
   return tmp2;
 };
 prototype["renderActivityCheckRow"] = function renderActivityCheckRow() {
-  let obj = getPlatformUserUrl;
+  let obj = getPlatformUserUrlDefault;
   const value = obj.get(this.props.account.type);
   let tmp3 = null;
   if (set2.has(value.type)) {
@@ -698,7 +685,7 @@ prototype["renderIntegrationsRow"] = function renderIntegrationsRow() {
       const items = [callback3(View, obj), ];
       obj = { style: null, children: null };
       obj[0] = { paddingHorizontal: 16, paddingVertical: 8 };
-      const obj1 = { style: null, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
+      obj1 = { style: null, variant: "eyebrow", color: "mobile-text-heading-primary", children: null };
       obj1[0] = tmp.integrationCategoryLabel;
       const intl = getSystemLocale.intl;
       obj1[3] = intl.string(getSystemLocale.t.fOe3fZ);
@@ -718,7 +705,7 @@ prototype["render"] = function render() {
   const tmp = createCacheKey(this.context);
   const props = this.props;
   const account = props.account;
-  let obj = getPlatformUserUrl;
+  let obj = getPlatformUserUrlDefault;
   const value = obj.get(account.type);
   const migrationData = value.migrationData;
   let migrationExperimentEnabled;
@@ -733,22 +720,20 @@ prototype["render"] = function render() {
   } else {
     name = account.name;
   }
-  obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: null, source: null, disableColor: true };
-  obj[3] = Button.Icon.Sizes.LARGE;
+  obj = { accessible: true, accessibilityLabel: value.name, style: tmp.platformIcon, size: Button2.Icon.Sizes.LARGE, source: null, disableColor: true };
   let obj3 = getAvatarURL;
   let obj4 = AccessibilityAnnouncer;
   const icon = value.icon;
   obj[4] = obj3.makeSource(obj4.isThemeDark(props.theme) ? icon.darkPNG : icon.lightPNG);
-  let tmp7Result = tmp7(Button.Icon, obj);
-  const obj1 = { spacing: 8, direction: "horizontal", align: "center", children: null };
+  let tmp7Result = tmp7(Button2.Icon, obj);
+  obj1 = { spacing: 8, direction: "horizontal", align: "center", children: null };
   const obj2 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl2 = tmp8(1236).intl;
   obj2[1] = intl2.string(getSystemLocale.t["DT39A+"]);
   obj2[2] = self.handleDisconnect;
   obj2[3] = { top: 5, left: 5, bottom: 5, right: 5 };
-  obj3 = { style: tmp.deleteConnectionIcon, source: null };
-  obj3[1] = registerAsset;
-  obj2[4] = closure_14(Button.Icon, obj3);
+  obj3 = { style: tmp.deleteConnectionIcon, source: tmp2(8143) };
+  obj2[4] = closure_14(Button2.Icon, obj3);
   obj1[3] = closure_14(PressableBase.PressableOpacity, obj2);
   tmp7Result = tmp7(tmp8(4733).Stack, obj1);
   const result = self.renderIntegrationsRow();
@@ -773,8 +758,8 @@ prototype["render"] = function render() {
   return closure_14(View, obj4);
 };
 ConnectedAccount.contextType = require("ManaContext").ThemeContext;
-let obj8 = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: require("Themes").radii.round };
-let result = require("noop").fileFinishedImporting("modules/user_settings/connections/native/ConnectedAccount.tsx");
+let obj8 = { paddingVertical: 8, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round };
+let result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectedAccount.tsx");
 
 export default ConnectedAccount;
 export const readStyles = createCacheKey;

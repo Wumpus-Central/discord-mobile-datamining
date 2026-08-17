@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { VerificationListItem } from "../../privacy_and_safety/native/SettingsSecureFramesVerificationsScreen.tsx";
 
 obj = {
@@ -8,17 +11,17 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["5b3FNI"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
+  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
   unsearchable: true,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
+  route: ME.UserSettingsSections.SECURE_FRAMES_VERIFIED_DEVICES,
   getComponent() {
     return VerificationListItem.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/SecureFramesVerifiedDevicesSetting.tsx");
 
 export default route;

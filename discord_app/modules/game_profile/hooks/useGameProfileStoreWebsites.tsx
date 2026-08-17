@@ -1,6 +1,6 @@
 // discord_app/modules/game_profile/hooks/useGameProfileStoreWebsites.tsx
-import noop from "noop";
-import set from "buildSteamStoreUrl";
+import closure_3 from "noop" /* 19 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 let set = new Set(["1402418703554842694", "356877880938070016"]);
@@ -27,7 +27,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
   if (data != null) {
     steamReleaseStatus = data.steamReleaseStatus;
   }
-  const items = [steamWebsiteUrl, websites, id1, steamReleaseStatus, tmp4];
+  items = [steamWebsiteUrl, websites, id1, steamReleaseStatus, tmp4];
   return websites.useMemo(() => {
     let arr = websites;
     if (null != websites) {
@@ -35,9 +35,9 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
         let found;
         if (arr != null) {
           found = arr.filter((category) => {
-            let tmp3 = category.category === outer1_0(outer1_2[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
+            let tmp3 = category.category === closure_1_0(closure_1_2[1]).ThirdPartyGameApplicationWebsiteCategory.EPICGAMES;
             if (tmp3) {
-              tmp3 = !outer1_4.has(closure_2);
+              tmp3 = !closure_1_4.has(closure_2);
             }
             let tmp6 = !tmp3;
             if (!tmp3) {
@@ -46,7 +46,7 @@ export const useGameProfileStoreWebsites = function useGameProfileStoreWebsites(
                 hasItem = closure_4 !== tmp(tmp2[4]).SteamReleaseStatus.RETIRED_ABANDONED;
               }
               if (hasItem) {
-                hasItem = outer1_5.includes(category.category);
+                hasItem = closure_1_5.includes(category.category);
               }
               tmp6 = hasItem;
             }

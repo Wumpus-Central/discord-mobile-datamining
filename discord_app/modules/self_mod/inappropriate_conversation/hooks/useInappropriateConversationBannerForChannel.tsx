@@ -1,11 +1,13 @@
 // discord_app/modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx
-import { SafetyWarningTypes } from "handleConnectionOpen";
-import { useChannelSafetyWarning } from "../../hooks/useChannelSafetyWarning.tsx";
-import { InappropriateConversationExperiment } from "../SelfModInappropriateConversationExperiment.tsx";
-import { useInappropriateConversationWarningsForChannel } from "useInappropriateConversationWarningsForChannel.tsx";
-import { useSafetyAlertsSettingOrDefault } from "useSafetyAlertsSettingOrDefault.tsx";
+import set from "set" /* 2 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10573 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
+import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10577 */;
 
-const result = require("useSafetyAlertsSettingOrDefault").fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
+const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
+const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/hooks/useInappropriateConversationBannerForChannel.tsx");
 
 export const useInappropriateConversationBannerForChannel = function useInappropriateConversationBannerForChannel(channelId, LOCATION_CONTEXT_MOBILE) {
   let obj = InappropriateConversationExperiment;

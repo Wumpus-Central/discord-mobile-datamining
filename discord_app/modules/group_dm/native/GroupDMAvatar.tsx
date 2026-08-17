@@ -1,34 +1,32 @@
 // discord_app/modules/group_dm/native/GroupDMAvatar.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 class FacepileGroupDMAvatar {
   constructor(arg0) {
     ({ size, animate, users, sources, pileSizeOverride } = global);
-    c0 = undefined;
-    c1 = undefined;
+    closure_0 = undefined;
+    closure_1 = undefined;
     ({ style, status, accessible, accessibilityLabel } = global);
-    tmp = jsxs();
-    tmp2 = c0;
-    tmp3 = c1;
+    tmp = closure_8();
+    tmp2 = closure_0;
+    tmp3 = closure_1;
     tmp4 = require("Button").AVATAR_SIZE_MAP[size];
-    c0 = tmp4;
-    obj = noop;
+    closure_0 = tmp4;
+    obj = closure_2;
     items = [];
     items[0] = tmp4;
-    memo = noop.useMemo(() => ({ width: c0, height: c0 }), items);
+    memo = closure_2.useMemo(() => ({ width: closure_0, height: closure_0 }), items);
     if (pileSizeOverride == null) {
-      tmp6 = jsxs;
-      pileSizeOverride = jsxs[size];
+      tmp6 = closure_7;
+      pileSizeOverride = closure_7[size];
     }
     tmp7 = require("Button").AVATAR_SIZE_MAP[pileSizeOverride];
-    c1 = tmp7;
+    closure_1 = tmp7;
     items1 = [, ];
     items1[0] = tmp4;
     items1[1] = tmp7;
@@ -38,15 +36,15 @@ class FacepileGroupDMAvatar {
     items2[1] = style;
     tmp11 = jsx;
     memo1 = obj.useMemo(() => {
-      const result = _undefined2 / 2;
+      const result = table / 2;
       const sum = result + 3;
       const result1 = 2 * sum;
       const sqrtResult = Math.sqrt(2 * Math.pow(sum, 2));
-      const diff = _undefined - result - _undefined2;
+      const diff = callback - result - table;
       const sqrtResult1 = Math.sqrt(2 * Math.pow(diff, 2));
       const sum1 = -sqrtResult - (sum - sqrtResult) - sqrtResult1 + (sqrtResult1 - diff);
-      let obj = { nativeCutouts: null };
-      obj = { shape: _undefined(_undefined2[6]).CutoutShape.Circle, x: _undefined2 - result1 - sum1, y: _undefined2 - result1 - sum1, size: result1 };
+      obj = { nativeCutouts: null };
+      obj = { shape: callback(table[6]).CutoutShape.Circle, x: table - result1 - sum1, y: table - result1 - sum1, size: result1 };
       const items = [obj];
       obj[0] = items;
       return obj;
@@ -67,10 +65,7 @@ class FacepileGroupDMAvatar {
     merged = Object.assign(obj3);
     items3 = [, ];
     items3[0] = tmp11(require("Button").Avatar, obj1);
-    obj4 = { status, statusSizeOverride: null, autoStatusCutout: true, style: null, size: null, guildId: "Array", animate: "heading-md/bold" };
-    obj4[1] = require("Button").StatusSizes.REFRESH_MEDIUM_10;
-    obj4[3] = tmp.secondFace;
-    obj4[4] = pileSizeOverride;
+    obj4 = { status, statusSizeOverride: require("Button").StatusSizes.REFRESH_MEDIUM_10, autoStatusCutout: true, style: tmp.secondFace, size: pileSizeOverride, guildId: "Array", animate: "heading-md/bold" };
     obj4[6] = animate;
     if (null == users) {
       obj5 = { source: null };
@@ -97,24 +92,17 @@ obj[require("Button").AvatarSizes.XSMALL] = require("Button").AvatarSizes.SIZE_1
 obj[require("Button").AvatarSizes.SIZE_16] = require("Button").AvatarSizes.XXSMALL_10;
 obj[require("Button").AvatarSizes.NORMAL] = require("Button").AvatarSizes.XSMALL;
 let closure_8 = createCacheKey.createStyles({ firstFace: { position: "absolute", top: 0, left: 0 }, secondFace: { position: "absolute", bottom: 0, right: 0 } });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
+let result = require("set").fileFinishedImporting("modules/group_dm/native/GroupDMAvatar.tsx");
 
 export default function GroupDMAvatar(pileSizeOverride) {
-  let accessibilityLabel;
-  let accessible;
-  let animate;
-  let channel;
-  let size;
-  let status;
-  let style;
   ({ style, channel } = pileSizeOverride);
   ({ size, animate, status, accessible, accessibilityLabel } = pileSizeOverride);
-  let obj = channel(589);
-  const items = [mergeGuildAvatar];
+  obj = channel(589);
+  const items = [closure_4];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     const recipients = channel.recipients;
     const mapped = recipients.map((arg0) => user.getUser(arg0));
-    return mapped.filter(channel(outer1_1[8]).isNotNullish);
+    return mapped.filter(channel(closure_1_1[8]).isNotNullish);
   });
   if (null == channel.icon) {
     if (0 !== channel.recipients.length) {

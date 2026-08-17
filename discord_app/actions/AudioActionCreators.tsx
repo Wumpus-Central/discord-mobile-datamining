@@ -1,24 +1,24 @@
 // discord_app/actions/AudioActionCreators.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import initialize from "initialize";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import closure_8 from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { SoundOutputChannel } from "SoundOutputChannel";
-import { MediaEngineContextTypes } from "DesktopSources";
-import { dispatcher } from "../Dispatcher.tsx";
-import { snapVolumeToDefault } from "../modules/user_settings/voice/AudioSettingsUtils.tsx";
-import { trackVoiceAndVideoDebuggingSettingsUpdated } from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
-import { _getFilterBlob } from "../modules/video_backgrounds/applyBackgroundOption.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { isPremiumResolution } from "../utils/StreamQualityUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import debounceDefault from "debounce" /* 636 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9656 */;
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9658 */;
+import _getFilterBlob from "_getFilterBlob" /* 9659 */;
+import isPremiumResolution from "isPremiumResolution" /* 9667 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 4538 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { SoundOutputChannel } from "SoundOutputChannel" /* 9655 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 
-let c10;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {
   if (inputDeviceId !== found) {
     const voiceChannelId = store4.getVoiceChannelId();
@@ -35,7 +35,7 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {
     if (null != inputDevices[inputDeviceId]) {
       str2 = tmp6.name;
     }
-    const obj = { device_from_name: null, device_to_name: null, device_type: null, device_is_certified: null, location: null, location_stack: null, voice_channel_type: null, audio_subsystem: null, audio_layer: null };
+    obj = { device_from_name: null, device_to_name: null, device_type: null, device_is_certified: null, location: null, location_stack: null, voice_channel_type: null, audio_subsystem: null, audio_layer: null };
     obj[0] = certifiedDeviceName.getCertifiedDeviceName(inputDeviceId, str2);
     if (null != inputDevices[found]) {
       str = tmp7.name;
@@ -52,15 +52,15 @@ function trackDeviceChanged(inputDevices, inputDeviceId, found, Video, arg4) {
     obj[6] = type;
     obj[7] = audioSubsystem;
     obj[8] = audioLayer;
-    expandEventProperties.track(constants2.MEDIA_DEVICE_CHANGED, obj);
-    const obj3 = expandEventProperties;
+    expandEventPropertiesDefault.track(constants2.MEDIA_DEVICE_CHANGED, obj);
+    const obj3 = expandEventPropertiesDefault;
   }
 }
 ({ InputModes: c10, AnalyticEvents: unpackModuleId } = ME);
-let obj = new require("_detectH265HardwareDecode")("AudioActionCreators");
+let obj = new timestampDefault("AudioActionCreators");
 obj.enableNativeLogger(true);
-let closure_15 = require("debounce")((target_user_id, context, volume) => {
-  let obj = expandEventProperties;
+let closure_15 = debounceDefault((target_user_id, context, volume) => {
+  obj = expandEventPropertiesDefault;
   obj = { target_user_id, context, volume, media_session_id: store3.getMediaSessionId(), rtc_connection_id: store3.getRTCConnectionId() };
   obj.track(constants2.USER_VOLUME_SETTING_UPDATED, obj);
 }, 300);
@@ -78,7 +78,7 @@ obj = {
     return Promise.resolve(true);
   },
   toggleSelfMute(arg0) {
-    let obj = arg0;
+    obj = arg0;
     if (arg0 === undefined) {
       obj = {};
     }
@@ -118,8 +118,8 @@ obj = {
         obj[1] = DEFAULT;
         obj[2] = flag;
         obj[3] = flag2;
-        let dispatchResult = dispatcher.dispatch(obj);
-        const obj3 = dispatcher;
+        let dispatchResult = dispatcherDefault.dispatch(obj);
+        const obj3 = dispatcherDefault;
       } else {
         const self = this;
         dispatchResult = this.enable(true);
@@ -147,7 +147,7 @@ obj = {
       obj.info("Setting self mute", mute);
     }
     obj = { type: "AUDIO_SET_SELF_MUTE", context, mute, playSoundEffect: flag };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setTemporarySelfMute(mute) {
     if (typeof isNotSupported !== "function") {
@@ -162,10 +162,10 @@ obj = {
       obj.info("Setting temporary self mute", mute);
     }
     obj = { type: "AUDIO_SET_TEMPORARY_SELF_MUTE", mute };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   toggleSelfDeaf(arg0) {
-    let obj = arg0;
+    obj = arg0;
     if (arg0 === undefined) {
       obj = {};
     }
@@ -188,7 +188,7 @@ obj = {
       obj = { type: "AUDIO_TOGGLE_SELF_DEAF", context: null, syncRemote: null };
       obj[1] = DEFAULT;
       obj[2] = flag;
-      dispatcher.dispatch(obj);
+      dispatcherDefault.dispatch(obj);
     }
   },
   toggleLocalMute(id, closure_1) {
@@ -199,7 +199,7 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_TOGGLE_LOCAL_MUTE", context: DEFAULT, userId: id };
     obj.dispatch(obj);
   },
@@ -208,7 +208,7 @@ obj = {
     if (arg1 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: DEFAULT, userId: id };
     obj.dispatch(obj);
   },
@@ -227,7 +227,7 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: DEFAULT, userId: closure_0, videoToggleState: MANUAL_ENABLED, persist: flag, isAutomatic: flag2 };
     obj.dispatch(obj);
   },
@@ -235,10 +235,10 @@ obj = {
     if (DEFAULT === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = snapVolumeToDefault;
+    obj = snapVolumeToDefault;
     const snapVolumeToDefaultResult = obj.snapVolumeToDefault(USER, DEFAULT);
     obj = { type: "AUDIO_SET_LOCAL_VOLUME", context: DEFAULT, userId, volume: snapVolumeToDefaultResult };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
     callback2(userId, DEFAULT, snapVolumeToDefaultResult);
   },
   setAudioMixerSettings(audioMixerSettings) {
@@ -246,7 +246,7 @@ obj = {
     if (arg1 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: DEFAULT, settings: audioMixerSettings };
     obj.dispatch(obj);
   },
@@ -255,8 +255,8 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     const audioMixerSettings = store2.getAudioMixerSettings();
-    trackVoiceAndVideoDebuggingSettingsUpdated("spatial_audio_enabled", enabled, audioMixerSettings.enabled, arg1);
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("spatial_audio_enabled", enabled, audioMixerSettings.enabled, arg1);
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: MediaEngineContextTypes.DEFAULT, settings: null };
     obj = {};
     const merged = Object.assign(audioMixerSettings);
@@ -269,12 +269,12 @@ obj = {
     if (arg3 === undefined) {
       DEFAULT = MediaEngineContextTypes.DEFAULT;
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_LOCAL_PAN", context: DEFAULT, userId, left, right };
     obj.dispatch(obj);
   },
   setMode(mode, arg1, DEFAULT) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -292,7 +292,7 @@ obj = {
     let obj2 = store2;
     mode = store2.getMode();
     const modeOptions = store2.getModeOptions(DEFAULT);
-    let obj3 = dispatcher;
+    let obj3 = dispatcherDefault;
     obj = { type: "AUDIO_SET_MODE", context: DEFAULT, mode, options: null };
     const merged = Object.assign(modeOptions);
     const merged1 = Object.assign(obj);
@@ -367,12 +367,12 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_BYPASS_SYSTEM_INPUT_PROCESSING", bypassEnabled, location };
     obj.dispatch(obj);
   },
   setInputVolume(volume) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -380,13 +380,13 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     obj = { type: "AUDIO_SET_INPUT_VOLUME", volume };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
     const voiceChannelId = store4.getVoiceChannelId();
     let channel = null;
     if (null != voiceChannelId) {
       channel = store.getChannel(voiceChannelId);
     }
-    const obj2 = dispatcher;
+    const obj2 = dispatcherDefault;
     const tmp = importDefault;
     obj = { volume, location_stack: obj.analyticsLocations, voice_channel_type: null };
     let type;
@@ -394,10 +394,10 @@ obj = {
       type = channel.type;
     }
     obj[2] = type;
-    expandEventProperties.track(constants2.MEDIA_INPUT_VOLUME_CHANGED, obj);
+    expandEventPropertiesDefault.track(constants2.MEDIA_INPUT_VOLUME_CHANGED, obj);
   },
   setOutputVolume(volume) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -405,13 +405,13 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     obj = { type: "AUDIO_SET_OUTPUT_VOLUME", volume };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
     const voiceChannelId = store4.getVoiceChannelId();
     let channel = null;
     if (null != voiceChannelId) {
       channel = store.getChannel(voiceChannelId);
     }
-    const obj2 = dispatcher;
+    const obj2 = dispatcherDefault;
     const tmp = importDefault;
     obj = { volume, location_stack: obj.analyticsLocations, voice_channel_type: null };
     let type;
@@ -419,12 +419,10 @@ obj = {
       type = channel.type;
     }
     obj[2] = type;
-    expandEventProperties.track(constants2.MEDIA_OUTPUT_VOLUME_CHANGED, obj);
+    expandEventPropertiesDefault.track(constants2.MEDIA_OUTPUT_VOLUME_CHANGED, obj);
   },
   setInputDevice(id) {
-    let _location;
-    let analyticsLocations;
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -440,12 +438,10 @@ obj = {
       trackDeviceChanged(store2.getInputDevices(), inputDeviceId, id, "Audio Input", obj);
     }
     obj = { type: "AUDIO_SET_INPUT_DEVICE", id, oldId: inputDeviceId };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setOutputDevice(id) {
-    let _location;
-    let analyticsLocations;
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -461,12 +457,10 @@ obj = {
       trackDeviceChanged(store2.getOutputDevices(), outputDeviceId, id, "Audio Output", obj);
     }
     obj = { type: "AUDIO_SET_OUTPUT_DEVICE", id, oldId: outputDeviceId };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setVideoDevice(found) {
-    let _location;
-    let analyticsLocations;
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -482,10 +476,10 @@ obj = {
       trackDeviceChanged(store2.getVideoDevices(), videoDeviceId, found, "Video", obj);
     }
     obj = { type: "MEDIA_ENGINE_SET_VIDEO_DEVICE", id: found, oldId: videoDeviceId };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setActiveInputProfile(inputProfile) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
@@ -493,51 +487,51 @@ obj = {
       HermesBuiltin.throwTypeError();
     }
     const activeInputProfile = store2.getActiveInputProfile();
-    trackVoiceAndVideoDebuggingSettingsUpdated("active_input_profile", inputProfile, activeInputProfile, obj.analyticsLocations);
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("active_input_profile", inputProfile, activeInputProfile, obj.analyticsLocations);
     const tmp = importDefault;
-    const tmp3 = trackVoiceAndVideoDebuggingSettingsUpdated;
+    const tmp3 = trackVoiceAndVideoDebuggingSettingsUpdatedDefault;
     obj = { type: "AUDIO_SET_ACTIVE_INPUT_PROFILE", inputProfile };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setEchoCancellation(enabled, location) {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_ECHO_CANCELLATION", enabled, location };
     obj.dispatch(obj);
   },
   setSidechainCompression(enabled) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("stream_attenuation_enabled", enabled, store2.getSidechainCompression(), obj.analyticsLocations);
-    const tmp = trackVoiceAndVideoDebuggingSettingsUpdated;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("stream_attenuation_enabled", enabled, store2.getSidechainCompression(), obj.analyticsLocations);
+    const tmp = trackVoiceAndVideoDebuggingSettingsUpdatedDefault;
     obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION", enabled };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setSidechainCompressionStrength(strength) {
-    let obj = arg1;
+    obj = arg1;
     if (arg1 === undefined) {
       obj = {};
     }
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("stream_attenuation_strength", strength, store2.getSidechainCompressionStrength(), obj.analyticsLocations);
-    const tmp = trackVoiceAndVideoDebuggingSettingsUpdated;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("stream_attenuation_strength", strength, store2.getSidechainCompressionStrength(), obj.analyticsLocations);
+    const tmp = trackVoiceAndVideoDebuggingSettingsUpdatedDefault;
     obj = { type: "AUDIO_SET_SIDECHAIN_COMPRESSION_STRENGTH", strength };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setLoopback(loopbackReason, enabled) {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_LOOPBACK", loopbackReason, enabled };
     obj.dispatch(obj);
   },
@@ -545,7 +539,7 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_NOISE_SUPPRESSION", enabled, location };
     obj.dispatch(obj);
   },
@@ -553,17 +547,17 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_NOISE_CANCELLATION", enabled, location };
     obj.dispatch(obj);
     obj = { type: "AUDIO_SET_NOISE_SUPPRESSION", enabled: !enabled, location };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setAutomaticGainControl(enabled, location) {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_AUTOMATIC_GAIN_CONTROL", enabled, location };
     obj.dispatch(obj);
   },
@@ -575,13 +569,13 @@ obj = {
     attenuateWhileSpeakingSelf = store2.getAttenuateWhileSpeakingSelf();
     attenuateWhileSpeakingOthers = store2.getAttenuateWhileSpeakingOthers();
     if (attenuation !== attenuation) {
-      trackVoiceAndVideoDebuggingSettingsUpdated("global_attenuation_strength", attenuation, attenuation);
+      trackVoiceAndVideoDebuggingSettingsUpdatedDefault("global_attenuation_strength", attenuation, attenuation);
     } else if (attenuateWhileSpeakingSelf !== attenuateWhileSpeakingSelf) {
-      trackVoiceAndVideoDebuggingSettingsUpdated("global_attenuation_for_self_speak_enabled", attenuateWhileSpeakingSelf, attenuateWhileSpeakingSelf);
+      trackVoiceAndVideoDebuggingSettingsUpdatedDefault("global_attenuation_for_self_speak_enabled", attenuateWhileSpeakingSelf, attenuateWhileSpeakingSelf);
     } else if (attenuateWhileSpeakingOthers !== attenuateWhileSpeakingOthers) {
-      trackVoiceAndVideoDebuggingSettingsUpdated("global_attenuation_for_other_speak_enabled", attenuateWhileSpeakingOthers, attenuateWhileSpeakingOthers);
+      trackVoiceAndVideoDebuggingSettingsUpdatedDefault("global_attenuation_for_other_speak_enabled", attenuateWhileSpeakingOthers, attenuateWhileSpeakingOthers);
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_ATTENUATION", attenuation, attenuateWhileSpeakingSelf, attenuateWhileSpeakingOthers };
     obj.dispatch(obj);
   },
@@ -589,8 +583,8 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("quality_of_service_packets_enabled", enabled, store2.getQoS());
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("quality_of_service_packets_enabled", enabled, store2.getQoS());
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_QOS", enabled };
     obj.dispatch(obj);
   },
@@ -598,19 +592,19 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    dispatcher.dispatch({ type: "AUDIO_RESET" });
+    dispatcherDefault.dispatch({ type: "AUDIO_RESET" });
   },
   setSilenceWarning(enabled) {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("silence_warning_enabled", enabled, store2.getEnableSilenceWarning());
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("silence_warning_enabled", enabled, store2.getEnableSilenceWarning());
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_DISPLAY_SILENCE_WARNING", enabled };
     obj.dispatch(obj);
   },
   setDebugLogging(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
       if (dependencyMap === 2) {
         dependencyMap = 3;
@@ -619,7 +613,7 @@ obj = {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -638,12 +632,12 @@ obj = {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp2;
-              outer1_16();
+              closure_0 = tmp2;
+              closure_1_16();
               v0 = 1;
               dependencyMap = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = v0(9658)("debug_logging_enabled", outer1_0, outer1_6.getDebugLogging());
+              obj1 = { value: null, done: false };
+              obj1[0] = v0(9658)("debug_logging_enabled", closure_1_0, closure_1_6.getDebugLogging());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -673,8 +667,8 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("video_hook_enabled", enabled, store2.getVideoHook());
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("video_hook_enabled", enabled, store2.getVideoHook());
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_VIDEO_HOOK", enabled };
     obj.dispatch(obj);
   },
@@ -682,8 +676,8 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("experimental_soundshare_enabled", enabled, store2.getExperimentalSoundshare());
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("experimental_soundshare_enabled", enabled, store2.getExperimentalSoundshare());
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_EXPERIMENTAL_SOUNDSHARE", enabled };
     obj.dispatch(obj);
   },
@@ -691,13 +685,13 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("system_screenshare_picker_enabled", enabled, store2.getUseSystemScreensharePicker());
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("system_screenshare_picker_enabled", enabled, store2.getUseSystemScreensharePicker());
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_USE_SYSTEM_SCREENSHARE_PICKER", enabled };
     obj.dispatch(obj);
   },
   setAudioSubsystem(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
       if (dependencyMap === 2) {
         dependencyMap = 3;
@@ -706,7 +700,7 @@ obj = {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -725,12 +719,12 @@ obj = {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp2;
-              outer1_16();
+              closure_0 = tmp2;
+              closure_1_16();
               v0 = 1;
               dependencyMap = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = v0(9658)("audio_subsystem", outer1_0, outer1_6.getAudioSubsystem());
+              obj1 = { value: null, done: false };
+              obj1[0] = v0(9658)("audio_subsystem", closure_1_0, closure_1_6.getAudioSubsystem());
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -757,10 +751,10 @@ obj = {
     })();
   },
   setVideoEnabled(enabled) {
-    let obj = _getFilterBlob;
+    obj = _getFilterBlob;
     const result = obj.applyInitialVideoBackgroundOption();
     obj = { type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setGoLiveSource(qualityOptions) {
     qualityOptions = undefined;
@@ -768,7 +762,7 @@ obj = {
       qualityOptions = qualityOptions.qualityOptions;
     }
     if (null != qualityOptions) {
-      let obj = isPremiumResolution;
+      obj = isPremiumResolution;
       const preset = qualityOptions.qualityOptions.preset;
       const resolution = qualityOptions.qualityOptions.resolution;
       const frameRate = qualityOptions.qualityOptions.frameRate;
@@ -780,14 +774,14 @@ obj = {
       const result = obj.trackStreamSettingsUpdate(preset, resolution, frameRate, sound);
     }
     obj = { type: "MEDIA_ENGINE_SET_GO_LIVE_SOURCE", settings: qualityOptions };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   },
   setAecDump(enabled) {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    trackVoiceAndVideoDebuggingSettingsUpdated("diagnostic_audio_recording_enabled", enabled, store2.getAecDump());
-    let obj = dispatcher;
+    trackVoiceAndVideoDebuggingSettingsUpdatedDefault("diagnostic_audio_recording_enabled", enabled, store2.getAecDump());
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_AEC_DUMP", enabled };
     obj.dispatch(obj);
   },
@@ -795,13 +789,13 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    dispatcher.dispatch({ type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required: false });
+    dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_INTERACTION_REQUIRED", required: false });
   },
   setEnableHardwareMuteNotice(enabled) {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE", enabled };
     obj.dispatch(obj);
   },
@@ -809,7 +803,7 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_KRISP_SUPPRESSION_LEVEL", level };
     obj.dispatch(obj);
   },
@@ -817,7 +811,7 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "AUDIO_SET_KRISP_MODEL_OVERRIDE", model };
     obj.dispatch(obj);
     if (store2.getNoiseCancellation()) {
@@ -835,16 +829,16 @@ obj = {
     if (typeof isNotSupported !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_SET_OPENH264_ENABLED", enabled };
     obj.dispatch(obj);
   },
   resetMediaEngineSettings(overrides) {
-    let obj = dispatcher;
+    obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_RESET_SETTINGS", overrides };
     return obj.dispatch(obj);
   }
 };
-let result = require("ensureGuildLoaded").fileFinishedImporting("actions/AudioActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/AudioActionCreators.tsx");
 
 export default obj;

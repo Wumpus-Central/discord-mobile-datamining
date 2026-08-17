@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "markAllUserIdListsStale" /* 4030 */;
+import createToggle from "createToggle" /* 10669 */;
 import { IgnoredUsersList } from "../../content_and_social/native/IgnoredUsersList.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   IconComponent: require("EyeSlashIcon").EyeSlashIcon,
   useTitle() {
@@ -14,7 +14,7 @@ createToggle = {
   },
   useDescription: function useAccountIgnoredUsersSettingDescription() {
     let obj = initialize;
-    const items = [markAllUserIdListsStale];
+    const items = [closure_2];
     const stateFromStoresArray = obj.useStateFromStoresArray(items, () => ignoredIDs.getIgnoredIDs());
     const intl = getSystemLocale.intl;
     obj = { numberOfIgnoredUsers: stateFromStoresArray.length };
@@ -30,6 +30,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountIgnoredUsersSetting.tsx");
 
 export default createToggle;

@@ -1,19 +1,14 @@
 // discord_app/modules/profile_customization/native/BioText.tsx
-import noop from "noop";
-import { Pressable } from "get ActivityIndicator";
-import { AnalyticEvents } from "ME";
-import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import Text from "Text" /* 4734 */;
+import closure_3 from "noop" /* 19 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { CHANGELOG_URL } from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function LinkButton(arg0) {
-  let lineClamp;
-  let text;
   ({ lineClamp, text } = arg0);
   const tmp = callback3();
   obj = {
@@ -30,15 +25,11 @@ function LinkButton(arg0) {
   items = ["\n", text];
   return callback2(Pressable, obj);
 }
-({ jsxs: error, jsx: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsxs: error, jsx: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 }, span: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, display: "flex", paddingBottom: 2 }, link: { alignSelf: "stretch", textAlignVertical: "bottom", width: "100%", flexGrow: 1, bottom: -4, position: "relative" } });
-const result = require("ME").fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
+const result = require("set").fileFinishedImporting("modules/profile_customization/native/BioText.tsx");
 
 export default function BioText(lineClamp) {
-  let bio;
-  let placeholder;
-  let textVariant;
-  let userId;
   ({ placeholder, bio } = lineClamp);
   lineClamp = lineClamp.lineClamp;
   ({ userId, textVariant } = lineClamp);
@@ -81,14 +72,14 @@ export default function BioText(lineClamp) {
     if (tmp3) {
       str2 = "text-muted";
     }
-    const obj1 = { children: null };
+    obj1 = { children: null };
     obj[1] = str2;
     obj[2] = lineClamp;
     obj[3] = tmp.span;
     const intl2 = tmp12(tmp6[12]).intl;
     const obj2 = { blogHook: null };
     obj2[0] = function blogHook(text) {
-      return outer1_8(outer1_11, { lineClamp, text }, arg1);
+      return closure_1_8(closure_1_11, { lineClamp, text }, arg1);
     };
     obj[4] = intl2.format(bio(tmp6[12]).t.RCYeBL, obj2);
     items2[1] = closure_8(bio(tmp6[8]).Text, obj, "changelog-cta");

@@ -1,10 +1,12 @@
 // discord_app/modules/quests/QuestHomeRoundtripTracker.tsx
-import { AnalyticEvents } from "ME";
-import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
-import { set } from "../monitoring/MonitoringAgent.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import setDefault from "set" /* 5006 */;
+import set2 from "set" /* 5011 */;
+import _modDef10501 from "module_10501" /* 10501 */;
 
+const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;
 class QuestHomeRoundtripTracker {
 }
@@ -18,19 +20,19 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
   }
 };
 prototype["sendMetric"] = function sendMetric(timeout, duration) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { timeout, duration };
   obj.track(AnalyticEvents.QUEST_HOME_ROUNDTRIP, obj);
   if (Math.random() <= 0.1) {
     obj = { name: null, tags: null };
-    obj[0] = set.MetricEvents.QUEST_HOME_ROUNDTRIP;
+    obj[0] = set2.MetricEvents.QUEST_HOME_ROUNDTRIP;
     const _HermesInternal = HermesInternal;
     const items = ["includes_bounties:" + arg2, ];
     const _HermesInternal2 = HermesInternal;
     items[1] = "timeout:" + timeout;
     obj[1] = items;
-    set.distribution(obj, duration);
-    const tmpResult = set;
+    setDefault.distribution(obj, duration);
+    const tmpResult = setDefault;
   }
 };
 prototype["startTracking"] = function startTracking() {
@@ -78,13 +80,13 @@ prototype["stopTracking"] = function stopTracking() {
       const _Math2 = Math;
       self.sendMetric(flag2, Math.min(rounded, c4), flag);
     }
-    obj2 = DiscordAppState.native;
+    obj2 = _modDef10501;
   }
 };
 prototype["clearTracking"] = function clearTracking() {
   this.clearTimeoutTimer();
   this.startTime = null;
 };
-const result = require("set").fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
+const result = set.fileFinishedImporting("modules/quests/QuestHomeRoundtripTracker.tsx");
 
 export default Object.create(QuestHomeRoundtripTracker.prototype);

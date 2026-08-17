@@ -1,12 +1,11 @@
 // discord_app/modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx
-import initializeState from "initializeState";
+import v1All from "v1" /* 514 */;
+import closure_4 from "initializeState" /* 7453 */;
 
 const require = arg1;
-const result = require("v1").fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/openVideoQuestModal.tsx");
 
 export default function openVideoQuestModal(questId) {
-  let initialStep;
-  let questContentPosition;
   questId = questId.questId;
   const sourceQuestContent = questId.sourceQuestContent;
   ({ questContentPosition, initialStep } = questId);
@@ -23,16 +22,16 @@ export default function openVideoQuestModal(questId) {
       sourceQuestContent(14470)();
     }
   }
-  const v4Result = importAll(514).v4();
+  const v4Result = v1All.v4();
   importAll = v4Result;
-  const obj2 = importAll(514);
+  const obj2 = v1All;
   obj = {
     questId,
     questContentPosition,
     videoSessionId: v4Result,
     initialStep,
     onClose() {
-      let obj = questId(outer1_3[6]);
+      let obj = questId(closure_1_3[6]);
       obj = { questId, sourceQuestContent, videoSessionId: closure_2 };
       return obj.handleVideoQuestModalClose(obj);
     },

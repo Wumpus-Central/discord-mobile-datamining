@@ -1,21 +1,20 @@
 // discord_app/modules/coded_links/MessageCodedLinkManager.tsx
-import queueMessageLinkFetch from "queueMessageLinkFetch";
-import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
-import updateInvite from "updateInvite";
-import "initialize";
-import { trimTrailingPunctuation } from "findCodedLinks.tsx";
+import trimTrailingPunctuationDefault from "trimTrailingPunctuation" /* 4358 */;
+import initializeDefault from "initialize" /* 5038 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleGuildTemplateResolveSuccess" /* 7429 */;
+import closure_5 from "updateInvite" /* 4359 */;
 
 const require = arg1;
 function resolveMessageCodedLinks(content) {
-  const arr = trimTrailingPunctuation(content.content);
+  const arr = trimTrailingPunctuationDefault(content.content);
   let tmp = null != arr;
   if (tmp) {
     tmp = 0 !== arr.length;
   }
   if (tmp) {
     const item = arr.forEach((arg0) => {
-      let code;
-      let type;
       ({ type, code } = arg0);
       if (code(table[4]).CodedLinkType.INVITE === type) {
         let tmpResult = tmp(tmp2[5]);
@@ -46,8 +45,8 @@ function resolveMessageCodedLinks(content) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  if (null == outer1_5.getInvite(c0)) {
-                    let obj1 = v0(outer1_2[6]);
+                  if (null == closure_1_5.getInvite(c0)) {
+                    obj1 = v0(closure_1_2[6]);
                     v0 = 1;
                     c0 = 1;
                     obj1 = { value: null, done: false };
@@ -102,8 +101,8 @@ function resolveMessageCodedLinks(content) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  if (null == outer1_4.getGuildTemplate(c0)) {
-                    let obj1 = v0(outer1_2[7]);
+                  if (null == closure_1_4.getGuildTemplate(c0)) {
+                    obj1 = v0(closure_1_2[7]);
                     v0 = 1;
                     c0 = 1;
                     obj1 = { value: null, done: false };
@@ -178,6 +177,7 @@ function resolveMessageCodedLinks(content) {
     });
   }
 }
+initializeDefault;
 class MessageCodedLinkManager extends tmp6 {
   constructor() {
     tmp3 = new MessageCodedLinkManager(tmp2, tmp, new.target);
@@ -188,7 +188,7 @@ class MessageCodedLinkManager extends tmp6 {
 }
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, MessageCodedLinkManager, importDefault);
 // ThrowIfThisInitialized (0x7c)
-require("setupLoadFromMessageManagerHandlers")(tmp, resolveMessageCodedLinks);
-let result = require("updateInvite").fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
+setupLoadFromMessageManagerHandlersDefault(tmp, resolveMessageCodedLinks);
+let result = require("set").fileFinishedImporting("modules/coded_links/MessageCodedLinkManager.tsx");
 
 export default tmp;

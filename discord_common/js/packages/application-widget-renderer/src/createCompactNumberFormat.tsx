@@ -1,4 +1,6 @@
 // discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx
+import set from "set" /* 2 */;
+
 function toAsciiDigits(arg0, get) {
   let str = "";
   const iter = arg0[Symbol.iterator]();
@@ -15,7 +17,7 @@ function toAsciiDigits(arg0, get) {
   }
   return str;
 }
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/createCompactNumberFormat.tsx");
 
 export const createCompactNumberFormat = function createCompactNumberFormat(stateFromStores) {
   const numberFormat = new Intl.NumberFormat(stateFromStores, { useGrouping: false });
@@ -28,7 +30,7 @@ export const createCompactNumberFormat = function createCompactNumberFormat(stat
     num = num + 1;
   } while (num <= 9);
   const numberFormat1 = new Intl.NumberFormat(stateFromStores, { notation: "compact", compactDisplay: "short" });
-  const map1 = new Map();
+  map1 = new Map();
   return {
     format(arg0) {
       let tmp10;

@@ -1,15 +1,15 @@
 // discord_app/modules/guild_scheduled_events/useSelectStage.tsx
-import initialize from "initialize";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useSelectStage.tsx");
 
 export default function useSelectStage() {
-  const items = [handleConnectionOpen];
+  const items = [closure_6];
   const stateFromStores = _require(first[5]).useStateFromStores(items, () => voiceChannelId.getVoiceChannelId(), []);
   _require = stateFromStores;
   const tmp2 = callback2(React.useState(stateFromStores), 2);
@@ -26,31 +26,31 @@ export default function useSelectStage() {
   }, items1);
   _require = undefined;
   _require = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c6 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c6 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      let initialize = tmp3;
-      let c5 = 1;
+      closure_2 = tmp3;
+      c5 = 1;
       if (closure_1 === closure_1) {
-        const channel = outer2_5.getChannel(tmp31);
+        const channel = closure_2_5.getChannel(tmp31);
         if (null != channel) {
           callback(first[6]).navigateToStage(channel);
           c5 = 0;
-          let c6 = 3;
-          let obj1 = { value: null, done: true };
+          c6 = 3;
+          obj1 = { value: null, done: true };
           obj1[0] = undefined;
           return obj1;
         }
       }
-      outer1_2(closure_1);
+      closure_1_2(closure_1);
       obj1 = callback(first[6]);
       yield obj1.connectOrLurkStage(callback, closure_1);
       if (1 === tmp7) {
         c5 = 0;
-        outer1_2(null);
+        closure_1_2(null);
         c6 = 3;
       } else if (arg0 === 1) {
         c6 = 3;

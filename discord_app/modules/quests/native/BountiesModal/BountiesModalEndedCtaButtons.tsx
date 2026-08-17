@@ -1,23 +1,20 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles(() => {
   let obj = { container: null };
-  obj = { gap: Themes.space.PX_8 };
+  obj = { gap: ThemesDefault.space.PX_8 };
   obj[0] = obj;
   return obj;
 });
 let closure_6 = { code: "function BountiesModalEndedCtaButtonsTsx1(){const{withTiming,visible,timingStandard}=this.__closure;return{opacity:withTiming(visible?1:0,timingStandard)};}" };
-let result = require("Themes").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx");
+let result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalEndedCtaButtons.tsx");
 
 export default function BountiesModalEndedCtaButtons(bounty) {
-  let dependencyMap;
-  let showCloseButton;
   bounty = bounty.bounty;
   let visible = bounty.visible;
   ({ sourceQuestContent: dependencyMap, showCloseButton } = bounty);
@@ -31,14 +28,14 @@ export default function BountiesModalEndedCtaButtons(bounty) {
   let callback;
   let obj = bounty(10687);
   callback = obj.useGetQuestImpressionId();
-  let obj1 = bounty(4115);
+  obj1 = bounty(4115);
   const fn = function y() {
-    let obj = bounty(outer1_2[5]);
+    let obj = bounty(closure_1_2[5]);
     let num = 0;
     if (visible) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, bounty(outer1_2[6]).timingStandard) };
+    obj = { opacity: obj.withTiming(num, bounty(closure_1_2[6]).timingStandard) };
     return obj;
   };
   obj = { withTiming: bounty(4664).withTiming, visible, timingStandard: bounty(4667).timingStandard };
@@ -55,9 +52,9 @@ export default function BountiesModalEndedCtaButtons(bounty) {
     obj1[1] = tmp6.buttonLabel;
     obj1[3] = flag;
     obj1[4] = function onPress() {
-      let obj = bounty(outer1_2[9]);
-      obj = { adContentId: bounty.id, adCreativeType: bounty(outer1_2[10]).AdCreativeType.BOUNTY, cta: bounty.cta };
-      obj = { content: bounty(outer1_2[11]).QuestContent.VIDEO_MODAL_END_CARD, ctaContent: bounty(outer1_2[12]).QuestContentCTA.OPEN_GAME_LINK, impressionId: callback(), sourceQuestContent: closure_2 };
+      let obj = bounty(closure_1_2[9]);
+      obj = { adContentId: bounty.id, adCreativeType: bounty(closure_1_2[10]).AdCreativeType.BOUNTY, cta: bounty.cta };
+      obj = { content: bounty(closure_1_2[11]).QuestContent.VIDEO_MODAL_END_CARD, ctaContent: bounty(closure_1_2[12]).QuestContentCTA.OPEN_GAME_LINK, impressionId: callback(), sourceQuestContent: closure_2 };
       const result = obj.openAdGameLinkDirectly(obj, obj);
     };
     const items1 = [callback(tmp2(4745).Button, obj1), ];

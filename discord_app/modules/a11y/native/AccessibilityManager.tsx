@@ -1,38 +1,36 @@
 // discord_app/modules/a11y/native/AccessibilityManager.tsx
-import AccessibilityFeatureFlags from "AccessibilityFeatureFlags";
-import get_ActivityIndicator from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { AnalyticEvents } from "ME";
-import { SystemTheme } from "SystemThemeState";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { u } from "../../reanimated/utils/updateSharedValueIfChanged.native.tsx";
-import { updateSaturation } from "../../themes/native/updateSaturation.tsx";
-import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
-import { A11Y_FEATURE_MAP } from "AccessibilityPreferencesSharedValue.tsx";
-import { AccessibilityFeatureFlags } from "AccessibilitySystemFeatures.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import setSystemTheme from "setSystemTheme" /* 4222 */;
+import uDefault from "u" /* 10561 */;
+import AccessibilityFeatureFlagsDefault from "AccessibilityFeatureFlags" /* 13811 */;
+import A11Y_FEATURE_MAP from "A11Y_FEATURE_MAP" /* 13812 */;
+import updateSaturation from "updateSaturation" /* 13814 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { SystemTheme } from "SystemThemeState" /* 1305 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ AccessibilityInfo: c4, Appearance: c5 } = get_ActivityIndicator);
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
+let result = require("set").fileFinishedImporting("modules/a11y/native/AccessibilityManager.tsx");
 
 export default {
   init() {
     const self = this;
-    AccessibilityFeatureFlags.init();
+    AccessibilityFeatureFlagsDefault.init();
     this.updateNativeColors();
     this.updateMotionSettings();
-    maybeApplyNoTextColorForLightCustomTheme.addChangeListener(this.updateNativeColors);
-    maybeApplyNoTextColorForLightCustomTheme.addChangeListener(this.updateMotionSettings);
-    let obj = AccessibilityFeatureFlags;
-    const subscription = dispatcher.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
+    closure_6.addChangeListener(this.updateNativeColors);
+    closure_6.addChangeListener(this.updateMotionSettings);
+    let obj = AccessibilityFeatureFlagsDefault;
+    const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", this.updateMotionSettings);
     closure_5.addChangeListener(this.updateSystemAppearance);
     const listener = closure_4.addEventListener("screenReaderChanged", (arg0) => {
       const result = self.updateScreenReaderEnabled(arg0);
     });
-    const obj2 = dispatcher;
-    const subscription1 = dispatcher.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
+    const obj2 = dispatcherDefault;
+    const subscription1 = dispatcherDefault.subscribe("ACCESSIBILITY_COLORBLIND_TOGGLE", () => {
       let obj = callback(table[7]);
       obj = { colorblind_enabled: colorblindMode.colorblindMode };
       obj.track(constants.LOCAL_SETTINGS_UPDATED, obj);
@@ -40,10 +38,10 @@ export default {
     let result = this.startAnnouncementQueue();
   },
   updateNativeColors() {
-    updateSaturation.updateSaturation(maybeApplyNoTextColorForLightCustomTheme.saturation);
+    updateSaturation.updateSaturation(closure_6.saturation);
   },
   updateMotionSettings() {
-    u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { reduceMotion: maybeApplyNoTextColorForLightCustomTheme.useReducedMotion, prefersCrossfades: maybeApplyNoTextColorForLightCustomTheme.systemPrefersCrossfades });
+    uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { reduceMotion: closure_6.useReducedMotion, prefersCrossfades: closure_6.systemPrefersCrossfades });
   },
   checkScreenreaderEnabled() {
     const self = this;
@@ -74,13 +72,13 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp5;
-              let closure_0 = tmp2;
+              closure_1 = tmp5;
+              closure_0 = tmp2;
               closure_0 = undefined;
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_4.isScreenReaderEnabled();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_4.isScreenReaderEnabled();
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -105,7 +103,7 @@ export default {
     })();
   },
   updateScreenReaderEnabled(screenReaderEnabled) {
-    u(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { screenReaderEnabled });
+    uDefault(A11Y_FEATURE_MAP.accessibilityPreferencesSharedValue, { screenReaderEnabled });
   },
   updateSystemAppearance(colorScheme) {
     let DARK = SystemTheme.NO_PREFERENCE;
@@ -125,7 +123,7 @@ export default {
           set.add(success.announcement);
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
-            const AccessibilityAnnouncer = success(outer1_2[12]).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = success(closure_1_2[12]).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(success.announcement);
           }, 150);
         }

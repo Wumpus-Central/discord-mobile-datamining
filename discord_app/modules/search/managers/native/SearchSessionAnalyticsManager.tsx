@@ -1,8 +1,11 @@
 // discord_app/modules/search/managers/native/SearchSessionAnalyticsManager.tsx
-import { SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB as closure_2 } from "SearchEntrypointAnalyticsLocations";
-import "getSession";
-import { SearchTokenTypes } from "../../SearchUtils.tsx";
+import set from "set" /* 2 */;
+import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8506 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+import getSessionDefault from "getSession" /* 11533 */;
 
+let closure_2 = SearchEntrypointAnalyticsLocations.SEARCH_TAB_TO_ANALYTICS_SEARCH_TAB;
+getSessionDefault;
 class SearchSessionAnalyticsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -41,6 +44,6 @@ prototype["setSelectedTab"] = function setSelectedTab(visibleTabs, arg1) {
   const result = selectedTabs.set(SearchTokenTypes.getSearchContextId(visibleTabs), table[arg1]);
 };
 const searchSessionAnalyticsManager = new SearchSessionAnalyticsManager();
-let result = require("SearchTokenTypes").fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");
+let result = set.fileFinishedImporting("modules/search/managers/native/SearchSessionAnalyticsManager.tsx");
 
 export default searchSessionAnalyticsManager;

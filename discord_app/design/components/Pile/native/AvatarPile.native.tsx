@@ -1,32 +1,23 @@
 // discord_app/design/components/Pile/native/AvatarPile.native.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
-import { getListSummaryLabel } from "../../../../utils/ListUtils.tsx";
-import { StaticNativeCutoutAvatarImage } from "../../../void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
-import { SolidCutout } from "../../Icon/native/ClipView.tsx";
-import { Pile } from "Pile.native.tsx";
-import { map } from "PileOverflow.native.tsx";
+import SolidCutout from "SolidCutout" /* 8402 */;
+import Pile from "Pile" /* 11788 */;
+import map from "map" /* 11789 */;
+import getListSummaryLabel from "getListSummaryLabel" /* 11790 */;
+import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12125 */;
+import closure_2 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("StaticNativeCutoutAvatarImage").fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Pile/native/AvatarPile.native.tsx");
 
 export const AvatarPile = function AvatarPile(arg0) {
-  let children;
-  let names;
-  let size;
-  let totalCount;
   ({ totalCount, children } = arg0);
   const Children = React.Children;
   ({ size, names } = arg0);
   const countResult = Children.count(children);
   const tmp4 = StaticNativeCutoutAvatarImage.AVATAR_SIZE_MAP[size];
-  let obj = { "aria-label": null, shape: null, size: null, gap: null, depthX: 0.4, children: null };
-  obj[0] = getListSummaryLabel.getListSummaryLabel(names, totalCount);
-  obj[1] = SolidCutout.CutoutShape.Circle;
-  obj[2] = tmp4;
+  let obj = { "aria-label": getListSummaryLabel.getListSummaryLabel(names, totalCount), shape: SolidCutout.CutoutShape.Circle, size: tmp4, gap: null, depthX: 0.4, children: null };
   let num = 3;
   if (tmp4 <= 40) {
     num = 2;

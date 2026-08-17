@@ -1,19 +1,17 @@
 // discord_app/modules/icymi/native/util/openDetailsActionSheet.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { ICYMIActionCreators } from "../../ICYMIActionCreators.tsx";
-const result = require("ItemDetailsActionSheet").fileFinishedImporting("modules/icymi/native/util/openDetailsActionSheet.tsx");
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import _modDef9057 from "module_9057" /* 9057 */;
+
+const result = set.fileFinishedImporting("modules/icymi/native/util/openDetailsActionSheet.tsx");
 
 export const openDetailsActionSheet = function openDetailsActionSheet(arg0) {
-  let channelId;
-  let guildId;
-  let id;
-  let type;
   ({ id, type } = arg0);
   ({ guildId, channelId } = arg0);
-  ICYMIActionCreators.itemInteracted(id, type, "overflow_menu");
-  const obj = ICYMIActionCreators;
-  ICYMIActionCreators.feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
-  const obj2 = ICYMIActionCreators;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(15714, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
+  _modDef9057.itemInteracted(id, type, "overflow_menu");
+  const obj = _modDef9057;
+  _modDef9057.feedItemActioned({ itemId: id, itemType: type, actionParameters: { actionGestureType: "press", actionTargetElement: "overflow_menu_button", actionIntentType: "open", actionDestinationType: null } });
+  const obj2 = _modDef9057;
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(15714, dependencyMap.paths), "ItemDetailsActionSheet", { guildId, channelId, id });
 };

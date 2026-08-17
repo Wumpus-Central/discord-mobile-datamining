@@ -1,23 +1,24 @@
 // discord_app/modules/media_viewer/native/useVideoControls.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
-import keys from "keys";
-import createCacheKey from "createCacheKey";
+import batchUpdates from "batchUpdates" /* 705 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
+import keys from "keys" /* 644 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-const require = arg1;
+require = arg1;
 keys = keys.create(() => ({ controls: "ct", paused: true }));
 let closure_8 = createCacheKey.createStyles({ slider: { marginBottom: 8 } });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/useVideoControls.tsx");
 
 export default function useVideoControls(arg0, portal) {
   const _require = arg0;
-  const importDefault = arg2;
+  importDefault = arg2;
   let obj = _require(stateFromStores[8]);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
-  stateFromStores = obj.useStateFromStores(items, () => tmp9.useReducedMotion);
+  const items = [closure_5];
+  stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp5 = callback(state.useState(false), 2);
   callback = tmp6;
   const MediaViewerSourcesStore = _require(stateFromStores[9]).MediaViewerSourcesStore;
@@ -26,7 +27,7 @@ export default function useVideoControls(arg0, portal) {
     return spoilerIndexes.has(closure_0);
   });
   const tmp9 = importDefault(stateFromStores[10])(arg0);
-  maybeApplyNoTextColorForLightCustomTheme = tmp9;
+  closure_5 = tmp9;
   let result = null != arg2;
   if (result) {
     result = tmp2(tmp3[11]).supportOverlayVideoControls(portal);
@@ -37,10 +38,10 @@ export default function useVideoControls(arg0, portal) {
     videoURI = portal.videoURI;
   }
   const tmp11 = importDefault(stateFromStores[10])(videoURI);
-  const keys = tmp11;
+  closure_7 = tmp11;
   const items1 = [arg2, videoURI, stateFromStores, tmp11, state, tmp9, arg0];
   const effect = state.useEffect(() => {
-    if (maybeApplyNoTextColorForLightCustomTheme !== closure_0) {
+    if (closure_5 !== closure_0) {
       if (null != tmp) {
         if (null != videoURI) {
           if (closure_7 !== tmp3) {
@@ -50,7 +51,7 @@ export default function useVideoControls(arg0, portal) {
               tmp6 = stateFromStores;
             }
             closure_1.pause(tmp6);
-            tmp6(tmp6);
+            callback2(tmp6);
             const obj = closure_1;
           }
         }
@@ -80,7 +81,7 @@ export const initVideoStateStore = function initVideoStateStore() {
 export const setMuted = function setMuted(arg0) {
   const _require = arg0;
   _batchUpdates.batchUpdates(() => {
-    const useMediaPlayerMutedStore = callback(outer1_2[6]).useMediaPlayerMutedStore;
+    const useMediaPlayerMutedStore = callback(closure_1_2[6]).useMediaPlayerMutedStore;
     useMediaPlayerMutedStore.setState({ isMuted: callback });
   });
 };
@@ -92,11 +93,11 @@ export const toggleMuted = function toggleMuted() {
 };
 export const setVideoStateControls = function setVideoStateControls(videoControls) {
   const _require = videoControls;
-  _batchUpdates.batchUpdates(() => outer1_7.setState({ controls: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_7.setState({ controls: closure_0 }));
 };
 export const setPausedState = function setPausedState(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => outer1_7.setState({ paused: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_7.setState({ paused: closure_0 }));
 };
 export const tryPauseCurrentVideo = function tryPauseCurrentVideo() {
   const controls = keys.getState().controls;

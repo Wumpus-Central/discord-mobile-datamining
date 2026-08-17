@@ -1,7 +1,9 @@
 // discord_app/utils/getDevicePixelRatio.native.tsx
-import { PixelRatio } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("utils/getDevicePixelRatio.native.tsx");
+const PixelRatio = get_ActivityIndicator.PixelRatio;
+const result = set.fileFinishedImporting("utils/getDevicePixelRatio.native.tsx");
 
 export default function getDevicePixelRatio() {
   let num = PixelRatio.get();

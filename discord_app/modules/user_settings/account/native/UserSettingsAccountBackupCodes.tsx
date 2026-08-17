@@ -1,22 +1,20 @@
 // discord_app/modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx
-import noop from "noop";
-import { ScrollView } from "set";
-import getVerificationKey from "getVerificationKey";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "getVerificationKey" /* 13295 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 function CodeRow(code) {
   code = code.code;
   const showCheckMark = code.showCheckMark;
   const items = [code];
   const callback = React.useCallback(() => {
-    code(outer1_2[6]).copy(code.replace(/[^a-zA-Z0-9]/g, ""));
-    const obj = code(outer1_2[6]);
-    const result = code(outer1_2[7]).presentCopiedToClipboard();
+    code(closure_1_2[6]).copy(code.replace(/[^a-zA-Z0-9]/g, ""));
+    const obj = code(closure_1_2[6]);
+    const result = code(closure_1_2[7]).presentCopiedToClipboard();
   }, items);
   let tmp5;
   if (!showCheckMark) {
@@ -26,7 +24,7 @@ function CodeRow(code) {
   let tmp2Result = null;
   if (showCheckMark) {
     obj = { color: null };
-    obj[0] = Themes.colors.TEXT_BRAND;
+    obj[0] = ThemesDefault.colors.TEXT_BRAND;
     tmp2Result = tmp2(code(6933).CheckmarkSmallIcon, obj);
   }
   obj[2] = tmp2Result;
@@ -34,14 +32,12 @@ function CodeRow(code) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { generateCode: null };
-createCacheKey = { color: require("Themes").colors.TEXT_BRAND };
+createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("getVerificationKey").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountBackupCodes.tsx");
 
 export default function UserSettingsAccountBackupCodes(headerLabel) {
-  let unusedCodes;
-  let usedCodes;
   headerLabel = headerLabel.headerLabel;
   if (headerLabel === undefined) {
     const intl = stateFromStores(1236).intl;
@@ -49,9 +45,9 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   }
   stateFromStores = undefined;
   let obj = stateFromStores(4097);
-  const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_PADDING);
-  let obj1 = stateFromStores(589);
-  const items = [getVerificationKey];
+  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_PADDING);
+  obj1 = stateFromStores(589);
+  const items = [closure_5];
   stateFromStores = obj1.useStateFromStores(items, () => store.getBackupCodes());
   const items1 = [stateFromStores];
   const memo = React.useMemo(() => {
@@ -71,9 +67,8 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   const effect = React.useEffect(() => () => {
     callback(table[13]).clearBackupCodes();
   }, []);
-  obj = { spacing: null, style: null, children: null };
-  obj[0] = Themes.space.PX_24;
-  obj = { paddingHorizontal: token, paddingTop: Themes.space.PX_16 };
+  obj = { spacing: ThemesDefault.space.PX_24, style: null, children: null };
+  obj = { paddingHorizontal: token, paddingTop: ThemesDefault.space.PX_16 };
   obj[1] = obj;
   const items2 = [headerLabel.map((children) => callback2(stateFromStores(4734).Text, { variant: "text-sm/medium", children }, arg1)), , , ];
   let tmp10Result = unusedCodes.length > 0;
@@ -112,7 +107,7 @@ export default function UserSettingsAccountBackupCodes(headerLabel) {
   }
   const tmp11 = ScrollView;
   const tmp12 = closure_7;
-  tmp6 = createCacheKey();
+  tmp6 = callback();
   items2[3] = tmp10Result1;
   obj[2] = items2;
   return closure_6(tmp11, { children: closure_7(stateFromStores(4733).Stack, obj) });

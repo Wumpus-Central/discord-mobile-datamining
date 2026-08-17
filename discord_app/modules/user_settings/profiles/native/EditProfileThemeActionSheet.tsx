@@ -1,23 +1,23 @@
 // discord_app/modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { nitroWheel: null, titleWrapper: null, titleContainer: null };
-createCacheKey = { tintColor: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, marginLeft: 4, width: 20, height: 20 };
+createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginLeft: 4, width: 20, height: 20 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 0 };
 createCacheKey[2] = { justifyContent: "flex-start" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/EditProfileThemeActionSheet.tsx");
 
 export default function EditProfileThemeActionSheet(onResetTheme) {
   onResetTheme = onResetTheme.onResetTheme;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { children: null };
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = onResetTheme(1236).intl;
@@ -26,7 +26,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   obj[1] = callback(onResetTheme(1297).NitroWheel, obj);
   ({ titleWrapper: obj2[2], titleContainer: obj2[3] } = tmp);
   const items = [callback(onResetTheme(6949).BottomSheetTitleHeader, obj), ];
-  const obj1 = { hasIcons: false, children: null };
+  obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, subLabel: null, onPress: null };
   const intl2 = onResetTheme(1236).intl;
   obj2[0] = intl2.string(onResetTheme(1236).t["L+GmoR"]);
@@ -34,7 +34,7 @@ export default function EditProfileThemeActionSheet(onResetTheme) {
   obj2[1] = intl3.string(onResetTheme(1236).t.MA9iNr);
   obj2[2] = function onPress() {
     onResetTheme();
-    outer1_1(outer1_2[10]).hideActionSheet();
+    closure_1_1(closure_1_2[10]).hideActionSheet();
   };
   obj1[1] = callback(onResetTheme(6291).TableRow, obj2);
   items[1] = callback(onResetTheme(6286).TableRowGroup, obj1);

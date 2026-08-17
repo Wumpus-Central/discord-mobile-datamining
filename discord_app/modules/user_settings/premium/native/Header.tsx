@@ -1,31 +1,30 @@
 // discord_app/modules/user_settings/premium/native/Header.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import Text from "Text" /* 4734 */;
+import preloadDefault from "preload" /* 5449 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "column", alignItems: "center" }, headerText: { marginTop: 16, marginBottom: 24 } });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/Header.tsx");
 
 export default function Header(style) {
   const tmp = callback();
   let obj = { style: items, children: null };
   items = [tmp.container, style.style];
   obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", source: null };
-  const tmp4 = useTheme();
+  const tmp4 = useThemeDefault();
   const tmp5 = closure_5;
   const tmp6 = View;
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.lpNrPu);
-  const tmp8 = preload;
+  const tmp8 = preloadDefault;
   if (obj3.isThemeDark(tmp4)) {
     let tmp2Result = tmp2(8034);
   } else {

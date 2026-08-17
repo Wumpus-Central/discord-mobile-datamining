@@ -1,19 +1,16 @@
 // discord_common/js/packages/dynamic-links/generateDynamicLink.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { format } from "../../../../_runtime/00669_format.js";
-import { set } from "getDescription.tsx";
+import v1 from "v1" /* 514 */;
+import formatDefault from "format" /* 669 */;
+import setDefault from "set" /* 12835 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = ["utmSource", "androidFallbackLink", "iosFallbackLink"];
 let c6 = "https://discordapp.onelink.me";
-let result = require("format").fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/dynamic-links/generateDynamicLink.tsx");
 
 export default function generateDynamicLink(arg0, arg1) {
-  let androidFallbackLink;
-  let iosFallbackLink;
-  let utmSource;
   ({ utmSource, androidFallbackLink, iosFallbackLink } = arg1);
   const tmp = callback(arg1, closure_3);
   const str = new URL(arg0);
@@ -33,7 +30,7 @@ export default function generateDynamicLink(arg0, arg1) {
   const encodeURIComponentResult1 = encodeURIComponent("discord://app/open#" + str.toString());
   const items = ["WebView", "(iPhone|iPod|iPad)(?!.*Safari/)"];
   const regExp = new RegExp("(" + items.join("|") + ")", "ig");
-  const tmp9 = format;
+  const tmp9 = formatDefault;
   let match;
   if (tmp9 != null) {
     if (tmp9.ua != null) {
@@ -67,7 +64,7 @@ export default function generateDynamicLink(arg0, arg1) {
     const _encodeURIComponent2 = encodeURIComponent;
     encodeURIComponentResult4 = encodeURIComponent(iosFallbackLink);
   }
-  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(set()) + "&af_dp=" + encodeURIComponentResult1;
+  const combined = "" + c6 + "/Hs5r/?deep_link_value=" + encodeURIComponentResult + "&pid=" + utmSource + "&af_force_deeplink=" + str3 + "&af_og_description=" + encodeURIComponent(setDefault()) + "&af_dp=" + encodeURIComponentResult1;
   let sum = combined;
   if (null != encodeURIComponentResult3) {
     const _HermesInternal = HermesInternal;

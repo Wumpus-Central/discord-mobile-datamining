@@ -1,6 +1,10 @@
 // discord_app/modules/react_asset/native/native_required_assets.tsx
-const merged = Object.assign(require("NATIVE_REQUIRED_ASSETS_ICONS").NATIVE_REQUIRED_ASSETS_ICONS);
-const merged1 = Object.assign(require("NATIVE_REQUIRED_ASSETS_MISC").NATIVE_REQUIRED_ASSETS_MISC);
-const result = require("set").fileFinishedImporting("modules/react_asset/native/native_required_assets.tsx");
+import set from "set" /* 2 */;
+import NATIVE_REQUIRED_ASSETS_ICONS from "NATIVE_REQUIRED_ASSETS_ICONS" /* 17124 */;
+import NATIVE_REQUIRED_ASSETS_MISC from "NATIVE_REQUIRED_ASSETS_MISC" /* 17131 */;
+
+const merged = Object.assign(NATIVE_REQUIRED_ASSETS_ICONS.NATIVE_REQUIRED_ASSETS_ICONS);
+const merged1 = Object.assign(NATIVE_REQUIRED_ASSETS_MISC.NATIVE_REQUIRED_ASSETS_MISC);
+const result = set.fileFinishedImporting("modules/react_asset/native/native_required_assets.tsx");
 
 export const NATIVE_REQUIRED_ASSETS = {};

@@ -1,15 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx
-import { ChannelDetailsButtonTypes } from "ChannelDetailsNavigatorScreens";
-import { set } from "../../../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 692 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
+const ChannelDetailsButtonTypes = ChannelDetailsNavigatorScreens.ChannelDetailsButtonTypes;
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsUtils.tsx");
 
 export const getChannelDetailsButtons = function getChannelDetailsButtons(channel, stateFromStores) {
   let flag = stateFromStores;
   if (stateFromStores === undefined) {
     flag = false;
   }
-  if (channel.type === set.ChannelTypes.GUILD_DIRECTORY) {
+  if (channel.type === set2.ChannelTypes.GUILD_DIRECTORY) {
     let items = [];
   } else {
     items = [, , ];

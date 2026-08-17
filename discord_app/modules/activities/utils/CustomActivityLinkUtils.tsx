@@ -1,8 +1,8 @@
 // discord_app/modules/activities/utils/CustomActivityLinkUtils.tsx
-import dispatcher from "dispatcher";
-import getOne from "getOne";
-import { Endpoints } from "ME";
-import set from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getOne" /* 12412 */;
+import { Endpoints } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 function fetchCustomActivityLink() {
@@ -18,10 +18,10 @@ function fetchCustomActivityLink() {
 function _fetchCustomActivityLink() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c2 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c2 = 0;
     return (function*(arg0, body) {
       if (table === 2) {
         table = 3;
@@ -59,8 +59,8 @@ function _fetchCustomActivityLink() {
                     const type2 = result.type;
                     if (tmp16(tmp17[3]).CustomLinkType.MANAGED === type2) {
                       const HTTP2 = tmp16(tmp17[4]).HTTP;
-                      const obj1 = { url: null, rejectWithError: false };
-                      obj1[0] = outer1_5.APPLICATION_MANAGED_ACTIVITY_LINK(tmp13, result.decodedLinkId);
+                      obj1 = { url: null, rejectWithError: false };
+                      obj1[0] = closure_1_5.APPLICATION_MANAGED_ACTIVITY_LINK(tmp13, result.decodedLinkId);
                       c3 = 1;
                       table = 1;
                       const obj2 = { value: null, done: false };
@@ -69,7 +69,7 @@ function _fetchCustomActivityLink() {
                     } else if (tmp16(tmp17[3]).CustomLinkType.QUICK === type2) {
                       const HTTP = tmp16(tmp17[4]).HTTP;
                       const obj3 = { url: null, rejectWithError: false };
-                      obj3[0] = outer1_5.APPLICATION_QUICK_ACTIVITY_LINK(tmp13, result.decodedLinkId);
+                      obj3[0] = closure_1_5.APPLICATION_QUICK_ACTIVITY_LINK(tmp13, result.decodedLinkId);
                       c3 = 2;
                       table = 1;
                       const obj4 = { value: null, done: false };
@@ -123,7 +123,7 @@ function _fetchCustomActivityLink() {
       }
     })();
   });
-  const _fetchCustomActivityLink = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -135,12 +135,12 @@ function _fetchCustomActivityLink() {
 function _getCustomActivityLinkParams() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c7 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c7 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
@@ -168,14 +168,14 @@ function _getCustomActivityLinkParams() {
               obj[0] = arg1;
               return obj;
             } else {
-              let getOne = tmp14;
+              closure_4 = tmp14;
               let custom_id;
-              let c3 = closure_2;
+              c3 = closure_2;
               if (closure_2 == null) {
                 c3 = undefined;
               }
               if (null == closure_1) {
-                const obj1 = { customId: null };
+                obj1 = { customId: null };
                 obj1[0] = tmp11;
                 c7 = 3;
                 const obj2 = { value: null, done: true };
@@ -235,7 +235,7 @@ function _getCustomActivityLinkParams() {
       }
     })();
   });
-  const _getCustomActivityLinkParams = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -257,10 +257,10 @@ function loadCustomActivityLink(id, linkId) {
 function _loadCustomActivityLink() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -288,15 +288,15 @@ function _loadCustomActivityLink() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dispatcher = tmp5;
+              closure_3 = tmp5;
               const table = tmp2;
               let callback;
               if (null != closure_0) {
                 if (null != tmp26) {
                   c4 = 1;
                   c5 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = outer1_6(tmp25, tmp26);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_6(tmp25, tmp26);
                   return obj1;
                 }
               }
@@ -337,7 +337,7 @@ function _loadCustomActivityLink() {
       }
     })();
   });
-  const _loadCustomActivityLink = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

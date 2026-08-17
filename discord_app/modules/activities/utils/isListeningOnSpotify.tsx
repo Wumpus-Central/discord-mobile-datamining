@@ -1,12 +1,12 @@
 // discord_app/modules/activities/utils/isListeningOnSpotify.tsx
-import ME from "ME";
-import { isSpotifyParty } from "WEB_OPEN";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
+import set from "set" /* 2 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ ActivityTypes: obj1, PlatformTypes: c3 } = ME);
-const result = require("getPlatformUserUrl").fileFinishedImporting("modules/activities/utils/isListeningOnSpotify.tsx");
+const isSpotifyParty = SPOTIFY_APP_PROTOCOL.isSpotifyParty;
+const result = set.fileFinishedImporting("modules/activities/utils/isListeningOnSpotify.tsx");
 
 export default function isListeningOnSpotify(type) {
   let tmp = null != type;
@@ -14,8 +14,8 @@ export default function isListeningOnSpotify(type) {
     tmp = type.type === constants.LISTENING;
   }
   if (tmp) {
-    tmp = type.name === getPlatformUserUrl.get(constants2.SPOTIFY).name;
-    const obj = getPlatformUserUrl;
+    tmp = type.name === getPlatformUserUrlDefault.get(constants2.SPOTIFY).name;
+    const obj = getPlatformUserUrlDefault;
   }
   if (tmp) {
     tmp = null != type.party;

@@ -1,7 +1,9 @@
 // discord_app/modules/message_request/getRestrictedHiddenMediaCount.tsx
-import { getForwardInfo } from "../forwarding/formatMessageForwards.tsx";
-import { getStickerExtensionFromFormatType } from "../stickers/StickersUtils.tsx";
-let result = require("set").fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
+import set from "set" /* 2 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import getForwardInfo from "getForwardInfo" /* 8179 */;
+
+let result = set.fileFinishedImporting("modules/message_request/getRestrictedHiddenMediaCount.tsx");
 
 export default function getRestrictedHiddenMediaCount(message) {
   const result = getForwardInfo.maybeCreateSingleForwardForMessage(message);

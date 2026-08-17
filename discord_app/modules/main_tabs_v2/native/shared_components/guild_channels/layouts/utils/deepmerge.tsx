@@ -1,9 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx
+import set2 from "set" /* 2 */;
+
 function merge() {
   let items = [...arguments];
   return items.reduce((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     if (Array.isArray(arg1)) {
       const _TypeError = TypeError;
       const typeError = new TypeError("Arguments provided to ts-deepmerge must be objects, not arrays.");
@@ -26,7 +28,7 @@ function merge() {
                 const set = new tmp.Set(tmp2[arg0].concat(tmp3[arg0]));
                 tmp3 = set;
                 let fromResult = _Array3.from(set);
-                const obj = tmp2[arg0];
+                obj = tmp2[arg0];
               } else {
                 fromResult = tmp3[arg0];
               }
@@ -86,12 +88,12 @@ let obj = { mergeArrays: true };
 merge.options = obj;
 merge.withOptions = (arg0) => {
   const substr = [...arguments].slice();
-  const obj = { mergeArrays: true };
+  obj = { mergeArrays: true };
   const merged = Object.assign(arg0);
   merge.options = obj;
   merge.options = obj;
   return merge(...substr);
 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx");
+const result = set2.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/utils/deepmerge.tsx");
 
 export default merge;

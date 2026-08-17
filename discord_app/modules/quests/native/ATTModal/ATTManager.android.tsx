@@ -1,9 +1,10 @@
 // discord_app/modules/quests/native/ATTModal/ATTManager.android.tsx
-import "initialize";
-import { SentryUtils.native } from "../../../../utils/SentryUtils.native.tsx";
-import { _fetchAdUser } from "../../../ads/native/AdUserActionCreators.android.tsx";
+import _modDef1208 from "module_1208" /* 1208 */;
+import initializeDefault from "initialize" /* 5038 */;
+import _fetchAdUser from "_fetchAdUser" /* 7484 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class ATTManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -17,8 +18,8 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   try {
     const adUser = _fetchAdUser.fetchAdUser("post_connection_open");
   } catch (tmp4) {
-    SentryUtils.native.captureException(tmp4);
-    const obj2 = SentryUtils.native;
+    _modDef1208.captureException(tmp4);
+    const obj2 = _modDef1208;
   }
 };
 prototype["_terminate"] = function _terminate() {
@@ -30,6 +31,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const aTTManager = new ATTManager();
-const result = require("module_1208").fileFinishedImporting("modules/quests/native/ATTModal/ATTManager.android.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/ATTModal/ATTManager.android.tsx");
 
 export default aTTManager;

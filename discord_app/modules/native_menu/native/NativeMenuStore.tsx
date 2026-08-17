@@ -1,8 +1,10 @@
 // discord_app/modules/native_menu/native/NativeMenuStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = null;
 let c1 = null;
+const Store = initializeDefault.Store;
 class NativeMenuStore extends Store {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -22,10 +24,8 @@ NativeMenuStore.prototype["initialize"] = function initialize() {
 
 };
 NativeMenuStore.displayName = "NativeMenuStore";
-const nativeMenuStore = new NativeMenuStore(require("dispatcher"), {
+const nativeMenuStore = new NativeMenuStore(dispatcherDefault, {
   SHOW_NATIVE_MENU: function handleShowNativeMenu(arg0) {
-    let c0;
-    let c1;
     ({ menu: c0, key: c1 } = arg0);
   },
   HIDE_NATIVE_MENU: function handleHideNativeMenu(key) {
@@ -34,7 +34,7 @@ const nativeMenuStore = new NativeMenuStore(require("dispatcher"), {
         return false;
       }
     }
-    let c0 = null;
+    c0 = null;
     c1 = null;
   }
 });

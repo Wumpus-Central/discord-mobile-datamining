@@ -1,16 +1,17 @@
 // discord_app/modules/voice_calls/VoicePermissionManager.tsx
-import buildStageChannelUserRoles from "buildStageChannelUserRoles";
-import isVoiceMuted from "isVoiceMuted";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import { InputModes } from "ME";
-import { NativePermissionTypes } from "NativePermissionStatus";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
+import closure_4 from "isVoiceMuted" /* 4543 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
+import { InputModes } from "ME" /* 676 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
 
 const require = arg1;
 let c11 = null;
+initializeDefault;
 class VoicePermissionManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,14 +22,12 @@ class VoicePermissionManager extends tmp2 {
 const prototype = VoicePermissionManager.prototype;
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(channelId) {
   if (null == channelId.channelId) {
-    let c11 = null;
+    c11 = null;
   }
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceStates) {
   voiceStates = voiceStates.voiceStates;
   const item = voiceStates.forEach((arg0) => {
-    let channelId;
-    let userId;
     ({ userId, channelId } = arg0);
     if (null != channelId) {
       if (id.getId() === userId) {
@@ -55,7 +54,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
                 const tmp19Result = callback2(4840);
               }
             } else {
-              const tmp8 = new isVoiceMuted(arg0);
+              const tmp8 = new closure_4(arg0);
               const audienceRequestToSpeakState = callback(4981).getAudienceRequestToSpeakState(tmp8);
               if (audienceRequestToSpeakState === callback(4981).RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK) {
                 const permission2 = callback2(4840).requestPermission(constants2.AUDIO);
@@ -81,7 +80,7 @@ prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(voiceSta
   });
 };
 const voicePermissionManager = new VoicePermissionManager();
-const result = require("fetchFingerprint").fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/VoicePermissionManager.tsx");
 
 export default voicePermissionManager;
 export const shouldImmediatelyRequestVoicePermissions = function shouldImmediatelyRequestVoicePermissions(id, id2) {

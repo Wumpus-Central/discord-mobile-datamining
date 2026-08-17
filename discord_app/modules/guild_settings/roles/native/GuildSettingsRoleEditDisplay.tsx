@@ -1,39 +1,26 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx
-import AsyncFromSyncIterator from "AsyncFromSyncIterator";
-import { View } from "items";
-import { isEveryoneRole } from "GuildRoleRecordTypeTag";
-import handleSetSection from "handleSetSection";
-import { RoleColorsStyle } from "handleSetSection";
-import { STYLE_CONFIGS } from "title";
-import ME from "ME";
-import { DEFAULT_GRADIENT_ROLE_COLORS as closure_11 } from "HOLOGRAPHIC_ROLE_COLORS";
-import jsxProd from "EnhancedRoleColorsSelectStyleModal";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_6 from "handleSetSection" /* 16831 */;
+import { RoleColorsStyle } from "handleSetSection" /* 16831 */;
+import { STYLE_CONFIGS } from "title" /* 16830 */;
+import ME from "ME" /* 676 */;
+import { DEFAULT_GRADIENT_ROLE_COLORS as closure_11 } from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let map1;
 const require = arg1;
 ({ DEFAULT_ROLE_COLOR: c9, MAX_ROLE_LENGTH: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 createCacheKey = { roleIcon: { paddingTop: 2, opacity: 0.5 }, trailingColorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, colorBlock: { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 }, holographicInfo: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_INFO, padding: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_12, marginTop: -1 * require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_12, display: "flex", flexDirection: "row", gap: require("Themes").space.PX_8, justifyContent: "center", alignItems: "center", borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.ICON_FEEDBACK_INFO };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, padding: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_12, marginTop: -1 * ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_12, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO };
 createCacheKey[3] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("GuildRoleRecordTypeTag").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditDisplay.tsx");
 
 export default function GuildSettingsRoleEditDisplay(guild) {
-  let autoFocusInput;
-  let formErrors;
-  let hoist;
-  let locked;
-  let mentionable;
-  let name;
-  let onHoistChanged;
-  let onMentionableChanged;
-  let onNameChanged;
   guild = guild.guild;
   const role = guild.role;
   let id;
@@ -41,7 +28,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
   let primary_color;
   let concat;
   ({ name, formErrors, mentionable, hoist, onNameChanged, onMentionableChanged, onHoistChanged, locked, autoFocusInput } = guild);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp2 = concat(role);
   let tmp3 = tmp2;
   if (!tmp2) {
@@ -50,9 +37,9 @@ export default function GuildSettingsRoleEditDisplay(guild) {
   id = role.id;
   let obj = guild(id[10]);
   const hasEnhancedRoleColorsForRole = obj.useHasEnhancedRoleColorsForRole(guild.id, role);
-  let obj1 = guild(id[11]);
-  const items = [handleSetSection];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_6.getRoleStyleData(role.id));
+  obj1 = guild(id[11]);
+  const items = [closure_6];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getRoleStyleData(role.id));
   if (null != stateFromStores) {
     if (hasEnhancedRoleColorsForRole) {
       SOLID = stateFromStores.currentStyle;
@@ -95,19 +82,19 @@ export default function GuildSettingsRoleEditDisplay(guild) {
     const items1 = [role, id, concat, primary_color, SOLID];
     const items2 = [guild.id, role, id, SOLID];
     callback = SOLID.useCallback(() => {
-      if (SOLID === outer1_7.SOLID) {
+      if (SOLID === closure_1_7.SOLID) {
         let obj = role(id[16]);
         obj = { color: null, onSelect: null };
         obj[0] = primary_color;
         obj[1] = function onSelect(arg0) {
-          outer1_0(outer1_2[19]).updateRoleColor(closure_1, arg0);
+          closure_1_0(closure_1_2[19]).updateRoleColor(closure_1, arg0);
         };
         obj.openLazy(guild(id[18])(id[17], id.paths), "RoleColorPicker", obj);
       } else if (tmp === tmp2.GRADIENT) {
         obj = { colors: null, onSelect: null };
         obj[0] = concat;
         obj[1] = function onSelect(colors) {
-          outer1_0(outer1_2[19]).updateRoleColors(closure_2, colors, outer1_7.GRADIENT);
+          closure_1_0(closure_1_2[19]).updateRoleColors(closure_2, colors, closure_1_7.GRADIENT);
         };
         role(id[16]).openLazy(guild(id[18])(id[20], id.paths), "RoleColorPicker", obj);
         const obj3 = role(id[16]);
@@ -120,7 +107,7 @@ export default function GuildSettingsRoleEditDisplay(guild) {
         role,
         roleStyle: SOLID,
         onStyleChanged(currentStyle) {
-          outer1_0(outer1_2[19]).updateRoleStyles(closure_2, currentStyle);
+          closure_1_0(closure_1_2[19]).updateRoleStyles(closure_2, currentStyle);
         }
       };
       obj.openLazy(guild(id[18])(id[21], id.paths), "EnhancedRoleColorsSelectStyleModal", obj);

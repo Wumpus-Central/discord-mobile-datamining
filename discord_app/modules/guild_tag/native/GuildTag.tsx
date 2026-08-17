@@ -1,26 +1,20 @@
 // discord_app/modules/guild_tag/native/GuildTag.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GuildTagBadgeSize } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "mergeGuildAvatar";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { GuildTagBadgeSize } from "items" /* 8168 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let obj = { container: null, tag: null };
-obj = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
+obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 4, paddingHorizontal: 4, paddingVertical: 1, columnGap: 2 };
 obj[0] = obj;
 let num = 16;
 if (set.isAndroid()) {
@@ -35,8 +29,6 @@ createCacheKey[1] = str;
 obj[1] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
-  let size;
-  let source;
   ({ source, size } = arg0);
   if (size === undefined) {
     size = GuildTagBadgeSize.SIZE_12;
@@ -56,13 +48,6 @@ const memoResult = importAllResult.memo((arg0) => {
   return tmp2;
 });
 const memoResult1 = importAllResult.memo((textVariant) => {
-  let badgeSize;
-  let closure_4;
-  let containerStyles;
-  let disabled;
-  let importDefault;
-  let onPress;
-  let require;
   ({ containerStyles, guildTag: require, guildBadge: importDefault, onPress, disabled } = textVariant);
   if (disabled === undefined) {
     disabled = false;
@@ -79,7 +64,7 @@ const memoResult1 = importAllResult.memo((textVariant) => {
   if (badgeSize === undefined) {
     badgeSize = GuildTagBadgeSize.SIZE_12;
   }
-  let c6;
+  closure_6 = undefined;
   function renderContent() {
     let tmp4 = closure_1;
     if (null != closure_1) {
@@ -90,18 +75,18 @@ const memoResult1 = importAllResult.memo((textVariant) => {
         obj[0] = tmp3;
         obj[0] = obj;
         obj[1] = badgeSize;
-        tmp4 = outer1_8(outer1_12, obj);
+        tmp4 = closure_1_8(closure_1_12, obj);
       }
     }
     obj = { children: null };
     const items = [tmp4, ];
-    const items1 = [_undefined.tag, closure_4];
-    items[1] = outer1_8(outer1_0(str[9]).Text, { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: items1, children: closure_0 });
+    const items1 = [tag.tag, closure_4];
+    items[1] = closure_1_8(closure_1_0(str[9]).Text, { variant: str, color: str2, lineClamp: 1, ellipsizeMode: "tail", style: items1, children: closure_0 });
     obj[0] = items;
-    return outer1_10(outer1_9, obj);
+    return closure_1_10(closure_1_9, obj);
   }
   const tmp2 = callback2();
-  c6 = tmp2;
+  closure_6 = tmp2;
   if (null != onPress) {
     let obj = { onPress: null, style: null, disabled: null, accessibilityRole: "button", accessibilityState: null, children: null };
     obj[0] = onPress;
@@ -125,8 +110,6 @@ const memoResult1 = importAllResult.memo((textVariant) => {
 const result = set.fileFinishedImporting("modules/guild_tag/native/GuildTag.tsx");
 
 export default importAllResult.memo((primaryGuild) => {
-  let guildId;
-  let tag;
   primaryGuild = primaryGuild.primaryGuild;
   const userId = primaryGuild.userId;
   let flag = primaryGuild.disabledTooltip;
@@ -140,11 +123,11 @@ export default importAllResult.memo((primaryGuild) => {
   const merged = Object.assign(primaryGuild, Object.create(null));
   guildId = undefined;
   let obj = primaryGuild(guildId[11]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   const items1 = [userId, primaryGuild];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const user = outer1_6.getUser(userId);
-    let primaryGuild;
+    const user = closure_1_6.getUser(userId);
+    primaryGuild = undefined;
     if (user != null) {
       primaryGuild = user.primaryGuild;
     }

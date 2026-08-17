@@ -1,29 +1,17 @@
 // discord_app/actions/CreateChannelActionCreators.tsx
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import ME from "ME";
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES";
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
+import encodeProperties from "encodeProperties" /* 503 */;
+import sendRequest from "sendRequest" /* 530 */;
+import _modDef5227 from "module_5227" /* 5227 */;
+import closure_3 from "updateUserGuildSettingsInternal" /* 5043 */;
+import ME from "ME" /* 676 */;
+import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ BITRATE_DEFAULT: c4, ChannelTypes: c5, Endpoints: closure_6 } = ME);
-let result = require("MAX_FAVORITES").fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
 
 export default {
   createChannel(guildId) {
-    let availableTags;
-    let bitrate;
-    let flags;
-    let gameId;
-    let parentId;
-    let permissionOverwrites;
-    let skuId;
-    let type;
-    let userLimit;
     guildId = guildId.guildId;
     ({ type, permissionOverwrites } = guildId);
     if (permissionOverwrites === undefined) {
@@ -66,7 +54,7 @@ export default {
     if (type === constants.GUILD_STORE) {
       if (null == skuId) {
         const _Error = Error;
-        const error = new Error("Unexpected missing SKU");
+        error = new Error("Unexpected missing SKU");
         throw error;
       } else {
         obj.sku_id = skuId;
@@ -79,7 +67,7 @@ export default {
     obj[3] = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = guildId(outer1_2[6]);
+        let obj = guildId(closure_1_2[6]);
         obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
         if (body != null) {
@@ -100,10 +88,10 @@ export default {
         return obj.exact(obj);
       }
     };
-    const obj1 = {
+    obj1 = {
       event: guildId(503).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
-        let obj = guildId(outer1_2[6]);
+        let obj = guildId(closure_1_2[6]);
         obj = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
         if (body != null) {
@@ -127,13 +115,13 @@ export default {
     obj[4] = guildId(530).rejectWithMigratedError();
     const obj6 = guildId(530);
     return tmpResult.post(obj).then((body) => {
-      if (outer1_3.isOptInEnabled(guildId)) {
-        let obj = permissionOverwrites(outer1_2[8]);
+      if (closure_1_3.isOptInEnabled(guildId)) {
+        let obj = permissionOverwrites(closure_1_2[8]);
         obj = { flags: null };
-        obj[0] = outer1_7.OPT_IN_ENABLED;
-        const result = obj.updateChannelOverrideSettings(tmp, body.body.id, obj, guildId(outer1_2[9]).NotificationLabels.OptedIn);
+        obj[0] = closure_1_7.OPT_IN_ENABLED;
+        const result = obj.updateChannelOverrideSettings(tmp, body.body.id, obj, guildId(closure_1_2[9]).NotificationLabels.OptedIn);
       }
-      const result1 = permissionOverwrites(outer1_2[10]).checkGuildTemplateDirty(tmp);
+      const result1 = permissionOverwrites(closure_1_2[10]).checkGuildTemplateDirty(tmp);
       return body;
     }, (body) => {
       let obj = permissionOverwrites(table[3]);
@@ -143,7 +131,7 @@ export default {
     });
   },
   createRoleSubscriptionTemplateChannel(closure_0, name, type, topic) {
-    let obj = TrackedHTTPUtils;
+    let obj = _modDef5227;
     obj = { url: closure_6.GUILD_CHANNELS(closure_0), body: obj, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
     obj = { name, type, topic };
     obj[3] = {
@@ -169,7 +157,7 @@ export default {
         return obj.exact(obj);
       }
     };
-    const obj1 = {
+    obj1 = {
       event: encodeProperties.NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         let obj = callback(table[6]);

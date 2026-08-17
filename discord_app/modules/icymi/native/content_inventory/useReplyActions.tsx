@@ -1,15 +1,15 @@
 // discord_app/modules/icymi/native/content_inventory/useReplyActions.tsx
-import set from "set";
-import getSystemLocale from "getSystemLocale";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { DraftType } from "handleChanged";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EmojiIntention } from "set";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { jsx } from "module_9057";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/useReplyActions.tsx");
 
 export const useReplyActions = function useReplyActions(content) {
   content = content.content;
@@ -21,8 +21,8 @@ export const useReplyActions = function useReplyActions(content) {
   let callback;
   let callback1;
   let obj = _require(hotwheels_gaming_activity[8]);
-  const items = [mergeGuildAvatar];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_7.getUser(lib.author_id));
+  const items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getUser(lib.author_id));
   let str = "unknown";
   hotwheels_gaming_activity = "unknown";
   let content_type = content.content_type;
@@ -48,18 +48,18 @@ export const useReplyActions = function useReplyActions(content) {
       id = stateFromStores1.id;
     }
     items2[1] = id;
-    const effect = React.useEffect(() => c4 ? (() => {
+    const effect = React.useEffect(() => closure_4 ? (() => {
       let id;
       if (id != null) {
         id = id.id;
       }
-      outer1_1(outer1_2[10]).clearAll(id, outer1_6.ChannelMessage);
+      closure_1_1(closure_1_2[10]).clearAll(id, closure_1_6.ChannelMessage);
     }) : undefined, items2);
     _require = undefined;
     _require = stateFromStores1((arg0) => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+      closure_0 = arg0;
+      closure_3 = 0;
+      closure_4 = 0;
       return (function*(arg0) {
         if (num8 === 2) {
           num8 = 3;
@@ -89,15 +89,15 @@ export const useReplyActions = function useReplyActions(content) {
                 return obj;
               } else {
                 let channel = tmp5;
-                let closure_1 = tmp2;
+                closure_1 = tmp2;
                 closure_1 = undefined;
                 channel = undefined;
                 c3 = undefined;
                 num8 = undefined;
-                if (null != outer1_1) {
+                if (null != closure_1_1) {
                   c3 = num8;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = stateFromStores(hotwheels_gaming_activity[11]).getOrEnsurePrivateChannel(outer1_1.id);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = stateFromStores(hotwheels_gaming_activity[11]).getOrEnsurePrivateChannel(closure_1_1.id);
                   return obj1;
                 } else {
                   num8 = 3;
@@ -157,16 +157,16 @@ export const useReplyActions = function useReplyActions(content) {
                 obj5[1] = "";
                 obj5[2] = lib;
                 let obj9 = stateFromStores(hotwheels_gaming_activity[13]);
-                obj5[3] = obj9.getName(outer1_1);
+                obj5[3] = obj9.getName(closure_1_1);
                 obj5[4] = lib.extra.attachments;
-                c3 = tmp35(obj5);
-                let c4 = stateFromStores(hotwheels_gaming_activity[14]).parse(outer1_2, c3);
+                closure_3 = tmp35(obj5);
+                closure_4 = stateFromStores(hotwheels_gaming_activity[14]).parse(closure_1_2, closure_3);
                 const obj12 = stateFromStores(hotwheels_gaming_activity[15]);
                 const obj6 = { location: null };
-                obj6[0] = outer2_9.ICYMI;
+                obj6[0] = closure_2_9.ICYMI;
                 c3 = 3;
                 const obj7 = { value: null, done: false };
-                obj7[0] = obj12.sendMessage(outer1_2.id, c4, false, obj6);
+                obj7[0] = obj12.sendMessage(closure_1_2.id, closure_4, false, obj6);
                 return obj7;
               } else {
                 if (str3 == lib.extra.emoji_id) {
@@ -185,7 +185,7 @@ export const useReplyActions = function useReplyActions(content) {
               obj8[0] = channel;
               obj8[1] = lib;
               obj8[2] = lib;
-              obj8[5] = outer2_9.ICYMI;
+              obj8[5] = closure_2_9.ICYMI;
               c3 = 2;
               obj9 = { value: null, done: false };
               obj9[0] = obj5.sendMessageWithEmbed(obj8);
@@ -228,9 +228,7 @@ export const useReplyActions = function useReplyActions(content) {
     const items6 = [stateFromStores, content, callback1, callback];
     const callback2 = obj3.useCallback(() => {
       let obj = lib(hotwheels_gaming_activity[22]);
-      obj = { pickerIntention: outer1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji: callback1, channel: null, reactionType: null };
-      obj[4] = stateFromStores1;
-      obj[5] = lib(hotwheels_gaming_activity[23]).ReactionTypes.NORMAL;
+      obj = { pickerIntention: closure_1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji: callback1, channel: stateFromStores1, reactionType: lib(hotwheels_gaming_activity[23]).ReactionTypes.NORMAL };
       const result = obj.openEmojiPickerActionSheet(obj);
     }, items5);
     obj[0] = React.useCallback(() => {

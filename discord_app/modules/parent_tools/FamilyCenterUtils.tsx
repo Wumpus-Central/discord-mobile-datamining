@@ -1,37 +1,31 @@
 // discord_app/modules/parent_tools/FamilyCenterUtils.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import items from "items";
-import { t } from "../../../_runtime/03975_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
-import { maybeFetchCollectiblesForInvoices } from "FamilyCenterActionCreators.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import tDefault from "t" /* 3975 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
+import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import items from "items" /* 5297 */;
 
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: metroImportAll, UserLinkType: c9 } = items);
+require = arg1;
+({ ACTION_TO_TEXT: c4, FAMILY_CENTER_ERROR_CODE_TO_FAILURE: c5, FamilyCenterFailureCode: closure_6, TeenActionDisplayType: error, UserLinkStatus: closure_8, UserLinkType: c9 } = items);
 let c10 = 86400;
 let c11 = 172800;
-let result = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterUtils.tsx");
 
 export const getEmptyActivityFormatter = function getEmptyActivityFormatter() {
   const obj = { today: null, yesterday: null, days: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxy.VjIAQQ);
+  obj[0] = intl.string(messagesProxyDefault.VjIAQQ);
   const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxy["2a8xHY"]);
-  obj[2] = messagesProxy.Xt6oND;
+  obj[1] = intl2.string(messagesProxyDefault["2a8xHY"]);
+  obj[2] = messagesProxyDefault.Xt6oND;
   return obj;
 };
 export const getActivityWindowTimestampFormatter = function getActivityWindowTimestampFormatter(arg0) {
   const obj = { today: null, yesterday: null, days: null };
   const intl = getSystemLocale.intl;
   const string = intl.string;
-  const tmp4 = messagesProxy;
+  const tmp4 = messagesProxyDefault;
   if (arg0) {
     obj[0] = string(tmp4["2AtcIs"]);
     const intl3 = tmp(1236).intl;
@@ -48,10 +42,10 @@ export const getActivityWindowTimestampFormatter = function getActivityWindowTim
   return tmp5;
 };
 export const formatUserActivityTimestamp = function formatUserActivityTimestamp(time, timestampFormatter, arg2) {
-  let obj = t();
-  const diffResult = obj.diff(t(time), "s");
+  let obj = tDefault();
+  const diffResult = obj.diff(tDefault(time), "s");
   const tmp3 = timestampFormatter();
-  t(time).format("LL");
+  tDefault(time).format("LL");
   if (diffResult < c10) {
     let yesterday = tmp3.today;
   } else if (diffResult < c11) {
@@ -71,10 +65,10 @@ export const formatUserActivityTimestamp = function formatUserActivityTimestamp(
   return yesterday;
 };
 export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMESTAMP_FORMATTER) {
-  let obj = t();
-  const diffResult = obj.diff(t(arg0), "s");
+  let obj = tDefault();
+  const diffResult = obj.diff(tDefault(arg0), "s");
   const tmp3 = SENT_TIMESTAMP_FORMATTER();
-  t(arg0);
+  tDefault(arg0);
   if (diffResult < 60) {
     let yesterday = tmp3.seconds;
   } else if (diffResult < 3600) {
@@ -93,7 +87,7 @@ export const formatLinkTimestamp = function formatLinkTimestamp(arg0, SENT_TIMES
     yesterday = tmp3.yesterday;
   } else if (diffResult < 604800) {
     const intl2 = getSystemLocale.intl;
-    const obj1 = { count: null };
+    obj1 = { count: null };
     const _Math = Math;
     obj1[0] = Math.floor(diffResult / tmp13);
     yesterday = intl2.formatToPlainString(tmp3.days, obj1);
@@ -165,7 +159,7 @@ export const getOrFetchLinkedUsers = function getOrFetchLinkedUsers() {
   if (authStore.getAreLinkedUsersProcessed()) {
     return obj.getLinkedUsers();
   } else {
-    const linkedUsers = maybeFetchCollectiblesForInvoices.fetchLinkedUsers();
+    const linkedUsers = maybeFetchCollectiblesForInvoicesDefault.fetchLinkedUsers();
   }
   obj = authStore;
 };
@@ -195,7 +189,7 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
       const intl3 = getSystemLocale.intl;
       let obj = { callCount: null };
       obj[0] = call_count;
-      let formatToPlainStringResult = intl3.formatToPlainString(messagesProxy["L/Cj7S"], obj);
+      let formatToPlainStringResult = intl3.formatToPlainString(messagesProxyDefault["L/Cj7S"], obj);
     }
     return formatToPlainStringResult;
   }
@@ -204,10 +198,10 @@ export const getTopUserOrGuildDescription = function getTopUserOrGuildDescriptio
       const intl2 = getSystemLocale.intl;
       obj = { messageCount: null };
       obj[0] = dms_sent;
-      formatToPlainStringResult = intl2.formatToPlainString(messagesProxy["6X1F0i"], obj);
+      formatToPlainStringResult = intl2.formatToPlainString(messagesProxyDefault["6X1F0i"], obj);
     }
   }
   const intl = getSystemLocale.intl;
   obj = { messageCount: dms_sent, callCount: call_count };
-  formatToPlainStringResult = intl.formatToPlainString(messagesProxy.IYqGMG, obj);
+  formatToPlainStringResult = intl.formatToPlainString(messagesProxyDefault.IYqGMG, obj);
 };

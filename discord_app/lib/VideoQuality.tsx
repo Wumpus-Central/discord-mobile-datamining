@@ -1,11 +1,12 @@
 // discord_app/lib/VideoQuality.tsx
-import "on";
-import { apply } from "../../_runtime/00012_apply.js";
-import { BaseConnectionEvent } from "../../discord_common/js/packages/media-engine/index.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
-import { parseEncoder } from "VideoQualityStats.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import onDefault from "on" /* 4572 */;
+import parseEncoder from "parseEncoder" /* 7489 */;
+import _initStatsDefault from "_initStats" /* 13092 */;
 
-let require = arg1;
+require = arg1;
 function round(arg0) {
   let num;
   num = 0;
@@ -16,6 +17,7 @@ function round(arg0) {
   return num;
 }
 let obj = { FpsUpdate: "fps-update" };
+onDefault;
 class VideoQuality extends tmp2 {
   constructor(arg0) {
     TimeStampProducer = arg1;
@@ -42,12 +44,12 @@ class VideoQuality extends tmp2 {
     tmp7.statCollectionPausedUsers = set;
     tmp7.sampleStats = function sampleStats(transport) {
       if (null != transport) {
-        const timestampProducer = tmp7.timestampProducer;
+        const timestampProducer = closure_0.timestampProducer;
         const nowResult = timestampProducer.now();
-        const networkQuality = tmp7.networkQuality;
+        const networkQuality = closure_0.networkQuality;
         const result = networkQuality.incrementNetworkStats(nowResult);
-        const result1 = tmp7.updateSystemResourceStats();
-        const result2 = tmp7.updateVideoEffectStats(transport);
+        const result1 = closure_0.updateSystemResourceStats();
+        const result2 = closure_0.updateVideoEffectStats(transport);
         if (null != transport) {
           const connection = obj.connection;
           obj.receivedStats(nowResult, transport, connection.getStreamParameters());
@@ -164,11 +166,11 @@ prototype["pause"] = function pause() {
   if (!this.paused.value) {
     self.pausedCount = self.pausedCount + 1;
   }
-  const item = apply.forEach(self.outboundStats, (arg0) => {
+  const item = applyDefault.forEach(self.outboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
-  const arr = apply;
-  const item1 = apply.forEach(self.inboundStats, (arg0) => {
+  const arr = applyDefault;
+  const item1 = applyDefault.forEach(self.inboundStats, (arg0) => {
     arg0.statsWindow = [];
   });
   self.updateSendState({ paused: true });
@@ -217,7 +219,7 @@ prototype["getEncoderUsageStats"] = function getEncoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    let map1 = new Map();
+    map1 = new Map();
     let tmp9 = map1;
     let obj3 = self.outboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
@@ -242,7 +244,7 @@ prototype["getDecoderUsageStats"] = function getDecoderUsageStats() {
     let _Map = Map;
     let tmp7 = new.target;
     let tmp8 = new.target;
-    let map1 = new Map();
+    map1 = new Map();
     let tmp9 = map1;
     let obj3 = self.inboundStats[key10011];
     let codecsUsed = obj3.getCodecsUsed();
@@ -268,7 +270,7 @@ prototype["getCodecUsageStats"] = function getCodecUsageStats(receiver, userId) 
       if (decoderUsageStats.has(userId)) {
         value = decoderUsageStats.get(userId);
       }
-      let obj = { codec_asymmetric_session: null, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
+      obj = { codec_asymmetric_session: null, codec_h264_decode_duration_sec: null, codec_h265_decode_duration_sec: null, codec_vp8_decode_duration_sec: null, codec_vp9_decode_duration_sec: null, codec_av1_decode_duration_sec: null, codec_unknown_decode_duration_sec: null };
       obj[0] = tmp;
       let num = value.get(parseEncoder.CodecTypes.H264);
       if (num == null) {
@@ -352,8 +354,8 @@ prototype["getOutboundStats"] = function getOutboundStats() {
   const self = this;
   let items = [];
   let item = self(12).forEach(this.outboundStats, (vmafHistogram) => {
-    let items = arg1;
-    let obj = self;
+    items = arg1;
+    obj = self;
     const connection = self.connection;
     let streamParameters;
     if (connection != null) {
@@ -821,7 +823,7 @@ prototype["destroyUser"] = function destroyUser(arg0) {
   delete tmp2[tmp];
 };
 prototype["getInboundParticipants"] = function getInboundParticipants() {
-  return DISCORD_EPOCH.keys(this.inboundStats);
+  return DISCORD_EPOCHDefault.keys(this.inboundStats);
 };
 prototype["updateSendState"] = function updateSendState(paused) {
   const self = this;
@@ -833,47 +835,15 @@ prototype["updateSendState"] = function updateSendState(paused) {
   }
   self.videoStopped.value = self.paused.value || self.zeroReceivers.value;
   if ((self.paused.value || self.zeroReceivers.value) !== self.videoStopped.value) {
-    const item = apply.forEach(self.outboundStats, (arg0) => {
+    const item = applyDefault.forEach(self.outboundStats, (arg0) => {
       const items = [];
       arg0.statsWindow = items;
       return items;
     });
-    const arr = apply;
+    const arr = applyDefault;
   }
 };
 prototype["getStats"] = function getStats(aggregationDuration) {
-  let bytes;
-  let cryptorAttempts;
-  let cryptorDuration;
-  let cryptorFailureCount;
-  let cryptorInvalidNonceCount;
-  let cryptorMissingKeyCount;
-  let cryptorSuccessCount;
-  let framesCodec;
-  let framesCodecError;
-  let framesDropped;
-  let framesNetwork;
-  let freezeCount;
-  let keyframes;
-  let nackCount;
-  let networkFramesDropped;
-  let packets;
-  let packetsLost;
-  let passthroughCount;
-  let pauseCount;
-  let paused;
-  let pliCount;
-  let qpSum;
-  let qualityDecodeErrors;
-  let qualityDecoderReboots;
-  let qualityFrameDrops;
-  let qualityScoreErrors;
-  let qualitySizeMismatches;
-  let totalDecodeTime;
-  let totalFramesDuration;
-  let totalFreezesDuration;
-  let totalPausesDuration;
-  let windowOccluded;
   if (null == aggregationDuration) {
     return null;
   } else {
@@ -901,7 +871,7 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     const report4 = localWantHistogram.getReport([1, 5, 10, 25, 50, 75, 90, 95]);
     const systemResources = aggregationDuration.systemResources;
     const stats = systemResources.getStats();
-    let obj = { duration: null, duration_aggregation: null, duration_stopped_receiving: null, duration_stream_under_8mbps: null, duration_stream_under_7mbps: null, duration_stream_under_6mbps: null, duration_stream_under_5mbps: null, duration_stream_under_4mbps: null, duration_stream_under_3mbps: null, duration_stream_under_2mbps: null, duration_stream_under_1_5mbps: null, duration_stream_under_1mbps: null, duration_stream_under_0_5mbps: null, duration_stream_at_0mbps: null, duration_fps_under_60: null, duration_fps_under_55: null, duration_fps_under_50: null, duration_fps_under_45: null, duration_fps_under_40: null, duration_fps_under_35: null, duration_fps_under_30: null, duration_fps_under_25: null, duration_fps_under_20: null, duration_fps_under_15: null, duration_fps_under_10: null, duration_fps_under_5: null, duration_fps_at_0: null, avg_resolution: null, avg_minor_resolution: null, avg_major_resolution: null, min_resolution_width: null, min_resolution_height: null, duration_resolution_under_720: null, duration_resolution_under_480: null, duration_resolution_under_360: null, num_pauses: null, duration_paused: null, duration_zero_receivers: null, duration_video_stopped: null, duration_hq_simulcast_stream_watched: null, duration_lq_simulcast_stream_watched: null, duration_hq_simulcast_stream_eligible: null, duration_lq_simulcast_stream_eligible: null, num_quality_changes: null, duration_window_occluded: null, duration_incoming_video_stopped_for_occlusion: null, num_window_occlusion_changes: null, fps_percentile1: null, fps_percentile5: null, fps_percentile10: null, fps_percentile25: null, fps_percentile50: null, fps_percentile75: null, bitrate_percentile1: null, bitrate_percentile5: null, bitrate_percentile10: null, bitrate_percentile25: null, bitrate_percentile50: null, bitrate_percentile75: null, bitrate_percentile99: null, resolution_percentile1: null, resolution_percentile5: null, resolution_percentile10: null, resolution_percentile25: null, resolution_percentile50: null, resolution_percentile75: null, inbound_bitrate_estimate_percentile1: null, inbound_bitrate_estimate_percentile5: null, inbound_bitrate_estimate_percentile10: null, inbound_bitrate_estimate_percentile25: null, inbound_bitrate_estimate_percentile50: null, inbound_bitrate_estimate_percentile75: null, inbound_bitrate_estimate_percentile99: null, local_want_percentile1: null, local_want_percentile5: null, local_want_percentile10: null, local_want_percentile25: null, local_want_percentile50: null, local_want_percentile75: null, local_want_percentile90: null, local_want_percentile95: null, average_local_want: null, duration_video_effect: null, cryptor_max_attempts: null, duration_decoder_ffmpeg: null, duration_decoder_dav1d: null, duration_decoder_vp8_libvpx: null, duration_decoder_electron: null, duration_decoder_videotoolbox: null, duration_decoder_uncategorized: null, duration_decoder_unknown: null, duration_decoder_exynos: null, duration_decoder_webrtc: null, duration_decoder_qualcomm: null, duration_decoder_mediatek: null, duration_decoder_d3d11videodecoder: null, duration_decoder_android: null };
+    obj = { duration: null, duration_aggregation: null, duration_stopped_receiving: null, duration_stream_under_8mbps: null, duration_stream_under_7mbps: null, duration_stream_under_6mbps: null, duration_stream_under_5mbps: null, duration_stream_under_4mbps: null, duration_stream_under_3mbps: null, duration_stream_under_2mbps: null, duration_stream_under_1_5mbps: null, duration_stream_under_1mbps: null, duration_stream_under_0_5mbps: null, duration_stream_at_0mbps: null, duration_fps_under_60: null, duration_fps_under_55: null, duration_fps_under_50: null, duration_fps_under_45: null, duration_fps_under_40: null, duration_fps_under_35: null, duration_fps_under_30: null, duration_fps_under_25: null, duration_fps_under_20: null, duration_fps_under_15: null, duration_fps_under_10: null, duration_fps_under_5: null, duration_fps_at_0: null, avg_resolution: null, avg_minor_resolution: null, avg_major_resolution: null, min_resolution_width: null, min_resolution_height: null, duration_resolution_under_720: null, duration_resolution_under_480: null, duration_resolution_under_360: null, num_pauses: null, duration_paused: null, duration_zero_receivers: null, duration_video_stopped: null, duration_hq_simulcast_stream_watched: null, duration_lq_simulcast_stream_watched: null, duration_hq_simulcast_stream_eligible: null, duration_lq_simulcast_stream_eligible: null, num_quality_changes: null, duration_window_occluded: null, duration_incoming_video_stopped_for_occlusion: null, num_window_occlusion_changes: null, fps_percentile1: null, fps_percentile5: null, fps_percentile10: null, fps_percentile25: null, fps_percentile50: null, fps_percentile75: null, bitrate_percentile1: null, bitrate_percentile5: null, bitrate_percentile10: null, bitrate_percentile25: null, bitrate_percentile50: null, bitrate_percentile75: null, bitrate_percentile99: null, resolution_percentile1: null, resolution_percentile5: null, resolution_percentile10: null, resolution_percentile25: null, resolution_percentile50: null, resolution_percentile75: null, inbound_bitrate_estimate_percentile1: null, inbound_bitrate_estimate_percentile5: null, inbound_bitrate_estimate_percentile10: null, inbound_bitrate_estimate_percentile25: null, inbound_bitrate_estimate_percentile50: null, inbound_bitrate_estimate_percentile75: null, inbound_bitrate_estimate_percentile99: null, local_want_percentile1: null, local_want_percentile5: null, local_want_percentile10: null, local_want_percentile25: null, local_want_percentile50: null, local_want_percentile75: null, local_want_percentile90: null, local_want_percentile95: null, average_local_want: null, duration_video_effect: null, cryptor_max_attempts: null, duration_decoder_ffmpeg: null, duration_decoder_dav1d: null, duration_decoder_vp8_libvpx: null, duration_decoder_electron: null, duration_decoder_videotoolbox: null, duration_decoder_uncategorized: null, duration_decoder_unknown: null, duration_decoder_exynos: null, duration_decoder_webrtc: null, duration_decoder_qualcomm: null, duration_decoder_mediatek: null, duration_decoder_d3d11videodecoder: null, duration_decoder_android: null };
     const _Math2 = Math;
     obj[0] = Math.floor(diff / 1000);
     const _Math3 = Math;
@@ -1203,91 +1173,91 @@ prototype["getStats"] = function getStats(aggregationDuration) {
     const _Math44 = Math;
     obj[82] = Math.round(videoEffectDuration.totalDuration() / 1000);
     obj[83] = aggregationDuration.cryptorMaxAttempts;
-    const tmp47 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.FFMPEG];
+    const tmp47 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.FFMPEG];
     let num53 = 0;
     if (null != tmp47) {
       const _Math45 = Math;
       num53 = Math.round(tmp47);
     }
     obj[84] = num53;
-    const tmp48 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.DAV1D];
+    const tmp48 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.DAV1D];
     let num54 = 0;
     if (null != tmp48) {
       const _Math46 = Math;
       num54 = Math.round(tmp48);
     }
     obj[85] = num54;
-    const tmp49 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.VP8_LIBVPX];
+    const tmp49 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.VP8_LIBVPX];
     let num55 = 0;
     if (null != tmp49) {
       const _Math47 = Math;
       num55 = Math.round(tmp49);
     }
     obj[86] = num55;
-    const tmp50 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.ELECTRON];
+    const tmp50 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.ELECTRON];
     let num56 = 0;
     if (null != tmp50) {
       const _Math48 = Math;
       num56 = Math.round(tmp50);
     }
     obj[87] = num56;
-    const tmp51 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.VIDEOTOOLBOX];
+    const tmp51 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.VIDEOTOOLBOX];
     let num57 = 0;
     if (null != tmp51) {
       const _Math49 = Math;
       num57 = Math.round(tmp51);
     }
     obj[88] = num57;
-    const tmp52 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.UNCATEGORIZED];
+    const tmp52 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.UNCATEGORIZED];
     let num58 = 0;
     if (null != tmp52) {
       const _Math50 = Math;
       num58 = Math.round(tmp52);
     }
     obj[89] = num58;
-    const tmp53 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.UNKNOWN];
+    const tmp53 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.UNKNOWN];
     let num59 = 0;
     if (null != tmp53) {
       const _Math51 = Math;
       num59 = Math.round(tmp53);
     }
     obj[90] = num59;
-    const tmp54 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.EXYNOS];
+    const tmp54 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.EXYNOS];
     let num60 = 0;
     if (null != tmp54) {
       const _Math52 = Math;
       num60 = Math.round(tmp54);
     }
     obj[91] = num60;
-    const tmp55 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.WEBRTC];
+    const tmp55 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.WEBRTC];
     let num61 = 0;
     if (null != tmp55) {
       const _Math53 = Math;
       num61 = Math.round(tmp55);
     }
     obj[92] = num61;
-    const tmp56 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.QUALCOMM];
+    const tmp56 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.QUALCOMM];
     let num62 = 0;
     if (null != tmp56) {
       const _Math54 = Math;
       num62 = Math.round(tmp56);
     }
     obj[93] = num62;
-    const tmp57 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.MEDIATEK];
+    const tmp57 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.MEDIATEK];
     let num63 = 0;
     if (null != tmp57) {
       const _Math55 = Math;
       num63 = Math.round(tmp57);
     }
     obj[94] = num63;
-    const tmp58 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.D3D11VIDEODECODER];
+    const tmp58 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.D3D11VIDEODECODER];
     let num64 = 0;
     if (null != tmp58) {
       const _Math56 = Math;
       num64 = Math.round(tmp58);
     }
     obj[95] = num64;
-    const tmp59 = aggregationDuration.decoderBuckets[require(undefined, 7489) /* parseEncoder */.Decoders.ANDROID];
+    const tmp59 = aggregationDuration.decoderBuckets[parseEncoder.Decoders.ANDROID];
     let num65 = 0;
     if (null != tmp59) {
       const _Math57 = Math;
@@ -1374,9 +1344,9 @@ prototype["getStats"] = function getStats(aggregationDuration) {
 prototype["receivedStats"] = function receivedStats(nowResult, transport, streamParameters) {
   let self = this;
   self = this;
-  const importDefault = nowResult;
-  const dependencyMap = transport;
-  let closure_3 = streamParameters;
+  importDefault = nowResult;
+  dependencyMap = transport;
+  closure_3 = streamParameters;
   transport = transport.transport;
   let num = 1;
   if (!obj.isWeb()) {
@@ -1420,12 +1390,12 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   obj = videoEntropy(500);
   tmp13 = self.cameraDuration.value && !self.cameraDuration.value;
   const tmp14 = importDefault;
-  let closure_7 = apply.max(streamParameters.map((quality) => quality.quality));
+  closure_7 = applyDefault.max(streamParameters.map((quality) => quality.quality));
   const outbound = transport.rtp.outbound;
   const first = outbound.filter((type) => {
     let tmp = "video" === type.type;
     if (tmp) {
-      let videoEntropy;
+      videoEntropy = undefined;
       if (type != null) {
         videoEntropy = type.videoEntropy;
       }
@@ -1442,7 +1412,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
   const item = found.forEach((ssrc) => {
     if (null != ssrc) {
       ssrc = ssrc.ssrc;
-      let obj = self.outboundStats[ssrc];
+      obj = self.outboundStats[ssrc];
       if (null == obj) {
         const outboundStats = new videoEntropy(transport[5]).OutboundStats(tmp63.timestampProducer);
         tmp63.outboundStats[ssrc] = outboundStats;
@@ -1674,10 +1644,10 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
     }
   });
   if (!self.paused.value) {
-    const item1 = tmp14(12).forEach(transport.rtp.inbound, (arr) => {
+    const item1 = applyDefault.forEach(transport.rtp.inbound, (arr) => {
       const found = arr.find((type) => "video" === type.type);
       if (null != found) {
-        let obj = self.inboundStats[arg1];
+        obj = self.inboundStats[arg1];
         if (null == obj) {
           const inboundStats = new videoEntropy(transport[5]).InboundStats(obj2.timestampProducer);
           obj2.inboundStats[arg1] = inboundStats;
@@ -1725,7 +1695,7 @@ prototype["receivedStats"] = function receivedStats(nowResult, transport, stream
         tmp27 = null == obj.timeToFirstFrame && found.framesDecoded > 0;
       }
     });
-    const tmp14Result = tmp14(12);
+    const tmp14Result = applyDefault;
   }
   if (tmp19) {
     if (tmpResult.areSetsEqual(set, set1)) {
@@ -1740,7 +1710,7 @@ prototype["updateSystemResourceStats"] = function updateSystemResourceStats() {
   const self = this;
   for (const key10003 in this.outboundStats) {
     let tmp = key10003;
-    let obj = self.outboundStats[key10003];
+    obj = self.outboundStats[key10003];
     let addSystemResourcesResult = obj.addSystemResources();
     continue;
   }
@@ -1763,7 +1733,7 @@ prototype["updateVideoEffectStats"] = function updateVideoEffectStats(rtp) {
   }
   this.videoEffectDuration.value = "video" === type && null != found.filter;
 };
-let result = require("sleep").fileFinishedImporting("lib/VideoQuality.tsx");
+let result = require("set").fileFinishedImporting("lib/VideoQuality.tsx");
 
 export const VideoQualityEvent = obj;
 export { VideoQuality };

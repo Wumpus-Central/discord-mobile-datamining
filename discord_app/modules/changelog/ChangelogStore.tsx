@@ -1,15 +1,14 @@
 // discord_app/modules/changelog/ChangelogStore.tsx
-import _getSystemLocale from "_getSystemLocale";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY";
-import { Store } from "initialize";
-import set from "CHANGELOG_MODAL_KEY";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage3 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import CHANGELOG_MODAL_KEY from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import set from "set" /* 2 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function handleUserSettingsProtoStoreChange() {
   const LastReceivedChangelogId = explicitContentFromProto.LastReceivedChangelogId;
   const setting = LastReceivedChangelogId.getSetting();
@@ -24,16 +23,17 @@ const lastChangeLogDate = "lastChangeLogDate";
 let c12 = null;
 let c13 = null;
 let set = new Set();
+const Store = initializeDefault.Store;
 class ChangelogStore extends Store {
 }
 const prototype = ChangelogStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(_getSystemLocale, handleConnectionClosedOrResumed);
-  const items = [_getSystemLocale];
+  this.waitFor(closure_2, closure_3);
+  const items = [closure_2];
   this.syncWith(items, () => true);
-  const items1 = [handleConnectionClosedOrResumed];
+  const items1 = [closure_3];
   this.syncWith(items1, handleUserSettingsProtoStoreChange);
-  const Storage = Storage.Storage;
+  const Storage = Storage3.Storage;
   const value = Storage.get(lastChangeLogDate);
   if (null != value) {
     try {
@@ -45,9 +45,9 @@ prototype["initialize"] = function initialize() {
     }
   }
 };
-prototype["getChangelog"] = function getChangelog(outer1_0, closure_1) {
+prototype["getChangelog"] = function getChangelog(closure_1_0, closure_1) {
   let tmp2;
-  if (dependencyMap[outer1_0] != null) {
+  if (dependencyMap[closure_1_0] != null) {
     tmp2 = tmp[closure_1];
   }
   if (tmp2 == null) {
@@ -90,7 +90,7 @@ prototype["isLocked"] = function isLocked() {
   return set.size > 0;
 };
 ChangelogStore.displayName = "ChangelogStore";
-const changelogStore = new ChangelogStore(require("dispatcher"), {
+const changelogStore = new ChangelogStore(dispatcherDefault, {
   CHANGE_LOG_LOCK: function handleChangeLogLock(key) {
     if (set.has(key.key)) {
       return false;
@@ -110,13 +110,9 @@ const changelogStore = new ChangelogStore(require("dispatcher"), {
     }
   },
   CHANGE_LOG_SET_CONFIG: function handleConfig(arg0) {
-    let c10;
-    let c8;
     ({ latestChangelogId: c8, config: c10 } = arg0);
   },
   CHANGE_LOG_FETCH_SUCCESS: function handleChangelogFetch(arg0) {
-    let changelog;
-    let id;
     ({ id, changelog } = arg0);
     if (null == dependencyMap[id]) {
       tmp[id] = {};
@@ -134,8 +130,6 @@ const changelogStore = new ChangelogStore(require("dispatcher"), {
     dependencyMap2[id][changelog.locale] = constants2.LOADED_SUCCESS;
   },
   CHANGE_LOG_FETCH_FAILED: function handleChangelogFetchFailed(arg0) {
-    let id;
-    let locale;
     ({ id, locale } = arg0);
     if (null != dependencyMap[id]) {
       if (null != dependencyMap[id][locale]) {
@@ -153,7 +147,7 @@ const changelogStore = new ChangelogStore(require("dispatcher"), {
   CHANGE_LOG_MARK_SEEN: function handleDismiss(changelogDate) {
     changelogDate = changelogDate.changelogDate;
     const date = new Date(changelogDate);
-    const Storage = Storage.Storage;
+    const Storage = Storage3.Storage;
     const result = Storage.set(lastChangeLogDate, changelogDate);
   }
 });

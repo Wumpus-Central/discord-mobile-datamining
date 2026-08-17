@@ -1,9 +1,11 @@
 // discord_app/modules/go_live/utils/canUseStreamSetting.tsx
-import { StreamQualities } from "GuildFeatures";
-import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import set from "set" /* 2 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4266 */;
 
-let result = require("getGuildTierFromGuild").fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
+const StreamQualities = GuildFeatures.StreamQualities;
+let result = set.fileFinishedImporting("modules/go_live/utils/canUseStreamSetting.tsx");
 
 export default function canUseStreamSetting(quality, user) {
   if (null != quality) {
@@ -11,11 +13,11 @@ export default function canUseStreamSetting(quality, user) {
     if (null != quality.quality) {
       quality = quality.quality;
       if (StreamQualities.HIGH_STREAMING_QUALITY === quality) {
-        flag = getPremiumPlanItem.canStreamQuality(getPremiumPlanItem.StreamQuality.HIGH, user);
-        const obj2 = getPremiumPlanItem;
+        flag = getPremiumPlanItemDefault.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.HIGH, user);
+        const obj2 = getPremiumPlanItemDefault;
       } else if (tmp2.MID_STREAMING_QUALITY === quality) {
-        flag = getPremiumPlanItem.canStreamQuality(getPremiumPlanItem.StreamQuality.MID, user);
-        const obj = getPremiumPlanItem;
+        flag = getPremiumPlanItemDefault.canStreamQuality(getPremiumPlanItemDefault.StreamQuality.MID, user);
+        const obj = getPremiumPlanItemDefault;
       } else {
         const quality2 = quality.quality;
         flag = false;

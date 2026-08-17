@@ -1,10 +1,12 @@
 // discord_common/js/packages/libdave/package/src/DisplayableCode.ts
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/DisplayableCode.ts");
 
 export const generateDisplayableCode = function generateDisplayableCode(toByteArrayResult, desiredLength, chunkSize) {
   if (toByteArrayResult.byteLength < desiredLength) {
     const _Error4 = Error;
-    const error = new Error("data.byteLength must be greater than or equal to desiredLength");
+    error = new Error("data.byteLength must be greater than or equal to desiredLength");
     throw error;
   } else if (desiredLength % chunkSize != 0) {
     const _Error3 = Error;

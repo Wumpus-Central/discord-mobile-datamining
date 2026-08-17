@@ -1,5 +1,5 @@
 // discord_app/hooks/useThrottle.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 import { apply } from "../../_runtime/00012_apply.js";
 
 const require = arg1;
@@ -8,7 +8,7 @@ function throttleStateFn(arg0) {
 }
 function useThrottledFunction(callback4, arg1, items4, sharedValue) {
   const _require = callback4;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let items = items4;
   if (items4 === undefined) {
     items = [];
@@ -18,7 +18,7 @@ function useThrottledFunction(callback4, arg1, items4, sharedValue) {
   ref = React.useRef(_apply.throttle(callback4, arg1, sharedValue));
   const items1 = [callback4, arg1, sharedValue, ...items];
   const effect = React.useEffect(() => {
-    ref.current = stateFromStores(current2[1]).throttle(stateFromStores, current2, ref1);
+    ref.current = callback(current2[1]).throttle(callback, current2, ref1);
     return () => {
       const current = ref.current;
       if (current != null) {
@@ -52,7 +52,7 @@ export const useThrottledState = (stateFromStores) => {
   ref = ref1.useRef(_require(current2[1]).throttle(tmp, arg1, arg3));
   const items1 = [tmp, arg1, arg3, ...items];
   const effect = ref1.useEffect(() => {
-    ref.current = stateFromStores(current2[1]).throttle(stateFromStores, current2, ref1);
+    ref.current = callback(current2[1]).throttle(callback, current2, ref1);
     return () => {
       const current = ref.current;
       if (current != null) {

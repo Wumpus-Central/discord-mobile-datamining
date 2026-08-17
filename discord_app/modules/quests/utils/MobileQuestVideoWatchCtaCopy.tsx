@@ -1,8 +1,9 @@
 // discord_app/modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { apexExperiment } from "../experiments/VQRemainingTimeTruncationExperiment.tsx";
-import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import QuestsExperimentLocations2 from "QuestsExperimentLocations" /* 6716 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
+import apexExperimentDefault from "apexExperiment" /* 10706 */;
 
 function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
   let obj = getApplicationIdsByTaskTypes;
@@ -33,7 +34,8 @@ function formatWatchRemainingDurationShort(questTaskDetails, truncate) {
     return intl.formatToPlainString(tmp5 ? t["spl/XS"] : t.rUfeQx, obj);
   }
 }
-const result = require("getSystemLocale").fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
+const QuestsExperimentLocations = QuestsExperimentLocations2.QuestsExperimentLocations;
+const result = set.fileFinishedImporting("modules/quests/utils/MobileQuestVideoWatchCtaCopy.tsx");
 
 export { formatWatchRemainingDurationShort };
 export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(questTaskDetails) {
@@ -43,7 +45,7 @@ export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(ques
     obj[0] = formatWatchRemainingDurationShort(questTaskDetails);
     return intl.formatToPlainString(getSystemLocale.t["pF/deA"], obj);
   } else {
-    let obj1 = apexExperiment;
+    obj1 = apexExperimentDefault;
     obj = { location: null };
     obj[0] = QuestsExperimentLocations.QUESTS_CARD;
     const intl2 = getSystemLocale.intl;
@@ -55,8 +57,6 @@ export const getVideoQuestWatchCtaText = function getVideoQuestWatchCtaText(ques
   }
 };
 export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails) {
-  let minutes;
-  let seconds;
   let obj = getApplicationIdsByTaskTypes;
   const remainingTaskTime = obj.getRemainingTaskTime(questTaskDetails);
   ({ minutes, seconds } = remainingTaskTime);
@@ -76,7 +76,7 @@ export const getVideoQuestWatchCtaAccessibilityLabel = function getVideoQuestWat
       obj[0] = formatToPlainStringResult;
       let formatToPlainStringResult1 = formatToPlainString(t["ch+yrN"], obj);
     } else {
-      const obj1 = { remainTime: null };
+      obj1 = { remainTime: null };
       obj1[0] = formatToPlainStringResult;
       formatToPlainStringResult1 = formatToPlainString(t.Bwc5Dg, obj1);
     }

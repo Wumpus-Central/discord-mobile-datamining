@@ -1,10 +1,10 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx
-import getSystemLocale from "getSystemLocale";
-import noop from "noop";
-import { HelpdeskArticles } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx");
+let result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx");
 
 export default function useCreatorMonetizationEligibilityItems(arg0) {
   const _require = arg0;
@@ -50,9 +50,9 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
-            if (outer1_4) {
-              if (!outer1_5) {
+            closure_0 = tmp4;
+            if (closure_1_4) {
+              if (!closure_1_5) {
                 let result;
                 if (c2 != null) {
                   const onRequireModeratorMFAClick = c2.onRequireModeratorMFAClick;
@@ -62,7 +62,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
                 }
                 c1 = 1;
                 c2 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = result;
                 return obj1;
               }
@@ -115,9 +115,6 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
   enableMFAHook = _require(actions[4]).useEnableMFAHook({ onEnableMFAClick: callback });
   const items1 = [arg0, sortedByIneligible, isUserMFAEnabled, actions, isModerationMFAEnabled, enableMFAHook, callback];
   return isUserMFAEnabled.useMemo(() => {
-    let minimumOwnerAgeInYears;
-    let minimumSize;
-    let noRecentViolations;
     if (null == callback) {
       return null;
     } else {
@@ -154,7 +151,7 @@ export default function useCreatorMonetizationEligibilityItems(arg0) {
         const intl3 = tmp23(tmp24[5]).intl;
         obj[2] = intl3.string(tmp23(tmp24[5]).t["5BwC/O"]);
         const intl4 = tmp23(tmp24[5]).intl;
-        const obj1 = { minimumOwnerAgeInYears: null };
+        obj1 = { minimumOwnerAgeInYears: null };
         obj1[0] = minimumOwnerAgeInYears;
         obj[3] = intl4.formatToPlainString(tmp23(tmp24[5]).t.DW1Vae, obj1);
         obj[4] = tmp.meetsOwnerAgeRequirement;

@@ -1,12 +1,12 @@
 // discord_app/design/components/Modal/native/ModalStepIndicator.native.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../intl/Mana.messages.js";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2009 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function StepPill(isActive) {
   isActive = isActive.isActive;
   let TEXT_BRAND = isActive.activeColor;
@@ -36,28 +36,28 @@ function StepPill(isActive) {
   token1 = tmp6Result.useToken(BACKGROUND_MOD_STRONG);
   let items = [isActive, sharedValue];
   const effect = token.useEffect(() => {
-    let num = 0;
+    num = 0;
     if (isActive) {
       num = 1;
     }
-    const result = sharedValue.set(isActive(sharedValue[7]).withSpring(num, outer1_6));
+    const result = sharedValue.set(isActive(sharedValue[7]).withSpring(num, closure_1_6));
   }, items);
   const tmp5 = callback();
   class I {
     constructor() {
       obj = { width: null, backgroundColor: null, opacity: null };
-      obj2 = isActive(c2[5]);
-      obj[0] = obj2.interpolate(c2.get(), [0, 1], [12, 36]);
-      obj3 = isActive(c2[5]);
+      obj2 = isActive(closure_2[5]);
+      obj[0] = obj2.interpolate(closure_2.get(), [0, 1], [12, 36]);
+      obj3 = isActive(closure_2[5]);
       items = [, ];
-      items[0] = BACKGROUND_MOD_STRONG;
-      items[1] = TEXT_BRAND;
-      obj[1] = obj3.interpolateColor(c2.get(), [0, 1], items);
-      obj4 = isActive(c2[5]);
+      items[0] = closure_4;
+      items[1] = closure_3;
+      obj[1] = obj3.interpolateColor(closure_2.get(), [0, 1], items);
+      obj4 = isActive(closure_2[5]);
       items1 = [, ];
       items1[0] = c1;
       items1[1] = 1;
-      obj[2] = obj4.interpolate(c2.get(), [0, 1], items1);
+      obj[2] = obj4.interpolate(closure_2.get(), [0, 1], items1);
       return obj;
     }
   }
@@ -72,14 +72,9 @@ function StepPill(isActive) {
 let closure_6 = { overshootClamping: true };
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", gap: 4 }, stepPill: { height: 4, borderRadius: 2 } });
 let closure_8 = { code: "function ModalStepIndicatorNativeTsx1(){const{interpolate,sharedValue,WIDTH_INACTIVE,WIDTH_ACTIVE,interpolateColor,inactiveColor,activeColor,inactiveOpacity}=this.__closure;return{width:interpolate(sharedValue.get(),[0,1],[WIDTH_INACTIVE,WIDTH_ACTIVE]),backgroundColor:interpolateColor(sharedValue.get(),[0,1],[inactiveColor,activeColor]),opacity:interpolate(sharedValue.get(),[0,1],[inactiveOpacity,1])};}" };
-let result = require("jsxProd").fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalStepIndicator.native.tsx");
 
 export const ModalStepIndicator = function ModalStepIndicator(arg0) {
-  let activeColor;
-  let currentStep;
-  let inactiveColor;
-  let inactiveOpacity;
-  let totalSteps;
   ({ currentStep, totalSteps } = arg0);
   ({ activeColor, inactiveColor, inactiveOpacity } = arg0);
   const tmp = callback();
@@ -106,8 +101,8 @@ export const ModalStepIndicator = function ModalStepIndicator(arg0) {
       return <View style={null}>{null}</View>;
     } else {
       const intl = getSystemLocale.intl;
-      const obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
-      obj1[2] = intl.string(messagesProxy.KUwsC0);
+      obj1 = { accessible: true, accessibilityRole: "progressbar", accessibilityLabel: null, accessibilityValue: null, importantForAccessibility: "yes", style: null, children: null };
+      obj1[2] = intl.string(messagesProxyDefault.KUwsC0);
       const obj2 = { min: 1, max: null, now: null };
       obj2[1] = totalSteps;
       obj2[2] = currentStep + 1;

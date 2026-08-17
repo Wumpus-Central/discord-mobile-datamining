@@ -1,57 +1,53 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx
-import _slicedToArray from "_slicedToArray";
-import RowGroup from "RowGroup";
-import { View } from "usePremiumUpsellConfig";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import handleThemeChange from "handleThemeChange";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "PressableBase";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getEmojiToGroupId" /* 6727 */;
+import closure_7 from "handleThemeChange" /* 1302 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c10;
-let c9;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 ({ UpsellTypes: c9, AnalyticsSections: c10, Fonts } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { header: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" }, dotSeparator: null, premiumTitle: null, emojiContainer: null, emoji: null, emojiCount: null };
-createCacheKey = { width: 4, height: 4, borderRadius: require("Themes").radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: require("Themes").colors.TEXT_SUBTLE };
+createCacheKey = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: require("Themes").unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
+createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
 createCacheKey[3] = { flexDirection: "row", flexWrap: "wrap", alignItems: "center", padding: 4 };
 createCacheKey[4] = { width: 24, height: 24 };
-let obj1 = { color: require("Themes").unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
-createCacheKey[5] = { color: require("Themes").colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: require("Themes").colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx");
+let obj1 = { color: ThemesDefault.unsafe_rawColors.PREMIUM_TIER_2_PURPLE, marginLeft: 4, fontFamily: Fonts.PRIMARY_BOLD, fontSize: 12 };
+createCacheKey[5] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 12, fontFamily: Fonts.PRIMARY_BOLD, textAlign: "center", textAlignVertical: "center" };
+let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetEmojiSection.tsx");
 
 export default function GuildActionSheetEmojiSection(guildId) {
   guildId = guildId.guildId;
-  let importDefault;
+  importDefault = undefined;
   let first;
   let callback;
   let stateFromStores;
   let num;
   let analyticsLocations;
   let theme;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   importDefault = tmp;
   let obj = stateFromStores;
   const tmp2 = callback(stateFromStores.useState(false), 2);
   first = tmp2[0];
   callback = tmp2[1];
-  let obj1 = guildId(first[10]);
+  obj1 = guildId(first[10]);
   let items = [analyticsLocations];
   const items1 = [guildId];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items, () => analyticsLocations.getGuildEmoji(guildId), items1);
   let obj2 = guildId(first[12]);
   const token = obj2.useToken(importDefault(first[9]).modules.mobile.TABLE_ROW_PADDING);
   let obj3 = guildId(first[10]);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_8];
   stateFromStores = obj3.useStateFromStores(items2, () => currentUser.getCurrentUser(), []);
   let obj4 = importDefault(first[13]);
   let result = obj4.canUseEmojisEverywhere(stateFromStores);
@@ -91,21 +87,21 @@ export default function GuildActionSheetEmojiSection(guildId) {
   theme = obj.useCallback((arg0, currentUser) => {
     let result = null == currentUser;
     if (!result) {
-      let obj = _undefined(first[13]);
+      let obj = lib(first[13]);
       result = obj.canUseEmojisEverywhere(currentUser);
     }
     if (!result) {
       const _HermesInternal = HermesInternal;
-      _undefined(first[16]).hideActionSheet("GuildProfile:" + arg0);
-      const obj2 = _undefined(first[16]);
+      lib(first[16]).hideActionSheet("GuildProfile:" + arg0);
+      const obj2 = lib(first[16]);
       obj = { initialUpsellKey: null, analyticsLocation: null, analyticsLocations: null };
-      obj[0] = outer1_9.GLOBAL_EMOJI;
+      obj[0] = closure_1_9.GLOBAL_EMOJI;
       obj = { section: null };
-      obj[0] = outer1_10.EMOJI_PICKER_POPOUT;
+      obj[0] = closure_1_10.EMOJI_PICKER_POPOUT;
       obj[1] = obj;
       obj[2] = analyticsLocations;
-      const result1 = _undefined(first[17]).handleShowUpsellAlert(obj);
-      const obj3 = _undefined(first[17]);
+      const result1 = lib(first[17]).handleShowUpsellAlert(obj);
+      const obj3 = lib(first[17]);
     }
   }, items3);
   const tmp4Result = guildId(first[18]);
@@ -120,7 +116,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
     if (tmp10) {
       obj = { accessibilityRole: "button", onPress: null, children: null };
       obj[1] = function onPress() {
-        return lib(guildId, stateFromStores);
+        return lib2(guildId, stateFromStores);
       };
       obj1 = { style: null, children: null };
       obj1[0] = tmp.header;
@@ -150,7 +146,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
     obj6[0] = tmp.emojiContainer;
     const items6 = [
       substr.map((accessibilityLabel) => {
-          let closure_0 = accessibilityLabel;
+          closure_0 = accessibilityLabel;
           let obj = {
             accessibilityRole: "image",
             accessibilityLabel: accessibilityLabel.name,
@@ -158,29 +154,29 @@ export default function GuildActionSheetEmojiSection(guildId) {
               const result = guildId(first[24]).triggerHapticFeedback(callback(first[25]).IMPACT_LIGHT);
               const obj = guildId(first[24]);
               guildId(first[26]).presentEmoji(closure_0);
-              if (!outer1_2) {
-                outer1_3(true);
+              if (!closure_1_2) {
+                closure_1_3(true);
               }
             },
             children: null
           };
           obj = { resizeMode: "contain", style: items, placeholder: null, source: null };
-          items = [_undefined.emoji, ];
+          items = [lib.emoji, ];
           obj = { margin: num };
           items[1] = obj;
-          const tmp4 = _undefined(first[27]);
-          if (obj4.isThemeDark(lib.theme)) {
+          const tmp4 = lib(first[27]);
+          if (obj4.isThemeDark(lib2.theme)) {
             let tmp3Result = tmp3(tmp2[28]);
           } else {
             tmp3Result = tmp3(tmp2[29]);
           }
           obj[2] = tmp3Result;
-          const obj1 = { uri: null };
+          obj1 = { uri: null };
           tmp3Result = tmp3(tmp2[30]);
           obj1[0] = tmp3Result.getEmojiURL({ id: accessibilityLabel.id, animated: accessibilityLabel.animated, size: 48 });
           obj[3] = obj1;
-          obj[3] = outer1_11(tmp4, obj);
-          return outer1_11(guildId(first[21]).PressableOpacity, obj, accessibilityLabel.id);
+          obj[3] = closure_1_11(tmp4, obj);
+          return closure_1_11(guildId(first[21]).PressableOpacity, obj, accessibilityLabel.id);
         }),
 
     ];
@@ -190,7 +186,7 @@ export default function GuildActionSheetEmojiSection(guildId) {
       const intl3 = tmp4(tmp5[20]).intl;
       obj7[1] = intl3.string(tmp4(tmp5[20]).t["UKOtz+"]);
       obj7[2] = function onPress() {
-        const result = guildId(first[24]).triggerHapticFeedback(_undefined(first[25]).IMPACT_LIGHT);
+        const result = guildId(first[24]).triggerHapticFeedback(lib(first[25]).IMPACT_LIGHT);
         callback(true);
       };
       const obj8 = { style: null, children: null };

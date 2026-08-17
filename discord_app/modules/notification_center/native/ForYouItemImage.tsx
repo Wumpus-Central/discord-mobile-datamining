@@ -1,18 +1,14 @@
 // discord_app/modules/notification_center/native/ForYouItemImage.tsx
-import importAllResult from "registerAsset";
-import { View } from "Button";
-import { getGuildAcronym } from "GuildNSFWContentLevel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import PROFILE_BACKGROUND from "PROFILE_BACKGROUND";
-import { jsx } from "initialize";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { getGuildAcronym } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import PROFILE_BACKGROUND from "PROFILE_BACKGROUND" /* 15682 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let FRIEND_BACKGROUND;
-let MESSAGE_BACKGROUND;
-let PROFILE_BACKGROUND;
 const require = arg1;
 let c3 = importAllResult;
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = PROFILE_BACKGROUND);
@@ -29,23 +25,23 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj = { container: obj, rowImage: { height: num, width: num, borderRadius: result }, guildFallbackImage: null };
   obj[3] = num2;
-  obj = { height: "auto", maxHeight: result, width: "auto", color: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj = { height: "auto", maxHeight: result, width: "auto", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   obj[2] = obj;
   return obj;
 });
 let obj = { fallbackImage: null, fallbackImageV2: null, brandBackground: null, profileBackground: null, friendBackground: null, messageBackground: null, guildGridBackground: null };
-obj = { color: require("Themes").colors.WHITE };
+obj = { color: ThemesDefault.colors.WHITE };
 obj[0] = obj;
-createCacheKey = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = createCacheKey;
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[2] = createCacheKey;
 obj[3] = { backgroundColor: PROFILE_BACKGROUND };
 obj[4] = { backgroundColor: FRIEND_BACKGROUND };
 obj[5] = { backgroundColor: MESSAGE_BACKGROUND };
-obj[6] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_10 = createCacheKey.createStyles(obj);
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 const memoResult = importAllResult.memo((item) => {
   item = item.item;
   const compactMode = item.compactMode;
@@ -61,9 +57,9 @@ const memoResult = importAllResult.memo((item) => {
   if (other_user != null) {
     id = other_user.id;
   }
-  let obj1 = item(obj[21]);
-  const items = [mergeGuildAvatar];
-  stateFromStores = obj1.useStateFromStores(items, () => outer1_7.getUser(id));
+  obj1 = item(obj[21]);
+  const items = [closure_7];
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getUser(id));
   const items1 = [stateFromStores, compactMode, , , , ];
   ({ acked: arr2[2], guild_id: arr2[3], message_id: arr2[4] } = item);
   items1[5] = analyticsLocations;
@@ -74,7 +70,7 @@ const memoResult = importAllResult.memo((item) => {
     } else {
       let tmpResult = { onPress: null, children: null };
       tmpResult[0] = function onPress() {
-        outer1_1(outer1_2[23])({ userId: id.id, localUser: id, messageId: message_id.message_id, sourceAnalyticsLocations: closure_2 });
+        closure_1_1(closure_1_2[23])({ userId: id.id, localUser: id, messageId: message_id.message_id, sourceAnalyticsLocations: closure_2 });
       };
       tmpResult = { source: null, size: null, avatarDecoration: null };
       const obj3 = item(analyticsLocations[24]);
@@ -239,6 +235,6 @@ const memoResult = importAllResult.memo((item) => {
     return <stateFromStores style={null}>{null}</stateFromStores>;
   }
 });
-let result = require("GuildNSFWContentLevel").fileFinishedImporting("modules/notification_center/native/ForYouItemImage.tsx");
+let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouItemImage.tsx");
 
 export const ForYouItemImage = memoResult;

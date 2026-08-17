@@ -1,19 +1,15 @@
 // discord_app/modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx
-import createCacheKey from "createCacheKey";
-import _slicedToArray from "_slicedToArray";
-import registerAsset from "registerAsset";
-import { View } from "Stack";
-import jsxProd from "TableSwitchRow";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-const result = require("noop").fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
+({ jsx: error, jsxs: closure_8 } = jsxProd);
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/ConnectedApplicationIdentity.tsx");
 
 export default function ConnectedApplicationIdentity(identity) {
-  let c4;
-  let tmp6;
   identity = identity.identity;
   let _require = identity;
   const token = identity.token;
@@ -34,7 +30,7 @@ export default function ConnectedApplicationIdentity(identity) {
   }
   let obj = _require(application[5]);
   const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(_require(application[6]).readStyles);
-  let obj1 = React;
+  obj1 = React;
   let profile = identity.profile;
   let flag;
   if (profile != null) {
@@ -51,21 +47,21 @@ export default function ConnectedApplicationIdentity(identity) {
   let icon;
   callback = obj1.useCallback(() => {
     let obj = { children: null };
-    const items = [outer1_7(lib(application[8]).Spacer, { size: 8 }), , , ];
+    const items = [closure_1_7(lib(application[8]).Spacer, { size: 8 }), , , ];
     obj = { variant: "text-md/medium", children: null };
     const intl = lib(application[7]).intl;
     obj = { provider: str };
     obj[1] = intl.format(lib(application[7]).t.VgqIPj, obj);
-    items[1] = outer1_7(lib(application[9]).Text, obj);
-    items[2] = outer1_7(lib(application[8]).Spacer, { size: 16 });
-    const obj1 = { children: null };
+    items[1] = closure_1_7(lib(application[9]).Text, obj);
+    items[2] = closure_1_7(lib(application[8]).Spacer, { size: 16 });
+    obj1 = { children: null };
     const intl2 = lib(application[7]).intl;
     obj1[0] = intl2.format(lib(application[7]).t.COW3Xn, { platformName: str });
-    items[3] = outer1_7(token(application[10]), obj1);
+    items[3] = closure_1_7(token(application[10]), obj1);
     obj[0] = items;
     const obj2 = { platformName: str };
     const tmp = token(application[10]);
-    const tmp2 = outer1_8(outer1_6, obj);
+    const tmp2 = closure_1_8(closure_1_6, obj);
     const obj3 = { title: null, body: null, cancelText: null, children: null, confirmText: null, onConfirm: null, confirmColor: null };
     const intl3 = lib(application[7]).intl;
     obj3[0] = intl3.formatToPlainString(lib(application[7]).t.U5x12f, { name: str });
@@ -77,8 +73,8 @@ export default function ConnectedApplicationIdentity(identity) {
     obj3[4] = intl5.string(lib(application[7]).t.ppppRJ);
     obj3[5] = function onConfirm() {
       if (null != closure_1) {
-        outer1_0(outer1_2[12]).handleDeleteApp(tmp);
-        const obj = outer1_0(outer1_2[12]);
+        closure_1_0(closure_1_2[12]).handleDeleteApp(tmp);
+        const obj = closure_1_0(closure_1_2[12]);
       }
     };
     obj3[6] = token(application[13]).Colors.RED;
@@ -101,15 +97,15 @@ export default function ConnectedApplicationIdentity(identity) {
     return obj.getApplicationIconSource(obj);
   }, items1);
   _require = str((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp3;
+      closure_1 = tmp3;
       v0(closure_0);
-      let c3 = 1;
-      let obj1 = token(application[16]);
+      c3 = 1;
+      obj1 = token(application[16]);
       obj1 = { connection_visible: null };
       obj1[0] = closure_0;
       yield obj1.updateApplicationIdentityConfig(closure_0.application_id, closure_0.provider_issued_user_id, obj1);

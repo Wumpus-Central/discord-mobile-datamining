@@ -1,6 +1,7 @@
 // discord_common/js/packages/media-engine/native/ui/Camera.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import VideoDefault from "Video" /* 4573 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 class Camera {
   constructor(arg0) {
@@ -28,7 +29,8 @@ class Camera {
     return tmp2Result;
   }
 }
+noopAll;
 Camera.defaultProps = { disabled: false, width: 320, height: 180 };
-const result = require("Video").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Camera.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/Camera.tsx");
 
 export default Camera;

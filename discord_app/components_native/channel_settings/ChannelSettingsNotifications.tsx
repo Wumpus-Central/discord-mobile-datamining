@@ -1,82 +1,72 @@
 // discord_app/components_native/channel_settings/ChannelSettingsNotifications.tsx
-import importAllResult from "computeChannelName";
-import createChannelRecord from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleInviteData from "handleInviteData";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "TableRowInner";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import Form from "Form" /* 8083 */;
+import MutedUntilTextDefault from "MutedUntilText" /* 10087 */;
+import NotificationSettingsChannelDefault from "NotificationSettingsChannel" /* 10089 */;
+import importAllResult from "noop" /* 19 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "handleInviteData" /* 4295 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { Stack } from "../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { Form } from "../../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { collectGuildAnalyticsMetadata } from "../../modules/app_analytics/AppAnalyticsUtils.tsx";
-import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
-import { MutedUntilText } from "../../modules/main_tabs_v2/native/sidebar/details/screens/MutedUntilText.tsx";
 import { getMuteTimeOptions } from "../../modules/notifications/NotificationUtils.tsx";
-import { NotificationSettingsChannel } from "../../modules/notifications/settings/native/NotificationSettingsChannel.tsx";
 
-let c4;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let map1;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 function ChannelSettingsNotificationsGuard(onClose) {
   onClose = onClose.onClose;
   const channelId = onClose.channelId;
   let stateFromStores;
   let guildId;
   let obj = onClose(stateFromStores[29]);
-  const items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(channelId));
+  const items = [closure_6];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   guildId = undefined;
   if (stateFromStores != null) {
     guildId = stateFromStores.getGuildId();
   }
   let tmpResult = tmp(tmp2[29]);
-  const items1 = [updateUserGuildSettingsInternal];
+  const items1 = [closure_9];
   const stateFromStoresObject = tmpResult.useStateFromStoresObject(items1, () => {
     let parent_id;
     if (stateFromStores != null) {
       parent_id = tmp.parent_id;
     }
     if (null != parent_id) {
-      let NULL = outer1_9.getChannelMessageNotifications(guildId, tmp.parent_id);
+      let NULL = closure_1_9.getChannelMessageNotifications(guildId, tmp.parent_id);
     } else {
-      NULL = outer1_12.NULL;
+      NULL = closure_1_12.NULL;
     }
-    const messageNotifications = outer1_9.getMessageNotifications(guildId);
+    const messageNotifications = closure_1_9.getMessageNotifications(guildId);
     let tmp8 = messageNotifications;
-    if (NULL !== outer1_12.NULL) {
+    if (NULL !== closure_1_12.NULL) {
       tmp8 = NULL;
     }
-    const obj = { messageNotifications: outer1_9.getChannelMessageNotifications(guildId, channelId), muted: outer1_9.isChannelMuted(guildId, channelId), muteConfig: outer1_9.getChannelMuteConfig(guildId, channelId), guildMuted: outer1_9.isMuted(guildId), guildMessageNotifications: messageNotifications, newForumThreadsCreated: null, defaultSetting: null };
+    const obj = { messageNotifications: closure_1_9.getChannelMessageNotifications(guildId, channelId), muted: closure_1_9.isChannelMuted(guildId, channelId), muteConfig: closure_1_9.getChannelMuteConfig(guildId, channelId), guildMuted: closure_1_9.isMuted(guildId), guildMessageNotifications: messageNotifications, newForumThreadsCreated: null, defaultSetting: null };
     let newForumThreadsCreated = null != tmp;
     if (newForumThreadsCreated) {
-      newForumThreadsCreated = outer1_9.getNewForumThreadsCreated(tmp);
+      newForumThreadsCreated = closure_1_9.getNewForumThreadsCreated(tmp);
     }
     obj[5] = newForumThreadsCreated;
     obj[6] = tmp8;
     return obj;
   });
   tmpResult = tmp(tmp2[29]);
-  const items2 = [handleInviteData];
+  const items2 = [closure_7];
   const items3 = [stateFromStores, onClose];
-  const stateFromStores1 = tmpResult.useStateFromStores(items2, () => outer1_7.getMemberCount(guildId));
+  const stateFromStores1 = tmpResult.useStateFromStores(items2, () => closure_1_7.getMemberCount(guildId));
   const effect = guildId.useEffect(() => {
     if (null == stateFromStores) {
       if (onClose != null) {
@@ -100,10 +90,10 @@ let c3 = importAllResult;
 ({ AnalyticEvents: unpackModuleId, UserNotificationSettings: closure_12, ChannelTypes: map1, SettingsPaneTypes: closure_14, MAX_MEMBERS_NOTIFY_ALL_MESSAGES: closure_15 } = ME);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 createCacheKey = { screenContainer: null, stackPadding: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingTop: require("Themes").space.PX_16 };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+let closure_19 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class ChannelSettingsNotifications extends PureComponent {
   constructor(arg0) {
@@ -112,11 +102,8 @@ class ChannelSettingsNotifications extends PureComponent {
     closure_0 = tmp2;
     tmp2.radioGroupRef = closure_3.createRef();
     tmp2.updateSetting = function updateSetting(arg0, NotificationLabel) {
-      let messageNotifications;
-      let mute_config;
-      let muted;
       ({ muted, messageNotifications, mute_config } = arg0);
-      const channel = tmp2.props.channel;
+      const channel = state.props.channel;
       const obj = {};
       let flag = false;
       if (undefined !== muted) {
@@ -132,9 +119,8 @@ class ChannelSettingsNotifications extends PureComponent {
         flag = true;
       }
       if (flag) {
-        const obj2 = outer1_1(outer1_2[14]);
+        const obj2 = closure_1_1(closure_1_2[14]);
         const result = obj2.updateChannelOverrideSettings(channel.getGuildId(), channel.id, obj, NotificationLabel);
-        tmp2 = NotificationLabel;
       }
     };
     tmp2.handleToggleMuteChannel = function handleToggleMuteChannel() {
@@ -145,27 +131,28 @@ class ChannelSettingsNotifications extends PureComponent {
         obj = { muted: null };
         obj[0] = !muted;
         obj.setState(obj, () => {
-          const NotificationLabel = muted(outer2_2[18]).NotificationLabel;
+          const NotificationLabel = muted(closure_2_2[18]).NotificationLabel;
           return muted.updateSetting({ muted: !muted }, NotificationLabel.muted(!muted));
         });
       } else {
         const _HermesInternal = HermesInternal;
-        const obj2 = outer1_1(outer1_2[15]);
+        const obj2 = closure_1_1(closure_1_2[15]);
         obj = { guildId: null, channelId: null, onOptionPress: null };
         const combined = "muteSettings" + channel.id;
         obj[0] = channel.getGuildId();
         obj[1] = channel.id;
         obj[2] = function onOptionPress(muted) {
-          const NotificationLabel = muted(outer1_2[18]).NotificationLabel;
+          const NotificationLabel = muted(closure_1_2[18]).NotificationLabel;
           return muted.updateSetting(muted, NotificationLabel.muted(muted.muted));
         };
-        obj2.openLazy(outer1_2(outer1_2[17])(outer1_2[16], outer1_2.paths), combined, obj);
-        const tmp4 = outer1_2(outer1_2[17])(outer1_2[16], outer1_2.paths);
+        obj2.openLazy(state(closure_1_2[17])(closure_1_2[16], closure_1_2.paths), combined, obj);
+        const tmp4 = state(closure_1_2[17])(closure_1_2[16], closure_1_2.paths);
       }
     };
     tmp2.handleTypeChange = function handleTypeChange(messageNotifications) {
-      messageNotifications.setState({ messageNotifications }, () => {
-        const NotificationLabel = messageNotifications(outer2_2[18]).NotificationLabel;
+      const state = messageNotifications;
+      state.setState({ messageNotifications }, () => {
+        const NotificationLabel = messageNotifications(closure_2_2[18]).NotificationLabel;
         return messageNotifications.updateSetting({ messageNotifications }, NotificationLabel.notifications(messageNotifications));
       });
     };
@@ -175,7 +162,7 @@ class ChannelSettingsNotifications extends PureComponent {
 }
 const prototype = ChannelSettingsNotifications.prototype;
 prototype["componentDidMount"] = function componentDidMount() {
-  let obj = collectGuildAnalyticsMetadata;
+  let obj = collectGuildAnalyticsMetadataDefault;
   obj = { settings_type: "channel", destination_pane: constants4.CHANNEL_NOTIFICATION_SETTINGS };
   obj.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
@@ -198,7 +185,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
   const muted = this.state.muted;
   let MuteSettingType = dependencyMap;
   let obj = computeChannelName;
-  const channelName = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true);
+  const channelName = obj.computeChannelName(channel, closure_10, closure_8, true);
   obj = { description: null, hasIcons: false, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["6yI+JS"]);
@@ -210,7 +197,7 @@ prototype["renderMuteSection"] = function renderMuteSection() {
     obj[0] = channelName;
     let formatResult = format(t["eC+9rj"], obj);
   } else {
-    const obj1 = { name: null };
+    obj1 = { name: null };
     obj1[0] = channelName;
     formatResult = format(t.byjuJm, obj1);
   }
@@ -231,13 +218,11 @@ prototype["renderMuteSection"] = function renderMuteSection() {
       CHANNEL = tmp(10087).MuteSettingType.CHANNEL;
     }
     obj4[1] = CHANNEL;
-    tmp5(MutedUntilText, obj4);
-    const tmp8 = MutedUntilText;
+    tmp5(MutedUntilTextDefault, obj4);
+    const tmp8 = MutedUntilTextDefault;
   }
 };
 prototype["renderForumSettings"] = function renderForumSettings() {
-  let newForumThreadsCreated;
-  let require;
   const props = this.props;
   ({ channel: require, newForumThreadsCreated } = props);
   let guildMuted = this.state.muted;
@@ -250,15 +235,11 @@ prototype["renderForumSettings"] = function renderForumSettings() {
   }
   obj[2] = guildMuted;
   obj[3] = function onValueChange() {
-    const result = newForumThreadsCreated(outer1_2[14]).setForumThreadsCreated(closure_0, !newForumThreadsCreated);
+    const result = newForumThreadsCreated(closure_1_2[14]).setForumThreadsCreated(closure_0, !newForumThreadsCreated);
   };
   return closure_16(TableSwitchRow.TableSwitchRow, obj);
 };
 prototype["renderNotificationSettings"] = function renderNotificationSettings() {
-  let channel;
-  let defaultSetting;
-  let guildMemberCount;
-  let guildMuted;
   const self = this;
   ({ channel, guildMuted, guildMemberCount, defaultSetting } = this.props);
   const state = this.state;
@@ -313,7 +294,7 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
     if (!muted) {
       muted = guildMuted;
     }
-    const obj1 = { disabled: null, value: null, label: null };
+    obj1 = { disabled: null, value: null, label: null };
     obj1[0] = muted;
     obj1[1] = constants2.NO_MESSAGES;
     const intl13 = tmp7(1236).intl;
@@ -387,10 +368,8 @@ prototype["renderNotificationSettings"] = function renderNotificationSettings() 
   return tmp11Result;
 };
 prototype["render"] = function render() {
-  let guildMessageNotifications;
-  let guildMuted;
   const self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   const props = this.props;
   const channel = props.channel;
   ({ guildMuted, guildMessageNotifications } = props);
@@ -408,7 +387,7 @@ prototype["render"] = function render() {
     } else if (guildMessageNotifications === constants2.NO_MESSAGES) {
       obj = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl3 = getSystemLocale.intl;
-      const obj1 = { notificationHook: null };
+      obj1 = { notificationHook: null };
       obj1[0] = function notificationHook(children) {
         return callback2(callback(4734).Text, { variant: "text-sm/medium", color: "text-feedback-warning", children }, arg1);
       };
@@ -418,7 +397,7 @@ prototype["render"] = function render() {
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.screenContainer;
     const obj3 = { spacing: null, style: null, children: null };
-    obj3[0] = Themes.space.PX_24;
+    obj3[0] = ThemesDefault.space.PX_24;
     obj3[1] = tmp.stackPadding;
     let renderMuteSectionResult = null;
     if (tmp2) {
@@ -443,15 +422,15 @@ prototype["render"] = function render() {
   return tmp9Result;
 };
 ChannelSettingsNotifications.contextType = require("ManaContext").ThemeContext;
-let obj1 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
-let result = require("ensureGuildLoaded").fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
+let obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+let result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsNotifications.tsx");
 
 export default function ChannelSettingsNotificationsSplit(arg0) {
   let merged1 = arg0;
   const _require = arg0;
   let obj = dependencyMap;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_6.getChannel(channelId.channelId));
+  const items = [closure_6];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_6.getChannel(channelId.channelId));
   _getMuteTimeOptions;
   if (null == stateFromStores) {
     return null;
@@ -464,7 +443,7 @@ export default function ChannelSettingsNotificationsSplit(arg0) {
     obj = { channel: null };
     obj[0] = stateFromStores;
     merged1 = Object.assign(merged1);
-    tmp11 = callback2(NotificationSettingsChannel, obj);
-    const tmp14 = NotificationSettingsChannel;
+    tmp11 = callback2(NotificationSettingsChannelDefault, obj);
+    const tmp14 = NotificationSettingsChannelDefault;
   }
 };

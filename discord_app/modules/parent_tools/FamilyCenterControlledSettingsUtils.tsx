@@ -1,11 +1,11 @@
 // discord_app/modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { resolveExplicitContentSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
-import { result } from "../user_settings/family_center/ParentalControlledUserSettings.tsx";
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
+import result2 from "result" /* 14182 */;
+
 function getGoreContentSettingOrDefault(arg0) {
-  let goreContentFriendDm;
-  let goreContentNonFriendDm;
-  const ParentalControlledGoreContent = result.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result2.ParentalControlledGoreContent;
   let controlledSetting = ParentalControlledGoreContent.getControlledSetting(arg0);
   if (controlledSetting == null) {
     controlledSetting = {};
@@ -26,9 +26,7 @@ function getGoreContentSettingOrDefault(arg0) {
   return obj;
 }
 function getExplicitContentSettingOrDefault(teenId) {
-  let isFriend;
-  let setting;
-  const ParentalControlledExplicitContent = result.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result2.ParentalControlledExplicitContent;
   const controlledSetting = ParentalControlledExplicitContent.getControlledSetting(teenId);
   let obj = { teenId, setting: null };
   let prop;
@@ -67,7 +65,7 @@ function getExplicitContentSettingOrDefault(teenId) {
     }
   }
 }
-let result = require("resolveGoreSettingWithDefaults").fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx");
+let result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterControlledSettingsUtils.tsx");
 
 export const isSetAndNotDefault = function isSetAndNotDefault(goreContentFriendDm) {
   let tmp = null != goreContentFriendDm;
@@ -78,14 +76,12 @@ export const isSetAndNotDefault = function isSetAndNotDefault(goreContentFriendD
 };
 export { getGoreContentSettingOrDefault };
 export const updateGoreContentSetting = function updateGoreContentSetting(selectedTeenId) {
-  const ParentalControlledGoreContent = result.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result2.ParentalControlledGoreContent;
   const merged = Object.assign(getGoreContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledGoreContent.updateControlledSetting(selectedTeenId, {});
 };
 export const resolveExplicitContentSettingWithDefaultsForTeen = function resolveExplicitContentSettingWithDefaultsForTeen(teenId) {
-  let isFriend;
-  let setting;
   ({ setting, isFriend } = teenId);
   if (isFriend === undefined) {
     isFriend = false;
@@ -97,7 +93,7 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
   if (tmp) {
     return setting;
   } else {
-    const ParentalControlledLegacyExplicitContent = result.ParentalControlledLegacyExplicitContent;
+    const ParentalControlledLegacyExplicitContent = result2.ParentalControlledLegacyExplicitContent;
     const controlledSetting = ParentalControlledLegacyExplicitContent.getControlledSetting(teenId.teenId);
     const tmp7 = resolveExplicitContentSettingWithDefaults;
     if (isFriend) {
@@ -110,7 +106,7 @@ export const resolveExplicitContentSettingWithDefaultsForTeen = function resolve
 };
 export { getExplicitContentSettingOrDefault };
 export const updateExplicitContentSetting = function updateExplicitContentSetting(selectedTeenId) {
-  const ParentalControlledExplicitContent = result.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result2.ParentalControlledExplicitContent;
   const merged = Object.assign(getExplicitContentSettingOrDefault(selectedTeenId));
   const merged1 = Object.assign(arg1);
   const result = ParentalControlledExplicitContent.updateControlledSetting(selectedTeenId, {});

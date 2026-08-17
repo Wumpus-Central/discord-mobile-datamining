@@ -1,40 +1,41 @@
 // discord_app/modules/guild_sidebar/native/GuildActionRows.tsx
-import renderChannelBadge from "renderChannelBadge";
-import { View } from "asyncRequireImpl";
-import guildHasCommunity from "guildHasCommunity";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { CHANNELS_AND_ROLES_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY";
-import { ReadStateTypes } from "ReadStateTypes";
-import { jsx } from "ChannelListMagnifyingGlassIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "guildHasCommunity" /* 5276 */;
+import closure_6 from "generateOldThreadCutoff" /* 4772 */;
+import { CHANNELS_AND_ROLES_MODAL_KEY as closure_7 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { container: null, channelInfoContainer: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: require("Themes").radii.md };
+createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingStart: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("guildHasCommunity").fileFinishedImporting("modules/guild_sidebar/native/GuildActionRows.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/GuildActionRows.tsx");
 
 export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild) {
   guild = guild.guild;
   const selected = guild.selected;
   let id;
-  const tmp = createCacheKey();
+  const tmp = callback();
   const tmp4 = id(7296)(guild);
   id = guild.id;
   let obj = guild(4196);
   const result = obj.useIsDismissibleContentDismissed_UNSAFE(guild(1377).DismissibleContent.CHANNEL_BROWSER_NEW_BADGE_NUX);
-  let obj1 = guild(647);
-  const items = [generateOldThreadCutoff];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_6.hasUnread(guild.id, outer1_8.GUILD_ONBOARDING_QUESTION));
-  const items1 = [guildHasCommunity];
+  obj1 = guild(647);
+  const items = [closure_6];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.hasUnread(guild.id, closure_1_8.GUILD_ONBOARDING_QUESTION));
+  const items1 = [closure_5];
   const items2 = [id];
-  const stateFromStores1 = guild(647).useStateFromStores(items1, () => outer1_5.getNewChannelIds(guild.id).size > guild(outer1_2[14]).MAX_NEW_CHANNELS_TO_SHOW);
-  const callback = React.useCallback(() => {
-    let obj = id(outer1_2[15]);
+  const stateFromStores1 = guild(647).useStateFromStores(items1, () => closure_1_5.getNewChannelIds(guild.id).size > guild(closure_1_2[14]).MAX_NEW_CHANNELS_TO_SHOW);
+  callback = React.useCallback(() => {
+    let obj = id(closure_1_2[15]);
     obj = { guildId: id };
-    obj.pushLazy(guild(outer1_2[17])(outer1_2[16], outer1_2.paths), obj, outer1_7);
+    obj.pushLazy(guild(closure_1_2[17])(closure_1_2[16], closure_1_2.paths), obj, closure_1_7);
   }, items2);
   let SELECTED = guild(11553).ChannelModes.DEFAULT;
   if (selected) {
@@ -77,9 +78,8 @@ export const GuildRolesAndChannelsRow = function GuildRolesAndChannelsRow(guild)
     string2Result = string2(t2.et6wav);
   }
   obj[6] = jsx(guild(11553).BaseChannelName, { name: string2Result, mode: SELECTED });
-  obj1 = { mode: SELECTED, IconComponent: null };
-  obj1[1] = guild(13069).ChannelListMagnifyingGlassIcon;
-  obj[7] = jsx(guild(11553).BaseChannelIcon, { mode: SELECTED, IconComponent: null });
+  obj1 = { mode: SELECTED, IconComponent: tmp5(13069).ChannelListMagnifyingGlassIcon };
+  obj[7] = jsx(guild(11553).BaseChannelIcon, { mode: SELECTED, IconComponent: tmp5(13069).ChannelListMagnifyingGlassIcon });
   obj[8] = tmp11;
   return jsx(id(11553), { onPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, mode: null, name: null, icon: null, channelInfo: null });
 };

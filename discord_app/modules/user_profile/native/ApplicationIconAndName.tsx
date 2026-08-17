@@ -1,26 +1,21 @@
 // discord_app/modules/user_profile/native/ApplicationIconAndName.tsx
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles((width) => {
   let obj = { gameIcon: null };
-  obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: Themes.radii.xs };
+  obj = { width, height: width, marginTop: -1, marginRight: 4, borderRadius: ThemesDefault.radii.xs };
   obj[0] = obj;
   return obj;
 });
-const result = require("Themes").fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/native/ApplicationIconAndName.tsx");
 
 export default function ApplicationIconAndName(textVariant) {
-  let application;
-  let iconSize;
-  let useComma;
   ({ application, iconSize, useComma } = textVariant);
   if (useComma === undefined) {
     useComma = false;

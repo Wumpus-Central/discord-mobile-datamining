@@ -1,33 +1,26 @@
 // discord_app/components_native/common/color_picker/RoleColorPickerActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let ROLE_COLORS;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
 ({ DEFAULT_ROLE_COLOR: error, ROLE_COLORS } = ME);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-let items = [...require("_slicedToArray"), ...require("showCustomColorPickerActionSheet"), ...require("createCacheKey"), ...require("EyeDropperIcon")];
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
+let items = [...require("module_0"), ...require("module_10"), ...require("module_5"), ...require("module_15")];
 createCacheKey = { body: null, colorWrap: null };
-createCacheKey = { paddingVertical: require("Themes").space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_16, flexGrow: 1, justifyContent: "center", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: require("Themes").space.PX_16 };
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
+createCacheKey[1] = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: ThemesDefault.space.PX_16 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexGrow: 1, flexDirection: "row", flexWrap: "wrap", justifyContent: "center", maxWidth: 340, marginBottom: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("components_native/common/color_picker/RoleColorPickerActionSheet.tsx");
 
 export default function RoleColorPickerActionSheet(color) {
-  let confirmLabel;
-  let defaultColor;
   color = color.color;
   const onSelect = color.onSelect;
   ({ confirmLabel, defaultColor } = color);
@@ -36,19 +29,19 @@ export default function RoleColorPickerActionSheet(color) {
   }
   let styles;
   let first;
-  let closure_5;
+  closure_5 = undefined;
   let isWindowSmall;
   memo = undefined;
-  let closure_8;
-  let tmp = createCacheKey();
+  closure_8 = undefined;
+  let tmp = callback2();
   let obj = color(defaultColor[7]);
   styles = obj.useStyles();
   const tmp5 = styles(first.useState(color), 2);
   first = tmp5[0];
   closure_5 = tmp5[1];
-  let obj1 = color(defaultColor[8]);
+  obj1 = color(defaultColor[8]);
   isWindowSmall = obj1.useIsWindowSmall();
-  const items = [isWindowSmall, styles.colorBlock];
+  items = [isWindowSmall, styles.colorBlock];
   memo = first.useMemo(() => {
     const colorBlock = styles.colorBlock;
     if (isWindowSmall) {

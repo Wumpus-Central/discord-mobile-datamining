@@ -1,6 +1,7 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx
-import createSoundForPack from "createSoundForPack";
-import "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 5038 */;
+import createSoundForPack from "createSoundForPack" /* 10040 */;
 
 function fadeIn() {
   if (null != interval) {
@@ -8,15 +9,15 @@ function fadeIn() {
     clearInterval(interval);
   }
   closure_2.loop();
-  let c4 = 0.5;
-  let closure_0 = 0.2 * (0.5 - c3);
+  c4 = 0.5;
+  closure_0 = 0.2 * (0.5 - closure_3);
   interval = setInterval(() => {
     const rounded = Math.round(100 * callback);
     const rounded1 = Math.round(100 * c4);
-    const rounded2 = Math.round(100 * outer1_3);
+    const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
-      outer1_3 = (rounded2 + rounded) / 100;
-      outer1_2.volume = callback(outer1_1[1])(outer1_3, 0, 0.5);
+      closure_3 = (rounded2 + rounded) / 100;
+      closure_1_2.volume = callback(closure_1_1[1])(closure_3, 0, 0.5);
     }
     clearInterval(closure_5);
     if (tmp9) {
@@ -26,21 +27,21 @@ function fadeIn() {
 }
 function handlePauseMusic() {
   const pause = closure_2.pause;
-  let closure_0 = pause.bind(closure_2);
-  let closure_1;
+  closure_0 = pause.bind(closure_2);
+  closure_1 = undefined;
   if (null != interval) {
     const _clearInterval = clearInterval;
     clearInterval(interval);
   }
-  let c4 = 0;
+  c4 = 0;
   closure_1 = 0.2 * (0 - c3);
   interval = setInterval(() => {
     const rounded = Math.round(100 * table);
     const rounded1 = Math.round(100 * c4);
-    const rounded2 = Math.round(100 * outer1_3);
+    const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
-      outer1_3 = (rounded2 + rounded) / 100;
-      outer1_2.volume = callback(table[1])(outer1_3, 0, 0.5);
+      closure_3 = (rounded2 + rounded) / 100;
+      closure_1_2.volume = callback(table[1])(closure_3, 0, 0.5);
     }
     clearInterval(closure_5);
     let tmp10 = 0 === rounded1;
@@ -54,21 +55,21 @@ function handlePauseMusic() {
 }
 function handleStopMusic() {
   const stop = closure_2.stop;
-  let closure_0 = stop.bind(closure_2);
-  let closure_1;
+  closure_0 = stop.bind(closure_2);
+  closure_1 = undefined;
   if (null != interval) {
     const _clearInterval = clearInterval;
     clearInterval(interval);
   }
-  let c4 = 0;
-  closure_1 = 0.2 * (0 - c3);
+  c4 = 0;
+  closure_1 = 0.2 * (0 - closure_3);
   interval = setInterval(() => {
     const rounded = Math.round(100 * table);
     const rounded1 = Math.round(100 * c4);
-    const rounded2 = Math.round(100 * outer1_3);
+    const rounded2 = Math.round(100 * closure_3);
     if (rounded <= 0) {
-      outer1_3 = (rounded2 + rounded) / 100;
-      outer1_2.volume = callback(table[1])(outer1_3, 0, 0.5);
+      closure_3 = (rounded2 + rounded) / 100;
+      closure_1_2.volume = callback(table[1])(closure_3, 0, 0.5);
     }
     clearInterval(closure_5);
     let tmp10 = 0 === rounded1;
@@ -84,6 +85,7 @@ let closure_2 = createSoundForPack.createSound("vibing_wumpus", "vibing_wumpus",
 let c3 = 0;
 let c4 = 0;
 let c5 = null;
+initializeDefault;
 let prototype = function InappropriateConversationsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { VIBING_WUMPUS_PLAY_MUSIC: fadeIn, VIBING_WUMPUS_STOP_MUSIC: handleStopMusic, VIBING_WUMPUS_PAUSE_MUSIC: handlePauseMusic };
@@ -92,6 +94,6 @@ let prototype = function InappropriateConversationsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("initialize").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx");
+const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsManager.tsx");
 
 export default prototype;

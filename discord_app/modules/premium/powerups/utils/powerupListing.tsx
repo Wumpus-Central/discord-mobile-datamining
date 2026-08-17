@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/utils/powerupListing.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import BoostedGuildTiers from "BoostedGuildTiers";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -14,7 +14,7 @@ function orderPowerupListings(items) {
     }
     return tmp;
   });
-  let obj = items;
+  obj = items;
   if (findIndexResult > 0) {
     items = [];
     HermesBuiltin.arraySpread(items, 0);
@@ -46,7 +46,7 @@ function orderPowerupListings(items) {
     if (-1 !== findIndexResult2) {
       tmp10 = obj;
       if (findIndexResult2 !== findIndexResult1 + 1) {
-        const items1 = [];
+        items1 = [];
         HermesBuiltin.arraySpread(tmp9, 0);
         items1.splice(items1.findIndex((type) => {
           let tmp = "singlePerk" === type.type;
@@ -63,7 +63,7 @@ function orderPowerupListings(items) {
 }
 function buildPowerupListings(arg0, arr) {
   let items = [];
-  let closure_1 = arr.reduce((arg0, type) => {
+  closure_1 = arr.reduce((arg0, type) => {
     if (type.type !== constants.PERK) {
       return arg0;
     } else {
@@ -78,14 +78,14 @@ function buildPowerupListings(arg0, arr) {
     }
   }, {});
   function _loop() {
-    if (type.type === outer1_5.LEVEL) {
-      let obj = { type: "singleLevel", powerup: null };
+    if (type.type === closure_1_5.LEVEL) {
+      obj = { type: "singleLevel", powerup: null };
       obj[1] = tmp;
       items.push(obj);
       return 0;
-    } else if (null != outer1_8[tmp.skuId]) {
+    } else if (null != closure_1_8[tmp.skuId]) {
       if (undefined !== table[tmp13]) {
-        items = outer1_7[tmp13];
+        items = closure_1_7[tmp13];
         const sorted = obj2.sort((skuId, skuId2) => {
           const index = closure_0.indexOf(skuId.skuId);
           return index - closure_0.indexOf(skuId2.skuId);
@@ -100,13 +100,13 @@ function buildPowerupListings(arg0, arr) {
     } else {
       obj = { type: "singlePerk", powerup: null, badge: null };
       obj[1] = tmp;
-      obj[2] = outer1_6[tmp.skuId];
+      obj[2] = closure_1_6[tmp.skuId];
       items.push(obj);
     }
   }
   const iter = arr[Symbol.iterator]();
   while (iter !== undefined) {
-    let _slicedToArray = iter.next();
+    closure_2 = iter.next();
     let _loopResult = _loop();
     continue;
   }
@@ -126,8 +126,6 @@ let items = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_C
 obj[0] = items;
 const entries = Object.entries(obj);
 let closure_8 = entries.reduce((arg0, arg1) => {
-  let tmp;
-  let tmp2;
   [tmp, tmp2] = arg1;
   for (const item10016 of tmp2) {
     arg0[item10016] = tmp;
@@ -137,21 +135,21 @@ let closure_8 = entries.reduce((arg0, arg1) => {
 }, {});
 let items1 = [, ];
 ({ LEVEL: arr3[0], PERK: arr3[1] } = GuildPowerupType);
-const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/premium/powerups/utils/powerupListing.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/powerupListing.tsx");
 
 export const POWERUP_GROUP_TO_SKU_IDS = obj;
 export { buildPowerupListings };
 export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSections(guildId, gameServerEnabled) {
   const _require = guildId;
-  const dependencyMap = gameServerEnabled;
-  const items = [calculateAppliedBoosts];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.getStateForGuild(closure_0));
+  dependencyMap = gameServerEnabled;
+  const items = [closure_4];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
   let powerupCatalog;
   if (stateFromStores != null) {
     powerupCatalog = stateFromStores.powerupCatalog;
   }
-  const items1 = [powerupCatalog, gameServerEnabled];
-  return React.useMemo(() => outer1_11.reduce((arr) => {
+  items1 = [powerupCatalog, gameServerEnabled];
+  return React.useMemo(() => closure_1_11.reduce((arr) => {
     let tmp;
     if (powerupCatalog != null) {
       tmp = powerupCatalog.powerupCatalog[arg1];
@@ -159,9 +157,9 @@ export const useBuildGuildPowerupsSections = function useBuildGuildPowerupsSecti
     if (null == tmp) {
       return arr;
     } else {
-      const obj = { type: null, listings: null };
+      obj = { type: null, listings: null };
       obj[0] = arg1;
-      obj[1] = outer1_10(arg1, tmp, closure_1);
+      obj[1] = closure_1_10(arg1, tmp, closure_1);
       arr.push(obj);
       return arr;
     }

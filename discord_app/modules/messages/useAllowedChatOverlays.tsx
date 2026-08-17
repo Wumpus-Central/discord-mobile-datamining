@@ -1,13 +1,13 @@
 // discord_app/modules/messages/useAllowedChatOverlays.tsx
-import participantFromServer from "participantFromServer";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ChatOverlays } from "ChatOverlays";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getEmbeddedActivityLocationChannelId } from "../activities/utils/embeddedActivityLocationUtils.tsx";
-import { isVoiceEmbeddedActivity } from "../activities/utils/isVoiceEmbeddedActivity.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
+import isVoiceEmbeddedActivityDefault from "isVoiceEmbeddedActivity" /* 8724 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { ChatOverlays } from "ChatOverlays" /* 10634 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
 
-const require = arg1;
+require = arg1;
 const no_text_activity = "no_text_activity";
 let obj = { no_text_activity: items };
 items = [, , ];
@@ -25,20 +25,20 @@ obj[ActivityPanelModes.PIP] = items3;
 const items4 = [, , ];
 ({ NEW_MESSAGES: arr5[0], OPT_IN_CHANNEL: arr5[1], SUMMARIES: arr5[2] } = ChatOverlays);
 obj[ActivityPanelModes.ACTIVITY_POPOUT_WINDOW] = items4;
-const result = require("ChatOverlays").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/useAllowedChatOverlays.tsx");
 
 export default function useAllowedChatOverlays() {
-  const obj = defaultAreStatesEqual;
-  const items = [participantFromServer];
+  obj = defaultAreStatesEqual;
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => store.getCurrentEmbeddedActivity());
-  const items1 = [participantFromServer];
+  const items1 = [closure_3];
   const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => store.getActivityPanelMode());
   getEmbeddedActivityLocationChannelId;
   if (stateFromStores != null) {
     const _location = stateFromStores.location;
   }
   if (undefined !== stateFromStores) {
-    if (!isVoiceEmbeddedActivity(tmp5, ensureGuildLoaded)) {
+    if (!isVoiceEmbeddedActivityDefault(tmp5, closure_4)) {
       let tmp9 = obj[stateFromStores1];
     }
     return tmp9;

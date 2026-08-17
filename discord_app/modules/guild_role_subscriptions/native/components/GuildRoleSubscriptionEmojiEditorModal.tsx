@@ -1,34 +1,28 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import get_ActivityIndicator from "EmojiAlias";
-import computeRolesForGuild from "computeRolesForGuild";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "computeRolesForGuild" /* 6728 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ View: closure_6, SectionList: error } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { container: null, emojiList: null, row: null, emojiImage: null, emojiAlias: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "flex-start", height: "100%" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[1] = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[2] = { alignItems: "flex-start", paddingTop: 16, paddingBottom: 14 };
 createCacheKey[3] = { width: 24, height: 24, marginBottom: 2 };
 createCacheKey[4] = { marginBottom: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-const result = require("noop").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexGrow: 0, marginVertical: 24, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionEmojiEditorModal.tsx");
 
 export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
-  let initialTierEmojiIds;
-  let listingId;
   guildId = guildId.guildId;
   const subscriptionRoleId = guildId.subscriptionRoleId;
   const onClose = guildId.onClose;
@@ -37,7 +31,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   let React;
   let stateFromStores;
   let first;
-  let computeRolesForGuild;
+  closure_8 = undefined;
   let callback2;
   function handleSave() {
     const self = this;
@@ -52,12 +46,12 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   function _handleSave(stateFromStores, arg1) {
     const self = this;
     const tmp = onSave(function*() {
-      let closure_0 = tmp3;
+      closure_0 = tmp3;
       let v0 = 1;
-      yield v0(outer1_7);
+      yield v0(closure_1_7);
       if (1 === tmp7) {
         v0 = 0;
-        let c4 = 3;
+        c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
@@ -68,7 +62,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       v0 = 0;
       return arg1;
     });
-    const _handleSave = tmp;
+    closure_11 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -78,16 +72,16 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
     return applyArgumentsResult;
   }
   ({ initialTierEmojiIds, listingId } = guildId);
-  let tmp = createCacheKey();
+  let tmp = callback3();
   callback = tmp;
   let tmp2 = subscriptionRoleId(onClose[8])(guildId);
   React = tmp2;
   let obj = guildId(onClose[9]);
-  const items = [computeRolesForGuild];
+  const items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => subscriptionRoles.getSubscriptionRoles(guildId));
   const tmp4 = callback(React.useState(initialTierEmojiIds), 2);
   first = tmp4[0];
-  computeRolesForGuild = tmp4[1];
+  closure_8 = tmp4[1];
   let items1 = [stateFromStores, tmp2, subscriptionRoleId, first];
   callback2 = React.useMemo(() => {
     if (null == subscriptionRoleId) {
@@ -95,17 +89,17 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       const set = new Set();
       return set;
     } else {
-      const found = _undefined2.filter((roles) => {
-        let closure_0 = roles;
+      const found = closure_5.filter((roles) => {
+        closure_0 = roles;
         roles = roles.roles;
         return 0 === roles.filter((arg0) => {
-          let tmp = arg0 === outer1_1;
+          let tmp = arg0 === closure_1_1;
           if (tmp) {
-            tmp = !outer1_7.has(id.id);
+            tmp = !closure_1_7.has(id.id);
           }
           let hasItem = !tmp;
           if (!tmp) {
-            hasItem = outer1_6.has(arg0);
+            hasItem = closure_1_6.has(arg0);
           }
           return hasItem;
         }).length;
@@ -143,22 +137,22 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
   };
   obj[3] = listingId;
   const items2 = [callback2(subscriptionRoleId(onClose[12]), obj), ];
-  let obj1 = {
+  obj1 = {
     style: tmp.emojiList,
     renderItem(item) {
       item = item.item;
-      let closure_1;
+      closure_1 = undefined;
       const hasItem = first.has(item.id);
       closure_1 = set.has(item.id);
-      let obj = { style: _undefined.row, leading: null, label: null, onPress: null, trailing: null };
-      obj = { style: _undefined.emojiImage, source: null };
+      let obj = { style: closure_4.row, leading: null, label: null, onPress: null, trailing: null };
+      obj = { style: closure_4.emojiImage, source: null };
       obj = { uri: null };
       const tmp2 = subscriptionRoleId(onClose[10]);
       obj[0] = subscriptionRoleId(onClose[11]).getEmojiURL({ id: item.id, animated: item.animated, size: 48 });
       obj[1] = obj;
       obj[1] = set(tmp2, obj);
       obj[2] = function label() {
-        let obj = { name: item.name, style: outer1_4.emojiAlias };
+        let obj = { name: item.name, style: closure_1_4.emojiAlias };
         const children = [callback(subscriptionRoleId(onClose[17]), obj), ];
         let tmpResult = closure_1;
         if (closure_1) {
@@ -167,7 +161,7 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
           const intl = guildId(tmp4[13]).intl;
           obj[2] = intl.string(guildId(tmp4[13]).t["1GlN06"]);
           const items1 = [tmp3(guildId(tmp4[18]).Text, obj), ];
-          const obj1 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
+          obj1 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
           const intl2 = guildId(tmp4[13]).intl;
           obj1[2] = intl2.string(guildId(tmp4[13]).t.J0XdJ4);
           items1[1] = tmp3(guildId(tmp4[18]).Text, obj1);
@@ -179,13 +173,13 @@ export default function GuildRoleSubscriptionEmojiEditorModal(guildId) {
       };
       obj[3] = function onPress() {
         const id = item.id;
-        const set = new Set(outer1_7);
+        const set = new Set(closure_1_7);
         if (set.has(id)) {
           set.delete(id);
         } else {
           set.add(id);
         }
-        outer1_8(set);
+        closure_1_8(set);
       };
       obj[4] = set(guildId(onClose[16]).FormRow.Checkbox, { selected: hasItem });
       return set(guildId(onClose[16]).FormRow, obj);

@@ -1,7 +1,9 @@
 // discord_app/stores/InviteStore.tsx
-import { InviteStates } from "ME";
-import { Store } from "initialize";
-import { readSnowflake } from "../modules/instant_invite/InviteCodeUtils.tsx";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import readSnowflake from "readSnowflake" /* 4360 */;
 
 function updateInvite(code, arg1) {
   let str = code;
@@ -29,27 +31,29 @@ function updateInvite(code, arg1) {
     id = guild.id;
   }
   if (null != id) {
-    const obj1 = {};
+    obj1 = {};
     const merged1 = Object.assign(obj1);
     obj1[obj.guild.id] = str;
   }
 }
 function handleInviteResolveFailure(code) {
-  let closure_0 = code;
+  closure_0 = code;
   updateInvite(code.code, (arg0) => {
     if ("banned" in banned) {
       if (banned.banned) {
-        let EXPIRED = outer1_2.BANNED;
+        let EXPIRED = closure_1_2.BANNED;
       }
       arg0.state = EXPIRED;
     }
-    EXPIRED = outer1_2.EXPIRED;
+    EXPIRED = closure_1_2.EXPIRED;
   });
 }
+const InviteStates = ME.InviteStates;
 let map = new Map();
 const map1 = new Map();
 let closure_5 = {};
 const map2 = new Map();
+const Store = initializeDefault.Store;
 class InviteStore extends Store {
 }
 const prototype = InviteStore.prototype;
@@ -69,7 +73,7 @@ prototype["getFriendMemberIds"] = function getFriendMemberIds(arg0) {
   return map2.get(arg0);
 };
 InviteStore.displayName = "InviteStore";
-const inviteStore = new InviteStore(require("dispatcher"), {
+const inviteStore = new InviteStore(dispatcherDefault, {
   INVITE_RESOLVE: function handleInviteResolve(code) {
     code = code.code;
     let obj = readSnowflake;
@@ -79,9 +83,9 @@ const inviteStore = new InviteStore(require("dispatcher"), {
     const result1 = map.set(code, obj);
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(code) {
-    let closure_0 = code;
+    closure_0 = code;
     updateInvite(code.code, (arg0) => {
-      arg0.state = outer1_2.RESOLVED;
+      arg0.state = closure_1_2.RESOLVED;
       arg0.guild = code.invite.guild;
       arg0.channel = code.invite.channel;
       arg0.inviter = code.invite.inviter;
@@ -115,9 +119,9 @@ const inviteStore = new InviteStore(require("dispatcher"), {
   INVITE_RESOLVE_FAILURE: handleInviteResolveFailure,
   INSTANT_INVITE_REVOKE_SUCCESS: handleInviteResolveFailure,
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreate(invite) {
-    let closure_0 = invite;
+    closure_0 = invite;
     updateInvite(invite.invite.code, (arg0) => {
-      arg0.state = outer1_2.RESOLVED;
+      arg0.state = closure_1_2.RESOLVED;
       arg0.inviter = invite.invite.inviter;
     });
   },
@@ -130,9 +134,9 @@ const inviteStore = new InviteStore(require("dispatcher"), {
     });
   },
   INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreate(invite) {
-    let closure_0 = invite;
+    closure_0 = invite;
     updateInvite(invite.invite.code, (arg0) => {
-      arg0.state = outer1_2.RESOLVED;
+      arg0.state = closure_1_2.RESOLVED;
       arg0.guild = invite.invite.guild;
       arg0.channel = invite.invite.channel;
       arg0.inviter = invite.invite.inviter;
@@ -162,9 +166,9 @@ const inviteStore = new InviteStore(require("dispatcher"), {
     });
   },
   INVITE_ACCEPT_SUCCESS: function handleAcceptInviteSuccess(code) {
-    let closure_0 = code;
+    closure_0 = code;
     updateInvite(code.code, (channel) => {
-      channel.state = outer1_2.ACCEPTED;
+      channel.state = closure_1_2.ACCEPTED;
       channel.guild = code.invite.guild;
       channel.new_member = code.invite.new_member;
       const merged = Object.assign(channel.channel);
@@ -207,6 +211,6 @@ const inviteStore = new InviteStore(require("dispatcher"), {
     }
   }
 });
-let result = require("initialize").fileFinishedImporting("stores/InviteStore.tsx");
+let result = set.fileFinishedImporting("stores/InviteStore.tsx");
 
 export default inviteStore;

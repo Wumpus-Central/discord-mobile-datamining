@@ -1,9 +1,9 @@
 // discord_app/modules/app_dms/getAppDMApplication.tsx
-import addApplication from "addApplication";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_0 from "addApplication" /* 4478 */;
+import closure_1 from "createUserWidgetFromServer" /* 5365 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
+const result = require("set").fileFinishedImporting("modules/app_dms/getAppDMApplication.tsx");
 
 export const getAppDMApplication = function getAppDMApplication(channel) {
   let recipientId;

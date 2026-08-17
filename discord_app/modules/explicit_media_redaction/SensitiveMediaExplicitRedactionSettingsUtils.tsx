@@ -1,16 +1,14 @@
 // discord_app/modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ExplicitContentFilterTypes } from "items";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { getShouldObscureForSetting } from "SensitiveMediaRedactionSettingUtils.tsx";
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
+import getShouldObscureForSetting from "getShouldObscureForSetting" /* 5024 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { ExplicitContentFilterTypes } from "items" /* 4068 */;
 
-const require = arg1;
+require = arg1;
 function resolveExplicitContentSettingWithDefaults(isFriend) {
-  let isDm;
-  let setting;
   ({ setting, isDm } = isFriend);
   if (isDm === undefined) {
     isDm = false;
@@ -26,7 +24,7 @@ function resolveExplicitContentSettingWithDefaults(isFriend) {
   }
   const currentUser = authStore.getCurrentUser();
   let ExplicitContentRedaction = dependencyMap;
-  const obj = isFeatureAgeGated;
+  obj = isFeatureAgeGated;
   if (obj.isSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SENSITIVE_CONTENT)) {
     if (isDm === undefined) {
       isDm = false;
@@ -129,7 +127,7 @@ const FRIENDS_AND_NON_FRIENDS4 = ExplicitContentFilterTypes.FRIENDS_AND_NON_FRIE
 const valueOfResult9 = NON_FRIENDS4.valueOf();
 obj1[FRIENDS_AND_NON_FRIENDS4.valueOf()] = require("create").ExplicitContentRedaction.BLOCK;
 const valueOfResult10 = FRIENDS_AND_NON_FRIENDS4.valueOf();
-const result = require("create").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx");
 
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_FRIEND_DM = obj;
 export const TEEN_EXPLICIT_CONTENT_FILTER_TO_EXPLICIT_CONTENT_REDACTION_NON_FRIEND_DM = obj1;
@@ -166,7 +164,7 @@ export const getExplicitContentSettingOrDefault = function getExplicitContentSet
   if (setting != null) {
     prop = setting.explicitContentGuilds;
   }
-  const obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = { explicitContentGuilds: resolveExplicitContentSettingWithDefaults({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
   let prop1;
   if (setting != null) {
     prop1 = setting.explicitContentNonFriendDm;
@@ -186,7 +184,7 @@ export const updateExplicitContentSetting = function updateExplicitContentSettin
   if (setting != null) {
     prop = setting.explicitContentGuilds;
   }
-  let obj = { explicitContentGuilds: tmp4({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
+  obj = { explicitContentGuilds: tmp4({ setting: prop }), explicitContentNonFriendDm: null, explicitContentFriendDm: null };
   let prop1;
   if (setting != null) {
     prop1 = setting.explicitContentNonFriendDm;
@@ -213,7 +211,7 @@ export const shouldRedactMessageMediaForForum = function shouldRedactMessageMedi
     if (setting != null) {
       prop = setting.explicitContentGuilds;
     }
-    let obj = { setting: null };
+    obj = { setting: null };
     obj[0] = prop;
     let prop1;
     let tmp10Result = tmp10(obj);

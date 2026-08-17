@@ -1,48 +1,36 @@
 // discord_app/modules/forums/native/composer/ForumComposer.tsx
-import handleThemeChange from "handleThemeChange";
-import useSafeAreaInsetsKeyboardAware from "useSafeAreaInsetsKeyboardAware";
-import closure_5 from "jsxProd";
-import get_ActivityIndicator from "AbortCodes";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import closure_11 from "handleThemeChange";
-import handleChanged from "handleChanged";
-import { DraftType } from "handleChanged";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleConnectionOpen from "handleConnectionOpen";
-import setCooldown from "setCooldown";
-import { SlowmodeType } from "setCooldown";
-import map from "map";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { ChannelFlags } from "set";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { ExpressionPickerViewType } from "ExpressionPickerViewType";
-import { OpenThreadAnalyticsLocations as closure_27 } from "AbortCodes";
-import sum from "sum";
-import jsxProd from "Themes";
-import createCacheKey from "createCacheKey";
-import { TagIcon } from "../../../../design/components/Icon/native/redesign/generated/TagIcon.tsx";
-import { useKeyboardType } from "../../../keyboard/native/useKeyboardType.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useKeyboardTypeDefault from "useKeyboardType" /* 4239 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import TagIcon from "TagIcon" /* 8014 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_10 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_11 from "handleThemeChange" /* 1302 */;
+import closure_12 from "handleChanged" /* 4825 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_14 from "trackCommunicationDisabled" /* 1990 */;
+import closure_15 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_16 from "handleConnectionOpen" /* 1979 */;
+import closure_17 from "setCooldown" /* 7440 */;
+import { SlowmodeType } from "setCooldown" /* 7440 */;
+import closure_19 from "map" /* 4824 */;
+import closure_20 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { ChannelFlags } from "set" /* 1398 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { ExpressionPickerViewType } from "ExpressionPickerViewType" /* 1338 */;
+import { OpenThreadAnalyticsLocations as closure_27 } from "AbortCodes" /* 1235 */;
+import sum from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let StyleSheet;
-let c9;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_28;
-let closure_29;
-let closure_30;
-let closure_31;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Tags(tags) {
   tags = tags.tags;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let tmp2 = null;
   if (0 !== tags.length) {
     let obj = { style: null, children: null };
@@ -72,40 +60,30 @@ function Tags(tags) {
   return tmp2;
 }
 function ActionBar(channel) {
-  let canPost;
-  let useSafeAreaInsetsKeyboardAware;
-  let closure_5;
-  let dependencyMap;
-  let importDefault;
-  let isEdit;
-  let lastInput;
-  let onLayout;
-  let onShowExpressionPicker;
-  let submitting;
   channel = channel.channel;
   ({ tags: importDefault, onTagsSave: dependencyMap, canPost } = channel);
-  ({ submitting, onSubmit: useSafeAreaInsetsKeyboardAware, focusLastInput: closure_5, isEdit } = channel);
-  let c7;
-  let c8;
+  ({ submitting, onSubmit: closure_4, focusLastInput: closure_5, isEdit } = channel);
+  closure_7 = undefined;
+  closure_8 = undefined;
   ({ onShowExpressionPicker, lastInput, onLayout } = channel);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = channel(589);
-  const items = [map];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_19.getUploads(channel.id, outer1_13.ChannelMessage));
-  let obj1 = channel(589);
-  const items1 = [getUncachedChannelPermissions];
+  const items = [closure_19];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_19.getUploads(channel.id, closure_1_13.ChannelMessage));
+  obj1 = channel(589);
+  const items1 = [closure_15];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let canResult = !isEdit;
     if (!isEdit) {
-      canResult = outer1_15.can(outer1_23.ATTACH_FILES, channel);
+      canResult = closure_1_15.can(closure_1_23.ATTACH_FILES, channel);
     }
     return canResult;
   });
-  const tmp6 = useKeyboardType();
-  c7 = tmp6;
+  const tmp6 = useKeyboardTypeDefault();
+  closure_7 = tmp6;
   let isMediaChannelResult = channel.isMediaChannel();
   const tmp8 = tmp6 === channel(1627).KeyboardTypes.MEDIA;
-  c8 = tmp8;
+  closure_8 = tmp8;
   if (!isMediaChannelResult) {
     let tmp9 = stateFromStores1;
     if (stateFromStores1) {
@@ -123,7 +101,7 @@ function ActionBar(channel) {
     tmp10 = length > 0;
   }
   obj = { onLayout, style: items2, children: null };
-  items2 = [tmp.actionsContainer, { marginBottom: useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom }];
+  items2 = [tmp.actionsContainer, { marginBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom }];
   if (isMediaChannelResult) {
     obj = { attachments: null, channelId: null, highlightThumbnails: true };
     obj[0] = stateFromStores;
@@ -144,7 +122,7 @@ function ActionBar(channel) {
       obj2[2] = tmp2(8014).TagIcon;
       obj2[3] = function onPress() {
         isEdit.dismiss();
-        let obj = outer1_1(outer1_2[76]);
+        let obj = closure_1_1(closure_1_2[76]);
         obj = {
           parentChannel: channel,
           onSave(arg0) {
@@ -157,15 +135,15 @@ function ActionBar(channel) {
           tags: null,
           onClose: null
         };
-        const intl = channel(outer1_2[43]).intl;
-        obj[2] = intl.string(channel(outer1_2[43]).t.HPu3kq);
+        const intl = channel(closure_1_2[43]).intl;
+        obj[2] = intl.string(channel(closure_1_2[43]).t.HPu3kq);
         obj[3] = closure_1;
         obj[4] = function onClose() {
           if (!tmp4) {
             callback2();
           }
         };
-        obj.openLazy(channel(outer1_2[52])(outer1_2[77], outer1_2.paths), "ForumPostTagsActionSheet", obj);
+        obj.openLazy(channel(closure_1_2[52])(closure_1_2[77], closure_1_2.paths), "ForumPostTagsActionSheet", obj);
       };
       tmp10 = callback(tmp2(5432).HeaderActionButton, obj2);
     }
@@ -226,36 +204,36 @@ function ActionBar(channel) {
     }
     obj7[2] = ImageIcon;
     obj7[3] = function onPress() {
-      if (c8) {
+      if (closure_8) {
         callback2();
       } else {
-        const result = channel(outer1_2[74]).showSimpleMediaKeyboard(channel);
+        const result = channel(closure_1_2[74]).showSimpleMediaKeyboard(channel);
         isEdit.dismiss();
-        const obj = channel(outer1_2[74]);
+        const obj = channel(closure_1_2[74]);
       }
-      const result1 = channel(outer1_2[75]).trackForumChannelMediaUploaderClicked({ isMobile: true });
+      const result1 = channel(closure_1_2[75]).trackForumChannelMediaUploaderClicked({ isMobile: true });
     };
     callback(tmp2(5432).HeaderActionButton, obj7);
     const tmp15 = callback;
   }
 }
-({ Keyboard: closure_6, Pressable: error, StyleSheet, Text: metroImportAll, View: c9 } = get_ActivityIndicator);
+({ Keyboard: closure_6, Pressable: error, StyleSheet, Text: closure_8, View: c9 } = get_ActivityIndicator);
 ({ AbortCodes: closure_21, MAX_CHANNEL_NAME_LENGTH: closure_22, Permissions: closure_23 } = ME);
 ({ NOOP: closure_28, Fonts } = sum);
 ({ jsx: closure_29, jsxs: closure_30, Fragment: closure_31 } = jsxProd);
 const re32 = /(#"[^"]*"|[@#]\S+|:[\w+-]+:)/g;
 createCacheKey = { container: null, scrollViewContentContainer: null, avatarContainer: null, avatar: null, titleInput: null, titleInputText: null, contentInput: null, mentionText: null, postButtonWrapper: null, tags: null, tagIcon: null, editor: null, editorBody: null, usernameToChannel: null, channelName: null, actionsContainer: null, actions: null, actionButton: null, mediaButton: null, horizontalAutocomplete: null, nameError: null, messageError: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, position: "relative" };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "relative" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingBottom: 16 };
 createCacheKey[2] = { height: 40 };
 createCacheKey[3] = { marginRight: 12 };
 createCacheKey[4] = { padding: 8 };
-createCacheKey[5] = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[6] = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
-let obj2 = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
-createCacheKey[7] = { color: require("Themes").unsafe_rawColors.BRAND_500 };
+createCacheKey[5] = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj1 = { minHeight: 40, height: "auto", fontFamily: Fonts.DISPLAY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[6] = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
+let obj2 = { width: "100%", height: "100%", padding: 0, lineHeight: 20, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlignVertical: "top" };
+createCacheKey[7] = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 createCacheKey[8] = { marginLeft: "auto" };
 createCacheKey[9] = { flexDirection: "row", alignItems: "center", padding: 8 };
 createCacheKey[10] = { marginRight: 8 };
@@ -266,58 +244,49 @@ createCacheKey[14] = { lineHeight: 20, flex: 1 };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj4.borderTopWidth = StyleSheet.hairlineWidth;
-obj4.borderTopColor = require("Themes").colors.BORDER_SUBTLE;
-obj4.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOW;
+obj4.borderTopColor = ThemesDefault.colors.BORDER_SUBTLE;
+obj4.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
 obj4.top = undefined;
 createCacheKey[15] = obj4;
 createCacheKey[16] = { flex: 1, flexDirection: "row", alignItems: "center", padding: 8, width: "100%" };
-let obj3 = { color: require("Themes").unsafe_rawColors.BRAND_500 };
-createCacheKey[17] = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: require("Themes").colors.TEXT_DEFAULT, backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
+let obj3 = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
+createCacheKey[17] = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
 createCacheKey[18] = { marginRight: 8 };
-let obj5 = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: require("Themes").colors.TEXT_DEFAULT, backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
-createCacheKey[19] = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+let obj5 = { height: 40, minHeight: 40, maxHeight: 40, width: 40, minWidth: 40, maxWidth: 40, borderRadius: 20, color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, marginLeft: 0, marginRight: 0, overflow: "hidden" };
+createCacheKey[19] = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[20] = { marginBottom: 16, marginLeft: 16, marginRight: 16 };
 createCacheKey[21] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_33 = createCacheKey.createStyles(createCacheKey);
 let closure_34 = { code: "function ForumComposerTsx1({contentOffset:{y:y}}){const{scrollTopValue}=this.__closure;return scrollTopValue.set(y);}" };
-let obj6 = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-let result = require("noop").fileFinishedImporting("modules/forums/native/composer/ForumComposer.tsx");
+let obj6 = { position: "absolute", bottom: 0, left: 0, right: 0, zIndex: 100, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let result = require("set").fileFinishedImporting("modules/forums/native/composer/ForumComposer.tsx");
 
 export default function ForumComposer(parentChannel) {
-  let c13;
-  let c21;
-  let c31;
-  let c34;
-  let c38;
-  let focusLastInput;
-  let tmp17;
-  let tmp28;
-  let tmp59;
-  let tmp64;
   parentChannel = parentChannel.parentChannel;
   let _require = parentChannel;
-  let thread = parentChannel.thread;
+  const thread = parentChannel.thread;
+  let content = thread;
   const threadSettingsDraft = parentChannel.threadSettingsDraft;
   const onClose = parentChannel.onClose;
   const message = parentChannel.message;
   const isEdit = parentChannel.isEdit;
-  let c6;
+  closure_6 = undefined;
   let analyticsLocations;
   let stateFromStores;
   let stateFromStores4;
   let stateFromStores5;
-  let c11;
-  let c12;
+  closure_11 = undefined;
+  closure_12 = undefined;
   c13 = undefined;
   let first;
-  let getUncachedChannelPermissions;
+  closure_15 = undefined;
   let str4;
-  let c17;
+  closure_17 = undefined;
   let appliedTags;
   let first1;
-  let mergeGuildAvatar;
+  closure_20 = undefined;
   c21 = undefined;
-  let closure_22;
+  closure_22 = undefined;
   let ref1;
   let sharedValue;
   let callback3;
@@ -330,9 +299,9 @@ export default function ForumComposer(parentChannel) {
   focusLastInput = undefined;
   let blurLastInput;
   c34 = undefined;
-  let closure_35;
-  let closure_36;
-  let closure_37;
+  closure_35 = undefined;
+  closure_36 = undefined;
+  closure_37 = undefined;
   c38 = undefined;
   let obj22;
   let memo2;
@@ -340,12 +309,12 @@ export default function ForumComposer(parentChannel) {
     return lib(threadSettingsDraft[52])(threadSettingsDraft[51], threadSettingsDraft.paths);
   }
   const tmp = blurLastInput();
-  c6 = tmp;
-  analyticsLocations = thread(threadSettingsDraft[22])().analyticsLocations;
+  closure_6 = tmp;
+  analyticsLocations = content(threadSettingsDraft[22])().analyticsLocations;
   let obj = isEdit;
   const ref = isEdit.useRef(null);
-  let obj1 = _require(threadSettingsDraft[23]);
-  let items = [mergeGuildAvatar];
+  obj1 = _require(threadSettingsDraft[23]);
+  let items = [closure_20];
   stateFromStores = obj1.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     if (currentUser == null) {
@@ -360,24 +329,24 @@ export default function ForumComposer(parentChannel) {
   const items2 = [first];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => first.getSelfMember(lib.guild_id));
   let obj4 = _require(threadSettingsDraft[23]);
-  const items3 = [c12];
-  const str = obj4.useStateFromStores(items3, () => _undefined3.getDraft(lib.id, _undefined4.ChannelMessage));
+  const items3 = [closure_12];
+  const str = obj4.useStateFromStores(items3, () => draft.getDraft(lib.id, _undefined.ChannelMessage));
   let obj5 = _require(threadSettingsDraft[23]);
-  const items4 = [c11];
-  const stateFromStores3 = obj5.useStateFromStores(items4, () => lib(threadSettingsDraft[24]).isThemeDark(_undefined2.theme));
-  const unsafe_rawColors = thread(threadSettingsDraft[21]).unsafe_rawColors;
+  const items4 = [closure_11];
+  const stateFromStores3 = obj5.useStateFromStores(items4, () => lib(threadSettingsDraft[24]).isThemeDark(theme.theme));
+  const unsafe_rawColors = content(threadSettingsDraft[21]).unsafe_rawColors;
   let tmp10 = stateFromStores3 ? unsafe_rawColors.PRIMARY_330 : unsafe_rawColors.PRIMARY_460;
   let tmp5Result = tmp5(tmp3[23]);
-  const items5 = [c17];
-  stateFromStores4 = tmp5Result.useStateFromStores(items5, () => _undefined5.getSlowmodeCooldownGuess(lib.id, appliedTags.CreateThread));
+  const items5 = [closure_17];
+  stateFromStores4 = tmp5Result.useStateFromStores(items5, () => slowmodeCooldownGuess.getSlowmodeCooldownGuess(lib.id, appliedTags.CreateThread));
   tmp5Result = tmp5(tmp3[23]);
   const items6 = [first1];
-  stateFromStores5 = tmp5Result.useStateFromStores(items6, () => first1.getUploads(lib.id, _undefined4.ChannelMessage));
-  let tmp12 = thread(threadSettingsDraft[25])();
-  c11 = tmp12;
-  let tmp13 = thread(threadSettingsDraft[26])();
-  c12 = tmp13;
-  let tmp14 = thread(threadSettingsDraft[27])(parentChannel);
+  stateFromStores5 = tmp5Result.useStateFromStores(items6, () => first1.getUploads(lib.id, _undefined.ChannelMessage));
+  let tmp12 = content(threadSettingsDraft[25])();
+  closure_11 = tmp12;
+  let tmp13 = content(threadSettingsDraft[26])();
+  closure_12 = tmp13;
+  let tmp14 = content(threadSettingsDraft[27])(parentChannel);
   [tmp17, c13] = message(obj.useState(false), 2);
   if (isEdit) {
     let name;
@@ -393,7 +362,7 @@ export default function ForumComposer(parentChannel) {
   }
   let tmp15Result = tmp15(obj.useState(str2), 2);
   first = tmp15Result[0];
-  getUncachedChannelPermissions = tmp15Result[1];
+  closure_15 = tmp15Result[1];
   let tmp16 = message(obj.useState(false), 2);
   const channelTemplate = _require(threadSettingsDraft[28]).useChannelTemplate(parentChannel);
   let str3 = "";
@@ -419,7 +388,7 @@ export default function ForumComposer(parentChannel) {
   }
   tmp15Result = tmp15(obj.useState(str3), 2);
   str4 = tmp15Result[0];
-  c17 = tmp24;
+  closure_17 = tmp24;
   const tmp5Result1 = _require(threadSettingsDraft[28]);
   appliedTags = _require(threadSettingsDraft[30]).useAppliedTags(thread);
   const tmp15Result1 = message(obj.useState(() => {
@@ -451,7 +420,7 @@ export default function ForumComposer(parentChannel) {
     return found;
   }), 2);
   first1 = tmp15Result1[0];
-  mergeGuildAvatar = tmp15Result1[1];
+  closure_20 = tmp15Result1[1];
   const tmp5Result2 = _require(threadSettingsDraft[30]);
   [tmp28, c21] = message(obj.useState(null), 2);
   const tmp15Result3 = message(obj.useState(null), 2);
@@ -494,7 +463,7 @@ export default function ForumComposer(parentChannel) {
   const tmp5Result3 = _require(threadSettingsDraft[33]);
   class D {
     constructor(arg0) {
-      return c24.set(parentChannel.contentOffset.y);
+      return closure_24.set(parentChannel.contentOffset.y);
     }
   }
   D.__closure = { scrollTopValue: sharedValue };
@@ -505,7 +474,7 @@ export default function ForumComposer(parentChannel) {
   const items8 = [isEdit, parentChannel.id];
   const callback1 = obj.useCallback((arg0) => {
     if (!isEdit) {
-      let obj = thread(threadSettingsDraft[34]);
+      let obj = content(threadSettingsDraft[34]);
       obj = { name: null };
       obj[0] = arg0;
       obj.changeThreadSettings(lib.id, obj);
@@ -516,7 +485,7 @@ export default function ForumComposer(parentChannel) {
   const callback2 = obj.useCallback((arr) => {
     currentUser(arr);
     if (!isEdit) {
-      let obj = thread(threadSettingsDraft[34]);
+      let obj = content(threadSettingsDraft[34]);
       obj = { appliedTags: null };
       const _Set = Set;
       const set = new Set(arr.map((id) => id.id));
@@ -536,9 +505,9 @@ export default function ForumComposer(parentChannel) {
   memo1 = obj.useMemo(() => new Set(appliedTags.map((id) => id.id)), items11);
   _require = undefined;
   _require = onClose((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -566,33 +535,33 @@ export default function ForumComposer(parentChannel) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp2;
-              if (null == outer1_1) {
+              closure_1 = tmp2;
+              if (null == closure_1_1) {
                 v0 = 3;
               } else {
-                let tmp6 = null != outer1_4;
+                let tmp6 = null != closure_1_4;
                 if (tmp6) {
                   tmp6 = tmp46.content !== tmp43;
                 }
                 if (tmp6) {
-                  let obj2 = thread(threadSettingsDraft[36]);
-                  const obj1 = { content: null };
+                  let obj2 = content(threadSettingsDraft[36]);
+                  obj1 = { content: null };
                   obj1[0] = tmp43;
-                  obj2.editMessage(outer1_1.id, tmp46.id, obj1);
+                  obj2.editMessage(closure_1_1.id, tmp46.id, obj1);
                 }
-                let obj4 = thread(threadSettingsDraft[37]);
-                if (!obj4.isEqual(outer1_27, outer1_26)) {
-                  let obj5 = thread(threadSettingsDraft[38]);
+                let obj4 = content(threadSettingsDraft[37]);
+                if (!obj4.isEqual(closure_1_27, closure_1_26)) {
+                  let obj5 = content(threadSettingsDraft[38]);
                   const _Array = Array;
                   c2 = 1;
                   v0 = 1;
                   obj2 = { value: null, done: false };
-                  obj2[0] = obj5.updateForumPostTags(outer1_1.id, Array.from(tmp14));
+                  obj2[0] = obj5.updateForumPostTags(closure_1_1.id, Array.from(tmp14));
                   return obj2;
                 }
-                tmp14 = outer1_26;
+                tmp14 = closure_1_26;
               }
-              outer1_25(outer1_1);
+              closure_1_25(closure_1_1);
             }
           } else {
             if (1 === tmp5) {
@@ -614,17 +583,17 @@ export default function ForumComposer(parentChannel) {
               obj[0] = arg1;
               return obj;
             }
-            if (str4.getChannelId() === outer1_1.id) {
+            if (str4.getChannelId() === closure_1_1.id) {
               v0(true);
             }
           }
-          if (outer1_1.name !== outer1_14) {
+          if (closure_1_1.name !== closure_1_14) {
             obj4 = { name: null };
-            obj4[0] = outer1_14;
+            obj4[0] = closure_1_14;
             c2 = 2;
             v0 = 1;
             obj5 = { value: null, done: false };
-            obj5[0] = thread(threadSettingsDraft[39]).saveChannel(outer1_1.id, obj4);
+            obj5[0] = content(threadSettingsDraft[39]).saveChannel(closure_1_1.id, obj4);
             return obj5;
           }
         } catch (tmp37) {
@@ -674,7 +643,7 @@ export default function ForumComposer(parentChannel) {
       }
       let tmp51 = first !== name2;
       if (!tmp51) {
-        let content;
+        content = undefined;
         if (message != null) {
           content = message.content;
         }
@@ -695,10 +664,10 @@ export default function ForumComposer(parentChannel) {
   createForumPost = _require(threadSettingsDraft[40]).useCreateForumPost({ parentChannel, threadSettings: threadSettingsDraft, appliedTags: memo, onThreadCreated: callback3 });
   _require = undefined;
   _require = tmp41((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -731,8 +700,8 @@ export default function ForumComposer(parentChannel) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp4;
-                let c1 = tmp8;
+                closure_2 = tmp4;
+                c1 = tmp8;
                 let stickerId;
                 throwTypeErrorResult = stickerId;
                 stickerId = stickerId.stickerId;
@@ -748,7 +717,7 @@ export default function ForumComposer(parentChannel) {
                   throw arg1;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
@@ -756,28 +725,28 @@ export default function ForumComposer(parentChannel) {
                   throwTypeErrorResult = lib;
                   throwTypeErrorResult = sharedValue;
                   if (lib.hasFlag(sharedValue.REQUIRE_TAG)) {
-                    if (0 === outer1_19.length) {
+                    if (0 === closure_1_19.length) {
                       throwTypeErrorResult = threadSettingsDraft;
-                      throwTypeErrorResult = outer1_22(lib(threadSettingsDraft[41]).makeEmptyTagsError());
+                      throwTypeErrorResult = closure_1_22(lib(threadSettingsDraft[41]).makeEmptyTagsError());
                       const obj9 = lib(threadSettingsDraft[41]);
                     }
                     c6 = 3;
                   }
-                  outer1_13(true);
+                  closure_1_13(true);
                   if (c5) {
-                    let tmp74 = outer1_1;
+                    let tmp74 = closure_1_1;
                   } else {
                     tmp74 = lib;
                   }
-                  thread = thread(threadSettingsDraft[29]).parse(tmp74, outer1_16).content;
-                  let c4 = 2;
-                  outer1_21(null);
-                  outer1_22(null);
+                  content = content(threadSettingsDraft[29]).parse(tmp74, closure_1_16).content;
+                  c4 = 2;
+                  closure_1_21(null);
+                  closure_1_22(null);
                   if (c5) {
                     c5 = 4;
                     c6 = 1;
                     let obj2 = { value: null, done: false };
-                    obj2[0] = outer1_28(outer1_1);
+                    obj2[0] = closure_1_28(closure_1_1);
                     return obj2;
                   } else {
                     let tmp90;
@@ -788,31 +757,31 @@ export default function ForumComposer(parentChannel) {
                     c5 = 5;
                     c6 = 1;
                     let obj3 = { value: null, done: false };
-                    obj3[0] = outer1_29(outer1_1, tmp90, outer1_10);
+                    obj3[0] = closure_1_29(closure_1_1, tmp90, closure_1_10);
                     return obj3;
                   }
-                  const obj6 = thread(threadSettingsDraft[29]);
+                  const obj6 = content(threadSettingsDraft[29]);
                 }
               } else if (2 !== tmp8) {
                 if (3 === tmp8) {
                   c4 = 1;
-                  const outer1_2 = handleThemeChange;
-                  const body = outer1_2.body;
+                  closure_2 = closure_3;
+                  const body = closure_2.body;
                   let code;
                   if (body != null) {
                     code = body.code;
                   }
                   if (null != code) {
                     throwTypeErrorResult = c1;
-                    throwTypeErrorResult = outer1_2;
-                    const body3 = outer1_2.body;
+                    throwTypeErrorResult = closure_2;
+                    const body3 = closure_2.body;
                     let code1;
                     if (body3 != null) {
                       code1 = body3.code;
                     }
                     if (code1 === constants.AUTOMOD_TITLE_BLOCKED) {
                       let obj4 = lib(threadSettingsDraft[41]);
-                      outer1_21(obj4.makeAutomodViolationError(closure_2.body, lib));
+                      closure_1_21(obj4.makeAutomodViolationError(closure_2.body, lib));
                     } else {
                       throwTypeErrorResult = c1;
                       throwTypeErrorResult = threadSettingsDraft;
@@ -823,7 +792,7 @@ export default function ForumComposer(parentChannel) {
                       }
                       if (code2 === constants.AUTOMOD_MESSAGE_BLOCKED) {
                         obj3 = lib(threadSettingsDraft[41]);
-                        outer1_22(obj3.makeAutomodViolationError(closure_2.body, lib));
+                        closure_1_22(obj3.makeAutomodViolationError(closure_2.body, lib));
                       } else {
                         throwTypeErrorResult = c1;
                         throwTypeErrorResult = threadSettingsDraft;
@@ -846,7 +815,7 @@ export default function ForumComposer(parentChannel) {
                         }
                         if (tmp29) {
                           obj2 = lib(threadSettingsDraft[41]);
-                          outer1_21(obj2.makeApiNameValidationError());
+                          closure_1_21(obj2.makeApiNameValidationError());
                         }
                       }
                     }
@@ -858,7 +827,7 @@ export default function ForumComposer(parentChannel) {
                       throw arg1;
                     } else if (arg0 === 2) {
                       c4 = 0;
-                      outer1_13(false);
+                      closure_1_13(false);
                       c6 = 3;
                       obj4 = { value: null, done: true };
                       obj4[0] = arg1;
@@ -869,7 +838,7 @@ export default function ForumComposer(parentChannel) {
                     throw arg1;
                   } else if (arg0 === 2) {
                     c4 = 0;
-                    outer1_13(false);
+                    closure_1_13(false);
                     c6 = 3;
                     obj = { value: null, done: true };
                     obj[0] = arg1;
@@ -878,14 +847,14 @@ export default function ForumComposer(parentChannel) {
                   c4 = 1;
                 }
                 c4 = 0;
-                outer1_13(false);
+                closure_1_13(false);
               }
               c4 = 0;
-              outer1_13(false);
-              throw handleThemeChange;
+              closure_1_13(false);
+              throw closure_3;
             }
           } catch (throwTypeErrorResult) {
-            handleThemeChange = throwTypeErrorResult;
+            closure_3 = throwTypeErrorResult;
             if (tmp5 === c4) {
               throwTypeErrorResult = tmp3;
               c6 = tmp3;
@@ -918,7 +887,7 @@ export default function ForumComposer(parentChannel) {
   const callback6 = obj.useCallback((stickerId) => {
     stickerId = stickerId.stickerId;
     if (stateFromStores4 <= 0) {
-      if (str4.length > c12) {
+      if (str4.length > closure_12) {
         let obj = { title: null, body: null };
         const intl4 = lib(threadSettingsDraft[43]).intl;
         obj[0] = intl4.string(lib(threadSettingsDraft[43]).t.l8rYLt);
@@ -927,8 +896,8 @@ export default function ForumComposer(parentChannel) {
         obj[0] = arr.length;
         obj[1] = tmp40;
         obj[1] = intl5.formatToPlainString(lib(threadSettingsDraft[43]).t.FfjF15, obj);
-        thread(threadSettingsDraft[42]).show(obj);
-        const obj4 = thread(threadSettingsDraft[42]);
+        content(threadSettingsDraft[42]).show(obj);
+        const obj4 = content(threadSettingsDraft[42]);
       } else {
         const RESTRICTIONS = lib(threadSettingsDraft[44]).RESTRICTIONS;
         const iter = RESTRICTIONS[Symbol.iterator]();
@@ -939,10 +908,10 @@ export default function ForumComposer(parentChannel) {
           let checkResult = iter.next().check(str4, stickerId, null != stickerId.getGuildId());
           let tmp9 = checkResult;
           if (false !== checkResult) {
-            let tmp10 = thread;
+            let tmp10 = content;
             let tmp11 = threadSettingsDraft;
-            obj = thread(threadSettingsDraft[42]);
-            let obj1 = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
+            obj = content(threadSettingsDraft[42]);
+            obj1 = { title: null, body: null, confirmText: null, onConfirm: null, cancelText: null };
             let tmp12 = lib;
             let tmp13 = threadSettingsDraft;
             let intl = lib(threadSettingsDraft[43]).intl;
@@ -957,7 +926,7 @@ export default function ForumComposer(parentChannel) {
             let tmp19 = threadSettingsDraft;
             obj1[2] = intl2.string(lib(threadSettingsDraft[43]).t.KJnHq3);
             obj1[3] = function onConfirm() {
-              outer1_30({ stickerId });
+              closure_1_30({ stickerId });
             };
             let tmp20 = lib;
             let tmp21 = threadSettingsDraft;
@@ -977,8 +946,8 @@ export default function ForumComposer(parentChannel) {
     }
   }, items14);
   const callback7 = obj.useCallback((draft) => {
-    thread(threadSettingsDraft[34]).changeDraft(lib.id, draft, _undefined4.ChannelMessage);
-    _undefined5(draft);
+    content(threadSettingsDraft[34]).changeDraft(lib.id, draft, _undefined.ChannelMessage);
+    slowmodeCooldownGuess(draft);
   }, items15);
   const tmp5Result5 = _require(threadSettingsDraft[40]);
   const focusHandlers = _require(threadSettingsDraft[45]).useFocusHandlers({ titleInput: ref, contentInput: ref1 });
@@ -989,12 +958,10 @@ export default function ForumComposer(parentChannel) {
   [tmp59, c34] = message(obj.useState(obj), 2);
   const callback8 = obj.useCallback((nativeEvent) => {
     const merged = Object.assign(nativeEvent.nativeEvent.selection);
-    _undefined7({});
+    _undefined3({});
   }, []);
   const callback9 = obj.useCallback((arg0) => {
-    let closure_0;
-    let thread;
-    ({ start: closure_0, end: thread } = arg0);
+    ({ start: closure_0, end: content } = arg0);
     let current;
     if (obj.isAndroid()) {
       current = ref1.current;
@@ -1022,7 +989,7 @@ export default function ForumComposer(parentChannel) {
   [tmp64, c38] = message(obj.useState(0), 2);
   obj22 = parentChannel;
   const callback10 = obj.useCallback((nativeEvent) => {
-    _undefined8(nativeEvent.nativeEvent.layout.height);
+    _undefined4(nativeEvent.nativeEvent.layout.height);
   }, []);
   if (isEdit) {
     obj22 = thread;
@@ -1046,16 +1013,16 @@ export default function ForumComposer(parentChannel) {
           if (1 !== parts.length) {
             mapped = parts.map((children) => {
               if (arg1 % 2 === 1) {
-                let obj = outer1_1(outer1_2[29]);
+                let obj = closure_1_1(closure_1_2[29]);
                 if (obj.parse(closure_39, children, closure_40).content !== children) {
                   obj = { style: null, children: null };
                   obj[0] = mentionText.mentionText;
                   obj[1] = children;
-                  return outer1_29(outer1_8, obj, arg1);
+                  return closure_1_29(closure_1_8, obj, arg1);
                 }
               }
               obj = { children };
-              return outer1_29(outer1_5.Fragment, obj, arg1);
+              return closure_1_29(closure_1_5.Fragment, obj, arg1);
             });
           }
           return mapped;
@@ -1129,7 +1096,7 @@ export default function ForumComposer(parentChannel) {
           if (tmp != null) {
             name1 = tmp.name;
           }
-          const tmp6Result = thread(threadSettingsDraft[57])(name1, true);
+          const tmp6Result = content(threadSettingsDraft[57])(name1, true);
           let name2;
           if (tmp != null) {
             name2 = tmp.name;
@@ -1141,9 +1108,9 @@ export default function ForumComposer(parentChannel) {
             callback(tmp6Result);
             const tmp4Result = tmp4(tmp5[34]);
           }
-          tmp4 = thread;
+          tmp4 = content;
           tmp5 = threadSettingsDraft;
-          const tmp6 = thread(threadSettingsDraft[57]);
+          const tmp6 = content(threadSettingsDraft[57]);
         }
       }
     };
@@ -1155,7 +1122,7 @@ export default function ForumComposer(parentChannel) {
         tmp2(tmp3[59]).setKeyboardType(obj);
         const tmp2Result = tmp2(tmp3[59]);
       }
-      _undefined6(lib(threadSettingsDraft[45]).PostComposerInputs.TITLE);
+      _undefined2(lib(threadSettingsDraft[45]).PostComposerInputs.TITLE);
     };
     obj6[18] = callback;
     const items22 = [createForumPost(tmp5(tmp3[55]).FormInput, obj6), , ];
@@ -1181,7 +1148,7 @@ export default function ForumComposer(parentChannel) {
         }
         obj[2] = id;
         obj[3] = analyticsLocations;
-        return thread(threadSettingsDraft[61])(obj);
+        return content(threadSettingsDraft[61])(obj);
       };
       const obj10 = { animate: null, style: null, user: null, guildId: null, avatarDecoration: null, accessibilityLabel: null };
       obj10[0] = !stateFromStores1;
@@ -1243,14 +1210,14 @@ export default function ForumComposer(parentChannel) {
     obj19[6] = callback7;
     obj19[7] = callback8;
     obj19[8] = function onFocus() {
-      if (c11 === lib(threadSettingsDraft[58]).KeyboardTypes.MEDIA) {
+      if (closure_11 === lib(threadSettingsDraft[58]).KeyboardTypes.MEDIA) {
         const obj = { type: null, context: null };
         obj[0] = tmp(tmp2[58]).KeyboardTypes.SYSTEM;
         obj[1] = { keyboardWillOpen: true };
         tmp(tmp2[59]).setKeyboardType(obj);
         const tmpResult = tmp(tmp2[59]);
       }
-      _undefined6(lib(threadSettingsDraft[45]).PostComposerInputs.CONTENT);
+      _undefined2(lib(threadSettingsDraft[45]).PostComposerInputs.CONTENT);
     };
     obj19[9] = tmp12 !== tmp5(tmp3[58]).KeyboardTypes.EXPRESSION;
     let tmp71Result2 = str4;
@@ -1279,7 +1246,7 @@ export default function ForumComposer(parentChannel) {
     obj23[4] = tmp17;
     obj23[5] = callback6;
     obj23[6] = function onShowExpressionPicker() {
-      _undefined.dismiss();
+      closure_6.dismiss();
       let obj = lib(threadSettingsDraft[64]);
       obj = { channelId: lib.id, onPressEmoji: closure_35, onPressSticker: callback4, onPressGIF: closure_36, onBackspace: closure_37, visibleTabs: items };
       items = [, ];
@@ -1310,7 +1277,7 @@ export default function ForumComposer(parentChannel) {
       if (markAsDismissed.visibleContent === lib(threadSettingsDraft[50]).DismissibleContent.MEDIA_CHANNEL_MULTIPLE_THUMBNAIL_NOTICE) {
         const obj = { markAsDismissed: null, actionSheetKey: "ThumbnailBottomSheet", importer: null };
         obj[0] = function markAsDismissed() {
-          return markAsDismissed(outer1_25.UNKNOWN);
+          return markAsDismissed(closure_1_25.UNKNOWN);
         };
         obj[2] = MediaPostMultipleThumbnailActionSheetImporter;
         tmp3 = createForumPost(lib(threadSettingsDraft[67]).DismissibleActionSheet, obj);

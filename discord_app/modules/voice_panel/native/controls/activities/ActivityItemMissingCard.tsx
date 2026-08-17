@@ -1,17 +1,14 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx
-import Themes from "Themes";
-import importAllResult from "noop";
-import { ActivityIndicator } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { set } from "../../../../core/native/NativeView.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import setDefault from "set" /* 7190 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importAllResult from "noop" /* 19 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 function ActivityItemEmptyCard(activity) {
-  let height;
-  let width;
   activity = activity.activity;
   const application = activity.application;
   let channelId;
@@ -50,16 +47,16 @@ function ActivityItemEmptyCard(activity) {
             obj[0] = arg1;
             return obj;
           } else {
-            const obj1 = { channelId: null, applicationId: null, launchId: null, inputApplication: null, analyticsLocations: null };
-            obj1[0] = outer1_2;
+            obj1 = { channelId: null, applicationId: null, launchId: null, inputApplication: null, analyticsLocations: null };
+            obj1[0] = closure_1_2;
             obj1[1] = id.id;
             obj1[2] = v0.launchId;
             obj1[3] = id;
-            obj1[4] = outer1_3;
+            obj1[4] = closure_1_3;
             id = 1;
             v0 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = v0(outer1_2[8]).maybeJoinEmbeddedActivity(obj1);
+            obj2[0] = v0(closure_1_2[8]).maybeJoinEmbeddedActivity(obj1);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -91,14 +88,12 @@ function ActivityItemEmptyCard(activity) {
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { loadingActivity: null, disabledActivity: null };
-obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
-createCacheKey = { width: "100%", height: "100%", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[1] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ActivityItemMissingCard(arg0) {
-  let activity;
-  let application;
   ({ activity, application } = arg0);
   if (null != activity) {
     if (null != application) {
@@ -112,8 +107,8 @@ const memoResult = importAllResult.memo(function ActivityItemMissingCard(arg0) {
   obj = { style: callback3().loadingActivity, children: null };
   const tmp = callback3();
   obj[1] = callback(ActivityIndicator, { size: "large" });
-  tmp4 = callback(set, obj);
+  tmp4 = callback(setDefault, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityItemMissingCard.tsx");
 
 export default memoResult;

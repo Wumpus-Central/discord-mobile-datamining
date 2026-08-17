@@ -1,45 +1,37 @@
 // discord_app/modules/guild_sidebar/native/useChannelNoticeRows.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import completeStep from "completeStep";
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow";
-import { MFALevels } from "ME";
-import ContentDismissActionType from "ContentDismissActionType";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "completeStep" /* 11644 */;
+import closure_6 from "comparator" /* 1980 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelListChannelNoticeRow as closure_9 } from "ChannelListGuildActionRow" /* 5281 */;
+import { MFALevels } from "ME" /* 676 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1388 */;
 
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 ({ ContentDismissActionType: unpackModuleId, DismissibleContentGroupName: closure_12 } = ContentDismissActionType);
-let result = require("completeStep").fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/native/useChannelNoticeRows.tsx");
 
 export default function useChannelNoticeRows(id) {
-  let canStartAuthorization;
-  let connectionApp;
-  let fetched;
-  let startAuthorization;
-  let tmp17;
-  let tmp18;
   id = id.id;
   let hasAlreadyLinked = id;
   let obj = id(stateFromStores[10]);
   let items = [guildHasLiveChannelNotice];
   stateFromStores = obj.useStateFromStores(items, () => guildHasLiveChannelNotice.hasProgress(hasAlreadyLinked));
   currentUser = currentUser.getCurrentUser();
-  const items1 = [comparator];
+  const items1 = [closure_6];
   const items2 = [currentUser, id.mfaLevel, id];
   const stateFromStores1 = id(stateFromStores[10]).useStateFromStores(items1, () => {
     let result = null != currentUser;
     if (result) {
-      result = id.mfaLevel === outer1_10.ELEVATED;
+      result = id.mfaLevel === closure_1_10.ELEVATED;
     }
     if (result) {
       result = !currentUser.mfaEnabled;
     }
     if (result) {
-      result = tmp11.hasElevatedPermissions(hasAlreadyLinked);
+      result = closure_6.hasElevatedPermissions(hasAlreadyLinked);
     }
     return result;
   }, items2);
@@ -55,7 +47,7 @@ export default function useChannelNoticeRows(id) {
     items4 = [];
   }
   const tmp10 = currentUser(id(stateFromStores[14]).useSelectedSingleUseGuildDismissibleContent(items4, id, constants.CHANNEL_NOTICES, true), 2);
-  comparator = tmp11;
+  closure_6 = tmp11;
   hasAlreadyLinked = undefined;
   const obj5 = id(stateFromStores[14]);
   const tmp12 = hasAlreadyLinked;
@@ -63,12 +55,12 @@ export default function useChannelNoticeRows(id) {
   const tmp9 = currentUser;
   let enabled = hasAlreadyLinked(stateFromStores[9]).useConfig({ location: "useMobileAccountLinkRow" }).enabled;
   let tmpResult = tmp(tmp2[10]);
-  const items5 = [createGuildRecordFromRust];
+  const items5 = [closure_7];
   tmpResult = tmp(tmp2[11]);
   let first = null;
   if (enabled) {
     first = tmpResult.useStateFromStoresArray(items5, () => {
-      const guild = tmp20.getGuild(id);
+      guild = guild.getGuild(id);
       let gameApplicationIds;
       if (guild != null) {
         gameApplicationIds = guild.gameApplicationIds;
@@ -119,20 +111,20 @@ export default function useChannelNoticeRows(id) {
     if (hasAlreadyLinked) {
       let obj = id(stateFromStores[16]);
       obj = { dismissAction: null, guildId: null, groupName: null };
-      obj[0] = outer1_11.INDIRECT_ACTION;
+      obj[0] = closure_1_11.INDIRECT_ACTION;
       obj[1] = id;
-      obj[2] = outer1_12.CHANNEL_NOTICES;
+      obj[2] = closure_1_12.CHANNEL_NOTICES;
       const result = obj.UNSAFE_markSingleUseGuildDismissibleContentAsDismissed(id(stateFromStores[15]).DismissibleContent.MOBILE_ACCOUNT_LINKING_BANNER, id, obj);
     }
   }, items8);
-  createGuildRecordFromRust = tmp20;
+  closure_7 = tmp20;
   obj = {
     rows: stateFromStores1.useMemo(() => {
-      const items = [outer1_9.SPACER];
-      if (comparator) {
+      const items = [closure_1_9.SPACER];
+      if (closure_6) {
         items.push(tmp.GAME_CLAIM);
       }
-      if (createGuildRecordFromRust) {
+      if (closure_7) {
         items.push(tmp.APPLICATION_ACCOUNT_LINK);
       }
       if (stateFromStores) {

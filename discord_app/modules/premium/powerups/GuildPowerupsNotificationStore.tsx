@@ -1,12 +1,14 @@
 // discord_app/modules/premium/powerups/GuildPowerupsNotificationStore.tsx
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import { PersistedStore } from "initialize";
-import { getExpiringGuildEntitlements } from "utils/getExpiringGuildEntitlements.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getExpiringGuildEntitlements from "getExpiringGuildEntitlements" /* 11662 */;
+import closure_2 from "handleGameServerInstanceCreated" /* 4282 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "calculateAppliedBoosts" /* 4261 */;
 
-const require = arg1;
+require = arg1;
 let closure_5 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildPowerupsNotificationStore extends PersistedStore {
 }
 const prototype = GuildPowerupsNotificationStore.prototype;
@@ -14,9 +16,9 @@ prototype["getState"] = function getState() {
   return closure_5;
 };
 prototype["initialize"] = function initialize(arg0) {
-  this.waitFor(handleGameServerInstanceCreated, calculateAppliedBoosts, createGuildRecordFromRust);
+  this.waitFor(closure_2, closure_4, closure_3);
   if (null != arg0) {
-    let closure_5 = arg0;
+    closure_5 = arg0;
   }
 };
 prototype["getNotificationStateForGuild"] = function getNotificationStateForGuild(closure_0) {
@@ -26,11 +28,9 @@ GuildPowerupsNotificationStore.displayName = "GuildPowerupsNotificationStore";
 GuildPowerupsNotificationStore.persistKey = "GuildPowerupsNotificationStore";
 let items = [
   (arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const entries = Object.entries(arg0);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       closure_0[tmp] = tmp2;
     });
@@ -38,7 +38,7 @@ let items = [
   }
 ];
 GuildPowerupsNotificationStore.migrations = items;
-const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(require("dispatcher"), {
+const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(dispatcherDefault, {
   GUILD_POWERUPS_ACK_NOTIFICATION: function handleAckNotification(guildId) {
     guildId = guildId.guildId;
     guild = guild.getGuild(guildId);
@@ -79,15 +79,13 @@ const guildPowerupsNotificationStore = new GuildPowerupsNotificationStore(requir
       const _Date = Date;
       ends_at = Date.now();
     }
-    obj = { lastSeenWarningNotification: null, lastBoostCount: null };
-    obj[0] = new Date(ends_at).getTime();
-    obj[1] = num;
+    obj = { lastSeenWarningNotification: new Date(ends_at).getTime(), lastBoostCount: num };
     obj[guildId] = obj;
   },
   GUILD_POWERUPS_RESET_NOTIFICATIONS: function handleResetNotifications() {
-    let closure_5 = {};
+    closure_5 = {};
   }
 });
-const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/premium/powerups/GuildPowerupsNotificationStore.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsNotificationStore.tsx");
 
 export default guildPowerupsNotificationStore;

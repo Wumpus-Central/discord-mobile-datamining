@@ -1,20 +1,17 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventCard.tsx
-import { View } from "get ActivityIndicator";
-import createRTCConnection from "createRTCConnection";
-import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort";
-import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import { usePrimaryActionButtonType } from "GuildEventCardComponents.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import ButtonGroup from "ButtonGroup" /* 6687 */;
+import usePrimaryActionButtonType from "usePrimaryActionButtonType" /* 8800 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import { isGuildScheduledEventActive as closure_5 } from "scheduledEventSort" /* 4370 */;
+import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function GuildEventCardControls(onCloseAction) {
-  let event;
-  let isConnected;
   ({ event, isConnected } = onCloseAction);
   let obj = usePrimaryActionButtonType;
   const primaryActionButtonType = obj.usePrimaryActionButtonType(event, isConnected);
@@ -31,15 +28,12 @@ function GuildEventCardControls(onCloseAction) {
   obj[2] = items;
   return closure_8(ButtonGroup.ButtonGroup, obj);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { actionContainer: null };
-obj = { paddingTop: require("Themes").space.PX_16, paddingBottom: 0 };
+obj = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: 0 };
 obj[0] = obj;
 const styles = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((event) => {
-  let hideControls;
-  let importDefault;
-  let onCloseAction;
+const memoResult = importAllResult.memo((event) => {
   event = event.event;
   ({ onPress: importDefault, onCloseAction, hideControls } = event);
   if (hideControls === undefined) {
@@ -56,12 +50,12 @@ const memoResult = require("noop").memo((event) => {
   let channel_id;
   channel_id = event.channel_id;
   let obj = event(channel_id[10]);
-  const items = [createRTCConnection];
+  const items = [closure_4];
   const items1 = [channel_id];
   let stateFromStores = obj.useStateFromStores(items, () => {
-    let isConnectedResult = outer1_4.isConnected();
+    let isConnectedResult = closure_1_4.isConnected();
     if (isConnectedResult) {
-      isConnectedResult = outer1_4.getChannelId() === channel_id;
+      isConnectedResult = closure_1_4.getChannelId() === channel_id;
     }
     return isConnectedResult;
   }, items1);
@@ -90,7 +84,7 @@ const memoResult = require("noop").memo((event) => {
   items2[3] = callback2(event(channel_id[8]).GuildEventSimpleLocation, { event });
   let tmp6Result = null;
   if (!hideControls) {
-    const obj1 = { event: null, onCloseAction: null, isConnected: null };
+    obj1 = { event: null, onCloseAction: null, isConnected: null };
     obj1[0] = event;
     obj1[1] = onCloseAction;
     obj1[2] = stateFromStores;
@@ -116,7 +110,7 @@ const memoResult = require("noop").memo((event) => {
   obj[2] = closure_8(View, { children: items2 });
   return callback2(event(channel_id[12]).Card, obj);
 });
-let result = require("createRTCConnection").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventCard.tsx");
 
 export default memoResult;
 export const useGuildEventCardStyles = styles;

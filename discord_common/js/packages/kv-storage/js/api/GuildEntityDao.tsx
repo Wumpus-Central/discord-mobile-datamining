@@ -1,6 +1,9 @@
 // discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx
+import set from "set" /* 2 */;
+import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
+import TableId from "TableId" /* 1962 */;
 import { TableId } from "../types/index.tsx";
-import { fromDatabaseTransaction } from "Table.tsx";
+
 let GuildEntityDao;
 class GuildEntityDao {
   constructor(arg0, arg1, arg2) {
@@ -76,7 +79,7 @@ prototype["getGuildId"] = function getGuildId(arg0) {
 };
 prototype["put"] = function put(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
     Replace = _TableId.ConflictOptions.Replace;
@@ -85,7 +88,7 @@ prototype["put"] = function put(arg0, arg1) {
 };
 prototype["putAll"] = function putAll(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let Replace = arg2;
   if (arg2 === undefined) {
     Replace = _TableId.ConflictOptions.Replace;
@@ -93,28 +96,28 @@ prototype["putAll"] = function putAll(arg0, arg1) {
   return this.transaction((putAll) => putAll.putAll(closure_0, closure_1, Replace), "" + this.prefix + " putAll");
 };
 prototype["replaceAll"] = function replaceAll(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return this.transaction((str) => str.replaceAll(closure_0, closure_1), "" + this.prefix + " replaceAll");
 };
 prototype["delete"] = function delete(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return this.transaction((arg0) => arg0.delete(closure_0, closure_1), "" + this.prefix + " delete");
 };
 prototype["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return this.transaction((deleteGeneration) => deleteGeneration.deleteGeneration(closure_0, closure_1), "" + this.prefix + " deleteGeneration");
 };
 prototype["transaction"] = function transaction(arg0, arg1) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_3 !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(outer1_3.prototype);
+    const obj = Object.create(closure_1_3.prototype);
     obj.transaction = transaction;
     return closure_0(obj);
   }, arg1);
@@ -186,7 +189,7 @@ prototype2["putAll"] = function putAll(arg0, arr) {
     Replace = _TableId.ConflictOptions.Replace;
   }
   const transaction = this.transaction;
-  return transaction.putAll(arr.map((arg0) => outer1_2.cell(closure_0, arg0, null)), Replace);
+  return transaction.putAll(arr.map((arg0) => closure_1_2.cell(closure_0, arg0, null)), Replace);
 };
 prototype2["replaceAll"] = function replaceAll(arg0, arg1) {
   this.delete(arg0);
@@ -216,7 +219,7 @@ prototype2["deleteGeneration"] = function deleteGeneration(arg0, arg1) {
   const transaction = this.transaction;
   return transaction.deleteGeneration([], arg0, arg1);
 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/GuildEntityDao.tsx");
 
 export { GuildEntityDao };
 export { GuildEntityDaoTransaction };

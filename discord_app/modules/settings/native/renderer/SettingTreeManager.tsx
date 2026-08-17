@@ -1,8 +1,10 @@
 // discord_app/modules/settings/native/renderer/SettingTreeManager.tsx
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import { frozen } from "../../../user_settings/core/native/SettingsRendererConfig.tsx";
-import { map } from "SettingHookHarness.tsx";
+import set from "set" /* 2 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
+import map from "map" /* 13997 */;
+import frozen from "frozen" /* 13998 */;
 
+const NodeType = GUILD_SELECT_ALL_SERVERS_OPTION_ID.NodeType;
 class SettingTreeManagerCache {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -71,7 +73,7 @@ prototype2["getAncestors"] = function getAncestors(field) {
   return items;
 };
 prototype2["isBlocked"] = function isBlocked(field) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const ancestors = this.getAncestors(field);
   ancestors.push(field);
   return ancestors.some((arg0) => set.has(arg0));
@@ -114,7 +116,7 @@ prototype2["getNearestRouteAncestorDataOrSelf"] = function getNearestRouteAncest
     }
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("[SettingTree] No route ancestor found for setting: " + setting);
+    error = new Error("[SettingTree] No route ancestor found for setting: " + setting);
     throw error;
   }
 };
@@ -156,6 +158,6 @@ obj[0] = obj;
 let obj1 = Object.create(SettingTreeManagerCache.prototype);
 obj1[0] = {};
 obj[1] = obj1;
-let result = require("map").fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
+let result = set.fileFinishedImporting("modules/settings/native/renderer/SettingTreeManager.tsx");
 
 export default obj;

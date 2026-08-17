@@ -1,21 +1,17 @@
 // discord_app/modules/notification_center/getNotificationCenterItemBody.tsx
-import scheduledEventSort from "scheduledEventSort";
-import { isGuildEventEnded } from "scheduledEventSort";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import closure_3 from "scheduledEventSort" /* 4370 */;
+import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ EMPTY_STRING_SNOWFLAKE_ID: metroImportAll, RelationshipTypes: c9 } = ME);
+({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: c9 } = ME);
 const re10 = /[\\`*_~|<>[\]:]/g;
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
+const result = require("set").fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");
 
 export default function getNotificationCenterItemBody(arg0) {
-  let item;
-  let renderApplication;
   ({ item, renderApplication } = arg0);
   let applicationId = renderApplication;
   renderApplication = undefined;
@@ -28,7 +24,7 @@ export default function getNotificationCenterItemBody(arg0) {
     id = closure_8;
   }
   let obj = renderApplication(4219);
-  let obj1 = user;
+  obj1 = user;
   const other_user2 = item.other_user;
   let id1;
   if (other_user2 != null) {

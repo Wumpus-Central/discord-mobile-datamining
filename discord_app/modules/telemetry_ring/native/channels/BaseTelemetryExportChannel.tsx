@@ -1,9 +1,11 @@
 // discord_app/modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import "append";
-import { Storage } from "../../../../../discord_common/js/packages/storage/Storage.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import Storage2 from "Storage" /* 595 */;
+import appendDefault from "append" /* 13561 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
+appendDefault;
 class BaseTelemetryExportChannel extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -95,7 +97,7 @@ prototype["flushNow"] = function flushNow() {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = c0;
+            obj1 = c0;
             if (c0.shouldRun()) {
               c1 = 1;
               c0 = 1;
@@ -123,7 +125,7 @@ prototype["flushNow"] = function flushNow() {
   })();
 };
 prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const value = Storage.get(this.getAckedEndOffsetStorageKey());
   let num = -1;
   if (typeof value === "number") {
@@ -136,11 +138,11 @@ prototype["_readAckedEndOffset"] = function _readAckedEndOffset() {
   return num;
 };
 prototype["_writeAckedEndOffset"] = function _writeAckedEndOffset(maxReturnedEndOffset) {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const result = Storage.set(this.getAckedEndOffsetStorageKey(), maxReturnedEndOffset);
 };
 prototype["_clearAckedEndOffset"] = function _clearAckedEndOffset() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   Storage.remove(this.getAckedEndOffsetStorageKey());
 };
 prototype["_kick"] = function _kick(arg0) {
@@ -167,19 +169,19 @@ prototype["_kick"] = function _kick(arg0) {
   return _inflight;
 };
 prototype["_drainOnce"] = function _drainOnce(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    let closure_0 = tmp2;
-    const budget = outer1_1.getBudget(outer1_0.mode);
-    const _readAckedEndOffsetResult = outer1_1._readAckedEndOffset();
+    closure_0 = tmp2;
+    const budget = closure_1_1.getBudget(closure_1_0.mode);
+    const _readAckedEndOffsetResult = closure_1_1._readAckedEndOffset();
     if (_readAckedEndOffsetResult >= 0) {
       const tmp27 = _readAckedEndOffsetResult;
     }
-    yield outer1_1._collectPages(budget, tmp27);
+    yield closure_1_1._collectPages(budget, tmp27);
     if (1 === tmp5) {
       if (arg0 === 1) {
-        let c3 = 3;
+        c3 = 3;
         throw arg1;
       } else if (arg0 === 2) {
         c3 = 3;
@@ -189,7 +191,7 @@ prototype["_drainOnce"] = function _drainOnce(arg0) {
       } else {
         closure_0 = arg1;
         if (0 !== closure_0.length) {
-          let c2 = 2;
+          c2 = 2;
           c3 = 1;
           const obj3 = { value: null, done: false };
           obj3[0] = maxReturnedEndOffset._exportPages(closure_0, closure_0.flush);
@@ -223,8 +225,8 @@ prototype["_drainOnce"] = function _drainOnce(arg0) {
   })();
 };
 prototype["_collectPages"] = function _collectPages(budget, arg1) {
-  let closure_0 = budget;
-  let closure_1 = arg1;
+  closure_0 = budget;
+  closure_1 = arg1;
   const self = this;
   return callback(function*() {
     if (c3 === 2) {
@@ -254,7 +256,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
             return obj;
           } else {
             let arr = 1;
-            let closure_0 = 0;
+            closure_0 = 0;
             closure_0 = undefined;
             arr = [];
             nextBeforeOffset = -1;
@@ -264,7 +266,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
           throw arg1;
         } else if (arg0 === 2) {
           c3 = 3;
-          const obj1 = { value: null, done: true };
+          obj1 = { value: null, done: true };
           obj1[0] = arg1;
           return obj1;
         } else {
@@ -294,7 +296,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
         nextBeforeOffset = 1;
         c3 = 1;
         const obj4 = { value: null, done: false };
-        obj4[0] = nextBeforeOffset.snapshot(nextBeforeOffset, outer1_0, outer1_1);
+        obj4[0] = nextBeforeOffset.snapshot(nextBeforeOffset, closure_1_0, closure_1_1);
         return obj4;
       } catch (tmp15) {
         c3 = tmp;
@@ -304,7 +306,7 @@ prototype["_collectPages"] = function _collectPages(budget, arg1) {
   })();
 };
 prototype["_exportPages"] = function _exportPages(closure_0, flush) {
-  let closure_1 = flush;
+  closure_1 = flush;
   const self = this;
   return callback(function*() {
     if (c3 === 2) {
@@ -333,20 +335,20 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
+            closure_1 = tmp2;
             let exportBatchSize = tmp5;
             exportBatchSize = undefined;
             closure_1 = undefined;
             c2 = undefined;
             c3 = undefined;
-            let closure_4;
-            let closure_5;
-            let closure_6;
-            let c7;
+            closure_4 = undefined;
+            closure_5 = undefined;
+            closure_6 = undefined;
+            closure_7 = undefined;
             exportBatchSize = c2.getExportBatchSize();
-            closure_1 = outer1_0.length - 1;
+            closure_1 = closure_1_0.length - 1;
             if (closure_1 >= 0) {
-              c2 = outer1_0[closure_1];
+              c2 = closure_1_0[closure_1];
               if (null != exportBatchSize) {
                 if (exportBatchSize > 0) {
                   let length = exportBatchSize;
@@ -384,14 +386,14 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
         if (tmp38) {
           tmp38 = closure_5 === c2.entries.length;
         }
-        c7 = tmp38;
+        closure_7 = tmp38;
         let tmp46 = closure_1;
         if (closure_1) {
-          tmp46 = c7;
+          tmp46 = closure_7;
         }
         c2 = 1;
         c3 = 1;
-        const obj1 = { value: null, done: false };
+        obj1 = { value: null, done: false };
         obj1[0] = c2.exportEntries(closure_6, tmp46);
         return obj1;
       } catch (tmp48) {
@@ -401,6 +403,6 @@ prototype["_exportPages"] = function _exportPages(closure_0, flush) {
     }
   })();
 };
-let result = require("timestamp").fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/BaseTelemetryExportChannel.tsx");
 
 export default BaseTelemetryExportChannel;

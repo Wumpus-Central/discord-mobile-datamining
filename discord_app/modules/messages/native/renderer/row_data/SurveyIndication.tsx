@@ -1,7 +1,10 @@
 // discord_app/modules/messages/native/renderer/row_data/SurveyIndication.tsx
-import { NotificationTypes } from "str2";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import str2 from "str2" /* 5259 */;
 
-const result = require("frozen").fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");
+const NotificationTypes = str2.NotificationTypes;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/SurveyIndication.tsx");
 
 export const createSurveyIndication = function createSurveyIndication(message, forcedTheme, pushFeedbackType) {
   let TOP_MESSAGE_PUSH = pushFeedbackType;

@@ -1,17 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileEditNote.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { NOTE_MAX_LENGTH } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { NOTE_MAX_LENGTH } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditNote.tsx");
 
 export default function UserProfileEditNote(userId) {
   userId = userId.userId;
@@ -20,68 +18,69 @@ export default function UserProfileEditNote(userId) {
   let navigation;
   let note;
   let first;
-  let c6;
+  closure_6 = undefined;
   let obj = userId(onClose[6]);
   navigation = obj.useNavigation();
   const tmp5 = onSave(onClose[7])(userId);
   note = tmp5.note;
-  let obj1 = note;
+  obj1 = note;
   let str = note;
   if (note == null) {
     str = "";
   }
   const tmp6 = navigation(note.useState(str), 2);
   first = tmp6[0];
-  c6 = tmp8;
+  closure_6 = tmp8;
   const items = [navigation, userId, note, first, onSave, onClose];
   const layoutEffect = obj1.useLayoutEffect(() => {
-    let obj = { headerLeft: null, headerRight: null };
-    obj[0] = userId(onClose[8]).getHeaderConditionalBackButton(() => new Promise((arg0) => {
-      let closure_0 = arg0;
-      let str = noop;
-      if (noop == null) {
-        str = "";
-      }
-      const tmp = outer1_2;
-      const tmp2 = outer1_1(outer1_2[9]);
-      tmp2({
-        hasEdits: str !== closure_5,
-        onHasEdits: outer1_0(outer1_2[10]).dismissKeyboard,
-        resetPending() {
-          let str = noop;
-          if (noop == null) {
-            str = "";
+    let obj = {
+      headerLeft: userId(onClose[8]).getHeaderConditionalBackButton(() => new Promise((arg0) => {
+        closure_0 = arg0;
+        let str = closure_4;
+        if (closure_4 == null) {
+          str = "";
+        }
+        const tmp = closure_1_2;
+        const tmp2 = closure_1_1(closure_1_2[9]);
+        tmp2({
+          hasEdits: str !== closure_5,
+          onHasEdits: closure_1_0(closure_1_2[10]).dismissKeyboard,
+          resetPending() {
+            let str = closure_4;
+            if (closure_4 == null) {
+              str = "";
+            }
+            return closure_6(str);
+          },
+          onConfirm() {
+            callback(true);
+            if (closure_1_2 != null) {
+              closure_1_2();
+            }
           }
-          return closure_6(str);
-        },
-        onConfirm() {
-          callback(true);
-          if (outer1_2 != null) {
-            outer1_2();
+        });
+      })),
+      headerRight(arg0) {
+        const obj = {};
+        const merged = Object.assign(arg0);
+        const intl = closure_1_0(closure_1_2[12]).intl;
+        obj.label = intl.string(closure_1_0(closure_1_2[12]).t["R3BPH+"]);
+        let str = closure_4;
+        if (closure_4 == null) {
+          str = "";
+        }
+        obj.disabled = str === closure_5;
+        obj.onPress = function onPress() {
+          closure_1_1(closure_1_2[13]).updateNote(closure_0, closure_5);
+          if (callback != null) {
+            callback();
           }
-        }
-      });
-    }));
-    obj[1] = function headerRight(arg0) {
-      const obj = {};
-      const merged = Object.assign(arg0);
-      const intl = outer1_0(outer1_2[12]).intl;
-      obj.label = intl.string(outer1_0(outer1_2[12]).t["R3BPH+"]);
-      let str = noop;
-      if (noop == null) {
-        str = "";
+          if (callback2 != null) {
+            callback2();
+          }
+        };
+        return closure_1_7(closure_1_0(closure_1_2[11]).HeaderTextButton, obj);
       }
-      obj.disabled = str === closure_5;
-      obj.onPress = function onPress() {
-        outer1_1(outer1_2[13]).updateNote(closure_0, closure_5);
-        if (callback != null) {
-          callback();
-        }
-        if (callback2 != null) {
-          callback2();
-        }
-      };
-      return outer1_7(outer1_0(outer1_2[11]).HeaderTextButton, obj);
     };
     navigation.setOptions(obj);
   }, items);
@@ -90,7 +89,7 @@ export default function UserProfileEditNote(userId) {
   let intl = tmp2(tmp3[12]).intl;
   obj[1] = intl.string(userId(onClose[12]).t["mQKv+v"]);
   const items1 = [callback(userId(onClose[14]).Text, obj), ];
-  obj1 = { value: first, onChange: tmp8, maxLength: c6, autoFocus: true, autoCorrect: false, autoCapitalize: "none", placeholder: null, accessibilityLabel: null };
+  obj1 = { value: first, onChange: tmp8, maxLength: closure_6, autoFocus: true, autoCorrect: false, autoCapitalize: "none", placeholder: null, accessibilityLabel: null };
   const intl2 = tmp2(tmp3[12]).intl;
   const string = intl2.string;
   const t = tmp2(tmp3[12]).t;

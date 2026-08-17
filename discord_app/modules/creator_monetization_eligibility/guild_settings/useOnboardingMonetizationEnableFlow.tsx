@@ -1,29 +1,17 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx
-import noop from "noop";
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import closure_3 from "noop" /* 19 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { set } from "../CreatorMonetizationEligibilityExperimentUtils.tsx";
 import { getCreatorMonetizationAcceptTermsCheckboxText } from "CreatorMonetizationAcceptTermCheckboxText.tsx";
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ GuildFeatures: closure_6, HelpdeskArticles: error, MarketingURLs: metroImportAll } = ME);
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
+({ GuildFeatures: closure_6, HelpdeskArticles: error, MarketingURLs: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useOnboardingMonetizationEnableFlow.tsx");
 
 export default function useOnboardingMonetizationEnableFlow(features) {
-  let createEnableRequest;
-  let eligibility;
-  let error;
-  let error2;
-  let isApplicationRejected;
-  let loading;
-  let loading2;
-  let requestCooldownDuration;
-  let submittedRequest;
   const _require = features;
   let obj = _set;
   let isExpeditedOnboardingGuild = obj.useIsExpeditedOnboardingGuild(features);
@@ -36,11 +24,11 @@ export default function useOnboardingMonetizationEnableFlow(features) {
     const hasItem1 = features2.has(constants.CREATOR_MONETIZABLE);
   }
   let tmpResult = tmp(647);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     let tmp3 = null != closure_0;
     if (tmp3) {
-      tmp3 = outer1_4(tmp2, tmp);
+      tmp3 = closure_1_4(tmp2, tmp);
     }
     return tmp3;
   });
@@ -106,7 +94,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
         let formatResult1 = intl4.format(tmp(1236).t["0o1Q+t"], obj);
       } else {
         const intl3 = tmp(1236).intl;
-        const obj1 = { communityGuidelineUrl: null };
+        obj1 = { communityGuidelineUrl: null };
         obj1[0] = constants3.GUIDELINES;
         formatResult1 = intl3.format(tmp(1236).t.b6h59n, obj1);
       }
@@ -132,7 +120,7 @@ export default function useOnboardingMonetizationEnableFlow(features) {
   if (tmp34) {
     tmp34 = false === hasItem1;
   }
-  const dependencyMap = tmp34;
+  dependencyMap = tmp34;
   if (isExpeditedOnboardingGuild) {
     isExpeditedOnboardingGuild = false === hasItem;
   }

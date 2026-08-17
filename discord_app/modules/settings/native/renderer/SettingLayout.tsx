@@ -1,12 +1,12 @@
 // discord_app/modules/settings/native/renderer/SettingLayout.tsx
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { SearchListSectionLabel } from "SettingListRenderer.tsx";
-import { SettingSegmentedControl } from "SettingSegmentedControlRenderer.tsx";
+import SearchListSectionLabel from "SearchListSectionLabel" /* 13992 */;
+import SettingSegmentedControlDefault from "SettingSegmentedControl" /* 15068 */;
+import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo(function SettingLayout(node) {
+require = arg1;
+const memoResult = importAllResult.memo(function SettingLayout(node) {
   node = node.node;
   const type = node.type;
   if (NodeType.LIST === type) {
@@ -16,9 +16,9 @@ const memoResult = require("noop").memo(function SettingLayout(node) {
   } else if (tmp.SEGMENTED_CONTROL === type) {
     obj = { node: null };
     obj[0] = node;
-    return jsx(SettingSegmentedControl, { node: null });
+    return jsx(SettingSegmentedControlDefault, { node: null });
   }
 });
-const result = require("jsxProd").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingLayout.tsx");
 
 export default memoResult;

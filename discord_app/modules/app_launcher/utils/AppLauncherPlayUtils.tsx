@@ -1,20 +1,14 @@
 // discord_app/modules/app_launcher/utils/AppLauncherPlayUtils.tsx
-import set from "set";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _launchActivityInBotDM() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -41,7 +35,7 @@ function _launchActivityInBotDM() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = 0;
+              dependencyMap = 0;
               let callback2 = tmp2;
               let callback;
               callback2 = undefined;
@@ -50,7 +44,7 @@ function _launchActivityInBotDM() {
               c4 = undefined;
               c5 = undefined;
               ({ appId: c0, botId: c1, analyticsLocations: c2, customId: c3, referrerId: c4, commandOrigin: c5 } = callback);
-              let closure_6;
+              closure_6 = undefined;
               c3 = 1;
               c4 = 1;
               return { value: "ct", done: true };
@@ -61,7 +55,7 @@ function _launchActivityInBotDM() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -133,7 +127,7 @@ function _launchActivityInBotDM() {
     iter.next();
     return iter;
   });
-  const _launchActivityInBotDM = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -142,7 +136,7 @@ function _launchActivityInBotDM() {
   }
   return applyArgumentsResult;
 }
-let result = require("stashPendingFrameLaunch").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherPlayUtils.tsx");
 
 export const launchActivityInBotDM = function launchActivityInBotDM(arg0) {
   const self = this;

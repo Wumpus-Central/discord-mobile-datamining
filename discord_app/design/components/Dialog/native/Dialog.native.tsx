@@ -1,19 +1,17 @@
 // discord_app/design/components/Dialog/native/Dialog.native.tsx
-import noop from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { AccessibilityView } from "../../AccessibilityView/AccessibilityView.native.tsx";
+import AccessibilityView from "AccessibilityView" /* 4717 */;
+import closure_2 from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("design/components/Dialog/native/Dialog.native.tsx");
 
 export const Dialog = function Dialog(dialogKey) {
-  let onDismiss;
-  let zIndex;
   dialogKey = dialogKey.dialogKey;
   ({ onDismiss, zIndex } = dialogKey);
   const merged = Object.assign(dialogKey, Object.create(null));
-  const id = noop.useId();
+  const id = closure_2.useId();
   const obj = { style: items, accessibilityViewIsModal: true, onAccessibilityEscape: onDismiss, nativeID: null };
   items = [StyleSheet.absoluteFill, { zIndex }];
   if (dialogKey == null) {

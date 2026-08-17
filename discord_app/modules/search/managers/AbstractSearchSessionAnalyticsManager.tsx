@@ -1,7 +1,9 @@
 // discord_app/modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { SearchTokenTypes } from "../SearchUtils.tsx";
-let result = require("set").fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
+import set from "set" /* 2 */;
+import v1 from "v1" /* 514 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+
+let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchSessionAnalyticsManager.tsx");
 class AbstractSearchSessionAnalyticsManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -63,15 +65,13 @@ prototype["getQueryId"] = function getQueryId(arg0) {
   return searchQueryId;
 };
 prototype["refreshQueryId"] = function refreshQueryId(searchContext) {
-  const obj = { searchQueryId: null };
-  obj[0] = v1.v4();
+  const obj = { searchQueryId: v1.v4() };
   this.setSession(searchContext, obj);
 };
 prototype["initialize"] = function initialize(arg0) {
   const items = [arg0, ...HermesBuiltin.copyRestArgs()];
   this._initialize.apply(items);
-  const obj = { sessionId: null, searchQueryId: null };
-  obj[0] = v1.v4();
+  const obj = { sessionId: v1.v4(), searchQueryId: null };
   this.setSession(arg0, obj);
 };
 prototype["terminate"] = function terminate(arg0) {

@@ -1,12 +1,12 @@
 // discord_app/lib/VoiceStateAnalytics.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import updateVoiceState from "updateVoiceState";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import { SpeakingFlags } from "DesktopSources";
-import { apply } from "../../_runtime/00012_apply.js";
+import apply from "apply" /* 12 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "updateVoiceState" /* 4542 */;
+import closure_4 from "getVoiceStatesForGuild" /* 4545 */;
+import { SpeakingFlags } from "DesktopSources" /* 4529 */;
 
-const require = arg1;
-const result = require("getVoiceStatesForGuild").fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -28,7 +28,7 @@ prototype["updateVoiceStates"] = function updateVoiceStates(userId, channelId) {
     const totalParticipants = self.totalParticipants;
     totalParticipants.add(userId);
     const _Math = Math;
-    self.maxVoiceStateCount = Math.max(getVoiceStatesForGuild.countVoiceStatesForChannel(channelId), self.maxVoiceStateCount);
+    self.maxVoiceStateCount = Math.max(closure_4.countVoiceStatesForChannel(channelId), self.maxVoiceStateCount);
   } else {
     if (tmp2) {
       self.totalSpeakers[userId] = SpeakingFlags.NONE;

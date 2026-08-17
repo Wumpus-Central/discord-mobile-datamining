@@ -1,41 +1,31 @@
 // discord_app/modules/app_launcher/native/options/user/AppLauncherUserOption.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AppLauncherSelectOptionFormRow } from "../../base_components/AppLauncherSelectOptionFormRow.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 11354 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { iconWrapper: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserOption.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserOption.tsx");
 
 export default function AppLauncherUserOption(option) {
-  let autoFocus;
-  let c6;
-  let c7;
-  let channel;
-  let _slicedToArray;
-  let dependencyMap;
-  let hasError;
-  let importDefault;
-  let style;
-  let tmp6;
-  let tmp8;
   option = option.option;
-  ({ initialValue: importDefault, onUserPress: dependencyMap, onActionSheetDismiss: _slicedToArray, channel } = option);
+  ({ initialValue: importDefault, onUserPress: dependencyMap, onActionSheetDismiss: closure_3, channel } = option);
   const onPress = option.onPress;
   c6 = undefined;
-  let createCacheKey;
+  let callback2;
   ({ style, autoFocus, hasError } = option);
   const guild_id = channel.guild_id;
   let obj = option(589);
   const items = [onPress];
   const stateFromStores = obj.useStateFromStores(items, () => onPress.useReducedMotion);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   [tmp6, c6] = callback(channel.useState(() => {
     let userId = null;
     if (null != closure_1) {
@@ -68,9 +58,9 @@ export default function AppLauncherUserOption(option) {
     if (onPress != null) {
       tmp();
     }
-    let obj = option(outer1_2[8]);
+    let obj = option(closure_1_2[8]);
     const result = obj.dismissGlobalKeyboard();
-    const obj2 = outer1_1(outer1_2[9]);
+    const obj2 = closure_1_1(closure_1_2[9]);
     obj = {
       option,
       channel,
@@ -84,9 +74,9 @@ export default function AppLauncherUserOption(option) {
         }
         callback({ user });
       },
-      onActionSheetDismiss: _slicedToArray
+      onActionSheetDismiss: closure_3
     };
-    obj2.openLazy(option(outer1_2[11])(outer1_2[10], outer1_2.paths), option(outer1_2[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
+    obj2.openLazy(option(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), option(closure_1_2[12]).APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, obj);
   };
   if (null != tmp8) {
     obj = { user: null, guildId: null, animate: null, size: null };
@@ -96,7 +86,7 @@ export default function AppLauncherUserOption(option) {
     obj[3] = tmp2(1297).AvatarSizes.REFRESH_MEDIUM_32;
     let tmp9Result = tmp9(tmp2(1297).Avatar, obj);
   } else {
-    const obj1 = { icon: null, wrapperStyle: null };
+    obj1 = { icon: null, wrapperStyle: null };
     obj1[0] = tmp9(tmp2(9923).UserCircleIcon, { size: "sm", color: "interactive-text-default" });
     obj1[1] = tmp.iconWrapper;
     tmp9Result = tmp9(tmp10(11357), obj1);
@@ -118,5 +108,5 @@ export default function AppLauncherUserOption(option) {
   }
   obj[6] = tmp9Result;
   obj[7] = autoFocus;
-  return c6(AppLauncherSelectOptionFormRow, obj);
+  return c6(AppLauncherSelectOptionFormRowDefault, obj);
 };

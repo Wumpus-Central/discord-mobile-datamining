@@ -1,8 +1,10 @@
 // discord_app/modules/chat_input/native/ChatInputParser.tsx
-import { processColor } from "get ActivityIndicator";
-import { apply } from "../../../../_runtime/00012_apply.js";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
+const processColor = get_ActivityIndicator.processColor;
+const result = set.fileFinishedImporting("modules/chat_input/native/ChatInputParser.tsx");
 class ChatInputParser {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -18,11 +20,11 @@ prototype["removeRule"] = function removeRule(arg0) {
   delete tmp2[tmp];
 };
 prototype["parse"] = function parse(arg0, arg1) {
-  const importDefault = arg0;
-  const dependencyMap = arg1;
-  let obj = apply;
-  return apply.valuesIn(this.rules).reduce((arr, matchFunction) => {
-    let closure_0 = matchFunction;
+  importDefault = arg0;
+  dependencyMap = arg1;
+  let obj = applyDefault;
+  return applyDefault.valuesIn(this.rules).reduce((arr, matchFunction) => {
+    closure_0 = matchFunction;
     return arr.concat(matchFunction.matchFunction(closure_0, closure_1).map((arg0) => {
       let obj = matchFunction;
       if (typeof matchFunction.deleteNodeOnBackspace === "function") {
@@ -52,8 +54,6 @@ prototype["parse"] = function parse(arg0, arg1) {
 
 export default ChatInputParser;
 export const convertToNativeStyle = (color) => {
-  let backgroundColor;
-  let borderRadius;
   ({ backgroundColor, borderRadius } = color);
   const merged = Object.assign(color, Object.create(null));
   let tmp2 = null;

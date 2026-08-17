@@ -1,9 +1,9 @@
 // discord_common/js/packages/markup/native/MarkupParser.tsx
-import { t } from "../../../../../_runtime/04092_t.js";
-import { collectAst } from "../MarkupASTUtils.tsx";
+import set from "set" /* 2 */;
+import tDefault from "t" /* 4092 */;
+import collectAst from "collectAst" /* 6904 */;
+
 function saferParse(arg0, arg1, inline) {
-  let ast;
-  let hasBailedAst;
   let text = arg1;
   let tmp6 = arg3;
   if (arg3 === undefined) {
@@ -33,11 +33,11 @@ function saferParse(arg0, arg1, inline) {
     hasBailedAst = false;
   }
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/markup/native/MarkupParser.tsx");
 
 export default {
   astParserFor(importDefaultResultResult) {
-    let closure_0 = t.parserFor(importDefaultResultResult);
+    closure_0 = tDefault.parserFor(importDefaultResultResult);
     return (arg0, inline) => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -53,14 +53,14 @@ export default {
       }
       obj = { inline };
       const merged = Object.assign(obj);
-      return outer1_3(closure_0, str, obj, tmp, !inline);
+      return closure_1_3(closure_0, str, obj, tmp, !inline);
     };
   },
   reactParserFor(importDefaultResultResult) {
-    let closure_0 = t.parserFor(importDefaultResultResult);
-    let obj = t;
-    const obj2 = t;
-    importDefault = obj2.reactFor(t.ruleOutput(importDefaultResultResult, "react"));
+    closure_0 = tDefault.parserFor(importDefaultResultResult);
+    let obj = tDefault;
+    const obj2 = tDefault;
+    importDefault = obj2.reactFor(tDefault.ruleOutput(importDefaultResultResult, "react"));
     return () => {
       let str = arg0;
       if (arg0 === undefined) {
@@ -92,13 +92,13 @@ export default {
               hasItem = message.includes("Cannot convert undefined");
             }
             if (hasItem) {
-              const markupParserNodeTypeError = new outer1_0(outer1_2[0]).MarkupParserNodeTypeError(tmp);
+              const markupParserNodeTypeError = new closure_1_0(closure_1_2[0]).MarkupParserNodeTypeError(tmp);
               throw markupParserNodeTypeError;
             } else {
               throw tmp4;
             }
           }
-        })(outer1_3(closure_0, str, obj, tmp, !flag), obj);
+        })(closure_1_3(closure_0, str, obj, tmp, !flag), obj);
       } else {
         return null;
       }

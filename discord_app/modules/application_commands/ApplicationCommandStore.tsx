@@ -1,12 +1,13 @@
 // discord_app/modules/application_commands/ApplicationCommandStore.tsx
-import _slicedToArray from "_slicedToArray";
-import handlePermissionsChange from "handlePermissionsChange";
-import handleConnectionOpen from "handleConnectionOpen";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "handlePermissionsChange" /* 4970 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
 
-let require = arg1;
+const require = arg1;
 function handleInit() {
-  let closure_5 = {};
+  closure_5 = {};
   return true;
 }
 function getOrCreateChannelState(channelId) {
@@ -19,18 +20,6 @@ function getOrCreateChannelState(channelId) {
   return dependencyMap[channelId];
 }
 function handleSetActiveCommand(arg0) {
-  let _location;
-  let channelId;
-  let command;
-  let commandOrigin;
-  let initialValues;
-  let query;
-  let queryLength;
-  let searchResultsPosition;
-  let section;
-  let sectionName;
-  let source;
-  let triggerSection;
   ({ channelId, command, initialValues, source, commandOrigin } = arg0);
   let obj;
   ({ section, location: _location, triggerSection, queryLength, sectionName, query, searchResultsPosition } = arg0);
@@ -195,31 +184,32 @@ function handleUpdateOptionStates(channelId) {
   return true;
 }
 let closure_5 = {};
+const Store = initializeDefault.Store;
 class ApplicationCommandStore extends Store {
 }
 const prototype = ApplicationCommandStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(handlePermissionsChange, handleConnectionOpen);
-  handlePermissionsChange.addChangeListener(() => {
+  this.waitFor(closure_3, closure_4);
+  closure_3.addChangeListener(() => {
     channelId = channelId.getChannelId();
     if (null == channelId) {
-      let table = {};
+      let obj = {};
       return true;
     } else {
       currentSidebarChannelId = currentSidebarChannelId.getCurrentSidebarChannelId(channelId);
       if (null != currentSidebarChannelId) {
-        if (currentSidebarChannelId in table) {
+        if (currentSidebarChannelId in obj) {
           return false;
         }
       }
-      const obj = {};
-      if (channelId in table) {
-        obj[channelId] = table[channelId];
+      obj = {};
+      if (channelId in obj) {
+        obj[channelId] = obj[channelId];
         let tmp6 = obj;
       } else {
         tmp6 = obj;
       }
-      table = tmp6;
+      obj = tmp6;
     }
   });
 };
@@ -257,13 +247,13 @@ prototype["getActiveOption"] = function getActiveOption(channelId) {
     obj[5] = {};
     dependencyMap[channelId] = obj;
   }
-  const require = tmp2;
+  closure_0 = tmp2;
   const activeCommand = tmp2.activeCommand;
   let found;
   if (activeCommand != null) {
     const options = activeCommand.options;
     if (options != null) {
-      found = options.find((name) => name.name === tmp2.activeOptionName);
+      found = options.find((name) => name.name === activeOptionName.activeOptionName);
     }
   }
   if (found == null) {
@@ -317,7 +307,7 @@ prototype["getSource"] = function getSource(arg0) {
   return dependencyMap[arg0].source;
 };
 prototype["getOption"] = function getOption(arg0) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   if (!(arg0 in dependencyMap)) {
     const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
     obj[4] = {};
@@ -346,14 +336,12 @@ prototype["getState"] = function getState(arg0) {
   return obj;
 };
 ApplicationCommandStore.displayName = "ApplicationCommandStore";
-const applicationCommandStore = new ApplicationCommandStore(require("dispatcher"), {
+const applicationCommandStore = new ApplicationCommandStore(dispatcherDefault, {
   CONNECTION_OPEN: handleInit,
   CHANNEL_SELECT: handleInit,
   LOGOUT: handleInit,
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: handleSetActiveCommand,
   APPLICATION_COMMAND_SET_PREFERRED_COMMAND: function handleSetPreferredCommand(arg0) {
-    let channelId;
-    let commandId;
     ({ channelId, commandId } = arg0);
     if (!(channelId in dependencyMap)) {
       const obj = { activeCommand: null, activeCommandSection: null, activeOptionName: null, preferredCommandId: null, optionStates: null, initialValues: null, commandOrigin: null };
@@ -388,8 +376,6 @@ const applicationCommandStore = new ApplicationCommandStore(require("dispatcher"
   },
   APPLICATION_COMMAND_UPDATE_OPTIONS: handleUpdateOptionStates,
   APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function handleUpdateChannelState(changedOptionStates) {
-    let channelId;
-    let preferredCommandId;
     ({ channelId, preferredCommandId } = changedOptionStates);
     let obj = { type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND", channelId, command: changedOptionStates.command, section: changedOptionStates.section, location: changedOptionStates.location };
     let flag = handleSetActiveCommand(obj);
@@ -432,6 +418,6 @@ const applicationCommandStore = new ApplicationCommandStore(require("dispatcher"
     return flag;
   }
 });
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/application_commands/ApplicationCommandStore.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandStore.tsx");
 
 export default applicationCommandStore;

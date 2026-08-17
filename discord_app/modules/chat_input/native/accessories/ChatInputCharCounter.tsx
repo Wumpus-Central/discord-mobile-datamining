@@ -1,27 +1,23 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputCharCounter.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UpsellTypes } from "ME";
-import { PremiumUpsellTypes } from "GuildFeatures";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { UpsellTypes } from "ME" /* 676 */;
+import { PremiumUpsellTypes } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { alignItems: "center", paddingBottom: 6 } });
 const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) => {
-  let c2;
-  let tmp6;
   analyticsLocations = analyticsLocations.analyticsLocations;
   let stateFromStores;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let obj = analyticsLocations(589);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores(_undefined[8]).canUseIncreasedMessageLength(currentUser.getCurrentUser()));
   const tmp = callback4();
   [tmp6, c2] = callback(importAllResult.useState(0), 2);
@@ -29,7 +25,7 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
   callback = tmp7;
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({
     onMessageLengthChanged(length) {
-      callback(Math.max(0, length - _slicedToArray));
+      callback(Math.max(0, length - closure_3));
     }
   }));
   const items1 = [analyticsLocations, stateFromStores, tmp7];
@@ -49,6 +45,6 @@ const forwardRefResult = importAllResult.forwardRef((analyticsLocations, ref) =>
 });
 forwardRefResult.displayName = "ChatInputCharCounter";
 const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCharCounter.tsx");
 
 export default memoResult;

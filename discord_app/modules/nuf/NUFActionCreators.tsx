@@ -1,15 +1,17 @@
 // discord_app/modules/nuf/NUFActionCreators.tsx
-import { dispatcher } from "../../Dispatcher.tsx";
-const result = require("set").fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+
+const result = set.fileFinishedImporting("modules/nuf/NUFActionCreators.tsx");
 
 export const setNewUser = function setNewUser(ORGANIC_REGISTERED) {
-  const importDefault = ORGANIC_REGISTERED;
-  dispatcher.wait(() => {
-    let obj = ORGANIC_REGISTERED(outer1_1[0]);
+  importDefault = ORGANIC_REGISTERED;
+  dispatcherDefault.wait(() => {
+    let obj = ORGANIC_REGISTERED(closure_1_1[0]);
     obj = { type: "NUF_NEW_USER", newUserType: ORGANIC_REGISTERED };
     return obj.dispatch(obj);
   });
 };
 export const setNewUserFlowCompleted = function setNewUserFlowCompleted() {
-  dispatcher.wait(() => callback(table[0]).dispatch({ type: "NUF_COMPLETE" }));
+  dispatcherDefault.wait(() => callback(table[0]).dispatch({ type: "NUF_COMPLETE" }));
 };

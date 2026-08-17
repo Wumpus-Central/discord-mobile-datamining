@@ -1,12 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Cozy.tsx
-import importDefaultResult from "merge";
+import ThemesDefault from "Themes" /* 712 */;
+import importDefaultResult from "merge" /* 10058 */;
 
 let obj = { layout: { margin: { marginVertical: 2 }, marginPanels: { marginVertical: 2 }, marginThread: { marginVertical: 2, marginLeft: 76 } }, container: null, category: null, voiceUsers: null, voiceOrStageSummaryRow: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
-obj = { borderRadius: null, padding: null, paddingPanels: null, paddingThread: null };
-obj[0] = require("Themes").radii.lg;
-obj[1] = { paddingVertical: 8 };
-obj[2] = { paddingVertical: 8 };
-obj[3] = { paddingVertical: 6, paddingLeft: 8 };
+obj = { borderRadius: ThemesDefault.radii.lg, padding: { paddingVertical: 8 }, paddingPanels: { paddingVertical: 8 }, paddingThread: { paddingVertical: 6, paddingLeft: 8 } };
 obj[1] = obj;
 obj[2] = { margin: { marginTop: 24 } };
 obj[3] = { height: 40, margin: { marginTop: -4, marginLeft: 80 } };
@@ -29,8 +26,8 @@ obj[13] = { position: { top: 12, left: 12 }, positionThread: { top: 3, left: -17
 obj[14] = { margin: { marginVertical: 20 } };
 const importDefaultResultResult = importDefaultResult(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj4 = { size: require("Button").IconSizes.REFRESH_SMALL_16, gameSize: require("GameIcon").GameIconSizes.SMALL };
-const tmp4 = require("merge")(importDefaultResultResult, { layout: { marginThread: { marginLeft: 0 } }, container: { paddingThread: { paddingLeft: 20 } }, unreadBadge: { positionThread: { left: 4 } }, mentionBadge: { positionThread: { top: 34 } } });
-const result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Cozy.tsx");
+const tmp4 = importDefaultResult(importDefaultResultResult, { layout: { marginThread: { marginLeft: 0 } }, container: { paddingThread: { paddingLeft: 20 } }, unreadBadge: { positionThread: { left: 4 } }, mentionBadge: { positionThread: { top: 34 } } });
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/Cozy.tsx");
 
 export const CHANNEL_LIST_STYLES_COZY = importDefaultResultResult;
 export const CHANNEL_LIST_STYLES_COZY_LAUNCHPAD = tmp4;

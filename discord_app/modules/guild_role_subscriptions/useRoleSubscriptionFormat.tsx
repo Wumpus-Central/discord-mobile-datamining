@@ -1,35 +1,35 @@
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx
-import noop from "noop";
-import { hasPermission } from "GuildRoleRecordTypeTag";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildRoleSubscriptionFormat as closure_6 } from "MAX_SUBSCRIPTION_TIERS";
-import { Permissions } from "ME";
+import closure_2 from "noop" /* 19 */;
+import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildRoleSubscriptionFormat as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionFormat.tsx");
 
 export default function useRoleSubscriptionFormat(arg0) {
   const _require = arg0;
   let obj = _require(stateFromStores[6]);
-  const items = [createGuildRecordFromRust, createGuildRoleRecordFromRust];
+  const items = [closure_5, closure_4];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const guild = outer1_5.getGuild(closure_0);
+    const guild = closure_1_5.getGuild(closure_0);
     let everyoneRole;
     if (null != guild) {
-      everyoneRole = outer1_4.getEveryoneRole(guild);
+      everyoneRole = closure_1_4.getEveryoneRole(guild);
     }
     return everyoneRole;
   });
   const items1 = [stateFromStores];
   const memo = React.useMemo(() => {
     if (null != stateFromStores) {
-      if (!outer1_3(tmp, outer1_7.VIEW_CHANNEL)) {
-        let SOME_CHANNELS = outer1_6.ALL_CHANNELS;
+      if (!closure_1_3(tmp, closure_1_7.VIEW_CHANNEL)) {
+        let SOME_CHANNELS = closure_1_6.ALL_CHANNELS;
       }
       return SOME_CHANNELS;
     }
-    SOME_CHANNELS = outer1_6.SOME_CHANNELS;
+    SOME_CHANNELS = closure_1_6.SOME_CHANNELS;
   }, items1);
   obj = { format: memo, isFullServerGating: memo === constants.ALL_CHANNELS };
   return obj;

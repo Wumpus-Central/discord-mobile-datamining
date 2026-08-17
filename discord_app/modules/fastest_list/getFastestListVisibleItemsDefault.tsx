@@ -1,14 +1,9 @@
 // discord_app/modules/fastest_list/getFastestListVisibleItemsDefault.tsx
-const result = require("set").fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/fastest_list/getFastestListVisibleItemsDefault.tsx");
 
 export default function getFastestListVisibleItemsDefault(arg0) {
-  let estimatedListSize;
-  let itemSizes;
-  let listHeaderSize;
-  let sectionFooterSizes;
-  let sectionHeaderSizes;
-  let sections;
-  let sectionsVersioned;
   ({ estimatedListSize, sectionsVersioned } = arg0);
   ({ itemSizes, listHeaderSize, sections, sectionFooterSizes, sectionHeaderSizes } = sectionsVersioned);
   const obj = { sectionsId: sectionsVersioned.sectionsId, sectionStart: 0, sectionEnd: 0, itemStart: 0, itemEnd: -1 };

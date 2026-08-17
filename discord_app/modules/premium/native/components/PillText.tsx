@@ -1,27 +1,29 @@
 // discord_app/modules/premium/native/components/PillText.tsx
-import { HorizontalGradient } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { usePremiumPrimaryGradientColors } from "../usePremiumPrimaryGradientColors.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ME from "ME" /* 676 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import usePremiumPrimaryGradientColorsDefault from "usePremiumPrimaryGradientColors" /* 12872 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const HorizontalGradient = ME.HorizontalGradient;
+const jsx = jsxProd.jsx;
 let obj = { pillTextContainer: null, pillText: null };
-obj = { paddingHorizontal: 8, borderRadius: require("Themes").radii.lg, justifyContent: "center" };
+obj = { paddingHorizontal: 8, borderRadius: ThemesDefault.radii.lg, justifyContent: "center" };
 obj[0] = obj;
 obj[1] = { textTransform: "uppercase" };
 let closure_5 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/native/components/PillText.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/components/PillText.tsx");
 
 export default function PillText(arg0) {
-  let pillText;
-  let style;
   ({ pillText, style } = arg0);
   const tmp = callback();
-  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColors(), children: null };
+  let obj = { style: items, start: HorizontalGradient.START, end: HorizontalGradient.END, colors: usePremiumPrimaryGradientColorsDefault(), children: null };
   items = [tmp.pillTextContainer, style];
-  const tmp2 = usePremiumPrimaryGradientColors();
+  const tmp2 = usePremiumPrimaryGradientColorsDefault();
   obj = { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText };
   obj[4] = jsx(Text.Text, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
-  return jsx(LinearGradient, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
+  return jsx(LinearGradientDefault, { variant: "text-xs/semibold", color: "text-overlay-light", style: tmp.pillText, children: pillText });
 };

@@ -1,24 +1,18 @@
 // discord_app/design/components/Pile/native/Pile.native.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
+import apply from "apply" /* 12 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let closure_6 = createCacheKey.createStyles({ pile: { flexDirection: "row" } });
-let result = require("jsxProd").fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Pile/native/Pile.native.tsx");
 
 export const Pile = function Pile(aria_label) {
-  let View;
-  let children;
-  let noop;
-  let dependencyMap;
-  let require;
-  let size;
   ({ shape: require, size } = aria_label);
-  ({ gap: dependencyMap, depthX: noop, depthY: View, children } = aria_label);
+  ({ gap: dependencyMap, depthX: closure_3, depthY: View, children } = aria_label);
   let length;
   let Children = React.Children;
   const tmp = callback();
@@ -28,7 +22,7 @@ export const Pile = function Pile(aria_label) {
   if (obj.isArray(size)) {
     if (size.length !== length) {
       const _Error = Error;
-      const error = new Error("Pile: size array must have the same number of elements as children");
+      error = new Error("Pile: size array must have the same number of elements as children");
       throw error;
     }
   }
@@ -37,8 +31,8 @@ export const Pile = function Pile(aria_label) {
     accessible: true,
     "aria-label": aria_label["aria-label"],
     children: Children.map(children, (type) => {
-      if (outer1_3.isValidElement(type)) {
-        let obj = outer1_0(outer1_2[5]);
+      if (closure_1_3.isValidElement(type)) {
+        let obj = closure_1_0(closure_1_2[5]);
         let tmp6 = size;
         if (obj.isArray(size)) {
           tmp6 = tmp5[arg1];
@@ -53,7 +47,7 @@ export const Pile = function Pile(aria_label) {
           if (tmp3(tmp4[6]).CutoutShape.Circle === closure_0) {
             obj = { shape: null, x: null, y: null, size: null };
             obj[0] = tmp10;
-            if (null == noop) {
+            if (null == closure_3) {
               let result = -closure_2;
             } else {
               result = tmp6 * (1 - tmp20);
@@ -70,7 +64,7 @@ export const Pile = function Pile(aria_label) {
           } else if (tmp3(tmp4[6]).CutoutShape.RoundedRect === tmp10) {
             obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
             obj[0] = tmp10;
-            if (null == noop) {
+            if (null == closure_3) {
               let result2 = -closure_2;
             } else {
               result2 = tmp6 * (1 - tmp12);
@@ -98,7 +92,7 @@ export const Pile = function Pile(aria_label) {
           if (tmp3Result1.isArray(tmp5)) {
             tmp29 = tmp5[arg1 - 1];
           }
-          if (null == noop) {
+          if (null == closure_3) {
             let sum1 = -tmp29;
           } else {
             sum1 = -tmp29 * tmp30 + closure_2;
@@ -111,12 +105,12 @@ export const Pile = function Pile(aria_label) {
           num7 = sum1;
           tmp3Result1 = tmp3(tmp4[5]);
         }
-        const obj1 = { height: null, marginLeft: null, marginTop: null };
+        obj1 = { height: null, marginLeft: null, marginTop: null };
         obj1[0] = tmp6;
         obj1[1] = num7;
         obj1[2] = num6;
         const items = [obj1, ];
-        if (type.type === outer1_0(outer1_2[7]).PileOverflow) {
+        if (type.type === closure_1_0(closure_1_2[7]).PileOverflow) {
           const obj2 = { minWidth: null };
           obj2[0] = tmp6;
           let obj3 = obj2;
@@ -136,7 +130,7 @@ export const Pile = function Pile(aria_label) {
           tmp35Result = tmp35(size(tmp4[6]), obj5);
         }
         obj4[1] = tmp35Result;
-        return length(outer1_4, obj4, arg1);
+        return length(closure_1_4, obj4, arg1);
       } else {
         return null;
       }

@@ -1,24 +1,21 @@
 // discord_app/modules/parent_tools/native/FamilyCenterPendingLinks.tsx
-import "registerAsset";
-import { View } from "registerAsset";
-import { UserLinkStatus } from "items";
-import jsxProd from "FamilyCenterLinkRow";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useAgeSpecificText } from "../hooks/useAgeSpecificText.tsx";
-import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import Text from "Text" /* 4734 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
+import useAgeSpecificText from "useAgeSpecificText" /* 11107 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { UserLinkStatus } from "items" /* 5297 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function FamilyCenterPendingLinkRow(otherUser) {
   let str = otherUser.otherUser;
-  const tmp = callback3();
+  const tmp = callback4();
   str(7621);
   if (undefined === str) {
     return null;
@@ -34,12 +31,12 @@ function FamilyCenterPendingLinkRow(otherUser) {
       obj[0] = str;
       obj[1] = intl3.formatToPlainString(tmp2(2335).oUpA6X, obj);
       obj[2] = function onPress() {
-        let obj = outer1_1(outer1_2[13]);
+        let obj = closure_1_1(closure_1_2[13]);
         obj = { otherUser: str };
-        obj.pushLazy(str(outer1_2[15])(outer1_2[20], outer1_2.paths), obj);
+        obj.pushLazy(str(closure_1_2[15])(closure_1_2[20], closure_1_2.paths), obj);
       };
       obj[3] = tmp.actionButton;
-      const obj1 = { size: null, disableColor: true, source: null };
+      obj1 = { size: null, disableColor: true, source: null };
       obj1[0] = tmp5(1297).Icon.Sizes.SMALL;
       obj1[2] = tmp2(14280);
       obj[4] = closure_5(tmp5(1297).Icon, obj1);
@@ -58,9 +55,9 @@ function FamilyCenterPendingLinkRow(otherUser) {
         obj2[0] = str1;
         obj[1] = intl.formatToPlainString(tmp2(2335).jc1Ip7, obj2);
         obj[2] = function onPress() {
-          let obj = outer1_1(outer1_2[13]);
+          let obj = closure_1_1(closure_1_2[13]);
           obj = { otherUser: str };
-          obj.pushLazy(str(outer1_2[15])(outer1_2[14], outer1_2.paths), obj);
+          obj.pushLazy(str(closure_1_2[15])(closure_1_2[14], closure_1_2.paths), obj);
         };
         const items = [, ];
         ({ actionButton: arr[0], actionButtonFirst: arr[1] } = tmp);
@@ -84,9 +81,9 @@ function FamilyCenterPendingLinkRow(otherUser) {
       obj6[0] = str2;
       obj5[1] = intl2.formatToPlainString(tmp2(2335)["4GtllP"], obj6);
       obj5[2] = function onPress() {
-        let obj = outer1_1(outer1_2[13]);
+        let obj = closure_1_1(closure_1_2[13]);
         obj = { otherUser: str };
-        obj.pushLazy(str(outer1_2[15])(outer1_2[18], outer1_2.paths), obj);
+        obj.pushLazy(str(closure_1_2[15])(closure_1_2[18], closure_1_2.paths), obj);
       };
       obj5[3] = tmp.actionButton;
       const obj7 = { size: null, disableColor: true, source: null };
@@ -104,36 +101,36 @@ function FamilyCenterPendingLinkRow(otherUser) {
     obj8[1] = tmp8Result;
     return tmp14(tmp2(14275), obj8);
   }
-  tmp4 = useIsInAdultAgeGroup();
+  tmp4 = useIsInAdultAgeGroupDefault();
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: { marginTop: 24 }, content: null, header: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.md };
+createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.md };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 10 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { actionButton: null, actionButtonFirst: null };
-obj1[0] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
-createCacheKey = { marginRight: require("Themes").space.PX_8 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { actionButton: { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 }, actionButtonFirst: null };
+createCacheKey = { marginRight: ThemesDefault.space.PX_8 };
 obj1[1] = createCacheKey;
 let closure_9 = createCacheKey.createStyles(obj1);
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
-const result = require("items").fileFinishedImporting("modules/parent_tools/native/FamilyCenterPendingLinks.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterPendingLinks.tsx");
 
 export default function FamilyCenterPendingLinks() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = useUserIdsForLinkStatus;
   const usersForLinkStatus = obj.useUsersForLinkStatus(UserLinkStatus.PENDING);
   useAgeSpecificText;
   const intl = getSystemLocale.intl;
   obj = { count: usersForLinkStatus.length };
-  intl.formatToPlainString(messagesProxy.IkAgkG, obj);
+  intl.formatToPlainString(messagesProxyDefault.IkAgkG, obj);
   const intl2 = getSystemLocale.intl;
   let tmp7 = null;
   if (0 !== usersForLinkStatus.length) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const obj1 = { style: null, variant: "eyebrow", color: "text-default", children: null };
+    obj1 = { style: null, variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.header;
     obj1[3] = tmp6;
     const items = [callback(Text.Text, obj1), ];

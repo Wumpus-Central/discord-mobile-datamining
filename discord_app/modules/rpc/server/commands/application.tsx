@@ -1,40 +1,34 @@
 // discord_app/modules/rpc/server/commands/application.tsx
-import addApplication from "addApplication";
-import ME from "ME";
-import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { isTestModeForApplication } from "../../../game_store/TestModeUtils.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { getCurrentEmbeddedActivityChannel } from "../../helpers/getCurrentEmbeddedActivityChannel.tsx";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import isTestModeForApplication from "isTestModeForApplication" /* 7871 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 13838 */;
+import closure_3 from "addApplication" /* 4478 */;
+import ME from "ME" /* 676 */;
 
-let RPCCommands;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ ApplicationFlags: c4, Endpoints: c5, RPCCommands, RPCErrors: closure_6 } = ME);
 let obj = {
   validation(string) {
-    let obj = createRpcJoiSchemaObject(string);
+    let obj = createRpcJoiSchemaObjectDefault(string);
     obj = { event_name: null, event_properties: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
     const stringResult = string.string();
-    obj[1] = createRpcJoiSchemaObject(string).required();
+    obj[1] = createRpcJoiSchemaObjectDefault(string).required();
     return requiredResult.keys(obj);
   },
   handler(arg0) {
-    let args;
-    let socket;
     ({ socket, args } = arg0);
     const event_properties = args.event_properties;
     let obj = recurseReplaceContentTree;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = recurseReplaceContentTree;
+    obj1 = recurseReplaceContentTree;
     obj1.validateApplication(socket.application);
     const id = socket.application.id;
-    const obj3 = getCurrentEmbeddedActivityChannel();
+    const obj3 = getCurrentEmbeddedActivityChannelDefault();
     if (obj3 != null) {
       const guildId = obj3.getGuildId();
     }
@@ -75,7 +69,7 @@ obj = {
     if (null == id) {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_COMMAND;
-      const tmp7 = new prototype(obj, "No application.");
+      const tmp7 = new prototypeDefault(obj, "No application.");
       throw tmp7;
     } else {
       const HTTP = sendRequest.HTTP;
@@ -89,6 +83,6 @@ obj = {
     }
   }
 };
-let result = require("ME").fileFinishedImporting("modules/rpc/server/commands/application.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/commands/application.tsx");
 
 export default { [RPCCommands.SEND_ANALYTICS_EVENT]: obj, [RPCCommands.GET_APPLICATION_TICKET]: obj };

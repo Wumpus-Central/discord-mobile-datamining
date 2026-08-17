@@ -1,10 +1,8 @@
 // discord_common/js/packages/tokens/transforms.tsx
-import { n } from "../../../../_runtime/00689_n.js";
+import set2 from "set" /* 2 */;
+import nDefault from "n" /* 689 */;
+
 function interpolate(arg0, arg1, arg2) {
-  let tmp;
-  let tmp2;
-  let tmp3;
-  let tmp4;
   [tmp, tmp2] = arg0;
   [tmp3, tmp4] = arg1;
   let diff = arg2;
@@ -26,7 +24,7 @@ let closure_6 = [1.3, 0.7];
 let closure_7 = [0.98, 1];
 let closure_8 = [0.75, 1.5];
 let closure_9 = [1.45, 0.45];
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
+let result = set2.fileFinishedImporting("../discord_common/js/packages/tokens/transforms.tsx");
 
 export const transformColorForReducedContrast = function transformColorForReducedContrast(arg0, arg1, arg2) {
   if ("background" !== arg1) {
@@ -38,7 +36,7 @@ export const transformColorForReducedContrast = function transformColorForReduce
           const _Math = Math;
           TEXT_LIGHTNESS_LIGHT_THEME = Math.max(tmp3 * constants.TEXT_LIGHTNESS_MULTIPLIER_DARK_THEME, constants.TEXT_LIGHTNESS_MAX_DARK_THEME);
         }
-        const result = n(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
+        const result = nDefault(arg0).set("hsl.l", TEXT_LIGHTNESS_LIGHT_THEME);
         return result.hex();
       } else {
         return arg0;
@@ -52,7 +50,7 @@ export const transformColorForReducedContrast = function transformColorForReduce
     tmp7 = constants;
     BACKGROUND_LIGHTNESS_LIGHT_THEME = constants.BACKGROUND_LIGHTNESS_LIGHT_THEME;
   }
-  const result1 = n(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
+  const result1 = nDefault(arg0).set("hsl.l", BACKGROUND_LIGHTNESS_LIGHT_THEME);
   const result2 = result1.set("hsl.s", tmp7.BACKGROUND_SATURATION);
   return result2.hex();
 };
@@ -61,7 +59,7 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
     const items = [arg0, constants2.BORDER_MIN_OPACITY + arg1];
     let items3 = items;
   } else if ("text" === arg2) {
-    let set = n(arg0).set;
+    let set = nDefault(arg0).set;
     if ("light" === arg3) {
       let TEXT_LIGHTNESS_DARK_THEME = constants2.TEXT_LIGHTNESS_LIGHT_THEME;
       let tmp7 = constants2;
@@ -72,14 +70,14 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
     set = set("hsl.l", TEXT_LIGHTNESS_DARK_THEME);
     const result = set.set("hsl.s", tmp7.TEXT_SATURATION);
     const items1 = [result.hex(), arg1];
-    const tmp6 = n(arg0);
+    const tmp6 = nDefault(arg0);
   } else {
     if ("background" === arg2) {
       if ("light" !== arg3) {
-        const result1 = n(arg0).set("hsl.l", constants2.BACKGROUND_LIGHTNESS_DARK_THEME);
+        const result1 = nDefault(arg0).set("hsl.l", constants2.BACKGROUND_LIGHTNESS_DARK_THEME);
         const items2 = [result1.hex(), arg1];
         items3 = items2;
-        const obj = n(arg0);
+        const obj = nDefault(arg0);
       }
     }
     items3 = [arg0, arg1];
@@ -87,11 +85,7 @@ export const transformColorForIncreasedContrast = function transformColorForIncr
   return items3;
 };
 export const transformColorForReducedSaturation = function transformColorForReducedSaturation(result, category, saturation) {
-  let tmp2;
-  let tmp3;
-  let tmp5;
-  let tmp6;
-  const obj = n(result);
+  const obj = nDefault(result);
   if ("background" === category) {
     [tmp2, tmp3] = [0, 1];
     const items = [0.25, 1];
@@ -110,13 +104,13 @@ export const transformColorContrast = function transformColorContrast(result, ca
     if ("border" !== category) {
       if ("text" === category) {
         const _HermesInternal = HermesInternal;
-        result = n(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast));
+        result = nDefault(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_9 : closure_8, contrast));
         return result.hex();
       } else {
         return result;
       }
     }
   }
-  const result1 = n(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast));
+  const result1 = nDefault(result).set("hsl.l", "*" + interpolate(closure_5, "light" === theme ? closure_7 : closure_6, contrast));
   return result1.hex();
 };

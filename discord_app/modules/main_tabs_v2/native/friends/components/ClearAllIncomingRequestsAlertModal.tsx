@@ -1,13 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx
-import getSystemLocale from "getSystemLocale";
-import "noop";
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function handleConfirm() {
   const self = this;
   const apply = _handleConfirm.apply;
@@ -47,7 +45,7 @@ function _handleConfirm() {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(outer1_2[3]);
+            obj1 = v0(closure_1_2[3]);
             v0 = 1;
             c0 = 1;
             obj1 = { value: null, done: false };
@@ -72,7 +70,7 @@ function _handleConfirm() {
       }
     }
   });
-  const _handleConfirm = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -81,8 +79,9 @@ function _handleConfirm() {
   }
   return applyArgumentsResult;
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ClearAllIncomingRequestsAlertModal.tsx");
 
 export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount) {
   let obj = { title: null, content: null, actions: null };
@@ -95,7 +94,7 @@ export default function ClearAllIncomingRequestsAlertModal(incomingRequestCount)
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t["cY+Oob"]);
   const items = [callback2(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
   items[1] = callback2(getAlertModalItemKey.AlertActionButton, obj1, "cancel");

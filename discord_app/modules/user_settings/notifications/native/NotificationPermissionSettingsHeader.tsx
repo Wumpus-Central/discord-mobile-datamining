@@ -1,47 +1,39 @@
 // discord_app/modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import ME from "ME";
-import EventActionType from "EventActionType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import EventActionType from "EventActionType" /* 11582 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 ({ AnalyticEvents: c5, NOOP: closure_6 } = ME);
-({ EventActionLocation: error, EventActionType: metroImportAll, NotificationNudgeAnalyticsAction: c9, NotificationNudgeSurface: c10 } = EventActionType);
+({ EventActionLocation: error, EventActionType: closure_8, NotificationNudgeAnalyticsAction: c9, NotificationNudgeSurface: c10 } = EventActionType);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: null, cardContent: null, iconCircle: null, body: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_16 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
-createCacheKey[2] = { width: 48, height: 48, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: require("Themes").space.PX_8 };
-let obj1 = { width: 48, height: 48, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: require("Themes").space.PX_8 };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_12, marginTop: require("Themes").space.PX_8, textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: require("Themes").space.PX_12, marginTop: require("Themes").space.PX_8, textAlign: "center" };
-const result = require("ME").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
+createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { marginBottom: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/NotificationPermissionSettingsHeader.tsx");
 
 export default function NotificationPermissionSettingsHeader() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = canSeePushNotificationNudge(11583);
   canSeePushNotificationNudge = obj.useCanSeePushNotificationNudge();
   const items = [canSeePushNotificationNudge];
   const effect = React.useEffect(() => {
     if (canSeePushNotificationNudge) {
-      let obj = outer1_1(outer1_2[8]);
+      let obj = closure_1_1(closure_1_2[8]);
       obj = { action: null, prompt_type: null };
-      obj[0] = outer1_9.IMPRESSION;
-      obj[1] = outer1_10.NOTIFICATION_SETTINGS_PERMISSION_HEADER;
-      obj.track(outer1_5.CONTEXTUAL_REMINDER_ACTION, obj);
+      obj[0] = closure_1_9.IMPRESSION;
+      obj[1] = closure_1_10.NOTIFICATION_SETTINGS_PERMISSION_HEADER;
+      obj.track(closure_1_5.CONTEXTUAL_REMINDER_ACTION, obj);
     }
   }, items);
   let tmp7 = null;
@@ -49,12 +41,12 @@ export default function NotificationPermissionSettingsHeader() {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { border: "none", shadow: "none", children: null };
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.cardContent;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.iconCircle;
     const obj3 = { size: "md", color: null };
-    obj3[1] = Themes.colors.ICON_STRONG;
+    obj3[1] = ThemesDefault.colors.ICON_STRONG;
     obj2[1] = callback(tmp2(10001).BellSlashIcon, obj3);
     const items1 = [callback(View, obj2), , , ];
     const obj4 = { variant: "heading-lg/bold", color: "text-default", children: null };

@@ -1,27 +1,28 @@
 // discord_app/stores/SlowmodeStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
 import { start } from "../../discord_common/js/packages/timers/Timers.tsx";
 import { canBypassSlowmodeHelper } from "../modules/chat/SlowmodeUtils.tsx";
-import { set } from "../utils/Durations.tsx";
 
 const require = arg1;
 function setCooldown(channel, SendMessage, arg2) {
   const _require = channel;
-  let closure_1 = SendMessage;
+  closure_1 = SendMessage;
   if (null != table[SendMessage][channel.id]) {
     const timer = tmp3[SendMessage][channel.id].timer;
     timer.stop();
     const id = channel.id;
     delete tmp2[tmp];
   }
-  let obj = _canBypassSlowmodeHelper;
+  obj = _canBypassSlowmodeHelper;
   if (!obj.canBypassSlowmode(channel)) {
     if (arg2 > 0) {
       const _Date = Date;
       const sum = arg2 + Date.now();
-      const dependencyMap = sum;
+      dependencyMap = sum;
       obj = { rateLimitPerUser: null, cooldownMs: null, cooldownEndTimestamp: null, timer: null };
       obj[0] = channel.rateLimitPerUser;
       obj[1] = arg2;
@@ -31,7 +32,7 @@ function setCooldown(channel, SendMessage, arg2) {
       tmp3[SendMessage][channel.id] = obj;
       const timer2 = tmp3[SendMessage][channel.id].timer;
       timer2.start(1000, () => {
-        let obj = SendMessage(sum[4]);
+        obj = SendMessage(sum[4]);
         obj = { type: "SLOWMODE_SET_COOLDOWN", channelId: id.id, slowmodeType: SendMessage, cooldownMs: Math.max(closure_2 - Date.now(), 0) };
         obj.dispatch(obj);
       }, true);
@@ -47,11 +48,12 @@ function handleUploadCancel(channelId) {
 }
 let obj = { SendMessage: 0, [0]: "SendMessage", CreateThread: 1, [1]: "CreateThread" };
 let closure_6 = { [obj.SendMessage]: {}, [obj.CreateThread]: {} };
+const Store = initializeDefault.Store;
 class SlowmodeStore extends Store {
 }
 const prototype = SlowmodeStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, getUncachedChannelPermissions);
+  this.waitFor(closure_3, closure_4);
 };
 prototype["getSlowmodeCooldownGuess"] = function getSlowmodeCooldownGuess(id, CreateThread) {
   let SendMessage = CreateThread;
@@ -74,7 +76,7 @@ obj = {
     if (null != channel) {
       let num2 = 0;
       if (0 !== channel.rateLimitPerUser) {
-        num2 = channel.rateLimitPerUser * set.Millis.SECOND + 100;
+        num2 = channel.rateLimitPerUser * setDefault.Millis.SECOND + 100;
       }
       setCooldown(channel, channelId.slowmodeType, num2);
       const tmp2 = setCooldown;
@@ -99,7 +101,7 @@ obj = {
     if (null != channel) {
       let num2 = 0;
       if (0 !== channel.rateLimitPerUser) {
-        num2 = channel.rateLimitPerUser * set.Millis.SECOND + 100;
+        num2 = channel.rateLimitPerUser * setDefault.Millis.SECOND + 100;
       }
       setCooldown(channel, obj.SendMessage, num2);
       const tmp2 = setCooldown;
@@ -116,8 +118,8 @@ obj = {
       const iter = channels[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
-        let tmp4 = outer1_6;
-        let tmp5 = outer1_6[arg0][nextResult.id];
+        let tmp4 = closure_1_6;
+        let tmp5 = closure_1_6[arg0][nextResult.id];
         let tmp6 = tmp5;
         let rateLimitPerUser = nextResult.rateLimitPerUser;
         if (null != tmp5) {
@@ -127,7 +129,7 @@ obj = {
             let tmp10 = nextResult;
             let tmp11 = tmp5;
             let num;
-            let tmp9 = outer1_7;
+            let tmp9 = closure_1_7;
             if (tmp6 != null) {
               num = tmp6.cooldownMs;
             }
@@ -135,9 +137,9 @@ obj = {
               num = 0;
             }
             let tmp12 = rateLimitPerUser;
-            let tmp13 = outer1_1;
-            let tmp14 = outer1_2;
-            let tmp9Result = tmp9(tmp3, arg0, Math.min(num, rateLimitPerUser * outer1_1(outer1_2[5]).Millis.SECOND));
+            let tmp13 = closure_1_1;
+            let tmp14 = closure_1_2;
+            let tmp9Result = tmp9(tmp3, arg0, Math.min(num, rateLimitPerUser * closure_1_1(closure_1_2[5]).Millis.SECOND));
           }
         }
         continue;
@@ -148,18 +150,18 @@ obj = {
     const items = [, ];
     ({ SendMessage: arr[0], CreateThread: arr[1] } = obj);
     let item = items.forEach((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const keys = Object.keys(table[arg0]);
       const item = keys.forEach((arg0) => {
-        const timer = outer1_6[closure_0][arg0].timer;
+        const timer = closure_1_6[closure_0][arg0].timer;
         return timer.stop();
       });
       table[arg0] = {};
     });
   }
 };
-const slowmodeStore = new SlowmodeStore(require("dispatcher"), obj);
-const result = require("canBypassSlowmodeHelper").fileFinishedImporting("stores/SlowmodeStore.tsx");
+const slowmodeStore = new SlowmodeStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("stores/SlowmodeStore.tsx");
 
 export default slowmodeStore;
 export const SlowmodeType = obj;

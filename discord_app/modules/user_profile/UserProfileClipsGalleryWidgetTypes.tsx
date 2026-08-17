@@ -1,5 +1,8 @@
 // discord_app/modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx
-import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
+import set from "set" /* 2 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import WidgetType from "WidgetType" /* 5366 */;
+
 function convertClip(gameId) {
   let obj = { game_id: gameId.gameId, title: gameId.title, tags: gameId.tags };
   if ("saved" === gameId.status) {
@@ -45,7 +48,7 @@ prototype["isEqual"] = function isEqual(clips) {
   let tmp = clips instanceof ClipsGalleryWidget;
   if (tmp) {
     const self = this;
-    tmp = isUndefinedOrNull(this.clips, clips.clips);
+    tmp = isUndefinedOrNullDefault(this.clips, clips.clips);
   }
   return tmp;
 };
@@ -58,7 +61,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileClipsGalleryWidgetTypes.tsx");
 
 export { ClipsGalleryWidget };
 export const WIDGET_CLIP_CONTENT_TYPE = "video/mp4";

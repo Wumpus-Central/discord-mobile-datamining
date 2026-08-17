@@ -1,11 +1,12 @@
 // discord_app/modules/reactions/native/BurstReactionToggle.tsx
-import noop from "noop";
-import { Pressable } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import { Easing } from "module_4115";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { Easing } from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let obj = { duration: 100, easing: null };
@@ -13,14 +14,12 @@ obj[1] = Easing.out(require("module_4115").Easing.quad);
 let closure_9 = { stiffness: 750, mass: 2.5, damping: 70 };
 let closure_10 = { code: "function BurstReactionToggleTsx1(){const{reducedMotion,targetBackgroundColor,backgroundColor,rotation}=this.__closure;const _backgroundColor=reducedMotion?targetBackgroundColor:backgroundColor.get();const _rotation=reducedMotion?0:rotation.get();return{backgroundColor:_backgroundColor,transform:[{rotate:_rotation+\"deg\"}]};}" };
 obj = { container: null };
-obj = { borderRadius: require("Themes").modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
+obj = { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, padding: 8, marginLeft: 8, width: 40, height: 40 };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
+let result = require("set").fileFinishedImporting("modules/reactions/native/BurstReactionToggle.tsx");
 
 export default function BurstReactionToggle(arg0) {
-  let isActive;
-  let stateFromStores;
   ({ onPress: stateFromStores, isActive } = arg0);
   let str;
   const colors = str(num[8]).colors;
@@ -37,7 +36,7 @@ export default function BurstReactionToggle(arg0) {
     tmp6 = tmp3;
     tmp7 = tmp2;
   }
-  let obj = sharedValue;
+  obj = sharedValue;
   const ref = sharedValue.useRef(null);
   str = tmp7(tmp6[12])(ref);
   stateFromStores = undefined;
@@ -46,7 +45,7 @@ export default function BurstReactionToggle(arg0) {
   sharedValue = undefined;
   let sharedValue1;
   const tmp = callback();
-  let items = [maybeApplyNoTextColorForLightCustomTheme];
+  let items = [closure_5];
   stateFromStores = stateFromStores(tmp5[6]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const obj2 = stateFromStores(tmp5[6]);
   const colors2 = tmp4(tmp5[8]).colors;
@@ -69,8 +68,8 @@ export default function BurstReactionToggle(arg0) {
     } else {
       value = sharedValue.get();
     }
-    let obj = { backgroundColor: value, transform: null };
-    let num = 0;
+    obj = { backgroundColor: value, transform: null };
+    num = 0;
     if (!stateFromStores) {
       num = sharedValue1.get();
     }
@@ -85,13 +84,13 @@ export default function BurstReactionToggle(arg0) {
   const items1 = [sharedValue, str, sharedValue1, num];
   const animatedStyle = stateFromStores(tmp5[5]).useAnimatedStyle(fn);
   const effect = obj.useEffect(() => {
-    const result = sharedValue.set(stateFromStores(num[9]).withTiming(str, outer1_8));
-    const obj = stateFromStores(num[9]);
-    const result1 = sharedValue1.set(stateFromStores(num[10]).withSpring(num, outer1_9));
+    const result = sharedValue.set(stateFromStores(num[9]).withTiming(str, closure_1_8));
+    obj = stateFromStores(num[9]);
+    const result1 = sharedValue1.set(stateFromStores(num[10]).withSpring(num, closure_1_9));
   }, items1);
   obj = {
     onPress() {
-      str(outer1_6.AUTO);
+      str(closure_1_6.AUTO);
       stateFromStores();
     },
     accessible: true,
@@ -110,9 +109,8 @@ export default function BurstReactionToggle(arg0) {
   }
   obj[2] = stringResult;
   obj[4] = { checked: isActive };
-  obj = { style: items2, ref, children: null };
+  obj = { style: items2, ref, children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) };
   items2 = [tmp.container, animatedStyle];
-  obj[2] = jsx(stateFromStores(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT });
-  obj[5] = jsx(tmp7(tmp6[5]).View, { style: items2, ref, children: null });
-  return <sharedValue1 style={items2} ref={ref}>{null}</sharedValue1>;
+  obj[5] = jsx(tmp7(tmp6[5]).View, { style: items2, ref, children: tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT }) });
+  return <sharedValue1 style={items2} ref={ref}>{tmp15(tmp9(tmp6[14]).SuperReactionIcon, { color: INTERACTIVE_TEXT_DEFAULT })}</sharedValue1>;
 };

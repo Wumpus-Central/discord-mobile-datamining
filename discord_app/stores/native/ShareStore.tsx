@@ -1,41 +1,41 @@
 // discord_app/stores/native/ShareStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_10 from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AppStates } from "ME";
-import { Store } from "initialize";
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeShareManagerModule.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import encodeProperties from "encodeProperties" /* 503 */;
+import initializeDefault from "initialize" /* 589 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import enforcingDefault from "enforcing" /* 9068 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import closure_10 from "handleConnectionOpen" /* 4197 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import { AppStates } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function handleTokenUpdated(token) {
   token = token.token;
   return false;
 }
+const Store = initializeDefault.Store;
 class ShareStore extends Store {
 }
 ShareStore.prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded, createGuildRecordFromRust, handleConnectionOpen, closure_10, mergeGuildAvatar);
+  this.waitFor(closure_6, closure_7, closure_8, closure_9, closure_10, closure_11);
 };
 ShareStore.displayName = "ShareStore";
-const shareStore = new ShareStore(require("dispatcher"), {
+const shareStore = new ShareStore(dispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(arg0) {
-    let closure_3;
-    let closure_4;
     ({ guildId: closure_3, channelId: closure_4 } = arg0);
     return false;
   },
   LOGOUT: function handleLogout() {
-    enforcing.setSelectedChannel(null, null);
-    const obj = enforcing;
-    const obj2 = enforcing;
-    const result = obj2.setAuthenticationToken(null, expandEventProperties.getSuperPropertiesBase64());
-    let c5 = null;
+    enforcingDefault.setSelectedChannel(null, null);
+    const obj = enforcingDefault;
+    const obj2 = enforcingDefault;
+    const result = obj2.setAuthenticationToken(null, expandEventPropertiesDefault.getSuperPropertiesBase64());
+    c5 = null;
     return false;
   },
   REGISTER_SUCCESS: handleTokenUpdated,
@@ -68,10 +68,10 @@ const shareStore = new ShareStore(require("dispatcher"), {
           obj.recipients = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
           json1 = JSON.stringify(obj);
         }
-        enforcing.setSelectedChannel(json1, json);
+        enforcingDefault.setSelectedChannel(json1, json);
         c3 = null;
         c4 = null;
-        const obj3 = enforcing;
+        const obj3 = enforcingDefault;
       }
     }
     if (null != c5) {
@@ -79,16 +79,16 @@ const shareStore = new ShareStore(require("dispatcher"), {
       obj[0] = state;
       const result = encodeProperties.extendSuperProperties(obj);
       const obj4 = encodeProperties;
-      const obj6 = enforcing;
-      const result1 = obj6.setAuthenticationToken(c5, expandEventProperties.getSuperPropertiesBase64());
+      const obj6 = enforcingDefault;
+      const result1 = obj6.setAuthenticationToken(c5, expandEventPropertiesDefault.getSuperPropertiesBase64());
       if (state === AppStates.INACTIVE) {
         c5 = null;
       }
-      const obj7 = expandEventProperties;
+      const obj7 = expandEventPropertiesDefault;
     }
     return false;
   }
 });
-let result = require("createGuildRecordFromRust").fileFinishedImporting("stores/native/ShareStore.tsx");
+let result = require("set").fileFinishedImporting("stores/native/ShareStore.tsx");
 
 export default shareStore;

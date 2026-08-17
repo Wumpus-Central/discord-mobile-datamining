@@ -1,12 +1,14 @@
 // discord_app/modules/user_profile/hooks/useProfileThemeOverrideStore.tsx
-import { ThemeTypes } from "ME";
-import keys from "keys";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getProfileTheme } from "../UserProfileGradientUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import getProfileTheme from "getProfileTheme" /* 8422 */;
+import keys from "keys" /* 644 */;
 
+const ThemeTypes = ME.ThemeTypes;
 let tmp2 = keys.create()((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return {
     themeOverride: null,
     savedClientTheme: null,
@@ -18,13 +20,13 @@ let tmp2 = keys.create()((arg0) => {
     }
   };
 });
-let c4 = tmp2;
-const result = require("useTheme").fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
+let closure_4 = tmp2;
+const result = set.fileFinishedImporting("modules/user_profile/hooks/useProfileThemeOverrideStore.tsx");
 
 export const useProfileThemeOverrideStore = tmp2;
 export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
-  const tmp = tmp2((themeOverride) => themeOverride.themeOverride);
-  const tmp3 = useTheme();
+  const tmp = callback((themeOverride) => themeOverride.themeOverride);
+  const tmp3 = useThemeDefault();
   if (null == tmp) {
     return null;
   } else {
@@ -88,11 +90,10 @@ export const useEffectiveThemeOverride = function useEffectiveThemeOverride() {
     obj[2] = tmp4;
     return obj;
   }
-  tmp2 = dependencyMap;
 };
 export const useIsBannerDisabledByOverride = function useIsBannerDisabledByOverride() {
-  const tmp = tmp2((themeOverride) => themeOverride.themeOverride);
-  tmp2 = null != tmp;
+  const tmp = callback((themeOverride) => themeOverride.themeOverride);
+  let tmp2 = null != tmp;
   if (tmp2) {
     let tmp3 = "non-nitro" === tmp.mode;
     if (!tmp3) {
@@ -103,8 +104,8 @@ export const useIsBannerDisabledByOverride = function useIsBannerDisabledByOverr
   return tmp2;
 };
 export const useHasNonNitroThemeOverride = function useHasNonNitroThemeOverride() {
-  const tmp = tmp2((themeOverride) => themeOverride.themeOverride);
-  tmp2 = null != tmp;
+  const tmp = callback((themeOverride) => themeOverride.themeOverride);
+  let tmp2 = null != tmp;
   if (tmp2) {
     tmp2 = "non-nitro" === tmp.mode;
   }

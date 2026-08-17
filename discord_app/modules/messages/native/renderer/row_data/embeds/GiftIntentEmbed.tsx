@@ -1,21 +1,20 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx
-import getCurrentTime from "getCurrentTime";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GiftIntentType } from "GuildFeatures";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
-import { _sendGiftMessage } from "../../../../../premium/PremiumGiftingUtils.tsx";
-import { frozen } from "../../EmbedUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import frozen from "frozen" /* 8171 */;
+import _sendGiftMessage from "_sendGiftMessage" /* 8294 */;
+import closure_3 from "getCurrentTime" /* 8290 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { GiftIntentType } from "GuildFeatures" /* 1924 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
-createCacheKey = { headerTextColor: require("Themes").colors.TEXT_STRONG, subHeaderTextColor: require("Themes").colors.TEXT_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderColor: require("Themes").colors.BORDER_MUTED };
-createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("GuildFeatures").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
+require = arg1;
+createCacheKey = { headerTextColor: ThemesDefault.colors.TEXT_STRONG, subHeaderTextColor: ThemesDefault.colors.TEXT_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_MUTED };
+let closure_6 = createCacheKey.createNativeStyleProperties(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftIntentEmbed.tsx");
 
 export const createGiftIntentEmbed = function createGiftIntentEmbed(message, theme) {
-  let giftIntentType;
-  let recipientUserId;
   const giftingPrompt = message.giftingPrompt;
   if (null == giftingPrompt) {
     return null;
@@ -25,7 +24,7 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
     if (null == user) {
       return null;
     } else {
-      const name = nameFromUser.getName(user);
+      const name = nameFromUserDefault.getName(user);
       if (GiftIntentType.FRIEND_ANNIVERSARY === giftIntentType) {
         let obj = { headerText: null, subHeaderParts: null };
         const intl = getSystemLocale.intl;
@@ -57,15 +56,15 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
           const _HermesInternal = HermesInternal;
           combined1 = "" + currentUser.getAvatarURL(undefined, 40);
         }
-        const obj1 = { recipientAvatarUrl: null, currentUserAvatarUrl: null, recipientName: null, headerText: null, subHeaderParts: null, recipientUserId: null, giftIntentType: null, headerTextColor: null, subHeaderTextColor: null, backgroundColor: null, borderColor: null, subHeaderIconUrl: null, primaryCtaLabel: null, primaryCtaIconUrl: null, secondaryCtaIconUrl: null, secondaryCtaAccessibilityLabel: null };
+        obj1 = { recipientAvatarUrl: null, currentUserAvatarUrl: null, recipientName: null, headerText: null, subHeaderParts: null, recipientUserId: null, giftIntentType: null, headerTextColor: null, subHeaderTextColor: null, backgroundColor: null, borderColor: null, subHeaderIconUrl: null, primaryCtaLabel: null, primaryCtaIconUrl: null, secondaryCtaIconUrl: null, secondaryCtaAccessibilityLabel: null };
         obj1[0] = combined;
         obj1[1] = combined1;
         obj1[2] = name;
         ({ headerText: obj4[3], subHeaderParts: obj4[4] } = tmp);
         obj1[5] = recipientUserId;
         obj1[6] = giftIntentType;
-        ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = createCacheKey(theme));
-        const tmp6 = createCacheKey(theme);
+        ({ headerTextColor: obj4[7], subHeaderTextColor: obj4[8], backgroundColor: obj4[9], borderColor: obj4[10] } = callback(theme));
+        const tmp6 = callback(theme);
         obj1[11] = frozen.getAssetUriForEmbed(tmp8(4311));
         const intl3 = getSystemLocale.intl;
         obj1[12] = intl3.string(getSystemLocale.t.ilhtIa);
@@ -77,7 +76,7 @@ export const createGiftIntentEmbed = function createGiftIntentEmbed(message, the
         obj1[15] = intl4.string(getSystemLocale.t.I5gL2H);
         return obj1;
       }
-      const obj10 = nameFromUser;
+      const obj10 = nameFromUserDefault;
     }
     obj8 = user;
   }

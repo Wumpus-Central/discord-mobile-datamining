@@ -1,10 +1,10 @@
 // discord_app/modules/messages/MessageUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("shouldShowAgeGateForVoiceChannel").fileFinishedImporting("modules/messages/MessageUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/MessageUtils.tsx");
 
 export const canViewPotentiallyNSFWChannel = function canViewPotentiallyNSFWChannel(channel_id) {
   currentUser = currentUser.getCurrentUser();

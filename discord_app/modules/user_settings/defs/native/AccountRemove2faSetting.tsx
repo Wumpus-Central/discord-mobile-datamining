@@ -1,17 +1,20 @@
 // discord_app/modules/user_settings/defs/native/AccountRemove2faSetting.tsx
-import createToggle from "createToggle";
-import { set } from "../../../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getSMSBackupDisabledMessage } from "../../account/MFAUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setDefault from "set" /* 4827 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import useIs2FAEnabled from "useIs2FAEnabled" /* 14102 */;
+import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14151 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const pressable = createToggle.createPressable({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["D+aE7g"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = set;
+    let obj = setDefault;
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["D+aE7g"]);
@@ -27,17 +30,17 @@ const pressable = createToggle.createPressable({
   useIsDisabled() {
     return null !== getSMSBackupDisabledMessage.use2FARemoveDisableReason();
   },
-  useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
-  usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
+  useDescription: getSMSBackupDisabledMessage.use2FARemoveDisableReason,
+  usePredicate: useIs2FAEnabled.useIsTOTPEnabled
 });
 let obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["D+aE7g"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   onPress: function remove2FA() {
-    let obj = set;
+    let obj = setDefault;
     obj = { title: null, body: null, cancelText: null, onConfirm: null };
     const intl = getSystemLocale.intl;
     obj[0] = intl.string(getSystemLocale.t["D+aE7g"]);
@@ -53,9 +56,9 @@ let obj = {
   useIsDisabled() {
     return null !== getSMSBackupDisabledMessage.use2FARemoveDisableReason();
   },
-  useDescription: require("getSMSBackupDisabledMessage").use2FARemoveDisableReason,
-  usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
+  useDescription: getSMSBackupDisabledMessage.use2FARemoveDisableReason,
+  usePredicate: useIs2FAEnabled.useIsTOTPEnabled
 };
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountRemove2faSetting.tsx");
 
 export default pressable;

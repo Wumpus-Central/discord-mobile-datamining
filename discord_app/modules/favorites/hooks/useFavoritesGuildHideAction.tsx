@@ -1,11 +1,11 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildHideAction.tsx
-import noop from "noop";
-import handleConnectionOpen from "handleConnectionOpen";
-import { Routes } from "ME";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
+import messagesProxyDefault from "messagesProxy" /* 3079 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import { Routes } from "ME" /* 676 */;
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
+let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
 
 export default function useFavoritesGuildHideAction() {
   let obj = hasAccess(9979);
@@ -14,17 +14,17 @@ export default function useFavoritesGuildHideAction() {
   obj = { isPreview: !hasAccess, label: null, subLabel: null, perform: null };
   const callback = React.useCallback(() => {
     if (hasAccess) {
-      const result = hasAccess(outer1_2[4]).setFavoritesGuildVisibility(false, "server_context_menu");
-      const obj = hasAccess(outer1_2[4]);
+      const result = hasAccess(closure_1_2[4]).setFavoritesGuildVisibility(false, "server_context_menu");
+      const obj = hasAccess(closure_1_2[4]);
     }
-    if (obj2.isFavoritesGuildId(outer1_4.getGuildId())) {
-      hasAccess(outer1_2[6]).transitionTo(outer1_5.ME);
-      const obj3 = hasAccess(outer1_2[6]);
+    if (obj2.isFavoritesGuildId(closure_1_4.getGuildId())) {
+      hasAccess(closure_1_2[6]).transitionTo(closure_1_5.ME);
+      const obj3 = hasAccess(closure_1_2[6]);
     }
   }, items);
   const intl = hasAccess(1236).intl;
   if (hasAccess) {
-    let ojM1xJ = messagesProxy["8FO0y9"];
+    let ojM1xJ = messagesProxyDefault["8FO0y9"];
   } else {
     ojM1xJ = tmp(1236).t.ojM1xJ;
   }
@@ -32,7 +32,7 @@ export default function useFavoritesGuildHideAction() {
   let stringResult;
   if (hasAccess) {
     const intl2 = tmp(1236).intl;
-    stringResult = intl2.string(messagesProxy.FaHxWl);
+    stringResult = intl2.string(messagesProxyDefault.FaHxWl);
   }
   obj[2] = stringResult;
   obj[3] = callback;

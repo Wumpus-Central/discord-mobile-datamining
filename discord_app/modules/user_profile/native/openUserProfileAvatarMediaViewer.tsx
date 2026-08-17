@@ -1,14 +1,12 @@
 // discord_app/modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { AVATAR_MAX_SIZE } from "ME";
-import { _openMediaModal } from "../../media_viewer/native/components/openMediaModal.tsx";
+import _openMediaModal from "_openMediaModal" /* 8992 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { AVATAR_MAX_SIZE } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("_openMediaModal").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
 
 export default function openUserProfileAvatarMediaViewer(user) {
-  let guildId;
-  let originViewOrOriginLayout;
   user = user.user;
   useReducedMotion = useReducedMotion.useReducedMotion;
   let animate = !useReducedMotion;

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function useObscuredContentNonFriendsDmSettingValue() {
   const parentalControlledExplicitContentSettings = useParentalControlledExplicitContentSettings.useParentalControlledExplicitContentSettings();
   let prop;
@@ -32,7 +32,7 @@ function onObscuredContentNonFriendsDmOnPress() {
     const items = [selectedTeenId(1306).ExplicitContentRedaction.SHOW];
     obj[2] = items;
     obj[3] = function handlePress(explicitContentNonFriendDm) {
-      let obj = selectedTeenId(outer1_1[4]);
+      let obj = selectedTeenId(closure_1_1[4]);
       obj = { explicitContentNonFriendDm };
       const result = obj.updateExplicitContentSetting(selectedTeenId, obj);
     };
@@ -52,7 +52,7 @@ createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("useParentalControlledExplicitContentSettings").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default createToggle;
 export { useObscuredContentNonFriendsDmSettingValue };

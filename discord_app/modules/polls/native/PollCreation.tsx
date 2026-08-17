@@ -1,27 +1,19 @@
 // discord_app/modules/polls/native/PollCreation.tsx
-import importAllResult from "trackImpression";
-import get_ActivityIndicator from "TableRowInner";
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER";
-import jsxProd from "useSafeAreaInsetsKeyboardAware";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "POLL_ATTACHMENT_FOLDER";
-import { registerAsset } from "../../../../_runtime/11374_registerAsset.js";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import Text from "Text" /* 4734 */;
+import TextInput from "TextInput" /* 8071 */;
+import registerAssetDefault from "registerAsset" /* 11374 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function UnsavedChangesAlertModal(onConfirm) {
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
@@ -34,7 +26,7 @@ function UnsavedChangesAlertModal(onConfirm) {
   obj[0] = intl3.string(getSystemLocale.t.TzJA4g);
   obj[1] = onConfirm.onConfirm;
   const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["2BR5R2"]);
   items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "back");
@@ -44,10 +36,7 @@ function UnsavedChangesAlertModal(onConfirm) {
 }
 function AddAnswerButton(onPress) {
   const tmp = callback3();
-  let obj = { source: null, size: null, color: null };
-  obj[0] = registerAsset;
-  obj[1] = Button.Icon.Sizes.LARGE;
-  obj[2] = tmp.addAnswerIcon.color;
+  let obj = { source: registerAssetDefault, size: Button.Icon.Sizes.LARGE, color: tmp.addAnswerIcon.color };
   obj = { onPress: onPress.onPress, style: tmp.addAnswerButtonDefault, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.B2Uvme);
@@ -71,20 +60,20 @@ function PollDurationSelectionRow(selectedDuration) {
   const intl3 = selectedDuration(1236).intl;
   obj[2] = intl3.string(selectedDuration(1236).t.A4PJ1o);
   obj[3] = function onPress() {
-    let obj = selectedDuration(outer1_2[18]);
+    let obj = selectedDuration(closure_1_2[18]);
     obj.dismissKeyboard();
     obj = { selectedDuration, onChange };
-    onChange(outer1_2[14]).openLazy(selectedDuration(outer1_2[16])(outer1_2[15], outer1_2.paths), outer1_8, obj);
+    onChange(closure_1_2[14]).openLazy(selectedDuration(closure_1_2[16])(closure_1_2[15], closure_1_2.paths), closure_1_8, obj);
   };
   obj[4] = callback(selectedDuration(4734).Text, { variant: "text-md/normal", color: "text-muted", children: tmp });
   return callback(selectedDuration(6291).TableRow, obj);
 }
 let c3 = importAllResult;
 ({ TouchableOpacity: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ MAX_POLL_QUESTION_LENGTH: error, POLL_CREATION_DURATION_ACTION_SHEET_KEY: metroImportAll } = POLL_ATTACHMENT_FOLDER);
+({ MAX_POLL_QUESTION_LENGTH: error, POLL_CREATION_DURATION_ACTION_SHEET_KEY: closure_8 } = POLL_ATTACHMENT_FOLDER);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { viewPadding: { paddingHorizontal: 18 }, scrollContainer: { paddingVertical: 20, gap: 16 }, safeAreaContainer: null, header: null, actionButton: null, postButton: null, title: null, label: null, answerInputsContainer: null, addAnswerButtonDefault: null, addAnswerIcon: null, pollConfigSection: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj[2] = obj;
 obj[3] = { flexDirection: "row", paddingHorizontal: 18, paddingVertical: 10 };
 obj[4] = { flex: 0, justifyContent: "flex-start", minWidth: 48, paddingHorizontal: 0, marginHorizontal: 0 };
@@ -96,15 +85,13 @@ let num = 8;
 if (set.isAndroid()) {
   num = 10;
 }
-createCacheKey = { paddingVertical: num, paddingLeft: 14, marginRight: 30, display: "flex", flexDirection: "row", gap: 16, alignItems: "center", justifyContent: "flex-start", backgroundColor: require("Themes").colors.MESSAGE_BACKGROUND_HOVER, borderRadius: require("Themes").radii.lg };
+createCacheKey = { paddingVertical: num, paddingLeft: 14, marginRight: 30, display: "flex", flexDirection: "row", gap: 16, alignItems: "center", justifyContent: "flex-start", backgroundColor: ThemesDefault.colors.MESSAGE_BACKGROUND_HOVER, borderRadius: ThemesDefault.radii.lg };
 obj[9] = createCacheKey;
-obj[10] = { color: require("Themes").colors.TEXT_MUTED };
-let obj2 = { color: require("Themes").colors.TEXT_MUTED };
-obj[11] = { borderTopWidth: 1, borderColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER };
+obj[10] = { color: ThemesDefault.colors.TEXT_MUTED };
+let obj2 = { color: ThemesDefault.colors.TEXT_MUTED };
+obj[11] = { borderTopWidth: 1, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.forwardRef((error, ref) => {
-  let onChange;
-  let onSubmitEditing;
   error = error.error;
   let tmp = null != error;
   ({ onChange, onSubmitEditing } = error);
@@ -140,27 +127,9 @@ let closure_14 = importAllResult.forwardRef((error, ref) => {
 const result = set.fileFinishedImporting("modules/polls/native/PollCreation.tsx");
 
 export default function PollCreation(channel) {
-  let allowMultiSelect;
-  let c11;
-  let c12;
-  let c4;
-  let c6;
-  let c7;
-  let c8;
-  let c9;
-  let canAddMoreAnswers;
-  let createPollError;
-  let duration;
-  let fieldErrors;
-  let handleAddAnswer;
-  let handleQuestionChange;
-  let handleSubmitPoll;
-  let setDuration;
-  let shouldFocusOnInvalidField;
-  let submitting;
   channel = channel.channel;
   const onCancel = channel.onCancel;
-  let dependencyMap;
+  dependencyMap = undefined;
   let answers;
   c4 = undefined;
   allowMultiSelect = undefined;
@@ -174,7 +143,7 @@ export default function PollCreation(channel) {
   fieldErrors = undefined;
   shouldFocusOnInvalidField = undefined;
   let setShouldFocusOnInvalidField;
-  let closure_16;
+  closure_16 = undefined;
   let obj4;
   function handleCancelClose() {
     callback();
@@ -183,9 +152,7 @@ export default function PollCreation(channel) {
     const intl = channel(1236).intl;
     AccessibilityAnnouncer.announce(intl.string(channel(1236).t["+G3oRq"]));
   }
-  let obj = { type: null, name: null };
-  obj[0] = channel(503).ImpressionTypes.VIEW;
-  obj[1] = channel(503).ImpressionNames.POLL_EDITOR_VIEWED;
+  let obj = { type: channel(503).ImpressionTypes.VIEW, name: channel(503).ImpressionNames.POLL_EDITOR_VIEWED };
   onCancel(9177)(obj);
   const items = [onCancel];
   const effect = answers.useEffect(() => () => {
@@ -220,7 +187,7 @@ export default function PollCreation(channel) {
   ({ createPollError, shouldFocusOnInvalidField } = tmp10);
   setShouldFocusOnInvalidField = tmp10.setShouldFocusOnInvalidField;
   ({ handleQuestionChange, handleSubmitPoll, duration, setDuration, submitting } = tmp10);
-  let obj1 = channel(11382);
+  obj1 = channel(11382);
   closure_16 = obj1.useTrackPollCreationEvents(answers, allowMultiSelect).trackPollCreationCancelled;
   let obj2 = channel(6318);
   obj2.useNavigatorBackPressHandler(() => {
@@ -330,17 +297,7 @@ export default function PollCreation(channel) {
   const items7 = [
     callback(channel(8083).FormLabel, obj9),
     answers.map((localCreationAnswerId) => {
-      const obj = { inputRef: null, answer: null, index: null, channelId: null, onSubmitEditing: null, onAnswerTextChange: null, onAnswerEmojiSelect: null, onRemoveAnswer: null, onRemoveAnswerImage: null, canRemoveAnswer: null, error: null };
-      obj[0] = obj4.refWithKey("answer-" + localCreationAnswerId.localCreationAnswerId);
-      obj[1] = localCreationAnswerId;
-      obj[2] = arg1;
-      obj[3] = channel.id;
-      obj[4] = obj4.focusNext;
-      obj[5] = c8;
-      obj[6] = c9;
-      obj[7] = c11;
-      obj[8] = c12;
-      obj[9] = c7;
+      const obj = { inputRef: obj4.refWithKey("answer-" + localCreationAnswerId.localCreationAnswerId), answer: localCreationAnswerId, index: arg1, channelId: channel.id, onSubmitEditing: obj4.focusNext, onAnswerTextChange: c8, onAnswerEmojiSelect: c9, onRemoveAnswer: c11, onRemoveAnswerImage: c12, canRemoveAnswer: c7, error: null };
       let tmp4;
       if (fieldErrors != null) {
         const _HermesInternal = HermesInternal;

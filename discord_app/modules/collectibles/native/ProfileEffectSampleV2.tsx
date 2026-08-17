@@ -1,22 +1,24 @@
 // discord_app/modules/collectibles/native/ProfileEffectSampleV2.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { metadata } from "../../../../discord_assets/assets/collectibles/previews/sample_profile.png.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { StaticEffect } from "../profile_effects/native/ProfileEffect.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import preloadDefault from "preload" /* 5449 */;
+import SAMPLE_PROFILE_ASPECT_RATIO from "SAMPLE_PROFILE_ASPECT_RATIO" /* 9207 */;
+import metadataDefault from "metadata" /* 9209 */;
+import StaticEffectDefault from "StaticEffect" /* 9210 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
+const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { profileContainer: { position: "absolute", display: "flex", height: "100%", width: "100%" }, profileBackground: null, sampleProfileImage: null, profileBorder: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj[1] = obj;
-obj[2] = { aspectRatio: require("SAMPLE_PROFILE_ASPECT_RATIO").SAMPLE_PROFILE_ASPECT_RATIO };
-obj[3] = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED };
+obj[2] = { aspectRatio: SAMPLE_PROFILE_ASPECT_RATIO.SAMPLE_PROFILE_ASPECT_RATIO };
+obj[3] = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
 let closure_5 = createCacheKey.createStyles(obj);
-let obj1 = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED };
-const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
+let obj1 = { position: "absolute", height: "100%", width: "100%", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+const result = set.fileFinishedImporting("modules/collectibles/native/ProfileEffectSampleV2.tsx");
 
 export default function ProfileEffectSample(hideBackground) {
   let flag = hideBackground.hideBackground;
@@ -33,18 +35,17 @@ export default function ProfileEffectSample(hideBackground) {
   items[1] = profileBackground;
   obj = { style: items1, source: null, accessible: false, resizeMode: "cover" };
   items1 = [tmp.sampleProfileImage];
-  obj = { uri: null };
-  obj[0] = metadata;
+  obj = { uri: metadataDefault };
   obj[1] = obj;
-  const items2 = [callback(preload, obj), , ];
+  const items2 = [callback(preloadDefault, obj), , ];
   let tmp4Result = !flag;
   if (!flag) {
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp.profileBorder;
     tmp4Result = tmp4(tmp3, obj1);
   }
   items2[1] = tmp4Result;
-  items2[2] = callback(StaticEffect, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
+  items2[2] = callback(StaticEffectDefault, { skuId: hideBackground.item.skuId, bannerAdjustment: 0, useThumbnail: true });
   obj[1] = items2;
   return closure_4(View, obj);
 };

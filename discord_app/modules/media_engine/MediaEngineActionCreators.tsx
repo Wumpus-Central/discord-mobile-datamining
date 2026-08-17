@@ -1,11 +1,11 @@
 // discord_app/modules/media_engine/MediaEngineActionCreators.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { MediaEngineContextTypes } from "DesktopSources";
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 
-const result = require("dispatcher").fileFinishedImporting("modules/media_engine/MediaEngineActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/media_engine/MediaEngineActionCreators.tsx");
 
 export const setPushToTalkState = function setPushToTalkState(isActive, arg1) {
-  const importDefault = isActive;
+  importDefault = isActive;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;

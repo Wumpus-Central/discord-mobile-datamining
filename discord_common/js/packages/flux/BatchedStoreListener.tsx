@@ -1,11 +1,13 @@
 // discord_common/js/packages/flux/BatchedStoreListener.tsx
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/BatchedStoreListener.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("../discord_common/js/packages/flux/BatchedStoreListener.tsx");
 class BatchedStoreListener {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj.handleStoreChange = function handleStoreChange() {
-      obj = obj(outer1_1[0]);
+      obj = obj(closure_1_1[0]);
       const changeSentinel = obj.getChangeSentinel();
       if (obj.storeVersionHandled !== changeSentinel) {
         obj2.changeCallback();
@@ -20,13 +22,13 @@ class BatchedStoreListener {
 const prototype = BatchedStoreListener.prototype;
 prototype["attach"] = function attach(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const stores = this.stores;
   const item = stores.forEach((addReactChangeListener) => {
     if (null == addReactChangeListener) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("" + closure_0 + " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded " + arg1 + " stores before error.");
+      error = new Error("" + closure_0 + " tried to load a non-existent store. Either it isn't defined or there is a circular dependency. Loaded " + arg1 + " stores before error.");
       throw error;
     } else {
       const result = addReactChangeListener.addReactChangeListener(self.handleStoreChange);

@@ -1,14 +1,11 @@
 // discord_app/modules/application_commands/native/ApplicationCommandBuiltIns.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { set } from "../../../actions/AlertActionCreators.tsx";
+import setDefault from "set" /* 4827 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
-let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: null, inputType: null, applicationId: null };
-obj[3] = require("PermissionOverwriteType").ApplicationCommandType.CHAT;
-obj[4] = require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN;
-obj[5] = require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN;
+let obj = { id: "-15", untranslatedName: "leave", displayName: "leave", type: require("PermissionOverwriteType").ApplicationCommandType.CHAT, inputType: require("ApplicationCommandSectionType").ApplicationCommandInputType.BUILT_IN, applicationId: require("TRUE_OPTION_NAME").BuiltInSectionId.BUILT_IN };
 Object.defineProperty(obj, "untranslatedDescription", {
   get: () => {
     const intl = getSystemLocale.intl;
@@ -30,7 +27,7 @@ obj.predicate = function predicate(channel) {
 obj.execute = function execute(arg0, channel) {
   channel = channel.channel;
   if (null != channel) {
-    const channelName = channel(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+    const channelName = channel(4984).computeChannelName(channel, closure_4, closure_3);
     const intl5 = channel(1236).intl;
     let obj = { name: null };
     obj[0] = channelName;
@@ -46,11 +43,11 @@ obj.execute = function execute(arg0, channel) {
       obj[0] = channelName;
       formatToPlainStringResult1 = intl.formatToPlainString(tmp5(1236).t.hVGjEW, obj);
       const intl2 = tmp5(1236).intl;
-      const obj1 = { name: null };
+      obj1 = { name: null };
       obj1[0] = channelName;
       formatResult = intl2.format(tmp5(1236).t.IK1Qvs, obj1);
     }
-    let obj2 = set;
+    let obj2 = setDefault;
     obj2 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
     obj2[0] = formatToPlainStringResult1;
     obj2[1] = formatResult;
@@ -60,11 +57,11 @@ obj.execute = function execute(arg0, channel) {
     obj2[3] = intl4.string(channel(1236).t["ETE/oC"]);
     obj2[4] = function onConfirm() {
       try {
-        outer1_1(outer1_2[8]).closePrivateChannel(channel.id);
+        closure_1_1(closure_1_2[8]).closePrivateChannel(channel.id);
       } catch (err) {
-        const intl = channel(outer1_2[5]).intl;
-        outer1_1(outer1_2[9]).sendBotMessage(channel.id, intl.string(channel(outer1_2[5]).t["YOsuT/"]));
-        const obj2 = outer1_1(outer1_2[9]);
+        const intl = channel(closure_1_2[5]).intl;
+        closure_1_1(closure_1_2[9]).sendBotMessage(channel.id, intl.string(channel(closure_1_2[5]).t["YOsuT/"]));
+        const obj2 = closure_1_1(closure_1_2[9]);
       }
     };
     obj2.show(obj2);
@@ -72,6 +69,6 @@ obj.execute = function execute(arg0, channel) {
   }
 };
 const items = [obj];
-const result = require("TRUE_OPTION_NAME").fileFinishedImporting("modules/application_commands/native/ApplicationCommandBuiltIns.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandBuiltIns.tsx");
 
 export default items;

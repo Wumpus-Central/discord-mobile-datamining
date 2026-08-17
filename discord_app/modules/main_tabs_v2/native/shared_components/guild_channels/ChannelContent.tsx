@@ -1,44 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "hairlineWidth";
-import { isRoleRequired } from "../../../../channel/isRoleRequired.tsx";
-import { SubscriptionGatedChannelIcon } from "../../../../guild_role_subscriptions/native/premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
-import { ChannelTitle } from "ChannelTitle.tsx";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
+import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15380 */;
+import _modDef15885 from "module_15885" /* 15885 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function ChannelContentComponent(arg0) {
-  let channel;
-  let connected;
-  let isSubscriptionGated;
-  let lastMessageTimestampString;
-  let layout;
-  let locked;
-  let mentionBadge;
-  let mentionCount;
-  let muted;
-  let name;
-  let needSubscriptionToAccess;
-  let resolvedUnreadSetting;
-  let subtitle;
-  let unread;
   ({ subtitle, resolvedUnreadSetting, locked, lastMessageTimestampString, channel, layout, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, muted, connected, needSubscriptionToAccess } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = getLayoutStyles;
   let tmp10Result = null != channel;
   const layoutStyles = obj.getLayoutStyles(layout);
   if (tmp10Result) {
     if (!locked) {
-      locked = isRoleRequired(channel);
+      locked = isRoleRequiredDefault(channel);
     }
     tmp10Result = locked;
   }
@@ -58,7 +40,7 @@ function ChannelContentComponent(arg0) {
   if (isValidElementResult) {
     str = "space-between";
   }
-  const obj1 = { style: items, children: null };
+  obj1 = { style: items, children: null };
   items[1] = { justifyContent: str };
   let num = 0;
   if (tmp10Result2) {
@@ -72,7 +54,7 @@ function ChannelContentComponent(arg0) {
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
   obj3[5] = layout;
-  const items1 = [closure_6(ChannelTitle, obj3), ];
+  const items1 = [closure_6(_modDef15885, obj3), ];
   let tmp12Result = tmp10Result;
   if (!tmp10Result) {
     tmp12Result = isNSFWResult;
@@ -106,7 +88,7 @@ function ChannelContentComponent(arg0) {
     if (isSubscriptionGated) {
       const obj8 = { locked: null, isInMainTabsExperiment: true };
       obj8[0] = needSubscriptionToAccess;
-      isSubscriptionGated = tmp10(SubscriptionGatedChannelIcon, obj8);
+      isSubscriptionGated = tmp10(SubscriptionGatedChannelIconDefault, obj8);
     }
     items3[2] = isSubscriptionGated;
     obj4[1] = items3;
@@ -178,7 +160,7 @@ if (set.isAndroid()) {
 }
 createCacheKey[2] = num2;
 createCacheKey[6] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelContent.tsx");
 
 export const renderChannelContent = function renderChannelContent(arg0) {

@@ -1,30 +1,26 @@
 // discord_app/modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx
-import importAllResult from "getSystemLocale";
-import get_ActivityIndicator from "useShowConnectedUserLimit";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import { jsx } from "StageIcon";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, Pressable: c5 } = get_ActivityIndicator);
-({ NOOP: metroImportAll, Permissions: c9 } = ME);
+({ NOOP: closure_8, Permissions: c9 } = ME);
 let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
-  let obj = { borderRadius: Themes.radii.xxl, paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4, marginVertical: -Themes.space.PX_4, backgroundColor: Themes.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, minHeight: 28, justifyContent: "center", elevation: null, shadowRadius: 4, shadowOffset: null, shadowColor: null, shadowOpacity: null, borderColor: null, borderWidth: 1 };
+  let obj = { borderRadius: ThemesDefault.radii.xxl, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, marginVertical: -ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, minHeight: 28, justifyContent: "center", elevation: null, shadowRadius: 4, shadowOffset: null, shadowColor: null, shadowOpacity: null, borderColor: null, borderWidth: 1 };
   let num = 1;
   if (arg0) {
     num = 0;
   }
   obj[7] = num;
   obj[9] = { width: 0, height: 1 };
-  obj[10] = Themes.colors.BLACK;
+  obj[10] = ThemesDefault.colors.BLACK;
   let num2 = 0.14;
   if (arg1) {
     num2 = 0.08;
@@ -38,8 +34,8 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   obj[12] = str;
   obj = { tintColor: tmp(712).colors.WHITE };
   obj[2] = obj;
-  obj[3] = { tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
-  const obj1 = { tintColor: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj[3] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   let num3 = 0;
   if (obj5.isAndroid()) {
     num3 = -2;
@@ -48,8 +44,6 @@ let closure_11 = createCacheKey.createStyles((arg0, arg1) => {
   return obj;
 });
 const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel) {
-  let noIcon;
-  let small;
   channel = channel.channel;
   let voiceStates = channel.voiceStates;
   if (voiceStates === undefined) {
@@ -63,19 +57,19 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
   const tmp = voiceStates(8502)();
   let obj = channel(1363);
   let joinButtonText = callback(tmp, obj.isThemeLight(voiceStates(4310)()));
-  let obj1 = channel(8675);
+  obj1 = channel(8675);
   const isConnectedToVoiceChannel = obj1.useIsConnectedToVoiceChannel(channel);
   let obj2 = channel(647);
-  const items = [getUncachedChannelPermissions];
-  const stateFromStores = obj2.useStateFromStores(items, () => !outer1_6.can(outer1_9.CONNECT, channel));
+  const items = [closure_6];
+  const stateFromStores = obj2.useStateFromStores(items, () => !closure_1_6.can(closure_1_9.CONNECT, channel));
   let obj3 = channel(6708);
   const stageParticipantsCount = obj3.useStageParticipantsCount(channel.id, channel(6703).StageChannelParticipantNamedIndex.AUDIENCE);
   const isGuildStageVoiceResult = channel.isGuildStageVoice();
   const tmp2 = voiceStates(4310)();
   const obj5 = channel(4988);
   let tmp3Result = tmp3(647);
-  const items1 = [updateVoiceState];
-  const stateFromStores1 = tmp3Result.useStateFromStores(items1, () => outer1_7.hasVideo(channel.id));
+  const items1 = [closure_7];
+  const stateFromStores1 = tmp3Result.useStateFromStores(items1, () => closure_1_7.hasVideo(channel.id));
   const sum = stageParticipantsCount + voiceStates.length;
   const items2 = [voiceStates];
   const memo = importAllResult.useMemo(() => {
@@ -169,6 +163,6 @@ const memoResult = importAllResult.memo(function VocalChannelJoinButton(channel)
     }
   }
 });
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/VocalChannelJoinButton.tsx");
 
 export default memoResult;

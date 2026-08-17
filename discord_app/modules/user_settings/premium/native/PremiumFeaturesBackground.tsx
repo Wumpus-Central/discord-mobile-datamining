@@ -1,21 +1,21 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
-import "noop";
-import { Gradients } from "items";
-import { PremiumTypes } from "GuildFeatures";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import { Gradients } from "items" /* 7403 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
+noopAll;
 createCacheKey = { cardContainer: null };
-createCacheKey = { display: "flex", borderRadius: require("Themes").radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
+createCacheKey = { display: "flex", borderRadius: ThemesDefault.radii.lg, flexDirection: "column", justifyContent: "space-between", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("GuildFeatures").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesBackground.tsx");
 
 export default function PremiumFeaturesBackground(opacity) {
-  let children;
-  let style;
   let num = opacity.opacity;
   if (num === undefined) {
     num = 1;
@@ -30,16 +30,16 @@ export default function PremiumFeaturesBackground(opacity) {
   let mapped = PREMIUM_TIER_0;
   if (num < 1) {
     mapped = PREMIUM_TIER_0.map((arg0) => {
-      const obj = outer1_1(outer1_2[6])(arg0);
-      return outer1_1(outer1_2[6])(arg0).alpha(num).hex();
+      const obj = closure_1_1(closure_1_2[6])(arg0);
+      return closure_1_1(closure_1_2[6])(arg0).alpha(num).hex();
     });
   }
   let obj = { style: items, colors: mapped, start: null, end: null };
-  items = [createCacheKey().cardContainer, style];
-  const tmp2 = createCacheKey();
+  items = [callback().cardContainer, style];
+  const tmp2 = callback();
   obj[2] = num(691).HorizontalGradient.START;
   obj[3] = num(691).HorizontalGradient.END;
   const merged1 = Object.assign(merged);
   obj.children = children;
-  return jsx(LinearGradient, { style: items, colors: mapped, start: null, end: null });
+  return jsx(LinearGradientDefault, { style: items, colors: mapped, start: null, end: null });
 };

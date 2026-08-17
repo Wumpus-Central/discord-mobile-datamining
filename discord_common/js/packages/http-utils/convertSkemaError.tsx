@@ -1,6 +1,8 @@
 // discord_common/js/packages/http-utils/convertSkemaError.tsx
+import set from "set" /* 2 */;
+
 const _errors = "_errors";
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/http-utils/convertSkemaError.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/convertSkemaError.tsx");
 
 export const convertSkemaError = function convertSkemaError(errors) {
   const obj = {};

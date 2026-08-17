@@ -1,37 +1,29 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TwinButtons } from "../../../../../design/components/experimental/native.tsx";
-import { SolidCutout } from "../../../../../design/components/Icon/native/ClipView.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import SolidCutoutDefault from "SolidCutout" /* 8402 */;
+import TwinButtons from "TwinButtons" /* 8811 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const md = require("getIconSize").ICON_SIZE.md;
-const result = (require("Themes").space.PX_32 - md) / 2;
-const TEXT_DEFAULT = require("Themes").colors.TEXT_DEFAULT;
+const result = (ThemesDefault.space.PX_32 - md) / 2;
+const TEXT_DEFAULT = ThemesDefault.colors.TEXT_DEFAULT;
 let obj = { shape: require("SolidCutout").CutoutShape.Circle, x: md - 8 - 4, y: -4, size: 16 };
 let items = [obj];
-obj = { container: null, label: null, dot: null };
-obj[0] = { borderRadius: require("Themes").modules.button.BORDER_RADIUS, marginHorizontal: require("Themes").space.PX_4, flexDirection: "column", alignItems: "center", padding: result };
-createCacheKey = { marginTop: require("Themes").space.PX_4 };
+obj = { container: { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, marginHorizontal: ThemesDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result }, label: null, dot: null };
+createCacheKey = { marginTop: ThemesDefault.space.PX_4 };
 obj[1] = createCacheKey;
-let obj1 = { borderRadius: require("Themes").modules.button.BORDER_RADIUS, marginHorizontal: require("Themes").space.PX_4, flexDirection: "column", alignItems: "center", padding: result };
-obj[2] = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: require("Themes").radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
+let obj1 = { borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, marginHorizontal: ThemesDefault.space.PX_4, flexDirection: "column", alignItems: "center", padding: result };
+obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: ThemesDefault.radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: require("Themes").radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_NOTIFICATION, borderRadius: ThemesDefault.radii.round, height: 8, width: 8, position: "absolute", right: 0, top: 0 };
 const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) => {
-  let IconComponent;
-  let accessibilityLabel;
-  let label;
-  let onPress;
-  let showRedDot;
   ({ accessibilityLabel, label, showRedDot } = arg0);
   ({ onPress, IconComponent } = arg0);
   if (showRedDot === undefined) {
@@ -46,8 +38,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
     obj = { cutouts: null, children: null };
     obj[0] = items;
     obj[1] = tmp3;
-    items = [tmp2(SolidCutout, obj), ];
-    const obj1 = { style: null };
+    items = [tmp2(SolidCutoutDefault, obj), ];
+    obj1 = { style: null };
     obj1[0] = tmp.dot;
     items[1] = tmp2(View, obj1);
     obj[0] = items;
@@ -60,8 +52,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
     obj2[0] = intl.string(getSystemLocale.t.y2b7CA);
     tmp10 = obj2;
   }
-  const obj3 = { ref, style: tmp.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp10, onPress, hitSlop: null, children: null };
-  obj3[6] = Themes.space.PX_8;
+  const obj3 = { ref, style: tmp.container, accessibilityRole: "button", accessibilityLabel, accessibilityValue: tmp10, onPress, hitSlop: ThemesDefault.space.PX_8, children: null };
   const items1 = [tmp4, ];
   const obj4 = { style: tmp.label, variant: "text-xs/semibold", color: "text-default", maxFontSizeMultiplier: 2, children: null };
   if (label == null) {
@@ -72,6 +63,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((arg0, ref) =
   obj3[7] = items1;
   return callback2(TwinButtons.PressableScale, obj3);
 }));
-const result1 = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
+const result1 = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenNavIcon.tsx");
 
 export default memoResult;

@@ -1,11 +1,17 @@
 // discord_app/modules/quests/QuestConstants.tsx
-import sendRequest from "sendRequest";
-import apply from "apply";
-import set from "Quests";
+import setDefault from "set" /* 687 */;
+import QuestVariants from "QuestVariants" /* 6717 */;
+import Quests from "Quests" /* 6718 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
+import set4 from "set" /* 6723 */;
+import DismissibleQuestContentFlags from "DismissibleQuestContentFlags" /* 6724 */;
+import sendRequest from "sendRequest" /* 530 */;
+import apply from "apply" /* 12 */;
+import set from "set" /* 2 */;
 
-const items = [require("QuestVariants").QuestVariants.NITRO_2_POINT_0_CTA, require("QuestVariants").QuestVariants.ORBS_MULTIPLIER_QUEST, require("QuestVariants").QuestVariants.XBOX_GAME_PASS_QUEST];
+const items = [QuestVariants.QuestVariants.NITRO_2_POINT_0_CTA, QuestVariants.QuestVariants.ORBS_MULTIPLIER_QUEST, QuestVariants.QuestVariants.XBOX_GAME_PASS_QUEST];
 let set = new Set(items);
-const result = require("set").Millis.MINUTE * require("Quests").Quests.ConsecutiveHeartbeatPeriodMinutes;
+const result = setDefault.Millis.MINUTE * Quests.Quests.ConsecutiveHeartbeatPeriodMinutes;
 sendRequest = sendRequest.getAPIBaseURL();
 if (-1 !== sendRequest.indexOf("localhost")) {
   const _HermesInternal = HermesInternal;
@@ -14,12 +20,12 @@ if (-1 !== sendRequest.indexOf("localhost")) {
   str2 = "https://cdn.discordapp.com/";
 }
 const text = `${str2}quests/`;
-const items1 = [require("QuestsVisibleMessagesChangedSource").AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA, require("QuestsVisibleMessagesChangedSource").AdPlacement.MOBILE_HOME_DOCK_AREA, require("QuestsVisibleMessagesChangedSource").AdPlacement.QUEST_HOME_BANNER_DESKTOP, require("QuestsVisibleMessagesChangedSource").AdPlacement.QUEST_HOME_MOBILE_CAROUSEL, require("QuestsVisibleMessagesChangedSource").AdPlacement.VIDEO_MODAL_MOBILE];
-const items2 = [require("set").FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_XBOX, require("set").FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, require("set").FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items1 = [QuestsVisibleMessagesChangedSource.AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA, QuestsVisibleMessagesChangedSource.AdPlacement.MOBILE_HOME_DOCK_AREA, QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_BANNER_DESKTOP, QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL, QuestsVisibleMessagesChangedSource.AdPlacement.VIDEO_MODAL_MOBILE];
+const items2 = [set4.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set4.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set4.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 const set1 = new Set(items1);
-const items3 = [require("set").FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_XBOX, require("set").FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, require("set").FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items3 = [set4.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set4.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set4.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 const set2 = new Set(items2);
-const items4 = [require("set").FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, require("set").FirstPartyQuestTaskTypes.PLAY_ON_XBOX, require("set").FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, require("set").FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
+const items4 = [set4.FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP, set4.FirstPartyQuestTaskTypes.PLAY_ON_XBOX, set4.FirstPartyQuestTaskTypes.PLAY_ON_PLAYSTATION, set4.FirstPartyQuestTaskTypes.PLAY_ACTIVITY];
 const set3 = new Set(items3);
 let obj = { VIDEO: "task_video", PLAY: "task_play" };
 obj = { VIRTUAL_CURRENCY: "reward_virtual_currency", COLLECTIBLE: "reward_collectible", IN_GAME: "reward_in_game" };
@@ -42,8 +48,8 @@ const sorted = entries.sort((arg0, arg1) => {
 const result1 = set.fileFinishedImporting("modules/quests/QuestConstants.tsx");
 
 export const QuestsExperimentLocations = { ACTIVITY_PANEL: "quests_bar_activity_panel", QUESTS_MANAGER: "quests_manager", QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER: "quests_console_optimistic_updates_manager", USER_SETTINGS_GIFT_INVENTORY: "user_settings_gift_inventory", USER_SETTINGS_SEARCH_GIFT_INVENTORY: "user_settings_search_gift_inventory", USE_QUESTS: "use_quests", STREAM_SOURCE_SELECT: "stream_source_select", MEMBERS_LIST: "members_list", QUESTS_BAR: "quests_bar", QUESTS_BAR_MOBILE: "quests_bar_mobile", REWARD_CODE_MODAL: "reward_code_modal", INGAME_REWARD_MODAL: "ingame_reward_modal", INGAME_CONNECTION_MODAL: "ingame_connection_modal", COLLECTIBLE_REWARD_MODAL: "collectible_reward_modal", ORBS_REWARD_MODAL: "orbs_reward_modal", QUESTS_MINOR_REWARD_CAPPING_CONFIG: "QUESTS_MINOR_REWARD_CAPPING_CONFIG", QUESTS_CARD: "quests_card", QUESTS_STORE: "quests_store", QUEST_CHANNEL_CALL_HEADER: "quests_channel_call_header", QUEST_HOME_DESKTOP: "quest_home_desktop", QUEST_HOME_HERO_SHELF_DESKTOP: "quest_home_hero_shelf_desktop", QUEST_HOME_DEFAULT_BANNER: "quest_home_default_banner", QUEST_HOME_MOBILE: "quest_home_mobile", QUEST_PROGRESS_BAR: "quest_progress_bar", EMBED_MOBILE: "embed_mobile", EMBED_DESKTOP: "embed_desktop", QUEST_CONTEXT_MENU: "context_menu", CODED_LINK: "coded_link", QUEST_DISCLOSURE_MODAL: "quest_disclosure_modal", DISCOVERY_SIDEBAR: "discovery_sidebar", DISCOVERY_COMPASS: "discovery_compass", BADGE: "badge", COLLECTIBLES_SHOP_HEADER_BAR: "collectibles_shop_header_bar", ORBS_ANNOUNCEMENT_MODAL: "orbs_announcement_modal", CONFLICT_CHECKS: "conflict_checks", VIDEO_MODAL: "video_modal", VIDEO_MODAL_MOBILE: "video_modal_mobile", GAME_WIDGETS_POPOVER: "game_widgets_popover", PRIVATE_CHANNELS_LIST: "private_channels_list", INTERNAL_TOOLING: "internal_tooling", QUEST_HOME_MOVED_CALLOUT: "quest_home_moved_callout", IN_APP_NAVIGATION: "in_app_navigation", QUEST_DEEP_LINK_UTIL: "quest_deep_link_util", YOU_TAB_PROFILE_HEADER: "you_tab_profile_header", QUEST_INSTRUCTIONS: "quest_instructions", QUEST_ACTIVITY_BOTTOM_SHEET: "quest_activity_bottom_sheet", QUEST_PRIMARY_CTA: "quest_primary_cta", QUEST_ACTIVITY_HEADER: "quest_activity_header", QUEST_ACTIVITY_UNENROLLED_MODAL: "quest_activity_unenrolled_modal", NITRO_HOME_MARKETING: "nitro_home_marketing", NITRO_HOME_TAB: "nitro_home_tab", QUEST_ORB_MULTIPLIER_TAB_TOOLTIP: "quest_orb_multiplier_tab_tooltip", PLAY_QUEST_CONNECTION_MODAL: "play_quest_connection_modal" };
-export const DismissibleQuestContentFlags = require("DismissibleQuestContentFlags").DismissibleQuestContentFlags;
-export const QuestVariants = require("QuestVariants").QuestVariants;
+export const DismissibleQuestContentFlags = DismissibleQuestContentFlags.DismissibleQuestContentFlags;
+export const QuestVariants = QuestVariants.QuestVariants;
 export const NitroQuestVariants = set;
 export const QUESTS_SETTINGS_SECTION = "inventory";
 export const CONSECUTIVE_HEARTBEAT_PERIOD_MS = result;

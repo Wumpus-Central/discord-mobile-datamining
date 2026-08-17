@@ -1,55 +1,43 @@
 // discord_app/modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx
-import DiscordTag from "DiscordTag";
-import { View } from "ShieldUserIcon";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import sortActivity from "sortActivity";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "UserIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "sortActivity" /* 4559 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c10;
-let c9;
-let unpackModuleId;
 const require = arg1;
 ({ Fonts, DEFAULT_ROLE_COLOR_HEX: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { name: null, discriminator: null, roleCountContainer: null, roleCountText: null };
-createCacheKey = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12, lineHeight: 16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: require("Themes").colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
+createCacheKey[1] = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", flexGrow: 1, alignItems: "center", justifyContent: "flex-end", marginRight: 12 };
 createCacheKey[3] = { paddingRight: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
-const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { color: ThemesDefault.colors.TEXT_MUTED, fontFamily: Fonts.PRIMARY_MEDIUM, fontSize: 12 };
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/components/MentionableSelectComponentActionSheet.tsx");
 
 export default function MentionableSelectComponentActionSheet(selectionActionComponent) {
-  let allowEmpty;
-  let containerId;
-  let isSelected;
-  let labelComponent;
-  let onPressOptionItem;
-  let onSubmit;
-  let options;
-  let setQuery;
-  let submitSelection;
   selectionActionComponent = selectionActionComponent.selectionActionComponent;
   const channelId = selectionActionComponent.channelId;
   const guildId = selectionActionComponent.guildId;
   let React;
   let guild;
-  let createGuildRoleRecordFromRust;
+  closure_5 = undefined;
   ({ labelComponent, containerId, onSubmit, allowEmpty } = selectionActionComponent);
-  React = createCacheKey();
+  React = callback2();
   guild = guild.getGuild(guildId);
   let id;
   if (guild != null) {
     id = guild.id;
   }
-  createGuildRoleRecordFromRust = channelId(guildId[10])(id, selectionActionComponent(tmp3[11]).MIN_REREQUEST_TIME);
+  closure_5 = channelId(guildId[10])(id, selectionActionComponent(tmp3[11]).MIN_REREQUEST_TIME);
   let items = [selectionActionComponent, channelId];
   const callback = React.useCallback((arg0) => selectionActionComponent(guildId[11]).queryMentionables(selectionActionComponent.type, arg0, channelId), items);
   let tmp7 = channelId(guildId[12])({ selectActionComponent: selectionActionComponent, containerId, guildId, queryOptions: callback, onSubmit });
@@ -57,23 +45,21 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
   const items1 = [guild, guildId];
   ({ options, isSelected, onPressOptionItem, submitSelection, setQuery } = tmp7);
   const callback1 = React.useCallback((type) => {
-    let customIconSrc;
-    let unicodeEmoji;
     if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.USER) {
-      const user = outer1_8.getUser(type.value);
+      const user = closure_1_8.getUser(type.value);
       if (null == user) {
         return null;
       } else {
-        const isMobileOnlineResult = outer1_7.isMobileOnline(user.id);
-        const status = outer1_7.getStatus(user.id);
+        const isMobileOnlineResult = closure_1_7.isMobileOnline(user.id);
+        const status = closure_1_7.getStatus(user.id);
         let obj = { user: null, isMobileOnline: null, isVROnline: null, status: null, guildId: null, size: null };
         obj[0] = user;
         obj[1] = isMobileOnlineResult;
-        obj[2] = outer1_7.isVROnline(user.id);
+        obj[2] = closure_1_7.isVROnline(user.id);
         obj[3] = status;
         obj[4] = guildId;
         obj[5] = tmp(tmp2[14]).AvatarSizes.XSMALL;
-        return outer1_10(tmp(tmp2[14]).Avatar, obj);
+        return closure_1_10(tmp(tmp2[14]).Avatar, obj);
       }
     } else if (type.type === tmp(tmp2[13]).SelectOptionType.ROLE) {
       if (null != guild) {
@@ -95,22 +81,22 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
               obj[0] = customIconSrc;
               tmp7 = obj;
             }
-            const obj1 = { source: null, unicodeEmoji: null, size: 24, name: null };
+            obj1 = { source: null, unicodeEmoji: null, size: 24, name: null };
             obj1[0] = tmp7;
             obj1[1] = unicodeEmoji;
             obj1[3] = role.name;
-            return outer1_10(channelId(tmp2[16]), obj1);
+            return closure_1_10(channelId(tmp2[16]), obj1);
           }
           let colorString;
           if (role != null) {
             colorString = role.colorString;
           }
           if (colorString == null) {
-            colorString = outer1_9;
+            colorString = closure_1_9;
           }
           const obj2 = { color: null };
           obj2[0] = colorString;
-          return outer1_10(tmp(tmp2[17]).ShieldUserIcon, obj2);
+          return closure_1_10(tmp(tmp2[17]).ShieldUserIcon, obj2);
         }
       }
       return null;
@@ -121,11 +107,11 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
     renderIcon: callback1,
     renderDescription(type) {
       if (type.type === selectionActionComponent(guildId[13]).SelectOptionType.USER) {
-        const user = outer1_8.getUser(type.value);
+        const user = closure_1_8.getUser(type.value);
         const obj = { user: null, usernameStyle: null, discriminatorStyle: null, nicknameStyle: null };
         obj[0] = user;
-        ({ name: obj[1], discriminator: obj[2], name: obj[3] } = DiscordTag);
-        return outer1_10(channelId(tmp[19]), obj);
+        ({ name: obj[1], discriminator: obj[2], name: obj[3] } = closure_3);
+        return closure_1_10(channelId(tmp[19]), obj);
       }
       tmp = guildId;
     },
@@ -145,13 +131,13 @@ export default function MentionableSelectComponentActionSheet(selectionActionCom
         }
         if (null != tmp7) {
           let obj = { style: null, children: null };
-          obj[0] = DiscordTag.roleCountContainer;
+          obj[0] = closure_3.roleCountContainer;
           obj = { style: null, variant: "text-sm/medium", color: "interactive-text-default", children: null };
-          obj[0] = DiscordTag.roleCountText;
+          obj[0] = closure_3.roleCountText;
           obj[3] = tmp7;
-          const items = [outer1_10(tmp(tmp2[20]).Text, obj), outer1_10(tmp(tmp2[21]).UserIcon, { size: "xs" })];
+          const items = [closure_1_10(tmp(tmp2[20]).Text, obj), closure_1_10(tmp(tmp2[21]).UserIcon, { size: "xs" })];
           obj[1] = items;
-          return outer1_11(guild, obj);
+          return closure_1_11(guild, obj);
         }
       }
     },

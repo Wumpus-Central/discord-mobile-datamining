@@ -1,29 +1,20 @@
 // discord_app/modules/premium/native/renderPremiumButtonText.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function PremiumText(basePlanId) {
-  let isCurrentPlan;
-  let isGift;
-  let product;
-  let style;
-  let text;
   ({ style, isCurrentPlan, isGift, product, text } = basePlanId);
-  const tmp = createCacheKey();
-  let obj = getPremiumPlanItem;
+  const tmp = callback2();
+  let obj = getPremiumPlanItemDefault;
   const intervalType = obj.getInterval(basePlanId.basePlanId).intervalType;
   let combined = null;
   if (intervalType === constants.YEAR) {
@@ -43,7 +34,7 @@ function PremiumText(basePlanId) {
     if (product != null) {
       title = product.title;
     }
-    const obj1 = { product: null, description: null };
+    obj1 = { product: null, description: null };
     obj1[0] = title;
     obj1[1] = text;
     obj[2] = intl3.formatToPlainString(getSystemLocale.t.E0lS2r, obj1);
@@ -98,15 +89,16 @@ function PremiumText(basePlanId) {
     }
   }
 }
+noopAll;
 ({ PREMIUM_YEARLY_DISCOUNT_PERCENT: c4, PRICE_PLACEHOLDER: c5, SubscriptionIntervalTypes: closure_6 } = GuildFeatures);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { discount: null, premiumText: null };
 createCacheKey = { borderWidth: 1, borderColor: null, borderRadius: 2, marginLeft: 4, paddingHorizontal: 2 };
-createCacheKey[1] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.WHITE, 0.3);
+createCacheKey[1] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.3);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("GuildFeatures").fileFinishedImporting("modules/premium/native/renderPremiumButtonText.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/premium/native/renderPremiumButtonText.tsx");
 
 export default function renderPremiumText(arg0) {
   const merged = Object.assign(arg0);

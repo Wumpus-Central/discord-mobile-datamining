@@ -1,33 +1,32 @@
 // discord_app/modules/application_commands/ApplicationCommandIndexStore.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import 00038__ from "../../../_runtime/metro/00038__.js";
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
-import _getSystemLocale from "_getSystemLocale";
-import closure_9 from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_14 from "handleUserSettingsProtoStoreChange";
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
-import ME from "ME";
-import { Store } from "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import initializeDefault from "initialize" /* 589 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
+import computePermissions from "computePermissions" /* 8453 */;
+import ScoreMethod from "ScoreMethod" /* 8456 */;
+import getOptionValue from "getOptionValue" /* 8458 */;
+import computeAllowedForUser from "computeAllowedForUser" /* 9556 */;
+import computeAllowedForUserAll from "computeAllowedForUser" /* 9556 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "noop" /* 19 */;
+import closure_7 from "handleUserSettingsProtoStoreChange" /* 8449 */;
+import closure_8 from "_getSystemLocale" /* 1994 */;
+import closure_9 from "fetchFingerprint" /* 1218 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "trackCommunicationDisabled" /* 1990 */;
+import closure_12 from "createGuildRecordFromRust" /* 1910 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "handleUserSettingsProtoStoreChange" /* 8450 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getOptionValue } from "ApplicationCommandBuiltIns.tsx";
-import { ScoreMethod } from "ApplicationCommandQueryTypes.tsx";
-import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
-import { computePermissions } from "CommandPermissionContext.tsx";
-import { computeAllowedForUser } from "CommandPermissionUtils.tsx";
 
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let require = arg1;
+require = arg1;
 function getIndexKey(type) {
   type = type.type;
   if ("guild" === type) {
@@ -96,9 +95,9 @@ function handleReset() {
 function _getOrFetchApplicationCommandIndexForTarget() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
     return (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -126,20 +125,20 @@ function _getOrFetchApplicationCommandIndexForTarget() {
               obj[0] = arg1;
               return obj;
             } else {
-              let fetchFingerprint = tmp5;
-              let _slicedToArray = tmp2;
-              let c0;
-              const tmp34 = outer1_29(c0);
-              c0 = tmp34;
-              let closure_1 = tmp36;
-              if (outer1_37.indices[tmp34] == null) {
-                closure_1 = outer1_25;
+              closure_5 = tmp5;
+              closure_4 = tmp2;
+              closure_0 = undefined;
+              const tmp34 = closure_1_29(closure_0);
+              closure_0 = tmp34;
+              closure_1 = tmp36;
+              if (closure_1_37.indices[tmp34] == null) {
+                closure_1 = closure_1_25;
               }
-              if (outer1_42(closure_1)) {
+              if (closure_1_42(closure_1)) {
                 c6 = 1;
                 c7 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_33(tmp32);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_33(tmp32);
                 return obj1;
               } else if (tmp23.fetchState.fetching) {
                 c6 = 2;
@@ -153,7 +152,7 @@ function _getOrFetchApplicationCommandIndexForTarget() {
                 obj3[0] = tmp23;
                 return obj3;
               }
-              tmp32 = c0;
+              tmp32 = closure_0;
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
@@ -165,8 +164,8 @@ function _getOrFetchApplicationCommandIndexForTarget() {
               obj4[0] = arg1;
               return obj4;
             } else {
-              let closure_3 = tmp18;
-              if (closure_37.indices[c0] == null) {
+              closure_3 = tmp18;
+              if (closure_37.indices[closure_0] == null) {
                 closure_3 = closure_25;
               }
               c7 = 3;
@@ -183,8 +182,8 @@ function _getOrFetchApplicationCommandIndexForTarget() {
             obj6[0] = arg1;
             return obj6;
           } else {
-            let closure_2 = tmp10;
-            if (closure_37.indices[c0] == null) {
+            closure_2 = tmp10;
+            if (closure_37.indices[closure_0] == null) {
               closure_2 = closure_25;
             }
             c7 = 3;
@@ -199,7 +198,7 @@ function _getOrFetchApplicationCommandIndexForTarget() {
       }
     })();
   });
-  const _getOrFetchApplicationCommandIndexForTarget = tmp;
+  closure_32 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -221,9 +220,9 @@ function updateIndexAndFetchApplicationCommandIndex(target) {
 function _updateIndexAndFetchApplicationCommandIndex() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -253,15 +252,15 @@ function _updateIndexAndFetchApplicationCommandIndex() {
             } else {
               const _AbortController = AbortController;
               const abortController = new AbortController();
-              const future = new callback(outer1_3[14]).Future();
-              const obj1 = { fetchState: null };
+              const future = new callback(closure_1_3[14]).Future();
+              obj1 = { fetchState: null };
               const obj2 = { fetching: true, abort: null, promise: null };
               obj2[1] = abortController;
               obj2[2] = future.promise;
               obj1[0] = obj2;
-              outer1_30(callback, obj1, true);
-              const applicationCommandIndex = callback(outer1_3[15]).fetchApplicationCommandIndex(callback, abortController);
-              const obj7 = callback(outer1_3[15]);
+              closure_1_30(callback, obj1, true);
+              const applicationCommandIndex = callback(closure_1_3[15]).fetchApplicationCommandIndex(callback, abortController);
+              const obj7 = callback(closure_1_3[15]);
               c2 = 1;
               c1 = 1;
               const obj3 = { value: null, done: false };
@@ -287,7 +286,7 @@ function _updateIndexAndFetchApplicationCommandIndex() {
       }
     })();
   });
-  const _updateIndexAndFetchApplicationCommandIndex = tmp;
+  closure_34 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -297,8 +296,6 @@ function _updateIndexAndFetchApplicationCommandIndex() {
   return applyArgumentsResult;
 }
 function handleFetchSuccess(arg0, flag) {
-  let index;
-  let target;
   if (flag === undefined) {
     flag = false;
   }
@@ -344,7 +341,7 @@ function handleFetchSuccess(arg0, flag) {
           let tmp19 = id;
           let tmp20 = dependencyMap;
           let tmp21 = dependencyMap;
-          let obj1 = id(5245);
+          obj1 = id(5245);
           let tmp22 = toApplication;
           let tmp23 = nextResult;
           let tmp24 = obj;
@@ -377,12 +374,11 @@ function handleFetchSuccess(arg0, flag) {
     if (tmp32) {
       const items = [];
       HermesBuiltin.arraySpread(set, 0);
-      const membersById = showTooManyUserGuildsAlert.requestMembersById(target.guildId, items);
-      const obj5 = showTooManyUserGuildsAlert;
+      const membersById = showTooManyUserGuildsAlertDefault.requestMembersById(target.guildId, items);
+      const obj5 = showTooManyUserGuildsAlertDefault;
     }
     const application_commands = index.application_commands;
     const applicationCommands = id(5245).buildApplicationCommands(application_commands.map((description_default) => {
-      let name_default;
       const obj = {};
       const merged = Object.assign(description_default);
       let str = description_default.description_default;
@@ -401,7 +397,7 @@ function handleFetchSuccess(arg0, flag) {
       const options = description_default.options;
       let mapped;
       if (options != null) {
-        mapped = options.map(outer1_44);
+        mapped = options.map(closure_1_44);
       }
       if (mapped == null) {
         mapped = [];
@@ -409,7 +405,7 @@ function handleFetchSuccess(arg0, flag) {
       obj.options = mapped;
       let tmp4;
       if (null != description_default.permissions) {
-        tmp4 = outer1_46(description_default.permissions, id);
+        tmp4 = closure_1_46(description_default.permissions, id);
       }
       obj.permissions = tmp4;
       if (description_default.description !== description_default.description_default) {
@@ -430,8 +426,8 @@ function handleFetchSuccess(arg0, flag) {
         let tmp55 = nextResult1;
         tmp51.commands[tmp49.id] = tmp49;
       } else {
-        let tmp52 = tmp4;
-        let errorResult = tmp4.error("Command has no matching application");
+        let tmp52 = logger;
+        let errorResult = logger.error("Command has no matching application");
       }
       continue;
     }
@@ -466,18 +462,18 @@ function updateGuildBotMembers(guildId, members) {
   if (applicationCommandIndexStore.indices[applicationId] != null) {
     result = tmp.result;
   }
-  const require = result;
+  require = result;
   if (null == result) {
     return false;
   } else {
-    let c1 = false;
+    c1 = false;
     const item = members.forEach((user) => {
       user = user.user;
       if (user.bot) {
         if (null != closure_0.sectionIdsByBotId[user.id]) {
-          callback(outer1_3[19])(null != closure_0.sections[tmp2], "Bot has no matching index section");
-          callback(outer1_3[19])(null != closure_0.sections[tmp2].descriptor.application, "Bot's index section has no application info");
-          let obj = result(outer1_3[16]);
+          callback(closure_1_3[19])(null != closure_0.sections[tmp2], "Bot has no matching index section");
+          callback(closure_1_3[19])(null != closure_0.sections[tmp2].descriptor.application, "Bot's index section has no application info");
+          let obj = result(closure_1_3[16]);
           obj = {};
           const merged = Object.assign(tmp4.descriptor.application);
           obj.bot = user;
@@ -497,8 +493,6 @@ function handleStaleUserIndex() {
   updateIndex({ type: "user" }, { serverVersion: closure_21 });
 }
 function useQueryState(type, commandTypes, allowFetch) {
-  let allowFetch3;
-  let applicationId;
   applicationId = type;
   allowFetch3 = commandTypes;
   let first2 = allowFetch;
@@ -507,7 +501,7 @@ function useQueryState(type, commandTypes, allowFetch) {
     channel = type.channel;
   }
   const permissionContext = applicationId(8453).usePermissionContext(channel, commandTypes.commandTypes);
-  let dependencyMap = permissionContext;
+  dependencyMap = permissionContext;
   let stateFromStores2 = tmp3;
   allowFetch = allowFetch.allowFetch;
   applicationId = type;
@@ -524,9 +518,9 @@ function useQueryState(type, commandTypes, allowFetch) {
   const items = [applicationCommandIndexStore];
   stateFromStoresObject = applicationId(589).useStateFromStoresObject(items, () => {
     if ("channel" === applicationId.type) {
-      let contextState = outer1_37.getContextState(tmp);
+      let contextState = closure_1_37.getContextState(tmp);
     } else {
-      contextState = outer1_37.getUserState();
+      contextState = closure_1_37.getUserState();
     }
     return contextState;
   });
@@ -549,9 +543,9 @@ function useQueryState(type, commandTypes, allowFetch) {
               if (channel != null) {
                 type = channel.type;
               }
-              let tmp19 = type === outer1_18.DM;
+              let tmp19 = type === closure_1_18.DM;
               if (tmp19) {
-                const user = outer1_13.getUser(channel.getRecipientId());
+                const user = closure_1_13.getUser(channel.getRecipientId());
                 let bot;
                 if (user != null) {
                   bot = user.bot;
@@ -563,12 +557,12 @@ function useQueryState(type, commandTypes, allowFetch) {
             tmp13 = tmp16;
           }
           if (tmp13) {
-            let obj1 = allowFetch3(698);
+            obj1 = allowFetch3(698);
             let obj = { miss: null, size: null };
             obj[0] = null == stateFromStoresObject.result;
             const _Object = Object;
-            obj[1] = Object.keys(outer1_37.indices).length;
-            obj1.track(outer1_17.APPLICATION_COMMAND_CACHE_FETCH, obj);
+            obj[1] = Object.keys(closure_1_37.indices).length;
+            obj1.track(closure_1_17.APPLICATION_COMMAND_CACHE_FETCH, obj);
             const result2 = stateFromStoresObject.result;
             let version;
             if (result2 != null) {
@@ -697,7 +691,7 @@ function useQueryState(type, commandTypes, allowFetch) {
   dependencyMap = tmp14[1];
   const obj5 = applicationId(589);
   const items6 = [applicationCommandIndexStore];
-  stateFromStores2 = applicationId(589).useStateFromStores(items6, () => outer1_37.getApplicationState(applicationId));
+  stateFromStores2 = applicationId(589).useStateFromStores(items6, () => closure_1_37.getApplicationState(applicationId));
   const items7 = [allowFetch3, applicationId, stateFromStores2, first2];
   const effect2 = stateFromStoresObject1.useEffect(() => {
     if (first2) {
@@ -754,20 +748,10 @@ function useQueryState(type, commandTypes, allowFetch) {
     }
     obj[9] = map;
     ({ sortOptions: obj[10], applicationId: obj[11], installOnDemand: obj[12] } = first2);
-    return outer1_40(obj);
+    return closure_1_40(obj);
   }, items8);
 }
 function queryIndex(allowApplicationCommands) {
-  let allowEmptySections;
-  let applicationStates;
-  let builtIns;
-  let contextState;
-  let permissionContext;
-  let singleApplicationId;
-  let text;
-  let tmp24;
-  let tmp25;
-  let userState;
   ({ permissionContext, contextState, userState, applicationStates, text, builtIns } = allowApplicationCommands);
   if (builtIns === undefined) {
     let arr = NONE;
@@ -793,7 +777,7 @@ function queryIndex(allowApplicationCommands) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let c2;
+  let obj;
   let formatted;
   if (text != null) {
     formatted = text.toLowerCase();
@@ -810,7 +794,7 @@ function queryIndex(allowApplicationCommands) {
     builtInCommands = [];
   }
   const items = [];
-  let obj = { permissionContext, query: formatted, splitQuery: parts, allowEmptySections, scoreMethod: NONE, installOnDemand: flag2 };
+  obj = { permissionContext, query: formatted, splitQuery: parts, allowEmptySections, scoreMethod: NONE, installOnDemand: flag2 };
   let result = contextState.result;
   let sections;
   if (result != null) {
@@ -981,7 +965,7 @@ function queryIndex(allowApplicationCommands) {
   }
   const sorted = items.sort((section, section2) => {
     if (sortOptions.applications.useScore) {
-      if (NONE === NONE(outer1_3[24]).ScoreMethod.APPLICATION_ONLY) {
+      if (NONE === NONE(closure_1_3[24]).ScoreMethod.APPLICATION_ONLY) {
         const first = section.data[0];
         let score;
         if (first != null) {
@@ -1006,13 +990,13 @@ function queryIndex(allowApplicationCommands) {
       }
     }
     if (sortOptions.applications.useFrecency) {
-      const scoreWithoutLoadingLatest = outer1_7.getScoreWithoutLoadingLatest(section.section.id);
-      const scoreWithoutLoadingLatest1 = outer1_7.getScoreWithoutLoadingLatest(section2.section.id);
+      const scoreWithoutLoadingLatest = closure_1_7.getScoreWithoutLoadingLatest(section.section.id);
+      const scoreWithoutLoadingLatest1 = closure_1_7.getScoreWithoutLoadingLatest(section2.section.id);
       if (scoreWithoutLoadingLatest !== scoreWithoutLoadingLatest1) {
         return scoreWithoutLoadingLatest1 - scoreWithoutLoadingLatest;
       }
     }
-    const collator = outer1_37.collator;
+    const collator = closure_1_37.collator;
     return collator.compare(section.section.name, section2.section.name);
   });
   if (builtInCommands.length > 0) {
@@ -1022,10 +1006,10 @@ function queryIndex(allowApplicationCommands) {
     }
   }
   const flatMapResult = items.flatMap((data) => {
-    let closure_0 = data;
+    closure_0 = data;
     data = data.data;
     return data.map((arg0) => {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(arg0);
       obj.section = data.section;
       return obj;
@@ -1052,7 +1036,7 @@ function queryIndex(allowApplicationCommands) {
       obj[1] = guild;
       tmp97 = obj;
     }
-    c2 = tmp97;
+    obj = tmp97;
     const sorted1 = flatMapResult.sort((score, score2) => {
       if (sortOptions.commands.useScore) {
         let num = score.score;
@@ -1068,17 +1052,17 @@ function queryIndex(allowApplicationCommands) {
         }
       }
       if (sortOptions.commands.useFrecency) {
-        const scoreWithoutLoadingLatest = outer1_14.getScoreWithoutLoadingLatest(c2, score);
-        const scoreWithoutLoadingLatest1 = outer1_14.getScoreWithoutLoadingLatest(c2, score2);
+        const scoreWithoutLoadingLatest = closure_1_14.getScoreWithoutLoadingLatest(obj, score);
+        const scoreWithoutLoadingLatest1 = closure_1_14.getScoreWithoutLoadingLatest(obj, score2);
         if (scoreWithoutLoadingLatest !== scoreWithoutLoadingLatest1) {
           return scoreWithoutLoadingLatest1 - scoreWithoutLoadingLatest;
         }
       }
-      const collator = outer1_37.collator;
+      const collator = closure_1_37.collator;
       return collator.compare(score.displayName, score2.displayName);
     });
   }
-  const obj1 = { commands: flatMapResult, descriptors: items.map((section) => section.section), sectionedCommands: items, loading: null };
+  obj1 = { commands: flatMapResult, descriptors: items.map((section) => section.section), sectionedCommands: items, loading: null };
   let fetching;
   if (contextState != null) {
     fetching = contextState.fetchState.fetching;
@@ -1106,16 +1090,6 @@ function queryIndex(allowApplicationCommands) {
   return obj1;
 }
 function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
-  let allowEmptySections;
-  let context;
-  let installOnDemand;
-  let isImpersonating;
-  let permissionContext;
-  let query;
-  let roleIds;
-  let scoreMethod;
-  let splitQuery;
-  let userId;
   ({ query, splitQuery, scoreMethod, permissionContext } = arg4);
   ({ context, userId, roleIds, isImpersonating } = permissionContext);
   let guild_id;
@@ -1125,7 +1099,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
   }
   let allowedForUser = null;
   if (null != guild_id) {
-    let obj = importAll(9556);
+    let obj = computeAllowedForUserAll;
     allowedForUser = obj.computeAllowedForUser(descriptor.permissions, context.guild_id, userId, roleIds, isImpersonating);
   }
   let guild_id1;
@@ -1134,8 +1108,8 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
   }
   let allowedForChannel = null;
   if (null != guild_id1) {
-    allowedForChannel = importAll(9556).computeAllowedForChannel(descriptor.permissions, context, context.guild_id);
-    const obj2 = importAll(9556);
+    allowedForChannel = computeAllowedForUserAll.computeAllowedForChannel(descriptor.permissions, context, context.guild_id);
+    const obj2 = computeAllowedForUserAll;
   }
   const items = [];
   const iter = builtInCommands[Symbol.iterator]();
@@ -1145,7 +1119,7 @@ function queryIndexSection(descriptor, builtInCommands, arg2, arg3, arg4) {
     let tmp16 = nextResult;
     let tmp18 = dependencyMap;
     let tmp19 = dependencyMap;
-    let obj3 = importAll(9556);
+    let obj3 = computeAllowedForUserAll;
     obj = { applicationAllowedForUser: null, applicationAllowedForChannel: null, commandBotId: null, isGuildInstalled: null, isUserInstalled: null };
     obj[0] = allowedForUser;
     obj[1] = allowedForChannel;
@@ -1292,10 +1266,6 @@ function toServerChoice(name_default) {
   return obj;
 }
 function toServerPermissions(permissions, id) {
-  let tmp10;
-  let tmp11;
-  let tmp20;
-  let tmp21;
   const items = [];
   if (null != permissions.user) {
     let obj = { type: null, id: null, permission: null };
@@ -1454,7 +1424,7 @@ function scoreCommand(untranslatedName) {
 }
 ({ BuiltInSectionId: closure_15, DISCOVERY_COMMANDS_FRECENCY_LIMIT: closure_16 } = TRUE_OPTION_NAME);
 ({ AnalyticEvents: closure_17, ChannelTypes: closure_18 } = ME);
-let closure_19 = new require("handleUserSettingsProtoStoreChange")("ApplicationCommandIndexStore");
+let closure_19 = new timestampDefault("ApplicationCommandIndexStore");
 let closure_20 = Symbol("currentUser");
 const SymbolResult = Symbol("stale");
 const SymbolResult1 = Symbol("current");
@@ -1464,6 +1434,7 @@ let closure_25 = Object.freeze({ serverVersion: SymbolResult, fetchState: { fetc
 let closure_26 = { sensitivity: "accent", numeric: true };
 let c27 = false;
 let closure_28 = [];
+const Store = initializeDefault.Store;
 class ApplicationCommandIndexStore extends Store {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -1471,17 +1442,17 @@ class ApplicationCommandIndexStore extends Store {
     map = new Map();
     applyArgumentsResult.applicationIndices = map;
     applyArgumentsResult.applicationIndicesVersion = 0;
-    applyArgumentsResult.oldLocale = scoreCommand.locale;
-    collator = new Intl.Collator(scoreCommand.locale, current);
+    applyArgumentsResult.oldLocale = closure_8.locale;
+    collator = new Intl.Collator(closure_8.locale, closure_26);
     applyArgumentsResult.collator = collator;
     return applyArgumentsResult;
   }
 }
 const prototype = ApplicationCommandIndexStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(_getSystemLocale);
-  this.waitFor(closure_14, handleUserSettingsProtoStoreChange, closure_9, ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, mergeGuildAvatar);
-  const items = [_getSystemLocale];
+  this.waitFor(closure_8);
+  this.waitFor(closure_14, closure_7, closure_9, closure_10, closure_11, closure_12, closure_13);
+  const items = [closure_8];
   this.syncWith(items, () => {
     locale = locale.locale;
     if (locale !== oldLocale.oldLocale) {
@@ -1614,7 +1585,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
     const userState = this.getUserState();
     const applicationState = this.getApplicationState(applicationId.applicationId);
     let applicationStates = this.getApplicationStates();
-    let obj1 = computePermissions;
+    obj1 = computePermissions;
     const permissionContext = obj1.buildPermissionContext(channel, commandTypes.commandTypes);
     let tmp11 = null == channel;
     let guild_id = channel;
@@ -1713,7 +1684,7 @@ prototype["query"] = function query(type, commandTypes, applicationId) {
         }
         flag3 = flag5;
       } else {
-        let obj2 = expandEventProperties;
+        let obj2 = expandEventPropertiesDefault;
         obj = { miss: null, size: null };
         obj[0] = null == contextState.result;
         const _Object = Object;
@@ -1791,14 +1762,14 @@ prototype["queryInstallOnDemandApp"] = function queryInstallOnDemandApp(arg0, id
     obj = { commandTypes: null };
     const items = [PermissionOverwriteType.ApplicationCommandType.CHAT];
     obj[0] = items;
-    const obj1 = { placeholderCount: 5, scoreMethod: null, applicationId: null, allowFetch: true };
+    obj1 = { placeholderCount: 5, scoreMethod: null, applicationId: null, allowFetch: true };
     obj1[1] = ScoreMethod.ScoreMethod.COMMAND_ONLY;
     obj1[2] = arg0;
     const query = this.query(obj, obj, obj1);
   }
 };
 ApplicationCommandIndexStore.displayName = "ApplicationCommandIndexStore";
-const applicationCommandIndexStore = new ApplicationCommandIndexStore(require("dispatcher"), {
+const applicationCommandIndexStore = new ApplicationCommandIndexStore(dispatcherDefault, {
   LOGOUT: handleReset,
   CONNECTION_OPEN: function handleConnectionOpen() {
     const values = Object.values(applicationCommandIndexStore.indices);
@@ -1813,9 +1784,9 @@ const applicationCommandIndexStore = new ApplicationCommandIndexStore(require("d
         let tmp2 = callback(item10005);
         continue;
       }
-      let closure_28 = [];
+      closure_28 = [];
     })();
-    let c27 = true;
+    c27 = true;
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function handleFetchRequest(target) {
     target = target.target;
@@ -1863,9 +1834,6 @@ const applicationCommandIndexStore = new ApplicationCommandIndexStore(require("d
     updateIndex(target.target, obj);
   },
   APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function handleStaleCommand(arg0) {
-    let applicationId;
-    let channelId;
-    let guildId;
     ({ applicationId, channelId, guildId } = arg0);
     let obj = applicationCommandIndexStore;
     if (!applicationCommandIndexStore.hasContextStateApplication({ applicationId, channelId, guildId })) {
@@ -1877,7 +1845,7 @@ const applicationCommandIndexStore = new ApplicationCommandIndexStore(require("d
       if (obj.hasApplicationState(applicationId)) {
         obj = { type: "application", applicationId: null };
         obj[1] = applicationId;
-        const obj1 = { serverVersion: null };
+        obj1 = { serverVersion: null };
         obj1[0] = closure_21;
         updateIndex(obj, obj1);
       }
@@ -2008,9 +1976,9 @@ let obj = {
         let tmp2 = callback(item10005);
         continue;
       }
-      let closure_28 = [];
+      closure_28 = [];
     })();
-    let c27 = true;
+    c27 = true;
   },
   APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function handleFetchRequest(target) {
     target = target.target;
@@ -2058,9 +2026,6 @@ let obj = {
     updateIndex(target.target, obj);
   },
   APPLICATION_COMMAND_EXECUTE_BAD_VERSION: function handleStaleCommand(arg0) {
-    let applicationId;
-    let channelId;
-    let guildId;
     ({ applicationId, channelId, guildId } = arg0);
     let obj = applicationCommandIndexStore;
     if (!applicationCommandIndexStore.hasContextStateApplication({ applicationId, channelId, guildId })) {
@@ -2072,7 +2037,7 @@ let obj = {
       if (obj.hasApplicationState(applicationId)) {
         obj = { type: "application", applicationId: null };
         obj[1] = applicationId;
-        const obj1 = { serverVersion: null };
+        obj1 = { serverVersion: null };
         obj1[0] = closure_21;
         updateIndex(obj, obj1);
       }
@@ -2186,8 +2151,8 @@ let obj = {
     return flag;
   }
 };
-let tmp4 = new require("handleUserSettingsProtoStoreChange")("ApplicationCommandIndexStore");
-let result = require("noop").fileFinishedImporting("modules/application_commands/ApplicationCommandIndexStore.tsx");
+let tmp4 = new timestampDefault("ApplicationCommandIndexStore");
+let result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandIndexStore.tsx");
 
 export default applicationCommandIndexStore;
 export const getOrFetchApplicationCommandIndexForTarget = function getOrFetchApplicationCommandIndexForTarget() {
@@ -2202,17 +2167,17 @@ export const getOrFetchApplicationCommandIndexForTarget = function getOrFetchApp
 };
 export const useContextIndexState = function useContextIndexState(arg0, arg1, arg2) {
   const _require = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_1 = arg1;
+  closure_2 = arg2;
   const tmp = callback(React.useState(true), 2);
   const first = tmp[0];
   callback = tmp[1];
   const items = [applicationCommandIndexStore];
   const stateFromStoresObject = _require(first[20]).useStateFromStoresObject(items, () => {
     if ("channel" === applicationId.type) {
-      let contextState = outer1_37.getContextState(tmp);
+      let contextState = closure_1_37.getContextState(tmp);
     } else {
-      contextState = outer1_37.getUserState();
+      contextState = closure_1_37.getUserState();
     }
     return contextState;
   });
@@ -2235,9 +2200,9 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
               if (channel != null) {
                 type = channel.type;
               }
-              let tmp19 = type === outer1_18.DM;
+              let tmp19 = type === closure_1_18.DM;
               if (tmp19) {
-                const user = outer1_13.getUser(channel.getRecipientId());
+                const user = closure_1_13.getUser(channel.getRecipientId());
                 let bot;
                 if (user != null) {
                   bot = user.bot;
@@ -2249,12 +2214,12 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
             tmp13 = tmp16;
           }
           if (tmp13) {
-            let obj1 = allowFetch3(698);
+            obj1 = allowFetch3(698);
             let obj = { miss: null, size: null };
             obj[0] = null == stateFromStoresObject.result;
             const _Object = Object;
-            obj[1] = Object.keys(outer1_37.indices).length;
-            obj1.track(outer1_17.APPLICATION_COMMAND_CACHE_FETCH, obj);
+            obj[1] = Object.keys(closure_1_37.indices).length;
+            obj1.track(closure_1_17.APPLICATION_COMMAND_CACHE_FETCH, obj);
             const result2 = stateFromStoresObject.result;
             let version;
             if (result2 != null) {
@@ -2323,15 +2288,15 @@ export const useContextIndexState = function useContextIndexState(arg0, arg1, ar
 };
 export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   let tmp = stateFromStoresObject(React.useState(true), 2);
   const first = tmp[0];
-  const dependencyMap = tmp[1];
+  dependencyMap = tmp[1];
   const items = [applicationCommandIndexStore];
   stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
-    let tmp = outer1_37.indices[closure_0];
+    let tmp = closure_1_37.indices[closure_0];
     if (tmp == null) {
-      tmp = outer1_25;
+      tmp = closure_1_25;
     }
     return tmp;
   });
@@ -2347,8 +2312,8 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
         obj = { miss: null, size: null };
         obj[0] = null == stateFromStoresObject.result;
         const _Object = Object;
-        obj[1] = Object.keys(outer1_37.indices).length;
-        obj.track(outer1_17.APPLICATION_COMMAND_CACHE_FETCH, obj);
+        obj[1] = Object.keys(closure_1_37.indices).length;
+        obj.track(closure_1_17.APPLICATION_COMMAND_CACHE_FETCH, obj);
         const result = stateFromStoresObject.result;
         let version;
         if (result != null) {
@@ -2381,10 +2346,10 @@ export const useGuildIndexState = function useGuildIndexState(arg0, arg1) {
 };
 export const useUserIndexState = function useUserIndexState(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const tmp = stateFromStoresObject(React.useState(true), 2);
   const first = tmp[0];
-  const dependencyMap = tmp[1];
+  dependencyMap = tmp[1];
   const items = [applicationCommandIndexStore];
   stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => authStore.getUserState());
   const items1 = [stateFromStoresObject, arg1, arg0, first];
@@ -2426,8 +2391,8 @@ export const useUserIndexState = function useUserIndexState(arg0, arg1) {
 };
 export const useDiscoveryState = function useDiscoveryState(type, arg1, commandTypes, includeFrecency) {
   const _require = type;
-  let closure_1 = arg1;
-  let closure_2 = includeFrecency;
+  closure_1 = arg1;
+  closure_2 = includeFrecency;
   const tmp = useQueryState(type, commandTypes, includeFrecency);
   const descriptors = tmp.descriptors;
   const commands = tmp.commands;
@@ -2449,12 +2414,12 @@ export const useDiscoveryState = function useDiscoveryState(type, arg1, commandT
   return loading.useMemo(() => {
     if (includeFrecency.includeFrecency) {
       if (0 !== topCommands.length) {
-        const found = commands.filter((id) => _getSystemLocale.includes(id.id));
+        const found = commands.filter((id) => closure_8.includes(id.id));
         const sorted = found.sort((arg0, arg1) => {
-          const scoreWithoutLoadingLatest = outer1_14.getScoreWithoutLoadingLatest(handleUserSettingsProtoStoreChange, arg0);
-          return outer1_14.getScoreWithoutLoadingLatest(handleUserSettingsProtoStoreChange, arg1) - scoreWithoutLoadingLatest;
+          const scoreWithoutLoadingLatest = closure_1_14.getScoreWithoutLoadingLatest(closure_7, arg0);
+          return closure_1_14.getScoreWithoutLoadingLatest(closure_7, arg1) - scoreWithoutLoadingLatest;
         });
-        const spliceResult = sorted.splice(0, outer1_16);
+        const spliceResult = sorted.splice(0, closure_1_16);
         if (0 === spliceResult.length) {
           let obj = { descriptors: null, commands: null, sectionedCommands: null, loading: null };
           obj[0] = descriptors;
@@ -2463,12 +2428,12 @@ export const useDiscoveryState = function useDiscoveryState(type, arg1, commandT
           obj[3] = loading;
         } else {
           obj = { descriptors: null, commands: null, sectionedCommands: null, loading: null };
-          const items = [type(descriptors[27]).BUILT_IN_SECTIONS[outer1_15.FRECENCY]];
+          const items = [type(descriptors[27]).BUILT_IN_SECTIONS[closure_1_15.FRECENCY]];
           HermesBuiltin.arraySpread(descriptors, 1);
           obj[0] = items;
           obj[1] = spliceResult.concat(tmp5);
           obj = { section: null, data: null };
-          obj[0] = type(descriptors[27]).BUILT_IN_SECTIONS[outer1_15.FRECENCY];
+          obj[0] = type(descriptors[27]).BUILT_IN_SECTIONS[closure_1_15.FRECENCY];
           obj[1] = spliceResult;
           const items1 = [obj];
           HermesBuiltin.arraySpread(sectionedCommands, 1);

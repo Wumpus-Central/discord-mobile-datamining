@@ -1,11 +1,11 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizationApp.tsx
-import noop from "noop";
-import addApplication from "addApplication";
-import createExecutable from "createExecutable";
-import { ApplicationTypes } from "ApplicationTypes";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "addApplication" /* 4478 */;
+import closure_4 from "createExecutable" /* 4479 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
 
 const require = arg1;
-const result = require("createExecutable").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizationApp.tsx");
 
 export const getAuthorizationApp = function getAuthorizationApp(type) {
   if (null == type) {
@@ -39,7 +39,7 @@ export const useAuthorizationApp = function useAuthorizationApp(getOfficialAppli
   const _require = getOfficialApplicationId;
   let officialApplicationId;
   if (null != getOfficialApplicationId) {
-    if (!(getOfficialApplicationId instanceof createExecutable)) {
+    if (!(getOfficialApplicationId instanceof closure_4)) {
       officialApplicationId = getOfficialApplicationId.getOfficialApplicationId();
     }
   }
@@ -49,11 +49,11 @@ export const useAuthorizationApp = function useAuthorizationApp(getOfficialAppli
     let application = closure_0;
     if (null == closure_0) {
       return null;
-    } else if (application instanceof outer1_4) {
+    } else if (application instanceof closure_1_4) {
       let tmp4 = null;
       if (null != application) {
         tmp4 = application;
-        if (application.type === outer1_5.GAME) {
+        if (application.type === closure_1_5.GAME) {
           const linkedGames = application.linkedGames;
           let found;
           if (linkedGames != null) {
@@ -68,7 +68,7 @@ export const useAuthorizationApp = function useAuthorizationApp(getOfficialAppli
             if (found != null) {
               id = found.id;
             }
-            application = outer1_3.getApplication(id);
+            application = closure_1_3.getApplication(id);
           }
           if (application == null) {
             application = null;

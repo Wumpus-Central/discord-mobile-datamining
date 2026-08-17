@@ -1,17 +1,20 @@
 // discord_app/modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx
-import dropChannelIfEmpty from "dropChannelIfEmpty";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getCurrentTime from "getCurrentTime";
-import { MessageTypes } from "ME";
-import "initialize";
-import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { fetchAndReconcileGiftIntentDismissals } from "../PremiumGiftingIntentActionCreators.tsx";
+import failsDefault from "fails" /* 584 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 5038 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import fetchAndReconcileGiftIntentDismissals from "fetchAndReconcileGiftIntentDismissals" /* 7609 */;
+import closure_3 from "dropChannelIfEmpty" /* 4995 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "getCurrentTime" /* 8290 */;
+import { MessageTypes } from "ME" /* 676 */;
 
-let require = arg1;
-let closure_8 = 10 * require("set").Millis.SECOND;
-let closure_9 = 5 * require("set").Millis.MINUTE;
+require = arg1;
+let closure_8 = 10 * setDefault.Millis.SECOND;
+let closure_9 = 5 * setDefault.Millis.MINUTE;
+initializeDefault;
 class GiftIntentReconcilingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -34,13 +37,13 @@ class GiftIntentReconcilingManager extends tmp2 {
           }
     };
     items = [, ];
-    items[0] = getCurrentTime;
+    items[0] = closure_6;
     items[1] = () => applyArgumentsResult.onPremiumGiftingIntentStoreChange();
     items1 = [];
     items1[0] = items;
     map = new Map(items1);
     applyArgumentsResult.stores = map;
-    tmp4 = new require("fails")(c8, c9);
+    tmp4 = new require("fails")(closure_8, closure_9);
     applyArgumentsResult.reconcileBackoff = tmp4;
     applyArgumentsResult.isReconciling = false;
     applyArgumentsResult.heldGiftingPromptSystemMessage = false;
@@ -158,7 +161,7 @@ prototype["removeRemotelyDismissedGiftIntentCards"] = function removeRemotelyDis
             if (tmp11) {
               let tmp15 = importDefault;
               let tmp16 = dependencyMap;
-              let obj = dispatcher;
+              let obj = dispatcherDefault;
               obj = { type: "MESSAGE_DELETE", id: null, channelId: null };
               let tmp17 = item10031;
               obj[1] = tmp9.id;
@@ -201,7 +204,7 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
     this.heldGiftingPromptSystemMessage = true;
     let flag = false;
   } else {
-    let obj = trackInvite;
+    let obj = trackInviteDefault;
     obj = { giftIntentType: null, recipientUserId: null, giftIntentSecondaryAction: null };
     obj[0] = FRIEND_ANNIVERSARY;
     obj[1] = closure_0;
@@ -211,6 +214,6 @@ prototype["trySendGiftingPromptSystemMessage"] = function trySendGiftingPromptSy
   }
   return flag;
 };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/gifting/shared/GiftIntentReconcilingManager.tsx");
 
 export default GiftIntentReconcilingManager;

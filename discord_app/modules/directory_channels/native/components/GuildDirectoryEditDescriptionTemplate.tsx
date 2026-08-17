@@ -1,37 +1,24 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx
-import closure_3 from "DirectoryEntryTypes";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import isFetching from "isFetching";
-import DirectoryEntryTypes from "DirectoryEntryTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "isFetching" /* 11479 */;
+import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ View: closure_6, Keyboard: error } = get_ActivityIndicator);
 ({ DirectoryEntryCategories: c9, getHubCategories: c10 } = DirectoryEntryTypes);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { marginHorizontal: 16, gap: 24 } });
-const result = require("noop").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEditDescriptionTemplate.tsx");
 
 export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
-  let c5;
-  let c6;
-  let directoryChannelId;
-  let entry;
-  let obj3;
-  let require;
-  let tmp11;
   ({ onSubmit: require, entry, directoryChannelId } = buttonLabel);
   let first;
-  let closure_3;
+  closure_3 = undefined;
   let first1;
   let React;
   c6 = undefined;
@@ -64,14 +51,14 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp4;
-              let closure_0 = tmp8;
+              closure_1 = tmp4;
+              closure_0 = tmp8;
               v0(true);
-              let c3 = 2;
+              c3 = 2;
               c4 = 3;
               v0 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(c4, outer1_2);
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(c4, closure_1_2);
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -82,7 +69,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
             if (2 === tmp8) {
               c3 = 1;
               closure_0 = closure_2;
-              const tmp22 = new outer1_1(outer1_2[9])(closure_0);
+              const tmp22 = new closure_1_1(closure_1_2[9])(closure_0);
               callback(tmp22);
               c3 = 0;
               v0(false);
@@ -113,7 +100,7 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
         }
       }
     });
-    const _handleSubmit = tmp;
+    closure_7 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -124,10 +111,10 @@ export default function GuildDirectoryEditDescriptionTemplate(buttonLabel) {
   }
   let tmp = callback2();
   let obj = require(first[8]);
-  const items = [isFetching];
-  let obj1 = React;
+  const items = [closure_8];
+  obj1 = React;
   let primaryCategoryId;
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getCurrentCategoryId(directoryChannelId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getCurrentCategoryId(directoryChannelId));
   if (entry != null) {
     primaryCategoryId = entry.primaryCategoryId;
   }

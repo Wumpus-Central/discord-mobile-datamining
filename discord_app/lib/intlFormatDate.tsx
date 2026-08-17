@@ -1,5 +1,5 @@
 // discord_app/lib/intlFormatDate.tsx
-import _getSystemLocale from "_getSystemLocale";
+import closure_2 from "_getSystemLocale" /* 1994 */;
 
 const require = arg1;
 function makeIntlFormatter(locale, arg1) {
@@ -11,7 +11,7 @@ function makeIntlFormatter(locale, arg1) {
     return Intl.DateTimeFormat(undefined, tmp).format;
   }
 }
-const result = require("getSystemLocale").fileFinishedImporting("lib/intlFormatDate.tsx");
+const result = require("set").fileFinishedImporting("lib/intlFormatDate.tsx");
 
 export const makeFormatter = function makeFormatter(arg0) {
   locale = locale.locale;
@@ -38,7 +38,7 @@ export const makeFormatter = function makeFormatter(arg0) {
         if (null == formatter) {
           return null;
         } else {
-          let c3 = null;
+          c3 = null;
           return (arg0) => {
             try {
               return formatter(arg0);

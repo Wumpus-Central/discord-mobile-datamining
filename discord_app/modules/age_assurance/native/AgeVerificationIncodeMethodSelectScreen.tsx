@@ -1,31 +1,25 @@
 // discord_app/modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx
-import AGE_VERIFICATION_INCODE_PATH from "AGE_VERIFICATION_INCODE_PATH";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import handleThemeChange from "handleThemeChange";
-import { VerificationMethod } from "set";
-import { buildIncodeParamsInjection as closure_8 } from "AGE_VERIFICATION_INCODE_PATH";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
+import { VerificationMethod } from "set" /* 5427 */;
+import { buildIncodeParamsInjection as closure_8 } from "AGE_VERIFICATION_INCODE_PATH" /* 5429 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { ModalContent } from "../../../design/components/Modal/native/ModalContent.native.tsx";
 import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
 
-let c10;
-let c9;
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { alignSelf: "stretch" }, header: { textAlign: "center" }, loadingContainer: { flex: 1, alignSelf: "stretch" } });
-const result = require("noop").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationIncodeMethodSelectScreen.tsx");
 
 export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected) {
-  let c2;
-  let c3;
-  let tmp2;
-  let tmp4;
   onMethodSelected = onMethodSelected.onMethodSelected;
   let _require = onMethodSelected;
   const trustedOrigin = onMethodSelected.trustedOrigin;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let callback2;
   [tmp2, c2] = callback2(React.useState(false), 2);
@@ -34,10 +28,10 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
   const tmp5 = callback4();
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -65,37 +59,37 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               closure_1 = undefined;
               closure_2 = undefined;
-              outer1_2(true);
-              outer1_3(false);
-              let c4 = 2;
+              closure_1_2(true);
+              closure_1_3(false);
+              c4 = 2;
               let obj2 = callback(table[8]);
               c5 = 3;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj2.requestIncodeMethodSession(callback);
               return obj1;
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            outer1_2(false);
-            throw AGE_VERIFICATION_INCODE_PATH;
+            closure_1_2(false);
+            throw closure_3;
           } else {
             if (2 === tmp8) {
               c4 = 1;
-              outer1_3(true);
+              closure_1_3(true);
               c4 = 0;
-              outer1_2(false);
+              closure_1_2(false);
               c6 = 3;
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 0;
-              outer1_2(false);
+              closure_1_2(false);
               c6 = 3;
               obj2 = { value: null, done: true };
               obj2[0] = arg1;
@@ -108,23 +102,23 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
                 obj3[1] = closure_1.sessionToken;
                 obj3[2] = closure_1.consentId;
                 obj3[3] = closure_1.interviewId;
-                obj3[4] = outer2_6.theme;
+                obj3[4] = closure_2_6.theme;
                 obj3[5] = callback;
-                closure_2 = outer2_8(obj3, outer1_1);
+                closure_2 = closure_2_8(obj3, closure_1_1);
                 callback(closure_2);
                 c4 = 1;
               }
             }
-            outer1_3(true);
+            closure_1_3(true);
             c4 = 0;
-            outer1_2(false);
+            closure_1_2(false);
             c6 = 3;
             obj = { value: null, done: true };
             obj[0] = undefined;
             return obj;
           }
         } catch (tmp36) {
-          AGE_VERIFICATION_INCODE_PATH = tmp36;
+          closure_3 = tmp36;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp36;
@@ -159,7 +153,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     obj[0] = tmp6(ModalContent, obj);
     let tmp11 = obj;
   } else {
-    let obj1 = { align: "stretch", spacing: 24, style: null, children: null };
+    obj1 = { align: "stretch", spacing: 24, style: null, children: null };
     obj1[2] = tmp5.container;
     let obj2 = { align: "center", justify: "center", spacing: 16, children: null };
     const items1 = [tmp6(tmp7(5447).ShieldSpotIllustration, { height: 100, width: 177 }), ];
@@ -193,7 +187,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     const intl5 = tmp7(1236).intl;
     obj8[2] = intl5.string(trustedOrigin(2853).fm7qBC);
     obj8[3] = function onPress() {
-      callback(outer1_7.FACIAL_AGE_ESTIMATION);
+      callback(closure_1_7.FACIAL_AGE_ESTIMATION);
     };
     const items4 = [tmp6(tmp7(6291).TableRow, obj8), ];
     const obj9 = { arrow: true, label: null, subLabel: null, onPress: null };
@@ -202,7 +196,7 @@ export default function AgeVerificationIncodeMethodSelectScreen(onMethodSelected
     const intl7 = tmp7(1236).intl;
     obj9[2] = intl7.string(trustedOrigin(2853).ARmJ0M);
     obj9[3] = function onPress() {
-      callback(outer1_7.ID_VERIFICATION);
+      callback(closure_1_7.ID_VERIFICATION);
     };
     items4[1] = tmp6(tmp7(6291).TableRow, obj9);
     obj7[1] = items4;

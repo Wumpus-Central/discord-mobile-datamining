@@ -1,18 +1,14 @@
 // discord_app/stores/PresenceStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { Store } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
-import { hasRichActivity } from "../modules/activities/utils/hasRichActivity.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import hasRichActivityDefault from "hasRichActivity" /* 4560 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 function sortActivity(type, type2) {
   type = type2.type;
   let num = 4;
@@ -45,7 +41,7 @@ function sortActivity(type, type2) {
   let diff = num2 - num;
   if (!diff) {
     let num3 = 0;
-    if (hasRichActivity(type2)) {
+    if (hasRichActivityDefault(type2)) {
       num3 = 1;
     }
     let num4 = 0;
@@ -100,7 +96,6 @@ function filterPlayingActivities(arg0) {
   }
 }
 function flattenPresence(id) {
-  let activities;
   delete tmp[tmp2];
   delete tmp[tmp2];
   delete tmp[tmp2];
@@ -181,7 +176,7 @@ function flattenPresence(id) {
         closure_14[id] = tmp8;
         const tmp7 = closure_14;
       }
-      obj = apply;
+      obj = applyDefault;
     }
     ({ status: closure_11[id], activities } = reduced);
     closure_12[id] = activities;
@@ -201,7 +196,7 @@ function flattenPresence(id) {
       HermesBuiltin.arraySpread(flatMapResult1, 0);
       const reversed1 = items2.reverse();
       const _Map2 = Map;
-      const map1 = new Map(reversed1.map((party) => {
+      map1 = new Map(reversed1.map((party) => {
         party = party.party;
         let id;
         if (party != null) {
@@ -222,10 +217,9 @@ function flattenPresence(id) {
   }
 }
 function flattenPresenceInConnectionOpen(arg0) {
-  let activities;
   if (null != dependencyMap[arg0]) {
     const _Object = Object;
-    const maxByResult = apply.maxBy(Object.values(tmp), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
+    const maxByResult = applyDefault.maxBy(Object.values(tmp), (processedAtTimestamp) => processedAtTimestamp.processedAtTimestamp);
     let tmp3 = maxByResult.status !== constants.OFFLINE;
     if (!tmp3) {
       let tmp2 = null != maxByResult.hiddenActivities;
@@ -248,17 +242,10 @@ function flattenPresenceInConnectionOpen(arg0) {
       }
       const tmp8 = closure_14;
     }
-    const obj = apply;
+    const obj = applyDefault;
   }
 }
 function updatePresence(arg0) {
-  let activities;
-  let clientStatus;
-  let guildId;
-  let hiddenActivities;
-  let processedAtTimestamp;
-  let status;
-  let userId;
   ({ guildId, userId, status, clientStatus, activities, hiddenActivities, processedAtTimestamp } = arg0);
   if (userId === store.getId()) {
     return false;
@@ -321,7 +308,7 @@ function updatePresence(arg0) {
       let activities2 = sorted;
       if (null != tmp7[guildId]) {
         activities2 = sorted;
-        if (isUndefinedOrNull(tmp25.activities, sorted)) {
+        if (isUndefinedOrNullDefault(tmp25.activities, sorted)) {
           activities2 = tmp25.activities;
         }
       }
@@ -339,13 +326,6 @@ function updatePresence(arg0) {
   }
 }
 function updatePresenceInConnectionOpen(arg0) {
-  let activities;
-  let clientStatus;
-  let guildId;
-  let hiddenActivities;
-  let processedAtTimestamp;
-  let status;
-  let userId;
   ({ guildId, userId, status, clientStatus, activities, hiddenActivities, processedAtTimestamp } = arg0);
   if (userId !== store.getId()) {
     let tmp3 = status === constants.OFFLINE;
@@ -429,15 +409,15 @@ function clearPresence(closure_7, id) {
   }
 }
 function clearPresences(closure_7) {
-  const keys = DISCORD_EPOCH.keys(closure_10);
-  const obj = DISCORD_EPOCH;
+  const keys = DISCORD_EPOCHDefault.keys(closure_10);
+  const obj = DISCORD_EPOCHDefault;
   while (tmp2 !== undefined) {
     let tmp4 = clearPresence;
     let tmp5 = clearPresence(closure_7, tmp3);
     continue;
   }
 }
-({ StatusTypes: c4, ActivityTypes: c5, ClientTypes: closure_6, ME: error, UserFlags: metroImportAll } = ME);
+({ StatusTypes: c4, ActivityTypes: c5, ClientTypes: closure_6, ME: error, UserFlags: closure_8 } = ME);
 let closure_9 = Object.freeze([]);
 let closure_10 = {};
 let closure_11 = {};
@@ -446,11 +426,12 @@ let closure_13 = {};
 let closure_14 = {};
 let closure_15 = {};
 let closure_16 = {};
+const Store = initializeDefault.Store;
 class PresenceStore extends Store {
 }
 const prototype = PresenceStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, mergeGuildAvatar);
+  this.waitFor(closure_2, closure_3);
 };
 prototype["setCurrentUserOnConnectionOpen"] = function setCurrentUserOnConnectionOpen(closure_17, closure_26) {
   closure_11[store.getId()] = closure_17;
@@ -584,7 +565,7 @@ prototype["getPrimaryActivity"] = function getPrimaryActivity(arg0) {
 };
 prototype["getAllApplicationActivities"] = function getAllApplicationActivities(arg0) {
   const items = [];
-  let obj = DISCORD_EPOCH;
+  let obj = DISCORD_EPOCHDefault;
   const keys = obj.keys(dependencyMap4);
   for (const item10015 of keys) {
     let tmp3 = dependencyMap4;
@@ -607,7 +588,7 @@ prototype["getAllApplicationActivities"] = function getAllApplicationActivities(
   return items;
 };
 prototype["getApplicationActivity"] = function getApplicationActivity(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let tmp = arg2;
   if (arg2 === undefined) {
     tmp = null;
@@ -638,7 +619,7 @@ prototype["getActivityMetadata"] = function getActivityMetadata(arg0) {
   return table[arg0];
 };
 prototype["getUserIds"] = function getUserIds() {
-  return DISCORD_EPOCH.keys(closure_12);
+  return DISCORD_EPOCHDefault.keys(closure_12);
 };
 prototype["isMobileOnline"] = function isMobileOnline(id) {
   let tmp2 = null != tmp;
@@ -667,45 +648,43 @@ prototype["getState"] = function getState() {
   return { presencesForGuilds: closure_10, statuses: closure_11, activities: closure_12, filteredActivities: closure_13, hiddenActivities: closure_14, activityMetadata: closure_16, clientStatuses: closure_15 };
 };
 PresenceStore.displayName = "PresenceStore";
-const presenceStore = new PresenceStore(require("dispatcher"), {
+const presenceStore = new PresenceStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     return true;
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(arg0) {
-    let guilds;
-    let presences;
     ({ guilds, presences } = arg0);
     let set;
     const id = store.getId();
-    let closure_10 = {};
-    let closure_16 = {};
+    closure_10 = {};
+    closure_16 = {};
     obj = { [id]: obj[id] };
     obj = { [id]: obj[id] };
     obj = { [id]: obj[id] };
     obj1 = { [id]: obj1[id] };
-    let closure_15 = { [id]: {} };
+    closure_15 = { [id]: {} };
     set = new Set();
     let item = guilds.forEach((presences) => {
-      let closure_0 = presences;
+      closure_0 = presences;
       presences = presences.presences;
       const item = presences.forEach((status) => {
         const user = status.user;
-        outer2_22({ guildId: presences.id, userId: user.id, status: status.status, clientStatus: status.clientStatus, activities: status.activities, hiddenActivities: status.hiddenActivities, processedAtTimestamp: status.processedAtTimestamp });
+        closure_2_22({ guildId: presences.id, userId: user.id, status: status.status, clientStatus: status.clientStatus, activities: status.activities, hiddenActivities: status.hiddenActivities, processedAtTimestamp: status.processedAtTimestamp });
         presences.add(user.id);
       });
     });
     const item1 = presences.forEach((user) => {
       user = user.user;
       if (null != user) {
-        const obj = { guildId: null, userId: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, processedAtTimestamp: null };
-        obj[0] = outer1_7;
+        obj = { guildId: null, userId: null, status: null, clientStatus: null, activities: null, hiddenActivities: null, processedAtTimestamp: null };
+        obj[0] = closure_1_7;
         obj[1] = user.id;
         obj[2] = tmp;
         obj[3] = tmp2;
         obj[4] = tmp3;
         obj[5] = tmp4;
         obj[6] = tmp5;
-        outer1_22(obj);
+        closure_1_22(obj);
         set.add(user.id);
       }
     });
@@ -713,18 +692,13 @@ const presenceStore = new PresenceStore(require("dispatcher"), {
     const item2 = set.forEach(flattenPresenceInConnectionOpen);
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(presences) {
-    let closure_10;
-    let closure_11;
-    let closure_12;
-    let closure_14;
-    let closure_16;
     ({ presencesForGuilds: closure_10, statuses: closure_11, activities: closure_12, hiddenActivities: closure_14, activityMetadata: closure_16 } = presences.presences);
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
     const presences = guild.presences;
     const item = presences.forEach((user) => {
-      outer1_21({ guildId: guild.id, userId: user.user.id, status: user.status, clientStatus: user.clientStatus, activities: user.activities, hiddenActivities: user.hiddenActivities, processedAtTimestamp: user.processedAtTimestamp });
+      closure_1_21({ guildId: guild.id, userId: user.user.id, status: user.status, clientStatus: user.clientStatus, activities: user.activities, hiddenActivities: user.hiddenActivities, processedAtTimestamp: user.processedAtTimestamp });
     });
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
@@ -752,12 +726,6 @@ const presenceStore = new PresenceStore(require("dispatcher"), {
   PRESENCE_UPDATES: function handlePresenceUpdates(updates) {
     updates = updates.updates;
     const mapped = updates.map((guildId) => {
-      let activities;
-      let clientStatus;
-      let hiddenActivities;
-      let processedAtTimestamp;
-      let status;
-      let user;
       guildId = guildId.guildId;
       ({ user, status, clientStatus, activities, hiddenActivities, processedAtTimestamp } = guildId);
       if (guildId == null) {
@@ -790,8 +758,6 @@ const presenceStore = new PresenceStore(require("dispatcher"), {
     return false;
   },
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(arg0) {
-    let importDefault;
-    let members;
     ({ guildId: importDefault, members } = arg0);
     const item = members.forEach((presence) => {
       if (null != presence.presence) {
@@ -803,13 +769,11 @@ const presenceStore = new PresenceStore(require("dispatcher"), {
         obj[4] = presence.presence.activities;
         obj[5] = presence.presence.hiddenActivities;
         obj[6] = presence.presence.processedAtTimestamp;
-        outer1_21(obj);
+        closure_1_21(obj);
       }
     });
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(arg0) {
-    let addedMembers;
-    let importDefault;
     ({ guildId: importDefault, addedMembers } = arg0);
     if (addedMembers != null) {
       const item = addedMembers.forEach((presence) => {
@@ -822,7 +786,7 @@ const presenceStore = new PresenceStore(require("dispatcher"), {
           obj[4] = presence.presence.activities;
           obj[5] = presence.presence.hiddenActivities;
           obj[6] = presence.presence.processedAtTimestamp;
-          outer1_21(obj);
+          closure_1_21(obj);
         }
       });
     }
@@ -846,7 +810,7 @@ const presenceStore = new PresenceStore(require("dispatcher"), {
     delete tmp[tmp2];
   }
 });
-const result = require("ME").fileFinishedImporting("stores/PresenceStore.tsx");
+const result = require("set").fileFinishedImporting("stores/PresenceStore.tsx");
 
 export default presenceStore;
 export { sortActivity };

@@ -1,22 +1,22 @@
 // discord_app/modules/guild_scheduled_events/useGuildEventRecurrences.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import scheduledEventSort from "scheduledEventSort";
+import usePrevValueDefault from "usePrevValue" /* 8902 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "scheduledEventSort" /* 4370 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { usePrevValue } from "../../../discord_common/js/shared/hooks/usePrevValue.tsx";
 
 const require = arg1;
-const result = require("scheduledEventSort").fileFinishedImporting("modules/guild_scheduled_events/useGuildEventRecurrences.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildEventRecurrences.tsx");
 
 export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
   const _require = arg0;
-  const importDefault = arg1;
-  const dependencyMap = byWeekday;
+  importDefault = arg1;
+  dependencyMap = byWeekday;
   let obj = _initialize;
   let items = [first];
   const stateFromStores = obj.useStateFromStores(items, () => first.getGuildScheduledEvent(closure_0));
-  const tmp4 = usePrevValue(byWeekday);
-  let noop = tmp4;
+  const tmp4 = usePrevValueDefault(byWeekday);
+  closure_4 = tmp4;
   if (null != byWeekday) {
     if (null != stateFromStores) {
       let tmpResult = tmp(8785);
@@ -28,10 +28,10 @@ export default function useGuildEventRecurrences(arg0, arg1, byWeekday) {
     }
     const tmp14 = stateFromStores(tmp5([]), 2);
     first = tmp14[0];
-    let closure_6 = tmp14[1];
+    closure_6 = tmp14[1];
     const items1 = [byWeekday, first.length, stateFromStores, tmp4];
     const effect = obj2.useEffect(() => {
-      if (null != noop) {
+      if (null != closure_4) {
         if (null != byWeekday) {
           if (null != stateFromStores) {
             if (!obj3.isEqual(tmp, tmp12)) {

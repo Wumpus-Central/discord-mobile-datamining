@@ -1,24 +1,25 @@
 // discord_app/modules/guild_settings/GuildRoleMemberActionCreators.tsx
-import priv from "priv";
-import getRoleMemberCount from "getRoleMemberCount";
-import { Endpoints } from "ME";
+import privDefault from "priv" /* 1405 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getRoleMemberCount" /* 6928 */;
+import { Endpoints } from "ME" /* 676 */;
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _fetchMemberCountsFromBackend() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
-      const dependencyMap = tmp3;
-      let c4 = 1;
-      const obj1 = { type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START", guildId: null };
+      dependencyMap = tmp3;
+      c4 = 1;
+      obj1 = { type: "GUILD_ROLE_MEMBER_COUNT_FETCH_START", guildId: null };
       obj1[1] = callback;
-      outer1_1(outer1_2[3]).dispatch(obj1);
-      const HTTP = callback(outer1_2[4]).HTTP;
+      closure_1_1(closure_1_2[3]).dispatch(obj1);
+      const HTTP = callback(closure_1_2[4]).HTTP;
       const obj2 = { url: null, rejectWithError: true };
       obj2[0] = c5.GUILD_ROLE_MEMBER_COUNTS(callback);
       yield HTTP.get(obj2);
@@ -28,7 +29,7 @@ function _fetchMemberCountsFromBackend() {
         const obj4 = { type: "GUILD_ROLE_MEMBER_COUNT_FETCH_FAILURE", guildId: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
-        let c6 = 3;
+        c6 = 3;
       } else if (arg0 === 1) {
         c6 = 3;
         throw body;
@@ -45,7 +46,7 @@ function _fetchMemberCountsFromBackend() {
       return body;
     })();
   });
-  const _fetchMemberCountsFromBackend = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -57,9 +58,9 @@ function _fetchMemberCountsFromBackend() {
 function _fetchMemberCounts() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -87,10 +88,10 @@ function _fetchMemberCounts() {
               obj[0] = arg1;
               return obj;
             } else {
-              if (outer1_4.shouldFetch(closure_0)) {
+              if (closure_1_4.shouldFetch(closure_0)) {
                 c2 = 1;
                 c1 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = (function fetchMemberCountsFromBackend(arg0) {
                   const self = this;
                   const apply = closure_6.apply;
@@ -123,7 +124,7 @@ function _fetchMemberCounts() {
       }
     })();
   });
-  const _fetchMemberCounts = tmp;
+  closure_7 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -132,9 +133,9 @@ function _fetchMemberCounts() {
   }
   return applyArgumentsResult;
 }
-const metroImportAll = new require("priv")({ maxAge: 10000 });
-const tmp2 = new require("priv")({ maxAge: 10000 });
-let result = require("ME").fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");
+let closure_8 = new privDefault({ maxAge: 10000 });
+const tmp2 = new privDefault({ maxAge: 10000 });
+let result = require("set").fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");
 
 export const fetchMemberCounts = function fetchMemberCounts(guildId) {
   const self = this;
@@ -153,19 +154,18 @@ export const requestMembersForRole = function requestMembersForRole(closure_0, c
   }
   const combined = "" + closure_0 + "-" + callback;
   if (flag) {
-    if (null != tmp2.get(combined)) {
+    if (null != store.get(combined)) {
       let resolved = Promise.resolve(null);
     }
     return resolved;
   }
-  const result = tmp2.set(combined, true);
+  const result = store.set(combined, true);
   const _require = closure_0;
   const HTTP = _sendRequest.HTTP;
-  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: null };
-  obj[1] = _sendRequest.rejectWithMigratedError();
+  const obj = { url: Endpoints.GUILD_ROLE_MEMBER_IDS(closure_0, callback), rejectWithError: _sendRequest.rejectWithMigratedError() };
   const value = HTTP.get(obj);
   resolved = value.then((body) => {
-    const membersById = outer1_1(outer1_2[6]).requestMembersById(closure_0, body.body, false);
+    const membersById = closure_1_1(closure_1_2[6]).requestMembersById(closure_0, body.body, false);
     return body.body.length;
   });
 };

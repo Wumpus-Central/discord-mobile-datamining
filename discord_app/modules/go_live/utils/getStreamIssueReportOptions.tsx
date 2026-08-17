@@ -1,8 +1,10 @@
 // discord_app/modules/go_live/utils/getStreamIssueReportOptions.tsx
-import { StreamIssueReportReasons } from "StreamIssueReportReasons";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import StreamIssueReportReasons2 from "StreamIssueReportReasons" /* 4532 */;
 
-const result = require("set").fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
+const StreamIssueReportReasons = StreamIssueReportReasons2.StreamIssueReportReasons;
+const result = set.fileFinishedImporting("modules/go_live/utils/getStreamIssueReportOptions.tsx");
 
 export default function getStreamIssueReportOptions(isEndStream) {
   isEndStream = isEndStream.isEndStream;
@@ -41,7 +43,7 @@ export default function getStreamIssueReportOptions(isEndStream) {
   }
   obj[2] = string3Result;
   items[2] = obj;
-  const obj1 = { id: "out-of-sync", value: StreamIssueReportReasons.OUT_OF_SYNC, label: null };
+  obj1 = { id: "out-of-sync", value: StreamIssueReportReasons.OUT_OF_SYNC, label: null };
   const intl4 = tmp6(1236).intl;
   const string4 = intl4.string;
   const t4 = tmp6(1236).t;

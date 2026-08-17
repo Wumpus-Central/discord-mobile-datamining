@@ -1,21 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function ChatPanelNativeStackNavigator(arg0) {
-  let NavigationContent;
-  let UNSTABLE_routeNamesChangeBehavior;
-  let UNSTABLE_router;
-  let children;
-  let describe;
-  let id;
-  let initialRouteName;
-  let layout;
-  let screenLayout;
-  let screenListeners;
-  let screenOptions;
   ({ id, initialRouteName, UNSTABLE_routeNamesChangeBehavior, children, layout, screenListeners, screenOptions, screenLayout, UNSTABLE_router } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let state;
@@ -30,7 +19,7 @@ function ChatPanelNativeStackNavigator(arg0) {
   let items = [state, descriptors];
   ({ describe, NavigationContent } = navigationBuilder);
   const memo = navigation.useMemo(() => {
-    const state = {};
+    state = {};
     const merged = Object.assign(state);
     const items = [...state.routes];
     state.routes = items;
@@ -86,10 +75,10 @@ function ChatPanelNativeStackNavigator(arg0) {
       const addListener = navigation.addListener;
       if (addListener != null) {
         addListenerResult = addListener("tabPress", (arg0) => {
-          let closure_0 = arg0;
-          let closure_1 = focused.isFocused();
+          closure_0 = arg0;
+          closure_1 = focused.isFocused();
           const animationFrame = requestAnimationFrame(() => {
-            let tmp2 = outer1_3.index > 0;
+            let tmp2 = closure_1_3.index > 0;
             if (tmp2) {
               tmp2 = closure_1;
             }
@@ -98,10 +87,10 @@ function ChatPanelNativeStackNavigator(arg0) {
             }
             if (tmp2) {
               const obj = {};
-              const StackActions = outer2_0(outer2_1[2]).StackActions;
+              const StackActions = closure_2_0(closure_2_1[2]).StackActions;
               const merged = Object.assign(StackActions.popToTop());
-              obj.target = outer1_3.key;
-              outer1_2.dispatch(obj);
+              obj.target = closure_1_3.key;
+              closure_1_2.dispatch(obj);
             }
           });
         });
@@ -119,7 +108,7 @@ function ChatPanelNativeStackNavigator(arg0) {
   obj[0] = state2(state(descriptors[5]).NativeStackView, obj);
   return state2(NavigationContent, obj);
 }
-const result = require("createStandardNavigationFactories").fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/createChatPanelNativeStackNavigator.tsx");
 
 export default function createChatPanelNativeStackNavigator(arg0) {
   return createStandardNavigationFactories.createNavigatorFactory(ChatPanelNativeStackNavigator)(arg0);

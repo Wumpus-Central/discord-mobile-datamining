@@ -1,14 +1,12 @@
 // discord_app/modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx
-import noop from "noop";
-import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { NOTIFICATION_PREVIEW_LINE_CLAMP as closure_4 } from "set" /* 10030 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
 
 export default function ForumThreadCreatedNotification(notification) {
-  let parentChannel;
-  let threadCreator;
   notification = notification.notification;
   let thread;
   parentChannel = undefined;
@@ -38,16 +36,13 @@ export default function ForumThreadCreatedNotification(notification) {
     return obj.pushLazy(notification(parentChannel[9])(parentChannel[8], parentChannel.paths), obj);
   }, items2);
   obj = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
-  obj = { size: null, user: null, guildId: null };
-  obj[0] = notification(parentChannel[11]).AvatarSizes.NORMAL;
-  obj[1] = threadCreator;
-  obj[2] = thread.guild_id;
-  obj[0] = jsx(notification(parentChannel[11]).Avatar, { size: null, user: null, guildId: null });
+  obj = { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id };
+  obj[0] = jsx(notification(parentChannel[11]).Avatar, { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });
   const formatToPlainStringResult = intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult });
   obj[1] = jsx(notification(parentChannel[12]).Text, { variant: "redesign/message-preview/medium", color: "text-subtle", lineClamp: userAuthor, children: intl2.formatToPlainString(notification(parentChannel[4]).t.WUIDu9, { threadName: stringResult }) });
   obj[2] = memo;
   obj[3] = callback;
   obj[4] = callback1;
   obj[5] = notification;
-  return jsx(notification(parentChannel[10]).NotificationPressable, { size: null, user: null, guildId: null });
+  return jsx(notification(parentChannel[10]).NotificationPressable, { size: notification(tmp[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });
 };

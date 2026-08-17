@@ -1,7 +1,9 @@
 // discord_app/modules/guild_rooms/GuildRoomErrorUtils.native.tsx
-import { NOOP_NULL } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomErrorUtils.native.tsx");
+const NOOP_NULL = ME.NOOP_NULL;
+const result = set.fileFinishedImporting("modules/guild_rooms/GuildRoomErrorUtils.native.tsx");
 
 export const handleGuildRoomError = function handleGuildRoomError(arg0) {
   NOOP_NULL();

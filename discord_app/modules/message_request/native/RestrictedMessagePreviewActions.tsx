@@ -1,71 +1,67 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewActions.tsx
-import Button from "Button";
-import { View } from "_submitHamReportForFirstDM";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import ME from "ME";
-import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import ME from "ME" /* 676 */;
+import { BLOCK_CONFIRMATION_ACTION_SHEET_KEY as closure_8 } from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 ({ AnalyticsPages: closure_6, RelationshipTypes: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, buttonRow: null };
-createCacheKey = { gap: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_12 };
+createCacheKey = { gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_8 };
-let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
+createCacheKey[1] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewActions.tsx");
 
 export default function RestrictedMessagePreviewActions(channel) {
-  let isLoaded;
-  let isReportable;
   channel = channel.channel;
   const user = channel.user;
   let message;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = channel(message[8]);
   const dMMessageToReport = obj.useDMMessageToReport(channel, user.id, true === user.bot);
   message = dMMessageToReport.message;
   ({ isReportable, isLoaded } = dMMessageToReport);
-  let obj1 = channel(message[9]);
-  const items = [markAllUserIdListsStale];
+  obj1 = channel(message[9]);
+  const items = [closure_5];
   const items1 = [user.id];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_5.getRelationshipType(user.id), items1);
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_5.getRelationshipType(user.id), items1);
   const items2 = [user.id];
   const items3 = [user.id];
   const callback = React.useCallback(() => {
     let obj = user(message[10]);
     obj = { userId: user.id, context: obj };
-    obj = { location: outer1_6.DM_CHANNEL };
+    obj = { location: closure_1_6.DM_CHANNEL };
     obj.addRelationship(obj);
   }, items2);
   const items4 = [user.id];
   const callback1 = React.useCallback(() => {
     let obj = user(message[11]);
-    obj = { userId: user.id, location: outer1_6.DM_CHANNEL };
+    obj = { userId: user.id, location: closure_1_6.DM_CHANNEL };
     const result = obj.maybeConfirmFriendRequestAccept(obj);
   }, items3);
   const items5 = [user];
-  const callback2 = React.useCallback(() => {
+  callback2 = React.useCallback(() => {
     let obj = user(message[10]);
-    obj = { location: outer1_6.DM_CHANNEL };
+    obj = { location: closure_1_6.DM_CHANNEL };
     obj.cancelFriendRequest(user.id, obj);
   }, items4);
   const items6 = [user.id, channel.id];
   const callback3 = React.useCallback(() => {
     let obj = channel(message[12]);
-    obj = { userDisplayName: null, onConfirm: null };
-    obj[0] = user(message[13]).getName(user);
-    obj[1] = function onConfirm() {
-      let obj = outer1_1(outer1_2[10]);
-      obj = { location: outer1_6.DM_CHANNEL };
-      obj.removeFriend(id.id, obj);
+    obj = {
+      userDisplayName: user(message[13]).getName(user),
+      onConfirm() {
+        let obj = closure_1_1(closure_1_2[10]);
+        obj = { location: closure_1_6.DM_CHANNEL };
+        obj.removeFriend(id.id, obj);
+      }
     };
     obj.confirmRemoveFriend(obj);
   }, items5);
@@ -73,19 +69,19 @@ export default function RestrictedMessagePreviewActions(channel) {
   const callback4 = React.useCallback(() => {
     let obj = user(message[14]);
     obj = { userId: user.id, channelId: channel.id };
-    obj.openLazy(channel(message[16])(message[15], message.paths), outer1_8, obj);
+    obj.openLazy(channel(message[16])(message[15], message.paths), closure_1_8, obj);
   }, items6);
   const items8 = [message, channel.id];
   const callback5 = React.useCallback(() => {
     let obj = user(message[10]);
-    obj = { location: outer1_6.DM_CHANNEL };
+    obj = { location: closure_1_6.DM_CHANNEL };
     obj.unblockUser(user.id, obj);
   }, items7);
   let tmp14 = null;
   const callback6 = React.useCallback(() => {
     if (null != message) {
       const result = channel(message[17]).showReportModalForFirstDM(tmp, () => {
-        outer1_1(outer1_2[18]).closePrivateChannel(id.id, true);
+        closure_1_1(closure_1_2[18]).closePrivateChannel(id.id, true);
       });
       const obj = channel(message[17]);
     }

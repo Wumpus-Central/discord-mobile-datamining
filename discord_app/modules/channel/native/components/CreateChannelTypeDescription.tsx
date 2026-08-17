@@ -1,16 +1,14 @@
 // discord_app/modules/channel/native/components/CreateChannelTypeDescription.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { GuildProfileFetchStatus } from "handleUpdateStart";
-import { ChannelTypes } from "ME";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
+import { ChannelTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("handleUpdateStart").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/native/components/CreateChannelTypeDescription.tsx");
 
 export default function CreateChannelTypeDescription(guildId) {
-  let fetchGuildProfile;
-  let guildProfile;
   guildId = guildId.guildId;
   fetchGuildProfile = undefined;
   let obj = fetchGuildProfile(8855);

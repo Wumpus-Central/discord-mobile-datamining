@@ -1,25 +1,21 @@
 // discord_app/modules/links/native/handleIncomingURL.tsx
-import timestamp from "timestamp";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import getState from "getState";
-import ME from "ME";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createRTCConnection" /* 4539 */;
+import closure_6 from "getState" /* 7383 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function _handleIncomingURL() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, url) {
-      let Iterable;
-      let tmp;
       if (fingerprint === 2) {
         fingerprint = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -69,17 +65,17 @@ function _handleIncomingURL() {
                 let inviteCode;
                 let guildTemplateCode;
                 let authToken;
-                let c15;
+                c15 = undefined;
                 ({ url, source: Iterable } = lib);
-                throwTypeErrorResult = outer1_10;
+                throwTypeErrorResult = closure_1_10;
                 throwTypeErrorResult = url;
                 throwTypeErrorResult = Iterable;
                 const _HermesInternal = HermesInternal;
-                throwTypeErrorResult = outer1_10.log("Opening url: " + url + " [" + Iterable + "]");
+                throwTypeErrorResult = closure_1_10.log("Opening url: " + url + " [" + Iterable + "]");
                 throwTypeErrorResult = store;
                 throwTypeErrorResult = c7;
                 if (store.getState() !== c7.ACTIVE) {
-                  let obj3 = lib(outer1_2[6]);
+                  let obj3 = lib(closure_1_2[6]);
                   let str = "deeplink";
                   if (null == url) {
                     str = "launcher";
@@ -123,20 +119,20 @@ function _handleIncomingURL() {
                           });
                           url = str35.toString();
                           throwTypeErrorResult = lib;
-                          throwTypeErrorResult = outer1_2;
-                          Iterable = lib(outer1_2[7]).DeeplinkSource.AppsFlyer;
-                          throwTypeErrorResult = outer1_10;
+                          throwTypeErrorResult = closure_1_2;
+                          Iterable = lib(closure_1_2[7]).DeeplinkSource.AppsFlyer;
+                          throwTypeErrorResult = closure_1_10;
                           throwTypeErrorResult = url;
                           const _HermesInternal2 = HermesInternal;
-                          throwTypeErrorResult = outer1_10.log("Extracted clean URL from AppsFlyer legacy URL: " + url);
+                          throwTypeErrorResult = closure_1_10.log("Extracted clean URL from AppsFlyer legacy URL: " + url);
                           store = 0;
                         }
                       }
-                      throwTypeErrorResult = outer1_10;
-                      const obj1 = { originalUrl: null };
+                      throwTypeErrorResult = closure_1_10;
+                      obj1 = { originalUrl: null };
                       throwTypeErrorResult = url;
                       obj1[0] = url;
-                      throwTypeErrorResult = outer1_10.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj1);
+                      throwTypeErrorResult = closure_1_10.warn("Empty or whitespace-only URL fragment in AppsFlyer legacy URL", obj1);
                       fingerprint = 3;
                       const obj2 = { value: null, done: true };
                       obj2[0] = undefined;
@@ -144,23 +140,23 @@ function _handleIncomingURL() {
                     } else {
                       obj3 = { originalUrl: null };
                       obj3[0] = url;
-                      outer1_10.warn("No hash mark found in AppsFlyer legacy URL", obj3);
+                      closure_1_10.warn("No hash mark found in AppsFlyer legacy URL", obj3);
                     }
                   }
                   if (url.startsWith("discordwidget:///")) {
                     throwTypeErrorResult = url;
                     if (url.startsWith("discordwidget:///open-voice-panel")) {
-                      throwTypeErrorResult = outer1_5;
-                      throwTypeErrorResult = outer1_5.getChannelId();
+                      throwTypeErrorResult = closure_1_5;
+                      throwTypeErrorResult = closure_1_5.getChannelId();
                       throwTypeErrorResult = null;
                       if (null != throwTypeErrorResult) {
-                        throwTypeErrorResult = outer1_4;
-                        throwTypeErrorResult = outer1_4.getChannel(throwTypeErrorResult);
+                        throwTypeErrorResult = closure_1_4;
+                        throwTypeErrorResult = closure_1_4.getChannel(throwTypeErrorResult);
                       }
                       if (null != throwTypeErrorResult) {
                         throwTypeErrorResult = lib;
-                        throwTypeErrorResult = outer1_2;
-                        throwTypeErrorResult = lib(outer1_2[8]).navigateToVoiceChannel(throwTypeErrorResult, "LiveActivity");
+                        throwTypeErrorResult = closure_1_2;
+                        throwTypeErrorResult = lib(closure_1_2[8]).navigateToVoiceChannel(throwTypeErrorResult, "LiveActivity");
                         throwTypeErrorResult = url;
                         throwTypeErrorResult = url.indexOf("?");
                         let str3 = "";
@@ -180,15 +176,15 @@ function _handleIncomingURL() {
                         }
                         if (!throwTypeErrorResult) {
                           throwTypeErrorResult = callback;
-                          throwTypeErrorResult = outer1_2;
+                          throwTypeErrorResult = closure_1_2;
                           throwTypeErrorResult = constants;
                           const obj4 = { action: "Open Voice Panel", channel_id: null, surface: null };
                           obj4[1] = throwTypeErrorResult.id;
                           obj4[2] = throwTypeErrorResult;
-                          throwTypeErrorResult = callback(outer1_2[9]).track(constants.LIVE_ACTIVITY_INTERACTED, obj4);
-                          const obj22 = callback(outer1_2[9]);
+                          throwTypeErrorResult = callback(closure_1_2[9]).track(constants.LIVE_ACTIVITY_INTERACTED, obj4);
+                          const obj22 = callback(closure_1_2[9]);
                         }
-                        const obj30 = lib(outer1_2[8]);
+                        const obj30 = lib(closure_1_2[8]);
                       }
                       fingerprint = 3;
                       return { value: "HermesInternal", done: "HermesInternal" };
@@ -206,49 +202,49 @@ function _handleIncomingURL() {
                         } else if ("user" !== parts1[0]) {
                           if ("invite" === parts1[0]) {
                             throwTypeErrorResult = callback;
-                            throwTypeErrorResult = outer1_2;
+                            throwTypeErrorResult = closure_1_2;
                             let obj5 = { payload: null };
                             let obj6 = { type: null, guildId: null, channelId: null };
-                            throwTypeErrorResult = outer1_9;
-                            obj6[0] = outer1_9.CREATE_VOICE_INVITE;
+                            throwTypeErrorResult = closure_1_9;
+                            obj6[0] = closure_1_9.CREATE_VOICE_INVITE;
                             obj6[1] = parts1[1];
                             obj6[2] = parts1[2];
                             obj5[0] = obj6;
-                            throwTypeErrorResult = callback(outer1_2[10])(obj5);
+                            throwTypeErrorResult = callback(closure_1_2[10])(obj5);
                           } else if ("wave" === parts1[0]) {
                             throwTypeErrorResult = callback;
-                            throwTypeErrorResult = outer1_2;
+                            throwTypeErrorResult = closure_1_2;
                             const obj7 = { payload: null };
                             const obj8 = { type: null, guildId: null, channelId: null };
-                            throwTypeErrorResult = outer1_9;
-                            obj8[0] = outer1_9.SEND_VOICE_HANGOUT_WAVE;
+                            throwTypeErrorResult = closure_1_9;
+                            obj8[0] = closure_1_9.SEND_VOICE_HANGOUT_WAVE;
                             obj8[1] = parts1[1];
                             obj8[2] = parts1[2];
                             obj7[0] = obj8;
-                            throwTypeErrorResult = callback(outer1_2[10])(obj7);
+                            throwTypeErrorResult = callback(closure_1_2[10])(obj7);
                           } else if ("join" === parts1[0]) {
                             throwTypeErrorResult = callback;
-                            throwTypeErrorResult = outer1_2;
+                            throwTypeErrorResult = closure_1_2;
                             let obj9 = { payload: null };
                             let obj10 = { type: null, guildId: null, channelId: null };
-                            throwTypeErrorResult = outer1_9;
-                            obj10[0] = outer1_9.CHANNEL;
+                            throwTypeErrorResult = closure_1_9;
+                            obj10[0] = closure_1_9.CHANNEL;
                             obj10[1] = parts1[1];
                             obj10[2] = parts1[2];
                             obj9[0] = obj10;
-                            throwTypeErrorResult = callback(outer1_2[10])(obj9);
+                            throwTypeErrorResult = callback(closure_1_2[10])(obj9);
                           } else if (2 === parts1.length) {
                             throwTypeErrorResult = callback;
-                            throwTypeErrorResult = outer1_2;
+                            throwTypeErrorResult = closure_1_2;
                             [tmp, tmp] = parts1;
                             const obj11 = { payload: null };
                             const obj12 = { type: null, guildId: null, channelId: null };
-                            throwTypeErrorResult = outer1_9;
-                            obj12[0] = outer1_9.CHANNEL;
+                            throwTypeErrorResult = closure_1_9;
+                            obj12[0] = closure_1_9.CHANNEL;
                             obj12[1] = throwTypeErrorResult;
                             obj12[2] = throwTypeErrorResult;
                             obj11[0] = obj12;
-                            throwTypeErrorResult = callback(outer1_2[10])(obj11);
+                            throwTypeErrorResult = callback(closure_1_2[10])(obj11);
                             fingerprint = 3;
                             const obj13 = { value: null, done: true };
                             obj13[0] = undefined;
@@ -405,7 +401,7 @@ function _handleIncomingURL() {
       }
     })();
   });
-  const _handleIncomingURL = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -414,10 +410,10 @@ function _handleIncomingURL() {
   }
   return applyArgumentsResult;
 }
-({ AppStates: error, AnalyticEvents: metroImportAll, LinkingTypes: c9 } = ME);
-let c10 = new require("getState")("index.native.tsx");
-const tmp3 = new require("getState")("index.native.tsx");
-let result = require("createRTCConnection").fileFinishedImporting("modules/links/native/handleIncomingURL.tsx");
+({ AppStates: error, AnalyticEvents: closure_8, LinkingTypes: c9 } = ME);
+let closure_10 = new timestampDefault("index.native.tsx");
+const tmp3 = new timestampDefault("index.native.tsx");
+let result = require("set").fileFinishedImporting("modules/links/native/handleIncomingURL.tsx");
 
 export default function handleIncomingURL() {
   const self = this;

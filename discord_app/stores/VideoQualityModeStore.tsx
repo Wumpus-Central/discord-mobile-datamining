@@ -1,7 +1,11 @@
 // discord_app/stores/VideoQualityModeStore.tsx
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
-const AUTO = require("ME").VideoQualityMode.AUTO;
+const AUTO = ME.VideoQualityMode.AUTO;
+const Store = initializeDefault.Store;
 class VideoQualityModeStore extends Store {
 }
 Object.defineProperty(VideoQualityModeStore.prototype, "mode", {
@@ -11,11 +15,11 @@ Object.defineProperty(VideoQualityModeStore.prototype, "mode", {
   set: undefined
 });
 VideoQualityModeStore.displayName = "VideoQualityModeStore";
-const videoQualityModeStore = new VideoQualityModeStore(require("dispatcher"), {
+const videoQualityModeStore = new VideoQualityModeStore(dispatcherDefault, {
   SET_CHANNEL_VIDEO_QUALITY_MODE: function handleSetChannelVideoQualityMode(mode) {
     mode = mode.mode;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/VideoQualityModeStore.tsx");
+const result = set.fileFinishedImporting("stores/VideoQualityModeStore.tsx");
 
 export default videoQualityModeStore;

@@ -1,13 +1,13 @@
 // discord_app/modules/design/PlaygroundAccessExperiment.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ApexExperiment from "ApexExperiment";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
-const require = arg1;
+require = arg1;
 ApexExperiment = { 1: null };
 ApexExperiment[1] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-02-mana-playground-access", kind: "user", defaultConfig: { enabled: false }, variations: ApexExperiment });
-const result = require("initialize").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
+const result = require("set").fileFinishedImporting("modules/design/PlaygroundAccessExperiment.tsx");
 
 export default apexExperiment;
 export const usePlaygroundAccessExperiment = function usePlaygroundAccessExperiment(design_systems_settings) {
@@ -18,7 +18,7 @@ export const getPlaygroundAccessExperiment = function getPlaygroundAccessExperim
 };
 export const useHasPlaygroundAccess = function useHasPlaygroundAccess(location) {
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_2];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let isStaffResult;
   if (stateFromStores != null) {

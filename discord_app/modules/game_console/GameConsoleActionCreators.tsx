@@ -1,18 +1,15 @@
 // discord_app/modules/game_console/GameConsoleActionCreators.tsx
-import expandEventProperties from "expandEventProperties";
-import createRTCConnection from "createRTCConnection";
-import handleUpdate from "handleUpdate";
-import set from "set";
-import ME from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { snapVolumeToDefault } from "../user_settings/voice/AudioSettingsUtils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import snapVolumeToDefault from "snapVolumeToDefault" /* 9656 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_5 from "handleUpdate" /* 4541 */;
+import closure_6 from "set" /* 4540 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function disconnectRemote() {
   const self = this;
   const apply = _disconnectRemote.apply;
@@ -27,15 +24,15 @@ function _disconnectRemote() {
   const self = this;
   const tmp = callback(function*() {
     const callback = tmp3;
-    const awaitingRemoteSessionInfo = outer1_6.getAwaitingRemoteSessionInfo();
+    const awaitingRemoteSessionInfo = closure_1_6.getAwaitingRemoteSessionInfo();
     if (awaitingRemoteSessionInfo != null) {
       const nonce = awaitingRemoteSessionInfo.nonce;
     }
-    v0(outer1_2[6]).dispatch({ type: "REMOTE_SESSION_DISCONNECT" });
+    v0(closure_1_2[6]).dispatch({ type: "REMOTE_SESSION_DISCONNECT" });
     if (awaitingRemoteSessionInfo != null) {
       const type = awaitingRemoteSessionInfo.type;
     }
-    let tmp24 = type !== outer1_9.PLAYSTATION;
+    let tmp24 = type !== closure_1_9.PLAYSTATION;
     if (tmp24) {
       let type1;
       if (awaitingRemoteSessionInfo != null) {
@@ -59,23 +56,23 @@ function _disconnectRemote() {
     }
     const items = [];
     if (!tmp24) {
-      items.push(outer1_17(awaitingRemoteSessionInfo.type, awaitingRemoteSessionInfo.deviceId, awaitingRemoteSessionInfo.commandId));
+      items.push(closure_1_17(awaitingRemoteSessionInfo.type, awaitingRemoteSessionInfo.deviceId, awaitingRemoteSessionInfo.commandId));
     }
     if (null != nonce) {
-      items.push(outer1_14(nonce));
+      items.push(closure_1_14(nonce));
     }
-    let c3 = 1;
+    c3 = 1;
     yield Promise.all(items);
     if (1 === tmp7) {
       c3 = 0;
-      const obj1 = v0(4827);
+      obj1 = v0(4827);
       const obj2 = { title: null, body: null };
       const intl = callback(1236).intl;
       obj2[0] = intl.string(callback(1236).t.LNhXcL);
       const intl2 = callback(1236).intl;
       obj2[1] = intl2.string(callback(1236).t.QnKxtP);
       obj1.show(obj2);
-      let c4 = 3;
+      c4 = 3;
     } else if (arg0 === 1) {
       c4 = 3;
       throw arg1;
@@ -85,7 +82,7 @@ function _disconnectRemote() {
     c3 = 0;
     return arg1;
   });
-  const _disconnectRemote = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -136,17 +133,17 @@ function _getConnectNonce() {
             let callback = tmp3;
             let nonce = tmp7;
             nonce = undefined;
-            let c3 = 1;
+            c3 = 1;
             if (null != rTCConnectionId.getRTCConnectionId()) {
-              let CREATE_NEW_CALL = outer1_0(outer1_2[10]).ConsoleHandoffType.TRANSFER_EXISTING_CALL;
-              let tmp21 = outer1_0;
+              let CREATE_NEW_CALL = closure_1_0(closure_1_2[10]).ConsoleHandoffType.TRANSFER_EXISTING_CALL;
+              let tmp21 = closure_1_0;
             } else {
-              CREATE_NEW_CALL = outer1_0(outer1_2[10]).ConsoleHandoffType.CREATE_NEW_CALL;
-              tmp21 = outer1_0;
+              CREATE_NEW_CALL = closure_1_0(closure_1_2[10]).ConsoleHandoffType.CREATE_NEW_CALL;
+              tmp21 = closure_1_0;
             }
-            const HTTP = tmp21(outer1_2[11]).HTTP;
-            let obj1 = { url: null, body: null, rejectWithError: false };
-            obj1[0] = outer1_8.CONNECT_REQUEST_CREATE;
+            const HTTP = tmp21(closure_1_2[11]).HTTP;
+            obj1 = { url: null, body: null, rejectWithError: false };
+            obj1[0] = closure_1_8.CONNECT_REQUEST_CREATE;
             const obj2 = { analytics_properties: null };
             const obj3 = { handoff_type: null };
             obj3[0] = CREATE_NEW_CALL;
@@ -187,7 +184,7 @@ function _getConnectNonce() {
       }
     }
   });
-  const _getConnectNonce = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -203,10 +200,10 @@ function cancelConnectRequest(arg0) {
 function _fetchDevices() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -238,13 +235,13 @@ function _fetchDevices() {
               let lib = tmp7;
               lib = undefined;
               devices = undefined;
-              const obj1 = { type: "GAME_CONSOLE_FETCH_DEVICES_START", platform: null };
+              obj1 = { type: "GAME_CONSOLE_FETCH_DEVICES_START", platform: null };
               obj1[1] = callback;
-              outer1_1(outer1_2[6]).dispatch(obj1);
-              let c4 = 1;
-              const HTTP = callback(outer1_2[11]).HTTP;
+              closure_1_1(closure_1_2[6]).dispatch(obj1);
+              c4 = 1;
+              const HTTP = callback(closure_1_2[11]).HTTP;
               const obj2 = { url: null, rejectWithError: false };
-              obj2[0] = outer1_8.CONSOLES_DEVICES(callback);
+              obj2[0] = closure_1_8.CONSOLES_DEVICES(callback);
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
@@ -256,9 +253,9 @@ function _fetchDevices() {
             let obj4 = lib(devices[6]);
             obj4 = { type: "GAME_CONSOLE_FETCH_DEVICES_FAIL", platform: null, error: null };
             obj4[1] = callback;
-            obj4[2] = expandEventProperties;
+            obj4[2] = closure_3;
             obj4.dispatch(obj4);
-            throw expandEventProperties;
+            throw closure_3;
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
@@ -283,7 +280,7 @@ function _fetchDevices() {
             return obj7;
           }
         } catch (tmp26) {
-          expandEventProperties = tmp26;
+          closure_3 = tmp26;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp26;
@@ -294,7 +291,7 @@ function _fetchDevices() {
       }
     })();
   });
-  const _fetchDevices = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -306,13 +303,13 @@ function _fetchDevices() {
 function _sendConnectVoiceCommand() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let expandEventProperties = arg3;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       if (c9 === 2) {
         c9 = 3;
@@ -344,17 +341,17 @@ function _sendConnectVoiceCommand() {
               let body = tmp7;
               body = undefined;
               id = undefined;
-              const obj1 = { type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_START", platform: null };
+              obj1 = { type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_START", platform: null };
               obj1[1] = callback;
               callback2(id[6]).dispatch(obj1);
-              let c7 = 1;
+              c7 = 1;
               const HTTP = callback(id[11]).HTTP;
               let obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = c8.CONSOLES_DEVICES_COMMANDS(callback, callback2);
               const obj3 = { command: null, channel_id: null, guild_id: null, nonce: null };
               obj3[0] = callback(id[13]).ConsoleCommands.CONNECT_VOICE;
               ({ id: obj13[1], guild_id: obj13[2] } = id);
-              obj3[3] = expandEventProperties;
+              obj3[3] = closure_3;
               obj2[1] = obj3;
               c8 = 2;
               c9 = 1;
@@ -367,9 +364,9 @@ function _sendConnectVoiceCommand() {
             obj2 = callback2(id[6]);
             const obj5 = { type: "GAME_CONSOLE_DEVICE_SEND_COMMAND_FAIL", platform: null, error: null };
             obj5[1] = callback;
-            obj5[2] = set;
+            obj5[2] = closure_6;
             obj2.dispatch(obj5);
-            throw set;
+            throw closure_6;
           } else if (arg0 === 1) {
             c9 = 3;
             throw arg1;
@@ -386,7 +383,7 @@ function _sendConnectVoiceCommand() {
             let obj7 = callback2(id[6]);
             obj7 = { type: "WAIT_FOR_REMOTE_SESSION", sessionType: null, nonce: null, channelId: null, deviceId: null, commandId: null };
             obj7[1] = callback;
-            obj7[2] = expandEventProperties;
+            obj7[2] = closure_3;
             obj7[3] = id.id;
             obj7[4] = callback2;
             obj7[5] = id;
@@ -397,7 +394,7 @@ function _sendConnectVoiceCommand() {
             return obj;
           }
         } catch (tmp18) {
-          set = tmp18;
+          closure_6 = tmp18;
           if (tmp4 === c7) {
             c9 = tmp2;
             throw tmp18;
@@ -408,7 +405,7 @@ function _sendConnectVoiceCommand() {
       }
     })();
   });
-  const _sendConnectVoiceCommand = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -430,12 +427,12 @@ function cancelCommand() {
 function _cancelCommand() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
@@ -463,14 +460,14 @@ function _cancelCommand() {
               obj[0] = arg1;
               return obj;
             } else {
-              let createRTCConnection = tmp3;
-              let expandEventProperties = tmp7;
-              const obj1 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START", platform: null, deviceId: null, commandId: null };
+              closure_4 = tmp3;
+              closure_3 = tmp7;
+              obj1 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_START", platform: null, deviceId: null, commandId: null };
               obj1[1] = callback;
               obj1[2] = callback2;
               obj1[3] = dependencyMap;
               callback2(709).dispatch(obj1);
-              let c6 = 1;
+              c6 = 1;
               const HTTP = callback(530).HTTP;
               const obj2 = { url: null, rejectWithError: false };
               obj2[0] = c8.CONSOLES_DEVICES_COMMAND(callback, callback2, dependencyMap);
@@ -482,15 +479,15 @@ function _cancelCommand() {
             }
           } else if (1 === tmp7) {
             c6 = 0;
-            expandEventProperties = handleUpdate;
+            closure_3 = closure_5;
             obj3 = callback2(709);
             const obj4 = { type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_FAIL", platform: null, deviceId: null, commandId: null, error: null };
             obj4[1] = callback;
             obj4[2] = callback2;
             obj4[3] = dependencyMap;
-            obj4[4] = expandEventProperties;
+            obj4[4] = closure_3;
             obj3.dispatch(obj4);
-            throw expandEventProperties;
+            throw closure_3;
           } else if (arg0 === 1) {
             c8 = 3;
             throw arg1;
@@ -512,7 +509,7 @@ function _cancelCommand() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp28) {
-          handleUpdate = tmp28;
+          closure_5 = tmp28;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp28;
@@ -523,7 +520,7 @@ function _cancelCommand() {
       }
     })();
   });
-  const _cancelCommand = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -535,11 +532,11 @@ function _cancelCommand() {
 function _transferToPlayStation() {
   let self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -567,13 +564,13 @@ function _transferToPlayStation() {
               obj[0] = arg1;
               return obj;
             } else {
-              let createRTCConnection = tmp5;
-              let expandEventProperties = tmp2;
-              expandEventProperties = undefined;
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              closure_3 = undefined;
               let obj7 = callback(id[14]);
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj7.maybeShowPTTAlert(closure_0);
               return obj1;
             }
@@ -590,7 +587,7 @@ function _transferToPlayStation() {
               c5 = 2;
               c6 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = outer1_10();
+              obj3[0] = closure_1_10();
               return obj3;
             }
           } else if (2 === tmp5) {
@@ -606,7 +603,7 @@ function _transferToPlayStation() {
               c5 = 3;
               c6 = 1;
               const obj5 = { value: null, done: false };
-              obj5[0] = outer1_12();
+              obj5[0] = closure_1_12();
               return obj5;
             }
           } else if (3 === tmp5) {
@@ -619,11 +616,11 @@ function _transferToPlayStation() {
               obj6[0] = arg1;
               return obj6;
             } else {
-              expandEventProperties = arg1;
+              closure_3 = arg1;
               c5 = 4;
               c6 = 1;
               obj7 = { value: null, done: false };
-              obj7[0] = (function sendConnectVoiceCommand(closure_0, closure_1, closure_2, expandEventProperties) {
+              obj7[0] = (function sendConnectVoiceCommand(closure_0, closure_1, closure_2, closure_3) {
                 const self = this;
                 const apply = closure_16.apply;
                 if (typeof apply === "unknown") {
@@ -632,7 +629,7 @@ function _transferToPlayStation() {
                   applyArgumentsResult = apply(self, arguments);
                 }
                 return applyArgumentsResult;
-              })(closure_0, callback, id, expandEventProperties);
+              })(closure_0, callback, id, closure_3);
               return obj7;
             }
           } else if (arg0 === 1) {
@@ -655,7 +652,7 @@ function _transferToPlayStation() {
       }
     })();
   });
-  const _transferToPlayStation = tmp;
+  closure_19 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -664,25 +661,23 @@ function _transferToPlayStation() {
   }
   return applyArgumentsResult;
 }
-({ AnalyticEvents: error, Endpoints: metroImportAll, PlatformTypes: c9 } = ME);
-let result = require("handleUpdate").fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
+({ AnalyticEvents: error, Endpoints: closure_8, PlatformTypes: c9 } = ME);
+let result = require("set").fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");
 
 export const waitForSession = function waitForSession(XBOX, id, closure_1) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "WAIT_FOR_REMOTE_SESSION", sessionType: XBOX, nonce: closure_1, channelId: id };
   obj.dispatch(obj);
 };
 export { disconnectRemote };
 export const connectToRemote = function connectToRemote(sessionId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "REMOTE_SESSION_CONNECT", sessionId };
   obj.dispatch(obj);
 };
 export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSessionId, arg1) {
-  let selfDeaf;
-  let selfMute;
   ({ selfMute, selfDeaf } = arg1);
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "VOICE_STATE_UPDATE", self_mute: selfMute, self_deaf: selfDeaf } };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
@@ -693,10 +688,10 @@ export const remoteVoiceStateUpdate = function remoteVoiceStateUpdate(remoteSess
       os = clientInfo.os;
     }
   }
-  expandEventProperties.track(constants.REMOTE_COMMAND_SENT, { command_type: "VOICE_STATE_UPDATE", remote_platform: os });
+  expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "VOICE_STATE_UPDATE", remote_platform: os });
 };
 export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "REMOTE_COMMAND", sessionId: remoteSessionId, payload: { type: "DISCONNECT" } };
   obj.dispatch(obj);
   const sessionById = store.getSessionById(remoteSessionId);
@@ -707,7 +702,7 @@ export const remoteDisconnect = function remoteDisconnect(remoteSessionId) {
       os = clientInfo.os;
     }
   }
-  expandEventProperties.track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
+  expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, { command_type: "DISCONNECT", remote_platform: os });
   disconnectRemote();
 };
 export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sessionId, arg1, first) {
@@ -721,8 +716,8 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
     obj[2] = arg1;
     const merged = Object.assign(arg3);
     obj[2] = obj;
-    dispatcher.dispatch(obj);
-    const obj3 = dispatcher;
+    dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
     const sessionById = store.getSessionById(sessionId);
     let os;
     if (sessionById != null) {
@@ -731,10 +726,10 @@ export const remoteAudioSettingsUpdate = function remoteAudioSettingsUpdate(sess
         os = clientInfo.os;
       }
     }
-    const obj1 = { command_type: "AUDIO_SETTINGS_UPDATE", remote_platform: null };
+    obj1 = { command_type: "AUDIO_SETTINGS_UPDATE", remote_platform: null };
     obj1[1] = os;
-    expandEventProperties.track(constants.REMOTE_COMMAND_SENT, obj1);
-    const obj6 = expandEventProperties;
+    expandEventPropertiesDefault.track(constants.REMOTE_COMMAND_SENT, obj1);
+    const obj6 = expandEventPropertiesDefault;
   }
 };
 export { getConnectNonce };
@@ -750,7 +745,7 @@ export const fetchDevices = function fetchDevices(closure_0) {
   return applyArgumentsResult;
 };
 export const persistSelectedDeviceId = function persistSelectedDeviceId(closure_0, value) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GAME_CONSOLE_SELECT_DEVICE", platform: closure_0, deviceId: value };
   obj.dispatch(obj);
 };

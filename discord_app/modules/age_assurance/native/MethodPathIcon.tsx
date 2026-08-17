@@ -1,28 +1,29 @@
 // discord_app/modules/age_assurance/native/MethodPathIcon.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../_runtime/06571_inlineStyles.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { map } from "../../../design/tokens/native/useToken.tsx";
 
 const require = arg1;
+noopAll;
 createCacheKey = { container: null };
-createCacheKey = { width: require("Themes").modules.mobile.TABLE_ROW_ICON_SIZE, height: require("Themes").modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: require("Themes").radii.lg };
+createCacheKey = { width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.lg };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/age_assurance/native/MethodPathIcon.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/MethodPathIcon.tsx");
 
 export default function MethodPathIcon(icon) {
   let _require;
   let obj = _map;
-  _require = obj.useToken(Themes.colors.INTERACTIVE_TEXT_DEFAULT);
-  obj = { style: createCacheKey().container, children: null };
+  _require = obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT);
+  obj = { style: callback().container, children: null };
   obj = { width: 24, height: 24, viewBox: "0 0 24 24", children: null };
   const paths = icon.icon.paths;
-  const tmp = createCacheKey();
-  obj[3] = paths.map((d) => outer1_4(callback(outer1_2[6]).Path, { d: d.d, fill: callback, fillRule: d.fillRule }, d.d));
-  obj[1] = jsx(inlineStyles, { width: 24, height: 24, viewBox: "0 0 24 24", children: null });
+  const tmp = callback();
+  obj[3] = paths.map((d) => closure_1_4(callback(closure_1_2[6]).Path, { d: d.d, fill: callback, fillRule: d.fillRule }, d.d));
+  obj[1] = jsx(inlineStylesDefault, { width: 24, height: 24, viewBox: "0 0 24 24", children: null });
   return <View width={24} height={24} viewBox="0 0 24 24">{null}</View>;
 };

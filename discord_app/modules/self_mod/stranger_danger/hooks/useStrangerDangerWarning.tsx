@@ -1,17 +1,17 @@
 // discord_app/modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { SafetyWarningTypes } from "handleConnectionOpen";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useIsMessageRequest } from "../../../message_request/hooks/useIsMessageRequest.tsx";
-import { useIsSpamMessageRequest } from "../../../message_request/hooks/useIsSpamMessageRequest.tsx";
-import { useChannelSafetyWarning } from "../../hooks/useChannelSafetyWarning.tsx";
-import { useUserIsTeen } from "../../hooks/useUserIsTeen.tsx";
+import initialize from "initialize" /* 589 */;
+import useUserIsTeen from "useUserIsTeen" /* 8152 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10571 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 10572 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10573 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/stranger_danger/hooks/useStrangerDangerWarning.tsx");
 
 export const useStrangerDangerWarning = function useStrangerDangerWarning(id) {
-  const items = [mergeGuildAvatar];
+  const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = initialize;
   const tmp = require;

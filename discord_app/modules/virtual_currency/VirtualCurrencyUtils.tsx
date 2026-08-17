@@ -1,15 +1,17 @@
 // discord_app/modules/virtual_currency/VirtualCurrencyUtils.tsx
-import { COLLECTIBLES_APPLICATION_ID as closure_2 } from "ME";
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
-import ContentDismissActionType from "ContentDismissActionType";
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_6 } from "GuildFeatures";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import items from "items" /* 678 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1388 */;
 
-let c4;
-let c5;
+let closure_2 = ME.COLLECTIBLES_APPLICATION_ID;
+const EXTERNAL_PRODUCT_SKU_IDS = items.EXTERNAL_PRODUCT_SKU_IDS;
 ({ DismissibleContentGroupName: c4, ContentDismissActionType: c5 } = ContentDismissActionType);
-let result = require("ContentDismissActionType").fileFinishedImporting("modules/virtual_currency/VirtualCurrencyUtils.tsx");
+let closure_6 = GuildFeatures.PREMIUM_SUBSCRIPTION_APPLICATION;
+let result = set.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyUtils.tsx");
 
 export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSKU(skuId) {
   return skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM ? closure_6 : closure_2;
@@ -27,7 +29,7 @@ export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExp
     obj[0] = constants2.INDIRECT_ACTION;
     obj[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
     const result1 = tmpResult.UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, obj);
-    const obj1 = { dismissAction: null, groupName: null };
+    obj1 = { dismissAction: null, groupName: null };
     obj1[0] = constants2.INDIRECT_ACTION;
     obj1[1] = constants.VIRTUAL_CURRENCY_ONBOARDING;
     const result2 = tmp(4196).UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, obj1);

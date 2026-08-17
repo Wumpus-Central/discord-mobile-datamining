@@ -1,15 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopAll;
 let c4 = "GuildRoleSubscriptionTrialActiveUserLimitSelect";
-const result = require("useTrialActiveUserLimitOptions").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormTrialActiveUserLimitPicker.tsx");
 
 export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
   const str = activeTrialUserlimit.activeTrialUserlimit;
   const onChange = activeTrialUserlimit.onChange;
-  let dependencyMap;
+  dependencyMap = undefined;
   dependencyMap = onChange(16970)();
   if (null == str) {
     let intl = str(1236).intl;
@@ -27,10 +28,10 @@ export default function FormTrialActiveUserLimitPicker(activeTrialUserlimit) {
       obj[1] = paths;
       obj[2] = function onItemSelect(arg0) {
         callback(arg0);
-        outer1_1(outer1_2[5]).hideActionSheet(outer1_4);
+        closure_1_1(closure_1_2[5]).hideActionSheet(closure_1_4);
       };
       obj[3] = str;
-      obj.openLazy(str(paths[7])(paths[6], paths.paths), outer1_4, obj);
+      obj.openLazy(str(paths[7])(paths[6], paths.paths), closure_1_4, obj);
     },
     disabled: activeTrialUserlimit.disabled
   });

@@ -1,18 +1,17 @@
 // discord_app/modules/forums/native/posts/ForumPostTimestamp.tsx
-import "noop";
-import { useForumChannelStore } from "set";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
+import { useForumChannelStore } from "set" /* 11177 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ text: { lineHeight: 18, height: 18 } });
-const result = require("jsxProd").fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTimestamp.tsx");
 
 export default function ForumPostTimestamp(thread) {
-  let format;
-  let hasUnreads;
-  let textStyle;
   thread = thread.thread;
   ({ textStyle, hasUnreads, format } = thread);
   const tmp = callback();
@@ -23,5 +22,5 @@ export default function ForumPostTimestamp(thread) {
     color = "text-default";
   }
   const style = [textStyle, tmp.text];
-  return jsx(tmp2(4734).Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
+  return jsx(Text.Text, { lineClamp: 1, variant: "text-xs/normal", color, style, children });
 };

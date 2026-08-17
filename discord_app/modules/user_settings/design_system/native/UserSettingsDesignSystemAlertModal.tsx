@@ -1,16 +1,14 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx
-import useAlertStore from "useAlertStore";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import useAlertStore from "useAlertStore" /* 4657 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import Button from "Button" /* 4745 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function DemoModal() {
   callback = React.useCallback(callback(function*() {
     if (c0 === 2) {
@@ -42,7 +40,7 @@ function DemoModal() {
             const promise = new Promise((arg0) => setTimeout(arg0, 2000));
             c1 = 1;
             c0 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = promise;
             return obj1;
           }
@@ -74,7 +72,7 @@ function openDemoModal() {
 }
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center" } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemAlertModal.tsx");
 
 export default function UserSettingsDesignSystemAlertModal() {
   let obj = { children: null };

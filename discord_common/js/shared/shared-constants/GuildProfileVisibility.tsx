@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/GuildProfileVisibility.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { VISIBLE: null };
 let set = new Set([1, 3]);

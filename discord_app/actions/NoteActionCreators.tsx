@@ -1,8 +1,10 @@
 // discord_app/actions/NoteActionCreators.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("actions/NoteActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("actions/NoteActionCreators.tsx");
 
 export default {
   updateNote(closure_0, closure_5) {

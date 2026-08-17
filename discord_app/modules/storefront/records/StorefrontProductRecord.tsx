@@ -1,6 +1,6 @@
 // discord_app/modules/storefront/records/StorefrontProductRecord.tsx
-import fromServer from "fromServer";
-import createFromServer from "createFromServer";
+import closure_0 from "fromServer" /* 5328 */;
+import closure_1 from "createFromServer" /* 4515 */;
 
 let prototype;
 prototype = function StorefrontProductRecord(arg0) {
@@ -8,11 +8,6 @@ prototype = function StorefrontProductRecord(arg0) {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_ids) {
-  let created_at;
-  let options;
-  let skus;
-  let tenant_metadata;
-  let updated_at;
   ({ options, created_at, updated_at, skus, tenant_metadata } = sku_ids);
   let obj = {};
   const merged = Object.assign(Object.assign(sku_ids, Object.create(null)));
@@ -21,7 +16,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   obj.createdAt = new Date(created_at);
   const date = new Date(created_at);
   obj.updatedAt = new Date(updated_at);
-  obj.skus = skus.map((arg0) => createFromServer.createFromServer(arg0));
+  obj.skus = skus.map((arg0) => closure_1.createFromServer(arg0));
   const collectibles = tenant_metadata.collectibles;
   let prop;
   if (collectibles != null) {
@@ -35,7 +30,7 @@ prototype["fromServer"] = function fromServer(sku_ids) {
   }
   let fromServerResult;
   if (null != prop1) {
-    fromServerResult = fromServer.fromServer(tenant_metadata.collectibles.primary_collection_styles);
+    fromServerResult = closure_0.fromServer(tenant_metadata.collectibles.primary_collection_styles);
   }
   obj.primaryCollectionStyles = fromServerResult;
   const collectibles3 = tenant_metadata.collectibles;

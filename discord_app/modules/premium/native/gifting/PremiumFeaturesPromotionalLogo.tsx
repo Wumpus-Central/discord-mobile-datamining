@@ -1,16 +1,13 @@
 // discord_app/modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumFeaturesPromotionalLogo.tsx");
 
 export default function PremiumFeaturesPromotionalLogo(arg0) {
-  let promoRotatingStyle;
-  let rotatingAvatarImageUrl;
-  let shouldAnimate;
   ({ rotatingAvatarImageUrl, promoRotatingStyle, shouldAnimate } = arg0);
   if (shouldAnimate === undefined) {
     shouldAnimate = true;
@@ -20,7 +17,7 @@ export default function PremiumFeaturesPromotionalLogo(arg0) {
   let first;
   let React;
   let obj = shouldAnimate(aPNGPlayerControls[4]);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let num = null;
   const ref = React.useRef(null);

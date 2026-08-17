@@ -1,11 +1,13 @@
 // discord_app/modules/stage_channels/native/StageChannelAudioStore.tsx
-import { NativeModules } from "get ActivityIndicator";
-import handleAudioRouteChanged from "handleAudioRouteChanged";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import { Store } from "initialize";
-import { apexExperiment } from "../../voice_calls/DefaultAudioRouteExperiment.tsx";
-import { RouteTypes } from "../../voice_calls/VoiceCallTypes.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import RouteTypes from "RouteTypes" /* 9649 */;
+import apexExperimentDefault from "apexExperiment" /* 16339 */;
+import closure_4 from "handleAudioRouteChanged" /* 9648 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
 
 function handleAudioRouteChanged() {
   if (c8) {
@@ -32,14 +34,16 @@ function handleAudioRouteChanged() {
     return false;
   }
 }
+const NativeModules = get_ActivityIndicator.NativeModules;
 let c7 = null;
 let c8 = false;
+const Store = initializeDefault.Store;
 class StageChannelAudioStore extends Store {
 }
 const prototype = StageChannelAudioStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(handleAudioRouteChanged, ensureGuildLoaded, createRTCConnection);
-  const items = [handleAudioRouteChanged];
+  this.waitFor(closure_4, closure_5, closure_6);
+  const items = [closure_4];
   this.syncWith(items, handleAudioRouteChanged);
 };
 prototype["getConnectedChannelId"] = function getConnectedChannelId() {
@@ -49,10 +53,10 @@ prototype["getQueueAudioSwap"] = function getQueueAudioSwap() {
   return c8;
 };
 StageChannelAudioStore.displayName = "StageChannelAudioStore";
-const stageChannelAudioStore = new StageChannelAudioStore(require("dispatcher"), {
+const stageChannelAudioStore = new StageChannelAudioStore(dispatcherDefault, {
   RTC_CONNECTION_STATE: function handleConnectionStatusChanged() {
-    const isConnectedResult = createRTCConnection.isConnected();
-    const channelId = createRTCConnection.getChannelId();
+    const isConnectedResult = closure_6.isConnected();
+    const channelId = closure_6.getChannelId();
     if (isConnectedResult) {
       if (null != channelId) {
         if (channelId !== id) {
@@ -63,16 +67,16 @@ const stageChannelAudioStore = new StageChannelAudioStore(require("dispatcher"),
             if (!isGuildStageVoiceResult) {
               let defaultSpeakerForGuildCall = channel.isGuildVoice();
               if (defaultSpeakerForGuildCall) {
-                defaultSpeakerForGuildCall = apexExperiment.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForGuildCall;
-                const obj2 = apexExperiment;
+                defaultSpeakerForGuildCall = apexExperimentDefault.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForGuildCall;
+                const obj2 = apexExperimentDefault;
               }
               isGuildStageVoiceResult = defaultSpeakerForGuildCall;
             }
             if (!isGuildStageVoiceResult) {
               let defaultSpeakerForDMCall = channel.isDM();
               if (defaultSpeakerForDMCall) {
-                defaultSpeakerForDMCall = apexExperiment.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForDMCall;
-                const obj3 = apexExperiment;
+                defaultSpeakerForDMCall = apexExperimentDefault.getConfig({ location: "StageChannelAudioStore" }).defaultSpeakerForDMCall;
+                const obj3 = apexExperimentDefault;
               }
               isGuildStageVoiceResult = defaultSpeakerForDMCall;
             }
@@ -81,7 +85,7 @@ const stageChannelAudioStore = new StageChannelAudioStore(require("dispatcher"),
           if (tmp10) {
             if (null != channel) {
               if (id !== channel.id) {
-                let c8 = true;
+                c8 = true;
               }
               id = channel.id;
             }
@@ -106,6 +110,6 @@ const stageChannelAudioStore = new StageChannelAudioStore(require("dispatcher"),
     return flag;
   }
 });
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/stage_channels/native/StageChannelAudioStore.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/native/StageChannelAudioStore.tsx");
 
 export default stageChannelAudioStore;

@@ -1,9 +1,9 @@
 // discord_app/modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx
-import noop from "noop";
-import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "items";
+import closure_2 from "noop" /* 19 */;
+import { APPLICATION_IDENTITY_CONNECTIONS_ALLOWED_APPLICATIONS as closure_3 } from "items" /* 4483 */;
 
 const require = arg1;
-const result = require("fetchStore").fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");
+const result = require("set").fileFinishedImporting("modules/user_application_identity/hooks/useConnectionFilteredAppIdentities.tsx");
 
 export default function useConnectionFilteredAppIdentities(arg0) {
   let obj = arg1;
@@ -24,8 +24,8 @@ export default function useConnectionFilteredAppIdentities(arg0) {
         items = [];
       }
       return items.filter((profile) => {
-        let closure_0 = profile;
-        let someResult = outer1_3.some((applicationId) => {
+        closure_0 = profile;
+        let someResult = closure_1_3.some((applicationId) => {
           let migrationExperimentEnabled = applicationId.applicationId === profile.application_id;
           if (migrationExperimentEnabled) {
             migrationExperimentEnabled = applicationId.getMigrationExperimentEnabled("useConnectionFilteredAppIdentities");

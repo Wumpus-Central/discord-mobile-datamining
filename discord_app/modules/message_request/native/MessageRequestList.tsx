@@ -1,27 +1,13 @@
 // discord_app/modules/message_request/native/MessageRequestList.tsx
-import useSafeAreaInsets from "useSafeAreaInsets";
-import get_ActivityIndicator from "registerAsset";
-import { AnalyticEvents } from "ME";
-import jsxProd from "useListHasSingleMessageRequest";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 function PendingMessageRequestRow(isRestricted) {
-  let c5;
-  let c6;
-  let hasSingleMessageRequest;
-  let isAcceptLoading;
-  let isOptimisticAccepted;
-  let isOptimisticRejected;
-  let isRejectLoading;
-  let isUserProfileLoading;
-  let messageRequest;
-  let require;
   ({ messageRequest, goToMessageRequestPreview: require, hasSingleMessageRequest } = isRestricted);
   let flag = isRestricted.isRestricted;
   if (flag === undefined) {
@@ -32,7 +18,7 @@ function PendingMessageRequestRow(isRestricted) {
   let id;
   c5 = undefined;
   c6 = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   str = messageRequest.user;
   channel = messageRequest.channel;
   id = channel.id;
@@ -47,10 +33,10 @@ function PendingMessageRequestRow(isRestricted) {
   }, []);
   const callback1 = channel.useCallback(() => {
     if (hasSingleMessageRequest) {
-      outer1_0(str[9]).transitionToChannel(id);
+      closure_1_0(str[9]).transitionToChannel(id);
       let arr = hasSingleMessageRequest(str[10]);
       arr = arr.pop();
-      const obj = outer1_0(str[9]);
+      const obj = closure_1_0(str[9]);
     }
   }, items);
   let obj = require(str[11]);
@@ -72,7 +58,7 @@ function PendingMessageRequestRow(isRestricted) {
   function handleSelectRow() {
     let obj = hasSingleMessageRequest(str[12]);
     obj = { is_spam: false, channel_id: channel.id, other_user_id: str.id };
-    obj.track(outer1_7.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
+    obj.track(closure_1_7.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
     callback();
   }
   obj = { onPress: handleSelectRow, accessibilityRole: "button", accessibilityActions: null, onAccessibilityAction: null, style: null, children: null };
@@ -80,7 +66,7 @@ function PendingMessageRequestRow(isRestricted) {
   let intl = tmp4(tmp5[6]).intl;
   obj[1] = intl.string(require(str[6]).t.hSLLWi);
   const items1 = [obj, , ];
-  const obj1 = { name: constants.IGNORE_MESSAGE_REQUEST, label: null };
+  obj1 = { name: constants.IGNORE_MESSAGE_REQUEST, label: null };
   const intl2 = tmp4(tmp5[6]).intl;
   obj1[1] = intl2.string(require(str[6]).t.fIBuSD);
   items1[1] = obj1;
@@ -91,7 +77,7 @@ function PendingMessageRequestRow(isRestricted) {
   obj[2] = items1;
   obj[3] = function onAccessibilityAction(nativeEvent) {
     const actionName = nativeEvent.nativeEvent.actionName;
-    if (outer1_11.ACCEPT_MESSAGE_REQUEST === actionName) {
+    if (closure_1_11.ACCEPT_MESSAGE_REQUEST === actionName) {
       _undefined(channel.id);
     } else if (tmp.IGNORE_MESSAGE_REQUEST === actionName) {
       _undefined2(channel.id);
@@ -100,7 +86,7 @@ function PendingMessageRequestRow(isRestricted) {
       obj = { is_spam: false, channel_id: null, other_user_id: null };
       obj[1] = channel.id;
       obj[2] = str.id;
-      obj.track(outer1_7.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
+      obj.track(closure_1_7.MESSAGE_REQUEST_PREVIEW_VIEWED, obj);
       callback();
     }
   };
@@ -172,38 +158,38 @@ function PendingMessageRequestRow(isRestricted) {
   tmp10Result = tmp10(id, { style: tmp.activityIndicator });
 }
 ({ ActivityIndicator: c4, View: c5, FlatList: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { sectionContainer: null, rowContainer: null, actionContainer: null, actionButton: null, acceptButton: null, acceptButtonRestricted: null, pressableRow: null, activityIndicator: null, list: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "row", justifyContent: "space-between", marginTop: 6, marginBottom: 10 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 14, marginBottom: 12 };
 createCacheKey[2] = { flexDirection: "row", alignItems: "flex-start", height: "100%" };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: require("Themes").radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
 createCacheKey[4] = { marginRight: 16 };
 createCacheKey[5] = { marginRight: 12 };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: require("Themes").radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
-createCacheKey[6] = { borderRadius: require("Themes").radii.md };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", height: 32, width: 32 };
+createCacheKey[6] = { borderRadius: ThemesDefault.radii.md };
 createCacheKey[7] = { height: 16, width: 16 };
-let obj2 = { borderRadius: require("Themes").radii.md };
-createCacheKey[8] = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderRadius: ThemesDefault.radii.md };
+createCacheKey[8] = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { ACCEPT_MESSAGE_REQUEST: "accept-message-request", IGNORE_MESSAGE_REQUEST: "ignore-message-request", PREVIEW_MESSAGE_REQUEST: "preview-message-request" };
-let obj3 = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-const result = require("ME").fileFinishedImporting("modules/message_request/native/MessageRequestList.tsx");
+let obj3 = { flex: 1, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestList.tsx");
 
 export default function MessageRequestList(goToMessageRequestPreview) {
   goToMessageRequestPreview = goToMessageRequestPreview.goToMessageRequestPreview;
-  let importDefault;
+  importDefault = undefined;
   let arr;
-  let useSafeAreaInsets;
-  let closure_4;
-  const tmp = createCacheKey();
+  closure_3 = undefined;
+  closure_4 = undefined;
+  const tmp = callback2();
   importDefault = tmp;
   const bottom = importDefault(arr[19])().bottom;
   arr = importDefault(arr[20])();
   let obj = goToMessageRequestPreview(arr[21]);
-  useSafeAreaInsets = obj.useListHasSingleMessageRequest();
-  let obj1 = goToMessageRequestPreview(arr[22]);
+  closure_3 = obj.useListHasSingleMessageRequest();
+  obj1 = goToMessageRequestPreview(arr[22]);
   closure_4 = obj1.useIsMessageRequestRestrictedViewer("MessageRequestList");
   if (0 === arr.length) {
     obj = { bodyText: null };
@@ -231,14 +217,14 @@ export default function MessageRequestList(goToMessageRequestPreview) {
       item = item.item;
       if (typeof item === "string") {
         let obj = { style: null, children: null };
-        obj[0] = _undefined.sectionContainer;
+        obj[0] = sectionContainer.sectionContainer;
         obj = { variant: "eyebrow", color: "text-default", children: null };
         const intl = goToMessageRequestPreview(arr[6]).intl;
-        const obj1 = { pendingRequestNumber: null };
+        obj1 = { pendingRequestNumber: null };
         obj1[0] = arr.length;
         obj[2] = intl.format(goToMessageRequestPreview(arr[6]).t.evH4Yb, obj1);
-        obj[1] = outer1_8(goToMessageRequestPreview(arr[25]).Text, obj);
-        return outer1_8(outer1_5, obj);
+        obj[1] = closure_1_8(goToMessageRequestPreview(arr[25]).Text, obj);
+        return closure_1_8(closure_1_5, obj);
       } else {
         let id;
         if (arr[arr.length - 1] != null) {
@@ -250,9 +236,9 @@ export default function MessageRequestList(goToMessageRequestPreview) {
           return item(item.channel.id);
         };
         obj[2] = item.channel.id === id;
-        obj[3] = useSafeAreaInsets;
+        obj[3] = closure_3;
         obj[4] = closure_4;
-        return outer1_8(outer1_12, obj, item.channel.id);
+        return closure_1_8(closure_1_12, obj, item.channel.id);
       }
     };
     obj[4] = items;

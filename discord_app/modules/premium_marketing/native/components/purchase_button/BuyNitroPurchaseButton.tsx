@@ -1,28 +1,18 @@
 // discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx
-import _slicedToArray from "_slicedToArray";
-import BuyNitroPurchaseButtonLegalDisclaimer from "BuyNitroPurchaseButtonLegalDisclaimer";
-import { View } from "module_4656";
-import updateProduct from "updateProduct";
-import { PremiumTypes } from "GuildFeatures";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "updateProduct" /* 5319 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { width: "100%" }, buttonStack: { width: "100%" }, hiddenFlow: { position: "absolute", width: 0, height: 0, overflow: "hidden", opacity: 0 } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx");
+let result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButton.tsx");
 
 export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
-  let _location;
-  let applicationId;
-  let c5;
-  let onHostSheetClose;
-  let onPaymentDismiss;
-  let onPaymentSuccess;
-  let planSelection;
-  let tmp19;
   ({ planSelection, location: _location } = sourceAnalyticsLocations);
   ({ onPaymentSuccess, onPaymentDismiss } = sourceAnalyticsLocations);
   if (_location === undefined) {
@@ -35,7 +25,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   let first;
   let React;
   c5 = undefined;
-  let updateProduct;
+  closure_6 = undefined;
   let callback;
   ({ applicationId, onHostSheetClose } = sourceAnalyticsLocations);
   const tmp3 = callback2();
@@ -81,19 +71,19 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
   React = tmp16[1];
   const ref = React.useRef(false);
   [tmp19, c5] = first(React.useState(null), 2);
-  updateProduct = React.useRef(first);
+  closure_6 = React.useRef(first);
   const items = [first];
   const effect = React.useEffect(() => {
-    updateProduct.current = first;
+    closure_6.current = first;
   }, items);
   const effect1 = React.useEffect(() => () => {
     if (null != ref.current) {
-      const BuyNitroPurchaseLock = outer1_0(outer1_2[14]).BuyNitroPurchaseLock;
+      const BuyNitroPurchaseLock = closure_1_0(closure_1_2[14]).BuyNitroPurchaseLock;
       BuyNitroPurchaseLock.end();
     }
   }, []);
   const tmp18 = first(React.useState(null), 2);
-  const items1 = [updateProduct];
+  const items1 = [closure_6];
   let stateFromStores = null != first;
   if (!stateFromStores) {
     stateFromStores = tmp4Result1.useStateFromStores(items1, () => busy.isBusy());
@@ -136,7 +126,7 @@ export default function BuyNitroPurchaseButton(sourceAnalyticsLocations) {
     callback();
   }, items2);
   obj = { style: tmp3.container, children: null };
-  const obj1 = { style: tmp3.buttonStack, children: null };
+  obj1 = { style: tmp3.buttonStack, children: null };
   callback2 = obj4.useCallback(() => {
     let beginResult = null != selection.item;
     if (beginResult) {

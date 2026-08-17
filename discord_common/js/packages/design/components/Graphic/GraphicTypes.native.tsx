@@ -1,5 +1,7 @@
 // discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Graphic/GraphicTypes.native.tsx");
 
 export const isImage = function isImage(type) {
   return "image" === type.type;

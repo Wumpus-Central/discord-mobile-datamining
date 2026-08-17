@@ -1,19 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getChannelSubtitleData } from "../../../../channel/native/getChannelSubtitleData.tsx";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 15486 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function ChannelSubtitle(arg0) {
-  let channelId;
-  let connected;
-  let guildId;
-  let layout;
-  let muted;
-  let subtitle;
-  let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, layout, subtitle } = arg0);
   let obj = getChannelSubtitleData;
@@ -37,11 +30,10 @@ function ChannelSubtitle(arg0) {
     return jsx(tmp(4734).Text, { content: null, muted: null, channelId: null, guildId: null, layout: null, color: "text-muted", disableAnimatedEmoji: null });
   }
 }
-const result = require("getLayoutStyles").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelSubtitle.tsx");
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
-  let layout;
-  let subtitle;
   ({ subtitle, layout } = arg0);
   if (null == subtitle) {
     return null;

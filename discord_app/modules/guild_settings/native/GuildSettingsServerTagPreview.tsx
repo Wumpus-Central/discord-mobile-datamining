@@ -1,55 +1,44 @@
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagPreview.tsx
-import items from "items";
-import _slicedToArray from "_slicedToArray";
-import registerAsset from "registerAsset";
-import get_ActivityIndicator from "memoResult1";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GuildTagBadgeSize } from "items";
-import jsxProd from "PressableCard";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { GuildTagBadgeSize } from "items" /* 8168 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ Image: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { card: null, notice: null, message: null, unfocused: null, avatar: null, messageBody: null, usernameRow: null };
-createCacheKey = { padding: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: require("Themes").space.PX_12 };
-let obj1 = { marginBottom: require("Themes").space.PX_12 };
-createCacheKey[2] = { flexDirection: "row", columnGap: require("Themes").space.PX_12, alignItems: "flex-start" };
+createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_12 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_12 };
+createCacheKey[2] = { flexDirection: "row", columnGap: ThemesDefault.space.PX_12, alignItems: "flex-start" };
 createCacheKey[3] = { opacity: 0.5 };
-let obj2 = { flexDirection: "row", columnGap: require("Themes").space.PX_12, alignItems: "flex-start" };
-createCacheKey[4] = { width: 40, height: 40, borderRadius: require("Themes").radii.round };
+let obj2 = { flexDirection: "row", columnGap: ThemesDefault.space.PX_12, alignItems: "flex-start" };
+createCacheKey[4] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.round };
 createCacheKey[5] = { flex: 1 };
-let obj3 = { width: 40, height: 40, borderRadius: require("Themes").radii.round };
-createCacheKey[6] = { flexDirection: "row", alignItems: "center", columnGap: require("Themes").space.PX_4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { flexDirection: "row", alignItems: "center", columnGap: require("Themes").space.PX_4 };
-const result = require("noop").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPreview.tsx");
+let obj3 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.round };
+createCacheKey[6] = { flexDirection: "row", alignItems: "center", columnGap: ThemesDefault.space.PX_4 };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { flexDirection: "row", alignItems: "center", columnGap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagPreview.tsx");
 
 export default function GuildSettingsServerTagPreview(guildId) {
-  let badge;
-  let c2;
-  let primaryColor;
-  let secondaryColor;
-  let tag;
-  let tmp11;
-  let variant;
   guildId = guildId.guildId;
   ({ tag, badge, primaryColor, secondaryColor, variant } = guildId);
   if (variant === undefined) {
     variant = "card";
   }
   const onAdopted = guildId.onAdopted;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback3();
   let obj = guildId(589);
-  const items = [mergeGuildAvatar];
+  const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = onAdopted(4796);
   const name = obj2.useName(guildId, null, stateFromStores);
@@ -110,11 +99,11 @@ export default function GuildSettingsServerTagPreview(guildId) {
             let ok = tmp2;
             ok = undefined;
             dependencyMap(true);
-            let obj1 = outer1_0(13374);
+            obj1 = closure_1_0(13374);
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj1.adoptGuildIdentity(outer1_0, true);
+            obj1[0] = obj1.adoptGuildIdentity(closure_1_0, true);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -153,9 +142,8 @@ export default function GuildSettingsServerTagPreview(guildId) {
   }
   obj[3] = stringResult;
   const items2 = [closure_10(guildId(4734).Text, obj), ];
-  obj = { spacing: null, children: null };
-  obj[0] = onAdopted(712).space.PX_12;
-  let obj1 = { style: items3, children: null };
+  obj = { spacing: tmp4(712).space.PX_12, children: null };
+  obj1 = { style: items3, children: null };
   items3 = [, ];
   ({ message: arr4[0], unfocused: arr4[1] } = tmp);
   obj2 = { source: tmp4(10102), style: tmp.avatar, importantForAccessibility: "no" };

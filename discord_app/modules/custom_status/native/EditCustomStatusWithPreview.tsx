@@ -1,37 +1,27 @@
 // discord_app/modules/custom_status/native/EditCustomStatusWithPreview.tsx
-import ActivityEmoji from "ActivityEmoji";
-import setCustomStatus from "setCustomStatus";
-import get_ActivityIndicator from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { STATUS_MAX_LENGTH } from "StatusTypes";
-import ME from "ME";
-import { EmojiIntention } from "set";
-import jsxProd from "removeCustomStatus";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08578_registerAsset.js";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import registerAssetDefault from "registerAsset" /* 8578 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { STATUS_MAX_LENGTH } from "StatusTypes" /* 9292 */;
+import ME from "ME" /* 676 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c10;
-let c5;
-let c9;
-let closure_14;
-let closure_6;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function ClearInputButton(onPress) {
   let obj = { style: { borderRadius: 10, paddingLeft: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.VkKicb);
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
-  obj = { source: null, style: null, size: null };
-  obj[0] = registerAsset;
-  obj[1] = createCacheKey().closeIcon;
-  obj[2] = Button.Icon.Sizes.SMALL;
+  obj = { source: registerAssetDefault, style: callback2().closeIcon, size: Button.Icon.Sizes.SMALL };
   obj[5] = callback(Button.Icon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 }
@@ -43,18 +33,18 @@ function EditCustomStatusWithPreview(navigation) {
   let ref;
   let stateFromStores;
   let first;
-  let c6;
+  closure_6 = undefined;
   let first1;
-  let c8;
+  closure_8 = undefined;
   let first2;
-  let closure_10;
-  let c11;
+  closure_10 = undefined;
+  c11 = undefined;
   let callback;
   let ref1;
   let callback2;
   let callback3;
   let ref2;
-  let closure_17;
+  closure_17 = undefined;
   let memo;
   let callback7;
   let obj = stateFromStores;
@@ -69,7 +59,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj.track(first2.OPEN_MODAL, obj);
   }, items);
   const tmp5 = callback3();
-  let obj1 = navigation(analyticsLocations[16]);
+  obj1 = navigation(analyticsLocations[16]);
   const customStatusActivity = obj1.useCustomStatusActivity();
   let obj2 = navigation(analyticsLocations[17]);
   const items1 = [first1];
@@ -83,7 +73,7 @@ function EditCustomStatusWithPreview(navigation) {
   }
   const tmp13 = ref(obj.useState(str), 2);
   first = tmp13[0];
-  c6 = tmp15;
+  closure_6 = tmp15;
   let emoji;
   if (customStatusActivity != null) {
     emoji = customStatusActivity.emoji;
@@ -93,7 +83,7 @@ function EditCustomStatusWithPreview(navigation) {
   }
   let tmp12Result = tmp12(obj.useState(emoji), 2);
   first1 = tmp12Result[0];
-  c8 = tmp19;
+  closure_8 = tmp19;
   tmp12Result = tmp12(obj.useState(onClose(analyticsLocations[18])()), 2);
   first2 = tmp12Result[0];
   closure_10 = tmp12Result[1];
@@ -107,9 +97,8 @@ function EditCustomStatusWithPreview(navigation) {
   c11 = labelResult;
   const items2 = [first, first1, first2, onClose, analyticsLocations];
   callback = obj.useCallback(() => {
-    const obj = { text: first, emojiInfo: first1, clearAfter: first2, analyticsLocations, prompt: null };
-    const current = ref.current;
-    obj[4] = current;
+    const obj = { text: first, emojiInfo: first1, clearAfter: first2, analyticsLocations, prompt: current };
+    current = ref.current;
     onClose(analyticsLocations[19])(obj);
     const AccessibilityAnnouncer = navigation(tmp[20]).AccessibilityAnnouncer;
     const intl = navigation(tmp[11]).intl;
@@ -159,8 +148,8 @@ function EditCustomStatusWithPreview(navigation) {
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items5);
   const callback5 = obj.useCallback(() => {
-    _undefined2(null);
-    _undefined("");
+    callback2(null);
+    callback("");
   }, items6);
   ref2 = obj.useRef(null);
   const ref3 = obj.useRef(null);
@@ -186,10 +175,7 @@ function EditCustomStatusWithPreview(navigation) {
   }, items8);
   const items9 = [memo, onClose];
   callback7 = obj.useCallback(() => {
-    const obj = { hasEdits: memo, onHasEdits: null, resetPending: null, onConfirm: null };
-    obj[1] = navigation(analyticsLocations[27]).dismissKeyboard;
-    obj[2] = c11;
-    obj[3] = onClose;
+    const obj = { hasEdits: memo, onHasEdits: navigation(analyticsLocations[27]).dismissKeyboard, resetPending: c11, onConfirm: onClose };
     onClose(analyticsLocations[26])(obj);
   }, items9);
   const items10 = [stateFromStores, first, first1, labelResult];
@@ -210,15 +196,14 @@ function EditCustomStatusWithPreview(navigation) {
     let obj = {
       headerRight() {
         const obj = { label: null, onPress: null, disabled: null };
-        const intl = outer1_0(outer1_2[11]).intl;
-        obj[0] = intl.string(outer1_0(outer1_2[11]).t["R3BPH+"]);
+        const intl = closure_1_0(closure_1_2[11]).intl;
+        obj[0] = intl.string(closure_1_0(closure_1_2[11]).t["R3BPH+"]);
         obj[1] = closure_12;
         obj[2] = !closure_18;
-        return outer1_13(outer1_0(outer1_2[29]).HeaderTextButton, obj);
+        return closure_1_13(closure_1_0(closure_1_2[29]).HeaderTextButton, obj);
       },
-      headerLeft: null
+      headerLeft: navigation(analyticsLocations[30]).getHeaderCloseButton(callback7)
     };
-    obj[1] = navigation(analyticsLocations[30]).getHeaderCloseButton(callback7);
     navigation.setOptions(obj);
   }, items11);
   if (null == stateFromStores) {
@@ -229,7 +214,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj = { style: null, children: null };
     obj[0] = tmp5.previewContainer;
     obj[1] = memo1;
-    const items12 = [ref1(c6, obj), , , ];
+    const items12 = [ref1(closure_6, obj), , , ];
     obj1 = { style: null, children: null };
     obj1[0] = tmp5.statusSection;
     obj2 = { style: null, children: null };
@@ -238,7 +223,7 @@ function EditCustomStatusWithPreview(navigation) {
     const intl5 = tmp6(tmp7[11]).intl;
     obj3[3] = intl5.string(tmp6(tmp7[11]).t.zOdg0A);
     obj2[1] = ref1(tmp6(tmp7[31]).Text, obj3);
-    const items13 = [ref1(c6, obj2), ];
+    const items13 = [ref1(closure_6, obj2), ];
     const obj4 = { style: null, children: null };
     obj4[0] = tmp5.statusInput;
     const obj5 = { style: null, children: null };
@@ -262,7 +247,7 @@ function EditCustomStatusWithPreview(navigation) {
     const items14 = [ref1(tmp6(tmp7[10]).PressableOpacity, obj6), , ];
     const obj9 = { ref: null, maxLength: null, placeholder: null, placeholderTextColor: null, accessibilityLabel: null, onSubmitEditing: null, onFocus: null, style: null, value: null, onChange: null, autoCorrect: false, showBorder: false, showTopContainer: false, autoCapitalize: "none", inputTextStyle: null, multiline: true, submitBehavior: "blurAndSubmit", returnKeyType: "done", autoFocus: true };
     obj9[0] = ref2;
-    obj9[1] = c8;
+    obj9[1] = closure_8;
     obj9[2] = labelResult;
     obj9[3] = tmp5.inputPlaceholder.color;
     const intl2 = tmp6(tmp7[11]).intl;
@@ -285,10 +270,10 @@ function EditCustomStatusWithPreview(navigation) {
     }
     items14[2] = tmp48Result;
     obj5[1] = items14;
-    obj4[1] = callback2(c6, obj5);
-    items13[1] = ref1(c6, obj4);
+    obj4[1] = callback2(closure_6, obj5);
+    items13[1] = ref1(closure_6, obj4);
     obj1[1] = items13;
-    items12[1] = callback2(c6, obj1);
+    items12[1] = callback2(closure_6, obj1);
     const obj11 = { hasIcons: false, children: null };
     const obj12 = { label: null, arrow: true, onPress: null, trailing: null };
     const intl3 = tmp6(tmp7[11]).intl;
@@ -319,7 +304,7 @@ function EditCustomStatusWithPreview(navigation) {
     }
     items12[3] = tmp48Result;
     obj[1] = items12;
-    const tmp46Result = callback2(c6, obj);
+    const tmp46Result = callback2(closure_6, obj);
     const tmp10Result = tmp10(tmp7[33]);
     if (tmp6Result.isAndroid()) {
       const obj17 = { ref: null, keyboardShouldPersistTaps: "always", contentContainerStyle: null, children: null };
@@ -342,24 +327,24 @@ function EditCustomStatusWithPreview(navigation) {
 ({ AnalyticEvents: c9, AnalyticsSections: c10, NOOP: unpackModuleId, Fonts } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { container: { flexGrow: 1, padding: 16, rowGap: 24 }, statusSection: { rowGap: 8 }, statusInput: null, statusInputRow: null, emoji: null, status: null, statusText: null, inputPlaceholder: null, previewContainer: null, closeIcon: null, statusSectionHeader: null };
-createCacheKey = { flexDirection: "column", rowGap: 4, backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.lg, padding: 12 };
+createCacheKey = { flexDirection: "column", rowGap: 4, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, padding: 12 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { marginRight: 8 };
-createCacheKey[5] = { color: require("Themes").colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
-let obj1 = { color: require("Themes").colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
-createCacheKey[6] = { fontSize: 16, lineHeight: 20, fontFamily: Fonts.PRIMARY_MEDIUM, color: require("Themes").colors.TEXT_STRONG, flexGrow: 1, height: "auto", textAlignVertical: "center" };
-let obj2 = { fontSize: 16, lineHeight: 20, fontFamily: Fonts.PRIMARY_MEDIUM, color: require("Themes").colors.TEXT_STRONG, flexGrow: 1, height: "auto", textAlignVertical: "center" };
-createCacheKey[7] = { color: require("Themes").colors.TEXT_MUTED };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+createCacheKey[5] = { color: ThemesDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
+let obj1 = { color: ThemesDefault.colors.TEXT_STRONG, lineHeight: 16, flexGrow: 1, alignSelf: "flex-start", paddingVertical: 0, paddingHorizontal: 0 };
+createCacheKey[6] = { fontSize: 16, lineHeight: 20, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_STRONG, flexGrow: 1, height: "auto", textAlignVertical: "center" };
+let obj2 = { fontSize: 16, lineHeight: 20, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.colors.TEXT_STRONG, flexGrow: 1, height: "auto", textAlignVertical: "center" };
+createCacheKey[7] = { color: ThemesDefault.colors.TEXT_MUTED };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[8] = { alignItems: "center" };
-let obj3 = { color: require("Themes").colors.TEXT_MUTED };
+let obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
 let obj4 = { alignItems: "center" };
-createCacheKey[9] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
+createCacheKey[9] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
 createCacheKey[10] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/custom_status/native/EditCustomStatusWithPreview.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, flexShrink: 0 };
+let result = require("set").fileFinishedImporting("modules/custom_status/native/EditCustomStatusWithPreview.tsx");
 
 export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
   analyticsLocations = analyticsLocations.analyticsLocations;
@@ -368,23 +353,22 @@ export default function EditCustomStatusWithPreviewModal(analyticsLocations) {
   const memo = React.useMemo(() => {
     let obj = { root: null };
     obj = { title: null, headerTitle: null, headerLeft: null, ignoreKeyboard: true, render: null };
-    let intl = analyticsLocations(outer1_2[11]).intl;
-    obj[0] = intl.string(analyticsLocations(outer1_2[11]).t.Iuzg8R);
+    let intl = analyticsLocations(closure_1_2[11]).intl;
+    obj[0] = intl.string(analyticsLocations(closure_1_2[11]).t.Iuzg8R);
     obj[1] = function headerTitle() {
       const obj = { title: null };
       const intl = callback(1236).intl;
       obj[0] = intl.string(callback(1236).t.Iuzg8R);
       return callback3(callback(8492).GenericHeaderTitle, obj);
     };
-    obj[2] = analyticsLocations(outer1_2[30]).getHeaderCloseButton(_prompt(outer1_2[43]).pop);
+    obj[2] = analyticsLocations(closure_1_2[30]).getHeaderCloseButton(_prompt(closure_1_2[43]).pop);
     obj[4] = function render(arg0, navigation) {
-      return outer1_13(outer1_17, { navigation, onClose: callback2(outer1_2[43]).pop, analyticsLocations: closure_0, prompt: callback2 });
+      return closure_1_13(closure_1_17, { navigation, onClose: callback2(closure_1_2[43]).pop, analyticsLocations: closure_0, prompt: callback2 });
     };
     obj[0] = obj;
     return obj;
   }, items);
-  let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: null, headerStyle: null };
-  obj[2] = 12;
+  let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: 12, headerStyle: null };
   const obj2 = analyticsLocations(501);
   const tmp2 = closure_13;
   const tmp3 = analyticsLocations;

@@ -1,8 +1,10 @@
 // discord_app/modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx
-import { DismissibleContent } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { getUnitId } from "../../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
-const result = require("GUILD_POWERUP_NOTIFICATION_COOLDOWN").fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
+import set from "set" /* 2 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
+import getUnitIdDefault from "getUnitId" /* 11671 */;
+
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/GuildPowerupsNotificationsDCF.native.tsx");
 
 export const usePerksCoachmarkDCF = function usePerksCoachmarkDCF(arg0) {
   if (arg0) {
@@ -51,7 +53,7 @@ export function useGameServerPricingCoachmarkDCF(arg0) {
   return items;
 }
 export const useBoostToUnlockCoachmarkDCF = function useBoostToUnlockCoachmarkDCF(arg0, id, GUILD_HEADER_TOOLTIPS) {
-  let obj = getUnitId;
+  let obj = getUnitIdDefault;
   let prop = null;
   if (arg0) {
     prop = null;

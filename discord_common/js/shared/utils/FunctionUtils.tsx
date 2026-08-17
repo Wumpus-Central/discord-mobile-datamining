@@ -1,16 +1,16 @@
 // discord_common/js/shared/utils/FunctionUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "asyncGeneratorStep" /* 5 */;
 
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
 function promiseThrottle(arg0) {
-  let _slicedToArray = arg0;
+  closure_0 = arg0;
   let num = arg1;
   if (arg1 === undefined) {
     num = 5000;
   }
-  let c2 = -1;
-  let c3 = null;
+  c2 = -1;
+  c3 = null;
   return () => {
     let tmp = null == closure_3;
     if (!tmp) {
@@ -45,7 +45,7 @@ const prototype = PromiseDeduper.prototype;
 prototype["one"] = function one(play, fn, arg2, arg3) {
   let self = this;
   self = this;
-  let asyncGeneratorStep = play;
+  closure_1 = play;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -64,9 +64,9 @@ prototype["one"] = function one(play, fn, arg2, arg3) {
   }
   cleanupPromise = fn().finally(() => {
     // GetOwnPrivateBySym (0x65)
-    if (obj.get(asyncGeneratorStep) === cleanupPromise) {
+    if (obj.get(closure_1) === cleanupPromise) {
       // GetOwnPrivateBySym (0x65)
-      self.delete(asyncGeneratorStep);
+      self.delete(closure_1);
     }
   });
   // GetOwnPrivateBySym (0x65)
@@ -83,7 +83,7 @@ prototype["many"] = function many(items) {
     flag = false;
   }
   let map;
-  let closure_2;
+  closure_2 = undefined;
   let self = this;
   items = [...new Set(items)];
   const items1 = [];
@@ -110,19 +110,19 @@ prototype["many"] = function many(items) {
   }
   if (items1.length <= 0) {
     Promise.all(items.map((() => {
-      let _slicedToArray = map((arg0) => {
-        let _slicedToArray = arg0;
-        let c2 = 0;
-        let c3 = 0;
+      closure_0 = map((arg0) => {
+        closure_0 = arg0;
+        c2 = 0;
+        c3 = 0;
         return (function*(arg0) {
-          const items = [_slicedToArray, ];
-          items[1] = yield outer1_1.get(_slicedToArray);
+          const items = [closure_0, ];
+          items[1] = yield closure_1_1.get(closure_0);
           return items;
         })();
       });
       return function(arg0) {
-        const self = this;
-        const apply = _slicedToArray.apply;
+        self = this;
+        const apply = closure_0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -131,7 +131,7 @@ prototype["many"] = function many(items) {
         return applyArgumentsResult;
       };
     })())).then((arg0) => {
-      const map = new Map();
+      map = new Map();
       while (tmp !== undefined) {
         let tmp3 = self;
         let tmp4 = self(tmp2, 2);
@@ -141,19 +141,19 @@ prototype["many"] = function many(items) {
       return map;
     });
     const allPromises = Promise.all(items.map((() => {
-      let _slicedToArray = map((arg0) => {
-        let _slicedToArray = arg0;
-        let c2 = 0;
-        let c3 = 0;
+      closure_0 = map((arg0) => {
+        closure_0 = arg0;
+        c2 = 0;
+        c3 = 0;
         return (function*(arg0) {
-          const items = [_slicedToArray, ];
-          items[1] = yield outer1_1.get(_slicedToArray);
+          const items = [closure_0, ];
+          items[1] = yield closure_1_1.get(closure_0);
           return items;
         })();
       });
       return function(arg0) {
-        const self = this;
-        const apply = _slicedToArray.apply;
+        self = this;
+        const apply = closure_0.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {
@@ -168,20 +168,20 @@ prototype["many"] = function many(items) {
       function _loop(arg0) {
         const _self = arg0;
         const cleanupPromise = promise.then((has) => {
-          if (has.has(_slicedToArray)) {
+          if (has.has(closure_0)) {
             return has.get(tmp);
           } else {
             const _Error = Error;
             const _String = String;
             const _HermesInternal = HermesInternal;
-            const error = new Error("Promise deduper result missing key: " + String(tmp));
+            error = new Error("Promise deduper result missing key: " + String(tmp));
             throw error;
           }
         }).finally(() => {
           // GetOwnPrivateBySym (0x65)
-          if (obj.get(_slicedToArray) === cleanupPromise) {
+          if (obj.get(closure_0) === cleanupPromise) {
             // GetOwnPrivateBySym (0x65)
-            _slicedToArray.delete(_slicedToArray);
+            closure_0.delete(closure_0);
           }
         });
         // GetOwnPrivateBySym (0x65)
@@ -217,9 +217,9 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, ar
   }
 };
 export function cachedFunction(arg0) {
-  let _slicedToArray = arg0;
-  let c1 = null;
-  let c2 = null;
+  closure_0 = arg0;
+  c1 = null;
+  c2 = null;
   return () => {
     const items = [...arguments];
     let flag = true;
@@ -250,7 +250,7 @@ export function cachedFunction(arg0) {
     if (!flag) {
       const items1 = [];
       HermesBuiltin.arraySpread(items, 0);
-      let closure_2 = HermesBuiltin.apply(items1, undefined);
+      closure_2 = HermesBuiltin.apply(items1, undefined);
     }
     return closure_2;
   };

@@ -1,23 +1,16 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { QuestDockMode } from "QuestsExperimentLocations";
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let QUEST_DOCK_EXPANDED_HEIGHT;
-let QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED;
-let StyleSheet;
-let c4;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
 ({ StyleSheet, View: c4 } = get_ActivityIndicator);
 ({ QUEST_DOCK_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QUEST_DOCK_COLLAPSED_HEIGHT);
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let obj = { image: null, overlay: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -32,8 +25,6 @@ obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = { code: "function QuestDockBlurredHeaderPlaceholderTsx1(){const{activeQuestDockMode,QuestDockMode,QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED,questDockWrapperSpecs}=this.__closure;return{left:activeQuestDockMode.get()===QuestDockMode.EXPANDED?-QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED:0,width:questDockWrapperSpecs.get().width+QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED};}" };
 const memoResult = importAllResult.memo(function QuestDockBlurredContentBackground(placeholder) {
-  let animatedLayout;
-  let animatedStyle;
   placeholder = placeholder.placeholder;
   ({ animatedLayout, animatedStyle } = placeholder);
   const context = importAllResult.useContext(placeholder(activeQuestDockMode[6]).QuestDockGestureContext);
@@ -41,8 +32,7 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   activeQuestDockMode = context.activeQuestDockMode;
   const items = [placeholder];
   const memo = importAllResult.useMemo(() => {
-    const obj = { uri: null };
-    obj[0] = placeholder(activeQuestDockMode[7]).thumbHashToDataURL(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0)));
+    const obj = { uri: placeholder(activeQuestDockMode[7]).thumbHashToDataURL(Uint8Array.from(atob(placeholder), (str) => str.charCodeAt(0))) };
     return obj;
   }, items);
   const tmp3 = callback3();
@@ -50,11 +40,11 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   class D {
     constructor() {
       num = 0;
-      if (activeQuestDockMode.get() === outer1_5.EXPANDED) {
-        tmp = outer1_6;
-        num = -outer1_6;
+      if (activeQuestDockMode.get() === closure_1_5.EXPANDED) {
+        tmp = closure_1_6;
+        num = -closure_1_6;
       }
-      obj = { left: num, width: questDockWrapperSpecs.get().width + outer1_6 };
+      obj = { left: num, width: questDockWrapperSpecs.get().width + closure_1_6 };
       return obj;
     }
   }
@@ -69,6 +59,6 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   obj[0] = items2;
   return callback2(closure_8, obj);
 });
-const result = require("QuestsExperimentLocations").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredHeaderPlaceholder.tsx");
 
 export default memoResult;

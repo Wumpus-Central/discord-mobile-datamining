@@ -1,15 +1,16 @@
 // discord_app/modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx
-import GPlayConnectionState from "GPlayConnectionState";
-import noop from "noop";
-import { useNativeCheckoutStoreOrNull as closure_5 } from "context";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CurrencyCodes } from "ME";
-import { GPlayBillingResult as metroImportAll } from "GPlayConnectionState";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { useNativeCheckoutStoreOrNull as closure_5 } from "context" /* 7395 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { CurrencyCodes } from "ME" /* 676 */;
 
 const require = arg1;
-let c9 = new require("mergeGuildAvatar")("useMobilePurchaseSKU.android");
-const tmp2 = new require("mergeGuildAvatar")("useMobilePurchaseSKU.android");
-let result = require("context").fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
+require("GPlayConnectionState").GPlayBillingResult;
+let closure_9 = new timestampDefault("useMobilePurchaseSKU.android");
+const tmp2 = new timestampDefault("useMobilePurchaseSKU.android");
+let result = require("set").fileFinishedImporting("modules/billing/native/hooks/useMobilePurchaseSKU.android.tsx");
 
 export default function useMobilePurchaseSKU(skuId) {
   skuId = skuId.skuId;
@@ -17,6 +18,7 @@ export default function useMobilePurchaseSKU(skuId) {
   const platformSkuId = skuId.platformSkuId;
   const analyticsLocations = skuId.analyticsLocations;
   let analyticsLoadId = skuId.analyticsLoadId;
+  let callback = analyticsLoadId;
   const analyticsData = skuId.analyticsData;
   const onPurchaseComplete = skuId.onPurchaseComplete;
   const onPurchaseError = skuId.onPurchaseError;
@@ -30,12 +32,12 @@ export default function useMobilePurchaseSKU(skuId) {
   const orderId = skuId.orderId;
   let handlePremiumPurchase;
   let androidShopOrdersEnabled;
-  let c14;
-  let c15;
-  let closure_16;
-  let c17;
+  closure_14 = undefined;
+  closure_15 = undefined;
+  closure_16 = undefined;
+  closure_17 = undefined;
   let flag2;
-  let callback;
+  callback = undefined;
   let callback1;
   let callback2;
   const currentUser = onPurchaseError.getCurrentUser();
@@ -44,12 +46,12 @@ export default function useMobilePurchaseSKU(skuId) {
   let tmp = analyticsLocations;
   androidShopOrdersEnabled = _require(analyticsLocations[8]).useAndroidShopOrdersEnabled({ location: "useMobilePurchaseSKU" });
   const tmp4 = onPurchaseComplete((setOrder) => setOrder.setOrder);
-  c14 = tmp4;
+  closure_14 = tmp4;
   const tmp5 = onPurchaseComplete((setCheckoutSucceeded) => setCheckoutSucceeded.setCheckoutSucceeded);
-  c15 = tmp5;
+  closure_15 = tmp5;
   closure_16 = analyticsData.useRef(false);
   const tmp6 = undefined !== currentUser && currentUser.isStaff();
-  c17 = tmp6;
+  closure_17 = tmp6;
   const tmp7 = platformSkuId(tmp[9])(() => callback(analyticsLocations[10]).getNewAnalyticsLoadId());
   flag2 = undefined;
   if (giftParams != null) {
@@ -59,15 +61,15 @@ export default function useMobilePurchaseSKU(skuId) {
     flag2 = false;
   }
   if (null == analyticsLoadId) {
-    analyticsLoadId = tmp7;
+    callback = tmp7;
     analyticsLoadId = tmp7;
   }
   const items = [onPurchaseComplete, tmp5];
   callback = obj4.useCallback(() => {
     platformSkuId(analyticsLocations[11]).unsubscribe("GPLAY_PURCHASE_VERIFIED", callback);
     closure_16.current = false;
-    if (_undefined != null) {
-      _undefined();
+    if (callback2 != null) {
+      callback2();
     }
     onPurchaseComplete();
   }, items);
@@ -78,11 +80,11 @@ export default function useMobilePurchaseSKU(skuId) {
     onPurchaseError();
   }, items1);
   _require = undefined;
-  _require = analyticsLoadId((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+  _require = callback((arg0) => {
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -110,30 +112,30 @@ export default function useMobilePurchaseSKU(skuId) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
               let lib;
               if (lib.billingResult === onPurchasePending.OK) {
-                outer1_8();
+                closure_1_8();
                 v0 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 let obj5 = platformSkuId(analyticsLocations[11]);
-                obj5.unsubscribe("GPLAY_PURCHASE_VERIFIED", outer1_19);
-                if (null != outer1_11) {
-                  if (outer1_13) {
+                obj5.unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_1_19);
+                if (null != closure_1_11) {
+                  if (closure_1_13) {
                     if (tmp58.isActivePurchase) {
                       if (tmp58.billingResult === tmp59.USER_CANCELED) {
-                        let obj1 = { orderId: null, platformSkuId: null, skuId: null };
-                        obj1[0] = outer1_11;
-                        obj1[1] = outer1_1;
+                        obj1 = { orderId: null, platformSkuId: null, skuId: null };
+                        obj1[0] = closure_1_11;
+                        obj1[1] = closure_1_1;
                         obj1[2] = lib;
                         giftParams.info("[handleGPlayUpdatePurchaseAction] User canceled purchase, canceling order signing", obj1);
-                        let c4 = 1;
+                        c4 = 1;
                         c5 = 2;
                         v0 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = lib(analyticsLocations[12]).cancelOrderSigning(outer1_11);
+                        obj2[0] = lib(analyticsLocations[12]).cancelOrderSigning(closure_1_11);
                         return obj2;
                       }
                     }
@@ -144,17 +146,17 @@ export default function useMobilePurchaseSKU(skuId) {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              closure_1 = GPlayConnectionState;
+              closure_1 = closure_3;
               obj1 = lib(analyticsLocations[13]);
               const obj3 = { tags: null, extra: null };
               obj3[0] = { source: "useMobilePurchaseSKU_cancelOrderSigning" };
               const obj4 = { orderId: null };
-              obj4[0] = outer1_11;
+              obj4[0] = closure_1_11;
               obj3[1] = obj4;
               const result = obj1.captureBillingException(closure_1, obj3);
               obj5 = { error: null, orderId: null, skuId: null };
               obj5[0] = closure_1;
-              obj5[1] = outer1_11;
+              obj5[1] = closure_1_11;
               obj5[2] = lib;
               giftParams.error("Failed to cancel order signing", obj5);
             } else if (arg0 === 1) {
@@ -162,7 +164,7 @@ export default function useMobilePurchaseSKU(skuId) {
               throw arg1;
             } else if (arg0 !== 2) {
               lib = arg1;
-              if (outer1_14 != null) {
+              if (closure_1_14 != null) {
                 tmp10(lib);
               }
               c4 = 0;
@@ -173,10 +175,10 @@ export default function useMobilePurchaseSKU(skuId) {
             obj[0] = arg1;
             return obj;
           }
-          outer1_16.current = false;
+          closure_1_16.current = false;
           v0();
         } catch (tmp49) {
-          GPlayConnectionState = tmp49;
+          closure_3 = tmp49;
           if (tmp4 === c4) {
             v0 = tmp2;
             throw tmp49;
@@ -206,15 +208,15 @@ export default function useMobilePurchaseSKU(skuId) {
     let obj2 = platformSkuId(analyticsLocations[11]);
     const subscription2 = platformSkuId(analyticsLocations[11]).subscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", callback1);
     return () => {
-      outer1_1(outer1_2[11]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_21);
-      const obj = outer1_1(outer1_2[11]);
-      outer1_1(outer1_2[11]).unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_19);
-      const obj2 = outer1_1(outer1_2[11]);
-      outer1_1(outer1_2[11]).unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", closure_20);
+      closure_1_1(closure_1_2[11]).unsubscribe("GPLAY_UPDATE_PURCHASE_STATE", closure_21);
+      const obj = closure_1_1(closure_1_2[11]);
+      closure_1_1(closure_1_2[11]).unsubscribe("GPLAY_PURCHASE_VERIFIED", closure_19);
+      const obj2 = closure_1_1(closure_1_2[11]);
+      closure_1_1(closure_1_2[11]).unsubscribe("GPLAY_PURCHASE_VERIFICATION_FAILED", closure_20);
     };
   }, items3);
   const items4 = [skuId, platformSkuId, tmp6, flag2, handlePremiumPurchase, onPurchaseComplete, onPurchaseError, freePurchaseCallback, analyticsLoadId, analyticsLocations, analyticsData, giftParams, flag, orderId, androidShopOrdersEnabled];
-  return analyticsData.useCallback(analyticsLoadId(function*() {
+  return analyticsData.useCallback(callback(function*() {
     if (v02 === 2) {
       v02 = 3;
       HermesBuiltin.throwTypeError();
@@ -247,49 +249,49 @@ export default function useMobilePurchaseSKU(skuId) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp10;
-              tmp = outer1_16;
-              if (outer1_16.current) {
+              closure_2 = tmp4;
+              closure_1 = tmp10;
+              tmp = closure_1_16;
+              if (closure_1_16.current) {
                 const _Error2 = Error;
-                const error = new Error("Purchase already in progress");
+                error = new Error("Purchase already in progress");
                 throw error;
               } else {
-                let obj7 = outer1_0(outer1_2[14]);
-                if (obj7.isNullOrEmpty(outer1_1)) {
+                let obj7 = closure_1_0(closure_1_2[14]);
+                if (obj7.isNullOrEmpty(closure_1_1)) {
                   const _Error = Error;
                   const error1 = new Error("Missing google play sku ID");
                   throw error1;
                 } else {
-                  let c4 = 2;
-                  outer1_16.current = true;
-                  if (outer1_17) {
-                    if (outer1_10) {
-                      if (!outer1_18) {
+                  c4 = 2;
+                  closure_1_16.current = true;
+                  if (closure_1_17) {
+                    if (closure_1_10) {
+                      if (!closure_1_18) {
                         c4 = 4;
-                        let callback = outer1_7;
-                        if (outer1_7 == null) {
-                          callback = outer1_0(outer1_2[15]).purchaseSKU;
+                        callback = closure_1_7;
+                        if (closure_1_7 == null) {
+                          callback = closure_1_0(closure_1_2[15]).purchaseSKU;
                         }
-                        const obj1 = { expectedAmount: 0, expectedCurrency: null, loadId: null };
-                        obj1[1] = outer1_7.USD;
-                        let obj9 = outer1_0(outer1_2[16]);
+                        obj1 = { expectedAmount: 0, expectedCurrency: null, loadId: null };
+                        obj1[1] = closure_1_7.USD;
+                        let obj9 = closure_1_0(closure_1_2[16]);
                         obj1[2] = obj9.v4();
                         v0 = 5;
                         v02 = 1;
                         let obj2 = { value: null, done: false };
-                        obj2[0] = callback("collectibles", outer1_0, obj1);
+                        obj2[0] = callback("collectibles", closure_1_0, obj1);
                         return obj2;
                       }
                     }
                   }
-                  if (null != outer1_11) {
-                    if (outer1_13) {
+                  if (null != closure_1_11) {
+                    if (closure_1_13) {
                       c4 = 5;
                       v0 = 7;
                       v02 = 1;
                       const obj3 = { value: null, done: false };
-                      obj3[0] = outer1_0(outer1_2[12]).markOrderAsSigningInProgress(outer1_11);
+                      obj3[0] = closure_1_0(closure_1_2[12]).markOrderAsSigningInProgress(closure_1_11);
                       return obj3;
                     }
                   }
@@ -298,18 +300,18 @@ export default function useMobilePurchaseSKU(skuId) {
             }
           } else if (1 === tmp10) {
             c4 = 0;
-            outer1_16.current = false;
-            throw GPlayConnectionState;
+            closure_1_16.current = false;
+            throw closure_3;
           } else if (2 === tmp10) {
             c4 = 1;
-            throw GPlayConnectionState;
+            throw closure_3;
           } else if (3 === tmp10) {
             c4 = 2;
-            outer1_16.current = false;
-            throw GPlayConnectionState;
+            closure_1_16.current = false;
+            throw closure_3;
           } else if (4 === tmp10) {
             c4 = 3;
-            callback = GPlayConnectionState;
+            callback = closure_3;
             v02();
             throw callback;
           } else {
@@ -333,8 +335,8 @@ export default function useMobilePurchaseSKU(skuId) {
               }
             } else if (6 === tmp10) {
               c4 = 2;
-              closure_1 = GPlayConnectionState;
-              obj2 = outer1_0(outer1_2[13]);
+              closure_1 = closure_3;
+              obj2 = closure_1_0(closure_1_2[13]);
               const obj5 = { tags: null, extra: null };
               obj5[0] = { source: "useMobilePurchaseSKU_markSigning" };
               const obj6 = { orderId: null };
@@ -345,7 +347,7 @@ export default function useMobilePurchaseSKU(skuId) {
               obj7[0] = closure_1;
               obj7[1] = callback;
               obj7[2] = closure_11;
-              outer1_9.error("Failed to mark order signing-in-progress", obj7);
+              closure_1_9.error("Failed to mark order signing-in-progress", obj7);
               throw closure_1;
             } else if (7 === tmp10) {
               if (arg0 === 1) {
@@ -382,7 +384,7 @@ export default function useMobilePurchaseSKU(skuId) {
           obj9 = { productId: null, skuId: null, isOneTimePurchase: true, analyticsLoadId: null, analyticsLocations: null, analyticsData: null, isGift: null, giftInfoOptions: null, onPurchaseError: null };
           obj9[0] = closure_1;
           obj9[1] = callback;
-          obj9[3] = GPlayConnectionState;
+          obj9[3] = closure_3;
           obj9[4] = closure_2;
           obj9[5] = c4;
           obj9[6] = closure_18;
@@ -398,7 +400,7 @@ export default function useMobilePurchaseSKU(skuId) {
           obj10[0] = closure_12(obj9);
           return obj10;
         } catch (tmp95) {
-          GPlayConnectionState = tmp95;
+          closure_3 = tmp95;
           if (tmp5 === c4) {
             v02 = tmp3;
             throw tmp95;

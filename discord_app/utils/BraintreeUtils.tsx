@@ -1,13 +1,13 @@
 // discord_app/utils/BraintreeUtils.tsx
-import getClient from "getClient";
-import { PaymentSettings } from "ME";
-import { CodeSplittingUtils } from "../modules/core/CodeSplittingUtils.tsx";
+import _mod4057 from "module_4057" /* 4057 */;
+import closure_2 from "getClient" /* 4056 */;
+import { PaymentSettings } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("module_4057").fileFinishedImporting("utils/BraintreeUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("utils/BraintreeUtils.tsx");
 
 export const getBraintreeSDK = function getBraintreeSDK() {
-  let obj = CodeSplittingUtils;
+  let obj = _mod4057;
   obj = {
     createPromise() {
       return callback(paths[4])(paths[3], paths.paths);

@@ -1,33 +1,29 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventsListView.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
 const require = arg1;
 function FormSeparator() {
   obj = { style: obj.spacer };
   return <closure_3 style={obj.spacer} />;
 }
+noopAll;
 ({ View: c3, FlatList: c4 } = get_ActivityIndicator);
 let obj = { spacer: null, container: null };
-obj = { height: require("Themes").space.PX_16, width: "100%" };
+obj = { height: ThemesDefault.space.PX_16, width: "100%" };
 obj[0] = obj;
-obj = { paddingHorizontal: require("Themes").space.PX_16 };
+obj = { paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[1] = obj;
-const result = require("jsxProd").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsListView.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventsListView.tsx");
 
 export default function GuildEventsListView(lastAckedId) {
-  let events;
-  let guild;
-  let importDefault;
-  let onCloseAction;
   ({ events, guild } = lastAckedId);
   ({ onPressEvent: importDefault, onCloseAction } = lastAckedId);
   lastAckedId = lastAckedId.lastAckedId;
   if (0 === events.length) {
-    let obj = { children: null };
+    obj = { children: null };
     obj = { onClose: null, guild: null };
     obj[0] = onCloseAction;
     obj[1] = guild;
@@ -47,20 +43,20 @@ export default function GuildEventsListView(lastAckedId) {
     };
     obj[3] = function renderItem(item) {
       item = item.item;
-      const obj = { event: item, onCloseAction, onPress: closure_1, isNew: null };
+      obj = { event: item, onCloseAction, onPress: closure_1, isNew: null };
       let tmp6 = null != lastAckedId;
       if (tmp6) {
-        tmp6 = outer1_1(onCloseAction[8]).compare(item.id, tmp5) > 0;
-        const tmp2Result = outer1_1(onCloseAction[8]);
+        tmp6 = closure_1_1(onCloseAction[8]).compare(item.id, tmp5) > 0;
+        const tmp2Result = closure_1_1(onCloseAction[8]);
       }
       obj[3] = tmp6;
-      return outer1_5(outer1_1(onCloseAction[7]), obj);
+      return closure_1_5(closure_1_1(onCloseAction[7]), obj);
     };
     obj[4] = FormSeparator;
     obj[6] = function ListEmptyComponent() {
-      return outer1_5(outer1_1(onCloseAction[6]), { onClose: onCloseAction, guild });
+      return closure_1_5(closure_1_1(onCloseAction[6]), { onClose: onCloseAction, guild });
     };
-    const obj1 = { paddingBottom: null };
+    obj1 = { paddingBottom: null };
     obj1[0] = tmp(tmp2[3]).space.PX_16 + tmp3;
     obj[7] = obj1;
     return <BottomSheetFlatList data={null} style={null} keyExtractor={null} renderItem={null} ItemSeparatorComponent={null} initialNumToRender={5} ListEmptyComponent={null} contentContainerStyle={null} />;

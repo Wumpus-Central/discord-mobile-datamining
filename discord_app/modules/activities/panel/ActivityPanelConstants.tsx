@@ -1,5 +1,7 @@
 // discord_app/modules/activities/panel/ActivityPanelConstants.tsx
-const result = require("set").fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/activities/panel/ActivityPanelConstants.tsx");
 
 export const ActivityPanelModes = { DISCONNECTED: "disconnected", LAUNCHING_WITH_ORIENTATION_CHANGE: "launching_with_orientation_change", PANEL: "panel", PIP: "pip", ACTIVITY_POPOUT_WINDOW: "activity_popout_window" };
 export const SCREEN_HEADER_HEIGHT = 64;

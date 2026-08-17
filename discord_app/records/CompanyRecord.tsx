@@ -1,6 +1,7 @@
 // discord_app/records/CompanyRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let prototype;
 prototype = function CompanyRecord(arg0) {
   const tmp = new prototype(new.target, new.target);

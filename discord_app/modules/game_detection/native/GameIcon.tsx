@@ -1,20 +1,23 @@
 // discord_app/modules/game_detection/native/GameIcon.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { PremiumSubscriptionSKUs } from "GuildFeatures";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 7150 */;
+import registerAssetDefault2 from "registerAsset" /* 7151 */;
+import registerAssetDefault3 from "registerAsset" /* 7152 */;
+import registerAssetDefault4 from "registerAsset" /* 7153 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
 class GameIcon {
   constructor(arg0) {
     ({ game, skuId, size } = global);
     if (size === undefined) {
-      tmp = Image;
-      size = Image.NORMAL;
+      tmp = closure_6;
+      size = closure_6.NORMAL;
     }
-    tmp2 = LARGE();
+    tmp2 = closure_8();
     obj = { [closure_6.NORMAL]: tmp2.normal, [closure_6.SMALL]: tmp2.small, [closure_6.SIZE_24]: tmp2.size24, [closure_6.LARGE]: tmp2.large };
     items = [, , ];
     items[0] = tmp2.gameIcon;
@@ -24,8 +27,8 @@ class GameIcon {
       tmp12 = undefined;
       if (null != game) {
         if (null == undefined) {
-          tmp13 = large;
-          iconURL = game.getIconURL(large[size]);
+          tmp13 = closure_7;
+          iconURL = game.getIconURL(closure_7[size]);
           if (null != iconURL) {
             obj = { uri: null };
             obj[0] = iconURL;
@@ -75,25 +78,25 @@ class GameIcon {
     return;
   }
 }
+noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 let obj = { SIZE_24: "size_24", SMALL: "small", NORMAL: "normal", LARGE: "large" };
 obj = { [obj.SIZE_24]: 24, [obj.SMALL]: 32, [obj.NORMAL]: 48, [obj.LARGE]: 80 };
-obj = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: null, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
-obj[1] = { width: obj.size_24, height: obj.size_24, borderRadius: require("Themes").radii.sm };
-createCacheKey = { width: obj.small, height: obj.small, borderRadius: require("Themes").radii.sm };
+obj = { gameIcon: { justifyContent: "center", alignItems: "center" }, size24: { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm }, small: null, normal: null, large: null, placeholder: null, entityWrapper: null };
+createCacheKey = { width: obj.small, height: obj.small, borderRadius: ThemesDefault.radii.sm };
 obj[2] = createCacheKey;
-obj1 = { width: obj.size_24, height: obj.size_24, borderRadius: require("Themes").radii.sm };
-obj[3] = { width: obj.normal, height: obj.normal, borderRadius: require("Themes").radii.lg };
-const obj3 = { width: obj.normal, height: obj.normal, borderRadius: require("Themes").radii.lg };
-obj[4] = { width: obj.large, height: obj.large, borderRadius: require("Themes").radii.sm };
-const obj4 = { width: obj.large, height: obj.large, borderRadius: require("Themes").radii.sm };
-obj[5] = { borderRadius: require("Themes").radii.none, tintColor: require("Themes").colors.ICON_MUTED };
-const obj5 = { borderRadius: require("Themes").radii.none, tintColor: require("Themes").colors.ICON_MUTED };
-obj[6] = { borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden" };
+obj1 = { width: obj.size_24, height: obj.size_24, borderRadius: ThemesDefault.radii.sm };
+obj[3] = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
+const obj3 = { width: obj.normal, height: obj.normal, borderRadius: ThemesDefault.radii.lg };
+obj[4] = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
+const obj4 = { width: obj.large, height: obj.large, borderRadius: ThemesDefault.radii.sm };
+obj[5] = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
+const obj5 = { borderRadius: ThemesDefault.radii.none, tintColor: ThemesDefault.colors.ICON_MUTED };
+obj[6] = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
 let closure_8 = createCacheKey.createStyles(obj);
 GameIcon.Sizes = obj;
-const obj6 = { borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden" };
-const result = require("GuildFeatures").fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
+const obj6 = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+const result = require("set").fileFinishedImporting("modules/game_detection/native/GameIcon.tsx");
 
 export default GameIcon;
 export const GameIconSizes = obj;

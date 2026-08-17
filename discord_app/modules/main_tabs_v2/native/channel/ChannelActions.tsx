@@ -1,34 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelActions.tsx
-import "apply";
-import { View } from "initialize";
-import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
-import { THREADED_CHANNEL_TYPES } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateVoiceState from "updateVoiceState";
-import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore";
-import ME from "ME";
-import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations";
-import { jsx } from "useConversationsHeaderButton";
-import { createElement } from "apply";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PhoneCallIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
-import { PhoneHangUpIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
-import { PrivateChannelButtons } from "header/PrivateChannelButtons.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 8508 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8510 */;
+import _modDef12703 from "module_12703" /* 12703 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "handleThreadCreateOrUpdate" /* 4969 */;
+import { THREADED_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
+import { setIsChannelDetailsSearchActive as closure_8 } from "useChannelDetailsStore" /* 8505 */;
+import ME from "ME" /* 676 */;
+import { SearchEntrypointAnalyticsLocations as closure_12 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { createElement } from "noop" /* 19 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function JoinCallButton() {
-  const obj = { size: "sm", color: null };
-  obj[1] = Themes.unsafe_rawColors.GREEN_360;
-  return jsx(PhoneCallIcon.PhoneCallIcon, { size: "sm", color: null });
+  return jsx(PhoneCallIcon.PhoneCallIcon, { size: "sm", color: ThemesDefault.unsafe_rawColors.GREEN_360 });
 }
 function EndCallButton() {
-  const obj = { size: "sm", color: null };
-  obj[1] = Themes.unsafe_rawColors.RED_400;
-  return jsx(PhoneHangUpIcon.PhoneHangUpIcon, { size: "sm", color: null });
+  return jsx(PhoneHangUpIcon.PhoneHangUpIcon, { size: "sm", color: ThemesDefault.unsafe_rawColors.RED_400 });
 }
 function ChannelActionButtons(channel) {
   channel = channel.channel;
@@ -39,18 +32,18 @@ function ChannelActionButtons(channel) {
   let obj = channel(items1[15]);
   const canSearchForumPosts = obj.useCanSearchForumPosts(channel);
   let tmp7 = screenIndex(items1[16])();
-  let obj1 = channel(items1[17]);
-  const items = [handleThreadCreateOrUpdate];
+  obj1 = channel(items1[17]);
+  const items = [closure_4];
   items1 = [];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_4.hasThreadsForChannel(channel.guild_id, channel.id));
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_4.hasThreadsForChannel(channel.guild_id, channel.id));
   let obj2 = channel(items1[18]);
   const canJoinThreadVoice = obj2.useCanJoinThreadVoice(channel);
   let obj3 = channel(items1[17]);
-  const items2 = [updateVoiceState];
-  const stateFromStores1 = obj3.useStateFromStores(items2, () => outer1_7.isInChannel(channel.id));
+  const items2 = [closure_7];
+  const stateFromStores1 = obj3.useStateFromStores(items2, () => closure_1_7.isInChannel(channel.id));
   let obj4 = channel(items1[17]);
-  const items3 = [updateVoiceState];
-  const stateFromStores2 = obj4.useStateFromStores(items3, () => !screenIndex(items1[19]).isEmpty(outer1_7.getVoiceStatesForChannel(channel.id)));
+  const items3 = [closure_7];
+  const stateFromStores2 = obj4.useStateFromStores(items3, () => !screenIndex(items1[19]).isEmpty(closure_1_7.getVoiceStatesForChannel(channel.id)));
   let fn = screenIndex(items1[20])(channel);
   const tmp4 = screenIndex(items1[14])(channel);
   conversationsHeaderButton = channel(items1[21]).useConversationsHeaderButton(channel);
@@ -80,8 +73,8 @@ function ChannelActionButtons(channel) {
           obj[1] = tmp5(tmp3[25]).MagnifyingGlassIcon;
           obj[2] = function onPress() {
             let obj = channel;
-            outer1_8(channel.id, true, "initial");
-            let obj1 = channel(items1[28]);
+            closure_1_8(channel.id, true, "initial");
+            obj1 = channel(items1[28]);
             if (obj1.isIOS()) {
               let tmp2Result = tmp2(tmp3[29]);
               const chatInputRef = tmp2Result.getChatInputRef(obj.id, screenIndex);
@@ -93,7 +86,7 @@ function ChannelActionButtons(channel) {
             tmp2Result = tmp2(tmp3[30]);
             const channelDetailsSearchContext = tmp2Result.getChannelDetailsSearchContext(obj.id, guildId, obj.isThread());
             const isThreadResult = obj.isThread();
-            obj = { searchContext: channelDetailsSearchContext, searchLocation: outer1_12.CHANNEL_HEADER };
+            obj = { searchContext: channelDetailsSearchContext, searchLocation: closure_1_12.CHANNEL_HEADER };
             screenIndex(items1[31]).trackSearchOpened(obj);
             const obj6 = screenIndex(items1[31]);
             if (tmp2Result1.isSwipeToMemberListEnabled()) {
@@ -101,7 +94,7 @@ function ChannelActionButtons(channel) {
               obj = { source: "channel-header-search", channelId: null, screenIndex: null };
               obj[1] = obj.id;
               obj[2] = screenIndex;
-              ComponentDispatch.dispatch(outer1_11.SHOW_CHANNEL_DETAILS, obj);
+              ComponentDispatch.dispatch(closure_1_11.SHOW_CHANNEL_DETAILS, obj);
             } else {
               const rootNavigationRef = tmp2(tmp3[34]).getRootNavigationRef();
               if (null != rootNavigationRef) {
@@ -168,12 +161,12 @@ function ChannelActionButtons(channel) {
     obj3 = { style: null, children: null };
     obj3[0] = tmp.actionWrapper;
     obj3[1] = items1.map((accessibilityLabel) => {
-      let closure_0 = accessibilityLabel;
+      closure_0 = accessibilityLabel;
       if (accessibilityLabel === conversationsHeaderButton) {
         let obj = { isLast: null, children: null };
         obj[0] = tmp;
         obj[1] = function children(arg0) {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           const obj = { noMargin: true };
           const merged = Object.assign(closure_0);
           obj.onPress = function onPress(arg0) {
@@ -183,15 +176,15 @@ function ChannelActionButtons(channel) {
               onPress(arg0);
             }
           };
-          return outer1_13(outer1_1(outer1_2[39]), obj);
+          return closure_1_13(closure_1_1(closure_1_2[39]), obj);
         };
-        let tmp9 = outer1_13(channel(items1[38]).ConversationCoachmark, obj, accessibilityLabel.accessibilityLabel);
+        let tmp9 = closure_1_13(channel(items1[38]).ConversationCoachmark, obj, accessibilityLabel.accessibilityLabel);
       } else {
         obj = { noMargin: null };
         obj[0] = tmp;
         let merged = Object.assign(accessibilityLabel);
         obj.key = accessibilityLabel.accessibilityLabel;
-        tmp9 = outer1_14(screenIndex(items1[39]), obj);
+        tmp9 = closure_1_14(screenIndex(items1[39]), obj);
         const tmp5 = screenIndex(items1[39]);
       }
       return tmp9;
@@ -216,13 +209,11 @@ function ChannelActionButtons(channel) {
   }
 }
 function WrappedChannelNavButtons(channelId) {
-  let screenIndex;
-  let showCreateThread;
   channelId = channelId.channelId;
   ({ screenIndex, showCreateThread } = channelId);
   let obj = channelId(589);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(channelId));
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   channelId(5252);
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -239,23 +230,20 @@ function WrappedChannelNavButtons(channelId) {
   }
   return tmp4;
 }
+noopAll;
 ({ ChannelTypes: c9, ChannelTypesSets: c10, ComponentActions: unpackModuleId } = ME);
 let closure_15 = createCacheKey.createStyles({ actionWrapper: { flexShrink: 0, flexDirection: "row", alignItems: "center" } });
-let result = require("handleThreadCreateOrUpdate").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelActions.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelActions.tsx");
 
 export default function ChannelActions(channelId) {
-  let containerStyle;
-  let isDM;
-  let isMultiUserDM;
-  let showCreateThread;
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   ({ containerStyle, showCreateThread } = channelId);
   let obj = channelId(589);
-  const items = [ensureGuildLoaded];
+  const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    let obj = outer1_6;
-    const channel = outer1_6.getChannel(channelId);
+    let obj = closure_1_6;
+    const channel = closure_1_6.getChannel(channelId);
     let flag;
     if (channel != null) {
       flag = channel.isMultiUserDM();
@@ -276,7 +264,7 @@ export default function ChannelActions(channelId) {
     return obj;
   });
   ({ isMultiUserDM, isDM } = stateFromStoresObject);
-  let obj1 = channelId(8513);
+  obj1 = channelId(8513);
   obj = { style: containerStyle, children: null };
   if (obj1.useHasForumSearchQuery(channelId)) {
     obj = { channelId: null };
@@ -295,7 +283,7 @@ export default function ChannelActions(channelId) {
     const obj2 = { channelId: null, screenIndex: null };
     obj2[0] = channelId;
     obj2[1] = screenIndex;
-    tmp4Result = tmp4(PrivateChannelButtons, obj2);
+    tmp4Result = tmp4(_modDef12703, obj2);
   }
   obj[1] = tmp4Result;
   return <View style={containerStyle}>{null}</View>;

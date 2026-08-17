@@ -1,22 +1,22 @@
 // discord_app/modules/guild_rooms/GuildRoomActionCreators.shared.tsx
-import serverGuildRoomObjectToClient from "serverGuildRoomObjectToClient";
-import fetchFingerprint from "fetchFingerprint";
-import resolveCreatingNotes from "resolveCreatingNotes";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getBaseProperties } from "GuildRoomAnalytics.tsx";
-import { experiment } from "GuildRoomsExperiment.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getBaseProperties from "getBaseProperties" /* 9872 */;
+import experimentDefault from "experiment" /* 9882 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "resolveCreatingNotes" /* 9864 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function _guildRoomConnect() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c10 = 0;
-    let c11 = 0;
-    let c9 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c10 = 0;
+    c11 = 0;
+    c9 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c11 === 2) {
         c11 = 3;
@@ -49,31 +49,31 @@ function _guildRoomConnect() {
               return obj;
             } else {
               let items = tmp;
-              let closure_6 = tmp4;
+              closure_6 = tmp4;
               let tmp83 = dependencyMap;
-              let serverGuildRoomObjectToClient;
-              let fetchFingerprint;
+              closure_3 = undefined;
+              closure_4 = undefined;
               let users;
               closure_6 = undefined;
               items = undefined;
-              let c8;
-              let c9 = 1;
-              serverGuildRoomObjectToClient = dependencyMap;
+              c8 = undefined;
+              c9 = 1;
+              closure_3 = dependencyMap;
               let tmp81 = callback;
               let tmp82 = callback2;
               if (dependencyMap == null) {
-                let tmp37 = outer1_7;
-                serverGuildRoomObjectToClient = outer1_7;
+                let tmp37 = closure_1_7;
+                closure_3 = closure_1_7;
               }
-              let tmp38 = serverGuildRoomObjectToClient;
+              let tmp38 = closure_3;
               let tmp39 = callback;
               let tmp40 = dependencyMap;
               let HTTP = callback(530).HTTP;
-              let obj1 = { url: null, body: null, rejectWithError: true };
-              let tmp41 = outer1_6;
-              obj1[0] = outer1_6.GUILD_ROOM_CONNECT(tmp81, tmp82);
+              obj1 = { url: null, body: null, rejectWithError: true };
+              let tmp41 = closure_1_6;
+              obj1[0] = closure_1_6.GUILD_ROOM_CONNECT(tmp81, tmp82);
               let obj2 = { position: null };
-              obj2[0] = serverGuildRoomObjectToClient;
+              obj2[0] = closure_3;
               obj1[1] = obj2;
               c10 = 2;
               let num5 = 1;
@@ -115,12 +115,12 @@ function _guildRoomConnect() {
             } else {
               let tmp47 = closure_6;
               let tmp48 = items;
-              fetchFingerprint = arg1;
+              closure_4 = arg1;
               let tmp49 = callback;
               let tmp50 = dependencyMap;
               let obj12 = callback(9866);
-              let tmp51 = fetchFingerprint;
-              users = obj12.serverGuildRoomToClient(fetchFingerprint.body);
+              let tmp51 = closure_4;
+              users = obj12.serverGuildRoomToClient(closure_4.body);
               let tmp52 = callback2;
               let tmp53 = dependencyMap;
               let obj14 = callback2(709);
@@ -129,8 +129,8 @@ function _guildRoomConnect() {
               obj6[1] = users;
               let tmp55 = callback;
               obj6[2] = callback;
-              let tmp56 = serverGuildRoomObjectToClient;
-              obj6[3] = serverGuildRoomObjectToClient;
+              let tmp56 = closure_3;
+              obj6[3] = closure_3;
               let dispatchResult1 = obj14.dispatch(obj6);
               let tmp58 = callback2;
               let tmp59 = callback;
@@ -154,8 +154,8 @@ function _guildRoomConnect() {
                 let fireSurveyActionResult = obj18.fireSurveyAction(callback(9880).SurveyActionTypes.GUILD_ROOM_JOINED);
                 let tmp72 = users;
                 users = users.users;
-                let tmp73 = fetchFingerprint;
-                closure_6 = users.get(fetchFingerprint.getId());
+                let tmp73 = closure_4;
+                closure_6 = users.get(closure_4.getId());
                 let tmp74 = closure_6;
                 if (null != closure_6) {
                   let tmp75 = closure_6;
@@ -175,10 +175,10 @@ function _guildRoomConnect() {
                   users = items;
                   let tmp80 = items;
                   users = items;
-                  fetchFingerprint = items[Symbol.iterator]();
+                  closure_4 = items[Symbol.iterator]();
                   let tmp8 = users;
-                  let tmp9 = fetchFingerprint;
-                  while (fetchFingerprint !== undefined) {
+                  let tmp9 = closure_4;
+                  while (closure_4 !== undefined) {
                     let tmp11 = closure_6;
                     let tmp12 = items;
                     c9 = 2;
@@ -221,15 +221,15 @@ function _guildRoomConnect() {
             let tmp5 = c8;
             let tmp6 = c8;
             c9 = 1;
-            let tmp7 = fetchFingerprint;
-            fetchFingerprint.return();
+            let tmp7 = closure_4;
+            closure_4.return();
             throw c8;
           }
         }
       }
     })();
   });
-  const _guildRoomConnect = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -241,12 +241,12 @@ function _guildRoomConnect() {
 function _guildRoomUpdate() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (position === 2) {
         position = 3;
@@ -279,14 +279,14 @@ function _guildRoomUpdate() {
               room = undefined;
               id = undefined;
               let roomObjects;
-              let c6;
+              c6 = undefined;
               users = undefined;
               position = undefined;
-              room = outer1_5.getRoom(callback2);
-              id = outer1_5.getRoomUsers(callback2);
-              roomObjects = outer1_5.getRoomObjects(callback2);
+              room = closure_1_5.getRoom(callback2);
+              id = closure_1_5.getRoomUsers(callback2);
+              roomObjects = closure_1_5.getRoomObjects(callback2);
               c6 = 1;
-              const obj1 = { type: "GUILD_ROOM_LOCAL_UPDATE", roomId: null };
+              obj1 = { type: "GUILD_ROOM_LOCAL_UPDATE", roomId: null };
               obj1[1] = callback2;
               let background;
               if (closure_2 != null) {
@@ -329,7 +329,7 @@ function _guildRoomUpdate() {
             }
           } else if (1 === tmp8) {
             c6 = 0;
-            let closure_9 = roomObjects;
+            closure_9 = roomObjects;
             let obj12 = callback2(closure_2[6]);
             const obj4 = { type: "GUILD_ROOM_UPDATE_FAILURE", originalRoom: null, originalRoomUsers: null, originalRoomObjects: null, guildId: null };
             obj4[1] = room;
@@ -424,7 +424,7 @@ function _guildRoomUpdate() {
       }
     })();
   });
-  const _guildRoomUpdate = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -446,21 +446,21 @@ function guildRoomObjectCreate() {
 function _guildRoomObjectCreate() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0, arg1, arg2) {
       const HTTP = callback(table[4]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: true };
-      obj1[0] = outer1_6.GUILD_ROOM_OBJECT_CREATE(callback, closure_1);
+      obj1 = { url: null, body: null, rejectWithError: true };
+      obj1[0] = closure_1_6.GUILD_ROOM_OBJECT_CREATE(callback, closure_1);
       obj1[1] = table;
       yield HTTP.post(obj1);
       return arg1;
     })();
   });
-  const _guildRoomObjectCreate = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -472,22 +472,22 @@ function _guildRoomObjectCreate() {
 function _guildRoomObjectUpdate() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let serverGuildRoomObjectToClient = arg3;
-    let c5 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c5 = 0;
+    c4 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       const HTTP = callback(table[4]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: true };
-      obj1[0] = outer1_6.GUILD_ROOM_OBJECT_UPDATE(callback, closure_1, table);
-      obj1[1] = serverGuildRoomObjectToClient;
+      obj1 = { url: null, body: null, rejectWithError: true };
+      obj1[0] = closure_1_6.GUILD_ROOM_OBJECT_UPDATE(callback, closure_1, table);
+      obj1[1] = closure_3;
       yield HTTP.post(obj1);
       return arg1;
     })();
   });
-  const _guildRoomObjectUpdate = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -509,22 +509,22 @@ function guildRoomObjectDelete() {
 function _guildRoomObjectDelete() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let serverGuildRoomObjectToClient = arg3;
-    let c5 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c5 = 0;
+    c4 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       const HTTP = callback(table[4]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: true };
-      obj1[0] = outer1_6.GUILD_ROOM_OBJECT_DELETE(callback, closure_1, table);
-      obj1[1] = serverGuildRoomObjectToClient;
+      obj1 = { url: null, body: null, rejectWithError: true };
+      obj1[0] = closure_1_6.GUILD_ROOM_OBJECT_DELETE(callback, closure_1, table);
+      obj1[1] = closure_3;
       yield HTTP.del(obj1);
       return arg1;
     })();
   });
-  const _guildRoomObjectDelete = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -534,20 +534,20 @@ function _guildRoomObjectDelete() {
   return applyArgumentsResult;
 }
 function deletePendingGuildRoomNote(roomId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId };
   obj.dispatch(obj);
 }
 function _createGuildRoomNote() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let serverGuildRoomObjectToClient = arg3;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       if (c9 === 2) {
         c9 = 3;
@@ -575,39 +575,39 @@ function _createGuildRoomNote() {
               obj[0] = arg1;
               return obj;
             } else {
-              let resolveCreatingNotes = tmp3;
-              let fetchFingerprint = tmp7;
-              let dependencyMap;
+              closure_5 = tmp3;
+              closure_4 = tmp7;
+              dependencyMap = undefined;
               const _Date = Date;
               const fromTimestampResult = callback2(11).fromTimestamp(Date.now());
               dependencyMap = fromTimestampResult;
               const obj9 = callback2(11);
-              const obj1 = { type: "GUILD_ROOM_NOTE_CREATE_START", roomId: null, localId: null, position: null };
+              obj1 = { type: "GUILD_ROOM_NOTE_CREATE_START", roomId: null, localId: null, position: null };
               obj1[1] = callback2;
               obj1[2] = fromTimestampResult;
-              obj1[3] = serverGuildRoomObjectToClient;
+              obj1[3] = closure_3;
               callback2(709).dispatch(obj1);
-              outer1_15(callback2);
-              let c7 = 1;
+              closure_1_15(callback2);
+              c7 = 1;
               const obj2 = { object_type: null, content: null, position: null };
               obj2[0] = callback(9865).GuildRoomObjectTypes.NOTE;
               obj2[1] = dependencyMap;
-              obj2[2] = serverGuildRoomObjectToClient;
+              obj2[2] = closure_3;
               c8 = 2;
               c9 = 1;
               let obj3 = { value: null, done: false };
-              obj3[0] = outer1_10(callback, callback2, obj2);
+              obj3[0] = closure_1_10(callback, callback2, obj2);
               return obj3;
             }
           } else if (1 === tmp7) {
             c7 = 0;
-            serverGuildRoomObjectToClient = closure_6;
+            closure_3 = closure_6;
             obj3 = callback2(709);
             const obj4 = { type: "GUILD_ROOM_NOTE_CREATE_FAILURE", roomId: null, localId: null };
             obj4[1] = callback2;
             obj4[2] = dependencyMap;
             obj3.dispatch(obj4);
-            throw serverGuildRoomObjectToClient;
+            throw closure_3;
           } else if (arg0 === 1) {
             c9 = 3;
             throw arg1;
@@ -641,7 +641,7 @@ function _createGuildRoomNote() {
       }
     })();
   });
-  const _createGuildRoomNote = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -653,11 +653,11 @@ function _createGuildRoomNote() {
 function _deleteGuildRoomNote() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -685,14 +685,14 @@ function _deleteGuildRoomNote() {
               obj[0] = arg1;
               return obj;
             } else {
-              let fetchFingerprint = tmp5;
-              let serverGuildRoomObjectToClient = tmp2;
-              const obj1 = { object_type: null };
+              closure_4 = tmp5;
+              closure_3 = tmp2;
+              obj1 = { object_type: null };
               obj1[0] = callback(9865).GuildRoomObjectTypes.NOTE;
               c5 = 1;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = outer1_13(callback, closure_1, dependencyMap, obj1);
+              obj2[0] = closure_1_13(callback, closure_1, dependencyMap, obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -721,7 +721,7 @@ function _deleteGuildRoomNote() {
       }
     })();
   });
-  const _deleteGuildRoomNote = tmp;
+  closure_17 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -733,30 +733,30 @@ function _deleteGuildRoomNote() {
 function _fetchGuildRoom() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      let serverGuildRoomObjectToClient = tmp3;
-      let c5 = 1;
-      const HTTP = callback(outer1_2[4]).HTTP;
-      let obj1 = { url: null, rejectWithError: true };
+      closure_3 = tmp3;
+      c5 = 1;
+      const HTTP = callback(closure_1_2[4]).HTTP;
+      obj1 = { url: null, rejectWithError: true };
       obj1[0] = c6.GUILD_ROOM(callback, lib);
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c5 = 0;
         const obj4 = callback(9881);
         obj4.handleGuildRoomError({ silent: true });
-        let c7 = 3;
+        c7 = 3;
       } else if (arg0 === 1) {
         c7 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         lib = arg1;
         const obj = callback(9866);
-        const dependencyMap = obj.serverGuildRoomToClient(lib.body);
+        dependencyMap = obj.serverGuildRoomToClient(lib.body);
         obj1 = lib(709);
         const obj3 = { type: "GUILD_ROOM_FETCH_SUCCESS", guildId: null, room: null };
         obj3[1] = callback;
@@ -768,7 +768,7 @@ function _fetchGuildRoom() {
       return arg1;
     })();
   });
-  const _fetchGuildRoom = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -778,7 +778,7 @@ function _fetchGuildRoom() {
   return applyArgumentsResult;
 }
 let closure_7 = { x: 0, y: 0 };
-let result = require("resolveCreatingNotes").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.shared.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.shared.tsx");
 
 export const guildRoomConnect = function guildRoomConnect() {
   const self = this;
@@ -791,7 +791,7 @@ export const guildRoomConnect = function guildRoomConnect() {
   return applyArgumentsResult;
 };
 export const guildRoomDisconnect = function guildRoomDisconnect(guildId, channelId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_DISCONNECT", userId: id.getId(), roomId: channelId };
   obj.dispatch(obj);
   if (channelId !== guildId) {
@@ -803,7 +803,7 @@ export const guildRoomDisconnect = function guildRoomDisconnect(guildId, channel
   }
 };
 export const guildRoomLocalDisconnect = function guildRoomLocalDisconnect(userId, oldChannelId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_DISCONNECT", userId, roomId: oldChannelId };
   obj.dispatch(obj);
 };
@@ -818,15 +818,15 @@ export const guildRoomUpdate = function guildRoomUpdate() {
   return applyArgumentsResult;
 };
 export const clearGuildRoomPendingPosition = function clearGuildRoomPendingPosition() {
-  dispatcher.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_CLEARED" });
+  dispatcherDefault.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_CLEARED" });
 };
 export const selectGuildRoomLocalPosition = function selectGuildRoomLocalPosition(position) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_LOCAL_POSITION_REQUESTED", position };
   obj.dispatch(obj);
 };
 export const guildRoomToggleLayout = function guildRoomToggleLayout(roomId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId };
   obj.dispatch(obj);
 };
@@ -843,12 +843,12 @@ export const guildRoomObjectUpdate = function guildRoomObjectUpdate() {
 };
 export { guildRoomObjectDelete };
 export const startPendingGuildRoomNote = function startPendingGuildRoomNote(roomId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_PENDING_NOTE_START", roomId };
   obj.dispatch(obj);
 };
 export const placePendingGuildRoomNote = function placePendingGuildRoomNote(roomId, position) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId, position };
   obj.dispatch(obj);
 };
@@ -885,7 +885,7 @@ export const fetchGuildRoom = function fetchGuildRoom(c6, c5) {
 };
 export const setGuildRoomVideoOverlayVisibility = function setGuildRoomVideoOverlayVisibility(value) {
   const videoOverlayVisibility = store.getVideoOverlayVisibility();
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value };
   obj.dispatch(obj);
   if (value !== videoOverlayVisibility) {
@@ -901,29 +901,29 @@ export const setGuildRoomVideoOverlayVisibility = function setGuildRoomVideoOver
   }
 };
 export const maybeSetGuildRoomVideoOverlay = function maybeSetGuildRoomVideoOverlay(arg0, guildId, channelId) {
-  let obj = experiment;
+  let obj = experimentDefault;
   obj = { guildId, location: "maybeSetGuildRoomVideoOverlay" };
   if (obj.getCurrentConfig(obj, { autoTrackExposure: false }).enabled) {
     const videoOverlayVisibility = store.getVideoOverlayVisibility();
     obj = { type: "GUILD_ROOM_SET_VIDEO_OVERLAY_VISIBILITY", value: null };
     obj[1] = arg0;
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
     if (arg0 !== videoOverlayVisibility) {
       let str = "video_overlay_closed";
       if (arg0) {
         str = "video_overlay_opened";
       }
-      const obj1 = { interactionType: null, channelId: null };
+      obj1 = { interactionType: null, channelId: null };
       obj1[0] = str;
       obj1[1] = channelId;
       const result = getBaseProperties.trackGuildRoomInteracted(obj1);
       const obj5 = getBaseProperties;
     }
-    const tmpResult = dispatcher;
+    const tmpResult = dispatcherDefault;
   }
 };
 export const setGuildRoomRememberVideoOverlayVisibility = function setGuildRoomRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY", rememberVideoOverlayVisibility };
   obj.dispatch(obj);
   obj = { rememberVideoOverlayVisibility };

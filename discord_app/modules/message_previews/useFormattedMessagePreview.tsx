@@ -1,23 +1,19 @@
 // discord_app/modules/message_previews/useFormattedMessagePreview.tsx
-import fetchFingerprint from "fetchFingerprint";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageFlags } from "ME";
+import set from "set" /* 686 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4814 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8204 */;
+import getSystemMessageUserJoinMobileDefault from "getSystemMessageUserJoinMobile" /* 8209 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { MessageFlags } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getSystemMessageUserJoinMobile } from "../../utils/SystemMessageUtils.tsx";
-import { useIsCallActive } from "../calls/mobile/useIsCallActive.tsx";
-import { isForwardMessage } from "../forwarding/isForwardMessage.tsx";
-import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
 
-const require = arg1;
+require = arg1;
 function formatMessagePreview(type, isBlocked) {
-  let authorNick;
-  let currentUserId;
-  let isCallActive;
-  let otherUser;
-  let otherUserNick;
   if (isBlocked.isBlocked) {
     let obj = { type: "text", text: null };
     const intl29 = getSystemLocale.intl;
@@ -43,7 +39,7 @@ function formatMessagePreview(type, isBlocked) {
                 if (1 === type.embeds.length) {
                   if (type.embeds[0].url === type.content) {
                     if (null != type.embeds[0].rawTitle) {
-                      const obj1 = { type: "markup", markup: null };
+                      obj1 = { type: "markup", markup: null };
                       obj1[1] = type.embeds[0].rawTitle;
                       let tmp10 = obj1;
                     }
@@ -208,7 +204,7 @@ function formatMessagePreview(type, isBlocked) {
                   obj25[0] = text;
                   obj24[1] = intl2.formatToPlainString(tmp4(1236).t.ImizdM, obj25);
                   tmp10 = obj24;
-                } else if (isForwardMessage(type)) {
+                } else if (isForwardMessageDefault(type)) {
                   obj = { type: "text", text: null };
                   const intl = tmp4(1236).intl;
                   obj[1] = intl.string(tmp4(1236).t["9ddYKt"]);
@@ -316,7 +312,7 @@ function formatMessagePreview(type, isBlocked) {
               } else if (type.type === tmp4(686).MessageTypes.USER_JOIN) {
                 let obj38 = { type: "text", text: null };
                 const intl18 = tmp4(1236).intl;
-                obj38 = getSystemMessageUserJoinMobile;
+                obj38 = getSystemMessageUserJoinMobileDefault;
                 const obj39 = { username: null, usernameHook: null };
                 obj39[0] = authorNick;
                 const systemMessageUserJoin = obj38.getSystemMessageUserJoin(type.id);
@@ -389,7 +385,7 @@ function formatMessagePreview(type, isBlocked) {
     flag = true;
   }
 }
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
+const result = require("set").fileFinishedImporting("modules/message_previews/useFormattedMessagePreview.tsx");
 
 export const isMessageContentPreviewable = function isMessageContentPreviewable(messageRecord) {
   const type = messageRecord.type;
@@ -411,18 +407,16 @@ export const isMessageContentPreviewable = function isMessageContentPreviewable(
   return true;
 };
 export const useFormattedMessagePreview = function useFormattedMessagePreview(message, channel) {
-  let isBlocked;
-  let isIgnored;
   const _require = message;
   let obj = _initialize;
-  const items = [markAllUserIdListsStale];
+  const items = [closure_4];
   const items1 = [message.author.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isBlocked: outer1_4.isBlocked(message.author.id), isIgnored: outer1_4.isIgnored(message.author.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isBlocked: closure_1_4.isBlocked(message.author.id), isIgnored: closure_1_4.isIgnored(message.author.id) }), items1);
   ({ isBlocked, isIgnored } = stateFromStoresObject);
-  const tmp4 = useIsCallActive(channel.id, message.id);
-  const items2 = [fetchFingerprint];
+  const tmp4 = useIsCallActiveDefault(channel.id, message.id);
+  const items2 = [closure_3];
   const stateFromStores = _initialize.useStateFromStores(items2, () => id.getId());
-  const nick = useNullableMessageAuthor(message).nick;
+  const nick = useNullableMessageAuthorDefault(message).nick;
   let stringResult = nick;
   if (message.type !== _set.MessageTypes.USER_JOIN) {
     stringResult = nick;
@@ -432,11 +426,11 @@ export const useFormattedMessagePreview = function useFormattedMessagePreview(me
     }
   }
   let tmpResult = tmp(589);
-  const items3 = [mergeGuildAvatar];
+  const items3 = [closure_5];
   const stateFromStores1 = tmpResult.useStateFromStores(items3, () => {
     let user;
     if (message.mentions.length > 0) {
-      user = outer1_5.getUser(tmp.mentions[0]);
+      user = closure_1_5.getUser(tmp.mentions[0]);
     }
     return user;
   });

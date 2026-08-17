@@ -1,37 +1,33 @@
 // discord_app/modules/age_gate/native/components/NsfwGateChat.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/11837_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 11837 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, Image: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: null, border: null, description: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[1] = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = { marginTop: 16, textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { height: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-const result = require("jsxProd").fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { height: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateChat.tsx");
 
 export default function NsfwGateChat() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { children: null };
   obj = { style: tmp.border };
   const items = [callback(closure_3, obj), ];
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(closure_4, { source: registerAsset }), ];
+  const items1 = [callback(closure_4, { source: registerAssetDefault }), ];
   const obj2 = { style: tmp.description, variant: "text-md/medium", color: "text-muted", children: null };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.W4Qyxr);

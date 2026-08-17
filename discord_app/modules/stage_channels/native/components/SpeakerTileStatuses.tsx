@@ -1,36 +1,36 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTileStatuses.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import updateVoiceState from "updateVoiceState";
-import buildStageChannelUserRoles from "buildStageChannelUserRoles";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08606_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12610_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import registerAssetDefault from "registerAsset" /* 8606 */;
+import registerAssetDefault2 from "registerAsset" /* 12610 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
+import closure_6 from "buildStageChannelUserRoles" /* 4990 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let obj = { voiceStatusWrapper: null, moderatorStatusWrapper: null, restricted: null };
-obj = { position: "absolute", top: 4, left: 4, backgroundColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+obj = { position: "absolute", top: 4, left: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
-createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
+createCacheKey = { position: "absolute", top: 4, right: 4, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.md, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
 obj[1] = createCacheKey;
-obj[2] = { marginEnd: require("Themes").space.PX_4 };
+obj[2] = { marginEnd: ThemesDefault.space.PX_4 };
 let closure_8 = createCacheKey.createStyles(obj);
-const obj2 = { marginEnd: require("Themes").space.PX_4 };
+const obj2 = { marginEnd: ThemesDefault.space.PX_4 };
 const memoResult = importAllResult.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
   let obj = userId(589);
-  const items = [_detectH265HardwareDecode];
+  const items = [closure_4];
   const items1 = [userId];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.isLocalMute(userId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.isLocalMute(userId), items1);
   const tmp = callback();
-  const items2 = [updateVoiceState];
+  const items2 = [closure_5];
   const items3 = [channelId, userId];
-  const stateFromStores1 = userId(589).useStateFromStores(items2, () => outer1_5.getVoiceStateForChannel(channelId, userId), items3);
+  const stateFromStores1 = userId(589).useStateFromStores(items2, () => closure_1_5.getVoiceStateForChannel(channelId, userId), items3);
   let flag;
   if (stateFromStores1 != null) {
     flag = stateFromStores1.isVoiceMuted();
@@ -77,10 +77,10 @@ const memoResult1 = importAllResult.memo((userId) => {
   userId = userId.userId;
   const channelId = userId.channelId;
   let obj = userId(589);
-  const items = [buildStageChannelUserRoles];
+  const items = [closure_6];
   const items1 = [channelId, userId];
   let tmp4;
-  if (obj.useStateFromStores(items, () => outer1_6.isModerator(userId, channelId), items1)) {
+  if (obj.useStateFromStores(items, () => closure_1_6.isModerator(userId, channelId), items1)) {
     tmp4 = channelId(12609);
   }
   let tmp6 = null;
@@ -97,20 +97,15 @@ const memoResult1 = importAllResult.memo((userId) => {
   }
   return tmp6;
 });
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTileStatuses.tsx");
 
 export const VoiceStatus = memoResult;
 export const ModeratorStatus = memoResult1;
 export const BlockedStatus = function BlockedStatus() {
-  const obj = { style: callback().restricted, source: null, size: null, color: null };
-  obj[1] = registerAsset;
-  obj[2] = Button.Icon.Sizes.EXTRA_SMALL;
-  obj[3] = Themes.unsafe_rawColors.RED_400;
-  return jsx(Button.Icon, { style: callback().restricted, source: null, size: null, color: null });
+  const tmp = callback();
+  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault2, size: Button.Icon.Sizes.EXTRA_SMALL, color: ThemesDefault.unsafe_rawColors.RED_400 });
 };
 export const IgnoredStatus = function IgnoredStatus() {
-  const obj = { style: callback().restricted, source: null, size: null };
-  obj[1] = registerAsset;
-  obj[2] = Button.Icon.Sizes.EXTRA_SMALL;
-  return jsx(Button.Icon, { style: callback().restricted, source: null, size: null });
+  const tmp = callback();
+  return jsx(Button.Icon, { style: callback().restricted, source: registerAssetDefault, size: Button.Icon.Sizes.EXTRA_SMALL });
 };

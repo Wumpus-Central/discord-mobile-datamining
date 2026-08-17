@@ -1,16 +1,18 @@
 // discord_app/modules/ads/AdPersonalizationStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function reset() {
-  let c0 = false;
+  c0 = false;
 }
 let c0 = false;
+const Store = initializeDefault.Store;
 class AdPersonalizationStore extends Store {
 }
 AdPersonalizationStore.prototype["isTogglesDisabled"] = function isTogglesDisabled() {
   return c0;
 };
-const adPersonalizationStore = new AdPersonalizationStore(require("dispatcher"), {
+const adPersonalizationStore = new AdPersonalizationStore(dispatcherDefault, {
   AD_PERSONALIZATION_TOGGLES_RESTRICTED: function handleAdPersonalizationTogglesRestricted(disabled) {
     let flag = disabled.disabled;
     if (flag == null) {

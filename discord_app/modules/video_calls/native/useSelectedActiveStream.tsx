@@ -1,19 +1,19 @@
 // discord_app/modules/video_calls/native/useSelectedActiveStream.tsx
-import getParticipants from "getParticipants";
-import reset from "reset";
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useSelectedActiveStream.tsx");
 
 export default function useSelectedActiveStream(arg0) {
   const _require = arg0;
-  const items = [getParticipants, reset];
+  const items = [closure_2, closure_3];
   return _initialize.useStateFromStores(items, () => {
-    const selectedParticipantId = outer1_2.getSelectedParticipantId(id.id);
+    const selectedParticipantId = closure_1_2.getSelectedParticipantId(id.id);
     let activeStreamForStreamKey = null;
     if (null != selectedParticipantId) {
-      activeStreamForStreamKey = outer1_3.getActiveStreamForStreamKey(selectedParticipantId);
+      activeStreamForStreamKey = closure_1_3.getActiveStreamForStreamKey(selectedParticipantId);
     }
     return activeStreamForStreamKey;
   });

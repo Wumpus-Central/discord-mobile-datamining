@@ -1,18 +1,17 @@
 // discord_app/modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Permissions } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 function canToggleCommunicationDisableOnUser(id, id2, items) {
-  let obj;
-  let obj2;
-  let obj3;
   let tmp = items;
   if (items === undefined) {
-    items = [mergeGuildAvatar, createGuildRecordFromRust, getUncachedChannelPermissions];
+    items = [closure_6, closure_4, closure_5];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;
@@ -29,8 +28,8 @@ function canToggleCommunicationDisableOnUser(id, id2, items) {
         obj[0] = Permissions.ADMINISTRATOR;
         obj[1] = user;
         obj[2] = guild;
-        canResult = importAll(4026).can(obj);
-        const obj5 = importAll(4026);
+        canResult = applyOverwritesAll.can(obj);
+        const obj5 = applyOverwritesAll;
       }
       let canManageUserResult = !canResult;
       if (!canResult) {
@@ -42,16 +41,18 @@ function canToggleCommunicationDisableOnUser(id, id2, items) {
   }
   return tmp6;
 }
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx");
+const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
+const Permissions = ME.Permissions;
+const result = set.fileFinishedImporting("modules/guild_communication_disabled/useCanToggleCommunicationDisableOnUser.tsx");
 
 export default function useCanToggleCommunicationDisableOnUser(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
-  let items = [mergeGuildAvatar, createGuildRecordFromRust, getUncachedChannelPermissions];
+  closure_1 = arg1;
+  let items = [closure_6, closure_4, closure_5];
   const items1 = [arg0, arg1];
   return _initialize.useStateFromStores(items, () => {
-    const items = [outer1_6, outer1_4, outer1_5];
-    return outer1_8(closure_0, closure_1, items);
+    const items = [closure_1_6, closure_1_4, closure_1_5];
+    return closure_1_8(closure_0, closure_1, items);
   }, items1);
 };
 export { canToggleCommunicationDisableOnUser };

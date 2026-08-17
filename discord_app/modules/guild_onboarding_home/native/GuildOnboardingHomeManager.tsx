@@ -1,21 +1,22 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx
-import _slicedToArray from "_slicedToArray";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import set from "set";
-import { GuildMemberFlags } from "GuildMemberFlags";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "initialize" /* 1982 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "handleConnectionOpen" /* 4197 */;
+import closure_11 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_12 from "set" /* 5049 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
 const require = arg1;
+initializeDefault;
 let prototype = function GuildOnboardingHomeManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let closure_0 = applyArgumentsResult;
+  closure_0 = applyArgumentsResult;
   applyArgumentsResult.onboardingCompleteGuilds = new Set();
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
@@ -38,14 +39,14 @@ let prototype = function GuildOnboardingHomeManager() {
     }
   };
   applyArgumentsResult.handlePostConnectionOpen = function handlePostConnectionOpen() {
-    const guilds = outer1_9.getGuilds();
+    const guilds = closure_1_9.getGuilds();
     for (const key10007 in guilds) {
       let tmp8 = key10007;
-      let tmp9 = outer1_8;
-      let selfMember = outer1_8.getSelfMember(key10007);
+      let tmp9 = closure_1_8;
+      let selfMember = closure_1_8.getSelfMember(key10007);
       let tmp11 = lib;
-      let tmp12 = outer1_2;
-      let obj = lib(outer1_2[12]);
+      let tmp12 = closure_1_2;
+      let obj = lib(closure_1_2[12]);
       let num;
       if (selfMember != null) {
         num = selfMember.flags;
@@ -53,8 +54,8 @@ let prototype = function GuildOnboardingHomeManager() {
       if (num == null) {
         num = 0;
       }
-      let tmp2 = outer1_13;
-      if (!obj.hasFlag(num, outer1_13.COMPLETED_HOME_ACTIONS)) {
+      let tmp2 = closure_1_13;
+      if (!obj.hasFlag(num, closure_1_13.COMPLETED_HOME_ACTIONS)) {
         continue;
       } else {
         let tmp3 = lib;
@@ -64,26 +65,24 @@ let prototype = function GuildOnboardingHomeManager() {
       }
       continue;
     }
-    const guildId = outer1_10.getGuildId();
+    const guildId = closure_1_10.getGuildId();
     if (null != guildId) {
       const result = lib._getOrLoadOnboardingMemberActions(guildId);
     }
   };
   applyArgumentsResult.handleGuildMemberUpdate = function handleGuildMemberUpdate(user) {
-    let flags;
-    let guildId;
     ({ flags, guildId } = user);
-    if (user.user.id === outer1_6.getId()) {
+    if (user.user.id === closure_1_6.getId()) {
       const onboardingCompleteGuilds2 = lib.onboardingCompleteGuilds;
       if (!onboardingCompleteGuilds2.has(guildId)) {
-        let obj = lib(outer1_2[12]);
+        let obj = lib(closure_1_2[12]);
         if (flags == null) {
           flags = 0;
         }
-        if (obj.hasFlag(flags, outer1_13.COMPLETED_HOME_ACTIONS)) {
+        if (obj.hasFlag(flags, closure_1_13.COMPLETED_HOME_ACTIONS)) {
           const onboardingCompleteGuilds = tmp7.onboardingCompleteGuilds;
           onboardingCompleteGuilds.add(guildId);
-          const newMemberActions = outer1_11.getNewMemberActions(guildId);
+          const newMemberActions = closure_1_11.getNewMemberActions(guildId);
           let num;
           if (newMemberActions != null) {
             num = newMemberActions.length;
@@ -111,14 +110,12 @@ let prototype = function GuildOnboardingHomeManager() {
     onboardingCompleteGuilds.delete(guild.guild.id);
   };
   closure_0 = undefined;
-  let importDefault = applyArgumentsResult;
+  importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
       if (completedActions === 2) {
         completedActions = 3;
         HermesBuiltin.throwTypeError();
@@ -145,7 +142,7 @@ let prototype = function GuildOnboardingHomeManager() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
+              closure_2 = tmp5;
               c1 = tmp2;
               c0 = undefined;
               c1 = undefined;
@@ -165,7 +162,7 @@ let prototype = function GuildOnboardingHomeManager() {
                 throw arg1;
               } else if (arg0 === 2) {
                 completedActions = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -174,7 +171,7 @@ let prototype = function GuildOnboardingHomeManager() {
                     memberActions = 2;
                     completedActions = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = outer1_1._getOrLoadOnboardingMemberActions(c0);
+                    obj2[0] = closure_1_1._getOrLoadOnboardingMemberActions(c0);
                     return obj2;
                   }
                 }
@@ -200,10 +197,10 @@ let prototype = function GuildOnboardingHomeManager() {
                 tmp13 = null != found;
               }
               if (tmp13) {
-                tmp13 = found.actionType === callback(outer1_2[16]).NewMemberActionTypes.VIEW;
+                tmp13 = found.actionType === callback(closure_1_2[16]).NewMemberActionTypes.VIEW;
               }
               if (tmp13) {
-                obj = callback(outer1_2[18]);
+                obj = callback(closure_1_2[18]);
                 const result = obj.completeNewMemberAction(c0, c1);
               }
               arr = memberActions;
@@ -226,15 +223,13 @@ let prototype = function GuildOnboardingHomeManager() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
   };
   applyArgumentsResult.handleMessageSend = function handleMessageSend(message) {
-    let channelId;
-    let guildId;
     ({ guildId, channelId } = message);
     if (null != guildId) {
       if (null != channelId) {
@@ -243,8 +238,8 @@ let prototype = function GuildOnboardingHomeManager() {
         if (author != null) {
           id = author.id;
         }
-        if (id === outer1_6.getId()) {
-          const channel = outer1_7.getChannel(channelId);
+        if (id === closure_1_6.getId()) {
+          const channel = closure_1_7.getChannel(channelId);
           let isForumPostResult;
           if (channel != null) {
             isForumPostResult = channel.isForumPost();
@@ -265,14 +260,12 @@ let prototype = function GuildOnboardingHomeManager() {
     }
   };
   applyArgumentsResult.handleThreadCreate = function handleThreadCreate(arg0) {
-    let channel;
-    let isNewlyCreated;
     ({ channel, isNewlyCreated } = arg0);
     if (isNewlyCreated) {
       isNewlyCreated = null != channel.parent_id;
     }
     if (isNewlyCreated) {
-      channel = outer1_7.getChannel(channel.parent_id);
+      channel = closure_1_7.getChannel(channel.parent_id);
       let isForumLikeChannelResult;
       if (channel != null) {
         isForumLikeChannelResult = channel.isForumLikeChannel();
@@ -280,7 +273,7 @@ let prototype = function GuildOnboardingHomeManager() {
       isNewlyCreated = isForumLikeChannelResult;
     }
     if (isNewlyCreated) {
-      isNewlyCreated = channel.ownerId === outer1_6.getId();
+      isNewlyCreated = channel.ownerId === closure_1_6.getId();
     }
     if (isNewlyCreated) {
       lib._completeChatAction(channel.guild_id, channel.parent_id);
@@ -289,10 +282,10 @@ let prototype = function GuildOnboardingHomeManager() {
   closure_0 = undefined;
   importDefault = applyArgumentsResult;
   closure_0 = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (actionType === 2) {
         actionType = 3;
@@ -321,14 +314,14 @@ let prototype = function GuildOnboardingHomeManager() {
               return obj;
             } else {
               let memberActions = tmp5;
-              let closure_2 = tmp2;
+              closure_2 = tmp2;
               closure_2 = undefined;
               memberActions = undefined;
               completedActions = undefined;
               actionType = undefined;
               completedActions = 1;
               actionType = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = closure_1._getOrLoadOnboardingMemberActions(callback);
               return obj1;
             }
@@ -358,10 +351,10 @@ let prototype = function GuildOnboardingHomeManager() {
               tmp13 = null != actionType;
             }
             if (tmp13) {
-              tmp13 = actionType.actionType === callback(outer1_2[16]).NewMemberActionTypes.CHAT;
+              tmp13 = actionType.actionType === callback(closure_1_2[16]).NewMemberActionTypes.CHAT;
             }
             if (tmp13) {
-              obj = callback(outer1_2[18]);
+              obj = callback(closure_1_2[18]);
               const result = obj.completeNewMemberAction(callback, closure_1);
             }
             actionType = 3;
@@ -378,7 +371,7 @@ let prototype = function GuildOnboardingHomeManager() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
@@ -387,9 +380,9 @@ let prototype = function GuildOnboardingHomeManager() {
   closure_0 = undefined;
   importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -417,25 +410,25 @@ let prototype = function GuildOnboardingHomeManager() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
-              let dependencyMap = tmp2;
+              closure_2 = tmp5;
+              dependencyMap = tmp2;
               let callback;
               dependencyMap = undefined;
-              const obj10 = callback(outer1_2[19]);
+              const obj10 = callback(closure_1_2[19]);
               const tmp24 = callback;
-              const tmp25 = outer1_2;
+              const tmp25 = closure_1_2;
               if (!canSeeOnboardingHomeResult) {
-                if (!outer1_5.isFullServerPreview(callback)) {
+                if (!closure_1_5.isFullServerPreview(callback)) {
                   c4 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = {};
                   return obj1;
                 }
               }
-              const selfMember = outer1_8.getSelfMember(tmp23);
+              const selfMember = closure_1_8.getSelfMember(tmp23);
               if (null != selfMember) {
                 if (tmp24Result.getIsNewMember(tmp23)) {
-                  const items = [outer1_1._getOrLoadOnboardingHomeSettings(tmp23), outer1_1._getOrLoadMemberActions(tmp23, selfMember)];
+                  const items = [closure_1_1._getOrLoadOnboardingHomeSettings(tmp23), closure_1_1._getOrLoadMemberActions(tmp23, selfMember)];
                   v0 = 1;
                   c4 = 1;
                   const obj2 = { value: null, done: false };
@@ -479,16 +472,16 @@ let prototype = function GuildOnboardingHomeManager() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
   };
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (c3 === 2) {
         c3 = 3;
@@ -516,16 +509,16 @@ let prototype = function GuildOnboardingHomeManager() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp4;
+              closure_1 = tmp4;
               let lib;
-              const newMemberActions = outer1_11.getNewMemberActions(lib);
+              const newMemberActions = closure_1_11.getNewMemberActions(lib);
               if (null == newMemberActions) {
-                if (!outer1_11.getIsLoading(lib)) {
+                if (!closure_1_11.getIsLoading(lib)) {
                   let obj2 = lib(table[20]);
                   if (obj2.getIsNewMember(tmp16)) {
                     table = 1;
                     c3 = 1;
-                    const obj1 = { value: null, done: false };
+                    obj1 = { value: null, done: false };
                     obj1[0] = tmp8(tmp9[18]).fetchGuildHomeSettings(tmp16);
                     return obj1;
                   }
@@ -568,17 +561,17 @@ let prototype = function GuildOnboardingHomeManager() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
     return applyArgumentsResult;
   };
   closure_0 = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0, arg1) {
       if (c3 === 2) {
         c3 = 3;
@@ -606,20 +599,20 @@ let prototype = function GuildOnboardingHomeManager() {
               obj[0] = arg1;
               return obj;
             } else {
-              const state = outer1_12.getState(callback);
+              const state = closure_1_12.getState(callback);
               const completedActions = state.completedActions;
               let tmp5 = completedActions;
               if (null == completedActions) {
                 tmp5 = completedActions;
                 if (!tmp20) {
-                  let obj1 = callback(outer1_2[12]);
+                  obj1 = callback(closure_1_2[12]);
                   const flags = tmp17.flags;
-                  let c2 = flags;
+                  c2 = flags;
                   if (flags == null) {
                     c2 = 0;
                   }
                   tmp5 = completedActions;
-                  if (obj1.hasFlag(c2, outer1_13.STARTED_HOME_ACTIONS)) {
+                  if (obj1.hasFlag(c2, closure_1_13.STARTED_HOME_ACTIONS)) {
                     c4 = 1;
                     c3 = 1;
                     obj1 = { value: null, done: false };
@@ -627,7 +620,7 @@ let prototype = function GuildOnboardingHomeManager() {
                     return obj1;
                   }
                   tmp6 = callback;
-                  tmp7 = outer1_2;
+                  tmp7 = closure_1_2;
                 }
               }
               tmp16 = callback;
@@ -660,7 +653,7 @@ let prototype = function GuildOnboardingHomeManager() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
@@ -671,6 +664,6 @@ let prototype = function GuildOnboardingHomeManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("initialize").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomeManager.tsx");
 
 export default prototype;

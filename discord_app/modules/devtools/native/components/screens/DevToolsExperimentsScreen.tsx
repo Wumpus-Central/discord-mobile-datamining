@@ -1,31 +1,26 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx
-import Background from "Background";
-import importAllResult from "module_8636";
-import { View } from "getNoResultsSource";
-import getHash from "getHash";
-import fetchFingerprint from "fetchFingerprint";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ExperimentBuckets from "ExperimentBuckets";
-import jsxProd from "trackExposureToExperiment";
-import createCacheKey from "createCacheKey";
-import { apply } from "../../../../../../_runtime/00012_apply.js";
-import { extractId } from "../../../../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { useExperimentAssignment } from "../../../../experiments/client_override_hooks/useExperimentAssignments.tsx";
-import { trackExposureToExperiment } from "../../../../experiments/ExperimentManager.tsx";
+import applyDefault from "apply" /* 12 */;
+import extractId from "extractId" /* 513 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import useExperimentAssignment from "useExperimentAssignment" /* 10989 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getHash" /* 4288 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function UserExperimentDebugView(id) {
-  let experiment;
-  let override;
   ({ override, experiment } = id);
   id = store2.getId();
   const installationForTracking = store2.getInstallationForTracking();
@@ -41,19 +36,16 @@ function UserExperimentDebugView(id) {
       tmp7 = maybeExtractIdResult;
     }
   }
-  let obj1 = useExperimentAssignment;
+  obj1 = useExperimentAssignment;
   const experimentAssignment = obj1.useExperimentAssignment(experiment, tmp7);
   let obj2 = useExperimentAssignment;
   const experimentServerAssignment = obj2.useExperimentServerAssignment(experiment, tmp7);
-  let obj3 = apply;
+  let obj3 = applyDefault;
   const tmp = callback3();
   const mapped = obj3.sortBy(store.getRecentExposures(constants2.USER, id.id), (arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return -tmp;
   }).map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
   });
@@ -101,7 +93,6 @@ function UserExperimentDebugView(id) {
     str5 = mapped.join("\n");
   }
   const sortByResult = obj3.sortBy(store.getRecentExposures(constants2.USER, id.id), (arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return -tmp;
   });
@@ -112,26 +103,20 @@ function UserExperimentDebugView(id) {
   return tmp15(tmp16, obj);
 }
 function GuildExperimentDebugView(arg0) {
-  let id;
-  let override;
   ({ id, override } = arg0);
   let obj;
   const loadedGuildExperiment = store.getLoadedGuildExperiment(id);
-  obj = apply;
+  obj = applyDefault;
   const tmp = callback3();
   let mapped = obj.sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return -tmp;
   }).map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     return "" + new Date(tmp2).toLocaleString() + " (" + tmp + ")";
   });
-  let obj1 = apply;
+  obj1 = applyDefault;
   const sortByResult = obj.sortBy(store.getRecentExposures(constants2.GUILD, id), (arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return -tmp;
   });
@@ -163,15 +148,14 @@ function GuildExperimentDebugView(arg0) {
     let arr = items.push("" + tmp5.name + ": " + tmp10);
     continue;
   }
-  let obj3 = apply(obj);
+  let obj3 = applyDefault(obj);
   const keys = obj3.keys();
   const mapped1 = keys.map(Number);
   const sorted = mapped1.sort();
   const mapped2 = sorted.map((arg0) => "" + obj[arg0] + " guilds are in bucket " + arg0);
   obj = { style: tmp.debugContainer, children: null };
   const joined = mapped2.join(", ");
-  obj1 = { label: null, subLabel: null };
-  obj1[0] = "Current Assignments: " + joined;
+  obj1 = { label: "Current Assignments: " + joined, subLabel: null };
   let str = null;
   if (null == loadedGuildExperiment) {
     str = "Warning: Server did not send any experiment config. You may need to check the 'Send to Client' box in the admin UI.";
@@ -182,9 +166,8 @@ function GuildExperimentDebugView(arg0) {
   obj1[1] = str;
   const items1 = [closure_11(obj(6286).TableRowGroup, { title: "Overview", hasIcons: false, children: closure_11(obj(6291).TableRow, obj1) }), closure_11(obj(1297).Spacer, { size: 16 }), , , , , , , ];
   obj3 = { title: "Guild Assignments", hasIcons: false, children: null };
-  const obj4 = { label: null };
-  obj4[0] = items.join("\n");
-  obj3[2] = closure_11(obj(6291).TableRow, obj4);
+  const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(6291).TableRow, obj1) };
+  obj3[2] = closure_11(obj(6291).TableRow, { label: items.join("\n") });
   items1[2] = closure_11(obj(6286).TableRowGroup, obj3);
   items1[3] = closure_11(obj(1297).Spacer, { size: 16 });
   let str2 = "None";
@@ -193,7 +176,7 @@ function GuildExperimentDebugView(arg0) {
     const _JSON = JSON;
     str3 = JSON.stringify(loadedGuildExperiment, undefined, 2);
   }
-  const obj2 = { title: "Overview", hasIcons: false, children: closure_11(obj(6291).TableRow, obj1) };
+  const obj4 = { label: items.join("\n") };
   items1[4] = closure_11(obj(6286).TableRowGroup, { title: "Server Descriptor", hasIcons: false, children: closure_11(obj(6291).TableRow, { label: str3 }) });
   items1[5] = closure_11(obj(1297).Spacer, { size: 16 });
   if (null != override) {
@@ -207,7 +190,7 @@ function GuildExperimentDebugView(arg0) {
     mapped = tmp19(tmp20(6291).TableRow, { label: "none" });
   } else {
     mapped = mapped.map((label) => {
-      const obj = { label, labelLineClamp: 1 };
+      obj = { label, labelLineClamp: 1 };
       return callback(obj(table[23]).TableRow, obj, label);
     });
   }
@@ -218,20 +201,20 @@ function GuildExperimentDebugView(arg0) {
 class ExperimentDetails {
   constructor(arg0) {
     ({ experiment, override, id, options, onCopyLink } = global);
-    c1 = undefined;
-    tmp = jsxs();
+    closure_1 = undefined;
+    tmp = closure_13();
     obj = require("regExp");
     uRLForExperiment = obj.getURLForExperiment(id);
-    c1 = uRLForExperiment;
+    closure_1 = uRLForExperiment;
     items = [, ];
     items[0] = uRLForExperiment;
     items[1] = onCopyLink;
     obj = { style: null, children: null };
     obj1 = { paddingHorizontal: null };
-    callback = Object.useCallback(() => {
-      onCopyLink(outer1_2[29]).copy(uRLForExperiment, () => {
-        let obj = outer1_1(outer1_2[30]);
-        obj = { key: "experiment-link-copied", content: "Copied experiment link", IconComponent: outer1_0(outer1_2[31]).CircleCheckIcon, iconColor: "status-positive" };
+    callback = closure_4.useCallback(() => {
+      onCopyLink(closure_1_2[29]).copy(uRLForExperiment, () => {
+        let obj = closure_1_1(closure_1_2[30]);
+        obj = { key: "experiment-link-copied", content: "Copied experiment link", IconComponent: closure_1_0(closure_1_2[31]).CircleCheckIcon, iconColor: "status-positive" };
         obj.open(obj);
         if (callback != null) {
           callback();
@@ -243,23 +226,22 @@ class ExperimentDetails {
     obj1[0] = require("Themes").space.PX_12;
     obj[0] = obj1;
     tmp6 = jsx;
-    obj2 = { title: "Experiment Assignments", hasIcons: false, children: null };
-    obj2[2] = options.map((arg0, arg1) => {
-      let isDestructive;
-      let label;
-      let onPress;
-      ({ label, isDestructive, onPress } = arg0);
-      let variant = "default";
-      if (isDestructive) {
-        variant = "danger";
-      }
-      return closure_11(onCopyLink(table[23]).TableRow, { variant, label, onPress }, arg1);
-    });
+    obj2 = {
+      title: "Experiment Assignments",
+      hasIcons: false,
+      children: options.map((arg0, arg1) => {
+            ({ label, isDestructive, onPress } = arg0);
+            let variant = "default";
+            if (isDestructive) {
+              variant = "danger";
+            }
+            return closure_11(onCopyLink(table[23]).TableRow, { variant, label, onPress }, arg1);
+          })
+    };
     items1 = [, , ];
     items1[0] = jsx(require("TableRowGroupTitle").TableRowGroup, obj2);
     obj3 = { style: tmp.copyExperimentLink, children: null };
-    obj4 = { title: "Share", hasIcons: false, children: null };
-    obj4[2] = jsx(require("TableRowInner").TableRow, { label: "Copy Link", subLabel: uRLForExperiment, onPress: callback });
+    obj4 = { title: "Share", hasIcons: false, children: jsx(require("TableRowInner").TableRow, { label: "Copy Link", subLabel: uRLForExperiment, onPress: callback }) };
     obj3[1] = jsx(require("TableRowGroupTitle").TableRowGroup, obj4);
     items1[1] = jsx(View, obj3);
     if ("guild" === experiment.kind) {
@@ -282,11 +264,6 @@ class ExperimentDetails {
   }
 }
 function ExperimentActionSheet(arg0) {
-  let experiment;
-  let id;
-  let onCopyLink;
-  let options;
-  let override;
   ({ id, experiment } = arg0);
   ({ override, options, onCopyLink } = arg0);
   let obj = { header: null, children: null };
@@ -299,20 +276,18 @@ let c4 = importAllResult;
 ({ ExperimentBuckets: c9, ExperimentTypes: c10 } = ExperimentBuckets);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let obj = { container: null, listContainer: null, searchBar: null, debugContainer: null, copyExperimentLink: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj[0] = obj;
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_12 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[1] = createCacheKey;
-obj[2] = { paddingVertical: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_12 };
-let obj2 = { paddingVertical: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_12 };
-obj[3] = { marginTop: require("Themes").space.PX_16 };
-let obj3 = { marginTop: require("Themes").space.PX_16 };
-obj[4] = { marginTop: require("Themes").space.PX_16 };
+obj[2] = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_12 };
+let obj2 = { paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_12 };
+obj[3] = { marginTop: ThemesDefault.space.PX_16 };
+let obj3 = { marginTop: ThemesDefault.space.PX_16 };
+obj[4] = { marginTop: ThemesDefault.space.PX_16 };
 let closure_13 = createCacheKey.createStyles(obj);
-let obj4 = { marginTop: require("Themes").space.PX_16 };
+let obj4 = { marginTop: ThemesDefault.space.PX_16 };
 let closure_14 = importAllResult.memo((id) => {
-  let end;
-  let start;
   id = id.id;
   let variantId = id;
   const override = id.override;
@@ -330,13 +305,13 @@ let closure_14 = importAllResult.memo((id) => {
     });
     const items = [];
     const item1 = map.forEach((label) => {
-      let closure_0 = label;
+      closure_0 = label;
       items.push({
         label: label.label,
         onPress() {
-          map(outer2_2[21]).overrideBucket(outer1_2.system, label, label.id);
-          const obj = map(outer2_2[21]);
-          items(outer2_2[22]).hideActionSheet("UserSettingsExperimentBucket");
+          map(closure_2_2[21]).overrideBucket(closure_1_2.system, label, label.id);
+          const obj = map(closure_2_2[21]);
+          items(closure_2_2[22]).hideActionSheet("UserSettingsExperimentBucket");
         }
       });
     });
@@ -344,13 +319,13 @@ let closure_14 = importAllResult.memo((id) => {
       label: "Clear Override",
       isDestructive: true,
       onPress() {
-        map(outer1_2[21]).overrideBucket(system.system, map, null);
-        const obj = map(outer1_2[21]);
-        items(outer1_2[22]).hideActionSheet("UserSettingsExperimentBucket");
+        map(closure_1_2[21]).overrideBucket(system.system, map, null);
+        const obj = map(closure_1_2[21]);
+        items(closure_1_2[22]).hideActionSheet("UserSettingsExperimentBucket");
       }
     };
     items.push(obj);
-    obj = { default: outer1_18 };
+    obj = { default: closure_1_18 };
     obj = {
       id: map,
       experiment,
@@ -386,15 +361,13 @@ let closure_14 = importAllResult.memo((id) => {
   }
 });
 const memoResult = importAllResult.memo(() => {
-  let tmp3;
-  let tmp4;
   const tmp = callback3();
   [tmp3, tmp4] = overridesInfo2(memo1.useState(""), 2);
   let obj = experiments(experiments2[10]);
   const legacyExperiments = obj.useLegacyExperiments();
   experiments = legacyExperiments.experiments;
   const overridesInfo = legacyExperiments.overridesInfo;
-  let obj1 = experiments(experiments2[11]);
+  obj1 = experiments(experiments2[11]);
   const apexExperiments = obj1.useApexExperiments();
   experiments2 = apexExperiments.experiments;
   overridesInfo2 = apexExperiments.overridesInfo;
@@ -421,7 +394,7 @@ const memoResult = importAllResult.memo(() => {
     const items = [bestMatches.length];
     return items;
   }, items2);
-  const callback = memo1.useCallback((arg0, arg1) => outer1_11(outer1_14, { id: bestMatches[arg1].id, experiment: bestMatches[arg1].experiment, override: memo1[bestMatches[arg1].id], start: 0 === arg1, end: arg1 === bestMatches.length - 1 }), items3);
+  const callback = memo1.useCallback((arg0, arg1) => closure_1_11(closure_1_14, { id: bestMatches[arg1].id, experiment: bestMatches[arg1].experiment, override: memo1[bestMatches[arg1].id], start: 0 === arg1, end: arg1 === bestMatches.length - 1 }), items3);
   const obj5 = experiments(experiments2[14]);
   if (obj6.isEmpty(memo)) {
     obj = { Illustration: null, title: "No Experiments", body: "No experiments are currently running." };
@@ -449,7 +422,7 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp19;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsExperimentsScreen.tsx");
 
 export default memoResult;
 export { ExperimentDetails };

@@ -1,26 +1,20 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivitySection.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import items from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
-import { useActionsForDisplayType } from "../hooks/useFamilyCenterActivities.tsx";
-import { useIsInAdultAgeGroup } from "../hooks/useIsInAdultAgeGroup.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 7622 */;
+import useActionsForDisplayType from "useActionsForDisplayType" /* 14251 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import items from "items" /* 5297 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function FamilyCenterActivitySectionHeader(displayType) {
   displayType = displayType.displayType;
-  const tmp = createCacheKey();
-  let flag = useIsInAdultAgeGroup();
+  const tmp = callback3();
+  let flag = useIsInAdultAgeGroupDefault();
   let obj = getEmptyActivityFormatter;
   const activityTypeTextConfigs = obj.getActivityTypeTextConfigs();
   const value = activityTypeTextConfigs.get(displayType);
@@ -59,7 +53,7 @@ function FamilyCenterActivitySectionHeader(displayType) {
       obj[3] = tmp10;
       tmp14Result = callback2(tmp3(4734).Text, obj);
     }
-    const obj1 = { children: null };
+    obj1 = { children: null };
     items[1] = tmp14Result;
     obj1[0] = items;
     return closure_10(closure_6, obj1);
@@ -67,29 +61,29 @@ function FamilyCenterActivitySectionHeader(displayType) {
   length = actionsForDisplayType.length;
 }
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: error, TeenActionDisplayType: metroImportAll } = items);
+({ FAMILY_CENTER_ITEMS_SHOWN_INCREMENTS: error, TeenActionDisplayType: closure_8 } = items);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { header: null, description: null };
-createCacheKey = { marginBottom: require("Themes").space.PX_4 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_8 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { container: { display: "flex" }, loadMoreContainer: { display: "flex", flexDirection: "row", flex: 1, alignItems: "center", justifyContent: "center", width: "100%" }, loadMore: null, loadMoreButton: null };
-let obj1 = { marginBottom: require("Themes").space.PX_8 };
-obj2[2] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: require("Themes").radii.sm, borderBottomLeftRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
+let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
+obj2[2] = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
 obj2[3] = { paddingVertical: 4 };
 let closure_13 = createCacheKey.createStyles(obj2);
-let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: require("Themes").radii.sm, borderBottomLeftRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivitySection.tsx");
+let obj3 = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderBottomRightRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, width: "60%" };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivitySection.tsx");
 
 export default function FamilyCenterActivitySection(displayType) {
   displayType = displayType.displayType;
   let loadMore;
-  let dependencyMap;
-  let loadMoreButton = callback3();
+  dependencyMap = undefined;
+  let loadMoreButton = callback4();
   let obj = displayType(14251);
   const actionsForDisplayType = obj.useActionsForDisplayType(displayType);
-  let obj1 = displayType(14251);
+  obj1 = displayType(14251);
   const actionTotalsForDisplayType = obj1.useActionTotalsForDisplayType(displayType);
   let obj2 = displayType(11104);
   const familyCenterActions = obj2.useFamilyCenterActions({});

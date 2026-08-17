@@ -1,14 +1,11 @@
 // discord_app/design/components/TextInput/native/TextInput.native.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { Input } from "../../Input/native/Input.native.tsx";
-import { TextField } from "../../TextField/native/TextField.native.tsx";
+import TextField from "TextField" /* 7338 */;
+import Input from "Input" /* 8072 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
-  let accessibilityLabel;
-  let label;
-  let status;
   ({ label, accessibilityLabel, status } = errorMessage);
   const id = importAllResult.useId();
   if (status == null) {
@@ -47,6 +44,6 @@ const forwardRefResult = importAllResult.forwardRef((errorMessage, ref) => {
   obj.children = jsx(TextField.TextField, { ref });
   return jsx(Input.Input, { ref });
 });
-const result = require("Input").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextInput/native/TextInput.native.tsx");
 
 export const TextInput = forwardRefResult;

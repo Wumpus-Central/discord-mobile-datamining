@@ -1,8 +1,10 @@
 // discord_app/modules/messages/logMessageSendFailure.tsx
-import { AnalyticEvents } from "ME";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
 
-const result = require("set").fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/messages/logMessageSendFailure.tsx");
 
 export const logMessageSendFailure = function logMessageSendFailure(fileItems) {
   if (null != fileItems.fileItems) {

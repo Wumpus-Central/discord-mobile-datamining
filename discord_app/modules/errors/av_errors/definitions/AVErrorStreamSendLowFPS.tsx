@@ -1,13 +1,14 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx
-import getParticipants from "getParticipants";
-import reset from "reset";
-import initialize from "initialize";
-import { ApplicationStreamStates } from "ME";
-import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
+import setDefault from "set" /* 687 */;
+import isStreamKey from "isStreamKey" /* 4531 */;
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "initialize" /* 4558 */;
+import { ApplicationStreamStates } from "ME" /* 676 */;
 
-const require = arg1;
-let closure_6 = 20 * require("set").Millis.SECOND;
-const result = require("initialize").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
+require = arg1;
+let closure_6 = 20 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");
 
 export const AVErrorStreamSendLowFPSDefinition = {
   getActiveErrors() {

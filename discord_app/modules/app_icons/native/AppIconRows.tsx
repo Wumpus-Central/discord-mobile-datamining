@@ -1,31 +1,26 @@
 // discord_app/modules/app_icons/native/AppIconRows.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { createElement } from "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isPremiumAtLeast } from "../../../utils/PremiumTypeUtils.tsx";
-import { fetchCurrentAppIcon } from "AppIconUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7945 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { createElement } from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function BackwardsCompatibleAppIconRows(arg0) {
-  let c1;
-  let c2;
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
     let merged = Object.assign(arg0, undefined);
     c1 = undefined;
-    let dependencyMap;
-    function onLongPress(noop, arg1) {
+    dependencyMap = undefined;
+    function onLongPress(closure_4, arg1) {
       let tmp = null;
-      if (noop === merged(_undefined2[6]).FreemiumAppIconIds.DEFAULT) {
+      if (closure_4 === merged(_undefined2[6]).FreemiumAppIconIds.DEFAULT) {
         tmp = _undefined2(true);
       }
       return tmp;
@@ -46,26 +41,23 @@ function BackwardsCompatibleAppIconRows(arg0) {
       obj.icon = id;
       obj.showEasterEgg = _undefined;
       obj.onLongPress = onLongPress;
-      return outer1_7(_undefined(_undefined2[9]), obj);
+      return closure_1_7(_undefined(_undefined2[9]), obj);
     });
     obj[1] = callback(merged(6286).TableRowGroup, obj);
     return callback(View, obj);
   }
 }
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
+const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconRows.tsx");
 
 export default function AppIconRows(onSelect) {
-  let currentAppIcon;
-  let limitedTimeAppIcons;
-  let officialAppIcons;
   onSelect = onSelect.onSelect;
   let obj = fetchCurrentAppIcon;
   const appIcons = obj.useAppIcons();
   ({ limitedTimeAppIcons, currentAppIcon, officialAppIcons } = appIcons);
-  let obj1 = initialize;
-  const items = [mergeGuildAvatar];
+  obj1 = initialize;
+  const items = [closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = isPremiumAtLeast;
   const isPremiumResult = obj2.isPremium(stateFromStores);

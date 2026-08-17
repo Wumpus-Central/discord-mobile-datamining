@@ -1,8 +1,9 @@
 // discord_app/modules/suspicious_downloads/SuspiciousDownloadUtils.tsx
-import set from "set";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import _modDef8342 from "module_8342" /* 8342 */;
+import set from "set" /* 2 */;
 
-let set = new Set(require("module_8342"));
+let set = new Set(_modDef8342);
 let obj = { "github.com": null, "bitbucket.org": null, "gitlab.com": null };
 const regExp = new RegExp("/releases\\S*/download|archive/refs/\\S*|/i/raw/i/\\S*|/user-attachments\\S*");
 obj[0] = regExp;
@@ -13,9 +14,7 @@ obj[2] = regExp2;
 const result = set.fileFinishedImporting("modules/suspicious_downloads/SuspiciousDownloadUtils.tsx");
 
 export const isSuspiciousDownload = function isSuspiciousDownload(localUri) {
-  let hostname;
-  let pathname;
-  const obj = isDiscordProxiedAssetUrl;
+  obj = isDiscordProxiedAssetUrlDefault;
   let toURLSafeResult = obj.toURLSafe(localUri);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};

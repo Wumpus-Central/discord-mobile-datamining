@@ -1,14 +1,11 @@
 // discord_app/modules/guild_automod/AutomodTriggerConfigs.tsx
-import noop from "noop";
-import AutomodEventType from "AutomodEventType";
-import set from "getSystemLocale";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isInMentionRaidExperiment } from "ExperimentUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isInMentionRaidExperiment from "isInMentionRaidExperiment" /* 10035 */;
+import closure_2 from "noop" /* 19 */;
+import AutomodEventType from "AutomodEventType" /* 11042 */;
+import set from "set" /* 2 */;
 
-let AutomodActionType;
-let AutomodEventType;
-let AutomodTriggerType;
-const require = arg1;
+require = arg1;
 ({ AutomodActionType, AutomodEventType, AutomodTriggerType } = AutomodEventType);
 let closure_4 = AutomodEventType.MENTION_SPAM_LIMIT_DEFAULT;
 let obj = { NEW: "new", RECOMMENDED: "recommended", BETA: "beta", ALPHA: "alpha" };
@@ -180,12 +177,10 @@ export const getAvailableActionTypes = function getAvailableActionTypes(arg0) {
   return Array.from(obj[arg0].availableActionTypes);
 };
 export const validateRuleByTriggerConfigOrThrow = function validateRuleByTriggerConfigOrThrow(actions, arr) {
-  let require;
-  let triggerType;
   ({ id: require, triggerType } = actions);
   actions = actions.actions;
-  let c2;
-  c2 = tmp;
+  closure_2 = undefined;
+  closure_2 = tmp;
   if (arr.filter((id) => {
     let tmp = closure_0 !== id.id;
     if (tmp) {
@@ -195,10 +190,10 @@ export const validateRuleByTriggerConfigOrThrow = function validateRuleByTrigger
   }).length > obj[triggerType].perGuildMaxCount) {
     const _Error3 = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("You have exceeded the maximum number of rules of type " + triggerType);
+    error = new Error("You have exceeded the maximum number of rules of type " + triggerType);
     throw error;
   } else if (actions.some((type) => {
-    const availableActionTypes = _undefined.availableActionTypes;
+    availableActionTypes = availableActionTypes.availableActionTypes;
     return !availableActionTypes.has(type.type);
   })) {
     const _Error2 = Error;
@@ -214,10 +209,10 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) 
   isUserProfileRuleEnabled = isUserProfileRuleEnabled(16049).useIsUserProfileRuleEnabled(arg0);
   const items = [isUserProfileRuleEnabled];
   return React.useMemo(() => {
-    const keys = Object.keys(outer1_7);
+    const keys = Object.keys(closure_1_7);
     return keys.reduce((arg0, arg1) => {
-      const found = outer1_7[arg1].filter((type) => {
-        let tmp2 = type.type !== outer1_3.SERVER_POLICY;
+      const found = closure_1_7[arg1].filter((type) => {
+        let tmp2 = type.type !== closure_1_3.SERVER_POLICY;
         if (tmp2) {
           let tmp3 = type.type === tmp.USER_PROFILE;
           if (tmp3) {
@@ -233,13 +228,13 @@ export const useAvailableTriggerTypes = function useAvailableTriggerTypes(arg0) 
       });
       arg0[arg1] = found.map((type) => type.type);
       return arg0;
-    }, { [outer1_6.MEMBERS]: [], [outer1_6.CONTENT]: [] });
+    }, { [closure_1_6.MEMBERS]: [], [closure_1_6.CONTENT]: [] });
   }, items);
 };
 export const getDefaultTriggerMetadataForTriggerType = function getDefaultTriggerMetadataForTriggerType(arg0, arg1) {
   isInMentionRaidExperiment;
   if (AutomodTriggerType.DEFAULT_KEYWORD_LIST === arg0) {
-    let obj = { allowList: null, presets: null };
+    obj = { allowList: null, presets: null };
     obj[0] = [];
     obj[1] = [];
     return obj;

@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { VoicePanelLockedIcon } from "VoicePanelLockedIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import VoicePanelLockedIconDefault from "VoicePanelLockedIcon" /* 16401 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNoJoinPermissionsAlert.tsx");
 
 export default function VoicePanelNoJoinPermissionsAlert() {
   let obj = getAlertModalItemKey;
-  obj = { header: null, title: null, content: null, actions: null };
-  obj[0] = jsx(VoicePanelLockedIcon, {});
+  obj = { header: jsx(VoicePanelLockedIconDefault, {}), title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["7/2/3M"]);
   const intl2 = getSystemLocale.intl;

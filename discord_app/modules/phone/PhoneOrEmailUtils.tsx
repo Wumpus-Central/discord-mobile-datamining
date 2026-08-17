@@ -1,7 +1,9 @@
 // discord_app/modules/phone/PhoneOrEmailUtils.tsx
+import set from "set" /* 2 */;
+
 let obj = { PHONE: "phone", EMAIL: "email" };
 const re1 = /^[-() \d]+$/;
-const result = require("set").fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
+const result = set.fileFinishedImporting("modules/phone/PhoneOrEmailUtils.tsx");
 
 export const PhoneOrEmailSelectorForceMode = obj;
 export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelector(forceMode, value) {
@@ -20,6 +22,6 @@ export const shouldShowCountryCodeSelector = function shouldShowCountryCodeSelec
   return tmp2;
 };
 export const getPhoneOrEmail = function getPhoneOrEmail(arg0) {
-  const obj = /^\+\d/;
+  obj = /^\+\d/;
   return obj.test(arg0) ? obj.PHONE : obj.EMAIL;
 };

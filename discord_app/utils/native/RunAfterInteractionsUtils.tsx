@@ -1,5 +1,6 @@
 // discord_app/utils/native/RunAfterInteractionsUtils.tsx
-import { InteractionManager } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
 
 function runAfterInteractions(arg0, MINUTE) {
@@ -8,7 +9,7 @@ function runAfterInteractions(arg0, MINUTE) {
   if (MINUTE === undefined) {
     num = 2000;
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   let delayedCall;
   dependencyMap = delayedCall.runAfterInteractions(() => {
     delayedCall.cancel();
@@ -26,7 +27,8 @@ function runAfterInteractions(arg0, MINUTE) {
     }
   };
 }
-const result = require("set").fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
+const InteractionManager = get_ActivityIndicator.InteractionManager;
+const result = set.fileFinishedImporting("utils/native/RunAfterInteractionsUtils.tsx");
 
 export default { runAfterInteractions };
 export { runAfterInteractions };

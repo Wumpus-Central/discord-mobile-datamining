@@ -1,14 +1,14 @@
 // discord_app/modules/nuf/native/RedesignNewUserManager.tsx
-import ContactSyncModes from "ContactSyncModes";
-import initialize from "initialize";
-import "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 5038 */;
+import ContactSyncModes from "ContactSyncModes" /* 11850 */;
+import closure_5 from "initialize" /* 4494 */;
 
-let c3;
-let c4;
 ({ initialize: c3, ContactSyncModes: c4 } = ContactSyncModes);
+initializeDefault;
 let prototype = function RedesignNewUserManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
   applyArgumentsResult._lastShownStepIndex = -1;
   applyArgumentsResult.actions = {
@@ -26,8 +26,6 @@ let prototype = function RedesignNewUserManager() {
     const tmp2 = table;
     const nextOnboardingStep = applyArgumentsResult(table[4]).getNextOnboardingStep(false, -1, -1);
     nextOnboardingStep.then((arg0) => {
-      let lastShownStepIndex;
-      let onboardingStepIndex;
       ({ lastShownStepIndex, onboardingStepIndex } = arg0);
       let obj = callback(table[4]);
       const keyForOnboardingStep = obj.getKeyForOnboardingStep(onboardingStepIndex);
@@ -53,11 +51,11 @@ let prototype = function RedesignNewUserManager() {
     applyArgumentsResult.startOnboarding();
   };
   applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-    if (null != outer1_5.getType()) {
+    if (null != closure_1_5.getType()) {
       if (!obj.isModalOpen()) {
         applyArgumentsResult.startOnboarding();
       }
-      obj = applyArgumentsResult(outer1_2[10]);
+      obj = applyArgumentsResult(closure_1_2[10]);
     }
   };
   return applyArgumentsResult;
@@ -65,6 +63,6 @@ let prototype = function RedesignNewUserManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = require("initialize").fileFinishedImporting("modules/nuf/native/RedesignNewUserManager.tsx");
+const result = set.fileFinishedImporting("modules/nuf/native/RedesignNewUserManager.tsx");
 
 export default prototype;

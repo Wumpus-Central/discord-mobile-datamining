@@ -1,12 +1,13 @@
 // discord_app/modules/games/GameRecord.tsx
-import "toJS";
-import createExecutable from "createExecutable";
-import { createExecutable } from "createExecutable";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { getGameMediaRefURL } from "getGameMediaRefURL.tsx";
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import toJSDefault from "toJS" /* 1931 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 4507 */;
+import closure_3 from "createExecutable" /* 4479 */;
+import { createExecutable } from "createExecutable" /* 4479 */;
 
-const require = arg1;
-const result = require("PermissionOverwriteType").fileFinishedImporting("modules/games/GameRecord.tsx");
+require = arg1;
+toJSDefault;
+const result = require("set").fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {
   constructor(arg0) {
     tmp5 = new GameRecord(tmp4, tmp3, tmp2, tmp, new.target, new.target);
@@ -41,7 +42,7 @@ class GameRecord extends tmp2 {
       flag4 = true;
     }
     tmp5.hook = flag4;
-    tmp5.supportsOutOfProcessOverlay = __esModule.supportsOutOfProcessOverlay(global.overlay_methods);
+    tmp5.supportsOutOfProcessOverlay = closure_3.supportsOutOfProcessOverlay(global.overlay_methods);
     third_party_skus = global.third_party_skus;
     if (third_party_skus == null) {
       third_party_skus = [];
@@ -130,7 +131,7 @@ prototype["getIconURL"] = function getIconURL(size, format) {
   if (media != null) {
     icon = media.icon;
   }
-  return getGameMediaRefURL(this.id, icon, { size, format });
+  return getGameMediaRefURLDefault(this.id, icon, { size, format });
 };
 prototype["getBannerURL"] = function getBannerURL(size) {
   const media = this.media;
@@ -138,7 +139,7 @@ prototype["getBannerURL"] = function getBannerURL(size) {
   if (media != null) {
     banner = media.banner;
   }
-  return getGameMediaRefURL(this.id, banner, { keepAspectRatio: true, size });
+  return getGameMediaRefURLDefault(this.id, banner, { keepAspectRatio: true, size });
 };
 prototype["getCoverURL"] = function getCoverURL(size) {
   const media = this.media;
@@ -150,7 +151,7 @@ prototype["getCoverURL"] = function getCoverURL(size) {
   if (getAvatarURL.SUPPORTS_WEBP) {
     str = "webp";
   }
-  return getGameMediaRefURL(this.id, cover, { keepAspectRatio: true, format: str, size });
+  return getGameMediaRefURLDefault(this.id, cover, { keepAspectRatio: true, format: str, size });
 };
 prototype["getArtworkURLs"] = function getArtworkURLs() {
   const self = this;
@@ -162,11 +163,11 @@ prototype["getArtworkURLs"] = function getArtworkURLs() {
   if (artwork == null) {
     artwork = [];
   }
-  const mapped = artwork.map((arg0) => outer1_1(outer1_2[3])(self.id, arg0, { keepAspectRatio: true }));
+  const mapped = artwork.map((arg0) => closure_1_1(closure_1_2[3])(self.id, arg0, { keepAspectRatio: true }));
   return mapped.filter(self(1370).isNotNullish);
 };
 prototype["getCompanyByRole"] = function getCompanyByRole(DEVELOPER) {
-  let closure_0 = DEVELOPER;
+  closure_0 = DEVELOPER;
   const companies = this.companies;
   let found;
   if (companies != null) {

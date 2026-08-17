@@ -1,27 +1,23 @@
 // discord_app/modules/message_previews/native/MessagePreviewMarkup.tsx
-import { t } from "../../../../_runtime/04092_t.js";
-import { ChannelListLayoutTypes } from "../../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import { combineMarkupRules } from "../../markup/combineMarkupRules.tsx";
-import { parseLink } from "../../markup/MarkupRules.tsx";
-import { defaultReactFn } from "../../markup/native/MarkupMessagePreviewReactRules.tsx";
-const require = arg1;
+import privDefault from "priv" /* 1405 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
+import tDefault from "t" /* 4092 */;
+import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6808 */;
+import parseLinkDefault from "parseLink" /* 6809 */;
+import defaultReactFnDefault from "defaultReactFn" /* 10054 */;
+
+require = arg1;
 function getOrParseMessagePreviewMarkupAST(arg0) {
-  let color;
-  let content;
-  let fontScale;
-  let initialParserState;
-  let layout;
-  let maxFontSizeMultiplier;
-  let postProcessor;
   ({ content, layout, color, initialParserState, postProcessor, fontScale, maxFontSizeMultiplier } = arg0);
-  const value = tmp2.get(content);
+  const value = closure_3.get(content);
   if (null != value) {
     return value;
   } else {
-    const items = [parseLink.RULES, defaultReactFn(layout, color, fontScale, maxFontSizeMultiplier)];
-    const tmp11 = combineMarkupRules;
-    const tmp11Result = combineMarkupRules(items);
-    const obj3 = require("../../markup/MarkupUtils.tsx") /* get defaultRules */;
+    const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout, color, fontScale, maxFontSizeMultiplier)];
+    const tmp11 = combineMarkupRulesDefault;
+    const tmp11Result = combineMarkupRulesDefault(items);
+    const obj3 = get_defaultRulesDefault;
     let startsWithResult = content.startsWith("```");
     let tmp3;
     if (!startsWithResult) {
@@ -32,48 +28,32 @@ function getOrParseMessagePreviewMarkupAST(arg0) {
     if (startsWithResult) {
       tmp3 = content;
     }
-    const astParserForResultResult = require("../../markup/MarkupUtils.tsx") /* get defaultRules */.astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
+    const astParserForResultResult = get_defaultRulesDefault.astParserFor(tmp11Result)(tmp3, true, initialParserState, postProcessor);
     const result = obj.set(content, astParserForResultResult);
     return astParserForResultResult;
   }
-  obj = tmp2;
+  obj = closure_3;
 }
-const tmp2 = new require("priv")({ max: 2000 });
-let c3 = tmp2;
-let result = require("defaultReactFn").fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
+const tmp2 = new privDefault({ max: 2000 });
+let closure_3 = tmp2;
+let result = require("set").fileFinishedImporting("modules/message_previews/native/MessagePreviewMarkup.tsx");
 
 export const renderASTToReact = function renderASTToReact(layout) {
-  let color;
-  let fontScale;
-  let initialParserState;
-  let maxFontSizeMultiplier;
-  let tree;
   ({ tree, initialParserState, color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [parseLink.RULES, defaultReactFn(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = combineMarkupRules;
-  const tmpResult = combineMarkupRules(items);
-  const obj = t;
-  return obj.reactFor(t.ruleOutput(tmpResult, "react"))(tree, initialParserState);
+  const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = combineMarkupRulesDefault;
+  const tmpResult = combineMarkupRulesDefault(items);
+  const obj = tDefault;
+  return obj.reactFor(tDefault.ruleOutput(tmpResult, "react"))(tree, initialParserState);
 };
 export const getMessagePreviewASTParser = function getMessagePreviewASTParser(layout) {
-  let color;
-  let fontScale;
-  let maxFontSizeMultiplier;
   ({ color, fontScale, maxFontSizeMultiplier } = layout);
-  const items = [parseLink.RULES, defaultReactFn(layout.layout, color, fontScale, maxFontSizeMultiplier)];
-  const tmp = combineMarkupRules;
-  const tmpResult = combineMarkupRules(items);
-  return require("../../markup/MarkupUtils.tsx") /* get defaultRules */.astParserFor(tmpResult);
+  const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout.layout, color, fontScale, maxFontSizeMultiplier)];
+  const tmp = combineMarkupRulesDefault;
+  const tmpResult = combineMarkupRulesDefault(items);
+  return get_defaultRulesDefault.astParserFor(tmpResult);
 };
 export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fontScale) {
-  let channelId;
-  let color;
-  let content;
-  let disableAnimatedEmoji;
-  let guildId;
-  let layout;
-  let muted;
-  let postProcessor;
   ({ content, muted, layout } = fontScale);
   ({ guildId, channelId } = fontScale);
   if (layout === undefined) {
@@ -110,11 +90,11 @@ export const renderMessagePreviewMarkup = function renderMessagePreviewMarkup(fo
     obj[5] = maxFontSizeMultiplier;
     obj[6] = postProcessor;
     const tmp4 = getOrParseMessagePreviewMarkupAST(obj);
-    const items = [parseLink.RULES, defaultReactFn(layout, color, num, maxFontSizeMultiplier)];
-    const tmp7 = combineMarkupRules;
-    const tmp7Result = combineMarkupRules(items);
-    const obj2 = t;
-    return obj2.reactFor(t.ruleOutput(tmp7Result, "react"))(tmp4, obj);
+    const items = [parseLinkDefault.RULES, defaultReactFnDefault(layout, color, num, maxFontSizeMultiplier)];
+    const tmp7 = combineMarkupRulesDefault;
+    const tmp7Result = combineMarkupRulesDefault(items);
+    const obj2 = tDefault;
+    return obj2.reactFor(tDefault.ruleOutput(tmp7Result, "react"))(tmp4, obj);
   }
 };
 export const messagePreviewASTCache = tmp2;

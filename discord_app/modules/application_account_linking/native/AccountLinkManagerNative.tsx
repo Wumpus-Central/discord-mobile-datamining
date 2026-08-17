@@ -1,6 +1,8 @@
 // discord_app/modules/application_account_linking/native/AccountLinkManagerNative.tsx
-import { AccountLinkManager } from "_claimIncentivizedAccountLinkingReward";
+import set from "set" /* 2 */;
+import _claimIncentivizedAccountLinkingReward from "_claimIncentivizedAccountLinkingReward" /* 16158 */;
 
+const AccountLinkManager = _claimIncentivizedAccountLinkingReward.AccountLinkManager;
 class AccountLinkManagerNative extends AccountLinkManager {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -32,7 +34,7 @@ class AccountLinkManagerNative extends AccountLinkManager {
   }
   evaluatePending() {
     if (!this.isBrowserOpen) {
-      tmp2 = __esModule;
+      tmp2 = closure_2;
       evaluatePendingResult = super.evaluatePending();
     }
     return;
@@ -40,6 +42,6 @@ class AccountLinkManagerNative extends AccountLinkManager {
 }
 let closure_2 = AccountLinkManagerNative.prototype;
 const accountLinkManagerNative = new AccountLinkManagerNative();
-const result = require("set").fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
+const result = set.fileFinishedImporting("modules/application_account_linking/native/AccountLinkManagerNative.tsx");
 
 export default accountLinkManagerNative;

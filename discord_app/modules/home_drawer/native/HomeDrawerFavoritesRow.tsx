@@ -1,12 +1,13 @@
 // discord_app/modules/home_drawer/native/HomeDrawerFavoritesRow.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15569 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("HomeDrawerSharedItem").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFavoritesRow.tsx");
 
 export const HomeDrawerFavoritesRowExpandedChildren = function HomeDrawerFavoritesRowExpandedChildren() {
   let obj = { title: null, subtitle: null };

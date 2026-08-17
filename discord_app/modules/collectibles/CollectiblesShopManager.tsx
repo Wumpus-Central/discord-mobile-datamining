@@ -1,11 +1,12 @@
 // discord_app/modules/collectibles/CollectiblesShopManager.tsx
-import getFetchState from "getFetchState";
-import closure_3 from "getFetchState";
-import set from "_maybeFetchProductsWithSkus";
-import { _maybeFetchCollectionsWithProducts } from "../storefront/StorefrontCollectionActionCreators.tsx";
-import { _maybeFetchProductsWithSkus } from "../storefront/StorefrontProductActionCreators.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _maybeFetchProductsWithSkus from "_maybeFetchProductsWithSkus" /* 8962 */;
+import _maybeFetchCollectionsWithProducts from "_maybeFetchCollectionsWithProducts" /* 12001 */;
+import closure_2 from "getFetchState" /* 11999 */;
+import closure_3 from "getFetchState" /* 8963 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function chunk(arr) {
   let length;
   let sum;
@@ -22,7 +23,7 @@ function chunk(arr) {
   return items;
 }
 function flushProducts() {
-  let c6 = null;
+  c6 = null;
   const items = [...set];
   set.clear();
   for (const item10016 of tmp2) {
@@ -36,7 +37,7 @@ function flushProducts() {
   }
 }
 function flushCollections() {
-  let c7 = null;
+  c7 = null;
   const items = [...set1];
   set1.clear();
   for (const item10016 of tmp2) {
@@ -123,7 +124,7 @@ let obj = {
     }
   }
 };
-const subscription = require("dispatcher").subscribe("LOGOUT", obj.reset);
+const subscription = dispatcherDefault.subscribe("LOGOUT", obj.reset);
 let result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopManager.tsx");
 
 export const CollectiblesShopManager = obj;

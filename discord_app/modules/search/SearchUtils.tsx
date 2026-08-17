@@ -1,40 +1,35 @@
 // discord_app/modules/search/SearchUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import initialize from "initialize";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { SearchTabs } from "MessageEmbedTypes";
-import ME from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03975_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getMatch } from "../../lib/QueryTokenizer.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
-import { SearchActionCreators } from "SearchActionCreators.tsx";
-import { getShortcuts } from "tokens/SearchTokens.tsx";
+import applyDefault from "apply" /* 12 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 1979 */;
+import tDefault from "t" /* 3975 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import getShortcuts from "getShortcuts" /* 11512 */;
+import getShortcutsDefault from "getShortcuts" /* 11512 */;
+import getMatchDefault from "getMatch" /* 11517 */;
+import _modDef11518 from "module_11518" /* 11518 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "comparator" /* 1980 */;
+import closure_6 from "initialize" /* 5253 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
+import ME from "ME" /* 676 */;
 
-let ME;
-let SearchTokenTypes;
-let c10;
-let closure_12;
-let closure_14;
-let closure_15;
-let map1;
-const require = arg1;
+require = arg1;
+handleConnectionOpenDefault;
 ({ SearchTypes: c10, SearchTokenTypes } = ME);
 ({ SearchPopoutModes: closure_12, IS_SEARCH_ANSWER_TOKEN: map1, IS_SEARCH_FILTER_TOKEN: closure_14, SearchModes: closure_15, ME } = ME);
 let c16 = 2592000;
 let c17 = 31536000;
 let obj = { [SearchTokenTypes.FILTER_BEFORE]: true, [SearchTokenTypes.FILTER_AFTER]: true, [SearchTokenTypes.FILTER_ON]: true };
-let closure_19 = new require("getMatch")();
-let tmp4 = new require("getMatch")();
-let closure_20 = new require("getMatch")();
-let tmp5 = new require("getMatch")();
-let result = require("comparator").fileFinishedImporting("modules/search/SearchUtils.tsx");
+let closure_19 = new getMatchDefault();
+let tmp4 = new getMatchDefault();
+let closure_20 = new getMatchDefault();
+let tmp5 = new getMatchDefault();
+let result = require("set").fileFinishedImporting("modules/search/SearchUtils.tsx");
 
 export const getSearchContextId = function getSearchContextId(searchContext) {
   const type = searchContext.type;
@@ -88,8 +83,8 @@ export const getSearchTabFetchId = function getSearchTabFetchId(closure_0, closu
   return "" + channelId + "-" + closure_1 + "-" + searchResultsQuery;
 };
 export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestamp(arg0) {
-  let obj = t();
-  const diffResult = obj.diff(t(arg0), "s");
+  obj = tDefault();
+  const diffResult = obj.diff(tDefault(arg0), "s");
   if (diffResult > c17) {
     const _Math5 = Math;
     const rounded = Math.round(diffResult / tmp3);
@@ -108,7 +103,7 @@ export const getChannelActiveAgoTimestamp = function getChannelActiveAgoTimestam
     const _Math3 = Math;
     const rounded2 = Math.round(diffResult / 86400);
     const intl5 = getSystemLocale.intl;
-    const obj1 = { count: null };
+    obj1 = { count: null };
     obj1[0] = rounded2;
     return intl5.formatToPlainString(getSystemLocale.t.HNgi95, obj1);
   } else if (diffResult > 86400) {
@@ -283,7 +278,7 @@ export const getSearchOptionAnswer = function getSearchOptionAnswer(arg0) {
 };
 export const ShowDatePicker = obj;
 export const setIncludeNSFW = function setIncludeNSFW(arg0, guildIdFromSearchContext) {
-  if (initialize.didAgree(guildIdFromSearchContext)) {
+  if (closure_6.didAgree(guildIdFromSearchContext)) {
     const currentUser = authStore.getCurrentUser();
     if (null != currentUser) {
       arg0.include_nsfw = null == currentUser.nsfwAllowed || currentUser.nsfwAllowed;
@@ -292,13 +287,11 @@ export const setIncludeNSFW = function setIncludeNSFW(arg0, guildIdFromSearchCon
   }
 };
 export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokenizeQueryResult) {
-  let tmp10;
-  let tmp9;
-  const obj = {};
+  obj = {};
   const item = tokenizeQueryResult.forEach((type) => {
     type = type.type;
-    if (!outer1_14.test(type)) {
-      if (outer1_11.ANSWER_BEFORE !== type) {
+    if (!closure_1_14.test(type)) {
+      if (closure_1_11.ANSWER_BEFORE !== type) {
         if (tmp.ANSWER_ON !== type) {
           if (tmp.ANSWER_AFTER !== type) {
             const tmp27 = (function getQueryKey(type) {
@@ -354,13 +347,13 @@ export const getSearchQueryFromTokens = function getSearchQueryFromTokens(tokeni
       const data1 = type.getData("start");
       const data2 = type.getData("end");
       if (data1) {
-        obj.min_id = outer1_1(outer1_2[12]).fromTimestamp(data1);
-        const obj2 = outer1_1(outer1_2[12]);
+        obj.min_id = closure_1_1(closure_1_2[12]).fromTimestamp(data1);
+        const obj2 = closure_1_1(closure_1_2[12]);
       }
       if (data2) {
-        const fromTimestampResult = outer1_1(outer1_2[12]).fromTimestamp(data2);
+        const fromTimestampResult = closure_1_1(closure_1_2[12]).fromTimestamp(data2);
         obj.max_id = fromTimestampResult;
-        const obj3 = outer1_1(outer1_2[12]);
+        const obj3 = closure_1_1(closure_1_2[12]);
       }
     }
   });
@@ -427,9 +420,9 @@ export const getNonTokenQuery = function getNonTokenQuery(arr) {
   return mapped.join(" ").trim();
 };
 export const getSelectionScope = function getSelectionScope(tokenizeQueryResult, arg1, arg2) {
-  let closure_0 = tokenizeQueryResult;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = tokenizeQueryResult;
+  closure_1 = arg1;
+  closure_2 = arg2;
   const found = tokenizeQueryResult.find((start) => {
     if (closure_1 >= start.start) {
       if (tmp <= start.end) {
@@ -437,7 +430,7 @@ export const getSelectionScope = function getSelectionScope(tokenizeQueryResult,
           if (tmp2 <= start.end) {
             let flag = true;
             if (null != tokenizeQueryResult[arg1 + 1]) {
-              let ensureGuildLoaded = tmp4[arg1 + 1];
+              closure_4 = tmp4[arg1 + 1];
               flag = true;
             }
           }
@@ -445,15 +438,15 @@ export const getSelectionScope = function getSelectionScope(tokenizeQueryResult,
         }
       }
     }
-    let _slicedToArray = start;
+    closure_3 = start;
     flag = false;
   });
   let tmp2 = null;
   if (null != found) {
-    const obj = { previousToken: null, currentToken: null, nextToken: null, focusOffset: null, anchorOffset: null };
-    obj[0] = _slicedToArray;
+    obj = { previousToken: null, currentToken: null, nextToken: null, focusOffset: null, anchorOffset: null };
+    obj[0] = closure_3;
     obj[1] = found;
-    obj[2] = ensureGuildLoaded;
+    obj[2] = closure_4;
     obj[3] = arg1;
     obj[4] = arg2;
     tmp2 = obj;
@@ -461,10 +454,7 @@ export const getSelectionScope = function getSelectionScope(tokenizeQueryResult,
   return tmp2;
 };
 export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tokens) {
-  let currentToken;
-  let nextToken;
-  let previousToken;
-  let obj = cursorScope;
+  obj = cursorScope;
   if (cursorScope == null) {
     obj = {};
   }
@@ -480,10 +470,10 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
   } else {
     if (obj9.isSearchFilterTokenType(currentToken.type)) {
       if (null != nextToken) {
-        if (nextToken.type !== getMatch.NON_TOKEN_TYPE) {
+        if (nextToken.type !== getMatchDefault.NON_TOKEN_TYPE) {
           if (null != nextToken) {
             if (!regex.test(nextToken.type)) {
-              const obj1 = { type: null, filter: null, token: null };
+              obj1 = { type: null, filter: null, token: null };
               obj1[0] = constants2.FILTER;
               obj1[1] = currentToken.type;
               return obj1;
@@ -497,7 +487,7 @@ export const getAutocompleteMode = function getAutocompleteMode(cursorScope, tok
       obj2[2] = nextToken;
       return obj2;
     }
-    if (currentToken.type === getMatch.NON_TOKEN_TYPE) {
+    if (currentToken.type === getMatchDefault.NON_TOKEN_TYPE) {
       if (null != previousToken) {
         if (tmp10Result.isSearchFilterTokenType(previousToken.type)) {
           const obj3 = { type: null, filter: null, token: null };
@@ -530,10 +520,10 @@ export const quoteChannelName = function quoteChannelName(channelName) {
   return combined;
 };
 export const getFlattenedAutocompleteResults = function getFlattenedAutocompleteResults(arg0, arg1) {
-  let closure_0 = arg1;
-  const importDefault = [];
-  const item = apply(arg0).forEach((results) => {
-    let closure_0 = results;
+  closure_0 = arg1;
+  importDefault = [];
+  const item = applyDefault(arg0).forEach((results) => {
+    closure_0 = results;
     if (null != results) {
       if (0 !== results.results.length) {
         let group = results.group;
@@ -549,9 +539,9 @@ export const getFlattenedAutocompleteResults = function getFlattenedAutocomplete
             tmp = combined;
           }
           let combined1 = tmp;
-          if (closure_0.type === outer2_12.FILTER_ALL) {
+          if (closure_0.type === closure_2_12.FILTER_ALL) {
             const group = result.group;
-            const tmp8 = callback(outer2_2[11])[group];
+            const tmp8 = callback(closure_2_2[11])[group];
             let key;
             if (tmp8 != null) {
               key = tmp8.key;
@@ -586,15 +576,15 @@ export const getQueryFromTokens = function getQueryFromTokens(tokens) {
   return str;
 };
 export const queryHasFilter = function queryHasFilter(errorcode) {
-  let closure_0 = arg1;
-  return tmp4.tokenize(errorcode).some((type) => type.type === closure_0);
+  closure_0 = arg1;
+  return navigation.tokenize(errorcode).some((type) => type.type === closure_0);
 };
 export const tokenizeQuery = function tokenizeQuery(searchQueryString) {
-  return tmp4.tokenize(searchQueryString);
+  return navigation.tokenize(searchQueryString);
 };
 export const clearTokenCache = function clearTokenCache() {
-  tmp4.clearCache();
-  tmp5.clearCache();
+  navigation.clearCache();
+  navigation2.clearCache();
 };
 export const showDatePicker = function showDatePicker(arg0) {
   let tmp = null;
@@ -617,35 +607,35 @@ export const filterHasAnswer = function filterHasAnswer(type, type2) {
 };
 export const refreshSearchTokens = function refreshSearchTokens() {
   const result = getShortcuts.rebuildSearchTokenConfigs();
-  tmp4.reset();
-  const obj = getShortcuts;
-  const tmp3 = apply;
-  apply(getShortcuts).forOwn((arg0, type) => {
+  navigation.reset();
+  obj = getShortcuts;
+  const tmp3 = applyDefault;
+  applyDefault(getShortcutsDefault).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return closure_19.addRule({ type });
   });
-  tmp5.reset();
-  const tmp3Result = apply(getShortcuts);
+  navigation2.reset();
+  const tmp3Result = applyDefault(getShortcutsDefault);
   const crossDMSearchTokensConfig = getShortcuts.buildCrossDMSearchTokensConfig();
   const obj3 = getShortcuts;
-  apply(crossDMSearchTokensConfig).forOwn((arg0, type) => {
+  applyDefault(crossDMSearchTokensConfig).forOwn((arg0, type) => {
     const merged = Object.assign(arg0);
     return closure_20.addRule({ type });
   });
-  const obj4 = apply(crossDMSearchTokensConfig);
-  const result1 = SearchActionCreators.markSearchTokensRefreshed();
+  const obj4 = applyDefault(crossDMSearchTokensConfig);
+  const result1 = _modDef11518.markSearchTokensRefreshed();
 };
 export const getChannelDisplayName = function getChannelDisplayName(isDM) {
-  const channelName = computeChannelName.computeChannelName(isDM, mergeGuildAvatar, markAllUserIdListsStale);
+  const channelName = computeChannelName.computeChannelName(isDM, closure_8, closure_7);
   if (isDM.isDM()) {
-    const user = mergeGuildAvatar.getUser(isDM.getRecipientId());
-    const userTag = nameFromUser.getUserTag(user);
+    const user = closure_8.getUser(isDM.getRecipientId());
+    const userTag = nameFromUserDefault.getUserTag(user);
     let flag = false;
     let str = userTag;
     if (null == userTag) {
       return null;
     }
-    const obj3 = nameFromUser;
+    const obj3 = nameFromUserDefault;
   } else {
     flag = false;
     str = channelName;
@@ -678,10 +668,10 @@ export const getChannelDisplayName = function getChannelDisplayName(isDM) {
 };
 export const getChannelPlaceholderName = function getChannelPlaceholderName(isGroupDM) {
   if (isGroupDM.isGroupDM()) {
-    return computeChannelName.computeChannelName(isGroupDM, authStore, markAllUserIdListsStale);
+    return computeChannelName.computeChannelName(isGroupDM, authStore, closure_7);
   } else if (isGroupDM.isDM()) {
     const user = authStore.getUser(isGroupDM.getRecipientId());
-    return nameFromUser.getUserTag(user);
+    return nameFromUserDefault.getUserTag(user);
   } else {
     const tmp2 = store.getTextChannelNameDisambiguations(isGroupDM.getGuildId())[isGroupDM.id];
     let name;
@@ -689,20 +679,20 @@ export const getChannelPlaceholderName = function getChannelPlaceholderName(isGr
       name = tmp2.name;
     }
     if (name == null) {
-      name = computeChannelName.computeChannelName(isGroupDM, authStore, markAllUserIdListsStale);
-      const obj = computeChannelName;
+      name = computeChannelName.computeChannelName(isGroupDM, authStore, closure_7);
+      obj = computeChannelName;
     }
     return name;
   }
 };
 export const removeInvalidPrivateChannelSearchTokens = function removeInvalidPrivateChannelSearchTokens(errorcode) {
   const items = [];
-  const item = tmp5.tokenize(errorcode).forEach((type) => {
+  const item = navigation2.tokenize(errorcode).forEach((type) => {
     if (!tmp2) {
       items.push(type);
     }
   });
-  const importDefault = "";
+  importDefault = "";
   const item1 = items.forEach((getFullMatch) => {
     closure_1 = closure_1 + getFullMatch.getFullMatch();
   });

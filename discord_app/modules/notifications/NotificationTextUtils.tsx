@@ -1,51 +1,42 @@
 // discord_app/modules/notifications/NotificationTextUtils.tsx
-import participantFromServer from "participantFromServer";
-import initialize from "initialize";
-import processChannel from "processChannel";
-import storeThread from "storeThread";
-import withEqualityFn from "withEqualityFn";
-import createChannelRecord from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import createRTCConnection from "createRTCConnection";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_15 from "handleConnectionOpen";
-import filterPlayingActivities from "filterPlayingActivities";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import handleRequiredAction from "handleRequiredAction";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_20 from "initialize";
-import ME from "ME";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { ThreadMemberFlags } from "AbortCodes";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../age_gate/AgeGateUtils.tsx";
-import { FSI } from "../bidi/IsolateString.tsx";
-import { isChannelCurrentlyVisible } from "../channel/ChannelVisibilityUtils.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
-import { isForwardMessage } from "../forwarding/isForwardMessage.tsx";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import { isMentioned } from "../messages/isMessageMentioned.tsx";
-import { isSystemMessage } from "../messages/isSystemMessage.tsx";
-import { computeThreadNotificationSetting } from "../threads/ThreadNotificationSettings.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { useFocusModeEnabled } from "FocusModeUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import isMentioned from "isMentioned" /* 4819 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import isForwardMessage from "isForwardMessage" /* 5026 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
+import FSI from "FSI" /* 7438 */;
+import isChannelCurrentlyVisible from "isChannelCurrentlyVisible" /* 10021 */;
+import computeThreadNotificationSetting from "computeThreadNotificationSetting" /* 10022 */;
+import useFocusModeEnabled from "useFocusModeEnabled" /* 10024 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "initialize" /* 4022 */;
+import closure_5 from "processChannel" /* 4799 */;
+import closure_6 from "storeThread" /* 4023 */;
+import closure_7 from "withEqualityFn" /* 8664 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "createGuildRecordFromRust" /* 1910 */;
+import closure_12 from "createRTCConnection" /* 4539 */;
+import closure_13 from "markAllUserIdListsStale" /* 4030 */;
+import closure_14 from "handleConnectionOpen" /* 1979 */;
+import closure_15 from "handleConnectionOpen" /* 4197 */;
+import closure_16 from "filterPlayingActivities" /* 7250 */;
+import closure_17 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_18 from "handleRequiredAction" /* 1385 */;
+import closure_19 from "mergeGuildAvatar" /* 1922 */;
+import closure_20 from "initialize" /* 10020 */;
+import ME from "ME" /* 676 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import { ThreadMemberFlags } from "AbortCodes" /* 1235 */;
 
-let c9;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_24;
-let closure_25;
-let closure_26;
-let closure_27;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function shouldNotifyBase(currentUser, user, channel, arg3) {
   let obj = arg3;
   if (arg3 === undefined) {
@@ -72,7 +63,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
         }
         let tmp10 = !tmp8;
         if (!tmp8) {
-          const isBlockedOrIgnoredResult = markAllUserIdListsStale.isBlockedOrIgnored(user.id);
+          const isBlockedOrIgnoredResult = closure_13.isBlockedOrIgnored(user.id);
           let tmp13 = !isBlockedOrIgnoredResult;
           if (!isBlockedOrIgnoredResult) {
             const ignoreStatus = obj.ignoreStatus;
@@ -89,7 +80,7 @@ function shouldNotifyBase(currentUser, user, channel, arg3) {
                 const ignoreNoMessagesSetting = obj.ignoreNoMessagesSetting;
                 let allowNoMessagesResult = !ignoreNoMessagesSetting;
                 if (!ignoreNoMessagesSetting) {
-                  allowNoMessagesResult = updateUserGuildSettingsInternal.allowNoMessages(channel);
+                  allowNoMessagesResult = closure_17.allowNoMessages(channel);
                 }
                 tmp19 = !allowNoMessagesResult;
               }
@@ -112,8 +103,8 @@ function renderTitle(channelName, channel, channel) {
   const isolateResult = FSI.isolate(channelName);
   const obj2 = FSI;
   const obj3 = computeChannelName;
-  const tmp4 = mergeGuildAvatar;
-  const tmp5 = markAllUserIdListsStale;
+  const tmp4 = closure_19;
+  const tmp5 = closure_13;
   let str = "";
   if (null != channel) {
     let tmpResult = tmp(7438);
@@ -121,7 +112,7 @@ function renderTitle(channelName, channel, channel) {
     const _HermesInternal = HermesInternal;
     str = ", " + tmpResult.isolate(tmpResult.computeChannelName(channel, tmp4, tmp5));
   }
-  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true)) + str + ")";
+  return "" + isolateResult + " (" + obj2.isolate(computeChannelName.computeChannelName(channel, closure_19, closure_13, true)) + str + ")";
 }
 function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   type = type.type;
@@ -137,9 +128,9 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
   }
   return _TD0la;
 }
-({ GUILD_VOCAL_CHANNEL_TYPES: metroImportAll, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
+({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
 ({ ActivityActionTypes: closure_21, ChannelTypes: closure_22, MessageFlags: closure_23, MessageTypes: closure_24, MessageTypesSets: closure_25, StatusTypes: closure_26, UserFlags: closure_27 } = ME);
-let result = require("processChannel").fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");
 
 export { shouldNotifyBase };
 export const shouldNotify = function shouldNotify(message, channel_id, result) {
@@ -157,7 +148,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
       return false;
     }
   }
-  let obj1 = store2;
+  obj1 = store2;
   const channel = store2.getChannel(channel_id);
   let channel1 = channel;
   if (message.type === constants4.THREAD_STARTER_MESSAGE) {
@@ -202,7 +193,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
               }
               obj5 = isChannelCurrentlyVisible;
             }
-            if (markAllUserIdListsStale.isBlockedOrIgnoredForMessage(message)) {
+            if (closure_13.isBlockedOrIgnoredForMessage(message)) {
               return false;
             } else {
               if (undefined !== message.activity_instance) {
@@ -249,7 +240,7 @@ export const shouldNotify = function shouldNotify(message, channel_id, result) {
                 if (hasItem) {
                   tmp29 = channelId.getChannelId() === channel1.id;
                 }
-                if (updateUserGuildSettingsInternal.allowAllMessages(channel1)) {
+                if (closure_17.allowAllMessages(channel1)) {
                   if (tmp29) {
                     return true;
                   }
@@ -302,7 +293,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
         const hasFlagResult = user.hasFlag(constants7.SPAMMER);
         let tmp12 = !hasFlagResult;
         if (!hasFlagResult) {
-          const result = markAllUserIdListsStale.isBlockedOrIgnoredForMessage(type);
+          const result = closure_13.isBlockedOrIgnoredForMessage(type);
           let tmp15 = !result;
           if (!result) {
             let tmp16 = user.id !== currentUser.id;
@@ -313,7 +304,7 @@ export const shouldNotifyForSelectedChannel = function shouldNotifyForSelectedCh
                 const setting = FocusMode.getSetting();
                 let tmp23 = !setting;
                 if (!setting) {
-                  tmp23 = !updateUserGuildSettingsInternal.allowNoMessages(channel1);
+                  tmp23 = !closure_17.allowNoMessages(channel1);
                 }
                 tmp19 = tmp23;
               }
@@ -347,7 +338,7 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
     obj[0] = flag2;
     let tmp9 = shouldNotifyBase(currentUser, user, channel2, obj);
     if (tmp9) {
-      const result = updateUserGuildSettingsInternal.isGuildOrCategoryOrChannelMuted(channel2.guild_id, channel2.id);
+      const result = closure_17.isGuildOrCategoryOrChannelMuted(channel2.guild_id, channel2.id);
       let tmp11 = !result;
       if (!result) {
         let result1 = !flag;
@@ -362,17 +353,13 @@ export const shouldNotifyForForumThreadCreation = function shouldNotifyForForumT
         tmp11 = newForumThreadsCreated;
       }
       tmp9 = tmp11;
-      obj2 = updateUserGuildSettingsInternal;
+      obj2 = closure_17;
     }
     tmp3 = tmp9;
   }
   return tmp3;
 };
 export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
-  let channel;
-  let includeSelectedChannel;
-  let message;
-  let reactor;
   ({ channel, reactor, includeSelectedChannel, message } = arg0);
   const currentUser = authStore.getCurrentUser();
   const author = message.author;
@@ -387,7 +374,7 @@ export const shouldNotifyForReaction = function shouldNotifyForReaction(arg0) {
     if (tmp10) {
       let tmp11 = null == reactor;
       if (!tmp11) {
-        tmp11 = !markAllUserIdListsStale.isBlockedOrIgnored(reactor.id);
+        tmp11 = !closure_13.isBlockedOrIgnored(reactor.id);
       }
       if (tmp11) {
         let result = !includeSelectedChannel;
@@ -426,8 +413,7 @@ export const shouldIncludeSelectedChannel = function shouldIncludeSelectedChanne
 };
 export { renderTitle };
 export const makeTextChatNotification = function makeTextChatNotification(getGuildId, content, bot) {
-  let emoji;
-  let obj = getNickname;
+  let obj = getNicknameDefault;
   const name = obj.getName(getGuildId.getGuildId(), getGuildId.id, bot);
   const type = getGuildId.type;
   if (constants2.GUILD_ANNOUNCEMENT !== type) {
@@ -440,8 +426,8 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
               if (tmp4.GROUP_DM === type) {
                 let tmp6 = getGuildId.isManaged() && bot.bot;
                 if (tmp6) {
-                  let obj1 = computeChannelName;
-                  tmp6 = name === obj1.computeChannelName(getGuildId, mergeGuildAvatar, markAllUserIdListsStale);
+                  obj1 = computeChannelName;
+                  tmp6 = name === obj1.computeChannelName(getGuildId, closure_19, closure_13);
                 }
                 tmp5 = name;
                 if (!tmp6) {
@@ -459,7 +445,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
                 obj[0] = content;
                 obj15.warn("SystemMessageUtils.stringify(...) could not convert", obj);
                 const _Error = Error;
-                const error = new Error("failed to stringify system message");
+                error = new Error("failed to stringify system message");
                 throw error;
               }
             }
@@ -657,7 +643,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
       tmp5 = renderTitle(name, channel, obj2.getChannel(channel.parent_id));
     }
   }
-  if (isSystemMessage(content)) {
+  if (isSystemMessageDefault(content)) {
     tmp5 = name;
     if (null != guild.getGuild(getGuildId.getGuildId())) {
       tmp5 = renderTitle(name, getGuildId, channel);
@@ -667,7 +653,7 @@ export const makeTextChatNotification = function makeTextChatNotification(getGui
   }
 };
 export const allowInAppNotifications = function allowInAppNotifications() {
-  if (handleRequiredAction.hasAction()) {
+  if (closure_18.hasAction()) {
     return false;
   } else {
     const ShowInAppNotifications = explicitContentFromProto.ShowInAppNotifications;
@@ -683,8 +669,8 @@ export const useAllowInAppNotifications = function useAllowInAppNotifications() 
   const setting = ShowInAppNotifications.useSetting();
   const focusModeEnabled = useFocusModeEnabled.useFocusModeEnabled();
   const obj = useFocusModeEnabled;
-  const items = [handleRequiredAction];
-  const stateFromStores = initialize.useStateFromStores(items, () => handleRequiredAction.hasAction());
+  const items = [closure_18];
+  const stateFromStores = initialize.useStateFromStores(items, () => closure_18.hasAction());
   let tmp4 = !stateFromStores;
   if (!stateFromStores) {
     tmp4 = setting;

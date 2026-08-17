@@ -1,23 +1,23 @@
 // discord_app/modules/channel_text_area/PlaintextResolvers.tsx
-import _slicedToArray from "_slicedToArray";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import rebuild from "rebuild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Permissions } from "ME";
-import { EmojiIntention } from "set";
-import { getEmojiUnavailableReason } from "../../utils/EmojiUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { createEmptyState } from "slate/SlateUtils.tsx";
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
+import createEmptyState from "createEmptyState" /* 7439 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getEmojiToGroupId" /* 6727 */;
+import closure_5 from "rebuild" /* 5251 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "comparator" /* 1980 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_8 } from "comparator" /* 1980 */;
+import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_11 from "createGuildRecordFromRust" /* 1910 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_13 from "markAllUserIdListsStale" /* 4030 */;
+import closure_14 from "mergeGuildAvatar" /* 1922 */;
+import { Permissions } from "ME" /* 676 */;
+import { EmojiIntention } from "set" /* 1925 */;
 
-const require = arg1;
+require = arg1;
 function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
   let obj = intention;
   if (intention == null) {
@@ -30,7 +30,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
     return (function resolveUserOrRole(arr, throwTypeErrorResult, id, arg3, arg4) {
       let tmp = callback3(arr.slice(1).split("#", 2), 2);
       const first = tmp[0];
-      let closure_1 = tmp3;
+      closure_1 = tmp3;
       let guild = null;
       if (null != throwTypeErrorResult) {
         guild = guild.getGuild(throwTypeErrorResult);
@@ -112,7 +112,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
       return null;
     })(text, throwTypeErrorResult, id, tmp, tmp2);
   } else if (":" === first) {
-    const EMOJI_NAME_RE = parseRawEmojiObject.EMOJI_NAME_RE;
+    const EMOJI_NAME_RE = parseRawEmojiObjectDefault.EMOJI_NAME_RE;
     const match = EMOJI_NAME_RE.exec(text);
     let tmp7 = null;
     if (null != match) {
@@ -134,7 +134,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
           obj = { emojiId: null, name: null, animated: null, jumboable: false };
           obj[0] = obj2.id;
           if (!("require_colons" in obj2)) {
-            const obj1 = { type: "customEmoji", emoji: null, children: null };
+            obj1 = { type: "customEmoji", emoji: null, children: null };
             obj[1] = obj2.name;
             obj[2] = true === obj2.animated;
             obj1[1] = obj;
@@ -146,7 +146,7 @@ function resolvePlaintextInlineVoid(text, throwTypeErrorResult, id, intention) {
           const _HermesInternal = HermesInternal;
           const combined = ":" + obj2.name + ":";
         }
-        tmp4Result = getEmojiUnavailableReason;
+        tmp4Result = getEmojiUnavailableReasonDefault;
       }
     }
     return tmp7;
@@ -197,7 +197,7 @@ function matchesUser(arg0, arg1, username, requireExact) {
   }
   return tmp;
 }
-const result = require("rebuild").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_text_area/PlaintextResolvers.tsx");
 
 export { resolvePlaintextInlineVoid };
 export const resolveApplicationCommandOption = function resolveApplicationCommandOption(text, throwTypeErrorResult, id, intention) {

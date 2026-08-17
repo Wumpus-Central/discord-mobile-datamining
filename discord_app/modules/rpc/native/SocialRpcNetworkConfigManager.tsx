@@ -1,18 +1,15 @@
 // discord_app/modules/rpc/native/SocialRpcNetworkConfigManager.tsx
-import { NativeModules } from "get ActivityIndicator";
-import _getSystemLocale from "_getSystemLocale";
-import fetchFingerprint from "fetchFingerprint";
-import "initialize";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set2 from "set" /* 500 */;
+import sendRequest from "sendRequest" /* 530 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
 
 function updateSocialRpcNetworkConfig() {
-  let obj = { "X-Super-Properties": null, "X-Fingerprint": null, "X-Installation-ID": null, "X-Discord-Locale": null };
-  obj[0] = expandEventProperties.getSuperPropertiesBase64();
-  obj[1] = store.getFingerprint();
-  obj[2] = store.getInstallationForTracking();
-  obj[3] = locale.locale;
+  let obj = { "X-Super-Properties": expandEventPropertiesDefault.getSuperPropertiesBase64(), "X-Fingerprint": store.getFingerprint(), "X-Installation-ID": store.getInstallationForTracking(), "X-Discord-Locale": locale.locale };
   const NativeCacheModule = NativeModules.NativeCacheModule;
   if (NativeCacheModule != null) {
     const _JSON = JSON;
@@ -23,9 +20,11 @@ function updateSocialRpcNetworkConfig() {
     const obj4 = sendRequest;
   }
 }
+const NativeModules = get_ActivityIndicator.NativeModules;
+initializeDefault;
 let prototype = function SocialRpcNetworkConfigManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.handleUpdate = set.isAndroid() ? updateSocialRpcNetworkConfig : (() => {
+  applyArgumentsResult.handleUpdate = set2.isAndroid() ? updateSocialRpcNetworkConfig : (() => {
 
   });
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: applyArgumentsResult.handleUpdate };
@@ -34,6 +33,6 @@ let prototype = function SocialRpcNetworkConfigManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("fetchFingerprint").fileFinishedImporting("modules/rpc/native/SocialRpcNetworkConfigManager.tsx");
+let result = set.fileFinishedImporting("modules/rpc/native/SocialRpcNetworkConfigManager.tsx");
 
 export default prototype;

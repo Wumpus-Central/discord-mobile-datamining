@@ -1,25 +1,21 @@
 // discord_app/modules/guild_sidebar/native/VoiceUsers.tsx
-import importAllResult from "noop";
-import { View } from "VoiceUsersItem";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { HeadphonesIcon } from "../../../design/components/Icon/native/redesign/generated/HeadphonesIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useIsUsingClientTheme } from "../../client_themes/native/useIsUsingClientTheme.tsx";
-import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
+import map from "map" /* 9288 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import HeadphonesIcon from "HeadphonesIcon" /* 11697 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function AudienceItem(arg0) {
-  let audienceCount;
-  let collapsed;
   ({ audienceCount, collapsed } = arg0);
-  const tmp2 = callback2(useIsUsingClientTheme());
+  const tmp2 = callback2(useIsUsingClientThemeDefault());
   let formatToPlainStringResult = audienceCount;
   if (!collapsed) {
     const intl = getSystemLocale.intl;
@@ -39,7 +35,7 @@ let closure_8 = {};
 let closure_9 = [];
 let c10 = "text-sm/medium";
 let closure_11 = createCacheKey.createStyles((arg0) => {
-  const colors = Themes.colors;
+  const colors = ThemesDefault.colors;
   if (arg0) {
     let BACKGROUND_BASE_LOWEST = colors.MOBILE_EXPRESSION_PICKER_BACKGROUND_DEFAULT;
     let tmp4 = tmp;
@@ -59,19 +55,15 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let closure_12 = importAllResult.memo((voiceState) => {
-  let isGuest;
-  let member;
-  let storeMember;
-  let voiceState2;
   voiceState = voiceState.voiceState;
   const user = voiceState.user;
   ({ member, voiceState: voiceState2 } = voiceState);
   const channel = voiceState.channel;
   const collapsed = voiceState.collapsed;
   let obj = user(589);
-  const items = [trackCommunicationDisabled];
+  const items = [closure_5];
   const items1 = [channel.guild_id, user.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ storeMember: outer1_5.getMember(channel.guild_id, user.id), isGuest: outer1_5.isGuestOrLurker(channel.guild_id, user.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ storeMember: closure_1_5.getMember(channel.guild_id, user.id), isGuest: closure_1_5.isGuestOrLurker(channel.guild_id, user.id) }), items1);
   let userCollapsedOverlap = null;
   ({ storeMember, isGuest } = stateFromStoresObject);
   if (collapsed) {
@@ -97,16 +89,14 @@ let closure_12 = importAllResult.memo((voiceState) => {
   obj[1] = closure_6(channel(15384), obj, user.id);
   return closure_6(tmp6, obj);
 });
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUsers.tsx");
 
 export default function VoiceUsers(collapsed) {
-  let audienceCount;
-  let voiceStates;
   collapsed = collapsed.collapsed;
   const channel = collapsed.channel;
   ({ voiceStates, audienceCount } = collapsed);
   let guild_id;
-  let importAllResult;
+  importAllResult = undefined;
   guild_id = channel.guild_id;
   if (tmp3) {
     if (null != guild_id) {
@@ -118,14 +108,14 @@ export default function VoiceUsers(collapsed) {
     const items = [guild_id, tmp4Result];
     const memo = importAllResult.useMemo(() => {
       if (null != guild_id) {
-        if (_undefined.length > 0) {
+        if (length.length > 0) {
           const obj = {};
           obj[tmp] = tmp2;
           let tmp3 = obj;
         }
         return tmp3;
       }
-      tmp3 = outer1_8;
+      tmp3 = closure_1_8;
     }, items);
     let obj = collapsed(tmp2[16]);
     const subscribeGuildMembers = obj.useSubscribeGuildMembers(memo, "voice_channel_games");
@@ -133,7 +123,7 @@ export default function VoiceUsers(collapsed) {
     if (0 !== voiceStates.length) {
       obj = { collapsed: null, children: null };
       obj[0] = collapsed;
-      const items1 = [voiceStates.map((user) => outer1_6(outer1_12, { voiceState: user, channel, collapsed, isFirst: 0 === arg1 }, "voice-user-item-" + user.user.id + "-" + user.voiceState.sessionId)), ];
+      const items1 = [voiceStates.map((user) => closure_1_6(closure_1_12, { voiceState: user, channel, collapsed, isFirst: 0 === arg1 }, "voice-user-item-" + user.user.id + "-" + user.voiceState.sessionId)), ];
       let tmp17 = null != audienceCount && audienceCount > 0;
       if (tmp17) {
         obj = { audienceCount: null, collapsed: null };

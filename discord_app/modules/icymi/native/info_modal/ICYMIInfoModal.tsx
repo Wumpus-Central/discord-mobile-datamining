@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/native/info_modal/ICYMIInfoModal.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("NavigationStack").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModal.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIInfoModal.tsx");
 
 export default function ICYMIInfoModal(extendedOnboarding) {
   extendedOnboarding = extendedOnboarding.extendedOnboarding;
@@ -13,69 +13,69 @@ export default function ICYMIInfoModal(extendedOnboarding) {
   const navigatorScreens = obj.useNavigatorScreens(() => {
     let obj = {};
     obj = { headerLeft: null, render: null, impressionName: null, impressionProperties: null };
-    let obj2 = extendedOnboarding(outer1_2[4]);
+    let obj2 = extendedOnboarding(closure_1_2[4]);
     obj[0] = obj2.getHeaderCloseButton();
     obj[1] = function render() {
-      return outer1_4(outer1_1(outer1_2[5]), { extendedOnboarding: closure_0 });
+      return closure_1_4(closure_1_1(closure_1_2[5]), { extendedOnboarding: closure_0 });
     };
-    obj[2] = extendedOnboarding(outer1_2[6]).ImpressionNames.ICYMI_ONBOARDING_OVERVIEW;
+    obj[2] = extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_OVERVIEW;
     obj = { extended_onboarding: extendedOnboarding };
     obj[3] = obj;
-    obj[extendedOnboarding(outer1_2[3]).ICYMIInfoScreens.DEFAULT] = obj;
-    const obj5 = extendedOnboarding(outer1_2[4]);
+    obj[extendedOnboarding(closure_1_2[3]).ICYMIInfoScreens.DEFAULT] = obj;
+    const obj5 = extendedOnboarding(closure_1_2[4]);
     if (skipIntro) {
       let headerCloseButton = obj5.getHeaderCloseButton(() => callback2(5260).popWithKey(callback(15723).ICYMI_INFO_MODAL_KEY));
     } else {
       headerCloseButton = obj5.getHeaderBackButton();
     }
-    obj[extendedOnboarding(outer1_2[3]).ICYMIInfoScreens.TOPICS_CLOUD] = {
+    obj[extendedOnboarding(closure_1_2[3]).ICYMIInfoScreens.TOPICS_CLOUD] = {
       headerLeft: headerCloseButton,
       headerRight() {
         let tmp = null;
         if (!closure_1) {
           const obj = { text: null, onPress: null };
-          const intl = outer1_0(outer1_2[9]).intl;
-          obj[0] = intl.string(outer1_0(outer1_2[9]).t["5Wxrcd"]);
+          const intl = closure_1_0(closure_1_2[9]).intl;
+          obj[0] = intl.string(closure_1_0(closure_1_2[9]).t["5Wxrcd"]);
           obj[1] = function onPress() {
             const ICYMIAnalytics = callback(9065).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             let arr = callback2(5260);
             arr = arr.pop();
           };
-          tmp = outer1_4(outer1_0(outer1_2[8]).HeaderActionButton, obj);
+          tmp = closure_1_4(closure_1_0(closure_1_2[8]).HeaderActionButton, obj);
         }
         return tmp;
       },
       render() {
         return callback3(callback2(15732), {});
       },
-      impressionName: extendedOnboarding(outer1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
+      impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
     obj2 = { headerLeft: null, headerRight: null, render: null, impressionName: null };
-    const obj1 = {
+    obj1 = {
       headerLeft: headerCloseButton,
       headerRight() {
         let tmp = null;
         if (!closure_1) {
           const obj = { text: null, onPress: null };
-          const intl = outer1_0(outer1_2[9]).intl;
-          obj[0] = intl.string(outer1_0(outer1_2[9]).t["5Wxrcd"]);
+          const intl = closure_1_0(closure_1_2[9]).intl;
+          obj[0] = intl.string(closure_1_0(closure_1_2[9]).t["5Wxrcd"]);
           obj[1] = function onPress() {
             const ICYMIAnalytics = callback(9065).ICYMIAnalytics;
             const result = ICYMIAnalytics.trackFeedOnboardingScreenSkipped({ location: "topics" });
             let arr = callback2(5260);
             arr = arr.pop();
           };
-          tmp = outer1_4(outer1_0(outer1_2[8]).HeaderActionButton, obj);
+          tmp = closure_1_4(closure_1_0(closure_1_2[8]).HeaderActionButton, obj);
         }
         return tmp;
       },
       render() {
         return callback3(callback2(15732), {});
       },
-      impressionName: extendedOnboarding(outer1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
+      impressionName: extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_TOPICS
     };
-    obj2[0] = extendedOnboarding(outer1_2[4]).getHeaderBackButton();
+    obj2[0] = extendedOnboarding(closure_1_2[4]).getHeaderBackButton();
     obj2[1] = function headerRight() {
       const obj = { text: null, onPress: null };
       const intl = callback(1236).intl;
@@ -91,8 +91,8 @@ export default function ICYMIInfoModal(extendedOnboarding) {
     obj2[2] = function render() {
       return callback3(callback2(15740), {});
     };
-    obj2[3] = extendedOnboarding(outer1_2[6]).ImpressionNames.ICYMI_ONBOARDING_SELECT_GUILDS;
-    obj[extendedOnboarding(outer1_2[3]).ICYMIInfoScreens.JOIN_GUILDS] = obj2;
+    obj2[3] = extendedOnboarding(closure_1_2[6]).ImpressionNames.ICYMI_ONBOARDING_SELECT_GUILDS;
+    obj[extendedOnboarding(closure_1_2[3]).ICYMIInfoScreens.JOIN_GUILDS] = obj2;
     return obj;
   }, items);
   let items1 = [extendedOnboarding, skipIntro];

@@ -1,34 +1,32 @@
 // discord_app/modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx
-import computeAlertSettings from "computeAlertSettings";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
+import closure_2 from "computeAlertSettings" /* 10014 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-let c4;
-let c5;
 const require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/safety/GuildInvitesDisabledUtils.tsx");
 
 export const useInvitesDisabledPermission = function useInvitesDisabledPermission(guild) {
   const _require = guild;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_3];
   const items1 = [guild];
   return _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = outer1_3.can(outer1_5.MANAGE_GUILD, tmp);
+      canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
     }
     return canResult;
   }, items1);
 };
 export const useInvitesDisabled = function useInvitesDisabled(features) {
   const _require = features;
-  const items = [computeAlertSettings];
+  const items = [closure_2];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
     let guildIncident = null;
     if (null != closure_0) {
-      guildIncident = outer1_2.getGuildIncident(tmp.id);
+      guildIncident = closure_1_2.getGuildIncident(tmp.id);
     }
     return guildIncident;
   });
@@ -56,22 +54,22 @@ export const useInvitesDisabled = function useInvitesDisabled(features) {
 };
 export const useShouldShowInvitesDisabledNotif = function useShouldShowInvitesDisabledNotif(guild) {
   let _require = guild;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_3];
   const items1 = [guild];
   let stateFromStores = _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = outer1_3.can(outer1_5.MANAGE_GUILD, tmp);
+      canResult = closure_1_3.can(closure_1_5.MANAGE_GUILD, tmp);
     }
     return canResult;
   }, items1);
   _require = guild;
   const obj = _initialize;
-  const items2 = [computeAlertSettings];
+  const items2 = [closure_2];
   const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
-      guildIncident = outer1_2.getGuildIncident(tmp.id);
+      guildIncident = closure_1_2.getGuildIncident(tmp.id);
     }
     return guildIncident;
   });

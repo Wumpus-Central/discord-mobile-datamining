@@ -1,7 +1,8 @@
 // discord_app/modules/guild_tag/utils/getGuildTagPalettePresetColorPairLabel.tsx
-import { GuildTagPalettePresetColor as closure_2 } from "items";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import items from "items" /* 8168 */;
 
 function getGuildTagPalettePresetColorLabel(primary) {
   if (constants.HOT_PINK === primary) {
@@ -86,13 +87,11 @@ function getGuildTagPalettePresetColorLabel(primary) {
     isDiscordFrontendDevelopment.assertNever(primary);
   }
 }
-const result = require("isDiscordFrontendDevelopment").fileFinishedImporting("modules/guild_tag/utils/getGuildTagPalettePresetColorPairLabel.tsx");
+let closure_2 = items.GuildTagPalettePresetColor;
+const result = set.fileFinishedImporting("modules/guild_tag/utils/getGuildTagPalettePresetColorPairLabel.tsx");
 
 export default function getGuildTagPalettePresetColorPairLabel(primary, primary) {
   const intl = getSystemLocale.intl;
-  const obj = { primaryColor: null, secondaryColor: null };
-  obj[0] = getGuildTagPalettePresetColorLabel(primary);
-  obj[1] = getGuildTagPalettePresetColorLabel(primary);
-  return intl.formatToPlainString(getSystemLocale.t.g79C8T, obj);
+  return intl.formatToPlainString(getSystemLocale.t.g79C8T, { primaryColor: getGuildTagPalettePresetColorLabel(primary), secondaryColor: getGuildTagPalettePresetColorLabel(primary) });
 };
 export { getGuildTagPalettePresetColorLabel };

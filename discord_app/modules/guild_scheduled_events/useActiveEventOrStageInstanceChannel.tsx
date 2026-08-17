@@ -1,14 +1,14 @@
 // discord_app/modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { useLiveStageChannels } from "../stage_channels/useLiveStageChannels.tsx";
-import { useGuildEvents } from "useGuildScheduledEvents.tsx";
+import useGuildEvents from "useGuildEvents" /* 8891 */;
+import useLiveStageChannelsDefault from "useLiveStageChannels" /* 15447 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-const result = require("useLiveStageChannels").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useActiveEventOrStageInstanceChannel.tsx");
 
 export const useActiveEventOrStageInstanceChannel = function useActiveEventOrStageInstanceChannel(id) {
   let firstActiveEventChannel = useGuildEvents.useFirstActiveEventChannel(id);
-  const first = useLiveStageChannels(id)[0];
+  const first = useLiveStageChannelsDefault(id)[0];
   if (first != null) {
     id = first.id;
   }

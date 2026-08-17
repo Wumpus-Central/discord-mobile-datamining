@@ -1,6 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ServerTrendingNotificationSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import onServerTrendingNotificationSettingsChanged from "onServerTrendingNotificationSettingsChanged" /* 14818 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -11,9 +15,9 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Wc1RcU);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableServerTrendingNotifications.useSetting,
-  onValueChange: require("onServerTrendingNotificationSettingsChanged").onServerTrendingNotificationSettingsChanged,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableServerTrendingNotifications.useSetting,
+  onValueChange: onServerTrendingNotificationSettingsChanged.onServerTrendingNotificationSettingsChanged,
   usePredicate() {
     return false;
   }
@@ -27,13 +31,13 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Wc1RcU);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableServerTrendingNotifications.useSetting,
-  onValueChange: require("onServerTrendingNotificationSettingsChanged").onServerTrendingNotificationSettingsChanged,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableServerTrendingNotifications.useSetting,
+  onValueChange: onServerTrendingNotificationSettingsChanged.onServerTrendingNotificationSettingsChanged,
   usePredicate() {
     return false;
   }
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/ServerTrendingNotificationSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ServerTrendingNotificationSetting.tsx");
 
 export default toggle;

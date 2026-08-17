@@ -1,11 +1,10 @@
 // discord_app/modules/messages/isNewMessageGroup.tsx
-import ME from "ME";
-import { resetCache } from "../../utils/DateUtils.tsx";
-import { isSystemMessage } from "isSystemMessage.tsx";
+import set from "set" /* 2 */;
+import setDefault from "set" /* 687 */;
+import resetCache from "resetCache" /* 4063 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
 function isNewMessageGroup(isForumPost, content, hasFlag) {
   let type = hasFlag;
   const hasFlagResult = hasFlag.hasFlag(constants3.HAS_THREAD);
@@ -20,7 +19,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
     } else {
       let REPLY = constants;
       if (type.type > constants.DEFAULT) {
-        const tmp37 = isSystemMessage(content);
+        const tmp37 = isSystemMessageDefault(content);
         let tmp38 = !tmp37;
         if (tmp37) {
           type = type.type;
@@ -29,7 +28,7 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
         }
         let tmp34 = tmp38;
       } else {
-        tmp34 = isSystemMessage(content);
+        tmp34 = isSystemMessageDefault(content);
         if (!tmp34) {
           let tmp7 = content.author.id !== type.author.id;
           if (!tmp7) {
@@ -126,8 +125,8 @@ function isNewMessageGroup(isForumPost, content, hasFlag) {
   return tmp4;
 }
 ({ MessageTypes: c3, ChannelStreamTypes: c4, MessageFlags: c5 } = ME);
-let closure_6 = 7 * require("set").Millis.MINUTE;
-const result = require("isSystemMessage").fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
+let closure_6 = 7 * setDefault.Millis.MINUTE;
+const result = set.fileFinishedImporting("modules/messages/isNewMessageGroup.tsx");
 
 export default isNewMessageGroup;
 export const isNewGroupItem = function isNewGroupItem(isForumPost, type, hasFlag) {

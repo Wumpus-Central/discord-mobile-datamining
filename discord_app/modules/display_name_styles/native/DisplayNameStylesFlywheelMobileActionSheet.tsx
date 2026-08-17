@@ -1,48 +1,44 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx
-import ActionSheetHeaderBar from "ActionSheetHeaderBar";
-import { View } from "Background";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 ({ UserSettingsSections: closure_6, Fonts: error } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles(() => {
   let obj = { content: null, imageContainer: null, image: null, title: null, subtitle: null, actions: null };
-  obj = { alignItems: "center", paddingHorizontal: Themes.space.PX_16 };
+  obj = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[0] = obj;
-  obj = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: Themes.space.PX_24 };
+  obj = { width: "100%", height: 162, alignItems: "center", justifyContent: "center", marginVertical: ThemesDefault.space.PX_24 };
   obj[1] = obj;
   obj[2] = { width: "100%", height: "100%" };
-  obj[3] = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_16, paddingTop: Themes.space.PX_12 };
-  const obj1 = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_16, paddingTop: Themes.space.PX_12 };
-  obj[4] = { textAlign: "center", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_32 };
-  const obj2 = { textAlign: "center", marginTop: Themes.space.PX_12, marginBottom: Themes.space.PX_32 };
-  obj[5] = { gap: Themes.space.PX_12, width: "100%" };
+  obj[3] = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
+  obj1 = { textAlign: "center", fontFamily: constants.GINTO_NORD_EXTRA_BOLD, textTransform: "uppercase", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_12 };
+  obj[4] = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_32 };
+  const obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_32 };
+  obj[5] = { gap: ThemesDefault.space.PX_12, width: "100%" };
   return obj;
 });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesFlywheelMobileActionSheet.tsx");
 
 export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   let ref;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = React;
   ref = React.useRef(null);
   const enabled = React.useContext(markAsDismissed(1356).AccessibilityPreferencesContext).reducedMotion.enabled;
-  let obj1 = markAsDismissed(1363);
+  obj1 = markAsDismissed(1363);
   const isThemeDarkResult = obj1.isThemeDark(ref(4310)());
   const tmp6 = callback2();
   let obj2 = markAsDismissed(589);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = ref(4039);
   let result = obj3.canUsePremiumProfileCustomization(stateFromStores);
@@ -58,25 +54,25 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
   const items1 = [result, markAsDismissed];
   const items2 = [markAsDismissed];
   const callback = obj.useCallback(() => {
-    markAsDismissed(_undefined[13]).openUserSettings({ screen: _undefined ? outer1_6.PROFILE_CUSTOMIZATION : outer1_6.PROFILE_CUSTOMIZATION_TRY_IT_OUT }, () => {
-      outer1_0(outer1_2[14]).runAfterInteractions(() => {
-        let obj = outer1_0(outer1_2[13]);
-        obj = { screen: outer1_6.DISPLAY_NAME_STYLES };
+    markAsDismissed(_undefined[13]).openUserSettings({ screen: _undefined ? closure_1_6.PROFILE_CUSTOMIZATION : closure_1_6.PROFILE_CUSTOMIZATION_TRY_IT_OUT }, () => {
+      closure_1_0(closure_1_2[14]).runAfterInteractions(() => {
+        let obj = closure_1_0(closure_1_2[13]);
+        obj = { screen: closure_1_6.DISPLAY_NAME_STYLES };
         obj.openUserSettings(obj, () => {
-          callback(outer1_8.TAKE_ACTION);
-          let obj = outer1_0(outer1_2[15]);
-          obj = { dismissAction: outer1_8.INDIRECT_ACTION };
-          const result = obj.UNSAFE_markDismissibleContentAsDismissed(outer1_0(outer1_2[16]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, obj);
+          callback(closure_1_8.TAKE_ACTION);
+          let obj = closure_1_0(closure_1_2[15]);
+          obj = { dismissAction: closure_1_8.INDIRECT_ACTION };
+          const result = obj.UNSAFE_markDismissibleContentAsDismissed(closure_1_0(closure_1_2[16]).DismissibleContent.DISPLAY_NAME_STYLES_FLYWHEEL_MOBILE_PROFILE_COACHMARK, obj);
         });
       });
     });
   }, items1);
   const items3 = [markAsDismissed];
   const callback1 = obj.useCallback(() => {
-    markAsDismissed(outer1_8.USER_DISMISS);
+    markAsDismissed(closure_1_8.USER_DISMISS);
   }, items2);
   callback2 = obj.useCallback(() => {
-    markAsDismissed(outer1_8.USER_DISMISS);
+    markAsDismissed(closure_1_8.USER_DISMISS);
   }, items3);
   obj = { ref, onDismiss: callback2, startExpanded: true, handleDisabled: true, children: null };
   obj = { style: tmp6.content, children: null };
@@ -86,7 +82,7 @@ export default function DisplayNameStylesFlywheelMobileActionSheet(markAsDismiss
       if (current != null) {
         current.closeActionSheet();
       }
-      markAsDismissed(outer1_8.USER_DISMISS);
+      markAsDismissed(closure_1_8.USER_DISMISS);
     }
   };
   const items4 = [callback(markAsDismissed(7124).ActionSheetHeaderBar, obj1), , , , ];

@@ -1,27 +1,23 @@
 // discord_app/modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx
-import createExecutable from "createExecutable";
-import useGetOrFetchApplications from "useGetOrFetchApplications";
-import AppLauncherEntrypoint from "AppLauncherEntrypoint";
-import { View } from "getSystemLocale";
-import initialize from "initialize";
-import closure_9 from "createExecutable";
-import { AnalyticEvents } from "ME";
-import jsxProd from "module_4770";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { QUICK_SWITCHER } from "../../../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../../../app_analytics/useAnalyticsLocations.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import toggleUseActivityUrlOverrideAll from "toggleUseActivityUrlOverride" /* 8747 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_8 from "initialize" /* 7872 */;
+import closure_9 from "createExecutable" /* 4479 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function Tag(arg0) {
-  let accessibilityLabel;
-  let icon;
-  let tagName;
   ({ tagName, icon, accessibilityLabel } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback5();
   let obj = { style: tmp.tag, accessible: true, accessibilityLabel, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/normal", style: tmp.tagText, children: tagName };
@@ -30,12 +26,6 @@ function Tag(arg0) {
   return callback4(View, obj);
 }
 function PrimaryEntryPointButton(applicationId) {
-  let context;
-  let disabled;
-  let entrypoint;
-  let onActivityItemSelected;
-  let primaryEntryPointCommand;
-  let sectionName;
   applicationId = applicationId.applicationId;
   ({ context, primaryEntryPointCommand } = applicationId);
   const activityAction = applicationId.activityAction;
@@ -46,7 +36,7 @@ function PrimaryEntryPointButton(applicationId) {
   let obj = handleActivityItemSelected;
   ({ sectionName, disabled, onActivityItemSelected, entrypoint } = applicationId);
   const id = handleActivityItemSelected.useId();
-  let obj1 = applicationId(chatInputRef[11]);
+  obj1 = applicationId(chatInputRef[11]);
   const requiredAppLauncherContext = obj1.useRequiredAppLauncherContext();
   chatInputRef = requiredAppLauncherContext.chatInputRef;
   keyboardCloseReasonRef = requiredAppLauncherContext.keyboardCloseReasonRef;
@@ -102,7 +92,7 @@ function TryItOutButton(botUserId) {
   botUserId = botUserId.botUserId;
   const applicationId = botUserId.applicationId;
   const analyticsLocations = botUserId.analyticsLocations;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   const tmp = callback2(React.useState(false), 2);
   dependencyMap = tmp[1];
@@ -110,26 +100,26 @@ function TryItOutButton(botUserId) {
   const items = [botUserId, applicationId, analyticsLocations];
   let str = "primary";
   callback = React.useCallback(callback(function*() {
-    let closure_1 = tmp3;
-    const obj1 = { application_id: null, button_action: null };
-    obj1[0] = outer1_1;
-    obj1[1] = outer1_0(9566).EntryPointCommandButtonActions.OPEN_APP_DM;
-    outer1_1(698).track(outer1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
+    closure_1 = tmp3;
+    obj1 = { application_id: null, button_action: null };
+    obj1[0] = closure_1_1;
+    obj1[1] = closure_1_0(9566).EntryPointCommandButtonActions.OPEN_APP_DM;
+    closure_1_1(698).track(closure_1_10.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, obj1);
     const _setTimeout = setTimeout;
     ref.current = setTimeout(() => {
       v0(true);
     }, 250);
-    let dependencyMap = 1;
-    const obj8 = outer1_1(698);
+    dependencyMap = 1;
+    const obj8 = closure_1_1(698);
     const obj2 = { recipientIds: null };
-    obj2[0] = outer1_0;
-    yield outer1_1(4770).openPrivateChannel(obj2);
+    obj2[0] = closure_1_0;
+    yield closure_1_1(4770).openPrivateChannel(obj2);
     if (1 === tmp7) {
       dependencyMap = 0;
       const _clearTimeout = clearTimeout;
       clearTimeout(ref.current);
       dependencyMap(false);
-      let c5 = 3;
+      c5 = 3;
     } else if (2 === tmp7) {
       if (arg0 === 1) {
         c5 = 3;
@@ -141,7 +131,7 @@ function TryItOutButton(botUserId) {
         obj4[0] = arg1;
         return obj4;
       } else {
-        let closure_0 = arg1;
+        closure_0 = arg1;
         const obj5 = { targetApplicationId: null, channelId: null, analyticsLocations: null };
         obj5[0] = closure_1;
         obj5[1] = closure_0;
@@ -149,7 +139,7 @@ function TryItOutButton(botUserId) {
         ref = 3;
         c5 = 1;
         const obj6 = { value: null, done: false };
-        obj6[0] = outer1_1(8746)(obj5);
+        obj6[0] = closure_1_1(8746)(obj5);
         return obj6;
       }
     } else if (arg0 === 1) {
@@ -171,54 +161,44 @@ function TryItOutButton(botUserId) {
   return callback3(botUserId(4745).Button, obj);
 }
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PX_12 = require("Themes").space.PX_12;
+const PX_12 = ThemesDefault.space.PX_12;
 createCacheKey = { container: { flex: 1 }, cardContainer: null, activityHeroDetailsLandscape: null, heroMediaContainerLandscape: null, detailsContainerLandscape: null, details: null, tagList: null, tag: null, tagText: null, tagIcon: null, buttonContainer: null, activityUrlOverrideInputContainer: null, primaryEntryPointButtonDisabledCTA: null, tryItOutButtonContainerStyle: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, overflow: "hidden", gap: require("Themes").space.PX_16, paddingBottom: PX_12 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", gap: ThemesDefault.space.PX_16, paddingBottom: PX_12 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flexDirection: "row" };
 createCacheKey[3] = { width: "65%" };
 createCacheKey[4] = { width: "35%" };
 createCacheKey[5] = { marginTop: 16, paddingHorizontal: PX_12, rowGap: 4 };
-createCacheKey[6] = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: require("Themes").space.PX_8, columnGap: 4, rowGap: 6 };
-let obj1 = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: require("Themes").space.PX_8, columnGap: 4, rowGap: 6 };
-createCacheKey[7] = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.round, paddingHorizontal: 12, paddingVertical: 4 };
+createCacheKey[6] = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: ThemesDefault.space.PX_8, columnGap: 4, rowGap: 6 };
+let obj1 = { display: "flex", flexDirection: "row", flexWrap: "wrap", marginTop: ThemesDefault.space.PX_8, columnGap: 4, rowGap: 6 };
+createCacheKey[7] = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: 12, paddingVertical: 4 };
 createCacheKey[8] = { top: -1 };
 createCacheKey[9] = { marginRight: 4 };
 createCacheKey[10] = { paddingTop: 16 };
 createCacheKey[11] = { marginTop: -4 };
-let obj2 = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.round, paddingHorizontal: 12, paddingVertical: 4 };
-createCacheKey[12] = { marginTop: require("Themes").space.PX_12, color: require("Themes").colors.TEXT_MUTED, textAlign: "center" };
+let obj2 = { display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: 12, paddingVertical: 4 };
+createCacheKey[12] = { marginTop: ThemesDefault.space.PX_12, color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center" };
 createCacheKey[13] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: require("Themes").space.PX_12, color: require("Themes").colors.TEXT_MUTED, textAlign: "center" };
-let result = require("noop").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { marginTop: ThemesDefault.space.PX_12, color: ThemesDefault.colors.TEXT_MUTED, textAlign: "center" };
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/ActivityDetailContent.tsx");
 
 export default function ActivityDetailContent(application) {
-  let activityUrlOverride;
-  let context;
-  let disabled;
-  let entrypoint;
-  let hasCommands;
-  let isDeveloperOfThisApp;
-  let onActivityItemSelected;
-  let reason;
-  let sectionName;
-  let useActivityUrlOverride;
   application = application.application;
   ({ context, entrypoint } = application);
   ({ sectionName, onActivityItemSelected, hasCommands } = application);
-  const tmp = createCacheKey();
+  const tmp = callback5();
   let obj = application(9565);
   const width = obj.useRequiredAppLauncherContext().width;
-  let obj1 = application(8769);
+  obj1 = application(8769);
   const getPrimaryAppCommand = obj1.useGetPrimaryAppCommand(context, application.id);
-  const analyticsLocations = context(QUICK_SWITCHER.APP_DETAIL).analyticsLocations;
+  const analyticsLocations = contextDefault(QUICK_SWITCHERDefault.APP_DETAIL).analyticsLocations;
   let obj2 = application(8944);
   const isScreenLandscape = obj2.useIsScreenLandscape();
   let detailsContainerLandscape = entrypoint !== application(9566).AppLauncherEntrypoint.VOICE && isScreenLandscape;
   let tmp2Result = tmp2(589);
-  const items = [initialize];
-  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items, () => ({ isDeveloperOfThisApp: outer1_8.inDevModeForApplication(application.id), activityUrlOverride: outer1_8.getActivityUrlOverride(), useActivityUrlOverride: outer1_8.getUseActivityUrlOverride() }));
+  const items = [closure_8];
+  const stateFromStoresObject = tmp2Result.useStateFromStoresObject(items, () => ({ isDeveloperOfThisApp: closure_1_8.inDevModeForApplication(application.id), activityUrlOverride: closure_1_8.getActivityUrlOverride(), useActivityUrlOverride: closure_1_8.getUseActivityUrlOverride() }));
   ({ isDeveloperOfThisApp, activityUrlOverride, useActivityUrlOverride } = stateFromStoresObject);
   tmp2Result = tmp2(8447);
   if (tmp2Result.isRealApplication(application)) {
@@ -242,7 +222,7 @@ export default function ActivityDetailContent(application) {
       let intl = tmp2(1236).intl;
       obj1[0] = intl.string(tmp2(1236).t["3TSGuD"]);
       obj1[1] = useActivityUrlOverride;
-      obj1[2] = importAll(8747).toggleUseActivityUrlOverride;
+      obj1[2] = toggleUseActivityUrlOverrideAll.toggleUseActivityUrlOverride;
       items1[1] = callback3(tmp2(7178).TableSwitchRow, obj1);
       let tmp19Result = null;
       if (useActivityUrlOverride) {
@@ -438,8 +418,8 @@ export default function ActivityDetailContent(application) {
     return callback3(tmp2(7139).AnalyticsLocationProvider, obj15);
   } else {
     const _Error = Error;
-    const error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
+    error = new Error("ActivityDetailContent was passed the Built-in App, which is not supported.");
     throw error;
   }
-  const tmp6 = context;
+  const tmp6 = contextDefault;
 };

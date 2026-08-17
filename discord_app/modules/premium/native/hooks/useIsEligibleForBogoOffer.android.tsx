@@ -1,17 +1,17 @@
 // discord_app/modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx
-import noop from "noop";
-import reset from "reset";
-import createEmptyPromotionsByType from "createEmptyPromotionsByType";
-import { PremiumTypes } from "GuildFeatures";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "reset" /* 4045 */;
+import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
-const result = require("createEmptyPromotionsByType").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/hooks/useIsEligibleForBogoOffer.android.tsx");
 
 export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
-  const items = [createEmptyPromotionsByType];
+  const items = [closure_4];
   const stateFromStores = forceUpdate(589).useStateFromStores(items, () => activeBogoRewardPromotion.getActiveBogoRewardPromotion());
   const obj = forceUpdate(589);
-  const items1 = [reset];
+  const items1 = [closure_3];
   const stateFromStores1 = forceUpdate(589).useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj2 = forceUpdate(589);
   const premiumTrialOffer = forceUpdate(7418).usePremiumTrialOffer();
@@ -26,7 +26,7 @@ export const useIsEligibleForBogoOffer = function useIsEligibleForBogoOffer() {
     const endDate = stateFromStores.endDate;
     valueOfResult = endDate.valueOf();
   }
-  const dependencyMap = valueOfResult;
+  dependencyMap = valueOfResult;
   const items2 = [valueOfResult, forceUpdate];
   const effect = React.useEffect(() => {
     if (null != closure_1) {

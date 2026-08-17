@@ -1,7 +1,8 @@
 // discord_app/modules/payments/native/OrderActionCreators.tsx
-import _createGatewayCheckoutContext from "_createGatewayCheckoutContext";
-import { OrderStatus } from "CustomCheckoutFlow";
-import { Endpoints } from "ME";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { OrderStatus } from "CustomCheckoutFlow" /* 4357 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function getOrders() {
@@ -17,10 +18,10 @@ function getOrders() {
 function _getOrders() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (logger === 2) {
         logger = 3;
@@ -49,13 +50,13 @@ function _getOrders() {
               return obj;
             } else {
               const table = tmp3;
-              let closure_1 = tmp5;
-              let c4 = 1;
+              closure_1 = tmp5;
+              c4 = 1;
               let status;
               if (callback != null) {
                 status = tmp40.status;
               }
-              const obj1 = {};
+              obj1 = {};
               if (null != status) {
                 const items = [tmp40.status];
                 obj1.statuses = items;
@@ -88,7 +89,7 @@ function _getOrders() {
               if (null != paymentGateway) {
                 obj1.payment_gateway = tmp40.paymentGateway;
               }
-              const HTTP = callback(outer1_2[4]).HTTP;
+              const HTTP = callback(closure_1_2[4]).HTTP;
               const obj2 = { url: null, query: null, rejectWithError: true };
               obj2[0] = constants.ORDER_LIST;
               obj2[1] = obj1;
@@ -100,7 +101,7 @@ function _getOrders() {
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            closure_1 = _createGatewayCheckoutContext;
+            closure_1 = closure_3;
             const obj4 = { error: null, options: null };
             obj4[0] = closure_1;
             obj4[1] = callback;
@@ -134,7 +135,7 @@ function _getOrders() {
             return obj;
           }
         } catch (tmp31) {
-          _createGatewayCheckoutContext = tmp31;
+          closure_3 = tmp31;
           if (tmp4 === c4) {
             logger = tmp2;
             throw tmp31;
@@ -145,7 +146,7 @@ function _getOrders() {
       }
     })();
   });
-  const _getOrders = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -167,19 +168,11 @@ function createOrder(arg0) {
 function _createOrder() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -206,7 +199,7 @@ function _createOrder() {
               obj[0] = body;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
@@ -231,7 +224,7 @@ function _createOrder() {
               throw body;
             } else if (arg0 === 2) {
               logger = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
@@ -319,7 +312,7 @@ function _createOrder() {
             }
           } else if (2 === tmp7) {
             c4 = 0;
-            let closure_11 = c3;
+            closure_11 = c3;
             const obj9 = { response: null };
             obj9[0] = closure_11;
             logger.error("failed to create order", obj9);
@@ -341,7 +334,7 @@ function _createOrder() {
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const error = new Error("Failed to create order: " + closure_11);
+              error = new Error("Failed to create order: " + closure_11);
               throw error;
             }
           } else if (4 === tmp7) {
@@ -400,7 +393,7 @@ function _createOrder() {
     iter.next();
     return iter;
   });
-  const _createOrder = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -412,19 +405,10 @@ function _createOrder() {
 function _getOrCreateOrder() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -475,7 +459,7 @@ function _getOrCreateOrder() {
               throw arg1;
             } else if (arg0 === 2) {
               constants = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -555,7 +539,7 @@ function _getOrCreateOrder() {
     iter.next();
     return iter;
   });
-  const _getOrCreateOrder = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -567,15 +551,11 @@ function _getOrCreateOrder() {
 function _patchOrderLineItem() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -602,14 +582,14 @@ function _patchOrderLineItem() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
               dependencyMap = undefined;
               c3 = undefined;
               ({ orderId: c0, orderLineItemId: c1, subscriptionPlanId: c2, expectedRevision: c3 } = callback);
-              let c4;
+              c4 = undefined;
               c5 = undefined;
               c5 = 1;
               logger = 1;
@@ -621,7 +601,7 @@ function _patchOrderLineItem() {
               throw arg1;
             } else if (arg0 === 2) {
               logger = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -731,7 +711,7 @@ function _patchOrderLineItem() {
     iter.next();
     return iter;
   });
-  const _patchOrderLineItem = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -743,16 +723,11 @@ function _patchOrderLineItem() {
 function _patchOrder() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -779,7 +754,7 @@ function _patchOrder() {
               obj[0] = body;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
@@ -799,7 +774,7 @@ function _patchOrder() {
               throw body;
             } else if (arg0 === 2) {
               logger = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
@@ -829,7 +804,7 @@ function _patchOrder() {
             }
           } else if (2 === tmp7) {
             c4 = 0;
-            let closure_7 = c3;
+            closure_7 = c3;
             let obj5 = callback(4054);
             obj5 = { tags: null, extra: null };
             obj5[0] = { source: "OrderActionCreators_patchOrder" };
@@ -914,7 +889,7 @@ function _patchOrder() {
     iter.next();
     return iter;
   });
-  const _patchOrder = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -926,14 +901,11 @@ function _patchOrder() {
 function _updateOrder() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
       if (logger === 2) {
         logger = 3;
         HermesBuiltin.throwTypeError();
@@ -960,14 +932,14 @@ function _updateOrder() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let lib = tmp7;
               let callback;
               lib = undefined;
               dependencyMap = undefined;
               ({ orderId: c0, giftInfo: c1, expectedRevision: c2 } = callback);
               let obj2;
-              let c4;
+              c4 = undefined;
               c5 = undefined;
               c5 = 1;
               logger = 1;
@@ -979,7 +951,7 @@ function _updateOrder() {
               throw arg1;
             } else if (arg0 === 2) {
               logger = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -1111,7 +1083,7 @@ function _updateOrder() {
     iter.next();
     return iter;
   });
-  const _updateOrder = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1133,24 +1105,24 @@ function discardOrder(id) {
 function _discardOrder() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp4;
+      closure_1 = tmp4;
       const HTTP = lib(table[4]).HTTP;
-      const obj1 = { url: null, rejectWithError: false };
-      obj1[0] = outer1_5.ORDER_DISCARD(lib);
+      obj1 = { url: null, rejectWithError: false };
+      obj1[0] = closure_1_5.ORDER_DISCARD(lib);
       lib = yield HTTP.post(obj1);
       if (null == lib.body) {
         const _Error = Error;
-        const error = new Error("Invalid discard order response");
+        error = new Error("Invalid discard order response");
         throw error;
       }
       return lib.body;
     })();
   });
-  const _discardOrder = tmp;
+  closure_17 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1162,17 +1134,17 @@ function _discardOrder() {
 function _cancelSigningAndDiscardOrder() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const table = tmp3;
-      let c4 = 1;
-      yield outer1_21(callback);
+      c4 = 1;
+      yield closure_1_21(callback);
       if (1 === tmp7) {
         c4 = 0;
-        let closure_1 = _createGatewayCheckoutContext;
+        closure_1 = closure_3;
         let obj3 = callback(table[5]);
         const obj2 = { tags: null, extra: null };
         obj2[0] = { source: "OrderActionCreators_cancelSigningAndDiscardOrder" };
@@ -1180,7 +1152,7 @@ function _cancelSigningAndDiscardOrder() {
         obj3[0] = callback;
         obj2[1] = obj3;
         const result = obj3.captureBillingException(closure_1, obj2);
-        let c6 = 3;
+        c6 = 3;
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c6 = 3;
@@ -1192,7 +1164,7 @@ function _cancelSigningAndDiscardOrder() {
           obj4[0] = arg1;
           return obj4;
         } else {
-          let c5 = 3;
+          c5 = 3;
           c6 = 1;
           const obj5 = { value: null, done: false };
           obj5[0] = callback2(callback);
@@ -1208,7 +1180,7 @@ function _cancelSigningAndDiscardOrder() {
       return arg1;
     })();
   });
-  const _cancelSigningAndDiscardOrder = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1220,9 +1192,9 @@ function _cancelSigningAndDiscardOrder() {
 function _markOrderAsSigningInProgress() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -1249,17 +1221,17 @@ function _markOrderAsSigningInProgress() {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else if (null != outer1_11) {
-              let obj1 = { orderId: null };
+            } else if (null != closure_11) {
+              obj1 = { orderId: null };
               obj1[0] = tmp15;
-              outer1_6.info("signing already in progress, awaiting existing promise", obj1);
+              closure_1_6.info("signing already in progress, awaiting existing promise", obj1);
               c2 = 1;
               c1 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = outer1_11;
+              obj2[0] = closure_11;
               return obj2;
             } else {
-              const tmp6 = outer1_3(function*() {
+              const tmp6 = closure_1_3(function*() {
                 if (c5 === 2) {
                   c5 = 3;
                   HermesBuiltin.throwTypeError();
@@ -1286,44 +1258,44 @@ function _markOrderAsSigningInProgress() {
                         obj[0] = arg1;
                         return obj;
                       } else {
-                        let closure_1 = tmp4;
-                        let c0 = tmp8;
-                        c0 = undefined;
-                        const obj1 = { type: "ORDER_MARK_SIGNING_START", orderId: null };
-                        obj1[1] = outer1_0;
-                        outer1_1(outer1_2[6]).dispatch(obj1);
-                        let c3 = 2;
-                        const obj22 = outer1_1(outer1_2[6]);
+                        let callback = tmp4;
+                        let lib = tmp8;
+                        lib = undefined;
+                        obj1 = { type: "ORDER_MARK_SIGNING_START", orderId: null };
+                        obj1[1] = lib;
+                        callback(closure_1_2[6]).dispatch(obj1);
+                        c3 = 2;
+                        const obj22 = callback(closure_1_2[6]);
                         c4 = 4;
                         c5 = 1;
                         const obj2 = { value: null, done: false };
-                        obj2[0] = outer1_0(outer1_2[7]).getOrder(outer1_0);
+                        obj2[0] = lib(closure_1_2[7]).getOrder(lib);
                         return obj2;
                       }
                     } else if (1 === tmp8) {
                       c3 = 0;
-                      let outer1_11 = null;
+                      c11 = null;
                       throw closure_2;
                     } else if (2 === tmp8) {
                       c3 = 1;
-                      outer1_1 = closure_2;
-                      let obj6 = outer1_0(outer1_2[5]);
+                      callback = closure_2;
+                      let obj6 = lib(closure_1_2[5]);
                       const _Error2 = Error;
-                      const error = new Error("failed to mark order as signing in progress");
+                      error = new Error("failed to mark order as signing in progress");
                       const obj3 = { tags: null, extra: null };
                       obj3[0] = { source: "OrderActionCreators_markOrderAsSigningInProgress" };
                       const obj4 = { orderId: null, response: null };
-                      obj4[0] = c0;
-                      obj4[1] = outer1_1;
+                      obj4[0] = lib;
+                      obj4[1] = callback;
                       obj3[1] = obj4;
                       const result = obj6.captureBillingException(error, obj3);
                       const obj5 = { response: null, orderId: null };
-                      obj5[0] = outer1_1;
-                      obj5[1] = c0;
-                      outer1_6.error("failed to mark order as signing in progress", obj5);
-                      let obj10 = outer1_1(outer1_2[6]);
+                      obj5[0] = callback;
+                      obj5[1] = lib;
+                      closure_1_6.error("failed to mark order as signing in progress", obj5);
+                      let obj10 = callback(closure_1_2[6]);
                       obj6 = { type: "ORDER_MARK_SIGNING_FAIL", orderId: null };
-                      obj6[1] = c0;
+                      obj6[1] = lib;
                       c4 = 3;
                       c5 = 1;
                       const obj7 = { value: null, done: false };
@@ -1335,13 +1307,13 @@ function _markOrderAsSigningInProgress() {
                         throw arg1;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        outer1_11 = null;
+                        c11 = null;
                         c5 = 3;
                         const obj8 = { value: null, done: true };
                         obj8[0] = arg1;
                         return obj8;
                       } else {
-                        throw outer1_1;
+                        throw callback;
                       }
                     } else if (4 === tmp8) {
                       if (arg0 === 1) {
@@ -1349,24 +1321,24 @@ function _markOrderAsSigningInProgress() {
                         throw arg1;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        outer1_11 = null;
+                        c11 = null;
                         c5 = 3;
                         const obj9 = { value: null, done: true };
                         obj9[0] = arg1;
                         return obj9;
                       } else {
-                        outer1_0 = arg1;
-                        if (null == outer1_0) {
+                        lib = arg1;
+                        if (null == lib) {
                           const _Error = Error;
                           const _HermesInternal = HermesInternal;
-                          const error1 = new Error("Order " + outer1_0 + " not found");
+                          const error1 = new Error("Order " + lib + " not found");
                           throw error1;
                         } else {
-                          const HTTP = outer1_0(outer1_2[4]).HTTP;
+                          const HTTP = lib(closure_1_2[4]).HTTP;
                           obj10 = { url: null, body: null, rejectWithError: true };
-                          obj10[0] = c5.ORDER_SIGN(c0);
+                          obj10[0] = c5.ORDER_SIGN(lib);
                           const obj11 = { expected_revision: null };
-                          obj11[0] = c0.revision;
+                          obj11[0] = lib.revision;
                           obj10[1] = obj11;
                           c4 = 5;
                           c5 = 1;
@@ -1381,22 +1353,22 @@ function _markOrderAsSigningInProgress() {
                         throw arg1;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        outer1_11 = null;
+                        c11 = null;
                         c5 = 3;
                         const obj13 = { value: null, done: true };
                         obj13[0] = arg1;
                         return obj13;
                       } else {
                         const obj14 = { orderId: null, revision: null };
-                        obj14[0] = c0;
-                        obj14[1] = c0.revision;
-                        outer1_6.info("marked order as signing in progress", obj14);
+                        obj14[0] = lib;
+                        obj14[1] = lib.revision;
+                        closure_1_6.info("marked order as signing in progress", obj14);
                         const obj15 = { type: "ORDER_MARK_SIGNING_SUCCESS", orderId: null };
-                        obj15[1] = c0;
+                        obj15[1] = lib;
                         c4 = 6;
                         c5 = 1;
                         const obj16 = { value: null, done: false };
-                        obj16[0] = outer1_1(outer1_2[6]).dispatch(obj15);
+                        obj16[0] = callback(closure_1_2[6]).dispatch(obj15);
                         return obj16;
                       }
                     } else if (arg0 === 1) {
@@ -1404,14 +1376,14 @@ function _markOrderAsSigningInProgress() {
                       throw arg1;
                     } else if (arg0 === 2) {
                       c3 = 0;
-                      outer1_11 = null;
+                      c11 = null;
                       c5 = 3;
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
                     } else {
                       c3 = 0;
-                      outer1_11 = null;
+                      c11 = null;
                       c5 = 3;
                       return { value: "HermesInternal", done: "HermesInternal" };
                     }
@@ -1428,7 +1400,7 @@ function _markOrderAsSigningInProgress() {
                   }
                 }
               })();
-              outer1_11 = tmp6;
+              closure_11 = tmp6;
               c2 = 2;
               c1 = 1;
               let obj3 = { value: null, done: false };
@@ -1469,7 +1441,7 @@ function _markOrderAsSigningInProgress() {
       }
     })();
   });
-  const _markOrderAsSigningInProgress = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1478,7 +1450,7 @@ function _markOrderAsSigningInProgress() {
   }
   return applyArgumentsResult;
 }
-function cancelOrderSigning(outer1_11) {
+function cancelOrderSigning(closure_1_11) {
   const self = this;
   const apply = _cancelOrderSigning.apply;
   if (typeof apply === "unknown") {
@@ -1491,9 +1463,9 @@ function cancelOrderSigning(outer1_11) {
 function _cancelOrderSigning() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -1521,18 +1493,18 @@ function _cancelOrderSigning() {
               obj[0] = arg1;
               return obj;
             } else {
-              const value = outer1_20.get(closure_0);
+              const value = closure_1_20.get(closure_0);
               if (null != value) {
-                let obj1 = { orderId: null };
+                obj1 = { orderId: null };
                 obj1[0] = tmp16;
-                outer1_6.info("cancel signing already in progress for order, awaiting existing promise", obj1);
+                closure_1_6.info("cancel signing already in progress for order, awaiting existing promise", obj1);
                 c2 = 1;
                 c1 = 1;
                 let obj2 = { value: null, done: false };
                 obj2[0] = value;
                 return obj2;
               } else {
-                const tmp6 = outer1_3(function*() {
+                const tmp6 = closure_1_3(function*() {
                   if (c5 === 2) {
                     c5 = 3;
                     HermesBuiltin.throwTypeError();
@@ -1559,16 +1531,16 @@ function _cancelOrderSigning() {
                           obj[0] = arg1;
                           return obj;
                         } else {
-                          let closure_1 = tmp4;
-                          let closure_0 = tmp8;
+                          closure_1 = tmp4;
+                          closure_0 = tmp8;
                           closure_0 = undefined;
-                          const obj1 = { type: "ORDER_CANCEL_SIGNING_START", orderId: null };
-                          obj1[1] = outer1_0;
-                          outer1_1(outer1_2[6]).dispatch(obj1);
-                          let c3 = 2;
-                          const HTTP = outer1_0(outer1_2[4]).HTTP;
+                          obj1 = { type: "ORDER_CANCEL_SIGNING_START", orderId: null };
+                          obj1[1] = closure_1_0;
+                          closure_1_1(closure_1_2[6]).dispatch(obj1);
+                          c3 = 2;
+                          const HTTP = closure_1_0(closure_1_2[4]).HTTP;
                           const obj2 = { url: null, rejectWithError: true };
-                          obj2[0] = c5.ORDER_CANCEL_SIGNING(outer1_0);
+                          obj2[0] = c5.ORDER_CANCEL_SIGNING(closure_1_0);
                           c4 = 4;
                           c5 = 1;
                           let obj3 = { value: null, done: false };
@@ -1577,14 +1549,14 @@ function _cancelOrderSigning() {
                         }
                       } else if (1 === tmp8) {
                         c3 = 0;
-                        outer1_20.delete(outer1_0);
+                        closure_1_20.delete(closure_1_0);
                         throw closure_2;
                       } else if (2 === tmp8) {
                         c3 = 1;
                         closure_1 = closure_2;
-                        let obj8 = outer1_0(outer1_2[5]);
+                        let obj8 = closure_1_0(closure_1_2[5]);
                         const _Error2 = Error;
-                        const error = new Error("failed to cancel order signing");
+                        error = new Error("failed to cancel order signing");
                         const obj4 = { tags: null, extra: null };
                         obj4[0] = { source: "OrderActionCreators_cancelOrderSigning" };
                         const obj5 = { orderId: null, response: null };
@@ -1595,8 +1567,8 @@ function _cancelOrderSigning() {
                         const obj6 = { response: null, orderId: null };
                         obj6[0] = closure_1;
                         obj6[1] = closure_0;
-                        outer1_6.error("failed to cancel order signing", obj6);
-                        let obj12 = outer1_1(outer1_2[6]);
+                        closure_1_6.error("failed to cancel order signing", obj6);
+                        let obj12 = closure_1_1(closure_1_2[6]);
                         const obj7 = { type: "ORDER_CANCEL_SIGNING_FAIL", orderId: null };
                         obj7[1] = closure_0;
                         c4 = 3;
@@ -1610,13 +1582,13 @@ function _cancelOrderSigning() {
                           throw arg1;
                         } else if (arg0 === 2) {
                           c3 = 0;
-                          outer1_20.delete(outer1_0);
+                          closure_1_20.delete(closure_1_0);
                           c5 = 3;
                           const obj9 = { value: null, done: true };
                           obj9[0] = arg1;
                           return obj9;
                         } else {
-                          throw outer1_1;
+                          throw closure_1_1;
                         }
                       } else if (4 === tmp8) {
                         if (arg0 === 1) {
@@ -1624,7 +1596,7 @@ function _cancelOrderSigning() {
                           throw arg1;
                         } else if (arg0 === 2) {
                           c3 = 0;
-                          outer1_20.delete(outer1_0);
+                          closure_1_20.delete(closure_1_0);
                           c5 = 3;
                           const obj10 = { value: null, done: true };
                           obj10[0] = arg1;
@@ -1638,8 +1610,8 @@ function _cancelOrderSigning() {
                           } else {
                             const obj11 = { orderId: null };
                             obj11[0] = closure_0;
-                            outer1_6.info("cancel order signing, transitioned back to DRAFT", obj11);
-                            obj3 = outer1_1(outer1_2[6]);
+                            closure_1_6.info("cancel order signing, transitioned back to DRAFT", obj11);
+                            obj3 = closure_1_1(closure_1_2[6]);
                             obj12 = { type: "ORDER_CANCEL_SIGNING_SUCCESS", orderId: null };
                             obj12[1] = closure_0;
                             c4 = 5;
@@ -1654,14 +1626,14 @@ function _cancelOrderSigning() {
                         throw arg1;
                       } else if (arg0 === 2) {
                         c3 = 0;
-                        outer1_20.delete(closure_0);
+                        closure_1_20.delete(closure_0);
                         c5 = 3;
                         const obj14 = { value: null, done: true };
                         obj14[0] = arg1;
                         return obj14;
                       } else {
                         c3 = 0;
-                        outer1_20.delete(closure_0);
+                        closure_1_20.delete(closure_0);
                         c5 = 3;
                         obj = { value: null, done: true };
                         obj[0] = closure_0.body;
@@ -1687,7 +1659,7 @@ function _cancelOrderSigning() {
                 obj3[0] = tmp6;
                 return obj3;
               }
-              obj10 = outer1_20;
+              obj10 = closure_1_20;
             }
           } else if (1 === tmp4) {
             if (arg0 === 1) {
@@ -1725,7 +1697,7 @@ function _cancelOrderSigning() {
       }
     })();
   });
-  const _cancelOrderSigning = tmp;
+  closure_22 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1734,11 +1706,11 @@ function _cancelOrderSigning() {
   }
   return applyArgumentsResult;
 }
-const tmp2 = new require("timestamp")("OrderActionCreators");
+const tmp2 = new timestampDefault("OrderActionCreators");
 let closure_6 = tmp2;
 let c11 = null;
 const map = new Map();
-let result = require("ME").fileFinishedImporting("modules/payments/native/OrderActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/payments/native/OrderActionCreators.tsx");
 
 export const logger = tmp2;
 export const DRAFT_ORDER_LOOKBACK_DAYS = 3;
@@ -1795,7 +1767,7 @@ export const cancelSigningAndDiscardOrder = function cancelSigningAndDiscardOrde
   }
   return applyArgumentsResult;
 };
-export const markOrderAsSigningInProgress = function markOrderAsSigningInProgress(orderId) {
+export const markOrderAsSigningInProgress = function markOrderAsSigningInProgress(closure_1_11) {
   const self = this;
   const apply = _markOrderAsSigningInProgress.apply;
   if (typeof apply === "unknown") {

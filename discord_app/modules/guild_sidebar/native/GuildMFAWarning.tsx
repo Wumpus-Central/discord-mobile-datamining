@@ -1,22 +1,19 @@
 // discord_app/modules/guild_sidebar/native/GuildMFAWarning.tsx
-import closure_3 from "createCacheKey";
-import "noop";
-import { Image } from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/15462_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import map from "map" /* 9288 */;
+import registerAssetDefault from "registerAsset" /* 15462 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function handlePress() {
   const self = this;
   const apply = _handlePress.apply;
@@ -61,8 +58,8 @@ function _handlePress() {
             articleURL = undefined;
             paths = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(paths[9])(paths[8], paths.paths);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0(paths[9])(paths[8], paths.paths);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -86,7 +83,7 @@ function _handlePress() {
       }
     }
   });
-  const _handlePress = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -95,27 +92,27 @@ function _handlePress() {
   }
   return applyArgumentsResult;
 }
+noopAll;
 ({ HelpdeskArticles: c5, Fonts } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { MFAWarning: null, MFAWarningIcon: null, MFAWarningLink: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 10, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: 10, width: 98, height: 53 };
-createCacheKey[2] = { color: require("Themes").unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
+createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { color: ThemesDefault.unsafe_rawColors.BLUE_345, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/GuildMFAWarning.tsx");
 
 export default function GuildMFAWarning() {
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = { accessibilityRole: "button", style: tmp.MFAWarning, onPress: handlePress, children: null };
-  obj = { style: tmp.MFAWarningIcon, source: null };
-  obj[1] = registerAsset;
+  obj = { style: tmp.MFAWarningIcon, source: registerAssetDefault };
   const items = [callback2(Image, obj), ];
   obj = { variant: "text-xs/medium", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   const items1 = [intl.string(getSystemLocale.t.ZIf8Ag), ];
-  const obj1 = { style: tmp.MFAWarningLink, children: null };
+  obj1 = { style: tmp.MFAWarningLink, children: null };
   const intl2 = getSystemLocale.intl;
   const items2 = [" ", intl2.string(getSystemLocale.t.hvVgAZ)];
   obj1[1] = items2;

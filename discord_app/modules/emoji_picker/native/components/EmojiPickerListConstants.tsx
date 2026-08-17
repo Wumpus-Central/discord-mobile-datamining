@@ -1,6 +1,9 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListConstants.tsx
-const result = 2 * require("ExpressionPickerViewType").PADDING_VERTICAL;
-const result1 = require("set").fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListConstants.tsx");
+import set from "set" /* 2 */;
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
+
+const result = 2 * ExpressionPickerViewType.PADDING_VERTICAL;
+const result1 = set.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListConstants.tsx");
 
 export const IMAGE_SIZE = 33;
 export const LABEL_TOP_PADDING = 8;

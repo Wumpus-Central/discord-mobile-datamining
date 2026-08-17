@@ -1,39 +1,34 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_6, AnalyticsSections: error } = ME);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { background: null, content: null, iosPaddingThemeAdjust: null, container: null, inputContainer: null, headerText: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let obj1 = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[2] = { paddingTop: require("Themes").space.PX_40 };
-const obj2 = { paddingTop: require("Themes").space.PX_40 };
-createCacheKey[3] = { flexGrow: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: require("Themes").space.PX_16 };
-let obj3 = { flexGrow: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
+createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_40 };
+const obj2 = { paddingTop: ThemesDefault.space.PX_40 };
+createCacheKey[3] = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj3 = { flexGrow: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
 createCacheKey[5] = { textTransform: "none" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj4 = { marginTop: require("Themes").space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
-const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+const obj4 = { marginTop: ThemesDefault.space.PX_16, backgroundColor: "transparent", paddingHorizontal: 0 };
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/UsernameSearchScreen.tsx");
 
 export default function UsernameSearchScreen(navigation) {
   navigation = navigation.navigation;
   let ref;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const effect = React.useEffect(() => {
     let obj = ref(table[6]);
     obj = { friend_add_type: constants2.FRIENDS_ADD_BY_USERNAME_MODAL };
@@ -45,8 +40,8 @@ export default function UsernameSearchScreen(navigation) {
   const effect1 = React.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     let closing = data.data.closing;
     if (!closing) {
-      closing = outer1_0(outer1_2[8]).getIsScreenReaderEnabled();
-      const obj = outer1_0(outer1_2[8]);
+      closing = closure_1_0(closure_1_2[8]).getIsScreenReaderEnabled();
+      const obj = closure_1_0(closure_1_2[8]);
     }
     if (!closing) {
       const current = ref.current;
@@ -57,7 +52,7 @@ export default function UsernameSearchScreen(navigation) {
   }), items);
   let obj = navigation(8501);
   const clientThemesOverride = obj.useClientThemesOverride();
-  let obj1 = navigation(500);
+  obj1 = navigation(500);
   let prop = null;
   if (obj1.isIOS()) {
     prop = null;

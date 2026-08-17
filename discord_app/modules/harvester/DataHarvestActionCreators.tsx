@@ -1,13 +1,15 @@
 // discord_app/modules/harvester/DataHarvestActionCreators.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { saveProfileAndAccountRequest } from "../../actions/UserSettingsAccountActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import saveProfileAndAccountRequest from "saveProfileAndAccountRequest" /* 8620 */;
 
-const result = require("sendRequest").fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/harvester/DataHarvestActionCreators.tsx");
 
 export const getDataHarvestStatus = function getDataHarvestStatus() {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj.dispatch({ type: "LOAD_DATA_HARVEST_TYPE_START" });
   const HTTP = sendRequest.HTTP;
   obj = { url: Endpoints.USER_HARVEST, oldFormErrors: true, rejectWithError: false };

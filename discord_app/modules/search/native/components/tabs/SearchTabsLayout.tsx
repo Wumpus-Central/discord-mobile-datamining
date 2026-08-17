@@ -1,43 +1,37 @@
 // discord_app/modules/search/native/components/tabs/SearchTabsLayout.tsx
-import importAllResult from "LegacyBaseButton";
-import { View } from "useSearchSegmentedControlState";
-import handleReaction from "handleReaction";
-import prototype from "prototype";
-import handleSearchQuery from "handleSearchQuery";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { ComponentActions } from "ME";
-import jsxProd from "module_11534";
-import createCacheKey from "createCacheKey";
-import apply from "getSystemLocale";
-import { Tracking } from "../../tracking/Tracking.tsx";
-import { ErrorScreen } from "pages/ErrorScreen.tsx";
+import _modDef11531 from "module_11531" /* 11531 */;
+import _modDef15862 from "module_15862" /* 15862 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleReaction" /* 4971 */;
+import closure_6 from "prototype" /* 11510 */;
+import closure_7 from "handleSearchQuery" /* 11535 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import { ComponentActions } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import apply from "apply" /* 12 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let map1;
-let metroImportAll;
 const require = arg1;
 function NoSearchResultsScreen(searchContext) {
   searchContext = searchContext.searchContext;
   const items = [searchContext];
   const effect = importAllResult.useEffect(() => {
-    let obj = outer1_1(outer1_2[10]);
+    let obj = closure_1_1(closure_1_2[10]);
     obj = { searchContext };
     const result = obj.trackSearchEmptyResult(obj);
   }, items);
   let obj = { text: null };
   const intl = searchContext(1236).intl;
   obj[0] = intl.string(searchContext(1236).t.V6nAfF);
-  return callback(ErrorScreen, obj);
+  return callback(_modDef15862, obj);
 }
 let c3 = importAllResult;
-({ MESSAGE_SEARCH_RESULT_TABS_SET: metroImportAll, SEARCH_MESSAGE_TAB_SENTINEL: c9, SearchTabs: c10 } = MessageEmbedTypes);
+({ MESSAGE_SEARCH_RESULT_TABS_SET: closure_8, SEARCH_MESSAGE_TAB_SENTINEL: c9, SearchTabs: c10 } = MessageEmbedTypes);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles({ controls: { flex: 0, minHeight: 32 }, pages: { flex: 1 } });
 let closure_16 = apply.debounce((searchContext) => {
-  let obj = Tracking;
+  let obj = _modDef11531;
   obj = { searchContext };
   return obj.trackSearchTabSelected(obj);
 }, 500);
@@ -45,14 +39,12 @@ let closure_18 = { code: "function SearchTabsLayoutTsx1({contentOffset:contentOf
 let closure_19 = { code: "function SearchTabsLayoutTsx2(){const{isDragging,disallowMemberListGesture}=this.__closure;var _disallowMemberListGe;isDragging.set(false);(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(false);}" };
 let closure_20 = { code: "function SearchTabsLayoutTsx3({contentOffset:contentOffset}){const{isDragging,disallowMemberListGesture}=this.__closure;if(isDragging.get()){var _disallowMemberListGe;(_disallowMemberListGe=disallowMemberListGesture)===null||_disallowMemberListGe===void 0||_disallowMemberListGe.set(contentOffset.x>0);}}" };
 let closure_21 = importAllResult.memo((searchContext) => {
-  let segmentedControlState;
-  let selectedTab;
   searchContext = searchContext.searchContext;
   let visibleTabs = searchContext;
   visibleTabs = searchContext.visibleTabs;
   let setActiveIndex = visibleTabs;
   const visibleTabCounts = searchContext.visibleTabCounts;
-  let dependencyMap = visibleTabCounts;
+  dependencyMap = visibleTabCounts;
   const width = searchContext.width;
   selectedTab = undefined;
   setActiveIndex = undefined;
@@ -71,14 +63,12 @@ let closure_21 = importAllResult.memo((searchContext) => {
   const memo = width.useMemo(() => {
     const items = [];
     const item = setActiveIndex.forEach((tab) => {
-      let obj = { label: null, id: null, page: null, count: null };
-      obj[0] = visibleTabs(11511).getTabTitle(tab);
-      obj[1] = tab;
-      obj = { tab, searchContext: items, width: outer1_3 };
+      let obj = { label: visibleTabs(11511).getTabTitle(tab), id: tab, page: null, count: null };
+      obj = { tab, searchContext: items, width: closure_1_3 };
       obj[2] = sharedValue(setActiveIndex(15863), obj);
       let tmp2;
-      if (outer1_2 != null) {
-        tmp2 = outer1_2[tab];
+      if (closure_1_2 != null) {
+        tmp2 = closure_1_2[tab];
       }
       obj[3] = tmp2;
       items.push(obj);
@@ -87,7 +77,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
   }, items);
   const callback = width.useCallback((arg0) => {
     setActiveIndex(ref[15]).setSelectedTab(visibleTabs, arg0);
-    outer1_16(visibleTabs);
+    closure_1_16(visibleTabs);
     const queryString = callback1.getQueryString(visibleTabs);
     const obj = setActiveIndex(ref[15]);
     const tmp = setActiveIndex;
@@ -109,7 +99,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
       const tmpResult = tmp(tmp2[16]);
     }
   }, items1);
-  let obj1 = visibleTabs(15938);
+  obj1 = visibleTabs(15938);
   const searchSegmentedControlState = obj1.useSearchSegmentedControlState({ items: memo, visibleTabs, onSelectedTabChange: callback, width });
   ({ segmentedControlState, selectedTab } = searchSegmentedControlState);
   setActiveIndex = segmentedControlState.setActiveIndex;
@@ -144,7 +134,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
   sharedValue = visibleTabs(4115).useSharedValue(false);
   class D {
     constructor(arg0) {
-      result = useCallback.set(true);
+      result = closure_12.set(true);
       obj = disallowGesture;
       if (disallowGesture != null) {
         num = 0;
@@ -159,7 +149,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
   const items5 = [disallowGesture, sharedValue];
   class G {
     constructor() {
-      result = useCallback.set(false);
+      result = closure_12.set(false);
       obj = disallowGesture;
       if (disallowGesture != null) {
         result1 = obj.set(false);
@@ -174,7 +164,7 @@ let closure_21 = importAllResult.memo((searchContext) => {
   callback2 = obj.useCallback(D, items5);
   class A {
     constructor(arg0) {
-      if (useCallback.get()) {
+      if (closure_12.get()) {
         obj = disallowGesture;
         tmp = null;
         if (disallowGesture != null) {
@@ -276,17 +266,14 @@ let closure_21 = importAllResult.memo((searchContext) => {
   }
   return tmp25Result;
 });
-let result = require("handleReaction").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsLayout.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/SearchTabsLayout.tsx");
 
 export default function ConnectedSearchTabsLayout(width) {
-  let candidateTabs;
-  let visibleTabCounts;
-  let visibleTabs;
   const searchContext = width.searchContext;
   candidateTabs = undefined;
-  const items = [handleSearchQuery];
+  const items = [closure_7];
   const items1 = [searchContext];
-  const stateFromStoresObject = searchContext(589).useStateFromStoresObject(items, () => ({ visibleTabs: outer1_7.getVisibleTabs(searchContext), visibleTabCounts: outer1_7.getVisibleTabCounts(searchContext), candidateTabs: outer1_7.getCandidateTabs(searchContext) }), items1);
+  const stateFromStoresObject = searchContext(589).useStateFromStoresObject(items, () => ({ visibleTabs: closure_1_7.getVisibleTabs(searchContext), visibleTabCounts: closure_1_7.getVisibleTabCounts(searchContext), candidateTabs: closure_1_7.getCandidateTabs(searchContext) }), items1);
   ({ visibleTabs, visibleTabCounts, candidateTabs } = stateFromStoresObject);
   const items2 = [candidateTabs];
   const memo = importAllResult.useMemo(() => new Set(candidateTabs), items2);

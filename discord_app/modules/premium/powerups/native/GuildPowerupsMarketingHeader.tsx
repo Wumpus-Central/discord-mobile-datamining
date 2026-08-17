@@ -1,43 +1,45 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useHasAllocateBoostPermission } from "../hooks/useHasAllocateBoostPermission.tsx";
-import { set } from "../hooks/useMarketablePowerupPerks.tsx";
+import nDefault from "n" /* 689 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11682 */;
+import setDefault from "set" /* 13010 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function PerkText(children) {
   return jsx(Text.Text, { color: "text-overlay-light", variant: "text-sm/semibold", children: children.powerup.title });
 }
 createCacheKey = { container: null, text: null };
-createCacheKey = { padding: require("Themes").space.PX_12, backgroundColor: null };
-let obj4 = require("n")("#000000");
-createCacheKey[1] = require("n")("#000000").alpha(0.18).hex();
+createCacheKey = { padding: ThemesDefault.space.PX_12, backgroundColor: null };
+let obj4 = nDefault("#000000");
+createCacheKey[1] = nDefault("#000000").alpha(0.18).hex();
 createCacheKey[0] = createCacheKey;
 let obj1 = { textAlign: "center", color: null };
-const alphaResult = require("n")("#000000").alpha(0.18);
-const obj7 = require("n")("#FFFFFF");
-obj1[1] = require("n")("#FFFFFF").alpha(0.5).hex();
+const alphaResult = nDefault("#000000").alpha(0.18);
+const obj7 = nDefault("#FFFFFF");
+obj1[1] = nDefault("#FFFFFF").alpha(0.5).hex();
 createCacheKey[1] = obj1;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const alphaResult1 = require("n")("#FFFFFF").alpha(0.5);
-const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const alphaResult1 = nDefault("#FFFFFF").alpha(0.5);
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMarketingHeader.tsx");
 
 export default function GuildPowerupsMarketingHeader(guild) {
   guild = guild.guild;
-  const tmp = createCacheKey();
-  const arr = set(guild.id);
+  const tmp = callback();
+  const arr = setDefault(guild.id);
   const items = [guild.id];
   const effect = React.useEffect(() => {
-    if (outer1_5.shouldFetchCatalogForGuild(guild.id)) {
-      const powerupCatalogForGuild = guild(outer1_2[9]).fetchPowerupCatalogForGuild(guild.id);
-      const obj = guild(outer1_2[9]);
+    if (closure_1_5.shouldFetchCatalogForGuild(guild.id)) {
+      const powerupCatalogForGuild = guild(closure_1_2[9]).fetchPowerupCatalogForGuild(guild.id);
+      const obj = guild(closure_1_2[9]);
     }
   }, items);
-  if (useHasAllocateBoostPermission(guild.id)) {
+  if (useHasAllocateBoostPermissionDefault(guild.id)) {
     let num;
     if (arr != null) {
       num = arr.length;
@@ -63,7 +65,7 @@ export default function GuildPowerupsMarketingHeader(guild) {
             let formatResult = tmp6(PerkText, obj);
           } else {
             const intl2 = guild(1236).intl;
-            const obj1 = { perk1: null, perk2: null };
+            obj1 = { perk1: null, perk2: null };
             const obj2 = { powerup: null };
             obj2[0] = first[0];
             obj1[0] = tmp6(PerkText, obj2);

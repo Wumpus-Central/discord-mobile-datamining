@@ -1,12 +1,13 @@
 // discord_app/modules/directory_channels/GuildDirectoryUtils.tsx
-import { DirectoryEntryTypes } from "DirectoryEntryTypes";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import set2 from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import _modDef38 from "module_38" /* 38 */;
+import DirectoryEntryTypes2 from "DirectoryEntryTypes" /* 11472 */;
 
-const result = require("apply").fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
+const DirectoryEntryTypes = DirectoryEntryTypes2.DirectoryEntryTypes;
+const result = set2.fileFinishedImporting("modules/directory_channels/GuildDirectoryUtils.tsx");
 
 export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromServer(entry) {
-  let guild;
   if (entry.type === DirectoryEntryTypes.GUILD) {
     const obj = { channelId: null, guildId: null, type: null, authorId: null, createdAt: null, description: null, primaryCategoryId: null, name: null, icon: null, splash: null, features: null, approximateMemberCount: null, approximatePresenceCount: null, featurableInDirectory: null };
     ({ directory_channel_id: obj[0], entity_id: obj[1], type: obj[2], author_id: obj[3], created_at: obj[4], description: obj[5], primary_category_id: obj[6], guild } = entry);
@@ -55,25 +56,25 @@ export const guildDirectoryEntryFromServer = function guildDirectoryEntryFromSer
     return obj;
   } else {
     const type = entry.type;
-    00038__(false, "Directory entries must be connected to a guild!");
+    _modDef38(false, "Directory entries must be connected to a guild!");
   }
 };
 export const MAX_CATEGORY_SERVERS = 5;
 export const orderByTotalMemberCount = function orderByTotalMemberCount(found) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return apply.orderBy(found, items, ["desc"]);
+  return applyDefault.orderBy(found, items, ["desc"]);
 };
 export const orderByDateAdded = function orderByDateAdded(reactions) {
   const items = [(createdAt) => createdAt.createdAt];
-  return apply.orderBy(reactions, items, ["desc"]);
+  return applyDefault.orderBy(reactions, items, ["desc"]);
 };
 export const rankByDateAdded = function rankByDateAdded(arr) {
   const found = arr.filter((featurableInDirectory) => featurableInDirectory.featurableInDirectory);
   const items = [(createdAt) => createdAt.createdAt];
-  const obj = apply;
-  return apply.orderBy(found, items, ["desc"]).slice(0, 5);
+  const obj = applyDefault;
+  return applyDefault.orderBy(found, items, ["desc"]).slice(0, 5);
 };
 export const rankGuildEntries = function rankGuildEntries(arr) {
   const items = [(approximateMemberCount) => approximateMemberCount.approximateMemberCount];
-  return apply.orderBy(arr, items, ["desc"]);
+  return applyDefault.orderBy(arr, items, ["desc"]);
 };

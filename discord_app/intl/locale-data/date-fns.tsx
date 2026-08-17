@@ -1,5 +1,5 @@
 // discord_app/intl/locale-data/date-fns.tsx
-import importDefaultResult from "code";
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 const obj = { bg: null, cs: null, da: null, de: null, el: null, "en-GB": null, "en-US": null, "es-ES": null, "es-419": null, fi: null, fr: null, hr: null, hu: null, it: null, ja: null, ko: null, lt: null, nl: null, no: null, pl: null, "pt-BR": null, ro: null, ru: null, "sv-SE": null, th: null, tr: null, uk: null, vi: null, "zh-CN": null, "zh-TW": null, hi: null };
@@ -437,6 +437,6 @@ obj[30] = function() {
   }
   return applyArgumentsResult;
 };
-const result = require("asyncRequireImpl").fileFinishedImporting("intl/locale-data/date-fns.tsx");
+const result = require("set").fileFinishedImporting("intl/locale-data/date-fns.tsx");
 
 export const dateFnsLocales = obj;

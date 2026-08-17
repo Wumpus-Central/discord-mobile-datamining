@@ -1,5 +1,7 @@
 // discord_app/utils/FunctionUtils.tsx
-const result = require("set").fileFinishedImporting("utils/FunctionUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/FunctionUtils.tsx");
 
 export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, arg1) {
   if (arg0 === arg1) {
@@ -23,9 +25,9 @@ export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, ar
   }
 };
 export function cachedFunction(arg0) {
-  let closure_0 = arg0;
-  let c1 = null;
-  let c2 = null;
+  closure_0 = arg0;
+  c1 = null;
+  c2 = null;
   return () => {
     const items = [...arguments];
     let flag = true;
@@ -56,7 +58,7 @@ export function cachedFunction(arg0) {
     if (!flag) {
       const items1 = [];
       HermesBuiltin.arraySpread(items, 0);
-      let closure_2 = HermesBuiltin.apply(items1, undefined);
+      closure_2 = HermesBuiltin.apply(items1, undefined);
     }
     return closure_2;
   };

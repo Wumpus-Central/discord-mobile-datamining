@@ -1,44 +1,40 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
-import asyncRequireImpl from "asyncRequireImpl";
-import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
-import handleFormInit from "handleFormInit";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "comparator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CREATE_NEW_CHANNEL_VALUE } from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
-import { ChannelTypes } from "ME";
-import jsxProd from "EnableCommunityModalSteps";
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "handleFormInit" /* 8875 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "comparator" /* 1980 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_9 } from "comparator" /* 1980 */;
+import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import { CREATE_NEW_CHANNEL_VALUE } from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8254 */;
+import { ChannelTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_14;
-let closure_15;
 const require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const result = require("handleFormInit").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx");
 
 export default function ChannelSetupScreen() {
   let obj = callback;
   const ref = callback.useRef(null);
-  let obj1 = guild(publicUpdatesChannel[10]);
+  obj1 = guild(publicUpdatesChannel[10]);
   const token = obj1.useToken(rulesChannel(publicUpdatesChannel[11]).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(publicUpdatesChannel[12]);
   const enableCommunitySharedStyles = obj2.useEnableCommunitySharedStyles();
   let obj3 = guild(publicUpdatesChannel[13]);
-  let items = [handleFormInit];
+  let items = [closure_6];
   guild = obj3.useStateFromStoresObject(items, () => props.getProps()).guild;
   let obj4 = guild(publicUpdatesChannel[13]);
-  let items1 = [ensureGuildLoaded];
+  let items1 = [closure_7];
   const stateFromStoresObject = obj4.useStateFromStoresObject(items1, () => {
-    let obj = outer1_7;
+    let obj = closure_1_7;
     let rulesChannelId;
     if (guild != null) {
       rulesChannelId = tmp.rulesChannelId;
     }
-    obj = { rulesChannel: outer1_7.getChannel(rulesChannelId), publicUpdatesChannel: null };
+    obj = { rulesChannel: closure_1_7.getChannel(rulesChannelId), publicUpdatesChannel: null };
     let prop;
     if (guild != null) {
       prop = tmp.publicUpdatesChannelId;
@@ -68,20 +64,19 @@ export default function ChannelSetupScreen() {
     if (guild != null) {
       id = guild.id;
     }
-    const channels = outer1_8.getChannels(id);
-    let obj = { value: outer1_12, label: null };
+    const channels = closure_1_8.getChannels(id);
+    let obj = { value: closure_1_12, label: null };
     const intl = guild(publicUpdatesChannel[15]).intl;
     obj[1] = intl.string(guild(publicUpdatesChannel[15]).t.Cla0re);
     let items = [];
     if (null != channels) {
-      const found = channels[outer1_9].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
+      const found = channels[closure_1_9].filter((channel) => channel.channel.type === constants.GUILD_TEXT);
       items = found.map((channel) => {
         channel = channel.channel;
-        const obj = { value: channel.id, label: null };
-        obj[1] = callback(table[14]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true);
+        const obj = { value: channel.id, label: callback(table[14]).computeChannelName(channel, closure_11, closure_10, true) };
         return obj;
       });
-      const arr2 = channels[outer1_9];
+      const arr2 = channels[closure_1_9];
     }
     const items1 = [obj, ...items];
     return items1;
@@ -105,7 +100,7 @@ export default function ChannelSetupScreen() {
       id = rulesChannel.id;
     }
     if (id == null) {
-      id = outer1_12;
+      id = closure_1_12;
     }
     obj[3] = id;
     obj.openLazy(guild(publicUpdatesChannel[19])(publicUpdatesChannel[18], publicUpdatesChannel.paths), "SelectRulesChannel", obj);
@@ -127,13 +122,12 @@ export default function ChannelSetupScreen() {
       id = publicUpdatesChannel.id;
     }
     if (id == null) {
-      id = outer1_12;
+      id = closure_1_12;
     }
     obj[3] = id;
     obj.openLazy(guild(publicUpdatesChannel[19])(publicUpdatesChannel[18], publicUpdatesChannel.paths), "SelectUpdatesChannel", obj);
   }, items4);
-  obj = { headerRef: ref, disableNextStep: false, currentStep: null, children: null };
-  obj[2] = guild(publicUpdatesChannel[21]).EnableCommunityModalSteps.STEP_2;
+  obj = { headerRef: ref, disableNextStep: false, currentStep: tmp2(tmp3[21]).EnableCommunityModalSteps.STEP_2, children: null };
   obj = { style: enableCommunitySharedStyles.content, children: null };
   obj1 = { ref, accessibilityRole: "header", variant: "text-md/semibold", color: "text-subtle", children: null };
   const intl3 = tmp2(tmp3[15]).intl;

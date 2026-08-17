@@ -1,16 +1,17 @@
 // discord_app/modules/premium/promotions/PromotionsManager.tsx
-import GuildFeatures from "GuildFeatures";
-import _getSystemLocale from "_getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import createEmptyPromotionsByType from "createEmptyPromotionsByType";
-import { PremiumTypes } from "GuildFeatures";
-import { EntitlementTypes } from "ME";
-import { SubscriptionTypes } from "sum";
-import "initialize";
-import { fetchActivePromotions } from "PromotionsActionCreators.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import fetchActivePromotions from "fetchActivePromotions" /* 7928 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "reset" /* 4045 */;
+import closure_7 from "createEmptyPromotionsByType" /* 7628 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { EntitlementTypes } from "ME" /* 676 */;
+import { SubscriptionTypes } from "sum" /* 505 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class PromotionsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,14 +20,14 @@ class PromotionsManager extends tmp2 {
     applyArgumentsResult.actions = obj;
     map = new Map();
     onLocaleChanged = applyArgumentsResult.onLocaleChanged;
-    result = map.set(_getSystemLocale, onLocaleChanged.bind(applyArgumentsResult));
+    result = map.set(closure_4, onLocaleChanged.bind(applyArgumentsResult));
     onSubscriptionStateChanged = applyArgumentsResult.onSubscriptionStateChanged;
-    result1 = result.set(reset, onSubscriptionStateChanged.bind(applyArgumentsResult));
+    result1 = result.set(closure_6, onSubscriptionStateChanged.bind(applyArgumentsResult));
     onPromotionsFetchSettled = applyArgumentsResult.onPromotionsFetchSettled;
-    applyArgumentsResult.stores = result1.set(createEmptyPromotionsByType, onPromotionsFetchSettled.bind(applyArgumentsResult));
+    applyArgumentsResult.stores = result1.set(closure_7, onPromotionsFetchSettled.bind(applyArgumentsResult));
     applyArgumentsResult.lastSubscriptionStateSignature = null;
     applyArgumentsResult.hasPendingSubscriptionRefetch = false;
-    applyArgumentsResult.maybeFetchBogoPromotion = GuildFeatures(function*() {
+    applyArgumentsResult.maybeFetchBogoPromotion = closure_3(function*() {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -53,17 +54,17 @@ class PromotionsManager extends tmp2 {
               obj[0] = arg1;
               return obj;
             } else {
-              const currentUser = outer1_5.getCurrentUser();
-              if (!obj6.isPremiumExactly(currentUser, outer1_8.TIER_2)) {
-                let obj1 = v0(tmp15[11]);
+              const currentUser = closure_1_5.getCurrentUser();
+              if (!obj6.isPremiumExactly(currentUser, closure_1_8.TIER_2)) {
+                obj1 = v0(tmp15[11]);
                 v02 = 1;
                 v0 = 1;
                 obj1 = { value: null, done: false };
                 obj1[0] = obj1.maybeFetchActiveBogoPromotion();
                 return obj1;
               }
-              obj6 = v02(outer1_2[10]);
-              tmp15 = outer1_2;
+              obj6 = v02(closure_1_2[10]);
+              tmp15 = closure_1_2;
             }
           } else if (arg0 === 1) {
             v0 = 3;
@@ -91,9 +92,9 @@ prototype["_terminate"] = function _terminate() {
   this.lastSubscriptionStateSignature = null;
 };
 prototype["onLocaleChanged"] = function onLocaleChanged() {
-  let tmp = null != createEmptyPromotionsByType.lastFetchedActivePromotions;
+  let tmp = null != closure_7.lastFetchedActivePromotions;
   if (tmp) {
-    tmp = createEmptyPromotionsByType.lastFetchedActivePromotionsLocale !== locale.locale;
+    tmp = closure_7.lastFetchedActivePromotionsLocale !== locale.locale;
   }
   if (tmp) {
     const result = fetchActivePromotions.maybeFetchActivePromotions(false);
@@ -129,7 +130,7 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(outer1_2[9]);
+            obj1 = v0(closure_1_2[9]);
             const result = obj1.maybeFetchActivePromotions();
             c1 = 1;
             v0 = 1;
@@ -176,7 +177,7 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
   if (str !== this.lastSubscriptionStateSignature) {
     self.lastSubscriptionStateSignature = str;
     if (!tmp3) {
-      if (createEmptyPromotionsByType.isFetchingActivePromotions) {
+      if (closure_7.isFetchingActivePromotions) {
         self.hasPendingSubscriptionRefetch = true;
       } else {
         const result = fetchActivePromotions.maybeFetchActivePromotions(false);
@@ -187,7 +188,7 @@ prototype["onSubscriptionStateChanged"] = function onSubscriptionStateChanged() 
 };
 prototype["onPromotionsFetchSettled"] = function onPromotionsFetchSettled() {
   if (this.hasPendingSubscriptionRefetch) {
-    if (!createEmptyPromotionsByType.isFetchingActivePromotions) {
+    if (!closure_7.isFetchingActivePromotions) {
       tmp.hasPendingSubscriptionRefetch = false;
       const result = fetchActivePromotions.maybeFetchActivePromotions(false);
       const obj = fetchActivePromotions;
@@ -208,6 +209,6 @@ prototype["onVCRedeemed"] = function onVCRedeemed(entitlements) {
   }
 };
 const promotionsManager = new PromotionsManager();
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsManager.tsx");
 
 export default promotionsManager;

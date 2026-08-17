@@ -1,22 +1,14 @@
 // discord_app/modules/launchpad/native/shared/CutoutImage.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { Image } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 12128 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) {
-  let c1;
-  let imageBackgroundColor;
-  let imageBorderRadius;
-  let imageSize;
-  let imageSource;
-  let imageTintColor;
-  let tmp4;
   let num = cutoutTopLeftSize.cutoutTopLeftSize;
   if (num === undefined) {
     num = 0;
@@ -79,9 +71,9 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
     num15 = 0;
   }
   const borderStroke = cutoutTopLeftSize.borderStroke;
-  let importDefault;
+  importDefault = undefined;
   let obj = importAllResult;
-  let obj1 = imageTintColor(514);
+  obj1 = imageTintColor(514);
   [tmp4, c1] = callback(importAllResult.useState(obj1.v4()), 2);
   if (null != tmp4) {
     const _HermesInternal = HermesInternal;
@@ -98,12 +90,12 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
   }
   const items = [imageTintColor];
   callback = obj.useCallback(() => {
-    _undefined(imageTintColor(outer1_2[4]).v4());
+    _undefined(imageTintColor(closure_1_2[4]).v4());
   }, []);
   const layoutEffect = obj.useLayoutEffect(() => {
     if (null != imageTintColor) {
-      _undefined(imageTintColor(outer1_2[4]).v4());
-      const obj = imageTintColor(outer1_2[4]);
+      _undefined(imageTintColor(closure_1_2[4]).v4());
+      const obj = imageTintColor(closure_1_2[4]);
     }
   }, items);
   obj = { style: cutoutTopLeftSize.style, height: imageSize, width: imageSize, children: null };
@@ -206,7 +198,7 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
           const obj10 = { height: null, width: null, href: null, mask: null, clipPath: null };
           obj10[0] = imageSize;
           obj10[1] = imageSize;
-          obj10[2] = tmp13(12128)(imageSource);
+          obj10[2] = getReactNativeSVGImageSourceDefault(imageSource);
           obj10[3] = combined;
           obj10[4] = combined1;
           let tmp15Result5 = tmp15(tmp(6571).Image, obj10);
@@ -266,6 +258,6 @@ const memoResult = importAllResult.memo(function CutoutImage(cutoutTopLeftSize) 
     tmp15Result8 = tmp15(tmp(6571).Rect, obj18);
   }
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/launchpad/native/shared/CutoutImage.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/CutoutImage.tsx");
 
 export default memoResult;

@@ -1,6 +1,10 @@
 // discord_app/modules/user_settings/notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx
+import set from "set" /* 2 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 15056 */;
+import route from "route" /* 15057 */;
+
 const obj = {};
-obj[require("MobileNotifSettings").MobileNotifSettings.VOICE_ACTIVITY_TITLE] = require("route").VoiceActivityTitleSetting;
-const result = require("set").fileFinishedImporting("modules/user_settings/notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx");
+obj[MobileNotifSettings.MobileNotifSettings.VOICE_ACTIVITY_TITLE] = route.VoiceActivityTitleSetting;
+const result = set.fileFinishedImporting("modules/user_settings/notifications/native/codegen/MobileNotifSettingsRendererConfig.tsx");
 
 export const MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG = obj;

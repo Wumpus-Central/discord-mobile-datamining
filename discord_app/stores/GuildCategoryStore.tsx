@@ -1,17 +1,14 @@
 // discord_app/stores/GuildCategoryStore.tsx
-import initializeFromUserSettings from "initializeFromUserSettings";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import closure_7 from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "initializeFromUserSettings" /* 1394 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import comparator from "comparator" /* 1980 */;
+import closure_7 from "comparator" /* 1980 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
 function setIndex(arg0, index) {
   arg0.index = index;
 }
@@ -43,7 +40,7 @@ function rebuildGuild(arg0) {
   return obj;
 }
 function handleConnectionOpen() {
-  let closure_12 = {};
+  closure_12 = {};
   if (null != c11) {
     function updateChannel(channel) {
       channel = channel.channel;
@@ -190,7 +187,7 @@ function handleGuildRoleUpdate(guildId) {
   }
 }
 function updateSelectedVoiceChannel(channel, channelId) {
-  let closure_13 = channelId;
+  closure_13 = channelId;
   if (null != channel) {
     if (null != channel.getGuildId()) {
       const guildId = channel.getGuildId();
@@ -269,12 +266,13 @@ let c11 = null;
 let closure_12 = {};
 let c13 = null;
 let closure_14 = { _categories: [], null: [] };
+const Store = initializeDefault.Store;
 class GuildCategoryStore extends Store {
 }
 const prototype = GuildCategoryStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(closure_7, createGuildRecordFromRust, fetchFingerprint, ensureGuildLoaded, initializeFromUserSettings);
-  const items = [initializeFromUserSettings];
+  this.waitFor(closure_7, closure_8, closure_3, closure_4, closure_2);
+  const items = [closure_2];
   this.syncWith(items, handleFavoritesUpdate);
 };
 prototype["getCategories"] = function getCategories(arg0) {
@@ -320,14 +318,14 @@ prototype["getCategories"] = function getCategories(arg0) {
   return tmp;
 };
 GuildCategoryStore.displayName = "GuildCategoryStore";
-const guildCategoryStore = new GuildCategoryStore(require("dispatcher"), {
+const guildCategoryStore = new GuildCategoryStore(dispatcherDefault, {
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
     guildId = guildId.guildId;
     let tmp = guildId;
     if (guildId == null) {
       tmp = null;
     }
-    let c11 = tmp;
+    c11 = tmp;
     let tmp2 = null != guildId;
     if (tmp2) {
       if (null == dependencyMap[guildId]) {
@@ -498,6 +496,6 @@ const guildCategoryStore = new GuildCategoryStore(require("dispatcher"), {
     }, false);
   }
 });
-const result = require("ensureGuildLoaded").fileFinishedImporting("stores/GuildCategoryStore.tsx");
+const result = require("set").fileFinishedImporting("stores/GuildCategoryStore.tsx");
 
 export default guildCategoryStore;

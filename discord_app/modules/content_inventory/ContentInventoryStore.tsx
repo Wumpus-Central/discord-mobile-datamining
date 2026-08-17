@@ -1,12 +1,14 @@
 // discord_app/modules/content_inventory/ContentInventoryStore.tsx
-import { Store } from "initialize";
-import { isMatchingListeningActivity } from "matchUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isMatchingListeningActivity from "isMatchingListeningActivity" /* 9046 */;
 
-const require = arg1;
+require = arg1;
 let map = new Map();
 const map1 = new Map();
 const map2 = new Map();
 let c6 = false;
+const Store = initializeDefault.Store;
 class ContentInventoryStore extends Store {
 }
 const prototype = ContentInventoryStore.prototype;
@@ -37,8 +39,6 @@ prototype["getDebugImpressionCappingDisabled"] = function getDebugImpressionCapp
   return c6;
 };
 prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
-  let activity;
-  let require;
   ({ activity, userId: require } = feedId);
   const feed = this.getFeed(feedId.feedId);
   if (null != feed) {
@@ -60,9 +60,9 @@ prototype["getMatchingInboxEntry"] = function getMatchingInboxEntry(feedId) {
   }
 };
 ContentInventoryStore.displayName = "ContentInventoryStore";
-const contentInventoryStore = new ContentInventoryStore(require("dispatcher"), {
+const contentInventoryStore = new ContentInventoryStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const map = new Map();
+    map = new Map();
   },
   CONTENT_INVENTORY_SET_FEED: function handleSetContentInventoryFeed(feedId) {
     feedId = feedId.feedId;
@@ -90,6 +90,6 @@ const contentInventoryStore = new ContentInventoryStore(require("dispatcher"), {
     closure_6 = !closure_6;
   }
 });
-let result = require("dispatcher").fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
+let result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryStore.tsx");
 
 export default contentInventoryStore;

@@ -1,10 +1,10 @@
 // discord_app/modules/applications/utils/ApplicationInstallUtils.tsx
-import getIndexKey from "getIndexKey";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { ApplicationIntegrationType } from "../../../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
+import closure_2 from "getIndexKey" /* 8448 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
 
-const require = arg1;
-let result = require("ApplicationIntegrationType").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/applications/utils/ApplicationInstallUtils.tsx");
 
 export const canInstallApplication = function canInstallApplication(application) {
   const integrationTypesConfig = application.integrationTypesConfig;
@@ -69,9 +69,6 @@ export const isAppUserInstallable = function isAppUserInstallable(integrationTyp
   return tmp;
 };
 export const shouldInstallApplicationOnDemand = function shouldInstallApplicationOnDemand(arg0) {
-  let applicationId;
-  let channel;
-  let commandIntegrationTypes;
   ({ applicationId, channel, commandIntegrationTypes } = arg0);
   let tmp = null != commandIntegrationTypes;
   if (tmp) {
@@ -81,8 +78,8 @@ export const shouldInstallApplicationOnDemand = function shouldInstallApplicatio
   if (!tmp) {
     let tmp6 = applicationId !== BuiltInSectionId.BUILT_IN;
     if (tmp6) {
-      let obj = getIndexKey;
-      const result = getIndexKey.hasUserStateApplication(applicationId);
+      let obj = closure_2;
+      const result = closure_2.hasUserStateApplication(applicationId);
       let tmp8 = !result;
       if (!result) {
         let tmp9 = null == channel;

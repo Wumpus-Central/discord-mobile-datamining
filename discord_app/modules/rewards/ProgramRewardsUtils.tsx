@@ -1,13 +1,13 @@
 // discord_app/modules/rewards/ProgramRewardsUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PremiumTypes } from "GuildFeatures";
-import { isPast } from "../../../_runtime/03816_isPast.js";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { apexExperiment } from "../croissant/crepe/CrepeExperiment.tsx";
-import { PremiumRewardsOrbsTreatment } from "../premium/tenure_reward/experiments/PremiumRewardsOrbsExperiment.tsx";
-import { RewardProgram } from "ProgramRewardsTypes.tsx";
+import isPastDefault from "isPast" /* 3816 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import apexExperiment from "apexExperiment" /* 5315 */;
+import RewardProgram from "RewardProgram" /* 13275 */;
+import PremiumRewardsOrbsTreatment from "PremiumRewardsOrbsTreatment" /* 13278 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
+require = arg1;
 function canFetchNitroProgramReward(canUseMonthlyOrbs) {
   let str = canUseMonthlyOrbs;
   if (canUseMonthlyOrbs === undefined) {
@@ -60,7 +60,7 @@ function canFetchXboxProgramReward(canUseMonthlyOrbs) {
   return flag;
 }
 let closure_5 = { [arg1(13275).RewardProgram.NITRO]: canFetchNitroProgramReward, [arg1(13275).RewardProgram.XBOX]: canFetchXboxProgramReward };
-const result = require("isPast").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/rewards/ProgramRewardsUtils.tsx");
 
 export const isProgramRewardStale = function isProgramRewardStale(next_reward_date) {
   if (null == next_reward_date) {
@@ -74,8 +74,8 @@ export const isProgramRewardStale = function isProgramRewardStale(next_reward_da
     if (tmp) {
       const _Date = Date;
       const date = new Date(next_reward_date);
-      tmp = isPast(date);
-      const tmp4 = isPast;
+      tmp = isPastDefault(date);
+      const tmp4 = isPastDefault;
     }
     return tmp;
   }
@@ -105,7 +105,7 @@ export const useIsEligibleForProgramReward = function useIsEligibleForProgramRew
   const isCrepeEnabled = apexExperiment.useIsCrepeEnabled(str);
   if (RewardProgram.RewardProgram.NITRO === arg0) {
     return obj.usePremiumRewardsOrbsExperiment(str).isInTreatment;
-  } else if (tmp(13275).RewardProgram.XBOX === arg0) {
+  } else if (RewardProgram.RewardProgram.XBOX === arg0) {
     return isCrepeEnabled;
   } else {
     return false;

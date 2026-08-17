@@ -1,6 +1,8 @@
 // discord_app/modules/activities/utils/getIFrameSandboxAttributes.tsx
+import set from "set" /* 2 */;
+
 let closure_0 = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
-const result = require("set").fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getIFrameSandboxAttributes.tsx");
 
 export default function getIFrameSandboxAttributes(allowPopups) {
   let obj = closure_0;

@@ -1,7 +1,9 @@
 // discord_app/modules/connections/FederatedSocialUtils.tsx
-import { PlatformTypes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
+const PlatformTypes = ME.PlatformTypes;
+const result = set.fileFinishedImporting("modules/connections/FederatedSocialUtils.tsx");
 
 export const validateHandle = function validateHandle(first, platformType) {
   if (platformType === PlatformTypes.MASTODON) {

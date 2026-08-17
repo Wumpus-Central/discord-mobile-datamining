@@ -1,34 +1,29 @@
 // discord_app/modules/app_launcher/native/screens/app_list_view/AppLauncherViewAllScreen.tsx
-import useBottomSheetFlashListBottomViewabilityInset from "useBottomSheetFlashListBottomViewabilityInset";
-import { View } from "EntityBorderAppIcon";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "useAppLauncherFlashListProps";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
 let closure_6 = APP_LAUNCHER_BUILT_IN_SECTION_ICON.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { bottom: 4 };
 createCacheKey = { container: null, header: null, list: null, backButton: null };
-createCacheKey = { height: "100%", backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1, flexDirection: "column", paddingBottom: 12 };
+createCacheKey = { height: "100%", backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1, flexDirection: "column", paddingBottom: 12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
-createCacheKey[2] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: require("Themes").space.PX_4 };
-let obj2 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: require("Themes").space.PX_4 };
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
+let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", height: 24, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, paddingHorizontal: DEFAULT_CONTENT_PADDING, marginBottom: 12 };
+createCacheKey[2] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: ThemesDefault.space.PX_4 };
+const obj2 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { width: require("AppLauncherBackButton").BACK_BUTTON_SIZE, height: require("AppLauncherBackButton").BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { width: require("AppLauncherBackButton").BACK_BUTTON_SIZE, height: require("AppLauncherBackButton").BACK_BUTTON_SIZE, alignItems: "center", justifyContent: "center" };
-let result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/screens/app_list_view/AppLauncherViewAllScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/app_list_view/AppLauncherViewAllScreen.tsx");
 
 export default function AppLauncherViewAllScreen(route) {
-  let bottomVisibilityInsetRef;
-  let flashListRef;
-  let sectionName;
-  let sectionOverallPosition;
   const params = route.route.params;
   const context = params.context;
   const analyticsLocation = params.analyticsLocation;
@@ -40,12 +35,12 @@ export default function AppLauncherViewAllScreen(route) {
   const promotedApplicationIds = params.promotedApplicationIds;
   const navigation = route.navigation;
   sectionName = undefined;
-  let createCacheKey;
-  let c11;
+  let callback;
+  c11 = undefined;
   let chatInputRef;
   let keyboardCloseReasonRef;
   let entrypoint;
-  let callback;
+  callback = undefined;
   let callback1;
   let callback2;
   let callback4;
@@ -53,8 +48,8 @@ export default function AppLauncherViewAllScreen(route) {
   if (sectionName == null) {
     sectionName = "frecency_view_all";
   }
-  let tmp = createCacheKey();
-  createCacheKey = tmp;
+  let tmp = callback();
+  callback = tmp;
   const sum = analyticsLocation(sectionOverallPosition[7])().bottom + sectionDescriptors;
   c11 = sum;
   let obj = context(sectionOverallPosition[8]);
@@ -77,8 +72,6 @@ export default function AppLauncherViewAllScreen(route) {
   }, items);
   const items1 = [analyticsLocation, context, entrypoint, navigation];
   callback1 = applications.useCallback((arg0) => {
-    let application;
-    let sectionName;
     ({ application, sectionName } = arg0);
     let obj = context(sectionOverallPosition[9]);
     let APP_LAUNCHER_APPLICATION_VIEW_FRECENCT = analyticsLocation;
@@ -103,18 +96,14 @@ export default function AppLauncherViewAllScreen(route) {
   items3[3] = title;
   const items4 = [applications, promotedApplicationIds, callback1, sectionName];
   const memo = applications.useMemo(() => {
-    let obj = { style: _undefined.header, children: null };
-    obj = { style: _undefined.backButton, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
+    let obj = { style: closure_10.header, children: null };
+    obj = { style: closure_10.backButton, accessibilityLabel: null, accessibilityRole: "button", onPress: null, children: null };
     const intl = context(sectionOverallPosition[12]).intl;
     obj[1] = intl.string(context(sectionOverallPosition[12]).t["13/7kX"]);
     obj[3] = callback;
-    obj = { color: null };
-    obj[0] = analyticsLocation(sectionOverallPosition[5]).colors.INTERACTIVE_TEXT_DEFAULT;
+    obj = { color: analyticsLocation(sectionOverallPosition[5]).colors.INTERACTIVE_TEXT_DEFAULT };
     obj[4] = promotedApplicationIds(context(sectionOverallPosition[13]).ArrowLargeLeftIcon, obj);
-    const items = [promotedApplicationIds(context(sectionOverallPosition[11]).PressableOpacity, obj), promotedApplicationIds(context(sectionOverallPosition[14]).Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title }), ];
-    const obj2 = { size: null };
-    obj2[0] = context(sectionOverallPosition[6]).BACK_BUTTON_SIZE;
-    items[2] = promotedApplicationIds(context(sectionOverallPosition[15]).Spacer, obj2);
+    const items = [promotedApplicationIds(context(sectionOverallPosition[11]).PressableOpacity, obj), promotedApplicationIds(context(sectionOverallPosition[14]).Text, { accessibilityRole: "header", lineClamp: 1, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: title }), promotedApplicationIds(context(sectionOverallPosition[15]).Spacer, { size: context(sectionOverallPosition[6]).BACK_BUTTON_SIZE })];
     obj[1] = items;
     return navigation(commands, obj);
   }, items3);
@@ -129,7 +118,7 @@ export default function AppLauncherViewAllScreen(route) {
     const obj = {
       application: item,
       onPress() {
-        return outer1_16({ application: item, sectionName: outer1_9 });
+        return closure_1_16({ application: item, sectionName: closure_1_9 });
       },
       isFirstRow: 0 === index,
       isLastRow: tmp,
@@ -176,7 +165,7 @@ export default function AppLauncherViewAllScreen(route) {
       obj = { command: null, onPressCommand: null, onExecuteCommand: null, isFirstRow: null, isLastRow: null, context: null, section: null, location: null, sectionName: null, icon: null };
       obj[0] = item;
       obj[1] = function onPressCommand() {
-        return outer1_17(item, found, outer1_9);
+        return closure_1_17(item, found, closure_1_9);
       };
       obj[2] = callback4;
       obj[3] = 0 === index;
@@ -190,7 +179,7 @@ export default function AppLauncherViewAllScreen(route) {
     }
     arr = sectionDescriptors;
   }, items6);
-  let obj1 = context(sectionOverallPosition[19]);
+  obj1 = context(sectionOverallPosition[19]);
   const bottomSheetFlashListBottomViewabilityInset = obj1.useBottomSheetFlashListBottomViewabilityInset();
   ({ flashListRef, bottomVisibilityInsetRef } = bottomSheetFlashListBottomViewabilityInset);
   trackAppLauncherItemImpressionOnFirstView = context(sectionOverallPosition[20]).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
@@ -199,7 +188,7 @@ export default function AppLauncherViewAllScreen(route) {
   const items7 = [sum, tmp.list];
   const memo1 = applications.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(_undefined.list);
+    const merged = Object.assign(closure_10.list);
     obj.paddingBottom = c11;
     return obj;
   }, items7);

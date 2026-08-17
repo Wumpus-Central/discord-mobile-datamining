@@ -1,22 +1,24 @@
 // discord_app/modules/lurker_mode/LurkingStore.tsx
-import { isGuildLurker } from "GuildNSFWContentLevel";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { Store } from "initialize";
+import set2 from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import closure_1 from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
+const isGuildLurker = GuildNSFWContentLevel.isGuildLurker;
 ({ JoinGuildSources: c4, ME: c5 } = ME);
 let closure_6 = [];
 let closure_7 = {};
 let closure_8 = {};
+const Store = initializeDefault.Store;
 class LurkingStore extends Store {
 }
 const prototype = LurkingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(trackCommunicationDisabled, createGuildRecordFromRust, mergeGuildAvatar);
+  this.waitFor(closure_1, closure_2, closure_3);
 };
 prototype["lurkingGuildIds"] = function lurkingGuildIds() {
   return closure_6;
@@ -60,17 +62,14 @@ prototype["getLoadId"] = function getLoadId(arg0) {
   return tmp;
 };
 LurkingStore.displayName = "LurkingStore";
-const lurkingStore = new LurkingStore(require("dispatcher"), {
+const lurkingStore = new LurkingStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     const guildsArray = store.getGuildsArray();
     const found = guildsArray.filter((arg0) => callback(arg0));
-    let closure_6 = found.map((id) => id.id);
-    let closure_8 = {};
+    closure_6 = found.map((id) => id.id);
+    closure_8 = {};
   },
   GUILD_JOIN: function handleGuildJoin(lurker) {
-    let guildId;
-    let loadId;
-    let source;
     ({ guildId, source, loadId } = lurker);
     if (lurker.lurker) {
       if (guildId !== closure_5) {
@@ -112,17 +111,16 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
     }
     let items = [...ignoredGuildIds];
     set = new Set(items);
-    const items1 = [...closure_6];
+    const items1 = [...items];
     return items1.reduce((arg0, arg1) => {
       let tmp4 = arg0;
       if (!set.has(arg1)) {
-        const index = outer1_6.indexOf(arg1);
+        const index = items.indexOf(arg1);
         let flag = false;
         if (index > -1) {
-          const items = [];
-          HermesBuiltin.arraySpread(outer1_6, 0);
+          items = [];
+          HermesBuiltin.arraySpread(items, 0);
           items.splice(index, 1);
-          outer1_6 = items;
           delete tmp3[tmp2];
           delete tmp[tmp2];
           flag = true;
@@ -136,8 +134,6 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
     }, false);
   },
   GUILD_STOP_LURKING_FAILURE: function handleGuildStopLurkingFailure(arg0) {
-    let lurkingGuildId;
-    let lurkingSource;
     ({ lurkingGuildId, lurkingSource } = arg0);
     if (lurkingGuildId !== closure_5) {
       const hasItem = items.includes(lurkingGuildId);
@@ -218,6 +214,6 @@ const lurkingStore = new LurkingStore(require("dispatcher"), {
     return flag;
   }
 });
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
+const result = set2.fileFinishedImporting("modules/lurker_mode/LurkingStore.tsx");
 
 export default lurkingStore;

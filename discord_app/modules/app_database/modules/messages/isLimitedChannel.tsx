@@ -1,9 +1,9 @@
 // discord_app/modules/app_database/modules/messages/isLimitedChannel.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleInviteData from "handleInviteData";
-import { ChannelTypes } from "ME";
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_1 from "handleInviteData" /* 4295 */;
+import { ChannelTypes } from "ME" /* 676 */;
 
-const result = require("ME").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/isLimitedChannel.tsx");
 
 export const LIMITED_GUILD_MEMBER_THRESHOLD = 10000;
 export const isLimitedChannel = function isLimitedChannel(basicChannel) {

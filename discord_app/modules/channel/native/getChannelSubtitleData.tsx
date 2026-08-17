@@ -1,6 +1,8 @@
 // discord_app/modules/channel/native/getChannelSubtitleData.tsx
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/channel/native/getChannelSubtitleData.tsx");
 
 export const getChannelSubtitleData = function getChannelSubtitleData(subtitle) {
   if (null == subtitle) {

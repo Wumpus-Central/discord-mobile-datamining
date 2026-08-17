@@ -1,34 +1,27 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import emitChanges from "emitChanges";
-import updateProduct from "updateProduct";
-import { HelpdeskArticles } from "ME";
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "GuildFeatures";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "reset" /* 4045 */;
+import closure_6 from "emitChanges" /* 7421 */;
+import closure_7 from "updateProduct" /* 5319 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "GuildFeatures" /* 1924 */;
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let result = require("reset").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbed.tsx");
 
 export const createReferralTrialEmbedRedeemable = function createReferralTrialEmbedRedeemable(message, theme, id, relevantUserTrialOffer) {
-  let acceptLabelColor;
-  let backgroundColor;
-  let bodyTextColor;
-  let footerTextColor;
-  let headerTextColor;
-  let subTextColor;
-  let titleColor;
   if (null != message.author) {
     let obj = { headerTextColor: null, titleColor: null, bodyTextColor: null, footerTextColor: null, subTextColor: null, backgroundColor: null, acceptLabelColor: null };
-    obj[0] = Themes.colors.WHITE;
-    obj[1] = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    obj[2] = Themes.colors.TEXT_DEFAULT;
-    obj[3] = Themes.colors.TEXT_MUTED;
-    obj[4] = Themes.colors.INTERACTIVE_TEXT_DEFAULT;
-    obj[5] = Themes.colors.BACKGROUND_MOD_NORMAL;
-    obj[6] = Themes.colors.WHITE;
+    obj[0] = ThemesDefault.colors.WHITE;
+    obj[1] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj[2] = ThemesDefault.colors.TEXT_DEFAULT;
+    obj[3] = ThemesDefault.colors.TEXT_MUTED;
+    obj[4] = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
+    obj[5] = ThemesDefault.colors.BACKGROUND_MOD_NORMAL;
+    obj[6] = ThemesDefault.colors.WHITE;
     const tmp47 = _createCacheKey.createNativeStyleProperties(obj)(theme);
     ({ titleColor, bodyTextColor, backgroundColor } = tmp47);
     ({ headerTextColor, footerTextColor, subTextColor, acceptLabelColor } = tmp47);
@@ -68,7 +61,7 @@ export const createReferralTrialEmbedRedeemable = function createReferralTrialEm
             obj[1] = name1;
             const formatToPlainStringResult = intl11.formatToPlainString(tmp44(1236).t.IiWKwg, obj);
             if (null == relevantUserTrialOffer) {
-              const obj1 = {};
+              obj1 = {};
               const merged = Object.assign(obj);
               obj1.titleText = formatToPlainStringResult;
               obj1.titleColor = titleColor;

@@ -1,11 +1,12 @@
 // discord_app/modules/search/native/stores/SearchPeopleTabStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleChannelSelect from "handleChannelSelect";
-import { Store } from "initialize";
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { _toPropertyKey } from "../../../main_tabs_v2/native/shared_components/user_list/useUserListData.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _toPropertyKey from "_toPropertyKey" /* 9636 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleChannelSelect" /* 6772 */;
 
-const require = arg1;
+require = arg1;
 let closure_5 = [];
 class PeopleSearchManager {
   constructor() {
@@ -44,15 +45,14 @@ prototype["search"] = function search(str) {
     if (0 === trimmed1.length) {
       let items = [];
     } else {
-      const obj2 = apply;
-      const values = apply.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
+      const obj2 = applyDefault;
+      const values = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels()).values();
       const found = values.filter(trimmed1(11539).filterGroupDMs);
       const mapped = found.map((id) => {
-        const items = [id, trimmed1(outer1_2[3]).matchGroupDM(id, trimmed1), outer1_4.getScoreWithoutFetchingLatest(id.id)];
+        const items = [id, trimmed1(closure_1_2[3]).matchGroupDM(id, trimmed1), closure_1_4.getScoreWithoutFetchingLatest(id.id)];
         return items;
       });
       const found1 = mapped.filter((arg0) => {
-        let tmp;
         [, tmp] = arg0;
         return tmp > 0;
       });
@@ -63,14 +63,12 @@ prototype["search"] = function search(str) {
         }
         return diff;
       });
-      const chainResult = apply.chain(mutablePrivateChannels.getMutablePrivateChannels());
+      const chainResult = applyDefault.chain(mutablePrivateChannels.getMutablePrivateChannels());
       items = sorted.map((arg0) => {
-        let tmp;
         [tmp] = arg0;
         return tmp;
       }).value();
       const iter = sorted.map((arg0) => {
-        let tmp;
         [tmp] = arg0;
         return tmp;
       });
@@ -126,11 +124,12 @@ prototype["getCount"] = function getCount() {
   return this.count;
 };
 const map = new Map();
+const Store = initializeDefault.Store;
 class SearchPeopleTabStoreImpl extends Store {
 }
 const prototype2 = SearchPeopleTabStoreImpl.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, handleChannelSelect);
+  this.waitFor(closure_3, closure_4);
 };
 prototype2["getResults"] = function getResults(arg0) {
   const value = map.get(arg0);
@@ -155,7 +154,7 @@ prototype2["getCount"] = function getCount(arg0) {
   return count;
 };
 SearchPeopleTabStoreImpl.displayName = "SearchPeopleTabStore";
-const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(require("dispatcher"), {
+const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(dispatcherDefault, {
   SEARCH_PEOPLE_TAB_SEARCH: function handleSearchPeopleTabSearch(id) {
     id = id.id;
     let obj = map;
@@ -189,6 +188,6 @@ const searchPeopleTabStoreImpl = new SearchPeopleTabStoreImpl(require("dispatche
     map.delete(id);
   }
 });
-let result = require("apply").fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchPeopleTabStore.tsx");
 
 export default searchPeopleTabStoreImpl;

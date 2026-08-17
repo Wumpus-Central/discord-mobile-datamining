@@ -1,20 +1,19 @@
 // discord_app/modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { useFrameMonitor } from "useFrameMonitor.tsx";
+import noopAll from "noop" /* 19 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import useFrameMonitorDefault from "useFrameMonitor" /* 15185 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useFrameMonitor").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/ScrollBenchmark.tsx");
 
 export default function ScrollBenchmark(subLabel) {
-  let monitoring;
-  let start;
   let str = subLabel.subLabel;
   if (str === undefined) {
     str = "Records frame times while you scroll the content below.";
   }
-  const tmp = useFrameMonitor(subLabel.onResult);
+  const tmp = useFrameMonitorDefault(subLabel.onResult);
   ({ monitoring, start } = tmp);
   let str2 = "Start scroll monitor";
   if (monitoring) {

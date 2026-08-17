@@ -1,12 +1,15 @@
 // discord_app/modules/app_startup/awaitExperiments.tsx
-const future = new require("Future").Future();
+import set from "set" /* 2 */;
+import Future from "Future" /* 8451 */;
+
+const future = new Future.Future();
 let c1 = null;
-const result = require("set").fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
+const result = set.fileFinishedImporting("modules/app_startup/awaitExperiments.tsx");
 
 export const beginLoadedExperimentsTimeout = function beginLoadedExperimentsTimeout() {
   const timeout = setTimeout(() => {
     closure_0.resolve();
-    let c1 = null;
+    c1 = null;
   }, 1000);
 };
 export const onExperimentsLoaded = function onExperimentsLoaded() {

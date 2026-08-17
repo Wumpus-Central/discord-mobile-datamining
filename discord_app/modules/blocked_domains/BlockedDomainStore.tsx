@@ -1,8 +1,10 @@
 // discord_app/modules/blocked_domains/BlockedDomainStore.tsx
-import { AnalyticEvents } from "ME";
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
 
+const AnalyticEvents = ME.AnalyticEvents;
 const prototype = function BlockedDomainStore() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -16,11 +18,11 @@ prototype["isBlockedDomain"] = function isBlockedDomain(arg0) {
   if (tmp5) {
     obj = { blocked_domain: null };
     obj[0] = isBlockedDomainResult;
-    expandEventProperties.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
-    const obj3 = expandEventProperties;
+    expandEventPropertiesDefault.track(AnalyticEvents.LINK_SECURITY_CHECK_BLOCKED, obj);
+    const obj3 = expandEventPropertiesDefault;
   }
   return isBlockedDomainResult;
 };
-const result = require("expandEventProperties").fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
+const result = set.fileFinishedImporting("modules/blocked_domains/BlockedDomainStore.tsx");
 
 export default prototype;

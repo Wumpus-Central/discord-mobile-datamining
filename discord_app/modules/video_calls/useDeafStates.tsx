@@ -1,25 +1,25 @@
 // discord_app/modules/video_calls/useDeafStates.tsx
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import updateVoiceState from "updateVoiceState";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("updateVoiceState").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/useDeafStates.tsx");
 
 export default function useDeafStates(arg0) {
   const _require = arg0;
-  const items = [updateVoiceState, _detectH265HardwareDecode, fetchFingerprint];
+  const items = [closure_4, closure_3, closure_2];
   const items1 = [arg0];
   return _initialize.useStateFromStoresObject(items, () => {
     let obj = closure_0;
-    if (outer1_4 !== undefined) {
+    if (closure_1_4 !== undefined) {
       if (obj3 !== undefined) {
         if (obj4 !== undefined) {
           let voiceState = null;
           if (null != obj) {
             const guildId = obj.getGuildId();
-            voiceState = outer1_4.getVoiceState(guildId, obj4.getId());
+            voiceState = closure_1_4.getVoiceState(guildId, obj4.getId());
           }
           obj = { selfDeaf: null, deaf: null };
           obj[0] = obj3.isSelfDeaf();
@@ -37,18 +37,18 @@ export default function useDeafStates(arg0) {
     }
   }, items1);
 };
-export const getDeafStates = function getDeafStates(channel, outer1_12, outer1_9, callback3) {
-  let obj = outer1_12;
-  if (outer1_12 === undefined) {
-    obj = updateVoiceState;
+export const getDeafStates = function getDeafStates(channel, closure_1_12, closure_1_9, callback3) {
+  let obj = closure_1_12;
+  if (closure_1_12 === undefined) {
+    obj = closure_4;
   }
-  let obj2 = outer1_9;
-  if (outer1_9 === undefined) {
-    obj2 = _detectH265HardwareDecode;
+  let obj2 = closure_1_9;
+  if (closure_1_9 === undefined) {
+    obj2 = closure_3;
   }
   let obj3 = callback3;
   if (callback3 === undefined) {
-    obj3 = fetchFingerprint;
+    obj3 = closure_2;
   }
   let voiceState = null;
   if (null != channel) {

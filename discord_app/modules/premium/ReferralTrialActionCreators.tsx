@@ -1,23 +1,21 @@
 // discord_app/modules/premium/ReferralTrialActionCreators.tsx
-import sendRequest from "sendRequest";
-import createFromServer from "createFromServer";
-import createdAt from "createdAt";
-import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createFromServer" /* 7425 */;
+import closure_5 from "createdAt" /* 1930 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import ME from "ME" /* 676 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _fetchReferralEligibleUsers() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c6 = 0;
+    c7 = 0;
     return (function*(arg0, body) {
       if (c7 === 2) {
         c7 = 3;
@@ -26,7 +24,7 @@ function _fetchReferralEligibleUsers() {
         if (arg0 === 1) {
           throw body;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = body;
           return obj;
         } else {
@@ -45,7 +43,7 @@ function _fetchReferralEligibleUsers() {
               obj[0] = body;
               return obj;
             } else {
-              let c5 = 0;
+              c5 = 0;
               let obj7 = tmp2;
               let json;
               body = undefined;
@@ -53,19 +51,19 @@ function _fetchReferralEligibleUsers() {
               let next_index;
               obj7 = undefined;
               const _JSON = JSON;
-              const obj1 = { index: null, searchQuery: null };
+              obj1 = { index: null, searchQuery: null };
               obj1[0] = json;
               obj1[1] = body;
               json = JSON.stringify(obj1);
-              if (outer1_10.has(json)) {
+              if (closure_1_10.has(json)) {
                 c7 = 3;
                 const obj2 = { value: null, done: true };
-                obj2[0] = outer1_10.get(json);
+                obj2[0] = closure_1_10.get(json);
                 return obj2;
               } else {
                 const HTTP = callback(table[5]).HTTP;
                 const obj3 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-                obj3[0] = outer1_8.GET_REFERRAL_ELIGIBLE_USERS;
+                obj3[0] = closure_1_8.GET_REFERRAL_ELIGIBLE_USERS;
                 const obj4 = { index: null, limit: null, search_query: null };
                 obj4[0] = tmp28;
                 next_index = tmp30;
@@ -112,7 +110,7 @@ function _fetchReferralEligibleUsers() {
       }
     })();
   });
-  const _fetchReferralEligibleUsers = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -124,10 +122,10 @@ function _fetchReferralEligibleUsers() {
 function _createReferralTrials() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -136,7 +134,7 @@ function _createReferralTrials() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -160,11 +158,11 @@ function _createReferralTrials() {
               return obj;
             } else {
               let fromServer = tmp;
-              let sendRequest = tmp2;
+              closure_3 = tmp2;
               let tmp62 = arr;
               let store;
-              let dependencyMap;
-              sendRequest = undefined;
+              dependencyMap = undefined;
+              closure_3 = undefined;
               fromServer = undefined;
               arr = [];
               let _Map = Map;
@@ -179,24 +177,24 @@ function _createReferralTrials() {
               store = arr[Symbol.iterator]();
             }
           } else if (1 === tmp5) {
-            let tmp36 = createdAt;
-            let tmp37 = createdAt;
-            let c6 = 0;
+            let tmp36 = closure_5;
+            let tmp37 = closure_5;
+            c6 = 0;
             let tmp38 = store;
             store.return();
-            throw createdAt;
+            throw closure_5;
           } else {
             if (2 === tmp5) {
-              let tmp24 = sendRequest;
+              let tmp24 = closure_3;
               let tmp25 = fromServer;
-              let tmp26 = createdAt;
-              let tmp27 = createdAt;
+              let tmp26 = closure_5;
+              let tmp27 = closure_5;
               c6 = 1;
               let tmp28 = store;
               let tmp29 = dependencyMap;
-              let obj1 = store(1208);
-              let tmp30 = createdAt;
-              let captureExceptionResult = obj1.captureException(createdAt);
+              obj1 = store(1208);
+              let tmp30 = closure_5;
+              let captureExceptionResult = obj1.captureException(closure_5);
               let tmp32 = store;
               let tmp33 = dependencyMap;
               let tmp34 = constants;
@@ -215,26 +213,26 @@ function _createReferralTrials() {
               obj[0] = arg1;
               return obj;
             } else {
-              let tmp60 = sendRequest;
-              sendRequest = arg1;
-              let tmp61 = sendRequest;
+              let tmp60 = closure_3;
+              closure_3 = arg1;
+              let tmp61 = closure_3;
               fromServer = null;
-              if (null != sendRequest.body) {
-                let tmp6 = sendRequest;
+              if (null != closure_3.body) {
+                let tmp6 = closure_3;
                 let tmp7 = fromServer;
                 let tmp8 = fromServer;
-                let tmp9 = sendRequest;
-                fromServer = fromServer.createFromServer(sendRequest.body);
+                let tmp9 = closure_3;
+                fromServer = fromServer.createFromServer(closure_3.body);
               }
-              let tmp11 = sendRequest;
+              let tmp11 = closure_3;
               let tmp12 = fromServer;
               if (null != fromServer) {
-                let tmp13 = sendRequest;
+                let tmp13 = closure_3;
                 let tmp14 = arr;
                 let tmp15 = fromServer;
                 arr = arr.push(fromServer);
               }
-              let tmp17 = sendRequest;
+              let tmp17 = closure_3;
               let tmp18 = fromServer;
               let tmp19 = store;
               let tmp20 = dependencyMap;
@@ -247,7 +245,7 @@ function _createReferralTrials() {
           let tmp39 = dependencyMap;
           let tmp40 = store;
           if (store === undefined) {
-            let tmp48 = sendRequest;
+            let tmp48 = closure_3;
             let tmp49 = fromServer;
             let tmp50 = store;
             let tmp51 = dependencyMap;
@@ -262,7 +260,7 @@ function _createReferralTrials() {
             obj2[0] = store;
             return obj2;
           } else {
-            let tmp42 = sendRequest;
+            let tmp42 = closure_3;
             dependencyMap = tmp41;
             let tmp43 = fromServer;
             c6 = 2;
@@ -284,7 +282,7 @@ function _createReferralTrials() {
       }
     })();
   });
-  const _createReferralTrials = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -296,25 +294,25 @@ function _createReferralTrials() {
 function _createReferralTrial() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      let dependencyMap = tmp3;
-      let c4 = 1;
-      const HTTP = lib(outer1_2[5]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj1[0] = outer1_8.CREATE_REFERRAL(lib);
+      dependencyMap = tmp3;
+      c4 = 1;
+      const HTTP = lib(closure_1_2[5]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj1[0] = closure_1_8.CREATE_REFERRAL(lib);
       yield HTTP.post(obj1);
       c4 = 0;
       let obj5 = fromServer(709);
       obj5.dispatch({ type: "BILLING_CREATE_REFERRAL_FAIL" });
-      if (sendRequest.body.code === constants.INVALID_MESSAGE_SEND_USER) {
+      if (closure_3.body.code === constants.INVALID_MESSAGE_SEND_USER) {
         dependencyMap = currentlySelectedChannelId.getCurrentlySelectedChannelId();
         if (null != dependencyMap) {
           const obj6 = fromServer(7427);
-          obj6.sendClydeError(dependencyMap, sendRequest.body.code);
+          obj6.sendClydeError(dependencyMap, closure_3.body.code);
         }
       }
       lib = yield "HermesInternal";
@@ -323,7 +321,7 @@ function _createReferralTrial() {
         fromServer = c4.createFromServer(lib.body);
       }
       if (null != fromServer) {
-        const obj = fromServer(709);
+        obj = fromServer(709);
         const obj4 = { type: "BILLING_CREATE_REFERRAL_SUCCESS", userTrialOffer: null };
         obj4[1] = fromServer;
         obj.dispatch(obj4);
@@ -334,7 +332,7 @@ function _createReferralTrial() {
       return obj5;
     })();
   });
-  const _createReferralTrial = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -346,16 +344,16 @@ function _createReferralTrial() {
 function _resolveReferralTrialOffer() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0) {
-      let sendRequest = tmp3;
-      let c5 = 1;
-      const HTTP = callback(outer1_2[5]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj1[0] = outer1_8.REFERRAL_OFFER_ID_RESOLVE(callback);
+      closure_3 = tmp3;
+      c5 = 1;
+      const HTTP = callback(closure_1_2[5]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj1[0] = closure_1_8.REFERRAL_OFFER_ID_RESOLVE(callback);
       yield HTTP.get(obj1);
       c5 = 0;
       let obj5 = lib(fromServer[6]);
@@ -365,9 +363,9 @@ function _resolveReferralTrialOffer() {
       lib = yield "HermesInternal";
       fromServer = null;
       if (null != lib.body) {
-        fromServer = createFromServer.createFromServer(lib.body);
+        fromServer = closure_4.createFromServer(lib.body);
       }
-      const obj = lib(fromServer[6]);
+      obj = lib(fromServer[6]);
       lib = fromServer;
       if (fromServer == null) {
         lib = undefined;
@@ -381,7 +379,7 @@ function _resolveReferralTrialOffer() {
       return obj6;
     })();
   });
-  const _resolveReferralTrialOffer = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -390,7 +388,7 @@ function _resolveReferralTrialOffer() {
   }
   return applyArgumentsResult;
 }
-({ AbortCodes: error, Endpoints: metroImportAll } = ME);
+({ AbortCodes: error, Endpoints: closure_8 } = ME);
 let obj = { SUCCESS: 1, [1]: "SUCCESS", FAIL: 2, [2]: "FAIL" };
 class EligibleUserCache {
   constructor() {
@@ -426,7 +424,7 @@ obj = Object.create(EligibleUserCache.prototype);
 obj.cache = new Map();
 obj.expiration = Date.now() + 600000;
 let map = new Map();
-let result = require("createdAt").fileFinishedImporting("modules/premium/ReferralTrialActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/ReferralTrialActionCreators.tsx");
 
 export const ReferralOfferStatus = { REDEEMED: 1, [1]: "REDEEMED", PENDING: 2, [2]: "PENDING", CONVERTED: 3, [3]: "CONVERTED" };
 export const CreateReferralStatus = obj;
@@ -441,7 +439,7 @@ export const fetchReferralEligibleUsers = function fetchReferralEligibleUsers(cl
   return applyArgumentsResult;
 };
 export const fetchReferralsRemaining = function fetchReferralsRemaining() {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" });
   const HTTP = sendRequest.HTTP;
   obj = { url: constants.GET_REFERRALS_REMAINING, oldFormErrors: true, rejectWithError: false };
@@ -464,7 +462,7 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
         num = body.body.referrals_remaining;
       }
     }
-    const obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null };
+    obj = { type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS", referrals_remaining: num, sent_user_ids: null, refresh_at: null, recipient_status: null, has_eligible_friends: null, reminder_state_id: null };
     if (null != body.body) {
       if (null != body.body.sent_user_ids) {
         const sent_user_ids = body.body.sent_user_ids;
@@ -507,7 +505,7 @@ export const fetchReferralsRemaining = function fetchReferralsRemaining() {
     }
     if (404 !== status) {
       callback(709).dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
-      const obj = callback(709);
+      obj = callback(709);
     }
   });
 };

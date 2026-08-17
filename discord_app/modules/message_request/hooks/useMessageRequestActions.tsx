@@ -1,28 +1,18 @@
 // discord_app/modules/message_request/hooks/useMessageRequestActions.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "createUserWidgetFromServer" /* 5365 */;
+import MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL from "MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL" /* 11611 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
-({ MessageRequestAnalyticsAction: error, BATCH_REJECT_LIMIT: metroImportAll } = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL);
-let result = require("noop").fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
+let require = arg1;
+({ MessageRequestAnalyticsAction: error, BATCH_REJECT_LIMIT: closure_8 } = MESSAGE_REQUEST_ACCEPT_CONFIRMATION_MODAL);
+let result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestActions.tsx");
 
 export const useMessageRequestActions = function useMessageRequestActions(user) {
-  let c4;
-  let c5;
-  let c6;
-  let c7;
-  let tmp3;
-  let tmp5;
-  let tmp7;
-  let tmp9;
   user = user.user;
-  let closure_0 = user;
+  require = user;
   const onAcceptSuccess = user.onAcceptSuccess;
   const onRejectSuccess = user.onRejectSuccess;
   const onError = user.onError;
@@ -30,8 +20,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
   let React;
   c6 = undefined;
   c7 = undefined;
-  let closure_8;
-  let c9;
+  closure_8 = undefined;
+  let isUserProfileLoading;
   let acceptMessageRequest;
   let tmp = onAcceptSuccess(onRejectSuccess[6])();
   [tmp3, c4] = callback(React.useState(false), 2);
@@ -50,13 +40,13 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
   if (!tmp11) {
     tmp11 = isUserProfileLoading;
   }
-  c9 = tmp11;
-  closure_0 = undefined;
-  closure_0 = onError((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+  isUserProfileLoading = tmp11;
+  require = undefined;
+  require = onError((arg0) => {
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -84,15 +74,15 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_9) {
+              if (closure_1_9) {
                 c6 = 3;
               } else {
                 v0(true);
                 v0 = 2;
-                let obj1 = callback(onRejectSuccess[7]);
+                obj1 = callback(onRejectSuccess[7]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -103,9 +93,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               v0 = 1;
-              closure_1 = ME;
+              closure_1 = closure_3;
               aPIError = new callback(onRejectSuccess[8]).APIError(closure_1);
-              if (outer1_3 != null) {
+              if (closure_1_3 != null) {
                 tmp27(callback);
               }
             } else if (arg0 === 1) {
@@ -119,9 +109,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               obj[0] = arg1;
               return obj;
             } else {
-              outer1_7(true);
-              if (outer1_1 != null) {
-                outer1_1();
+              closure_1_7(true);
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               v0 = 1;
             }
@@ -130,9 +120,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
           }
           v0 = 0;
           v0(false);
-          throw ME;
+          throw closure_3;
         } catch (tmp45) {
-          ME = tmp45;
+          closure_3 = tmp45;
           if (tmp5 === v0) {
             c6 = tmp3;
             throw tmp45;
@@ -156,12 +146,12 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items);
-  closure_0 = undefined;
-  closure_0 = onError((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+  require = undefined;
+  require = onError((arg0) => {
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -189,15 +179,15 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_9) {
+              if (closure_1_9) {
                 c6 = 3;
               } else {
                 v0(true);
-                let c4 = 2;
-                let obj1 = callback(onRejectSuccess[7]);
+                c4 = 2;
+                obj1 = callback(onRejectSuccess[7]);
                 v0 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -208,9 +198,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c4 = 1;
-              closure_1 = ME;
+              closure_1 = closure_3;
               aPIError = new callback(onRejectSuccess[8]).APIError(closure_1);
-              if (outer1_3 != null) {
+              if (closure_1_3 != null) {
                 tmp27(callback);
               }
             } else if (arg0 === 1) {
@@ -224,9 +214,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               obj[0] = arg1;
               return obj;
             } else {
-              outer1_8(true);
-              if (outer1_2 != null) {
-                outer1_2();
+              closure_1_8(true);
+              if (closure_1_2 != null) {
+                closure_1_2();
               }
               c4 = 1;
             }
@@ -235,9 +225,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
           }
           c4 = 0;
           v0(false);
-          throw ME;
+          throw closure_3;
         } catch (tmp45) {
-          ME = tmp45;
+          closure_3 = tmp45;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp45;
@@ -251,7 +241,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     })();
   });
   const items1 = [tmp11, onRejectSuccess, onError];
-  closure_0 = undefined;
+  require = undefined;
   const rejectMessageRequest = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -262,11 +252,11 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items1);
-  closure_0 = onError((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+  require = onError((arg0) => {
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -298,49 +288,49 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               obj[0] = arg1;
               return obj;
             } else {
-              let _slicedToArray = tmp;
-              let ME = tmp4;
-              let c0;
+              closure_4 = tmp;
+              closure_3 = tmp4;
+              c0 = undefined;
               let aPIError;
-              let tmp60 = outer1_9;
-              if (outer1_9) {
+              let tmp60 = closure_1_9;
+              if (closure_1_9) {
                 let num5 = 3;
                 v0 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
-                let tmp29 = outer1_5;
-                let tmp30 = outer1_5(true);
+                let tmp29 = closure_1_5;
+                let tmp30 = closure_1_5(true);
                 let tmp31 = onAcceptSuccess;
                 let tmp32 = onRejectSuccess;
                 let tmp33 = closure_8;
                 let tmp34 = onAcceptSuccess(onRejectSuccess[9])(tmp59, closure_8);
-                let c6 = 2;
-                let closure_2 = tmp34;
+                c6 = 2;
+                closure_2 = tmp34;
                 let tmp35 = tmp34;
                 closure_2 = tmp34;
                 aPIError = tmp34[Symbol.iterator]();
                 let tmp36 = closure_2;
                 let tmp37 = aPIError;
                 if (aPIError === undefined) {
-                  let tmp44 = _slicedToArray;
+                  let tmp44 = closure_4;
                   let tmp45 = v0;
                   let tmp46 = v0(true);
-                  if (outer1_2 != null) {
-                    let tmp47 = outer1_2();
+                  if (closure_1_2 != null) {
+                    let tmp47 = closure_1_2();
                   }
                   c6 = 1;
                   c6 = 0;
-                  let tmp48 = _slicedToArray;
-                  let tmp49 = outer1_5;
-                  let tmp50 = outer1_5(false);
+                  let tmp48 = closure_4;
+                  let tmp49 = closure_1_5;
+                  let tmp50 = closure_1_5(false);
                 } else {
-                  let tmp39 = ME;
-                  let tmp40 = _slicedToArray;
+                  let tmp39 = closure_3;
+                  let tmp40 = closure_4;
                   c6 = 3;
                   let callback = tmp38;
                   let tmp41 = callback;
                   let tmp42 = onRejectSuccess;
-                  let obj1 = callback(onRejectSuccess[7]);
+                  obj1 = callback(onRejectSuccess[7]);
                   let tmp43 = callback;
                   c7 = 4;
                   let num4 = 1;
@@ -353,12 +343,12 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             }
           } else if (1 !== tmp4) {
             if (2 === tmp4) {
-              let tmp12 = ME;
-              let tmp13 = _slicedToArray;
-              let tmp14 = noop;
-              let tmp15 = noop;
+              let tmp12 = closure_3;
+              let tmp13 = closure_4;
+              let tmp14 = closure_5;
+              let tmp15 = closure_5;
               c6 = 1;
-              closure_2 = noop;
+              closure_2 = closure_5;
               let tmp16 = callback;
               let tmp17 = onRejectSuccess;
               let tmp18 = closure_2;
@@ -366,18 +356,18 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               let tmp20 = new.target;
               aPIError = new callback(onRejectSuccess[8]).APIError(closure_2);
               let tmp22 = aPIError;
-              if (outer1_3 != null) {
-                let tmp56 = ME;
-                let tmp57 = outer1_1;
-                let tmp23Result = tmp23(outer1_1);
+              if (closure_1_3 != null) {
+                let tmp56 = closure_3;
+                let tmp57 = closure_1_1;
+                let tmp23Result = tmp23(closure_1_1);
               }
             } else if (3 === tmp4) {
-              let tmp9 = noop;
-              let tmp10 = noop;
+              let tmp9 = closure_5;
+              let tmp10 = closure_5;
               c6 = 2;
               let tmp11 = aPIError;
               aPIError.return();
-              throw noop;
+              throw closure_5;
             } else if (arg0 === 1) {
               let num3 = 3;
               v0 = 3;
@@ -387,9 +377,9 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               let tmp5 = aPIError;
               aPIError.return();
               c6 = 0;
-              let tmp6 = _slicedToArray;
-              let tmp7 = outer1_5;
-              let tmp8 = outer1_5(false);
+              let tmp6 = closure_4;
+              let tmp7 = closure_1_5;
+              let tmp8 = closure_1_5(false);
               let num2 = 3;
               v0 = 3;
               obj = { value: null, done: true };
@@ -399,19 +389,19 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               c6 = 2;
             }
           }
-          let tmp24 = _slicedToArray;
-          let tmp25 = noop;
-          let tmp26 = noop;
+          let tmp24 = closure_4;
+          let tmp25 = closure_5;
+          let tmp26 = closure_5;
           c6 = 0;
-          let tmp27 = outer1_5;
-          let tmp28 = outer1_5(false);
-          throw noop;
+          let tmp27 = closure_1_5;
+          let tmp28 = closure_1_5(false);
+          throw closure_5;
         }
       }
     })();
   });
   const items2 = [tmp11, onRejectSuccess, onError];
-  closure_0 = undefined;
+  require = undefined;
   const rejectAll = obj.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
@@ -422,11 +412,11 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     }
     return applyArgumentsResult;
   }, items2);
-  closure_0 = onError((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+  require = onError((arg0) => {
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (mutualGuilds === 2) {
         mutualGuilds = 3;
@@ -454,11 +444,11 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
+              closure_2 = tmp4;
               let _onConfirm = tmp6;
               _onConfirm = function _onConfirm() {
                 const self = this;
-                const tmp = outer2_3(function*() {
+                const tmp = closure_2_3(function*() {
                   if (c1 === 2) {
                     c1 = 3;
                     HermesBuiltin.throwTypeError();
@@ -485,8 +475,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                           obj[0] = arg1;
                           return obj;
                         } else {
-                          if (null != outer1_0) {
-                            const mutualGuilds = outer2_6.getMutualGuilds(tmp22.id);
+                          if (null != closure_1_0) {
+                            const mutualGuilds = closure_2_6.getMutualGuilds(tmp22.id);
                             let mapped;
                             if (mutualGuilds != null) {
                               mapped = mutualGuilds.map(() => { ... });
@@ -495,25 +485,25 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                           } else {
                             items = [];
                           }
-                          let obj1 = v0(outer2_2[11]);
+                          obj1 = v0(closure_2_2[11]);
                           obj1 = { action: null, channel_id: null, mutual_guild_ids: null, other_user_id: null };
-                          obj1[0] = outer2_7.ACCEPT_CONFIRMATION_PROMPT;
-                          obj1[1] = outer1_0;
-                          let closure_0 = items;
+                          obj1[0] = closure_2_7.ACCEPT_CONFIRMATION_PROMPT;
+                          obj1[1] = closure_1_0;
+                          closure_0 = items;
                           if (items == null) {
                             closure_0 = [];
                           }
                           obj1[2] = closure_0;
                           let id;
-                          if (outer1_0 != null) {
+                          if (closure_1_0 != null) {
                             id = tmp22.id;
                           }
                           obj1[3] = id;
-                          obj1.track(outer2_9.MESSAGE_REQUEST_ACTION, obj1);
+                          obj1.track(closure_2_9.MESSAGE_REQUEST_ACTION, obj1);
                           c2 = 1;
                           c1 = 1;
                           const obj2 = { value: null, done: false };
-                          obj2[0] = outer1_10(outer1_0);
+                          obj2[0] = closure_1_10(closure_1_0);
                           return obj2;
                         }
                       } else if (arg0 === 1) {
@@ -534,7 +524,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                     }
                   }
                 });
-                const _onConfirm = tmp;
+                closure_1 = tmp;
                 const apply = tmp.apply;
                 if (typeof apply === "unknown") {
                   let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -543,10 +533,10 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
                 }
                 return applyArgumentsResult;
               };
-              if (!outer1_9) {
-                let obj1 = callback;
+              if (!closure_1_9) {
+                obj1 = callback;
                 mutualGuilds(true);
-                let c4 = 2;
+                c4 = 2;
                 c5 = 3;
                 mutualGuilds = 1;
                 obj1 = { value: null, done: false };
@@ -558,7 +548,7 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
           } else if (1 === tmp9) {
             c4 = 0;
             mutualGuilds(false);
-            throw ME;
+            throw closure_3;
           } else {
             if (2 === tmp9) {
               c4 = 1;
@@ -602,8 +592,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
             } else {
               items = [];
             }
-            let obj = outer2_1(outer2_2[11]);
-            obj = { action: outer2_7.DISMISS_CONFIRMATION_PROMPT, channel_id: closure_0, mutual_guild_ids: null, other_user_id: null };
+            let obj = closure_2_1(closure_2_2[11]);
+            obj = { action: closure_2_7.DISMISS_CONFIRMATION_PROMPT, channel_id: closure_0, mutual_guild_ids: null, other_user_id: null };
             if (items == null) {
               items = [];
             }
@@ -613,11 +603,11 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
               id = tmp.id;
             }
             obj[3] = id;
-            obj.track(outer2_9.MESSAGE_REQUEST_ACTION, obj);
+            obj.track(closure_2_9.MESSAGE_REQUEST_ACTION, obj);
           };
           const result = obj2.openAcceptMessageRequestConfirmModal(obj2);
         } catch (tmp34) {
-          ME = tmp34;
+          closure_3 = tmp34;
           if (tmp5 === c4) {
             mutualGuilds = tmp3;
             throw tmp34;
@@ -643,9 +633,8 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
     return applyArgumentsResult;
   }, items3);
   const markAsNotSpam = obj.useCallback((arg0, arg1, arg2) => {
-    const callback = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    closure_1 = arg1;
+    closure_2 = arg2;
     function onConfirm(setting) {
       if (arg1) {
         const NonSpamRetrainingOptIn = lib(onRejectSuccess[13]).NonSpamRetrainingOptIn;
@@ -659,14 +648,14 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
         let obj = lib(onRejectSuccess[14]);
         const result = obj.submitHamReportForFirstDM(closure_1);
       }
-      outer1_10(lib.id);
+      closure_1_10(lib.id);
       obj = { action: constants.ACCEPT_HAM_CONFIRMATION_PROMPT, channel_id: lib.id, is_dont_show_again_checked: arg1, non_spam_retraining_opt_in: setting };
-      onAcceptSuccess(onRejectSuccess[11]).track(constants2.MESSAGE_REQUEST_ACTION, obj);
+      onAcceptSuccess(onRejectSuccess[11]).track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj);
       if (null != callback) {
         callback();
       }
     }
-    let NonSpamRetrainingOptIn = callback(onRejectSuccess[13]).NonSpamRetrainingOptIn;
+    let NonSpamRetrainingOptIn = tmp38(onRejectSuccess[13]).NonSpamRetrainingOptIn;
     const setting = NonSpamRetrainingOptIn.getSetting();
     if (null == setting) {
       let obj = { channel: null, onConfirm: null, onCancel: null };
@@ -675,10 +664,10 @@ export const useMessageRequestActions = function useMessageRequestActions(user) 
       obj[2] = function onCancel() {
         let obj = onAcceptSuccess(onRejectSuccess[11]);
         obj = { action: constants.DISMISS_HAM_CONFIRMATION_PROMPT, channel_id: lib.id };
-        obj.track(constants2.MESSAGE_REQUEST_ACTION, obj);
+        obj.track(isUserProfileLoading.MESSAGE_REQUEST_ACTION, obj);
       };
-      let result = callback(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
-      const tmpResult = callback(onRejectSuccess[12]);
+      let result = arg0(onRejectSuccess[12]).onMarkAsNotSpamConfirmationModal(obj);
+      const tmpResult = arg0(onRejectSuccess[12]);
     } else {
       onConfirm(setting);
     }

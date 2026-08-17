@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 let result = require("set").fileFinishedImporting("modules/voice_panel/native/controller/VoicePanelStreamOutputSinkStack.tsx");
 class VoicePanelStreamOutputSinkStack {
@@ -10,7 +10,7 @@ class VoicePanelStreamOutputSinkStack {
       flag = false;
     }
     obj = Object.create(new.target.prototype);
-    _slicedToArray = obj;
+    closure_0 = obj;
     map = new Map();
     obj.activeSinks = map;
     obj.timer = -1;
@@ -44,7 +44,7 @@ prototype["logSinks"] = function logSinks() {
     continue;
   }
 };
-prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(noop) {
+prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(closure_1) {
   const self = this;
   const activeSinks = this.activeSinks;
   let set = activeSinks.get(arg1);
@@ -52,40 +52,38 @@ prototype["setHasActiveVideoOutputSink"] = function setHasActiveVideoOutputSink(
     const _Set = Set;
     set = new Set();
   }
-  const hasItem = set.has(noop);
+  const hasItem = set.has(closure_1);
   if (arg2) {
     if (!hasItem) {
-      set.add(noop);
+      set.add(closure_1);
       if (1 === set.size) {
-        self.setActive(arg1, true, self.sourceId(noop));
+        self.setActive(arg1, true, self.sourceId(closure_1));
         const activeSinks3 = self.activeSinks;
         const result = activeSinks3.set(arg1, set);
       }
     }
   } else if (hasItem) {
-    set.delete(noop);
+    set.delete(closure_1);
     if (0 === set.size) {
-      self.setActive(arg1, false, self.sourceId(noop));
+      self.setActive(arg1, false, self.sourceId(closure_1));
       const activeSinks2 = self.activeSinks;
       activeSinks2.delete(arg1);
     }
   }
 };
-prototype["clearLock"] = function clearLock(noop) {
-  let obj;
-  let tmp5;
+prototype["clearLock"] = function clearLock(closure_1) {
   const self = this;
   while (tmp !== undefined) {
     let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     [tmp5, obj] = tmp4;
     let obj2 = obj;
-    if (obj.has(noop)) {
+    if (obj.has(closure_1)) {
       let tmp6 = obj;
-      let deleteResult = obj2.delete(noop);
+      let deleteResult = obj2.delete(closure_1);
       if (0 === obj2.size) {
         let tmp8 = tmp5;
-        let setActiveResult = self.setActive(tmp5, false, self.sourceId(noop));
+        let setActiveResult = self.setActive(tmp5, false, self.sourceId(closure_1));
         let activeSinks = self.activeSinks;
         let deleteResult1 = activeSinks.delete(tmp5);
       }
@@ -94,25 +92,25 @@ prototype["clearLock"] = function clearLock(noop) {
   }
 };
 prototype["setActive"] = function setActive(arg0, arg1, arg2) {
-  let _slicedToArray = arg0;
-  let noop = arg1;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   const mediaEngine = this.mediaEngine;
-  mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(_slicedToArray, noop, closure_2));
+  mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, closure_1, closure_2));
 };
-prototype["sourceId"] = function sourceId(noop) {
-  return "VoicePanelStreamOutputSinkStack-" + noop;
+prototype["sourceId"] = function sourceId(closure_1) {
+  return "VoicePanelStreamOutputSinkStack-" + closure_1;
 };
 
 export default VoicePanelStreamOutputSinkStack;
 export const useSetHasActiveVideoOutputSink = function useSetHasActiveVideoOutputSink(streamOutputSinkStack) {
-  let _slicedToArray = streamOutputSinkStack;
+  closure_0 = streamOutputSinkStack;
   id = id.useId();
   const items = [id, streamOutputSinkStack];
   const callback = id.useCallback((arg0, arg1) => {
     const result = streamOutputSinkStack.setHasActiveVideoOutputSink(id, arg0, arg1);
   }, items);
   const items1 = [id, callback, streamOutputSinkStack];
-  const effect = id.useEffect(() => () => _slicedToArray.clearLock(noop), items1);
+  const effect = id.useEffect(() => () => closure_0.clearLock(closure_1), items1);
   return callback;
 };

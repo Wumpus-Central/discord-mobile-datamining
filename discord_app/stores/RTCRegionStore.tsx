@@ -1,14 +1,21 @@
 // discord_app/stores/RTCRegionStore.tsx
-import { DeviceSettingsStore } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { preferredRegions: null, lastTestTimestamp: null, lastGeoRankedOrder: null };
-const HOUR = require("set").Millis.HOUR;
+const HOUR = setDefault.Millis.HOUR;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class RTCRegionStore extends DeviceSettingsStore {
 }
 const prototype = RTCRegionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  const tmp = arg0;
+  let tmp = arg0;
+  if (arg0 == null) {
+    tmp = obj;
+  }
+  closure_3 = tmp;
 };
 prototype["shouldIncludePreferredRegion"] = function shouldIncludePreferredRegion() {
   return null != obj.preferredRegions;
@@ -38,7 +45,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 prototype["shouldPerformLatencyTest"] = function shouldPerformLatencyTest(mapped) {
   let tmp = null === obj.preferredRegions;
   if (!tmp) {
-    obj = apply;
+    obj = applyDefault;
     let lastGeoRankedOrder = obj.lastGeoRankedOrder;
     if (lastGeoRankedOrder == null) {
       lastGeoRankedOrder = [];
@@ -80,7 +87,7 @@ obj = {
     obj.lastTestTimestamp = Date.now();
   }
 };
-const rTCRegionStore = new RTCRegionStore(require("dispatcher"), obj);
-const result = require("apply").fileFinishedImporting("stores/RTCRegionStore.tsx");
+const rTCRegionStore = new RTCRegionStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("stores/RTCRegionStore.tsx");
 
 export default rTCRegionStore;

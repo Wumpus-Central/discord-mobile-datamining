@@ -1,17 +1,17 @@
 // discord_app/modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx
-import setContent from "setContent";
-import handleConnectionOpen from "handleConnectionOpen";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import initialize from "initialize" /* 589 */;
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import closure_2 from "setContent" /* 4086 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/favorites/hooks/useCanShowFavoritesGuildOnboarding.native.tsx");
 
 export default function useCanShowFavoritesGuildOnboarding() {
-  const items = [handleConnectionOpen];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => null != voiceChannelId.getVoiceChannelId());
   const obj = initialize;
-  const items1 = [setContent];
+  const items1 = [closure_2];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => open.isOpen());
   const obj2 = initialize;
   let tmp4 = !stateFromStores;

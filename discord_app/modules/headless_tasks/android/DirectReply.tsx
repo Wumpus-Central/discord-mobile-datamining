@@ -1,29 +1,30 @@
 // discord_app/modules/headless_tasks/android/DirectReply.tsx
-import trackInvite from "trackInvite";
-import { NativeModules } from "get ActivityIndicator";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-let c5 = new require("timestamp")("DirectReply");
-let tmp = new require("timestamp")("DirectReply");
-let result = require("MESSAGE_GROUP_SPACING").fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
+let closure_5 = new timestampDefault("DirectReply");
+let tmp = new timestampDefault("DirectReply");
+let result = require("set").fileFinishedImporting("modules/headless_tasks/android/DirectReply.tsx");
 
 export default (arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0) => {
     const lib = arg0;
-    outer1_5.log("Executing DirectReply");
-    let PushNotificationAndroid = outer1_3.PushNotificationAndroid;
+    closure_1_5.log("Executing DirectReply");
+    let PushNotificationAndroid = closure_1_3.PushNotificationAndroid;
     let result = PushNotificationAndroid.markNotificationAsDirectReply(lib.channelId);
-    lib(outer1_1[4]).awaitStorage(() => {
+    lib(closure_1_1[4]).awaitStorage(() => {
       function _sendMessage() {
         const self = this;
-        const tmp = outer3_2((arg0) => {
-          let closure_0 = arg0;
-          let c3 = 0;
-          let c4 = 0;
+        const tmp = closure_3_2((arg0) => {
+          closure_0 = arg0;
+          c3 = 0;
+          c4 = 0;
           return (/* F120856 */ function*() { ... })();
         });
-        const _sendMessage = tmp;
+        closure_0 = tmp;
         const apply = tmp.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -32,7 +33,7 @@ export default (arg0) => {
         }
         return applyArgumentsResult;
       }
-      outer2_5.log("Storage loaded");
+      closure_2_5.log("Storage loaded");
       (function sendMessage(closure_0) {
         const self = this;
         const apply = _sendMessage.apply;

@@ -1,19 +1,22 @@
 // discord_app/modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GuildFeatures } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { set } from "../creator_monetization_eligibility/CreatorMonetizationEligibilityExperimentUtils.tsx";
 
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
+const isGuildOwner = GuildNSFWContentLevel.isGuildOwner;
+const GuildFeatures = ME.GuildFeatures;
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/useIsGuildEligibleForRoleSubscriptionsUpsell.tsx");
 
 export default function useIsGuildEligibleForRoleSubscriptionsUpsell(arg0) {
   const _require = arg0;
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_3.getGuild(closure_0));
+  const items = [closure_3];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_3.getGuild(closure_0));
   _initialize;
-  [][0] = mergeGuildAvatar;
+  [][0] = closure_4;
   let tmp6 = null != stateFromStores;
   if (tmp6) {
     tmp6 = isGuildOwner(stateFromStores, tmp5);

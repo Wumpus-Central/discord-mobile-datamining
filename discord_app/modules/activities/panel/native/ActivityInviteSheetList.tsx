@@ -1,24 +1,21 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheetList.tsx
-import noop from "noop";
-import { Fonts } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import importDefaultResult1 from "createTextStyle";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import closure_3 from "noop" /* 19 */;
+import { Fonts } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function keyExtractor(item) {
   return item.item.id;
 }
 function FriendsEmptyComponent() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { children: null };
   obj = { title: null, body: null, titleStyle: null, bodyStyle: null };
   const intl = getSystemLocale.intl;
@@ -46,7 +43,7 @@ function FriendsEmptyComponent() {
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t.a7FVbE);
   obj[3] = { top: 8, left: 8, bottom: 8, right: 8 };
-  const obj1 = { style: items1, variant: "text-sm/semibold", color: "text-link", children: null };
+  obj1 = { style: items1, variant: "text-sm/semibold", color: "text-link", children: null };
   items1 = [tmp.goToFriendsLink];
   const intl4 = getSystemLocale.intl;
   obj1[3] = intl4.string(getSystemLocale.t.a7FVbE);
@@ -58,39 +55,35 @@ function FriendsEmptyComponent() {
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { emptyTitle: null, emptyBody: null, goToFriendsLink: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(Fonts.DISPLAY_EXTRABOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 createCacheKey.textTransform = "none";
 createCacheKey.lineHeight = 24;
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
-const merged1 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_SUBTLE, 16));
+const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 16));
 obj1.lineHeight = 20;
 obj1.fontWeight = "600";
 createCacheKey[1] = obj1;
 createCacheKey[2] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetList.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const importDefaultResult1 = importDefaultResult;
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetList.tsx");
 
 export default function ActivityInviteSheetList(data) {
   data = data.data;
-  const error = data.error;
+  error = data.error;
   const getSendState = data.getSendState;
   const isSubmitting = data.isSubmitting;
   const onInviteSent = data.onInviteSent;
   const onPressAvatar = data.onPressAvatar;
   const items = [error, isSubmitting, getSendState, onPressAvatar, onInviteSent, data.length];
   const callback = isSubmitting.useCallback((arg0) => {
-    let index;
-    let item;
     ({ item, index } = arg0);
-    const obj = { start: 0 === index, end: index === data.length - 1, row: item, onPressAvatar, onInviteSent, isSubmitting, error, sendState: null };
-    obj[7] = getSendState(item);
+    const obj = { start: 0 === index, end: index === data.length - 1, row: item, onPressAvatar, onInviteSent, isSubmitting, error, sendState: getSendState(item) };
     return onInviteSent(error(getSendState[12]), obj);
   }, items);
   let obj = { contentContainerStyle: null, bounces: false, renderItem: null, data: null, keyExtractor: null, keyboardShouldPersistTaps: "always", ListEmptyComponent: null };
-  obj = { paddingBottom: null, paddingHorizontal: null };
-  obj[0] = error(getSendState[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16;
-  obj[1] = error(getSendState[5]).space.PX_12;
+  obj = { paddingBottom: error(getSendState[13])({ isKeyboardAwareOnAndroid: false }).insets.bottom + error(getSendState[5]).space.PX_16, paddingHorizontal: error(getSendState[5]).space.PX_12 };
   obj[0] = obj;
   obj[2] = callback;
   obj[3] = data;

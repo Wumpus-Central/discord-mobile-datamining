@@ -1,14 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/useScaledActionHeight.tsx
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../../design/tokens/native/useToken.tsx";
-import { getFontScale } from "../../../../screen/native/useFontScale.tsx";
-const result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledActionHeight.tsx");
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import getFontScale from "getFontScale" /* 4751 */;
+
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/useScaledActionHeight.tsx");
 
 export default function useScaledActionHeight() {
   const fontScale = getFontScale.useFontScale();
   const obj = getFontScale;
-  const token = map.useToken(Themes.modules.mobile.TABLE_ROW_HEIGHT);
+  const token = map.useToken(ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT);
   const obj2 = map;
-  const token1 = map.useToken(Themes.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
+  const token1 = map.useToken(ThemesDefault.modules.mobile.TABLE_ROW_CONTENT_HEIGHT);
   return token + Math.max(fontScale * token1 - token1, 0);
 };

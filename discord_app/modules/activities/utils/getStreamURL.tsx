@@ -1,7 +1,9 @@
 // discord_app/modules/activities/utils/getStreamURL.tsx
-import { validStreamURL } from "items3";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/getStreamURL.tsx");
+const validStreamURL = items3.validStreamURL;
+const result = set.fileFinishedImporting("modules/activities/utils/getStreamURL.tsx");
 
 export default function getStreamURL(url) {
   if (null != url) {

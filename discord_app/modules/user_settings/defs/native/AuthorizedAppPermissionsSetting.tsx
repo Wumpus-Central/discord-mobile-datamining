@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { AuthorizedAppPermissionsScreen } from "../../authorized_apps/native/AuthorizedAppPermissionsScreen.tsx";
 
 obj = {
@@ -8,17 +11,17 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.xrmhRX);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.AUTHORIZED_APP,
+  parent: MobileUserSettings.MobileUserSettings.AUTHORIZED_APP,
   unsearchable: true,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.AUTHORIZED_APP_PERMISSIONS,
+  route: ME.UserSettingsSections.AUTHORIZED_APP_PERMISSIONS,
   getComponent() {
     return AuthorizedAppPermissionsScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AuthorizedAppPermissionsSetting.tsx");
 
 export default route;

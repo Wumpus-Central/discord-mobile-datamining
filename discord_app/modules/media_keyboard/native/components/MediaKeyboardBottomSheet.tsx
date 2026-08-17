@@ -1,24 +1,18 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "expandEventProperties";
-import { View } from "HapticFeedbackTypes";
-import DRAG_HANDLE from "DRAG_HANDLE";
-import { AnalyticEvents } from "ME";
-import jsxProd from "setAccessibilityFocus";
-import isMetaQuest from "isMetaQuest";
-import set from "set";
-import createCacheKey from "createCacheKey";
-import set from "get ActivityIndicator";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import DRAG_HANDLE from "DRAG_HANDLE" /* 1624 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import set from "set" /* 500 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function MediaKeyboardBackground(arg0) {
-  let pointerEvents;
-  let style;
   ({ pointerEvents, style } = arg0);
   const obj = { pointerEvents, accessible: true, accessibilityRole: "adjustable", accessibilityLabel: null, style: null };
   const intl = getSystemLocale.intl;
@@ -30,10 +24,10 @@ function MediaKeyboardBackground(arg0) {
 let c4 = importAllResult;
 ({ HEADER_HANDLE_HEIGHT: closure_6, MediaPickerActionSheetEngagedActions: error } = DRAG_HANDLE);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-isMetaQuest = isMetaQuest.isMetaQuest();
-set = set.isIOS();
+let closure_11 = isMetaQuest.isMetaQuest();
+let closure_12 = set.isIOS();
 let obj = { background: null };
-obj = { backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: require("Themes").modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.MOBILE_MEDIA_KEYBOARD_TOP_BORDER_RADIUS };
 obj[0] = obj;
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_15 = { code: "function MediaKeyboardBottomSheetTsx1(){const{animatedIndex}=this.__closure;return animatedIndex.get()>=0;}" };
@@ -43,25 +37,16 @@ let closure_18 = { code: "function MediaKeyboardBottomSheetTsx4(result,previous)
 let result = set.fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheet.tsx");
 
 export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIndex) {
-  let accessoriesComponent;
-  let animatedPosition;
-  let animationConfigs;
-  let children;
-  let handleComponent;
-  let left;
-  let overlayComponent;
-  let right;
-  let transitionState;
   animatedIndex = animatedIndex.animatedIndex;
   const bottomSheetRef = animatedIndex.bottomSheetRef;
   const onClose = animatedIndex.onClose;
   let callback = animatedIndex.onAccessibilityFocusRestore;
-  let importAllResult;
+  importAllResult = undefined;
   let isScreenReaderEnabled;
-  let c6;
+  closure_6 = undefined;
   let ref;
-  let closure_8;
-  let closure_9;
+  closure_8 = undefined;
+  closure_9 = undefined;
   let callback3;
   ({ accessoriesComponent, animatedPosition, children, handleComponent, transitionState, animationConfigs, overlayComponent } = animatedIndex);
   const tmp4 = bottomSheetRef(onClose[11])({ forceMaxHeight: false });
@@ -83,7 +68,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
     return ref2(animatedIndex(onClose[15]).BottomSheetBackdrop, obj);
   }, []);
   const callback2 = importAllResult.useCallback((arg0, arg1) => {
-    if (c4) {
+    if (closure_4) {
       if (-1 !== arg1) {
         if (onClose != null) {
           tmp9();
@@ -103,14 +88,14 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
       const obj2 = bottomSheetRef(onClose[19]);
     }
   }, items);
-  let obj1 = animatedIndex(onClose[20]);
+  obj1 = animatedIndex(onClose[20]);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   let tmp13 = isScreenReaderEnabled;
   if (!isScreenReaderEnabled) {
     tmp13 = tmp6;
   }
   const tmp14 = callback(obj.useState(false), 2);
-  c6 = tmp15;
+  closure_6 = tmp15;
   ref = obj.useRef(null);
   closure_8 = obj.useRef(false);
   closure_9 = obj.useRef(null);
@@ -131,7 +116,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
         tmp.current = setTimeout(() => {
           closure_9.current = null;
           closure_8.current = true;
-          let obj = outer1_0(outer1_2[21]);
+          let obj = closure_1_0(closure_1_2[21]);
           obj = { ref: closure_7 };
           const result = obj.setAccessibilityFocus(obj);
         }, 100);
@@ -151,8 +136,8 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   T.__initData = closure_15;
   class D {
     constructor(arg0, arg1) {
-      tmp = outer1_12;
-      if (outer1_12) {
+      tmp = closure_1_12;
+      if (closure_1_12) {
         tmp = animatedIndex !== arg1;
       }
       if (tmp) {
@@ -164,13 +149,13 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
         tmp4 = animatedIndex;
         tmp5 = onClose;
         obj = animatedIndex(onClose[22]);
-        tmp6 = c10;
-        tmp7 = obj.runOnJS(c10)(animatedIndex);
+        tmp6 = closure_10;
+        tmp7 = obj.runOnJS(closure_10)(animatedIndex);
       }
       return;
     }
   }
-  obj = { IS_IOS: set, runOnJS: tmp5(tmp3[22]).runOnJS, handleSheetOpenChange: callback3 };
+  obj = { IS_IOS: closure_12, runOnJS: tmp5(tmp3[22]).runOnJS, handleSheetOpenChange: callback3 };
   D.__closure = obj;
   D.__workletHash = 12464478404147;
   D.__initData = closure_16;
@@ -186,7 +171,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   H.__initData = closure_17;
   const fn = function w(arg0, arg1) {
     if (arg0 !== arg1) {
-      animatedIndex(onClose[22]).runOnJS(c6)(arg0);
+      animatedIndex(onClose[22]).runOnJS(closure_6)(arg0);
       const obj = animatedIndex(onClose[22]);
     }
   };
@@ -206,7 +191,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   });
   const items2 = [bottomSheetRef, tmp6, onClose];
   const layoutEffect = obj.useLayoutEffect(() => {
-    if (c4) {
+    if (closure_4) {
       if (null != bottomSheetRef.current) {
         const current = bottomSheetRef.current;
         current.forceClose();
@@ -241,7 +226,7 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   obj2[5] = animatedPosition;
   let tmp27 = !tmp13;
   if (!tmp13) {
-    tmp27 = !isMetaQuest;
+    tmp27 = !closure_11;
   }
   obj2[6] = tmp27;
   obj2[7] = !tmp13;
@@ -250,14 +235,14 @@ export default importAllResult.memo(function MediaKeyboardBottomSheet(animatedIn
   obj2[10] = tmp.background;
   obj2[11] = callback1;
   obj2[12] = callback2;
-  obj2[13] = c6;
+  obj2[13] = closure_6;
   obj2[14] = onClose;
   let merged = Object.assign(tmp4);
   obj2.children = closure_9(animatedIndex(onClose[26]).AccessibilityViewAnimated, {
     ref,
     nativeID: "media-keyboard-sheet",
     onAccessibilityEscape() {
-      if (_slicedToArray != null) {
+      if (closure_3 != null) {
         tmp();
       }
       animatedIndex(onClose[27]).dismissKeyboard();

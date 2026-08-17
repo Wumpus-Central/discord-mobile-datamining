@@ -1,7 +1,9 @@
 // discord_app/modules/premium/gifting/GiftPromotionStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = { giftOptionsReceiptMap: {} };
+const PersistedStore = initializeDefault.PersistedStore;
 class GiftPromotionStore extends PersistedStore {
 }
 const prototype = GiftPromotionStore.prototype;
@@ -36,9 +38,9 @@ const items = [
   }
 ];
 GiftPromotionStore.migrations = items;
-const giftPromotionStore = new GiftPromotionStore(require("dispatcher"), {
+const giftPromotionStore = new GiftPromotionStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
-    let closure_0 = { giftOptionsReceiptMap: {} };
+    closure_0 = { giftOptionsReceiptMap: {} };
   },
   GIFT_PROMOTION_GIFT_OPTIONS_CACHE_ACTION: function handleCacheGiftOptions(key) {
     closure_0.giftOptionsReceiptMap[key.key] = key.giftOptions;

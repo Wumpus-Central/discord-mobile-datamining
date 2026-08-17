@@ -1,10 +1,11 @@
 // discord_app/modules/gif_picker/FavoriteGIFHooks.tsx
-import noop from "noop";
+import useFrecencySettings from "useFrecencySettings" /* 10200 */;
+import closure_3 from "noop" /* 19 */;
 import { useFrecencySettings } from "../user_settings/FrecencyUserSettingsHooks.tsx";
 
-const require = arg1;
+require = arg1;
 let closure_4 = {};
-const result = require("apply").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/gif_picker/FavoriteGIFHooks.tsx");
 
 export const useFavoriteGIFs = function useFavoriteGIFs() {
   const favoriteGifs = useFrecencySettings.useFrecencySettings().favoriteGifs;
@@ -29,7 +30,7 @@ export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFav
   }
   const items = [gifs, transformFavoriteGifUrl];
   return React.useMemo(() => {
-    const mapped = gifs(outer1_2[2])(gifs).map((src, url) => {
+    const mapped = gifs(closure_1_2[2])(gifs).map((src, url) => {
       const obj = {};
       const merged = Object.assign(src);
       obj.url = url;
@@ -43,7 +44,7 @@ export const useSortedFavoriteGIFs = function useSortedFavoriteGIFs(transformFav
       obj.src = src;
       return obj;
     });
-    const arr = gifs(outer1_2[2])(gifs);
+    const arr = gifs(closure_1_2[2])(gifs);
     const sortByResult = mapped.sortBy("order");
     return mapped.sortBy("order").reverse().value();
   }, items);

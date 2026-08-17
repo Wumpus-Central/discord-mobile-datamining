@@ -1,25 +1,24 @@
 // discord_app/stores/billing/SubscriptionStore.tsx
-import setPremiumTypeActual from "setPremiumTypeActual";
-import { isNoneSubscription } from "createFromServer";
-import { SubscriptionRecord } from "createSubscriptionItemFromServer";
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "setPremiumTypeActual" /* 1923 */;
+import { isNoneSubscription } from "createFromServer" /* 4040 */;
+import { SubscriptionRecord } from "createSubscriptionItemFromServer" /* 4046 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
 function reset() {
-  let c6 = null;
-  let c7 = null;
-  let c8 = null;
-  let c9 = null;
-  let c10 = null;
-  let c11 = false;
-  let c12 = null;
-  let c13 = false;
-  let c14 = false;
-  let c16 = false;
-  let c17 = null;
+  c6 = null;
+  c7 = null;
+  c8 = null;
+  c9 = null;
+  c10 = null;
+  c11 = false;
+  c12 = null;
+  c13 = false;
+  c14 = false;
+  c16 = false;
+  c17 = null;
 }
 ({ SubscriptionStatusTypes: c4, SubscriptionTypes: c5 } = ME);
 let c6 = null;
@@ -34,11 +33,12 @@ let c14 = false;
 let c15 = null;
 let c16 = false;
 let c17 = null;
+const Store = initializeDefault.Store;
 class SubscriptionStore extends Store {
 }
 const prototype = SubscriptionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, setPremiumTypeActual);
+  this.waitFor(closure_3, closure_0);
 };
 prototype["hasFetchedSubscriptions"] = function hasFetchedSubscriptions() {
   return null != c6;
@@ -231,7 +231,7 @@ prototype["getPremiumGroupSubscription"] = function getPremiumGroupSubscription(
   return tmp3;
 };
 SubscriptionStore.displayName = "SubscriptionStore";
-const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
+const subscriptionStore = new SubscriptionStore(dispatcherDefault, {
   BILLING_SUBSCRIPTION_FETCH_SUCCESS: function handleSubscriptionsFetch(subscriptions) {
     subscriptions = subscriptions.subscriptions;
     let id;
@@ -246,7 +246,7 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
         obj[fromServer.id] = fromServer;
         if (fromServer.status !== constants.UNPAID) {
           obj[fromServer.id] = fromServer;
-          let tmp3 = fromServer.type === outer1_5.GUILD;
+          let tmp3 = fromServer.type === closure_1_5.GUILD;
           if (tmp3) {
             tmp3 = fromServer.status !== tmp12.ENDED;
           }
@@ -256,8 +256,8 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
           if (tmp6) {
             items1.push(fromServer);
           }
-          const tmp2 = outer1_5;
-          tmp6 = fromServer.type === outer1_5.APPLICATION && fromServer.status !== tmp12.ENDED;
+          const tmp2 = closure_1_5;
+          tmp6 = fromServer.type === closure_1_5.APPLICATION && fromServer.status !== tmp12.ENDED;
         }
       }
     });
@@ -275,17 +275,17 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
         const merged1 = Object.assign(obj);
         obj[fromServer.id] = fromServer;
       }
-      let tmp6 = null != _null;
+      let tmp6 = null != items1;
       if (tmp6) {
         tmp6 = fromServer.type === constants2.GUILD;
       }
       if (!tmp6) {
-        let tmp19 = null != _null2;
+        let tmp19 = null != _null;
         if (tmp19) {
           tmp19 = fromServer.type === constants2.APPLICATION;
         }
         if (tmp19) {
-          const findIndexResult = _null2.findIndex((id) => id.id === fromServer.id);
+          const findIndexResult = _null.findIndex((id) => id.id === fromServer.id);
           if (-1 === findIndexResult) {
             let items = [fromServer];
             HermesBuiltin.arraySpread(tmp21, 1);
@@ -300,12 +300,12 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
             items[findIndexResult] = fromServer;
             tmp27 = items;
           }
-          _null = tmp27;
+          items1 = tmp27;
         }
       } else {
-        const findIndexResult1 = _null.findIndex((id) => id.id === fromServer.id);
+        const findIndexResult1 = items1.findIndex((id) => id.id === fromServer.id);
         if (-1 === findIndexResult1) {
-          let items1 = [fromServer];
+          items1 = [fromServer];
           HermesBuiltin.arraySpread(tmp8, 1);
           let tmp14 = items1;
         } else {
@@ -318,53 +318,53 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
           items1[findIndexResult1] = fromServer;
           tmp14 = items1;
         }
-        _null = tmp14;
+        items1 = tmp14;
       }
     }
   },
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_START: function handleMostRecentSubscriptionFetchStart() {
-    let c16 = true;
+    c16 = true;
   },
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: function handleMostRecentSubscriptionFetch(subscription) {
     subscription = subscription.subscription;
-    let c11 = true;
-    let c16 = false;
+    c11 = true;
+    c16 = false;
     if (null != subscription) {
       if (subscription.user_id !== store2.getId()) {
         c11 = false;
       } else {
-        let closure_8 = SubscriptionRecord.createFromServer(subscription);
+        closure_8 = SubscriptionRecord.createFromServer(subscription);
       }
     }
   },
   BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_FAIL: function handleMostRecentSubscriptionFetchFail() {
-    let c16 = false;
+    c16 = false;
   },
   BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: function handlePreviousSubscriptionFetch(subscription) {
     subscription = subscription.subscription;
-    let c13 = true;
+    c13 = true;
     if (null != subscription) {
       if (subscription.user_id !== store2.getId()) {
         c13 = false;
       } else {
-        let closure_12 = SubscriptionRecord.createFromServer(subscription);
+        closure_12 = SubscriptionRecord.createFromServer(subscription);
       }
     }
   },
   BILLING_SUBSCRIPTION_RESET: reset,
   BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START: function handleSubscriptionRewardEligibilityFetchStart() {
-    let c14 = true;
+    c14 = true;
   },
   BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS: function handleSubscriptionRewardEligibilityFetch(eligible) {
     eligible = eligible.eligible;
-    let c14 = false;
+    c14 = false;
   },
   BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE: function handleSubscriptionRewardEligibilityFetchFailed(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c15 = false;
-      let c14 = false;
+      c15 = false;
+      c14 = false;
     }
   },
   SET_PREMIUM_TYPE_OVERRIDE: function handlePremiumTypeOverride() {
@@ -372,7 +372,7 @@ const subscriptionStore = new SubscriptionStore(require("dispatcher"), {
   },
   LOGOUT: reset
 });
-const result = require("createSubscriptionItemFromServer").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
+const result = require("set").fileFinishedImporting("stores/billing/SubscriptionStore.tsx");
 
 export default subscriptionStore;
 export const getSubscriptionOfType = function getSubscriptionOfType(arg0, arg1) {

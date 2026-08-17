@@ -1,9 +1,10 @@
 // discord_app/modules/markup/MarkupTextRule.tsx
-import t from "t";
+import tDefault from "t" /* 4092 */;
+import t from "t" /* 4092 */;
 
 const tmp2 = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/;
 const obj = {};
-const merged = Object.assign(require("t").defaultRules.text);
+const merged = Object.assign(tDefault.defaultRules.text);
 obj.match = t.anyScopeRegex(tmp2);
 const result = require("set").fileFinishedImporting("modules/markup/MarkupTextRule.tsx");
 

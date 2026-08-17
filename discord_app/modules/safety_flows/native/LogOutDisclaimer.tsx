@@ -1,11 +1,13 @@
 // discord_app/modules/safety_flows/native/LogOutDisclaimer.tsx
-import { jsx } from "jsxProd";
-import { ModalDisclaimer } from "../../../design/components/Modal/native/ModalDisclaimer.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../SafetyFlows.messages.js";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2597 */;
+import Text from "Text" /* 4734 */;
+import ModalDisclaimer from "ModalDisclaimer" /* 13540 */;
 
-const result = require("Text").fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/safety_flows/native/LogOutDisclaimer.tsx");
 
 export default function LogOutDisclaimer() {
   let obj = { children: null };
@@ -16,7 +18,7 @@ export default function LogOutDisclaimer() {
       callback(table[5]).logout("safety_flows_enter_email_screen");
     }
   };
-  obj[1] = intl.format(messagesProxy["0DHxym"], obj);
+  obj[1] = intl.format(messagesProxyDefault["0DHxym"], obj);
   obj[0] = jsx(Text.Text, {
     handleLogOut() {
       callback(table[5]).logout("safety_flows_enter_email_screen");

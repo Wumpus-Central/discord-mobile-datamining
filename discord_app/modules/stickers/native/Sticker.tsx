@@ -1,21 +1,19 @@
 // discord_app/modules/stickers/native/Sticker.tsx
-import "noop";
-import { PixelRatio } from "get ActivityIndicator";
-import handleThemeChange from "handleThemeChange";
-import { jsx } from "jsxProd";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { NativeAPNGView } from "../../../components_native/common/NativeAPNGView.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { StickerFormat } from "../StickersTypes.tsx";
-import { NativeLottieView } from "NativeLottieView.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import StickerFormat from "StickerFormat" /* 4964 */;
+import preloadDefault from "preload" /* 5449 */;
+import NativeLottieViewDefault from "NativeLottieView" /* 8218 */;
+import _modDef10120 from "module_10120" /* 10120 */;
+import { PixelRatio } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("handleThemeChange").fileFinishedImporting("modules/stickers/native/Sticker.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/stickers/native/Sticker.tsx");
 
 export default function Sticker(opaque) {
-  let animated;
-  let size;
-  let sticker;
   ({ sticker, size, animated } = opaque);
   if (animated === undefined) {
     animated = true;
@@ -63,7 +61,7 @@ export default function Sticker(opaque) {
     const NativeLottieRenderMode = tmp(8218).NativeLottieRenderMode;
     obj2[5] = animated ? NativeLottieRenderMode.LOOP : NativeLottieRenderMode.STILL;
     obj2[6] = formatToPlainStringResult;
-    return jsx(NativeLottieView, { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });
+    return jsx(NativeLottieViewDefault, { url: null, asset: null, width: null, height: null, opacity: null, renderMode: null, accessibilityLabel: null });
   } else {
     if (sticker.format_type === tmp(4964).StickerFormat.APNG) {
       if ("type" in sticker) {
@@ -82,7 +80,7 @@ export default function Sticker(opaque) {
       const obj5 = {};
       const tmpResult3 = tmp(4823);
       const merged = Object.assign(obj3);
-      return jsx(NativeAPNGView, {});
+      return jsx(_modDef10120, {});
     }
     const obj6 = { resizeMode: "contain", style: null, placeholder: null, source: null, accessible: true, accessibilityLabel: null };
     const obj7 = { height: null, width: null, opacity: null };
@@ -91,7 +89,7 @@ export default function Sticker(opaque) {
     obj7[2] = num;
     obj6[1] = obj7;
     const tmp12 = jsx;
-    const tmp14 = preload;
+    const tmp14 = preloadDefault;
     if (tmpResult4.isThemeDark(theme.theme)) {
       let tmp13Result = tmp13(6931);
     } else {
@@ -104,7 +102,7 @@ export default function Sticker(opaque) {
     obj6[5] = formatToPlainStringResult;
     return tmp12(tmp14, obj6);
   }
-  const obj1 = { stickerName: sticker.name };
+  obj1 = { stickerName: sticker.name };
 };
 export const getStickerAssetUrl = function getStickerAssetUrl(sticker, closure_7, first) {
   if (sticker.format_type === StickerFormat.StickerFormat.LOTTIE) {

@@ -1,11 +1,11 @@
 // discord_app/modules/activities/useActivityShelfData.tsx
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import participantFromServer from "participantFromServer";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "reset" /* 7874 */;
+import closure_6 from "participantFromServer" /* 1390 */;
 
 const require = arg1;
-const result = require("reset").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfData.tsx");
 
 export const useActivityShelfData = function useActivityShelfData(guildId) {
   const _require = guildId;
@@ -28,7 +28,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   const tmp9 = stateFromStores(tmp[5])(tmp5);
   getCurrentUser = tmp9;
   const items4 = [tmp9];
-  memo = stateFromStores1.useMemo(() => tmp9.filter(guildId(stateFromStoresArray[6]).isNotNullish), items4);
+  memo = stateFromStores1.useMemo(() => closure_4.filter(guildId(stateFromStoresArray[6]).isNotNullish), items4);
   const items5 = [memo, stateFromStores1];
   memo1 = stateFromStores1.useMemo(() => {
     if (null != stateFromStores1) {
@@ -48,8 +48,8 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
   const items6 = [stateFromStoresArray, memo];
   const memo2 = stateFromStores1.useMemo(() => {
     const mapped = stateFromStoresArray.map((arg0) => {
-      let closure_0 = arg0;
-      const found = reset.find((id) => id.id === application_id.application_id);
+      closure_0 = arg0;
+      const found = closure_5.find((id) => id.id === application_id.application_id);
       let tmp2 = null;
       if (null != found) {
         const obj = { activity: null, application: null };
@@ -102,7 +102,7 @@ export const useActivityShelfData = function useActivityShelfData(guildId) {
       }
       let tmp2 = false === nsfwAllowed;
       if (tmp2) {
-        tmp2 = outer1_1(outer1_2[9])(application.application.id);
+        tmp2 = closure_1_1(closure_1_2[9])(application.application.id);
       }
       return !tmp2;
     });

@@ -1,19 +1,16 @@
 // discord_app/modules/forums/native/posts/hooks/useNativeForumPostContent.tsx
-import { MessageFlags } from "ME";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { isSystemMessage } from "../../../../messages/isSystemMessage.tsx";
-import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const MessageFlags = ME.MessageFlags;
 let closure_4 = createCacheKey.createStyles({ italics: { fontStyle: "italic" } });
-const result = require("getSystemLocale").fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
+const result = set.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostContent.tsx");
 
 export default function useNativeForumPostContent(arg0) {
-  let isMessageDeleted;
-  let message;
-  let messageContent;
-  let messageLoaded;
-  let senderModifier;
   ({ message, messageContent, senderModifier } = arg0);
   ({ messageLoaded, isMessageDeleted } = arg0);
   const tmp = callback();
@@ -25,7 +22,7 @@ export default function useNativeForumPostContent(arg0) {
     return obj;
   } else {
     if (null != message) {
-      if (isSystemMessage(message)) {
+      if (isSystemMessageDefault(message)) {
         obj = { content: null, style: null, variant: "text-sm/normal" };
         obj[0] = messageContent;
         obj[1] = tmp.italics;
@@ -111,7 +108,7 @@ export default function useNativeForumPostContent(arg0) {
         const intl7 = getSystemLocale.intl;
         let stringResult1 = intl7.string(getSystemLocale.t.yWK7ZM);
       }
-      const obj1 = { content: null, style: null, variant: "text-sm/normal" };
+      obj1 = { content: null, style: null, variant: "text-sm/normal" };
       obj1[0] = stringResult1;
       obj1[1] = tmp.italics;
       return obj1;

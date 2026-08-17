@@ -1,47 +1,43 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx
-import TwoFASetupModalActionCreators from "../../../../user_settings/account/native/mfa_modal_flow/TwoFASetupModalActionCreators.tsx";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import Themes from "Themes";
-import { ScrollView } from "jsxProd";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import closure_8 from "_handleConnectionOpen";
-import setPremiumTypeActual from "setPremiumTypeActual";
-import _getSystemLocale from "_getSystemLocale";
-import handleThemeChange from "handleThemeChange";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import { ThemeTypes } from "ME";
-import { NewUserTypes } from "NewUserTypes";
-import GuildFeatures from "GuildFeatures";
-import { VIBING_WUMPUS_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE";
-import { SystemThemeState } from "SystemThemeState";
-import jsxProd from "dispatcher";
-import createCacheKey from "createCacheKey";
-import { asyncRequireImpl } from "../../../../../../_runtime/02007_asyncRequireImpl.js";
-import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { ModalActionCreators } from "../../../../../actions/ModalActionCreators.tsx";
-import { saveGuildFolders } from "../../../../../actions/UserSettingsActionCreators.tsx";
-import { dispatcher } from "../../../../../Dispatcher.tsx";
-import { setFontSize } from "../../../../a11y/AccessibilityActionCreators.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { _startContactSyncForDiscoverability } from "../../../../nuf/native/NUFActionCreators.tsx";
-import { setNewUser } from "../../../../nuf/NUFActionCreators.tsx";
-import { updateUserGuildSettings } from "../../../../user_settings/UserSettingsProtoActionCreators.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ThemesDefault from "Themes" /* 712 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9365 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 11877 */;
+import setNewUser from "setNewUser" /* 11925 */;
+import setFontSize from "setFontSize" /* 13813 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_8 from "_handleConnectionOpen" /* 4495 */;
+import closure_9 from "setPremiumTypeActual" /* 1923 */;
+import closure_10 from "_getSystemLocale" /* 1994 */;
+import closure_11 from "handleThemeChange" /* 1302 */;
+import closure_12 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "initialize" /* 7471 */;
+import { ThemeTypes } from "ME" /* 676 */;
+import { NewUserTypes } from "NewUserTypes" /* 11878 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { VIBING_WUMPUS_MODAL_KEY } from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
+import { SystemThemeState } from "SystemThemeState" /* 1305 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_17;
-let closure_18;
-let closure_21;
-let closure_22;
-let closure_23;
-const require = arg1;
+require = arg1;
 function handleNewUserOnboarding() {
   setNewUser.setNewUser(NewUserTypes.ORGANIC_REGISTERED);
   const obj = setNewUser;
-  dispatcher.wait(_startContactSyncForDiscoverability.startOnboarding);
+  dispatcherDefault.wait(_startContactSyncForDiscoverability.startOnboarding);
 }
 function handleThemeChange(arg0) {
-  saveGuildFolders.updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
+  saveGuildFoldersDefault.updateTheme(arg0 ? ThemeTypes.LIGHT : ThemeTypes.DARK);
 }
 function handleReducedMotionChange(arg0) {
   let str = "no-preference";
@@ -56,7 +52,7 @@ function handleLaunchWelcomeReset() {
   const result1 = UNSAFE_isDismissibleContentDismissed.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.SEEN_OLD_DESIGN);
 }
 function showVibingWumpus() {
-  let obj = ModalActionCreators;
+  let obj = _modDef5260;
   obj = {
     onClose() {
 
@@ -76,7 +72,7 @@ function handleResetDoubleTapState() {
   }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }
 function launchTotpSetupSuccess() {
-  let arr = ModalActionCreators;
+  let arr = _modDef5260;
   arr = arr.pop();
   const items = [asyncRequireImpl(14138, dependencyMap.paths), asyncRequireImpl(14140, dependencyMap.paths)];
   Promise.all(items).then((arg0) => {
@@ -144,8 +140,8 @@ function _handleShowAppRatingModal() {
             ok = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1(13247)();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_1(13247)();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -165,7 +161,7 @@ function _handleShowAppRatingModal() {
           let str2 = "Review requested -- no error returned. The OS decides whether to render the prompt.";
           if (!ok.ok) {
             const _HermesInternal = HermesInternal;
-            str2 = "Review request failed: " + outer1_0.error;
+            str2 = "Review request failed: " + closure_1_0.error;
           }
           obj2[2] = str2;
           callback(4094).open(obj2);
@@ -178,7 +174,7 @@ function _handleShowAppRatingModal() {
       }
     }
   });
-  const _handleShowAppRatingModal = tmp;
+  closure_34 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -190,12 +186,12 @@ function _handleShowAppRatingModal() {
 ({ PREMIUM_TYPE_OVERRIDE_OPTIONS: closure_17, UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_18 } = GuildFeatures);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 createCacheKey = { container: null, content: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
+let closure_24 = createCacheKey.createStyles(createCacheKey);
 function launchMFA() {
-  let arr = ModalActionCreators;
+  let arr = _modDef5260;
   arr = arr.pop();
   asyncRequireImpl(15118, dependencyMap.paths).then((openMFAModal) => {
     const items = [{ type: "webauthn", challenge: "{}" }, { type: "totp" }, { type: "backup" }, { type: "sms" }, { type: "password" }];
@@ -206,33 +202,29 @@ function launchMFA() {
     });
   });
 }
-let obj1 = { padding: require("Themes").space.PX_16 };
-let result = require("noop").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx");
+let obj1 = { padding: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsQuickActionsScreen.tsx");
 
 export default function DevToolsQuickActionsScreen() {
-  let _handleConnectionOpen;
-  let locale;
-  let tmp8;
-  let usingSystemTheme;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const tmp5 = locale;
   let obj = locale(589);
-  const items = [handleThemeChange, _getSystemLocale, CHANNEL_SIDEBAR_WIDTH, initialize];
+  const items = [closure_11, closure_10, closure_12, closure_14];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ theme: theme.theme, usingSystemTheme: useSystemTheme.useSystemTheme === constants.ON, locale: locale.locale, showDevWidget: showDevWidget.showDevWidget }));
   ({ usingSystemTheme, locale } = stateFromStoresObject);
   const showDevWidget = stateFromStoresObject.showDevWidget;
-  let obj1 = locale(589);
-  const items1 = [mergeGuildAvatar];
-  const dependencyMap = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
+  obj1 = locale(589);
+  const items1 = [closure_13];
+  dependencyMap = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let obj2 = locale(589);
-  const items2 = [setPremiumTypeActual];
+  const items2 = [closure_9];
   const callback = obj2.useStateFromStores(items2, () => premiumTypeOverride.getPremiumTypeOverride());
   const tmp4 = showDevWidget(1629)();
-  [tmp8, _handleConnectionOpen] = callback(setting.useState(false), 2);
+  [tmp8, closure_4] = callback(setting.useState(false), 2);
   let IgnoreProfileSpeedbumpDisabled = locale(4066).IgnoreProfileSpeedbumpDisabled;
   setting = IgnoreProfileSpeedbumpDisabled.useSetting();
   let obj3 = locale(589);
-  const items3 = [maybeApplyNoTextColorForLightCustomTheme];
+  const items3 = [closure_7];
   [][0] = locale;
   const stateFromStores = obj3.useStateFromStores(items3, () => useReducedMotion.useReducedMotion);
   if (tmp8) {
@@ -284,21 +276,16 @@ export default function DevToolsQuickActionsScreen() {
     items5[3] = tmp14(tmp5(1297).Spacer, obj7);
     const obj8 = { title: "Override Client-Side Premium Type", hasIcons: true, children: null };
     obj8[2] = closure_17.map((arg0) => {
-      let label;
-      let value;
       ({ label, value } = arg0);
-      const locale = value;
-      const obj = {
+      locale = value;
+      return closure_1_21(locale(7178).TableSwitchRow, {
         onValueChange(arg0) {
-          const result = locale(table[48]).updateClientPremiumTypeOverride(arg0 ? closure_0 : outer2_18, outer1_2);
+          const result = locale(table[48]).updateClientPremiumTypeOverride(arg0 ? closure_0 : closure_2_18, closure_1_2);
         },
         label,
-        icon: null,
-        value: null
-      };
-      obj[2] = outer1_21(locale(9925).PencilIcon, {});
-      obj[3] = value === module_14138;
-      return outer1_21(locale(7178).TableSwitchRow, obj, label);
+        icon: closure_1_21(locale(9925).PencilIcon, {}),
+        value: value === closure_3
+      }, label);
     });
     items5[4] = tmp14(tmp5(6286).TableRowGroup, obj8);
     const obj9 = { size: null };
@@ -381,7 +368,7 @@ export default function DevToolsQuickActionsScreen() {
     const obj24 = { icon: null, label: "Force JS Crash", onPress: null };
     obj24[0] = tmp14(tmp5(14870).WrenchIcon, {});
     obj24[2] = function onPress() {
-      const error = new Error("Force JS Crash");
+      error = new Error("Force JS Crash");
       throw error;
     };
     items8[1] = tmp14(tmp5(6291).TableRow, obj24);

@@ -1,15 +1,11 @@
 // discord_app/design/components/Sheet/native/BottomSheetTextInput.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("useBottomSheetKeyboardHandling").fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/BottomSheetTextInput.native.tsx");
 
 export const BottomSheetTextInput = function BottomSheetTextInput(ref) {
-  let onBlur;
-  let onBlur2;
-  let onFocus;
-  let onFocus2;
   ref = ref.ref;
   ({ onFocus, onBlur } = ref);
   ref = undefined;

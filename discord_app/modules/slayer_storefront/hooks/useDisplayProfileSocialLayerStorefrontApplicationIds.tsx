@@ -1,9 +1,9 @@
 // discord_app/modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx
-import noop from "noop";
-import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleUserSettingsStoreUpdate" /* 7202 */;
 
 const require = arg1;
-const result = require("useDisplayProfile").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/useDisplayProfileSocialLayerStorefrontApplicationIds.tsx");
 
 export default function useDisplayProfileSocialLayerStorefrontApplicationIds(userId) {
   let _require;
@@ -16,7 +16,7 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
   let items = [tmp];
   const memo = areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let userId;
-    if (c0 != null) {
+    if (closure_0 != null) {
       userId = tmp.userId;
     }
     if (null != userId) {
@@ -54,13 +54,13 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
       }
       for (const item10011 of widgets1) {
         let tmp5 = item10011;
-        let tmp6 = _undefined;
+        let tmp6 = lib;
         let tmp7 = usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds;
         let tmp8 = item10011;
-        if (item10011 instanceof _undefined(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[5]).BaseGameWidget) {
+        if (item10011 instanceof lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[5]).BaseGameWidget) {
           let games = tmp5.games;
           let item = games.forEach((gameId) => {
-            const applicationIdFromDetectableId = outer1_4.getApplicationIdFromDetectableId(gameId.gameId);
+            const applicationIdFromDetectableId = closure_1_4.getApplicationIdFromDetectableId(gameId.gameId);
             if (null != applicationIdFromDetectableId) {
               set.add(applicationIdFromDetectableId);
             }
@@ -87,16 +87,16 @@ export default function useDisplayProfileSocialLayerStorefrontApplicationIds(use
   const items3 = [application, usersPlayingStorefrontEnabledGamesApplicationIds, usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds, areUsersInSocialLayerStorefrontMutualGuildsApplicationIds, stateFromStoresArray];
   return areUsersInSocialLayerStorefrontMutualGuildsApplicationIds.useMemo(() => {
     let application;
-    if (_undefined != null) {
-      application = _undefined.application;
+    if (lib != null) {
+      application = lib.application;
     }
     if (null != application) {
       let items = [];
     } else {
       const items1 = [];
       HermesBuiltin.arraySpread(stateFromStoresArray, HermesBuiltin.arraySpread(areUsersInSocialLayerStorefrontMutualGuildsApplicationIds, HermesBuiltin.arraySpread(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds, HermesBuiltin.arraySpread(usersPlayingStorefrontEnabledGamesApplicationIds, 0))));
-      items = _undefined(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[7]).uniq(items1);
-      const obj = _undefined(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[7]);
+      items = lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[7]).uniq(items1);
+      const obj = lib(usersPlayedSocialLayerStorefrontGamesInOutboxApplicationIds[7]);
     }
     return items;
   }, items3);

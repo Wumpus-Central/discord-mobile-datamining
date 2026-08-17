@@ -1,25 +1,20 @@
 // discord_app/utils/StreamQualityUtils.tsx
-import noop from "noop";
-import ApplicationStreamPresets from "ApplicationStreamPresets";
-import fetchFingerprint from "fetchFingerprint";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import createRTCConnection from "createRTCConnection";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticEvents } from "ME";
-import RESOLUTION_720 from "RESOLUTION_720";
-import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures";
-import { ResolutionTypes } from "DesktopSources";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { expandEventProperties } from "AnalyticsUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ApplicationStreamPresets" /* 4562 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
+import { StreamQualitiesToPremiumType as closure_15 } from "GuildFeatures" /* 1924 */;
+import { ResolutionTypes } from "DesktopSources" /* 4529 */;
 
-let c10;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 ({ ApplicationStreamFPS: c10, ApplicationStreamResolutions: unpackModuleId, ApplicationStreamSettingRequirements: closure_12, getApplicationFramerate: map1, getApplicationResolution: closure_14 } = RESOLUTION_720);
-const result = require("fetchFingerprint").fileFinishedImporting("utils/StreamQualityUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/StreamQualityUtils.tsx");
 
 export const isPremiumResolution = function isPremiumResolution(maxQuality) {
   if (null != maxQuality) {
@@ -28,13 +23,13 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
     } else {
       height = maxQuality.maxResolution.height;
     }
-    let closure_0 = callback2(height);
+    closure_0 = callback2(height);
     let tmp6 = callback(maxQuality.maxFrameRate) !== FPS_5.FPS_5;
     if (tmp6) {
       tmp6 = null == closure_12.find((resolution) => {
         let tmp = resolution.resolution === closure_0;
         if (tmp) {
-          tmp = resolution.fps !== outer1_10.FPS_5;
+          tmp = resolution.fps !== closure_1_10.FPS_5;
         }
         if (tmp) {
           tmp = !(null != resolution.quality || null != resolution.guildPremiumTier);
@@ -48,7 +43,7 @@ export const isPremiumResolution = function isPremiumResolution(maxQuality) {
 };
 export const isPremiumFPS = function isPremiumFPS(maxQuality) {
   if (null != maxQuality) {
-    let closure_0 = callback(maxQuality.maxFrameRate);
+    closure_0 = callback(maxQuality.maxFrameRate);
     return null == closure_12.find((fps) => {
       let tmp = fps.fps === closure_0;
       if (tmp) {
@@ -63,9 +58,9 @@ export const isPremiumRequirement = function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;
 };
 export const getPremiumRequirement = function getPremiumRequirement(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   return closure_12.find((preset) => {
     let tmp = null == preset.preset;
     if (!tmp) {
@@ -110,10 +105,10 @@ export const getMaxQuality = function getMaxQuality(participant) {
 };
 export const useMaxQuality = function useMaxQuality(participant) {
   const _require = participant;
-  const items = [ApplicationStreamPresets];
+  const items = [closure_4];
   const stateFromStoresObject = _require(stateFromStores[11]).useStateFromStoresObject(items, () => state.getState());
   let obj = _require(stateFromStores[11]);
-  const items1 = [fetchFingerprint];
+  const items1 = [closure_5];
   stateFromStores = _require(stateFromStores[11]).useStateFromStores(items1, () => id.getId());
   const items2 = [stateFromStores, participant, stateFromStoresObject];
   return React.useMemo(() => {
@@ -123,9 +118,9 @@ export const useMaxQuality = function useMaxQuality(participant) {
       obj = { height: null, width: 0, type: null };
       obj[0] = stateFromStoresObject.resolution;
       if (0 === stateFromStoresObject.resolution) {
-        let FIXED = outer1_16.SOURCE;
+        let FIXED = closure_1_16.SOURCE;
       } else {
-        FIXED = outer1_16.FIXED;
+        FIXED = closure_1_16.FIXED;
       }
       obj[2] = FIXED;
       obj[1] = obj;
@@ -144,9 +139,9 @@ export const useMaxQuality = function useMaxQuality(participant) {
   }, items2);
 };
 export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(preset, resolution, frameRate, sound) {
-  let closure_0 = preset;
-  const importDefault = resolution;
-  const dependencyMap = frameRate;
+  closure_0 = preset;
+  importDefault = resolution;
+  dependencyMap = frameRate;
   const found = closure_12.find((preset) => {
     let tmp = null == preset.preset;
     if (!tmp) {
@@ -166,7 +161,7 @@ export const trackStreamSettingsUpdate = function trackStreamSettingsUpdate(pres
   if (null != guildId) {
     guild = guild.getGuild(guildId);
   }
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   let premiumType;
   if (currentUser != null) {
     premiumType = currentUser.premiumType;

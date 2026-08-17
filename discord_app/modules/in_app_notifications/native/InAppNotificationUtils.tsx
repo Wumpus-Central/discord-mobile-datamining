@@ -1,20 +1,15 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationUtils.tsx
-import noop from "noop";
-import { REACTION_MILESTONE_COUNTS } from "set";
-import ME from "ME";
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { set } from "../../../utils/Durations.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import apply from "apply" /* 12 */;
+import v1 from "v1" /* 514 */;
+import setDefault from "set" /* 687 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import closure_3 from "noop" /* 19 */;
+import { REACTION_MILESTONE_COUNTS } from "set" /* 10030 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ AnalyticEvents: c5, ChannelTypes: closure_6, InAppNotificationTypes: error, MessageEmbedTypes: metroImportAll, MessageFlags: c9 } = ME);
-const result = require("ME").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
+require = arg1;
+({ AnalyticEvents: c5, ChannelTypes: closure_6, InAppNotificationTypes: error, MessageEmbedTypes: closure_8, MessageFlags: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/InAppNotificationUtils.tsx");
 
 export const isReactionMilestoneNotification = function isReactionMilestoneNotification(reactions, type) {
   if (null != type) {
@@ -59,16 +54,16 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
           if (tmp.REACTION !== ALERT) {
             if (tmp.MESSAGE_REQUEST !== ALERT) {
               if (tmp.ALERT === ALERT) {
-                return 30 * set.Millis.SECOND;
+                return 30 * setDefault.Millis.SECOND;
               } else {
                 if (tmp.MESSAGE_REMINDER !== ALERT) {
                   if (tmp.RESTRICTED_HOURS_WARNING !== ALERT) {
                     if (tmp.RESTRICTED_SCHEDULE_UPDATED === ALERT) {
-                      return 7 * set.Millis.SECOND;
+                      return 7 * setDefault.Millis.SECOND;
                     }
                   }
                 }
-                return 10 * set.Millis.SECOND;
+                return 10 * setDefault.Millis.SECOND;
               }
             }
           }
@@ -76,13 +71,13 @@ export const getNotificationDuration = function getNotificationDuration(ALERT) {
       }
     }
   }
-  return 5 * set.Millis.SECOND;
+  return 5 * setDefault.Millis.SECOND;
 };
 export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
-  let closure_0 = message;
+  closure_0 = message;
   const items = [message];
   return React.useMemo(() => {
-    let hasFlagResult = message.hasFlag(outer1_9.IS_VOICE_MESSAGE);
+    let hasFlagResult = message.hasFlag(closure_1_9.IS_VOICE_MESSAGE);
     if (!hasFlagResult) {
       hasFlagResult = tmp.attachments.length > 0;
     }
@@ -98,7 +93,7 @@ export const useHasPreviewableMedia = function useHasPreviewableMedia(message) {
       hasFlagResult = tmp.stickerItems.length > 0;
     }
     if (!hasFlagResult) {
-      let someResult = outer1_1(outer1_2[7])(tmp);
+      let someResult = closure_1_1(closure_1_2[7])(tmp);
       if (someResult) {
         const messageSnapshots = tmp.messageSnapshots;
         someResult = messageSnapshots.some((message) => {
@@ -233,12 +228,6 @@ export const extractMetadataFromNotification = function extractMetadataFromNotif
   tmp4 = id4;
 };
 export const trackDismissed = function trackDismissed(arg0) {
-  let channelId;
-  let dismissReason;
-  let guildId;
-  let inAppNotificationId;
-  let messageId;
-  let type;
   ({ guildId, channelId, type, dismissReason, inAppNotificationId, messageId } = arg0);
-  collectGuildAnalyticsMetadata.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.IN_APP_NOTIFICATION_DISMISSED, { type, guild_id: guildId, channel_id: channelId, dismiss_reason: dismissReason, in_app_notification_id: inAppNotificationId, message_id: messageId });
 };

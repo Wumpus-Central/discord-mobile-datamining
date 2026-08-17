@@ -1,12 +1,14 @@
 // discord_app/modules/parent_tools/native/shareGuardianConnectLink.tsx
-import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_3 } from "items";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { showShareActionSheet } from "../../action_sheet/native/showShareActionSheet.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import items from "items" /* 5297 */;
+import showShareActionSheet from "showShareActionSheet" /* 9067 */;
 
-const result = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");
+let closure_3 = items.FAMILY_CENTER_REQUEST_QR_CODE_URL;
+const result = set.fileFinishedImporting("modules/parent_tools/native/shareGuardianConnectLink.tsx");
 
-export const shareGuardianConnectLink = function shareGuardianConnectLink(globalName, closure_2) {
+export const shareGuardianConnectLink = function shareGuardianConnectLink(globalName, linkCode) {
   let username = globalName.globalName;
   if (username == null) {
     username = globalName.username;
@@ -14,6 +16,6 @@ export const shareGuardianConnectLink = function shareGuardianConnectLink(global
   let obj = showShareActionSheet;
   obj = { message: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.formatToPlainString(messagesProxy.lVD5Nd, { username, url: callback(globalName.id, closure_2) });
+  obj[0] = intl.formatToPlainString(messagesProxyDefault.lVD5Nd, { username, url: callback(globalName.id, linkCode) });
   obj.showShareActionSheet(obj, "Family Center Connect Guardian");
 };

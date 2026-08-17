@@ -1,9 +1,10 @@
 // discord_app/modules/settings/native/renderer/SettingTreeCacheLifecycleManager.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
+initializeDefault;
 let prototype = function SettingTreeManagerLifecycleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const importDefault = applyArgumentsResult;
+  importDefault = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handleConnectionOpen();

@@ -1,10 +1,11 @@
 // discord_app/modules/mfa/native/components/button.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 4745 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Button").fileFinishedImporting("modules/mfa/native/components/button.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/mfa/native/components/button.tsx");
 
 export default function MFAButton(arg0) {
   const merged = Object.assign(arg0);

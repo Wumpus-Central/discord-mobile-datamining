@@ -1,94 +1,82 @@
 // discord_app/modules/video_calls/native/components/UserTile.tsx
-import Emoji from "Emoji";
-import importAllResult from "getSystemLocale";
-import { View } from "registerAsset";
-import recentlyUsedEmojis from "recentlyUsedEmojis";
-import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { VideoToggleState } from "ME";
-import { ParticipantTypes } from "ParticipantTypes";
-import { MediaEngineContextTypes } from "DesktopSources";
-import jsxProd from "map";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/08117_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12461_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12462_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12463_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 8117 */;
+import registerAssetDefault2 from "registerAsset" /* 12461 */;
+import registerAssetDefault3 from "registerAsset" /* 12462 */;
+import registerAssetDefault4 from "registerAsset" /* 12463 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "recentlyUsedEmojis" /* 12460 */;
+import { clearVoiceChannelEffectForUser as closure_7 } from "recentlyUsedEmojis" /* 12460 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "_detectH265HardwareDecode" /* 4497 */;
+import { VideoToggleState } from "ME" /* 676 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let obj = { container: null, imageBackground: null, autoDisabledVideoWrapper: null, autoDisabledVideo: null, autoDisabledVideoTextWrapper: null, statusWrapper: null, labelText: null };
-obj = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: require("Themes").colors.BLACK };
+obj = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BLACK };
 obj[0] = obj;
 obj[1] = { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" };
 obj[2] = { width: "100%", flexDirection: "row", justifyContent: "center" };
 createCacheKey = { backgroundColor: null, alignItems: "center", height: 24 };
-createCacheKey[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_700, 0.5);
+createCacheKey[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
 obj[3] = createCacheKey;
-obj[4] = { borderRadius: require("Themes").radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
+obj[4] = { borderRadius: ThemesDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
 let obj3 = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-obj3[3] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_700, 0.5);
-obj3[4] = require("Themes").radii.md;
+obj3[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
+obj3[4] = ThemesDefault.radii.md;
 obj[5] = obj3;
 obj[6] = { marginLeft: 8, height: 20, alignItems: "center" };
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo((guildId) => {
-  let avatarSize;
-  let gestureEnabled;
-  let hasVideo;
-  let resizeMode;
-  let ringing;
-  let speaking;
-  let streamId;
-  let user;
   ({ user, hasVideo } = guildId);
   guildId = guildId.guildId;
-  let importDefault;
+  importDefault = undefined;
   let id;
   let callback;
-  let c4;
+  closure_4 = undefined;
   ({ streamId, resizeMode, ringing, avatarSize, speaking, gestureEnabled } = guildId);
   let tmp = callback3();
   importDefault = tmp;
   id = user.id;
   let obj = hasVideo(id[14]);
-  let items = [fetchFingerprint];
+  let items = [closure_8];
   let items1 = [hasVideo, id];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp = hasVideo;
     if (hasVideo) {
-      tmp = id === outer1_8.getId();
+      tmp = id === closure_1_8.getId();
     }
     return tmp;
   }, items1);
-  const items2 = [_detectH265HardwareDecode];
+  const items2 = [closure_10];
   const items3 = [id];
   callback = callback(hasVideo(id[14]).useStateFromStoresArray(items2, () => {
-    const items = [outer1_10.isLocalVideoAutoDisabled(id)];
+    const items = [closure_1_10.isLocalVideoAutoDisabled(id)];
     return items;
   }, items3), 1)[0];
   const obj2 = hasVideo(id[14]);
   let tmp2 = hasVideo;
-  const items4 = [_detectH265HardwareDecode];
+  const items4 = [closure_10];
   const items5 = [id];
   const tmp5 = hasVideo(id[14]).useStateFromStores(items4, () => {
     if (null != id) {
-      let NONE = outer1_10.getVideoToggleState(tmp, outer1_13.DEFAULT);
+      let NONE = closure_1_10.getVideoToggleState(tmp, closure_1_13.DEFAULT);
     } else {
-      NONE = outer1_11.NONE;
+      NONE = closure_1_11.NONE;
     }
     return NONE;
   }, items5) === VideoToggleState.AUTO_PROBING;
-  c4 = tmp5;
+  closure_4 = tmp5;
   if (!ringing) {
     if (hasVideo) {
       if (!tmp5) {
@@ -114,25 +102,25 @@ let closure_18 = importAllResult.memo((guildId) => {
   obj[4] = speaking;
   obj[5] = avatarSize;
   obj[6] = function renderVideoDetails() {
-    if (Emoji) {
+    if (closure_3) {
       let obj = { style: null, children: null };
-      obj[0] = _undefined.autoDisabledVideoWrapper;
+      obj[0] = lib.autoDisabledVideoWrapper;
       obj = { style: null, children: null };
       const items = [, ];
-      ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = _undefined);
+      ({ autoDisabledVideo: arr[0], autoDisabledVideoTextWrapper: arr[1] } = lib);
       obj[0] = items;
       obj = { source: null, size: null, disableColor: true };
-      obj[0] = _undefined(id[17]);
+      obj[0] = lib(id[17]);
       obj[1] = hasVideo(id[16]).Icon.Sizes.SMALL;
-      const items1 = [outer1_14(hasVideo(id[16]).Icon, obj), ];
-      const obj1 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
-      obj1[2] = _undefined.labelText;
+      const items1 = [closure_1_14(hasVideo(id[16]).Icon, obj), ];
+      obj1 = { variant: "text-sm/normal", color: "text-default", style: null, children: null };
+      obj1[2] = lib.labelText;
       const intl = hasVideo(id[19]).intl;
       obj1[3] = intl.string(hasVideo(id[19]).t.m2Hyj0);
-      items1[1] = outer1_14(hasVideo(id[18]).Text, obj1);
+      items1[1] = closure_1_14(hasVideo(id[18]).Text, obj1);
       obj[1] = items1;
-      obj[1] = outer1_15(outer1_5, obj);
-      let tmp2 = outer1_14(outer1_5, obj);
+      obj[1] = closure_1_15(closure_1_5, obj);
+      let tmp2 = closure_1_14(closure_1_5, obj);
     } else {
       tmp2 = null;
     }
@@ -141,26 +129,24 @@ let closure_18 = importAllResult.memo((guildId) => {
   tmp6Result = callback2(importDefault(id[15]), obj);
 });
 let closure_19 = importAllResult.memo((userId) => {
-  let deafened;
-  let muted;
   userId = userId.userId;
   const style = userId.style;
   ({ muted, deafened } = userId);
   const tmp = callback3();
   let obj = userId(589);
-  let items = [_detectH265HardwareDecode];
+  let items = [closure_10];
   const items1 = [userId];
   const tmp4 = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [outer1_10.isLocalMute(userId), outer1_10.isLocalVideoDisabled(userId), outer1_10.isLocalVideoAutoDisabled(userId)];
+    const items = [closure_1_10.isLocalMute(userId), closure_1_10.isLocalVideoDisabled(userId), closure_1_10.isLocalVideoAutoDisabled(userId)];
     return items;
   }, items1), 3);
   let tmp5 = tmp4[1];
   if (tmp4[0]) {
-    let tmp6 = registerAsset;
+    let tmp6 = registerAssetDefault;
   } else if (deafened) {
-    tmp6 = registerAsset;
+    tmp6 = registerAssetDefault2;
   } else if (muted) {
-    tmp6 = registerAsset;
+    tmp6 = registerAssetDefault3;
   }
   if (tmp5) {
     tmp5 = !tmp4[2];
@@ -172,7 +158,7 @@ let closure_19 = importAllResult.memo((userId) => {
       const items2 = [tmp.statusWrapper, style];
       obj[0] = items2;
       obj = { source: null, size: null, disableColor: true };
-      obj[0] = registerAsset;
+      obj[0] = registerAssetDefault4;
       obj[1] = tmp2(1297).Icon.Sizes.SMALL;
       obj[1] = callback2(tmp2(1297).Icon, obj);
       tmp14 = callback2(View, obj);
@@ -181,7 +167,7 @@ let closure_19 = importAllResult.memo((userId) => {
     let tmp19Result = null;
     if (null != tmp6) {
       const items4 = [tmp.statusWrapper, style, ];
-      let obj1 = null;
+      obj1 = null;
       if (tmp5) {
         obj1 = { right: 38 };
       }
@@ -191,8 +177,8 @@ let closure_19 = importAllResult.memo((userId) => {
       const obj3 = { source: null, size: null, color: null, disableColor: null };
       obj3[0] = tmp6;
       obj3[1] = tmp2(1297).Icon.Sizes.SMALL;
-      obj3[2] = Themes.unsafe_rawColors.WHITE;
-      obj3[3] = tmp6 === registerAsset;
+      obj3[2] = ThemesDefault.unsafe_rawColors.WHITE;
+      obj3[3] = tmp6 === registerAssetDefault;
       obj2[1] = callback2(tmp2(1297).Icon, obj3);
       tmp19Result = tmp19(View, obj2);
       const tmp20 = View;
@@ -208,16 +194,10 @@ let closure_19 = importAllResult.memo((userId) => {
   }
   return tmp11Result;
 });
-let obj2 = { borderRadius: require("Themes").radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/video_calls/native/components/UserTile.tsx");
+let obj2 = { borderRadius: ThemesDefault.radii.sm, flexDirection: "row", justifyContent: "space-evenly", paddingHorizontal: 8, paddingVertical: 4, alignItems: "center" };
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/UserTile.tsx");
 
 export default function UserTile(participant) {
-  let gestureEnabled;
-  let hasNotch;
-  let ringing;
-  let statusStyle;
-  let streamId;
-  let style;
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;
@@ -282,13 +262,13 @@ export default function UserTile(participant) {
   if (flag2 == null) {
     flag2 = false;
   }
-  let obj1 = participant(tmp8[14]);
-  const items3 = [_detectH265HardwareDecode];
+  obj1 = participant(tmp8[14]);
+  const items3 = [closure_10];
   const items4 = [user.id, participant.type];
   const stateFromStores = obj1.useStateFromStores(items3, () => {
     let isLocalVideoDisabledResult = null != user.id;
     if (isLocalVideoDisabledResult) {
-      isLocalVideoDisabledResult = outer1_10.isLocalVideoDisabled(tmp.id, onSingleTap(onDoubleTap[28])(participant.type));
+      isLocalVideoDisabledResult = closure_1_10.isLocalVideoDisabled(tmp.id, onSingleTap(onDoubleTap[28])(participant.type));
     }
     return isLocalVideoDisabledResult;
   }, items4);
@@ -304,11 +284,11 @@ export default function UserTile(participant) {
     id = user2.id;
   }
   const tmp9 = onSingleTap(onDoubleTap[26])(obj);
-  const items5 = [recentlyUsedEmojis];
+  const items5 = [closure_6];
   const stateFromStores1 = participant(onDoubleTap[14]).useStateFromStores(items5, () => {
     let effectForUserId = null;
     if (null != id) {
-      effectForUserId = outer1_6.getEffectForUserId(tmp);
+      effectForUserId = closure_1_6.getEffectForUserId(tmp);
     }
     return effectForUserId;
   });
@@ -349,7 +329,7 @@ export default function UserTile(participant) {
       obj2 = { voiceChannelEffect: null, onComplete: null, userId: null, hasNotch: null };
       obj2[0] = stateFromStores1;
       obj2[1] = function onComplete() {
-        return outer1_7(id);
+        return closure_1_7(id);
       };
       obj2[2] = id;
       obj2[3] = hasNotch;

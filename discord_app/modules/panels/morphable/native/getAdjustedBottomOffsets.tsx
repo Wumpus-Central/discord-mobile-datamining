@@ -1,11 +1,8 @@
 // discord_app/modules/panels/morphable/native/getAdjustedBottomOffsets.tsx
-import set from "set";
-import set from "set";
+import set from "set" /* 500 */;
 
 set = set.isAndroid();
 const fn = function t(arg0) {
-  let keyboardHeight;
-  let screenBottomOffset;
   ({ screenBottomOffset, keyboardHeight } = arg0);
   let bottomOffset = screenBottomOffset;
   if (keyboardHeight > 0) {

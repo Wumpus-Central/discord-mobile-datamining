@@ -1,32 +1,27 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/ActivityRichPresenceInviteEmbed.tsx
-import addApplication from "addApplication";
-import upsertAccount from "upsertAccount";
-import { SpotifyApplication } from "getIconURL";
-import createdAt from "createdAt";
-import fetchFingerprint from "fetchFingerprint";
-import updateParty from "updateParty";
-import updateActivities from "updateActivities";
-import reinjectEphemerals from "reinjectEphemerals";
-import sortActivity from "sortActivity";
-import filterPlayingActivities from "filterPlayingActivities";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleActivityStateChanged from "handleActivityStateChanged";
-import ME from "ME";
-import WEB_OPEN from "WEB_OPEN";
-import { result } from "../../../../../activities/utils/isInviteActive.tsx";
+import resultDefault from "result" /* 10917 */;
+import getRequestToStreamCTAAndIsDisabledDefault from "getRequestToStreamCTAAndIsDisabled" /* 12791 */;
+import closure_3 from "addApplication" /* 4478 */;
+import closure_4 from "upsertAccount" /* 7241 */;
+import { SpotifyApplication } from "getIconURL" /* 12779 */;
+import closure_6 from "createdAt" /* 1930 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "updateParty" /* 12780 */;
+import closure_9 from "updateActivities" /* 7251 */;
+import closure_10 from "reinjectEphemerals" /* 4994 */;
+import closure_11 from "sortActivity" /* 4559 */;
+import closure_12 from "filterPlayingActivities" /* 7250 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "handleActivityStateChanged" /* 10663 */;
+import ME from "ME" /* 676 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
 import { ContentClassificationVisibility } from "../../../../../content_classification/ContentClassificationVisibility.tsx";
-import { getRequestToStreamCTAAndIsDisabled } from "../../../../../request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx";
 
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
 const require = arg1;
 ({ ActivityActionStates: closure_15, ActivityActionTypes: closure_16, ActivityTypes: closure_17 } = ME);
-({ isSpotifyParty: closure_18, SPOTIFY_PLATFORM_NAME: closure_19 } = WEB_OPEN);
+({ isSpotifyParty: closure_18, SPOTIFY_PLATFORM_NAME: closure_19 } = SPOTIFY_APP_PROTOCOL);
 let obj = { ACTIVE: "active", DEAD: "dead", DEAD_COMPACT: "dead_compact", BLOCKED: "blocked" };
-const result = require("getIconURL").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ActivityRichPresenceInviteEmbed.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ActivityRichPresenceInviteEmbed.tsx");
 
 export const EmbedDisplayType = obj;
 export const createActivityRichPresenceInviteEmbed = function createActivityRichPresenceInviteEmbed(message, channel) {
@@ -37,7 +32,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
         currentUser = currentUser.getCurrentUser();
         let intl = _require;
         let string2Result = dependencyMap;
-        let obj = _ContentClassificationVisibility;
+        obj = _ContentClassificationVisibility;
         let application = message.application;
         let prop;
         if (application != null) {
@@ -58,11 +53,11 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
           }
           application = null;
           if (null != id) {
-            application = addApplication.getApplication(id);
+            application = closure_3.getApplication(id);
           }
           let tmp14 = null == application && null != id;
           if (tmp14) {
-            tmp14 = false === addApplication.isFetchingApplication(id);
+            tmp14 = false === closure_3.isFetchingApplication(id);
           }
           if (tmp14) {
             const application1 = intl(7140).fetchApplication(id, false);
@@ -100,11 +95,11 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                 tmp23 = id1;
               }
             }
-            id = sortActivity;
-            const applicationActivity = sortActivity.getApplicationActivity(tmp23, message.application.id);
+            id = closure_11;
+            const applicationActivity = closure_11.getApplicationActivity(tmp23, message.application.id);
           } else {
-            let obj5 = sortActivity;
-            const findActivityResult = sortActivity.findActivity(message.author.id, (type) => type.type === constants.LISTENING);
+            let obj5 = closure_11;
+            const findActivityResult = closure_11.findActivity(message.author.id, (type) => type.type === constants.LISTENING);
             let tmp27;
             if (null != application) {
               const activity3 = message.activity;
@@ -147,9 +142,9 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                 } else {
                   id2 = obj5.findActivity(message.author.id, (type) => type.type === constants.LISTENING);
                   id2 = importDefault;
-                  id2 = result(id2, message, application.id);
+                  id2 = resultDefault(id2, message, application.id);
                   id2 = intl(12783).getRequestToStreamText(message, channel, obj4.getId());
-                  id2 = getRequestToStreamCTAAndIsDisabled(message);
+                  id2 = getRequestToStreamCTAAndIsDisabledDefault(message);
                   id2 = id2 ? obj.ACTIVE : obj.DEAD;
                   obj = { displayType: null, ctaButtonEnabled: null, ctaButtonText: null, ctaButtonIsLoading: false, footerLabel: null, gradientColors: null, headerText: null, iconSrc: null, isSpotifyParty: false, isPlatformSupported: true, maxPartySize: 0, partyMemberAvatarURIs: null, partySizeText: null, platformIconKeys: null, coverImageUrl: null, detailsText: null, subtitle: null, title: null };
                   obj[0] = id2;
@@ -172,7 +167,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                 const intlResult3 = intl(11131);
               } else {
                 id2 = importDefault;
-                id2 = result(findActivityResult, message, application.id);
+                id2 = resultDefault(findActivityResult, message, application.id);
                 id2 = !id2;
                 const activity9 = message.activity;
                 let name_override;
@@ -211,7 +206,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                   let length = intl(10918).getPartySize(findActivityResult).maxPartySize;
                   const intlResult8 = intl(10918);
                   const currentActivityGamePlatform = intl(12132).getCurrentActivityGamePlatform();
-                  const tmp40 = id2(10924)(updateActivities, filterPlayingActivities, application.id);
+                  const tmp40 = id2(10924)(closure_9, closure_12, application.id);
                   const intlResult9 = intl(12132);
                   const isInParty = intl(10921).getIsInParty(tmp40, findActivityResult);
                   const intlResult11 = intl(12784);
@@ -274,7 +269,7 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                   }
                   let str2 = "";
                   if (null != start) {
-                    const obj1 = { start: null, end: null };
+                    obj1 = { start: null, end: null };
                     obj1[0] = start;
                     obj1[1] = end;
                     const _Date = Date;
@@ -380,9 +375,9 @@ export const createActivityRichPresenceInviteEmbed = function createActivityRich
                     name2 = application.name;
                   } else if (id2) {
                     const mapped = items.map((arg0) => {
-                      let user = outer1_13.getUser(arg0);
+                      let user = closure_1_13.getUser(arg0);
                       if (user == null) {
-                        user = new outer1_6({ discriminator: "0005" });
+                        user = new closure_1_6({ discriminator: "0005" });
                       }
                       let avatarURL;
                       if (user != null) {

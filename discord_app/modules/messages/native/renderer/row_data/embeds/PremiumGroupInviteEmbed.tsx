@@ -1,39 +1,30 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx
-import SubscriptionStatusTypes from "SubscriptionStatusTypes";
-import { registerAsset } from "../../../../../../../_runtime/08267_registerAsset.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
-import { getPremiumGroupInviteEmbedText } from "../../../../../premium/premium_group/PremiumGroupUtils.native.tsx";
-import { frozen } from "../../EmbedUtils.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import frozen from "frozen" /* 8171 */;
+import registerAssetDefault from "registerAsset" /* 8267 */;
+import getPremiumGroupInviteEmbedText from "getPremiumGroupInviteEmbedText" /* 8268 */;
+import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
 
-let c3;
-let c4;
 ({ HELP_CENTER_LINK: c3, PremiumGroupInviteState: c4 } = SubscriptionStatusTypes);
-const result = require("Themes").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PremiumGroupInviteEmbed.tsx");
 
 export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEmbed(message, theme, id, channel) {
-  let backgroundColor;
-  let betaPillBackgroundColor;
-  let betaPillTextColor;
-  let body;
-  let bodyTextColor;
-  let header;
-  let headerTextColor;
-  let linkTextColor;
   if (null != message.author) {
     let obj = { headerTextColor: null, bodyTextColor: null, linkTextColor: null, backgroundColor: null, betaPillTextColor: null, betaPillBackgroundColor: null };
-    obj[0] = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    obj[1] = Themes.colors.TEXT_DEFAULT;
-    obj[2] = Themes.colors.TEXT_LINK;
-    obj[3] = Themes.colors.BACKGROUND_MOD_NORMAL;
-    obj[4] = Themes.colors.BLACK;
-    obj[5] = Themes.colors.WHITE;
+    obj[0] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj[1] = ThemesDefault.colors.TEXT_DEFAULT;
+    obj[2] = ThemesDefault.colors.TEXT_LINK;
+    obj[3] = ThemesDefault.colors.BACKGROUND_MOD_NORMAL;
+    obj[4] = ThemesDefault.colors.BLACK;
+    obj[5] = ThemesDefault.colors.WHITE;
     const obj4 = createCacheKey;
     const tmp8 = importDefault;
     ({ backgroundColor, headerTextColor, bodyTextColor, linkTextColor, betaPillTextColor, betaPillBackgroundColor } = createCacheKey.createNativeStyleProperties(obj)(theme));
     const tmp9 = createCacheKey.createNativeStyleProperties(obj)(theme);
     const author = message.author;
-    const assetUriForEmbed = frozen.getAssetUriForEmbed(registerAsset);
+    const assetUriForEmbed = frozen.getAssetUriForEmbed(registerAssetDefault);
     const obj6 = frozen;
     obj = { sender: null, channel: null, isSender: null, inviteState: null };
     obj[0] = author;
@@ -45,7 +36,7 @@ export const createPremiumGroupInviteEmbed = function createPremiumGroupInviteEm
       ({ header, body } = premiumGroupInviteEmbedText);
       const intl = tmp6(1236).intl;
       obj = { learnMoreLinkOnClick: null };
-      const obj1 = { action: "bindOpenUrl", url: null, linkColor: null };
+      obj1 = { action: "bindOpenUrl", url: null, linkColor: null };
       obj1[1] = closure_3;
       obj1[2] = linkTextColor;
       obj[0] = obj1;

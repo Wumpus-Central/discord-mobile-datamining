@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import result2 from "result" /* 14182 */;
+import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -22,14 +22,14 @@ createToggle = {
   onValueChange: function onAllowDirectMessagesFromServerMembersValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledDefaultGuildsRestrictedV2 = result.ParentalControlledDefaultGuildsRestrictedV2;
+      const ParentalControlledDefaultGuildsRestrictedV2 = result2.ParentalControlledDefaultGuildsRestrictedV2;
       const result = ParentalControlledDefaultGuildsRestrictedV2.updateControlledSetting(selectedTeenId, !arg0);
     }
   },
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("useParentalControlledExplicitContentSettings").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsDirectMessages.tsx");
 
 export default createToggle;
 export const ParentalControlsDirectMessages = createToggle;

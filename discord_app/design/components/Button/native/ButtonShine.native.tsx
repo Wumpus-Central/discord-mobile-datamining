@@ -1,7 +1,8 @@
 // discord_app/design/components/Button/native/ButtonShine.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import _modDef4115 from "module_4115" /* 4115 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../animation/reanimated/timing/timing.tsx";
 import { AccessibilityAnnouncer } from "../../../shared.tsx";
@@ -25,23 +26,23 @@ function useShineEffectStyles(width, variant) {
       let tmp5 = obj;
     } else {
       obj = { transform: null };
-      let obj1 = { translateX: null };
+      obj1 = { translateX: null };
       if (enabled) {
         obj1[0] = (tmp - 56) / 2;
         const items1 = [obj1];
         obj[0] = items1;
         tmp5 = obj;
       } else {
-        obj = width(outer1_2[6]);
-        obj1 = width(outer1_2[6]);
-        const obj3 = width(outer1_2[7]);
-        const withTimingResult = width(outer1_2[7]).withTiming(-120, { duration: 0 }, "animate-always");
-        const obj4 = width(outer1_2[6]);
-        obj1[0] = obj.withRepeat(obj1.withSequence(withTimingResult, obj4.withDelay(750, width(outer1_2[7]).withTiming(tmp + 120, { duration: 2000 }, "animate-always"))), -1);
+        obj = width(closure_1_2[6]);
+        obj1 = width(closure_1_2[6]);
+        const obj3 = width(closure_1_2[7]);
+        const withTimingResult = width(closure_1_2[7]).withTiming(-120, { duration: 0 }, "animate-always");
+        const obj4 = width(closure_1_2[6]);
+        obj1[0] = obj.withRepeat(obj1.withSequence(withTimingResult, obj4.withDelay(750, width(closure_1_2[7]).withTiming(tmp + 120, { duration: 2000 }, "animate-always"))), -1);
         const items2 = [obj1];
         obj[0] = items2;
         tmp5 = obj;
-        const obj5 = width(outer1_2[7]);
+        const obj5 = width(closure_1_2[7]);
       }
     }
     return tmp5;
@@ -59,11 +60,11 @@ function useShineEffectStyles(width, variant) {
   return obj;
 }
 let closure_6 = { code: "function ButtonShineNativeTsx1(){const{width,SHINE_OFFSCREEN_OFFSET,useReducedMotion,SHINE_WIDTH,withRepeat,withSequence,withTiming,withDelay,SHINE_INITIAL_ANIMATION_DELAY,SHINE_ANIMATION_DURATION}=this.__closure;if(width==null){return{transform:[{translateX:-SHINE_OFFSCREEN_OFFSET}]};}if(useReducedMotion){const centerOffset=(width-SHINE_WIDTH)/2;return{transform:[{translateX:centerOffset}]};}return{transform:[{translateX:withRepeat(withSequence(withTiming(-SHINE_OFFSCREEN_OFFSET,{duration:0},'animate-always'),withDelay(SHINE_INITIAL_ANIMATION_DELAY,withTiming(width+SHINE_OFFSCREEN_OFFSET,{duration:SHINE_ANIMATION_DURATION},'animate-always'))),-1)}]};}" };
-const result = require("jsxProd").fileFinishedImporting("design/components/Button/native/ButtonShine.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Button/native/ButtonShine.native.tsx");
 
 export { useShineEffectStyles };
 export const ButtonShine = function ButtonShine(variant) {
-  let closure_0;
+  closure_0 = undefined;
   const tmp = callback(React.useState(null), 2);
   closure_0 = tmp[1];
   const tmp2 = useShineEffectStyles(tmp[0], variant.variant);
@@ -76,9 +77,17 @@ export const ButtonShine = function ButtonShine(variant) {
     children: null
   };
   items = [shineStyles.shineContainer, tmp2.shineAnimatedStyle];
-  obj = { style: shineStyles.shine, children: null };
+  obj = {
+    style: shineStyles.shine,
+    children: jsx(_modDef4115.View, {
+      onLayout(nativeEvent) {
+        return callback(nativeEvent.nativeEvent.layout.width);
+      },
+      style: items,
+      children: null
+    })
+  };
   obj = { style: shineStyles.shineInner };
-  obj[1] = jsx(ReanimatedRexport.View, { style: shineStyles.shineInner });
-  obj[2] = jsx(ReanimatedRexport.View, { style: shineStyles.shineInner });
-  return jsx(ReanimatedRexport.View, { style: shineStyles.shineInner });
+  obj[2] = jsx(_modDef4115.View, { style: shineStyles.shineInner });
+  return jsx(_modDef4115.View, { style: shineStyles.shineInner });
 };

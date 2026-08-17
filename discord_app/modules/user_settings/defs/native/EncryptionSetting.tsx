@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/EncryptionSetting.tsx
-import items from "items";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSecureFramesVerifiedUserIds } from "../../../rtc/hooks/useSecureFramesVerifiedUsers.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds" /* 14991 */;
+import closure_2 from "items" /* 9709 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UserListItem } from "../../privacy_and_safety/native/SettingsSecureFramesScreen.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -21,7 +21,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   usePredicate: function useSecureFramesPersistentCodesValue() {
-    const items = [items];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => persistentCodesEnabled.getPersistentCodesEnabled());
   },
   screen: createToggle
@@ -33,7 +33,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/EncryptionSetting.tsx");
 
 export default createToggle;
 export const SecureFramesEncryptionSetting = createToggle;

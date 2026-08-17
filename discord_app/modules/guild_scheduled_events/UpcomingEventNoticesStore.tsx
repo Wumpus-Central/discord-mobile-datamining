@@ -1,21 +1,21 @@
 // discord_app/modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import scheduledEventSort from "scheduledEventSort";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { PersistedStore } from "initialize";
-import { getNextShownUpcomingEventNoticeType } from "GuildScheduledEventUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getNextShownUpcomingEventNoticeType from "getNextShownUpcomingEventNoticeType" /* 8893 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "scheduledEventSort" /* 4370 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ GuildScheduledEventStatus: c4, UpcomingGuildEventNoticeTypes: c5 } = GUILD_EVENT_MAX_NAME_LENGTH);
 let closure_6 = {};
 let closure_7 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class UpcomingEventNoticesStore extends PersistedStore {
 }
 const prototype = UpcomingEventNoticesStore.prototype;
 prototype["initialize"] = function initialize(upcomingEventDismissals) {
-  this.waitFor(fetchFingerprint, scheduledEventSort);
+  this.waitFor(closure_2, closure_3);
   if (null != upcomingEventDismissals) {
     let prop = upcomingEventDismissals.upcomingEventDismissals;
     if (prop == null) {
@@ -44,7 +44,7 @@ prototype["getState"] = function getState() {
 };
 UpcomingEventNoticesStore.displayName = "UpcomingEventNoticesStore";
 UpcomingEventNoticesStore.persistKey = "UpcomingEventNotices";
-const upcomingEventNoticesStore = new UpcomingEventNoticesStore(require("dispatcher"), {
+const upcomingEventNoticesStore = new UpcomingEventNoticesStore(dispatcherDefault, {
   UPCOMING_GUILD_EVENT_NOTICE_HIDE: function handleHideNotice(eventId) {
     const obj = {};
     const merged = Object.assign(obj);
@@ -95,6 +95,6 @@ const upcomingEventNoticesStore = new UpcomingEventNoticesStore(require("dispatc
     obj[guildEventId.guildEventId] = Date.now();
   }
 });
-const result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/UpcomingEventNoticesStore.tsx");
 
 export default upcomingEventNoticesStore;

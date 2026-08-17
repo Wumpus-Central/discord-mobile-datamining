@@ -1,6 +1,7 @@
 // discord_app/polyfills.android.tsx
-import addLikelySubtags from "addLikelySubtags";
-import polyfillsNative from "polyfillsNative.tsx";
+import set from "set" /* 2 */;
+import addLikelySubtags from "addLikelySubtags" /* 13573 */;
+import polyfillsNative from "polyfillsNative.tsx" /* 13669 */;
 
 String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
   const self = this;
@@ -12,4 +13,4 @@ String.prototype.toLocaleLowerCase = function toLocaleLowerCase() {
     const tmp = toLocaleLowerCase;
   }
 };
-const result = require("set").fileFinishedImporting("polyfills.android.tsx");
+const result = set.fileFinishedImporting("polyfills.android.tsx");

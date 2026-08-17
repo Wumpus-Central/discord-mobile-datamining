@@ -1,9 +1,10 @@
 // discord_app/modules/collectibles/records/CollectiblesCategoryRecord.tsx
-import fromServer from "fromServer";
-import "fromServer";
-import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
+import fromServerDefault from "fromServer" /* 5310 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import closure_2 from "fromServer" /* 5303 */;
 
-const require = arg1;
+require = arg1;
+fromServerDefault;
 let prototype;
 prototype = function CollectiblesCategoryRecord(products) {
   const tmp3 = new prototype(products, tmp2, new.target, tmp, new.target);
@@ -24,30 +25,13 @@ prototype = function CollectiblesCategoryRecord(products) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
-  let catalog_banner_animated_url;
-  let catalog_banner_rive_url;
-  let catalog_banner_url;
-  let featured_block_url;
-  let hero_banner_animated_url;
-  let hero_banner_display_config;
-  let hero_banner_url;
-  let hero_logo_display_config;
-  let hero_logo_url;
-  let hero_ranking;
-  let hero_rive_url;
-  let logo_url;
-  let mobile_banner_url;
-  let mobile_bg_url;
-  let pdp_bg_url;
-  let products;
-  let unpublished_at;
   ({ products, unpublished_at } = arg0);
   let date = null;
   ({ hero_ranking, hero_logo_display_config, hero_banner_display_config, hero_banner_url, hero_banner_animated_url, hero_rive_url, hero_logo_url, catalog_banner_url, catalog_banner_animated_url, catalog_banner_rive_url, featured_block_url, logo_url, pdp_bg_url, mobile_banner_url, mobile_bg_url } = arg0);
   const obj = {};
   const merged = Object.assign(super.fromServer(Object.assign(arg0, Object.create(null))));
   obj.products = products.reduce((arr) => {
-    const fromServerResult = fromServer.fromServer(arg1);
+    const fromServerResult = closure_2.fromServer(arg1);
     const type = fromServerResult.type;
     if (tmp4) {
       arr.push(fromServerResult);
@@ -88,7 +72,7 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     unpublishedAt: id.unpublishedAt,
     styles: id.styles,
     products: products.reduce((arr, skus) => {
-      const result = fromServer.fromStorefrontProductRecord(skus);
+      const result = closure_2.fromStorefrontProductRecord(skus);
       if (null != result) {
         const type = result.type;
         if (tmp4) {
@@ -117,6 +101,6 @@ prototype["fromStorefrontCollectionRecord"] = function fromStorefrontCollectionR
     heroBannerDisplayConfig: id.heroDisplayConfig
   });
 };
-let result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoryRecord.tsx");
 
 export default prototype;

@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_3 = { code: "function useSearchSegmentedControlStateTsx1(){const{visibleTabsStateful}=this.__closure;return visibleTabsStateful;}" };
@@ -8,11 +8,9 @@ let closure_5 = { code: "function useSearchSegmentedControlStateTsx3(){const{vis
 let closure_6 = { code: "function useSearchSegmentedControlStateTsx4(visibleTabs){const{lastSelectedTab,runOnJS,setActiveIndex}=this.__closure;if(visibleTabs.length===0)return;const lastSelectedTabIndex=visibleTabs.indexOf(lastSelectedTab.get());const targetIndex=Math.max(0,lastSelectedTabIndex);const maxIndex=Math.max(0,visibleTabs.length-1);const nextActiveIndex=Math.min(targetIndex,maxIndex);runOnJS(setActiveIndex)(nextActiveIndex,false);}" };
 let closure_7 = { code: "function useSearchSegmentedControlStateTsx5(){const{selectedTab}=this.__closure;return selectedTab.get();}" };
 let closure_8 = { code: "function useSearchSegmentedControlStateTsx6(selectedTab){const{lastSelectedTab,runOnJS,onSelectedTabChange}=this.__closure;if(selectedTab==null)return;lastSelectedTab.set(selectedTab);runOnJS(onSelectedTabChange)(selectedTab);}" };
-let result = require("useSegmentedControlState").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchSegmentedControlState.tsx");
 
 export const useSearchSegmentedControlState = function useSearchSegmentedControlState(visibleTabs) {
-  let items;
-  let width;
   visibleTabs = visibleTabs.visibleTabs;
   const onSelectedTabChange = visibleTabs.onSelectedTabChange;
   let sharedValue;
@@ -72,7 +70,7 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   const obj5 = visibleTabs(onSelectedTabChange[1]);
   class C {
     constructor() {
-      return c7.get();
+      return closure_7.get();
     }
   }
   C.__closure = { selectedTab: derivedValue1 };
@@ -81,8 +79,8 @@ export const useSearchSegmentedControlState = function useSearchSegmentedControl
   class I {
     constructor(arg0) {
       if (null != visibleTabs) {
-        tmp = c2;
-        result = c2.set(visibleTabs);
+        tmp = closure_2;
+        result = closure_2.set(visibleTabs);
         tmp3 = visibleTabs;
         tmp4 = onSelectedTabChange;
         obj = visibleTabs(onSelectedTabChange[1]);

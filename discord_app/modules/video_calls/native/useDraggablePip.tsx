@@ -1,10 +1,8 @@
 // discord_app/modules/video_calls/native/useDraggablePip.tsx
-import _slicedToArray from "_slicedToArray";
-import { useChannelCallStore } from "VoiceChatDrawerState";
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET";
+import closure_2 from "_slicedToArray" /* 32 */;
+import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
+import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ PIP_FOCUS_SCALE: c4, PIP_GESTURE_ACTIVE_OFFSET: c5 } = PIP_GESTURE_ACTIVE_OFFSET);
 let closure_6 = { mass: 1, stiffness: 250, overshootClamping: true, restSpeedThreshold: 0.001, restDisplacementThreshold: 0.001, damping: 20 };
@@ -29,7 +27,7 @@ function clamp(arg0, arg1, arg2) {
 clamp.__closure = {};
 clamp.__workletHash = 1988116204206;
 clamp.__initData = { code: "function clamp_useDraggablePipTsx16(value,min,max){return Math.min(Math.max(value,min),max);}" };
-let result = require("PIP_GESTURE_ACTIVE_OFFSET").fileFinishedImporting("modules/video_calls/native/useDraggablePip.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/useDraggablePip.tsx");
 
 export const useDraggablePip = function useDraggablePip(width) {
   width = width.width;
@@ -39,7 +37,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   const onPress = width.onPress;
   const onMoved = width.onMoved;
   const snapToCorners = width.snapToCorners;
-  let c7;
+  closure_7 = undefined;
   let derivedValue;
   let derivedValue1;
   let derivedValue2;
@@ -53,7 +51,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   let sharedValue3;
   let sharedValue4;
   const tmp = containerHeight((pipFocus) => pipFocus.pipFocus);
-  c7 = tmp;
+  closure_7 = tmp;
   let obj = width(height[3]);
   class X {
     constructor() {
@@ -61,7 +59,7 @@ export const useDraggablePip = function useDraggablePip(width) {
       tmp2 = height;
       obj = width(height[4]);
       num = 1;
-      if (c7) {
+      if (closure_7) {
         num = onPress;
       }
       obj = { easing: tmp(tmp2[5]).STANDARD_EASING, duration: 250 };
@@ -71,7 +69,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   obj = { withTiming: width(height[4]).withTiming, pipFocus: tmp, PIP_FOCUS_SCALE: onPress, STANDARD_EASING: width(height[5]).STANDARD_EASING };
   X.__closure = obj;
   X.__workletHash = 7848271415351;
-  X.__initData = c7;
+  X.__initData = closure_7;
   derivedValue = obj.useDerivedValue(X);
   let obj2 = width(height[3]);
   class Y {
@@ -96,7 +94,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   let obj4 = width(height[3]);
   class V {
     constructor() {
-      return c8.get() * width;
+      return closure_8.get() * width;
     }
   }
   V.__closure = { pipScale: derivedValue, width };
@@ -106,7 +104,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   let obj5 = width(height[3]);
   class F {
     constructor() {
-      return c8.get() * height;
+      return closure_8.get() * height;
     }
   }
   F.__closure = { pipScale: derivedValue, height };
@@ -146,8 +144,8 @@ export const useDraggablePip = function useDraggablePip(width) {
   class J {
     constructor() {
       items = [, ];
-      items[0] = containerWidth - width.get();
-      items[1] = height.get();
+      items[0] = containerWidth - closure_11.get();
+      items[1] = closure_16.get();
       return items;
     }
   }
@@ -166,7 +164,7 @@ export const useDraggablePip = function useDraggablePip(width) {
       if (null != arg1) {
         if (first !== first1) {
           const result = tmp3[1] * (first / first1);
-          if (typeof outer1_22 !== "function") {
+          if (typeof closure_1_22 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           const _Math = Math;
@@ -188,8 +186,8 @@ export const useDraggablePip = function useDraggablePip(width) {
   class U {
     constructor() {
       items = [, ];
-      items[0] = containerHeight - STANDARD_EASING.get();
-      items[1] = withTiming.get();
+      items[0] = containerHeight - closure_12.get();
+      items[1] = closure_18.get();
       return items;
     }
   }
@@ -213,9 +211,9 @@ export const useDraggablePip = function useDraggablePip(width) {
         first1 = tmp2(items, 1)[0];
         if (null != arg1) {
           if (first !== first1) {
-            tmp6 = outer1_22;
+            tmp6 = closure_1_22;
             result = tmp3[1] * (first / first1);
-            if (typeof outer1_22 !== "function") {
+            if (typeof closure_1_22 !== "function") {
               str = "Trying to call a non-function";
               throwTypeErrorResult = HermesBuiltin.throwTypeError();
             }
@@ -224,10 +222,10 @@ export const useDraggablePip = function useDraggablePip(width) {
             _Math2 = Math;
             num3 = 0;
             bound = Math.min(Math.max(result, 0), first);
-            tmp10 = withTiming;
-            result1 = withTiming.set(bound);
-            tmp12 = c17;
-            result2 = c17.set(bound);
+            tmp10 = closure_18;
+            result1 = closure_18.set(bound);
+            tmp12 = closure_17;
+            result2 = closure_17.set(bound);
           }
         }
       }
@@ -240,7 +238,7 @@ export const useDraggablePip = function useDraggablePip(width) {
   R.__initData = sharedValue2;
   const animatedReaction1 = obj18.useAnimatedReaction(U, R);
   const Gesture = width(height[7]).Gesture;
-  const obj1 = { cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual, clamp, yPosition: sharedValue3, yDestination: sharedValue2 };
+  obj1 = { cheapWorkletArrayShallowEqual: width(height[6]).cheapWorkletArrayShallowEqual, clamp, yPosition: sharedValue3, yDestination: sharedValue2 };
   let items = [-onMoved, onMoved];
   const PanResult = Gesture.Pan();
   const items1 = [-onMoved, onMoved];
@@ -266,7 +264,7 @@ export const useDraggablePip = function useDraggablePip(width) {
     const sum = sharedValue1.get() + 0.0875 * velocityX.velocityX;
     let value = derivedValue5.get();
     const diff = value - derivedValue3.get();
-    if (typeof outer1_22 !== "function") {
+    if (typeof closure_1_22 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const bound = Math.min(Math.max(sum, 0), diff);
@@ -342,7 +340,7 @@ export const useDraggablePip = function useDraggablePip(width) {
     const obj5 = derivedValue6;
     const obj6 = derivedValue4;
     const obj7 = width(height[8]);
-    tmp4 = outer1_22;
+    tmp4 = closure_1_22;
     obj = {};
     const merged1 = Object.assign(snapToCorners);
     obj.velocity = velocityX.velocityY;

@@ -1,7 +1,7 @@
 // discord_app/modules/user_profile/native/useUserProfileOverscrollStyles.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
 const require = arg1;
 let closure_6 = { code: "function useUserProfileOverscrollStylesTsx1(){const{position}=this.__closure;return position.get()<=0;}" };
@@ -11,11 +11,9 @@ let closure_9 = { code: "function useUserProfileOverscrollStylesTsx4(){const{isN
 let closure_10 = { code: "function useUserProfileOverscrollStylesTsx5(){const{clamp,interpolate,position,windowHeight,coefficient}=this.__closure;return{blurAmount:clamp(interpolate(position.get(),[0,-windowHeight*coefficient],[0,1]),0,1)};}" };
 let closure_11 = { code: "function useUserProfileOverscrollStylesTsx6(){const{position}=this.__closure;return position.get()<0;}" };
 let closure_12 = { code: "function useUserProfileOverscrollStylesTsx7(result,previous){const{runOnJS,setShowBlur}=this.__closure;return result!==previous&&runOnJS(setShowBlur)(result);}" };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/user_profile/native/useUserProfileOverscrollStyles.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/useUserProfileOverscrollStyles.tsx");
 
 export default function useUserProfileOverscrollStyles(arg0) {
-  let bannerHeight;
-  let scrollPosition;
   ({ scrollPosition, bannerHeight } = arg0);
   let height;
   let stateFromStores;
@@ -23,7 +21,7 @@ export default function useUserProfileOverscrollStyles(arg0) {
   let callback;
   let React;
   let derivedValue;
-  let c6;
+  closure_6 = undefined;
   height = stateFromStores(scrollPosition[3])().height;
   let obj = height(scrollPosition[4]);
   let items = [derivedValue];
@@ -34,7 +32,7 @@ export default function useUserProfileOverscrollStyles(arg0) {
     }
     return num;
   }, []);
-  let obj1 = height(scrollPosition[5]);
+  obj1 = height(scrollPosition[5]);
   if (scrollPosition == null) {
     scrollPosition = obj1.useSharedValue(0);
   }
@@ -47,15 +45,15 @@ export default function useUserProfileOverscrollStyles(arg0) {
   };
   fn.__closure = { position: scrollPosition };
   fn.__workletHash = 11756661427383;
-  fn.__initData = c6;
+  fn.__initData = closure_6;
   derivedValue = tmp2Result.useDerivedValue(fn);
   tmp2Result = tmp2(tmp[5]);
   class P {
     constructor() {
-      if (c5.get()) {
+      if (closure_5.get()) {
         obj = { translateY: null };
-        tmp = scrollPosition;
-        obj[0] = scrollPosition.get();
+        tmp = closure_2;
+        obj[0] = closure_2.get();
         items = [];
         items[0] = obj;
         items1 = items;
@@ -71,20 +69,20 @@ export default function useUserProfileOverscrollStyles(arg0) {
   const bannerAnimatedStyle = tmp2Result.useAnimatedStyle(P);
   class O {
     constructor() {
-      obj = height(scrollPosition[5]);
+      obj = height(closure_2[5]);
       items = [, ];
-      items[0] = c3;
+      items[0] = closure_3;
       items[1] = 0;
-      interpolateResult = obj.interpolate(scrollPosition.get(), items, [1.5, 1]);
-      obj2 = height(scrollPosition[5]);
+      interpolateResult = obj.interpolate(closure_2.get(), items, [1.5, 1]);
+      obj2 = height(closure_2[5]);
       items1 = [, ];
-      items1[0] = c3;
+      items1[0] = closure_3;
       items1[1] = 0;
       items2 = [, ];
-      items2[0] = c4;
+      items2[0] = closure_4;
       items2[1] = 0;
-      interpolateResult1 = obj2.interpolate(scrollPosition.get(), items1, items2);
-      if (c5.get()) {
+      interpolateResult1 = obj2.interpolate(closure_2.get(), items1, items2);
+      if (closure_5.get()) {
         obj = { scale: null };
         obj[0] = interpolateResult;
         items3 = [, ];
@@ -124,11 +122,11 @@ export default function useUserProfileOverscrollStyles(arg0) {
   class A {
     constructor() {
       obj = { blurAmount: null };
-      obj2 = height(scrollPosition[5]);
-      obj3 = height(scrollPosition[5]);
+      obj2 = height(closure_2[5]);
+      obj3 = height(closure_2[5]);
       items = [0];
-      items[1] = -height * c1;
-      obj[0] = obj2.clamp(obj3.interpolate(scrollPosition.get(), items, [0, 1]), 0, 1);
+      items[1] = -height * closure_1;
+      obj[0] = obj2.clamp(obj3.interpolate(closure_2.get(), items, [0, 1]), 0, 1);
       return obj;
     }
   }
@@ -138,11 +136,11 @@ export default function useUserProfileOverscrollStyles(arg0) {
   A.__initData = closure_10;
   const blurAnimatedProps = height(scrollPosition[5]).useAnimatedProps(A);
   const showBlur = callback(React.useState(scrollPosition.get() < 0), 2);
-  c6 = tmp12;
+  closure_6 = tmp12;
   const tmp2Result3 = height(scrollPosition[5]);
   class H {
     constructor() {
-      return scrollPosition.get() < 0;
+      return closure_2.get() < 0;
     }
   }
   H.__closure = { position: scrollPosition };
@@ -151,7 +149,7 @@ export default function useUserProfileOverscrollStyles(arg0) {
   const fn3 = function y(arg0, arg1) {
     let tmp = arg0 !== arg1;
     if (tmp) {
-      tmp = height(scrollPosition[5]).runOnJS(c6)(arg0);
+      tmp = height(scrollPosition[5]).runOnJS(closure_6)(arg0);
       const obj = height(scrollPosition[5]);
     }
     return tmp;

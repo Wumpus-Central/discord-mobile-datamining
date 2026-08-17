@@ -1,7 +1,9 @@
 // discord_app/utils/native/ChatInputUtils.tsx
-import { KeyboardTypes } from "../../modules/keyboard/native/KeyboardTypes.tsx";
-import { zustandStore } from "../../modules/keyboard/native/PortalKeyboardUIStore.native.tsx";
-import { dismissGlobalKeyboard } from "KeyboardManagerUtils.tsx";
+import set from "set" /* 2 */;
+import KeyboardTypes from "KeyboardTypes" /* 1627 */;
+import dismissGlobalKeyboard from "dismissGlobalKeyboard" /* 1892 */;
+import zustandStore from "zustandStore" /* 4240 */;
+
 function getBestActiveInput() {
   let str;
   if (0 !== map1.size) {
@@ -44,11 +46,11 @@ function getBestActiveInput() {
 }
 const map = new Map();
 const map1 = new Map();
-let result = require("useKeyboardType").fileFinishedImporting("utils/native/ChatInputUtils.tsx");
+let result = set.fileFinishedImporting("utils/native/ChatInputUtils.tsx");
 
 export function createInputRefTracker(id, screenIndex) {
-  let closure_0 = screenIndex;
-  let c1 = null;
+  closure_0 = screenIndex;
+  c1 = null;
   let obj = { current: id };
   obj = {
     handleRef(current, id) {
@@ -61,7 +63,7 @@ export function createInputRefTracker(id, screenIndex) {
             if (0 === value.size) {
               obj.delete(id);
             }
-            outer1_3.delete(tmp16);
+            closure_1_3.delete(tmp16);
           }
           obj = null;
         }
@@ -75,10 +77,10 @@ export function createInputRefTracker(id, screenIndex) {
         }
         const result = value.set(tmp2, obj);
         const result1 = obj.set(id, value);
-        const result2 = outer1_3.set(tmp2, obj);
+        const result2 = closure_1_3.set(tmp2, obj);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
-          const hasItem = outer1_3.has(tmp2);
+          const hasItem = closure_1_3.has(tmp2);
         }
       } else {
         obj.current = current;
@@ -93,7 +95,7 @@ export function createInputRefTracker(id, screenIndex) {
           if (0 === value.size) {
             obj3.delete(current2);
           }
-          outer1_3.delete(tmp15);
+          closure_1_3.delete(tmp15);
         }
         const current = obj.current;
         value = obj3.get(current);
@@ -103,12 +105,12 @@ export function createInputRefTracker(id, screenIndex) {
         }
         const result = value.set(tmp15, tmp5);
         const result1 = obj3.set(current, value);
-        const result2 = outer1_3.set(tmp15, tmp5);
+        const result2 = closure_1_3.set(tmp15, tmp5);
         const _process = process;
         if ("development" === process.env.DEVELOPMENT) {
           const hasItem = obj2.has(tmp15);
         }
-        obj2 = outer1_3;
+        obj2 = closure_1_3;
         const tmp14 = obj;
       }
     },
@@ -121,7 +123,7 @@ export function createInputRefTracker(id, screenIndex) {
           if (0 === value.size) {
             obj.delete(current);
           }
-          outer1_3.delete(tmp2);
+          closure_1_3.delete(tmp2);
         }
       }
     }

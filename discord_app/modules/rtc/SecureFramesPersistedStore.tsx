@@ -1,8 +1,10 @@
 // discord_app/modules/rtc/SecureFramesPersistedStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let items = [];
 let c1 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class SecureFramesPersistedStore extends PersistedStore {
 }
 const prototype = SecureFramesPersistedStore.prototype;
@@ -33,12 +35,12 @@ prototype["getUploadedKeyVersionsCached"] = function getUploadedKeyVersionsCache
 };
 SecureFramesPersistedStore.displayName = "SecureFramesPersistedStore";
 SecureFramesPersistedStore.persistKey = "SecureFramesPersistedStore";
-const secureFramesPersistedStore = new SecureFramesPersistedStore(require("dispatcher"), {
+const secureFramesPersistedStore = new SecureFramesPersistedStore(dispatcherDefault, {
   SECURE_FRAMES_SETTINGS_UPDATE: function handleSecureFramesSettingsUpdate(persistentCodesEnabled) {
     persistentCodesEnabled = persistentCodesEnabled.persistentCodesEnabled;
   },
   SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: function handleSecureFramesUploadedKeyVersionAdd(keyVersion) {
-    const items = [];
+    items = [];
     for (const item10008 of items) {
       if (item10008 === arg0.keyVersion) {
         let tmp4 = obj;
@@ -52,7 +54,7 @@ const secureFramesPersistedStore = new SecureFramesPersistedStore(require("dispa
     items.push(keyVersion.keyVersion);
   },
   SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: function handleSecureFramesUploadedKeyVersionsClear() {
-    let closure_2 = items;
+    closure_2 = items;
   }
 });
 const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesPersistedStore.tsx");

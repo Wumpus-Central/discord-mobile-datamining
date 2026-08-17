@@ -1,7 +1,10 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { resolveGoreSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
+import ReportNames from "ReportNames" /* 8137 */;
+
 let obj = {
   getTitle() {
     const intl = getSystemLocale.intl;
@@ -19,12 +22,9 @@ let obj = {
   onApply: null,
   predicate: null
 };
-const items = [require("ReportNames").ReportSubType.SUB_GORE, require("ReportNames").ReportSubType.SUB_GLORIFYING_VIOLENCE];
+const items = [ReportNames.ReportSubType.SUB_GORE, ReportNames.ReportSubType.SUB_GLORIFYING_VIOLENCE];
 obj[3] = items;
 obj[4] = function onApply() {
-  let goreContentFriendDm;
-  let goreContentGuilds;
-  let goreContentNonFriendDm;
   let obj = resolveGoreSettingWithDefaults;
   const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
   obj = {};
@@ -41,14 +41,11 @@ obj[4] = function onApply() {
   return obj.updateGoreContentSetting(obj);
 };
 obj[5] = function predicate() {
-  let goreContentFriendDm;
-  let goreContentGuilds;
-  let goreContentNonFriendDm;
   const goreContentSettingOrDefault = resolveGoreSettingWithDefaults.getGoreContentSettingOrDefault();
   ({ goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm } = goreContentSettingOrDefault);
   const obj = resolveGoreSettingWithDefaults;
   return goreContentGuilds === create.ExplicitContentRedaction.SHOW || goreContentFriendDm === create.ExplicitContentRedaction.SHOW || goreContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersGraphicMedia.tsx");
 
 export default obj;

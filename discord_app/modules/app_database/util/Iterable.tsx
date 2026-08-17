@@ -1,4 +1,6 @@
 // discord_app/modules/app_database/util/Iterable.tsx
+import set from "set" /* 2 */;
+
 class Chained {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -23,7 +25,7 @@ prototype["next"] = function next() {
   }
   return { done: true, value: "a" };
 };
-const result = require("set").fileFinishedImporting("modules/app_database/util/Iterable.tsx");
+const result = set.fileFinishedImporting("modules/app_database/util/Iterable.tsx");
 
 export const chain = function chain() {
   const items = [...arguments];

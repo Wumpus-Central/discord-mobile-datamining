@@ -1,36 +1,32 @@
 // discord_app/modules/share/native/ShareEmbed.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: null, containerRevamp: null, thumbnail: null, contentContainer: null, authorView: null, authorThumbnail: null, loadingSpinner: null };
-createCacheKey = { flexDirection: "row", height: 80, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderColor: require("Themes").colors.BORDER_STRONG, borderWidth: 1, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+createCacheKey = { flexDirection: "row", height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderWidth: 0 };
 createCacheKey[2] = { width: 80 };
 createCacheKey[3] = { flex: 1, flexDirection: "column", justifyContent: "center", paddingLeft: 12, paddingRight: 24 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginBottom: 3 };
-createCacheKey[5] = { height: 16, width: 16, borderRadius: require("Themes").radii.sm, marginRight: 4 };
+createCacheKey[5] = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
 createCacheKey[6] = { flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 16, width: 16, borderRadius: require("Themes").radii.sm, marginRight: 4 };
-const result = require("jsxProd").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 4 };
+const result = require("set").fileFinishedImporting("modules/share/native/ShareEmbed.tsx");
 
 export default function ShareEmbed(embed) {
   embed = embed.embed;
   const isLoadingEmbed = embed.isLoadingEmbed;
   let React;
   let memo3;
-  let tmp = createCacheKey();
+  let tmp = callback();
   React = tmp;
   let items = [embed];
   const memo = React.useMemo(() => {
@@ -60,8 +56,8 @@ export default function ShareEmbed(embed) {
     let tmp = null;
     if (isLoadingEmbed) {
       const obj = { style: null };
-      obj[0] = _undefined.loadingSpinner;
-      tmp = outer1_5(embed(isLoadingEmbed[5]).ActivityIndicator, obj);
+      obj[0] = closure_2.loadingSpinner;
+      tmp = closure_1_5(embed(isLoadingEmbed[5]).ActivityIndicator, obj);
     }
     return tmp;
   }, items1);
@@ -80,7 +76,7 @@ export default function ShareEmbed(embed) {
         icon_url = author.icon_url;
       }
       let obj = { style: null, children: null };
-      obj[0] = _undefined.authorView;
+      obj[0] = closure_2.authorView;
       let tmp5 = null != icon_url;
       if (tmp5) {
         obj = { style: null, source: null, resizeMode: "cover" };
@@ -88,14 +84,14 @@ export default function ShareEmbed(embed) {
         obj = { uri: null };
         obj[0] = icon_url;
         obj[1] = obj;
-        tmp5 = outer1_5(memo3, obj);
+        tmp5 = closure_1_5(memo3, obj);
       }
       const items = [tmp5, ];
-      const obj1 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: null };
+      obj1 = { variant: "text-xs/semibold", color: "mobile-text-heading-primary", ellipsizeMode: "tail", lineClamp: 1, children: null };
       obj1[4] = author.name;
-      items[1] = outer1_5(embed(isLoadingEmbed[6]).Text, obj1);
+      items[1] = closure_1_5(embed(isLoadingEmbed[6]).Text, obj1);
       obj[1] = items;
-      return outer1_6(outer1_4, obj);
+      return closure_1_6(closure_1_4, obj);
     }
   }, items2);
   memo3 = React.useMemo(() => {
@@ -108,7 +104,7 @@ export default function ShareEmbed(embed) {
       const obj = { style: null, variant: "text-xs/semibold", color: "mobile-text-heading-primary", lineClamp: 1, ellipsizeMode: "tail", children: null };
       obj[0] = { marginVertical: 1 };
       obj[5] = title;
-      tmp2 = outer1_5(embed(isLoadingEmbed[6]).Text, obj);
+      tmp2 = closure_1_5(embed(isLoadingEmbed[6]).Text, obj);
     }
     return tmp2;
   }, items3);
@@ -125,7 +121,7 @@ export default function ShareEmbed(embed) {
         const obj = { style: null, variant: "text-xs/medium", color: "text-default", lineClamp: 1, ellipsizeMode: "tail", children: null };
         obj[0] = { marginVertical: 1 };
         obj[5] = description;
-        tmp = outer1_5(embed(isLoadingEmbed[6]).Text, obj);
+        tmp = closure_1_5(embed(isLoadingEmbed[6]).Text, obj);
       }
     }
     return tmp;
@@ -149,7 +145,7 @@ export default function ShareEmbed(embed) {
       }
       obj = { children: null };
       const items6 = [tmp9Result, ];
-      let obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp.contentContainer;
       const items7 = [memo2, memo3, memo4, tmp7];
       obj1[1] = items7;

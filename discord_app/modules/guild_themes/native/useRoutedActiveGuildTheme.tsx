@@ -1,13 +1,13 @@
 // discord_app/modules/guild_themes/native/useRoutedActiveGuildTheme.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ME } from "ME";
-import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { resolveSavedActiveGuildTheme } from "../GuildThemeResolver.tsx";
-import { context } from "GuildThemeGuildIdOverrideContext.tsx";
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import contextDefault from "context" /* 4255 */;
+import resolveSavedActiveGuildTheme from "resolveSavedActiveGuildTheme" /* 4256 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ME } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function getGuildIdFromNavigationState(routes) {
   if (null != routes) {
     routes = routes.routes;
@@ -149,23 +149,21 @@ function getActiveGuildThemeGuildIdSnapshot() {
   }
   return null;
 }
-const result = require("ME").fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_themes/native/useRoutedActiveGuildTheme.tsx");
 
 export default function useRoutedActiveGuildTheme() {
-  let require;
-  let tmp4;
-  const context = React.useContext(context);
+  const context = React.useContext(contextDefault);
   [tmp4, require] = callback(React.useState(getActiveGuildThemeGuildIdSnapshot), 2);
   const effect = React.useEffect(() => {
-    const rootNavigationRef = outer1_0(outer1_2[4]).getRootNavigationRef();
+    const rootNavigationRef = closure_1_0(closure_1_2[4]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       function handleStateChange() {
-        callback(outer1_7());
+        callback(closure_1_7());
       }
-      callback(outer1_7());
+      callback(closure_1_7());
       return rootNavigationRef.addListener("state", handleStateChange);
     }
-    const obj = outer1_0(outer1_2[4]);
+    const obj = closure_1_0(closure_1_2[4]);
   }, []);
   if (undefined !== context) {
     let tmp7 = null;

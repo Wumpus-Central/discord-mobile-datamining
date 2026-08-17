@@ -1,35 +1,27 @@
 // discord_app/modules/threads/native/components/ThreadLongPressActionSheet.tsx
-import PencilIcon from "PencilIcon";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import updateVoiceState from "updateVoiceState";
-import storeThread from "storeThread";
-import ME from "ME";
-import jsxProd from "LinkIcon";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "updateVoiceState" /* 4542 */;
+import closure_7 from "storeThread" /* 4023 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 function ThreadLongPressActionSheetConnected(channel) {
-  let hasJoined;
-  let isMuted;
   channel = channel.channel;
   const onClose = channel.onClose;
   isMuted = onClose;
-  let dependencyMap;
+  dependencyMap = undefined;
   let setting;
   let items4;
   dependencyMap = channel.getGuildId();
   let obj = channel(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(closure_2));
-  let obj1 = channel(589);
-  const items1 = [storeThread];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMuted: outer1_7.isMuted(channel.id), hasJoined: outer1_7.hasJoined(channel.id) }));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(closure_2));
+  obj1 = channel(589);
+  const items1 = [closure_7];
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => ({ isMuted: closure_1_7.isMuted(channel.id), hasJoined: closure_1_7.hasJoined(channel.id) }));
   ({ isMuted, hasJoined } = stateFromStoresObject);
   let obj2 = channel(7234);
   const canManageThread = obj2.useCanManageThread(channel);
@@ -40,11 +32,11 @@ function ThreadLongPressActionSheetConnected(channel) {
   let obj5 = channel(7234);
   const canJoinThreadVoice = obj5.useCanJoinThreadVoice(channel);
   let obj6 = channel(589);
-  const items2 = [updateVoiceState];
-  const stateFromStores1 = obj6.useStateFromStores(items2, () => outer1_6.isInChannel(channel.id));
+  const items2 = [closure_6];
+  const stateFromStores1 = obj6.useStateFromStores(items2, () => closure_1_6.isInChannel(channel.id));
   let obj7 = channel(589);
-  const items3 = [updateVoiceState];
-  const stateFromStores2 = obj7.useStateFromStores(items3, () => !isMuted(paths[32]).isEmpty(outer1_6.getVoiceStatesForChannel(channel.id)));
+  const items3 = [closure_6];
+  const stateFromStores2 = obj7.useStateFromStores(items3, () => !isMuted(paths[32]).isEmpty(closure_1_6.getVoiceStatesForChannel(channel.id)));
   const tmp12 = isMuted(8521)(channel);
   const DeveloperMode = channel(4066).DeveloperMode;
   setting = DeveloperMode.useSetting();
@@ -79,7 +71,7 @@ function ThreadLongPressActionSheetConnected(channel) {
   obj2[1] = channel(8607).EyeIcon;
   obj2[2] = function onPress() {
     let obj = channel(paths[9]);
-    obj = { section: outer1_10.THREAD_ACTION_SHEET, object: outer1_9.MARK_THREAD_AS_READ_BUTTON, objectType: outer1_8.ACK_MANUAL };
+    obj = { section: closure_1_10.THREAD_ACTION_SHEET, object: closure_1_9.MARK_THREAD_AS_READ_BUTTON, objectType: closure_1_8.ACK_MANUAL };
     obj.ack(channel.id, obj, true, true);
   };
   const items5 = [obj2];
@@ -277,31 +269,27 @@ function ThreadLongPressActionSheetConnected(channel) {
           obj14[0] = tmp16(tmp(10516).ActionSheetIconHeader, obj15);
           const items8 = [
             items4.map((buttons) => {
-                      let obj = { hasIcons: true, children: null };
                       buttons = buttons.buttons;
-                      obj[1] = buttons.map((onPress) => {
-                        let IconComponent;
-                        let disableColor;
-                        let isDestructive;
-                        let label;
-                        let trailing;
-                        onPress = onPress.onPress;
-                        ({ label, IconComponent, trailing, isDestructive, disableColor } = onPress);
-                        const obj = { label, variant: null, icon: null, trailing: null, onPress: null };
-                        let str = "default";
-                        if (isDestructive) {
-                          str = "danger";
-                        }
-                        obj[1] = str;
-                        obj[2] = outer1_12(outer1_0(outer1_2[41]).ActionSheetRow.Icon, { IconComponent, disableColor });
-                        obj[3] = trailing;
-                        obj[4] = function onPress() {
-                          outer1_1();
-                          onPress();
-                        };
-                        return outer1_12(outer1_0(outer1_2[41]).ActionSheetRow, obj, arg1);
-                      });
-                      return outer1_12(channel(paths[41]).ActionSheetRow.Group, obj, buttons.sectionKey);
+                      return closure_1_12(channel(paths[41]).ActionSheetRow.Group, {
+                        hasIcons: true,
+                        children: buttons.map((onPress) => {
+                          onPress = onPress.onPress;
+                          ({ label, IconComponent, trailing, isDestructive, disableColor } = onPress);
+                          const obj = { label, variant: null, icon: null, trailing: null, onPress: null };
+                          let str = "default";
+                          if (isDestructive) {
+                            str = "danger";
+                          }
+                          obj[1] = str;
+                          obj[2] = closure_1_12(closure_1_0(closure_1_2[41]).ActionSheetRow.Icon, { IconComponent, disableColor });
+                          obj[3] = trailing;
+                          obj[4] = function onPress() {
+                            closure_1_1();
+                            onPress();
+                          };
+                          return closure_1_12(closure_1_0(closure_1_2[41]).ActionSheetRow, obj, arg1);
+                        })
+                      }, buttons.sectionKey);
                     }),
 
           ];
@@ -340,7 +328,7 @@ function ThreadLongPressActionSheetConnected(channel) {
         obj19[0] = string7Result;
         obj19[1] = tmp(9925).PencilIcon;
         obj19[2] = function onPress() {
-          isMuted(paths[20]).setSection(outer1_11.OVERVIEW);
+          isMuted(paths[20]).setSection(closure_1_11.OVERVIEW);
           const obj = isMuted(paths[20]);
           isMuted(paths[20]).open(channel.id);
         };
@@ -364,18 +352,16 @@ function ThreadLongPressActionSheetConnected(channel) {
     }
   }
 }
-({ AnalyticsObjectTypes: metroImportAll, AnalyticsObjects: c9, AnalyticsSections: c10, ChannelSettingsSections: unpackModuleId } = ME);
+({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: c9, AnalyticsSections: c10, ChannelSettingsSections: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/threads/native/components/ThreadLongPressActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadLongPressActionSheet.tsx");
 
 export default function ThreadLongPressActionSheet(arg0) {
-  let onClose;
-  let require;
   ({ channelId: require, onClose } = arg0);
   let stateFromStores;
   let obj = require(stateFromStores[30]);
-  const items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(closure_0));
+  const items = [closure_4];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(closure_0));
   const items1 = [stateFromStores, onClose];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {

@@ -1,11 +1,12 @@
 // discord_app/design/components/Pile/native/AvatarDuoPile.native.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { SolidCutout } from "../../Icon/native/ClipView.tsx";
-import { Pile } from "Pile.native.tsx";
+import noopAll from "noop" /* 19 */;
+import SolidCutout from "SolidCutout" /* 8402 */;
+import Pile from "Pile" /* 11788 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Pile").fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/components/Pile/native/AvatarDuoPile.native.tsx");
 
 export const AvatarDuoPile = function AvatarDuoPile(size) {
   size = size.size;

@@ -1,10 +1,11 @@
 // discord_app/modules/app_database/background_sync/native/BackgroundSyncManager.tsx
-import fetchFingerprint from "fetchFingerprint";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import "initialize";
-import { _backgroundSync } from "BackgroundSync.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import _backgroundSync from "_backgroundSync" /* 16534 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class BackgroundSyncManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -41,6 +42,6 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   _backgroundSync.backgroundSync({ force: false, messagesOnly: true, checkLastMessageId: true });
 };
 const backgroundSyncManager = new BackgroundSyncManager();
-const result = require("initialize").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
+const result = require("set").fileFinishedImporting("modules/app_database/background_sync/native/BackgroundSyncManager.tsx");
 
 export default backgroundSyncManager;

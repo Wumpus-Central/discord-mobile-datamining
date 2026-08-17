@@ -1,9 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx
-import { YOU_BAR_HEIGHT } from "CONNECTION_BANNER_HEIGHT";
-import { useConnectionBannerHeight } from "useConnectionBannerHeight.tsx";
-import { useYouBarHorizontalMargin } from "useYouBarMargins.tsx";
+import set from "set" /* 2 */;
+import useYouBarHorizontalMargin from "useYouBarHorizontalMargin" /* 14449 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
+import useConnectionBannerHeight from "useConnectionBannerHeight" /* 14453 */;
 
-const result = require("useConnectionBannerHeight").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
+const YOU_BAR_HEIGHT = CONNECTION_BANNER_HEIGHT.YOU_BAR_HEIGHT;
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarTotalHeight.tsx");
 
 export const useYouBarTotalHeight = function useYouBarTotalHeight(arg0) {
   let num = arg0;

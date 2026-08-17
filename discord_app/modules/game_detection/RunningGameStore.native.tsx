@@ -1,11 +1,13 @@
 // discord_app/modules/game_detection/RunningGameStore.native.tsx
-import handleLoadMessages from "handleLoadMessages";
-import gameFromServer from "gameFromServer";
-import setLibraryApplications from "setLibraryApplications";
-import { Store } from "initialize";
-import { DevToolsFocusedPidsTrackMode } from "../overlay/OverlayTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DevToolsFocusedPidsTrackMode from "DevToolsFocusedPidsTrackMode" /* 4522 */;
+import closure_2 from "handleLoadMessages" /* 4505 */;
+import closure_3 from "gameFromServer" /* 4509 */;
+import closure_4 from "setLibraryApplications" /* 4512 */;
 
-const require = arg1;
+require = arg1;
+const Store = initializeDefault.Store;
 class RunningGameStore extends Store {
 }
 const prototype = RunningGameStore.prototype;
@@ -118,8 +120,8 @@ prototype["isSystemServiceInitialized"] = function isSystemServiceInitialized() 
   return false;
 };
 RunningGameStore.displayName = "RunningGameStore";
-const runningGameStore = new RunningGameStore(require("dispatcher"), {});
-const result = require("setLibraryApplications").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
+const runningGameStore = new RunningGameStore(dispatcherDefault, {});
+const result = require("set").fileFinishedImporting("modules/game_detection/RunningGameStore.native.tsx");
 
 export default runningGameStore;
 export function gameKey() {
@@ -127,7 +129,7 @@ export function gameKey() {
 }
 export const getRawOverlayGameStatus = function getRawOverlayGameStatus() {
   if (arg1 === undefined) {
-    const items = [gameFromServer, setLibraryApplications, handleLoadMessages];
+    const items = [closure_3, closure_4, closure_2];
   }
   return { source: DevToolsFocusedPidsTrackMode.OverlayGameStatusSource.UNKNOWN, enabledOOP: false, enabledLegacy: false, overlayMethod: DevToolsFocusedPidsTrackMode.OverlayMethod.Disabled, reason: "Dummy implementation" };
 };

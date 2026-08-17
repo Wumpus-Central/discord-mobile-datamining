@@ -1,8 +1,10 @@
 // discord_app/modules/activities/utils/getRemoteJoinFooterLabel.tsx
-import { ActivityGamePlatforms } from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");
+const ActivityGamePlatforms = ME.ActivityGamePlatforms;
+const result = set.fileFinishedImporting("modules/activities/utils/getRemoteJoinFooterLabel.tsx");
 
 export const getRemoteJoinFooterLabel = function getRemoteJoinFooterLabel(remoteJoinPlatform) {
   if (ActivityGamePlatforms.DESKTOP === remoteJoinPlatform) {

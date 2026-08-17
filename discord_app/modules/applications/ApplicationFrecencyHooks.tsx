@@ -1,14 +1,14 @@
 // discord_app/modules/applications/ApplicationFrecencyHooks.tsx
-import noop from "noop";
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
-import { UserSettingsTypes } from "MAX_FAVORITES";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 8449 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 const require = arg1;
-const result = require("MAX_FAVORITES").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyHooks.tsx");
 
 export const useSortApplicationsViaFrecency = function useSortApplicationsViaFrecency(found, stateFromStoresArray) {
   const _require = found;
-  let closure_1 = stateFromStoresArray;
+  closure_1 = stateFromStoresArray;
   const effect = memo.useEffect(() => {
     const FrecencyUserSettingsActionCreators = lib(stateFromStores[3]).FrecencyUserSettingsActionCreators;
     const ifUncached = FrecencyUserSettingsActionCreators.loadIfUncached(memo2.FRECENCY_AND_FAVORITES_SETTINGS);
@@ -20,7 +20,7 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
     if (null != stateFromStoresArray) {
       if (0 !== stateFromStoresArray.length) {
         let mapped = lib.map((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           const obj = {};
           const merged = Object.assign(arg0);
           let flag;
@@ -40,10 +40,10 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   }, items1);
   const items2 = [found, stateFromStoresArray];
   memo1 = memo.useMemo(() => {
-    let found;
+    found = undefined;
     if (closure_1 != null) {
       found = closure_1.filter((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         return !closure_0.some((id) => id.id === application.application.id);
       });
     }
@@ -53,7 +53,7 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
   const memo2 = memo.useMemo(() => {
     if (memo1 != null) {
       const item = arr.forEach((id) => {
-        let obj = outer1_1(outer1_2[5]);
+        let obj = closure_1_1(closure_1_2[5]);
         if (null == store.getEntry(id.application.id)) {
           obj = { timestamp: null };
           obj[0] = extractTimestampResult;
@@ -100,7 +100,7 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
           tmp2 = extractTimestampResult > callback;
         }
         if (tmp2) {
-          let closure_0 = id;
+          closure_0 = id;
           callback = extractTimestampResult;
         }
       });
@@ -121,7 +121,7 @@ export const useSortApplicationsViaFrecency = function useSortApplicationsViaFre
         tmp3 = applyResult > closure_1;
       }
       if (tmp3) {
-        let closure_0 = id;
+        closure_0 = id;
         closure_1 = applyResult;
       }
     });

@@ -1,13 +1,10 @@
 // discord_app/stores/billing/BraintreeStore.tsx
-import ME from "ME";
-import set from "set";
-import { Store } from "initialize";
-import set from "sendRequest";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 500 */;
 
-let c4;
-let c5;
-let closure_6;
 ({ Endpoints: c4, PaymentGateways: c5, PaymentSourceTypes: closure_6 } = ME);
 let c7 = null;
 let c8 = null;
@@ -18,7 +15,7 @@ if (set.isDesktop()) {
   obj[0] = function getReturnUrlPrefix() {
     if (null == closure_2) {
       const _Error = Error;
-      const error = new Error("popupBridgeState is unset");
+      error = new Error("popupBridgeState is unset");
       throw error;
     } else {
       const aPIBaseURL = sendRequest.getAPIBaseURL();
@@ -26,12 +23,13 @@ if (set.isDesktop()) {
     }
   };
   obj[1] = function open(arg0) {
-    let closure_3 = arg0;
+    closure_3 = arg0;
     window.open(arg0);
     braintreeStore.emitChange();
   };
   window.popupBridge = obj;
 }
+const Store = initializeDefault.Store;
 class BraintreeStore extends Store {
 }
 const prototype = BraintreeStore.prototype;
@@ -74,16 +72,16 @@ obj = {
     }
   },
   BRAINTREE_TEARDOWN_PAYPAL_CLIENT: function handleBraintreeTeardownPayPalClient() {
-    let c8 = null;
+    c8 = null;
   },
   BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: function handleBraintreeCreateVenmoClientSuccess(venmoClient) {
     venmoClient = venmoClient.venmoClient;
   },
   BRAINTREE_TEARDOWN_VENMO_CLIENT: function handleBraintreeTeardownVenmoClient() {
-    let c9 = null;
+    c9 = null;
   }
 };
-const braintreeStore = new BraintreeStore(require("dispatcher"), obj);
+const braintreeStore = new BraintreeStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("stores/billing/BraintreeStore.tsx");
 
 export default braintreeStore;

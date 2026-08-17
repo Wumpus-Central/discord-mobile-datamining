@@ -1,8 +1,9 @@
 // discord_app/modules/app_launcher/AppLauncherStore.tsx
-import { Store } from "initialize";
-import { AppLauncherEntrypoint } from "AppLauncherTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
 
-const require = arg1;
+require = arg1;
 function handleDismissWithDismissed() {
   let DISMISSED = AppLauncherEntrypoint.AppLauncherCloseReason.DISMISSED;
   if (DISMISSED === undefined) {
@@ -26,6 +27,7 @@ function handleSetActiveCommand() {
   obj.activeChannelId = null;
 }
 let obj = { show: false, entrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, lastShownEntrypoint: require("AppLauncherEntrypoint").AppLauncherEntrypoint.NONE, activeViewType: null, activeChannelId: null, closeReason: require("AppLauncherEntrypoint").AppLauncherCloseReason.DISMISSED, initialState: "accessibilityRole" };
+const Store = initializeDefault.Store;
 class AppLauncherStore extends Store {
 }
 const prototype = AppLauncherStore.prototype;
@@ -71,9 +73,6 @@ prototype["initialState"] = function initialState(arg0) {
 AppLauncherStore.displayName = "AppLauncherStore";
 obj = {
   APP_LAUNCHER_SHOW: function handleShow(entrypoint) {
-    let activeChannelId;
-    let activeViewType;
-    let initialState;
     entrypoint = entrypoint.entrypoint;
     obj.show = true;
     obj.entrypoint = entrypoint;
@@ -103,7 +102,7 @@ obj = {
   APPLICATION_COMMAND_SET_ACTIVE_COMMAND: handleSetActiveCommand,
   APP_LAUNCHER_SET_ACTIVE_COMMAND: handleSetActiveCommand
 };
-const appLauncherStore = new AppLauncherStore(require("dispatcher"), obj);
-const result = require("dispatcher").fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");
+const appLauncherStore = new AppLauncherStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherStore.tsx");
 
 export default appLauncherStore;

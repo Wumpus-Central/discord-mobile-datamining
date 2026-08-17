@@ -1,15 +1,14 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/BotsBanner.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { useBannerBots } from "../hooks/useBannerBots.tsx";
-import { BannerBase } from "BannerBase.tsx";
+import noopAll from "noop" /* 19 */;
+import BannerBaseDefault from "BannerBase" /* 11237 */;
+import useBannerBots from "useBannerBots" /* 11242 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useBannerBots").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BotsBanner.tsx");
 
 export default function BotsBanner(context) {
-  let firstBotApplication;
-  let secondBotApplication;
   let obj = useBannerBots;
   const bannerBots = obj.useBannerBots({ context: context.context });
   ({ firstBotApplication, secondBotApplication } = bannerBots);
@@ -24,8 +23,8 @@ export default function BotsBanner(context) {
       obj[0] = firstBotApplication.name;
       obj[1] = secondBotApplication.name;
       obj[1] = intl.formatToPlainString(tmp(1236).t["9SN0xw"], obj);
-      tmp4Result = jsx(BannerBase, { firstApplicationName: null, secondApplicationName: null });
-      const tmp5Result = BannerBase;
+      tmp4Result = jsx(BannerBaseDefault, { firstApplicationName: null, secondApplicationName: null });
+      const tmp5Result = BannerBaseDefault;
     }
   }
   return tmp4Result;

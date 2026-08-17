@@ -1,12 +1,12 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { AnalyticEvents } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBlockUserElement.tsx");
 
 export default function BlockUserElement(user) {
   user = user.user;
@@ -14,13 +14,13 @@ export default function BlockUserElement(user) {
   const reportId = user.reportId;
   let stateFromStores1;
   let obj = user(reportId[5]);
-  const items = [markAllUserIdListsStale];
+  const items = [closure_5];
   const items1 = [user];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.isBlocked(user.id), items1);
-  let obj1 = user(reportId[5]);
-  const items2 = [ensureGuildLoaded];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isBlocked(user.id), items1);
+  obj1 = user(reportId[5]);
+  const items2 = [closure_4];
   const items3 = [channelId];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => outer1_4.getChannel(channelId), items3);
+  stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
   const items4 = [stateFromStores1, user];
   const memo = stateFromStores1.useMemo(() => {
     let guild_id;

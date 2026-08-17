@@ -1,14 +1,15 @@
 // discord_app/modules/wishlists/WishlistStore.tsx
-import fromServer from "fromServer";
-import closure_5 from "fromServer";
-import { Store } from "initialize";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { createUserWidgetFromServer } from "../user_profile/UserProfileStore.tsx";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import createUserWidgetFromServer from "createUserWidgetFromServer" /* 5365 */;
+import fromServer from "fromServer" /* 9187 */;
+import closure_5 from "fromServer" /* 9187 */;
 
-let c3;
-let c4;
 ({ getWishlistSkuIds: c3, wishlistHasSkuId: c4 } = fromServer);
 let closure_6 = {};
+const Store = initializeDefault.Store;
 class WishlistStore extends Store {
 }
 const prototype = WishlistStore.prototype;
@@ -57,7 +58,7 @@ prototype["getUpdatedAt"] = function getUpdatedAt(arg0) {
 prototype["getLastFetchedAt"] = function getLastFetchedAt(arg0) {
   return this.get(arg0).lastFetchedAt;
 };
-const wishlistStore = new WishlistStore(require("dispatcher"), {
+const wishlistStore = new WishlistStore(dispatcherDefault, {
   WISHLIST_FETCH_START: function handleFetchStart(wishlistId) {
     wishlistId = wishlistId.wishlistId;
     let tmp2 = dependencyMap[wishlistId];
@@ -70,8 +71,6 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     tmp2.error = undefined;
   },
   WISHLIST_FETCH_SUCCESS: function handleFetchSuccess(wishlistId) {
-    let updatedAt;
-    let wishlistData;
     wishlistId = wishlistId.wishlistId;
     let tmp2 = dependencyMap[wishlistId];
     ({ wishlistData, updatedAt } = wishlistId);
@@ -111,11 +110,9 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_ADD_SKU_FAILURE: function handleAddSkuFailure(error) {
-    SentryUtils.native.captureException(error.error);
+    _modDef1208.captureException(error.error);
   },
   WISHLIST_REMOVE_SKU_START: function handleRemoveSkuStart(arg0) {
-    let require;
-    let wishlistId;
     ({ wishlistId, skuId: require } = arg0);
     let tmp2 = dependencyMap[wishlistId];
     if (tmp2 == null) {
@@ -156,7 +153,7 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    SentryUtils.native.captureException(wishlistId.error);
+    _modDef1208.captureException(wishlistId.error);
   },
   WISHLIST_UPDATE_VISIBILITY_SUCCESS: function handleUpdateVisibilitySuccess(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -171,7 +168,7 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     tmp2.lastFetchedAt = Date.now();
   },
   WISHLIST_UPDATE_VISIBILITY_FAILURE: function handleUpdateVisibilityFailure(error) {
-    SentryUtils.native.captureException(error.error);
+    _modDef1208.captureException(error.error);
   },
   WISHLIST_REORDER_START: function handleReorderStart(wishlistId) {
     wishlistId = wishlistId.wishlistId;
@@ -205,11 +202,9 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
       tmp2 = obj;
     }
     tmp2.updatedAt = undefined;
-    SentryUtils.native.captureException(wishlistId.error);
+    _modDef1208.captureException(wishlistId.error);
   },
   WISHLIST_ITEM_PURCHASED: function handleWishlistItemPurchased(arg0) {
-    let recipientId;
-    let skuId;
     ({ recipientId, skuId } = arg0);
     const firstWishlistId = createUserWidgetFromServer.default.getFirstWishlistId(recipientId);
     let tmp2 = null != firstWishlistId;
@@ -227,6 +222,6 @@ const wishlistStore = new WishlistStore(require("dispatcher"), {
     }
   }
 });
-const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
+const result = set.fileFinishedImporting("modules/wishlists/WishlistStore.tsx");
 
 export default wishlistStore;

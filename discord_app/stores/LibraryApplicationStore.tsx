@@ -1,18 +1,20 @@
 // discord_app/stores/LibraryApplicationStore.tsx
-import createFromServer from "createFromServer";
-import fetchFingerprint from "fetchFingerprint";
-import { LibraryApplicationFlags } from "ME";
-import { Store } from "initialize";
-import set from "ME";
+import initializeDefault from "initialize" /* 589 */;
+import Storage6 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import hasFlagAll from "hasFlag" /* 1403 */;
+import getComboId from "getComboId" /* 4520 */;
+import closure_4 from "createFromServer" /* 4513 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import { LibraryApplicationFlags } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 import { apply } from "../../_runtime/00012_apply.js";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
-import { getComboId } from "../utils/LibraryApplicationUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function setLibraryApplications(libraryApplications) {
   while (tmp !== undefined) {
-    let tmp3 = createFromServer;
-    let fromServer = createFromServer.createFromServer(tmp2);
+    let tmp3 = closure_4;
+    let fromServer = closure_4.createFromServer(tmp2);
     let tmp5 = require;
     let tmp6 = dependencyMap;
     let obj = getComboId;
@@ -22,7 +24,7 @@ function setLibraryApplications(libraryApplications) {
   }
 }
 function handleLibraryApplicationUpdate(libraryApplication) {
-  const fromServer = createFromServer.createFromServer(libraryApplication.libraryApplication);
+  const fromServer = closure_4.createFromServer(libraryApplication.libraryApplication);
   const comboId = getComboId.getComboId(fromServer.id, fromServer.branchId);
   closure_9[comboId] = fromServer;
   set.delete(comboId);
@@ -35,12 +37,13 @@ let set = new Set();
 let closure_12 = {};
 let closure_13 = {};
 let c14 = false;
+const Store = initializeDefault.Store;
 class LibraryApplicationStore extends Store {
 }
 const prototype = LibraryApplicationStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint);
-  const Storage = Storage.Storage;
+  this.waitFor(closure_5);
+  const Storage = Storage6.Storage;
   let value = Storage.get(LibraryApplicationStore);
   if (null != value) {
     if (null == value.activeLaunchOptionIds) {
@@ -222,9 +225,9 @@ Object.defineProperty(prototype, "hasRemovedLibraryApplicationThisSession", {
   set: undefined
 });
 prototype["whenInitialized"] = function whenInitialized(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const result = this.addConditionalChangeListener(() => {
-    if (outer1_8) {
+    if (closure_1_8) {
       const _setImmediate = setImmediate;
       setImmediate(closure_0);
       return false;
@@ -232,21 +235,19 @@ prototype["whenInitialized"] = function whenInitialized(arg0) {
   });
 };
 LibraryApplicationStore.displayName = "LibraryApplicationStore";
-const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"), {
+const libraryApplicationStore = new LibraryApplicationStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
-    let c8 = false;
+    c8 = false;
   },
   LIBRARY_FETCH_SUCCESS: function handleFetchSuccess(libraryApplications) {
-    let closure_9 = {};
+    closure_9 = {};
     setLibraryApplications(libraryApplications.libraryApplications);
-    let c8 = true;
+    c8 = true;
   },
   SKU_PURCHASE_SUCCESS: function handlePurchaseSuccess(libraryApplications) {
     setLibraryApplications(libraryApplications.libraryApplications);
   },
   LIBRARY_APPLICATION_FLAGS_UPDATE_START: function handleFlagsUpdateStart(flags) {
-    let applicationId;
-    let branchId;
     ({ applicationId, branchId } = flags);
     const comboId = getComboId.getComboId(applicationId, branchId);
     const obj = getComboId;
@@ -257,25 +258,22 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     }
     let hasFlagResult = null != obj3 && !obj3.isHidden();
     if (hasFlagResult) {
-      hasFlagResult = importAll(1403).hasFlag(flags.flags, LibraryApplicationFlags.HIDDEN);
-      const obj4 = importAll(1403);
+      hasFlagResult = hasFlagAll.hasFlag(flags.flags, LibraryApplicationFlags.HIDDEN);
+      const obj4 = hasFlagAll;
     }
     if (hasFlagResult) {
-      let c14 = true;
+      c14 = true;
     }
     set.add(comboId);
   },
   LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: handleLibraryApplicationUpdate,
   LIBRARY_APPLICATION_UPDATE: handleLibraryApplicationUpdate,
   LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function handleActiveLaunchOptionIdUpdate(arg0) {
-    let applicationId;
-    let branchId;
-    let launchOptionId;
     ({ applicationId, branchId, launchOptionId } = arg0);
     let obj = getComboId;
     closure_13[obj.getComboId(applicationId, branchId)] = launchOptionId;
-    const Storage = Storage.Storage;
-    const Storage2 = Storage.Storage;
+    const Storage = Storage6.Storage;
+    const Storage2 = Storage6.Storage;
     obj = Storage2.get(LibraryApplicationStore);
     if (obj == null) {
       obj = {};
@@ -286,15 +284,13 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     const result = Storage.set(LibraryApplicationStore, obj);
   },
   LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function handleActiveBranchUpdate(arg0) {
-    let applicationId;
-    let branchId;
     ({ applicationId, branchId } = arg0);
     if (dependencyMap3[applicationId] === branchId) {
       return false;
     } else {
       dependencyMap3[applicationId] = branchId;
-      const Storage = Storage.Storage;
-      const Storage2 = Storage.Storage;
+      const Storage = Storage6.Storage;
+      const Storage2 = Storage6.Storage;
       let obj = Storage2.get(LibraryApplicationStore);
       if (obj == null) {
         obj = {};
@@ -316,7 +312,7 @@ const libraryApplicationStore = new LibraryApplicationStore(require("dispatcher"
     }
   },
   DEVELOPER_TEST_MODE_RESET: function handleTestModeDisabled() {
-    let closure_10 = {};
+    closure_10 = {};
   }
 });
 let result = set.fileFinishedImporting("stores/LibraryApplicationStore.tsx");

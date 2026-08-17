@@ -1,18 +1,18 @@
 // discord_app/modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx
-import noop from "noop";
-import { AnalyticEvents } from "ME";
-import { QUICK_SWITCHER } from "../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import closure_2 from "noop" /* 19 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("context").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildUpsellModalOpened.tsx");
 
 export default function useTrackFavoritesGuildUpsellModalOpened(arg0) {
-  const importDefault = arg0;
+  importDefault = arg0;
   const items = [arg0];
   const effect = React.useEffect(() => {
-    let obj = callback(outer1_1[4]);
+    let obj = callback(closure_1_1[4]);
     obj = { source: callback };
-    obj.track(outer1_3.FAVORITES_GUILD_UPSELL_MODAL_OPENED, obj);
+    obj.track(closure_1_3.FAVORITES_GUILD_UPSELL_MODAL_OPENED, obj);
   }, items);
-  return { analyticsLocations: context(QUICK_SWITCHER.FAVORITES_GUILD_UPSELL_MODAL).analyticsLocations };
+  return { analyticsLocations: contextDefault(QUICK_SWITCHERDefault.FAVORITES_GUILD_UPSELL_MODAL).analyticsLocations };
 };

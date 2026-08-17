@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ForumLayout.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { ALL: null };
 let set = new Set([0, 1, 2]);

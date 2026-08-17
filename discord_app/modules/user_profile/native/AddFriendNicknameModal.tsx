@@ -1,36 +1,31 @@
 // discord_app/modules/user_profile/native/AddFriendNicknameModal.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "nameFromUser";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import closure_8 from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { TextField } from "../../../design/components/TextField/native/TextField.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import TextField from "TextField" /* 7338 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-const require = arg1;
+require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, title: null, description: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, justifyContent: "center", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { marginTop: 8, marginBottom: 16, textAlign: "center", lineHeight: 18 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("noop").fileFinishedImporting("modules/user_profile/native/AddFriendNicknameModal.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_profile/native/AddFriendNicknameModal.tsx");
 
 export default function AddFriendNicknameModal(arg0) {
-  let c2;
-  let c3;
-  let require;
-  let showUserProfile;
   ({ userId: require, showUserProfile } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   c3 = undefined;
   let callback;
   let callback1;
@@ -63,22 +58,22 @@ export default function AddFriendNicknameModal(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               if (table) {
                 v0 = 3;
               } else {
-                outer1_3(true);
+                closure_1_3(true);
                 let ref = 1;
-                let obj1 = outer1_1(table[12]);
+                obj1 = closure_1_1(table[12]);
                 const current = ref.current;
-                let c0 = current;
+                c0 = current;
                 if (current == null) {
                   c0 = "";
                 }
                 table = 2;
                 v0 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.updateRelationship(outer1_0, c0);
+                obj1[0] = obj1.updateRelationship(closure_1_0, c0);
                 return obj1;
               }
             }
@@ -111,7 +106,7 @@ export default function AddFriendNicknameModal(arg0) {
         }
       }
     });
-    const _handleSubmit = tmp;
+    closure_6 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -120,23 +115,23 @@ export default function AddFriendNicknameModal(arg0) {
     }
     return applyArgumentsResult;
   }
-  let tmp = createCacheKey();
+  let tmp = callback4();
   let obj = callback1;
   [c2, c3] = callback(callback1.useState(false), 2);
-  let obj1 = initialize;
-  const items = [markAllUserIdListsStale];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_7.getNickname(closure_0));
+  obj1 = initialize;
+  const items = [closure_7];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getNickname(closure_0));
   let tmp6 = stateFromStores;
   if (stateFromStores == null) {
     tmp6 = null;
   }
   callback = callback1.useRef(tmp6);
   callback = obj.useCallback((current) => {
-    _slicedToArray.current = current;
+    closure_4.current = current;
   }, []);
   const tmp2 = callback(callback1.useState(false), 2);
   const items1 = [closure_8];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => outer1_8.getUser(closure_0));
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.getUser(closure_0));
   if (null == stateFromStores) {
     const intl2 = tmp3(1236).intl;
     let stringResult = intl2.string(tmp3(1236).t.BGYkaH);

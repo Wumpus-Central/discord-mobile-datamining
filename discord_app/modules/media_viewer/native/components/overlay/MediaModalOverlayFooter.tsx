@@ -1,21 +1,20 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { drawerContainer: { overflow: "hidden", backgroundColor: "HermesInternal" }, drawerHeaderTab: null, drawerHeader: null, messagePreviewContainer: null, thumbnailsContainer: null };
-createCacheKey = { width: 40, backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_600 };
+createCacheKey = { width: 40, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: "r" };
 createCacheKey[3] = { marginLeft: 6 };
 createCacheKey[4] = { paddingTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let c9 = -1;
 function clamp(arg0, arg1, arg2) {
   return Math.max(Math.min(arg0, arg2), arg1);
@@ -38,7 +37,7 @@ let closure_22 = { code: "function MediaModalOverlayFooterTsx13(){const{animatio
 let closure_23 = { code: "function MediaModalOverlayFooterTsx14(){const{isCollapsed,animationState,NONE}=this.__closure;isCollapsed.set(false);animationState.set(NONE);}" };
 let closure_24 = { code: "function MediaModalOverlayFooterTsx15(){const{overlayEnabled,animationDriver}=this.__closure;return[overlayEnabled.get(),animationDriver.get()];}" };
 let closure_25 = { code: "function MediaModalOverlayFooterTsx16([overlayEnabledValue,animationDriverValue]){const{DISMISSED_HIDE_OVERLAY,overlayEnabled}=this.__closure;if(overlayEnabledValue&&animationDriverValue<DISMISSED_HIDE_OVERLAY){overlayEnabled.set(false);}}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayFooter.tsx");
 
 export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelId) {
   let tmp = first1();
@@ -56,20 +55,20 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   }
   let obj = onFullViewToggled(num[6]);
   const sharedValue = obj.useSharedValue(true);
-  let obj1 = onFullViewToggled(num[6]);
-  const sharedValue1 = obj1.useSharedValue(c9);
+  obj1 = onFullViewToggled(num[6]);
+  const sharedValue1 = obj1.useSharedValue(closure_9);
   const tmp6 = num2(sharedValue.useState(false), 2);
   const first = tmp6[0];
-  let closure_7 = tmp6[1];
+  closure_7 = tmp6[1];
   const tmp8 = num2(sharedValue.useState(0), 2);
   first1 = tmp8[0];
-  c9 = tmp10;
+  closure_9 = tmp10;
   const tmp11 = num2(sharedValue.useState(0), 2);
   const first2 = tmp11[0];
-  let closure_11 = tmp13;
+  closure_11 = tmp13;
   const tmp14 = num2(sharedValue.useState(0), 2);
   const first3 = tmp14[0];
-  let closure_13 = tmp16;
+  closure_13 = tmp16;
   let items = [first3, first2];
   const effect = sharedValue.useEffect(() => {
     let obj = onFullViewToggled(num[7]);
@@ -89,8 +88,8 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     let obj = onFullViewToggled(num[8]);
     obj = { duration: 250, easing: onFullViewToggled(num[9]).STANDARD_EASING };
     const fn = function t() {
-      const result = closure_5.set(outer1_9);
-      const result1 = noop.set(false);
+      const result = closure_5.set(closure_1_9);
+      const result1 = closure_4.set(false);
     };
     obj = { animationState: sharedValue1, NONE: closure_9, isCollapsed: sharedValue };
     fn.__closure = obj;
@@ -105,8 +104,8 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     let obj = onFullViewToggled(num[8]);
     obj = { duration: 250, easing: onFullViewToggled(num[9]).STANDARD_EASING };
     const fn = function t() {
-      const result = closure_5.set(outer1_9);
-      const result1 = noop.set(true);
+      const result = closure_5.set(closure_1_9);
+      const result1 = closure_4.set(true);
     };
     obj = { animationState: sharedValue1, NONE: closure_9, isCollapsed: sharedValue };
     fn.__closure = obj;
@@ -134,10 +133,10 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   const items5 = [tmp11[1]];
   const items6 = [tmp8[1]];
   const callback3 = sharedValue.useCallback((arg0) => {
-    tmp13(arg0 + 17);
+    callback3(arg0 + 17);
   }, items5);
   const callback4 = sharedValue.useCallback((arg0) => {
-    tmp10(arg0 + 17);
+    callback2(arg0 + 17);
   }, items6);
   let obj3 = onFullViewToggled(num[6]);
   function ee() {
@@ -163,8 +162,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   const animatedStyle = obj3.useAnimatedStyle(ee);
   let obj5 = onFullViewToggled(num[6]);
   function te() {
-    const obj = { opacity: null, height: null };
-    obj[0] = onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [1, 0], "clamp");
+    const obj = { opacity: onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [1, 0], "clamp"), height: null };
     const obj2 = onFullViewToggled(num[6]);
     const items = [0, num2];
     obj[1] = onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [1, 0], items, "clamp");
@@ -186,13 +184,12 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       value = sharedValue1.get() === closure_9;
     }
     if (value) {
-      tmp16(height);
+      callback4(height);
     }
   }, items7);
   let obj7 = onFullViewToggled(num[6]);
   function ae() {
-    const obj = { height: null };
-    obj[0] = onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [0, 24], "clamp");
+    const obj = { height: onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [0, 24], "clamp") };
     return obj;
   }
   obj1 = { interpolate: onFullViewToggled(num[6]).interpolate, animationDriver: sharedValue2, COLLAPSED: 0, EXPANDED: 1 };
@@ -203,18 +200,17 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   const tmp30 = overlayEnabled(num[10])();
   const mediaModalFooterBackgroundColorRgba = tmp30.mediaModalFooterBackgroundColorRgba;
   const r = mediaModalFooterBackgroundColorRgba.r;
-  let closure_18 = r;
+  closure_18 = r;
   const g = mediaModalFooterBackgroundColorRgba.g;
-  let closure_19 = g;
+  closure_19 = g;
   const b = mediaModalFooterBackgroundColorRgba.b;
-  let closure_20 = b;
+  closure_20 = b;
   const a = mediaModalFooterBackgroundColorRgba.a;
-  let closure_21 = a;
+  closure_21 = a;
   let obj9 = onFullViewToggled(num[6]);
   function ie() {
-    let obj = { backgroundColor: null, paddingVertical: null, transform: null };
-    const items = [closure_21, 1];
-    obj[0] = "rgba(" + closure_18 + ", " + closure_19 + ", " + closure_20 + ", " + onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], items, "clamp") + ")";
+    let obj = { backgroundColor: "rgba(" + closure_18 + ", " + closure_19 + ", " + closure_20 + ", " + onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], items, "clamp") + ")", paddingVertical: null, transform: null };
+    items = [closure_21, 1];
     const obj2 = onFullViewToggled(num[6]);
     obj[1] = onFullViewToggled(num[6]).interpolate(sharedValue2.get(), [0, 1], [8, 0], "clamp");
     obj = { translateY: null };
@@ -238,7 +234,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     const Gesture = onFullViewToggled(num[11]).Gesture;
     const FlingResult = Gesture.Fling();
     const fn = function t() {
-      outer1_0(outer1_2[6]).runOnJS(closure_17)();
+      closure_1_0(closure_1_2[6]).runOnJS(closure_17)();
     };
     const directionResult = Gesture.Fling().direction(onFullViewToggled(num[11]).Directions.UP);
     fn.__closure = { runOnJS: onFullViewToggled(num[6]).runOnJS, onFullViewToggled: callback2 };
@@ -258,12 +254,12 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     const FlingResult = Gesture.Fling();
     let fn = function t() {
       if (closure_6) {
-        outer1_0(outer1_2[6]).runOnJS(closure_17)();
-        const obj4 = outer1_0(outer1_2[6]);
+        closure_1_0(closure_1_2[6]).runOnJS(closure_17)();
+        const obj4 = closure_1_0(closure_1_2[6]);
       } else {
-        let obj = outer1_0(outer1_2[8]);
+        let obj = closure_1_0(closure_1_2[8]);
         obj = { duration: 350, easing: null };
-        obj[1] = outer1_0(outer1_2[9]).STANDARD_EASING;
+        obj[1] = closure_1_0(closure_1_2[9]).STANDARD_EASING;
         const fn = function t() {
           const result = closure_14.set(0);
         };
@@ -271,7 +267,7 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         obj[0] = closure_14;
         fn.__closure = obj;
         fn.__workletHash = 15839049590506;
-        fn.__initData = outer1_19;
+        fn.__initData = closure_1_19;
         let result = closure_14.set(obj.withTiming(-1, obj, "respect-motion-settings", fn));
       }
     };
@@ -293,8 +289,8 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
       const result = store.set(2);
       if (translationY > 0) {
         const _Math3 = Math;
-        const diff = 1 - translationY / Math.abs(closure_10 - (_slicedToArray + closure_8));
-        if (typeof outer1_10 !== "function") {
+        const diff = 1 - translationY / Math.abs(closure_10 - (closure_3 + closure_8));
+        if (typeof closure_1_10 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Math4 = Math;
@@ -302,12 +298,12 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
         const bound = Math.max(Math.min(diff, 1), 0);
         const result1 = store2.set(bound);
         if (bound < 0.4) {
-          outer1_0(outer1_2[6]).runOnJS(closure_7)(false);
-          const obj = outer1_0(outer1_2[6]);
+          closure_1_0(closure_1_2[6]).runOnJS(closure_7)(false);
+          const obj = closure_1_0(closure_1_2[6]);
         }
       } else {
         const result2 = -translationY / 3;
-        if (typeof outer1_10 !== "function") {
+        if (typeof closure_1_10 !== "function") {
           HermesBuiltin.throwTypeError();
         }
         const _Math = Math;
@@ -323,46 +319,46 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
     let fn2 = function t() {
       let obj = store2;
       if (store2.get() < 0.75) {
-        let obj1 = outer1_0(outer1_2[6]);
+        obj1 = closure_1_0(closure_1_2[6]);
         obj1.runOnJS(closure_7)(false);
-        let result = noop.set(true);
+        let result = closure_4.set(true);
         if (0 === obj.get()) {
-          let obj2 = outer1_0(outer1_2[6]);
-          let result1 = store.set(obj2.withDelay(150, outer1_0(outer1_2[8]).withTiming(outer1_9, { duration: 0 })));
-          const obj4 = outer1_0(outer1_2[8]);
+          let obj2 = closure_1_0(closure_1_2[6]);
+          let result1 = store.set(obj2.withDelay(150, closure_1_0(closure_1_2[8]).withTiming(closure_1_9, { duration: 0 })));
+          const obj4 = closure_1_0(closure_1_2[8]);
         } else {
-          const obj9 = outer1_0(outer1_2[8]);
+          const obj9 = closure_1_0(closure_1_2[8]);
           obj = { duration: 150, easing: null };
-          obj[1] = outer1_0(outer1_2[9]).STANDARD_EASING;
+          obj[1] = closure_1_0(closure_1_2[9]).STANDARD_EASING;
           const fn2 = function a() {
-            const result = store.set(outer1_9);
+            const result = store.set(closure_1_9);
           };
           obj = { animationState: null, NONE: null };
           obj[0] = store;
-          obj[1] = outer1_9;
+          obj[1] = closure_1_9;
           fn2.__closure = obj;
           fn2.__workletHash = 15486611138793;
-          fn2.__initData = outer1_22;
+          fn2.__initData = closure_1_22;
           const result2 = obj.set(obj9.withTiming(0, obj, "respect-motion-settings", fn2));
         }
       } else {
-        outer1_0(outer1_2[6]).runOnJS(closure_7)(true);
-        const obj6 = outer1_0(outer1_2[8]);
+        closure_1_0(closure_1_2[6]).runOnJS(closure_7)(true);
+        const obj6 = closure_1_0(closure_1_2[8]);
         obj1 = { duration: 150, easing: null };
-        obj1[1] = outer1_0(outer1_2[9]).STANDARD_EASING;
+        obj1[1] = closure_1_0(closure_1_2[9]).STANDARD_EASING;
         const fn = function t() {
-          const result = noop.set(false);
-          const result1 = store.set(outer1_9);
+          const result = closure_4.set(false);
+          const result1 = store.set(closure_1_9);
         };
         obj2 = { isCollapsed: null, animationState: null, NONE: null };
-        obj2[0] = noop;
+        obj2[0] = closure_4;
         obj2[1] = store;
-        obj2[2] = outer1_9;
+        obj2[2] = closure_1_9;
         fn.__closure = obj2;
         fn.__workletHash = 8502240261161;
-        fn.__initData = outer1_23;
+        fn.__initData = closure_1_23;
         const result3 = obj.set(obj6.withTiming(1, obj1, "respect-motion-settings", fn));
-        const obj5 = outer1_0(outer1_2[6]);
+        const obj5 = closure_1_0(closure_1_2[6]);
       }
     };
     obj = { animationDriver: sharedValue2, COLLAPSE_DRAWER_ON_RELEASE: 0.75, runOnJS: onFullViewToggled(num[6]).runOnJS, setFull: closure_7, isCollapsed: sharedValue, COLLAPSED: 0, animationState: sharedValue1, withDelay: onFullViewToggled(num[6]).withDelay, withTiming: onFullViewToggled(num[8]).withTiming, NONE: closure_9, STANDARD_EASING: onFullViewToggled(num[9]).STANDARD_EASING, EXPANDED: 1 };
@@ -381,8 +377,6 @@ export const MediaModalOverlayFooter = function MediaModalOverlayFooter(channelI
   oe.__workletHash = 12659996728578;
   oe.__initData = first4;
   function ne(arg0) {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     if (tmp) {
       const result = overlayEnabled.set(false);

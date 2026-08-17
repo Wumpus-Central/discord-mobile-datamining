@@ -1,11 +1,12 @@
 // discord_app/modules/user_identifiers/native/IOSUserIdentifiersManager.tsx
-import set from "set";
-import { NativeModules } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticEvents } from "ME";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
+initializeDefault;
 class IOSUserIdentifiersManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -50,20 +51,20 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
           } else {
             if (obj6.isIOS()) {
               if (tmp15Result.isIOSAppTransactionIdTrackingEnabled("IOSUserIdentifiersManager")) {
-                const currentUser = outer1_5.getCurrentUser();
+                const currentUser = closure_1_5.getCurrentUser();
                 if (null != currentUser) {
                   c1 = 1;
                   v0 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = v0.syncAppTransactionId(currentUser);
                   return obj1;
                 }
               }
               tmp15Result = tmp15(tmp16[6]);
             }
-            obj6 = v0(outer1_2[5]);
+            obj6 = v0(closure_1_2[5]);
             tmp15 = v0;
-            tmp16 = outer1_2;
+            tmp16 = closure_1_2;
           }
         } else if (arg0 === 1) {
           v0 = 3;
@@ -84,22 +85,22 @@ prototype["onPostConnectionOpen"] = function onPostConnectionOpen() {
   })();
 };
 prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
-  let closure_0 = currentUser;
+  closure_0 = currentUser;
   return callback(function*() {
-    let closure_1 = tmp3;
-    let c3 = 1;
+    closure_1 = tmp3;
+    c3 = 1;
     const DCDAppTransactionManager = obj.DCDAppTransactionManager;
     yield DCDAppTransactionManager.getAppTransactionId();
     if (1 === tmp7) {
       c3 = 0;
       closure_1 = closure_2;
-      let obj6 = outer1_1(outer1_2[9]);
+      let obj6 = closure_1_1(closure_1_2[9]);
       const obj2 = { tags: null };
       obj2[0] = { source: "ios_user_identifiers_manager", step: "sync_app_transaction_id" };
       obj6.captureException(closure_1, obj2);
-      outer1_1(outer1_2[8]).track(outer1_6.APP_TRANSACTION_ID_SYNCED, { success: false });
-      let c5 = 3;
-      const obj9 = outer1_1(outer1_2[8]);
+      closure_1_1(closure_1_2[8]).track(closure_1_6.APP_TRANSACTION_ID_SYNCED, { success: false });
+      c5 = 3;
+      const obj9 = closure_1_1(closure_1_2[8]);
     } else if (2 === tmp7) {
       if (arg0 === 1) {
         c5 = 3;
@@ -111,10 +112,10 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
         obj3[0] = arg1;
         return obj3;
       } else {
-        const outer1_0 = arg1.appTransactionId;
-        if (null != outer1_0) {
-          if ("" !== outer1_0) {
-            const appTransactionIds = outer1_0.appTransactionIds;
+        const appTransactionId = arg1.appTransactionId;
+        if (null != appTransactionId) {
+          if ("" !== appTransactionId) {
+            const appTransactionIds = appTransactionId.appTransactionIds;
             let hasItem;
             if (appTransactionIds != null) {
               hasItem = appTransactionIds.includes(c0);
@@ -124,7 +125,7 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
               c5 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             } else {
-              const HTTP = outer1_0(outer1_2[7]).HTTP;
+              const HTTP = appTransactionId(closure_1_2[7]).HTTP;
               const obj4 = { url: "/users/@me/app-transaction-ids", body: null, rejectWithError: true };
               const obj5 = { app_transaction_id: null };
               obj5[0] = c0;
@@ -145,8 +146,8 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
       c5 = 3;
       throw arg1;
     } else if (arg0 !== 2) {
-      obj = outer1_1(outer1_2[8]);
-      obj.track(outer1_6.APP_TRANSACTION_ID_SYNCED, { success: true });
+      obj = closure_1_1(closure_1_2[8]);
+      obj.track(closure_1_6.APP_TRANSACTION_ID_SYNCED, { success: true });
       c3 = 0;
     }
     c3 = 0;
@@ -154,6 +155,6 @@ prototype["syncAppTransactionId"] = function syncAppTransactionId(currentUser) {
   })();
 };
 const iOSUserIdentifiersManager = new IOSUserIdentifiersManager();
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_identifiers/native/IOSUserIdentifiersManager.tsx");
+const result = require("set").fileFinishedImporting("modules/user_identifiers/native/IOSUserIdentifiersManager.tsx");
 
 export default iOSUserIdentifiersManager;

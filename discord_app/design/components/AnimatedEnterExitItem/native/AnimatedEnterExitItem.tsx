@@ -1,14 +1,10 @@
 // discord_app/design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
-import { createElement } from "noop";
+import closure_2 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import { createElement } from "noop" /* 19 */;
 
-let c3;
-let c4;
 const require = arg1;
 function AnimatedRenderItem(shouldAnimate) {
-  let item;
-  let renderItem;
   shouldAnimate = shouldAnimate.shouldAnimate;
   const entering = shouldAnimate.entering;
   const exiting = shouldAnimate.exiting;
@@ -16,7 +12,7 @@ function AnimatedRenderItem(shouldAnimate) {
   const cleanUp = shouldAnimate.cleanUp;
   const useReducedMotion = shouldAnimate.useReducedMotion;
   let sharedValue;
-  let c7;
+  closure_7 = undefined;
   ({ renderItem, item } = shouldAnimate);
   let obj = shouldAnimate(entering[2]);
   let num = 0;
@@ -49,18 +45,18 @@ function AnimatedRenderItem(shouldAnimate) {
           tmp5 = entering;
           if (state === shouldAnimate(entering[3]).TransitionStates.YEETED) {
             if (null != exiting) {
-              tmp9 = c6;
-              tmp6Result = tmp6(c6.get(), (arg0) => {
+              tmp9 = closure_6;
+              tmp6Result = tmp6(closure_6.get(), (arg0) => {
                 if (arg0) {
-                  outer1_0(outer1_1[2]).runOnJS(closure_4)();
-                  const obj = outer1_0(outer1_1[2]);
+                  closure_1_0(closure_1_1[2]).runOnJS(closure_4)();
+                  const obj = closure_1_0(closure_1_1[2]);
                 }
               });
             }
           }
           if (null != entering) {
-            tmp8 = c6;
-            tmp6Result = tmp7(c6.get());
+            tmp8 = closure_6;
+            tmp6Result = tmp7(closure_6.get());
           } else {
             tmp6Result = {};
           }
@@ -74,21 +70,21 @@ function AnimatedRenderItem(shouldAnimate) {
   T.__closure = obj;
   T.__workletHash = 2197269661090;
   T.__initData = sharedValue;
-  c7 = tmp6;
+  closure_7 = tmp6;
   const animatedStyle = tmpResult.useAnimatedStyle(T);
   tmpResult = tmp(tmp2[2]);
   class I {
     constructor() {
       tmp = state === shouldAnimate(entering[3]).TransitionStates.YEETED;
       if (tmp) {
-        tmp2 = c6;
+        tmp2 = closure_6;
         num = 0;
-        tmp = 0 === c6.get();
+        tmp = 0 === closure_6.get();
       }
       if (tmp) {
-        tmp3 = c7;
-        tmp4 = !c7;
-        if (c7) {
+        tmp3 = closure_7;
+        tmp4 = !closure_7;
+        if (closure_7) {
           tmp4 = useReducedMotion;
         }
         tmp = tmp4;
@@ -99,7 +95,7 @@ function AnimatedRenderItem(shouldAnimate) {
   obj = { state, TransitionStates: tmp(tmp2[3]).TransitionStates, visible: sharedValue, hasExiting: tmp6, useReducedMotion };
   I.__closure = obj;
   I.__workletHash = 11984384474891;
-  I.__initData = c7;
+  I.__initData = closure_7;
   const fn = function v(arg0, arg1) {
     let tmp = arg0;
     if (arg0) {
@@ -114,7 +110,7 @@ function AnimatedRenderItem(shouldAnimate) {
   fn.__workletHash = 2105667466259;
   fn.__initData = closure_8;
   const animatedReaction = tmpResult.useAnimatedReaction(I, fn);
-  const obj1 = { runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp };
+  obj1 = { runOnJS: shouldAnimate(entering[2]).runOnJS, cleanUp };
   return cleanUp(state, { children: renderItem(item, animatedStyle) });
 }
 function renderAnimatedItem(key, arg1, state, cleanUp) {
@@ -129,7 +125,7 @@ function renderAnimatedItem(key, arg1, state, cleanUp) {
 let closure_6 = { code: "function AnimatedEnterExitItemTsx1(){const{useReducedMotion,shouldAnimate,state,TransitionStates,exiting,visible,runOnJS,cleanUp,entering}=this.__closure;var _shouldAnimate;if(useReducedMotion)return{};if(((_shouldAnimate=shouldAnimate)===null||_shouldAnimate===void 0?void 0:_shouldAnimate.get())===false)return{};if(state===TransitionStates.YEETED&&exiting!=null){return exiting(visible.get(),function(finished){if(finished){runOnJS(cleanUp)();}});}if(entering!=null){return entering(visible.get());}return{};}" };
 let closure_7 = { code: "function AnimatedEnterExitItemTsx2(){const{state,TransitionStates,visible,hasExiting,useReducedMotion}=this.__closure;return state===TransitionStates.YEETED&&visible.get()===0&&(!hasExiting||useReducedMotion);}" };
 let closure_8 = { code: "function AnimatedEnterExitItemTsx3(hasExited,previous){const{runOnJS,cleanUp}=this.__closure;if(!hasExited||hasExited===previous)return;runOnJS(cleanUp)();}" };
-let result = require("module_4115").fileFinishedImporting("design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx");
+let result = require("set").fileFinishedImporting("design/components/AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx");
 
 export default function AnimatedEnterExitItem(useReducedMotion) {
   useReducedMotion = useReducedMotion.useReducedMotion;

@@ -1,5 +1,7 @@
 // discord_app/modules/video-qoe/integrations/MuxIntegration.tsx
-let result = require("set").fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("modules/video-qoe/integrations/MuxIntegration.tsx");
 const prototype = function MuxIntegration() {
   return Object.create(new.target.prototype);
 }.prototype;

@@ -1,38 +1,30 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftCustomization.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import { PremiumTypes } from "GuildFeatures";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, scrollViewContainer: null, senderHeaderTitle: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingBottom: require("Themes").space.PX_24 };
-let obj1 = { paddingBottom: require("Themes").space.PX_24 };
-createCacheKey[2] = { marginTop: require("Themes").space.PX_24, marginLeft: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_8, fontSize: 14 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: require("Themes").space.PX_24, marginLeft: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_8, fontSize: 14 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomization.tsx");
+createCacheKey[1] = { paddingBottom: ThemesDefault.space.PX_24 };
+let obj1 = { paddingBottom: ThemesDefault.space.PX_24 };
+createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8, fontSize: 14 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { marginTop: ThemesDefault.space.PX_24, marginLeft: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8, fontSize: 14 };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftCustomization.tsx");
 
 export default function PremiumGiftCustomization() {
-  let claimableRewards;
-  let premiumType;
-  let recipientUser;
-  let selectedGiftingPromotionReward;
   let obj = navigation(ref[7]);
   navigation = obj.useNavigation();
-  const tmp4 = createCacheKey();
-  let obj1 = navigation(ref[8]);
+  const tmp4 = callback3();
+  obj1 = navigation(ref[8]);
   const nativeGiftContext = obj1.useNativeGiftContext();
   ({ recipientUser, premiumType, claimableRewards, selectedGiftingPromotionReward } = nativeGiftContext);
   let obj2 = navigation(ref[9]);
@@ -66,7 +58,7 @@ export default function PremiumGiftCustomization() {
   const effect = obj3.useEffect(() => {
     let obj = { title: null };
     const intl = navigation(ref[10]).intl;
-    obj = { nitroTierName: _slicedToArray };
+    obj = { nitroTierName: closure_3 };
     obj[0] = intl.formatToPlainString(navigation(ref[10]).t["RMu0/q"], obj);
     navigation.setOptions(obj);
   }, items1);

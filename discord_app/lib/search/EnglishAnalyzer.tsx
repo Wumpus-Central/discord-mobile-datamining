@@ -1,7 +1,7 @@
 // discord_app/lib/search/EnglishAnalyzer.tsx
-import set from "MAX_MESSAGE_SEARCH_RESULTS_OFFSET";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { snowballStem } from "snowballStemmer.tsx";
+import applyDefault from "apply" /* 12 */;
+import snowballStem from "snowballStem" /* 15934 */;
+import set from "set" /* 2 */;
 
 function stripPossessive(str) {
   return str.replace(/('|\u2019|\uFF07)(s|S)$/, "");
@@ -45,17 +45,17 @@ function shouldHighlight(arg0, set) {
   }
 }
 function highlightAST(content, arg1, arg2) {
-  let closure_0 = arg1;
-  let closure_1 = arg2;
+  closure_0 = arg1;
+  closure_1 = arg2;
   if (Array.isArray(content)) {
     const item = content.forEach((arg0) => {
-      outer1_9(arg0, closure_0, closure_1);
+      closure_1_9(arg0, closure_0, closure_1);
       return arg0;
     });
   } else if ("list" === content.type) {
     const items = content.items;
     const item1 = items.forEach((arg0) => {
-      outer1_9(arg0, closure_0, closure_1);
+      closure_1_9(arg0, closure_0, closure_1);
       return arg0;
     });
   } else {
@@ -65,7 +65,7 @@ function highlightAST(content, arg1, arg2) {
         const parts = content.content.split(/(\W+)/g);
         const item2 = parts.forEach((arg0) => {
           let arr = closure_3;
-          if (outer1_8(arg0, closure_0, closure_1)) {
+          if (closure_1_8(arg0, closure_0, closure_1)) {
             if (arr.length > 0) {
               let obj = { type: "text", content: null };
               obj[1] = closure_3;
@@ -107,9 +107,9 @@ let set = new Set(["a", "an", "and", "are", "as", "at", "be", "but", "by", "for"
 const result = set.fileFinishedImporting("lib/search/EnglishAnalyzer.tsx");
 
 export const analyze = function analyze(str) {
-  const tmp = apply;
-  const mapped = apply(str.split(/\W+/)).map(stripPossessive);
-  const tmpResult = apply(str.split(/\W+/));
+  const tmp = applyDefault;
+  const mapped = applyDefault(str.split(/\W+/)).map(stripPossessive);
+  const tmpResult = applyDefault(str.split(/\W+/));
   const mapped1 = mapped.reject(isBlank).map(lowercase);
   const rejectResult = mapped.reject(isBlank);
   const rejectResult1 = mapped1.reject(isStopWord);
@@ -122,8 +122,8 @@ export const createASTHighlighter = function createASTHighlighter(str) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let importDefault;
-  let set;
+  importDefault = undefined;
+  set = undefined;
   let tmp3 = str.length >= flag(set[2]).SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH;
   if (tmp3) {
     tmp3 = str.length <= tmp(tmp2[2]).SEARCH_PARTIAL_NAME_MATCH_MAX_QUERY_LENGTH;
@@ -137,11 +137,11 @@ export const createASTHighlighter = function createASTHighlighter(str) {
   const rejectResult1 = mapped1.reject(isStopWord);
   set = new Set(mapped1.reject(isStopWord).map(flag(set[1]).snowballStem).value());
   return (arg0) => {
-    let tmp3 = c1;
-    if (c1) {
+    let tmp3 = closure_1;
+    if (closure_1) {
       tmp3 = flag;
     }
-    outer1_9(arg0, set, tmp3);
+    closure_1_9(arg0, set, tmp3);
     return arg0;
   };
 };

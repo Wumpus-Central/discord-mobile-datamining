@@ -1,51 +1,43 @@
 // discord_app/modules/notification_center/native/ForYouSuggestedFriendRow.tsx
-import renderChannelPressableWrapper from "renderChannelPressableWrapper";
-import { View } from "getSystemLocale";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import ME from "ME";
-import jsxProd from "renderChannelWrapper";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { context } from "../../app_analytics/useAnalyticsLocations.tsx";
-import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import contextDefault from "context" /* 7139 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
-({ AnalyticEvents: error, RelationshipTypes: metroImportAll } = ME);
+require = arg1;
+({ AnalyticEvents: error, RelationshipTypes: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((layout) => {
   let obj = getLayoutStyles;
   const layoutStyles = obj.getLayoutStyles(layout);
-  let obj1 = getLayoutStyles;
+  obj1 = getLayoutStyles;
   const sizeStyle = obj1.makeSizeStyle(layoutStyles.icon.wrapper.size);
   obj = { rowActive: null, pressable: null, textContainer: null, nameText: null, avatar: null };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   obj[0] = obj;
   obj[1] = { flex: 1 };
-  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: Themes.space.PX_8 };
+  obj1 = { flexDirection: "column", flexGrow: 2, flexShrink: 2, alignSelf: "center", overflow: "hidden", marginTop: -2, marginRight: ThemesDefault.space.PX_8 };
   obj[2] = obj1;
   let num = 0;
   if (obj6.isAndroid()) {
     num = 2;
   }
   obj[3] = { flexShrink: 1, marginBottom: num };
-  const obj2 = { position: "relative", borderRadius: Themes.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
+  const obj2 = { position: "relative", borderRadius: ThemesDefault.radii.round, justifyContent: "center", alignItems: "center", flexShrink: 0, flexGrow: 0 };
   const merged = Object.assign(sizeStyle);
   obj2.marginRight = layoutStyles.icon.margin.marginRight + 4;
   obj[4] = obj2;
   return obj;
 });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendRow.tsx");
+let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouSuggestedFriendRow.tsx");
 
 export default function ForYouSuggestedFriendRow(suggestedFriend) {
-  let dependencyMap;
-  let importDefault;
-  let panelVariant;
   suggestedFriend = suggestedFriend.suggestedFriend;
   ({ onAddSuggestion: importDefault, onAddSuggestionAnimationFinish: dependencyMap, panelVariant } = suggestedFriend);
   if (panelVariant === undefined) {
@@ -57,8 +49,8 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
   let obj = suggestedFriend(10056);
   const messagesTabLayout = obj.useMessagesTabLayout(panelVariant);
   const tmp4 = callback2(messagesTabLayout);
-  analyticsLocations = context().analyticsLocations;
-  let obj1 = suggestedFriend(10056);
+  analyticsLocations = contextDefault().analyticsLocations;
+  obj1 = suggestedFriend(10056);
   const layoutStyles = obj1.getLayoutStyles(messagesTabLayout);
   let obj2 = suggestedFriend(4751);
   const fontScale = obj2.useFontScale();
@@ -87,8 +79,8 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       }
       tmpResult = tmp(4115);
       sharedValue = tmpResult.useSharedValue(false);
-      const items2 = [markAllUserIdListsStale];
-      stateFromStores = tmp(647).useStateFromStores(items2, () => outer1_6.getRelationshipType(suggestedFriend.user.id) === outer1_8.PENDING_OUTGOING);
+      const items2 = [closure_6];
+      stateFromStores = tmp(647).useStateFromStores(items2, () => closure_1_6.getRelationshipType(suggestedFriend.user.id) === closure_1_8.PENDING_OUTGOING);
       const items3 = [sharedValue, stateFromStores];
       const effect = obj4.useEffect(() => {
         if (!stateFromStores) {
@@ -159,9 +151,9 @@ export default function ForYouSuggestedFriendRow(suggestedFriend) {
       const obj10 = { children: null };
       obj9[2] = str4;
       obj9[3] = function onAddSuggestion(id) {
-        let obj = outer1_1(outer1_2[26]);
+        let obj = closure_1_1(closure_1_2[26]);
         obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: "Notifications Tab" };
-        obj.track(outer1_7.FRIEND_SUGGESTION_ADDED, obj);
+        obj.track(closure_1_7.FRIEND_SUGGESTION_ADDED, obj);
         callback(suggestedFriend);
       };
       obj9[4] = function onFinishAnimation() {

@@ -1,31 +1,29 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx
-import { ScrollView } from "get ActivityIndicator";
-import refreshSourceMapCookie from "refreshSourceMapCookie";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import closure_3 from "refreshSourceMapCookie" /* 706 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
+const ScrollView = get_ActivityIndicator.ScrollView;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, content: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-obj[1] = { padding: require("Themes").space.PX_16 };
+obj[1] = { padding: ThemesDefault.space.PX_16 };
 let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = { padding: require("Themes").space.PX_16 };
-const result = require("jsxProd").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
+const obj1 = { padding: ThemesDefault.space.PX_16 };
+const result = set.fileFinishedImporting("modules/devtools/native/components/screens/DevToolsLoggingFlagsScreen.tsx");
 
 export default function DevToolsLoggingFlagsScreen() {
-  let isLoggingAnalyticsEvents;
-  let isLoggingGatewayEvents;
-  let isTracingRequests;
   const tmp = callback3();
   let obj = initialize;
-  const items = [refreshSourceMapCookie];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: refreshSourceMapCookie.isLoggingGatewayEvents, isLoggingAnalyticsEvents: refreshSourceMapCookie.isLoggingAnalyticsEvents, isTracingRequests: refreshSourceMapCookie.isTracingRequests }));
+  const items = [closure_3];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isLoggingGatewayEvents: closure_3.isLoggingGatewayEvents, isLoggingAnalyticsEvents: closure_3.isLoggingAnalyticsEvents, isTracingRequests: closure_3.isTracingRequests }));
   obj = { style: tmp.container, contentContainerStyle: tmp.content, children: null };
   ({ isLoggingGatewayEvents, isLoggingAnalyticsEvents, isTracingRequests } = stateFromStoresObject);
   obj = { title: "Logging", hasIcons: false, children: null };

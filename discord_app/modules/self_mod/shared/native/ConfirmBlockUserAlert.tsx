@@ -1,28 +1,25 @@
 // discord_app/modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx
-import noop from "noop";
-import { View } from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { LOCATION_CONTEXT_MOBILE } from "LOCATION_CONTEXT_MOBILE" /* 10569 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { header: null, text: null, buttonsContainer: null };
-createCacheKey = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
+createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: require("Themes").colors.TEXT_SUBTLE, marginTop: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_4, textAlign: "center" };
-let obj1 = { color: require("Themes").colors.TEXT_SUBTLE, marginTop: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_4, textAlign: "center" };
-createCacheKey[2] = { gap: require("Themes").space.PX_12, marginBottom: -require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { gap: require("Themes").space.PX_12, marginBottom: -require("Themes").space.PX_8 };
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
+createCacheKey[1] = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_4, textAlign: "center" };
+let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_4, textAlign: "center" };
+createCacheKey[2] = { gap: ThemesDefault.space.PX_12, marginBottom: -ThemesDefault.space.PX_8 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { gap: ThemesDefault.space.PX_12, marginBottom: -ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/self_mod/shared/native/ConfirmBlockUserAlert.tsx");
 
 export default function ConfirmBlockUserAlert(userId) {
-  let description;
-  let onCancel;
   userId = userId.userId;
   const channelId = userId.channelId;
   ({ description, onCancel } = userId);
@@ -32,12 +29,12 @@ export default function ConfirmBlockUserAlert(userId) {
   let str = userId.blockButtonVariant;
   let lastChannelMessage;
   let callback;
-  let closure_8;
-  const tmp = createCacheKey();
+  closure_8 = undefined;
+  const tmp = callback();
   let obj = userId(onCancel[7]);
   const items = [onBlock];
   const stateFromStores = obj.useStateFromStores(items, () => onBlock.getUser(userId));
-  let obj1 = userId(onCancel[8]);
+  obj1 = userId(onCancel[8]);
   lastChannelMessage = obj1.useLastChannelMessage(channelId);
   let obj2 = channelId(onCancel[9]);
   const name = obj2.useName(stateFromStores);
@@ -46,7 +43,7 @@ export default function ConfirmBlockUserAlert(userId) {
     let obj = channelId(onCancel[10]);
     obj = { location: lastChannelMessage };
     obj.blockUser(userId, obj).then(() => {
-      const result = outer1_1(outer1_2[11]).showBlockSuccessToast(closure_0, closure_1);
+      const result = closure_1_1(closure_1_2[11]).showBlockSuccessToast(closure_0, closure_1);
     });
   }, items1);
   const items2 = [onClose, onCancel];

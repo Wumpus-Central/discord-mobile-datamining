@@ -1,8 +1,9 @@
 // discord_app/modules/parent_tools/FamilyCenterModels.tsx
-import "toJS";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
+import toJSDefault from "toJS" /* 1931 */;
+import create from "create" /* 1940 */;
 
-const require = arg1;
+require = arg1;
+toJSDefault;
 const frozen = Object.freeze({ 0: require("create").DayOfWeek.SUNDAY, 1: require("create").DayOfWeek.MONDAY, 2: require("create").DayOfWeek.TUESDAY, 3: require("create").DayOfWeek.WEDNESDAY, 4: require("create").DayOfWeek.THURSDAY, 5: require("create").DayOfWeek.FRIDAY, 6: require("create").DayOfWeek.SATURDAY });
 let closure_3 = Object.freeze({ [arg1(1940).DayOfWeek.DAY_OF_WEEK_UNSPECIFIED]: 0, [arg1(1940).DayOfWeek.MONDAY]: 1, [arg1(1940).DayOfWeek.TUESDAY]: 2, [arg1(1940).DayOfWeek.WEDNESDAY]: 3, [arg1(1940).DayOfWeek.THURSDAY]: 4, [arg1(1940).DayOfWeek.FRIDAY]: 5, [arg1(1940).DayOfWeek.SATURDAY]: 6, [arg1(1940).DayOfWeek.SUNDAY]: 0 });
 let ScheduleRuleRecord;
@@ -16,11 +17,6 @@ class ScheduleRuleRecord extends tmp2 {
 }
 const prototype = ScheduleRuleRecord.prototype;
 ScheduleRuleRecord["fromServer"] = function fromServer(end_time) {
-  let days;
-  let enabled;
-  let label;
-  let rule_id;
-  let start_time;
   ({ rule_id, label, start_time } = end_time);
   end_time = end_time.end_time;
   ({ days, enabled } = end_time);
@@ -152,8 +148,8 @@ prototype2["isInRestrictedHours"] = function isInRestrictedHours(date) {
     const _Date = Date;
     date = new Date();
   }
-  let closure_0;
-  let closure_1;
+  closure_0 = undefined;
+  closure_1 = undefined;
   if (0 === this.rules.length) {
     return false;
   } else {
@@ -238,8 +234,8 @@ prototype2["getNextEndTime"] = function getNextEndTime() {
     const _Date = Date;
     date = new Date();
   }
-  let closure_0;
-  let c1;
+  closure_0 = undefined;
+  c1 = undefined;
   if (0 === this.rules.length) {
     return null;
   } else {

@@ -1,10 +1,12 @@
 // discord_app/records/TwitchApplicationRecord.tsx
-import "createExecutable";
-import { getPlatformUserUrl } from "../lib/Platforms.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createExecutableDefault from "createExecutable" /* 4479 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
 
-const require = arg1;
+require = arg1;
+createExecutableDefault;
 let c3 = "twitch:";
-const result = require("getPlatformUserUrl").fileFinishedImporting("records/TwitchApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/TwitchApplicationRecord.tsx");
 class TwitchApplicationRecord extends tmp2 {
   constructor(arg0) {
     tmp3 = new TwitchApplicationRecord(global, tmp2, tmp, new.target);
@@ -16,7 +18,7 @@ class TwitchApplicationRecord extends tmp2 {
   }
 }
 TwitchApplicationRecord.prototype["getIconURL"] = function getIconURL() {
-  return getPlatformUserUrl.get("twitch").icon.lightPNG;
+  return getPlatformUserUrlDefault.get("twitch").icon.lightPNG;
 };
 
 export default TwitchApplicationRecord;

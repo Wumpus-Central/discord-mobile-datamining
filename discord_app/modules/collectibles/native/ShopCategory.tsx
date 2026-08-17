@@ -1,13 +1,12 @@
 // discord_app/modules/collectibles/native/ShopCategory.tsx
-import PressableBase from "PressableBase";
-import { View } from "openCollectiblesShop";
-import { CollectiblesMobileShopScreen as closure_5 } from "items";
-import { UserSettingsSections } from "ME";
-import jsxProd from "preload";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 678 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 function Spacing() {
   return callback(View, { style: { width: 12 } });
@@ -15,33 +14,29 @@ function Spacing() {
 function HeaderAndFooterSpacing() {
   return callback(View, { style: { width: 16 } });
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 const sum = 100 + require("CollectiblesShopCardInternalV2").COLLECTIBLES_SHOP_CARD_HEIGHT;
 createCacheKey = { categoryContainer: null, categoryHeader: null, categoryHeaderBorderDark: null, categoryHeaderBorderLight: null, imageBackground: null, viewAllIcon: null };
-createCacheKey = { marginTop: require("Themes").space.PX_16, marginBottom: 24, height: sum };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, marginBottom: 24, height: sum };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: require("Themes").radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
-let obj1 = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: require("Themes").radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
-createCacheKey[2] = { borderColor: require("Themes").unsafe_rawColors.PRIMARY_660 };
-let obj2 = { borderColor: require("Themes").unsafe_rawColors.PRIMARY_660 };
-createCacheKey[3] = { borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
+let obj1 = { display: "flex", flexDirection: "row", justifyContent: "flex-end", alignItems: "center", marginBottom: 16, marginHorizontal: 16, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, height: 84, padding: 20 };
+createCacheKey[2] = { borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_660 };
+let obj2 = { borderColor: ThemesDefault.unsafe_rawColors.PRIMARY_660 };
+createCacheKey[3] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[4] = { top: 0, bottom: 0, left: 0, right: 0, position: "absolute" };
-let obj3 = { borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[5] = { backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: require("Themes").radii.round };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: require("Themes").radii.round };
-let result = require("items").fileFinishedImporting("modules/collectibles/native/ShopCategory.tsx");
+let obj3 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[5] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: ThemesDefault.radii.round };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, padding: 6, borderRadius: ThemesDefault.radii.round };
+let result = require("set").fileFinishedImporting("modules/collectibles/native/ShopCategory.tsx");
 
 export const CATEGORY_CONTAINER_HEIGHT = sum;
 export const CATEGORY_CONTAINER_BOTTOM_MARGIN = 24;
 export const ShopCategory = function ShopCategory(category) {
-  let index;
-  let initialProductSkuId;
-  let isDarkTheme;
-  let productIndex;
   category = category.category;
   let analyticsLocations;
-  let dependencyMap;
+  dependencyMap = undefined;
   let unpublishedAt;
   let filteredAndSortedProducts;
   initialProductSkuId = undefined;
@@ -50,11 +45,11 @@ export const ShopCategory = function ShopCategory(category) {
   let collectiblesAnalyticsContext;
   ({ index, isDarkTheme } = category);
   analyticsLocations = analyticsLocations(7139)().analyticsLocations;
-  const tmp3 = createCacheKey();
+  const tmp3 = callback2();
   let obj = category(1500);
   dependencyMap = obj.useNavigation();
   unpublishedAt = category.unpublishedAt;
-  let obj1 = category(14428);
+  obj1 = category(14428);
   obj = { products: category.products, bypassAndroidUnsyncedFilter: category.isOrbsExclusive };
   filteredAndSortedProducts = obj1.useFilteredAndSortedProducts(obj);
   const mobileBannerUrl = category.mobileBannerUrl;
@@ -101,8 +96,6 @@ export const ShopCategory = function ShopCategory(category) {
   }, items1);
   const items2 = [unpublishedAt];
   const callback = obj4.useCallback((arg0) => {
-    let index;
-    let item;
     ({ item, index } = arg0);
     let obj = { newValue: { tilePosition: index }, children: null };
     obj = { product: item, unpublishedAt };

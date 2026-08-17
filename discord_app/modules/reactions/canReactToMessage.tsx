@@ -1,23 +1,15 @@
 // discord_app/modules/reactions/canReactToMessage.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import recomputeGuild from "recomputeGuild";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import hasFlag from "hasFlag" /* 1403 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "recomputeGuild" /* 4977 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function canReactToMessageInternal(state, getGuildId, items) {
-  let obj;
-  let obj2;
-  let obj3;
-  let obj4;
   [obj, obj2, obj3, obj4] = items;
   const guildId = getGuildId.getGuildId();
   const currentUser = obj.getCurrentUser();
@@ -58,19 +50,19 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   return canResult;
 }
-({ Permissions: closure_6, MessageStates: error, MessageTypes: metroImportAll, MessageFlags: c9 } = ME);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
+({ Permissions: closure_6, MessageStates: error, MessageTypes: closure_8, MessageFlags: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/reactions/canReactToMessage.tsx");
 
 export const canReactToMessage = function canReactToMessage(message, channel) {
-  const items = [mergeGuildAvatar, trackCommunicationDisabled, recomputeGuild, getUncachedChannelPermissions];
+  const items = [closure_5, closure_2, closure_3, closure_4];
   return canReactToMessageInternal(message, channel, items);
 };
 export const useCanReactToMessage = function useCanReactToMessage(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  let items = [mergeGuildAvatar, trackCommunicationDisabled, recomputeGuild, getUncachedChannelPermissions];
+  dependencyMap = arg1;
+  let items = [closure_5, closure_2, closure_3, closure_4];
   return _initialize.useStateFromStores(items, () => {
-    const items = [outer1_5, outer1_2, outer1_3, outer1_4];
-    return outer1_10(closure_0, closure_1, items);
+    const items = [closure_1_5, closure_1_2, closure_1_3, closure_1_4];
+    return closure_1_10(closure_0, closure_1, items);
   });
 };

@@ -1,22 +1,16 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { FractionalStar } from "AppStoreOverlayStarRating.tsx";
-import { formatAppStoreRatingValue } from "AppStoreOverlayStatCardUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import formatAppStoreRatingValue from "formatAppStoreRatingValue" /* 10698 */;
+import FractionalStarDefault from "FractionalStar" /* 10699 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function AppStoreOverlayStatCardItem(stat) {
-  let ratingCount;
-  let secondaryContent;
-  let secondaryText;
   stat = stat.stat;
   const type = stat.type;
   if ("rating" === type) {
@@ -46,9 +40,9 @@ function AppStoreOverlayStatCardItem(stat) {
     obj[3] = num2;
     obj[0] = intl.formatToPlainString(getSystemLocale.t["/0p2sz"], obj);
     obj[1] = result;
-    const obj1 = { fillAmounts: null };
+    obj1 = { fillAmounts: null };
     obj1[0] = appStoreStarFillAmounts;
-    obj[2] = callback(FractionalStar, obj1);
+    obj[2] = callback(FractionalStarDefault, obj1);
     obj[3] = result1;
     let tmp6 = obj;
   } else if ("age" === type) {
@@ -74,7 +68,7 @@ function AppStoreOverlayStatCardItem(stat) {
     const obj11 = formatAppStoreRatingValue;
   }
   ({ secondaryText, secondaryContent, ratingCount } = tmp6);
-  const obj3 = { style: createCacheKey().statCard, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp6.accessibilityLabel, children: null };
+  const obj3 = { style: callback2().statCard, accessible: true, accessibilityRole: "text", accessibilityLabel: tmp6.accessibilityLabel, children: null };
   const items = [stat.label, " ", ];
   let str9 = "";
   if (null != ratingCount) {
@@ -96,17 +90,18 @@ function AppStoreOverlayStatCardItem(stat) {
   obj3[4] = items1;
   return closure_6(closure_4, obj3);
 }
+noopAll;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { carousel: null, carouselContent: null, statCard: null };
-createCacheKey = { marginHorizontal: -require("Themes").space.PX_16 };
+createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: require("Themes").space.PX_16, paddingLeft: require("Themes").space.PX_16, paddingRight: require("Themes").space.PX_16 };
-let obj1 = { gap: require("Themes").space.PX_16, paddingLeft: require("Themes").space.PX_16, paddingRight: require("Themes").space.PX_16 };
-createCacheKey[2] = { width: 130, height: 87, borderRadius: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { width: 130, height: 87, borderRadius: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_8 };
-let result = require("jsxProd").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
+createCacheKey[1] = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
+let obj1 = { gap: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { width: 130, height: 87, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { width: 130, height: 87, borderRadius: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayStatsCarousel.tsx");
 
 export default function AppStoreOverlayStatsCarousel(stats) {
   stats = stats.stats;

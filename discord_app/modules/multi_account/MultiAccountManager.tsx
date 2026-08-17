@@ -1,11 +1,12 @@
 // discord_app/modules/multi_account/MultiAccountManager.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { noop } from "../gateway/GatewaySocket.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 5038 */;
+import noop from "noop" /* 13188 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "initialize" /* 13268 */;
 
-let require = arg1;
+require = arg1;
+initializeDefault;
 class MultiAccountManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,9 +20,9 @@ class MultiAccountManager extends tmp2 {
           }
     };
     applyArgumentsResult.handleConnectionOpen = function handleConnectionOpen() {
-      let switchResult = outer1_4.getSwitchResult();
+      let switchResult = closure_1_4.getSwitchResult();
       if (null != switchResult) {
-        const currentUser = outer1_3.getCurrentUser();
+        const currentUser = closure_1_3.getCurrentUser();
         if (null != currentUser) {
           let obj = closure_0;
           if (switchResult.success) {
@@ -31,7 +32,7 @@ class MultiAccountManager extends tmp2 {
             obj.onSwitchError(currentUser);
             obj2 = obj;
           }
-          obj = applyArgumentsResult(outer1_2[4]);
+          obj = applyArgumentsResult(closure_1_2[4]);
           const result = obj.setAccountSwitchUserId(null);
           obj2.onSwitchComplete();
         }
@@ -42,11 +43,11 @@ class MultiAccountManager extends tmp2 {
 }
 const prototype = MultiAccountManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcher.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  const subscription = dispatcherDefault.subscribe("CONNECTION_OPEN", this.handleConnectionOpen);
   this.handleConnectionOpen();
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcher.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
+  dispatcherDefault.unsubscribe("CONNECTION_OPEN", this.handleConnectionOpen);
 };
 prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
   if (isSwitchingAccount.isSwitchingAccount) {
@@ -57,6 +58,6 @@ prototype["handleLogout"] = function handleLogout(isSwitchingAccount) {
 prototype["handleMultiAccountSwitchStart"] = function handleMultiAccountSwitchStart(targetUserId) {
   const result = noop.setAccountSwitchUserId(targetUserId.targetUserId);
 };
-let result = require("initialize").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
+let result = require("set").fileFinishedImporting("modules/multi_account/MultiAccountManager.tsx");
 
 export default MultiAccountManager;

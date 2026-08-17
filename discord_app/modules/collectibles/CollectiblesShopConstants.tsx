@@ -1,21 +1,24 @@
 // discord_app/modules/collectibles/CollectiblesShopConstants.tsx
-import set from "CollectibleSearchSortType";
-import { set } from "../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import set2 from "set" /* 679 */;
+import CollectibleSearchItemType from "CollectibleSearchItemType" /* 680 */;
+import CollectibleSearchSortType from "CollectibleSearchSortType" /* 681 */;
+import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 682 */;
+import set from "set" /* 2 */;
 
 let obj = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", LAYOUT: "layout", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };
 const items = [, , , , ];
 ({ AVATAR_DECORATIONS: arr[0], PROFILE_EFFECTS: arr[1], NAMEPLATES: arr[2], PROFILE_FRAMES: arr[3], BUNDLES: arr[4] } = obj);
-obj = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: require("set").FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY, FRACTIONAL_PREMIUM_1_DAY: require("set").FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY };
+obj = { ORB_PROFILE_BADGE: "1342211853484429445", FRACTIONAL_PREMIUM: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_3_DAY, FRACTIONAL_PREMIUM_1_DAY: set2.FractionalPremiumSKUs.PREMIUM_TIER_2_1_DAY };
 let set = new Set(Object.values(obj));
-const items1 = [require("CollectibleSearchItemType").CollectibleSearchItemType.AVATAR_DECORATION, require("CollectibleSearchItemType").CollectibleSearchItemType.NAMEPLATE, require("CollectibleSearchItemType").CollectibleSearchItemType.PROFILE_EFFECT, require("CollectibleSearchItemType").CollectibleSearchItemType.PROFILE_FRAME, require("CollectibleSearchItemType").CollectibleSearchItemType.BUNDLE];
-obj = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.RELEVANCE, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.DESC };
-const items2 = [obj, { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.RECENCY, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.DESC }, , , ];
-const obj1 = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.RECENCY, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.DESC };
-items2[2] = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.PRICE, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.ASC };
-const obj2 = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.PRICE, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.ASC };
-items2[3] = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.PRICE, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.DESC };
-const obj3 = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.PRICE, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.DESC };
-items2[4] = { sortType: require("CollectibleSearchSortType").CollectibleSearchSortType.POPULARITY, sortDirection: require("CollectibleSearchSortDirection").CollectibleSearchSortDirection.DESC };
+const items1 = [CollectibleSearchItemType.CollectibleSearchItemType.AVATAR_DECORATION, CollectibleSearchItemType.CollectibleSearchItemType.NAMEPLATE, CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_EFFECT, CollectibleSearchItemType.CollectibleSearchItemType.PROFILE_FRAME, CollectibleSearchItemType.CollectibleSearchItemType.BUNDLE];
+obj = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RELEVANCE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
+const items2 = [obj, { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC }, , , ];
+const obj1 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.RECENCY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
+items2[2] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC };
+const obj2 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.ASC };
+items2[3] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
+const obj3 = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.PRICE, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
+items2[4] = { sortType: CollectibleSearchSortType.CollectibleSearchSortType.POPULARITY, sortDirection: CollectibleSearchSortDirection.CollectibleSearchSortDirection.DESC };
 const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopConstants.tsx");
 const items3 = [{ categorySkuId: "1440063059895779408", rewardSkuId: "1440063059862487193" }];
 
@@ -58,7 +61,7 @@ export const SHOP_ALL_PAGE_SIZE = 5;
 export const ShopPurchaseType = { FIAT: 0, [0]: "FIAT", ORB: 1, [1]: "ORB", PREMIUM_PURCHASE: 2, [2]: "PREMIUM_PURCHASE", PROMOTIONAL: 3, [3]: "PROMOTIONAL", TENURE_REWARD: 4, [4]: "TENURE_REWARD", GIFT: 5, [5]: "GIFT" };
 export const EXTERNAL_PRODUCT_SKU_IDS = obj;
 export const isFractionalPremiumSku = function isFractionalPremiumSku(arg0) {
-  const ALL = set.FractionalPremiumSKUsSets.ALL;
+  const ALL = set2.FractionalPremiumSKUsSets.ALL;
   return ALL.has(arg0);
 };
 export const isExternalProduct = function isExternalProduct(arg0) {

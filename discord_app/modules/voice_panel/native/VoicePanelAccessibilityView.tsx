@@ -1,16 +1,14 @@
 // discord_app/modules/voice_panel/native/VoicePanelAccessibilityView.tsx
-import { VoicePanelPIPModes } from "VoicePanelPIPModes";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { context } from "pip/VoicePanelPIPStateContext.tsx";
+import context from "context" /* 16311 */;
+import { VoicePanelPIPModes } from "VoicePanelPIPModes" /* 16307 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-let closure_4 = require("noop").memo(require("AccessibilityView").AccessibilityViewAnimated);
-const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
+require = arg1;
+let closure_4 = importAllResult.memo(require("AccessibilityView").AccessibilityViewAnimated);
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelAccessibilityView.tsx");
 
 export default function VoicePanelAccessibilityView(pointerEvents) {
-  let nativeID;
-  let onAccessibilityEscape;
   let str = pointerEvents.pointerEvents;
   if (str === undefined) {
     str = "box-none";

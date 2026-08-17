@@ -1,23 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx
-import { View } from "get ActivityIndicator";
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
-import { UnreadSetting } from "ReadStateTypes";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { getFontScale } from "../../../../screen/native/useFontScale.tsx";
-import { DEFAULT_BADGE_SIZE } from "../Badge.tsx";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
+import getFontScale from "getFontScale" /* 4751 */;
+import DEFAULT_BADGE_SIZEDefault from "DEFAULT_BADGE_SIZE" /* 8498 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_7 = createCacheKey.createStyles({ unreadBadge: { flexGrow: 0, flexShrink: 0, position: "absolute" }, unreadBadgePanel: { marginLeft: -16 } });
-const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant) {
-  let isThread;
-  let launchpad;
-  let layout;
-  let muted;
-  let resolvedUnreadSetting;
-  let unread;
+const memoResult = importAllResult.memo(function ChannelUnreadBadge(panelVariant) {
   let flag = panelVariant.panelVariant;
   ({ unread, resolvedUnreadSetting, muted, isThread, layout, launchpad } = panelVariant);
   if (flag === undefined) {
@@ -51,16 +45,16 @@ const memoResult = require("noop").memo(function ChannelUnreadBadge(panelVariant
     } else {
       num2 = 1;
     }
-    const obj1 = { opacity: null };
+    obj1 = { opacity: null };
     obj1[0] = num2;
     const items1 = [obj1];
     obj[2] = items1;
-    obj[1] = jsx(DEFAULT_BADGE_SIZE, { classic: null, size: null, badgeStyle: null });
+    obj[1] = jsx(DEFAULT_BADGE_SIZEDefault, { classic: null, size: null, badgeStyle: null });
     tmp8Result = tmp8(tmp9, obj);
-    const tmp12 = DEFAULT_BADGE_SIZE;
+    const tmp12 = DEFAULT_BADGE_SIZEDefault;
   }
   return tmp8Result;
 });
-const result = require("hairlineWidth").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelUnreadBadge.tsx");
 
 export default memoResult;

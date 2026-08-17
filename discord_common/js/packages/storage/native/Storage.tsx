@@ -1,11 +1,10 @@
 // discord_common/js/packages/storage/native/Storage.tsx
-import closure_2 from "set";
-import get_ActivityIndicator from "get ActivityIndicator";
-import enforcing from "enforcing";
-import set from "enforcing";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_3 from "enforcing" /* 597 */;
+import set from "set" /* 2 */;
 
-let NativeModules;
-let Platform;
+let set = importDefault;
 function parseValue(arg0) {
   let parsed = arg0;
   if (null != arg0) {
@@ -22,7 +21,7 @@ const DCDStrongboxManager = NativeModules.DCDStrongboxManager;
 class ProxyAsyncStorage {
   constructor() {
     obj = Object.create(new.target.prototype);
-    ProxyAsyncStorage = obj;
+    closure_0 = obj;
     promise = new Promise((parseResolve) => {
       obj.parseResolve = parseResolve;
     });
@@ -47,7 +46,7 @@ prototype["refresh"] = function refresh() {
     new Set();
   }
   self.secureKeys = new Set();
-  const items1 = [enforcing.refresh(items), ];
+  const items1 = [closure_3.refresh(items), ];
   let refreshResult;
   if (DCDStrongboxManager != null) {
     const items2 = [];
@@ -58,10 +57,8 @@ prototype["refresh"] = function refresh() {
   obj = DCDStrongboxManager;
   const set1 = new Set();
   return Promise.all(items1).then((arg0) => {
-    let tmp2;
-    let tmp3;
     [tmp2, tmp3] = arg0;
-    self(outer1_1[3]).mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
+    self(closure_1_1[3]).mark("\u{1F4BE}", "Storage.refresh() Promise Resolved");
     let num = 0;
     let num2 = 0;
     const keys = Object.keys();
@@ -76,8 +73,8 @@ prototype["refresh"] = function refresh() {
           continue;
         } else {
           let tmp8 = self;
-          let tmp9 = outer1_1;
-          let obj2 = self(outer1_1[3]);
+          let tmp9 = closure_1_1;
+          let obj2 = self(closure_1_1[3]);
           let addDetailResult = obj2.addDetail(tmp7, length);
           num = sum;
           continue;
@@ -85,16 +82,14 @@ prototype["refresh"] = function refresh() {
         continue;
       }
     }
-    const obj = self(outer1_1[3]);
-    self(outer1_1[3]).addDetail("TotalStorageSize", num2);
+    const obj = self(closure_1_1[3]);
+    self(closure_1_1[3]).addDetail("TotalStorageSize", num2);
     self.hasLoaded = true;
     const items = [tmp2, tmp3];
     return items;
   });
 };
 prototype["parse"] = function parse(arg0) {
-  let tmp;
-  let tmp2;
   let self = this;
   self = this;
   [tmp, tmp2] = arg0;
@@ -106,10 +101,10 @@ prototype["parse"] = function parse(arg0) {
     const secureKeys = _self.secureKeys;
     if (secureKeys.has(arg1)) {
       _self = arg1;
-      const result = outer1_4.setItem(arg1, rawData);
+      const result = closure_1_4.setItem(arg1, rawData);
       result.then((arg0) => {
         if (arg0) {
-          outer1_3.removeItem(closure_0);
+          closure_1_3.removeItem(closure_0);
         }
       });
     }
@@ -133,8 +128,8 @@ prototype["get"] = function get(key10009) {
     return arg1;
   }
 };
-prototype["getAfterRefresh"] = function getAfterRefresh(outer1_13) {
-  let closure_0 = outer1_13;
+prototype["getAfterRefresh"] = function getAfterRefresh(closure_1_13) {
+  closure_0 = closure_1_13;
   const self = this;
   return callback(function*() {
     yield parsePromise.then(() => c1.get(c0));
@@ -143,9 +138,9 @@ prototype["getAfterRefresh"] = function getAfterRefresh(outer1_13) {
 };
 prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
   const self = this;
-  let closure_1 = ContactSyncDMListCTADismissed;
-  let closure_2 = arg1;
-  let closure_0 = arg2;
+  closure_1 = ContactSyncDMListCTADismissed;
+  closure_2 = arg1;
+  closure_0 = arg2;
   const secureKeys = this.secureKeys;
   if (secureKeys.has(ContactSyncDMListCTADismissed)) {
     let value = DCDStrongboxManager.getItem(ContactSyncDMListCTADismissed);
@@ -153,7 +148,7 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
       if (null != arg0) {
         const _Date = Date;
         const timestamp = Date.now();
-        const tmp7 = outer1_5(arg0);
+        const tmp7 = closure_1_5(arg0);
         const obj = { parsed: true, value: null };
         obj[1] = tmp7;
         self.storage[tmp] = obj;
@@ -173,7 +168,7 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
       if (null != arg0) {
         const _Date = Date;
         const timestamp = Date.now();
-        const tmp7 = outer1_5(arg0);
+        const tmp7 = closure_1_5(arg0);
         const obj = { parsed: true, value: null };
         obj[1] = tmp7;
         self.storage[tmp] = obj;
@@ -190,8 +185,8 @@ prototype["asyncGet"] = function asyncGet(ContactSyncDMListCTADismissed, arg1) {
   }
 };
 prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const self = this;
   return self(function*() {
     if (item === 2) {
@@ -220,16 +215,16 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
-            let closure_0 = tmp5;
+            closure_1 = tmp2;
+            closure_0 = tmp5;
             closure_0 = undefined;
-            if (null != outer1_1) {
-              outer1_0(outer1_1[3]).mark("\u{1F4BE}", "Get: " + outer1_1);
-              const obj4 = outer1_0(outer1_1[3]);
+            if (null != closure_1_1) {
+              closure_1_0(closure_1_1[3]).mark("\u{1F4BE}", "Get: " + closure_1_1);
+              const obj4 = closure_1_0(closure_1_1[3]);
             }
             secureKeys = secureKeys.secureKeys;
-            if (secureKeys.has(outer1_0)) {
-              let value = outer1_4.getItem(tmp20);
+            if (secureKeys.has(closure_1_0)) {
+              let value = closure_1_4.getItem(tmp20);
             } else {
               value = item.getItem(tmp20);
             }
@@ -241,7 +236,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
           throw arg1;
         } else if (arg0 === 2) {
           item = 3;
-          const obj1 = { value: null, done: true };
+          obj1 = { value: null, done: true };
           obj1[0] = arg1;
           return obj1;
         } else {
@@ -249,7 +244,7 @@ prototype["asyncGetRaw"] = function asyncGetRaw(arg0, arg1) {
           let tmp14 = null;
           if (null != closure_0) {
             if (null != closure_1) {
-              obj = outer1_0(outer1_1[3]);
+              obj = closure_1_0(closure_1_1[3]);
               obj.mark("\u{1F4BE}", "Got: " + closure_1);
             }
             tmp14 = closure_0;
@@ -289,7 +284,7 @@ prototype["set"] = function set(arg0, value) {
 prototype["setRaw"] = function setRaw(str, str2) {
   if (typeof str !== "string") {
     const _Error2 = Error;
-    const error = new Error("Key must be a string");
+    error = new Error("Key must be a string");
     throw error;
   } else if (typeof str2 !== "string") {
     const _Error = Error;
@@ -304,7 +299,7 @@ prototype["setRaw"] = function setRaw(str, str2) {
     if (secureKeys.has(str)) {
       const result = DCDStrongboxManager.setItem(str, str2);
     } else {
-      const result1 = enforcing.setItem(str, str2);
+      const result1 = closure_3.setItem(str, str2);
     }
   }
 };
@@ -314,19 +309,19 @@ prototype["remove"] = function remove(arg0) {
   if (secureKeys.has(arg0)) {
     DCDStrongboxManager.removeItem(arg0);
   } else {
-    enforcing.removeItem(arg0);
+    closure_3.removeItem(arg0);
   }
 };
 prototype["clear"] = function clear() {
   this.storage = {};
-  enforcing.clear();
+  closure_3.clear();
   if (DCDStrongboxManager != null) {
     const items = [];
     HermesBuiltin.arraySpread(this.secureKeys, 0);
     DCDStrongboxManager.clear(items);
   }
 };
-let set = Object.create(ProxyAsyncStorage.prototype);
+set = Object.create(ProxyAsyncStorage.prototype);
 set.parsePromise = new Promise((parseResolve) => {
   obj.parseResolve = parseResolve;
 });

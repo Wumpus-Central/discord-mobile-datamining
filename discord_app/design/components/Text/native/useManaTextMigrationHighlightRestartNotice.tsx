@@ -1,22 +1,22 @@
 // discord_app/design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx
-import noop from "noop";
-import getUserAgnosticState from "getUserAgnosticState";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getUserAgnosticState" /* 4737 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");
+const result = require("set").fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlightRestartNotice.tsx");
 
 export const useManaTextMigrationHighlightRestartNotice = function useManaTextMigrationHighlightRestartNotice() {
-  const items = [getUserAgnosticState];
-  const stateFromStores = _initialize.useStateFromStores(items, () => getUserAgnosticState.get("highlight_mana_text"));
+  const items = [closure_4];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_4.get("highlight_mana_text"));
   _require = React.useRef(true);
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (ref.current) {
       tmp.current = false;
     } else {
-      outer1_1(outer1_2[3]).show({ title: "Mana Text Migration Highlighter", body: "Restart the app (force quit and reopen) to see the change." });
-      const obj = outer1_1(outer1_2[3]);
+      closure_1_1(closure_1_2[3]).show({ title: "Mana Text Migration Highlighter", body: "Restart the app (force quit and reopen) to see the change." });
+      const obj = closure_1_1(closure_1_2[3]);
     }
   }, items1);
 };

@@ -1,10 +1,12 @@
 // discord_app/modules/collectibles/native/hooks/useCardLayout.tsx
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { CollectiblesShopCardInternalV2 } from "../CollectiblesShopCardV2.tsx";
-let result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
+import set from "set" /* 2 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import CollectiblesShopCardInternalV2 from "CollectiblesShopCardInternalV2" /* 9172 */;
+
+let result = set.fileFinishedImporting("modules/collectibles/native/hooks/useCardLayout.tsx");
 
 export const useCardLayout = function useCardLayout() {
-  const width = useWindowDimensions().width;
+  const width = useWindowDimensionsDefault().width;
   let num = 1;
   if (width >= 320) {
     num = 2;

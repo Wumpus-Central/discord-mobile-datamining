@@ -1,7 +1,9 @@
 // discord_app/modules/collectibles/records/FeaturedBlockRecord.tsx
-import { FeaturedCategorySubblockRecord as closure_2 } from "fromServer";
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+import fromServer from "fromServer" /* 5341 */;
 
+let closure_2 = fromServer.FeaturedCategorySubblockRecord;
 let prototype;
 prototype = function FeaturedBlockRecord(subblocks) {
   const obj = Object.create(new.target.prototype);
@@ -36,6 +38,6 @@ prototype["fromServer"] = function fromServer(subblocks) {
   });
   return obj;
 };
-const result = require("FeaturedSubblockType").fileFinishedImporting("modules/collectibles/records/FeaturedBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/FeaturedBlockRecord.tsx");
 
 export const FeaturedBlockRecord = prototype;

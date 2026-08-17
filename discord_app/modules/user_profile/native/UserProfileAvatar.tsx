@@ -1,25 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfileAvatar.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY";
-import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET";
-import jsxProd from "jsxProd";
-import { HeaderAvatar } from "../../profile_customization/native/HeaderAvatar.tsx";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
+import _modDef8409 from "module_8409" /* 8409 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import { AVATAR_SIZE_VARIANT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   let size = backgroundColor.size;
   if (size === undefined) {
     size = AVATAR_SIZE_VARIANT;
   }
   const merged = Object.assign(backgroundColor, Object.create(null));
-  const tmp2 = useSharedStyles();
+  const tmp2 = useSharedStylesDefault();
   let obj = { children: null };
   const items = [, , ];
   ({ avatarBackground: arr[0], avatarPosition: arr[1] } = tmp2);
@@ -29,12 +26,12 @@ const forwardRefResult = importAllResult.forwardRef((backgroundColor, ref) => {
   items2 = [, ];
   ({ avatar: arr3[0], avatarPosition: arr3[1] } = tmp2);
   const merged1 = Object.assign(merged);
-  items1[1] = callback(HeaderAvatar, obj);
+  items1[1] = callback(_modDef8409, obj);
   obj[0] = items1;
   return callback2(closure_8, obj);
 });
 let c10 = forwardRefResult;
-const result = require("USER_PROFILE_TOOLTIP_DELAY").fileFinishedImporting("modules/user_profile/native/UserProfileAvatar.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAvatar.tsx");
 
 export default forwardRefResult;
 export const OpenableUserProfileAvatar = function OpenableUserProfileAvatar(animate) {
@@ -54,7 +51,7 @@ export const OpenableUserProfileAvatar = function OpenableUserProfileAvatar(anim
   const items = [flag, guildId, trackUserProfileAction, user];
   obj = { ref };
   const callback = obj.useCallback(() => {
-    let obj = { action: outer1_5.VIEW_AVATAR };
+    let obj = { action: closure_1_5.VIEW_AVATAR };
     trackUserProfileAction(obj);
     obj = { user, guildId, animate: flag, originViewOrOriginLayout: ref.current };
     user(guildId[8])(obj);

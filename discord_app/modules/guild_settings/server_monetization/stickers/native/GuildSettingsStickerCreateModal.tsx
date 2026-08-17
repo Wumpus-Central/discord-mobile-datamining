@@ -1,18 +1,15 @@
 // discord_app/modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useNavigatorConfirmChangesOnBack").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/stickers/native/GuildSettingsStickerCreateModal.tsx");
 
 export default function GuildSettingsStickerCreateModal(arg0) {
-  let c2;
-  let c3;
-  let require;
-  let stickerId;
   ({ guildId: require, stickerId } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   c3 = undefined;
   ({ onGoBack: c2, ref: c3 } = stickerId(9928)());
   const tmp2 = stickerId(9928)();

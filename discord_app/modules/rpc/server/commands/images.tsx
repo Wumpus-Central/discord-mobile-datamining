@@ -1,16 +1,16 @@
 // discord_app/modules/rpc/server/commands/images.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
 const require = arg1;
 const RPCErrors = ME.RPCErrors;
 let obj = {
   scope: require("RPC_SCOPE_CONFIG").RPC_LOCAL_SCOPE,
   validation(string) {
-    let obj = createRpcJoiSchemaObject(string);
+    let obj = createRpcJoiSchemaObjectDefault(string);
     obj = { type: null, id: null, format: null, size: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
@@ -26,8 +26,6 @@ let obj = {
     return requiredResult.keys(obj);
   },
   handler(args) {
-    let format;
-    let id;
     args = args.args;
     ({ id, format } = args);
     if (format === undefined) {
@@ -44,11 +42,11 @@ let obj = {
         let obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_USER;
         const _HermesInternal = HermesInternal;
-        let tmp14 = prototype;
+        let tmp14 = prototypeDefault;
         tmp14 = new tmp14(obj, "Invalid user id: " + id);
         throw tmp14;
       } else {
-        const obj3 = getAvatarURL;
+        const obj3 = getAvatarURLDefault;
         const userAvatarURL = obj3.getUserAvatarURL(user, false, num, format);
         const _window = window;
         let tmp2 = null != CDN_HOST;
@@ -64,7 +62,7 @@ let obj = {
     if (null == text) {
       obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_COMMAND;
-      const tmp10 = new prototype(obj, "No valid type.");
+      const tmp10 = new prototypeDefault(obj, "No valid type.");
       throw tmp10;
     } else {
       const _fetch = fetch;
@@ -74,6 +72,6 @@ let obj = {
     }
   }
 };
-const result = require("ME").fileFinishedImporting("modules/rpc/server/commands/images.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/commands/images.tsx");
 
 export default { [ME.RPCCommands.GET_IMAGE]: obj };

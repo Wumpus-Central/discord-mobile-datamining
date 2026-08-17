@@ -1,31 +1,30 @@
 // discord_app/modules/collectibles/native/ShopBlockItem.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { shopBlockSpacing: null };
-createCacheKey = { marginTop: require("Themes").space.PX_16 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("updateCategoriesAndProducts").fileFinishedImporting("modules/collectibles/native/ShopBlockItem.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/collectibles/native/ShopBlockItem.tsx");
 
 export default function _default(block) {
-  let preferVCPrice;
-  let screen;
   block = block.block;
   ({ screen, preferVCPrice } = block);
   let stateFromStores;
   let stateFromStores1;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = block(stateFromStores1[6]);
-  const items = [updateCategoriesAndProducts];
-  stateFromStores = obj.useStateFromStores(items, () => updateCategoriesAndProducts.categories);
-  let obj1 = block(stateFromStores1[6]);
-  const items1 = [updateCategoriesAndProducts];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => updateCategoriesAndProducts.products);
+  const items = [closure_5];
+  stateFromStores = obj.useStateFromStores(items, () => closure_5.categories);
+  obj1 = block(stateFromStores1[6]);
+  const items1 = [closure_5];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_5.products);
   const items2 = [block, stateFromStores.size, stateFromStores1.size];
   const memo = React.useMemo(() => {
     if (block.type === block(stateFromStores1[7]).ShopBlockType.HERO) {

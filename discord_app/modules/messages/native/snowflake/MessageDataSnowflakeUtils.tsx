@@ -1,5 +1,7 @@
 // discord_app/modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx
-const result = require("set").fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/snowflake/MessageDataSnowflakeUtils.tsx");
 
 export function castNativeSyntheticEventData(arg0) {
   return arg0;

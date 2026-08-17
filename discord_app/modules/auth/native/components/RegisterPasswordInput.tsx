@@ -1,29 +1,19 @@
 // discord_app/modules/auth/native/components/RegisterPasswordInput.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "EyeIcon";
-import handleSetLocationMetadata from "handleSetLocationMetadata";
-import useRegistrationUIStore from "useRegistrationUIStore";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { FadeIn } from "module_4115";
-import { FadeOut } from "module_4115";
-import { LinearTransition } from "module_4115";
-import { Easing } from "module_4115";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PasswordScore } from "utils/usePasswordScore.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import PasswordScore from "PasswordScore" /* 15236 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_7 from "handleSetLocationMetadata" /* 8581 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4115" /* 4115 */;
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function PasswordStrength(passwordScore) {
-  let isPasswordFocused;
-  let password;
-  let passwordError;
   passwordScore = passwordScore.passwordScore;
   ({ password, isPasswordFocused, passwordError } = passwordScore);
   const tmp = callback3();
@@ -65,14 +55,14 @@ function PasswordStrength(passwordScore) {
   return null;
 }
 let closure_3 = ["password"];
-({ setRegistrationErrors: metroImportAll, useRegistrationUIStore: c9 } = useRegistrationUIStore);
+({ setRegistrationErrors: closure_8, useRegistrationUIStore: c9 } = useRegistrationUIStore);
 ({ jsxs: c10, jsx: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let obj = { weak: null, medium: null, strong: null, passwordStrength: null, inputHint: null };
-obj = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+obj = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 obj[0] = obj;
-createCacheKey = { color: require("Themes").colors.TEXT_FEEDBACK_WARNING };
+createCacheKey = { color: ThemesDefault.colors.TEXT_FEEDBACK_WARNING };
 obj[1] = createCacheKey;
-obj[2] = { color: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
+obj[2] = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj[3] = { marginTop: 4, marginBottom: 4 };
 obj[4] = { width: "100%" };
 let closure_13 = createCacheKey.createStyles(obj);
@@ -80,18 +70,10 @@ let obj3 = { entering: null, exiting: null };
 obj3[0] = require("module_300");
 obj3[1] = require("module_300");
 const obj4 = { layout: null };
-const obj2 = { color: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
+const obj2 = { color: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 obj4[0] = require("module_300");
 const easingResult = LinearTransition.easing(Easing.inOut(require("module_4115").Easing.quad));
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let autoFocus;
-  let onPasswordChange;
-  let onSubmitEditing;
-  let password;
-  let passwordScore;
-  let returnKeyType;
-  let tmp8;
-  let tmp9;
   ({ password, onPasswordChange } = arg0);
   ({ returnKeyType, autoFocus } = arg0);
   let obj = importAllResult;
@@ -110,20 +92,20 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   importDefault = tmp9;
   const tmp10 = stateFromStores(obj.useState(false), 2);
   first = tmp10[0];
-  let closure_3 = tmp12;
+  closure_3 = tmp12;
   const tmp13 = callback((errors) => errors.errors);
-  let _objectWithoutProperties = tmp13;
+  closure_4 = tmp13;
   const tmp14 = tmp3(first[13])("password", tmp13);
   const items = [onPasswordChange, tmp13];
   callback = obj.useCallback((arg0) => {
-    if (null != tmp13.password) {
+    if (null != lib.password) {
       const password = tmp.password;
-      outer1_8(tmp13(tmp, closure_3));
+      closure_1_8(lib(tmp, closure_3));
     }
     onPasswordChange(arg0);
   }, items);
-  const obj3 = onPasswordChange(first[14]);
-  const items1 = [handleSetLocationMetadata];
+  obj3 = onPasswordChange(first[14]);
+  const items1 = [closure_7];
   stateFromStores = obj3.useStateFromStores(items1, () => {
     const FRANCE_AND_FRENCH_REGION = onPasswordChange(first[15]).CountryCodesSets.FRANCE_AND_FRENCH_REGION;
     let num = 8;
@@ -144,11 +126,11 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const items3 = [tmp10[1]];
   const items4 = [tmp10[1]];
   const callback1 = obj.useCallback(() => {
-    tmp12(true);
+    callback(true);
   }, items3);
   const items5 = [tmp9];
   const callback2 = obj.useCallback(() => {
-    tmp12(false);
+    callback(false);
   }, items4);
   callback3 = obj.useCallback(() => {
     tmp9((arg0) => !arg0);
@@ -198,7 +180,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   if (null != memo) {
     tmp24Result = null;
     if (null == tmp14) {
-      const obj1 = {};
+      obj1 = {};
       const merged = Object.assign(obj3);
       const merged1 = Object.assign(obj4);
       obj1.style = tmp.inputHint;
@@ -212,6 +194,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   children[2] = tmp24Result;
   return tmp22(tmp23, { children });
 });
-const result = require("noop").fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterPasswordInput.tsx");
 
 export const RegisterPasswordInput = forwardRefResult;

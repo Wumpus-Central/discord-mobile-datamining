@@ -1,35 +1,33 @@
 // discord_app/components_native/calls/CallPTTButton.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import { InputModes } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import { InputModes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
 const require = arg1;
 let c4 = importAllResult;
 let obj = { BRAND: "brand", BLUR: "blur" };
 obj = { button: { margin: 13 }, container: null, buttonBlur: null, buttonBlurPressed: null, textStyle: null, brandButtonContainer: null };
-let obj1 = { borderRadius: require("Themes").radii.xs, overflow: "hidden", backgroundColor: null };
-obj1[2] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.WHITE, 0.24);
+let obj1 = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: null };
+obj1[2] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.24);
 obj[1] = obj1;
 obj[2] = { backgroundColor: "transparent" };
 createCacheKey = { backgroundColor: null };
-createCacheKey[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BLACK, 0.6);
+createCacheKey[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.6);
 obj[3] = createCacheKey;
 obj[4] = { fontSize: 16 };
-obj[5] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function CallPTTButtonTsx1(){const{runOnJS,setDragging}=this.__closure;runOnJS(setDragging)(false);}" };
 let closure_13 = { code: "function CallPTTButtonTsx2(){const{runOnJS,setDragging,setPressed,setIsSwipeToChatDisabled}=this.__closure;runOnJS(setDragging)(true);runOnJS(setPressed)(false);if(setIsSwipeToChatDisabled!=null){runOnJS(setIsSwipeToChatDisabled)(false);}}" };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo((look) => {
-  let sendCallback;
-  let style;
   let BRAND = look.look;
   if (BRAND === undefined) {
     BRAND = obj.BRAND;
@@ -38,17 +36,17 @@ const memoResult = importAllResult.memo((look) => {
   const stopCallback = look.stopCallback;
   let stateFromStores1;
   let first;
-  let importAllResult;
+  importAllResult = undefined;
   let first1;
-  let c6;
+  closure_6 = undefined;
   let ref;
   let prop;
   let string = callback();
   let onTouchStart = stateFromStores1;
   obj = sendCallback(stateFromStores1[10]);
-  const items = [c6];
-  const stateFromStores = obj.useStateFromStores(items, () => _undefined2.getMode());
-  let obj1 = sendCallback(stateFromStores1[10]);
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => mode.getMode());
+  obj1 = sendCallback(stateFromStores1[10]);
   const items1 = [ref];
   stateFromStores1 = obj1.useStateFromStores(items1, () => ref.getChannelId());
   let obj2 = sendCallback(stateFromStores1[10]);
@@ -61,7 +59,7 @@ const memoResult = importAllResult.memo((look) => {
   importAllResult = tmp8;
   const tmp9 = first(importAllResult.useState(false), 2);
   first1 = tmp9[0];
-  c6 = tmp11;
+  closure_6 = tmp11;
   let isGuildStageVoiceResult;
   if (stateFromStores2 != null) {
     isGuildStageVoiceResult = stateFromStores2.isGuildStageVoice();
@@ -91,7 +89,7 @@ const memoResult = importAllResult.memo((look) => {
       } else if (stopCallback != null) {
         stopCallback();
       }
-      const obj = sendCallback(stateFromStores1[13]);
+      obj = sendCallback(stateFromStores1[13]);
     }
     ref.current = tmp;
   }, items4);
@@ -100,11 +98,11 @@ const memoResult = importAllResult.memo((look) => {
   class F {
     constructor() {
       tmp = sendCallback;
-      tmp2 = f85636;
-      obj = sendCallback(f85636[15]);
-      tmp3 = obj.runOnJS(c6)(true);
-      obj2 = sendCallback(f85636[15]);
-      tmp4 = obj2.runOnJS(c4)(false);
+      tmp2 = closure_2;
+      obj = sendCallback(closure_2[15]);
+      tmp3 = obj.runOnJS(closure_6)(true);
+      obj2 = sendCallback(closure_2[15]);
+      tmp4 = obj2.runOnJS(closure_4)(false);
       if (null != setIsSwipeToChatDisabled) {
         tmpResult = tmp(tmp2[15]);
         tmp6 = tmpResult.runOnJS(tmp5)(false);
@@ -119,8 +117,8 @@ const memoResult = importAllResult.memo((look) => {
   const PanResult = Gesture.Pan();
   class N {
     constructor() {
-      obj = sendCallback(f85636[15]);
-      tmp = obj.runOnJS(c6)(false);
+      obj = sendCallback(closure_2[15]);
+      tmp = obj.runOnJS(closure_6)(false);
       return;
     }
   }
@@ -164,15 +162,15 @@ const memoResult = importAllResult.memo((look) => {
         string = intl.string;
         obj3[2] = string(tmp2(onTouchStart[17]).t.Q8gkVL);
         onTouchStart = function onTouchStart() {
-          _undefined(true);
-          _undefined2(false);
+          callback(true);
+          mode(false);
           if (prop != null) {
             prop(true);
           }
         };
         obj3[3] = onTouchStart;
         obj3[4] = function onTouchEnd(nativeEvent) {
-          _undefined(false);
+          callback(false);
           if (prop != null) {
             prop(false);
           }
@@ -186,7 +184,7 @@ const memoResult = importAllResult.memo((look) => {
   }
   return tmp18;
 });
-const result = require("ensureGuildLoaded").fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
+const result = require("set").fileFinishedImporting("components_native/calls/CallPTTButton.tsx");
 
 export default memoResult;
 export const CallPTTButtonLooks = obj;

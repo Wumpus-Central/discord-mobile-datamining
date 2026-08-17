@@ -1,27 +1,17 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx
-import _slicedToArray from "_slicedToArray";
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
-import get_ActivityIndicator from "useNavigation";
-import initialize from "initialize";
-import { usePriceTiers } from "usePriceTiers";
-import ME from "ME";
-import jsxProd from "PencilIcon";
-import createCacheKey from "createCacheKey";
-import { useGroupListingsFetchContext } from "../../../GroupListingsFetchContext.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useGroupListingsFetchContext from "useGroupListingsFetchContext" /* 14559 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_10 from "initialize" /* 14580 */;
+import { usePriceTiers } from "usePriceTiers" /* 16950 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function TierTemplatesRenderer(groupListingId) {
-  let error;
-  let guildId;
-  let templates;
   ({ templates, error, guildId } = groupListingId);
   groupListingId = groupListingId.groupListingId;
   let tiers;
@@ -42,7 +32,7 @@ function TierTemplatesRenderer(groupListingId) {
       if (0 !== templates.length) {
         obj = { data: null, horizontal: true, contentContainerStyle: null, keyExtractor: null, ItemSeparatorComponent: null, decelerationRate: "fast", snapToInterval: null, renderItem: null };
         obj[0] = templates;
-        const obj1 = { paddingLeft: null, paddingRight: null };
+        obj1 = { paddingLeft: null, paddingRight: null };
         obj1[0] = c16;
         obj1[1] = c16;
         obj[2] = obj1;
@@ -55,7 +45,7 @@ function TierTemplatesRenderer(groupListingId) {
         };
         obj[6] = guildId(17004).CARD_WIDTH + c16;
         obj[7] = function renderItem(item) {
-          return outer1_14(groupListingId(outer1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
+          return closure_1_14(groupListingId(closure_1_3[10]), { template: item.item, priceTiers: tiers, guildId, groupListingId, editGroupId: guildId });
         };
         tmp3 = callback(closure_9, obj);
       }
@@ -64,23 +54,21 @@ function TierTemplatesRenderer(groupListingId) {
   return tmp3;
 }
 function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
-  let error;
-  let loading;
   guildId = guildId.guildId;
   let groupListingId = guildId.groupListingId;
-  let importDefault;
+  importDefault = undefined;
   let stateFromStores;
   groupListingId = undefined;
   let first1;
   let navigation;
   let callback;
   let callback1;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   importDefault = tmp;
   let obj = guildId(groupListingId[11]);
-  let items = [initialize];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_10.getTemplates(guildId));
-  let obj1 = guildId(groupListingId[12]);
+  let items = [closure_10];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getTemplates(guildId));
+  obj1 = guildId(groupListingId[12]);
   const first = obj1.useGroupListingsForGuild(guildId)[0];
   let obj2 = guildId(groupListingId[13]);
   const groupListingsFetchContext = obj2.useGroupListingsFetchContext();
@@ -108,23 +96,23 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
   }, items1);
   const items2 = [guildId];
   callback = navigation.useCallback(() => {
-    let obj = _undefined(groupListingId[18]);
+    let obj = callback(groupListingId[18]);
     obj = { exit_reason: "voluntarily_exit" };
     const merged = Object.assign(guildId(groupListingId[19]).collectGuildAnalyticsMetadata(guildId));
-    obj.track(outer1_12.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
+    obj.track(closure_1_12.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
   }, items2);
   const items3 = [guildId, groupListingId, navigation];
   callback1 = navigation.useCallback(() => {
-    let obj = _undefined(groupListingId[18]);
+    let obj = callback(groupListingId[18]);
     obj = { exit_reason: "create_from_scratch" };
     const merged = Object.assign(guildId(groupListingId[19]).collectGuildAnalyticsMetadata(guildId));
-    obj.track(outer1_12.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
+    obj.track(closure_1_12.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, obj);
     const obj3 = guildId(groupListingId[19]);
     obj = {
       guildId,
       groupListingId,
       onAfterTierCreation() {
-        navigation.navigate(outer1_13.ROLE_SUBSCRIPTIONS_TIERS);
+        navigation.navigate(closure_1_13.ROLE_SUBSCRIPTIONS_TIERS);
       }
     };
     const result = stateFromStores(groupListingId[20]).openTierCreationModal(obj);
@@ -134,24 +122,23 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
     let obj = {
       headerRight() {
         let obj = { onPress: closure_7, style: closure_1.startFromScratch, activeOpacity: 0.5, children: null };
-        obj = { style: closure_1.editIcon, children: outer1_14(outer1_0(outer1_3[21]).PencilIcon, obj) };
+        obj = { style: closure_1.editIcon, children: closure_1_14(closure_1_0(closure_1_3[21]).PencilIcon, obj) };
         obj = { color: closure_1.editIcon.color, size: "xs" };
-        const items = [outer1_14(outer1_8, obj), ];
-        const obj1 = { children: null };
+        const items = [closure_1_14(closure_1_8, obj), ];
+        obj1 = { children: null };
         const obj2 = { variant: "text-md/medium", color: "interactive-text-active", children: null };
-        const intl = outer1_0(outer1_3[22]).intl;
-        obj2[2] = intl.string(outer1_0(outer1_3[22]).t.WNWtkB);
-        obj1[0] = outer1_14(outer1_0(outer1_3[9]).Text, obj2);
-        items[1] = outer1_14(outer1_8, obj1);
+        const intl = closure_1_0(closure_1_3[22]).intl;
+        obj2[2] = intl.string(closure_1_0(closure_1_3[22]).t.WNWtkB);
+        obj1[0] = closure_1_14(closure_1_0(closure_1_3[9]).Text, obj2);
+        items[1] = closure_1_14(closure_1_8, obj1);
         obj[3] = items;
-        return outer1_15(outer1_7, obj);
+        return closure_1_15(closure_1_7, obj);
       },
       headerTitle() {
         return callback(closure_8, {});
       },
-      headerLeft: null
+      headerLeft: guildId(groupListingId[23]).getHeaderBackButton(callback)
     };
-    obj[2] = guildId(groupListingId[23]).getHeaderBackButton(callback);
     navigation.setOptions(obj);
   }, items4);
   obj = { type: null, name: null, properties: null };
@@ -192,21 +179,21 @@ function GuildSettingsRoleSubscriptionTierTemplateSelectionComponent(guildId) {
   obj[1] = closure_15(closure_8, obj1);
   return callback(guildId(groupListingId[26]).RoleSubscriptionSettingsDisabledContextProvider, obj);
 }
-({ ActivityIndicator: closure_6, TouchableOpacity: error, View: metroImportAll, FlatList: c9 } = get_ActivityIndicator);
+({ ActivityIndicator: closure_6, TouchableOpacity: error, View: closure_8, FlatList: c9 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, GuildSettingsSections: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let c16 = 16;
 createCacheKey = { container: { marginTop: 16 }, title: null, text: null, activityIndicator: null, editIcon: null, startFromScratch: null };
-createCacheKey = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginLeft: 16, marginRight: 16 };
-createCacheKey[3] = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let obj1 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[4] = { color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
+createCacheKey[3] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj1 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[4] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
 createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "center", marginRight: 12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx");
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginRight: 4 };
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildSettingsRoleSubscriptionTierTemplateSelection.tsx");
 
 export default function GuildSettingsRoleSubscriptionTierTemplateSelection(guildId) {
   let obj = { guildId: guildId.guildId, children: null };

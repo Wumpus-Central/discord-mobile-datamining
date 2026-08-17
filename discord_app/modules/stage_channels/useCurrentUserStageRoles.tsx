@@ -1,9 +1,9 @@
 // discord_app/modules/stage_channels/useCurrentUserStageRoles.tsx
-import fetchFingerprint from "fetchFingerprint";
-import buildStageChannelUserRoles from "buildStageChannelUserRoles";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "buildStageChannelUserRoles" /* 4990 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/useCurrentUserStageRoles.tsx");
 
 export default function useCurrentUserStageRoles(arg0) {
   const _require = arg0;
@@ -11,7 +11,7 @@ export default function useCurrentUserStageRoles(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [buildStageChannelUserRoles, fetchFingerprint];
+  const items = [closure_3, closure_2];
   const items1 = [arg0, flag];
-  return _require(flag[2]).useStateFromStoresObject(items, () => outer1_3.getPermissionsForUser(outer1_2.getId(), closure_0, flag), items1);
+  return _require(flag[2]).useStateFromStoresObject(items, () => closure_1_3.getPermissionsForUser(closure_1_2.getId(), closure_0, flag), items1);
 };

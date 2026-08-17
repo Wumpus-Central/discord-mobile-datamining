@@ -1,22 +1,33 @@
 // discord_app/modules/emoji_terms/EmojiTerms.tsx
-import { emojiTermsImporter } from "EmojiTermsImporter.js";
-const require = arg1;
+import setParamsDefault from "setParams" /* 6735 */;
+import emojiTermsImporter from "emojiTermsImporter" /* 6736 */;
+
+require = arg1;
+let closure_2 = new setParamsDefault(function loadEmoji(arg0) {
+  const tmp = emojiTermsImporter.emojiTermsImporter[arg0];
+  if (undefined !== tmp) {
+    let nextPromise = tmp().then((arg0) => arg0.default);
+    const tmpResult = tmp();
+  } else {
+    nextPromise = Promise.resolve({});
+  }
+  return nextPromise;
+});
 const obj = {
   setEmojiLocale(locale) {
-    tmp2.setParams(locale);
+    store.setParams(locale);
   },
   getTermsForEmoji(name) {
-    const value = tmp2.get();
+    const value = store.get();
     if (undefined !== value) {
       let items = value[name];
-      tmp2 = name;
     } else {
       items = [];
     }
     return items;
   }
 };
-let tmp2 = new require("setParams")(function loadEmoji(arg0) {
+const tmp2 = new setParamsDefault(function loadEmoji(arg0) {
   const tmp = emojiTermsImporter.emojiTermsImporter[arg0];
   if (undefined !== tmp) {
     let nextPromise = tmp().then((arg0) => arg0.default);

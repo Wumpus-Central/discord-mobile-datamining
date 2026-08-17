@@ -1,12 +1,10 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockContentExpanded.tsx
-import importAllResult from "noop";
-import { QuestDockMode } from "QuestsExperimentLocations";
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 let c3 = importAllResult;
 ({ QUEST_DOCK_MODE_CHANGE_PHYSICS: c5, QUEST_DOCK_EXPANDED_HEIGHT: closure_6 } = QUEST_DOCK_COLLAPSED_HEIGHT);
@@ -29,20 +27,20 @@ const memoResult = importAllResult.memo(function QuestDockContentExpanded(childr
   const fn = function s() {
     let tmp;
     if ("content" !== expandedHeight) {
-      tmp = outer1_6;
+      tmp = closure_1_6;
     }
     let obj = { height: tmp, width: windowDimensions.get().width, opacity: null, transform: null };
     let num = 0;
-    if (activeQuestDockMode.get() === outer1_4.EXPANDED) {
+    if (activeQuestDockMode.get() === closure_1_4.EXPANDED) {
       num = 1;
     }
-    obj[2] = expandedHeight(questDockWrapperSpecs[8]).withSpring(num, outer1_5);
+    obj[2] = expandedHeight(questDockWrapperSpecs[8]).withSpring(num, closure_1_5);
     obj = { translateX: null };
     const obj2 = windowDimensions;
     const obj3 = expandedHeight(questDockWrapperSpecs[8]);
     const tmp2 = expandedHeight;
     const tmp3 = questDockWrapperSpecs;
-    obj[0] = expandedHeight(questDockWrapperSpecs[8]).withSpring((questDockWrapperSpecs.get().width - obj2.get().width) / 2, outer1_5);
+    obj[0] = expandedHeight(questDockWrapperSpecs[8]).withSpring((questDockWrapperSpecs.get().width - obj2.get().width) / 2, closure_1_5);
     const items = [obj];
     obj[3] = items;
     return obj;
@@ -55,6 +53,6 @@ const memoResult = importAllResult.memo(function QuestDockContentExpanded(childr
   const style = [callback().wrapper, animatedStyle];
   return jsx(activeQuestDockMode(questDockWrapperSpecs[9]), { style, children: children.children });
 });
-const result = require("QuestsExperimentLocations").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentExpanded.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContentExpanded.tsx");
 
 export default memoResult;

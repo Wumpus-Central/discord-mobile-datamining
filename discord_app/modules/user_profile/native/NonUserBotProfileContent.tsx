@@ -1,43 +1,27 @@
 // discord_app/modules/user_profile/native/NonUserBotProfileContent.tsx
-import { View } from "UserProfileOverscrollBanner";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "getSystemLocale";
-import importAllResult from "OpenableUserProfileAvatar";
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
-import { useBadges } from "../hooks/useBadges.tsx";
-import { useProfileTheme } from "../hooks/useProfileTheme.tsx";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
-import { useUserProfileOverscrollStyles } from "useUserProfileOverscrollStyles.tsx";
+import getNicknameDefault from "getNickname" /* 4796 */;
+import useProfileThemeDefault from "useProfileTheme" /* 8970 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8972 */;
+import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
+import useBadgesDefault from "useBadges" /* 8983 */;
+import useUserProfileOverscrollStylesDefault from "useUserProfileOverscrollStyles" /* 8984 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ PROFILE_CONTENT_BOTTOM_PADDING: c4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5 } = ARBITRARY_LARGE_OFFSET);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
-const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBotProfileContent(scrollPosition) {
-  let bannerAnimatedStyle;
-  let bannerImageAnimatedStyle;
-  let blurAnimatedProps;
-  let channel;
-  let contentAnimatedStyle;
-  let displayProfile;
-  let primaryColor;
-  let secondaryColor;
-  let showBlur;
-  let theme;
-  let user;
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
+const memoResult = importAllResult.memo(function NonUserBotProfileContent(scrollPosition) {
   ({ user, channel, displayProfile } = scrollPosition);
   let trackUserProfileAction;
-  let importDefault;
-  const tmp3 = useSharedStyles();
+  importDefault = undefined;
+  const tmp3 = useSharedStylesDefault();
   let obj = trackUserProfileAction(8934);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = getNickname;
+  obj1 = getNicknameDefault;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -49,12 +33,12 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   const name = obj1.useName(guild_id, id, user);
   let tmpResult = tmp(4219);
   importDefault = tmpResult.useUserTag(user);
-  const tmp9 = useUserProfileBannerHeight(ACTION_SHEET_MAX_WIDTH);
-  const tmp8 = useBadges(displayProfile);
-  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = useUserProfileOverscrollStyles({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
-  const tmp10 = useUserProfileOverscrollStyles({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
-  ({ theme, primaryColor, secondaryColor } = useProfileTheme({ user, displayProfile }));
-  const tmp11 = useProfileTheme({ user, displayProfile });
+  const tmp9 = useUserProfileBannerHeightDefault(ACTION_SHEET_MAX_WIDTH);
+  const tmp8 = useBadgesDefault(displayProfile);
+  ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 }));
+  const tmp10 = useUserProfileOverscrollStylesDefault({ scrollPosition: scrollPosition.scrollPosition, bannerHeight: tmp9 });
+  ({ theme, primaryColor, secondaryColor } = useProfileThemeDefault({ user, displayProfile }));
+  const tmp11 = useProfileThemeDefault({ user, displayProfile });
   const userProfileColors = trackUserProfileAction(8979).useUserProfileColors({ theme, primaryColor, secondaryColor });
   const containerBackground = userProfileColors.containerBackground;
   if (null == user) {
@@ -105,9 +89,9 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     }
     function handleCopyUsername() {
       trackUserProfileAction({ action: "COPY_USERNAME" });
-      trackUserProfileAction(outer1_2[15]).copy(closure_1);
-      const obj = trackUserProfileAction(outer1_2[15]);
-      const result = trackUserProfileAction(outer1_2[16]).presentUsernameCopied();
+      trackUserProfileAction(closure_1_2[15]).copy(closure_1);
+      const obj = trackUserProfileAction(closure_1_2[15]);
+      const result = trackUserProfileAction(closure_1_2[16]).presentUsernameCopied();
     }
     const obj6 = { children: null };
     obj5[3] = pronouns;
@@ -119,7 +103,7 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
     obj5[8] = handleCopyUsername;
     obj5[9] = function onPressPronouns() {
       trackUserProfileAction({ action: "PRESS_PRONOUNS" });
-      trackUserProfileAction(outer1_2[16]).presentUserPronouns();
+      trackUserProfileAction(closure_1_2[16]).presentUserPronouns();
     };
     obj4[1] = callback(tmpResult, obj5);
     const items3 = [callback(View, obj4), ];
@@ -145,6 +129,6 @@ const memoResult = require("OpenableUserProfileAvatar").memo(function NonUserBot
   }
   const tmp4Result = trackUserProfileAction(8979);
 });
-let result = require("ARBITRARY_LARGE_OFFSET").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/NonUserBotProfileContent.tsx");
 
 export default memoResult;

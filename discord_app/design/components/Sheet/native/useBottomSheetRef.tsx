@@ -1,5 +1,5 @@
 // discord_app/design/components/Sheet/native/useBottomSheetRef.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetRef.tsx");
 

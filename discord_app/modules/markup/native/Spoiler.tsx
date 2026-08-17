@@ -1,14 +1,12 @@
 // discord_app/modules/markup/native/Spoiler.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { EMOJI_CHAT_SIZE } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "ME";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { EMOJI_CHAT_SIZE } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c3;
-let c4;
 let require = arg1;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 let str = "transparent";
@@ -16,13 +14,13 @@ if (set.isAndroid()) {
   str = "rgba(0,0,0,0.0019607844)";
 }
 createCacheKey = { spoiler: null, placeholder: null, spoilerRevealed: null, muted: null };
-createCacheKey = { color: str, backgroundColor: require("Themes").colors.SPOILER_HIDDEN_BACKGROUND };
+createCacheKey = { color: str, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-set = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: require("Themes").colors.SPOILER_HIDDEN_BACKGROUND };
+set = { width: EMOJI_CHAT_SIZE, height: EMOJI_CHAT_SIZE, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 createCacheKey[1] = set;
-createCacheKey[2] = { color: require("Themes").colors.TEXT_DEFAULT, backgroundColor: require("Themes").colors.SPOILER_REVEALED_BACKGROUND };
+createCacheKey[2] = { color: ThemesDefault.colors.TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.SPOILER_REVEALED_BACKGROUND };
 createCacheKey[3] = { opacity: require("hairlineWidth").MUTED_OPACITY_CONTENT };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_6 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class Spoiler extends PureComponent {
   constructor() {
@@ -42,8 +40,8 @@ class Spoiler extends PureComponent {
 }
 Spoiler.prototype["render"] = function render() {
   const self = this;
-  let tmp = createCacheKey(this.context);
-  const require = tmp;
+  let tmp = callback(this.context);
+  const _require = tmp;
   const revealed = this.state.revealed;
   const children = this.props.children;
   if (revealed) {
@@ -58,19 +56,18 @@ Spoiler.prototype["render"] = function render() {
   } else {
     Children = tmp4.Children;
     let mapped = Children.map(children, (type) => {
-      let map = outer1_2;
-      if (!outer1_2.isValidElement(type)) {
+      let map = closure_1_2;
+      if (!closure_1_2.isValidElement(type)) {
         return type;
       } else {
         if ("Image" === type.type.displayName) {
           if (!revealed) {
             let obj = { style: null };
-            obj[0] = tmp.placeholder;
-            let tmp7 = outer1_5(outer1_3, obj);
+            obj[0] = placeholder.placeholder;
+            let tmp7 = closure_1_5(closure_1_3, obj);
           }
         } else {
           const props = type.props;
-          tmp = null;
           let source;
           if (props != null) {
             source = props.source;
@@ -83,38 +80,32 @@ Spoiler.prototype["render"] = function render() {
             const Children = map.Children;
             map = Children.map;
             mapped = map(type, (props) => {
-              let Children;
-              let cloneElement;
-              if (outer1_2.isValidElement(props)) {
+              if (closure_1_2.isValidElement(props)) {
                 const style = props.props.style;
                 const _Array = Array;
                 let flattenResult = style;
                 if (Array.isArray(style)) {
-                  flattenResult = outer1_4.flatten(style);
+                  flattenResult = closure_1_4.flatten(style);
                 }
                 const obj = { children: null, style: null, onPress: "Array" };
                 ({ Children, cloneElement } = tmp);
                 obj[0] = Children.map(props.props.children, (props) => {
-                  let Children;
-                  let cloneElement;
-                  if (outer1_2.isValidElement(props)) {
+                  if (closure_1_2.isValidElement(props)) {
                     const style = props.props.style;
                     const _Array = Array;
                     let flattenResult = style;
                     if (Array.isArray(style)) {
-                      flattenResult = outer1_4.flatten(style);
+                      flattenResult = closure_1_4.flatten(style);
                     }
                     const obj = { children: null, style: null, onPress: "Array" };
                     ({ Children, cloneElement } = tmp);
                     obj[0] = Children.map(props.props.children, (props) => {
-                      let Children;
-                      let cloneElement;
-                      if (outer1_2.isValidElement(props)) {
+                      if (closure_1_2.isValidElement(props)) {
                         const style = props.props.style;
                         const _Array = Array;
                         let flattenResult = style;
                         if (Array.isArray(style)) {
-                          flattenResult = outer1_4.flatten(style);
+                          flattenResult = closure_1_4.flatten(style);
                         }
                         const obj = { children: null, style: null, onPress: "Array" };
                         ({ Children, cloneElement } = tmp);
@@ -125,7 +116,7 @@ Spoiler.prototype["render"] = function render() {
                       } else {
                         return props;
                       }
-                      tmp = outer1_2;
+                      tmp = closure_1_2;
                     });
                     const items = [flattenResult, spoiler.spoiler];
                     obj[1] = items;
@@ -133,7 +124,7 @@ Spoiler.prototype["render"] = function render() {
                   } else {
                     return props;
                   }
-                  tmp = outer1_2;
+                  tmp = closure_1_2;
                 });
                 const items = [flattenResult, spoiler.spoiler];
                 obj[1] = items;
@@ -141,7 +132,7 @@ Spoiler.prototype["render"] = function render() {
               } else {
                 return props;
               }
-              tmp = outer1_2;
+              tmp = closure_1_2;
             });
           }
         }
@@ -162,7 +153,7 @@ Spoiler.prototype["render"] = function render() {
     }
     obj[2] = handleTap;
     obj[3] = mapped;
-    return jsx(require(revealed[9]).LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
+    return jsx(_require(revealed[9]).LegacyText, { accessibilityRole: "button", style: null, onPress: null, children: null });
   }
   tmp4 = importAllResult;
 };

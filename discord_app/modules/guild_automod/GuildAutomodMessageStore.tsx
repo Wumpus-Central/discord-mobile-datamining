@@ -1,24 +1,20 @@
 // discord_app/modules/guild_automod/GuildAutomodMessageStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import ME from "ME";
-import { PersistedStore } from "initialize";
-import { items } from "../../lib/MessageQueue.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { getAutomodErrorMessageFromErrorResponse } from "AutomodErrorUtils.tsx";
-import { getDecisionOutcomeFromMessage } from "AutomodMessageUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import items from "items" /* 5040 */;
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5232 */;
+import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7608 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function handleMessageSendFailedAutomod(messageData) {
   messageData = messageData.messageData;
   let obj = items;
   const failedMessageId = obj.getFailedMessageId(messageData);
-  obj = { id: failedMessageId, isBlockedEdit: null, messageData: null, errorMessage: null };
-  obj[1] = items.isMessageDataEdit(messageData);
-  obj[2] = messageData;
+  obj = { id: failedMessageId, isBlockedEdit: items.isMessageDataEdit(messageData), messageData, errorMessage: null };
   const obj3 = items;
   obj[3] = getAutomodErrorMessageFromErrorResponse.getAutomodErrorMessage(messageData, messageData.errorResponseBody);
   closure_8[failedMessageId] = obj;
@@ -69,13 +65,12 @@ let closure_8 = {};
 let c9 = 0;
 let closure_10 = {};
 let closure_11 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildAutomodMessageStore extends PersistedStore {
 }
 const prototype = GuildAutomodMessageStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let closure_10;
-  let closure_8;
-  this.waitFor(ensureGuildLoaded, reinjectEphemerals);
+  this.waitFor(closure_3, closure_4);
   if (null != arg0) {
     ({ automodFailedMessages: closure_8, mentionRaidDetectionByGuild: closure_10 } = arg0);
   }
@@ -113,7 +108,7 @@ prototype["getLastIncidentAlertMessage"] = function getLastIncidentAlertMessage(
 };
 GuildAutomodMessageStore.displayName = "GuildAutomodMessageStore";
 GuildAutomodMessageStore.persistKey = "GuildAutomodMessages";
-const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatcher"), {
+const guildAutomodMessageStore = new GuildAutomodMessageStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     let flag = 0 !== Object.keys(closure_8).length;
     if (flag) {
@@ -126,8 +121,6 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   LOCAL_MESSAGES_LOADED: handleLoadMessages,
   MESSAGE_CREATE: function handleIncidentAlertMessageCreate(arg0) {
-    let guildId;
-    let message;
     ({ guildId, message } = arg0);
     if (null == guildId) {
       return false;
@@ -191,6 +184,6 @@ const guildAutomodMessageStore = new GuildAutomodMessageStore(require("dispatche
     return true;
   }
 });
-let result = require("ME").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStore.tsx");
 
 export default guildAutomodMessageStore;

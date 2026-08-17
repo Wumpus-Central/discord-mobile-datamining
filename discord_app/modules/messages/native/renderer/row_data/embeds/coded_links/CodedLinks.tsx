@@ -1,28 +1,21 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "initialize" /* 4022 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/CodedLinks.tsx");
 
 export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, message2, channel, arg3) {
-  let closure_0 = message;
-  let closure_1 = channel;
-  let _slicedToArray = arg3;
+  closure_0 = message;
+  closure_1 = channel;
+  closure_2 = arg3;
   if (null != message.author) {
     if (0 !== message2.codedLinks.length) {
       const currentUser2 = currentUser.getCurrentUser();
       const codedLinks = message2.codedLinks;
       return codedLinks.map((arg0) => {
-        let code;
-        let tmp10;
-        let tmp14;
-        let tmp15;
-        let tmp9;
-        let type;
-        let url;
         ({ type, code, url } = arg0);
         let obj = message(table[4]);
         if (obj.isApplicationCodedLink(type)) {
@@ -63,7 +56,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                         return null;
                       }
                     }
-                    const obj1 = { theme: null, embedUrl: null, message: null, app: null };
+                    obj1 = { theme: null, embedUrl: null, message: null, app: null };
                     obj1[0] = tmp39;
                     obj1[1] = url;
                     obj1[2] = tmp38;
@@ -84,13 +77,13 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
         } else if (tmp(tmp2[6]).CodedLinkType.BUILD_OVERRIDE === type) {
           return tmp(tmp2[10]).createBuildOverrideEmbed(code, callback);
         } else if (tmp(tmp2[6]).CodedLinkType.MANUAL_BUILD_OVERRIDE === type) {
-          const currentUser = outer1_5.getCurrentUser();
+          const currentUser = closure_1_5.getCurrentUser();
           let isStaffResult;
           if (currentUser != null) {
             isStaffResult = currentUser.isStaff();
           }
           if (!isStaffResult) {
-            const currentUser1 = outer1_5.getCurrentUser();
+            const currentUser1 = closure_1_5.getCurrentUser();
             let isStaffPersonalResult;
             if (currentUser1 != null) {
               isStaffPersonalResult = currentUser1.isStaffPersonal();
@@ -98,7 +91,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
             isStaffResult = isStaffPersonalResult;
           }
           if (!isStaffResult) {
-            let tmp27 = null != outer1_4.getGuild("943265993613008967");
+            let tmp27 = null != closure_1_4.getGuild("943265993613008967");
             if (tmp27) {
               tmp27 = !lurking.isLurking("943265993613008967");
             }

@@ -1,32 +1,14 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 import { DataBindByName } from "../../../../../../../_runtime/04110_DataBindByName.js";
 
-let Platform;
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c3, StyleSheet, Image: c4, PixelRatio: c5, Platform } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const styles = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 1 }, hidden: { opacity: 0 } });
 const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(renderDataBinding, ref) {
-  let alignment;
-  let artboard;
-  let artboardProperties;
-  let artboardViewModelInstances;
-  let fit;
-  let referencedAssets;
-  let require;
-  let src;
-  let stateMachine;
-  let style;
-  let withReducedMotion;
   ({ artboard, defaultViewModelInstance: require, referencedAssets, stateMachine, fit, alignment, withReducedMotion } = renderDataBinding);
   ({ src, style, artboardProperties, artboardViewModelInstances } = renderDataBinding);
   if (withReducedMotion === undefined) {
@@ -108,7 +90,7 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
   if (null == riveViewRef) {
     hidden = tmp22.hidden;
   }
-  const obj1 = { style: items2, children: null };
+  obj1 = { style: items2, children: null };
   items2[1] = hidden;
   if (null == riveFile) {
     const items3 = [tmp24, ];
@@ -174,15 +156,15 @@ const forwardRefResult = importAllResult.forwardRef(function BaseRiveInner(rende
     const tmp25 = closure_6;
   }
 });
-let result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/BaseRive.tsx");
 
 export const BaseRive = forwardRefResult;
 export const useNumberBinding = function useNumberBinding(AnimationState, instance, AnimationState2, AnimationState1, playIfNeeded) {
   let _require = AnimationState2;
-  let dependencyMap = playIfNeeded;
+  dependencyMap = playIfNeeded;
   const iter = _DataBindByName.useRiveNumber(AnimationState, instance);
   const setValue = iter.setValue;
-  let importAllResult = setValue;
+  importAllResult = setValue;
   const value = iter.value;
   const items = [AnimationState2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
@@ -226,10 +208,10 @@ export const useNumberBinding = function useNumberBinding(AnimationState, instan
 };
 export const useStringBinding = function useStringBinding(LVL, instance, LVL2, LVL1, playIfNeeded) {
   let _require = LVL2;
-  let dependencyMap = playIfNeeded;
+  dependencyMap = playIfNeeded;
   const iter = _DataBindByName.useRiveString(LVL, instance);
   const setValue = iter.setValue;
-  let importAllResult = setValue;
+  importAllResult = setValue;
   const value = iter.value;
   const items = [LVL2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
@@ -259,10 +241,10 @@ export const useStringBinding = function useStringBinding(LVL, instance, LVL2, L
 };
 export const useBooleanBinding = function useBooleanBinding(reducedMotion, instance, reducedMotionEnabled, pressed1, playIfNeeded) {
   let _require = reducedMotionEnabled;
-  let dependencyMap = playIfNeeded;
+  dependencyMap = playIfNeeded;
   const iter = _DataBindByName.useRiveBoolean(reducedMotion, instance);
   const setValue = iter.setValue;
-  let importAllResult = setValue;
+  importAllResult = setValue;
   const value = iter.value;
   const items = [reducedMotionEnabled, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
@@ -293,11 +275,11 @@ export const useBooleanBinding = function useBooleanBinding(reducedMotion, insta
 };
 export const useColorBinding = function useColorBinding(FillColor, instance, FillColor2, FillColor1, playIfNeeded) {
   const _require = FillColor2;
-  const dependencyMap = FillColor1;
+  dependencyMap = FillColor1;
   const iter = _DataBindByName.useRiveColor(FillColor, instance);
   const setValue = iter.setValue;
   const value = iter.value;
-  let closure_4 = value;
+  closure_4 = value;
   const items = [FillColor2, setValue, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
     if (null != closure_0) {
@@ -307,7 +289,7 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
       }
     }
   }, items);
-  let closure_5 = importAllResult.useRef(FillColor1);
+  closure_5 = importAllResult.useRef(FillColor1);
   const items1 = [FillColor1];
   const effect1 = importAllResult.useEffect(() => {
     closure_5.current = closure_1;
@@ -324,10 +306,10 @@ export const useColorBinding = function useColorBinding(FillColor, instance, Fil
 };
 export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2, stateFromStores) {
   let _require = arg2;
-  let dependencyMap = arg4;
+  dependencyMap = arg4;
   const iter = _DataBindByName.useRiveEnum(FillColor, instance);
   const setValue = iter.setValue;
-  let importAllResult = setValue;
+  importAllResult = setValue;
   const value = iter.value;
   const items = [arg2, setValue, arg4];
   const effect = importAllResult.useEffect(() => {
@@ -357,7 +339,7 @@ export const useEnumBinding = function useEnumBinding(FillColor, instance, arg2,
 };
 export const useTriggerBinding = function useTriggerBinding(startAnimation, instance, startAnimation2, startAnimation1, playIfNeeded) {
   const _require = startAnimation2;
-  const dependencyMap = playIfNeeded;
+  dependencyMap = playIfNeeded;
   let obj = _DataBindByName;
   let tmp;
   if (null != startAnimation1) {
@@ -385,15 +367,15 @@ export const useTriggerBinding = function useTriggerBinding(startAnimation, inst
   }, items);
 };
 export const useImageBinding = function useImageBinding(img, instance, prop12, prop13, playIfNeeded) {
-  let closure_0 = img;
-  let closure_1 = instance;
-  let closure_3 = prop13;
-  let closure_4 = playIfNeeded;
+  closure_0 = img;
+  closure_1 = instance;
+  closure_3 = prop13;
+  closure_4 = playIfNeeded;
   const items = [img, instance, prop12, playIfNeeded];
   const effect = importAllResult.useEffect(() => {
     if (null != instance) {
       if (null != closure_2) {
-        let c0 = false;
+        c0 = false;
         const RiveImages = img(instance[3]).RiveImages;
         let uri = tmp;
         if (typeof tmp === "number") {
@@ -402,11 +384,11 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
         const fromURLAsync = RiveImages.loadFromURLAsync(uri);
         fromURLAsync.then((arg0) => {
           if (!c0) {
-            const imagePropertyResult = outer1_1.imageProperty(c0);
+            const imagePropertyResult = closure_1_1.imageProperty(c0);
             if (imagePropertyResult != null) {
               const result = imagePropertyResult.set(arg0);
             }
-            if (outer1_4 != null) {
+            if (closure_1_4 != null) {
               tmp6();
             }
           }
@@ -414,12 +396,12 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
 
         });
         return () => {
-          let c0 = true;
+          c0 = true;
         };
       }
     }
   }, items);
-  let closure_5 = importAllResult.useRef(prop13);
+  closure_5 = importAllResult.useRef(prop13);
   const items1 = [prop13];
   const effect1 = importAllResult.useEffect(() => {
     closure_5.current = closure_3;
@@ -442,10 +424,10 @@ export const useImageBinding = function useImageBinding(img, instance, prop12, p
   }, items2);
 };
 export const useArtboardBinding = function useArtboardBinding(Icon, instance, file, Icon2, playIfNeeded) {
-  let closure_0 = Icon;
-  let closure_1 = instance;
-  let closure_3 = Icon2;
-  let closure_4 = playIfNeeded;
+  closure_0 = Icon;
+  closure_1 = instance;
+  closure_3 = Icon2;
+  closure_4 = playIfNeeded;
   const items = [Icon, instance, file, Icon2, playIfNeeded];
   const effect = file.useEffect(() => {
     if (null != closure_1) {

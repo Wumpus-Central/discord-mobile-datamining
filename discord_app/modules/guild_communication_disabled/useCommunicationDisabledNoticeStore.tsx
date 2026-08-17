@@ -1,39 +1,40 @@
 // discord_app/modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "getFriendlyDurationString";
-import keys from "keys";
-import { Storage } from "Storage";
-import { identity } from "../../../_runtime/00700_identity.js";
-import { isIterable } from "../../../_runtime/04006_isIterable.js";
+import identity from "identity" /* 700 */;
+import isIterable from "isIterable" /* 4006 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY } from "getFriendlyDurationString" /* 1992 */;
+import keys from "keys" /* 645 */;
+import { Storage } from "Storage" /* 595 */;
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-const require = arg1;
+require = arg1;
 let closure_4 = keys.createStore((arg0, arg1) => {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let Storage = _Storage.Storage;
   let items = Storage.get(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY);
   if (items == null) {
     items = [];
   }
-  let obj = { notificationDismissedInGuilds: null, dismissNotification: null, resetNotification: null };
-  obj[0] = new Set(items);
-  obj[1] = function dismissNotification(arg0) {
-    const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
-    notificationDismissedInGuilds.add(arg0);
-    const Storage = callback(595).Storage;
-    const result = Storage.set(outer1_3, notificationDismissedInGuilds);
-    callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-  };
-  obj[2] = function resetNotification(arg0) {
-    const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
-    if (notificationDismissedInGuilds.has(arg0)) {
-      notificationDismissedInGuilds.delete(arg0);
+  let obj = {
+    notificationDismissedInGuilds: new Set(items),
+    dismissNotification(arg0) {
+      const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
+      notificationDismissedInGuilds.add(arg0);
       const Storage = callback(595).Storage;
-      const result = Storage.set(outer1_3, notificationDismissedInGuilds);
+      const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
       callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
-      const obj = callback(705);
+    },
+    resetNotification(arg0) {
+      const notificationDismissedInGuilds = dependencyMap().notificationDismissedInGuilds;
+      if (notificationDismissedInGuilds.has(arg0)) {
+        notificationDismissedInGuilds.delete(arg0);
+        const Storage = callback(595).Storage;
+        const result = Storage.set(closure_1_3, notificationDismissedInGuilds);
+        callback(705).batchUpdates(() => notificationDismissedInGuilds({ notificationDismissedInGuilds }));
+        const obj = callback(705);
+      }
     }
   };
   return obj;
@@ -41,12 +42,11 @@ let closure_4 = keys.createStore((arg0, arg1) => {
 Storage.asyncGet(DISMISSED_COMMUNICATION_DISABLED_NOTIFICATION_GUILDS_KEY, (arg0) => {
   const _require = arg0;
   _batchUpdates.batchUpdates(() => {
-    const obj = { notificationDismissedInGuilds: null };
-    obj[0] = new Set(closure_0);
-    return outer1_4.setState(obj);
+    const obj = { notificationDismissedInGuilds: new Set(closure_0) };
+    return closure_1_4.setState(obj);
   });
 });
-let result = require("Storage").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_communication_disabled/useCommunicationDisabledNoticeStore.tsx");
 
 export const useCommunicationDisabledNoticeStore = function useCommunicationDisabledNoticeStore(arg0) {
   const tmp = callback(identity.useStoreWithEqualityFn(closure_4, (arg0) => {

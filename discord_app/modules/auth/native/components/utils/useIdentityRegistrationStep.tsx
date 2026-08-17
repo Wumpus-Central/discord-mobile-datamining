@@ -1,51 +1,47 @@
 // discord_app/modules/auth/native/components/utils/useIdentityRegistrationStep.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import useRegistrationUIStore from "useRegistrationUIStore";
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
-import { AbortCodes } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import { AbortCodes } from "ME" /* 676 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ setRegistrationErrors: closure_6, updateRegistrationOptions: error, useRegistrationUIStore: metroImportAll } = useRegistrationUIStore);
+({ setRegistrationErrors: closure_6, updateRegistrationOptions: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);
 ({ authStateToRegisterTransitionStep: c9, RegisterTransitionSteps: c10, RegistrationTransitionActionTypes: unpackModuleId } = RegistrationTransitionActionTypes);
-const result = require("noop").fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");
 
 export const useIdentityRegistrationStep = function useIdentityRegistrationStep(REGISTER_IDENTITY, inputMode) {
   let _require = REGISTER_IDENTITY;
-  const importDefault = inputMode;
+  importDefault = inputMode;
   let obj = _require(navigation[6]);
   navigation = obj.useNavigation();
-  let context = React.useContext(_require(navigation[7]).TrackRegistrationContext);
-  const tmp4 = first(React.useState(""), 2);
-  first = tmp4[0];
+  const context = React.useContext(_require(navigation[7]).TrackRegistrationContext);
+  let callback = context;
+  const tmp4 = callback2(React.useState(""), 2);
+  const first = tmp4[0];
+  callback2 = first;
   React = React.useRef("");
-  const tmp6 = first(React.useState(""), 2);
+  const tmp6 = callback2(React.useState(""), 2);
   const first1 = tmp6[0];
-  let closure_7 = tmp6[1];
-  let callback = React.useCallback((arg0, current) => {
+  closure_7 = tmp6[1];
+  callback = React.useCallback((arg0, current) => {
     callback2(arg0);
-    set.current = current;
+    closure_5.current = current;
   }, []);
-  const tmp9 = callback((errors) => errors.errors);
-  callback = tmp9;
+  const tmp9 = callback3((errors) => errors.errors);
+  callback3 = tmp9;
   let items = [tmp9];
   _require = undefined;
   const memo = React.useMemo(() => {
     const intl = callback(navigation[8]).intl;
     return intl.string(callback(navigation[8]).t.F8UYVY);
   }, items);
-  _require = context((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+  _require = callback((arg0) => {
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -73,15 +69,15 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               obj[0] = arg1;
               return obj;
             } else {
-              let error_code = tmp3;
-              let closure_2 = tmp5;
-              let closure_1;
+              c3 = tmp3;
+              closure_2 = tmp5;
+              closure_1 = undefined;
               closure_2 = undefined;
-              error_code = undefined;
-              let c4;
+              c3 = undefined;
+              c4 = undefined;
               const sum = ref.current + c6;
               closure_1 = sum;
-              let obj1 = { email: "Array", phone: 0 };
+              obj1 = { email: "Array", phone: 0 };
               obj1[1] = sum;
               v0(obj1);
               closure_2 = callback2(callback);
@@ -102,41 +98,41 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               return { value: "HermesInternal", done: "HermesInternal" };
             } else {
               obj1 = callback(navigation[11]);
-              const context = obj1.getAuthenticationErrorsFromAPIError(set);
-              first1(context);
+              const authenticationErrorsFromAPIError = obj1.getAuthenticationErrorsFromAPIError(closure_5);
+              first1(authenticationErrorsFromAPIError);
               const _Object = Object;
-              const keys = Object.keys(context);
-              const first = keys.filter((arg0) => {
+              const keys = Object.keys(authenticationErrorsFromAPIError);
+              const length = keys.filter((arg0) => {
                 const items = ["phone"];
                 return items.includes(arg0);
               });
-              if (first.length <= 0) {
-                let tmp30 = null != context.error_code;
+              if (length.length <= 0) {
+                let tmp30 = null != authenticationErrorsFromAPIError.error_code;
                 if (tmp30) {
-                  tmp30 = null != context.message;
+                  tmp30 = null != authenticationErrorsFromAPIError.message;
                 }
                 if (tmp30) {
                   let obj4 = { step: null, actionType: null, details: null };
                   obj4[0] = closure_2;
-                  obj4[1] = outer2_11.RESPONSE_ERROR;
+                  obj4[1] = closure_2_11.RESPONSE_ERROR;
                   obj3 = callback(navigation[12]);
-                  let items = [obj3.getCommonErrorDetails(error_code.error_code)];
+                  let items = [obj3.getCommonErrorDetails(c3.error_code)];
                   obj4[2] = items;
-                  outer1_3(obj4);
+                  closure_1_3(obj4);
                 }
                 c7 = 3;
               }
               let obj5 = { step: null, actionType: null, details: null };
               obj5[0] = navigation;
-              obj5[1] = outer2_11.RESPONSE_ERROR;
+              obj5[1] = closure_2_11.RESPONSE_ERROR;
               closure_1 = 0;
               const items1 = [];
-              closure_1 = HermesBuiltin.arraySpread(first, 0);
+              closure_1 = HermesBuiltin.arraySpread(length, 0);
               obj5 = callback(navigation[12]);
-              items1[closure_1] = obj5.getCommonErrorDetails(context.error_code);
+              items1[closure_1] = obj5.getCommonErrorDetails(authenticationErrorsFromAPIError.error_code);
               closure_1 = closure_1 + 1;
               obj5[2] = items1;
-              outer1_3(obj5);
+              closure_1_3(obj5);
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -150,9 +146,9 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
           } else {
             const obj6 = { step: null, toStep: null, actionType: null };
             obj6[0] = closure_2;
-            obj6[1] = outer2_10.PHONE_VERIFICATION;
-            obj6[2] = outer2_11.SUCCESS;
-            outer1_3(obj6);
+            obj6[1] = closure_2_10.PHONE_VERIFICATION;
+            obj6[2] = closure_2_11.SUCCESS;
+            closure_1_3(obj6);
             ref = 0;
             const obj7 = { title: null, description: null, phone: null, sourceState: null, onPhoneTokenReceived: null, onBail: null };
             const intl = callback(navigation[8]).intl;
@@ -168,20 +164,18 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
               obj[1] = closure_1;
               obj[2] = arg0;
               v3(obj);
-              obj = { step: outer2_10.PHONE_VERIFICATION, toStep: null, actionType: null };
-              obj[1] = callback(outer2_2[14]).getNextRegistrationTransitionStep(callback);
-              obj[2] = outer2_11.SUCCESS;
+              obj = { step: closure_2_10.PHONE_VERIFICATION, toStep: callback(closure_2_2[14]).getNextRegistrationTransitionStep(callback), actionType: closure_2_11.SUCCESS };
               _undefined(obj);
-              const obj3 = callback(outer2_2[14]);
-              const nextAuthState = callback(outer2_2[14]).getNextAuthState(callback);
-              const obj4 = callback(outer2_2[14]);
-              arr.dispatch(callback(outer2_2[15]).StackActions.replace(nextAuthState));
+              const obj3 = callback(closure_2_2[14]);
+              const nextAuthState = callback(closure_2_2[14]).getNextAuthState(callback);
+              const obj4 = callback(closure_2_2[14]);
+              arr.dispatch(callback(closure_2_2[15]).StackActions.replace(nextAuthState));
             };
             obj7[5] = function onBail(arg0) {
               v3("");
               callback();
             };
-            outer1_2.push(callback(navigation[13]).AuthStates.VERIFY_PHONE, obj7);
+            closure_1_2.push(callback(navigation[13]).AuthStates.VERIFY_PHONE, obj7);
             c7 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -213,11 +207,11 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
   } else {
     tmp13 = importDefault(tmp[17])("email", tmp9);
   }
-  let closure_9 = tmp13;
+  closure_9 = tmp13;
   const items2 = [inputMode, first1, first, tmp13];
   const items3 = [first];
   const memo1 = obj2.useMemo(() => {
-    const tmp = closure_1 === callback(navigation[16]).PhoneOrEmailSelectorForceMode.PHONE ? first1 : first;
+    const tmp = closure_1 === callback(navigation[16]).PhoneOrEmailSelectorForceMode.PHONE ? first1 : closure_4;
     let tmp2 = null == tmp;
     if (!tmp2) {
       tmp2 = "" === tmp;
@@ -238,7 +232,7 @@ export const useIdentityRegistrationStep = function useIdentityRegistrationStep(
     identityError: tmp13,
     validateEmail: obj2.useCallback(() => {
       let stringResult = null;
-      if (!obj.isEmail(first)) {
+      if (!obj.isEmail(closure_4)) {
         const intl = callback(tmp[8]).intl;
         stringResult = intl.string(callback(tmp[8]).t.nr0MVZ);
       }

@@ -1,9 +1,7 @@
 // discord_app/modules/group_dm/getGroupDMRecipientLimit.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import closure_0 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let closure_1;
-let obj1;
 ({ MAX_GROUP_DM_PARTICIPANTS: closure_1, MAX_GROUP_DM_STAFF_PARTICIPANTS: obj1 } = ME);
 const result = require("set").fileFinishedImporting("modules/group_dm/getGroupDMRecipientLimit.tsx");
 

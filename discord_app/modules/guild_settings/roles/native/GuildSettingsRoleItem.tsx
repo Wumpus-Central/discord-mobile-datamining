@@ -1,22 +1,19 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx
-import closure_3 from "createCacheKey";
-import importAllResult from "isDiscordFrontendDevelopment";
-import get_ActivityIndicator from "VerifiedRoleIcon";
-import { DEFAULT_ROLE_COLOR_HEX } from "ME";
-import jsxProd from "ShieldUserIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = "text-md/semibold";
 let obj = { row: { flexDirection: "row", gap: 4, alignItems: "center" }, everyone: null, label: null, sparkleIcon: null, container: null, gradient: null, image: null };
-obj = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 };
+obj = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, padding: 8 };
 obj[1] = obj;
 text_md_semibold = require("Text").TextStyleSheet["text-md/semibold"];
 let num;
@@ -28,26 +25,16 @@ if (num == null) {
 }
 createCacheKey = { lineHeight: num + 1 };
 obj[2] = createCacheKey;
-obj[3] = { tintColor: require("Themes").colors.ICON_MUTED };
-let obj2 = { tintColor: require("Themes").colors.ICON_MUTED };
-obj[4] = { width: 32, height: 32, borderRadius: require("Themes").radii.round, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" };
+obj[3] = { tintColor: ThemesDefault.colors.ICON_MUTED };
+let obj2 = { tintColor: ThemesDefault.colors.ICON_MUTED };
+obj[4] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[5] = {};
 obj[6] = { tintColor: "white" };
 let closure_10 = createCacheKey.createStyles(obj);
-let obj3 = { width: 32, height: 32, borderRadius: require("Themes").radii.round, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" };
+let obj3 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, overflow: "hidden", display: "flex", alignItems: "center", justifyContent: "center" };
 let obj4 = {};
 const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) {
-  let importDefault;
-  let isEveryoneRole;
-  let isFirstRole;
-  let isLastRole;
-  let locked;
-  let numMembers;
-  let onLongPress;
-  let onMoveUp;
-  let sortHandlers;
-  let sorting;
   const tmp4 = callback3();
   const role = guildId.role;
   ({ sorting, locked, onPress: importDefault, onMoveUp } = guildId);
@@ -62,7 +49,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
   if (tags != null) {
     guild_connections = tags.guild_connections;
   }
-  let closure_5 = tmp8;
+  closure_5 = tmp8;
   const items = [];
   if (null != onMoveUp) {
     obj = { name: "moveup", label: null };
@@ -71,7 +58,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
     items.push(obj);
   }
   if (null != onMoveDown) {
-    let obj1 = { name: "movedown", label: null };
+    obj1 = { name: "movedown", label: null };
     let intl2 = tmp5(tmp2[11]).intl;
     obj1[1] = intl2.string(tmp5(tmp2[11]).t["5PbXSy"]);
     items.push(obj1);
@@ -101,7 +88,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
         obj5[0] = role.name;
         obj3[1] = intl5.formatToPlainString(tmp5(tmp2[11]).t.FiMFTZ, obj5);
         obj3[4] = function handleDeleteRow() {
-          let obj = outer1_1(onMoveUp[10]);
+          let obj = closure_1_1(onMoveUp[10]);
           obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, confirmColor: null };
           const intl = role(onMoveUp[11]).intl;
           obj = { name: name.name };
@@ -140,11 +127,11 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
                     return obj;
                   } else {
                     const callback = tmp2;
-                    if (outer1_5) {
+                    if (closure_1_5) {
                       c1 = 1;
                       c2 = 1;
-                      let obj1 = { value: null, done: false };
-                      obj1[0] = callback(outer2_2[12]).putRoleConnectionsConfigurations(outer1_4, outer1_0.id, []);
+                      obj1 = { value: null, done: false };
+                      obj1[0] = callback(closure_2_2[12]).putRoleConnectionsConfigurations(closure_1_4, closure_1_0.id, []);
                       return obj1;
                     }
                   }
@@ -157,8 +144,8 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
                   obj[0] = arg1;
                   return obj;
                 }
-                obj1 = outer2_1(outer2_2[13]);
-                obj1.deleteRole(outer1_4, outer1_0.id);
+                obj1 = closure_2_1(closure_2_2[13]);
+                obj1.deleteRole(closure_1_4, closure_1_0.id);
                 c2 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } catch (tmp16) {
@@ -177,7 +164,7 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
             }
             return applyArgumentsResult;
           };
-          obj[5] = outer1_1(onMoveUp[14]).Colors.RED;
+          obj[5] = closure_1_1(onMoveUp[14]).Colors.RED;
           obj.show(obj);
         };
         flag = false;
@@ -315,6 +302,6 @@ const memoResult = importAllResult.memo(function GuildSettingsRoleItem(guildId) 
     flag2 = false;
   }
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleItem.tsx");
 
 export default memoResult;

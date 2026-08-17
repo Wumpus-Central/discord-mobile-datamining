@@ -1,8 +1,9 @@
 // discord_app/stores/channel_notices/HubLinkNoticeStore.tsx
-import set from "set";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "set" /* 7194 */;
+import closure_1 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildFeatures } from "ME" /* 676 */;
 
 function checkGuildIsHub(id) {
   const guild = store.getGuild(id);
@@ -11,7 +12,7 @@ function checkGuildIsHub(id) {
     const features = guild.features;
     let flag = features.has(GuildFeatures.HUB);
     if (flag) {
-      let c3 = true;
+      c3 = true;
       flag = true;
     }
     tmp2 = flag;
@@ -22,12 +23,13 @@ function handleHotspotUpdates() {
   return true;
 }
 let c3 = false;
+const Store = initializeDefault.Store;
 class HubLinkNoticeStore extends Store {
 }
 const prototype = HubLinkNoticeStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(createGuildRecordFromRust, set);
-  const items = [set];
+  this.waitFor(closure_1, closure_0);
+  const items = [closure_0];
   this.syncWith(items, handleHotspotUpdates);
 };
 prototype["channelNoticePredicate"] = function channelNoticePredicate(features) {
@@ -39,7 +41,7 @@ prototype["channelNoticePredicate"] = function channelNoticePredicate(features) 
   return hasItem;
 };
 HubLinkNoticeStore.displayName = "HubLinkNoticeStore";
-const hubLinkNoticeStore = new HubLinkNoticeStore(require("dispatcher"), {
+const hubLinkNoticeStore = new HubLinkNoticeStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
     const obj = arg0.guilds[Symbol.iterator]();
     while (obj !== undefined) {
@@ -60,7 +62,7 @@ const hubLinkNoticeStore = new HubLinkNoticeStore(require("dispatcher"), {
       const features = guild.features;
       let flag = features.has(GuildFeatures.HUB);
       if (flag) {
-        let c3 = true;
+        c3 = true;
         flag = true;
       }
       tmp2 = flag;
@@ -68,6 +70,6 @@ const hubLinkNoticeStore = new HubLinkNoticeStore(require("dispatcher"), {
     return tmp2;
   }
 });
-const result = require("ME").fileFinishedImporting("stores/channel_notices/HubLinkNoticeStore.tsx");
+const result = require("set").fileFinishedImporting("stores/channel_notices/HubLinkNoticeStore.tsx");
 
 export default hubLinkNoticeStore;

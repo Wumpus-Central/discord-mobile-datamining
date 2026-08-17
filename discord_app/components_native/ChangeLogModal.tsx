@@ -1,31 +1,29 @@
 // discord_app/components_native/ChangeLogModal.tsx
-import importAllResult from "useWindowDimensions";
-import { View } from "Button";
-import { AnalyticEvents } from "ME";
-import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY";
-import jsxProd from "createStandardNavigationFactories";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { 14851__ } from "../../_runtime/metro/14851__.js";
-import { ModalActionCreators } from "../actions/ModalActionCreators.tsx";
-import { NavigationStack } from "../design/components/Navigator/native/Navigator.native.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
-import { LHeading } from "ChangeLogStandardTemplate.tsx";
-import { VideoComponent } from "common/Video.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import NavigationStack from "NavigationStack" /* 6312 */;
+import LHeadingDefault from "LHeading" /* 8302 */;
+import VideoComponentDefault from "VideoComponent" /* 9018 */;
+import _modDef14851 from "module_14851" /* 14851 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-let require = arg1;
+require = arg1;
 class ChangeLogScreen {
   constructor(arg0) {
     fn = global.onClose;
     changelog = undefined;
     loaded = undefined;
-    useNavigation = undefined;
+    closure_2 = undefined;
     tmp = changelog;
-    tmp2 = useNavigation;
+    tmp2 = closure_2;
     obj = require("createCacheKey");
-    legacyClassComponentStyles = obj.useLegacyClassComponentStyles(jsxs);
+    legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_10);
     obj2 = require("useChangelog");
     currentChangelog = obj2.useCurrentChangelog();
     changelog = currentChangelog.changelog;
@@ -41,7 +39,7 @@ class ChangeLogScreen {
     }
     tmpResult = require("createStandardNavigationFactories");
     navigation = tmpResult.useNavigation();
-    useNavigation = navigation;
+    closure_2 = navigation;
     if (null == fn) {
       fn = function o() {
         return navigation.goBack();
@@ -50,23 +48,23 @@ class ChangeLogScreen {
     items = [, ];
     items[0] = changelog;
     items[1] = navigation;
-    effect = __esModule.useEffect(() => {
+    effect = closure_3.useEffect(() => {
       if (null != changelog) {
         let obj = { headerTitle: null };
         obj[0] = function headerTitle() {
           let obj = { title: null, subtitle: null };
-          const intl = outer1_0(outer1_2[13]).intl;
-          obj[0] = intl.string(outer1_0(outer1_2[13]).t.LRmNAl);
-          const intl2 = outer1_0(outer1_2[13]).intl;
+          const intl = closure_1_0(closure_1_2[13]).intl;
+          obj[0] = intl.string(closure_1_0(closure_1_2[13]).t.LRmNAl);
+          const intl2 = closure_1_0(closure_1_2[13]).intl;
           if (null != date.date) {
             if ("" !== tmp4.date) {
-              let toDateResult = outer1_1(outer1_2[23])(tmp4.date).toDate();
-              const obj2 = outer1_1(outer1_2[23])(tmp4.date);
+              let toDateResult = closure_1_1(closure_1_2[23])(tmp4.date).toDate();
+              const obj2 = closure_1_1(closure_1_2[23])(tmp4.date);
             }
             obj = { date: null };
             obj[0] = toDateResult;
             obj[1] = intl2.formatToPlainString(tmp3, obj);
-            return outer1_7(outer1_0(outer1_2[22]).NavigatorHeader, obj);
+            return closure_1_7(closure_1_0(closure_1_2[22]).NavigatorHeader, obj);
           }
           toDateResult = new Date();
         };
@@ -76,10 +74,10 @@ class ChangeLogScreen {
     items1 = [, ];
     items1[0] = loaded;
     items1[1] = changelog;
-    effect1 = __esModule.useEffect(() => {
+    effect1 = closure_3.useEffect(() => {
       if (loaded) {
         if (null != changelog) {
-          return () => outer1_1(outer1_2[24]).markChangelogAsSeen(closure_0.id, closure_0.date);
+          return () => closure_1_1(closure_1_2[24]).markChangelogAsSeen(closure_0.id, closure_0.date);
         }
       }
     }, items1);
@@ -129,24 +127,24 @@ class ChangeLogScreen {
   }
 }
 function hideChangeLog() {
-  ModalActionCreators.popWithKey(CHANGELOG_MODAL_KEY);
+  _modDef5260.popWithKey(CHANGELOG_MODAL_KEY);
 }
 let c3 = importAllResult;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c9 = 0.5625;
 createCacheKey = { video: { alignSelf: "center" }, videoWrapper: { marginBottom: 8 }, videoSpecial: null, videoOverlay: null, playButton: null, playIcon: null, empty: null };
-createCacheKey = { borderRadius: require("Themes").radii.xs, overflow: "hidden" };
+createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", width: "100%", height: "100%" };
-createCacheKey[4] = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
+createCacheKey[4] = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
 createCacheKey[5] = { width: 21, height: 21 };
 createCacheKey[6] = { width: "100%", height: 240, alignItems: "center", paddingTop: 48 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_10 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 let obj2 = { bulletPoint: null, listItem: null, listText: null, listItemContent: null };
-let obj1 = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
-obj2[0] = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
+let obj1 = { position: "absolute", top: "50%", left: "50%", marginLeft: -28, marginTop: -28, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: 56, height: 56 };
+obj2[0] = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 obj2[1] = { flexDirection: "row", marginLeft: 4, marginBottom: 8 };
-createCacheKey = { color: require("Themes").colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT, fontSize: 14, lineHeight: 18, flex: 1 };
 obj2[2] = createCacheKey;
 obj2[3] = { flexDirection: "column", flex: 1 };
 let closure_11 = createCacheKey.createLegacyClassComponentStyles(obj2);
@@ -155,14 +153,14 @@ class ListItem extends PureComponent {
 }
 ListItem.prototype["render"] = function render() {
   const children = this.props.children;
-  const tmp = callback2(this.context);
+  const tmp = callback3(this.context);
   let obj = { style: tmp.listItem, children: null };
   obj = { style: tmp.bulletPoint };
   const items = [callback(View, obj), ];
   obj = { style: tmp.listText, children: null };
   let childrenResult = children;
   if (typeof children === "function") {
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp.listText;
     childrenResult = children(obj1);
   }
@@ -178,17 +176,13 @@ class ChangeLog extends PureComponent2 {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.mountedAt = 0;
-    applyArgumentsResult.ref = __esModule.createRef();
+    applyArgumentsResult.ref = closure_3.createRef();
     applyArgumentsResult.maxScrolledPercentage = 0;
     applyArgumentsResult.state = { ytVideoReady: false };
     applyArgumentsResult.handleScroll = function handleScroll(contentOffset) {
       applyArgumentsResult.maxScrolledPercentage = Math.min(Math.max(applyArgumentsResult.maxScrolledPercentage, (contentOffset.contentOffset.y + contentOffset.layoutMeasurement.height) / contentOffset.contentSize.height), 1);
     };
     applyArgumentsResult.playVideo = function playVideo() {
-      let height;
-      let image;
-      let video;
-      let width;
       let obj = applyArgumentsResult;
       const props = applyArgumentsResult.props;
       ({ video, image } = props.changeLog);
@@ -205,10 +199,10 @@ class ChangeLog extends PureComponent2 {
         obj = { uri: null };
         obj[0] = image;
       }
-      obj.track(outer1_5.CHANGE_LOG_VIDEO_INTERACTED);
+      obj.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
       const current = obj.ref.current;
       if (null != current) {
-        const obj1 = { initialSources: null, disableDownload: true, shareable: false, analyticsSource: "Change Log", originViewOrOriginLayout: null };
+        obj1 = { initialSources: null, disableDownload: true, shareable: false, analyticsSource: "Change Log", originViewOrOriginLayout: null };
         const obj2 = {};
         const merged = Object.assign(obj);
         obj2.width = width;
@@ -216,8 +210,8 @@ class ChangeLog extends PureComponent2 {
         const items = [obj2];
         obj1[0] = items;
         obj1[4] = current;
-        applyArgumentsResult(outer1_2[9]).openMediaModal(obj1);
-        const obj4 = applyArgumentsResult(outer1_2[9]);
+        applyArgumentsResult(closure_1_2[9]).openMediaModal(obj1);
+        const obj4 = applyArgumentsResult(closure_1_2[9]);
       }
     };
     return applyArgumentsResult;
@@ -255,20 +249,14 @@ prototype["track"] = function track(arg0) {
       const merged1 = Object.assign(obj);
       tmp10 = obj;
     }
-    expandEventProperties.track(arg0, tmp10);
-    const obj2 = expandEventProperties;
+    expandEventPropertiesDefault.track(arg0, tmp10);
+    const obj2 = expandEventPropertiesDefault;
   }
 };
 prototype["renderVideo"] = function renderVideo() {
-  let changeLog;
-  let height;
-  let image;
-  let onClose;
-  let video;
-  let youtube_video_id;
   let self = this;
   self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback2(this.context);
   const props = this.props;
   ({ changeLog, height, onClose } = props);
   ({ video, image, youtube_video_id } = changeLog);
@@ -281,13 +269,13 @@ prototype["renderVideo"] = function renderVideo() {
       obj = { style: null, onAccessibilityEscape: null, children: null };
       obj[0] = tmp.videoWrapper;
       obj[1] = onClose;
-      const obj1 = { height: null, play: false, videoId: null, onReady: null, useLocalHTML: true };
+      obj1 = { height: null, play: false, videoId: null, onReady: null, useLocalHTML: true };
       obj1[0] = height;
       obj1[2] = youtube_video_id;
       obj1[3] = function onReady() {
         return self.setState({ ytVideoReady: true });
       };
-      const items = [callback(14851__, obj1), ];
+      const items = [callback(_modDef14851, obj1), ];
       let tmp6Result = null;
       if (!tmp2) {
         const obj2 = { style: null, source: null };
@@ -318,9 +306,9 @@ prototype["renderVideo"] = function renderVideo() {
   const intl = self(1236).intl;
   obj6[7] = intl.string(self(1236).t.zHeo07);
   obj6[8] = function onPress() {
-    self.track(outer1_5.CHANGE_LOG_VIDEO_INTERACTED);
+    self.track(closure_1_5.CHANGE_LOG_VIDEO_INTERACTED);
   };
-  const items1 = [callback(VideoComponent, obj6), ];
+  const items1 = [callback(VideoComponentDefault, obj6), ];
   let tmp12Result = null;
   if (null != video) {
     const obj7 = { accessibilityLabel: "Play Video", accessibilityRole: "button", style: null, onPress: null, children: null };
@@ -346,19 +334,21 @@ prototype["render"] = function render() {
   const merged = Object.assign(this.props);
   obj.video = this.renderVideo();
   obj.onScroll = this.handleScroll;
-  return callback(LHeading, obj);
+  return callback(LHeadingDefault, obj);
 };
 ChangeLog.contextType = require("ManaContext").ThemeContext;
-let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
-let result = require("ME").fileFinishedImporting("components_native/ChangeLogModal.tsx");
+let obj3 = { width: 7, height: 7, borderRadius: 3.5, marginRight: 13, marginTop: 7, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
+let result = require("set").fileFinishedImporting("components_native/ChangeLogModal.tsx");
 
 export default function ChangelogModal() {
   const screens = importAllResult.useMemo(() => {
     let obj = { CHANGELOG: null };
-    obj = { name: "CHANGELOG", headerLeft: null, render: null };
-    obj[1] = callback(table[22]).getHeaderCloseButton(closure_14);
-    obj[2] = function render() {
-      return callback(closure_13, { onClose: closure_14 });
+    obj = {
+      name: "CHANGELOG",
+      headerLeft: callback(table[22]).getHeaderCloseButton(closure_14),
+      render() {
+        return callback(closure_13, { onClose: closure_14 });
+      }
     };
     obj[0] = obj;
     return obj;

@@ -1,9 +1,9 @@
 // discord_app/modules/icymi/useICYMIItems.tsx
-import noop from "noop";
-import filterStaffGuild from "filterStaffGuild";
-import { MessageEmbedTypes } from "ICYMITypes.tsx";
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "filterStaffGuild" /* 9044 */;
 
-const require = arg1;
+require = arg1;
 function createItem(id, type, arg2) {
   type = type.type;
   if (MessageEmbedTypes.ICYMIItemTypes.MESSAGE === type) {
@@ -21,7 +21,7 @@ function createItem(id, type, arg2) {
         const _JSON5 = JSON;
         obj[5] = JSON.stringify(id.score_components);
         obj[6] = arg2;
-        let obj1 = obj;
+        obj1 = obj;
       }
       return obj1;
     }
@@ -85,28 +85,28 @@ function createItem(id, type, arg2) {
     return obj5;
   }
 }
-const result = require("MessageEmbedTypes").fileFinishedImporting("modules/icymi/useICYMIItems.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/useICYMIItems.tsx");
 
 export default function useICYMIItems() {
   let obj = stateFromStores1(589);
-  const items = [filterStaffGuild];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => store.getUnreadDisplayItems());
-  const items1 = [filterStaffGuild];
+  const items1 = [closure_4];
   stateFromStores1 = stateFromStores1(589).useStateFromStores(items1, () => store.getReadDisplayItems());
   const obj2 = stateFromStores1(589);
-  const items2 = [filterStaffGuild];
+  const items2 = [closure_4];
   const stateFromStores2 = stateFromStores1(589).useStateFromStores(items2, () => store.getNextIndexToHydrate());
   const obj3 = stateFromStores1(589);
-  const items3 = [filterStaffGuild];
+  const items3 = [closure_4];
   const stateFromStoresObject = stateFromStores1(589).useStateFromStoresObject(items3, () => store.getHydratedItems());
   const obj4 = stateFromStores1(589);
-  const items4 = [filterStaffGuild];
+  const items4 = [closure_4];
   const stateFromStores3 = stateFromStores1(589).useStateFromStores(items4, () => store.getMissingItems());
   const items5 = [stateFromStores1];
   const effect = React.useEffect(() => {
     stateFromStores1 = Date.now() + stateFromStores1.length;
-    outer1_1(outer1_2[4]).ackGravityItems(stateFromStores1.map((id) => {
-      let closure_0 = tmp - 1;
+    closure_1_1(closure_1_2[4]).ackGravityItems(stateFromStores1.map((id) => {
+      closure_0 = tmp - 1;
       return { id: id.id, timestamp: +closure_0 };
     }, true));
   }, items5);

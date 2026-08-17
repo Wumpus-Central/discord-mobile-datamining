@@ -1,5 +1,5 @@
 // discord_app/design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 let result = require("set").fileFinishedImporting("design/components/AccessibilityView/useAccessibilityViewIsModalToggle.native.tsx");
 
@@ -21,7 +21,7 @@ export default function useAccessibilityViewIsModalToggle(accessibilityViewIsMod
     if (tmp) {
       if (null == nativeID) {
         const _Error = Error;
-        const error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
+        error = new Error("Must have a unique nativeID when accessibilityViewIsModal is enabled.");
         throw error;
       } else if (ref.current !== tmp6) {
         ref.current = tmp6;

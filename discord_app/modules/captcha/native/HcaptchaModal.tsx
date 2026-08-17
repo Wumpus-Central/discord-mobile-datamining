@@ -1,28 +1,23 @@
 // discord_app/modules/captcha/native/HcaptchaModal.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import siteKey from "siteKey";
-import get_ActivityIndicator from "Text";
-import _getSystemLocale from "_getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "XLargeIcon";
-import createCacheKey from "createCacheKey";
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "_getSystemLocale" /* 1994 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 class HcaptchaModal {
   constructor(arg0) {
     onMessage = global.onMessage;
-    tmp = _objectWithoutProperties(global, closure_3);
-    tmp2 = jsxs();
+    tmp = closure_4(global, closure_3);
+    tmp2 = closure_13();
     tmp3 = onMessage;
     tmp4 = closure_2;
     obj = require("initialize");
     items = [];
-    items[0] = StyleSheet;
+    items[0] = closure_10;
     stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
     obj2 = require("useNavigation");
     navigation = obj2.useNavigation();
@@ -46,11 +41,11 @@ class HcaptchaModal {
     items1 = [];
     items1[0] = onMessage;
     stringResult = intl.string(require("getSystemLocale").t.wsoPhr);
-    callback = siteKey.useCallback(() => {
+    callback = closure_5.useCallback(() => {
       if (onMessage != null) {
         let obj = { nativeEvent: null };
         obj = { data: null };
-        obj[0] = onMessage(outer1_2[13]).CaptchaError.CANCEL;
+        obj[0] = onMessage(closure_1_2[13]).CaptchaError.CANCEL;
         obj[0] = obj;
         tmp(obj);
       }
@@ -91,7 +86,7 @@ class HcaptchaModal {
     obj5 = {};
     tmp9Result = require("siteKey");
     merged = Object.assign(tmp);
-    obj5.languageCode = StyleSheet.locale;
+    obj5.languageCode = closure_9.locale;
     obj5.onMessage = onMessage;
     obj4[1] = jsx(tmp9Result, obj5);
     items3[1] = jsx(tmp15, obj4);
@@ -107,8 +102,7 @@ class HcaptchaModal {
     obj8[1] = intl2.string(require("getSystemLocale").t.cpT0Cq);
     obj8[2] = callback;
     obj8[3] = tmp2.closeButtonHitArea;
-    obj9 = { color: null };
-    obj9[0] = require("Themes").colors.INTERACTIVE_ICON_DEFAULT;
+    obj9 = { color: require("Themes").colors.INTERACTIVE_ICON_DEFAULT };
     obj8[4] = jsx(require("XLargeIcon").XLargeIcon, obj9);
     obj6[2] = jsx(require("PressableBase").PressableOpacity, obj8);
     items3[2] = jsx(tmp15, obj6);
@@ -117,10 +111,10 @@ class HcaptchaModal {
   }
 }
 let closure_3 = ["onMessage", "onClose"];
-({ ActivityIndicator: closure_6, View: error, StyleSheet: metroImportAll } = get_ActivityIndicator);
+({ ActivityIndicator: closure_6, View: error, StyleSheet: closure_8 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" }, title: { textAlign: "center" }, closeButtonContainer: { position: "absolute", top: 0, left: 0, zIndex: 2 }, closeButtonHitArea: { minWidth: 44, minHeight: 44, justifyContent: "center", alignItems: "center" } });
 HcaptchaModal.modalConfig = { animation: require("ME").ModalAnimation.FADE };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
+const result = require("set").fileFinishedImporting("modules/captcha/native/HcaptchaModal.tsx");
 
 export default HcaptchaModal;

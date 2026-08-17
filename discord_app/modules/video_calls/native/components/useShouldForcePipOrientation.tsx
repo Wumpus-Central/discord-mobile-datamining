@@ -1,30 +1,26 @@
 // discord_app/modules/video_calls/native/components/useShouldForcePipOrientation.tsx
-import participantFromServer from "participantFromServer";
-import getParticipants from "getParticipants";
-import fetchFingerprint from "fetchFingerprint";
-import { OrientationLockState } from "items3";
-import ParticipantTypes from "ParticipantTypes";
-import { usePipVideoOrStream } from "../usePipVideoOrStream.tsx";
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 8687 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import { OrientationLockState } from "items3" /* 4481 */;
+import ParticipantTypes from "ParticipantTypes" /* 4544 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ isStreamParticipant: error, ParticipantTypes: metroImportAll } = ParticipantTypes);
-const result = require("fetchFingerprint").fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
+({ isStreamParticipant: error, ParticipantTypes: closure_8 } = ParticipantTypes);
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/useShouldForcePipOrientation.tsx");
 
 export const useShouldForcePipOrientation = function useShouldForcePipOrientation(channel) {
-  let activityLockOrientation;
-  let focusedEmbeddedActivityParticipant;
   channel = channel.channel;
   let OrientationType = dependencyMap;
-  const tmp = usePipVideoOrStream(channel.id);
-  const items = [getParticipants, fetchFingerprint];
+  const tmp = usePipVideoOrStreamDefault(channel.id);
+  const items = [closure_4, closure_5];
   const stateFromStores = channel(589).useStateFromStores(items, () => {
-    const participant = outer1_4.getParticipant(channel.id, outer1_5.getId());
+    const participant = closure_1_4.getParticipant(channel.id, closure_1_5.getId());
     let tmp2 = null;
     if (null != participant) {
       tmp2 = null;
-      if (participant.type === outer1_8.USER) {
+      if (participant.type === closure_1_8.USER) {
         tmp2 = null;
         if (null != participant.streamId) {
           tmp2 = participant;
@@ -34,12 +30,12 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
     return tmp2;
   });
   let obj = channel(589);
-  let obj2 = fetchFingerprint;
-  const items1 = [participantFromServer, getParticipants];
+  let obj2 = closure_5;
+  const items1 = [closure_3, closure_4];
   const stateFromStoresObject = channel(589).useStateFromStoresObject(items1, () => {
-    let obj = outer1_3;
-    const currentEmbeddedActivity = outer1_3.getCurrentEmbeddedActivity();
-    const selectedParticipant = outer1_4.getSelectedParticipant(channel.id);
+    let obj = closure_1_3;
+    const currentEmbeddedActivity = closure_1_3.getCurrentEmbeddedActivity();
+    const selectedParticipant = closure_1_4.getSelectedParticipant(channel.id);
     let applicationId;
     if (currentEmbeddedActivity != null) {
       applicationId = currentEmbeddedActivity.applicationId;
@@ -56,7 +52,7 @@ export const useShouldForcePipOrientation = function useShouldForcePipOrientatio
       if (id === obj2.getEmbeddedActivityParticipantId(obj)) {
         tmp4 = selectedParticipant;
       }
-      obj2 = channel(outer1_2[7]);
+      obj2 = channel(closure_1_2[7]);
     }
     obj = { focusedEmbeddedActivityParticipant: tmp4, activityLockOrientation: null };
     let pipOrientationLockStateForApp = null;

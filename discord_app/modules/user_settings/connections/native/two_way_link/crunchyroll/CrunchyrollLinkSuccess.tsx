@@ -1,24 +1,21 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/09806_registerAsset.js";
-import { SafeAreaPaddingView } from "../../../../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { styles } from "../TwoWayLinkStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import styles from "styles" /* 9756 */;
+import registerAssetDefault from "registerAsset" /* 9806 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ image: { width: 232, height: 108, marginBottom: 24 } });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/crunchyroll/CrunchyrollLinkSuccess.tsx");
 
 export default function CrunchyrollLinkDiscordSuccess(onClose) {
   let obj = styles;
@@ -26,7 +23,7 @@ export default function CrunchyrollLinkDiscordSuccess(onClose) {
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   const tmp = callback3();
-  const items = [callback(closure_3, { source: registerAsset, style: callback3().image }), , ];
+  const items = [callback(closure_3, { source: registerAssetDefault, style: callback3().image }), , ];
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: twoWayLinkStyles.title, children: null };
   const intl = getSystemLocale.intl;
   obj2[3] = intl.string(getSystemLocale.t.Fnvxvk);

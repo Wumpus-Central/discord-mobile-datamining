@@ -1,33 +1,23 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/Messages.tsx
-import importAllResult from "useIsMobileVisualRefreshExperimentEnabled";
-import { View } from "useCommonTriggerPoint";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import jsxProd from "getRootNavigationRef";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "_handleConnectionOpen" /* 4495 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null };
-  obj = { flex: 1, backgroundColor: Themes.colors.PANEL_BG };
+  obj = { flex: 1, backgroundColor: ThemesDefault.colors.PANEL_BG };
   obj[0] = obj;
   return obj;
 });
 let closure_10 = { code: "function MessagesTsx1(event){const{scrollPosition,handleGuildsNavigationScroll}=this.__closure;scrollPosition.set(event.contentOffset.y);handleGuildsNavigationScroll(event.contentOffset.y,event.contentSize.height,event.layoutMeasurement.height);}" };
 const memoResult = importAllResult.memo(function Messages(style) {
-  let headerSize;
-  let list;
-  let listItemHeight;
-  let listItemSizes;
-  let listItemSuggestedFriendHeight;
-  let listLeft;
-  let listTop;
-  let recycleItems;
   let sharedValue;
   let dataKey;
   let sections;
@@ -35,7 +25,7 @@ const memoResult = importAllResult.memo(function Messages(style) {
   const tmp = callback2();
   let obj = sharedValue(sections[9]);
   sharedValue = obj.useSharedValue(0);
-  let obj1 = sharedValue(sections[10]);
+  obj1 = sharedValue(sections[10]);
   const youBarTotalHeight = obj1.useYouBarTotalHeight();
   let obj2 = sharedValue(sections[11]);
   const sum = youBarTotalHeight + obj2.useMobileQuestDockHeight();
@@ -61,7 +51,7 @@ const memoResult = importAllResult.memo(function Messages(style) {
   const effect = externalScrollEventHandler.useEffect(() => {
     if (null != dataKey) {
       if (!obj7.isAndroid()) {
-        if (!outer1_5.useReducedMotion) {
+        if (!closure_1_5.useReducedMotion) {
           let tmp5Result = tmp5(tmp6[21]);
           const rootNavigationRef = tmp5Result.getRootNavigationRef();
           let tmp2 = null != rootNavigationRef && rootNavigationRef.isReady();
@@ -88,7 +78,7 @@ const memoResult = importAllResult.memo(function Messages(style) {
     sharedValue(sections[24]).trackAppUIViewed();
     const obj = sharedValue(sections[24]);
     const reduced = sections.reduce((arg0, arg1) => arg0 + arg1, 0);
-    dataKey(sections[25]).recordRender(reduced, outer1_6.isConnected());
+    dataKey(sections[25]).recordRender(reduced, closure_1_6.isConnected());
   });
   const tmp18 = dataKey(sections[19])("Messages");
   externalScrollEventHandler = sharedValue(sections[26]).useExternalScrollEventHandler({ id: "messages" });
@@ -143,6 +133,6 @@ const memoResult = importAllResult.memo(function Messages(style) {
   obj[1] = callback(View, obj1);
   return callback(sharedValue(sections[7]).AnalyticsLocationProvider, obj);
 });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/Messages.tsx");
 
 export default memoResult;

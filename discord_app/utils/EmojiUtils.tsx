@@ -1,30 +1,18 @@
 // discord_app/utils/EmojiUtils.tsx
-import closure_3 from "set";
-import createChannelRecord from "createChannelRecord";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Permissions } from "ME";
-import set from "set";
-import set from "getUncachedChannelPermissions";
-import { EmojiTypes } from "../modules/emojis/EmojiTypes.tsx";
-import { getAvatarURL } from "AvatarUtils.tsx";
-import { getURL } from "EmojiUtilsPlatformed.native.tsx";
-import { fit } from "ImageUtils.tsx";
-import { getPremiumPlanItem } from "PremiumUtils.tsx";
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import fit from "fit" /* 1491 */;
+import EmojiTypes from "EmojiTypes" /* 4037 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import getURLDefault from "getURL" /* 7530 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { Permissions } from "ME" /* 676 */;
+import set from "set" /* 1925 */;
 
-let EmojiDisabledReasons;
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getEmojiUnavailableReason(intention) {
-  let channel;
-  let emoji;
-  let guildId;
   ({ emoji, channel, guildId } = intention);
   if (guildId === undefined) {
     guildId = undefined;
@@ -123,7 +111,7 @@ function getEmojiUnavailableReason(intention) {
             }
             return PREMIUM_LOCKED;
           }
-          obj = getPremiumPlanItem;
+          obj = getPremiumPlanItemDefault;
           tmp27 = importDefault;
         }
       }
@@ -136,16 +124,16 @@ function getEmojiUnavailableReason(intention) {
 function _getEmojiColors() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       const obj2 = v0(table[10]);
       yield obj2.getEmojiColors(closure_0);
       return arg1;
     })();
   });
-  const _getEmojiColors = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -184,8 +172,8 @@ export default {
     }
     return tmp2;
   },
-  filterUnsupportedEmojis: require("getURL").filterUnsupportedEmojis,
-  getURL: require("getURL").getURL,
+  filterUnsupportedEmojis: getURLDefault.filterUnsupportedEmojis,
+  getURL: getURLDefault.getURL,
   isInternalEmojiForGuildId(type) {
     let tmp = null != type && null != arg1;
     if (tmp) {
@@ -207,9 +195,6 @@ export default {
     return tmp;
   },
   getEmojiUnavailableReasons(arg0) {
-    let channel;
-    let guildId;
-    let intention;
     ({ channel, guildId, intention } = arg0);
     const emojisDisabled = new Set();
     const emojisUnfiltered = [];
@@ -273,9 +258,6 @@ export default {
     return set.has(getEmojiUnavailableReason(intention));
   },
   isEmojiCategoryNitroLocked(categoryEmojis) {
-    let channel;
-    let guildId;
-    let intention;
     categoryEmojis = categoryEmojis.categoryEmojis;
     let flag = false;
     let num = 0;
@@ -321,13 +303,13 @@ export default {
   }
 };
 export const countEmoji = function countEmoji(arr) {
-  let closure_0 = arg1;
-  let c1 = 0;
-  let c2 = 0;
-  let c3 = 0;
-  let c4 = 0;
-  let c5 = 0;
-  let c6 = 0;
+  closure_0 = arg1;
+  c1 = 0;
+  c2 = 0;
+  c3 = 0;
+  c4 = 0;
+  c5 = 0;
+  c6 = 0;
   const item = arr.forEach((id) => {
     if (null != id.id) {
       if (id.type === callback(table[6]).EmojiTypes.GUILD) {
@@ -344,7 +326,7 @@ export const countEmoji = function countEmoji(arr) {
         }
       }
       if (id.animated) {
-        getUncachedChannelPermissions = getUncachedChannelPermissions + 1;
+        closure_6 = closure_6 + 1;
       }
     } else {
       closure_1 = closure_1 + 1;
@@ -363,8 +345,6 @@ export const getEmojiColors = function getEmojiColors() {
   return applyArgumentsResult;
 };
 export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
-  let animated;
-  let id;
   let num = arg1;
   if (arg1 === undefined) {
     num = 32;
@@ -378,10 +358,10 @@ export const getEmojiUrl = function getEmojiUrl(arg0, arg1) {
       animated = false;
     }
     obj[2] = animated;
-    let emojiURL = getAvatarURL.getEmojiURL(obj);
-    const obj2 = getAvatarURL;
+    let emojiURL = getAvatarURLDefault.getEmojiURL(obj);
+    const obj2 = getAvatarURLDefault;
   } else {
-    obj = getURL;
+    obj = getURLDefault;
     emojiURL = obj.getURL(tmp);
   }
   return emojiURL;

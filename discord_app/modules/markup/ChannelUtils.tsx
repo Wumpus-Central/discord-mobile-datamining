@@ -1,10 +1,9 @@
 // discord_app/modules/markup/ChannelUtils.tsx
-import createChannelRecord from "createChannelRecord";
+import set from "set" /* 2 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
 
-let c0;
-let closure_1;
 ({ isGuildSelectableChannelType: c0, isGuildVocalChannelType: closure_1 } = createChannelRecord);
-const result = require("set").fileFinishedImporting("modules/markup/ChannelUtils.tsx");
+const result = set.fileFinishedImporting("modules/markup/ChannelUtils.tsx");
 
 export const isChannelTypeMentionable = function isChannelTypeMentionable(type) {
   let tmp = callback(type);

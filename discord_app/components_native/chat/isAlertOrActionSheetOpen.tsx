@@ -1,22 +1,22 @@
 // discord_app/components_native/chat/isAlertOrActionSheetOpen.tsx
-import setContent from "setContent";
-import getAlert from "getAlert";
-import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
+import useAlertStore2 from "useAlertStore" /* 4657 */;
+import closure_2 from "setContent" /* 4086 */;
+import closure_3 from "getAlert" /* 10737 */;
 
-const require = arg1;
-const result = require("useAlertStore").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("components_native/chat/isAlertOrActionSheetOpen.tsx");
 
 export const isAlertOrActionSheetOpen = function isAlertOrActionSheetOpen(selectedChannelId) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = setContent;
+    obj = closure_2;
   }
   let obj2 = arg2;
   if (arg2 === undefined) {
-    obj2 = getAlert;
+    obj2 = closure_3;
   }
   let tmp = null != obj.getContent();
-  const useAlertStore = useAlertStore.useAlertStore;
+  const useAlertStore = useAlertStore2.useAlertStore;
   const tmp2 = null != obj2.getAlert();
   if (!tmp) {
     tmp = tmp2;

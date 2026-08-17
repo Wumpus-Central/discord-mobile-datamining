@@ -1,6 +1,8 @@
 // discord_app/modules/phone/PhoneStore.tsx
-import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME";
-import { DeviceSettingsStore } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DEFAULT_COUNTRY_CODE_NAME from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
 
 function handleSetLocationMetadata(countryCode) {
   countryCode = countryCode.countryCode;
@@ -9,12 +11,13 @@ function handleSetLocationMetadata(countryCode) {
     if (tmp2 == null) {
       tmp2 = getDefaultCountryCode();
     }
-    let closure_3 = tmp2;
+    closure_3 = tmp2;
   }
 }
 const getDefaultCountryCode = DEFAULT_COUNTRY_CODE_NAME.getDefaultCountryCode;
 const getCountryCodeByAlpha2 = DEFAULT_COUNTRY_CODE_NAME.getCountryCodeByAlpha2;
 let closure_3 = getDefaultCountryCode();
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class PhoneStore extends DeviceSettingsStore {
 }
 const prototype = PhoneStore.prototype;
@@ -31,13 +34,13 @@ prototype["getCountryCode"] = function getCountryCode() {
 };
 PhoneStore.displayName = "PhoneStore";
 PhoneStore.persistKey = "PhoneStore";
-const phoneStore = new PhoneStore(require("dispatcher"), {
+const phoneStore = new PhoneStore(dispatcherDefault, {
   PHONE_SET_COUNTRY_CODE: function handleSetCountryCode(countryCode) {
     countryCode = countryCode.countryCode;
   },
   CONNECTION_OPEN: handleSetLocationMetadata,
   SET_LOCATION_METADATA: handleSetLocationMetadata
 });
-const result = require("dispatcher").fileFinishedImporting("modules/phone/PhoneStore.tsx");
+const result = set.fileFinishedImporting("modules/phone/PhoneStore.tsx");
 
 export default phoneStore;

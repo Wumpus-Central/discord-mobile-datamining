@@ -1,16 +1,20 @@
 // discord_app/modules/native_permissions/NativePermissionManager.tsx
-import { NativePermissionTypes } from "NativePermissionStatus";
-import { InputModes } from "ME";
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { NativePermissionsRequestOptions } from "NativePermissionUtils.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 4720 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
+import NativePermissionsRequestOptions from "NativePermissionsRequestOptions" /* 4840 */;
 
+const NativePermissionTypes = NativePermissionStatus.NativePermissionTypes;
+const InputModes = ME.InputModes;
+initializeDefault;
 class NativePermissionManager extends tmp2 {
 }
 const prototype = NativePermissionManager.prototype;
 prototype["isEnabled"] = function isEnabled() {
-  let isDesktopResult = set.isDesktop();
+  let isDesktopResult = set2.isDesktop();
   if (isDesktopResult) {
     isDesktopResult = tmp(500).isMac();
     const tmpResult = tmp(500);
@@ -23,14 +27,14 @@ prototype["isEnabled"] = function isEnabled() {
 };
 prototype["_initialize"] = function _initialize() {
   if (this.isEnabled()) {
-    const subscription = dispatcher.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
-    const obj = dispatcher;
+    const subscription = dispatcherDefault.subscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
+    const obj = dispatcherDefault;
   }
 };
 prototype["_terminate"] = function _terminate() {
   if (this.isEnabled()) {
-    dispatcher.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
-    const obj = dispatcher;
+    dispatcherDefault.unsubscribe("AUDIO_SET_MODE", this.handleAudioSetMode);
+    const obj = dispatcherDefault;
   }
 };
 prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
@@ -40,6 +44,6 @@ prototype["handleAudioSetMode"] = function handleAudioSetMode(mode) {
   }
 };
 const nativePermissionManager = new NativePermissionManager();
-const result = require("initialize").fileFinishedImporting("modules/native_permissions/NativePermissionManager.tsx");
+const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionManager.tsx");
 
 export default nativePermissionManager;

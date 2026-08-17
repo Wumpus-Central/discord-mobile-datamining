@@ -1,15 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import updateVoiceState from "updateVoiceState";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import { apply } from "../../../../../../_runtime/00012_apply.js";
+import apply from "apply" /* 12 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: c5, HAPPENING_NOW_CARD_WIDTH_SMALL_WITH_MARGIN: closure_6, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
-const result = require("HAPPENING_NOW_PANELS_CONTAINER_PADDING").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/happeningNowRankingUtils.tsx");
 
 export const cardSize = function cardSize(arg0) {
   return closure_6;

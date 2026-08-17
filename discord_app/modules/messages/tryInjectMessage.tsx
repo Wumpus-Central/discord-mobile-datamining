@@ -1,17 +1,14 @@
 // discord_app/modules/messages/tryInjectMessage.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { createMessage } from "createMessage.tsx";
-import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
+import hasFlag from "hasFlag" /* 1403 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import createMessageDefault from "createMessage" /* 7500 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ MessageFlags: c4, MessageStates: c5, MessageTypes: closure_6 } = ME);
 const map = new Map();
-let result = require("createMessage").fileFinishedImporting("modules/messages/tryInjectMessage.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/tryInjectMessage.tsx");
 
 export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, closure_0) {
   let obj = map;
@@ -22,7 +19,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
     obj[3] = id.author;
     obj[4] = constants.EPHEMERAL;
     obj[5] = constants2.SENT;
-    const tmp19 = createMessage(obj);
+    const tmp19 = createMessageDefault(obj);
     const messageRecord = createMinimalMessageRecord.createMessageRecord(tmp19);
     ({ applicationId: tmp21.applicationId, timestamp: tmp21.timestamp } = id);
     let tmp4 = messageRecord;
@@ -30,7 +27,7 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
   } else {
     tmp4 = null;
     if (null != id.applicationId) {
-      let obj1 = hasFlag;
+      obj1 = hasFlag;
       tmp4 = null;
       if (obj1.hasFlag(id.flags, constants.SENT_BY_SOCIAL_LAYER_INTEGRATION)) {
         tmp4 = null;
@@ -55,11 +52,11 @@ export const tryCreateInjectedMessage = function tryCreateInjectedMessage(id, cl
                   obj[4] = tmp3.EPHEMERAL;
                   obj[5] = constants2.SENT;
                   tmpResult = tmp(4803);
-                  const messageRecord1 = tmpResult.createMessageRecord(createMessage(obj));
+                  const messageRecord1 = tmpResult.createMessageRecord(createMessageDefault(obj));
                   ({ applicationId: tmp10.applicationId, timestamp: tmp10.timestamp } = id);
                   const result = obj.set(closure_0.id, id.id);
                   const tmp6 = importDefault;
-                  const tmp9 = createMessage(obj);
+                  const tmp9 = createMessageDefault(obj);
                   let num2 = closure_0.recipientFlags;
                   if (num2 == null) {
                     num2 = 0;

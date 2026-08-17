@@ -1,10 +1,12 @@
 // discord_app/modules/in_app_reports/getInAppReportsFeedbackOptions.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
 let obj = { COULD_NOT_FIND: "I couldn't find what I was looking for", CONFUSING_LANGUAGE: "I found the language confusing", OTHER: "Other" };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/getInAppReportsFeedbackOptions.tsx");
 
 export default function getInAppReportsFeedbackOptions() {
-  let obj = { label: null, code: 2, value: null };
+  obj = { label: null, code: 2, value: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.cigGCe);
   obj[2] = obj.COULD_NOT_FIND;

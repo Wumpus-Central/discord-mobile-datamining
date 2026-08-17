@@ -1,8 +1,10 @@
 // discord_app/modules/analytics/updateDynamicSuperProperties.tsx
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { trackHeartbeat } from "../analytics_sessions/SessionHeartbeatScheduler.tsx";
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
-let result = require("module_10501").fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
+import set from "set" /* 2 */;
+import encodeProperties from "encodeProperties" /* 503 */;
+import trackHeartbeat from "trackHeartbeat" /* 5054 */;
+import _modDef10501 from "module_10501" /* 10501 */;
+
+let result = set.fileFinishedImporting("modules/analytics/updateDynamicSuperProperties.tsx");
 
 export const updateDynamicSuperProperties = function updateDynamicSuperProperties() {
   let obj = trackHeartbeat;
@@ -22,7 +24,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
   }
   const obj2 = encodeProperties;
   const tmp = require;
-  const state = DiscordAppState.native.getState();
+  const state = _modDef10501.getState();
   let client_app_state;
   if (superProperties != null) {
     client_app_state = superProperties.client_app_state;
@@ -31,7 +33,7 @@ export const updateDynamicSuperProperties = function updateDynamicSuperPropertie
     obj.client_app_state = state;
   }
   if (Object.keys(obj).length > 0) {
-    const result = tmp(503).extendSuperProperties(obj);
-    const tmpResult = tmp(503);
+    const result = encodeProperties.extendSuperProperties(obj);
+    const tmpResult = encodeProperties;
   }
 };

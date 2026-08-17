@@ -1,7 +1,9 @@
 // discord_app/modules/rtc/TransientKeyStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 const map = new Map();
+const Store = initializeDefault.Store;
 class TransientKeyStore extends Store {
 }
 const prototype = TransientKeyStore.prototype;
@@ -27,7 +29,7 @@ prototype["isKeyVerified"] = function isKeyVerified(arg0, arg1) {
   return false;
 };
 TransientKeyStore.displayName = "TransientKeyStore";
-const transientKeyStore = new TransientKeyStore(require("dispatcher"), {
+const transientKeyStore = new TransientKeyStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },

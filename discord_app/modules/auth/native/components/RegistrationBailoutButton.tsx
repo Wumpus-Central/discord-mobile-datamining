@@ -1,13 +1,14 @@
 // discord_app/modules/auth/native/components/RegistrationBailoutButton.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_3 = createCacheKey.createStyles({ bail: { marginBottom: 16, marginLeft: "auto", marginRight: "auto" } });
-const result = require("createCacheKey").fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/RegistrationBailoutButton.tsx");
 
 export default function RegistrationBailoutButton(onBail) {
   const obj = { shrink: true, text: null, size: null, look: null, color: null, style: null, onPress: null };

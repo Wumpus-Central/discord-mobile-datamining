@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/defs/native/AccountSmsBackupSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserFlags } from "ME";
-import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY";
-import apply from "asyncRequireImpl";
-import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { MFAActionCreators } from "../../../../actions/MFAActionCreators.tsx";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
-import { getSMSBackupDisabledMessage } from "../../account/MFAUtils.tsx";
-import { showUserSettingsInputAlert } from "../../account/native/showUserSettingsInputAlert.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
+import _modDef14101 from "module_14101" /* 14101 */;
+import getSMSBackupDisabledMessage from "getSMSBackupDisabledMessage" /* 14151 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14153 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { UserFlags } from "ME" /* 676 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_5 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
+import apply from "apply" /* 12 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 let closure_6 = apply.debounce(function toggleSMS(user) {
   user = user.user;
   if (user.mfaSMSEnabled) {
@@ -24,10 +24,10 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
     const str2 = intl2.string(getSystemLocale.t["CIGa+7"]);
     let obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
     const formatted1 = intl3.string(getSystemLocale.t.wlfmlR).toUpperCase();
-    obj[0] = MFAActionCreators.disableSMS;
+    obj[0] = _modDef14101.disableSMS;
     obj[1] = formatted1;
     obj[2] = formatted;
-    showUserSettingsInputAlert(obj);
+    showUserSettingsInputAlertDefault(obj);
     const str3 = intl3.string(getSystemLocale.t.wlfmlR);
   } else {
     if (null != user) {
@@ -37,18 +37,18 @@ let closure_6 = apply.debounce(function toggleSMS(user) {
         const str = intl.string(getSystemLocale.t.DZQe23);
         obj = { title: null };
         obj[0] = formatted2;
-        const obj3 = AlertActionCreators;
-        AlertActionCreators.confirm(obj).then((arg0) => {
+        const obj3 = _modDef4656;
+        _modDef4656.confirm(obj).then((arg0) => {
           if (arg0) {
             callback(table[7]).enableSMS();
             const obj = callback(table[7]);
           }
         });
-        const confirmResult = AlertActionCreators.confirm(obj);
+        const confirmResult = _modDef4656.confirm(obj);
       }
     }
-    obj = ModalActionCreators;
-    const obj1 = { reason: null };
+    obj = _modDef5260;
+    obj1 = { reason: null };
     obj1[0] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
     obj.pushLazy(asyncRequireImpl(8626, dependencyMap.paths), obj1, closure_5);
     const tmp5 = asyncRequireImpl(8626, dependencyMap.paths);
@@ -61,7 +61,7 @@ apply = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useIsDisabled: function useAccountSMSBackupSettingIsDisabled() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let sMSBackupDisabledMessage = null;
     if (null != stateFromStores) {
@@ -71,7 +71,7 @@ apply = {
     return null != sMSBackupDisabledMessage;
   },
   useValue: function useAccountSMSBackupSettingToggleValue() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let flag;
     if (stateFromStores != null) {
@@ -92,7 +92,7 @@ apply = {
     }
   },
   useDescription: function useAccountSMSBackupSettingDescription() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let sMSBackupDisabledMessage = null;
     if (null != stateFromStores) {
@@ -104,6 +104,6 @@ apply = {
   usePredicate: require("useIs2FAEnabled").useIsTOTPEnabled
 };
 apply = createToggle.createToggle(apply);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");
 
 export default apply;

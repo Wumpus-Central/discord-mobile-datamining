@@ -1,21 +1,13 @@
 // discord_app/modules/rpc/server/commands/setActivity.tsx
-import addApplication from "addApplication";
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { StatusDisplayTypes } from "../../../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 9907 */;
+import closure_3 from "addApplication" /* 4478 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
 
-let RPC_LOCAL_SCOPE;
-let RPC_SCOPE_CONFIG;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ TransportTypes: c4, RPC_SCOPE_CONFIG, RPC_LOCAL_SCOPE } = RPC_SCOPE_CONFIG);
-({ ActivityGamePlatforms: c5, ActivityPartyPrivacy: closure_6, ActivityTypes: error, AnalyticEvents: metroImportAll, RPCErrors: c9 } = ME);
+({ ActivityGamePlatforms: c5, ActivityPartyPrivacy: closure_6, ActivityTypes: error, AnalyticEvents: closure_8, RPCErrors: c9 } = ME);
 let closure_10 = ["1402418171662569542"];
 let obj = {};
 obj = { scope: null, validation: null, handler: null };
@@ -24,11 +16,11 @@ let items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_AC
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(number) {
-  let obj = createRpcJoiSchemaObject(number);
+  let obj = createRpcJoiSchemaObjectDefault(number);
   obj = { pid: null, activity: null };
   const requiredResult = obj.required();
   obj[0] = number.number().min(0);
-  let obj4 = createRpcJoiSchemaObject(number);
+  let obj4 = createRpcJoiSchemaObjectDefault(number);
   obj = { name: null, state: null, state_url: null, details: null, details_url: null, timestamps: null, assets: null, party: null, secrets: null, buttons: null, instance: null, supported_platforms: null, type: null, status_display_type: null };
   const numberResult = number.number();
   const stringResult = number.string();
@@ -48,15 +40,15 @@ obj[1] = function validation(number) {
   const uriResult1 = number.string().uri();
   obj[4] = number.string().uri().min(1).max(256);
   const minResult4 = number.string().uri().min(1);
-  const obj1 = { start: null, end: null };
-  const obj19 = createRpcJoiSchemaObject(number);
+  obj1 = { start: null, end: null };
+  const obj19 = createRpcJoiSchemaObjectDefault(number);
   obj1[0] = number.number().min(1);
   const numberResult1 = number.number();
   obj1[1] = number.number().min(1);
   obj[5] = obj19.keys(obj1);
   const numberResult2 = number.number();
   const obj2 = { large_image: null, large_text: null, large_url: null, small_image: null, small_text: null, small_url: null, invite_cover_image: null };
-  const obj23 = createRpcJoiSchemaObject(number);
+  const obj23 = createRpcJoiSchemaObjectDefault(number);
   const stringResult5 = number.string();
   obj2[0] = number.string().min(1).max(300);
   const minResult5 = number.string().min(1);
@@ -82,7 +74,7 @@ obj[1] = function validation(number) {
   obj[6] = obj23.keys(obj2);
   const minResult11 = number.string().min(1);
   const obj3 = { id: null, size: null, privacy: null };
-  const obj41 = createRpcJoiSchemaObject(number);
+  const obj41 = createRpcJoiSchemaObjectDefault(number);
   const stringResult12 = number.string();
   obj3[0] = number.string().min(2).max(128);
   let arrayResult = number.array();
@@ -97,7 +89,7 @@ obj[1] = function validation(number) {
   obj[7] = obj41.keys(obj3);
   const defaultResult = number.number().default(constants.PRIVATE);
   obj4 = { match: null, join: null, spectate: null };
-  const obj49 = createRpcJoiSchemaObject(number);
+  const obj49 = createRpcJoiSchemaObjectDefault(number);
   const stringResult13 = number.string();
   obj4[0] = number.string().min(2).max(128);
   const minResult13 = number.string().min(2);
@@ -110,7 +102,7 @@ obj[1] = function validation(number) {
   arrayResult = number.array();
   const minResult15 = number.string().min(2);
   const obj5 = { label: null, url: null };
-  const obj58 = createRpcJoiSchemaObject(number);
+  const obj58 = createRpcJoiSchemaObjectDefault(number);
   const stringResult16 = number.string();
   const minResult16 = number.string().min(1);
   obj5[0] = number.string().min(1).max(32).required();
@@ -140,10 +132,6 @@ obj[1] = function validation(number) {
   return requiredResult.keys(obj);
 };
 obj[2] = function handler(socket) {
-  let buttons;
-  let party2;
-  let secrets;
-  let timestamps;
   socket = socket.socket;
   const args = socket.args;
   const pid = args.pid;
@@ -190,7 +178,7 @@ obj[2] = function handler(socket) {
       if (activity.party != null) {
         delete tmp3[tmp];
       }
-      let obj1 = socket(activity[8]);
+      obj1 = socket(activity[8]);
       let canLaunchFrameResult = null != application;
       if (canLaunchFrameResult) {
         canLaunchFrameResult = socket(tmp25[9]).canLaunchFrame(application);
@@ -280,16 +268,10 @@ obj[2] = function handler(socket) {
           }
         }
         const _Error = Error;
-        const error = new Error();
+        error = new Error();
         throw error;
       }
       return resolved.then((arg0) => {
-        let details;
-        let party;
-        let secrets;
-        let tmp5;
-        let tmp6;
-        let tmp7;
         [tmp5, tmp6, tmp7] = arg0;
         if (null != assets) {
           if (null != tmp5) {
@@ -365,7 +347,7 @@ obj[2] = function handler(socket) {
             obj.party_max = tmp20;
             obj.party_id = party.id;
           }
-          pid(activity[13]).track(outer1_8.ACTIVITY_UPDATED, obj);
+          pid(activity[13]).track(closure_1_8.ACTIVITY_UPDATED, obj);
           return activity;
         }
       });
@@ -380,6 +362,6 @@ obj[2] = function handler(socket) {
   }
 };
 obj[ME.RPCCommands.SET_ACTIVITY] = obj;
-const result = require("ME").fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/commands/setActivity.tsx");
 
 export default obj;

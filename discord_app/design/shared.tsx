@@ -1,20 +1,25 @@
 // discord_app/design/shared.tsx
-const result = require("isThemeLight").fileFinishedImporting("design/shared.tsx");
+import set from "set" /* 2 */;
+import _mod1350 from "module_1350" /* 1350 */;
+import isThemeLight from "isThemeLight" /* 1364 */;
+import WCAGContrastRatios from "WCAGContrastRatios" /* 1365 */;
 
-export const AccessibilityAnnouncer = require("module_1350").AccessibilityAnnouncer;
-export const AccessibilityPreferencesContext = require("module_1350").AccessibilityPreferencesContext;
-export const LOW_SATURATION_THRESHOLD = require("module_1350").LOW_SATURATION_THRESHOLD;
-export const ContrastPreference = require("module_1350").ContrastPreference;
-export const ForcedColorsPreference = require("module_1350").ForcedColorsPreference;
-export const MotionPreference = require("module_1350").MotionPreference;
-export const RoleStyle = require("module_1350").RoleStyle;
-export const AccessibilityPreferences = require("module_1350").AccessibilityPreferences;
-export const useThemeContext = require("module_1350").useThemeContext;
-export const ThemeContextType = require("module_1350").ThemeContextType;
-export const isThemeDark = require("isThemeLight").isThemeDark;
-export const isThemeLight = require("isThemeLight").isThemeLight;
-export const getContrastingColor = require("WCAGContrastRatios").getContrastingColor;
-export const darkenColor = require("WCAGContrastRatios").darkenColor;
-export const brightenColor = require("WCAGContrastRatios").brightenColor;
-export const setColorOpacity = require("WCAGContrastRatios").setColorOpacity;
-export const WCAGContrastRatios = require("WCAGContrastRatios").WCAGContrastRatios;
+const result = set.fileFinishedImporting("design/shared.tsx");
+
+export const AccessibilityAnnouncer = _mod1350.AccessibilityAnnouncer;
+export const AccessibilityPreferencesContext = _mod1350.AccessibilityPreferencesContext;
+export const LOW_SATURATION_THRESHOLD = _mod1350.LOW_SATURATION_THRESHOLD;
+export const ContrastPreference = _mod1350.ContrastPreference;
+export const ForcedColorsPreference = _mod1350.ForcedColorsPreference;
+export const MotionPreference = _mod1350.MotionPreference;
+export const RoleStyle = _mod1350.RoleStyle;
+export const AccessibilityPreferences = _mod1350.AccessibilityPreferences;
+export const useThemeContext = _mod1350.useThemeContext;
+export const ThemeContextType = _mod1350.ThemeContextType;
+export const isThemeDark = isThemeLight.isThemeDark;
+export const isThemeLight = isThemeLight.isThemeLight;
+export const getContrastingColor = WCAGContrastRatios.getContrastingColor;
+export const darkenColor = WCAGContrastRatios.darkenColor;
+export const brightenColor = WCAGContrastRatios.brightenColor;
+export const setColorOpacity = WCAGContrastRatios.setColorOpacity;
+export const WCAGContrastRatios = WCAGContrastRatios.WCAGContrastRatios;

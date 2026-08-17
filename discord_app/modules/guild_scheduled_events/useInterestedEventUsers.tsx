@@ -1,14 +1,17 @@
 // discord_app/modules/guild_scheduled_events/useInterestedEventUsers.tsx
-import { useMemo } from "noop";
-import scheduledEventSort from "scheduledEventSort";
-import { GuildScheduledEventUserResponses as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";
+import set2 from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import closure_3 from "scheduledEventSort" /* 4370 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-const result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");
+const useMemo = noop.useMemo;
+let closure_4 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventUserResponses;
+const result = set2.fileFinishedImporting("modules/guild_scheduled_events/useInterestedEventUsers.tsx");
 
 export default function useInterestedEventUsers(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let items = [stateFromStoresArray1];
   const items1 = [arg0];
   const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => Object.values(stateFromStoresArray1.getUsersForGuildEvent(closure_0, null)), items1);
@@ -24,14 +27,14 @@ export default function useInterestedEventUsers(arg0, arg1) {
         set.add(user_id.user_id);
       }
     }
-    let closure_0 = stateFromStoresArray1.reduce((arg0, user_id) => {
+    closure_0 = stateFromStoresArray1.reduce((arg0, user_id) => {
       arg0[user_id.user_id] = user_id;
       return arg0;
     }, {});
     const found = items.filter((arg0) => {
       let tmp2 = null == tmp;
       if (!tmp2) {
-        tmp2 = tmp.response === outer1_4.INTERESTED;
+        tmp2 = tmp.response === closure_1_4.INTERESTED;
       }
       return tmp2;
     });

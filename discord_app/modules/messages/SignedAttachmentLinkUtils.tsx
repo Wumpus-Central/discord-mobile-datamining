@@ -1,12 +1,12 @@
 // discord_app/modules/messages/SignedAttachmentLinkUtils.tsx
-import sendRequest from "sendRequest";
-import { Endpoints } from "ME";
-import set from "set";
-import { set } from "../../utils/Durations.tsx";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { isImageProxyURL } from "../image_proxy/ImageProxyUtils.tsx";
+import setDefault from "set" /* 687 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import isImageProxyURL from "isImageProxyURL" /* 4508 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let require = arg1;
+require = arg1;
 function shouldRefreshAttachmentUrl(searchParams) {
   searchParams = searchParams.searchParams;
   let str = searchParams.get("ex");
@@ -16,7 +16,7 @@ function shouldRefreshAttachmentUrl(searchParams) {
   const parsed = parseInt(str, 16);
   let result;
   if (!isNaN(parsed)) {
-    result = parsed * set.Millis.SECOND;
+    result = parsed * setDefault.Millis.SECOND;
   }
   let tmp5 = null == result;
   if (!tmp5) {
@@ -26,7 +26,7 @@ function shouldRefreshAttachmentUrl(searchParams) {
   return tmp5;
 }
 function isAttachmentExpired(url) {
-  const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(url.url);
+  const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(url.url);
   let tmp4 = null != toURLSafeResult;
   if (tmp4) {
     const searchParams = toURLSafeResult.searchParams;
@@ -38,7 +38,7 @@ function isAttachmentExpired(url) {
     const _isNaN = isNaN;
     let result;
     if (!isNaN(parsed)) {
-      result = parsed * set.Millis.SECOND;
+      result = parsed * setDefault.Millis.SECOND;
     }
     let tmp8 = null == result;
     if (!tmp8) {
@@ -53,10 +53,10 @@ function isEmbedMediaExpiredAttachment(image) {
   if (null == image) {
     return false;
   } else {
-    const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(image.url);
+    const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(image.url);
     let tmp11 = null != toURLSafeResult;
     if (tmp11) {
-      const require = toURLSafeResult;
+      require = toURLSafeResult;
       const _Array = Array;
       const hasItem = set1.has(toURLSafeResult.hostname);
       const arr = Array.from(set);
@@ -74,7 +74,7 @@ function isEmbedMediaExpiredAttachment(image) {
         const _isNaN = isNaN;
         let result;
         if (!isNaN(parsed)) {
-          result = parsed * set.Millis.SECOND;
+          result = parsed * setDefault.Millis.SECOND;
         }
         let tmp9 = null == result;
         if (!tmp9) {
@@ -110,13 +110,13 @@ function embedHasExpiredAttachmentUrl(image) {
 function _refreshAttachmentUrl() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       const HTTP = callback(530).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = outer1_4.ATTACHMENTS_REFRESH_URLS;
+      obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = closure_1_4.ATTACHMENTS_REFRESH_URLS;
       const obj2 = { attachment_urls: null };
       const items = [callback];
       obj2[0] = items;
@@ -126,7 +126,7 @@ function _refreshAttachmentUrl() {
       return arg1.body.refreshed_urls[0].refreshed;
     })();
   });
-  const _refreshAttachmentUrl = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -138,9 +138,9 @@ function _refreshAttachmentUrl() {
 function _maybeRefreshAttachmentUrl() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -168,15 +168,15 @@ function _maybeRefreshAttachmentUrl() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp2;
-              let closure_1;
-              const toURLSafeResult = outer1_1(outer1_2[4]).toURLSafe(closure_0);
+              closure_2 = tmp2;
+              closure_1 = undefined;
+              const toURLSafeResult = closure_1_1(closure_1_2[4]).toURLSafe(closure_0);
               if (null == toURLSafeResult) {
                 c4 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = tmp18;
                 return obj1;
-              } else if (outer1_8(toURLSafeResult)) {
+              } else if (closure_1_8(toURLSafeResult)) {
                 c3 = 1;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
@@ -197,7 +197,7 @@ function _maybeRefreshAttachmentUrl() {
                 obj3[0] = tmp18;
                 return obj3;
               }
-              const obj8 = outer1_1(outer1_2[4]);
+              const obj8 = closure_1_1(closure_1_2[4]);
             }
           } else if (arg0 === 1) {
             c4 = 3;
@@ -224,7 +224,7 @@ function _maybeRefreshAttachmentUrl() {
       }
     })();
   });
-  const _maybeRefreshAttachmentUrl = tmp;
+  closure_13 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -234,7 +234,7 @@ function _maybeRefreshAttachmentUrl() {
   return applyArgumentsResult;
 }
 let set = new Set(["/attachments/", "/ephemeral-attachments/"]);
-const HOUR = require("set").Millis.HOUR;
+const HOUR = setDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST, ];
 let substr;
 if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
@@ -242,7 +242,7 @@ if (window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT != null) {
 }
 items[1] = substr;
 function isAttachmentUrl(toURLSafeResult) {
-  let closure_0 = toURLSafeResult;
+  closure_0 = toURLSafeResult;
   const hasItem = set1.has(toURLSafeResult.hostname);
   const arr = Array.from(set);
   return hasItem && Array.from(set).some((arg0) => {
@@ -259,7 +259,7 @@ function getSignedAttachmentExpiration(searchParams) {
   const parsed = parseInt(str, 16);
   let result;
   if (!isNaN(parsed)) {
-    result = parsed * set.Millis.SECOND;
+    result = parsed * setDefault.Millis.SECOND;
   }
   return result;
 }
@@ -278,7 +278,7 @@ export const isExternalProxiedAttachmentUrl = function isExternalProxiedAttachme
   return isImageProxyURL.isImageProxyURL(toURLSafeResult);
 };
 export const removeSignedUrlParameters = function removeSignedUrlParameters(toURLSafeResult) {
-  toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(toURLSafeResult);
+  toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(toURLSafeResult);
   if (null == toURLSafeResult) {
     return toURLSafeResult;
   } else {
@@ -290,7 +290,7 @@ export const removeSignedUrlParameters = function removeSignedUrlParameters(toUR
     }
     return toURLSafeResult;
   }
-  const obj = isDiscordProxiedAssetUrl;
+  const obj = isDiscordProxiedAssetUrlDefault;
 };
 export { getSignedAttachmentExpiration };
 export const messageHasExpiredAttachmentUrl = function messageHasExpiredAttachmentUrl(attachments) {

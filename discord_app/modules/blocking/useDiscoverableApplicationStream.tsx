@@ -1,16 +1,14 @@
 // discord_app/modules/blocking/useDiscoverableApplicationStream.tsx
-import reset from "reset";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
+import closure_2 from "reset" /* 4652 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getDiscoverableApplicationStream(arg0) {
-  let obj;
-  let obj2;
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [reset, markAllUserIdListsStale];
+    const items = [closure_2, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -32,15 +30,15 @@ function getDiscoverableApplicationStream(arg0) {
   }
   return tmp6;
 }
-const result = require("ME").fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
+const result = require("set").fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");
 
 export default function useDiscoverableApplicationStream(arg0) {
   const _require = arg0;
-  let items = [reset, markAllUserIdListsStale];
+  let items = [closure_2, closure_3];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
-    const items = [outer1_2, outer1_3];
-    return outer1_5(closure_0, items);
+    const items = [closure_1_2, closure_1_3];
+    return closure_1_5(closure_0, items);
   }, items1);
 };
 export { getDiscoverableApplicationStream };

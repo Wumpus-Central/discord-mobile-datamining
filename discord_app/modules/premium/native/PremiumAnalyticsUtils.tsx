@@ -1,16 +1,13 @@
 // discord_app/modules/premium/native/PremiumAnalyticsUtils.tsx
-import ME from "ME";
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import set from "set" /* 2 */;
+import v1 from "v1" /* 514 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 ({ SubscriptionTypes: c3, PurchaseTypeToAnalyticsPaymentType: c4, PurchaseTypes: c5, AnalyticEvents: closure_6 } = ME);
 let obj = { WHAT_YOU_LOSE: 1, [1]: "WHAT_YOU_LOSE", CONFIRM: 2, [2]: "CONFIRM", PREVIEW: 3, [3]: "PREVIEW", DOWNGRADE_TO_TIER_0: 4, [4]: "DOWNGRADE_TO_TIER_0", MOBILE_SUBSCRIPTION_MANAGE: 5, [5]: "MOBILE_SUBSCRIPTION_MANAGE" };
-const result = require("getPremiumPlanItem").fileFinishedImporting("modules/premium/native/PremiumAnalyticsUtils.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/PremiumAnalyticsUtils.tsx");
 
 export const PaymentFlowStep = { SKU_SELECT: "sku_select", PLAN_SELECT: "plan_select", REVIEW: "review", CONFIRM: "confirm", MOBILE_WEB_REDIRECT_CHECKOUT: "mobile_web_redirect_checkout", YEARLY_UPSELL: "yearly_upsell", PREMIUM_UPSELL: "premium_upsell", EXTERNAL_PAYMENT: "external_payment", REWARD_SKU_SELECT: "reward_sku_select" };
 export const getBasePurchaseFlowAnalyticsFields = function getBasePurchaseFlowAnalyticsFields(isGift) {
@@ -43,7 +40,7 @@ export const getNewAnalyticsLoadId = function getNewAnalyticsLoadId() {
 export const CancellationFlowSteps = obj;
 export const STEP_ANALYTICS_NAMES = { [obj.WHAT_YOU_LOSE]: "What You're Losing", [obj.DOWNGRADE_TO_TIER_0]: "Downgrade To Tier 0", [obj.CONFIRM]: "Confirm Cancellation", [obj.PREVIEW]: "Preview Updated Subscription", [obj.MOBILE_SUBSCRIPTION_MANAGE]: "Mobile Subscription Manage" };
 export const trackPremiumSubscriptionCancellationStarted = function trackPremiumSubscriptionCancellationStarted(closure_0, analyticsLocations) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { location_stack: analyticsLocations };
   let id;
   if (closure_0 != null) {
@@ -80,12 +77,9 @@ export const trackPremiumSubscriptionCancellationStarted = function trackPremium
   obj.track(constants3.CANCELLATION_FLOW_STARTED, obj);
 };
 export const trackPremiumSubscriptionCancellationFlowStep = function trackPremiumSubscriptionCancellationFlowStep(subscription) {
-  let analyticsLocations;
-  let fromStep;
-  let toStep;
   subscription = subscription.subscription;
   ({ fromStep, toStep, analyticsLocations } = subscription);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { from_step: fromStep, to_step: toStep, location_stack: analyticsLocations };
   let id;
   if (subscription != null) {

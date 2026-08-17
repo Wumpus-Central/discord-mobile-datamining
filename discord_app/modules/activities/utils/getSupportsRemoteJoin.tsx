@@ -1,13 +1,15 @@
 // discord_app/modules/activities/utils/getSupportsRemoteJoin.tsx
-import { ActivityFlags } from "ME";
-import { hasFlag } from "hasFlag.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import hasFlagDefault from "hasFlag" /* 7260 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");
+const ActivityFlags = ME.ActivityFlags;
+const result = set.fileFinishedImporting("modules/activities/utils/getSupportsRemoteJoin.tsx");
 
 export const getSupportsRemoteJoin = function getSupportsRemoteJoin(applicationActivity) {
   let tmp = null != applicationActivity;
   if (tmp) {
-    tmp = hasFlag(applicationActivity, ActivityFlags.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN);
+    tmp = hasFlagDefault(applicationActivity, ActivityFlags.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN);
   }
   return tmp;
 };

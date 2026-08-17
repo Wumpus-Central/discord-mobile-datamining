@@ -1,5 +1,7 @@
 // discord_app/modules/activities/utils/getActivitySessionKey.tsx
-const result = require("set").fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/activities/utils/getActivitySessionKey.tsx");
 
 export const getActivitySessionKey = function getActivitySessionKey(application_id) {
   if (null == application_id.application_id) {

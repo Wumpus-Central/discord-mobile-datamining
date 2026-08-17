@@ -1,7 +1,9 @@
 // discord_common/js/shared/hooks/usePrevValue.tsx
-import { useRef } from "noop";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
 
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
+const useRef = noop.useRef;
+const result = set.fileFinishedImporting("../discord_common/js/shared/hooks/usePrevValue.tsx");
 
 export default function usePrevValue(current) {
   const tmp = useRef(null);

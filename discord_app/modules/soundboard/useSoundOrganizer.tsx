@@ -1,4 +1,6 @@
 // discord_app/modules/soundboard/useSoundOrganizer.tsx
+import set from "set" /* 2 */;
+
 function sortSoundsOldestToNewestCreationDate(value2) {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -28,7 +30,7 @@ function sortSoundsOldestToNewestCreationDate(value2) {
   }
   return sorted1;
 }
-const result = require("set").fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
+const result = set.fileFinishedImporting("modules/soundboard/useSoundOrganizer.tsx");
 
 export { sortSoundsOldestToNewestCreationDate };
 export function useSoundOrganizer() {

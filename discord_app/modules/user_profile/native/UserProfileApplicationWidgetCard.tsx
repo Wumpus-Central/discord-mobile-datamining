@@ -1,58 +1,45 @@
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetCard.tsx
-import GameProfileEmbedAction from "GameProfileEmbedAction";
-import get_ActivityIndicator from "importDefaultResult1";
-import _getSystemLocale from "_getSystemLocale";
-import fetchFingerprint from "fetchFingerprint";
-import jsxProd from "useStartAuthorize";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "_getSystemLocale" /* 1994 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
 const require = arg1;
 ({ Image: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { appIcon: null, header: null, divider: null, stillSyncing: null };
-createCacheKey = { width: 16, height: 16, borderRadius: require("Themes").radii.xs, overflow: "hidden" };
+createCacheKey = { width: 16, height: 16, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-let obj1 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: require("Themes").space.PX_24 };
-let obj2 = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: require("Themes").space.PX_24 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-let result = require("_getSystemLocale").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetCard.tsx");
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetCard.tsx");
 
 export default function UserProfileApplicationWidgetCard(userId) {
-  let canStartAuthorization;
-  let cardStyle;
-  let fetched;
-  let hasIdentity;
-  let isFirstWidget;
-  let isLoading;
-  let resolutionContext;
-  let surfaceConfigs;
-  let widget;
   userId = userId.userId;
   ({ widget, cardStyle, isFirstWidget } = userId);
   if (isFirstWidget === undefined) {
     isFirstWidget = false;
   }
   let stateFromStores;
-  let dependencyMap;
+  dependencyMap = undefined;
   let token;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = userId(589);
-  const items = [_getSystemLocale];
+  const items = [closure_7];
   stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   const items1 = [stateFromStores];
-  const memo = token.useMemo(() => userId(_undefined[14]).createCompactNumberFormat(stateFromStores), items1);
-  let obj1 = userId(589);
-  const items2 = [fetchFingerprint];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => outer1_8.getId() === userId);
+  const memo = token.useMemo(() => userId(12190).createCompactNumberFormat(stateFromStores), items1);
+  obj1 = userId(589);
+  const items2 = [closure_8];
+  const stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_8.getId() === userId);
   const tmp8 = stateFromStores(1367)("UserProfileCard");
   let obj2 = userId(7145);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(widget.applicationId);
@@ -143,8 +130,8 @@ export default function UserProfileApplicationWidgetCard(userId) {
     style: tmp.header,
     onPress() {
       let tmp;
-      if (_undefined != null) {
-        tmp = _undefined();
+      if (dependencyMap != null) {
+        tmp = dependencyMap();
       }
       return tmp;
     },

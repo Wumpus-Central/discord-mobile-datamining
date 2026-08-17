@@ -1,10 +1,13 @@
 // discord_app/modules/routing/RouteParam.tsx
-import { PSEUDO_GUILD_IDS } from "INVITE";
-import { StaticChannelRoutes } from "set";
-import { escapeRegExp } from "../../../_runtime/04217_escapeRegExp.js";
-import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import set from "set" /* 2 */;
+import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
+import INVITE from "INVITE" /* 677 */;
+import set2 from "set" /* 1398 */;
+import escapeRegExpDefault from "escapeRegExp" /* 4217 */;
 
-const result = require("getAuthenticationPath").fileFinishedImporting("modules/routing/RouteParam.tsx");
+const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
+const StaticChannelRoutes = set2.StaticChannelRoutes;
+const result = set.fileFinishedImporting("modules/routing/RouteParam.tsx");
 
 export const RouteParam = {
   guildId() {
@@ -20,7 +23,7 @@ export const RouteParam = {
     if (flag === undefined) {
       flag = false;
     }
-    const mapped = PSEUDO_GUILD_IDS.map(escapeRegExp);
+    const mapped = PSEUDO_GUILD_IDS.map(escapeRegExpDefault);
     const combined = "" + mapped.join("|") + "|\\d+";
     let flag2 = { optional: flag }.optional;
     if (flag2 === undefined) {
@@ -30,7 +33,7 @@ export const RouteParam = {
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(":" + escapeRegExp(str) + "(" + combined + ")" + str2);
+    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2);
     return unescapedPathParam;
   },
   channelId() {
@@ -47,7 +50,7 @@ export const RouteParam = {
       flag = false;
     }
     const items = [...StaticChannelRoutes];
-    const mapped = items.map(escapeRegExp);
+    const mapped = items.map(escapeRegExpDefault);
     const combined = "" + mapped.join("|") + "|\\d+";
     let flag2 = { optional: flag }.optional;
     if (flag2 === undefined) {
@@ -57,7 +60,7 @@ export const RouteParam = {
     if (flag2) {
       str2 = "?";
     }
-    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(":" + escapeRegExp(str) + "(" + combined + ")" + str2);
+    const unescapedPathParam = new getAuthenticationPath.UnescapedPathParam(":" + escapeRegExpDefault(str) + "(" + combined + ")" + str2);
     return unescapedPathParam;
   }
 };

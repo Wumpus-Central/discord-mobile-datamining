@@ -1,20 +1,14 @@
 // discord_app/modules/game_profile/native/components/GameProfileMedia.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NOOP } from "sum";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function ImageItem(index) {
-  let height;
-  let url;
-  let width;
   index = index.index;
   const sources = index.sources;
   const trackAction = index.trackAction;
@@ -22,7 +16,7 @@ function ImageItem(index) {
   const setMediaModalOpen = index.setMediaModalOpen;
   let ref;
   ({ url, width, height } = index);
-  const tmp = createCacheKey();
+  const tmp = callback();
   ref = setMediaModalOpen.useRef(null);
   const items = [sources, index, trackAction, onScrollToIndex, setMediaModalOpen];
   obj = {
@@ -54,12 +48,6 @@ function ImageItem(index) {
   return <closure_8 source={{ uri: url }} style={tmp.mediaImage} />;
 }
 function TrailerItem(active) {
-  let c8;
-  let height;
-  let posterUrl;
-  let tmp4;
-  let url;
-  let width;
   active = active.active;
   const index = active.index;
   const sources = active.sources;
@@ -67,15 +55,15 @@ function TrailerItem(active) {
   const onScrollToIndex = active.onScrollToIndex;
   const setMediaModalOpen = active.setMediaModalOpen;
   let ref;
-  let closure_7;
+  closure_7 = undefined;
   c8 = undefined;
   let ref1;
   ({ url, posterUrl, width, height } = active);
-  const tmp = createCacheKey();
+  const tmp = callback();
   ref = onScrollToIndex.useRef(null);
   closure_7 = onScrollToIndex.useRef(0);
   [tmp4, c8] = trackAction(onScrollToIndex.useState(0), 2);
-  const callback = onScrollToIndex.useCallback((current) => {
+  callback = onScrollToIndex.useCallback((current) => {
     closure_7.current = current;
   }, []);
   let obj = active(sources[9]);
@@ -130,48 +118,44 @@ function TrailerItem(active) {
   obj[3] = jsx(active(sources[9]).VideoComponent, { style: tmp.mediaVideo, source: { uri: url }, poster: posterUrl, paused: !active, muted: true, resizeMode: "cover", pauseWhileAppInactive: true, controls: ref1.current }, combined);
   return <tmp10 style={tmp.mediaVideo} source={{ uri: url }} poster={posterUrl} paused={!active} muted resizeMode="cover" pauseWhileAppInactive controls={ref1.current} />;
 }
-({ View: c5, ScrollView: closure_6, Image: error, Pressable: metroImportAll } = get_ActivityIndicator);
+({ View: c5, ScrollView: closure_6, Image: error, Pressable: closure_8 } = get_ActivityIndicator);
 let c11 = 1920;
 createCacheKey = { container: null, scrollView: null, scrollViewContent: null, mediaItem: null, mediaImage: null, mediaVideo: null };
-createCacheKey = { gap: require("Themes").space.PX_12, marginHorizontal: -require("Themes").space.PX_16 };
+createCacheKey = { gap: ThemesDefault.space.PX_12, marginHorizontal: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", overflow: "visible" };
-createCacheKey[2] = { gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-const obj1 = { gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-const merged = Object.assign(require("Themes").shadows.SHADOW_HIGH);
-createCacheKey[3] = { maxWidth: 366, maxHeight: 200, borderRadius: require("Themes").radii.lg, overflow: "hidden" };
+createCacheKey[2] = { gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+const obj1 = { gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
+createCacheKey[3] = { maxWidth: 366, maxHeight: 200, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[4] = { width: "100%", height: "100%", resizeMode: "cover" };
-let obj2 = { maxWidth: 366, maxHeight: 200, borderRadius: require("Themes").radii.lg, overflow: "hidden" };
-createCacheKey[5] = { width: "100%", height: "100%", backgroundColor: require("Themes").colors.BLACK };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj3 = { width: "100%", height: "100%", backgroundColor: require("Themes").colors.BLACK };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/game_profile/native/components/GameProfileMedia.tsx");
+let obj2 = { maxWidth: 366, maxHeight: 200, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+createCacheKey[5] = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const obj3 = { width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileMedia.tsx");
 
 export default function GameProfileMedia(game) {
-  let c6;
-  let c7;
-  let c8;
-  let c9;
   game = game.game;
   const trackAction = game.trackAction;
   let width;
   let obscured;
   let first;
-  let closure_5;
+  closure_5 = undefined;
   c6 = undefined;
   c7 = undefined;
   c8 = undefined;
   c9 = undefined;
   let ref;
   let first1;
-  let createCacheKey;
+  let callback;
   let memo;
   let memo1;
-  let closure_15;
-  let closure_16;
+  closure_15 = undefined;
+  closure_16 = undefined;
   let memo2;
-  let closure_18;
-  let tmp = createCacheKey();
+  closure_18 = undefined;
+  let tmp = callback();
   width = trackAction(width[11])().width;
   let obj = game(width[12]);
   obscured = obj.useObscuredSurface().obscured;
@@ -191,9 +175,9 @@ export default function GameProfileMedia(game) {
     return items;
   }, items), 2);
   first1 = tmp7[0];
-  createCacheKey = tmp9;
+  callback = tmp9;
   const items1 = [game, first1, width];
-  const callback = first.useCallback((nativeEvent) => {
+  callback = first.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.width);
   }, []);
   memo = first.useMemo(() => {
@@ -206,12 +190,10 @@ export default function GameProfileMedia(game) {
       }
       items = [];
       let arraySpreadResult = HermesBuiltin.arraySpread(trailers.map((application_id) => {
-        let id;
-        const obj = { type: "trailer", url: null, thumbnailUrl: null };
-        obj[1] = outer1_0(outer1_2[14]).getAssetURL(application_id.application_id, application_id.id, 1920, "mp4");
-        const obj2 = outer1_0(outer1_2[14]);
+        const obj = { type: "trailer", url: closure_1_0(closure_1_2[14]).getAssetURL(application_id.application_id, application_id.id, 1920, "mp4"), thumbnailUrl: null };
+        const obj2 = closure_1_0(closure_1_2[14]);
         ({ application_id, id } = application_id);
-        obj[2] = outer1_0(outer1_2[14]).getAssetURL(application_id, id, Math.min(closure_2, outer1_11), "webp");
+        obj[2] = closure_1_0(closure_1_2[14]).getAssetURL(application_id, id, Math.min(closure_2, closure_1_11), "webp");
         return obj;
       }), 0);
       let screenshotUrls = tmp.screenshotUrls;
@@ -238,7 +220,7 @@ export default function GameProfileMedia(game) {
     }
     obj[1] = url;
     obj[2] = arg1;
-    obj[3] = outer1_11;
+    obj[3] = closure_1_11;
     obj = { width: closure_11, height: closure_12, uri: uri.thumbnailUrl };
     obj[5] = obj;
     return obj;
@@ -246,8 +228,8 @@ export default function GameProfileMedia(game) {
   const items5 = [memo, first, memo1];
   memo2 = first.useMemo(() => {
     const diff = first - memo1;
-    let closure_0 = (diff - 2 * trackAction(width[6]).space.PX_16) / 2;
-    let closure_1 = memo1 + trackAction(width[6]).space.PX_12;
+    closure_0 = (diff - 2 * trackAction(width[6]).space.PX_16) / 2;
+    closure_1 = memo1 + trackAction(width[6]).space.PX_12;
     return memo.map((arg0, arg1) => Math.max(0, arg1 * closure_1 - closure_0));
   }, items5);
   const items6 = [memo2];

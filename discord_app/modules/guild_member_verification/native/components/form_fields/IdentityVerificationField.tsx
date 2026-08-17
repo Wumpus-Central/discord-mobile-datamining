@@ -1,21 +1,17 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx
-import "noop";
-import { View } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { MAX_RESULTS_PER_PAGE } from "../../../MemberVerificationTypes.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function BaseIdentityVerificationField(icon) {
-  let label;
-  let onPress;
-  let passesVerification;
   icon = icon.icon;
   ({ label, passesVerification, onPress } = icon);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   let tmp4 = null;
   if (null != icon) {
@@ -33,7 +29,7 @@ function BaseIdentityVerificationField(icon) {
     let tmp9 = obj;
   } else {
     obj[0] = tmp.ctaButton;
-    const obj1 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
+    obj1 = { variant: "primary", size: "sm", grow: true, text: null, onPress: null };
     const intl = tmp7(1236).intl;
     obj1[3] = intl.string(tmp7(1236).t["13ofGu"]);
     obj1[4] = onPress;
@@ -44,20 +40,19 @@ function BaseIdentityVerificationField(icon) {
   obj[1] = items;
   return closure_5(View, obj);
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, icon: null, label: null, verifiedContainer: null, ctaButton: null };
-createCacheKey = { padding: 8, marginTop: 8, borderRadius: require("Themes").radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { padding: 8, marginTop: 8, borderRadius: ThemesDefault.radii.sm, height: 48, flexDirection: "row", alignItems: "center", justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginLeft: 4, marginRight: 8 };
 createCacheKey[2] = { flex: 1, marginLeft: 4, lineHeight: 20 };
 createCacheKey[3] = { paddingVertical: 7, paddingHorizontal: 4, flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { flexGrow: 0, alignSelf: "center", paddingHorizontal: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/IdentityVerificationField.tsx");
 
 export default function IdentityVerificationField(arg0) {
-  let passesVerification;
-  let platform;
   ({ platform, passesVerification } = arg0);
   if (MAX_RESULTS_PER_PAGE.UserVerificationFieldPlatforms.EMAIL === platform) {
     const intl3 = tmp(1236).intl;
@@ -98,8 +93,7 @@ export default function IdentityVerificationField(arg0) {
     } else {
       fn = tmp(4200).UserVerificationFieldPlatforms.PHONE === platform ? (() => {
         let obj = callback2(paths[11]);
-        obj = { reason: null };
-        obj[0] = callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED;
+        obj = { reason: callback(paths[14]).ChangePhoneReason.GUILD_PHONE_REQUIRED };
         obj.pushLazy(callback(paths[13])(paths[12], paths.paths), obj);
       }) : (() => {
 

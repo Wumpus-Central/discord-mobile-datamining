@@ -1,27 +1,21 @@
 // discord_app/modules/captcha/native/CaptchaModal.tsx
-import noop from "noop";
-import get_ActivityIndicator from "trackRegTransition";
-import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore";
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import Background from "Background" /* 6950 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { doesRegistrationHaveIdentityType as closure_6 } from "useRegistrationUIStore" /* 15212 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ Keyboard: c4, View: c5 } = get_ActivityIndicator);
-({ RegisterTransitionSteps: error, RegistrationTransitionActionTypes: metroImportAll } = RegistrationTransitionActionTypes);
+({ RegisterTransitionSteps: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles((arg0) => {
   let paddingHorizontal = 8;
@@ -30,21 +24,11 @@ let closure_11 = createCacheKey.createStyles((arg0) => {
   }
   return { contentContainer: { alignItems: "center", paddingVertical: 8, paddingHorizontal }, description: { paddingBottom: 12, paddingTop: 4 } };
 });
-let result = require("useRegistrationUIStore").fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
+let result = require("set").fileFinishedImporting("modules/captcha/native/CaptchaModal.tsx");
 
 export default function CaptchaModal(arg0) {
-  let bodyText;
-  let noop;
-  let closure_4;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let dependencyMap;
-  let headerText;
-  let onReject;
-  let require;
   ({ onCaptchaVerify: require, onReject } = arg0);
-  ({ close: dependencyMap, sitekey: noop, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
+  ({ close: dependencyMap, sitekey: closure_3, captchaService: closure_4, headerText, bodyText, rqdata: closure_5, rqtoken: closure_6, userflow: closure_7 } = arg0);
   let navigation;
   let callback;
   const tmp2 = callback2(onReject(8582)());
@@ -63,7 +47,7 @@ export default function CaptchaModal(arg0) {
     let str = "Guild Join Captcha";
     if ("auth" === name) {
       str = "Guild Join Captcha";
-      if (outer1_6()) {
+      if (closure_1_6()) {
         str = "User Registration Captcha";
       }
     }
@@ -85,7 +69,7 @@ export default function CaptchaModal(arg0) {
     const intl2 = tmp3(1236).intl;
     bodyText = intl2.string(tmp3(1236).t["/CidxO"]);
   }
-  const obj1 = { startHeight: 900, startExpanded: true, children: null };
+  obj1 = { startHeight: 900, startExpanded: true, children: null };
   let obj2 = { children: null };
   obj[3] = bodyText;
   items2[1] = callback(Text.Text, obj);
@@ -96,11 +80,11 @@ export default function CaptchaModal(arg0) {
     onPress() {
       callback2();
       callback();
-      const result = outer1_0(outer1_2[15]).emitCaptchaDistributionMetric(closure_7);
-      let obj = outer1_0(outer1_2[15]);
-      let obj2 = onReject(outer1_2[16]);
-      const showCaptchaResult = onReject(outer1_2[16]).showCaptcha(closure_4, noop, closure_5);
-      onReject(outer1_2[16]).showCaptcha(closure_4, noop, closure_5).then((arg0) => {
+      const result = closure_1_0(closure_1_2[15]).emitCaptchaDistributionMetric(closure_7);
+      let obj = closure_1_0(closure_1_2[15]);
+      let obj2 = onReject(closure_1_2[16]);
+      const showCaptchaResult = onReject(closure_1_2[16]).showCaptcha(closure_4, closure_3, closure_5);
+      onReject(closure_1_2[16]).showCaptcha(closure_4, closure_3, closure_5).then((arg0) => {
         let obj = state;
         state = state.getState();
         let name;
@@ -112,14 +96,14 @@ export default function CaptchaModal(arg0) {
         }
         let tmp4 = "auth" === name;
         if (tmp4) {
-          tmp4 = outer1_6();
+          tmp4 = closure_1_6();
         }
         if (tmp4) {
           obj = { step: null, actionType: null };
-          obj[0] = outer1_7.CAPTCHA;
-          obj[1] = outer1_8.SUBMITTED;
-          outer1_0(outer1_2[17]).trackRegTransition(obj);
-          const obj2 = outer1_0(outer1_2[17]);
+          obj[0] = closure_1_7.CAPTCHA;
+          obj[1] = closure_1_8.SUBMITTED;
+          closure_1_0(closure_1_2[17]).trackRegTransition(obj);
+          const obj2 = closure_1_0(closure_1_2[17]);
         }
         callback(arg0, closure_6);
         const state1 = obj.getState();
@@ -132,14 +116,14 @@ export default function CaptchaModal(arg0) {
         }
         let tmp15 = "auth" === name1;
         if (tmp15) {
-          tmp15 = outer1_6();
+          tmp15 = closure_1_6();
         }
         if (tmp15) {
           obj = { step: null, actionType: null };
-          obj[0] = outer1_7.CAPTCHA;
-          obj[1] = outer1_8.SUCCESS;
-          outer1_0(outer1_2[17]).trackRegTransition(obj);
-          const obj4 = outer1_0(outer1_2[17]);
+          obj[0] = closure_1_7.CAPTCHA;
+          obj[1] = closure_1_8.SUCCESS;
+          closure_1_0(closure_1_2[17]).trackRegTransition(obj);
+          const obj4 = closure_1_0(closure_1_2[17]);
         }
       }).catch((arg0) => {
         if (closure_1 != null) {

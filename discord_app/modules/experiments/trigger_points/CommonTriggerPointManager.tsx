@@ -1,9 +1,10 @@
 // discord_app/modules/experiments/trigger_points/CommonTriggerPointManager.tsx
-import "initialize";
-import { commonTriggerPointConfiguration } from "OpenUserSettingsTriggerPoint.tsx";
-import { commonTriggerPointConfiguration } from "VoiceCallTriggerPoint.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import commonTriggerPointConfiguration from "commonTriggerPointConfiguration" /* 16120 */;
+import commonTriggerPointConfiguration2 from "commonTriggerPointConfiguration" /* 16547 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class CommonTriggerPointManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -15,14 +16,14 @@ const prototype = CommonTriggerPointManager.prototype;
 prototype["handleVoiceChannelSelect"] = function handleVoiceChannelSelect(guildId) {
   guildId = guildId.guildId;
   if (null != guildId.channelId) {
-    const VoiceCallTriggerPoint = commonTriggerPointConfiguration.VoiceCallTriggerPoint;
+    const VoiceCallTriggerPoint = commonTriggerPointConfiguration2.VoiceCallTriggerPoint;
     const obj = { guildId: null };
     obj[0] = guildId;
     VoiceCallTriggerPoint.trigger(obj);
   }
 };
 prototype["handleCallCreate"] = function handleCallCreate() {
-  const VoiceCallTriggerPoint = commonTriggerPointConfiguration.VoiceCallTriggerPoint;
+  const VoiceCallTriggerPoint = commonTriggerPointConfiguration2.VoiceCallTriggerPoint;
   VoiceCallTriggerPoint.trigger();
 };
 prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen() {
@@ -30,6 +31,6 @@ prototype["handleUserSettingsModalOpen"] = function handleUserSettingsModalOpen(
   OpenUserSettingsTriggerPoint.trigger();
 };
 const commonTriggerPointManager = new CommonTriggerPointManager();
-const result = require("commonTriggerPointConfiguration").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/CommonTriggerPointManager.tsx");
 
 export default commonTriggerPointManager;

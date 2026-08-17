@@ -1,4 +1,6 @@
 // discord_app/utils/AnalyticsSchema.tsx
-import { AnalyticEvents } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("utils/AnalyticsSchema.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("utils/AnalyticsSchema.tsx");

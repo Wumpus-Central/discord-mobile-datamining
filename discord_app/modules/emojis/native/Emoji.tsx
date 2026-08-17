@@ -1,23 +1,17 @@
 // discord_app/modules/emojis/native/Emoji.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import handleThemeChange from "handleThemeChange";
-import { jsx } from "jsxProd";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { getEmojiUnavailableReason } from "../../../utils/EmojiUtils.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import set from "set" /* 500 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
+import preloadDefault from "preload" /* 5449 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("handleThemeChange").fileFinishedImporting("modules/emojis/native/Emoji.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/emojis/native/Emoji.tsx");
 
 export default function Emoji(arg0) {
-  let adjustsFontSizeToFit;
-  let fastImageStyle;
-  let forceTextEmoji;
-  let name;
-  let src;
-  let style;
-  let textEmojiStyle;
   ({ src, name } = arg0);
   ({ style, textEmojiStyle, fastImageStyle, forceTextEmoji, adjustsFontSizeToFit } = arg0);
   let obj = set;
@@ -25,7 +19,7 @@ export default function Emoji(arg0) {
   if (obj.isAndroid()) {
     uRL = src;
     if (null == src) {
-      let obj1 = getEmojiUnavailableReason;
+      obj1 = getEmojiUnavailableReasonDefault;
       uRL = obj1.getURL(name);
     }
   }
@@ -35,7 +29,7 @@ export default function Emoji(arg0) {
       if ("" !== uRL) {
         obj = { resizeMode: "contain", style: null, placeholder: null, source: null };
         obj[1] = fastImageStyle;
-        const tmp10 = preload;
+        const tmp10 = preloadDefault;
         if (tmpResult.isThemeDark(theme.theme)) {
           let tmp9Result = tmp9(6931);
         } else {

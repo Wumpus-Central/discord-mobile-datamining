@@ -1,6 +1,8 @@
 // discord_app/modules/screen_recording/native/StudyConfig.tsx
+import set from "set" /* 2 */;
+
 const obj = {};
-const result = require("set").fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
+const result = set.fileFinishedImporting("modules/screen_recording/native/StudyConfig.tsx");
 
 export const SURVEY_CONFIGS = obj;
 export const getSurveyConfig = function getSurveyConfig(closure_0) {

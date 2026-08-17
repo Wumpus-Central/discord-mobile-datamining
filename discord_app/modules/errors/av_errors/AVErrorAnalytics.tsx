@@ -1,19 +1,17 @@
 // discord_app/modules/errors/av_errors/AVErrorAnalytics.tsx
-import _slicedToArray from "_slicedToArray";
-import updateAveragedStatsHelper from "updateAveragedStatsHelper";
-import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo";
-import ApplicationStreamPresets from "ApplicationStreamPresets";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import initialize from "initialize";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_12 from "initialize";
-import { AnalyticEvents } from "ME";
-import DesktopSources from "DesktopSources";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "updateAveragedStatsHelper" /* 4557 */;
+import { getSystemAnalyticsInfo } from "getSystemAnalyticsInfo" /* 4536 */;
+import closure_6 from "ApplicationStreamPresets" /* 4562 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_9 from "createRTCConnection" /* 4539 */;
+import closure_10 from "initialize" /* 4565 */;
+import closure_11 from "handleConnectionOpen" /* 1979 */;
+import closure_12 from "initialize" /* 4558 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let closure_14;
-let closure_15;
 const require = arg1;
 function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   const connectionStats = store.getConnectionStats(mediaEngineConnectionId);
@@ -77,15 +75,9 @@ function getCurrentScreenshareCaptureMethod(mediaEngineConnectionId) {
   return null;
 }
 ({ MediaEngineContextTypes: closure_14, SIMULCAST_HQ_QUALITY: closure_15 } = DesktopSources);
-const result = require("getSystemAnalyticsInfo").fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorAnalytics.tsx");
 
 export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(error, context) {
-  let closure_20;
-  let closure_21;
-  let closure_22;
-  let closure_23;
-  let closure_24;
-  let closure_25;
   const _require = error;
   errorInfo = _require(errorInfo[12]).getErrorInfo(error);
   let channelId;
@@ -237,23 +229,23 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     if (outboundStats1 == tmp6) {
       outboundStats1 = [];
     }
-    let maxByResult = importDefault(tmp2[15]).maxBy(outboundStats1, (num_frames) => num_frames.num_frames);
+    let maxByResult = inboundStats1(tmp2[15]).maxBy(outboundStats1, (num_frames) => num_frames.num_frames);
     if (maxByResult == tmp6) {
       maxByResult = null;
     }
     let tmp32 = maxByResult;
-    let obj5 = importDefault(tmp2[15]);
+    let obj5 = inboundStats1(tmp2[15]);
   } else {
     tmp32 = null;
     if (tmp6 != userId) {
-      let inboundStats1;
+      inboundStats1 = undefined;
       if (rTCConnection1 != tmp6) {
         inboundStats1 = rTCConnection1.getInboundStats(userId);
       }
       tmp32 = inboundStats1;
     }
   }
-  importDefault = tmp32;
+  inboundStats1 = tmp32;
   let obj = _require(errorInfo[12]);
   mediaContext().then((cpu_brand) => {
     const obj = { error_name: error.valueOf(), error_code: errorInfo.errorCode, error_severity: errorInfo.severity, error_category: errorInfo.category, underlying_error: null, error_message: null, guild_id: null, channel_id: null, channel_type: null, rtc_connection_id: null, media_session_id: null, parent_media_session_id: null, context: null, voice_backend_version: null, rtc_worker_backend_version: null, guild_region: null, hostname: null, duration: null, participant_type: null, num_frames: null, num_packets: null, num_bytes: null, num_packets_lost: null, video_codec: null, video_encoder: null, video_decoder: null, audio_capture_sample_rate_mismatch_percent: null, audio_capture_processing_sample_rate: null, incoming_video_stopped_for_occlusion: null, bitrate: null, target_bitrate: null, fps: null, target_fps: null, sender_user_id: null, stream_region: null, stream_source_type: null, num_stream_viewers: null, video_input_resolution_height: null, video_input_frame_rate: null, screenshare_capture_method: null, share_application_name: null, share_application_id: null, share_application_executable: null, share_application_distributor: null, cpu_brand: null, cpu_vendor: null, cpu_memory: null, gpu_brand: null, gpu_count: null, gpu_memory: null, gpu_device_vendor_id: null, gpu_device_device_id: null, gpu_device_sub_sys_id: null, gpu_device_revision: null, gpu_driver_version: null, cpu_usage: null, memory_usage: null, outbound_bitrate_estimate: null, inbound_bitrate_estimate: null, hardware_enabled: null, audio_input_device_name: null, audio_output_device_name: null, video_device_name: null, audio_subsystem: null, automatic_audio_subsystem: null, audio_layer: null, audio_input_mode: null, automatic_audio_input_sensitivity_enabled: null, audio_input_sensitivity: null, echo_cancellation_enabled: null, noise_suppression_enabled: null, noise_cancellation_enabled: null, automatic_gain_control_enabled: null, sidechain_compression_enabled: null, input_volume: null, output_volume: null, audio_input_device_count: null, audio_output_device_count: null, app_hardware_acceleration_enabled: null, input_device_os_muted: null, input_device_os_volume: null };
@@ -322,7 +314,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       voiceVersion = null;
     }
     obj[13] = voiceVersion;
-    const rTCConnection1 = rtcConnectionId.getRTCConnection();
+    rTCConnection1 = rtcConnectionId.getRTCConnection();
     let rtcWorkerVersion;
     if (rTCConnection1 != null) {
       rtcWorkerVersion = rTCConnection1.getRtcWorkerVersion();
@@ -355,7 +347,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
     obj[18] = tmp17;
     let num;
-    if (tmp32 != null) {
+    if (inboundStats1 != null) {
       num = tmp18.num_frames;
     }
     if (num == null) {
@@ -363,7 +355,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
     obj[19] = num;
     let num2;
-    if (tmp32 != null) {
+    if (inboundStats1 != null) {
       num2 = tmp18.num_packets;
     }
     if (num2 == null) {
@@ -371,7 +363,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
     }
     obj[20] = num2;
     let num3;
-    if (tmp32 != null) {
+    if (inboundStats1 != null) {
       num3 = tmp18.num_bytes;
     }
     if (num3 == null) {
@@ -431,7 +423,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           }
           tmp39 = found2;
         }
-        tmp32 = tmp39;
+        let tmp32 = tmp39;
       } else {
         tmp32 = null;
         if (null != tmp21) {
@@ -473,7 +465,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
         }
         tmp47 = found4;
       }
-      let prop;
+      prop = undefined;
       if (tmp47 != null) {
         prop = tmp47.encoderImplementationName;
       }
@@ -504,7 +496,7 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
           tmp53 = tmp54;
         }
       }
-      let prop1;
+      prop1 = undefined;
       if (tmp53 != null) {
         prop1 = tmp53.decoderImplementationName;
       }
@@ -820,14 +812,14 @@ export const sendAVErrorAnalyticsEvent = function sendAVErrorAnalyticsEvent(erro
       cpu_vendor = null;
     }
     obj[54] = cpu_vendor;
-    cpu_vendor = tmp32;
-    cpu_vendor = tmp32(errorInfo[18]).getCurrentCPUUsagePercent();
+    cpu_vendor = inboundStats1;
+    cpu_vendor = inboundStats1(errorInfo[18]).getCurrentCPUUsagePercent();
     if (cpu_vendor == null) {
       cpu_vendor = null;
     }
     obj[55] = cpu_vendor;
     obj5 = rTCConnection1;
-    const obj8 = tmp32(errorInfo[18]);
+    const obj8 = inboundStats1(errorInfo[18]);
     cpu_vendor = cpu_vendor(errorInfo[18]).getCurrentMemoryUsageKB();
     if (cpu_vendor == null) {
       cpu_vendor = null;

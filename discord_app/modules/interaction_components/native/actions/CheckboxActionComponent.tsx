@@ -1,6 +1,6 @@
 // discord_app/modules/interaction_components/native/actions/CheckboxActionComponent.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -21,7 +21,7 @@ const memoResult = importAllResult.memo((type) => {
   executeStateUpdate = componentState.executeStateUpdate;
   const items = [state, type];
   const memo = importAllResult.useMemo(() => {
-    let type;
+    type = undefined;
     if (state != null) {
       type = iter.type;
     }
@@ -58,6 +58,6 @@ const memoResult = importAllResult.memo((type) => {
     }
   });
 });
-const result = require("isInteractionComponent").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/CheckboxActionComponent.tsx");
 
 export default memoResult;

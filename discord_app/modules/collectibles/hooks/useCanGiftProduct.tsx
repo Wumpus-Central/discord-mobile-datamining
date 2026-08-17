@@ -1,9 +1,11 @@
 // discord_app/modules/collectibles/hooks/useCanGiftProduct.tsx
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
-import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
-import { useCurrentUser } from "useCurrentUser.tsx";
-let result = require("getProductOrbPrice").fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
+import set from "set" /* 2 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import useCurrentUser from "useCurrentUser" /* 9176 */;
+
+let result = set.fileFinishedImporting("modules/collectibles/hooks/useCanGiftProduct.tsx");
 
 export const useCanGiftProduct = function useCanGiftProduct(product) {
   const currentUser = useCurrentUser.useCurrentUser();
@@ -14,8 +16,8 @@ export const useCanGiftProduct = function useCanGiftProduct(product) {
   const obj3 = getItemRecordsFromPurchases;
   const result2 = getProductOrbPrice.isOrbsExclusiveProduct(product);
   const obj4 = getProductOrbPrice;
-  const obj5 = getPremiumPlanItem;
-  const canUseShopDiscountsResult = getPremiumPlanItem.canUseShopDiscounts(currentUser);
+  const obj5 = getPremiumPlanItemDefault;
+  const canUseShopDiscountsResult = getPremiumPlanItemDefault.canUseShopDiscounts(currentUser);
   const defaultPriceSetAssignmentPurchaseType = getItemRecordsFromPurchases.getDefaultPriceSetAssignmentPurchaseType(canUseShopDiscountsResult);
   const obj6 = getItemRecordsFromPurchases;
   const result3 = getItemRecordsFromPurchases.extractPriceByPurchaseTypes(product, defaultPriceSetAssignmentPurchaseType);

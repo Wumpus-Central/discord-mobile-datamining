@@ -1,25 +1,24 @@
 // discord_app/modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx
-import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase";
-import { View } from "IncentivizedAccountLinkConfirmationBottomSheet";
-import addApplication from "addApplication";
-import set from "set";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "Stack";
-import createCacheKey from "createCacheKey";
-import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
-import { IconSizes } from "../../../design/void/Icon/native/Icon.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { GameIcon } from "../../game_detection/native/GameIcon.tsx";
-import { useStartAuthorize } from "useStartAuthorize.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import isThemeLight from "isThemeLight" /* 1364 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import IconSizes from "IconSizes" /* 4747 */;
+import IconSizesDefault from "IconSizes" /* 4747 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7142 */;
+import GameIcon from "GameIcon" /* 7149 */;
+import GameIconDefault from "GameIcon" /* 7149 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "addApplication" /* 4478 */;
+import closure_6 from "set" /* 5221 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ConnectionIcon(arg0) {
-  let platform;
-  let theme;
   ({ platform, theme } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(theme);
   const tmp2 = require;
@@ -28,50 +27,48 @@ function ConnectionIcon(arg0) {
   const source = getAvatarURL.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
   obj = { size: null, source: null, disableColor: true, style: null };
   const obj2 = getAvatarURL;
-  obj[0] = tmp2(4747).IconSizes.CUSTOM;
+  obj[0] = IconSizes.IconSizes.CUSTOM;
   obj[1] = source;
   obj[3] = tmp.connectionIcon;
-  obj[1] = callback(IconSizes, obj);
+  obj[1] = callback(IconSizesDefault, obj);
   return callback(View, obj);
 }
 function ApplicationIcon(application) {
   application = application.application;
-  let obj = { style: createCacheKey().iconContainer, children: null };
+  let obj = { style: callback3().iconContainer, children: null };
   let tmpResult = null;
   if (null != application) {
     obj = { game: null, size: null };
     obj[0] = application;
     obj[1] = GameIcon.GameIconSizes.NORMAL;
-    tmpResult = tmp(GameIcon, obj);
-    const tmp6 = GameIcon;
+    tmpResult = tmp(GameIconDefault, obj);
+    const tmp6 = GameIconDefault;
   }
   obj[1] = tmpResult;
   return closure_8(View, obj);
 }
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { iconContainer: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, content: null, text: null, connectionIcon: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { height: 48, width: 48 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("addApplication").fileFinishedImporting("modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/application_account_linking/native/ConnectionDeprecationBottomSheet.tsx");
 
 export default function ConnectionDeprecationBottomSheet(arg0) {
-  let markAsDismissed;
-  let require;
   ({ platformTypes: require, markAsDismissed } = arg0);
   let replacedBy;
   let startAuthorization;
   let analyticsLocations;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = require(replacedBy[8]);
   const theme = obj.useThemeContext().theme;
-  let obj1 = require(replacedBy[10]);
-  const items = [set];
+  obj1 = require(replacedBy[10]);
+  const items = [closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => {
-    const accounts = outer1_6.getAccounts();
+    const accounts = closure_1_6.getAccounts();
     const found = accounts.find((type) => closure_0.includes(type.type));
     let type;
     if (found != null) {
@@ -98,7 +95,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
   analyticsLocations = tmp4Result(tmp4(tmp3[14]).ACTION_SHEET).analyticsLocations;
   const items2 = [replacedBy];
   callback = startAuthorization.useCallback(() => {
-    let obj = outer1_0(replacedBy[15]);
+    let obj = closure_1_0(replacedBy[15]);
     obj = {
       applicationId: replacedBy,
       onSuccess() {
@@ -114,7 +111,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       obj[1] = tmp.content;
       obj[2] = callback(tmp2(tmp3[19]).BottomSheetTitleHeader, { title: null });
       obj[3] = function onDismiss() {
-        return markAsDismissed(outer1_7.DISMISS);
+        return markAsDismissed(closure_1_7.DISMISS);
       };
       obj = { spacing: 24, style: null, children: null };
       obj1 = { paddingBottom: null };
@@ -145,9 +142,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       const obj9 = { connectionName: null, orbCount: 200, orbsIconHook: null };
       obj9[0] = value.name;
       obj9[2] = function orbsIconHook() {
-        const obj = { size: "xs", color: null };
-        obj[1] = markAsDismissed(replacedBy[7]).colors.TEXT_STRONG;
-        return callback2(callback(replacedBy[26]).OrbsIcon, obj);
+        return callback2(callback(replacedBy[26]).OrbsIcon, { size: "xs", color: markAsDismissed(replacedBy[7]).colors.TEXT_STRONG });
       };
       obj8[2] = intl2.format(tmp4(tmp3[25]).qV9zT6, obj9);
       items6[1] = callback(tmp2(tmp3[23]).Text, obj8);
@@ -168,7 +163,7 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
       obj13[3] = function onPress() {
         markAsDismissed(replacedBy[16]).hideActionSheet();
         if (markAsDismissed != null) {
-          tmp2(outer1_7.DISMISS);
+          tmp2(closure_1_7.DISMISS);
         }
       };
       items7[1] = callback(tmp2(tmp3[27]).Button, obj13);
@@ -182,15 +177,11 @@ export default function ConnectionDeprecationBottomSheet(arg0) {
   return false;
 };
 export const useShouldShowConnectionDeprecationBottomSheet = function useShouldShowConnectionDeprecationBottomSheet(deprecatedPlatformTypes) {
-  let canStartAuthorization;
-  let fetchingConnections;
-  let hasAlreadyLinked;
-  let matchingPlatform;
   deprecatedPlatformTypes = deprecatedPlatformTypes.deprecatedPlatformTypes;
-  const items = [set];
+  const items = [closure_6];
   const stateFromStoresObject = deprecatedPlatformTypes(589).useStateFromStoresObject(items, () => {
-    const obj = { fetchingConnections: outer1_6.isFetching(), matchingPlatform: null };
-    const accounts = outer1_6.getAccounts();
+    const obj = { fetchingConnections: closure_1_6.isFetching(), matchingPlatform: null };
+    const accounts = closure_1_6.getAccounts();
     const mapped = accounts.map((type) => callback(table[11]).get(type.type));
     obj[1] = mapped.find((migrationData) => {
       migrationData = migrationData.migrationData;
@@ -215,7 +206,7 @@ export const useShouldShowConnectionDeprecationBottomSheet = function useShouldS
     }
   }
   const getOrFetchApplication = deprecatedPlatformTypes(7145).useGetOrFetchApplication(replacedBy);
-  const tmp5 = useStartAuthorize(getOrFetchApplication);
+  const tmp5 = useStartAuthorizeDefault(getOrFetchApplication);
   ({ hasAlreadyLinked, canStartAuthorization } = tmp5);
   if (!fetchingConnections) {
     fetchingConnections = !tmp5.fetched;

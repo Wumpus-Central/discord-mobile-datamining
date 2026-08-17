@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/GuildSettingActivityStatus.tsx
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getSanitizedRestrictedGuilds } from "../../../../utils/UserSettingsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 7357 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let c3;
-let obj1;
 ({ getSelectedGuildId: obj1, useUserSafetySettingsSelectedGuildStore: c3 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -17,7 +17,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.TUKMak);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
     const setting = ActivityRestrictedGuilds.useSetting();
@@ -45,7 +45,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.TUKMak);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue() {
     const ActivityRestrictedGuilds = explicitContentFromProto.ActivityRestrictedGuilds;
     const setting = ActivityRestrictedGuilds.useSetting();
@@ -64,6 +64,6 @@ const obj = {
     ActivityRestrictedGuilds.updateSetting(items);
   }
 };
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityStatus.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/GuildSettingActivityStatus.tsx");
 
 export default toggle;

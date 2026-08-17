@@ -1,17 +1,17 @@
 // discord_app/modules/activities/utils/isVoiceEmbeddedActivity.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import updateVoiceState from "updateVoiceState";
-import { set } from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import set from "set" /* 692 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
 
-const require = arg1;
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/utils/isVoiceEmbeddedActivity.tsx");
 
 export default function isVoiceEmbeddedActivity(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = ensureGuildLoaded;
+    obj = closure_3;
   }
   const channel = obj.getChannel(arg0);
   let tmp3 = null != channel;

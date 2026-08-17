@@ -1,21 +1,22 @@
 // discord_app/modules/reactions/native/EmojiReactionRowButton.tsx
-import noop from "noop";
-import { Platform } from "get ActivityIndicator";
-import { EMOJI_URL_BASE_SIZE } from "set";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReactionIcon } from "../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { EmojiTypes } from "../../emojis/EmojiTypes.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import EmojiTypes from "EmojiTypes" /* 4037 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import EmojiDefault from "Emoji" /* 6930 */;
+import ReactionIcon from "ReactionIcon" /* 7939 */;
+import closure_3 from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let closure_6 = createCacheKey.createStyles((width) => {
   let obj = { emojiContainer: null };
-  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: Themes.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: Themes.modules.button.BORDER_RADIUS, overflow: "hidden" };
+  obj = { width, height: width, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_EMOJI_BUTTON_BACKGROUND, borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
   obj[0] = obj;
   return obj;
 });
@@ -26,7 +27,7 @@ let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
   }
   obj = { emojiImage: obj, emojiText: null };
   obj = { width, height: width };
-  obj = { lineHeight, fontSize, color: Themes.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
+  obj = { lineHeight, fontSize, color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center", width: tmp, height: tmp };
   const merged = Object.assign(tmp2);
   obj[1] = obj;
   return obj;
@@ -34,14 +35,12 @@ let closure_7 = createCacheKey.createStyles((width, fontSize, lineHeight) => {
 const result = require("set").fileFinishedImporting("modules/reactions/native/EmojiReactionRowButton.tsx");
 
 export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
-  let onPress;
-  let styles;
   let str = iconSize.iconSize;
   ({ onPress, styles } = iconSize);
   let obj = AccessibilityAnnouncer;
   const tmp = callback(iconSize.emojiContainerSize);
   const obj2 = AccessibilityAnnouncer;
-  const unsafe_rawColors = Themes.unsafe_rawColors;
+  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   const isThemeLightResult = AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme);
   obj = { activeOpacity: 0.5, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 4, onPress: null, style: null, children: null };
   const intl = tmp2(1236).intl;
@@ -58,12 +57,6 @@ export const EmojiPickerRowButton = function EmojiPickerRowButton(iconSize) {
   return jsx(PressableBase.PressableOpacity, { color: AccessibilityAnnouncer.isThemeLight(obj.useThemeContext().theme) ? unsafe_rawColors.PRIMARY_500 : unsafe_rawColors.PRIMARY_300, size: null });
 };
 export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiContainerSize) {
-  let animated;
-  let emojiFontSize;
-  let emojiLineHeight;
-  let emojiSize;
-  let onPress;
-  let styles;
   ({ emoji: animated, emojiSize } = emojiContainerSize);
   ({ emojiFontSize, emojiLineHeight, onPress, styles } = emojiContainerSize);
   let getEmojiURL = importDefault;
@@ -88,13 +81,13 @@ export const EmojiReactionRowButton = function EmojiReactionRowButton(emojiConta
     obj = { textEmojiStyle: null, fastImageStyle: null, name: null, src: null };
     ({ emojiText: obj3[0], emojiImage: obj3[1] } = tmp2);
     let str = "";
-    const emojiURL = getEmojiURL(6930);
+    const emojiURL = EmojiDefault;
     if (null == animated.id) {
       str = animated.surrogates;
     }
     obj[2] = str;
     if (null != animated.id) {
-      const emojiURL1 = getEmojiURL(1435);
+      const emojiURL1 = getAvatarURLDefault;
       getEmojiURL = emojiURL1.getEmojiURL;
       obj = { id: null, animated: null, size: null };
       ({ id: obj[0], animated } = animated);

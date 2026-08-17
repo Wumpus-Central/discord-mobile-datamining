@@ -1,39 +1,30 @@
 // discord_app/modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
-import apply from "apply";
-import get_ActivityIndicator from "Text";
-import createdAt from "createdAt";
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import map from "map";
-import { OperatorTypes } from "OperatorTypes";
-import ME from "ME";
-import jsxProd from "getPlatformUserUrl";
-import createCacheKey from "createCacheKey";
-import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { officialApplicationIds } from "../ConnectionsUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4326 */;
+import Text from "Text" /* 4734 */;
+import officialApplicationIds2 from "officialApplicationIds" /* 5224 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createdAt" /* 1930 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_10 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_11 from "createGuildRecordFromRust" /* 1910 */;
+import closure_12 from "map" /* 10999 */;
+import { OperatorTypes } from "OperatorTypes" /* 5225 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_6;
-const require = arg1;
+require = arg1;
 function PopoutCheck(arg0) {
-  let connectionMetadataField;
-  let connectionType;
-  let description;
-  let operator;
-  let value;
   ({ operator, value, description } = arg0);
   ({ connectionType, connectionMetadataField } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (null != description) {
     if (OperatorTypes.LESS_THAN === operator) {
       const intl = getSystemLocale.intl;
@@ -56,8 +47,8 @@ function PopoutCheck(arg0) {
       }
     }
   } else {
-    obj = officialApplicationIds;
-    const obj1 = { connectionType: null, connectionMetadataField: null, operator: null, value: null };
+    obj = officialApplicationIds2;
+    obj1 = { connectionType: null, connectionMetadataField: null, operator: null, value: null };
     obj1[0] = connectionType;
     obj1[1] = connectionMetadataField;
     obj1[2] = operator;
@@ -82,13 +73,13 @@ function PopoutCheck(arg0) {
 class PopoutChecks {
   constructor(arg0) {
     guildId = global.guildId;
-    guildId = undefined;
-    c2 = undefined;
-    c3 = undefined;
-    c4 = undefined;
-    GREEN_330 = undefined;
-    guildId = Fragment();
-    c2 = require("useTheme")();
+    closure_1 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_1 = closure_19();
+    closure_2 = require("useTheme")();
     obj = require("apply");
     groupByResult = obj.groupBy(global.eligibilityStates, (application_id) => {
       let str = "";
@@ -98,11 +89,11 @@ class PopoutChecks {
       }
       return "" + application_id.connection_type + str;
     });
-    c3 = groupByResult;
+    closure_3 = groupByResult;
     keys = Object.keys(groupByResult);
-    c4 = keys.length - 1;
+    closure_4 = keys.length - 1;
     obj2 = require("map");
-    GREEN_330 = obj2.useToken(require("Themes").unsafe_rawColors.GREEN_330);
+    closure_5 = obj2.useToken(require("Themes").unsafe_rawColors.GREEN_330);
     obj = {
       children: keys.map((arg0, arg1) => {
             const found = arr.filter((operator) => null != operator.operator);
@@ -119,7 +110,7 @@ class PopoutChecks {
             }
             let tmp7 = null;
             if (null != bot) {
-              tmp7 = new outer1_7(application.bot);
+              tmp7 = new closure_1_7(application.bot);
             }
             const officialApplicationIds = guildId(tmp3[15]).officialApplicationIds;
             let str;
@@ -134,18 +125,18 @@ class PopoutChecks {
               obj[0] = lib.botTag;
               obj[1] = guildId;
               obj[2] = closure_5;
-              let tmp12 = outer1_16(tmp2(tmp3[22]), obj);
+              let tmp12 = closure_1_16(tmp2(tmp3[22]), obj);
             } else if (null != tmp7) {
               obj = { style: null, verified: false };
               obj[0] = lib.botTag;
-              tmp12 = outer1_16(tmp2(tmp3[23]), obj);
+              tmp12 = closure_1_16(tmp2(tmp3[23]), obj);
             }
             const items = [lib.popoutChecksGroup, ];
             let prop = null;
-            if (arg1 < apply) {
+            if (arg1 < closure_4) {
               prop = tmp21.popoutChecksGroupBottomMargin;
             }
-            const obj1 = { style: items, children: null };
+            obj1 = { style: items, children: null };
             items[1] = prop;
             const obj2 = { style: lib.popoutCheckGroupName, children: null };
             if (null == value) {
@@ -156,7 +147,7 @@ class PopoutChecks {
                 obj3[0] = tmp21.popoutCheckGroupPlatformIcon;
                 obj3[1] = tmp7;
                 obj3[2] = tmp11(tmp3[24]).AvatarSizes.XSMALL;
-                tmp26 = outer1_16(tmp11(tmp3[24]).Avatar, obj3);
+                tmp26 = closure_1_16(tmp11(tmp3[24]).Avatar, obj3);
               }
               items1[1] = tmp26;
               let name;
@@ -172,16 +163,12 @@ class PopoutChecks {
               }
               const obj4 = { variant: "text-sm/medium", color: "interactive-text-active", children: null };
               obj4[2] = name;
-              items1[2] = outer1_16(tmp11(tmp3[17]).Text, obj4);
+              items1[2] = closure_1_16(tmp11(tmp3[17]).Text, obj4);
               items1[3] = tmp12;
               obj2[1] = items1;
               const items2 = [
                 tmp19(tmp20, obj2),
                 found.map((description) => {
-                    let connection_metadata_field;
-                    let connection_type;
-                    let operator;
-                    let value;
                     ({ connection_type, connection_metadata_field, operator, value } = description);
                     callback(38)(null != connectionMetadataField, "connectionMetadataField is null");
                     callback(38)(null != operator, "operator is null");
@@ -199,8 +186,8 @@ class PopoutChecks {
               const icon = value.icon;
               obj5[1] = tmp11Result.makeSource(tmp11Result.isThemeDark(table) ? icon.darkPNG : icon.lightPNG);
               obj5[3] = tmp11(tmp3[24]).Icon.Sizes.MEDIUM;
-              outer1_16(tmp11(tmp3[24]).Icon, obj5);
-              const tmp23 = outer1_16;
+              closure_1_16(tmp11(tmp3[24]).Icon, obj5);
+              const tmp23 = closure_1_16;
             }
           })
     };
@@ -211,24 +198,24 @@ class PopoutChecks {
 ({ AnalyticEvents: closure_14, EMPTY_STRING_SNOWFLAKE_ID: closure_15 } = ME);
 ({ jsx: closure_16, jsxs: closure_17, Fragment: closure_18 } = jsxProd);
 createCacheKey = { container: { flexDirection: "column", alignItems: "center", padding: 16 }, header: null, verifiedContainer: null, headerTextContainer: null, verifiedCheck: null, loadingSpinner: null, popoutCheck: null, popoutCheckIcon: null, popoutChecksGroup: null, popoutChecksGroupBottomMargin: null, popoutCheckGroupName: null, popoutCheckGroupPlatformIcon: null, button: null, botTag: null };
-createCacheKey = { width: "100%", flexDirection: "row", alignItems: "center", paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: require("Themes").space.PX_24 };
+createCacheKey = { width: "100%", flexDirection: "row", alignItems: "center", paddingBottom: 16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_24 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 8, height: 24, width: 24 };
 createCacheKey[3] = { flexShrink: 1, flexDirection: "column" };
 createCacheKey[4] = { position: "absolute", left: 0, top: 0 };
 createCacheKey[5] = { marginVertical: 40 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 8, marginLeft: 32, paddingRight: 20 };
-createCacheKey[7] = { marginRight: 8, tintColor: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
+createCacheKey[7] = { marginRight: 8, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
 createCacheKey[8] = { width: "100%", marginBottom: 24 };
-let obj1 = { marginRight: 8, tintColor: require("Themes").colors.TEXT_FEEDBACK_POSITIVE };
-createCacheKey[9] = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: 12 };
+let obj1 = { marginRight: 8, tintColor: ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE };
+createCacheKey[9] = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 12 };
 createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[11] = { marginRight: 8 };
 createCacheKey[12] = { marginBottom: 8 };
 createCacheKey[13] = { marginLeft: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: 12 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
+let closure_19 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingBottom: 12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 12 };
+let result = require("set").fileFinishedImporting("modules/connections/native/ConnectionsRoleMessageBadgeActionSheet.tsx");
 
 export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
   userId = userId.userId;
@@ -237,28 +224,28 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
   const guildId = userId.guildId;
   let analyticsLocations;
   let stateFromStores;
-  let closure_6;
+  closure_6 = undefined;
   let stateFromStores2;
   let first;
-  let trackCommunicationDisabled;
-  let tmp = createCacheKey();
+  closure_9 = undefined;
+  let tmp = callback3();
   analyticsLocations = roleId(channelId[28])(roleId(channelId[29]).CONNECTIONS_ROLE_POPOUT).analyticsLocations;
   let obj = userId(channelId[30]);
-  const items = [createGuildRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_11.getGuild(guildId));
-  let obj1 = userId(channelId[30]);
+  const items = [closure_11];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getGuild(guildId));
+  obj1 = userId(channelId[30]);
   const items1 = [first];
   closure_6 = obj1.useStateFromStores(items1, () => first.getId());
   let obj2 = userId(channelId[30]);
-  const items2 = [trackCommunicationDisabled];
+  const items2 = [closure_9];
   const stateFromStores1 = obj2.useStateFromStores(items2, () => member.getMember(guildId, closure_6));
   let obj3 = userId(channelId[30]);
-  const items3 = [map];
-  stateFromStores2 = obj3.useStateFromStores(items3, () => outer1_12.getGuildRoleConnectionEligibility(roleId));
+  const items3 = [closure_12];
+  stateFromStores2 = obj3.useStateFromStores(items3, () => closure_1_12.getGuildRoleConnectionEligibility(roleId));
   let obj4 = analyticsLocations;
   const tmp8 = guildId(analyticsLocations.useState(null == stateFromStores2), 2);
   first = tmp8[0];
-  trackCommunicationDisabled = tmp8[1];
+  closure_9 = tmp8[1];
   if (stateFromStores1 != null) {
     const roles = stateFromStores1.roles;
     const hasItem = roles.includes(roleId);
@@ -270,7 +257,7 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
     const merged = Object.assign(userId(channelId[32]).collectChannelAnalyticsMetadataFromId(channelId));
     const obj3 = userId(channelId[32]);
     const merged1 = Object.assign(userId(channelId[32]).collectGuildAnalyticsMetadata(guildId));
-    obj.track(outer1_14.PASSPORT_ROLE_POPOUT_VIEWED, obj);
+    obj.track(closure_1_14.PASSPORT_ROLE_POPOUT_VIEWED, obj);
   }, items4);
   const items5 = [guildId, roleId, first, stateFromStores2];
   const effect1 = obj4.useEffect(() => {
@@ -290,11 +277,11 @@ export default function ConnectionsRoleMessageBadgeActionSheet(userId) {
   }
   const tmp2 = roleId;
   const tmp4 = roleId(channelId[28]);
-  const items6 = [createGuildRoleRecordFromRust];
+  const items6 = [closure_10];
   const stateFromStores3 = userId(channelId[30]).useStateFromStores(items6, () => {
     let role;
     if (null != stateFromStores) {
-      role = outer1_10.getRole(tmp.id, roleId);
+      role = closure_1_10.getRole(tmp.id, roleId);
     }
     return role;
   });

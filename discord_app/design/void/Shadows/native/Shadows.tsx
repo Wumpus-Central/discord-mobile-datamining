@@ -1,17 +1,12 @@
 // discord_app/design/void/Shadows/native/Shadows.tsx
-import { set } from "../../../../utils/PlatformUtils.tsx";
-const result = require("set").fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+
+const result = set.fileFinishedImporting("design/void/Shadows/native/Shadows.tsx");
 
 export const generateBoxShadowStyle = (arg0) => {
-  let elevation;
-  let shadowColorAndroid;
-  let shadowColorIos;
-  let shadowOpacity;
-  let shadowRadius;
-  let xOffset;
-  let yOffset;
   ({ xOffset, yOffset, shadowColorIos, shadowOpacity, shadowRadius, elevation, shadowColorAndroid } = arg0);
-  let obj = set;
+  let obj = set2;
   if (obj.isAndroid()) {
     obj = { elevation: null, shadowColor: null };
     obj[0] = elevation;
@@ -19,7 +14,7 @@ export const generateBoxShadowStyle = (arg0) => {
   } else {
     obj = { shadowColor: null, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
     obj[0] = shadowColorIos;
-    const obj1 = { width: null, height: null };
+    obj1 = { width: null, height: null };
     obj1[0] = xOffset;
     obj1[1] = yOffset;
     obj[1] = obj1;

@@ -1,16 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import ME from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ AnalyticEvents: c5, InstantInviteSources: closure_6, RelationshipTypes: error } = ME);
 let closure_9 = { ADD: "add" };
-let result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ContactSuggestionRow.tsx");
 
 export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFriend) {
   suggestedFriend = suggestedFriend.suggestedFriend;
@@ -22,7 +19,7 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     if (suggestedFriend.friendSuggestionName.length > 0) {
       let friendSuggestionName = suggestedFriend.friendSuggestionName;
     }
-    let obj1 = suggestedFriend(onAddSuggestion[5]);
+    obj1 = suggestedFriend(onAddSuggestion[5]);
     sharedValue = obj1.useSharedValue(false);
     let items = [added, sharedValue];
     const effect = merged.useEffect(() => {
@@ -34,7 +31,7 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
         let items = [];
       } else {
         const obj = { name: null, label: null };
-        obj[0] = outer1_9.ADD;
+        obj[0] = closure_1_9.ADD;
         const intl = suggestedFriend(onAddSuggestion[6]).intl;
         obj[1] = intl.string(suggestedFriend(onAddSuggestion[6]).t["ed99+i"]);
         items = [obj];
@@ -47,7 +44,7 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
     const items3 = [sharedValue, onAddSuggestion, suggestedFriend.user];
     let mutualFriendsCount;
     const callback = merged.useCallback((nativeEvent) => {
-      if (nativeEvent.nativeEvent.actionName === outer1_9.ADD) {
+      if (nativeEvent.nativeEvent.actionName === closure_1_9.ADD) {
         const result = sharedValue.set(true);
         onAddSuggestion(suggestedFriend.user);
         return suggestedFriend(onAddSuggestion[8]).addContactSuggestion(suggestedFriend.user);
@@ -115,10 +112,10 @@ export const ContactSuggestionRow = function ContactSuggestionRow(suggestedFrien
       obj = { suggested_user_id: id.id, suggestion_source: suggestedFriend.source, location: null };
       let ADD_FRIENDS_MODAL = merged.location;
       if (ADD_FRIENDS_MODAL == null) {
-        ADD_FRIENDS_MODAL = outer1_6.ADD_FRIENDS_MODAL;
+        ADD_FRIENDS_MODAL = closure_1_6.ADD_FRIENDS_MODAL;
       }
       obj[2] = ADD_FRIENDS_MODAL;
-      obj.track(outer1_5.FRIEND_SUGGESTION_ADDED, obj);
+      obj.track(closure_1_5.FRIEND_SUGGESTION_ADDED, obj);
       onAddSuggestion(id);
     };
     obj2[3] = !stateFromStores;

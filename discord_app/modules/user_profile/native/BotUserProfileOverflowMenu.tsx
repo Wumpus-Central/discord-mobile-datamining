@@ -1,27 +1,19 @@
 // discord_app/modules/user_profile/native/BotUserProfileOverflowMenu.tsx
-import encodeProperties from "encodeProperties";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
-import { jsx } from "BlockedInformationTable";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ AnalyticEvents: metroImportAll, ApplicationFlags: c9, ChannelTypesSets: c10, RelationshipTypes: unpackModuleId } = ME);
+({ AnalyticEvents: closure_8, ApplicationFlags: c9, ChannelTypesSets: c10, RelationshipTypes: unpackModuleId } = ME);
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: closure_12, IGNORE_CONFIRMATION_ACTION_SHEET_KEY: map1 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
-let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_profile/native/BotUserProfileOverflowMenu.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/BotUserProfileOverflowMenu.tsx");
 
 export default function BotUserProfileOverflowMenu(application) {
-  let isIgnored;
-  let relationshipType;
   application = application.application;
   const user = application.user;
   const channel = application.channel;
@@ -34,13 +26,13 @@ export default function BotUserProfileOverflowMenu(application) {
   let constants;
   let id;
   let guildId;
-  let closure_12;
+  closure_12 = undefined;
   let installAppPropsFromProfileApplication;
   let obj = application(channel[8]);
   const items = [trackUserProfileAction];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ relationshipType: trackUserProfileAction.getRelationshipType(user.id), isIgnored: trackUserProfileAction.isIgnored(user.id) }));
   ({ relationshipType, isIgnored } = stateFromStoresObject);
-  let obj1 = application(channel[8]);
+  obj1 = application(channel[8]);
   const items1 = [analyticsLocations, context];
   stateFromStores = obj1.useStateFromStores(items1, () => context.getChannel(analyticsLocations.getChannelId()));
   let obj2 = application(channel[9]);
@@ -66,7 +58,7 @@ export default function BotUserProfileOverflowMenu(application) {
     const merged = Object.assign(context);
     obj.showGuildProfile = showGuildProfile;
     obj.userId = user.id;
-    let id;
+    id = undefined;
     if (channel != null) {
       id = channel.id;
     }
@@ -88,7 +80,7 @@ export default function BotUserProfileOverflowMenu(application) {
       obj[0] = intl.string(tmp(tmp2[14]).t["8wXU9B"]);
       obj[1] = function action() {
         trackUserProfileAction({ action: "UNIGNORE", analyticsLocations });
-        let id;
+        id = undefined;
         if (channel != null) {
           id = channel.id;
         }
@@ -155,7 +147,7 @@ export default function BotUserProfileOverflowMenu(application) {
           }
           const obj2 = user(channel[16]);
           obj = { user, entrypoint: "UserProfileOverflowMenu", contextualGuildId: tmp3, contextualChannelId: null };
-          let id;
+          id = undefined;
           if (channel != null) {
             id = channel.id;
           }
@@ -209,7 +201,7 @@ export default function BotUserProfileOverflowMenu(application) {
         if (closure_12) {
           obj = { applicationId: null, referrerId: null };
           obj[0] = application.id;
-          let id;
+          id = undefined;
           if (closure_8 != null) {
             id = closure_8.id;
           }
@@ -271,8 +263,7 @@ export default function BotUserProfileOverflowMenu(application) {
         obj.variant = "secondary-overlay";
         const intl = application(channel[14]).intl;
         obj.accessibilityLabel = intl.string(application(channel[14]).t["+zofAD"]);
-        obj = { size: "sm", color: null };
-        obj[1] = user(channel[38]).colors.WHITE;
+        obj = { size: "sm", color: user(channel[38]).colors.WHITE };
         obj.icon = callback2(application(channel[37]).MoreHorizontalIcon, obj);
         return callback2(application(channel[36]).IconButton, obj);
       };

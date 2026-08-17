@@ -1,36 +1,36 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
-let error;
-let metroImportAll;
-let require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+require = arg1;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { wrapper: null, content: null, heading: null, list: null, listItem: null, questionWrapper: null, questionWrapperExpanded: null, question: null, questionIcon: null, questionIconExpanded: null, answer: null };
 createCacheKey = { alignSelf: "center", marginTop: 50, marginBottom: require("GuildBoostingMarketingPersistentCta").VISIBILITY_OFFSET, maxWidth: 800, paddingHorizontal: 16, width: "100%" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
 createCacheKey[2] = { marginBottom: 20, textAlign: "center" };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
-createCacheKey[3] = { borderTopColor: require("Themes").colors.BORDER_MUTED, borderTopWidth: 1 };
-let obj2 = { borderTopColor: require("Themes").colors.BORDER_MUTED, borderTopWidth: 1 };
-createCacheKey[4] = { borderBottomColor: require("Themes").colors.BORDER_MUTED, borderBottomWidth: 1 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 16, paddingVertical: 28 };
+createCacheKey[3] = { borderTopColor: ThemesDefault.colors.BORDER_MUTED, borderTopWidth: 1 };
+let obj2 = { borderTopColor: ThemesDefault.colors.BORDER_MUTED, borderTopWidth: 1 };
+createCacheKey[4] = { borderBottomColor: ThemesDefault.colors.BORDER_MUTED, borderBottomWidth: 1 };
 createCacheKey[5] = { display: "flex", flexDirection: "row", paddingVertical: 10 };
 createCacheKey[6] = { paddingBottom: 6 };
 createCacheKey[7] = { flexGrow: 1, flexShrink: 1, paddingRight: 8 };
-const obj3 = { borderBottomColor: require("Themes").colors.BORDER_MUTED, borderBottomWidth: 1 };
-createCacheKey[8] = { flexGrow: 0, flexShrink: 0, tintColor: require("Themes").colors.ICON_MUTED };
+const obj3 = { borderBottomColor: ThemesDefault.colors.BORDER_MUTED, borderBottomWidth: 1 };
+createCacheKey[8] = { flexGrow: 0, flexShrink: 0, tintColor: ThemesDefault.colors.ICON_MUTED };
 let items = [{ rotate: "45deg" }];
 createCacheKey[9] = { transform: items };
 createCacheKey[10] = { marginBottom: 10 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let items1 = [
   {
     getQuestion() {
@@ -49,8 +49,7 @@ let items1 = [
     },
     getAnswer() {
       const intl = getSystemLocale.intl;
-      const obj = { helpCenterUrl: null };
-      obj[0] = combined.getArticleURL(HelpdeskArticles.GUILD_BOOSTING_FAQ);
+      const obj = { helpCenterUrl: combinedDefault.getArticleURL(HelpdeskArticles.GUILD_BOOSTING_FAQ) };
       return intl.format(getSystemLocale.t["8zlqlD"], obj);
     }
   },
@@ -125,7 +124,7 @@ let items1 = [
     }
   }
 ];
-const obj4 = { flexGrow: 0, flexShrink: 0, tintColor: require("Themes").colors.ICON_MUTED };
+const obj4 = { flexGrow: 0, flexShrink: 0, tintColor: ThemesDefault.colors.ICON_MUTED };
 const obj5 = {
   getQuestion() {
     const intl = getSystemLocale.intl;
@@ -136,28 +135,26 @@ const obj5 = {
     return intl.string(getSystemLocale.t.nhkk6k);
   }
 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingFaq.tsx");
 
 export default function GuildBoostingMarketingFaq() {
-  let dependencyMap;
-  let importDefault;
-  let tmp = createCacheKey();
-  const require = tmp;
+  let tmp = callback4();
+  const _require = tmp;
   [importDefault, dependencyMap] = callback(React.useState(null), 2);
   let obj = { style: tmp.wrapper, children: null };
   obj = { style: tmp.content, children: null };
   obj = { style: tmp.heading, variant: "heading-xxl/bold", children: null };
-  const intl = getSystemLocale.intl;
-  obj[2] = intl.string(getSystemLocale.t.HPJ6Nj);
-  let items = [callback2(Text.Heading, obj), ];
+  const intl = _getSystemLocale.intl;
+  obj[2] = intl.string(_getSystemLocale.t.HPJ6Nj);
+  let items = [callback2(_Text.Heading, obj), ];
   const tmp2 = callback(React.useState(null), 2);
   items[1] = callback2(View, {
     style: tmp.list,
     children: items1.map((getQuestion) => {
-      let tmp = arg1;
-      tmp = closure_1 === arg1;
-      let obj = { style: tmp.listItem, children: null };
-      const items = [tmp.questionWrapper, ];
+      const lib = arg1;
+      let tmp = closure_1 === arg1;
+      let obj = { style: lib.listItem, children: null };
+      const items = [lib.questionWrapper, ];
       let questionWrapperExpanded = tmp;
       if (tmp) {
         questionWrapperExpanded = tmp4.questionWrapperExpanded;
@@ -165,7 +162,7 @@ export default function GuildBoostingMarketingFaq() {
       obj = {
         style: items,
         onPress() {
-          return outer1_2((arg0) => {
+          return closure_1_2((arg0) => {
             let tmp = null;
             if (arg0 !== closure_0) {
               tmp = closure_0;
@@ -183,19 +180,18 @@ export default function GuildBoostingMarketingFaq() {
         str = "interactive-text-active";
       }
       obj = { color: str, style: tmp4.question, variant: "text-md/normal", children: getQuestion.getQuestion() };
-      const items1 = [outer1_7(tmp(outer1_2[10]).Text, obj), ];
-      const obj1 = { source: null, style: null };
-      obj1[0] = outer1_1(outer1_2[13]);
-      const items2 = [tmp.questionIcon, ];
+      items1 = [closure_1_7(lib(closure_1_2[10]).Text, obj), ];
+      obj1 = { source: closure_1_1(closure_1_2[13]), style: null };
+      const items2 = [lib.questionIcon, ];
       let questionIconExpanded = tmp;
       if (tmp) {
         questionIconExpanded = tmp4.questionIconExpanded;
       }
       items2[1] = questionIconExpanded;
       obj1[1] = items2;
-      items1[1] = outer1_7(tmp(outer1_2[12]).Icon, obj1);
+      items1[1] = closure_1_7(lib(closure_1_2[12]).Icon, obj1);
       obj[4] = items1;
-      const items3 = [outer1_8(tmp(outer1_2[11]).PressableOpacity, obj), ];
+      const items3 = [closure_1_8(lib(closure_1_2[11]).PressableOpacity, obj), ];
       if (tmp) {
         const obj2 = { style: null, color: "interactive-text-active", variant: "text-sm/normal", children: null };
         obj2[0] = tmp4.answer;
@@ -204,7 +200,7 @@ export default function GuildBoostingMarketingFaq() {
       }
       items3[1] = tmp;
       obj[1] = items3;
-      return outer1_8(outer1_5, obj, arg1);
+      return closure_1_8(closure_1_5, obj, arg1);
     })
   });
   obj[1] = items;

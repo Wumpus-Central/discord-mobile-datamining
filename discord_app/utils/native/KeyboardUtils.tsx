@@ -1,7 +1,9 @@
 // discord_app/utils/native/KeyboardUtils.tsx
-import { Keyboard } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("utils/native/KeyboardUtils.tsx");
+const Keyboard = get_ActivityIndicator.Keyboard;
+const result = set.fileFinishedImporting("utils/native/KeyboardUtils.tsx");
 
 export const dismissKeyboard = function dismissKeyboard() {
   let flag = arg0;

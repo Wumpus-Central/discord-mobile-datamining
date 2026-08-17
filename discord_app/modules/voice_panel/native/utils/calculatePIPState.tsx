@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/utils/calculatePIPState.tsx
-import getParticipants from "getParticipants";
-import reset from "reset";
-import { VoicePanelModes } from "VoicePanelModes";
-import { ParticipantTypes } from "ParticipantTypes";
-import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
-import { PIPReferenceDimensions } from "../pip/VoicePanelPIPUtils.tsx";
+import isStreamKey from "isStreamKey" /* 4531 */;
+import PIPReferenceDimensions from "PIPReferenceDimensions" /* 16306 */;
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 
-const require = arg1;
-const result = require("VoicePanelModes").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/calculatePIPState.tsx");
 
 export default function calculatePIPState(channelId, getTargetDimensions, lastParticipantId, speakingUserId, focusedId) {
   let tmp = null != focusedId.focusedId;

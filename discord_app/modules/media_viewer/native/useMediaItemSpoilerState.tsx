@@ -1,22 +1,20 @@
 // discord_app/modules/media_viewer/native/useMediaItemSpoilerState.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = { code: "function useMediaItemSpoilerStateTsx1(){const{runOnJS,setSpoilerActive,hasSpoiler}=this.__closure;runOnJS(setSpoilerActive)(hasSpoiler);}" };
 let closure_5 = { code: "function useMediaItemSpoilerStateTsx2(){const{spoilerOpacity}=this.__closure;return{opacity:spoilerOpacity.get()};}" };
-let result = require("zustandStore").fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/useMediaItemSpoilerState.tsx");
 
 export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index) {
-  let _slicedToArray;
-  let tmp5;
   const _require = index;
   const MediaViewerSourcesStore = _require(state[2]).MediaViewerSourcesStore;
   state = MediaViewerSourcesStore.useState((spoilerIndexes) => {
     spoilerIndexes = spoilerIndexes.spoilerIndexes;
     return spoilerIndexes.has(closure_0);
   });
-  [tmp5, _slicedToArray] = callback(sharedValue.useState(state), 2);
+  [tmp5, closure_2] = callback(sharedValue.useState(state), 2);
   let obj = sharedValue;
   const tmp = _require;
   const tmp2 = state;
@@ -35,19 +33,19 @@ export const useMediaItemSpoilerState = function useMediaItemSpoilerState(index)
     }
     obj = { duration: 200, easing: tmp2(tmp3[5]).STANDARD_EASING };
     const fn = function t() {
-      outer1_0(outer1_1[3]).runOnJS(_slicedToArray)(closure_1);
+      closure_1_0(closure_1_1[3]).runOnJS(closure_2)(closure_1);
     };
-    obj = { runOnJS: tmp2(tmp3[3]).runOnJS, setSpoilerActive: _slicedToArray, hasSpoiler: state };
+    obj = { runOnJS: tmp2(tmp3[3]).runOnJS, setSpoilerActive: closure_2, hasSpoiler: state };
     fn.__closure = obj;
     fn.__workletHash = 15930548853488;
-    fn.__initData = outer1_4;
+    fn.__initData = closure_1_4;
     const result = sharedValue.set(obj.withTiming(num, obj, "respect-motion-settings", fn));
   }, items);
   const items1 = [tmp5, ];
   const obj2 = _require(state[3]);
   class S {
     constructor() {
-      obj = { opacity: useSharedValue.get() };
+      obj = { opacity: closure_3.get() };
       return obj;
     }
   }

@@ -1,13 +1,13 @@
 // discord_app/modules/activities/utils/getActivityChannelId.tsx
-import { isTextChannel } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateVoiceState from "updateVoiceState";
+import set from "set" /* 2 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "updateVoiceState" /* 4542 */;
 
-const result = require("updateVoiceState").fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
+const isTextChannel = createChannelRecord.isTextChannel;
+const result = set.fileFinishedImporting("modules/activities/utils/getActivityChannelId.tsx");
 
 export default function getActivityChannelId(userId) {
-  let activity;
-  let channelId;
   ({ channelId, activity } = userId);
   channel = channel.getChannel(channelId);
   let session_id;

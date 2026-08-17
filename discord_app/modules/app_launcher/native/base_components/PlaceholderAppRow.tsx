@@ -1,21 +1,23 @@
 // discord_app/modules/app_launcher/native/base_components/PlaceholderAppRow.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { usePlaceholderWidth } from "../hooks/usePlaceholderSize.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 11227 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { loadingAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null };
-createCacheKey = { width: 32, height: 32, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/PlaceholderAppRow.tsx");
 
 export default function PlaceholderAppRow(isFirstRow) {
   let flag = isFirstRow.isFirstRow;
@@ -26,14 +28,13 @@ export default function PlaceholderAppRow(isFirstRow) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = usePlaceholderWidth;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = usePlaceholderWidth;
+  obj1 = usePlaceholderWidth;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
-  obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
+  obj = { icon: <View {...obj} />, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingAppIcon };
-  obj[0] = <View style={tmp.loadingAppIcon} />;
   obj1 = { style: null };
   const items = [tmp.loadingTextPlaceholder, { width: "" + placeholderWidth + "%" }];
   obj1[0] = items;

@@ -1,9 +1,9 @@
 // discord_app/modules/frames/native/FrameWebView.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("getSafeArea").fileFinishedImporting("modules/frames/native/FrameWebView.tsx");
+const result = require("set").fileFinishedImporting("modules/frames/native/FrameWebView.tsx");
 
 export default function FrameWebView(applicationId) {
   const frameId = applicationId.frameId;

@@ -1,19 +1,13 @@
 // discord_app/modules/launchpad/native/shared/ChannelSubtitle.tsx
-import "noop";
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
-import { jsx } from "jsxProd";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getChannelSubtitleData } from "../../../channel/native/getChannelSubtitleData.tsx";
-import { getLayoutStyle } from "getLayoutStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 15486 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10055 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function ChannelSubtitle(arg0) {
-  let channelId;
-  let connected;
-  let guildId;
-  let muted;
-  let subtitle;
-  let textProps;
   ({ muted, textProps } = arg0);
   ({ connected, channelId, guildId, subtitle } = arg0);
   let obj = getChannelSubtitleData;
@@ -42,17 +36,16 @@ function ChannelSubtitle(arg0) {
     return jsx(tmp(4734).Text, { content: null, muted: null, channelId: null, guildId: null, disableAnimatedEmoji: null, color: null });
   }
 }
-const result = require("jsxProd").fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/ChannelSubtitle.tsx");
 
 export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
-  let muted;
-  let subtitle;
   ({ subtitle, muted } = arg0);
   if (null == subtitle) {
     return null;
   } else {
     let obj = { variant: null, color: "text-muted", lineClamp: 1, maxFontSizeMultiplier: 1.75, style: null };
-    obj[0] = getLayoutStyle().messagePreview.text.variant;
+    obj[0] = getLayoutStyleDefault().messagePreview.text.variant;
     let num = 1;
     if (!muted) {
       num = SUBTITLE_OPACITY_NORMAL;
@@ -66,7 +59,7 @@ export const renderChannelSubtitle = function renderChannelSubtitle(arg0) {
       obj.children = subtitle;
       let tmp9 = jsx(Text.Text, {});
     } else {
-      const obj1 = { channelId: null, guildId: null, subtitle: null, muted: null, connected: null, textProps: null };
+      obj1 = { channelId: null, guildId: null, subtitle: null, muted: null, connected: null, textProps: null };
       obj1[0] = tmp;
       obj1[1] = tmp2;
       obj1[2] = subtitle;

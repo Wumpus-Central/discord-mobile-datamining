@@ -1,8 +1,8 @@
 // discord_app/modules/guild_config_gates/GuildConfigGates.tsx
-import importDefaultResult1 from "hasLoaded";
-import { Endpoints } from "ME";
-import initialize from "initialize";
-import importDefaultResult from "dispatcher";
+import importDefaultResult1 from "hasLoaded" /* 16861 */;
+import { Endpoints } from "ME" /* 676 */;
+import initialize from "initialize" /* 589 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 initialize = {
@@ -27,10 +27,10 @@ initialize = {
   },
   load: null
 };
-let closure_3 = require("dispatcher")((arg0) => {
-  let closure_0 = arg0;
-  let c5 = 0;
-  let c6 = 0;
+let closure_3 = importDefaultResult((arg0) => {
+  closure_0 = arg0;
+  c5 = 0;
+  c6 = 0;
   return (function*(arg0, body) {
     if (c6 === 2) {
       c6 = 3;
@@ -58,14 +58,14 @@ let closure_3 = require("dispatcher")((arg0) => {
             obj[0] = body;
             return obj;
           } else {
-            let closure_4 = tmp5;
-            let closure_3 = tmp2;
+            closure_4 = tmp5;
+            closure_3 = tmp2;
             let lib;
             if (null != callback) {
-              const HTTP = callback(outer1_2[4]).HTTP;
+              const HTTP = callback(closure_1_2[4]).HTTP;
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = HTTP.get(c5.GUILD_CONFIG_GATES(tmp27));
               return obj1;
             } else {
@@ -116,7 +116,7 @@ initialize[2] = function() {
   return applyArgumentsResult;
 };
 let closure_6 = initialize.createFetchStore(importDefaultResult1, initialize);
-const result = require("ME").fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_config_gates/GuildConfigGates.tsx");
 
 export const useGuildVerificationRoleEnabled = function useGuildVerificationRoleEnabled(arg0) {
   const data = callback(arg0).data;

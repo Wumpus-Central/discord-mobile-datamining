@@ -1,24 +1,17 @@
 // discord_app/modules/icymi/native/info_modal/ICYMITopicsScreen.tsx
-import GuildPrimaryCategory from "GuildPrimaryCategory";
-import initialize from "initialize";
-import BicycleIcon from "BicycleIcon";
-import get_ActivityIndicator from "FoodIcon";
-import getPrimaryCategories from "getPrimaryCategories";
-import { GuildPrimaryCategory } from "GuildPrimaryCategory";
-import jsxProd from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "getPrimaryCategories" /* 15726 */;
+import { GuildPrimaryCategory } from "GuildPrimaryCategory" /* 15733 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 function WordTopic(categoryid) {
-  let importDefault;
-  let selected;
   categoryid = categoryid.categoryid;
   ({ selected, handlePress: importDefault } = categoryid);
   if (GuildPrimaryCategory.GAMING === categoryid) {
@@ -75,31 +68,31 @@ function WordTopic(categoryid) {
 ({ View: closure_6, ScrollView: error, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: null, footer: null, title: null, subtitle: null, separator: null, topicsContainer: null, scrollContentContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", bottom: 0, left: require("Themes").space.PX_24, right: require("Themes").space.PX_24, paddingBottom: require("Themes").space.PX_8 };
-let obj1 = { position: "absolute", bottom: 0, left: require("Themes").space.PX_24, right: require("Themes").space.PX_24, paddingBottom: require("Themes").space.PX_8 };
-createCacheKey[2] = { marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_24 };
-let obj2 = { marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_8, marginHorizontal: require("Themes").space.PX_24 };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_24 };
-let obj3 = { marginBottom: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_24 };
-createCacheKey[4] = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-let obj4 = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[5] = { flex: 1, marginHorizontal: require("Themes").space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: require("Themes").space.PX_12 };
-let obj5 = { flex: 1, marginHorizontal: require("Themes").space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: require("Themes").space.PX_12 };
-createCacheKey[6] = { paddingTop: require("Themes").space.PX_24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingTop: require("Themes").space.PX_24 };
-let result = require("noop").fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
+createCacheKey[1] = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
+let obj1 = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
+let obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_24 };
+createCacheKey[4] = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj4 = { height: StyleSheet.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[5] = { flex: 1, marginHorizontal: ThemesDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: ThemesDefault.space.PX_12 };
+let obj5 = { flex: 1, marginHorizontal: ThemesDefault.space.PX_16, flexWrap: "wrap", flexDirection: "row", gap: ThemesDefault.space.PX_12 };
+createCacheKey[6] = { paddingTop: ThemesDefault.space.PX_24 };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj6 = { paddingTop: ThemesDefault.space.PX_24 };
+let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMITopicsScreen.tsx");
 
 export default function ICYMITopicsScreen() {
-  const tmp = createCacheKey();
-  const bottom = useSafeAreaInsets().bottom;
+  const tmp = callback3();
+  const bottom = useSafeAreaInsetsDefault().bottom;
   const tmp4 = callback(React.useState(new Set()), 2);
   const first = tmp4[0];
   importDefault = tmp4[1];
   const tmp6 = callback(React.useState(false), 2);
-  const dependencyMap = tmp6[1];
+  dependencyMap = tmp6[1];
   let obj = first(1500);
   const navigation = obj.useNavigation();
   const items = [navigation, first];
@@ -130,13 +123,13 @@ export default function ICYMITopicsScreen() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp4;
-            let closure_0 = tmp4;
+            closure_1 = tmp4;
+            closure_0 = tmp4;
             v0(true);
             v0 = 1;
             arr = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(v0[28])(v0[27], v0.paths);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0(v0[28])(v0[27], v0.paths);
             return obj1;
           }
         } else if (1 === tmp4) {
@@ -149,7 +142,7 @@ export default function ICYMITopicsScreen() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            let obj3 = outer1_1(v0[29]);
+            let obj3 = closure_1_1(v0[29]);
             const _Array = Array;
             v0 = 2;
             arr = 1;
@@ -169,10 +162,10 @@ export default function ICYMITopicsScreen() {
           if (arg1) {
             arr = arr.push("join_guilds");
           } else {
-            obj = outer1_1(v0[30]);
+            obj = closure_1_1(v0[30]);
             const obj5 = { key: "ICYMIInfoModal", content: null };
-            const intl = outer1_0(v0[31]).intl;
-            obj5[1] = intl.string(outer1_0(v0[31]).t.CG4Hks);
+            const intl = closure_1_0(v0[31]).intl;
+            obj5[1] = intl.string(closure_1_0(v0[31]).t.CG4Hks);
             obj.open(obj5);
           }
           const _setTimeout = setTimeout;
@@ -185,8 +178,8 @@ export default function ICYMITopicsScreen() {
       }
     }
   }), items);
-  let obj1 = first(589);
-  const items1 = [getPrimaryCategories];
+  obj1 = first(589);
+  const items1 = [closure_8];
   const stateFromStoresArray = obj1.useStateFromStoresArray(items1, () => allCategories.getAllCategories());
   const items2 = [first];
   callback = React.useCallback((categoryId) => {
@@ -220,7 +213,7 @@ export default function ICYMITopicsScreen() {
   const tmp10 = closure_12;
   const tmp11 = closure_11;
   const tmp13 = closure_6;
-  obj2[4] = callback2(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => outer1_10(outer1_14, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress: initialize }, categoryId.categoryId)) });
+  obj2[4] = callback2(closure_6, { style: tmp.topicsContainer, children: stateFromStoresArray.map((categoryId) => closure_1_10(closure_1_14, { selected: first.has(categoryId.categoryId), topic: categoryId.name, categoryid: categoryId.categoryId, handlePress: closure_4 }, categoryId.categoryId)) });
   children[3] = callback2(closure_7, obj2);
   let tmp12Result = first.size > 0;
   if (tmp12Result) {

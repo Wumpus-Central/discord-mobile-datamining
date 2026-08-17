@@ -1,12 +1,12 @@
 // discord_app/modules/activities/useIframeLifecycle.tsx
-import noop from "noop";
-import { ComponentActions } from "ME";
+import closure_2 from "noop" /* 19 */;
+import { ComponentActions } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("ComponentDispatcher").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useIframeLifecycle.tsx");
 
 export default function useIframeLifecycle(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -21,10 +21,10 @@ export default function useIframeLifecycle(arg0) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let closure_8;
+  closure_5 = undefined;
+  closure_6 = undefined;
+  closure_7 = undefined;
+  closure_8 = undefined;
   closure_5 = onIframeUnmount.useRef(onIframeMount);
   closure_6 = onIframeUnmount.useRef(onIframeUnmount);
   closure_7 = onIframeUnmount.useRef(flag);
@@ -50,10 +50,10 @@ export default function useIframeLifecycle(arg0) {
     }
     return () => {
       if (ref2.current) {
-        const ComponentDispatch = outer1_0(outer1_1[2]).ComponentDispatch;
+        const ComponentDispatch = closure_1_0(closure_1_1[2]).ComponentDispatch;
         const obj = { id: null };
         obj[0] = closure_0;
-        ComponentDispatch.dispatch(outer1_3.IFRAME_UNMOUNT, obj);
+        ComponentDispatch.dispatch(closure_1_3.IFRAME_UNMOUNT, obj);
         const current = ref.current;
         if (current != null) {
           current(tmp4);

@@ -1,39 +1,31 @@
 // discord_app/modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx
-import "PromoSheet";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "preload";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import { STAGE_BOOSTING_SHEET_KEY } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ AnalyticEvents: error, BoostedGuildTiers: metroImportAll, GuildFeatures: c9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: unpackModuleId } = ME);
+noopAll;
+({ AnalyticEvents: error, BoostedGuildTiers: closure_8, GuildFeatures: c9, MAX_STAGE_VIDEO_USER_LIMIT_TIER2: c10, MAX_STAGE_VIDEO_USER_LIMIT_UNCAPPED: unpackModuleId } = ME);
 ({ BoostingUpsellAction: closure_12, PremiumUpsellTypes: map1 } = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/sheets/StageBoostingActionSheet.tsx");
 
 export default function StageBoostingActionSheet(channel) {
   channel = channel.channel;
   let stateFromStores2;
-  let dependencyMap;
-  let maybeApplyNoTextColorForLightCustomTheme;
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let obj = channel(589);
-  const items = [createGuildRecordFromRust];
+  const items = [closure_4];
   const items1 = [channel.guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id), items1);
-  let obj1 = channel(589);
-  const items2 = [maybeApplyNoTextColorForLightCustomTheme];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id), items1);
+  obj1 = channel(589);
+  const items2 = [closure_3];
   let num;
   const stateFromStores1 = obj1.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
   if (stateFromStores != null) {
@@ -60,9 +52,9 @@ export default function StageBoostingActionSheet(channel) {
     }
   }
   let tmpResult = tmp(589);
-  const items3 = [getUncachedChannelPermissions];
+  const items3 = [closure_5];
   const items4 = [channel];
-  stateFromStores2 = tmpResult.useStateFromStores(items3, () => outer1_5.can(channel(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
+  stateFromStores2 = tmpResult.useStateFromStores(items3, () => closure_1_5.can(channel(1399).MODERATE_STAGE_CHANNEL_PERMISSIONS, channel), items4);
   if (hasItem) {
     let premiumTier1;
     if (stateFromStores != null) {
@@ -101,18 +93,18 @@ export default function StageBoostingActionSheet(channel) {
   } else {
     function handleClose() {
       let obj = stateFromStores2(4342);
-      obj.hideActionSheet(outer1_6);
-      obj = { guild_id: channel.guild_id, type: outer1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: outer1_12.DISMISS };
-      stateFromStores2(698).track(outer1_7.BOOSTING_UPSELL_CLICKED, obj);
+      obj.hideActionSheet(closure_1_6);
+      obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
+      stateFromStores2(698).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
     }
     tmpResult = tmp(6708);
     dependencyMap = tmpResult.useActualStageSpeakerCount(channel.id);
     const string3Result1 = string3(T_zF9M.pqPQL0);
-    maybeApplyNoTextColorForLightCustomTheme = tmp(6708).useStageParticipantsCount(channel.id, tmp(6703).StageChannelParticipantNamedIndex.AUDIENCE);
+    closure_3 = tmp(6708).useStageParticipantsCount(channel.id, tmp(6703).StageChannelParticipantNamedIndex.AUDIENCE);
     stateFromStores2(4761)(() => {
       let obj = stateFromStores2(698);
-      obj = { guild_id: channel.guild_id, type: outer1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: dependencyMap + maybeApplyNoTextColorForLightCustomTheme };
-      obj.track(outer1_7.BOOSTING_UPSELL_VIEWED, obj);
+      obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, listener_count: dependencyMap + closure_3 };
+      obj.track(closure_1_7.BOOSTING_UPSELL_VIEWED, obj);
     });
     if (tmp9) {
       obj = { size: "lg", children: null };
@@ -122,14 +114,14 @@ export default function StageBoostingActionSheet(channel) {
       obj[3] = intl6.string(tmp(1236).t.Uj0md3);
       obj[4] = function onPress() {
         let obj = stateFromStores2(4342);
-        obj.hideActionSheet(outer1_6);
-        obj = { guild_id: channel.guild_id, type: outer1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: outer1_12.DISMISS };
-        stateFromStores2(698).track(outer1_7.BOOSTING_UPSELL_CLICKED, obj);
+        obj.hideActionSheet(closure_1_6);
+        obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.DISMISS };
+        stateFromStores2(698).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
         const obj2 = stateFromStores2(698);
         channel(6710).openApplyBoostModal(channel.guild_id);
         const obj4 = channel(6710);
-        obj = { guild_id: channel.guild_id, type: outer1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: outer1_12.BOOST };
-        stateFromStores2(698).track(outer1_7.BOOSTING_UPSELL_CLICKED, obj);
+        obj = { guild_id: channel.guild_id, type: closure_1_13.VIDEO_STAGE_LIMIT, is_moderator: stateFromStores2, action: closure_1_12.BOOST };
+        stateFromStores2(698).track(closure_1_7.BOOSTING_UPSELL_CLICKED, obj);
       };
       const items5 = [callback(tmp(4745).Button, obj), ];
       obj1 = { variant: "secondary", size: "lg", text: null, onPress: null };

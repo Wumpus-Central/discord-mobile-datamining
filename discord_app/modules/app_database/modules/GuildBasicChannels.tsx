@@ -1,31 +1,34 @@
 // discord_app/modules/app_database/modules/GuildBasicChannels.tsx
-import _slicedToArray from "_slicedToArray";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import { createChannelRecordFromServer as closure_7 } from "createChannelRecord";
-import fetchFingerprint from "fetchFingerprint";
-import closure_9 from "ensureGuildLoaded";
-import { ChannelLoader } from "ensureGuildLoaded";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import hasChannel from "hasChannel";
-import set from "_handleConnectionOpen";
-import { items } from "../DatabaseDaos.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import fromStringAll from "fromString" /* 506 */;
+import itemsDefault from "items" /* 1955 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "_handleConnectionOpen" /* 4495 */;
+import { createChannelRecordFromServer as closure_7 } from "createChannelRecord" /* 1395 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_12 from "createGuildRecordFromRust" /* 1910 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_14 from "hasChannel" /* 1392 */;
+import set from "set" /* 2 */;
 
+let set = arg1;
 function hasBasicChannelChanged(basicChannel, nextResult) {
   let tmp = null == basicChannel || basicChannel.type !== nextResult.type || basicChannel.parent_id !== nextResult.parent_id;
   if (!tmp) {
-    const basicPermissions = getUncachedChannelPermissions.computeBasicPermissions(basicChannel);
-    tmp = basicPermissions !== getUncachedChannelPermissions.computeBasicPermissions(nextResult);
+    const basicPermissions = closure_13.computeBasicPermissions(basicChannel);
+    tmp = basicPermissions !== closure_13.computeBasicPermissions(nextResult);
   }
   return tmp;
 }
-let closure_15 = new require("createChannelRecord")("GuildBasicChannels");
+let closure_15 = new timestampDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
     obj = Object.create(new.target.prototype);
-    GuildBasicChannels = obj;
+    closure_0 = obj;
     obj.synced = null;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
@@ -70,23 +73,23 @@ class GuildBasicChannels {
 }
 const prototype = GuildBasicChannels.prototype;
 prototype["getAsync"] = function getAsync(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    let closure_1 = tmp3;
-    let closure_0 = tmp2;
+    closure_1 = tmp3;
+    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
-    const obj7 = outer1_1(c3[11]);
-    let items = [outer1_1(c3[11]).basicChannels(outer1_0).getKvEntries(), ];
-    const basicChannelsResult = outer1_1(c3[11]).basicChannels(outer1_0);
-    const obj9 = outer1_1(c3[11]);
-    items[1] = outer1_1(c3[11]).syncedBasicChannels(outer1_0).getKvEntries();
+    const obj7 = closure_1_1(c3[11]);
+    let items = [closure_1_1(c3[11]).basicChannels(closure_1_0).getKvEntries(), ];
+    const basicChannelsResult = closure_1_1(c3[11]).basicChannels(closure_1_0);
+    const obj9 = closure_1_1(c3[11]);
+    items[1] = closure_1_1(c3[11]).syncedBasicChannels(closure_1_0).getKvEntries();
     closure_1 = yield Promise.all(items);
-    let _slicedToArray = 5;
+    closure_4 = 5;
     const _performance = performance;
-    let ensureGuildLoaded = performance.now() - closure_0;
-    let _handleConnectionOpen = (function groupStatuses(_slicedToArray) {
+    closure_5 = performance.now() - closure_0;
+    closure_6 = (function groupStatuses(closure_4) {
       const items = [];
       const items1 = [];
       while (tmp !== undefined) {
@@ -103,20 +106,19 @@ prototype["getAsync"] = function getAsync(arg0) {
       }
       const items2 = [items, items1];
       return items2;
-    })(_slicedToArray);
-    const dependencyMap2 = outer1_4(_handleConnectionOpen, 2);
-    let fetchFingerprint = 32;
+    })(closure_4);
+    const dependencyMap2 = closure_1_4(closure_6, 2);
+    closure_8 = 32;
     const length = 5;
     const _Set = Set;
-    const set = new Set(fetchFingerprint);
+    set = new Set(closure_8);
     closure_1.synced = set;
     const _HermesInternal = HermesInternal;
-    outer1_15.verbose("loaded in " + ensureGuildLoaded + "ms (guilds: " + c3.length + ", synced: " + set.size + " unsynced: " + length.length + ")");
+    closure_1_15.verbose("loaded in " + closure_5 + "ms (guilds: " + c3.length + ", synced: " + set.size + " unsynced: " + length.length + ")");
     const obj3 = { all: null, stale: null, channels: null };
     obj3[0] = c3;
     obj3[1] = length;
     obj3[2] = c3.filter((arg0) => {
-      let tmp;
       [tmp, ] = arg0;
       return set.has(tmp);
     });
@@ -153,10 +155,10 @@ prototype["handleChannelUpdates"] = function handleChannelUpdates(channels, clos
   }
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const self = this;
   function _loop(iter) {
-    let closure_0 = iter;
+    closure_0 = iter;
     const data_mode = iter.data_mode;
     if ("unavailable" !== data_mode) {
       if ("partial" === data_mode) {
@@ -164,7 +166,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         const channels = iter.partial_updates.channels;
         let mapped;
         if (channels != null) {
-          mapped = channels.map((arg0) => outer1_7(arg0, iter.id));
+          mapped = channels.map((arg0) => closure_1_7(arg0, iter.id));
         }
         if (mapped == null) {
           mapped = [];
@@ -222,29 +224,29 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
             obj[0] = arg1;
             return obj;
           } else {
-            let _handleConnectionOpen = tmp4;
-            let closure_0;
+            closure_6 = tmp4;
+            closure_0 = undefined;
             let guildIds;
             let v;
             let iter3;
             let next;
-            closure_0 = outer1_6.lastTimeConnectedChanged();
-            const databaseResult = outer1_1(outer1_3[11]).database();
+            closure_0 = closure_1_6.lastTimeConnectedChanged();
+            const databaseResult = closure_1_1(closure_1_3[11]).database();
             guildIds = databaseResult;
-            if (null != outer1_0.synced) {
+            if (null != closure_1_0.synced) {
               if (null != databaseResult) {
                 if (obj7.isCacheEnabled()) {
-                  guildIds = outer1_12.getGuildIds();
+                  guildIds = closure_1_12.getGuildIds();
                   let _HermesInternal = HermesInternal;
-                  outer1_15.verbose("scheduling basic_channel optimstic writes (guilds: " + guildIds.filter((arg0) => {
+                  closure_1_15.verbose("scheduling basic_channel optimstic writes (guilds: " + guildIds.filter((arg0) => {
                     synced = synced.synced;
                     return !synced.has(arg0);
                   }).length + ")");
                   iter3 = function _loop2(arg0) {
-                    let closure_0 = arg0;
-                    let c5 = 0;
-                    let c6 = 0;
-                    let c4 = 0;
+                    closure_0 = arg0;
+                    c5 = 0;
+                    c6 = 0;
+                    c4 = 0;
                     return (function* _loop2(arg0) {
                       if (c6 === 2) {
                         c6 = 3;
@@ -272,23 +274,23 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                               obj[0] = arg1;
                               return obj;
                             } else {
-                              let closure_2 = tmp3;
-                              let closure_1 = tmp7;
+                              closure_2 = tmp3;
+                              closure_1 = tmp7;
                               if (null != synced.synced) {
-                                if (outer1_1 === obj10.database()) {
-                                  if (synced === _handleConnectionOpen.lastTimeConnectedChanged()) {
+                                if (closure_1_1 === obj10.database()) {
+                                  if (synced === closure_6.lastTimeConnectedChanged()) {
                                     synced = tmp36.synced;
                                     if (synced.has(tmp35)) {
                                       c6 = 3;
                                       return { value: 1, done: true };
                                     } else {
                                       const _HermesInternal = HermesInternal;
-                                      outer2_15.verbose("optimstically writing basic_channels (guild: " + tmp35 + ")");
-                                      let c4 = 1;
+                                      closure_2_15.verbose("optimstically writing basic_channels (guild: " + tmp35 + ")");
+                                      c4 = 1;
                                       const items = [tmp35];
                                       c5 = 3;
                                       c6 = 1;
-                                      const obj1 = { value: null, done: false };
+                                      obj1 = { value: null, done: false };
                                       obj1[0] = c10.loadGuildIds(items);
                                       return obj1;
                                     }
@@ -302,7 +304,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                           } else if (1 === tmp7) {
                             c4 = 0;
                             closure_1 = closure_3;
-                            outer2_15.warn("couldn't optimstically write basic_channel:", closure_1);
+                            closure_2_15.warn("couldn't optimstically write basic_channel:", closure_1);
                             c6 = 3;
                             const obj2 = { value: null, done: true };
                             obj2[0] = { v: "r" };
@@ -369,7 +371,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                   };
                   closure_0 = guildIds[Symbol.iterator]();
                   if (closure_0 !== undefined) {
-                    let c7 = 1;
+                    c7 = 1;
                     next = tmp38;
                     const iter4 = iter3(next)[tmp59.iterator]();
                     HermesBuiltin.ensureObject("iterator is not an object");
@@ -378,7 +380,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                     const tmp71 = iter3(next);
                   }
                 }
-                obj7 = outer1_0(outer1_3[12]);
+                obj7 = closure_1_0(closure_1_3[12]);
               }
             }
             c10 = 3;
@@ -387,7 +389,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         } else if (1 === tmp7) {
           c7 = 0;
           closure_0.return();
-          throw fetchFingerprint;
+          throw closure_8;
         } else {
           if (2 !== tmp7) {
             c7 = 1;
@@ -420,14 +422,14 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                   c7 = 0;
                   closure_0.return();
                   c10 = 3;
-                  let obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = v.v;
                   return obj1;
                 }
               }
               c7 = 0;
             }
-            tmp9 = fetchFingerprint;
+            tmp9 = closure_8;
           }
           c7 = 2;
           if (arg0 === 1) {
@@ -476,7 +478,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
           return iter3;
         }
       } catch (tmp51) {
-        fetchFingerprint = tmp51;
+        closure_8 = tmp51;
         if (tmp3 === c7) {
           c10 = tmp2;
           throw tmp51;
@@ -493,8 +495,6 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   this.handleOneGuildCreate(guild.guild, arg1);
 };
 prototype["handleOneGuildCreate"] = function handleOneGuildCreate(arg0, closure_0) {
-  let channels;
-  let id;
   ({ id, channels } = arg0);
   const op = channels.op;
   const self = this;
@@ -518,9 +518,9 @@ prototype["handleGuildRoleUpdate"] = function handleGuildRoleUpdate(role, closur
   role = role.getRole(role.guildId, role.id);
   let equalsResult = null != role;
   if (equalsResult) {
-    const obj = importAll(506);
-    equalsResult = obj.equals(importAll(506).deserialize(role.permissions), role.permissions);
-    const obj2 = importAll(506);
+    const obj = fromStringAll;
+    equalsResult = obj.equals(fromStringAll.deserialize(role.permissions), role.permissions);
+    const obj2 = fromStringAll;
   }
   if (!equalsResult) {
     const self = this;
@@ -546,8 +546,8 @@ prototype["onGuildUpdate"] = function onGuildUpdate(id, mapped, deleted_channel_
       basicChannel = basicChannel.getBasicChannel(id.id);
       let tmp2 = null == basicChannel || basicChannel.type !== id.type || basicChannel.parent_id !== id.parent_id;
       if (!tmp2) {
-        const basicPermissions = getUncachedChannelPermissions.computeBasicPermissions(basicChannel);
-        tmp2 = basicPermissions !== getUncachedChannelPermissions.computeBasicPermissions(id);
+        const basicPermissions = closure_13.computeBasicPermissions(basicChannel);
+        tmp2 = basicPermissions !== closure_13.computeBasicPermissions(id);
       }
       return tmp2;
     });
@@ -562,10 +562,10 @@ prototype["onGuildSync"] = function onGuildSync(id, closure_0) {
 };
 prototype["delete"] = function delete(guild_id, database) {
   this.unsync(guild_id, database);
-  const result = items.basicChannelsTransaction(database);
+  const result = itemsDefault.basicChannelsTransaction(database);
   result.delete(guild_id);
-  const obj = items;
-  const result1 = items.syncedBasicChannelsTransaction(database);
+  const obj = itemsDefault;
+  const result1 = itemsDefault.syncedBasicChannelsTransaction(database);
   result1.delete(guild_id);
 };
 prototype["unsync"] = function unsync(guild_id, closure_0) {
@@ -573,16 +573,16 @@ prototype["unsync"] = function unsync(guild_id, closure_0) {
   if (synced != null) {
     synced.delete(guild_id);
   }
-  const result = items.basicChannelsTransaction(closure_0);
+  const result = itemsDefault.basicChannelsTransaction(closure_0);
   result.delete(guild_id);
-  const obj = items;
-  const result1 = items.syncedBasicChannelsTransaction(closure_0);
+  const obj = itemsDefault;
+  const result1 = itemsDefault.syncedBasicChannelsTransaction(closure_0);
   result1.put(guild_id, false);
-  hasChannel.invalidate(guild_id);
+  closure_14.invalidate(guild_id);
 };
 prototype["sync"] = function sync(database) {
   const self = this;
-  tmp2.verbose("Starting to write all basic channels");
+  closure_15.verbose("Starting to write all basic channels");
   let num = 0;
   let num2 = 0;
   const guildIds = store2.getGuildIds();
@@ -597,7 +597,7 @@ prototype["sync"] = function sync(database) {
     }
     continue;
   }
-  tmp2.verbose("" + num + " basic_channel guilds submitted (took: " + performance.now() - nowResult + "ms, skipped: " + num2 + " guilds)");
+  closure_15.verbose("" + num + " basic_channel guilds submitted (took: " + performance.now() - nowResult + "ms, skipped: " + num2 + " guilds)");
 };
 prototype["syncOne"] = function syncOne(closure_0, database) {
   const self = this;
@@ -615,23 +615,22 @@ prototype["syncOne"] = function syncOne(closure_0, database) {
     if (synced2 != null) {
       synced2.add(closure_0);
     }
-    const result = items.basicChannelsTransaction(database);
+    const result = itemsDefault.basicChannelsTransaction(database);
     const _Object = Object;
     const values = Object.values(store.getMutableGuildChannelsForGuild(closure_0));
     result.put(closure_0, values.map((id) => {
-      const obj = { id: id.id, type: id.type, guild_id: id.guild_id, parent_id: id.parent_id, basicPermissions: null };
-      obj[4] = callback(table[14]).asBasicFlag(getUncachedChannelPermissions.computePermissions(id));
+      const obj = { id: id.id, type: id.type, guild_id: id.guild_id, parent_id: id.parent_id, basicPermissions: callback(table[14]).asBasicFlag(closure_13.computePermissions(id)) };
       return obj;
     }));
-    let obj = items;
-    const result1 = items.syncedBasicChannelsTransaction(database);
+    let obj = itemsDefault;
+    const result1 = itemsDefault.syncedBasicChannelsTransaction(database);
     result1.put(closure_0, true);
     flag = true;
-    const obj3 = items;
+    const obj3 = itemsDefault;
   }
   return flag;
 };
-let set = Object.create(GuildBasicChannels.prototype);
+set = Object.create(GuildBasicChannels.prototype);
 set.synced = null;
 set.actions = {
   BACKGROUND_SYNC(arg0, arg1) {

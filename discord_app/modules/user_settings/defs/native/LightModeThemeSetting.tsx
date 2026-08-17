@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/LightModeThemeSetting.tsx
-import handleThemeChange from "handleThemeChange";
-import { SystemTheme } from "SystemThemeState";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import useSyncedModeThemeName from "useSyncedModeThemeName" /* 14650 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
+import { SystemTheme } from "SystemThemeState" /* 1305 */;
+import createToggle from "createToggle" /* 10669 */;
 import { SettingsAppearanceLightModeThemePickerScreen } from "../../appearance/native/SettingsAppearanceLightModeThemePickerScreen.tsx";
-import { useSyncedModeThemeName } from "useSyncedModeThemeName.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -15,8 +15,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useSyncedModePickerVisible() {
-    let stateFromStores = useIsMobileVisualRefreshExperimentEnabled("LightModeThemeSetting");
-    const items = [handleThemeChange];
+    let stateFromStores = useIsMobileVisualRefreshExperimentEnabledDefault("LightModeThemeSetting");
+    const items = [closure_3];
     if (stateFromStores) {
       stateFromStores = obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
     }
@@ -34,6 +34,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LightModeThemeSetting.tsx");
 
 export default createToggle;

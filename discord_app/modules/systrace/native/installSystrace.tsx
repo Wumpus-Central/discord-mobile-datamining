@@ -1,7 +1,9 @@
 // discord_app/modules/systrace/native/installSystrace.tsx
-import { Systrace } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
+const Systrace = get_ActivityIndicator.Systrace;
+const result = set.fileFinishedImporting("modules/systrace/native/installSystrace.tsx");
 
 export const installSystrace = function installSystrace() {
   if (obj.isAndroid()) {

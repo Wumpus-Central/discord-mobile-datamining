@@ -1,17 +1,15 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getParticipants from "getParticipants";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import updateVoiceState from "updateVoiceState";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import VoicePanelModes from "VoicePanelModes";
-import { RTCConnectionStates } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
+import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
+import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import { RTCConnectionStates } from "ME" /* 676 */;
 
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function getMemoizedParticipant(type, get) {
   const combined = "" + type.type + "-" + type.id;
@@ -24,11 +22,11 @@ function getMemoizedParticipant(type, get) {
 }
 ({ VoicePanelCardItemType: unpackModuleId, VoicePanelCTACard: closure_12 } = VoicePanelModes);
 let closure_14 = [];
-let result = require("getParticipants").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelParticipants.tsx");
 
 export default function useVoicePanelCards(arg0, arg1) {
   const _require = arg0;
-  const importDefault = arg1;
+  importDefault = arg1;
   const id = stateFromStores.getId();
   const channel = desyncedChannelParticipants.getChannel(arg0);
   let flag;
@@ -42,18 +40,18 @@ export default function useVoicePanelCards(arg0, arg1) {
   const React = tmp2;
   const first = flag(React.useState(() => new Map()), 1)[0];
   let items = [first];
-  const effect = React.useEffect(() => () => getParticipants.clear(), items);
-  let items1 = [createRTCConnection];
+  const effect = React.useEffect(() => () => closure_5.clear(), items);
+  let items1 = [closure_8];
   stateFromStores = _require(id[11]).useStateFromStores(items1, () => state.getState() === constants.RTC_CONNECTED);
   const obj2 = _require(id[11]);
   desyncedChannelParticipants = _require(id[12]).useDesyncedChannelParticipants(arg0);
   let obj = { items: null, isConnected: null };
   const obj3 = _require(id[12]);
-  const items2 = [first, getVoiceStatesForGuild];
+  const items2 = [first, closure_10];
   const items3 = [tmp2, desyncedChannelParticipants, arg0, arg1, first, flag, id, stateFromStores];
   obj[0] = _require(id[11]).useStateFromStoresArray(items2, () => {
     let tmp;
-    if (noop) {
+    if (closure_4) {
       let voiceParticipantsHidden = first.getVoiceParticipantsHidden(closure_0);
       const items = [];
       const filteredParticipants = first.getFilteredParticipants(closure_0);
@@ -72,13 +70,13 @@ export default function useVoicePanelCards(arg0, arg1) {
       let items1 = [];
       const tmp18 = items[Symbol.iterator]();
       while (tmp18 !== undefined) {
-        let tmp22 = outer1_15;
+        let tmp22 = closure_1_15;
         let obj = { type: null, id: null };
-        let tmp23 = outer1_11;
-        obj[0] = outer1_11.PARTICIPANT;
+        let tmp23 = closure_1_11;
+        obj[0] = closure_1_11.PARTICIPANT;
         obj[1] = tmp20.id;
         let tmp24 = first;
-        let tmp25 = outer1_15(obj, first);
+        let tmp25 = closure_1_15(obj, first);
         let tmp26 = flag;
         if (flag) {
           let tmp27 = tmp25;
@@ -103,37 +101,37 @@ export default function useVoicePanelCards(arg0, arg1) {
       }
       if (tmp34) {
         obj = { type: null, id: null };
-        obj[0] = outer1_11.CTA;
-        obj[1] = outer1_12.CALLER_DISCONNECTED;
-        items1.push(outer1_15(obj, first));
+        obj[0] = closure_1_11.CTA;
+        obj[1] = closure_1_12.CALLER_DISCONNECTED;
+        items1.push(closure_1_15(obj, first));
       }
       if (voiceParticipantsHidden) {
         voiceParticipantsHidden = 0 === items.length;
       }
       if (voiceParticipantsHidden) {
         obj = { type: null, id: null };
-        obj[0] = outer1_11.CTA;
-        obj[1] = outer1_12.NO_VIDEO_PARTICIPANTS;
-        items1.push(outer1_15(obj, first));
+        obj[0] = closure_1_11.CTA;
+        obj[1] = closure_1_12.NO_VIDEO_PARTICIPANTS;
+        items1.push(closure_1_15(obj, first));
       }
       if (items1.length <= 0) {
-        items1 = outer1_14;
+        items1 = closure_1_14;
       }
       return items1;
     } else {
-      const voiceStatesForChannelAlt = outer1_10.getVoiceStatesForChannelAlt(closure_0, closure_1);
+      const voiceStatesForChannelAlt = closure_1_10.getVoiceStatesForChannelAlt(closure_0, closure_1);
       let mapped = voiceStatesForChannelAlt.map((id) => {
-        const obj = { type: outer1_11.PARTICIPANT, id: id.user.id };
+        const obj = { type: closure_1_11.PARTICIPANT, id: id.user.id };
         const combined = "" + obj.type + "-" + obj.id;
-        let value = getParticipants.get(combined);
+        let value = closure_5.get(combined);
         if (null == value) {
-          const result = getParticipants.set(combined, obj);
+          const result = closure_5.set(combined, obj);
           value = obj;
         }
         return value;
       });
       if (mapped.length <= 0) {
-        mapped = outer1_14;
+        mapped = closure_1_14;
       }
       return mapped;
     }
@@ -143,22 +141,22 @@ export default function useVoicePanelCards(arg0, arg1) {
 };
 export const useChunkedParticipants = function useChunkedParticipants(channelId, arg1) {
   const _require = channelId;
-  const importDefault = arg1;
+  importDefault = arg1;
   id = id.getId();
   const layoutManager = managerSubscription.useContext(importDefault(id[13])).layoutManager;
   managerSubscription = _require(id[14]).useManagerSubscription(layoutManager);
   const first = layoutManager(managerSubscription.useState(() => new Map()), 1)[0];
   let items = [first];
-  const effect = managerSubscription.useEffect(() => () => getParticipants.clear(), items);
+  const effect = managerSubscription.useEffect(() => () => closure_5.clear(), items);
   let obj = _require(id[14]);
-  let items1 = [updateVoiceState, first];
+  let items1 = [closure_9, first];
   const items2 = [channelId, first, layoutManager, arg1, managerSubscription, id];
   return _require(id[11]).useStateFromStoresArray(items1, () => {
     if (managerSubscription < 0) {
-      return outer1_14;
+      return closure_1_14;
     } else {
       let items = [];
-      if (outer1_9.isInChannel(closure_0, id)) {
+      if (closure_1_9.isInChannel(closure_0, id)) {
         const _Set = Set;
         const set = new Set((() => {
           let end;
@@ -185,19 +183,19 @@ export const useChunkedParticipants = function useChunkedParticipants(channelId,
           return items;
         })());
         for (const item10013 of set) {
-          let tmp7 = outer1_15;
+          let tmp7 = closure_1_15;
           let tmp8 = first;
-          let arr = items.push(outer1_15(item10013, first));
+          let arr = items.push(closure_1_15(item10013, first));
           continue;
         }
         if (tmp12) {
           const obj = { type: null, id: null };
-          obj[0] = outer1_11.CTA;
-          obj[1] = outer1_12.NO_VIDEO_PARTICIPANTS;
-          items.push(outer1_15(obj, first));
+          obj[0] = closure_1_11.CTA;
+          obj[1] = closure_1_12.NO_VIDEO_PARTICIPANTS;
+          items.push(closure_1_15(obj, first));
         }
         if (items.length <= 0) {
-          items = outer1_14;
+          items = closure_1_14;
         }
         return items;
       } else {

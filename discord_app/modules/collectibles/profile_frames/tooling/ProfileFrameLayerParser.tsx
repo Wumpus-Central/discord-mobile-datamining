@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/profile_frames/tooling/ProfileFrameLayerParser.tsx
-import _toArray from "_toArray";
-import set from "ProfileFrameLayerType";
-import { ProfileFrameLayerType } from "../../../../../discord_common/js/shared/shared-constants/ProfileFrameLayerType.tsx";
+import ProfileFrameLayerType from "ProfileFrameLayerType" /* 8952 */;
+import closure_2 from "_toArray" /* 853 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 const preview = "preview";
 const responsive = "responsive";
 let obj = { foreground: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.FRONT, background: require("ProfileFrameLayerOrder").ProfileFrameLayerOrder.BACK };
@@ -28,8 +28,6 @@ export const FOLDER_ORDER_MAP = obj;
 export const ParseErrorKind = obj;
 export const PARSE_ERROR_LABELS = obj;
 export const parseLayerFilename = function parseLayerFilename(c7) {
-  let tmp19;
-  let tmp20;
   const parts = c7.replace(/\.\w+$/, "").split("_");
   if (parts.length >= 2) {
     if (parts.length <= 4) {
@@ -41,7 +39,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
           if (tmp20 === ProfileFrameLayerType.ProfileFrameLayerType.BORDER) {
             if (substr.length > 0) {
               if (set1.has(substr[0])) {
-                let obj = { parsed: null, errorType: null };
+                obj = { parsed: null, errorType: null };
                 obj[1] = obj.BORDER_HAS_ANCHOR;
                 return obj;
               }
@@ -53,7 +51,7 @@ export const parseLayerFilename = function parseLayerFilename(c7) {
             } else {
               if (1 === substr.length) {
                 if (substr[0] !== responsive) {
-                  const obj1 = { parsed: null, errorType: null };
+                  obj1 = { parsed: null, errorType: null };
                   obj1[1] = obj.INVALID_RESPONSIVE;
                   return obj1;
                 }

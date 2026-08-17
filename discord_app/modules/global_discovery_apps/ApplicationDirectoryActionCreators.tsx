@@ -1,29 +1,29 @@
 // discord_app/modules/global_discovery_apps/ApplicationDirectoryActionCreators.tsx
-import getLastFetchTimeMs from "getLastFetchTimeMs";
-import getUserAgnosticState from "getUserAgnosticState";
-import _getSystemLocale from "_getSystemLocale";
-import "refreshSourceMapCookie";
-import set from "set";
-import { FetchState } from "set";
-import closure_8 from "getLastFetchTimeMs";
-import closure_9 from "getLastFetchTimeMs";
-import { FetchState } from "getLastFetchTimeMs";
-import getSearchResults from "getSearchResults";
-import { FetchState } from "getSearchResults";
-import getSimilarApplications from "getSimilarApplications";
-import { FetchState } from "getSimilarApplications";
-import addToApplicationIdToGuildIds from "addToApplicationIdToGuildIds";
-import { FetchState } from "addToApplicationIdToGuildIds";
-import { Endpoints } from "ME";
+import refreshSourceMapCookieDefault from "refreshSourceMapCookie" /* 706 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getUserAgnosticState" /* 4737 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "set" /* 7141 */;
+import { FetchState } from "set" /* 7141 */;
+import closure_8 from "getLastFetchTimeMs" /* 11248 */;
+import closure_9 from "getLastFetchTimeMs" /* 11249 */;
+import { FetchState } from "getLastFetchTimeMs" /* 11249 */;
+import closure_11 from "getSearchResults" /* 11244 */;
+import { FetchState } from "getSearchResults" /* 11244 */;
+import closure_13 from "getSimilarApplications" /* 11250 */;
+import { FetchState } from "getSimilarApplications" /* 11250 */;
+import closure_15 from "addToApplicationIdToGuildIds" /* 11251 */;
+import { FetchState } from "addToApplicationIdToGuildIds" /* 11251 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _getEmbedApplication() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
       if (constants === 2) {
         constants = 3;
@@ -58,7 +58,7 @@ function _getEmbedApplication() {
               body = undefined;
               const _Date = Date;
               const timestamp = Date.now();
-              const value = outer1_19.get(callback);
+              const value = closure_1_19.get(callback);
               callback2 = value;
               if (value == null) {
                 callback2 = 0;
@@ -66,35 +66,35 @@ function _getEmbedApplication() {
               let obj5 = applicationFetchState;
               if (applicationFetchState.getApplicationFetchState(callback) !== constants.FETCHING) {
                 if (!obj5.isInvalidApplication(tmp34)) {
-                  if (timestamp >= tmp21 + outer1_18) {
+                  if (timestamp >= tmp21 + closure_1_18) {
                     const result = obj10.set(tmp34, timestamp);
-                    const obj1 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: null };
+                    obj1 = { type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: null };
                     obj1[1] = tmp34;
-                    outer1_1(outer1_2[11]).dispatch(obj1);
-                    const tmp45 = new outer1_1(outer1_2[12])(1000, 5000);
+                    closure_1_1(closure_1_2[11]).dispatch(obj1);
+                    const tmp45 = new closure_1_1(closure_1_2[12])(1000, 5000);
                     callback2 = tmp45;
                     interceptResponse = function interceptResponse(status) {
-                      let closure_0 = arg1;
+                      closure_0 = arg1;
                       let flag = 429 === status.status;
                       if (flag) {
-                        flag = c1.fails < 10;
+                        flag = closure_1.fails < 10;
                       }
                       if (flag) {
-                        c1.fail(() => {
-                          callback(undefined, outer1_2);
+                        closure_1.fail(() => {
+                          callback(undefined, closure_1_2);
                         });
                         flag = true;
                       }
                       return flag;
                     };
-                    let c5 = 1;
-                    const HTTP = callback(outer1_2[13]).HTTP;
+                    c5 = 1;
+                    const HTTP = callback(closure_1_2[13]).HTTP;
                     const obj2 = { url: null, backoff: null, retries: 10, interceptResponse: null, rejectWithError: null };
-                    obj2[0] = outer1_17.APPLICATION_DIRECTORY_EMBED_APPLICATION(tmp34);
+                    obj2[0] = closure_1_17.APPLICATION_DIRECTORY_EMBED_APPLICATION(tmp34);
                     obj2[1] = tmp45;
                     obj2[3] = interceptResponse;
-                    const obj11 = outer1_1(outer1_2[11]);
-                    obj2[4] = callback(outer1_2[13]).rejectWithMigratedError();
+                    const obj11 = closure_1_1(closure_1_2[11]);
+                    obj2[4] = callback(closure_1_2[13]).rejectWithMigratedError();
                     applicationFetchState = 2;
                     constants = 1;
                     let obj3 = { value: null, done: false };
@@ -103,7 +103,7 @@ function _getEmbedApplication() {
                   }
                 }
               }
-              obj10 = outer1_19;
+              obj10 = closure_1_19;
               tmp21 = callback2;
             }
           } else {
@@ -132,7 +132,7 @@ function _getEmbedApplication() {
           }
           constants = 3;
         } catch (tmp24) {
-          let getUserAgnosticState = tmp24;
+          closure_4 = tmp24;
           if (tmp4 === c5) {
             constants = tmp2;
             throw tmp24;
@@ -143,7 +143,7 @@ function _getEmbedApplication() {
       }
     })();
   });
-  const _getEmbedApplication = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -155,11 +155,11 @@ function _getEmbedApplication() {
 function _getApplication() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -189,11 +189,11 @@ function _getApplication() {
             } else {
               let applicationLastFetchTime = tmp3;
               let applicationFetchState = tmp7;
-              let obj1;
+              obj1 = undefined;
               if (obj1 === undefined) {
                 obj1 = {};
               }
-              let dependencyMap;
+              dependencyMap = undefined;
               applicationFetchState = undefined;
               applicationLastFetchTime = undefined;
               let dontRefetchMs;
@@ -287,7 +287,7 @@ function _getApplication() {
     iter.next();
     return iter;
   });
-  const _getApplication = tmp;
+  closure_21 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -330,19 +330,19 @@ function _getCategories() {
             body = undefined;
             const _Date = Date;
             const timestamp = Date.now();
-            const lastFetchTimeMs = outer1_8.getLastFetchTimeMs();
+            const lastFetchTimeMs = closure_1_8.getLastFetchTimeMs();
             if (null != lastFetchTimeMs) {
-              if (lastFetchTimeMs + outer1_18 > timestamp) {
+              if (lastFetchTimeMs + closure_1_18 > timestamp) {
                 c3 = 3;
               }
             }
-            const HTTP = outer1_0(530).HTTP;
-            const obj1 = { url: null, query: null, rejectWithError: null };
-            obj1[0] = outer1_17.APPLICATION_DIRECTORY_CATEGORIES;
+            const HTTP = closure_1_0(530).HTTP;
+            obj1 = { url: null, query: null, rejectWithError: null };
+            obj1[0] = closure_1_17.APPLICATION_DIRECTORY_CATEGORIES;
             const obj2 = { locale: null };
-            obj2[0] = outer1_5.locale;
+            obj2[0] = closure_1_5.locale;
             obj1[1] = obj2;
-            let obj5 = outer1_0(530);
+            let obj5 = closure_1_0(530);
             obj1[2] = obj5.rejectWithMigratedError();
             dependencyMap = 1;
             c3 = 1;
@@ -370,7 +370,7 @@ function _getCategories() {
       }
     }
   });
-  const _getCategories = tmp;
+  closure_22 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -382,14 +382,11 @@ function _getCategories() {
 function _getSimilarApplications() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let closure_1;
-      let closure_2;
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -416,14 +413,14 @@ function _getSimilarApplications() {
               obj[0] = arg1;
               return obj;
             } else {
-              let getUserAgnosticState = tmp3;
+              closure_4 = tmp3;
               let page = tmp7;
               let callback;
               let lib;
               let lastFetchTimeMs;
               ({ applicationId: c0, guildId: closure_1, options: closure_2 } = callback);
               page = undefined;
-              getUserAgnosticState = undefined;
+              closure_4 = undefined;
               let locale;
               let lastFetchTimeMs2;
               closure_7 = undefined;
@@ -438,7 +435,7 @@ function _getSimilarApplications() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c8 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -448,7 +445,7 @@ function _getSimilarApplications() {
                 }
                 page = lib.page;
                 const _Date = Date;
-                getUserAgnosticState = Date.now();
+                closure_4 = Date.now();
                 const obj2 = { applicationId: null, guildId: null };
                 obj2[0] = callback;
                 obj2[1] = lib;
@@ -532,7 +529,7 @@ function _getSimilarApplications() {
     iter.next();
     return iter;
   });
-  const _getSimilarApplications = tmp;
+  closure_23 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -544,15 +541,11 @@ function _getSimilarApplications() {
 function _search() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c3;
-      let closure_1;
-      let closure_2;
       if (integrationType === 2) {
         integrationType = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -585,7 +578,7 @@ function _search() {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let getUserAgnosticState = tmp3;
+                closure_4 = tmp3;
                 c3 = tmp7;
                 let callback;
                 let callback2;
@@ -593,21 +586,21 @@ function _search() {
                 c3 = undefined;
                 throwTypeErrorResult = callback;
                 ({ query: c0, guildId: closure_1, options: closure_2, onSuccessCallback: c3 } = callback);
-                getUserAgnosticState = undefined;
+                closure_4 = undefined;
                 let page;
                 let pageSize;
                 categoryId = undefined;
                 integrationType = undefined;
-                let closure_9;
-                let closure_10;
+                closure_9 = undefined;
+                closure_10 = undefined;
                 let excludeNonEmbeddedApps;
                 let constants;
                 let source;
                 let APP_DIRECTORY;
-                let addToApplicationIdToGuildIds;
+                closure_15 = undefined;
                 let fetchState;
                 lastFetchTimeMs = undefined;
-                let closure_18;
+                closure_18 = undefined;
                 categoryId = 1;
                 integrationType = 1;
                 return { value: "ct", done: true };
@@ -619,7 +612,7 @@ function _search() {
                   throw arg1;
                 } else if (arg0 === 2) {
                   integrationType = 3;
-                  let obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
@@ -629,23 +622,23 @@ function _search() {
                   if (lastFetchTimeMs == null) {
                     callback2 = {};
                   }
-                  getUserAgnosticState = callback2;
-                  page = getUserAgnosticState.page;
-                  pageSize = getUserAgnosticState.pageSize;
-                  categoryId = getUserAgnosticState.categoryId;
-                  integrationType = getUserAgnosticState.integrationType;
-                  closure_9 = getUserAgnosticState.minUserInstallCommandCount;
-                  closure_10 = getUserAgnosticState.excludeAppsWithCustomInstallUrl;
-                  excludeNonEmbeddedApps = getUserAgnosticState.excludeNonEmbeddedApps;
-                  constants = getUserAgnosticState.excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
-                  source = getUserAgnosticState.source;
+                  closure_4 = callback2;
+                  page = closure_4.page;
+                  pageSize = closure_4.pageSize;
+                  categoryId = closure_4.categoryId;
+                  integrationType = closure_4.integrationType;
+                  closure_9 = closure_4.minUserInstallCommandCount;
+                  closure_10 = closure_4.excludeAppsWithCustomInstallUrl;
+                  excludeNonEmbeddedApps = closure_4.excludeNonEmbeddedApps;
+                  constants = closure_4.excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand;
+                  source = closure_4.source;
                   if (undefined === source) {
                     APP_DIRECTORY = callback(lastFetchTimeMs[14]).SearchAppsRequestSource.APP_DIRECTORY;
                   } else {
                     APP_DIRECTORY = source;
                   }
                   const _Date = Date;
-                  addToApplicationIdToGuildIds = Date.now();
+                  closure_15 = Date.now();
                   const obj2 = { query: null, guildId: null, page: null, pageSize: null, categoryId: null, integrationType: null };
                   obj2[0] = callback;
                   obj2[1] = callback2;
@@ -734,7 +727,7 @@ function _search() {
                   throw arg1;
                 } else if (arg0 !== 2) {
                   throwTypeErrorResult = c3;
-                  throwTypeErrorResult = getUserAgnosticState;
+                  throwTypeErrorResult = closure_4;
                   closure_18 = arg1;
                   throwTypeErrorResult = callback2;
                   throwTypeErrorResult = lastFetchTimeMs;
@@ -807,7 +800,7 @@ function _search() {
     iter.next();
     return iter;
   });
-  const _search = tmp;
+  closure_24 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -819,10 +812,10 @@ function _search() {
 function _fetchCollections() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (c6 === 2) {
         c6 = 3;
@@ -850,24 +843,24 @@ function _fetchCollections() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let ACTIVE = tmp7;
               let APPLICATION_DIRECTORY;
               ACTIVE = undefined;
-              let obj1 = APPLICATION_DIRECTORY;
+              obj1 = APPLICATION_DIRECTORY;
               if (APPLICATION_DIRECTORY === undefined) {
                 obj1 = {};
               }
               APPLICATION_DIRECTORY = obj1.surface;
               if (APPLICATION_DIRECTORY === undefined) {
-                APPLICATION_DIRECTORY = callback(outer1_2[17]).ApplicationCollectionSurface.APPLICATION_DIRECTORY;
+                APPLICATION_DIRECTORY = callback(closure_1_2[17]).ApplicationCollectionSurface.APPLICATION_DIRECTORY;
               }
               ACTIVE = obj1.activeState;
               if (ACTIVE === undefined) {
-                ACTIVE = callback(outer1_2[18]).ApplicationCollectionActiveState.ACTIVE;
+                ACTIVE = callback(closure_1_2[18]).ApplicationCollectionActiveState.ACTIVE;
               }
               dependencyMap = undefined;
-              let getLastFetchTimeMs;
+              closure_3 = undefined;
               let fetchState;
               locale = undefined;
               c6 = undefined;
@@ -889,7 +882,7 @@ function _fetchCollections() {
               } else {
                 dependencyMap = fetchState.get("disable_app_collections_cache");
                 const _Date = Date;
-                getLastFetchTimeMs = Date.now();
+                closure_3 = Date.now();
                 let obj3 = { surface: null, activeState: null };
                 obj3[0] = APPLICATION_DIRECTORY;
                 obj3[1] = ACTIVE;
@@ -971,7 +964,7 @@ function _fetchCollections() {
             c6 = 3;
           }
         } catch (tmp67) {
-          getLastFetchTimeMs = tmp67;
+          closure_3 = tmp67;
           if (tmp4 === fetchState) {
             c6 = tmp2;
             throw tmp67;
@@ -984,7 +977,7 @@ function _fetchCollections() {
     iter.next();
     return iter;
   });
-  const _fetchCollections = tmp;
+  closure_25 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1028,18 +1021,18 @@ function _fetchIntegrationApplicationIdsForMyGuilds() {
             callback = undefined;
             const _Date = Date;
             const timestamp = Date.now();
-            const fetchState = outer1_15.getFetchState();
-            const lastFetchTimeMs = outer1_15.getLastFetchTimeMs();
-            const nextFetchRetryTimeMs = outer1_15.getNextFetchRetryTimeMs();
-            if (fetchState !== outer1_16.FETCHING) {
+            const fetchState = closure_1_15.getFetchState();
+            const lastFetchTimeMs = closure_1_15.getLastFetchTimeMs();
+            const nextFetchRetryTimeMs = closure_1_15.getNextFetchRetryTimeMs();
+            if (fetchState !== closure_1_16.FETCHING) {
               if (null == lastFetchTimeMs) {
-                let obj5 = outer1_1(outer1_2[11]);
+                let obj5 = closure_1_1(closure_1_2[11]);
                 obj5.dispatch({ type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS" });
-                let c3 = 1;
-                const HTTP = outer1_0(outer1_2[13]).HTTP;
-                const obj1 = { url: null, rejectWithError: null };
-                obj1[0] = outer1_17.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS;
-                obj1[1] = outer1_0(outer1_2[13]).rejectWithMigratedError();
+                c3 = 1;
+                const HTTP = closure_1_0(closure_1_2[13]).HTTP;
+                obj1 = { url: null, rejectWithError: null };
+                obj1[0] = closure_1_17.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS;
+                obj1[1] = closure_1_0(closure_1_2[13]).rejectWithMigratedError();
                 c4 = 2;
                 c5 = 1;
                 const obj2 = { value: null, done: false };
@@ -1098,7 +1091,7 @@ function _fetchIntegrationApplicationIdsForMyGuilds() {
       }
     }
   });
-  const _fetchIntegrationApplicationIdsForMyGuilds = tmp;
+  closure_26 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1107,9 +1100,10 @@ function _fetchIntegrationApplicationIdsForMyGuilds() {
   }
   return applyArgumentsResult;
 }
+refreshSourceMapCookieDefault;
 let c18 = 600000;
 const map = new Map();
-let result = require("_getSystemLocale").fileFinishedImporting("modules/global_discovery_apps/ApplicationDirectoryActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/global_discovery_apps/ApplicationDirectoryActionCreators.tsx");
 
 export const getEmbedApplication = function getEmbedApplication(code) {
   const self = this;

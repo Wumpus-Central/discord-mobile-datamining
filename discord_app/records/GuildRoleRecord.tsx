@@ -1,9 +1,11 @@
 // discord_app/records/GuildRoleRecord.tsx
-import { TypeTag } from "isValueEqual";
-import { apply } from "../../_runtime/00012_apply.js";
-import { fromString } from "../../discord_common/js/shared/utils/BigFlagUtils.tsx";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import fromString from "fromString" /* 506 */;
+import isValueEqual from "isValueEqual" /* 1431 */;
 
-const result = require("apply").fileFinishedImporting("records/GuildRoleRecord.tsx");
+const TypeTag = isValueEqual.TypeTag;
+const result = set.fileFinishedImporting("records/GuildRoleRecord.tsx");
 
 export const GuildRoleRecordTypeTag = "GuildRole";
 export const isEveryoneRole = function isEveryoneRole(role) {
@@ -16,7 +18,7 @@ export const hasAnyPermission = function hasAnyPermission(permissions) {
   return fromString.hasAny(permissions.permissions, arg1);
 };
 export const isRoleEqual = function isRoleEqual(pickResult, arg1) {
-  return apply.isEqualWith(pickResult, arg1, (arg0, arg1, arg2) => {
+  return applyDefault.isEqualWith(pickResult, arg1, (arg0, arg1, arg2) => {
     let equalsResult;
     if ("permissions" === arg2) {
       equalsResult = callback(table[1]).equals(arg0, arg1);

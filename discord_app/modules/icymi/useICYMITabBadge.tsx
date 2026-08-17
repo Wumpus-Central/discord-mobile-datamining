@@ -1,16 +1,15 @@
 // discord_app/modules/icymi/useICYMITabBadge.tsx
-import filterStaffGuild from "filterStaffGuild";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "filterStaffGuild" /* 9044 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/icymi/useICYMITabBadge.tsx");
 
 export default function useICYMITabBadge() {
-  const obj = { value: 0, showDot: null };
-  const items = [filterStaffGuild];
-  obj[1] = initialize.useStateFromStores(items, () => filterStaffGuild.hasNewContent(), []);
+  const obj = { value: 0, showDot: initialize.useStateFromStores(items, () => closure_2.hasNewContent(), []) };
+  items = [closure_2];
   return obj;
 };
 export const icymiTabBadgeShown = function icymiTabBadgeShown() {
-  return filterStaffGuild.hasNewContent();
+  return closure_2.hasNewContent();
 };

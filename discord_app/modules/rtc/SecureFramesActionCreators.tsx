@@ -1,11 +1,11 @@
 // discord_app/modules/rtc/SecureFramesActionCreators.tsx
-import ME from "ME";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateVoiceState from "updateVoiceState";
-import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import { ChannelTypes } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "updateVoiceState" /* 4542 */;
+import { SECURE_FRAMES_PUBLIC_KEY_VERSION as closure_7 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import { ChannelTypes } from "ME" /* 676 */;
 
 const require = arg1;
 function savePersistentCodesEnabled() {
@@ -21,11 +21,11 @@ function savePersistentCodesEnabled() {
 function _savePersistentCodesEnabled() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -53,29 +53,29 @@ function _savePersistentCodesEnabled() {
               obj[0] = arg1;
               return obj;
             } else {
-              let fetchFingerprint = tmp3;
-              let ME = tmp5;
+              closure_4 = tmp3;
+              closure_3 = tmp5;
               const callback = aPIError;
               aPIError = undefined;
-              let obj1 = { type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: null };
+              obj1 = { type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: null };
               obj1[1] = callback;
-              callback2(outer1_2[6]).dispatch(obj1);
+              callback2(closure_1_2[6]).dispatch(obj1);
               if (callback) {
-                let c6 = 1;
+                c6 = 1;
                 c7 = 2;
                 c8 = 1;
                 let obj2 = { value: null, done: false };
-                obj2[0] = callback(outer1_2[7]).ensureCurrentUserPublicKey(c7);
+                obj2[0] = callback(closure_1_2[7]).ensureCurrentUserPublicKey(c7);
                 return obj2;
               } else if (tmp54 != null) {
                 tmp54();
               }
-              const obj9 = callback2(outer1_2[6]);
+              const obj9 = callback2(closure_1_2[6]);
             }
           } else {
             if (1 === tmp8) {
               c6 = 0;
-              let dependencyMap = ensureGuildLoaded;
+              dependencyMap = closure_5;
               aPIError = new callback(4273).APIError(dependencyMap);
               obj1 = aPIError(709);
               obj1.dispatch({ type: "SECURE_FRAMES_SETTINGS_UPDATE", persistentCodesEnabled: false });
@@ -108,7 +108,7 @@ function _savePersistentCodesEnabled() {
           }
           c8 = 3;
         } catch (tmp44) {
-          ensureGuildLoaded = tmp44;
+          closure_5 = tmp44;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp44;
@@ -119,7 +119,7 @@ function _savePersistentCodesEnabled() {
       }
     })();
   });
-  const _savePersistentCodesEnabled = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -131,9 +131,9 @@ function _savePersistentCodesEnabled() {
 function _updatePersistentCodesEnabled() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -198,7 +198,7 @@ function _updatePersistentCodesEnabled() {
                   stringResult = string(t.q29xJz);
                   tmp10 = tmp8;
                 }
-                let obj1 = { title: null, subtitle: null, confirmText: null, onConfirm: null };
+                obj1 = { title: null, subtitle: null, confirmText: null, onConfirm: null };
                 obj1[0] = stringResult;
                 const intl2 = tmp10(1236).intl;
                 const string2 = intl2.string;
@@ -211,7 +211,7 @@ function _updatePersistentCodesEnabled() {
                 obj1[1] = string2Result;
                 intl3 = tmp10(1236).intl;
                 obj1[2] = intl3.string(tmp10(1236).t.aTuFYT);
-                v0 = outer1_3(function*() {
+                v0 = closure_1_3(function*() {
                   if (c0 === 2) {
                     c0 = 3;
                     HermesBuiltin.throwTypeError();
@@ -240,11 +240,11 @@ function _updatePersistentCodesEnabled() {
                         } else {
                           c1 = 1;
                           c0 = 1;
-                          const obj1 = { value: null, done: false };
-                          obj1[0] = outer1_9(c0, () => {
-                            v1(outer1_2[12]).disconnect();
-                            const obj = v1(outer1_2[12]);
-                            const voiceChannel = v1(outer1_2[12]).selectVoiceChannel(closure_2);
+                          obj1 = { value: null, done: false };
+                          obj1[0] = closure_1_9(c0, () => {
+                            v1(closure_1_2[12]).disconnect();
+                            const obj = v1(closure_1_2[12]);
+                            const voiceChannel = v1(closure_1_2[12]).selectVoiceChannel(closure_2);
                           });
                           return obj1;
                         }
@@ -281,7 +281,7 @@ function _updatePersistentCodesEnabled() {
                 dependencyMap = 1;
                 v0 = 1;
                 obj2 = { value: null, done: false };
-                obj2[0] = outer1_9(tmp18);
+                obj2[0] = closure_1_9(tmp18);
                 return obj2;
               }
             }
@@ -304,7 +304,7 @@ function _updatePersistentCodesEnabled() {
       }
     })();
   });
-  const _updatePersistentCodesEnabled = tmp;
+  closure_11 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -313,11 +313,11 @@ function _updatePersistentCodesEnabled() {
   }
   return applyArgumentsResult;
 }
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesActionCreators.tsx");
 
 export default {
   clearUploadedKeyVersions() {
-    dispatcher.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
+    dispatcherDefault.dispatch({ type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR" });
   },
   updatePersistentCodesEnabled(arg0) {
     const self = this;
@@ -330,32 +330,32 @@ export default {
     return applyArgumentsResult;
   },
   addUploadedKeyVersion(closure_0) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD", keyVersion: closure_0 };
     obj.dispatch(obj);
   },
   createSecureFramesVerifiedKey(userId, key) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_VERIFIED_KEY_CREATE", userId, key };
     obj.dispatch(obj);
   },
   deleteSecureFramesVerifiedKey(closure_0, closure_1) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_VERIFIED_KEY_DELETE", userId: closure_0, serializedKey: closure_1 };
     obj.dispatch(obj);
   },
   deleteSecureFramesUserVerifiedKeys(closure_0) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_USER_VERIFIED_KEYS_DELETE", userId: closure_0 };
     obj.dispatch(obj);
   },
   createSecureFramesTransientKey(userId, key) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_CREATE", userId, key };
     obj.dispatch(obj);
   },
   deleteSecureFramesTransientKey(userId) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SECURE_FRAMES_TRANSIENT_KEY_DELETE", userId };
     obj.dispatch(obj);
   }

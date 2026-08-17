@@ -1,23 +1,22 @@
 // discord_app/modules/user_settings/defs/native/CopyClientInfoSetting.tsx
-import getCurrentBuildOverride from "getCurrentBuildOverride";
-import jsxProd from "jsxProd";
-import createToggle from "createToggle";
-import importAllResult from "getConstants";
-import { CopyIcon } from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
-import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import CopyIcon from "CopyIcon" /* 4322 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import ActionSheet from "ActionSheet" /* 7175 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
+import setBuildOverrideForBranch from "setBuildOverrideForBranch" /* 10968 */;
+import closure_3 from "getCurrentBuildOverride" /* 10638 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createToggle from "createToggle" /* 10669 */;
+import importAllResult from "getConstants" /* 1626 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function getClientInfo() {
   const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
   let tmp;
   if (overrides != null) {
-    tmp = overrides[require(undefined, 10968) /* setBuildOverrideForBranch */.DEVICE_FIELD];
+    tmp = overrides[setBuildOverrideForBranch.DEVICE_FIELD];
   }
   let str2 = "N/A";
   if (str.trim().length > 0) {
@@ -69,7 +68,7 @@ function ClientClientInfoActionSheet() {
   obj[0] = intl.string(getSystemLocale.t.Na2lF9);
   obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { hasIcons: false, children: null };
-  const obj1 = { label: null, subLabel: null, onPress: null };
+  obj1 = { label: null, subLabel: null, onPress: null };
   const intl2 = getSystemLocale.intl;
   obj1[0] = intl2.string(getSystemLocale.t.H66MEk);
   obj1[1] = getClientInfo().appVersion;
@@ -122,16 +121,10 @@ function ClientClientInfoActionSheet() {
   obj[1] = items;
   const items1 = [callback2(ActionSheetRowIcon.ActionSheetRow.Group, obj), ];
   const obj6 = { hasIcons: true, children: null };
-  const obj7 = { icon: null, label: null, onPress: null };
-  obj7[0] = callback(CopyIcon.CopyIcon, {});
+  const obj7 = { icon: callback(CopyIcon.CopyIcon, {}), label: null, onPress: null };
   const intl7 = getSystemLocale.intl;
   obj7[1] = intl7.string(getSystemLocale.t["7dqZ6H"]);
   obj7[2] = function onPress() {
-    let appVersion;
-    let buildNumber;
-    let buildOverride;
-    let manifest;
-    let releaseChannel;
     const tmp = callback2();
     ({ appVersion, buildNumber } = tmp);
     ({ releaseChannel, buildOverride, manifest } = tmp);
@@ -149,7 +142,7 @@ function ClientClientInfoActionSheet() {
   return callback2(ActionSheet.ActionSheet, obj);
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const constants = require("getConstants").getConstants();
+const constants = importAllResult.getConstants();
 const pressable = createToggle.createPressable({
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -158,7 +151,7 @@ const pressable = createToggle.createPressable({
   parent: null,
   IconComponent: require("ClipboardListIcon").ClipboardListIcon,
   onPress: function handleClientInfoPress() {
-    let obj = ACTION_SHEET_HEIGHT_HALF;
+    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { default: ClientClientInfoActionSheet };
     obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
   },
@@ -173,14 +166,14 @@ let obj = {
   parent: null,
   IconComponent: require("ClipboardListIcon").ClipboardListIcon,
   onPress: function handleClientInfoPress() {
-    let obj = ACTION_SHEET_HEIGHT_HALF;
+    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { default: ClientClientInfoActionSheet };
     obj.openLazy(Promise.resolve(obj), "ClientClientInfoActionSheet");
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting,
   withArrow: true
 };
-let result = require("getConstants").fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CopyClientInfoSetting.tsx");
 
 export default pressable;
 export const getClientInfoString = function getClientInfoString(ReleaseChannel) {

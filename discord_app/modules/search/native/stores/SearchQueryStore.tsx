@@ -1,20 +1,17 @@
 // discord_app/modules/search/native/stores/SearchQueryStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
-import ME from "ME";
-import areArraysShallowlyEqual from "areArraysShallowlyEqual";
-import { Store } from "initialize";
-import { SearchTokenTypes } from "../../SearchUtils.tsx";
-import { isComplete } from "SearchQueryTagManager.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+import isCompleteDefault from "isComplete" /* 11523 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
+import ME from "ME" /* 676 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ EMPTY_SEARCH_QUERY_STRING: closure_6, SearchQueryTagTypes: error } = MessageEmbedTypes);
 ({ SearchTokenTypes: c9, SearchTypes: c10 } = ME);
 const prototype = function SearchQueryStateManager(type) {
@@ -142,9 +139,9 @@ const prototype = function SearchQueryStateManager(type) {
     }
   };
   obj.reset = function reset() {
-    obj.textInputValue = outer1_6;
+    obj.textInputValue = closure_1_6;
     obj.textInputChangedFromInput = false;
-    obj.searchResultsQuery = outer1_6;
+    obj.searchResultsQuery = closure_1_6;
     obj.draftTextInputValue = null;
     obj.isExplicitSearchSubmitted = false;
     const tagsManager = obj.tagsManager;
@@ -159,7 +156,7 @@ const prototype = function SearchQueryStateManager(type) {
       let items = [];
     }
     obj.initialTagsSnapshot = items;
-    const tmp12 = new isComplete();
+    const tmp12 = new isCompleteDefault();
     obj.tagsManager = tmp12;
     let tagsManager = obj.tagsManager;
     let result = tagsManager.set(obj.initialTagsSnapshot);
@@ -176,7 +173,7 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+      channelName = obj(4984).computeChannelName(channel, closure_5, closure_4);
       const obj2 = obj(4984);
     }
     if (null == channelName) {
@@ -199,11 +196,12 @@ const prototype = function SearchQueryStateManager(type) {
 }.prototype;
 const map = new Map();
 let closure_13 = areArraysShallowlyEqual.cachedFunction((arg0) => new prototype(arg0));
+const Store = initializeDefault.Store;
 class NativeSearchQueryStore extends Store {
 }
 const prototype2 = NativeSearchQueryStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, mergeGuildAvatar, markAllUserIdListsStale);
+  this.waitFor(closure_3, closure_5, closure_4);
 };
 prototype2["getManager"] = function getManager(closure_0) {
   let value = map.get(SearchTokenTypes.getSearchContextId(closure_0));
@@ -331,8 +329,8 @@ areArraysShallowlyEqual = {
     map.delete(id.id);
   }
 };
-const nativeSearchQueryStore = new NativeSearchQueryStore(require("dispatcher"), areArraysShallowlyEqual);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/search/native/stores/SearchQueryStore.tsx");
+const nativeSearchQueryStore = new NativeSearchQueryStore(dispatcherDefault, areArraysShallowlyEqual);
+let result = require("set").fileFinishedImporting("modules/search/native/stores/SearchQueryStore.tsx");
 
 export default nativeSearchQueryStore;
 export const SearchQueryStateManager = prototype;

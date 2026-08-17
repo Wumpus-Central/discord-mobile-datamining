@@ -1,14 +1,14 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { isEqual } from "../../../_runtime/04632_isEqual.js";
-import { version } from "../../../discord_common/js/packages/secondary-index-map/SecondaryIndexMap.tsx";
-import { isSpamSupported } from "../messages/isSpam.tsx";
-import { getJoinedAtDateFormatter } from "DateUtils.tsx";
-import { result } from "MemberSafetyElasticSearchQueryTypes.tsx";
-import { hasMemberSupplemental } from "MemberSafetyStoreSupplemental.tsx";
-import { getSortValueForMember } from "SortUtils.tsx";
+import version from "version" /* 4017 */;
+import isEqualDefault from "isEqual" /* 4632 */;
+import result2 from "result" /* 5091 */;
+import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 5092 */;
+import getSortValueForMember from "getSortValueForMember" /* 5094 */;
+import hasMemberSupplemental from "hasMemberSupplemental" /* 5095 */;
+import isSpamSupported from "isSpamSupported" /* 5231 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 function getGuildMemberSecondaryIndexes(isCurrentGuildMemberByTimestamp) {
   if (isCurrentGuildMemberByTimestamp.isCurrentGuildMemberByTimestamp) {
     let NEW_GUILD_MEMBER = tmp.CURRENT_GUILD_MEMBER;
@@ -28,7 +28,7 @@ function getGuildMemberSecondarySortBy(arg0) {
 }
 let closure_4 = Date.now();
 let obj = { NEW_GUILD_MEMBER: "NEW_GUILD_MEMBER", CURRENT_GUILD_MEMBER: "CURRENT_GUILD_MEMBER", INCLUDED_IN_SEARCH_RESULTS: "INCLUDED_IN_SEARCH_RESULTS" };
-let result = require("result").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyMembers.tsx");
 class GuildMemberSafetyMembers {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -51,15 +51,7 @@ prototype["resetNewMemberTimestamp"] = function resetNewMemberTimestamp() {
   this.newMemberTimestamp = Date.now();
 };
 prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchState, isIncludedInSearchResults) {
-  let hasUnusualAccountActivity;
-  let hasUnusualDmActivity;
-  let integrationType;
-  let inviterId;
-  let joinSourceApplicationId;
-  let joinSourceChannelId;
-  let joinSourceType;
-  let sourceInviteCode;
-  let obj = isIncludedInSearchResults;
+  obj = isIncludedInSearchResults;
   if (isIncludedInSearchResults === undefined) {
     obj = {};
   }
@@ -76,7 +68,7 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   const tmp = require;
   let ORDER_BY_UNSPECIFIED = searchState.selectedSort;
   if (ORDER_BY_UNSPECIFIED == null) {
-    ORDER_BY_UNSPECIFIED = tmp(5091).OrderBy.ORDER_BY_UNSPECIFIED;
+    ORDER_BY_UNSPECIFIED = result2.OrderBy.ORDER_BY_UNSPECIFIED;
   }
   obj.sort = getSortValueForMember.getSortValueForMember(trueMember, ORDER_BY_UNSPECIFIED);
   obj.joinedAtTimestamp = joinedAtTimestamp;
@@ -84,7 +76,7 @@ prototype["enhanceNewMember"] = function enhanceNewMember(trueMember, searchStat
   return obj;
 };
 prototype["_computeMemberSupplementals"] = function _computeMemberSupplementals(userId, unusualDMActivityUntil) {
-  let obj = hasMemberSupplemental;
+  obj = hasMemberSupplemental;
   obj = obj.getMemberSupplementalByGuildId(this.guildId)[userId];
   if (obj == null) {
     obj = {};
@@ -135,20 +127,12 @@ prototype["createMember"] = function createMember(userId) {
   return _membersMap.set(userId.userId, userId);
 };
 prototype["updateMember"] = function updateMember(userId) {
-  let hasUnusualAccountActivity;
-  let hasUnusualDmActivity;
-  let integrationType;
-  let inviterId;
-  let joinSourceApplicationId;
-  let joinSourceChannelId;
-  let joinSourceType;
-  let sourceInviteCode;
   const self = this;
   if (null == arg1) {
     const _membersMap2 = self._membersMap;
     return _membersMap2.set(userId.userId, userId);
   } else {
-    let obj = {};
+    obj = {};
     const merged = Object.assign(userId);
     obj = {};
     const merged1 = Object.assign(arg1);
@@ -192,7 +176,7 @@ prototype["updateMember"] = function updateMember(userId) {
         let tmp15 = obj[tmp6];
         let tmp16 = importDefault;
         let tmp17 = dependencyMap;
-        if (isEqual(tmp15, obj[tmp6])) {
+        if (isEqualDefault(tmp15, obj[tmp6])) {
           continue;
         } else {
           obj[tmp6] = tmp15;
@@ -236,7 +220,7 @@ export const hasUnusualDmActivity = function hasUnusualDmActivity(arg0) {
     const _Date = Date;
     const date = new Date(arg0);
     const time = date.getTime();
-    tmp = time >= closure_4 - result.UNUSUAL_DM_COMPARISON_DELTA;
+    tmp = time >= closure_4 - result2.UNUSUAL_DM_COMPARISON_DELTA;
   }
   return tmp;
 };

@@ -1,52 +1,45 @@
 // discord_app/modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import get_ActivityIndicator from "PressableBase";
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ DEFAULT_GRADIENT_ROLE_COLORS: error, GRADIENT_PRESETS: metroImportAll } = HOLOGRAPHIC_ROLE_COLORS);
+({ DEFAULT_GRADIENT_ROLE_COLORS: error, GRADIENT_PRESETS: closure_8 } = HOLOGRAPHIC_ROLE_COLORS);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { body: null, gradientContainer: null, dropperContainer: null, dropper: null, gradient: null, optionContainer: null, pressable: null, selected: null, option: null };
-createCacheKey = { paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: require("Themes").space.PX_16 };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, flexGrow: 1, justifyContent: "center", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: require("Themes").space.PX_8 };
-let obj1 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: require("Themes").space.PX_8 };
-createCacheKey[2] = { left: require("Themes").space.PX_24, right: require("Themes").space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
-let obj2 = { left: require("Themes").space.PX_24, right: require("Themes").space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
-createCacheKey[3] = { borderColor: "white", tintColor: "white", padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.round, borderWidth: 1 };
-let obj3 = { borderColor: "white", tintColor: "white", padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.round, borderWidth: 1 };
-createCacheKey[4] = { height: 50, width: "100%", borderRadius: require("Themes").radii.sm };
-const obj4 = { height: 50, width: "100%", borderRadius: require("Themes").radii.sm };
-createCacheKey[5] = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
-let obj5 = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
-createCacheKey[6] = { width: 80, height: 50, borderRadius: require("Themes").radii.sm, overflow: "hidden", padding: 2 };
-let obj6 = { width: 80, height: 50, borderRadius: require("Themes").radii.sm, overflow: "hidden", padding: 2 };
-createCacheKey[7] = { borderWidth: 2, borderColor: require("Themes").colors.BACKGROUND_BRAND };
-let obj7 = { borderWidth: 2, borderColor: require("Themes").colors.BACKGROUND_BRAND };
-createCacheKey[8] = { flex: 1, borderRadius: require("Themes").radii.sm };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj8 = { flex: 1, borderRadius: require("Themes").radii.sm };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx");
+createCacheKey[1] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
+let obj2 = { left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, position: "absolute", display: "flex", flexDirection: "row", justifyContent: "space-between" };
+createCacheKey[3] = { borderColor: "white", tintColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
+let obj3 = { borderColor: "white", tintColor: "white", padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round, borderWidth: 1 };
+createCacheKey[4] = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
+const obj4 = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
+createCacheKey[5] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
+let obj5 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", justifyContent: "center" };
+createCacheKey[6] = { width: 80, height: 50, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", padding: 2 };
+let obj6 = { width: 80, height: 50, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", padding: 2 };
+createCacheKey[7] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj7 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey[8] = { flex: 1, borderRadius: ThemesDefault.radii.sm };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+const obj8 = { flex: 1, borderRadius: ThemesDefault.radii.sm };
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/RoleGradientPickerActionSheet.tsx");
 
 export default function RoleGradientPickerActionSheet(arg0) {
-  let colors;
-  let onSelect;
   ({ colors, onSelect } = arg0);
-  let importDefault;
+  importDefault = undefined;
   let first;
   let callback;
   let callback1;
-  let tmp = createCacheKey();
+  let tmp = callback4();
   importDefault = tmp;
   let obj = callback1;
   if (null == colors) {
@@ -55,13 +48,13 @@ export default function RoleGradientPickerActionSheet(arg0) {
   const tmp2 = callback(callback1.useState(colors), 2);
   first = tmp2[0];
   callback = tmp2[1];
-  let obj1 = onSelect(first[7]);
+  obj1 = onSelect(first[7]);
   const values = Object.values(obj1.extractColorStringsFromServerColors(first));
   let items = [first, onSelect];
   const found = values.filter(onSelect(first[8]).isNotNullish);
   callback = obj.useCallback(() => {
     onSelect(first);
-    _undefined(first[9]).hideActionSheet();
+    lib(first[9]).hideActionSheet();
   }, items);
   callback1 = obj.useCallback((arg0) => {
     callback(arg0);
@@ -76,7 +69,7 @@ export default function RoleGradientPickerActionSheet(arg0) {
     if (num == null) {
       num = 0;
     }
-    _undefined(first[10])({
+    lib(first[10])({
       color: num,
       onSelect(primary_color) {
         const obj = {};
@@ -94,7 +87,7 @@ export default function RoleGradientPickerActionSheet(arg0) {
     if (num == null) {
       num = 0;
     }
-    _undefined(first[10])({
+    lib(first[10])({
       color: num,
       onSelect(secondary_color) {
         const obj = {};
@@ -137,9 +130,9 @@ export default function RoleGradientPickerActionSheet(arg0) {
       style: tmp.optionContainer,
       children: closure_8.map((colors) => {
         const tmp = callback(colors.colors, 2);
-        const first = tmp[0];
-        const _undefined = tmp3;
-        const items = [_undefined.pressable, ];
+        first = tmp[0];
+        const lib = tmp3;
+        const items = [lib.pressable, ];
         let selected = first === first.primary_color;
         if (selected) {
           selected = tmp3 === first.secondary_color;
@@ -151,10 +144,10 @@ export default function RoleGradientPickerActionSheet(arg0) {
           style: items,
           onPress() {
             const obj = {};
-            const merged = Object.assign(outer1_2);
+            const merged = Object.assign(closure_1_2);
             obj.primary_color = first;
             obj.secondary_color = closure_1;
-            return outer1_4(obj);
+            return closure_1_4(obj);
           },
           children: null
         };
@@ -167,8 +160,8 @@ export default function RoleGradientPickerActionSheet(arg0) {
         obj[1] = items1;
         obj[2] = { x: 0, y: 0 };
         obj[3] = { x: 1, y: 0 };
-        obj[2] = outer1_9(_undefined(first[15]), obj);
-        return outer1_9(onSelect(first[17]).PressableOpacity, obj, colors.name);
+        obj[2] = closure_1_9(lib(first[15]), obj);
+        return closure_1_9(onSelect(first[17]).PressableOpacity, obj, colors.name);
       })
     }),
 
@@ -177,7 +170,7 @@ export default function RoleGradientPickerActionSheet(arg0) {
   const intl5 = onSelect(first[13]).intl;
   obj9[0] = intl5.string(onSelect(first[13]).t.yBZMsQ);
   obj9[1] = function onPress() {
-    callback(outer1_7);
+    callback(closure_1_7);
   };
   items5[2] = callback2(onSelect(first[14]).Button, obj9);
   obj2[1] = items5;

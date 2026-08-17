@@ -1,15 +1,14 @@
 // discord_app/modules/application_commands/native/ApplicationCommandLoadingItem.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getFontScale } from "../../screen/native/useFontScale.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getFontScale from "getFontScale" /* 4751 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let c7 = 16;
 let closure_8 = createCacheKey.createStyles((arg0) => {
@@ -17,14 +16,14 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj = { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
   obj[0] = obj;
   obj[1] = { flexDirection: "column", width: "75%", height: "100%", justifyContent: "space-between" };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, height: c7, borderRadius: c7, width: "20%" };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: c7, borderRadius: c7, width: "20%" };
   obj[2] = obj;
-  obj[3] = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
-  const obj1 = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
-  obj[4] = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, paddingLeft: 16, width: "25%", marginLeft: "auto", height: c7, borderRadius: c7 };
+  obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
+  obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: c7, borderRadius: c7, width: "80%" };
+  obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, paddingLeft: 16, width: "25%", marginLeft: "auto", height: c7, borderRadius: c7 };
   return obj;
 });
-const result = require("AUTOCOMPLETE_ROW_HEIGHT").fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandLoadingItem.tsx");
 
 export default function ApplicationCommandLoadingItem() {
   let obj = getFontScale;

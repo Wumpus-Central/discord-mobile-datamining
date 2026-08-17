@@ -1,6 +1,7 @@
 // discord_app/modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx
-import { PersistedStore } from "initialize";
-import { set } from "../../../utils/Durations.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function addToApplicationIdToGuildIds(applicationId) {
   applicationId = applicationId.applicationId;
@@ -14,6 +15,7 @@ function addToApplicationIdToGuildIds(applicationId) {
 }
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", ERROR: 3, [3]: "ERROR" };
 let closure_3 = { applicationIdToGuildIds: {}, lastFetchTimeMs: null, nextFetchRetryTimeMs: null, fetchState: obj.NOT_FETCHED };
+const PersistedStore = initializeDefault.PersistedStore;
 class MyGuildApplicationsStore extends PersistedStore {
 }
 const prototype = MyGuildApplicationsStore.prototype;
@@ -63,7 +65,6 @@ obj = {
     closure_3.fetchState = obj.FETCHING;
   },
   FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: function handleGuildApplicationsFetchSuccess(guildIdToApplicationIds) {
-    let obj;
     guildIdToApplicationIds = guildIdToApplicationIds.guildIdToApplicationIds;
     closure_3.fetchState = obj.FETCHED;
     closure_3.lastFetchTimeMs = Date.now();
@@ -89,7 +90,7 @@ obj = {
     closure_3.fetchState = obj.ERROR;
     if (null != retryAfterSeconds) {
       const _Date = Date;
-      const result = retryAfterSeconds * set.Millis.SECOND;
+      const result = retryAfterSeconds * setDefault.Millis.SECOND;
       tmp.nextFetchRetryTimeMs = Date.now() + result;
     }
   },
@@ -106,7 +107,7 @@ obj = {
       const _Set2 = Set;
       const set1 = new Set(closure_3.applicationIdToGuildIds[id]);
       closure_3.applicationIdToGuildIds[id] = set1;
-      const obj = closure_3.applicationIdToGuildIds[id];
+      obj = closure_3.applicationIdToGuildIds[id];
     }
   },
   INTEGRATION_DELETE: function handleIntegrationDelete(applicationId) {
@@ -117,13 +118,13 @@ obj = {
         const _Set = Set;
         const set = new Set(tmp2.applicationIdToGuildIds[applicationId]);
         tmp2.applicationIdToGuildIds[applicationId] = set;
-        const obj = tmp2.applicationIdToGuildIds[applicationId];
+        obj = tmp2.applicationIdToGuildIds[applicationId];
       }
     }
   }
 };
-const myGuildApplicationsStore = new MyGuildApplicationsStore(require("dispatcher"), obj);
-let result = require("dispatcher").fileFinishedImporting("modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx");
+const myGuildApplicationsStore = new MyGuildApplicationsStore(dispatcherDefault, obj);
+let result = require("set").fileFinishedImporting("modules/global_discovery_apps/stores/MyGuildApplicationsStore.tsx");
 
 export default myGuildApplicationsStore;
 export const FetchState = obj;

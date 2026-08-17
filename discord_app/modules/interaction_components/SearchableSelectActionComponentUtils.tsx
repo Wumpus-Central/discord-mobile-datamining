@@ -1,21 +1,19 @@
 // discord_app/modules/interaction_components/SearchableSelectActionComponentUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getInteractionComponentStates from "getInteractionComponentStates";
+import NOOPDefault from "NOOP" /* 6714 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "getInteractionComponentStates" /* 8327 */;
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { NOOP } from "../../utils/AutocompleteUtils.tsx";
 
 const require = arg1;
-const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/SearchableSelectActionComponentUtils.tsx");
 
 export const MIN_REREQUEST_TIME = 1000;
 export const queryMentionables = function queryMentionables(type, arg1, channelId) {
-  let roles;
-  let users;
   const _require = channelId;
   const channel = store.getChannel(channelId);
   if (null == channel) {
@@ -32,9 +30,9 @@ export const queryMentionables = function queryMentionables(type, arg1, channelI
     ({ users, roles } = obj.queryMentionResults(obj));
     const items = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(users.map((user) => {
-      let obj = channel(outer1_2[9]);
+      let obj = channel(closure_1_2[9]);
       let username = obj.getNickname(channel.getGuildId(), channelId, user.user);
-      obj = { type: channelId(outer1_2[10]).SelectOptionType.USER, value: user.user.id, label: null };
+      obj = { type: channelId(closure_1_2[10]).SelectOptionType.USER, value: user.user.id, label: null };
       if (username == null) {
         username = user.user.globalName;
       }
@@ -53,15 +51,14 @@ export const queryChannels = function queryChannels(arg0, arg1, arg2) {
   if (null == channel) {
     let items = [];
   } else {
-    let obj = NOOP;
+    let obj = NOOPDefault;
     obj = { query: null, channel: null, channelTypes: null, limit: 15 };
     obj[0] = arg0;
     obj[1] = channel;
     obj[2] = arg2;
     const channels = obj.queryApplicationCommandChannelResults(obj).channels;
     items = channels.map((id) => {
-      const obj = { type: callback(4813).SelectOptionType.CHANNEL, value: id.id, label: null };
-      obj[2] = callback(4984).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale);
+      const obj = { type: callback(4813).SelectOptionType.CHANNEL, value: id.id, label: callback(4984).computeChannelName(id, closure_8, closure_7) };
       return obj;
     });
   }
@@ -82,14 +79,14 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
     guild = store2.getGuild(guildId);
     const mapped = defaultValues.map((type) => {
       type = type.type;
-      if (channelTypes(outer1_2[12]).SnowflakeSelectDefaultValueTypes.USER === type) {
-        const user = outer1_8.getUser(type.id);
+      if (channelTypes(closure_1_2[12]).SnowflakeSelectDefaultValueTypes.USER === type) {
+        const user = closure_1_8.getUser(type.id);
         if (null == user) {
           return null;
         } else {
           let nick;
           if (null != closure_1) {
-            nick = outer1_4.getNick(tmp16.id, user.id);
+            nick = closure_1_4.getNick(tmp16.id, user.id);
           }
           let obj = { type: null, value: null, label: null };
           obj[0] = tmp(tmp2[10]).SelectOptionType.USER;
@@ -107,7 +104,7 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
         if (null == closure_1) {
           return null;
         } else {
-          const role = outer1_5.getRole(tmp8.id, type.id);
+          const role = closure_1_5.getRole(tmp8.id, type.id);
           let tmp12 = null;
           if (null != role) {
             obj = { type: null, value: null, label: null };
@@ -121,17 +118,17 @@ export const getInitialSnowflakeSelectOptions = function getInitialSnowflakeSele
         if (null == closure_1) {
           return null;
         } else {
-          const channel = outer1_3.getChannel(type.id);
+          const channel = closure_1_3.getChannel(type.id);
           let tmp5 = null;
           if (null != channel) {
             tmp5 = null;
             if (channel.guild_id === tmp3.id) {
               obj = channelTypes;
               if (channelTypes.length <= 0) {
-                const obj1 = { type: null, value: null, label: null };
+                obj1 = { type: null, value: null, label: null };
                 obj1[0] = tmp(tmp2[10]).SelectOptionType.CHANNEL;
                 obj1[1] = channel.id;
-                obj1[2] = tmp(tmp2[11]).computeChannelName(channel, outer1_8, outer1_7);
+                obj1[2] = tmp(tmp2[11]).computeChannelName(channel, closure_1_8, closure_1_7);
                 tmp5 = obj1;
                 const tmpResult = tmp(tmp2[11]);
               } else {
@@ -183,14 +180,14 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
     guild = store2.getGuild(guild_id);
     const mapped = defaultValues.map((type) => {
       type = type.type;
-      if (channelTypes(outer1_2[12]).SnowflakeSelectDefaultValueTypes.USER === type) {
-        const user = outer1_8.getUser(type.id);
+      if (channelTypes(closure_1_2[12]).SnowflakeSelectDefaultValueTypes.USER === type) {
+        const user = closure_1_8.getUser(type.id);
         if (null == user) {
           return null;
         } else {
           let nick;
           if (null != closure_1) {
-            nick = outer1_4.getNick(tmp16.id, user.id);
+            nick = closure_1_4.getNick(tmp16.id, user.id);
           }
           let obj = { type: null, value: null, label: null };
           obj[0] = tmp(tmp2[10]).SelectOptionType.USER;
@@ -208,7 +205,7 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
         if (null == closure_1) {
           return null;
         } else {
-          const role = outer1_5.getRole(tmp8.id, type.id);
+          const role = closure_1_5.getRole(tmp8.id, type.id);
           let tmp12 = null;
           if (null != role) {
             obj = { type: null, value: null, label: null };
@@ -222,17 +219,17 @@ export const getSnowflakeSelectDefaultValues = function getSnowflakeSelectDefaul
         if (null == closure_1) {
           return null;
         } else {
-          const channel = outer1_3.getChannel(type.id);
+          const channel = closure_1_3.getChannel(type.id);
           let tmp5 = null;
           if (null != channel) {
             tmp5 = null;
             if (channel.guild_id === tmp3.id) {
               obj = channelTypes;
               if (channelTypes.length <= 0) {
-                const obj1 = { type: null, value: null, label: null };
+                obj1 = { type: null, value: null, label: null };
                 obj1[0] = tmp(tmp2[10]).SelectOptionType.CHANNEL;
                 obj1[1] = channel.id;
-                obj1[2] = tmp(tmp2[11]).computeChannelName(channel, outer1_8, outer1_7);
+                obj1[2] = tmp(tmp2[11]).computeChannelName(channel, closure_1_8, closure_1_7);
                 tmp5 = obj1;
                 const tmpResult = tmp(tmp2[11]);
               } else {

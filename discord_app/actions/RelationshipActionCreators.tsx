@@ -1,23 +1,19 @@
 // discord_app/actions/RelationshipActionCreators.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { ClearFriendRequestFilters } from "ClearFriendRequestFilters";
+import sendRequest from "sendRequest" /* 530 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setDefault from "set" /* 4827 */;
+import openQuarantineModeInfoModalDefault from "openQuarantineModeInfoModal" /* 6780 */;
+import openContextMenu from "openContextMenu" /* 6911 */;
+import isLimitedAccessErrorCode from "isLimitedAccessErrorCode" /* 9739 */;
+import openClearAllIncomingRequestsConfirmationModalDefault from "openClearAllIncomingRequestsConfirmationModal" /* 9741 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { ClearFriendRequestFilters } from "ClearFriendRequestFilters" /* 9737 */;
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { openClearAllIncomingRequestsConfirmationModal } from "../modules/people/ClearAllIncomingRequestsConfirmationModal.tsx";
-import { openQuarantineModeInfoModal } from "../modules/quarantine/openQuarantineModeInfoModal.native.tsx";
-import { isLimitedAccessErrorCode } from "../modules/user_limited_access/UserLimitedAccessUtils.tsx";
-import { set } from "AlertActionCreators.tsx";
-import { openContextMenu } from "ContextMenuActionCreators.tsx";
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function handleRelationshipAddError(arg0, arg1, substr) {
-  let body;
-  let status;
   ({ status, body } = arg0);
   let num = body;
   if (body) {
@@ -34,8 +30,8 @@ function handleRelationshipAddError(arg0, arg1, substr) {
       obj[2] = intl9.string(getSystemLocale.t.DppXIx);
       openContextMenu.closeContextMenu();
       const obj11 = openContextMenu;
-      set.show(obj);
-      const obj12 = set;
+      setDefault.show(obj);
+      const obj12 = setDefault;
     }
   } else {
     if (403 === status) {
@@ -52,13 +48,13 @@ function handleRelationshipAddError(arg0, arg1, substr) {
         };
         openContextMenu.closeContextMenu();
         const obj7 = openContextMenu;
-        set.show(obj);
-        const obj8 = set;
+        setDefault.show(obj);
+        const obj8 = setDefault;
       }
     }
     if (num === constants.USER_QUARANTINED) {
       openContextMenu.closeContextMenu();
-      openQuarantineModeInfoModal();
+      openQuarantineModeInfoModalDefault();
       const obj5 = openContextMenu;
     } else {
       if (!obj9.isLimitedAccessErrorCode(status, num)) {
@@ -74,7 +70,7 @@ function handleRelationshipAddError(arg0, arg1, substr) {
               const intl = tmp18(1236).intl;
               humanizeAbortCodeResult = intl.string(tmp18(1236).t.paDJBM);
             }
-            const obj1 = { title: null, body: null, confirmText: null };
+            obj1 = { title: null, body: null, confirmText: null };
             const intl2 = tmp18(1236).intl;
             obj1[0] = intl2.string(tmp18(1236).t["6moJ8s"]);
             obj1[1] = humanizeAbortCodeResult;
@@ -82,8 +78,8 @@ function handleRelationshipAddError(arg0, arg1, substr) {
             obj1[2] = intl3.string(tmp18(1236).t.BddRzS);
             tmp18Result = tmp18(6911);
             tmp18Result.closeContextMenu();
-            set.show(obj1);
-            const obj4 = set;
+            setDefault.show(obj1);
+            const obj4 = setDefault;
           }
         }
       }
@@ -92,16 +88,10 @@ function handleRelationshipAddError(arg0, arg1, substr) {
   }
   throw arg0;
 }
-({ Endpoints: closure_6, AbortCodes: error, RelationshipTypes: metroImportAll } = ME);
+({ Endpoints: closure_6, AbortCodes: error, RelationshipTypes: closure_8 } = ME);
 let obj = { SHOW_ALWAYS: 0, [0]: "SHOW_ALWAYS", SHOW_ONLY_IF_ACTION_NEEDED: 1, [1]: "SHOW_ONLY_IF_ACTION_NEEDED" };
 obj = {
   sendRequest(discordTag) {
-    let captchaPayload;
-    let context;
-    let errorUxConfig;
-    let note;
-    let tmp3;
-    let tmp4;
     const str = discordTag.discordTag;
     ({ captchaPayload, errorUxConfig } = discordTag);
     ({ context, note } = discordTag);
@@ -119,16 +109,10 @@ obj = {
     obj[4] = str(530).rejectWithMigratedError();
     const obj3 = str(530);
     return HTTP.post(obj).catch((arg0) => {
-      outer1_11(arg0, errorUxConfig, str);
+      closure_1_11(arg0, errorUxConfig, str);
     });
   },
   addRelationship(arg0, arg1) {
-    let captchaPayload;
-    let confirmStrangerRequest;
-    let context;
-    let fromFriendSuggestion;
-    let type;
-    let userId;
     ({ userId, captchaPayload } = arg0);
     const _require = arg1;
     let SHOW_ALWAYS = arg2;
@@ -152,7 +136,7 @@ obj = {
         tmp();
       }
     }).catch((arg0) => {
-      outer1_11(arg0, SHOW_ALWAYS, SHOW_ALWAYS(outer1_3[12]).getUserTag(closure_2));
+      closure_1_11(arg0, SHOW_ALWAYS, SHOW_ALWAYS(closure_1_3[12]).getUserTag(closure_2));
     });
   },
   acceptFriendRequest(arg0) {
@@ -177,7 +161,7 @@ obj = {
     });
   },
   blockUser(userId, context) {
-    const obj = { userId, context, type: constants2.BLOCKED };
+    obj = { userId, context, type: constants2.BLOCKED };
     return obj.addRelationship(obj, () => {
       const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
       const intl = callback(1236).intl;
@@ -194,8 +178,7 @@ obj = {
   removeRelationship(userId, context) {
     const _require = arg2;
     const HTTP = _sendRequest.HTTP;
-    const obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: null };
-    obj[3] = _sendRequest.rejectWithMigratedError();
+    obj = { url: closure_6.USER_RELATIONSHIP(userId), context, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
     const obj2 = _sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
@@ -219,13 +202,13 @@ obj = {
     const HTTP = sendRequest.HTTP;
     const value = HTTP.get({ url: closure_6.USER_RELATIONSHIPS(), oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
-      let obj = callback(709);
+      obj = callback(709);
       obj = { type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: body.body };
       return obj.dispatch(obj);
     }, () => callback(709).dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }));
   },
   confirmClearPendingRelationships(arg0) {
-    openClearAllIncomingRequestsConfirmationModal(arg0);
+    openClearAllIncomingRequestsConfirmationModalDefault(arg0);
   },
   clearPendingRelationships() {
     const HTTP = sendRequest.HTTP;
@@ -261,7 +244,7 @@ obj = {
   },
   ignoreUser(closure_3, IGNORE_CONFIRMATION_ACTION_SHEET, channelId) {
     const _require = closure_3;
-    let closure_1 = channelId;
+    closure_1 = channelId;
     const HTTP = _sendRequest.HTTP;
     obj = { url: closure_6.IGNORE_USER(closure_3), context: obj, rejectWithError: null };
     obj = { location: IGNORE_CONFIRMATION_ACTION_SHEET };
@@ -269,13 +252,13 @@ obj = {
     const obj3 = _sendRequest;
     const putResult = HTTP.put(obj);
     return HTTP.put(obj).then(() => {
-      let obj = channelId(outer1_3[16]);
+      obj = channelId(closure_1_3[16]);
       const result = obj.showIgnoreSuccessToast(callback, channelId);
-      const AccessibilityAnnouncer = callback(outer1_3[13]).AccessibilityAnnouncer;
-      const intl = callback(outer1_3[7]).intl;
-      AccessibilityAnnouncer.announce(intl.string(callback(outer1_3[7]).t.Us93Ca));
+      const AccessibilityAnnouncer = callback(closure_1_3[13]).AccessibilityAnnouncer;
+      const intl = callback(closure_1_3[7]).intl;
+      AccessibilityAnnouncer.announce(intl.string(callback(closure_1_3[7]).t.Us93Ca));
       obj = { type: "RELATIONSHIP_IGNORE_USER_SUCCESS", userId: callback, timestamp: Date.now() };
-      channelId(outer1_3[14]).dispatch(obj);
+      channelId(closure_1_3[14]).dispatch(obj);
     }).catch(() => {
       channelId(6553).showFailedToast();
       const AccessibilityAnnouncer = callback(1363).AccessibilityAnnouncer;
@@ -285,7 +268,7 @@ obj = {
   },
   unignoreUser(id, UserProfileRemediatedNotice, id2) {
     const _require = id;
-    let closure_1 = id2;
+    closure_1 = id2;
     const HTTP = _sendRequest.HTTP;
     obj = { url: closure_6.IGNORE_USER(id), context: obj, rejectWithError: null };
     obj = { location: UserProfileRemediatedNotice };
@@ -293,10 +276,10 @@ obj = {
     const obj3 = _sendRequest;
     const delResult = HTTP.del(obj);
     return HTTP.del(obj).then(() => {
-      const result = id2(outer1_3[16]).showUnignoreSuccessToast(id, id2);
-      const AccessibilityAnnouncer = id(outer1_3[13]).AccessibilityAnnouncer;
-      const intl = id(outer1_3[7]).intl;
-      AccessibilityAnnouncer.announce(intl.string(id(outer1_3[7]).t.QlH5w6));
+      const result = id2(closure_1_3[16]).showUnignoreSuccessToast(id, id2);
+      const AccessibilityAnnouncer = id(closure_1_3[13]).AccessibilityAnnouncer;
+      const intl = id(closure_1_3[7]).intl;
+      AccessibilityAnnouncer.announce(intl.string(id(closure_1_3[7]).t.QlH5w6));
     }).catch(() => {
       id2(6553).showFailedToast();
       const AccessibilityAnnouncer = id(1363).AccessibilityAnnouncer;
@@ -305,7 +288,7 @@ obj = {
     });
   }
 };
-let result = require("ME").fileFinishedImporting("actions/RelationshipActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/RelationshipActionCreators.tsx");
 
 export default obj;
 export const RelationshipErrorUXConfig = obj;

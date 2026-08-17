@@ -1,33 +1,23 @@
 // discord_app/modules/mfa/native/screens/MfaOptionScreen.tsx
-import { ScrollView } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { BackgroundImage } from "../../../auth/native/components/atoms/BackgroundImage.tsx";
-import { useWideAuthView } from "../../../auth/native/useWideAuthView.tsx";
-import { MfaScreenUtils } from "../MfaScreenUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
+import BackgroundImageDefault from "BackgroundImage" /* 8612 */;
+import _modDef15125 from "module_15125" /* 15125 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
+const ScrollView = get_ActivityIndicator.ScrollView;
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
-const result = require("useWideAuthView").fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
+const result = set.fileFinishedImporting("modules/mfa/native/screens/MfaOptionScreen.tsx");
 
 export default function MFAOptionScreen(arg0) {
-  let content;
-  let error;
-  let headerImage;
-  let headerText;
-  let input;
-  let mfaMethod;
-  let screenProps;
-  let submit;
-  let subtitle;
   ({ headerImage, subtitle, screenProps, error } = arg0);
   ({ headerText, input, submit, mfaMethod, content } = arg0);
-  const tmp3 = useWideAuthView();
-  let obj = MfaScreenUtils;
+  const tmp3 = useWideAuthViewDefault();
+  let obj = _modDef15125;
   const screenStyles = obj.useScreenStyles(tmp3);
   const first = screenProps.mfaChallenge.methods[0];
   let type;
@@ -73,7 +63,7 @@ export default function MFAOptionScreen(arg0) {
   items2[2] = closure_5(Stack.Stack, obj5);
   obj[3] = items2;
   const tmp7Result = closure_5(SafeAreaPaddingView.SafeAreaPaddingView, obj);
-  const children = [callback(BackgroundImage, { backgroundImageCover: false }), ];
+  const children = [callback(BackgroundImageDefault, { backgroundImageCover: false }), ];
   let tmp10Result2 = tmp7Result;
   if (tmp3) {
     const obj7 = { keyboardShouldPersistTaps: "handled", children: null };

@@ -1,12 +1,12 @@
 // discord_app/modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx
-import { _getPrimaryAppCommand } from "../application_commands/getPrimaryAppCommand.tsx";
-import { useIsAppDM } from "useIsAppDM.tsx";
-const result = require("canLaunchFrame").fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
+import set from "set" /* 2 */;
+import canLaunchFrame from "canLaunchFrame" /* 8704 */;
+import _getPrimaryAppCommand from "_getPrimaryAppCommand" /* 8769 */;
+import useIsAppDMDefault from "useIsAppDM" /* 11323 */;
+
+const result = set.fileFinishedImporting("modules/app_dms/useShowTryItOutButtonInAppLauncher.tsx");
 
 export default function useShowTryItOutButtonInAppLauncher(arg0) {
-  let application;
-  let botUserId;
-  let context;
   ({ context, application, botUserId } = arg0);
   let obj = _getPrimaryAppCommand;
   obj = { context, applicationId: application.id, botUserId };
@@ -16,9 +16,9 @@ export default function useShowTryItOutButtonInAppLauncher(arg0) {
     channel = context.channel;
   }
   const tmp = require;
-  const tmp4 = useIsAppDM;
-  const tmp4Result = useIsAppDM(channel);
-  const canLaunchFrameResult = tmp(8704).canLaunchFrame(application);
+  const tmp4 = useIsAppDMDefault;
+  const tmp4Result = useIsAppDMDefault(channel);
+  const canLaunchFrameResult = canLaunchFrame.canLaunchFrame(application);
   let tmp8 = !canLaunchFrameResult;
   if (!canLaunchFrameResult) {
     if (isPrimaryAppCommandUsableInAppDM) {

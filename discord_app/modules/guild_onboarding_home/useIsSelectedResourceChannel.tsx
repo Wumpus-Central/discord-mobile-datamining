@@ -1,28 +1,28 @@
 // discord_app/modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx
-import handlePermissionsChange from "handlePermissionsChange";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import { ChannelFlags } from "set";
+import closure_3 from "handlePermissionsChange" /* 4970 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import { ChannelFlags } from "set" /* 1398 */;
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useCanSeeOnboardingHome } from "OnboardingHomeUtils.tsx";
 
 const require = arg1;
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");
 
 export default function useIsSelectedResourceChannel(arg0) {
   const _require = arg0;
-  const items = [ensureGuildLoaded, handleConnectionOpen, handlePermissionsChange];
+  const items = [closure_4, closure_5, closure_3];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => {
-    const channel = outer1_4.getChannel(callback);
+    const channel = closure_1_4.getChannel(callback);
     if (null != channel) {
-      if (obj.hasFlag(channel.flags, outer1_7.IS_GUILD_RESOURCE_CHANNEL)) {
-        if (outer1_1(tmp3[7])(channel, outer1_5, outer1_3)) {
+      if (obj.hasFlag(channel.flags, closure_1_7.IS_GUILD_RESOURCE_CHANNEL)) {
+        if (closure_1_1(tmp3[7])(channel, closure_1_5, closure_1_3)) {
           return channel.guild_id;
         }
       }
-      obj = callback(outer1_2[6]);
-      tmp3 = outer1_2;
+      obj = callback(closure_1_2[6]);
+      tmp3 = closure_1_2;
     }
   });
   let obj = _defaultAreStatesEqual;

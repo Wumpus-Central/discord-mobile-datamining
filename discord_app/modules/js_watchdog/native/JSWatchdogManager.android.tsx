@@ -1,16 +1,17 @@
 // discord_app/modules/js_watchdog/native/JSWatchdogManager.android.tsx
-import enforcing from "enforcing";
-import ME from "ME";
-import "initialize";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import setDefault from "set" /* 687 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import initializeDefault from "initialize" /* 5038 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let require = arg1;
+require = arg1;
 ({ AppStates: c4, AnalyticEvents: c5 } = ME);
-let closure_6 = new require("set")("JSWatchdogManager");
-const HALF_SECOND = require("set").Millis.HALF_SECOND;
+let closure_6 = new timestampDefault("JSWatchdogManager");
+const HALF_SECOND = setDefault.Millis.HALF_SECOND;
+initializeDefault;
 class JSWatchdogManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -81,61 +82,60 @@ prototype["ping"] = function ping() {
             return obj;
           } else {
             let _lastSessionId = tmp4;
-            let c0 = tmp8;
+            c0 = tmp8;
             c0 = undefined;
             _lastSessionId = undefined;
-            outer1_1._pingCompleted = false;
-            let c3 = 2;
+            checkForStallReportResult._pingCompleted = false;
+            c3 = 2;
             c4 = 3;
             c5 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = outer1_1.getCurrentSessionId();
+            obj1 = { value: null, done: false };
+            obj1[0] = checkForStallReportResult.getCurrentSessionId();
             return obj1;
           }
         } else if (1 === tmp8) {
           c3 = 0;
-          outer1_1._pingCompleted = true;
-          throw closure_2;
+          checkForStallReportResult._pingCompleted = true;
+          throw dependencyMap;
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            const outer1_2 = closure_2;
-            outer1_1(outer1_2[6]).captureException(outer1_2);
+            checkForStallReportResult(1208).captureException(dependencyMap);
             c3 = 0;
-            outer1_1._pingCompleted = true;
+            checkForStallReportResult._pingCompleted = true;
             c5 = 3;
-            const obj8 = outer1_1(outer1_2[6]);
+            const obj8 = checkForStallReportResult(1208);
           } else if (3 === tmp8) {
             if (arg0 === 1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 === 2) {
               c3 = 0;
-              outer1_1._pingCompleted = true;
+              checkForStallReportResult._pingCompleted = true;
               c5 = 3;
               const obj2 = { value: null, done: true };
               obj2[0] = arg1;
               return obj2;
             } else {
-              const outer1_0 = arg1;
-              if (null == outer1_0) {
-                if (outer1_1._enabled) {
+              closure_0 = arg1;
+              if (null == closure_0) {
+                if (checkForStallReportResult._enabled) {
                   const _setTimeout2 = setTimeout;
-                  const timerId = setTimeout(() => _undefined.ping(), outer1_7);
+                  const timerId = setTimeout(() => _undefined.ping(), closure_1_7);
                   _lastSessionId._timeoutId = timerId;
                 }
                 c3 = 0;
-                outer1_1._pingCompleted = true;
+                checkForStallReportResult._pingCompleted = true;
                 c5 = 3;
                 let obj3 = { value: null, done: true };
                 obj3[0] = undefined;
                 return obj3;
               } else {
-                obj3 = outer1_1(outer1_2[5]);
+                obj3 = checkForStallReportResult(16625);
                 let pingResult;
                 if (obj3 != null) {
                   const _Date = Date;
-                  pingResult = obj3.ping(Date.now(), outer1_0, outer1_0, false);
+                  pingResult = obj3.ping(Date.now(), closure_0, closure_0, false);
                 }
                 c4 = 4;
                 c5 = 1;
@@ -149,45 +149,44 @@ prototype["ping"] = function ping() {
             throw arg1;
           } else if (arg0 !== 2) {
             if (arg1) {
-              obj = outer1_1(outer1_2[5]);
-              let checkForStallReportResult;
+              obj = checkForStallReportResult(16625);
+              checkForStallReportResult = undefined;
               if (obj != null) {
                 checkForStallReportResult = obj.checkForStallReport();
               }
-              outer1_1 = checkForStallReportResult;
-              if (null != outer1_1) {
-                if (_lastSessionId._lastSessionId !== outer1_0) {
-                  outer1_1._lastSessionId = c0;
-                  outer1_1._analyticsReportsRemaining = 3;
+              if (null != checkForStallReportResult) {
+                if (_lastSessionId._lastSessionId !== closure_0) {
+                  checkForStallReportResult._lastSessionId = c0;
+                  checkForStallReportResult._analyticsReportsRemaining = 3;
                 }
-                outer1_1._analyticsReportsRemaining = +outer1_1._analyticsReportsRemaining - 1;
-                if (+outer1_1._analyticsReportsRemaining > 0) {
-                  outer1_1.reportStall(_lastSessionId, c0, false, outer1_1._analyticsReportsRemaining);
+                checkForStallReportResult._analyticsReportsRemaining = +checkForStallReportResult._analyticsReportsRemaining - 1;
+                if (+checkForStallReportResult._analyticsReportsRemaining > 0) {
+                  checkForStallReportResult.reportStall(_lastSessionId, c0, false, checkForStallReportResult._analyticsReportsRemaining);
                 }
-                if (0 === outer1_1._analyticsReportsRemaining) {
-                  outer1_1.stopWatchdog();
-                  obj1 = outer1_1(outer1_2[5]);
+                if (0 === checkForStallReportResult._analyticsReportsRemaining) {
+                  checkForStallReportResult.stopWatchdog();
+                  obj1 = checkForStallReportResult(16625);
                   if (obj1 != null) {
                     obj1.disable();
                   }
                 }
               }
             }
-            if (outer1_1._enabled) {
+            if (checkForStallReportResult._enabled) {
               const _setTimeout = setTimeout;
-              _lastSessionId._timeoutId = setTimeout(() => _undefined.ping(), outer1_7);
+              _lastSessionId._timeoutId = setTimeout(() => _undefined.ping(), closure_1_7);
             }
             c3 = 1;
           }
           c3 = 0;
-          outer1_1._pingCompleted = true;
+          checkForStallReportResult._pingCompleted = true;
           c5 = 3;
           const obj5 = { value: null, done: true };
           obj5[0] = arg1;
           return obj5;
         }
       } catch (tmp84) {
-        closure_2 = tmp84;
+        dependencyMap = tmp84;
         if (tmp5 === c3) {
           c5 = tmp3;
           throw tmp84;
@@ -229,16 +228,16 @@ prototype["startWatchdog"] = function startWatchdog() {
             obj[0] = arg1;
             return obj;
           } else {
-            let c1 = tmp2;
-            let closure_0 = 0;
+            c1 = tmp2;
+            closure_0 = 0;
             closure_0 = undefined;
             c1 = undefined;
-            if (null == outer1_0._timeoutId) {
-              if (null != outer1_1(16625)) {
+            if (null == closure_1_0._timeoutId) {
+              if (null != checkForStallReportResult(16625)) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0.getCurrentSessionId();
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0.getCurrentSessionId();
                 return obj1;
               }
             }
@@ -251,20 +250,19 @@ prototype["startWatchdog"] = function startWatchdog() {
           closure_0 = arg1;
           if (null != closure_0) {
             if (closure_0._lastSessionId !== closure_0) {
-              outer1_6.info("startWatchdog()");
+              closure_1_6.info("startWatchdog()");
               closure_0._enabled = true;
               if (closure_0._pingCompleted) {
-                let checkForStallReportResult;
-                obj = outer1_1(16625);
+                checkForStallReportResult = undefined;
+                obj = checkForStallReportResult(16625);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
-                outer1_1 = checkForStallReportResult;
-                if (null != outer1_1) {
-                  closure_0.reportStall(outer1_1, outer1_0, true, -1);
+                if (null != checkForStallReportResult) {
+                  closure_0.reportStall(checkForStallReportResult, closure_1_0, true, -1);
                 }
               }
-              outer1_0.ping(true);
+              closure_1_0.ping(true);
             }
           }
         }
@@ -280,13 +278,13 @@ prototype["startWatchdog"] = function startWatchdog() {
   })();
 };
 prototype["stopWatchdog"] = function stopWatchdog() {
-  tmp3.info("stopWatchdog()");
+  logger.info("stopWatchdog()");
   this._enabled = false;
   clearTimeout(this._timeoutId);
   this._timeoutId = null;
 };
 prototype["reportStall"] = function reportStall(c1, c0, is_previous, _analyticsReportsRemaining) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(getDeviceMetadata.getDeviceMetadata());
   obj.version = 1;
@@ -330,20 +328,20 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
+            closure_1 = tmp5;
+            closure_0 = tmp2;
             closure_0 = undefined;
-            if (null != outer1_0._cachedSession) {
-              let obj1 = outer1_0(5063);
-              if (!obj1.isSessionExpired(outer1_0._cachedSession)) {
-                const uuid = outer1_0._cachedSession.uuid;
+            if (null != closure_1_0._cachedSession) {
+              obj1 = closure_1_0(5063);
+              if (!obj1.isSessionExpired(closure_1_0._cachedSession)) {
+                const uuid = closure_1_0._cachedSession.uuid;
                 c3 = 3;
               }
             }
             dependencyMap = 1;
             c3 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(5054).getSession();
+            obj1[0] = closure_1_0(5054).getSession();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -370,7 +368,7 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
   })();
 };
 const jSWatchdogManager = new JSWatchdogManager();
-const tmp3 = new require("set")("JSWatchdogManager");
-let result = require("timestamp").fileFinishedImporting("modules/js_watchdog/native/JSWatchdogManager.android.tsx");
+const tmp3 = new timestampDefault("JSWatchdogManager");
+let result = require("set").fileFinishedImporting("modules/js_watchdog/native/JSWatchdogManager.android.tsx");
 
 export default jSWatchdogManager;

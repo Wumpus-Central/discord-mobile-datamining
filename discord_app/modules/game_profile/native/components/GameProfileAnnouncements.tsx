@@ -1,27 +1,18 @@
 // discord_app/modules/game_profile/native/components/GameProfileAnnouncements.tsx
-import importAllResult from "set";
-import get_ActivityIndicator from "Button";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import createRulesAll from "createRules" /* 4764 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 function EmbedAnnouncementCard(message) {
-  let channelId;
-  let guildId;
-  let importDefault;
   message = message.message;
   ({ onPress: importDefault, guildId, channelId } = message);
   const tmp = callback3();
   if (null == parser) {
-    let obj = importAll(4764);
+    let obj = createRulesAll;
     parser = obj.getParser();
   }
   const media = message.media;
@@ -39,7 +30,7 @@ function EmbedAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    let obj1 = message(9163);
+    obj1 = message(9163);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -156,7 +147,7 @@ function EmbedAnnouncementCard(message) {
       const obj18 = { style: null, children: null };
       obj18[0] = tmp.reactionInfo;
       const obj19 = { size: "xs", color: null };
-      obj19[1] = Themes.colors.TEXT_MUTED;
+      obj19[1] = ThemesDefault.colors.TEXT_MUTED;
       const items6 = [tmp12(tmp35(7939).ReactionIcon, obj19), ];
       let tmp46 = null != obj20;
       if (tmp46) {
@@ -187,14 +178,11 @@ function EmbedAnnouncementCard(message) {
   }
 }
 function MessageAnnouncementCard(message) {
-  let channelId;
-  let guildId;
-  let importDefault;
   message = message.message;
   ({ onPress: importDefault, guildId, channelId } = message);
   const tmp = callback3();
   if (null == parser) {
-    let obj = importAll(4764);
+    let obj = createRulesAll;
     parser = obj.getParser();
   }
   const media = message.media;
@@ -212,7 +200,7 @@ function MessageAnnouncementCard(message) {
   }
   let posterUrl = null;
   if (null != proxyUrl) {
-    let obj1 = message(9163);
+    obj1 = message(9163);
     posterUrl = obj1.getPosterUrl(proxyUrl, 160, c12);
   }
   if (posterUrl == null) {
@@ -274,7 +262,7 @@ function MessageAnnouncementCard(message) {
     const obj9 = { style: null, children: null };
     obj9[0] = tmp.reactionInfo;
     const obj10 = { size: "xs", color: null };
-    obj10[1] = Themes.colors.TEXT_MUTED;
+    obj10[1] = ThemesDefault.colors.TEXT_MUTED;
     const items3 = [tmp27(tmp28(7939).ReactionIcon, obj10), ];
     let tmp34 = null != obj11;
     if (tmp34) {
@@ -305,9 +293,9 @@ function MessageAnnouncementCard(message) {
 function PollAnnouncementCard(message) {
   message = message.message;
   const onPress = message.onPress;
-  let c2;
+  closure_2 = undefined;
   const tmp = callback3();
-  c2 = tmp;
+  closure_2 = tmp;
   const poll = message.poll;
   if (null == poll) {
     return null;
@@ -323,20 +311,20 @@ function PollAnnouncementCard(message) {
     obj[3] = poll.question.text;
     obj = { style: null, children: null };
     obj[0] = tmp.cardBody;
-    const obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
+    obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = poll.question.text;
     const items = [callback(message(4734).Text, obj1), , ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.pollAnswers;
     const items1 = [
       substr.map((poll_media) => {
-          const obj = { style: _undefined.pollAnswerOption, children: null };
+          const obj = { style: pollAnswerOption.pollAnswerOption, children: null };
           let str = poll_media.poll_media.text;
           if (str == null) {
             str = "";
           }
-          obj[1] = outer1_10(message(outer1_3[8]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: str });
-          return outer1_10(outer1_7, obj, poll_media.answer_id);
+          obj[1] = closure_1_10(message(closure_1_3[8]).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: str });
+          return closure_1_10(closure_1_7, obj, poll_media.answer_id);
         }),
 
     ];
@@ -371,45 +359,45 @@ function PollAnnouncementCard(message) {
   }
 }
 let c4 = importAllResult;
-({ Image: c5, ScrollView: closure_6, View: error, Pressable: metroImportAll, ActivityIndicator: c9 } = get_ActivityIndicator);
+({ Image: c5, ScrollView: closure_6, View: error, Pressable: closure_8, ActivityIndicator: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let c12 = 120;
 let c13 = null;
 let c14 = null;
 let obj = { container: null, smallCardsScroller: null, smallCardsContainer: null, sectionHeader: null, loadingContainer: null, card: null, cardBody: null, smallCardMedia: null, mediaImage: null, metadataRow: null, reactionInfo: null, embedContentArea: null, embedAuthorRow: null, embedAuthorIcon: null, embedProviderIcon: null, embedMedia: null, pollAnswers: null, pollAnswerOption: null, pollMoreOptions: null };
-obj = { gap: require("Themes").space.PX_8 };
+obj = { gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-createCacheKey = { marginHorizontal: -require("Themes").space.PX_16, overflow: "visible" };
+createCacheKey = { marginHorizontal: -ThemesDefault.space.PX_16, overflow: "visible" };
 obj[1] = createCacheKey;
-obj[2] = { flexDirection: "row", gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-let obj2 = { flexDirection: "row", gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
-obj[3] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: require("Themes").space.PX_8 };
+obj[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj2 = { flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
+obj[3] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
 obj[4] = { height: 120, alignItems: "center", justifyContent: "center" };
-let obj3 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: require("Themes").space.PX_8 };
-obj[5] = { flexDirection: "column", borderRadius: require("Themes").radii.lg, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, width: 160 };
-let obj4 = { flexDirection: "column", borderRadius: require("Themes").radii.lg, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, width: 160 };
-obj[6] = { flex: 1, flexDirection: "column", gap: require("Themes").space.PX_4, overflow: "hidden", padding: require("Themes").space.PX_12 };
+let obj3 = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+obj[5] = { flexDirection: "column", borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, width: 160 };
+let obj4 = { flexDirection: "column", borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, width: 160 };
+obj[6] = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_4, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
 obj[7] = { height: 120, overflow: "hidden", flexShrink: 0 };
 obj[8] = { width: "100%", height: "100%", resizeMode: "cover" };
-let obj5 = { flex: 1, flexDirection: "column", gap: require("Themes").space.PX_4, overflow: "hidden", padding: require("Themes").space.PX_12 };
-obj[9] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, marginTop: "auto" };
-let obj6 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, marginTop: "auto" };
-obj[10] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-let obj7 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-obj[11] = { flex: 1, gap: require("Themes").space.PX_4, borderLeftWidth: 4, borderLeftColor: require("Themes").colors.BORDER_SUBTLE, borderTopLeftRadius: require("Themes").radii.xs, borderBottomLeftRadius: require("Themes").radii.xs, paddingLeft: require("Themes").space.PX_8 };
-let obj8 = { flex: 1, gap: require("Themes").space.PX_4, borderLeftWidth: 4, borderLeftColor: require("Themes").colors.BORDER_SUBTLE, borderTopLeftRadius: require("Themes").radii.xs, borderBottomLeftRadius: require("Themes").radii.xs, paddingLeft: require("Themes").space.PX_8 };
-obj[12] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-obj[13] = { width: 20, height: 20, borderRadius: require("Themes").radii.round };
+let obj5 = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_4, overflow: "hidden", padding: ThemesDefault.space.PX_12 };
+obj[9] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: "auto" };
+let obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: "auto" };
+obj[10] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+obj[11] = { flex: 1, gap: ThemesDefault.space.PX_4, borderLeftWidth: 4, borderLeftColor: ThemesDefault.colors.BORDER_SUBTLE, borderTopLeftRadius: ThemesDefault.radii.xs, borderBottomLeftRadius: ThemesDefault.radii.xs, paddingLeft: ThemesDefault.space.PX_8 };
+let obj8 = { flex: 1, gap: ThemesDefault.space.PX_4, borderLeftWidth: 4, borderLeftColor: ThemesDefault.colors.BORDER_SUBTLE, borderTopLeftRadius: ThemesDefault.radii.xs, borderBottomLeftRadius: ThemesDefault.radii.xs, paddingLeft: ThemesDefault.space.PX_8 };
+obj[12] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let obj9 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+obj[13] = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round };
 obj[14] = { width: 16, height: 16 };
-let obj10 = { width: 20, height: 20, borderRadius: require("Themes").radii.round };
-obj[15] = { overflow: "hidden", borderRadius: require("Themes").radii.sm, aspectRatio: 1.7777777777777777 };
-let obj11 = { overflow: "hidden", borderRadius: require("Themes").radii.sm, aspectRatio: 1.7777777777777777 };
-obj[16] = { flexDirection: "column", gap: require("Themes").space.PX_4, flex: 1 };
-let obj12 = { flexDirection: "column", gap: require("Themes").space.PX_4, flex: 1 };
-obj[17] = { paddingVertical: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-let obj13 = { paddingVertical: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-obj[18] = { paddingHorizontal: require("Themes").space.PX_12 };
+let obj10 = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round };
+obj[15] = { overflow: "hidden", borderRadius: ThemesDefault.radii.sm, aspectRatio: 1.7777777777777777 };
+let obj11 = { overflow: "hidden", borderRadius: ThemesDefault.radii.sm, aspectRatio: 1.7777777777777777 };
+obj[16] = { flexDirection: "column", gap: ThemesDefault.space.PX_4, flex: 1 };
+let obj12 = { flexDirection: "column", gap: ThemesDefault.space.PX_4, flex: 1 };
+obj[17] = { paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj13 = { paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+obj[18] = { paddingHorizontal: ThemesDefault.space.PX_12 };
 let closure_15 = createCacheKey.createStyles(obj);
 let closure_19 = importAllResult.memo((message) => {
   if (null != message.message.poll) {
@@ -427,12 +415,10 @@ let closure_19 = importAllResult.memo((message) => {
   }
   return tmp6;
 });
-let obj14 = { paddingHorizontal: require("Themes").space.PX_12 };
-let result = require("jsxProd").fileFinishedImporting("modules/game_profile/native/components/GameProfileAnnouncements.tsx");
+let obj14 = { paddingHorizontal: ThemesDefault.space.PX_12 };
+let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileAnnouncements.tsx");
 
 export default function GameProfileAnnouncements(gameId) {
-  let channelId;
-  let messages;
   gameId = gameId.gameId;
   const invite = gameId.invite;
   const closeModal = gameId.closeModal;
@@ -441,7 +427,7 @@ export default function GameProfileAnnouncements(gameId) {
   let analyticsLocations;
   channelId = undefined;
   let guildId;
-  let closure_8;
+  closure_8 = undefined;
   const tmp = callback3();
   analyticsLocations = invite(trackAction[12])().analyticsLocations;
   let tmp3 = invite(trackAction[13])(gameId, 10);
@@ -524,7 +510,7 @@ export default function GameProfileAnnouncements(gameId) {
     obj[2] = intl.string(gameId(tmp2[4]).t.B0BV3Y);
     obj[1] = callback(gameId(tmp2[8]).Text, obj);
     const items2 = [callback(guildId, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.loadingContainer;
     obj1[1] = callback(closure_9, {});
     items2[1] = callback(guildId, obj1);
@@ -553,7 +539,7 @@ export default function GameProfileAnnouncements(gameId) {
         const items4 = [callback2(guildId, obj3), ];
         const obj6 = { horizontal: true, showsHorizontalScrollIndicator: false, style: null, contentContainerStyle: null, decelerationRate: "fast", snapToInterval: 172, snapToStart: false, snapToEnd: false, children: null };
         ({ smallCardsScroller: obj9[2], smallCardsContainer: obj9[3] } = tmp);
-        obj6[8] = messages.map((id) => outer1_10(outer1_19, { message: id, onPress: closure_8, guildId, channelId }, id.id));
+        obj6[8] = messages.map((id) => closure_1_10(closure_1_19, { message: id, onPress: closure_8, guildId, channelId }, id.id));
         items4[1] = callback(channelId, obj6);
         obj2[1] = items4;
         tmp6 = callback2(guildId, obj2);

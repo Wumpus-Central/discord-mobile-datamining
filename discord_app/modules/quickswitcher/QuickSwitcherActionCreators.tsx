@@ -1,47 +1,36 @@
 // discord_app/modules/quickswitcher/QuickSwitcherActionCreators.tsx
-import setLibraryApplications from "setLibraryApplications";
-import _slicedToArray from "_slicedToArray";
-import { InAppNavigationType } from "fromType";
-import { ChannelRecordBase } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "setLibraryApplications";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_10 from "handleConnectionOpen";
-import closure_11 from "handleConnectionOpen";
-import ME from "ME";
-import { isStaticChannelRoute } from "set";
-import { CollectibleShopTab } from "items";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/ValidationUtils.tsx";
-import { sortByMatchScore } from "../autocompleter/index.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import sortByMatchScore from "sortByMatchScore" /* 7593 */;
+import setDefault from "set" /* 8781 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import { InAppNavigationType } from "fromType" /* 6715 */;
+import { ChannelRecordBase } from "createChannelRecord" /* 1395 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "setLibraryApplications" /* 4512 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import closure_10 from "handleConnectionOpen" /* 4197 */;
+import closure_11 from "handleConnectionOpen" /* 7592 */;
+import ME from "ME" /* 676 */;
+import { isStaticChannelRoute } from "set" /* 1398 */;
+import { CollectibleShopTab } from "items" /* 678 */;
 
-let Layers;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let map1;
-const require = arg1;
+require = arg1;
 function trackClose(QUICKSWITCHER_CLOSED, type) {
-  let query;
-  let queryMode;
-  let record;
-  let results;
-  let type3;
   let obj = closure_11;
   const props = closure_11.getProps();
   ({ results, queryMode, query } = props);
   const guildId = store2.getGuildId();
   const channelId = store.getChannelId(guildId);
   const obj2 = sortByMatchScore;
-  const tmp6 = results[obj2.findNextSelectedResult(obj2, require(undefined, 7593) /* sortByMatchScore */.FindResultDirections.DOWN, -1, results)];
-  const isEmailResult = set.isEmail(query);
-  const obj3 = set;
+  const tmp6 = results[obj2.findNextSelectedResult(obj2, sortByMatchScore.FindResultDirections.DOWN, -1, results)];
+  const isEmailResult = setDefault.isEmail(query);
+  const obj3 = setDefault;
   const tmp7 = importDefault;
-  const isPhoneNumberResult = set.isPhoneNumber(query);
-  const obj4 = set;
-  const isUserTagLikeResult = set.isUserTagLike(query);
+  const isPhoneNumberResult = setDefault.isPhoneNumber(query);
+  const obj4 = setDefault;
+  const isUserTagLikeResult = setDefault.isUserTagLike(query);
   let tmp11 = null != channelId;
   if (tmp11) {
     tmp11 = isStaticChannelRoute(channelId);
@@ -131,7 +120,7 @@ function trackClose(QUICKSWITCHER_CLOSED, type) {
         type2 = type.type;
       }
     }
-    tmp7(698).track(QUICKSWITCHER_CLOSED, obj);
+    expandEventPropertiesDefault.track(QUICKSWITCHER_CLOSED, obj);
   } else if (tmp6.type === tmp4(7593).AutocompleterResultTypes.IN_APP_NAVIGATION) {
     type = `${tmp6.type}_${tmp6.record.type}`;
   } else {
@@ -159,7 +148,7 @@ function show() {
       }
       tmp6 = type;
     }
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { source: null, current_guild_id: null, current_channel_id: null, current_channel_type: null };
     obj[0] = str;
     obj[1] = guildId;
@@ -175,14 +164,14 @@ function show() {
   const items = [str2.replace(regExp, ""), tmp14];
   const tmp15 = callback2(items, 2);
   const merged = Object.assign({ query: tmp15[0], queryMode: tmp15[1] });
-  dispatcher.dispatch(obj);
+  dispatcherDefault.dispatch(obj);
 }
 function _openInviteFromQuickSwitcher() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, invite) {
       if (c4 === 2) {
         c4 = 3;
@@ -213,10 +202,10 @@ function _openInviteFromQuickSwitcher() {
               const table = tmp5;
               invite = tmp2;
               invite = undefined;
-              let obj3 = outer1_1(outer1_2[28]);
+              let obj3 = closure_1_1(closure_1_2[28]);
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.resolveInvite(closure_0, "Quick Switcher");
               return obj1;
             }
@@ -248,7 +237,7 @@ function _openInviteFromQuickSwitcher() {
       }
     })();
   });
-  const _openInviteFromQuickSwitcher = tmp;
+  closure_23 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -268,7 +257,7 @@ let merged = Object.assign(Object.freeze(obj));
 obj[require("sortByMatchScore").AutocompleterQuerySymbols.GAME_PROFILE] = require("sortByMatchScore").AutocompleterResultTypes.GAME_PROFILE;
 let closure_19 = Object.freeze(obj);
 const regExp = new RegExp("^" + require("sortByMatchScore").AutocompleterQuerySymbols.USER + "|" + require("sortByMatchScore").AutocompleterQuerySymbols.TEXT_CHANNEL + "|" + require("sortByMatchScore").AutocompleterQuerySymbols.VOICE_CHANNEL + "|\\" + require("sortByMatchScore").AutocompleterQuerySymbols.GUILD + "|\\" + require("sortByMatchScore").AutocompleterQuerySymbols.GAME_PROFILE);
-const result = require("fromType").fileFinishedImporting("modules/quickswitcher/QuickSwitcherActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/quickswitcher/QuickSwitcherActionCreators.tsx");
 
 export const getQuickSwitcherOptions = function getQuickSwitcherOptions(str) {
   let tmp = dependencyMap[str.charAt(str, 0)];
@@ -292,7 +281,7 @@ export const trackOpen = function trackOpen(arg0) {
       }
       tmp6 = type;
     }
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { source: null, current_guild_id: null, current_channel_id: null, current_channel_type: null };
     obj[0] = arg0;
     obj[1] = guildId;
@@ -305,7 +294,7 @@ export { trackClose };
 export { show };
 export const hide = function hide() {
   trackClose(constants.QUICKSWITCHER_CLOSED);
-  dispatcher.dispatch({ type: "QUICKSWITCHER_HIDE" });
+  dispatcherDefault.dispatch({ type: "QUICKSWITCHER_HIDE" });
 };
 export const toggle = function toggle() {
   let str = arg0;
@@ -314,14 +303,14 @@ export const toggle = function toggle() {
   }
   if (closure_11.isOpen()) {
     trackClose(constants.QUICKSWITCHER_CLOSED);
-    dispatcher.dispatch({ type: "QUICKSWITCHER_HIDE" });
-    const obj = dispatcher;
+    dispatcherDefault.dispatch({ type: "QUICKSWITCHER_HIDE" });
+    const obj = dispatcherDefault;
   } else {
     show(str);
   }
 };
 export const search = function search(str) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   let tmp = dependencyMap[str.charAt(str, 0)];
   if (tmp == null) {
     tmp = null;
@@ -334,19 +323,16 @@ export const search = function search(str) {
   obj.dispatch(obj);
 };
 export const selectResult = function selectResult(selectedIndex) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "QUICKSWITCHER_SELECT", selectedIndex };
   obj.dispatch(obj);
 };
 export const switchToResult = function switchToResult(record) {
-  let QUICK_SWITCHER;
-  let QUICK_SWITCHER2;
-  let type;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj.dispatch({ type: "QUICKSWITCHER_HIDE" });
   trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, record);
   ({ type, record } = record);
@@ -359,7 +345,7 @@ export const switchToResult = function switchToResult(record) {
     if (null != channel) {
       tmp5Result = tmp5(4768);
       obj = { state: null, navigationReplace: true };
-      const obj1 = { analyticsSource: null };
+      obj1 = { analyticsSource: null };
       obj1[0] = obj;
       obj[0] = obj1;
       tmp5Result.transitionToChannel(channel.id, obj);
@@ -440,5 +426,5 @@ export const switchToResult = function switchToResult(record) {
       }
     }
   }
-  dispatcher.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: record });
+  dispatcherDefault.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: record });
 };

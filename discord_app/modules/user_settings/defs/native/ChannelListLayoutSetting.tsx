@@ -1,8 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ChannelListLayoutSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ChannelListLayoutTypes } from "../../../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 function useChannelListLayoutPredicate() {
   return false;
@@ -12,8 +14,8 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.eY1X1e);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
-  useValue: require("explicitContentFromProto").ChannelListLayoutSetting.useSetting,
+  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
+  useValue: explicitContentFromProto.ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
     const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
     ChannelListLayoutSetting.updateSetting(arg0);
@@ -38,8 +40,8 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.eY1X1e);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
-  useValue: require("explicitContentFromProto").ChannelListLayoutSetting.useSetting,
+  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
+  useValue: explicitContentFromProto.ChannelListLayoutSetting.useSetting,
   onValueChange: function onChannelListLayoutValueChange(arg0) {
     const ChannelListLayoutSetting = explicitContentFromProto.ChannelListLayoutSetting;
     ChannelListLayoutSetting.updateSetting(arg0);
@@ -59,7 +61,7 @@ let obj = {
   },
   usePredicate: useChannelListLayoutPredicate
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/ChannelListLayoutSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChannelListLayoutSetting.tsx");
 
 export default radio;
 export { useChannelListLayoutPredicate };

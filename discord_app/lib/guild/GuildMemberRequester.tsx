@@ -1,5 +1,7 @@
 // discord_app/lib/guild/GuildMemberRequester.tsx
-import { apply } from "../../../_runtime/00012_apply.js";
+import set3 from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+
 class GuildMemberRequestState {
   constructor(arg0, arg1) {
     closure_0 = global;
@@ -79,7 +81,7 @@ prototype["request"] = function request(arg0) {
   }
   return false;
 };
-const result = require("set").fileFinishedImporting("lib/guild/GuildMemberRequester.tsx");
+const result = set3.fileFinishedImporting("lib/guild/GuildMemberRequester.tsx");
 class GuildMemberRequester {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -109,7 +111,7 @@ prototype2["acknowledge"] = function acknowledge(_guildId) {
 };
 prototype2["flushRequests"] = function flushRequests() {
   const self = this;
-  const item = apply.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
+  const item = applyDefault.forEach(this._guildStates, (flushRequests) => flushRequests.flushRequests(self._onChange));
 };
 prototype2["requestUnacknowledged"] = function requestUnacknowledged() {
   if (arr.reduce(this._guildStates, (arg0, requestUnacknowledged) => false !== requestUnacknowledged.requestUnacknowledged() || arg0, false)) {
@@ -124,7 +126,7 @@ prototype2["_getGuildState"] = function _getGuildState(_guildId) {
     if (typeof GuildMemberRequestState !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let closure_0 = _guildId;
+    closure_0 = _guildId;
     const _guildMemberExists = self._guildMemberExists;
     const obj = Object.create(GuildMemberRequestState.prototype);
     const _Set = Set;
@@ -145,7 +147,7 @@ prototype2["_getGuildState"] = function _getGuildState(_guildId) {
   return tmp;
 };
 prototype2["getDebugState"] = function getDebugState(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const pendingRequestGuildIds = [];
   const unacknowledgedRequestGuildIds = [];
   const sentRequestGuildIds = [];

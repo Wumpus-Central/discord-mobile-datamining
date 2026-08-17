@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/pip/VoicePanelPIPStateContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 const context = importAllResult.createContext({ id: "dispatch", mode: "isArray", width: false, height: "money_mouth", containerHeight: "money_mouth_face", showSecondaryPIP: "none" });

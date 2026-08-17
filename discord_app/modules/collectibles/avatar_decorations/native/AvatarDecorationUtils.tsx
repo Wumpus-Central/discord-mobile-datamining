@@ -1,10 +1,13 @@
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx
-import { DECORATION_TO_AVATAR_RATIO as closure_3 } from "DECORATION_TO_AVATAR_RATIO";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import set from "set" /* 2 */;
+import Button from "Button" /* 1297 */;
+import DECORATION_TO_AVATAR_RATIO from "DECORATION_TO_AVATAR_RATIO" /* 1436 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import { Button } from "../../../../design/void/native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 
-let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
+let closure_3 = DECORATION_TO_AVATAR_RATIO.DECORATION_TO_AVATAR_RATIO;
+let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx");
 
 export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvatarSize(NORMAL) {
   if (typeof NORMAL !== "number") {
@@ -15,7 +18,6 @@ export const getDecorationSizeForAvatarSize = function getDecorationSizeForAvata
   return result;
 };
 export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutForAvatarCutout(memo, arg1) {
-  let inset;
   const _require = arg1;
   let tmp = memo;
   if (null != memo) {
@@ -43,13 +45,8 @@ export const getDecorationCutoutForAvatarCutout = function getDecorationCutoutFo
   return tmp;
 };
 export const openAvatarDecorationActionSheet = function openAvatarDecorationActionSheet(arg0) {
-  let analyticsLocations;
-  let currentAvatarDecoration;
-  let guildId;
-  let isTryItOut;
-  let user;
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
-  ACTION_SHEET_HEIGHT_HALF.hideActionSheet();
-  const obj = ACTION_SHEET_HEIGHT_HALF;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(8368, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
+  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet();
+  const obj = ACTION_SHEET_HEIGHT_HALFDefault;
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(8368, dependencyMap.paths), "Edit Avatar Decoration", { user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations });
 };

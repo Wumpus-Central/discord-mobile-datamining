@@ -1,14 +1,15 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx
-import "noop";
-import { reset } from "usePremiumPlanPurchasedStore";
-import { PremiumTypes } from "GuildFeatures";
-import { jsx } from "jsxProd";
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useAlertStore from "useAlertStore" /* 4657 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import { reset } from "usePremiumPlanPurchasedStore" /* 7392 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("GuildFeatures").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPurchaseSuccess.tsx");
 
 export const presentBuyNitroPurchaseSuccess = function presentBuyNitroPurchaseSuccess(premiumTier) {
   let obj = useAlertStore;

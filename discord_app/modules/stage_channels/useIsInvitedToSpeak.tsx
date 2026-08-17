@@ -1,18 +1,19 @@
 // discord_app/modules/stage_channels/useIsInvitedToSpeak.tsx
-import fetchFingerprint from "fetchFingerprint";
-import handleConnectionOpen from "handleConnectionOpen";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useAudienceRequestToSpeakState } from "useAudienceRequestToSpeakState.tsx";
+import initialize from "initialize" /* 589 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 4981 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/useIsInvitedToSpeak.tsx");
 
 export default function useIsInvitedToSpeak() {
-  const items = [handleConnectionOpen];
+  const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => voiceChannelId.getVoiceChannelId());
   const obj = initialize;
-  const items1 = [fetchFingerprint];
+  const items1 = [closure_3];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => id.getId());
   const obj2 = initialize;
-  return useAudienceRequestToSpeakState(stateFromStores1, stateFromStores) === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+  return useAudienceRequestToSpeakStateDefault(stateFromStores1, stateFromStores) === useAudienceRequestToSpeakState.RequestToSpeakStates.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 };

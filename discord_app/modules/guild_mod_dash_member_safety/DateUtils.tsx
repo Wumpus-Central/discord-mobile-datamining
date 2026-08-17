@@ -1,6 +1,8 @@
 // discord_app/modules/guild_mod_dash_member_safety/DateUtils.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getTimestampString } from "../threads/getTimestampString.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getTimestampStringDefault from "getTimestampString" /* 5093 */;
+
 function getJoinedAtDateFormatter() {
   return { seconds: getSystemLocale.t["FsBhl/"], minutes: getSystemLocale.t["4d1mgT"], hours: getSystemLocale.t["2wkczD"], days: getSystemLocale.t["ocdS+f"], months: getSystemLocale.t["az14+h"], years: getSystemLocale.t["5Gk1ns"] };
 }
@@ -8,7 +10,7 @@ function getAccountAgeDateFormatter() {
   return { hours: getSystemLocale.t.JZP2Rs, days: getSystemLocale.t["3moSHc"], months: getSystemLocale.t["0Ddwr1"], years: getSystemLocale.t.cR7lcs };
 }
 const obj = { JOINED_AT: 0, [0]: "JOINED_AT", ACCOUNT_AGE: 1, [1]: "ACCOUNT_AGE" };
-const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_mod_dash_member_safety/DateUtils.tsx");
 
 export const ACCOUNT_AGE_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
 export const MEMBER_JOIN_DATE_TOOLTIP_CONFIG = { month: "short", day: "numeric", year: "numeric", hour: "numeric", minute: "2-digit" };
@@ -27,7 +29,7 @@ export const formatDateRelativeTime = function formatDateRelativeTime(arg0, arg1
   } else if (arg1 === tmp.ACCOUNT_AGE) {
     tmp2 = getAccountAgeDateFormatter;
   }
-  return getTimestampString(arg0, tmp2, false);
+  return getTimestampStringDefault(arg0, tmp2, false);
 };
 export const getJoinedAtTimestamp = function getJoinedAtTimestamp(joinedAt) {
   if (null != joinedAt) {

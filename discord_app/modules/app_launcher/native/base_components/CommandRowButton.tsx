@@ -1,11 +1,11 @@
 // discord_app/modules/app_launcher/native/base_components/CommandRowButton.tsx
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/CommandRowButton.tsx");
 
 export default function CommandRowIcon(hasOptions) {
   if (hasOptions.hasOptions) {
@@ -27,7 +27,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   const onExecuteCommand = command.onExecuteCommand;
   const tryExecuteCommand = command.tryExecuteCommand;
   const sectionName = command.sectionName;
-  let closure_5;
+  closure_5 = undefined;
   let commandContext;
   let callback;
   let options = command.options;
@@ -66,19 +66,19 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
-            outer1_5(true);
+            closure_0 = tmp3;
+            closure_1_5(true);
             if (dependencyMap != null) {
               dependencyMap();
             }
-            let c3 = 1;
-            let obj1 = outer1_0(8447);
+            c3 = 1;
+            obj1 = closure_1_0(8447);
             obj1 = { command: null, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-            obj1[0] = outer1_0;
-            obj1[1] = outer1_0(11165).parseOptionValuesForSend(outer1_6.channel, outer1_0, {});
-            obj1[2] = outer1_6;
+            obj1[0] = closure_1_0;
+            obj1[1] = closure_1_0(11165).parseOptionValuesForSend(closure_1_6.channel, closure_1_0, {});
+            obj1[2] = closure_1_6;
             obj1[3] = c4;
-            obj1[4] = outer1_0(5248).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+            obj1[4] = closure_1_0(5248).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
             dependencyMap = 2;
             c4 = 1;
             const obj2 = { value: null, done: false };

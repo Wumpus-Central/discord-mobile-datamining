@@ -1,50 +1,34 @@
 // discord_app/modules/app_launcher/native/screens/command_view/CommandOptionView.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "maybeApplyNoTextColorForLightCustomTheme";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { AppLauncherCommandOption } from "../../options/AppLauncherCommandOption.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import AppLauncherCommandOptionDefault from "AppLauncherCommandOption" /* 11341 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 2 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let items = [require("PermissionOverwriteType").ApplicationCommandOptionType.STRING, require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER, require("PermissionOverwriteType").ApplicationCommandOptionType.ATTACHMENT, require("PermissionOverwriteType").ApplicationCommandOptionType.BOOLEAN, require("PermissionOverwriteType").ApplicationCommandOptionType.MENTIONABLE, require("PermissionOverwriteType").ApplicationCommandOptionType.USER, require("PermissionOverwriteType").ApplicationCommandOptionType.ROLE, require("PermissionOverwriteType").ApplicationCommandOptionType.CHANNEL, require("PermissionOverwriteType").ApplicationCommandOptionType.NUMBER];
 let set = new Set(items);
 createCacheKey = { optionDescription: { marginTop: 4 }, optionErrorContainer: { flexDirection: "row", alignItems: "center", marginTop: 4 }, optionErrorIcon: null, labelText: null };
-createCacheKey = { marginRight: 4, tintColor: require("Themes").colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" };
+createCacheKey = { marginRight: 4, tintColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, alignItems: "center" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginBottom: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let items1 = [require("PermissionOverwriteType").ApplicationCommandOptionType.STRING, require("PermissionOverwriteType").ApplicationCommandOptionType.INTEGER, require("PermissionOverwriteType").ApplicationCommandOptionType.NUMBER];
 const result = set.fileFinishedImporting("modules/app_launcher/native/screens/command_view/CommandOptionView.tsx");
 
 export default function CommandOptionView(option) {
-  let View;
-  let autoFocusType;
-  let channel;
-  let maybeApplyNoTextColorForLightCustomTheme;
-  let command;
-  let dependencyMap;
-  let editedOptions;
-  let importDefault;
-  let isPreSelectedOption;
-  let onDismiss;
-  let onEndEditing;
-  let onOptionValueChange;
-  let onStartEditing;
-  let optionValidationResults;
-  let optionValues;
-  let style;
   option = option.option;
-  ({ editedOptions, onOptionViewLayout: importDefault, onPressOption: dependencyMap, onPressAttachmentOption: View, optionValidationResults, setFocusedOption: maybeApplyNoTextColorForLightCustomTheme } = option);
+  ({ editedOptions, onOptionViewLayout: importDefault, onPressOption: dependencyMap, onPressAttachmentOption: View, optionValidationResults, setFocusedOption: closure_4 } = option);
   ({ style, autoFocusType, onDismiss, onStartEditing, onEndEditing, onOptionValueChange, channel, command, optionValues, isPreSelectedOption } = option);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = option(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => lib.useReducedMotion);
   const ReduceMotion = option(4115).ReduceMotion;
   const tmp5 = stateFromStores ? ReduceMotion.Always : ReduceMotion.Never;
@@ -57,13 +41,13 @@ export default function CommandOptionView(option) {
     const FadeOut = tmp2(4115).FadeOut;
     const FadeInUp = tmp2(4115).FadeInUp;
     obj = { transform: null };
-    const items1 = [{ translateY: -10 }];
+    items1 = [{ translateY: -10 }];
     obj[0] = items1;
     const reduceMotionResult = FadeOut.reduceMotion(tmp5);
     const withInitialValuesResult = FadeInUp.withInitialValues(obj);
     let hasItem = editedOptions.has(option.name);
     if (hasItem) {
-      let error;
+      error = undefined;
       if (optionValidationResults[option.name] != null) {
         error = tmp12.error;
       }
@@ -72,7 +56,7 @@ export default function CommandOptionView(option) {
     const hasItem1 = items1.includes(option.type);
     obj = { skipEntering: null, children: null };
     obj[0] = option.required || isPreSelectedOption;
-    const obj1 = { handleQueuedCallback: null, children: null };
+    obj1 = { handleQueuedCallback: null, children: null };
     obj1[0] = fn;
     const obj2 = { collapsable: false, entering: null, exiting: null, layout: null, onLayout: null, children: null };
     obj2[1] = optionEnteringAnimation.EnteringAnimation;
@@ -111,7 +95,7 @@ export default function CommandOptionView(option) {
     obj5[10] = command;
     obj5[11] = optionValues;
     obj5[12] = hasItem;
-    items2[1] = closure_5(AppLauncherCommandOption, obj5);
+    items2[1] = closure_5(AppLauncherCommandOptionDefault, obj5);
     const obj6 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
     obj6[0] = tmp.optionDescription;
     obj6[3] = option.displayDescription;
@@ -135,7 +119,7 @@ export default function CommandOptionView(option) {
     items2[3] = hasItem;
     obj3[2] = items2;
     obj2[5] = closure_6(View, obj3);
-    obj1[1] = closure_5(ReanimatedRexport.View, obj2);
+    obj1[1] = closure_5(_modDef4115.View, obj2);
     obj[1] = closure_5(tmp2(11340).AwaitAnimationContext, obj1);
     return closure_5(tmp2(4115).LayoutAnimationConfig, obj);
   } else {

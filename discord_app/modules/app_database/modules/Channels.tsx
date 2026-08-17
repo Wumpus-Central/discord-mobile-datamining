@@ -1,13 +1,15 @@
 // discord_app/modules/app_database/modules/Channels.tsx
-import { createChannelRecordFromServer as closure_2 } from "createChannelRecord";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
+import set from "set" /* 2 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
 
 let obj = importDefault;
+let closure_2 = createChannelRecord.createChannelRecordFromServer;
 class Channels {
   constructor() {
     obj = Object.create(new.target.prototype);
-    Channels = obj;
+    closure_0 = obj;
     obj.privateChannels = [];
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
@@ -46,14 +48,14 @@ class Channels {
 }
 const prototype = Channels.prototype;
 prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const self = this;
   function _loop(iter) {
-    let closure_0 = iter;
+    closure_0 = iter;
     const data_mode = iter.data_mode;
     if ("unavailable" !== data_mode) {
       function asRecord(arg0) {
-        return outer1_2(arg0, iter.id);
+        return closure_1_2(arg0, iter.id);
       }
       if ("partial" === data_mode) {
         const channels = iter.partial_updates.channels;
@@ -64,7 +66,7 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(arg0, arg1) {
         if (mapped == null) {
           mapped = [];
         }
-        let obj = { op: "update", writes: null, deletes: null };
+        obj = { op: "update", writes: null, deletes: null };
         obj[1] = mapped;
         let deleted_channel_ids = iter.partial_updates.deleted_channel_ids;
         if (deleted_channel_ids == null) {
@@ -212,6 +214,6 @@ obj.actions = {
     return obj.handleGuildDelete(arg0, arg1);
   }
 };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/app_database/modules/Channels.tsx");
+let result = set.fileFinishedImporting("modules/app_database/modules/Channels.tsx");
 
 export default obj;

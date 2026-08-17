@@ -1,8 +1,10 @@
 // discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx
-import { AccessibilityInfo } from "get ActivityIndicator";
-import { updateAccessibilityAnnouncerLiveRegionMessage } from "AccessibilityAnnouncerLiveRegion.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import updateAccessibilityAnnouncerLiveRegionMessage from "updateAccessibilityAnnouncerLiveRegionMessage" /* 1352 */;
 
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx");
+const AccessibilityInfo = get_ActivityIndicator.AccessibilityInfo;
+let result = set.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx");
 
 export const AccessibilityAnnouncer = {
   announce(intl, polite) {

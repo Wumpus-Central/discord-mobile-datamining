@@ -1,5 +1,7 @@
 // discord_app/modules/messages/native/renderer/sanitizeMediaDimension.tsx
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/renderer/sanitizeMediaDimension.tsx");
 
 export const sanitizeMediaDimension = function sanitizeMediaDimension(height) {
   if (typeof height !== "number") {

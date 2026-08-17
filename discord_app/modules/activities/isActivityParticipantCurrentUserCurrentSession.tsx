@@ -1,12 +1,12 @@
 // discord_app/modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx
-import fetchFingerprint from "fetchFingerprint";
+import closure_0 from "fetchFingerprint" /* 1218 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantCurrentUserCurrentSession.tsx");
 
 export const isActivityParticipantCurrentUserCurrentSession = function isActivityParticipantCurrentUserCurrentSession(userId) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = fetchFingerprint;
+    obj = closure_0;
   }
   const id = obj.getId();
   let tmp3 = userId.userId === id;

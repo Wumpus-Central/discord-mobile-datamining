@@ -1,7 +1,13 @@
 // discord_common/js/packages/libdave/package/src/index.ts
-const result = require("_generateKeyFingerprint").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");
+import set from "set" /* 2 */;
+import generateDisplayableCode from "generateDisplayableCode" /* 9695 */;
+import _generateKeyFingerprint from "_generateKeyFingerprint" /* 9696 */;
+import compareArrays from "compareArrays" /* 9697 */;
+import serializeKey from "serializeKey" /* 9706 */;
 
-export const generateDisplayableCode = require("generateDisplayableCode").generateDisplayableCode;
-export const generateKeyFingerprint = require("_generateKeyFingerprint").generateKeyFingerprint;
-export const generatePairwiseFingerprint = require("compareArrays").generatePairwiseFingerprint;
-export const serializeKey = require("serializeKey").serializeKey;
+const result = set.fileFinishedImporting("../discord_common/js/packages/libdave/package/src/index.ts");
+
+export const generateDisplayableCode = generateDisplayableCode.generateDisplayableCode;
+export const generateKeyFingerprint = _generateKeyFingerprint.generateKeyFingerprint;
+export const generatePairwiseFingerprint = compareArrays.generatePairwiseFingerprint;
+export const serializeKey = serializeKey.serializeKey;

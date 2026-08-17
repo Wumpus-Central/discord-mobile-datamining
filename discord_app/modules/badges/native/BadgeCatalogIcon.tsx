@@ -1,22 +1,18 @@
 // discord_app/modules/badges/native/BadgeCatalogIcon.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 const re7 = /\.svg(?:[?#]|$)/i;
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/badges/native/BadgeCatalogIcon.tsx");
 
 export default function BadgeCatalogIcon(style) {
-  let badge;
-  let c2;
-  let size;
-  let tmp4;
   ({ badge, size } = style);
   let complex_icon_animated_url;
   let isMatch;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   complex_icon_animated_url = badge.simple_icon_url;
   if (complex_icon_animated_url == null) {
@@ -46,7 +42,7 @@ export default function BadgeCatalogIcon(style) {
               const obj = { url: null, xml: null };
               obj[0] = abortController;
               obj[1] = arg0;
-              outer1_2(obj);
+              closure_1_2(obj);
             }
           }).catch(() => {
 
@@ -80,7 +76,7 @@ export default function BadgeCatalogIcon(style) {
     obj[0] = items1;
     let tmp15Result = null;
     if (null != xml) {
-      const obj1 = { xml: null, width: null, height: null };
+      obj1 = { xml: null, width: null, height: null };
       obj1[0] = xml;
       obj1[1] = size;
       obj1[2] = size;

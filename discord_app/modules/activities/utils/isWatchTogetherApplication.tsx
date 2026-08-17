@@ -1,11 +1,9 @@
 // discord_app/modules/activities/utils/isWatchTogetherApplication.tsx
-import items3 from "items3";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
 
-let c0;
-let closure_1;
-let obj1;
 ({ WATCH_YOUTUBE_DEV_APP_ID: c0, WATCH_YOUTUBE_PROD_APP_ID: closure_1, WATCH_YOUTUBE_QA_APP_ID: obj1 } = items3);
-const result = require("set").fileFinishedImporting("modules/activities/utils/isWatchTogetherApplication.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/isWatchTogetherApplication.tsx");
 
 export default function isWatchTogetherApplication(arg0) {
   let hasItem = null != arg0;

@@ -1,42 +1,39 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx
-import registerAsset from "registerAsset";
-import { View } from "openCreateOrEditGuildEventModal";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import scheduledEventSort from "scheduledEventSort";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "scheduledEventSort" /* 4370 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 }, active: null, actions: null, secondarySmallButton: null, secondarySmallIcon: null };
-createCacheKey = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_SELECTED, borderRadius: require("Themes").radii.xs };
+createCacheKey = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignItems: "center", flexDirection: "row", flexShrink: 0 };
-createCacheKey[4] = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: require("Themes").radii.xs };
-let obj1 = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: require("Themes").radii.xs };
-createCacheKey[5] = { tintColor: require("Themes").colors.TEXT_STRONG };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { tintColor: require("Themes").colors.TEXT_STRONG };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx");
+createCacheKey[4] = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: ThemesDefault.radii.xs };
+let obj1 = { flexShrink: 0, alignItems: "center", flexDirection: "row", padding: 8, marginLeft: 8, borderRadius: ThemesDefault.radii.xs };
+createCacheKey[5] = { tintColor: ThemesDefault.colors.TEXT_STRONG };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { tintColor: ThemesDefault.colors.TEXT_STRONG };
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrence.tsx");
 
 export default function GuildEventRecurrence(recurrenceId) {
-  let dependencyMap;
-  let isActive;
   recurrenceId = recurrenceId.recurrenceId;
   const guildEventId = recurrenceId.guildEventId;
   ({ onPress: dependencyMap, isActive } = recurrenceId);
   let stateFromStores;
   let stateFromStores1;
-  let ensureGuildLoaded;
-  let c6;
-  let c7;
-  const tmp = createCacheKey();
+  closure_5 = undefined;
+  c6 = undefined;
+  closure_7 = undefined;
+  const tmp = callback2();
   let obj = recurrenceId(589);
-  const items = [c7];
-  stateFromStores = obj.useStateFromStores(items, () => _undefined2.getGuildScheduledEvent(guildEventId));
+  const items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => guildScheduledEvent.getGuildScheduledEvent(guildEventId));
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -52,7 +49,7 @@ export default function GuildEventRecurrence(recurrenceId) {
     return _undefined.getGuild(guild_id);
   });
   tmp2Result = tmp2(589);
-  const items2 = [ensureGuildLoaded];
+  const items2 = [closure_5];
   let stateFromStores2 = tmp2Result.useStateFromStores(items2, () => {
     let channel_id;
     if (stateFromStores != null) {
@@ -65,7 +62,7 @@ export default function GuildEventRecurrence(recurrenceId) {
   if (stateFromStores2 == null) {
     stateFromStores2 = stateFromStores1;
   }
-  ensureGuildLoaded = recurrenceId(8839).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
+  closure_5 = recurrenceId(8839).useManageResourcePermissions(stateFromStores2).canManageGuildEvent(stateFromStores);
   const tmp2Result1 = recurrenceId(8839);
   const eventScheduleById = recurrenceId(8791).useEventScheduleById(guildEventId, recurrenceId);
   let toISOStringResult;
@@ -78,8 +75,8 @@ export default function GuildEventRecurrence(recurrenceId) {
   const memo = stateFromStores.useMemo(() => {
     let eventTimeData = null;
     if (null != c6) {
-      eventTimeData = recurrenceId(outer1_2[12]).getEventTimeData(tmp);
-      const obj = recurrenceId(outer1_2[12]);
+      eventTimeData = recurrenceId(closure_1_2[12]).getEventTimeData(tmp);
+      const obj = recurrenceId(closure_1_2[12]);
     }
     return eventTimeData;
   }, items3);
@@ -91,7 +88,7 @@ export default function GuildEventRecurrence(recurrenceId) {
     }
     const is_canceled = obj.is_canceled;
     let tmp21Result = undefined !== is_canceled && is_canceled;
-    c7 = tmp21Result;
+    closure_7 = tmp21Result;
     let str2 = "";
     if (tmp21Result) {
       const intl = tmp2(1236).intl;
@@ -113,11 +110,11 @@ export default function GuildEventRecurrence(recurrenceId) {
     obj = { style: null, children: null };
     items4[1] = active;
     obj[0] = items4;
-    const obj1 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+    obj1 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
     obj1[2] = sum1;
     obj1[3] = function onPress(stopPropagation) {
       stopPropagation.stopPropagation();
-      if (!c7) {
+      if (!closure_7) {
         if (closure_2 != null) {
           tmp2(recurrenceId);
         }
@@ -147,8 +144,8 @@ export default function GuildEventRecurrence(recurrenceId) {
       if (null != stateFromStores) {
         stopPropagation.stopPropagation();
         if (null != stateFromStores1) {
-          const result = recurrenceId(outer1_2[17]).showGuildEventModeratorActionSheet(tmp, ensureGuildLoaded, recurrenceId);
-          const obj = recurrenceId(outer1_2[17]);
+          const result = recurrenceId(closure_1_2[17]).showGuildEventModeratorActionSheet(tmp, closure_5, recurrenceId);
+          const obj = recurrenceId(closure_1_2[17]);
         }
       }
     };

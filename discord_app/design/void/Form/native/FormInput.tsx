@@ -1,30 +1,18 @@
 // discord_app/design/void/Form/native/FormInput.tsx
-import importAllResult from "noop";
-import { KeyboardThemes } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { KeyboardThemes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let obj = { inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 }, placeholderText: null, inputText: null };
-obj = { color: require("Themes").colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
-createCacheKey = { color: require("Themes").colors.TEXT_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 obj[2] = createCacheKey;
 let closure_5 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
-  let autoCapitalize;
-  let autoCorrect;
-  let clearButtonVisibility;
-  let error;
-  let inputTextStyle;
-  let keyboardAppearance;
-  let keyboardType;
-  let onChange;
-  let placeholder;
-  let showBorder;
-  let style;
-  let title;
-  let value;
   ({ onChange, keyboardAppearance, value, title } = helpText);
   ({ keyboardType, style, inputTextStyle } = helpText);
   if (title === undefined) {
@@ -203,7 +191,7 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
         const tmp18 = value;
       }
     } else {
-      const obj1 = { ref: null, inputTextColor: null, multiline: null, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
+      obj1 = { ref: null, inputTextColor: null, multiline: null, returnKeyType: null, onChangeText: null, keyboardAppearance: null, keyboardType: null, placeholderTextColor: null, title: null, helpText: null, error: null, placeholder: null, secureTextEntry: null, disabled: null, autoFocus: null, numberOfLines: null, autoCapitalize: null, autoCorrect: null, showBorder: null, showCharactersRemaining: null, style: null, inputTextStyle: null, value: null, clearButtonVisibility: null };
       obj1[0] = ref1;
       obj1[1] = color.inputText.color;
       obj1[2] = flag3;
@@ -256,6 +244,6 @@ const forwardRefResult = importAllResult.forwardRef((helpText, ref) => {
     const TextAreaResult2 = TextArea(obj[7]);
   }
 });
-const result = require("jsxProd").fileFinishedImporting("design/void/Form/native/FormInput.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormInput.tsx");
 
 export default forwardRefResult;

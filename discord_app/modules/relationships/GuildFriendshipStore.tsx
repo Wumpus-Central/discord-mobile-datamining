@@ -1,13 +1,15 @@
 // discord_app/modules/relationships/GuildFriendshipStore.tsx
-import { Store } from "initialize";
-import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
 
 function resetStates() {
-  let closure_3 = {};
+  closure_3 = {};
 }
 let closure_2 = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED" };
 let closure_3 = {};
 let c4 = 0;
+const Store = initializeDefault.Store;
 class GuildFriendshipStore extends Store {
 }
 const prototype = GuildFriendshipStore.prototype;
@@ -33,11 +35,11 @@ prototype["fetchFriendMembersIfNotFetched"] = function fetchFriendMembersIfNotFe
     const obj = { fetchState: null, foundMembers: 0, notFoundMembers: 0 };
     obj[0] = tmp4.FETCHING;
     dependencyMap[id1] = obj;
-    const membersById = showTooManyUserGuildsAlert.requestMembersById(id1, items, false);
-    const obj2 = showTooManyUserGuildsAlert;
+    const membersById = showTooManyUserGuildsAlertDefault.requestMembersById(id1, items, false);
+    const obj2 = showTooManyUserGuildsAlertDefault;
   }
 };
-const guildFriendshipStore = new GuildFriendshipStore(require("dispatcher"), {
+const guildFriendshipStore = new GuildFriendshipStore(dispatcherDefault, {
   CONNECTION_OPEN: resetStates,
   LOGOUT: resetStates,
   RELATIONSHIP_ADD: resetStates,
@@ -69,6 +71,6 @@ const guildFriendshipStore = new GuildFriendshipStore(require("dispatcher"), {
     }
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/relationships/GuildFriendshipStore.tsx");
+const result = require("set").fileFinishedImporting("modules/relationships/GuildFriendshipStore.tsx");
 
 export default guildFriendshipStore;

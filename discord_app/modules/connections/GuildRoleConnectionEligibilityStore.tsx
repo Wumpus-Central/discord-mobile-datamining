@@ -1,7 +1,9 @@
 // discord_app/modules/connections/GuildRoleConnectionEligibilityStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 const map = new Map();
+const Store = initializeDefault.Store;
 class GuildRoleConnectionEligibilityStore extends Store {
 }
 GuildRoleConnectionEligibilityStore.prototype["getGuildRoleConnectionEligibility"] = function getGuildRoleConnectionEligibility(roleId) {
@@ -12,7 +14,7 @@ GuildRoleConnectionEligibilityStore.prototype["getGuildRoleConnectionEligibility
   return value;
 };
 GuildRoleConnectionEligibilityStore.displayName = "GuildRoleConnectionEligibilityStore";
-const guildRoleConnectionEligibilityStore = new GuildRoleConnectionEligibilityStore(require("dispatcher"), {
+const guildRoleConnectionEligibilityStore = new GuildRoleConnectionEligibilityStore(dispatcherDefault, {
   GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: function handleFetchSuccess(roleId) {
     const result = map.set(roleId.roleId, roleId.roleConnectionEligibility);
   }

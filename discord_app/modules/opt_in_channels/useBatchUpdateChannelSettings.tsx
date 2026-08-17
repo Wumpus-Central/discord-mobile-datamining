@@ -1,25 +1,25 @@
 // discord_app/modules/opt_in_channels/useBatchUpdateChannelSettings.tsx
-import noop from "noop";
-import incrementVersion from "incrementVersion";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { AnalyticsSections } from "ME";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "incrementVersion" /* 5270 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { AnalyticsSections } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/opt_in_channels/useBatchUpdateChannelSettings.tsx");
+let result = require("set").fileFinishedImporting("modules/opt_in_channels/useBatchUpdateChannelSettings.tsx");
 
 export default function useBatchUpdateChannelSettings(arg0) {
   const _require = arg0;
   let obj = _initialize;
-  let items = [updateUserGuildSettingsInternal];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getPendingChannelUpdates(closure_0));
+  let items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getPendingChannelUpdates(closure_0));
   let items1 = [arg0];
   const effect = React.useEffect(() => {
-    let obj = stateFromStores(outer1_2[4]);
+    let obj = stateFromStores(closure_1_2[4]);
     obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
     obj.dispatch(obj);
     return () => {
-      let obj = outer1_1(outer1_2[4]);
+      let obj = closure_1_1(closure_1_2[4]);
       obj = { type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: closure_0 };
       obj.dispatch(obj);
     };
@@ -27,8 +27,8 @@ export default function useBatchUpdateChannelSettings(arg0) {
   const items2 = [arg0, stateFromStores];
   const effect1 = React.useEffect(() => {
     if (null != stateFromStores) {
-      const result = callback(outer1_2[6]).updateOptInChannelsBatched(callback, tmp);
-      const obj = callback(outer1_2[6]);
+      const result = callback(closure_1_2[6]).updateOptInChannelsBatched(callback, tmp);
+      const obj = callback(closure_1_2[6]);
     }
   }, items2);
   obj = {
@@ -45,7 +45,7 @@ export default function useBatchUpdateChannelSettings(arg0) {
         let obj = callback(10750);
         obj.categoryExpand(id);
       }
-      let obj1 = callback(10747);
+      obj1 = callback(10747);
       if (obj1.hasNotSetUpChannelOptIn(closure_0)) {
         if (id === id) {
           let tmp8Result = tmp8(10747);

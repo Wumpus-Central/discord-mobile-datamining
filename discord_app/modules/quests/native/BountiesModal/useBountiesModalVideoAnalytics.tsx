@@ -1,11 +1,11 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx
-import noop from "noop";
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import { AnalyticEvents } from "ME";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionInfoChange" /* 4564 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 let closure_6 = [25, 50, 75];
-let result = require("ME").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesModalVideoAnalytics.tsx");
 
 export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnalytics(bountyId) {
   bountyId = bountyId.bountyId;
@@ -41,18 +41,18 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }
   let questImpressionId;
   let memo;
-  let closure_11;
-  let closure_12;
-  let closure_13;
-  let closure_14;
-  let closure_15;
-  let closure_16;
-  let closure_17;
-  let closure_18;
-  let closure_19;
-  let closure_20;
-  let closure_21;
-  let closure_22;
+  closure_11 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
+  closure_14 = undefined;
+  closure_15 = undefined;
+  closure_16 = undefined;
+  closure_17 = undefined;
+  closure_18 = undefined;
+  closure_19 = undefined;
+  closure_20 = undefined;
+  closure_21 = undefined;
+  closure_22 = undefined;
   let callback;
   let memo1;
   let callback1;
@@ -129,9 +129,6 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   }, items1);
   const items2 = [bountyId, memo, questImpressionId, sourceQuestContent, rewardDurationMs];
   callback3 = obj2.useCallback((arg0) => {
-    let progress;
-    let thresholdMet;
-    let videoTimestampSeconds;
     ({ videoTimestampSeconds, progress, thresholdMet } = arg0);
     let obj = bountyId(rewardDurationMs[6]);
     obj = { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_PROGRESSED, properties: obj, sourceQuestContent };
@@ -282,9 +279,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
   const callback13 = obj2.useCallback((error) => {
     let obj = bountyId(rewardDurationMs[6]);
     obj = { adContentId: bountyId, adCreativeType: bountyId(rewardDurationMs[7]).AdCreativeType.BOUNTY, event: flag.AD_VIDEO_ERROR, properties: null, sourceQuestContent: null };
-    obj = { video_progress: null, video_error_type: null, network_connection_speed: null, video_session_id: null, video_error_code: null, video_error_message: null, video_network_state: null, impression_id: null, reward_timer_seconds: null };
-    obj[0] = bountyId(rewardDurationMs[5]).formatVideoProgressRatio(ref2.current, ref3.current);
-    obj[3] = memo;
+    obj = { video_progress: bountyId(rewardDurationMs[5]).formatVideoProgressRatio(ref2.current, ref3.current), video_error_type: null, network_connection_speed: null, video_session_id: memo, video_error_code: null, video_error_message: null, video_network_state: null, impression_id: null, reward_timer_seconds: null };
     let code;
     if (error != null) {
       code = error.error.code;
@@ -309,7 +304,7 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
     obj.trackAdContentEvent(obj);
     const obj4 = bountyId(rewardDurationMs[5]);
     if (tmpResult.isSourceError(error)) {
-      const obj1 = { name: null, tags: null };
+      obj1 = { name: null, tags: null };
       obj1[0] = tmp(tmp2[11]).MetricEvents.QUEST_VIDEO_ERROR;
       obj1[1] = ["error_type:SOURCE_ERROR"];
       sourceQuestContent(tmp2[10]).increment(obj1);
@@ -430,8 +425,6 @@ export const useBountiesModalVideoAnalytics = function useBountiesModalVideoAnal
       closure_22.current = { bitrateBps: null, width: null, height: null, levelIndex: null };
     }, items18),
     handleVideoTracksAnalytics: obj2.useCallback((arg0) => {
-      let selectedVideoTrackId;
-      let videoTracks;
       ({ videoTracks, selectedVideoTrackId } = arg0);
       if (0 === videoTracks.length) {
         let obj = { bitrateBps: null, width: null, height: null, levelIndex: null };

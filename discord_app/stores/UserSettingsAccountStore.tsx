@@ -1,21 +1,23 @@
 // discord_app/stores/UserSettingsAccountStore.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { FormStates } from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "mergeGuildAvatar" /* 1922 */;
+import { FormStates } from "ME" /* 676 */;
 
 function handleFormClose() {
-  const CLOSED = FormStates.CLOSED;
-  let c4 = null;
-  let closure_3 = {};
+  CLOSED = FormStates.CLOSED;
+  c4 = null;
+  closure_3 = {};
 }
 let CLOSED = FormStates.CLOSED;
 let closure_3 = {};
 let c4 = null;
+const Store = initializeDefault.Store;
 class UserSettingsAccountStore extends Store {
 }
 const prototype = UserSettingsAccountStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(mergeGuildAvatar);
+  this.waitFor(closure_0);
 };
 prototype["getErrors"] = function getErrors() {
   return closure_3;
@@ -27,13 +29,13 @@ prototype["getSettings"] = function getSettings() {
   return c4;
 };
 UserSettingsAccountStore.displayName = "UserSettingsAccountStore";
-const userSettingsAccountStore = new UserSettingsAccountStore(require("dispatcher"), {
+const userSettingsAccountStore = new UserSettingsAccountStore(dispatcherDefault, {
   USER_SETTINGS_MODAL_OPEN: function handleFormOpen() {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
       let OPEN = FormStates.CLOSED;
       let obj = null;
-      let closure_3 = {};
+      closure_3 = {};
     } else {
       OPEN = FormStates.OPEN;
       closure_3 = {};
@@ -49,7 +51,7 @@ const userSettingsAccountStore = new UserSettingsAccountStore(require("dispatche
     if (null == currentUser) {
       let OPEN = FormStates.CLOSED;
       let obj = null;
-      let closure_3 = {};
+      closure_3 = {};
     } else {
       OPEN = FormStates.OPEN;
       closure_3 = {};
@@ -86,12 +88,12 @@ const userSettingsAccountStore = new UserSettingsAccountStore(require("dispatche
   },
   USER_SETTINGS_MODAL_SUBMIT_COMPLETE: function handleFormSubmitComplete() {
     const OPEN = FormStates.OPEN;
-    let closure_3 = {};
+    closure_3 = {};
   },
   USER_SETTINGS_MODAL_RESET: function handleFormReset() {
     const currentUser = authStore.getCurrentUser();
     const OPEN = FormStates.OPEN;
-    let closure_3 = {};
+    closure_3 = {};
     if (null != currentUser) {
       let obj = { userId: null, username: null, discriminator: null, email: null, avatar: null, password: "", newPassword: null, claimed: null };
       ({ id: obj2[0], username: obj2[1], discriminator: obj2[2], email: obj2[3], avatar: obj2[4] } = currentUser);
@@ -101,6 +103,6 @@ const userSettingsAccountStore = new UserSettingsAccountStore(require("dispatche
     }
   }
 });
-const result = require("initialize").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
+const result = require("set").fileFinishedImporting("stores/UserSettingsAccountStore.tsx");
 
 export default userSettingsAccountStore;

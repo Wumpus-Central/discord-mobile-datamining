@@ -1,22 +1,21 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let closure_7 = createCacheKey.createStyles(() => ({ container: { width: 80, height: 80 } }));
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollIndicatorAnimation.tsx");
 
 export default function BountiesScrollIndicatorAnimation(startAnimation) {
-  let tmp6;
-  let tmp7;
   const visible = startAnimation.visible;
   let obj = map;
-  const token = obj.useToken(Themes.colors.TEXT_DEFAULT);
+  const token = obj.useToken(ThemesDefault.colors.TEXT_DEFAULT);
   const tmp = callback2();
   const tmp2 = require;
   [tmp6, tmp7] = callback(React.useState(0), 2);
@@ -27,7 +26,7 @@ export default function BountiesScrollIndicatorAnimation(startAnimation) {
       tmp7((arg0) => arg0 + 1);
     }
   }
-  obj = { style: tmp.container, children: jsx(tmp2(4104).BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: obj }, tmp6) };
+  obj = { style: tmp.container, children: jsx(ManaContext.BountiesScrollIndicatorRive, { stateMachine: "State Machine 1", fit: "contain", dataBinding: obj }, tmp6) };
   obj = { color: token, startAnimation: !startAnimation.isFadingInContent };
   return <View color={token} startAnimation={!arg0.isFadingInContent} />;
 };

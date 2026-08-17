@@ -1,18 +1,15 @@
 // discord_app/design/components/Sticky/native/StickyWrapper.native.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ StyleSheet, View: obj1 } = get_ActivityIndicator);
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 const styles = StyleSheet.create({ wrapper: { height: "100%", width: "100%" }, header: { zIndex: 1 }, androidHeader: { position: "absolute", top: 0, left: 0, right: 0 } });
-const result = require("jsxProd").fileFinishedImporting("design/components/Sticky/native/StickyWrapper.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sticky/native/StickyWrapper.native.tsx");
 
 export const StickyWrapper = function StickyWrapper(header) {
   header = header.header;

@@ -1,10 +1,10 @@
 // discord_app/design/void/ThumbnailImage/native/ThumbnailImage.tsx
-import "noop";
-import { Image as _default } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import set from "set";
-import set from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { Image as _default } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
 
+noopAll;
 if (set.isAndroid()) {
   _default = require("__INTERNAL_VIEW_CONFIG").default;
 }

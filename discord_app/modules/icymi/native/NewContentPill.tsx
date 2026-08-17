@@ -1,50 +1,48 @@
 // discord_app/modules/icymi/native/NewContentPill.tsx
-import _slicedToArray from "_slicedToArray";
-import Text from "Text";
-import get_ActivityIndicator from "PressableBase";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import filterStaffGuild from "filterStaffGuild";
-import jsxProd from "AccessibilityAnnouncer";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import SolidCutout from "SolidCutout" /* 8402 */;
+import SolidCutoutDefault from "SolidCutout" /* 8402 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "filterStaffGuild" /* 9044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-const require = arg1;
+require = arg1;
 function CutoutGuildIcon(guild) {
   let obj = { style: { width: 24, height: 24 }, children: null };
   obj = { cutouts: null, children: null };
   obj = { shape: null, x: 18, y: -4, width: 32, height: 32, cornerRadius: null };
-  const tmp = createCacheKey();
+  const tmp = callback2();
   obj[0] = SolidCutout.CutoutShape.RoundedRect;
-  obj[5] = Themes.radii.md;
+  obj[5] = ThemesDefault.radii.md;
   const items = [obj];
   obj[0] = items;
-  const obj1 = { guild: guild.guild, size: null, style: null };
-  const tmp2 = SolidCutout;
+  obj1 = { guild: guild.guild, size: null, style: null };
+  const tmp2 = SolidCutoutDefault;
   obj1[1] = GuildIconSizes.GuildIconSizes.XSMALL;
   obj1[2] = tmp.guildIconBG;
-  obj[1] = callback(GuildIconSizes, obj1);
+  obj[1] = callback(GuildIconSizesDefault, obj1);
   obj[1] = callback(tmp2, obj);
   return callback(closure_6, obj);
 }
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null, guildIconBG: null, refreshMorePillContainer: null };
-createCacheKey = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { alignSelf: "center", alignItems: "center", flexDirection: "row", paddingRight: 12, paddingLeft: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[2] = { position: "absolute", top: 0, left: 0, height: 32, width: "100%", zIndex: 100 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { overshootClamping: true, stiffness: 20, damping: 15, mass: 0.03 };
 let closure_14 = { code: "function NewContentPillTsx1(){const{withSpring,showingPill,springConfig}=this.__closure;return{transform:[{translateY:withSpring(showingPill?12:0,springConfig)}],opacity:withSpring(showingPill?1:0,springConfig,'respect-motion-settings')};}" };
 let closure_15 = { code: "function NewContentPillTsx2(){const{showingPill}=this.__closure;return{pointerEvents:showingPill?'box-none':'none'};}" };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const result = require("set").fileFinishedImporting("modules/icymi/native/NewContentPill.tsx");
 
 export default function NewContentPill(onPress) {
   onPress = onPress.onPress;
@@ -52,18 +50,18 @@ export default function NewContentPill(onPress) {
   let stateFromStoresArray;
   let stateFromStores;
   let first;
-  let closure_5;
-  let closure_6;
-  let createGuildRecordFromRust;
+  closure_5 = undefined;
+  closure_6 = undefined;
+  closure_7 = undefined;
   let first1;
   let isFocused;
   let first2;
-  let createCacheKey;
-  let tmp = createCacheKey();
+  let callback2;
+  let tmp = callback2();
   let obj = onPress(stateFromStoresArray[10]);
   let items = [first1];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => first1.getNewUnreadDehydratedItems());
-  let obj1 = onPress(stateFromStoresArray[10]);
+  obj1 = onPress(stateFromStoresArray[10]);
   const items1 = [first1];
   stateFromStores = obj1.useStateFromStores(items1, () => first1.hasNewContent(), []);
   let obj2 = first;
@@ -75,24 +73,24 @@ export default function NewContentPill(onPress) {
     const items = [];
     const item = first.forEach((data) => {
       let arr = items;
-      if (items.length < items(outer1_2[12]).MIN_ITEMS_FOR_NEW_PILL) {
-        const tmpResult = items(outer1_2[13]);
+      if (items.length < items(closure_1_2[12]).MIN_ITEMS_FOR_NEW_PILL) {
+        const tmpResult = items(closure_1_2[13]);
         if (tmp4) {
           arr = arr.push(data.data.guild_id);
         }
-        tmp4 = items(outer1_2[13]).isGuildItem(data) && !arr.includes(data.data.guild_id);
+        tmp4 = items(closure_1_2[13]).isGuildItem(data) && !arr.includes(data.data.guild_id);
       }
     });
     return items;
   }, items2);
   let obj3 = onPress(stateFromStoresArray[10]);
-  const items3 = [createGuildRecordFromRust];
+  const items3 = [closure_7];
   const stateFromStoresArray1 = obj3.useStateFromStoresArray(items3, () => {
     const mapped = closure_6.map((arg0) => guild.getGuild(arg0));
     return mapped.filter(Boolean);
   });
   const tmp11 = stateFromStores(first.useState(false), 2);
-  createGuildRecordFromRust = tmp11[1];
+  closure_7 = tmp11[1];
   first1 = stateFromStores;
   if (stateFromStores) {
     first1 = tmp11[0];
@@ -105,14 +103,14 @@ export default function NewContentPill(onPress) {
       num = 12;
     }
     obj = { transform: null, opacity: null };
-    obj = { translateY: obj.withSpring(num, outer1_12) };
+    obj = { translateY: obj.withSpring(num, closure_1_12) };
     const items = [obj];
     obj[0] = items;
     let num2 = 0;
     if (first1) {
       num2 = 1;
     }
-    obj[1] = onPress(stateFromStoresArray[15]).withSpring(num2, outer1_12, "respect-motion-settings");
+    obj[1] = onPress(stateFromStoresArray[15]).withSpring(num2, closure_1_12, "respect-motion-settings");
     return obj;
   };
   obj = { withSpring: tmp2(tmp3[15]).withSpring, showingPill: first1, springConfig: closure_12 };
@@ -124,7 +122,7 @@ export default function NewContentPill(onPress) {
   class C {
     constructor() {
       pointerEvents = "none";
-      if (c8) {
+      if (closure_8) {
         pointerEvents = "box-none";
       }
       return { pointerEvents };
@@ -139,7 +137,7 @@ export default function NewContentPill(onPress) {
   isFocused = onPress(stateFromStoresArray[16]).useIsFocused();
   const tmp6Result = tmp6(obj2.useState(false), 2);
   first2 = tmp6Result[0];
-  createCacheKey = tmp6Result[1];
+  callback2 = tmp6Result[1];
   const items4 = [stateFromStores, isFocused, first2];
   const layoutEffect = obj2.useLayoutEffect(() => {
     let tmp = first2;

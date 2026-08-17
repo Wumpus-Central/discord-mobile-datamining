@@ -1,21 +1,15 @@
 // discord_app/design/void/Form/native/FormRadioRow.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import { TableRadioRow } from "../../../components/TableRow/native/TableRadioRow.native.tsx";
-import { FormRow } from "FormRow.tsx";
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
+import _modDef6937 from "module_6937" /* 6937 */;
+import context2 from "context" /* 6939 */;
+import TableRadioRow from "TableRadioRow" /* 8100 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("context").fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormRadioRow.tsx");
 
 export default function FormRadioRow(arg0) {
-  let align;
-  let leading;
-  let onPress;
-  let selected;
-  let style;
-  let value;
   ({ selected, align } = arg0);
   if (align === undefined) {
     align = "left";
@@ -23,7 +17,7 @@ export default function FormRadioRow(arg0) {
   ({ leading, onPress } = arg0);
   ({ value, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  const context = React.useContext(context.RedesignCompatContext);
+  const context = React.useContext(context2.RedesignCompatContext);
   let obj = useCheckboxA11yNative;
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   if (context) {
@@ -43,7 +37,7 @@ export default function FormRadioRow(arg0) {
     obj.accessibilityState = tmp7;
     tmp8Result = null;
     if ("right" === align) {
-      const obj1 = { selected: null };
+      obj1 = { selected: null };
       obj1[0] = selected;
       tmp8Result = tmp8(tmp9(6943), obj1);
     }
@@ -55,8 +49,8 @@ export default function FormRadioRow(arg0) {
       tmp8Result1 = tmp8(tmp9(6943), obj2);
     }
     obj.leading = tmp8Result1;
-    tmp8Result = tmp8(FormRow, obj);
-    const tmp10 = FormRow;
+    tmp8Result = tmp8(_modDef6937, obj);
+    const tmp10 = _modDef6937;
   }
   return tmp8Result;
 };

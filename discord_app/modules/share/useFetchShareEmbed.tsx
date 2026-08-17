@@ -1,20 +1,18 @@
 // discord_app/modules/share/useFetchShareEmbed.tsx
-import batchUpdates from "batchUpdates";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
+const result = require("set").fileFinishedImporting("modules/share/useFetchShareEmbed.tsx");
 
 export default function useFetchShareEmbed(arg0) {
-  let dependencyMap;
-  let tmp3;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const embed = callback(React.useState(undefined), 2);
-  let closure_1 = embed[1];
+  closure_1 = embed[1];
   [tmp3, dependencyMap] = callback(React.useState(false), 2);
   const hasTriedResolving = callback(React.useState(false), 2);
-  let batchUpdates = hasTriedResolving[1];
+  closure_3 = hasTriedResolving[1];
   callback = React.useRef(true);
   React = React.useRef(undefined);
   let items = [arg0];
@@ -48,17 +46,17 @@ export default function useFetchShareEmbed(arg0) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp4;
-                let closure_0 = tmp8;
+                closure_1 = tmp4;
+                closure_0 = tmp8;
                 closure_0 = undefined;
-                if (null != outer1_0) {
-                  let c3 = 2;
-                  outer1_2(true);
-                  const items = [outer1_0];
+                if (null != closure_1_0) {
+                  c3 = 2;
+                  closure_1_2(true);
+                  const items = [closure_1_0];
                   c4 = 3;
                   c5 = 1;
-                  let obj1 = { value: null, done: false };
-                  obj1[0] = outer2_0(11055).unfurlEmbedUrl(items);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_2_0(11055).unfurlEmbedUrl(items);
                   return obj1;
                 } else {
                   c5 = 3;
@@ -67,13 +65,13 @@ export default function useFetchShareEmbed(arg0) {
             } else if (1 !== tmp8) {
               if (2 === tmp8) {
                 c3 = 1;
-                outer1_1(undefined);
+                closure_1_1(undefined);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
                 c3 = 0;
-                let obj3 = outer2_0(705);
+                let obj3 = closure_2_0(705);
                 obj3.batchUpdates(() => {
                   v0(true);
                   tmp48(false);
@@ -85,9 +83,9 @@ export default function useFetchShareEmbed(arg0) {
               } else {
                 closure_0 = arg1;
                 if (0 === closure_0.embeds.length) {
-                  outer1_1(undefined);
+                  closure_1_1(undefined);
                   c3 = 0;
-                  obj1 = outer2_0(705);
+                  obj1 = closure_2_0(705);
                   obj1.batchUpdates(() => {
                     v0(true);
                     tmp48(false);
@@ -100,19 +98,19 @@ export default function useFetchShareEmbed(arg0) {
                   obj = { embed: null, url: null };
                   obj[0] = closure_0.embeds[0];
                   obj[1] = closure_0;
-                  outer1_1(obj);
+                  closure_1_1(obj);
                   c3 = 1;
                 }
               }
               c3 = 0;
-              outer2_0(705).batchUpdates(() => {
+              closure_2_0(705).batchUpdates(() => {
                 v0(true);
                 tmp48(false);
               });
-              const obj6 = outer2_0(705);
+              const obj6 = closure_2_0(705);
             }
             c3 = 0;
-            outer2_0(705).batchUpdates(() => {
+            closure_2_0(705).batchUpdates(() => {
               v0(true);
               tmp48(false);
             });
@@ -130,7 +128,7 @@ export default function useFetchShareEmbed(arg0) {
           }
         }
       });
-      const _unfurl = tmp;
+      closure_2 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -141,7 +139,7 @@ export default function useFetchShareEmbed(arg0) {
     }
     if (null != closure_0) {
       if ("" !== str) {
-        const match = str.match(callback(outer1_2[3]).URL_REGEX);
+        const match = str.match(callback(closure_1_2[3]).URL_REGEX);
         let atResult;
         if (match != null) {
           atResult = match.at(0);

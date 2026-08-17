@@ -1,12 +1,12 @@
 // discord_app/design/components/AlertModal/native/useAlertStore.native.tsx
-import _slicedToArray from "_slicedToArray";
-import keys from "keys";
+import markAccessibilityFocusDefault from "markAccessibilityFocus" /* 4659 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import keys from "keys" /* 644 */;
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { markAccessibilityFocus } from "../../../../modules/a11y/native/markAccessibilityFocus.tsx";
 
 const require = arg1;
 keys = keys.create(() => ({ alerts: [] }));
-const result = require("batchUpdates").fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/AlertModal/native/useAlertStore.native.tsx");
 
 export const useAlertStore = keys;
 export const dismissAlerts = function dismissAlerts() {
@@ -24,7 +24,7 @@ export const dismissAlerts = function dismissAlerts() {
   const first = tmp[0];
   const arr4 = tmp[1];
   first(705).batchUpdates(() => {
-    outer1_4.setState({ alerts: arr4 });
+    closure_1_4.setState({ alerts: arr4 });
     const item = first.forEach((onDismiss) => {
       onDismiss = onDismiss.onDismiss;
       let onDismissResult;
@@ -53,7 +53,7 @@ export const dismissAlert = function dismissAlert(c6) {
       tmp2 = key === c6;
     }
     _batchUpdates.batchUpdates(() => {
-      outer1_4.setState((alerts) => {
+      closure_1_4.setState((alerts) => {
         alerts = alerts.alerts;
         return { alerts: alerts.filter((key) => key.key !== closure_0) };
       });
@@ -70,14 +70,14 @@ export const dismissAlert = function dismissAlert(c6) {
 };
 export const openAlert = function openAlert(DeleteEventAlert, arg1, onCloseCallback, arg3) {
   const _require = DeleteEventAlert;
-  const importDefault = arg1;
-  const dependencyMap = onCloseCallback;
-  let _slicedToArray = arg3;
+  importDefault = arg1;
+  dependencyMap = onCloseCallback;
+  closure_3 = arg3;
   if (0 === keys.getState().alerts.length) {
-    markAccessibilityFocus();
+    markAccessibilityFocusDefault();
   }
   _batchUpdates.batchUpdates(() => {
-    outer1_4.setState((alerts) => {
+    closure_1_4.setState((alerts) => {
       alerts = [...alerts.alerts];
       const obj = { key: closure_0, node: closure_1, onDismiss: closure_2, dismissable: null };
       let dismissable;

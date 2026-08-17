@@ -1,29 +1,17 @@
 // discord_app/modules/guild_invite/native/AdvancedInstantInvite.tsx
-import Themes from "Themes";
-import { View } from "TableRowIcon";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "TableRowInner";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flexGrow: 1 } });
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_invite/native/AdvancedInstantInvite.tsx");
 
 export default function AdvancedInstantInvite(maxAge) {
-  let canCreateApplicationBypassInvites;
-  let channel;
-  let closure_7;
-  let flags;
-  let guild;
-  let isManualApprovalGuild;
-  let onChangeTemporary;
-  let roleIds;
-  let style;
-  let temporary;
   ({ channel, guild } = maxAge);
   let maxUses = guild;
   maxAge = maxAge.maxAge;
@@ -35,7 +23,7 @@ export default function AdvancedInstantInvite(maxAge) {
   ({ onChangeFlags: closure_7, roleIds } = maxAge);
   const onChangeRoleIds = maxAge.onChangeRoleIds;
   let maxAgeOptions;
-  let c11;
+  closure_11 = undefined;
   ({ style, temporary } = maxAge);
   if (null != channel) {
     let obj = maxUses(onChangeMaxAge[6]);
@@ -43,7 +31,7 @@ export default function AdvancedInstantInvite(maxAge) {
   }
   let str = " ";
   if (null != channel) {
-    let obj1 = maxUses(onChangeMaxAge[7]);
+    obj1 = maxUses(onChangeMaxAge[7]);
     str = obj1.computeChannelName(channel, flags, onChangeMaxUses, true);
   }
   let obj2 = maxUses(onChangeMaxAge[8]);
@@ -61,7 +49,7 @@ export default function AdvancedInstantInvite(maxAge) {
     tmp17 = null;
   }
   const tmp16Result = maxAge(onChangeMaxAge[10])(tmp17);
-  c11 = tmp16Result;
+  closure_11 = tmp16Result;
   const items = [guild, tmp16Result, roleIds, onChangeRoleIds];
   const items1 = [maxAge, maxAgeOptions, onChangeMaxAge];
   const callback = maxUsesOptions.useCallback(() => {
@@ -72,7 +60,7 @@ export default function AdvancedInstantInvite(maxAge) {
     if (tmp) {
       let obj = maxAge(onChangeMaxAge[11]);
       obj = { assignableRoles: null, selectedRoleIds: null, onSave: null };
-      obj[0] = c11;
+      obj[0] = closure_11;
       obj[1] = roleIds;
       obj[2] = onChangeRoleIds;
       obj.openLazy(maxUses(onChangeMaxAge[13])(onChangeMaxAge[12], onChangeMaxAge.paths), "SelectInviteRolesActionSheet", obj, "stack");
@@ -107,7 +95,7 @@ export default function AdvancedInstantInvite(maxAge) {
     }
   }, items2);
   const memo = maxUsesOptions.useMemo(() => {
-    const set = new Set(_undefined.map((id) => id.id));
+    const set = new Set(closure_11.map((id) => id.id));
     return roleIds.filter((arg0) => set.has(arg0)).length;
   }, items3);
   if (0 !== memo) {
@@ -140,8 +128,7 @@ export default function AdvancedInstantInvite(maxAge) {
   }
   obj2 = { style: items4, children: null };
   items4 = [tmp.container, style];
-  obj3 = { spacing: null, children: null };
-  obj3[0] = maxAge(onChangeMaxAge[19]).space.PX_24;
+  obj3 = { spacing: tmp15(tmp12[19]).space.PX_24, children: null };
   const obj4 = { title: null, hasIcons: null, children: null };
   const intl2 = tmp11(tmp12[15]).intl;
   obj4[0] = intl2.string(maxUses(onChangeMaxAge[15]).t.LUo0Q8);

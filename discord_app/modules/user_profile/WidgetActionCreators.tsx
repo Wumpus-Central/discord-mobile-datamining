@@ -1,20 +1,20 @@
 // discord_app/modules/user_profile/WidgetActionCreators.tsx
-import convertClip from "convertClip";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/WidgetActionCreators.tsx");
 
 export default {
   setPendingWidgets(items) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "WIDGET_PENDING_SET", widgets: items };
     obj.dispatch(obj);
   },
   savePendingWidgets(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
       if (constants === 2) {
         constants = 3;
@@ -42,7 +42,7 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let id = tmp5;
               id = undefined;
               closure_1 = undefined;
@@ -52,12 +52,12 @@ export default {
                 id = currentUser.id;
               }
               if (null != id) {
-                let obj5 = outer1_1(outer1_2[3]);
+                let obj5 = closure_1_1(closure_1_2[3]);
                 obj5.dispatch({ type: "WIDGET_PENDING_SAVE_START" });
-                let c3 = 1;
-                const mapped = outer1_0.map((toSubmission) => toSubmission.toSubmission());
-                const HTTP = outer1_0(outer1_2[4]).HTTP;
-                const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
+                c3 = 1;
+                const mapped = closure_1_0.map((toSubmission) => toSubmission.toSubmission());
+                const HTTP = closure_1_0(closure_1_2[4]).HTTP;
+                obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
                 obj1[0] = constants.USER_PROFILE_WIDGETS;
                 const obj2 = { widgets: null };
                 obj2[0] = mapped;
@@ -74,7 +74,7 @@ export default {
             }
           } else if (1 === tmp8) {
             c3 = 0;
-            let obj4 = outer1_1(outer1_2[3]);
+            let obj4 = closure_1_1(closure_1_2[3]);
             obj4.dispatch({ type: "WIDGET_PENDING_SAVE_FAILURE" });
             throw closure_2;
           } else if (arg0 === 1) {
@@ -88,7 +88,7 @@ export default {
             return obj4;
           } else {
             closure_1 = arg1;
-            obj = outer1_1(outer1_2[3]);
+            obj = closure_1_1(closure_1_2[3]);
             obj5 = { type: "WIDGET_PENDING_SAVE_SUCCESS", userId: null, widgets: null };
             obj5[1] = id;
             obj5[2] = closure_1.body.widgets;
@@ -112,10 +112,10 @@ export default {
     })();
   },
   clearPendingWidgets() {
-    dispatcher.dispatch({ type: "WIDGET_PENDING_CLEAR" });
+    dispatcherDefault.dispatch({ type: "WIDGET_PENDING_CLEAR" });
   },
   uploadWidgetAsset(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
       if (c3 === 2) {
         c3 = 3;
@@ -149,12 +149,12 @@ export default {
               upload_url = undefined;
               table = undefined;
               c3 = undefined;
-              const HTTP = outer1_0(table[4]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: true };
-              obj1[0] = outer1_5.USER_PROFILE_WIDGET_ASSET_UPLOAD;
+              const HTTP = closure_1_0(table[4]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: true };
+              obj1[0] = closure_1_5.USER_PROFILE_WIDGET_ASSET_UPLOAD;
               const obj2 = { filename: null, file_size: null };
-              obj2[0] = outer1_0.name;
-              obj2[1] = outer1_0.size;
+              obj2[0] = closure_1_0.name;
+              obj2[1] = closure_1_0.size;
               obj1[1] = obj2;
               table = 1;
               c3 = 1;
@@ -208,7 +208,7 @@ export default {
             } else {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const error = new Error("Failed to upload widget asset: " + c3.status);
+              error = new Error("Failed to upload widget asset: " + c3.status);
               throw error;
             }
           }
@@ -220,9 +220,7 @@ export default {
     })();
   },
   uploadWidgetClip(arg0) {
-    let dependencyMap;
-    let importDefault;
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -230,21 +228,21 @@ export default {
     ({ onProgress: importDefault, signal: dependencyMap } = obj);
     return callback(function*() {
       let upload_url = tmp2;
-      const HTTP2 = outer1_0(530).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: true };
-      obj1[0] = outer1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
+      const HTTP2 = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: true };
+      obj1[0] = closure_1_5.USER_PROFILE_WIDGET_CLIP_UPLOAD;
       const obj2 = { file_size: null };
-      obj2[0] = outer1_0.size;
+      obj2[0] = closure_1_0.size;
       obj1[1] = obj2;
       yield HTTP2.post(obj1);
       const body = arg1.body;
       upload_url = body.upload_url;
-      const HTTP = outer1_0(530).HTTP;
+      const HTTP = closure_1_0(530).HTTP;
       const obj5 = { url: null, body: null, headers: null, onRequestProgress: null, signal: null, rejectWithError: true };
       obj5[0] = upload_url;
       obj5[1] = body;
       const obj6 = { "Content-Type": null };
-      obj6[0] = outer1_0(5374).WIDGET_CLIP_CONTENT_TYPE;
+      obj6[0] = closure_1_0(5374).WIDGET_CLIP_CONTENT_TYPE;
       obj5[2] = obj6;
       obj5[3] = function onRequestProgress(direction) {
         let tmp = "upload" === direction.direction;
@@ -290,13 +288,13 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let convertClip = tmp3;
-              const dependencyMap = tmp7;
-              let closure_0;
-              outer1_1(outer1_2[3]).dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
+              closure_0 = undefined;
+              closure_1_1(closure_1_2[3]).dispatch({ type: "WIDGET_SUGGESTED_FETCH_START" });
               let constants = 1;
-              const HTTP = outer1_0(outer1_2[4]).HTTP;
-              let obj1 = { url: null, rejectWithError: true };
+              const HTTP = closure_1_0(closure_1_2[4]).HTTP;
+              obj1 = { url: null, rejectWithError: true };
               obj1[0] = constants.USER_PROFILE_SUGGESTED_GAMES;
               c6 = 2;
               c7 = 1;
@@ -306,7 +304,7 @@ export default {
             }
           } else if (1 === tmp7) {
             constants = 0;
-            let callback = mergeGuildAvatar;
+            let callback = closure_4;
             let obj4 = callback(709);
             obj4.dispatch({ type: "WIDGET_SUGGESTED_FETCH_FAILURE" });
             callback(1208).captureException(callback);
@@ -368,7 +366,7 @@ export default {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp41) {
-          mergeGuildAvatar = tmp41;
+          closure_4 = tmp41;
           if (tmp4 === constants) {
             c7 = tmp2;
             throw tmp41;
@@ -380,7 +378,7 @@ export default {
     })();
   },
   removeGameFromSuggestedGames(applicationId) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "WIDGET_SUGGESTED_REMOVE_GAME", applicationId };
     obj.dispatch(obj);
   }

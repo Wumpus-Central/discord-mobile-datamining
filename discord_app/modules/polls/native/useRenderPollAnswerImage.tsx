@@ -1,26 +1,26 @@
 // discord_app/modules/polls/native/useRenderPollAnswerImage.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ActivityIndicator } from "get ActivityIndicator";
-import { DraftType } from "handleChanged";
-import map from "map";
-import { EMOJI_URL_BASE_SIZE } from "set";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_7 from "map" /* 4824 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { PollMediaUploadAttachmentStatus } from "../PollTypes.tsx";
 
 const require = arg1;
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/native/useRenderPollAnswerImage.tsx");
 
 export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentState) {
   const _require = arg0;
-  let closure_1 = arg1;
-  const dependencyMap = mediaAttachmentState;
+  closure_1 = arg1;
+  dependencyMap = mediaAttachmentState;
   const callback = arg3;
   const React = arg4;
   let obj = _initialize;
-  const items = [map];
-  const stateFromStores = obj.useStateFromStores(items, () => tmp7.getUpload(closure_0, closure_1, first.Poll));
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => upload.getUpload(closure_0, closure_1, first.Poll));
   const tmp4 = callback(React.useState(), 2);
   const first = tmp4[0];
   let status;
@@ -31,14 +31,14 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
     }
   }
   const tmp7 = status === _PollMediaUploadAttachmentStatus.PollMediaUploadAttachmentStatus.PREPARING;
-  map = tmp7;
+  closure_7 = tmp7;
   obj = {
     renderImage: React.useMemo(() => {
-      if (map) {
-        return outer1_9(stateFromStores, {});
+      if (closure_7) {
+        return closure_1_9(stateFromStores, {});
       } else if (null != stateFromStores) {
-        let tmp14 = _slicedToArray;
-        if (_slicedToArray == null) {
+        let tmp14 = closure_3;
+        if (closure_3 == null) {
           tmp14 = first;
         }
         let obj = { style: null, source: null };
@@ -46,10 +46,10 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
         obj[0] = tmp14;
         obj[1] = tmp14;
         obj[0] = obj;
-        const obj1 = { uri: null };
+        obj1 = { uri: null };
         obj1[0] = stateFromStores.item.uri;
         obj[1] = obj1;
-        return outer1_9(callback2(mediaAttachmentState[9]), obj);
+        return closure_1_9(callback2(mediaAttachmentState[9]), obj);
       } else {
         let emoji;
         if (mediaAttachmentState != null) {
@@ -59,11 +59,11 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
           emoji = tmp20.emoji;
           obj = { fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
           const obj2 = { width: null, height: null };
-          obj2[0] = noop;
-          obj2[1] = noop;
+          obj2[0] = closure_4;
+          obj2[1] = closure_4;
           obj[0] = obj2;
           let obj3 = { fontSize: null };
-          obj3[0] = noop;
+          obj3[0] = closure_4;
           obj[1] = obj3;
           let str = emoji.type === callback(mediaAttachmentState[11]).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
           if (str == null) {
@@ -75,11 +75,11 @@ export default function useRenderPollAnswerImage(arg0, arg1, mediaAttachmentStat
             obj3 = callback2(mediaAttachmentState[12]);
             const obj4 = { id: null, animated: null, size: null };
             ({ id: obj5[0], animated: obj5[1] } = emoji);
-            obj4[2] = outer1_8;
+            obj4[2] = closure_1_8;
             emojiURL = obj3.getEmojiURL(obj4);
           }
           obj[3] = emojiURL;
-          return outer1_9(callback2(mediaAttachmentState[10]), obj);
+          return closure_1_9(callback2(mediaAttachmentState[10]), obj);
         }
       }
     }, items1),

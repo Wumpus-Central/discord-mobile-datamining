@@ -1,5 +1,5 @@
 // discord_app/modules/guild_member_verification/hooks/useCurrentUserGuildJoinRequest.tsx
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
+import closure_2 from "handleGatewayJoinRequestUpdate" /* 4198 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -7,12 +7,12 @@ const result = require("set").fileFinishedImporting("modules/guild_member_verifi
 
 export const useCurrentUserGuildJoinRequest = function useCurrentUserGuildJoinRequest(guildId) {
   const _require = guildId;
-  const items = [handleGatewayJoinRequestUpdate];
+  const items = [closure_2];
   const items1 = [guildId];
   return _initialize.useStateFromStores(items, () => {
     let request = null;
     if (null != closure_0) {
-      request = outer1_2.getRequest(tmp);
+      request = closure_1_2.getRequest(tmp);
     }
     return request;
   }, items1);

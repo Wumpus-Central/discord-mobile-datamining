@@ -1,20 +1,21 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import XSmallIcon from "XSmallIcon" /* 6368 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles(() => {
   let obj = { closeButton: null };
-  obj = { alignItems: "center", justifyContent: "center", backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: Themes.radii.round, width: Themes.space.PX_32, height: Themes.space.PX_32 };
+  obj = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round, width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32 };
   obj[0] = obj;
   return obj;
 });
-const result = require("createCacheKey").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalCloseButton.tsx");
 
 export default function BountiesModalCloseButton(onPress) {
   let obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };
@@ -22,8 +23,7 @@ export default function BountiesModalCloseButton(onPress) {
   obj[0] = intl.string(getSystemLocale.t.cpT0Cq);
   obj[3] = onPress.onPress;
   obj[4] = callback().closeButton;
-  obj = { size: "sm", color: null };
-  obj[1] = Themes.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT;
-  obj[5] = jsx(XSmallIcon.XSmallIcon, { size: "sm", color: null });
-  return jsx(PressableBase.PressableOpacity, { size: "sm", color: null });
+  obj = { size: "sm", color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
+  obj[5] = jsx(XSmallIcon.XSmallIcon, { size: "sm", color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
+  return jsx(PressableBase.PressableOpacity, { size: "sm", color: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT });
 };

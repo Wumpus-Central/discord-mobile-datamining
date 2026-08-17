@@ -1,5 +1,7 @@
 // discord_app/modules/premium/PremiumSubscriptionInvoiceItem.tsx
-const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
+import set2 from "set" /* 2 */;
+
+const result = set2.fileFinishedImporting("modules/premium/PremiumSubscriptionInvoiceItem.tsx");
 
 export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
   const items = [];
@@ -45,7 +47,7 @@ export const coalesceInvoiceItems = function coalesceInvoiceItems(arr) {
       obj.amount = obj.amount * obj.quantity;
       const discounts = obj.discounts;
       obj.discounts = discounts.map((amount) => {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(amount);
         obj.amount = amount.amount * obj.quantity;
         return obj;

@@ -1,15 +1,14 @@
 // discord_app/modules/activities/native/IgnoreThermalStateAlert.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import noopAll from "noop" /* 19 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" } });
-let result = require("createCacheKey").fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/native/IgnoreThermalStateAlert.tsx");
 
 export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfirm) {
   onConfirm = onConfirm.onConfirm;
@@ -23,7 +22,7 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
     if (onConfirm != null) {
       tmp();
     }
-    const result = onConfirm(outer1_2[5]).disregardSeriousThermalState();
+    const result = onConfirm(closure_1_2[5]).disregardSeriousThermalState();
   };
   const intl2 = onConfirm(1236).intl;
   obj.confirmText = intl2.string(onConfirm(1236).t.oEAioF);
@@ -36,5 +35,5 @@ export const IgnoreThermalStateAlert = function IgnoreThermalStateAlert(onConfir
   obj[2] = intl4.string(onConfirm(1236).t.VOgTjy);
   items[1] = callback(onConfirm(4734).Text, obj);
   obj.children = items;
-  return callback2(componentDidMount, obj);
+  return callback2(componentDidMountDefault, obj);
 };

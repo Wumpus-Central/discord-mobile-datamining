@@ -1,16 +1,17 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx
-import _slicedToArray from "_slicedToArray";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getJoinedAtDateFormatter } from "DateUtils.tsx";
-import { getGuildMemberSecondaryIndexes } from "GuildMemberSafetyMembers.tsx";
+import apply from "apply" /* 12 */;
+import setDefault from "set" /* 687 */;
+import getGuildMemberSecondaryIndexes from "getGuildMemberSecondaryIndexes" /* 5090 */;
+import getJoinedAtDateFormatter from "getJoinedAtDateFormatter" /* 5092 */;
+import hasStringMatch from "hasStringMatch" /* 5243 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { items } from "GuildMemberSafetyPagination.tsx";
-import { hasStringMatch } from "GuildMemberSafetySearch.tsx";
 
-const require = arg1;
-let closure_5 = 3 * require("set").Millis.SECOND;
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx");
+require = arg1;
+let closure_5 = 3 * setDefault.Millis.SECOND;
+let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/GuildMemberSafetyPageStore.tsx");
 class GuildMemberSafetyPageStore {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -34,8 +35,6 @@ prototype["getSearchIndex"] = function getSearchIndex() {
   CURRENT_GUILD_MEMBER = getGuildMemberSecondaryIndexes.MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER;
 };
 prototype["initialize"] = function initialize() {
-  let _members;
-  let guildId;
   const self = this;
   if (this._initialized) {
     const _Date = Date;
@@ -400,7 +399,7 @@ prototype["updateMembersByMemberIds"] = function updateMembersByMemberIds(items)
   if (null != this._members) {
     if (self._initialized) {
       return self.updateClientMembers(items.reduce((arr, id) => {
-        const trueMember = outer1_3.getTrueMember(self.guildId, id);
+        const trueMember = closure_1_3.getTrueMember(self.guildId, id);
         if (null != trueMember) {
           arr.push(trueMember);
         }
@@ -412,13 +411,13 @@ prototype["updateMembersByMemberIds"] = function updateMembersByMemberIds(items)
 };
 prototype["updateMembersSort"] = function updateMembersSort(selectedSort) {
   const self = this;
-  let closure_0 = selectedSort;
+  closure_0 = selectedSort;
   return new Promise((arg0) => {
     const items = [...selectedSort(self[8]).cloneDeep(self.getMembersByIndex(closure_0(self[4]).MemberSafetySecondaryIndex.CURRENT_GUILD_MEMBER)[0])];
     let obj = selectedSort(self[8]);
     HermesBuiltin.arraySpread(selectedSort(self[8]).cloneDeep(self.getMembersByIndex(selectedSort(self[4]).MemberSafetySecondaryIndex.NEW_GUILD_MEMBER)[0]), tmp);
     const item = items.forEach((joinedAt) => {
-      let obj = outer1_0(outer1_1[9]);
+      let obj = closure_1_0(closure_1_1[9]);
       _search = _search._search;
       let flag;
       const sortValueForMember = obj.getSortValueForMember(joinedAt, closure_0);
@@ -463,7 +462,7 @@ prototype["updateSearchedMembersByMemberIds"] = function updateSearchedMembersBy
     if (null != self._members) {
       if (self._initialized) {
         return self.updateClientMembers(memberIds.reduce((arr, id) => {
-          const trueMember = outer1_3.getTrueMember(self.guildId, id);
+          const trueMember = closure_1_3.getTrueMember(self.guildId, id);
           if (null != trueMember) {
             arr.push(trueMember);
           }

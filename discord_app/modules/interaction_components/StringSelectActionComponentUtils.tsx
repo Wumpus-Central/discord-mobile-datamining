@@ -1,8 +1,8 @@
 // discord_app/modules/interaction_components/StringSelectActionComponentUtils.tsx
-import getInteractionComponentStates from "getInteractionComponentStates";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import closure_2 from "getInteractionComponentStates" /* 8327 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/interaction_components/StringSelectActionComponentUtils.tsx");
 
 export const getInitialStringSelectOptions = function getInitialStringSelectOptions(selectionActionComponent, containerId) {

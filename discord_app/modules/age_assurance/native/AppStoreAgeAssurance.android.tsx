@@ -1,5 +1,5 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeAssurance.android.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 let closure_3 = { [arg1(16676).AgeSignalsVerificationStatus.VERIFIED]: "VERIFIED", [arg1(16676).AgeSignalsVerificationStatus.SUPERVISED]: "SUPERVISED", [arg1(16676).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_PENDING]: "SUPERVISED_APPROVAL_PENDING", [arg1(16676).AgeSignalsVerificationStatus.SUPERVISED_APPROVAL_DENIED]: "SUPERVISED_APPROVAL_DENIED", [arg1(16676).AgeSignalsVerificationStatus.UNKNOWN]: "UNKNOWN", [arg1(16676).AgeSignalsVerificationStatus.DECLARED]: "DECLARED" };
@@ -17,7 +17,7 @@ export default {
         obj[3] = tmp;
         return obj;
       }
-      const obj2 = outer1_0(table[1]);
+      const obj2 = closure_1_0(table[1]);
       yield obj2.getAgeSignals();
       return toAppStoreAgeCheck(arg1);
     })();

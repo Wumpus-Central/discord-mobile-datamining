@@ -1,9 +1,11 @@
 // discord_app/modules/threads/native/showThreadBrowserModal.tsx
-import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { getAccessibilityLabelFormatter } from "../ThreadUtils.tsx";
+import set from "set" /* 2 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import getAccessibilityLabelFormatter from "getAccessibilityLabelFormatter" /* 7528 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
 
-let result = require("getRootNavigationRef").fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
+let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
+let result = set.fileFinishedImporting("modules/threads/native/showThreadBrowserModal.tsx");
 
 export default function showThreadBrowserModal(id) {
   let obj = getAccessibilityLabelFormatter;

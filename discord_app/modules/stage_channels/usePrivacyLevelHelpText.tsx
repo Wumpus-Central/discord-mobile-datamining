@@ -1,21 +1,23 @@
 // discord_app/modules/stage_channels/usePrivacyLevelHelpText.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { HelpdeskArticles } from "ME";
-import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { Permissions } from "sum";
+import fromStringAll from "fromString" /* 506 */;
+import combinedDefault from "combined" /* 1993 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { GuildScheduledEventPrivacyLevel as closure_6 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { Permissions } from "sum" /* 505 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
 
 const require = arg1;
-const result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
 
 export default function useStagePrivacyLevelSettings(channel, privacy_level) {
   const _require = channel;
   let obj = _initialize;
-  const items = [getUncachedChannelPermissions];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.can(outer1_7.CREATE_INSTANT_INVITE, closure_0));
-  const obj2 = importAll(4026);
-  const canEveryoneRoleResult = obj2.canEveryoneRole(importAll(506).combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT), channel);
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.can(closure_1_7.CREATE_INSTANT_INVITE, closure_0));
+  const obj2 = applyOverwritesAll;
+  const canEveryoneRoleResult = obj2.canEveryoneRole(fromStringAll.combine(Permissions.VIEW_CHANNEL, Permissions.CONNECT), channel);
   privacy_level = undefined;
   if (privacy_level != null) {
     privacy_level = privacy_level.privacy_level;
@@ -29,9 +31,9 @@ export default function useStagePrivacyLevelSettings(channel, privacy_level) {
       if (arg2 === tmp6.PUBLIC) {
         const intl3 = tmp(1236).intl;
         obj = { articleURL: null };
-        obj[0] = combined.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
+        obj[0] = combinedDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES);
         formatResult = intl3.format(tmp(1236).t["ew/Jq4"], obj);
-        const obj5 = combined;
+        const obj5 = combinedDefault;
       }
       let stringResult1 = formatResult;
     } else {

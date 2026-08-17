@@ -1,15 +1,15 @@
 // discord_app/modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx
-import noop from "noop";
-import updateProduct from "updateProduct";
-import { CurrencyCodes } from "sum";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "updateProduct" /* 5319 */;
+import { CurrencyCodes } from "sum" /* 505 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("sum").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.tsx");
 
 export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProductInfo(premiumDiscountOffer, items3) {
   const _require = premiumDiscountOffer;
-  const dependencyMap = items3;
+  dependencyMap = items3;
   const items = [premiumDiscountOffer, items3];
   memo = memo.useMemo(() => {
     if (null == planIds) {
@@ -51,7 +51,7 @@ export const useDiscountedPremiumProductInfo = function useDiscountedPremiumProd
           if (null == tmp2) {
             return null;
           } else {
-            if (str2.toUpperCase() in outer1_4) {
+            if (str2.toUpperCase() in closure_1_4) {
               let USD = tmp5.currencyCode.toLowerCase();
               const str = tmp5.currencyCode;
             } else {

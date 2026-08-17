@@ -1,13 +1,11 @@
 // discord_app/modules/user_settings/defs/native/UploadIntlDataSetting.tsx
-import batchUpdates from "batchUpdates";
-import { ActivityIndicator } from "set";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import keys from "keys";
-import createToggle from "createToggle";
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import keys from "keys" /* 644 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let closure_6;
-let error;
 const require = arg1;
 function _serializeIntlData() {
   const self = this;
@@ -43,15 +41,15 @@ function _serializeIntlData() {
             callback = undefined;
             obj4 = undefined;
             let lib;
-            let dependencyMap;
+            dependencyMap = undefined;
             Identifier = undefined;
             Build = undefined;
             dependencyMap = 1;
-            let obj5 = outer1_0(1239);
+            let obj5 = closure_1_0(1239);
             Identifier = 2;
             Build = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = obj5.loadJsonAsset(outer1_0(1273));
+            obj1 = { value: null, done: false };
+            obj1[0] = obj5.loadJsonAsset(closure_1_0(1273));
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -139,7 +137,7 @@ function _serializeIntlData() {
       }
     }
   });
-  const _serializeIntlData = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -181,7 +179,7 @@ function _handleUploadIntlDataSettingPress() {
             let ANDROID_APP = tmp6;
             ANDROID_APP = undefined;
             callback = undefined;
-            let closure_2;
+            closure_2 = undefined;
             (function onUploadIntlDataRequestStart() {
               ANDROID_APP(705).batchUpdates(() => state.setState({ isDisabled: true, isUploading: true }));
             })();
@@ -190,7 +188,7 @@ function _handleUploadIntlDataSettingPress() {
             } else {
               ANDROID_APP = tmp52.ANDROID_APP;
             }
-            let dependencyMap = 2;
+            dependencyMap = 2;
             (function serializeIntlData() {
               const self = this;
               const apply = closure_10.apply;
@@ -203,7 +201,7 @@ function _handleUploadIntlDataSettingPress() {
             })();
             c4 = 3;
             c5 = 1;
-            obj11 = outer1_0(500);
+            obj11 = closure_1_0(500);
           }
         } else if (1 === tmp9) {
           dependencyMap = 0;
@@ -216,7 +214,7 @@ function _handleUploadIntlDataSettingPress() {
           if (2 === tmp9) {
             dependencyMap = 1;
             let obj5 = callback(4094);
-            const obj1 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: null, content: "Failed to upload internationalization data." };
+            obj1 = { key: "USER_SETTINGS_INTL_DATA_UPLOAD_FAILED", IconComponent: null, content: "Failed to upload internationalization data." };
             obj1[1] = ANDROID_APP(4330).CircleInformationIcon;
             obj5.open(obj1);
             dependencyMap = 0;
@@ -241,8 +239,8 @@ function _handleUploadIntlDataSettingPress() {
               return obj2;
             } else {
               callback = arg1;
-              closure_2 = outer1_7.DEBUG_LOG(ANDROID_APP, "intl_data");
-              const HTTP = outer1_0(530).HTTP;
+              closure_2 = closure_1_7.DEBUG_LOG(ANDROID_APP, "intl_data");
+              const HTTP = closure_1_0(530).HTTP;
               const obj3 = { url: null, body: null, retries: 3, headers: null, oldFormErrors: true, rejectWithError: true };
               obj3[0] = closure_2;
               obj3[1] = callback;
@@ -286,7 +284,7 @@ function _handleUploadIntlDataSettingPress() {
       }
     }
   });
-  const _handleUploadIntlDataSettingPress = tmp;
+  closure_11 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -326,6 +324,6 @@ keys = {
   }
 };
 keys = createToggle.createPressable(keys);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UploadIntlDataSetting.tsx");
 
 export default keys;

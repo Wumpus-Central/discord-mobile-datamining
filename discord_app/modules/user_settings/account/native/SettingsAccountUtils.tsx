@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountUtils.tsx");
 
 export const useIs2FAEnabled = function useIs2FAEnabled() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   return defaultAreStatesEqual.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
@@ -21,11 +21,11 @@ export const useIs2FAEnabled = function useIs2FAEnabled() {
   });
 };
 export const useIsTOTPEnabled = function useIsTOTPEnabled() {
-  const items = [fetchFingerprint];
-  return defaultAreStatesEqual.useStateFromStores(items, () => fetchFingerprint.hasTOTPEnabled());
+  const items = [closure_2];
+  return defaultAreStatesEqual.useStateFromStores(items, () => closure_2.hasTOTPEnabled());
 };
 export const useIsUserVerified = function useIsUserVerified() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   return defaultAreStatesEqual.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

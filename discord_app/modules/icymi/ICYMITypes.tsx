@@ -1,9 +1,7 @@
 // discord_app/modules/icymi/ICYMITypes.tsx
-import ME from "ME";
-import set from "set";
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let MessageEmbedTypes;
-let c0;
 ({ ChannelTypes: c0, MessageEmbedTypes } = ME);
 const obj = { MESSAGE: 0, [0]: "MESSAGE", ACTIVITY: 2, [2]: "ACTIVITY", CUSTOM_STATUS: 3, [3]: "CUSTOM_STATUS", GUILD_EVENT: 5, [5]: "GUILD_EVENT", RECOMMENDED_GUILDS: 6, [6]: "RECOMMENDED_GUILDS" };
 const items = [, ];

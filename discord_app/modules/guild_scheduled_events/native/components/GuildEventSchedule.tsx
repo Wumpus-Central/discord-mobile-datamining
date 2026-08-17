@@ -1,24 +1,19 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("t").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventSchedule.tsx");
 
 export default function GuildEventSchedule(schedule) {
-  let guildEvent;
-  let recurrenceId;
   schedule = schedule.schedule;
   const onChange = schedule.onChange;
   ({ guildEvent, recurrenceId } = schedule);
   let obj = onChange(3975)();
   const addResult = obj.add(schedule(8785).MAX_DAYS_AHEAD_AN_EVENT_CAN_START, "days");
   const items = [schedule.startDate];
-  const memo = React.useMemo(() => onChange(outer1_2[2])(schedule.startDate).add(15, "minutes"), items);
+  const memo = React.useMemo(() => onChange(closure_1_2[2])(schedule.startDate).add(15, "minutes"), items);
   const tmp2 = onChange(3975)();
   const addResult1 = onChange(3975)().add(schedule(8785).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days");
   if (null != recurrenceId) {

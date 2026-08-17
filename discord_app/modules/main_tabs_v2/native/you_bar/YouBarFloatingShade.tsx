@@ -1,24 +1,21 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx
-import { View } from "LinearGradient";
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT";
-import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { int2hslRaw } from "../../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useYouBarTotalHeight } from "hooks/useYouBarTotalHeight.tsx";
+import initialize from "initialize" /* 589 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import map from "map" /* 4097 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 14452 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
+import { YOU_BAR_GRADIENT_EXTRA_HEIGHT as closure_5 } from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
+import { GUILD_LIST_WIDTH } from "GUILD_ITEM_SIZE" /* 15548 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c9;
-let error;
-let metroImportAll;
-let require = arg1;
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
+require = arg1;
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let closure_11 = { code: "function YouBarFloatingShadeTsx1(){const{gradientHeight,drawerWidth}=this.__closure;return{height:gradientHeight,opacity:1,width:drawerWidth};}" };
-const memoResult = require("noop").memo(function YouBarFloatingShade() {
+const memoResult = importAllResult.memo(function YouBarFloatingShade() {
   const tmp = callback3();
   let obj = useYouBarTotalHeight;
   const youBarTotalHeight = obj.useYouBarTotalHeight();
@@ -40,7 +37,7 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   const gradientValue = tmp2Result.useGradientValue(tmp2(4194).GradientPercentage.END);
   const token = map.useToken(tmp6(712).colors.BACKGROUND_BASE_LOWER);
   const tmp2Result1 = map;
-  const items = [isSyncedModeThemesEnabled];
+  const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => gradientPreset.gradientPreset);
   const tmp2Result2 = initialize;
   let token1 = null;
@@ -76,6 +73,6 @@ const memoResult = require("noop").memo(function YouBarFloatingShade() {
   obj[0] = items2;
   return callback2(closure_8, obj);
 });
-const result = require("isSyncedModeThemesEnabled").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarFloatingShade.tsx");
 
 export default memoResult;

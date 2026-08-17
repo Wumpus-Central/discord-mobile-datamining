@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/useConnectRetry.tsx");
 
 export const useConnectRetry = function useConnectRetry(navigation, PRE_CONNECT) {
   const React = navigation;
-  let closure_1 = PRE_CONNECT;
+  closure_1 = PRE_CONNECT;
   const items = [navigation, PRE_CONNECT];
   return React.useCallback(() => {
     let arr = navigation;

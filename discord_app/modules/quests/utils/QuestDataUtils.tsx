@@ -1,15 +1,12 @@
 // discord_app/modules/quests/utils/QuestDataUtils.tsx
-import _getSystemLocale from "_getSystemLocale";
-import set from "set";
-import initializeState from "initializeState";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../QuestTypes.tsx";
+import _modDef1208 from "module_1208" /* 1208 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
+import closure_3 from "_getSystemLocale" /* 1994 */;
+import closure_4 from "set" /* 7452 */;
+import closure_5 from "initializeState" /* 7453 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getQuestDeliveryDataForPlacement(arg0, adContentId) {
   if (arg0 === QuestsVisibleMessagesChangedSource.AdPlacement.QUEST_HOME_MOBILE_CAROUSEL) {
     let tmp3 = null;
@@ -17,7 +14,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
       adDecisionByPlacementAndAdCreativeId = adDecisionByPlacementAndAdCreativeId.getAdDecisionByPlacementAndAdCreativeId(arg0, adContentId);
       let tmp8 = null;
       if (null != adDecisionByPlacementAndAdCreativeId) {
-        let obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
+        obj = { questId: null, adCreativeId: null, adDecisionData: null, adContext: null, metadataSealed: null, trafficMetadataSealed: null };
         let tmpResult = tmp(7468);
         obj[0] = tmpResult.getDeliveredQuestId(adDecisionByPlacementAndAdCreativeId.creative);
         tmpResult = tmp(7468);
@@ -59,7 +56,7 @@ function getQuestDeliveryDataForPlacement(arg0, adContentId) {
     }
   }
 }
-({ DismissibleQuestContentFlags: closure_6, BILLABLE_PLACEMENTS: error, EMPTY_AD_DECISION_DATA: metroImportAll } = QuestsExperimentLocations);
+({ DismissibleQuestContentFlags: closure_6, BILLABLE_PLACEMENTS: error, EMPTY_AD_DECISION_DATA: closure_8 } = QuestsExperimentLocations);
 let c9 = 2592000000;
 let obj = {};
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_BAR] = require("QuestsVisibleMessagesChangedSource").AdPlacement.DESKTOP_ACCOUNT_PANEL_AREA;
@@ -69,7 +66,7 @@ obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_HOME_HERO] 
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_HOME_HERO_SHELF] = require("QuestsVisibleMessagesChangedSource").AdPlacement.QUEST_HOME_BANNER_DESKTOP;
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.QUEST_HOME_MOBILE_CAROUSEL] = require("QuestsVisibleMessagesChangedSource").AdPlacement.QUEST_HOME_MOBILE_CAROUSEL;
 obj[require("QuestsVisibleMessagesChangedSource").QuestContent.VIDEO_MODAL_MOBILE] = require("QuestsVisibleMessagesChangedSource").AdPlacement.VIDEO_MODAL_MOBILE;
-const result = require("initializeState").fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/utils/QuestDataUtils.tsx");
 
 export const THIRTY_DAYS_MS = 2592000000;
 export const earnedDecisionIsValid = function earnedDecisionIsValid(value) {
@@ -90,7 +87,7 @@ export const findQuestOrReplacement = function findQuestOrReplacement(questId, q
       return items;
     }));
   }
-  let map1 = excludedQuests;
+  map1 = excludedQuests;
   if (Array.isArray(excludedQuests)) {
     const _Map2 = Map;
     map1 = new Map(excludedQuests.map((id) => {
@@ -178,7 +175,7 @@ export const hasUnclaimedReward = function hasUnclaimedReward(userStatus) {
   return null != userStatus && null != userStatus.completedAt && null == userStatus.claimedAt;
 };
 export const getQuestFormattedDate = function getQuestFormattedDate(expiresAtPremium) {
-  let obj = arg1;
+  obj = arg1;
   if (arg1 === undefined) {
     obj = { dateStyle: "short" };
   }
@@ -267,7 +264,7 @@ export const getAdContext = function getAdContext(questContent, adContentId) {
   }
 };
 export const captureQuestsException = function captureQuestsException(error, tags) {
-  let obj = SentryUtils.native;
+  obj = _modDef1208;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

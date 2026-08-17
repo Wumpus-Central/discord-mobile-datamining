@@ -1,6 +1,8 @@
 // discord_app/modules/applications/ApplicationInteractionInfoUtils.tsx
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-const result = require("set").fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
+import set from "set" /* 2 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+
+const result = set.fileFinishedImporting("modules/applications/ApplicationInteractionInfoUtils.tsx");
 
 export const canViewInteractionInfo = function canViewInteractionInfo(message) {
   return null != message.interactionMetadata;

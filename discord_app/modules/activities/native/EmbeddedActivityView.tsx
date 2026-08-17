@@ -1,20 +1,14 @@
 // discord_app/modules/activities/native/EmbeddedActivityView.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "set";
-import get_ActivityIndicator from "getSafeArea";
-import participantFromServer from "participantFromServer";
-import items3 from "items3";
-import { OBEY_SILENT_HARDWARE_SWITCH_APP_IDS as closure_10 } from "ApplicationTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import WakeLockDefault from "WakeLock" /* 11818 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "participantFromServer" /* 1390 */;
+import items3 from "items3" /* 4481 */;
+import { OBEY_SILENT_HARDWARE_SWITCH_APP_IDS as closure_10 } from "ApplicationTypes" /* 4482 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 function useBaseActivityView(orientationLockState) {
   orientationLockState = orientationLockState.orientationLockState;
@@ -25,7 +19,7 @@ function useBaseActivityView(orientationLockState) {
   let isResetting;
   let defaultOrientationLockState;
   let first1;
-  let closure_8;
+  closure_8 = undefined;
   let isLandscape;
   const setIsResetting = application(setOrientationLockState.useState(false), 2);
   isResetting = setIsResetting[0];
@@ -81,7 +75,7 @@ function useBaseActivityView(orientationLockState) {
 }
 class ActivityViewLoadingIndicator {
   constructor() {
-    obj = { style: jsxs().loadingContainer, children: jsx(ActivityIndicator, { size: "large" }) };
+    obj = { style: closure_14().loadingContainer, children: jsx(ActivityIndicator, { size: "large" }) };
     return jsx(View, obj);
   }
 }
@@ -114,18 +108,14 @@ class BaseActivityView {
 }
 let c4 = importAllResult;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
-({ ActivityLayoutMode: metroImportAll, ActivityScreenOrientation: c9 } = items3);
+({ ActivityLayoutMode: closure_8, ActivityScreenOrientation: c9 } = items3);
 ({ jsx: unpackModuleId, Fragment: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portraitSafeAreasConfig) {
-  let channel;
-  let layoutMode;
-  let tmp8;
-  let tmp9;
   ({ channel, layoutMode } = portraitSafeAreasConfig);
   let landscapeSafeAreasConfig = portraitSafeAreasConfig.portraitSafeAreasConfig;
   let currentEmbeddedActivity;
-  let dependencyMap;
+  dependencyMap = undefined;
   let setIsResetting;
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
   const tmp4 = currentEmbeddedActivity(11235)();
@@ -133,11 +123,11 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   let obj = layoutMode(589);
   const items = [currentEmbeddedActivity];
   const items1 = [tmp4];
-  let obj1 = importAllResult;
+  obj1 = importAllResult;
   const stateFromStores = obj.useStateFromStores(items, () => {
     let orientationLockStateForApp;
-    if (null != c2) {
-      orientationLockStateForApp = outer1_7.getOrientationLockStateForApp(tmp.id);
+    if (null != closure_2) {
+      orientationLockStateForApp = closure_1_7.getOrientationLockStateForApp(tmp.id);
     }
     return orientationLockStateForApp;
   }, items1);
@@ -192,7 +182,7 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   const items2 = [layoutMode, currentEmbeddedActivity];
   const layoutEffect = obj1.useLayoutEffect(() => {
     if (null != currentEmbeddedActivity) {
-      let obj = currentEmbeddedActivity(_undefined[10]);
+      let obj = currentEmbeddedActivity(id[10]);
       obj = { type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: null, applicationId: null };
       obj[1] = layoutMode;
       obj[2] = tmp.applicationId;
@@ -201,15 +191,15 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   }, items2);
   const items3 = [tmp4, currentEmbeddedActivity];
   const callback = obj1.useCallback(() => {
-    let obj = currentEmbeddedActivity(_undefined[16]);
+    let obj = currentEmbeddedActivity(id[16]);
     let _location;
     if (currentEmbeddedActivity != null) {
       _location = currentEmbeddedActivity.location;
     }
     obj = { location: _location, applicationId: null };
-    let id;
-    if (_undefined != null) {
-      id = _undefined.id;
+    id = undefined;
+    if (id != null) {
+      id = id.id;
     }
     obj[1] = id;
     obj.leaveActivity(obj);
@@ -286,7 +276,7 @@ const memoResult = importAllResult.memo(function EmbeddedActivityViewInner(portr
   }
   return tmp25Result;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/activities/native/EmbeddedActivityView.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/EmbeddedActivityView.tsx");
 
 export default memoResult;
 export { useBaseActivityView };

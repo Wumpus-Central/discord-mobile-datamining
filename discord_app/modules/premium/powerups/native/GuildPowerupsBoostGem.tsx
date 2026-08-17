@@ -1,23 +1,24 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostGem.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { BoostGem } from "images/BoostGem.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import BoostGemDefault from "BoostGem" /* 11691 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const View = get_ActivityIndicator.View;
+const jsx = jsxProd.jsx;
 let obj = { boostGemContainer: null };
-obj = { width: 100, height: 100, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SECONDARY_ALT, alignItems: "center", justifyContent: "center", alignSelf: "center" };
+obj = { width: 100, height: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT, alignItems: "center", justifyContent: "center", alignSelf: "center" };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostGem.tsx");
 
 export default function GuildPowerupsBoostGem(arg0) {
-  let gemHeight;
-  let gemWidth;
-  let style;
   ({ style, gemWidth, gemHeight } = arg0);
   const obj = { style: null, children: null };
   const items = [callback().boostGemContainer, style];
   obj[0] = items;
-  obj[1] = jsx(BoostGem, { width: gemWidth, height: gemHeight });
+  obj[1] = jsx(BoostGemDefault, { width: gemWidth, height: gemHeight });
   return <View style={null}>{null}</View>;
 };

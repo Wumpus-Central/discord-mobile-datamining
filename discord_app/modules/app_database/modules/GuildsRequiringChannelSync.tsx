@@ -1,33 +1,33 @@
 // discord_app/modules/app_database/modules/GuildsRequiringChannelSync.tsx
-import createChannelRecord from "createChannelRecord";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { ChannelFlags } from "set";
-import { Permissions } from "sum";
-import importAllResult from "fromString";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { items } from "../DatabaseDaos.tsx";
+import set2 from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import sum from "sum" /* 505 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import set3 from "set" /* 1398 */;
+import itemsDefault from "items" /* 1955 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
+import importAllResult from "fromString" /* 506 */;
 
-let c4;
-let c5;
-let closure_12;
-let map1;
 let obj = require;
 ({ createChannelRecordFromServer: c4, ChannelRecordBase: c5 } = createChannelRecord);
 ({ AnalyticEvents: closure_12, BasicPermissions: map1 } = ME);
-let closure_15 = require("fromString").combine(Permissions.VIEW_CHANNEL, Permissions.ADMINISTRATOR);
-let closure_16 = new require("trackCommunicationDisabled")("GuildsRequiringChannelSync");
+const ChannelFlags = set3.ChannelFlags;
+const Permissions = sum.Permissions;
+let closure_15 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.ADMINISTRATOR);
+let closure_16 = new timestampDefault("GuildsRequiringChannelSync");
 let closure_17 = { NewGuild: "new_guild", OwnershipChange: "ownership_change", RolePermissions: "role_permissions", RoleSubscriptionTags: "role_subscription_tags", MemberRoles: "member_roles", ChannelVisibleParentHidden: "channel_visible_parent_hidden", Unknown: "unknown" };
 let closure_18 = { ConnectionOpen: "connection_open", GuildCreate: "guild_create", BackgroundSync: "background_sync" };
 class GuildsRequiringChannelSync {
   constructor() {
     obj = Object.create(new.target.prototype);
-    GuildsRequiringChannelSync = obj;
+    closure_0 = obj;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
             return obj.handleBackgroundSync(arg0, arg1);
@@ -50,7 +50,7 @@ class GuildsRequiringChannelSync {
 }
 const prototype = GuildsRequiringChannelSync.prototype;
 prototype["getAll"] = function getAll() {
-  const result = items.guildsRequiringChannelSync();
+  const result = itemsDefault.guildsRequiringChannelSync();
   if (null == result) {
     let resolved = Promise.resolve([]);
   } else {
@@ -87,7 +87,7 @@ prototype["handleUnmarkResyncGuilds"] = function handleUnmarkResyncGuilds(guildI
     let unmarkGuildForResyncResult = self.unmarkGuildForResync(item10008, arg1);
     continue;
   }
-  tmp4.verbose("Unmarked guilds " + JSON.stringify(guildIds));
+  closure_16.verbose("Unmarked guilds " + JSON.stringify(guildIds));
 };
 prototype["detectRoleVisibilityChanges"] = function detectRoleVisibilityChanges(id, unsafeMutableRoles, obj, set) {
   for (const key10008 in arg2) {
@@ -127,12 +127,12 @@ prototype["detectRoleVisibilityChanges"] = function detectRoleVisibilityChanges(
         return closure_17.RolePermissions;
       } else {
         let tmp10 = importAll;
-        let arr = importAll(506);
+        let arr = importAllResult;
         let tmp11 = closure_15;
         let found = arr.filter(tmp18.permissions, closure_15);
-        let arr2 = importAll(506);
+        let arr2 = importAllResult;
         let found1 = arr2.filter(tmp17.permissions, closure_15);
-        let obj5 = importAll(506);
+        let obj5 = importAllResult;
         if (obj5.equals(found, found1)) {
           continue;
         } else {
@@ -166,7 +166,7 @@ prototype["processMemberRoleIds"] = function processMemberRoleIds(arg0, roles) {
         continue;
       } else {
         let tmp10 = iter;
-        let obj = { rolesAreDifferent: true, allRoleIds: null };
+        obj = { rolesAreDifferent: true, allRoleIds: null };
         iter.return();
         return obj;
       }
@@ -188,7 +188,7 @@ prototype["userBecameGuildOwner"] = function userBecameGuildOwner(ownerId, owner
   return tmp;
 };
 prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item10008, database) {
-  let obj = store3;
+  obj = store3;
   let selfMember = store3.getSelfMember(item10008.id);
   if (selfMember == null) {
     selfMember = obj.getCachedSelfMember(item10008.id);
@@ -206,7 +206,7 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
             obj[0] = item10021.id;
             let tmp5 = importAll;
             let tmp6 = dependencyMap;
-            let obj4 = importAll(506);
+            let obj4 = importAllResult;
             obj[1] = obj4.deserialize(item10021.permissions);
             let tags = item10021.tags;
             if (tags == null) {
@@ -276,8 +276,6 @@ prototype["handleBackgroundSyncGuild"] = function handleBackgroundSyncGuild(item
   }
 };
 prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSync) {
-  let allRoleIds;
-  let rolesAreDifferent;
   const self = this;
   if ("full_sync" !== channels.channels.op) {
     const id = store.getId();
@@ -302,7 +300,7 @@ prototype["handleGuild"] = function handleGuild(channels, database, BackgroundSy
     let tmp10 = null;
     let tmp11 = MemberRoles;
     if (!flag) {
-      let obj = store3;
+      obj = store3;
       let selfMember = store3.getSelfMember(channels.id);
       if (selfMember == null) {
         selfMember = obj.getCachedSelfMember(channels.id);
@@ -386,14 +384,14 @@ prototype["markGuildForResync"] = function markGuildForResync(id, database, Back
   obj = obj(514);
   const v4Result = obj.v4();
   obj = { guild_id: id, request_id: v4Result, trigger: BackgroundSync, change_type: ChannelVisibleParentHidden };
-  expandEventProperties.track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, obj);
-  const obj2 = expandEventProperties;
-  const result = items.guildsRequiringChannelSyncTransaction(database);
+  expandEventPropertiesDefault.track(constants.GUILD_CHANNEL_RESYNC_REQUESTED, obj);
+  const obj2 = expandEventPropertiesDefault;
+  const result = itemsDefault.guildsRequiringChannelSyncTransaction(database);
   obj = { id, requestId: v4Result };
   result.put(obj);
 };
 prototype["unmarkGuildForResync"] = function unmarkGuildForResync(id, database) {
-  const result = items.guildsRequiringChannelSyncTransaction(database);
+  const result = itemsDefault.guildsRequiringChannelSyncTransaction(database);
   result.delete(id);
 };
 prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleChannelWithHiddenParent(id, channels, deleted_channel_ids) {
@@ -434,10 +432,10 @@ prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleCh
         let tmp17 = tmp16;
         let canBasicChannelResult = null != tmp16;
         if (canBasicChannelResult) {
-          let tmp19 = getUncachedChannelPermissions;
+          let tmp19 = closure_11;
           let tmp20 = constants2;
           let tmp21 = tmp16;
-          canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants2.VIEW_CHANNEL, tmp17);
+          canBasicChannelResult = closure_11.canBasicChannel(constants2.VIEW_CHANNEL, tmp17);
         }
         let tmp22 = nextResult1;
         let tmp23 = !obj2.isObfuscated();
@@ -461,7 +459,7 @@ prototype["hasNewlyVisibleChannelWithHiddenParent"] = function hasNewlyVisibleCh
                 let tmp32 = parent_id;
                 let tmp33 = mutableBasicGuildChannelsForGuild[tmp29];
                 if (null != tmp33) {
-                  let tmp35 = getUncachedChannelPermissions;
+                  let tmp35 = closure_11;
                   let tmp36 = constants2;
                   let tmp37 = tmp33;
                 }
@@ -548,7 +546,7 @@ obj.actions = {
     return obj.handleUnmarkResyncGuilds(guildIds, database);
   }
 };
-let tmp4 = new require("trackCommunicationDisabled")("GuildsRequiringChannelSync");
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/app_database/modules/GuildsRequiringChannelSync.tsx");
+let tmp4 = new timestampDefault("GuildsRequiringChannelSync");
+let result = set2.fileFinishedImporting("modules/app_database/modules/GuildsRequiringChannelSync.tsx");
 
 export default obj;

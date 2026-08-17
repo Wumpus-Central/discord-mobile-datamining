@@ -1,51 +1,42 @@
 // discord_app/components_native/premium/OutboundPromotionClaimAlert.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "module_4090";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ ActivityIndicator: c5, View: closure_6, Image: error, ScrollView: metroImportAll } = get_ActivityIndicator);
+({ ActivityIndicator: c5, View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { loading: { marginVertical: 80 }, body: { alignItems: "center" }, title: { marginBottom: 8 }, errorTitle: { lineHeight: 24, marginBottom: 8 }, bodyText: { textAlign: "center", lineHeight: 20 }, copyInputContainer: null, copyInputLabel: null, copyInput: null, copyInputCopied: null, copyButton: null, promotionArt: null, errorArt: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: require("Themes").radii.sm };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 16, padding: 12, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[5] = createCacheKey;
 createCacheKey[6] = { lineHeight: 20, marginBottom: 8 };
-createCacheKey[7] = { borderWidth: 1, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-let obj1 = { borderWidth: 1, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-createCacheKey[8] = { borderColor: require("Themes").colors.ICON_FEEDBACK_POSITIVE };
+createCacheKey[7] = { borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+let obj1 = { borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginBottom: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+createCacheKey[8] = { borderColor: ThemesDefault.colors.ICON_FEEDBACK_POSITIVE };
 createCacheKey[9] = { paddingHorizontal: 8, marginLeft: 8 };
 createCacheKey[10] = { width: 200, height: 100, marginBottom: 20 };
 createCacheKey[11] = { width: 141, height: 99, marginBottom: 20 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderColor: require("Themes").colors.ICON_FEEDBACK_POSITIVE };
-let result = require("get ActivityIndicator").fileFinishedImporting("components_native/premium/OutboundPromotionClaimAlert.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderColor: ThemesDefault.colors.ICON_FEEDBACK_POSITIVE };
+let result = require("set").fileFinishedImporting("components_native/premium/OutboundPromotionClaimAlert.tsx");
 
 export default function OutboundPromotionClaimAlert(onCancel) {
-  let c4;
-  let c5;
-  let tmp3;
-  let tmp7;
   onCancel = onCancel.onCancel;
   const onClaim = onCancel.onClaim;
   const code = onCancel.code;
   const outboundPromotion = onCancel.outboundPromotion;
   let React;
   c5 = undefined;
-  let c6;
+  closure_6 = undefined;
   let analyticsLocations;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   [tmp3, c4] = outboundPromotion(React.useState(null), 2);
   const tmp2 = outboundPromotion(React.useState(null), 2);
   [tmp7, c5] = outboundPromotion(onClaim(code[6])(false, 2000), 2);
-  c6 = tmp8;
+  closure_6 = tmp8;
   const tmp6 = outboundPromotion(onClaim(code[6])(false, 2000), 2);
   analyticsLocations = onClaim(code[7])(onClaim(code[8]).USER_SETTINGS_GIFT_INVENTORY).analyticsLocations;
   const items = [null != code, , , , , ];
@@ -53,7 +44,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
   items[4] = onClaim;
   items[5] = analyticsLocations;
   const effect = React.useEffect(() => {
-    if (!c6) {
+    if (!closure_6) {
       let obj = onCancel(code[9]);
       obj = { promotionId: null, promotionTitle: null, partnerId: null, analyticsLocations: null };
       ({ id: obj2[0], outboundTitle: obj2[1], partnerId: obj2[2] } = outboundPromotion);
@@ -71,7 +62,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     obj[1] = tmp.promotionArt;
     const items1 = [callback(analyticsLocations, obj), , , ];
     let Text = onCancel;
-    const obj1 = { style: null, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
+    obj1 = { style: null, variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.title;
     const intl = onCancel(tmp5[12]).intl;
     obj1[3] = intl.string(onCancel(tmp5[12]).t["23BfZh"]);
@@ -107,7 +98,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     const obj9 = { lineClamp: 1, variant: "text-sm/medium", color: "interactive-text-active", children: null };
     obj9[3] = code;
     obj8[1] = callback(Text(tmp5[11]).Text, obj9);
-    obj7[3] = callback(c6, obj8);
+    obj7[3] = callback(closure_6, obj8);
     const items3 = [callback(closure_8, obj7), ];
     let obj10 = { style: null, children: null };
     obj10[0] = tmp.copyButton;
@@ -130,7 +121,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     obj10 = tmp16(tmp15, obj10);
     items3[1] = obj10;
     obj6[1] = items3;
-    items2[1] = callback2(c6, obj6);
+    items2[1] = callback2(closure_6, obj6);
     Text = Text(tmp5[11]).Text;
     obj6 = tmp16(Text, { variant: "text-sm/medium", color: "text-muted", children: "This code is included in your confirmation email" });
     items2[2] = obj6;
@@ -138,7 +129,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     obj3 = tmp14(tmp15, obj3);
     items1[3] = obj3;
     obj[1] = items1;
-    callback2(c6, obj);
+    callback2(closure_6, obj);
   } else {
     obj = { style: null };
     obj[0] = tmp.loading;
@@ -162,7 +153,7 @@ export default function OutboundPromotionClaimAlert(onCancel) {
     obj12[1] = items4;
     const obj16 = { onCancel: null, confirmText: null, onConfirm: null, cancelText: null, noDefaultButtons: null, children: null };
     obj16[0] = onCancel;
-    const tmp32 = callback2(c6, obj12);
+    const tmp32 = callback2(closure_6, obj12);
     if (null != tmp3) {
       const intl7 = tmp31(tmp5[12]).intl;
       let stringResult1 = intl7.string(tmp31(tmp5[12]).t.cpT0Cq);

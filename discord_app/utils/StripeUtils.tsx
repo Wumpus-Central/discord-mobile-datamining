@@ -1,21 +1,20 @@
 // discord_app/utils/StripeUtils.tsx
-import _typeof from "_typeof";
-import _slicedToArray from "_slicedToArray";
-import _getSystemLocale from "_getSystemLocale";
-import ME from "ME";
-import { _typeof } from "../../_runtime/metro/04473__typeof.js";
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import initialize from "initialize" /* 589 */;
+import _typeof from "_typeof" /* 4473 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function getStripe() {
   if (null != closure_2) {
     let resolved = Promise.resolve(closure_2);
   } else {
     const stripe = _typeof.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((arg0) => {
-      let closure_2 = arg0;
+      closure_2 = arg0;
       return arg0;
     });
     const obj = _typeof;
@@ -25,10 +24,10 @@ function getStripe() {
 function _authenticatePaymentIntentForPaymentId() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (error2 === 2) {
         error2 = 3;
@@ -56,18 +55,18 @@ function _authenticatePaymentIntentForPaymentId() {
               obj[0] = body;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
               let callback;
               closure_1 = undefined;
               closure_2 = undefined;
-              let error;
+              error = undefined;
               let paymentIntent;
               c5 = undefined;
               error2 = undefined;
               paymentIntent = 1;
-              const HTTP = callback(outer1_1[6]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+              const HTTP = callback(closure_1_1[6]).HTTP;
+              obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
               obj1[0] = error2.BILLING_STRIPE_PAYMENT_INTENTS(callback);
               c5 = 2;
               error2 = 1;
@@ -231,7 +230,7 @@ function _authenticatePaymentIntentForPaymentId() {
       }
     })();
   });
-  const _authenticatePaymentIntentForPaymentId = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -241,20 +240,16 @@ function _authenticatePaymentIntentForPaymentId() {
   return applyArgumentsResult;
 }
 ({ Endpoints: closure_6, PaymentSettings: error } = ME);
-const metroImportAll = new require("ME")("StripeUtils");
+let closure_8 = new timestampDefault("StripeUtils");
 let closure_9 = { REQUIRES_PAYMENT_METHOD: "requires_payment_method", REQUIRES_CONFIRMATION: "requires_confirmation", REQUIRES_ACTION: "requires_action", PROCESSING: "processing", CANCELED: "canceled", SUCCEEDED: "succeeded" };
 let closure_12 = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-let tmp3 = new require("ME")("StripeUtils");
-const result = require("_getSystemLocale").fileFinishedImporting("utils/StripeUtils.tsx");
+let tmp3 = new timestampDefault("StripeUtils");
+const result = require("set").fileFinishedImporting("utils/StripeUtils.tsx");
 
 export const validateExpiry = function validateExpiry(arg0) {
-  let tmp4;
-  let tmp5;
   try {
     [tmp4, tmp5] = callback2((function parseExpString(str) {
-      let tmp5;
-      let tmp6;
-      let closure_0 = str;
+      closure_0 = str;
       const parts = str.split(/[.\-/\s]+/g);
       if (2 !== parts.length) {
         let _HermesInternal = HermesInternal;
@@ -324,7 +319,7 @@ export const validateExpiry = function validateExpiry(arg0) {
 export { getStripe };
 export const getStripeClientMode = function getStripeClientMode() {
   if (null == constants.STRIPE.KEY) {
-    tmp3.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", tmp.STRIPE.KEY);
+    logger.warn("getStripeClientMode() called before PaymentSettings.STRIPE.KEY initialized: ", tmp.STRIPE.KEY);
     let str2 = "unknown";
   } else {
     const KEY = tmp.STRIPE.KEY;
@@ -333,7 +328,7 @@ export const getStripeClientMode = function getStripeClientMode() {
       const KEY2 = tmp.STRIPE.KEY;
       let str4 = "test";
       if (!KEY2.startsWith("pk_test")) {
-        tmp3.warn("Unexpected value for Stripe public key: ", tmp.STRIPE.KEY);
+        logger.warn("Unexpected value for Stripe public key: ", tmp.STRIPE.KEY);
         str4 = "unknown";
       }
       str2 = str4;
@@ -408,7 +403,7 @@ export const getStripeElementLocale = function getStripeElementLocale(arg0) {
   return tmp;
 };
 export const useStripeLocale = function useStripeLocale() {
-  const items = [_getSystemLocale];
+  const items = [closure_5];
   return initialize.useStateFromStores(items, () => {
     locale = locale.locale;
     let tmp = table[locale];

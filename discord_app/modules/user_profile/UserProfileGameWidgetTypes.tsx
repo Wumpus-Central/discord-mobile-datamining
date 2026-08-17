@@ -1,7 +1,10 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetTypes.tsx
-import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
-import { findGameWidget } from "WidgetUtils.tsx";
-const items = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES];
+import set from "set" /* 2 */;
+import WidgetType from "WidgetType" /* 5366 */;
+import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
+import findGameWidget from "findGameWidget" /* 5369 */;
+
+const items = [WidgetType.WidgetType.CURRENT_GAMES, WidgetType.WidgetType.FAVORITE_GAMES, WidgetType.WidgetType.WANT_TO_PLAY_GAMES, WidgetType.WidgetType.PLAYED_GAMES];
 let BaseGameWidget;
 class BaseGameWidget {
   constructor(arg0) {
@@ -57,7 +60,7 @@ prototype["getProfileAnalyticsOptions"] = function getProfileAnalyticsOptions() 
 prototype["getProfileEditAnalyticsOptions"] = function getProfileEditAnalyticsOptions() {
   return { widgetEdited: this.type };
 };
-const result = require("findGameWidget").fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTypes.tsx");
 
 export const GAME_WIDGET_TYPES = items;
 export const isGameWidgetType = function isGameWidgetType(arg0) {

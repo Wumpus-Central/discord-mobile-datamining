@@ -1,15 +1,17 @@
 // discord_app/modules/experiments/apex/ApexExperimentStore.tsx
-import _slicedToArray from "_slicedToArray";
-import "_toPropertyKey";
-import fetchFingerprint from "fetchFingerprint";
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { Version } from "../../build_overrides/BuildOverrideUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _toPropertyKeyDefault from "_toPropertyKey" /* 1213 */;
+import Version from "Version" /* 4290 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
+_toPropertyKeyDefault;
 class ApexExperimentStore extends tmp2 {
   constructor() {
-    DispatchBand = undefined;
+    closure_0 = undefined;
     tmp2 = require("dispatcher");
     obj = {
       CONNECTION_OPEN(arg0) {
@@ -57,7 +59,7 @@ class ApexExperimentStore extends tmp2 {
     };
     tmp = new tmp(tmp2, obj, require("dispatcher").DispatchBand.Early, new.target, tmp, tmp2, obj, new.target);
     // ThrowIfThisInitialized (0x7c)
-    DispatchBand = tmp;
+    closure_0 = tmp;
     tmp.track = () => {
       const items = [...arguments];
       const items1 = [...items];
@@ -70,7 +72,7 @@ class ApexExperimentStore extends tmp2 {
 }
 const prototype = ApexExperimentStore.prototype;
 prototype["initialize"] = function initialize(version) {
-  this.waitFor(fetchFingerprint);
+  this.waitFor(closure_4);
   const storedState = this.loadStoredState(version, Version.getBuildOverrideExperiments());
 };
 prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEvent() {
@@ -84,7 +86,7 @@ prototype["maybeEmitDebugExperimentEvent"] = function maybeEmitDebugExperimentEv
     if (0 !== variantId) {
       if (variantId !== self.lastEmittedDebugVariantId) {
         self.lastEmittedDebugVariantId = variantId;
-        let obj = expandEventProperties;
+        let obj = expandEventPropertiesDefault;
         obj = { experiment: "2026-03-debug-experiment", apex_debug_variant: null, experiment_location: "apex_assignments_received" };
         obj[1] = variantId;
         obj.track(AnalyticEvents.EXPERIMENT_APEX_DEBUGGING_EVENT, obj);
@@ -114,7 +116,7 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   }
 };
 const apexExperimentStore = new ApexExperimentStore();
-const result = require("fetchFingerprint").fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/apex/ApexExperimentStore.tsx");
 
 export default apexExperimentStore;
 export const ExperimentAssignment = require("_toPropertyKey").ExperimentAssignment;

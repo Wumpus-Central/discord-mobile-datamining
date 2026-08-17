@@ -1,7 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx
-import { create } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { useSwipeToReplySettingValue } from "../../../../user_settings/defs/native/ChatGestureSettings.tsx";
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+import useSwipeToReplySettingValue from "useSwipeToReplySettingValue" /* 10668 */;
+
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/member_list/SwipeToMemberListUtils.tsx");
 
 export const useIsSwipeToMemberListEnabled = function useIsSwipeToMemberListEnabled() {
   const swipeToReplySettingValue = useSwipeToReplySettingValue.useSwipeToReplySettingValue();

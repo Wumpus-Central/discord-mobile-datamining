@@ -1,17 +1,19 @@
 // discord_app/modules/holidays/HolidayEventsUtils.tsx
-import { HolidayEmojiAnimationType } from "HolidayEventsConfig.tsx";
-const result = require("set").fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
+import set from "set" /* 2 */;
+import HolidayEmojiAnimationTypeDefault from "HolidayEmojiAnimationType" /* 16593 */;
+
+const result = set.fileFinishedImporting("modules/holidays/HolidayEventsUtils.tsx");
 
 export default {
   isEligible() {
-    const isExperimentEligible = HolidayEmojiAnimationType.getIsExperimentEligible();
+    const isExperimentEligible = HolidayEmojiAnimationTypeDefault.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationType;
+    const obj = HolidayEmojiAnimationTypeDefault;
     const tmp = importDefault;
-    return timestamp >= HolidayEmojiAnimationType.startTimeMs && timestamp <= HolidayEmojiAnimationType.endTimeMs && isExperimentEligible;
+    return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
   },
   useHolidaySoundpack() {
-    let obj = HolidayEmojiAnimationType;
+    let obj = HolidayEmojiAnimationTypeDefault;
     const isExperimentEligible = obj.useIsExperimentEligible();
     const timestamp = Date.now();
     let tmp6 = null;
@@ -30,11 +32,11 @@ export default {
     return tmp6;
   },
   useIsEligible() {
-    const isExperimentEligible = HolidayEmojiAnimationType.useIsExperimentEligible();
+    const isExperimentEligible = HolidayEmojiAnimationTypeDefault.useIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationType;
+    const obj = HolidayEmojiAnimationTypeDefault;
     const tmp = importDefault;
-    return timestamp >= HolidayEmojiAnimationType.startTimeMs && timestamp <= HolidayEmojiAnimationType.endTimeMs && isExperimentEligible;
+    return timestamp >= HolidayEmojiAnimationTypeDefault.startTimeMs && timestamp <= HolidayEmojiAnimationTypeDefault.endTimeMs && isExperimentEligible;
   },
   getAppSpinnerSources() {
     const timestamp = Date.now();
@@ -59,9 +61,9 @@ export default {
     return tmp5;
   },
   getHolidaySoundpack() {
-    const isExperimentEligible = HolidayEmojiAnimationType.getIsExperimentEligible();
+    const isExperimentEligible = HolidayEmojiAnimationTypeDefault.getIsExperimentEligible();
     const timestamp = Date.now();
-    const obj = HolidayEmojiAnimationType;
+    const obj = HolidayEmojiAnimationTypeDefault;
     let soundpack = null;
     if (tmp5) {
       soundpack = null;

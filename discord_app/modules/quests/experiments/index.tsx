@@ -1,19 +1,8 @@
 // discord_app/modules/quests/experiments/index.tsx
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
-import { getQuestOrbMultiplierEligibilityForUser } from "../hooks/QuestOrbMultiplierHooks.tsx";
-import { items } from "../utils/QuestOrbMultiplierUtils.tsx";
+import set from "set" /* 2 */;
+import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 10493 */;
+import items from "items" /* 10494 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null };
 obj[1] = { enabled: true };
@@ -42,7 +31,7 @@ const obj10 = { CONTROL: 0, [0]: "CONTROL", NEW_LAYOUT_WITH_SEARCH: 1, [1]: "NEW
 const apexExperiment9 = ApexExperiment.createApexExperiment({ name: "2026-05-bounty-stale-refresh-quest-home", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
 const apexExperiment10 = ApexExperiment.createApexExperiment({ name: "2026-06-quest-home-layout-visual-tweaks", kind: "user", defaultConfig: { enabled: false, variant: obj10.CONTROL }, variations: { 0: { enabled: false, variant: obj10.CONTROL }, 1: { enabled: true, variant: obj10.NEW_LAYOUT_WITH_SEARCH }, 2: { enabled: true, variant: obj10.LARGE_MASK_MARGIN }, 3: { enabled: true, variant: obj10.REMOVE_QUEST_TITLE_SUFFIX }, 4: { enabled: true, variant: obj10.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER } } });
 const apexExperiment11 = ApexExperiment.createApexExperiment({ name: "2026-07-quest-bar-secondary-cta", kind: "user", defaultConfig: { enabled: false, showPlayInstantlyLabel: false }, variations: { 0: { enabled: false, showPlayInstantlyLabel: false }, 1: { enabled: true, showPlayInstantlyLabel: false }, 2: { enabled: true, showPlayInstantlyLabel: true } } });
-const result = require("items").fileFinishedImporting("modules/quests/experiments/index.tsx");
+const result = set.fileFinishedImporting("modules/quests/experiments/index.tsx");
 
 export const VideoEndCardV2Experiment = apexExperiment;
 export const AppStoreBottomSheetOverlayFeatureGate = apexExperiment1;

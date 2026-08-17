@@ -1,49 +1,39 @@
 // discord_app/modules/quests/native/QuestCard.tsx
-import initializeState from "initializeState";
-import openQuestAccessSuspendedBottomSheet from "openQuestAccessSuspendedBottomSheet";
-import importAllResult from "useDeliveredDockCreative";
-import get_ActivityIndicator from "useWindowDimensions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_9 from "initializeState";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import { NOOP } from "sum";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { shared } from "../../../../discord_common/js/packages/design/shared.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _mod1350 from "module_1350" /* 1350 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "initializeState" /* 7453 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
+import { NOOP } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let closure_12;
-let closure_14;
-let closure_6;
-let error;
-let map1;
-const require = arg1;
+require = arg1;
 let c5 = importAllResult;
 ({ Image: closure_6, StyleSheet, View: error } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let result = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const obj = shared;
+  const obj = _mod1350;
   const tmp = require;
-  const internal = Themes.internal;
-  const colors = Themes.colors;
-  const semanticColor = internal.resolveSemanticColor(theme, shared.isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const isThemeDarkResult = shared.isThemeDark(theme);
-  return tmp(4223).hexOpacityToRgba(semanticColor, 0);
+  const internal = ThemesDefault.internal;
+  const colors = ThemesDefault.colors;
+  const semanticColor = internal.resolveSemanticColor(theme, _mod1350.isThemeDark(theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
+  const isThemeDarkResult = _mod1350.isThemeDark(theme);
+  return hexToRgba.hexOpacityToRgba(semanticColor, 0);
 });
 let result1 = createCacheKey.experimental_createToken((theme) => {
   theme = theme.theme;
-  const isThemeDarkResult = shared.isThemeDark(theme);
-  const internal = Themes.internal;
-  const colors = Themes.colors;
+  const isThemeDarkResult = _mod1350.isThemeDark(theme);
+  const internal = ThemesDefault.internal;
+  const colors = ThemesDefault.colors;
   const semanticColor = internal.resolveSemanticColor(theme, isThemeDarkResult ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK);
-  const obj = shared;
+  const obj = _mod1350;
   const tmp = require;
   let num = 0.5;
   if (isThemeDarkResult) {
@@ -52,58 +42,48 @@ let result1 = createCacheKey.experimental_createToken((theme) => {
   return hexToRgba.hexOpacityToRgba(semanticColor, num);
 });
 let result2 = createCacheKey.experimental_createToken((theme) => {
-  const obj = shared;
-  const colors = Themes.colors;
-  return shared.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
+  const obj = _mod1350;
+  const colors = ThemesDefault.colors;
+  return _mod1350.isThemeDark(theme.theme) ? colors.BACKGROUND_SURFACE_HIGH : colors.BLACK;
 });
-const PX_16 = require("Themes").space.PX_16;
+const PX_16 = ThemesDefault.space.PX_16;
 let obj = { container: null, heroContainer: null, heroImg: null, heroLinearGradientOverlay: null, previewBadge: null, previewBadgeText: null, rewardImgContainer: null, heroFooterContainer: null, heroFooterLeftContainer: null, detailsWrapper: null, detailsContainer: null, questName: null, bodyContainer: null, subtitleRow: null, orbWithAmountRow: null, detailsTextContainer: null, buttonContainers: null, equalWidthContainer: null };
-obj = { position: "relative", padding: 0, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginBottom: require("Themes").space.PX_16, overflow: "hidden" };
+obj = { position: "relative", padding: 0, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginBottom: ThemesDefault.space.PX_16, overflow: "hidden" };
 obj[0] = obj;
-createCacheKey = { display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: require("Themes").space.PX_12 };
+createCacheKey = { display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: ThemesDefault.space.PX_12 };
 obj[1] = createCacheKey;
 createCacheKey = { resizeMode: "cover" };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[2] = createCacheKey;
 obj[3] = StyleSheet.absoluteFillObject;
-createCacheKey = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.BACKGROUND_BRAND, padding: require("Themes").space.PX_4, borderRadius: require("Themes").radii.sm };
-let merged1 = Object.assign(require("Themes").shadows.SHADOW_LOW);
+createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm };
+let merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj[4] = createCacheKey;
 obj[5] = { textTransform: "uppercase" };
-createCacheKey = { height: 64, width: 64, marginRight: require("Themes").space.PX_12 };
+createCacheKey = { height: 64, width: 64, marginRight: ThemesDefault.space.PX_12 };
 obj[6] = createCacheKey;
 obj[7] = { display: "flex", flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end" };
 obj[8] = { display: "flex", flexDirection: "column", alignItems: "flex-start" };
-obj[9] = { display: "flex", padding: require("Themes").space.PX_12 };
+obj[9] = { display: "flex", padding: ThemesDefault.space.PX_12 };
 obj[10] = { display: "flex", flexDirection: "row" };
-let obj5 = { display: "flex", padding: require("Themes").space.PX_12 };
-obj[11] = { marginBottom: require("Themes").space.PX_4 };
-let obj6 = { marginBottom: require("Themes").space.PX_4 };
-obj[12] = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_4 };
-let obj7 = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_4 };
-obj[13] = { flexDirection: "row", alignItems: "center", rowGap: require("Themes").space.PX_4, columnGap: require("Themes").space.PX_8, flexWrap: "wrap" };
+let obj5 = { display: "flex", padding: ThemesDefault.space.PX_12 };
+obj[11] = { marginBottom: ThemesDefault.space.PX_4 };
+let obj6 = { marginBottom: ThemesDefault.space.PX_4 };
+obj[12] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
+let obj7 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_4 };
+obj[13] = { flexDirection: "row", alignItems: "center", rowGap: ThemesDefault.space.PX_4, columnGap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
 obj[14] = { flexDirection: "row", alignItems: "center" };
 obj[15] = { flex: 1, justifyContent: "center" };
-let obj8 = { flexDirection: "row", alignItems: "center", rowGap: require("Themes").space.PX_4, columnGap: require("Themes").space.PX_8, flexWrap: "wrap" };
-obj[16] = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: require("Themes").space.PX_12 };
+let obj8 = { flexDirection: "row", alignItems: "center", rowGap: ThemesDefault.space.PX_4, columnGap: ThemesDefault.space.PX_8, flexWrap: "wrap" };
+obj[16] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12 };
 obj[17] = { flexBasis: 0, flexGrow: 1, flexShrink: 1 };
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_17 = createCacheKey.createStyleProperties({ gradientStart: result, gradientMid: result1, gradientEnd: result2 });
-let obj9 = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: require("Themes").space.PX_12 };
+let obj9 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_12 };
 const memoResult = importAllResult.memo((questContent) => {
-  let initializeState;
-  let gradientEnd;
-  let gradientMid;
-  let gradientStart;
-  let isClaimingReward;
-  let isFetchingRewardCode;
-  let quest;
-  let questEnrollmentBlockedUntil;
-  let require;
-  let sourceQuestContent;
   function trackClick(CLAIM_REWARD) {
-    let obj = outer1_0(QUEST_HOME_MOBILE[34]);
-    if (obj.shouldMigrateToAdAnalyticsInterface(outer1_0(QUEST_HOME_MOBILE[34]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_card")) {
+    let obj = closure_1_0(QUEST_HOME_MOBILE[34]);
+    if (obj.shouldMigrateToAdAnalyticsInterface(closure_1_0(QUEST_HOME_MOBILE[34]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_card")) {
       obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
       obj[0] = tmp(tmp2[36]).AdUserActionType.CLICK_INTERNAL;
       obj[1] = tmp(tmp2[37]).AdCreativeType.QUEST;
@@ -125,8 +105,8 @@ const memoResult = importAllResult.memo((questContent) => {
   }
   function showQuestBottomSheet() {
     let obj = quest(QUEST_HOME_MOBILE[39]);
-    obj = { questId: quest.id, questContentPosition: initializeState, sourceQuestContent };
-    obj.openLazy(outer1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[40], QUEST_HOME_MOBILE.paths), "QuestBottomSheet", obj);
+    obj = { questId: quest.id, questContentPosition: closure_3, sourceQuestContent };
+    obj.openLazy(closure_1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[40], QUEST_HOME_MOBILE.paths), "QuestBottomSheet", obj);
   }
   ({ onLayout: require, quest } = questContent);
   let QUEST_HOME_MOBILE = questContent.questContent;
@@ -134,14 +114,14 @@ const memoResult = importAllResult.memo((questContent) => {
     let merged4 = require;
     QUEST_HOME_MOBILE = require(QUEST_HOME_MOBILE[13]).QuestContent.QUEST_HOME_MOBILE;
   }
-  ({ questContentPosition: initializeState, sourceQuestContent } = questContent);
+  ({ questContentPosition: closure_3, sourceQuestContent } = questContent);
   const tmp3 = require;
   const tmp4 = QUEST_HOME_MOBILE;
   let obj = require(QUEST_HOME_MOBILE[14]);
   obj = { quest, location: first.QUEST_HOME_MOBILE };
-  const importAllResult = obj.getQuestLogger(obj);
+  importAllResult = obj.getQuestLogger(obj);
   let obj2 = require(QUEST_HOME_MOBILE[15]);
-  let closure_6 = obj2.useTrackQuestContentClickedWithImpression();
+  closure_6 = obj2.useTrackQuestContentClickedWithImpression();
   let obj3 = require(QUEST_HOME_MOBILE[16]);
   const questTaskDetails = obj3.useQuestTaskDetails(quest);
   let obj4 = require(QUEST_HOME_MOBILE[16]);
@@ -151,23 +131,22 @@ const memoResult = importAllResult.memo((questContent) => {
     enrolledAt = userStatus.enrolledAt;
   }
   const tmp9 = callback2();
-  let closure_7 = tmp9;
+  closure_7 = tmp9;
   const diff = quest(tmp4[17])().width - 2 * hasWatchVideoOnMobileTasks;
-  let mergeGuildAvatar = diff;
   let result = 0.2803030303030303 * diff;
-  let closure_9 = result;
+  closure_9 = result;
   let obj5 = importAllResult;
   let items = [quest, diff, result];
   const memo = importAllResult.useMemo(() => {
-    let obj = outer1_0(QUEST_HOME_MOBILE[18]);
-    const questAsset = obj.getQuestAsset(quest, outer1_0(QUEST_HOME_MOBILE[18]).QuestAssetType.HERO);
+    let obj = closure_1_0(QUEST_HOME_MOBILE[18]);
+    const questAsset = obj.getQuestAsset(quest, closure_1_0(QUEST_HOME_MOBILE[18]).QuestAssetType.HERO);
     obj = {};
     const merged = Object.assign(questAsset);
-    const obj3 = outer1_0(QUEST_HOME_MOBILE[18]);
+    const obj3 = closure_1_0(QUEST_HOME_MOBILE[18]);
     if (questAsset.isAnimated) {
       obj = { assetUrl: null, width: null, height: null };
       obj[0] = questAsset.url;
-      obj[1] = mergeGuildAvatar;
+      obj[1] = closure_8;
       obj[2] = closure_9;
       let url = obj3.getScaledFirstFrameImageUrl(obj);
       if (url == null) {
@@ -176,9 +155,9 @@ const memoResult = importAllResult.memo((questContent) => {
       obj.url = url;
       let tmp5 = obj;
     } else {
-      const obj1 = { assetUrl: null, width: null, height: null };
+      obj1 = { assetUrl: null, width: null, height: null };
       obj1[0] = questAsset.url;
-      obj1[1] = mergeGuildAvatar;
+      obj1[1] = closure_8;
       obj1[2] = closure_9;
       obj.url = obj3.getScaledImageUrl(obj1);
       tmp5 = obj;
@@ -192,31 +171,31 @@ const memoResult = importAllResult.memo((questContent) => {
   let items1 = [quest.id];
   let tmp17 = sourceQuestContent(tmp3Result.useRecyclingState(null, items1), 2);
   first = tmp17[0];
-  const NOOP = tmp19;
+  closure_11 = tmp19;
   let items2 = [tmp17[1]];
   const callback = importAllResult.useCallback(() => {
-    tmp19(false);
+    callback2(false);
   }, items2);
   let items3 = [first, quest.id, QUEST_HOME_MOBILE];
   const effect = importAllResult.useEffect(() => {
     if (false === first) {
       let obj = quest(QUEST_HOME_MOBILE[21]);
       obj = { name: null, tags: null };
-      obj[0] = outer1_0(QUEST_HOME_MOBILE[22]).MetricEvents.QUEST_CONTENT_RENDERING_FAILURE;
+      obj[0] = closure_1_0(QUEST_HOME_MOBILE[22]).MetricEvents.QUEST_CONTENT_RENDERING_FAILURE;
       const _HermesInternal = HermesInternal;
       const items = ["quest_id:" + quest.id, , ];
       const _HermesInternal2 = HermesInternal;
-      items[1] = "quest_content:" + outer1_0(QUEST_HOME_MOBILE[23]).getQuestContentName(QUEST_HOME_MOBILE);
+      items[1] = "quest_content:" + closure_1_0(QUEST_HOME_MOBILE[23]).getQuestContentName(QUEST_HOME_MOBILE);
       items[2] = "reason:asset_loading_error";
       obj[1] = items;
       obj.increment(obj);
-      const obj3 = outer1_0(QUEST_HOME_MOBILE[23]);
+      const obj3 = closure_1_0(QUEST_HOME_MOBILE[23]);
     }
   }, items3);
   const tmp11 = hasWatchVideoOnMobileTasks;
   const tmp16 = product();
   const tmp8 = null != enrolledAt;
-  const items4 = [mergeGuildAvatar];
+  const items4 = [diff];
   const stateFromStores = tmp3(tmp4[24]).useStateFromStores(items4, () => diff.getCurrentUser());
   const tmp3Result1 = tmp3(tmp4[24]);
   const defaultRewardNameWithArticle = tmp3(tmp4[25]).getDefaultRewardNameWithArticle(quest.config, stateFromStores);
@@ -274,18 +253,18 @@ const memoResult = importAllResult.memo((questContent) => {
   product = fetchCollectiblesProduct.product;
   const isFetching = fetchCollectiblesProduct.isFetching;
   const tmp3Result12 = tmp3(tmp4[30]);
-  const items6 = [mergeGuildAvatar];
-  let closure_18 = tmp3(tmp4[24]).useStateFromStores(items6, () => {
+  const items6 = [diff];
+  closure_18 = tmp3(tmp4[24]).useStateFromStores(items6, () => {
     const currentUser = diff.getCurrentUser();
-    let result;
+    result = undefined;
     if (currentUser != null) {
       result = currentUser.hasVerifiedEmailOrPhone();
     }
     return result;
   });
   const tmp3Result13 = tmp3(tmp4[24]);
-  const items7 = [mergeGuildAvatar];
-  let closure_19 = tmp3(tmp4[24]).useStateFromStores(items7, () => {
+  const items7 = [diff];
+  closure_19 = tmp3(tmp4[24]).useStateFromStores(items7, () => {
     const currentUser = diff.getCurrentUser();
     let verified;
     if (currentUser != null) {
@@ -318,7 +297,7 @@ const memoResult = importAllResult.memo((questContent) => {
   obj = {
     disabled: true,
     onPressDisabled() {
-      callback({ questId: quest.id, questContent: QUEST_HOME_MOBILE, questContentCTA: outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent });
+      callback({ questId: quest.id, questContent: QUEST_HOME_MOBILE, questContentCTA: closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.QUEST_ACCESS_SUSPENDED, sourceQuestContent });
       quest(QUEST_HOME_MOBILE[32])();
     }
   };
@@ -328,8 +307,8 @@ const memoResult = importAllResult.memo((questContent) => {
   const getQuestImpressionId = tmp3(tmp4[33]).useGetQuestImpressionId();
   const items8 = [quest, QUEST_HOME_MOBILE, getQuestImpressionId, sourceQuestContent];
   const callback1 = obj5.useCallback(() => {
-    let obj = outer1_0(QUEST_HOME_MOBILE[38]);
-    obj = { content: QUEST_HOME_MOBILE, ctaContent: outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
+    let obj = closure_1_0(QUEST_HOME_MOBILE[38]);
+    obj = { content: QUEST_HOME_MOBILE, ctaContent: closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.OPEN_GAME_LINK, impressionId: getQuestImpressionId(), sourceQuestContent };
     obj.openGameLinkDirectly(quest, obj);
   }, items8);
   const tmp3Result21 = tmp3(tmp4[33]);
@@ -343,7 +322,7 @@ const memoResult = importAllResult.memo((questContent) => {
     if (buttonColors == null) {
       buttonColors = [];
     }
-    let obj1 = { buttonColors: null, confettiColors: null, backgroundColors: null };
+    obj1 = { buttonColors: null, confettiColors: null, backgroundColors: null };
     obj1[0] = buttonColors;
     const styles = product.styles;
     let confettiColors;
@@ -364,9 +343,9 @@ const memoResult = importAllResult.memo((questContent) => {
     obj2[0] = intl4.string(tmp3(tmp4[44]).t.vTgCWx);
     obj2[1] = isFetching;
     obj2[2] = function onPress() {
-      trackClick(outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.SHOW_REWARD);
-      let obj = outer1_0(QUEST_HOME_MOBILE[45]);
-      obj = { product: closure_17, quest, questContent: QUEST_HOME_MOBILE, questContentPosition: initializeState, sourceQuestContent };
+      trackClick(closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.SHOW_REWARD);
+      let obj = closure_1_0(QUEST_HOME_MOBILE[45]);
+      obj = { product: closure_17, quest, questContent: QUEST_HOME_MOBILE, questContentPosition: closure_3, sourceQuestContent };
       obj.viewReward(obj);
     };
     let obj8 = obj2;
@@ -383,10 +362,10 @@ const memoResult = importAllResult.memo((questContent) => {
       }
       obj3[1] = isClaimingReward;
       obj3[2] = function onPress() {
-        trackClick(outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.CLAIM_REWARD);
-        let obj = outer1_0(QUEST_HOME_MOBILE[45]);
-        obj = { product: closure_17, quest, questContent: QUEST_HOME_MOBILE, questContentPosition: initializeState, currentUserHasVerifiedEmailOrPhone: closure_18, currentUserHasVerifiedEmail: closure_19, sourceQuestContent };
-        const result = obj.handleRewardClaimThenView(obj);
+        trackClick(closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.CLAIM_REWARD);
+        let obj = closure_1_0(QUEST_HOME_MOBILE[45]);
+        obj = { product: closure_17, quest, questContent: QUEST_HOME_MOBILE, questContentPosition: closure_3, currentUserHasVerifiedEmailOrPhone: closure_18, currentUserHasVerifiedEmail: closure_19, sourceQuestContent };
+        result = obj.handleRewardClaimThenView(obj);
       };
       let tmp70 = null;
       if (isQuestAccessSuspended) {
@@ -409,7 +388,7 @@ const memoResult = importAllResult.memo((questContent) => {
         tmp68 = isFetching;
       }
       obj4[1] = tmp68;
-      obj4[4] = NOOP;
+      obj4[4] = closure_11;
       obj8 = obj4;
     } else {
       if (tmp31) {
@@ -420,7 +399,7 @@ const memoResult = importAllResult.memo((questContent) => {
           obj6[1] = tmp3(tmp4[46]).getVideoQuestWatchCtaAccessibilityLabel(questTaskDetails);
           obj6[3] = function onPress() {
             logger.log("Navigating to video quest bottom sheet");
-            trackClick(outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.WATCH_VIDEO);
+            trackClick(closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.WATCH_VIDEO);
             if (hasWatchVideoOnMobileTasks) {
               let obj = { questId: null, sourceQuestContent: null };
               obj[0] = quest.id;
@@ -429,9 +408,9 @@ const memoResult = importAllResult.memo((questContent) => {
             } else {
               obj = { questId: null, questContentPosition: null, sourceQuestContent: null };
               obj[0] = quest.id;
-              obj[1] = initializeState;
+              obj[1] = closure_3;
               obj[2] = sourceQuestContent;
-              tmp5(tmp3[39]).openLazy(outer1_0(tmp3[41])(tmp3[40], tmp3.paths), "QuestBottomSheet", obj);
+              tmp5(tmp3[39]).openLazy(closure_1_0(tmp3[41])(tmp3[40], tmp3.paths), "QuestBottomSheet", obj);
               const tmp5Result = tmp5(tmp3[39]);
             }
           };
@@ -450,7 +429,7 @@ const memoResult = importAllResult.memo((questContent) => {
           obj7[0] = primaryCtaCopy;
           obj7[1] = tmp3(tmp4[45]).getPrimaryCtaIcon(quest);
           obj7[3] = function onPress() {
-            trackClick(outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY);
+            trackClick(closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.LAUNCH_MOBILE_ACTIVITY);
             callback3();
           };
           let tmp60 = null;
@@ -470,10 +449,10 @@ const memoResult = importAllResult.memo((questContent) => {
             obj8[0] = intl.string(tmp3(tmp4[44]).t.JiosAn);
             obj8[3] = function onPress() {
               logger.log("Navigating to console connection action sheet");
-              trackClick(outer1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.VIEW_REQUIREMENTS);
+              trackClick(closure_1_0(QUEST_HOME_MOBILE[23]).QuestContentCTA.VIEW_REQUIREMENTS);
               let obj = quest(QUEST_HOME_MOBILE[39]);
-              obj = { questId: quest.id, questContentPosition: initializeState, sourceQuestContent };
-              obj.openLazy(outer1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[40], QUEST_HOME_MOBILE.paths), "QuestBottomSheet", obj);
+              obj = { questId: quest.id, questContentPosition: closure_3, sourceQuestContent };
+              obj.openLazy(closure_1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[40], QUEST_HOME_MOBILE.paths), "QuestBottomSheet", obj);
             };
           }
         }
@@ -493,7 +472,7 @@ const memoResult = importAllResult.memo((questContent) => {
         const tmp3Result27 = tmp3(tmp4[45]);
       }
       obj9[4] = primaryCtaIcon;
-      let closure_25 = callback(function*() {
+      closure_25 = callback(function*() {
         if (dependencyMap === 2) {
           dependencyMap = 3;
           HermesBuiltin.throwTypeError();
@@ -520,17 +499,17 @@ const memoResult = importAllResult.memo((questContent) => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_0 = tmp2;
-                outer1_5.log("Enrolling in quest");
-                outer1_0(10477);
-                let obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
+                closure_0 = tmp2;
+                closure_1_5.log("Enrolling in quest");
+                closure_1_0(10477);
+                obj1 = { questContent: null, questContentCTA: null, sourceQuestContent: null };
                 obj1[0] = dependencyMap;
-                if (!outer1_20) {
-                  if (!outer1_14) {
+                if (!closure_1_20) {
+                  if (!closure_1_14) {
                     let START_QUEST = tmp31(7480).QuestContentCTA.ACCEPT_QUEST;
                   }
                   obj1[1] = START_QUEST;
-                  obj1[2] = outer1_4;
+                  obj1[2] = closure_1_4;
                   obj1 = tmp34(tmp36, obj1);
                   v0 = 1;
                   dependencyMap = 1;
@@ -550,7 +529,7 @@ const memoResult = importAllResult.memo((questContent) => {
                 if (closure_15) {
                   obj = { questId: null, sourceQuestContent: null };
                   obj[0] = v0.id;
-                  obj[1] = openQuestAccessSuspendedBottomSheet;
+                  obj[1] = closure_4;
                   v0(14476)(obj);
                   dependencyMap = 3;
                 }
@@ -620,19 +599,19 @@ const memoResult = importAllResult.memo((questContent) => {
   const items10 = [null != claimedAt, result2, questOrbRewardQuantityForUser, orbQuantityClaimed, defaultRewardName, defaultRewardNameWithArticle, result3, scaledTextLineHeight, tmp9.orbWithAmountRow];
   let tmp87 = isQuestExpiredResult;
   const memo1 = obj5.useMemo(() => {
-    let obj = outer1_0(QUEST_HOME_MOBILE[54]);
+    let obj = closure_1_0(QUEST_HOME_MOBILE[54]);
     let num = 0;
     if (obj.isAndroid()) {
       num = 16 / scaledTextLineHeight;
     }
-    const result = tmp / 8;
+    result = tmp / 8;
     obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary" };
     obj = { width: tmp, height: tmp, marginRight: result, marginTop: 0, transform: items };
     items = [{ translateY: num }];
     if (closure_16) {
       if (result2) {
-        const obj1 = { style: null, children: null };
-        obj1[0] = tmp9.orbWithAmountRow;
+        obj1 = { style: null, children: null };
+        obj1[0] = closure_7.orbWithAmountRow;
         const obj2 = { size: "custom", color: "mobile-text-heading-primary", style: null };
         obj2[2] = obj;
         const items1 = [defaultRewardNameWithArticle(tmp2(tmp3[55]).OrbsIcon, obj2), , ];
@@ -640,7 +619,7 @@ const memoResult = importAllResult.memo((questContent) => {
         const obj4 = { width: null };
         obj4[0] = result;
         obj3[0] = obj4;
-        items1[1] = defaultRewardNameWithArticle(tmp9, obj3);
+        items1[1] = defaultRewardNameWithArticle(closure_7, obj3);
         const obj5 = {};
         const merged = Object.assign(obj);
         const intl4 = tmp2(tmp3[44]).intl;
@@ -653,9 +632,9 @@ const memoResult = importAllResult.memo((questContent) => {
         obj5.children = intl4.format(tmp2(tmp3[44]).t["nLXlh+"], obj6);
         items1[2] = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj5);
         obj1[1] = items1;
-        let tmp14Result = questEnrollmentBlockedUntil(tmp9, obj1);
+        let tmp14Result = questEnrollmentBlockedUntil(closure_7, obj1);
         const tmp30 = questEnrollmentBlockedUntil;
-        const tmp31 = tmp9;
+        const tmp31 = closure_7;
         const tmp33 = defaultRewardNameWithArticle;
       }
       return tmp14Result;
@@ -667,7 +646,7 @@ const memoResult = importAllResult.memo((questContent) => {
       tmp14Result = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj7);
     } else if (result2) {
       const obj8 = { style: null, children: null };
-      obj8[0] = tmp9.orbWithAmountRow;
+      obj8[0] = closure_7.orbWithAmountRow;
       const obj9 = {};
       const merged2 = Object.assign(obj);
       const intl2 = tmp2(tmp3[44]).intl;
@@ -678,7 +657,7 @@ const memoResult = importAllResult.memo((questContent) => {
       obj9.children = intl2.format(tmp2(tmp3[44]).t["0IUT4Y"], obj10);
       const items2 = [defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj9), ];
       const obj11 = { style: null, children: null };
-      obj11[0] = tmp9.orbWithAmountRow;
+      obj11[0] = closure_7.orbWithAmountRow;
       const obj12 = { size: "custom", color: "mobile-text-heading-primary", style: null };
       obj12[2] = obj;
       const items3 = [defaultRewardNameWithArticle(tmp2(tmp3[55]).OrbsIcon, obj12), , ];
@@ -686,7 +665,7 @@ const memoResult = importAllResult.memo((questContent) => {
       const obj14 = { width: null };
       obj14[0] = result;
       obj13[0] = obj14;
-      items3[1] = defaultRewardNameWithArticle(tmp9, obj13);
+      items3[1] = defaultRewardNameWithArticle(closure_7, obj13);
       const obj15 = {};
       const merged3 = Object.assign(obj);
       const intl3 = tmp2(tmp3[44]).intl;
@@ -699,7 +678,7 @@ const memoResult = importAllResult.memo((questContent) => {
       obj15.children = intl3.format(tmp2(tmp3[44]).t["nLXlh+"], obj16);
       items3[2] = defaultRewardNameWithArticle(tmp2(tmp3[56]).Text, obj15);
       obj11[1] = items3;
-      items2[1] = questEnrollmentBlockedUntil(tmp9, obj11);
+      items2[1] = questEnrollmentBlockedUntil(closure_7, obj11);
       obj8[1] = items2;
       tmp14Result = tmp14(tmp15, obj8);
       const tmp17 = defaultRewardNameWithArticle;
@@ -732,9 +711,7 @@ const memoResult = importAllResult.memo((questContent) => {
   const items11 = [quest.id, sourceQuestContent];
   const ctaLink = tmp3(tmp4[28]).getCtaLink(quest.config);
   callback2 = obj5.useCallback(() => {
-    const obj = { questId: quest.id, initialStep: null, sourceQuestContent: null };
-    obj[1] = outer1_0(QUEST_HOME_MOBILE[57]).VideoQuestModalSteps.WATCH_VIDEO;
-    obj[2] = sourceQuestContent;
+    const obj = { questId: quest.id, initialStep: closure_1_0(QUEST_HOME_MOBILE[57]).VideoQuestModalSteps.WATCH_VIDEO, sourceQuestContent };
     quest(QUEST_HOME_MOBILE[47])(obj);
   }, items11);
   const items12 = [launchMobileActivity];
@@ -765,12 +742,12 @@ const memoResult = importAllResult.memo((questContent) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(outer1_2[45]);
-            const result = obj1.dismissOverlayScreens();
+            obj1 = v0(closure_1_2[45]);
+            result = obj1.dismissOverlayScreens();
             c1 = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = outer1_21();
+            obj1[0] = closure_1_21();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -911,15 +888,13 @@ const memoResult = importAllResult.memo((questContent) => {
   obj29[1] = items21;
   obj28[1] = questEnrollmentBlockedUntil(closure_7, obj29);
   items20[1] = defaultRewardNameWithArticle(closure_7, obj28);
-  const obj39 = { direction: "horizontal", align: "center", spacing: null, style: null, children: null };
-  obj39[2] = quest(tmp4[9]).space.PX_8;
-  obj39[3] = tmp9.buttonContainers;
+  const obj39 = { direction: "horizontal", align: "center", spacing: quest(tmp4[9]).space.PX_8, style: tmp9.buttonContainers, children: null };
   const obj40 = { children: null };
   merged4 = hasWatchVideoTasksResult;
   if (tmp47) {
     const obj41 = { grow: true, onPress: null, variant: "secondary", disabled: true, text: null };
-    merged4 = NOOP;
-    obj41[1] = NOOP;
+    merged4 = closure_11;
+    obj41[1] = closure_11;
     const intl11 = tmp3(tmp4[44]).intl;
     obj41[4] = intl11.string(tmp3(tmp4[44]).t.V293qn);
     const items25 = [tmp92(tmp3(tmp4[69]).Button, obj41), ];
@@ -927,7 +902,7 @@ const memoResult = importAllResult.memo((questContent) => {
     obj42[0] = function onPress() {
       let obj = quest(QUEST_HOME_MOBILE[39]);
       obj = { questId: quest.id, questEnrollmentBlockedUntil, sourceQuestContent };
-      obj.openLazy(outer1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[70], QUEST_HOME_MOBILE.paths), "QuestEnrollmentBlockedBottomSheet", obj);
+      obj.openLazy(closure_1_0(QUEST_HOME_MOBILE[41])(QUEST_HOME_MOBILE[70], QUEST_HOME_MOBILE.paths), "QuestEnrollmentBlockedBottomSheet", obj);
     };
     const intl12 = tmp3(tmp4[44]).intl;
     obj42[2] = intl12.string(tmp3(tmp4[44]).t.vY9GgG);
@@ -994,7 +969,7 @@ const memoResult = importAllResult.memo((questContent) => {
   obj12[2] = questEnrollmentBlockedUntil(tmp10Result, obj13);
   return defaultRewardNameWithArticle(tmp3(tmp4[58]).Card, obj12);
 });
-let result3 = require("noop").fileFinishedImporting("modules/quests/native/QuestCard.tsx");
+let result3 = require("set").fileFinishedImporting("modules/quests/native/QuestCard.tsx");
 
 export const ESTIMATED_CARD_HEIGHT = 348;
 export const QuestCard = memoResult;

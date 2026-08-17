@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx
-import noop from "noop";
-import { GUILD_FEATURE_TO_PERK } from "BoostedGuildTiers";
+import closure_3 from "noop" /* 19 */;
+import { GUILD_FEATURE_TO_PERK } from "BoostedGuildTiers" /* 4262 */;
 
 const require = arg1;
-const result = require("getGuildTierFromGuild").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");
 
 export default function useGuildPowerupLevelPerks(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = { includeEmojis: true, includeStickers: true, includeSoundboards: true };
@@ -17,7 +17,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
   let items = [arg0, includeEmojis, includeStickers, includeSoundboards];
   return includeSoundboards.useMemo(() => {
     const items = [];
-    const lib = outer1_4();
+    const lib = closure_1_4();
     if (includeEmojis) {
       let obj = { perkIcon: null, description: null };
       obj[0] = lib(includeStickers[2]).PerkIcons.EMOJI;
@@ -32,7 +32,7 @@ export default function useGuildPowerupLevelPerks(arg0) {
       obj = { perkIcon: null, description: null };
       obj[0] = lib(includeStickers[2]).PerkIcons.STICKER;
       const intl2 = lib(includeStickers[3]).intl;
-      const obj1 = { totalStickers: null, additionalStickers: null };
+      obj1 = { totalStickers: null, additionalStickers: null };
       obj1[0] = lib.features.total_sticker_slots;
       obj1[1] = lib.features.additional_sticker_slots;
       obj[1] = intl2.formatToPlainString(includeEmojis(includeStickers[4]).ZEvvPz, obj1);

@@ -1,9 +1,11 @@
 // discord_app/modules/experiments/ExperimentEmbedUtils.tsx
-import { getFirstEligibleUserExperiment } from "../../utils/ExperimentUtils.tsx";
-import { getExperimentVariantsForDevTools } from "devtools/ExperimentDevToolsUtils.tsx";
-import { trackExposureToExperiment } from "ExperimentManager.tsx";
+import set from "set" /* 2 */;
+import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
+import getFirstEligibleUserExperimentDefault from "getFirstEligibleUserExperiment" /* 4365 */;
+import getExperimentVariantsForDevTools from "getExperimentVariantsForDevTools" /* 4366 */;
+
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = require("getExperimentVariantsForDevTools").fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
+const result = set.fileFinishedImporting("modules/experiments/ExperimentEmbedUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const isExperimentEmbedURL = function isExperimentEmbedURL(target) {
@@ -47,7 +49,7 @@ export const getExperimentServerAssignmentLabel = function getExperimentServerAs
     if (null != system) {
       const system2 = system.system;
       if (trackExposureToExperiment.ExperimentSystem.LEGACY === system2) {
-        return getFirstEligibleUserExperiment.getExperimentBucketName(experimentServerAssignment.bucket);
+        return getFirstEligibleUserExperimentDefault.getExperimentBucketName(experimentServerAssignment.bucket);
       } else if (tmp4(4296).ExperimentSystem.APEX === system2) {
         const _HermesInternal = HermesInternal;
         return "Variant " + experimentServerAssignment.variantId;

@@ -1,34 +1,27 @@
 // discord_app/modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx
-import Background from "Background";
-import { View } from "items";
-import ME from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { ActionSheetHeaderBar } from "../../../design/components/Sheet/native/ActionSheetHeaderBar.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { usePremiumFeatureUpsellGetNitro } from "../../premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import Text from "Text" /* 4734 */;
+import Button2 from "Button" /* 4745 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 7124 */;
+import usePremiumFeatureUpsellGetNitroDefault from "usePremiumFeatureUpsellGetNitro" /* 9395 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Footer(eligibleToReceivePremiumRewards) {
-  let loading;
-  let onPress;
   const callback = React.useCallback(() => {
     let obj = callback2(4342);
     obj.hideActionSheet();
     obj = { screen: constants2.PREMIUM };
     callback(7360).openUserSettings(obj);
   }, []);
-  const tmp = createCacheKey();
-  ({ loading, onPress } = usePremiumFeatureUpsellGetNitro(false, callback, constants.QUEST_ORB_MULTIPLIER_PERK_INFO));
+  const tmp = callback3();
+  ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(false, callback, constants.QUEST_ORB_MULTIPLIER_PERK_INFO));
   const callback1 = React.useCallback(() => {
     callback2(4342).hideActionSheet();
     const obj = callback2(4342);
@@ -39,7 +32,7 @@ function Footer(eligibleToReceivePremiumRewards) {
   const callback2 = React.useCallback(() => {
     callback2(4342).hideActionSheet();
   }, []);
-  const Button = Button.Button;
+  const Button = Button2.Button;
   if (eligibleToReceivePremiumRewards.eligibleToReceivePremiumRewards) {
     obj = { size: "lg", text: null, variant: "primary", onPress: null };
     const intl3 = tmp10(1236).intl;
@@ -54,7 +47,7 @@ function Footer(eligibleToReceivePremiumRewards) {
     obj[1] = items;
     let tmp11 = obj;
   } else {
-    const obj1 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
+    obj1 = { size: "lg", variant: "primary", text: null, onPress: null, loading: null };
     const intl = tmp10(1236).intl;
     obj1[2] = intl.string(tmp10(1236).t.pj0XBN);
     obj1[3] = onPress;
@@ -71,15 +64,12 @@ function Footer(eligibleToReceivePremiumRewards) {
   return closure_9(View, tmp11);
 }
 function SheetContent(arg0) {
-  let body;
-  let eligibleToReceivePremiumRewards;
-  let title;
   ({ title, body, eligibleToReceivePremiumRewards } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { children: null };
   const items = [callback(ActionSheetHeaderBar.ActionSheetHeaderBar, { variant: "floating" }), ];
   obj = { style: items1, children: null };
-  items1 = [tmp.container, { marginBottom: useSafeAreaInsets().bottom }];
+  items1 = [tmp.container, { marginBottom: useSafeAreaInsetsDefault().bottom }];
   obj = { style: tmp.contentContainer, children: null };
   const items2 = [callback(View, { style: tmp.riveContainer, children: callback(ManaContext.NitroQuestOrbsMultiplierRive, {}) }), , , ];
   const items3 = [, ];
@@ -94,26 +84,26 @@ function SheetContent(arg0) {
   return callback2(closure_10, obj);
 }
 ({ AnalyticsPages: c5, HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
-({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 let closure_11 = { marginBottom: 0 };
 createCacheKey = { container: null, contentContainer: null, text: null, buttonContainer: null, title: null, riveContainer: null };
-createCacheKey = { alignItems: "center", paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignItems: "center", width: "100%", marginTop: require("Themes").space.PX_48 };
-let obj1 = { alignItems: "center", width: "100%", marginTop: require("Themes").space.PX_48 };
-createCacheKey[2] = { textAlign: "center", paddingHorizontal: require("Themes").space.PX_24, paddingBottom: require("Themes").space.PX_16 };
-let obj2 = { textAlign: "center", paddingHorizontal: require("Themes").space.PX_24, paddingBottom: require("Themes").space.PX_16 };
-createCacheKey[3] = { width: "100%", gap: require("Themes").space.PX_12, marginVertical: require("Themes").space.PX_16 };
+createCacheKey[1] = { alignItems: "center", width: "100%", marginTop: ThemesDefault.space.PX_48 };
+let obj1 = { alignItems: "center", width: "100%", marginTop: ThemesDefault.space.PX_48 };
+createCacheKey[2] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_16 };
+let obj2 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { width: "100%", gap: ThemesDefault.space.PX_12, marginVertical: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { textTransform: "uppercase", textAlign: "center", lineHeight: 34, paddingHorizontal: 0 };
 createCacheKey[5] = { width: "100%", height: 160 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj3 = { width: "100%", gap: require("Themes").space.PX_12, marginVertical: require("Themes").space.PX_16 };
-let result = require("ME").fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const obj3 = { width: "100%", gap: ThemesDefault.space.PX_12, marginVertical: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestOrbMultiplierPerkInfoActionSheet.tsx");
 
 export default function QuestOrbMultiplierPerkInfoActionSheet(multiplier) {
   multiplier = multiplier.multiplier;
   const orbMultiplierEligibility = multiplier.orbMultiplierEligibility;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = multiplier(10494);
   const result = obj.shouldReceiveQuestOrbMultiplier(orbMultiplierEligibility);
   dependencyMap = result;

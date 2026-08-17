@@ -1,10 +1,11 @@
 // discord_app/modules/content_inventory/ContentInventoryActivityStore.tsx
-import sortActivity from "sortActivity";
-import map from "map";
-import { ActivityTypes } from "ME";
-import { Store } from "initialize";
-import set from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "sortActivity" /* 4559 */;
+import closure_4 from "map" /* 9045 */;
+import { ActivityTypes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
 let require = arg1;
 function entryToKey(content) {
@@ -19,22 +20,22 @@ function getMatchingActivity(author_type) {
       if (author_type.author_type === tmp(9062).ContentInventoryAuthorType.USER) {
         activities = activities.getActivities(author_type.author_id);
         found = activities.find((type) => {
-          if (type.type === outer1_5.PLAYING) {
+          if (type.type === closure_1_5.PLAYING) {
             if (obj.isApplicationEntry(author_type)) {
-              let result = author_type(outer1_2[7]).isMatchingApplicationActivity(author_type, type);
-              const tmp2Result = author_type(outer1_2[7]);
+              let result = author_type(closure_1_2[7]).isMatchingApplicationActivity(author_type, type);
+              const tmp2Result = author_type(closure_1_2[7]);
             }
             return result;
           }
-          let tmp5 = type.type !== outer1_5.LISTENING;
+          let tmp5 = type.type !== closure_1_5.LISTENING;
           if (!tmp5) {
-            tmp5 = !author_type(outer1_2[6]).isListenedSessionEntry(author_type);
-            const obj2 = author_type(outer1_2[6]);
+            tmp5 = !author_type(closure_1_2[6]).isListenedSessionEntry(author_type);
+            const obj2 = author_type(closure_1_2[6]);
           }
           result = !tmp5;
           if (!tmp5) {
-            result = author_type(outer1_2[7]).isMatchingListeningActivity(author_type, type);
-            const obj3 = author_type(outer1_2[7]);
+            result = author_type(closure_1_2[7]).isMatchingListeningActivity(author_type, type);
+            const obj3 = author_type(closure_1_2[7]);
           }
         });
       }
@@ -75,7 +76,7 @@ function detectMatchingActivityForEntries(entries) {
 }
 function handlePresenceUpdates() {
   let flag = false;
-  const set = new Set();
+  set = new Set();
   const set1 = new Set();
   feeds = feeds.getFeeds();
   const values = feeds.values();
@@ -87,7 +88,7 @@ function handlePresenceUpdates() {
     if (iter === undefined) {
       let tmp15 = importDefault;
       let tmp16 = dependencyMap;
-      let obj2 = apply;
+      let obj2 = applyDefault;
       let items = [];
       let tmp17 = items;
       let tmp18 = set1;
@@ -129,15 +130,16 @@ function handlePresenceUpdates() {
 let items = [require("ContentInventoryEntryType").ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();
+const Store = initializeDefault.Store;
 class ContentInventoryActivityStore extends Store {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.canRenderContent = function canRenderContent(content_type) {
-      const isEntryExpiredResult = applyArgumentsResult(outer1_2[4]).isEntryExpired(content_type);
+      const isEntryExpiredResult = applyArgumentsResult(closure_1_2[4]).isEntryExpired(content_type);
       let tmp2 = !isEntryExpiredResult;
       if (!isEntryExpiredResult) {
-        const hasItem = outer1_6.has(content_type.content_type);
+        const hasItem = closure_1_6.has(content_type.content_type);
         let tmp5 = !hasItem;
         if (hasItem) {
           tmp5 = null != applyArgumentsResult.getMatchingActivity(content_type);
@@ -151,8 +153,8 @@ class ContentInventoryActivityStore extends Store {
 }
 const prototype = ContentInventoryActivityStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(map, sortActivity);
-  const items = [sortActivity];
+  this.waitFor(closure_4, closure_3);
+  const items = [closure_3];
   this.syncWith(items, handlePresenceUpdates);
 };
 prototype["getMatchingActivity"] = function getMatchingActivity(author_id) {
@@ -164,7 +166,7 @@ prototype["getMatchingActivity"] = function getMatchingActivity(author_id) {
   return value;
 };
 ContentInventoryActivityStore.displayName = "ContentInventoryActivityStore";
-const contentInventoryActivityStore = new ContentInventoryActivityStore(require("dispatcher"), {
+const contentInventoryActivityStore = new ContentInventoryActivityStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     map.clear();
   },

@@ -1,6 +1,9 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingManager.ios.tsx
-const DCDScreenRecordingManager = require("get ActivityIndicator").NativeModules.DCDScreenRecordingManager;
-const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+
+const DCDScreenRecordingManager = get_ActivityIndicator.NativeModules.DCDScreenRecordingManager;
+const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingManager.ios.tsx");
 
 export default {
   requestPermissions() {

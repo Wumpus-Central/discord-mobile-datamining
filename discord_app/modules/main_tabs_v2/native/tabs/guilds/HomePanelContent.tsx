@@ -1,22 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx
-import { View } from "get ActivityIndicator";
-import withEqualityFn from "withEqualityFn";
-import { DM_WIDTH } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { GuildsBar } from "../../../../guilds_bar/native/GuildsBar.tsx";
-import { context } from "../../../../home_drawer/native/useHomeDrawerGesture.tsx";
+import context from "context" /* 15288 */;
+import _modDef15545 from "module_15545" /* 15545 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "withEqualityFn" /* 15289 */;
+import { DM_WIDTH } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 function HomeDrawerPanelContent() {
   const tmp = callback();
   let obj = panelSpringTranslateX(isClientThemeOrCustomThemeActive[8]);
   const drawerOpen = obj.useDrawerOpen();
-  let obj1 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[6]);
+  obj1 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[6]);
   panelSpringTranslateX = obj1.useHomeDrawerState().panelSpringTranslateX;
   const tmp4 = token1((maxX) => maxX.maxX);
-  const importDefault = tmp4;
+  importDefault = tmp4;
   isClientThemeOrCustomThemeActive = panelSpringTranslateX(isClientThemeOrCustomThemeActive[9]).useIsClientThemeOrCustomThemeActive();
   const obj3 = panelSpringTranslateX(isClientThemeOrCustomThemeActive[9]);
   const tmp2 = isClientThemeOrCustomThemeActive;
@@ -45,9 +45,8 @@ function HomeDrawerPanelContent() {
   const animatedStyle = panelSpringTranslateX(isClientThemeOrCustomThemeActive[12]).useAnimatedStyle(fn);
   obj = { style: items, children: null };
   items = [tmp.container, animatedStyle];
-  obj1 = { style: drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, children: null };
-  obj1[1] = jsx(tmp6(tmp2[7]), { enableHome: true });
-  obj[1] = <token style={drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault}>{null}</token>;
+  obj1 = { style: drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault, children: tmp10(tmp6(tmp2[7]), { enableHome: true }) };
+  obj[1] = <token style={drawerOpen ? tmp.guildsListContainerGestured : tmp.guildLisetContainerDefault}>{tmp10(tmp6(tmp2[7]), { enableHome: true })}</token>;
   return jsx(importDefault(isClientThemeOrCustomThemeActive[12]).View, { style: items, children: null });
 }
 let closure_7 = createCacheKey.createStyles((width) => {
@@ -55,7 +54,7 @@ let closure_7 = createCacheKey.createStyles((width) => {
   return { container: { flex: 1 }, guildsListContainerGestured: { flex: 1 }, guildLisetContainerDefault };
 });
 let closure_8 = { code: "function HomePanelContentTsx1(){const{isGradientTheme,maxX,interpolateColor,panelSpringTranslateX,baseLowest,panelBg}=this.__closure;if(isGradientTheme||maxX<=0){return{backgroundColor:'transparent'};}return{backgroundColor:interpolateColor(panelSpringTranslateX.get(),[0,maxX],[baseLowest,panelBg])};}" };
-const memoResult = require("noop").memo(() => {
+const memoResult = importAllResult.memo(() => {
   const tmp = callback(DM_WIDTH);
   let obj = context;
   if (obj.useIsHomeDrawerEnabled()) {
@@ -65,12 +64,12 @@ const memoResult = require("noop").memo(() => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.guildLisetContainerDefault;
-    obj[1] = tmp3(GuildsBar, {});
+    obj[1] = tmp3(_modDef15545, {});
     obj[1] = tmp3(View, obj);
     tmp3Result = tmp3(View, obj);
   }
   return tmp3Result;
 });
-const result = require("withEqualityFn").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/guilds/HomePanelContent.tsx");
 
 export const HomePanelContent = memoResult;

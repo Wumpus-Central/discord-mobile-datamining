@@ -1,61 +1,39 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesTable.tsx
-import _slicedToArray from "_slicedToArray";
-import PremiumTier0LogoSmall from "PremiumTier0LogoSmall";
-import { View } from "usePremiumPlanPrice";
-import { HorizontalGradient } from "ME";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "preload";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { registerAsset } from "../../../../../_runtime/12909_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import registerAssetDefault from "registerAsset" /* 12908 */;
+import registerAssetDefault2 from "registerAsset" /* 12909 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { HorizontalGradient } from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-let c10;
-let c9;
-let closure_12;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function CheckIcon() {
   let obj = AccessibilityAnnouncer;
   const tmp = importDefault;
-  const tmp3 = useTheme();
-  const unsafe_rawColors = Themes.unsafe_rawColors;
-  const isThemeDarkResult = obj.isThemeDark(useTheme());
-  obj = { source: null, color: null, size: null };
-  obj[0] = tmp(12908);
-  obj[1] = obj.isThemeDark(useTheme()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860;
-  obj[2] = Button.IconSizes.SMALL;
+  const tmp3 = useThemeDefault();
+  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
+  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
+  obj = { source: registerAssetDefault, color: obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_860, size: tmp4(1297).IconSizes.SMALL };
   return callback2(Button.Icon, obj);
 }
 function CloseIcon() {
-  const obj = { source: null, style: null, size: null };
-  obj[0] = registerAsset;
-  obj[1] = callback3().icon;
-  obj[2] = Button.IconSizes.SMALL;
-  return callback2(Button.Icon, obj);
+  const tmp = callback4();
+  return callback2(Button.Icon, { source: registerAssetDefault2, style: callback4().icon, size: Button.IconSizes.SMALL });
 }
 function CellText(children) {
   return callback2(Text.Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.text });
 }
 function Row(withTopBorderRadius) {
-  let column1;
-  let column1AccessibilityLabel;
-  let column2;
-  let column2AccessibilityLabel;
-  let disableHighlightColumn2;
-  let highlightColumn1;
-  let label;
-  let rowName;
-  let rowNumber;
-  let withBottomBorder;
   ({ column2, withBottomBorder } = withTopBorderRadius);
   ({ label, column1 } = withTopBorderRadius);
   if (withBottomBorder === undefined) {
@@ -83,7 +61,7 @@ function Row(withTopBorderRadius) {
   }
   ({ rowName, column1AccessibilityLabel, column2AccessibilityLabel, rowNumber } = withTopBorderRadius);
   let _require;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const tmp2 = callback(React.useState(0), 2);
   _require = tmp2[1];
   let num = 0;
@@ -136,7 +114,7 @@ function Row(withTopBorderRadius) {
   if (null != column1AccessibilityLabel) {
     const intl = _getSystemLocale.intl;
     const intl2 = _getSystemLocale.intl;
-    const obj1 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 1, columnName: null };
+    obj1 = { accessibilityLabel: null, rowNumber: null, rowName: null, columnNumber: 1, columnName: null };
     obj1[0] = column1AccessibilityLabel;
     obj1[1] = rowNumber;
     obj1[2] = rowName;
@@ -202,7 +180,7 @@ function Row(withTopBorderRadius) {
         ({ START: obj9[1], END: obj9[2] } = HorizontalGradient);
         obj6[3] = ["rgba(133, 71, 198, 0.10)", "rgba(184, 69, 193, 0.10)", "rgba(171, 93, 138, 0.10)"];
         obj6[4] = column2;
-        obj4[3] = tmp5(LinearGradient, obj6);
+        obj4[3] = tmp5(LinearGradientDefault, obj6);
       }
       items2[2] = tmp5(tmp4, obj4);
       obj[2] = items2;
@@ -245,33 +223,30 @@ function Row(withTopBorderRadius) {
   obj8[3] = column2;
   obj4 = obj8;
 }
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PRICE_PLACEHOLDER: metroImportAll, PremiumTypes: c9, SubscriptionPlans: c10 } = GuildFeatures);
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PRICE_PLACEHOLDER: closure_8, PremiumTypes: c9, SubscriptionPlans: c10 } = GuildFeatures);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let c13 = "rgba(184, 69, 193, 0.5)";
 createCacheKey = { container: { display: "flex", flex: 1, width: "100%" }, headerText: { textAlign: "center" }, logo: { marginTop: 8, marginBottom: -6 }, table: { marginTop: 16 }, row: { display: "flex", flexDirection: "row" }, bottomBorder: { borderBottomColor: "rgba(106, 116, 128, 0.24)", borderBottomWidth: 1 }, topBorderRadius: null, bottomBorderRadius: null, cell: null, labelCell: null, dataCell: null, themedHighlightedCell: null, nitroHomeHightlightedBorderLeftRight: null, premiumGroupCard: null, priceContainer: null };
-createCacheKey = { borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm };
+createCacheKey = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = createCacheKey;
-createCacheKey[7] = { borderBottomLeftRadius: require("Themes").radii.sm, borderBottomRightRadius: require("Themes").radii.sm };
+createCacheKey[7] = { borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
 createCacheKey[8] = { paddingVertical: 12 };
 createCacheKey[9] = { flex: 1, justifyContent: "flex-start" };
 createCacheKey[10] = { flexDirection: "row", justifyContent: "center", alignItems: "center", width: 82 };
-let obj1 = { borderBottomLeftRadius: require("Themes").radii.sm, borderBottomRightRadius: require("Themes").radii.sm };
+let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
 createCacheKey[11] = { backgroundColor: require("result").PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
 createCacheKey[12] = { borderLeftColor: "rgba(184, 69, 193, 0.5)", borderLeftWidth: 2, borderRightColor: "rgba(184, 69, 193, 0.5)", borderRightWidth: 2 };
 createCacheKey[13] = { marginTop: 16 };
 createCacheKey[14] = { alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_14 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { icon: null };
 let obj2 = { backgroundColor: require("result").PREMIUM_FEATURES_TABLE_HIGHLIGHTED_CELL_BG };
-obj3[0] = { tintColor: require("Themes").colors.TEXT_MUTED };
+obj3[0] = { tintColor: ThemesDefault.colors.TEXT_MUTED };
 let closure_16 = createCacheKey.createStyles(obj3);
-let obj4 = { tintColor: require("Themes").colors.TEXT_MUTED };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesTable.tsx");
+let obj4 = { tintColor: ThemesDefault.colors.TEXT_MUTED };
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesTable.tsx");
 
 export default function PremiumFeaturesTable(highlightNitroBasic) {
-  let isFractionalOnly;
-  let isPremiumGroup;
-  let titleOverride;
   let flag = highlightNitroBasic.highlightNitroBasic;
   if (flag === undefined) {
     flag = false;
@@ -285,7 +260,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
     isPremiumGroup = false;
   }
   const premiumGroupRole = highlightNitroBasic.premiumGroupRole;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const tmp3 = isPremiumGroup;
   const tmp4 = str(isPremiumGroup[9])();
   const tmp5 = str(isPremiumGroup[17])(closure_10.PREMIUM_MONTH_TIER_0);
@@ -307,7 +282,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
   const tmp9 = flag;
   let obj = flag(tmp3[18]);
   const maxFileSizeForPremiumType = obj.getMaxFileSizeForPremiumType(closure_9.TIER_0);
-  let obj1 = flag(tmp3[18]);
+  obj1 = flag(tmp3[18]);
   const maxFileSizeForPremiumType1 = obj1.getMaxFileSizeForPremiumType(closure_9.TIER_2);
   obj = { column1: callback2(tmp2(tmp3[19]), obj), column2: callback2(tmp2(tmp3[20]), obj1), withBottomBorder: false, disableAccessibility: true, hidden: !isPremiumGroup };
   obj = { style: tmp.logo, width: 48, height: 9 };
@@ -490,7 +465,7 @@ export default function PremiumFeaturesTable(highlightNitroBasic) {
       obj.disableHighlightColumn2 = isPremiumGroup;
       obj.variant = str;
       obj.rowNumber = rowNumber;
-      return outer1_11(outer1_19, obj, rowNumber);
+      return closure_1_11(closure_1_19, obj, rowNumber);
     })
   });
   obj25[1] = items2;

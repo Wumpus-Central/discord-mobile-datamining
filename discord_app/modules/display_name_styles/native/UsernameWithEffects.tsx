@@ -1,19 +1,14 @@
 // discord_app/modules/display_name_styles/native/UsernameWithEffects.tsx
-import importAllResult from "PerLetterEffect";
-import get_ActivityIndicator from "useTypographyVariantRemap";
-import { MIN_PRISM_GRADIENT_WIDTH } from "items3";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import ThemesDefault from "Themes" /* 712 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { MIN_PRISM_GRADIENT_WIDTH } from "items3" /* 1934 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ View: c4, processColor: c5, PixelRatio: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
@@ -22,12 +17,12 @@ let closure_12 = createCacheKey.createStyles((color) => {
   const result = 0.04 * arg1;
   const sum = 4 + 0.12 * arg1;
   const value = closure_6.get();
-  const sum1 = dependencyMap[require(undefined, 1935) /* DisplayNameEffect */.DisplayNameEffect.NEON] + 0.04 * arg1;
-  const sum2 = dependencyMap[require(undefined, 1935) /* DisplayNameEffect */.DisplayNameEffect.TOON] + 0.04 * arg1;
-  const sum3 = dependencyMap[require(undefined, 1935) /* DisplayNameEffect */.DisplayNameEffect.POP] + 0.04 * arg1;
+  const sum1 = dependencyMap[DisplayNameEffect.DisplayNameEffect.NEON] + 0.04 * arg1;
+  const sum2 = dependencyMap[DisplayNameEffect.DisplayNameEffect.TOON] + 0.04 * arg1;
+  const sum3 = dependencyMap[DisplayNameEffect.DisplayNameEffect.POP] + 0.04 * arg1;
   const result1 = Math.floor(sum2 / 2) / value;
-  let obj = { color: Themes.colors.WHITE, textShadowColor: color, textShadowRadius: sum, textShadowOffset: { width: 0, height: 0 } };
-  let obj1 = PlatformTypes;
+  let obj = { color: ThemesDefault.colors.WHITE, textShadowColor: color, textShadowRadius: sum, textShadowOffset: { width: 0, height: 0 } };
+  obj1 = PlatformTypes;
   if (obj1.isIOS()) {
     obj = { top: null, left: null, padding: null, marginVertical: null, marginLeft: null, marginRight: null };
     const result2 = -sum1 / 2;
@@ -80,9 +75,9 @@ let closure_12 = createCacheKey.createStyles((color) => {
   const merged1 = Object.assign(obj5);
   obj1[2] = obj3;
   tmp4Result2 = PlatformTypes;
-  obj1[3] = { color: Themes.colors.WHITE };
-  const obj8 = { color: Themes.colors.WHITE, top: null, left: null, marginRight: null };
-  const obj7 = { color: Themes.colors.WHITE };
+  obj1[3] = { color: ThemesDefault.colors.WHITE };
+  const obj8 = { color: ThemesDefault.colors.WHITE, top: null, left: null, marginRight: null };
+  const obj7 = { color: ThemesDefault.colors.WHITE };
   let num6 = 0;
   if (tmp4Result3.isIOS()) {
     num6 = -sum2 / 2;
@@ -101,12 +96,6 @@ let closure_12 = createCacheKey.createStyles((color) => {
   return obj1;
 });
 const memoResult = importAllResult.memo((userName) => {
-  let containerStyle;
-  let defaultColor;
-  let guildId;
-  let ignoreDisabledStylesSetting;
-  let pendingDisplayNameStyles;
-  let userId;
   userName = userName.userName;
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
@@ -122,7 +111,7 @@ const memoResult = importAllResult.memo((userName) => {
   const tmp6 = num(4815)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
   let obj = userName(9454);
   const isDisplayNameStylesFlywheelViewersEnabled = obj.useIsDisplayNameStylesFlywheelViewersEnabled("UsernameWithEffects");
-  let obj1 = userName(1933);
+  obj1 = userName(1933);
   const result = obj1.applyFlywheelViewingFallback(tmp6, isDisplayNameStylesFlywheelViewersEnabled);
   let obj2 = userName(4816);
   const displayNameStylesEnabled = obj2.useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
@@ -183,8 +172,8 @@ const memoResult = importAllResult.memo((userName) => {
   }
   const items = [userName, num];
   const memo = importAllResult.useMemo(() => {
-    const nodeText = userName(outer1_2[18]).getNodeText(userName);
-    let num;
+    const nodeText = userName(closure_1_2[18]).getNodeText(userName);
+    num = undefined;
     if (nodeText != null) {
       num = nodeText.length;
     }
@@ -385,7 +374,7 @@ const memoResult = importAllResult.memo((userName) => {
   obj9.children = userName;
   return callback2(userName(4734).Text, obj9);
 });
-let result = require("items3").fileFinishedImporting("modules/display_name_styles/native/UsernameWithEffects.tsx");
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/UsernameWithEffects.tsx");
 
 export default memoResult;
 export const AVERAGE_FONT_WIDTH_RATIO = 0.6;

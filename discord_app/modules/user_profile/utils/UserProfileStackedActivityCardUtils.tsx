@@ -1,8 +1,10 @@
 // discord_app/modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx
-import { ActivityTypes } from "ME";
-import { apply } from "../../../../_runtime/00012_apply.js";
+import set from "set" /* 2 */;
+import apply from "apply" /* 12 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
+const ActivityTypes = ME.ActivityTypes;
+const result = set.fileFinishedImporting("modules/user_profile/utils/UserProfileStackedActivityCardUtils.tsx");
 
 export const getUserProfileLiveActivities = function getUserProfileLiveActivities(stateFromStores1) {
   return apply.uniqWith(stateFromStores1.filter((type) => {
@@ -18,11 +20,6 @@ export const getUserProfileLiveActivities = function getUserProfileLiveActivitie
   });
 };
 export const getUserProfileStackedActivityCards = function getUserProfileStackedActivityCards(arg0) {
-  let isPrivate;
-  let live;
-  let stream;
-  let voiceActivity;
-  let voiceChannel;
   ({ stream, live } = arg0);
   if (live === undefined) {
     live = [];

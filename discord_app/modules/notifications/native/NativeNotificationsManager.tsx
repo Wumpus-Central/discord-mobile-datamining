@@ -1,10 +1,11 @@
 // discord_app/modules/notifications/native/NativeNotificationsManager.tsx
-import timestamp from "timestamp";
-import { NativeModules } from "get ActivityIndicator";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { AnalyticEvents } from "ME";
-import "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_6 from "generateOldThreadCutoff" /* 4772 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 let require = arg1;
 function getDeliveredNotifications() {
@@ -46,8 +47,8 @@ function _getDeliveredNotifications() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp2;
-            let obj1 = outer1_0(table[6]);
+            closure_0 = tmp2;
+            obj1 = closure_1_0(table[6]);
             if (obj1.shouldClearChannelNotificationsOnAppForeground({ location: "getDeliveredNotifications" })) {
               v0 = 1;
               table = 1;
@@ -63,7 +64,7 @@ function _getDeliveredNotifications() {
           table = 3;
           throw arg1;
         } else if (arg0 !== 2) {
-          let closure_9 = arg1;
+          closure_9 = arg1;
         }
         table = 3;
         obj = { value: null, done: true };
@@ -75,7 +76,7 @@ function _getDeliveredNotifications() {
       }
     }
   });
-  const _getDeliveredNotifications = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -123,11 +124,11 @@ function _updateAndClearStaleNotifications() {
             obj[0] = arg1;
             return obj;
           } else {
-            let c0 = 0;
+            c0 = 0;
             c1 = 1;
             c2 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_10();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_10();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -163,7 +164,7 @@ function _updateAndClearStaleNotifications() {
                       }
                       if (null != message_id) {
                         if (typeof message_id === "string") {
-                          const ackMessageIdResult = generateOldThreadCutoff.ackMessageId(userInfo.userInfo.channel_id);
+                          const ackMessageIdResult = closure_6.ackMessageId(userInfo.userInfo.channel_id);
                           let tmp3 = null != ackMessageIdResult;
                           if (tmp3) {
                             tmp3 = callback(table[8]).compare(ackMessageIdResult, message_id) > 0;
@@ -195,7 +196,7 @@ function _updateAndClearStaleNotifications() {
       }
     }
   });
-  const _updateAndClearStaleNotifications = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -204,8 +205,9 @@ function _updateAndClearStaleNotifications() {
   }
   return applyArgumentsResult;
 }
-const metroImportAll = new require("generateOldThreadCutoff")("NativeNotificationsManager");
+let closure_8 = new timestampDefault("NativeNotificationsManager");
 let closure_9 = [];
+initializeDefault;
 let prototype = function NativeNotificationsManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.handleAck = function handleAck(channelId) {
@@ -221,7 +223,7 @@ let prototype = function NativeNotificationsManager() {
       }
     }
   };
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.handlePostConnectionOpen = callback(function*() {
     if (logger === 2) {
       logger = 3;
@@ -250,27 +252,27 @@ let prototype = function NativeNotificationsManager() {
             return obj;
           } else {
             let map = tmp3;
-            let c3 = tmp6;
-            let closure_0;
-            let closure_1;
+            c3 = tmp6;
+            closure_0 = undefined;
+            closure_1 = undefined;
             let processing_notification_states;
             c3 = undefined;
             map = undefined;
-            let c5;
-            let dependencyMap;
+            c5 = undefined;
+            c6 = undefined;
             c7 = undefined;
             logger = undefined;
             if (obj14.isIOS()) {
-              outer1_12();
+              callback();
             } else {
-              let result = outer1_0.handleSetCallNotificationExperiment();
+              let result = closure_1_0.handleSetCallNotificationExperiment();
             }
-            dependencyMap = 1;
+            c6 = 1;
             function moveAndReadData(notifications_to_track, processing_notifications) {
               const self = this;
               const apply = _moveAndReadData.apply;
               if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
                 applyArgumentsResult = apply(self, arguments);
               }
@@ -279,18 +281,18 @@ let prototype = function NativeNotificationsManager() {
             function _moveAndReadData() {
               const self = this;
               const tmp = _undefined((arg0, arg1) => {
-                let closure_0 = arg0;
-                let closure_1 = arg1;
-                let c4 = 0;
-                let c5 = 0;
+                closure_0 = arg0;
+                closure_1 = arg1;
+                c4 = 0;
+                c5 = 0;
                 return (function*(arg0, arg1) {
-                  let closure_2 = tmp2;
-                  yield callback(outer1_2[11]).removeFile(callback, closure_1);
-                  let obj5 = callback(outer1_2[11]);
+                  closure_2 = tmp2;
+                  yield callback(closure_1_2[11]).removeFile(callback, closure_1);
+                  let obj5 = callback(closure_1_2[11]);
                   yield obj5.moveFile(callback, callback, closure_1);
                   if (2 === tmp5) {
                     if (arg0 === 1) {
-                      let c5 = 3;
+                      c5 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
                       c5 = 3;
@@ -300,8 +302,8 @@ let prototype = function NativeNotificationsManager() {
                     } else {
                       let tmp6 = null;
                       if (arg1) {
-                        const obj2 = callback(outer1_2[11]);
-                        let c4 = 3;
+                        const obj2 = callback(closure_1_2[11]);
+                        c4 = 3;
                         c5 = 1;
                         obj5 = { value: null, done: false };
                         obj5[0] = obj2.readFile(callback, closure_1, "utf8");
@@ -323,10 +325,10 @@ let prototype = function NativeNotificationsManager() {
                   return tmp6;
                 })();
               });
-              const _moveAndReadData = tmp;
+              closure_10 = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                applyArgumentsResult = HermesBuiltin.applyArguments(self);
               } else {
                 applyArgumentsResult = apply(self, arguments);
               }
@@ -344,7 +346,7 @@ let prototype = function NativeNotificationsManager() {
                 return rounded;
               }
             }
-            obj14 = outer1_0(outer1_2[10]);
+            obj14 = closure_1_0(closure_1_2[10]);
             let str2 = "cache";
             if (obj8.isIOS()) {
               str2 = "shared";
@@ -354,15 +356,15 @@ let prototype = function NativeNotificationsManager() {
             processing_notification_states = "processing_notification_states";
             c7 = 2;
             logger = 1;
-            let obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = moveAndReadData("notifications_to_track", "processing_notifications");
             return obj1;
           }
         } else {
           if (1 === tmp9) {
-            dependencyMap = 0;
-            outer1_12 = c5;
-            logger.error("Error tracking push notifications", outer1_12);
+            c6 = 0;
+            callback = c5;
+            logger.error("Error tracking push notifications", callback);
             logger = 3;
           } else {
             if (2 === tmp9) {
@@ -370,15 +372,15 @@ let prototype = function NativeNotificationsManager() {
                 logger = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                dependencyMap = 0;
+                c6 = 0;
                 logger = 3;
                 let obj2 = { value: null, done: true };
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                const outer1_3 = arg1;
-                if (null == outer1_3) {
-                  dependencyMap = 0;
+                closure_3 = arg1;
+                if (null == closure_3) {
+                  c6 = 0;
                   logger = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
@@ -388,16 +390,16 @@ let prototype = function NativeNotificationsManager() {
                     c7 = 3;
                     logger = 1;
                     const obj3 = { value: null, done: false };
-                    obj3[0] = outer1_9("notification_states_to_track", outer1_2);
+                    obj3[0] = closure_1_9("notification_states_to_track", closure_1_2);
                     return obj3;
                   } else {
-                    dependencyMap = outer1_3.trim().split("\n");
+                    dependencyMap = closure_3.trim().split("\n");
                     closure_1 = dependencyMap;
                     closure_1 = dependencyMap;
                     closure_0 = dependencyMap[Symbol.iterator]();
-                    const str = outer1_3.trim();
+                    const str = closure_3.trim();
                   }
-                  obj13 = outer1_0(outer1_2[10]);
+                  obj13 = closure_1_0(closure_1_2[10]);
                 }
               }
             } else if (3 === tmp9) {
@@ -405,18 +407,18 @@ let prototype = function NativeNotificationsManager() {
                 logger = 3;
                 throw arg1;
               } else if (arg0 !== 2) {
-                const outer1_5 = arg1;
-                if (null !== outer1_5) {
-                  const parts = outer1_5.trim().split("\n");
+                closure_5 = arg1;
+                if (null !== closure_5) {
+                  const parts = closure_5.trim().split("\n");
                   const item = parts.forEach((arg0) => {
                     const parsed = JSON.parse(arg0);
                     const result = map.set(parsed._local_uuid, parsed.app_state);
                   });
-                  const str13 = outer1_5.trim();
+                  const str13 = closure_5.trim();
                 }
               }
             } else if (4 === tmp9) {
-              dependencyMap = 1;
+              c6 = 1;
               closure_0.return();
               throw c5;
             } else {
@@ -425,42 +427,42 @@ let prototype = function NativeNotificationsManager() {
                   logger = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  dependencyMap = 0;
+                  c6 = 0;
                   logger = 3;
                   let obj4 = { value: null, done: true };
                   obj4[0] = arg1;
                   return obj4;
                 } else {
-                  const obj12 = outer1_0(outer1_2[10]);
+                  const obj12 = closure_1_0(closure_1_2[10]);
                 }
               } else if (arg0 === 1) {
                 logger = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                dependencyMap = 0;
+                c6 = 0;
                 logger = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
               }
-              dependencyMap = 0;
+              c6 = 0;
             }
-            dependencyMap = 0;
+            c6 = 0;
             logger = 3;
             let obj5 = { value: null, done: true };
             obj5[0] = arg1;
             return obj5;
           }
-          obj1 = outer1_0(outer1_2[11]);
+          obj1 = closure_1_0(closure_1_2[11]);
           c7 = 6;
           logger = 1;
           const obj6 = { value: null, done: false };
-          obj6[0] = obj1.removeFile(outer1_0, outer1_2);
+          obj6[0] = obj1.removeFile(closure_1_0, closure_1_2);
           return obj6;
         }
       } catch (tmp41) {
         c5 = tmp41;
-        if (tmp4 === dependencyMap) {
+        if (tmp4 === c6) {
           logger = tmp2;
           throw tmp41;
         } else if (tmp === tmp43) {
@@ -495,7 +497,7 @@ let prototype = function NativeNotificationsManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const tmp2 = new require("generateOldThreadCutoff")("NativeNotificationsManager");
-let result = require("updateGuildUnreadSentinel").fileFinishedImporting("modules/notifications/native/NativeNotificationsManager.tsx");
+const tmp2 = new timestampDefault("NativeNotificationsManager");
+let result = require("set").fileFinishedImporting("modules/notifications/native/NativeNotificationsManager.tsx");
 
 export default prototype;

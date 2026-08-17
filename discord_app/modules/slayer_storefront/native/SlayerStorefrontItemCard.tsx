@@ -1,20 +1,19 @@
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ ImageBackground: c4, View: c5 } = get_ActivityIndicator);
 createCacheKey = { cardContainer: null, cardImageBackground: null, cardImage: null };
-createCacheKey = { borderRadius: require("Themes").radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 };
+createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", shadowColor: "#000", shadowOffset: { width: 0, height: 4 }, shadowOpacity: 0.3, shadowRadius: 8, elevation: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" };
 createCacheKey[2] = { width: "100%", height: "100%", resizeMode: "cover" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx");
 
 export default function SlayerStorefrontItemCard(sku) {
   sku = sku.sku;
@@ -24,7 +23,7 @@ export default function SlayerStorefrontItemCard(sku) {
   }
   let bound;
   let dominantColorFromImage;
-  let cardImage = createCacheKey();
+  let cardImage = callback();
   let size = num;
   if (typeof num !== "object") {
     let obj = { width: null, height: null };
@@ -61,7 +60,7 @@ export default function SlayerStorefrontItemCard(sku) {
       const items2 = [cardImage.cardContainer, size, sku.containerStyle];
       obj[0] = items2;
       if (null != str2) {
-        const obj1 = { source: null, style: null, children: null };
+        obj1 = { source: null, style: null, children: null };
         const obj2 = { uri: null };
         obj2[0] = str2.toString();
         obj1[0] = obj2;

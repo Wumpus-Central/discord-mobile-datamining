@@ -1,5 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/PremiumRoleUtils.tsx
-const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/PremiumRoleUtils.tsx");
 
 export const isSubscriptionRole = function isSubscriptionRole(role) {
   let prop;

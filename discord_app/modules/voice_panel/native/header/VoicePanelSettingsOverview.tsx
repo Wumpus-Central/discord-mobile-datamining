@@ -1,56 +1,54 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx
-import importAllResult from "useIsSecureFramesUIEnabled";
-import participantFromServer from "participantFromServer";
-import getParticipants from "getParticipants";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import ME from "ME";
-import { isStreamParticipant } from "ParticipantTypes";
-import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08134_registerAsset.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { WrenchIcon } from "../../../../design/components/Icon/native/redesign/generated/WrenchIcon.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowArrow } from "../../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import { TableRowIcon } from "../../../../design/components/TableRow/native/TableRowIcon.native.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import TableRowIcon from "TableRowIcon" /* 6296 */;
+import TableRowArrow from "TableRowArrow" /* 6297 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import registerAssetDefault from "registerAsset" /* 8134 */;
+import useIsUserSecureFramesVerified from "useIsUserSecureFramesVerified" /* 9689 */;
+import useIsSecureFramesUIEnabled from "useIsSecureFramesUIEnabled" /* 9726 */;
+import WrenchIcon from "WrenchIcon" /* 14870 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "participantFromServer" /* 1390 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import closure_6 from "initialize" /* 8683 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "getVoiceStatesForGuild" /* 4545 */;
+import ME from "ME" /* 676 */;
+import { isStreamParticipant } from "ParticipantTypes" /* 4544 */;
+import { SECURE_FRAMES_CALL_VERIFICATION_BOTTOM_SHEET_KEY as closure_17 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_15;
-let closure_18;
-let closure_19;
-let closure_20;
-let map1;
-const require = arg1;
+require = arg1;
 class VoicePanelSettingsOverviewHeader {
   constructor(arg0) {
     ({ guildId, channelId } = global);
-    tmp = Fragment();
+    tmp = closure_21();
     tmp2 = guildId;
     tmp3 = closure_2;
     obj = require("initialize");
     items = [];
-    items[0] = getVoiceStatesForGuild;
+    items[0] = closure_12;
     stateFromStores = obj.useStateFromStores(items, () => {
-      const voiceStatesForChannelAlt = outer1_12.getVoiceStatesForChannelAlt(channelId, closure_0);
+      const voiceStatesForChannelAlt = closure_1_12.getVoiceStatesForChannelAlt(channelId, closure_0);
       const substr = voiceStatesForChannelAlt.slice(0, 2);
       const mapped = substr.map((user) => user.user);
-      return channelId(outer1_2[17])(closure_0, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
+      return channelId(closure_1_2[17])(closure_0, channelId, mapped, voiceStatesForChannelAlt.length - mapped.length);
     });
     obj2 = require("initialize");
     items1 = [];
-    items1[0] = ensureGuildLoaded;
+    items1[0] = closure_8;
     items2 = [];
     items2[0] = channelId;
-    stateFromStores1 = obj2.useStateFromStores(items1, () => outer1_8.getChannel(channelId), items2);
+    stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_8.getChannel(channelId), items2);
     tmp6 = channelId;
     tmp7 = require("computeChannelName")(stateFromStores1);
     obj3 = require("useIsSecureFramesUIEnabled");
@@ -118,9 +116,7 @@ function ShareActivityLogsButton() {
     }
   }, []);
   let obj = { onPress: callback, icon: null, label: null, trailing: null };
-  obj = { IconComponent: null, source: null };
-  obj[0] = WrenchIcon.WrenchIcon;
-  obj[1] = registerAsset;
+  obj = { IconComponent: WrenchIcon.WrenchIcon, source: registerAssetDefault };
   obj[1] = callback(TableRowIcon.TableRowIcon, obj);
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.iQzQs3);
@@ -129,7 +125,7 @@ function ShareActivityLogsButton() {
 }
 function ActivityDebugToggle() {
   let obj = initialize;
-  const items = [initialize];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => showActivitiesDebugOverlay.getShowActivitiesDebugOverlay());
   const callback = importAllResult.useCallback((visible) => {
     let obj = callback(table[35]);
@@ -137,9 +133,7 @@ function ActivityDebugToggle() {
     obj.dispatch(obj);
   }, []);
   obj = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null };
-  obj = { IconComponent: null, source: null };
-  obj[0] = WrenchIcon.WrenchIcon;
-  obj[1] = registerAsset;
+  obj = { IconComponent: WrenchIcon.WrenchIcon, source: registerAssetDefault };
   obj[0] = callback(TableRowIcon.TableRowIcon, obj);
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["qv5/SP"]);
@@ -153,7 +147,7 @@ let c3 = importAllResult;
 ({ AnalyticsSections: map1, Permissions: closure_14, RPC_APPLICATION_LOGGING_CATEGORY: closure_15 } = ME);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let obj = { headerContainer: { alignItems: "center" }, channelTitleWrapper: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginTop: 8 }, channelTitle: { textAlign: "center" }, channelSubtitle: { marginTop: 4, marginHorizontal: 16, textAlign: "center" }, secureFrames: null, secureFramesIcon: null };
-obj = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.sm, marginTop: 8, padding: 4, gap: 4 };
+obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, marginTop: 8, padding: 4, gap: 4 };
 obj[4] = obj;
 obj[5] = { marginStart: 4 };
 let closure_21 = createCacheKey.createStyles(obj);
@@ -168,15 +162,15 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const tmp = guildId;
   const tmp2 = stateFromStores;
   let obj = guildId(stateFromStores[16]);
-  let items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_8.getChannel(channelId));
+  let items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(channelId));
   const DeveloperMode = guildId(stateFromStores[37]).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj1 = guildId(stateFromStores[16]);
-  const items1 = [getVoiceStatesForGuild];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_12.getVoiceStatesForChannelAlt(channelId, guildId));
+  obj1 = guildId(stateFromStores[16]);
+  const items1 = [closure_12];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_12.getVoiceStatesForChannelAlt(channelId, guildId));
   let obj2 = guildId(stateFromStores[16]);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_11];
   const items3 = [stateFromStores, stateFromStores1];
   const stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
     if (null != stateFromStores) {
@@ -186,9 +180,9 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
         const items = [];
         const recipients = obj.recipients;
         for (const item10020 of recipients) {
-          let tmp9 = outer1_11;
+          let tmp9 = closure_1_11;
           let tmp8 = item10020;
-          let user = outer1_11.getUser(item10020);
+          let user = closure_1_11.getUser(item10020);
           let hasItem = null == user;
           let tmp11 = user;
           if (!hasItem) {
@@ -207,7 +201,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     return [];
   }, items3);
   let obj3 = guildId(stateFromStores[16]);
-  const items4 = [_detectH265HardwareDecode];
+  const items4 = [closure_9];
   const stateFromStores2 = obj3.useStateFromStores(items4, () => selfDeaf.isSelfDeaf());
   const callback = stateFromStores1.useCallback(() => {
     channelId(stateFromStores[38]).toggleSelfDeaf();
@@ -216,13 +210,13 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const items5 = [stateFromStores4];
   stateFromStores3 = obj4.useStateFromStores(items5, () => stateFromStores4.getVoiceParticipantsHidden(channelId));
   let obj5 = guildId(stateFromStores[16]);
-  const items6 = [stateFromStores4, fetchFingerprint];
+  const items6 = [stateFromStores4, closure_7];
   stateFromStores4 = obj5.useStateFromStores(items6, () => {
     const selectedParticipant = stateFromStores4.getSelectedParticipant(channelId);
     let id = null;
-    if (outer1_16(selectedParticipant)) {
+    if (closure_1_16(selectedParticipant)) {
       id = null;
-      if (selectedParticipant.stream.ownerId !== outer1_7.getId()) {
+      if (selectedParticipant.stream.ownerId !== closure_1_7.getId()) {
         id = selectedParticipant.id;
       }
     }
@@ -249,7 +243,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const callback4 = stateFromStores1.useCallback(() => {
     let obj = channelId(stateFromStores[42]);
     obj = { channelId };
-    obj.openLazy(guildId(stateFromStores[44])(stateFromStores[43], stateFromStores.paths), outer1_17, obj);
+    obj.openLazy(guildId(stateFromStores[44])(stateFromStores[43], stateFromStores.paths), closure_1_17, obj);
   }, items10);
   const callback5 = stateFromStores1.useCallback(() => {
     if (null != stateFromStores4) {
@@ -265,9 +259,9 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   const items12 = [stateFromStores3];
   const stateFromStores5 = obj8.useStateFromStores(items12, () => null != stateFromStores3.getCurrentEmbeddedActivity(), []);
   let obj9 = guildId(stateFromStores[16]);
-  const items13 = [getUncachedChannelPermissions];
+  const items13 = [closure_10];
   const items14 = [channelId];
-  const stateFromStores6 = obj9.useStateFromStores(items13, () => outer1_10.canWithPartialContext(outer1_14.MANAGE_CHANNELS, { channelId }), items14);
+  const stateFromStores6 = obj9.useStateFromStores(items13, () => closure_1_10.canWithPartialContext(closure_1_14.MANAGE_CHANNELS, { channelId }), items14);
   let obj10 = guildId(stateFromStores[48]);
   const canInviteMembers = obj10.useCanInviteMembers(channelId);
   let obj11 = guildId(stateFromStores[49]);
@@ -308,9 +302,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   }
   children[2] = tmp26Result1;
   obj3 = { onPress: callback3, icon: null, label: null, subLabel: null, trailing: null };
-  obj4 = { IconComponent: null, source: null };
-  obj4[0] = tmp(tmp2[53]).SettingsIcon;
-  obj4[1] = channelId(tmp2[54]);
+  obj4 = { IconComponent: tmp(tmp2[53]).SettingsIcon, source: tmp17(tmp2[54]) };
   obj3[1] = callback(tmp(tmp2[31]).TableRowIcon, obj4);
   const intl3 = tmp(tmp2[24]).intl;
   obj3[2] = intl3.string(tmp(tmp2[24]).t.NiTd0e);
@@ -319,9 +311,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   obj3[4] = callback(tmp(tmp2[34]).TableRowArrow, {});
   const items16 = [callback(tmp(tmp2[30]).TableRow, obj3), , , , ];
   obj5 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj6 = { IconComponent: null, source: null };
-  obj6[0] = tmp(tmp2[55]).HeadphonesSlashIcon;
-  obj6[1] = channelId(tmp2[56]);
+  obj6 = { IconComponent: tmp(tmp2[55]).HeadphonesSlashIcon, source: tmp17(tmp2[56]) };
   obj5[0] = callback(tmp(tmp2[31]).TableRowIcon, obj6);
   const intl5 = tmp(tmp2[24]).intl;
   obj5[1] = intl5.string(tmp(tmp2[24]).t.wjcRFX);
@@ -333,9 +323,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   obj5[5] = intl7.string(tmp(tmp2[24]).t.M3VN2U);
   items16[1] = callback(tmp(tmp2[36]).TableSwitchRow, obj5);
   obj7 = { icon: null, accessibilityHint: null, value: null, onValueChange: null, label: null, subLabel: null };
-  obj8 = { IconComponent: null, source: null };
-  obj8[0] = tmp(tmp2[57]).VideoIcon;
-  obj8[1] = channelId(tmp2[58]);
+  obj8 = { IconComponent: tmp(tmp2[57]).VideoIcon, source: tmp17(tmp2[58]) };
   obj7[0] = callback(tmp(tmp2[31]).TableRowIcon, obj8);
   const intl8 = tmp(tmp2[24]).intl;
   obj7[1] = intl8.string(tmp(tmp2[24]).t.ZMTRyc);
@@ -415,15 +403,11 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
     const items17 = [
       tmp26Result3,
       stateFromStores1.map((user) => {
-          const obj = { user: user.user, selfStream: user.voiceState.selfStream, nick: null, channelId: null, guildId: null, showSecureFramesUI: null, showGameActivity: true };
-          const nick = user.nick;
-          obj[2] = nick;
-          obj[3] = channelId;
-          obj[4] = guildId;
-          obj[5] = isSecureFramesUIEnabled;
-          return outer1_18(guildId(stateFromStores[51]).MemberRowItem, obj, user.user.id);
+          const obj = { user: user.user, selfStream: user.voiceState.selfStream, nick, channelId, guildId, showSecureFramesUI: isSecureFramesUIEnabled, showGameActivity: true };
+          nick = user.nick;
+          return closure_1_18(guildId(stateFromStores[51]).MemberRowItem, obj, user.user.id);
         }),
-      stateFromStoresArray.map((id) => outer1_18(guildId(stateFromStores[51]).MemberRowItem, { user: id, channelId, guildId, notConnected: true, showRing: true }, id.id))
+      stateFromStoresArray.map((id) => closure_1_18(guildId(stateFromStores[51]).MemberRowItem, { user: id, channelId, guildId, notConnected: true, showRing: true }, id.id))
     ];
     obj13[2] = items17;
     tmp24Result = tmp24(tmp(tmp2[51]).VoicePanelFormSection, obj13);
@@ -445,7 +429,7 @@ const memoResult = importAllResult.memo(function VoicePanelSettingsOverview(guil
   children[5] = tmp24Result;
   return closure_19(closure_20, { children });
 });
-let result = require("getParticipants").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsOverview.tsx");
 
 export default memoResult;
 export { VoicePanelSettingsOverviewHeader };

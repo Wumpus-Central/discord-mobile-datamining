@@ -1,4 +1,6 @@
 // discord_app/modules/messages/native/renderer/redactRestrictedContent.tsx
+import set from "set" /* 2 */;
+
 function nodeToText(content) {
   let str = "";
   if (null != content) {
@@ -21,7 +23,7 @@ function nodeToText(content) {
   }
   return str;
 }
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/redactRestrictedContent.tsx");
 function redactRestrictedContent(content) {
   if (null != content) {
     if (typeof content !== "string") {
@@ -95,7 +97,7 @@ function redactRestrictedContent(content) {
             }
           }
         }
-        const obj1 = { type: "inlineCode", content: null };
+        obj1 = { type: "inlineCode", content: null };
         obj1[1] = str4;
         return obj1;
       }

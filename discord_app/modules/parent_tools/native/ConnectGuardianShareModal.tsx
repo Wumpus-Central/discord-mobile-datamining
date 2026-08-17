@@ -1,21 +1,19 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianShareModal.tsx
-import HeaderBackImage from "HeaderBackImage";
-import { View } from "ConnectGuardianCard";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { useOnNewPendingRequest } from "../hooks/useOnNewPendingRequest.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import Modal from "Modal" /* 11115 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 14237 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function ConnectGuardianShareScreen() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = getLinkCode(1236);
   const syncMessages = obj.useSyncMessages(getLinkCode(2335).messagesLoader);
   const callback = React.useCallback(() => {
@@ -24,38 +22,34 @@ function ConnectGuardianShareScreen() {
     let arr = callback(5260);
     arr = arr.pop();
   }, []);
-  let obj1 = getLinkCode(11104);
+  obj1 = getLinkCode(11104);
   getLinkCode = obj1.useFamilyCenterActions({ onError: callback }).getLinkCode;
   let obj2 = getLinkCode(647);
-  const items = [freshTeenActivityWithMap];
+  const items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => store.getLinkCode());
   let obj3 = getLinkCode(647);
-  const items1 = [freshTeenActivityWithMap];
+  const items1 = [closure_5];
   const stateFromStores1 = obj3.useStateFromStores(items1, () => store.getLinkCodeExpiresAt());
   const effect = React.useEffect(() => {
     getLinkCode();
   }, []);
-  useOnNewPendingRequest(ModalActionCreators.pop);
-  obj = { spacing: null, children: null };
-  obj[0] = Themes.space.PX_40;
-  obj = { spacing: null, children: null };
-  obj[0] = Themes.space.PX_8;
+  useOnNewPendingRequestDefault(_modDef5260.pop);
+  obj = { spacing: ThemesDefault.space.PX_40, children: null };
+  obj = { spacing: ThemesDefault.space.PX_8, children: null };
   obj1 = { style: tmp.title, variant: "heading-xl/bold", color: "mobile-text-heading-primary", accessibilityRole: "header", children: null };
   let intl = getLinkCode(1236).intl;
-  obj1[4] = intl.string(messagesProxy.ITlV6p);
+  obj1[4] = intl.string(messagesProxyDefault.ITlV6p);
   const items2 = [callback(getLinkCode(4734).Text, obj1), ];
   obj2 = { style: tmp.body, variant: "text-sm/medium", color: "text-muted", children: null };
   const intl2 = getLinkCode(1236).intl;
-  obj2[3] = intl2.format(messagesProxy.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
+  obj2[3] = intl2.format(messagesProxyDefault.F4GT2S, { link: "https://support.discord.com/hc/articles/14155060633623" });
   items2[1] = callback(getLinkCode(4734).Text, obj2);
   obj[1] = items2;
   const items3 = [callback2(getLinkCode(4733).Stack, obj), ];
-  obj3 = { spacing: null, style: null, children: null };
-  obj3[0] = Themes.space.PX_24;
-  obj3[1] = tmp.cardSection;
+  obj3 = { spacing: ThemesDefault.space.PX_24, style: tmp.cardSection, children: null };
   const obj4 = { style: tmp.qrLabel, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl3 = getLinkCode(1236).intl;
-  obj4[3] = intl3.string(messagesProxy.pojgfk);
+  obj4[3] = intl3.string(messagesProxyDefault.pojgfk);
   const items4 = [callback(getLinkCode(4734).Text, obj4), ];
   if (null != stateFromStores) {
     if (null != stateFromStores1) {
@@ -75,26 +69,28 @@ function ConnectGuardianShareScreen() {
     obj6[0] = tmp11(getLinkCode(5445).ModalContent, obj7);
     return tmp11(getLinkCode(5440).ModalScreen, obj6);
   }
-  const tmp9 = useOnNewPendingRequest;
+  const tmp9 = useOnNewPendingRequestDefault;
   tmp11Result = tmp11(View, { style: tmp.loading, children: callback(getLinkCode(5446).ActivityIndicator, {}) });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { title: { textAlign: "center" }, body: { textAlign: "center" }, qrLabel: { textAlign: "center" }, cardSection: { alignItems: "center" }, loading: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", paddingVertical: require("Themes").space.PX_24 };
+createCacheKey = { alignItems: "center", justifyContent: "center", paddingVertical: ThemesDefault.space.PX_24 };
 createCacheKey[4] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianShareModal.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianShareModal.tsx");
 
 export default function ConnectGuardianShareModal() {
   const memo = React.useMemo(() => {
     let obj = { CONNECT_GUARDIAN_SHARE: null };
-    obj = { headerShown: true, headerLeft: null, headerTitle: null, render: null };
-    obj[1] = callback(6314).getHeaderBackButton(callback2(5260).pop);
-    obj[2] = function headerTitle() {
-      return null;
-    };
-    obj[3] = function render() {
-      return callback(closure_9, {});
+    obj = {
+      headerShown: true,
+      headerLeft: callback(6314).getHeaderBackButton(callback2(5260).pop),
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return callback(closure_9, {});
+      }
     };
     obj[0] = obj;
     return obj;

@@ -1,23 +1,15 @@
 // discord_app/actions/native/GPlayActionCreators.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importDefaultResult from "updateProduct";
-import setGPlayAnalytics from "setGPlayAnalytics";
-import fetchFingerprint from "fetchFingerprint";
-import updateProduct from "updateProduct";
-import ME from "ME";
-import GPlayConnectionState from "GPlayConnectionState";
-import GuildFeatures from "GuildFeatures";
-import { PaymentGateways } from "sum";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_7 from "_objectWithoutProperties" /* 109 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import setGPlayAnalytics from "setGPlayAnalytics" /* 7618 */;
+import closure_11 from "fetchFingerprint" /* 1218 */;
+import closure_12 from "updateProduct" /* 5319 */;
+import ME from "ME" /* 676 */;
+import GPlayConnectionState from "GPlayConnectionState" /* 5320 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { PaymentGateways } from "sum" /* 505 */;
 
-let c10;
-let c9;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let map1;
 let closure_0 = arg1;
 let c1 = importDefault;
 function getPlanIdForProduct(arg0, arg1) {
@@ -52,12 +44,12 @@ function fetchDesktopSubscriptionSkus() {
 function _fetchDesktopSubscriptionSkus() {
   const self = this;
   const tmp = importDefaultResult((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c21 = 0;
-    let c22 = 0;
-    let c20 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c21 = 0;
+    c22 = 0;
+    c20 = 0;
     const iter = (function*(arg0) {
       if (logger === 2) {
         logger = 3;
@@ -101,23 +93,23 @@ function _fetchDesktopSubscriptionSkus() {
                 let flag;
                 throwTypeErrorResult = dependencyMap;
                 if (DEFAULT === undefined) {
-                  throwTypeErrorResult = outer1_15;
-                  DEFAULT = outer1_15.DEFAULT;
+                  throwTypeErrorResult = closure_1_15;
+                  DEFAULT = closure_1_15.DEFAULT;
                 }
                 if (flag === undefined) {
                   flag = false;
                 }
                 let arr;
                 let set;
-                let closure_5;
-                let closure_6;
-                let _objectWithoutProperties;
-                let closure_8;
-                let closure_9;
+                closure_5 = undefined;
+                closure_6 = undefined;
+                closure_7 = undefined;
+                closure_8 = undefined;
+                closure_9 = undefined;
                 let dependencyMap2;
                 let usd;
                 let US;
-                let c13;
+                c13 = undefined;
                 let name;
                 let user;
                 name = undefined;
@@ -138,7 +130,7 @@ function _fetchDesktopSubscriptionSkus() {
               } else if (arg0 === 2) {
                 let num7 = 3;
                 logger = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -165,14 +157,14 @@ function _fetchDesktopSubscriptionSkus() {
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = closure_6;
                   throwTypeErrorResult = flag;
-                  _objectWithoutProperties = callback(closure_6, flag);
-                  throwTypeErrorResult = _objectWithoutProperties;
-                  if (null != _objectWithoutProperties) {
+                  closure_7 = callback(closure_6, flag);
+                  throwTypeErrorResult = closure_7;
+                  if (null != closure_7) {
                     throwTypeErrorResult = first;
                     throwTypeErrorResult = constants;
                     throwTypeErrorResult = amount;
-                    throwTypeErrorResult = _objectWithoutProperties;
-                    closure_8 = amount[_objectWithoutProperties];
+                    throwTypeErrorResult = closure_7;
+                    closure_8 = amount[closure_7];
                     throwTypeErrorResult = undefined;
                     if (closure_8 != null) {
                       throwTypeErrorResult = closure_8.skuId;
@@ -192,8 +184,8 @@ function _fetchDesktopSubscriptionSkus() {
                       throwTypeErrorResult = set.add(closure_8.skuId);
                       throwTypeErrorResult = closure_5;
                       throwTypeErrorResult = closure_6;
-                      throwTypeErrorResult = _objectWithoutProperties;
-                      closure_5[closure_6] = _objectWithoutProperties;
+                      throwTypeErrorResult = closure_7;
+                      closure_5[closure_6] = closure_7;
                     }
                   }
                   user2 = 0;
@@ -275,10 +267,10 @@ function _fetchDesktopSubscriptionSkus() {
                 closure_8 = dependencyMap;
                 let tmp29 = dependencyMap;
                 closure_8 = dependencyMap;
-                _objectWithoutProperties = dependencyMap[Symbol.iterator]();
+                closure_7 = dependencyMap[Symbol.iterator]();
                 let tmp30 = closure_8;
-                let tmp31 = _objectWithoutProperties;
-                while (_objectWithoutProperties !== undefined) {
+                let tmp31 = closure_7;
+                while (closure_7 !== undefined) {
                   throwTypeErrorResult = first;
                   user2 = 4;
                   c13 = tmp32;
@@ -477,8 +469,8 @@ function _fetchDesktopSubscriptionSkus() {
               let tmp5 = amount;
               let tmp6 = amount;
               user2 = 0;
-              let tmp7 = _objectWithoutProperties;
-              _objectWithoutProperties.return();
+              let tmp7 = closure_7;
+              closure_7.return();
               throw amount;
             }
           }
@@ -488,7 +480,7 @@ function _fetchDesktopSubscriptionSkus() {
     iter.next();
     return iter;
   });
-  const _fetchDesktopSubscriptionSkus = tmp;
+  closure_25 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -527,12 +519,12 @@ function _loadUserCountry() {
             return obj;
           } else {
             const callback = tmp5;
-            let closure_0 = tmp2;
+            closure_0 = tmp2;
             closure_0 = undefined;
             table = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_31();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_31();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -558,7 +550,7 @@ function _loadUserCountry() {
       }
     }
   });
-  const _loadUserCountry = tmp;
+  closure_28 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -570,27 +562,27 @@ function _loadUserCountry() {
 function _subscribe() {
   const self = this;
   const tmp = importDefaultResult((arg0, arg1, arg2, arg3, arg4) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let closure_3 = arg3;
-    let closure_4 = arg4;
-    let c10 = 0;
-    let c11 = 0;
-    let c9 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    closure_4 = arg4;
+    c10 = 0;
+    c11 = 0;
+    c9 = 0;
     return (function*(arg0, arg1, arg2, arg3, arg4) {
-      let _objectWithoutProperties = tmp3;
+      closure_7 = tmp3;
       const callback2 = dependencyMap;
       dependencyMap = closure_4;
-      let c9 = 1;
-      yield outer1_21.subscribe(callback, callback2, dependencyMap, message, closure_4);
+      c9 = 1;
+      yield closure_1_21.subscribe(callback, callback2, dependencyMap, message, closure_4);
       if (1 === tmp7) {
         c9 = 0;
         message = closure_8;
-        const obj1 = callback(4054);
+        obj1 = callback(4054);
         const obj2 = { productId: null, oldProductId: null };
         obj2[0] = callback;
-        let c5 = callback2;
+        c5 = callback2;
         if (callback2 == null) {
           c5 = "";
         }
@@ -610,7 +602,7 @@ function _subscribe() {
         obj5[2] = dependencyMap;
         obj5[3] = message.message;
         callback2(698).track(constants.GPLAY_PURCHASE_FAILED, obj5);
-        let c11 = 3;
+        c11 = 3;
         const obj7 = callback2(698);
         const tmp14 = message;
       } else if (arg0 === 1) {
@@ -623,7 +615,7 @@ function _subscribe() {
       return arg1;
     })();
   });
-  const _subscribe = tmp;
+  closure_29 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -635,11 +627,11 @@ function _subscribe() {
 function _verifyPurchase() {
   const self = this;
   const tmp = importDefaultResult((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -667,17 +659,17 @@ function _verifyPurchase() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp3;
+              closure_4 = tmp3;
               let body = tmp5;
               let lib2;
-              let dependencyMap;
+              dependencyMap = undefined;
               body = undefined;
               closure_4 = undefined;
-              let closure_5;
-              const tmp78 = outer1_10.getState().analyticsByProductId[lib.productId];
+              closure_5 = undefined;
+              const tmp78 = closure_1_10.getState().analyticsByProductId[lib.productId];
               lib2 = tmp78;
-              const id = outer1_11.getId();
-              const SubscriptionProductIds = lib(outer1_2[11]).SubscriptionProductIds;
+              const id = closure_1_11.getId();
+              const SubscriptionProductIds = lib(closure_1_2[11]).SubscriptionProductIds;
               const hasItem = SubscriptionProductIds.includes(lib.productId);
               let tmp54 = !hasItem;
               dependencyMap = tmp54;
@@ -696,15 +688,15 @@ function _verifyPurchase() {
                 tmp54 = null == tmp76.gift_style;
               }
               if (tmp54) {
-                let obj8 = lib2(outer1_2[19]);
-                const obj1 = { source: "verifyPurchase", sku_id: null };
+                let obj8 = lib2(closure_1_2[19]);
+                obj1 = { source: "verifyPurchase", sku_id: null };
                 obj1[1] = tmp75.productId;
-                obj8.track(outer1_13.GIFT_INFO_OPTIONS_MISSING, obj1);
+                obj8.track(closure_1_13.GIFT_INFO_OPTIONS_MISSING, obj1);
               }
-              let c6 = 1;
-              const HTTP = lib(outer1_2[20]).HTTP;
+              c6 = 1;
+              const HTTP = lib(closure_1_2[20]).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: false };
-              obj2[0] = outer1_14.VERIFY_PURCHASE;
+              obj2[0] = closure_1_14.VERIFY_PURCHASE;
               let obj3 = { purchase_token: null, user_id: null, package_name: null, subscription_sku_id: null, one_time_purchase_sku_id: null, gift_info_options: null, one_time_purchase_options: null, load_id: null };
               obj3[0] = lib.purchaseToken;
               obj3[1] = id;
@@ -786,7 +778,7 @@ function _verifyPurchase() {
       }
     })();
   });
-  const _verifyPurchase = tmp;
+  closure_30 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -799,18 +791,17 @@ let closure_3 = ["succeededOnlyFields"];
 let closure_4 = ["succeededOnlyFields"];
 let closure_5 = ["succeededOnlyFields"];
 let closure_6 = ["succeededOnlyFields"];
-const metroImportAll = importDefaultResult;
 ({ deleteGPlayAnalytics: c9, useGPlayAnalyticsStore: c10 } = setGPlayAnalytics);
 ({ AnalyticEvents: map1, Endpoints: closure_14, PriceSetAssignmentPurchaseTypes: closure_15 } = ME);
 ({ GPlayBillingResult: closure_16, GPlaySkusType: closure_17 } = GPlayConnectionState);
 ({ PremiumSubscriptionSKUs: closure_18, SubscriptionPlanInfo: closure_19 } = GuildFeatures);
-const BillingManager = require("set").NativeModules.BillingManager;
-let closure_22 = new require("setGPlayAnalytics")("GPlayActionCreators");
+const BillingManager = require("get ActivityIndicator").NativeModules.BillingManager;
+let closure_22 = new timestampDefault("GPlayActionCreators");
 closure_0 = importDefaultResult(() => {
-  let closure_0 = arg0;
-  let c5 = 0;
-  let c6 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
   const iter = (function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -838,11 +829,11 @@ closure_0 = importDefaultResult(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            let dependencyMap = tmp3;
+            dependencyMap = tmp3;
             let callback2 = tmp7;
             let SubscriptionProductIds;
             if (SubscriptionProductIds === undefined) {
-              SubscriptionProductIds = callback(outer1_2[11]).SubscriptionProductIds;
+              SubscriptionProductIds = callback(closure_1_2[11]).SubscriptionProductIds;
             }
             callback2 = undefined;
             c5 = 1;
@@ -855,14 +846,14 @@ closure_0 = importDefaultResult(() => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
             if (null != SubscriptionProductIds) {
               if (0 !== SubscriptionProductIds.length) {
                 callback2(709).dispatch({ type: "GPLAY_FETCH_SUBSCRIPTION_SKUS_START" });
-                let c4 = 1;
+                c4 = 1;
                 const obj13 = callback2(709);
                 if (obj14.isGooglePlayBillingSupported()) {
                   c5 = 4;
@@ -943,10 +934,10 @@ closure_0 = importDefaultResult(() => {
 });
 c1 = true;
 const importDefaultResultResult = importDefaultResult(() => {
-  let closure_0 = [...arguments];
-  let c5 = 0;
-  let c6 = 0;
-  let c4 = 0;
+  closure_0 = [...arguments];
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
   const iter = (function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -974,11 +965,11 @@ const importDefaultResultResult = importDefaultResult(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
-            let closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
             closure_1 = undefined;
             closure_2 = undefined;
-            let closure_3;
+            closure_3 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "ct", done: true };
@@ -989,11 +980,11 @@ const importDefaultResultResult = importDefaultResult(() => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
-            let c4 = 1;
+            c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(callback, 0);
             c5 = 3;
@@ -1006,7 +997,7 @@ const importDefaultResultResult = importDefaultResult(() => {
           c4 = 0;
           c4 = closure_3;
           const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = outer1_16);
+          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1033,7 +1024,7 @@ const importDefaultResultResult = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(outer1_2[16]);
+                let obj3 = callback(closure_1_2[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1046,8 +1037,8 @@ const importDefaultResultResult = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(outer1_2[16]).captureBillingException(c4);
-            const obj5 = callback(outer1_2[16]);
+            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
+            const obj5 = callback(closure_1_2[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1080,10 +1071,10 @@ const importDefaultResultResult = importDefaultResult(() => {
   return iter;
 });
 closure_0 = importDefaultResult(() => {
-  let closure_0 = arg0;
-  let c5 = 0;
-  let c6 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
   let iter = (function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -1111,11 +1102,11 @@ closure_0 = importDefaultResult(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            let dependencyMap = tmp3;
+            dependencyMap = tmp3;
             let callback2 = tmp7;
             let IAPProductIds;
             if (IAPProductIds === undefined) {
-              IAPProductIds = callback(outer1_2[11]).IAPProductIds;
+              IAPProductIds = callback(closure_1_2[11]).IAPProductIds;
             }
             callback2 = undefined;
             c5 = 1;
@@ -1128,20 +1119,20 @@ closure_0 = importDefaultResult(() => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            let obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
             if (null != IAPProductIds) {
               if (0 !== IAPProductIds.length) {
                 callback2(709).dispatch({ type: "GPLAY_FETCH_IN_APP_SKUS_START" });
-                let c4 = 1;
+                c4 = 1;
                 const obj13 = callback2(709);
                 if (obj14.isGooglePlayBillingSupported()) {
                   c5 = 4;
                   c6 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = outer1_21.getIAPSkus(IAPProductIds);
+                  obj2[0] = closure_1_21.getIAPSkus(IAPProductIds);
                   return obj2;
                 } else {
                   c5 = 3;
@@ -1235,10 +1226,10 @@ closure_0 = importDefaultResult(() => {
 });
 c1 = true;
 const importDefaultResultResult1 = importDefaultResult(() => {
-  let closure_0 = [...arguments];
-  let c5 = 0;
-  let c6 = 0;
-  let c4 = 0;
+  closure_0 = [...arguments];
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
   const iter = (function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -1266,11 +1257,11 @@ const importDefaultResultResult1 = importDefaultResult(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
-            let closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
             closure_1 = undefined;
             closure_2 = undefined;
-            let closure_3;
+            closure_3 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "ct", done: true };
@@ -1281,11 +1272,11 @@ const importDefaultResultResult1 = importDefaultResult(() => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
-            let c4 = 1;
+            c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(callback, 0);
             c5 = 3;
@@ -1298,7 +1289,7 @@ const importDefaultResultResult1 = importDefaultResult(() => {
           c4 = 0;
           c4 = closure_3;
           const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = outer1_16);
+          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1325,7 +1316,7 @@ const importDefaultResultResult1 = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(outer1_2[16]);
+                let obj3 = callback(closure_1_2[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1338,8 +1329,8 @@ const importDefaultResultResult1 = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(outer1_2[16]).captureBillingException(c4);
-            const obj5 = callback(outer1_2[16]);
+            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
+            const obj5 = callback(closure_1_2[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1398,10 +1389,10 @@ closure_0 = importDefaultResult(function*() {
           obj[0] = arg1;
           return obj;
         } else {
-          const items = [outer1_26(), outer1_27()];
+          const items = [closure_1_26(), closure_1_27()];
           c1 = 1;
           c0 = 1;
-          const obj1 = { value: null, done: false };
+          obj1 = { value: null, done: false };
           obj1[0] = Promise.all(items);
           return obj1;
         }
@@ -1425,50 +1416,49 @@ closure_0 = importDefaultResult(function*() {
 });
 c1 = false;
 closure_0 = undefined;
-let tmp7 = new require("setGPlayAnalytics")("GPlayActionCreators");
+let tmp7 = new timestampDefault("GPlayActionCreators");
 closure_0 = importDefaultResult((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let c7 = 0;
-  let c8 = 0;
-  let c6 = 0;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c7 = 0;
+  c8 = 0;
+  c6 = 0;
   return (function*(arg0, arg1) {
-    let closure_4 = tmp3;
-    let c3 = tmp5;
-    const callback2 = outer1_10.getState().analyticsByProductId[callback];
-    let c6 = 1;
-    yield outer1_21.purchase(callback, callback2);
+    closure_4 = tmp3;
+    c3 = tmp5;
+    const callback2 = closure_1_10.getState().analyticsByProductId[callback];
+    c6 = 1;
+    yield closure_1_21.purchase(callback, callback2);
     if (1 === tmp8) {
       c6 = 0;
       closure_4 = closure_5;
-      const obj1 = callback(outer1_2[16]);
+      obj1 = callback(succeededOnlyFields[16]);
       const obj2 = { tags: null };
       const obj3 = { productId: null };
       obj3[0] = callback;
       obj2[0] = obj3;
       const result = obj1.captureBillingException(closure_4, obj2);
-      let obj4 = callback2(outer1_2[17]);
+      let obj4 = callback2(succeededOnlyFields[17]);
       obj4 = { title: null, body: null };
-      const intl = callback(outer1_2[18]).intl;
-      obj4[0] = intl.string(callback(outer1_2[18]).t["U+H+kd"]);
-      const intl2 = callback(outer1_2[18]).intl;
-      obj4[1] = intl2.string(callback(outer1_2[18]).t.LFFx5G);
+      const intl = callback(succeededOnlyFields[18]).intl;
+      obj4[0] = intl.string(callback(succeededOnlyFields[18]).t["U+H+kd"]);
+      const intl2 = callback(succeededOnlyFields[18]).intl;
+      obj4[1] = intl2.string(callback(succeededOnlyFields[18]).t.LFFx5G);
       obj4.show(obj4);
-      let closure_2 = callback2;
+      succeededOnlyFields = callback2;
       if (callback2 == null) {
-        closure_2 = {};
+        succeededOnlyFields = {};
       }
-      outer1_2 = closure_2;
-      const succeededOnlyFields = outer1_2.succeededOnlyFields;
-      outer1_3 = v0(outer1_2, outer1_3);
+      succeededOnlyFields = succeededOnlyFields.succeededOnlyFields;
+      closure_3 = v0(succeededOnlyFields, closure_3);
       const obj5 = {};
-      const merged = Object.assign(outer1_3);
+      const merged = Object.assign(closure_3);
       obj5.location = "purchase";
       obj5.product_id = callback;
-      obj5.error = outer1_4.message;
-      callback2(outer1_2[19]).track(outer1_13.GPLAY_PURCHASE_FAILED, obj5);
-      let c8 = 3;
-      const obj7 = callback2(outer1_2[19]);
+      obj5.error = closure_1_4.message;
+      callback2(succeededOnlyFields[19]).track(closure_1_13.GPLAY_PURCHASE_FAILED, obj5);
+      c8 = 3;
+      const obj7 = callback2(succeededOnlyFields[19]);
     } else if (arg0 === 1) {
       c8 = 3;
       throw arg1;
@@ -1506,21 +1496,21 @@ closure_0 = importDefaultResult(function*() {
           obj[0] = arg1;
           return obj;
         } else {
-          let closure_1 = tmp3;
+          closure_1 = tmp3;
           let lib = tmp7;
           if (obj9.isGooglePlayBillingSupported()) {
-            let c3 = 1;
+            c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_21.getUserCountry();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_21.getUserCountry();
             return obj1;
           } else {
-            outer1_22.info("[getUserCountry] Quest: Skipping Google Play country lookup");
+            closure_1_22.info("[getUserCountry] Quest: Skipping Google Play country lookup");
             c5 = 3;
             return { value: null, done: true };
           }
-          obj9 = outer1_0(outer1_2[15]);
+          obj9 = closure_1_0(closure_1_2[15]);
         }
       } else if (1 === tmp7) {
         c3 = 0;
@@ -1591,10 +1581,10 @@ closure_0 = importDefaultResult(function*() {
 });
 c1 = true;
 const importDefaultResultResult3 = importDefaultResult(() => {
-  let closure_0 = [...arguments];
-  let c5 = 0;
-  let c6 = 0;
-  let c4 = 0;
+  closure_0 = [...arguments];
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
   const iter = (function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -1622,11 +1612,11 @@ const importDefaultResultResult3 = importDefaultResult(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
-            let closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
             closure_1 = undefined;
             closure_2 = undefined;
-            let closure_3;
+            closure_3 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "ct", done: true };
@@ -1637,11 +1627,11 @@ const importDefaultResultResult3 = importDefaultResult(() => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
-            let c4 = 1;
+            c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(callback, 0);
             c5 = 3;
@@ -1654,7 +1644,7 @@ const importDefaultResultResult3 = importDefaultResult(() => {
           c4 = 0;
           c4 = closure_3;
           const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = outer1_16);
+          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1681,7 +1671,7 @@ const importDefaultResultResult3 = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(outer1_2[16]);
+                let obj3 = callback(closure_1_2[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1694,8 +1684,8 @@ const importDefaultResultResult3 = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(outer1_2[16]).captureBillingException(c4);
-            const obj5 = callback(outer1_2[16]);
+            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
+            const obj5 = callback(closure_1_2[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1728,10 +1718,10 @@ const importDefaultResultResult3 = importDefaultResult(() => {
   return iter;
 });
 const importDefaultResultResult2 = importDefaultResult(() => {
-  let closure_0 = [...arguments];
-  let c5 = 0;
-  let c6 = 0;
-  let c4 = 0;
+  closure_0 = [...arguments];
+  c5 = 0;
+  c6 = 0;
+  c4 = 0;
   const iter = (function*() {
     if (c6 === 2) {
       c6 = 3;
@@ -1759,11 +1749,11 @@ const importDefaultResultResult2 = importDefaultResult(() => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
-            let closure_1 = tmp7;
+            closure_2 = tmp3;
+            closure_1 = tmp7;
             closure_1 = undefined;
             closure_2 = undefined;
-            let closure_3;
+            closure_3 = undefined;
             c5 = 1;
             c6 = 1;
             return { value: "ct", done: true };
@@ -1774,11 +1764,11 @@ const importDefaultResultResult2 = importDefaultResult(() => {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
-            let c4 = 1;
+            c4 = 1;
             const items = [];
             HermesBuiltin.arraySpread(callback, 0);
             c5 = 3;
@@ -1791,7 +1781,7 @@ const importDefaultResultResult2 = importDefaultResult(() => {
           c4 = 0;
           c4 = closure_3;
           const items1 = [, , , , , ];
-          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = outer1_16);
+          ({ SERVICE_DISCONNECTED: arr[0], SERVICE_TIMEOUT: arr[1], SERVICE_UNAVAILABLE: arr[2], BILLING_UNAVAILABLE: arr[3], FEATURE_NOT_SUPPORTED: arr[4], BILLING_CLIENT_NOT_READY: arr[5] } = closure_1_16);
           const _String = String;
           const mapped = items1.map(String);
           let code;
@@ -1818,7 +1808,7 @@ const importDefaultResultResult2 = importDefaultResult(() => {
           if (!closure_1) {
             if (!closure_2) {
               if (!closure_3) {
-                let obj3 = callback(outer1_2[16]);
+                let obj3 = callback(closure_1_2[16]);
                 const result = obj3.captureBillingException(c4);
               }
               if (closure_1) {
@@ -1831,8 +1821,8 @@ const importDefaultResultResult2 = importDefaultResult(() => {
           }
           const _Math = Math;
           if (Math.random() < 0.01) {
-            const result1 = callback(outer1_2[16]).captureBillingException(c4);
-            const obj5 = callback(outer1_2[16]);
+            const result1 = callback(closure_1_2[16]).captureBillingException(c4);
+            const obj5 = callback(closure_1_2[16]);
           }
         } else if (arg0 === 1) {
           c6 = 3;
@@ -1864,7 +1854,7 @@ const importDefaultResultResult2 = importDefaultResult(() => {
   iter.next();
   return iter;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/native/GPlayActionCreators.tsx");
 
 export const loadSubscriptionSkus = importDefaultResultResult;
 export const loadInAppSkus = importDefaultResultResult1;
@@ -1925,8 +1915,6 @@ export const sendPaymentCompleteAnalytics = function sendPaymentCompleteAnalytic
   }
 };
 export const updatePendingDowngrade = function updatePendingDowngrade(closure_0, c6, c7, c5) {
-  let tmp;
-  let tmp2;
   const items = [store.getProduct(closure_0), store.getProduct(c6)];
   [tmp, tmp2] = items;
   if (null != tmp2) {
@@ -1952,9 +1940,6 @@ export const updatePendingDowngrade = function updatePendingDowngrade(closure_0,
   }
 };
 export const downgradeSubscription = function downgradeSubscription(pendingDowngrade) {
-  let newSubscriptionSkuId;
-  let purchaseToken;
-  let subscriptionId;
   ({ purchaseToken, subscriptionId, newSubscriptionSkuId } = pendingDowngrade);
   const HTTP = callback(530).HTTP;
   return HTTP.post({ url: constants2.DOWNGRADE_SUBSCRIPTION, body: { purchase_token: purchaseToken, subscription_id: subscriptionId, subscription_sku_id: newSubscriptionSkuId }, rejectWithError: false });

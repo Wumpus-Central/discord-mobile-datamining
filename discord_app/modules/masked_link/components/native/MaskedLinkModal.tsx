@@ -1,32 +1,19 @@
 // discord_app/modules/masked_link/components/native/MaskedLinkModal.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { linkCalloutContainer: { maxHeight: 250 }, emphasis: null };
-obj = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[1] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
+const result = set.fileFinishedImporting("modules/masked_link/components/native/MaskedLinkModal.tsx");
 
 export default function MaskedLinkModal(isProtocol) {
-  let authorityPrefix;
-  let handleCancel;
-  let handleConfirm;
-  let hostname;
-  let onCancel;
-  let onConfirm;
-  let protocol;
-  let shouldTrustUrl;
-  let theRestOfTheUrl;
-  let trustUrl;
-  let url;
   isProtocol = isProtocol.isProtocol;
   shouldTrustUrl = undefined;
   let setShouldTrustUrl;
@@ -56,7 +43,7 @@ export default function MaskedLinkModal(isProtocol) {
   } else {
     stringResult = string(t.NcJfJG);
   }
-  const obj1 = { children: null };
+  obj1 = { children: null };
   obj[2] = stringResult;
   const items = [closure_4(shouldTrustUrl(setShouldTrustUrl[5]).AlertActionButton, obj, "confirm"), ];
   const obj2 = { onPress: handleCancel, variant: "secondary", text: null };

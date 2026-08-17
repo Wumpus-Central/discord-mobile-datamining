@@ -1,17 +1,21 @@
 // discord_app/modules/premium/ProductCatalog.tsx
-import GuildFeatures from "GuildFeatures";
-import "set";
-import importDefaultResult1 from "set";
-import { apexExperiment } from "experiments/DenormalizedPerksReadExperiment.tsx";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import create from "create" /* 1940 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 8482 */;
+import getUserMaxFileSize from "getUserMaxFileSize" /* 9366 */;
+import setDefault from "set" /* 13442 */;
+import apexExperimentDefault from "apexExperiment" /* 13443 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import importDefaultResult1 from "set" /* 13441 */;
 
-let PremiumSubscriptionSKUs;
-let c3;
-let c0 = require;
+let closure_0 = require;
 ({ PremiumSubscriptionSKUs, PremiumTypeToActivePremiumSubscriptionSKU: c3 } = GuildFeatures);
-let c4 = new require("EntitlementFeatureNames")("ProductCatalog.tsx");
+let closure_4 = new timestampDefault("ProductCatalog.tsx");
+importDefaultResult1;
 class ProductCatalogFeature extends tmp36 {
   constructor(arg0, arg1) {
-    c0 = undefined;
+    closure_0 = undefined;
     tmp2 = new tmp2(global, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
       if (null != premiumType) {
         if (null != premiumType.premiumType) {
@@ -46,12 +50,12 @@ class ProductCatalogFeature extends tmp36 {
       return false;
     })(tmp, premiumType), require, new.target, tmp2, tmp);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp2;
+    closure_0 = tmp2;
     return tmp2;
   }
 }
-c0 = undefined;
-let object = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.ANIMATED_EMOJIS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+let object = new Object(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_EMOJIS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -85,8 +89,8 @@ let object = new Object(require("EntitlementFeatureNames").EntitlementFeatureNam
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, tmp27, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-object = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.EMOJIS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+object = new Object(EntitlementFeatureNames.EntitlementFeatureNames.EMOJIS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -120,8 +124,8 @@ object = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.E
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object1 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.STICKERS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object1 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STICKERS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -155,8 +159,8 @@ const object1 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object2 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object2 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -190,8 +194,8 @@ const object2 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object3 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.CUSTOM_CALL_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object3 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_CALL_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -225,8 +229,8 @@ const object3 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object4 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.PREMIUM_VOICE_FILTERS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object4 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.PREMIUM_VOICE_FILTERS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -260,8 +264,8 @@ const object4 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object5 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.ANIMATED_AVATAR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object5 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.ANIMATED_AVATAR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -295,8 +299,8 @@ const object5 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object6 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.CUSTOM_DISCRIMINATOR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object6 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_DISCRIMINATOR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -330,8 +334,8 @@ const object6 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object7 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object7 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -365,7 +369,7 @@ const object7 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp = new tmp("profileBadges", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -400,8 +404,8 @@ tmp = new tmp("profileBadges", (premiumType) => (function userHasFeatureByMeritO
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-tmp = new tmp(require("EntitlementFeatureNames").EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+tmp = new tmp(EntitlementFeatureNames.EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -435,7 +439,7 @@ tmp = new tmp(require("EntitlementFeatureNames").EntitlementFeatureNames.PROFILE
   return false;
 })(tmp, premiumType), "custom banner and avatar decoration", tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp1 = new tmp("collectibles", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -470,7 +474,7 @@ tmp1 = new tmp("collectibles", (premiumType) => (function userHasFeatureByMeritO
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp2 = new tmp("appIcons", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -505,8 +509,8 @@ tmp2 = new tmp("appIcons", (premiumType) => (function userHasFeatureByMeritOfPre
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object8 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.CLIENT_THEMES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object8 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CLIENT_THEMES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -540,7 +544,7 @@ const object8 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp3 = new tmp("boostDiscount", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -575,7 +579,7 @@ tmp3 = new tmp("boostDiscount", (premiumType) => (function userHasFeatureByMerit
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp13, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp4 = new tmp("freeBoosts", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -610,8 +614,8 @@ tmp4 = new tmp("freeBoosts", (premiumType) => (function userHasFeatureByMeritOfP
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp12, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object9 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.STREAM_MID_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object9 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_MID_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -645,8 +649,8 @@ const object9 = new Object(require("EntitlementFeatureNames").EntitlementFeature
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, tmp11, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object10 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.STREAM_HIGH_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object10 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.STREAM_HIGH_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -680,8 +684,8 @@ const object10 = new Object(require("EntitlementFeatureNames").EntitlementFeatur
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, tmp10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object11 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object11 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -715,7 +719,7 @@ const object11 = new Object(require("EntitlementFeatureNames").EntitlementFeatur
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, tmp9, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp5 = new tmp("fancyVoiceChannelReactions", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -750,7 +754,7 @@ tmp5 = new tmp("fancyVoiceChannelReactions", (premiumType) => (function userHasF
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp6 = new tmp("installPremiumApplications", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -785,7 +789,7 @@ tmp6 = new tmp("installPremiumApplications", (premiumType) => (function userHasF
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp7 = new tmp("redeemPremiumPerks", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -820,8 +824,8 @@ tmp7 = new tmp("redeemPremiumPerks", (premiumType) => (function userHasFeatureBy
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp5, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object12 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.VIDEO_FILTER_ASSETS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object12 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.VIDEO_FILTER_ASSETS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -855,10 +859,10 @@ const object12 = new Object(require("EntitlementFeatureNames").EntitlementFeatur
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, tmp4, tmp3, tmp2, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = object12;
-importDefaultResult1 = new importDefaultResult1(require("EntitlementFeatureNames").EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, require("getUserMaxFileSize").getUserMaxFileSize);
-c0 = undefined;
-const object13 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = object12;
+importDefaultResult1 = new importDefaultResult1(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, getUserMaxFileSize.getUserMaxFileSize);
+closure_0 = undefined;
+const object13 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -892,8 +896,8 @@ const object13 = new Object(require("EntitlementFeatureNames").EntitlementFeatur
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, object12, new.target, importDefaultResult1, tmp1, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-const object14 = new Object(require("EntitlementFeatureNames").EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+const object14 = new Object(EntitlementFeatureNames.EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -927,7 +931,7 @@ const object14 = new Object(require("EntitlementFeatureNames").EntitlementFeatur
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, object12, new.target, importDefaultResult1, object13, tmp);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp28 = new tmp28("increasedVideoUploadQuality", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -962,7 +966,7 @@ tmp28 = new tmp28("increasedVideoUploadQuality", (premiumType) => (function user
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, object12, new.target, importDefaultResult1, object13, object14);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
+closure_0 = undefined;
 tmp29 = new tmp29("uploadLargeFiles", (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
@@ -997,8 +1001,8 @@ tmp29 = new tmp29("uploadLargeFiles", (premiumType) => (function userHasFeatureB
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, object12, new.target, importDefaultResult1, object13, object14);
 // ThrowIfThisInitialized (0x7c)
-c0 = undefined;
-tmp29 = new tmp29(require("EntitlementFeatureNames").EntitlementFeatureNames.QUEST_ORB_MULTIPLIER, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+closure_0 = undefined;
+tmp29 = new tmp29(EntitlementFeatureNames.EntitlementFeatureNames.QUEST_ORB_MULTIPLIER, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -1032,72 +1036,72 @@ tmp29 = new tmp29(require("EntitlementFeatureNames").EntitlementFeatureNames.QUE
   return false;
 })(tmp, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, new.target, undefined, globalThis, require, dependencyMap, object, object, object1, object2, object3, object4, object5, object6, object7, tmp, tmp, tmp1, tmp2, object8, tmp3, tmp4, object9, object10, object11, tmp5, tmp6, tmp7, object12, new.target, importDefaultResult1, object13, object14);
 // ThrowIfThisInitialized (0x7c)
-c0 = tmp29;
+closure_0 = tmp29;
 let obj = {};
 const items = [object, object, object1, tmp, object12, tmp28, tmp29, tmp2];
-const tmp35 = new require("EntitlementFeatureNames")("ProductCatalog.tsx");
-obj[PremiumSubscriptionSKUs.TIER_0] = new require("set")(PremiumSubscriptionSKUs.TIER_0, items);
+const tmp35 = new timestampDefault("ProductCatalog.tsx");
+obj[PremiumSubscriptionSKUs.TIER_0] = new setDefault(PremiumSubscriptionSKUs.TIER_0, items);
 const items1 = [object, object, object5, object6, tmp, tmp3, object9, tmp5, tmp28, tmp29, tmp2];
-const tmp67 = new require("set")(PremiumSubscriptionSKUs.TIER_0, items);
-obj[PremiumSubscriptionSKUs.TIER_1] = new require("set")(PremiumSubscriptionSKUs.TIER_1, items1);
+const tmp67 = new setDefault(PremiumSubscriptionSKUs.TIER_0, items);
+obj[PremiumSubscriptionSKUs.TIER_1] = new setDefault(PremiumSubscriptionSKUs.TIER_1, items1);
 const items2 = [object, object, object1, object2, object3, object5, object6, object7, tmp, tmp, object8, tmp3, tmp4, object9, object10, tmp5, tmp6, tmp7, object12, object13, object14, tmp28, tmp29, tmp2, tmp1, object11, object4, tmp29];
-const tmp68 = new require("set")(PremiumSubscriptionSKUs.TIER_1, items1);
-obj[PremiumSubscriptionSKUs.TIER_2] = new require("set")(PremiumSubscriptionSKUs.TIER_2, items2);
+const tmp68 = new setDefault(PremiumSubscriptionSKUs.TIER_1, items1);
+obj[PremiumSubscriptionSKUs.TIER_2] = new setDefault(PremiumSubscriptionSKUs.TIER_2, items2);
 const frozen = Object.freeze(obj);
 const items3 = [tmp3, tmp4];
 const items4 = [tmp29];
 let closure_8 = [];
-const items5 = [object, require("create").Perk.ANIMATED_EMOJIS];
+const items5 = [object, create.Perk.ANIMATED_EMOJIS];
 const items6 = [items5, , , , , , , , , , , , , , , , , , , , , , , ];
-const items7 = [object, require("create").Perk.EMOJIS_EVERYWHERE];
+const items7 = [object, create.Perk.EMOJIS_EVERYWHERE];
 items6[1] = items7;
-const items8 = [object1, require("create").Perk.STICKERS_EVERYWHERE];
+const items8 = [object1, create.Perk.STICKERS_EVERYWHERE];
 items6[2] = items8;
-const items9 = [object2, require("create").Perk.SOUNDBOARD_EVERYWHERE];
+const items9 = [object2, create.Perk.SOUNDBOARD_EVERYWHERE];
 items6[3] = items9;
-const items10 = [object3, require("create").Perk.CUSTOM_CALL_SOUNDS];
+const items10 = [object3, create.Perk.CUSTOM_CALL_SOUNDS];
 items6[4] = items10;
-const items11 = [object4, require("create").Perk.PREMIUM_VOICE_FILTERS];
+const items11 = [object4, create.Perk.PREMIUM_VOICE_FILTERS];
 items6[5] = items11;
-const items12 = [object5, require("create").Perk.ANIMATED_AVATAR];
+const items12 = [object5, create.Perk.ANIMATED_AVATAR];
 items6[6] = items12;
-const items13 = [object6, require("create").Perk.CUSTOM_DISCRIMINATOR];
+const items13 = [object6, create.Perk.CUSTOM_DISCRIMINATOR];
 items6[7] = items13;
-const items14 = [object7, require("create").Perk.PREMIUM_GUILD_MEMBER_PROFILE];
+const items14 = [object7, create.Perk.PREMIUM_GUILD_MEMBER_PROFILE];
 items6[8] = items14;
-const items15 = [tmp, require("create").Perk.PROFILE_PREMIUM_FEATURES];
+const items15 = [tmp, create.Perk.PROFILE_PREMIUM_FEATURES];
 items6[9] = items15;
-const items16 = [tmp1, require("create").Perk.PREMIUM_COLLECTIBLES];
+const items16 = [tmp1, create.Perk.PREMIUM_COLLECTIBLES];
 items6[10] = items16;
-const items17 = [object8, require("create").Perk.CLIENT_THEMES];
+const items17 = [object8, create.Perk.CLIENT_THEMES];
 items6[11] = items17;
-const items18 = [object9, require("create").Perk.STREAM_MID_QUALITY];
+const items18 = [object9, create.Perk.STREAM_MID_QUALITY];
 items6[12] = items18;
-const items19 = [object10, require("create").Perk.STREAM_HIGH_QUALITY];
+const items19 = [object10, create.Perk.STREAM_HIGH_QUALITY];
 items6[13] = items19;
-const items20 = [object12, require("create").Perk.VIDEO_FILTER_ASSETS];
+const items20 = [object12, create.Perk.VIDEO_FILTER_ASSETS];
 items6[14] = items20;
-const items21 = [object13, require("create").Perk.INCREASED_GUILD_LIMIT];
+const items21 = [object13, create.Perk.INCREASED_GUILD_LIMIT];
 items6[15] = items21;
-const items22 = [object14, require("create").Perk.INCREASED_MESSAGE_LENGTH];
+const items22 = [object14, create.Perk.INCREASED_MESSAGE_LENGTH];
 items6[16] = items22;
-const items23 = [tmp29, require("create").Perk.INCREASED_FILE_UPLOAD_SIZE];
+const items23 = [tmp29, create.Perk.INCREASED_FILE_UPLOAD_SIZE];
 items6[17] = items23;
-const items24 = [tmp, require("create").Perk.PROFILE_BADGES];
+const items24 = [tmp, create.Perk.PROFILE_BADGES];
 items6[18] = items24;
-const items25 = [tmp2, require("create").Perk.APP_ICONS];
+const items25 = [tmp2, create.Perk.APP_ICONS];
 items6[19] = items25;
-const items26 = [tmp3, require("create").Perk.BOOST_DISCOUNT];
+const items26 = [tmp3, create.Perk.BOOST_DISCOUNT];
 items6[20] = items26;
-const items27 = [tmp4, require("create").Perk.FREE_BOOSTS];
+const items27 = [tmp4, create.Perk.FREE_BOOSTS];
 items6[21] = items27;
-const items28 = [tmp6, require("create").Perk.INSTALL_PREMIUM_APPLICATIONS];
+const items28 = [tmp6, create.Perk.INSTALL_PREMIUM_APPLICATIONS];
 items6[22] = items28;
-const items29 = [tmp28, require("create").Perk.INCREASED_VIDEO_UPLOAD_QUALITY];
+const items29 = [tmp28, create.Perk.INCREASED_VIDEO_UPLOAD_QUALITY];
 items6[23] = items29;
 const map = new Map(items6);
-const tmp69 = new require("set")(PremiumSubscriptionSKUs.TIER_2, items2);
-const result = require("set").fileFinishedImporting("modules/premium/ProductCatalog.tsx");
+const tmp69 = new setDefault(PremiumSubscriptionSKUs.TIER_2, items2);
+const result = set.fileFinishedImporting("modules/premium/ProductCatalog.tsx");
 
 export const ANIMATED_EMOJIS = object;
 export const EMOJIS_EVERYWHERE = object;
@@ -1156,8 +1160,8 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
       perks = isPremiumWithFractionalPremiumOnly.perks;
     }
     if (null != perks) {
-      const config = apexExperiment.getConfig({ location: "product_catalog_can_user_use" });
-      if (config !== _undefined(13443).DenormalizedPerksReadConfig.CONTROL) {
+      const config = apexExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
+      if (config !== callback(13443).DenormalizedPerksReadConfig.CONTROL) {
         let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
         let perks1;
         if (isPremiumWithFractionalPremiumOnly != null) {
@@ -1169,7 +1173,7 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
         }
         return featureValue;
       }
-      const obj = apexExperiment;
+      const obj = apexExperimentDefault;
     }
   }
   return COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);

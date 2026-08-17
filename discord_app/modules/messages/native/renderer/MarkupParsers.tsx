@@ -1,58 +1,55 @@
 // discord_app/modules/messages/native/renderer/MarkupParsers.tsx
-import { MessageTypes } from "ME";
-import importDefaultResult from "priv";
-import { LHeading } from "../../../../components_native/ChangeLogStandardTemplate.tsx";
-import { getInitialParserState } from "../../renderMessageMarkup.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import setDefault from "set" /* 687 */;
+import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
+import LHeading from "LHeading" /* 8302 */;
+import getInitialParserState from "getInitialParserState" /* 8315 */;
+import importDefaultResult from "priv" /* 1405 */;
 
-let obj = { max: Infinity, maxAge: 15 * require("set").Millis.MINUTE, updateAgeOnGet: true };
-let c4 = new require("priv")(obj);
-const tmp2 = new require("priv")(obj);
-let c5 = new require("priv")(obj);
+const MessageTypes = ME.MessageTypes;
+let obj = { max: Infinity, maxAge: 15 * setDefault.Millis.MINUTE, updateAgeOnGet: true };
+let closure_4 = new importDefaultResult(obj);
+const tmp2 = new importDefaultResult(obj);
+let closure_5 = new importDefaultResult(obj);
 obj = {};
 let merged = Object.assign(obj);
 obj.updateAgeOnGet = false;
 importDefaultResult = new importDefaultResult(obj);
-const tmp3 = new require("priv")(obj);
-const error = new require("priv")(obj);
-const tmp7 = new require("priv")(obj);
-let result = require("priv").fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
+const tmp3 = new importDefaultResult(obj);
+let closure_7 = new importDefaultResult(obj);
+const tmp7 = new importDefaultResult(obj);
+let result = set.fileFinishedImporting("modules/messages/native/renderer/MarkupParsers.tsx");
 
 export const parseEmbedTitleMarkup = function parseEmbedTitleMarkup(rawName, closure_0) {
   const combined = "" + rawName + "-" + closure_0;
-  let obj = tmp2;
-  let value = tmp2.get(combined);
+  let obj = closure_4;
+  let value = closure_4.get(combined);
   if (null == value) {
     obj = { channelId: null };
     obj[0] = closure_0;
-    const parseEmbedTitleToASTResult = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */.parseEmbedTitleToAST(rawName, true, obj);
+    const parseEmbedTitleToASTResult = get_defaultRulesDefault.parseEmbedTitleToAST(rawName, true, obj);
     const result = obj.set(combined, parseEmbedTitleToASTResult);
     value = parseEmbedTitleToASTResult;
-    const obj2 = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */;
+    const obj2 = get_defaultRulesDefault;
   }
   return value;
 };
 export const parseEmbedTitleMarkupWithoutLinks = function parseEmbedTitleMarkupWithoutLinks(arg0, arg1) {
   const combined = "" + arg0 + "-" + arg1 + "-nolinks";
-  let obj = tmp3;
-  let value = tmp3.get(combined);
+  let obj = closure_5;
+  let value = closure_5.get(combined);
   if (null == value) {
     obj = { channelId: null };
     obj[0] = arg1;
-    const result = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */.parseEmbedTitleWithoutLinksToAST(arg0, true, obj);
+    const result = get_defaultRulesDefault.parseEmbedTitleWithoutLinksToAST(arg0, true, obj);
     const result1 = obj.set(combined, result);
     value = result;
-    const obj2 = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */;
+    const obj2 = get_defaultRulesDefault;
   }
   return value;
 };
 export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(arg0) {
-  let channelId;
-  let description;
-  let ignoreCache;
-  let isField;
-  let replaceMap;
-  let showListsAndHeaders;
-  let showMaskedLinks;
   ({ description, channelId, isField, replaceMap, showListsAndHeaders } = arg0);
   ({ ignoreCache, showMaskedLinks } = arg0);
   const combined = "" + description + "-" + channelId;
@@ -81,7 +78,7 @@ export const parseEmbedDescriptionMarkup = function parseEmbedDescriptionMarkup(
   obj[4] = tmp8;
   obj[5] = showListsAndHeaders;
   obj[6] = showMaskedLinks;
-  const parseToASTResult = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */.parseToAST(tmp4, true, obj);
+  const parseToASTResult = get_defaultRulesDefault.parseToAST(tmp4, true, obj);
   const result = importDefaultResult.set(combined, parseToASTResult);
   return parseToASTResult;
 };
@@ -102,8 +99,8 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (result2 === undefined) {
     flag3 = false;
   }
-  let obj1 = tmp7;
-  const value = tmp7.get(message);
+  obj1 = closure_7;
+  const value = closure_7.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
       return value;
@@ -132,7 +129,7 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     result = obj1.set(message, obj);
     const obj3 = getInitialParserState;
   }
-  const obj6 = require("../../../markup/MarkupUtils.tsx") /* get defaultRules */;
+  const obj6 = get_defaultRulesDefault;
   obj1 = { hideSimpleEmbedContent: forceHideSimpleEmbedContent, formatInline: flag, allowHeading: null, allowList: null, allowLinks: null, previewLinkTarget: null };
   flag = flag2;
   const obj7 = LHeading;

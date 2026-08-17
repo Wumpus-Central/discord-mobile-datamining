@@ -1,19 +1,19 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesProducts.tsx
-import _slicedToArray from "_slicedToArray";
-import { useEffect } from "noop";
-import addSku from "addSku";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { SKUProductLines } from "ME";
+import closure_2 from "_slicedToArray" /* 32 */;
+import { useEffect } from "noop" /* 19 */;
+import closure_4 from "addSku" /* 4521 */;
+import closure_5 from "updateCategoriesAndProducts" /* 5301 */;
+import { SKUProductLines } from "ME" /* 676 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
-const result = require("addSku").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesProducts.tsx");
 
 export const useFetchCollectiblesProducts = function useFetchCollectiblesProducts(first) {
   const _require = first;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   const items = [stateFromStoresArray2];
-  const stateFromStoresArray = _defaultAreStatesEqual.useStateFromStoresArray(items, () => lib.map((arg0) => addSku.get(arg0)));
+  const stateFromStoresArray = _defaultAreStatesEqual.useStateFromStoresArray(items, () => lib.map((arg0) => closure_4.get(arg0)));
   let obj = _defaultAreStatesEqual;
   const items1 = [stateFromStoresArray3];
   const stateFromStoresArray1 = _defaultAreStatesEqual.useStateFromStoresArray(items1, () => lib.map((arg0) => product.getProduct(arg0)));
@@ -25,8 +25,6 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
   stateFromStoresArray3 = _defaultAreStatesEqual.useStateFromStoresArray(items3, () => lib.map((closure_0) => productFetchBackedOff.isProductFetchBackedOff(closure_0)));
   const items4 = [first, stateFromStoresArray, stateFromStoresArray2, stateFromStoresArray1, arg1, stateFromStoresArray3];
   stateFromStoresArray1(() => {
-    let tmp6;
-    let tmp8;
     const entries = lib.entries();
     while (tmp2 !== undefined) {
       let tmp4 = stateFromStoresArray;
@@ -66,8 +64,8 @@ export const useFetchCollectiblesProducts = function useFetchCollectiblesProduct
         let tmp27 = null != tmp10;
         if (tmp27) {
           let tmp28 = tmp10;
-          let tmp29 = outer1_6;
-          tmp27 = tmp10.productLine !== outer1_6.COLLECTIBLES;
+          let tmp29 = closure_1_6;
+          tmp27 = tmp10.productLine !== closure_1_6.COLLECTIBLES;
         }
         tmp24 = tmp27;
       }

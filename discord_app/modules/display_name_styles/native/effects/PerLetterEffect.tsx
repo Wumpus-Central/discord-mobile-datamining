@@ -1,21 +1,15 @@
 // discord_app/modules/display_name_styles/native/effects/PerLetterEffect.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ View: c4, Text: c5 } = get_ActivityIndicator);
 let closure_7 = createCacheKey.createStyles({ container: { overflow: "hidden" } });
-const result = require("jsxProd").fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
+const result = require("set").fileFinishedImporting("modules/display_name_styles/native/effects/PerLetterEffect.tsx");
 
 export default function PerLetterEffect(name) {
-  let colors;
-  let containerStyle;
-  let textProps;
-  let textStyle;
   name = name.name;
   ({ textProps, colors } = name);
   ({ containerStyle, textStyle } = name);
@@ -23,10 +17,10 @@ export default function PerLetterEffect(name) {
   let obj = { style: items1, children: null };
   items1 = [callback().container, containerStyle];
   const memo = React.useMemo(() => {
-    let closure_0 = colors(outer1_2[4])();
-    let c1 = 0;
-    let obj = name(outer1_2[5]);
-    return name(outer1_2[5]).splitGraphemes(closure_0).map((children) => {
+    closure_0 = colors(closure_1_2[4])();
+    c1 = 0;
+    let obj = name(closure_1_2[5]);
+    return name(closure_1_2[5]).splitGraphemes(closure_0).map((children) => {
       regex.lastIndex = 0;
       const tmp = regex.test(children) || 0 === children.trim().length;
       let tmp2;
@@ -47,7 +41,7 @@ export default function PerLetterEffect(name) {
         tmp7 = obj;
       }
       obj = { style: tmp7, children };
-      return outer2_6(outer2_5, obj, arg1);
+      return closure_2_6(closure_2_5, obj, arg1);
     });
   }, items);
   obj = {};

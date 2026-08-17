@@ -1,16 +1,14 @@
 // discord_app/modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ Modal: c3, View: c4 } = get_ActivityIndicator);
 let closure_6 = createCacheKey.createStyles({ modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" } });
 let closure_7 = { OPENING: 0, [0]: "OPENING", SHOWN: 1, [1]: "SHOWN", DISMISSED: 2, [2]: "DISMISSED" };
-const result = require("jsxProd").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
+const result = require("set").fileFinishedImporting("modules/mobile_web_handoff/native/SimpleLoadingModalUI.tsx");
 
 export default function SimpleLoadingModal(operation) {
   operation = operation.operation;
@@ -22,7 +20,7 @@ export default function SimpleLoadingModal(operation) {
       }
     }
   }
-  const dependencyMap = S;
+  const onResolved = S;
   const I = operation.onRejected;
   if (I === undefined) {
     class I {
@@ -31,7 +29,7 @@ export default function SimpleLoadingModal(operation) {
       }
     }
   }
-  const React = I;
+  const onRejected = I;
   const cancelable = operation.cancelable;
   if (cancelable === undefined) {
     class I {
@@ -48,31 +46,31 @@ export default function SimpleLoadingModal(operation) {
       }
     }
   }
-  let closure_4 = D;
-  let jsx;
+  const onDismissed = D;
+  jsx = undefined;
   let callback;
   let callback1;
   let callback2;
-  jsx = React.useRef(callback1.OPENING);
+  jsx = onRejected.useRef(callback1.OPENING);
   const items = [D];
-  callback = React.useCallback(() => {
+  callback = onRejected.useCallback(() => {
     if (ref.current === callback1.SHOWN) {
-      D();
+      onDismissed();
     }
     ref.current = callback1.DISMISSED;
   }, items);
   const items1 = [callback, S];
-  callback1 = React.useCallback((arg0) => {
-    S(arg0);
+  callback1 = onRejected.useCallback((arg0) => {
+    onResolved(arg0);
     callback();
   }, items1);
   const items2 = [callback, I];
-  callback2 = React.useCallback((arg0) => {
-    I(arg0);
+  callback2 = onRejected.useCallback((arg0) => {
+    onRejected(arg0);
     callback();
   }, items2);
   const items3 = [operation, callback1, callback2];
-  const effect = React.useEffect(() => {
+  const effect = onRejected.useEffect(() => {
     const promise = operation();
     operation().then((arg0) => callback(arg0)).catch((arg0) => callback2(arg0));
   }, items3);
@@ -81,7 +79,7 @@ export default function SimpleLoadingModal(operation) {
     animationType: "none",
     onShow() {
       if (ref.current === callback1.DISMISSED) {
-        D();
+        onDismissed();
       } else {
         tmp.current = tmp2.SHOWN;
       }
@@ -93,7 +91,7 @@ export default function SimpleLoadingModal(operation) {
     },
     children: null
   };
-  obj = { style: callback().modalBackground, children: jsx(operation(5446).ActivityIndicator, {}) };
-  obj[4] = <closure_4 style={callback().modalBackground}>{jsx(operation(5446).ActivityIndicator, {})}</closure_4>;
-  return <cancelable style={callback().modalBackground}>{jsx(operation(5446).ActivityIndicator, {})}</cancelable>;
+  obj = { style: callback().modalBackground, children: jsx(operation(onResolved[4]).ActivityIndicator, {}) };
+  obj[4] = <onDismissed style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</onDismissed>;
+  return <cancelable style={callback().modalBackground}>{jsx(operation(onResolved[4]).ActivityIndicator, {})}</cancelable>;
 };

@@ -1,8 +1,10 @@
 // discord_app/modules/markup/UnicodeSanitizationUtils.tsx
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import set from "set" /* 2 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+
 function safelyPartiallyDecodeURIComponent(hash) {
   let substr;
-  const result = isDiscordProxiedAssetUrl.safeDecodeURIComponent(hash);
+  const result = isDiscordProxiedAssetUrlDefault.safeDecodeURIComponent(hash);
   if (null == result) {
     return hash;
   } else {
@@ -172,7 +174,7 @@ function safelyPartiallyDecodeURIComponent(hash) {
     }
     return str4;
   }
-  const obj = isDiscordProxiedAssetUrl;
+  const obj = isDiscordProxiedAssetUrlDefault;
 }
 const items = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"];
 const regExp = new RegExp("" + /(?:[\xAD\u0600-\u0605\u061C\u06DD\u070F\u0890\u0891\u08E2\u180E\u200B-\u200F\u202A-\u202E\u2060-\u2064\u2066-\u206F\uFEFF\uFFF9-\uFFFB]|\uD804[\uDCBD\uDCCD]|\uD80D[\uDC30-\uDC3F]|\uD82F[\uDCA0-\uDCA3]|\uD834[\uDD73-\uDD7A]|\uDB40[\uDC01\uDC20-\uDC7F])|\u2028|\u2029|[\0-\t\x0B-\x1F\x7F-\x9F]|[\xA0\u1680\u2000-\u200A\u202F\u205F\u3000]/g.source + "|" + items.join("|"), "gu");
@@ -208,7 +210,7 @@ const regExp7 = new RegExp(items7.join("|"), "gu");
 obj3[1] = regExp7;
 items2[5] = obj3;
 let closure_5 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0];
-let result = require("set").fileFinishedImporting("modules/markup/UnicodeSanitizationUtils.tsx");
+let result = set.fileFinishedImporting("modules/markup/UnicodeSanitizationUtils.tsx");
 
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX = regExp;
 export const BLANK_CHARACTERS_TO_SANITIZE_REGEX_EXCLUDING_TABS = regExp1;
@@ -220,7 +222,7 @@ export const sanitizeWhitespaceExcludingTabs = function sanitizeWhitespaceExclud
 };
 export const UNICODE_CONFUSABLES_FOR_URL_DETECTION = items2;
 export const sanitizeUnicodeConfusables = function sanitizeUnicodeConfusables(sanitizeWhitespaceResult) {
-  let closure_0 = sanitizeWhitespaceResult;
+  closure_0 = sanitizeWhitespaceResult;
   const item = items2.forEach((matcher) => {
 
   });

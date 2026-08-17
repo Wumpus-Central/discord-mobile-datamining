@@ -1,12 +1,14 @@
 // discord_app/modules/guild_automod/AutomodFeedback.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
 let obj = { BUG: "BUG", ALLOWED: "ALLOWED", MENTION_RAID_REMOVE_RESTRICTION: "MENTION_RAID_REMOVE_RESTRICTION" };
 obj = { LEGITIMATE_ACTIVITY: "LEGITIMATE_ACTIVITY", LEGITIMATE_ACCOUNTS: "LEGITIMATE_ACCOUNTS", LEGITIMATE_DMS: "LEGITIMATE_DMS", DM_SPAM: "DM_SPAM", JOIN_RAID: "JOIN_RAID", OTHER: "OTHER" };
-const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
+const result = set.fileFinishedImporting("modules/guild_automod/AutomodFeedback.tsx");
 
 export const Feedback = obj;
 export const generateFeedbackOptions = function generateFeedbackOptions() {
-  let obj = { name: null, value: null };
+  obj = { name: null, value: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["+MbOX4"]);
   obj[1] = obj.BUG;

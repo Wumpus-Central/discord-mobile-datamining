@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/defs/native/InternalBuildActiveSetting.tsx
-import checkForNewerBuild from "checkForNewerBuild";
-import createToggle from "createToggle";
-import { useStaffOrDeveloperSettingPredicate } from "../../dev_tools/native/useIsStaffOrDeveloperSettingPredicate.tsx";
+import useStaffOrDeveloperSettingPredicate from "useStaffOrDeveloperSettingPredicate" /* 14199 */;
+import closure_2 from "checkForNewerBuild" /* 13770 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     return "Internal Build Active";
@@ -19,6 +19,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createStatic(createToggle);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/InternalBuildActiveSetting.tsx");
 
 export default createToggle;

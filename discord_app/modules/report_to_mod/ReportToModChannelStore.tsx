@@ -1,22 +1,22 @@
 // discord_app/modules/report_to_mod/ReportToModChannelStore.tsx
-import keys from "keys";
-import createJSONStorage from "createJSONStorage";
-import createJSONStorage from "createJSONStorage";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
+import createJSONStorage from "createJSONStorage" /* 4242 */;
 import { frozen } from "../zustand/LocalStorageWrapper.tsx";
 
 let obj = { name: "report-to-mod-channel-storage", storage: null };
 obj[1] = createJSONStorage.createJSONStorage(() => frozen);
 obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return {
     channelShowResolvedFlags: {},
     setShowResolvedFlags(arg0, arg1) {
       const callback = arg0;
-      let closure_1 = arg1;
-      return callback(outer1_2[2]).batchUpdates(() => {
+      closure_1 = arg1;
+      return callback(closure_1_2[2]).batchUpdates(() => {
         callback((channelShowResolvedFlags) => {
-          let obj = { channelShowResolvedFlags: null };
+          obj = { channelShowResolvedFlags: null };
           obj = {};
           const merged = Object.assign(channelShowResolvedFlags.channelShowResolvedFlags);
           obj[closure_0] = closure_1;
@@ -34,11 +34,11 @@ obj = keys.create(createJSONStorage.persist((arg0, arg1) => {
     }
   };
 }, obj));
-const result = require("batchUpdates").fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
+const result = set.fileFinishedImporting("modules/report_to_mod/ReportToModChannelStore.tsx");
 
 export const useReportToModChannelFiltersStore = obj;
 export const useShouldShowResolvedFlagsForChannel = function useShouldShowResolvedFlagsForChannel(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   obj = obj();
   if (null == arg0) {
     obj = { showResolvedFlags: true, setShowResolvedFlags: null };

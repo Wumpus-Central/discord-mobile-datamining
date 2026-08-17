@@ -1,11 +1,13 @@
 // discord_app/modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
-const result = require("set").fileFinishedImporting("modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx");
 
 export default function trackVoiceAndVideoDebuggingSettingsUpdated(arg0, arg1, arg2, location_stack) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   let StringResult;
   if (null != arg2) {
     const _String = String;

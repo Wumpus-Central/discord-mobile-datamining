@@ -1,13 +1,12 @@
 // discord_app/modules/guild_member_verification/UserGuildJoinRequestStore.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Store } from "initialize";
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
-import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4199 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 function handleGatewayJoinRequestUpdate(arg0) {
-  let guildId;
-  let request;
   ({ guildId, request } = arg0);
   if (null != request) {
     let obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
@@ -33,11 +32,12 @@ let c3 = null;
 let closure_4 = {};
 let c5 = false;
 let closure_6 = {};
+const Store = initializeDefault.Store;
 class UserGuildJoinRequestStore extends Store {
 }
 const prototype = UserGuildJoinRequestStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(mergeGuildAvatar);
+  this.waitFor(closure_2);
 };
 prototype["getRequest"] = function getRequest(arg0) {
   return table[arg0];
@@ -71,12 +71,12 @@ prototype["hasJoinRequestCoackmark"] = function hasJoinRequestCoackmark() {
   return null != c3;
 };
 UserGuildJoinRequestStore.displayName = "UserGuildJoinRequestStore";
-const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatcher"), {
+const userGuildJoinRequestStore = new UserGuildJoinRequestStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guildJoinRequests) {
     guildJoinRequests = guildJoinRequests.guildJoinRequests;
-    let c5 = false;
-    let closure_6 = {};
-    let closure_4 = {};
+    c5 = false;
+    closure_6 = {};
+    closure_4 = {};
     const item = guildJoinRequests.forEach((guild_id) => {
       guild_id = guild_id.guild_id;
       if (null != guild_id) {
@@ -95,8 +95,6 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
     }
   },
   USER_GUILD_JOIN_REQUEST_UPDATE: function handleJoinRequestUpdate(arg0) {
-    let guildId;
-    let request;
     ({ request, guildId } = arg0);
     if (null != request) {
       const obj = { joinRequestId: null, guildId: null, userId: null, user: null, createdAt: null, formResponses: null, rejectionReason: null, applicationStatus: null, actionedAt: null, actionedByUser: null, lastSeen: null, interviewChannelId: null };
@@ -125,14 +123,13 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
   },
   USER_JOIN_REQUEST_GUILDS_FETCH: function handleJoinRequestGuildsFetch(guilds) {
     guilds = guilds.guilds;
-    let c5 = true;
+    c5 = true;
     const item = guilds.forEach((id) => {
       id = id.id;
       closure_6[id] = { id, name: id.name, features: id.features, icon: id.icon, splash: id.splash };
     });
   },
   MEMBER_VERIFICATION_FORM_UPDATE: function handleVerificationFormUpdate(form) {
-    let splash;
     form = form.form;
     let guild;
     if (form != null) {
@@ -153,11 +150,6 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
     }
   },
   INVITE_ACCEPT_SUCCESS: function handleInviteSuccess(invite) {
-    let features;
-    let guild;
-    let id;
-    let join_request;
-    let splash;
     ({ guild, join_request } = invite.invite);
     if (null != guild) {
       if (null != join_request) {
@@ -188,10 +180,10 @@ const userGuildJoinRequestStore = new UserGuildJoinRequestStore(require("dispatc
     guildId = guildId.guildId;
   },
   USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR: function handleClearCoachmark() {
-    let c3 = null;
+    c3 = null;
   }
 });
-const result = require("initialize").fileFinishedImporting("modules/guild_member_verification/UserGuildJoinRequestStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/UserGuildJoinRequestStore.tsx");
 
 export default userGuildJoinRequestStore;
 export const joinRequestFromServer = function joinRequestFromServer(request) {

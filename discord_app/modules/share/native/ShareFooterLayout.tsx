@@ -1,47 +1,41 @@
 // discord_app/modules/share/native/ShareFooterLayout.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { CONFIG_NEVER_ANIMATE } from "../../../design/animation/reanimated/spring/spring.tsx";
 import { SUBTLE_SPRING } from "../../../design/animation/reanimated/spring/springPresets.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { footer: null, footerSeparator: null, warningWrapper: null, chatRow: null };
-createCacheKey = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { display: "flex", flexDirection: "column", flexShrink: 0, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: -require("Themes").space.PX_16, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey[1] = { marginHorizontal: -ThemesDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[2] = { display: "flex", flexDirection: "column", gap: 8 };
-let obj1 = { marginHorizontal: -require("Themes").space.PX_16, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[3] = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_12, alignItems: "flex-end" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { marginHorizontal: -ThemesDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[3] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "flex-end" };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function ShareFooterLayoutTsx1(){const{withSpring,footerPaddingBottom,ON_PRESS_SPRING}=this.__closure;return{paddingBottom:withSpring(footerPaddingBottom,ON_PRESS_SPRING,'respect-motion-settings')};}" };
-let obj2 = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_12, alignItems: "flex-end" };
-const result = require("jsxProd").fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
+let obj2 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "flex-end" };
+const result = require("set").fileFinishedImporting("modules/share/native/ShareFooterLayout.tsx");
 
 export default function ShareFooterLayout(arg0) {
-  let avoidKeyboard;
-  let chatInput;
-  let preview;
-  let sendButton;
-  let warningText;
   ({ preview, warningText } = arg0);
   let _require;
   ({ chatInput, sendButton, avoidKeyboard } = arg0);
-  const tmp = createCacheKey();
-  const sum = tmp.footer.paddingVertical + useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
+  const tmp = callback2();
+  const sum = tmp.footer.paddingVertical + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: avoidKeyboard, includeCustomKeyboardHeight: false }).insets.bottom;
   _require = sum;
   let obj = _ReanimatedRexport;
   const fn = function f() {
-    const obj = { paddingBottom: null };
-    obj[0] = _undefined(outer1_2[7]).withSpring(_undefined, _undefined(outer1_2[8]).ON_PRESS_SPRING, "respect-motion-settings");
+    const obj = { paddingBottom: _undefined(closure_1_2[7]).withSpring(_undefined, _undefined(closure_1_2[8]).ON_PRESS_SPRING, "respect-motion-settings") };
     return obj;
   };
   obj = { withSpring: _CONFIG_NEVER_ANIMATE.withSpring, footerPaddingBottom: sum, ON_PRESS_SPRING: _SUBTLE_SPRING.ON_PRESS_SPRING };
@@ -53,7 +47,7 @@ export default function ShareFooterLayout(arg0) {
   items = [tmp.footer, animatedStyle];
   let tmp6Result = null;
   if (null != preview) {
-    const obj1 = { children: null };
+    obj1 = { children: null };
     const items1 = [preview, ];
     const obj2 = { style: null };
     obj2[0] = tmp.footerSeparator;
@@ -75,5 +69,5 @@ export default function ShareFooterLayout(arg0) {
   obj3[1] = items4;
   items2[1] = closure_6(View, obj3);
   obj[1] = items2;
-  return closure_6(ReanimatedRexport.View, obj);
+  return closure_6(_modDef4115.View, obj);
 };

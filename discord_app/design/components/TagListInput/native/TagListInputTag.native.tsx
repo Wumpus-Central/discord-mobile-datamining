@@ -1,25 +1,24 @@
 // discord_app/design/components/TagListInput/native/TagListInputTag.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useAccessibilityPress } from "../../../../modules/a11y/native/useAccessibilityPress.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
-import { Text } from "../../Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import useAccessibilityPressDefault from "useAccessibilityPress" /* 8866 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  const colors = Themes.colors;
+  const colors = ThemesDefault.colors;
   if (flag) {
     let BACKGROUND_SURFACE_HIGH = colors.BACKGROUND_MOD_SUBTLE;
     let tmp4 = tmp;
@@ -39,9 +38,7 @@ let closure_6 = createCacheKey.createStyles(() => {
   if (flag) {
     BORDER_SUBTLE = tmp4(712).colors.BORDER_SUBTLE;
   }
-  obj = { tagWrapper: null, tagText: null, highlightedTagWrapper: null, tagIcon: null, start: null, end: null };
-  obj[4] = BORDER_SUBTLE;
-  obj[5] = tmp4(712).space.PX_8;
+  obj = { tagWrapper: null, tagText: null, highlightedTagWrapper: null, tagIcon: null, start: BORDER_SUBTLE, end: tmp4(712).space.PX_8 };
   obj[6] = tmp4(712).space.PX_4;
   obj[0] = obj;
   obj[1] = { flexShrink: 1 };
@@ -49,19 +46,13 @@ let closure_6 = createCacheKey.createStyles(() => {
   obj[2] = obj;
   obj[3] = { paddingRight: tmp4(712).space.PX_4, marginLeft: 0 };
   obj[4] = { marginLeft: 0 };
-  const obj1 = { paddingRight: tmp4(712).space.PX_4, marginLeft: 0 };
+  obj1 = { paddingRight: tmp4(712).space.PX_4, marginLeft: 0 };
   obj[5] = { marginRight: tmp4(712).space.PX_4 };
   return obj;
 });
-const result = require("jsxProd").fileFinishedImporting("design/components/TagListInput/native/TagListInputTag.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TagListInput/native/TagListInputTag.native.tsx");
 
 export const TagListInputTagComponent = function TagListInputTagComponent(end) {
-  let accessibilityActions;
-  let onAccessibilityAction;
-  let require;
-  let selected;
-  let start;
-  let tag;
   ({ tag, selected, onPress: require, start } = end);
   if (start === undefined) {
     start = false;
@@ -70,11 +61,11 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = callback2(useIsMobileVisualRefreshExperimentEnabled("TagListInputTag"));
+  const tmp2 = callback2(useIsMobileVisualRefreshExperimentEnabledDefault("TagListInputTag"));
   const intl = getSystemLocale.intl;
   let obj = { text: tag.text };
   const formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["0Vb9FQ"], obj);
-  ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPress(() => callback("remove"), formatToPlainStringResult));
+  ({ onAccessibilityAction, accessibilityActions } = useAccessibilityPressDefault(() => callback("remove"), formatToPlainStringResult));
   const items = [tmp2.tagWrapper, , , ];
   let prop;
   if (selected) {
@@ -110,7 +101,7 @@ export const TagListInputTagComponent = function TagListInputTagComponent(end) {
     tmp10 = callback(View, obj);
   }
   const items1 = [tmp10, ];
-  const obj1 = { style: tmp2.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
+  obj1 = { style: tmp2.tagText, lineClamp: 1, variant: "text-sm/medium", color: null, children: null };
   let str = "text-default";
   if (selected) {
     str = "text-overlay-light";

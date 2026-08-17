@@ -1,9 +1,10 @@
 // discord_app/modules/errors/ErrorHandlingUtils.tsx
-import set from "set";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import ME from "ME" /* 676 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import set from "set" /* 2 */;
 
 const items = [, , ];
-({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = require("ME").AbortCodes);
+({ UNAUTHORIZED: arr[0], EMAIL_VERIFICATION_REQUIRED: arr[1], USER_BANNED: arr[2] } = ME.AbortCodes);
 let set = new Set([500, 502, 503, 504]);
 const set1 = new Set([401, 403, 405, 409, 429]);
 const result = set.fileFinishedImporting("modules/errors/ErrorHandlingUtils.tsx");
@@ -65,7 +66,7 @@ export const captureOrIgnoreApiError = function captureOrIgnoreApiError(aPIError
     tmp = flag;
   }
   if (!tmp) {
-    SentryUtils.native.captureException(aPIError);
-    const obj = SentryUtils.native;
+    _modDef1208.captureException(aPIError);
+    const obj = _modDef1208;
   }
 };

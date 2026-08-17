@@ -1,12 +1,12 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx
-import noop from "noop";
-import { HelpdeskArticles } from "ME";
-import { MobileUserSettings } from "MobileUserSettings";
-import { jsx } from "jsxProd";
-import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
+import _modDef13991 from "module_13991" /* 13991 */;
+import closure_3 from "noop" /* 19 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("MobileUserSettings").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsDataAndPrivacy.tsx");
 
 export default function FamilyCenterParentalControlsDataAndPrivacy() {
   const memo = React.useMemo(() => {
@@ -21,7 +21,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj = { settings: items2, subLabel: null };
     items2 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_PERSONALIZATION];
     const intl2 = memo(1236).intl;
-    const obj1 = { helpdeskArticle: null };
+    obj1 = { helpdeskArticle: null };
     let obj5 = callback(1993);
     obj1[0] = obj5.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
     obj[1] = intl2.format(callback(2335).Imp6Ns, obj1);
@@ -29,8 +29,7 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
     obj2 = { settings: items3, subLabel: null };
     items3 = [closure_5.PARENTAL_CONTROLS_DATA_USAGE_QUESTS];
     const intl3 = memo(1236).intl;
-    const obj3 = { helpdeskArticle: null };
-    obj3[0] = callback(1993).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
+    const obj3 = { helpdeskArticle: callback(1993).getArticleURL(constants.QUESTS_PRIVACY_CONTROLS) };
     obj2[1] = intl3.format(callback(2335).cnCK6b, obj3);
     items1[2] = obj2;
     const obj4 = { settings: items4, subLabel: null };
@@ -45,9 +44,9 @@ export default function FamilyCenterParentalControlsDataAndPrivacy() {
   }, []);
   let items = [memo];
   const node = React.useMemo(() => {
-    let obj = memo(outer1_2[7]);
+    let obj = memo(closure_1_2[7]);
     obj = { sections: memo };
     return obj.createList(obj);
   }, items);
-  return jsx(SettingLayout, { node });
+  return jsx(_modDef13991, { node });
 };

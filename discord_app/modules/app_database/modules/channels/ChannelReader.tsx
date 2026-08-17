@@ -1,35 +1,36 @@
 // discord_app/modules/app_database/modules/channels/ChannelReader.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { items } from "../../DatabaseDaos.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import itemsDefault from "items" /* 1955 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-let c3 = new require("set")("ChannelReader");
-const tmp2 = new require("set")("ChannelReader");
-const result = require("items").fileFinishedImporting("modules/app_database/modules/channels/ChannelReader.tsx");
+let closure_3 = new timestampDefault("ChannelReader");
+const tmp2 = new timestampDefault("ChannelReader");
+const result = require("set").fileFinishedImporting("modules/app_database/modules/channels/ChannelReader.tsx");
 const prototype = function ChannelReader() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["getSync"] = function getSync(closure_1, closure_0) {
   const nowResult = performance.now();
-  const obj = items;
-  const manySyncUnsafe = items.channels(closure_1).getManySyncUnsafe(closure_0);
+  const obj = itemsDefault;
+  const manySyncUnsafe = itemsDefault.channels(closure_1).getManySyncUnsafe(closure_0);
   const diff = performance.now() - nowResult;
-  tmp2.log("synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")");
+  logger.log("synchronously loaded in " + diff + "ms (guild: " + closure_0 + ", channels: " + manySyncUnsafe.length + ")");
   const items = [manySyncUnsafe, diff];
   return items;
 };
 prototype["getAsync"] = function getAsync(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return callback(function*() {
     let length = tmp5;
-    let closure_0 = tmp2;
+    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
-    const obj6 = outer1_0(outer1_1[2]);
-    length = yield outer1_0(outer1_1[2]).channels(outer1_0).getMany(outer1_1);
+    const obj6 = closure_1_0(closure_1_1[2]);
+    length = yield closure_1_0(closure_1_1[2]).channels(closure_1_0).getMany(closure_1_1);
     const _performance = performance;
     const _HermesInternal = HermesInternal;
-    c3.verbose("loaded in " + asyncGeneratorStep + "ms (guild: " + length + ", channels: " + length.length + ")");
+    c3.verbose("loaded in " + closure_2 + "ms (guild: " + length + ", channels: " + length.length + ")");
     return length;
   })();
 };
@@ -61,17 +62,17 @@ prototype["getGuildIds"] = function getGuildIds() {
             obj[0] = arg1;
             return obj;
           } else {
-            let asyncGeneratorStep = tmp3;
-            let closure_1 = tmp7;
-            let closure_0;
-            let c4 = 1;
-            const channelsResult = outer1_0(outer1_1[2]).channels();
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_0 = undefined;
+            c4 = 1;
+            const channelsResult = closure_1_0(closure_1_1[2]).channels();
             if (null == channelsResult) {
               const _Set3 = Set;
               const set = new Set();
               c4 = 0;
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = set;
               return obj1;
             } else {
@@ -81,7 +82,7 @@ prototype["getGuildIds"] = function getGuildIds() {
               obj2[0] = channelsResult.getGuildIds();
               return obj2;
             }
-            const obj8 = outer1_0(outer1_1[2]);
+            const obj8 = closure_1_0(closure_1_1[2]);
           }
         } else if (1 === tmp7) {
           c4 = 0;

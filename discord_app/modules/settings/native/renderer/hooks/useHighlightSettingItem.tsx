@@ -1,9 +1,9 @@
 // discord_app/modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx
-import zustandStore from "zustandStore";
+import closure_0 from "zustandStore" /* 13993 */;
 
 const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useHighlightSettingItem.tsx");
 
 export const useHighlightSettingItem = function useHighlightSettingItem(setting) {
   const React = setting;
-  return React.useState((selected) => selected.selected === zustandStore);
+  return React.useState((selected) => selected.selected === closure_0);
 };

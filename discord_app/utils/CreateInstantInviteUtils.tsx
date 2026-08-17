@@ -1,16 +1,16 @@
 // discord_app/utils/CreateInstantInviteUtils.tsx
-import comparator from "comparator";
-import closure_2 from "comparator";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import comparator from "comparator" /* 1980 */;
+import closure_2 from "comparator" /* 1980 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
 
-let c0;
-let closure_1;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c0, GUILD_VOCAL_CHANNELS_KEY: closure_1 } = comparator);
-const result = require("ME").fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
+const Permissions = ME.Permissions;
+const result = set.fileFinishedImporting("utils/CreateInstantInviteUtils.tsx");
 
 export const getInvitableChannelForGuild = function getInvitableChannelForGuild(guildId) {
   channels = channels.getChannels(guildId);
   const items = [...channels[closure_1]];
-  return items.find((channel) => getUncachedChannelPermissions.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+  return items.find((channel) => closure_3.can(constants.CREATE_INSTANT_INVITE, channel.channel));
 };

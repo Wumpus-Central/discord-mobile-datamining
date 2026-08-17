@@ -1,34 +1,26 @@
 // discord_app/modules/collectibles/native/IndividualProductPreview.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import items from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
-import { NameplateUser } from "../nameplates/native/NameplateProductPreview.tsx";
-import { ProfileEffectUserPreview } from "../profile_effects/native/previews/ProfileEffectUserPreview.tsx";
-import { ProfileFrameUserPreview } from "../profile_frames/native/previews/ProfileFrameUserPreview.tsx";
-import { AvatarDecorationProductPreview } from "AvatarDecorationProductPreview.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import useCurrentUser from "useCurrentUser" /* 9176 */;
+import ProfileEffectUserPreviewDefault from "ProfileEffectUserPreview" /* 9283 */;
+import ProfileFrameUserPreviewDefault from "ProfileFrameUserPreview" /* 9570 */;
+import AvatarDecorationProductPreviewDefault from "AvatarDecorationProductPreview" /* 9571 */;
+import NameplateUserDefault from "NameplateUser" /* 9572 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import items from "items" /* 678 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ProfilePreviewWrapper(children) {
-  let importDefault;
-  let require;
   ({ handlePreviewPress: require, onTrackPress: importDefault } = children);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = {
     onPress() {
       if (closure_1 != null) {
-        tmp(outer1_6.FULL_PROFILE_PREVIEW);
+        tmp(closure_1_6.FULL_PROFILE_PREVIEW);
       }
       if (closure_0 != null) {
         tmp4();
@@ -42,62 +34,53 @@ function ProfilePreviewWrapper(children) {
   obj = { style: tmp.profilePreviewGradient, start: { x: 0, y: 0.6 }, end: { x: 0, y: 1 }, colors: null };
   const items1 = ["" + tmp.profilePreviewGradient.color + "00", tmp.profilePreviewGradient.color];
   obj[3] = items1;
-  items[1] = callback(LinearGradient, obj);
+  items[1] = callback(LinearGradientDefault, obj);
   obj[1] = items;
   obj[2] = callback2(closure_4, obj);
   return callback(closure_3, obj);
 }
 function ProfileEffectPreview(arg0) {
-  let handlePreviewPress;
-  let onTrackPress;
-  let profileEffect;
-  let width;
   ({ profileEffect, width, handlePreviewPress, onTrackPress } = arg0);
   let obj = useCurrentUser;
   obj = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = obj.useCurrentUser();
-  obj = { user: currentUser, profileEffect, maxWidth: width, style: createCacheKey().profilePreview };
-  obj[2] = callback(ProfileEffectUserPreview, obj);
+  obj = { user: currentUser, profileEffect, maxWidth: width, style: callback3().profilePreview };
+  obj[2] = callback(ProfileEffectUserPreviewDefault, obj);
   return callback(ProfilePreviewWrapper, obj);
 }
 function ProfileFramePreview(arg0) {
-  let handlePreviewPress;
-  let onTrackPress;
-  let profileFrame;
-  let width;
   ({ profileFrame, width, handlePreviewPress, onTrackPress } = arg0);
   let obj = useCurrentUser;
   obj = { handlePreviewPress, onTrackPress, children: null };
   const currentUser = obj.useCurrentUser();
-  obj = { profileFrame, user: currentUser, maxWidth: width, style: createCacheKey().profilePreview };
-  obj[2] = callback(ProfileFrameUserPreview, obj);
+  obj = { profileFrame, user: currentUser, maxWidth: width, style: callback3().profilePreview };
+  obj[2] = callback(ProfileFrameUserPreviewDefault, obj);
   return callback(ProfilePreviewWrapper, obj);
 }
 function AvatarDecorationPreview(product) {
-  let importDefault;
-  let require;
   ({ handlePreviewPress: require, onTrackPress: importDefault } = product);
   return callback(closure_3, {
     onPress() {
       if (closure_1 != null) {
-        tmp(outer1_6.FULL_PROFILE_PREVIEW);
+        tmp(closure_1_6.FULL_PROFILE_PREVIEW);
       }
       if (closure_0 != null) {
         tmp4();
       }
     },
-    style: createCacheKey().collectiblePreview,
-    children: callback(AvatarDecorationProductPreview, { product: product.product })
+    style: callback3().collectiblePreview,
+    children: callback(AvatarDecorationProductPreviewDefault, { product: product.product })
   });
 }
 function NameplatePreview(product) {
-  return callback(closure_4, { style: createCacheKey().collectiblePreview, children: callback(NameplateUser, { product: product.product }) });
+  return callback(closure_4, { style: callback3().collectiblePreview, children: callback(NameplateUserDefault, { product: product.product }) });
 }
+noopAll;
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ EXTERNAL_PRODUCT_SKU_IDS: c5, ShopCtaEnum: closure_6 } = items);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { collectiblePreview: null, profilePreviewContainer: null, profilePreview: null, profilePreviewGradient: null };
-createCacheKey = { marginTop: require("Themes").space.PX_12, position: "relative", height: 280 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_12, position: "relative", height: 280 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", flex: 1, alignItems: "center", overflow: "hidden" };
 createCacheKey[2] = { width: "66%" };
@@ -105,16 +88,12 @@ let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.bottom = -1;
 obj1.pointerEvents = "none";
-obj1.color = require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND;
+obj1.color = ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
 createCacheKey[3] = obj1;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("items").fileFinishedImporting("modules/collectibles/native/IndividualProductPreview.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/collectibles/native/IndividualProductPreview.tsx");
 
 export const IndividualProductPreview = function IndividualProductPreview(arg0) {
-  let handlePreviewPress;
-  let onTrackPress;
-  let product;
-  let width;
   ({ product, width, handlePreviewPress, onTrackPress } = arg0);
   const type = product.type;
   if (CollectiblesItemType.CollectiblesItemType.NAMEPLATE === type) {
@@ -129,7 +108,7 @@ export const IndividualProductPreview = function IndividualProductPreview(arg0) 
     obj[3] = onTrackPress;
     return callback(ProfileEffectPreview, obj);
   } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
-    const obj1 = { profileFrame: null, width: null, handlePreviewPress: null, onTrackPress: null };
+    obj1 = { profileFrame: null, width: null, handlePreviewPress: null, onTrackPress: null };
     obj1[0] = product.items[0];
     obj1[1] = width;
     obj1[2] = handlePreviewPress;

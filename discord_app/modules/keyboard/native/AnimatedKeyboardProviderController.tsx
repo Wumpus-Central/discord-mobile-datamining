@@ -1,21 +1,18 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
-import jsxProd from "jsxProd";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import mutable from "noop";
-import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
-import importAllResult from "noop";
-import { KeyboardChatScrollView } from "../../../../_runtime/01643_KeyboardChatScrollView.js";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import KeyboardChatScrollView from "KeyboardChatScrollView" /* 1643 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx" /* 4115 */;
+import mutable from "module_0" /* 0 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 const mutable1 = module_4115.makeMutable(require("module_4115").KeyboardState.UNKNOWN);
 let closure_6 = { code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}" };
 let closure_7 = { code: "function AnimatedKeyboardProviderControllerTsx2(e){const{animatedKeyboardHeight}=this.__closure;animatedKeyboardHeight.set(e.height);}" };
 let closure_8 = { code: "function AnimatedKeyboardProviderControllerTsx3(e){const{animatedKeyboardState,KeyboardState,animatedKeyboardHeight}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);animatedKeyboardHeight.set(e.height);}" };
-let closure_9 = require("noop").memo(() => {
+let closure_9 = importAllResult.memo(() => {
   let obj = KeyboardChatScrollView;
   obj = { onStart: null, onMove: null, onEnd: null };
   const fn = function o(height) {
@@ -26,7 +23,7 @@ let closure_9 = require("noop").memo(() => {
     }
     const result = store2.set(OPEN);
   };
-  obj = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport.KeyboardState };
+  obj = { animatedKeyboardState: mutable1, KeyboardState: _mod4115.KeyboardState };
   fn.__closure = obj;
   fn.__workletHash = 12130162639136;
   fn.__initData = closure_6;
@@ -47,7 +44,7 @@ let closure_9 = require("noop").memo(() => {
     const result = store2.set(OPEN);
     const result1 = store.set(height.height);
   };
-  fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: ReanimatedRexport.KeyboardState, animatedKeyboardHeight: mutable };
+  fn3.__closure = { animatedKeyboardState: mutable1, KeyboardState: _mod4115.KeyboardState, animatedKeyboardHeight: mutable };
   fn3.__workletHash = 10688534401196;
   fn3.__initData = closure_8;
   obj[2] = fn3;
@@ -64,6 +61,6 @@ let obj = {
   animatedKeyboardHeight: mutable,
   animatedKeyboardState: mutable1
 };
-let result = require("module_4115").fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProviderController.tsx");
+let result = require("set").fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProviderController.tsx");
 
 export default obj;

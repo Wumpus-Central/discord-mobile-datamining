@@ -1,10 +1,10 @@
 // discord_app/modules/media_channel/useIsFirstMessageInMediaPost.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
-const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");
+const result = require("set").fileFinishedImporting("modules/media_channel/useIsFirstMessageInMediaPost.tsx");
 
 export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPost(arg0) {
   const _require = arg0;
@@ -15,7 +15,7 @@ export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPos
       const channel_id = tmp.channel_id;
       let flag = false;
       if (tmp.id === obj.castChannelIdAsMessageId(channel_id)) {
-        const channel = outer1_3.getChannel(channel_id);
+        const channel = closure_1_3.getChannel(channel_id);
         flag = false;
         if (null != channel) {
           flag = false;
@@ -28,10 +28,10 @@ export const useIsFirstMessageInMediaPost = function useIsFirstMessageInMediaPos
             flag = true === isMediaChannelResult;
           }
         }
-        obj2 = outer1_3;
+        obj2 = closure_1_3;
       }
       tmp2 = flag;
-      obj = outer1_1(outer1_2[2]);
+      obj = closure_1_1(closure_1_2[2]);
     }
     return tmp2;
   }, items);
@@ -58,7 +58,7 @@ export const isFirstMessageInMediaPost = function isFirstMessageInMediaPost(chan
       obj2 = store;
     }
     tmp = flag;
-    obj = DISCORD_EPOCH;
+    obj = DISCORD_EPOCHDefault;
   }
   return tmp;
 };
@@ -79,5 +79,5 @@ export const isFirstMessageIdInMediaPost = function isFirstMessageIdInMediaPost(
     }
     return false;
   }
-  obj = DISCORD_EPOCH;
+  obj = DISCORD_EPOCHDefault;
 };

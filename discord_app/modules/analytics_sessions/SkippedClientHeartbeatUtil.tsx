@@ -1,8 +1,8 @@
 // discord_app/modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { sampleWithUserId } from "../app_analytics/sampleWithUserId.tsx";
+import sampleWithUserId from "sampleWithUserId" /* 5062 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/analytics_sessions/SkippedClientHeartbeatUtil.tsx");
 
 export const shouldLogClientHeartbeatSkipped = function shouldLogClientHeartbeatSkipped() {

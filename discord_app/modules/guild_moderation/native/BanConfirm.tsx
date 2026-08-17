@@ -1,20 +1,16 @@
 // discord_app/modules/guild_moderation/native/BanConfirm.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "TextArea";
-import get_ActivityIndicator from "context";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import setDefault from "set" /* 687 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 let c4 = importAllResult;
 ({ Image: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
@@ -27,7 +23,7 @@ let obj = {
 };
 let items = [obj, , , , , , ];
 obj = {
-  value: require("set").Seconds.HOUR,
+  value: setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.RKpitY);
@@ -35,63 +31,63 @@ obj = {
 };
 items[1] = obj;
 items[2] = {
-  value: 6 * require("set").Seconds.HOUR,
+  value: 6 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["8WfJZ8"]);
   }
 };
 let obj1 = {
-  value: 6 * require("set").Seconds.HOUR,
+  value: 6 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["8WfJZ8"]);
   }
 };
 items[3] = {
-  value: 12 * require("set").Seconds.HOUR,
+  value: 12 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.p1up7u);
   }
 };
 let obj2 = {
-  value: 12 * require("set").Seconds.HOUR,
+  value: 12 * setDefault.Seconds.HOUR,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.p1up7u);
   }
 };
 items[4] = {
-  value: require("set").Seconds.DAY,
+  value: setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XuVkkD);
   }
 };
 let obj3 = {
-  value: require("set").Seconds.DAY,
+  value: setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XuVkkD);
   }
 };
 items[5] = {
-  value: 3 * require("set").Seconds.DAY,
+  value: 3 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["gMcDS+"]);
   }
 };
 let obj4 = {
-  value: 3 * require("set").Seconds.DAY,
+  value: 3 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["gMcDS+"]);
   }
 };
 items[6] = {
-  value: 7 * require("set").Seconds.DAY,
+  value: 7 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.FA7IUk);
@@ -99,49 +95,44 @@ items[6] = {
 };
 let obj6 = { container: null, iconLabelBlock: null, iconStyles: null, blurb: null, redText: null, errorText: null };
 let obj5 = {
-  value: 7 * require("set").Seconds.DAY,
+  value: 7 * setDefault.Seconds.DAY,
   getLabel() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.FA7IUk);
   }
 };
-obj6[0] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey = { marginTop: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_16, alignItems: "center" };
+obj6[0] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16, alignItems: "center" };
 obj6[1] = createCacheKey;
-let obj7 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-obj6[2] = { height: 1.25 * require("Themes").space.PX_96 };
-let obj9 = { height: 1.25 * require("Themes").space.PX_96 };
-obj6[3] = { marginVertical: require("Themes").space.PX_16 };
-let obj10 = { marginVertical: require("Themes").space.PX_16 };
-obj6[4] = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_4, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-let obj11 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_4, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-obj6[5] = { marginBottom: require("Themes").space.PX_16 };
+let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+obj6[2] = { height: 1.25 * ThemesDefault.space.PX_96 };
+let obj9 = { height: 1.25 * ThemesDefault.space.PX_96 };
+obj6[3] = { marginVertical: ThemesDefault.space.PX_16 };
+let obj10 = { marginVertical: ThemesDefault.space.PX_16 };
+obj6[4] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj11 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+obj6[5] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_14 = createCacheKey.createStyles(obj6);
-let obj12 = { marginBottom: require("Themes").space.PX_16 };
+let obj12 = { marginBottom: ThemesDefault.space.PX_16 };
 const memoResult = importAllResult.memo(function BanConfirm(arg0) {
-  let c7;
-  let importDefault;
-  let onBan;
-  let require;
-  let tmp11;
   ({ guildId: require, userId: importDefault, onBan } = arg0);
   let stateFromStores;
   let stateFromStores1;
-  let closure_5;
-  let closure_6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   c7 = undefined;
   const tmp = callback3();
   const ref = stateFromStores1.useRef(null);
   const ref1 = stateFromStores1.useRef(null);
   const insets = importDefault(onBan[10])({ includeKeyboardHeight: true }).insets;
-  const items = [{ ref: ref1, offset: { type: "toBottom" } }];
+  items = [{ ref: ref1, offset: { type: "toBottom" } }];
   importDefault(onBan[11])({ insets, inputs: items, scrollViewRef: ref });
   let obj = require(onBan[12]);
-  const items1 = [createGuildRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items1, () => outer1_8.getGuild(closure_0));
-  let obj1 = require(onBan[12]);
-  const items2 = [mergeGuildAvatar];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => outer1_9.getUser(closure_1));
+  const items1 = [closure_8];
+  stateFromStores = obj.useStateFromStores(items1, () => closure_1_8.getGuild(closure_0));
+  obj1 = require(onBan[12]);
+  const items2 = [closure_9];
+  stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_9.getUser(closure_1));
   closure_5 = stateFromStores1.useRef(0);
   closure_6 = stateFromStores1.useRef("");
   [tmp11, c7] = stateFromStores(stateFromStores1.useState(() => ({ banning: false, banError: false })), 2);
@@ -191,11 +182,7 @@ const memoResult = importAllResult.memo(function BanConfirm(arg0) {
       obj8[2] = function onChange(current) {
         closure_5.current = current;
       };
-      obj8[4] = items.map((getLabel, value) => {
-        const obj = { value, label: null };
-        obj[1] = getLabel.getLabel();
-        return callback2(callback(onBan[18]).TableRadioRow, obj, value);
-      });
+      obj8[4] = items.map((getLabel, value) => callback2(callback(onBan[18]).TableRadioRow, { value, label: getLabel.getLabel() }, value));
       items5[2] = callback(tmp7(tmp5[17]).TableRadioGroup, obj8);
       const obj9 = { ref: null, containerStyle: null, label: null, maxLength: 512, onChange: null };
       obj9[0] = ref1;
@@ -242,6 +229,6 @@ const memoResult = importAllResult.memo(function BanConfirm(arg0) {
   }
   return tmp14Result;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_moderation/native/BanConfirm.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_moderation/native/BanConfirm.tsx");
 
 export default memoResult;

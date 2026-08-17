@@ -1,18 +1,16 @@
 // discord_app/modules/premium/fractional/native/BoostingCountDownPill.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import Text from "Text" /* 4734 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 function handlePress() {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { aboutText: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["07lzz7"]);
@@ -21,19 +19,17 @@ function handlePress() {
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { fractionalPremiumBanner: null, fpDurationPill: null, fpDurationText: null, fpUnavailable: null, fpUnavailableTextNoCountdown: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: require("Themes").colors.STATUS_WARNING, borderWidth: 1, borderRadius: require("Themes").radii.lg, marginBottom: 12 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flexDirection: "row", gap: 12, padding: 12, justifyContent: "center", borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, marginBottom: 12 };
 obj[0] = obj;
-obj[1] = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: require("Themes").radii.xxl, justifyContent: "center" };
+obj[1] = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.xxl, justifyContent: "center" };
 obj[2] = { textAlign: "center", color: "#FFEAA0" };
 obj[3] = { flex: 1, justifyContent: "center" };
 obj[4] = { textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: require("Themes").radii.xxl, justifyContent: "center" };
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/fractional/native/BoostingCountDownPill.tsx");
+let obj1 = { flex: 1, paddingVertical: 12, paddingHorizontal: 27, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.xxl, justifyContent: "center" };
+const result = set.fileFinishedImporting("modules/premium/fractional/native/BoostingCountDownPill.tsx");
 
 export default function BoostingCountDownPill(style) {
-  let fpDurationText;
-  let isInReverseTrial;
   ({ fpDurationText, isInReverseTrial } = style);
   const tmp = callback();
   let tmp4;
@@ -47,7 +43,7 @@ export default function BoostingCountDownPill(style) {
   if (!isInReverseTrial) {
     obj = { style: null, children: null };
     obj[0] = tmp.fpDurationPill;
-    const obj1 = { variant: "text-sm/bold", style: null, children: null };
+    obj1 = { variant: "text-sm/bold", style: null, children: null };
     obj1[1] = tmp.fpDurationText;
     obj1[2] = fpDurationText.toUpperCase();
     obj[1] = tmp2(Text.Text, obj1);

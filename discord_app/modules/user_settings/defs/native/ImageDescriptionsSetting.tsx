@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/ImageDescriptionsSetting.tsx
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsText } from "../../chat/native/UserSettingsText.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import UserSettingsText from "UserSettingsText" /* 14771 */;
+import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function onImageDescriptionSettingValueChange(viewImageDescriptions) {
   let obj = UserSettingsText;
-  obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: CHANNEL_SIDEBAR_WIDTH.lowQualityImageMode, dataSavingMode: CHANNEL_SIDEBAR_WIDTH.dataSavingMode };
+  obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions, lowQualityImageMode: closure_2.lowQualityImageMode, dataSavingMode: closure_2.dataSavingMode };
   obj.setImageDescriptions(obj);
 }
 createToggle = {
@@ -24,7 +24,7 @@ createToggle = {
   onValueChange: onImageDescriptionSettingValueChange
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ImageDescriptionsSetting.tsx");
 
 export default createToggle;
 export { onImageDescriptionSettingValueChange };

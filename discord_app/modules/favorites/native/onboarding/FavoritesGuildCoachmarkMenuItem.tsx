@@ -1,16 +1,14 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx
-import noop from "noop";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import set from "ME";
-import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
-import { items1 } from "../../FavoritesDismissibleContent.tsx";
+import Layer from "Layer" /* 7126 */;
+import items12 from "items1" /* 9990 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initializeFromUserSettings" /* 1394 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function FavoritesGuildCoachmarkMenuItemContent(arg0) {
-  let channelType;
-  let targetRef;
   let stateFromStores;
   let shouldShowPopover;
   let markPopoverAsDismissed;
@@ -25,11 +23,11 @@ function FavoritesGuildCoachmarkMenuItemContent(arg0) {
   markPopoverAsDismissed = favoritesMenuItemPopoverDismissibleContent.markPopoverAsDismissed;
   const items1 = [markPopoverAsDismissed];
   callback = callback.useCallback(() => {
-    markPopoverAsDismissed(outer1_5.USER_DISMISS);
+    markPopoverAsDismissed(closure_1_5.USER_DISMISS);
   }, items1);
   const items2 = [markPopoverAsDismissed];
   callback1 = callback.useCallback(() => {
-    markPopoverAsDismissed(outer1_5.TAKE_ACTION);
+    markPopoverAsDismissed(closure_1_5.TAKE_ACTION);
   }, items2);
   const items3 = [shouldShowPopover, stateFromStores, callback, callback1];
   const memo = callback.useMemo(() => {
@@ -60,7 +58,7 @@ let set = new Set(items);
 const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkMenuItem.tsx");
 
 export default function FavoritesGuildCoachmarkMenuItem(arg0) {
-  let obj = items1;
+  let obj = items12;
   let tmp3 = null;
   if (obj.useShouldRenderFavoritesMenuItemPopover()) {
     obj = { zIndex: 1, children: null };

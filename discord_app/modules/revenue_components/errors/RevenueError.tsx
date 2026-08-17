@@ -1,7 +1,7 @@
 // discord_app/modules/revenue_components/errors/RevenueError.tsx
+import set from "set" /* 2 */;
+
 const prototype = function RevenueError(errorHandlingBehavior) {
-  let extraSentryInformation;
-  let message;
   ({ message, extraSentryInformation } = errorHandlingBehavior);
   if (extraSentryInformation === undefined) {
     extraSentryInformation = null;
@@ -24,6 +24,6 @@ const prototype = function RevenueError(errorHandlingBehavior) {
 }.prototype;
 class prototype extends Error {
 }
-const result = require("set").fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
+const result = set.fileFinishedImporting("modules/revenue_components/errors/RevenueError.tsx");
 
 export const RevenueError = prototype;

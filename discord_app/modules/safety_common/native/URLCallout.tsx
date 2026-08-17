@@ -1,28 +1,25 @@
 // discord_app/modules/safety_common/native/URLCallout.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useUrlParts } from "../../masked_link/SharedStateUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import useUrlParts from "useUrlParts" /* 12421 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsxs: c3, jsx: c4 } = jsxProd);
 createCacheKey = { linkCalloutContainer: null, linkCalloutContainerText: null };
-createCacheKey = { maxHeight: 300, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: require("Themes").radii.md };
+createCacheKey = { maxHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_8, paddingVertical: require("Themes").space.PX_12, textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { padding: require("Themes").space.PX_8, paddingVertical: require("Themes").space.PX_12, textAlign: "center" };
-const result = require("jsxProd").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
+createCacheKey[1] = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { padding: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_12, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/safety_common/native/URLCallout.tsx");
 
 export const URLCallout = function URLCallout(url) {
-  let hostname;
-  let protocol;
-  let theRestOfTheUrl;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = useUrlParts;
   const urlParts = obj.useUrlParts(url.url);
   obj = { style: tmp.linkCalloutContainer, children: null };

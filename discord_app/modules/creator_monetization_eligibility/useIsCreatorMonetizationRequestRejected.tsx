@@ -1,8 +1,10 @@
 // discord_app/modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx
-import { CreatorMonetizationApplicationState as closure_2 } from "CreatorMonetizationApplicationState";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import CreatorMonetizationApplicationState from "CreatorMonetizationApplicationState" /* 16903 */;
 
-const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
+let closure_2 = CreatorMonetizationApplicationState.CreatorMonetizationApplicationState;
+const result = set.fileFinishedImporting("modules/creator_monetization_eligibility/useIsCreatorMonetizationRequestRejected.tsx");
 
 export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
   let state;
@@ -48,7 +50,7 @@ export default function useIsCreatorMonetizationRequestRejected(latestRequest) {
           formatToPlainStringResult = intl4.formatToPlainString(getSystemLocale.t.EmoBD2, obj);
         } else if (rounded >= 1440) {
           const intl3 = getSystemLocale.intl;
-          const obj1 = { days: null };
+          obj1 = { days: null };
           const _Math3 = Math;
           obj1[0] = Math.round(rounded / 1440);
           formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t["k2UNz+"], obj1);

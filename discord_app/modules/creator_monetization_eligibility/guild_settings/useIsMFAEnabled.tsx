@@ -1,17 +1,17 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx
-import handleFormInit from "handleFormInit";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MFALevels } from "ME";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import closure_2 from "handleFormInit" /* 8875 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { MFALevels } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useIsMFAEnabled.tsx");
 
 export const useIsMFAEnabled = function useIsMFAEnabled() {
   let obj = defaultAreStatesEqual;
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [handleFormInit];
+  const items1 = [closure_2];
   let mfaEnabled;
   const stateFromStores1 = defaultAreStatesEqual.useStateFromStores(items1, () => props.getProps().mfaLevel);
   if (stateFromStores != null) {

@@ -1,13 +1,16 @@
 // discord_common/js/packages/media-engine/index.tsx
-import DesktopSources from "DesktopSources";
-import { Video } from "MediaEngineDummy.tsx";
-import { destroy } from "native/index.tsx";
+import set from "set" /* 2 */;
+import destroy from "destroy" /* 4570 */;
+import destroy2 from "destroy" /* 4580 */;
+import Video from "Video" /* 4640 */;
+import MediaEngineEvent from "MediaEngineEvent" /* 4641 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
 let closure_2 = DesktopSources.MediaEngineImplementations;
-const result = require("Video").fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/index.tsx");
 
-export const BaseConnectionEvent = require("destroy").BaseConnectionEvent;
-export const MediaEngineEvent = require("MediaEngineEvent").MediaEngineEvent;
+export const BaseConnectionEvent = destroy2.BaseConnectionEvent;
+export const MediaEngineEvent = MediaEngineEvent.MediaEngineEvent;
 export const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
 export const DesktopSourceEndReason = { SOURCE_NOT_FOUND: 0, [0]: "SOURCE_NOT_FOUND", USER_STOPPED: 1, [1]: "USER_STOPPED", OTHER_ERROR: 2, [2]: "OTHER_ERROR" };
 export const FilterTargetType = { INPUT_DEVICE: "input_device", STREAM: "stream" };

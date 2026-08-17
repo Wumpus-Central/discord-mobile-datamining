@@ -1,18 +1,20 @@
 // discord_app/stores/GuildAffinitiesStore.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { PersistedStore } from "initialize";
-import { fetchGuildAffinities } from "../actions/GuildAffinitiesActionCreators.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import fetchGuildAffinities from "fetchGuildAffinities" /* 9053 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildAffinitiesStore extends PersistedStore {
 }
 const prototype = GuildAffinitiesStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_3 = arg0;
+    closure_3 = arg0;
   }
-  this.waitFor(createGuildRecordFromRust);
+  this.waitFor(closure_2);
 };
 prototype["getState"] = function getState() {
   return closure_3;
@@ -34,7 +36,7 @@ Object.defineProperty(prototype, "hasRequestResolved", {
 });
 GuildAffinitiesStore.displayName = "GuildAffinitiesStore";
 GuildAffinitiesStore.persistKey = "GuildAffinitiesStore";
-const guildAffinitiesStore = new GuildAffinitiesStore(require("dispatcher"), {
+const guildAffinitiesStore = new GuildAffinitiesStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
     if (Date.now() - closure_3.lastFetched > 86400000) {
       const guildAffinities = fetchGuildAffinities.fetchGuildAffinities();
@@ -56,9 +58,9 @@ const guildAffinitiesStore = new GuildAffinitiesStore(require("dispatcher"), {
     });
   },
   LOGOUT: function handleLogout() {
-    let closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
+    closure_3 = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
   }
 });
-const result = require("initialize").fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
+const result = require("set").fileFinishedImporting("stores/GuildAffinitiesStore.tsx");
 
 export default guildAffinitiesStore;

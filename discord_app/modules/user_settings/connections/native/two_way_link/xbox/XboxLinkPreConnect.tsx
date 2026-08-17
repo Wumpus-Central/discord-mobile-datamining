@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx
-import noop from "noop";
-import { XboxLinkModalScenes } from "XboxLinkModalScenes";
-import { PlatformTypes } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9752 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ image: { width: 231, height: 160 } });
-const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkPreConnect.tsx");
 
 export default function XboxLinkPreConnect() {
   let obj = navigation(1500);
@@ -15,10 +15,10 @@ export default function XboxLinkPreConnect() {
   const items = [navigation];
   const items1 = [navigation];
   const callback = React.useCallback((arg0) => {
-    navigation.push(outer1_4.DISCORD_CONSENT, arg0);
+    navigation.push(closure_1_4.DISCORD_CONSENT, arg0);
   }, items);
   const callback1 = React.useCallback(() => {
-    navigation.push(outer1_4.ERROR);
+    navigation.push(closure_1_4.ERROR);
   }, items1);
   const memo = React.useMemo(() => ({ uri: callback(table[6]) }), []);
   obj = { platformType: PlatformTypes.XBOX, onError: callback1, onNext: callback, img: memo, imgStyle: callback().image, title: null, body: null };

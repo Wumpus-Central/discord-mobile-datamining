@@ -1,22 +1,22 @@
 // discord_app/modules/applications/disclosures.tsx
-import set from "set";
-import { Endpoints } from "ME";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_kkv_store_value_models/v1/applications.tsx";
+import create from "create" /* 9769 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function _getDisclosures() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp2;
+      closure_1 = tmp2;
       const result = c3.APPLICATION_DISCLOSURES(lib);
-      const HTTP = lib(outer1_1[2]).HTTP;
-      const obj1 = { url: null, retries: 3, rejectWithError: null };
+      const HTTP = lib(closure_1_1[2]).HTTP;
+      obj1 = { url: null, retries: 3, rejectWithError: null };
       obj1[0] = result;
-      obj1[2] = lib(outer1_1[2]).rejectWithMigratedError();
+      obj1[2] = lib(closure_1_1[2]).rejectWithMigratedError();
       lib = yield HTTP.get(obj1);
       const obj = { disclosures: null, ackedDisclosures: null, allAcked: null };
       obj[0] = lib.body.disclosures;
@@ -25,7 +25,7 @@ function _getDisclosures() {
       return obj;
     })();
   });
-  const _getDisclosures = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -37,10 +37,10 @@ function _getDisclosures() {
 function _ackDisclosures() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c2 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c2 = 0;
     return (function*(arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
@@ -70,7 +70,7 @@ function _ackDisclosures() {
             } else {
               const result = c3.APPLICATION_DISCLOSURES(callback);
               const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
+              obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = result;
               const obj2 = { disclosures: null };
               obj2[0] = dependencyMap;
@@ -101,7 +101,7 @@ function _ackDisclosures() {
       }
     })();
   });
-  const _ackDisclosures = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -110,7 +110,7 @@ function _ackDisclosures() {
   }
   return applyArgumentsResult;
 }
-let result = require("sendRequest").fileFinishedImporting("modules/applications/disclosures.tsx");
+let result = require("set").fileFinishedImporting("modules/applications/disclosures.tsx");
 
 export const ApplicationDisclosure = require("create").ApplicationDisclosureType;
 export const getDisclosures = function getDisclosures(closure_0) {
@@ -123,7 +123,7 @@ export const getDisclosures = function getDisclosures(closure_0) {
   }
   return applyArgumentsResult;
 };
-export const ackDisclosures = function ackDisclosures(closure_0, outer1_50) {
+export const ackDisclosures = function ackDisclosures(closure_0, closure_1_50) {
   const self = this;
   const apply = _ackDisclosures.apply;
   if (typeof apply === "unknown") {

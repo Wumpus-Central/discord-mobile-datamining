@@ -1,6 +1,8 @@
 // discord_app/modules/gif_picker/GifProvider.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/gif_picker/GifProvider.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/gif_picker/GifProvider.tsx");
 
 export const GIF_PROVIDER = "klipy";
 export const GIF_PROVIDER_EMBED_NAME = "Klipy";

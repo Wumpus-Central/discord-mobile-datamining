@@ -1,6 +1,8 @@
 // discord_app/modules/game_profile/GameProfileReviewUtils.tsx
-import { GameTheme } from "../game_detection/GameDetectionTypes.tsx";
-const result = require("set").fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
+import set from "set" /* 2 */;
+import GameTheme from "GameTheme" /* 4511 */;
+
+const result = set.fileFinishedImporting("modules/game_profile/GameProfileReviewUtils.tsx");
 
 export const getSteamReviewScoreDescriptionColor = function getSteamReviewScoreDescriptionColor(NO_USER_REVIEWS) {
   if (GameTheme.SteamReviewScoreDescription.NO_USER_REVIEWS === NO_USER_REVIEWS) {

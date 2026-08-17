@@ -1,27 +1,27 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsBoostButton.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
-import { AnalyticsSections } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostButton.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsBoostButton.tsx");
 
 export const GuildPowerupsBoostButton = function GuildPowerupsBoostButton(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
   let obj = guildId(589);
-  let items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(guildId));
-  const items1 = [handleGuildBoostsUpdate];
+  let items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(guildId));
+  const items1 = [closure_6];
   stateFromStores1 = guildId(589).useStateFromStores(items1, () => boostSlots.boostSlots);
   const obj2 = guildId(589);
   const tmp = guildId;
   const tmp5 = stateFromStores1;
   const tmp6 = stateFromStores1(5356)({ forceFetch: true });
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_5];
   const stateFromStores2 = guildId(589).useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores2) {
     let UNSPECIFIED = stateFromStores2.premiumGroupRole;

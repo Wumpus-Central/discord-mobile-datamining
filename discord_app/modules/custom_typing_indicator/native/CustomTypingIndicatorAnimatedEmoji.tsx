@@ -1,14 +1,12 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_5 = { code: "function CustomTypingIndicatorAnimatedEmojiTsx1(){const{angle,scale,RING_RADIUS,translateY}=this.__closure;const currentAngle=angle.get();return{transform:[{scale:scale.get()},{translateX:-RING_RADIUS*Math.sin(currentAngle)},{translateY:translateY.get()+RING_RADIUS*(Math.cos(currentAngle)-1)}]};}" };
-let result = require("context").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
+let result = require("set").fileFinishedImporting("modules/custom_typing_indicator/native/CustomTypingIndicatorAnimatedEmoji.tsx");
 
 export default function CustomTypingIndicatorAnimatedEmoji(size) {
-  let emoji;
-  let index;
   ({ emoji, index } = size);
   let num = size.size;
   if (num === undefined) {
@@ -22,7 +20,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
   enabled = sharedValue.useContext(index(enabled[2]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let obj = index(enabled[3]);
   sharedValue = obj.useSharedValue(1);
-  let obj1 = index(enabled[3]);
+  obj1 = index(enabled[3]);
   sharedValue1 = obj1.useSharedValue(0);
   sharedValue2 = index(enabled[3]).useSharedValue(0);
   let items = [animation, index, enabled, sharedValue1, sharedValue, sharedValue2];
@@ -63,11 +61,11 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
           const tmp13Result12 = tmp13(tmp14[5]);
         }
         return () => {
-          outer1_0(outer1_2[3]).cancelAnimation(noop);
-          const obj = outer1_0(outer1_2[3]);
-          outer1_0(outer1_2[3]).cancelAnimation(closure_4);
-          const obj2 = outer1_0(outer1_2[3]);
-          outer1_0(outer1_2[3]).cancelAnimation(closure_5);
+          closure_1_0(closure_1_2[3]).cancelAnimation(closure_3);
+          const obj = closure_1_0(closure_1_2[3]);
+          closure_1_0(closure_1_2[3]).cancelAnimation(closure_4);
+          const obj2 = closure_1_0(closure_1_2[3]);
+          closure_1_0(closure_1_2[3]).cancelAnimation(closure_5);
         };
       }
     }
@@ -81,7 +79,7 @@ export default function CustomTypingIndicatorAnimatedEmoji(size) {
     const items = [obj, , ];
     obj = { translateX: -5 * Math.sin(value) };
     items[1] = obj;
-    const obj1 = { translateY: null };
+    obj1 = { translateY: null };
     value = sharedValue2.get();
     obj1[0] = value + 5 * (Math.cos(value) - 1);
     items[2] = obj1;

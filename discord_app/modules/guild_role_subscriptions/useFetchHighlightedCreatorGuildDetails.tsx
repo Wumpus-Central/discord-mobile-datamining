@@ -1,27 +1,23 @@
 // discord_app/modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
-const result = require("noop").fileFinishedImporting("modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useFetchHighlightedCreatorGuildDetails.tsx");
 
 export default function useFetchHighlightedCreatorGuildDetails(arg0) {
-  let asyncGeneratorStep;
-  let dependencyMap;
-  let tmp2;
-  let tmp4;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   [tmp2, dependencyMap] = callback2(callback.useState(true), 2);
   const tmp = callback2(callback.useState(true), 2);
-  [tmp4, asyncGeneratorStep] = callback2(callback.useState(), 2);
+  [tmp4, closure_2] = callback2(callback.useState(), 2);
   const highlightedCreatorDetails = callback2(callback.useState(), 2);
   callback2 = highlightedCreatorDetails[1];
   closure_0 = undefined;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -49,13 +45,13 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp4;
-              let closure_1 = tmp8;
-              let callback;
-              outer1_1(true);
-              outer1_2(undefined);
-              let c4 = 2;
-              let obj1 = callback(outer2_1[3]);
+              closure_2 = tmp4;
+              closure_1 = tmp8;
+              callback = undefined;
+              closure_1_1(true);
+              closure_1_2(undefined);
+              c4 = 2;
+              obj1 = callback(closure_2_1[3]);
               c5 = 3;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -64,32 +60,32 @@ export default function useFetchHighlightedCreatorGuildDetails(arg0) {
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            outer1_1(false);
-            throw _slicedToArray;
+            closure_1_1(false);
+            throw closure_3;
           } else {
             if (2 === tmp8) {
               c4 = 1;
-              outer1_2(_slicedToArray);
+              closure_1_2(closure_3);
               c4 = 0;
-              outer1_1(false);
+              closure_1_1(false);
               c6 = 3;
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               callback = arg1;
-              outer1_3(callback);
+              closure_1_3(callback);
               c4 = 1;
             }
             c4 = 0;
-            outer1_1(false);
+            closure_1_1(false);
             c6 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           }
         } catch (tmp37) {
-          _slicedToArray = tmp37;
+          closure_3 = tmp37;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp37;

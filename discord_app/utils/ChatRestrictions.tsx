@@ -1,8 +1,10 @@
 // discord_app/utils/ChatRestrictions.tsx
-import { TOKEN_REGEX } from "ME";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { parsedItemUsesEveryoneRole } from "MentionGuardUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import parsedItemUsesEveryoneRoleDefault from "parsedItemUsesEveryoneRole" /* 10172 */;
 
+const TOKEN_REGEX = ME.TOKEN_REGEX;
 const items = [
   {
     check(arg0, getGuildId) {
@@ -10,7 +12,7 @@ const items = [
         if (null == getGuildId.getGuildId()) {
           return false;
         } else {
-          const extractEveryoneRoleResult = parsedItemUsesEveryoneRole.extractEveryoneRole(arg0, getGuildId);
+          const extractEveryoneRoleResult = parsedItemUsesEveryoneRoleDefault.extractEveryoneRole(arg0, getGuildId);
           if (null == extractEveryoneRoleResult) {
             return false;
           } else {
@@ -40,7 +42,7 @@ const items = [
               return false;
             }
           }
-          const obj5 = parsedItemUsesEveryoneRole;
+          const obj5 = parsedItemUsesEveryoneRoleDefault;
         }
       } else {
         return false;
@@ -63,6 +65,6 @@ const items = [
     analyticsType: "API Token Warning"
   }
 ];
-let result = require("getSystemLocale").fileFinishedImporting("utils/ChatRestrictions.tsx");
+let result = set.fileFinishedImporting("utils/ChatRestrictions.tsx");
 
 export const RESTRICTIONS = items;

@@ -1,16 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileMutualGuilds.tsx
-import "noop";
-import { View } from "set";
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", columnGap: 4, flexWrap: "wrap" }, section: { flexDirection: "row", alignItems: "center", columnGap: 6 } });
-const result = require("USER_PROFILE_TOOLTIP_DELAY").fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuilds.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileMutualGuilds.tsx");
 
 export default function UserProfileMutualGuilds(user) {
   user = user.user;
@@ -29,28 +28,27 @@ export default function UserProfileMutualGuilds(user) {
         obj = { style: null, accessibilityRole: "button", onPress: null, children: null };
         obj[0] = tmp.section;
         obj[2] = function onPress() {
-          let obj = { action: "PRESS_SECTION", section: outer1_4.MUTUAL_GUILDS };
+          let obj = { action: "PRESS_SECTION", section: closure_1_4.MUTUAL_GUILDS };
           trackUserProfileAction(obj);
           obj = {
             user,
             onPressMutualGuild(arg0) {
               callback({ action: "PRESS_MUTUAL_GUILD" });
-              outer1_0(outer1_2[11]).transitionToGuild(arg0);
-              const obj = outer1_0(outer1_2[11]);
-              outer1_1(outer1_2[8]).hideActionSheet();
-              const obj2 = outer1_1(outer1_2[8]);
-              outer1_1(outer1_2[8]).hideActionSheet();
+              closure_1_0(closure_1_2[11]).transitionToGuild(arg0);
+              const obj = closure_1_0(closure_1_2[11]);
+              closure_1_1(closure_1_2[8]).hideActionSheet();
+              const obj2 = closure_1_1(closure_1_2[8]);
+              closure_1_1(closure_1_2[8]).hideActionSheet();
             }
           };
-          trackUserProfileAction(outer1_2[8]).openLazy(user(outer1_2[10])(outer1_2[9], outer1_2.paths), "UserProfileMutualGuildsActionSheet", obj, "stack");
+          trackUserProfileAction(closure_1_2[8]).openLazy(user(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), "UserProfileMutualGuildsActionSheet", obj, "stack");
         };
-        const obj1 = { size: null, totalCount: null, names: null, children: null };
+        obj1 = { size: null, totalCount: null, names: null, children: null };
         obj1[0] = tmp2(7188).GuildIconSizes.XXSMALL;
         obj1[1] = mapped.length;
         obj1[2] = mapped.map((name) => name.name);
         obj1[3] = mapped.map((guild) => {
-          const obj = { guild, size: null };
-          obj[1] = user(7188).GuildIconSizes.XXSMALL;
+          const obj = { guild, size: user(7188).GuildIconSizes.XXSMALL };
           return callback(trackUserProfileAction(7188), obj, guild.id);
         });
         const items = [callback(tmp2(11787).GuildIconPile, obj1), ];

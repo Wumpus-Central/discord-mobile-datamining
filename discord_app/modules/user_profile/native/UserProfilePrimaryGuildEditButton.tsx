@@ -1,22 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx
-import "set";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildTagBadgeSize } from "items";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildTagBadgeSize } from "items" /* 8168 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
+noopAll;
 createCacheKey = { tag: null };
-createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: require("Themes").radii.sm };
+createCacheKey = { paddingHorizontal: 6, paddingVertical: 2, columnGap: 4, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("items").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryGuildEditButton.tsx");
 
 export default function UserProfilePrimaryGuildEditButton(arg0) {
-  let disabled;
-  let pendingPrimaryGuildId;
-  let tagStyle;
-  let user;
   ({ user, pendingPrimaryGuildId } = arg0);
   pendingPrimaryGuildId = undefined;
   let stateFromStores;
@@ -48,7 +46,7 @@ export default function UserProfilePrimaryGuildEditButton(arg0) {
   const items = [handleSelectPrimaryGuild];
   const items1 = [pendingPrimaryGuildId];
   stateFromStores = obj.useStateFromStores(items, () => handleSelectPrimaryGuild.getGuild(pendingPrimaryGuildId), items1);
-  let obj1 = pendingPrimaryGuildId(userAvailableGuildsWithTags[7]);
+  obj1 = pendingPrimaryGuildId(userAvailableGuildsWithTags[7]);
   userAvailableGuildsWithTags = obj1.useUserAvailableGuildsWithTags();
   if (null != user) {
     if (userAvailableGuildsWithTags.length > 0) {

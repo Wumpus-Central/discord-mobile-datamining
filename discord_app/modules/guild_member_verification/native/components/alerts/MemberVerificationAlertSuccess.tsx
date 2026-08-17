@@ -1,17 +1,16 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ alert: { marginTop: 120 }, header: { marginTop: 40, textAlign: "center" }, text: { marginVertical: 8, lineHeight: 18, textAlign: "center" }, illustrationContainer: { position: "absolute", display: "flex", flexDirection: "column", alignItems: "center", left: 0, right: 0, top: -220 }, illustration: { height: 246, width: 240 } });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertSuccess.tsx");
 
 export default function MemberVerificationAlertSuccess(guildId) {
   guildId = guildId.guildId;
@@ -19,11 +18,11 @@ export default function MemberVerificationAlertSuccess(guildId) {
   const merged = Object.assign(guildId, Object.create(null));
   const tmp2 = callback3();
   let obj = guildId(merged[6]);
-  const items = [createGuildRecordFromRust];
+  const items = [closure_5];
   const items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(guildId), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(guildId), items1);
   guildId(merged[6]);
-  [][0] = maybeApplyNoTextColorForLightCustomTheme;
+  [][0] = closure_4;
   if (null == stateFromStores) {
     return null;
   } else {
@@ -43,7 +42,7 @@ export default function MemberVerificationAlertSuccess(guildId) {
     obj.onConfirm = onConfirm;
     obj = { style: null, children: null };
     obj[0] = tmp2.illustrationContainer;
-    const obj1 = { source: null, autoPlay: null, style: null };
+    obj1 = { source: null, autoPlay: null, style: null };
     const tmp10 = handleConfirmAndAck(tmp4[7]);
     obj1[0] = tmp3(tmp4[10]);
     obj1[1] = !tmp7;

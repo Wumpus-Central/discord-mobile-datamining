@@ -1,25 +1,23 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import PlatformTypes from "PlatformTypes";
-import PlatformTypes from "PlatformTypes";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { wrapper: { flexDirection: "row", alignItems: "center" }, dot: null, dotContainer: null, onlineDot: null, offlineDot: null, text: null, refreshText: null };
-obj = { width: 8, height: 8, borderRadius: require("Themes").radii.sm };
+obj = { width: 8, height: 8, borderRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 obj[2] = { alignItems: "center", justifyContent: "center", marginRight: 4 };
-createCacheKey = { backgroundColor: require("Themes").colors.TEXT_STATUS_ONLINE };
+createCacheKey = { backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
 obj[3] = createCacheKey;
-obj[4] = { backgroundColor: require("Themes").colors.TEXT_STATUS_OFFLINE };
+obj[4] = { backgroundColor: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
 let num;
 if (PlatformTypes.isAndroid()) {
   num = 12;
@@ -31,14 +29,10 @@ if (PlatformTypes.isAndroid()) {
 }
 obj[6] = { textAlignVertical: "center", lineHeight: num2 };
 let closure_6 = createCacheKey.createStyles(obj);
-let obj2 = { backgroundColor: require("Themes").colors.TEXT_STATUS_OFFLINE };
+let obj2 = { backgroundColor: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
 const memoResult = importAllResult.memo(function MemberCount(arg0) {
-  let color;
-  let count;
-  let dotContainerWidth;
-  let type;
   ({ type, count, color, dotContainerWidth } = arg0);
-  const tmp2 = useIsMobileVisualRefreshExperimentEnabled("GuildActionSheetMemberCount");
+  const tmp2 = useIsMobileVisualRefreshExperimentEnabledDefault("GuildActionSheetMemberCount");
   if (null == count) {
     const intl2 = getSystemLocale.intl;
     if ("online" === type) {
@@ -64,7 +58,7 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
       obj[0] = dotContainerWidth;
       tmp14 = obj;
     }
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     items[1] = tmp14;
     obj1[0] = items;
     const items1 = [tmp10.dot, ];
@@ -90,6 +84,6 @@ const memoResult = importAllResult.memo(function MemberCount(arg0) {
     return closure_5(View, obj);
   }
 });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetMemberCount.tsx");
 
 export default memoResult;

@@ -1,22 +1,22 @@
 // discord_app/modules/forums/ForumTagHooks.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;
 let closure_6 = [];
-let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/forums/ForumTagHooks.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/ForumTagHooks.tsx");
 
 export const useAvailableTags = function useAvailableTags(parent_id) {
   parent_id = undefined;
   if (parent_id != null) {
     parent_id = parent_id.parent_id;
   }
-  const items = [ensureGuildLoaded];
+  const items = [closure_3];
   const items1 = [parent_id];
   return parent_id(589).useStateFromStoresObject(items, () => {
-    const channel = outer1_3.getChannel(parent_id);
+    const channel = closure_1_3.getChannel(parent_id);
     let availableTags;
     if (channel != null) {
       availableTags = channel.availableTags;
@@ -38,10 +38,10 @@ export const useAppliedTags = function useAppliedTags(thread) {
   if (thread != null) {
     parent_id = thread.parent_id;
   }
-  const items = [ensureGuildLoaded];
+  const items = [closure_3];
   const items1 = [parent_id];
   stateFromStoresObject = parent_id(stateFromStoresObject[4]).useStateFromStoresObject(items, () => {
-    const channel = outer1_3.getChannel(parent_id);
+    const channel = closure_1_3.getChannel(parent_id);
     let availableTags;
     if (channel != null) {
       availableTags = channel.availableTags;
@@ -69,7 +69,7 @@ export const useAppliedTags = function useAppliedTags(thread) {
       }
     }
     if (found == null) {
-      found = outer1_6;
+      found = closure_1_6;
     }
     let result;
     if (parent_id != null) {
@@ -97,10 +97,10 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
   if (thread != null) {
     parent_id = thread.parent_id;
   }
-  let items = [ensureGuildLoaded];
+  let items = [closure_3];
   const items1 = [parent_id];
   const stateFromStoresObject = parent_id(memo[4]).useStateFromStoresObject(items, () => {
-    const channel = outer1_3.getChannel(parent_id);
+    const channel = closure_1_3.getChannel(parent_id);
     let availableTags;
     if (channel != null) {
       availableTags = channel.availableTags;
@@ -129,7 +129,7 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
       }
     }
     if (found == null) {
-      found = outer1_6;
+      found = closure_1_6;
     }
     let result;
     if (parent_id != null) {
@@ -150,8 +150,8 @@ export const useSomeAppliedTags = function useSomeAppliedTags(thread, arg1) {
 };
 export const useVisibleForumTags = function useVisibleForumTags(parentChannel) {
   const _require = parentChannel;
-  const items = [getUncachedChannelPermissions];
-  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => outer1_4.can(outer1_5.MANAGE_THREADS, stateFromStores));
+  const items = [closure_4];
+  stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores));
   const items1 = [stateFromStores, ];
   let availableTags;
   if (parentChannel != null) {
@@ -176,19 +176,19 @@ export const useVisibleForumTags = function useVisibleForumTags(parentChannel) {
 export const useVisibleAppliedForumTags = function useVisibleAppliedForumTags(arg0, arg1) {
   let stateFromStores = arg0;
   let stateFromStores1 = arg1;
-  let items = [ensureGuildLoaded];
+  let items = [closure_3];
   const items1 = [arg0];
   stateFromStores = stateFromStores(stateFromStores1[4]).useStateFromStores(items, () => {
     let parent_id;
     if (stateFromStores != null) {
       parent_id = stateFromStores.parent_id;
     }
-    return outer1_3.getChannel(parent_id);
+    return closure_1_3.getChannel(parent_id);
   }, items1);
   stateFromStores1 = undefined;
   const obj = stateFromStores(stateFromStores1[4]);
-  const items2 = [getUncachedChannelPermissions];
-  stateFromStores1 = stateFromStores(stateFromStores1[4]).useStateFromStores(items2, () => outer1_4.can(outer1_5.MANAGE_THREADS, stateFromStores));
+  const items2 = [closure_4];
+  stateFromStores1 = stateFromStores(stateFromStores1[4]).useStateFromStores(items2, () => closure_1_4.can(closure_1_5.MANAGE_THREADS, stateFromStores));
   const items3 = [stateFromStores1, ];
   let availableTags;
   if (stateFromStores != null) {
@@ -211,7 +211,7 @@ export const useVisibleAppliedForumTags = function useVisibleAppliedForumTags(ar
   }, items3);
   const items4 = [arg1, memo, arg0];
   return memo.useMemo(() => {
-    const found = stateFromStores1.filter((arg0) => noop.includes(arg0));
+    const found = stateFromStores1.filter((arg0) => closure_2.includes(arg0));
     let result;
     if (stateFromStores != null) {
       result = stateFromStores.isModeratorReportChannel();

@@ -1,9 +1,11 @@
 // discord_app/utils/ChangeLogUtils.tsx
-import { t } from "../../_runtime/04092_t.js";
-import { regExp } from "../modules/markup/MarkupListRule.tsx";
-import { MarkupSubtextRule } from "../modules/markup/MarkupSubtextRule.tsx";
-import { textRegexp } from "../modules/markup/MarkupTextRule.tsx";
+import tDefault from "t" /* 4092 */;
+import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
+import textRegexpDefault from "textRegexp" /* 6815 */;
+import regExpDefault from "regExp" /* 6829 */;
+import _modDef6830 from "module_6830" /* 6830 */;
 import { ChangeLogLink } from "native/ChangeLogUtils.tsx";
+
 const require = arg1;
 function defaultRules(uri) {
   let obj = {};
@@ -21,7 +23,7 @@ function defaultRules(uri) {
     const merged2 = Object.assign(strong);
     obj[0] = obj;
   } else {
-    const obj1 = {};
+    obj1 = {};
     const merged3 = Object.assign(obj1);
     const obj2 = {};
     const merged4 = Object.assign(image);
@@ -54,7 +56,7 @@ function defaultRules(uri) {
     const merged9 = Object.assign(list);
     obj.list = obj4;
     const obj5 = { order: null, match: null, parse: null, react: null };
-    obj5[0] = textRegexp.order;
+    obj5[0] = textRegexpDefault.order;
     obj5[1] = function match(arg0) {
       return regex.exec(arg0);
     };
@@ -76,8 +78,8 @@ function defaultRules(uri) {
     const merged10 = Object.assign(lheading);
     _require = true;
     obj6.parse = (arg0, arg1, inline) => {
-      const match = outer1_10.exec(arg0[1]);
-      const str2 = arg0[1].replace(outer1_10, "");
+      const match = closure_1_10.exec(arg0[1]);
+      const str2 = arg0[1].replace(closure_1_10, "");
       let formatted = str2;
       if (c0) {
         formatted = str2.toUpperCase();
@@ -92,7 +94,7 @@ function defaultRules(uri) {
         num = 1;
       }
       obj[1] = num;
-      obj[2] = outer1_1(outer1_2[0]).parseInline(arg1, formatted, inline);
+      obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
     if (typeof tmp(8306).customRules.lheading === "function") {
@@ -136,16 +138,16 @@ function defaultRules(uri) {
     return obj;
   }
 }
-let lheading = require("t").defaultRules.lheading;
-let heading = require("t").defaultRules.heading;
-let link = require("t").defaultRules.link;
-let image = require("t").defaultRules.image;
-let list = require("t").defaultRules.list;
-let blockQuote = require("t").defaultRules.blockQuote;
-let paragraph = require("t").defaultRules.paragraph;
+let lheading = tDefault.defaultRules.lheading;
+let heading = tDefault.defaultRules.heading;
+let link = tDefault.defaultRules.link;
+let image = tDefault.defaultRules.image;
+let list = tDefault.defaultRules.list;
+let blockQuote = tDefault.defaultRules.blockQuote;
+let paragraph = tDefault.defaultRules.paragraph;
 const re10 = /\{(.+?)}/;
 const re11 = /^\$(\w+?)\$/;
-const result = require("textRegexp").fileFinishedImporting("utils/ChangeLogUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/ChangeLogUtils.tsx");
 
 export default {
   getDefaultRules(uri) {
@@ -159,8 +161,8 @@ export default {
     const merged1 = Object.assign(lheading);
     const _require = false;
     obj.parse = (arg0, arg1, inline) => {
-      const match = outer1_10.exec(arg0[1]);
-      const str2 = arg0[1].replace(outer1_10, "");
+      const match = closure_1_10.exec(arg0[1]);
+      const str2 = arg0[1].replace(closure_1_10, "");
       let formatted = str2;
       if (c0) {
         formatted = str2.toUpperCase();
@@ -175,7 +177,7 @@ export default {
         num = 1;
       }
       obj[1] = num;
-      obj[2] = outer1_1(outer1_2[0]).parseInline(arg1, formatted, inline);
+      obj[2] = closure_1_1(closure_1_2[0]).parseInline(arg1, formatted, inline);
       return obj;
     };
     if (typeof _ChangeLogLink.customRules.lheading === "function") {
@@ -195,23 +197,23 @@ export default {
     obj = {};
     const merged = Object.assign(defaultRules(uri));
     obj = {};
-    const merged1 = Object.assign(t.defaultRules.newline);
+    const merged1 = Object.assign(tDefault.defaultRules.newline);
     obj.newline = obj;
-    obj.text = textRegexp;
-    obj.list = regExp;
-    obj.subtext = MarkupSubtextRule;
+    obj.text = textRegexpDefault;
+    obj.list = regExpDefault;
+    obj.subtext = _modDef6830;
     const merged2 = Object.assign(obj);
     return obj;
   }
 };
 export const renderChangelogMessageMarkup = function renderChangelogMessageMarkup(content, uri) {
-  let obj = require("../modules/markup/MarkupUtils.tsx") /* get defaultRules */;
+  let obj = get_defaultRulesDefault;
   obj = {};
   const merged = Object.assign(defaultRules(uri));
   if (null != arg2) {
     obj = { changeLog: null };
     obj[0] = arg2;
-    let obj1 = obj;
+    obj1 = obj;
   } else {
     obj1 = {};
   }

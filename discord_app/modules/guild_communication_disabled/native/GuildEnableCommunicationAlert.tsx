@@ -1,34 +1,29 @@
 // discord_app/modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx
-import closure_3 from "getFriendlyDurationString";
-import _slicedToArray from "_slicedToArray";
-import "componentDidMount";
-import { View } from "Text";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getFriendlyDurationString from "getFriendlyDurationString";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import getFriendlyDurationString from "getFriendlyDurationString" /* 1992 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c10;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: error, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: metroImportAll } = getFriendlyDurationString);
+noopAll;
+({ CLEAR_COMMUNICATION_DISABLED_MODAL_NAME: error, GUILD_COMMUNICATION_DISABLED_RESOURCE_LINK: closure_8 } = getFriendlyDurationString);
 ({ AnalyticEvents: c9, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let closure_12 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, cta: { paddingTop: 8 }, countdown: createCacheKey });
-const result = require("noop").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildEnableCommunicationAlert.tsx");
 
 export default function GuildEnableCommunicationAlert(guildId) {
   guildId = guildId.guildId;
   const userId = guildId.userId;
   const merged = Object.assign(guildId, Object.create(null));
-  let dependencyMap;
-  let closure_3;
+  dependencyMap = undefined;
+  closure_3 = undefined;
   function _handleConfirmRemoveTimeout(arg0, arg1) {
     const self = this;
     const tmp = callback(function*() {
@@ -58,12 +53,12 @@ export default function GuildEnableCommunicationAlert(guildId) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
-              let obj1 = v0(11022);
+              closure_0 = tmp4;
+              obj1 = v0(11022);
               v0 = 1;
               dependencyMap = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.setCommunicationDisabledDuration(outer1_0, v0);
+              obj1[0] = obj1.setCommunicationDisabledDuration(closure_1_0, v0);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -76,8 +71,8 @@ export default function GuildEnableCommunicationAlert(guildId) {
             return obj;
           } else {
             const obj2 = { key: "GUILD_ENABLE_COMMUNICATION_SUCCESS", content: null, icon: null };
-            const intl = outer1_0(1236).intl;
-            obj2[1] = intl.string(outer1_0(1236).t["/Mmbfv"]);
+            const intl = closure_1_0(1236).intl;
+            obj2[1] = intl.string(closure_1_0(1236).t["/Mmbfv"]);
             obj2[2] = v0(8764);
             v0(4094).open(obj2);
             dependencyMap = 3;
@@ -89,7 +84,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
         }
       }
     });
-    const _handleConfirmRemoveTimeout = tmp;
+    closure_4 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -102,9 +97,9 @@ export default function GuildEnableCommunicationAlert(guildId) {
   dependencyMap = tmp2;
   closure_3 = _handleConfirmRemoveTimeout(userId(8200)(userId, guildId), 1)[0];
   userId(4761)(() => {
-    let obj = userId(_undefined[11]);
-    obj = { type: outer1_7, guild_id: guildId, other_user_id: userId };
-    obj.track(outer1_9.OPEN_MODAL, obj);
+    let obj = userId(countdown[11]);
+    obj = { type: closure_1_7, guild_id: guildId, other_user_id: userId };
+    obj.track(closure_1_9.OPEN_MODAL, obj);
   });
   let obj = {};
   const merged1 = Object.assign(merged);
@@ -151,7 +146,7 @@ export default function GuildEnableCommunicationAlert(guildId) {
         const _Date = Date;
         num = new Date(tmp);
       }
-      return outer1_10(userId(_undefined[19]), { style: _undefined.countdown, deadline: num, withUnits: true });
+      return closure_1_10(userId(countdown[19]), { style: countdown.countdown, deadline: num, withUnits: true });
     }
   });
   const items = [closure_10(guildId(4734).Text, obj), ];

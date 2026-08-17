@@ -1,6 +1,6 @@
 // discord_app/modules/go_live/utils/StreamKeyUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { StreamTypes } from "StreamIssueReportReasons";
+import closure_0 from "_slicedToArray" /* 32 */;
+import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
 
 const result = require("set").fileFinishedImporting("modules/go_live/utils/StreamKeyUtils.tsx");
 
@@ -27,14 +27,11 @@ export const decodeStreamKey = function decodeStreamKey(streamKey) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unknown stream type " + first);
+    error = new Error("Unknown stream type " + first);
     throw error;
   }
 };
 export const encodeStreamKey = function encodeStreamKey(currentUserActiveStream) {
-  let channelId;
-  let ownerId;
-  let streamType;
   ({ streamType, channelId, ownerId } = currentUserActiveStream);
   if (StreamTypes.GUILD === streamType) {
     const items = [streamType, tmp, channelId, ownerId];
@@ -45,7 +42,7 @@ export const encodeStreamKey = function encodeStreamKey(currentUserActiveStream)
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unknown stream type " + streamType);
+    error = new Error("Unknown stream type " + streamType);
     throw error;
   }
 };

@@ -1,32 +1,23 @@
 // discord_app/modules/rtc/native/SecureFramesUserVerificationModal.tsx
-import Text from "Text";
-import dispatcher from "dispatcher";
-import get_ActivityIndicator from "getCurrentUserSigningKey";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import ME from "ME";
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import ME from "ME" /* 676 */;
+import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_14;
-let closure_16;
-let closure_17;
-let closure_6;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ USER_VERIFICATION_CHUNK_SIZE: c9, USER_VERIFICATION_LENGTH: c10, USER_VERIFICATION_NUM_COLUMNS: unpackModuleId, USER_VERIFIED_TOAST_KEY: closure_12 } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ AnalyticsLocations: map1, AnalyticsSections: closure_14 } = ME);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 createCacheKey = { container: null, footer: null, footerText: null, header: null, subtitle: null, code: null, helpMessage: null };
-createCacheKey = { flex: 1, padding: 16, flexDirection: "column", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, padding: 16, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, gap: 16, justifyContent: "flex-end" };
 createCacheKey[2] = { textAlign: "center" };
@@ -34,12 +25,10 @@ createCacheKey[3] = { height: 56, flexDirection: "row", alignItems: "center", ju
 createCacheKey[4] = { textAlign: "center" };
 createCacheKey[5] = { marginTop: 24 };
 createCacheKey[6] = { marginBottom: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationModal.tsx");
+let closure_18 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationModal.tsx");
 
 export default function SecureFramesUserVerificationModal(userId) {
-  let tmp18;
-  let tmp19;
   userId = userId.userId;
   const channelId = userId.channelId;
   let name;
@@ -51,11 +40,11 @@ export default function SecureFramesUserVerificationModal(userId) {
   let isOtherUserKeyPersistent;
   let enabled;
   let analyticsLocations;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = userId(name[11]);
   let items = [isOtherUserKeyPersistent];
   const stateFromStores = obj.useStateFromStores(items, () => isOtherUserKeyPersistent.getUser(userId));
-  let obj1 = userId(name[11]);
+  obj1 = userId(name[11]);
   let items1 = [isCurrentUserKeyPersistent];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     const channel = isCurrentUserKeyPersistent.getChannel(channelId);
@@ -84,11 +73,11 @@ export default function SecureFramesUserVerificationModal(userId) {
   let callback = userKey.useCallback(() => {
     if (null != userKey) {
       let obj = userId(name[17]);
-      obj.addVerification(userId, tmp, isOtherUserKeyPersistent, channelId, outer1_13.E2EE_USER_VERIFY_MODAL);
+      obj.addVerification(userId, tmp, isOtherUserKeyPersistent, channelId, closure_1_13.E2EE_USER_VERIFY_MODAL);
       let arr = channelId(name[18]);
       arr = arr.pop();
       obj = { key: null, iconColor: "text-feedback-positive", IconComponent: null, content: null };
-      obj[0] = outer1_12;
+      obj[0] = closure_1_12;
       obj[2] = userId(name[20]).CircleCheckIcon;
       const intl = userId(name[21]).intl;
       obj = { username: null };
@@ -110,7 +99,7 @@ export default function SecureFramesUserVerificationModal(userId) {
   let obj8 = userId(name[22]);
   enabled = obj8.useSecureFramesDeeplinkExperiment({ location: "SecureFramesUserVerificationModal" }).enabled;
   const items4 = [channelId, readableSecureFramesFingerprint, fingerprint, enabled, userId];
-  const callback2 = userKey.useCallback(() => {
+  callback2 = userKey.useCallback(() => {
     if (null != fingerprint) {
       if (null != readableSecureFramesFingerprint) {
         let obj = name;
@@ -132,7 +121,7 @@ export default function SecureFramesUserVerificationModal(userId) {
         showShareActionSheet = showShareActionSheet(obj[24]).showShareActionSheet;
         obj = { message: null };
         obj[0] = userVerificationDeeplink;
-        showShareActionSheet(obj, outer1_14.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
+        showShareActionSheet(obj, closure_1_14.SECURE_FRAMES_VOICE_BOTTOM_SHEET);
         const showShareActionSheetResult1 = showShareActionSheet(obj[24]);
       }
       obj3 = readableSecureFramesFingerprint;

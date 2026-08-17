@@ -1,5 +1,5 @@
 // discord_app/modules/noise_cancellation/getEffectiveNoiseCancellation.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const deep_noise_suppression = "deep_noise_suppression";
 let set = new Set(["voice_isolation", "wide_spectrum"]);

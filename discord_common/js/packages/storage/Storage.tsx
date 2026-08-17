@@ -1,4 +1,7 @@
 // discord_common/js/packages/storage/Storage.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/storage/Storage.tsx");
+import set from "set" /* 2 */;
+import parseValue from "parseValue" /* 596 */;
 
-export const Storage = require("parseValue").impl;
+const result = set.fileFinishedImporting("../discord_common/js/packages/storage/Storage.tsx");
+
+export const Storage = parseValue.impl;

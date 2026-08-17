@@ -1,9 +1,9 @@
 // discord_app/modules/rpc/helpers/getCurrentVoiceChannel.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateVoiceState from "updateVoiceState";
+import closure_0 from "fetchFingerprint" /* 1218 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "updateVoiceState" /* 4542 */;
 
-const result = require("updateVoiceState").fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentVoiceChannel.tsx");
 
 export default function getCurrentVoiceChannel() {
   const id = store.getId();

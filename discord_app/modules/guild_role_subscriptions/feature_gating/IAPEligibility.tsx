@@ -1,11 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 
 const require = arg1;
 let c4 = "13.2";
 let items = [require("ME").GuildFeatures.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE];
-const result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/feature_gating/IAPEligibility.tsx");
 
 export const canUseRoleSubscriptionIAP = function canUseRoleSubscriptionIAP(guildId) {
   if (obj.isIOS()) {
@@ -119,13 +119,13 @@ export const useCanUseRoleSubscriptionIAP = function useCanUseRoleSubscriptionIA
     return tmp;
   }, []);
   let memo1 = React.useMemo(() => guildId(500).isIOS(), []);
-  const items = [createGuildRecordFromRust];
+  items = [closure_3];
   if (memo1) {
     memo1 = obj.useStateFromStores(items, () => {
-      guild = outer1_3.getGuild(guild);
+      guild = closure_1_3.getGuild(guild);
       let everyResult = null != guild;
       if (everyResult) {
-        everyResult = outer1_5.every((arg0) => {
+        everyResult = closure_1_5.every((arg0) => {
           const features = guild.features;
           return features.has(arg0);
         });

@@ -1,15 +1,15 @@
 // discord_app/modules/media_viewer/native/useMediaViewerSources.tsx
-const zustandStore = require("defaultStatesAreEqual").createZustandStore(() => {
-  const obj = { sources: [], spoilerIndexes: null };
-  obj[1] = new Set();
+import set2 from "set" /* 2 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
+
+const zustandStore = defaultStatesAreEqual.createZustandStore(() => {
+  const obj = { sources: [], spoilerIndexes: new Set() };
   return obj;
 });
-const result = require("set").fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
+const result = set2.fileFinishedImporting("modules/media_viewer/native/useMediaViewerSources.tsx");
 
 export const MediaViewerSourcesStore = zustandStore;
 export const setMediaViewerSources = function setMediaViewerSources(arg0) {
-  let initialIndex;
-  let sources;
   ({ sources, initialIndex } = arg0);
   if (initialIndex === undefined) {
     initialIndex = null;

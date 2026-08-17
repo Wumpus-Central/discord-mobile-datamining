@@ -1,24 +1,21 @@
 // discord_app/modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx
-import createExecutable from "createExecutable";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
-import { getPlatform } from "../../activities/utils/getPlatform.tsx";
+import getPlatformDefault from "getPlatform" /* 8718 */;
+import closure_3 from "createExecutable" /* 4479 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;
-const result = require("sum").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useIsPrimaryEntryPointDisabled.tsx");
 
 export default function useIsPrimaryEntryPointDisabled(arg0) {
-  let activityAction;
-  let application;
-  let context;
   ({ context, application, activityAction } = arg0);
   let channel;
   channel = undefined;
   if ("channel" === context.type) {
     channel = context.channel;
   }
-  const items = [getUncachedChannelPermissions];
-  const stateFromStores = channel(589).useStateFromStores(items, () => outer1_4.can(outer1_5.USE_EMBEDDED_ACTIVITIES, channel));
+  const items = [closure_4];
+  const stateFromStores = channel(589).useStateFromStores(items, () => closure_1_4.can(closure_1_5.USE_EMBEDDED_ACTIVITIES, channel));
   const obj = channel(589);
   let id;
   if (channel != null) {
@@ -69,8 +66,8 @@ export default function useIsPrimaryEntryPointDisabled(arg0) {
   let disabled = flag;
   let reason;
   if (activityAction !== channel(11230).ActivityAction.LEAVE) {
-    const tmp10 = application instanceof createExecutable ? application.embeddedActivityConfig : application.embedded_activity_config;
-    getPlatform;
+    const tmp10 = application instanceof closure_3 ? application.embeddedActivityConfig : application.embedded_activity_config;
+    getPlatformDefault;
     tmp2(500);
     if (null != tmp10) {
       const supported_platforms = tmp10.supported_platforms;

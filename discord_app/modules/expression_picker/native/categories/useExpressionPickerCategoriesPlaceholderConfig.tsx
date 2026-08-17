@@ -1,22 +1,23 @@
 // discord_app/modules/expression_picker/native/categories/useExpressionPickerCategoriesPlaceholderConfig.tsx
-import noop from "noop";
-import { CATEGORY_ICON_SIZE } from "ME";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { CATEGORY_ICON_SIZE } from "ME" /* 676 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let require = arg1;
+const require = arg1;
 createCacheKey = { placeholder: null };
-createCacheKey = { color: require("Themes").colors.BACKGROUND_MOD_STRONG, opacity: 0.5 };
+createCacheKey = { color: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/expression_picker/native/categories/useExpressionPickerCategoriesPlaceholderConfig.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/expression_picker/native/categories/useExpressionPickerCategoriesPlaceholderConfig.tsx");
 
 export default function useExpressionPickerCategoriesPlaceholderConfig() {
-  const tmp = createCacheKey();
-  const require = tmp;
+  const tmp = callback();
+  closure_0 = tmp;
   const items = [tmp];
   return React.useMemo(() => {
     let obj = { sectionItem: null };
-    obj = { type: tmp(outer1_1[4]).FastestListPropsPlaceholderType.SHAPE, colorHex: tmp.placeholder.color, opacity: tmp.placeholder.opacity, shape: "circle", width: outer1_3, height: outer1_3 };
+    obj = { type: lib(closure_1_1[4]).FastestListPropsPlaceholderType.SHAPE, colorHex: lib.placeholder.color, opacity: lib.placeholder.opacity, shape: "circle", width: closure_1_3, height: closure_1_3 };
     obj[0] = obj;
     return obj;
   }, items);

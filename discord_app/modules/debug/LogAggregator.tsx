@@ -1,6 +1,8 @@
 // discord_app/modules/debug/LogAggregator.tsx
-let c0 = new require("Deque")(5000);
-let tmp2 = new require("Deque")(5000);
+import DequeDefault from "Deque" /* 8 */;
+
+let closure_0 = new DequeDefault(5000);
+let tmp2 = new DequeDefault(5000);
 const result = require("set").fileFinishedImporting("modules/debug/LogAggregator.tsx");
 
 export const report = function report(str) {
@@ -44,27 +46,25 @@ export const report = function report(str) {
     obj[0] = Date.now();
     obj[1] = str;
     obj[2] = tmp;
-    let arr = tmp2.push(obj);
-    arr = tmp2;
+    arr = arr.push(obj);
   } else {
-    arr = tmp2;
     obj = { time: null, category: null, timing: null, message: null };
     const _Date2 = Date;
     obj[0] = Date.now();
     ({ name: obj2[1], timing: obj2[2] } = str);
     obj[3] = tmp;
-    arr = tmp2.push(obj);
+    arr = arr.push(obj);
   }
   if (arr.length > 5000) {
     do {
-      let tmp5 = tmp2;
-      let arr1 = tmp2.shift();
-      length = tmp2.length;
+      let tmp5 = arr;
+      let arr1 = arr.shift();
+      length = arr.length;
     } while (length > 5000);
   }
 };
 export const clear = function clear() {
-  tmp2.clear();
+  arr.clear();
 };
 export const stringify = function stringify(arg0) {
   const found = arg0.toArray().filter((category) => {
@@ -90,7 +90,7 @@ export const getAllForDebugPanel = function getAllForDebugPanel(arg0) {
   if (arg0 === undefined) {
     flag = false;
   }
-  const toArrayResult = tmp2.toArray();
+  const toArrayResult = arr.toArray();
   if (flag) {
     let reversed = toArrayResult.reverse();
   } else {

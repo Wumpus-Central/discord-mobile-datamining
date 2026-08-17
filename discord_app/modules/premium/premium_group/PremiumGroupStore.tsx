@@ -1,21 +1,19 @@
 // discord_app/modules/premium/premium_group/PremiumGroupStore.tsx
-import reset from "reset";
-import SubscriptionStatusTypes from "SubscriptionStatusTypes";
-import { NOOP_NULL } from "ME";
-import { Store } from "initialize";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "reset" /* 4045 */;
+import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
+import { NOOP_NULL } from "ME" /* 676 */;
 
-let c4;
-let c5;
 const require = arg1;
 function handleMutationStart() {
   closure_7.membersData.isUpdating = true;
 }
 function handleMutationSuccess(subscriptionId) {
   subscriptionId = subscriptionId.subscriptionId;
-  dispatcher.wait(() => {
-    const subscriptionGroupMembers = subscriptionId(outer1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-    return subscriptionGroupMembers.catch(outer1_6);
+  dispatcherDefault.wait(() => {
+    const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
+    return subscriptionGroupMembers.catch(closure_1_6);
   });
   closure_7.membersData.isUpdating = false;
 }
@@ -24,11 +22,12 @@ function handleMutationFailure() {
 }
 ({ PremiumGroupAPIErrorCodes: c4, TOTAL_PREMIUM_GROUP_MEMBER_SEATS: c5 } = SubscriptionStatusTypes);
 let closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
+const Store = initializeDefault.Store;
 class PremiumGroupStore extends Store {
 }
 const prototype = PremiumGroupStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(reset);
+  this.waitFor(closure_3);
 };
 prototype["getMembers"] = function getMembers() {
   return closure_7.membersData.data;
@@ -70,18 +69,18 @@ prototype["getNumTotalSeats"] = function getNumTotalSeats() {
   return closure_5;
 };
 PremiumGroupStore.displayName = "PremiumGroupStore";
-const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
+const premiumGroupStore = new PremiumGroupStore(dispatcherDefault, {
   PREMIUM_GROUP_MEMBERS_REQUEST: function handleMembersRequest(subscriptionId) {
     subscriptionId = subscriptionId.subscriptionId;
     const isFetching = closure_7.membersData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      dispatcher.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(outer1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(outer1_6);
+      dispatcherDefault.wait(() => {
+        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(closure_1_6);
       });
       flag = true;
-      const obj = dispatcher;
+      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -99,12 +98,12 @@ const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
     const isFetching = closure_7.membershipData.isFetching;
     let flag = !isFetching;
     if (!isFetching) {
-      dispatcher.wait(() => {
+      dispatcherDefault.wait(() => {
         const premiumGroupMembership = callback(table[4]).fetchPremiumGroupMembership();
         return premiumGroupMembership.catch(closure_6);
       });
       flag = true;
-      const obj = dispatcher;
+      const obj = dispatcherDefault;
     }
     return flag;
   },
@@ -135,9 +134,9 @@ const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
   PREMIUM_GROUP_REMOVE_INVITE_FAILURE: function handleRemoveInviteFailure(subscriptionId) {
     subscriptionId = subscriptionId.subscriptionId;
     if (subscriptionId.errorCode === constants.BILLING_SUBSCRIPTION_GROUP_INVITE_ALREADY_ACCEPTED) {
-      dispatcher.wait(() => {
-        const subscriptionGroupMembers = subscriptionId(outer1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
-        return subscriptionGroupMembers.catch(outer1_6);
+      dispatcherDefault.wait(() => {
+        const subscriptionGroupMembers = subscriptionId(closure_1_2[4]).fetchSubscriptionGroupMembers(subscriptionId);
+        return subscriptionGroupMembers.catch(closure_1_6);
       });
       closure_7.membersData.isUpdating = false;
       return true;
@@ -146,9 +145,9 @@ const premiumGroupStore = new PremiumGroupStore(require("dispatcher"), {
     }
   },
   LOGOUT: function reset() {
-    let closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
+    closure_7 = { membersData: { data: null, isFetching: false, isUpdating: false }, membershipData: { data: null, isFetching: false, hasFetched: false } };
   }
 });
-const result = require("ME").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupStore.tsx");
 
 export default premiumGroupStore;

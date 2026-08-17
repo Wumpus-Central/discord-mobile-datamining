@@ -1,24 +1,23 @@
 // discord_app/modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx
-import "noop";
-import { AnalyticEvents } from "ME";
-import { FeedbackType } from "FeedbackRating";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { newGetEnglishMessageText } from "../../../../../intl/migration.tsx";
-import { closeActionSheet } from "../../../../feedback/native/FeedbackActionSheet.tsx";
-import { getInAppReportsFeedbackOptions } from "../../../getInAppReportsFeedbackOptions.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closeActionSheetDefault from "closeActionSheet" /* 10832 */;
+import getInAppReportsFeedbackOptionsDefault from "getInAppReportsFeedbackOptions" /* 16575 */;
+import newGetEnglishMessageText from "newGetEnglishMessageText" /* 16576 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { FeedbackType } from "FeedbackRating" /* 10811 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("FeedbackRating").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
+require = arg1;
+noopAll;
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/feedback/InAppReportsFeedbackActionSheet.tsx");
 
 export default function InAppReportsFeedbackActionSheet(arg0) {
-  let importDefault;
-  let require;
   ({ reportId: require, reportType: importDefault } = arg0);
   let obj = newGetEnglishMessageText;
   const result = obj.improperGetEnglishIntlMessageText("CALL_FEEDBACK_OPTION_OTHER");
   obj = { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null };
-  const tmp = getInAppReportsFeedbackOptions();
+  const tmp = getInAppReportsFeedbackOptionsDefault();
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.MP5lDj);
   const intl2 = getSystemLocale.intl;
@@ -30,15 +29,11 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
   obj[6] = items;
   obj[7] = result;
   obj[8] = function trackOpen() {
-    let obj = outer1_1(outer1_2[8]);
+    let obj = closure_1_1(closure_1_2[8]);
     obj = { report_id: closure_0, report_type: closure_1 };
-    obj.track(outer1_3.IAR_FEEDBACK_MODAL_VIEWED, obj);
+    obj.track(closure_1_3.IAR_FEEDBACK_MODAL_VIEWED, obj);
   };
   obj[9] = function trackReport(arg0) {
-    let dontShowAgain;
-    let feedback;
-    let rating;
-    let reason;
     ({ rating, reason, feedback, dontShowAgain } = arg0);
     let value = null;
     if (null != reason) {
@@ -56,17 +51,17 @@ export default function InAppReportsFeedbackActionSheet(arg0) {
       flag = false;
     }
     obj[5] = flag;
-    outer1_1(outer1_2[9])(obj);
+    closure_1_1(closure_1_2[9])(obj);
     if (dontShowAgain) {
       obj = { feedbackType: null, location: "InAppReportsFeedbackActionSheet" };
-      obj[0] = outer1_4.IN_APP_REPORTS;
-      outer1_0(tmp2[10]).processOptOut(obj);
-      const obj2 = outer1_0(tmp2[10]);
+      obj[0] = closure_1_4.IN_APP_REPORTS;
+      closure_1_0(tmp2[10]).processOptOut(obj);
+      const obj2 = closure_1_0(tmp2[10]);
     }
     if (null != rating) {
-      outer1_0(tmp2[11]).presentFeedbackSent();
-      const obj4 = outer1_0(tmp2[11]);
+      closure_1_0(tmp2[11]).presentFeedbackSent();
+      const obj4 = closure_1_0(tmp2[11]);
     }
   };
-  return jsx(closeActionSheet, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
+  return jsx(closeActionSheetDefault, { headerLabel: null, showHeaderCloseButton: true, hideDontShowAgainCheckbox: true, ratingsBodyLabel: null, reasonsHeaderLabel: null, reasons: null, feedbackReasons: null, otherKey: null, trackOpen: null, trackReport: null });
 };

@@ -1,15 +1,14 @@
 // discord_app/modules/app_launcher/native/base_components/RecommendationAppRow.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { AppRowLabel } from "../screens/home/AppLauncherHomeScreen.tsx";
+import noopAll from "noop" /* 19 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import AppRowLabel from "AppRowLabel" /* 11258 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("getAvatarURL").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/RecommendationAppRow.tsx");
 
 export default function RecommendationAppRow(onPress) {
-  let application;
-  let isFirstRow;
   ({ application, isFirstRow } = onPress);
   if (isFirstRow === undefined) {
     isFirstRow = false;
@@ -22,7 +21,7 @@ export default function RecommendationAppRow(onPress) {
   if (showsPromoted === undefined) {
     showsPromoted = false;
   }
-  let obj = getAvatarURL;
+  let obj = getAvatarURLDefault;
   obj = { id: application.id, icon: application.icon, bot: application.bot, botIconFirst: true };
   const iconSource = obj.getApplicationIconSource(obj);
   return jsx(AppRowLabel.BaseAppRow, { application, iconSource, onPress: onPress.onPress, isFirstRow, isLastRow, showsPromoted });

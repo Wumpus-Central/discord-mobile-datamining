@@ -1,8 +1,10 @@
 // discord_app/modules/user_profile/TieredTenureBadgeUtils.tsx
-import { TENURE_BADGES } from "GuildFeatures";
-import { t } from "../../../_runtime/03975_t.js";
+import set from "set" /* 2 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import tDefault from "t" /* 3975 */;
 
-const result = require("set").fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
+const TENURE_BADGES = GuildFeatures.TENURE_BADGES;
+const result = set.fileFinishedImporting("modules/user_profile/TieredTenureBadgeUtils.tsx");
 
 export const getTieredTenureBadgeData = function getTieredTenureBadgeData(tieredTenureBadge) {
   return TENURE_BADGES[tieredTenureBadge];
@@ -20,7 +22,7 @@ export const getEarnedOnDate = function getEarnedOnDate(tieredTenureBadgeForUser
   } else if (null == TENURE_BADGES[tieredTenureBadgeForUser]) {
     return null;
   } else {
-    const obj = t(premiumSince);
+    const obj = tDefault(premiumSince);
     obj.add(tmp3.tenureReqNumMonths, "months");
     obj.add(1, "days");
     return obj.toDate();

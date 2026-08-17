@@ -1,6 +1,8 @@
 // discord_app/modules/links/getLocalizedLink.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/links/getLocalizedLink.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/links/getLocalizedLink.tsx");
 
 export default function getLocalizedLink(arg0) {
   const formatted = getSystemLocale.intl.currentLocale.toLowerCase();

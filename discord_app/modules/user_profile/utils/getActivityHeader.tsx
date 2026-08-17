@@ -1,18 +1,17 @@
 // discord_app/modules/user_profile/utils/getActivityHeader.tsx
-import ME from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { unpackStageChannelParty } from "../../stage_channels/StageChannelRichPresenceUtils.tsx";
-import { PlatformTypes } from "getActivityPlatform.tsx";
-import { parseProviderRouteHeadlessSessionId } from "parseProviderRouteHeadlessSessionId.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import unpackStageChannelParty from "unpackStageChannelParty" /* 7254 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12112 */;
+import PlatformTypesDefault from "PlatformTypes" /* 12113 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ ActivityTypes: c3, PlatformTypes: c4 } = ME);
-const result = require("PlatformTypes").fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityHeader.tsx");
 
 export default function getActivityHeader(session_id) {
-  const tmp3 = parseProviderRouteHeadlessSessionId(session_id.session_id);
-  const tmp4 = PlatformTypes(session_id);
+  const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
+  const tmp4 = PlatformTypesDefault(session_id);
   if (tmp4 != null) {
     const icon = tmp4.icon;
   }
@@ -46,7 +45,7 @@ export default function getActivityHeader(session_id) {
       type1 = tmp4.type;
     }
     if (type1 === constants2.PLAYSTATION) {
-      const obj1 = { text: null, platformIcon: null, platformLabel: null };
+      obj1 = { text: null, platformIcon: null, platformLabel: null };
       const intl19 = getSystemLocale.intl;
       const obj2 = { platform: null };
       const intl20 = getSystemLocale.intl;

@@ -1,11 +1,9 @@
 // discord_app/modules/display_name_styles/native/effects/GummyStripesFromHue.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 function AnimatedStripe(hue) {
   hue = hue.hue;
@@ -36,15 +34,16 @@ function AnimatedStripe(hue) {
   style[2] = animatedStyle;
   return closure_4(shift(saturation[5]).View, { style });
 }
+noopAll;
 ({ jsx: c4, Fragment: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
 let closure_7 = { code: "function GummyStripesFromHueTsx1(){const{hue,shift,hslToRgbWorklet,saturation,lightness}=this.__closure;const h=((hue.get()+shift)%360+360)%360;const[r,g,b]=hslToRgbWorklet({h:h,s:saturation,l:lightness});return{backgroundColor:\"rgb(\"+r+\", \"+g+\", \"+b+\")\"};}" };
-let result = require("jsxProd").fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripesFromHue.tsx");
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripesFromHue.tsx");
 
 export default function GummyStripesFromHue(hue) {
   hue = hue.hue;
   const obj = { children: null };
   const GUMMY_STRIPES = hue(1933).GUMMY_STRIPES;
-  obj[0] = GUMMY_STRIPES.map((hueShift) => outer1_4(outer1_8, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: arg1 > 0 }, arg1));
+  obj[0] = GUMMY_STRIPES.map((hueShift) => closure_1_4(closure_1_8, { hue, shift: hueShift.hueShift, saturation: hueShift.saturation, lightness: hueShift.lightness, overlap: arg1 > 0 }, arg1));
   return callback(closure_5, obj);
 };

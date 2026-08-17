@@ -1,37 +1,19 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { card: null };
-createCacheKey = { padding: 0, paddingRight: require("Themes").space.PX_40, overflow: "hidden" };
+createCacheKey = { padding: 0, paddingRight: ThemesDefault.space.PX_40, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserNameplateRow.tsx");
 
 export const UserNameplateRow = function UserNameplateRow(onPressOut) {
-  let arrow;
-  let dragHandlePressableProps;
-  let draggable;
-  let end;
-  let icon;
-  let isPreviewRow;
-  let label;
-  let labelLineClamp;
-  let nameplate;
-  let onPress;
-  let onPressIn;
-  let start;
-  let subLabel;
-  let subLabelLineClamp;
-  let trailing;
-  let variant;
   ({ icon, onPressIn } = onPressOut);
   onPressOut = onPressOut.onPressOut;
   let flag = onPressOut.disabled;
@@ -48,7 +30,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
     isPreviewRow = false;
   }
   const merged = Object.assign(onPressOut, Object.create(null));
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = React;
   const context = React.useContext(onPressIn(6290).TableRowGroupContext);
   let tmp6 = !context;
@@ -71,7 +53,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
       tmp2(arg0);
     }
   }, items1);
-  const tmp2 = createCacheKey();
+  const tmp2 = callback3();
   const token = onPressIn(4097).useToken(onPressOut(712).modules.mobile.TABLE_ROW_BORDER_RADIUS);
   obj = { shadow: "none", border: "none", radius: token, start: null, end: null, onPress: null, onPressIn: null, onPressOut: null, disabled: null, style: null };
   let tmp13 = !context;
@@ -93,7 +75,7 @@ export const UserNameplateRow = function UserNameplateRow(onPressOut) {
     if (!tmp6) {
       obj = { children: null };
       const items3 = [tmp12Result, ];
-      const obj1 = { adjustSpacingForIcon: null };
+      obj1 = { adjustSpacingForIcon: null };
       obj1[0] = null != icon;
       items3[1] = tmp15(tmp3(6287).TableRowDivider, obj1);
       obj[0] = items3;

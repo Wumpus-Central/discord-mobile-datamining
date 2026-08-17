@@ -1,14 +1,13 @@
 // discord_app/modules/message_request/MessageRequestUtils.tsx
-import processChannel from "processChannel";
-import closure_3 from "processChannel";
+import closure_2 from "processChannel" /* 4799 */;
+import closure_3 from "processChannel" /* 4800 */;
 
-const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestUtils.tsx");
 
 export const filterOutMessageRequestsAndSpam = function filterOutMessageRequestsAndSpam(arg0) {
-  let importDefault;
   let tmp = arg1;
   if (arg1 === undefined) {
-    let items = [processChannel, closure_3];
+    let items = [closure_2, closure_3];
     tmp = items;
   }
   [importDefault, ] = tmp;
@@ -20,7 +19,6 @@ export const filterOutMessageRequestsAndSpam = function filterOutMessageRequests
   });
   const obj = importDefault(nextResult1[2]);
   return Array.from(mapped.filter((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     const isMessageRequestResult = messageRequest.isMessageRequest(tmp.id);
     let tmp3 = !isMessageRequestResult;
@@ -29,16 +27,14 @@ export const filterOutMessageRequestsAndSpam = function filterOutMessageRequests
     }
     return tmp3;
   })).reduce((arg0, arg1) => {
-    let tmp;
     [r10007, tmp] = arg1;
     return Object.assign(arg0, { [r10007]: tmp });
   }, {});
 };
 export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequestsAndSpamById(unreadPrivateChannelIds, items) {
-  let importDefault;
   let tmp = items;
   if (items === undefined) {
-    items = [processChannel, closure_3];
+    items = [closure_2, closure_3];
     tmp = items;
   }
   [importDefault, ] = tmp;
@@ -52,22 +48,18 @@ export const filterOutMessageRequestsAndSpamById = function filterOutMessageRequ
   });
 };
 export const isMessageRequestOrSpamRequest = function isMessageRequestOrSpamRequest(channelId, items) {
-  let obj;
-  let obj2;
   let tmp = items;
   if (items === undefined) {
-    items = [processChannel, closure_3];
+    items = [closure_2, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;
   return obj.isMessageRequest(channelId) || obj2.isSpam(channelId);
 };
 export const shouldShowMessageRequests = function shouldShowMessageRequests() {
-  let obj;
-  let obj2;
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [processChannel, closure_3];
+    const items = [closure_2, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;

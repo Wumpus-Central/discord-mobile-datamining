@@ -1,15 +1,14 @@
 // discord_app/modules/stage_channels/useGuildMemberDisplayRole.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function getHighestHoistedRole(arg0, arg1) {
-  let obj;
-  let obj2;
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [createGuildRecordFromRust, trackCommunicationDisabled];
+    const items = [closure_4, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -22,8 +21,8 @@ function getHighestHoistedRole(arg0, arg1) {
         const member = obj2.getMember(guild.id, arg1);
         let highestHoistedRole = null;
         if (null != member) {
-          highestHoistedRole = importAll(4026).getHighestHoistedRole(guild, member);
-          const obj3 = importAll(4026);
+          highestHoistedRole = applyOverwritesAll.getHighestHoistedRole(guild, member);
+          const obj3 = applyOverwritesAll;
         }
         return highestHoistedRole;
       }
@@ -31,16 +30,16 @@ function getHighestHoistedRole(arg0, arg1) {
   }
   return null;
 }
-const result = require("applyOverwrites").fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/useGuildMemberDisplayRole.tsx");
 
 export default function useGuildMemberDisplayRole(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
-  let items = [createGuildRecordFromRust, trackCommunicationDisabled];
+  closure_1 = arg1;
+  let items = [closure_4, closure_3];
   const items1 = [arg0, arg1];
   return _initialize.useStateFromStores(items, () => {
-    const items = [outer1_4, outer1_3];
-    return outer1_5(closure_0, closure_1, items);
+    const items = [closure_1_4, closure_1_3];
+    return closure_1_5(closure_0, closure_1, items);
   }, items1);
 };
 export { getHighestHoistedRole };

@@ -1,43 +1,40 @@
 // discord_app/modules/share/native/SharePreparingModal.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { MediaViewerOverlayButton } from "../../media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef9075 from "module_9075" /* 9075 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { content: null, topBar: null, topBarEnd: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: require("Themes").space.PX_12 };
+createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.bottom = undefined;
 createCacheKey[1] = obj1;
 createCacheKey[2] = { justifyContent: "flex-end" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/share/native/SharePreparingModal.tsx");
 
 export default function SharePreparingModal(onCancel) {
   onCancel = onCancel.onCancel;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const items = [onCancel];
   const effect = React.useEffect(() => () => callback(), items);
   let obj = { style: tmp.content, children: null };
   const items1 = [callback(onCancel(4723).Backdrop, { blur: "none", "aria-hidden": true }), , , ];
   obj = { style: tmp.topBar, pointerEvents: "box-none", children: null };
   obj = { style: tmp.topBarEnd, children: null };
-  const obj1 = { accessibilityLabel: null, icon: null, onPress: null };
+  obj1 = { accessibilityLabel: null, icon: null, onPress: null };
   const intl = onCancel(1236).intl;
   obj1[0] = intl.string(onCancel(1236).t.cpT0Cq);
   obj1[1] = callback(onCancel(6368).XSmallIcon, { size: "md", color: "interactive-text-active" });
   obj1[2] = onCancel;
-  obj[1] = callback(MediaViewerOverlayButton, obj1);
+  obj[1] = callback(_modDef9075, obj1);
   obj[2] = callback(onCancel(9074).MediaModalOverlayHeaderWrapper, obj);
   items1[1] = callback(closure_4, obj);
   items1[2] = callback(onCancel(5446).ActivityIndicator, {});

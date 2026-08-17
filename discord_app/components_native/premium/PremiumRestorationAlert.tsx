@@ -1,21 +1,19 @@
 // discord_app/components_native/premium/PremiumRestorationAlert.tsx
-import importDefaultResult from "updateProduct";
-import { jsx } from "jsxProd";
-import { PureComponent } from "noop";
-import importAllResult from "noop";
-import importDefaultResult1 from "initialize";
-import { componentDidMount } from "../common/UntouchableAlert.tsx";
+import componentDidMountDefault from "componentDidMount" /* 14591 */;
+import importDefaultResult from "updateProduct" /* 5319 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
+import importDefaultResult1 from "initialize" /* 589 */;
 
+const PureComponent = importAllResult.PureComponent;
 class PremiumRestorationAlert extends PureComponent {
 }
 PremiumRestorationAlert.prototype["render"] = function render() {
-  let isBusy;
-  let onClose;
   ({ isBusy, onClose } = this.props);
-  return jsx(componentDidMount, { loading, onClose });
+  return jsx(componentDidMountDefault, { loading, onClose });
 };
 const items = [importDefaultResult];
-const tmp4 = require("initialize").connectStores(items, () => ({ isBusy: importDefaultResult.isBusy() }))(PremiumRestorationAlert);
-const result = require("jsxProd").fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
+const tmp4 = importDefaultResult1.connectStores(items, () => ({ isBusy: importDefaultResult.isBusy() }))(PremiumRestorationAlert);
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumRestorationAlert.tsx");
 
 export default tmp4;

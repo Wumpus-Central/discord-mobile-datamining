@@ -1,19 +1,15 @@
 // discord_app/components_native/DatePickerActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { View } from "CollapsingText";
-import jsxProd from "Background";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { RedesignBottomSheetTitleHeaderBase } from "../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { set } from "../utils/PlatformUtils.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function ActionSheetHeader(handleSubmit) {
-  let handleCancel;
-  let title;
   ({ title, handleCancel } = handleSubmit);
   let obj = set;
   const BottomSheetTitleHeader = RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader;
@@ -25,7 +21,7 @@ function ActionSheetHeader(handleSubmit) {
     obj[1] = tmp4(tmp(7176).ActionSheetCloseButton, obj);
     let tmp4Result = tmp4(BottomSheetTitleHeader, obj);
   } else {
-    const obj1 = { title: null, leading: null, trailing: null };
+    obj1 = { title: null, leading: null, trailing: null };
     obj1[0] = title;
     const obj2 = { onPress: null, label: null };
     obj2[0] = handleCancel;
@@ -44,20 +40,20 @@ function ActionSheetHeader(handleSubmit) {
 function DateRangeError(children) {
   const show = children.show;
   let ref;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   ref = React.useRef(null);
   const items = [show];
   const effect = React.useEffect(() => {
-    let obj = show(outer1_2[12]);
+    let obj = show(closure_1_2[12]);
     obj = { ref, delay: 200 };
     const result = obj.setAccessibilityFocus(obj);
   }, items);
   let obj = show(4115);
   class A {
     constructor() {
-      obj = { easing: show(outer1_2[14]).STANDARD_EASING, duration: null };
+      obj = { easing: show(closure_1_2[14]).STANDARD_EASING, duration: null };
       tmp = show;
-      tmp2 = outer1_2;
+      tmp2 = closure_1_2;
       tmp3 = show;
       num = 150;
       if (show) {
@@ -101,18 +97,15 @@ function DateRangeError(children) {
   return closure_6(ref(4115).View, obj);
 }
 function ActionSheetFooter(arg0) {
-  let canSubmit;
-  let handleCancel;
-  let handleSubmit;
   ({ handleCancel, handleSubmit, canSubmit } = arg0);
-  const tmp = callback3();
+  const tmp = callback4();
   let obj = set;
   let tmp4 = null;
   if (obj.isAndroid()) {
     obj = { style: null, children: null };
     obj[0] = tmp.footer;
     obj = { shrink: true, size: "md", variant: "secondary", textElement: null, accessibilityLabel: null, style: null, onPress: null };
-    const obj1 = { variant: "text-md/semibold", children: null };
+    obj1 = { variant: "text-md/semibold", children: null };
     const intl = tmp2(1236).intl;
     obj1[1] = intl.string(tmp2(1236).t["ETE/oC"]);
     obj[3] = callback(tmp2(4734).Text, obj1);
@@ -139,23 +132,15 @@ function ActionSheetFooter(arg0) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { rangeErrorContainer: { justifyContent: "flex-start" }, rangeError: null, datetimePickerContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_CRITICAL, padding: 12, marginHorizontal: 12, borderRadius: require("Themes").radii.sm };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, padding: 12, marginHorizontal: 12, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = createCacheKey.createStyles({ footer: { marginVertical: 6, paddingHorizontal: 12, display: "flex", flexDirection: "row", justifyContent: "flex-end" }, actionButton: { marginLeft: 24 } });
 let closure_11 = { code: "function DatePickerActionSheetTsx1(){const{STANDARD_EASING,show,withTiming}=this.__closure;const animationSettings={easing:STANDARD_EASING,duration:show?200:150};return{opacity:withTiming(show?1:0,animationSettings),maxHeight:withTiming(show?500:0,animationSettings),paddingVertical:withTiming(show?12:0,animationSettings)};}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("components_native/DatePickerActionSheet.tsx");
+let result = require("set").fileFinishedImporting("components_native/DatePickerActionSheet.tsx");
 
 export default function DatePickerActionSheet(mode) {
-  let c10;
-  let c11;
-  let c9;
-  let dependencyMap;
-  let maximumDate;
-  let onCancel;
-  let startDate;
-  let tmp12;
   let str = mode.mode;
   if (str === undefined) {
     str = "date";
@@ -172,11 +157,11 @@ export default function DatePickerActionSheet(mode) {
   let first;
   let callback;
   let first1;
-  let createCacheKey;
+  let callback3;
   c9 = undefined;
   c10 = undefined;
   c11 = undefined;
-  let closure_12;
+  closure_12 = undefined;
   if (startDate == null) {
     const _Date = Date;
     startDate = new Date();
@@ -187,8 +172,8 @@ export default function DatePickerActionSheet(mode) {
   callback = tmp7[1];
   const tmp8 = onCancel(startDate.useState(!mode.requireDateChanged), 2);
   first1 = tmp8[0];
-  createCacheKey = tmp8[1];
-  let tmp3 = createCacheKey();
+  callback3 = tmp8[1];
+  let tmp3 = callback3();
   [c9, c10] = onCancel(startDate.useState(true), 2);
   const tmp10 = onCancel(startDate.useState(true), 2);
   [tmp12, c11] = onCancel(startDate.useState(false), 2);
@@ -213,7 +198,7 @@ export default function DatePickerActionSheet(mode) {
     if (onCancel != null) {
       tmp();
     }
-    minimumDate(outer1_2[6]).hideActionSheet();
+    minimumDate(closure_1_2[6]).hideActionSheet();
   });
   const tmp26 = minimumDate(8601)(() => {
     let tmp = first1;
@@ -221,18 +206,17 @@ export default function DatePickerActionSheet(mode) {
       tmp = c9;
     }
     if (tmp) {
-      callback(minimumDate(outer1_2[20])(ref.current));
+      callback(minimumDate(closure_1_2[20])(ref.current));
     }
     if (c9) {
-      minimumDate(outer1_2[6]).hideActionSheet();
-      const obj = minimumDate(outer1_2[6]);
+      minimumDate(closure_1_2[6]).hideActionSheet();
+      const obj = minimumDate(closure_1_2[6]);
     } else {
       _undefined(true);
     }
   });
   const tmp15 = minimumDate(4310)();
-  obj = { onDismiss: onCancel, header: null, children: null };
-  obj[1] = callback(c10, { title, handleCancel: tmp25, handleSubmit: tmp26 });
+  obj = { onDismiss: onCancel, header: callback(c10, { title, handleCancel: tmp25, handleSubmit: tmp26 }), children: null };
   let tmp32 = tmp12;
   if (tmp12) {
     let tmp33 = null == minimumDate;
@@ -244,7 +228,7 @@ export default function DatePickerActionSheet(mode) {
   }
   obj = { show: tmp32, errorText: null };
   const intl2 = tmp29(1236).intl;
-  const obj1 = { minDate: null };
+  obj1 = { minDate: null };
   const tmp27 = minimumDate(8601)((getTime) => {
     if (null != getTime) {
       let tmp2 = null == minimumDate;

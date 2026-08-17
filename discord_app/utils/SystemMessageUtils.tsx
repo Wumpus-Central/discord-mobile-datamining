@@ -1,37 +1,35 @@
 // discord_app/utils/SystemMessageUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import hasFlag from "hasFlag";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { reactParserFor } from "../../discord_common/js/packages/markup/MarkupParser.tsx";
-import { AutomodNotificationEmbedTypeKeys } from "../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedTypeKeys.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import reactParserFor from "reactParserFor" /* 6902 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8210 */;
+import identityHook from "identityHook" /* 8211 */;
+import getGuildProductPurchaseSystemMessageContentMobile from "getGuildProductPurchaseSystemMessageContentMobile" /* 8213 */;
+import getApplicationSubscriptionSystemMessageASTContent from "getApplicationSubscriptionSystemMessageASTContent" /* 8214 */;
+import getPrivateChannelIntegrationAddedSystemMessageContent from "getPrivateChannelIntegrationAddedSystemMessageContent" /* 8215 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "hasFlag" /* 4031 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 import { getSystemLocale } from "../intl/index.native.tsx";
-import { computeChannelName } from "../modules/channel/useChannelName.tsx";
-import { getGuildProductPurchaseSystemMessageContentMobile } from "../modules/guild_products/GuildProductSystemMessageUtils.tsx";
-import { identityHook } from "../modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx";
-import { createMinimalMessageRecord } from "../modules/messages/MessageRecordUtils.tsx";
-import { useNullableMessageAuthor } from "../modules/messages/useMessageAuthor.tsx";
-import { getApplicationSubscriptionSystemMessageASTContent } from "../modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx";
-import { getPrivateChannelIntegrationAddedSystemMessageContent } from "../modules/private_channel_integrations/PrivateChannelIntegrationSystemMessageUtils.tsx";
-import { getNickname } from "NicknameUtils.tsx";
-import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
 
-let c10;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getSystemMessageUserJoinMobile(id) {
   const items = [getSystemLocale.t.Jm6e0x, getSystemLocale.t.MGRnRT, getSystemLocale.t.EXOEGh, getSystemLocale.t["5uCTFN"], getSystemLocale.t.rl45Qo, getSystemLocale.t.Bh9zpQ, getSystemLocale.t.RdEy1J, getSystemLocale.t.qcdp00, getSystemLocale.t.F7w2Ru, getSystemLocale.t.gSyOgK, getSystemLocale.t.uYgqv7, getSystemLocale.t["b/1SBX"], getSystemLocale.t.LhebZF];
-  const obj = DISCORD_EPOCH;
+  const obj = DISCORD_EPOCHDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
 ({ MessageEmbedTypes: c10, MessageTypes: unpackModuleId, NOOP: closure_12 } = ME);
 let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
-const result = require("fetchFingerprint").fileFinishedImporting("utils/SystemMessageUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/SystemMessageUtils.tsx");
 
 export default {
   stringify(mentions, isForumPost) {
@@ -42,7 +40,7 @@ export default {
     let first = callback(mentions, 1)[0];
     if (null == first) {
       const channel_id = mentions.channel_id;
-      let obj = getNickname;
+      let obj = getNicknameDefault;
       const name = obj.getName(null, channel_id, mentions.author);
       const type = mentions.type;
       if (constants.RECIPIENT_ADD === type) {
@@ -74,7 +72,7 @@ export default {
             return astToStringResult;
           }
           const intl16 = getSystemLocale.intl;
-          const obj1 = { username: null, usernameOnClick: null };
+          obj1 = { username: null, usernameOnClick: null };
           obj1[0] = name;
           obj1[1] = closure_12;
           astToStringResult = reactParserFor.astToString(intl16.formatToParts(getSystemLocale.t["Qn5+Lf"], obj1));
@@ -139,11 +137,11 @@ export default {
                 const intl6 = getSystemLocale.intl;
                 const obj8 = { username: null, threadName: null };
                 obj8[0] = name;
-                obj8[1] = computeChannelName.computeChannelName(isForumPost, authStore, markAllUserIdListsStale);
+                obj8[1] = computeChannelName.computeChannelName(isForumPost, authStore, closure_8);
                 return intl6.formatToPlainString(getSystemLocale.t["B8H+Cl"], obj8);
               } else if (tmp9.ROLE_SUBSCRIPTION_PURCHASE === type) {
                 let astToStringResult2 = null;
-                if (!(mentions instanceof hasFlag)) {
+                if (!(mentions instanceof closure_4)) {
                   const obj34 = reactParserFor;
                   const obj9 = { username: null, guildId: null, roleSubscriptionData: null };
                   obj9[0] = name;
@@ -155,7 +153,7 @@ export default {
                 return astToStringResult2;
               } else if (tmp9.PURCHASE_NOTIFICATION === type) {
                 let astToStringResult3 = null;
-                if (!(mentions instanceof hasFlag)) {
+                if (!(mentions instanceof closure_4)) {
                   const purchase_notification = mentions.purchase_notification;
                   let product_name;
                   if (purchase_notification != null) {
@@ -176,7 +174,7 @@ export default {
                 }
                 return astToStringResult3;
               } else if (tmp9.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION === type) {
-                if (mentions instanceof hasFlag) {
+                if (mentions instanceof closure_4) {
                   return null;
                 } else {
                   const obj26 = useNullableMessageAuthor;
@@ -190,7 +188,7 @@ export default {
                 }
               } else if (tmp9.PRIVATE_CHANNEL_INTEGRATION_ADDED === type) {
                 let astToStringResult4 = null;
-                if (!(mentions instanceof hasFlag)) {
+                if (!(mentions instanceof closure_4)) {
                   let obj20 = reactParserFor;
                   const obj12 = { application: null, username: null };
                   obj12[0] = mentions.application;
@@ -203,7 +201,7 @@ export default {
                 return astToStringResult4;
               } else if (tmp9.PRIVATE_CHANNEL_INTEGRATION_REMOVED === type) {
                 let astToStringResult5 = null;
-                if (!(mentions instanceof hasFlag)) {
+                if (!(mentions instanceof closure_4)) {
                   let obj15 = reactParserFor;
                   let obj16 = getPrivateChannelIntegrationAddedSystemMessageContent;
                   const obj13 = { application: null, username: null };
@@ -359,7 +357,7 @@ export default {
   },
   getSystemMessageUserJoin(id) {
     const items = [getSystemLocale.t["0cuj7l"], getSystemLocale.t["MuW+CN"], getSystemLocale.t.osqpHX, getSystemLocale.t["5ToSh2"], getSystemLocale.t.JEB8ps, getSystemLocale.t.pkOV5T, getSystemLocale.t["kRb1J+"], getSystemLocale.t["EmKLY+"], getSystemLocale.t.rPtBnb, getSystemLocale.t["5B/ekS"], getSystemLocale.t.ESNC3Y, getSystemLocale.t.Iw6d8w, getSystemLocale.t["WecSZ/"]];
-    const obj = DISCORD_EPOCH;
+    const obj = DISCORD_EPOCHDefault;
     return items[obj.extractTimestamp(obj, id) % items.length];
   },
   getSystemMessageUserJoinMobile,
@@ -371,7 +369,7 @@ export default {
       let obj = { learnOnClick: null };
       obj = { onClick: null };
       obj[0] = function onClick() {
-        return window.open(outer1_13[closure_0]);
+        return window.open(closure_1_13[closure_0]);
       };
       obj[0] = obj;
       formatResult = intl.format(_getSystemLocale.t.xw1Ij0, obj);

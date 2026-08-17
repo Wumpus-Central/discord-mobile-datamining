@@ -1,22 +1,16 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryUtils.tsx
-import GuildDirectoryAddAlert from "GuildDirectoryAddAlert";
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function _onAddDirectoryGuildEntry() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -62,7 +56,7 @@ function _onAddDirectoryGuildEntry() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -87,7 +81,7 @@ function _onAddDirectoryGuildEntry() {
             const obj4 = { importer: null };
             obj4[0] = function importer() {
               return _undefined(paths[6])(paths[5], paths.paths).then((arg0) => {
-                let closure_0 = arg0.default;
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             };
@@ -104,7 +98,7 @@ function _onAddDirectoryGuildEntry() {
     iter.next();
     return iter;
   });
-  const _onAddDirectoryGuildEntry = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -113,7 +107,8 @@ function _onAddDirectoryGuildEntry() {
   }
   return applyArgumentsResult;
 }
-const result = require("jsxProd").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryUtils.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryUtils.tsx");
 
 export const onAddDirectoryGuildEntry = function onAddDirectoryGuildEntry(arg0) {
   const self = this;

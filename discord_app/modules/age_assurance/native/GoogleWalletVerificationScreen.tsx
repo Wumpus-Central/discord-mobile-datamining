@@ -1,30 +1,26 @@
 // discord_app/modules/age_assurance/native/GoogleWalletVerificationScreen.tsx
-import useNavigation from "useNavigation";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { ActivityIndicator } from "Button";
-import jsxProd from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = { NOT_AVAILABLE: "not_available", FAILED: "credential_error" };
-let result = require("noop").fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/GoogleWalletVerificationScreen.tsx");
 
 export default function GoogleWalletVerificationScreen(modalSessionId) {
-  let c2;
-  let tmp5;
   modalSessionId = modalSessionId.modalSessionId;
   let navigation;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let callback1;
   let React;
   let obj = modalSessionId(1500);
   navigation = obj.useNavigation();
   [tmp5, c2] = callback1(React.useState({ type: "loading" }), 2);
-  let obj1 = modalSessionId(4992);
+  obj1 = modalSessionId(4992);
   const watchAgeVerificationStatusChange = obj1.useWatchAgeVerificationStatusChange(modalSessionId.onClose);
   let items = [navigation];
   callback = React.useCallback(() => {
@@ -32,9 +28,9 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   }, items);
   const items1 = [callback];
   callback1 = React.useCallback(callback(function*() {
-    let closure_1 = tmp3;
+    closure_1 = tmp3;
     let v0 = 1;
-    yield outer1_0(outer1_2[7]).requestGoogleWalletVerification();
+    yield closure_1_0(closure_1_2[7]).requestGoogleWalletVerification();
     if (1 === tmp7) {
       v0 = 0;
       let code;
@@ -42,13 +38,13 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
         code = lib.code;
       }
       if ("CANCELLED" === code) {
-        let obj11 = outer1_1(outer1_2[8]);
+        let obj11 = closure_1_1(closure_1_2[8]);
         const obj2 = { name: null, tags: null };
-        obj2[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+        obj2[0] = closure_1_0(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
         obj2[1] = ["reason:user_cancelled"];
         obj11.increment(obj2);
         v0();
-        let c5 = 3;
+        c5 = 3;
         const obj3 = { value: null, done: true };
         obj3[0] = undefined;
         return obj3;
@@ -61,14 +57,14 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
           }
         }
         if ("unsupported_issuing_country" === reason) {
-          let obj7 = outer1_1(outer1_2[8]);
+          let obj7 = closure_1_1(closure_1_2[8]);
           let obj4 = { name: null, tags: null };
-          obj4[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+          obj4[0] = closure_1_0(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
           obj4[1] = ["reason:unsupported_issuing_country"];
           obj7.increment(obj4);
           const obj5 = { type: "error", message: null };
-          const intl = outer1_0(outer1_2[10]).intl;
-          obj5[1] = intl.string(outer1_1(outer1_2[11]).Pf5xUq);
+          const intl = closure_1_0(closure_1_2[10]).intl;
+          obj5[1] = intl.string(closure_1_1(closure_1_2[11]).Pf5xUq);
           lib(obj5);
           c5 = 3;
           const obj6 = { value: null, done: true };
@@ -98,17 +94,17 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
             return str;
           })(lib);
           obj7 = { name: null, tags: null };
-          obj7[0] = outer1_0(outer1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
+          obj7[0] = closure_1_0(closure_1_2[9]).MetricEvents.GOOGLE_WALLET_VERIFICATION_FAILED;
           const _HermesInternal = HermesInternal;
           const items = ["reason:" + v0];
           obj7[1] = items;
-          outer1_1(outer1_2[8]).increment(obj7);
+          closure_1_1(closure_1_2[8]).increment(obj7);
           const obj8 = { type: "error", message: null };
-          const intl2 = outer1_0(outer1_2[10]).intl;
-          obj8[1] = intl2.string(outer1_1(outer1_2[11])["+pwfOA"]);
+          const intl2 = closure_1_0(closure_1_2[10]).intl;
+          obj8[1] = intl2.string(closure_1_1(closure_1_2[11])["+pwfOA"]);
           lib(obj8);
           c5 = 3;
-          const obj19 = outer1_1(outer1_2[8]);
+          const obj19 = closure_1_1(closure_1_2[8]);
         }
       }
     } else if (2 === tmp7) {
@@ -123,8 +119,8 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
         return obj9;
       } else {
         const request_json = arg1.request_json;
-        obj4 = outer1_0(outer1_2[7]);
-        let c4 = 3;
+        obj4 = closure_1_0(closure_1_2[7]);
+        c4 = 3;
         c5 = 1;
         const obj10 = { value: null, done: false };
         obj10[0] = obj4.getGoogleWalletCredential(request_json);
@@ -142,7 +138,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
         return obj11;
       } else {
         closure_1 = arg1;
-        const obj1 = outer1_0(outer1_2[7]);
+        obj1 = closure_1_0(closure_1_2[7]);
         c4 = 4;
         c5 = 1;
         const obj12 = { value: null, done: false };
@@ -161,7 +157,7 @@ export default function GoogleWalletVerificationScreen(modalSessionId) {
   React = React.useRef(false);
   const items2 = [navigation, callback1];
   const effect = React.useEffect(() => {
-    let closure_0 = navigation.addListener("transitionEnd", (data) => {
+    closure_0 = navigation.addListener("transitionEnd", (data) => {
       let current = ref.current;
       if (!current) {
         current = true === data.data.closing;

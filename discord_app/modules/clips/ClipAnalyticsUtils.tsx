@@ -1,18 +1,18 @@
 // discord_app/modules/clips/ClipAnalyticsUtils.tsx
-import ApplicationStreamPresets from "ApplicationStreamPresets";
-import reset from "reset";
-import createRTCConnection from "createRTCConnection";
-import initialize from "initialize";
-import _migrateDefaultStorage from "_migrateDefaultStorage";
-import { ClipSignalTypes } from "result";
-import { AnalyticEvents } from "ME";
-import { isEqual } from "../../../_runtime/04632_isEqual.js";
-import { parseEncoder } from "../../lib/VideoQualityStats.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
-import { apexExperiment } from "ClipsV3RuntimeExperiment.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import isStreamKey from "isStreamKey" /* 4531 */;
+import isEqualDefault from "isEqual" /* 4632 */;
+import apexExperiment from "apexExperiment" /* 4833 */;
+import parseEncoder from "parseEncoder" /* 7489 */;
+import closure_3 from "ApplicationStreamPresets" /* 4562 */;
+import closure_4 from "reset" /* 4652 */;
+import closure_5 from "createRTCConnection" /* 4539 */;
+import closure_6 from "initialize" /* 4558 */;
+import closure_7 from "_migrateDefaultStorage" /* 4503 */;
+import { ClipSignalTypes } from "result" /* 4523 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function getClipSignalTypes(remoteClipId) {
   const items = [];
   const iter = remoteClipId.timeline[Symbol.iterator]();
@@ -145,7 +145,7 @@ function getPostSaveClipAnalytics(arg0, framesEncodedByEncoder) {
   ({ audioTrackCount: obj2.audio_track_count, savedAt: obj2.saved_at } = framesEncodedByEncoder);
   return obj;
 }
-let result = require("createRTCConnection").fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/clips/ClipAnalyticsUtils.tsx");
 
 export const getClipType = function getClipType(decision) {
   decision = decision.decision;
@@ -195,8 +195,7 @@ export const getClipBaseProperties = function getClipBaseProperties(clip) {
   return { clip_type: str, num_clip_participants: clip.users.length, clip_session_id: clip.gameSessionId, is_candidate: clip.isCandidate };
 };
 export const getClipContextProperties = function getClipContextProperties(trackClipsShared) {
-  const obj = { clip_runtime: null, current_clip_session_id: null };
-  obj[0] = apexExperiment.getClipsRuntime(trackClipsShared);
+  const obj = { clip_runtime: apexExperiment.getClipsRuntime(trackClipsShared), current_clip_session_id: null };
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -236,8 +235,7 @@ export const getPreSaveClipAnalytics = function getPreSaveClipAnalytics(decision
   obj = {};
   obj = { clip_type: str, num_clip_participants: decision.users.length, clip_session_id: decision.gameSessionId, is_candidate: decision.isCandidate };
   const merged = Object.assign(obj);
-  const obj1 = { clip_runtime: null, current_clip_session_id: null };
-  obj1[0] = apexExperiment.getClipsRuntime("getPreSaveClipAnalytics");
+  obj1 = { clip_runtime: apexExperiment.getClipsRuntime("getPreSaveClipAnalytics"), current_clip_session_id: null };
   const currentClipsSession = store.getCurrentClipsSession();
   let id;
   if (currentClipsSession != null) {
@@ -285,7 +283,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   isFavorite = isFavorite.isFavorite;
   let tmp2;
   if (null != isFavorite) {
-    if (!isEqual(isFavorite, tmp)) {
+    if (!isEqualDefault(isFavorite, tmp)) {
       tmp2 = isFavorite;
     }
   }
@@ -293,7 +291,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const name = isFavorite.name;
   let tmp6;
   if (null != name) {
-    if (!isEqual(name, tmp5)) {
+    if (!isEqualDefault(name, tmp5)) {
       tmp6 = name;
     }
   }
@@ -313,7 +311,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp11;
   if (null != start) {
-    if (!isEqual(start, start)) {
+    if (!isEqualDefault(start, start)) {
       tmp11 = start;
     }
   }
@@ -329,7 +327,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp15;
   if (null != end) {
-    if (!isEqual(end, end)) {
+    if (!isEqualDefault(end, end)) {
       tmp15 = end;
     }
   }
@@ -345,7 +343,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp19;
   if (null != applicationAudio) {
-    if (!isEqual(applicationAudio, applicationAudio)) {
+    if (!isEqualDefault(applicationAudio, applicationAudio)) {
       tmp19 = applicationAudio;
     }
   }
@@ -361,7 +359,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp23;
   if (null != voiceAudio) {
-    if (!isEqual(voiceAudio, voiceAudio)) {
+    if (!isEqualDefault(voiceAudio, voiceAudio)) {
       tmp23 = voiceAudio;
     }
   }
@@ -377,7 +375,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp27;
   if (null != soundboardAudio) {
-    if (!isEqual(soundboardAudio, soundboardAudio)) {
+    if (!isEqualDefault(soundboardAudio, soundboardAudio)) {
       tmp27 = soundboardAudio;
     }
   }
@@ -399,7 +397,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   }
   let tmp31;
   if (null != preset) {
-    if (!isEqual(preset, preset)) {
+    if (!isEqualDefault(preset, preset)) {
       tmp31 = preset;
     }
   }
@@ -407,7 +405,7 @@ export const trackClipEdited = function trackClipEdited(editMetadata, isFavorite
   const values = Object.values(obj);
   if (!values.every((arg0) => null == arg0)) {
     obj = { clip_runtime: null, current_clip_session_id: null };
-    const obj3 = expandEventProperties;
+    const obj3 = expandEventPropertiesDefault;
     obj[0] = apexExperiment.getClipsRuntime("updateClipMetadata");
     const currentClipsSession = store.getCurrentClipsSession();
     let id;

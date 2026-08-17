@@ -1,29 +1,27 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { AnalyticEvents } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsIgnoreUserElement.tsx");
 
 export default function IgnoreUserElement(user) {
-  let isBlocked;
-  let isIgnored;
   user = user.user;
   const channelId = user.channelId;
   const reportId = user.reportId;
   let stateFromStores;
   let obj = user(reportId[5]);
-  const items = [markAllUserIdListsStale];
+  const items = [closure_5];
   const items1 = [user];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isIgnored: outer1_5.isIgnored(user.id), isBlocked: outer1_5.isBlocked(user.id) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ isIgnored: closure_1_5.isIgnored(user.id), isBlocked: closure_1_5.isBlocked(user.id) }), items1);
   ({ isIgnored, isBlocked } = stateFromStoresObject);
-  let obj1 = user(reportId[5]);
-  const items2 = [ensureGuildLoaded];
+  obj1 = user(reportId[5]);
+  const items2 = [closure_4];
   const items3 = [channelId];
-  stateFromStores = obj1.useStateFromStores(items2, () => outer1_4.getChannel(channelId), items3);
+  stateFromStores = obj1.useStateFromStores(items2, () => closure_1_4.getChannel(channelId), items3);
   const items4 = [stateFromStores, user];
   const memo = stateFromStores.useMemo(() => {
     let guild_id;

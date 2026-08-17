@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx
-import noop from "noop";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserRowModes } from "UserRowModes";
-import { RelationshipTypes } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SpamRequestsScreen.tsx");
 
 export default function SpamRequestsScreen(navigation) {
   navigation = navigation.navigation;
@@ -17,7 +17,7 @@ export default function SpamRequestsScreen(navigation) {
   let callback;
   analyticsLocations = stateFromStoresArray(stateFromStoresArray1[6])(stateFromStoresArray(stateFromStoresArray1[7]).FRIEND_REQUESTS).analyticsLocations;
   let obj = analyticsLocations(stateFromStoresArray1[8]);
-  const items = [markAllUserIdListsStale];
+  const items = [closure_4];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => analyticsLocations(stateFromStoresArray1[9]).getPendingRelationshipIds(mutableRelationships.getMutableRelationships()).spamIds);
   obj = { name: null };
   const tmp = stateFromStoresArray1;
@@ -26,7 +26,7 @@ export default function SpamRequestsScreen(navigation) {
   obj[0] = analyticsLocations(stateFromStoresArray1[11]).ImpressionNames.FRIEND_REQUESTS_SPAM_INBOX;
   stateFromStoresArray(stateFromStoresArray1[10])(obj);
   const tmp5 = stateFromStoresArray(stateFromStoresArray1[10]);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_5];
   const items2 = [stateFromStoresArray];
   stateFromStoresArray1 = analyticsLocations(stateFromStoresArray1[8]).useStateFromStoresArray(items1, () => {
     const mapped = stateFromStoresArray.map((arg0) => user.getUser(arg0));

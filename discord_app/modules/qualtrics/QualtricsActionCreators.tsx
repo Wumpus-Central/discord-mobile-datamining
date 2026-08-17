@@ -1,14 +1,12 @@
 // discord_app/modules/qualtrics/QualtricsActionCreators.tsx
-import _slicedToArray from "_slicedToArray";
-import closure_4 from "QuestionTypeEnum";
-import fetchSurveyIfNeeded from "fetchSurveyIfNeeded";
-import { useQualtricsResponseStore } from "useQualtricsResponseStore";
-import map from "map";
-import QuestionTypeEnum from "QuestionTypeEnum";
-import { Endpoints } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "fetchSurveyIfNeeded" /* 9874 */;
+import { useQualtricsResponseStore } from "useQualtricsResponseStore" /* 9876 */;
+import closure_7 from "map" /* 9877 */;
+import QuestionTypeEnum from "QuestionTypeEnum" /* 9878 */;
+import { Endpoints } from "ME" /* 676 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
 function fetchSurveyDetails() {
   const self = this;
@@ -23,10 +21,10 @@ function fetchSurveyDetails() {
 function _fetchSurveyDetails() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c6 === 2) {
         c6 = 3;
@@ -54,13 +52,13 @@ function _fetchSurveyDetails() {
               obj[0] = body;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               body = tmp7;
               body = undefined;
-              let c4 = 1;
-              const HTTP = callback(outer1_2[7]).HTTP;
-              const obj1 = { url: null, rejectWithError: true };
-              obj1[0] = outer1_10.EMBEDDED_SURVEY(callback);
+              c4 = 1;
+              const HTTP = callback(closure_1_2[7]).HTTP;
+              obj1 = { url: null, rejectWithError: true };
+              obj1[0] = closure_1_10.EMBEDDED_SURVEY(callback);
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -69,7 +67,7 @@ function _fetchSurveyDetails() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            dependencyMap = _slicedToArray;
+            dependencyMap = closure_3;
             let obj4 = body(1208);
             obj4.captureException(dependencyMap);
             c6 = 3;
@@ -97,7 +95,7 @@ function _fetchSurveyDetails() {
             return obj5;
           }
         } catch (tmp27) {
-          _slicedToArray = tmp27;
+          closure_3 = tmp27;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp27;
@@ -108,7 +106,7 @@ function _fetchSurveyDetails() {
       }
     })();
   });
-  const _fetchSurveyDetails = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -130,11 +128,11 @@ function submitSurveyResponse() {
 function _submitSurveyResponse() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c8 = 0;
-    let c9 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c8 = 0;
+    c9 = 0;
+    c6 = 0;
     return (function*(arg0, body) {
       if (c9 === 2) {
         c9 = 3;
@@ -162,8 +160,8 @@ function _submitSurveyResponse() {
               obj[0] = body;
               return obj;
             } else {
-              let fetchSurveyIfNeeded = tmp3;
-              let closure_4 = tmp7;
+              closure_5 = tmp3;
+              closure_4 = tmp7;
               state = state.getState();
               const displayedQuestions = state.getDisplayedQuestions(callback);
               let table = displayedQuestions;
@@ -262,10 +260,10 @@ function _submitSurveyResponse() {
                       if (null != survey.Questions[arg0]) {
                         let tmp4 = null != tmp2.ChoiceOrder;
                         if (tmp4) {
-                          tmp4 = tmp2.QuestionType === outer1_9.MULTIPLE_CHOICE;
+                          tmp4 = tmp2.QuestionType === closure_1_9.MULTIPLE_CHOICE;
                         }
                         if (tmp4) {
-                          if (tmp2.Selector === outer1_8.MULTIPLE_ANSWER) {
+                          if (tmp2.Selector === closure_1_8.MULTIPLE_ANSWER) {
                             obj[arg0] = [];
                           }
                           const _HermesInternal = HermesInternal;
@@ -279,15 +277,15 @@ function _submitSurveyResponse() {
               })(callback, callback2, table);
               if (null == tmp19) {
                 c9 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = { responseId: "null" };
                 return obj1;
               } else {
                 state = 1;
-                let _slicedToArray = {};
-                const HTTP = callback(outer1_2[7]).HTTP;
+                closure_3 = {};
+                const HTTP = callback(closure_1_2[7]).HTTP;
                 let obj2 = { url: null, body: null, rejectWithError: true };
-                obj2[0] = outer1_10.EMBEDDED_SURVEY_RESPONSE(tmp30);
+                obj2[0] = closure_1_10.EMBEDDED_SURVEY_RESPONSE(tmp30);
                 const obj3 = { values_json: null };
                 const _JSON = JSON;
                 obj3[0] = JSON.stringify(tmp19);
@@ -302,7 +300,7 @@ function _submitSurveyResponse() {
             }
           } else if (1 === tmp7) {
             state = 0;
-            callback = map;
+            callback = closure_7;
             obj2 = callback2(table[9]);
             obj2.captureException(callback);
             c9 = 3;
@@ -319,15 +317,15 @@ function _submitSurveyResponse() {
             obj6[0] = body;
             return obj6;
           } else {
-            _slicedToArray.responseId = body.body.responseId;
+            closure_3.responseId = body.body.responseId;
             state = 0;
             c9 = 3;
             obj = { value: null, done: true };
-            obj[0] = _slicedToArray;
+            obj[0] = closure_3;
             return obj;
           }
         } catch (tmp20) {
-          map = tmp20;
+          closure_7 = tmp20;
           if (tmp4 === state) {
             c9 = tmp2;
             throw tmp20;
@@ -338,7 +336,7 @@ function _submitSurveyResponse() {
       }
     })();
   });
-  const _submitSurveyResponse = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -360,11 +358,11 @@ function fireSurveyAction(BOUNTY_ABANDONED, arg1) {
 function _fireSurveyAction() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -392,7 +390,7 @@ function _fireSurveyAction() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _slicedToArray = tmp3;
+              closure_3 = tmp3;
               const table = tmp5;
               let lib;
               if ((function shouldFireSurveyAction(closure_0) {
@@ -403,15 +401,15 @@ function _fireSurveyAction() {
                 }
                 return result;
               })(lib)) {
-                const obj1 = { action_type: null };
+                obj1 = { action_type: null };
                 obj1[0] = tmp26;
                 if (null != tmp27) {
                   obj1.metadata = tmp27;
                 }
-                let c4 = 1;
-                const HTTP = lib(outer1_2[7]).HTTP;
+                c4 = 1;
+                const HTTP = lib(closure_1_2[7]).HTTP;
                 const obj2 = { url: null, body: null, rejectWithError: true };
-                obj2[0] = outer1_10.EMBEDDED_SURVEY_ACTION;
+                obj2[0] = closure_1_10.EMBEDDED_SURVEY_ACTION;
                 obj2[1] = obj1;
                 c5 = 2;
                 c6 = 1;
@@ -460,7 +458,7 @@ function _fireSurveyAction() {
       }
     })();
   });
-  const _fireSurveyAction = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -469,8 +467,8 @@ function _fireSurveyAction() {
   }
   return applyArgumentsResult;
 }
-({ QuestionSelectorEnum: metroImportAll, QuestionTypeEnum: c9 } = QuestionTypeEnum);
-let result = require("fetchSurveyIfNeeded").fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
+({ QuestionSelectorEnum: closure_8, QuestionTypeEnum: c9 } = QuestionTypeEnum);
+let result = require("set").fileFinishedImporting("modules/qualtrics/QualtricsActionCreators.tsx");
 
 export default { fetchSurveyDetails, submitSurveyResponse, fireSurveyAction };
 export { fetchSurveyDetails };

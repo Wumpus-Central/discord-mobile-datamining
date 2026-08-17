@@ -1,54 +1,50 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx
-import importAllResult from "registerAsset";
-import get_ActivityIndicator from "getSystemLocale";
-import { SearchTypes } from "ME";
-import jsxProd from "MessageRequestAnimation";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { MINIMUM_HIT_AREA } from "../../../../../design/components/Button/native/ButtonConstants.native.tsx";
-import { map } from "../../../../screen/native/useScaledTextLineHeight.android.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
+import map from "map" /* 9288 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { SearchTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const PX_16 = require("Themes").space.PX_16;
-const PX_8 = require("Themes").space.PX_8;
+const PX_16 = ThemesDefault.space.PX_16;
+const PX_8 = ThemesDefault.space.PX_8;
 let obj = { headerPanel: null, headerPanelTitle: null, headerPanelButtons: null, headerBorder: null };
-obj = { position: "relative", padding: PX_16, paddingBottom: require("Themes").modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
+obj = { position: "relative", padding: PX_16, paddingBottom: ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM };
 obj[0] = obj;
-createCacheKey = { paddingBottom: PX_8, flexDirection: "row", gap: require("Themes").space.PX_8, justifyContent: "space-between" };
+createCacheKey = { paddingBottom: PX_8, flexDirection: "row", gap: ThemesDefault.space.PX_8, justifyContent: "space-between" };
 obj[1] = createCacheKey;
-obj[2] = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: require("Themes").modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: require("Themes").modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+obj[2] = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.backgroundColor = require("Themes").colors.BORDER_SUBTLE;
+obj3.backgroundColor = ThemesDefault.colors.BORDER_SUBTLE;
 obj3.top = undefined;
 obj3.height = 1;
 obj[3] = obj3;
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = { code: "function MessagesHeaderTsx1(){const{withSpring,scrollPosition}=this.__closure;return{opacity:withSpring(scrollPosition.get()>0?1:0)};}" };
-let obj2 = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: require("Themes").modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: require("Themes").modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
+let obj2 = { height: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, gap: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_GAP, flexDirection: ThemesDefault.modules.mobile.MESSAGES_HEADER_BUTTON_LAYOUT, alignItems: "center" };
 const memoResult = importAllResult.memo(function MessagesHeader(height) {
   height = height.height;
   const scrollPosition = height.scrollPosition;
-  let dependencyMap;
+  dependencyMap = undefined;
   const tmp = callback2();
   dependencyMap = tmp;
   const tmp4 = scrollPosition(1367)("MessagesHeader");
   let items = [tmp, height];
   const memo = importAllResult.useMemo(() => {
-    const items = [_undefined.headerPanel, { height }];
+    const items = [headerPanel.headerPanel, { height }];
     return items;
   }, items);
   let obj = height(4115);
   const fn = function c() {
-    let obj = height(_undefined[10]);
+    let obj = height(headerPanel[10]);
     let num = 0;
     if (scrollPosition.get() > 0) {
       num = 1;
@@ -64,13 +60,13 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   let obj2 = height(15288);
   const isHomeDrawerEnabled = obj2.useIsHomeDrawerEnabled();
   const callback = importAllResult.useCallback(() => {
-    const rootNavigationRef = height(_undefined[12]).getRootNavigationRef();
+    const rootNavigationRef = height(headerPanel[12]).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
   const callback1 = importAllResult.useCallback(() => {
-    let obj = height(_undefined[12]);
+    let obj = height(headerPanel[12]);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (rootNavigationRef != null) {
       obj = { screen: "add-friends", params: null };
@@ -79,17 +75,17 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     }
   }, []);
   callback2 = importAllResult.useCallback(() => {
-    let obj = height(_undefined[12]);
+    let obj = height(headerPanel[12]);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (null != rootNavigationRef) {
       obj = { type: null };
       obj[0] = constants.DMS;
-      const result = scrollPosition(_undefined[13]).navigateToSearchWithPrefetch(rootNavigationRef, obj);
-      const obj2 = scrollPosition(_undefined[13]);
+      const result = scrollPosition(headerPanel[13]).navigateToSearchWithPrefetch(rootNavigationRef, obj);
+      const obj2 = scrollPosition(headerPanel[13]);
     }
   }, []);
   const callback3 = importAllResult.useCallback(() => {
-    let obj = height(_undefined[12]);
+    let obj = height(headerPanel[12]);
     const rootNavigationRef = obj.getRootNavigationRef();
     if (rootNavigationRef != null) {
       const current = rootNavigationRef.current;
@@ -101,15 +97,14 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
     }
   }, []);
   obj = { variant: "primary", icon: null, size: "sm", accessibilityLabel: null, onPress: null };
-  const obj1 = { size: "sm", color: null };
-  obj1[1] = scrollPosition(712).colors.WHITE;
-  obj[1] = callback(height(9975).PlusLargeIcon, obj1);
+  const tmp13 = scrollPosition(6315)("bespoke");
+  obj[1] = callback(height(9975).PlusLargeIcon, { size: "sm", color: scrollPosition(712).colors.WHITE });
   const intl = height(1236).intl;
   obj[3] = intl.string(height(1236).t.jD1qzM);
   obj[4] = callback3;
   obj2 = { style: memo, children: null };
   const obj3 = { style: tmp.headerPanelTitle, children: null };
-  const tmp13 = scrollPosition(6315)("bespoke");
+  obj1 = { size: "sm", color: scrollPosition(712).colors.WHITE };
   let str = "redesign/heading-18/bold";
   if (tmp4) {
     str = "heading-lg/semibold";
@@ -155,12 +150,12 @@ const memoResult = importAllResult.memo(function MessagesHeader(height) {
   obj2[1] = items1;
   return closure_7(closure_4, obj2);
 });
-let result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesHeader.tsx");
 
 export default memoResult;
 export const getMessagesHeaderHeight = function getMessagesHeaderHeight(fontScale, closure_2) {
   const bound = Math.min(fontScale, 1.75);
-  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(Themes.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
+  const refreshToken = useIsMobileVisualRefreshExperimentEnabled.resolveRefreshToken(ThemesDefault.modules.mobile.MESSAGES_HEADER_PADDING_BOTTOM, closure_2);
   const obj = useIsMobileVisualRefreshExperimentEnabled;
   const sum = map.scaleTextLineHeight("redesign/heading-18/bold", bound) + PX_8;
   return sum + MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + PX_16 + refreshToken;

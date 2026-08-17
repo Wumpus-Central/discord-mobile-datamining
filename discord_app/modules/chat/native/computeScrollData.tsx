@@ -1,21 +1,12 @@
 // discord_app/modules/chat/native/computeScrollData.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import Changeset from "Changeset";
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import Changeset from "Changeset" /* 8158 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ RowType: c3, SeparatorType: c4 } = Changeset);
-const result = require("ChatScrollPosition").fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/computeScrollData.tsx");
 
 export default function computeScrollData(shouldInitialScroll) {
-  let animated;
-  let focusTargetId;
-  let jumpTargetId;
-  let jumpType;
-  let rows;
-  let scrollPosition;
-  let scrollToMessageId;
   ({ rows, scrollToMessageId, jumpTargetId, animated, scrollPosition, focusTargetId, jumpType } = shouldInitialScroll);
   if (shouldInitialScroll.shouldInitialScroll) {
     if (null == jumpTargetId) {
@@ -35,7 +26,7 @@ export default function computeScrollData(shouldInitialScroll) {
         obj[0] = focusTargetId(10473).ChatScrollType.SCROLL;
         obj[1] = tmp3;
         if (animated) {
-          animated = !maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
+          animated = !closure_2.useReducedMotion;
         }
         obj[2] = animated;
         obj[4] = focusTargetId(10473).ChatScrollPosition.TOP;
@@ -61,7 +52,7 @@ export default function computeScrollData(shouldInitialScroll) {
       obj = { type: null, index: null, animate: null, highlight: null, position: null };
       obj[0] = focusTargetId(10473).ChatScrollType.SCROLL;
       obj[1] = tmp6;
-      const useReducedMotion = maybeApplyNoTextColorForLightCustomTheme.useReducedMotion;
+      const useReducedMotion = closure_2.useReducedMotion;
       let tmp10 = !useReducedMotion;
       if (!useReducedMotion) {
         tmp10 = jumpType !== tmp7(4306).JumpType.INSTANT;
@@ -101,7 +92,7 @@ export default function computeScrollData(shouldInitialScroll) {
   return tmp4;
 };
 export const findMessageRowIndex = function findMessageRowIndex(previousRows, ChatTTITracker) {
-  let closure_0 = ChatTTITracker;
+  closure_0 = ChatTTITracker;
   const findIndexResult = previousRows.findIndex((message) => {
     let tmp = null != message.message;
     if (tmp) {

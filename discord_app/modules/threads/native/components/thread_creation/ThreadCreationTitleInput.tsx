@@ -1,8 +1,8 @@
 // discord_app/modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { MAX_CHANNEL_NAME_LENGTH } from "ME";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { MAX_CHANNEL_NAME_LENGTH } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -11,7 +11,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   const threadSettingsDraft = chatInputRef.threadSettingsDraft;
   const optional = chatInputRef.optional;
   let ref;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let obj = chatInputRef(15843);
   obj = { content: threadSettingsDraft.name };
   ref = ref.useRef(threadSettingsDraft.name);
@@ -64,8 +64,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
     }
   }, items3);
   const renderErrorResult = obj.renderError(chatInputRef.threadNameError, obj);
-  const items4 = [ensureGuildLoaded];
-  const stateFromStores = chatInputRef(589).useStateFromStores(items4, () => outer1_4.getChannel(threadSettingsDraft.parentChannelId));
+  const items4 = [closure_4];
+  const stateFromStores = chatInputRef(589).useStateFromStores(items4, () => closure_1_4.getChannel(threadSettingsDraft.parentChannelId));
   let str = "";
   if (null != stateFromStores) {
     str = tmp(8463).getDefaultThreadName(stateFromStores, threadSettingsDraft.parentMessageId);
@@ -79,11 +79,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   } else {
     stringResult = string(t.j3XWjD);
   }
-  obj = { defaultValue: null, errorMessage: null, label: null, accessibilityLabel: null, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" };
-  obj[0] = threadSettingsDraft(6804)(ref);
-  obj[1] = renderErrorResult;
-  obj[2] = stringResult;
-  obj[3] = stringResult;
+  obj = { defaultValue: threadSettingsDraft(6804)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityLabel: stringResult, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" };
   let stringResult1;
   if (!optional) {
     const intl2 = tmp(1236).intl;
@@ -101,8 +97,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((chatInputRef
   }
   obj[12] = str;
   obj[13] = arg1;
-  return jsx(chatInputRef(8071).TextInput, { defaultValue: null, errorMessage: null, label: null, accessibilityLabel: null, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
+  return jsx(chatInputRef(8071).TextInput, { defaultValue: threadSettingsDraft(6804)(ref), errorMessage: renderErrorResult, label: stringResult, accessibilityLabel: stringResult, accessibilityHint: null, required: null, isClearable: true, autoFocus: true, maxLength: null, onSubmitEditing: null, onBlur: null, onChange: null, placeholder: null, ref: null, returnKeyType: "next", textContentType: "none" });
 }));
-const result = require("ME").fileFinishedImporting("modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/native/components/thread_creation/ThreadCreationTitleInput.tsx");
 
 export default memoResult;

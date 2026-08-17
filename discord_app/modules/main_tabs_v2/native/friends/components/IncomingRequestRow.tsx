@@ -1,18 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import addApplication from "addApplication";
-import { UserRowModes } from "UserRowModes";
-import { RelationshipTypes } from "ME";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../../utils/UserUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "addApplication" /* 4478 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function IncomingRequestRow(user) {
-  let acceptedRequestAccessibilityLabel;
-  let acceptedRequestLabel;
-  let accessibilityLabel;
   user = user.user;
   const applicationId = user.applicationId;
   const accepted = user.accepted;
@@ -27,7 +24,7 @@ function IncomingRequestRow(user) {
   let stateFromStores1;
   let obj = user(accepted[6]);
   sharedValue = obj.useSharedValue(false);
-  let obj1 = user(accepted[7]);
+  obj1 = user(accepted[7]);
   let items = [onDeclineIncomingRequest];
   const stateFromStores = obj1.useStateFromStores(items, () => onDeclineIncomingRequest.useReducedMotion);
   let items1 = [accepted, sharedValue];
@@ -112,11 +109,9 @@ function IncomingRequestRow(user) {
   return userTag(applicationId(accepted[12]), obj);
 }
 function IncomingGameFriendRequestRow(arg0) {
-  let application;
-  let user;
   ({ user, application } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = nameFromUser;
+  let obj = nameFromUserDefault;
   const userTag = obj.useUserTag(user);
   obj = { user, applicationId: application.id, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
   const intl = application(1236).intl;
@@ -124,7 +119,7 @@ function IncomingGameFriendRequestRow(arg0) {
   const intl2 = application(1236).intl;
   obj = {
     applicationNameHook() {
-      return outer1_8(outer1_1(outer1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
+      return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
     }
   };
   obj[3] = intl2.format(application(1236).t.gRgJGR, obj);
@@ -136,16 +131,16 @@ function IncomingGameFriendRequestRow(arg0) {
   obj[6] = intl5.formatToPlainString(application(1236).t.d8Cw5e, { name: userTag, applicationName: application.name });
   const merged1 = Object.assign(merged);
   return <IncomingRequestRow applicationNameHook={function applicationNameHook() {
-    return outer1_8(outer1_1(outer1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
+    return closure_1_8(closure_1_1(closure_1_2[11]), { application, textVariant: "text-xs/medium", iconSize: 12 }, application.id);
   }} />;
 }
 let closure_9 = { ACCEPT: "accept", DECLINE: "decline", WAVE: "wave" };
-let result = require("addApplication").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRow.tsx");
 
 export const IncomingFriendRequestRow = function IncomingFriendRequestRow(user) {
   user = user.user;
   const merged = Object.assign(user, Object.create(null));
-  let obj = nameFromUser;
+  let obj = nameFromUserDefault;
   const userTag = obj.useUserTag(user);
   obj = { user, accessibilityLabel: null, acceptedRequestLabel: null, acceptedRequestAccessibilityLabel: null, acceptRequestAccessibilityLabel: null, ignoreRequestAccessibilityLabel: null };
   const intl = getSystemLocale.intl;
@@ -166,8 +161,8 @@ export const ConnectedIncomingGameFriendRequestRow = function ConnectedIncomingG
   let tmp = null;
   const merged = Object.assign(applicationId, Object.create(null));
   let obj = applicationId(647);
-  const items = [addApplication];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getApplication(applicationId));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getApplication(applicationId));
   if (null != stateFromStores) {
     obj = { user: null, application: null };
     obj[0] = applicationId.user;

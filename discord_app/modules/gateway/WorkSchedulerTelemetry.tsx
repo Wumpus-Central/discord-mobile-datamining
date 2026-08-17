@@ -1,8 +1,8 @@
 // discord_app/modules/gateway/WorkSchedulerTelemetry.tsx
-import _slicedToArray from "_slicedToArray";
-import { apply } from "../../../_runtime/00012_apply.js";
+import apply from "apply" /* 12 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 let obj = { LONGER_DISPATCH: "longer_dispatch", EXCEEDED_MAX_CONSECUTIVE_FLUSHES: "exceeded_max_consecutive_flushes", FIRED_DUE_TO_MAX_TIMEOUT: "fired_due_to_max_timeout", SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED: "skip_idle_callback_due_to_backgrounded" };
 obj = { TIME_TO_FIRE_IDLE_CALLBACK: "time_to_fire_idle_callback", TIME_TO_QUEUE_EMPTY: "time_to_flush_all_work", TIME_OVER_DEADLINE: "time_over_deadline", DEADLINE_INITIAL_TIME_REMAINING: "initial_time_of_deadline" };
 obj = { COUNT_DISPATCHES_LEFT_AFTER_YIELD: "count_dispatches_left_after_yield", COUNT_FLUSH_BEFORE_QUEUE_EMPTY: "count_flush_before_queue_empty", COUNT_INITIAL_DISPATCHS_LENGTH: "count_initial_dispatches_length" };
@@ -15,11 +15,11 @@ class WorkSchedulerTelemetry {
   constructor() {
     obj = Object.create(new.target.prototype);
     obj = require("apply");
-    obj[0] = obj.cloneDeep(count_initial_dispatches_length);
+    obj[0] = obj.cloneDeep(closure_3);
     obj2 = require("apply");
-    obj[1] = obj2.cloneDeep(count_initial_dispatches_length);
+    obj[1] = obj2.cloneDeep(closure_4);
     obj3 = require("apply");
-    obj[2] = obj3.cloneDeep(count_initial_dispatches_length);
+    obj[2] = obj3.cloneDeep(closure_5);
     obj4 = require("apply");
     obj[3] = obj4.cloneDeep(closure_6);
     return obj;
@@ -91,7 +91,6 @@ Object.defineProperty(prototype, "isTelemetryEnabled", {
 prototype["generateTelemetry"] = function generateTelemetry() {
   const entries = Object.entries(this._timingStats);
   const reduced = entries.reduce((arg0, arg1) => {
-    let tmp;
     [tmp, ] = arg1;
     const combined = "avg_" + tmp;
     arg0[combined] = "" + obj.toFixed(2) + "ms";
@@ -99,7 +98,6 @@ prototype["generateTelemetry"] = function generateTelemetry() {
   }, {});
   const entries1 = Object.entries(this._measurements);
   const reduced1 = entries1.reduce((arg0, arg1) => {
-    let tmp;
     [tmp, ] = arg1;
     const combined = "avg_" + tmp;
     arg0[combined] = "" + obj.toFixed(2);
@@ -107,8 +105,6 @@ prototype["generateTelemetry"] = function generateTelemetry() {
   }, {});
   const entries2 = Object.entries(this._eventCounts);
   const merged = Object.assign(entries2.reduce((arg0, arg1) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg1;
     const combined = "count_" + tmp;
     arg0[combined] = "" + tmp2;

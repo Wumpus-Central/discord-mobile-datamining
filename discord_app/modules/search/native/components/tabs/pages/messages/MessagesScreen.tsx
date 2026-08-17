@@ -1,21 +1,13 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx
-import importAllResult from "noop";
-import prototype from "prototype";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "prototype" /* 11510 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ SEARCH_FILTERS_BY_TAB: c5, SearchFilter: closure_6, SEARCH_PINNED_MESSAGES_LINE_CLAMP: error, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: metroImportAll, MESSAGE_PLACEHOLDER_ITEM_SIZE: c9, SearchListItemTypes: c10 } = MessageEmbedTypes);
+({ SEARCH_FILTERS_BY_TAB: c5, SearchFilter: closure_6, SEARCH_PINNED_MESSAGES_LINE_CLAMP: error, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: c9, SearchListItemTypes: c10 } = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
-  let isFirstPageLoading;
-  let isNextPageLoading;
   const searchContext = isFocused.searchContext;
   const tab = isFocused.tab;
   let searchMessages;
@@ -35,8 +27,6 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
   onPressMessageItem = searchContext(stateFromStores[6]).useOnPressMessageItem({ searchContext });
   const items2 = [onPressMessageItem, searchContext];
   callback = onPressMessageItem.useCallback((arg0, index) => {
-    let channelId;
-    let messageId;
     ({ channelId, messageId } = arg0);
     let obj = searchContext(stateFromStores[7]);
     obj = { searchContext, channelId, messageId, index };
@@ -47,7 +37,7 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
   const tmp7 = table[tab] === Pins.Pins ? memo : placeholderCount;
   Pins = tmp7;
   const items3 = [tmp7, stateFromStores];
-  memo = obj4.useMemo(() => new searchMessages(stateFromStores[8])(stateFromStores, c6), items3);
+  memo = obj4.useMemo(() => new searchMessages(stateFromStores[8])(stateFromStores, closure_6), items3);
   let tmpResult = tmp(tmp2[9]);
   obj = { searchContext, tab, placeholderHeight: closure_9, numColumns: 1 };
   const searchMessagesLoadingState = tmpResult.useSearchMessagesLoadingState(obj);
@@ -58,15 +48,15 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
     let items = [];
     if (searchMessages != null) {
       const item = searchMessages.forEach((arg0, arg1) => {
-        const items = arg1;
-        let obj = { type: outer2_10.MESSAGE, props: null };
+        items = arg1;
+        let obj = { type: closure_2_10.MESSAGE, props: null };
         obj = {
-          message: outer1_7.parse(arg0),
+          message: closure_1_7.parse(arg0),
           onPress(arg0) {
-            return outer1_4(arg0, closure_0);
+            return closure_1_4(arg0, closure_0);
           },
-          lineClamp: outer1_6,
-          messageSizeCacheRef: outer1_5
+          lineClamp: closure_1_6,
+          messageSizeCacheRef: closure_1_5
         };
         obj[1] = obj;
         items.push(obj);
@@ -77,8 +67,8 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
     const adjustedPlaceholderCount = obj.getAdjustedPlaceholderCount(obj);
     for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
       obj = { type: null, key: null };
-      let tmp3 = outer1_10;
-      obj[0] = outer1_10.MESSAGE_PLACEHOLDER;
+      let tmp3 = closure_1_10;
+      obj[0] = closure_1_10.MESSAGE_PLACEHOLDER;
       let _HermesInternal = HermesInternal;
       obj[1] = "message-placeholder-" + num;
       let arr = items.push(obj);
@@ -94,6 +84,6 @@ const memoResult = importAllResult.memo(function MessagesScreen(isFocused) {
   obj[7] = isNextPageLoading;
   return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null });
 });
-let result = require("MessageEmbedTypes").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MessagesScreen.tsx");
 
 export default memoResult;

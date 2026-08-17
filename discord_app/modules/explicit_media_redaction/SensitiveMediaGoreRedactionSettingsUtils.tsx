@@ -1,15 +1,13 @@
 // discord_app/modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { HelpdeskArticles } from "ME";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function resolveGoreSettingWithDefaults(isFriend) {
-  let isDm;
-  let setting;
   ({ setting, isDm } = isFriend);
   if (isDm === undefined) {
     isDm = false;
@@ -78,7 +76,7 @@ function resolveGoreSettingWithDefaults(isFriend) {
     }
   }
 }
-const result = require("ME").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx");
 
 export { resolveGoreSettingWithDefaults };
 export const resolveGoreSettingWithDefaultsForTeen = function resolveGoreSettingWithDefaultsForTeen(isDm) {

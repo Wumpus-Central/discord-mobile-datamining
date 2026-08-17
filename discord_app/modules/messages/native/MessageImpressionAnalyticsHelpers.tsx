@@ -1,17 +1,13 @@
 // discord_app/modules/messages/native/MessageImpressionAnalyticsHelpers.tsx
-import noop from "noop";
-import updateInvite from "updateInvite";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import ME from "ME";
-import { LinkType } from "LinkType";
-import { InviteTypes } from "InviteSendStates";
-import { InviteTypes } from "../../instant_invite/InviteTypeUtils.tsx";
+import InviteTypes2 from "InviteTypes" /* 4369 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "updateInvite" /* 4359 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
+import ME from "ME" /* 676 */;
+import { LinkType } from "LinkType" /* 7442 */;
+import { InviteTypes } from "InviteSendStates" /* 4371 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getVoiceInviteEmbedRenderInfo(state) {
   if (state.state !== constants2.RESOLVING) {
     if (state.state !== tmp.EXPIRED) {
@@ -47,19 +43,17 @@ function getVoiceInviteEmbedRenderInfo(state) {
               return tmp4;
             }
           }
-          obj5 = InviteTypes;
+          obj5 = InviteTypes2;
         }
       }
     }
   }
   return null;
 }
-({ ChannelTypes: closure_6, GuildFeatures: error, InviteStates: metroImportAll, MessageFlags: c9 } = ME);
-let result = require("getVoiceStatesForGuild").fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");
+({ ChannelTypes: closure_6, GuildFeatures: error, InviteStates: closure_8, MessageFlags: c9 } = ME);
+let result = require("set").fileFinishedImporting("modules/messages/native/MessageImpressionAnalyticsHelpers.tsx");
 
 export const useShouldTrackAnnouncementMessageViews = function useShouldTrackAnnouncementMessageViews(messages) {
-  let channel;
-  let guild;
   ({ guild, channel } = messages);
   messages = messages.messages;
   const isMessagesReady = messages.isMessagesReady;
@@ -80,13 +74,13 @@ export const useShouldTrackAnnouncementMessageViews = function useShouldTrackAnn
   items[3] = isMessagesReady;
   items[4] = messages;
   return flag.useMemo(() => {
-    let tmp = channel.type === outer1_6.GUILD_ANNOUNCEMENT && flag;
+    let tmp = channel.type === closure_1_6.GUILD_ANNOUNCEMENT && flag;
     let someResult = isMessagesReady;
     if (isMessagesReady) {
       someResult = messages.some((messageReference) => {
         let hasFlagResult = null != messageReference.messageReference && null != messageReference.webhookId;
         if (hasFlagResult) {
-          hasFlagResult = messageReference.hasFlag(outer1_9.IS_CROSSPOST);
+          hasFlagResult = messageReference.hasFlag(closure_1_9.IS_CROSSPOST);
         }
         if (hasFlagResult) {
           hasFlagResult = null != guild_id.guild_id;
@@ -114,7 +108,7 @@ export const useShouldTrackRichPresenceInviteEmbedViews = function useShouldTrac
 };
 export const handleAnnouncementMessageViewTracking = function handleAnnouncementMessageViewTracking(arr, shouldTrackAnnouncementMessageViews, guildId, channel) {
   const _require = guildId;
-  const importDefault = channel;
+  importDefault = channel;
   if (shouldTrackAnnouncementMessageViews) {
     if (null != guildId) {
       const items = [];
@@ -127,9 +121,9 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
         }
         let hasFlagResult = null != guild_id && null != message.webhookId;
         if (hasFlagResult) {
-          hasFlagResult = message.hasFlag(outer1_9.IS_CROSSPOST);
+          hasFlagResult = message.hasFlag(closure_1_9.IS_CROSSPOST);
         }
-        if (!message.hasFlag(outer1_9.EPHEMERAL)) {
+        if (!message.hasFlag(closure_1_9.EPHEMERAL)) {
           let id = type;
           if (hasFlagResult) {
             if (null != message.messageReference) {
@@ -169,12 +163,12 @@ export const handleAnnouncementMessageViewTracking = function handleAnnouncement
 };
 export const handleRichPresenceInviteEmbedViewTracking = function handleRichPresenceInviteEmbedViewTracking(arr, shouldTrackRichPresenceInviteEmbedViews, guildId, channel) {
   const _require = guildId;
-  const importDefault = channel;
+  importDefault = channel;
   if (shouldTrackRichPresenceInviteEmbedViews) {
     const items = [];
     const item = arr.forEach((message) => {
       message = message.message;
-      let hasFlagResult = message.hasFlag(outer1_9.EPHEMERAL);
+      let hasFlagResult = message.hasFlag(closure_1_9.EPHEMERAL);
       if (!hasFlagResult) {
         hasFlagResult = null == message.activity;
       }
@@ -191,7 +185,7 @@ export const handleRichPresenceInviteEmbedViewTracking = function handleRichPres
         obj[2] = id.id;
         obj[3] = guildId;
         obj[4] = message.application.id;
-        obj[5] = outer1_10.RICH_PRESENCE_INVITE;
+        obj[5] = closure_1_10.RICH_PRESENCE_INVITE;
         items.push(obj);
       }
     });
@@ -200,8 +194,6 @@ export const handleRichPresenceInviteEmbedViewTracking = function handleRichPres
   }
 };
 export const useShouldTrackOfficialMessageViews = function useShouldTrackOfficialMessageViews(isMessagesReady) {
-  let guild;
-  let messages;
   ({ guild, messages } = isMessagesReady);
   isMessagesReady = isMessagesReady.isMessagesReady;
   let isGuildOfficialMessagesEnabled;
@@ -227,16 +219,16 @@ export const useShouldTrackOfficialMessageViews = function useShouldTrackOfficia
 };
 export const handleOfficialMessageViewTracking = function handleOfficialMessageViewTracking(arr, shouldTrackOfficialMessageViews, guildId, channel) {
   const _require = guildId;
-  const importDefault = channel;
+  importDefault = channel;
   if (shouldTrackOfficialMessageViews) {
     if (null != guildId) {
       const items = [];
       const item = arr.forEach((message) => {
         message = message.message;
-        const hasFlagResult = message.hasFlag(outer1_9.EPHEMERAL);
+        const hasFlagResult = message.hasFlag(closure_1_9.EPHEMERAL);
         let hasFlagResult1 = !hasFlagResult;
         if (!hasFlagResult) {
-          hasFlagResult1 = message.hasFlag(outer1_9.IS_GUILD_OFFICIAL);
+          hasFlagResult1 = message.hasFlag(closure_1_9.IS_GUILD_OFFICIAL);
         }
         if (hasFlagResult1) {
           const obj = { type: null, messageId: null, channelId: null, guildId: null };
@@ -269,12 +261,12 @@ export const useShouldTrackVoiceInviteEmbedViews = function useShouldTrackVoiceI
 };
 export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbedViewTracking(arr, shouldTrackVoiceInviteEmbedViews, guildId, channel) {
   const _require = guildId;
-  const importDefault = channel;
+  importDefault = channel;
   if (shouldTrackVoiceInviteEmbedViews) {
     const items = [];
     const item = arr.forEach((message) => {
       message = message.message;
-      if (!message.hasFlag(outer1_9.EPHEMERAL)) {
+      if (!message.hasFlag(closure_1_9.EPHEMERAL)) {
         const codedLinks = message.codedLinks;
         const iter = codedLinks[Symbol.iterator]();
         const nextResult = iter.next();
@@ -283,17 +275,17 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
           let tmp7 = guildId;
           let tmp8 = items;
           if (nextResult.type === guildId(items[8]).CodedLinkType.INVITE) {
-            let tmp31 = outer1_4;
+            let tmp31 = closure_1_4;
             let tmp32 = nextResult;
-            let invite = outer1_4.getInvite(tmp6.code);
+            let invite = closure_1_4.getInvite(tmp6.code);
             let tmp34 = invite;
             if (null != invite) {
-              let tmp35 = outer1_12;
+              let tmp35 = closure_1_12;
               let tmp36 = invite;
-              let tmp37 = outer1_12(tmp34);
+              let tmp37 = closure_1_12(tmp34);
               if (null != tmp37) {
                 let tmp39 = invite;
-                let channel = tmp34.channel;
+                channel = tmp34.channel;
                 let id;
                 if (channel != null) {
                   id = channel.id;
@@ -319,10 +311,10 @@ export const handleVoiceInviteEmbedViewTracking = function handleVoiceInviteEmbe
                   someResult = null != tmp13;
                 }
                 if (someResult) {
-                  let tmp17 = outer1_5;
+                  let tmp17 = closure_1_5;
                   let tmp18 = id;
                   let tmp19 = id1;
-                  let voiceStatesForChannelAlt = outer1_5.getVoiceStatesForChannelAlt(tmp10, tmp13);
+                  let voiceStatesForChannelAlt = closure_1_5.getVoiceStatesForChannelAlt(tmp10, tmp13);
                   someResult = voiceStatesForChannelAlt.some((voiceState) => voiceState.voiceState.selfStream);
                 }
                 let obj = { type: null, messageId: null, channelId: null, guildId: null, inviteCode: null, inviteGuildId: null, inviteChannelId: null, inviteInstanceId: null, treatmentRendered: null, hasActiveStream: null };

@@ -1,7 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../notifications/profile_updates/ProfileUpdatesNotificationExperiment.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import apexExperiment from "apexExperiment" /* 14815 */;
+import onProfileUpdatesNotificationSettingsChanged from "onProfileUpdatesNotificationSettingsChanged" /* 14816 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -12,9 +16,9 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.F4VeBe);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableProfileUpdatesNotifications.useSetting,
-  onValueChange: require("onProfileUpdatesNotificationSettingsChanged").onProfileUpdatesNotificationSettingsChanged,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableProfileUpdatesNotifications.useSetting,
+  onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
@@ -28,13 +32,13 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.F4VeBe);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableProfileUpdatesNotifications.useSetting,
-  onValueChange: require("onProfileUpdatesNotificationSettingsChanged").onProfileUpdatesNotificationSettingsChanged,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableProfileUpdatesNotifications.useSetting,
+  onValueChange: onProfileUpdatesNotificationSettingsChanged.onProfileUpdatesNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useProfileUpdatesNotificationExperiment("tabsV2Settings").showSettingsToggle;
   }
 };
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileUpdatesNotificationSetting.tsx");
 
 export default toggle;

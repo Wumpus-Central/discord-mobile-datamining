@@ -1,21 +1,22 @@
 // discord_app/modules/channel_following/useChannelFollowerStats.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getFollowerStatsForChannel from "getFollowerStatsForChannel";
+import setDefault from "set" /* 687 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getFollowerStatsForChannel" /* 10862 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const HOUR = require("set").Millis.HOUR;
-const result = require("getFollowerStatsForChannel").fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
+const HOUR = setDefault.Millis.HOUR;
+const result = require("set").fileFinishedImporting("modules/channel_following/useChannelFollowerStats.tsx");
 
 export default function useChannelFollowerStats(arg0) {
   const _require = arg0;
   const tmp = stateFromStores(React.useState(false), 2);
   const first = tmp[0];
-  const dependencyMap = tmp[1];
-  const items = [getFollowerStatsForChannel];
+  dependencyMap = tmp[1];
+  const items = [closure_5];
   const items1 = [arg0];
-  stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getFollowerStatsForChannel(closure_0), items1);
+  stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getFollowerStatsForChannel(closure_0), items1);
   const items2 = [arg0, stateFromStores, first];
   const effect = React.useEffect(() => {
     if (null == stateFromStores) {

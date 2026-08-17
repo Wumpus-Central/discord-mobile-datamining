@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx
-import handleThemeChange from "handleThemeChange";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
+import createToggle from "createToggle" /* 10669 */;
 import { ThemeTypes } from "../../appearance/native/SettingsAppearanceThemePickerScreen.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -13,8 +13,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useIsSingleThemePickerVisible() {
-    const tmp = useIsMobileVisualRefreshExperimentEnabled("AppearanceThemePickerSetting");
-    const items = [handleThemeChange];
+    const tmp = useIsMobileVisualRefreshExperimentEnabledDefault("AppearanceThemePickerSetting");
+    const items = [closure_3];
     let tmp2 = !tmp;
     if (tmp) {
       tmp2 = !obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
@@ -31,6 +31,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppearanceThemePickerSetting.tsx");
 
 export default createToggle;

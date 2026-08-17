@@ -1,7 +1,10 @@
 // discord_common/js/packages/design/native.tsx
-import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD";
+import set from "set" /* 2 */;
+import context from "context" /* 4160 */;
+import isImage from "isImage" /* 4193 */;
+import LOW_SATURATION_THRESHOLD from "LOW_SATURATION_THRESHOLD" /* 1357 */;
 
-const result = require("useCheckboxA11yNative").fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/design/native.tsx");
 for (const key10018 in require("AccessibilityAnnouncer")) {
   let tmp4 = key10018;
   arg5[key10018] = require("AccessibilityAnnouncer")[key10018];
@@ -68,7 +71,7 @@ for (const key10067 in require("WCAGContrastRatios")) {
   continue;
 }
 
-export const ManaContext = require("context").ManaContext;
-export const ManaContextProvider = require("context").ManaContextProvider;
-export const useManaContext = require("context").useManaContext;
-export const isImage = require("isImage").isImage;
+export const ManaContext = context.ManaContext;
+export const ManaContextProvider = context.ManaContextProvider;
+export const useManaContext = context.useManaContext;
+export const isImage = isImage.isImage;

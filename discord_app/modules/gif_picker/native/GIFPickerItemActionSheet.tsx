@@ -1,21 +1,20 @@
 // discord_app/modules/gif_picker/native/GIFPickerItemActionSheet.tsx
-import noop from "noop";
-import { View } from "ButtonGroup";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { contentWrapper: null, gifContainer: null, gifImage: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column", alignItems: "center" };
-createCacheKey[2] = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("jsxProd").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemActionSheet.tsx");
 
 export default function GIFPickerItemActionSheet(item) {
   item = item.item;
@@ -24,9 +23,9 @@ export default function GIFPickerItemActionSheet(item) {
   let height;
   let callback;
   let callback1;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = item(width[5]);
-  let obj1 = item(width[6]);
+  obj1 = item(width[6]);
   isFavoriteGIF = obj.useIsFavoriteGIF(obj1.gifUrlKey(item.url));
   const size = isFavoriteGIF(width[7])();
   width = size.width;
@@ -66,7 +65,7 @@ export default function GIFPickerItemActionSheet(item) {
   }, items1);
   const items2 = [callback, item.url];
   const items3 = [callback1, isFavoriteGIF];
-  const callback2 = height.useCallback(() => {
+  callback2 = height.useCallback(() => {
     callback();
     item(width[12]).copy(item.url, item(width[13]).presentLinkCopied);
   }, items2);

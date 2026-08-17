@@ -1,15 +1,15 @@
 // discord_app/modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx
-import _slicedToArray from "_slicedToArray";
-import _openURL from "_openURL";
-import noop from "noop";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
 
 const require = arg1;
 function _getDeepLinkUrl() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -37,15 +37,15 @@ function _getDeepLinkUrl() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp5;
+              dependencyMap = tmp5;
               let callback = tmp2;
               callback = undefined;
               dependencyMap = undefined;
               if ("store.steampowered.com" === lib.hostname) {
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_1(outer1_2[3]).isProtocolRegistered(outer1_6);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_1(closure_1_2[3]).isProtocolRegistered(closure_1_6);
                 return obj1;
               }
             }
@@ -117,7 +117,7 @@ function _getDeepLinkUrl() {
       }
     })();
   });
-  const _getDeepLinkUrl = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -129,19 +129,19 @@ function _getDeepLinkUrl() {
 const steam = "steam";
 const re7 = /^\/app\/(\d+)(?:\/)?/;
 const re8 = /^\/games\/store\/title\/([^/]+)/;
-let result = require("noop").fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
+let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useOpenExternalUrlFromGameProfile.tsx");
 
 export default function useOpenExternalUrlFromGameProfile(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const tmp = callback(React.useState(false), 2);
   const first = tmp[0];
-  let closure_2 = tmp[1];
+  closure_2 = tmp[1];
   closure_0 = undefined;
   closure_0 = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (c5 === 2) {
         c5 = 3;
@@ -169,18 +169,18 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let c2 = tmp3;
+              c2 = tmp3;
               let uRL = tmp7;
               uRL = undefined;
               c2 = undefined;
               if (null != callback) {
-                let c3 = 1;
+                c3 = 1;
                 const _URL = URL;
                 uRL = new URL(callback);
                 c3 = 0;
                 c4 = 2;
                 c5 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = (function getDeepLinkUrl(uRL) {
                   const self = this;
                   const apply = closure_9.apply;
@@ -210,7 +210,7 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
             c2 = arg1;
             let tmp9 = null != c2;
             if (tmp9) {
-              tmp9 = outer1_1;
+              tmp9 = closure_1_1;
             }
             if (tmp9) {
               c2 = null;
@@ -220,15 +220,15 @@ export default function useOpenExternalUrlFromGameProfile(arg0) {
             callback = uRL.toString();
             if (null != callback) {
               callback(callback);
-            } else if (null == outer1_2) {
+            } else if (null == closure_1_2) {
               first(table[5])(callback);
             }
-            (function openDeepLink(outer1_2, outer1_22) {
-              let closure_0 = outer1_22;
-              const uRL = setTimeout(() => outer1_22(true), 5000);
+            (function openDeepLink(closure_1_2, closure_1_22) {
+              closure_0 = closure_1_22;
+              uRL = setTimeout(() => callback(true), 5000);
               const listener = window.addEventListener("blur", () => clearTimeout(closure_1), { once: true });
-              uRL(_null[5])(outer1_2);
-            })(outer1_2, outer1_2);
+              uRL(_null[5])(closure_1_2);
+            })(closure_1_2, closure_1_2);
           }
           c5 = 3;
         } catch (tmp40) {

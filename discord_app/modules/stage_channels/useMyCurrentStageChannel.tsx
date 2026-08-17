@@ -1,13 +1,13 @@
 // discord_app/modules/stage_channels/useMyCurrentStageChannel.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannel.tsx");
 
 export default function useMyCurrentStageChannel() {
-  const items = [handleConnectionOpen, ensureGuildLoaded];
+  const items = [closure_3, closure_2];
   return initialize.useStateFromStores(items, () => {
     voiceChannelId = voiceChannelId.getVoiceChannelId();
     if (null != voiceChannelId) {

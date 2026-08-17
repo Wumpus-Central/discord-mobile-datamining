@@ -1,59 +1,54 @@
 // discord_app/modules/message_request/native/MessageRequestRowSenderDetails.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ensureAvatarSource } from "../../../utils/native/AvatarUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import ensureAvatarSourceDefault from "ensureAvatarSource" /* 1438 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { avatar: null, avatarContainer: null, detailsContainer: null, messageDetails: null, username: null, timestampSeparator: null, messagePreview: null, usernameTextContainer: null };
-createCacheKey = { borderRadius: null, backgroundColor: null };
-createCacheKey[0] = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2;
-createCacheKey[1] = require("Themes").colors.BACKGROUND_SURFACE_HIGH;
+createCacheKey = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 16, alignItems: "flex-start", height: "100%" };
 createCacheKey[2] = { marginRight: 8, justifyContent: "flex-start", alignItems: "flex-start", flex: 1 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-createCacheKey[4] = { flexShrink: 1, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[4] = { flexShrink: 1, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[5] = { marginHorizontal: 6 };
 createCacheKey[6] = { marginTop: 2 };
 createCacheKey[7] = { flexShrink: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexShrink: 1, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/message_request/native/MessageRequestRowSenderDetails.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexShrink: 1, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestRowSenderDetails.tsx");
 
 export default function MessageRequestRowSenderDetails(isRestricted) {
-  let channel;
-  let otherUser;
   ({ channel, otherUser } = isRestricted);
   let flag = isRestricted.isRestricted;
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = otherUser(589);
-  const items = [markAllUserIdListsStale];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != otherUser) {
-      let nickname = outer1_4.getNickname(tmp.id);
+      let nickname = closure_1_4.getNickname(tmp.id);
       if (nickname == null) {
-        nickname = outer1_1(outer1_2[8]).getGlobalName(tmp);
-        const obj = outer1_1(outer1_2[8]);
+        nickname = closure_1_1(closure_1_2[8]).getGlobalName(tmp);
+        const obj = closure_1_1(closure_1_2[8]);
       }
       tmp2 = nickname;
     }
     return tmp2;
   });
-  let obj1 = otherUser(16093);
+  obj1 = otherUser(16093);
   const messageRequestRelativeTimestampText = obj1.useMessageRequestRelativeTimestampText(channel);
   const random = Math.random();
-  const rounded = Math.floor(random * ensureAvatarSource.DEFAULT_AVATARS.length);
+  const rounded = Math.floor(random * ensureAvatarSourceDefault.DEFAULT_AVATARS.length);
   obj = { style: tmp.avatarContainer, children: null };
   if (null != otherUser) {
     obj = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
@@ -68,7 +63,7 @@ export default function MessageRequestRowSenderDetails(isRestricted) {
   } else {
     obj1 = { avatarStyle: null, source: null };
     obj1[0] = tmp.avatar;
-    obj1[1] = ensureAvatarSource.DEFAULT_AVATARS[rounded];
+    obj1[1] = ensureAvatarSourceDefault.DEFAULT_AVATARS[rounded];
   }
   obj[1] = closure_5(otherUser(1297).Avatar, obj1);
   const items1 = [closure_5(View, obj), ];

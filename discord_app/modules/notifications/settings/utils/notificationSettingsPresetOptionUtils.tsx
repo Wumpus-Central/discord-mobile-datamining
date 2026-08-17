@@ -1,9 +1,12 @@
 // discord_app/modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx
-import { UserNotificationSettings } from "ME";
-import { UnreadSetting } from "ReadStateTypes";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ReadStateTypes from "ReadStateTypes" /* 5044 */;
 
-const result = require("getSystemLocale").fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx");
+const UserNotificationSettings = ME.UserNotificationSettings;
+const UnreadSetting = ReadStateTypes.UnreadSetting;
+const result = set.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsPresetOptionUtils.tsx");
 
 export const getPushNotificationSelectOptions = function getPushNotificationSelectOptions() {
   let obj = { label: null, value: null };

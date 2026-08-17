@@ -1,13 +1,14 @@
 // discord_app/design/components/Modal/native/ModalDisclaimer.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ container: { flexDirection: "column", alignItems: "center" }, disclaimer: { marginBottom: 12 } });
-const result = require("jsxProd").fileFinishedImporting("design/components/Modal/native/ModalDisclaimer.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalDisclaimer.native.tsx");
 
 export const ModalDisclaimer = function ModalDisclaimer(children) {
   const tmp = callback();

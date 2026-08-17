@@ -1,11 +1,11 @@
 // discord_app/modules/content_inventory/ContentInventoryPersistedStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { PersistedStore } from "initialize";
-import set from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import set from "set" /* 2 */;
 
 function updateImpressionCaches(flag) {
-  let tmp29;
-  let tmp30;
   if (flag === undefined) {
     flag = false;
   }
@@ -41,9 +41,9 @@ function updateImpressionCaches(flag) {
       num10 = closure_1;
     }
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     const _Set2 = Set;
-    const set1 = new Set();
+    set1 = new Set();
     const _Date3 = Date;
     let num11 = null;
     itemImpressions = closure_2.itemImpressions;
@@ -68,18 +68,19 @@ function updateImpressionCaches(flag) {
     if (num11 == null) {
       num11 = Infinity;
     }
-    let c6 = true;
+    c6 = true;
   } else {
     const _Date = Date;
   }
 }
-let closure_1 = 3 * require("set").Millis.DAY;
+let closure_1 = 3 * setDefault.Millis.DAY;
 let closure_2 = { itemImpressions: [], hidden: false };
 let set = new Set();
 let set1 = new Set();
 let c5 = 0;
 let c6 = false;
 let c7 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class ContentInventoryPersistedStore extends PersistedStore {
 }
 const prototype = ContentInventoryPersistedStore.prototype;
@@ -109,11 +110,11 @@ Object.defineProperty(prototype, "hidden", {
   set: undefined
 });
 prototype["reset"] = function reset() {
-  let closure_2 = { itemImpressions: [], hidden: false };
+  closure_2 = { itemImpressions: [], hidden: false };
 };
 ContentInventoryPersistedStore.displayName = "ContentInventoryPersistedStore";
 ContentInventoryPersistedStore.persistKey = "ContentInventoryPersistedStore";
-const contentInventoryPersistedStore = new ContentInventoryPersistedStore(require("dispatcher"), {
+const contentInventoryPersistedStore = new ContentInventoryPersistedStore(dispatcherDefault, {
   CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function handleImpressionsTracked(arg0) {
     if (!c6) {
       updateImpressionCaches();

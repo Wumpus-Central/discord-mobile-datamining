@@ -1,8 +1,10 @@
 // discord_app/modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx
-import get_ActivityIndicator from "set";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
@@ -10,34 +12,26 @@ import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
 import { getContextualEntrypointHeading } from "../../utils/QuestCopyUtils.tsx";
 
-let c3;
-let c4;
-let closure_6;
-let error;
 ({ ScrollView: c3, View: c4 } = get_ActivityIndicator);
+const HelpdeskArticles = ME.HelpdeskArticles;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { container: { flex: 1, width: "100%", maxWidth: 480, alignSelf: "center" }, contentContainer: null, illustration: null, closeButton: null, targetList: null, targetItem: null, lastTargetItem: null, disclosureText: null };
-obj = { flexGrow: 1, padding: require("Themes").space.PX_24, gap: require("Themes").space.PX_16 };
+obj = { flexGrow: 1, padding: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 obj[1] = obj;
-obj[2] = { alignSelf: "center", marginBottom: require("Themes").space.PX_8 };
-let obj1 = { alignSelf: "center", marginBottom: require("Themes").space.PX_8 };
-obj[3] = { marginTop: "auto", paddingHorizontal: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24 };
+obj[2] = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_8 };
+obj[3] = { marginTop: "auto", paddingHorizontal: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24 };
 obj[4] = { padding: 0 };
-let obj2 = { marginTop: "auto", paddingHorizontal: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_24 };
-obj[5] = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
+let obj2 = { marginTop: "auto", paddingHorizontal: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_24 };
+obj[5] = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 obj[6] = { borderBottomWidth: 0 };
-let obj3 = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-obj[7] = { flex: 1, paddingVertical: require("Themes").space.PX_12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
+let obj3 = { flexDirection: "row", flexWrap: "nowrap", alignItems: "center", paddingLeft: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+obj[7] = { flex: 1, paddingVertical: ThemesDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj4 = { flex: 1, paddingVertical: require("Themes").space.PX_12, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("jsxProd").fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx");
+let obj4 = { flex: 1, paddingVertical: ThemesDefault.space.PX_12, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = set.fileFinishedImporting("modules/quests/native/QuestDisclosureModal/QuestDisclosureModalInner.tsx");
 
 export default function QuestDisclosureModalInner(isTargetedDisclosure) {
-  let cosponsorName;
-  let gamePublisher;
-  let gameTitle;
-  let isVideoQuest;
-  let onClose;
   isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
   let _require;
   let items1;
@@ -71,7 +65,7 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     items1[2] = obj;
     tmp6 = tmp5;
   }
-  const obj1 = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
+  obj1 = { style: tmp.container, contentContainerStyle: tmp.contentContainer, children: null };
   const items2 = [tmp6(closure_4, { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) }), , , , ];
   const obj3 = { variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
   const obj2 = { style: tmp.illustration, children: tmp6(_AccountAgeTier10LargeBadge.WumpusCouchSpotIllustration, {}) };
@@ -84,18 +78,18 @@ export default function QuestDisclosureModalInner(isTargetedDisclosure) {
     const obj4 = { radius: 16, style: null, children: null };
     obj4[1] = tmp.targetList;
     obj4[2] = items1.map((children) => {
-      let obj = { style: _undefined.targetItem, children: null };
+      let obj = { style: lib.targetItem, children: null };
       const items = [children.icon, ];
-      const items1 = [_undefined.disclosureText, ];
+      items1 = [lib.disclosureText, ];
       let lastTargetItem = arg1 === items1.length - 1;
       if (lastTargetItem) {
-        lastTargetItem = _undefined.lastTargetItem;
+        lastTargetItem = lib.lastTargetItem;
       }
-      obj = { style: items1, children: tmp3(_undefined(outer1_2[12]).Text, { variant: "text-md/semibold", children: children.text }) };
+      obj = { style: items1, children: tmp3(lib(closure_1_2[12]).Text, { variant: "text-md/semibold", children: children.text }) };
       items1[1] = lastTargetItem;
-      items[1] = outer1_6(outer1_4, obj);
+      items[1] = closure_1_6(closure_1_4, obj);
       obj[1] = items;
-      return outer1_7(outer1_4, obj, arg1);
+      return closure_1_7(closure_1_4, obj, arg1);
     });
     isTargetedDisclosure = tmp6(tmp2(6292).Card, obj4);
   }

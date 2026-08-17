@@ -1,24 +1,25 @@
 // discord_app/modules/in_app_notifications/native/NotificationProgress.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { progress: null, progressContainerBottom: null };
-createCacheKey = { borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_BRAND, height: 4 };
+createCacheKey = { borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, height: 4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: "100%", position: "absolute", bottom: -1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function NotificationProgressTsx1(){const{percent,width}=this.__closure;const percentRemaining=(typeof percent==='number'?percent:percent.get())/100;return{transform:[{translateX:-width+width*percentRemaining}]};}" };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/NotificationProgress.tsx");
 
 export default function NotificationProgress(percent) {
   percent = percent.percent;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   const tmp2 = callback(React.useState(0), 2);
   first = tmp2[0];
   dependencyMap = tmp2[1];

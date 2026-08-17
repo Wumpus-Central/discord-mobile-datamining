@@ -1,20 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileContactButtons.tsx
-import "ACTION_SHEET_HEIGHT_HALF";
-import { View } from "handleRelationshipAddError";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
-import jsxProd from "module_4770";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 4745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function FlatFriendButton(label) {
-  let hasCustomProfileTheme;
-  let icon;
-  let isPending;
   label = label.label;
   ({ icon, hasCustomProfileTheme, isPending } = label);
   const merged = Object.assign(label, Object.create(null));
@@ -24,26 +19,20 @@ function FlatFriendButton(label) {
     str = "secondary";
   }
   if ("primary" === str) {
-    let CONTROL_SECONDARY_TEXT_DEFAULT = Themes.colors.WHITE;
+    let CONTROL_SECONDARY_TEXT_DEFAULT = ThemesDefault.colors.WHITE;
   } else {
-    CONTROL_SECONDARY_TEXT_DEFAULT = Themes.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
+    CONTROL_SECONDARY_TEXT_DEFAULT = ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT;
   }
-  const obj = { text: label, icon: null, accessibilityLabel: null, variant: null, size: "md", grow: true };
-  obj[1] = callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" });
-  obj[2] = label;
-  obj[3] = str;
   const merged1 = Object.assign(merged);
-  return callback(Button.Button, obj);
+  return callback(Button.Button, { text: label, icon: callback(icon, { color: CONTROL_SECONDARY_TEXT_DEFAULT, size: "xs" }), accessibilityLabel: label, variant: str, size: "md", grow: true });
 }
 function FriendRequestButton(user) {
-  let ButtonComponent;
-  let hasCustomProfileTheme;
   user = user.user;
   let newestAnalyticsLocation = user.location;
   let trackUserProfileAction;
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
-  let markAllUserIdListsStale;
+  closure_4 = undefined;
   ({ hasCustomProfileTheme, ButtonComponent } = user);
   let obj = user(8934);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
@@ -54,9 +43,9 @@ function FriendRequestButton(user) {
   let tmp3Result = tmp3(12172);
   const gameFriendsForUser = tmp3Result.useGameFriendsForUser(user.id);
   tmp3Result = tmp3(589);
-  const items = [markAllUserIdListsStale];
+  const items = [closure_4];
   stateFromStores = tmp3Result.useStateFromStores(items, () => relationshipType.getRelationshipType(user.id));
-  markAllUserIdListsStale = trackUserProfileAction(4219).useName(user);
+  closure_4 = trackUserProfileAction(4219).useName(user);
   if (stateFromStores !== RelationshipTypes.FRIEND) {
     if (stateFromStores !== tmp5.BLOCKED) {
       if (gameFriendsForUser.length > 0) {
@@ -90,12 +79,12 @@ function FriendRequestButton(user) {
         obj[1] = stringResult;
         obj[2] = string2Result;
         obj[3] = function onPress() {
-          if (stateFromStores === outer1_5.PENDING_OUTGOING) {
+          if (stateFromStores === closure_1_5.PENDING_OUTGOING) {
             let obj = { userDisplayName: null, onConfirm: null };
-            obj[0] = markAllUserIdListsStale;
+            obj[0] = closure_4;
             obj[1] = function onConfirm() {
               callback({ action: "CANCEL_FRIEND_REQUEST" });
-              outer1_1(outer1_2[17]).cancelFriendRequest(id.id, closure_2);
+              closure_1_1(closure_1_2[17]).cancelFriendRequest(id.id, closure_2);
             };
             const result = user(11791).confirmCancelFriendRequest(obj);
             const obj3 = user(11791);
@@ -116,34 +105,28 @@ function FriendRequestButton(user) {
   }
   return null;
 }
+noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { threeButtonLayout: null, flexGrow: null, iconButtonGroup: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { flexDirection: "row", gap: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", gap: require("Themes").space.PX_12 };
-let result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_profile/native/UserProfileContactButtons.tsx");
+createCacheKey[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileContactButtons.tsx");
 
 export default function UserProfileContactButtons(user) {
-  let accessibilityHint;
-  let disableCalls;
-  let disableMessage;
-  let hasCustomProfileTheme;
-  let inCall;
-  let style;
-  let text;
   user = user.user;
   ({ disableMessage, disableCalls, hasCustomProfileTheme, style } = user);
   let trackUserProfileAction;
   let fn;
   let obj = user(fn[9]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  const tmp3 = createCacheKey();
-  let obj1 = user(fn[11]);
-  const items = [markAllUserIdListsStale];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_4.getRelationshipType(user.id));
+  const tmp3 = callback2();
+  obj1 = user(fn[11]);
+  const items = [closure_4];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_4.getRelationshipType(user.id));
   let obj2 = user(fn[10]);
   const gameFriendsForUser = obj2.useGameFriendsForUser(user.id);
   const tmp6 = trackUserProfileAction(fn[22])(user.id, false, () => {

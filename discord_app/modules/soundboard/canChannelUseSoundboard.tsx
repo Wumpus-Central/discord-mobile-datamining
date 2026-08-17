@@ -1,15 +1,13 @@
 // discord_app/modules/soundboard/canChannelUseSoundboard.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ ChannelTypesSets: c5, Permissions: closure_6 } = ME);
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
+const result = require("set").fileFinishedImporting("modules/soundboard/canChannelUseSoundboard.tsx");
 
 export default function canChannelUseSoundboard(type) {
   if (null == type) {
@@ -19,9 +17,9 @@ export default function canChannelUseSoundboard(type) {
     if (CALLABLE.has(type.type)) {
       return true;
     } else {
-      const canResult = getUncachedChannelPermissions.can(constants2.USE_SOUNDBOARD, type);
-      const canResult1 = getUncachedChannelPermissions.can(constants2.SPEAK, type);
-      return type.isGuildVoiceOrThread() && canResult && getUncachedChannelPermissions.can(constants2.SPEAK, type);
+      const canResult = closure_3.can(constants2.USE_SOUNDBOARD, type);
+      const canResult1 = closure_3.can(constants2.SPEAK, type);
+      return type.isGuildVoiceOrThread() && canResult && closure_3.can(constants2.SPEAK, type);
     }
   }
 };
@@ -32,28 +30,28 @@ export const canSelectedVoiceChannelUseSoundboard = function canSelectedVoiceCha
     const CALLABLE = constants.CALLABLE;
     flag = true;
     if (!CALLABLE.has(channel.type)) {
-      const canResult = getUncachedChannelPermissions.can(constants2.USE_SOUNDBOARD, channel);
-      const canResult1 = getUncachedChannelPermissions.can(constants2.SPEAK, channel);
-      flag = channel.isGuildVoiceOrThread() && canResult && getUncachedChannelPermissions.can(constants2.SPEAK, channel);
-      const tmp6 = channel.isGuildVoiceOrThread() && canResult && getUncachedChannelPermissions.can(constants2.SPEAK, channel);
+      const canResult = closure_3.can(constants2.USE_SOUNDBOARD, channel);
+      const canResult1 = closure_3.can(constants2.SPEAK, channel);
+      flag = channel.isGuildVoiceOrThread() && canResult && closure_3.can(constants2.SPEAK, channel);
+      const tmp6 = channel.isGuildVoiceOrThread() && canResult && closure_3.can(constants2.SPEAK, channel);
     }
   }
   return flag;
 };
 export const useCanChannelUseSoundboard = function useCanChannelUseSoundboard(arg0) {
   const _require = arg0;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_3];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
     let flag = false;
     if (null != closure_0) {
-      const CALLABLE = outer1_5.CALLABLE;
+      const CALLABLE = closure_1_5.CALLABLE;
       flag = true;
       if (!CALLABLE.has(obj.type)) {
-        const canResult = outer1_3.can(outer1_6.USE_SOUNDBOARD, obj);
-        const canResult1 = outer1_3.can(outer1_6.SPEAK, obj);
-        flag = obj.isGuildVoiceOrThread() && canResult && outer1_3.can(outer1_6.SPEAK, obj);
-        const tmp6 = obj.isGuildVoiceOrThread() && canResult && outer1_3.can(outer1_6.SPEAK, obj);
+        const canResult = closure_1_3.can(closure_1_6.USE_SOUNDBOARD, obj);
+        const canResult1 = closure_1_3.can(closure_1_6.SPEAK, obj);
+        flag = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
+        const tmp6 = obj.isGuildVoiceOrThread() && canResult && closure_1_3.can(closure_1_6.SPEAK, obj);
       }
     }
     return flag;

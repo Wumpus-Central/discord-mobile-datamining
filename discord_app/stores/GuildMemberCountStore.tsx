@@ -1,9 +1,8 @@
 // discord_app/stores/GuildMemberCountStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function handleInviteData(invite) {
-  let approximate_presence_count;
-  let guild;
   ({ guild, approximate_presence_count } = invite.invite);
   let id;
   if (guild != null) {
@@ -18,6 +17,7 @@ function handleInviteData(invite) {
 }
 let closure_0 = {};
 let closure_1 = {};
+const Store = initializeDefault.Store;
 class GuildMemberCountStore extends Store {
 }
 const prototype = GuildMemberCountStore.prototype;
@@ -39,10 +39,10 @@ prototype["getOnlineCount"] = function getOnlineCount(arg0) {
   return tmp;
 };
 GuildMemberCountStore.displayName = "GuildMemberCountStore";
-const guildMemberCountStore = new GuildMemberCountStore(require("dispatcher"), {
+const guildMemberCountStore = new GuildMemberCountStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let closure_0 = {};
+    closure_0 = {};
     const item = guilds.forEach((id) => {
       closure_0[id.id] = id.member_count;
     });
@@ -66,9 +66,6 @@ const guildMemberCountStore = new GuildMemberCountStore(require("dispatcher"), {
     delete tmp2[tmp];
   },
   GUILD_MEMBER_LIST_UPDATE: function handleGuildMemberListUpdate(arg0) {
-    let guildId;
-    let memberCount;
-    let onlineCount;
     ({ guildId, memberCount, onlineCount } = arg0);
     let flag = false;
     if (dependencyMap[guildId] !== memberCount) {
@@ -84,8 +81,6 @@ const guildMemberCountStore = new GuildMemberCountStore(require("dispatcher"), {
   INVITE_ACCEPT_SUCCESS: handleInviteData,
   INVITE_RESOLVE_SUCCESS: handleInviteData,
   ONLINE_GUILD_MEMBER_COUNT_UPDATE: function handleOnlineCountUpdate(arg0) {
-    let count;
-    let guildId;
     ({ guildId, count } = arg0);
     if (null != guildId) {
       if (null != count) {

@@ -1,29 +1,23 @@
 // discord_app/modules/collectibles/avatar_decorations/native/AvatarGrid.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import sortActivity from "sortActivity";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "sortActivity" /* 4559 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function GridAvatar(user) {
-  let guildId;
-  let pendingAvatarDecoration;
-  let pendingAvatarSrc;
-  let showStatus;
-  let size;
   user = user.user;
   ({ guildId, pendingAvatarSrc, pendingAvatarDecoration } = user);
   ({ size, showStatus } = user);
   let obj = user(589);
-  const items = [sortActivity];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getStatus(user.id));
-  let obj1 = user(589);
-  const items1 = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getStatus(user.id));
+  obj1 = user(589);
+  const items1 = [closure_3];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (undefined === pendingAvatarDecoration) {
     pendingAvatarDecoration = user.avatarDecoration;
@@ -34,7 +28,7 @@ function GridAvatar(user) {
     tmp6 = stateFromStores;
   }
   obj[1] = tmp6;
-  obj[2] = createCacheKey().avatarStatusStyle;
+  obj[2] = callback3().avatarStatusStyle;
   obj[3] = size;
   if (undefined !== pendingAvatarSrc) {
     obj = { source: null };
@@ -50,16 +44,17 @@ function GridAvatar(user) {
   }
   return closure_5(user(1297).Avatar, obj1);
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: null, gridContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/native/AvatarGrid.tsx");
 
 export default function AvatarGrid(arg0) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.gridContainer, children: null };
   obj = { style: tmp.avatarRow, children: null };
   obj = { size: Button.AvatarSizes.NORMAL };
@@ -70,7 +65,7 @@ export default function AvatarGrid(arg0) {
   obj[1] = items;
   const items1 = [callback2(View, obj), ];
   const obj2 = { style: tmp.avatarRow, children: null };
-  const obj1 = { size: Button.AvatarSizes.NORMAL, showStatus: true };
+  obj1 = { size: Button.AvatarSizes.NORMAL, showStatus: true };
   const merged2 = Object.assign(arg0);
   const items2 = [callback(GridAvatar, { size: Button.AvatarSizes.REFRESH_MEDIUM_32 }), ];
   const obj3 = { size: Button.AvatarSizes.REFRESH_MEDIUM_32 };

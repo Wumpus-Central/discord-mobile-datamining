@@ -1,22 +1,22 @@
 // discord_app/modules/guild_settings/GuildSettingsServerTagUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
-import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
-import { apexExperiment } from "MobileServerTagExperiment.tsx";
+import guildHasTag from "guildHasTag" /* 8375 */;
+import apexExperimentDefault from "apexExperiment" /* 8878 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 const GuildSettingsServerTag = "GuildSettingsServerTag";
-const result = require("ME").fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
 
 export const canUseMobileServerTagSettings = function canUseMobileServerTagSettings(guildId) {
   const guild = store.getGuild(guildId);
   let enabled = null != guild;
   if (enabled) {
-    enabled = getUncachedChannelPermissions.can(Permissions.MANAGE_GUILD, guild);
+    enabled = closure_4.can(Permissions.MANAGE_GUILD, guild);
   }
   if (enabled) {
-    let obj = apexExperiment;
+    let obj = apexExperimentDefault;
     obj = { location: null };
     obj[0] = GuildSettingsServerTag;
     enabled = obj.getConfig(obj).enabled;
@@ -37,8 +37,8 @@ export const canViewMobileServerTag = function canViewMobileServerTag(id) {
   if (enabled) {
     obj = { location: null };
     obj[0] = GuildSettingsServerTag;
-    enabled = apexExperiment.getConfig(obj).enabled;
-    const obj3 = apexExperiment;
+    enabled = apexExperimentDefault.getConfig(obj).enabled;
+    const obj3 = apexExperimentDefault;
   }
   return enabled;
 };

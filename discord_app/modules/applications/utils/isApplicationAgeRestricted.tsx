@@ -1,10 +1,10 @@
 // discord_app/modules/applications/utils/isApplicationAgeRestricted.tsx
-import addApplication from "addApplication";
-import { getUnitId } from "../../application_commands/AgeRestrictedApplicationCommandsExperiment.tsx";
-import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
+import getUnitIdDefault from "getUnitId" /* 9558 */;
+import closure_3 from "addApplication" /* 4478 */;
 
-const require = arg1;
-const result = require("isAgeRestrictedContentClassification").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/applications/utils/isApplicationAgeRestricted.tsx");
 
 export default function isApplicationAgeRestricted(arg0) {
   if (obj.getConfig({ location: "isApplicationAgeRestricted" }).enabled) {
@@ -17,5 +17,5 @@ export default function isApplicationAgeRestricted(arg0) {
   } else {
     return false;
   }
-  obj = getUnitId;
+  obj = getUnitIdDefault;
 };

@@ -1,54 +1,47 @@
 // discord_app/modules/parent_tools/native/ParentalConsentWarningBanner.tsx
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "Text";
-import { FamilyCenterSubPages } from "items";
-import ME from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { FamilyCenterSubPages } from "items" /* 5297 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c4;
-let c9;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 ({ Pressable: c4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-({ AnalyticEvents: metroImportAll, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
+({ AnalyticEvents: closure_8, UserSettingsSections: c9, VerticalGradient: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
-let closure_14 = 28 + require("Themes").space.PX_16;
+let closure_14 = 28 + ThemesDefault.space.PX_16;
 let closure_15 = [0.5875, 1];
 createCacheKey = { strip: null, pressable: null, label: null, link: null };
-createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { position: "absolute", top: 0, left: 0, right: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.flexDirection = "row";
 obj1.alignItems = "center";
 obj1.justifyContent = "center";
-obj1.paddingHorizontal = require("Themes").space.PX_12;
-obj1.paddingBottom = require("Themes").space.PX_16;
+obj1.paddingHorizontal = ThemesDefault.space.PX_12;
+obj1.paddingBottom = ThemesDefault.space.PX_16;
 createCacheKey[1] = obj1;
-createCacheKey[2] = { paddingRight: require("Themes").space.PX_8 };
+createCacheKey[2] = { paddingRight: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { textDecorationLine: "underline" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingRight: require("Themes").space.PX_8 };
-const result = require("items").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingRight: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ParentalConsentWarningBanner.tsx");
 
 export default function ParentalConsentWarningBanner(children) {
   let _require;
   let token;
   let daysRemaining;
-  const tmp = createCacheKey();
+  const tmp = callback();
   _require = tmp;
   let Gfqlpa = token;
   let obj = daysRemaining;
   const tmp2 = token(daysRemaining[7])();
   let intl = _require;
-  let obj1 = _require(daysRemaining[8]);
+  obj1 = _require(daysRemaining[8]);
   const parentalConsentWarning = obj1.useParentalConsentWarning();
   let obj2 = _require(daysRemaining[9]);
   const isParentalConsentBannerActive = obj2.useIsParentalConsentBannerActive();
@@ -86,16 +79,16 @@ export default function ParentalConsentWarningBanner(children) {
   const items1 = [daysRemaining];
   const sum = tmp2.top + closure_14;
   const items2 = [tmp.link];
-  const callback = obj7.useCallback(() => {
+  callback = obj7.useCallback(() => {
     let obj = token(daysRemaining[14]);
     obj = { days_remaining: daysRemaining };
-    obj.track(outer1_8.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, obj);
-    const tab = token(daysRemaining[15]).selectTab(outer1_7.REQUESTS);
+    obj.track(closure_1_8.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, obj);
+    const tab = token(daysRemaining[15]).selectTab(closure_1_7.REQUESTS);
     const obj3 = token(daysRemaining[15]);
-    obj = { screen: outer1_9.FAMILY_CENTER };
-    _undefined(daysRemaining[16]).openUserSettings(obj);
+    obj = { screen: closure_1_9.FAMILY_CENTER };
+    lib(daysRemaining[16]).openUserSettings(obj);
   }, items1);
-  const callback1 = obj7.useCallback((children) => outer1_11(_undefined(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: _undefined.link, children }, arg1), items2);
+  const callback1 = obj7.useCallback((children) => closure_1_11(lib(daysRemaining[17]).Text, { variant: "text-sm/medium", color: "text-strong", style: lib.link, children }, arg1), items2);
   const items3 = [StyleSheet.absoluteFill, ];
   let num2 = 0;
   if (isOnMainSurface) {

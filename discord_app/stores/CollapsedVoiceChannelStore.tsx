@@ -1,10 +1,11 @@
 // discord_app/stores/CollapsedVoiceChannelStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { PersistedStore } from "initialize";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 function handleConnectionOpen() {
-  const obj = DISCORD_EPOCH;
+  obj = DISCORD_EPOCHDefault;
   const keys = obj.keys(obj);
   const item = keys.forEach((arg0) => {
     if (null == channel.getChannel(arg0)) {
@@ -13,12 +14,17 @@ function handleConnectionOpen() {
   });
 }
 let obj = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class CollapsedVoiceChannelStore extends PersistedStore {
 }
 const prototype = CollapsedVoiceChannelStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  const tmp = arg0;
-  this.waitFor(ensureGuildLoaded);
+  let tmp = arg0;
+  this.waitFor(closure_2);
+  if (arg0 == null) {
+    tmp = obj;
+  }
+  closure_4 = tmp;
 };
 prototype["getState"] = function getState() {
   return obj;
@@ -45,7 +51,7 @@ obj = {
     const merged = Object.assign(obj);
   }
 };
-const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(require("dispatcher"), obj);
-const result = require("initialize").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
+const collapsedVoiceChannelStore = new CollapsedVoiceChannelStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("stores/CollapsedVoiceChannelStore.tsx");
 
 export default collapsedVoiceChannelStore;

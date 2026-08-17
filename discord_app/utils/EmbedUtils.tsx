@@ -1,10 +1,8 @@
 // discord_app/utils/EmbedUtils.tsx
-import ME from "ME";
-import { EMBED_TYPES_WITH_PARSEABLE_FIELDS as closure_6 } from "MessageEmbedTypes";
+import set from "set" /* 2 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 4822 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
 function getEffectiveVideoProvider(name, url) {
   if ("YouTube" !== name) {
     if ("TikTok" !== name) {
@@ -27,6 +25,7 @@ function getEffectiveVideoProvider(name, url) {
   return name;
 }
 ({ MessageEmbedMediaFlags: c3, MessageEmbedTypes: c4, Permissions: c5 } = ME);
+let closure_6 = MessageEmbedTypes.EMBED_TYPES_WITH_PARSEABLE_FIELDS;
 const re7 = /sketchfab/i;
 const re8 = /^https:\/\/sketchfab\.com/i;
 const re9 = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i;
@@ -38,21 +37,11 @@ const re14 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-sh
 const re15 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
 const re16 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
 const re17 = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/users\/[0-9]+\/?$/;
-let result = require("DISCORD_EPOCH").fileFinishedImporting("utils/EmbedUtils.tsx");
+let result = set.fileFinishedImporting("utils/EmbedUtils.tsx");
 
 export const sanitizeEmbed = function sanitizeEmbed(channel_id, id, footer) {
-  let content_type;
-  let content_type2;
-  let content_type3;
-  let content_type4;
-  let flags;
-  let flags2;
-  let flags3;
-  let flags4;
-  let provider;
-  let video3;
   let obj = { id: null, url: null, type: null, rawTitle: null, rawDescription: null, referenceId: null, flags: null, contentScanVersion: null };
-  let obj1 = str(12);
+  obj1 = str(12);
   obj[0] = obj1.uniqueId("embed_");
   ({ url: obj[1], type: obj[2], title: obj[3], description: obj[4], reference_id: obj[5], flags: obj[6], content_scan_version: obj[7] } = footer);
   if (null != footer.footer) {
@@ -284,8 +273,6 @@ export const mergeEmbedsOnURL = function mergeEmbedsOnURL(mapped) {
 };
 export { getEffectiveVideoProvider };
 export const isEmbedInline = function isEmbedInline(first1) {
-  let author;
-  let rawTitle;
   const type = first1.type;
   let tmp = null != first1.image;
   ({ author, rawTitle } = first1);

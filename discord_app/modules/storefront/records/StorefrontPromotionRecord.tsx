@@ -1,6 +1,6 @@
 // discord_app/modules/storefront/records/StorefrontPromotionRecord.tsx
-import _slicedToArray from "_slicedToArray";
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function parseSkuIds(sku_ids) {
   if (null == sku_ids) {
@@ -21,6 +21,7 @@ function parseSkuIds(sku_ids) {
     return obj;
   }
 }
+toJSDefault;
 let prototype;
 prototype = function StorefrontPromotionRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
@@ -31,13 +32,6 @@ prototype = function StorefrontPromotionRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(display_name) {
-  let application_id;
-  let applies_to_all_skus;
-  let id;
-  let include_bundles;
-  let name;
-  let reward_status;
-  let reward_type;
   ({ id, application_id, name } = display_name);
   if (name == null) {
     name = null;
@@ -129,7 +123,7 @@ prototype["createFromServer"] = function createFromServer(display_name) {
       }
       if (null == nagbar) {
         if (null == offer_notice) {
-          let obj1 = {};
+          obj1 = {};
         }
       }
       let tmp27;

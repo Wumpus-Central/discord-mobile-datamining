@@ -1,25 +1,22 @@
 // discord_app/modules/search/native/components/tabs/pages/ChannelsScreen.tsx
-import importAllResult from "noop";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import search from "search";
-import prototype from "prototype";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { SearchResultContentEntityTypes as closure_10 } from "SearchEntrypointAnalyticsLocations";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "getVoiceStatesForGuild" /* 4545 */;
+import closure_5 from "search" /* 11536 */;
+import closure_6 from "prototype" /* 11510 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import { SearchResultContentEntityTypes as closure_10 } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ EMPTY_VOICE_STATES: error, SearchListItemTypes: metroImportAll, CHANNELS_ESTIMATED_ITEM_SIZE: c9 } = MessageEmbedTypes);
+({ EMPTY_VOICE_STATES: error, SearchListItemTypes: closure_8, CHANNELS_ESTIMATED_ITEM_SIZE: c9 } = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
   searchContext = searchContext.searchContext;
-  let importDefault;
+  importDefault = undefined;
   let stateFromStores;
   let stateFromStores1;
   let stateFromStores2;
-  let c5;
+  closure_5 = undefined;
   let onPressGuildTextChannel;
   let onPressGuildVoiceChannel;
   let stateFromStores3;
@@ -29,17 +26,17 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
   let callback1;
   let obj = searchContext(stateFromStores[7]);
   importDefault = obj.getSearchContextId(searchContext);
-  let obj1 = searchContext(stateFromStores[8]);
-  let items = [c5];
-  stateFromStores = obj1.useStateFromStores(items, () => _undefined.getTextChannels(closure_1));
-  const items1 = [c5];
-  stateFromStores1 = searchContext(stateFromStores[8]).useStateFromStores(items1, () => _undefined.getVoiceChannels(closure_1));
+  obj1 = searchContext(stateFromStores[8]);
+  let items = [closure_5];
+  stateFromStores = obj1.useStateFromStores(items, () => store.getTextChannels(closure_1));
+  const items1 = [closure_5];
+  stateFromStores1 = searchContext(stateFromStores[8]).useStateFromStores(items1, () => store.getVoiceChannels(closure_1));
   let obj3 = searchContext(stateFromStores[8]);
   const items2 = [stateFromStores2];
   const items3 = [searchContext.guildId];
   stateFromStores2 = searchContext(stateFromStores[8]).useStateFromStores(items2, () => stateFromStores2.getVoiceStates(searchContext.guildId), items3);
   const tmp6 = importDefault(stateFromStores[9])(searchContext.guildId);
-  c5 = tmp6;
+  closure_5 = tmp6;
   const obj4 = searchContext(stateFromStores[8]);
   onPressGuildTextChannel = searchContext(stateFromStores[10]).useOnPressGuildTextChannel({ searchContext });
   const obj5 = searchContext(stateFromStores[10]);
@@ -88,8 +85,8 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
   const items10 = [fullscreenPlaceholderCount, callback, callback1, stateFromStores3, tmp6, stateFromStores, stateFromStores1, stateFromStores2];
   const memo = stateFromStores1.useMemo(() => {
     const items = [];
-    let closure_0 = items;
-    let closure_1 = 0;
+    closure_0 = items;
+    closure_1 = 0;
     let arr1 = stateFromStores;
     if (stateFromStores.length > 0) {
       let obj = { type: null, props: null };
@@ -106,7 +103,7 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
           channel: channel.channel,
           lastMessageId: channel.lastMessageId,
           onPress(arg0) {
-            return outer1_11(arg0, closure_0);
+            return closure_1_11(arg0, closure_0);
           }
         };
         arr = arr.push(obj);
@@ -115,7 +112,7 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
     }
     obj = stateFromStores1;
     if (stateFromStores1.length > 0) {
-      const obj1 = { type: null, props: null };
+      obj1 = { type: null, props: null };
       obj1[0] = stateFromStores3.SECTION;
       const obj2 = { title: null };
       const intl2 = searchContext(stateFromStores[11]).intl;
@@ -123,7 +120,7 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
       obj1[1] = obj2;
       items.push(obj1);
       closure_0 = stateFromStores2;
-      closure_1 = c5;
+      closure_1 = closure_5;
       const sorted = obj.sort((channel, channel2) => {
         channel = channel.channel;
         let tmp = closure_0;
@@ -133,7 +130,7 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
         }
         let arr = tmp3[channel.id];
         if (arr == null) {
-          arr = outer1_7;
+          arr = closure_1_7;
         }
         channel2 = channel2.channel;
         if (channel2.isGuildStageVoice()) {
@@ -141,7 +138,7 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
         }
         let arr2 = tmp[channel2.id];
         if (arr2 == null) {
-          arr2 = outer1_7;
+          arr2 = closure_1_7;
         }
         let num = 1;
         if (arr.length >= arr2.length) {
@@ -157,18 +154,18 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
         let arr = closure_1 + arg1;
         let obj = { type: stateFromStores3.GUILD_VOICE_CHANNEL, props: null };
         obj = { channel: channel.channel, voiceStates: null, speakerVoiceStates: null, onPress: null };
-        let tmp2 = outer1_4[channel.channel.id];
+        let tmp2 = closure_1_4[channel.channel.id];
         if (tmp2 == null) {
           tmp2 = onPressGuildVoiceChannel;
         }
         obj[1] = tmp2;
-        let tmp3 = outer1_5[channel.channel.id];
+        let tmp3 = closure_1_5[channel.channel.id];
         if (tmp3 == null) {
           tmp3 = onPressGuildVoiceChannel;
         }
         obj[2] = tmp3;
         obj[3] = function onPress(arg0) {
-          return outer1_12(arg0, closure_0);
+          return closure_1_12(arg0, closure_0);
         };
         obj[1] = obj;
         arr = arr.push(obj);
@@ -206,6 +203,6 @@ const memoResult = importAllResult.memo(function ChannelsScreen(searchContext) {
   }
   return tmp18;
 });
-let result = require("search").fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/ChannelsScreen.tsx");
 
 export default memoResult;

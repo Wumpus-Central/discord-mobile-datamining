@@ -1,30 +1,27 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07356_registerAsset.js";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import ButtonGroup from "ButtonGroup" /* 6687 */;
+import registerAssetDefault from "registerAsset" /* 7356 */;
+import IconButton from "IconButton" /* 8035 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { padding: 16, paddingBottom: 64 } });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemButtonGroup.tsx");
 
 export default function UserSettingsDesignSystemButtonGroup() {
   let obj = { children: null };
   obj = { style: callback3().container, children: null };
   obj = { spacing: 24, children: null };
-  const obj1 = { children: null };
+  obj1 = { children: null };
   const obj2 = { children: null };
   const items = [callback(Text.Text, { variant: "text-lg/bold", children: "Text Button Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "By default, stacks buttons vertically. This is best for buttons with text." }), ];
   const obj3 = { children: null };
@@ -53,18 +50,47 @@ export default function UserSettingsDesignSystemButtonGroup() {
   const obj7 = { children: null };
   const items3 = [callback(Text.Text, { variant: "text-lg/bold", children: "IconButton Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "For IconButtons, a horizontal layout is recommended" }), ];
   const obj8 = { direction: "horizontal", children: null };
-  const obj9 = { accessibilityLabel: "Settings", variant: "secondary", icon: null, onPress: null };
-  obj9[2] = registerAsset;
-  obj9[3] = function onPress() {
+  const items4 = [
+    callback(IconButton.IconButton, {
+      accessibilityLabel: "Settings",
+      variant: "secondary",
+      icon: registerAssetDefault,
+      onPress() {
 
-  };
-  const items4 = [callback(IconButton.IconButton, obj9), ];
-  const obj10 = { accessibilityLabel: "Settings", variant: "secondary", icon: null, onPress: null };
-  obj10[2] = registerAsset;
-  obj10[3] = function onPress() {
+      }
+    }),
 
+  ];
+  const obj4 = {
+    text: "Agree",
+    variant: "primary",
+    onPress() {
+
+    }
   };
-  items4[1] = callback(IconButton.IconButton, obj10);
+  const obj5 = {
+    text: "Cancel",
+    variant: "secondary",
+    onPress() {
+
+    }
+  };
+  const obj9 = {
+    accessibilityLabel: "Settings",
+    variant: "secondary",
+    icon: registerAssetDefault,
+    onPress() {
+
+    }
+  };
+  items4[1] = callback(IconButton.IconButton, {
+    accessibilityLabel: "Settings",
+    variant: "secondary",
+    icon: registerAssetDefault,
+    onPress() {
+
+    }
+  });
   obj8[1] = items4;
   items3[2] = callback2(ButtonGroup.ButtonGroup, obj8);
   obj7[0] = items3;
@@ -85,12 +111,30 @@ export default function UserSettingsDesignSystemButtonGroup() {
     }),
 
   ];
-  const obj15 = { accessibilityLabel: "Cancel", variant: "secondary", icon: null, onPress: null };
-  obj15[2] = registerAsset;
-  obj15[3] = function onPress() {
+  const obj10 = {
+    accessibilityLabel: "Settings",
+    variant: "secondary",
+    icon: registerAssetDefault,
+    onPress() {
 
+    }
   };
-  items6[1] = callback(IconButton.IconButton, obj15);
+  const obj14 = {
+    text: "Search",
+    variant: "secondary",
+    grow: true,
+    onPress() {
+
+    }
+  };
+  items6[1] = callback(IconButton.IconButton, {
+    accessibilityLabel: "Cancel",
+    variant: "secondary",
+    icon: registerAssetDefault,
+    onPress() {
+
+    }
+  });
   obj13[1] = items6;
   items5[3] = callback2(ButtonGroup.ButtonGroup, obj13);
   items5[4] = callback(Text.Text, { variant: "text-sm/medium", color: "text-feedback-critical", children: "More than one text button should not be put in a horizontal group." });

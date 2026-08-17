@@ -1,155 +1,23 @@
 // discord_app/modules/user_settings/UserSettings.tsx
-import updateExistingSettings from "updateExistingSettings";
-import MAX_FAVORITES from "MAX_FAVORITES";
-import items from "items";
-import ME from "ME";
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
-import set from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import defineProtoSetting from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "defineProtoSetting";
-import set from "items";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { defineProperty } from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
-import { SettingsDefaultFeature } from "../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import { ChannelListLayoutTypes } from "../main_tabs_v2/ChannelListLayoutTypes.tsx";
-import { isFeatureAgeGated } from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import apply from "apply" /* 12 */;
+import initialize from "initialize" /* 589 */;
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+import create from "create" /* 1306 */;
+import defineProperty from "defineProperty" /* 1337 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
+import closure_2 from "updateExistingSettings" /* 4067 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import items from "items" /* 4068 */;
+import ME from "ME" /* 676 */;
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
+import set from "defineProtoSetting" /* 4070 */;
+import defineProtoSetting from "defineProtoSetting" /* 4070 */;
+import set from "set" /* 2 */;
 
-let ListDensityMode;
-let StatusTypes;
-let UserSettingsDelay;
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function explicitContentFromProto(arg0) {
-  let explicitContentFriendDm;
-  let explicitContentGuilds;
-  let explicitContentNonFriendDm;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
@@ -171,17 +39,12 @@ function explicitContentFromProto(arg0) {
 }
 function explicitContentToProto(explicitContentGuilds) {
   explicitContentGuilds = explicitContentGuilds.explicitContentGuilds;
-  const obj = { explicitContentGuilds, explicitContentFriendDm: null, explicitContentNonFriendDm: null };
-  const explicitContentFriendDm = explicitContentGuilds.explicitContentFriendDm;
-  obj[1] = explicitContentFriendDm;
-  const explicitContentNonFriendDm = explicitContentGuilds.explicitContentNonFriendDm;
-  obj[2] = explicitContentNonFriendDm;
+  const obj = { explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm };
+  explicitContentFriendDm = explicitContentGuilds.explicitContentFriendDm;
+  explicitContentNonFriendDm = explicitContentGuilds.explicitContentNonFriendDm;
   return obj;
 }
 function goreContentFromProto(arg0) {
-  let goreContentFriendDm;
-  let goreContentGuilds;
-  let goreContentNonFriendDm;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
@@ -203,11 +66,9 @@ function goreContentFromProto(arg0) {
 }
 function goreContentToProto(goreContentGuilds) {
   goreContentGuilds = goreContentGuilds.goreContentGuilds;
-  const obj = { goreContentGuilds, goreContentFriendDm: null, goreContentNonFriendDm: null };
-  const goreContentFriendDm = goreContentGuilds.goreContentFriendDm;
-  obj[1] = goreContentFriendDm;
-  const goreContentNonFriendDm = goreContentGuilds.goreContentNonFriendDm;
-  obj[2] = goreContentNonFriendDm;
+  const obj = { goreContentGuilds, goreContentFriendDm, goreContentNonFriendDm };
+  goreContentFriendDm = goreContentGuilds.goreContentFriendDm;
+  goreContentNonFriendDm = goreContentGuilds.goreContentNonFriendDm;
   return obj;
 }
 ({ UserSettingsDelay, ListDensityMode } = MAX_FAVORITES);
@@ -1062,11 +923,8 @@ const result3 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   const BoolValue = defineProperty.BoolValue;
   return BoolValue.create({ value });
 }), "text", "renderReactions");
-set = { comparator: require("shallowEqual") };
+set = { comparator: shallowEqualDefault };
 const result4 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSetting.defineProtoSetting("textAndImages", "defaultReactionEmoji", (disableDoubleTap) => {
-  let animated;
-  let emojiId;
-  let emojiName;
   let obj = disableDoubleTap;
   if (disableDoubleTap == null) {
     obj = {};
@@ -1099,10 +957,6 @@ const result4 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   obj[3] = flag;
   return obj;
 }, (arg0) => {
-  let animated;
-  let disableDoubleTap;
-  let emojiId;
-  let emojiName;
   const obj = { emojiId: null, emojiName: null, animated: null, disableDoubleTap: null };
   ({ emojiId, emojiName, animated, disableDoubleTap } = arg0);
   const UInt64Value = defineProperty.UInt64Value;
@@ -1182,7 +1036,7 @@ const defineProtoSettingResult74 = defineProtoSetting.defineProtoSetting("appear
   const StringValue = defineProperty.StringValue;
   return StringValue.create({ value });
 });
-set = { comparator: require("isFeatureAgeGated").isEqual };
+set = { comparator: require("apply").isEqual };
 const result6 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSetting.defineProtoSetting("appearance", "clientThemeSettings", (backgroundGradientPresetId) => {
   let value;
   if (backgroundGradientPresetId != null) {
@@ -1217,7 +1071,7 @@ const result6 = defineProtoSetting.wrapSettingWithSelectiveSyncing(defineProtoSe
   obj = { backgroundGradientPresetId: obj, customUserThemeSettings: null };
   let tmp4;
   if (null != backgroundGradientPresetId.customUserThemeSettings) {
-    const obj1 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
+    obj1 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
     obj1[0] = backgroundGradientPresetId.customUserThemeSettings.colors;
     obj1[1] = backgroundGradientPresetId.customUserThemeSettings.gradientColorStops;
     obj1[2] = backgroundGradientPresetId.customUserThemeSettings.gradientAngle;
@@ -1247,7 +1101,7 @@ const result7 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   }
   return value;
 }, () => {
-  const items = [updateExistingSettings];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => {
     const iter = override.getOverride("gifAutoPlay");
     let value;
@@ -1277,7 +1131,7 @@ const result8 = defineProtoSetting.wrapSettingWithOverride(defineProtoSetting.wr
   }
   return value;
 }, () => {
-  const items = [updateExistingSettings];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => {
     const iter = override.getOverride("animateEmoji");
     let value;
@@ -1308,7 +1162,7 @@ const result9 = defineProtoSetting.wrapSettingWithOverride(set.wrapSettingWithSe
   }
   return value;
 }, () => {
-  const items = [updateExistingSettings];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => {
     const iter = override.getOverride("animateStickers");
     let value;

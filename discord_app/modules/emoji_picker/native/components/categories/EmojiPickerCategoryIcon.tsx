@@ -1,22 +1,22 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx
-import { EmojiCategories } from "EmojiCategoryTypes";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { BicycleIcon } from "../../../../../design/components/Icon/native/redesign/generated/BicycleIcon.tsx";
-import { ClockIcon } from "../../../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import { FlagIcon } from "../../../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
-import { FoodIcon } from "../../../../../design/components/Icon/native/redesign/generated/FoodIcon.tsx";
-import { GameControllerIcon } from "../../../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import { HeartIcon } from "../../../../../design/components/Icon/native/redesign/generated/HeartIcon.tsx";
-import { NatureIcon } from "../../../../../design/components/Icon/native/redesign/generated/NatureIcon.tsx";
-import { NitroWheelIcon } from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import { ObjectIcon } from "../../../../../design/components/Icon/native/redesign/generated/ObjectIcon.tsx";
-import { ReactionIcon } from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
-import { StarIcon } from "../../../../../design/components/Icon/native/redesign/generated/StarIcon.tsx";
-import { TrophyIcon } from "../../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
+import ClockIcon from "ClockIcon" /* 4338 */;
+import ReactionIcon from "ReactionIcon" /* 7939 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
+import TrophyIcon from "TrophyIcon" /* 8010 */;
+import HeartIcon from "HeartIcon" /* 9183 */;
+import StarIcon from "StarIcon" /* 9410 */;
+import NatureIcon from "NatureIcon" /* 9426 */;
+import FoodIcon from "FoodIcon" /* 9428 */;
+import GameControllerIcon from "GameControllerIcon" /* 9430 */;
+import BicycleIcon from "BicycleIcon" /* 9431 */;
+import ObjectIcon from "ObjectIcon" /* 9433 */;
+import FlagIcon from "FlagIcon" /* 9435 */;
+import { EmojiCategories } from "EmojiCategoryTypes" /* 6731 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo(function EmojiPickerCategoryIcon(id) {
+require = arg1;
+const memoResult = importAllResult.memo(function EmojiPickerCategoryIcon(id) {
   id = id.id;
   if (EmojiCategories.TOP_GUILD_EMOJI === id) {
     return jsx(TrophyIcon.TrophyIcon, {});
@@ -47,6 +47,6 @@ const memoResult = require("noop").memo(function EmojiPickerCategoryIcon(id) {
     return jsx(NitroWheelIcon.NitroWheelIcon, {});
   }
 });
-const result = require("jsxProd").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoryIcon.tsx");
 
 export default memoResult;

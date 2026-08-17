@@ -1,13 +1,14 @@
 // discord_app/modules/chat/native/ChatUpdatesQueue.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
+import set2 from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const DCDChatBlockerManager = get_ActivityIndicator.NativeModules.DCDChatBlockerManager;
-const result = require("set").fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
+const result = set2.fileFinishedImporting("modules/chat/native/ChatUpdatesQueue.tsx");
 class ChatUpdatesQueue {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
-    NativeEventEmitter = obj;
+    closure_0 = obj;
     set = new Set();
     obj.blockers = set;
     obj.queue = [];
@@ -17,7 +18,7 @@ class ChatUpdatesQueue {
     };
     obj.getReactTag = global;
     obj.onFlushItem = require;
-    tmp3 = new NativeEventEmitter(DCDChatBlockerManager);
+    tmp3 = new closure_0(DCDChatBlockerManager);
     obj.eventEmitter = tmp3;
     eventEmitter = obj.eventEmitter;
     obj.addBlockerSubscription = eventEmitter.addListener("AddBlocker", (reactTag) => {

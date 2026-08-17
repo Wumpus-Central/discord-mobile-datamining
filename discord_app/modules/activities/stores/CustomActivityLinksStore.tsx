@@ -1,8 +1,10 @@
 // discord_app/modules/activities/stores/CustomActivityLinksStore.tsx
-import getAssetURL from "getAssetURL";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "getAssetURL" /* 12413 */;
 
 let closure_1 = {};
+const Store = initializeDefault.Store;
 class CustomActivityLinksStore extends Store {
 }
 CustomActivityLinksStore.prototype["getOne"] = function getOne(id, linkId) {
@@ -11,21 +13,19 @@ CustomActivityLinksStore.prototype["getOne"] = function getOne(id, linkId) {
   }
 };
 CustomActivityLinksStore.displayName = "CustomActivityLinksStore";
-const customActivityLinksStore = new CustomActivityLinksStore(require("dispatcher"), {
+const customActivityLinksStore = new CustomActivityLinksStore(dispatcherDefault, {
   CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let applicationId;
-    let link;
     ({ applicationId, link } = arg0);
     if (null == dependencyMap[applicationId]) {
       const _Object = Object;
       dependencyMap[applicationId] = Object.create(null);
     }
-    dependencyMap[applicationId][link.link_id] = new getAssetURL(link);
+    dependencyMap[applicationId][link.link_id] = new closure_0(link);
   },
   LOGOUT: function handleLogout() {
-    let closure_1 = {};
+    closure_1 = {};
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/stores/CustomActivityLinksStore.tsx");
 
 export default customActivityLinksStore;

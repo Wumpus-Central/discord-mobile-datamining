@@ -1,5 +1,6 @@
 // discord_app/modules/cache/deserializeChannels.tsx
-import _slicedToArray from "_slicedToArray";
+import fromStringAll from "fromString" /* 506 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
 function deserializeChannels(arg0) {
   const iter = arg0[Symbol.iterator]();
@@ -14,9 +15,9 @@ function deserializeChannels(arg0) {
         let tmp5 = tmp[key10012];
         let tmp6 = importAll;
         let tmp7 = dependencyMap;
-        let obj = importAll(506);
+        let obj = fromStringAll;
         tmp5.allow = obj.deserialize(tmp5.allow);
-        let obj2 = importAll(506);
+        let obj2 = fromStringAll;
         tmp5.deny = obj2.deserialize(tmp5.deny);
         continue;
       }
@@ -45,9 +46,9 @@ export const deserializeChannel = function deserializeChannel(permissionOverwrit
       let tmp3 = permissionOverwrites_[key10006];
       let tmp4 = importAll;
       let tmp5 = dependencyMap;
-      let obj = importAll(506);
+      let obj = fromStringAll;
       tmp3.allow = obj.deserialize(tmp3.allow);
-      let obj2 = importAll(506);
+      let obj2 = fromStringAll;
       tmp3.deny = obj2.deserialize(tmp3.deny);
       continue;
     }

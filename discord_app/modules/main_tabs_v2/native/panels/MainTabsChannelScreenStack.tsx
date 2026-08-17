@@ -1,48 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "createStandardNavigationFactories";
-import get_ActivityIndicator from "Suspender";
-import { MIDNIGHT_BORDER_WIDTH } from "MIN_HEADER_HEIGHT";
-import ME from "ME";
-import { ThemeTypes } from "sum";
-import jsxProd from "getBestActiveInput";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { MIDNIGHT_BORDER_WIDTH } from "MIN_HEADER_HEIGHT" /* 8493 */;
+import ME from "ME" /* 676 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
 const require = arg1;
 function getKey(index) {
   return String(index.index);
 }
 let c4 = importAllResult;
 ({ NativeModules: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
-({ AnalyticsObjectTypes: metroImportAll, AnalyticsObjects: c9, AnalyticsSections: c10 } = ME);
+({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: c9, AnalyticsSections: c10 } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles({ midnightContainerStyles: { marginTop: -MIDNIGHT_BORDER_WIDTH, marginLeft: -MIDNIGHT_BORDER_WIDTH } });
 let closure_15 = { code: "function MainTabsChannelScreenStackTsx1(){const{translateX}=this.__closure;return translateX.get()>0;}" };
 let closure_16 = { code: "function MainTabsChannelScreenStackTsx2(isVisibleBeneath,wasVisibleBeneath){const{highestFullyRenderedScreenIndex,index}=this.__closure;if(isVisibleBeneath===wasVisibleBeneath)return;if(isVisibleBeneath){if(highestFullyRenderedScreenIndex.get()>=index){highestFullyRenderedScreenIndex.set(index-1);}return;}if(highestFullyRenderedScreenIndex.get()<index){highestFullyRenderedScreenIndex.set(index);}}" };
 let closure_17 = { code: "function MainTabsChannelScreenStackTsx3(){const{enabled,highestFullyRenderedScreenIndex,index}=this.__closure;return enabled&&highestFullyRenderedScreenIndex.get()>index;}" };
 let closure_18 = importAllResult.memo(function FirstChannelScreen(cleanup) {
-  let channelId;
-  let containerWidth;
-  let focusChatPressableComponent;
-  let frame;
-  let freeze;
-  let guildId;
-  let index;
-  let isActive;
-  let isDragging;
-  let maxWidth;
-  let parentFreezeValue;
-  let showCreateThread;
-  let transitionState;
-  let translateX;
   ({ frame, index, isDragging, translateX, containerWidth, isActive, transitionState } = cleanup);
   index = transitionState;
   cleanup = cleanup.cleanup;
@@ -52,7 +30,7 @@ let closure_18 = importAllResult.memo(function FirstChannelScreen(cleanup) {
   const tmp = highestFullyRenderedScreenIndex;
   const tmp3 = highestFullyRenderedScreenIndex(translateX[11])();
   let obj = index(translateX[12]);
-  let obj1 = index(translateX[13]);
+  obj1 = index(translateX[13]);
   let enabled;
   const orientation = obj1.useOrientation();
   let obj2 = highestFullyRenderedScreenIndex(translateX[8]);
@@ -143,19 +121,6 @@ let closure_18 = importAllResult.memo(function FirstChannelScreen(cleanup) {
 let closure_19 = { code: "function MainTabsChannelScreenStackTsx4(){const{translateX}=this.__closure;return translateX.get()===0;}" };
 let closure_20 = { code: "function MainTabsChannelScreenStackTsx5(isFullyOpen,prev){const{index,mainTabsDisallowGesture}=this.__closure;if(isFullyOpen===prev)return;if(index!==1)return;mainTabsDisallowGesture.set(isFullyOpen);}" };
 let closure_21 = importAllResult.memo(function ChannelScreen(transitionState) {
-  let channelId;
-  let freeze;
-  let gesture;
-  let guildId;
-  let index;
-  let isActive;
-  let isDragging;
-  let maxWidth;
-  let movePanel;
-  let panelGestureContext;
-  let parentFreezeValue;
-  let showCreateThread;
-  let translateX;
   transitionState = transitionState.transitionState;
   index = transitionState;
   const cleanup = transitionState.cleanup;
@@ -164,16 +129,16 @@ let closure_21 = importAllResult.memo(function ChannelScreen(transitionState) {
   translateX = index;
   highestFullyRenderedScreenIndex = transitionState.highestFullyRenderedScreenIndex;
   let enabled;
-  let importAllResult;
+  importAllResult = undefined;
   translateX = undefined;
   let disallowGesture;
   let obj;
-  let closure_8;
+  closure_8 = undefined;
   ({ guildId, channelId, showCreateThread, freeze, parentFreezeValue } = transitionState);
   let tmp = highestFullyRenderedScreenIndex;
   const tmp3 = highestFullyRenderedScreenIndex(translateX[11])();
   obj = index(translateX[12]);
-  let obj1 = index(translateX[13]);
+  obj1 = index(translateX[13]);
   const orientation = obj1.useOrientation();
   let obj2 = index(translateX[19]);
   const navigation = obj2.useNavigation();
@@ -298,12 +263,9 @@ let closure_21 = importAllResult.memo(function ChannelScreen(transitionState) {
       prop = tmp4.midnightContainerStyles;
     }
   }
-  const obj3 = { style: items2, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  const obj3 = { style: items2, accessibilityElementsHidden: !isActive, importantForAccessibility: "no-hide-descendants", children: null };
   items2[1] = prop;
-  obj3[1] = !isActive;
-  obj3[2] = "no-hide-descendants";
-  obj4 = { freeze, children: null };
-  obj4[1] = closure_12(tmp(translateX[18]), { guildId, channelId, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index });
+  obj4 = { freeze, children: tmp18(tmp(tmp2[18]), { guildId, channelId, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index }) };
   obj3[3] = closure_12(index(translateX[17]).Freeze, obj4);
   obj2[1] = closure_12(highestFullyRenderedScreenIndex(translateX[16]), obj3);
   obj1[1] = closure_12(index(translateX[22]).MainTabsChannelScreenStackContext.Provider, obj2);
@@ -312,8 +274,6 @@ let closure_21 = importAllResult.memo(function ChannelScreen(transitionState) {
 let closure_23 = { code: "function MainTabsChannelScreenStackTsx6(){const{translateX,maxWidth}=this.__closure;return translateX.get()===maxWidth;}" };
 let closure_24 = { code: "function MainTabsChannelScreenStackTsx7(value,prev){const{runOnJS,setIsHidden}=this.__closure;if(value===prev)return;runOnJS(setIsHidden)(value);}" };
 const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(screens) {
-  let focusChatPressableComponent;
-  let shouldFreeze;
   screens = screens.screens;
   const screenStackActive = screens.screenStackActive;
   const translateX = screens.translateX;
@@ -323,15 +283,15 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
   ({ shouldFreeze, focusChatPressableComponent } = screens);
   const firstScreenWidth = screens.firstScreenWidth;
   const firstScreenFrame = screens.firstScreenFrame;
-  let c9;
+  closure_9 = undefined;
   let first;
   let sharedValue;
-  let closure_12;
-  let closure_13;
+  closure_12 = undefined;
+  closure_13 = undefined;
   let obj = maxWidth;
   let tmp3 = isDragging(maxWidth.useState(translateX.get() === maxWidth), 2);
-  c9 = tmp4;
-  let obj1 = screens(translateX[9]);
+  closure_9 = tmp4;
+  obj1 = screens(translateX[9]);
   class D {
     constructor() {
       return translateX.get() === maxWidth;
@@ -346,8 +306,8 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
         tmp = screens;
         tmp2 = translateX;
         obj = screens(translateX[9]);
-        tmp3 = c9;
-        tmp4 = obj.runOnJS(c9)(screens);
+        tmp3 = closure_9;
+        tmp4 = obj.runOnJS(closure_9)(screens);
       }
       return;
     }
@@ -404,8 +364,6 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
   const items3 = [screens.length, focusChatPressableComponent, isDragging, translateX, firstScreenWidth, firstScreenFrame, maxWidth, sharedValue, screenStackActive, highestFullyRenderedScreenIndex];
   let channelId;
   const callback = obj.useCallback((arg0, arg1, arg2, arg3) => {
-    let showCreateThread;
-    let showCreateThread2;
     const NumberResult = Number(arg0);
     if (0 === NumberResult) {
       let obj = { guildId: null, channelId: null, showCreateThread: null, focusChatPressableComponent: null, index: null, transitionState: null, cleanup: null, isDragging: null, translateX: null, isActive: null, freeze: null, containerWidth: null, frame: null, parentFreezeValue: null, maxWidth: null, highestFullyRenderedScreenIndex: null };
@@ -431,9 +389,9 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
       obj[13] = sharedValue;
       obj[14] = maxWidth;
       obj[15] = highestFullyRenderedScreenIndex;
-      let tmp20Result = closure_12(outer1_18, obj, arg0);
+      let tmp20Result = closure_12(closure_1_18, obj, arg0);
       const tmp6 = closure_12;
-      const tmp7 = outer1_18;
+      const tmp7 = closure_1_18;
     } else {
       obj = { guildId: null, channelId: null, showCreateThread: null, index: null, transitionState: null, parentFreezeValue: null, cleanup: null, isActive: null, freeze: null, highestFullyRenderedScreenIndex: null };
       ({ guildId: obj2[0], channelId: obj2[1], showCreateThread } = arg1);
@@ -448,9 +406,9 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
       obj[7] = NumberResult === screens.length - 1;
       obj[8] = NumberResult < screens.length - 2;
       obj[9] = highestFullyRenderedScreenIndex;
-      tmp20Result = closure_12(outer1_21, obj, arg0);
+      tmp20Result = closure_12(closure_1_21, obj, arg0);
       const tmp20 = closure_12;
-      const tmp21 = outer1_21;
+      const tmp21 = closure_1_21;
     }
     return tmp20Result;
   }, items3);
@@ -493,7 +451,7 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
           let obj = { type: "TRY_ACK", location: null, channelId: null };
           obj = { section: null, object: null, objectType: null };
           obj[0] = first.CHANNEL;
-          obj[1] = _undefined.ACK_CHANNEL_SELECT_SAME_CHANNEL_DISPATCH;
+          obj[1] = constants.ACK_CHANNEL_SELECT_SAME_CHANNEL_DISPATCH;
           obj[2] = firstScreenFrame.ACK_AUTOMATIC;
           obj[1] = obj;
           obj[2] = tmp.channelId;
@@ -537,6 +495,6 @@ const memoResult = importAllResult.memo(function MainTabsChannelScreenStack(scre
   return tmp21Result;
 });
 let obj = { marginTop: -MIDNIGHT_BORDER_WIDTH, marginLeft: -MIDNIGHT_BORDER_WIDTH };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx");
 
 export default memoResult;

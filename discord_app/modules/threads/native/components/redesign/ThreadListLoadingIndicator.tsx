@@ -1,14 +1,14 @@
 // discord_app/modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { result } from "../../../../../components_native/common/MessageLoadingSpinner.tsx";
+import resultDefault from "result" /* 12453 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 let closure_3 = createCacheKey.createStyles({ spinner: { width: 32, height: 32 } });
-const memoResult = require("noop").memo(() => {
+const memoResult = importAllResult.memo(() => {
   const tmp = callback();
-  return jsx(result, { style: callback().spinner, animate: true });
+  return jsx(resultDefault, { style: callback().spinner, animate: true });
 });
-const result = require("createCacheKey").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListLoadingIndicator.tsx");
 
 export default memoResult;

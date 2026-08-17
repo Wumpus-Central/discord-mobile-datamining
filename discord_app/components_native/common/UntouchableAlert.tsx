@@ -1,13 +1,13 @@
 // discord_app/components_native/common/UntouchableAlert.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PureComponent } from "noop";
-import importAllResult from "noop";
-import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
+import ActivityIndicator from "ActivityIndicator" /* 5446 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_4 = createCacheKey.createLegacyClassComponentStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" } });
+const PureComponent = importAllResult.PureComponent;
 class UntouchableAlert extends PureComponent {
 }
 const prototype = UntouchableAlert.prototype;
@@ -42,6 +42,6 @@ prototype["render"] = function render() {
   return tmp2;
 };
 UntouchableAlert.contextType = require("ManaContext").ThemeContext;
-const result = require("jsxProd").fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/UntouchableAlert.tsx");
 
 export default UntouchableAlert;

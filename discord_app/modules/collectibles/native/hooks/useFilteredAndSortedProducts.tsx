@@ -1,16 +1,16 @@
 // discord_app/modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CollectiblesMobileShopScreen as closure_5 } from "items";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 678 */;
 
 const require = arg1;
-const result = require("items").fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useFilteredAndSortedProducts.tsx");
 
 export const useFilteredAndSortedProducts = function useFilteredAndSortedProducts(products) {
   products = products.products;
   let _require = products;
   const maxProducts = products.maxProducts;
-  let importDefault = maxProducts;
+  importDefault = maxProducts;
   const bypassAndroidUnsyncedFilter = products.bypassAndroidUnsyncedFilter;
   let badBundleFilter;
   let androidUnsyncedFilter;
@@ -31,9 +31,9 @@ export const useFilteredAndSortedProducts = function useFilteredAndSortedProduct
   const items1 = [products.screen === callback.ORBS, canUseShopDiscountsResult];
   callback = badBundleFilter.useCallback((arr) => {
     let found = arr;
-    if (c0) {
+    if (closure_0) {
       found = arr.filter((product) => {
-        let obj = outer1_0(outer1_2[8]);
+        let obj = closure_1_0(closure_1_2[8]);
         obj = { product, hasShopDiscount: closure_1 };
         return null != obj.getProductOrbPrice(obj);
       });
@@ -48,7 +48,7 @@ export const useFilteredAndSortedProducts = function useFilteredAndSortedProduct
       fn = androidUnsyncedFilter;
     }
     const items = [fn, badBundleFilter, callback];
-    return items.reduce((arg0, arg1) => arg1(arg0), c0);
+    return items.reduce((arg0, arg1) => arg1(arg0), closure_0);
   }, items2);
   const obj4 = importDefault(bypassAndroidUnsyncedFilter[7]);
   purchasedProductsSort = _require(bypassAndroidUnsyncedFilter[5]).usePurchasedProductsSort(memo);

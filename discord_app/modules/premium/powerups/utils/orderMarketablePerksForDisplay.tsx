@@ -1,9 +1,9 @@
 // discord_app/modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx
-import _slicedToArray from "_slicedToArray";
-import { GAME_SERVER_POWERUP_SKU_ID as closure_3 } from "str11";
+import closure_2 from "_slicedToArray" /* 32 */;
+import { GAME_SERVER_POWERUP_SKU_ID as closure_3 } from "str11" /* 4263 */;
 
 const require = arg1;
-const result = require("VANITY_URL_POWERUP_SKU_ID").fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/orderMarketablePerksForDisplay.tsx");
 
 export default function orderMarketablePerksForDisplay(arg0) {
   const items = [...arg0];

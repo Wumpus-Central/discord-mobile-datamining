@@ -1,29 +1,26 @@
 // discord_app/modules/messages/native/DMMessageStickerGreeting.tsx
-import reinjectEphemerals from "reinjectEphemerals";
-import set from "set";
-import closure_5 from "set";
-import { View } from "getSystemLocale";
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import closure_8 from "reinjectEphemerals";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "MAX_MESSAGES_ALLOWED_FOR_GREETING";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "loadSavedGuildStickers" /* 6769 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
 import { getGradientColorByPercentage } from "../../client_themes/native/ClientThemesUtils.tsx";
 
-let c10;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles((arg0) => {
   let BACKGROUND_BASE_LOWER = arg0;
   if (arg0 == null) {
-    BACKGROUND_BASE_LOWER = Themes.colors.BACKGROUND_BASE_LOWER;
+    BACKGROUND_BASE_LOWER = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
   }
   let obj = { container: { backgroundColor: BACKGROUND_BASE_LOWER, alignItems: "center", paddingHorizontal: 16, paddingBottom: 16, paddingTop: 8 }, stickerContainer: { paddingBottom: 16 }, toastContainer: null, toastContent: null, gradient: null };
-  obj = { flexDirection: "row", backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", gap: 8, height: 48, paddingHorizontal: 16, borderRadius: Themes.radii.xxl };
+  obj = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, justifyContent: "center", alignItems: "center", gap: 8, height: 48, paddingHorizontal: 16, borderRadius: ThemesDefault.radii.xxl };
   obj[2] = obj;
   obj[3] = { lineHeight: 20 };
   obj[4] = { position: "absolute", right: 0, left: 0, top: 0, height: 30 };
@@ -32,16 +29,14 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
 let c14 = "749054660769218631";
 const END = require("getGradientColorByPercentage").GradientPercentage.END;
 let closure_16 = { code: "function DMMessageStickerGreetingTsx1(){const{styles,isRendered,hasInputText,hasMessages,HEIGHT_COMPACT,HEIGHT_FULL,withDelay,withTiming,STANDARD_EASING}=this.__closure;const gradientOverlayOffset=styles.gradient.height;const hasHeight=isRendered&&!hasInputText;const heightExpanded=(hasMessages?HEIGHT_COMPACT:HEIGHT_FULL)-1;const targetHeight=hasHeight?heightExpanded+gradientOverlayOffset:0;const targetMargin=hasHeight?-gradientOverlayOffset:0;function generateAnimationConfig(value){return withDelay(300,withTiming(value,{easing:STANDARD_EASING,duration:250}));}return{justifyContent:'flex-end',overflow:'hidden',marginTop:generateAnimationConfig(targetMargin),height:generateAnimationConfig(targetHeight)};}" };
-const result = require("noop").fileFinishedImporting("modules/messages/native/DMMessageStickerGreeting.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/DMMessageStickerGreeting.tsx");
 
 export default function DMMessageStickerGreeting(channel) {
-  let tmp17;
-  let tmp18;
   channel = channel.channel;
   let _require = channel;
   const hasInputText = channel.hasInputText;
   let first = hasInputText;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let callback;
   let React;
@@ -50,17 +45,17 @@ export default function DMMessageStickerGreeting(channel) {
   let obj = _getGradientColorByPercentage;
   let toastContent = callback3(obj.useGradientValue(END));
   dependencyMap = toastContent;
-  let obj1 = _initialize;
+  obj1 = _initialize;
   const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => {
-    const messages = outer1_8.getMessages(_undefined.id);
+    const messages = closure_1_8.getMessages(_undefined.id);
     return messages.filter((type) => type.type !== callback(table[19]).MessageTypes.FRIEND_REQUEST_ACCEPTED).length > 0;
   });
   first1 = stateFromStores;
   let obj2 = _initialize;
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_9];
   let tmp5 = first;
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => outer1_9.getUser(_undefined.getRecipientId()));
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_9.getUser(_undefined.getRecipientId()));
   let obj3 = first(4219);
   let name = obj3.useName(stateFromStores1);
   if (name == null) {
@@ -73,18 +68,18 @@ export default function DMMessageStickerGreeting(channel) {
   callback = showConvoStarterInDM;
   const TextResult = Text(11431);
   const tmp2 = END;
-  const items2 = [loadSavedGuildStickers];
+  const items2 = [closure_7];
   const items3 = [showConvoStarterInDM];
   const stateFromStores2 = Text(589).useStateFromStores(items2, () => {
     let stickerById = null;
-    if (set) {
-      stickerById = outer1_7.getStickerById(outer1_14);
+    if (closure_4) {
+      stickerById = closure_1_7.getStickerById(closure_1_14);
     }
     return stickerById;
   }, items3);
   const items4 = [showConvoStarterInDM];
   const effect = React.useEffect(() => {
-    if (set) {
+    if (closure_4) {
       const stickerPack = _undefined(lib[22]).fetchStickerPack("847199849233514549", true);
       const obj = _undefined(lib[22]);
     }
@@ -133,7 +128,7 @@ export default function DMMessageStickerGreeting(channel) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
+            closure_1 = tmp3;
             let showErrorToast = tmp7;
             showErrorToast = function showErrorToast(intl) {
               if (callback !== intl) {
@@ -146,21 +141,21 @@ export default function DMMessageStickerGreeting(channel) {
             tmp7 = c3;
             if (!c3) {
               v0(true);
-              if (null !== outer1_1) {
+              if (null !== closure_1_1) {
                 v0(false);
                 showErrorToast(tmp26);
                 c5 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 c3 = 1;
-                const obj1 = { channelId: null, source: "In-channel greet" };
-                obj1[0] = outer1_0.id;
-                outer1_0(outer1_2[15]).trackWaveCtaClicked(obj1);
-                const obj5 = outer1_0(outer1_2[15]);
+                obj1 = { channelId: null, source: "In-channel greet" };
+                obj1[0] = closure_1_0.id;
+                closure_1_0(closure_1_2[15]).trackWaveCtaClicked(obj1);
+                const obj5 = closure_1_0(closure_1_2[15]);
                 v0 = 2;
                 c5 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_1(outer1_2[16]).sendGreetMessage(outer1_0.id, outer1_14);
+                obj2[0] = closure_1_1(closure_1_2[16]).sendGreetMessage(closure_1_0.id, closure_1_14);
                 return obj2;
               }
             }
@@ -174,8 +169,8 @@ export default function DMMessageStickerGreeting(channel) {
               ok = 429 !== closure_1.status;
             }
             if (!ok) {
-              const intl = outer1_0(outer1_2[17]).intl;
-              showErrorToast(intl.string(outer1_0(outer1_2[17]).t.Whhv4w));
+              const intl = closure_1_0(closure_1_2[17]).intl;
+              showErrorToast(intl.string(closure_1_0(closure_1_2[17]).t.Whhv4w));
             }
           } else if (arg0 === 1) {
             c5 = 3;

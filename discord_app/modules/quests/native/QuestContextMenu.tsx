@@ -1,18 +1,18 @@
 // discord_app/modules/quests/native/QuestContextMenu.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importAllResult from "getQuestContentName";
-import initializeState from "initializeState";
-import { LinkingTypes } from "ME";
-import { jsx } from "module_14457";
-import { registerAsset } from "../../../../_runtime/09416_registerAsset.js";
-import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import IconButton from "IconButton" /* 8035 */;
+import registerAssetDefault from "registerAsset" /* 9416 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import importAllResult from "noop" /* 19 */;
+import closure_6 from "initializeState" /* 7453 */;
+import { LinkingTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function renderDefaultButton(ref) {
   const obj = { ref: ref.ref };
   const merged = Object.assign(callback(ref, closure_3));
-  obj.icon = registerAsset;
+  obj.icon = registerAssetDefault;
   obj.variant = "secondary";
   const intl = getSystemLocale.intl;
   obj.accessibilityLabel = intl.string(getSystemLocale.t.CAgr1w);
@@ -179,7 +179,7 @@ const memoResult = importAllResult.memo((children) => {
     items[HermesBuiltin.arraySpread(memo1, 5)] = {
       label: "Copy Quest ID",
       action() {
-        return outer1_0(outer1_2[27]).copy(id.id);
+        return closure_1_0(closure_1_2[27]).copy(id.id);
       }
     };
     return items;
@@ -196,7 +196,7 @@ const memoResult = importAllResult.memo((children) => {
     const obj = {
       label: "Show in Quest Bar",
       action() {
-        return callback(outer1_0(outer1_2[10]).QuestContent.QUEST_BAR_MOBILE);
+        return callback(closure_1_0(closure_1_2[10]).QuestContent.QUEST_BAR_MOBILE);
       },
       IconComponent: null
     };
@@ -256,6 +256,6 @@ const memoResult = importAllResult.memo((children) => {
   }, items11);
   return handleResetHasBeenSeenClick(quest(sourceQuestContent[33]).ContextMenu, { items, onOpen, triggerOnTap: true, children });
 });
-let result = require("initializeState").fileFinishedImporting("modules/quests/native/QuestContextMenu.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestContextMenu.tsx");
 
 export default memoResult;

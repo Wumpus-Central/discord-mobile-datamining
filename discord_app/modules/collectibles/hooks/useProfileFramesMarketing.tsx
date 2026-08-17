@@ -1,19 +1,16 @@
 // discord_app/modules/collectibles/hooks/useProfileFramesMarketing.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { apexExperiment } from "../experiments/CollectiblesProfileFramesEAMarketingExperiment.tsx";
-import { apexExperiment } from "../experiments/CollectiblesProfileFramesExperiment.tsx";
-import { apexExperiment } from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
-import { useCanPurchaseFrames } from "useCanPurchaseFrames.tsx";
+import initialize from "initialize" /* 589 */;
+import apexExperimentDefault from "apexExperiment" /* 8956 */;
+import useCanPurchaseFrames from "useCanPurchaseFrames" /* 9233 */;
+import apexExperiment from "apexExperiment" /* 9234 */;
+import apexExperimentDefault2 from "apexExperiment" /* 9234 */;
+import apexExperiment2 from "apexExperiment" /* 16164 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("apexExperiment").fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProfileFramesMarketing.tsx");
 
 export const deriveProfileFramesMarketing = function deriveProfileFramesMarketing(arg0) {
-  let canViewProfileFramesInCollectiblesShop;
-  let hasPaidTier2;
-  let isEarlyAccess;
-  let isFramesEAMarketingEnabled;
   ({ canViewProfileFramesInCollectiblesShop, isEarlyAccess, isFramesEAMarketingEnabled, hasPaidTier2 } = arg0);
   if (canViewProfileFramesInCollectiblesShop) {
     canViewProfileFramesInCollectiblesShop = !isEarlyAccess;
@@ -49,9 +46,9 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop(CollectiblesMobileAnnouncementActionSheet);
   let isProfileFramesEarlyAccessPhase = useCanPurchaseFrames.useIsProfileFramesEarlyAccessPhase(CollectiblesMobileAnnouncementActionSheet);
   const obj2 = useCanPurchaseFrames;
-  const isProfileFramesEAMarketingEnabled = apexExperiment.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
-  const obj3 = apexExperiment;
-  const items = [mergeGuildAvatar];
+  const isProfileFramesEAMarketingEnabled = apexExperiment2.useIsProfileFramesEAMarketingEnabled(CollectiblesMobileAnnouncementActionSheet);
+  const obj3 = apexExperiment2;
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => callback(table[1]).isUserPaidTier2(currentUser.getCurrentUser()));
   let tmp5 = canViewProfileFramesInCollectiblesShop;
   if (canViewProfileFramesInCollectiblesShop) {
@@ -84,11 +81,11 @@ export const useProfileFramesMarketing = function useProfileFramesMarketing(Coll
   return obj;
 };
 export const getProfileFramesMarketing = function getProfileFramesMarketing(location) {
-  let obj = apexExperiment;
+  let obj = apexExperimentDefault;
   obj = { location };
   let enableProfileFrames = obj.getConfig(obj).enableProfileFrames;
   obj = { location };
-  const bucket = apexExperiment.getConfig(obj).bucket;
+  const bucket = apexExperimentDefault2.getConfig(obj).bucket;
   let tmp2 = enableProfileFrames;
   if (enableProfileFrames) {
     tmp2 = bucket !== apexExperiment.ProfileFramesPurchaseBucket.CONTROL;
@@ -96,9 +93,9 @@ export const getProfileFramesMarketing = function getProfileFramesMarketing(loca
   if (enableProfileFrames) {
     enableProfileFrames = bucket === apexExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
-  const obj3 = apexExperiment;
-  const isProfileFramesEAMarketingEnabled = apexExperiment.getIsProfileFramesEAMarketingEnabled(location);
-  const obj5 = apexExperiment;
+  const obj3 = apexExperimentDefault2;
+  const isProfileFramesEAMarketingEnabled = apexExperiment2.getIsProfileFramesEAMarketingEnabled(location);
+  const obj5 = apexExperiment2;
   const isUserPaidTier2Result = useCanPurchaseFrames.isUserPaidTier2(currentUser.getCurrentUser());
   if (tmp2) {
     tmp2 = !enableProfileFrames;
@@ -111,7 +108,7 @@ export const getProfileFramesMarketing = function getProfileFramesMarketing(loca
     }
     tmp7 = tmp8;
   }
-  const obj1 = { isAnnouncementEligible: tmp7, isEarlyAccess: enableProfileFrames, showGiftingMarketing: tmp2, showEaPremiumMarketing: null, showEaNonPremiumMarketing: null };
+  obj1 = { isAnnouncementEligible: tmp7, isEarlyAccess: enableProfileFrames, showGiftingMarketing: tmp2, showEaPremiumMarketing: null, showEaNonPremiumMarketing: null };
   let tmp9 = enableProfileFrames;
   if (enableProfileFrames) {
     tmp9 = isProfileFramesEAMarketingEnabled;

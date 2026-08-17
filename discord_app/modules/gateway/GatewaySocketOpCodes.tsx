@@ -1,10 +1,11 @@
 // discord_app/modules/gateway/GatewaySocketOpCodes.tsx
-import initialize from "initialize";
-import { EventEmitter } from "EventEmitter";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import Opcode from "Opcode" /* 13193 */;
+import closure_3 from "initialize" /* 4565 */;
+import { EventEmitter } from "EventEmitter" /* 652 */;
 import { Opcode } from "GatewaySocketOpcode.tsx";
 
-const require = arg1;
+require = arg1;
 class GatewaySocketOpCodes extends EventEmitter {
 }
 const prototype = GatewaySocketOpCodes.prototype;
@@ -51,7 +52,7 @@ prototype["voiceStateUpdate"] = function voiceStateUpdate(guildId) {
   const obj = { guild_id: guildId, channel_id: channelId, self_mute: flag, self_deaf: flag2, self_video: flag3, flags: num };
   let result = null != channelId;
   if (result) {
-    result = initialize.shouldIncludePreferredRegion();
+    result = closure_3.shouldIncludePreferredRegion();
   }
   if (result) {
     obj.preferred_region = preferredRegion;
@@ -70,16 +71,10 @@ prototype["voiceServerPing"] = function voiceServerPing() {
   this.send(Opcode.Opcode.VOICE_SERVER_PING, null);
 };
 prototype["requestGuildMembers"] = function requestGuildMembers(guildIds, arg1) {
-  let limit;
-  let presences;
-  let query;
-  let userIds;
   ({ query, limit, userIds, presences } = arg1);
   this.send(Opcode.Opcode.REQUEST_GUILD_MEMBERS, { guild_id: guildIds, query, limit, user_ids: userIds, presences });
 };
 prototype["searchRecentMembers"] = function searchRecentMembers(guild_id) {
-  let continuationToken;
-  let query;
   ({ query, continuationToken } = arg1);
   const obj = { guild_id, query: null, continuation_token: null };
   if (query == null) {
@@ -95,10 +90,10 @@ prototype["searchRecentMembers"] = function searchRecentMembers(guild_id) {
 prototype["updateGuildSubscriptions"] = function updateGuildSubscriptions(subscriptions) {
   let self = this;
   self = this;
-  const importDefault = subscriptions;
-  const dependencyMap = {};
+  importDefault = subscriptions;
+  dependencyMap = {};
   const _require = 0;
-  let obj = DISCORD_EPOCH;
+  let obj = DISCORD_EPOCHDefault;
   const keys = obj.keys(subscriptions);
   const item = keys.forEach((arg0) => {
     const items = [arg0, subscriptions[arg0]];
@@ -142,9 +137,7 @@ prototype["streamSetPaused"] = function streamSetPaused(streamKey, paused) {
   this.send(Opcode.Opcode.STREAM_SET_PAUSED, { stream_key: streamKey, paused });
 };
 prototype["requestForumUnreads"] = function requestForumUnreads(guildId, channelId, threads) {
-  const obj = { guild_id: guildId, channel_id: channelId, threads: null };
-  obj[2] = threads.map((threadId) => ({ thread_id: threadId.threadId, ack_message_id: threadId.ackMessageId }));
-  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, obj);
+  this.send(Opcode.Opcode.REQUEST_FORUM_UNREADS, { guild_id: guildId, channel_id: channelId, threads: threads.map((threadId) => ({ thread_id: threadId.threadId, ack_message_id: threadId.ackMessageId })) });
 };
 prototype["requestSoundboardSounds"] = function requestSoundboardSounds(guildIds) {
   this.send(Opcode.Opcode.REQUEST_SOUNDBOARD_SOUNDS, { guild_ids: guildIds });
@@ -167,7 +160,7 @@ prototype["requestChannelMemberCount"] = function requestChannelMemberCount(guil
 prototype["remoteCommand"] = function remoteCommand(sessionId, payload) {
   this.send(Opcode.Opcode.REMOTE_COMMAND, { target_session_id: sessionId, payload });
 };
-let result = require("Opcode").fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
+let result = require("set").fileFinishedImporting("modules/gateway/GatewaySocketOpCodes.tsx");
 
 export default GatewaySocketOpCodes;
 export const Opcode = require("Opcode").Opcode;

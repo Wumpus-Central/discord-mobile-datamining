@@ -1,40 +1,29 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useGuildEventRecurrences } from "../../useGuildEventRecurrences.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useGuildEventRecurrencesDefault from "useGuildEventRecurrences" /* 8901 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { marginTop: 16 }, scrollView: null };
-createCacheKey = { marginTop: 8, marginBottom: 8, borderRadius: require("Themes").radii.sm, maxHeight: 140 };
+createCacheKey = { marginTop: 8, marginBottom: 8, borderRadius: ThemesDefault.radii.sm, maxHeight: 140 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildEventRecurrences.tsx");
 
 export default function GuildEventRecurrences(guildEventId) {
-  let c4;
-  let canViewMoreRecurrences;
-  let dependencyMap;
-  let guildId;
-  let hideViewMoreButton;
-  let importDefault;
-  let recurrenceRule;
-  let recurrenceStartTimes;
   guildEventId = guildEventId.guildEventId;
   ({ onRecurrencePress: importDefault, activeRecurrenceId: dependencyMap } = guildEventId);
   let ref;
   c4 = undefined;
   ({ guildId, recurrenceRule, hideViewMoreButton } = guildEventId);
   ref = ref.useRef(null);
-  const tmp2 = createCacheKey();
-  ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = useGuildEventRecurrences(guildEventId, guildId, recurrenceRule));
+  const tmp2 = callback2();
+  ({ recurrenceStartTimes, canViewMoreRecurrences, updateRecurrenceStartTimes: c4 } = useGuildEventRecurrencesDefault(guildEventId, guildId, recurrenceRule));
   let obj = { style: tmp2.container, children: null };
   obj = { variant: "heading-md/semibold", children: null };
   const intl = guildEventId(1236).intl;
@@ -44,10 +33,10 @@ export default function GuildEventRecurrences(guildEventId) {
     style: tmp2.scrollView,
     ref,
     children: recurrenceStartTimes.map((getTime) => {
-      let obj = outer1_1(outer1_2[8]);
+      let obj = closure_1_1(closure_1_2[8]);
       const fromTimestampResult = obj.fromTimestamp(getTime.getTime());
       obj = { recurrenceId: fromTimestampResult, guildEventId, onPress: closure_1, isActive: fromTimestampResult === closure_2 };
-      return outer1_6(outer1_1(outer1_2[9]), obj, fromTimestampResult);
+      return closure_1_6(closure_1_1(closure_1_2[9]), obj, fromTimestampResult);
     })
   };
   items[1] = callback(closure_5, obj);
@@ -55,7 +44,7 @@ export default function GuildEventRecurrences(guildEventId) {
     canViewMoreRecurrences = !hideViewMoreButton;
   }
   if (canViewMoreRecurrences) {
-    const obj1 = { text: null, onPress: null, size: "sm" };
+    obj1 = { text: null, onPress: null, size: "sm" };
     const intl2 = tmp8(1236).intl;
     obj1[0] = intl2.string(tmp8(1236).t["8O7Hpy"]);
     obj1[1] = function onPress(stopPropagation) {

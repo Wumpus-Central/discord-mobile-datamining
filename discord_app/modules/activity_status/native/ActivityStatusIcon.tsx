@@ -1,14 +1,13 @@
 // discord_app/modules/activity_status/native/ActivityStatusIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+noopAll;
 let closure_1 = createCacheKey.createStyles({ icon: { flexShrink: 0 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusIcon.tsx");
 
 export default function ActivityStatusIcon(arg0) {
-  let icon;
-  let style;
   ({ icon, style } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const obj = { size: "xxs", style: null, color: "status-positive" };

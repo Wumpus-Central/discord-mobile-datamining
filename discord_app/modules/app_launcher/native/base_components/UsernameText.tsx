@@ -1,19 +1,15 @@
 // discord_app/modules/app_launcher/native/base_components/UsernameText.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getNickname } from "../../../../utils/NicknameUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import getNickname from "getNickname" /* 4796 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsxs: obj1, Fragment: c3, jsx: c4 } = jsxProd);
-const result = require("getNickname").fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/UsernameText.tsx");
 
 export default function UsernameText(color) {
-  let user;
-  let variant;
   ({ user, variant } = color);
   if (variant === undefined) {
     variant = "text-md/medium";
@@ -23,7 +19,7 @@ export default function UsernameText(color) {
     str = "text-default";
   }
   let obj = { variant, color: str };
-  let obj1 = getNickname;
+  obj1 = getNickname;
   const name = obj1.getName(color.guildId, null, user);
   if (user.hasUniqueUsername()) {
     str = user.toString();

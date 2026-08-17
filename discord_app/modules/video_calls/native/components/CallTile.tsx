@@ -1,38 +1,32 @@
 // discord_app/modules/video_calls/native/components/CallTile.tsx
-import importAllResult from "StreamPreviewContainer";
-import get_ActivityIndicator from "UserTile";
-import reset from "reset";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import VoiceChatDrawerState from "VoiceChatDrawerState";
-import ParticipantTypes from "ParticipantTypes";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/09839_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09885_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12619_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12620_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12621_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import registerAssetDefault from "registerAsset" /* 9839 */;
+import registerAssetDefault2 from "registerAsset" /* 9885 */;
+import StreamPreviewContainerDefault from "StreamPreviewContainer" /* 12615 */;
+import registerAssetDefault3 from "registerAsset" /* 12619 */;
+import registerAssetDefault4 from "registerAsset" /* 12620 */;
+import registerAssetDefault5 from "registerAsset" /* 12621 */;
+import ParticipantTitleDefault from "ParticipantTitle" /* 12622 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "reset" /* 4652 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
+import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class StreamPreviewTile {
   constructor(arg0) {
     participant = global.participant;
     obj = { style: null, children: null };
     items = [, ];
-    items[0] = jsxs().streamPreview;
+    items[0] = closure_16().streamPreview;
     items[1] = global.style;
     obj[0] = items;
     obj = {
@@ -51,17 +45,17 @@ class StreamPreviewTile {
 function ParticipantIcon(participant) {
   participant = participant.participant;
   if (participant.type === constants.STREAM) {
-    let tmp3 = registerAsset;
+    let tmp3 = registerAssetDefault3;
   } else if (participant.type === tmp2.USER) {
     const voicePlatform = participant.voicePlatform;
     if (constants2.MOBILE === voicePlatform) {
-      tmp3 = registerAsset;
+      tmp3 = registerAssetDefault4;
     } else if (tmp19.XBOX === voicePlatform) {
-      tmp3 = registerAsset;
+      tmp3 = registerAssetDefault;
     } else if (tmp19.PLAYSTATION === voicePlatform) {
-      tmp3 = registerAsset;
+      tmp3 = registerAssetDefault2;
     } else if (tmp19.QUEST === voicePlatform) {
-      tmp3 = registerAsset;
+      tmp3 = registerAssetDefault5;
     }
   }
   let tmp14 = null;
@@ -69,7 +63,7 @@ function ParticipantIcon(participant) {
     const obj = { source: null, size: null, color: null, style: null };
     obj[0] = tmp3;
     obj[1] = Button.Icon.Sizes.REFRESH_SMALL_16;
-    obj[2] = Themes.unsafe_rawColors.WHITE;
+    obj[2] = ThemesDefault.unsafe_rawColors.WHITE;
     obj[3] = tmp.titleIcon;
     tmp14 = callback(Button.Icon, obj);
   }
@@ -80,18 +74,18 @@ class TileOverlay {
     ({ participant, isActiveStream } = global);
     reveal = undefined;
     ({ channel, hasLeftSafeArea, hasRightSafeArea, hasBottomSafeArea, hasTopSafeArea } = global);
-    tmp = jsxs();
+    tmp = closure_16();
     tmp2 = closure_1;
     tmp3 = closure_2;
     tmp4 = require("useSafeAreaInsets")();
     ({ bottom, left, top, right } = tmp4);
     tmp5 = reveal;
-    reveal = defineProperty.useContext(require("useRevealProviderValue").RevealContext).reveal;
+    reveal = closure_3.useContext(require("useRevealProviderValue").RevealContext).reveal;
     obj = require("module_4115");
     class T {
       constructor() {
         tmp = reveal;
-        tmp2 = outer1_2;
+        tmp2 = closure_1_2;
         obj = require("CONFIG_NEVER_ANIMATE_TIMING");
         num = 0;
         if (reveal) {
@@ -106,7 +100,7 @@ class TileOverlay {
     obj = { withTiming: require("CONFIG_NEVER_ANIMATE_TIMING").withTiming, reveal, STANDARD_EASING: require("Button").STANDARD_EASING };
     T.__closure = obj;
     T.__workletHash = 15640123774063;
-    T.__initData = memo;
+    T.__initData = closure_19;
     num = 0;
     animatedStyle = obj.useAnimatedStyle(T);
     if (hasBottomSafeArea) {
@@ -158,31 +152,25 @@ class TileOverlay {
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ resetFocus: metroImportAll, toggleFocus: c9 } = VoiceChatDrawerState);
+({ resetFocus: closure_8, toggleFocus: c9 } = VoiceChatDrawerState);
 ({ ParticipantTypes: c10, isStreamParticipant: unpackModuleId, VoicePlatforms: closure_12 } = ParticipantTypes);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 let obj = { liveContainer: { position: "absolute", top: 8, right: 8 }, titleIcon: { marginRight: 6 }, usernameContainer: null, usernamePosition: null, streamPreview: null, screenshareContainer: null, stageStreamContainer: null };
 obj = { flexDirection: "row", alignItems: "center", alignSelf: "flex-start", backgroundColor: null, borderRadius: null, paddingHorizontal: 8, paddingVertical: 4 };
-obj[3] = hexToRgba.hexOpacityToRgba(require("Themes").unsafe_rawColors.PRIMARY_700, 0.5);
-obj[4] = require("Themes").radii.sm;
+obj[3] = hexToRgba.hexOpacityToRgba(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
+obj[4] = ThemesDefault.radii.sm;
 obj[2] = obj;
-createCacheKey = { overflow: "hidden", position: "absolute", bottom: 8, left: 8, right: 40, borderRadius: require("Themes").radii.sm };
+createCacheKey = { overflow: "hidden", position: "absolute", bottom: 8, left: 8, right: 40, borderRadius: ThemesDefault.radii.sm };
 obj[3] = createCacheKey;
-obj[4] = { flex: 1, width: "100%", backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_600 };
-let obj2 = { flex: 1, width: "100%", backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_600 };
-obj[5] = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: require("Themes").colors.BLACK };
-hexToRgba = { backgroundColor: require("Themes").colors.BLACK };
+obj[4] = { flex: 1, width: "100%", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
+let obj2 = { flex: 1, width: "100%", backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_600 };
+obj[5] = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
+hexToRgba = { backgroundColor: ThemesDefault.colors.BLACK };
 obj[6] = hexToRgba;
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_19 = { code: "function CallTileTsx1(){const{withTiming,reveal,STANDARD_EASING}=this.__closure;return{opacity:withTiming(reveal?1:0,{easing:STANDARD_EASING,duration:250})};}" };
-let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: require("Themes").colors.BLACK };
+let obj3 = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 const memoResult = importAllResult.memo((participant) => {
-  let avatarSize;
-  let contentStyle;
-  let hasLeftSafeArea;
-  let hasNotch;
-  let hasTopSafeArea;
-  let shrinkStreamEmptyState;
   participant = participant.participant;
   const channel = participant.channel;
   const hasRightSafeArea = participant.hasRightSafeArea;
@@ -204,12 +192,12 @@ const memoResult = importAllResult.memo((participant) => {
   const items = [right];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let streamForUser = null;
-    if (outer1_11(participant)) {
+    if (closure_1_11(participant)) {
       streamForUser = right.getStreamForUser(tmp2.user.id, tmp2.stream.guildId);
     }
     const obj = { stream: streamForUser, activeStream: null };
     let activeStreamForUser = null;
-    if (outer1_11(participant)) {
+    if (closure_1_11(participant)) {
       activeStreamForUser = right.getActiveStreamForUser(tmp2.user.id, tmp2.stream.guildId);
     }
     obj[1] = activeStreamForUser;
@@ -218,7 +206,7 @@ const memoResult = importAllResult.memo((participant) => {
   const activeStream = stateFromStoresObject.activeStream;
   const items1 = [channel.id, participant.id];
   const callback = hasBottomSafeArea.useCallback(() => {
-    outer1_8();
+    closure_1_8();
     participant = channel(hasRightSafeArea[13]).selectParticipant(channel.id, participant.id);
   }, items1);
   const items2 = [channel.id, analyticsLocations];
@@ -239,8 +227,8 @@ const memoResult = importAllResult.memo((participant) => {
     obj[1] = num2;
     return obj;
   }, items3);
-  let obj1 = participant(hasRightSafeArea[12]);
-  const items4 = [mergeGuildAvatar];
+  obj1 = participant(hasRightSafeArea[12]);
+  const items4 = [closure_7];
   const stateFromStores = obj1.useStateFromStores(items4, () => currentUser.getCurrentUser());
   const type = participant.type;
   if (constants.HIDDEN_STREAM === type) {
@@ -329,7 +317,7 @@ const memoResult = importAllResult.memo((participant) => {
   const children = [tmp10, tmp27];
   return callback2(closure_14, { children });
 });
-const result = require("reset").fileFinishedImporting("modules/video_calls/native/components/CallTile.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/CallTile.tsx");
 
 export default memoResult;
 export { StreamPreviewTile };

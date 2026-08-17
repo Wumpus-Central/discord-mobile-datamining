@@ -1,30 +1,27 @@
 // discord_app/modules/video_calls/native/components/ChannelVoiceChat.tsx
-import importAllResult from "registerAsset";
-import { View } from "getSystemLocale";
-import { useIsVoiceChatFocused } from "VoiceChatDrawerState";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { useIsVoiceChatFocused } from "VoiceChatDrawerState" /* 8669 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { chat: null, chatHeaderSpacer: null, chatHeader: null, chatHeaderBackIconContainer: null, chatHeaderTitleContainer: null, safeAreaTop: null };
-obj = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignSelf: "stretch" };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignSelf: "stretch" };
 obj[0] = obj;
-createCacheKey = { height: 44, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { height: 44, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = createCacheKey;
-obj[2] = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
+obj[2] = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
 obj[3] = { width: 32, height: 32, alignItems: "flex-start", justifyContent: "center" };
 obj[4] = { alignSelf: "stretch", flex: 1, justifyContent: "center", marginStart: 16 };
-let obj2 = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
-obj[5] = { alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+let obj2 = { flexDirection: "row", alignSelf: "stretch", height: 44, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "flex-start", position: "absolute", left: 0, right: 0, paddingHorizontal: 16 };
+obj[5] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+let obj3 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo((channel) => {
-  let left;
-  let right;
   channel = channel.channel;
   const id = channel.id;
   const guild_id = channel.guild_id;
@@ -37,14 +34,14 @@ const memoResult = importAllResult.memo((channel) => {
   let obj = importAllResult;
   const items = [id, guild_id];
   const effect = importAllResult.useEffect(() => {
-    let obj = guild_id(outer1_2[6]);
+    let obj = guild_id(closure_1_2[6]);
     obj = { guildId: guild_id, channelId: id };
     const messages = obj.fetchMessages(obj);
   }, items);
   const tmp6 = guild_id(1629)();
   const top = tmp6.top;
   ({ left, right } = tmp6);
-  let obj1 = id(10010);
+  obj1 = id(10010);
   const voiceChatNavigationContext = obj1.useVoiceChatNavigationContext();
   let openVoice;
   if (voiceChatNavigationContext != null) {
@@ -118,12 +115,10 @@ const memoResult = importAllResult.memo((channel) => {
   const intl = tmp7(1236).intl;
   obj6[2] = intl.string(id(1236).t["13/7kX"]);
   obj6[3] = tmp.chatHeaderBackIconContainer;
-  const obj7 = { source: null, size: null };
-  obj7[0] = guild_id(10776);
-  obj7[1] = id(1297).Icon.Sizes.MEDIUM;
-  obj6[4] = callback(id(1297).Icon, obj7);
-  const items7 = [callback(id(5433).PressableOpacity, obj6), ];
   const tmp12 = guild_id(4310)();
+  obj6[4] = callback(id(1297).Icon, { source: guild_id(10776), size: id(1297).Icon.Sizes.MEDIUM });
+  const items7 = [callback(id(5433).PressableOpacity, obj6), ];
+  const obj7 = { source: guild_id(10776), size: id(1297).Icon.Sizes.MEDIUM };
   items7[1] = callback(View, { style: tmp.chatHeaderTitleContainer, children: callback(id(11949).ChannelTitle, { guildId: guild_id, channelId: id }) });
   obj5[1] = items7;
   items3[4] = closure_7(View, obj5);
@@ -132,6 +127,6 @@ const memoResult = importAllResult.memo((channel) => {
   obj[3] = items2;
   return closure_7(View, obj);
 });
-const result = require("VoiceChatDrawerState").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChat.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelVoiceChat.tsx");
 
 export default memoResult;

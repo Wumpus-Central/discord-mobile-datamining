@@ -1,53 +1,38 @@
 // discord_app/modules/forums/native/ForumPost.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { useForumChannelStore } from "set";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
+import ForumPostGridHeaderDefault from "ForumPostGridHeader" /* 11178 */;
+import GIFIconDefault from "GIFIcon" /* 11182 */;
+import ForumPostGridFooterDefault from "ForumPostGridFooter" /* 11193 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import { useForumChannelStore } from "set" /* 11177 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { GIFIcon } from "posts/grid/ForumPostGridBody.tsx";
-import { ForumPostGridFooter } from "posts/grid/ForumPostGridFooter.tsx";
-import { ForumPostGridHeader } from "posts/grid/ForumPostGridHeader.tsx";
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function ForumPostGrid(arg0) {
-  let firstMessage;
-  let hasUnreads;
-  let isNew;
-  let media;
-  let parentChannel;
-  let thread;
   ({ hasUnreads, thread } = arg0);
   const obj = { children: null };
   ({ firstMessage, isNew, media, parentChannel } = arg0);
-  const items = [callback(ForumPostGridHeader, { thread, hasUnreads, isNew }), callback(GIFIcon, { thread, hasUnreads, media }), callback(ForumPostGridFooter, { thread, firstMessage, hasUnreads, parentChannel })];
+  const items = [callback(ForumPostGridHeaderDefault, { thread, hasUnreads, isNew }), callback(GIFIconDefault, { thread, hasUnreads, media }), callback(ForumPostGridFooterDefault, { thread, firstMessage, hasUnreads, parentChannel })];
   obj[0] = items;
   return callback2(closure_7, obj);
 }
 function ConnectedForumPost(arg0) {
-  let content;
-  let hasSpoilerEmbeds;
-  let hasUnreads;
-  let isNew;
-  let require;
-  let style;
   ({ threadId: require, style } = arg0);
   let parent_id;
   let firstMessage;
   let ForumPostPressableContainer = require;
   let tmp = firstMessage;
   let obj = require(firstMessage[8]);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getChannel(closure_0));
+  const items = [closure_3];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(closure_0));
   let tmp3 = parent_id;
   parent_id(firstMessage[9])(null != stateFromStores, "[Forum Post] The thread should not be null here. A store must have missed an update.");
   parent_id = stateFromStores.parent_id;
-  let obj1 = require(firstMessage[8]);
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_3.getChannel(parent_id));
+  obj1 = require(firstMessage[8]);
+  const items1 = [closure_3];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_3.getChannel(parent_id));
   let obj2 = require(firstMessage[10]);
   const firstForumPostMessage = obj2.useFirstForumPostMessage(stateFromStores);
   firstMessage = firstForumPostMessage.firstMessage;
@@ -62,16 +47,16 @@ function ConnectedForumPost(arg0) {
   const obj6 = require(firstMessage[14]);
   const firstMediaIsEmbed = require(firstMessage[14]).useFirstMediaIsEmbed(firstMessage, hasSpoilerEmbeds);
   const obj7 = require(firstMessage[14]);
-  const items2 = [markAllUserIdListsStale];
+  const items2 = [closure_4];
   const stateFromStoresObject = require(firstMessage[8]).useStateFromStoresObject(items2, () => {
     let isBlockedForMessageResult = null != firstMessage;
     if (isBlockedForMessageResult) {
-      isBlockedForMessageResult = outer1_4.isBlockedForMessage(tmp);
+      isBlockedForMessageResult = closure_1_4.isBlockedForMessage(tmp);
     }
     const obj = { isBlocked: isBlockedForMessageResult, isIgnored: null };
     let isIgnoredForMessageResult = null != tmp;
     if (isIgnoredForMessageResult) {
-      isIgnoredForMessageResult = outer1_4.isIgnoredForMessage(tmp);
+      isIgnoredForMessageResult = closure_1_4.isIgnoredForMessage(tmp);
     }
     obj[1] = isIgnoredForMessageResult;
     return obj;
@@ -137,37 +122,33 @@ function ConnectedForumPost(arg0) {
     return callback(tmp3(tmp[15]), {});
   }
 }
-({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
-const memoResult = require("noop").memo((arg0) => {
+({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
+const memoResult = importAllResult.memo((arg0) => {
   const _require = arg0;
   let obj = _initialize;
-  const items = [ensureGuildLoaded];
+  const items = [closure_3];
   let tmp = null;
-  if (null != obj.useStateFromStores(items, () => outer1_3.getChannel(threadId.threadId))) {
+  if (null != obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId.threadId))) {
     obj = {};
     const merged = Object.assign(arg0);
     tmp = callback(ConnectedForumPost, obj);
   }
   return tmp;
 });
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/forums/native/ForumPost.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/ForumPost.tsx");
 
 export default memoResult;
 export const ForumPostListDisabled = function ForumPostListDisabled(threadId) {
-  let firstMessage;
-  let loaded;
-  let localDeviceMedia;
-  let style;
   threadId = threadId.threadId;
   let stateFromStores;
   ({ style, localDeviceMedia } = threadId);
   let obj = threadId(589);
-  const items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_3.getChannel(threadId));
+  const items = [closure_3];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getChannel(threadId));
   let tmp5 = null;
   stateFromStores(38)(null != stateFromStores, "[Forum Post] The thread should not be null here. A store must have missed an update.");
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores1 = threadId(589).useStateFromStores(items1, () => outer1_3.getChannel(stateFromStores.parent_id));
+  const items1 = [closure_3];
+  const stateFromStores1 = threadId(589).useStateFromStores(items1, () => closure_1_3.getChannel(stateFromStores.parent_id));
   const obj2 = threadId(589);
   const tmp = threadId;
   const tmp4 = stateFromStores;

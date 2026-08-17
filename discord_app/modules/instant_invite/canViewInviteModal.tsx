@@ -1,7 +1,9 @@
 // discord_app/modules/instant_invite/canViewInviteModal.tsx
-import { Permissions } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
+const Permissions = ME.Permissions;
+const result = set.fileFinishedImporting("modules/instant_invite/canViewInviteModal.tsx");
 
 export const canViewInviteModal = function canViewInviteModal(closure_6, guild, closure_0, stageInstanceByChannel) {
   let tmp = closure_0;

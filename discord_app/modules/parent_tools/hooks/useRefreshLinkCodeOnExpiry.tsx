@@ -1,23 +1,23 @@
 // discord_app/modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx
-import noop from "noop";
-import { set } from "../../../hooks/useStableCallback.tsx";
+import setDefault from "set" /* 8601 */;
+import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useRefreshLinkCodeOnExpiry.tsx");
 
 export default function useRefreshLinkCodeOnExpiry(arg0, arg1) {
-  const importDefault = arg0;
-  const tmp = set(arg1);
-  const dependencyMap = tmp;
+  importDefault = arg0;
+  const tmp = setDefault(arg1);
+  dependencyMap = tmp;
   const items = [arg0, tmp];
   const effect = React.useEffect(() => {
     if (null != timeout) {
       const _Date = Date;
       const diff = tmp - Date.now();
       if (diff <= 0) {
-        tmp();
+        callback();
       } else {
         const _setTimeout = setTimeout;
-        timeout = setTimeout(tmp, diff);
+        timeout = setTimeout(callback, diff);
         return () => clearTimeout(closure_0);
       }
     }

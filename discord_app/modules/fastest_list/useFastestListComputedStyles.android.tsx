@@ -1,6 +1,6 @@
 // discord_app/modules/fastest_list/useFastestListComputedStyles.android.tsx
-import noop from "noop";
-import { StyleSheet } from "get ActivityIndicator";
+import closure_0 from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
 
 const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListComputedStyles.android.tsx");
 
@@ -18,7 +18,7 @@ export default function useFastestListComputedStyles(style) {
     } else {
       obj = { flex: 1 };
     }
-    const flattenResult = outer1_1.flatten(obj);
+    const flattenResult = closure_1_1.flatten(obj);
     let num;
     if (flattenResult != null) {
       num = flattenResult.marginStart;
@@ -143,7 +143,7 @@ export default function useFastestListComputedStyles(style) {
           }
         }
         const _Error = Error;
-        const error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
+        error = new Error("FastestList: paddingStart and paddingEnd must be numbers.");
         throw error;
       }
     }

@@ -1,12 +1,12 @@
 // discord_app/modules/media_engine/DeviceFrecencyStore.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import DesktopSources from "DesktopSources";
-import { PersistedStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let c5;
-let closure_6;
 const DeviceTypes = DesktopSources.DeviceTypes;
 ({ MediaEngineContextTypes: c5, SpeakingFlags: closure_6 } = DesktopSources);
 let closure_7 = { inputDeviceFrecency: DeviceTypes.AUDIO_INPUT, outputDeviceFrecency: DeviceTypes.AUDIO_OUTPUT, videoDeviceFrecency: DeviceTypes.VIDEO_INPUT };
@@ -32,17 +32,18 @@ const stopWatch2 = new require("sleep").StopWatch();
 obj[DeviceTypes.VIDEO_INPUT] = stopWatch2;
 let closure_9 = { [DeviceTypes.AUDIO_INPUT]: {}, [DeviceTypes.AUDIO_OUTPUT]: {}, [DeviceTypes.VIDEO_INPUT]: {} };
 obj = {};
-obj[DeviceTypes.AUDIO_INPUT] = new require("DEFAULT_FRECENCY")(obj);
-const tmp6 = new require("DEFAULT_FRECENCY")(obj);
-obj[DeviceTypes.AUDIO_OUTPUT] = new require("DEFAULT_FRECENCY")(obj);
-const tmp7 = new require("DEFAULT_FRECENCY")(obj);
-obj[DeviceTypes.VIDEO_INPUT] = new require("DEFAULT_FRECENCY")(obj);
+obj[DeviceTypes.AUDIO_INPUT] = new DEFAULT_FRECENCYDefault(obj);
+const tmp6 = new DEFAULT_FRECENCYDefault(obj);
+obj[DeviceTypes.AUDIO_OUTPUT] = new DEFAULT_FRECENCYDefault(obj);
+const tmp7 = new DEFAULT_FRECENCYDefault(obj);
+obj[DeviceTypes.VIDEO_INPUT] = new DEFAULT_FRECENCYDefault(obj);
+const PersistedStore = initializeDefault.PersistedStore;
 class DeviceFrecencyStore extends PersistedStore {
 }
 const prototype = DeviceFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let closure_0 = arg0;
-  this.waitFor(_detectH265HardwareDecode, mergeGuildAvatar);
+  closure_0 = arg0;
+  this.waitFor(closure_2, closure_3);
   const items = [, , ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
   const item = items.forEach((arg0) => {
@@ -51,10 +52,10 @@ prototype["initialize"] = function initialize(arg0) {
       tmp2 = tmp[arg0];
     }
     if (null != tmp2) {
-      outer1_10[arg0].overwriteHistory(tmp[arg0]);
-      const obj = outer1_10[arg0];
+      closure_1_10[arg0].overwriteHistory(tmp[arg0]);
+      obj = closure_1_10[arg0];
     }
-    outer1_8[arg0].reset();
+    closure_1_8[arg0].reset();
   });
 };
 prototype["reset"] = function reset() {
@@ -93,7 +94,7 @@ prototype["stopSampling"] = function stopSampling(AUDIO_OUTPUT, oldId) {
         return getInputDeviceId.getInputDeviceId();
       };
       obj[DeviceTypes.AUDIO_INPUT] = obj;
-      const obj1 = { getCurrentDeviceId: null };
+      obj1 = { getCurrentDeviceId: null };
       obj1[0] = function getCurrentDeviceId(getOutputDeviceId) {
         return getOutputDeviceId.getOutputDeviceId();
       };
@@ -103,7 +104,7 @@ prototype["stopSampling"] = function stopSampling(AUDIO_OUTPUT, oldId) {
         return getVideoDeviceId.getVideoDeviceId();
       };
       obj[DeviceTypes.VIDEO_INPUT] = obj2;
-      currentDeviceId = obj[AUDIO_OUTPUT].getCurrentDeviceId(_detectH265HardwareDecode);
+      currentDeviceId = obj[AUDIO_OUTPUT].getCurrentDeviceId(closure_2);
       const obj7 = obj[AUDIO_OUTPUT];
     }
     const self = this;
@@ -120,7 +121,7 @@ prototype["getDeviceIdsSortedByFrecency"] = function getDeviceIdsSortedByFrecenc
 };
 prototype["getUsageStats"] = function getUsageStats() {
   const self = this;
-  let obj = { [closure_4.AUDIO_INPUT]: [], [closure_4.AUDIO_OUTPUT]: [], [closure_4.VIDEO_INPUT]: [] };
+  obj = { [closure_4.AUDIO_INPUT]: [], [closure_4.AUDIO_OUTPUT]: [], [closure_4.VIDEO_INPUT]: [] };
   const items = [, ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1] } = DeviceTypes);
   const item = items.forEach((AUDIO_OUTPUT) => {
@@ -128,26 +129,22 @@ prototype["getUsageStats"] = function getUsageStats() {
       obj.stopSampling(AUDIO_OUTPUT);
       obj.startSampling(AUDIO_OUTPUT);
     }
-    self[AUDIO_OUTPUT] = Object.entries(outer1_9[AUDIO_OUTPUT]);
+    self[AUDIO_OUTPUT] = Object.entries(closure_1_9[AUDIO_OUTPUT]);
   });
   obj = {
     duration_input_device_used_ids: arr2.map((arg0) => {
-      let tmp;
       [tmp, ] = arg0;
       return tmp;
     }),
     duration_input_device_used_ms: arr3.map((arg0) => {
-      let tmp;
       [, tmp] = arg0;
       return tmp;
     }),
     duration_output_device_used_ids: arr4.map((arg0) => {
-      let tmp;
       [tmp, ] = arg0;
       return tmp;
     }),
     duration_output_device_used_ms: arr5.map((arg0) => {
-      let tmp;
       [, tmp] = arg0;
       return tmp;
     })
@@ -156,9 +153,9 @@ prototype["getUsageStats"] = function getUsageStats() {
 };
 DeviceFrecencyStore.displayName = "DeviceFrecencyStore";
 DeviceFrecencyStore.persistKey = "DeviceFrecencyStore";
-let items = [(arg0) => apply.mapKeys(arg0, (arg0, arg1) => table[arg1])];
+let items = [(arg0) => applyDefault.mapKeys(arg0, (arg0, arg1) => table[arg1])];
 DeviceFrecencyStore.migrations = items;
-const deviceFrecencyStore = new DeviceFrecencyStore(require("dispatcher"), {
+const deviceFrecencyStore = new DeviceFrecencyStore(dispatcherDefault, {
   AUDIO_SET_INPUT_DEVICE(oldId) {
     const AUDIO_INPUT = DeviceTypes.AUDIO_INPUT;
     if (deviceFrecencyStore.isSampling(AUDIO_INPUT)) {
@@ -282,7 +279,7 @@ let obj1 = {
     deviceFrecencyStore.reset();
   }
 };
-const tmp8 = new require("DEFAULT_FRECENCY")(obj);
-const result = require("DesktopSources").fileFinishedImporting("modules/media_engine/DeviceFrecencyStore.tsx");
+const tmp8 = new DEFAULT_FRECENCYDefault(obj);
+const result = require("set").fileFinishedImporting("modules/media_engine/DeviceFrecencyStore.tsx");
 
 export default deviceFrecencyStore;

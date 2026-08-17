@@ -1,6 +1,7 @@
 // discord_app/modules/install/native/DiskUsageManager.android.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
+initializeDefault;
 class DiskUsageManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

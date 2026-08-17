@@ -1,20 +1,15 @@
 // discord_app/design/components/Navigator/native/Navigator.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
-import { useNavigationTheme } from "useNavigationTheme.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import useNavigationTheme from "useNavigationTheme" /* 6552 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c5;
-const require = arg1;
+require = arg1;
 function NavigationStack(screens) {
-  let closure_10;
-  let detachInactiveScreens;
-  let headerLeftContainerStyle;
-  let initialRouteName;
   screens = screens.screens;
   const onWillFocus = screens.onWillFocus;
   const onDidFocus = screens.onDidFocus;
@@ -32,16 +27,16 @@ function NavigationStack(screens) {
   const headerBackTitle = screens.headerBackTitle;
   const hideTitle = screens.hideTitle;
   const disableHeaderAnimation = screens.disableHeaderAnimation;
-  let c18;
+  closure_18 = undefined;
   let styles;
   let token;
   let navigatorShouldCrossfade;
   let first;
   let top;
-  let closure_24;
+  closure_24 = undefined;
   ({ initialRouteName, detachInactiveScreens } = screens);
   const tmp = cardShadowEnabled();
-  c18 = tmp;
+  closure_18 = tmp;
   let obj = screens(onDidFocus[7]);
   styles = obj.useStyles();
   token = screens(onDidFocus[8]).useToken(onWillFocus(onDidFocus[5]).colors.NAVIGATOR_HEADER_TINT);
@@ -51,16 +46,16 @@ function NavigationStack(screens) {
   top = onWillFocus(onDidFocus[10])().top;
   let items = [onWillFocus, onDidFocus];
   closure_24 = gestureDirection.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return {
       focus() {
-        if (outer1_1 != null) {
+        if (closure_1_1 != null) {
           tmp(closure_0);
         }
       },
       transitionEnd(data) {
         if (!data.data.closing) {
-          if (outer1_2 != null) {
+          if (closure_1_2 != null) {
             tmp(closure_0);
           }
         }
@@ -104,10 +99,10 @@ function NavigationStack(screens) {
         str = "screen";
       }
       let obj = { headerMode: str, headerStyle: items, headerTintColor: token, headerTitleStyle: styles.headerTitle, headerBackTitleStyle: styles.headerBackTitleStyle, headerTitleAllowFontScaling: false, headerBackImage: screens(onDidFocus[7]).renderBackImage, headerBackButtonDisplayMode: "minimal", headerTitleContainerStyle: items1, headerLeftContainerStyle: items2, headerRightContainerStyle: items3, headerTitle: null, gestureDirection: null, gestureResponseDistance: null, cardOverlayEnabled: null, cardShadowEnabled: null, cardStyle: null, headerBackTitle: null, headerTitleAlign: null, headerStatusBarHeight: null, cardStyleInterpolator: null, headerStyleInterpolator: null };
-      items = [_undefined.navbar, headerStyle];
+      items = [closure_18.navbar, headerStyle];
       items1 = [{ maxWidth: "60%", alignItems: "center" }, headerTitleContainerStyle];
-      items2 = [_undefined.headerLeftContainerStyle, headerLeftContainerStyle];
-      items3 = [_undefined.headerRightContainerStyle, headerRightContainerStyle];
+      items2 = [closure_18.headerLeftContainerStyle, headerLeftContainerStyle];
+      items3 = [closure_18.headerRightContainerStyle, headerRightContainerStyle];
       let fn;
       if (hideTitle) {
         fn = () => {
@@ -158,10 +153,6 @@ function NavigationStack(screens) {
         fn3 = tmp3(tmp4[9]).HeaderStyleInterpolators.forFade;
       } else {
         fn3 = (arg0) => {
-          let current;
-          let direction;
-          let layouts;
-          let next;
           ({ current, next, layouts, direction } = arg0);
           const HeaderStyleInterpolators = callback(table[9]).HeaderStyleInterpolators;
           const forUIKitResult = HeaderStyleInterpolators.forUIKit({ current, next, layouts, direction });
@@ -203,7 +194,7 @@ function NavigationStack(screens) {
       children(arg0) {
         obj = { screen: obj };
         const merged = Object.assign(arg0);
-        obj.viewStyle = outer1_10;
+        obj.viewStyle = closure_1_10;
         return cardOverlayEnabled(screens(onDidFocus[13]).NavigatorScreen, obj);
       }
     };
@@ -212,11 +203,6 @@ function NavigationStack(screens) {
   return cardOverlayEnabled(first.Navigator, obj);
 }
 function WrappedNavigationStack(arg0) {
-  let initialRouteName;
-  let initialRouteState;
-  let navigationTheme;
-  let onStateChange;
-  let require;
   ({ initialRouteStack: require, initialRouteState, navigationTheme } = arg0);
   ({ initialRouteName, onStateChange } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
@@ -232,10 +218,9 @@ function WrappedNavigationStack(arg0) {
     }
     return tmp2;
   }), 1)[0];
-  let obj1 = useNavigationTheme;
+  obj1 = useNavigationTheme;
   navigationTheme = obj1.useNavigationTheme(navigationContainerRef(4310)());
-  obj = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
-  obj[1] = navigationTheme;
+  obj = { ref: navigationContainerRef, theme: navigationTheme, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null == initialRouteState) {
     let tmp7;
     if (null != first) {
@@ -246,7 +231,7 @@ function WrappedNavigationStack(arg0) {
   obj = { children: null };
   obj[2] = initialRouteState;
   obj[3] = function onReady() {
-    const routingInstrumentation = outer1_0(outer1_2[17]).routingInstrumentation;
+    const routingInstrumentation = closure_1_0(closure_1_2[17]).routingInstrumentation;
     const result = routingInstrumentation.registerNavigationContainer(navigationContainerRef);
   };
   obj[4] = onStateChange;
@@ -260,14 +245,14 @@ function WrappedNavigationStack(arg0) {
 createCacheKey = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOW;
+createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, shadowColor: "transparent" };
+createCacheKey[1] = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
 createCacheKey[2] = { paddingLeft: 16, marginRight: -16 };
 createCacheKey[3] = { paddingRight: 16, marginLeft: -16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, shadowColor: "transparent" };
-let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderBottomWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, shadowColor: "transparent" };
+let result = require("set").fileFinishedImporting("design/components/Navigator/native/Navigator.native.tsx");
 
 export const useNavigatorScreens = function useNavigatorScreens(getNextRenewalDateLabel, items) {
   return React.useMemo(getNextRenewalDateLabel, items);
@@ -290,7 +275,7 @@ export const Navigator = function Navigator(useContainer) {
   }
   const merged = Object.assign(useContainer, Object.create(null));
   let obj = { style: null, children: null };
-  const items = [createCacheKey().container, useContainer.containerStyle];
+  const items = [callback2().container, useContainer.containerStyle];
   obj[0] = items;
   obj = {};
   const merged1 = Object.assign(merged);

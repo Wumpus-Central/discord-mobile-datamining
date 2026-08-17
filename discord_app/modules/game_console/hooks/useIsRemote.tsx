@@ -1,11 +1,11 @@
 // discord_app/modules/game_console/hooks/useIsRemote.tsx
-import set from "set";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "set" /* 4540 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/hooks/useIsRemote.tsx");
 
 export default function useIsRemote() {
-  const items = [set];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => null != remoteSessionId.getRemoteSessionId() || null != remoteSessionId.getAwaitingRemoteSessionInfo());
 };

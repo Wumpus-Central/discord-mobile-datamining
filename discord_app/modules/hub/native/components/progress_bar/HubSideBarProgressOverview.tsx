@@ -1,13 +1,12 @@
 // discord_app/modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx
-import "noop";
-import items from "items";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import items from "items" /* 11506 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ HUB_PROGRESS_ACTION_SHEET_ID: c3, HUB_PROGRESS_NUM_TOTAL_STEPS: c4 } = items);
-const result = require("jsxProd").fileFinishedImporting("modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubSideBarProgressOverview.tsx");
 
 export default function HubSidebarProgressOverview(guild) {
   guild = guild.guild;
@@ -34,9 +33,9 @@ export default function HubSidebarProgressOverview(guild) {
     const bound = Math.max(tmp(11643).MIN_PROGRESS_PERCENT, 100 * size / tmp11);
     obj = { onPress: null, title: null, subtitle: null, percentComplete: null };
     obj[0] = function onPress() {
-      let obj = outer1_1(outer1_2[7]);
+      let obj = closure_1_1(closure_1_2[7]);
       obj = { guild, analyticsSource: "Channels Sidebar" };
-      obj.openLazy(guild(outer1_2[9])(outer1_2[8], outer1_2.paths), outer1_3, obj);
+      obj.openLazy(guild(closure_1_2[9])(closure_1_2[8], closure_1_2.paths), closure_1_3, obj);
     };
     obj[1] = hubProgressTitleForStep;
     obj[2] = formatToPlainStringResult;

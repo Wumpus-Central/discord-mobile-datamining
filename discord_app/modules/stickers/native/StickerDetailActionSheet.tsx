@@ -1,40 +1,25 @@
 // discord_app/modules/stickers/native/StickerDetailActionSheet.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import explicitContentFromProto from "explicitContentFromProto";
-import importAllResult from "getSystemLocale";
-import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import closure_10 from "mergeGuildAvatar";
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
-import ME from "ME";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "dispatcher";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "noop";
-import { useStickerPackCategories } from "../StickersHooks.tsx";
-import { openStickerPackDetailActionSheet } from "openStickerPackDetailActionSheet.tsx";
-import { hideStickerDetailActionSheet } from "showStickerDetailActionSheet.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useStickerPackCategories from "useStickerPackCategories" /* 10217 */;
+import openStickerPackDetailActionSheet from "openStickerPackDetailActionSheet" /* 10224 */;
+import openStickerPackDetailActionSheetDefault from "openStickerPackDetailActionSheet" /* 10224 */;
+import hideStickerDetailActionSheet from "hideStickerDetailActionSheet" /* 10233 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "loadSavedGuildStickers" /* 6769 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
+import ME from "ME" /* 676 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function StandardStickerDetail(chatInputRef) {
-  let channel;
-  let sticker;
   ({ sticker, channel } = chatInputRef);
   let stateFromStores = channel;
   chatInputRef = chatInputRef.chatInputRef;
@@ -44,11 +29,11 @@ function StandardStickerDetail(chatInputRef) {
   let memo;
   pack_id = sticker.pack_id;
   let obj = stateFromStores(pack_id[22]);
-  const items = [loadSavedGuildStickers];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_11.getStickerPack(pack_id));
-  let obj1 = stateFromStores(pack_id[22]);
-  const items1 = [loadSavedGuildStickers];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_11.isPremiumPack(pack_id));
+  const items = [closure_11];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_11.getStickerPack(pack_id));
+  obj1 = stateFromStores(pack_id[22]);
+  const items1 = [closure_11];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_11.isPremiumPack(pack_id));
   let obj2 = stateFromStores(pack_id[14]);
   const fetchStickerPack = obj2.useFetchStickerPack(pack_id);
   const diff = chatInputRef(pack_id[23])().width - 2 * closure_12;
@@ -56,11 +41,11 @@ function StandardStickerDetail(chatInputRef) {
   const items2 = [channel.guild_id];
   memo = memo.useMemo(() => {
     if (null != stateFromStores.guild_id) {
-      let DM_CHANNEL = outer1_15.GUILD_CHANNEL;
+      let DM_CHANNEL = closure_1_15.GUILD_CHANNEL;
     } else {
-      DM_CHANNEL = outer1_15.DM_CHANNEL;
+      DM_CHANNEL = closure_1_15.DM_CHANNEL;
     }
-    return { page: DM_CHANNEL, section: outer1_16.STICKER_POPOUT };
+    return { page: DM_CHANNEL, section: closure_1_16.STICKER_POPOUT };
   }, items2);
   const items3 = [memo, stateFromStores];
   const effect = memo.useEffect(() => {
@@ -69,7 +54,7 @@ function StandardStickerDetail(chatInputRef) {
       obj = { location: null, type: "Sticker Upsell Sheet", sticker_pack_id: null };
       obj[0] = memo;
       obj[2] = tmp.id;
-      obj.track(outer1_17.OPEN_POPOUT, obj);
+      obj.track(closure_1_17.OPEN_POPOUT, obj);
     }
   }, items3);
   if (null == stateFromStores) {
@@ -125,10 +110,8 @@ function StandardStickerDetail(chatInputRef) {
             }
           }
         }
-        obj = { analyticsLocation: memo, analyticsPopoutType: null, stickerPack: null };
-        obj[1] = openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_UPSELL;
-        obj[2] = stateFromStores;
-        openStickerPackDetailActionSheet(obj);
+        obj = { analyticsLocation: memo, analyticsPopoutType: openStickerPackDetailActionSheet.AnalyticsPopoutType.STICKER_PACK_UPSELL, stickerPack: stateFromStores };
+        openStickerPackDetailActionSheetDefault(obj);
       };
       tmp15Result = tmp15(tmp2(tmp3[26]).Button, obj6);
     }
@@ -143,24 +126,22 @@ function StandardStickerDetail(chatInputRef) {
   return tmp13Result;
 }
 function UnavailableStickerDetail(arg0) {
-  let channel;
-  let renderableSticker;
   ({ renderableSticker, channel } = arg0);
-  let importDefault;
+  importDefault = undefined;
   let stickerAssetUrl;
   const tmp = callback4();
   const currentUser = authStore.getCurrentUser();
   let obj = importDefault(stickerAssetUrl[30]);
-  let obj1 = importAllResult;
+  obj1 = importAllResult;
   const items = [channel.guild_id];
   const result = obj.canUseCustomStickersEverywhere(currentUser);
   importDefault = importAllResult.useMemo(() => {
     if (null != channel.guild_id) {
-      let DM_CHANNEL = outer1_15.GUILD_CHANNEL;
+      let DM_CHANNEL = closure_1_15.GUILD_CHANNEL;
     } else {
-      DM_CHANNEL = outer1_15.DM_CHANNEL;
+      DM_CHANNEL = closure_1_15.DM_CHANNEL;
     }
-    return { page: DM_CHANNEL, section: outer1_16.STICKER_POPOUT };
+    return { page: DM_CHANNEL, section: closure_1_16.STICKER_POPOUT };
   }, items);
   let obj2 = importDefault(stickerAssetUrl[31]);
   let tidaWebformEnabled = obj2.useExperiment({ location: "StickerDetailActionSheet" }, { autoTrackExposure: false }).tidaWebformEnabled;
@@ -192,10 +173,10 @@ function UnavailableStickerDetail(arg0) {
     obj3[0] = function openPremiumSettings() {
       let obj = lib(stickerAssetUrl[17]);
       obj.hideActionSheet();
-      let obj1 = lib(stickerAssetUrl[24]);
+      obj1 = lib(stickerAssetUrl[24]);
       obj = { location_page: lib.page, location_section: lib.section };
-      obj1.track(outer1_17.PREMIUM_PROMOTION_OPENED, obj);
-      obj = { screen: outer1_19.PREMIUM, params: obj1 };
+      obj1.track(closure_1_17.PREMIUM_PROMOTION_OPENED, obj);
+      obj = { screen: closure_1_19.PREMIUM, params: obj1 };
       obj1 = { analyticsLocation: lib };
       channel(stickerAssetUrl[39]).openUserSettings(obj);
     };
@@ -224,7 +205,7 @@ function UnavailableStickerDetail(arg0) {
   return closure_23(closure_6, obj);
 }
 let c5 = importAllResult;
-({ View: closure_6, ActivityIndicator: error, Pressable: metroImportAll } = get_ActivityIndicator);
+({ View: closure_6, ActivityIndicator: error, Pressable: closure_8 } = get_ActivityIndicator);
 ({ PADDING_HORIZONTAL: closure_12, MIN_MARGIN: map1, STICKER_SIZE: closure_14 } = PADDING_HORIZONTAL);
 ({ AnalyticsPages: closure_15, AnalyticsSections: closure_16, AnalyticEvents: closure_17, GuildFeatures: closure_18, UserSettingsSections: closure_19 } = ME);
 ({ jsx: closure_21, Fragment: closure_22, jsxs: closure_23 } = jsxProd);
@@ -233,32 +214,32 @@ if (set.isAndroid()) {
   num = 16;
 }
 let obj = { content: { padding: 16, paddingBottom: num }, description: { lineHeight: 18, marginTop: 4 }, guildEmojiTopContainer: { flexDirection: "row", alignItems: "center" }, buttonContainer: null, guildEmojiDescription: null, divider: null, moreMenuIcon: null, favoriteContainer: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
-obj = { marginTop: require("Themes").space.PX_12 };
+obj = { marginTop: ThemesDefault.space.PX_12 };
 obj[3] = obj;
 obj[4] = { paddingLeft: 16, flex: 1 };
-createCacheKey = { marginLeft: 0, marginTop: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { marginLeft: 0, marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[5] = createCacheKey;
 obj[6] = { height: 32, width: 32, justifyContent: "center", alignItems: "center" };
-set = { paddingTop: require("Themes").space.PX_4 };
+set = { paddingTop: ThemesDefault.space.PX_4 };
 obj[7] = set;
 obj[8] = { height: 32, width: 32 };
-obj[9] = { tintColor: require("Themes").colors.ICON_FEEDBACK_WARNING };
-let obj3 = { tintColor: require("Themes").colors.ICON_FEEDBACK_WARNING };
-obj[10] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+obj[9] = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+let obj3 = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+obj[10] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let closure_24 = createCacheKey.createStyles(obj);
 function GuildStickerDetail(sticker) {
   sticker = sticker.sticker;
   let id = sticker;
   const channel = sticker.channel;
-  let importDefault = channel;
+  importDefault = channel;
   let hasItem1;
   let callback;
   let first1;
-  let importAllResult;
+  importAllResult = undefined;
   let stickerAssetUrl;
-  let closure_7;
-  let obj1;
-  let createGuildRecordFromRust;
+  closure_7 = undefined;
+  obj1 = undefined;
+  closure_9 = undefined;
   const tmp2 = callback4();
   let obj = importAllResult;
   const tmp4 = first1(importAllResult.useState(null), 2);
@@ -266,7 +247,7 @@ function GuildStickerDetail(sticker) {
   hasItem1 = first;
   callback = tmp4[1];
   obj1 = id(hasItem1[22]);
-  const items = [createGuildRecordFromRust];
+  const items = [closure_9];
   const stateFromStores = obj1.useStateFromStores(items, () => ref.getGuild(id.guild_id));
   let hasItem = null == stateFromStores;
   if (!hasItem) {
@@ -295,7 +276,7 @@ function GuildStickerDetail(sticker) {
   const items1 = [tmpResult];
   callback = obj.useCallback((arg0) => {
     const obj = {};
-    const merged = Object.assign(_undefined.starIcon);
+    const merged = Object.assign(lib.starIcon);
     if (arg0) {
       const merged1 = Object.assign(tmp.starIconSelected);
       let style = obj;
@@ -308,24 +289,24 @@ function GuildStickerDetail(sticker) {
     } else {
       StarOutlineIcon = tmp9(tmp10[16]).StarOutlineIcon;
     }
-    return outer1_21(StarOutlineIcon, { style });
+    return closure_1_21(StarOutlineIcon, { style });
   }, items1);
   const items2 = [hasItem1, id, callback];
   const callback1 = obj.useCallback(() => {
     function content() {
       const obj = { style: { marginLeft: 8, marginTop: 2 }, variant: "text-md/bold", children: null };
-      const intl = outer1_0(outer1_2[19]).intl;
+      const intl = closure_1_0(closure_1_2[19]).intl;
       const string = intl.string;
-      const t = outer1_0(outer1_2[19]).t;
+      const t = closure_1_0(closure_1_2[19]).t;
       if (closure_2) {
         let stringResult = string(t.in1rga);
       } else {
         stringResult = string(t.mE2e8A);
       }
       obj[2] = stringResult;
-      return outer1_21(outer1_0(outer1_2[18]).Text, obj);
+      return closure_1_21(closure_1_0(closure_1_2[18]).Text, obj);
     }
-    let obj = _undefined(hasItem1[17]);
+    let obj = lib(hasItem1[17]);
     obj.hideActionSheet();
     const obj2 = id(hasItem1[20]);
     if (hasItem1) {
@@ -357,19 +338,19 @@ function GuildStickerDetail(sticker) {
   const items4 = [channel.guild_id];
   const callback2 = obj.useCallback(() => {
     if (null != stickerAssetUrl) {
-      let obj = _undefined(hasItem1[17]);
+      let obj = lib(hasItem1[17]);
       obj = { stickerUrl: null };
       obj[0] = tmp;
       obj.openLazy(id(hasItem1[35])(hasItem1[34], hasItem1.paths), "StickerOptionsActionSheet", obj, "stack");
     }
   }, items3);
   closure_7 = obj.useMemo(() => {
-    if (null != _undefined.guild_id) {
-      let DM_CHANNEL = outer1_15.GUILD_CHANNEL;
+    if (null != lib.guild_id) {
+      let DM_CHANNEL = closure_1_15.GUILD_CHANNEL;
     } else {
-      DM_CHANNEL = outer1_15.DM_CHANNEL;
+      DM_CHANNEL = closure_1_15.DM_CHANNEL;
     }
-    return { page: DM_CHANNEL, section: outer1_16.STICKER_POPOUT };
+    return { page: DM_CHANNEL, section: closure_1_16.STICKER_POPOUT };
   }, items4);
   obj = { guild_id: channel.getGuildId() };
   let merged = Object.assign(id(hasItem1[36]).collectChannelAnalyticsMetadata(channel));
@@ -404,13 +385,13 @@ function GuildStickerDetail(sticker) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp5;
-                let closure_0 = tmp2;
+                closure_1 = tmp5;
+                closure_0 = tmp2;
                 closure_0 = undefined;
                 c2 = 1;
                 v0 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer2_1(outer2_2[38])(outer1_0.id);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_2_1(closure_2_2[38])(closure_1_0.id);
                 return obj1;
               }
             } else if (arg0 === 1) {
@@ -424,7 +405,7 @@ function GuildStickerDetail(sticker) {
             } else {
               closure_0 = arg1;
               v0(closure_0);
-              outer1_5(true);
+              closure_1_5(true);
               v0 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             }
@@ -434,7 +415,7 @@ function GuildStickerDetail(sticker) {
           }
         }
       });
-      const _fetchDiscoverableGuild = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -497,12 +478,12 @@ function GuildStickerDetail(sticker) {
     } else {
       obj = { openPremiumSettings: null };
       obj[0] = function openPremiumSettings() {
-        let obj = _undefined(hasItem1[17]);
+        let obj = lib(hasItem1[17]);
         obj.hideActionSheet();
-        let obj1 = _undefined(hasItem1[24]);
+        obj1 = lib(hasItem1[24]);
         obj = { location_page: closure_7.page, location_section: closure_7.section };
-        obj1.track(outer1_17.PREMIUM_PROMOTION_OPENED, obj);
-        obj = { screen: outer1_19.PREMIUM, params: obj1 };
+        obj1.track(closure_1_17.PREMIUM_PROMOTION_OPENED, obj);
+        obj = { screen: closure_1_19.PREMIUM, params: obj1 };
         obj1 = { analyticsLocation: closure_7 };
         id(hasItem1[39]).openUserSettings(obj);
       };
@@ -521,19 +502,19 @@ function GuildStickerDetail(sticker) {
     obj1 = { popoutAnalyticsConfig: null, popoutType: null };
     obj1[0] = obj.useRef(obj).current;
     obj1[1] = str;
-    createGuildRecordFromRust = obj.useRef(obj1);
+    closure_9 = obj.useRef(obj1);
     const effect1 = obj.useEffect(() => {
-      createGuildRecordFromRust.current = obj1;
+      closure_9.current = obj1;
     });
     const items6 = [first1];
     const effect2 = obj.useEffect(() => {
       const popoutAnalyticsConfig = ref.current.popoutAnalyticsConfig;
       if (first1) {
-        let obj = _undefined(hasItem1[24]);
+        let obj = lib(hasItem1[24]);
         obj = { type: null };
         obj[0] = tmp;
         const merged = Object.assign(popoutAnalyticsConfig);
-        obj.track(outer1_17.OPEN_POPOUT, obj);
+        obj.track(closure_1_17.OPEN_POPOUT, obj);
       }
     }, items6);
     let tmp37Result = null;
@@ -580,7 +561,7 @@ function GuildStickerDetail(sticker) {
         const intl3 = tmp6(tmp7[19]).intl;
         obj10[0] = intl3.string(tmp6(tmp7[19]).t["gl/XHJ"]);
         obj10[1] = function onPress() {
-          return _undefined(hasItem1[43])(closure_7);
+          return lib(hasItem1[43])(closure_7);
         };
         const items10 = [tmp40(tmp15Result, obj10), ];
         const obj11 = { style: null };
@@ -601,12 +582,12 @@ function GuildStickerDetail(sticker) {
         obj14[0] = intl4.string(tmp6(tmp7[19]).t.riu2R5);
         obj14[1] = function onPress() {
           if (null != hasItem1) {
-            const id = hasItem1.id;
-            const obj = _undefined(hasItem1[37]);
-            _undefined(hasItem1[37]).joinGuild(id).then(() => {
-              const result = outer1_1(outer1_2[37]).transitionToGuildSync(id);
+            id = hasItem1.id;
+            const obj = lib(hasItem1[37]);
+            lib(hasItem1[37]).joinGuild(id).then(() => {
+              const result = closure_1_1(closure_1_2[37]).transitionToGuildSync(id);
             });
-            const joinGuildResult = _undefined(hasItem1[37]).joinGuild(id);
+            const joinGuildResult = lib(hasItem1[37]).joinGuild(id);
           }
         };
         const items11 = [tmp40(tmp6(tmp7[26]).Button, obj14), ];
@@ -687,12 +668,10 @@ function GuildStickerDetail(sticker) {
     return tmp37Result;
   }
 }
-let obj4 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+let obj4 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let result = set.fileFinishedImporting("modules/stickers/native/StickerDetailActionSheet.tsx");
 
 export default importAllResult.memo(function StickerDetailActionSheet(chatInputRef) {
-  let channel;
-  let renderableSticker;
   ({ renderableSticker, channel } = chatInputRef);
   let obj = useStickerPackCategories;
   const tmp4 = callback(obj.useStickerForRenderableSticker(renderableSticker, true), 2);
@@ -706,7 +685,7 @@ export default importAllResult.memo(function StickerDetailActionSheet(chatInputR
       tmp6Result = tmp6(UnavailableStickerDetail, obj);
     }
     obj = { startExpanded: true, children: null };
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.content;
     obj1[1] = tmp6Result;
     obj[1] = tmp6(closure_6, obj1);

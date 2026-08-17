@@ -1,5 +1,7 @@
 // discord_app/modules/guild_templates/GuildTemplatesConstants.tsx
-const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_templates/GuildTemplatesConstants.tsx");
 
 export const GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD = 50;
 export const GuildTemplateStates = { RESOLVING: "RESOLVING", RESOLVED: "RESOLVED", EXPIRED: "EXPIRED", ACCEPTED: "ACCEPTED", ACCEPTING: "ACCEPTING" };

@@ -1,18 +1,18 @@
 // discord_app/modules/user_settings/PreloadedUserSettingsMigrations.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ChannelNoticeTypes } from "ME";
-import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { defineProperty } from "../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { HotspotStore } from "../hotspot/index.tsx";
-import { b64ToProto } from "UserSettingsUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage4 from "Storage" /* 595 */;
+import create from "create" /* 1306 */;
+import defineProperty from "defineProperty" /* 1337 */;
+import b64ToProto from "b64ToProto" /* 1342 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import HotspotStore2 from "HotspotStore" /* 7193 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import { ChannelNoticeTypes } from "ME" /* 676 */;
+import { MULTIACCOUNT_TOOLTIP_SEEN_KEY as closure_5 } from "MAX_ACCOUNTS" /* 11586 */;
 
-const require = arg1;
+require = arg1;
 function migrateHotspotLocation(userContent, ACTIVITY_BEB_TUTORIAL, ACCOUNT_MULTIACCOUNT_TOOLTIP) {
-  const HotspotStore = HotspotStore.HotspotStore;
+  const HotspotStore = HotspotStore2.HotspotStore;
   let hasHiddenHotspotResult = HotspotStore.hasHiddenHotspot(ACTIVITY_BEB_TUTORIAL);
   if (hasHiddenHotspotResult) {
     if (null == userContent.userContent) {
@@ -45,7 +45,7 @@ let items = [
         const InboxSettings = create.InboxSettings;
         const obj = InboxSettings.create();
         inbox.inbox = obj;
-        const Storage3 = Storage.Storage;
+        const Storage3 = Storage4.Storage;
         let flag2 = false;
         if (Storage3.get("seenInboxTutorial", false)) {
           obj.viewedTutorial = true;
@@ -108,18 +108,18 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("seenInboxTutorial");
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage4.Storage;
       Storage2.remove("recentsButtonTab2");
-      const Storage3 = Storage.Storage;
+      const Storage3 = Storage4.Storage;
       Storage3.remove("unread-messages-collapsed-channels");
     }
   },
   {
     version: 3,
     run(textAndImages) {
-      const PersistedStore = initialize.PersistedStore;
+      const PersistedStore = initializeDefault.PersistedStore;
       const items = [
         () => {
           const Storage = callback(table[6]).Storage;
@@ -158,7 +158,7 @@ let items = [
   {
     version: 4,
     run(userContent) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       let hasHiddenHotspotResult = true === Storage.get("HAS_SEEN_HUB_UPSELL");
       if (!hasHiddenHotspotResult) {
         const HotspotStore = tmp(7193).HotspotStore;
@@ -188,7 +188,7 @@ let items = [
       return flag;
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("HAS_SEEN_HUB_UPSELL");
     }
   },
@@ -231,7 +231,7 @@ let items = [
         debug = DebugSettings.create();
       }
       textAndImages.debug = debug;
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       let obj = Storage.get("UserSettingsStore");
       if (obj == null) {
         obj = {};
@@ -246,7 +246,7 @@ let items = [
       }
       if (typeof obj.renderSpoilers === "string") {
         const StringValue = tmp13(1337).StringValue;
-        const obj1 = { value: null };
+        obj1 = { value: null };
         obj1[0] = obj.renderSpoilers;
         textAndImages.textAndImages.renderSpoilers = StringValue.create(obj1);
         flag = true;
@@ -345,7 +345,7 @@ let items = [
   {
     version: 7,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, DismissibleContent.DismissibleContent.APPLICATION_COMMAND_TOOLTIP);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.APPLICATION_COMMAND_TOOLTIP, DismissibleContent.DismissibleContent.APPLICATION_COMMAND_TOOLTIP);
     },
     cleanup() {
 
@@ -354,7 +354,7 @@ let items = [
   {
     version: 8,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, DismissibleContent.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.CHANNEL_BANNER_MEMBER_LIST_NOTICE, DismissibleContent.DismissibleContent.CHANNELINFO_CHANNELBANNER_NOTICE);
     },
     cleanup() {
 
@@ -363,12 +363,12 @@ let items = [
   {
     version: 9,
     run(userContent) {
-      const HotspotStore = HotspotStore.HotspotStore;
-      if (HotspotStore.hasHiddenHotspot(HotspotStore.HotspotLocations.MULTI_ACCOUNT_TOOLTIP)) {
+      const HotspotStore = HotspotStore2.HotspotStore;
+      if (HotspotStore.hasHiddenHotspot(HotspotStore2.HotspotLocations.MULTI_ACCOUNT_TOOLTIP)) {
         const Storage = tmp(595).Storage;
         const result = Storage.set(closure_5, "true");
       }
-      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, DismissibleContent.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.MULTI_ACCOUNT_TOOLTIP, DismissibleContent.DismissibleContent.ACCOUNT_MULTIACCOUNT_TOOLTIP);
     },
     cleanup() {
 
@@ -377,8 +377,8 @@ let items = [
   {
     version: 10,
     run(userContent) {
-      let flag = migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, DismissibleContent.DismissibleContent.CHANNEL_NOTICE_HUBLINK);
-      const Storage = Storage.Storage;
+      let flag = migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.HUB_LINK_CHANNEL_NOTICE, DismissibleContent.DismissibleContent.CHANNEL_NOTICE_HUBLINK);
+      const Storage = Storage4.Storage;
       let obj = Storage.get("channelNotices");
       if (obj == null) {
         obj = {};
@@ -458,7 +458,7 @@ let items = [
       return flag;
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("channelNotices");
     }
   },
@@ -466,10 +466,10 @@ let items = [
     version: 11,
     run(userContent) {
       let flag = false;
-      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.GUILD_EVENT_UPSELL, DismissibleContent.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_EVENT_UPSELL, DismissibleContent.DismissibleContent.GUILD_HEADER_EVENT_UPSELL)) {
         flag = true;
       }
-      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, DismissibleContent.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.ANIMATED_GUILD_BANNER_GUILD_HEADER_TOOLTIP, DismissibleContent.DismissibleContent.GUILD_HEADER_ANIMATED_GUILD_BANNER)) {
         flag = true;
       }
       return flag;
@@ -481,7 +481,7 @@ let items = [
   {
     version: 12,
     run(userContent) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       let value = Storage.get("hideNag");
       if (value) {
         const NAGBAR_NOTICE_DOWNLOAD = tmp(1377).DismissibleContent.NAGBAR_NOTICE_DOWNLOAD;
@@ -560,18 +560,18 @@ let items = [
       return flag2;
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("hideNag");
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage4.Storage;
       Storage2.remove("hideConnectSpotify");
-      const Storage3 = Storage.Storage;
+      const Storage3 = Storage4.Storage;
       Storage3.remove("hideConnectPlayStation");
     }
   },
   {
     version: 13,
     run(userContent) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       let value = Storage.get("hidePremiumPromo");
       if (value) {
         const NAGBAR_NOTICE_PREMIUM_PROMO = tmp(1377).DismissibleContent.NAGBAR_NOTICE_PREMIUM_PROMO;
@@ -650,18 +650,18 @@ let items = [
       return flag2;
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("hidePremiumPromo");
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage4.Storage;
       Storage2.remove("hidePremiumTier2TrialEnding");
-      const Storage3 = Storage.Storage;
+      const Storage3 = Storage4.Storage;
       Storage3.remove("hidePremiumReactivateNotice");
     }
   },
   {
     version: 14,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.ACTIVITY_BEB_TUTORIAL, DismissibleContent.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.ACTIVITY_BEB_TUTORIAL, DismissibleContent.DismissibleContent.ACTIVITIES_TUTORIAL_COACH_MARK);
     },
     cleanup() {
 
@@ -670,7 +670,7 @@ let items = [
   {
     version: 15,
     run(userContent) {
-      return migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.NOW_PLAYING_CONSENT_CARD, DismissibleContent.DismissibleContent.NOW_PLAYING_CONSENT_CARD);
+      return migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.NOW_PLAYING_CONSENT_CARD, DismissibleContent.DismissibleContent.NOW_PLAYING_CONSENT_CARD);
     },
     cleanup() {
 
@@ -679,7 +679,7 @@ let items = [
   {
     version: 16,
     run(userContent) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       const value = Storage.get("PromotionsPersistedStore");
       if (null == value) {
         return false;
@@ -710,7 +710,7 @@ let items = [
   {
     version: 17,
     run(textAndImages) {
-      const PersistedStore = initialize.PersistedStore;
+      const PersistedStore = initializeDefault.PersistedStore;
       const state = PersistedStore.migrateAndReadStoreState("ExpressionSuggestionsPersistedStore", null).state;
       if (null == state) {
         return false;
@@ -735,7 +735,7 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("ExpressionSuggestionsPersistedStore");
     }
   },
@@ -743,10 +743,10 @@ let items = [
     version: 18,
     run(userContent) {
       let flag = false;
-      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.GUILD_DELETE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_DELETE_FEEDBACK)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_DELETE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_DELETE_FEEDBACK)) {
         flag = true;
       }
-      if (migrateHotspotLocation(userContent, HotspotStore.HotspotLocations.GUILD_LEAVE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_LEAVE_FEEDBACK)) {
+      if (migrateHotspotLocation(userContent, HotspotStore2.HotspotLocations.GUILD_LEAVE_FEEDBACK, DismissibleContent.DismissibleContent.GUILD_LEAVE_FEEDBACK)) {
         flag = true;
       }
       return flag;
@@ -758,7 +758,7 @@ let items = [
   {
     version: 19,
     run(userContent) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       let flag = Storage.get("forumHelperCardStorageKey");
       if (flag == null) {
         flag = false;
@@ -787,14 +787,14 @@ let items = [
       return flag2;
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("forumHelperCardStorageKey");
     }
   },
   {
     version: 20,
     run(userContent) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       const value = Storage.get("lastChangeLogId");
       if (null == value) {
         return false;
@@ -823,7 +823,7 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("lastChangeLogId");
     }
   },
@@ -847,6 +847,6 @@ let items = [
     }
   }
 ];
-let result = require("MAX_ACCOUNTS").fileFinishedImporting("modules/user_settings/PreloadedUserSettingsMigrations.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/PreloadedUserSettingsMigrations.tsx");
 
 export default items;

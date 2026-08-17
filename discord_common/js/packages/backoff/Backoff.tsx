@@ -1,5 +1,7 @@
 // discord_common/js/packages/backoff/Backoff.tsx
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("../discord_common/js/packages/backoff/Backoff.tsx");
 class Backoff {
   constructor() {
     num = global;
@@ -61,7 +63,7 @@ prototype["succeed"] = function succeed() {
 prototype["fail"] = function fail(_callback) {
   let self = this;
   self = this;
-  let closure_0 = _callback;
+  closure_0 = _callback;
   this._fails = this._fails + 1;
   const result = 2 * this._current;
   let result1 = result;
@@ -78,7 +80,7 @@ prototype["fail"] = function fail(_callback) {
     if (null != self._timeoutId) {
       if (self._callback !== _callback) {
         const _Error = Error;
-        const error = new Error("callback already pending");
+        error = new Error("callback already pending");
         throw error;
       } else {
         self.cancel();

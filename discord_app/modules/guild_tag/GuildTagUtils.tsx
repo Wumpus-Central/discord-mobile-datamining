@@ -1,18 +1,15 @@
 // discord_app/modules/guild_tag/GuildTagUtils.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import items from "items";
-import { GuildFeatures } from "ME";
+import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import items from "items" /* 8168 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
 
-let GuildTagBadgeMediaProxySizes;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: c5, GuildTagBadgeSize: closure_6 } = items);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_tag/GuildTagUtils.tsx");
 
 export const guildHasTag = function guildHasTag(guild) {
   let tag;
@@ -50,13 +47,12 @@ export const getUserPrimaryGuild = function getUserPrimaryGuild(primaryGuild) {
   }
 };
 export const useUserPrimaryGuild = function useUserPrimaryGuild(arg0) {
-  let profile;
   let tmp = arg0;
   const _require = arg0;
   let obj = _initialize;
-  const items = [createGuildRecordFromRust];
+  const items = [closure_3];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getGuild(closure_0), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(closure_0), items1);
   if (null != arg0) {
     let tmp3 = stateFromStores;
     if (null != stateFromStores) {
@@ -81,18 +77,18 @@ export const useUserPrimaryGuild = function useUserPrimaryGuild(arg0) {
 };
 export const useShouldDisplayGuildTag = function useShouldDisplayGuildTag(arg0, arg1, arg2) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let tmp = arg2;
   let obj = _initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   const items1 = [arg0];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(closure_0), items1);
-  const items2 = [trackCommunicationDisabled];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(closure_0), items1);
+  const items2 = [closure_2];
   const items3 = [arg1, arg0];
   const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
     if (null != table) {
       if (null != callback) {
-        const member = outer1_2.getMember(tmp, tmp2);
+        const member = closure_1_2.getMember(tmp, tmp2);
         return callback(table[6]).hasAutomodQuarantinedProfile(member);
       }
     }

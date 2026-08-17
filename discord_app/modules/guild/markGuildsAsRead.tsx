@@ -1,19 +1,19 @@
 // discord_app/modules/guild/markGuildsAsRead.tsx
-import handleUpdate from "handleUpdate";
-import rebuild from "rebuild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { AnalyticEvents } from "ME";
-import { ReadStateTypes } from "ReadStateTypes";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import closure_3 from "handleUpdate" /* 6788 */;
+import closure_4 from "rebuild" /* 5251 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "comparator" /* 1980 */;
+import closure_7 from "generateOldThreadCutoff" /* 4772 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
 
 const require = arg1;
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/markGuildsAsRead.tsx");
 
 export default function markGuildsAsRead(arr, source, onFinished) {
-  let obj = apply;
+  let obj = applyDefault;
   const mapped = obj.flatMap(arr, (closure_0) => {
     const selectableChannelIds = store.getSelectableChannelIds(closure_0);
     const vocalChannelIds = store.getVocalChannelIds(closure_0);
@@ -46,22 +46,19 @@ export default function markGuildsAsRead(arr, source, onFinished) {
       let fromTimestampResult = callback(table[8]).fromTimestamp(Date.now());
       const obj3 = callback(table[8]);
     } else {
-      fromTimestampResult = generateOldThreadCutoff.lastMessageId(channelId);
+      fromTimestampResult = closure_7.lastMessageId(channelId);
     }
     obj[2] = fromTimestampResult;
     return obj;
   });
   const item = arr.forEach((id) => {
-    let obj = { channelId: null, readStateType: null, messageId: null };
-    obj[0] = outer1_1(outer1_2[8]).cast(id);
-    obj[1] = outer1_9.GUILD_EVENT;
-    obj[2] = outer1_7.lastMessageId(id, outer1_9.GUILD_EVENT);
+    let obj = { channelId: closure_1_1(closure_1_2[8]).cast(id), readStateType: closure_1_9.GUILD_EVENT, messageId: closure_1_7.lastMessageId(id, closure_1_9.GUILD_EVENT) };
     mapped.push(obj);
     obj = { channelId: null, readStateType: null, messageId: null };
-    const obj2 = outer1_1(outer1_2[8]);
-    obj[0] = outer1_1(outer1_2[8]).cast(id);
-    obj[1] = outer1_9.GUILD_ONBOARDING_QUESTION;
-    obj[2] = outer1_3.ackIdForGuild(id);
+    const obj2 = closure_1_1(closure_1_2[8]);
+    obj[0] = closure_1_1(closure_1_2[8]).cast(id);
+    obj[1] = closure_1_9.GUILD_ONBOARDING_QUESTION;
+    obj[2] = closure_1_3.ackIdForGuild(id);
     mapped.push(obj);
   });
   const flatMapResult = obj.flatMap(arr, (closure_0) => {
@@ -86,7 +83,7 @@ export default function markGuildsAsRead(arr, source, onFinished) {
     return items;
   });
   obj = { source, type: "guild" };
-  expandEventProperties.track(AnalyticEvents.MARK_AS_READ, obj);
-  let obj2 = expandEventProperties;
+  expandEventPropertiesDefault.track(AnalyticEvents.MARK_AS_READ, obj);
+  let obj2 = expandEventPropertiesDefault;
   return mapped(5277).bulkAck(mapped, onFinished);
 };

@@ -1,8 +1,9 @@
 // discord_app/modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 
 const tmp2 = keys.create()((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return {
     overrideApplicationId: null,
     setOverrideApplicationId(overrideApplicationId) {
@@ -30,6 +31,6 @@ const tmp2 = keys.create()((arg0) => {
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
+const result = set.fileFinishedImporting("modules/slayer_storefront/hooks/useSlayerStorefrontDevOverrideStore.tsx");
 
 export const useSlayerStorefrontDevOverrideStore = tmp2;

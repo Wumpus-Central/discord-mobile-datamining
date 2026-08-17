@@ -1,12 +1,13 @@
 // discord_app/modules/quarantine/openQuarantineModeInfoModal.native.tsx
-import "noop";
-import { Keyboard } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
-import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getBestActiveInput from "getBestActiveInput" /* 4237 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import { Keyboard } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/quarantine/openQuarantineModeInfoModal.native.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/quarantine/openQuarantineModeInfoModal.native.tsx");
 
 export default function openQuarantineModeInfoModal() {
   Keyboard.dismiss();
@@ -18,13 +19,13 @@ export default function openQuarantineModeInfoModal() {
   obj = {
     importer() {
       return callback(paths[6])(paths[5], paths.paths).then((arg0) => {
-        let closure_0 = arg0.default;
+        closure_0 = arg0.default;
         return (arg0) => {
           const merged = Object.assign(arg0);
-          return outer1_4(closure_0, {});
+          return closure_1_4(closure_0, {});
         };
       });
     }
   };
-  AlertActionCreators.openLazy(obj);
+  _modDef4656.openLazy(obj);
 };

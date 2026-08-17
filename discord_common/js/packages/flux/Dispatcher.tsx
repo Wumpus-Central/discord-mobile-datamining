@@ -1,14 +1,18 @@
 // discord_common/js/packages/flux/Dispatcher.tsx
-import set from "isTracing";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
+import log from "log" /* 4 */;
+import _modDef38 from "module_38" /* 38 */;
+import loggerDefault from "logger" /* 593 */;
+import addAll from "add" /* 594 */;
+import logger2 from "logger" /* 651 */;
+import DepGraph from "DepGraph" /* 656 */;
+import set from "set" /* 2 */;
 import { mark } from "../../shared/utils/profiling.tsx";
-import { logger } from "Emitter.tsx";
 
 function setDisplayName(arg0, displayName) {
   arg0.displayName = displayName;
 }
 let set = new Set(["APP_STATE_UPDATE", "CLEAR_CACHES", "CONNECTION_CLOSED", "CONNECTION_OPEN", "CONNECTION_RESUMED", "LOGIN_SUCCESS", "LOGIN", "LOGOUT", "MESSAGE_SEND_FAILED", "PUSH_NOTIFICATION_CLICK", "RESET_SOCKET", "SESSION_START", "UPLOAD_FAIL", "WRITE_CACHES"]);
-const logger = new require("logger").Logger("Flux");
+const logger = new log.Logger("Flux");
 class ActionHandlersGraph {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -37,11 +41,11 @@ prototype["register"] = function register(name, obj, storeDidChange, band, token
     const _Number = Number;
     isIntegerResult = Number.isInteger(band);
   }
-  00038__(isIntegerResult, "band must be a non-negative integer.");
+  _modDef38(isIntegerResult, "band must be a non-negative integer.");
   obj = {};
   for (const key10024 in arg1) {
     let tmp9 = key10024;
-    let require = arg1[key10024];
+    closure_0 = arg1[key10024];
     function wrapper(arg0) {
       return callback(arg0);
     }
@@ -148,7 +152,7 @@ prototype["_computeOrderedCallbackTokens"] = function _computeOrderedCallbackTok
       });
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Dependency Cycle Found: " + mapped.join(" -> "));
+      error = new Error("Dependency Cycle Found: " + mapped.join(" -> "));
       throw error;
     } else {
       throw tmp2;
@@ -208,16 +212,16 @@ prototype2["isDispatching"] = function isDispatching() {
 };
 prototype2["dispatch"] = function dispatch(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0, arg1) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const _self = arg1;
     const _waitQueue = _self._waitQueue;
     _waitQueue.push(() => {
       try {
         if (null == lib2.functionCache[lib.type]) {
           tmp.functionCache[tmp2.type] = (type) => closure_1._dispatchWithDevtools(type);
-          outer2_7(tmp.functionCache[tmp2.type], "dispatch_" + tmp2.type);
+          closure_2_7(tmp.functionCache[tmp2.type], "dispatch_" + tmp2.type);
         }
         const functionCache = tmp.functionCache;
         functionCache[lib.type](lib);
@@ -230,9 +234,7 @@ prototype2["dispatch"] = function dispatch(arg0) {
   });
 };
 prototype2["dispatchForStoreTest"] = function dispatchForStoreTest(type) {
-  let actionHandler;
-  let storeDidChange;
-  00038__(false, "dispatchForTest cannot be called in: production");
+  _modDef38(false, "dispatchForTest cannot be called in: production");
   for (const item10019 of orderedActionHandlers) {
     ({ actionHandler, storeDidChange } = item10019);
     let tmp3 = item10019.name === arg1;
@@ -254,7 +256,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
       self._processingWaitQueue = true;
       let tmp4 = importDefault;
       let tmp6 = dependencyMap;
-      logger.isDispatching = true;
+      loggerDefault.isDispatching = true;
       let num2 = 0;
       if (self._waitQueue.length > 0) {
         const sum = num2 + 1;
@@ -271,10 +273,10 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
           tmp4 = importDefault;
           let tmp11 = dependencyMap;
           tmp6 = dependencyMap;
-          let obj = logger;
+          let obj = loggerDefault;
           let emitResult = obj.emit();
         }
-        const serializeResult = importAll(594).serialize();
+        const serializeResult = addAll.serialize();
         logger.error("LastFewActions", serializeResult);
         const _sentryUtils = self._sentryUtils;
         if (_sentryUtils != null) {
@@ -291,7 +293,7 @@ prototype2["flushWaitQueue"] = function flushWaitQueue() {
       tmp4(593).isDispatching = false;
     } catch (tmp25) {
       tmp2._processingWaitQueue = false;
-      logger.isDispatching = false;
+      loggerDefault.isDispatching = false;
       throw tmp25;
     }
   }
@@ -313,7 +315,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
   const tmp8 = _require;
   _mark.mark(type.type);
   const obj = _mark;
-  importAll(594).add(type.type);
+  addAll.add(type.type);
   const actionLogger = this.actionLogger;
   const logResult1 = actionLogger.log(type, (arg0) => {
     try {
@@ -338,7 +340,7 @@ prototype2["_dispatchWithLogging"] = function _dispatchWithLogging(type) {
 prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
   let sum;
   const self = this;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   for (const item10008 of tmp) {
     if (item10008(arg0)) {
       let tmp2 = obj;
@@ -348,7 +350,7 @@ prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
     }
   }
   const orderedActionHandlers = self._actionHandlers.getOrderedActionHandlers(closure_0);
-  let c3 = 0;
+  c3 = 0;
   let num = 0;
   if (0 < orderedActionHandlers.length) {
     do {
@@ -362,9 +364,10 @@ prototype2["_dispatch"] = function _dispatch(closure_0, arg1) {
       num = sum;
     } while (sum < length);
   }
+  closure_4 = tmp5;
   if (null != self._subscriptions[closure_0.type]) {
     arg1("__subscriptions", () => {
-      const item = tmp5.forEach((arg0) => arg0(closure_0));
+      const item = closure_4.forEach((arg0) => arg0(closure_0));
     });
   }
 };
@@ -381,7 +384,7 @@ prototype2["subscribe"] = function subscribe(arg0, arg1) {
   let obj = this._subscriptions[arg0];
   if (null == obj) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     this._subscriptions[arg0] = set;
     obj = set;
   }

@@ -1,17 +1,17 @@
 // discord_app/modules/devtools/native/components/DevToolsLazy.tsx
-import jsxProd from "jsxProd";
-import noop from "noop";
-import { NativeModules } from "get ActivityIndicator";
-import init from "init";
-import initialize from "initialize";
-import { jsx } from "jsxProd";
-import set from "set";
-import set from "get ActivityIndicator";
+import enforcingDefault from "enforcing" /* 13945 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "noop" /* 19 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "init" /* 7472 */;
+import closure_6 from "initialize" /* 7471 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
 
 const require = arg1;
 if (set.isAndroid()) {
-  let keyModifierControl = require("enforcing").getConstants().keyModifierControl;
-  const importDefaultResult = require("enforcing");
+  let keyModifierControl = enforcingDefault.getConstants().keyModifierControl;
+  const importDefaultResult = enforcingDefault;
 } else {
   keyModifierControl = NativeModules.KeyCommandsView.keyModifierControl;
 }
@@ -50,7 +50,7 @@ set = {
             } else {
               paths = 1;
               v0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = v0(paths[9])(paths[8], paths.paths);
               return obj1;
             }
@@ -79,16 +79,16 @@ let items = [set];
 let result = set.fileFinishedImporting("modules/devtools/native/components/DevToolsLazy.tsx");
 
 export default function DevToolsLazy() {
-  const items = [init];
+  items = [closure_5];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => isDeveloper.isDeveloper);
   const obj = stateFromStores(589);
   const tmp = stateFromStores;
-  const items1 = [initialize];
+  const items1 = [closure_6];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => showDevWidget.showDevWidget);
   const effect = React.useEffect(() => {
     if (obj.isIOS()) {
-      outer1_5.addChangeListener(() => {
-        const NSUserDefaultsBridge = outer1_4.NSUserDefaultsBridge;
+      closure_1_5.addChangeListener(() => {
+        const NSUserDefaultsBridge = closure_1_4.NSUserDefaultsBridge;
         if (NSUserDefaultsBridge != null) {
           const result = NSUserDefaultsBridge.setIsDiscordDeveloper(closure_0);
         }

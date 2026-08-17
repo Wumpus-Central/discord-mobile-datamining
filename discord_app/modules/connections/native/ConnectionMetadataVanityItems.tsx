@@ -1,25 +1,22 @@
 // discord_app/modules/connections/native/ConnectionMetadataVanityItems.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import OperatorTypes from "OperatorTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { registerAsset } from "../../../../_runtime/10773_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10774_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { shortenAndLocalizeNumber } from "../../../utils/NumberUtils.tsx";
-import { officialApplicationIds } from "../ConnectionsUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
+import Text from "Text" /* 4734 */;
+import officialApplicationIds from "officialApplicationIds" /* 5224 */;
+import registerAssetDefault from "registerAsset" /* 10773 */;
+import registerAssetDefault2 from "registerAsset" /* 10774 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import OperatorTypes from "OperatorTypes" /* 5225 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function PaypalVanityTag(style) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const obj = { style: items, label: null, textStyle: null };
   items = [tmp.paypalVerifiedTag, style.style];
   const intl = getSystemLocale.intl;
@@ -28,9 +25,6 @@ function PaypalVanityTag(style) {
   return callback(VanityTag, obj, constants.PAYPAL_VERIFIED);
 }
 function VanityMetric(label) {
-  let count;
-  let percent;
-  let style;
   label = label.label;
   ({ count, style, percent } = label);
   let obj = shortenAndLocalizeNumber;
@@ -52,17 +46,14 @@ function VanityMetric(label) {
     obj[0] = sum;
     children = intl2.format(label, obj);
   }
-  style = [createCacheKey().connectedAccountVanityMetadata, ];
+  style = [callback3().connectedAccountVanityMetadata, ];
   style[1] = style;
   return callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style, children });
 }
 function VanityItem(style) {
-  let imageAlt;
-  let imageSrc;
-  let label;
   style = style.style;
   ({ label, imageSrc, imageAlt } = style);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: items, children: null };
   items = [, , ];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataItem: arr[1] } = tmp);
@@ -73,43 +64,37 @@ function VanityItem(style) {
   return callback2(View, obj);
 }
 function VanityTag(arg0) {
-  let label;
-  let style;
-  let textStyle;
   ({ label, style, textStyle } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const items = [, , ];
   ({ connectedAccountVanityMetadata: arr[0], connectedAccountVanityMetadataTag: arr[1] } = tmp);
   items[2] = style;
   return callback(View, { style: items, children: callback(Text.Text, { variant: "text-xs/normal", color: "text-muted", style: textStyle, children: label }) });
 }
 function VanityDate(arg0) {
-  let date;
-  let label;
-  let locale;
-  let style;
   ({ date, label, locale, style } = arg0);
   let obj = { variant: "text-xs/normal", color: "text-muted", style: items, children: null };
-  items = [createCacheKey().connectedAccountVanityMetadata, style];
+  items = [callback3().connectedAccountVanityMetadata, style];
   const intl = getSystemLocale.intl;
   obj = { value: null, name: null };
-  const tmp = createCacheKey();
+  const tmp = callback3();
   obj[0] = officialApplicationIds.getCreatedAtDate(date, locale);
   obj[1] = label;
   obj[3] = intl.format(getSystemLocale.t.HLoinF, obj);
   return callback(Text.Text, obj);
 }
+noopAll;
 ({ MetadataFields: c4, MetadataItemTypes: c5 } = OperatorTypes);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { connectedAccountVanityMetadata: { marginTop: 4, paddingRight: 8 }, connectedAccountVanityMetadataItem: { flexDirection: "row", alignItems: "center" }, connectedAccountVanityMetadataItemIcon: { height: 18, width: 18, marginRight: 8 }, connectedAccountVanityMetadataTag: null, paypalVerifiedTag: null, paypalVerifiedTagText: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.md, paddingHorizontal: 8, paddingVertical: 1, marginRight: 8 };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { backgroundColor: require("Themes").colors.STATUS_POSITIVE_BACKGROUND };
-let obj1 = { backgroundColor: require("Themes").colors.STATUS_POSITIVE_BACKGROUND };
-createCacheKey[5] = { color: require("Themes").colors.WHITE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: require("Themes").colors.WHITE };
-let result = require("OperatorTypes").fileFinishedImporting("modules/connections/native/ConnectionMetadataVanityItems.tsx");
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
+let obj1 = { backgroundColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
+createCacheKey[5] = { color: ThemesDefault.colors.WHITE };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { color: ThemesDefault.colors.WHITE };
+let result = require("set").fileFinishedImporting("modules/connections/native/ConnectionMetadataVanityItems.tsx");
 
 export const generateRedditMetadataItems = function generateRedditMetadataItems(metadata, metadataItem) {
   let num = metadata[constants.REDDIT_TOTAL_KARMA];
@@ -228,19 +213,19 @@ export const generateSteamMetadataItems = function generateSteamMetadataItems(me
     obj = { count: null };
     obj[0] = NumberResult1;
     obj[1] = intl.format(getSystemLocale.t.Y88M5x, obj);
-    obj[2] = registerAsset;
+    obj[2] = registerAssetDefault;
     const intl2 = getSystemLocale.intl;
     obj[3] = intl2.string(getSystemLocale.t.HKUEZo);
     items.push(callback(VanityItem, obj, tmp2.STEAM_ITEM_COUNT_DOTA2));
   }
   if (NumberResult2 > -1) {
-    const obj1 = { style: null, label: null, imageSrc: null, imageAlt: null };
+    obj1 = { style: null, label: null, imageSrc: null, imageAlt: null };
     obj1[0] = tmp;
     const intl3 = getSystemLocale.intl;
     const obj2 = { count: null };
     obj2[0] = NumberResult2;
     obj1[1] = intl3.format(getSystemLocale.t.Y88M5x, obj2);
-    obj1[2] = registerAsset;
+    obj1[2] = registerAssetDefault2;
     const intl4 = getSystemLocale.intl;
     obj1[3] = intl4.string(getSystemLocale.t.C8p1Sh);
     items.push(callback(VanityItem, obj1, tmp2.STEAM_ITEM_COUNT_TF2));
@@ -318,7 +303,7 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
     items.push(callback(VanityMetric, obj, tmp2.TIKTOK_LIKES_COUNT));
   }
   if ("1" === metadata[constants.TIKTOK_VERIFIED]) {
-    const obj1 = { style: null, label: null };
+    obj1 = { style: null, label: null };
     obj1[0] = tmp;
     const intl = getSystemLocale.intl;
     obj1[1] = intl.string(getSystemLocale.t.QHHwRR);
@@ -327,14 +312,14 @@ export const generateTikTokMetadataItems = function generateTikTokMetadataItems(
   return items;
 };
 export const generateRoleConnectionMetadataItems = function generateRoleConnectionMetadataItems(applicationRoleConnection) {
-  let closure_0 = applicationRoleConnection;
+  closure_0 = applicationRoleConnection;
   const items = [];
   const keys = Object.keys(applicationRoleConnection.metadata);
   if (null != applicationRoleConnection.application_metadata) {
     const _Object = Object;
     if (0 !== Object.keys(applicationRoleConnection.application_metadata).length) {
       if (0 !== keys.length) {
-        const sortByResult = apply.sortBy(keys, (arg0) => {
+        const sortByResult = applyDefault.sortBy(keys, (arg0) => {
           const application_metadata = applicationRoleConnection.application_metadata;
           let name;
           if (application_metadata != null) {
@@ -391,7 +376,7 @@ export const generateRoleConnectionMetadataItems = function generateRoleConnecti
           } catch (err) {
           }
         }
-        const obj4 = apply;
+        const obj4 = applyDefault;
       }
     }
   }

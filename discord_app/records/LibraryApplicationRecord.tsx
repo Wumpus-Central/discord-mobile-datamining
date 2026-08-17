@@ -1,13 +1,12 @@
 // discord_app/records/LibraryApplicationRecord.tsx
-import "toJS";
-import addApplication from "addApplication";
-import createFromServer from "createFromServer";
-import ME from "ME";
-import { t } from "../../_runtime/03975_t.js";
+import hasFlagAll from "hasFlag" /* 1403 */;
+import toJSDefault from "toJS" /* 1931 */;
+import tDefault from "t" /* 3975 */;
+import closure_3 from "addApplication" /* 4478 */;
+import closure_4 from "createFromServer" /* 4514 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
+toJSDefault;
 ({ LibraryApplicationFlags: c5, Distributors: closure_6, SKUTypes: error } = ME);
 let LibraryApplicationRecord;
 class LibraryApplicationRecord extends tmp2 {
@@ -24,7 +23,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   let obj = { id: id.application.id, branchId: id.branch_id, entitlements: null, branch: null, flags: null, createdAt: null, sku: null };
   if (null != id.entitlements) {
     let entitlements = id.entitlements;
-    let mapped = entitlements.map((arg0) => createFromServer.createFromServer(arg0));
+    let mapped = entitlements.map((arg0) => closure_4.createFromServer(arg0));
   } else {
     mapped = [];
   }
@@ -33,7 +32,7 @@ LibraryApplicationRecord["createFromServer"] = function createFromServer(id) {
   obj = { id: id.sku.id, type: id.sku.type, premium: id.sku.premium, preorderReleaseAt: null, preorderApproximateReleaseDate: null };
   let entitlementsResult = null;
   if (null != id.sku.preorder_release_at) {
-    entitlements = t;
+    entitlements = tDefault;
     entitlementsResult = entitlements(id.sku.preorder_release_at);
   }
   obj[3] = entitlementsResult;
@@ -78,7 +77,7 @@ prototype["getFlags"] = function getFlags() {
   return this.flags;
 };
 prototype["hasFlag"] = function hasFlag(arg0) {
-  return importAll(1403).hasFlag(this.flags, arg0);
+  return hasFlagAll.hasFlag(this.flags, arg0);
 };
 prototype["isHidden"] = function isHidden() {
   return this.hasFlag(closure_5.HIDDEN);
@@ -99,10 +98,10 @@ prototype["isMasterBranch"] = function isMasterBranch() {
 prototype["isDiscordApplication"] = function isDiscordApplication() {
   return true;
 };
-prototype["isEntitled"] = function isEntitled(currentUser, createFromServer) {
+prototype["isEntitled"] = function isEntitled(currentUser, closure_4) {
   const self = this;
-  let closure_1 = currentUser;
-  let closure_0 = createFromServer;
+  closure_1 = currentUser;
+  closure_0 = closure_4;
   let someResult = this.isTestMode;
   if (!someResult) {
     const entitlements = this.entitlements;
@@ -154,6 +153,6 @@ prototype["getAnalyticsData"] = function getAnalyticsData() {
   obj[3] = self.getDistributor();
   return obj;
 };
-const result = require("createFromServer").fileFinishedImporting("records/LibraryApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/LibraryApplicationRecord.tsx");
 
 export default LibraryApplicationRecord;

@@ -1,13 +1,15 @@
 // discord_app/modules/libdiscore/stores/LibdiscoreStore.tsx
-import { Store } from "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import { Store } from "initialize" /* 589 */;
 
-let require = arg1;
+const require = arg1;
 function identity(arg0) {
   return arg0;
 }
 let closure_3 = Symbol("version");
 let closure_4 = Object.freeze({});
-let c5 = new require("deepEqualImpl")("LibdiscoreStore");
+let closure_5 = new timestampDefault("LibdiscoreStore");
 class SecondaryIndexMetadata {
   constructor(arg0, arg1, arg2, arg3, arg4) {
     obj = Object.create(new.target.prototype);
@@ -263,13 +265,13 @@ prototype3["mapPartitions"] = function mapPartitions(toSerializedPartition) {
 };
 prototype3["memoizedPartition"] = function memoizedPartition(arg0) {
   const self = this;
-  let closure_1 = arg0;
+  closure_1 = arg0;
   let tmp = arg1;
-  let closure_2 = Symbol();
+  closure_2 = Symbol();
   if (undefined === arg1) {
     tmp = arg0("", {});
   }
-  const require = tmp;
+  closure_0 = tmp;
   return (arg0) => {
     if (null == self.state.root[arg0]) {
       return closure_0;
@@ -289,14 +291,14 @@ prototype3["memoizedPartition"] = function memoizedPartition(arg0) {
 };
 prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partition, arg1, arg2) {
   const self = this;
-  let closure_1 = partition;
-  let closure_2 = arg1;
+  closure_1 = partition;
+  closure_2 = arg1;
   let tmp = arg2;
-  let closure_3 = Symbol();
+  closure_3 = Symbol();
   if (undefined === arg2) {
     tmp = arg1(self);
   }
-  const require = tmp;
+  closure_0 = tmp;
   return () => {
     if (null == self.state.root[closure_1]) {
       return closure_0;
@@ -316,8 +318,8 @@ prototype3["memoizedSinglePartition"] = function memoizedSinglePartition(partiti
 };
 prototype3["memoized"] = function memoized(arg0) {
   const self = this;
-  let closure_1 = arg0;
-  let closure_0 = Symbol();
+  closure_1 = arg0;
+  closure_0 = Symbol();
   return () => {
     const memoized = self.state.derived.memoized;
     let tmp3 = memoized[closure_0];
@@ -411,7 +413,7 @@ prototype3["updateRecord"] = function updateRecord(partitionKey, clusteringKey, 
   if (null == self.state.root[partitionKey]) {
     const _Error2 = Error;
     const _HermesInternal2 = HermesInternal;
-    const error = new Error("Partition " + partitionKey + " does not exist");
+    error = new Error("Partition " + partitionKey + " does not exist");
     throw error;
   } else if (null == self.state.root[partitionKey].root[clusteringKey]) {
     const _Error = Error;
@@ -555,20 +557,20 @@ class LibdiscoreStore extends Store {
     if (arg1 === undefined) {
       str = "typescript";
     }
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {};
     if ("typescript" === str) {
       tmp = global;
       tmp2 = global;
       for (const key10008 in arg0) {
         tmp11 = key10008;
-        c0 = arg0[key10008];
+        closure_0 = arg0[key10008];
         fn = (arg0) => {
-          if (_undefined.wrappedState == null) {
+          if (lib.wrappedState == null) {
             obj.wrappedState = obj.stateWrapper();
           }
-          _undefined(arg0, _undefined.wrappedState);
-          if (_undefined._nextVersion === _undefined._nextVersion) {
+          lib(arg0, lib.wrappedState);
+          if (lib._nextVersion === lib._nextVersion) {
             return false;
           }
         };
@@ -587,7 +589,7 @@ class LibdiscoreStore extends Store {
     tmp3.shadowDatabases = null;
     tmp3.shadowRecordCreators = null;
     tmp3.dualReadValidationDisabled = false;
-    c0 = tmp3;
+    closure_0 = tmp3;
     tmp3.mode = str;
     tmp3.state = { databases: {} };
     if ("typescript-libdiscore-dual-read" === str) {
@@ -615,7 +617,7 @@ prototype4["connectWithLibdiscore"] = function connectWithLibdiscore(FLUX_API) {
   const self = this;
   if ("typescript" === this.mode) {
     const _Error = Error;
-    const error = new Error("connectWithLibdiscore should not be called in TypeScript mode.");
+    error = new Error("connectWithLibdiscore should not be called in TypeScript mode.");
     throw error;
   } else {
     const obj = { storeName: null, databases: null };
@@ -634,26 +636,25 @@ prototype4["connectWithLibdiscore"] = function connectWithLibdiscore(FLUX_API) {
 prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
   let self = this;
   self = this;
-  let closure_2 = Symbol("didValidatePartition");
-  let closure_0 = { root: {}, derived: { length: 0, memoized: {} } };
+  closure_2 = Symbol("didValidatePartition");
+  closure_0 = { root: {}, derived: { length: 0, memoized: {} } };
   this.addChangeListener(() => {
-    let self;
     const shadowDatabases = self.shadowDatabases;
     if (null != shadowDatabases) {
       if (!tmp.dualReadValidationDisabled) {
         for (const key10013 in tmp.state.databases) {
           let tmp8 = key10013;
-          let obj2 = self;
-          let obj3 = self.state.databases[key10013];
+          let obj2 = _self;
+          let obj3 = _self.state.databases[key10013];
           let obj4 = shadowDatabases[key10013];
           if (null == obj4) {
-            let tmp6 = outer1_5;
+            let tmp6 = closure_1_5;
             let _HermesInternal2 = HermesInternal;
-            let warnResult = outer1_5.warn("Shadow database " + key10013 + " not found for dual-read validation");
+            let warnResult = closure_1_5.warn("Shadow database " + key10013 + " not found for dual-read validation");
             continue;
           } else {
             let callback = obj3.getAllPartitions();
-            self = obj4.getAllPartitions();
+            let _self = obj4.getAllPartitions();
             let tmp3 = callback;
             let tmp4 = table;
             let obj = callback(table[3]);
@@ -677,9 +678,9 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
                   let tmp14 = tmp8[tmp4];
                   let tmp15 = tmp14;
                   let tmp16 = tmp6;
-                  let tmp17 = outer1_2;
-                  let tmp18 = tmp6.derived.memoized[outer1_2];
-                  let tmp20 = tmp14.derived.memoized[outer1_2];
+                  let tmp17 = closure_1_2;
+                  let tmp18 = tmp6.derived.memoized[closure_1_2];
+                  let tmp20 = tmp14.derived.memoized[closure_1_2];
                   if (null == tmp18) {
                     let tmp23 = tmp6;
                     let tmp24 = tmp14;
@@ -693,8 +694,8 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
                   }
                 } else {
                   let tmp9 = tmp6;
-                  let tmp10 = outer1_0;
-                  let tmp11 = arg0(tmp6, outer1_0);
+                  let tmp10 = table;
+                  let tmp11 = arg0(tmp6, table);
                 }
                 continue;
               }
@@ -712,8 +713,8 @@ prototype4["setupDualReadValidation"] = function setupDualReadValidation() {
                   let tmp29 = table2;
                   let tmp30 = table2;
                   let tmp31 = item10064;
-                  let tmp32 = outer1_0;
-                  let tmp33 = arg0(outer1_0, table2[tmp26]);
+                  let tmp32 = table;
+                  let tmp33 = arg0(table, table2[tmp26]);
                 }
                 continue;
               }
@@ -820,8 +821,6 @@ prototype4["markDirty"] = function markDirty() {
   this._nextVersion = this._nextVersion + 1;
 };
 prototype4["executeDatabaseChange"] = function executeDatabaseChange(arg0, arg1) {
-  let databaseName;
-  let opcodes;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -837,7 +836,7 @@ prototype4["executeDatabaseChange"] = function executeDatabaseChange(arg0, arg1)
   if (null == databases[databaseName]) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Database " + databaseName + " does not exist");
+    error = new Error("Database " + databaseName + " does not exist");
     throw error;
   } else {
     const value = obj.get(databaseName);
@@ -891,8 +890,8 @@ prototype4["nextVersion"] = function nextVersion() {
   this._nextVersion = +this._nextVersion + 1;
   return +this._nextVersion;
 };
-let tmp2 = new require("deepEqualImpl")("LibdiscoreStore");
-let result = require("dispatcher").fileFinishedImporting("modules/libdiscore/stores/LibdiscoreStore.tsx");
+let tmp2 = new timestampDefault("LibdiscoreStore");
+let result = require("set").fileFinishedImporting("modules/libdiscore/stores/LibdiscoreStore.tsx");
 
 export { KVDatabase };
 export { KKVDatabase };

@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/findActivityWithMostParticipants.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
+import closure_0 from "markAllUserIdListsStale" /* 4030 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/findActivityWithMostParticipants.tsx");
 
@@ -19,8 +19,6 @@ export default function findActivityWithMostParticipants(arr) {
   }
 };
 export const findActivityWithMostNonBlockedOrIgnoredParticipants = function findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel) {
-  let markAllUserIdListsStale;
-  let closure_1;
   if (0 === embeddedActivitiesForChannel.length) {
     return null;
   } else if (1 === length) {
@@ -30,14 +28,14 @@ export const findActivityWithMostNonBlockedOrIgnoredParticipants = function find
     const items1 = [];
     HermesBuiltin.arraySpread(embeddedActivitiesForChannel[0].userIds, 0);
     items[1] = items1.map((id) => !blockedOrIgnored.isBlockedOrIgnored(id)).length;
-    [markAllUserIdListsStale, closure_1] = items;
+    [closure_0, closure_1] = items;
     const item = embeddedActivitiesForChannel.forEach((userIds) => {
       const items = [...userIds.userIds];
       const length = items.filter((id) => !userIds.isBlockedOrIgnored(id)).length;
       if (length > length) {
-        let markAllUserIdListsStale = userIds;
+        closure_0 = userIds;
       }
     });
-    return markAllUserIdListsStale;
+    return closure_0;
   }
 };

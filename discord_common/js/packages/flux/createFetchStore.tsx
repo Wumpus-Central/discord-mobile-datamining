@@ -1,15 +1,12 @@
 // discord_common/js/packages/flux/createFetchStore.tsx
-import closure_3 from "keys";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import keys from "keys";
-import { fails } from "../backoff/Backoff.tsx";
-import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
+import failsDefault from "fails" /* 584 */;
+import shallowEqual from "shallowEqual" /* 643 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import keys from "keys" /* 644 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function areStatesEqual(items, current) {
   if (Array.isArray(items)) {
     const _Array = Array;
@@ -33,11 +30,10 @@ function defaultRetryableErrors(status) {
   return tmp;
 }
 function defaultBackoff() {
-  return new fails();
+  return new failsDefault();
 }
 ({ useCallback: c5, useEffect: closure_6, useState: error } = noop);
 const SymbolResult = Symbol("NO_DATA");
-const metroImportAll = SymbolResult;
 class HTTPResponseError extends Error {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -54,24 +50,15 @@ prototype["setRetryAfter"] = function setRetryAfter(retryAfter) {
   this.retryAfter = retryAfter;
 };
 let closure_13 = keys.create(() => {
-  const obj = { isLoading: false, error: null, backoff: null, lastSuccessAt: null, failureLockedUntil: null };
-  obj[2] = new fails();
+  const obj = { isLoading: false, error: null, backoff: new failsDefault(), lastSuccessAt: null, failureLockedUntil: null };
   return obj;
 });
-let result = require("noop").fileFinishedImporting("../discord_common/js/packages/flux/createFetchStore.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/createFetchStore.tsx");
 
 export const NO_DATA = SymbolResult;
 export const createFetchStore = function createFetchStore(importDefaultResult, initialize) {
-  let HTTPResponseError;
-  let areStatesEqual;
-  let closure_3;
-  let _slicedToArray;
-  let closure_5;
-  let dependencyMap;
-  let importDefault;
-  let retryConfig;
-  let closure_0 = importDefaultResult;
-  ({ getQueryId: importDefault, get: dependencyMap, load: closure_3, getIsLoading: _slicedToArray, getError: closure_5, retryConfig } = initialize);
+  closure_0 = importDefaultResult;
+  ({ getQueryId: importDefault, get: dependencyMap, load: closure_3, getIsLoading: closure_4, getError: closure_5, retryConfig } = initialize);
   if (retryConfig === undefined) {
     retryConfig = {};
   }
@@ -96,10 +83,10 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       let obj = map;
       let value = map.get(arg0);
       if (null == value) {
-        obj = importDefaultResult(outer1_2[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
+        obj = importDefaultResult(closure_1_2[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
         const result = obj.set(arg0, obj);
         value = obj;
-        const obj2 = importDefaultResult(outer1_2[5]);
+        const obj2 = importDefaultResult(closure_1_2[5]);
       }
       return value;
     }
@@ -116,16 +103,14 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
   }
   function _loader() {
     const self = this;
-    const tmp = outer1_3((arg0) => {
-      let closure_0 = arg0;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+    const tmp = closure_1_3((arg0) => {
+      closure_0 = arg0;
+      c6 = 0;
+      let failureLockedUntil = 0;
+      c5 = 0;
       const iter = (function*(arg0) {
-        let isLoading;
-        let refetch;
-        if (failureLockedUntil === 2) {
-          failureLockedUntil = 3;
+        if (c7 === 2) {
+          c7 = 3;
           HermesBuiltin.throwTypeError();
         } else if (tmp6 === 3) {
           if (arg0 === 1) {
@@ -139,13 +124,13 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
           }
         } else {
           try {
-            failureLockedUntil = 2;
+            c7 = 2;
             if (0 === c6) {
               if (arg0 === 1) {
-                failureLockedUntil = 3;
+                c7 = 3;
                 throw arg1;
               } else if (arg0 === 2) {
-                failureLockedUntil = 3;
+                c7 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
@@ -163,29 +148,29 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                 }
                 useStoreState = queryId.useStoreState;
                 if (useStoreState === undefined) {
-                  useStoreState = outer1_12(queryId);
+                  useStoreState = closure_1_12(queryId);
                 }
-                let c4;
-                let c5;
+                c4 = undefined;
+                c5 = undefined;
                 c6 = undefined;
-                failureLockedUntil = undefined;
+                c7 = undefined;
                 let callback;
                 c6 = 1;
-                failureLockedUntil = 1;
+                c7 = 1;
                 return { value: "ct", done: true };
               }
             } else {
               if (1 === tmp7) {
                 if (arg0 === 1) {
-                  failureLockedUntil = 3;
+                  c7 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  failureLockedUntil = 3;
-                  const obj1 = { value: null, done: true };
+                  c7 = 3;
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
-                  const outer2_4 = outer2_3.getState().backoff;
+                  backoff = closure_2_3.getState().backoff;
                   let applyResult;
                   if (c4 != null) {
                     const items = [];
@@ -203,44 +188,44 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                         const items1 = [];
                         HermesBuiltin.arraySpread(isLoading, 0);
                         c6 = HermesBuiltin.apply(items1, undefined);
-                        if (c6 === outer1_8) {
-                          failureLockedUntil = 3;
+                        if (c6 === closure_1_8) {
+                          c7 = 3;
                           return { value: "HermesInternal", done: "HermesInternal" };
                         } else {
                           if (null != c6) {
-                            if (!(function isCachedDataStale(useStoreState, outer1_9) {
-                              if (null == outer1_9) {
+                            if (!(function isCachedDataStale(useStoreState, closure_1_9) {
+                              if (null == closure_1_9) {
                                 return false;
                               } else {
                                 const lastSuccessAt = useStoreState.getState().lastSuccessAt;
                                 let tmp2 = null == lastSuccessAt;
                                 if (!tmp2) {
                                   const _Date = Date;
-                                  tmp2 = Date.now() - lastSuccessAt > 1000 * outer1_9;
+                                  tmp2 = Date.now() - lastSuccessAt > 1000 * closure_1_9;
                                 }
                                 return tmp2;
                               }
-                            })(useStoreState, outer1_9)) {
-                              failureLockedUntil = 3;
+                            })(useStoreState, closure_1_9)) {
+                              c7 = 3;
                               return { value: "HermesInternal", done: "HermesInternal" };
                             }
                           }
-                          failureLockedUntil = outer1_3.getState().failureLockedUntil;
+                          failureLockedUntil = closure_1_3.getState().failureLockedUntil;
                           if (null != failureLockedUntil) {
                             const _Date2 = Date;
                             if (Date.now() < failureLockedUntil) {
-                              failureLockedUntil = 3;
+                              c7 = 3;
                               return { value: "HermesInternal", done: "HermesInternal" };
                             }
                           }
                         }
                       }
                       c5 = 1;
-                      outer1_3.setState({ isLoading: true });
+                      closure_1_3.setState({ isLoading: true });
                       const items2 = [];
-                      HermesBuiltin.arraySpread(outer1_1, 0);
+                      HermesBuiltin.arraySpread(closure_1_1, 0);
                       c6 = 3;
-                      failureLockedUntil = 1;
+                      c7 = 1;
                       let obj2 = { value: null, done: false };
                       obj2[0] = HermesBuiltin.apply(items2, undefined);
                       return obj2;
@@ -295,7 +280,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                       }
                       const _Error = Error;
                       const _String = String;
-                      const error = new Error(String(c4));
+                      error = new Error(String(c4));
                       return error;
                     }
                   })(c4);
@@ -305,8 +290,8 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                   if (callback(callback)) {
                     if (c6 > c4.fails) {
                       const promise = new Promise((arg0, arg1) => {
-                        let closure_0 = arg0;
-                        let closure_1 = arg1;
+                        closure_0 = arg0;
+                        closure_1 = arg1;
                         retryAfter = retryAfter.retryAfter;
                         let tmp2;
                         if (typeof retryAfter === "number") {
@@ -324,7 +309,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                         _undefined.fail(() => { ... }, num2);
                       });
                       c6 = 4;
-                      failureLockedUntil = 1;
+                      c7 = 1;
                       const obj4 = { value: null, done: false };
                       obj4[0] = promise;
                       return obj4;
@@ -338,7 +323,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                   }
                 } else if (3 === tmp7) {
                   if (arg0 === 1) {
-                    failureLockedUntil = 3;
+                    c7 = 3;
                     throw arg1;
                   } else if (arg0 !== 2) {
                     c4.succeed();
@@ -349,26 +334,26 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                     c5 = 0;
                   }
                 } else if (arg0 === 1) {
-                  failureLockedUntil = 3;
+                  c7 = 3;
                   throw arg1;
                 } else if (arg0 === 2) {
-                  failureLockedUntil = 3;
+                  c7 = 3;
                   obj = { value: null, done: true };
                   obj[0] = arg1;
                   return obj;
                 }
                 c5 = 0;
-                failureLockedUntil = 3;
+                c7 = 3;
                 const obj7 = { value: null, done: true };
                 obj7[0] = arg1;
                 return obj7;
               }
-              failureLockedUntil = 3;
+              c7 = 3;
             }
           } catch (tmp75) {
             c4 = tmp75;
             if (tmp4 === c5) {
-              failureLockedUntil = tmp2;
+              c7 = tmp2;
               throw tmp75;
             } else {
               c6 = tmp;
@@ -379,7 +364,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       iter.next();
       return iter;
     });
-    const _loader = tmp;
+    closure_14 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -392,12 +377,12 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     let items = [...arguments];
     let first;
     let callback;
-    let c2;
-    const tmp = outer1_4(backoff(items), 2);
+    c2 = undefined;
+    const tmp = closure_1_4(backoff(items), 2);
     first = tmp[0];
     let result = items === first;
     if (!result) {
-      let obj = importDefaultResult(outer1_2[3]);
+      let obj = importDefaultResult(closure_1_2[3]);
       result = obj.areArraysShallowEqual(items, first);
     }
     if (!result) {
@@ -415,44 +400,44 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     } else {
       value = map.get(tmp9);
       if (null == value) {
-        obj = importDefaultResult(outer1_2[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
+        obj = importDefaultResult(closure_1_2[5]).create(() => ({ isLoading: false, error: null, backoff: callback(), lastSuccessAt: null, failureLockedUntil: null }));
         const result1 = obj2.set(tmp9, obj);
         value = obj;
-        const obj3 = importDefaultResult(outer1_2[5]);
+        const obj3 = importDefaultResult(closure_1_2[5]);
       }
       obj2 = map;
     }
     c2 = value;
     const items2 = [first];
-    let stateFromStores = importDefaultResult(outer1_2[6]).useStateFromStores(tmp8, () => {
+    let stateFromStores = importDefaultResult(closure_1_2[6]).useStateFromStores(tmp8, () => {
       let applyResult;
-      if (outer1_4 != null) {
+      if (closure_1_4 != null) {
         const items = [];
         HermesBuiltin.arraySpread(first, 0);
         applyResult = HermesBuiltin.apply(items, undefined);
       }
       return applyResult;
     }, items2);
-    const obj4 = importDefaultResult(outer1_2[6]);
+    const obj4 = importDefaultResult(closure_1_2[6]);
     tmp7 = first;
     const valueResult = value((isLoading) => {
-      isLoading = null == _slicedToArray;
+      isLoading = null == closure_4;
       if (isLoading) {
         isLoading = isLoading.isLoading;
       }
       return isLoading;
     });
     const items3 = [first];
-    let stateFromStores1 = importDefaultResult(outer1_2[6]).useStateFromStores(tmp8, () => {
+    let stateFromStores1 = importDefaultResult(closure_1_2[6]).useStateFromStores(tmp8, () => {
       let applyResult;
-      if (outer1_5 != null) {
+      if (closure_1_5 != null) {
         const items = [];
         HermesBuiltin.arraySpread(first, 0);
         applyResult = HermesBuiltin.apply(items, undefined);
       }
       return applyResult;
     }, items3);
-    const obj5 = importDefaultResult(outer1_2[6]);
+    const obj5 = importDefaultResult(closure_1_2[6]);
     const valueResult1 = value((error) => {
       error = null;
       if (null == closure_5) {
@@ -461,14 +446,14 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       return error;
     });
     const items4 = [first];
-    const stateFromStores2 = importDefaultResult(outer1_2[6]).useStateFromStores(tmp8, () => _undefined(...first), items4, outer1_10);
+    const stateFromStores2 = importDefaultResult(closure_1_2[6]).useStateFromStores(tmp8, () => _undefined(...first), items4, closure_1_10);
     const items5 = [tmp9, first, value];
     num(() => {
-      outer1_13({ queryId: c1, args: first, useStoreState: c2 });
+      closure_1_13({ queryId: closure_1, args: first, useStoreState: c2 });
     }, items5);
     const items6 = [tmp9, first, value];
     let tmp22 = null;
-    const obj6 = importDefaultResult(outer1_2[6]);
+    const obj6 = importDefaultResult(closure_1_2[6]);
     if (stateFromStores2 !== retryableErrors) {
       tmp22 = stateFromStores2;
     }
@@ -481,16 +466,16 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
       stateFromStores = valueResult;
     }
     obj[2] = stateFromStores;
-    obj[3] = outer1_5(() => {
-      outer1_13({ queryId: c1, args: first, useStoreState: c2, refetch: true });
+    obj[3] = closure_1_5(() => {
+      closure_1_13({ queryId: closure_1, args: first, useStoreState: c2, refetch: true });
     }, items6);
     return obj;
   }
   map = new Map();
   useCfsHook.refetch = callback(() => {
-    let closure_0 = [...arguments];
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = [...arguments];
+    c3 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (c4 === 2) {
         c4 = 3;
@@ -519,7 +504,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               return obj;
             } else {
               let store = tmp5;
-              let closure_1 = tmp2;
+              closure_1 = tmp2;
               closure_1 = undefined;
               store = undefined;
               c3 = 1;
@@ -532,7 +517,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -540,7 +525,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               HermesBuiltin.arraySpread(closure_0, 0);
               closure_1 = HermesBuiltin.apply(items, undefined);
               store = callback(closure_1);
-              const backoff = store.getState().backoff;
+              backoff = store.getState().backoff;
               backoff.succeed();
               store.setState({ failureLockedUntil: null });
               const obj2 = { queryId: null, args: null, useStoreState: null, refetch: true };
@@ -575,9 +560,9 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     return iter;
   });
   useCfsHook.fetchMany = callback(() => {
-    let closure_0 = [...arguments];
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = [...arguments];
+    c2 = 0;
+    c3 = 0;
     const iter = (function*() {
       if (c3 === 2) {
         c3 = 3;
@@ -605,7 +590,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp2;
+              closure_1 = tmp2;
               c2 = 1;
               c3 = 1;
               return { value: "ct", done: true };
@@ -616,7 +601,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -627,7 +612,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                 const tmp = tmp2(...args);
                 let obj = { queryId: tmp, args, useStoreState: null };
                 if (null == tmp) {
-                  let value = outer1_13;
+                  let value = closure_1_13;
                 } else {
                   value = closure_11.get(tmp);
                   if (null == value) {
@@ -665,9 +650,9 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
     return iter;
   });
   useCfsHook.refetchMany = callback(() => {
-    let closure_0 = [...arguments];
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = [...arguments];
+    c2 = 0;
+    c3 = 0;
     const iter = (function*() {
       if (c3 === 2) {
         c3 = 3;
@@ -695,7 +680,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp2;
+              closure_1 = tmp2;
               c2 = 1;
               c3 = 1;
               return { value: "ct", done: true };
@@ -706,7 +691,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               throw arg1;
             } else if (arg0 === 2) {
               c3 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -716,7 +701,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
               obj2[0] = Promise.all(closure_0.map((args) => {
                 const tmp = tmp2(...args);
                 if (null == tmp) {
-                  let value = outer1_13;
+                  let value = closure_1_13;
                 } else {
                   let obj = closure_11;
                   value = closure_11.get(tmp);
@@ -728,7 +713,7 @@ export const createFetchStore = function createFetchStore(importDefaultResult, i
                     tmp2 = callback;
                   }
                 }
-                const backoff = value.getState().backoff;
+                backoff = value.getState().backoff;
                 backoff.succeed();
                 value.setState({ failureLockedUntil: null });
                 obj = { queryId: tmp, args, useStoreState: value, refetch: true };

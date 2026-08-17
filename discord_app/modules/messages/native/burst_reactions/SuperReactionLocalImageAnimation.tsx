@@ -1,15 +1,14 @@
 // discord_app/modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
-import { FadeOutLottieAnimation } from "FadeOutLottieAnimation.tsx";
+import noopAll from "noop" /* 19 */;
+import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
+import FadeOutLottieAnimationDefault from "FadeOutLottieAnimation" /* 7574 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("_generateAnimationSource").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionLocalImageAnimation.tsx");
 
 export default function SuperReactionLocalImageAnimation(arg0) {
-  let animationSource;
-  let localImageSource;
   let tmp = null;
   ({ localImageSource, animationSource } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
@@ -19,8 +18,8 @@ export default function SuperReactionLocalImageAnimation(arg0) {
     obj = { loop: true, source: null };
     obj[1] = superReactionAnimationSourceFromLocalImage;
     const merged1 = Object.assign(merged);
-    tmp = jsx(FadeOutLottieAnimation, { loop: true, source: null });
-    const tmp7 = FadeOutLottieAnimation;
+    tmp = jsx(FadeOutLottieAnimationDefault, { loop: true, source: null });
+    const tmp7 = FadeOutLottieAnimationDefault;
   }
   return tmp;
 };

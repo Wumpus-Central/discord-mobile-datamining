@@ -1,21 +1,20 @@
 // discord_app/modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx
-import "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getPreviewVideoAssetUrl } from "../../../../../activities/utils/getPreviewVideoAssetUrl.tsx";
-import { useEmbeddedActivityBackground } from "../../../../../activities/utils/useEmbeddedActivityBackground.tsx";
-import { useDefaultAppLauncherWidth } from "../../../hooks/useDefaultAppLauncherWidth.tsx";
+import noopAll from "noop" /* 19 */;
+import useDefaultAppLauncherWidth from "useDefaultAppLauncherWidth" /* 9567 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11232 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_7 = createCacheKey.createStyles({ mediaBackground: { backgroundColor: "black" } });
-const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/activity/HeroMedia.tsx");
 
 export default function HeroMedia(width) {
-  let applicationId;
-  let containerHeight;
   ({ applicationId, containerHeight } = width);
   const tmp = callback();
   width = { width: width.width }.width;
@@ -30,9 +29,9 @@ export default function HeroMedia(width) {
   }
   const diff = bound - 2 * DEFAULT_CONTENT_PADDING;
   const rounded = Math.floor(9 * diff / 16);
-  const tmp13 = useEmbeddedActivityBackground({ applicationId, size: diff, names: ["embedded_cover"] });
+  const tmp13 = useEmbeddedActivityBackgroundDefault({ applicationId, size: diff, names: ["embedded_cover"] });
   let tmp2Result = tmp2(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => useReducedMotion.useReducedMotion, []);
   tmp2Result = tmp2(7145);
   const getOrFetchApplication = tmp2Result.useGetOrFetchApplication(applicationId);
@@ -46,7 +45,7 @@ export default function HeroMedia(width) {
   }
   let tmp18 = null;
   if (null != prop1) {
-    tmp18 = getPreviewVideoAssetUrl(applicationId, prop.activity_preview_video_asset_id);
+    tmp18 = getPreviewVideoAssetUrlDefault(applicationId, prop.activity_preview_video_asset_id);
   }
   let tmp21Result = null;
   if (null != tmp18) {
@@ -72,7 +71,7 @@ export default function HeroMedia(width) {
         if (str3 == null) {
           str3 = "";
         }
-        const obj1 = { applicationName: null };
+        obj1 = { applicationName: null };
         obj1[0] = str3;
         obj[7] = intl.formatToPlainString(tmp2(1236).t["Af+EQD"], obj1);
         const items1 = [tmp.mediaBackground, , ];

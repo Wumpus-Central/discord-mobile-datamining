@@ -1,17 +1,17 @@
 // discord_app/utils/native/DeviceUtils.tsx
-import set from "set";
-import set from "enforcing";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceModule.tsx";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 671 */;
+import set from "set" /* 500 */;
 
 if (set.isAndroid()) {
-  const importDefaultResult = require("enforcing");
+  const importDefaultResult = enforcingDefault;
   let constants;
   if (importDefaultResult != null) {
     constants = importDefaultResult.getConstants();
   }
   let DCDDeviceManager = constants;
 } else {
-  DCDDeviceManager = require("get ActivityIndicator").NativeModules.DCDDeviceManager;
+  DCDDeviceManager = get_ActivityIndicator.NativeModules.DCDDeviceManager;
 }
 let c4 = null;
 const mediaPerformanceClass = "mediaPerformanceClass";
@@ -83,10 +83,10 @@ export const getDeviceMediaPerformanceClass = function getDeviceMediaPerformance
       tmp5 = null == value;
     }
     if (tmp5) {
-      mediaPerformanceClass2 = enforcing.getMediaPerformanceClass();
+      mediaPerformanceClass2 = enforcingDefault.getMediaPerformanceClass();
       const Storage2 = tmp(595).Storage;
       const result = Storage2.set(mediaPerformanceClass, mediaPerformanceClass2);
-      const obj2 = enforcing;
+      const obj2 = enforcingDefault;
     }
     tmp3 = mediaPerformanceClass2;
   }

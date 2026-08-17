@@ -1,33 +1,25 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset";
-import get_ActivityIndicator from "DISPLAY_NAME_STYLES_EFFECT_NAMES";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISPLAY_NAME_STYLES_EFFECT_NAMES } from "../hooks/useDisplayNameStylesEffectConfigs.tsx";
-import { messagesProxy } from "../intl/DisplayNameStyles.messages.js";
-import { DisplayNameStyleColorPreset } from "../types.tsx";
-import { AVERAGE_FONT_WIDTH_RATIO } from "UsernameWithEffects.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2693 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
+import DisplayNameStyleColorPreset from "DisplayNameStyleColorPreset" /* 9453 */;
+import DISPLAY_NAME_STYLES_EFFECT_NAMES from "DISPLAY_NAME_STYLES_EFFECT_NAMES" /* 9457 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function EffectTile(arg0) {
-  let effectId;
-  let onClick;
-  let selected;
-  let showNewDot;
-  let userId;
   ({ effectId, selected, showNewDot } = arg0);
   ({ userId, onClick } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const intl = getSystemLocale.intl;
   let OpWJ3f = DISPLAY_NAME_STYLES_EFFECT_NAMES.DISPLAY_NAME_STYLES_EFFECT_NAMES[effectId];
   if (OpWJ3f == null) {
-    OpWJ3f = messagesProxy.OpWJ3f;
+    OpWJ3f = messagesProxyDefault.OpWJ3f;
   }
   const stringResult = intl.string(OpWJ3f);
   let obj = { onPress: onClick, accessibilityRole: "button", accessibilityLabel: stringResult, accessibilityState: { selected }, children: null };
@@ -38,14 +30,14 @@ function EffectTile(arg0) {
   }
   obj = { style: items, children: null };
   items[1] = selected;
-  const obj1 = { userId, userName: stringResult, effectDisplayType: null, pendingDisplayNameStyles: null, style: null, variant: "text-md/semibold" };
+  obj1 = { userId, userName: stringResult, effectDisplayType: null, pendingDisplayNameStyles: null, style: null, variant: "text-md/semibold" };
   const tmp2Result = DISPLAY_NAME_STYLES_EFFECT_NAMES;
   const tmp8 = closure_6;
   const tmp9 = closure_8;
   obj1[2] = DisplayNameStyleColorPreset.EffectDisplayType.STATIC;
   obj1[3] = displayNameStylesEffectConfig.previewStyles;
   obj1[4] = tmp.effectName;
-  const items1 = [closure_7(AVERAGE_FONT_WIDTH_RATIO, obj1), ];
+  const items1 = [closure_7(AVERAGE_FONT_WIDTH_RATIODefault, obj1), ];
   if (showNewDot) {
     const obj2 = { style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
     obj2[0] = tmp.tileNewDot;
@@ -57,37 +49,33 @@ function EffectTile(arg0) {
   return closure_7(tmp8, obj, effectId);
 }
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { header: { paddingTop: 4 }, headerTrailing: { justifyContent: "center", alignItems: "center" }, container: { flex: 1 }, contentContainer: null, gridContainer: null, effectCard: null, effectCardSelected: null, effectName: null, tileNewDot: null };
-createCacheKey = { padding: require("Themes").space.PX_8, paddingLeft: require("Themes").space.PX_16, alignItems: "center" };
+createCacheKey = { padding: ThemesDefault.space.PX_8, paddingLeft: ThemesDefault.space.PX_16, alignItems: "center" };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flexWrap: "wrap", width: 350 };
-createCacheKey[5] = { width: 109, height: 80, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
-let obj1 = { width: 109, height: 80, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
-createCacheKey[6] = { borderColor: require("Themes").colors.CONTROL_BRAND_FOREGROUND };
+createCacheKey[5] = { width: 109, height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
+let obj1 = { width: 109, height: 80, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, justifyContent: "center", alignItems: "center" };
+createCacheKey[6] = { borderColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
 createCacheKey[7] = { textAlign: "center" };
-let obj2 = { borderColor: require("Themes").colors.CONTROL_BRAND_FOREGROUND };
-createCacheKey[8] = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, width: require("Themes").space.PX_8, height: require("Themes").space.PX_8, borderRadius: require("Themes").space.PX_8 / 2, backgroundColor: require("Themes").colors.BADGE_BACKGROUND_BRAND, shadowColor: require("Themes").colors.BADGE_BACKGROUND_BRAND, shadowRadius: require("Themes").space.PX_4, shadowOpacity: 1, elevation: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8, width: require("Themes").space.PX_8, height: require("Themes").space.PX_8, borderRadius: require("Themes").space.PX_8 / 2, backgroundColor: require("Themes").colors.BADGE_BACKGROUND_BRAND, shadowColor: require("Themes").colors.BADGE_BACKGROUND_BRAND, shadowRadius: require("Themes").space.PX_4, shadowOpacity: 1, elevation: 4 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx");
+let obj2 = { borderColor: ThemesDefault.colors.CONTROL_BRAND_FOREGROUND };
+createCacheKey[8] = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, width: ThemesDefault.space.PX_8, height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.space.PX_8 / 2, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowRadius: ThemesDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8, width: ThemesDefault.space.PX_8, height: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.space.PX_8 / 2, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND, shadowRadius: ThemesDefault.space.PX_4, shadowOpacity: 1, elevation: 4 };
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEffectPickerSheet.tsx");
 
 export default function DisplayNameStylesEffectPickerSheet(userId) {
-  let c2;
-  let c3;
-  let onSelectEffect;
-  let selectedEffectId;
   userId = userId.userId;
   ({ selectedEffectId, onSelectEffect } = userId);
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let first;
-  let closure_5;
-  let c6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   let callback2;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = userId(7688);
-  let obj1 = userId(14685);
+  obj1 = userId(14685);
   const visibleEffectOrder = obj1.useVisibleEffectOrder();
   let obj2 = userId(14686);
   const displayNameStylesNewEffects = obj2.useDisplayNameStylesNewEffects(visibleEffectOrder);
@@ -95,7 +83,7 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
   const tmp5 = callback(first.useState(selectedEffectId), 2);
   first = tmp5[0];
   closure_5 = tmp5[1];
-  c6 = tmp7;
+  closure_6 = tmp7;
   callback2 = first.useCallback((arg0) => {
     callback(arg0);
   }, []);
@@ -126,16 +114,16 @@ export default function DisplayNameStylesEffectPickerSheet(userId) {
     const obj6 = { direction: "horizontal", spacing: 8, style: null, children: null };
     obj6[2] = tmp.gridContainer;
     obj6[3] = visibleEffectOrder.map((effectId) => {
-      let closure_0 = effectId;
-      return callback2(outer1_10, {
+      closure_0 = effectId;
+      return callback2(closure_1_10, {
         userId: closure_0,
         effectId,
         selected: effectId === first,
         showNewDot: _undefined.has(effectId),
         onClick() {
-          outer1_7(closure_0);
-          if (outer1_2.has(closure_0)) {
-            outer1_3(closure_0);
+          closure_1_7(closure_0);
+          if (closure_1_2.has(closure_0)) {
+            closure_1_3(closure_0);
           }
         }
       }, effectId);

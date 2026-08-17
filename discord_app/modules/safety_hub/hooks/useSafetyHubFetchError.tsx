@@ -1,11 +1,11 @@
 // discord_app/modules/safety_hub/hooks/useSafetyHubFetchError.tsx
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useSafetyHubFetchError.tsx");
 
 export const useSafetyHubFetchError = function useSafetyHubFetchError() {
-  const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => fetchError.getFetchError());
 };

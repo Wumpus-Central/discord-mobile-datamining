@@ -1,40 +1,36 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMembers.tsx
-import DISCORD_EPOCH from "DISCORD_EPOCH";
-import importAllResult from "nameFromUser";
-import { View } from "RolePill";
-import fetchFingerprint from "fetchFingerprint";
-import handleInviteData from "handleInviteData";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFormInit from "handleFormInit";
-import { GuildSettingsSections } from "ME";
-import jsxProd from "memoResult1";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "handleInviteData" /* 4295 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import closure_13 from "handleFormInit" /* 8875 */;
+import { GuildSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_15;
-let closure_16;
-let closure_17;
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let items = [require("sortByMatchScore").AutocompleterResultTypes.USER];
 let obj = { containerInner: null, searchFieldContainer: null, roleList: null };
-obj = { paddingHorizontal: require("Themes").space.PX_12, flex: 1 };
+obj = { paddingHorizontal: ThemesDefault.space.PX_12, flex: 1 };
 obj[0] = obj;
-createCacheKey = { paddingVertical: require("Themes").space.PX_12 };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_12 };
 obj[1] = createCacheKey;
 obj[2] = { flexDirection: "row", flexWrap: "wrap", overflow: "hidden", paddingTop: 4 };
 let closure_19 = createCacheKey.createStyles(obj);
 let closure_20 = importAllResult.memo((guild) => {
-  let end;
-  let start;
   guild = guild.guild;
   const guildMember = guild.guildMember;
   const sortedGuildRoles = guild.sortedGuildRoles;
-  let dependencyMap;
+  dependencyMap = undefined;
   ({ start, end } = guild);
   let obj = guild(1500);
   dependencyMap = obj.useNavigation();
@@ -49,11 +45,11 @@ let closure_20 = importAllResult.memo((guild) => {
       const roles = guildMember.roles;
       return roles.includes(id.id);
     });
-    const mapped = found.map((id) => outer1_15(guildMember(arr[17]), { role: id, guildId: guild.id }, id.id));
+    const mapped = found.map((id) => closure_1_15(guildMember(arr[17]), { role: id, guildId: guild.id }, id.id));
     let formatToPlainStringResult;
     if (found.length > 0) {
       user = user.getUser(guildMember.userId);
-      let obj1 = guildMember(4796);
+      obj1 = guildMember(4796);
       let str = obj1.getNickname(guild.id, undefined, user);
       if (str == null) {
         str = tmp9(4219).getGlobalName(user);
@@ -111,27 +107,27 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   let stateFromStores2;
   let stateFromStoresArray;
   let first;
-  let createGuildRecordFromRust;
+  closure_10 = undefined;
   let first1;
-  let mergeGuildAvatar;
+  closure_12 = undefined;
   let first2;
-  let closure_14;
+  closure_14 = undefined;
   let first3;
   let memo;
-  let c17;
+  c17 = undefined;
   let first4;
   let callback;
   let obj = guildId(guild[16]);
   navigation = obj.useNavigation();
   const tmp4 = callback();
-  let obj1 = guildId(guild[23]);
-  let items = [createGuildRecordFromRust, first];
+  obj1 = guildId(guild[23]);
+  items = [closure_10, first];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ guild: store.getGuild(guildId), guildLoaded: null != store.getGuild(guildId), sortedGuildRoles: first.getSortedRoles(guildId) }));
   guild = stateFromStoresObject.guild;
   guildLoaded = stateFromStoresObject.guildLoaded;
   sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
   let obj2 = guildId(guild[23]);
-  const items1 = [first1, mergeGuildAvatar];
+  const items1 = [first1, closure_12];
   const items2 = [guild];
   stateFromStores = obj2.useStateFromStores(items1, () => {
     let canPruneGuildMembersResult = null != guild;
@@ -167,10 +163,10 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   stateFromStoresArray = obj5.useStateFromStoresArray(items6, () => stateFromStoresArray.getMembers(guildId), items7);
   let tmp11 = guildLoaded(sortedGuildRoles.useState([]), 2);
   first = tmp11[0];
-  createGuildRecordFromRust = tmp11[1];
+  closure_10 = tmp11[1];
   const tmp13 = guildLoaded(sortedGuildRoles.useState(false), 2);
   first1 = tmp13[0];
-  mergeGuildAvatar = tmp13[1];
+  closure_12 = tmp13[1];
   const tmp15 = guildLoaded(sortedGuildRoles.useState(false), 2);
   first2 = tmp15[0];
   closure_14 = tmp15[1];
@@ -181,10 +177,10 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   const items8 = [guildId, stateFromStoresArray, first, stateFromStores1, first1];
   memo = sortedGuildRoles.useMemo(() => {
     function guildRoleIsFiltered(roles) {
-      let tmp2 = null != fetchFingerprint;
+      let tmp2 = null != closure_6;
       if (tmp2) {
-        tmp2 = !outer1_0(outer1_2[25]).isEveryoneRoleId(closure_0, tmp);
-        const obj = outer1_0(outer1_2[25]);
+        tmp2 = !closure_1_0(closure_1_2[25]).isEveryoneRoleId(closure_0, tmp);
+        const obj = closure_1_0(closure_1_2[25]);
       }
       if (tmp2) {
         roles = roles.roles;
@@ -192,7 +188,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
       }
       return tmp2;
     }
-    const items = [];
+    items = [];
     if (first1) {
       const iter2 = first[Symbol.iterator]();
       const nextResult = iter2.next();
@@ -277,8 +273,8 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           let obj = { guild: null, canPrune: null };
           obj[0] = tmp4;
           obj[1] = closure_5;
-          let membersManagementActions = outer1_0(outer1_2[27]).getMembersManagementActions(obj);
-          const tmp2Result = outer1_0(outer1_2[27]);
+          let membersManagementActions = closure_1_0(closure_1_2[27]).getMembersManagementActions(obj);
+          const tmp2Result = closure_1_0(closure_1_2[27]);
         } else {
           membersManagementActions = [];
         }
@@ -286,8 +282,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
           items: membersManagementActions,
           children(ref) {
             const merged = Object.assign(ref, Object.create(null));
-            const obj = { source: null, accessibilityLabel: null, ref: null };
-            obj[0] = callback2(8904);
+            const obj = { source: callback2(8904), accessibilityLabel: null, ref: null };
             const intl = callback(1236).intl;
             obj[1] = intl.string(callback(1236).t.ogxXGq);
             obj[2] = ref.ref;
@@ -295,7 +290,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
             return callback3(callback(5432).HeaderActionButton, obj);
           }
         };
-        return outer1_15(outer1_0(outer1_2[26]).ContextMenu, obj);
+        return closure_1_15(closure_1_0(closure_1_2[26]).ContextMenu, obj);
       }
     });
   }, items9);
@@ -316,10 +311,10 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
       first3.setOptions(obj);
     }
     return () => {
-      if (DISCORD_EPOCH) {
-        const obj = outer1_1(outer1_2[31]);
-        const role = obj.selectRole(outer1_1(outer1_2[32]).castGuildIdAsEveryoneGuildRoleId(closure_0));
-        const obj2 = outer1_1(outer1_2[32]);
+      if (closure_3) {
+        const obj = closure_1_1(closure_1_2[31]);
+        const role = obj.selectRole(closure_1_1(closure_1_2[32]).castGuildIdAsEveryoneGuildRoleId(closure_0));
+        const obj2 = closure_1_1(closure_1_2[32]);
       }
       closure_15.destroy();
     };
@@ -365,7 +360,7 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   const items14 = [guild, diff, sortedGuildRoles];
   const callback1 = sortedGuildRoles.useCallback((guildMember) => {
     const index = guildMember.index;
-    return first3(outer1_20, { guild, guildMember: guildMember.item, sortedGuildRoles, start: 0 === index, end: index === c17 });
+    return first3(closure_1_20, { guild, guildMember: guildMember.item, sortedGuildRoles, start: 0 === index, end: index === c17 });
   }, items14);
   obj = { style: tmp4.containerInner, children: null };
   obj = { style: tmp4.searchFieldContainer, children: null };
@@ -401,6 +396,6 @@ const memoResult = importAllResult.memo(function GuildSettingsModalMembers(guild
   obj5[0] = items16;
   return memo(c17, obj5);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembers.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembers.tsx");
 
 export default memoResult;

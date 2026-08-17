@@ -1,25 +1,23 @@
 // discord_app/modules/messages/native/emoji/StandardEmojiContent.tsx
-import noop from "noop";
-import { View } from "_updateEmoji";
-import handleConnectionOpen from "handleConnectionOpen";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getEmojiUnavailableReason } from "../../../../utils/EmojiUtils.tsx";
-import { styles } from "useSharedMessageEmojiStyles.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getEmojiUnavailableReasonDefault from "getEmojiUnavailableReason" /* 4038 */;
+import Text from "Text" /* 4734 */;
+import preloadDefault from "preload" /* 5449 */;
+import styles from "styles" /* 9402 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Emoji(surrogate) {
   surrogate = surrogate.surrogate;
   let obj = {};
-  const merged = Object.assign(createCacheKey());
-  let obj1 = styles;
+  const merged = Object.assign(callback3());
+  obj1 = styles;
   const merged1 = Object.assign(obj1.useSharedMessageEmojiStyles());
-  let obj2 = getEmojiUnavailableReason;
+  let obj2 = getEmojiUnavailableReasonDefault;
   const uRL = obj2.getURL(surrogate);
   obj = { style: obj.emojiWrapper, children: null };
   if ("" !== uRL) {
@@ -28,7 +26,7 @@ function Emoji(surrogate) {
     obj1 = { uri: null };
     obj1[0] = uRL;
     obj[2] = obj1;
-    let tmp7Result = tmp7(preload, obj);
+    let tmp7Result = tmp7(preloadDefault, obj);
   } else {
     obj2 = { style: null, variant: "text-md/medium", children: null };
     obj2[0] = obj.emojiSurrogate;
@@ -38,20 +36,20 @@ function Emoji(surrogate) {
   obj[1] = tmp7Result;
   return closure_6(View, obj);
 }
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 createCacheKey = { emojiSurrogate: { lineHeight: 48, fontSize: 40, margin: 8 }, ctaContainer: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_4 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/messages/native/emoji/StandardEmojiContent.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/messages/native/emoji/StandardEmojiContent.tsx");
 
 export default function StandardEmojiContent(nonce) {
   const emojiNode = nonce.emojiNode;
   let memo;
   let isFavoriteEmoji;
   let obj = {};
-  const merged = Object.assign(createCacheKey());
-  let obj1 = emojiNode(isFavoriteEmoji[6]);
+  const merged = Object.assign(callback3());
+  obj1 = emojiNode(isFavoriteEmoji[6]);
   const merged1 = Object.assign(obj1.useSharedMessageEmojiStyles());
   guildId = guildId.getGuildId();
   let obj2 = emojiNode(isFavoriteEmoji[10]);

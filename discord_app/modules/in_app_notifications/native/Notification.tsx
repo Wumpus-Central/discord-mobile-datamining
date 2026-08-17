@@ -1,43 +1,33 @@
 // discord_app/modules/in_app_notifications/native/Notification.tsx
-import noop from "noop";
-import set from "set";
-import { AnalyticEvents } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "ME";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import set from "set" /* 10030 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let NOTIFICATION_MAX_WIDTH;
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ MIN_SWIPE_VELOCITY: c4, STARTED_SWIPE_THRESHOLD: c5, NOTIFICATION_MAX_WIDTH } = set);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { shadow: null, container: null };
 createCacheKey = {};
-let merged = Object.assign(require("Themes").shadows.SHADOW_HIGH);
-createCacheKey.backgroundColor = require("Themes").colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
-createCacheKey.borderRadius = require("Themes").radii.lg;
+let merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
+createCacheKey.backgroundColor = ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT;
+createCacheKey.borderRadius = ThemesDefault.radii.lg;
 createCacheKey.maxWidth = NOTIFICATION_MAX_WIDTH;
 createCacheKey.width = "100%";
 createCacheKey.alignSelf = "center";
 createCacheKey.borderWidth = 1;
-createCacheKey.borderColor = require("Themes").colors.BORDER_SUBTLE;
+createCacheKey.borderColor = ThemesDefault.colors.BORDER_SUBTLE;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: require("Themes").radii.lg, overflow: "hidden" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { mass: 1, overshootClamping: true, damping: 27, stiffness: 300 };
 let closure_11 = { code: "function NotificationTsx1(){const{withSpring,scale,ON_PRESS_SPRING_CONFIG}=this.__closure;return{transform:[{scale:withSpring(scale.get(),ON_PRESS_SPRING_CONFIG)}]};}" };
 let closure_12 = { code: "function NotificationTsx2(finished){const{runOnJS,handleDismissNotification}=this.__closure;if(finished){runOnJS(handleDismissNotification)('timeout');}}" };
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/Notification.tsx");
 
 export const NotificationPressable = function NotificationPressable(notification) {
-  let accessoryLabelNode;
-  let children;
-  let header;
-  let icon;
-  let rightAccessory;
   notification = notification.notification;
   const onPress = notification.onPress;
   const onSettingsPress = notification.onSettingsPress;
@@ -55,7 +45,7 @@ export const NotificationPressable = function NotificationPressable(notification
   let panning;
   let sharedValue;
   let sharedValue1;
-  let c14;
+  closure_14 = undefined;
   let callback2;
   let callback3;
   const tmp3 = handleDismissNotification();
@@ -75,7 +65,7 @@ export const NotificationPressable = function NotificationPressable(notification
   handleDismissNotification = inAppNotificationContext.handleDismissNotification;
   initialized = inAppNotificationContext.initialized;
   panning = inAppNotificationContext.panning;
-  let obj1 = notification(onSettingsPress[8]);
+  obj1 = notification(onSettingsPress[8]);
   sharedValue = obj1.useSharedValue(1);
   const items1 = [sharedValue];
   const items2 = [sharedValue];
@@ -87,7 +77,7 @@ export const NotificationPressable = function NotificationPressable(notification
       obj = { transform: null };
       obj = { scale: null };
       obj3 = notification(onSettingsPress[9]);
-      obj[0] = obj3.withSpring(c12.get(), initialized);
+      obj[0] = obj3.withSpring(closure_12.get(), initialized);
       items = [];
       items[0] = obj;
       obj[0] = items;
@@ -101,12 +91,12 @@ export const NotificationPressable = function NotificationPressable(notification
   const animatedStyle = obj2.useAnimatedStyle(A);
   const memo1 = guildId.useMemo(() => ({ foreground: true }), []);
   sharedValue1 = notification(onSettingsPress[8]).useSharedValue(100);
-  c14 = tmp13;
+  closure_14 = tmp13;
   const items3 = [initialized, panning, notification, sharedValue1, handleDismissNotification, notification.duration !== Infinity];
   const effect = guildId.useEffect(() => {
     if (initialized) {
       if (!panning) {
-        if (c14) {
+        if (closure_14) {
           const value = sharedValue1.get();
           let obj = notification(onSettingsPress[10]);
           obj = { duration: null, easing: null };
@@ -114,8 +104,8 @@ export const NotificationPressable = function NotificationPressable(notification
           obj[1] = notification(onSettingsPress[8]).Easing.linear;
           const fn = function s(arg0) {
             if (arg0) {
-              outer1_0(outer1_2[8]).runOnJS(closure_9)("timeout");
-              const obj = outer1_0(outer1_2[8]);
+              closure_1_0(closure_1_2[8]).runOnJS(closure_9)("timeout");
+              const obj = closure_1_0(closure_1_2[8]);
             }
           };
           obj = { runOnJS: null, handleDismissNotification: null };
@@ -126,7 +116,7 @@ export const NotificationPressable = function NotificationPressable(notification
           fn.__initData = sharedValue;
           const result = sharedValue1.set(obj.withTiming(0, obj, "animate-always", fn));
           return () => {
-            outer1_0(outer1_2[8]).cancelAnimation(closure_13);
+            closure_1_0(closure_1_2[8]).cancelAnimation(closure_13);
           };
         }
       }
@@ -152,7 +142,7 @@ export const NotificationPressable = function NotificationPressable(notification
       obj[3] = messageId;
       obj[4] = notification.inAppNotificationId;
       let rounded;
-      if (c14) {
+      if (closure_14) {
         let value = sharedValue1;
         if (typeof sharedValue1 !== "number") {
           value = obj3.get();

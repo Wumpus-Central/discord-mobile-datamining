@@ -1,11 +1,11 @@
 // discord_app/modules/go_live/GoLiveAutoQualityExperiment.tsx
-import initialize from "initialize";
-import ApplicationStreamPresets from "ApplicationStreamPresets";
-import { ApplicationStreamPresets } from "RESOLUTION_720";
-import importDefaultResult from "getUnitId";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import Storage3 from "Storage" /* 595 */;
+import closure_2 from "initialize" /* 1212 */;
+import closure_3 from "ApplicationStreamPresets" /* 4562 */;
+import { ApplicationStreamPresets } from "RESOLUTION_720" /* 4524 */;
+import importDefaultResult from "getUnitId" /* 1368 */;
 
-const require = arg1;
+require = arg1;
 let obj = { allowAutoQuality: false, defaultAutoQuality: false, migrateAutoQuality: false };
 const GoLiveAutoQualityMigrationVersion = "GoLiveAutoQualityMigrationVersion";
 obj = { name: "2025-10-go-live-auto-quality", kind: "user", defaultConfig: obj, variations: null };
@@ -21,19 +21,19 @@ obj2.allowAutoQuality = true;
 obj2.defaultAutoQuality = true;
 obj[2] = obj2;
 obj[3] = obj;
-let closure_6 = require("getUnitId")(obj);
-let result = require("RESOLUTION_720").fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
+let closure_6 = importDefaultResult(obj);
+let result = require("set").fileFinishedImporting("modules/go_live/GoLiveAutoQualityExperiment.tsx");
 
 export const getGoLiveAutoQualityExperimentConfig = function getGoLiveAutoQualityExperimentConfig(location) {
   return store.getConfig({ location: location.location });
 };
 export const useGoLiveAutoQualityExperimentConfig = function useGoLiveAutoQualityExperimentConfig(location) {
   location = location.location;
-  const items = [initialize];
-  return location(589).useStateFromStores(items, () => outer1_6.getConfig({ location }));
+  const items = [closure_2];
+  return location(589).useStateFromStores(items, () => closure_1_6.getConfig({ location }));
 };
 export const maybeMigrateToAutoQuality = function maybeMigrateToAutoQuality() {
-  const Storage = Storage.Storage;
+  const Storage = Storage3.Storage;
   let num = Storage.get(GoLiveAutoQualityMigrationVersion);
   if (num == null) {
     num = 0;

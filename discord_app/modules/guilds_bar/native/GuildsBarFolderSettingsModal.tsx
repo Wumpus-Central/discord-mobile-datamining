@@ -1,22 +1,16 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR";
-import jsxProd from "jsxProd";
-import { FormRoleColorPicker } from "../../../components_native/common/color_picker/FormRoleColorPicker.tsx";
-import { Form } from "../../../design/void/Form/native/index.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Form from "Form" /* 8083 */;
+import FormRoleColorPickerDefault from "FormRoleColorPicker" /* 15554 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "insertUnsortedGuilds" /* 5078 */;
+import { DEFAULT_FOLDER_COLOR } from "DEFAULT_FOLDER_COLOR" /* 15553 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function GuildFolderSettingsScene(arg0) {
-  let color;
-  let name;
-  let onColorChange;
-  let onNameChange;
   ({ name, onNameChange, color, onColorChange } = arg0);
   let obj = { children: null };
   obj = { title: null, children: null };
@@ -30,34 +24,32 @@ function GuildFolderSettingsScene(arg0) {
   obj[6] = Button.ClearButtonVisibility.WITH_CONTENT;
   obj[1] = callback(Form.FormInput, obj);
   const items = [callback(Form.FormSection, obj), ];
-  const obj1 = { title: null, children: null };
+  obj1 = { title: null, children: null };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.xpurRF);
-  obj1[1] = callback(FormRoleColorPicker, { color, onChange: onColorChange });
+  obj1[1] = callback(FormRoleColorPickerDefault, { color, onChange: onColorChange });
   items[1] = callback(Form.FormSection, obj1);
   obj[0] = items;
   return callback2(Form.Form, obj);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let c10 = "Folder Settings";
-let result = require("insertUnsortedGuilds").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderSettingsModal.tsx");
 
 export default function GuildFolderSettingsModal(folderId) {
-  let initialFolderColor;
-  let initialFolderName;
   folderId = folderId.folderId;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let React;
-  let c5;
+  closure_5 = undefined;
   let callback;
   let callback1;
   let obj = folderId(589);
-  const items = [c5];
+  const items = [closure_5];
   const items1 = [folderId];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const guildFolderById = _undefined.getGuildFolderById(folderId);
+    const guildFolderById = store.getGuildFolderById(folderId);
     let folderName;
     if (guildFolderById != null) {
       folderName = guildFolderById.folderName;
@@ -81,11 +73,11 @@ export default function GuildFolderSettingsModal(folderId) {
   const tmp6 = first1(React.useState(initialFolderColor), 2);
   first1 = tmp6[0];
   React = tmp6[1];
-  c5 = tmp8;
+  closure_5 = tmp8;
   const items2 = [folderId, first, first1];
   callback = obj2.useCallback(() => {
-    const dependencyMap = first1;
-    const guildFolders = _undefined.getGuildFolders();
+    dependencyMap = first1;
+    const guildFolders = store.getGuildFolders();
     folderId(9365).saveGuildFolders(guildFolders.map((folderId) => {
       let tmp = folderId;
       if (folderId.folderId === closure_0) {
@@ -117,9 +109,9 @@ export default function GuildFolderSettingsModal(folderId) {
     };
     obj = {
       render() {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(obj);
-        return outer1_7(outer1_9, obj);
+        return closure_1_7(closure_1_9, obj);
       },
       title: null,
       headerLeft: null,
@@ -128,7 +120,7 @@ export default function GuildFolderSettingsModal(folderId) {
     const intl = folderId(1236).intl;
     obj[1] = intl.string(folderId(1236).t.Dx7im5);
     obj[2] = folderId(6314).getHeaderCloseButton(callback1);
-    if (c5) {
+    if (closure_5) {
       const intl2 = tmp3(1236).intl;
       let fn = tmp3(6314).getHeaderTextButton(intl2.string(tmp3(1236).t["R3BPH+"]), callback);
       const tmp3Result = tmp3(6314);
@@ -136,7 +128,7 @@ export default function GuildFolderSettingsModal(folderId) {
       fn = () => null;
     }
     obj[3] = fn;
-    return { [outer1_10]: obj };
+    return { [closure_1_10]: obj };
   }, items3);
   obj = { screens: memo, initialRouteName: c10 };
   return callback1(folderId(6312).Navigator, obj);

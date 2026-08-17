@@ -1,44 +1,29 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx
-import importAllResult from "HappeningNowCardPlaceholder";
-import get_ActivityIndicator from "asyncRequireImpl";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import ME from "ME";
-import jsxProd from "HAPPENING_NOW_CONTENT_HEIGHT";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../../design/void/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12138 */;
+import useLiveStageData from "useLiveStageData" /* 15334 */;
+import registerAssetDefault from "registerAsset" /* 15337 */;
+import registerAssetDefault2 from "registerAsset" /* 15338 */;
+import HappeningNowAvatarStack from "HappeningNowAvatarStack" /* 15345 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { updateAssets } from "../../../../../utils/ApplicationAssetUtils.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
 import { useDominantRGBFromImage } from "../../../../calls/native/VideoBackground.tsx";
-import { useFetchStreamPreview } from "../../../../go_live/useFetchStreamPreview.tsx";
-import { HappeningNowAvatarStack } from "HappeningNowAvatarStack.tsx";
-import { useLiveStageData } from "useLiveStageData.tsx";
 
-let HAPPENING_NOW_CONTENT_HEIGHT;
-let HAPPENING_NOW_STAGE_PREVIEW_HEIGHT;
-let PixelRatio;
-let c10;
-let c4;
-let c9;
-let closure_12;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function IconOrPreview(arg0) {
-  let activity;
-  let b;
-  let g;
-  let game;
-  let r;
-  let stream;
-  let userId;
   ({ userId, activity, stream, game } = arg0);
   let _require;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   const tmp = callback2();
   _require = tmp;
   let guildId;
@@ -53,7 +38,7 @@ function IconOrPreview(arg0) {
   if (stream != null) {
     ownerId = stream.ownerId;
   }
-  const previewUrl = useFetchStreamPreview(guildId, channelId, ownerId).previewUrl;
+  const previewUrl = useFetchStreamPreviewDefault(guildId, channelId, ownerId).previewUrl;
   let assetImage;
   if (null != previewUrl) {
     assetImage = previewUrl;
@@ -79,7 +64,7 @@ function IconOrPreview(arg0) {
     if (activity != null) {
       large_image1 = activity.assets.large_image;
     }
-    let items = [closure_14, closure_14];
+    items = [closure_14, closure_14];
     assetImage = obj.getAssetImage(application_id, large_image1, items);
   }
   if (null == assetImage) {
@@ -101,7 +86,7 @@ function IconOrPreview(arg0) {
     tmp17 = null != small_image;
   }
   if (tmp17) {
-    let obj1 = _updateAssets;
+    obj1 = _updateAssets;
     let application_id1;
     if (activity != null) {
       application_id1 = activity.application_id;
@@ -126,7 +111,7 @@ function IconOrPreview(arg0) {
     dependencyMap = hexWithOpacityResult;
     const items2 = [rgbToHexResult, tmp.cardImageAssetContainer];
     const memo = importAllResult.useMemo(() => {
-      const items = [_undefined.cardImageAssetContainer, { shadowColor: c1 }];
+      items = [closure_0.cardImageAssetContainer, { shadowColor: c1 }];
       return items;
     }, items2);
     const items3 = [hexWithOpacityResult, tmp.cardImageAssetBackground];
@@ -198,15 +183,13 @@ function IconOrPreview(arg0) {
   }
 }
 function StageStreamAvatars(stage) {
-  let audienceCount;
-  let audienceFriends;
   stage = stage.stage;
   let obj = useLiveStageData;
   const liveStageData = obj.useLiveStageData(stage);
   obj = { style: callback2().avatarStackContainer, children: null };
   ({ audienceCount, audienceFriends } = liveStageData);
   obj = { users: null, guildId: null, userCount: null, isStage: true, avatarSize: null };
-  const items = [stage.user];
+  items = [stage.user];
   HermesBuiltin.arraySpread(audienceFriends, 1);
   obj[0] = items;
   obj[1] = stage.guild_id;
@@ -217,34 +200,30 @@ function StageStreamAvatars(stage) {
 }
 let c3 = importAllResult;
 ({ PixelRatio, View: c4 } = get_ActivityIndicator);
-({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: error, STATUS_CUTOUT_SMALL: metroImportAll, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: error, STATUS_CUTOUT_SMALL: closure_8, HAPPENING_NOW_STAGE_PREVIEW_HEIGHT } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ ActivityTypes: c9, AnalyticEvents: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 const pixelSizeForLayoutSize = PixelRatio.getPixelSizeForLayoutSize(HAPPENING_NOW_CONTENT_HEIGHT);
-let items = [require("registerAsset"), require("registerAsset")];
+let items = [registerAssetDefault, registerAssetDefault2];
 let obj = { content: { flexShrink: 1, gap: 2 }, avatarStackContainer: null, cardAvatar: null, cardImage: null, cardImageStream: null, cardImageAsset: null, cardImageAssetContainer: null, cardImageAssetBackground: null, cardImageStreamPreview: null, cardImageStreamLive: null, stageStreamLiveText: null, stagePreviewWrapper: null };
-obj = { backgroundColor: require("Themes").colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: require("Themes").radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
+obj = { backgroundColor: ThemesDefault.colors.STAGE_CARD_PILL_BG, padding: 2, borderRadius: ThemesDefault.radii.xl, position: "absolute", alignSelf: "center", bottom: 0 };
 obj[1] = obj;
 obj[2] = { marginBottom: 2 };
 obj[3] = { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12, position: "relative" };
 obj[4] = { height: HAPPENING_NOW_STAGE_PREVIEW_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, position: "relative" };
-createCacheKey = { flex: 1, borderRadius: require("Themes").radii.sm - 1 };
+createCacheKey = { flex: 1, borderRadius: ThemesDefault.radii.sm - 1 };
 obj[5] = createCacheKey;
-obj[6] = { height: "100%", backgroundColor: require("Themes").colors.CARD_SECONDARY_BG, borderRadius: require("Themes").radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
-let obj2 = { height: "100%", backgroundColor: require("Themes").colors.CARD_SECONDARY_BG, borderRadius: require("Themes").radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
-obj[7] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-let obj3 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-obj[8] = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+obj[6] = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
+let obj2 = { height: "100%", backgroundColor: ThemesDefault.colors.CARD_SECONDARY_BG, borderRadius: ThemesDefault.radii.sm, shadowOffset: { width: 0, height: 0 }, shadowRadius: 5, shadowOpacity: 0.32, elevation: 10 };
+obj[7] = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj3 = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj[8] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[9] = { top: 4, left: 4, position: "absolute" };
 obj[10] = { fontSize: 10, lineHeight: 13, fontFamily: require("sum").Fonts.PRIMARY_BOLD };
 obj[11] = { marginRight: 12, flexDirection: "column", height: "100%" };
 let closure_16 = createCacheKey.createStyles(obj);
-let obj4 = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+let obj4 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 const memoResult = importAllResult.memo((userId) => {
-  let fullwidth;
-  let panelVariant;
-  let renderingContext;
-  let status;
   userId = userId.userId;
   const guildId = userId.guildId;
   const index = userId.index;
@@ -260,9 +239,9 @@ const memoResult = importAllResult.memo((userId) => {
   const tmp = callback2();
   analyticsLocations = guildId(index[12])().analyticsLocations;
   let obj = userId(index[13]);
-  let items = [stateFromStores];
+  items = [stateFromStores];
   stateFromStores = obj.useStateFromStores(items, () => stateFromStores.getUser(userId));
-  let obj1 = userId(index[14]);
+  obj1 = userId(index[14]);
   let application_id;
   if (activity != null) {
     application_id = activity.application_id;
@@ -304,14 +283,14 @@ const memoResult = importAllResult.memo((userId) => {
   const items2 = [userId, stateFromStores, stream, guildId, activity, index, analyticsLocations];
   const callback = activity.useCallback(() => {
     if (null != stream) {
-      let STATUS_CARD = outer1_7.STREAM_CARD;
+      let STATUS_CARD = closure_1_7.STREAM_CARD;
     } else {
       if (null != activity) {
-        if (activity.type !== outer1_9.CUSTOM_STATUS) {
-          STATUS_CARD = outer1_7.ACTIVITY_CARD;
+        if (activity.type !== closure_1_9.CUSTOM_STATUS) {
+          STATUS_CARD = closure_1_7.ACTIVITY_CARD;
         }
       }
-      STATUS_CARD = outer1_7.STATUS_CARD;
+      STATUS_CARD = closure_1_7.STATUS_CARD;
     }
     let obj = guildId(index[15]);
     obj = { type: STATUS_CARD, order: index, guild_id: guildId, highlighted_user_ids: items, destination_channel_id: null };
@@ -321,12 +300,12 @@ const memoResult = importAllResult.memo((userId) => {
       channelId = tmp.channelId;
     }
     obj[4] = channelId;
-    obj.track(outer1_10.ACTIVITY_CARD_CLICKED, obj);
+    obj.track(closure_1_10.ACTIVITY_CARD_CLICKED, obj);
     if (null != stream) {
       userId(tmp6[17])(tmp6[16], tmp6.paths).then((arg0) => arg0.default(channelId.channelId, true));
       const promise2 = userId(tmp6[17])(tmp6[16], tmp6.paths);
     } else {
-      userId(tmp6[17])(tmp6[18], tmp6.paths).then((arg0) => arg0.default({ userId: closure_0, localUser: mergeGuildAvatar, sourceAnalyticsLocations: handleStageInstanceCreateOrUpdate }));
+      userId(tmp6[17])(tmp6[18], tmp6.paths).then((arg0) => arg0.default({ userId: closure_0, localUser: closure_6, sourceAnalyticsLocations: closure_5 }));
       const promise = userId(tmp6[17])(tmp6[18], tmp6.paths);
     }
   }, items2);
@@ -439,6 +418,6 @@ const memoResult = importAllResult.memo((userId) => {
   }
   const tmp4Result = userId(index[13]);
 });
-const result = require("handleStageInstanceCreateOrUpdate").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivity.tsx");
 
 export default memoResult;

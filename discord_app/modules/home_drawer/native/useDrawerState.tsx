@@ -1,9 +1,9 @@
 // discord_app/modules/home_drawer/native/useDrawerState.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("createStandardNavigationFactories").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/useDrawerState.tsx");
 
 export const useDrawerOpen = function useDrawerOpen(enableHome) {
   let flag = enableHome;
@@ -62,7 +62,7 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
           tmp = routes[num];
         }
       }
-      const coerceGuildsRouteResult = handleStateChange(outer1_1[3]).coerceGuildsRoute(tmp);
+      const coerceGuildsRouteResult = handleStateChange(closure_1_1[3]).coerceGuildsRoute(tmp);
       if (null != coerceGuildsRouteResult) {
         const params = coerceGuildsRouteResult.params;
         let drawerOpen;
@@ -75,7 +75,7 @@ export const useDrawerOpen = function useDrawerOpen(enableHome) {
     if (handleStateChange) {
       navigation.addListener("state", handleStateChange);
       return () => {
-        outer1_1.removeListener("state", handleStateChange);
+        closure_1_1.removeListener("state", handleStateChange);
       };
     }
   }, items);

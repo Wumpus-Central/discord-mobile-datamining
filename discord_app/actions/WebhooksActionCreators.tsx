@@ -1,51 +1,49 @@
 // discord_app/actions/WebhooksActionCreators.tsx
-import ME from "ME";
-import { apply } from "../../_runtime/00012_apply.js";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ME from "ME" /* 676 */;
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
 
-let c3;
-let c4;
 ({ AbortCodes: c3, Endpoints: c4 } = ME);
 let closure_5 = ["Spidey Bot", "Captain Hook"];
-const result = require("sendRequest").fileFinishedImporting("actions/WebhooksActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/WebhooksActionCreators.tsx");
 
 export default {
   fetchForGuild(guildId) {
     const _require = guildId;
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "WEBHOOKS_FETCHING", guildId };
     obj.dispatch(obj);
     const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_4.GUILD_WEBHOOKS(guildId), oldFormErrors: true, rejectWithError: null };
-    obj[2] = _sendRequest.rejectWithMigratedError();
+    obj = { url: closure_4.GUILD_WEBHOOKS(guildId), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
     const value = HTTP.get(obj);
     const obj4 = _sendRequest;
     value.then((body) => {
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "WEBHOOKS_UPDATE", guildId: closure_0, webhooks: body.body };
       return obj.dispatch(obj);
     }).catch((body) => {
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "WEBHOOKS_UPDATE", guildId: closure_0, error: body.body.message };
       obj.dispatch(obj);
     });
   },
   fetchForChannel(guildId, channelId) {
     const _require = guildId;
-    const importDefault = channelId;
-    let obj = dispatcher;
+    importDefault = channelId;
+    let obj = dispatcherDefault;
     obj = { type: "WEBHOOKS_FETCHING", guildId, channelId };
     obj.dispatch(obj);
     const HTTP = _sendRequest.HTTP;
     obj = { url: closure_4.CHANNEL_WEBHOOKS(channelId), oldFormErrors: true, rejectWithError: true };
     const value = HTTP.get(obj);
     value.then((body) => {
-      let obj = channelId(outer1_2[1]);
+      let obj = channelId(closure_1_2[1]);
       obj = { type: "WEBHOOKS_UPDATE", guildId: closure_0, channelId, webhooks: body.body };
       return obj.dispatch(obj);
     }).catch((body) => {
-      let obj = channelId(outer1_2[1]);
+      let obj = channelId(closure_1_2[1]);
       obj = { type: "WEBHOOKS_UPDATE", guildId: closure_0, error: body.body.message };
       obj.dispatch(obj);
     });
@@ -54,17 +52,16 @@ export default {
     const _require = arg0;
     let tmp = arg2;
     if (null == arg2) {
-      let obj = apply;
+      let obj = applyDefault;
       tmp = length[obj.random(obj, 0, length.length - 1)];
     }
     const HTTP = _sendRequest.HTTP;
-    obj = { url: closure_4.CHANNEL_WEBHOOKS(channelId), body: { name: tmp }, oldFormErrors: true, rejectWithError: null };
-    obj[3] = _sendRequest.rejectWithMigratedError();
+    obj = { url: closure_4.CHANNEL_WEBHOOKS(channelId), body: { name: tmp }, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
     let obj3 = _sendRequest;
     const postResult = HTTP.post(obj);
     return HTTP.post(obj).then((body) => {
       body = body.body;
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "WEBHOOK_CREATE", guildId: closure_0, webhook: body };
       obj.dispatch(obj);
       return body;
@@ -91,7 +88,7 @@ export default {
         obj[1] = intl2.string(callback(1236).t["YBM+UW"]);
         obj.show(obj);
       } else {
-        const obj1 = { title: null, body: null };
+        obj1 = { title: null, body: null };
         const intl5 = callback(1236).intl;
         obj1[0] = intl5.string(callback(1236).t.cCqsca);
         const intl6 = callback(1236).intl;
@@ -103,13 +100,12 @@ export default {
   },
   delete(arg0, arg1) {
     const _require = arg0;
-    let closure_1 = arg1;
+    closure_1 = arg1;
     const HTTP = _sendRequest.HTTP;
-    let obj = { url: closure_4.WEBHOOK(arg1), oldFormErrors: true, rejectWithError: null };
-    obj[2] = _sendRequest.rejectWithMigratedError();
+    let obj = { url: closure_4.WEBHOOK(arg1), oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
     const obj2 = _sendRequest;
     return HTTP.del(obj).then(() => {
-      let obj = callback(outer1_2[1]);
+      let obj = callback(closure_1_2[1]);
       obj = { type: "WEBHOOK_DELETE", guildId: closure_0, webhookId: callback };
       obj.dispatch(obj);
     });
@@ -117,12 +113,11 @@ export default {
   update(arg0, arg1, body) {
     const _require = arg0;
     const HTTP = _sendRequest.HTTP;
-    let obj = { url: closure_4.WEBHOOK(arg1), body, oldFormErrors: true, rejectWithError: null };
-    obj[3] = _sendRequest.rejectWithMigratedError();
+    let obj = { url: closure_4.WEBHOOK(arg1), body, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
     const obj2 = _sendRequest;
     return HTTP.patch(obj).then((body) => {
       body = body.body;
-      let obj = outer1_1(outer1_2[1]);
+      let obj = closure_1_1(closure_1_2[1]);
       obj = { type: "WEBHOOK_UPDATE", guildId: closure_0, webhook: body };
       obj.dispatch(obj);
       return body;

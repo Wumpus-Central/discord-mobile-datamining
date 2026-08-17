@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
-import batchUpdates from "batchUpdates";
-import { ActivityIndicator } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import identity from "identity";
-import createToggle from "createToggle";
-import { isIterable } from "../../../../../_runtime/04006_isIterable.js";
+import isIterable from "isIterable" /* 4006 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import identity from "identity" /* 700 */;
+import createToggle from "createToggle" /* 10669 */;
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
-const require = arg1;
+require = arg1;
 function setFindYourFriendsDeletionIsLoading(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => outer1_6.setState({ isLoading: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_6.setState({ isLoading: closure_0 }));
 }
 function _onFindYourFriendsDeletionPress() {
   const self = this;
@@ -49,12 +49,12 @@ function _onFindYourFriendsDeletionPress() {
             })()) {
               c5 = 3;
             } else {
-              outer1_7(true);
-              let c3 = 2;
+              closure_1_7(true);
+              c3 = 2;
               c4 = 3;
               c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(outer1_2[7]).adminDeleteContactSync();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(closure_1_2[7]).adminDeleteContactSync();
               return obj1;
             }
           }
@@ -102,7 +102,7 @@ function _onFindYourFriendsDeletionPress() {
       }
     }
   });
-  const _onFindYourFriendsDeletionPress = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -140,6 +140,6 @@ identity = {
   }
 };
 identity = createToggle.createPressable(identity);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx");
 
 export default identity;

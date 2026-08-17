@@ -1,20 +1,17 @@
 // discord_app/modules/launchpad/native/shared/DMChannel.tsx
-import importAllResult from "set";
-import { UnreadSetting } from "ReadStateTypes";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
-obj = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[1] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
-  let channel;
-  let mentionCount;
-  let muted;
-  let unread;
   ({ channel, muted } = navigationReplace);
   if (muted === undefined) {
     muted = false;
@@ -45,17 +42,18 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   tmp2Result = tmp2(16197);
   obj = { style: items, underlayColor: tmp.pressableUnderlayColor.backgroundColor };
   items = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
-  obj = { onPress: null, onLongPress: null };
-  const items1 = [channel.id, flag];
-  obj[0] = importAllResult.useCallback(() => {
-    let obj = channel(outer1_2[3]);
-    obj = { navigationReplace: flag };
-    obj.transitionToChannel(channel.id, obj);
-  }, items1);
-  const items2 = [channel.id];
-  obj[1] = importAllResult.useCallback(() => channel(outer1_2[4]).openChannelLongPressActionSheet(channel.id), items2);
+  obj = {
+    onPress: importAllResult.useCallback(() => {
+      let obj = channel(closure_1_2[3]);
+      obj = { navigationReplace: flag };
+      obj.transitionToChannel(channel.id, obj);
+    }, items1),
+    onLongPress: importAllResult.useCallback(() => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id), items2)
+  };
+  items1 = [channel.id, flag];
+  items2 = [channel.id];
   const merged = Object.assign(obj);
-  const obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
+  obj1 = { channel, unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted, mentionCount, unreadBadge: null, subtitle: null, latestMessageTimestamp: null, channelName: null, fontScale: null };
   const tmp5Result = channel(4751);
   obj1[5] = jsx(flag(16200), { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, muted });
   let tmp11Result = null != tmp7;
@@ -73,8 +71,15 @@ const memoResult = importAllResult.memo(function DMChannel(navigationReplace) {
   obj1[8] = flag(4984)(channel);
   obj1[9] = fontScale;
   obj.children = flag(16209)(obj1);
-  return tmp2Result(jsx(channel(5433).PressableHighlight, { onPress: null, onLongPress: null }));
+  return tmp2Result(jsx(channel(5433).PressableHighlight, {
+    onPress: importAllResult.useCallback(() => {
+      let obj = channel(closure_1_2[3]);
+      obj = { navigationReplace: flag };
+      obj.transitionToChannel(channel.id, obj);
+    }, items1),
+    onLongPress: importAllResult.useCallback(() => channel(closure_1_2[4]).openChannelLongPressActionSheet(channel.id), items2)
+  }));
 });
-const result = require("jsxProd").fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/DMChannel.tsx");
 
 export default memoResult;

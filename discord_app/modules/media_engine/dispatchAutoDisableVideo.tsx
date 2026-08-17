@@ -1,15 +1,17 @@
 // discord_app/modules/media_engine/dispatchAutoDisableVideo.tsx
-import { MediaEngineContextTypes } from "DesktopSources";
-import { dispatcher } from "../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-const result = require("set").fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");
+const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
+const result = set.fileFinishedImporting("modules/media_engine/dispatchAutoDisableVideo.tsx");
 
 export default function dispatchAutoDisableVideo(arg0, arg1) {
-  const importDefault = arg0;
-  const dependencyMap = arg1;
-  dispatcher.wait(() => {
+  importDefault = arg0;
+  dependencyMap = arg1;
+  dispatcherDefault.wait(() => {
     let obj = callback(table[1]);
-    obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: outer1_2.DEFAULT, userId: callback, videoToggleState: table, persist: false, isAutomatic: true };
+    obj = { type: "AUDIO_SET_LOCAL_VIDEO_DISABLED", context: closure_1_2.DEFAULT, userId: callback, videoToggleState: table, persist: false, isAutomatic: true };
     obj.dispatch(obj);
   });
 };

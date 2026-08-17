@@ -1,17 +1,17 @@
 // discord_app/modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx
-import createUserWidgetFromServer from "createUserWidgetFromServer";
+import closure_2 from "createUserWidgetFromServer" /* 5365 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("getTieredTenureBadgeData").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/hooks/useTieredTenureBadgeForUser.tsx");
 
 export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(id) {
   const _require = id;
-  const items = [createUserWidgetFromServer];
+  const items = [closure_2];
   return _initialize.useStateFromStores(items, () => {
     let userProfile = null;
     if (null != closure_0) {
-      userProfile = outer1_2.getUserProfile(tmp);
+      userProfile = closure_1_2.getUserProfile(tmp);
     }
     if (userProfile != null) {
       const premiumSince = userProfile.premiumSince;
@@ -24,7 +24,7 @@ export const useTieredTenureBadgeForUser = function useTieredTenureBadgeForUser(
           const badges = userProfile.badges;
           if (badges != null) {
             const item = badges.forEach((id) => {
-              const tieredTenureBadge = outer1_0(outer1_1[2]).getTieredTenureBadge(id.id);
+              const tieredTenureBadge = closure_1_0(closure_1_1[2]).getTieredTenureBadge(id.id);
             });
           }
         }

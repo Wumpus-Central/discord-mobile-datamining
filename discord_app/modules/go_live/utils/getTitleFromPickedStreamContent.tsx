@@ -1,6 +1,8 @@
 // discord_app/modules/go_live/utils/getTitleFromPickedStreamContent.tsx
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/go_live/utils/getTitleFromPickedStreamContent.tsx");
 
 export default function getTitleFromPickedStreamContent(windows) {
   if (windows.windows.length > 0) {

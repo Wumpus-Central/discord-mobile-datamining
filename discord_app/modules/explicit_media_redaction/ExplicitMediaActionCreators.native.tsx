@@ -1,16 +1,16 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx
-import getFpMessageInfo from "getFpMessageInfo";
-import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
-import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import closure_3 from "getFpMessageInfo" /* 5002 */;
+import { EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
 
-const require = arg1;
-let result = require("redactionSettingToRenderedString").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaActionCreators.native.tsx");
 
 export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveFlow(channelId, closure_1) {
   let obj = redactionSettingToRenderedString;
   obj = { action: redactionSettingToRenderedString.TrackMediaRedactionActionType.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED, messageId: closure_1, channelId };
   const result = obj.trackMediaRedactionAction(obj);
-  if (getFpMessageInfo.canSubmitFpReport(closure_1)) {
+  if (closure_3.canSubmitFpReport(closure_1)) {
     let tmp4Result = tmp4(4342);
     obj = { channelId: null, messageId: null };
     obj[0] = channelId;
@@ -18,7 +18,7 @@ export const handleSenderFalsePositiveFlow = function handleSenderFalsePositiveF
     tmp4Result.openLazy(tmp(2007)(11100, tmp2.paths), closure_4, obj);
   } else {
     tmp4Result = tmp4(4656);
-    const obj1 = { title: null, body: null, confirmText: null };
+    obj1 = { title: null, body: null, confirmText: null };
     const intl = tmp(1236).intl;
     obj1[0] = intl.string(tmp(1236).t["iS/eFN"]);
     const intl2 = tmp(1236).intl;

@@ -1,18 +1,11 @@
 // discord_app/design/components/TextField/native/BaseTextField.native.tsx
-import importAllResult from "noop";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
-  let autoComplete;
-  let focusProps;
-  let isFocused;
-  let keyboardType;
-  let secureTextEntry;
   let obj = ref(7345);
   obj = { size: size.size, isRound: size.isRound, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: onChangeText(1367)("InputFieldContainer") };
   const inputStyles = obj.useInputStyles(obj);
@@ -66,7 +59,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref2) => {
       tmp4(replaced);
     }
   }, items);
-  const obj1 = {};
+  obj1 = {};
   const merged = Object.assign(size);
   obj1.isFocused = isFocused;
   const items1 = [size.leading, , ];

@@ -1,20 +1,16 @@
 // discord_app/modules/stickers/StickersUtils.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import map from "map";
-import getStickerPreview from "getStickerPreview";
-import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID";
-import { Endpoints } from "ME";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import handleImageLoad from "handleImageLoad" /* 1469 */;
+import StickerFormat from "StickerFormat" /* 4964 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "map" /* 4824 */;
+import closure_5 from "getStickerPreview" /* 4963 */;
+import STICKER_PICKER_TAB_PANEL_ID from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
+import { Endpoints } from "ME" /* 676 */;
 import { StickerFormat } from "StickersTypes.tsx";
 
-let ASSET_ENDPOINT;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getStickerExtensionFromFormatType(format_type) {
   if (StickerFormat.StickerFormat.PNG === format_type) {
     const StickerExtensions = tmp(4964).StickerExtensions;
@@ -28,11 +24,11 @@ function getStickerExtensionFromFormatType(format_type) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unexpected format type: " + format_type);
+    error = new Error("Unexpected format type: " + format_type);
     throw error;
   }
 }
-({ DEFAULT_STICKER_DIMENSIONS: closure_6, STICKER_APPLICATION_ID: error, StickerAnimationSettings: metroImportAll } = STICKER_PICKER_TAB_PANEL_ID);
+({ DEFAULT_STICKER_DIMENSIONS: closure_6, STICKER_APPLICATION_ID: error, StickerAnimationSettings: closure_8 } = STICKER_PICKER_TAB_PANEL_ID);
 const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: closure_12, ASSET_ENDPOINT } = GLOBAL_ENV);
@@ -42,10 +38,10 @@ const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\
 const regExp = new RegExp("(" + location.protocol + ASSET_ENDPOINT + "|" + location.protocol + MEDIA_PROXY_ENDPOINT + ")(" + decodeURIComponentResult + ")", "ig");
 const regExp1 = new RegExp("" + location.protocol + API_ENDPOINT + "(" + decodeURIComponentResult + ")", "ig");
 let closure_18 = [];
-const result = require("map").fileFinishedImporting("modules/stickers/StickersUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/StickersUtils.tsx");
 
 export const getStickerPackPreviewSticker = function getStickerPackPreviewSticker(cover_sticker_id) {
-  let closure_0 = cover_sticker_id;
+  closure_0 = cover_sticker_id;
   if (null != cover_sticker_id.cover_sticker_id) {
     const stickers = cover_sticker_id.stickers;
     const found = stickers.find((id) => id.id === cover_sticker_id.cover_sticker_id);
@@ -69,7 +65,7 @@ export const getStickerFormatTypeFromFileType = function getStickerFormatTypeFro
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("Unexpected file type: " + arg0);
+          error = new Error("Unexpected file type: " + arg0);
           throw error;
         }
       }
@@ -263,7 +259,7 @@ export const isAvailableGuildSticker = function isAvailableGuildSticker(guild_id
   }
 };
 export const getFavoriteStickerIds = function getFavoriteStickerIds() {
-  const favoriteStickers = handleConnectionClosedOrResumed.frecencyWithoutFetchingLatest.favoriteStickers;
+  const favoriteStickers = closure_2.frecencyWithoutFetchingLatest.favoriteStickers;
   let stickerIds;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;
@@ -274,7 +270,7 @@ export const getFavoriteStickerIds = function getFavoriteStickerIds() {
   return stickerIds;
 };
 export const isFavoriteSticker = function isFavoriteSticker(arg0) {
-  const favoriteStickers = handleConnectionClosedOrResumed.frecencyWithoutFetchingLatest.favoriteStickers;
+  const favoriteStickers = closure_2.frecencyWithoutFetchingLatest.favoriteStickers;
   let stickerIds;
   if (favoriteStickers != null) {
     stickerIds = favoriteStickers.stickerIds;

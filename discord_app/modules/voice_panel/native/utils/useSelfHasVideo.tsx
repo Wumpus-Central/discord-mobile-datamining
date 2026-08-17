@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/utils/useSelfHasVideo.tsx
-import getParticipants from "getParticipants";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/voice_panel/native/utils/useSelfHasVideo.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/useSelfHasVideo.tsx");
 
 export default function useSelfHasVideo(arg0) {
   const _require = arg0;
-  const items = [getParticipants, fetchFingerprint, _detectH265HardwareDecode];
+  const items = [closure_2, closure_3, closure_4];
   return _initialize.useStateFromStores(items, () => {
-    const participant = outer1_2.getParticipant(callback, outer1_3.getId());
-    return callback(outer1_1[4]).canRenderParticipantVideo(participant, outer1_4);
+    const participant = closure_1_2.getParticipant(callback, closure_1_3.getId());
+    return callback(closure_1_1[4]).canRenderParticipantVideo(participant, closure_1_4);
   });
 };

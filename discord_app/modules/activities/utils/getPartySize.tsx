@@ -1,5 +1,5 @@
 // discord_app/modules/activities/utils/getPartySize.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/utils/getPartySize.tsx");
 

@@ -1,45 +1,37 @@
 // discord_app/modules/guild_onboarding/native/ConnectionCardView.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: obj1, ActivityIndicator: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { card: null, leftContent: null, icon: null, textContent: null, connectedStatus: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.md, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, padding: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, padding: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: require("Themes").space.PX_12 };
-obj1 = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: require("Themes").space.PX_12 };
-createCacheKey[2] = { width: 32, height: 32, marginRight: require("Themes").space.PX_12, justifyContent: "center", alignItems: "center" };
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: ThemesDefault.space.PX_12 };
+obj1 = { flexDirection: "row", alignItems: "center", flex: 1, marginRight: ThemesDefault.space.PX_12 };
+createCacheKey[2] = { width: 32, height: 32, marginRight: ThemesDefault.space.PX_12, justifyContent: "center", alignItems: "center" };
 createCacheKey[3] = { flex: 1 };
-let obj2 = { width: 32, height: 32, marginRight: require("Themes").space.PX_12, justifyContent: "center", alignItems: "center" };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-const result = require("jsxProd").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCardView.tsx");
+let obj2 = { width: 32, height: 32, marginRight: ThemesDefault.space.PX_12, justifyContent: "center", alignItems: "center" };
+createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ConnectionCardView.tsx");
 
 export default function ConnectionCardView(description) {
-  let canConnect;
-  let displayName;
-  let icon;
-  let isConnected;
-  let isLoading;
-  let onConnect;
   description = description.description;
   ({ displayName, icon, isLoading, isConnected, canConnect, onConnect } = description);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.card, children: null };
   obj = { style: tmp.leftContent, children: null };
   obj = { style: tmp.icon, children: icon };
   const items = [callback(closure_2, obj), ];
-  const obj1 = { style: tmp.textContent, children: null };
+  obj1 = { style: tmp.textContent, children: null };
   const items1 = [callback(Text.Text, { variant: "text-md/medium", color: "text-strong", children: displayName }), ];
   let tmp4Result = null != description;
   if (tmp4Result) {

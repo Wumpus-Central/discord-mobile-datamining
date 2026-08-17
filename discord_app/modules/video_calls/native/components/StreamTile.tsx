@@ -1,30 +1,25 @@
 // discord_app/modules/video_calls/native/components/StreamTile.tsx
-import importAllResult from "map";
-import get_ActivityIndicator from "ResizeMode";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import { ApplicationStreamStates } from "ME";
-import { MediaEngineContextTypes } from "DesktopSources";
-import jsxProd from "LegacyBaseButton";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import { registerAsset } from "../../../../../_runtime/12458_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { useVideoStreamError } from "../../../errors/hooks/useVideoStreamError.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import useVideoStreamErrorDefault from "useVideoStreamError" /* 12439 */;
+import registerAssetDefault from "registerAsset" /* 12458 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "reset" /* 4652 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import { ApplicationStreamStates } from "ME" /* 676 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let StyleSheet;
-let c10;
-let c4;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class StreamTextOverlay {
   constructor(arg0) {
     subtext = global.subtext;
-    tmp = Fragment();
+    tmp = closure_13();
     obj = { style: tmp.screenMessageContainer, children: null };
     tmp2 = jsxs;
     tmp3 = View;
@@ -50,7 +45,7 @@ let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let obj = { container: null, screenMessageContainer: null, screenMessageText: null, screenMessageSubtext: null, statusWrapper: null, liveTag: null };
-obj = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: require("Themes").colors.BLACK };
+obj = { flex: 1, alignItems: "center", justifyContent: "center", overflow: "hidden", width: "100%", backgroundColor: ThemesDefault.colors.BLACK };
 obj[0] = obj;
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -58,32 +53,26 @@ createCacheKey.flex = 1;
 createCacheKey.padding = 8;
 createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
-createCacheKey.backgroundColor = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BLACK, 0.7);
+createCacheKey.backgroundColor = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.7);
 obj[1] = createCacheKey;
 obj[2] = { lineHeight: 18 };
-obj[3] = { color: require("Themes").unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
+obj[3] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
 let obj3 = { position: "absolute", bottom: 8, right: 8, backgroundColor: null, borderRadius: null, width: 24, height: 24, justifyContent: "center", alignItems: "center" };
-obj3[3] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_700, 0.5);
-obj3[4] = require("Themes").radii.md;
+obj3[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.5);
+obj3[4] = ThemesDefault.radii.md;
 obj[4] = obj3;
 obj[5] = { position: "absolute", right: 8, top: 8 };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_15 = importAllResult.memo((participant) => {
-  let gestureEnabled;
-  let removeEmptyStateButton;
-  let removeEmptyStateImage;
-  let resizeMode;
-  let streamId;
-  let user;
   participant = participant.participant;
   ({ user, removeEmptyStateButton, removeEmptyStateImage } = participant);
-  let importDefault;
+  importDefault = undefined;
   ({ streamId, resizeMode, gestureEnabled } = participant);
   importDefault = callback2();
   let obj = participant(589);
-  const items = [reset];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getActiveStreamForStreamKey(participant.id));
-  const tmp5 = useVideoStreamError(MediaEngineContextTypes.STREAM, participant.user.id);
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getActiveStreamForStreamKey(participant.id));
+  const tmp5 = useVideoStreamErrorDefault(MediaEngineContextTypes.STREAM, participant.user.id);
   if (null != stateFromStores) {
     const state = stateFromStores.state;
     if (ApplicationStreamStates.FAILED === state) {
@@ -106,7 +95,7 @@ let closure_15 = importAllResult.memo((participant) => {
       return callback(tmp4Result, obj);
     } else {
       if (tmp6.RECONNECTING === state) {
-        const obj1 = { title: null };
+        obj1 = { title: null };
         const intl = tmp(1236).intl;
         obj1[0] = intl.string(tmp(1236).t["pdFFK+"]);
         let tmp9 = callback(StreamTextOverlay, obj1);
@@ -140,7 +129,7 @@ let closure_15 = importAllResult.memo((participant) => {
         obj5[1] = streamId;
         obj5[2] = gestureEnabled;
         obj5[3] = function renderTag() {
-          return outer1_10(lib(outer1_2[18]), { style: lib.liveTag, participant });
+          return closure_1_10(lib(closure_1_2[18]), { style: lib.liveTag, participant });
         };
         if (stateFromStores.ownerId === id) {
           let REMOTE_STREAM = tmp(12448).VideoSpinnerContext.SELF_STREAM;
@@ -161,29 +150,17 @@ let closure_15 = importAllResult.memo((participant) => {
   }
 });
 let closure_16 = importAllResult.memo((arg0) => {
-  let onFullScreen;
-  let style;
   ({ onFullScreen, style } = arg0);
   let obj = { accessibilityRole: "button", onPress: onFullScreen, style: items, hitSlop: { top: 4, left: 4, right: 4, bottom: 4 }, children: null };
   items = [callback2().statusWrapper, style];
-  obj = { source: null, size: null, color: null };
-  obj[0] = registerAsset;
-  obj[1] = Button.Icon.Sizes.SMALL;
-  obj[2] = Themes.unsafe_rawColors.WHITE;
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.SMALL, color: ThemesDefault.unsafe_rawColors.WHITE };
   obj[4] = callback(Button.Icon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 });
-let obj2 = { color: require("Themes").unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
-const result = require("reset").fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");
+let obj2 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_300, fontSize: 14, lineHeight: 18, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/StreamTile.tsx");
 
 export default function StreamTile(participant) {
-  let fullscreenIconStyle;
-  let gestureEnabled;
-  let removeEmptyStateButton;
-  let removeEmptyStateImage;
-  let streamId;
-  let style;
-  let user;
   participant = participant.participant;
   const onSingleTap = participant.onSingleTap;
   const onDoubleTap = participant.onDoubleTap;

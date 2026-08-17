@@ -1,16 +1,13 @@
 // discord_app/utils/LibraryApplicationUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import addSku from "addSku";
-import ME from "ME";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "addSku" /* 4521 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ LibraryApplicationFlags: c5, LocalDispatchApplicationStates: closure_6, StatusTypes: error } = ME);
-const result = require("addSku").fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/LibraryApplicationUtils.tsx");
 
 export const getComboId = function getComboId(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
@@ -99,7 +96,7 @@ export const getCombinedProgress = function getCombinedProgress(arr) {
 export const isUserEntitledToLibraryApplication = function isUserEntitledToLibraryApplication(libraryApplication) {
   let isEntitledResult = libraryApplication.isDiscordApplication();
   if (isEntitledResult) {
-    isEntitledResult = libraryApplication.isEntitled(currentUser.getCurrentUser(), addSku);
+    isEntitledResult = libraryApplication.isEntitled(currentUser.getCurrentUser(), closure_4);
   }
   return isEntitledResult;
 };

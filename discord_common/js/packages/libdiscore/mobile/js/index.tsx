@@ -1,20 +1,23 @@
 // discord_common/js/packages/libdiscore/mobile/js/index.tsx
-import { NativeModules } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import typedGlobal from "typedGlobal" /* 1919 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
 if (NativeModules.LibDiscoreModule) {
   let LibDiscoreModule = NativeModules.LibDiscoreModule;
 } else {
   const _Proxy = Proxy;
   const obj = { get: null };
   obj[0] = function get() {
-    const error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
+    error = new Error("The package 'react-native-libdiscore-jsi-module' doesn't seem to be linked");
     throw error;
   };
   LibDiscoreModule = new Proxy({}, obj);
 }
 LibDiscoreModule.bridgeJSIFunctions();
-const LIBDISCORE_JSI = require("typedGlobal").typedGlobal.LIBDISCORE_JSI;
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
+const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
+let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/index.tsx");
 const prototype = function BlockedDomainsStore() {
   return Object.create(new.target.prototype);
 }.prototype;

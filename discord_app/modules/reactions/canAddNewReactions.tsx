@@ -1,18 +1,18 @@
 // discord_app/modules/reactions/canAddNewReactions.tsx
-import recomputeGuild from "recomputeGuild";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
+import closure_0 from "recomputeGuild" /* 4977 */;
+import closure_1 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 
-const result = require("ME").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/canAddNewReactions.tsx");
 
 export default (getGuildId) => {
   const guildId = getGuildId.getGuildId();
   let canChatInGuildResult = null != guildId;
   if (canChatInGuildResult) {
-    canChatInGuildResult = recomputeGuild.canChatInGuild(guildId);
+    canChatInGuildResult = closure_0.canChatInGuild(guildId);
   }
   if (canChatInGuildResult) {
-    canChatInGuildResult = getUncachedChannelPermissions.can(Permissions.ADD_REACTIONS, getGuildId);
+    canChatInGuildResult = closure_1.can(Permissions.ADD_REACTIONS, getGuildId);
   }
   if (!canChatInGuildResult) {
     canChatInGuildResult = getGuildId.isPrivate();

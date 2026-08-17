@@ -1,51 +1,47 @@
 // discord_app/modules/premium/powerups/constants/GuildPowerupsConstants.tsx
-import { BoostedGuildFeatures } from "GuildFeatures";
-import ME from "ME";
-import set from "str11";
-import { VANITY_URL_POWERUP_SKU_ID } from "../../../../../discord_common/js/shared/shared-constants/Powerups.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getGuildTierFromGuild } from "../../../../utils/GuildBoostingUtils.tsx";
-import { str11 } from "../../../game_server/GameServerConstants.tsx";
-import { experiment } from "../../../game_server/GameServerExperiment.tsx";
-import { experiment } from "../experiments/FileUpload250MbPowerupExperiment.tsx";
-import { apexExperiment } from "../experiments/FileUploadPowerupHoldoutExperiment.tsx";
-import { experiment } from "../experiments/ServerThemeExperiment.tsx";
-import { apexExperiment } from "../experiments/ServerThemeUserExperiment.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import GuildFeatures2 from "GuildFeatures" /* 1924 */;
+import str11 from "str11" /* 4263 */;
+import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4265 */;
+import getGuildTierFromGuild from "getGuildTierFromGuild" /* 4266 */;
+import experiment from "experiment" /* 4285 */;
+import apexExperiment from "apexExperiment" /* 4301 */;
+import experiment2 from "experiment" /* 4302 */;
+import apexExperiment2 from "apexExperiment" /* 4303 */;
+import experiment3 from "experiment" /* 4304 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let TIER_1;
-let TIER_12;
-let TIER_2;
-let TIER_22;
-let TIER_3;
-let TIER_32;
+const BoostedGuildFeatures = GuildFeatures2.BoostedGuildFeatures;
 const BoostedGuildTiers = ME.BoostedGuildTiers;
 const GuildFeatures = ME.GuildFeatures;
-const items = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_1_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_2_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_3_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_TAG_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_ROLE_COLOR_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
+const items = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_1_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_2_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_3_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_ROLE_COLOR_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
 let set = new Set(items);
 const items1 = [, , , , , ];
 ({ GUILD_TAGS: arr2[0], ENHANCED_ROLE_COLORS: arr2[1], GUILD_TAGS_BADGE_PACK_PETS: arr2[2], GUILD_TAGS_BADGE_PACK_FLEX: arr2[3], GUILD_TAGS_BADGE_PACK_PLANT: arr2[4], GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES: arr2[5] } = GuildFeatures);
-let obj = { [TIER_1]: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_1_SKU_ID, [TIER_2]: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_2_SKU_ID, [TIER_3]: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_3_SKU_ID, [BoostedGuildTiers.NONE]: undefined };
+let obj = { [TIER_1]: VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_1_SKU_ID, [TIER_2]: VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_2_SKU_ID, [TIER_3]: VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_3_SKU_ID, [BoostedGuildTiers.NONE]: undefined };
 ({ TIER_1, TIER_2, TIER_3 } = BoostedGuildTiers);
 obj = { [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_1_SKU_ID]: BoostedGuildTiers.TIER_1, [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_2_SKU_ID]: BoostedGuildTiers.TIER_2, [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_LEVEL_3_SKU_ID]: BoostedGuildTiers.TIER_3 };
-obj = { [TIER_12]: require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, [TIER_22]: require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, [TIER_32]: require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, [BoostedGuildTiers.NONE]: undefined };
+obj = { [TIER_12]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, [TIER_22]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, [TIER_32]: DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, [BoostedGuildTiers.NONE]: undefined };
 ({ TIER_1: TIER_12, TIER_2: TIER_22, TIER_3: TIER_32 } = BoostedGuildTiers);
-const items2 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_TAG_SKU_ID];
+const items2 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID];
 const items3 = [items2, , , , , , ];
-const items4 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_ROLE_COLOR_SKU_ID];
+const items4 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_ROLE_COLOR_SKU_ID];
 items3[1] = items4;
-const items5 = [require("VANITY_URL_POWERUP_SKU_ID").VANITY_URL_POWERUP_SKU_ID];
+const items5 = [VANITY_URL_POWERUP_SKU_ID.VANITY_URL_POWERUP_SKU_ID];
 items3[2] = items5;
-const items6 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
+const items6 = [VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
 items3[3] = items6;
-const items7 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
+const items7 = [VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
 items3[4] = items7;
-const items8 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+const items8 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
 items3[5] = items8;
-const items9 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_GUILD_THEME_SKU_ID];
+const items9 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID];
 items3[6] = items9;
-const items10 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_TAG_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_ROLE_COLOR_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").VANITY_URL_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_GUILD_THEME_SKU_ID];
+const items10 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_ROLE_COLOR_SKU_ID, VANITY_URL_POWERUP_SKU_ID.VANITY_URL_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID];
 const set1 = new Set(items1);
-const items11 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_ROLE_COLOR_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_TAG_SKU_ID];
+const items11 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_ROLE_COLOR_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID];
 const set2 = new Set(items10);
 const obj1 = { boostPrice: 5, includedInLevel: BoostedGuildTiers.TIER_3 };
 let obj2 = {
@@ -55,8 +51,8 @@ let obj2 = {
     const enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "GuildPowerupsConstants" }).enabled;
     let fileUpload250MbPowerupEnabled = !enabled;
     if (!enabled) {
-      fileUpload250MbPowerupEnabled = experiment.getFileUpload250MbPowerupEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = experiment;
+      fileUpload250MbPowerupEnabled = experiment2.getFileUpload250MbPowerupEnabled(guildId, "GuildPowerupsConstants");
+      const tmpResult = experiment2;
     }
     return fileUpload250MbPowerupEnabled;
   }
@@ -64,10 +60,10 @@ let obj2 = {
 let obj3 = {
   boostPrice: 3,
   isEnabled(guildId) {
-    let serverThemeUserEnabled = apexExperiment.getServerThemeUserEnabled("GuildPowerupsConstants");
+    let serverThemeUserEnabled = apexExperiment2.getServerThemeUserEnabled("GuildPowerupsConstants");
     if (serverThemeUserEnabled) {
-      serverThemeUserEnabled = experiment.getServerThemeEnabled(guildId, "GuildPowerupsConstants");
-      const tmpResult = experiment;
+      serverThemeUserEnabled = experiment3.getServerThemeEnabled(guildId, "GuildPowerupsConstants");
+      const tmpResult = experiment3;
     }
     return serverThemeUserEnabled;
   }
@@ -80,25 +76,25 @@ let obj4 = {
 };
 const set3 = new Set(items11);
 let obj6 = { VANITY_URL: 1, [1]: "VANITY_URL", GUILD_TAG_BADGE_PACKS_WAVE_ONE: 2, [2]: "GUILD_TAG_BADGE_PACKS_WAVE_ONE", GAME_SERVER_HOSTING: 3, [3]: "GAME_SERVER_HOSTING", GUILD_TAG_BADGE_PACKS_WAVE_TWO: 4, [4]: "GUILD_TAG_BADGE_PACKS_WAVE_TWO", FILE_UPLOAD_250_MB: 5, [5]: "FILE_UPLOAD_250_MB", GUILD_THEME: 6, [6]: "GUILD_THEME", GUILD_TAG: 7, [7]: "GUILD_TAG" };
-const items12 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
+const items12 = [VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID];
 const set4 = new Set(items12);
-const items13 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
+const items13 = [VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_PLANT_POWERUP_SKU_ID, VANITY_URL_POWERUP_SKU_ID.GUILD_TAGS_BADGE_PACK_CREEPY_CRAWLIES_POWERUP_SKU_ID];
 const set5 = new Set(items13);
 let obj7 = {};
-const items14 = [require("VANITY_URL_POWERUP_SKU_ID").VANITY_URL_POWERUP_SKU_ID];
+const items14 = [VANITY_URL_POWERUP_SKU_ID.VANITY_URL_POWERUP_SKU_ID];
 const obj5 = { [VANITY_URL_POWERUP_SKU_ID.VANITY_URL_POWERUP_SKU_ID]: BoostedGuildTiers.TIER_3 };
 obj7[obj6.VANITY_URL] = new Set(items14);
 obj7[obj6.GUILD_TAG_BADGE_PACKS_WAVE_ONE] = set4;
 const set6 = new Set(items14);
 obj7[obj6.GAME_SERVER_HOSTING] = new Set();
 obj7[obj6.GUILD_TAG_BADGE_PACKS_WAVE_TWO] = set5;
-const items15 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
+const items15 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_MAX_FILE_SIZE_250_MB_SKU_ID];
 const set7 = new Set();
 obj7[obj6.FILE_UPLOAD_250_MB] = new Set(items15);
-const items16 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_GUILD_THEME_SKU_ID];
+const items16 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID];
 const set8 = new Set(items15);
 obj7[obj6.GUILD_THEME] = new Set(items16);
-const items17 = [require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_TAG_SKU_ID];
+const items17 = [VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_TAG_SKU_ID];
 const set9 = new Set(items16);
 obj7[obj6.GUILD_TAG] = new Set(items17);
 const result = set.fileFinishedImporting("modules/premium/powerups/constants/GuildPowerupsConstants.tsx");

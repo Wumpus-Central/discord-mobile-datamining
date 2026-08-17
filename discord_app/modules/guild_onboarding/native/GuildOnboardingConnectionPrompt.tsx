@@ -1,64 +1,61 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingConnectionPrompt.tsx
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
-import get_ActivityIndicator from "isChattableChannel";
-import get from "get";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import set from "set";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleUpdate from "handleUpdate";
-import { OnboardingConnectionType } from "serverPromptToClientPrompt";
-import { GuildOnboardingModalStates as closure_12 } from "GUILD_ONBOARDING_MODAL_KEY";
-import { AnalyticEvents } from "ME";
-import jsxProd from "SafeAreaPaddingView";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "get" /* 6801 */;
+import closure_7 from "recomputeFromAppTokens" /* 5289 */;
+import closure_8 from "set" /* 5221 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "handleUpdate" /* 6788 */;
+import { OnboardingConnectionType } from "serverPromptToClientPrompt" /* 5286 */;
+import { GuildOnboardingModalStates as closure_12 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_14;
-let closure_15;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { flex: { flex: 1 }, container: null, scrollContainer: null, header: null, title: null, description: null, connectionsList: null, footer: null, footerContent: null };
-createCacheKey = { display: "flex", flex: 1, flexGrow: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, marginBottom: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { display: "flex", flex: 1, flexGrow: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, marginBottom: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { display: "flex", flexGrow: 1, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-let obj1 = { display: "flex", flexGrow: 1, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_24 };
-let obj2 = { marginBottom: require("Themes").space.PX_24 };
-createCacheKey[4] = { marginBottom: require("Themes").space.PX_8 };
-let obj3 = { marginBottom: require("Themes").space.PX_8 };
-createCacheKey[5] = { marginTop: require("Themes").space.PX_8 };
-let obj4 = { marginTop: require("Themes").space.PX_8 };
-createCacheKey[6] = { marginTop: require("Themes").space.PX_8 };
-let obj5 = { marginTop: require("Themes").space.PX_8 };
-createCacheKey[7] = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: require("Themes").space.PX_8, position: "absolute", width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-let obj6 = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: require("Themes").space.PX_8, position: "absolute", width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-createCacheKey[8] = { width: "100%", paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { width: "100%", paddingHorizontal: require("Themes").space.PX_16 };
-const result = require("get").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConnectionPrompt.tsx");
+createCacheKey[2] = { display: "flex", flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj1 = { display: "flex", flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
+let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_8 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { marginTop: ThemesDefault.space.PX_8 };
+let obj4 = { marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { marginTop: ThemesDefault.space.PX_8 };
+let obj5 = { marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[7] = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: ThemesDefault.space.PX_8, position: "absolute", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj6 = { display: "flex", flexDirection: "column", justifyContent: "flex-end", alignItems: "center", bottom: 0, paddingBottom: ThemesDefault.space.PX_8, position: "absolute", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+createCacheKey[8] = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingConnectionPrompt.tsx");
 
 export default function GuildOnboardingConnectionPrompt(guildId) {
   guildId = guildId.guildId;
   const onComplete = guildId.onComplete;
   const isLastStep = guildId.isLastStep;
   let navigation;
-  let closure_4;
+  closure_4 = undefined;
   let stateFromStores;
   let stateFromStoresArray;
   let stateFromStores1;
   let stateFromStores2;
   let stateFromStores3;
   let stateFromStores4;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = guildId(isLastStep[14]);
   navigation = obj.useNavigation();
   const bottom = onComplete(isLastStep[15])().bottom;
   const sum = 64 + bottom;
   const sum1 = sum + onComplete(isLastStep[13]).space.PX_8;
   closure_4 = navigation.useRef(false);
-  let obj1 = guildId(isLastStep[16]);
+  obj1 = guildId(isLastStep[16]);
   const items = [stateFromStores4];
   stateFromStores = obj1.useStateFromStores(items, () => stateFromStores4.getOnboardingConnections(guildId));
   let obj2 = guildId(isLastStep[16]);
@@ -82,7 +79,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     while (iter !== undefined) {
       let tmp3 = nextResult;
       let connection_type = nextResult.connection_type;
-      if (outer1_11.APPLICATION === connection_type) {
+      if (closure_1_11.APPLICATION === connection_type) {
         let tmp13 = stateFromStores1;
         let tmp14 = nextResult;
         if (null != stateFromStores1.getNewestTokenForApplication(tmp3.application_id)) {
@@ -131,7 +128,7 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
           obj.required = false;
           ({ connected: obj4.provider_connections_connected, notConnected: obj4.provider_connections_not_connected } = providerConnectionState);
           ({ connected: obj4.application_connections_connected, notConnected: obj4.application_connections_not_connected } = applicationConnectionState);
-          obj3.track(outer1_13.GUILD_ONBOARDING_STEP_VIEWED, obj);
+          obj3.track(closure_1_13.GUILD_ONBOARDING_STEP_VIEWED, obj);
           tmp12.current = true;
           const obj5 = guildId(isLastStep[19]);
         }
@@ -157,12 +154,12 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     obj.is_final_step = isLastStep;
     ({ connected: obj4.provider_connections_connected, notConnected: obj4.provider_connections_not_connected } = providerConnectionState);
     ({ connected: obj4.application_connections_connected, notConnected: obj4.application_connections_not_connected } = applicationConnectionState);
-    obj3.track(outer1_13.GUILD_ONBOARDING_STEP_COMPLETED, obj);
+    obj3.track(closure_1_13.GUILD_ONBOARDING_STEP_COMPLETED, obj);
     if (stateFromStoresArray.length > 0) {
-      navigation.push(outer1_12.PROMPT, { currentPrompt: 0 });
+      navigation.push(closure_1_12.PROMPT, { currentPrompt: 0 });
     } else {
       if (tmpResult.showRulesInOnboarding(stateFromStores1, stateFromStores2)) {
-        navigation.push(outer1_12.RULES);
+        navigation.push(closure_1_12.RULES);
       } else {
         onComplete();
       }
@@ -208,9 +205,8 @@ export default function GuildOnboardingConnectionPrompt(guildId) {
     const obj8 = { style: null, children: null };
     obj8[0] = tmp.connectionsList;
     obj8[1] = stateFromStores.map((connection) => {
-      const obj = { connection, guildId, location: null };
-      obj[2] = onComplete(isLastStep[25]).GUILD_ONBOARDING;
-      return outer1_14(onComplete(isLastStep[24]), obj, arg1);
+      const obj = { connection, guildId, location: onComplete(isLastStep[25]).GUILD_ONBOARDING };
+      return closure_1_14(onComplete(isLastStep[24]), obj, arg1);
     });
     items13[1] = tmp13(closure_4, obj8);
     obj3[1] = items13;

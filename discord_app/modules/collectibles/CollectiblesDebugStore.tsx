@@ -1,14 +1,15 @@
 // discord_app/modules/collectibles/CollectiblesDebugStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return {
     logs: [],
     addLog(arg0) {
       const callback = arg0;
       return callback((logs) => {
-        const obj = { logs: null };
+        obj = { logs: null };
         const items = [...logs.logs];
         const date = new Date();
         items[tmp] = "[" + new Date().toISOString().split("T")[0] + "] " + closure_0;
@@ -21,7 +22,7 @@ let obj = keys.create((arg0) => {
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/CollectiblesDebugStore.tsx");
 
 export const useCollectiblesDebugStore = obj;
 export const addDebugLog = function addDebugLog(arg0) {

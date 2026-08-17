@@ -1,13 +1,13 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { IconButton } from "../../../../../design/components/Button/native/IconButton.native.tsx";
+import IconButton from "IconButton" /* 8035 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
+require = arg1;
+const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0);
   return jsx(IconButton.IconButton, { ref, size: "md", variant: "secondary-overlay" });
 });
-const result = require("IconButton").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaViewerOverlayButton.tsx");
 
 export default forwardRefResult;

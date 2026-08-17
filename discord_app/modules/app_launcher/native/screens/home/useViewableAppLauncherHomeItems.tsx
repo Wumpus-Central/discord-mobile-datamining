@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx
-import noop from "noop";
-import handleDismissWithDismissed from "handleDismissWithDismissed";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleDismissWithDismissed" /* 11264 */;
 
 const require = arg1;
-let result = require("module_4115").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useViewableAppLauncherHomeItems.tsx");
 
 export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHomeItems() {
   let obj = sharedValue(sharedValue1[2]);
@@ -15,7 +15,7 @@ export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHo
       viewableItems = viewableItems.viewableItems;
       let item = viewableItems.forEach((item) => {
         item = item.item;
-        let value = item.type !== outer1_0(outer1_1[3]).AppLauncherHomeListItemType.SHELF_ITEM;
+        let value = item.type !== closure_1_0(closure_1_1[3]).AppLauncherHomeListItemType.SHELF_ITEM;
         if (!value) {
           value = store.get();
         }
@@ -43,7 +43,7 @@ export const useViewableAppLauncherHomeItems = function useViewableAppLauncherHo
           obj[1] = tmp(tmp2[5]).ImpressionNames.APP_LAUNCHER_SECTION;
           obj = { section_name: null, num_items: null, num_visible_items: null, source: null };
           ({ sectionName: obj3[0], numItems: obj3[1], numVisibleItems: obj3[2] } = item);
-          obj[3] = outer1_3.entrypoint();
+          obj[3] = closure_1_3.entrypoint();
           obj[2] = obj;
           tmp(tmp2[4]).trackImpression(obj);
           const tmpResult = tmp(tmp2[4]);

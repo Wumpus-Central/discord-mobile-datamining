@@ -1,11 +1,13 @@
 // discord_app/experiments/SwipeToReplyExperiment.tsx
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
-import { useLaunchPadType } from "../modules/launchpad/native/useLaunchPadType.tsx";
+import set from "set" /* 2 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 10666 */;
 
-const result = require("useIsSwipeToMemberListEnabled").fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");
+const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
+const result = set.fileFinishedImporting("experiments/SwipeToReplyExperiment.tsx");
 
 export const useIsMessageSwipeActionsEnabled = function useIsMessageSwipeActionsEnabled() {
-  const tmp = useLaunchPadType() === LaunchPadTypes.GESTURE_FULL;
+  const tmp = useLaunchPadTypeDefault() === LaunchPadTypes.GESTURE_FULL;
   let tmp2 = !tmp;
   if (!tmp) {
     tmp2 = !obj.useIsSwipeToMemberListEnabled();

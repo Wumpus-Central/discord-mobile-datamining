@@ -1,8 +1,10 @@
 // discord_app/modules/user_profile/Constants.tsx
-import { Endpoints } from "ME";
-import { BadgeId } from "../../../discord_common/js/shared/shared-constants/BadgeId.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import BadgeId from "BadgeId" /* 8932 */;
 
-const result = require("set").fileFinishedImporting("modules/user_profile/Constants.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/user_profile/Constants.tsx");
 
 export const USER_PROFILE_TOOLTIP_DELAY = 300;
 export const getBadgeName = function getBadgeName(arg0) {

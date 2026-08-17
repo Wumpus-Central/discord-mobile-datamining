@@ -1,32 +1,35 @@
 // discord_app/modules/gateway/GatewayConnectionStore.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import fetchFingerprint from "fetchFingerprint";
-import callConnect from "callConnect";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_9 from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import initialize from "initialize";
-import handleConnectionOpen from "handleConnectionOpen";
-import filterPlayingActivities from "filterPlayingActivities";
-import closure_14 from "initialize";
-import ME from "ME";
-import { UserSettingsTypes } from "MAX_FAVORITES";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { CLOSED } from "ConnectionState.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import applyDefault from "apply" /* 12 */;
+import set from "set" /* 500 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import handleIdentify from "handleIdentify" /* 13187 */;
+import CLOSEDDefault from "CLOSED" /* 13202 */;
+import getIsPausedAll from "getIsPaused" /* 13223 */;
+import defineSimpleDispatchDefault from "defineSimpleDispatch" /* 13231 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "callConnect" /* 4496 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_10 from "createRTCConnection" /* 4539 */;
+import closure_11 from "initialize" /* 4565 */;
+import closure_12 from "handleConnectionOpen" /* 1979 */;
+import closure_13 from "filterPlayingActivities" /* 7250 */;
+import closure_14 from "initialize" /* 4558 */;
+import ME from "ME" /* 676 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 import { handleIdentify } from "GatewaySocketSingleton.tsx";
 
-let closure_15;
-let closure_16;
-const require = arg1;
+require = arg1;
 function _handleConnectionOpen() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, rendererCrashReason) {
       if (c4 === 2) {
         c4 = 3;
@@ -60,12 +63,12 @@ function _handleConnectionOpen() {
               voiceChannelId = undefined;
               guildId = undefined;
               const _Date2 = Date;
-              const outer1_20 = Date.now();
-              const outer1_21 = obj2.sessionId;
+              closure_20 = Date.now();
+              sessionId = obj2.sessionId;
               const localPresenceState = callback(13187).localPresenceState;
               localPresenceState.handleConnectionOpen();
               obj2 = {};
-              voiceChannelId = outer1_12.getVoiceChannelId();
+              voiceChannelId = closure_1_12.getVoiceChannelId();
               if (null != voiceChannelId) {
                 const Storage2 = callback(595).Storage;
                 const value = Storage2.get("discord_watchdog_restart_timestamp");
@@ -97,8 +100,8 @@ function _handleConnectionOpen() {
                 if ("reload" !== type) {
                   if (!tmp19) {
                     let lastCrash;
-                    if (outer1_18 != null) {
-                      const processUtils = outer1_18.processUtils;
+                    if (closure_1_18 != null) {
+                      const processUtils = closure_1_18.processUtils;
                       if (processUtils != null) {
                         const getLastCrash = processUtils.getLastCrash;
                         if (getLastCrash != null) {
@@ -108,12 +111,12 @@ function _handleConnectionOpen() {
                     }
                     dependencyMap = 1;
                     c4 = 1;
-                    const obj1 = { value: null, done: false };
+                    obj1 = { value: null, done: false };
                     obj1[0] = lastCrash;
                     return obj1;
                   }
                 }
-                guildId = outer1_8.getChannel(voiceChannelId);
+                guildId = closure_1_8.getChannel(voiceChannelId);
                 if (null != guildId) {
                   obj2 = { guildId: null, channelId: null };
                   obj2[0] = guildId.getGuildId();
@@ -124,8 +127,8 @@ function _handleConnectionOpen() {
               }
               const localVoiceState = callback(13187).localVoiceState;
               localVoiceState.update(obj2, true);
-              const outer1_22 = false;
-              const outer1_24 = null;
+              c22 = false;
+              c24 = null;
               c4 = 3;
             }
           } else if (arg0 === 1) {
@@ -137,7 +140,7 @@ function _handleConnectionOpen() {
               rendererCrashReason = rendererCrashReason.rendererCrashReason;
             }
             if (null == rendererCrashReason) {
-              if (closure_22) {
+              if (c22) {
                 let tmp11 = null;
                 if (null != voiceChannelId) {
                   tmp11 = voiceChannelId;
@@ -159,7 +162,7 @@ function _handleConnectionOpen() {
       }
     })();
   });
-  const _handleConnectionOpen = tmp;
+  closure_25 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -183,21 +186,22 @@ function handleLocalPresenceChange() {
   return false;
 }
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = ME);
-require("handleIdentify").socket.dispatcher.getDispatchHandler = require("defineSimpleDispatch");
-let closure_19 = new require("callConnect")("ConnectionStore");
+require("handleIdentify").socket.dispatcher.getDispatchHandler = defineSimpleDispatchDefault;
+let closure_19 = new timestampDefault("ConnectionStore");
 let c20 = 0;
 let c21 = null;
 let c22 = true;
 let c23 = null;
 let c24 = null;
+const Store = initializeDefault.Store;
 class GatewayConnectionStore extends Store {
 }
 const prototype = GatewayConnectionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, callConnect, ensureGuildLoaded, closure_9, createRTCConnection, initialize, handleConnectionOpen, filterPlayingActivities, closure_14, handleConnectionClosedOrResumed);
+  this.waitFor(closure_6, closure_7, closure_8, closure_9, closure_10, closure_11, closure_12, closure_13, closure_14, closure_5);
   const items = [closure_9];
   this.syncWith(items, handleMediaEngineChange);
-  const items1 = [filterPlayingActivities];
+  const items1 = [closure_13];
   this.syncWith(items1, handleLocalPresenceChange);
 };
 prototype["getSocket"] = function getSocket() {
@@ -219,10 +223,10 @@ prototype["lastTimeConnectedChanged"] = function lastTimeConnectedChanged() {
   return c20;
 };
 GatewayConnectionStore.displayName = "GatewayConnectionStore";
-const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"), {
+const gatewayConnectionStore = new GatewayConnectionStore(dispatcherDefault, {
   START_SESSION: function handleSessionStart() {
     const socket = handleIdentify.socket;
-    const verbose = tmp3.verbose;
+    const verbose = closure_19.verbose;
     if (socket.isClosed()) {
       verbose("Socket is reconnecting because of starting new session");
       const socket2 = handleIdentify.socket;
@@ -237,7 +241,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     const obj = { isEstablished: null };
     const socket = handleIdentify.socket;
     obj[0] = socket.isSessionEstablished();
-    tmp3.verbose("session refresh dispatched", obj);
+    closure_19.verbose("session refresh dispatched", obj);
     const socket2 = handleIdentify.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
@@ -253,7 +257,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
       const localPresenceState = handleIdentify.localPresenceState;
       localPresenceState.handleAccountSwitch();
     }
-    tmp3.verbose("Closing socket because of logout");
+    closure_19.verbose("Closing socket because of logout");
     const socket = handleIdentify.socket;
     socket.close();
   },
@@ -281,11 +285,11 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     })(arg0);
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
-    let c24 = null;
+    c24 = null;
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    tmp3.verbose("connection closed dispatched");
-    let closure_20 = Date.now();
+    closure_19.verbose("connection closed dispatched");
+    closure_20 = Date.now();
   },
   RTC_CONNECTION_STATE: function handleRTCConnectionState(state) {
     if (state.state !== constants.DISCONNECTED) {
@@ -321,10 +325,10 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
       } else {
         const socket = tmp(13187).socket;
         if (socket.isClosed()) {
-          importAll(13223).setIsPaused(false);
+          getIsPausedAll.setIsPaused(false);
           const socket2 = tmp(13187).socket;
           socket2.connect();
-          const obj3 = importAll(13223);
+          const obj3 = getIsPausedAll;
         }
       }
     }
@@ -386,31 +390,31 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let state = arg0;
     let socket = require;
     if (obj.isIOS()) {
-      if (!fetchFingerprint.isAuthenticated()) {
+      if (!closure_6.isAuthenticated()) {
         state = state.state;
       } else {
         let isClosedResult = state === tmp6.BACKGROUND && state.state === tmp6.ACTIVE;
         if (isClosedResult) {
-          const socket3 = socket(13187).socket;
+          const socket3 = handleIdentify.socket;
           isClosedResult = socket3.isClosed();
         }
         if (isClosedResult) {
-          importAll(13223).setIsPaused(false);
-          const socket4 = socket(13187).socket;
+          getIsPausedAll.setIsPaused(false);
+          const socket4 = handleIdentify.socket;
           socket4.connect();
-          const obj2 = importAll(13223);
+          const obj2 = getIsPausedAll;
         }
       }
-      socket = socket(13187).socket;
+      socket = handleIdentify.socket;
       socket.close(true);
     } else {
       if (state.state === constants2.ACTIVE) {
-        importAll(13223).setIsPaused(false);
-        if (fetchFingerprint.isAuthenticated()) {
-          const socket2 = socket(13187).socket;
+        getIsPausedAll.setIsPaused(false);
+        if (closure_6.isAuthenticated()) {
+          const socket2 = handleIdentify.socket;
           socket2.resetBackoff("App state is active");
         }
-        const obj3 = importAll(13223);
+        const obj3 = getIsPausedAll;
       }
       return false;
     }
@@ -420,12 +424,12 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
-        const obj2 = apply(userIds.userIds);
-        const item = apply(userIds.userIds).chunk(100).forEach((userIds) => {
-          const socket = userIds(outer1_3[13]).socket;
+        const obj2 = applyDefault(userIds.userIds);
+        const item = applyDefault(userIds.userIds).chunk(100).forEach((userIds) => {
+          const socket = userIds(closure_1_3[13]).socket;
           const guildMembers = socket.requestGuildMembers(userIds.guildIds, { userIds, presences: userIds.presences });
         });
-        const chunkResult = apply(userIds.userIds).chunk(100);
+        const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
         const socket2 = _handleIdentify.socket;
         const obj = { query: null, limit: null, presences: null };
@@ -437,9 +441,6 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     return false;
   },
   GUILD_SEARCH_RECENT_MEMBERS: function handleGuildSearchRecentMembers(arg0) {
-    let continuationToken;
-    let guildId;
-    let query;
     ({ guildId, query, continuationToken } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -479,9 +480,6 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
   },
   STREAM_CREATE: handleClipsFlags,
   STREAM_START: function handleStreamStart(arg0) {
-    let channelId;
-    let guildId;
-    let streamType;
     ({ streamType, guildId, channelId } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -507,8 +505,6 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     return false;
   },
   STREAM_WATCH: function handleStreamWatch(arg0) {
-    let allowMultiple;
-    let streamKey;
     ({ streamKey, allowMultiple } = arg0);
     let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -541,8 +537,6 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     return false;
   },
   STREAM_SET_PAUSED: function handleStreamSetPaused(arg0) {
-    let paused;
-    let streamKey;
     ({ streamKey, paused } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -556,9 +550,6 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     return false;
   },
   REQUEST_FORUM_UNREADS: function handleRequestForumUnreads(arg0) {
-    let channelId;
-    let guildId;
-    let threads;
     ({ guildId, channelId, threads } = arg0);
     const socket = handleIdentify.socket;
     const forumUnreads = socket.requestForumUnreads(guildId, channelId, threads);
@@ -568,8 +559,6 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     const soundboardSounds = socket.requestSoundboardSounds(guildIds.guildIds);
   },
   REMOTE_COMMAND: function handleRemoteCommand(arg0) {
-    let payload;
-    let sessionId;
     ({ sessionId, payload } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -579,7 +568,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
     return false;
   },
   RESET_SOCKET: function handleResetSocket(args) {
-    if (handleIdentify.socket.connectionState !== CLOSED.WILL_RECONNECT) {
+    if (handleIdentify.socket.connectionState !== CLOSEDDefault.WILL_RECONNECT) {
       const socket = handleIdentify.socket;
       const result = socket.resetSocketAndClearCacheOnError(args.args);
     }
@@ -605,7 +594,7 @@ const gatewayConnectionStore = new GatewayConnectionStore(require("dispatcher"),
 let obj = {
   START_SESSION: function handleSessionStart() {
     const socket = handleIdentify.socket;
-    const verbose = tmp3.verbose;
+    const verbose = closure_19.verbose;
     if (socket.isClosed()) {
       verbose("Socket is reconnecting because of starting new session");
       const socket2 = handleIdentify.socket;
@@ -620,7 +609,7 @@ let obj = {
     const obj = { isEstablished: null };
     const socket = handleIdentify.socket;
     obj[0] = socket.isSessionEstablished();
-    tmp3.verbose("session refresh dispatched", obj);
+    closure_19.verbose("session refresh dispatched", obj);
     const socket2 = handleIdentify.socket;
     let connectResult = socket2.isSessionEstablished();
     if (connectResult) {
@@ -636,7 +625,7 @@ let obj = {
       const localPresenceState = handleIdentify.localPresenceState;
       localPresenceState.handleAccountSwitch();
     }
-    tmp3.verbose("Closing socket because of logout");
+    closure_19.verbose("Closing socket because of logout");
     const socket = handleIdentify.socket;
     socket.close();
   },
@@ -664,11 +653,11 @@ let obj = {
     })(arg0);
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
-    let c24 = null;
+    c24 = null;
   },
   CONNECTION_CLOSED: function handleConnectionClosed() {
-    tmp3.verbose("connection closed dispatched");
-    let closure_20 = Date.now();
+    closure_19.verbose("connection closed dispatched");
+    closure_20 = Date.now();
   },
   RTC_CONNECTION_STATE: function handleRTCConnectionState(state) {
     if (state.state !== constants.DISCONNECTED) {
@@ -704,10 +693,10 @@ let obj = {
       } else {
         const socket = tmp(13187).socket;
         if (socket.isClosed()) {
-          importAll(13223).setIsPaused(false);
+          getIsPausedAll.setIsPaused(false);
           const socket2 = tmp(13187).socket;
           socket2.connect();
-          const obj3 = importAll(13223);
+          const obj3 = getIsPausedAll;
         }
       }
     }
@@ -769,31 +758,31 @@ let obj = {
     let state = arg0;
     let socket = require;
     if (obj.isIOS()) {
-      if (!fetchFingerprint.isAuthenticated()) {
+      if (!closure_6.isAuthenticated()) {
         state = state.state;
       } else {
         let isClosedResult = state === tmp6.BACKGROUND && state.state === tmp6.ACTIVE;
         if (isClosedResult) {
-          const socket3 = socket(13187).socket;
+          const socket3 = handleIdentify.socket;
           isClosedResult = socket3.isClosed();
         }
         if (isClosedResult) {
-          importAll(13223).setIsPaused(false);
-          const socket4 = socket(13187).socket;
+          getIsPausedAll.setIsPaused(false);
+          const socket4 = handleIdentify.socket;
           socket4.connect();
-          const obj2 = importAll(13223);
+          const obj2 = getIsPausedAll;
         }
       }
-      socket = socket(13187).socket;
+      socket = handleIdentify.socket;
       socket.close(true);
     } else {
       if (state.state === constants2.ACTIVE) {
-        importAll(13223).setIsPaused(false);
-        if (fetchFingerprint.isAuthenticated()) {
-          const socket2 = socket(13187).socket;
+        getIsPausedAll.setIsPaused(false);
+        if (closure_6.isAuthenticated()) {
+          const socket2 = handleIdentify.socket;
           socket2.resetBackoff("App state is active");
         }
-        const obj3 = importAll(13223);
+        const obj3 = getIsPausedAll;
       }
       return false;
     }
@@ -803,12 +792,12 @@ let obj = {
     let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
       if ("userIds" in userIds) {
-        const obj2 = apply(userIds.userIds);
-        const item = apply(userIds.userIds).chunk(100).forEach((userIds) => {
-          const socket = userIds(outer1_3[13]).socket;
+        const obj2 = applyDefault(userIds.userIds);
+        const item = applyDefault(userIds.userIds).chunk(100).forEach((userIds) => {
+          const socket = userIds(closure_1_3[13]).socket;
           const guildMembers = socket.requestGuildMembers(userIds.guildIds, { userIds, presences: userIds.presences });
         });
-        const chunkResult = apply(userIds.userIds).chunk(100);
+        const chunkResult = applyDefault(userIds.userIds).chunk(100);
       } else {
         const socket2 = _handleIdentify.socket;
         const obj = { query: null, limit: null, presences: null };
@@ -820,9 +809,6 @@ let obj = {
     return false;
   },
   GUILD_SEARCH_RECENT_MEMBERS: function handleGuildSearchRecentMembers(arg0) {
-    let continuationToken;
-    let guildId;
-    let query;
     ({ guildId, query, continuationToken } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -862,9 +848,6 @@ let obj = {
   },
   STREAM_CREATE: handleClipsFlags,
   STREAM_START: function handleStreamStart(arg0) {
-    let channelId;
-    let guildId;
-    let streamType;
     ({ streamType, guildId, channelId } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -890,8 +873,6 @@ let obj = {
     return false;
   },
   STREAM_WATCH: function handleStreamWatch(arg0) {
-    let allowMultiple;
-    let streamKey;
     ({ streamKey, allowMultiple } = arg0);
     let socket = _handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -924,8 +905,6 @@ let obj = {
     return false;
   },
   STREAM_SET_PAUSED: function handleStreamSetPaused(arg0) {
-    let paused;
-    let streamKey;
     ({ streamKey, paused } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -939,9 +918,6 @@ let obj = {
     return false;
   },
   REQUEST_FORUM_UNREADS: function handleRequestForumUnreads(arg0) {
-    let channelId;
-    let guildId;
-    let threads;
     ({ guildId, channelId, threads } = arg0);
     const socket = handleIdentify.socket;
     const forumUnreads = socket.requestForumUnreads(guildId, channelId, threads);
@@ -951,8 +927,6 @@ let obj = {
     const soundboardSounds = socket.requestSoundboardSounds(guildIds.guildIds);
   },
   REMOTE_COMMAND: function handleRemoteCommand(arg0) {
-    let payload;
-    let sessionId;
     ({ sessionId, payload } = arg0);
     const socket = handleIdentify.socket;
     if (socket.isSessionEstablished()) {
@@ -962,7 +936,7 @@ let obj = {
     return false;
   },
   RESET_SOCKET: function handleResetSocket(args) {
-    if (handleIdentify.socket.connectionState !== CLOSED.WILL_RECONNECT) {
+    if (handleIdentify.socket.connectionState !== CLOSEDDefault.WILL_RECONNECT) {
       const socket = handleIdentify.socket;
       const result = socket.resetSocketAndClearCacheOnError(args.args);
     }
@@ -985,7 +959,7 @@ let obj = {
     }
   }
 };
-const tmp3 = new require("callConnect")("ConnectionStore");
-let result = require("fetchFingerprint").fileFinishedImporting("modules/gateway/GatewayConnectionStore.tsx");
+const tmp3 = new timestampDefault("ConnectionStore");
+let result = require("set").fileFinishedImporting("modules/gateway/GatewayConnectionStore.tsx");
 
 export default gatewayConnectionStore;

@@ -1,19 +1,16 @@
 // discord_app/modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx
-import { useMemo } from "noop";
-import BoostedGuildTiers from "BoostedGuildTiers";
-import ME from "ME";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
-let closure_1;
-let obj1;
+let useMemo = noop.useMemo;
 ({ MULTIPLE_PURCHASEABLE_PREMIUM_FEATURES_BOOST_INFO: closure_1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: obj1 } = BoostedGuildTiers);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c3, BoostedGuildTiers: c4, GuildFeatures: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useTotalPossibleBoostCount.tsx");
 
 export default function useTotalPossibleBoostCount(arg0) {
-  const useMemo = arg0;
+  useMemo = arg0;
   const items = [arg0];
   return useMemo(() => {
     if (null == num) {
@@ -22,21 +19,21 @@ export default function useTotalPossibleBoostCount(arg0) {
       let hasItem;
       if (tmp != null) {
         const features = tmp.features;
-        hasItem = features.has(outer1_5.PREMIUM_TIER_3_OVERRIDE);
+        hasItem = features.has(closure_1_5.PREMIUM_TIER_3_OVERRIDE);
       }
       num = 0;
       if (true !== hasItem) {
-        num = outer1_3[outer1_4.TIER_3];
+        num = closure_1_3[closure_1_4.TIER_3];
       }
       const _Object = Object;
-      const values = Object.values(outer1_2);
+      const values = Object.values(closure_1_2);
       const _Object2 = Object;
-      const combined = values.concat(Object.values(outer1_1));
+      const combined = values.concat(Object.values(closure_1_1));
       const item = combined.forEach((includedInLevel) => {
         let tmp = null == includedInLevel.includedInLevel;
         if (tmp) {
           const isEnabled = includedInLevel.isEnabled;
-          let num;
+          num = undefined;
           if (isEnabled != null) {
             num = isEnabled(num.id);
           }

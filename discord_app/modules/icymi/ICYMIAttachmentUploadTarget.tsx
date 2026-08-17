@@ -1,12 +1,10 @@
 // discord_app/modules/icymi/ICYMIAttachmentUploadTarget.tsx
-import ME from "ME";
-import { items } from "../../utils/UploadUtils.tsx";
+import set from "set" /* 2 */;
+import items from "items" /* 4830 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let obj1;
 ({ Endpoints: obj1, MAX_ATTACHMENT_SIZE: c3, MAX_UPLOAD_COUNT: c4 } = ME);
-const result = require("set").fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
+const result = set.fileFinishedImporting("modules/icymi/ICYMIAttachmentUploadTarget.tsx");
 class ICYMIAttachmentUploadTarget {
 }
 const prototype = ICYMIAttachmentUploadTarget.prototype;

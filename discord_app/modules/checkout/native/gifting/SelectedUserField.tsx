@@ -1,41 +1,37 @@
 // discord_app/modules/checkout/native/gifting/SelectedUserField.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { useInputStyles } from "../../../../design/components/Input/native/InputFieldContainer.native.tsx";
-import { nameFromUser } from "../../../../utils/UserUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import useInputStyles from "useInputStyles" /* 7345 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7351 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, content: null, opener: null, openerWithClearButton: null, searchIcon: null, userPill: null, userPillText: null, clearButton: null };
-createCacheKey = { marginHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", overflow: "hidden", alignItems: "center", display: "flex" };
-createCacheKey[2] = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: 6 };
+createCacheKey[2] = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 6 };
 createCacheKey[3] = { paddingRight: 0 };
-const obj1 = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: 6 };
-createCacheKey[4] = { marginRight: require("Themes").space.PX_8 };
-let obj2 = { marginRight: require("Themes").space.PX_8 };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
+const obj1 = { flexDirection: "row", alignItems: "center", flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: 6 };
+createCacheKey[4] = { marginRight: ThemesDefault.space.PX_8 };
+let obj2 = { marginRight: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
 createCacheKey[6] = { marginLeft: 6 };
-let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
-createCacheKey[7] = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: require("Themes").space.PX_16, paddingLeft: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: require("Themes").space.PX_16, paddingLeft: require("Themes").space.PX_8 };
-const result = require("jsxProd").fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
+let obj3 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, paddingVertical: 6, paddingHorizontal: 6 };
+createCacheKey[7] = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_8 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { alignItems: "center", justifyContent: "center", minWidth: 44, minHeight: 44, paddingRight: ThemesDefault.space.PX_16, paddingLeft: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/SelectedUserField.tsx");
 
 export default function SelectedUserField(onPress) {
-  let require;
-  let selectedUser;
   ({ selectedUser, setSelectedUser: require } = onPress);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.content, children: null };
   const items = [tmp.opener, ];
@@ -47,7 +43,7 @@ export default function SelectedUserField(onPress) {
   items[1] = openerWithClearButton;
   if (null != selectedUser) {
     const intl3 = tmp4(1236).intl;
-    let obj3 = nameFromUser;
+    let obj3 = nameFromUserDefault;
     const _HermesInternal2 = HermesInternal;
     let combined = "" + intl3.string(tmp4(1236).t.xFn72s) + ", " + obj3.getName(selectedUser);
     const stringResult = intl3.string(tmp4(1236).t.xFn72s);
@@ -69,11 +65,11 @@ export default function SelectedUserField(onPress) {
     const items2 = [tmp2(tmp4(1297).Avatar, obj3), ];
     const obj4 = { variant: "text-md/medium", style: null, children: null };
     obj4[1] = tmp.userPillText;
-    obj4[2] = nameFromUser.getName(selectedUser);
+    obj4[2] = nameFromUserDefault.getName(selectedUser);
     items2[1] = tmp2(tmp4(4734).Text, obj4);
     obj2[1] = items2;
     let tmp2Result = tmp6(tmp3, obj2);
-    const obj10 = nameFromUser;
+    const obj10 = nameFromUserDefault;
   } else {
     const obj5 = { variant: "text-sm/semibold", color: "text-subtle", style: null, children: null };
     obj5[2] = tmp.userPillText;
@@ -93,11 +89,11 @@ export default function SelectedUserField(onPress) {
     };
     const intl5 = tmp4(1236).intl;
     const obj7 = { text: null };
-    obj7[0] = nameFromUser.getName(selectedUser);
+    obj7[0] = nameFromUserDefault.getName(selectedUser);
     obj6[3] = intl5.formatToPlainString(tmp4(1236).t["0Vb9FQ"], obj7);
     obj6[4] = tmp2(tmp4(7341).CircleXIcon, { size: "xs" });
     tmp2Result = tmp2(tmp7, obj6);
-    const obj13 = nameFromUser;
+    const obj13 = nameFromUserDefault;
   }
   items3[1] = tmp2Result;
   obj[1] = items3;

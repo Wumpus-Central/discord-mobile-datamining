@@ -1,18 +1,17 @@
 // discord_app/modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx
-import noop from "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 createCacheKey = { guildFeedBackground: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("jsxProd").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/OnboardingHomeScrollView.tsx");
 
 export default function OnboardingHomeScrollView(children) {
-  let guildId;
-  let headerOffset;
   ({ guildId, headerOffset } = children);
   if (headerOffset === undefined) {
     headerOffset = 0;
@@ -21,15 +20,15 @@ export default function OnboardingHomeScrollView(children) {
   let React;
   let ref;
   let bottom;
-  let createCacheKey;
+  let callback;
   React = React.useRef(false);
   ref = React.useRef(null);
   bottom = headerOffset(scrollValue[5])().bottom;
   const items = [guildId];
   const effect = React.useEffect(() => {
-    noop.current = false;
+    closure_2.current = false;
   }, items);
-  createCacheKey = React.useRef(true);
+  callback = React.useRef(true);
   const items1 = [guildId];
   const effect1 = React.useEffect(() => {
     let current = null == ref.current;
@@ -43,7 +42,7 @@ export default function OnboardingHomeScrollView(children) {
     ref.current = false;
   }, items1);
   const items2 = [bottom, headerOffset];
-  const tmp = createCacheKey();
+  const tmp = callback();
   return bottom(ref, {
     ref,
     scrollIndicatorInsets: { right: 1 },
@@ -51,7 +50,7 @@ export default function OnboardingHomeScrollView(children) {
       const result = scrollValue.set(nativeEvent.nativeEvent.contentOffset.y);
     },
     scrollEventThrottle: 16,
-    style: createCacheKey().guildFeedBackground,
+    style: callback().guildFeedBackground,
     contentContainerStyle: React.useMemo(() => ({ paddingBottom: 16 + bottom, marginTop: headerOffset }), items2),
     children: children.children
   });

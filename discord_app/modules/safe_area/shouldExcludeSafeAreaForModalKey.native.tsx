@@ -1,13 +1,12 @@
 // discord_app/modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
-import set from "SHARE_PREPARING_MODAL_KEY";
-import { openChannelCallModal } from "../../utils/native/PrivateChannelCallUtils.tsx";
+import ME from "ME" /* 676 */;
+import openChannelCallModal from "openChannelCallModal" /* 8663 */;
+import SHARE_PREPARING_MODAL_KEY from "SHARE_PREPARING_MODAL_KEY" /* 9070 */;
+import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
+import set from "set" /* 2 */;
 
-let OAUTH2_AUTHORIZE_MODAL_KEY;
-let OAUTH2_ERROR_RESULT_MODAL_KEY;
-let OAUTH2_SUCCESS_RESULT_MODAL_KEY;
 ({ OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY } = OAUTH2_AUTHORIZE_MODAL_KEY);
-const items = [require("ME").MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, require("SHARE_PREPARING_MODAL_KEY").SHARE_PREPARING_MODAL_KEY];
+const items = [ME.MEDIA_MODAL_KEY, OAUTH2_AUTHORIZE_MODAL_KEY, OAUTH2_SUCCESS_RESULT_MODAL_KEY, OAUTH2_ERROR_RESULT_MODAL_KEY, SHARE_PREPARING_MODAL_KEY.SHARE_PREPARING_MODAL_KEY];
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/safe_area/shouldExcludeSafeAreaForModalKey.native.tsx");
 

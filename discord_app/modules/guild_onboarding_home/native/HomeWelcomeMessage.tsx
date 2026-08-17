@@ -1,61 +1,57 @@
 // discord_app/modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx
-import Text from "Text";
-import { View } from "Button";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "handleSettingsLoadSuccess" /* 5048 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { relativeContainer: { position: "relative" }, welcomeContainer: null, welcomeContent: null, avatarBackground: null, avatarBorder: null, avatar: null, adminUsernameContainer: null, adminUsername: null, message: null, icon: null };
-createCacheKey = { marginHorizontal: 12, marginVertical: 16, borderRadius: require("Themes").radii.sm, padding: 2, display: "flex", flexDirection: "column" };
+createCacheKey = { marginHorizontal: 12, marginVertical: 16, borderRadius: ThemesDefault.radii.sm, padding: 2, display: "flex", flexDirection: "column" };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
-let obj1 = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
-createCacheKey[3] = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj2 = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[4] = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: require("Themes").radii.round };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
+let obj1 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: 12, paddingBottom: 12, paddingTop: 4 };
+createCacheKey[3] = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = { position: "absolute", zIndex: 2, top: 0, left: 28, width: 40, height: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[4] = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: ThemesDefault.radii.round };
 createCacheKey[5] = { position: "absolute", top: 0, zIndex: 3, left: 28 };
 createCacheKey[6] = { display: "flex", flexDirection: "row", alignItems: "center", marginBottom: 4, paddingLeft: 44 };
-let obj3 = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: require("Themes").radii.round };
-createCacheKey[7] = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
-let obj4 = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
-createCacheKey[8] = { color: require("Themes").colors.TEXT_DEFAULT };
+let obj3 = { position: "absolute", top: -2, zIndex: -1, left: 26, width: 44, height: 44, borderRadius: ThemesDefault.radii.round };
+createCacheKey[7] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
+let obj4 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, paddingLeft: 8 };
+createCacheKey[8] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[9] = { marginLeft: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { color: require("Themes").colors.TEXT_DEFAULT };
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { color: ThemesDefault.colors.TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/HomeWelcomeMessage.tsx");
 
 export default function HomeWelcomeMessage(guildId) {
   let diff;
-  let primaryColor;
-  let secondaryColor;
-  let theme;
   guildId = guildId.guildId;
   let stateFromStores1;
   let stateFromStores2;
   let stateFromStores3;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let tmp2 = guildId;
   let tmp3 = stateFromStores2;
   let obj = guildId(stateFromStores2[8]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = guildId(stateFromStores2[8]);
-  const items1 = [handleSettingsLoadSuccess];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_7.getWelcomeMessage(guildId));
+  obj1 = guildId(stateFromStores2[8]);
+  const items1 = [closure_7];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getWelcomeMessage(guildId));
   let obj2 = guildId(stateFromStores2[8]);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_6];
   stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let first;
     if (stateFromStores1 != null) {
       first = stateFromStores1.authorIds[0];
     }
-    return outer1_6.getUser(first);
+    return closure_1_6.getUser(first);
   });
   let id;
   if (stateFromStores2 != null) {
@@ -65,8 +61,8 @@ export default function HomeWelcomeMessage(guildId) {
   const tmp8Result = stateFromStores1(stateFromStores2[9])(id, guildId);
   ({ primaryColor, secondaryColor, theme } = stateFromStores1(tmp3[10])({ user: stateFromStores2, displayProfile: stateFromStores1(stateFromStores2[9])(id, guildId) }));
   let tmp2Result = tmp2(tmp3[8]);
-  const items3 = [createGuildRecordFromRust];
-  stateFromStores3 = tmp2Result.useStateFromStores(items3, () => outer1_5.getGuild(guildId));
+  const items3 = [closure_5];
+  stateFromStores3 = tmp2Result.useStateFromStores(items3, () => closure_1_5.getGuild(guildId));
   tmp2Result = tmp2(tmp3[11]);
   let authorIds;
   if (stateFromStores1 != null) {
@@ -80,8 +76,6 @@ export default function HomeWelcomeMessage(guildId) {
   const subscribeGuildMembers = tmp2Result.useSubscribeGuildMembers(obj, "HomeWelcomeMessage");
   const items4 = [stateFromStores2, stateFromStores3];
   const effect = stateFromStores3.useEffect(() => {
-    let getAvatarURL;
-    let id;
     let obj = stateFromStores2;
     if (!tmp) {
       id = undefined;

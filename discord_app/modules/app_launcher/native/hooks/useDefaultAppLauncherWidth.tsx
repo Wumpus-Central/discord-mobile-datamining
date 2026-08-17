@@ -1,12 +1,14 @@
 // discord_app/modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { AppLauncherEntrypoint } from "../../AppLauncherTypes.tsx";
+import set from "set" /* 2 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import AppLauncherEntrypoint from "AppLauncherEntrypoint" /* 9566 */;
 
-const result = require("AppLauncherEntrypoint").fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
+const ACTION_SHEET_MAX_WIDTH = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_MAX_WIDTH;
+const result = set.fileFinishedImporting("modules/app_launcher/native/hooks/useDefaultAppLauncherWidth.tsx");
 
 export const useDefaultAppLauncherWidth = function useDefaultAppLauncherWidth(TEXT) {
-  const width = useWindowDimensions().width;
+  const width = useWindowDimensionsDefault().width;
   let bound = width;
   if (TEXT !== AppLauncherEntrypoint.AppLauncherEntrypoint.TEXT) {
     const _Math = Math;

@@ -1,10 +1,8 @@
 // discord_app/records/SubscriptionPlanRecord.tsx
-import "toJS";
-import GuildFeatures from "GuildFeatures";
+import toJSDefault from "toJS" /* 1931 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c0;
-let closure_1;
-let obj1;
+toJSDefault;
 ({ PremiumSubscriptionSKUs: c0, PremiumTypes: closure_1, SubscriptionPlans: obj1 } = GuildFeatures);
 let SubscriptionPlanRecord;
 class SubscriptionPlanRecord extends tmp2 {
@@ -17,14 +15,7 @@ class SubscriptionPlanRecord extends tmp2 {
 }
 const prototype = SubscriptionPlanRecord.prototype;
 SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
-  let currency;
-  let id;
-  let interval;
-  let interval_count;
-  let name;
-  let sku_id;
-  let tax_inclusive;
-  let closure_0 = prices;
+  closure_0 = prices;
   if (null != prices.prices) {
     let _Object = Object;
     const keys = Object.keys(prices.prices);
@@ -41,8 +32,6 @@ SubscriptionPlanRecord["createFromServer"] = function createFromServer(prices) {
         const _Object = Object;
         const entries = Object.entries(tmp3.payment_source_prices);
         obj[1] = entries.reduce((arg0, arg1) => {
-          let arr;
-          let tmp;
           [tmp, arr] = arg1;
           arg0[tmp] = arr.map((amount) => ({ amount: amount.amount, currency: amount.currency, tax: 0, taxInclusive: tax_inclusive.tax_inclusive }));
           return arg0;

@@ -1,15 +1,15 @@
 // discord_app/modules/recent_channels/RecentChannelsActionCreators.tsx
-import expandEventProperties from "expandEventProperties";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function _bulkClearRecents() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -37,16 +37,16 @@ function _bulkClearRecents() {
               obj[0] = arg1;
               return obj;
             } else {
-              let expandEventProperties = tmp5;
-              const dependencyMap = tmp2;
+              closure_3 = tmp5;
+              dependencyMap = tmp2;
               constants = 1;
               c5 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = callback(outer1_2[2]).updateUserGuildSettings(callback, (arg0) => {
+              obj1 = { value: null, done: false };
+              obj1[0] = callback(closure_1_2[2]).updateUserGuildSettings(callback, (arg0) => {
                 const Timestamp = callback(tmp2[3]).Timestamp;
                 arg0.guildRecentsDismissedAt = Timestamp.fromDate(new Date());
                 return true;
-              }, callback(outer1_2[2]).UserSettingsDelay.INFREQUENT_USER_ACTION);
+              }, callback(closure_1_2[2]).UserSettingsDelay.INFREQUENT_USER_ACTION);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -74,7 +74,7 @@ function _bulkClearRecents() {
       }
     })();
   });
-  const _bulkClearRecents = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -83,7 +83,7 @@ function _bulkClearRecents() {
   }
   return applyArgumentsResult;
 }
-const result = require("updateUserGuildSettings").fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
 
 export const bulkClearRecents = function bulkClearRecents(closure_0, closure_1) {
   const self = this;

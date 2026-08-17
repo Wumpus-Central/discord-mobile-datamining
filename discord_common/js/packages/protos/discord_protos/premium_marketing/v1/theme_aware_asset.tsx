@@ -1,9 +1,9 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/theme_aware_asset.tsx
-import _slicedToArray from "_slicedToArray";
-import { MessageType } from "module_1307";
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import _mod1307 from "module_1307" /* 1307 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { MessageType } from "module_1307" /* 1307 */;
 
-const require = arg1;
+require = arg1;
 class ThemeAwareAsset$Type extends MessageType {
   constructor() {
     items = [, , , ];
@@ -21,16 +21,14 @@ prototype["create"] = function create(arr) {
   let obj = { lightUrl: "", darkUrl: "", lightStaticUrl: "", darkStaticUrl: "" };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = 01307__.reflectionMergePartial(this, obj, arr);
-    const tmpResult = 01307__;
+    const result = _mod1307.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1307;
   }
   return obj;
 };
 prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
-  let tmp5;
-  let tmp6;
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -63,7 +61,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           let tmp21 = error;
           throw error;
         } else {
@@ -72,7 +70,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = 01307__.UnknownFieldHandler.onRead;
+              onRead = _mod1307.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -88,25 +86,25 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(lightUrl, tag, writeUnknownFields) {
   if ("" !== lightUrl.lightUrl) {
-    tag.tag(1, 01307__.WireType.LengthDelimited).string(lightUrl.lightUrl);
-    const tagResult = tag.tag(1, 01307__.WireType.LengthDelimited);
+    tag.tag(1, _mod1307.WireType.LengthDelimited).string(lightUrl.lightUrl);
+    const tagResult = tag.tag(1, _mod1307.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkUrl) {
-    tag.tag(2, 01307__.WireType.LengthDelimited).string(lightUrl.darkUrl);
-    const tagResult1 = tag.tag(2, 01307__.WireType.LengthDelimited);
+    tag.tag(2, _mod1307.WireType.LengthDelimited).string(lightUrl.darkUrl);
+    const tagResult1 = tag.tag(2, _mod1307.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.lightStaticUrl) {
-    tag.tag(3, 01307__.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
-    const tagResult2 = tag.tag(3, 01307__.WireType.LengthDelimited);
+    tag.tag(3, _mod1307.WireType.LengthDelimited).string(lightUrl.lightStaticUrl);
+    const tagResult2 = tag.tag(3, _mod1307.WireType.LengthDelimited);
   }
   if ("" !== lightUrl.darkStaticUrl) {
-    tag.tag(4, 01307__.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
-    const tagResult3 = tag.tag(4, 01307__.WireType.LengthDelimited);
+    tag.tag(4, _mod1307.WireType.LengthDelimited).string(lightUrl.darkStaticUrl);
+    const tagResult3 = tag.tag(4, _mod1307.WireType.LengthDelimited);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = 01307__.UnknownFieldHandler.onWrite;
+      onWrite = _mod1307.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, lightUrl, tag);

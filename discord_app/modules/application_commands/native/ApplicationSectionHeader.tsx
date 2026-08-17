@@ -1,28 +1,28 @@
 // discord_app/modules/application_commands/native/ApplicationSectionHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { applicationHeaderWrapper: null, applicationIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: require("Themes").colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 };
+createCacheKey = { flexDirection: "row", alignItems: "center", height: 32, backgroundColor: ThemesDefault.colors.MOBILE_FLOATING_ACCESSORY_BACKGROUND, paddingHorizontal: 16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 16, height: 16, borderRadius: require("Themes").radii.sm, marginRight: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { width: 16, height: 16, borderRadius: require("Themes").radii.sm, marginRight: 8 };
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/application_commands/native/ApplicationSectionHeader.tsx");
+createCacheKey[1] = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { width: 16, height: 16, borderRadius: ThemesDefault.radii.sm, marginRight: 8 };
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationSectionHeader.tsx");
 
 export default function ApplicationSectionHeader(section) {
   section = section.section;
   const guildId = section.guildId;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = section(589);
-  const items = [trackCommunicationDisabled];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     if (null != guildId) {
       let botId;
@@ -30,7 +30,7 @@ export default function ApplicationSectionHeader(section) {
         botId = tmp2.botId;
       }
       if (null != botId) {
-        return outer1_4.getMember(tmp, tmp2.botId);
+        return closure_1_4.getMember(tmp, tmp2.botId);
       }
     }
   });

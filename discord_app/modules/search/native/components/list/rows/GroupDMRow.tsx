@@ -1,14 +1,11 @@
 // discord_app/modules/search/native/components/list/rows/GroupDMRow.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("computeChannelName").fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GroupDMRow.tsx");
 
 export default function GroupDMRow(channel) {
-  let accessibilityActions;
-  let onAccessibilityAction;
-  let trailing;
   channel = channel.channel;
   const onPress = channel.onPress;
   ({ trailing, onAccessibilityAction, accessibilityActions } = channel);
@@ -17,11 +14,9 @@ export default function GroupDMRow(channel) {
   const callback = React.useCallback(() => {
     onPress(channel.id);
   }, items);
-  let obj = { size: null, channel: null };
-  obj[0] = channel(1297).AvatarSizes.LARGE_48;
-  obj[1] = channel;
+  let obj = { size: channel(1297).AvatarSizes.LARGE_48, channel };
   const tmp4 = onPress(9916);
-  const tmp6 = jsx(onPress(9916), { size: null, channel: null });
+  const tmp6 = jsx(onPress(9916), { size: channel(1297).AvatarSizes.LARGE_48, channel });
   const recipientsLabel = channel(9917).useRecipientsLabel(channel);
   let tmp3Result;
   if (null != recipientsLabel) {

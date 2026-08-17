@@ -1,28 +1,31 @@
 // discord_app/modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx
-import "noop";
-import { View } from "set";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsVoice } from "UserSettingsVoice.tsx";
-import { handleAutomaticGainControlChange } from "UserSettingsVoiceUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text2 from "Text" /* 4734 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import TableRadioRow from "TableRadioRow" /* 8100 */;
+import context from "context" /* 8101 */;
+import UserSettingsVoice from "UserSettingsVoice" /* 12547 */;
+import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 12557 */;
+import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
+import handleKrispLinkPressedDefault from "handleKrispLinkPressed" /* 12561 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 class VoiceProcessingOptions {
   constructor() {
-    krisp = Fragment();
+    krisp = closure_8();
     EUNgko = closure_0;
     tmp = closure_2;
     obj = require("initialize");
     items = [];
-    items[0] = View;
-    stateFromStores = obj.useStateFromStores(items, () => _detectH265HardwareDecode.isNoiseCancellationSupported());
+    items[0] = closure_4;
+    stateFromStores = obj.useStateFromStores(items, () => closure_4.isNoiseCancellationSupported());
     obj2 = require("handleAutomaticGainControlChange");
     selectedNoiseSuppressionOption = obj2.useSelectedNoiseSuppressionOption();
     obj3 = require("getNoiseCancellationDeferredToSystem");
@@ -72,7 +75,7 @@ class VoiceProcessingOptions {
         EUNgko = require("getSystemLocale").t.EUNgko;
         obj6 = { onSettingsClick: null };
         obj6[0] = function onSettingsClick() {
-          const mediaEngine = _detectH265HardwareDecode.getMediaEngine();
+          const mediaEngine = closure_4.getMediaEngine();
           const result = mediaEngine.showSystemCaptureConfigurationUI("microphone_modes");
         };
         formatResult = intl7.format(EUNgko, obj6);
@@ -115,22 +118,18 @@ class VoiceProcessingOptions {
     return;
   }
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { optionsParentContainer: { marginTop: 12 }, optionsDescriptionContainer: null, krisp: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_4, gap: require("Themes").space.PX_4 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginStart: -20 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/UserSettingsVoiceProcessing.tsx");
 
 export default function UserSettingsVoiceProcessing() {
-  let advancedVoiceActivitySupported;
-  let automaticGainControl;
-  let echoCancellation;
-  let require;
-  let vadUseKrisp;
   let obj = initialize;
-  const items = [_detectH265HardwareDecode];
+  const items = [closure_4];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ echoCancellation: store.getEchoCancellation(), advancedVoiceActivitySupported: store.isAdvancedVoiceActivitySupported(), automaticGainControl: store.getAutomaticGainControl(), inputMode: store.getMode(), vadUseKrisp: store.getModeOptions().vadUseKrisp }));
   ({ advancedVoiceActivitySupported, inputMode: require } = stateFromStoresObject);
   ({ echoCancellation, automaticGainControl, vadUseKrisp } = stateFromStoresObject);
@@ -144,7 +143,7 @@ export default function UserSettingsVoiceProcessing() {
   obj[2] = handleAutomaticGainControlChange.handleEchoCancellationChange;
   obj[2] = callback(TableSwitchRow.TableSwitchRow, obj);
   const items1 = [callback(UserSettingsVoice.UserSettingsTableRowGroup, obj), callback(VoiceProcessingOptions, {}), ];
-  const obj1 = { label: null, subLabel: null, value: null, onValueChange: null };
+  obj1 = { label: null, subLabel: null, value: null, onValueChange: null };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.cUMdH0);
   const intl4 = getSystemLocale.intl;
@@ -160,7 +159,7 @@ export default function UserSettingsVoiceProcessing() {
     obj2[1] = intl6.string(tmp(1236).t.LoOB1F);
     obj2[2] = vadUseKrisp;
     obj2[3] = function onValueChange(vadUseKrisp) {
-      let obj = outer1_1(outer1_2[9]);
+      let obj = closure_1_1(closure_1_2[9]);
       obj = { vadUseKrisp };
       return obj.setMode(closure_0, obj);
     };

@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("AppLauncherHomeListItemType").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/useTrackAppLauncherHomeItemImpression.tsx");
 
 export const useTrackAppLauncherHomeItemImpression = function useTrackAppLauncherHomeItemImpression() {
   let obj = trackAppLauncherItemImpressionOnFirstView(11278);
@@ -11,11 +11,8 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
     trackAppLauncherHomeItemImpression: React.useCallback((viewableItems) => {
       viewableItems = viewableItems.viewableItems;
       let item = viewableItems.forEach((item) => {
-        let applicationId;
-        let shelfItem1SectionPosition;
-        let shelfItem2SectionPosition;
         item = item.item;
-        if (item.type === outer1_0(outer1_2[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
+        if (item.type === closure_1_0(closure_1_2[2]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
           shelfItem1SectionPosition = item.sectionPosition;
           applicationId = item.application.id;
           let tmpResult = tmp(tmp2[3]);
@@ -41,8 +38,7 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
             const flags2 = shelfItem22.application.flags;
           }
         }
-        let obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: null };
-        obj[5] = outer1_1(outer1_2[4]).asUintN(32, flags);
+        let obj = { itemKey: "sectionName:" + item.sectionName + " applicationId:" + applicationId, sectionName: item.sectionName, sectionPosition: shelfItem1SectionPosition, sectionOverallPosition: item.sectionOverallPosition, applicationId, applicationFlags: closure_1_1(closure_1_2[4]).asUintN(32, flags) };
         callback(obj);
         if (tmp7) {
           obj = { itemKey: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null, applicationId: null, applicationFlags: null };
@@ -54,8 +50,8 @@ export const useTrackAppLauncherHomeItemImpression = function useTrackAppLaunche
           obj[4] = id;
           let asUintNResult;
           if (null != flags2) {
-            asUintNResult = outer1_1(tmp2[4]).asUintN(32, flags2);
-            const tmp5Result = outer1_1(tmp2[4]);
+            asUintNResult = closure_1_1(tmp2[4]).asUintN(32, flags2);
+            const tmp5Result = closure_1_1(tmp2[4]);
           }
           obj[5] = asUintNResult;
           callback(obj);

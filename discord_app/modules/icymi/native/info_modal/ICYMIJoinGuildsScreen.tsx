@@ -1,26 +1,22 @@
 // discord_app/modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import set from "set";
-import preload from "preload";
-import get_ActivityIndicator from "getAvatarURL";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import closure_9 from "createGuildRecordFromRust";
-import initialize from "initialize";
-import { GuildFeatures } from "ME";
-import jsxProd from "Text";
-import createICYMIStyles from "createICYMIStyles";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
-import { ServerIcon } from "../../../../design/components/Icon/native/redesign/generated/ServerIcon.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { GuildIconSizes } from "../../../guild/native/GuildIcon.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import SolidCutoutDefault from "SolidCutout" /* 8402 */;
+import ServerIcon from "ServerIcon" /* 9813 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "initialize" /* 15739 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-let closure_12;
-let closure_14;
-let closure_6;
-let error;
-let map1;
-const require = arg1;
+require = arg1;
 function SelectedServerIcon(guild) {
   guild = guild.guild;
   const tmp = callback3();
@@ -37,13 +33,13 @@ function SelectedServerIcon(guild) {
     obj[0] = tmp.guildIconBorder;
     obj[1] = guild;
     obj[2] = GuildIconSizes.GuildIconSizes.LARGE;
-    let tmp3Result = tmp3(GuildIconSizes, obj);
-    const tmp12 = GuildIconSizes;
+    let tmp3Result = tmp3(GuildIconSizesDefault, obj);
+    const tmp12 = GuildIconSizesDefault;
   } else {
     tmp3Result = null;
     if (tmp2) {
       obj = { size: "md", color: null };
-      obj[1] = Themes.colors.ICON_MUTED;
+      obj[1] = ThemesDefault.colors.ICON_MUTED;
       tmp3Result = tmp3(ServerIcon.ServerIcon, obj);
     }
   }
@@ -53,7 +49,7 @@ function SelectedServerIcon(guild) {
 function SelectedServersRow(selectedGuilds) {
   selectedGuilds = selectedGuilds.selectedGuilds;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let ref;
   const items = [selectedGuilds];
   const callback = React.useCallback((arg0, index) => {
@@ -61,7 +57,7 @@ function SelectedServersRow(selectedGuilds) {
     if (index < selectedGuilds.length) {
       tmp3 = selectedGuilds[index];
     }
-    return outer1_12(outer1_17, { guild: tmp3, index });
+    return closure_1_12(closure_1_17, { guild: tmp3, index });
   }, items);
   let tmp3 = callback(React.useState(selectedGuilds.length), 2);
   first = tmp3[0];
@@ -92,7 +88,7 @@ function SelectedServersRow(selectedGuilds) {
     let tmpResult = tmp(4664);
     let num2 = 0;
     if (selectedGuilds.length > 0) {
-      num2 = outer1_15;
+      num2 = closure_1_15;
     }
     obj[1] = tmpResult.withTiming(num2);
     tmpResult = tmp(4664);
@@ -110,7 +106,7 @@ function SelectedServersRow(selectedGuilds) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items2, children: null };
   items2 = [callback3().selectedServersRowContainer, animatedStyle];
-  const obj1 = { ref, sections: null, insetStart: null, insetEnd: null, renderItem: null, estimatedListSize: "windowSize", itemSize: null, horizontal: true, listId: "selected-servers-list", showsHorizontalScrollIndicator: false };
+  obj1 = { ref, sections: null, insetStart: null, insetEnd: null, renderItem: null, estimatedListSize: "windowSize", itemSize: null, horizontal: true, listId: "selected-servers-list", showsHorizontalScrollIndicator: false };
   let num = 3;
   const tmp = callback3();
   const tmp8 = c15;
@@ -130,7 +126,7 @@ function CutoutGuildBanner(guild) {
   guild = guild.guild;
   const tmp = callback3();
   let obj = guild(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let hasItem = !stateFromStores;
   if (!stateFromStores) {
@@ -138,17 +134,16 @@ function CutoutGuildBanner(guild) {
     hasItem = features.has(GuildFeatures.ANIMATED_BANNER);
   }
   if (null != guild.banner) {
-    let obj1 = getAvatarURL;
+    obj1 = getAvatarURLDefault;
     const animatableSourceWithFallback = obj1.getAnimatableSourceWithFallback(hasItem, (hasItem) => {
-      let obj = outer1_1(outer1_2[17]);
+      let obj = closure_1_1(closure_1_2[17]);
       obj = { id: guild.id, banner: guild.banner };
       return obj.getGuildBannerSource(obj, hasItem);
     });
   }
   obj = { style: tmp.bannerImage, children: null };
   obj = { cutouts: null, children: null };
-  obj1 = { shape: null, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
-  obj1[0] = guild(8402).CutoutShape.RoundedRect;
+  obj1 = { shape: guild(8402).CutoutShape.RoundedRect, x: 8, y: 46, width: 56, height: 56, cornerRadius: 20 };
   const items1 = [obj1];
   obj[0] = items1;
   if (null != guild.banner) {
@@ -164,27 +159,25 @@ function CutoutGuildBanner(guild) {
     tmp11Result = tmp11(tmp10, obj3);
   }
   obj[1] = tmp11Result;
-  const items3 = [closure_12(SolidCutout, obj), ];
+  const items3 = [closure_12(SolidCutoutDefault, obj), ];
   const obj4 = { style: items4, guild, size: null, animate: null };
   items4 = [, ];
   ({ guildIcon: arr5[0], guildIconBorder: arr5[1] } = tmp);
-  const tmp13 = SolidCutout;
+  const tmp13 = SolidCutoutDefault;
   const tmp9 = closure_13;
   obj4[2] = guild(7188).GuildIconSizes.LARGE;
   obj4[3] = !stateFromStores;
-  items3[1] = closure_12(GuildIconSizes, obj4);
+  items3[1] = closure_12(GuildIconSizesDefault, obj4);
   obj[1] = items3;
   return tmp9(closure_6, obj);
 }
 function FeaturedServer(guild) {
-  let handlePress;
-  let selected;
   guild = guild.guild;
   ({ selected, handlePress } = guild);
   const tmp = callback3();
   let obj = guild(589);
   const items = [closure_9];
-  const stateFromStores = obj.useStateFromStores(items, () => null != outer1_9.getGuild(guild.id));
+  const stateFromStores = obj.useStateFromStores(items, () => null != closure_1_9.getGuild(guild.id));
   const items1 = [guild, handlePress];
   const callback = React.useCallback(() => {
     handlePress(guild);
@@ -236,60 +229,60 @@ function FeaturedServer(guild) {
 let c15 = 50;
 let closure_16 = createICYMIStyles.createICYMIStyles((margin) => {
   let obj = { container: null, scrollContentContainer: null, footer: null, title: null, subtitle: null, separator: null, featuredServerContainer: null, featuredServerInnerContainer: null, buttonContainer: null, featuredServerTitle: null, guildIcon: null, bannerImage: null, emptyBanner: null, guildsScrollContainer: null, guildsColumn: null, selectedServersRowContainer: null, selectedServerIcon: null, noServerContainer: null, noServerExtraContainer: null, pressableUnderlayColor: null, guildIconBorder: null };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, position: "relative", flex: 1, marginHorizontal: margin.margin };
   obj[0] = obj;
-  obj = { paddingTop: Themes.space.PX_8 };
+  obj = { paddingTop: ThemesDefault.space.PX_8 };
   obj[1] = obj;
-  obj[2] = { position: "absolute", bottom: 0, left: Themes.space.PX_24, right: Themes.space.PX_24, paddingBottom: Themes.space.PX_8 };
-  const obj1 = { position: "absolute", bottom: 0, left: Themes.space.PX_24, right: Themes.space.PX_24, paddingBottom: Themes.space.PX_8 };
-  obj[3] = { marginTop: Themes.space.PX_24, marginBottom: Themes.space.PX_8, marginHorizontal: Themes.space.PX_24 };
-  const obj2 = { marginTop: Themes.space.PX_24, marginBottom: Themes.space.PX_8, marginHorizontal: Themes.space.PX_24 };
-  obj[4] = { marginHorizontal: Themes.space.PX_24 };
-  const obj3 = { marginHorizontal: Themes.space.PX_24 };
-  obj[5] = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
-  const obj4 = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
-  obj[6] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: Themes.space.PX_8, marginVertical: Themes.space.PX_8 };
-  const obj5 = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: Themes.space.PX_8, marginVertical: Themes.space.PX_8 };
-  obj[7] = { marginHorizontal: Themes.space.PX_12, marginTop: 36 };
-  const obj6 = { marginHorizontal: Themes.space.PX_12, marginTop: 36 };
-  obj[8] = { marginBottom: Themes.space.PX_12, marginTop: margin.margin };
-  const obj7 = { marginBottom: Themes.space.PX_12, marginTop: margin.margin };
-  obj[9] = { marginBottom: Themes.space.PX_8 };
+  obj[2] = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
+  obj1 = { position: "absolute", bottom: 0, left: ThemesDefault.space.PX_24, right: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_8 };
+  obj[3] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
+  const obj2 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8, marginHorizontal: ThemesDefault.space.PX_24 };
+  obj[4] = { marginHorizontal: ThemesDefault.space.PX_24 };
+  const obj3 = { marginHorizontal: ThemesDefault.space.PX_24 };
+  obj[5] = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  const obj4 = { height: hairlineWidth.hairlineWidth, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj[6] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
+  const obj5 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, overflow: "hidden", marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
+  obj[7] = { marginHorizontal: ThemesDefault.space.PX_12, marginTop: 36 };
+  const obj6 = { marginHorizontal: ThemesDefault.space.PX_12, marginTop: 36 };
+  obj[8] = { marginBottom: ThemesDefault.space.PX_12, marginTop: margin.margin };
+  const obj7 = { marginBottom: ThemesDefault.space.PX_12, marginTop: margin.margin };
+  obj[9] = { marginBottom: ThemesDefault.space.PX_8 };
   obj[10] = { position: "absolute", top: 50, left: 12 };
   obj[11] = { height: 73, width: "100%" };
-  const obj8 = { marginBottom: Themes.space.PX_8 };
-  obj[12] = { backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
-  const obj9 = { backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
-  obj[13] = { flex: 1, marginHorizontal: Themes.space.PX_8 };
-  const obj10 = { flex: 1, marginHorizontal: Themes.space.PX_8 };
-  obj[14] = { flex: 1, flexDirection: "column", gap: Themes.space.PX_16 };
-  const obj11 = { flex: 1, flexDirection: "column", gap: Themes.space.PX_16 };
-  obj[15] = { height: c15, width: "100%", marginBottom: Themes.space.PX_24 };
-  const obj12 = { height: c15, width: "100%", marginBottom: Themes.space.PX_24 };
-  obj[16] = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: Themes.colors.BORDER_STRONG, borderRadius: Themes.radii.md, borderWidth: 1 };
-  const obj13 = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: Themes.colors.BORDER_STRONG, borderRadius: Themes.radii.md, borderWidth: 1 };
-  obj[17] = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
+  const obj8 = { marginBottom: ThemesDefault.space.PX_8 };
+  obj[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  const obj9 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+  obj[13] = { flex: 1, marginHorizontal: ThemesDefault.space.PX_8 };
+  const obj10 = { flex: 1, marginHorizontal: ThemesDefault.space.PX_8 };
+  obj[14] = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_16 };
+  const obj11 = { flex: 1, flexDirection: "column", gap: ThemesDefault.space.PX_16 };
+  obj[15] = { height: c15, width: "100%", marginBottom: ThemesDefault.space.PX_24 };
+  const obj12 = { height: c15, width: "100%", marginBottom: ThemesDefault.space.PX_24 };
+  obj[16] = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.md, borderWidth: 1 };
+  const obj13 = { flex: 1, width: c15, height: c15, alignItems: "center", justifyContent: "center", borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.md, borderWidth: 1 };
+  obj[17] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
   obj[18] = { opacity: 0.4 };
-  const obj14 = { backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
-  obj[19] = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  const obj15 = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_ACTIVE };
-  obj[20] = { borderRadius: Themes.radii.md };
+  const obj14 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderStyle: "dashed" };
+  obj[19] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  const obj15 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+  obj[20] = { borderRadius: ThemesDefault.radii.md };
   return obj;
 });
 let closure_18 = { code: "function ICYMIJoinGuildsScreenTsx1(){const{withTiming,selectedGuilds,SELECTED_SERVER_SIZE_WITH_BORDER,tokens}=this.__closure;return{opacity:withTiming(selectedGuilds.length>0?1:0),height:withTiming(selectedGuilds.length>0?SELECTED_SERVER_SIZE_WITH_BORDER:0),marginTop:withTiming(selectedGuilds.length>0?tokens.space.PX_24:0)};}" };
-let result = require("noop").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/info_modal/ICYMIJoinGuildsScreen.tsx");
 
 export default function ICYMIJoinGuildsScreen() {
   const tmp = callback3();
   const bottom = stateFromStoresArray1(stateFromStores[25])().bottom;
   let obj = stateFromStoresArray(stateFromStores[16]);
-  let items = [initialize];
+  let items = [closure_10];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => store.getOnboardingGuilds());
-  let obj1 = stateFromStoresArray(stateFromStores[16]);
-  const items1 = [initialize];
+  obj1 = stateFromStoresArray(stateFromStores[16]);
+  const items1 = [closure_10];
   stateFromStoresArray1 = obj1.useStateFromStoresArray(items1, () => store.getOnboardingCategoryIds());
   let obj2 = stateFromStoresArray(stateFromStores[16]);
-  const items2 = [initialize];
+  const items2 = [closure_10];
   stateFromStores = obj2.useStateFromStores(items2, () => store.getCurrentOnboardingGuildOffset());
   const tmp7 = callback(React.useState(new Set()), 2);
   const first = tmp7[0];
@@ -298,10 +291,10 @@ export default function ICYMIJoinGuildsScreen() {
   React = tmp9[1];
   const tmp10 = callback(React.useState(0), 2);
   const first1 = tmp10[0];
-  let closure_7 = tmp10[1];
+  closure_7 = tmp10[1];
   const items3 = [first];
   callback = React.useCallback((guildId) => {
-    let closure_0 = guildId;
+    closure_0 = guildId;
     const ICYMIAnalytics = stateFromStoresArray(stateFromStores[26]).ICYMIAnalytics;
     const result = ICYMIAnalytics.trackFeedOnboardingGuildToggled({ guildId: guildId.id, toggled: !first.has(guildId.id) });
     if (first.has(guildId.id)) {
@@ -324,7 +317,7 @@ export default function ICYMIJoinGuildsScreen() {
   }, items3);
   const tmp13 = callback(React.useState(false), 2);
   const first2 = tmp13[0];
-  initialize = tmp13[1];
+  closure_10 = tmp13[1];
   const items4 = [first];
   const items5 = [stateFromStoresArray1, stateFromStores, first1, stateFromStoresArray.length];
   const callback1 = React.useCallback(first(function*() {
@@ -354,13 +347,13 @@ export default function ICYMIJoinGuildsScreen() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
-            outer1_10(true);
+            closure_0 = tmp4;
+            closure_1_10(true);
             const _Array = Array;
             v0 = 1;
             dependencyMap = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = v0(9057).gravityJoinGuild(Array.from(outer1_3), "icymi_info_modal");
+            obj1 = { value: null, done: false };
+            obj1[0] = v0(9057).gravityJoinGuild(Array.from(closure_1_3), "icymi_info_modal");
             return obj1;
           }
         } else if (1 === tmp4) {
@@ -382,8 +375,8 @@ export default function ICYMIJoinGuildsScreen() {
           } else {
             tmp52Result = tmp52(4094);
             const obj4 = { key: "ICYMIInfoModal", content: null };
-            const intl = outer1_0(1236).intl;
-            obj4[1] = intl.string(outer1_0(1236).t.CG4Hks);
+            const intl = closure_1_0(1236).intl;
+            obj4[1] = intl.string(closure_1_0(1236).t.CG4Hks);
             tmp52Result.open(obj4);
             let obj6 = v0(9057);
             const dehydrated = obj6.fetchDehydrated();
@@ -391,7 +384,7 @@ export default function ICYMIJoinGuildsScreen() {
             const guildChannelScores = obj7.getGuildChannelScores();
             const recommendedGuilds = v0(9057).getRecommendedGuilds();
             const obj9 = v0(9057);
-            v0(5260).popWithKey(outer1_0(15723).ICYMI_INFO_MODAL_KEY);
+            v0(5260).popWithKey(closure_1_0(15723).ICYMI_INFO_MODAL_KEY);
             dependencyMap = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = undefined;
@@ -427,7 +420,7 @@ export default function ICYMIJoinGuildsScreen() {
           const obj19 = v0(9057);
           const recommendedGuilds1 = v0(9057).getRecommendedGuilds();
           const obj20 = v0(9057);
-          v0(5260).popWithKey(outer1_0(15723).ICYMI_INFO_MODAL_KEY);
+          v0(5260).popWithKey(closure_1_0(15723).ICYMI_INFO_MODAL_KEY);
           dependencyMap = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         }
@@ -450,7 +443,7 @@ export default function ICYMIJoinGuildsScreen() {
   }, items5);
   callback3 = React.useCallback((item) => {
     item = item.item;
-    return outer1_12(outer1_21, { guild: item, loading: first2, selected: first.has(item.id), handlePress: callback }, item.id);
+    return closure_1_12(closure_1_21, { guild: item, loading: first2, selected: first.has(item.id), handlePress: callback }, item.id);
   }, items6);
   obj = { variant: "heading-xl/semibold", color: "mobile-text-heading-primary", style: tmp.title, children: null };
   let intl = stateFromStoresArray(stateFromStores[24]).intl;

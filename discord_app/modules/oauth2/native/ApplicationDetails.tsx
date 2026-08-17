@@ -1,24 +1,23 @@
 // discord_app/modules/oauth2/native/ApplicationDetails.tsx
-import "Text";
-import { View } from "RobotIcon";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { set } from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import { LockIcon } from "../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import { ShieldIcon } from "../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { items } from "../scopes.tsx";
-import { getApplicationDetailsText } from "../Utils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ClockIcon from "ClockIcon" /* 4338 */;
+import items2 from "items" /* 4374 */;
+import set from "set" /* 4375 */;
+import Text from "Text" /* 4734 */;
+import LockIcon from "LockIcon" /* 6890 */;
+import getApplicationDetailsText from "getApplicationDetailsText" /* 9770 */;
+import ShieldIcon from "ShieldIcon" /* 9834 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function ApplicationDetailsEntry(children) {
   const iconComponent = children.iconComponent;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.entry, children: null };
   let iconComponentResult = null;
   if (null != iconComponent) {
@@ -32,26 +31,20 @@ function ApplicationDetailsEntry(children) {
   obj[1] = items;
   return closure_5(View, obj);
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
-createCacheKey = { width: 16, height: 16, tintColor: require("Themes").colors.TEXT_MUTED };
+createCacheKey = { width: 16, height: 16, tintColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/oauth2/native/ApplicationDetails.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/oauth2/native/ApplicationDetails.tsx");
 
 export default function ApplicationDetails(arg0) {
-  let application;
-  let approximateGuildCount;
-  let connectedAccount;
-  let disclosures;
-  let isEmbeddedFlow;
-  let redirectUri;
-  let scopes;
   ({ application, scopes, redirectUri, approximateGuildCount, disclosures } = arg0);
   ({ isEmbeddedFlow, connectedAccount } = arg0);
-  let obj = DISCORD_EPOCH;
-  const tmp2 = createCacheKey();
-  let obj1 = items;
+  let obj = DISCORD_EPOCHDefault;
+  const tmp2 = callback2();
+  obj1 = items2;
   let joined = null;
   const securityMessage = obj1.getSecurityMessage(scopes);
   if (null != redirectUri) {
@@ -136,7 +129,7 @@ export default function ApplicationDetails(arg0) {
       if (null != tmp4) {
         tmp5 = null;
         if (null != textForDisclosure) {
-          const obj1 = { text: null };
+          obj1 = { text: null };
           obj1[0] = textForDisclosure;
           const merged = Object.assign(tmp4);
           tmp5 = callback2(closure_7, obj1, toFixed.toFixed());

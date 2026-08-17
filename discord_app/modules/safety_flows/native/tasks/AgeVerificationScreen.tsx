@@ -1,23 +1,21 @@
 // discord_app/modules/safety_flows/native/tasks/AgeVerificationScreen.tsx
-import combined from "combined";
-import { Pressable } from "messagesProxy";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { HelpdeskArticles } from "ME";
-import { jsx } from "handleLogout";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let closure_8 = createCacheKey.createStyles({ helpLink: { textAlign: "center" } });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/AgeVerificationScreen.tsx");
 
 export default function AgeVerificationScreen() {
-  let ageVerificationMethods;
-  let loading;
   const memo = React.useMemo(() => memo(stateFromStores[6]).v4(), []);
   let obj = memo(stateFromStores[7]);
   const onTaskComplete = obj.useOnTaskComplete();
-  let obj1 = memo(stateFromStores[8]);
-  const items = [mergeGuildAvatar];
+  obj1 = memo(stateFromStores[8]);
+  const items = [closure_5];
   stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   obj = {
     onClose() {

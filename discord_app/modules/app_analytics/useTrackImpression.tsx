@@ -1,22 +1,16 @@
 // discord_app/modules/app_analytics/useTrackImpression.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_6 from "handleConnectionOpen";
-import withEqualityFn from "withEqualityFn";
-import encodeProperties from "encodeProperties";
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
+import encodeProperties2 from "encodeProperties" /* 503 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "handleConnectionOpen" /* 4197 */;
+import withEqualityFn from "withEqualityFn" /* 699 */;
+import encodeProperties from "encodeProperties" /* 503 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function trackImpression(type, arg1, arg2) {
-  let name;
-  let properties;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -26,7 +20,7 @@ function trackImpression(type, arg1, arg2) {
     flag2 = false;
   }
   ({ name, type, properties } = type);
-  if (type.type === encodeProperties.ImpressionTypes.MODAL) {
+  if (type.type === encodeProperties2.ImpressionTypes.MODAL) {
     if (null == type.name) {
       let obj = callback4();
     }
@@ -60,29 +54,29 @@ function trackImpression(type, arg1, arg2) {
   } else {
     if (tmp15) {
       tmp(698).debugLogEvent(name, result);
-      encodeProperties(name, result);
+      callback5(name, result);
       const tmpResult2 = tmp(698);
     }
     callback2(name, result);
     tmp15 = null != name && null != type;
   }
 }
-({ setCurrentImpression: error, cleanupImpression: metroImportAll, setDebugTrackedData: c9, getLocation: c10, getImpressionStack: unpackModuleId } = withEqualityFn);
-encodeProperties = { analyticEventConfigs: require("expandEventProperties").AnalyticEventConfigs, dispatcher: require("dispatcher"), TRACK_ACTION_NAME: "TRACK" };
-encodeProperties = encodeProperties.trackMaker(encodeProperties);
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
+({ setCurrentImpression: error, cleanupImpression: closure_8, setDebugTrackedData: c9, getLocation: c10, getImpressionStack: unpackModuleId } = withEqualityFn);
+encodeProperties = { analyticEventConfigs: require("expandEventProperties").AnalyticEventConfigs, dispatcher: dispatcherDefault, TRACK_ACTION_NAME: "TRACK" };
+let closure_12 = encodeProperties.trackMaker(encodeProperties);
+let result = require("set").fileFinishedImporting("modules/app_analytics/useTrackImpression.tsx");
 
 export default function useTrackImpression(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = { disableTrack: false, trackOnInitialLoad: false };
   }
-  const dependencyMap = arg2;
+  dependencyMap = arg2;
   let React;
-  let ensureGuildLoaded;
+  closure_4 = undefined;
   React = React.useRef(undefined);
-  ensureGuildLoaded = React.useRef(undefined);
+  closure_4 = React.useRef(undefined);
   obj(4761)(() => {
     if (obj.trackOnInitialLoad) {
       const tmp6 = obj(659)(ref.current, obj);
@@ -97,10 +91,10 @@ export default function useTrackImpression(arg0) {
         obj = {};
         const merged = Object.assign(tmp5);
         obj.sequenceId = tmp2(5261)("impression_");
-        outer1_13(obj, tmp.disableTrack);
+        closure_1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
-            outer1_8(tmp);
+            closure_1_8(tmp);
           }
         };
       }
@@ -121,10 +115,10 @@ export default function useTrackImpression(arg0) {
         obj = {};
         const merged = Object.assign(tmp5);
         obj.sequenceId = tmp2(5261)("impression_");
-        outer1_13(obj, tmp.disableTrack);
+        closure_1_13(obj, tmp.disableTrack);
         const fn = () => {
           if (null != obj) {
-            outer1_8(tmp);
+            closure_1_8(tmp);
           }
         };
       }

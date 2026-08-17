@@ -1,41 +1,41 @@
 // discord_app/actions/RTCDebugActionCreators.tsx
-import updateStats from "updateStats";
-import { dispatcher } from "../Dispatcher.tsx";
-import { set } from "../lib/DiscordNative.tsx";
-import { trackVoiceAndVideoDebuggingSettingsUpdated } from "../modules/user_settings/voice/trackVoiceAndVideoSettingsUpdate.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import setDefault from "set" /* 4004 */;
+import trackVoiceAndVideoDebuggingSettingsUpdatedDefault from "trackVoiceAndVideoDebuggingSettingsUpdated" /* 9658 */;
+import closure_2 from "updateStats" /* 12596 */;
 
-const result = require("trackVoiceAndVideoDebuggingSettingsUpdated").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/RTCDebugActionCreators.tsx");
 
 export const open = function open(section) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "RTC_DEBUG_MODAL_OPEN", section };
   obj.dispatch(obj);
-  dispatcher.dispatch({ type: "RTC_DEBUG_POPOUT_WINDOW_OPEN" });
+  dispatcherDefault.dispatch({ type: "RTC_DEBUG_POPOUT_WINDOW_OPEN" });
 };
 export const close = function close() {
-  dispatcher.dispatch({ type: "RTC_DEBUG_MODAL_CLOSE" });
+  dispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_CLOSE" });
 };
 export const openReplay = function openReplay() {
-  dispatcher.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY" });
+  dispatcherDefault.dispatch({ type: "RTC_DEBUG_MODAL_OPEN_REPLAY" });
 };
 export const setSection = function setSection(section) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "RTC_DEBUG_MODAL_SET_SECTION", section };
   obj.dispatch(obj);
 };
 export const setShouldRecordNextConnection = function setShouldRecordNextConnection(value) {
-  trackVoiceAndVideoDebuggingSettingsUpdated("connection_replay_log_enabled", value, updateStats.shouldRecordNextConnection());
-  let obj = dispatcher;
+  trackVoiceAndVideoDebuggingSettingsUpdatedDefault("connection_replay_log_enabled", value, closure_2.shouldRecordNextConnection());
+  let obj = dispatcherDefault;
   obj = { type: "RTC_DEBUG_SET_RECORDING_FLAG", value };
   obj.dispatch(obj);
 };
 export const setSimulcastDebugOverride = function setSimulcastDebugOverride(userId, context, quality) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "RTC_DEBUG_SET_SIMULCAST_OVERRIDE", userId, context, quality };
   obj.dispatch(obj);
 };
 export const chooseReplayPath = function chooseReplayPath() {
-  const fileManager = set.fileManager;
+  const fileManager = setDefault.fileManager;
   const items = [{ name: "All Files", extensions: ["*"] }];
   fileManager.showOpenDialog({ filters: items }).then((arg0) => {
     let str = "";

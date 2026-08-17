@@ -1,21 +1,21 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx
-import initialize from "initialize";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
-import getState from "getState";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
+import closure_7 from "getState" /* 7383 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
+const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/useFetchGuildBoostSlots.tsx");
 
 export default function useFetchGuildBoostSlots() {
   let tmp = callback(React.useState(true), 2);
   const first = tmp[0];
-  let closure_1 = tmp[1];
-  let items = [handleGuildBoostsUpdate];
+  closure_1 = tmp[1];
+  let items = [closure_6];
   stateFromStores = first(stateFromStores[5]).useStateFromStores(items, () => hasFetched.hasFetched);
   let obj = first(stateFromStores[5]);
-  const items1 = [getState];
+  const items1 = [closure_7];
   const stateFromStores1 = first(stateFromStores[5]).useStateFromStores(items1, () => state.getState());
   callback = React.useRef(stateFromStores1);
   const items2 = [stateFromStores1, stateFromStores, first];
@@ -52,8 +52,8 @@ export default function useFetchGuildBoostSlots() {
                 } else {
                   const callback = tmp2;
                   let resolve = globalThis;
-                  let appliedGuildBoostsForUser = outer2_2;
-                  let items = [outer2_1(outer2_2[7]).init(), , ];
+                  let appliedGuildBoostsForUser = closure_2_2;
+                  let items = [closure_2_1(closure_2_2[7]).init(), , ];
                   if (c2) {
                     resolve = resolve.Promise.resolve;
                     let resolveResult = resolve();
@@ -63,7 +63,7 @@ export default function useFetchGuildBoostSlots() {
                     const obj2 = callback(appliedGuildBoostsForUser[8]);
                   }
                   items[1] = resolveResult;
-                  const obj6 = outer2_1(outer2_2[7]);
+                  const obj6 = closure_2_1(closure_2_2[7]);
                   appliedGuildBoostsForUser = callback(appliedGuildBoostsForUser[8]).fetchAppliedGuildBoostsForUser();
                   items[2] = appliedGuildBoostsForUser;
                   items = Promise.all(items);
@@ -90,7 +90,7 @@ export default function useFetchGuildBoostSlots() {
             }
           }
         });
-        const _fetch = tmp;
+        closure_0 = tmp;
         const apply = tmp.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);

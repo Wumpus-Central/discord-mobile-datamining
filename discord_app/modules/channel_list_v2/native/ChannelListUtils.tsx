@@ -1,9 +1,11 @@
 // discord_app/modules/channel_list_v2/native/ChannelListUtils.tsx
-import { AnalyticEvents } from "ME";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { computeSubtitle } from "../../guild_sidebar/ChannelListState.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import computeSubtitle from "computeSubtitle" /* 5272 */;
 
-const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/ChannelListUtils.tsx");
 
 export const isFavoritesSection = function isFavoritesSection(arg0, favoritesSectionNumber) {
   return arg0 === favoritesSectionNumber.favoritesSectionNumber;
@@ -18,5 +20,5 @@ export const isNamedCategorySection = function isNamedCategorySection(section) {
   return section >= computeSubtitle.SECTION_INDEX_FIRST_NAMED_CATEGORY;
 };
 export const logChannelListEndReached = function logChannelListEndReached() {
-  collectGuildAnalyticsMetadata.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(AnalyticEvents.CHANNEL_LIST_END_REACHED);
 };

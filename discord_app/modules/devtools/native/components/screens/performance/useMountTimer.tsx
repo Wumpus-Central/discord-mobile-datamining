@@ -1,6 +1,6 @@
 // discord_app/modules/devtools/native/components/screens/performance/useMountTimer.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useMountTimer.tsx");
 
@@ -8,8 +8,8 @@ export default function useMountTimer() {
   const tmp = callback(React.useState(null), 2);
   callback = tmp[1];
   React = React.useRef(0);
-  let closure_2 = React.useRef(0);
-  let closure_3 = React.useRef(null);
+  closure_2 = React.useRef(0);
+  closure_3 = React.useRef(null);
   return {
     run: tmp[0],
     begin: React.useCallback((params) => {

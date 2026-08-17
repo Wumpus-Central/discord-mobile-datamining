@@ -1,8 +1,9 @@
 // discord_app/modules/webauthn/WebAuthnSignalManager.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import fetchFingerprint from "fetchFingerprint";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
 
+initializeDefault;
 class WebAuthnSignalManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -40,7 +41,7 @@ prototype["handleAuthenticatorDelete"] = function handleAuthenticatorDelete(cred
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(table[3]);
+            obj1 = v0(table[3]);
             table = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
@@ -95,8 +96,8 @@ prototype["handleWebAuthnCredentialsLoaded"] = function handleWebAuthnCredential
             obj[0] = arg1;
             return obj;
           } else {
-            const id = outer1_3.getId();
-            let obj1 = v0(table[3]);
+            const id = closure_1_3.getId();
+            obj1 = v0(table[3]);
             table = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
@@ -151,7 +152,7 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(table[3]);
+            obj1 = v0(table[3]);
             table = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
@@ -178,6 +179,6 @@ prototype["handleCurrentUserUpdate"] = function handleCurrentUserUpdate(user) {
   })();
 };
 const webAuthnSignalManager = new WebAuthnSignalManager();
-const result = require("initialize").fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
+const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnSignalManager.tsx");
 
 export default webAuthnSignalManager;

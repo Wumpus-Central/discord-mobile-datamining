@@ -1,13 +1,13 @@
 // discord_app/modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/game_console/native/useShouldDisplayCancelConsoleTransfer.tsx");
 
 export default function useShouldDisplayCancelConsoleTransfer(arg0) {
   const callback = arg0;
   const tmp = callback(React.useState(() => {
-    let tmp2 = null != _slicedToArray;
+    let tmp2 = null != closure_0;
     if (tmp2) {
       const _Date = Date;
       tmp2 = Date.now() - tmp.startedAt > 6000;
@@ -28,15 +28,15 @@ export default function useShouldDisplayCancelConsoleTransfer(arg0) {
         const _setTimeout = setTimeout;
         const _Date2 = Date;
         timeout = setTimeout(() => {
-          let tmp3 = null != _slicedToArray;
+          let tmp3 = null != closure_0;
           if (tmp3) {
             const _Date = Date;
             tmp3 = Date.now() - tmp2.startedAt > 6000;
           }
-          return noop(tmp3);
+          return closure_1(tmp3);
         }, 6000 - (Date.now() - tmp.startedAt));
         return () => {
-          clearTimeout(_slicedToArray);
+          clearTimeout(closure_0);
         };
       }
     }

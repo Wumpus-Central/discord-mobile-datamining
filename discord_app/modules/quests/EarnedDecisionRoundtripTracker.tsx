@@ -1,13 +1,13 @@
 // discord_app/modules/quests/EarnedDecisionRoundtripTracker.tsx
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import { AnalyticEvents } from "ME";
-import set from "receiveNetworkInfoformation";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isForegrounded } from "../analytics_sessions/SessionForegroundUtils.native.tsx";
-import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
-import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5052 */;
+import isForegrounded from "isForegrounded" /* 5055 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
+import closure_3 from "handleConnectionInfoChange" /* 4564 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function trackRoundtrip(apiResponseTimestamp) {
   if (Math.random() <= 0.1) {
     let diff = null;
@@ -17,7 +17,7 @@ function trackRoundtrip(apiResponseTimestamp) {
     let obj = receiveNetworkInfoformation;
     const signalStrength = obj.getSignalStrength();
     obj = {};
-    const merged = Object.assign(getDeviceMetadata());
+    const merged = Object.assign(getDeviceMetadataDefault());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
     obj.api_latency_ms = diff;
     obj.mobile_network_type = type.getType();
@@ -29,7 +29,7 @@ function trackRoundtrip(apiResponseTimestamp) {
     }
     const merged1 = Object.assign(tmp10);
     ({ callerSource: obj3.caller_source, requestId: obj3.request_id, fetchedAt: obj3.fetched_at } = apiResponseTimestamp);
-    const obj2 = expandEventProperties;
+    const obj2 = expandEventPropertiesDefault;
     const tmp2 = require;
     obj.is_foregrounded = isForegrounded.isForegrounded();
     obj2.track(AnalyticEvents.EARNED_DECISION_ROUNDTRIP, obj);
@@ -47,14 +47,14 @@ class EarnedDecisionRoundtripTracker {
 const prototype = EarnedDecisionRoundtripTracker.prototype;
 prototype["recordEarnedRequestAttempt"] = function recordEarnedRequestAttempt(arg0, callerSource) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let pendingRequests = this.pendingRequests;
   const result = pendingRequests.set(arg0, { initialSendTimestamp: Date.now(), endpoint: "/quests/earned-decision", apiResponseTimestamp: null, wasSuccessful: false, callerSource, requestId: null, fetchedAt: null });
   const timerId = setTimeout(() => {
     const pendingRequests = self.pendingRequests;
     const value = pendingRequests.get(closure_0);
     if (null != value) {
-      outer1_5(value);
+      closure_1_5(value);
       const pendingRequests2 = self.pendingRequests;
       pendingRequests2.delete(closure_0);
     }

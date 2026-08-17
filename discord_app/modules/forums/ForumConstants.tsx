@@ -1,5 +1,7 @@
 // discord_app/modules/forums/ForumConstants.tsx
-const result = require("set").fileFinishedImporting("modules/forums/ForumConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/forums/ForumConstants.tsx");
 
 export const FORUM_GUIDELINES_ACTION_SHEET = "forum-guidelines-action-sheet";
 export const MAX_FORUM_TAGS = 20;

@@ -1,18 +1,18 @@
 // discord_app/modules/collectibles/hooks/useProductPurchaseState.tsx
-import map from "map";
-import { compact } from "../../../../_runtime/09244_compact.js";
+import compactDefault from "compact" /* 9244 */;
+import closure_3 from "map" /* 5324 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 
 const require = arg1;
-function getProductPurchaseState(outer1_5, skuId) {
-  const _require = outer1_5;
-  let tmp = null != outer1_5.getPurchase(skuId.skuId);
+function getProductPurchaseState(closure_1_5, skuId) {
+  const _require = closure_1_5;
+  let tmp = null != closure_1_5.getPurchase(skuId.skuId);
   let items = skuId.items;
   if (items == null) {
     items = [];
   }
-  const tmp3Result = compact(items.map((skuId) => outer1_5.getPurchase(skuId.skuId)));
+  const tmp3Result = compactDefault(items.map((skuId) => store.getPurchase(skuId.skuId)));
   let type;
   if (skuId != null) {
     type = skuId.type;
@@ -30,7 +30,7 @@ function getProductPurchaseState(outer1_5, skuId) {
     const variants = skuId.variants;
     let everyResult;
     if (variants != null) {
-      everyResult = variants.every((skuId) => null != outer1_5.getPurchase(skuId.skuId));
+      everyResult = variants.every((skuId) => null != store.getPurchase(skuId.skuId));
     }
     let flag = everyResult;
     if (everyResult == null) {
@@ -41,7 +41,7 @@ function getProductPurchaseState(outer1_5, skuId) {
     const variants2 = skuId.variants;
     let flag2;
     if (variants2 != null) {
-      flag2 = variants2.some((skuId) => null != outer1_5.getPurchase(skuId.skuId));
+      flag2 = variants2.some((skuId) => null != store.getPurchase(skuId.skuId));
     }
     if (flag2) {
       flag2 = !everyResult;
@@ -56,14 +56,14 @@ function getProductPurchaseState(outer1_5, skuId) {
     obj[0] = tmp;
     return obj;
   }
-  const tmp3 = compact;
+  const tmp3 = compactDefault;
   tmp5 = _require;
 }
-const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductPurchaseState.tsx");
 
 export { getProductPurchaseState };
 export const useProductPurchaseState = function useProductPurchaseState(product) {
   const _require = product;
-  const items = [map];
-  return _initialize.useStateFromStoresObject(items, () => outer1_4(outer1_3, closure_0));
+  const items = [closure_3];
+  return _initialize.useStateFromStoresObject(items, () => closure_1_4(closure_1_3, closure_0));
 };

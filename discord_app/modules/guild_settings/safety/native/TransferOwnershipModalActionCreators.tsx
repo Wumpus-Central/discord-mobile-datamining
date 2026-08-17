@@ -1,18 +1,20 @@
 // discord_app/modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { dispatcher } from "../../../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+
 const TRANSFER_OWNERSHIP_MODAL_KEY = "TRANSFER_OWNERSHIP_MODAL_KEY";
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/guild_settings/safety/native/TransferOwnershipModalActionCreators.tsx");
 
 export default {
   open(guild, toUser) {
-    let obj = ModalActionCreators;
+    let obj = _modDef5260;
     obj = { guild, toUser };
     obj.pushLazy(asyncRequireImpl(11025, dependencyMap.paths), obj, TRANSFER_OWNERSHIP_MODAL_KEY);
   },
   close() {
-    dispatcher.wait(() => {
+    dispatcherDefault.wait(() => {
       callback(table[0]).popWithKey(closure_3);
     });
   }

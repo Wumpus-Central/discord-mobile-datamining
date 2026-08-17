@@ -1,6 +1,7 @@
 // discord_app/modules/billing/errors/InvalidGooglePlayPurchase.tsx
-import "set";
+import setDefault from "set" /* 4061 */;
 
+setDefault;
 const prototype = function InvalidGooglePlayPurchase() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;

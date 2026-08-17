@@ -1,14 +1,14 @@
 // discord_app/modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx
-import noop from "noop";
-import { SearchTabs } from "MessageEmbedTypes";
+import closure_2 from "noop" /* 19 */;
+import { SearchTabs } from "MessageEmbedTypes" /* 8507 */;
 
-let result = require("module_11531").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/hooks/useAutoTrackSearchTabCountsViewedAnalytics.tsx");
 
 export const useAutoTrackSearchTabCountsViewedAnalytics = function useAutoTrackSearchTabCountsViewedAnalytics(searchContext) {
   searchContext = searchContext.searchContext;
   const visibleTabCounts = searchContext.visibleTabCounts;
   const visibleTabs = searchContext.visibleTabs;
-  let closure_3;
+  closure_3 = undefined;
   closure_3 = visibleTabs.useRef(visibleTabs);
   const items = [visibleTabs];
   const effect = visibleTabs.useEffect(() => {

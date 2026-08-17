@@ -1,30 +1,28 @@
 // discord_app/modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx
-import noop from "noop";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { ButtonGroup } from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import { LinkExternalSmallIcon } from "../../../design/components/Icon/native/redesign/generated/LinkExternalSmallIcon.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import ButtonGroup from "ButtonGroup" /* 6687 */;
+import LinkExternalSmallIcon from "LinkExternalSmallIcon" /* 6693 */;
+import Background from "Background" /* 6950 */;
+import closure_3 from "noop" /* 19 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, header: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingVertical: require("Themes").space.PX_8, alignSelf: "center", textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingVertical: require("Themes").space.PX_8, alignSelf: "center", textAlign: "center" };
-const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
+createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingVertical: ThemesDefault.space.PX_8, alignSelf: "center", textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/collectibles/native/PersonalizationDisclaimerActionSheet.tsx");
 
 export default function PersonalizationDisclaimerActionSheet() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const callback = React.useCallback(() => {
     const obj = callback(4090);
     obj.openURL(callback(1993).getArticleURL(constants.DATA_USED_FOR_RECOMMENDED));
@@ -35,13 +33,11 @@ export default function PersonalizationDisclaimerActionSheet() {
   obj[4] = intl.string(getSystemLocale.t.euks4U);
   const items = [callback(Text.Text, obj), ];
   obj = { children: null };
-  const obj1 = { size: "lg", text: null, onPress: null, icon: null, iconPosition: "end" };
+  obj1 = { size: "lg", text: null, onPress: null, icon: null, iconPosition: "end" };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
   obj1[2] = callback;
-  const obj2 = { color: null };
-  obj2[0] = Themes.colors.WHITE;
-  obj1[3] = callback(LinkExternalSmallIcon.LinkExternalSmallIcon, obj2);
+  obj1[3] = callback(LinkExternalSmallIcon.LinkExternalSmallIcon, { color: ThemesDefault.colors.WHITE });
   const items1 = [callback(Button.Button, obj1), ];
   const obj3 = { variant: "tertiary", size: "lg", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;

@@ -1,8 +1,9 @@
 // discord_app/modules/activities/utils/isPartyFull.tsx
-const result = require("set").fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/activities/utils/isPartyFull.tsx");
 
 export const isPartyFull = function isPartyFull(partySize) {
-  let maxPartySize;
   ({ partySize, maxPartySize } = partySize);
   let tmp = partySize > -1;
   if (tmp) {

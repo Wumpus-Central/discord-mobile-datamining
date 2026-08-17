@@ -1,5 +1,5 @@
 // discord_app/modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/media_keyboard/native/useMediaKeyboardItemsPerRow.tsx");
@@ -16,7 +16,7 @@ export const useMediaKeyboardItemsPerRow = function useMediaKeyboardItemsPerRow(
         if (tmp3(4233).WindowSizeClassifier.SMALL !== tmp2) {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("Unknown window size classifier: " + tmp2);
+          error = new Error("Unknown window size classifier: " + tmp2);
           throw error;
         }
       }

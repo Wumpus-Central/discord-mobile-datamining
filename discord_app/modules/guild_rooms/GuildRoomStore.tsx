@@ -1,12 +1,13 @@
 // discord_app/modules/guild_rooms/GuildRoomStore.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import fetchFingerprint from "fetchFingerprint";
-import createRTCConnection from "createRTCConnection";
-import handleConnectionOpen from "handleConnectionOpen";
-import { PersistedStore } from "initialize";
-import { GuildRoomObjectTypes } from "GuildRoomTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import GuildRoomObjectTypes from "GuildRoomObjectTypes" /* 9865 */;
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
+require = arg1;
 function resolveCreatingNotes(roomId, objects) {
   if (null != dependencyMap5[roomId]) {
     if (0 !== arr.length) {
@@ -67,12 +68,13 @@ let c21 = false;
 let closure_22 = {};
 let closure_23 = {};
 let closure_24 = [];
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildRoomStore extends PersistedStore {
 }
 const prototype = GuildRoomStore.prototype;
 prototype["initialize"] = function initialize(rememberVideoOverlayVisibility) {
-  this.waitFor(fetchFingerprint, createRTCConnection, handleConnectionOpen);
-  const items = [handleConnectionOpen];
+  this.waitFor(closure_6, closure_7, closure_8);
+  const items = [closure_8];
   this.syncWith(items, handleSelectedChannelStoreChange);
   let flag;
   if (rememberVideoOverlayVisibility != null) {
@@ -182,20 +184,18 @@ obj = {
     } else {
       const _Map = Map;
       const id = store.getId();
-      const map = new Map(dependencyMap2[roomId]);
+      map = new Map(dependencyMap2[roomId]);
       map.delete(id);
       dependencyMap2[roomId] = map;
     }
   },
   GUILD_ROOM_DISCONNECT: function handleDisconnect(arg0) {
-    let roomId;
-    let userId;
     ({ userId, roomId } = arg0);
     if (null == dependencyMap[roomId]) {
       return false;
     } else {
       const _Map = Map;
-      const map = new Map(dependencyMap2[roomId]);
+      map = new Map(dependencyMap2[roomId]);
       map.delete(userId);
       dependencyMap2[roomId] = map;
       let tmp4 = c21;
@@ -210,7 +210,7 @@ obj = {
         delete tmp[tmp2];
         delete tmp[tmp2];
         if (!c20) {
-          let c19 = false;
+          c19 = false;
         }
       }
     }
@@ -234,13 +234,11 @@ obj = {
     }
   },
   GUILD_ROOM_UPDATE_FAILURE: function handleUpdateFailure(arg0) {
-    let originalRoom;
-    let originalRoomUsers;
     ({ originalRoom, originalRoomUsers } = arg0);
     if (null == dependencyMap[originalRoom.roomId]) {
       return false;
     } else {
-      let obj = {};
+      obj = {};
       const merged = Object.assign(tmp2);
       obj.background = originalRoom.background;
       tmp[originalRoom.roomId] = obj;
@@ -248,7 +246,7 @@ obj = {
       const value = originalRoomUsers.get(id);
       if (null == value) {
         const _Map = Map;
-        const map = new Map(dependencyMap2[originalRoom.roomId]);
+        map = new Map(dependencyMap2[originalRoom.roomId]);
         map.delete(id);
         dependencyMap2[originalRoom.roomId] = map;
       } else {
@@ -268,28 +266,23 @@ obj = {
     position = position.position;
   },
   GUILD_ROOM_LOCAL_POSITION_CLEARED: function handleLocalPositionCleared() {
-    let c16 = null;
+    c16 = null;
   },
   GUILD_ROOM_TOGGLE_LAYOUT: function handleToggleLayout(roomId) {
     roomId = roomId.roomId;
     dependencyMap3[roomId] = !dependencyMap3[roomId];
     if (roomId.clearLayout) {
-      let c21 = true;
+      c21 = true;
     }
   },
   GUILD_ROOM_LOCAL_UPDATE: function handleLocalUpdate(arg0) {
-    let background;
-    let position;
-    let roomId;
-    let statusId;
-    let statusText;
     ({ roomId, background, position, statusId, statusText } = arg0);
     if (null == dependencyMap[roomId]) {
       return false;
     } else {
       const id = store.getId();
       if (null != background) {
-        let obj = {};
+        obj = {};
         const merged = Object.assign(tmp[roomId]);
         obj.background = background;
         tmp[roomId] = obj;
@@ -298,7 +291,7 @@ obj = {
         const value = dependencyMap2[roomId].get(id);
         if (null != value) {
           const _Map = Map;
-          const map = new Map(tmp4[roomId]);
+          map = new Map(tmp4[roomId]);
           obj = {};
           const merged1 = Object.assign(value);
           if (position == null) {
@@ -335,7 +328,7 @@ obj = {
     if (null == dependencyMap4[roomId]) {
       return false;
     } else {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(tmp3);
       obj.position = tmp;
       tmp2[roomId] = obj;
@@ -345,8 +338,6 @@ obj = {
     delete tmp[tmp2];
   },
   GUILD_ROOM_NOTE_CREATE_START: function handleNoteCreateStart(roomId) {
-    let localId;
-    let position;
     roomId = roomId.roomId;
     let items = dependencyMap5[roomId];
     ({ localId, position } = roomId);
@@ -358,8 +349,6 @@ obj = {
     dependencyMap5[roomId] = items1;
   },
   GUILD_ROOM_NOTE_CREATE_FAILURE: function handleNoteCreateFailure(arg0) {
-    let require;
-    let roomId;
     ({ roomId, localId: require } = arg0);
     if (null == dependencyMap5[roomId]) {
       return false;
@@ -378,11 +367,11 @@ obj = {
     value = value.value;
   },
   GUILD_ROOM_SET_REMEMBER_VIDEO_OVERLAY_VISIBILITY: function handleSetRememberVideoOverlayVisibility(rememberVideoOverlayVisibility) {
-    let closure_20 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
+    closure_20 = rememberVideoOverlayVisibility.rememberVideoOverlayVisibility;
   }
 };
-const guildRoomStore = new GuildRoomStore(require("dispatcher"), obj);
-let result = require("createRTCConnection").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
+const guildRoomStore = new GuildRoomStore(dispatcherDefault, obj);
+let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomStore.tsx");
 
 export default guildRoomStore;
 export const DEFAULT_ROOM = obj;

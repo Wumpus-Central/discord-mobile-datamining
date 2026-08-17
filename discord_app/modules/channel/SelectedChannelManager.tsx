@@ -1,21 +1,18 @@
 // discord_app/modules/channel/SelectedChannelManager.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import handleConnectionOpen from "handleConnectionOpen";
-import { findFirstVoiceChannelId } from "handleConnectionOpen";
-import closure_6 from "handleConnectionOpen";
-import ME from "ME";
-import "initialize";
-import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { transitionTo } from "../routing/router_utils.tsx";
-import { transitionToGuild } from "../routing/transitionToGuild.native.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import _modDef4975 from "module_4975" /* 4975 */;
+import initializeDefault from "initialize" /* 5038 */;
+import transitionToGuild from "transitionToGuild" /* 7302 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import { findFirstVoiceChannelId } from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "handleConnectionOpen" /* 4197 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ ChannelTypes: error, Routes: metroImportAll, ME: c9, NULL_STRING_GUILD_ID: c10 } = ME);
+require = arg1;
+({ ChannelTypes: error, Routes: closure_8, ME: c9, NULL_STRING_GUILD_ID: c10 } = ME);
+initializeDefault;
 class SelectedChannelManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -40,8 +37,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
     tmp6 = null == voiceChannelId;
   }
   if (tmp6) {
-    const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
-    const obj2 = SelectedChannelActionCreators;
+    const voiceChannel = _modDef4975.selectVoiceChannel(findFirstVoiceChannelId(guild.id));
+    const obj2 = _modDef4975;
   }
 };
 prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
@@ -56,16 +53,16 @@ prototype["handleChannelCreate"] = function handleChannelCreate(channel) {
     const obj3 = store;
     tmp = null == guildId.getGuildId() && null != originChannelId && originChannelId === channelId;
     if (tmp7) {
-      const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
-      const obj2 = SelectedChannelActionCreators;
+      const voiceChannel = _modDef4975.selectVoiceChannel(channel.id, videoEnabled.isVideoEnabled());
+      const obj2 = _modDef4975;
     }
     tmp7 = null != originChannelId && originChannelId === store.getVoiceChannelId();
   }
 };
 prototype["handleLogout"] = function handleLogout() {
-  dispatcher.dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
+  dispatcherDefault.dispatch({ type: "VOICE_CHANNEL_SELECT", channelId: null, guildId: null, video: false, currentVoiceChannelId: null, joinVoiceId: null });
 };
 const selectedChannelManager = new SelectedChannelManager();
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/SelectedChannelManager.tsx");
 
 export default selectedChannelManager;

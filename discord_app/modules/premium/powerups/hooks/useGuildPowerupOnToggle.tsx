@@ -1,16 +1,14 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("guildPowerupsAckNotification").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnToggle.tsx");
 
 export default function useGuildPowerupOnToggle(arg0, arg1) {
-  let _slicedToArray;
-  let tmp2;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  [tmp2, _slicedToArray] = callback(React.useState(false), 2);
+  closure_0 = arg0;
+  closure_1 = arg1;
+  [tmp2, closure_2] = callback(React.useState(false), 2);
   const tmp3 = callback(React.useState(undefined), 2);
   React = tmp3[1];
   const tmp = callback(React.useState(false), 2);
@@ -33,7 +31,7 @@ export default function useGuildPowerupOnToggle(arg0, arg1) {
           if (body != null) {
             message = body.message;
           }
-          noop(message);
+          closure_3(message);
           throw body;
         }).finally(() => {
           callback(false);

@@ -1,11 +1,11 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnShowMore.tsx");
 
 export default function useGuildPowerupOnShowMore(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const items = [arg0, arg1];
   return React.useCallback(() => {
     if (null != table) {

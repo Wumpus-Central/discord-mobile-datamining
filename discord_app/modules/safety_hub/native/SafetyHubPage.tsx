@@ -1,24 +1,18 @@
 // discord_app/modules/safety_hub/native/SafetyHubPage.tsx
-import expandEventProperties from "expandEventProperties";
-import get_ActivityIndicator from "useMountLayoutEffect";
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
-import { AgeCheckStatus } from "SafetyHubView";
-import ME from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import { AgeCheckStatus } from "SafetyHubView" /* 5438 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function AutomatedUnderageAppealStatus() {
   let obj = initialize;
-  const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => ageCheckStatus.getAgeCheckStatus());
   if (AgeCheckStatus.SUCCESS === stateFromStores) {
     obj = { message: null, type: null };
@@ -38,7 +32,7 @@ function AutomatedUnderageAppealStatus() {
     obj[1] = tmp(1297).HelpMessageTypes.SUCCESS;
     let obj4 = obj;
   } else if (tmp4.ERROR === stateFromStores) {
-    const obj1 = { message: null, type: null };
+    obj1 = { message: null, type: null };
     const intl3 = tmp(1236).intl;
     obj1[0] = intl3.string(tmp(1236).t["4sILBU"]);
     obj1[1] = tmp(1297).HelpMessageTypes.ERROR;
@@ -72,23 +66,23 @@ function AutomatedUnderageAppealStatus() {
 ({ AnalyticEvents: c10, Routes: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { container: null, loadingIndicator: null, body: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_12, paddingVertical: require("Themes").space.PX_12 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center" };
-createCacheKey[2] = { gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { gap: require("Themes").space.PX_8 };
-const result = require("handleSafetyHubRequestAgeVerificationResetModalAction").fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
+createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { gap: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubPage.tsx");
 
 export default function SafetyHubPage(visible) {
   visible = visible.visible;
-  let importDefault;
-  let closure_2;
+  importDefault = undefined;
+  closure_2 = undefined;
   let safetyHubFetchError;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = visible(safetyHubFetchError[14]);
   importDefault = obj.useSafetyHubInitialized();
-  let obj1 = visible(safetyHubFetchError[15]);
+  obj1 = visible(safetyHubFetchError[15]);
   closure_2 = obj1.useSafetyHubAccountStanding();
   const tmp2 = importDefault;
   const tmp4 = importDefault(safetyHubFetchError[13])();
@@ -100,7 +94,7 @@ export default function SafetyHubPage(visible) {
     if (callback) {
       obj = { account_standing: null };
       obj[0] = lib.state;
-      callback(tmp[19]).track(outer1_10.SAFETY_HUB_VIEWED, obj);
+      callback(tmp[19]).track(closure_1_10.SAFETY_HUB_VIEWED, obj);
       const obj2 = callback(tmp[19]);
       obj = { name: null };
       obj[0] = visible(tmp[21]).MetricEvents.SAFETY_HUB_VIEW;

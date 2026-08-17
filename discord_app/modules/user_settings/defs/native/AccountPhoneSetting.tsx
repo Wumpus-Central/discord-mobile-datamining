@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/AccountPhoneSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY";
-import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ChangePhoneReason } from "../../../phone/PhoneActionCreators.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import ChangePhoneReason from "ChangePhoneReason" /* 8629 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_4 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -16,7 +16,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountPhoneSettingTrailing() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let phone;
@@ -27,14 +27,13 @@ createToggle = {
     });
   },
   onPress: function onAccountPhoneSettingPress() {
-    let obj = ModalActionCreators;
-    obj = { allowDeletePhone: true, reason: null };
-    obj[1] = ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE;
+    let obj = _modDef5260;
+    obj = { allowDeletePhone: true, reason: ChangePhoneReason.ChangePhoneReason.USER_SETTINGS_UPDATE };
     obj.pushLazy(asyncRequireImpl(8626, dependencyMap.paths), obj, closure_4);
   },
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("PHONE_VERIFICATION_MODAL_KEY").fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountPhoneSetting.tsx");
 
 export default createToggle;

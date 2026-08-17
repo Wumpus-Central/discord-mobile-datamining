@@ -1,4 +1,6 @@
 // discord_app/modules/search/StringMatchUtils.tsx
+import set from "set" /* 2 */;
+
 function calculateJaroWinklerDistance(formatted, arg1) {
   const diff = Math.floor(Math.max(formatted.length, arg1.length) / 2) - 1;
   const items = [];
@@ -144,7 +146,7 @@ function calculateJaroWinklerDistance(formatted, arg1) {
     return 0;
   }
 }
-let result = require("set").fileFinishedImporting("modules/search/StringMatchUtils.tsx");
+let result = set.fileFinishedImporting("modules/search/StringMatchUtils.tsx");
 
 export const calculateJaroWinklerSimilarity = function calculateJaroWinklerSimilarity(c0, str) {
   let obj = arg2;

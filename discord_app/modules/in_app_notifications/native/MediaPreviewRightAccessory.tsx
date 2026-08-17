@@ -1,49 +1,38 @@
 // discord_app/modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx
-import isValidImageAttachment from "isValidImageAttachment";
-import get_ActivityIndicator from "VoiceMessageIcon";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "preload";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { VideoComponent } from "../../../components_native/common/Video.tsx";
-import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
-import { PlayIcon } from "../../../design/components/Icon/native/redesign/generated/PlayIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { redactionSettingToRenderedString } from "../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "../../explicit_media_redaction/hooks/useContentHarmTypes.tsx";
-import { Sticker } from "../../stickers/native/Sticker.tsx";
-import { isBlurDisabled } from "../../visual_effect_view/native/VisualEffectView.tsx";
-import { VoiceMessageIcon } from "hooks/usePreviewableMedia.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
+import Text from "Text" /* 4734 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import preloadDefault from "preload" /* 5449 */;
+import SolidCutoutDefault from "SolidCutout" /* 8402 */;
+import PlayIcon from "PlayIcon" /* 9003 */;
+import VideoComponentDefault from "VideoComponent" /* 9018 */;
+import VoiceMessageIcon from "VoiceMessageIcon" /* 10070 */;
+import useEnabledHarmTypesBitmaskForChannelAndAuthorId from "useEnabledHarmTypesBitmaskForChannelAndAuthorId" /* 10118 */;
+import StickerDefault from "Sticker" /* 10119 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c4;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function VideoBadge() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   obj = { style: tmp.badge, children: callback(PlayIcon.PlayIcon, obj) };
   obj = { style: tmp.icon, size: "custom", color: "white" };
   return callback(View, obj);
 }
 function CountBadge(children) {
-  return callback(View, { style: callback3().badge, children: callback(Text.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
+  return callback(View, { style: callback4().badge, children: callback(Text.Text, { variant: "text-xs/semibold", color: "text-default", children: children.total }) });
 }
 function ObscuredMediaOverlay(isSpoiler) {
-  let children;
-  let isObscured;
   ({ isObscured, children } = isSpoiler);
-  const tmp = createCacheKey();
+  const tmp = callback5();
   let obj = map;
-  const token = obj.useToken(Themes.colors.SPOILER_HIDDEN_BACKGROUND);
+  const token = obj.useToken(ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND);
   if (!isObscured) {
     if (!isSpoiler.isSpoiler) {
       return children;
@@ -67,10 +56,10 @@ function ObscuredMediaOverlay(isSpoiler) {
     obj[0] = str;
     obj[1] = token;
     obj[2] = StyleSheet.absoluteFill;
-    tmp11 = callback(isBlurDisabled, obj);
+    tmp11 = callback(isBlurDisabledDefault, obj);
   }
   items[2] = tmp11;
-  const obj1 = { style: tmp.spoilerIconContainer, children: null };
+  obj1 = { style: tmp.spoilerIconContainer, children: null };
   if (isObscured) {
     let tmp14Result = tmp14(tmp2(6877).ImageWarningIcon, { size: "sm", color: "white" });
   } else {
@@ -86,21 +75,13 @@ function ObscuredMediaOverlay(isSpoiler) {
   return closure_10(closure_9, obj3);
 }
 function SinglePreviewableMedia(arg0) {
-  let height;
-  let icon;
-  let media;
-  let message;
-  let previewableMedia;
-  let size;
-  let type;
-  let width;
   ({ previewableMedia, size, message } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback5();
   let obj = defaultAreStatesEqual;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   ({ type, media, icon } = previewableMedia);
-  let obj1 = redactionSettingToRenderedString;
+  obj1 = redactionSettingToRenderedString;
   const shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
   let obj2 = useEnabledHarmTypesBitmaskForChannelAndAuthorId;
   const enabledHarmTypesBitmaskForMessage = obj2.useEnabledHarmTypesBitmaskForMessage(message);
@@ -161,7 +142,7 @@ function SinglePreviewableMedia(arg0) {
                         obj6[0] = url;
                         obj5[4] = obj6;
                         obj5[5] = url2;
-                        let tmp16Result = tmp16(VideoComponent, obj5);
+                        let tmp16Result = tmp16(VideoComponentDefault, obj5);
                       }
                       obj4[2] = tmp16Result;
                       obj2[1] = tmp16(tmp18, obj4);
@@ -173,7 +154,7 @@ function SinglePreviewableMedia(arg0) {
                   obj8[0] = url2;
                   obj7[0] = obj8;
                   obj7[1] = tmp.mediaThumbnail;
-                  tmp16Result = tmp16(preload, obj7);
+                  tmp16Result = tmp16(preloadDefault, obj7);
                 }
                 url2 = thumbnail.url;
               }
@@ -189,7 +170,7 @@ function SinglePreviewableMedia(arg0) {
               obj11[0] = media;
               obj11[1] = size;
               obj11[2] = !stateFromStores;
-              obj9[1] = callback(Sticker, obj11);
+              obj9[1] = callback(StickerDefault, obj11);
               return callback(View, obj9);
             } else {
               return null;
@@ -235,7 +216,7 @@ function SinglePreviewableMedia(arg0) {
                 obj18[0] = srcWithWidthAndHeight;
                 obj17[0] = obj18;
                 obj17[1] = tmp.mediaThumbnail;
-                const items4 = [callback(preload, obj17), ];
+                const items4 = [callback(preloadDefault, obj17), ];
                 let tmp24Result = null;
                 if (type === tmp2(10070).PreviewableMediaTypes.VIDEO) {
                   tmp24Result = tmp24(VideoBadge, {});
@@ -263,35 +244,24 @@ function SinglePreviewableMedia(arg0) {
   }
 }
 function MultiplePreviewableMedia(arg0) {
-  let message;
-  let previewableMedia;
-  let totalMediaCount;
   ({ previewableMedia, totalMediaCount, message } = arg0);
-  let obj = { style: callback4().container, children: null };
+  let obj = { style: callback6().container, children: null };
   const memo = React.useMemo(() => {
     const BADGE_PADDING = callback(1297).BADGE_PADDING;
     const sum = BADGE_PADDING + 5;
     const roundToNearestPixelResult = closure_4.roundToNearestPixel(20 + 2 * BADGE_PADDING);
-    const obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
-    obj[0] = callback(8402).CutoutShape.RoundedRect;
-    obj[1] = 56 - roundToNearestPixelResult + sum;
-    obj[2] = -sum;
-    obj[3] = roundToNearestPixelResult;
-    obj[4] = roundToNearestPixelResult;
-    obj[5] = closure_4.roundToNearestPixel(roundToNearestPixelResult / 2);
+    const obj = { shape: callback(8402).CutoutShape.RoundedRect, x: 56 - roundToNearestPixelResult + sum, y: -sum, width: roundToNearestPixelResult, height: roundToNearestPixelResult, cornerRadius: closure_4.roundToNearestPixel(roundToNearestPixelResult / 2) };
     return obj;
   }, []);
   obj = { cutouts: items, children: null };
   items = [memo];
-  const tmp = callback4();
+  const tmp = callback6();
   obj[1] = callback(SinglePreviewableMedia, { previewableMedia, size: 56, message });
-  const items1 = [callback(SolidCutout, obj), callback(CountBadge, { total: totalMediaCount })];
+  const items1 = [callback(SolidCutoutDefault, obj), callback(CountBadge, { total: totalMediaCount })];
   obj[1] = items1;
   return callback2(View, obj);
 }
 function MediaPreviewRightAccessoryContent(arg0) {
-  let message;
-  let totalMediaCount;
   ({ totalMediaCount, message } = arg0);
   const first = arg0.previewableMedia[0];
   if (1 === totalMediaCount) {
@@ -310,37 +280,36 @@ function MediaPreviewRightAccessoryContent(arg0) {
 }
 ({ PixelRatio: c4, StyleSheet } = get_ActivityIndicator);
 const View = get_ActivityIndicator.View;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { badge: null, icon: null };
-createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.xs, width: 16, height: 16, position: "absolute", bottom: 4, left: 4 };
+createCacheKey = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xs, width: 16, height: 16, position: "absolute", bottom: 4, left: 4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 10, height: 10 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { badge: null };
-obj1[0] = { width: 20, height: 20, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { badge: { width: 20, height: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 } };
 let closure_12 = createCacheKey.createStyles(obj1);
 createCacheKey = { mediaThumbnailContainer: null, mediaThumbnail: null, iconContainer: null, obscureBackground: null, spoilerIconContainer: null, spoilerPill: null };
-let obj2 = { width: 20, height: 20, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 };
-createCacheKey[0] = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+let obj2 = { width: 20, height: 20, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", position: "absolute", right: -5, top: -5 };
+createCacheKey[0] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[1] = { width: "100%", height: "100%" };
-let obj4 = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-createCacheKey[2] = { alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.sm };
+let obj4 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[2] = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.sm };
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = require("Themes").unsafe_rawColors.PRIMARY_500;
+createCacheKey.backgroundColor = ThemesDefault.unsafe_rawColors.PRIMARY_500;
 createCacheKey[3] = createCacheKey;
 let obj7 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj7.justifyContent = "center";
 obj7.alignItems = "center";
 createCacheKey[4] = obj7;
-let obj5 = { alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.sm };
-createCacheKey[5] = { padding: require("Themes").space.PX_4, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj5 = { alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[5] = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_14 = createCacheKey.createStyles({ container: { overflow: "visible" } });
 let closure_15 = createCacheKey.createStyles({ rightAccessoryContainer: { marginLeft: require("set").RIGHT_ACCESSORY_LEFT_MARGIN } });
-let obj8 = { padding: require("Themes").space.PX_4, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
+let obj8 = { padding: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", alignItems: "center" };
+const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MediaPreviewRightAccessory.tsx");
 
 export const MediaPreviewRightAccessory = function MediaPreviewRightAccessory(message) {
   message = message.message;

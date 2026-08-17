@@ -1,11 +1,12 @@
 // discord_app/stores/GuildMemberRequesterStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import importDefaultResult from "trackCommunicationDisabled";
-import { Store } from "initialize";
-import { dispatcher } from "../Dispatcher.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import acknowledgeDefault from "acknowledge" /* 6705 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import importDefaultResult from "trackCommunicationDisabled" /* 1990 */;
 
 function handleConnectionReset() {
-  tmp3.reset();
+  navigation.reset();
 }
 function handleLoadMessages(messages) {
   messages = messages.messages;
@@ -14,15 +15,13 @@ function handleLoadMessages(messages) {
   if (flag) {
     const guild_id = channel.guild_id;
     const item = messages.forEach((arg0) => {
-      let author;
-      let mentions;
       ({ author, mentions } = arg0);
       if (null != author) {
-        outer1_4.request(guild_id, author.id);
+        closure_1_4.request(guild_id, author.id);
       }
       if (mentions != null) {
         const item = mentions.forEach((id) => {
-          outer1_4.request(closure_0, id.id);
+          closure_1_4.request(closure_0, id.id);
           return false;
         });
       }
@@ -32,8 +31,6 @@ function handleLoadMessages(messages) {
   return flag;
 }
 function handleLoadSearchResults(arg0) {
-  let data;
-  let guildId;
   ({ guildId, data } = arg0);
   guildId = undefined;
   if (null == guildId) {
@@ -50,15 +47,13 @@ function handleLoadSearchResults(arg0) {
       });
     });
     const item1 = items.forEach((arg0) => {
-      let author;
-      let mentions;
       ({ author, mentions } = arg0);
       if (null != author) {
-        outer1_4.request(guild_id, author.id);
+        closure_1_4.request(guild_id, author.id);
       }
       if (mentions != null) {
         const item = mentions.forEach((id) => {
-          outer1_4.request(closure_0, id.id);
+          closure_1_4.request(closure_0, id.id);
           return false;
         });
       }
@@ -67,42 +62,43 @@ function handleLoadSearchResults(arg0) {
   }
 }
 let c3 = importDefaultResult;
-let c4 = new require("acknowledge")(importDefaultResult.isMember, (arg0, userIds) => {
-  let obj = dispatcher;
+let closure_4 = new acknowledgeDefault(importDefaultResult.isMember, (arg0, userIds) => {
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
   obj.dispatch(obj);
 });
+const Store = initializeDefault.Store;
 class GuildMemberRequesterStore extends Store {
 }
 const prototype = GuildMemberRequesterStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, closure_3);
+  this.waitFor(closure_2, closure_3);
 };
 prototype["requestMember"] = function requestMember(closure_0, id) {
-  tmp3.request(closure_0, id);
+  navigation.request(closure_0, id);
 };
 prototype["getDebugState"] = function getDebugState(arg0) {
-  return tmp3.getDebugState(arg0);
+  return navigation.getDebugState(arg0);
 };
 GuildMemberRequesterStore.displayName = "GuildMemberRequesterStore";
-const guildMemberRequesterStore = new GuildMemberRequesterStore(require("dispatcher"), {
+const guildMemberRequesterStore = new GuildMemberRequesterStore(dispatcherDefault, {
   CONNECTION_CLOSED: handleConnectionReset,
   CONNECTION_OPEN: handleConnectionReset,
   CONNECTION_RESUMED: function handleConnectionResumed() {
-    const unacknowledged = tmp3.requestUnacknowledged();
+    const unacknowledged = navigation.requestUnacknowledged();
     return false;
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(arg0) {
     function _loop(iter) {
-      let closure_0 = iter;
+      closure_0 = iter;
       const members = iter.members;
       const item = members.forEach((user) => {
-        outer1_4.acknowledge(iter.guildId, user.user.id);
+        closure_1_4.acknowledge(iter.guildId, user.user.id);
       });
       if (null != iter.notFound) {
         const notFound = iter.notFound;
-        const item1 = notFound.forEach((arg0) => outer1_4.acknowledge(iter.guildId, arg0));
+        const item1 = notFound.forEach((arg0) => closure_1_4.acknowledge(iter.guildId, arg0));
       }
     }
     const iter = arg0.chunks[Symbol.iterator]();
@@ -126,15 +122,13 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(require("dispatc
       const mapped = pins.map((message) => message.message);
       const guild_id = channel.guild_id;
       const item = mapped.forEach((arg0) => {
-        let author;
-        let mentions;
         ({ author, mentions } = arg0);
         if (null != author) {
-          outer1_4.request(guild_id, author.id);
+          closure_1_4.request(guild_id, author.id);
         }
         if (mentions != null) {
           const item = mentions.forEach((id) => {
-            outer1_4.request(closure_0, id.id);
+            closure_1_4.request(closure_0, id.id);
             return false;
           });
         }
@@ -151,15 +145,13 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(require("dispatc
       const combined = messages.concat(messages.messageReferences);
       const guild_id = channel.guild_id;
       const item = combined.forEach((arg0) => {
-        let author;
-        let mentions;
         ({ author, mentions } = arg0);
         if (null != author) {
-          outer1_4.request(guild_id, author.id);
+          closure_1_4.request(guild_id, author.id);
         }
         if (mentions != null) {
           const item = mentions.forEach((id) => {
-            outer1_4.request(closure_0, id.id);
+            closure_1_4.request(closure_0, id.id);
             return false;
           });
         }
@@ -182,15 +174,13 @@ const guildMemberRequesterStore = new GuildMemberRequesterStore(require("dispatc
         });
         const guild_id = channel.guild_id;
         let item = mapped.flat().forEach((arg0) => {
-          let author;
-          let mentions;
           ({ author, mentions } = arg0);
           if (null != author) {
-            outer1_4.request(guild_id, author.id);
+            closure_1_4.request(guild_id, author.id);
           }
           if (mentions != null) {
             const item = mentions.forEach((id) => {
-              outer1_4.request(closure_0, id.id);
+              closure_1_4.request(closure_0, id.id);
               return false;
             });
           }
@@ -205,19 +195,19 @@ let obj = {
   CONNECTION_CLOSED: handleConnectionReset,
   CONNECTION_OPEN: handleConnectionReset,
   CONNECTION_RESUMED: function handleConnectionResumed() {
-    const unacknowledged = tmp3.requestUnacknowledged();
+    const unacknowledged = navigation.requestUnacknowledged();
     return false;
   },
   GUILD_MEMBERS_CHUNK_BATCH: function handleGuildMembersChunkBatch(arg0) {
     function _loop(iter) {
-      let closure_0 = iter;
+      closure_0 = iter;
       const members = iter.members;
       const item = members.forEach((user) => {
-        outer1_4.acknowledge(iter.guildId, user.user.id);
+        closure_1_4.acknowledge(iter.guildId, user.user.id);
       });
       if (null != iter.notFound) {
         const notFound = iter.notFound;
-        const item1 = notFound.forEach((arg0) => outer1_4.acknowledge(iter.guildId, arg0));
+        const item1 = notFound.forEach((arg0) => closure_1_4.acknowledge(iter.guildId, arg0));
       }
     }
     const iter = arg0.chunks[Symbol.iterator]();
@@ -241,15 +231,13 @@ let obj = {
       const mapped = pins.map((message) => message.message);
       const guild_id = channel.guild_id;
       const item = mapped.forEach((arg0) => {
-        let author;
-        let mentions;
         ({ author, mentions } = arg0);
         if (null != author) {
-          outer1_4.request(guild_id, author.id);
+          closure_1_4.request(guild_id, author.id);
         }
         if (mentions != null) {
           const item = mentions.forEach((id) => {
-            outer1_4.request(closure_0, id.id);
+            closure_1_4.request(closure_0, id.id);
             return false;
           });
         }
@@ -266,15 +254,13 @@ let obj = {
       const combined = messages.concat(messages.messageReferences);
       const guild_id = channel.guild_id;
       const item = combined.forEach((arg0) => {
-        let author;
-        let mentions;
         ({ author, mentions } = arg0);
         if (null != author) {
-          outer1_4.request(guild_id, author.id);
+          closure_1_4.request(guild_id, author.id);
         }
         if (mentions != null) {
           const item = mentions.forEach((id) => {
-            outer1_4.request(closure_0, id.id);
+            closure_1_4.request(closure_0, id.id);
             return false;
           });
         }
@@ -297,15 +283,13 @@ let obj = {
         });
         const guild_id = channel.guild_id;
         let item = mapped.flat().forEach((arg0) => {
-          let author;
-          let mentions;
           ({ author, mentions } = arg0);
           if (null != author) {
-            outer1_4.request(guild_id, author.id);
+            closure_1_4.request(guild_id, author.id);
           }
           if (mentions != null) {
             const item = mentions.forEach((id) => {
-              outer1_4.request(closure_0, id.id);
+              closure_1_4.request(closure_0, id.id);
               return false;
             });
           }
@@ -316,12 +300,12 @@ let obj = {
     return false;
   }
 };
-const tmp3 = new require("acknowledge")(importDefaultResult.isMember, (arg0, userIds) => {
-  let obj = dispatcher;
+const tmp3 = new acknowledgeDefault(importDefaultResult.isMember, (arg0, userIds) => {
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_MEMBERS_REQUEST", guildIds: items, userIds };
   items = [arg0];
   obj.dispatch(obj);
 });
-const result = require("acknowledge").fileFinishedImporting("stores/GuildMemberRequesterStore.tsx");
+const result = require("set").fileFinishedImporting("stores/GuildMemberRequesterStore.tsx");
 
 export default guildMemberRequesterStore;

@@ -1,20 +1,15 @@
 // discord_app/modules/dismissible_content/native/SelectedDismissibleContent.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import jsxProd from "jsxProd";
-import { useSelectedDismissibleContent } from "../hooks/useSelectedDismissibleContent.tsx";
+import noopAll from "noop" /* 19 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Fragment: c3, jsx: c4 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/dismissible_content/native/SelectedDismissibleContent.tsx");
+const result = require("set").fileFinishedImporting("modules/dismissible_content/native/SelectedDismissibleContent.tsx");
 
 export default function SelectedDismissibleContent(arg0) {
-  let bypassAutoDismiss;
-  let children;
-  let contentTypes;
-  let groupName;
   ({ contentTypes, children, groupName, bypassAutoDismiss } = arg0);
   let obj = useSelectedDismissibleContent;
   const tmp = callback(obj.useSelectedDismissibleContent(contentTypes, groupName, bypassAutoDismiss), 2);
@@ -23,10 +18,6 @@ export default function SelectedDismissibleContent(arg0) {
   return callback2(closure_3, obj);
 };
 export const SelectedVersionedDismissibleContent = function SelectedVersionedDismissibleContent(contentType) {
-  let bypassAutoDismiss;
-  let children;
-  let groupName;
-  let latestVersion;
   ({ latestVersion, groupName, bypassAutoDismiss, children } = contentType);
   let obj = useSelectedDismissibleContent;
   const tmp = callback(obj.useSelectedVersionedDismissibleContent(contentType.contentType, latestVersion, groupName, bypassAutoDismiss), 2);
@@ -35,10 +26,6 @@ export const SelectedVersionedDismissibleContent = function SelectedVersionedDis
   return callback2(closure_3, obj);
 };
 export const SelectedTimeRecurringDismissibleContent = function SelectedTimeRecurringDismissibleContent(contentType) {
-  let bypassAutoDismiss;
-  let children;
-  let groupName;
-  let timeRecurringConfig;
   ({ timeRecurringConfig, groupName, bypassAutoDismiss, children } = contentType);
   let obj = useSelectedDismissibleContent;
   const tmp = callback(obj.useSelectedTimeRecurringDismissibleContent(contentType.contentType, timeRecurringConfig, groupName, bypassAutoDismiss), 2);
@@ -47,10 +34,6 @@ export const SelectedTimeRecurringDismissibleContent = function SelectedTimeRecu
   return callback2(closure_3, obj);
 };
 export const SelectedSnowflakeBoundDismissibleContent = function SelectedSnowflakeBoundDismissibleContent(contentType) {
-  let bypassAutoDismiss;
-  let children;
-  let groupName;
-  let newSnowflakeId;
   ({ newSnowflakeId, groupName, bypassAutoDismiss, children } = contentType);
   let obj = useSelectedDismissibleContent;
   const tmp = callback(obj.useSelectedSnowflakeBoundDismissibleContent(contentType.contentType, newSnowflakeId, groupName, bypassAutoDismiss), 2);
@@ -59,11 +42,6 @@ export const SelectedSnowflakeBoundDismissibleContent = function SelectedSnowfla
   return callback2(closure_3, obj);
 };
 export const SelectedTimeReccuringSnowflakeBoundDismissibleContent = function SelectedTimeReccuringSnowflakeBoundDismissibleContent(contentType) {
-  let bypassAutoDismiss;
-  let children;
-  let groupName;
-  let newSnowflakeId;
-  let timeRecurringConfig;
   ({ newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss, children } = contentType);
   let obj = useSelectedDismissibleContent;
   const tmp = callback(obj.useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType.contentType, newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss), 2);

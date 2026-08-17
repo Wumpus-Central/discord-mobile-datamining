@@ -1,8 +1,10 @@
 // discord_app/modules/report_to_mod/ReportToModConstants.tsx
-import { Permissions } from "ME";
-import importAllResult from "fromString";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import importAllResult from "fromString" /* 506 */;
 
-const combineResult = require("fromString").combine(Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
-const result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModConstants.tsx");
+const Permissions = ME.Permissions;
+const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
+const result = set.fileFinishedImporting("modules/report_to_mod/ReportToModConstants.tsx");
 
 export const ReportToModPermissions = combineResult;

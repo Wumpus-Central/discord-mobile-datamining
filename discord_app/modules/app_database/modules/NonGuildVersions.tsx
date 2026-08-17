@@ -1,16 +1,19 @@
 // discord_app/modules/app_database/modules/NonGuildVersions.tsx
-import items from "items";
-import importDefaultResult from "handleConnectionOpen";
-import isCacheEnabled from "isCacheEnabled";
-import { items } from "../DatabaseDaos.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import applyDefault from "apply" /* 12 */;
+import setDefault from "set" /* 687 */;
+import itemsDefault from "items" /* 1955 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult from "handleConnectionOpen" /* 4197 */;
+import isCacheEnabled from "isCacheEnabled" /* 5395 */;
 
 let obj = arg1;
 let c4 = importDefaultResult;
-let c5 = new require("isCacheEnabled")("NonGuildVersions");
+let closure_5 = new timestampDefault("NonGuildVersions");
 class NonGuildVersions {
   constructor() {
     obj = Object.create(new.target.prototype);
-    resetInMemoryState = obj;
+    closure_0 = obj;
     obj.actions = {
       CONNECTION_OPEN(arg0, arg1) {
             return obj.handleConnectionOpen(arg0, arg1);
@@ -22,11 +25,11 @@ class NonGuildVersions {
     tmp2 = closure_2;
     obj = require("isCacheEnabled");
     if (obj.isCacheEnabled()) {
-      tmp3 = Object;
+      tmp3 = closure_4;
       tmp4 = closure_1;
       obj2 = require("apply");
       num = 10;
-      addChangeListenerResult = Object.addChangeListener(obj2.throttle(() => {
+      addChangeListenerResult = closure_4.addChangeListener(obj2.throttle(() => {
         const databaseResult = callback(table[5]).database();
         if (databaseResult != null) {
           databaseResult.transaction((database) => {
@@ -35,7 +38,7 @@ class NonGuildVersions {
               const _isNaN = isNaN;
               const _Number = Number;
               if (!isNaN(Number(guildId))) {
-                let obj = callback(1955);
+                obj = callback(1955);
                 const result = obj.nonGuildVersionsTransaction(database);
                 obj = { id: "initial_guild_id", versionString: null };
                 obj[1] = guildId;
@@ -61,7 +64,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -80,16 +83,16 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
-            let closure_1 = tmp7;
-            let closure_0;
-            let c4 = 1;
-            let obj3 = outer1_1(outer1_2[5]);
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_0 = undefined;
+            c4 = 1;
+            let obj3 = closure_1_1(closure_1_2[5]);
             const nonGuildVersionsResult = obj3.nonGuildVersions();
             if (null == nonGuildVersionsResult) {
               c4 = 0;
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = {};
               return obj1;
             } else {
@@ -102,7 +105,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           }
         } else if (1 === tmp7) {
           c4 = 0;
-          closure_1 = items;
+          closure_1 = closure_3;
           logger.warn("couldn't load guild versions", closure_1);
           c6 = 3;
           obj3 = { value: null, done: true };
@@ -132,7 +135,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           return obj;
         }
       } catch (tmp20) {
-        items = tmp20;
+        closure_3 = tmp20;
         if (tmp4 === c4) {
           c6 = tmp2;
           throw tmp20;
@@ -145,7 +148,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(apiCodeVersion, database) {
   if (null != apiCodeVersion.apiCodeVersion) {
-    let obj = items;
+    obj = itemsDefault;
     const result = obj.nonGuildVersionsTransaction(database);
     obj = { id: "api_code_version", version: null };
     obj[1] = apiCodeVersion.apiCodeVersion;
@@ -165,7 +168,7 @@ obj.actions = {
   }
 };
 if (isCacheEnabled.isCacheEnabled()) {
-  importDefaultResult.addChangeListener(require("apply").throttle(() => {
+  importDefaultResult.addChangeListener(applyDefault.throttle(() => {
     const databaseResult = callback(table[5]).database();
     if (databaseResult != null) {
       databaseResult.transaction((database) => {
@@ -174,7 +177,7 @@ if (isCacheEnabled.isCacheEnabled()) {
           const _isNaN = isNaN;
           const _Number = Number;
           if (!isNaN(Number(guildId))) {
-            let obj = callback(1955);
+            obj = callback(1955);
             const result = obj.nonGuildVersionsTransaction(database);
             obj = { id: "initial_guild_id", versionString: null };
             obj[1] = guildId;
@@ -185,11 +188,11 @@ if (isCacheEnabled.isCacheEnabled()) {
         result1.delete("initial_guild_id");
       });
     }
-  }, 10 * require("set").Millis.SECOND));
-  const importDefaultResult1 = require("apply");
+  }, 10 * setDefault.Millis.SECOND));
+  const importDefaultResult1 = applyDefault;
 }
-const tmp2 = new require("isCacheEnabled")("NonGuildVersions");
-let result = require("timestamp").fileFinishedImporting("modules/app_database/modules/NonGuildVersions.tsx");
+const tmp2 = new timestampDefault("NonGuildVersions");
+let result = require("set").fileFinishedImporting("modules/app_database/modules/NonGuildVersions.tsx");
 
 export default obj;
 export { NonGuildVersions };

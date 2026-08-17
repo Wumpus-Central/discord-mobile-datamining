@@ -1,15 +1,15 @@
 // discord_app/modules/messages/native/renderer/row_data/CtaButton.tsx
-import getFpMessageInfo from "getFpMessageInfo";
-import { useAgeVerificationRunner } from "../../../../age_assurance/AgeVerificationUtils.tsx";
-import { CtaButtonType } from "../../../CtaButtonUtils.tsx";
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
+import CtaButtonType from "CtaButtonType" /* 11096 */;
+import closure_2 from "getFpMessageInfo" /* 5002 */;
 
-const require = arg1;
-let result = require("useAgeVerificationRunner").fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/CtaButton.tsx");
 
 export const createCtaButton = function createCtaButton(id, channel_id, arg2) {
   let obj = CtaButtonType;
   const ctaButtonType = obj.getCtaButtonType(id, channel_id);
-  let obj1 = useAgeVerificationRunner;
+  obj1 = useAgeVerificationRunner;
   const isAgeVerifiedResult = obj1.isAgeVerified();
   const result = useAgeVerificationRunner.shouldShowTiggerPawtect();
   if (CtaButtonType.CtaButtonType.MARK_AS_FALSE_POSITIVE === ctaButtonType) {
@@ -18,7 +18,7 @@ export const createCtaButton = function createCtaButton(id, channel_id, arg2) {
     obj[0] = intl3.string(tmp(1236).t["4q1Elf"]);
     ({ reportFpTextColor: obj6[1], reportFpBackgroundColor: obj6[2] } = arg2);
     let prop;
-    if (getFpMessageInfo.canSubmitFpReport(id)) {
+    if (closure_2.canSubmitFpReport(id)) {
       prop = tmp(11096).CtaButtonType.MARK_AS_FALSE_POSITIVE;
     }
     obj[3] = prop;

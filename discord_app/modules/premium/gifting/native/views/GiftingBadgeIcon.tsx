@@ -1,9 +1,10 @@
 // discord_app/modules/premium/gifting/native/views/GiftingBadgeIcon.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("jsxProd").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeIcon.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingBadgeIcon.tsx");
 
 export default function GiftingBadgeIcon(size) {
   size = size.size;

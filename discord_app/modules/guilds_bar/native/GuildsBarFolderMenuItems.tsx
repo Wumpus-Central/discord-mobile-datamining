@@ -1,13 +1,13 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx
-import markGuildsAsRead from "markGuildsAsRead";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { AnalyticsSections } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "insertUnsortedGuilds" /* 5078 */;
+import { AnalyticsSections } from "ME" /* 676 */;
 import { EnvelopeIcon } from "../../../design/components/Icon/native/redesign/generated/EnvelopeIcon.tsx";
 import { SettingsIcon } from "../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFolderMenuItems.tsx");
 
 export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFolderMenuItems) {
   const _require = guildFolderMenuItems;
@@ -15,7 +15,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
   const intl = _getSystemLocale.intl;
   obj[1] = intl.string(_getSystemLocale.t.e6RscS);
   obj[2] = function action() {
-    return outer1_2(function*() {
+    return closure_1_2(function*() {
       if (guildFolderById === 2) {
         guildFolderById = 3;
         HermesBuiltin.throwTypeError();
@@ -42,15 +42,15 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               guildFolderById = tmp2;
               guildFolderById = undefined;
-              guildFolderById = guildFolderById.getGuildFolderById(outer1_0);
+              guildFolderById = guildFolderById.getGuildFolderById(closure_1_0);
               if (null != guildFolderById) {
                 c2 = 1;
                 guildFolderById = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0(outer1_1[6])(outer1_1[5], outer1_1.paths);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(closure_1_1[6])(closure_1_1[5], closure_1_1.paths);
                 return obj1;
               } else {
                 guildFolderById = 3;
@@ -60,7 +60,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
             guildFolderById = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            arg1.default(guildFolderById.guildIds, outer1_4.GUILD_LIST);
+            arg1.default(guildFolderById.guildIds, closure_1_4.GUILD_LIST);
           }
           guildFolderById = 3;
           obj = { value: null, done: true };
@@ -78,7 +78,7 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
   const intl2 = _getSystemLocale.intl;
   obj[1] = intl2.string(_getSystemLocale.t.Dx7im5);
   obj[2] = function action() {
-    return outer1_2(function*() {
+    return closure_1_2(function*() {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -105,11 +105,11 @@ export const getGuildFolderMenuItems = function getGuildFolderMenuItems(guildFol
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
+              closure_0 = tmp4;
               paths = 1;
               c2 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(paths[6])(paths[8], paths.paths);
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(paths[6])(paths[8], paths.paths);
               return obj1;
             }
           } else if (arg0 === 1) {

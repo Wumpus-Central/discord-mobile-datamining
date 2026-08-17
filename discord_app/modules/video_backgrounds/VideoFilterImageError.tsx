@@ -1,9 +1,11 @@
 // discord_app/modules/video_backgrounds/VideoFilterImageError.tsx
-import { V8APIError } from "sendRequest";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 let closure_2 = { ASSET_SIZE: "BINARY_TYPE_MAX_SIZE" };
 let closure_3 = { ASSET: "asset" };
+const V8APIError = sendRequest.V8APIError;
 const prototype = function VideoFilterImageError(arg0, arg1) {
   const intl = getSystemLocale.intl;
   tmp3 = new tmp3(arg0, arg1, intl.string(getSystemLocale.t.Mt8yDB), new.target, tmp3, tmp2, intl, require, new.target, tmp);
@@ -26,6 +28,6 @@ const prototype = function VideoFilterImageError(arg0, arg1) {
 }.prototype;
 class prototype extends V8APIError {
 }
-const result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
+const result = set.fileFinishedImporting("modules/video_backgrounds/VideoFilterImageError.tsx");
 
 export default prototype;

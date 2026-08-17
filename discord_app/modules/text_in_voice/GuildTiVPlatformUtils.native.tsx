@@ -1,6 +1,8 @@
 // discord_app/modules/text_in_voice/GuildTiVPlatformUtils.native.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/text_in_voice/GuildTiVPlatformUtils.native.tsx");
 
 export default {
   getTextInVoiceSendMessageChannelPermissionText(sendMessagesDisabled) {

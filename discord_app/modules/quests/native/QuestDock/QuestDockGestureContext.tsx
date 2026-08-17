@@ -1,16 +1,11 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockGestureContext.tsx
-import importAllResult from "noop";
-import QuestDockMode from "QuestDockMode";
-import { QuestDockMode } from "QuestsExperimentLocations";
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
-import { jsx } from "jsxProd";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "QuestDockMode" /* 14445 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ QUEST_DOCK_COLLAPSED_HEIGHT: closure_6, QUEST_DOCK_EXPANDED_HEIGHT: error } = QUEST_DOCK_COLLAPSED_HEIGHT);
@@ -18,12 +13,12 @@ let obj = { questDockWrapperSpecs: null, windowDimensions: null, activeQuestDock
 obj[0] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0, x: 0, y: 0, prevDeltaY: 0 });
 obj[1] = createFakeSharedValue.createFakeSharedValue({ width: 0, height: 0, maxContentHeight: 0, landscape: false });
 obj[2] = createFakeSharedValue.createFakeSharedValue(QuestDockMode.COLLAPSED);
-obj[3] = require("noop");
+obj[3] = require("module_0");
 const context = importAllResult.createContext(obj);
 const memoResult = importAllResult.memo(function QuestDockGestureContextProviderInner(children) {
   let obj = sharedValue3;
   const size = sharedValue3.useMemo(sharedValue(sharedValue2[6]).getWindowDimensions, []);
-  let obj1 = sharedValue(sharedValue2[7]);
+  obj1 = sharedValue(sharedValue2[7]);
   obj = { width: size.width, height: size.height, landscape: size.width > size.height, maxContentHeight: size.height };
   sharedValue = obj1.useSharedValue(obj);
   const youBarHorizontalMargin = sharedValue(sharedValue2[8]).useYouBarHorizontalMargin();
@@ -42,8 +37,6 @@ const memoResult = importAllResult.memo(function QuestDockGestureContextProvider
   sharedValue3 = tmp(tmp2[7]).useSharedValue(closure_7);
   const items = [sharedValue];
   const effect = obj.useEffect(() => sharedValue1(sharedValue2[10])((arg0) => {
-    let height;
-    let width;
     ({ width, height } = arg0);
     const result = closure_0.set({ width, height, landscape: width > height, maxContentHeight: height });
   }), items);
@@ -51,7 +44,7 @@ const memoResult = importAllResult.memo(function QuestDockGestureContextProvider
   obj1 = { value: obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1), children: children.children };
   return <context.Provider value={obj.useMemo(() => ({ windowDimensions: sharedValue, questDockWrapperSpecs: sharedValue1, activeQuestDockMode: sharedValue2, minExpandedContentHeight: sharedValue3 }), items1)}>{arg0.children}</context.Provider>;
 });
-let result = require("QuestsExperimentLocations").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureContext.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockGestureContext.tsx");
 
 export const QuestDockGestureContext = context;
 export const QuestDockGestureContextProvider = memoResult;

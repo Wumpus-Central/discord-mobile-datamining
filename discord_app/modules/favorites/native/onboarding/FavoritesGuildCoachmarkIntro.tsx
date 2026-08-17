@@ -1,15 +1,15 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import withEqualityFn from "withEqualityFn";
-import { FAVORITES } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "withEqualityFn" /* 15547 */;
+import { FAVORITES } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_9 = { code: "function FavoritesGuildCoachmarkIntroTsx1(){const{scrollPosition}=this.__closure;return scrollPosition.get()<=0;}" };
 let closure_10 = { code: "function FavoritesGuildCoachmarkIntroTsx2(atTop,wasAtTop){const{runOnJS,setScrolledToTop}=this.__closure;if(atTop===wasAtTop){return;}runOnJS(setScrolledToTop)(atTop);}" };
-let result = require("withEqualityFn").fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
+let result = require("set").fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkIntro.tsx");
 
 export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -31,7 +31,7 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   fn.__initData = closure_9;
   const fn2 = function p(arg0, arg1) {
     if (arg0 !== arg1) {
-      markAsDismissed(first[6]).runOnJS(c3)(arg0);
+      markAsDismissed(first[6]).runOnJS(closure_3)(arg0);
       const obj = markAsDismissed(first[6]);
     }
   };
@@ -42,13 +42,13 @@ export default function FavoritesGuildCoachmarkIntro(markAsDismissed) {
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
   const items = [markAsDismissed];
   callback = callback.useCallback(() => {
-    markAsDismissed(outer1_7.USER_DISMISS);
+    markAsDismissed(closure_1_7.USER_DISMISS);
   }, items);
   const items1 = [markAsDismissed];
   callback1 = callback.useCallback(() => {
     const result = markAsDismissed(first[7]).setNextFavoritesGuildViewSource("intro_dc");
-    scrollPosition(first[8])(outer1_6);
-    markAsDismissed(outer1_7.TAKE_ACTION);
+    scrollPosition(first[8])(closure_1_6);
+    markAsDismissed(closure_1_7.TAKE_ACTION);
   }, items1);
   const items2 = [first, callback, callback1];
   const memo = callback.useMemo(() => {

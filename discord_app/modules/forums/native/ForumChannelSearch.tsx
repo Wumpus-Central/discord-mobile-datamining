@@ -1,9 +1,9 @@
 // discord_app/modules/forums/native/ForumChannelSearch.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import initialize from "initialize";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "initialize" /* 7515 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -21,8 +21,8 @@ const memoResult = importAllResult.memo((channelId) => {
   const canSearchForumPostsByChannelId = channelId(route[6]).useCanSearchForumPostsByChannelId(channelId);
   const effect = importAllResult.useEffect(() => () => {
     if (null != closure_1) {
-      obj.setOptions(outer1_0(outer1_2[7]).getDefaultChannelStackHeaderProps(obj, closure_2));
-      const obj2 = outer1_0(outer1_2[7]);
+      obj.setOptions(closure_1_0(closure_1_2[7]).getDefaultChannelStackHeaderProps(obj, closure_2));
+      const obj2 = closure_1_0(closure_1_2[7]);
     }
   }, items);
   let tmp8 = null;
@@ -44,19 +44,17 @@ const memoResult = importAllResult.memo((channelId) => {
   return tmp8;
 });
 const memoResult1 = importAllResult.memo((channelId) => {
-  let importDefault;
-  let placeholder;
   channelId = channelId.channelId;
   ({ guildId: importDefault, placeholder } = channelId);
   let obj = channelId(12702);
   const canSearchForumPostsByChannelId = obj.useCanSearchForumPostsByChannelId(channelId);
   const tmp = callback();
-  const items = [initialize];
+  const items = [closure_5];
   const items1 = [channelId];
   const stateFromStores = channelId(589).useStateFromStores(items, () => {
     let searchQuery = null;
     if (null != channelId) {
-      searchQuery = outer1_5.getSearchQuery(tmp);
+      searchQuery = closure_1_5.getSearchQuery(tmp);
     }
     return searchQuery;
   }, items1);
@@ -70,8 +68,8 @@ const memoResult1 = importAllResult.memo((channelId) => {
       obj[1] = stateFromStores;
       obj[2] = function onChange(query) {
         if (null != channelId) {
-          const result = outer1_1(outer1_2[10]).updateForumSearchQuery(tmp, query);
-          const obj = outer1_1(outer1_2[10]);
+          const result = closure_1_1(closure_1_2[10]).updateForumSearchQuery(tmp, query);
+          const obj = closure_1_1(closure_1_2[10]);
         }
       };
       if (null == placeholder) {
@@ -86,15 +84,15 @@ const memoResult1 = importAllResult.memo((channelId) => {
           tmp2 = null != channelId;
         }
         if (tmp2) {
-          let obj = channelId(outer1_2[13]);
+          let obj = channelId(closure_1_2[13]);
           obj = { guildId: null, channelId: null };
           obj[0] = closure_1;
           obj[1] = channelId;
           const result = obj.trackForumSearchCleared(obj);
         }
         if (null != channelId) {
-          const result1 = outer1_1(outer1_2[10]).updateForumSearchQuery(tmp8, "");
-          const obj3 = outer1_1(outer1_2[10]);
+          const result1 = closure_1_1(closure_1_2[10]).updateForumSearchQuery(tmp8, "");
+          const obj3 = closure_1_1(closure_1_2[10]);
         }
       };
       obj[1] = jsx(tmp2(7337).SearchField, { size: "sm", defaultValue: null, onChange: null, placeholder: null, autoFocus: null, onClear: null, grow: false });
@@ -104,7 +102,7 @@ const memoResult1 = importAllResult.memo((channelId) => {
   }
   return tmp6Result;
 });
-let result = require("initialize").fileFinishedImporting("modules/forums/native/ForumChannelSearch.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/native/ForumChannelSearch.tsx");
 
 export const ForumChannelCloseSearchButton = memoResult;
 export const ForumChannelSearchInput = memoResult1;

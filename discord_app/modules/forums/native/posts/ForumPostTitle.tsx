@@ -1,11 +1,12 @@
 // discord_app/modules/forums/native/posts/ForumPostTitle.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import PlatformTypes from "PlatformTypes";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = null;
 if (PlatformTypes.isIOS()) {
   createCacheKey = { lineHeight: 22 };
@@ -14,20 +15,15 @@ createCacheKey = { title: null };
 PlatformTypes = { marginBottom: 6 };
 createCacheKey = Object.assign(createCacheKey);
 createCacheKey[0] = PlatformTypes;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
+let closure_3 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostTitle.tsx");
 
 export default function ForumPostTitle(arg0) {
-  let ellipsizeMode;
-  let hasUnreads;
-  let lineClamp;
-  let onTextLayout;
-  let title;
   ({ title, lineClamp, ellipsizeMode, hasUnreads, onTextLayout } = arg0);
   let str = "text-muted";
   if (hasUnreads) {
     str = "mobile-text-heading-primary";
   }
-  const tmp = createCacheKey();
-  return jsx(Text.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: createCacheKey().title, onTextLayout, children: title });
+  const tmp = callback();
+  return jsx(Text.Text, { variant: "text-md/semibold", color: str, lineClamp, ellipsizeMode, style: callback().title, onTextLayout, children: title });
 };

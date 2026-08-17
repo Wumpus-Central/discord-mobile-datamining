@@ -1,12 +1,10 @@
 // discord_app/modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
-import { ApplicationCommandSectionType } from "../../../application_commands/ApplicationCommandTypes.tsx";
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function commandPermissions(arg0, items) {
-  let tmp6;
-  let tmp7;
   const obj = {};
   const entries = Object.entries(arg0);
   while (tmp2 !== undefined) {
@@ -23,7 +21,7 @@ function commandPermissions(arg0, items) {
   }
   return obj;
 }
-const result = require("ApplicationCommandSectionType").fileFinishedImporting("modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/permission/IntegrationPermissionUtils.tsx");
 
 export const commandName = function commandName(arg0) {
   let text = arg1;

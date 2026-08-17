@@ -1,17 +1,19 @@
 // discord_app/modules/devtools/native/components/screens/performance/startFrameMonitor.tsx
+import set from "set" /* 2 */;
+
 let c0 = 16.666666666666668;
-const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
+const result = set.fileFinishedImporting("modules/devtools/native/components/screens/performance/startFrameMonitor.tsx");
 
 export const FRAME_BUDGET_MS = 16.666666666666668;
 export const startFrameMonitor = function startFrameMonitor() {
-  let closure_0 = 0;
-  let closure_1 = performance.now();
-  let c2 = false;
-  let c3 = 0;
-  let c4 = 0;
-  let c5 = 0;
-  let c6 = 0;
-  let c7 = false;
+  closure_0 = 0;
+  closure_1 = performance.now();
+  c2 = false;
+  c3 = 0;
+  c4 = 0;
+  c5 = 0;
+  c6 = 0;
+  c7 = false;
   function tick() {
     const nowResult = performance.now();
     if (c2) {

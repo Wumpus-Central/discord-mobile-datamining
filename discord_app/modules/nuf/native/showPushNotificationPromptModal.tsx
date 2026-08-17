@@ -1,16 +1,19 @@
 // discord_app/modules/nuf/native/showPushNotificationPromptModal.tsx
-import { PermissionStateType } from "set";
-import { NUF_NOTIFICATION_MODAL_KEY as closure_4 } from "NewUserTypes";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import set from "set" /* 2 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import set2 from "set" /* 11578 */;
+import NewUserTypes from "NewUserTypes" /* 11878 */;
 
-let result = require("module_5260").fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
+const PermissionStateType = set2.PermissionStateType;
+let closure_4 = NewUserTypes.NUF_NOTIFICATION_MODAL_KEY;
+let result = set.fileFinishedImporting("modules/nuf/native/showPushNotificationPromptModal.tsx");
 
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
-  let obj = ModalActionCreators;
+  let obj = _modDef5260;
   obj = {
     onComplete() {
-      outer1_1(outer1_2[2]).popWithKey(outer1_4);
+      closure_1_1(closure_1_2[2]).popWithKey(closure_1_4);
       onComplete();
     }
   };

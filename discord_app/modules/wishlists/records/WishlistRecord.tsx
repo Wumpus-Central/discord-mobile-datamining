@@ -1,15 +1,15 @@
 // discord_app/modules/wishlists/records/WishlistRecord.tsx
-import "toJS";
-import createExecutable from "createExecutable";
-import fromServer from "fromServer";
-import createCollectiblesItemFromServerResponse from "createCollectiblesItemFromServerResponse";
-import closure_3 from "fromServer";
-import closure_4 from "fromServer";
-import { SKUProductLines } from "ME";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_0 from "createExecutable" /* 4479 */;
+import closure_1 from "fromServer" /* 9188 */;
+import closure_2 from "createCollectiblesItemFromServerResponse" /* 9189 */;
+import closure_3 from "fromServer" /* 9190 */;
+import closure_4 from "fromServer" /* 9191 */;
+import { SKUProductLines } from "ME" /* 676 */;
 
+toJSDefault;
 let prototype;
 prototype = function WishlistRecord(arg0) {
-  let applications;
   const tmp = new prototype(new.target, new.target, arg0);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, userId: tmp.userId, items: tmp.items, applications } = arg0);
@@ -19,9 +19,6 @@ prototype = function WishlistRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
-  let applications;
-  let user_id;
-  let wishlist_items;
   ({ user_id, wishlist_items } = arg0);
   let obj = Object.create(null);
   const merged = Object.assign(arg0, obj);
@@ -30,13 +27,13 @@ prototype["fromServer"] = function fromServer(arg0) {
   const mapped = wishlist_items.map((sku_product_line) => {
     sku_product_line = sku_product_line.sku_product_line;
     if (constants.COLLECTIBLES === sku_product_line) {
-      return createCollectiblesItemFromServerResponse.fromServer(sku_product_line);
+      return closure_2.fromServer(sku_product_line);
     } else if (tmp.SOCIAL_LAYER_GAME_ITEM === sku_product_line) {
       return closure_4.fromServer(sku_product_line);
     } else if (tmp.PREMIUM === sku_product_line) {
       return closure_3.fromServer(sku_product_line);
     } else {
-      return fromServer.fromServer(sku_product_line);
+      return closure_1.fromServer(sku_product_line);
     }
   });
   const merged1 = Object.assign(merged);
@@ -45,7 +42,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   applications = merged.applications;
   let mapped1;
   if (applications != null) {
-    mapped1 = applications.map((arg0) => createExecutable.createFromServer(arg0));
+    mapped1 = applications.map((arg0) => closure_0.createFromServer(arg0));
   }
   obj.applications = mapped1;
   if (typeof prototype !== "function") {
@@ -58,7 +55,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp7.applications = applications;
   return tmp7;
 };
-const result = require("fromServer").fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/records/WishlistRecord.tsx");
 
 export default prototype;
 export const getWishlistSkuIds = function getWishlistSkuIds(items) {
@@ -66,9 +63,9 @@ export const getWishlistSkuIds = function getWishlistSkuIds(items) {
   return items.map((skuId) => skuId.skuId);
 };
 export const wishlistHasSkuId = function wishlistHasSkuId(items) {
-  let createExecutable = arg1;
+  closure_0 = arg1;
   items = items.items;
-  return items.some((skuId) => skuId.skuId === createExecutable);
+  return items.some((skuId) => skuId.skuId === closure_0);
 };
 export const getWishlistProductLines = function getWishlistProductLines(items) {
   items = items.items;

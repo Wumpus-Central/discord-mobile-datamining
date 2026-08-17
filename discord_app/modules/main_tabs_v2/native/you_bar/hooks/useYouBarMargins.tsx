@@ -1,17 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
-import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { map } from "../../../../../design/tokens/native/useToken.tsx";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import set from "set" /* 2 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import map from "map" /* 4097 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
 
-let c3;
-let c4;
-let c5;
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: c4, YOU_BAR_FLOATING_OFFSET_MINIMUM: c5 } = CONNECTION_BANNER_HEIGHT);
-const result = require("PlatformTypes").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
 
 export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
-  if (useSafeAreaInsets().bottom > 0) {
+  if (useSafeAreaInsetsDefault().bottom > 0) {
     if (obj.isIOS()) {
       let tmp3 = closure_3;
     }
@@ -20,7 +18,7 @@ export const useYouBarHorizontalMargin = function useYouBarHorizontalMargin() {
   tmp3 = closure_4;
 };
 export const useYouBarBottomMargin = function useYouBarBottomMargin() {
-  const bottom = useSafeAreaInsets().bottom;
+  const bottom = useSafeAreaInsetsDefault().bottom;
   map;
   if (tmp2) {
     const _Math2 = Math;

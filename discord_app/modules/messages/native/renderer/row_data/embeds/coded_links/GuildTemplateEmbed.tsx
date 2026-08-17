@@ -1,18 +1,20 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx
-import { Image } from "get ActivityIndicator";
-import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
-import { GuildTemplateStates } from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD";
-import { InviteTypes } from "InviteSendStates";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
-import { processColorOrThrow } from "../../../RowGeneratorStyleSheet.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
+import GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD from "GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD" /* 7289 */;
+import processColorOrThrow from "processColorOrThrow" /* 8161 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import closure_4 from "handleGuildTemplateResolveSuccess" /* 7429 */;
 
-const result = require("GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx");
+const Image = get_ActivityIndicator.Image;
+const GuildTemplateStates = GUILD_TEMPLATES_MEMBER_COUNT_PROMOTION_THRESHOLD.GuildTemplateStates;
+const InviteTypes = InviteSendStates.InviteTypes;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/GuildTemplateEmbed.tsx");
 
 export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, closure_2) {
-  let baseColors;
-  let colors;
-  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
   guildTemplate = guildTemplate.getGuildTemplate(code);
   if (null == guildTemplate) {
     return null;
@@ -29,7 +31,7 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     const merged1 = Object.assign(baseColors);
     const intl = getSystemLocale.intl;
     obj.headerText = intl.string(getSystemLocale.t.C7ZRNw).toUpperCase();
-    let obj1 = processColorOrThrow;
+    obj1 = processColorOrThrow;
     obj.titleColor = obj1.processColorOrThrow(tmp(712).unsafe_rawColors.RED_400);
     const intl2 = getSystemLocale.intl;
     obj.titleText = intl2.string(getSystemLocale.t.A6MwXE);
@@ -66,5 +68,5 @@ export const createGuildTemplateEmbed = function createGuildTemplateEmbed(code, 
     obj1.type = InviteTypes.GUILD;
     return obj1;
   }
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
 };

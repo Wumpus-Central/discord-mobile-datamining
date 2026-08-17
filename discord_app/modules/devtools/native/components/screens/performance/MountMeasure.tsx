@@ -1,18 +1,14 @@
 // discord_app/modules/devtools/native/components/screens/performance/MountMeasure.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { useMountLayoutEffect } from "../../../../../../hooks/useMountEffect.tsx";
+import noopAll from "noop" /* 19 */;
+import useMountLayoutEffect from "useMountLayoutEffect" /* 4761 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/MountMeasure.tsx");
 
 export default function MountMeasure(arg0) {
-  let View;
-  let children;
-  let dependencyMap;
-  let require;
-  let style;
   ({ batchKey: require, onMeasure: dependencyMap, onCancel: View } = arg0);
   ({ style, children } = arg0);
   let obj = useMountLayoutEffect;

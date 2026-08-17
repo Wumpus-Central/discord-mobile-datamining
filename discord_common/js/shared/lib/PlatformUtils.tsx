@@ -1,8 +1,6 @@
 // discord_common/js/shared/lib/PlatformUtils.tsx
-import { product as str } from "format";
-import importDefaultResult1 from "format";
-import importDefaultResult2 from "format";
-import set from "set";
+import importDefaultResult1 from "format" /* 669 */;
+import set from "set" /* 2 */;
 
 let set = new Set(["iPad", "Kindle", "Kindle Fire", "Nook", "PlayBook"]);
 const set1 = new Set(["Android", "iOS", "Windows Phone"]);
@@ -34,13 +32,14 @@ if (tmp3) {
   }
   tmp3 = maxTouchPoints > 1;
 }
+let str = importDefaultResult1.product;
 if (str == null) {
   str = "";
 }
 const tmp6 = set.has(str) || tmp3;
 let hasItem = !tmp6;
 if (!tmp6) {
-  const importDefaultResult = require("format");
+  const importDefaultResult = importDefaultResult1;
   let str2;
   if (importDefaultResult != null) {
     const os = importDefaultResult.os;
@@ -60,6 +59,7 @@ if (importDefaultResult1 != null) {
     family = os2.family;
   }
 }
+const importDefaultResult2 = importDefaultResult1;
 let family1;
 if (importDefaultResult2 != null) {
   const os3 = importDefaultResult2.os;

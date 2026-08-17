@@ -1,9 +1,11 @@
 // discord_app/modules/premium/native/utils/GiftAnimationData.tsx
-import { PremiumGiftStyles } from "GuildFeatures";
-import { _sendGiftMessage } from "../../PremiumGiftingUtils.tsx";
+import set from "set" /* 2 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import _sendGiftMessage from "_sendGiftMessage" /* 8294 */;
 
+const PremiumGiftStyles = GuildFeatures.PremiumGiftStyles;
 const obj = { JSON: 0, [0]: "JSON", LOTTIE: 1, [1]: "LOTTIE" };
-const result = require("module_9601").fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/utils/GiftAnimationData.tsx");
 
 export const LottieType = obj;
 export const getLottieType = function getLottieType(giftStyle) {

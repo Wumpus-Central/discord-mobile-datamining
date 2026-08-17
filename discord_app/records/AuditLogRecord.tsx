@@ -1,13 +1,10 @@
 // discord_app/records/AuditLogRecord.tsx
-import "toJS";
-import ME from "ME";
-import { t } from "../../_runtime/03975_t.js";
-import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import toJSDefault from "toJS" /* 1931 */;
+import tDefault from "t" /* 3975 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let obj1;
 function getTargetType(action) {
   if (action === constants2.ALL) {
     let CHANNEL = constants.ALL;
@@ -76,9 +73,9 @@ function getTargetType(action) {
                               CHANNEL = constants.GUILD;
                             } else {
                               const _HermesInternal = HermesInternal;
-                              SentryUtils.native.captureMessage("Unknown target type for: " + action);
+                              _modDef1208.captureMessage("Unknown target type for: " + action);
                               CHANNEL = constants.UNKNOWN;
-                              const obj = SentryUtils.native;
+                              const obj = _modDef1208;
                             }
                           }
                         }
@@ -261,19 +258,18 @@ function getActionType(action) {
   }
   return constants3.CREATE;
 }
+toJSDefault;
 ({ AuditLogTargetTypes: obj1, AuditLogActions: c3, AuditLogActionTypes: c4 } = ME);
 const prototype = function AuditLogRecord(timestampEnd) {
-  let changes;
-  let timestampStart;
   const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp5.id, action: tmp5.action } = timestampEnd);
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = t;
-    timestampStart = tmp8(DISCORD_EPOCH.extractTimestamp(tmp5.id));
-    const obj = DISCORD_EPOCH;
+    const tmp8 = tDefault;
+    timestampStart = tmp8(DISCORD_EPOCHDefault.extractTimestamp(tmp5.id));
+    const obj = DISCORD_EPOCHDefault;
   }
   tmp5.timestampStart = timestampStart;
   let timestampStart2 = timestampEnd.timestampEnd;
@@ -306,7 +302,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
 }.prototype;
 class prototype extends tmp2 {
 }
-const result = require("module_1208").fileFinishedImporting("records/AuditLogRecord.tsx");
+const result = require("set").fileFinishedImporting("records/AuditLogRecord.tsx");
 
 export default prototype;
 export { getTargetType };

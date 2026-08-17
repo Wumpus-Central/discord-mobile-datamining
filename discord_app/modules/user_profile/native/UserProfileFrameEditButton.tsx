@@ -1,36 +1,33 @@
 // discord_app/modules/user_profile/native/UserProfileFrameEditButton.tsx
-import _slicedToArray from "_slicedToArray";
-import FormControlText from "FormControlText";
-import { View } from "asyncRequireImpl";
-import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { NOOP } from "sum";
-import { jsx } from "filterLayer";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { NOOP } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
-const PX_4 = require("Themes").space.PX_4;
+const PX_4 = ThemesDefault.space.PX_4;
 createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, paddingVertical: PX_4, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center", borderRadius: require("Themes").radii.xs, overflow: "hidden" };
+createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, paddingVertical: PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileFrameEditButton.tsx");
+createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileFrameEditButton.tsx");
 
 export default function UserProfileFrameEditButton(arg0) {
-  let displayProfile;
-  let guildId;
-  let pendingProfileFrame;
-  let user;
   ({ displayProfile, user } = arg0);
   ({ pendingProfileFrame, guildId } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   let userProfileFrame;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = user(9233);
   const canViewProfileFramesInCollectiblesShop = obj.useCanViewProfileFramesInCollectiblesShop("UserProfileFrameEditButton");
-  let obj1 = user(7366);
+  obj1 = user(7366);
   const items = [user(1377).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
   const tmp5 = userProfileFrame(obj1.useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp6;

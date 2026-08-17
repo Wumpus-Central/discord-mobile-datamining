@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/InviteEmbedTextUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ActivityActionTypes } from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getNickname } from "../../../utils/NicknameUtils.tsx";
-import { messagesProxy } from "../../request_to_stream/RequestToStream.messages.js";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2789 */;
+import getNickname from "getNickname" /* 4796 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { ActivityActionTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
   if (author.author.id === id1) {
     if (isPrivate.isPrivate()) {
@@ -32,7 +32,7 @@ function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
     const formatToPlainString = intl.formatToPlainString;
     const t = getSystemLocale.t;
     if (arg4) {
-      const obj1 = { appName: null };
+      obj1 = { appName: null };
       obj1[0] = name_override;
       let formatToPlainStringResult = formatToPlainString(t["2N1kNS"], obj1);
     } else {
@@ -59,7 +59,7 @@ function getAskToJoinText(author, name_override, isPrivate, id1, arg4) {
     return formatToPlainString3Result;
   }
 }
-const result = require("getSystemLocale").fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/InviteEmbedTextUtils.tsx");
 
 export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
   if (ActivityActionTypes.LISTEN === arg1) {
@@ -81,7 +81,7 @@ export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
     return stringResult;
   } else if (tmp.STREAM_REQUEST === arg1) {
     const intl2 = getSystemLocale.intl;
-    return intl2.string(messagesProxy.DKHhec);
+    return intl2.string(messagesProxyDefault.DKHhec);
   } else {
     const JOIN_REQUEST = tmp.JOIN_REQUEST;
     const intl = getSystemLocale.intl;
@@ -91,12 +91,12 @@ export const getHeaderText = function getHeaderText(arg0, arg1, arg2) {
 export const getRequestToStreamText = function getRequestToStreamText(author, guild_id, id) {
   if (author.author.id === id) {
     const intl2 = getSystemLocale.intl;
-    let stringResult = intl2.string(messagesProxy["8B3U5O"]);
+    let stringResult = intl2.string(messagesProxyDefault["8B3U5O"]);
   } else {
     const intl = getSystemLocale.intl;
     const obj = { username: null };
     obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, author.author);
-    stringResult = intl.formatToPlainString(messagesProxy["d/qbC0"], obj);
+    stringResult = intl.formatToPlainString(messagesProxyDefault["d/qbC0"], obj);
     const obj2 = getNickname;
   }
   return stringResult;
@@ -114,12 +114,12 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
         if (tmp2.STREAM_REQUEST === type) {
           if (activity.author.id === id1) {
             const intl2 = getSystemLocale.intl;
-            let stringResult = intl2.string(messagesProxy["8B3U5O"]);
+            let stringResult = intl2.string(messagesProxyDefault["8B3U5O"]);
           } else {
             const intl = getSystemLocale.intl;
             const obj = { username: null };
             obj[0] = getNickname.getName(guild_id.guild_id, guild_id.id, activity.author);
-            stringResult = intl.formatToPlainString(messagesProxy["d/qbC0"], obj);
+            stringResult = intl.formatToPlainString(messagesProxyDefault["d/qbC0"], obj);
             const obj2 = getNickname;
           }
           return stringResult;
@@ -135,9 +135,6 @@ export const getDeadGameInviteText = function getDeadGameInviteText(activity, na
   return intl3.string(arg4 ? t.x1UXGR : t["Ek+51n"]);
 };
 export const getPartyText = function getPartyText(arg0) {
-  let activityActionType;
-  let maxPartySize;
-  let partySize;
   ({ activityActionType, maxPartySize, partySize } = arg0);
   if (activityActionType === ActivityActionTypes.STREAM_REQUEST) {
     return "";
@@ -164,7 +161,7 @@ export const getPartyText = function getPartyText(arg0) {
       let formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale.t.Zogoou, obj);
     } else {
       const intl3 = getSystemLocale.intl;
-      const obj1 = { partySize: null };
+      obj1 = { partySize: null };
       obj1[0] = partySize;
       formatToPlainStringResult1 = intl3.formatToPlainString(getSystemLocale.t.UGei0j, obj1);
     }

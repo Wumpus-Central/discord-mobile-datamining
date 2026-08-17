@@ -1,45 +1,39 @@
 // discord_app/modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFormInit from "handleFormInit";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { isGuildOwnerWithRequiredMfaLevel as closure_6 } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "handleFormInit" /* 8875 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ GuildFeatures: c10, MFALevels: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 createCacheKey = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: 99 }, center: null, label: null, image: null, infoWrapper: null, button: null };
-createCacheKey = { alignItems: "center", flexDirection: "column", paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = { alignItems: "center", flexDirection: "column", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[3] = { width: 295, height: 142, marginHorizontal: 35 };
 createCacheKey[4] = { marginBottom: 40 };
 createCacheKey[5] = { alignSelf: "center", paddingHorizontal: 16, marginTop: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("GuildNSFWContentLevel").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_settings/safety/native/GuildSettingsModalSecurity.tsx");
 
 export default function GuildSettingsModalSecurity(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback3();
   let obj = guildId(589);
-  const items = [createGuildRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuild(guildId));
-  let obj1 = guildId(589);
-  const items1 = [handleFormInit];
+  const items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(guildId));
+  obj1 = guildId(589);
+  const items1 = [closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => props.getProps().mfaLevel);
   currentUser = currentUser.getCurrentUser();
   dependencyMap = tmp7;
@@ -65,10 +59,10 @@ export default function GuildSettingsModalSecurity(guildId) {
   obj = { style: tmp.center, children: null };
   callback = React.useCallback(() => {
     if (null != stateFromStores) {
-      let updateMFALevelResult = stateFromStores(_undefined[11]);
+      let updateMFALevelResult = stateFromStores(table[11]);
       updateMFALevelResult = { guildId: null, level: null };
       updateMFALevelResult[0] = tmp.id;
-      updateMFALevelResult[1] = _undefined ? outer1_11.NONE : outer1_11.ELEVATED;
+      updateMFALevelResult[1] = table ? closure_1_11.NONE : closure_1_11.ELEVATED;
       updateMFALevelResult = updateMFALevelResult.updateMFALevel(updateMFALevelResult);
     }
   }, items2);

@@ -1,19 +1,15 @@
 // discord_app/design/void/Avatar/native/Avatar.tsx
-import importAllResult from "noop";
-import { View } from "registerAsset";
-import { StatusTypes } from "ME";
-import STATUS_PADDING from "STATUS_PADDING";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getDecorationSizeForAvatarSize } from "../../../../modules/collectibles/avatar_decorations/native/AvatarDecorationUtils.tsx";
-import { StaticNativeCutoutAvatarImage } from "../../CutoutableAvatarImage/native/CutoutableAvatarImage.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getDecorationSizeForAvatarSize from "getDecorationSizeForAvatarSize" /* 8367 */;
+import StaticNativeCutoutAvatarImage from "StaticNativeCutoutAvatarImage" /* 12125 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { StatusTypes } from "ME" /* 676 */;
+import STATUS_PADDING from "STATUS_PADDING" /* 1298 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getStatusSize(arg0) {
   if (StaticNativeCutoutAvatarImage.AvatarSizes.XXSMALL !== arg0) {
     if (tmp(12125).AvatarSizes.XSMALL !== arg0) {
@@ -52,15 +48,15 @@ function getStatusSize(arg0) {
 }
 let c3 = importAllResult;
 ({ STATUS_PADDING: closure_6, StatusSizes: error } = STATUS_PADDING);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles((NORMAL) => {
   let obj = { status: { position: "absolute", right: -3, bottom: -3 }, speaking: null, stageSpeaking: null, voiceStatus: null, decoration: null, container: null };
-  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: Themes.colors.STATUS_SPEAKING };
+  obj = { position: "absolute", right: -2, bottom: -2, backgroundColor: "transparent", borderWidth: 4, borderColor: ThemesDefault.colors.STATUS_SPEAKING };
   obj[1] = obj;
   obj[2] = { position: "absolute", right: -2, bottom: -2 };
-  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: Themes.unsafe_rawColors.RED_400, borderRadius: Themes.radii.md, right: 0, bottom: 0 };
+  obj = { width: 24, height: 24, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, borderRadius: ThemesDefault.radii.md, right: 0, bottom: 0 };
   obj[3] = obj;
-  const obj1 = { position: "absolute", top: null, left: null };
+  obj1 = { position: "absolute", top: null, left: null };
   const decorationSizeForAvatarSize = getDecorationSizeForAvatarSize.getDecorationSizeForAvatarSize(NORMAL);
   obj1[1] = -(decorationSizeForAvatarSize - StaticNativeCutoutAvatarImage.styles[NORMAL].width) / 2;
   const obj5 = getDecorationSizeForAvatarSize;
@@ -71,26 +67,6 @@ let closure_10 = createCacheKey.createStyles((NORMAL) => {
   return obj;
 });
 const memoResult = importAllResult.memo((isMobileOnline) => {
-  let accessibilityLabel;
-  let accessible;
-  let avatarDecoration;
-  let avatarStyle;
-  let channel;
-  let cutout;
-  let cutout2;
-  let deaf;
-  let decorationCutout;
-  let disablePlaceholder;
-  let guildId;
-  let isStageCall;
-  let mute;
-  let needsOffscreenAlphaCompositing;
-  let source;
-  let statusStyle;
-  let streaming;
-  let style;
-  let typing;
-  let user;
   ({ channel, streaming } = isMobileOnline);
   if (streaming === undefined) {
     streaming = false;
@@ -136,12 +112,6 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
   callback = tmp3;
   let items = [cutout, autoStatusCutout, flag, flag2, NORMAL, status, typing, statusSizeOverride, tmp3];
   const memo = NORMAL.useMemo(() => {
-    let height;
-    let height2;
-    let height3;
-    let width;
-    let width2;
-    let width3;
     if (null != autoStatusCutout) {
       let diff1 = status;
       let items = statusSizeOverride;
@@ -150,7 +120,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
         if (diff1 !== autoStatusCutout.UNKNOWN) {
           diff1 = flag(status[7]).AVATAR_SIZE_MAP[tmp2];
           if (items == null) {
-            items = outer1_11(tmp2);
+            items = closure_1_11(tmp2);
           }
           if (items == null) {
             items = 0;
@@ -189,7 +159,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
               let obj5 = flag(status[8]);
               const vRStatusContainerRect = obj5.getVRStatusContainerRect(items);
               ({ width: width2, height: height2 } = vRStatusContainerRect);
-              const obj1 = { nativeCutouts: null };
+              obj1 = { nativeCutouts: null };
               let obj2 = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
               obj2[0] = flag(status[10]).CutoutShape.RoundedRect;
               obj2[1] = diff1 - width2 + result;
@@ -234,7 +204,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
     } else {
       const obj6 = { cutout: null, decorationCutout: null };
       obj6[0] = cutout;
-      obj6[1] = flag(status[11]).getDecorationCutoutForAvatarCutout(cutout, -_undefined.decoration.top);
+      obj6[1] = flag(status[11]).getDecorationCutoutForAvatarCutout(cutout, -decoration.decoration.top);
       return obj6;
     }
   }, items);
@@ -278,7 +248,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
               }
               let merged1 = null;
               if (null != statusSizeOverride) {
-                let obj1 = { size: null, isMobileOnline: null, isVROnline: null, status: null, streaming: null, style: null };
+                obj1 = { size: null, isMobileOnline: null, isVROnline: null, status: null, streaming: null, style: null };
                 obj1[0] = statusSizeOverride;
                 obj1[1] = flag;
                 obj1[2] = flag2;
@@ -389,7 +359,7 @@ const memoResult = importAllResult.memo((isMobileOnline) => {
     }
   }
 });
-let result = require("ME").fileFinishedImporting("design/void/Avatar/native/Avatar.tsx");
+let result = require("set").fileFinishedImporting("design/void/Avatar/native/Avatar.tsx");
 
 export default memoResult;
 export const AvatarSizes = require("StaticNativeCutoutAvatarImage").AvatarSizes;

@@ -1,18 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/useEmojiByIdOrName.tsx
-import getEmojiToGroupId from "getEmojiToGroupId";
+import closure_2 from "getEmojiToGroupId" /* 6727 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 function useEmojiByIdOrName(guildId, emojiId) {
   const _require = guildId;
-  const dependencyMap = emojiId;
-  const items = [getEmojiToGroupId];
+  dependencyMap = emojiId;
+  const items = [closure_2];
   const items1 = [guildId, emojiId];
   return _initialize.useStateFromStores(items, () => {
     if (null == closure_1) {
       return null;
     } else {
-      const disambiguatedEmojiContext = outer1_2.getDisambiguatedEmojiContext(closure_0);
+      const disambiguatedEmojiContext = closure_1_2.getDisambiguatedEmojiContext(closure_0);
       let byId = disambiguatedEmojiContext.getById(tmp);
       if (byId == null) {
         byId = disambiguatedEmojiContext.getByName(tmp);

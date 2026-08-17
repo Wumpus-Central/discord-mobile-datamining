@@ -1,15 +1,11 @@
 // discord_app/modules/parent_tools/hooks/useIsOnMainSurface.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import set from "getRootNavigationRef";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function getIsOnMainSurface() {
-  let index;
-  let index2;
-  let routes;
-  let routes2;
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
@@ -56,22 +52,20 @@ let set = new Set(["tabs", "channel"]);
 const result = set.fileFinishedImporting("modules/parent_tools/hooks/useIsOnMainSurface.native.tsx");
 
 export const useIsOnMainSurface = function useIsOnMainSurface() {
-  let require;
-  let tmp2;
   [tmp2, require] = callback(React.useState(getIsOnMainSurface), 2);
   const effect = React.useEffect(() => {
     function handleNavigationChange() {
-      return rootNavigationRef(outer1_5());
+      return rootNavigationRef(closure_1_5());
     }
-    const rootNavigationRef = outer1_0(outer1_1[2]).getRootNavigationRef();
+    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
     if (null != rootNavigationRef) {
-      rootNavigationRef(outer1_5());
+      rootNavigationRef(closure_1_5());
       rootNavigationRef.addListener("state", handleNavigationChange);
       return () => {
         rootNavigationRef.removeListener("state", handleNavigationChange);
       };
     }
-    const obj = outer1_0(outer1_1[2]);
+    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

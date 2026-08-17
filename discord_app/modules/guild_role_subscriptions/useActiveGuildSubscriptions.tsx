@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx
-import noop from "noop";
-import reset from "reset";
-import { UserGuildRoleSubscriptionRelationship as closure_6 } from "MAX_SUBSCRIPTION_TIERS";
-import { useUserRoleSubscriptionRelationship } from "useUserRoleSubscriptionRelationship.tsx";
+import useUserRoleSubscriptionRelationshipDefault from "useUserRoleSubscriptionRelationship" /* 14552 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "reset" /* 4045 */;
+import { UserGuildRoleSubscriptionRelationship as closure_6 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 
 const require = arg1;
 let closure_7 = [];
-const result = require("MAX_SUBSCRIPTION_TIERS").fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useActiveGuildSubscriptions.tsx");
 
 export default function useActiveGuildSubscriptions() {
   let obj = arg0;
@@ -17,17 +17,17 @@ export default function useActiveGuildSubscriptions() {
   if (flag === undefined) {
     flag = false;
   }
-  let importDefault;
-  let closure_2;
-  const tmp = useUserRoleSubscriptionRelationship() === constants.SUBSCRIBED;
+  importDefault = undefined;
+  closure_2 = undefined;
+  const tmp = useUserRoleSubscriptionRelationshipDefault() === constants.SUBSCRIBED;
   importDefault = tmp;
-  const items = [reset];
+  const items = [closure_5];
   let stateFromStores = flag(589).useStateFromStores(items, () => activeGuildSubscriptions.getActiveGuildSubscriptions());
   closure_2 = React.useRef(false);
   const items1 = [flag, tmp];
   const effect = React.useEffect(() => {
     const current = ref.current;
-    const activeGuildSubscriptions = outer1_5.getActiveGuildSubscriptions();
+    const activeGuildSubscriptions = closure_1_5.getActiveGuildSubscriptions();
     let num;
     if (activeGuildSubscriptions != null) {
       num = activeGuildSubscriptions.length;
@@ -36,7 +36,7 @@ export default function useActiveGuildSubscriptions() {
       num = 0;
     }
     let tmp5 = !tmp4;
-    if (0 !== num || !c1) {
+    if (0 !== num || !closure_1) {
       let tmp6 = !tmp;
       if (tmp) {
         tmp6 = current;
@@ -46,14 +46,14 @@ export default function useActiveGuildSubscriptions() {
     if (!tmp5) {
       let tmp7 = !current;
       if (!current) {
-        tmp7 = !outer1_5.hasFetchedSubscriptions();
+        tmp7 = !closure_1_5.hasFetchedSubscriptions();
       }
       tmp5 = tmp7;
     }
     if (tmp5) {
       ref.current = true;
-      const subscriptions = ref(outer1_3[5]).fetchSubscriptions();
-      const obj2 = ref(outer1_3[5]);
+      const subscriptions = ref(closure_1_3[5]).fetchSubscriptions();
+      const obj2 = ref(closure_1_3[5]);
     }
   }, items1);
   if (stateFromStores == null) {

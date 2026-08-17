@@ -1,29 +1,32 @@
 // discord_app/modules/user_profile/hooks/useUserProfileActivity.tsx
-import { useMemo } from "noop";
-import map from "map";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import sortActivity from "sortActivity";
-import { Features } from "DesktopSources";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
+import closure_4 from "map" /* 9199 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "sortActivity" /* 4559 */;
 
+const useMemo = noop.useMemo;
+const Features = DesktopSources.Features;
 let closure_8 = [];
 let closure_9 = [];
-let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
+let result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileActivity.tsx");
 
 export default function useUserProfileActivity(arg0) {
   const _require = arg0;
   let obj = _require(stateFromStores2[5]);
-  const items = [_detectH265HardwareDecode];
-  const stateFromStores = obj.useStateFromStores(items, () => _detectH265HardwareDecode.supports(constants.VIDEO));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_5.supports(constants.VIDEO));
   let tmp4 = null;
   if (stateFromStores) {
     tmp4 = stateFromStores1(stateFromStores2[6])(arg0);
   }
   let tmpResult = tmp(tmp2[5]);
-  const items1 = [sortActivity];
-  stateFromStores1 = tmpResult.useStateFromStores(items1, () => outer1_6.getActivities(closure_0));
+  const items1 = [closure_6];
+  stateFromStores1 = tmpResult.useStateFromStores(items1, () => closure_1_6.getActivities(closure_0));
   tmpResult = tmp(tmp2[5]);
-  const items2 = [map];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => outer1_4.getUserOutbox(closure_0));
+  const items2 = [closure_4];
+  stateFromStores2 = tmpResult.useStateFromStores(items2, () => closure_1_4.getUserOutbox(closure_0));
   const items3 = [stateFromStores1, ];
   let entries;
   if (stateFromStores2 != null) {
@@ -38,8 +41,8 @@ export default function useUserProfileActivity(arg0) {
       const entries = stateFromStores2.entries;
       found = entries.filter((traits) => {
         let length = traits;
-        const userProfileLiveActivities = traits;
-        const isEntryLiveResult = userProfileLiveActivities(outer1_2[8]).isEntryLive(traits);
+        userProfileLiveActivities = traits;
+        const isEntryLiveResult = userProfileLiveActivities(closure_1_2[8]).isEntryLive(traits);
         if (isEntryLiveResult) {
           return !isEntryLiveResult;
         } else {
@@ -52,8 +55,8 @@ export default function useUserProfileActivity(arg0) {
               tmp6 = !userProfileLiveActivities.some((party) => {
                 let result = null != party;
                 if (result) {
-                  result = traits(outer1_2[10]).isMatchingListeningActivity(traits, party);
-                  const obj = traits(outer1_2[10]);
+                  result = traits(closure_1_2[10]).isMatchingListeningActivity(traits, party);
+                  const obj = traits(closure_1_2[10]);
                 }
                 return result;
               });
@@ -65,8 +68,8 @@ export default function useUserProfileActivity(arg0) {
               result = !userProfileLiveActivities.some((details) => {
                 let result = null != details;
                 if (result) {
-                  result = traits(outer1_2[10]).isMatchingWatchActivity(traits, details);
-                  const obj = traits(outer1_2[10]);
+                  result = traits(closure_1_2[10]).isMatchingWatchActivity(traits, details);
+                  const obj = traits(closure_1_2[10]);
                 }
                 return result;
               });
@@ -79,11 +82,11 @@ export default function useUserProfileActivity(arg0) {
       });
     }
     if (0 === userProfileLiveActivities.length) {
-      userProfileLiveActivities = outer1_8;
+      userProfileLiveActivities = closure_1_8;
     }
     obj = { live: userProfileLiveActivities, recent: null };
     if (null == found) {
-      found = outer1_9;
+      found = closure_1_9;
     }
     obj[1] = found;
     return obj;

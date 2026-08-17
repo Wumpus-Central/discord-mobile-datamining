@@ -1,23 +1,21 @@
 // discord_app/modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx
-import TableRowGroupTitle from "TableRowGroupTitle";
-import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint";
-import { View } from "useIsStageSpeakingDisabledForCurrentUser";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { REQUEST_TO_SPEAK_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH";
-import jsxProd from "audienceAckRequestToSpeak";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import useAudienceRequestToSpeakStateDefault from "useAudienceRequestToSpeakState" /* 4981 */;
+import registerAssetDefault from "registerAsset" /* 12519 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import { REQUEST_TO_SPEAK_SHEET_KEY as closure_8 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useAudienceRequestToSpeakState } from "../../useAudienceRequestToSpeakState.tsx";
 import { useRequestToSpeakPermission } from "../../useRequestToSpeakPermission.tsx";
 
-let c10;
-let c9;
 const require = arg1;
 function RequestToSpeakRow(channel) {
-  let c0;
-  let tmp2;
   let _require;
   let obj = _useRequestToSpeakPermission;
   [tmp2, c0] = callback(obj.useRequestToSpeakPermission(channel.channel.id), 2);
@@ -41,17 +39,17 @@ function RequestToSpeakRow(channel) {
 }
 function ManageSelfSpeakerRow(channel) {
   channel = channel.channel;
-  let importDefault;
+  importDefault = undefined;
   let obj = channel(589);
-  const items = [fetchFingerprint];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => id.getId());
   let id;
   if (channel != null) {
     id = channel.id;
   }
   const tmp4 = importDefault;
-  const tmp5 = useAudienceRequestToSpeakState;
-  const tmp8 = useAudienceRequestToSpeakState(stateFromStores, id) === channel(4981).RequestToSpeakStates.ON_STAGE;
+  const tmp5 = useAudienceRequestToSpeakStateDefault;
+  const tmp8 = useAudienceRequestToSpeakStateDefault(stateFromStores, id) === channel(4981).RequestToSpeakStates.ON_STAGE;
   importDefault = tmp8;
   const intl = tmp(1236).intl;
   const string = intl.string;
@@ -68,55 +66,52 @@ function ManageSelfSpeakerRow(channel) {
   }
   obj = {
     onPress() {
-      if (!_undefined) {
-        let obj = channel(outer1_2[17]);
+      if (!callback) {
+        let obj = channel(closure_1_2[17]);
         if (obj.shouldAgeVerifyToSpeakForCurrentUser(channel.id)) {
           obj = { entryPoint: null };
-          obj[0] = channel(outer1_2[19]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
-          const result = _undefined(outer1_2[18]).showAgeVerificationGetStartedModal(obj);
-          const obj2 = _undefined(outer1_2[18]);
-          _undefined(outer1_2[20]).hideActionSheet(outer1_8);
+          obj[0] = channel(closure_1_2[19]).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND;
+          const result = callback(closure_1_2[18]).showAgeVerificationGetStartedModal(obj);
+          const obj2 = callback(closure_1_2[18]);
+          callback(closure_1_2[20]).hideActionSheet(closure_1_8);
         }
       }
-      const result1 = channel(outer1_2[21]).audienceAckRequestToSpeak(channel, _undefined);
-      const obj5 = channel(outer1_2[21]);
-      const tmp = _undefined;
-      _undefined(outer1_2[20]).hideActionSheet(outer1_8);
+      const result1 = channel(closure_1_2[21]).audienceAckRequestToSpeak(channel, callback);
+      const obj5 = channel(closure_1_2[21]);
+      const tmp = callback;
+      callback(closure_1_2[20]).hideActionSheet(closure_1_8);
     },
-    icon: null,
-    label: null,
+    icon: callback2(MicrophoneArrowRightIcon, {}),
+    label: stringResult,
     trailing: null
   };
-  obj[1] = callback2(MicrophoneArrowRightIcon, {});
-  obj[2] = stringResult;
-  obj = { source: null };
-  obj[0] = tmp4(12519);
+  obj = { source: registerAssetDefault };
   obj[3] = callback2(channel(1297).Icon, obj);
   return callback2(channel(6291).TableRow, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/components/RequestToSpeakActionSheet.tsx");
 
 export default function RequestToSpeakActionSheet(channelId) {
   channelId = channelId.channelId;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let React;
   let obj = channelId(4097);
   const token = obj.useToken(first(712).modules.mobile.TABLE_ROW_PADDING);
   const items = [];
   const tmp3 = first;
-  const tmp5 = createCacheKey();
+  const tmp5 = callback4();
   const tmp6 = first(7139);
   items[HermesBuiltin.arraySpread(channelId.analyticsLocations, 0)] = first(7159).REQUEST_TO_SPEAK;
-  let obj1 = channelId(589);
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores = obj1.useStateFromStores(items1, () => outer1_7.getChannel(channelId));
+  obj1 = channelId(589);
+  const items1 = [closure_7];
+  const stateFromStores = obj1.useStateFromStores(items1, () => closure_1_7.getChannel(channelId));
   let obj2 = channelId(6708);
   const stageParticipantsCount = obj2.useStageParticipantsCount(channelId, channelId(6703).StageChannelParticipantNamedIndex.ALL_REQUESTED_TO_SPEAK);
   const tmp10 = first1(React.useState(0), 2);

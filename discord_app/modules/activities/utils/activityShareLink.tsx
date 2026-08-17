@@ -1,14 +1,17 @@
 // discord_app/modules/activities/utils/activityShareLink.tsx
+import set from "set" /* 2 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-const items = [require("trimTrailingPunctuation").parseQuestsEmbedCode];
-const result = require("getSystemLocale").fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
+
+const items = [trimTrailingPunctuation.parseQuestsEmbedCode];
+const result = set.fileFinishedImporting("modules/activities/utils/activityShareLink.tsx");
 
 export const resolveActivityShareMessageContent = function resolveActivityShareMessageContent(c3, closure_14, closure_12) {
   const _require = false;
-  const replaced = c3.replaceAll(isDiscordProxiedAssetUrl.URL_REGEX, (arg0) => {
-    let c0 = arg0;
-    const someResult = outer1_3.some((arg0) => null != arg0(c0));
+  const replaced = c3.replaceAll(isDiscordProxiedAssetUrlDefault.URL_REGEX, (arg0) => {
+    c0 = arg0;
+    const someResult = closure_1_3.some((arg0) => null != arg0(c0));
     if (someResult) {
       c0 = true;
     }

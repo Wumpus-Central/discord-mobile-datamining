@@ -1,9 +1,10 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 
 let obj = keys.create((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return {
     isRecording: false,
     microphoneEnabled: false,
@@ -64,6 +65,6 @@ let obj = keys.create((arg0, arg1) => {
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingStore.tsx");
+const result = set.fileFinishedImporting("modules/screen_recording/native/ScreenRecordingStore.tsx");
 
 export const useScreenRecordingStore = obj;

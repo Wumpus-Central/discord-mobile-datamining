@@ -1,14 +1,13 @@
 // discord_app/modules/conversations/components/native/ConversationListItem.tsx
-import importAllResult from "ConversationPreviewBlockedMessage";
-import { View } from "getSystemLocale";
-import removePendingListFetch from "removePendingListFetch";
-import { MOBILE_PREVIEW_MESSAGE_COUNT as closure_6 } from "CONVERSATION_COLORS";
-import { VerticalGradient } from "ME";
-import jsxProd from "LinearGradient";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "removePendingListFetch" /* 5014 */;
+import { MOBILE_PREVIEW_MESSAGE_COUNT as closure_6 } from "CONVERSATION_COLORS" /* 5016 */;
+import { VerticalGradient } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
 function ConversationListItemBase(conversation) {
   conversation = conversation.conversation;
@@ -18,7 +17,7 @@ function ConversationListItemBase(conversation) {
   const tmp = callback3();
   let obj = conversation(token[8]);
   navigation = obj.useNavigation();
-  let obj1 = conversation(token[9]);
+  obj1 = conversation(token[9]);
   token = obj1.useToken(navigation(token[7]).colors.BACKGROUND_SURFACE_HIGH);
   let items = [token];
   const memo = stateFromStores.useMemo(() => {
@@ -27,15 +26,15 @@ function ConversationListItemBase(conversation) {
     return items;
   }, items);
   let obj2 = conversation(token[11]);
-  const items1 = [removePendingListFetch];
+  const items1 = [closure_5];
   const items2 = [, ];
   ({ channelId: arr3[0], id: arr3[1] } = conversation);
-  stateFromStores = obj2.useStateFromStores(items1, () => outer1_5.getHydratedMessages(conversation.channelId, conversation.id), items2);
+  stateFromStores = obj2.useStateFromStores(items1, () => closure_1_5.getHydratedMessages(conversation.channelId, conversation.id), items2);
   const items3 = [stateFromStores];
   const memo1 = stateFromStores.useMemo(() => {
     let substr;
     if (stateFromStores != null) {
-      substr = stateFromStores.slice(0, outer1_6);
+      substr = stateFromStores.slice(0, closure_1_6);
     }
     if (substr == null) {
       substr = null;
@@ -73,7 +72,7 @@ function ConversationListItemBase(conversation) {
           const obj = { message: null, guildId: null, channelId: null };
           obj[0] = blocked;
           ({ guildId: obj[1], channelId: obj[2] } = conversation);
-          let tmp6Result = outer1_8(navigation(token[20]), obj, blocked.id);
+          let tmp6Result = closure_1_8(navigation(token[20]), obj, blocked.id);
         }
         return tmp6Result;
       }
@@ -81,7 +80,7 @@ function ConversationListItemBase(conversation) {
       if (blocked.blocked) {
         str = "blocked";
       }
-      tmp6Result = outer1_8(navigation(token[19]), { reason: str }, blocked.id);
+      tmp6Result = closure_1_8(navigation(token[19]), { reason: str }, blocked.id);
     });
   }
   obj4[1] = mapped;
@@ -91,28 +90,28 @@ function ConversationListItemBase(conversation) {
   return callback2(conversation(token[15]).Card, obj);
 }
 let c3 = importAllResult;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = [0, 0.8];
 let obj = { card: null, title: null, timestamp: null, headerContainer: null, previews: null, bottomFade: null };
-obj = { marginBottom: require("Themes").space.PX_12, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, height: 232, overflow: "hidden" };
+obj = { marginBottom: ThemesDefault.space.PX_12, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 232, overflow: "hidden" };
 obj[0] = obj;
 obj[1] = { flexShrink: 1, minWidth: 0 };
 obj[2] = { flexShrink: 0 };
-createCacheKey = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8 };
+createCacheKey = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
 obj[3] = createCacheKey;
-obj[4] = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_16 };
-let obj2 = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_16 };
-obj[5] = { position: "absolute", left: 0, right: 0, bottom: -require("Themes").space.PX_4, height: require("Themes").space.PX_64, zIndex: 1 };
+obj[4] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
+obj[5] = { position: "absolute", left: 0, right: 0, bottom: -ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_64, zIndex: 1 };
 let closure_11 = createCacheKey.createStyles(obj);
-const obj3 = { position: "absolute", left: 0, right: 0, bottom: -require("Themes").space.PX_4, height: require("Themes").space.PX_64, zIndex: 1 };
+const obj3 = { position: "absolute", left: 0, right: 0, bottom: -ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_64, zIndex: 1 };
 const memoResult = importAllResult.memo(function ConversationListItem(channelId) {
   channelId = channelId.channelId;
   const conversationId = channelId.conversationId;
   let obj = channelId(589);
-  const items = [removePendingListFetch];
+  const items = [closure_5];
   const items1 = [channelId, conversationId];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const conversationMetadata = outer1_5.getConversationMetadata(channelId, conversationId);
+    const conversationMetadata = closure_1_5.getConversationMetadata(channelId, conversationId);
     let conversation;
     if (conversationMetadata != null) {
       conversation = conversationMetadata.conversation;
@@ -127,6 +126,6 @@ const memoResult = importAllResult.memo(function ConversationListItem(channelId)
   }
   return tmp2;
 });
-let result = require("removePendingListFetch").fileFinishedImporting("modules/conversations/components/native/ConversationListItem.tsx");
+let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationListItem.tsx");
 
 export default memoResult;

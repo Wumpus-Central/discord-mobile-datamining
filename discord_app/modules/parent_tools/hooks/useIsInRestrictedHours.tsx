@@ -1,13 +1,13 @@
 // discord_app/modules/parent_tools/hooks/useIsInRestrictedHours.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { scheduleUpcomingWarning } from "../RestrictedHoursManager.tsx";
+import initialize from "initialize" /* 589 */;
+import scheduleUpcomingWarning from "scheduleUpcomingWarning" /* 16511 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useIsInRestrictedHours.tsx");
 
 export default function useIsInRestrictedHours() {
-  const items = [mergeGuildAvatar, freshTeenActivityWithMap];
+  const items = [closure_2, closure_3];
   return initialize.useStateFromStores(items, scheduleUpcomingWarning.getCurrentRestrictedHoursState);
 };

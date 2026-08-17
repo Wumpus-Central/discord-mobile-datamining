@@ -1,20 +1,15 @@
 // discord_app/modules/rpc/RPCServer.tsx
-import prototype from "prototype";
-import { TransportTypes } from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { transformUser } from "helpers/transformUser.tsx";
+import applyDefault from "apply" /* 12 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import transformUserDefault from "transformUser" /* 8758 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { TransportTypes } from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-({ AnalyticEvents: c4, RPCCloseCodes: c5, RPCCommands: closure_6, RPCErrors: error, RPCEvents: metroImportAll } = ME);
+({ AnalyticEvents: c4, RPCCloseCodes: c5, RPCCommands: closure_6, RPCErrors: error, RPCEvents: closure_8 } = ME);
 const RPC_STORE_WAIT = "RPC_STORE_WAIT";
 let closure_10 = [];
-let result = require("ME").fileFinishedImporting("modules/rpc/RPCServer.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/RPCServer.tsx");
 class RPCServer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -57,7 +52,7 @@ prototype["handleConnect"] = function handleConnect(v) {
     if (null == currentUser) {
       v.close(constants2.CLOSE_NORMAL, "User logged out");
     } else {
-      obj.user = transformUser(currentUser);
+      obj.user = transformUserDefault(currentUser);
     }
   }
   self.dispatch(v, null, constants3.DISPATCH, constants5.READY, obj);
@@ -72,8 +67,8 @@ prototype["handleDisconnect"] = function handleDisconnect(abortController) {
 };
 prototype["handleRequest"] = function handleRequest(arg0, arg1) {
   let self = this;
-  let closure_1 = arg0;
-  let prototype = arg1;
+  closure_1 = arg0;
+  closure_2 = arg1;
   self = this;
   const promise = new Promise((arg0) => {
     if (null != lib.nonce) {
@@ -81,7 +76,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_COMMAND;
+          obj[0] = closure_1_7.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
           let tmp15 = self(authorization[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
@@ -98,17 +93,17 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(outer1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_7.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: outer1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
   });
   const nextPromise = new Promise((arg0) => {
     if (null != lib.nonce) {
@@ -116,7 +111,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_COMMAND;
+          obj[0] = closure_1_7.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
           let tmp15 = self(authorization[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
@@ -133,25 +128,25 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(outer1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_7.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: outer1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     closure_0 = undefined;
     closure_0 = lib((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c4 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c4 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c5 === 2) {
           c5 = 3;
@@ -179,13 +174,13 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp5;
-                let prototype = tmp2;
-                prototype = undefined;
+                closure_3 = tmp5;
+                closure_2 = tmp2;
+                closure_2 = undefined;
                 if (null != closure_0.validation) {
                   c4 = 1;
                   c5 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = closure_0.getJoi();
                   return obj1;
                 } else {
@@ -197,16 +192,16 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              prototype = arg1;
+              closure_2 = arg1;
               self(table[8])(null != closure_0.validation, "command.validation must not be null");
-              const args = outer2_2.args;
-              prototype.validate(args, closure_0.validation(prototype), { convert: false }, (message) => {
+              const args = closure_2_2.args;
+              closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
                 if (null == message) {
                   callback(callback);
                 } else {
                   const obj = { errorCode: null };
-                  obj[0] = outer3_7.INVALID_PAYLOAD;
-                  const tmp8 = new callback(outer3_1[5])(obj, message.message);
+                  obj[0] = closure_3_7.INVALID_PAYLOAD;
+                  const tmp8 = new callback(closure_3_1[5])(obj, message.message);
                   callback2(tmp8);
                 }
               });
@@ -223,7 +218,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       })();
     });
     return new Promise(function() {
-      const self = this;
+      self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -239,7 +234,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_COMMAND;
+          obj[0] = closure_1_7.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
           let tmp15 = self(authorization[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
@@ -256,25 +251,25 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(outer1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_7.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: outer1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     closure_0 = undefined;
     closure_0 = lib((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c4 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c4 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c5 === 2) {
           c5 = 3;
@@ -302,13 +297,13 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp5;
-                let prototype = tmp2;
-                prototype = undefined;
+                closure_3 = tmp5;
+                closure_2 = tmp2;
+                closure_2 = undefined;
                 if (null != closure_0.validation) {
                   c4 = 1;
                   c5 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = closure_0.getJoi();
                   return obj1;
                 } else {
@@ -320,16 +315,16 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              prototype = arg1;
+              closure_2 = arg1;
               self(table[8])(null != closure_0.validation, "command.validation must not be null");
-              const args = outer2_2.args;
-              prototype.validate(args, closure_0.validation(prototype), { convert: false }, (message) => {
+              const args = closure_2_2.args;
+              closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
                 if (null == message) {
                   callback(callback);
                 } else {
                   const obj = { errorCode: null };
-                  obj[0] = outer3_7.INVALID_PAYLOAD;
-                  const tmp8 = new callback(outer3_1[5])(obj, message.message);
+                  obj[0] = closure_3_7.INVALID_PAYLOAD;
+                  const tmp8 = new callback(closure_3_1[5])(obj, message.message);
                   callback2(tmp8);
                 }
               });
@@ -346,7 +341,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       })();
     });
     return new Promise(function() {
-      const self = this;
+      self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -375,7 +370,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
         const cmd = tmp.cmd;
         if (null == self.commands[cmd]) {
           let obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_COMMAND;
+          obj[0] = closure_1_7.INVALID_COMMAND;
           const _HermesInternal = HermesInternal;
           let tmp15 = self(authorization[5]);
           tmp15 = new tmp15(obj, "Invalid command: " + tmp.cmd);
@@ -392,25 +387,25 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
           obj[1] = scope;
           obj[2] = tmp28.application.id;
           obj[3] = tmp28.authorization.scopes.toString();
-          tmp29(tmp30[7]).track(outer1_4.RPC_COMMAND_SENT, obj);
+          tmp29(tmp30[7]).track(closure_1_4.RPC_COMMAND_SENT, obj);
           arg0(tmp25);
         } else {
           obj = { errorCode: null };
-          obj[0] = outer1_7.INVALID_PERMISSIONS;
+          obj[0] = closure_1_7.INVALID_PERMISSIONS;
           const tmp6 = new tmp29(tmp30[5])(obj, "Not authenticated or invalid scope");
           throw tmp6;
         }
       }
     }
-    throw new self(authorization[5])({ errorCode: outer1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
+    throw new self(authorization[5])({ errorCode: closure_1_7.INVALID_PAYLOAD }, "Payload requires a nonce");
   }).then((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     closure_0 = undefined;
     closure_0 = lib((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c4 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c4 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c5 === 2) {
           c5 = 3;
@@ -438,13 +433,13 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp5;
-                let prototype = tmp2;
-                prototype = undefined;
+                closure_3 = tmp5;
+                closure_2 = tmp2;
+                closure_2 = undefined;
                 if (null != closure_0.validation) {
                   c4 = 1;
                   c5 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = closure_0.getJoi();
                   return obj1;
                 } else {
@@ -456,16 +451,16 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
               c5 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              prototype = arg1;
+              closure_2 = arg1;
               self(table[8])(null != closure_0.validation, "command.validation must not be null");
-              const args = outer2_2.args;
-              prototype.validate(args, closure_0.validation(prototype), { convert: false }, (message) => {
+              const args = closure_2_2.args;
+              closure_2.validate(args, closure_0.validation(closure_2), { convert: false }, (message) => {
                 if (null == message) {
                   callback(callback);
                 } else {
                   const obj = { errorCode: null };
-                  obj[0] = outer3_7.INVALID_PAYLOAD;
-                  const tmp8 = new callback(outer3_1[5])(obj, message.message);
+                  obj[0] = closure_3_7.INVALID_PAYLOAD;
+                  const tmp8 = new callback(closure_3_1[5])(obj, message.message);
                   callback2(tmp8);
                 }
               });
@@ -482,7 +477,7 @@ prototype["handleRequest"] = function handleRequest(arg0, arg1) {
       })();
     });
     return new Promise(function() {
-      const self = this;
+      self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -548,14 +543,14 @@ prototype["error"] = function error(arg0) {
   if (arg4 === undefined) {
     str = "Unknown Error";
   }
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj.track(constants.RPC_SERVER_ERROR_CAUGHT, { command: DISPATCH, code: UNKNOWN_ERROR, message: str });
   obj = { code: UNKNOWN_ERROR, message: str };
   this.dispatch(arg0, tmp, DISPATCH, constants5.ERROR, obj);
 };
 prototype["listenIsSubscribed"] = function listenIsSubscribed(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let isSubscribedListeners = this.isSubscribedListeners;
   isSubscribedListeners.add(arg0);
   return () => {
@@ -568,8 +563,8 @@ prototype["dispatchIsSubscribedUpdate"] = function dispatchIsSubscribedUpdate() 
   const item = prop.forEach((arg0) => arg0());
 };
 prototype["isSubscribed"] = function isSubscribed(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const subscriptions = this.subscriptions;
   return undefined !== subscriptions.find((socket) => {
     let tmp = socket.socket.application.id === closure_0;
@@ -580,8 +575,8 @@ prototype["isSubscribed"] = function isSubscribed(arg0, arg1) {
   });
 };
 prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let tmp = null != arg0;
   if (tmp) {
     const self = this;
@@ -596,32 +591,32 @@ prototype["isChildSubscribed"] = function isChildSubscribed(arg0, arg1) {
   }
   return tmp;
 };
-prototype["getSubscription"] = function getSubscription(closure_1, outer1_2, outer1_3) {
-  let closure_0 = closure_1;
-  closure_1 = outer1_2;
-  let prototype = outer1_3;
+prototype["getSubscription"] = function getSubscription(closure_1, closure_1_2, closure_1_3) {
+  closure_0 = closure_1;
+  closure_1 = closure_1_2;
+  closure_2 = closure_1_3;
   const subscriptions = this.subscriptions;
   return subscriptions.find((socket) => {
     let isEqualResult = socket.socket === callback;
     if (isEqualResult) {
-      isEqualResult = socket.evt === outer1_2;
+      isEqualResult = socket.evt === table;
     }
     if (isEqualResult) {
-      isEqualResult = callback(outer1_2[3]).isEqual(socket.args, prototype);
-      const obj = callback(outer1_2[3]);
+      isEqualResult = callback(table[3]).isEqual(socket.args, closure_2);
+      const obj = callback(table[3]);
     }
     return isEqualResult;
   });
 };
-prototype["addSubscription"] = function addSubscription(closure_1, outer1_2, outer1_3, prototype) {
-  let tmp = prototype;
-  if (prototype === undefined) {
+prototype["addSubscription"] = function addSubscription(closure_1, closure_1_2, closure_1_3, closure_2) {
+  let tmp = closure_2;
+  if (closure_2 === undefined) {
     tmp = null;
   }
   const self = this;
   const dispatch = this.dispatch;
-  const bindResult = dispatch.bind(this, closure_1, null, constants3.DISPATCH, outer1_2);
-  if (null == this.getSubscription(closure_1, outer1_2, outer1_3)) {
+  const bindResult = dispatch.bind(this, closure_1, null, constants3.DISPATCH, closure_1_2);
+  if (null == this.getSubscription(closure_1, closure_1_2, closure_1_3)) {
     const subscriptions = self.subscriptions;
     let obj = { update: null, dispatch: null, prevState: null, socket: null, evt: null, args: null };
     obj[0] = tmp;
@@ -634,23 +629,23 @@ prototype["addSubscription"] = function addSubscription(closure_1, outer1_2, out
     }
     obj[2] = tmpResult;
     obj[3] = closure_1;
-    obj[4] = outer1_2;
-    obj[5] = outer1_3;
+    obj[4] = closure_1_2;
+    obj[5] = closure_1_3;
     subscriptions.push(obj);
     const result = self.dispatchIsSubscribedUpdate();
   }
 };
 prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) {
-  const importDefault = arg0;
-  const dependencyMap = arg1;
-  let prototype = arg2;
-  apply.remove(this.subscriptions, (socket) => {
+  importDefault = arg0;
+  dependencyMap = arg1;
+  closure_2 = arg2;
+  applyDefault.remove(this.subscriptions, (socket) => {
     let isEqualResult = socket.socket === callback;
     if (isEqualResult) {
       isEqualResult = socket.evt === table;
     }
     if (isEqualResult) {
-      isEqualResult = callback(table[3]).isEqual(socket.args, prototype);
+      isEqualResult = callback(table[3]).isEqual(socket.args, closure_2);
       const obj = callback(table[3]);
     }
     return isEqualResult;
@@ -658,15 +653,15 @@ prototype["removeSubscription"] = function removeSubscription(arg0, arg1, arg2) 
   const result = this.dispatchIsSubscribedUpdate();
 };
 prototype["removeSubscriptions"] = function removeSubscriptions(abortController) {
-  const importDefault = abortController;
-  apply.remove(this.subscriptions, (socket) => socket.socket === closure_0);
+  importDefault = abortController;
+  applyDefault.remove(this.subscriptions, (socket) => socket.socket === closure_0);
   const result = this.dispatchIsSubscribedUpdate();
 };
 prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATIONSHIP_UPDATE, targetsFrame, closure_3, combined) {
   const self = this;
-  let closure_1 = RELATIONSHIP_UPDATE;
-  let prototype = targetsFrame;
-  let closure_0 = closure_3;
+  closure_1 = RELATIONSHIP_UPDATE;
+  closure_2 = targetsFrame;
+  closure_0 = closure_3;
   let tmp = null != combined;
   if (tmp) {
     tmp = "" !== combined;
@@ -685,8 +680,8 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
     const subscriptions = this.subscriptions;
     const item = subscriptions.forEach((evt) => {
       if (evt.evt === RELATIONSHIP_UPDATE) {
-        let tmp5 = typeof prototype === "function";
-        if (typeof prototype === "function") {
+        let tmp5 = typeof closure_2 === "function";
+        if (typeof closure_2 === "function") {
           tmp5 = !tmp13(evt);
         }
         if (!tmp5) {
@@ -707,7 +702,7 @@ prototype["dispatchToSubscriptions"] = function dispatchToSubscriptions(RELATION
           if (typeof callback === "function") {
             callback = tmp6(evt);
           }
-          self.dispatch(evt.socket, null, outer1_6.DISPATCH, evt.evt, callback);
+          self.dispatch(evt.socket, null, closure_1_6.DISPATCH, evt.evt, callback);
         }
       }
     });
@@ -723,28 +718,28 @@ prototype["updateSubscriptions"] = function updateSubscriptions() {
 };
 prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
   const self = this;
-  const dependencyMap = socket;
-  let prototype = arg1;
-  let closure_3 = timeout;
+  dependencyMap = socket;
+  closure_2 = arg1;
+  closure_3 = timeout;
   let tmp = arg1();
   if (!tmp) {
     if (0 !== timeout) {
-      let closure_4 = removeSubscription(12).uniqueId();
+      closure_4 = removeSubscription(12).uniqueId();
       removeSubscription = function removeSubscription(arg0) {
 
       };
       const promise = new Promise((arg0, closure_1) => {
-        let closure_0 = arg0;
-        const socket = closure_1;
-        const timeout = setTimeout(() => {
+        closure_0 = arg0;
+        socket = closure_1;
+        timeout = setTimeout(() => {
           if (typeof closure_0 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          outer1_5.removeSubscription(callback2, outer1_9, { uniqueId: outer1_4 });
-          const error = new Error("timeout");
+          closure_1_5.removeSubscription(callback2, closure_1_9, { uniqueId: closure_1_4 });
+          error = new Error("timeout");
           callback2(error);
         }, closure_3 * removeSubscription(socket[9]).Millis.SECOND);
-        self.addSubscription(socket, outer1_9, { uniqueId: closure_4 }, () => {
+        self.addSubscription(socket, closure_1_9, { uniqueId: closure_4 }, () => {
           const tmp = callback3();
           if (tmp) {
             const _clearTimeout = clearTimeout;
@@ -757,7 +752,7 @@ prototype["storeWait"] = function storeWait(socket, arg1, timeout) {
         if (typeof removeSubscription !== "function") {
           HermesBuiltin.throwTypeError();
         }
-        self.removeSubscription(closure_1, outer1_9, { uniqueId: closure_4 });
+        self.removeSubscription(closure_1, closure_1_9, { uniqueId: closure_4 });
         return arg0;
       });
     }

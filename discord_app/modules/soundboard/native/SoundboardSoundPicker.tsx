@@ -1,34 +1,25 @@
 // discord_app/modules/soundboard/native/SoundboardSoundPicker.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "encodeProperties";
-import { View } from "QUICK_SWITCHER";
-import withEqualityFn from "withEqualityFn";
-import createRTCConnection from "createRTCConnection";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EXPRESSION_FOOTER_HEIGHT } from "ME";
-import jsxProd from "PortalKeyboardFooterIOS";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import withEqualityFn from "withEqualityFn" /* 16283 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 let c4 = importAllResult;
 ({ setSearchQuery: closure_6, useExpressionPickerStore: error } = withEqualityFn);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let obj = { title: { marginBottom: 8 }, container: { flex: 1, alignItems: "center" }, header: null, body: null };
-obj = { paddingHorizontal: require("SOUND_BUTTON_HEIGHT").SOUND_ROW_HORIZONTAL_PADDING, padding: require("Themes").space.PX_8, width: "100%" };
+obj = { paddingHorizontal: require("SOUND_BUTTON_HEIGHT").SOUND_ROW_HORIZONTAL_PADDING, padding: ThemesDefault.space.PX_8, width: "100%" };
 obj[2] = obj;
 obj[3] = { flex: 1, width: "100%" };
 let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) {
-  let availableSounds;
-  let c3;
-  let categories;
-  let tmp15;
-  let tmp3;
-  let tmp4;
   channel = channel.channel;
   let stateFromStores;
   availableSounds = undefined;
@@ -38,11 +29,11 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   const ref = importAllResult.useRef(null);
   let obj = channel(availableSounds[11]);
   const sharedValue = obj.useSharedValue(0);
-  let obj1 = channel(availableSounds[12]);
-  const items = [mergeGuildAvatar];
+  obj1 = channel(availableSounds[12]);
+  const items = [closure_9];
   stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = channel(availableSounds[12]);
-  const items1 = [createRTCConnection];
+  const items1 = [closure_8];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => mediaSessionId.getMediaSessionId());
   const tmp2 = callback(importAllResult.useState(0), 2);
   ({ categories, availableSounds } = stateFromStores(availableSounds[13])(channel, { filterOutEmptyCurrentGuild: true }));
@@ -55,7 +46,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   const tmp14 = callback(importAllResult.useState(obj3.searchSounds(tmp13, availableSounds, stateFromStores, channel)), 2);
   const items2 = [channel, stateFromStores, availableSounds];
   callback = importAllResult.useCallback((arg0) => {
-    outer1_6(arg0);
+    closure_1_6(arg0);
     _undefined(channel(availableSounds[14]).searchSounds(arg0, availableSounds, stateFromStores, channel));
   }, items2);
   obj = { type: null, name: null, properties: null };
@@ -116,6 +107,6 @@ const memoResult = importAllResult.memo(function SoundboardSoundPicker(channel) 
   obj[1] = items3;
   return closure_12(channel(availableSounds[16]).AnalyticsLocationProvider, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPicker.tsx");
 
 export default memoResult;

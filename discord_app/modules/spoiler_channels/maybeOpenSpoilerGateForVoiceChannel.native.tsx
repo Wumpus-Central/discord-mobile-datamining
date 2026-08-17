@@ -1,12 +1,13 @@
 // discord_app/modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { jsx } from "jsxProd";
-import { useAlertStore } from "../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { VoicePanelSpoilerAlert } from "native/VoicePanelSpoilerAlert.tsx";
-import { isChannelSpoilerGated } from "SpoilerChannelUtils.tsx";
+import useAlertStore from "useAlertStore" /* 4657 */;
+import isChannelSpoilerGated from "isChannelSpoilerGated" /* 5267 */;
+import VoicePanelSpoilerAlert from "VoicePanelSpoilerAlert" /* 12830 */;
+import VoicePanelSpoilerAlertDefault from "VoicePanelSpoilerAlert" /* 12830 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("isChannelSpoilerGated").fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/spoiler_channels/maybeOpenSpoilerGateForVoiceChannel.native.tsx");
 
 export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGateForVoiceChannel(id) {
   channel = channel.getChannel(id);
@@ -19,7 +20,7 @@ export const maybeOpenSpoilerGateForVoiceChannel = function maybeOpenSpoilerGate
   if (!tmp2) {
     obj = { channelId: null };
     obj[0] = channel.id;
-    useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlert, { channelId: null }));
+    useAlertStore.openAlert(VoicePanelSpoilerAlert.VOICE_PANEL_SPOILER_KEY, jsx(VoicePanelSpoilerAlertDefault, { channelId: null }));
     flag = true;
     const obj2 = useAlertStore;
   }

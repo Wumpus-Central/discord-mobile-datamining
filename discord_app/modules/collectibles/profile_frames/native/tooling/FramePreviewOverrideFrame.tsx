@@ -1,27 +1,21 @@
 // discord_app/modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO";
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
 function OverrideProfileFrameLayer(layer) {
-  let containerHeight;
-  let containerWidth;
   layer = layer.layer;
   const uri = layer.uri;
   const overflowTop = layer.overflowTop;
   const overflowBottom = layer.overflowBottom;
   const overflowHorizontal = layer.overflowHorizontal;
   ({ containerWidth, containerHeight } = layer);
-  let c5;
-  let c6;
-  const tmp = createCacheKey();
+  c5 = undefined;
+  c6 = undefined;
+  const tmp = callback();
   const sum = containerWidth + 2 * overflowHorizontal;
   c5 = sum;
   const result = layer.ratio * sum;
@@ -62,7 +56,7 @@ function OverrideProfileFrameLayer(layer) {
       obj.justifyContent = str2;
       return obj;
     } else {
-      const obj1 = {};
+      obj1 = {};
       const merged2 = Object.assign(obj);
       obj1.left = -tmp;
       return obj1;
@@ -94,7 +88,7 @@ function OverrideProfileFrameLayer(layer) {
               obj[1] = Array.from(obj, (arg0, arg1) => {
                 obj = { source: obj, resizeMode: "cover", width: c5, height: c6 };
                 obj = { uri };
-                return outer1_7(layer(uri[6]), obj, arg1);
+                return closure_1_7(layer(uri[6]), obj, arg1);
               });
               return <overflowBottom length={null} />;
             }
@@ -104,7 +98,7 @@ function OverrideProfileFrameLayer(layer) {
           obj = { style: null, children: null };
           const items2 = [tmp.layer, memo];
           obj[0] = items2;
-          let obj1 = { source: null, resizeMode: "cover", width: null, height: null };
+          obj1 = { source: null, resizeMode: "cover", width: null, height: null };
           const obj2 = { uri: null };
           obj2[0] = uri;
           obj1[0] = obj2;
@@ -130,20 +124,18 @@ let merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj1.alignItems = "center";
 obj1.overflow = "hidden";
 createCacheKey[1] = obj1;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/native/tooling/FramePreviewOverrideFrame.tsx");
 
 export default function FramePreviewOverrideFrame(override) {
-  let noop;
-  let profileThemeType;
   override = override.override;
   const containerWidth = override.containerWidth;
-  ({ containerHeight: noop, profileThemeType } = override);
+  ({ containerHeight: closure_2, profileThemeType } = override);
   const frameOrder = override.frameOrder;
   const filterLayer = override.filterLayer;
-  let closure_6;
-  let jsx;
-  let createCacheKey;
+  closure_6 = undefined;
+  jsx = undefined;
+  let callback;
   const items = [override.layers, frameOrder, profileThemeType, filterLayer];
   const memo = React.useMemo(() => {
     const layers = override.layers;
@@ -156,7 +148,7 @@ export default function FramePreviewOverrideFrame(override) {
         }
         let tmp5 = !tmp4;
         if (!tmp4) {
-          let tmp8 = closure_3 === outer1_6.PREVIEW;
+          let tmp8 = closure_3 === closure_1_6.PREVIEW;
           if (!tmp8) {
             let tmp9 = "top" === order.anchor;
             if (tmp9) {
@@ -176,7 +168,7 @@ export default function FramePreviewOverrideFrame(override) {
       const result = containerWidth / override.innerWidth;
       closure_6 = override.overflowTop * result;
       jsx = override.overflowBottom * result;
-      createCacheKey = override.overflowHorizontal * result;
+      callback = override.overflowHorizontal * result;
       let obj = { style: null, children: null };
       obj[0] = tmp.container;
       obj[1] = memo.map((id) => {
@@ -201,8 +193,8 @@ export default function FramePreviewOverrideFrame(override) {
         obj[4] = closure_7;
         obj[5] = closure_8;
         obj[6] = containerWidth;
-        obj[7] = noop;
-        return closure_7(outer1_9, obj, id.id);
+        obj[7] = closure_2;
+        return closure_7(closure_1_9, obj, id.id);
       });
       return <profileThemeType style={null}>{null}</profileThemeType>;
     }

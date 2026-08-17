@@ -1,26 +1,21 @@
 // discord_app/modules/user_settings/voice/native/SettingsVoiceScreen.tsx
-import set from "set";
-import get_ActivityIndicator from "createToggle";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { MobileUserSettings } from "MobileUserSettings";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "combined";
-import { LegacyBaseButton } from "../../../../../_runtime/06377_LegacyBaseButton.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNoiseCancellationDeferredToSystem } from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
-import { handleKrispLinkPressed } from "KrispLogo.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import Text from "Text" /* 4734 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
+import handleKrispLinkPressed from "handleKrispLinkPressed" /* 12561 */;
+import _modDef13991 from "module_13991" /* 13991 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "combined" /* 1993 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function KrispLogo() {
   const tmp = callback3();
   let obj = AccessibilityAnnouncer;
@@ -34,7 +29,7 @@ function KrispLogo() {
   const intl = tmp5(1236).intl;
   obj[2] = intl.string(getSystemLocale.t.vFiCSx);
   const items = [callback(closure_5, obj), ];
-  const obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
+  obj1 = { accessibilityRole: "link", accessibilityLabel: null, onPress: null, children: null };
   const intl2 = tmp5(1236).intl;
   obj1[1] = intl2.string(getSystemLocale.t.hvVgAZ);
   obj1[2] = handleKrispLinkPressed.handleKrispLinkPressed;
@@ -64,9 +59,9 @@ function SystemProcessingSubLabel() {
 }
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = "" + require("combined").getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
+let closure_12 = "" + importDefaultResult.getArticleURL(HelpdeskArticles.VOICE_VIDEO_TROUBLESHOOTING) + "?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm";
 let closure_13 = createCacheKey.createStyles({ krisp: { marginTop: 8, flexDirection: "row", alignItems: "center" }, logo: { marginRight: 8, height: 30, width: 67 } });
-let result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/voice/native/SettingsVoiceScreen.tsx");
 
 export default function SettingsVoiceScreen() {
   const node = React.useMemo(() => {
@@ -79,7 +74,7 @@ export default function SettingsVoiceScreen() {
     ({ INPUT_MODE: arr[0], AUTO_VOICE_SENSITIVITY: arr[1], VOICE_SENSITIVITY: arr[2] } = constants);
     obj[1] = items;
     const items1 = [obj, , , , , , , ];
-    const obj1 = { label: null, settings: null, subLabel: null };
+    obj1 = { label: null, settings: null, subLabel: null };
     const intl2 = callback(1236).intl;
     obj1[0] = intl2.string(callback(1236).t.UXxPGB);
     const items2 = [, ];
@@ -134,5 +129,5 @@ export default function SettingsVoiceScreen() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return callback(SettingLayout, { node });
+  return callback(_modDef13991, { node });
 };

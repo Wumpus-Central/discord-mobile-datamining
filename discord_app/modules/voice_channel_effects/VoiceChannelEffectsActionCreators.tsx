@@ -1,16 +1,14 @@
 // discord_app/modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx
-import getEmojiToGroupId from "getEmojiToGroupId";
-import handleConnectionOpen from "handleConnectionOpen";
-import initialize from "initialize";
-import { VoiceChannelEffectAnimationType as closure_6 } from "VoiceChannelEffectAnimationType";
-import ME from "ME";
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
+import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "initialize" /* 7307 */;
+import { VoiceChannelEffectAnimationType as closure_6 } from "VoiceChannelEffectAnimationType" /* 7308 */;
+import ME from "ME" /* 676 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ Endpoints: error, NOOP_NULL: metroImportAll } = ME);
-const result = require("initialize").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx");
+({ Endpoints: error, NOOP_NULL: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/voice_channel_effects/VoiceChannelEffectsActionCreators.tsx");
 
 export const VoiceChannelEffectSentLocation = { EMOJI_PICKER: "emoji_picker", EFFECT_BAR: "effect_bar" };
 export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCustomCallSoundEffect(id, c4, arg2) {
@@ -23,7 +21,7 @@ export const sendVoiceChannelCustomCallSoundEffect = function sendVoiceChannelCu
   }
   obj = { animation_type: BASIC, animation_id: null };
   const throttleResult = obj.throttle(() => {
-    if (outer1_4.getVoiceChannelId() !== abortController) {
+    if (closure_1_4.getVoiceChannelId() !== abortController) {
       abortController.abort();
     }
   }, 1000);
@@ -66,14 +64,14 @@ export const sendVoiceChannelSoundboardEffect = function sendVoiceChannelSoundbo
     body: obj,
     signal: abortController.signal,
     onRequestProgress: obj.throttle(() => {
-      if (outer1_4.getVoiceChannelId() !== abortController) {
+      if (closure_1_4.getVoiceChannelId() !== abortController) {
         abortController.abort();
       }
     }, 1000),
     rejectWithError: true
   };
   const throttleResult = obj.throttle(() => {
-    if (outer1_4.getVoiceChannelId() !== abortController) {
+    if (closure_1_4.getVoiceChannelId() !== abortController) {
       abortController.abort();
     }
   }, 1000);

@@ -1,8 +1,10 @@
 // discord_app/modules/messages/getStickerDiscoverableGuild.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
 
-const result = require("_startLurking").fileFinishedImporting("modules/messages/getStickerDiscoverableGuild.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/messages/getStickerDiscoverableGuild.tsx");
 
 export default function getStickerDiscoverableGuild(arg0) {
   const HTTP = sendRequest.HTTP;

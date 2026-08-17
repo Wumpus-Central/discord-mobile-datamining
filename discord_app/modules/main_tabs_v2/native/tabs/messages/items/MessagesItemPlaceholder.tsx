@@ -1,14 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { UserPlaceholderRow } from "../../../shared_components/user_list/UserPlaceholderRow.tsx";
+import _modDef8928 from "module_8928" /* 8928 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const memoResult = require("noop").memo(function MessagesItemPlaceholder(arg0) {
-  let height;
-  let row;
+const memoResult = importAllResult.memo(function MessagesItemPlaceholder(arg0) {
   ({ row, height } = arg0);
-  return jsx(UserPlaceholderRow, { row, height });
+  return jsx(_modDef8928, { row, height });
 });
-const result = require("module_8928").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemPlaceholder.tsx");
 
 export default memoResult;

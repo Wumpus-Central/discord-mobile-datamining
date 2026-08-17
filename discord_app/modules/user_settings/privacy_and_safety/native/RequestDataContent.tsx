@@ -1,19 +1,15 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { USERS: "Account", MESSAGES: "Messages", GUILDS: "Servers", ANALYTICS: "Analytics", ACTIVITIES: "Activities", ADS: "Ads", ZENDESK: "Zendesk" };
 let closure_11 = createCacheKey.createStyles({ content: { padding: 16 }, header: { marginBottom: 8 }, title: { marginBottom: 8 }, description: { marginBottom: 0 }, checkboxContainer: { marginBottom: 16 } });
 const memoResult = importAllResult.memo(() => {
@@ -21,13 +17,13 @@ const memoResult = importAllResult.memo(() => {
   let obj = _require(first[6]);
   _require = obj.useNavigation();
   const tmp2 = callback(importAllResult.useState(false), 2);
-  const importDefault = tmp2[1];
+  importDefault = tmp2[1];
   obj = {};
   obj = { value: constants.USERS, label: null, checked: false };
   let intl = _require(first[7]).intl;
   obj[1] = intl.string(_require(first[7]).t["rfe/x8"]);
   obj[constants.USERS] = obj;
-  const obj1 = { value: constants.ANALYTICS, label: null, checked: false };
+  obj1 = { value: constants.ANALYTICS, label: null, checked: false };
   let intl2 = _require(first[7]).intl;
   obj1[1] = intl2.string(_require(first[7]).t["j+d6RN"]);
   obj[constants.ANALYTICS] = obj1;
@@ -58,16 +54,14 @@ const memoResult = importAllResult.memo(() => {
   const obj7 = { style: tmp.content, children: null };
   const obj8 = { style: tmp.header, children: null };
   let mapped = keys.map((arg0, arg1, arg2) => {
-    let checked;
-    let label;
     ({ label, checked } = first[arg0]);
     const callback = arg0;
-    return outer1_8(callback(first[8]).TableCheckboxRow, {
+    return closure_1_8(callback(first[8]).TableCheckboxRow, {
       label,
       checked,
       onPress: (arg0) => {
-        let closure_0 = arg0;
-        outer1_3((arg0) => {
+        closure_0 = arg0;
+        closure_1_3((arg0) => {
           let obj = {};
           const merged = Object.assign(arg0);
           obj = {};
@@ -87,8 +81,7 @@ const memoResult = importAllResult.memo(() => {
   const items = [callback2(_require(first[9]).Text, obj9), ];
   const obj10 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl9 = _require(first[7]).intl;
-  const obj11 = { helpdeskArticle: null };
-  obj11[0] = importDefault(first[10]).getArticleURL(HelpdeskArticles.GDPR_PACKAGE_CONTENTS);
+  const obj11 = { helpdeskArticle: importDefault(first[10]).getArticleURL(HelpdeskArticles.GDPR_PACKAGE_CONTENTS) };
   obj10[3] = intl9.format(_require(first[7]).t.vtRhDA, obj11);
   items[1] = callback2(_require(first[9]).Text, obj10);
   obj8[1] = items;
@@ -110,21 +103,21 @@ const memoResult = importAllResult.memo(() => {
         if (null != body) {
           if (null != body.body) {
             let obj = { title: null, body: null };
-            const intl3 = outer1_0(outer1_2[7]).intl;
-            obj[0] = intl3.string(outer1_0(outer1_2[7]).t.i2iul5);
-            const intl4 = outer1_0(outer1_2[7]).intl;
-            obj[1] = intl4.string(outer1_0(outer1_2[7]).t["6Nmv4i"]);
-            outer1_1(outer1_2[13]).show(obj);
+            const intl3 = closure_1_0(closure_1_2[7]).intl;
+            obj[0] = intl3.string(closure_1_0(closure_1_2[7]).t.i2iul5);
+            const intl4 = closure_1_0(closure_1_2[7]).intl;
+            obj[1] = intl4.string(closure_1_0(closure_1_2[7]).t["6Nmv4i"]);
+            closure_1_1(closure_1_2[13]).show(obj);
             arr = arr.pop();
-            const obj3 = outer1_1(outer1_2[13]);
+            const obj3 = closure_1_1(closure_1_2[13]);
           }
         }
-        obj = outer1_1(outer1_2[13]);
+        obj = closure_1_1(closure_1_2[13]);
         obj = { title: null, body: null };
-        const intl = outer1_0(outer1_2[7]).intl;
-        obj[0] = intl.string(outer1_0(outer1_2[7]).t.OjbtDm);
-        const intl2 = outer1_0(outer1_2[7]).intl;
-        obj[1] = intl2.string(outer1_0(outer1_2[7]).t["0F5Jyt"]);
+        const intl = closure_1_0(closure_1_2[7]).intl;
+        obj[0] = intl.string(closure_1_0(closure_1_2[7]).t.OjbtDm);
+        const intl2 = closure_1_0(closure_1_2[7]).intl;
+        obj[1] = intl2.string(closure_1_0(closure_1_2[7]).t["0F5Jyt"]);
         obj.show(obj);
       }, (message) => {
         message = undefined;
@@ -156,21 +149,21 @@ const memoResult = importAllResult.memo(() => {
         if (null != body) {
           if (null != body.body) {
             let obj = { title: null, body: null };
-            const intl3 = outer1_0(outer1_2[7]).intl;
-            obj[0] = intl3.string(outer1_0(outer1_2[7]).t.i2iul5);
-            const intl4 = outer1_0(outer1_2[7]).intl;
-            obj[1] = intl4.string(outer1_0(outer1_2[7]).t["6Nmv4i"]);
-            outer1_1(outer1_2[13]).show(obj);
+            const intl3 = closure_1_0(closure_1_2[7]).intl;
+            obj[0] = intl3.string(closure_1_0(closure_1_2[7]).t.i2iul5);
+            const intl4 = closure_1_0(closure_1_2[7]).intl;
+            obj[1] = intl4.string(closure_1_0(closure_1_2[7]).t["6Nmv4i"]);
+            closure_1_1(closure_1_2[13]).show(obj);
             arr = arr.pop();
-            const obj3 = outer1_1(outer1_2[13]);
+            const obj3 = closure_1_1(closure_1_2[13]);
           }
         }
-        obj = outer1_1(outer1_2[13]);
+        obj = closure_1_1(closure_1_2[13]);
         obj = { title: null, body: null };
-        const intl = outer1_0(outer1_2[7]).intl;
-        obj[0] = intl.string(outer1_0(outer1_2[7]).t.OjbtDm);
-        const intl2 = outer1_0(outer1_2[7]).intl;
-        obj[1] = intl2.string(outer1_0(outer1_2[7]).t["0F5Jyt"]);
+        const intl = closure_1_0(closure_1_2[7]).intl;
+        obj[0] = intl.string(closure_1_0(closure_1_2[7]).t.OjbtDm);
+        const intl2 = closure_1_0(closure_1_2[7]).intl;
+        obj[1] = intl2.string(closure_1_0(closure_1_2[7]).t["0F5Jyt"]);
         obj.show(obj);
       }, (message) => {
         message = undefined;
@@ -213,6 +206,6 @@ const memoResult = importAllResult.memo(() => {
   obj7[1] = items1;
   return callback3(closure_6, obj7);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/RequestDataContent.tsx");
 
 export default memoResult;

@@ -1,27 +1,26 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationScreen.tsx
-import closure_4 from "makeAuthenticated";
-import { View } from "useSafeAreaInsets";
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import makeAuthenticated from "makeAuthenticated";
-import { ActivityIndicator } from "../../../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { MemberVerificationModal } from "MemberVerificationModal.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import ActivityIndicator from "ActivityIndicator" /* 5446 */;
+import _modDef6551 from "module_6551" /* 6551 */;
+import MemberVerificationModalDefault from "MemberVerificationModal" /* 8524 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "comparator" /* 1980 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import makeAuthenticated from "makeAuthenticated" /* 15963 */;
 
-let c10;
-let c9;
-const require = arg1;
+require = arg1;
 function Loading() {
-  return <View style={createCacheKey().flexLoading}>{jsx(ActivityIndicator.ActivityIndicator, {})}</View>;
+  return <View style={callback().flexLoading}>{jsx(ActivityIndicator.ActivityIndicator, {})}</View>;
 }
 function MemberVerificationRouteView(arg0) {
   const merged = Object.assign(arg0);
-  return jsx(MemberVerificationModal, {});
+  return jsx(MemberVerificationModalDefault, {});
 }
 function ExistingJoinRequestHandler(guildId) {
   guildId = guildId.guildId;
@@ -29,15 +28,15 @@ function ExistingJoinRequestHandler(guildId) {
   let stateFromStores;
   let stateFromStores1;
   let React;
-  const items = [createGuildRecordFromRust];
-  stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => outer1_7.getGuild(guildId));
+  const items = [closure_7];
+  stateFromStores = guildId(stateFromStores1[11]).useStateFromStores(items, () => closure_1_7.getGuild(guildId));
   let obj = guildId(stateFromStores1[11]);
-  const items1 = [comparator];
+  const items1 = [closure_6];
   const items2 = [stateFromStores];
   stateFromStores1 = guildId(stateFromStores1[11]).useStateFromStores(items1, () => {
     let tmp2 = null;
     if (null != stateFromStores) {
-      const defaultChannel = outer1_6.getDefaultChannel(tmp.id);
+      const defaultChannel = closure_1_6.getDefaultChannel(tmp.id);
       let id;
       if (defaultChannel != null) {
         id = defaultChannel.id;
@@ -47,15 +46,15 @@ function ExistingJoinRequestHandler(guildId) {
     return tmp2;
   }, items2);
   const obj2 = guildId(stateFromStores1[11]);
-  const items3 = [handleGatewayJoinRequestUpdate];
-  const stateFromStores2 = guildId(stateFromStores1[11]).useStateFromStores(items3, () => outer1_8.getRequest(guildId));
+  const items3 = [closure_8];
+  const stateFromStores2 = guildId(stateFromStores1[11]).useStateFromStores(items3, () => closure_1_8.getRequest(guildId));
   const tmp6 = onClose(stateFromStores1[12])(stateFromStores2);
   React = tmp6;
   const items4 = [guildId, tmp6, onClose];
   const effect = React.useEffect(() => {
     let applicationStatus;
-    if (_undefined != null) {
-      applicationStatus = _undefined.applicationStatus;
+    if (applicationStatus != null) {
+      applicationStatus = applicationStatus.applicationStatus;
     }
     if (guildId(stateFromStores1[13]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       onClose();
@@ -74,7 +73,7 @@ function ExistingJoinRequestHandler(guildId) {
     if (null != stateFromStores) {
       if (null != guildId) {
         if (null != stateFromStores1) {
-          stateFromStores(stateFromStores1[15]).transitionTo(outer1_10.CHANNEL(tmp, tmp2));
+          stateFromStores(stateFromStores1[15]).transitionTo(closure_1_10.CHANNEL(tmp, tmp2));
           const obj = stateFromStores(stateFromStores1[15]);
         }
       }
@@ -98,16 +97,14 @@ function ExistingJoinRequestHandler(guildId) {
 }
 ({ ME: c9, Routes: c10 } = ME);
 createCacheKey = { flex: { flex: 1 }, flexLoading: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_12 = createCacheKey.createStyles(createCacheKey);
 const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerificationRouteContainer(navigation) {
   navigation = navigation.navigation;
   const guildId = navigation.route.params.guildId;
   const items = [navigation];
   const callback = React.useCallback(() => {
-    let index;
-    let routes;
     let obj = navigation;
     const state = navigation.getState();
     ({ routes, index } = state);
@@ -124,8 +121,8 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
           while (null != routes[diff]) {
             if ("member-verification" !== tmp10.name) {
               let tmp12 = navigation;
-              let tmp13 = outer1_3;
-              let obj4 = navigation(outer1_3[16]);
+              let tmp13 = closure_1_3;
+              let obj4 = navigation(closure_1_3[16]);
               let popScreensResult = obj4.popScreens(index - diff);
               break;
             } else {
@@ -143,12 +140,12 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
       }
     } else {
       obj = { screen: "guilds", guildId: null };
-      obj[1] = outer1_9;
-      navigation(outer1_3[16]).navigateToRootTab(obj);
-      const obj2 = navigation(outer1_3[16]);
+      obj[1] = closure_1_9;
+      navigation(closure_1_3[16]).navigateToRootTab(obj);
+      const obj2 = navigation(closure_1_3[16]);
     }
   }, items);
-  useSafeAreaInsets();
+  useSafeAreaInsetsDefault();
   if (null == guildId) {
     let tmp10 = <Loading />;
   } else {
@@ -162,16 +159,16 @@ const authenticated = makeAuthenticated.makeAuthenticated(function MemberVerific
     obj[1] = tmp7;
     items1[1] = obj;
     obj[0] = items1;
-    const obj1 = { guildId: null, onClose: null };
+    obj1 = { guildId: null, onClose: null };
     obj1[0] = guildId;
     obj1[1] = callback;
     obj[1] = <MemberVerificationRouteView guildId={null} onClose={null} />;
-    obj[2] = jsx(KeyboardAwareView, { marginLeft: null, marginRight: null });
+    obj[2] = jsx(_modDef6551, { marginLeft: null, marginRight: null });
     tmp10 = <ExistingJoinRequestHandler marginLeft={null} marginRight={null} />;
-    const tmp3Result = KeyboardAwareView;
+    const tmp3Result = _modDef6551;
   }
   return tmp10;
 });
-let result = require("comparator").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationScreen.tsx");
 
 export default authenticated;

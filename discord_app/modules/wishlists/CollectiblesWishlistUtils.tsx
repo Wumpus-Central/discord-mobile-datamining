@@ -1,11 +1,11 @@
 // discord_app/modules/wishlists/CollectiblesWishlistUtils.tsx
-import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getItemRecordsFromPurchases } from "../collectibles/CollectiblesUtils.tsx";
-let result = require("getItemRecordsFromPurchases").fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
+import set from "set" /* 2 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+
+let result = set.fileFinishedImporting("modules/wishlists/CollectiblesWishlistUtils.tsx");
 
 export const getProductNameAndTypeFromSku = function getProductNameAndTypeFromSku(sku) {
-  let name;
-  let tenantMetadata;
   ({ name, tenantMetadata } = sku);
   let type;
   if (tenantMetadata != null) {

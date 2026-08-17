@@ -1,12 +1,12 @@
 // discord_app/modules/premium/ReferralTrialStore.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { NOOP_NULL } from "ME";
-import { Store } from "initialize";
-import set from "_fetchReferralEligibleUsers";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { _fetchReferralEligibleUsers } from "ReferralTrialActionCreators.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _fetchReferralEligibleUsers from "_fetchReferralEligibleUsers" /* 7424 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { NOOP_NULL } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function emitChanges() {
   return true;
 }
@@ -25,8 +25,8 @@ function handleLoadMessages(messages) {
       if (!hasItem) {
         set.add(content);
         callback(table[3]).wait(() => {
-          const referralTrialOffer = content(outer1_2[2]).resolveReferralTrialOffer(content);
-          return referralTrialOffer.catch(outer1_4);
+          const referralTrialOffer = content(closure_1_2[2]).resolveReferralTrialOffer(content);
+          return referralTrialOffer.catch(closure_1_4);
         });
         const obj = callback(table[3]);
       }
@@ -50,12 +50,13 @@ let c17 = false;
 let c18 = false;
 let c19 = null;
 let c20 = null;
+const Store = initializeDefault.Store;
 class ReferralTrialStore extends Store {
 }
 const prototype = ReferralTrialStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(mergeGuildAvatar);
-  const items = [mergeGuildAvatar];
+  this.waitFor(closure_3);
+  const items = [closure_3];
   this.syncWith(items, emitChanges);
 };
 prototype["checkAndFetchReferralsRemaining"] = function checkAndFetchReferralsRemaining() {
@@ -135,7 +136,7 @@ prototype["getReminderStateId"] = function getReminderStateId() {
   return c20;
 };
 ReferralTrialStore.displayName = "ReferralTrialStore";
-const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
+const referralTrialStore = new ReferralTrialStore(dispatcherDefault, {
   BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function handleReferralTrialOfferUpdate(userTrialOfferId) {
     userTrialOfferId = userTrialOfferId.userTrialOfferId;
     if (!c8) {
@@ -144,42 +145,39 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
     }
     if (!set1.has(userTrialOfferId)) {
       set1.add(userTrialOfferId);
-      dispatcher.wait(() => {
-        const referralTrialOffer = userTrialOfferId(outer1_2[2]).resolveReferralTrialOffer(userTrialOfferId);
-        return referralTrialOffer.catch(outer1_4);
+      dispatcherDefault.wait(() => {
+        const referralTrialOffer = userTrialOfferId(closure_1_2[2]).resolveReferralTrialOffer(userTrialOfferId);
+        return referralTrialOffer.catch(closure_1_4);
       });
-      const obj2 = dispatcher;
+      const obj2 = dispatcherDefault;
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_START: function handleReferralsRemainingFetchStart(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c19 = null;
-      let c8 = true;
+      c19 = null;
+      c8 = true;
     }
   },
   BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function handleReferralsRemainingFetchSuccess(has_eligible_friends) {
-    let recipient_status;
-    let refresh_at;
-    let reminder_state_id;
-    let c17 = true;
+    c17 = true;
     has_eligible_friends = has_eligible_friends.has_eligible_friends;
-    let c8 = false;
+    c8 = false;
     const referrals_remaining = has_eligible_friends.referrals_remaining;
     ({ refresh_at, recipient_status, reminder_state_id } = has_eligible_friends);
-    const set = new Set(has_eligible_friends.sent_user_ids);
-    let c12 = 0;
-    let c13 = null;
+    set = new Set(has_eligible_friends.sent_user_ids);
+    c12 = 0;
+    c13 = null;
   },
   BILLING_REFERRALS_REMAINING_FETCH_FAIL: function handleReferralsRemainingFetchFail(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c17 = false;
-      let c18 = false;
-      let c19 = null;
-      let c8 = false;
+      c17 = false;
+      c18 = false;
+      c19 = null;
+      c8 = false;
       const sum = c12 + 1;
       c12 = sum;
       if (sum <= 3) {
@@ -192,7 +190,7 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
       const _Date = Date;
       const _Math3 = Math;
       const timestamp = Date.now();
-      let closure_13 = timestamp + Math.min(300000, result);
+      closure_13 = timestamp + Math.min(300000, result);
     }
   },
   BILLING_CREATE_REFERRAL_SUCCESS: function handleCreateReferralSuccess(userTrialOffer) {
@@ -225,16 +223,14 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
     set2.add(userTrialOfferId);
   },
   REFERRALS_FETCH_ELIGIBLE_USER_START: function handleReferralsFetchEligibleUsersStart() {
-    let c15 = true;
+    c15 = true;
   },
   REFERRALS_FETCH_ELIGIBLE_USER_SUCCESS: function handleReferralsFetchEligibleUsersSuccess(arg0) {
-    let c16;
-    let closure_14;
-    let c15 = false;
+    c15 = false;
     ({ users: closure_14, nextIndex: c16 } = arg0);
   },
   REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function handleReferralsFetchEligibleUsersFail() {
-    let c15 = false;
+    c15 = false;
   },
   LOAD_MESSAGES_SUCCESS: handleLoadMessages,
   MESSAGE_CREATE: function handleMessage(message) {
@@ -251,32 +247,32 @@ const referralTrialStore = new ReferralTrialStore(require("dispatcher"), {
       }
       if (!hasItem) {
         set1.add(content);
-        dispatcher.wait(() => {
-          const referralTrialOffer = content(outer1_2[2]).resolveReferralTrialOffer(content);
-          return referralTrialOffer.catch(outer1_4);
+        dispatcherDefault.wait(() => {
+          const referralTrialOffer = content(closure_1_2[2]).resolveReferralTrialOffer(content);
+          return referralTrialOffer.catch(closure_1_4);
         });
-        const obj = dispatcher;
+        const obj = dispatcherDefault;
       }
     }
   },
   LOAD_MESSAGES_AROUND_SUCCESS: handleLoadMessages,
   LOGOUT: function handleReset() {
-    let c5 = null;
-    const set = new Set();
-    let c8 = false;
-    const set1 = new Set();
-    const set2 = new Set();
-    const map = new Map();
-    let c12 = 0;
-    let c13 = null;
-    let closure_14 = [];
-    let c15 = false;
-    let c16 = 0;
-    let c17 = false;
-    let c18 = false;
-    let c19 = null;
-    const map1 = new Map();
-    let c20 = null;
+    c5 = null;
+    set = new Set();
+    c8 = false;
+    set1 = new Set();
+    set2 = new Set();
+    map = new Map();
+    c12 = 0;
+    c13 = null;
+    closure_14 = [];
+    c15 = false;
+    c16 = 0;
+    c17 = false;
+    c18 = false;
+    c19 = null;
+    map1 = new Map();
+    c20 = null;
   }
 });
 let result = set.fileFinishedImporting("modules/premium/ReferralTrialStore.tsx");

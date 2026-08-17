@@ -1,17 +1,19 @@
 // discord_app/modules/favorites/utils/getFavoritesAddButtonLabel.tsx
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
-const result = require("set").fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 3079 */;
+
+const result = set.fileFinishedImporting("modules/favorites/utils/getFavoritesAddButtonLabel.tsx");
 
 export const getFavoritesAddButtonLabel = function getFavoritesAddButtonLabel(length) {
   if (length >= 2) {
     const intl2 = getSystemLocale.intl;
     const obj = { count: null };
     obj[0] = length;
-    let formatToPlainStringResult = intl2.formatToPlainString(messagesProxy.LbCa8x, obj);
+    let formatToPlainStringResult = intl2.formatToPlainString(messagesProxyDefault.LbCa8x, obj);
   } else {
     const intl = getSystemLocale.intl;
-    formatToPlainStringResult = intl.string(messagesProxy.xKXcSu);
+    formatToPlainStringResult = intl.string(messagesProxyDefault.xKXcSu);
   }
   return formatToPlainStringResult;
 };

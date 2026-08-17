@@ -1,12 +1,11 @@
 // discord_app/modules/applications/getApplicationInstallURL.tsx
-import { Routes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-let result = require("set").fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
+const Routes = ME.Routes;
+let result = set.fileFinishedImporting("modules/applications/getApplicationInstallURL.tsx");
 
 export const getActivityLaunchURL = function getActivityLaunchURL(applicationId) {
-  let customId;
-  let linkId;
-  let referrerId;
   ({ customId, referrerId, linkId } = applicationId);
   const str = new URL(Routes.ACTIVITY_DETAILS(applicationId.applicationId), "" + location.protocol + "//" + location.host);
   const searchParams = str.searchParams;
@@ -22,11 +21,6 @@ export const getActivityLaunchURL = function getActivityLaunchURL(applicationId)
   return str.toString();
 };
 export const getApplicationInstallURL = function getApplicationInstallURL(application) {
-  let customInstallUrl;
-  let installParams;
-  let integrationTypesConfig;
-  let permissions;
-  let scopes;
   ({ customInstallUrl, installParams, integrationTypesConfig } = application);
   if (null != customInstallUrl) {
     return customInstallUrl;

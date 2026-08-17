@@ -1,11 +1,14 @@
 // discord_app/modules/fastest_list/utils/FastestListLogger.native.tsx
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-const tmp2 = new require("timestamp")("FastestList");
+import timestampDefault from "timestamp" /* 3 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+
+let closure_2 = new timestampDefault("FastestList");
+const tmp2 = new timestampDefault("FastestList");
 const result = require("set").fileFinishedImporting("modules/fastest_list/utils/FastestListLogger.native.tsx");
 
 export const logFastestListError = function logFastestListError(arg0, extra) {
-  tmp2.error(arg0, extra);
-  let obj = SentryUtils.native;
+  logger.error(arg0, extra);
+  let obj = _modDef1208;
   obj = { extra };
   obj.captureMessage(arg0, obj);
 };

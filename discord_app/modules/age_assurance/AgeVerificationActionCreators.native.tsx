@@ -1,22 +1,15 @@
 // discord_app/modules/age_assurance/AgeVerificationActionCreators.native.tsx
-import SafetyToastType from "SafetyToastType";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import set from "set";
-import { AGE_VERIFICATION_INCODE_PATH as closure_9 } from "AGE_VERIFICATION_INCODE_PATH";
-import { NativePermissionTypes } from "NativePermissionStatus";
-import { SafetyToastType } from "SafetyToastType";
-import { jsx } from "MethodsScreen";
-import set from "set";
-import { Linking } from "../../lib/native/Linking.tsx";
+import _modDef4090 from "module_4090" /* 4090 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import set from "set" /* 5427 */;
+import { AGE_VERIFICATION_INCODE_PATH as closure_9 } from "AGE_VERIFICATION_INCODE_PATH" /* 5429 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function openIncodeAgeVerificationModal(arg0) {
-  let importDefault;
-  let require;
   ({ onClose: require, onComplete: importDefault } = arg0);
   let combined;
   let WEBAPP_ENDPOINT;
@@ -45,16 +38,16 @@ function openIncodeAgeVerificationModal(arg0) {
   let flag = null != combined;
   if (flag) {
     callback(function*() {
-      let closure_1 = tmp3;
-      let closure_0 = tmp3;
-      let dependencyMap = 1;
-      yield outer1_1(4840).requestPermission(outer1_10.CAMERA, { showAuthorizationError: true });
+      closure_1 = tmp3;
+      closure_0 = tmp3;
+      dependencyMap = 1;
+      yield closure_1_1(4840).requestPermission(closure_1_10.CAMERA, { showAuthorizationError: true });
       if (1 === tmp7) {
         dependencyMap = 0;
-        outer1_1(6553).showFailedToast(outer1_11.TIGGER_PAWTECT_ERROR);
-        outer1_0();
-        let c4 = 3;
-        const obj5 = outer1_1(6553);
+        closure_1_1(6553).showFailedToast(closure_1_11.TIGGER_PAWTECT_ERROR);
+        closure_1_0();
+        c4 = 3;
+        const obj5 = closure_1_1(6553);
       } else if (2 === tmp7) {
         if (arg0 === 1) {
           c4 = 3;
@@ -66,16 +59,16 @@ function openIncodeAgeVerificationModal(arg0) {
           obj2[0] = arg1;
           return obj2;
         } else {
-          const obj1 = outer1_1(5260);
+          obj1 = closure_1_1(5260);
           const v0 = 3;
           c4 = 1;
           const obj3 = { value: null, done: false };
           obj3[0] = obj1.pushLazy(v0(function*() {
-            let closure_0 = tmp2;
-            yield outer1_0(paths[10])(paths[9], paths.paths);
+            closure_0 = tmp2;
+            yield closure_1_0(paths[10])(paths[9], paths.paths);
             closure_0 = arg1.default;
-            return () => outer2_12(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
-          }), {}, outer1_5);
+            return () => closure_2_12(closure_0, { webviewUrl: c2, onClose: closure_0, onComplete: c1 });
+          }), {}, closure_1_5);
           return obj3;
         }
       } else if (arg0 === 1) {
@@ -91,13 +84,11 @@ function openIncodeAgeVerificationModal(arg0) {
   }
   return flag;
 }
-({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, VerificationVendorName: metroImportAll } = set);
+({ AGE_VERIFICATION_MODAL_KEY: c5, AGE_VERIFICATION_GET_STARTED_MODAL_KEY: closure_6, AGE_VERIFICATION_QUEST_UNSUPPORTED_ALERT_KEY: error, VerificationVendorName: closure_8 } = set);
 const result = set.fileFinishedImporting("modules/age_assurance/AgeVerificationActionCreators.native.tsx");
 
 export default {
   showAgeVerification(onClose) {
-    let shouldShowExpressiveModal;
-    let webviewUrl;
     let fn = onClose.onClose;
     if (fn === undefined) {
       fn = function o(arg0) {
@@ -124,12 +115,12 @@ export default {
       flag = null != webviewUrl;
       if (flag) {
         webviewUrl(tmp3[8]).pushLazy(callback(function*() {
-          let closure_0 = tmp2;
-          yield outer1_0(paths[10])(paths[16], paths.paths);
+          closure_0 = tmp2;
+          yield closure_1_0(paths[10])(paths[16], paths.paths);
           closure_0 = arg1.default;
           return () => {
-            const merged = Object.assign(c2);
-            return outer2_12(closure_0, { webviewUrl: c1, onClose: closure_0 });
+            merged = Object.assign(c2);
+            return closure_2_12(closure_0, { webviewUrl: c1, onClose: closure_0 });
           };
         }), {}, closure_5);
         flag = true;
@@ -141,7 +132,7 @@ export default {
   showAgeVerificationGetStartedModal(entryPoint) {
     entryPoint = entryPoint.entryPoint;
     const onClose = entryPoint.onClose;
-    let dependencyMap;
+    dependencyMap = undefined;
     let prop;
     let currentUser;
     let obj = entryPoint(1625);
@@ -188,10 +179,10 @@ export default {
       } else {
         if (tmpResult3.isExpressiveModalV2Enabled(entryPoint)) {
           onClose(5260).pushLazy(prop(function*() {
-            let closure_0 = tmp2;
-            yield outer1_0(paths[10])(paths[21], paths.paths);
+            closure_0 = tmp2;
+            yield closure_1_0(paths[10])(paths[21], paths.paths);
             closure_0 = arg1.default;
-            return () => outer2_12(closure_0, {
+            return () => closure_2_12(closure_0, {
               entryPoint: closure_0,
               onClose() {
                 let tmp;
@@ -207,10 +198,10 @@ export default {
           currentUser = tmp(6688).isAgeVerificationExpressiveModalEverywhereEnabled(entryPoint);
           const tmpResult4 = tmp(6688);
           onClose(5260).pushLazy(prop(function*() {
-            let closure_0 = tmp2;
-            yield outer1_0(paths[10])(paths[23], paths.paths);
+            closure_0 = tmp2;
+            yield closure_1_0(paths[10])(paths[23], paths.paths);
             closure_0 = arg1.default;
-            return () => outer2_12(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: outer1_4 });
+            return () => closure_2_12(closure_0, { entryPoint: closure_0, isRetry: c2, useEmbeddedMethods: closure_1_4 });
           }), {}, closure_6);
           const obj7 = onClose(5260);
         }
@@ -220,6 +211,6 @@ export default {
     }
   },
   openUrl(arg0) {
-    Linking.openURL(arg0);
+    _modDef4090.openURL(arg0);
   }
 };

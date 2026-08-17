@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ReportMenuType.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { IN_APP: null, REPORT_TO_MOD: null, UNAUTHENTICATED: null, CONSOLE: null };
 let set = new Set(["application", "first_dm", "guild", "guild_directory_entry", "guild_discovery", "guild_scheduled_event", "message", "report_to_mod_message", "stage_channel", "user", "widget"]);

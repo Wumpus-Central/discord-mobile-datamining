@@ -1,7 +1,9 @@
 // discord_app/modules/samsung/native/SamsungManager.android.tsx
-import { NativeModules } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/samsung/native/SamsungManager.android.tsx");
 
 export default {
   checkIfOAuthRequest(closure_0) {

@@ -1,11 +1,12 @@
 // discord_app/modules/user_settings/defs/native/OutputVolumeSetting.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
+import apexExperimentDefault from "apexExperiment" /* 12136 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -14,10 +15,10 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useOutputVolumeSettingValue() {
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => outputVolume.getOutputVolume());
   },
-  onValueChange: require("trackDeviceChanged").setOutputVolume,
+  onValueChange: trackDeviceChangedDefault.setOutputVolume,
   useSearchTerms() {
     const intl = getSystemLocale.intl;
     const items = [intl.string(getSystemLocale.t["3182VD"]), ];
@@ -26,10 +27,10 @@ createToggle = {
     return items;
   },
   usePredicate() {
-    return apexExperiment.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
+    return apexExperimentDefault.useConfig({ location: "OutputVolumeSetting" }).audioOutputPresent;
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OutputVolumeSetting.tsx");
 
 export default createToggle;

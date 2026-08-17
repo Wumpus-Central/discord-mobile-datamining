@@ -1,12 +1,10 @@
 // discord_app/utils/native/InstantInviteUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import closure_5 from "comparator";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import comparator from "comparator" /* 1980 */;
+import closure_5 from "comparator" /* 1980 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 
-let c3;
-let c4;
 let f45578 = arg1;
 let f45579 = dependencyMap;
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: c4 } = comparator);
@@ -174,7 +172,7 @@ const obj15 = { value: 100 };
 Object.defineProperty(obj15, "label", { get: () => f45578(), set: undefined });
 Object.defineProperty(obj15, "descriptiveLabel", { get: () => f45579(), set: undefined });
 let items1 = [obj9, obj10, obj11, obj12, obj13, obj14, obj15];
-let result = require("getUncachedChannelPermissions").fileFinishedImporting("utils/native/InstantInviteUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/native/InstantInviteUtils.tsx");
 
 export const INVITE_OPTIONS_FOREVER = obj;
 export const INVITE_OPTIONS_7_DAYS = obj;
@@ -204,9 +202,9 @@ export const getInviteChannelId = function getInviteChannelId(channelId, stateFr
     if (null != channelId) {
       const obj = { channelId: null };
       obj[0] = channelId;
-      const result = getUncachedChannelPermissions.canWithPartialContext(Permissions.CREATE_INSTANT_INVITE, obj);
+      const result = closure_6.canWithPartialContext(Permissions.CREATE_INSTANT_INVITE, obj);
       const combined = stateFromStores[closure_3].concat(stateFromStores[closure_4]);
-      const found = combined.find((channel) => getUncachedChannelPermissions.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      const found = combined.find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (result) {
         channel = channel.getChannel(channelId);
         let isThreadResult;
@@ -239,16 +237,16 @@ export const shouldRenderInvite = function shouldRenderInvite(channels, guild) {
   }
   let tmp2 = null == vanityURLCode;
   if (!tmp2) {
-    tmp2 = !f45578(f45579[5]).canViewInviteModal(getUncachedChannelPermissions, guild);
+    tmp2 = !f45578(f45579[5]).canViewInviteModal(closure_6, guild);
     const obj = f45578(f45579[5]);
   }
   let tmp6 = !tmp2;
   if (tmp2) {
     let tmp8 = null != channels;
     if (tmp8) {
-      let tmp10 = null != channels[closure_3].find((channel) => getUncachedChannelPermissions.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      let tmp10 = null != channels[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (!tmp10) {
-        tmp10 = null != channels[closure_4].find((channel) => getUncachedChannelPermissions.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+        tmp10 = null != channels[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
         const arr2 = channels[closure_4];
       }
       tmp8 = tmp10;
@@ -262,23 +260,23 @@ export const useShouldShowInviteInActionBar = function useShouldShowInviteInActi
   const callback = id;
   const items = [closure_5];
   const items1 = [id.id];
-  const stateFromStoresObject = callback(f45579[6]).useStateFromStoresObject(items, () => outer1_5.getChannels(id.id), items1);
+  const stateFromStoresObject = callback(f45579[6]).useStateFromStoresObject(items, () => closure_1_5.getChannels(id.id), items1);
   let vanityURLCode;
   if (id != null) {
     vanityURLCode = id.vanityURLCode;
   }
   let tmp5 = null == vanityURLCode;
   if (!tmp5) {
-    tmp5 = !callback(f45579[5]).canViewInviteModal(getUncachedChannelPermissions, id);
+    tmp5 = !callback(f45579[5]).canViewInviteModal(closure_6, id);
     const tmpResult = callback(f45579[5]);
   }
   let tmp7 = !tmp5;
   if (tmp5) {
     let tmp8 = null == stateFromStoresObject;
     if (!tmp8) {
-      let tmp10 = null != stateFromStoresObject[closure_3].find((channel) => getUncachedChannelPermissions.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+      let tmp10 = null != stateFromStoresObject[closure_3].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
       if (!tmp10) {
-        tmp10 = null != stateFromStoresObject[closure_4].find((channel) => getUncachedChannelPermissions.can(constants.CREATE_INSTANT_INVITE, channel.channel));
+        tmp10 = null != stateFromStoresObject[closure_4].find((channel) => closure_6.can(constants.CREATE_INSTANT_INVITE, channel.channel));
         const arr4 = stateFromStoresObject[closure_4];
       }
       tmp8 = tmp10;

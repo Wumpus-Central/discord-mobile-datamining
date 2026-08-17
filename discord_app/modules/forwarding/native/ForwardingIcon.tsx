@@ -1,8 +1,10 @@
 // discord_app/modules/forwarding/native/ForwardingIcon.tsx
-import { jsx } from "jsxProd";
-import { ArrowAngleRightUpIcon } from "../../../design/components/Icon/native/redesign/generated/ArrowAngleRightUpIcon.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 9088 */;
 
-const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardingIcon.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/forwarding/native/ForwardingIcon.tsx");
 
 export default function ForwardingIcon(arg0) {
   const merged = Object.assign(arg0);

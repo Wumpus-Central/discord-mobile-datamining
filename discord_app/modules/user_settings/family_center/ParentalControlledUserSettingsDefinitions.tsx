@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx
-import getSettings from "getSettings";
+import closure_3 from "getSettings" /* 5299 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettingsDefinitions.tsx");
 
 export const defineParentalControlledSetting = function defineParentalControlledSetting(privacy, defaultGuildsRestricted, explicitContentFromProto, explicitContentToProto, arg4) {
-  let closure_0 = privacy;
-  let closure_1 = defaultGuildsRestricted;
-  let closure_2 = explicitContentFromProto;
-  let getSettings = explicitContentToProto;
+  closure_0 = privacy;
+  closure_1 = defaultGuildsRestricted;
+  closure_2 = explicitContentFromProto;
+  closure_3 = explicitContentToProto;
   let obj = arg4;
   if (arg4 === undefined) {
     obj = {};
@@ -49,25 +49,25 @@ export const defineParentalControlledSetting = function defineParentalControlled
         let resolved = Promise.resolve();
       } else {
         resolved = defaultGuildsRestricted(explicitContentFromProto[1]).updateTeenSettings(arg0, closure_0, (arg0) => {
-          arg0[outer1_1] = outer1_3(closure_0, arg0[outer1_1]);
+          arg0[closure_1_1] = closure_1_3(closure_0, arg0[closure_1_1]);
         });
         const obj = defaultGuildsRestricted(explicitContentFromProto[1]);
       }
       return resolved;
     },
     useControlledSetting(arg0) {
-      const privacy = arg0;
-      const items = [getSettings];
+      privacy = arg0;
+      const items = [closure_3];
       const items1 = [arg0];
       return privacy(explicitContentFromProto[2]).useStateFromStores(items, () => {
-        const settings = outer1_3.getSettings(closure_0);
+        const settings = closure_1_3.getSettings(closure_0);
         let tmp3;
         if (settings != null) {
           if (settings[closure_0] != null) {
-            tmp3 = tmp5[outer1_1];
+            tmp3 = tmp5[closure_1_1];
           }
         }
-        return outer1_2(tmp3);
+        return closure_1_2(tmp3);
       }, items1, fn);
     }
   };
@@ -77,13 +77,7 @@ export const defineParentalControlledSetting = function defineParentalControlled
   return obj;
 };
 export const wrapParentalControlledSettingWithExperimentDefaults = function wrapParentalControlledSettingWithExperimentDefaults(arg0) {
-  let getSettings;
-  let closure_4;
-  let closure_5;
-  let dependencyMap;
-  let importDefault;
-  let require;
-  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: getSettings, ineligibleDefault: closure_4, onUseDefault: closure_5 } = arg0);
+  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: closure_3, ineligibleDefault: closure_4, onUseDefault: closure_5 } = arg0);
   return {
     getControlledSetting(arg0) {
       const controlledSetting = closure_0.getControlledSetting(arg0);

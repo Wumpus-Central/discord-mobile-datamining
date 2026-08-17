@@ -1,37 +1,25 @@
 // discord_app/modules/create_guild/native/CreateGuild.tsx
-import noop from "noop";
-import { ScrollView } from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MarketingURLs } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { MarketingURLs } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { flex: { flex: 1 }, contentContainer: null, header: null, description: null, iconUploader: null, hint: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingBottom: 16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: 16, paddingBottom: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { lineHeight: 18, textAlign: "center", marginBottom: 24 };
 createCacheKey[4] = { alignSelf: "center", marginBottom: 4 };
 createCacheKey[5] = { marginBottom: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/create_guild/native/CreateGuild.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/create_guild/native/CreateGuild.tsx");
 
 export default function CreateGuild(arg0) {
-  let autoFocus;
-  let customButtonLabel;
-  let customDescription;
-  let customTitle;
-  let error;
-  let guild;
-  let onCreate;
-  let onIconPress;
-  let onNameChange;
-  let onStaffOnlyChange;
-  let submitting;
   ({ guild, error, customTitle, customDescription, customButtonLabel, autoFocus } = arg0);
   ({ onIconPress, onNameChange, onStaffOnlyChange, onCreate, submitting } = arg0);
   if (autoFocus === undefined) {
@@ -39,13 +27,13 @@ export default function CreateGuild(arg0) {
   }
   let isScreenReaderEnabled;
   let ref;
-  let tmp = createCacheKey();
+  let tmp = callback();
   currentUser = currentUser.getCurrentUser();
   let isStaffResult;
   if (currentUser != null) {
     isStaffResult = currentUser.isStaff();
   }
-  let obj1 = isScreenReaderEnabled(4721);
+  obj1 = isScreenReaderEnabled(4721);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   ref = React.useRef(null);
   const items = [isScreenReaderEnabled];
@@ -55,7 +43,7 @@ export default function CreateGuild(arg0) {
       tmp = null != ref.current;
     }
     if (tmp) {
-      let obj = isScreenReaderEnabled(outer1_2[8]);
+      let obj = isScreenReaderEnabled(closure_1_2[8]);
       obj = { ref: null, delay: 100 };
       obj[0] = ref;
       const result = obj.setAccessibilityFocus(obj);

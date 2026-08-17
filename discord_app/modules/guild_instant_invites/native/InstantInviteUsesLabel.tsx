@@ -1,14 +1,13 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx
-import "noop";
-import { jsxs } from "jsxProd";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { jsxs } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Text").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteUsesLabel.tsx");
 
 export default function InstantInviteUsesLabel(style) {
-  let maxUses;
-  let uses;
   ({ uses, maxUses } = style);
   let combined = uses;
   if (0 !== maxUses) {

@@ -1,21 +1,21 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import { Permissions } from "ME";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "initializeFromUserSettings" /* 1394 */;
+import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");
 
 export default function useFavoritesGuildChannelFilter() {
-  const items = [initializeFromUserSettings];
+  const items = [closure_5];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const items1 = [stateFromStores];
   return React.useCallback((type) => {
     type = type.type;
-    if (stateFromStores(outer1_1[6]).AutocompleterResultTypes.USER === type) {
-      const dMChannelFromUserId = outer1_3.getDMChannelFromUserId(type.record.id);
+    if (stateFromStores(closure_1_1[6]).AutocompleterResultTypes.USER === type) {
+      const dMChannelFromUserId = closure_1_3.getDMChannelFromUserId(type.record.id);
       let tmp13 = !arg1;
       if (!arg1) {
         tmp13 = null == dMChannelFromUserId;
@@ -38,7 +38,7 @@ export default function useFavoritesGuildChannelFilter() {
           return tmpResult.assertNever(type);
         }
       }
-      let canResult = outer1_4.can(outer1_6.VIEW_CHANNEL, type.record);
+      let canResult = closure_1_4.can(closure_1_6.VIEW_CHANNEL, type.record);
       if (canResult) {
         tmpResult = tmp(tmp2[7]);
         canResult = tmpResult.isFavoritableChannel(type.record);

@@ -1,20 +1,17 @@
 // discord_app/modules/guild_scheduled_events/useGetEventChannelsByType.tsx
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import comparator from "comparator";
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import VIEW_CHANNEL from "VIEW_CHANNEL";
+import canManageResource from "canManageResource" /* 8839 */;
+import closure_2 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_3 from "comparator" /* 1980 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import VIEW_CHANNEL from "VIEW_CHANNEL" /* 8838 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { canManageResource } from "../permissions/useManageResourcePermissions.tsx";
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function getEventChannelsByType(id, channelTypeFromEntity) {
-  let obj;
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [comparator];
+    const items = [closure_3];
     tmp = items;
   }
   [obj] = tmp;
@@ -61,16 +58,16 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
   }
 }
 ({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_6, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: error } = VIEW_CHANNEL);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGetEventChannelsByType.tsx");
 
 export const useCanCreateEventInStageChannel = function useCanCreateEventInStageChannel(isGuildStageVoice) {
   const _require = isGuildStageVoice;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_5];
   const items1 = [isGuildStageVoice];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.can(outer1_7, closure_0), items1);
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.can(closure_1_7, closure_0), items1);
   const obj = _initialize;
-  const items2 = [handleStageInstanceCreateOrUpdate];
-  const stateFromStores1 = _initialize.useStateFromStores(items2, () => outer1_2.getStageInstanceByChannel(isGuildStageVoice.id));
+  const items2 = [closure_2];
+  const stateFromStores1 = _initialize.useStateFromStores(items2, () => closure_1_2.getStageInstanceByChannel(isGuildStageVoice.id));
   let tmp3 = isGuildStageVoice.isGuildStageVoice() && stateFromStores;
   if (tmp3) {
     tmp3 = null == stateFromStores1;
@@ -79,20 +76,20 @@ export const useCanCreateEventInStageChannel = function useCanCreateEventInStage
 };
 export const useCanCreateEventInVoiceChannel = function useCanCreateEventInVoiceChannel(isGuildVoice) {
   const _require = isGuildVoice;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_5];
   const items1 = [isGuildVoice];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.can(outer1_6, closure_0), items1);
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.can(closure_1_6, closure_0), items1);
   const obj = _initialize;
   return isGuildVoice.isGuildVoice() && stateFromStores;
 };
 export { getEventChannelsByType };
 export const useGetEventChannelsByType = function useGetEventChannelsByType(id, channelType) {
   const _require = id;
-  const dependencyMap = channelType;
-  let items = [comparator];
+  dependencyMap = channelType;
+  let items = [closure_3];
   const items1 = [id, channelType];
   return _initialize.useStateFromStoresArray(items, () => {
-    const items = [outer1_3];
-    return outer1_8(closure_0, closure_1, items);
+    const items = [closure_1_3];
+    return closure_1_8(closure_0, closure_1, items);
   }, items1);
 };

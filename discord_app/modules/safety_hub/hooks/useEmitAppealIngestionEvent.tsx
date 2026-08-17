@@ -1,20 +1,18 @@
 // discord_app/modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx
-import noop from "noop";
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
-import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView";
-import ME from "ME";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import { SafetyHubAnalyticsActionSource as closure_5 } from "SafetyHubView" /* 5438 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_6, AnalyticEvents: error } = ME);
-const result = require("SafetyHubView").fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_hub/hooks/useEmitAppealIngestionEvent.tsx");
 
 export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent() {
-  let items = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  let items = [closure_4];
   stateFromStores = stateFromStores(safetyHubAccountStanding[4]).useStateFromStores(items, () => store.getAppealClassificationId());
   let obj = stateFromStores(safetyHubAccountStanding[4]);
-  const tmp3 = handleSafetyHubRequestAgeVerificationResetModalAction;
+  const tmp3 = closure_4;
   let tmp5 = stateFromStores;
   if (stateFromStores == null) {
     tmp5 = closure_6;
@@ -36,9 +34,9 @@ export const useEmitAppealIngestionEvent = function useEmitAppealIngestionEvent(
       tmp2 = items;
     }
     obj[2] = tmp2;
-    obj[3] = outer1_5.AppealIngestion;
+    obj[3] = closure_1_5.AppealIngestion;
     obj[4] = stateFromStores1;
     obj[5] = safetyHubClassification.violationType;
-    obj.track(outer1_7.SAFETY_HUB_ACTION, obj);
+    obj.track(closure_1_7.SAFETY_HUB_ACTION, obj);
   }, items2);
 };

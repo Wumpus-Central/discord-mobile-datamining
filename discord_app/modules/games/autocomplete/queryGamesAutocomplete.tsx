@@ -1,18 +1,17 @@
 // discord_app/modules/games/autocomplete/queryGamesAutocomplete.tsx
-import set from "set";
-import importDefaultResult from "debounce";
-import { GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH } from "GameAutocompleteUtils.tsx";
-import { fetchStore } from "useGameAutocomplete.tsx";
+import GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH from "GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH" /* 6900 */;
+import fetchStore from "fetchStore" /* 7600 */;
+import closure_2 from "set" /* 6899 */;
+import importDefaultResult from "debounce" /* 636 */;
 
-const require = arg1;
-const obj = { leading: true, maxWait: null };
-obj[1] = require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS;
-let closure_3 = require("debounce")((arg0) => {
+require = arg1;
+let closure_3 = importDefaultResult((arg0) => {
   const useGameAutocomplete = fetchStore.useGameAutocomplete;
   const items = [arg0];
   const many = useGameAutocomplete.fetchMany(items);
-}, require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MS, obj);
-let result = require("fetchStore").fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
+}, require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MS, { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS });
+const obj = { leading: true, maxWait: require("fetchStore").GAME_AUTOCOMPLETE_DEBOUNCE_MAX_WAIT_MS };
+let result = require("set").fileFinishedImporting("modules/games/autocomplete/queryGamesAutocomplete.tsx");
 
 export const queryGamesAutocomplete = function queryGamesAutocomplete(query) {
   const result = GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH.normalizeGameAutocompleteQuery(query);

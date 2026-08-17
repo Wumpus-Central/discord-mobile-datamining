@@ -1,12 +1,16 @@
 // discord_app/modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx
-import { CHANNEL_AFFINITY_V2_TTL } from "result";
-import { PersistedStore } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import result2 from "result" /* 15539 */;
 
+const CHANNEL_AFFINITY_V2_TTL = result2.CHANNEL_AFFINITY_V2_TTL;
 let map = new Map();
 let c2 = false;
 const frozen = Object.freeze({ channelAffinities: [], lastFetched: 0 });
 let obj = {};
 let merged = Object.assign(frozen);
+const PersistedStore = initializeDefault.PersistedStore;
 class ChannelAffinitiesV2Store extends PersistedStore {
 }
 const prototype = ChannelAffinitiesV2Store.prototype;
@@ -16,7 +20,7 @@ prototype["initialize"] = function initialize(channelAffinities) {
     obj.lastFetched = channelAffinities.lastFetched;
     const _Map = Map;
     channelAffinities = obj.channelAffinities;
-    const map = new Map(channelAffinities.map((channelId) => {
+    map = new Map(channelAffinities.map((channelId) => {
       const items = [channelId.channelId, channelId];
       return items;
     }));
@@ -66,29 +70,29 @@ ChannelAffinitiesV2Store.displayName = "ChannelAffinitiesV2Store";
 ChannelAffinitiesV2Store.persistKey = "ChannelAffinitiesStoreV2";
 obj = {
   LOAD_CHANNEL_AFFINITIES_V2: function handleLoadChannelAffinities() {
-    let c2 = true;
+    c2 = true;
   },
   LOAD_CHANNEL_AFFINITIES_V2_SUCCESS: function handleLoadChannelAffinitiesSuccess(affineChannels) {
     obj.lastFetched = Date.now();
-    let c2 = false;
+    c2 = false;
     obj.channelAffinities = affineChannels.affineChannels;
     const channelAffinities = obj.channelAffinities;
-    const map = new Map(channelAffinities.map((channelId) => {
+    map = new Map(channelAffinities.map((channelId) => {
       const items = [channelId.channelId, channelId];
       return items;
     }));
   },
   LOAD_CHANNEL_AFFINITIES_V2_FAILURE: function handleLoadChannelAffinitiesFailure() {
-    let c2 = false;
+    c2 = false;
   },
   LOGOUT: function handleLogout() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(frozen);
-    const map = new Map();
-    let c2 = false;
+    map = new Map();
+    c2 = false;
   }
 };
-const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(require("dispatcher"), obj);
-const result = require("dispatcher").fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
+const channelAffinitiesV2Store = new ChannelAffinitiesV2Store(dispatcherDefault, obj);
+const result = set.fileFinishedImporting("modules/channel_affinities_v2/ChannelAffinitiesV2Store.tsx");
 
 export default channelAffinitiesV2Store;

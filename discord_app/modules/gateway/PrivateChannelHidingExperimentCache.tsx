@@ -1,10 +1,12 @@
 // discord_app/modules/gateway/PrivateChannelHidingExperimentCache.tsx
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import set from "set" /* 2 */;
+import Storage2 from "Storage" /* 595 */;
+
 const private_channel_obfuscation = "private_channel_obfuscation";
-const result = require("set").fileFinishedImporting("modules/gateway/PrivateChannelHidingExperimentCache.tsx");
+const result = set.fileFinishedImporting("modules/gateway/PrivateChannelHidingExperimentCache.tsx");
 
 export const PRIVATE_CHANNEL_OBFUSCATION_KEY = "private_channel_obfuscation";
 export const getCachedPrivateChannelObfuscation = function getCachedPrivateChannelObfuscation() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   return null != Storage.get(private_channel_obfuscation);
 };

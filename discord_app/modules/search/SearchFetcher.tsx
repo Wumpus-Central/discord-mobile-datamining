@@ -1,13 +1,11 @@
 // discord_app/modules/search/SearchFetcher.tsx
-import sendRequest from "sendRequest";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import ME from "ME";
-import { parse } from "../../../_runtime/01484_parse.js";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import parseDefault from "parse" /* 1484 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ SearchTypes: c5, Endpoints: closure_6 } = ME);
 class SearchFetcher {
   constructor(arg0, arg1, arg2) {
@@ -20,9 +18,9 @@ class SearchFetcher {
 }
 const prototype = SearchFetcher.prototype;
 prototype["fetch"] = function fetch(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   const self = this;
   return self(function*() {
     if (c6 === 2) {
@@ -51,26 +49,26 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
             obj[0] = arg1;
             return obj;
           } else {
-            const callback2 = tmp3;
+            dependencyMap = tmp3;
             let callback = tmp7;
             let lib;
             callback = undefined;
-            if (!outer1_3.isCanceled) {
-              let c4 = 1;
+            if (!closure_1_3.isCanceled) {
+              c4 = 1;
               c5 = 2;
               c6 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_3.makeRequest({ rejectWithError: false });
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_3.makeRequest({ rejectWithError: false });
               return obj1;
             }
           }
         } else {
           if (1 === tmp7) {
             c4 = 0;
-            const outer1_2 = sendRequest;
-            obj1 = new outer1_1(outer1_2[4])("SearchFetcher");
-            obj1.error(outer1_2);
-            callback2(outer1_2);
+            dependencyMap = closure_3;
+            obj1 = new closure_1_1(3)("SearchFetcher");
+            obj1.error(dependencyMap);
+            dependencyMap(dependencyMap);
           } else if (arg0 === 1) {
             c6 = 3;
             throw arg1;
@@ -86,17 +84,17 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
               c4 = 0;
               c6 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
-            } else if (!sendRequest.isCanceled) {
+            } else if (!closure_3.isCanceled) {
               if (200 === lib.status) {
-                lib(outer1_0);
+                lib(closure_1_0);
               } else if (202 === lib.status) {
-                const attempts = sendRequest.query.attempts;
+                const attempts = closure_3.query.attempts;
                 lib = attempts;
                 if (attempts == null) {
                   lib = 0;
                 }
-                sendRequest.query.attempts = lib + 1;
-                if (sendRequest.query.attempts > 5) {
+                closure_3.query.attempts = lib + 1;
+                if (closure_3.query.attempts > 5) {
                   c4 = 0;
                   c6 = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
@@ -108,13 +106,13 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
                   if (!isNaN(callback)) {
                     num2 = 5000;
                     if (0 !== callback) {
-                      num2 = callback * outer1_1(outer1_2[3]).Millis.SECOND;
+                      num2 = callback * closure_1_1(687).Millis.SECOND;
                     }
                   }
-                  sendRequest.retryDelay = num2;
-                  sendRequest.retryLater(lib, callback, callback2);
-                  callback(outer1_0);
-                  const tmp71 = sendRequest;
+                  closure_3.retryDelay = num2;
+                  closure_3.retryLater(lib, callback, dependencyMap);
+                  callback(closure_1_0);
+                  const tmp71 = closure_3;
                 }
               }
               c4 = 0;
@@ -126,7 +124,7 @@ prototype["fetch"] = function fetch(arg0, arg1, arg2) {
         }
         c6 = 3;
       } catch (tmp49) {
-        sendRequest = tmp49;
+        closure_3 = tmp49;
         if (tmp4 === c4) {
           c6 = tmp2;
           throw tmp49;
@@ -153,7 +151,7 @@ prototype["retryLater"] = function retryLater(c0, closure_1, closure_2) {
   const _fetch = self.fetch;
   self.indexingPollId = setTimeout(_fetch.bind(self, c0, closure_1, closure_2), self.retryDelay);
 };
-const result = require("ME").fileFinishedImporting("modules/search/SearchFetcher.tsx");
+const result = require("set").fileFinishedImporting("modules/search/SearchFetcher.tsx");
 class SearchFetcherImpl extends SearchFetcher {
 }
 const prototype2 = SearchFetcherImpl.prototype;
@@ -188,7 +186,7 @@ prototype2["getEndpoint"] = function getEndpoint() {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
+    error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
     throw error;
   }
 };
@@ -199,10 +197,10 @@ prototype2["makeRequest"] = function makeRequest(rejectWithError) {
     const HTTP = sendRequest.HTTP;
     const obj = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
     obj[0] = endpoint;
-    obj[1] = parse.stringify(this.query);
+    obj[1] = parseDefault.stringify(this.query);
     obj[3] = rejectWithError.rejectWithError;
     value = HTTP.get(obj);
-    const obj2 = parse;
+    const obj2 = parseDefault;
   }
   return value;
 };
@@ -233,7 +231,7 @@ prototype3["getEndpoint"] = function getEndpoint() {
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
+            error = new Error("[SearchFetcher] Unhandled search type: " + self.searchType);
             throw error;
           }
         }

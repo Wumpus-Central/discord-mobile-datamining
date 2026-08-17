@@ -1,16 +1,13 @@
 // discord_app/modules/messages/BackgroundTaskManager.native.tsx
-import closure_3 from "set";
-import { NativeModules } from "get ActivityIndicator";
-import set from "set";
-import set from "set";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { initialize } from "../foreground_service/mobile/ForegroundServiceManager.android.tsx";
+import set2 from "set" /* 500 */;
+import initializeDefault from "initialize" /* 7504 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import set from "set" /* 500 */;
 
-const require = arg1;
+require = arg1;
 function startBackgroundTask(arg0) {
-  let content;
-  let title;
-  let obj = set;
+  let obj = set2;
   if (obj.isAndroid()) {
     if (null == arg0) {
       const promise = new Promise((arg0) => arg0(closure_5));
@@ -22,7 +19,7 @@ function startBackgroundTask(arg0) {
       obj[1] = content;
       obj[2] = tmp(7505).ServiceNotificationPriority.MEDIUM;
       obj[3] = tmp(7505).ServiceNotificationType.FILE_UPLOAD;
-      return initialize.addServiceHandler(obj);
+      return initializeDefault.addServiceHandler(obj);
     }
   } else {
     const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
@@ -36,18 +33,18 @@ if (!set.isAndroid()) {
 function endBackgroundTask(c7) {
   if (c7 !== num) {
     if (obj.isAndroid()) {
-      initialize.removeServiceHandler(c7);
-      const obj2 = initialize;
+      initializeDefault.removeServiceHandler(c7);
+      const obj2 = initializeDefault;
     } else {
       const DCDBackgroundTaskManager = NativeModules.DCDBackgroundTaskManager;
       DCDBackgroundTaskManager.endBackgroundTask(c7);
     }
-    obj = set;
+    obj = set2;
   }
 }
 function backgroundify(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return callback(function*() {
     if (c5 === 2) {
       c5 = 3;
@@ -75,14 +72,14 @@ function backgroundify(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
+            closure_1 = tmp3;
             let callback = tmp5;
             callback = c5;
-            let c3 = 1;
+            c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_6(outer1_1);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_6(closure_1_1);
             return obj1;
           }
         } else if (1 === tmp8) {
@@ -120,7 +117,7 @@ function backgroundify(arg0, arg1) {
           return obj;
         }
       } catch (tmp18) {
-        let closure_2 = tmp18;
+        closure_2 = tmp18;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp18;

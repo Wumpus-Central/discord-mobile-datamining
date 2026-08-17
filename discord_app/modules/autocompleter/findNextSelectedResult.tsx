@@ -1,10 +1,9 @@
 // discord_app/modules/autocompleter/findNextSelectedResult.tsx
-import HeaderRecord from "HeaderRecord";
+import set from "set" /* 2 */;
+import HeaderRecord from "HeaderRecord" /* 6773 */;
 
-let c0;
-let closure_1;
 ({ FindResultDirections: c0, AutocompleterResultTypes: closure_1 } = HeaderRecord);
-const result = require("set").fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
+const result = set.fileFinishedImporting("modules/autocompleter/findNextSelectedResult.tsx");
 function findNextSelectedResult(DOWN, closure_23, items) {
   if (0 === items.length) {
     return 0;

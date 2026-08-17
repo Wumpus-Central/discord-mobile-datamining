@@ -1,19 +1,14 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx
-import noop from "noop";
-import hasConsented from "hasConsented";
-import { MobileUserSettings } from "MobileUserSettings";
-import ME from "ME";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "hasConsented" /* 5258 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
+const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/DataAndPrivacyScreen.tsx");
 
 export default function DataAndPrivacySettings() {
   let obj = stackNavigation(1500);
@@ -26,7 +21,7 @@ export default function DataAndPrivacySettings() {
   obj[0] = obj3.getArticleURL(constants.DATA_PRIVACY_CONTROLS);
   obj[1] = intl.format(stackNavigation(1236).t["igTSG/"], obj);
   items1 = [obj, , , ];
-  let obj1 = { settings: items2, subLabel: null };
+  obj1 = { settings: items2, subLabel: null };
   items2 = [MobileUserSettings.USE_DATA_TO_CUSTOMIZE_DISCORD];
   let intl2 = stackNavigation(1236).intl;
   let obj2 = { helpdeskArticle: null };
@@ -56,8 +51,7 @@ export default function DataAndPrivacySettings() {
   const items5 = [MobileUserSettings.REQUEST_YOUR_DATA];
   obj7[1] = items5;
   const intl6 = stackNavigation(1236).intl;
-  const obj8 = { helpdeskArticle: null };
-  obj8[0] = items1(1993).getArticleURL(constants.GDPR_REQUEST_DATA);
+  const obj8 = { helpdeskArticle: items1(1993).getArticleURL(constants.GDPR_REQUEST_DATA) };
   obj7[2] = intl6.format(stackNavigation(1236).t.P3kNfr, obj8);
   items1.push(obj7);
   obj9 = { settings: items6, subLabel: null };
@@ -65,7 +59,7 @@ export default function DataAndPrivacySettings() {
   const intl7 = stackNavigation(1236).intl;
   obj9[1] = intl7.format(stackNavigation(1236).t.N1P5gE, {
     onClick() {
-      return stackNavigation.navigate(outer1_7.CONTENT_AND_SOCIAL);
+      return stackNavigation.navigate(closure_1_7.CONTENT_AND_SOCIAL);
     }
   });
   items1.push(obj9);
@@ -81,30 +75,29 @@ export default function DataAndPrivacySettings() {
   const items8 = [stackNavigation, items1];
   const obj11 = { children: null };
   const memo = React.useMemo(() => {
-    let obj = stackNavigation(outer1_2[11]);
+    let obj = stackNavigation(closure_1_2[11]);
     obj = { sections: null };
     const items = [...items1];
     obj = { label: null, settings: null, subLabel: null };
-    const intl = stackNavigation(outer1_2[5]).intl;
-    obj[0] = intl.string(stackNavigation(outer1_2[5]).t.Me5lVK);
+    const intl = stackNavigation(closure_1_2[5]).intl;
+    obj[0] = intl.string(stackNavigation(closure_1_2[5]).t.Me5lVK);
     items1 = [, ];
-    ({ DATA_AND_PRIVACY_SECURE_FRAMES_PERSISTENT_CODES: arr2[0], ENCRYPTION_VERIFIED_DEVICES: arr2[1] } = outer1_5);
+    ({ DATA_AND_PRIVACY_SECURE_FRAMES_PERSISTENT_CODES: arr2[0], ENCRYPTION_VERIFIED_DEVICES: arr2[1] } = closure_1_5);
     obj[1] = items1;
-    const intl2 = stackNavigation(outer1_2[5]).intl;
-    const obj1 = { helpArticle: null };
-    obj1[0] = stackNavigation(outer1_2[7]).getSecureFramesHelpdeskArticle();
-    obj[2] = intl2.format(stackNavigation(outer1_2[5]).t["/6sFWa"], obj1);
+    const intl2 = stackNavigation(closure_1_2[5]).intl;
+    obj1 = { helpArticle: stackNavigation(closure_1_2[7]).getSecureFramesHelpdeskArticle() };
+    obj[2] = intl2.format(stackNavigation(closure_1_2[5]).t["/6sFWa"], obj1);
     items[tmp] = obj;
     const obj2 = { label: null, settings: null, subLabel: null };
-    const intl3 = stackNavigation(outer1_2[5]).intl;
-    obj2[0] = intl3.string(stackNavigation(outer1_2[5]).t["+uHbqE"]);
+    const intl3 = stackNavigation(closure_1_2[5]).intl;
+    obj2[0] = intl3.string(stackNavigation(closure_1_2[5]).t["+uHbqE"]);
     const items2 = [, ];
-    ({ SAFETY_TERMS_OF_SERVICE: arr3[0], SAFETY_PRIVACY_POLICY: arr3[1] } = outer1_5);
+    ({ SAFETY_TERMS_OF_SERVICE: arr3[0], SAFETY_PRIVACY_POLICY: arr3[1] } = closure_1_5);
     obj2[1] = items2;
-    const intl4 = stackNavigation(outer1_2[5]).intl;
-    obj2[2] = intl4.format(stackNavigation(outer1_2[5]).t.R5N31P, {
+    const intl4 = stackNavigation(closure_1_2[5]).intl;
+    obj2[2] = intl4.format(stackNavigation(closure_1_2[5]).t.R5N31P, {
       onClick() {
-        return navigation.navigate(outer1_7.ACCOUNT);
+        return navigation.navigate(closure_1_7.ACCOUNT);
       }
     });
     const items3 = [obj2];
@@ -115,7 +108,7 @@ export default function DataAndPrivacySettings() {
   obj12 = { screen: null };
   const obj10 = {
     onClick() {
-      return stackNavigation.navigate(outer1_7.CONTENT_AND_SOCIAL);
+      return stackNavigation.navigate(closure_1_7.CONTENT_AND_SOCIAL);
     }
   };
   const obj16 = items1(1993);

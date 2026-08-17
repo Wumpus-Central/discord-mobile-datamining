@@ -1,48 +1,42 @@
 // discord_app/design/void/InputView/native/InputView.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { Fonts } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { BottomSheetTextInput } from "../../../../modules/action_sheet/native/components/BottomSheetTextInput.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { CircleXIcon } from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
-import { Text } from "../../../components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../shared.tsx";
-import { Button } from "../../native.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import Text from "Text" /* 4734 */;
+import CircleXIcon from "CircleXIcon" /* 7341 */;
+import BottomSheetTextInputDefault from "BottomSheetTextInput" /* 11351 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { Fonts } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let Platform;
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let require = arg1;
+require = arg1;
 let closure_3 = ["numberOfLines", "disableConstantNumberOfLines", "inputTextColor", "placeholder", "placeholderTextColor", "editable", "large", "accessibilityHint", "maxLength", "inActionSheet", "trailingButton", "clearButtonVisibility", "disabled", "style", "inputTextStyle", "onChangeText", "onFocus", "value"];
 ({ View: c5, Pressable: closure_6, TouchableWithoutFeedback: error, Platform } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { disabled: { opacity: 0.5 }, topContainer: { minHeight: 16, alignItems: "center", flexDirection: "row", marginBottom: 5, flexWrap: "wrap" }, inputViewTitle: { marginRight: 5 }, inputViewError: null, inputBorder: null, inputView: null, inputViewBorder: null, inputViewBorderActive: null, inputContainer: null, bottomContainer: null, charactersLength: null, closeIcon: null, clearButton: null, required: null };
-createCacheKey = { fontSize: 10, color: require("Themes").unsafe_rawColors.RED_400 };
+createCacheKey = { fontSize: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { backgroundColor: require("Themes").colors.TEXT_MUTED };
-let obj1 = { backgroundColor: require("Themes").colors.TEXT_MUTED };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.TEXT_MUTED };
+let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[5] = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createCacheKey[6] = { marginTop: 8, height: 2 };
 let obj2 = { fontSize: 16, paddingBottom: 0, paddingTop: 0, textAlignVertical: "top", flex: 1, color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
-createCacheKey[7] = { backgroundColor: require("Themes").unsafe_rawColors.TRANSPARENT };
+createCacheKey[7] = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", position: "relative" };
 createCacheKey[9] = { marginTop: 5 };
-let obj3 = { backgroundColor: require("Themes").unsafe_rawColors.TRANSPARENT };
+let obj3 = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[10] = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
 let obj4 = { alignSelf: "flex-end", fontFamily: Fonts.CODE_BOLD, color: require("result").DARK_PRIMARY_400_LIGHT_PRIMARY_300 };
-createCacheKey[11] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[11] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[12] = { position: "absolute", right: 6 };
-let obj5 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[13] = { color: require("Themes").unsafe_rawColors.RED_400 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let obj5 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[13] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
+let closure_11 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const obj7 = { NEVER: "never", WITH_CONTENT: "with-content", ALWAYS: "always" };
 const PureComponent = importAllResult.PureComponent;
 class InputView extends PureComponent {
@@ -155,7 +149,7 @@ InputView["getDerivedStateFromProps"] = function getDerivedStateFromProps(value,
   }
 };
 prototype["renderBorder"] = function renderBorder() {
-  const tmp = createCacheKey(this.context);
+  const tmp = callback4(this.context);
   const props = this.props;
   let backgroundColor = props.borderColor;
   if (props.showBorder) {
@@ -179,14 +173,7 @@ prototype["renderBorder"] = function renderBorder() {
   }
 };
 prototype["renderTopContainer"] = function renderTopContainer() {
-  let error;
-  let errorProps;
-  let errorStyles;
-  let helpText;
-  let required;
-  let showTopContainer;
-  let title;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback4(this.context);
   const props = this.props;
   ({ error, title, errorProps, helpText } = props);
   let tmp2 = null != error;
@@ -235,7 +222,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
     obj[1] = helpText;
     tmp16 = callback2(Text.Text, obj);
   }
-  const obj1 = { style: tmp.topContainer, children: null };
+  obj1 = { style: tmp.topContainer, children: null };
   const items3 = [tmp12Result, tmp16, , ];
   let tmp22 = null == tmp3;
   if (tmp22) {
@@ -253,7 +240,7 @@ prototype["renderTopContainer"] = function renderTopContainer() {
 };
 prototype["renderBottomContainer"] = function renderBottomContainer() {
   const self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback4(this.context);
   const props = this.props;
   const maxLength = props.maxLength;
   let tmp2 = null;
@@ -276,9 +263,6 @@ prototype["renderBottomContainer"] = function renderBottomContainer() {
   return tmp2;
 };
 prototype["renderTrailingButton"] = function renderTrailingButton() {
-  let clearButtonAccessibilityLabel;
-  let clearButtonVisibility;
-  let trailingButton;
   const self = this;
   ({ trailingButton, clearButtonVisibility, clearButtonAccessibilityLabel } = this.props);
   if (null == trailingButton) {
@@ -305,30 +289,12 @@ prototype["renderTrailingButton"] = function renderTrailingButton() {
   return trailingButton;
 };
 prototype["renderTextView"] = function renderTextView() {
-  let accessibilityHint;
-  let clearButtonVisibility;
-  let disableConstantNumberOfLines;
-  let disabled;
-  let editable;
-  let inActionSheet;
-  let inputTextColor;
-  let inputTextStyle;
-  let large;
-  let maxLength;
-  let numberOfLines;
-  let onChangeText;
-  let onFocus;
-  let placeholder;
-  let placeholderTextColor;
-  let style;
-  let trailingButton;
-  let value;
   const self = this;
   const props = this.props;
   ({ numberOfLines, inputTextColor, placeholder, placeholderTextColor, large, maxLength, trailingButton, clearButtonVisibility, style, onChangeText, onFocus, value } = props);
   ({ disableConstantNumberOfLines, editable, accessibilityHint, inActionSheet, disabled, inputTextStyle } = props);
   const tmp2 = callback(props, closure_3);
-  const items = [createCacheKey(this.context).inputView, , , , ];
+  const items = [callback4(this.context).inputView, , , , ];
   if (disableConstantNumberOfLines) {
     let num2 = 21;
     if (large) {
@@ -348,7 +314,7 @@ prototype["renderTextView"] = function renderTextView() {
   if (null != inputTextColor) {
     obj = { color: null };
     obj[0] = inputTextColor;
-    let obj1 = obj;
+    obj1 = obj;
   } else {
     obj1 = {};
   }
@@ -375,7 +341,7 @@ prototype["renderTextView"] = function renderTextView() {
     const found = items1.filter(Boolean);
     const joined = found.join(",");
     if (inActionSheet) {
-      let TextInput = BottomSheetTextInput;
+      let TextInput = BottomSheetTextInputDefault;
     } else {
       TextInput = Button.TextInput;
     }
@@ -395,13 +361,13 @@ prototype["renderTextView"] = function renderTextView() {
     return closure_9(TextInput, obj5);
   } else {
     obj6 = AccessibilityAnnouncer;
-    const unsafe_rawColors = Themes.unsafe_rawColors;
+    const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
     const isThemeDarkResult = obj6.isThemeDark(self.context.theme);
   }
 };
 prototype["render"] = function render() {
   const self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback4(this.context);
   const props = this.props;
   const disabled = props.disabled;
   let obj = { accessible: false, onPress: this.focus, children: null };
@@ -430,7 +396,7 @@ prototype["render"] = function render() {
   items1[2] = set.isAndroid() && self.renderBorder();
   items1[3] = self.renderBottomContainer();
   const tmp8 = set.isAndroid() && self.renderBorder();
-  const isAndroidResult = tmp6(500).isAndroid();
+  const isAndroidResult = set.isAndroid();
   let renderBorderResult = !isAndroidResult;
   if (!isAndroidResult) {
     renderBorderResult = self.renderBorder();
@@ -442,8 +408,8 @@ prototype["render"] = function render() {
 };
 InputView.contextType = require("ManaContext").ThemeContext;
 InputView.defaultProps = { showBorder: true, value: "", returnKeyType: "next", disabled: false, autoFocus: false, multiline: false, numberOfLines: 1, showTopContainer: true, showCharactersRemaining: false, clearButtonVisibility: "never", inActionSheet: false };
-let obj6 = { color: require("Themes").unsafe_rawColors.RED_400 };
-const result = require("get ActivityIndicator").fileFinishedImporting("design/void/InputView/native/InputView.tsx");
+let obj6 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
+const result = require("set").fileFinishedImporting("design/void/InputView/native/InputView.tsx");
 
 export default InputView;
 export const ClearButtonVisibility = obj7;

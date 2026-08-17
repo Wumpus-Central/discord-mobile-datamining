@@ -1,29 +1,29 @@
 // discord_app/modules/integration_settings/native/useShowUnlinkChannelAlert.tsx
-import componentDidMount from "componentDidMount";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("init").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/integration_settings/native/useShowUnlinkChannelAlert.tsx");
 
 export default function useShowUnlinkChannelAlert(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   const items = [arg0, arg2];
   callback = React.useCallback(callback(function*() {
-    let closure_0 = tmp3;
-    let c3 = 1;
-    yield v0(outer1_2[2]).removeLinkedLobby(outer1_0);
+    closure_0 = tmp3;
+    c3 = 1;
+    yield v0(closure_1_2[2]).removeLinkedLobby(closure_1_0);
     if (1 === tmp7) {
       c3 = 0;
-      const obj1 = v0(outer1_2[3]);
+      obj1 = v0(closure_1_2[3]);
       const obj2 = { title: null, body: null };
-      const intl = outer1_0(outer1_2[4]).intl;
-      obj2[0] = intl.string(outer1_0(outer1_2[4]).t.vFzPFj);
-      const intl2 = outer1_0(outer1_2[4]).intl;
-      obj2[1] = intl2.string(outer1_0(outer1_2[4]).t["6D5WVg"]);
+      const intl = closure_1_0(closure_1_2[4]).intl;
+      obj2[0] = intl.string(closure_1_0(closure_1_2[4]).t.vFzPFj);
+      const intl2 = closure_1_0(closure_1_2[4]).intl;
+      obj2[1] = intl2.string(closure_1_0(closure_1_2[4]).t["6D5WVg"]);
       obj1.show(obj2);
-      let c4 = 3;
+      c4 = 3;
     } else if (arg0 === 1) {
       c4 = 3;
       throw arg1;

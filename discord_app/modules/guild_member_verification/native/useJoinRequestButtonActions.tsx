@@ -1,18 +1,18 @@
 // discord_app/modules/guild_member_verification/native/useJoinRequestButtonActions.tsx
-import jsxProd from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Routes } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import { Routes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/guild_member_verification/native/useJoinRequestButtonActions.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/useJoinRequestButtonActions.tsx");
 
 export const useJoinRequestButtonActions = function useJoinRequestButtonActions(joinRequest, interviewChannelId, callback) {
-  let closure_0 = joinRequest;
-  let closure_1 = interviewChannelId;
-  let closure_2 = callback;
+  closure_0 = joinRequest;
+  closure_1 = interviewChannelId;
+  closure_2 = callback;
   let obj = joinRequest;
   if (joinRequest == null) {
     obj = {};
@@ -22,7 +22,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
   const joinRequestId = obj.joinRequestId;
   const tmp = userId(joinRequestId.useState(false), 2);
   const first = tmp[0];
-  let closure_7 = tmp[1];
+  closure_7 = tmp[1];
   callback = joinRequestId.useCallback(() => {
     let obj = interviewChannelId(paths[6]);
     obj = { key: "JOIN_REQUEST_ERROR", content: null };
@@ -59,27 +59,27 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp4;
-            let c0 = tmp8;
+            closure_1 = tmp4;
+            c0 = tmp8;
             c0 = undefined;
-            if (!outer1_6) {
+            if (!closure_1_6) {
               if (null != c3) {
                 if (null != c4) {
                   if (null != c5) {
-                    const channel = outer1_6.getChannel(outer1_1);
+                    const channel = closure_1_6.getChannel(closure_1_1);
                     if (null != channel) {
                       c4 = 1;
                       c5 = 1;
-                      const obj1 = { value: null, done: false };
-                      obj1[0] = outer1_1(outer1_2[8])(outer1_7.CHANNEL(null, channel.id), { openChannel: true, navigationReplace: false });
+                      obj1 = { value: null, done: false };
+                      obj1[0] = closure_1_1(closure_1_2[8])(closure_1_7.CHANNEL(null, channel.id), { openChannel: true, navigationReplace: false });
                       return obj1;
                     } else {
-                      outer1_7(true);
+                      closure_1_7(true);
                       c3 = 2;
                       c4 = 4;
                       c5 = 1;
                       const obj2 = { value: null, done: false };
-                      obj2[0] = outer1_1(outer1_2[10]).createOrEnterJoinRequestInterview(tmp71, false);
+                      obj2[0] = closure_1_1(closure_1_2[10]).createOrEnterJoinRequestInterview(tmp71, false);
                       return obj2;
                     }
                   }
@@ -98,7 +98,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             obj3[0] = arg1;
             return obj3;
           } else {
-            let obj7 = outer1_1(outer1_2[9]);
+            let obj7 = closure_1_1(closure_1_2[9]);
             obj7.hideActionSheet();
             c5 = 3;
             const obj4 = { value: null, done: true };
@@ -108,7 +108,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         } else if (2 !== tmp8) {
           if (3 === tmp8) {
             c3 = 1;
-            outer1_8();
+            closure_1_8();
           } else {
             if (4 === tmp8) {
               if (arg0 === 1) {
@@ -116,20 +116,20 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
                 throw arg1;
               } else if (arg0 === 2) {
                 c3 = 0;
-                outer1_7(false);
-                obj3 = outer1_1(outer1_2[9]);
+                closure_1_7(false);
+                obj3 = closure_1_1(closure_1_2[9]);
                 obj3.hideActionSheet();
                 c5 = 3;
                 let obj5 = { value: null, done: true };
                 obj5[0] = arg1;
                 return obj5;
               } else {
-                const outer1_0 = arg1;
-                if (null != outer1_0) {
+                closure_0 = arg1;
+                if (null != closure_0) {
                   c4 = 5;
                   c5 = 1;
                   let obj6 = { value: null, done: false };
-                  obj6[0] = outer1_1(outer1_2[8])(outer1_7.CHANNEL(null, outer1_0), { openChannel: true, navigationReplace: false });
+                  obj6[0] = closure_1_1(closure_1_2[8])(closure_1_7.CHANNEL(null, closure_0), { openChannel: true, navigationReplace: false });
                   return obj6;
                 }
               }
@@ -139,7 +139,7 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             } else if (arg0 === 2) {
               c3 = 0;
               callback(false);
-              obj = outer1_1(outer1_2[9]);
+              obj = closure_1_1(closure_1_2[9]);
               obj.hideActionSheet();
               c5 = 3;
               obj7 = { value: null, done: true };
@@ -149,13 +149,13 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             c3 = 1;
           }
           c3 = 0;
-          outer1_7(false);
-          obj5 = outer1_1(outer1_2[9]);
+          closure_1_7(false);
+          obj5 = closure_1_1(closure_1_2[9]);
           obj5.hideActionSheet();
         }
         c3 = 0;
-        outer1_7(false);
-        obj6 = outer1_1(outer1_2[9]);
+        closure_1_7(false);
+        obj6 = closure_1_1(closure_1_2[9]);
         obj6.hideActionSheet();
         throw closure_2;
       } catch (tmp60) {
@@ -199,19 +199,19 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp4;
-            let closure_0 = tmp4;
-            if (!outer1_6) {
+            closure_1 = tmp4;
+            closure_0 = tmp4;
+            if (!closure_1_6) {
               if (null != c3) {
                 if (null != c4) {
                   if (null != c5) {
-                    outer1_7(true);
+                    closure_1_7(true);
                     c3 = 2;
-                    const obj5 = outer1_1(outer1_2[10]);
+                    const obj5 = closure_1_1(closure_1_2[10]);
                     c4 = 3;
                     c5 = 1;
-                    const obj1 = { value: null, done: false };
-                    obj1[0] = obj5.updateGuildJoinRequest(tmp32, tmp63, tmp33, outer1_0(outer1_2[11]).GuildJoinRequestApplicationStatuses.APPROVED);
+                    obj1 = { value: null, done: false };
+                    obj1[0] = obj5.updateGuildJoinRequest(tmp32, tmp63, tmp33, closure_1_0(closure_1_2[11]).GuildJoinRequestApplicationStatuses.APPROVED);
                     return obj1;
                   }
                 }
@@ -222,14 +222,14 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c3 = 1;
-            outer1_8();
+            closure_1_8();
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
             callback(false);
-            obj = outer1_1(outer1_2[9]);
+            obj = closure_1_1(closure_1_2[9]);
             obj.hideActionSheet();
             c5 = 3;
             let obj2 = { value: null, done: true };
@@ -237,26 +237,23 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
             return obj2;
           } else {
             let obj3 = { key: "JOIN_REQUEST_APPROVE", content: null, icon: null };
-            const intl = outer1_0(outer1_2[7]).intl;
-            obj3[1] = intl.string(outer1_0(outer1_2[7]).t.WXHcq5);
+            const intl = closure_1_0(closure_1_2[7]).intl;
+            obj3[1] = intl.string(closure_1_0(closure_1_2[7]).t.WXHcq5);
             obj3[2] = function icon() {
-              const obj = { color: null, secondaryColor: null };
-              obj[0] = tmp42(tmp44[13]).colors.STATUS_POSITIVE_BACKGROUND;
-              obj[1] = tmp42(tmp44[13]).colors.STATUS_POSITIVE_TEXT;
-              return callback(tmp4(tmp44[12]).CircleCheckIcon, obj);
+              return callback(tmp4(tmp44[12]).CircleCheckIcon, { color: tmp42(tmp44[13]).colors.STATUS_POSITIVE_BACKGROUND, secondaryColor: tmp42(tmp44[13]).colors.STATUS_POSITIVE_TEXT });
             };
-            outer1_1(outer1_2[6]).open(obj3);
+            closure_1_1(closure_1_2[6]).open(obj3);
             c3 = 1;
-            const obj9 = outer1_1(outer1_2[6]);
+            const obj9 = closure_1_1(closure_1_2[6]);
           }
           c3 = 0;
-          outer1_7(false);
-          obj2 = outer1_1(outer1_2[9]);
+          closure_1_7(false);
+          obj2 = closure_1_1(closure_1_2[9]);
           obj2.hideActionSheet();
         }
         c3 = 0;
         callback(false);
-        obj3 = outer1_1(outer1_2[9]);
+        obj3 = closure_1_1(closure_1_2[9]);
         obj3.hideActionSheet();
         throw closure_2;
       } catch (tmp44) {

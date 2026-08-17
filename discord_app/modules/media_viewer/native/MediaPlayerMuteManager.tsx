@@ -1,9 +1,8 @@
 // discord_app/modules/media_viewer/native/MediaPlayerMuteManager.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import keys from "keys";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import keys from "keys" /* 644 */;
 
-let NativeEventEmitter;
-let NativeModules;
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 const obj = keys.create(() => ({ isMuted: false }));
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.MediaPlayerManager);
@@ -14,7 +13,7 @@ prototype["initialize"] = function initialize() {
   this.muteSubscription = nativeEventEmitter.addListener("MediaPlayerMuteStateChanged", (isMuted) => {
     isMuted = isMuted.isMuted;
     isMuted(table[2]).batchUpdates(() => {
-      outer1_2.setState({ isMuted });
+      closure_1_2.setState({ isMuted });
     });
   });
 };
@@ -24,7 +23,7 @@ prototype["terminate"] = function terminate() {
     muteSubscription.remove();
   }
 };
-const result = require("batchUpdates").fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
+const result = set.fileFinishedImporting("modules/media_viewer/native/MediaPlayerMuteManager.tsx");
 
 export default Object.create(MediaPlayerMuteManager.prototype);
 export const useMediaPlayerMutedStore = obj;

@@ -1,28 +1,23 @@
 // discord_app/modules/messages/native/renderer/RowGeneratorUtils.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
-import { SwipeActionsType } from "Changeset";
-import ME from "ME";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import set from "ensureGuildLoaded";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
-import { getSrcWithWidthAndHeight } from "../../../../utils/native/ImageUtils.tsx";
-import { useCanManageGuildOfficialMessages } from "../../GuildOfficialMessageUtils.tsx";
-import { createMinimalMessageRecord } from "../../MessageRecordUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSrcWithWidthAndHeightDefault from "getSrcWithWidthAndHeight" /* 1493 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 7232 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { SwipeActionsType } from "Changeset" /* 8158 */;
+import ME from "ME" /* 676 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 2 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: closure_6, GUILD_OFFICIAL_HIGHLIGHT_ALPHA_COLOR: error } = MESSAGE_GROUP_SPACING);
 ({ MessageFlags: c9, MessageTypes: c10 } = ME);
-const result = createCacheKey.experimental_createToken(() => hexToRgba.hexWithOpacity(Themes.unsafe_rawColors.BRAND_500, 0.1));
-createCacheKey = { ephemeralBackgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: require("Themes").colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: require("Themes").colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: require("Themes").unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: require("Themes").colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: require("Themes").unsafe_rawColors.RED_345, editingColor: require("Themes").colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT };
+const result = createCacheKey.experimental_createToken(() => hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.1));
+createCacheKey = { ephemeralBackgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, ephemeralGutterColor: ThemesDefault.colors.BACKGROUND_BRAND, giftIntentEphemeralBackgroundColor: result, mentionedBackgroundColor: ThemesDefault.colors.MESSAGE_MENTIONED_BACKGROUND_DEFAULT, mentionedGutterColor: ThemesDefault.unsafe_rawColors.YELLOW_300, automodBlockedBackgroundColor: ThemesDefault.colors.MESSAGE_AUTOMOD_BACKGROUND_DEFAULT, automodBlockedGutterColor: ThemesDefault.unsafe_rawColors.RED_345, editingColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT };
 createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
 const MediaManager = require("get ActivityIndicator").NativeModules.MediaManager;
 let set = new Set(MediaManager.getConstants().supportedExtensions);
@@ -44,11 +39,9 @@ createCacheKey = {
     if (flag) {
       str3 = "png";
     }
-    return getSrcWithWidthAndHeight.getMobileOptimizedSrc(proxy_url, width, height, str3);
+    return getSrcWithWidthAndHeightDefault.getMobileOptimizedSrc(proxy_url, width, height, str3);
   },
   createBackgroundHighlight(message) {
-    let isAutomodBlockedMessage;
-    let isEditing;
     message = message.message;
     ({ isEditing, isAutomodBlockedMessage } = message);
     const tmp = createCacheKey(message.theme);
@@ -87,7 +80,7 @@ createCacheKey = {
                 ephemeralGutterColor = tmp.ephemeralGutterColor;
               }
             }
-            const obj1 = { backgroundColor: null, gutterColor: null };
+            obj1 = { backgroundColor: null, gutterColor: null };
             obj1[0] = officialMessageColor | closure_7;
             obj1[1] = ephemeralGutterColor;
             return obj1;

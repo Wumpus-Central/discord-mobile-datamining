@@ -1,34 +1,27 @@
 // discord_app/modules/user_profile/native/UserProfileAboutMeCard.tsx
-import GuildIconSizes from "GuildIconSizes";
-import { View } from "DISCORD_EPOCH";
-import _getSystemLocale from "_getSystemLocale";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import { Routes } from "ME";
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
-import { LinkButton } from "../../profile_customization/native/BioText.tsx";
-import { useFriendsSinceDate } from "../hooks/useFriendsSinceDate.tsx";
-import { Divider } from "UserProfileCard.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import map from "map" /* 4097 */;
+import Text from "Text" /* 4734 */;
+import DividerDefault from "Divider" /* 7185 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import LinkButtonDefault from "LinkButton" /* 9549 */;
+import useFriendsSinceDate from "useFriendsSinceDate" /* 9553 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { Routes } from "ME" /* 676 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let UserProfileThemeTypes;
-let closure_12;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function Heading(children) {
-  let headingSpacing;
-  let headingVariant;
   const themeType = children.themeType;
   let tmp;
   if (null != themeType) {
@@ -38,16 +31,13 @@ function Heading(children) {
     tmp = closure_14;
   }
   ({ headingVariant, headingSpacing } = tmp);
-  let variant = map.useToken(Themes.modules.mobile.USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE);
+  let variant = map.useToken(ThemesDefault.modules.mobile.USER_PROFILE_ABOUT_ME_HEADING_TEXT_STYLE);
   if (variant == null) {
     variant = headingVariant;
   }
   return closure_11(Text.Text, { accessibilityRole: "header", variant, color: "user-profile-about-me-heading-text", style: { marginBottom }, children: children.children });
 }
 function TextWithIcon(themeType) {
-  let accessibilityLabel;
-  let children;
-  let icon;
   themeType = themeType.themeType;
   ({ icon, children, accessibilityLabel } = themeType);
   let tmp2;
@@ -64,11 +54,6 @@ function TextWithIcon(themeType) {
   return callback2(View, obj);
 }
 function Bio(arg0) {
-  let displayProfile;
-  let lineClamp;
-  let pendingBio;
-  let themeType;
-  let userId;
   ({ displayProfile, themeType } = arg0);
   let tmp;
   ({ userId, pendingBio, lineClamp } = arg0);
@@ -97,7 +82,7 @@ function Bio(arg0) {
       obj[1] = userId;
       obj[2] = tmp.textVariant;
       obj[3] = lineClamp;
-      items[1] = callback(LinkButton, obj);
+      items[1] = callback(LinkButtonDefault, obj);
       obj[0] = items;
       tmp4 = callback2(View, obj);
     }
@@ -105,10 +90,6 @@ function Bio(arg0) {
   return tmp4;
 }
 function MemberJoinDates(userId) {
-  let columnGap;
-  let importDefault;
-  let textVariant;
-  let themeType;
   userId = userId.userId;
   ({ guildId: importDefault, themeType } = userId);
   let tmp2;
@@ -120,28 +101,28 @@ function MemberJoinDates(userId) {
   }
   ({ textVariant, columnGap } = tmp2);
   let obj = userId(589);
-  const items = [_getSystemLocale];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  let obj1 = userId(589);
-  const items1 = [createGuildRecordFromRust];
+  obj1 = userId(589);
+  const items1 = [closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let guild = null;
     if (null != closure_1) {
-      guild = outer1_7.getGuild(tmp);
+      guild = closure_1_7.getGuild(tmp);
     }
     return guild;
   });
   let obj2 = userId(589);
-  const items2 = [trackCommunicationDisabled];
+  const items2 = [closure_6];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => {
     let member = null;
     if (null != closure_1) {
-      member = outer1_6.getMember(tmp, userId);
+      member = closure_1_6.getMember(tmp, userId);
     }
     return member;
   });
   let obj3 = userId(5224);
-  let obj4 = DISCORD_EPOCH;
+  let obj4 = DISCORD_EPOCHDefault;
   const createdAtDate = obj3.getCreatedAtDate(obj4.extractTimestamp(userId), stateFromStores);
   let obj5 = userId(5224);
   let joinedAt;
@@ -172,7 +153,7 @@ function MemberJoinDates(userId) {
     obj5 = { guild: null, size: null };
     obj5[0] = stateFromStores1;
     obj5[1] = tmp4(7188).GuildIconSizes.XXSMALL;
-    obj4[1] = tmp15(GuildIconSizes, obj5);
+    obj4[1] = tmp15(GuildIconSizesDefault, obj5);
     const intl3 = tmp4(1236).intl;
     const obj6 = { guildName: null, date: null };
     obj6[0] = stateFromStores1.name;
@@ -182,7 +163,7 @@ function MemberJoinDates(userId) {
     items6[1] = tmp15(TextWithIcon, obj4);
     obj2[0] = items6;
     tmp13Result = tmp13(closure_13, obj2);
-    const tmp9Result = GuildIconSizes;
+    const tmp9Result = GuildIconSizesDefault;
   }
   const obj7 = { children: null };
   items5[1] = tmp13Result;
@@ -210,7 +191,7 @@ function FriendsSinceDate(themeType) {
     const intl = tmp3(1236).intl;
     obj[1] = intl.string(tmp3(1236).t.wlTO8v);
     const items = [callback(Heading, obj), ];
-    const obj1 = { variant: null, color: "text-default", children: null };
+    obj1 = { variant: null, color: "text-default", children: null };
     obj1[0] = tmp.textVariant;
     obj1[2] = friendsSinceDate;
     items[1] = callback(tmp3(4734).Text, obj1);
@@ -220,9 +201,6 @@ function FriendsSinceDate(themeType) {
   return tmp6;
 }
 function PolicyLinks(arg0) {
-  let privacyPolicyUrl;
-  let termsOfServiceUrl;
-  let themeType;
   ({ termsOfServiceUrl, privacyPolicyUrl, themeType } = arg0);
   if (null != termsOfServiceUrl) {
     let obj = { themeType: null, children: null };
@@ -244,7 +222,7 @@ function PolicyLinks(arg0) {
     const items1 = [tmp5Result, ];
     tmp5Result = null != privacyPolicyUrl;
     if (tmp5Result) {
-      const obj1 = { url: null, label: null, themeType: null };
+      obj1 = { url: null, label: null, themeType: null };
       obj1[0] = privacyPolicyUrl;
       const intl3 = tmp7(1236).intl;
       obj1[1] = intl3.string(tmp7(1236).t.kH3JR5);
@@ -263,8 +241,6 @@ function PolicyLinks(arg0) {
   return tmp3Result;
 }
 function PolicyLink(children) {
-  let require;
-  let themeType;
   ({ url: require, themeType } = children);
   let tmp;
   if (null != themeType) {
@@ -273,24 +249,17 @@ function PolicyLink(children) {
   if (tmp == null) {
     tmp = closure_14;
   }
-  let obj = {
+  return callback(Button.PressableOpacity, {
     accessibilityRole: "link",
     onPress() {
-      let obj = outer1_0(outer1_2[22]);
+      let obj = closure_1_0(closure_1_2[22]);
       obj = { href: closure_0 };
       return obj.handleClick(obj);
     },
-    children: null
-  };
-  obj[2] = callback(Text.Text, { variant: tmp.textVariant, color: "text-link", children: children.label });
-  return callback(Button.PressableOpacity, obj);
+    children: callback(Text.Text, { variant: tmp.textVariant, color: "text-link", children: children.label })
+  });
 }
 function BotSlashCommands(channel) {
-  let application;
-  let applicationId;
-  let commandIds;
-  let commands;
-  let themeType;
   channel = channel.channel;
   let analyticsLocations;
   let context;
@@ -316,11 +285,11 @@ function BotSlashCommands(channel) {
       const items1 = [callback(Heading, obj), , ];
       obj = { style: null, children: null };
       obj[0] = tmp.slashCommands;
-      obj[1] = commands.map((command) => outer1_11(analyticsLocations(context[33]), { application, channel, command }, command.id));
+      obj[1] = commands.map((command) => closure_1_11(analyticsLocations(context[33]), { application, channel, command }, command.id));
       items1[1] = callback(View, obj);
       let tmp10Result = null != application && null != application.bot;
       if (tmp10Result) {
-        const obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
+        obj1 = { size: "sm", variant: "tertiary", text: null, onPress: null };
         const intl = tmp3(tmp2[13]).intl;
         obj1[2] = intl.string(tmp3(tmp2[13]).t.VEfKyb);
         obj1[3] = tmp5;
@@ -337,21 +306,14 @@ function BotSlashCommands(channel) {
   }
   return tmp8Result;
 }
-({ DIVIDER_DOT: metroImportAll, UserProfileThemeTypes } = ARBITRARY_LARGE_OFFSET);
+({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = { headingVariant: "text-sm/semibold", textVariant: "text-md/normal", headingSpacing: 8, rowGap: 24, columnGap: 6 };
 let closure_15 = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "text-xs/semibold", textVariant: "text-sm/normal", headingSpacing: 4, rowGap: 12, columnGap: 3 } };
 let closure_16 = createCacheKey.createStyles({ card: { flexDirection: "column" }, textWithIcon: { flexDirection: "row", alignItems: "center" }, memberJoinDates: { flexDirection: "row", flexWrap: "wrap" }, slashCommands: { flex: 1, flexDirection: "row", flexWrap: "wrap", marginBottom: 12 }, policyLinks: { rowGap: 8 } });
-const result = require("_getSystemLocale").fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCard.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAboutMeCard.tsx");
 
 export default function UserProfileAboutMeCard(arg0) {
-  let bioLineClamp;
-  let channel;
-  let displayProfile;
-  let pendingBio;
-  let style;
-  let themeType;
-  let userId;
   ({ userId, displayProfile, channel, themeType } = arg0);
   ({ pendingBio, bioLineClamp, style } = arg0);
   let tmp2;
@@ -397,7 +359,7 @@ export default function UserProfileAboutMeCard(arg0) {
   }
   let tmp7Result = null != prop && null != channel;
   if (tmp7Result) {
-    const obj1 = { applicationId: null, channel: null, commandIds: null, themeType: null };
+    obj1 = { applicationId: null, channel: null, commandIds: null, themeType: null };
     obj1[0] = application.id;
     obj1[1] = channel;
     obj1[2] = application.popularApplicationCommandIds;
@@ -406,5 +368,5 @@ export default function UserProfileAboutMeCard(arg0) {
   }
   items1[4] = tmp7Result;
   obj[1] = items1;
-  return tmp5(Divider, obj);
+  return tmp5(DividerDefault, obj);
 };

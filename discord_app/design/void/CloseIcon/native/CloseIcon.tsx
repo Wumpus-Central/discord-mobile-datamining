@@ -1,10 +1,11 @@
 // discord_app/design/void/CloseIcon/native/CloseIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("inlineStyles").fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/void/CloseIcon/native/CloseIcon.tsx");
 
 export default function Close(width) {
   let num = width.width;

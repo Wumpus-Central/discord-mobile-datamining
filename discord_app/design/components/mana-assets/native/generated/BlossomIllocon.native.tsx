@@ -1,27 +1,25 @@
 // discord_app/design/components/mana-assets/native/generated/BlossomIllocon.native.tsx
-import { jsx } from "jsxProd";
-import { metadata } from "../../../../../../discord_assets/assets/mana/asset-library/generated/BlossomIllocon-2x.png.js";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import preloadDefault from "preload" /* 5449 */;
+import metadataDefault from "metadata" /* 5545 */;
 
-const result = require("metadata").fileFinishedImporting("design/components/mana-assets/native/generated/BlossomIllocon.native.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/BlossomIllocon.native.tsx");
 
 export const BlossomIllocon = function BlossomIllocon(size) {
-  let accessibilityLabel;
-  let accessible;
-  let resizeMode;
   let num = size.size;
   ({ accessible, accessibilityLabel, resizeMode } = size);
   if (num === undefined) {
     num = 64;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: null };
-  obj[0] = metadata;
+  obj = { uri: metadataDefault };
   obj[1] = obj;
   const items = [{ width: num, height: num }];
   obj[2] = items;
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(preload, { uri: null });
+  return jsx(preloadDefault, { uri: metadataDefault });
 };

@@ -1,18 +1,18 @@
 // discord_app/modules/soundboard/useSortedGuildIdsForSoundboard.tsx
-import noop from "noop";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import { Permissions } from "sum";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "insertUnsortedGuilds" /* 5078 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import { Permissions } from "sum" /* 505 */;
 
 const require = arg1;
-const result = require("insertUnsortedGuilds").fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
+const result = require("set").fileFinishedImporting("modules/soundboard/useSortedGuildIdsForSoundboard.tsx");
 
 export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSoundboard(guild_id, arg1) {
   const _require = guild_id;
-  let closure_1 = arg1;
-  let items = [mergeGuildAvatar];
+  closure_1 = arg1;
+  let items = [closure_6];
   stateFromStores = _require(stateFromStores[6]).useStateFromStores(items, () => currentUser.getCurrentUser());
   guild_id = undefined;
   if (guild_id != null) {
@@ -29,7 +29,7 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
   stateFromStores2 = tmpResult.useStateFromStores(items2, () => {
     let canResult = null == closure_0 || null == tmp.guild_id;
     if (!canResult) {
-      canResult = stateFromStores1.can(outer1_8.USE_EXTERNAL_SOUNDS, tmp);
+      canResult = stateFromStores1.can(closure_1_8.USE_EXTERNAL_SOUNDS, tmp);
     }
     return canResult;
   });
@@ -38,7 +38,7 @@ export const useSortedGuildIdsForSoundboard = function useSortedGuildIdsForSound
     if (obj.canUseSoundboardEverywhere(stateFromStores)) {
       if (stateFromStores2) {
         if ("" !== guild_id) {
-          let found = arr2.filter((arg0) => arg0 !== noop);
+          let found = arr2.filter((arg0) => arg0 !== closure_3);
         } else {
           found = arr2;
         }

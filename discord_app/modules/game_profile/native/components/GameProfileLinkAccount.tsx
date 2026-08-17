@@ -1,49 +1,45 @@
 // discord_app/modules/game_profile/native/components/GameProfileLinkAccount.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, headerText: null, card: null, cardImagesContainer: null, ellipseGroup: null, ellipse: null, cardImageApplication: null, cardContent: null, cardText: null };
-createCacheKey = { gap: require("Themes").space.PX_8 };
+createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_8 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_8 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-let obj2 = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-createCacheKey[3] = { flexDirection: "row", gap: require("Themes").space.PX_8, alignItems: "center", alignSelf: "center" };
-let obj3 = { flexDirection: "row", gap: require("Themes").space.PX_8, alignItems: "center", alignSelf: "center" };
-createCacheKey[4] = { flexDirection: "row", justifyContent: "space-between", gap: require("Themes").space.PX_4 };
-let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: require("Themes").space.PX_4 };
-createCacheKey[5] = { width: 4, height: 4, backgroundColor: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.3, borderRadius: require("Themes").radii.round };
-let obj5 = { width: 4, height: 4, backgroundColor: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.3, borderRadius: require("Themes").radii.round };
-createCacheKey[6] = { width: 48, height: 48, borderRadius: require("Themes").radii.sm };
-let obj6 = { width: 48, height: 48, borderRadius: require("Themes").radii.sm };
-createCacheKey[7] = { gap: require("Themes").space.PX_4, alignSelf: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: require("Themes").space.PX_24 };
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
+let obj3 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "center", alignSelf: "center" };
+createCacheKey[4] = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
+let obj4 = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
+createCacheKey[5] = { width: 4, height: 4, backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.3, borderRadius: ThemesDefault.radii.round };
+let obj5 = { width: 4, height: 4, backgroundColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.3, borderRadius: ThemesDefault.radii.round };
+createCacheKey[6] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
+let obj6 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[7] = { gap: ThemesDefault.space.PX_4, alignSelf: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[8] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { gap: require("Themes").space.PX_4, alignSelf: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: require("Themes").space.PX_24 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/game_profile/native/components/GameProfileLinkAccount.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { gap: ThemesDefault.space.PX_4, alignSelf: "center", flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileLinkAccount.tsx");
 
 export default function GameProfileLinkAccount(trackAction) {
-  let canStartAuthorization;
-  let fetched;
-  let hasAlreadyLinked;
   trackAction = trackAction.trackAction;
   const analyticsLocations = trackAction.analyticsLocations;
   let startAuthorization;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp4 = analyticsLocations(startAuthorization[6])(trackAction.game);
   startAuthorization = tmp4.startAuthorization;
   const connectionApp = tmp4.connectionApp;
   ({ fetched, hasAlreadyLinked, canStartAuthorization } = tmp4);
   let obj = trackAction(startAuthorization[7]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [trackAction, startAuthorization, analyticsLocations];
   if (fetched) {
@@ -59,7 +55,7 @@ export default function GameProfileLinkAccount(trackAction) {
             const intl4 = tmp5(tmp3[10]).intl;
             obj[3] = intl4.string(tmp5(tmp3[10]).t["VDAhr+"]);
             const items2 = [callback(tmp5(tmp3[9]).Text, obj), ];
-            const obj1 = { style: null, children: null };
+            obj1 = { style: null, children: null };
             obj1[0] = tmp.card;
             let tmp11Result = null;
             if (null != iconSource) {

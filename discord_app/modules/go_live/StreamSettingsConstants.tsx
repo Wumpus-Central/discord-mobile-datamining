@@ -1,9 +1,12 @@
 // discord_app/modules/go_live/StreamSettingsConstants.tsx
-import { BoostedGuildTiers } from "ME";
-import { StreamQualities } from "GuildFeatures";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 let FPS_602 = require;
 let f31420 = dependencyMap;
+const BoostedGuildTiers = ME.BoostedGuildTiers;
+const StreamQualities = GuildFeatures.StreamQualities;
 let obj = { RESOLUTION_480: 480, [480]: "RESOLUTION_480", RESOLUTION_720: 720, [720]: "RESOLUTION_720", RESOLUTION_1080: 1080, [1080]: "RESOLUTION_1080", RESOLUTION_1440: 1440, [1440]: "RESOLUTION_1440", RESOLUTION_SOURCE: 0, [0]: "RESOLUTION_SOURCE" };
 obj = { FPS_5: 5, [5]: "FPS_5", FPS_15: 15, [15]: "FPS_15", FPS_30: 30, [30]: "FPS_30", FPS_60: 60, [60]: "FPS_60" };
 obj = { PRESET_VIDEO: 1, [1]: "PRESET_VIDEO", PRESET_DOCUMENTS: 2, [2]: "PRESET_DOCUMENTS", PRESET_CUSTOM: 3, [3]: "PRESET_CUSTOM", PRESET_AUTO: 4, [4]: "PRESET_AUTO", PRESET_MOBILE_DEFAULT: 5, [5]: "PRESET_MOBILE_DEFAULT", PRESET_MOBILE_PERFORMANCE: 6, [6]: "PRESET_MOBILE_PERFORMANCE", PRESET_MOBILE_HIGH_QUALITY: 7, [7]: "PRESET_MOBILE_HIGH_QUALITY" };
@@ -496,7 +499,7 @@ Object.defineProperty(obj19, "subtext", {
   set: undefined
 });
 items5[2] = obj19;
-const result = require("getSystemLocale").fileFinishedImporting("modules/go_live/StreamSettingsConstants.tsx");
+const result = set.fileFinishedImporting("modules/go_live/StreamSettingsConstants.tsx");
 
 export const ApplicationStreamResolutions = obj;
 export const getApplicationResolution = function getApplicationResolution(arg0) {
@@ -513,7 +516,7 @@ export const getApplicationResolution = function getApplicationResolution(arg0) 
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unknown resolution: " + arg0);
+    error = new Error("Unknown resolution: " + arg0);
     throw error;
   }
 };
@@ -531,7 +534,7 @@ export const getApplicationFramerate = function getApplicationFramerate(arg0) {
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unknown frame rate: " + arg0);
+    error = new Error("Unknown frame rate: " + arg0);
     throw error;
   }
 };

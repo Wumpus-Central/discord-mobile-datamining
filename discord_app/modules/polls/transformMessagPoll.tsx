@@ -1,10 +1,12 @@
 // discord_app/modules/polls/transformMessagPoll.tsx
-import { t } from "../../../_runtime/03975_t.js";
-const result = require("set").fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
+import set from "set" /* 2 */;
+import tDefault from "t" /* 3975 */;
+
+const result = set.fileFinishedImporting("modules/polls/transformMessagPoll.tsx");
 
 export default function transformMessagePoll(expiry) {
   const obj = {};
   const merged = Object.assign(expiry);
-  obj.expiry = t(expiry.expiry);
+  obj.expiry = tDefault(expiry.expiry);
   return obj;
 };

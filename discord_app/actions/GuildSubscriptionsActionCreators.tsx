@@ -1,44 +1,41 @@
 // discord_app/actions/GuildSubscriptionsActionCreators.tsx
-import { dispatcher } from "../Dispatcher.tsx";
-import { reset } from "../lib/guild/GuildChannelSubscriptions.tsx";
-let result = require("set").fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import reset from "reset" /* 7264 */;
+
+let result = set.fileFinishedImporting("actions/GuildSubscriptionsActionCreators.tsx");
 
 export const subscribeMembers = function subscribeMembers(guildId, userIds) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_ADD", guildId, userIds };
   obj.dispatch(obj);
 };
 export const unsubscribeMembers = function unsubscribeMembers(guildId, userIds) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SUBSCRIPTIONS_MEMBERS_REMOVE", guildId, userIds };
   obj.dispatch(obj);
 };
 export const subscribeToMemberUpdates = function subscribeToMemberUpdates(guildId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SUBSCRIPTIONS_ADD_MEMBER_UPDATES", guildId };
   obj.dispatch(obj);
 };
 export const unsubscribeFromMemberUpdates = function unsubscribeFromMemberUpdates(guildId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SUBSCRIPTIONS_REMOVE_MEMBER_UPDATES", guildId };
   obj.dispatch(obj);
 };
 export const subscribeGuild = function subscribeGuild(id) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SUBSCRIPTIONS", guildId: id };
   obj.dispatch(obj);
 };
 export const subscribeChannel = function subscribeChannel(guildId, channelId, ranges) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges };
   obj.dispatch(obj);
 };
 export const subscribeChannelDimensions = function subscribeChannelDimensions(arg0) {
-  let channelId;
-  let guildId;
-  let height;
-  let rowHeight;
-  let y;
   ({ y, height, rowHeight } = arg0);
   ({ guildId, channelId } = arg0);
   const bound = Math.max(0, Math.ceil(Math.ceil(0.5 * height / rowHeight)));
@@ -71,5 +68,5 @@ export const subscribeChannelDimensions = function subscribeChannelDimensions(ar
       let tmp11 = dependencyMap;
     } while (result <= bound2);
   }
-  dispatcher.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });
+  dispatcherDefault.dispatch({ type: "GUILD_SUBSCRIPTIONS_CHANNEL", guildId, channelId, ranges: items });
 };

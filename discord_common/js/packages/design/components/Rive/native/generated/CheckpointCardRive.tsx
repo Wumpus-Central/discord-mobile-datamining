@@ -1,22 +1,17 @@
 // discord_common/js/packages/design/components/Rive/native/generated/CheckpointCardRive.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { BaseRive } from "../BaseRive.tsx";
-import { getDerivedStateFromError } from "../RiveErrorBoundary.tsx";
+import BaseRive from "BaseRive" /* 4109 */;
+import getDerivedStateFromError from "getDerivedStateFromError" /* 4164 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = ["fallback", "artboard", "stateMachine", "defaultViewModelInstance", "dataBinding", "onDataBindingChange"];
 let c5 = importAllResult;
 let closure_7 = { Main: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Cassette: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Cassette Icon": {}, Cat: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Cat Icon": {}, Banana: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Banana Icon": {}, "Duck Icon": {}, Duck: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Snail Icon": {}, Snail: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Origami Icon": {}, Origami: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Disco Icon": {}, Disco: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Capybara: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Capybara Icon": {}, Donut: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Donut Icon": {}, "Bonsai Icon": {}, Bonsai: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, "Globe Single Line": {}, "Card Back": { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Knickknack: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" }, Globe: {}, Card: { reducedMotion: "boolean", Icon: "artboard", Illustration: "artboard", AnimationState: "number", PowerMeter: "number", LVL: "string", PersonaName: "string", "id#": "string", Outof: "string", FillColor: "color" } };
 let closure_8 = { Main: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], Cassette: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Cassette Icon": [], Cat: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Cat Icon": [], Banana: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Banana Icon": [], "Duck Icon": [], Duck: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Snail Icon": [], Snail: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Origami Icon": [], Origami: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Disco Icon": [], Disco: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], Capybara: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Capybara Icon": [], Donut: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Donut Icon": [], "Bonsai Icon": [], Bonsai: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], "Globe Single Line": [], "Card Back": ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], Knickknack: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"], Globe: [], Card: ["Bonsai", "Cassette-reducedMotion", "Cat-reducedMotion", "Banana-reducedMotion", "Duck-reducedMotion", "Snail-reducedMotion", "Origami-reducedMotion", "Disco-reducedMotion", "Capybara-reducedMotion", "Donut-reducedMotion", "Bonsai-reducedMotion", "Donut", "Capybara", "Disco", "Origami", "Snail", "Duck", "Banana", "Cat", "Cassette"] };
 let closure_9 = {
   Main: function MainBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -104,11 +99,6 @@ let closure_9 = {
     return null;
   },
   Cassette: function CassetteBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -196,11 +186,6 @@ let closure_9 = {
     return null;
   },
   Cat: function CatBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -288,11 +273,6 @@ let closure_9 = {
     return null;
   },
   Banana: function BananaBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -380,11 +360,6 @@ let closure_9 = {
     return null;
   },
   Duck: function DuckBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -472,11 +447,6 @@ let closure_9 = {
     return null;
   },
   Snail: function SnailBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -564,11 +534,6 @@ let closure_9 = {
     return null;
   },
   Origami: function OrigamiBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -656,11 +621,6 @@ let closure_9 = {
     return null;
   },
   Disco: function DiscoBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -748,11 +708,6 @@ let closure_9 = {
     return null;
   },
   Capybara: function CapybaraBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -840,11 +795,6 @@ let closure_9 = {
     return null;
   },
   Donut: function DonutBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -932,11 +882,6 @@ let closure_9 = {
     return null;
   },
   Bonsai: function BonsaiBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -1024,11 +969,6 @@ let closure_9 = {
     return null;
   },
   "Card Back": function CardBackBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -1116,11 +1056,6 @@ let closure_9 = {
     return null;
   },
   Knickknack: function KnickknackBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -1208,11 +1143,6 @@ let closure_9 = {
     return null;
   },
   Card: function CardBindings(reducedMotionEnabled) {
-    let dataBinding;
-    let file;
-    let instance;
-    let onDataBindingChange;
-    let playIfNeeded;
     ({ instance, file, dataBinding, onDataBindingChange, playIfNeeded } = reducedMotionEnabled);
     const booleanBinding = BaseRive.useBooleanBinding("reducedMotion", instance, reducedMotionEnabled.reducedMotionEnabled, undefined, playIfNeeded);
     const obj = BaseRive;
@@ -1301,8 +1231,6 @@ let closure_9 = {
   }
 };
 let closure_10 = importAllResult.forwardRef(function CheckpointCardRiveInner(defaultViewModelInstance, ref) {
-  let artboard;
-  let fallback;
   ({ fallback, artboard } = defaultViewModelInstance);
   let str = "Main";
   if (undefined !== artboard) {
@@ -1318,25 +1246,18 @@ let closure_10 = importAllResult.forwardRef(function CheckpointCardRiveInner(def
   const items = [str, dataBinding, onDataBindingChange];
   const callback = importAllResult.useCallback((arg0) => {
     let tmp2 = null;
-    if (null != outer1_9[str]) {
+    if (null != closure_1_9[str]) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.dataBinding = dataBinding;
       obj.onDataBindingChange = onDataBindingChange;
-      tmp2 = outer1_6(tmp, obj);
+      tmp2 = closure_1_6(tmp, obj);
     }
     return tmp2;
   }, items);
-  let obj = { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null, renderDataBinding: null };
-  obj[1] = dataBinding(onDataBindingChange[4]);
-  obj[2] = str;
-  obj[3] = closure_7;
-  obj[4] = closure_8;
-  obj[5] = str2;
-  obj[6] = defaultViewModelInstance.stateMachine;
-  obj[7] = callback;
-  let merged = Object.assign(callback(defaultViewModelInstance, closure_3));
-  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: null, artboard: null, artboardProperties: null, artboardViewModelInstances: null, defaultViewModelInstance: null, stateMachine: null, renderDataBinding: null });
+  const tmp = callback(defaultViewModelInstance, closure_3);
+  let merged = Object.assign(tmp);
+  return jsx(str(onDataBindingChange[3]).BaseRive, { ref, src: dataBinding(onDataBindingChange[4]), artboard: str, artboardProperties: closure_7, artboardViewModelInstances: closure_8, defaultViewModelInstance: str2, stateMachine: defaultViewModelInstance.stateMachine, renderDataBinding: callback });
 });
 const forwardRefResult = importAllResult.forwardRef(function CheckpointCardRiveWithBoundary(fallback, ref) {
   let obj = { fallback: fallback.fallback, children: null };
@@ -1345,6 +1266,6 @@ const forwardRefResult = importAllResult.forwardRef(function CheckpointCardRiveW
   obj[1] = <closure_10 ref={arg1} />;
   return jsx(getDerivedStateFromError.RiveErrorBoundary, { ref });
 });
-const result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointCardRive.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/CheckpointCardRive.tsx");
 
 export const CheckpointCardRive = forwardRefResult;

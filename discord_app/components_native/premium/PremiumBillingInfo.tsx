@@ -1,19 +1,17 @@
 // discord_app/components_native/premium/PremiumBillingInfo.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import { View } from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { QUICK_SWITCHER } from "../../modules/app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../modules/app_analytics/useAnalyticsLocations.tsx";
-import { createSubscriptionInvoicePreview } from "../../modules/premium/PremiumSubscriptionInvoice.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import isPremiumGiftingSupported from "isPremiumGiftingSupported" /* 4052 */;
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import createSubscriptionInvoicePreview from "createSubscriptionInvoicePreview" /* 7916 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 class GoogleManagementLink {
   constructor(arg0) {
     subscription = global.subscription;
@@ -41,21 +39,22 @@ class GoogleManagementLink {
     return tmp3;
   }
 }
+noopAll;
 ({ SubscriptionStatusTypes: c5, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, billingContainer: null, billingRenewalInfo: null, billingManageGoogle: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, marginTop: 8 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 4 };
 createCacheKey[4] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/premium/PremiumBillingInfo.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumBillingInfo.tsx");
 
 export default function PremiumBillingInfo(subscription) {
   subscription = subscription.subscription;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = createSubscriptionInvoicePreview;
-  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: context(), analyticsLocation: QUICK_SWITCHER.PREMIUM_BILLING_INFO };
+  obj = { subscriptionId: subscription.id, renewal: true, applyEntitlements: true, analyticsLocations: contextDefault(), analyticsLocation: QUICK_SWITCHERDefault.PREMIUM_BILLING_INFO };
   const first = callback(obj.useFetchSubscriptionInvoicePreview(obj), 1)[0];
   createSubscriptionInvoicePreview;
   if (null == first) {
@@ -65,7 +64,7 @@ export default function PremiumBillingInfo(subscription) {
     const externalManagementMessage = tmp2Result.getExternalManagementMessage(subscription, { shouldAllowExternalManagement: true });
     obj = { style: null, children: null };
     obj[0] = subscription.style;
-    const obj1 = { style: null, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
+    obj1 = { style: null, accessibilityRole: "header", variant: "eyebrow", color: "text-default", children: null };
     obj1[0] = tmp.title;
     const intl = tmp2(1236).intl;
     obj1[4] = intl.string(tmp2(1236).t.Sb6wI1);

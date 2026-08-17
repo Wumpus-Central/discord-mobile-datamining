@@ -1,15 +1,13 @@
 // discord_app/design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { styles } from "../../../Button/native/FloatingActionButton.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import styles2 from "styles" /* 8818 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function CollapsableButton(arg0) {
-  let state;
-  let style;
   ({ state, style } = arg0);
   let collapseText;
   collapseText = state.collapseText;
@@ -17,14 +15,14 @@ function CollapsableButton(arg0) {
   let obj = collapseText(4115);
   class B {
     constructor() {
-      obj = { minWidth: collapseText(outer1_2[2]).FAB_BUTTON_SIZE, minHeight: collapseText(outer1_2[2]).FAB_BUTTON_SIZE, paddingHorizontal: null, paddingVertical: null };
-      obj2 = collapseText(outer1_2[5]);
-      obj3 = collapseText(outer1_2[4]);
+      obj = { minWidth: collapseText(closure_1_2[2]).FAB_BUTTON_SIZE, minHeight: collapseText(closure_1_2[2]).FAB_BUTTON_SIZE, paddingHorizontal: null, paddingVertical: null };
+      obj2 = collapseText(closure_1_2[5]);
+      obj3 = collapseText(closure_1_2[4]);
       items = [20];
-      items[1] = outer1_5;
+      items[1] = closure_1_5;
       interpolateResult = obj3.interpolate(collapseText.get(), [0, 1], items);
-      obj[2] = obj2.withSpring(interpolateResult, collapseText(outer1_2[6]).SUBTLE_SPRING, "animate-always");
-      obj[3] = outer1_5;
+      obj[2] = obj2.withSpring(interpolateResult, collapseText(closure_1_2[6]).SUBTLE_SPRING, "animate-always");
+      obj[3] = closure_1_5;
       return obj;
     }
   }
@@ -46,23 +44,18 @@ function CollapsableButton(arg0) {
 const buttonPadding = MINIMUM_HIT_AREA.getButtonPadding(require("MINIMUM_HIT_AREA").FAB_BUTTON_SIZE, require("MINIMUM_HIT_AREA").FAB_BUTTON_ICON_SIZE);
 let closure_6 = createCacheKey.createStyles({ textButtonPill: { paddingHorizontal: 20, paddingVertical: buttonPadding } });
 let closure_7 = { code: "function CollapsibleFloatingActionButtonNativeTsx1(){const{FAB_BUTTON_SIZE,withSpring,interpolate,collapseText,FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL,SUBTLE_SPRING}=this.__closure;return{minWidth:FAB_BUTTON_SIZE,minHeight:FAB_BUTTON_SIZE,paddingHorizontal:withSpring(interpolate(collapseText.get(),[0,1],[FAB_PADDING_HORIZONTAL,FAB_PADDING_VERTICAL]),SUBTLE_SPRING,'animate-always'),paddingVertical:FAB_PADDING_VERTICAL};}" };
-const result = require("MINIMUM_HIT_AREA").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/CollapsibleFloatingActionButton.native.tsx");
 
 export const CollapsibleFloatingActionButton = function CollapsibleFloatingActionButton(arg0) {
-  let icon;
-  let positionBottom;
-  let positionRight;
-  let state;
-  let text;
   ({ icon, positionBottom, positionRight, text, state } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  let obj = styles;
-  let obj1 = validElement;
+  let obj = styles2;
+  obj1 = validElement;
   const styles = obj.useStyles();
   let cloneElementResult = icon;
   if (validElement.isValidElement(icon)) {
     obj = { color: null };
-    obj[0] = Themes.colors.WHITE;
+    obj[0] = ThemesDefault.colors.WHITE;
     cloneElementResult = obj1.cloneElement(icon, obj);
   }
   const items = [styles.button, ];

@@ -1,34 +1,31 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import preloadDefault from "preload" /* 5449 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 11224 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { appIconContainer: null, appIconLeftContainer: null, appIconRightContainer: null, appIcon: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, borderRadius: require("Themes").radii.sm + 3, position: "absolute", padding: 3 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.sm + 3, position: "absolute", padding: 3 };
 createCacheKey[0] = createCacheKey;
 let items = [{ rotate: "-10deg" }];
 createCacheKey[1] = { transform: items };
 let items1 = [{ rotate: "15deg" }];
-createCacheKey[2] = { left: require("Themes").space.PX_32, transform: items1 };
-let obj1 = { left: require("Themes").space.PX_32, transform: items1 };
-createCacheKey[3] = { borderRadius: require("Themes").radii.sm, width: 36, height: 36 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj2 = { borderRadius: require("Themes").radii.sm, width: 36, height: 36 };
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
+createCacheKey[2] = { left: ThemesDefault.space.PX_32, transform: items1 };
+let obj1 = { left: ThemesDefault.space.PX_32, transform: items1 };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm, width: 36, height: 36 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const obj2 = { borderRadius: ThemesDefault.radii.sm, width: 36, height: 36 };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/ApplicationsImage.tsx");
 
 export default function ApplicationsImage(arg0) {
-  let firstApplication;
-  let secondApplication;
   ({ firstApplication, secondApplication } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let appLauncherIconSource = null;
   if (null != firstApplication) {
     let obj = handleApplicationSelected;
@@ -36,7 +33,7 @@ export default function ApplicationsImage(arg0) {
   }
   let appLauncherIconSource1 = null;
   if (null != secondApplication) {
-    let obj1 = handleApplicationSelected;
+    obj1 = handleApplicationSelected;
     appLauncherIconSource1 = obj1.getAppLauncherIconSource(secondApplication);
   }
   let tmp8 = null != appLauncherIconSource;
@@ -44,14 +41,14 @@ export default function ApplicationsImage(arg0) {
     obj = { style: null, source: null };
     obj[0] = tmp.appIcon;
     obj[1] = appLauncherIconSource;
-    tmp8 = callback(preload, obj);
+    tmp8 = callback(preloadDefault, obj);
   }
   let tmp12 = null != appLauncherIconSource1;
   if (tmp12) {
     obj = { style: null, source: null };
     obj[0] = tmp.appIcon;
     obj[1] = appLauncherIconSource1;
-    tmp12 = callback(preload, obj);
+    tmp12 = callback(preloadDefault, obj);
   }
   obj1 = { children: null };
   const items = [, ];

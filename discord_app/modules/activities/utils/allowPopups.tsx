@@ -1,7 +1,9 @@
 // discord_app/modules/activities/utils/allowPopups.tsx
-import { APPLICATIONS_WITH_ALLOWED_POPUPS as closure_0 } from "items3";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
+let closure_0 = items3.APPLICATIONS_WITH_ALLOWED_POPUPS;
+const result = set.fileFinishedImporting("modules/activities/utils/allowPopups.tsx");
 
 export const allowPopups = function allowPopups(application) {
   let prop = application;

@@ -1,12 +1,13 @@
 // discord_app/modules/parent_tools/FamilyCenterConstants.tsx
-import getAuthenticationPath from "getAuthenticationPath";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 
-const require = arg1;
-const result = 30 * require("set").Millis.SECOND;
-const result1 = 5 * require("set").Millis.MINUTE;
-const result2 = 5 * require("set").Millis.MINUTE;
+require = arg1;
+const result = 30 * setDefault.Millis.SECOND;
+const result1 = 5 * setDefault.Millis.MINUTE;
+const result2 = 5 * setDefault.Millis.MINUTE;
 getAuthenticationPath = { USER_ADD: 1, [1]: "USER_ADD", GUILD_ADD: 2, [2]: "GUILD_ADD", USER_INTERACTION: 3, [3]: "USER_INTERACTION", GUILD_INTERACTION: 4, [4]: "GUILD_INTERACTION", USER_CALLED: 5, [5]: "USER_CALLED", TOTAL_VOICE_MINUTES: 6, [6]: "TOTAL_VOICE_MINUTES", PURCHASES: 7, [7]: "PURCHASES", GIFTS: 8, [8]: "GIFTS" };
 const items = [
   getAuthenticationPath.USER_INTERACTION,
@@ -14,12 +15,12 @@ const items = [
     priority: 100,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.kvTgWP);
+      return intl.string(messagesProxyDefault.kvTgWP);
     },
     tooltipDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.w4wmnb);
       } else {
@@ -29,12 +30,12 @@ const items = [
     },
     sectionHeader(count) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy["4T3zWT"], { count });
+      return intl.formatToPlainString(messagesProxyDefault["4T3zWT"], { count });
     },
     sectionDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.w4wmnb);
       } else {
@@ -45,10 +46,10 @@ const items = [
     timestampFormatter() {
       const obj = { today: null, yesterday: null, days: null };
       const intl = getSystemLocale.intl;
-      obj[0] = intl.string(messagesProxy.fLBUx7);
+      obj[0] = intl.string(messagesProxyDefault.fLBUx7);
       const intl2 = getSystemLocale.intl;
-      obj[1] = intl2.string(messagesProxy.cHHgxI);
-      obj[2] = messagesProxy.qvKjp8;
+      obj[1] = intl2.string(messagesProxyDefault.cHHgxI);
+      obj[2] = messagesProxyDefault.qvKjp8;
       return obj;
     }
   }
@@ -60,12 +61,12 @@ const items2 = [
     priority: 200,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.D7Sngz);
+      return intl.string(messagesProxyDefault.D7Sngz);
     },
     tooltipDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.aiAhnQ);
       } else {
@@ -75,12 +76,12 @@ const items2 = [
     },
     sectionHeader(count) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy["0GE4Ni"], { count });
+      return intl.formatToPlainString(messagesProxyDefault["0GE4Ni"], { count });
     },
     sectionDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.aiAhnQ);
       } else {
@@ -91,10 +92,10 @@ const items2 = [
     timestampFormatter() {
       const obj = { today: null, yesterday: null, days: null };
       const intl = getSystemLocale.intl;
-      obj[0] = intl.string(messagesProxy.IHd5cZ);
+      obj[0] = intl.string(messagesProxyDefault.IHd5cZ);
       const intl2 = getSystemLocale.intl;
-      obj[1] = intl2.string(messagesProxy.wOsfxv);
-      obj[2] = messagesProxy.oCk8c4;
+      obj[1] = intl2.string(messagesProxyDefault.wOsfxv);
+      obj[2] = messagesProxyDefault.oCk8c4;
       return obj;
     }
   }
@@ -106,12 +107,12 @@ const items3 = [
     priority: 300,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.kIcKAj);
+      return intl.string(messagesProxyDefault.kIcKAj);
     },
     tooltipDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.BkVb1X);
       } else {
@@ -121,12 +122,12 @@ const items3 = [
     },
     sectionHeader(count) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy["TEvo+H"], { count });
+      return intl.formatToPlainString(messagesProxyDefault["TEvo+H"], { count });
     },
     sectionDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.BkVb1X);
       } else {
@@ -137,10 +138,10 @@ const items3 = [
     timestampFormatter() {
       const obj = { today: null, yesterday: null, days: null };
       const intl = getSystemLocale.intl;
-      obj[0] = intl.string(messagesProxy.JUHIYZ);
+      obj[0] = intl.string(messagesProxyDefault.JUHIYZ);
       const intl2 = getSystemLocale.intl;
-      obj[1] = intl2.string(messagesProxy.GiswUW);
-      obj[2] = messagesProxy["fwQgE/"];
+      obj[1] = intl2.string(messagesProxyDefault.GiswUW);
+      obj[2] = messagesProxyDefault["fwQgE/"];
       return obj;
     }
   }
@@ -152,12 +153,12 @@ const items4 = [
     priority: 400,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.uav9Bh);
+      return intl.string(messagesProxyDefault.uav9Bh);
     },
     tooltipDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.LVNgTD);
       } else {
@@ -167,12 +168,12 @@ const items4 = [
     },
     sectionHeader(count) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy["7feG7T"], { count });
+      return intl.formatToPlainString(messagesProxyDefault["7feG7T"], { count });
     },
     sectionDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.LVNgTD);
       } else {
@@ -189,12 +190,12 @@ const items5 = [
     priority: 500,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.CcrbCw);
+      return intl.string(messagesProxyDefault.CcrbCw);
     },
     tooltipDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.BLgIrk);
       } else {
@@ -204,12 +205,12 @@ const items5 = [
     },
     sectionHeader(count) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy.rcPInc, { count });
+      return intl.formatToPlainString(messagesProxyDefault.rcPInc, { count });
     },
     sectionDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.BLgIrk);
       } else {
@@ -226,19 +227,19 @@ const items6 = [
     priority: 175,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.eo4Fxh);
+      return intl.string(messagesProxyDefault.eo4Fxh);
     },
     tooltipDescription() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy["O/AElu"]);
+      return intl.string(messagesProxyDefault["O/AElu"]);
     },
     sectionHeader(count) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy.eGFWUd, { count });
+      return intl.formatToPlainString(messagesProxyDefault.eGFWUd, { count });
     },
     sectionDescription() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy["O/AElu"]);
+      return intl.string(messagesProxyDefault["O/AElu"]);
     }
   }
 ];
@@ -249,12 +250,12 @@ const items7 = [
     priority: 150,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.NMYKsh);
+      return intl.string(messagesProxyDefault.NMYKsh);
     },
     tooltipDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.cqIdqZ);
       } else {
@@ -264,12 +265,12 @@ const items7 = [
     },
     sectionHeader(amount) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy.FPViWL, { amount });
+      return intl.formatToPlainString(messagesProxyDefault.FPViWL, { amount });
     },
     sectionDescription(arg0) {
       const intl = getSystemLocale.intl;
       const string = intl.string;
-      const tmp = messagesProxy;
+      const tmp = messagesProxyDefault;
       if (arg0) {
         let stringResult = string(tmp.cqIdqZ);
       } else {
@@ -286,19 +287,19 @@ const items8 = [
     priority: 600,
     tooltipHeader() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.ULUspo);
+      return intl.string(messagesProxyDefault.ULUspo);
     },
     tooltipDescription() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.nH8vlc);
+      return intl.string(messagesProxyDefault.nH8vlc);
     },
     sectionHeader(amount) {
       const intl = getSystemLocale.intl;
-      return intl.formatToPlainString(messagesProxy["0R6I/b"], { amount });
+      return intl.formatToPlainString(messagesProxyDefault["0R6I/b"], { amount });
     },
     sectionDescription() {
       const intl = getSystemLocale.intl;
-      return intl.string(messagesProxy.nH8vlc);
+      return intl.string(messagesProxyDefault.nH8vlc);
     }
   }
 ];
@@ -311,7 +312,7 @@ const obj5 = {
   header(isAdult) {
     const intl = getSystemLocale.intl;
     const string = intl.string;
-    const tmp = messagesProxy;
+    const tmp = messagesProxyDefault;
     if (isAdult.isAdult) {
       let stringResult = string(tmp.bS5x94);
     } else {
@@ -322,7 +323,7 @@ const obj5 = {
   description(isAdult) {
     const intl = getSystemLocale.intl;
     const format = intl.format;
-    const tmp = messagesProxy;
+    const tmp = messagesProxyDefault;
     if (isAdult.isAdult) {
       let formatResult = format(tmp.GKzqWi, { link: "https://support.discord.com/hc/articles/14155043715735" });
     } else {
@@ -337,18 +338,18 @@ const obj2 = { 290000: null, 290002: null, 290005: null };
 const obj3 = {
   header() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.nGX8Co);
+    return intl.string(messagesProxyDefault.nGX8Co);
   },
   description() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.Uss2dn);
+    return intl.string(messagesProxyDefault.Uss2dn);
   },
   icon: getAuthenticationPath.X
 };
 const obj4 = {
   header() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.tu0MRv);
+    return intl.string(messagesProxyDefault.tu0MRv);
   },
   description(email) {
     email = email.email;
@@ -356,10 +357,10 @@ const obj4 = {
       const intl2 = getSystemLocale.intl;
       const obj = { email: null };
       obj[0] = email;
-      let formatToPlainStringResult = intl2.formatToPlainString(messagesProxy.xNEkdx, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(messagesProxyDefault.xNEkdx, obj);
     } else {
       const intl = getSystemLocale.intl;
-      formatToPlainStringResult = intl.string(messagesProxy.Xyjnwn);
+      formatToPlainStringResult = intl.string(messagesProxyDefault.Xyjnwn);
     }
     return formatToPlainStringResult;
   },
@@ -368,15 +369,15 @@ const obj4 = {
 const obj6 = {
   header() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.W9JLJh);
+    return intl.string(messagesProxyDefault.W9JLJh);
   },
   description() {
     const intl = getSystemLocale.intl;
-    return intl.format(messagesProxy.On5iRI, { link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731" });
+    return intl.format(messagesProxyDefault.On5iRI, { link: "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731" });
   },
   icon: getAuthenticationPath.X
 };
-const result3 = require("getSystemLocale").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
+const result3 = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterConstants.tsx");
 
 export const RESTRICTED_HOURS_LAYER_KEY = "RESTRICTED_HOURS_LAYER";
 export const FAMILY_CENTER_REFETCH_COOLDOWN = result;
@@ -409,24 +410,24 @@ export const CONNECT_GUARDIAN_BOTTOM_SHEET_KEY = "ConnectGuardianBottomSheet";
 export const PENDING_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxy.CJdoee);
-  obj[1] = messagesProxy.InzMn3;
-  obj[2] = messagesProxy.ErkYCI;
+  obj[0] = intl.string(messagesProxyDefault.CJdoee);
+  obj[1] = messagesProxyDefault.InzMn3;
+  obj[2] = messagesProxyDefault.ErkYCI;
   const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(messagesProxy.GvfssA);
-  obj[4] = messagesProxy.pWig18;
-  obj[5] = messagesProxy.MP3khg;
+  obj[3] = intl2.string(messagesProxyDefault.GvfssA);
+  obj[4] = messagesProxyDefault.pWig18;
+  obj[5] = messagesProxyDefault.MP3khg;
   return obj;
 };
 export const ACCEPTED_LINK_REQUEST_TIMESTAMP_FORMATTER = () => {
   const obj = { seconds: null, minutes: null, hours: null, yesterday: null, days: null, date: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxy.Bqsamd);
-  obj[1] = messagesProxy.kX3wJg;
-  obj[2] = messagesProxy.J18GbG;
+  obj[0] = intl.string(messagesProxyDefault.Bqsamd);
+  obj[1] = messagesProxyDefault.kX3wJg;
+  obj[2] = messagesProxyDefault.J18GbG;
   const intl2 = getSystemLocale.intl;
-  obj[3] = intl2.string(messagesProxy.Ln9zMn);
-  obj[4] = messagesProxy.WRtySz;
-  obj[5] = messagesProxy.Y3ZYtM;
+  obj[3] = intl2.string(messagesProxyDefault.Ln9zMn);
+  obj[4] = messagesProxyDefault.WRtySz;
+  obj[5] = messagesProxyDefault.Y3ZYtM;
   return obj;
 };

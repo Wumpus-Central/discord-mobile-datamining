@@ -1,28 +1,25 @@
 // discord_app/modules/in_app_notifications/native/MessageNotificationHeader.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import initialize from "initialize" /* 589 */;
+import set from "set" /* 692 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function LocationText(channel) {
-  let _location;
-  let author;
   channel = channel.channel;
   const parentChannel = channel.parentChannel;
   let str = channel.color;
   let React;
   str = undefined;
   ({ author, location: _location } = channel);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   React = tmp;
   if (str == null) {
     str = "text-muted";
@@ -38,8 +35,8 @@ function LocationText(channel) {
       if (null != undefined) {
         const obj = { color: null, style: null };
         obj[0] = str;
-        obj[1] = _undefined.icon;
-        element = _undefined.createElement(undefined, { color: null, style: null });
+        obj[1] = React.icon;
+        element = React.createElement(undefined, { color: null, style: null });
       }
       return element;
     } else {
@@ -66,9 +63,9 @@ function LocationText(channel) {
   obj[1] = items1;
   return closure_8(str, obj);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, headerContent: null, primaryText: null, secondaryTextContainer: null, separator: null, icon: null, secondaryText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = { flexShrink: 1, marginRight: 2 };
@@ -76,18 +73,14 @@ createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: 2, flex: 
 createCacheKey[4] = { marginHorizontal: 2 };
 createCacheKey[5] = { width: 16, height: 16 };
 createCacheKey[6] = { flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/in_app_notifications/native/MessageNotificationHeader.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/MessageNotificationHeader.tsx");
 
 export default function MessageNotificationHeader(locationTextColor) {
-  let author;
-  let channel;
-  let guild;
-  let parentChannel;
   ({ channel, parentChannel, guild, author } = locationTextColor);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   if (author != null) {
     const colorString = author.colorString;
@@ -102,7 +95,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     const tmp6 = obj;
   }
   let tmp2Result = tmp2(4984);
-  const channelName = tmp2Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+  const channelName = tmp2Result.computeChannelName(channel, closure_6, closure_5);
   const type = channel.type;
   let tmp10 = channelName;
   if (set.ChannelTypes.GROUP_DM !== type) {
@@ -117,7 +110,7 @@ export default function MessageNotificationHeader(locationTextColor) {
           let channelName1 = null;
           if (null != parentChannel) {
             tmp2Result = tmp2(4984);
-            channelName1 = tmp2Result.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
+            channelName1 = tmp2Result.computeChannelName(parentChannel, closure_6, closure_5);
           }
           if (null != channelName1) {
             const _HermesInternal2 = HermesInternal;
@@ -141,7 +134,7 @@ export default function MessageNotificationHeader(locationTextColor) {
     tmp10 = combined1;
   }
   obj = { style: tmp.container, children: null };
-  const obj1 = { style: tmp.headerContent, children: null };
+  obj1 = { style: tmp.headerContent, children: null };
   let tmp17Result = null != author;
   if (tmp17Result) {
     const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: null, children: null };
@@ -167,11 +160,9 @@ export default function MessageNotificationHeader(locationTextColor) {
   return closure_7(View, obj);
 };
 export const SimpleNotificationHeader = function SimpleNotificationHeader(secondaryText) {
-  let labelStyle;
-  let text;
   secondaryText = secondaryText.secondaryText;
   ({ text, labelStyle } = secondaryText);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   const items = [tmp.primaryText, labelStyle];
   const items1 = [callback(Text.Text, { variant: "text-md/semibold", color: "mobile-text-heading-primary", lineClamp: 1, style: items, children: text }), ];
@@ -182,7 +173,7 @@ export const SimpleNotificationHeader = function SimpleNotificationHeader(second
     obj = { variant: "text-md/bold", color: "text-muted", maxFontSizeMultiplier: 1.75, style: null, children: "\u00B7" };
     obj[3] = tmp.separator;
     const items2 = [tmp4(tmp5(4734).Text, obj), ];
-    const obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
+    obj1 = { variant: "text-md/semibold", color: "text-muted", lineClamp: 1, style: null, children: null };
     obj1[3] = tmp.secondaryText;
     obj1[4] = secondaryText;
     items2[1] = tmp4(tmp5(4734).Text, obj1);

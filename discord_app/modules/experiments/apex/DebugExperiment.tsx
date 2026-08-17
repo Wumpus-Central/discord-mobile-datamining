@@ -1,10 +1,11 @@
 // discord_app/modules/experiments/apex/DebugExperiment.tsx
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const obj = { 1: null, 2: {} };
 obj[2] = {};
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-03-debug-experiment", kind: "user", defaultConfig: {}, variations: obj });
-const result = require("set").fileFinishedImporting("modules/experiments/apex/DebugExperiment.tsx");
+const result = set.fileFinishedImporting("modules/experiments/apex/DebugExperiment.tsx");
 
 export default apexExperiment;
 export const DebugExperiment = apexExperiment;

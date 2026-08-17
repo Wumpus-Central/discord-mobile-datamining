@@ -1,14 +1,13 @@
 // discord_app/utils/native/NetworkUtils.tsx
-import { NetworkConnectionTypes } from "ME";
-import importDefaultResult from "configure";
-import { configure } from "../../../_runtime/01476_configure.js";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import ME from "ME" /* 676 */;
+import importDefaultResult from "configure" /* 1476 */;
 
 function notifyListeners(isConnected) {
-  let details;
-  let type;
   isConnected = isConnected.isConnected;
   ({ type, details } = isConnected);
-  const obj = { type, effectiveSpeed: null, serviceProvider: null };
+  obj = { type, effectiveSpeed: null, serviceProvider: null };
   let cellularGeneration = null;
   if (type === NetworkConnectionTypes.CELLULAR) {
     cellularGeneration = details.cellularGeneration;
@@ -25,7 +24,7 @@ function notifyListeners(isConnected) {
   }
   obj.log("Network status changed: isConnected:" + isConnected + " type:" + isConnected.type + " speed:" + obj.cellularGeneration);
   const item = isConnected ? closure_4 : closure_5.forEach((arg0) => {
-    let flag = isConnected;
+    flag = isConnected;
     if (isConnected == null) {
       flag = false;
     }
@@ -33,14 +32,15 @@ function notifyListeners(isConnected) {
   });
   const item1 = arr3.forEach((arg0) => arg0(obj));
 }
-let obj = new require("set")("NetworkUtils");
+const NetworkConnectionTypes = ME.NetworkConnectionTypes;
+let obj = new timestampDefault("NetworkUtils");
 obj.enableNativeLogger(true);
 let closure_4 = [];
 let closure_5 = [];
 let closure_6 = [];
 let c7 = null;
 let c8 = false;
-let response = require("configure").fetch();
+let response = importDefaultResult.fetch();
 response.then((isConnected) => {
   let flag = isConnected.isConnected;
   if (flag == null) {
@@ -50,8 +50,8 @@ response.then((isConnected) => {
 obj = {
   addOnlineCallback(_handleNetworkOnline) {
     if (null == closure_7) {
-      closure_7 = configure.addEventListener(notifyListeners);
-      const obj = configure;
+      closure_7 = importDefaultResult.addEventListener(notifyListeners);
+      obj = importDefaultResult;
     }
   },
   removeOnlineCallback(_handleNetworkOnline) {
@@ -77,8 +77,8 @@ obj = {
   addOfflineCallback(_handleNetworkOffline) {
     arr2.push(_handleNetworkOffline);
     if (null == closure_7) {
-      closure_7 = configure.addEventListener(notifyListeners);
-      const obj = configure;
+      closure_7 = importDefaultResult.addEventListener(notifyListeners);
+      obj = importDefaultResult;
     }
   },
   removeOfflineCallback(_handleNetworkOffline) {
@@ -104,8 +104,8 @@ obj = {
   addChangeCallback(handleConnectionInfoChange) {
     arr3.push(handleConnectionInfoChange);
     if (null == closure_7) {
-      closure_7 = configure.addEventListener(notifyListeners);
-      const obj = configure;
+      closure_7 = importDefaultResult.addEventListener(notifyListeners);
+      obj = importDefaultResult;
     }
   },
   removeChangeCallback(arg0) {
@@ -129,12 +129,10 @@ obj = {
     }
   },
   getNetworkInformation() {
-    const response = configure.fetch();
+    const response = importDefaultResult.fetch();
     return response.then((arg0) => {
-      let details;
-      let type;
       ({ type, details } = arg0);
-      const obj = { type, effectiveSpeed: null, serviceProvider: null };
+      obj = { type, effectiveSpeed: null, serviceProvider: null };
       let cellularGeneration = null;
       if (type === constants.CELLULAR) {
         cellularGeneration = details.cellularGeneration;
@@ -152,6 +150,6 @@ obj = {
     return c8;
   }
 };
-const result = require("configure").fileFinishedImporting("utils/native/NetworkUtils.tsx");
+const result = set.fileFinishedImporting("utils/native/NetworkUtils.tsx");
 
 export default obj;

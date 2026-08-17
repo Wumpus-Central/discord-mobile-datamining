@@ -1,9 +1,10 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("getShelfBadgeTypeIfActive").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
+noopAll;
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/AppDetailsOverflowMenu.tsx");
 
 export default function AppDetailsOverflowMenu(application) {
   application = application.application;
@@ -11,7 +12,7 @@ export default function AppDetailsOverflowMenu(application) {
   let installAppProps;
   let obj = application(installAppProps[2]);
   installAppProps = obj.getInstallAppProps(application);
-  let obj1 = application(installAppProps[3]);
+  obj1 = application(installAppProps[3]);
   let result = obj1.canInstallApplication(installAppProps);
   if (result) {
     result = null != onAddAppMenuClick;
@@ -46,8 +47,7 @@ export default function AppDetailsOverflowMenu(application) {
     obj1[0] = items;
     obj1[1] = function children(ref) {
       const merged = Object.assign(ref, Object.create(null));
-      const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: null };
-      obj[3] = onAddAppMenuClick(installAppProps[12]);
+      const obj = { ref: ref.ref, size: "sm", variant: "secondary-overlay", icon: onAddAppMenuClick(installAppProps[12]) };
       const merged1 = Object.assign(merged);
       const intl = application(installAppProps[4]).intl;
       obj.accessibilityLabel = intl.string(application(installAppProps[4]).t.PdRCRg);

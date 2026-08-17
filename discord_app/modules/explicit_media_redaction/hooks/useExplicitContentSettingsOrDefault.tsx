@@ -1,15 +1,15 @@
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { resolveExplicitContentSettingWithDefaults } from "../SensitiveMediaExplicitRedactionSettingsUtils.tsx";
-import { resolveGoreSettingWithDefaults } from "../SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
 
-const require = arg1;
-const result = require("resolveExplicitContentSettingWithDefaults").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx");
 
 export const useExplicitContentSettingOrDefault = function useExplicitContentSettingOrDefault() {
   let obj = defaultAreStatesEqual;
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_2];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let prop;
@@ -43,7 +43,7 @@ export const useExplicitContentSettingOrDefault = function useExplicitContentSet
 };
 export const useGoreContentSettingOrDefault = function useGoreContentSettingOrDefault() {
   let obj = defaultAreStatesEqual;
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_2];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const textAndImages = settings.settings.textAndImages;
     let goreContentSettings;

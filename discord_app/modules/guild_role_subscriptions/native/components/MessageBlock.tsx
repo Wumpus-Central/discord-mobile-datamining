@@ -1,30 +1,31 @@
 // discord_app/modules/guild_role_subscriptions/native/components/MessageBlock.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let obj = { RED: 0, [0]: "RED", YELLOW: 1, [1]: "YELLOW" };
 let closure_6 = createCacheKey.createStyles((arg0) => {
   if (obj.RED === arg0) {
     obj = { backgroundColor: null, borderColor: null };
-    obj[0] = Themes.colors.BACKGROUND_FEEDBACK_CRITICAL;
-    obj[1] = Themes.colors.BORDER_FEEDBACK_CRITICAL;
+    obj[0] = ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL;
+    obj[1] = ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL;
     let tmp2 = obj;
   } else if (tmp.YELLOW === arg0) {
     obj = { backgroundColor: null, borderColor: null };
-    obj[0] = Themes.colors.BACKGROUND_FEEDBACK_WARNING;
-    obj[1] = Themes.colors.STATUS_WARNING;
+    obj[0] = ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING;
+    obj[1] = ThemesDefault.colors.STATUS_WARNING;
     tmp2 = obj;
   }
   obj = { container: null, text: null };
-  const obj1 = {};
+  obj1 = {};
   const merged = Object.assign(tmp2);
   obj1.alignItems = "center";
-  obj1.borderRadius = Themes.radii.xs;
+  obj1.borderRadius = ThemesDefault.radii.xs;
   obj1.borderWidth = 1;
   obj1.padding = 8;
   obj1.width = "100%";
@@ -37,7 +38,7 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[1] = { textAlign: "center", color: TEXT_FEEDBACK_WARNING };
   return obj;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/MessageBlock.tsx");
 
 export default function MessageBlock(children) {
   const tmp = callback(children.color);

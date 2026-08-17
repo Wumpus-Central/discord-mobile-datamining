@@ -1,40 +1,35 @@
 // discord_app/modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx
-import PX_8 from "PX_8";
-import importAllResult from "ComponentDispatcher";
-import get_ActivityIndicator from "getBestActiveInput";
-import useChannelDetailsStore from "useChannelDetailsStore";
-import { MIDNIGHT_BORDER_WIDTH } from "MIN_HEADER_HEIGHT";
-import ME from "ME";
-import jsxProd from "map";
-import createCacheKey from "createCacheKey";
+import timestampDefault from "timestamp" /* 3 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
+import { MIDNIGHT_BORDER_WIDTH } from "MIN_HEADER_HEIGHT" /* 8493 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let closure_14;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let c4 = importAllResult;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-({ getIsChannelDetailsSearchActive: error, setIsChannelDetailsSearchActive: metroImportAll } = useChannelDetailsStore);
+({ getIsChannelDetailsSearchActive: error, setIsChannelDetailsSearchActive: closure_8 } = useChannelDetailsStore);
 ({ AnalyticEvents: c10, ComponentActions: unpackModuleId, ThemeTypes: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let closure_15 = new require("useChannelDetailsStore")("SwipeForMemberListWrapper");
+let closure_15 = new timestampDefault("SwipeForMemberListWrapper");
 let context = importAllResult.createContext(undefined);
 let obj = { memberListPreview: null, content: null, memberListContainer: null, midnightBorder: null, midnightRightOverflow: null };
-obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { flex: 1, justifyContent: "center", alignItems: "flex-start", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
 createCacheKey = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.overflow = "hidden";
 obj[1] = createCacheKey;
-const tmp6 = new require("useChannelDetailsStore")("SwipeForMemberListWrapper");
-obj[2] = { flex: 1, overflow: "hidden", backgroundColor: require("Themes").colors.MODAL_BACKGROUND };
-let obj2 = { flex: 1, overflow: "hidden", backgroundColor: require("Themes").colors.MODAL_BACKGROUND };
-obj[3] = { borderLeftColor: require("Themes").colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
+const tmp6 = new timestampDefault("SwipeForMemberListWrapper");
+obj[2] = { flex: 1, overflow: "hidden", backgroundColor: ThemesDefault.colors.MODAL_BACKGROUND };
+let obj2 = { flex: 1, overflow: "hidden", backgroundColor: ThemesDefault.colors.MODAL_BACKGROUND };
+obj[3] = { borderLeftColor: ThemesDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
 obj[4] = { right: -MIDNIGHT_BORDER_WIDTH };
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = { code: "function SwipeForMemberListWrapperTsx1(){const{shownPixels}=this.__closure;return shownPixels.get()>0;}" };
@@ -44,16 +39,10 @@ let closure_21 = { code: "function SwipeForMemberListWrapperTsx4(isInactive,wasI
 let closure_22 = { code: "function SwipeForMemberListWrapperTsx5(){const{maxWidth,translateX}=this.__closure;return maxWidth-translateX.get();}" };
 let closure_23 = { code: "function SwipeForMemberListWrapperTsx6(){const{theme,ThemeTypes,isChatBesideChannelList,translateX,MIDNIGHT_BORDER_WIDTH}=this.__closure;if(theme!==ThemeTypes.MIDNIGHT||isChatBesideChannelList)return translateX.get();return translateX.get()-MIDNIGHT_BORDER_WIDTH;}" };
 let closure_24 = { code: "function SwipeForMemberListWrapperTsx7(){const{shownPixels,PEEK_PIXEL_THRESHOLD}=this.__closure;const exceedsPeekThreshold=shownPixels.get()>PEEK_PIXEL_THRESHOLD*2;return{display:exceedsPeekThreshold?'none':'flex',opacity:exceedsPeekThreshold?0:1-shownPixels.get()/PEEK_PIXEL_THRESHOLD};}" };
-let obj3 = { borderLeftColor: require("Themes").colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx");
+let obj3 = { borderLeftColor: ThemesDefault.colors.BORDER_STRONG, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/SwipeForMemberListWrapper.tsx");
 
 export default function _default(channelId) {
-  let children;
-  let gesture;
-  let isDragging;
-  let panelGestureContext;
-  let style;
-  let translateX;
   channelId = channelId.channelId;
   gesture = channelId;
   const screenIndex = channelId.screenIndex;
@@ -71,7 +60,7 @@ export default function _default(channelId) {
   let derivedStateFromSharedValue;
   let callback2;
   let callback3;
-  let closure_15;
+  closure_15 = undefined;
   ({ children, style } = channelId);
   let tmp = callback();
   let tmp4 = derivedValue(gesture2[15])();
@@ -83,7 +72,7 @@ export default function _default(channelId) {
   gesture3 = tmp5[1];
   const items = [channelId];
   const effect = translateX2.useEffect(() => {
-    let closure_0 = gesture(gesture2[16]).runAfterInteractions(() => {
+    closure_0 = gesture(gesture2[16]).runAfterInteractions(() => {
       callback(closure_0);
     }, 200);
     return () => {
@@ -123,7 +112,7 @@ export default function _default(channelId) {
   const movePanel = tmp11.movePanel;
   isChatLockedOpen = movePanel;
   maxWidth = tmp11.maxWidth;
-  let obj1 = gesture(gesture2[13]);
+  obj1 = gesture(gesture2[13]);
   class X {
     constructor() {
       return maxWidth - disallowGesture.get();
@@ -181,7 +170,7 @@ export default function _default(channelId) {
   }, items5);
   const items6 = [callback3];
   const effect2 = translateX2.useEffect(() => {
-    let closure_0 = derivedValue(gesture2[22]).addRouteChangeListener(() => {
+    closure_0 = derivedValue(gesture2[22]).addRouteChangeListener(() => {
       callback2();
     });
     return () => {
@@ -195,10 +184,10 @@ export default function _default(channelId) {
     let ComponentDispatch2 = gesture(gesture2[19]).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(derivedValue.HIDE_CHANNEL_DETAILS, callback3);
     return () => {
-      const ComponentDispatch = outer1_0(outer1_2[19]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(outer1_11.SHOW_CHANNEL_DETAILS, closure_13);
-      const ComponentDispatch2 = outer1_0(outer1_2[19]).ComponentDispatch;
-      ComponentDispatch2.unsubscribe(outer1_11.HIDE_CHANNEL_DETAILS, closure_14);
+      const ComponentDispatch = closure_1_0(closure_1_2[19]).ComponentDispatch;
+      ComponentDispatch.unsubscribe(closure_1_11.SHOW_CHANNEL_DETAILS, closure_13);
+      const ComponentDispatch2 = closure_1_0(closure_1_2[19]).ComponentDispatch;
+      ComponentDispatch2.unsubscribe(closure_1_11.HIDE_CHANNEL_DETAILS, closure_14);
     };
   }, items7);
   const items8 = [derivedValue, callback3, channelId];
@@ -216,7 +205,7 @@ export default function _default(channelId) {
         currentRoute = rootNavigationRef.getCurrentRoute();
       }
       let tmp23Result = tmp23(tmp24[12]);
-      const isChatLockedOpen = tmp23Result.getChatLayout().isChatLockedOpen;
+      isChatLockedOpen = tmp23Result.getChatLayout().isChatLockedOpen;
       tmp23Result = tmp23(tmp24[24]);
       let coerceChannelRouteResult = tmp23Result.coerceChannelRoute(currentRoute);
       if (tmp3) {
@@ -235,7 +224,7 @@ export default function _default(channelId) {
       obj[4] = params;
       navigation.verbose("handleBackPress", obj);
       if (null == coerceChannelRouteResult) {
-        const obj1 = { currentRoute: null, isChatLockedOpen: null };
+        obj1 = { currentRoute: null, isChatLockedOpen: null };
         obj1[0] = currentRoute;
         obj1[1] = isChatLockedOpen;
         navigation.verbose("handleBackPress", "route is null", obj1);
@@ -309,7 +298,7 @@ export default function _default(channelId) {
   translateX3 = undefined;
   disallowGesture3 = undefined;
   isChatLockedOpen = undefined;
-  const context = translateX2.useContext(derivedValue(gesture2[11]));
+  context = translateX2.useContext(derivedValue(gesture2[11]));
   gesture2 = context.gesture;
   disallowGesture = context.disallowGesture;
   translateX2 = context.translateX;
@@ -431,8 +420,7 @@ export default function _default(channelId) {
     },
     children: null
   };
-  obj3 = { style: tmp.content, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
-  obj3[1] = derivedStateFromSharedValue;
+  obj3 = { style: tmp.content, accessibilityElementsHidden: derivedStateFromSharedValue, importantForAccessibility: null, children: null };
   let str;
   if (derivedStateFromSharedValue) {
     str = "no-hide-descendants";
@@ -453,18 +441,15 @@ export default function _default(channelId) {
       prop = tmp.midnightRightOverflow;
     }
   }
-  const obj4 = { style: items16, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
+  const obj4 = { style: items16, accessibilityElementsHidden: !derivedStateFromSharedValue, importantForAccessibility: "no-hide-descendants", children: null };
   items16[3] = prop;
-  obj4[1] = !derivedStateFromSharedValue;
-  obj4[2] = "no-hide-descendants";
   const items17 = [callback2(derivedValue(gesture2[30]), { absolute: true, withOverlay: true, overlayOpacity: 0.5 }), , ];
-  obj5 = { children: null };
-  obj5[0] = callback2(derivedValue(gesture2[32]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 });
+  obj5 = { children: tmp35(tmp2(tmp3[32]), { isShowing: derivedStateFromSharedValue, channelId: tmp5[0], isSearchLocked: false, onBackPress: callback4, componentWidth: tmp8, onChannelDeleted: callback3 }) };
   items17[1] = callback2(gesture(gesture2[31]).LayerScope, obj5);
-  const obj6 = { style: items18, children: null };
-  items18 = [gesture3.absoluteFill, animatedStyle];
-  obj6[1] = callback2(disallowGesture2, { style: tmp.memberListPreview });
-  items17[2] = callback2(derivedValue(gesture2[13]).View, obj6);
+  const tmp12Result3 = gesture(gesture2[13]);
+  const tmp41 = !derivedStateFromSharedValue;
+  const items18 = [gesture3.absoluteFill, animatedStyle];
+  items17[2] = callback2(derivedValue(gesture2[13]).View, { style: items18, children: callback2(disallowGesture2, obj7) });
   obj4[3] = items17;
   items15[1] = callback3(derivedValue(gesture2[13]).View, obj4);
   obj2[2] = items15;

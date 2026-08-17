@@ -1,5 +1,5 @@
 // discord_common/js/packages/transition-group/TransitionChildMapping.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionChildMapping.tsx");
 
@@ -51,7 +51,7 @@ export const mergeChildMappings = function mergeChildMappings(children, childMap
       continue;
     }
   }
-  const obj1 = {};
+  obj1 = {};
   for (const key10018 in obj) {
     let tmp13 = key10018;
     if (obj.hasOwnProperty(key10018)) {

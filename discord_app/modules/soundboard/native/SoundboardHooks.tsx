@@ -1,32 +1,30 @@
 // discord_app/modules/soundboard/native/SoundboardHooks.tsx
-import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import handleThemeChange from "handleThemeChange";
-import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
+import SOUND_BUTTON_HEIGHT from "SOUND_BUTTON_HEIGHT" /* 16284 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ SOUNDS_PER_ROW: error, SOUND_ROW_PADDING: metroImportAll } = SOUND_BUTTON_HEIGHT);
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
+({ SOUNDS_PER_ROW: error, SOUND_ROW_PADDING: closure_8 } = SOUND_BUTTON_HEIGHT);
+const result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardHooks.tsx");
 
 export const useSoundButtonStyleConfig = function useSoundButtonStyleConfig() {
-  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, useWindowDimensions().width) - closure_8) / closure_7 };
+  return { buttonWidth: (Math.min(ACTION_SHEET_MAX_WIDTH, useWindowDimensionsDefault().width) - closure_8) / closure_7 };
 };
 export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSounds(shouldFetch) {
   shouldFetch = shouldFetch.shouldFetch;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   const stateFromStores = shouldFetch(589).useStateFromStores(items, () => saturation.saturation);
   let obj = shouldFetch(589);
-  const items1 = [handleThemeChange];
+  const items1 = [closure_6];
   const items2 = [stateFromStores, shouldFetch(589).useStateFromStores(items1, () => shouldFetch(table[8]).isThemeDark(theme.theme)), shouldFetch];
   const effect = React.useEffect(() => {
     function _fetchAndHydrateColors() {
       const self = this;
-      const tmp = outer2_3(function*() {
+      const tmp = closure_2_3(function*() {
         if (c0 === 2) {
           c0 = 3;
           HermesBuiltin.throwTypeError();
@@ -53,9 +51,9 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
                 obj[0] = arg1;
                 return obj;
               } else if (c0) {
-                const FrecencyUserSettingsActionCreators = v0(outer2_2[9]).FrecencyUserSettingsActionCreators;
+                const FrecencyUserSettingsActionCreators = v0(closure_2_2[9]).FrecencyUserSettingsActionCreators;
                 const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-                let obj1 = v0(outer2_2[10]);
+                obj1 = v0(closure_2_2[10]);
                 c1 = 1;
                 c0 = 1;
                 obj1 = { value: null, done: false };
@@ -79,7 +77,7 @@ export const useMaybeFetchSoundboardSounds = function useMaybeFetchSoundboardSou
           }
         }
       });
-      const _fetchAndHydrateColors = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);

@@ -1,30 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx
-import TableRowInner from "TableRowInner";
-import getRelativeTimestamp from "getRelativeTimestamp";
-import { View } from "explicitContentFromProto";
-import _validate from "_validate";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserRowModes } from "UserRowModes";
-import ME from "ME";
-import { MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL as closure_13 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD";
-import jsxProd from "context";
-import createCacheKey from "createCacheKey";
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "_validate" /* 4801 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import ME from "ME" /* 676 */;
+import { MINIMUM_PENDING_INCOMING_COUNT_FOR_CLEAR_ALL as closure_13 } from "RELATIONSHIP_COUNT_ANIMATION_THRESHOLD" /* 9891 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let closure_14;
-let closure_15;
-let unpackModuleId;
 const require = arg1;
 function compareUserItems(user, user2) {
   if (user.user.id === user2.user.id) {
-    let compareResult = DISCORD_EPOCH.compare(user.applicationId, user2.applicationId);
-    const obj2 = DISCORD_EPOCH;
+    let compareResult = DISCORD_EPOCHDefault.compare(user.applicationId, user2.applicationId);
+    const obj2 = DISCORD_EPOCHDefault;
   } else {
-    compareResult = DISCORD_EPOCH.compare(user.user.id, user2.user.id);
-    const obj = DISCORD_EPOCH;
+    compareResult = DISCORD_EPOCHDefault.compare(user.user.id, user2.user.id);
+    const obj = DISCORD_EPOCHDefault;
   }
   return compareResult;
 }
@@ -32,20 +28,18 @@ function compareUserItems(user, user2) {
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let closure_16 = { Incoming: 0, [0]: "Incoming", Outgoing: 1, [1]: "Outgoing" };
 createCacheKey = { container: { flex: 1 }, noResultsContainer: null, clearAllContainer: null, clearAll: null, tabs: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, borderColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: require("Themes").space.PX_16, minWidth: 2 * require("Themes").space.PX_64, borderRadius: require("Themes").radii.round, alignItems: "center", paddingVertical: 5, borderWidth: 3 };
-let obj2 = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, borderColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: require("Themes").space.PX_16, minWidth: 2 * require("Themes").space.PX_64, borderRadius: require("Themes").radii.round, alignItems: "center", paddingVertical: 5, borderWidth: 3 };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx");
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, justifyContent: "flex-end", flexDirection: "row" };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, minWidth: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.round, alignItems: "center", paddingVertical: 5, borderWidth: 3 };
+let obj2 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_16, minWidth: 2 * ThemesDefault.space.PX_64, borderRadius: ThemesDefault.radii.round, alignItems: "center", paddingVertical: 5, borderWidth: 3 };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/FriendRequestsScreen.tsx");
 
 export default function FriendRequestsScreen() {
-  let incomingSection;
-  let outgoingSection;
   let tmp = callback();
   let WumpusCouchSpotIllustration = dependencyMap;
   const analyticsLocations = first(7139)(first(7159).FRIEND_REQUESTS).analyticsLocations;
@@ -72,18 +66,18 @@ export default function FriendRequestsScreen() {
       const mapped = arr.map((local_id) => local_id.local_id);
       const _Boolean = Boolean;
       const found = mapped.filter(Boolean);
-      const result = stateFromStoresArray(tmp11[18]).markNotificationCenterLocalItemsAcked(found);
-      const obj = stateFromStoresArray(tmp11[18]);
-      const result1 = stateFromStoresArray(tmp11[18]).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !outer1_0(outer1_2[19]).isRemoteAcked(addResult, closure_1)));
-      const obj2 = stateFromStoresArray(tmp11[18]);
+      const result = stateFromStoresArray(15670).markNotificationCenterLocalItemsAcked(found);
+      const obj = stateFromStoresArray(15670);
+      const result1 = stateFromStoresArray(15670).bulkMarkNotificationCenterItemsAcked(arr.filter((addResult) => !closure_1_0(closure_1_2[19]).isRemoteAcked(addResult, closure_1)));
+      const obj2 = stateFromStoresArray(15670);
     }
   }, items1);
   const effect1 = gameRelationshipsByType1.useEffect(() => {
-    let obj = first(tmp11[23]);
+    let obj = first(698);
     obj = { friend_add_type: spam.FRIENDS_REQUESTS_MODAL };
     obj.track(outgoing.FRIEND_ADD_VIEWED, obj);
   }, []);
-  let obj1 = stateFromStoresArray(647);
+  obj1 = stateFromStoresArray(647);
   const items2 = [spamIds];
   const tmp9 = gameRelationshipsByType(obj1.useStateFromStoresArray(items2, () => {
     const items = [spamIds.getMutableRelationships(), spamIds.getVersion()];
@@ -108,7 +102,7 @@ export default function FriendRequestsScreen() {
   }, items3);
   first(7145)(memo);
   const items4 = [first, tmp9[1]];
-  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(tmp11[26]).getPendingRelationshipIds(first, tmp11), items4);
+  const memo1 = gameRelationshipsByType1.useMemo(() => stateFromStoresArray(15999).getPendingRelationshipIds(first, dependencyMap), items4);
   const pendingIncomingIds = memo1.pendingIncomingIds;
   pendingOutgoingIds = memo1.pendingOutgoingIds;
   spamIds = memo1.spamIds;
@@ -125,11 +119,9 @@ export default function FriendRequestsScreen() {
     const found2 = mapped2.filter((user) => null != user.user);
     const mapped3 = gameRelationshipsByType1.map((applicationId) => ({ user: authStore.getUser(applicationId.id), isGameRelationship: true, applicationId: applicationId.applicationId }));
     const found3 = mapped3.filter((user) => null != user.user);
-    const obj = { incoming: null, outgoing: null, spam: null, ignoredUsers: null };
-    const items = [...found1];
-    obj[0] = items.sort(navigation);
-    const items1 = [...found3];
-    obj[1] = items1.sort(navigation);
+    const obj = { incoming: items.sort(navigation), outgoing: items1.sort(navigation), spam: null, ignoredUsers: null };
+    items = [...found1];
+    items1 = [...found3];
     const mapped4 = spamIds.map((arg0) => ({ user: authStore.getUser(arg0) }));
     obj[2] = mapped4.filter((user) => null != user.user);
     const mapped5 = ignoredUserIds.map((arg0) => ({ user: authStore.getUser(arg0) }));
@@ -173,14 +165,14 @@ export default function FriendRequestsScreen() {
   let Outgoing = tmp19[1];
   const items8 = [analyticsLocations];
   callback = gameRelationshipsByType1.useCallback((id) => {
-    first(tmp11[28])({ userId: id.id, localUser: id, sourceAnalyticsLocations: stateFromStoresArray });
+    first(8929)({ userId: id.id, localUser: id, sourceAnalyticsLocations: stateFromStoresArray });
   }, items8);
   const callback1 = gameRelationshipsByType1.useCallback((arg0) => {
     if (1 === arg0) {
       let obj = { type: "section", props: null };
       obj = { title: null };
-      const intl = stateFromStoresArray(tmp11[29]).intl;
-      obj[0] = intl.string(stateFromStoresArray(tmp11[29]).t["NHpP/k"]);
+      const intl = stateFromStoresArray(1236).intl;
+      obj[0] = intl.string(stateFromStoresArray(1236).t["NHpP/k"]);
       obj[1] = obj;
       return obj;
     }
@@ -203,8 +195,8 @@ export default function FriendRequestsScreen() {
           obj[1] = intl.string(tmp2(tmp3[29]).t.fUQoqD);
           obj = { variant: "text-sm/medium", color: "text-muted", children: null };
           obj[2] = arr.length;
-          obj[2] = outer1_14(tmp2(tmp3[33]).Text, obj);
-          tmp4 = outer1_14(tmp2(tmp3[32]).TableRow, obj);
+          obj[2] = closure_1_14(tmp2(tmp3[33]).Text, obj);
+          tmp4 = closure_1_14(tmp2(tmp3[32]).TableRow, obj);
         }
         const children = [tmp4, ];
         let tmp6 = null;
@@ -215,13 +207,13 @@ export default function FriendRequestsScreen() {
           };
           const intl2 = tmp2(tmp3[29]).intl;
           obj[1] = intl2.string(tmp2(tmp3[29]).t.en1Gkz);
-          const obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
+          obj1 = { variant: "text-sm/medium", color: "text-muted", children: null };
           obj1[2] = arr3.length;
-          obj[2] = outer1_14(tmp2(tmp3[33]).Text, obj1);
-          tmp6 = outer1_14(tmp2(tmp3[32]).TableRow, obj);
+          obj[2] = closure_1_14(tmp2(tmp3[33]).Text, obj1);
+          tmp6 = closure_1_14(tmp2(tmp3[32]).TableRow, obj);
         }
         children[1] = tmp6;
-        return outer1_15(outer1_0(outer1_2[31]).TableRowGroup, { hasIcons: false, children });
+        return closure_1_15(closure_1_0(closure_1_2[31]).TableRowGroup, { hasIcons: false, children });
       };
       return obj;
     } else {
@@ -298,7 +290,7 @@ export default function FriendRequestsScreen() {
     obj6[0] = tmp.clearAll;
     obj6[1] = function onPress() {
       const lazyResult = gameRelationshipsByType1.lazy(() => callback(paths[13])(paths[12], paths.paths));
-      stateFromStoresArray(tmp11[14]).openAlert("clear-all-incoming-requests", outgoingData(lazyResult, { incomingRequestCount: incoming.length }));
+      stateFromStoresArray(4657).openAlert("clear-all-incoming-requests", outgoingData(lazyResult, { incomingRequestCount: incoming.length }));
     };
     const obj7 = { variant: "text-sm/semibold", color: "text-brand", children: null };
     const intl3 = tmp4(1236).intl;

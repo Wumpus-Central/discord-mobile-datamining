@@ -1,21 +1,25 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx
-import { createChannelRecord } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createChannelRecord2 from "createChannelRecord" /* 1395 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
 
+const createChannelRecord = createChannelRecord2.createChannelRecord;
 let closure_2 = {};
 let closure_3 = {};
+const Store = initializeDefault.Store;
 class GuildRoleSubscriptionTierTemplatesStore extends Store {
 }
 const prototype = GuildRoleSubscriptionTierTemplatesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded);
+  this.waitFor(closure_1);
 };
 prototype["getTemplates"] = function getTemplates(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getTemplateWithCategory"] = function getTemplateWithCategory(c0, usedTemplate) {
-  let closure_0 = usedTemplate;
+  closure_0 = usedTemplate;
   let found;
   if (dependencyMap[c0] != null) {
     found = arr.find((category) => category.category === closure_0);
@@ -26,20 +30,20 @@ prototype["getChannel"] = function getChannel(arg0) {
   return table[arg0];
 };
 GuildRoleSubscriptionTierTemplatesStore.displayName = "GuildRoleSubscriptionTierTemplatesStore";
-const guildRoleSubscriptionTierTemplatesStore = new GuildRoleSubscriptionTierTemplatesStore(require("dispatcher"), {
+const guildRoleSubscriptionTierTemplatesStore = new GuildRoleSubscriptionTierTemplatesStore(dispatcherDefault, {
   GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function handleStashTemplateChannels(guildId) {
-    let closure_0;
+    closure_0 = undefined;
     closure_0 = Object.values(mutableGuildChannelsForGuild.getMutableGuildChannelsForGuild(guildId.guildId));
     const listings = guildId.selectedTemplate.listings;
     let item = listings.forEach((channels) => {
       channels = channels.channels;
       const item = channels.forEach((id) => {
-        let closure_0 = id;
+        closure_0 = id;
         const found = closure_0.find((name) => name.name === name.name);
         if (undefined !== found) {
           id.id = found.id;
-        } else if (!(id.id in outer1_3)) {
-          tmp2[id.id] = outer1_0(id);
+        } else if (!(id.id in closure_1_3)) {
+          tmp2[id.id] = closure_1_0(id);
         }
       });
     });
@@ -48,6 +52,6 @@ const guildRoleSubscriptionTierTemplatesStore = new GuildRoleSubscriptionTierTem
     closure_2[guildId.guildId] = guildId.templates;
   }
 });
-const result = require("initialize").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesStore.tsx");
 
 export default guildRoleSubscriptionTierTemplatesStore;

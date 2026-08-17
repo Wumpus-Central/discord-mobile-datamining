@@ -1,25 +1,23 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx
-import "noop";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/14326_registerAsset.js";
-import { DismissibleContent } from "../../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { preload } from "../../../../../../components_native/common/FastImage.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
-import { OneWayToTwoWayNewTag } from "../OneWayToTwoWayLinkUpsell.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import combinedDefault from "combined" /* 1993 */;
+import preloadDefault from "preload" /* 5449 */;
+import OneWayToTwoWayNewTag from "OneWayToTwoWayNewTag" /* 14323 */;
+import registerAssetDefault from "registerAsset" /* 14326 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ HelpdeskArticles: c3, AnalyticsLocations: c4, PlatformTypes: c5 } = ME);
 let closure_7 = createCacheKey.createStyles({ upsellImage: { alignSelf: "center", width: 84, marginLeft: 16 } });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationTwoWayLinkUpsell.tsx");
 
 export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell() {
-  let obj = combined;
+  let obj = combinedDefault;
   const articleURL = obj.getArticleURL(constants.PS_CONNECTION);
   obj = { title: null, body: null, img: null, newIndicatorDismissibleContent: null, onPress: null };
   const intl = getSystemLocale.intl;
@@ -28,8 +26,8 @@ export const PlayStationTwoWayLinkUpsell = function PlayStationTwoWayLinkUpsell(
   obj[1] = intl2.format(getSystemLocale.t.lTZBit, { help_article: articleURL });
   obj = { style: callback().upsellImage, source: null, resizeMode: "contain" };
   const tmp = callback();
-  obj[1] = registerAsset;
-  obj[2] = jsx(preload, { style: callback().upsellImage, source: null, resizeMode: "contain" });
+  obj[1] = registerAssetDefault;
+  obj[2] = jsx(preloadDefault, { style: callback().upsellImage, source: null, resizeMode: "contain" });
   obj[3] = DismissibleContent.DismissibleContent.PS_ONE_WAY_RECONNECT;
   obj[4] = function onPress() {
     const items = [constants.RELINK_UPSELL];

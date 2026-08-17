@@ -1,14 +1,12 @@
 // discord_app/modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
-import { AbortCodes } from "ME";
-import { keys } from "../../../../../ConstantsIOS.tsx";
-import { getError } from "../../getError.tsx";
-import { headerTitle } from "../../RegistrationStepsUtils.tsx";
-import { trackRegTransition } from "../../RegistrationUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import keys from "keys" /* 691 */;
+import getErrorDefault from "getError" /* 8594 */;
+import headerTitle from "headerTitle" /* 15211 */;
+import trackRegTransition from "trackRegTransition" /* 15220 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 
-let c3;
-let c4;
-let c5;
 function getRedirectStepForErrorKey(arg0) {
   if ("email" !== arg0) {
     if ("phoneToken" !== arg0) {
@@ -27,11 +25,12 @@ function getRedirectStepForErrorKey(arg0) {
   return keys.AuthStates.REGISTER_IDENTITY;
 }
 ({ RegisterTransitionSteps: c3, RegistrationTransitionActionTypes: c4, authStateToRegisterTransitionStep: c5 } = RegistrationTransitionActionTypes);
+const AbortCodes = ME.AbortCodes;
 let closure_7 = { [keys.AuthStates.REGISTER_IDENTITY]: ["email", "phoneToken"], [keys.AuthStates.REGISTER_DISPLAY_NAME]: ["global_name"], [keys.AuthStates.REGISTER_ACCOUNT_INFORMATION]: ["username", "password"] };
-const result = require("keys").fileFinishedImporting("modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx");
+const result = set.fileFinishedImporting("modules/auth/native/components/utils/handleRegisterErrorRedirection.tsx");
 
 export default function handleRegisterErrorRedirection(navigate, arg1, code) {
-  if (null == getError("date_of_birth", code)) {
+  if (null == getErrorDefault("date_of_birth", code)) {
     const _Number = Number;
     if (Number(code.code) !== AbortCodes.UNDER_MINIMUM_AGE) {
       const registrationSteps = headerTitle.getRegistrationSteps();
@@ -49,7 +48,7 @@ export default function handleRegisterErrorRedirection(navigate, arg1, code) {
           let tmp9 = item10023;
           let tmp11 = dependencyMap;
           let tmp12 = dependencyMap;
-          let tmp13 = getError(item10023, arg2);
+          let tmp13 = getErrorDefault(item10023, arg2);
           if (null != tmp13) {
             let tmp15 = getRedirectStepForErrorKey;
             let tmp16 = item10023;

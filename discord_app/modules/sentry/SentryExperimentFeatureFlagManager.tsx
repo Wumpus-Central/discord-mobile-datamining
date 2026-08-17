@@ -1,10 +1,10 @@
 // discord_app/modules/sentry/SentryExperimentFeatureFlagManager.tsx
-import getHash from "getHash";
-import initialize from "initialize";
-import handleConnectionOpen from "handleConnectionOpen";
-import "initialize";
-import set from "handleConnectionOpen";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
+import _modDef1208 from "module_1208" /* 1208 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "getHash" /* 4288 */;
+import closure_3 from "initialize" /* 1212 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import set from "set" /* 2 */;
 
 function isLikelyControl(defaultConfig, variantId2) {
   if (null == defaultConfig) {
@@ -28,7 +28,7 @@ function flushFlags(items, set) {
     let tmp4 = importDefault;
     let tmp5 = dependencyMap;
     let tmp3 = nextResult;
-    let obj = SentryUtils.native;
+    let obj = _modDef1208;
     let addFeatureFlagResult = obj.addFeatureFlag(nextResult, true);
     if (set != null) {
       let tmp7 = nextResult;
@@ -210,11 +210,12 @@ function syncAllExperimentFlags() {
   flushFlags(items6, set);
 }
 let set = new Set();
+initializeDefault;
 let prototype = function SentryExperimentFeatureFlagManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const result = new Map().set(getHash, syncAllExperimentFlags);
-  const result1 = result.set(initialize, syncAllExperimentFlags);
-  applyArgumentsResult.stores = result1.set(handleConnectionOpen, syncAllExperimentFlags);
+  const result = new Map().set(closure_2, syncAllExperimentFlags);
+  const result1 = result.set(closure_3, syncAllExperimentFlags);
+  applyArgumentsResult.stores = result1.set(closure_4, syncAllExperimentFlags);
   return applyArgumentsResult;
 }.prototype;
 class prototype extends tmp3 {

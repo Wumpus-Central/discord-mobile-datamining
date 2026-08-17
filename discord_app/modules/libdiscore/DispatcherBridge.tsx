@@ -1,18 +1,19 @@
 // discord_app/modules/libdiscore/DispatcherBridge.tsx
-import getUserAgnosticState from "getUserAgnosticState";
-import importDefaultResult from "fromServer";
-import importDefaultResult1 from "parseServerGuildSticker";
-import fetchFingerprint from "fetchFingerprint";
-import importDefaultResult2 from "getNote";
-import importDefaultResult3 from "createGuildRoleRecordFromRust";
-import { AnalyticEvents } from "ME";
-import importDefaultResult4 from "createGuildRecordFromRust";
-import set from "parseServerGuildSticker";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { items } from "libdiscoreExperiments.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import items6 from "items" /* 1914 */;
+import closure_3 from "getUserAgnosticState" /* 4737 */;
+import importDefaultResult from "fromServer" /* 6729 */;
+import importDefaultResult1 from "parseServerGuildSticker" /* 6770 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import importDefaultResult2 from "getNote" /* 12160 */;
+import importDefaultResult3 from "createGuildRoleRecordFromRust" /* 1983 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import importDefaultResult4 from "createGuildRecordFromRust" /* 1910 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
-let closure_6 = new require("getNote")("DispatcherBridge");
+require = arg1;
+let closure_6 = new timestampDefault("DispatcherBridge");
 let items = [importDefaultResult2, importDefaultResult4, importDefaultResult3, importDefaultResult, importDefaultResult1];
 let closure_7 = {
   GUILD_MEMBER_ADD(arg0) {
@@ -42,7 +43,7 @@ _instance_members_initializer_DispatcherBridge_ = function() {
 class DispatcherBridge {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
-    __esModule = obj;
+    closure_4 = obj;
     tmp2 = _instance_members_initializer_DispatcherBridge_();
     closure_0 = obj;
     if (0 !== global.length) {
@@ -79,7 +80,7 @@ class DispatcherBridge {
             arr = items.push("" + name + " => [token: " + result + ", mode: " + nextResult.getMode() + "]");
             continue;
           }
-          tmp16 = AnalyticEvents;
+          tmp16 = closure_6;
           length = global.length;
           tmp17 = items;
           str10 = ", ";
@@ -89,22 +90,20 @@ class DispatcherBridge {
           str13 = "Connected ";
           tmp18 = length;
           str14 = ".";
-          infoResult = AnalyticEvents.info("Connected " + length + " store(s), mapping: " + items.join(", ") + ".");
+          infoResult = closure_6.info("Connected " + length + " store(s), mapping: " + items.join(", ") + ".");
           registeredActionTypes = FLUX_API.getRegisteredActionTypes();
           length2 = registeredActionTypes.length;
           _HermesInternal3 = HermesInternal;
           str15 = " bridged action(s): ";
           str16 = "Registering ";
           tmp20 = length2;
-          infoResult1 = AnalyticEvents.info("Registering " + length2 + " bridged action(s): " + registeredActionTypes.join(", ") + ".");
+          infoResult1 = closure_6.info("Registering " + length2 + " bridged action(s): " + registeredActionTypes.join(", ") + ".");
           actionHandler = function actionHandler(actionHandler) {
-            let metrics;
-            let storeResults;
-            let closure_0 = actionHandler;
+            closure_0 = actionHandler;
             if (!obj.disabledFromFatalError) {
               const _performance = performance;
               const nowResult = performance.now();
-              if (null != outer1_7[actionHandler.type]) {
+              if (null != closure_1_7[actionHandler.type]) {
                 const _JSON2 = JSON;
                 obj = { type: null };
                 obj[0] = actionHandler.type;
@@ -168,13 +167,10 @@ class DispatcherBridge {
                       const mapped1 = mutations.map((metrics) => {
                         const entries = Object.entries(metrics.metrics);
                         const found = entries.filter((arg0) => {
-                          let tmp;
                           [, tmp] = arg0;
                           return 0 !== tmp;
                         });
                         const mapped = found.map((arg0) => {
-                          let tmp;
-                          let tmp2;
                           [tmp, tmp2] = arg0;
                           return " - " + tmp + ": " + tmp2;
                         });
@@ -186,8 +182,6 @@ class DispatcherBridge {
                       const mapped2 = memory.map((statistics) => {
                         const entries = Object.entries(statistics.statistics);
                         const mapped = entries.map((arg0) => {
-                          let tmp;
-                          let tmp2;
                           [tmp, tmp2] = arg0;
                           return " - " + tmp + ": " + JSON.stringify(tmp2);
                         });
@@ -196,20 +190,17 @@ class DispatcherBridge {
                       const items5 = ["Memory Usage", mapped2.join("\n")];
                       items3[2] = items5;
                       let found = items3.filter((arg0) => {
-                        let arr;
                         [, arr] = arg0;
                         return arr.length > 0;
                       });
                       const mapped3 = found.map((arg0) => {
-                        let tmp;
-                        let tmp2;
                         [tmp, tmp2] = arg0;
                         return "" + tmp + ":\n" + tmp2;
                       });
                       const _HermesInternal = HermesInternal;
-                      outer1_6.info("Handling action " + actionHandler.type + " took " + diff + "ms\n" + mapped3.join("\n\n"));
+                      closure_1_6.info("Handling action " + actionHandler.type + " took " + diff + "ms\n" + mapped3.join("\n\n"));
                     }
-                    const obj1 = { action_type: null, total_duration_millis: null, timings: null, mutations: null, memory_usage: null };
+                    obj1 = { action_type: null, total_duration_millis: null, timings: null, mutations: null, memory_usage: null };
                     obj1[0] = actionHandler.type;
                     obj1[1] = diff;
                     const _JSON3 = JSON;
@@ -218,7 +209,7 @@ class DispatcherBridge {
                     obj1[3] = JSON.stringify(metrics.mutations);
                     const _JSON5 = JSON;
                     obj1[4] = JSON.stringify(metrics.memory);
-                    FLUX_API(actionHandler[11]).track(outer1_5.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, obj1);
+                    FLUX_API(actionHandler[11]).track(closure_1_5.LIBDISCORE_DISPATCH_BRIDGE_TELEMETRY, obj1);
                     const TelemetryExperiment2 = obj(actionHandler[10]).TelemetryExperiment;
                     TelemetryExperiment2.didEmit();
                     const obj8 = FLUX_API(actionHandler[11]);
@@ -244,32 +235,32 @@ class DispatcherBridge {
 
           }, require("dispatcher").DispatchBand.Database);
           _default = require("getState").default;
-          f102099 = _default;
+          closure_3 = _default;
           addChangeListenerResult = _default.addChangeListener(() => {
             if ("active" !== _default.getState()) {
               let _Date = Date;
-              let closure_0 = Date.now();
+              closure_0 = Date.now();
               const result = FLUX_API.flushReplicationStates();
               if (result != null) {
                 result.then((arg0) => {
                   if (arg0) {
                     const _Date = Date;
                     const _HermesInternal = HermesInternal;
-                    outer1_6.info("Successfully flushed replication states in " + Date.now() - closure_0 + "ms");
+                    closure_1_6.info("Successfully flushed replication states in " + Date.now() - closure_0 + "ms");
                   }
                 });
               }
             }
           });
         } catch (tmp29) {
-          tmp30 = AnalyticEvents;
+          tmp30 = closure_6;
           str18 = "Failed to initialize the dispatcher bridge";
-          errorResult = AnalyticEvents.error("Failed to initialize the dispatcher bridge", tmp29);
+          errorResult = closure_6.error("Failed to initialize the dispatcher bridge", tmp29);
         }
       } else {
-        tmp3 = AnalyticEvents;
+        tmp3 = closure_6;
         str = "Not initializing DispatcherBridge, because kvStoreApi is unavailable.";
-        infoResult2 = AnalyticEvents.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
+        infoResult2 = closure_6.info("Not initializing DispatcherBridge, because kvStoreApi is unavailable.");
       }
     }
     return obj;
@@ -280,12 +271,12 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
   const self = this;
   error = new Error(error);
   const result = this.hasAnyAuthoritativeStore();
-  let obj = tmp7;
-  tmp7.error("Fatal dispatch error for action", type, "hasAuthoritativeStore:", result, error);
+  let obj = logger;
+  logger.error("Fatal dispatch error for action", type, "hasAuthoritativeStore:", result, error);
   obj = { actionType: type, hasAuthoritativeStore: result };
-  SentryUtils.native.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
+  _modDef1208.captureException(error, { extra: obj, tags: { source: "libdiscore", errorKind: "fatal_dispatch" } });
   if (result) {
-    const result1 = items.clearLibdiscoreExperimentCache();
+    const result1 = items6.clearLibdiscoreExperimentCache();
     throw error;
   } else {
     obj.warn("Disabling DispatcherBridge until restart");
@@ -297,7 +288,7 @@ prototype["handleFatalError"] = function handleFatalError(error, type) {
       continue;
     }
   }
-  const obj2 = SentryUtils.native;
+  const obj2 = _modDef1208;
 };
 prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   const tokenToStore = this.tokenToStore;
@@ -318,14 +309,14 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
   if (str3 == null) {
     str3 = "unknown store error";
   }
-  const error = new Error(str3);
-  tmp7.error("Store", name, "failed to handle action", type, "mode:", mode, error);
-  SentryUtils.native.captureException(error, { extra: { actionType: type, storeName: name, storeMode: mode }, tags: { source: "libdiscore", errorKind: "store_dispatch" } });
+  error = new Error(str3);
+  logger.error("Store", name, "failed to handle action", type, "mode:", mode, error);
+  _modDef1208.captureException(error, { extra: { actionType: type, storeName: name, storeMode: mode }, tags: { source: "libdiscore", errorKind: "store_dispatch" } });
   if ("typescript-libdiscore-dual-read" !== mode) {
     if ("libdiscore" === mode) {
-      const result = items.clearLibdiscoreExperimentCache();
+      const result = items6.clearLibdiscoreExperimentCache();
       let error1 = error;
-      const obj5 = items;
+      const obj5 = items6;
     } else {
       const _Error = Error;
       const _HermesInternal3 = HermesInternal;
@@ -340,14 +331,14 @@ prototype["handleStoreError"] = function handleStoreError(storeToken, type) {
     }
   }
   const obj = { actionType: type, storeName: name, storeMode: mode };
-  obj2 = tmp7;
-  const obj3 = SentryUtils.native;
+  obj2 = logger;
+  const obj3 = _modDef1208;
 };
 prototype["withStoreToken"] = function withStoreToken(storeToken, type, arg2) {
   const tokenToStore = this.tokenToStore;
   const value = tokenToStore.get(storeToken);
   if (null == value) {
-    storeToken.warn("When dispatching action", type, "we got a store token", storeToken, "that is unknown");
+    logger.warn("When dispatching action", type, "we got a store token", storeToken, "that is unknown");
   } else {
     arg2(value);
   }

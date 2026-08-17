@@ -1,12 +1,11 @@
 // discord_app/modules/guild_badge/GuildTraits.tsx
-import ME from "ME";
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import set2 from "set" /* 2 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ GuildFeatures: obj1, BoostedGuildTiers: c3 } = ME);
 let obj = { PUBLIC: "PUBLIC", INVITE_ONLY: "INVITE_ONLY", APPLY_TO_JOIN: "APPLY_TO_JOIN" };
-const result = require("set").fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
+const result = set2.fileFinishedImporting("modules/guild_badge/GuildTraits.tsx");
 
 export const GuildVisibility = obj;
 export const getGuildTraits = function getGuildTraits(fromGuildProfileResult) {

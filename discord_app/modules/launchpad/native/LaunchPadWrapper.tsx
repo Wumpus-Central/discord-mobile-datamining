@@ -1,48 +1,35 @@
 // discord_app/modules/launchpad/native/LaunchPadWrapper.tsx
-import _slicedToArray from "_slicedToArray";
-import LAUNCH_PAD_PULL_TAB_BORDER_RADIUS from "LAUNCH_PAD_PULL_TAB_BORDER_RADIUS";
-import get_ActivityIndicator from "useRefValue";
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
-import ME from "ME";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ View: c5, Pressable: closure_6, TouchableOpacity: error, StyleSheet: metroImportAll } = get_ActivityIndicator);
+({ View: c5, Pressable: closure_6, TouchableOpacity: error, StyleSheet: closure_8 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, ComponentActions: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { modalWrapper: null, a11yDismiss: null };
-createCacheKey = { height: "100%", width: "100%", paddingTop: require("Themes").space.PX_8 };
+createCacheKey = { height: "100%", width: "100%", paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", top: 0, width: "100%", height: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", top: 0, width: "100%", height: require("Themes").space.PX_8 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/launchpad/native/LaunchPadWrapper.tsx");
+createCacheKey[1] = { position: "absolute", top: 0, width: "100%", height: ThemesDefault.space.PX_8 };
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { position: "absolute", top: 0, width: "100%", height: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadWrapper.tsx");
 
 export default function LaunchPadWrapper(launchPadType) {
-  let gestureState;
-  let launchPadCoverStyles;
-  let launchPadSharedState;
-  let launchPadShown;
-  let launchPadStyles;
-  let updaters;
   launchPadType = launchPadType.launchPadType;
   updaters = launchPadType;
   ({ gestureState, launchPadShown, launchPadSharedState, updaters } = launchPadType);
   let isModalOpen;
   let callback;
   let ref;
-  let closure_5;
+  closure_5 = undefined;
   callback = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = updaters(isModalOpen[10]);
   isModalOpen = obj.useIsModalOpen();
   ({ launchPadCoverStyles, launchPadStyles } = updaters(isModalOpen[11])({ launchPadSharedState, launchPadShown, gestureState }));
@@ -52,12 +39,12 @@ export default function LaunchPadWrapper(launchPadType) {
   closure_5 = callback(ref.useState({}), 2)[1];
   const items = [tmp7];
   const effect = ref.useEffect(() => {
-    if (c3) {
+    if (closure_3) {
       ref.current = false;
     } else {
       const _setTimeout = setTimeout;
       const timeout = setTimeout(() => {
-        LAUNCH_PAD_PULL_TAB_BORDER_RADIUS.current = true;
+        closure_4.current = true;
         callback({});
       }, 1000);
       return () => clearTimeout(closure_0);
@@ -67,17 +54,17 @@ export default function LaunchPadWrapper(launchPadType) {
   callback = ref.useCallback(() => updaters.setLaunchPadPosition(0), items1);
   const items2 = [tmp7];
   const effect1 = ref.useEffect(() => {
-    if (c3) {
-      updaters(isModalOpen[13]).track(outer1_10.LAUNCHPAD_OPENED);
+    if (closure_3) {
+      updaters(isModalOpen[13]).track(closure_1_10.LAUNCHPAD_OPENED);
       const obj = updaters(isModalOpen[13]);
     }
   }, items2);
   const items3 = [launchPadType, tmp7, isModalOpen];
   const effect2 = ref.useEffect(() => {
-    if (updaters === outer1_9.PULL_TAB) {
+    if (updaters === closure_1_9.PULL_TAB) {
       if (!isModalOpen) {
         const result = updaters(isModalOpen[14]).setLaunchPadPullTabExclusionRect();
-        if (c3) {
+        if (closure_3) {
           const result1 = tmp2(tmp3[15]).triggerHapticFeedback(tmp2(tmp3[15]).HapticFeedbackTypes.IMPACT_LIGHT);
           const tmp2Result = tmp2(tmp3[15]);
         }
@@ -89,10 +76,10 @@ export default function LaunchPadWrapper(launchPadType) {
   const items4 = [launchPadShown];
   const effect3 = ref.useEffect(() => () => callback(table[14]).clearLaunchPadPullTabExclusionRect(), items4);
   updaters(isModalOpen[16])(() => {
-    if (c3) {
+    if (closure_3) {
       callback();
     }
-    return c3;
+    return closure_3;
   });
   const items5 = [updaters];
   const effect4 = ref.useEffect(() => {
@@ -104,17 +91,17 @@ export default function LaunchPadWrapper(launchPadType) {
       showLaunchPad.setLaunchPadShown(false);
       showLaunchPad.setLaunchPadPosition(0);
     }
-    let closure_2 = updaters(isModalOpen[8]).addRouteChangeListener(hideLaunchPad);
+    closure_2 = updaters(isModalOpen[8]).addRouteChangeListener(hideLaunchPad);
     let ComponentDispatch = updaters(isModalOpen[9]).ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(outer1_11.LAUNCH_PAD_SHOW, showLaunchPad);
+    const subscription = ComponentDispatch.subscribe(closure_1_11.LAUNCH_PAD_SHOW, showLaunchPad);
     let ComponentDispatch2 = updaters(isModalOpen[9]).ComponentDispatch;
-    const subscription1 = ComponentDispatch2.subscribe(outer1_11.LAUNCH_PAD_HIDE, hideLaunchPad);
+    const subscription1 = ComponentDispatch2.subscribe(closure_1_11.LAUNCH_PAD_HIDE, hideLaunchPad);
     return () => {
       callback();
       const ComponentDispatch = updaters(isModalOpen[9]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(outer2_11.LAUNCH_PAD_SHOW, showLaunchPad);
+      ComponentDispatch.unsubscribe(closure_2_11.LAUNCH_PAD_SHOW, showLaunchPad);
       const ComponentDispatch2 = updaters(isModalOpen[9]).ComponentDispatch;
-      ComponentDispatch2.unsubscribe(outer2_11.LAUNCH_PAD_HIDE, hideLaunchPad);
+      ComponentDispatch2.unsubscribe(closure_2_11.LAUNCH_PAD_HIDE, hideLaunchPad);
     };
   }, items5);
   obj = { style: absoluteFill.absoluteFill, pointerEvents: "box-none", children: null };
@@ -133,8 +120,7 @@ export default function LaunchPadWrapper(launchPadType) {
     }
   }
   items6[1] = tmp20Result;
-  const obj1 = { style: launchPadStyles, pointerEvents: null, children: null };
-  obj1[1] = "none";
+  obj1 = { style: launchPadStyles, pointerEvents: "none", children: null };
   const obj2 = { nativeID: "launch-pad", style: tmp.modalWrapper, onAccessibilityEscape: callback, accessibilityViewIsModal: tmp7, children: null };
   let str2 = "no";
   if (tmp7) {

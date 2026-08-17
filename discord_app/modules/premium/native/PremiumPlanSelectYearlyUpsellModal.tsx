@@ -1,26 +1,23 @@
 // discord_app/modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx
-import _slicedToArray from "_slicedToArray";
-import getPremiumPlanItem from "getPremiumPlanItem";
-import get_ActivityIndicator from "Button";
-import _getSystemLocale from "_getSystemLocale";
-import updateProduct from "updateProduct";
-import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore";
-import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12984_registerAsset.js";
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import createTextStyleDefault from "createTextStyle" /* 6782 */;
+import registerAssetDefault from "registerAsset" /* 12984 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "_getSystemLocale" /* 1994 */;
+import closure_8 from "updateProduct" /* 5319 */;
+import { usePremiumPlanSelectStore } from "usePremiumPlanSelectStore" /* 12974 */;
+import { PREMIUM_YEARLY_DISCOUNT_PERCENT as closure_10 } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_12;
-let closure_6;
-let unpackModuleId;
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: { marginHorizontal: 26 }, image: { alignSelf: "center", marginVertical: 32 }, header: null, description: null, upsellButton: null, continueButton: null, cancelButton: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(require("sum").Fonts.DISPLAY_EXTRABOLD, undefined, 24));
+const merged = Object.assign(createTextStyleDefault(require("sum").Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 createCacheKey.alignSelf = "center";
 createCacheKey.textAlign = "center";
 createCacheKey.paddingBottom = 8;
@@ -30,35 +27,28 @@ createCacheKey[3] = { alignSelf: "center", textAlign: "center", paddingBottom: 3
 createCacheKey[4] = { marginBottom: 16 };
 createCacheKey[5] = { marginBottom: 4 };
 createCacheKey[6] = { marginTop: 8, marginBottom: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { alignSelf: "center", textAlign: "center", paddingBottom: 32, color: require("result").DARK_WHITE_500_LIGHT_BLACK_500 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanSelectYearlyUpsellModal.tsx");
 
 export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
-  let c3;
-  let dependencyMap;
-  let importDefault;
-  let onClose;
-  let orderPriceString;
-  let productId;
-  let tmp4;
   ({ onClose, productId } = arg0);
   ({ orderPriceString, continueWithUpsell: importDefault, continueWithDefault: dependencyMap } = arg0);
   let callback;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const tmp2 = usePremiumPlanSelectStore((isPurchasing) => isPurchasing.isPurchasing);
   let obj = React;
   [tmp4, c3] = callback(React.useState(null), 2);
-  let obj1 = productId(7378);
+  obj1 = productId(7378);
   const premiumBundledItemsFromProductId = obj1.getPremiumBundledItemsFromProductId(productId);
   let obj2 = productId(589);
-  let items = [_getSystemLocale];
+  let items = [closure_7];
   const stateFromStores = obj2.useStateFromStores(items, () => locale.locale);
   let obj3 = productId(589);
-  const items1 = [updateProduct];
+  const items1 = [closure_8];
   const tmp9 = callback(obj3.useStateFromStoresArray(items1, () => {
-    const items = [outer1_8.getProduct(productId), outer1_8.isBusy()];
+    const items = [closure_1_8.getProduct(productId), closure_1_8.isBusy()];
     return items;
   }), 2);
   const first = tmp9[0];
@@ -76,7 +66,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
   }
   React = tmp13;
   const effect = obj.useEffect(() => {
-    if (c4) {
+    if (closure_4) {
       callback2();
     }
   });
@@ -91,7 +81,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     obj[0] = tmp.container;
     obj1 = { style: null, source: null };
     obj1[0] = tmp.image;
-    obj1[1] = registerAsset;
+    obj1[1] = registerAssetDefault;
     const items2 = [callback2(closure_5, obj1), , , , , ];
     obj2 = { style: null, accessibilityRole: "header", children: null };
     obj2[0] = tmp.header;
@@ -147,7 +137,7 @@ export default function PremiumPlanSelectYearlyUpsellModal(arg0) {
     items2[5] = callback2(closure_6, obj11);
     obj[1] = items2;
     obj[2] = closure_12(closure_6, obj);
-    return callback2(componentDidMount, obj);
+    return callback2(componentDidMountDefault, obj);
   }
   const tmp3 = callback(React.useState(null), 2);
 };

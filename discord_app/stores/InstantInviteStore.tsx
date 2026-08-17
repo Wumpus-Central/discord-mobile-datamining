@@ -1,10 +1,11 @@
 // discord_app/stores/InstantInviteStore.tsx
-import createFromServer from "createFromServer";
-import { InviteTargetTypes } from "InviteSendStates";
-import { Store } from "initialize";
-import { head } from "../../_runtime/08045_head.js";
-import { reverse } from "../../_runtime/08047_reverse.js";
-import { 08048__ } from "../../_runtime/metro/08048__.js";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import headDefault from "head" /* 8045 */;
+import reverseDefault from "reverse" /* 8047 */;
+import _modDef8048 from "module_8048" /* 8048 */;
+import closure_3 from "createFromServer" /* 8044 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
 
 let closure_5 = {};
 let closure_6 = {};
@@ -14,13 +15,11 @@ let c9 = false;
 let c10 = false;
 let c11 = false;
 let map = new Map();
+const Store = initializeDefault.Store;
 class InstantInviteStore extends Store {
 }
 const prototype = InstantInviteStore.prototype;
 prototype["getInvite"] = function getInvite(arg0) {
-  let targetApplicationId;
-  let targetType;
-  let targetUserId;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -67,16 +66,16 @@ prototype["getReceivedInstallationIdForInviteCode"] = function getReceivedInstal
   return map.get(result.toLowerCase());
 };
 InstantInviteStore.displayName = "InstantInviteStore";
-const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
+const instantInviteStore = new InstantInviteStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_5 = {};
-    let closure_6 = {};
-    let closure_7 = {};
-    let closure_8 = {};
-    let c2 = null;
-    let c10 = false;
-    let c11 = false;
-    let c9 = false;
+    closure_5 = {};
+    closure_6 = {};
+    closure_7 = {};
+    closure_8 = {};
+    c2 = null;
+    c10 = false;
+    c11 = false;
+    c9 = false;
   },
   CHANNEL_DELETE: function handleDeleteChannel(channel) {
     channel = channel.channel;
@@ -85,18 +84,18 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
     delete tmp2[tmp];
   },
   FRIEND_INVITE_CREATE_SUCCESS: function handleFriendInviteCreateSuccess(invite) {
-    closure_8[invite.invite.code] = createFromServer.createFromServer(invite.invite);
-    const tmp = head;
-    const tmp2 = reverse;
-    let tmpResult = tmp(tmp2(08048__(Object.values(closure_8), "createdAt")));
+    closure_8[invite.invite.code] = closure_3.createFromServer(invite.invite);
+    const tmp = headDefault;
+    const tmp2 = reverseDefault;
+    let tmpResult = tmp(tmp2(_modDef8048(Object.values(closure_8), "createdAt")));
     if (tmpResult == null) {
       tmpResult = null;
     }
-    let closure_2 = tmpResult;
-    let c11 = false;
+    c2 = tmpResult;
+    c11 = false;
   },
   FRIEND_INVITE_CREATE_FAILURE: function handleFriendInviteCreateFailure() {
-    let c11 = false;
+    c11 = false;
   },
   FRIEND_INVITE_REVOKE_SUCCESS: function handleFriendInviteRevokeSuccess(invites) {
     if (null != invites.invites) {
@@ -108,18 +107,18 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
         }
       });
     }
-    const tmp2 = head;
-    const tmp3 = reverse;
-    let tmp2Result = tmp2(tmp3(08048__(Object.values(closure_8), "createdAt")));
+    const tmp2 = headDefault;
+    const tmp3 = reverseDefault;
+    let tmp2Result = tmp2(tmp3(_modDef8048(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
-    let closure_2 = tmp2Result;
-    let c10 = false;
+    c2 = tmp2Result;
+    c10 = false;
   },
   INSTANT_INVITE_CREATE_SUCCESS: function handleInstantInviteCreateSuccess(channelId) {
     channelId = channelId.channelId;
-    const fromServer = createFromServer.createFromServer(channelId.invite);
+    const fromServer = closure_3.createFromServer(channelId.invite);
     if (fromServer.targetType === InviteTargetTypes.STREAM) {
       if (null != fromServer.targetUser) {
         if (null == dependencyMap[channelId]) {
@@ -146,28 +145,28 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
     closure_5[channelId.channelId] = null;
   },
   FRIEND_INVITE_REVOKE_REQUEST: function handleFriendInviteRevokeRequest() {
-    let c10 = true;
+    c10 = true;
   },
   FRIEND_INVITE_CREATE_REQUEST: function handleFriendInviteCreateRequest() {
-    let c11 = true;
+    c11 = true;
   },
   FRIEND_INVITES_FETCH_REQUEST: function handleFriendInviteFetchRequest() {
-    let c9 = true;
+    c9 = true;
   },
   FRIEND_INVITES_FETCH_RESPONSE: function handleFriendInviteFetchResponse(invites) {
-    let closure_8 = {};
+    closure_8 = {};
     invites = invites.invites;
     const item = invites.forEach((code) => {
-      closure_8[code.code] = createFromServer.createFromServer(code);
+      closure_8[code.code] = closure_3.createFromServer(code);
     });
-    const tmp2 = head;
-    const tmp3 = reverse;
-    let tmp2Result = tmp2(tmp3(08048__(Object.values(closure_8), "createdAt")));
+    const tmp2 = headDefault;
+    const tmp3 = reverseDefault;
+    let tmp2Result = tmp2(tmp3(_modDef8048(Object.values(closure_8), "createdAt")));
     if (tmp2Result == null) {
       tmp2Result = null;
     }
-    let closure_2 = tmp2Result;
-    let c9 = false;
+    c2 = tmp2Result;
+    c9 = false;
   },
   INSTANT_INVITE_CLEAR: function handleInstantInviteClear(arg0) {
     delete tmp2[tmp];
@@ -209,6 +208,6 @@ const instantInviteStore = new InstantInviteStore(require("dispatcher"), {
     }
   }
 });
-let result = require("head").fileFinishedImporting("stores/InstantInviteStore.tsx");
+let result = require("set").fileFinishedImporting("stores/InstantInviteStore.tsx");
 
 export default instantInviteStore;

@@ -1,17 +1,17 @@
 // discord_app/modules/content_classification/ContentClassificationVisibility.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { contentClassificationToAgeRestrictionConclusion } from "../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx";
-import { AgeRestrictionStatus } from "../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx";
+import initialize from "initialize" /* 589 */;
+import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 4787 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 4789 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 let obj = { DISPLAY: "display", BLOCK_UNDERAGE: "block_underage", BLOCK_CHANNEL_RESTRICTION: "block_channel_restriction" };
-let result = require("AgeRestrictionStatus").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
+let result = require("set").fileFinishedImporting("modules/content_classification/ContentClassificationVisibility.tsx");
 
 export const ContentClassificationVisibility = obj;
 export const getContentClassificationVisibility = function getContentClassificationVisibility(contentClassification, channel, nsfwAllowed) {
   if (null != contentClassification) {
-    let obj = contentClassificationToAgeRestrictionConclusion;
+    obj = contentClassificationToAgeRestrictionConclusion;
     obj = { type: null, data: null };
     obj[0] = contentClassificationToAgeRestrictionConclusion.ContentClassificationVariant.MINIMAL;
     obj[1] = contentClassification;
@@ -34,9 +34,9 @@ export const getContentClassificationVisibility = function getContentClassificat
 };
 export const useContentClassificationVisibility = function useContentClassificationVisibility(arg0, isPrivate) {
   initialize;
-  [][0] = mergeGuildAvatar;
+  [][0] = closure_2;
   if (null != arg0) {
-    const obj = { type: null, data: null };
+    obj = { type: null, data: null };
     obj[0] = tmp(4787).ContentClassificationVariant.MINIMAL;
     obj[1] = arg0;
     const result = tmp(4787).contentClassificationToAgeRestriction(obj);

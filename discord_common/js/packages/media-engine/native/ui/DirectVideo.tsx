@@ -1,9 +1,9 @@
 // discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const logger = new require("classNames").Logger("DirectVideo");
+const logger = new require("log").Logger("DirectVideo");
 logger.enableNativeLogger(true);
 class RefCountedStream {
   constructor(arg0) {
@@ -22,7 +22,7 @@ prototype["release"] = function release() {
   return 0 === this.refcount;
 };
 const map = new Map();
-let result = require("log").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/native/ui/DirectVideo.tsx");
 
 export default function DirectVideo(streamId, onContainerResized) {
   streamId = streamId.streamId;
@@ -38,9 +38,9 @@ export default function DirectVideo(streamId, onContainerResized) {
   }
   const merged = Object.assign(streamId, Object.create(null));
   let ref;
-  let closure_6;
-  let closure_7;
-  let closure_8;
+  closure_6 = undefined;
+  closure_7 = undefined;
+  closure_8 = undefined;
   ref = onResize.useRef(null);
   closure_6 = onResize.useRef(null);
   closure_7 = onResize.useRef({ width: 0, height: 0 });
@@ -91,8 +91,6 @@ export default function DirectVideo(streamId, onContainerResized) {
         }
       });
       const listener1 = element.addEventListener("resize", function handleResize() {
-        let height;
-        let width;
         const current = ref.current;
         let num;
         ({ width, height } = ref2.current);
@@ -115,7 +113,7 @@ export default function DirectVideo(streamId, onContainerResized) {
           obj[0] = num;
           obj[1] = num2;
           const current3 = closure_8.current;
-          const onResize = current3.onResize;
+          onResize = current3.onResize;
           if (onResize != null) {
             onResize(obj);
           }
@@ -123,9 +121,9 @@ export default function DirectVideo(streamId, onContainerResized) {
         }
       });
       const listener2 = element.addEventListener("canplaythrough", function handleReady() {
-        outer1_5.info("handleReady for " + closure_8.current.streamId + ", have onReady callback = " + null != closure_8.current.onReady);
+        closure_1_5.info("handleReady for " + closure_8.current.streamId + ", have onReady callback = " + null != closure_8.current.onReady);
         const current = closure_8.current;
-        const onReady = current.onReady;
+        onReady = current.onReady;
         if (onReady != null) {
           onReady();
         }

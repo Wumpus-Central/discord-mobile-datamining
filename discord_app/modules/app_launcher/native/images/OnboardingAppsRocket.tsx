@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/images/OnboardingAppsRocket.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("inlineStyles").fileFinishedImporting("modules/app_launcher/native/images/OnboardingAppsRocket.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/images/OnboardingAppsRocket.tsx");
 
 export default function SvgComponent(arg0) {
   let obj = { fill: "none" };
@@ -18,7 +18,7 @@ export default function SvgComponent(arg0) {
   const items1 = [callback(inlineStyles.Stop, { offset: 0.07, stopColor: "#F9E172" }), callback(inlineStyles.Stop, { offset: 0.27, stopColor: "#F7D067" }), callback(inlineStyles.Stop, { offset: 0.67, stopColor: "#F1A549" }), callback(inlineStyles.Stop, { offset: 0.83, stopColor: "#EF913C" })];
   obj[6] = items1;
   const items2 = [callback2(inlineStyles.LinearGradient, obj), , ];
-  const obj1 = { id: "b", x1: 30.613, x2: 37.243, y1: 47.733, y2: 47.733, gradientUnits: "userSpaceOnUse", children: null };
+  obj1 = { id: "b", x1: 30.613, x2: 37.243, y1: 47.733, y2: 47.733, gradientUnits: "userSpaceOnUse", children: null };
   const items3 = [callback(inlineStyles.Stop, { offset: 0.07, stopColor: "#F9E172" }), callback(inlineStyles.Stop, { offset: 0.27, stopColor: "#F7D067" }), callback(inlineStyles.Stop, { offset: 0.67, stopColor: "#F1A549" }), callback(inlineStyles.Stop, { offset: 0.83, stopColor: "#EF913C" })];
   obj1[6] = items3;
   items2[1] = callback2(inlineStyles.LinearGradient, obj1);
@@ -29,5 +29,5 @@ export default function SvgComponent(arg0) {
   obj[0] = items2;
   items[20] = callback2(inlineStyles.Defs, obj);
   obj.children = items;
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 };

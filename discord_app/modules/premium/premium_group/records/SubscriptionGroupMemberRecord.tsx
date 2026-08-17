@@ -1,14 +1,15 @@
 // discord_app/modules/premium/premium_group/records/SubscriptionGroupMemberRecord.tsx
-import "toJS";
-import createdAt from "createdAt";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_0 from "createdAt" /* 1930 */;
 
+toJSDefault;
 const obj = { PRIMARY: 1, [1]: "PRIMARY", MEMBER: 2, [2]: "MEMBER" };
 let SubscriptionGroupMemberRecord;
 class SubscriptionGroupMemberRecord extends tmp2 {
   constructor(arg0) {
     tmp2 = new SubscriptionGroupMemberRecord(tmp, new.target, new.target);
     // ThrowIfThisInitialized (0x7c)
-    tmp3 = new createdAt(global.user);
+    tmp3 = new closure_0(global.user);
     tmp2.user = tmp3;
     ({ member_type: tmp2.member_type, accepted_at: tmp2.accepted_at } = global);
     return tmp2;
@@ -21,7 +22,7 @@ SubscriptionGroupMemberRecord["createFromServer"] = function createFromServer(us
   }
   const tmp2 = new SubscriptionGroupMemberRecord("Trying to call a non-function", SubscriptionGroupMemberRecord, new.target);
   // ThrowIfThisInitialized (0x7c)
-  tmp2.user = new createdAt(user.user);
+  tmp2.user = new closure_0(user.user);
   ({ member_type: tmp2.member_type, accepted_at: tmp2.accepted_at } = user);
   return tmp2;
 };

@@ -1,32 +1,30 @@
 // discord_app/modules/launchpad/native/LaunchPadSearchResults.tsx
-import importAllResult from "renderChannelBadge";
-import { View } from "GuildIconSizes";
-import _getSystemLocale from "_getSystemLocale";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_16204";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { sortByMatchScore } from "../../autocompleter/index.tsx";
-import { renderCategoryItem } from "../../channel_list_v2/native/items/RedesignCategory.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { user } from "LaunchPadSearchResultUser.tsx";
-import { DMChannel } from "shared/DMChannel.tsx";
-import { getLayoutStyle } from "shared/getLayoutStyles.tsx";
-import { renderChannelBadge } from "shared/renderChannelBadge.tsx";
-import { ChannelContent } from "shared/renderChannelContent.tsx";
-import { items } from "shared/renderChannelPressableWrapper.tsx";
-import { renderChannelWrapper } from "shared/renderChannelWrapper.tsx";
-import { TextChannel } from "shared/TextChannel.tsx";
-import { UnreadBadge } from "shared/UnreadBadge.tsx";
-import { handleVoiceOrStageChannelConnectPress } from "shared/VoiceOrStageChannel.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import sortByMatchScore from "sortByMatchScore" /* 7593 */;
+import renderCategoryItem from "renderCategoryItem" /* 15369 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import itemsDefault from "items" /* 16197 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16198 */;
+import _modDef16200 from "module_16200" /* 16200 */;
+import ChannelContentDefault from "ChannelContent" /* 16201 */;
+import renderChannelBadgeDefault from "renderChannelBadge" /* 16203 */;
+import _modDef16204 from "module_16204" /* 16204 */;
+import _modDef16210 from "module_16210" /* 16210 */;
+import handleVoiceOrStageChannelConnectPressDefault from "handleVoiceOrStageChannelConnectPress" /* 16211 */;
+import userDefault from "user" /* 16213 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function renderItemJSX(result) {
   result = result.result;
   if (null == result) {
@@ -40,18 +38,18 @@ function renderItemJSX(result) {
     } else if (tmp14(7593).AutocompleterResultTypes.TEXT_CHANNEL === type) {
       obj = { channel: null, navigationReplace: true, showGuildBadgeIcon: true };
       obj[0] = result.record;
-      return callback(TextChannel, obj);
+      return callback(_modDef16204, obj);
     } else if (tmp14(7593).AutocompleterResultTypes.GROUP_DM === type) {
-      const obj1 = { channel: null, navigationReplace: true };
+      obj1 = { channel: null, navigationReplace: true };
       obj1[0] = result.record;
-      return callback(DMChannel, obj1);
+      return callback(_modDef16210, obj1);
     } else if (tmp14(7593).AutocompleterResultTypes.VOICE_CHANNEL === type) {
       const obj2 = { channel: null };
       obj2[0] = result.record;
-      return callback(handleVoiceOrStageChannelConnectPress, obj2);
+      return callback(handleVoiceOrStageChannelConnectPressDefault, obj2);
     } else if (tmp14(7593).AutocompleterResultTypes.USER === type) {
       ({ record: obj4[0], comparator: obj4[1] } = result);
-      return callback(user, { user: null, comparator: null });
+      return callback(userDefault, { user: null, comparator: null });
     } else if (tmp14(7593).AutocompleterResultTypes.HEADER === type) {
       const obj4 = { name: null, styles: null, isRefreshEnabled: null };
       obj4[0] = result.record.text;
@@ -75,63 +73,57 @@ let c3 = importAllResult;
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = { bottom: 24 };
 let obj = { listContainer: { minHeight: 16 }, list: { flex: -1, marginTop: 8 }, guildIcon: null, categoryWrapper: null, pressable: null, pressableUnderlayColor: null };
-obj = { borderRadius: require("Themes").radii.sm };
+obj = { borderRadius: ThemesDefault.radii.sm };
 obj[2] = obj;
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[3] = createCacheKey;
 obj[4] = { flex: 1 };
-obj[5] = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj[5] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.memo((guild) => {
-  let isMentionLowImportance;
-  let mentionCount;
-  let unread;
   guild = guild.guild;
   const tmp = callback3();
-  const tmp2 = getLayoutStyle();
+  const tmp2 = getLayoutStyleDefault();
   const items = [guild.id];
   const callback = importAllResult.useCallback(() => {
-    guild(outer1_2[10]).transitionToGuild(guild.id);
+    guild(closure_1_2[10]).transitionToGuild(guild.id);
   }, items);
   let obj = guild(589);
-  const items1 = [updateGuildUnreadSentinel];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({ unread: outer1_6.hasUnread(guild.id), mentionCount: outer1_6.getMentionCount(guild.id), isMentionLowImportance: outer1_6.getIsMentionLowImportance(guild.id) }));
+  const items1 = [closure_6];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items1, () => ({ unread: closure_1_6.hasUnread(guild.id), mentionCount: closure_1_6.getMentionCount(guild.id), isMentionLowImportance: closure_1_6.getIsMentionLowImportance(guild.id) }));
   ({ unread, mentionCount, isMentionLowImportance } = stateFromStoresObject);
-  let obj1 = guild(4751);
+  obj1 = guild(4751);
   const fontScale = obj1.useFontScale();
   let obj2 = guild(589);
-  const items2 = [_getSystemLocale];
+  const items2 = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items2, () => locale.locale);
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items3, children: null };
   items3 = [tmp.pressable, { borderRadius: tmp2.container.borderRadius }];
   obj = { children: null };
-  const tmp7 = items;
+  const tmp7 = itemsDefault;
   obj1 = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items4 = [callback(UnreadBadge, obj1), , ];
+  const items4 = [callback(_modDef16200, obj1), , ];
   obj2 = { size: tmp2.icon.guildIconSize, guild, style: items5 };
   items5 = [tmp.guildIcon, tmp2.icon.margin];
-  items4[1] = callback(GuildIconSizes, obj2);
+  items4[1] = callback(GuildIconSizesDefault, obj2);
   const obj3 = { name: guild.name, mentionBadge: null };
-  const tmp8 = renderChannelWrapper;
-  obj3[1] = renderChannelBadge({ mentionCount, locale: stateFromStores, isMentionLowImportance });
-  items4[2] = ChannelContent(obj3);
+  const tmp8 = renderChannelWrapperDefault;
+  obj3[1] = renderChannelBadgeDefault({ mentionCount, locale: stateFromStores, isMentionLowImportance });
+  items4[2] = ChannelContentDefault(obj3);
   obj[0] = items4;
   obj[3] = tmp8(callback2(closure_10, obj), { fontScale });
   return tmp7(callback(guild(5433).PressableHighlight, obj));
 });
 let closure_16 = importAllResult.memo((arg0) => {
-  let name;
-  let note;
-  let onPress;
   ({ name, onPress, note } = arg0);
   let obj = renderCategoryItem;
   const categoryStyles = obj.useCategoryStyles();
   const tmp = callback3();
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("WrappedCategoryItem");
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("WrappedCategoryItem");
   obj = { style: tmp.categoryWrapper, children: renderCategoryItem.renderCategoryItem({ name, onPress, note, styles: categoryStyles, isRefreshEnabled: tmp3 }) };
   return callback(View, obj);
 });
-let obj2 = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+let obj2 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 const memoResult = importAllResult.memo(function InitialResultsInner(history) {
   history = history.history;
   const unreads = history.unreads;
@@ -139,16 +131,16 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
   const expandedHistory = history.expandedHistory;
   let str = history.selectedGuildId;
   let categoryStyles;
-  let c6;
+  closure_6 = undefined;
   let stateFromStores;
-  let c8;
-  let c9;
+  c8 = undefined;
+  closure_9 = undefined;
   let fontScale;
   const tmp = callback3();
   let obj = history(toggleExpandedHistory[25]);
   categoryStyles = obj.useCategoryStyles();
   const tmp5 = unreads(toggleExpandedHistory[27])("InitialResults");
-  c6 = tmp5;
+  closure_6 = tmp5;
   const items = [stateFromStores];
   stateFromStores = history(toggleExpandedHistory[11]).useStateFromStores(items, () => {
     if (null != str) {
@@ -167,7 +159,7 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
     } else {
       tmp3 = unreads[arg1];
     }
-    return outer1_15({ result: tmp3, categoryStyles, isRefreshEnabled: c6 });
+    return closure_1_15({ result: tmp3, categoryStyles, isRefreshEnabled: closure_6 });
   }, items1);
   const someResult = unreads.some((type) => type.type === history(toggleExpandedHistory[20]).AutocompleterResultTypes.VOICE_CHANNEL);
   c8 = someResult;
@@ -201,13 +193,13 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
     } else {
       const intl = history(toggleExpandedHistory[28]).intl;
       t = history(toggleExpandedHistory[28]).t;
-      const obj1 = { name: null };
+      obj1 = { name: null };
       obj1[0] = intl.string(c8 ? t.C5viSQ : t.ieCAhD);
       return tmp(tmp2, obj1);
     }
   }, items2);
   const tmp10 = unreads(toggleExpandedHistory[9])();
-  c9 = tmp10;
+  closure_9 = tmp10;
   const obj2 = history(toggleExpandedHistory[11]);
   const tmp2 = toggleExpandedHistory;
   const tmp4 = unreads;
@@ -225,7 +217,7 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
       let tmp6 = toggleExpandedHistory;
       if (tmp3.type === history(toggleExpandedHistory[20]).AutocompleterResultTypes.VOICE_CHANNEL) {
         tmp6 = unreads(tmp6[30])(fontScale);
-        let diff = tmp6 + _undefined.voiceUsers.height - 2;
+        let diff = tmp6 + voiceUsers.voiceUsers.height - 2;
       } else {
         diff = unreads(tmp6[30])(fontScale);
       }
@@ -256,14 +248,14 @@ const memoResult = importAllResult.memo(function InitialResultsInner(history) {
     tmp14Result = null;
   }
   obj[1] = tmp14Result;
-  return c9(str, obj);
+  return closure_9(str, obj);
 });
 const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
   results = results.results;
   let categoryStyles;
-  let dependencyMap;
+  dependencyMap = undefined;
   let ref;
-  let c4;
+  closure_4 = undefined;
   let fontScale;
   const tmp = callback3();
   let obj = results(15369);
@@ -271,7 +263,7 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
   const tmp5 = categoryStyles(1367)("SearchResults");
   dependencyMap = tmp5;
   const items = [results, categoryStyles, tmp5];
-  const callback = ref.useCallback((arg0, arg1) => outer1_15({ result: results[arg1], categoryStyles, isRefreshEnabled: c2 }), items);
+  const callback = ref.useCallback((arg0, arg1) => closure_1_15({ result: results[arg1], categoryStyles, isRefreshEnabled: closure_2 }), items);
   ref = ref.useRef(null);
   const items1 = [results.query];
   const effect = ref.useEffect(() => {
@@ -284,7 +276,7 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
     }
   }, items1);
   const tmp9 = categoryStyles(16196)();
-  c4 = tmp9;
+  closure_4 = tmp9;
   fontScale = results(4751).useFontScale();
   const items2 = [fontScale, results, tmp9];
   obj = { style: tmp.listContainer, children: null };
@@ -304,9 +296,9 @@ const memoResult1 = importAllResult.memo(function SearchResultsInner(results) {
     tmp12Result = tmp12(categoryStyles(8124), obj);
   }
   obj[1] = tmp12Result;
-  return closure_9(c4, obj);
+  return closure_9(closure_4, obj);
 });
-let result = require("_getSystemLocale").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResults.tsx");
+let result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResults.tsx");
 
 export const InitialResults = memoResult;
 export const SearchResults = memoResult1;

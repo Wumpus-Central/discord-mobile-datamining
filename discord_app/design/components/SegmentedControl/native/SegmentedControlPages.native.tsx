@@ -1,8 +1,8 @@
 // discord_app/design/components/SegmentedControl/native/SegmentedControlPages.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import importDefaultResult from "module_4115";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
 const require = arg1;
 function SegmentedControlPage(children) {
@@ -15,10 +15,10 @@ function SegmentedControlPage(children) {
   const merged = Object.assign(children, Object.create(null));
   let derivedValue;
   let first;
-  let c8;
+  closure_8 = undefined;
   let ref;
-  let closure_10;
-  let c11;
+  closure_10 = undefined;
+  closure_11 = undefined;
   let obj = reportedPageIndex(scrollTargetPageIndex[4]);
   const fn = function v() {
     let tmp2 = Math.floor(pageIndex.get()) === index;
@@ -35,7 +35,7 @@ function SegmentedControlPage(children) {
   fn.__workletHash = 6181538518841;
   fn.__initData = closure_19;
   derivedValue = obj.useDerivedValue(fn);
-  let obj1 = reportedPageIndex(scrollTargetPageIndex[4]);
+  obj1 = reportedPageIndex(scrollTargetPageIndex[4]);
   class S {
     constructor() {
       pointerEvents = "box-none";
@@ -51,7 +51,7 @@ function SegmentedControlPage(children) {
   const animatedProps = obj1.useAnimatedProps(S);
   const tmp6 = index(activePageRangeStart.useState(() => reportedPageIndex.get() !== index), 2);
   first = tmp6[0];
-  c8 = tmp8;
+  closure_8 = tmp8;
   let obj2 = reportedPageIndex(scrollTargetPageIndex[4]);
   const fn2 = function p() {
     return reportedPageIndex.get() !== index;
@@ -62,7 +62,7 @@ function SegmentedControlPage(children) {
   class I {
     constructor(arg0) {
       obj = reportedPageIndex(scrollTargetPageIndex[4]);
-      tmp = obj.runOnJS(c8)(children);
+      tmp = obj.runOnJS(closure_8)(children);
       return;
     }
   }
@@ -94,7 +94,7 @@ function SegmentedControlPage(children) {
   class A {
     constructor() {
       display = "none";
-      if (c6.get()) {
+      if (closure_6.get()) {
         display = "flex";
       }
       return { display, flex: 1 };
@@ -111,7 +111,7 @@ function SegmentedControlPage(children) {
     }
     return !tmp2;
   }), 2);
-  c11 = tmp14;
+  closure_11 = tmp14;
   const obj5 = reportedPageIndex(scrollTargetPageIndex[4]);
   let tmp2 = reportedPageIndex;
   const fn3 = function y() {
@@ -126,7 +126,7 @@ function SegmentedControlPage(children) {
       [tmp, tmp2] = children;
       obj = reportedPageIndex(scrollTargetPageIndex[4]);
       tmp4 = index >= tmp;
-      runOnJSResult = obj.runOnJS(c11);
+      runOnJSResult = obj.runOnJS(closure_11);
       if (tmp4) {
         tmp4 = index <= tmp2;
       }
@@ -148,12 +148,11 @@ function SegmentedControlPage(children) {
   }
   obj1.importantForAccessibility = str;
   obj1.accessibilityElementsHidden = first;
-  obj2 = { freeze: tmp13[0], children: null };
-  obj2[1] = activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, { style: animatedStyle, children: children.item.page });
+  obj2 = { freeze: tmp13[0], children: tmp16(pageIndex(tmp3[4]).View, obj3) };
   obj1.children = activePageRangeEnd(tmp2(scrollTargetPageIndex[9]).Freeze, obj2);
   return activePageRangeEnd(pageIndex(scrollTargetPageIndex[4]).View, obj1, index);
 }
-let closure_6 = require("module_4115").createAnimatedComponent(require("get ActivityIndicator").ScrollView);
+let closure_6 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
 let closure_7 = { code: "function SegmentedControlPagesNativeTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}" };
 let closure_8 = { code: "function SegmentedControlPagesNativeTsx2(value){const{runOnJS,updateCurrentActiveIndex}=this.__closure;runOnJS(updateCurrentActiveIndex)(value);}" };
 let closure_9 = { code: "function SegmentedControlPagesNativeTsx3(){const{pageIndex}=this.__closure;return pageIndex.get();}" };
@@ -176,20 +175,9 @@ let closure_25 = { code: "function SegmentedControlPagesNativeTsx19([start,end])
 let closure_27 = { code: "function SegmentedControlPagesNativeTsx20(min,max){const{activePageRangeStart,activePageRangeEnd}=this.__closure;activePageRangeStart.set(Math.min(activePageRangeStart.get(),min));activePageRangeEnd.set(Math.max(activePageRangeEnd.get(),max));}" };
 let closure_28 = { code: "function SegmentedControlPagesNativeTsx21(){const{activeIndex,pressedIndex}=this.__closure;return{activeIndex:activeIndex.get(),pressedIndex:pressedIndex.get()};}" };
 let closure_29 = { code: "function SegmentedControlPagesNativeTsx22({activeIndex:activeIndex,pressedIndex:pressedIndex}){const{expandActivePageRange}=this.__closure;let min=activeIndex;let max=activeIndex;if(pressedIndex!==-1){min=Math.min(activeIndex,pressedIndex);max=Math.max(activeIndex,pressedIndex);}expandActivePageRange(Math.floor(min),Math.ceil(max));}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlPages.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControlPages.native.tsx");
 
 export const SegmentedControlPages = function SegmentedControlPages(onEndDragWorklet) {
-  let activeIndex;
-  let bounces;
-  let c21;
-  let c22;
-  let items;
-  let nativeGesture;
-  let onBeginDragWorklet;
-  let onPageChangeRef;
-  let pressedIndex;
-  let state;
-  let style;
   ({ state, nativeGesture, onBeginDragWorklet } = onEndDragWorklet);
   activeIndex = onBeginDragWorklet;
   onEndDragWorklet = onEndDragWorklet.onEndDragWorklet;
@@ -207,8 +195,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   let sharedValue1;
   let length;
   let sharedValue2;
-  let closure_14;
-  let closure_15;
+  closure_14 = undefined;
+  closure_15 = undefined;
   let callback;
   let callback1;
   let callback2;
@@ -229,7 +217,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   ({ style, bounces } = onEndDragWorklet);
   let obj = activeIndex(sharedValue3[4]);
   sharedValue = obj.useSharedValue(activeIndex.get());
-  let obj1 = activeIndex(sharedValue3[4]);
+  obj1 = activeIndex(sharedValue3[4]);
   sharedValue1 = obj1.useSharedValue(activeIndex.get());
   length = items.length;
   let obj2 = activeIndex(sharedValue3[4]);
@@ -242,7 +230,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   let obj3 = activeIndex(sharedValue3[4]);
   class J {
     constructor() {
-      return get.get();
+      return closure_3.get();
     }
   }
   J.__closure = { activeIndex };
@@ -250,8 +238,8 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   J.__initData = scrollOverflow;
   class W {
     constructor(arg0) {
-      obj = activeIndex(useSharedValue[4]);
-      tmp = obj.runOnJS(c16)(onEndDragWorklet);
+      obj = activeIndex(closure_2[4]);
+      tmp = obj.runOnJS(closure_16)(onEndDragWorklet);
       return;
     }
   }
@@ -269,7 +257,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   fn.__initData = pageWidth;
   class E {
     constructor(arg0) {
-      result = get.set(onEndDragWorklet);
+      result = closure_3.set(onEndDragWorklet);
       return;
     }
   }
@@ -379,8 +367,6 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
   re.__initData = closure_14;
   obj1[2] = re;
   function ne(arg0) {
-    let contentOffset;
-    let contentSize;
     ({ contentOffset, contentSize } = arg0);
     if (0 !== contentSize.width) {
       if (sharedValue2.get() !== contentOffset.x) {
@@ -470,7 +456,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
         bound1 = Math.max(activeIndex, pressedIndex);
       }
       rounded = Math.floor(bound);
-      tmp5 = onScrollWorklet(rounded, Math.ceil(bound1));
+      tmp5 = closure_4(rounded, Math.ceil(bound1));
       return;
     }
   }
@@ -540,7 +526,7 @@ export const SegmentedControlPages = function SegmentedControlPages(onEndDragWor
       num = 32;
     }
     obj5[15] = num;
-    obj5[16] = items.map((item, index) => pagerRef(outer1_26, { index, activePageRangeStart: c21, activePageRangeEnd: c22, reportedPageIndex: sharedValue1, pageIndex: sharedValue, scrollTargetPageIndex: derivedValue, style: memo, item }, index));
+    obj5[16] = items.map((item, index) => pagerRef(closure_1_26, { index, activePageRangeStart: c21, activePageRangeEnd: c22, reportedPageIndex: sharedValue1, pageIndex: sharedValue, scrollTargetPageIndex: derivedValue, style: memo, item }, index));
     let tmp27Result = tmp27(scrollTarget, obj5);
     if (null != nativeGesture) {
       const obj6 = { gesture: null, children: null };

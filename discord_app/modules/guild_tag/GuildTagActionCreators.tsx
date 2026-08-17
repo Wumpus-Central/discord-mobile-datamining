@@ -1,17 +1,17 @@
 // discord_app/modules/guild_tag/GuildTagActionCreators.tsx
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _adoptGuildIdentity() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -39,12 +39,12 @@ function _adoptGuildIdentity() {
               obj[0] = arg1;
               return obj;
             } else {
-              let set = tmp3;
+              closure_3 = tmp3;
               const table = tmp7;
               let lib;
               let constants = 1;
-              const HTTP = lib(outer1_2[3]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
+              const HTTP = lib(closure_1_2[3]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = constants.USER_SET_GUILD_IDENTITY;
               const obj2 = { identity_guild_id: null, identity_enabled: null };
               obj2[0] = lib;
@@ -98,7 +98,7 @@ function _adoptGuildIdentity() {
       }
     })();
   });
-  const _adoptGuildIdentity = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -107,9 +107,9 @@ function _adoptGuildIdentity() {
   }
   return applyArgumentsResult;
 }
-const result = require("ME").fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/GuildTagActionCreators.tsx");
 
-export const adoptGuildIdentity = function adoptGuildIdentity(outer1_0, arg1) {
+export const adoptGuildIdentity = function adoptGuildIdentity(closure_1_0, arg1) {
   const self = this;
   const apply = _adoptGuildIdentity.apply;
   if (typeof apply === "unknown") {

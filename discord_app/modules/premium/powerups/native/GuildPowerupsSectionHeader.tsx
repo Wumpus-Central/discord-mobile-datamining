@@ -1,22 +1,21 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
+const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { headerContainer: null };
-obj = { padding: require("Themes").space.PX_16 };
+obj = { padding: ThemesDefault.space.PX_16 };
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSectionHeader.tsx");
 
 export default function GuildPowerupsSectionHeader(arg0) {
-  let description;
-  let title;
   ({ title, description } = arg0);
   let obj = apexExperiment;
   obj = { style: callback2().headerContainer, children: null };

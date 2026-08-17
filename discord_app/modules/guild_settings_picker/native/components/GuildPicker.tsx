@@ -1,17 +1,16 @@
 // discord_app/modules/guild_settings_picker/native/components/GuildPicker.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopAll;
 const GuildPicker = "GuildPicker";
-const result = require("useFilteredGuilds").fileFinishedImporting("modules/guild_settings_picker/native/components/GuildPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings_picker/native/components/GuildPicker.tsx");
 
 export default function GuildPicker(isGuildIncluded) {
-  let c2;
-  let selectedGuild;
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
-  let dependencyMap;
+  dependencyMap = undefined;
   ({ options: c2, selectedGuild } = onChange(13355)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId }));
   let name;
   const tmp2 = onChange(13355)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
@@ -38,7 +37,7 @@ export default function GuildPicker(isGuildIncluded) {
         });
       };
       obj[3] = guildId;
-      obj.openLazy(guildId(_undefined[6])(_undefined[5], _undefined.paths), outer1_4, obj);
+      obj.openLazy(guildId(_undefined[6])(_undefined[5], _undefined.paths), closure_1_4, obj);
     },
     placeholder: null
   };

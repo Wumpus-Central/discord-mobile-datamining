@@ -1,14 +1,14 @@
 // discord_app/modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx
-import noop from "noop";
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
+const result = require("set").fileFinishedImporting("modules/game_server/hooks/useGameServerGetExpiringEntitlements.tsx");
 
 export default function useGameServerGetExpiringEntitlements(arg0) {
   const _require = arg0;
-  let items = [handleGameServerInstanceCreated];
-  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => outer1_3.getStateForGuild(closure_0));
+  let items = [closure_3];
+  stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => closure_1_3.getStateForGuild(closure_0));
   let entitlements;
   if (stateFromStores != null) {
     entitlements = stateFromStores.entitlements;

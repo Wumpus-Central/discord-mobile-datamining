@@ -1,37 +1,27 @@
 // discord_app/modules/oauth2/native/useOAuth2AuthorizeForm.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import OAuth2Prompts from "OAuth2Prompts";
-import filterScopes from "filterScopes";
-import { View } from "CONFIG_NEVER_ANIMATE_TIMING";
-import defaultImageSrcGenerator from "defaultImageSrcGenerator";
-import closure_9 from "maybeApplyNoTextColorForLightCustomTheme";
-import createExecutable from "createExecutable";
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import OAuth2Steps from "OAuth2Steps";
-import ME from "ME";
-import jsxProd from "fromString";
-import createCacheKey from "createCacheKey";
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_8 from "defaultImageSrcGenerator" /* 4035 */;
+import closure_9 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_10 from "createExecutable" /* 4479 */;
+import closure_11 from "set" /* 5221 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import OAuth2Steps from "OAuth2Steps" /* 9766 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let map1;
 const require = arg1;
 ({ EMOJI_POINTING_DOWN_CODE_POINT: map1, OAuth2Steps: closure_14 } = OAuth2Steps);
 ({ AnalyticEvents: closure_15, Endpoints: closure_16 } = ME);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
 let closure_20 = createCacheKey.createStyles({ loading: { flex: 1, alignSelf: "center", justifyContent: "center" } });
 let closure_21 = { code: "function useOAuth2AuthorizeFormTsx1(){const{shouldReduceMotion,withSequence,withTiming,Easing,withRepeat}=this.__closure;const TOTAL=500;if(shouldReduceMotion)return{};return{transform:[{translateY:withSequence(withTiming(-5,{duration:TOTAL/2,easing:Easing.inOut(Easing.quad)}),withRepeat(withTiming(5,{duration:TOTAL,easing:Easing.inOut(Easing.quad)}),-1,true))}]};}" };
-let result = require("noop").fileFinishedImporting("modules/oauth2/native/useOAuth2AuthorizeForm.tsx");
+let result = require("set").fileFinishedImporting("modules/oauth2/native/useOAuth2AuthorizeForm.tsx");
 
 export default function useOAuth2AuthorizeForm(clientId) {
-  let channelId;
-  let guildId;
-  let integrationType;
   clientId = clientId.clientId;
   let _require = clientId;
   const responseType = clientId.responseType;
@@ -72,48 +62,48 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }
   callback = undefined;
   let first;
-  let closure_19;
+  closure_19 = undefined;
   let first1;
-  let closure_21;
+  closure_21 = undefined;
   let first2;
-  let closure_23;
-  let closure_24;
+  closure_23 = undefined;
+  closure_24 = undefined;
   let guilds;
   let first3;
-  let c27;
+  closure_27 = undefined;
   let first4;
-  let c29;
+  closure_29 = undefined;
   let first5;
-  let closure_31;
+  closure_31 = undefined;
   let nsfwAllowed;
   let memo;
-  let c34;
+  closure_34 = undefined;
   let first6;
-  let closure_36;
+  closure_36 = undefined;
   let first7;
-  let c38;
+  closure_38 = undefined;
   let stateFromStores2;
   let isScreenReaderEnabled;
   let memo1;
   let first8;
-  let closure_43;
+  closure_43 = undefined;
   let memo2;
   let requestedScopes;
   let memo4;
   let first9;
-  let closure_48;
-  let closure_49;
+  closure_48 = undefined;
+  closure_49 = undefined;
   let first11;
-  let c51;
+  closure_51 = undefined;
   let first12;
-  let c53;
+  closure_53 = undefined;
   callback = undefined;
   let callback1;
-  let closure_56;
-  let closure_57;
+  closure_56 = undefined;
+  closure_57 = undefined;
   let callback2;
   let memo5;
-  let closure_60;
+  closure_60 = undefined;
   let AUTHORIZE_SCOPES;
   let callback4;
   let AUTHORIZE_BOT_PERMISSIONS;
@@ -139,17 +129,17 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }
   const hasItem2Result = hasItem2(obj.useState(guildId), 2);
   first3 = hasItem2Result[0];
-  c27 = tmp12;
+  closure_27 = tmp12;
   if (channelId == null) {
     channelId = null;
   }
   const hasItem2Result1 = hasItem2(obj.useState(channelId), 2);
   first4 = hasItem2Result1[0];
-  c29 = tmp15;
+  closure_29 = tmp15;
   const hasItem2Result2 = hasItem2(obj.useState(redirectUri(codeChallenge[13]).NONE), 2);
   first5 = hasItem2Result2[0];
   closure_31 = hasItem2Result2[1];
-  let obj1 = _require(codeChallenge[14]);
+  obj1 = _require(codeChallenge[14]);
   let items = [callbackWithoutPost];
   const stateFromStores = obj1.useStateFromStores(items, () => callbackWithoutPost.getCurrentUser());
   nsfwAllowed = undefined;
@@ -179,13 +169,13 @@ export default function useOAuth2AuthorizeForm(clientId) {
     }
     return tmp;
   }, items3);
-  c34 = tmp25;
+  closure_34 = tmp25;
   const hasItem2Result3 = hasItem2(obj.useState(null), 2);
   first6 = hasItem2Result3[0];
   closure_36 = hasItem2Result3[1];
   const hasItem2Result4 = hasItem2(obj.useState(false), 2);
   first7 = hasItem2Result4[0];
-  c38 = tmp30;
+  closure_38 = tmp30;
   tmp20Result = tmp20(tmp17[14]);
   const items4 = [permissions];
   stateFromStores2 = tmp20Result.useStateFromStores(items4, () => permissions.useReducedMotion);
@@ -194,25 +184,25 @@ export default function useOAuth2AuthorizeForm(clientId) {
   const tmp20Result1 = _require(codeChallenge[15]);
   class V {
     constructor() {
-      if (c39) {
+      if (closure_39) {
         obj = {};
       } else {
         obj = { transform: null };
         obj = { translateY: null };
-        tmp = f108333;
+        tmp = closure_0;
         tmp2 = codeChallenge;
-        obj3 = f108333(codeChallenge[16]);
-        obj4 = f108333(codeChallenge[17]);
+        obj3 = closure_0(codeChallenge[16]);
+        obj4 = closure_0(codeChallenge[17]);
         obj1 = { duration: 250, easing: null };
-        Easing = f108333(codeChallenge[16]).Easing;
-        obj1[1] = Easing.inOut(f108333(codeChallenge[16]).Easing.quad);
+        Easing = closure_0(codeChallenge[16]).Easing;
+        obj1[1] = Easing.inOut(closure_0(codeChallenge[16]).Easing.quad);
         num = -5;
         withTimingResult = obj4.withTiming(-5, obj1);
-        obj6 = f108333(codeChallenge[16]);
-        obj7 = f108333(codeChallenge[17]);
+        obj6 = closure_0(codeChallenge[16]);
+        obj7 = closure_0(codeChallenge[17]);
         obj2 = { duration: 500, easing: null };
-        Easing2 = f108333(codeChallenge[16]).Easing;
-        obj2[1] = Easing2.inOut(f108333(codeChallenge[16]).Easing.quad);
+        Easing2 = closure_0(codeChallenge[16]).Easing;
+        obj2[1] = Easing2.inOut(closure_0(codeChallenge[16]).Easing.quad);
         num2 = 5;
         flag = true;
         num3 = -1;
@@ -258,7 +248,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   const effect = obj.useEffect(() => {
     if (memo1) {
       const application = responseType(codeChallenge[18]).fetchApplication(closure_0);
-      application.then((arg0) => callback(outer1_10.createFromServer(arg0)));
+      application.then((arg0) => callback(closure_1_10.createFromServer(arg0)));
       const obj = responseType(codeChallenge[18]);
     }
   }, items6);
@@ -290,7 +280,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   const items8 = [scopes1, scopes, memo1];
   const memo3 = obj.useMemo(() => {
     if (memo1) {
-      let scopes;
+      scopes = undefined;
       if (memo2 != null) {
         scopes = memo2.scopes;
       }
@@ -372,110 +362,115 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }
   const hasItem2Result8 = hasItem2(obj.useState(items11), 2);
   first11 = hasItem2Result8[0];
-  c51 = tmp60;
+  closure_51 = tmp60;
   const hasItem2Result9 = hasItem2(obj.useState(null != disclosures), 2);
   first12 = hasItem2Result9[0];
-  c53 = tmp63;
+  closure_53 = tmp63;
   const items12 = [clientId, disclosures, hasItem2Result8[1], hasItem2Result9[1]];
   const effect2 = obj.useEffect(() => {
     function _doGetDisclosures() {
       const self = this;
-      const tmp = codeChallengeMethod(function*() {
-        if (c5 === 2) {
-          c5 = 3;
-          HermesBuiltin.throwTypeError();
-        } else if (tmp7 === 3) {
-          if (arg0 === 1) {
-            throw arg1;
-          } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
-            obj[0] = arg1;
-            return obj;
+      const tmp = codeChallengeMethod(() => {
+        c4 = 0;
+        c5 = 0;
+        let body = 0;
+        return (function*() {
+          if (c5 === 2) {
+            c5 = 3;
+            HermesBuiltin.throwTypeError();
+          } else if (tmp7 === 3) {
+            if (arg0 === 1) {
+              throw arg1;
+            } else if (arg0 === 2) {
+              let obj = { value: null, done: true };
+              obj[0] = arg1;
+              return obj;
+            } else {
+              return { value: "HermesInternal", done: "HermesInternal" };
+            }
           } else {
-            return { value: "HermesInternal", done: "HermesInternal" };
-          }
-        } else {
-          try {
-            c5 = 2;
-            if (0 === c4) {
-              if (arg0 === 1) {
+            try {
+              c5 = 2;
+              if (0 === c4) {
+                if (arg0 === 1) {
+                  c5 = 3;
+                  throw arg1;
+                } else if (arg0 === 2) {
+                  c5 = 3;
+                  obj = { value: null, done: true };
+                  obj[0] = arg1;
+                  return obj;
+                } else {
+                  disclosures = tmp4;
+                  let lib = tmp8;
+                  lib = undefined;
+                  disclosures = undefined;
+                  let allAcked;
+                  body = undefined;
+                  closure_1_49.current = true;
+                  body = 2;
+                  obj1 = lib(closure_2_3[25]);
+                  c4 = 3;
+                  c5 = 1;
+                  obj1 = { value: null, done: false };
+                  obj1[0] = obj1.getDisclosures(closure_1_0);
+                  return obj1;
+                }
+              } else if (1 === tmp8) {
+                body = 0;
+                closure_1_49.current = false;
+                throw allAcked;
+              } else if (2 === tmp8) {
+                body = 1;
+                body = allAcked.body;
+                if (null != body.message) {
+                  let message = body.message;
+                } else {
+                  const _Object = Object;
+                  const _Object2 = Object;
+                  const _HermesInternal = HermesInternal;
+                  message = "" + Object.keys(body)[0] + ": " + Object.values(body)[0];
+                }
+                error = new Error(message);
+                closure_1_23(error);
+                const tmp25 = closure_1_23;
+              } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
-              } else if (arg0 === 2) {
+              } else {
+                if (arg0 !== 2) {
+                  lib = arg1;
+                  disclosures = lib.disclosures;
+                  allAcked = lib.allAcked;
+                  closure_1_53(!allAcked);
+                  closure_1_51(disclosures);
+                  body = 1;
+                  body = 0;
+                  closure_1_49.current = false;
+                  c5 = 3;
+                }
+                body = 0;
+                closure_1_49.current = false;
                 c5 = 3;
                 obj = { value: null, done: true };
                 obj[0] = arg1;
                 return obj;
+              }
+            } catch (tmp48) {
+              allAcked = tmp48;
+              if (tmp5 === body) {
+                c5 = tmp3;
+                throw tmp48;
+              } else if (tmp2 === tmp50) {
+                c4 = tmp2;
               } else {
-                let disclosures = tmp4;
-                let lib = tmp8;
-                lib = undefined;
-                disclosures = undefined;
-                let allAcked;
-                let body;
-                outer1_49.current = true;
-                body = 2;
-                let obj1 = lib(outer2_3[25]);
-                c4 = 3;
-                c5 = 1;
-                obj1 = { value: null, done: false };
-                obj1[0] = obj1.getDisclosures(outer1_0);
-                return obj1;
+                c4 = tmp;
               }
-            } else if (1 === tmp8) {
-              body = 0;
-              outer1_49.current = false;
-              throw allAcked;
-            } else if (2 === tmp8) {
-              body = 1;
-              body = allAcked.body;
-              if (null != body.message) {
-                let message = body.message;
-              } else {
-                const _Object = Object;
-                const _Object2 = Object;
-                const _HermesInternal = HermesInternal;
-                message = "" + Object.keys(body)[0] + ": " + Object.values(body)[0];
-              }
-              const error = new Error(message);
-              outer1_23(error);
-              const tmp25 = outer1_23;
-            } else if (arg0 === 1) {
-              c5 = 3;
-              throw arg1;
-            } else {
-              if (arg0 !== 2) {
-                lib = arg1;
-                disclosures = lib.disclosures;
-                allAcked = lib.allAcked;
-                outer1_53(!allAcked);
-                outer1_51(disclosures);
-                body = 1;
-                body = 0;
-                outer1_49.current = false;
-                c5 = 3;
-              }
-              body = 0;
-              outer1_49.current = false;
-              c5 = 3;
-              obj = { value: null, done: true };
-              obj[0] = arg1;
-              return obj;
-            }
-          } catch (tmp48) {
-            allAcked = tmp48;
-            if (tmp5 === body) {
-              c5 = tmp3;
-              throw tmp48;
-            } else if (tmp2 === tmp50) {
-              c4 = tmp2;
-            } else {
-              c4 = tmp;
             }
           }
-        }
+        })();
       });
-      const _doGetDisclosures = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -514,14 +509,11 @@ export default function useOAuth2AuthorizeForm(clientId) {
   let result = _require(codeChallenge[26]).isContentClassificationRestricted(prop1, nsfwAllowed);
   _require = undefined;
   _require = codeChallengeMethod((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    let body = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
       if (c6 === 2) {
         c6 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -561,8 +553,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 c2 = undefined;
                 throwTypeErrorResult = c0;
                 ({ isAuthorized: c0, overrideSuccessCallback: c1, canceled: c2 } = c0);
-                let body;
-                let body2;
+                c3 = undefined;
+                c4 = undefined;
                 c5 = 1;
                 c6 = 1;
                 return { value: "ct", done: true };
@@ -574,22 +566,22 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   throw arg1;
                 } else if (arg0 === 2) {
                   c6 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
                   throwTypeErrorResult = c2;
-                  throwTypeErrorResult = outer1_12;
-                  if (null != outer1_12) {
+                  throwTypeErrorResult = closure_1_12;
+                  if (null != closure_1_12) {
                     throwTypeErrorResult = c1;
                     throwTypeErrorResult = c2;
-                    throwTypeErrorResult = outer1_24;
-                    throwTypeErrorResult = outer1_24(true);
-                    throwTypeErrorResult = outer1_12;
+                    throwTypeErrorResult = closure_1_24;
+                    throwTypeErrorResult = closure_1_24(true);
+                    throwTypeErrorResult = closure_1_12;
                     throwTypeErrorResult = callback;
-                    throwTypeErrorResult = outer1_12(callback);
-                    if (outer1_13 != null) {
-                      throwTypeErrorResult = outer1_13();
+                    throwTypeErrorResult = closure_1_12(callback);
+                    if (closure_1_13 != null) {
+                      throwTypeErrorResult = closure_1_13();
                     }
                     c6 = 3;
                     const obj2 = { value: null, done: true };
@@ -597,60 +589,60 @@ export default function useOAuth2AuthorizeForm(clientId) {
                     return obj2;
                   } else {
                     throwTypeErrorResult = c2;
-                    throwTypeErrorResult = outer1_35;
-                    if (null != outer1_35) {
-                      body2 = 2;
-                      outer1_24(true);
+                    throwTypeErrorResult = closure_1_35;
+                    if (null != closure_1_35) {
+                      c4 = 2;
+                      closure_1_24(true);
                       let obj7 = callback(codeChallenge[27]);
                       let obj3 = { authorize: null, clientId: null, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, nonce: null, permissions: null, guildId: null, channelId: null, integrationType: null, connectedAccountProvider: null };
                       obj3[0] = c0;
                       obj3[1] = callback;
-                      obj3[2] = outer1_45;
-                      obj3[3] = outer1_1;
-                      obj3[4] = outer1_2;
-                      obj3[5] = outer1_3;
-                      obj3[6] = body2;
+                      obj3[2] = closure_1_45;
+                      obj3[3] = closure_1_1;
+                      obj3[4] = closure_1_2;
+                      obj3[5] = closure_3;
+                      obj3[6] = body;
                       obj3[7] = c5;
                       throwTypeErrorResult = c6;
                       obj3[8] = c6;
                       throwTypeErrorResult = redirectUri;
                       throwTypeErrorResult = codeChallenge;
                       let obj9 = redirectUri(codeChallenge[21]);
-                      throwTypeErrorResult = outer1_46;
-                      throwTypeErrorResult = outer1_30;
-                      obj3[9] = obj9.remove(outer1_46, outer1_30);
-                      throwTypeErrorResult = outer1_35;
+                      throwTypeErrorResult = closure_1_46;
+                      throwTypeErrorResult = closure_1_30;
+                      obj3[9] = obj9.remove(closure_1_46, closure_1_30);
+                      throwTypeErrorResult = closure_1_35;
                       throwTypeErrorResult = callback;
                       throwTypeErrorResult = codeChallenge;
                       throwTypeErrorResult = undefined;
-                      if (outer1_35 === callback(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
+                      if (closure_1_35 === callback(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
                         throwTypeErrorResult = c2;
-                        throwTypeErrorResult = outer1_26;
-                        if (null != outer1_26) {
+                        throwTypeErrorResult = closure_1_26;
+                        if (null != closure_1_26) {
                           throwTypeErrorResult = c2;
-                          throwTypeErrorResult = outer1_26;
+                          throwTypeErrorResult = closure_1_26;
                         }
                       }
                       throwTypeErrorResult = c2;
                       obj3[10] = throwTypeErrorResult;
-                      throwTypeErrorResult = outer1_35;
+                      throwTypeErrorResult = closure_1_35;
                       throwTypeErrorResult = callback;
                       throwTypeErrorResult = codeChallenge;
                       throwTypeErrorResult = undefined;
-                      if (outer1_35 === callback(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
+                      if (closure_1_35 === callback(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL) {
                         throwTypeErrorResult = c2;
-                        throwTypeErrorResult = outer1_28;
-                        if (null != outer1_28) {
+                        throwTypeErrorResult = closure_1_28;
+                        if (null != closure_1_28) {
                           throwTypeErrorResult = c2;
-                          throwTypeErrorResult = outer1_28;
+                          throwTypeErrorResult = closure_1_28;
                         }
                       }
                       throwTypeErrorResult = c2;
                       obj3[11] = throwTypeErrorResult;
-                      throwTypeErrorResult = outer1_35;
-                      obj3[12] = outer1_35;
-                      throwTypeErrorResult = outer1_15;
-                      obj3[13] = outer1_15;
+                      throwTypeErrorResult = closure_1_35;
+                      obj3[12] = closure_1_35;
+                      throwTypeErrorResult = closure_1_15;
+                      obj3[13] = closure_1_15;
                       c5 = 4;
                       c6 = 1;
                       let obj4 = { value: null, done: false };
@@ -658,45 +650,45 @@ export default function useOAuth2AuthorizeForm(clientId) {
                       return obj4;
                     } else {
                       const _Error2 = Error;
-                      const error = new Error("No integration type was selected.");
-                      outer1_23(error);
+                      error = new Error("No integration type was selected.");
+                      closure_1_23(error);
                       c6 = 3;
                     }
                   }
                 }
               } else if (2 !== tmp8) {
                 if (3 === tmp8) {
-                  body2 = 1;
-                  body2 = body.body;
+                  c4 = 1;
+                  body = c3.body;
                   let message;
-                  if (body2 != null) {
-                    message = body2.message;
+                  if (body != null) {
+                    message = body.message;
                   }
                   if (null != message) {
-                    if ("" !== body2.message) {
+                    if ("" !== body.message) {
                       const _Error = Error;
-                      const error1 = new Error(body2.message);
-                      outer1_23(error1);
-                      outer1_21(disclosures.AUTHORIZE_SCOPES);
+                      const error1 = new Error(body.message);
+                      closure_1_23(error1);
+                      closure_1_21(disclosures.AUTHORIZE_SCOPES);
                     }
                   }
-                  outer1_23(body2);
-                  outer1_21(disclosures.AUTHORIZE_SCOPES);
+                  closure_1_23(body);
+                  closure_1_21(disclosures.AUTHORIZE_SCOPES);
                 } else {
                   if (4 === tmp8) {
                     if (arg0 === 1) {
                       c6 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
-                      body2 = 0;
-                      outer1_24(false);
+                      c4 = 0;
+                      closure_1_24(false);
                       c6 = 3;
                       const obj5 = { value: null, done: true };
                       obj5[0] = arg1;
                       return obj5;
                     } else {
                       throwTypeErrorResult = c1;
-                      outer1_3 = arg1;
+                      closure_3 = arg1;
                       throwTypeErrorResult = callback;
                       if (callback) {
                         obj3 = responseType(codeChallenge[29]);
@@ -705,7 +697,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                         c5 = 5;
                         c6 = 1;
                         const obj6 = { value: null, done: false };
-                        obj6[0] = obj4.ackDisclosures(callback, outer1_50);
+                        obj6[0] = obj4.ackDisclosures(callback, closure_1_50);
                         return obj6;
                       }
                     }
@@ -715,8 +707,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
                         c6 = 3;
                         throw arg1;
                       } else if (arg0 === 2) {
-                        body2 = 0;
-                        outer1_24(false);
+                        c4 = 0;
+                        closure_1_24(false);
                         c6 = 3;
                         obj7 = { value: null, done: true };
                         obj7[0] = arg1;
@@ -726,37 +718,37 @@ export default function useOAuth2AuthorizeForm(clientId) {
                       c6 = 3;
                       throw arg1;
                     } else if (arg0 === 2) {
-                      body2 = 0;
-                      outer1_24(false);
+                      c4 = 0;
+                      closure_1_24(false);
                       c6 = 3;
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
-                    } else if (outer1_11 != null) {
+                    } else if (closure_1_11 != null) {
                       throwTypeErrorResult = c1;
                       throwTypeErrorResult = c2;
                       const obj8 = {};
-                      throwTypeErrorResult = body;
+                      throwTypeErrorResult = c3;
                       throwTypeErrorResult = obj8;
-                      throwTypeErrorResult = Object.assign(body);
+                      throwTypeErrorResult = Object.assign(c3);
                       throwTypeErrorResult = c2;
                       obj8.canceled = c2;
                       let application;
-                      if (outer1_18 != null) {
-                        application = outer1_18.application;
+                      if (closure_1_18 != null) {
+                        application = closure_1_18.application;
                       }
                       obj8.application = application;
-                      obj8.guild = outer1_33;
-                      obj8.wasDeepLink = outer1_16;
+                      obj8.guild = closure_1_33;
+                      obj8.wasDeepLink = closure_1_16;
                       tmp10(obj8);
                     }
-                    body2 = 1;
+                    c4 = 1;
                   }
-                  if (null != outer1_1) {
-                    outer1_1(outer1_3.location);
+                  if (null != closure_1_1) {
+                    closure_1_1(closure_3.location);
                   } else {
-                    if (outer1_13 != null) {
-                      outer1_13();
+                    if (closure_1_13 != null) {
+                      closure_1_13();
                     }
                     const promise = new Promise((arg0) => setTimeout(arg0, 100));
                     c5 = 6;
@@ -766,16 +758,16 @@ export default function useOAuth2AuthorizeForm(clientId) {
                     return obj9;
                   }
                 }
-                body2 = 0;
-                outer1_24(false);
+                c4 = 0;
+                closure_1_24(false);
               }
-              body2 = 0;
-              outer1_24(false);
-              throw body;
+              c4 = 0;
+              closure_1_24(false);
+              throw c3;
             }
           } catch (throwTypeErrorResult) {
-            body = throwTypeErrorResult;
-            if (tmp5 === body2) {
+            c3 = throwTypeErrorResult;
+            if (tmp5 === c4) {
               throwTypeErrorResult = tmp3;
               c6 = tmp3;
               throw throwTypeErrorResult;
@@ -811,10 +803,10 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }, items13);
   const items14 = [callback];
   callback1 = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return new Promise((arg0) => {
-      let closure_0 = arg0;
-      return outer1_54({
+      closure_0 = arg0;
+      return closure_1_54({
         isAuthorized: closure_0,
         overrideSuccessCallback(arg0) {
           callback(arg0);
@@ -824,63 +816,48 @@ export default function useOAuth2AuthorizeForm(clientId) {
   }, items14);
   const items15 = [clientId, first9, responseType, callback, callback1, tmp51, dismissOAuthModal, requestedScopes];
   closure_56 = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (first9) {
       const result = responseType(codeChallenge[22]).showConnectionDisclaimer();
       const obj2 = responseType(codeChallenge[22]);
       const nextPromise = result.then(() => callback2(9767).getAccountUrlAndAuthCode());
       const nextPromise1 = result.then(() => callback2(9767).getAccountUrlAndAuthCode()).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        const items = [tmp2, callback(outer1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, OAuth2Prompts)];
+        const items = [tmp2, callback(closure_1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, closure_5)];
         return Promise.all(items);
       });
       const nextPromise2 = result.then(() => callback2(9767).getAccountUrlAndAuthCode()).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        const items = [tmp2, callback(outer1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, OAuth2Prompts)];
+        const items = [tmp2, callback(closure_1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, closure_5)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
         [tmp, ] = arg0;
-        const items = [tmp, outer1_55(closure_0)];
+        const items = [tmp, closure_1_55(closure_0)];
         return Promise.all(items);
       });
       const nextPromise3 = result.then(() => callback2(9767).getAccountUrlAndAuthCode()).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        const items = [tmp2, callback(outer1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, OAuth2Prompts)];
+        const items = [tmp2, callback(closure_1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, closure_5)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
         [tmp, ] = arg0;
-        const items = [tmp, outer1_55(closure_0)];
+        const items = [tmp, closure_1_55(closure_0)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        return outer1_1(outer1_3[22]).finishSamsungAuthorization(tmp, tmp2, OAuth2Prompts);
+        return closure_1_1(closure_1_3[22]).finishSamsungAuthorization(tmp, tmp2, closure_5);
       });
       result.then(() => callback2(9767).getAccountUrlAndAuthCode()).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        const items = [tmp2, callback(outer1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, OAuth2Prompts)];
+        const items = [tmp2, callback(closure_1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, closure_5)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
         [tmp, ] = arg0;
-        const items = [tmp, outer1_55(closure_0)];
+        const items = [tmp, closure_1_55(closure_0)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        return outer1_1(outer1_3[22]).finishSamsungAuthorization(tmp, tmp2, OAuth2Prompts);
+        return closure_1_1(closure_1_3[22]).finishSamsungAuthorization(tmp, tmp2, closure_5);
       }).then(() => {
         let tmp;
         if (callback3 != null) {
@@ -891,21 +868,16 @@ export default function useOAuth2AuthorizeForm(clientId) {
         callback2(1208).captureException(arg0);
       });
       const nextPromise4 = result.then(() => callback2(9767).getAccountUrlAndAuthCode()).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        const items = [tmp2, callback(outer1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, OAuth2Prompts)];
+        const items = [tmp2, callback(closure_1_3[27]).startSamsungAuthorization(callback, closure_45, closure_1, tmp, closure_5)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
         [tmp, ] = arg0;
-        const items = [tmp, outer1_55(closure_0)];
+        const items = [tmp, closure_1_55(closure_0)];
         return Promise.all(items);
       }).then((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
-        return outer1_1(outer1_3[22]).finishSamsungAuthorization(tmp, tmp2, OAuth2Prompts);
+        return closure_1_1(closure_1_3[22]).finishSamsungAuthorization(tmp, tmp2, closure_5);
       }).then(() => {
         let tmp;
         if (callback3 != null) {
@@ -948,32 +920,32 @@ export default function useOAuth2AuthorizeForm(clientId) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp4;
+            closure_2 = tmp4;
             let application = tmp8;
-            let closure_0;
+            closure_0 = undefined;
             application = undefined;
             closure_2 = undefined;
-            let c3;
-            if (outer1_57.current) {
+            let body;
+            if (closure_1_57.current) {
               c6 = 3;
             } else {
-              outer1_57.current = true;
-              let c4 = 2;
-              let obj3 = outer1_0(outer1_3[27]);
-              const obj1 = { clientId: null, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, integrationType: null, connectedAccountProvider: null };
-              obj1[0] = outer1_0;
-              obj1[1] = outer1_45;
-              obj1[2] = outer1_1;
-              obj1[3] = outer1_2;
-              obj1[4] = outer1_3;
+              closure_1_57.current = true;
+              c4 = 2;
+              let obj3 = closure_1_0(body[27]);
+              obj1 = { clientId: null, scopes: null, responseType: null, redirectUri: null, codeChallenge: null, codeChallengeMethod: null, state: null, integrationType: null, connectedAccountProvider: null };
+              obj1[0] = closure_1_0;
+              obj1[1] = closure_1_45;
+              obj1[2] = closure_1_1;
+              obj1[3] = closure_1_2;
+              obj1[4] = body;
               obj1[5] = c4;
               obj1[6] = c5;
-              closure_0 = outer1_35;
-              if (outer1_35 == null) {
+              closure_0 = closure_1_35;
+              if (closure_1_35 == null) {
                 closure_0 = undefined;
               }
               obj1[7] = closure_0;
-              obj1[8] = outer1_15;
+              obj1[8] = closure_1_15;
               c5 = 3;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -984,16 +956,16 @@ export default function useOAuth2AuthorizeForm(clientId) {
         } else if (1 !== tmp8) {
           if (2 === tmp8) {
             c4 = 1;
-            outer1_3 = c3.body;
-            if (null != outer1_3.message) {
-              let message = c3.message;
+            body = body.body;
+            if (null != body.message) {
+              let message = body.message;
             } else {
               const _Object = Object;
               const _Object2 = Object;
               const _HermesInternal = HermesInternal;
-              message = "" + Object.keys(outer1_3)[0] + ": " + Object.values(outer1_3)[0];
+              message = "" + Object.keys(body)[0] + ": " + Object.values(body)[0];
             }
-            const error = new Error(message);
+            error = new Error(message);
             closure_23(error);
             const tmp30 = closure_23;
           } else if (arg0 === 1) {
@@ -1001,18 +973,18 @@ export default function useOAuth2AuthorizeForm(clientId) {
             throw arg1;
           } else if (arg0 === 2) {
             c4 = 0;
-            outer1_57.current = false;
+            closure_1_57.current = false;
             c6 = 3;
             obj3 = { value: null, done: true };
             obj3[0] = arg1;
             return obj3;
           } else {
             closure_0 = arg1;
-            application = outer1_0(outer1_3[31]).convertOAuth2Authorization(closure_0);
+            application = closure_1_0(body[31]).convertOAuth2Authorization(closure_0);
             callback(application);
-            const obj9 = outer1_0(outer1_3[31]);
-            closure_2 = outer1_0(outer1_3[26]).isContentClassificationRestricted(application.application.content_classification, closure_32);
-            let tmp11 = closure_7 !== outer1_0(outer1_3[32]).OAuth2Prompts.NONE;
+            const obj9 = closure_1_0(body[31]);
+            closure_2 = closure_1_0(body[26]).isContentClassificationRestricted(application.application.content_classification, closure_32);
+            let tmp11 = closure_7 !== closure_1_0(body[32]).OAuth2Prompts.NONE;
             if (!tmp11) {
               tmp11 = !closure_0.authorized;
             }
@@ -1023,23 +995,23 @@ export default function useOAuth2AuthorizeForm(clientId) {
               tmp11 = closure_2;
             }
             if (!tmp11) {
-              outer1_54({ isAuthorized: true });
+              closure_1_54({ isAuthorized: true });
             }
-            obj = outer1_0(outer1_3[33]);
+            obj = closure_1_0(body[33]);
             const obj4 = { application_id: null };
             obj4[0] = closure_0.application.id;
-            obj.trackWithMetadata(outer1_15.OAUTH2_AUTHORIZE_VIEWED, obj4);
+            obj.trackWithMetadata(closure_1_15.OAUTH2_AUTHORIZE_VIEWED, obj4);
             c4 = 1;
             c4 = 0;
-            outer1_57.current = false;
-            const obj10 = outer1_0(outer1_3[26]);
+            closure_1_57.current = false;
+            const obj10 = closure_1_0(body[26]);
           }
         }
         c4 = 0;
         closure_57.current = false;
-        throw c3;
+        throw body;
       } catch (tmp62) {
-        c3 = tmp62;
+        body = tmp62;
         if (tmp5 === c4) {
           c6 = tmp3;
           throw tmp62;
@@ -1061,12 +1033,10 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
         const entries = Object.entries(prop);
         const found = entries.filter((arg0) => {
-          let tmp;
           [, tmp] = arg0;
           return null != tmp.oauth2InstallParams;
         });
         const mapped = found.map((arg0) => {
-          let tmp;
           [tmp, ] = arg0;
           return Number(tmp);
         });
@@ -1101,20 +1071,20 @@ export default function useOAuth2AuthorizeForm(clientId) {
     }
     if (!tmp) {
       if (null != connectedAccountProvider) {
-        if (!c34) {
+        if (!closure_34) {
           callback3(disclosures.CONNECT_ACCOUNT);
         }
       }
       if (memo5.length > 1) {
         callback3(disclosures.SELECT_INSTALL_TYPE);
       } else if (1 === arr.length) {
-        callback6(arr[0]);
+        callback8(arr[0]);
         callback3(disclosures.AUTHORIZE_SCOPES);
       } else if (null != integrationType) {
-        callback6(tmp9);
+        callback8(tmp9);
         callback3(disclosures.AUTHORIZE_SCOPES);
       } else {
-        callback6(callback(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL);
+        callback8(callback(codeChallenge[28]).ApplicationIntegrationType.GUILD_INSTALL);
         callback3(disclosures.AUTHORIZE_SCOPES);
       }
     }
@@ -1123,7 +1093,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
   const effect5 = obj.useEffect(() => {
     let tmp2 = first1 === disclosures.CONNECT_ACCOUNT;
     if (tmp2) {
-      tmp2 = c34;
+      tmp2 = closure_34;
     }
     if (tmp2) {
       let USER_INSTALL = integrationType;
@@ -1141,8 +1111,8 @@ export default function useOAuth2AuthorizeForm(clientId) {
       if (null == first) {
         if (null == first2) {
           if (tmp === callback(codeChallenge[28]).ApplicationIntegrationType.USER_INSTALL) {
-            _undefined(null);
-            _undefined2(null);
+            callback5(null);
+            callback6(null);
           }
           const found = requestedScopes.filter((arg0) => {
             const ValidScopes = callback(table[20]).ValidScopes;
@@ -1150,7 +1120,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           });
           if (0 === requestedScopes.length) {
             const _Error3 = Error;
-            const error = new Error("No scopes were provided.");
+            error = new Error("No scopes were provided.");
             callback4(error);
           } else if (found.length > 0) {
             const _Error2 = Error;
@@ -1180,7 +1150,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
       tmp = !first7;
     }
     if (tmp) {
-      _undefined3(true);
+      callback9(true);
     }
   }, items22);
   if (first1 === disclosures.AUTHORIZE_SCOPES) {
@@ -1203,7 +1173,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
     }, items23);
     responseType(tmp17[35])(callback4, flag4);
     const callback5 = obj.useCallback((arg0) => {
-      callback6(arg0);
+      callback8(arg0);
       callback2(null);
       callback3(disclosures.AUTHORIZE_SCOPES);
     }, []);
@@ -1230,7 +1200,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         let str5;
         class Spinner {
           constructor() {
-            obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+            obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
             return closure_17(prompt, obj);
           }
         }
@@ -1242,7 +1212,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
       }
       class Spinner {
         constructor() {
-          obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+          obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
           return closure_17(prompt, obj);
         }
       }
@@ -1251,7 +1221,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         { body: null, obscured: false }[0] = callback(Spinner, {});
         class Spinner {
           constructor() {
-            obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+            obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
             return closure_17(prompt, obj);
           }
         }
@@ -1263,7 +1233,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           obj4[0] = clientId;
           class Spinner {
             constructor() {
-              obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+              obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
               return closure_17(prompt, obj);
             }
           }
@@ -1279,7 +1249,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
             { body: null, obscured: false }[0] = callback(Spinner, {});
             class Spinner {
               constructor() {
-                obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                 return closure_17(prompt, obj);
               }
             }
@@ -1290,7 +1260,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
             obj6[0] = first8;
             class Spinner {
               constructor() {
-                obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                 return closure_17(prompt, obj);
               }
             }
@@ -1318,7 +1288,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                 }
                 class Spinner {
                   constructor() {
-                    obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                    obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                     return closure_17(prompt, obj);
                   }
                 }
@@ -1335,7 +1305,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                     }
                     class Spinner {
                       constructor() {
-                        obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                        obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                         return closure_17(prompt, obj);
                       }
                     }
@@ -1351,7 +1321,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                     obj8[0] = stateFromStores1.type;
                     class Spinner {
                       constructor() {
-                        obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                        obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                         return closure_17(prompt, obj);
                       }
                     }
@@ -1384,7 +1354,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   hasItem2 = tmp81(tmp17[48]);
                   class Spinner {
                     constructor() {
-                      obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                      obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                       return closure_17(prompt, obj);
                     }
                   }
@@ -1419,7 +1389,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
                   hasItem2 = tmp81(tmp17[49]);
                   class Spinner {
                     constructor() {
-                      obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                      obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                       return closure_17(prompt, obj);
                     }
                   }
@@ -1474,7 +1444,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           hasItem2 = callback;
           class Spinner {
             constructor() {
-              obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+              obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
               return closure_17(prompt, obj);
             }
           }
@@ -1485,7 +1455,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           flag8 = false;
           class Spinner {
             constructor() {
-              obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+              obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
               return closure_17(prompt, obj);
             }
           }
@@ -1494,7 +1464,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               { body: null, obscured: false }[0] = callback(Spinner, {});
               class Spinner {
                 constructor() {
-                  obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                  obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                   return closure_17(prompt, obj);
                 }
               }
@@ -1504,7 +1474,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               obj18[0] = first.application;
               class Spinner {
                 constructor() {
-                  obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                  obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                   return closure_17(prompt, obj);
                 }
               }
@@ -1538,7 +1508,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               }
               class Spinner {
                 constructor() {
-                  obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                  obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                   return closure_17(prompt, obj);
                 }
               }
@@ -1562,7 +1532,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
         }
         class Spinner {
           constructor() {
-            obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+            obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
             return closure_17(prompt, obj);
           }
         }
@@ -1576,7 +1546,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
           obj20[0] = stateFromStores;
           class Spinner {
             constructor() {
-              obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+              obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
               return closure_17(prompt, obj);
             }
           }
@@ -1602,7 +1572,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
             let str6 = "auto";
             class Spinner {
               constructor() {
-                obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                 return closure_17(prompt, obj);
               }
             }
@@ -1615,7 +1585,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               const t2 = tmp20(tmp17[38]).t;
               class Spinner {
                 constructor() {
-                  obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                  obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                   return closure_17(prompt, obj);
                 }
               }
@@ -1624,7 +1594,7 @@ export default function useOAuth2AuthorizeForm(clientId) {
               const t = tmp20(tmp17[38]).t;
               class Spinner {
                 constructor() {
-                  obj = { style: closure_17.loading, children: closure_17(f108333(codeChallenge[39]).ActivityIndicator, {}) };
+                  obj = { style: closure_17.loading, children: closure_17(closure_0(codeChallenge[39]).ActivityIndicator, {}) };
                   return closure_17(prompt, obj);
                 }
               }

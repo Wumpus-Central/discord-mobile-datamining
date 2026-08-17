@@ -1,10 +1,10 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventManager.tsx
-import closure_2 from "set";
-import handleConnectionOpen from "handleConnectionOpen";
-import scheduledEventSort from "scheduledEventSort";
-import "initialize";
-import set from "scheduledEventSort";
-import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import _modDef8783 from "module_8783" /* 8783 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "handleConnectionOpen" /* 4197 */;
+import closure_4 from "scheduledEventSort" /* 4370 */;
+import set from "set" /* 2 */;
 
 function getGuildEventsForCurrentUser() {
   const self = this;
@@ -19,10 +19,10 @@ function getGuildEventsForCurrentUser() {
 function _getGuildEventsForCurrentUser() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (set === 2) {
         set = 3;
@@ -50,14 +50,14 @@ function _getGuildEventsForCurrentUser() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
+              closure_2 = tmp3;
+              closure_1 = tmp7;
               if (0 !== guildScheduledEventsForGuild.getGuildScheduledEventsForGuild(callback).length) {
                 if (!set.has(tmp33)) {
-                  if (!outer1_7.has(tmp33)) {
+                  if (!closure_1_7.has(tmp33)) {
                     guildScheduledEventsForGuild = 1;
                     set.add(tmp33);
-                    let obj1 = callback(outer1_1[3]);
+                    obj1 = callback(closure_1_1[3]);
                     c5 = 2;
                     set = 1;
                     obj1 = { value: null, done: false };
@@ -86,7 +86,7 @@ function _getGuildEventsForCurrentUser() {
           }
           set = 3;
         } catch (tmp25) {
-          let handleConnectionOpen = tmp25;
+          closure_3 = tmp25;
           if (tmp4 === guildScheduledEventsForGuild) {
             set = tmp2;
             throw tmp25;
@@ -97,7 +97,7 @@ function _getGuildEventsForCurrentUser() {
       }
     })();
   });
-  const _getGuildEventsForCurrentUser = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -110,6 +110,7 @@ let closure_5 = {};
 let set = new Set();
 const set1 = new Set();
 let c8 = 1800000;
+initializeDefault;
 class GuildScheduledEventManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -136,17 +137,17 @@ class GuildScheduledEventManager extends tmp4 {
 }
 const prototype = GuildScheduledEventManager.prototype;
 prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id, id, items1) {
-  let closure_0 = guild_id;
-  let closure_1 = id;
+  closure_0 = guild_id;
+  closure_1 = id;
   const callback = items1;
   return callback(function*() {
-    const found = outer1_2.filter((arg0) => {
-      let tmp3 = null == outer1_5["" + c0 + "-" + c1 + "-" + arg0];
+    const found = closure_1_2.filter((arg0) => {
+      let tmp3 = null == closure_1_5["" + c0 + "-" + c1 + "-" + arg0];
       if (!tmp3) {
         const _Date = Date;
         const _HermesInternal = HermesInternal;
         const timestamp = Date.now();
-        tmp3 = timestamp - outer1_5["" + tmp + "-" + tmp2 + "-" + arg0] > outer1_8;
+        tmp3 = timestamp - closure_1_5["" + tmp + "-" + tmp2 + "-" + arg0] > closure_1_8;
       }
       return tmp3;
     });
@@ -156,15 +157,15 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
     let _HermesInternal = HermesInternal;
     let _Date = Date;
     let combined = "" + tmp25 + "-" + tmp26;
-    outer1_5[combined] = Date.now();
+    closure_1_5[combined] = Date.now();
     const item = found.forEach((arg0) => {
       const combined = "" + c0 + "-" + c1 + "-" + arg0;
       const timestamp = Date.now();
-      outer1_5[combined] = timestamp;
+      closure_1_5[combined] = timestamp;
       return timestamp;
     });
-    let c3 = 1;
-    const obj1 = v0(table[3]);
+    c3 = 1;
+    obj1 = v0(table[3]);
     yield obj1.fetchGuildEventUserCounts(v0, table, found);
     if (1 === tmp6) {
       c3 = 0;
@@ -179,7 +180,7 @@ prototype["getGuildEventUserCounts"] = function getGuildEventUserCounts(guild_id
   })();
 };
 prototype["getGuildEventUsers"] = function getGuildEventUsers(id, arg1, guild_id) {
-  return GuildScheduledEventsActionCreators.fetchUsersForGuildEvent(id, arg1, guild_id);
+  return _modDef8783.fetchUsersForGuildEvent(id, arg1, guild_id);
 };
 prototype["getGuildEventsForCurrentUser"] = function getGuildEventsForCurrentUser(arg0) {
   return getGuildEventsForCurrentUser(arg0);
@@ -217,21 +218,21 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             obj[0] = arg1;
             return obj;
           } else {
-            let handleConnectionOpen = tmp;
-            let closure_2 = tmp4;
-            let closure_0;
+            closure_3 = tmp;
+            closure_2 = tmp4;
+            closure_0 = undefined;
             let guildScheduledEventsForGuild;
             let tmp28 = c6;
             let clearResult = c6.clear();
             let tmp30 = c7;
             let clearResult1 = c7.clear();
-            let c5 = {};
-            let tmp32 = outer1_3;
-            let lastSelectedGuildId = outer1_3.getLastSelectedGuildId();
+            closure_5 = {};
+            let tmp32 = closure_1_3;
+            let lastSelectedGuildId = closure_1_3.getLastSelectedGuildId();
             closure_0 = lastSelectedGuildId;
             if (null != lastSelectedGuildId) {
-              let tmp34 = outer1_4;
-              guildScheduledEventsForGuild = outer1_4.getGuildScheduledEventsForGuild(lastSelectedGuildId);
+              let tmp34 = closure_1_4;
+              guildScheduledEventsForGuild = closure_1_4.getGuildScheduledEventsForGuild(lastSelectedGuildId);
               let tmp36 = guildScheduledEventsForGuild;
               closure_0 = guildScheduledEventsForGuild[Symbol.iterator]();
             }
@@ -240,12 +241,12 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } else if (1 === tmp4) {
-          let tmp11 = scheduledEventSort;
-          let tmp12 = scheduledEventSort;
+          let tmp11 = closure_4;
+          let tmp12 = closure_4;
           c5 = 0;
           let tmp13 = closure_0;
           closure_0.return();
-          throw scheduledEventSort;
+          throw closure_4;
         } else if (2 === tmp4) {
           if (arg0 === 1) {
             let num6 = 3;
@@ -257,7 +258,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
             closure_0.return();
             let num5 = 3;
             c7 = 3;
-            let obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -293,7 +294,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen() {
         let tmp15 = closure_0;
         if (closure_0 !== undefined) {
           let tmp17 = closure_2;
-          let tmp18 = handleConnectionOpen;
+          let tmp18 = closure_3;
           c5 = 1;
           guildScheduledEventsForGuild = tmp16;
           let tmp19 = closure_0;
@@ -367,16 +368,16 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_5 = tmp;
-            let scheduledEventSort = tmp4;
-            let closure_0;
-            let tmp42 = outer1_0;
-            if (null != outer1_0) {
-              let tmp43 = outer1_4;
-              let tmp44 = outer1_0;
-              let guildScheduledEventsForGuild = outer1_4.getGuildScheduledEventsForGuild(outer1_0);
+            closure_5 = tmp;
+            closure_4 = tmp4;
+            let tmp30;
+            let tmp42 = tmp30;
+            if (null != tmp30) {
+              let tmp43 = closure_1_4;
+              let tmp44 = tmp30;
+              let guildScheduledEventsForGuild = closure_1_4.getGuildScheduledEventsForGuild(tmp30);
               let tmp46 = guildScheduledEventsForGuild;
-              closure_0 = guildScheduledEventsForGuild[Symbol.iterator]();
+              tmp30 = guildScheduledEventsForGuild[Symbol.iterator]();
             }
             let num14 = 3;
             c9 = 3;
@@ -385,14 +386,14 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
         } else if (1 === tmp4) {
           let tmp25 = closure_7;
           let tmp26 = closure_7;
-          let c6 = 0;
-          let tmp27 = closure_0;
-          closure_0.return();
+          c6 = 0;
+          let tmp27 = tmp30;
+          tmp30.return();
           throw closure_7;
         } else if (2 === tmp4) {
           let tmp19 = closure_7;
           let tmp20 = closure_7;
-          let handleConnectionOpen = closure_7;
+          closure_3 = closure_7;
           c6 = 1;
           let _Promise3 = Promise;
           let tmp21 = new.target;
@@ -402,7 +403,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
           let num12 = 1;
           c9 = 1;
           let tmp24 = promise;
-          let obj1 = { value: null, done: false };
+          obj1 = { value: null, done: false };
           obj1[0] = promise;
           return obj1;
         } else if (3 === tmp4) {
@@ -412,16 +413,16 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 0;
-            let tmp18 = closure_0;
-            closure_0.return();
+            let tmp18 = tmp30;
+            tmp30.return();
             let num10 = 3;
             c9 = 3;
             let obj2 = { value: null, done: true };
             obj2[0] = arg1;
             return obj2;
           } else {
-            let tmp17 = handleConnectionOpen;
-            throw handleConnectionOpen;
+            let tmp17 = closure_3;
+            throw closure_3;
           }
         } else if (4 === tmp4) {
           if (arg0 === 1) {
@@ -429,7 +430,7 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             c9 = 3;
             throw arg1;
           } else {
-            let closure_2 = arg1;
+            closure_2 = arg1;
             if (arg0 === 2) {
               c6 = 1;
               let _Promise2 = Promise;
@@ -465,8 +466,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             throw arg1;
           } else if (arg0 === 2) {
             c6 = 0;
-            let tmp8 = closure_0;
-            closure_0.return();
+            let tmp8 = tmp30;
+            tmp30.return();
             let num5 = 3;
             c9 = 3;
             let obj5 = { value: null, done: true };
@@ -474,8 +475,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
             return obj5;
           } else {
             c6 = 0;
-            let tmp6 = closure_0;
-            closure_0.return();
+            let tmp6 = tmp30;
+            tmp30.return();
             let num4 = 3;
             c9 = 3;
             let tmp7 = closure_2;
@@ -489,8 +490,8 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
           throw arg1;
         } else if (arg0 === 2) {
           c6 = 0;
-          let tmp5 = closure_0;
-          closure_0.return();
+          let tmp5 = tmp30;
+          tmp30.return();
           let num2 = 3;
           c9 = 3;
           obj = { value: null, done: true };
@@ -500,20 +501,19 @@ prototype["handleChannelSelect"] = function handleChannelSelect(guildId) {
           c6 = 0;
         }
         let tmp28 = guildScheduledEventsForGuild;
-        let tmp29 = closure_0;
-        if (closure_0 !== undefined) {
-          let tmp31 = scheduledEventSort;
-          outer1_0 = tmp30;
+        let tmp29 = tmp30;
+        if (tmp30 !== undefined) {
+          let tmp31 = closure_4;
           let tmp32 = closure_5;
           c6 = 2;
-          let tmp33 = outer1_1;
-          let tmp34 = outer1_0;
-          let tmp35 = outer1_0;
+          let tmp33 = closure_1_1;
+          let tmp34 = tmp30;
+          let tmp35 = tmp30;
           c8 = 4;
           let num13 = 1;
           c9 = 1;
           let obj7 = { value: null, done: false };
-          obj7[0] = outer1_1.getGuildEventUserCounts(outer1_0, outer1_0.id, []);
+          obj7[0] = closure_1_1.getGuildEventUserCounts(tmp30, tmp30.id, []);
           return obj7;
         }
       }

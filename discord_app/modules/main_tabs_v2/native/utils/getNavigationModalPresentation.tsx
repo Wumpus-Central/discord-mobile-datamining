@@ -1,18 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/utils/getNavigationModalPresentation.tsx
-import set from "set";
-import set from "set";
-import set from "DCDDeviceManager";
-import { handleOrientationChange } from "../../../device/native/DeviceOrientation.tsx";
+import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7925 */;
+import handleOrientationChange from "handleOrientationChange" /* 8671 */;
+import set from "set" /* 500 */;
 
 if (set.isAndroid()) {
-  const _module1 = require("useIsWindowLarge");
+  const _module1 = useIsWindowLarge;
   let str2 = "modal";
   if (_module1.getIsWindowLarge()) {
     str2 = "fullScreenModal";
   }
   let str = str2;
 } else {
-  const _module2 = require("DCDDeviceManager");
+  const _module2 = DCDDeviceManager;
   str = "modal";
   if (_module2.isIpadOS()) {
     str = "fullScreenModal";

@@ -1,52 +1,42 @@
 // discord_app/modules/premium/native/gift_code_modal/GiftCodeRedeemSuccess.tsx
-import _slicedToArray from "_slicedToArray";
-import BundleStaticPreviewContent from "BundleStaticPreviewContent";
-import get_ActivityIndicator from "SlayerStorefrontItemCard";
-import addSku from "addSku";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "addSku" /* 4521 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, body: null, nameplateContainer: null, bundleContainer: null, bundlePreview: null, header: null, message: null, footer: null, gameItemCard: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, justifyContent: "space-between", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, alignItems: "center", justifyContent: "center", paddingTop: 28, paddingBottom: 12, paddingHorizontal: 32 };
-createCacheKey[2] = { width: "100%", paddingTop: require("Themes").space.PX_24 };
-let obj1 = { width: "100%", paddingTop: require("Themes").space.PX_24 };
-createCacheKey[3] = { width: "100%", alignItems: "center", paddingTop: require("Themes").space.PX_24 };
+createCacheKey[2] = { width: "100%", paddingTop: ThemesDefault.space.PX_24 };
+let obj1 = { width: "100%", paddingTop: ThemesDefault.space.PX_24 };
+createCacheKey[3] = { width: "100%", alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[4] = { alignSelf: "stretch", minHeight: 250, alignItems: "center", justifyContent: "center" };
 createCacheKey[5] = { marginTop: 32, textAlign: "center" };
 createCacheKey[6] = { marginTop: 8, textAlign: "center" };
 createCacheKey[7] = { paddingHorizontal: 24 };
 createCacheKey[8] = { marginTop: 20 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { width: "100%", alignItems: "center", paddingTop: require("Themes").space.PX_24 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemSuccess.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { width: "100%", alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/GiftCodeRedeemSuccess.tsx");
 
 export default function GiftCodeRedeemSuccess(giftCode) {
-  let c3;
-  let canUseNow;
-  let firstAvatarDecoration;
-  let firstNameplate;
-  let firstProfileEffect;
-  let handleUseNow;
-  let tmp15;
   giftCode = giftCode.giftCode;
   const user = giftCode.user;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   dependencyMap = tmp;
   let obj = giftCode(589);
-  const items = [addSku];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.get(giftCode.skuId));
-  let obj1 = giftCode(10648);
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.get(giftCode.skuId));
+  obj1 = giftCode(10648);
   const getOrFetchSubscriptionPlan = obj1.useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
   let obj2 = giftCode(7145);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(giftCode.applicationId);
@@ -87,10 +77,8 @@ export default function GiftCodeRedeemSuccess(giftCode) {
   ({ handleUseNow, canUseNow } = handleUseNow);
   [tmp15, c3] = callback(React.useState(), 2);
   callback = React.useCallback((nativeEvent) => {
-    let giftCode;
-    let user;
     ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);
-    _undefined2((arg0) => {
+    _undefined((arg0) => {
       let size = arg0;
       if (null != arg0) {
         return size;
@@ -266,16 +254,16 @@ export default function GiftCodeRedeemSuccess(giftCode) {
       avatarSource = obj.getAvatarSource(null, true, tmp2(tmp3[21]).AVATAR_SIZE_MAP[tmp2(undefined, tmp3[21]).AvatarSizes.GIFT_SUCCESS]);
     }
     obj = { source: avatarSource, avatarDecoration, size: tmp2(tmp3[21]).AvatarSizes.GIFT_SUCCESS, animate: true };
-    return outer1_8(giftCode(_undefined[21]).Avatar, obj);
+    return closure_1_8(giftCode(nameplateContainer[21]).Avatar, obj);
   });
   const obj23 = { type: giftCode(1949).CollectiblesItemType.PROFILE_EFFECT };
-  const withResult1 = withResult.with({ type: giftCode(1949).CollectiblesItemType.PROFILE_EFFECT }, (profileEffect) => outer1_8(user(_undefined[22]), { user, profileEffect }));
+  const withResult1 = withResult.with({ type: giftCode(1949).CollectiblesItemType.PROFILE_EFFECT }, (profileEffect) => closure_1_8(user(nameplateContainer[22]), { user, profileEffect }));
   const obj24 = { type: giftCode(1949).CollectiblesItemType.PROFILE_FRAME };
-  const withResult2 = withResult1.with({ type: giftCode(1949).CollectiblesItemType.PROFILE_FRAME }, (profileFrame) => outer1_8(user(_undefined[23]), { user, profileFrame }));
+  const withResult2 = withResult1.with({ type: giftCode(1949).CollectiblesItemType.PROFILE_FRAME }, (profileFrame) => closure_1_8(user(nameplateContainer[23]), { user, profileFrame }));
   const obj25 = { type: giftCode(1949).CollectiblesItemType.NAMEPLATE };
   tmp20Result = withResult2.with({ type: giftCode(1949).CollectiblesItemType.NAMEPLATE }, (nameplate) => {
-    obj = { style: _undefined.nameplateContainer, children: outer1_8(giftCode(_undefined[24]).NameplatePreview, obj) };
+    obj = { style: nameplateContainer.nameplateContainer, children: closure_1_8(giftCode(nameplateContainer[24]).NameplatePreview, obj) };
     obj = { user, nameplate };
-    return outer1_8(outer1_5, obj);
-  }).otherwise(() => outer1_8(user(_undefined[25]), { giftStyle: giftCode.giftStyle }));
+    return closure_1_8(closure_1_5, obj);
+  }).otherwise(() => closure_1_8(user(nameplateContainer[25]), { giftStyle: giftCode.giftStyle }));
 };

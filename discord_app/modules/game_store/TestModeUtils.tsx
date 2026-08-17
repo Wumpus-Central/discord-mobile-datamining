@@ -1,35 +1,35 @@
 // discord_app/modules/game_store/TestModeUtils.tsx
-import initialize from "initialize";
-import reset from "reset";
+import closure_2 from "initialize" /* 7872 */;
+import closure_3 from "reset" /* 7874 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("initialize").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/game_store/TestModeUtils.tsx");
 
 export const isTestModeForApplication = function isTestModeForApplication(applicationId) {
-  let result = reset.inTestModeForApplication(applicationId);
+  let result = closure_3.inTestModeForApplication(applicationId);
   if (!result) {
-    result = initialize.inDevModeForApplication(applicationId);
+    result = closure_2.inDevModeForApplication(applicationId);
   }
   return result;
 };
 export const isAnyApplicationInTestMode = function isAnyApplicationInTestMode() {
-  let isEnabled = null != reset.getTestModeApplicationId();
+  let isEnabled = null != closure_3.getTestModeApplicationId();
   if (!isEnabled) {
-    isEnabled = initialize.getIsEnabled();
+    isEnabled = closure_2.getIsEnabled();
   }
   return isEnabled;
 };
 export const useIsTestModeForApplication = function useIsTestModeForApplication(id) {
   const _require = id;
-  const items = [reset, initialize];
+  const items = [closure_3, closure_2];
   const items1 = [id];
   return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let result = outer1_3.inTestModeForApplication(tmp);
+      let result = closure_1_3.inTestModeForApplication(tmp);
       if (!result) {
-        result = outer1_2.inDevModeForApplication(tmp);
+        result = closure_1_2.inDevModeForApplication(tmp);
       }
       tmp2 = result;
     }

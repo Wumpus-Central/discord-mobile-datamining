@@ -1,20 +1,14 @@
 // discord_app/modules/auth/native/components/RegisterPhoneOrEmailInput.tsx
-import noop from "noop";
-import handleSetLocationMetadata from "handleSetLocationMetadata";
-import useRegistrationUIStore from "useRegistrationUIStore";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleSetLocationMetadata" /* 8581 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ setRegistrationErrors: c5, useRegistrationUIStore: closure_6 } = useRegistrationUIStore);
-const result = require("useRegistrationUIStore").fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterPhoneOrEmailInput.tsx");
 
 export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(loginPhone) {
-  let autoFocus;
-  let inputError;
-  let onSubmit;
-  let submitBehavior;
   loginPhone = loginPhone.loginPhone;
   const loginEmail = loginPhone.loginEmail;
   const setLoginPhone = loginPhone.setLoginPhone;
@@ -23,9 +17,9 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   ({ inputError, autoFocus } = loginPhone);
   let navigation;
   let ref;
-  let c7;
+  closure_7 = undefined;
   let callback;
-  let closure_9;
+  closure_9 = undefined;
   ({ onSubmit, submitBehavior } = loginPhone);
   let obj = loginPhone(setLoginPhone[4]);
   navigation = obj.useNavigation();
@@ -41,10 +35,10 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
   const items = [inputMode];
   const stateFromStores = loginPhone(setLoginPhone[6]).useStateFromStores(items, () => inputMode.getCountryCode());
   const tmp9 = ref((errors) => errors.errors);
-  c7 = tmp9;
+  closure_7 = tmp9;
   const items1 = [tmp9];
   callback = obj2.useCallback((arg0) => {
-    if (null != _undefined[arg0]) {
+    if (null != table[arg0]) {
       const obj = {};
       const merged = Object.assign(tmp3);
       delete tmp2[tmp];
@@ -98,7 +92,7 @@ export const RegisterPhoneOrEmailInput = function RegisterPhoneOrEmailInput(logi
     stringResult1 = intl3.string(tmp(tmp2[9]).t.a17rBk);
   }
   obj = { ref, alpha2: stateFromStores.alpha2, countryCode: stateFromStores.code, onChange: callback1, onSubmitEditing: onSubmit, placeholder: stringResult, returnKeyType: "next", autoCapitalize: "none", accessibilityHint: stringResult1, label: stringResult, errorMessage: inputError, onPressCountrySelector: callback2, forceMode: inputMode, submitBehavior, autoComplete: null, keyboardType: null, isClearable: true, status: null };
-  const tmp16 = c7;
+  const tmp16 = closure_7;
   const tmpResult = loginPhone(setLoginPhone[6]);
   let str = "email";
   if (inputMode === loginPhone(setLoginPhone[7]).PhoneOrEmailSelectorForceMode.PHONE) {

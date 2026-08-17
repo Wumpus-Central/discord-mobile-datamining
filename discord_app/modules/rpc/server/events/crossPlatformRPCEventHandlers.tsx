@@ -1,30 +1,25 @@
 // discord_app/modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx
-import addApplication from "addApplication";
-import initialize from "initialize";
-import { getGuildIconURL } from "GuildNSFWContentLevel";
-import reset from "reset";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateVoiceState from "updateVoiceState";
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
+import fromStringAll from "fromString" /* 506 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "initialize" /* 4504 */;
+import { getGuildIconURL } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_7 from "reset" /* 4652 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_12 from "createRTCConnection" /* 4539 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "updateVoiceState" /* 4542 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
 
-let RPCEvents;
-let RPC_AUTHENTICATED_SCOPE;
-let RPC_LOCAL_SCOPE;
-let RPC_SCOPE_CONFIG;
-let closure_15;
-let closure_16;
-const require = arg1;
+require = arg1;
 function messageEventsValidation(string) {
-  let obj = createRpcJoiSchemaObject(string);
+  let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -40,7 +35,7 @@ function messageEvents(args) {
         let obj = { errorCode: null };
         obj[0] = constants2.INVALID_CHANNEL;
         const _HermesInternal = HermesInternal;
-        let tmp3 = prototype;
+        let tmp3 = prototypeDefault;
         tmp3 = new tmp3(obj, "Invalid nsfw channel id: " + channel.id);
         throw tmp3;
       }
@@ -50,14 +45,13 @@ function messageEvents(args) {
     tmp13 = require;
   }
   obj = { errorCode: constants2.INVALID_CHANNEL };
-  let tmp11 = prototype;
+  let tmp11 = prototypeDefault;
   tmp11 = new tmp11(obj, "Invalid channel id: " + channel_id);
   throw tmp11;
 }
 function speakingEventsValidation(string) {
-  let obj = createRpcJoiSchemaObject(string);
-  obj = { channel_id: null };
-  obj[0] = string.string().allow(null);
+  let obj = createRpcJoiSchemaObjectDefault(string);
+  obj = { channel_id: string.string().allow(null) };
   return obj.keys(obj);
 }
 function speakingEvents(args) {
@@ -67,7 +61,7 @@ function speakingEvents(args) {
       const obj = { errorCode: null };
       obj[0] = constants2.INVALID_CHANNEL;
       const _HermesInternal = HermesInternal;
-      let tmp4 = prototype;
+      let tmp4 = prototypeDefault;
       tmp4 = new tmp4(obj, "Invalid channel id: " + channel_id);
       throw tmp4;
     }
@@ -79,7 +73,7 @@ let obj = {};
 obj = {
   scope: require("set").OAuth2Scopes.RPC,
   validation(string) {
-    let obj = createRpcJoiSchemaObject(string);
+    let obj = createRpcJoiSchemaObjectDefault(string);
     obj = { guild_id: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
@@ -91,19 +85,17 @@ obj = {
       let obj = { errorCode: null };
       obj[0] = constants2.INVALID_GUILD;
       const _HermesInternal = HermesInternal;
-      let tmp3 = prototype;
+      let tmp3 = prototypeDefault;
       tmp3 = new tmp3(obj, "Invalid guild id: " + guild_id);
       throw tmp3;
     } else {
       return (arg0) => {
-        let dispatch;
-        let prevState;
         ({ prevState, dispatch } = arg0);
-        const guild = outer1_10.getGuild(guild_id);
+        const guild = closure_1_10.getGuild(guild_id);
         if (null != guild) {
           let obj = { id: null, name: null, icon_url: null };
           ({ id: obj[0], name: obj[1] } = guild);
-          let tmp3 = outer1_6(guild, 128);
+          let tmp3 = closure_1_6(guild, 128);
           if (tmp3 == null) {
             tmp3 = null;
           }
@@ -126,7 +118,7 @@ const items = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC_
 obj1[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj1;
 obj[1] = function validation(string) {
-  let obj = createRpcJoiSchemaObject(string);
+  let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -138,25 +130,23 @@ obj[2] = function handler(args) {
     const obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp3 = prototype;
+    let tmp3 = prototypeDefault;
     tmp3 = new tmp3(obj, "Invalid channel id: " + channel_id);
     throw tmp3;
   } else {
     return (arg0) => {
-      let channel_id;
-      let prevState;
       ({ prevState, dispatch: channel_id } = arg0);
       let channel;
       let guildId;
-      channel = outer1_8.getChannel(channel_id);
+      channel = closure_1_8.getChannel(channel_id);
       if (null != channel) {
         guildId = channel.getGuildId();
         const _Object = Object;
-        const values = Object.values(outer1_14.getVoiceStatesForChannel(channel.id));
+        const values = Object.values(closure_1_14.getVoiceStatesForChannel(channel.id));
         if (prevState) {
-          const obj2 = outer1_1(outer1_3[18]);
-          const item = outer1_1(outer1_3[18]).differenceBy(values, prevState, (userId) => userId.userId).forEach((userId) => callback(outer1_0(outer1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
-          const differenceByResult = outer1_1(outer1_3[18]).differenceBy(values, prevState, (userId) => userId.userId);
+          const obj2 = closure_1_1(closure_1_3[18]);
+          const item = closure_1_1(closure_1_3[18]).differenceBy(values, prevState, (userId) => userId.userId).forEach((userId) => callback(closure_1_0(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
+          const differenceByResult = closure_1_1(closure_1_3[18]).differenceBy(values, prevState, (userId) => userId.userId);
         }
         return values;
       }
@@ -170,7 +160,7 @@ const items1 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC
 obj3[RPC_SCOPE_CONFIG.ANY] = items1;
 obj2[0] = obj3;
 obj2[1] = function validation(string) {
-  let obj = createRpcJoiSchemaObject(string);
+  let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -182,7 +172,7 @@ obj2[2] = function handler(args) {
     const obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp3 = prototype;
+    let tmp3 = prototypeDefault;
     tmp3 = new tmp3(obj, "Invalid channel id: " + channel_id);
     throw tmp3;
   } else {
@@ -190,13 +180,13 @@ obj2[2] = function handler(args) {
       dispatch = dispatch.dispatch;
       let channel;
       let guildId;
-      channel = outer1_8.getChannel(dispatch);
+      channel = closure_1_8.getChannel(dispatch);
       if (null != channel) {
         guildId = channel.getGuildId();
         const _Object = Object;
-        const values = Object.values(outer1_14.getVoiceStatesForChannel(channel.id));
-        const obj2 = outer1_1(outer1_3[18]);
-        const item = outer1_1(outer1_3[18]).differenceBy(dispatch.prevState, values, (userId) => userId.userId).forEach((userId) => dispatch(dispatch(outer1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
+        const values = Object.values(closure_1_14.getVoiceStatesForChannel(channel.id));
+        const obj2 = closure_1_1(closure_1_3[18]);
+        const item = closure_1_1(closure_1_3[18]).differenceBy(dispatch.prevState, values, (userId) => userId.userId).forEach((userId) => dispatch(dispatch(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId)));
         return values;
       }
     };
@@ -209,7 +199,7 @@ const items2 = [require("set").OAuth2Scopes.RPC, require("set").OAuth2Scopes.RPC
 obj5[RPC_SCOPE_CONFIG.ANY] = items2;
 obj4[0] = obj5;
 obj4[1] = function validation(string) {
-  let obj = createRpcJoiSchemaObject(string);
+  let obj = createRpcJoiSchemaObjectDefault(string);
   obj = { channel_id: null };
   const requiredResult = obj.required();
   obj[0] = string.string().required();
@@ -221,7 +211,7 @@ obj4[2] = function handler(args) {
     const obj = { errorCode: null };
     obj[0] = constants2.INVALID_CHANNEL;
     const _HermesInternal = HermesInternal;
-    let tmp3 = prototype;
+    let tmp3 = prototypeDefault;
     tmp3 = new tmp3(obj, "Invalid channel id: " + channel_id);
     throw tmp3;
   } else {
@@ -229,14 +219,14 @@ obj4[2] = function handler(args) {
       dispatch = dispatch.dispatch;
       let channel;
       let guildId;
-      channel = outer1_8.getChannel(dispatch);
+      channel = closure_1_8.getChannel(dispatch);
       if (null != channel) {
         guildId = channel.getGuildId();
         const _Object = Object;
-        const values = Object.values(outer1_14.getVoiceStatesForChannel(channel.id));
-        const mapped = values.map((userId) => dispatch(outer1_3[14]).transformVoiceState(closure_2, channel.id, userId));
-        const obj2 = outer1_1(outer1_3[18]);
-        const item = outer1_1(outer1_3[18]).differenceWith(mapped, dispatch.prevState, outer1_1(outer1_3[18]).isEqual).forEach((arg0) => dispatch(arg0));
+        const values = Object.values(closure_1_14.getVoiceStatesForChannel(channel.id));
+        const mapped = values.map((userId) => dispatch(closure_1_3[14]).transformVoiceState(closure_2, channel.id, userId));
+        const obj2 = closure_1_1(closure_1_3[18]);
+        const item = closure_1_1(closure_1_3[18]).differenceWith(mapped, dispatch.prevState, closure_1_1(closure_1_3[18]).isEqual).forEach((arg0) => dispatch(arg0));
         return mapped;
       }
     };
@@ -250,15 +240,8 @@ obj7[RPC_SCOPE_CONFIG.ANY] = items3;
 obj6[0] = obj7;
 obj6[1] = function handler() {
   return (arg0) => {
-    let dispatch;
-    let prevState;
-    const obj = { state: null, hostname: null, pings: null, average_ping: null, last_ping: null };
+    const obj = { state: callback(8757).getVoiceConnectionState(store.getState()), hostname: store.getHostname(), pings: store.getPings(), average_ping: store.getAveragePing(), last_ping: store.getLastPing() };
     ({ prevState, dispatch } = arg0);
-    obj[0] = callback(8757).getVoiceConnectionState(store.getState());
-    obj[1] = store.getHostname();
-    obj[2] = store.getPings();
-    obj[3] = store.getAveragePing();
-    obj[4] = store.getLastPing();
     const obj2 = callback(8757);
     if (!obj3.isEqual(obj, prevState)) {
       dispatch(obj);
@@ -433,21 +416,21 @@ const obj34 = {
 obj[RPCEvents.RELATIONSHIP_UPDATE] = {
   scope: require("set").OAuth2Scopes.RELATIONSHIPS_READ,
   handler(socket) {
-    let obj = importAll(506);
+    let obj = fromStringAll;
     let num = socket.socket.application.flags;
     if (num == null) {
       num = 0;
     }
-    const obj2 = importAll(506);
+    const obj2 = fromStringAll;
     const tmp = importAll;
-    const deserializeResult = importAll(506).deserialize(num);
+    const deserializeResult = fromStringAll.deserialize(num);
     if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
       obj = { errorCode: null };
       obj[0] = constants2.INVALID_PERMISSIONS;
-      const tmp9 = new prototype(obj, "Missing Permissions");
+      const tmp9 = new prototypeDefault(obj, "Missing Permissions");
       throw tmp9;
     }
-    tmpResult = tmp(506);
+    tmpResult = fromStringAll;
   }
 };
 const obj38 = { scope: null, handler: null };
@@ -483,17 +466,17 @@ obj40[1] = function handler(args) {
   const guild_id = args.args.guild_id;
   return (prevState) => {
     prevState = prevState.prevState;
-    const obj = { currentGuildMember: outer1_9.getSelfMember(guild_id) };
+    const obj = { currentGuildMember: closure_1_9.getSelfMember(guild_id) };
     let tmp = null == obj.currentGuildMember;
     if (!tmp) {
       let tmp2 = null != prevState;
       if (tmp2) {
-        tmp2 = outer1_1(outer1_3[21])(obj, prevState);
+        tmp2 = closure_1_1(closure_1_3[21])(obj, prevState);
       }
       tmp = tmp2;
     }
     if (!tmp) {
-      prevState.dispatch(outer1_1(outer1_3[23])(obj.currentGuildMember));
+      prevState.dispatch(closure_1_1(closure_1_3[23])(obj.currentGuildMember));
     }
     return obj;
   };
@@ -520,8 +503,6 @@ obj45[RPC_SCOPE_CONFIG.ALL] = items19;
 obj44[0] = obj45;
 obj44[1] = function handler() {
   return (arg0) => {
-    let dispatch;
-    let prevState;
     ({ prevState, dispatch } = arg0);
     streamerActiveStreamMetadata = streamerActiveStreamMetadata.getStreamerActiveStreamMetadata();
     let pid;
@@ -577,8 +558,6 @@ obj47[RPC_SCOPE_CONFIG.ALL] = items20;
 obj46[0] = obj47;
 obj46[1] = function handler() {
   return (arg0) => {
-    let dispatch;
-    let prevState;
     const obj = { active: videoEnabled.isVideoEnabled() };
     ({ prevState, dispatch } = arg0);
     if (!obj2.isEqual(obj, prevState)) {
@@ -596,21 +575,21 @@ obj[RPCEvents.AUTHORIZE_REQUEST] = obj48;
 const obj37 = {
   scope: require("set").OAuth2Scopes.RELATIONSHIPS_READ,
   handler(socket) {
-    let obj = importAll(506);
+    let obj = fromStringAll;
     let num = socket.socket.application.flags;
     if (num == null) {
       num = 0;
     }
-    const obj2 = importAll(506);
+    const obj2 = fromStringAll;
     const tmp = importAll;
-    const deserializeResult = importAll(506).deserialize(num);
+    const deserializeResult = fromStringAll.deserialize(num);
     if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
       obj = { errorCode: null };
       obj[0] = constants2.INVALID_PERMISSIONS;
-      const tmp9 = new prototype(obj, "Missing Permissions");
+      const tmp9 = new prototypeDefault(obj, "Missing Permissions");
       throw tmp9;
     }
-    tmpResult = tmp(506);
+    tmpResult = fromStringAll;
   }
 };
 const obj42 = {
@@ -625,6 +604,6 @@ const obj43 = {
 
   }
 };
-const result = require("GuildNSFWContentLevel").fileFinishedImporting("modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx");
+const result = require("set").fileFinishedImporting("modules/rpc/server/events/crossPlatformRPCEventHandlers.tsx");
 
 export default obj;

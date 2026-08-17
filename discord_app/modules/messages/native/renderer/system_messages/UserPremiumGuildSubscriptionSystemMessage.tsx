@@ -1,16 +1,18 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx
-import { getNumSubscriptionsPurchasedFromSystemMessage } from "../../../../premium/getNumSubscriptionsPurchasedFromSystemMessage.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-const result = require("formatUsernameOnClick").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
+import set from "set" /* 2 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import getNumSubscriptionsPurchasedFromSystemMessageDefault from "getNumSubscriptionsPurchasedFromSystemMessage" /* 8223 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/UserPremiumGuildSubscriptionSystemMessage.tsx");
 
 export const createUserPremiumGuildSubscriptionSystemMessage = function createUserPremiumGuildSubscriptionSystemMessage(roleStyle) {
   const message = roleStyle.message;
-  const tmp3 = getNumSubscriptionsPurchasedFromSystemMessage(message);
+  const tmp3 = getNumSubscriptionsPurchasedFromSystemMessageDefault(message);
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
   if (tmp3 > 1) {
     const intl2 = tmp4(1236).intl;
     obj = { username: null, usernameOnClick: null, numSubscriptions: null };
@@ -25,6 +27,6 @@ export const createUserPremiumGuildSubscriptionSystemMessage = function createUs
     obj[1] = tmp6;
     formatToPartsResult = intl.formatToParts(tmp4(1236).t.ihxM9x, obj);
   }
-  const merged = Object.assign(createCommonMessage(roleStyle));
+  const merged = Object.assign(createCommonMessageDefault(roleStyle));
   return { content: formatToPartsResult };
 };

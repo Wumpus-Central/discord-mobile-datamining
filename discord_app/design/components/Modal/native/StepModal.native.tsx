@@ -1,26 +1,24 @@
 // discord_app/design/components/Modal/native/StepModal.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { height: "100%" }, stepContainer: null };
 createCacheKey = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/components/Modal/native/StepModal.native.tsx");
 
 export const StepModal = function StepModal(steps) {
   steps = steps.steps;
   const onWillFocus = steps.onWillFocus;
   const merged = Object.assign(steps, Object.create(null));
-  let dependencyMap;
-  const tmp2 = createCacheKey();
+  dependencyMap = undefined;
+  const tmp2 = callback3();
   const tmp3 = onWillFocus(1629)();
   const tmp4 = callback(React.useState(0), 2);
   dependencyMap = tmp4[1];
@@ -46,7 +44,7 @@ export const StepModal = function StepModal(steps) {
   obj.headerStyle = obj;
   obj.hideTitle = true;
   const items1 = [callback2(steps(11115).Modal, obj), ];
-  const obj1 = { style: items2, pointerEvents: "box-none", children: null };
+  obj1 = { style: items2, pointerEvents: "box-none", children: null };
   items2 = [tmp2.stepContainer, { marginTop: tmp3.top }];
   const obj2 = { currentStep: tmp4[0], totalSteps: null };
   let num;

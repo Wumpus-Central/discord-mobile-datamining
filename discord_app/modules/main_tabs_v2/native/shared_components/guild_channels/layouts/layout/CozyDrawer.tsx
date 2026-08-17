@@ -1,13 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx
-import importDefaultResult from "merge";
-import importDefaultResult1 from "merge";
+import ThemesDefault from "Themes" /* 712 */;
+import importDefaultResult from "merge" /* 10058 */;
 
 let obj = { container: null, channelName: null, messagePreview: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, typing: null, separator: null };
-obj = { borderRadius: null, padding: null, paddingPanels: null, paddingThread: null };
-obj[0] = require("Themes").radii.md;
-obj[1] = { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 };
-obj[2] = { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 };
-obj[3] = { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 };
+obj = { borderRadius: ThemesDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 20, paddingRight: 12 }, paddingPanels: { paddingVertical: 6, paddingLeft: 8, paddingRight: 8 }, paddingThread: { paddingVertical: 4, paddingLeft: 8, paddingRight: 12 } };
 obj[0] = obj;
 obj[1] = { height: 20, text: { variant: "text-md/semibold" } };
 obj = { text: { variant: "text-xs/medium" }, messageTypeIconSize: require("Button").IconSizes.EXTRA_SMALL, messageTypeIconSizeNew: "xs", height: 18, margin: { marginTop: 0 } };
@@ -28,11 +24,11 @@ obj[11] = { margin: { marginVertical: 20 } };
 const obj3 = { size: require("Button").IconSizes.REFRESH_SMALL_16, gameSize: require("GameIcon").GameIconSizes.SMALL };
 const importDefaultResultResult = importDefaultResult(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj);
 const obj4 = { container: { paddingPanels: { paddingVertical: 8 } }, icon: null };
-const obj5 = { avatarSize: null };
-obj5[0] = require("Button").AvatarSizes.REFRESH_MEDIUM_32;
-obj4[1] = obj5;
-const importDefaultResult1Result = require("merge")(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj4);
-const result = require("Themes").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx");
+const importDefaultResult1 = importDefaultResult;
+obj4[1] = { avatarSize: require("Button").AvatarSizes.REFRESH_MEDIUM_32 };
+const obj5 = { avatarSize: require("Button").AvatarSizes.REFRESH_MEDIUM_32 };
+const importDefaultResult1Result = importDefaultResult1(require("CHANNEL_LIST_STYLES_COMPACT").CHANNEL_LIST_STYLES_COMPACT, obj4);
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/layouts/layout/CozyDrawer.tsx");
 
 export const CHANNEL_LIST_STYLES_COZY_DRAWER = importDefaultResultResult;
 export const CHANNEL_LIST_STYLES_COZY_DRAWER_SMOL = importDefaultResult1Result;

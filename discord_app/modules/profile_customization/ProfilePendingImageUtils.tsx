@@ -1,13 +1,10 @@
 // discord_app/modules/profile_customization/ProfilePendingImageUtils.tsx
-import { AssetOriginTypes } from "ProfilePendingImageTypes.tsx";
-const result = require("set").fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
+import set from "set" /* 2 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
+
+const result = set.fileFinishedImporting("modules/profile_customization/ProfilePendingImageUtils.tsx");
 
 export const createPendingImage = function createPendingImage(assetOrigin) {
-  let description;
-  let imageUri;
-  let originalAsset;
-  let originalMd5;
-  let staticImageUri;
   let NEW_ASSET = assetOrigin.assetOrigin;
   if (NEW_ASSET === undefined) {
     NEW_ASSET = AssetOriginTypes.AssetOriginTypes.NEW_ASSET;
@@ -31,7 +28,7 @@ export const createPendingImage = function createPendingImage(assetOrigin) {
     obj[5] = originalMd5;
     return obj;
   } else if (tmp3(8385).AssetOriginTypes.ARCHIVED_ASSET === NEW_ASSET) {
-    const obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
+    obj1 = { assetOrigin: null, imageUri: null, description: "Array", originalAsset: true };
     obj1[0] = NEW_ASSET;
     obj1[1] = imageUri;
     obj1[3] = originalAsset;

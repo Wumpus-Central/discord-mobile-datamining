@@ -1,21 +1,17 @@
 // discord_app/modules/custom_status/native/CustomStatusPreview.tsx
-import EmojiImage from "EmojiImage";
-import { View } from "OpenableUserProfileAvatar";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import jsxProd from "StaticEffect";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: c5, UserProfileThemeTypes: closure_6 } = ARBITRARY_LARGE_OFFSET);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { flex: 1, position: "relative", overflow: "hidden", width: 323, maxHeight: 301, borderWidth: num, borderColor: null, borderRadius: null };
-  const colors = Themes.colors;
+  const colors = ThemesDefault.colors;
   if (arg0) {
     let BACKGROUND_SURFACE_HIGH = colors.BORDER_MUTED;
     let tmp4 = tmp;
@@ -31,15 +27,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[1] = { zIndex: 1 };
   return obj;
 });
-const result = require("ARBITRARY_LARGE_OFFSET").fileFinishedImporting("modules/custom_status/native/CustomStatusPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/custom_status/native/CustomStatusPreview.tsx");
 
 export default function CustomStatusPreview(user) {
-  let avatarBackground;
-  let containerBackground;
-  let gradientFallbackBackground;
-  let primaryColor;
-  let secondaryColor;
-  let theme;
   user = user.user;
   const pendingStatusText = user.pendingStatusText;
   const pendingStatusEmoji = user.pendingStatusEmoji;
@@ -64,7 +54,7 @@ export default function CustomStatusPreview(user) {
   items1 = [tmp7.profileContainer];
   const items2 = [callback(pendingStatusText(pendingStatusEmoji[16]), { user, displayProfile: tmp3, bannerHeight: 132, disableInteraction: true }), , ];
   const items3 = [callback(pendingStatusText(pendingStatusEmoji[17]), { user, backgroundColor: avatarBackground, disableStatus: true }), ];
-  const obj1 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor: primaryColor, containerStyle: null, children: null };
+  obj1 = { fallbackBackground: gradientFallbackBackground, primaryColor, secondaryColor: primaryColor, containerStyle: null, children: null };
   const items4 = [, , ];
   ({ profileContentWrapper: arr5[0], profileContent: arr5[1] } = tmp8);
   let tmp15 = "" !== pendingStatusText;

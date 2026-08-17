@@ -1,7 +1,7 @@
 // discord_app/modules/media_viewer/native/components/MediaModalTiktok.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -17,19 +17,19 @@ const memoResult = importAllResult.memo((style) => {
   const controls = style.controls;
   let merged = Object.assign(style, Object.create(null));
   let first;
-  let importAllResult;
-  let jsx;
-  let c6;
+  importAllResult = undefined;
+  jsx = undefined;
+  closure_6 = undefined;
   let ref;
   let mediaPlayerMutedStore;
-  let obj = importAllResult;
+  obj = importAllResult;
   const tmp4 = first(importAllResult.useState(visible(controls[3]).PlayerState.UNREADY), 2);
   first = tmp4[0];
   importAllResult = tmp4[1];
   const tmp7 = source(controls[4])(first);
   jsx = tmp7;
   let tmp8 = source(controls[4])(visible);
-  c6 = tmp8;
+  closure_6 = tmp8;
   ref = undefined;
   if (controls != null) {
     let props = controls.props;
@@ -73,7 +73,7 @@ const memoResult = importAllResult.memo((style) => {
           str5 = "UNKNOWN";
         }
       }
-      const obj = { platform: "tiktok", action: "errored", error: null };
+      obj = { platform: "tiktok", action: "errored", error: null };
       obj[2] = str5;
       const result = MediaViewerAnalytics.trackMessageEmbedsActionCompleted(obj);
     } else if ("onCurrentTime" === type) {
@@ -114,14 +114,14 @@ const memoResult = importAllResult.memo((style) => {
     if (tmp3) {
       let tmp8 = visible;
       if (visible) {
-        tmp8 = c5 === visible(controls[3]).PlayerState.UNREADY;
+        tmp8 = closure_5 === visible(controls[3]).PlayerState.UNREADY;
       }
       if (tmp8) {
         tmp8 = first === visible(controls[3]).PlayerState.READY;
       }
       if (tmp8) {
         const _JSON = JSON;
-        let obj = { "x-tiktok-player": true };
+        obj = { "x-tiktok-player": true };
         const merged = Object.assign({ type: "play" });
         current = tmp.current;
         if (current != null) {
@@ -131,7 +131,7 @@ const memoResult = importAllResult.memo((style) => {
       }
       let tmp20 = tmp7;
       if (visible) {
-        tmp20 = !c6;
+        tmp20 = !closure_6;
       }
       if (tmp20) {
         const _JSON2 = JSON;
@@ -145,7 +145,7 @@ const memoResult = importAllResult.memo((style) => {
       }
       let tmp27 = !tmp7;
       if (!visible) {
-        tmp27 = c6;
+        tmp27 = closure_6;
       }
       if (tmp27) {
         const _JSON3 = JSON;
@@ -172,7 +172,7 @@ const memoResult = importAllResult.memo((style) => {
           const _HermesInternal5 = HermesInternal;
           current4.injectJavaScript("\n    window.postMessage(" + tmp39 + ", '*')\n  ");
         }
-        const obj1 = { "x-tiktok-player": true };
+        obj1 = { "x-tiktok-player": true };
         const obj2 = { "x-tiktok-player": true };
       }
       let str11 = "unMute";
@@ -198,10 +198,8 @@ const memoResult = importAllResult.memo((style) => {
   const items2 = [source.uri];
   const memo = obj.useMemo(() => {
     const str = new URL(source.uri);
-    const entries = Object.entries(c6);
+    const entries = Object.entries(closure_6);
     const item = entries.forEach((arg0) => {
-      let str;
-      let tmp;
       [tmp, str] = arg0;
       const searchParams = str.searchParams;
       searchParams.append(tmp, str.toString());
@@ -221,16 +219,16 @@ const memoResult = importAllResult.memo((style) => {
   let merged2 = Object.assign(merged);
   return jsx(source(controls[3]), {});
 });
-let result = require("jsxProd").fileFinishedImporting("modules/media_viewer/native/components/MediaModalTiktok.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalTiktok.tsx");
 
 export default memoResult;
 export const createTiktokVideoControls = function createTiktokVideoControls() {
   const ref = importAllResult.createRef();
-  let c3 = 0;
-  let c5 = false;
+  c3 = 0;
+  c5 = false;
   obj = {
     seek(value) {
-      let obj = { type: "seekTo", value };
+      obj = { type: "seekTo", value };
       obj = { "x-tiktok-player": true };
       const merged = Object.assign(obj);
       const current = ref.current;
@@ -246,7 +244,7 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
         if (arg0) {
           str = "pause";
         }
-        let obj = { type: null };
+        obj = { type: null };
         obj[0] = str;
         const _JSON = JSON;
         obj = { "x-tiktok-player": true };
@@ -260,11 +258,11 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
       }
     },
     useSubscribe(arg0, arg1, arg2) {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       const layoutEffect = React.useLayoutEffect(() => {
         if (closure_0 != null) {
-          tmp(_slicedToArray, closure_4);
+          tmp(closure_3, closure_4);
         }
         if (closure_1 != null) {
           tmp5(closure_5);
@@ -277,20 +275,20 @@ export const createTiktokVideoControls = function createTiktokVideoControls() {
     ref,
     onPlayerStateChange(arg0) {
       if (closure_1 != null) {
-        tmp(arg0 === outer1_0(ref[3]).PlayerState.PAUSED || arg0 === outer1_0(ref[3]).PlayerState.ENDED);
-        const tmp3 = outer1_0;
+        tmp(arg0 === closure_1_0(ref[3]).PlayerState.PAUSED || arg0 === closure_1_0(ref[3]).PlayerState.ENDED);
+        const tmp3 = closure_1_0;
         const tmp4 = ref;
-        const tmp5 = arg0 === outer1_0(ref[3]).PlayerState.PAUSED || arg0 === outer1_0(ref[3]).PlayerState.ENDED;
+        const tmp5 = arg0 === closure_1_0(ref[3]).PlayerState.PAUSED || arg0 === closure_1_0(ref[3]).PlayerState.ENDED;
       }
     },
     onCurrentSecond(arg0) {
-      let _slicedToArray = arg0;
+      closure_3 = arg0;
       if (closure_0 != null) {
-        tmp(_slicedToArray, c4);
+        tmp(closure_3, c4);
       }
     },
     onDuration(arg0) {
-      let closure_4 = arg0;
+      closure_4 = arg0;
       if (closure_0 != null) {
         tmp(c3, closure_4);
       }

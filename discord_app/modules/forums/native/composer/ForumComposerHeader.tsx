@@ -1,45 +1,37 @@
 // discord_app/modules/forums/native/composer/ForumComposerHeader.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ForumIcon } from "../../../../design/components/Icon/native/redesign/generated/ForumIcon.tsx";
-import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import XSmallIcon from "XSmallIcon" /* 6368 */;
+import ForumIcon from "ForumIcon" /* 6883 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((height) => {
   obj = { headerBar: obj, headerBarContent: { flexDirection: "row", alignItems: "center", flex: 1 }, headerBarText: null, headerBarSeparator: null, button: null };
   obj = { height, flexDirection: "row", alignItems: "center" };
-  obj = { marginHorizontal: Themes.space.PX_16 };
+  obj = { marginHorizontal: ThemesDefault.space.PX_16 };
   obj[2] = obj;
-  const obj1 = {};
+  obj1 = {};
   const merged = Object.assign(closure_3.absoluteFillObject);
   obj1.height = closure_3.hairlineWidth;
-  obj1.backgroundColor = Themes.colors.BORDER_SUBTLE;
+  obj1.backgroundColor = ThemesDefault.colors.BORDER_SUBTLE;
   obj1.top = undefined;
   obj[3] = obj1;
-  obj[4] = { paddingHorizontal: Themes.space.PX_16 };
+  obj[4] = { paddingHorizontal: ThemesDefault.space.PX_16 };
   return obj;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/forums/native/composer/ForumComposerHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/composer/ForumComposerHeader.tsx");
 
 export default function ForumComposerHeader(height) {
-  let channel;
-  let onGuidelinesPress;
-  let require;
-  let submitting;
-  let title;
   ({ title, channel, onClose: require } = height);
   ({ submitting, onGuidelinesPress } = height);
   const tmp = callback2(height.height);
@@ -55,12 +47,12 @@ export default function ForumComposerHeader(height) {
   const items = [callback(PressableBase.PressableOpacity, obj), , , ];
   obj = { style: tmp.headerBarContent, children: null };
   const items1 = [callback(ForumIcon.ForumIcon, { size: "sm" }), ];
-  const obj1 = { style: tmp.headerBarText, children: null };
+  obj1 = { style: tmp.headerBarText, children: null };
   if ("" === title) {
     const intl2 = tmp7(1236).intl;
     title = intl2.string(tmp7(1236).t["7EjFCk"]);
   }
-  const items2 = [callback(Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelName(channel) })];
+  const items2 = [callback(Text.Text, { lineClamp: 1, ellipsizeMode: "tail", variant: "text-md/semibold", color: "mobile-text-heading-primary", children: title }), callback(Text.Text, { variant: "text-xs/medium", color: "text-default", children: computeChannelNameDefault(channel) })];
   obj1[1] = items2;
   items1[1] = closure_6(closure_4, obj1);
   obj[1] = items1;

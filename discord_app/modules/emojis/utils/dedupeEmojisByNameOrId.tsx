@@ -1,6 +1,8 @@
 // discord_app/modules/emojis/utils/dedupeEmojisByNameOrId.tsx
-import { parseRawEmojiObject } from "../UnicodeEmojis.tsx";
-let result = require("set").fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
+import set from "set" /* 2 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+
+let result = set.fileFinishedImporting("modules/emojis/utils/dedupeEmojisByNameOrId.tsx");
 
 export default function dedupeEmojisByNameOrId(arg0) {
   const map = new Map();
@@ -11,7 +13,7 @@ export default function dedupeEmojisByNameOrId(arg0) {
     if (null == nextResult.id) {
       let tmp5 = importDefault;
       let tmp6 = dependencyMap;
-      let obj2 = parseRawEmojiObject;
+      let obj2 = parseRawEmojiObjectDefault;
       let tmp7 = nextResult;
       let result = obj2.convertSurrogateToBase(tmp2.surrogates);
       if (result == null) {

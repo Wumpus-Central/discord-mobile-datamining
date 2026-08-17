@@ -1,10 +1,12 @@
 // discord_app/modules/client_themes/native/chat/formatSharedClientThemeData.tsx
-import { Image } from "get ActivityIndicator";
-import { registerAsset } from "../../../../../_runtime/07989_registerAsset.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../intl/ClientThemes.messages.js";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2533 */;
+import registerAssetDefault from "registerAsset" /* 7989 */;
 
-const result = require("getSystemLocale").fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
+const Image = get_ActivityIndicator.Image;
+const result = set.fileFinishedImporting("modules/client_themes/native/chat/formatSharedClientThemeData.tsx");
 
 export const formatSharedClientThemeData = function formatSharedClientThemeData(message, ensureAvatarSourceResult, nick) {
   const sharedClientTheme = message.sharedClientTheme;
@@ -17,14 +19,14 @@ export const formatSharedClientThemeData = function formatSharedClientThemeData(
       str2 = ensureAvatarSourceResult.uri;
     }
     obj[3] = str2;
-    obj[4] = Image.resolveAssetSource(registerAsset).uri;
+    obj[4] = Image.resolveAssetSource(registerAssetDefault).uri;
     const intl = getSystemLocale.intl;
     obj[5] = intl.string(getSystemLocale.t.SKNnqq);
     const intl2 = getSystemLocale.intl;
-    obj[6] = intl2.string(messagesProxy.yl1iMm);
+    obj[6] = intl2.string(messagesProxyDefault.yl1iMm);
     const intl3 = getSystemLocale.intl;
     const _HermesInternal = HermesInternal;
-    obj[7] = "" + intl3.format(messagesProxy.fQPSEf, { username: "__USERNAME__" });
+    obj[7] = "" + intl3.format(messagesProxyDefault.fQPSEf, { username: "__USERNAME__" });
     return obj;
   }
 };

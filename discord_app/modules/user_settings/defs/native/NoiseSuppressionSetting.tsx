@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionSetting.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { handleAutomaticGainControlChange } from "../../voice/native/UserSettingsVoiceUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 12557 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -13,7 +13,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue: function useNoiseSuppressionSettingValue() {
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => noiseSuppression.getNoiseSuppression());
   },
   onValueChange: function onNoiseSuppressionSettingValueChange(arg0) {
@@ -21,11 +21,11 @@ createToggle = {
     const result = handleAutomaticGainControlChange.handleNoiseSuppressionChange(arg0 ? NoiseSuppressionOpt.STANDARD : NoiseSuppressionOpt.NONE);
   },
   usePredicate: function useHasNoiseSuppressionSetting() {
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => !noiseCancellationSupported.isNoiseCancellationSupported());
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionSetting.tsx");
 
 export default createToggle;

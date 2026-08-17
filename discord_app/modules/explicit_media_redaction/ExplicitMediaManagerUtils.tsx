@@ -1,5 +1,7 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx
-const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaManagerUtils.tsx");
 
 export const hasAttachmentsEmbedsComponentsOrSnapshots = function hasAttachmentsEmbedsComponentsOrSnapshots(message) {
   if (null == message) {

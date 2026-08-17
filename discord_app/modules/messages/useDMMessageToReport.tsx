@@ -1,9 +1,9 @@
 // discord_app/modules/messages/useDMMessageToReport.tsx
-const result = require("loadMessageRequestData").fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/messages/useDMMessageToReport.tsx");
 
 export const useDMMessageToReport = function useDMMessageToReport(channel, id, arg2) {
-  let error;
-  let loaded;
   let isReportable = arg2;
   if (!arg2) {
     isReportable = obj.useIsRelationshipTypeSpamReportable(id);

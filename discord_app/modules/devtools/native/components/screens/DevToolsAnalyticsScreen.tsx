@@ -1,47 +1,34 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import Stack from "Stack";
-import { View } from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import { Fonts } from "ME";
-import jsxProd from "TableSwitchRow";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "initialize" /* 13774 */;
+import { Fonts } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function CommonProperty(arg0) {
-  let children;
-  let name;
   ({ name, children } = arg0);
-  const obj = { style: createCacheKey().commonProperty, children: null };
+  const obj = { style: callback4().commonProperty, children: null };
   const items = [callback2(Text.Text, { variant: "text-sm/semibold", color: "text-default", children: name }), children];
   obj[1] = items;
   return callback3(View, obj);
 }
 function LoggedEvent(arg0) {
-  let c2;
-  let end;
-  let event;
-  let fingerprint;
-  let properties;
-  let start;
-  let timestamp;
-  let tmp2;
   ({ properties, fingerprint } = arg0);
   let map;
-  let dependencyMap;
+  dependencyMap = undefined;
   ({ event, timestamp, start, end } = arg0);
-  map = createCacheKey();
+  map = callback4();
   [tmp2, c2] = callback(React.useState(false), 2);
   user = user.getUser(fingerprint);
   let CopyIcon = fingerprint;
   let tmp6Result = dependencyMap;
-  let obj = { arrow: !tmp2, icon: null, label: null, subLabel: null, onPress: null, start: null, end: null };
-  obj[1] = callback2(fingerprint(10214).AnalyticsIcon, {});
-  obj[2] = event;
+  let obj = { arrow: !tmp2, icon: callback2(fingerprint(10214).AnalyticsIcon, {}), label: event, subLabel: null, onPress: null, start: null, end: null };
   if ("name" in properties) {
     let str2 = properties.name;
   } else {
@@ -68,7 +55,7 @@ function LoggedEvent(arg0) {
   } else {
     obj = { style: null, children: null };
     obj[0] = map.detailsContainer;
-    let obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = map.commonPropertiesContainer;
     const obj2 = { name: "Timestamp (local)", children: null };
     const obj3 = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children: null };
@@ -121,26 +108,24 @@ function LoggedEvent(arg0) {
     const entries = Object.entries(properties);
     map = entries.map;
     obj10[1] = map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       let obj = { style: map.customProperty, children: null };
       obj = { variant: "text-sm/semibold", color: "text-brand", style: map.customPropertyName, children: items };
       items = [tmp, ":"];
-      const items1 = [outer1_9(fingerprint(_undefined[9]).Text, obj), ];
+      const items1 = [closure_1_9(fingerprint(_undefined[9]).Text, obj), ];
       if (null != tmp2) {
         obj = { variant: "text-sm/semibold", color: "mobile-text-heading-primary", style: null, children: null };
         obj[2] = tmp5.monospace;
         const _JSON = JSON;
         obj[3] = JSON.stringify(tmp2);
-        let obj1 = obj;
+        obj1 = obj;
       } else {
         obj1 = { variant: "text-sm/semibold", color: "text-muted", style: null, children: "null" };
         obj1[2] = tmp5.monospace;
       }
-      items1[1] = outer1_8(fingerprint(_undefined[9]).Text, obj1);
+      items1[1] = closure_1_8(fingerprint(_undefined[9]).Text, obj1);
       obj[1] = items1;
-      return outer1_9(outer1_5, obj, tmp);
+      return closure_1_9(closure_1_5, obj, tmp);
     });
     items1 = tmp6(tmp5, obj10);
     obj1[1] = items1;
@@ -150,31 +135,29 @@ function LoggedEvent(arg0) {
     const tmp4Result = tmp4(tmp5, obj1);
   }
 }
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { analyticsContainer: null, contentContainer: null, searchFieldContainer: null, detailsContainer: null, commonPropertiesContainer: null, commonProperty: null, customPropertiesContainer: null, customProperty: null, customPropertyName: null, monospace: null, copyContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16 };
-let obj1 = { padding: require("Themes").space.PX_16 };
-createCacheKey[2] = { paddingHorizontal: require("Themes").space.PX_16 };
-let obj2 = { paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 10 };
+createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
+let obj1 = { padding: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj2 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 10 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, height: 20 };
 createCacheKey[6] = { paddingHorizontal: 10, paddingVertical: 4 };
 createCacheKey[7] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "flex-start", marginVertical: 4 };
 createCacheKey[8] = { fontWeight: "600", fontFamily: Fonts.CODE_BOLD, marginRight: 4 };
 createCacheKey[9] = { fontFamily: Fonts.CODE_BOLD };
 createCacheKey[10] = { flexDirection: "row", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 10 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: 10 };
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAnalyticsScreen.tsx");
 
 export default function DevToolsAnalyticsScreen() {
-  let str;
-  let tmp8;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = trimmed(589);
   const items = [loggedEvents];
   loggedEvents = loggedEvents.loggedEvents;
@@ -199,20 +182,15 @@ export default function DevToolsAnalyticsScreen() {
   }
   obj = { style: tmp.analyticsContainer, children: null };
   obj = { title: "Actions", hasIcons: true, children: null };
-  const obj1 = { icon: null, label: "Reverse Events", value: null, onValueChange: null };
-  obj1[0] = callback2(trimmed(11329).ArrowsUpDownIcon, {});
-  obj1[2] = first;
-  obj1[3] = tmp5[1];
-  const items2 = [callback2(trimmed(7178).TableSwitchRow, obj1), ];
-  const obj2 = { arrow: true, variant: "danger", icon: null, label: "Clear Analytics Log", onPress: null };
-  obj2[2] = callback2(trimmed(4333).TrashIcon, { color: "text-feedback-critical" });
-  obj2[4] = trimmed(13951).clearAnalyticsLog;
-  items2[1] = callback2(trimmed(6291).TableRow, obj2);
-  obj[2] = items2;
-  const items3 = [callback3(trimmed(6286).TableRowGroup, obj), , ];
   const str2 = str.toLowerCase();
   const tmp12 = View;
   const tmp13 = callback3;
+  const items2 = [callback2(trimmed(7178).TableSwitchRow, { icon: callback2(trimmed(11329).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] }), ];
+  obj1 = { icon: callback2(trimmed(11329).ArrowsUpDownIcon, {}), label: "Reverse Events", value: first, onValueChange: tmp5[1] };
+  items2[1] = callback2(trimmed(6291).TableRow, { arrow: true, variant: "danger", icon: callback2(trimmed(4333).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(13951).clearAnalyticsLog });
+  obj[2] = items2;
+  const items3 = [callback3(trimmed(6286).TableRowGroup, obj), , ];
+  const obj2 = { arrow: true, variant: "danger", icon: callback2(trimmed(4333).TrashIcon, { color: "text-feedback-critical" }), label: "Clear Analytics Log", onPress: trimmed(13951).clearAnalyticsLog };
   items3[1] = callback2(View, { style: tmp.searchFieldContainer, children: callback2(trimmed(7337).SearchField, { placeholder: "Search by event name", onChange: tmp8 }) });
   if (0 === loggedEvents.length) {
     let tmp11Result = tmp11(tmp2(6291).TableRow, { label: "No events logged." });
@@ -234,10 +212,8 @@ export default function DevToolsAnalyticsScreen() {
   obj5[2] = stateFromStores;
   obj5[3] = reversed;
   obj5[4] = function renderItem(arg0) {
-    let index;
-    let item;
     ({ item, index } = arg0);
-    return outer1_8(outer1_12, { start: 0 === index, end: index === reversed.length - 1, event: item.event, properties: item.properties, timestamp: item.timestamp, fingerprint: item.fingerprint });
+    return closure_1_8(closure_1_12, { start: 0 === index, end: index === reversed.length - 1, event: item.event, properties: item.properties, timestamp: item.timestamp, fingerprint: item.fingerprint });
   };
   obj[1] = callback2(trimmed(8029).FlashList, obj5);
   return callback2(tmp12, obj);

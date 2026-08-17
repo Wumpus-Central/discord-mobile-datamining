@@ -1,13 +1,15 @@
 // discord_app/modules/native_permissions/mobile/openNotificationSettings.native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 4849 */;
 
-let result = require("enforcing").fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+let result = set.fileFinishedImporting("modules/native_permissions/mobile/openNotificationSettings.native.tsx");
 
 export default function openNotificationSettings() {
   if (obj.isAndroid()) {
-    const result = enforcing.openNotificationSettings();
-    const obj2 = enforcing;
+    const result = enforcingDefault.openNotificationSettings();
+    const obj2 = enforcingDefault;
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     const result1 = DeviceSettingsManager.openNotificationSettings();

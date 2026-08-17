@@ -1,18 +1,17 @@
 // discord_app/design/void/Form/native/FormCheckboxRow.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { FormCheckbox } from "FormCheckbox.tsx";
-import { FormRow } from "FormRow.tsx";
+import noopAll from "noop" /* 19 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
+import _modDef6937 from "module_6937" /* 6937 */;
+import FormCheckboxDefault from "FormCheckbox" /* 6946 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ checkboxWrapperStyle: { flexShrink: 0 } });
-const result = require("createCacheKey").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormCheckboxRow.tsx");
 
 export default function FormCheckboxRow(selected) {
-  let accessibilityRole;
-  let accessibilityState;
   selected = selected.selected;
   const merged = Object.assign(selected, Object.create(null));
   let obj = useCheckboxA11yNative;
@@ -23,7 +22,7 @@ export default function FormCheckboxRow(selected) {
   const merged1 = Object.assign(merged);
   obj.accessibilityRole = accessibilityRole;
   obj.accessibilityState = accessibilityState;
-  obj.trailing = jsx(FormCheckbox, { selected });
+  obj.trailing = jsx(FormCheckboxDefault, { selected });
   obj.trailingWrapperStyle = tmp2.checkboxWrapperStyle;
-  return jsx(FormRow, {});
+  return jsx(_modDef6937, {});
 };

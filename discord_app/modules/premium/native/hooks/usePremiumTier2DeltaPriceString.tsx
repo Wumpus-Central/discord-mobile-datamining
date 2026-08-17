@@ -1,11 +1,11 @@
 // discord_app/modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx
-import noop from "noop";
-import { useNativeCheckoutStore } from "context";
-import updateProduct from "updateProduct";
-import { PremiumTypes } from "GuildFeatures";
-import { getPremiumBundledItemsFromProductId } from "../PremiumBundledPlansUtils.tsx";
+import getPremiumBundledItemsFromProductId from "getPremiumBundledItemsFromProductId" /* 7378 */;
+import closure_2 from "noop" /* 19 */;
+import { useNativeCheckoutStore } from "context" /* 7395 */;
+import closure_4 from "updateProduct" /* 5319 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
+require = arg1;
 function getViewerProductId(subscription) {
   if (null == subscription) {
     return null;
@@ -36,7 +36,7 @@ function getViewerProductId(subscription) {
   }
 }
 let closure_6 = { priceString: null, failure: null };
-let result = require("updateProduct").fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/hooks/usePremiumTier2DeltaPriceString.tsx");
 
 export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPriceString(plan, subscription, first, flag3) {
   const tmp = productId((orderRequired) => ({ orderRequired: orderRequired.orderRequired, checkoutContext: orderRequired.getCheckoutContextRecord() }));
@@ -44,15 +44,15 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
   const tmp3 = getViewerProductId(subscription);
   let kind = tmp3;
   let obj = kind(platform[9]);
-  const items = [updateProduct];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let product = null;
     if (null != kind) {
-      product = outer1_4.getProduct(tmp);
+      product = closure_1_4.getProduct(tmp);
     }
     return product;
   });
-  let obj1 = kind(platform[6]);
+  obj1 = kind(platform[6]);
   let flag = false;
   if (flag3) {
     flag = false;
@@ -196,7 +196,7 @@ export const usePremiumTier2DeltaPriceString = function usePremiumTier2DeltaPric
       if (null != kind) {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("delta_price_integrity_" + tmp);
+        error = new Error("delta_price_integrity_" + tmp);
         let obj = { source: "usePremiumTier2DeltaPriceString", delta_failure_kind: null, delta_platform: null, delta_currency_code: null, delta_product_id: null };
         obj[1] = tmp;
         let str = platform;

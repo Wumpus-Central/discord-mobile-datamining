@@ -1,21 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DesignSystemsButtonGroupSetting.tsx
-import createToggle from "createToggle";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UserSettingsDesignSystemButtonGroup } from "../../design_system/native/UserSettingsDesignSystemButtonGroup.tsx";
 
 obj = {
   useTitle() {
     return "Button Group";
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DESIGN_SYSTEMS,
+  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.DESIGN_SYSTEM_BUTTON_GROUP,
+  route: ME.UserSettingsSections.DESIGN_SYSTEM_BUTTON_GROUP,
   getComponent() {
     return UserSettingsDesignSystemButtonGroup.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsButtonGroupSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsButtonGroupSetting.tsx");
 
 export default route;

@@ -1,33 +1,29 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx
-import importAllResult from "getNoResultsSource";
-import get_ActivityIndicator from "getSystemLocale";
-import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import Text from "Text" /* 4734 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let obj = { containerInner: null, spinnerContainer: null, footerSpinner: null, spinner: null };
-obj = { paddingHorizontal: require("Themes").space.PX_12, flex: 1, marginTop: 16 };
+obj = { paddingHorizontal: ThemesDefault.space.PX_12, flex: 1, marginTop: 16 };
 obj[0] = obj;
 obj[1] = { padding: 32 };
 obj[2] = { paddingVertical: 16 };
-createCacheKey = { color: require("Themes").colors.TEXT_BRAND };
+createCacheKey = { color: ThemesDefault.colors.TEXT_BRAND };
 obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((user) => {
   user = user.user;
-  let obj = nameFromUser;
+  let obj = nameFromUserDefault;
   const globalName = obj.getGlobalName(user);
   let username = globalName;
   if (globalName == null) {
@@ -45,8 +41,6 @@ const memoResult = importAllResult.memo((user) => {
 });
 const unpackModuleId = memoResult;
 let closure_12 = importAllResult.memo((joinRequest) => {
-  let end;
-  let start;
   joinRequest = joinRequest.joinRequest;
   [][0] = joinRequest;
   ({ start, end } = joinRequest);
@@ -59,7 +53,7 @@ let closure_12 = importAllResult.memo((joinRequest) => {
     } else {
       let userAvatarSource = null;
       if (null != user) {
-        let obj = getAvatarURL;
+        let obj = getAvatarURLDefault;
         userAvatarSource = obj.getUserAvatarSource(user);
       }
       obj = { arrow: true, icon: null, label: null, onPress: null, start: null, end: null };
@@ -67,7 +61,7 @@ let closure_12 = importAllResult.memo((joinRequest) => {
       obj[0] = userAvatarSource;
       obj[1] = joinRequest(1297).AvatarSizes.SMALL;
       obj[1] = callback(joinRequest(1297).Avatar, obj);
-      const obj1 = { user: null };
+      obj1 = { user: null };
       obj1[0] = user;
       obj[2] = callback(closure_11, obj1);
       obj[3] = tmp;
@@ -78,10 +72,8 @@ let closure_12 = importAllResult.memo((joinRequest) => {
   }
 });
 const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplications(arg0) {
-  let applicationStatus;
-  let guildId;
   ({ guildId, applicationStatus } = arg0);
-  let importDefault;
+  importDefault = undefined;
   let guildJoinRequests;
   let fetchNextPage;
   let stateFromStores;
@@ -94,7 +86,7 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   let obj2 = applicationStatus(guildJoinRequests[15]);
   fetchNextPage = obj2.usePaginatedMemberApplications({ guildId, guildJoinRequests }).fetchNextPage;
   let obj3 = applicationStatus(guildJoinRequests[16]);
-  const items = [updateSubmittedGuildJoinRequestTotal];
+  const items = [closure_6];
   stateFromStores = obj3.useStateFromStores(items, () => fetching.isFetching());
   const items1 = [applicationStatus, fetchNextPage];
   callback = fetchNextPage.useCallback(() => {
@@ -109,14 +101,14 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   const items3 = [guildJoinRequests.length];
   const callback1 = fetchNextPage.useCallback((index) => {
     index = index.index;
-    return outer1_7(outer1_12, { joinRequest: index.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
+    return closure_1_7(closure_1_12, { joinRequest: index.item, start: 0 === index, end: index === guildJoinRequests.length - 1 });
   }, items3);
   callback2 = fetchNextPage.useCallback((joinRequestId) => joinRequestId.joinRequestId, []);
   if (stateFromStores) {
     if (0 === guildJoinRequests.length) {
       obj = { style: null, children: null };
       obj[0] = tmp.spinnerContainer;
-      const obj1 = { size: "large", color: null };
+      obj1 = { size: "large", color: null };
       obj1[1] = tmp.spinner.color;
       obj[1] = callback(stateFromStores, obj1);
       return callback(callback, obj);
@@ -146,11 +138,11 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
       let tmp = null;
       if (stateFromStores) {
         let obj = { style: null, children: null };
-        obj[0] = _undefined.footerSpinner;
+        obj[0] = closure_1.footerSpinner;
         obj = { size: "small", color: null };
-        obj[1] = _undefined.spinner.color;
-        obj[1] = outer1_7(stateFromStores, obj);
-        tmp = outer1_7(callback, obj);
+        obj[1] = closure_1.spinner.color;
+        obj[1] = closure_1_7(stateFromStores, obj);
+        tmp = closure_1_7(callback, obj);
       }
       return tmp;
     };
@@ -167,7 +159,7 @@ const memoResult1 = importAllResult.memo(function GuildSettingsModalMemberApplic
   obj6[0] = items4;
   return closure_8(closure_9, obj6);
 });
-const result = require("updateSubmittedGuildJoinRequestTotal").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMemberApplications.tsx");
 
 export default memoResult1;
 export const MemberApplicationUser = memoResult;

@@ -1,12 +1,11 @@
 // discord_app/modules/guild_products/GuildProductAttachmentUploadTarget.tsx
-import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY";
-import { Endpoints } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import GUILD_PRODUCT_EDIT_MODAL_KEY from "GUILD_PRODUCT_EDIT_MODAL_KEY" /* 4873 */;
 
-let c0;
-let closure_1;
-let obj1;
 ({ MAX_ATTACHMENT_UPLOAD_COUNT: c0, MAX_ATTACHMENT_UPLOAD_FILESIZE_BYTES: closure_1, MAX_ATTACHMENT_UPLOAD_TOTAL_FILESIZE_BYTES: obj1 } = GUILD_PRODUCT_EDIT_MODAL_KEY);
-const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductAttachmentUploadTarget.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/guild_products/GuildProductAttachmentUploadTarget.tsx");
 class GuildProductAttachmentUploadTarget {
 }
 const prototype = GuildProductAttachmentUploadTarget.prototype;

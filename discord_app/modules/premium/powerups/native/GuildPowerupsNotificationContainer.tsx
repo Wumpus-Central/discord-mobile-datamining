@@ -1,14 +1,14 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
-import { useGuildPowerupExpiringNotificationsConfig } from "../hooks/useGuildPowerupExpiringNotificationsConfig.tsx";
-import { useGuildPowerupTier3OverrideConfig } from "../hooks/useGuildPowerupTier3OverrideConfig.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 11725 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 11726 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 function Tier3OverrideNotice(children) {
   let obj = apexExperiment;
   obj = { style: callback().staffContainer, children: null };
@@ -20,19 +20,20 @@ function Tier3OverrideNotice(children) {
   obj[1] = closure_4(Text.Text, { variant: str, children: children.text });
   return closure_4(View, obj);
 }
+const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, staffContainer: null };
-obj = { gap: require("Themes").space.PX_12, margin: require("Themes").space.PX_16 };
+obj = { gap: ThemesDefault.space.PX_12, margin: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-obj[1] = { padding: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.md, borderWidth: 1, borderStyle: "solid", borderColor: require("Themes").colors.BORDER_SUBTLE };
+obj[1] = { padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_6 = createCacheKey.createStyles(obj);
-let obj1 = { padding: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.md, borderWidth: 1, borderStyle: "solid", borderColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
+let obj1 = { padding: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.md, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsNotificationContainer.tsx");
 
 export default function GuildPowerupsNotificationContainer(guildId) {
   guildId = guildId.guildId;
-  const tmp4 = useGuildPowerupTier3OverrideConfig(guildId);
-  const tmp5 = useGuildPowerupExpiringNotificationsConfig(guildId);
+  const tmp4 = useGuildPowerupTier3OverrideConfigDefault(guildId);
+  const tmp5 = useGuildPowerupExpiringNotificationsConfigDefault(guildId);
   let obj = apexExperiment;
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsNotificationContainer");
   if (tmp4.shouldShow) {
@@ -54,7 +55,7 @@ export default function GuildPowerupsNotificationContainer(guildId) {
     const items = [closure_4(tmp6(4734).Text, obj), , ];
     let shouldShow = tmp4.shouldShow;
     if (shouldShow) {
-      const obj1 = { text: null };
+      obj1 = { text: null };
       obj1[0] = tmp4.text;
       shouldShow = tmp11(Tier3OverrideNotice, obj1);
     }

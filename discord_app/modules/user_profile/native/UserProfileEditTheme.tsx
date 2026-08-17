@@ -1,32 +1,27 @@
 // discord_app/modules/user_profile/native/UserProfileEditTheme.tsx
-import "EditProfileThemeActionSheet";
-import { View } from "showCustomColorPickerActionSheet";
-import jsxProd from "MoreHorizontalIcon";
-import createCacheKey from "createCacheKey";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { PencilIcon } from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { showCustomColorPickerActionSheet } from "../../color_picker/native/showCustomColorPickerActionSheet.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { getHigherContrastColor } from "../utils/getHigherContrastColor.tsx";
+import noopAll from "noop" /* 19 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 7183 */;
+import PencilIcon from "PencilIcon" /* 9925 */;
+import showCustomColorPickerActionSheetDefault from "showCustomColorPickerActionSheet" /* 14009 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function ColorSwatch(color) {
-  let accessibilityLabel;
-  let label;
-  let onPress;
-  let style;
   color = color.color;
   ({ label, accessibilityLabel, onPress, style } = color);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = int2hslRaw;
   const int2hexResult = obj.int2hex(color);
-  let obj1 = getHigherContrastColor;
+  obj1 = getHigherContrastColor;
   const items = [WHITE, PRIMARY_530];
   obj = { style: tmp.colorSwatchContainer, children: null };
   const higherContrastColor = obj1.getHigherContrastColor({ backgroundColor: int2hexResult, colors: items });
@@ -42,24 +37,20 @@ function ColorSwatch(color) {
   obj[1] = items2;
   return callback2(View, obj);
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { gap: 6 }, sectionHeader: { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, themeColorContainer: { flexDirection: "row", gap: 12, justifyContent: "center" }, colorSwatchContainer: { position: "relative", flex: 1, flexDirection: "column", alignItems: "center", gap: 4 }, colorSwatch: null, dropperIcon: null, overflowMenu: null };
-createCacheKey = { height: 50, width: "100%", borderRadius: require("Themes").radii.sm };
+createCacheKey = { height: 50, width: "100%", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { position: "absolute", top: 10, right: 10 };
-createCacheKey[6] = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const WHITE = require("Themes").unsafe_rawColors.WHITE;
-const PRIMARY_530 = require("Themes").unsafe_rawColors.PRIMARY_530;
-let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-let result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileEditTheme.tsx");
+createCacheKey[6] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const WHITE = ThemesDefault.unsafe_rawColors.WHITE;
+const PRIMARY_530 = ThemesDefault.unsafe_rawColors.PRIMARY_530;
+let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditTheme.tsx");
 
 export default function UserProfileEditTheme(pendingThemeColors) {
-  let guildId;
-  let pendingAvatarSrc;
-  let secondaryColor;
-  let showResetMenu;
-  let user;
   ({ user, onProfileThemeColorsChanged: secondaryColor, guildId, pendingAvatarSrc, showResetMenu } = pendingThemeColors);
   if (showResetMenu === undefined) {
     showResetMenu = false;
@@ -72,7 +63,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
   let primaryColor;
   secondaryColor = undefined;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let tmp4 = f93423(primaryColor[11])(user.id, guildId);
   f93423 = tmp4;
   const tmp5 = f93423(primaryColor[12])({ user, displayProfile: tmp4, pendingThemeColors: pendingThemeColors.pendingThemeColors, isPreview: flag });
@@ -89,7 +80,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       obj[0] = tmp.container;
       obj = { style: null, children: null };
       obj[0] = tmp.sectionHeader;
-      const obj1 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
+      obj1 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
       const intl6 = tmp6(tmp3[8]).intl;
       obj1[2] = intl6.string(tmp6(tmp3[8]).t.DMeO2X);
       let items = [callback(tmp6(tmp3[10]).Text, obj1), ];
@@ -147,7 +138,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         let obj = UNSAFE_isDismissibleContentDismissed;
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
         obj = { color: secondaryColor, onSelect: f93423, suggestedColors: closure_4 };
-        showCustomColorPickerActionSheet(obj);
+        showCustomColorPickerActionSheetDefault(obj);
       };
       obj5[1] = primaryColor;
       const intl2 = tmp6(tmp3[8]).intl;
@@ -180,7 +171,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         let obj = UNSAFE_isDismissibleContentDismissed;
         const result = obj.UNSAFE_markDismissibleContentAsDismissed(DismissibleContent.DismissibleContent.PROFILE_THEMES_SETTINGS_VIEWED_V2);
         obj = { color: secondaryColor, onSelect: f93423, suggestedColors: closure_4 };
-        showCustomColorPickerActionSheet(obj);
+        showCustomColorPickerActionSheetDefault(obj);
       };
       const intl4 = tmp6(tmp3[8]).intl;
       obj7[2] = intl4.string(tmp6(tmp3[8]).t["8elvy6"]);

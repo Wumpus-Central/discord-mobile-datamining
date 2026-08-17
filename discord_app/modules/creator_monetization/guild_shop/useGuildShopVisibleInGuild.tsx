@@ -1,10 +1,12 @@
 // discord_app/modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx
-import { GuildFeatures } from "ME";
-import { useShouldHideGuildPurchaseEntryPoints } from "../../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
-import { useGuildEligibleForGuildProducts } from "../../guild_products/GuildProductsEligibility.tsx";
-import { computeCanEveryoneInGuildSeeRoleSubscriptions } from "../../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import computeCanEveryoneInGuildSeeRoleSubscriptions from "computeCanEveryoneInGuildSeeRoleSubscriptions" /* 7216 */;
+import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7219 */;
+import useGuildEligibleForGuildProducts from "useGuildEligibleForGuildProducts" /* 7224 */;
 
-let result = require("computeCanEveryoneInGuildSeeRoleSubscriptions").fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
+const GuildFeatures = ME.GuildFeatures;
+let result = set.fileFinishedImporting("modules/creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx");
 
 export const useGuildShopVisibleInGuild = function useGuildShopVisibleInGuild(id) {
   id = undefined;

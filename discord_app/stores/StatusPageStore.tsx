@@ -1,18 +1,20 @@
 // discord_app/stores/StatusPageStore.tsx
-import { Store } from "initialize";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
-const require = arg1;
+require = arg1;
 const MaintenanceStore = "MaintenanceStore";
 let c3 = null;
 let c4 = null;
 let c5 = null;
+const Store = initializeDefault.Store;
 class MaintenanceStore extends Store {
 }
 const prototype = MaintenanceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const Storage = Storage.Storage;
-  let closure_5 = Storage.get(MaintenanceStore);
+  const Storage = Storage2.Storage;
+  closure_5 = Storage.get(MaintenanceStore);
 };
 prototype["getIncident"] = function getIncident() {
   return c3;
@@ -47,9 +49,9 @@ prototype["getScheduledMaintenance"] = function getScheduledMaintenance() {
   return tmp3;
 };
 MaintenanceStore.displayName = "MaintenanceStore";
-const maintenanceStore = new MaintenanceStore(require("dispatcher"), {
+const maintenanceStore = new MaintenanceStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let c3 = null;
+    c3 = null;
   },
   STATUS_PAGE_INCIDENT: function handleIncident(incident) {
     incident = incident.incident;
@@ -62,11 +64,11 @@ const maintenanceStore = new MaintenanceStore(require("dispatcher"), {
       return false;
     } else {
       const id = _null.id;
-      const Storage = Storage.Storage;
+      const Storage = Storage2.Storage;
       const result = Storage.set(MaintenanceStore, id);
     }
   }
 });
-let result = require("dispatcher").fileFinishedImporting("stores/StatusPageStore.tsx");
+let result = require("set").fileFinishedImporting("stores/StatusPageStore.tsx");
 
 export default maintenanceStore;

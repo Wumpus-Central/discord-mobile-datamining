@@ -1,13 +1,14 @@
 // discord_app/modules/stage_channels/native/modals/GuildStageChannelSelection.tsx
-import "noop";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
+noopAll;
 let closure_7 = createCacheKey.createStyles({ channelText: { marginTop: 8, flexDirection: "row" } });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/modals/GuildStageChannelSelection.tsx");
 
 export default function GuildStageChannelSelection(channel) {
   channel = channel.channel;
@@ -17,8 +18,7 @@ export default function GuildStageChannelSelection(channel) {
     let obj = channelsUserCanStartStageIn(handleSelectChannel[7]);
     const result = obj.dismissGlobalKeyboard();
     const mapped = channelsUserCanStartStageIn.map((id) => {
-      const obj = { value: id.id, label: null };
-      obj[1] = callback(table[6]).computeChannelName(id, mergeGuildAvatar, markAllUserIdListsStale, true);
+      const obj = { value: id.id, label: callback(table[6]).computeChannelName(id, closure_5, closure_4, true) };
       return obj;
     });
     obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
@@ -27,12 +27,12 @@ export default function GuildStageChannelSelection(channel) {
     obj[0] = intl.string(channel(handleSelectChannel[11]).t["bxw/f7"]);
     obj[1] = mapped;
     obj[2] = function onItemSelect(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const found = closure_2.find((id) => id.id === closure_0);
       if (null != found) {
         callback2(found);
       }
-      outer1_1(outer1_3[8]).hideActionSheet();
+      closure_1_1(closure_1_3[8]).hideActionSheet();
     };
     let id;
     if (channel != null) {
@@ -56,12 +56,12 @@ export default function GuildStageChannelSelection(channel) {
     obj[0] = tmp3;
     obj[1] = renderChannelHook;
     obj[2] = function changeHook(children) {
-      return outer1_6(channel(handleSelectChannel[12]).Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, arg1);
+      return closure_1_6(channel(handleSelectChannel[12]).Text, { onPress: handleSelectChannel, variant: "text-xs/medium", color: "text-link", children }, arg1);
     };
     obj[3] = format(t.AkzLcV, obj);
     let tmp5 = obj;
   } else {
-    const obj1 = { stageName: null, stageHook: null };
+    obj1 = { stageName: null, stageHook: null };
     obj1[0] = tmp3;
     obj1[1] = renderChannelHook;
     obj[3] = format(t["S+9O7g"], obj1);

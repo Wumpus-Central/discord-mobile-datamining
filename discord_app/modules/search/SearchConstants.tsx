@@ -1,9 +1,8 @@
 // discord_app/modules/search/SearchConstants.tsx
-import ME from "ME";
-import set from "set";
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 4071 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let MessageEmbedTypes;
-let SearchTypes;
 ({ MessageEmbedTypes, SearchTypes } = ME);
 let obj = { Messages: 0, [0]: "Messages", Media: 1, [1]: "Media", Link: 2, [2]: "Link", File: 3, [3]: "File", Pins: 4, [4]: "Pins" };
 obj = { RECENT: "recent", MEMBERS: "members", PEOPLE: "people", MEDIA: "media", PINS: "pins", MESSAGES: "messages", LINKS: "links", FILES: "files", GUILD_CHANNELS: "guild_channels", THREADS: "threads" };
@@ -75,7 +74,7 @@ export const MESSAGE_ESTIMATED_ITEM_SIZE = 110;
 export const CARD_ESTIMATED_ITEM_SIZE = 150;
 export const RECENTS_ESTIMATED_ITEM_SIZE = 64;
 export const MESSAGE_PLACEHOLDER_ITEM_SIZE = 64;
-export const CHANNEL_LIST_SEARCH_LAYOUT = require("ChannelListLayoutTypes").ChannelListLayoutTypes.COZY;
+export const CHANNEL_LIST_SEARCH_LAYOUT = ChannelListLayoutTypes.ChannelListLayoutTypes.COZY;
 export const EMPTY_VOICE_STATES = [];
 export const EMPTY_SEARCH_TAB_COUNTS = {};
 export const FADE_LAYOUT_ANIMATION_DURATION = 350;

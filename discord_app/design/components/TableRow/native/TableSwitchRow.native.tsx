@@ -1,29 +1,22 @@
 // discord_app/design/components/TableRow/native/TableSwitchRow.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { getNodeText } from "../../../utils/native.tsx";
-import { FormSwitch } from "../../Forms/native/FormSwitch.native.tsx";
-import { TableRowInner } from "TableRow.native.tsx";
+import set from "set" /* 500 */;
+import getNodeText from "getNodeText" /* 4099 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import FormSwitch from "FormSwitch" /* 7179 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let require = arg1;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => ({ labelWithTrailing: { flexDirection: "row", alignItems: "center", gap: 8 } }));
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableSwitchRow.native.tsx");
 
 export const TableSwitchRow = function TableSwitchRow(value) {
-  let dependencyMap;
-  let disabled;
-  let label;
-  let subLabel;
-  let trailing;
   value = value.value;
-  const require = value;
+  require = value;
   ({ onValueChange: dependencyMap, label, subLabel, trailing, disabled } = value);
   if (disabled === undefined) {
     disabled = false;
@@ -33,7 +26,7 @@ export const TableSwitchRow = function TableSwitchRow(value) {
   let callback;
   let obj = set;
   const tmp2 = callback2();
-  let obj1 = getNodeText;
+  obj1 = getNodeText;
   const nodeText = obj1.getNodeText(label);
   const isAndroidResult = obj.isAndroid();
   const nodeText1 = getNodeText.getNodeText(subLabel);

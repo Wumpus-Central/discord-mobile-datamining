@@ -1,14 +1,16 @@
 // discord_app/modules/multi_account/native/openManageAccountsModal.tsx
-import { SWITCH_ACCOUNTS_MODAL_KEY } from "MAX_ACCOUNTS";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import MAX_ACCOUNTS from "MAX_ACCOUNTS" /* 11586 */;
 
-const result = require("module_5260").fileFinishedImporting("modules/multi_account/native/openManageAccountsModal.tsx");
+const SWITCH_ACCOUNTS_MODAL_KEY = MAX_ACCOUNTS.SWITCH_ACCOUNTS_MODAL_KEY;
+const result = set.fileFinishedImporting("modules/multi_account/native/openManageAccountsModal.tsx");
 
 export default function openManageAccountsModal(initialRouteName) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideActionSheet();
   obj = { initialRouteName };
-  ModalActionCreators.pushLazy(asyncRequireImpl(15635, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
+  _modDef5260.pushLazy(asyncRequireImpl(15635, dependencyMap.paths), obj, SWITCH_ACCOUNTS_MODAL_KEY);
 };

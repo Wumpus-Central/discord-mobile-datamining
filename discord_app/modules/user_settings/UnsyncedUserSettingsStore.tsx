@@ -1,22 +1,26 @@
 // discord_app/modules/user_settings/UnsyncedUserSettingsStore.tsx
-import { SystemThemeState } from "SystemThemeState";
-import { ListDensityMode } from "MAX_FAVORITES";
-import ME from "ME";
-import { ExpressionPickerWidths } from "ExpressionPickerViewType";
-import { DeviceSettingsStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { getSystemTheme } from "../themes/getSystemTheme.native.tsx";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage3 from "Storage" /* 595 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import SystemThemeState2 from "SystemThemeState" /* 1305 */;
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
+import getSystemThemeDefault from "getSystemTheme" /* 1339 */;
+import ME from "ME" /* 676 */;
 
-let CHANNEL_SIDEBAR_WIDTH;
-let c5;
+const SystemThemeState = SystemThemeState2.SystemThemeState;
+const ListDensityMode = MAX_FAVORITES.ListDensityMode;
 ({ DEFAULT_CHAT_SIDEBAR_WIDTH: c5, CHANNEL_SIDEBAR_WIDTH } = ME);
 let closure_7 = ME.DEFAULT_MESSAGE_REQUEST_SIDEBAR_WIDTH;
+const ExpressionPickerWidths = ExpressionPickerViewType.ExpressionPickerWidths;
 let obj = { DATA_SAVER: "data_saver", STANDARD: "standard", BEST: "best" };
 let closure_9 = (window.innerWidth - CHANNEL_SIDEBAR_WIDTH) / 2;
 const STANDARD = obj.STANDARD;
 let c11 = null;
 let closure_12 = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class UnsyncedUserSettingsStore extends DeviceSettingsStore {
 }
 const prototype = UnsyncedUserSettingsStore.prototype;
@@ -27,7 +31,7 @@ prototype["initialize"] = function initialize(arg0) {
   }
   const useSystemTheme = obj.useSystemTheme;
   if (null != useSystemTheme) {
-    if (null != getSystemTheme()) {
+    if (null != getSystemThemeDefault()) {
       let UNSET = useSystemTheme;
     }
     obj.useSystemTheme = UNSET;
@@ -328,11 +332,11 @@ UnsyncedUserSettingsStore.displayName = "UnsyncedUserSettingsStore";
 UnsyncedUserSettingsStore.persistKey = "UnsyncedUserSettingsStore";
 const items = [
   () => {
-    const Storage = Storage.Storage;
+    const Storage = Storage3.Storage;
     const value = Storage.get("UserSettingsStore");
-    const Storage2 = Storage.Storage;
+    const Storage2 = Storage3.Storage;
     Storage2.remove("UserSettingsStore");
-    return apply.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
+    return applyDefault.pick(value, "dataSavingMode", "videoUploadQuality", "lowQualityImageMode", "useSystemTheme", "expressionPickerWidth", "disableVoiceChannelChangeAlert", "disableHardwareMuteSilenceAlert", "disableHideSelfStreamAndVideoConfirmationAlert", "pushUpsellDismissed", "disableEmbeddedActivityPopOutAlert", "disableActivityHardwareAccelerationPrompt", "disableInviteWithTextChannelActivityLaunch", "disableActivityHostLeftNitroUpsell", "disableCallUserConfirmationPrompt", "disableApplicationSubscriptionCancellationSurvey", "enableAndroidChatListAnimations");
   },
   (arg0) => {
     delete tmp[tmp2];
@@ -357,8 +361,8 @@ obj = {
     closure_12.useSystemTheme = SystemThemeState.ON;
   }
 };
-const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(require("dispatcher"), obj);
-const result = require("ME").fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
+const unsyncedUserSettingsStore = new UnsyncedUserSettingsStore(dispatcherDefault, obj);
+const result = set.fileFinishedImporting("modules/user_settings/UnsyncedUserSettingsStore.tsx");
 
 export default unsyncedUserSettingsStore;
 export const VideoQualitySettings = obj;

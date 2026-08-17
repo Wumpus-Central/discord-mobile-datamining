@@ -1,32 +1,26 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import get_ActivityIndicator from "TableSwitchRow";
-import handleFormInit from "handleFormInit";
-import ME from "ME";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "handleFormInit" /* 8875 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 ({ Image: c5, View: closure_6 } = get_ActivityIndicator);
-({ VerificationLevels: metroImportAll, GuildExplicitContentFilterTypes: c9 } = ME);
+({ VerificationLevels: closure_8, GuildExplicitContentFilterTypes: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/SafetyCheckScreen.tsx");
 
 export default function SafetyCheckScreen() {
   let obj = React;
   const ref = React.useRef(null);
-  let obj1 = guild(first1[6]);
+  obj1 = guild(first1[6]);
   const token = obj1.useToken(first(first1[7]).modules.mobile.TABLE_ROW_PADDING);
   let obj2 = guild(first1[8]);
   const enableCommunitySharedStyles = obj2.useEnableCommunitySharedStyles();
   let obj3 = guild(first1[9]);
-  const items = [handleFormInit];
+  const items = [closure_7];
   guild = obj3.useStateFromStoresObject(items, () => props.getProps()).guild;
   let verificationLevel;
   if (guild != null) {
@@ -90,7 +84,7 @@ export default function SafetyCheckScreen() {
     obj9[3] = function onValueChange(arg0) {
       if (null != guild) {
         if (arg0) {
-          if (tmp.verificationLevel < outer1_8.LOW) {
+          if (tmp.verificationLevel < closure_1_8.LOW) {
             let obj = { verificationLevel: null };
             obj[0] = tmp2.LOW;
             first(first1[18]).updateGuild(obj);
@@ -122,7 +116,7 @@ export default function SafetyCheckScreen() {
     obj12[3] = function onValueChange(arg0) {
       if (null != guild) {
         if (arg0) {
-          if (tmp.explicitContentFilter < outer1_9.ALL_MEMBERS) {
+          if (tmp.explicitContentFilter < closure_1_9.ALL_MEMBERS) {
             let obj = { explicitContentFilter: null };
             obj[0] = tmp2.ALL_MEMBERS;
             first(first1[18]).updateGuild(obj);

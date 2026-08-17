@@ -1,42 +1,39 @@
 // discord_app/modules/guild/native/GuildIconUploader.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import handleThemeChange from "handleThemeChange";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/10980_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10981_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import registerAssetDefault from "registerAsset" /* 10980 */;
+import registerAssetDefault2 from "registerAsset" /* 10981 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleThemeChange" /* 1302 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { width: 82, height: 82, marginTop: 4 }, guildPlaceholder: null, guildIcon: null, iconWrapperBorder: null, filledIconWrapper: null, emptyIconWrapper: null, emptyGuildIcon: null, emptyGuildIconText: null, uploadIcon: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { width: 82, height: 82, borderRadius: 41 };
 createCacheKey[3] = { position: "absolute", top: -8, right: -8, width: 40, height: 40, borderRadius: 20, justifyContent: "center", alignItems: "center" };
-createCacheKey[4] = { width: 32, height: 32, borderRadius: require("Themes").radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
-let obj1 = { width: 32, height: 32, borderRadius: require("Themes").radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
-createCacheKey[5] = { position: "absolute", top: -4, right: -4, width: 32, height: 32, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-let obj2 = { position: "absolute", top: -4, right: -4, width: 32, height: 32, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
-createCacheKey[6] = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[4] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+let obj1 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+createCacheKey[5] = { position: "absolute", top: -4, right: -4, width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+let obj2 = { position: "absolute", top: -4, right: -4, width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center" };
+createCacheKey[6] = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[7] = { textAlign: "center", lineHeight: 16, paddingTop: 4 };
 createCacheKey[8] = { height: 16, width: 16 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_8 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class GuildIconUploader extends PureComponent {
 }
 const prototype = GuildIconUploader.prototype;
 prototype["renderIcon"] = function renderIcon() {
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   const icon = this.props.icon;
   if (null != icon) {
     let obj = { style: null, source: null };
@@ -48,7 +45,7 @@ prototype["renderIcon"] = function renderIcon() {
     obj[1] = obj;
     let tmp6Result = callback(closure_4, obj);
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     const items1 = [, ];
     ({ guildIcon: arr3[0], emptyGuildIcon: arr3[1] } = tmp);
     obj1[0] = items1;
@@ -76,7 +73,7 @@ prototype["renderIcon"] = function renderIcon() {
   return tmp6Result;
 };
 prototype["renderUpload"] = function renderUpload() {
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   const props = this.props;
   const iconBackgroundColor = props.iconBackgroundColor;
   if (null != props.icon) {
@@ -86,7 +83,7 @@ prototype["renderUpload"] = function renderUpload() {
     obj[0] = iconBackgroundColor;
     items[1] = obj;
     obj[0] = items;
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.filledIconWrapper;
     const obj2 = { style: null, source: null };
     const items1 = [tmp.uploadIcon, ];
@@ -94,24 +91,21 @@ prototype["renderUpload"] = function renderUpload() {
     obj3[0] = iconBackgroundColor;
     items1[1] = obj3;
     obj2[0] = items1;
-    obj2[1] = registerAsset;
+    obj2[1] = registerAssetDefault;
     obj1[1] = tmp2(closure_4, obj2);
     obj[1] = tmp2(tmp3, obj1);
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.emptyIconWrapper;
     const obj4 = { source: null };
-    obj4[0] = registerAsset;
+    obj4[0] = registerAssetDefault2;
     obj[1] = tmp2(closure_4, obj4);
   }
   return closure_6(closure_3, obj);
 };
 prototype["render"] = function render() {
-  let icon;
-  let onPress;
-  let style;
   const self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   ({ style, onPress, icon } = this.props);
   if (null != icon) {
     const intl2 = tmp3(1236).intl;
@@ -130,7 +124,7 @@ prototype["render"] = function render() {
   return closure_6(PressableBase.PressableOpacity, obj);
 };
 GuildIconUploader.contextType = require("ManaContext").ThemeContext;
-let obj3 = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-const result = require("handleThemeChange").fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
+let obj3 = { borderWidth: 2, borderStyle: "dashed", justifyContent: "center", alignItems: "center", borderColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/guild/native/GuildIconUploader.tsx");
 
 export default GuildIconUploader;

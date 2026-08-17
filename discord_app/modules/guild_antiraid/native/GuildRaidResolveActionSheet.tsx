@@ -1,49 +1,42 @@
 // discord_app/modules/guild_antiraid/native/GuildRaidResolveActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import SafetyToastsActionCreators.native from "../../safety_common/SafetyToastsActionCreators.native.tsx";
-import { View } from "collectGuildAnalyticsMetadata";
-import { AnalyticEvents } from "ME";
-import { SafetyToastType } from "SafetyToastType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { Feedback } from "../../guild_automod/AutomodFeedback.tsx";
-import { KeyboardAwareView } from "../../keyboard/native/KeyboardAwareView.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import Feedback from "Feedback" /* 5242 */;
+import _modDef6551 from "module_6551" /* 6551 */;
+import ActionSheet from "ActionSheet" /* 7175 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { SafetyToastType } from "SafetyToastType" /* 5430 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+require = arg1;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: { paddingVertical: 24, paddingHorizontal: 16, display: "flex", flexDirection: "column", alignItems: "center" }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { marginBottom: 16, textAlign: "center" }, optionContainer: null, option: null, textInputContainer: null, textInput: null };
-createCacheKey = { borderColor: require("Themes").colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: require("Themes").radii.xs, display: "flex", flexDirection: "column", marginBottom: 14, width: "100%" };
+createCacheKey = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.xs, display: "flex", flexDirection: "column", marginBottom: 14, width: "100%" };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { width: "100%" };
 createCacheKey[5] = { paddingLeft: 54, paddingRight: 16, paddingBottom: 16 };
-createCacheKey[6] = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, width: "100%", padding: 8, borderRadius: require("Themes").radii.xs };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, width: "100%", padding: 8, borderRadius: require("Themes").radii.xs };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidResolveActionSheet.tsx");
+createCacheKey[6] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, width: "100%", padding: 8, borderRadius: ThemesDefault.radii.xs };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, width: "100%", padding: 8, borderRadius: ThemesDefault.radii.xs };
+const result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidResolveActionSheet.tsx");
 
 export default function GuildRaidResolveActionSheet(arg0) {
-  let c3;
-  let c4;
-  let c5;
-  let c6;
-  let importDefault;
-  let require;
   ({ guildId: require, messageId: importDefault } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let React;
   c5 = undefined;
   c6 = undefined;
   function handleTextInputChange(arg0) {
-    _undefined3(arg0);
+    _undefined2(arg0);
   }
-  const tmp = createCacheKey();
+  const tmp = callback4();
   dependencyMap = tmp;
   [c3, c4] = callback(React.useState([]), 2);
   const tmp2 = callback(React.useState([]), 2);
@@ -63,7 +56,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   obj[0] = intl3.string(getSystemLocale.t.UfHAwZ);
   obj[1] = Feedback.RaidResolutionType.JOIN_RAID;
   items[2] = obj;
-  let obj1 = { text: null, value: null };
+  obj1 = { text: null, value: null };
   const intl4 = getSystemLocale.intl;
   obj1[0] = intl4.string(getSystemLocale.t.K3UWeR);
   obj1[1] = Feedback.RaidResolutionType.OTHER;
@@ -81,12 +74,12 @@ export default function GuildRaidResolveActionSheet(arg0) {
   items1[1] = callback2(Text.Text, obj5);
   items1[2] = items.map((value) => {
     value = value.value;
-    let closure_0 = value;
-    let obj = { style: _undefined.optionContainer, children: null };
+    closure_0 = value;
+    let obj = { style: closure_2.optionContainer, children: null };
     obj = {
-      style: _undefined.option,
+      style: closure_2.option,
       onPress() {
-        outer1_4(outer1_3.includes(closure_0) ? ((arr) => arr.filter((arg0) => arg0 !== closure_0)) : ((arg0) => {
+        closure_1_4(closure_1_3.includes(closure_0) ? ((arr) => arr.filter((arg0) => arg0 !== closure_0)) : ((arg0) => {
           const items = [];
           items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
           return items;
@@ -95,17 +88,16 @@ export default function GuildRaidResolveActionSheet(arg0) {
       leading: null,
       label: null
     };
-    obj = { selected: null };
-    obj[0] = _undefined2.includes(value);
-    obj[2] = outer1_8(outer1_0(_undefined[15]).Checkbox, obj);
+    obj = { selected: _undefined.includes(value) };
+    obj[2] = closure_1_8(closure_1_0(closure_2[15]).Checkbox, obj);
     obj[3] = value.text;
-    let items = [outer1_8(outer1_0(_undefined[14]).FormRow, obj), ];
-    let hasItem = value === outer1_0(_undefined[9]).RaidResolutionType.OTHER;
+    let items = [closure_1_8(closure_1_0(closure_2[14]).FormRow, obj), ];
+    let hasItem = value === closure_1_0(closure_2[9]).RaidResolutionType.OTHER;
     if (hasItem) {
-      hasItem = _undefined2.includes(tmp5(tmp6[9]).RaidResolutionType.OTHER);
+      hasItem = _undefined.includes(tmp5(tmp6[9]).RaidResolutionType.OTHER);
     }
     if (hasItem) {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp3.textInputContainer;
       const obj2 = { style: null, autoComplete: "off", value: null, placeholder: null, onChangeText: null };
       obj2[0] = tmp3.textInput;
@@ -118,19 +110,19 @@ export default function GuildRaidResolveActionSheet(arg0) {
     }
     items[1] = hasItem;
     obj[1] = items;
-    return outer1_9(c5, obj, value);
+    return closure_1_9(c5, obj, value);
   });
   const obj6 = {
     onPress() {
-      const obj = { raid_alert_type: outer1_0(_undefined[9]).RaidAlertType.JOIN_RAID, raid_alert_id: closure_1, false_alarm_type: _undefined2.map((arg0) => arg0.toString()), false_alarm_other_reason: c5, guild_id: closure_0 };
-      outer1_0(_undefined[17]).trackWithMetadata(_undefined3.GUILD_RAID_FEEDBACK, obj);
-      const obj2 = outer1_0(_undefined[17]);
-      const obj3 = outer1_0(_undefined[18]);
-      obj3.handleResolveRaid(closure_0, closure_1, outer1_0(_undefined[9]).getMostImportantRaidResolutionType(_undefined2));
-      const obj4 = outer1_0(_undefined[9]);
-      outer1_1(_undefined[10]).hideActionSheet("GuildRaidResolveActionSheet");
-      const obj5 = outer1_1(_undefined[10]);
-      outer1_1(_undefined[19]).showSuccessToast(handleTextInputChange.SAFETY_FEEDBACK_SUCCESS);
+      const obj = { raid_alert_type: closure_1_0(closure_2[9]).RaidAlertType.JOIN_RAID, raid_alert_id: closure_1, false_alarm_type: _undefined.map((arg0) => arg0.toString()), false_alarm_other_reason: c5, guild_id: closure_0 };
+      closure_1_0(closure_2[17]).trackWithMetadata(_undefined2.GUILD_RAID_FEEDBACK, obj);
+      const obj2 = closure_1_0(closure_2[17]);
+      const obj3 = closure_1_0(closure_2[18]);
+      obj3.handleResolveRaid(closure_0, closure_1, closure_1_0(closure_2[9]).getMostImportantRaidResolutionType(_undefined));
+      const obj4 = closure_1_0(closure_2[9]);
+      closure_1_1(closure_2[10]).hideActionSheet("GuildRaidResolveActionSheet");
+      const obj5 = closure_1_1(closure_2[10]);
+      closure_1_1(closure_2[19]).showSuccessToast(handleTextInputChange.SAFETY_FEEDBACK_SUCCESS);
     },
     text: null,
     size: "md"
@@ -140,7 +132,7 @@ export default function GuildRaidResolveActionSheet(arg0) {
   items1[3] = callback2(Button.Button, obj6);
   const obj7 = {
     onPress: function handleClose() {
-      callback(_undefined[10]).hideActionSheet("GuildRaidResolveActionSheet");
+      callback(closure_2[10]).hideActionSheet("GuildRaidResolveActionSheet");
     },
     text: null,
     variant: "secondary",
@@ -150,6 +142,6 @@ export default function GuildRaidResolveActionSheet(arg0) {
   obj7[1] = intl8.string(getSystemLocale.t["ETE/oC"]);
   items1[4] = callback2(Button.Button, obj7);
   obj3[1] = items1;
-  obj2[0] = callback3(KeyboardAwareView, obj3);
+  obj2[0] = callback3(_modDef6551, obj3);
   return callback2(ActionSheet.ActionSheet, obj2);
 };

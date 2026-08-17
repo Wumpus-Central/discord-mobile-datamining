@@ -1,31 +1,24 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import Layer from "Layer" /* 7126 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Content() {
-  let tmp11;
-  let tmp12;
   let tmp = callback2();
   let obj = first3;
   const tmp2 = first2(first3.useState(true), 2);
   const first = tmp2[0];
-  const importDefault = tmp2[1];
+  importDefault = tmp2[1];
   const tmp4 = first2(first3.useState(false), 2);
   const first1 = tmp4[0];
   const tmp6 = first2(first3.useState(false), 2);
   first2 = tmp6[0];
-  let obj1 = first(first1[5]);
+  obj1 = first(first1[5]);
   [tmp11, tmp12] = first2(obj1.useCanRotate(), 2);
   const tmp13 = first2(first3.useState(false), 2);
   first3 = tmp13[0];
@@ -42,7 +35,7 @@ function Content() {
   const ref = obj.useRef(null);
   const items = [first3, first2, first, first1, str, first4, first5];
   const memo = obj.useMemo(() => {
-    let str = "top";
+    str = "top";
     if (first2) {
       str = "bottom";
     }
@@ -164,15 +157,14 @@ function Content() {
   return closure_8(tmp28, obj9);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemCoachmark.tsx");
 
 export default function UserSettingsDesignSystemCoachmark() {
   let obj = { style: callback2().flex, bottom: true, children: null };
   obj = { children: null };
-  obj = { children: null };
-  obj[0] = callback(Content, {});
+  obj = { children: callback(Content, {}) };
   obj[0] = callback(Layer.LayerScope, obj);
   obj[2] = callback(closure_6, obj);
   return callback(SafeAreaPaddingView.SafeAreaPaddingView, obj);

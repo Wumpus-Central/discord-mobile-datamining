@@ -1,9 +1,11 @@
 // discord_common/js/packages/rpc-schema/rpc-schema.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/rpc-schema/rpc-schema.tsx");
 
 export const createRPCCommand = function createRPCCommand(AUTHENTICATE, scope) {
   let request;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = { scope: scope.scope, handler: scope.handler };
   const tmp = request(13847).RPCCommandSchemas[AUTHENTICATE];
   request = undefined;

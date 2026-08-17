@@ -1,30 +1,27 @@
 // discord_app/modules/quests/native/QuestEmbed.native.tsx
-import { Image } from "isSponsoredPlayQuest";
-import handleThemeChange from "handleThemeChange";
-import initializeState from "initializeState";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { ThemeTypes } from "ME";
-import { InviteTypes } from "InviteSendStates";
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
-import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import registerAssetDefault from "registerAsset" /* 12775 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import closure_5 from "initializeState" /* 7453 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
-let closure_6;
-let error;
+const Image = get_ActivityIndicator.Image;
 ({ QuestsExperimentLocations: closure_6, QuestEmbedFallbackReason: error } = QuestsExperimentLocations);
-let result = require("initializeState").fileFinishedImporting("modules/quests/native/QuestEmbed.native.tsx");
+const ThemeTypes = ME.ThemeTypes;
+const InviteTypes = InviteSendStates.InviteTypes;
+let result = set.fileFinishedImporting("modules/quests/native/QuestEmbed.native.tsx");
 
 export const createQuestsEmbed = function createQuestsEmbed(questId) {
-  let bodyText;
-  let currentUser;
-  let theme;
-  let themeColors;
-  let thumbnailUrl;
-  let titleText;
   questId = questId.questId;
   let merged5 = importDefault;
   let acceptBlurpleLabelBackgroundColor = dependencyMap;
   ({ theme, currentUser } = questId);
-  let acceptLabelGreenColor = getEmbedThemeColors(theme);
+  let acceptLabelGreenColor = getEmbedThemeColorsDefault(theme);
   let obj = isMetaQuest;
   if (obj.isMetaQuest()) {
     const intl9 = tmp2(1236).intl;
@@ -36,7 +33,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     obj.headerColor = colors5.headerColor;
     obj.titleText = intl9.string(tmp2(1236).t["6LxbQM"]);
     ({ titleColor: obj25.titleColor, bodyTextColor: obj25.subtitleColor, bodyTextColor: obj25.bodyTextColor } = colors5);
-    obj.thumbnailUrl = Image.resolveAssetSource(merged5(12775)).uri;
+    obj.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
     obj.embedCanBeTapped = true;
     obj.canBeAccepted = true;
     obj.type = InviteTypes.GUILD;
@@ -64,12 +61,12 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
     isAndroidResult = tmp2Result.isAndroid();
   } else {
     tmp2Result = tmp2(7451);
-    const result = tmp2Result.findQuestOrReplacement(questId, initializeState.quests, initializeState.excludedQuests);
-    const excludedQuests = initializeState.excludedQuests;
+    const result = tmp2Result.findQuestOrReplacement(questId, closure_5.quests, closure_5.excludedQuests);
+    const excludedQuests = closure_5.excludedQuests;
     const value = excludedQuests.get(questId);
     if (null == result) {
       if (tmp3.isFetchingCurrentQuests) {
-        const obj1 = { themeColors: null };
+        obj1 = { themeColors: null };
         obj1[0] = acceptLabelGreenColor;
         ({ bodyText, themeColors } = obj1);
         const colors4 = themeColors.colors;
@@ -111,7 +108,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj4.headerColor = colors6.headerColor;
         obj4.titleText = intl12.string(tmp2(1236).t["rxf+nx"]);
         ({ titleColor: obj34.titleColor, bodyTextColor: obj34.subtitleColor, bodyTextColor: obj34.bodyTextColor } = colors6);
-        obj4.thumbnailUrl = Image.resolveAssetSource(merged5(12775)).uri;
+        obj4.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
         obj4.embedCanBeTapped = true;
         obj4.canBeAccepted = true;
         merged5 = InviteTypes;
@@ -144,7 +141,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
       obj6.headerColor = colors3.headerColor;
       obj6.titleText = intl7.string(tmp2(1236).t.Dd6Daw);
       ({ titleColor: obj18.titleColor, bodyTextColor: obj18.subtitleColor, bodyTextColor: obj18.bodyTextColor } = colors3);
-      obj6.thumbnailUrl = Image.resolveAssetSource(merged5(12775)).uri;
+      obj6.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
       obj6.embedCanBeTapped = true;
       obj6.canBeAccepted = true;
       obj6.type = InviteTypes.GUILD;
@@ -266,7 +263,7 @@ export const createQuestsEmbed = function createQuestsEmbed(questId) {
         obj14.headerColor = colors.headerColor;
         obj14.titleText = intl.string(tmp2(1236).t.Dd6Daw);
         ({ titleColor: obj4.titleColor, bodyTextColor: obj4.subtitleColor, bodyTextColor: obj4.bodyTextColor } = colors);
-        obj14.thumbnailUrl = Image.resolveAssetSource(merged5(12775)).uri;
+        obj14.thumbnailUrl = Image.resolveAssetSource(registerAssetDefault).uri;
         obj14.embedCanBeTapped = true;
         obj14.canBeAccepted = true;
         obj14.type = InviteTypes.GUILD;

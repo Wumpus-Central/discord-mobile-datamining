@@ -1,5 +1,5 @@
 // discord_app/modules/self_mod/SelfModUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_0 from "mergeGuildAvatar" /* 1922 */;
 
 const result = require("set").fileFinishedImporting("modules/self_mod/SelfModUtils.tsx");
 

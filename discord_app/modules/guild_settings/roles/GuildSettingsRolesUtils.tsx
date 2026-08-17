@@ -1,24 +1,24 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRolesUtils.tsx
-import noop from "noop";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES";
-import { AnalyticEvents } from "ME";
-import { fuzzysearch } from "../../../../_runtime/06775_fuzzysearch.js";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { GuildSettingsRoleEditSections as closure_6 } from "MAX_SUBCATEGORIES" /* 16826 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesUtils.tsx");
 
 export const ADD_MEMBER_QUERY_LIMIT = 50;
 export const MAX_PREFETCH_MEMBER_COUNT = 1000;
 export const useGuildMembers = function useGuildMembers(id, callback) {
   const _require = id;
-  let closure_1 = callback;
-  const items = [trackCommunicationDisabled];
+  closure_1 = callback;
+  const items = [closure_4];
   const items1 = [id, callback];
   stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items, () => {
-    const members = outer1_4.getMembers(closure_0);
+    const members = closure_1_4.getMembers(closure_0);
     let found = members;
     if (null != callback) {
       found = members.filter(tmp);
@@ -26,7 +26,7 @@ export const useGuildMembers = function useGuildMembers(id, callback) {
     return found;
   }, items1);
   const obj = _require(stateFromStoresArray[5]);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_5];
   const items3 = [stateFromStoresArray];
   const stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items2, () => stateFromStoresArray.reduce((arg0, userId) => {
     user = user.getUser(userId.userId);
@@ -99,10 +99,10 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
   _require = id;
   stateFromStoresArray = undefined;
   stateFromStoresObject = undefined;
-  const items2 = [trackCommunicationDisabled];
+  const items2 = [closure_4];
   const items3 = [id, callback];
   stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items2, () => {
-    const members = outer1_4.getMembers(closure_0);
+    const members = closure_1_4.getMembers(closure_0);
     let found = members;
     if (null != callback) {
       found = members.filter(tmp);
@@ -110,7 +110,7 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
     return found;
   }, items3);
   let obj = _require(stateFromStoresArray[5]);
-  const items4 = [mergeGuildAvatar];
+  const items4 = [closure_5];
   const items5 = [stateFromStoresArray];
   stateFromStoresObject = _require(stateFromStoresArray[5]).useStateFromStoresObject(items4, () => stateFromStoresArray.reduce((arg0, userId) => {
     user = user.getUser(userId.userId);
@@ -163,9 +163,9 @@ export const useGuildRoleMembers = function useGuildRoleMembers(id, id2, onMembe
   }, items6);
 };
 export const useQueryGuildMembers = function useQueryGuildMembers(id, formatted) {
-  let closure_0 = id;
-  let closure_1 = formatted;
-  let closure_2 = React.useRef(false);
+  closure_0 = id;
+  closure_1 = formatted;
+  closure_2 = React.useRef(false);
   const items = [id, formatted];
   const effect = React.useEffect(() => {
     const members = callback(ref[8]).requestMembers(closure_0, callback, 200);
@@ -174,7 +174,7 @@ export const useQueryGuildMembers = function useQueryGuildMembers(id, formatted)
       current = ref.current;
     }
     if (!current) {
-      callback(ref[9]).track(outer1_7.SEARCH_STARTED, { search_type: "Role Members" });
+      callback(ref[9]).track(closure_1_7.SEARCH_STARTED, { search_type: "Role Members" });
       ref.current = true;
       const tmpResult = callback(ref[9]);
     }
@@ -184,14 +184,14 @@ export const filterFullMembersByQuery = function filterFullMembersByQuery(str, i
   const formatted = str.trim().toLowerCase();
   let tmp8Result = id.id === formatted;
   if (!tmp8Result) {
-    tmp8Result = fuzzysearch(formatted, id.name.toLowerCase());
+    tmp8Result = fuzzysearchDefault(formatted, id.name.toLowerCase());
     const str2 = id.name;
-    const tmp5 = fuzzysearch;
+    const tmp5 = fuzzysearchDefault;
   }
   if (!tmp8Result) {
-    tmp8Result = fuzzysearch(formatted, id.userTag.toLowerCase());
+    tmp8Result = fuzzysearchDefault(formatted, id.userTag.toLowerCase());
     const str3 = id.userTag;
-    const tmp8 = fuzzysearch;
+    const tmp8 = fuzzysearchDefault;
   }
   return tmp8Result;
 };

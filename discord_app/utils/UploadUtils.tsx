@@ -1,6 +1,8 @@
 // discord_app/utils/UploadUtils.tsx
-import { cancel } from "../lib/uploader/Upload.tsx";
-import { getClipCreatedAt } from "../modules/clips/clipPayloadUtils.tsx";
+import set from "set" /* 2 */;
+import cancel from "cancel" /* 4829 */;
+import getClipCreatedAt from "getClipCreatedAt" /* 4831 */;
+
 const items = [
   {
     reName: /\.jpe?g$/i,
@@ -101,7 +103,7 @@ const items = [
     type: "image/webm"
   }
 ];
-const result = require("set").fileFinishedImporting("utils/UploadUtils.tsx");
+const result = set.fileFinishedImporting("utils/UploadUtils.tsx");
 
 export const MAX_TOTAL_ATTACHMENT_SIZE = 524288000;
 export const MAX_TOTAL_ATTACHMENT_SIZE_MB = 500;
@@ -172,11 +174,11 @@ export const getAttachmentPayload = function getAttachmentPayload(closure_0, clo
   return obj;
 };
 export const getFileData = function getFileData(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let xMLHttpRequest = new XMLHttpRequest();
   return new Promise((arg0, arg1) => {
-    let closure_0 = arg0;
-    const xMLHttpRequest = arg1;
+    closure_0 = arg0;
+    xMLHttpRequest = arg1;
     xMLHttpRequest.open("GET", closure_0, true);
     xMLHttpRequest.responseType = "blob";
     xMLHttpRequest.onabort = (arg0) => lib(arg0);
@@ -196,10 +198,10 @@ export const getFileData = function getFileData(arg0) {
   });
 };
 export const getFileContentLength = function getFileContentLength(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0, onerror) => {
-    let closure_0 = arg0;
-    let closure_1 = onerror;
+    closure_0 = arg0;
+    closure_1 = onerror;
     const xMLHttpRequest = new XMLHttpRequest();
     xMLHttpRequest.open("HEAD", closure_0, true);
     xMLHttpRequest.onload = () => {
@@ -213,7 +215,7 @@ export const getFileContentLength = function getFileContentLength(arg0) {
             }
           }
           const _Error = Error;
-          const error = new Error("Content-Length header is missing");
+          error = new Error("Content-Length header is missing");
           onerror(error);
         }
       }
@@ -227,9 +229,6 @@ export const getFileContentLength = function getFileContentLength(arg0) {
   });
 };
 export const getFile = function getFile(overrideType) {
-  let i;
-  let overrideFilename;
-  let uri;
   ({ uri, i, overrideFilename } = overrideType);
   let str = overrideType.overrideType;
   let str3;

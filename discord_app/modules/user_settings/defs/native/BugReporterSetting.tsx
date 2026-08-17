@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/BugReporterSetting.tsx
-import zustandStore from "zustandStore";
-import createToggle from "createToggle";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../bug_reporter/BugReporterExperiment.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import apexExperimentDefault from "apexExperiment" /* 10156 */;
+import closure_3 from "zustandStore" /* 10127 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function useBugReporterExperimentSettingPredicate() {
-  return apexExperiment.useConfig({ location: "native-settings" }).hasBugReporterAccess;
+  return apexExperimentDefault.useConfig({ location: "native-settings" }).hasBugReporterAccess;
 }
 createToggle = {
   useTitle() {
@@ -20,15 +20,15 @@ createToggle = {
   onPress: function handleBugReporterSettingPress() {
     if (!field.getField("isReportOpen")) {
       field.setState({ isReportOpen: true });
-      ModalActionCreators.pushLazy(asyncRequireImpl(10128, dependencyMap.paths));
-      const obj2 = ModalActionCreators;
+      _modDef5260.pushLazy(asyncRequireImpl(10128, dependencyMap.paths));
+      const obj2 = _modDef5260;
     }
   },
   withArrow: true,
   usePredicate: useBugReporterExperimentSettingPredicate
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("handleClose").fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/BugReporterSetting.tsx");
 
 export default createToggle;
 export { useBugReporterExperimentSettingPredicate };

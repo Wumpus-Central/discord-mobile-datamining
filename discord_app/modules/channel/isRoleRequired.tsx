@@ -1,8 +1,13 @@
 // discord_app/modules/channel/isRoleRequired.tsx
-import { GUILD_NON_CATEGORY_CHANNEL_TYPES as closure_2 } from "createChannelRecord";
-import { Permissions } from "sum";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import fromStringAll from "fromString" /* 506 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
 
-const result = require("applyOverwrites").fileFinishedImporting("modules/channel/isRoleRequired.tsx");
+let closure_2 = createChannelRecord.GUILD_NON_CATEGORY_CHANNEL_TYPES;
+const Permissions = sum.Permissions;
+const result = set.fileFinishedImporting("modules/channel/isRoleRequired.tsx");
 
 export default function isRoleRequired(guild_id) {
   if (null == guild_id) {
@@ -14,12 +19,12 @@ export default function isRoleRequired(guild_id) {
           if (!obj.canEveryoneRole(Permissions.CONNECT, guild_id)) {
             return true;
           }
-          obj = importAll(4026);
+          obj = applyOverwritesAll;
         }
         let hasItem = null != tmp4;
         if (hasItem) {
-          hasItem = importAll(506).has(tmp4.deny, Permissions.VIEW_CHANNEL);
-          const obj2 = importAll(506);
+          hasItem = fromStringAll.has(tmp4.deny, Permissions.VIEW_CHANNEL);
+          const obj2 = fromStringAll;
         }
         return hasItem;
       }

@@ -1,8 +1,10 @@
 // discord_app/modules/polls/usePollDurationOptions.tsx
-import { PollDurations } from "POLL_ATTACHMENT_FOLDER";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 
-const result = require("set").fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
+const PollDurations = POLL_ATTACHMENT_FOLDER.PollDurations;
+const result = set.fileFinishedImporting("modules/polls/usePollDurationOptions.tsx");
 
 export default function usePollDurationOptions() {
   const obj = {};

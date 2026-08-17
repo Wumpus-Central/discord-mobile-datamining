@@ -1,23 +1,23 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx
-import useTheme from "useTheme";
-import { Endpoints } from "ME";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../lib/Platforms.tsx";
-import { PlatformTypes } from "../connections/ConnectionsHooks.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import PlatformTypes from "PlatformTypes" /* 5220 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function createFetchKeys(arg0, arr) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return arr.map((arg0) => closure_0 + arg0);
 }
 function getUserIdFromFetchKey(arg0) {
   return arg0.split("-")[1];
 }
 function updateFetchRequests(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const item = arr.forEach((arg0) => {
-    outer1_5[arg0] = closure_0;
+    closure_1_5[arg0] = closure_0;
   });
 }
 function _transformFetchMemberSupplementalResponse(userId) {
@@ -26,11 +26,11 @@ function _transformFetchMemberSupplementalResponse(userId) {
 function _fetchMemberSupplemental() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (v0 === 2) {
         v0 = 3;
@@ -39,7 +39,7 @@ function _fetchMemberSupplemental() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -58,32 +58,32 @@ function _fetchMemberSupplemental() {
               obj[0] = arg1;
               return obj;
             } else {
-              let useTheme = tmp3;
+              closure_3 = tmp3;
               let arr2 = tmp7;
-              let c1;
+              closure_1 = undefined;
               arr2 = undefined;
-              useTheme = undefined;
-              let closure_4;
-              let c5;
+              closure_3 = undefined;
+              closure_4 = undefined;
+              c5 = undefined;
               constants = undefined;
               v0 = undefined;
-              const tmp53 = v0(callback, c1);
-              c1 = tmp53;
+              const tmp53 = v0(callback, closure_1);
+              closure_1 = tmp53;
               arr2 = (function getFetchchableUsers(arr) {
                 const found = arr.filter((arg0) => table[arg0] <= constants.UNFETCHED);
                 return found.map(closure_8);
               })(tmp53);
               if (0 === arr2.length) {
                 v0 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = [];
                 return obj1;
               } else {
-                outer1_9(tmp53, constants.PENDING);
+                closure_1_9(tmp53, constants.PENDING);
                 c5 = 1;
-                const HTTP = callback(outer1_2[7]).HTTP;
+                const HTTP = callback(closure_1_2[7]).HTTP;
                 const obj2 = { url: null, body: null, rejectWithError: true };
-                obj2[0] = outer1_4.MEMBER_SAFETY_SUPPLEMENTAL(tmp50);
+                obj2[0] = closure_1_4.MEMBER_SAFETY_SUPPLEMENTAL(tmp50);
                 const obj3 = { user_ids: null };
                 obj3[0] = arr2;
                 obj2[1] = obj3;
@@ -97,7 +97,7 @@ function _fetchMemberSupplemental() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            callback2(c1, constants.FAILED);
+            callback2(closure_1, constants.FAILED);
             v0 = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = [];
@@ -112,10 +112,10 @@ function _fetchMemberSupplemental() {
             obj6[0] = arg1;
             return obj6;
           } else {
-            useTheme = arg1;
+            closure_3 = arg1;
             const _Array = Array;
-            if (Array.isArray(useTheme.body)) {
-              const body = useTheme.body;
+            if (Array.isArray(closure_3.body)) {
+              const body = closure_3.body;
               closure_4 = body.map(closure_12);
               c5 = [];
               const item = closure_4.forEach((userId) => arr.push(userId.userId));
@@ -129,7 +129,7 @@ function _fetchMemberSupplemental() {
               obj7[0] = closure_4;
               return obj7;
             } else {
-              callback2(c1, constants.FAILED);
+              callback2(closure_1, constants.FAILED);
               c5 = 0;
               v0 = 3;
               obj = { value: null, done: true };
@@ -149,7 +149,7 @@ function _fetchMemberSupplemental() {
       }
     })();
   });
-  const _fetchMemberSupplemental = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -162,12 +162,12 @@ let closure_5 = {};
 let closure_6 = { FAILED: 0, [0]: "FAILED", UNFETCHED: 1, [1]: "UNFETCHED", PENDING: 2, [2]: "PENDING", SUCCEEDED: 3, [3]: "SUCCEEDED", FAILED_NO_RETRY: 4, [4]: "FAILED_NO_RETRY" };
 let obj = { UNSPECIFIED: 0, [0]: "UNSPECIFIED", BOT: 1, [1]: "BOT", INTEGRATION: 2, [2]: "INTEGRATION", DISCOVERY: 3, [3]: "DISCOVERY", HUB: 4, [4]: "HUB", INVITE: 5, [5]: "INVITE", VANITY_URL: 6, [6]: "VANITY_URL", MANUAL_MEMBER_VERIFICATION: 7, [7]: "MANUAL_MEMBER_VERIFICATION", SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL: 8, [8]: "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL" };
 obj = { DISCORD: "discord", TWITCH: "twitch", YOUTUBE: "youtube", GUILD_SUBSCRIPTION: "guild_subscription" };
-const result = require("getSystemLocale").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetySupplementalUtils.tsx");
 
 export const registerFetchedSupplementals = function registerFetchedSupplementals(guildId, memberIds) {
-  let closure_0 = guildId;
+  closure_0 = guildId;
   const item = memberIds.forEach((arg0) => {
-    outer1_5[closure_0 + arg0] = outer1_6.SUCCEEDED;
+    closure_1_5[closure_0 + arg0] = closure_1_6.SUCCEEDED;
   });
 };
 export const JoinSourceType = obj;
@@ -232,7 +232,7 @@ export const getIntegrationLabel = function getIntegrationLabel(arg0) {
   }
 };
 export const useGetIntegrationIconString = function useGetIntegrationIconString(arg0) {
-  const obj = getPlatformUserUrl;
+  obj = getPlatformUserUrlDefault;
   const value = obj.get(PlatformTypes.useLegacyPlatformType(arg0));
   let tmp5 = null;
   if (null != value) {

@@ -1,25 +1,25 @@
 // discord_app/modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { getBlockedSource } from "../../../../design/components/Illustration/native/redesign/generated/Blocked.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import context from "context" /* 7139 */;
+import contextDefault from "context" /* 7139 */;
+import getBlockedSource from "getBlockedSource" /* 14159 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function BlockedUsersList(userIds) {
   userIds = userIds.userIds;
-  const tmp = createCacheKey();
-  context;
+  const tmp = callback3();
+  contextDefault;
   if (0 === userIds.length) {
     let obj = { Illustration: null, body: null };
     obj[0] = getBlockedSource.Blocked;
@@ -31,7 +31,7 @@ function BlockedUsersList(userIds) {
     obj[0] = tmp4;
     obj = { bottom: true, style: null, children: null };
     obj[1] = tmp.list;
-    const obj1 = { children: null };
+    obj1 = { children: null };
     const obj2 = { style: null, variant: "text-sm/semibold", color: "text-default", children: null };
     obj2[0] = tmp.sectionLabelStyle;
     const intl2 = getSystemLocale.intl;
@@ -50,18 +50,19 @@ function BlockedUsersList(userIds) {
   }
   return tmp7;
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { list: null, sectionLabelStyle: null };
-createCacheKey = { flex: 1, paddingTop: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_8 };
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/BlockedUsersListV2.tsx");
 
 export default function ConnectedBlockedUsersList() {
   let obj = initialize;
-  const items = [markAllUserIdListsStale];
+  const items = [closure_4];
   obj = { userIds: obj.useStateFromStoresArray(items, () => blockedIDs.getBlockedIDs()) };
   return callback(BlockedUsersList, obj);
 };

@@ -1,29 +1,22 @@
 // discord_app/modules/oauth2/native/authorizeCallback.tsx
-import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { Linking } from "../../../lib/native/Linking.tsx";
-import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-import { NativeModules } from "../../links/native/BrowserManager.tsx";
+import set from "set" /* 2 */;
+import keys from "keys" /* 691 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef4090 from "module_4090" /* 4090 */;
+import NativeModules from "NativeModules" /* 4340 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import OAUTH2_AUTHORIZE_MODAL_KEY from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
 
-let c3;
-let c4;
 ({ OAUTH2_SUCCESS_RESULT_MODAL_KEY: c3, OAUTH2_ERROR_RESULT_MODAL_KEY: c4 } = OAUTH2_AUTHORIZE_MODAL_KEY);
 const re5 = /oauth2\/authorized/;
 const re6 = /oauth2\/error/;
-const result = require("error").fileFinishedImporting("modules/oauth2/native/authorizeCallback.tsx");
+const result = set.fileFinishedImporting("modules/oauth2/native/authorizeCallback.tsx");
 
 export default function authorizeCallback(arg0) {
-  let _location;
-  let canceled;
-  let host;
-  let pathname;
-  let searchParams;
-  let wasDeepLink;
   ({ location: _location, canceled, wasDeepLink } = arg0);
   if (null != _location) {
-    let toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(_location);
+    let toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(_location);
     if (toURLSafeResult == null) {
       toURLSafeResult = {};
     }
@@ -73,15 +66,15 @@ export default function authorizeCallback(arg0) {
       wasDeepLink = browserManagerSelectedBrowser === keys.WebBrowserType.IN_APP;
       const obj5 = NativeModules;
     }
-    const obj2 = isDiscordProxiedAssetUrl;
+    const obj2 = isDiscordProxiedAssetUrlDefault;
     let SAFARI;
     if (wasDeepLink) {
       SAFARI = keys.WebBrowserType.SAFARI;
     }
-    Linking.openURL(_location, SAFARI);
-    const tmp8Result2 = Linking;
+    _modDef4090.openURL(_location, SAFARI);
+    const tmp8Result2 = _modDef4090;
   } else if (!canceled) {
-    obj = ModalActionCreators;
+    obj = _modDef5260;
     obj.pushLazy(asyncRequireImpl(9776, dependencyMap.paths), undefined, closure_4);
   }
 };

@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/VideoUploadQualitySetting.tsx
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsText } from "../../chat/native/UserSettingsText.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import UserSettingsText from "UserSettingsText" /* 14771 */;
+import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -15,7 +15,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.CHAT,
   useValue: function useVideoUploadQualitySettingValue() {
-    const items = [CHANNEL_SIDEBAR_WIDTH];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => videoUploadQuality.videoUploadQuality);
   },
   onValueChange: function onVideoUploadQualitySettingValueChange(videoUploadQuality) {
@@ -23,7 +23,7 @@ createToggle = {
     obj = { videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
-    ({ lowQualityImageMode: obj2[2], dataSavingMode: obj2[3] } = CHANNEL_SIDEBAR_WIDTH);
+    ({ lowQualityImageMode: obj2[2], dataSavingMode: obj2[3] } = closure_2);
     const result = obj.setVideoUploadQuality(obj);
   },
   useOptions: function useVideoUploadQualitySettingOptions() {
@@ -46,6 +46,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VideoUploadQualitySetting.tsx");
 
 export default createToggle;

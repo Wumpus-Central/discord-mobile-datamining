@@ -1,15 +1,9 @@
 // discord_app/modules/messages/parseReactionPermissions.tsx
-const result = require("set").fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/messages/parseReactionPermissions.tsx");
 
 export default function parseReactionPermissions(arg0) {
-  let canAddNewReactions;
-  let canChat;
-  let channel;
-  let communicationDisabled;
-  let isActiveChannelOrUnarchivableThread;
-  let isAutomodQuarantined;
-  let isLurking;
-  let renderReactions;
   ({ channel, canChat, isLurking, isActiveChannelOrUnarchivableThread, renderReactions, canAddNewReactions, communicationDisabled, isAutomodQuarantined } = arg0);
   const isPrivateResult = channel.isPrivate();
   const isMediaThreadResult = channel.isMediaThread();

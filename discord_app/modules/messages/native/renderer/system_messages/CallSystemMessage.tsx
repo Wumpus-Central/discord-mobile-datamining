@@ -1,15 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/CallSystemMessage.tsx
-import getParticipants from "getParticipants";
-import fetchFingerprint from "fetchFingerprint";
-import updateVoiceState from "updateVoiceState";
-import { ME } from "ME";
-import { ParticipantTypes } from "ParticipantTypes";
-import { useIsCallActive } from "../../../../calls/mobile/useIsCallActive.tsx";
-import { getHumanizedCallDuration } from "../../../getHumanizedCallDuration.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
+import useIsCallActive from "useIsCallActive" /* 8204 */;
+import closure_3 from "getParticipants" /* 4773 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
+import { ME } from "ME" /* 676 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 
-const require = arg1;
-const result = require("updateVoiceState").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/CallSystemMessage.tsx");
 
 export const createCallSystemMessage = function createCallSystemMessage(message) {
   message = message.message;
@@ -17,7 +17,7 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   const channelId = message.getChannelId();
   const call = message.call;
   userVoiceChannelId = userVoiceChannelId.getUserVoiceChannelId(ME, id);
-  const tmp6 = getHumanizedCallDuration(message);
+  const tmp6 = getHumanizedCallDurationDefault(message);
   participants = participants.getParticipants(channelId);
   let obj = useIsCallActive;
   const checkIsCallActiveResult = obj.checkIsCallActive(channelId, message.id);
@@ -73,6 +73,6 @@ export const createCallSystemMessage = function createCallSystemMessage(message)
   }
   obj = { title: stringResult1, description: formatToPlainStringResult, isCallActive: checkIsCallActiveResult, missed: tmp9, avatarURLs: mapped, rawMilliseconds: timestamp.valueOf() };
   timestamp = message.timestamp;
-  const merged = Object.assign(createCommonMessage(message));
+  const merged = Object.assign(createCommonMessageDefault(message));
   return obj;
 };

@@ -1,27 +1,24 @@
 // discord_app/stores/LocalActivityStore.tsx
-import _slicedToArray from "_slicedToArray";
-import participantFromServer from "participantFromServer";
-import addApplication from "addApplication";
-import initialize from "initialize";
-import updateActivities from "updateActivities";
-import upsertAccount from "upsertAccount";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import reset from "reset";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import gameFromServer from "gameFromServer";
-import makeTwitchRequest from "makeTwitchRequest";
-import handleConnectionOpen from "handleConnectionOpen";
-import handleUpdate from "handleUpdate";
-import ME from "ME";
-import { Store } from "initialize";
-import { isUndefinedOrNull } from "../../_runtime/00659_isUndefinedOrNull.js";
+import initializeDefault from "initialize" /* 589 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "participantFromServer" /* 1390 */;
+import closure_5 from "addApplication" /* 4478 */;
+import closure_6 from "initialize" /* 4504 */;
+import closure_7 from "updateActivities" /* 7252 */;
+import closure_8 from "upsertAccount" /* 7241 */;
+import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_10 from "reset" /* 4652 */;
+import closure_11 from "ensureGuildLoaded" /* 1391 */;
+import closure_12 from "gameFromServer" /* 4509 */;
+import closure_13 from "makeTwitchRequest" /* 7255 */;
+import closure_14 from "handleConnectionOpen" /* 1979 */;
+import closure_15 from "handleUpdate" /* 4541 */;
+import ME from "ME" /* 676 */;
 
-let closure_16;
-let closure_17;
-let closure_18;
 const require = arg1;
 function updateActivities() {
-  let id;
   const items = [];
   const CustomStatusSetting = items(streamerActiveStreamMetadata[14]).CustomStatusSetting;
   const setting = CustomStatusSetting.getSetting();
@@ -43,7 +40,7 @@ function updateActivities() {
     let tmpResult = tmp(tmp2[15]);
     items.push(tmpResult.getActivityFromCustomStatus(setting));
   }
-  const items1 = [...updateActivities.getActivities()];
+  const items1 = [...closure_7.getActivities()];
   items.push.apply(items1);
   stream = stream.getStream();
   if (null != stream) {
@@ -55,7 +52,6 @@ function updateActivities() {
   const set = new Set();
   let arr2 = set(tmp2[16]);
   const item = arr2.forEach(closure_20, (arg0) => {
-    let tmp;
     [, tmp] = arg0;
     if (null != tmp.application_id) {
       set.add(tmp.name);
@@ -129,7 +125,7 @@ function updateActivities() {
     if (null != tmp26.name) {
       if (!tmp35) {
         if (!tmp43) {
-          const findGameResult = gameFromServer.findGame(tmp26);
+          const findGameResult = closure_12.findGame(tmp26);
           obj = { type: null, name: null, application_id: null, timestamps: null };
           obj[0] = constants.PLAYING;
           ({ name: obj9[1], id } = tmp26);
@@ -145,7 +141,7 @@ function updateActivities() {
           if (c21 == null) {
             start2 = tmp26.start;
           }
-          const obj1 = { start: null };
+          obj1 = { start: null };
           obj1[0] = start2;
           obj[3] = obj1;
           const merged1 = Object.assign(tmp(tmp2[18]).maybeAddAdditionalGameMetadata(tmp26));
@@ -167,12 +163,13 @@ function updateActivities() {
 let closure_19 = [];
 let closure_20 = {};
 let c21 = null;
+const Store = initializeDefault.Store;
 class LocalActivityStore extends Store {
 }
 const prototype = LocalActivityStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(addApplication, reset, ensureGuildLoaded, participantFromServer, makeTwitchRequest, updateActivities, gameFromServer, initialize, handleConnectionOpen, handleUpdate, upsertAccount, handleConnectionClosedOrResumed);
-  const items = [updateActivities];
+  this.waitFor(closure_5, closure_10, closure_11, closure_4, closure_13, closure_7, closure_12, closure_6, closure_14, closure_15, closure_8, closure_9);
+  const items = [closure_7];
   this.syncWith(items, () => {
     callback();
   });
@@ -184,14 +181,14 @@ prototype["getPrimaryActivity"] = function getPrimaryActivity() {
   return closure_19[0];
 };
 prototype["getApplicationActivity"] = function getApplicationActivity(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return this.findActivity((application_id) => application_id.application_id === closure_0);
 };
 prototype["getCustomStatusActivity"] = function getCustomStatusActivity() {
   return this.findActivity((type) => type.type === constants.CUSTOM_STATUS);
 };
-prototype["findActivity"] = function findActivity(participantFromServer) {
-  return closure_19.find(participantFromServer);
+prototype["findActivity"] = function findActivity(closure_4) {
+  return closure_19.find(closure_4);
 };
 prototype["getApplicationActivities"] = function getApplicationActivities() {
   return closure_20;
@@ -211,7 +208,7 @@ prototype["getActivityForPID"] = function getActivityForPID(arg0) {
   return null;
 };
 LocalActivityStore.displayName = "LocalActivityStore";
-const localActivityStore = new LocalActivityStore(require("dispatcher"), {
+const localActivityStore = new LocalActivityStore(dispatcherDefault, {
   ROBLOX_SUBGAME_UPDATE: updateActivities,
   ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: updateActivities,
   OVERLAY_INITIALIZE: function handleOverlayInitialize(localActivities) {
@@ -220,17 +217,13 @@ const localActivityStore = new LocalActivityStore(require("dispatcher"), {
     updateActivities();
   },
   START_SESSION: function handleStartSession() {
-    let closure_20 = {};
+    closure_20 = {};
     updateActivities();
   },
   LOCAL_ACTIVITY_UPDATE: function handleLocalActivityUpdate(arg0) {
-    let activity;
-    let partyPrivacy;
-    let pid;
-    let socketId;
     ({ socketId, pid, activity, partyPrivacy } = arg0);
     const items = [pid, activity, partyPrivacy];
-    if (isUndefinedOrNull(table[socketId], items)) {
+    if (isUndefinedOrNullDefault(table[socketId], items)) {
       return false;
     } else {
       if (null != activity) {
@@ -256,8 +249,6 @@ const localActivityStore = new LocalActivityStore(require("dispatcher"), {
   STREAM_STOP: updateActivities,
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate() {
     (function recalculateActivityPartyPrivacyFlags() {
-      let tmp8;
-      let tmp9;
       let obj = {};
       let flag = false;
       const entries = Object.entries(obj);
@@ -334,6 +325,6 @@ const localActivityStore = new LocalActivityStore(require("dispatcher"), {
   EMBEDDED_ACTIVITY_CLOSE: updateActivities,
   RUNNING_GAME_TOGGLE_DETECTION: updateActivities
 });
-const result = require("addApplication").fileFinishedImporting("stores/LocalActivityStore.tsx");
+const result = require("set").fileFinishedImporting("stores/LocalActivityStore.tsx");
 
 export default localActivityStore;

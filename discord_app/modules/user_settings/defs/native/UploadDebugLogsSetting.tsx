@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/UploadDebugLogsSetting.tsx
-import batchUpdates from "batchUpdates";
-import { ActivityIndicator } from "get ActivityIndicator";
-import { DebugLogCategory } from "ME";
-import { jsx } from "jsxProd";
-import keys from "keys";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import { DebugLogCategory } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import keys from "keys" /* 644 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function _handleUploadDebugLogSettingPress() {
   const self = this;
   const tmp = callback(function*() {
@@ -48,13 +48,13 @@ function _handleUploadDebugLogSettingPress() {
             } else {
               ANDROID_APP = uploadDebugLogFiles.ANDROID_APP;
             }
-            let c3 = 2;
-            obj8 = outer1_0(outer1_2[6]);
-            uploadDebugLogFiles = outer1_0(outer1_2[7]).uploadDebugLogFiles;
+            c3 = 2;
+            obj8 = closure_1_0(closure_1_2[6]);
+            uploadDebugLogFiles = closure_1_0(closure_1_2[7]).uploadDebugLogFiles;
             uploadDebugLogFiles(ANDROID_APP);
             c4 = 3;
             c5 = 1;
-            const tmp29 = outer1_0(outer1_2[7]);
+            const tmp29 = closure_1_0(closure_1_2[7]);
           }
         } else if (1 === tmp8) {
           c3 = 0;
@@ -66,7 +66,7 @@ function _handleUploadDebugLogSettingPress() {
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            let obj1 = callback2(4094);
+            obj1 = callback2(4094);
             obj1 = { key: "USER_SETTINGS_CACHES_CLEARED", IconComponent: null, content: null };
             obj1[1] = callback(4330).CircleInformationIcon;
             const intl = callback(1236).intl;
@@ -113,7 +113,7 @@ function _handleUploadDebugLogSettingPress() {
       }
     }
   });
-  const _handleUploadDebugLogSettingPress = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -152,6 +152,6 @@ keys = {
   }
 };
 keys = createToggle.createPressable(keys);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UploadDebugLogsSetting.tsx");
 
 export default keys;

@@ -1,24 +1,23 @@
 // discord_app/modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { StatusTypes } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { MobileHomeDrawerExperiment } from "HomeDrawerExperiment.tsx";
-import { HomeDrawerSharedItem } from "HomeDrawerShared.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4235 */;
+import Text from "Text" /* 4734 */;
+import HomeDrawerSharedItem from "HomeDrawerSharedItem" /* 15569 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "sortActivity" /* 4559 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import { StatusTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function HomeDrawerDMsRow() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = initialize;
-  const items = [markAllUserIdListsStale, sortActivity];
+  const items = [closure_5, closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
     friendIDs = friendIDs.getFriendIDs();
     return friendIDs.filter((arg0) => status.getStatus(arg0) !== constants.OFFLINE).length;
@@ -30,7 +29,7 @@ function HomeDrawerDMsRow() {
     obj = { style: null };
     obj[0] = tmp.onlineDot;
     const items1 = [callback(View, obj), ];
-    const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
+    obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children: null };
     const intl = tmp2(1236).intl;
     const obj2 = { numFriends: null };
     obj2[0] = stateFromStores;
@@ -47,15 +46,16 @@ function HomeDrawerDMsRow() {
   obj3[1] = tmp5;
   return callback(HomeDrawerSharedItem.HomeDrawerSharedItem, obj3);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+noopAll;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { subtitle: { flexDirection: "row", alignItems: "center", gap: 4 }, onlineDot: null };
-createCacheKey = { width: 8, height: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.TEXT_STATUS_ONLINE };
+createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("sortActivity").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerDirectMessagesRow.tsx");
 
 export default function HomeDrawerDMsRowWrapper() {
-  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment.MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment2.MobileHomeDrawerExperiment;
   let tmp2 = null;
   if (MobileHomeDrawerExperiment.useConfig({ location: "dm-expanded-children" }).enableHome) {
     tmp2 = null;

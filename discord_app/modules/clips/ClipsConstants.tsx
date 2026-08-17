@@ -1,22 +1,25 @@
 // discord_app/modules/clips/ClipsConstants.tsx
+import timestampDefault from "timestamp" /* 3 */;
+import setDefault from "set" /* 687 */;
+
 let obj = {};
-const result = 30 * require("set").Millis.SECOND;
+const result = 30 * setDefault.Millis.SECOND;
 obj.SECONDS_30 = result;
 obj[result] = "SECONDS_30";
-const MINUTE = require("set").Millis.MINUTE;
+const MINUTE = setDefault.Millis.MINUTE;
 obj.MINUTES_1 = MINUTE;
 obj[MINUTE] = "MINUTES_1";
-const result1 = 2 * require("set").Millis.MINUTE;
+const result1 = 2 * setDefault.Millis.MINUTE;
 obj.MINUTES_2 = result1;
 obj[result1] = "MINUTES_2";
-const result2 = 6 * require("set").Millis.SECOND;
-const result3 = 60 * require("set").Millis.SECOND;
+const result2 = 6 * setDefault.Millis.SECOND;
+const result3 = 60 * setDefault.Millis.SECOND;
 obj = { ORIGINAL: "original", PORTRAIT_9_16: "9:16", LANDSCAPE_16_9: "16:9" };
 obj = { TEXT: "text" };
 const obj1 = { NONE: "none", SMALL: "small", MEDIUM: "medium", LARGE: "large" };
-const result4 = 14 * require("set").Millis.DAY;
+const result4 = 14 * setDefault.Millis.DAY;
 const obj2 = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: obj1.NONE, strokeColor: "#000000" };
-const tmp5 = new require("timestamp")("Clips");
+const tmp5 = new timestampDefault("Clips");
 const result5 = require("set").fileFinishedImporting("modules/clips/ClipsConstants.tsx");
 
 export const ClipsLengthSettings = obj;

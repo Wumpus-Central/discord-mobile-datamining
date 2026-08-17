@@ -1,10 +1,12 @@
 // discord_app/modules/ads/native/AdUserStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c1 = false;
 let c2 = false;
 let c3 = null;
 let c4 = null;
+const Store = initializeDefault.Store;
 class AdUserStore extends Store {
 }
 const prototype = AdUserStore.prototype;
@@ -50,27 +52,27 @@ Object.defineProperty(prototype, "hasFetchedRecently", {
   set: undefined
 });
 prototype["setFetchPromise"] = function setFetchPromise(arg0) {
-  let closure_3 = arg0;
+  closure_3 = arg0;
 };
 AdUserStore.displayName = "AdUserStore";
-const adUserStore = new AdUserStore(require("dispatcher"), {
+const adUserStore = new AdUserStore(dispatcherDefault, {
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
 
   },
   FETCH_AD_USER_START: function handleFetchAdUserStart() {
-    let c1 = true;
-    let closure_4 = Date.now();
+    c1 = true;
+    closure_4 = Date.now();
   },
   FETCH_AD_USER_SUCCESS: function handleFetchAdUserSuccess(advertisingId) {
-    let c1 = false;
-    let c3 = null;
-    let closure_0 = { advertisingId: advertisingId.advertisingId, isLimitAdTrackingEnabled: advertisingId.isLimitAdTrackingEnabled };
-    let c2 = false;
+    c1 = false;
+    c3 = null;
+    closure_0 = { advertisingId: advertisingId.advertisingId, isLimitAdTrackingEnabled: advertisingId.isLimitAdTrackingEnabled };
+    c2 = false;
   },
   FETCH_AD_USER_FAILURE: function handleFetchAdUserFailure() {
-    let c1 = false;
-    let c2 = true;
-    let c3 = null;
+    c1 = false;
+    c2 = true;
+    c3 = null;
   }
 });
 const result = require("set").fileFinishedImporting("modules/ads/native/AdUserStore.tsx");

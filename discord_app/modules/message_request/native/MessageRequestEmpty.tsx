@@ -1,15 +1,13 @@
 // discord_app/modules/message_request/native/MessageRequestEmpty.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getPendingSource } from "../../../design/components/Illustration/native/redesign/generated/Pending.tsx";
-import { Button } from "../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 1297 */;
+import getPendingSource from "getPendingSource" /* 16103 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Button").fileFinishedImporting("modules/message_request/native/MessageRequestEmpty.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/message_request/native/MessageRequestEmpty.tsx");
 
-export default function MessageRequestEmpty(bodyText) {
-  const obj = { Illustration: null, body: null };
-  obj[0] = getPendingSource.Pending;
-  obj[1] = bodyText.bodyText;
-  return jsx(Button.EmptyState, { Illustration: null, body: null });
+export default function MessageRequestEmpty(body) {
+  return jsx(Button.EmptyState, { Illustration: getPendingSource.Pending, body: body.bodyText });
 };

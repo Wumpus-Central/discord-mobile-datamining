@@ -1,20 +1,20 @@
 // discord_app/modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx
-import { CustomCheckoutFlow } from "CustomCheckoutFlow";
-import ME from "ME";
-import { keysSorter } from "../../../../_runtime/04376_keysSorter.js";
-import { _extends } from "../../../../_runtime/metro/04203__extends.js";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import set from "set" /* 2 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import _extends from "_extends" /* 4203 */;
+import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4357 */;
+import keysSorter from "keysSorter" /* 4376 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
+const CustomCheckoutFlow = CustomCheckoutFlow2.CustomCheckoutFlow;
 ({ Routes: c4, LinkingTypes: c5 } = ME);
 const mobile_web_redirect_checkout = "mobile_web_redirect_checkout";
-const result = require("module_1208").fileFinishedImporting("modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx");
+const result = set.fileFinishedImporting("modules/payments/utils/MobileWebRedirectCheckoutUtils.tsx");
 
 export const MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG = "mobile_web_redirect_checkout";
 export const captureMobileWebRedirectCheckoutSentryError = function captureMobileWebRedirectCheckoutSentryError(error, source, tags) {
-  let obj = SentryUtils.native;
+  let obj = _modDef1208;
   obj = { tags: null, extra: null };
   obj = { app_context: mobile_web_redirect_checkout, source };
   const merged = Object.assign(tags.tags);
@@ -29,10 +29,6 @@ export const getCustomCheckoutFlowForAnalytics = function getCustomCheckoutFlowF
   return isMetaQuest.isMetaQuest() ? CustomCheckoutFlow.META_QUEST_WEB_REDIRECT_CHECKOUT : CustomCheckoutFlow.MOBILE_WEB_REDIRECT_CHECKOUT;
 };
 export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
-  let deep_link_type;
-  let flow_type;
-  let pathname;
-  let search;
   const _location = _extends.useLocation();
   ({ pathname, search } = _location);
   const obj = _extends;
@@ -47,8 +43,6 @@ export const useGetCustomCheckoutFlow = function useGetCustomCheckoutFlow() {
   }
 };
 export const getCustomCheckoutFlow = function getCustomCheckoutFlow() {
-  let deep_link_type;
-  let flow_type;
   const parsed = keysSorter.parse(window.location.search);
   ({ deep_link_type, flow_type } = parsed);
   if (!pathname.startsWith(constants.BILLING_MANAGE_SUBSCRIPTION)) {

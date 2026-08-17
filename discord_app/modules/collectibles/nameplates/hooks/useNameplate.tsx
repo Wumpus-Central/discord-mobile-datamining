@@ -1,21 +1,21 @@
 // discord_app/modules/collectibles/nameplates/hooks/useNameplate.tsx
-import noop from "noop";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/hooks/useNameplate.tsx");
 
 export const useNameplate = function useNameplate(user) {
   user = user.user;
   const guildId = user.guildId;
   let stateFromStores;
-  const items = [trackCommunicationDisabled];
+  const items = [closure_3];
   stateFromStores = user(guildId[2]).useStateFromStores(items, () => {
     let member = null;
     if (null != guildId) {
       member = null;
       if (null != user) {
-        member = outer1_3.getMember(tmp, tmp3.id);
+        member = closure_1_3.getMember(tmp, tmp3.id);
       }
     }
     return member;

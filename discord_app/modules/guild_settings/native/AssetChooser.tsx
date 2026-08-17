@@ -1,41 +1,33 @@
 // discord_app/modules/guild_settings/native/AssetChooser.tsx
-import closure_3 from "createCacheKey";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { UPLOAD_MEDIUM_SIZE } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/16753_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16754_registerAsset.js";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import registerAssetDefault from "registerAsset" /* 16753 */;
+import registerAssetDefault2 from "registerAsset" /* 16754 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 ({ View: c4, Image: c5, ImageBackground: closure_6, TouchableWithoutFeedback: error } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
-createCacheKey = { width: "100%", height: 192, borderRadius: require("Themes").radii.xs, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { width: "100%", height: 192, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", bottom: 10, right: 10, shadowColor: require("Themes").unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
+createCacheKey[2] = { position: "absolute", bottom: 10, right: 10, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
 createCacheKey[3] = { width: 16, height: 16 };
-let obj1 = { position: "absolute", bottom: 10, right: 10, shadowColor: require("Themes").unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
-createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, color: require("Themes").unsafe_rawColors.BLUE_345 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let obj1 = { position: "absolute", bottom: 10, right: 10, shadowColor: ThemesDefault.unsafe_rawColors.BLACK, shadowRadius: 10, shadowOffset: { height: 8, width: 0 }, shadowOpacity: 0.2 };
+createCacheKey[4] = { marginTop: 8, fontSize: 14, lineHeight: 18, color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+let closure_12 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class AssetChooser extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleChooseAsset = closure_3(function*() {
-      let obj2;
-      let size;
       if (c3 === 2) {
         c3 = 3;
         HermesBuiltin.throwTypeError();
@@ -65,23 +57,23 @@ class AssetChooser extends PureComponent {
               let base64 = tmp2;
               obj2 = undefined;
               base64 = undefined;
-              ({ size, onChooseAsset: obj2 } = outer1_0.props);
+              ({ size, onChooseAsset: obj2 } = closure_1_0.props);
               if (typeof size === "number") {
-                const obj1 = { size: null };
+                obj1 = { size: null };
                 obj1[0] = size;
                 let tmp15 = obj1;
               } else {
                 obj2 = size;
                 if (size == null) {
                   obj2 = { size: null };
-                  obj2[0] = outer1_8;
+                  obj2[0] = closure_1_8;
                 }
                 tmp15 = obj2;
               }
-              outer1_1(table[8]).openImagePicker(tmp15);
+              closure_1_1(table[8]).openImagePicker(tmp15);
               table = 1;
               c3 = 1;
-              const obj6 = outer1_1(table[8]);
+              const obj6 = closure_1_1(table[8]);
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -130,7 +122,7 @@ prototype["getSource"] = function getSource() {
   }
 };
 prototype["render"] = function render() {
-  const tmp = createCacheKey(this.context);
+  const tmp = callback2(this.context);
   const disabled = this.props.disabled;
   const source = this.getSource();
   let obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, onPress: null, disabled: null, children: null };
@@ -141,16 +133,16 @@ prototype["render"] = function render() {
   obj[4] = disabled;
   let tmp9 = source;
   if (null == source) {
-    tmp9 = registerAsset;
+    tmp9 = registerAssetDefault;
   }
   obj = { source: tmp9, style: tmp.asset, children: null };
   let tmp5Result = null;
   if (!disabled) {
     obj = { style: null, children: null };
     obj[0] = tmp.uploadIconWrapper;
-    const obj1 = { style: null, source: null };
+    obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = registerAsset;
+    obj1[1] = registerAssetDefault2;
     obj[1] = tmp5(closure_5, obj1);
     tmp5Result = tmp5(closure_4, obj);
   }
@@ -175,7 +167,7 @@ prototype["render"] = function render() {
   return closure_11(closure_10, { children });
 };
 AssetChooser.contextType = require("ManaContext").ThemeContext;
-let obj2 = { marginTop: 8, fontSize: 14, lineHeight: 18, color: require("Themes").unsafe_rawColors.BLUE_345 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
+let obj2 = { marginTop: 8, fontSize: 14, lineHeight: 18, color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 
 export default AssetChooser;

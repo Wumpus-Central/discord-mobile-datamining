@@ -1,14 +1,12 @@
 // discord_app/modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "subscribeToKeyboardUIStore" /* 1496 */;
 
 const require = arg1;
-let result = require("subscribeToKeyboardUIStore").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
+let result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx");
 
 export default function useSafeAreaInsetsKeyboardAware() {
-  let c6;
-  let tmp8;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -21,7 +19,7 @@ export default function useSafeAreaInsetsKeyboardAware() {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  let importDefault = flag2;
+  importDefault = flag2;
   let flag3 = obj.includeCustomKeyboardHeight;
   if (flag3 === undefined) {
     flag3 = true;

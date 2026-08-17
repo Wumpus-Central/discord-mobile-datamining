@@ -1,9 +1,11 @@
 // discord_app/modules/parent_tools/ParentalConsentWarningStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = null;
 let c1 = null;
 let c2 = null;
+const PersistedStore = initializeDefault.PersistedStore;
 class ParentalConsentWarningStore extends PersistedStore {
 }
 const prototype = ParentalConsentWarningStore.prototype;
@@ -88,7 +90,7 @@ const items = [
   }
 ];
 ParentalConsentWarningStore.migrations = items;
-const parentalConsentWarningStore = new ParentalConsentWarningStore(require("dispatcher"), {
+const parentalConsentWarningStore = new ParentalConsentWarningStore(dispatcherDefault, {
   PARENTAL_CONSENT_WARNING_FETCH_SUCCESS: function handleFetchSuccess(warning) {
     warning = warning.warning;
     const date = new Date();
@@ -103,13 +105,13 @@ const parentalConsentWarningStore = new ParentalConsentWarningStore(require("dis
     parentalConsentWarningStore.persist();
   },
   PARENTAL_CONSENT_WARNING_CLEARED: function handleWarningCleared() {
-    let c2 = null;
+    c2 = null;
     parentalConsentWarningStore.persist();
   },
   LOGOUT: function handleLogout() {
-    let c0 = null;
-    let c1 = null;
-    let c2 = null;
+    c0 = null;
+    c1 = null;
+    c2 = null;
     parentalConsentWarningStore.persist();
   }
 });

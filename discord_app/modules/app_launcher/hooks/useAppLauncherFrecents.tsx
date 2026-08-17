@@ -1,16 +1,15 @@
 // discord_app/modules/app_launcher/hooks/useAppLauncherFrecents.tsx
-import noop from "noop";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { FetchState } from "recomputeFromAppTokens";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import { WATCH_YOUTUBE_PROD_APP_ID } from "items3";
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
+import findCommandInSectionAll from "findCommandInSection" /* 9555 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "recomputeFromAppTokens" /* 5289 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "initialize" /* 11297 */;
+import { WATCH_YOUTUBE_PROD_APP_ID } from "items3" /* 4481 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
 
 const require = arg1;
 function useFrecentApps(onlyActivityApps) {
-  let context;
-  let sectionDescriptors;
   ({ sectionDescriptors, context } = onlyActivityApps);
   onlyActivityApps = onlyActivityApps.onlyActivityApps;
   const includeAuthorizedAppsAndFetch = onlyActivityApps.includeAuthorizedAppsAndFetch;
@@ -29,10 +28,10 @@ function useFrecentApps(onlyActivityApps) {
     }
     if (tmp) {
       const response = onlyActivityApps(stateFromStores[9]).fetch();
-      const obj = onlyActivityApps(stateFromStores[9]);
+      obj = onlyActivityApps(stateFromStores[9]);
     }
   }, items1);
-  let obj = context(stateFromStores[8]);
+  obj = context(stateFromStores[8]);
   const items2 = [memo];
   const stateFromStoresArray = context(stateFromStores[8]).useStateFromStoresArray(items2, () => {
     if (includeAuthorizedAppsAndFetch) {
@@ -51,8 +50,8 @@ function useFrecentApps(onlyActivityApps) {
   let found = sectionDescriptors.filter((id) => id.id !== constants.FRECENCY && id.id !== tmp.BUILT_IN);
   memo = React.useMemo(() => {
     const items = [];
-    if (c4) {
-      items.push(outer1_9);
+    if (closure_4) {
+      items.push(closure_1_9);
     }
     return items;
   }, items3);
@@ -71,9 +70,9 @@ function useFrecentApps(onlyActivityApps) {
   const items5 = [onlyActivityApps, sortApplicationsViaFrecency, context, memo, stateFromStores1];
   return React.useMemo(() => {
     function hideAgeRestricted(id) {
-      let tmp = false === mergeGuildAvatar;
+      let tmp = false === closure_7;
       if (tmp) {
-        tmp = outer1_1(outer1_3[12])(id.id);
+        tmp = closure_1_1(closure_1_3[12])(id.id);
       }
       return !tmp;
     }
@@ -82,19 +81,19 @@ function useFrecentApps(onlyActivityApps) {
       const found = filter((application) => {
         let isEmbeddedAppResult = null != application.application;
         if (isEmbeddedAppResult) {
-          isEmbeddedAppResult = outer1_0(outer1_3[13]).isEmbeddedApp(application.application);
-          const obj = outer1_0(outer1_3[13]);
+          isEmbeddedAppResult = closure_1_0(closure_1_3[13]).isEmbeddedApp(application.application);
+          obj = closure_1_0(closure_1_3[13]);
         }
         if (isEmbeddedAppResult) {
-          isEmbeddedAppResult = null != outer1_0(outer1_3[14]).queryForPrimaryAppCommand(closure_0, application.id);
-          const obj2 = outer1_0(outer1_3[14]);
+          isEmbeddedAppResult = null != closure_1_0(closure_1_3[14]).queryForPrimaryAppCommand(closure_0, application.id);
+          const obj2 = closure_1_0(closure_1_3[14]);
         }
         return isEmbeddedAppResult;
       });
-      const found1 = found.filter((id) => !recomputeFromAppTokens.includes(id.id));
+      const found1 = found.filter((id) => !closure_5.includes(id.id));
       let found2 = found1.filter(hideAgeRestricted);
     } else {
-      const found3 = filter((id) => !recomputeFromAppTokens.includes(id.id));
+      const found3 = filter((id) => !closure_5.includes(id.id));
       found2 = found3.filter(hideAgeRestricted);
     }
     return found2;
@@ -105,19 +104,15 @@ let obj = { commandTypes: null };
 let items = [require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT];
 obj[0] = items;
 let closure_12 = { placeholderCount: 0, limit: TRUE_OPTION_NAME.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/app_launcher/hooks/useAppLauncherFrecents.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppLauncherFrecents.tsx");
 
 export default function useAppLauncherFrecentCommandsAndApps(arg0) {
-  let context;
-  let filterSection;
-  let onlyActivityApps;
-  let sectionDescriptors;
   ({ context, onlyActivityApps } = arg0);
   let commands;
   let commandsByActiveSection;
   filterSection = undefined;
   let stateFromStores;
-  let obj = commandsByActiveSection(filterSection[7]);
+  obj = commandsByActiveSection(filterSection[7]);
   obj = { context, filters: obj, options: closure_12, allowFetch: true };
   const discovery = obj.useDiscovery(obj);
   commands = discovery.commands;
@@ -125,9 +120,9 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
   ({ sectionDescriptors, filterSection } = discovery);
   let items = [filterSection];
   const effect = stateFromStores.useEffect(() => {
-    filterSection(outer1_10.FRECENCY);
+    filterSection(closure_1_10.FRECENCY);
   }, items);
-  const items1 = [initialize];
+  const items1 = [closure_8];
   stateFromStores = onlyActivityApps(filterSection[8]).useStateFromStores(items1, () => lastUsedCommandId.getLastUsedCommandId());
   obj = {
     loading: discovery.loading,
@@ -143,11 +138,11 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
         if (data == null) {
           data = [];
         }
-        const found = commands.find((id) => id.id === noop);
+        const found = commands.find((id) => id.id === closure_4);
         let tmp6 = data;
         if (null != found) {
           const items = [found];
-          HermesBuiltin.arraySpread(data.filter((id) => id.id !== noop), 1);
+          HermesBuiltin.arraySpread(data.filter((id) => id.id !== closure_4), 1);
           tmp6 = items;
         }
         return tmp6;
@@ -160,12 +155,9 @@ export default function useAppLauncherFrecentCommandsAndApps(arg0) {
   return obj;
 };
 export const useAppLauncherFrecentApps = function useAppLauncherFrecentApps(context) {
-  let allowCommandFetch;
-  let includeAuthorizedAppsAndFetch;
-  let onlyActivityApps;
   context = context.context;
   ({ onlyActivityApps, allowCommandFetch, includeAuthorizedAppsAndFetch } = context);
-  let obj = importAll(9555);
+  obj = findCommandInSectionAll;
   obj = { context, filters: obj, options: closure_12, allowFetch: allowCommandFetch };
   const discovery = obj.useDiscovery(obj);
   obj = { loading: discovery.loading, frecentApps: useFrecentApps(obj1) };

@@ -1,9 +1,11 @@
 // discord_app/modules/launchpad/native/useLaunchPadType.tsx
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
 
-const result = require("create").fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
+const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
+const result = set.fileFinishedImporting("modules/launchpad/native/useLaunchPadType.tsx");
 
 export default function useLaunchPadType() {
   const LaunchPadModeSetting = explicitContentFromProto.LaunchPadModeSetting;

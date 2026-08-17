@@ -1,8 +1,9 @@
 // discord_app/modules/blocked_domains/BlockedDomainManager.tsx
-import "initialize";
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import initializeDefault from "initialize" /* 5038 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class BlockedDomainManager extends tmp2 {
 }
 BlockedDomainManager.prototype["_initialize"] = function _initialize() {

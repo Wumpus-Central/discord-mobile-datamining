@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AppVersionSetting.tsx
-import createToggle from "createToggle";
-import importAllResult from "getConstants";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getClientInfo } from "CopyClientInfoSetting.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getClientInfo from "getClientInfo" /* 14865 */;
+import createToggle from "createToggle" /* 10669 */;
+import importAllResult from "getConstants" /* 1626 */;
 
-const require = arg1;
-const constants = require("getConstants").getConstants();
+require = arg1;
+const constants = importAllResult.getConstants();
 let obj = {
   useTitle: function useAppVersionSettingTitle() {
     const intl = getSystemLocale.intl;
@@ -17,9 +17,9 @@ let obj = {
     const clientInfoString = getClientInfo.getClientInfoString(closure_3.ReleaseChannel);
     const obj = getClientInfo;
     const obj2 = getClientInfo;
-    const clientInfoString1 = obj2.getClientInfoString(importAll(1626).getBuildNumberLabel());
+    const clientInfoString1 = obj2.getClientInfoString(importAllResult.getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj3 = importAll(1626);
+    const obj3 = importAllResult;
     const clientInfoString2 = getClientInfo.getClientInfoString(closure_3.Version);
     if (hasItem) {
       let combined = concat(clientInfoString2, " (", clientInfoString, ")");
@@ -41,9 +41,9 @@ const createStaticResult = createToggle.createStatic({
     const clientInfoString = getClientInfo.getClientInfoString(closure_3.ReleaseChannel);
     const obj = getClientInfo;
     const obj2 = getClientInfo;
-    const clientInfoString1 = obj2.getClientInfoString(importAll(1626).getBuildNumberLabel());
+    const clientInfoString1 = obj2.getClientInfoString(importAllResult.getBuildNumberLabel());
     const hasItem = clientInfoString1.includes("dev");
-    const obj3 = importAll(1626);
+    const obj3 = importAllResult;
     const clientInfoString2 = getClientInfo.getClientInfoString(closure_3.Version);
     if (hasItem) {
       let combined = concat(clientInfoString2, " (", clientInfoString, ")");
@@ -54,6 +54,6 @@ const createStaticResult = createToggle.createStatic({
   },
   usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
 });
-const result = require("getClientInfo").fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AppVersionSetting.tsx");
 
 export default createStaticResult;

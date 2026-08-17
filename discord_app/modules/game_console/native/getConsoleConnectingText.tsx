@@ -1,8 +1,10 @@
 // discord_app/modules/game_console/native/getConsoleConnectingText.tsx
-import { PlatformTypes } from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = require("set").fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
+const PlatformTypes = ME.PlatformTypes;
+const result = set.fileFinishedImporting("modules/game_console/native/getConsoleConnectingText.tsx");
 
 export const getConsoleConnectingText = function getConsoleConnectingText(stateFromStores1, stateFromStores, arg2) {
   let type;

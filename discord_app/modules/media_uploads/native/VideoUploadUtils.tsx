@@ -1,7 +1,10 @@
 // discord_app/modules/media_uploads/native/VideoUploadUtils.tsx
-import { VideoCompressionQuality } from "CHANNEL_SIDEBAR_WIDTH";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
 
-let closure_1 = new require("timestamp")("VideoUploadUtils.tsx");
+const VideoCompressionQuality = CHANNEL_SIDEBAR_WIDTH.VideoCompressionQuality;
+let closure_1 = new timestampDefault("VideoUploadUtils.tsx");
 let VideoQualityTarget;
 class VideoQualityTarget {
   constructor(arg0, arg1, arg2) {
@@ -54,14 +57,14 @@ VideoQualityTarget.fromCompressionQuality = function fromCompressionQuality(vide
   } else {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unknown compression quality: " + videoQualitySetting);
+    error = new Error("Unknown compression quality: " + videoQualitySetting);
     throw error;
   }
   return VERY_HIGH;
 };
 obj = { bitrateFloor: 300000, createHDR: false, frameRate: 30, keyFrameIntervalSeconds: 2, rotationDegrees: 0, skipVideoTranscode: false, targetBitrate: VideoQualityTarget.MEDIUM.targetBitrate, targetHeight: 480, targetWidth: 640, useHEVC: false, videoQuality: VideoQualityTarget.MEDIUM, hevcIsSupported: false, useTranscodedVideoForMovSources: true, transmuxLivePhotos: true, progressUpdateGranularity: 10 };
-const tmp2 = new require("timestamp")("VideoUploadUtils.tsx");
-let result = require("set").fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
+const tmp2 = new timestampDefault("VideoUploadUtils.tsx");
+let result = set.fileFinishedImporting("modules/media_uploads/native/VideoUploadUtils.tsx");
 
 export { VideoQualityTarget };
 export const DEFAULT_VIDEO_ENCODING_CONFIG = obj;
@@ -145,42 +148,42 @@ export const logSourceMetadata = function logSourceMetadata(format) {
     }
     str = format;
   }
-  tmp2.info("Video Source Metadata:");
-  tmp2.info("- Codec: " + str);
-  tmp2.info("- Dimensions: " + format.width + "x" + format.height);
-  tmp2.info("- Bitrate: " + format.bitRate + " bps");
-  tmp2.info("- Frame Rate: " + format.frameRate + " fps");
+  logger.info("Video Source Metadata:");
+  logger.info("- Codec: " + str);
+  logger.info("- Dimensions: " + format.width + "x" + format.height);
+  logger.info("- Bitrate: " + format.bitRate + " bps");
+  logger.info("- Frame Rate: " + format.frameRate + " fps");
   let str2 = "No";
   if (format.isHDRContent) {
     str2 = "Yes";
   }
-  tmp2.info(`- HDR: ${str2}`);
-  tmp2.info("- Rotation Degrees: " + format.rotationDegrees);
-  tmp2.info("- Profile: " + format.sourceProfile);
-  tmp2.info("- Level: " + format.sourceLevel);
-  tmp2.info("- Duration: " + format.durationMs + " ms");
+  logger.info(`- HDR: ${str2}`);
+  logger.info("- Rotation Degrees: " + format.rotationDegrees);
+  logger.info("- Profile: " + format.sourceProfile);
+  logger.info("- Level: " + format.sourceLevel);
+  logger.info("- Duration: " + format.durationMs + " ms");
 };
 export const logEncoderSettings = function logEncoderSettings(videoQuality) {
-  tmp2.info("Encoder Video Quality Settings:");
+  logger.info("Encoder Video Quality Settings:");
   let str = videoQuality.videoQuality;
   str = undefined;
   if (str != null) {
     str = str.toString();
   }
-  tmp2.info("- Compression Quality: " + str);
+  logger.info("- Compression Quality: " + str);
   videoQuality = videoQuality.videoQuality;
   let targetResolution;
   if (videoQuality != null) {
     targetResolution = videoQuality.targetResolution;
   }
-  tmp2.info("- Compression Quality Target Resolution: " + targetResolution + "p");
+  logger.info("- Compression Quality Target Resolution: " + targetResolution + "p");
   const videoQuality2 = videoQuality.videoQuality;
   let targetBitrate;
   if (videoQuality2 != null) {
     targetBitrate = videoQuality2.targetBitrate;
   }
-  tmp2.info("- Compression Quality Max Bitrate: " + targetBitrate + " bps");
-  tmp2.info("Encoder Video Transcoding Settings:");
+  logger.info("- Compression Quality Max Bitrate: " + targetBitrate + " bps");
+  logger.info("Encoder Video Transcoding Settings:");
   const info = obj.info;
   if (videoQuality.skipVideoTranscode) {
     info("- Skip Video Transcode: Yes");

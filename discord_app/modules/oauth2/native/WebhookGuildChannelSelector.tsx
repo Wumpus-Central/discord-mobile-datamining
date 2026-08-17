@@ -1,34 +1,33 @@
 // discord_app/modules/oauth2/native/WebhookGuildChannelSelector.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { View } from "Button";
-import { createChannelRecord } from "createChannelRecord";
-import closure_8 from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { createChannelRecord } from "createChannelRecord" /* 1395 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { selectorGroup: { flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, borderRadius: require("Themes").radii.xs };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: require("Themes").colors.TEXT_SUBTLE, fontWeight: "500" };
-let obj1 = { color: require("Themes").colors.TEXT_SUBTLE, fontWeight: "500" };
-createCacheKey[3] = { color: require("Themes").unsafe_rawColors.RED_400 };
+createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+let obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const WebhookGuildChannelSelector = "WebhookGuildChannelSelector";
-let obj2 = { color: require("Themes").unsafe_rawColors.RED_400 };
-const result = require("noop").fileFinishedImporting("modules/oauth2/native/WebhookGuildChannelSelector.tsx");
+let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/WebhookGuildChannelSelector.tsx");
 
 export default function WebhookGuildChannelSelector(selectedGuildId) {
   selectedGuildId = selectedGuildId.selectedGuildId;
   const selectedChannelId = selectedGuildId.selectedChannelId;
   const onChannelChange = selectedGuildId.onChannelChange;
-  const error = selectedGuildId.error;
+  error = selectedGuildId.error;
   let first;
   let callback;
   let React;
@@ -51,19 +50,17 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       obj[0] = intl.string(selectedGuildId(onChannelChange[13]).t["Re/64R"]);
       const channels = tmp.channels;
       obj[1] = channels.map((id) => {
-        const obj = { label: null, value: null };
-        obj[0] = callback(4984).computeChannelName(callback2(id), mergeGuildAvatar, closure_8);
-        obj[1] = id.id;
+        const obj = { label: callback(4984).computeChannelName(callback2(id), closure_9, closure_8), value: id.id };
         return obj;
       });
       obj[2] = function onItemSelect(arg0) {
         dependencyMap(arg0);
-        outer1_1(outer1_2[10]).hideActionSheet(outer1_13);
+        closure_1_1(closure_1_2[10]).hideActionSheet(closure_1_13);
       };
       obj[3] = selectedChannelId;
-      obj.openLazy(selectedGuildId(onChannelChange[12])(onChannelChange[11], onChannelChange.paths), outer1_13, obj);
+      obj.openLazy(selectedGuildId(onChannelChange[12])(onChannelChange[11], onChannelChange.paths), closure_1_13, obj);
       const tmp7 = selectedGuildId(onChannelChange[12])(onChannelChange[11], onChannelChange.paths);
-      const tmp8 = outer1_13;
+      const tmp8 = closure_1_13;
       const tmp9 = selectedChannelId;
     }
   }, items);
@@ -71,9 +68,9 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
     function _updateChannels() {
       const self = this;
       const tmp = first((arg0) => {
-        let closure_0 = arg0;
-        let c3 = 0;
-        let c4 = 0;
+        closure_0 = arg0;
+        c3 = 0;
+        c4 = 0;
         return (function*(arg0) {
           if (v0 === 2) {
             v0 = 3;
@@ -101,13 +98,13 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let closure_2 = tmp5;
-                  let closure_1 = tmp2;
+                  closure_2 = tmp5;
+                  closure_1 = tmp2;
                   closure_1 = undefined;
-                  let obj2 = callback(outer2_2[15]);
+                  let obj2 = callback(closure_2_2[15]);
                   c3 = 1;
                   v0 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = obj2.fetchChannels(callback);
                   return obj1;
                 }
@@ -127,7 +124,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
                   obj[0] = callback;
                   obj[1] = closure_1;
                   v0(obj);
-                  outer1_5.current = true;
+                  closure_1_5.current = true;
                 }
                 v0 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
@@ -139,7 +136,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
           }
         })();
       });
-      const _updateChannels = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -212,7 +209,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const intl2 = tmp11(tmp12[13]).intl;
       name = intl2.string(tmp11(tmp12[13]).t["Re/64R"]);
     }
-    let obj1 = { label: null, disabled: null, trailing: null, DEPRECATED_style: null, onPress: null };
+    obj1 = { label: null, disabled: null, trailing: null, DEPRECATED_style: null, onPress: null };
     obj1[0] = name;
     obj1[1] = null == selectedGuildId;
     obj1[2] = callback2(selectedGuildId(onChannelChange[18]).FormRow.Arrow, {});

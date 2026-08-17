@@ -1,8 +1,10 @@
 // discord_app/modules/activities/utils/getCurrentUserPresenceActivity.tsx
-const result = require("set").fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/activities/utils/getCurrentUserPresenceActivity.tsx");
 
 export default function getCurrentUserPresenceActivity(getApplicationActivity, getApplicationActivity2) {
-  let closure_0 = arg2;
+  closure_0 = arg2;
   let tmp = null;
   if (null != arg2) {
     let applicationActivity = getApplicationActivity.getApplicationActivity(arg2);

@@ -1,31 +1,20 @@
 // discord_app/modules/soundboard/native/SoundboardSoundPickerCategories.tsx
-import importAllResult from "initialize";
-import get_ActivityIndicator from "HapticFeedbackTypes";
-import { setSearchQuery } from "withEqualityFn";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "isSoundboardSectionNitroLocked";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/10221_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16296_registerAsset.js";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
-import { SoundButtonOverlay } from "../SoundboardTypes.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import SoundButtonOverlay from "SoundButtonOverlay" /* 6824 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import registerAssetDefault from "registerAsset" /* 10221 */;
+import registerAssetDefault2 from "registerAsset" /* 16296 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { setSearchQuery } from "withEqualityFn" /* 16283 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let CATEGORY_ICON_SIZE;
-let NODE_MARGIN;
-let NODE_SIZE;
-let c10;
-let c5;
-let c9;
-let closure_6;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function SoundCategoryItem(style) {
-  let category;
-  let importDefault;
-  let locked;
-  let require;
   ({ category, handlePressCategory: require, index: importDefault, locked } = style);
   if (locked === undefined) {
     locked = false;
@@ -38,13 +27,13 @@ function SoundCategoryItem(style) {
     let obj = { guild: null, style: null };
     obj[0] = guild;
     obj[1] = tmp.guildItem;
-    let tmp13Result = callback(GuildIconSizes, obj);
+    let tmp13Result = callback(GuildIconSizesDefault, obj);
     let tmp4 = null;
     let tmp5 = null;
   } else if (tmp2(6824).SoundboardSoundGridSectionType.FAVORITES === type) {
     const intl3 = tmp2(1236).intl;
     name = intl3.string(tmp2(1236).t.y3LQCG);
-    tmp4 = registerAsset;
+    tmp4 = registerAssetDefault;
     tmp5 = null;
     tmp13Result = null;
   } else if (tmp2(6824).SoundboardSoundGridSectionType.FREQUENTLY_USED === type) {
@@ -58,7 +47,7 @@ function SoundCategoryItem(style) {
   } else if (tmp2(6824).SoundboardSoundGridSectionType.DEFAULTS === type) {
     const intl = tmp2(1236).intl;
     name = intl.string(tmp2(1236).t.Rtvk9X);
-    tmp4 = registerAsset;
+    tmp4 = registerAssetDefault2;
     tmp5 = null;
     tmp13Result = null;
   } else {
@@ -69,7 +58,7 @@ function SoundCategoryItem(style) {
     if (tmp2(6824).SoundboardSoundGridSectionType.SEARCH === type) {
       const intl4 = tmp2(1236).intl;
       name = intl4.string(tmp2(1236).t.sKt3xS);
-      tmp4 = registerAsset;
+      tmp4 = registerAssetDefault2;
       tmp5 = null;
       tmp13Result = null;
     }
@@ -82,7 +71,7 @@ function SoundCategoryItem(style) {
     accessibilityLabel: name,
     children: null
   };
-  const obj1 = { style: items, children: null };
+  obj1 = { style: items, children: null };
   items = [tmp.item, style.style];
   if (tmp13Result == null) {
     tmp13Result = tmp5;
@@ -116,18 +105,18 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 ({ CATEGORY_ICON_SIZE, EXPRESSION_FOOTER_HEIGHT: c9, NODE_SIZE, NODE_MARGIN } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { container: null, item: null, fadedItem: null, activeItem: null, guildItem: null, keyboardItem: null, lockContainer: null, lock: null };
-obj = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderTopColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+obj = { borderTopWidth: StyleSheet.hairlineWidth, paddingHorizontal: 8, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderTopColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 obj[0] = obj;
 createCacheKey = { margin: NODE_MARGIN, height: NODE_SIZE, width: NODE_SIZE, borderRadius: NODE_SIZE / 2, alignItems: "center", justifyContent: "center" };
 obj[1] = createCacheKey;
 obj[2] = { opacity: 0.5 };
-obj[3] = { opacity: 1, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj[3] = { opacity: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[4] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE, borderRadius: CATEGORY_ICON_SIZE / 2 };
 obj[5] = { height: CATEGORY_ICON_SIZE, width: CATEGORY_ICON_SIZE };
-let obj2 = { opacity: 1, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
-obj[6] = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center" };
-let obj3 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center" };
-obj[7] = { width: 7.5, height: 7.5, tintColor: require("Themes").colors.TEXT_DEFAULT };
+let obj2 = { opacity: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj[6] = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+let obj3 = { width: 12, height: 12, position: "absolute", bottom: 0, end: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+obj[7] = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_14 = importAllResult.memo(importAllResult.forwardRef((arg0, ref) => {
   const obj = {};
@@ -135,17 +124,15 @@ let closure_14 = importAllResult.memo(importAllResult.forwardRef((arg0, ref) => 
   obj.ref = ref;
   return callback(closure_6, obj);
 }));
-let obj4 = { width: 7.5, height: 7.5, tintColor: require("Themes").colors.TEXT_DEFAULT };
+let obj4 = { width: 7.5, height: 7.5, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories(guildId) {
-  let categories;
-  let style;
   guildId = guildId.guildId;
   const categoryIndex = guildId.categoryIndex;
   const listRef = guildId.listRef;
-  let importAllResult;
+  importAllResult = undefined;
   let ref;
-  let closure_5;
-  let closure_6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   let callback2;
   let stateFromStores;
   ({ categories, style } = guildId);
@@ -159,7 +146,7 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
     if (null != ref.current) {
       if (null != ref2.current) {
         if (null != ref.current) {
-          const result = categoryIndex * outer1_9;
+          const result = categoryIndex * closure_1_9;
           if (tmp7) {
             const current = tmp3.current;
             const obj = { offset: null };
@@ -183,11 +170,11 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
     closure_6.current = contentOffset.x + nativeEvent.layoutMeasurement.width;
   }, []);
   callback2 = importAllResult.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     callback2("");
     setImmediate(() => {
       let current;
-      if (outer1_2 != null) {
+      if (closure_1_2 != null) {
         current = tmp.current;
       }
       if (null != current) {
@@ -206,8 +193,6 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
   const items3 = [stateFromStores, guildId, callback2, categoryIndex, , ];
   ({ activeItem: arr4[4], fadedItem: arr4[5] } = tmp);
   callback3 = importAllResult.useCallback((arg0) => {
-    let index;
-    let item;
     ({ item, index } = arg0);
     let result = !stateFromStores;
     if (!stateFromStores) {
@@ -217,14 +202,14 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
     obj = { category: item, index, style: null, handlePressCategory: null, locked: null };
     if (null != categoryIndex) {
       if (index === categoryIndex) {
-        let fadedItem = _undefined.activeItem;
+        let fadedItem = closure_3.activeItem;
       }
       obj[2] = fadedItem;
       obj[3] = callback2;
       obj[4] = result;
       return tmp5(tmp6, obj);
     }
-    fadedItem = _undefined.fadedItem;
+    fadedItem = closure_3.fadedItem;
   }, items3);
   obj = { hostName: "soundboard-footer", children: null };
   obj = { style: items4, children: null };
@@ -250,6 +235,6 @@ const memoResult = importAllResult.memo(function SoundboardSoundPickerCategories
   obj[1] = callback2(closure_5, obj);
   return callback(guildId(listRef[23]).Portal, obj);
 });
-let result = require("withEqualityFn").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
+let result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardSoundPickerCategories.tsx");
 
 export default memoResult;

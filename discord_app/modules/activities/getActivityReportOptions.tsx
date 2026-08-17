@@ -1,8 +1,10 @@
 // discord_app/modules/activities/getActivityReportOptions.tsx
-import { ActivityFeedbackReasons } from "items3";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import items3 from "items3" /* 4481 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");
+const ActivityFeedbackReasons = items3.ActivityFeedbackReasons;
+const result = set.fileFinishedImporting("modules/activities/getActivityReportOptions.tsx");
 
 export default function getActivityReportOptions(arg0) {
   let flag = arg1;
@@ -44,7 +46,7 @@ export default function getActivityReportOptions(arg0) {
   }
   obj[1] = string3Result;
   items[2] = obj;
-  const obj1 = { value: ActivityFeedbackReasons.NOT_FUN, label: null };
+  obj1 = { value: ActivityFeedbackReasons.NOT_FUN, label: null };
   const intl4 = tmp6(1236).intl;
   const string4 = intl4.string;
   const t4 = tmp6(1236).t;

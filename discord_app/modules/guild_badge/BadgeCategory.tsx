@@ -1,7 +1,9 @@
 // discord_app/modules/guild_badge/BadgeCategory.tsx
-import { GuildVisibility } from "GuildTraits.tsx";
+import set from "set" /* 2 */;
+import GuildVisibility from "GuildVisibility" /* 9155 */;
+
 const obj = { PARTNERED: 0, [0]: "PARTNERED", VERIFIED: 1, [1]: "VERIFIED", VERIFIED_AND_PARTNERED: 2, [2]: "VERIFIED_AND_PARTNERED", COMMUNITY: 3, [3]: "COMMUNITY", DISCOVERABLE: 4, [4]: "DISCOVERABLE", STAFF: 5, [5]: "STAFF", NONE: 6, [6]: "NONE" };
-const result = require("set").fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
+const result = set.fileFinishedImporting("modules/guild_badge/BadgeCategory.tsx");
 
 export const BadgeCategory = obj;
 export const getBadgeCategory = function getBadgeCategory(guildTraits) {

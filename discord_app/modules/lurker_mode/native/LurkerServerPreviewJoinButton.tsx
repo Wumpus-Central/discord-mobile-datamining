@@ -1,11 +1,11 @@
 // discord_app/modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import initialize from "initialize";
-import { JoinGuildSources } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "initialize" /* 4022 */;
+import { JoinGuildSources } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c5 = importAllResult;
@@ -45,31 +45,31 @@ const memoResult = importAllResult.memo(function LurkerServerPreviewJoinButton(g
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
-            if (outer1_2) {
+            closure_0 = tmp3;
+            if (closure_1_2) {
               c4 = 3;
             } else {
-              const lurkingSourceForGuild = outer1_7.getLurkingSourceForGuild(outer1_0);
+              const lurkingSourceForGuild = closure_1_7.getLurkingSourceForGuild(closure_1_0);
               let type;
               if (lurkingSourceForGuild != null) {
                 type = lurkingSourceForGuild.type;
               }
-              if (type === outer1_8.DIRECTORY_ENTRY) {
-                const channel = outer1_6.getChannel(lurkingSourceForGuild.directoryChannelId);
+              if (type === closure_1_8.DIRECTORY_ENTRY) {
+                const channel = closure_1_6.getChannel(lurkingSourceForGuild.directoryChannelId);
                 if (null != channel) {
-                  const guildId = channel.getGuildId();
-                  const result = outer1_0(outer1_2[7]).setHubProgressActionComplete(guildId, outer1_0(outer1_2[8]).HubProgressStep.JOIN_GUILD);
-                  const obj6 = outer1_0(outer1_2[7]);
+                  guildId = channel.getGuildId();
+                  const result = closure_1_0(closure_1_2[7]).setHubProgressActionComplete(guildId, closure_1_0(closure_1_2[8]).HubProgressStep.JOIN_GUILD);
+                  const obj6 = closure_1_0(closure_1_2[7]);
                 }
               }
               v02(true);
               v02 = 1;
-              let obj1 = { source: null };
+              obj1 = { source: null };
               obj1[0] = v0;
               v0 = 2;
               c4 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = v0(outer1_2[9]).joinGuild(outer1_0, obj1);
+              obj2[0] = v0(closure_1_2[9]).joinGuild(closure_1_0, obj1);
               return obj2;
             }
           }
@@ -89,7 +89,7 @@ const memoResult = importAllResult.memo(function LurkerServerPreviewJoinButton(g
             obj3[0] = arg1;
             return obj3;
           } else {
-            obj1 = v0(outer1_2[9]);
+            obj1 = v0(closure_1_2[9]);
             v0 = 3;
             c4 = 1;
             const obj4 = { value: null, done: false };
@@ -126,6 +126,6 @@ const memoResult = importAllResult.memo(function LurkerServerPreviewJoinButton(g
   obj[5] = callback;
   return jsx(guildId(first[10]).Button, { grow: true, variant: "primary", size: "md", loading: first, text: null, onPress: null });
 });
-let result = require("noop").fileFinishedImporting("modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx");
+let result = require("set").fileFinishedImporting("modules/lurker_mode/native/LurkerServerPreviewJoinButton.tsx");
 
 export default memoResult;

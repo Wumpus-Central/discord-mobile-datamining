@@ -1,21 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DesignSystemsLegacyButtonSetting.tsx
-import createToggle from "createToggle";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { ComparisonRow } from "../../design_system/native/UserSettingsDesignSystemLegacyButton.tsx";
 
 obj = {
   useTitle() {
     return "Legacy Button";
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DESIGN_SYSTEMS,
+  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
+  route: ME.UserSettingsSections.DESIGN_SYSTEM_LEGACY_BUTTON,
   getComponent() {
     return ComparisonRow.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsLegacyButtonSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsLegacyButtonSetting.tsx");
 
 export default route;

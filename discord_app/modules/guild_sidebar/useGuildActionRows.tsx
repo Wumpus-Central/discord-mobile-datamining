@@ -1,8 +1,12 @@
 // discord_app/modules/guild_sidebar/useGuildActionRows.tsx
-import _slicedToArray from "_slicedToArray";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
-import { GuildFeatures } from "ME";
+import useIsNewMemberDefault from "useIsNewMember" /* 5284 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 11546 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 11682 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 15483 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "handleSettingsLoadSuccess" /* 5048 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 5281 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useGuildShopVisibleInGuild } from "../creator_monetization/guild_shop/useGuildShopVisibleInGuild.tsx";
 import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
@@ -12,25 +16,19 @@ import { canReviewGuildMemberApplications } from "../guild_member_verification/c
 import { getContextForPermission } from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
 import { useMemberActionsForChannel } from "../guild_onboarding_home/MemberActionUtils.tsx";
 import { useCanSeeOnboardingHome } from "../guild_onboarding_home/OnboardingHomeUtils.tsx";
-import { useIsNewMember } from "../guild_onboarding_home/useIsNewMember.tsx";
 import { computeCanEveryoneInGuildSeeRoleSubscriptions } from "../guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx";
-import { useCanSeeEventsInChannelList } from "../guild_scheduled_events/useCanSeeEventsInChannelList.tsx";
 import { isGuildSpaceAdmin } from "../guild_space/canUseGuildSpace.tsx";
 import { useCanManageGuildOfficialMessages } from "../messages/GuildOfficialMessageUtils.tsx";
 import { apexExperiment } from "../premium/powerups/experiments/MobileBoostProgressBarExperiment.tsx";
-import { useHasAllocateBoostPermission } from "../premium/powerups/hooks/useHasAllocateBoostPermission.tsx";
-import { useTotalPossibleBoostCount } from "../premium/powerups/hooks/useTotalPossibleBoostCount.tsx";
 import { getPrice } from "../slayer_storefront/SlayerStorefrontUtils.tsx";
 import { vibegrationsAppIdFromTopic } from "../vibegrations/lib/VibegrationsUtils.tsx";
 
 const require = arg1;
-let result = require("ChannelListGuildActionRow").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_sidebar/useGuildActionRows.tsx");
 
 export default function useGuildActionRows(id) {
-  let features2;
-  let features3;
   const _require = id;
-  const tmp2 = useCanSeeEventsInChannelList(id.id);
+  const tmp2 = useCanSeeEventsInChannelListDefault(id.id);
   const tmp3 = _require;
   let canReviewGuildMemberApplications = _canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(id.id);
   const obj = _canReviewGuildMemberApplications;
@@ -42,13 +40,13 @@ export default function useGuildActionRows(id) {
   const obj4 = _getPrice;
   const canSeeOnboardingHome = _useCanSeeOnboardingHome.useCanSeeOnboardingHome(id.id);
   const obj5 = _useCanSeeOnboardingHome;
-  const items = [handleSettingsLoadSuccess];
+  const items = [closure_4];
   const items1 = [id.id];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_4.getNewMemberActions(id.id), items1);
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_4.getNewMemberActions(id.id), items1);
   const obj6 = _defaultAreStatesEqual;
   const canManageVibegrations = _vibegrationsAppIdFromTopic.useCanManageVibegrations(id, "useGuildActionRows");
   const obj7 = _vibegrationsAppIdFromTopic;
-  const tmp10 = useIsNewMember(id.id);
+  const tmp10 = useIsNewMemberDefault(id.id);
   const allActionsCompleted = _useMemberActionsForChannel.useAllActionsCompleted(id.id);
   const obj8 = _useMemberActionsForChannel;
   const canAccessMemberSafetyPage = _getContextForPermission.useCanAccessMemberSafetyPage(id.id);
@@ -61,10 +59,10 @@ export default function useGuildActionRows(id) {
   const hasItem2 = features3.has(GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY);
   const obj10 = _isGuildSpaceAdmin;
   const tmp14 = GuildFeatures;
-  const tmp18 = useHasAllocateBoostPermission(id.id);
+  const tmp18 = useHasAllocateBoostPermissionDefault(id.id);
   const mobileBoostProgressBarEnabled = _apexExperiment.useMobileBoostProgressBarEnabled("useGuildActionRows");
   const obj11 = _apexExperiment;
-  const tmp20 = useTotalPossibleBoostCount(id);
+  const tmp20 = useTotalPossibleBoostCountDefault(id);
   const isGuildOfficialMessagesEnabled = _useCanManageGuildOfficialMessages.useIsGuildOfficialMessagesEnabled(id.id, "useGuildActionRows");
   const obj12 = _useCanManageGuildOfficialMessages;
   const gameServerEnabled = _experiment.useGameServerEnabled(id.id, "useGuildActionRows");

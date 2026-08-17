@@ -1,10 +1,10 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx
-import initialize from "initialize";
-import { RTCConnectionQuality } from "ME";
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import closure_2 from "initialize" /* 4558 */;
+import { RTCConnectionQuality } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("mapped").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
 
 export const AVErrorStreamBadNetworkQualityDefinition = {
   getActiveErrors() {

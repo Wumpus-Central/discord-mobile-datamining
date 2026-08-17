@@ -1,34 +1,18 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalLanding.tsx
-import ReactionIcon from "ReactionIcon";
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import sortCategoryList from "sortCategoryList";
-import handleFormInit from "handleFormInit";
-import ME from "ME";
-import jsxProd from "StampIcon";
-import createCacheKey from "createCacheKey";
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "comparator" /* 1980 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "sortCategoryList" /* 15404 */;
+import closure_10 from "handleFormInit" /* 8875 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let map1;
-let unpackModuleId;
 const require = arg1;
 function SettingsSection(guild) {
-  let canConfigureOfficialMessages;
-  let canManageChannels;
-  let canManageGuild;
-  let canManageGuildExpressions;
-  let canManageWebhooks;
-  let canUnlinkChannelLobbies;
-  let canViewAuditLog;
-  let categories;
-  let importDefault;
-  let isGuildAdmin;
   guild = guild.guild;
   ({ isGuildAdmin, canManageGuild, canManageChannels, pushScreen: importDefault } = guild);
   const tmp2 = guild;
@@ -36,11 +20,10 @@ function SettingsSection(guild) {
   let obj = { label: null, arrow: true, icon: null, onPress: null };
   const intl = guild(1236).intl;
   obj[0] = intl.string(guild(1236).t["/dp6yY"]);
-  obj = { IconComponent: null };
-  obj[0] = guild(4330).CircleInformationIcon;
+  obj = { IconComponent: guild(4330).CircleInformationIcon };
   obj[2] = callback(guild(6291).TableRow.Icon, obj);
   obj[3] = function onPress() {
-    return callback(outer1_12.OVERVIEW);
+    return callback(closure_1_12.OVERVIEW);
   };
   const items = [callback(guild(6291).TableRow, obj, "overview")];
   currentUser = currentUser.getCurrentUser();
@@ -48,11 +31,11 @@ function SettingsSection(guild) {
     obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl2 = tmp2(1236).intl;
     obj[0] = intl2.string(tmp2(1236).t["5tbTdV"]);
-    const obj1 = { IconComponent: null };
+    obj1 = { IconComponent: null };
     obj1[0] = tmp2(16740).ModerationIcon;
     obj[2] = tmp(tmp2(6291).TableRow.Icon, obj1);
     obj[3] = function onPress() {
-      return callback(outer1_12.MODERATION);
+      return callback(closure_1_12.MODERATION);
     };
     items.push(tmp(tmp2(6291).TableRow, obj, "moderation"));
   }
@@ -64,14 +47,14 @@ function SettingsSection(guild) {
     obj3[0] = tmp2(8534).ClipboardListIcon;
     obj2[2] = tmp(tmp2(6291).TableRow.Icon, obj3);
     obj2[3] = function onPress() {
-      return callback(outer1_12.AUDIT_LOG);
+      return callback(closure_1_12.AUDIT_LOG);
     };
     items.push(tmp(tmp2(6291).TableRow, obj2, "auditlogs"));
   }
   if (!canManageChannels) {
     let canManageACategoryResult = null != currentUser;
     if (canManageACategoryResult) {
-      let obj6 = importAll(4026);
+      let obj6 = applyOverwritesAll;
       canManageACategoryResult = obj6.canManageACategory(currentUser, guild, categories);
     }
     canManageChannels = canManageACategoryResult;
@@ -84,8 +67,8 @@ function SettingsSection(guild) {
     obj5[0] = tmp2(16742).ChannelListIcon;
     obj4[2] = tmp(tmp2(6291).TableRow.Icon, obj5);
     obj4[3] = function onPress() {
-      guild = outer1_9.initGuild(guild.id);
-      callback(outer1_12.CHANNELS);
+      guild = closure_1_9.initGuild(guild.id);
+      callback(closure_1_12.CHANNELS);
     };
     items.push(tmp(tmp2(6291).TableRow, obj4, "channels"));
   }
@@ -104,7 +87,7 @@ function SettingsSection(guild) {
     obj7[0] = tmp2(14311).PuzzlePieceIcon;
     obj6[2] = tmp(tmp2(6291).TableRow.Icon, obj7);
     obj6[3] = function onPress() {
-      return callback(outer1_12.INTEGRATIONS);
+      return callback(closure_1_12.INTEGRATIONS);
     };
     items.push(tmp(tmp2(6291).TableRow, obj6, "integrations"));
   }
@@ -116,7 +99,7 @@ function SettingsSection(guild) {
     obj9[0] = tmp2(7939).ReactionIcon;
     obj8[2] = tmp(tmp2(6291).TableRow.Icon, obj9);
     obj8[3] = function onPress() {
-      return callback(outer1_12.EMOJI);
+      return callback(closure_1_12.EMOJI);
     };
     items.push(tmp(tmp2(6291).TableRow, obj8, "emoji"));
     const obj10 = { label: null, arrow: true, icon: null, onPress: null };
@@ -126,7 +109,7 @@ function SettingsSection(guild) {
     obj11[0] = tmp2(7990).StickerIcon;
     obj10[2] = tmp(tmp2(6291).TableRow.Icon, obj11);
     obj10[3] = function onPress() {
-      return callback(outer1_12.STICKERS);
+      return callback(closure_1_12.STICKERS);
     };
     items.push(tmp(tmp2(6291).TableRow, obj10, "stickers"));
   }
@@ -138,7 +121,7 @@ function SettingsSection(guild) {
     obj13[0] = tmp2(10905).StampIcon;
     obj12[2] = tmp(tmp2(6291).TableRow.Icon, obj13);
     obj12[3] = function onPress() {
-      return callback(outer1_12.OFFICIAL_MESSAGES);
+      return callback(closure_1_12.OFFICIAL_MESSAGES);
     };
     items.push(tmp(tmp2(6291).TableRow, obj12, "official-messages"));
   }
@@ -151,7 +134,7 @@ function SettingsSection(guild) {
     obj15[0] = tmp2(8014).TagIcon;
     obj14[2] = tmp(tmp2(6291).TableRow.Icon, obj15);
     obj14[3] = function onPress() {
-      return callback(outer1_12.TAG);
+      return callback(closure_1_12.TAG);
     };
     items.push(tmp(tmp2(6291).TableRow, obj14, "server-tag"));
   }
@@ -163,7 +146,7 @@ function SettingsSection(guild) {
     obj17[0] = tmp2(8859).ShieldUserIcon;
     obj16[2] = tmp(tmp2(6291).TableRow.Icon, obj17);
     obj16[3] = function onPress() {
-      return callback(outer1_12.SECURITY);
+      return callback(closure_1_12.SECURITY);
     };
     items.push(tmp(tmp2(6291).TableRow, obj16, "security"));
   }
@@ -179,7 +162,7 @@ function SettingsSection(guild) {
     obj19[0] = tmp2(4318).LinkIcon;
     obj18[2] = tmp(tmp2(6291).TableRow.Icon, obj19);
     obj18[3] = function onPress() {
-      return callback(outer1_12.VANITY_URL);
+      return callback(closure_1_12.VANITY_URL);
     };
     items.push(tmp(tmp2(6291).TableRow, obj18, "vanity"));
   }
@@ -211,16 +194,16 @@ function CommunitySection(pushScreen) {
     obj[0] = tmp3(13965).TreehouseIcon;
     obj[2] = tmp2(tmp3(6291).TableRow.Icon, obj);
     obj[3] = function onPress() {
-      return pushScreen(outer1_12.COMMUNITY, {});
+      return pushScreen(closure_1_12.COMMUNITY, {});
     };
     let tmp2Result = tmp2(TableRow, obj, "community-overview");
   } else {
     obj[0] = string(t.ElKTeb);
-    const obj1 = { IconComponent: null };
+    obj1 = { IconComponent: null };
     obj1[0] = tmp3(13965).TreehouseIcon;
     obj[2] = tmp2(tmp3(6291).TableRow.Icon, obj1);
     obj[3] = function onPress() {
-      return pushScreen(outer1_12.COMMUNITY_INTRO, {});
+      return pushScreen(closure_1_12.COMMUNITY_INTRO, {});
     };
     tmp2Result = tmp2(TableRow, obj, "community-intro");
   }
@@ -228,30 +211,26 @@ function CommunitySection(pushScreen) {
   return closure_15(pushScreen(6286).TableRowGroup, obj);
 }
 function UserManagementSection(pushScreen) {
-  let canManageBans;
-  let canManageGuild;
-  let canManageRoles;
   pushScreen = pushScreen.pushScreen;
   ({ canManageGuild, canManageRoles, canManageBans } = pushScreen);
   let obj = { label: null, arrow: true, icon: null, onPress: null };
   const intl = pushScreen(1236).intl;
   obj[0] = intl.string(pushScreen(1236).t["9Oq93m"]);
-  obj = { IconComponent: null };
-  obj[0] = pushScreen(6884).GroupIcon;
+  obj = { IconComponent: pushScreen(6884).GroupIcon };
   obj[2] = callback(pushScreen(6291).TableRow.Icon, obj);
   obj[3] = function onPress() {
-    return pushScreen(outer1_12.MEMBERS);
+    return pushScreen(closure_1_12.MEMBERS);
   };
   const items = [callback(pushScreen(6291).TableRow, obj, "members")];
   if (canManageRoles) {
     obj = { label: null, arrow: true, icon: null, onPress: null };
     const intl2 = tmp2(1236).intl;
     obj[0] = intl2.string(tmp2(1236).t["LPJmL/"]);
-    const obj1 = { IconComponent: null };
+    obj1 = { IconComponent: null };
     obj1[0] = tmp2(8859).ShieldUserIcon;
     obj[2] = tmp(tmp2(6291).TableRow.Icon, obj1);
     obj[3] = function onPress() {
-      return pushScreen(outer1_12.ROLES);
+      return pushScreen(closure_1_12.ROLES);
     };
     items.push(tmp(tmp2(6291).TableRow, obj, "roles"));
   }
@@ -263,7 +242,7 @@ function UserManagementSection(pushScreen) {
     obj3[0] = tmp2(4318).LinkIcon;
     obj2[2] = tmp(tmp2(6291).TableRow.Icon, obj3);
     obj2[3] = function onPress() {
-      return pushScreen(outer1_12.INSTANT_INVITES);
+      return pushScreen(closure_1_12.INSTANT_INVITES);
     };
     items.push(tmp(tmp2(6291).TableRow, obj2, "invites"));
   }
@@ -275,7 +254,7 @@ function UserManagementSection(pushScreen) {
     obj5[0] = tmp2(9830).HammerIcon;
     obj4[2] = tmp(tmp2(6291).TableRow.Icon, obj5);
     obj4[3] = function onPress() {
-      return pushScreen(outer1_12.BANS);
+      return pushScreen(closure_1_12.BANS);
     };
     items.push(tmp(tmp2(6291).TableRow, obj4, "bans"));
   }
@@ -290,39 +269,31 @@ function UserManagementSection(pushScreen) {
   return tmpResult;
 }
 function GuildSettingsModalLandingInner(guild) {
-  let canManageBans;
-  let canManageChannels;
-  let canManageGuild;
-  let canManageGuildExpressions;
-  let canManageRoles;
-  let canManageWebhooks;
-  let canViewAuditLog;
-  let isGuildAdmin;
   guild = guild.guild;
   const updateErrors = guild.updateErrors;
   let navigation;
   let obj = guild(4097);
   const token = obj.useToken(updateErrors(712).modules.mobile.TABLE_ROW_PADDING);
   const tmp5 = callback2();
-  let obj1 = guild(1500);
+  obj1 = guild(1500);
   navigation = obj1.useNavigation();
   let obj2 = guild(589);
-  let items = [comparator];
+  let items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => {
     let id;
     if (guild != null) {
       id = guild.id;
     }
-    const channels = outer1_5.getChannels(id);
+    const channels = closure_1_5.getChannels(id);
     let tmp4;
     if (channels != null) {
-      tmp4 = channels[outer1_13.GUILD_CATEGORY];
+      tmp4 = channels[closure_1_13.GUILD_CATEGORY];
     }
     return tmp4;
   });
   let obj3 = guild(589);
-  let items1 = [getUncachedChannelPermissions];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items1, () => outer1_7.getGuildPermissionProps(guild));
+  let items1 = [closure_7];
+  const stateFromStoresObject = obj3.useStateFromStoresObject(items1, () => closure_1_7.getGuildPermissionProps(guild));
   let obj4 = React;
   const effect = React.useEffect(() => {
     let obj = updateErrors(table[9]);
@@ -334,11 +305,11 @@ function GuildSettingsModalLandingInner(guild) {
   const callback = React.useCallback(() => {
     const items = [...arguments];
     const first = items[0];
-    updateErrors(outer1_3[35]).setSection(first);
+    updateErrors(closure_1_3[35]).setSection(first);
     const items1 = [...items];
     navigation.push.apply(items1);
-    const obj = updateErrors(outer1_3[35]);
-    updateErrors(outer1_3[9]).trackWithMetadata(outer1_14.SETTINGS_PANE_VIEWED, { settings_type: "guild", origin_pane: outer1_12.LANDING, destination_pane: first });
+    const obj = updateErrors(closure_1_3[35]);
+    updateErrors(closure_1_3[9]).trackWithMetadata(closure_1_14.SETTINGS_PANE_VIEWED, { settings_type: "guild", origin_pane: closure_1_12.LANDING, destination_pane: first });
   }, items2);
   ({ canManageGuild, isGuildAdmin, canManageRoles, canManageBans, canManageGuildExpressions, canManageChannels, canViewAuditLog, canManageWebhooks } = stateFromStoresObject);
   let obj5 = guild(16745);
@@ -352,18 +323,17 @@ function GuildSettingsModalLandingInner(guild) {
   const items3 = [updateErrors.message];
   const layoutEffect = obj4.useLayoutEffect(() => {
     if (null != updateErrors.message) {
-      guild(outer1_3[39]).presentError(tmp.message);
-      const obj = guild(outer1_3[39]);
+      guild(closure_1_3[39]).presentError(tmp.message);
+      const obj = guild(closure_1_3[39]);
     }
   }, items3);
   obj = { style: tmp5.container, contentContainerStyle: items4, children: null };
   items4 = [tmp5.containerContent, guild.contentContainerStyle];
-  obj = { style: { paddingHorizontal: token }, spacing: null, children: null };
-  obj[1] = updateErrors(712).space.PX_24;
+  obj = { style: { paddingHorizontal: token }, spacing: tmp3(712).space.PX_24, children: null };
   obj1 = { iconProps: obj2, text: guild.name, textAccessibilityRole: "header" };
   obj2 = {
     onUpload(base64) {
-      updateErrors(outer1_3[35]).updateIcon(guild.id, base64);
+      updateErrors(closure_1_3[35]).updateIcon(guild.id, base64);
     },
     type: "guild",
     icon: guild.icon,
@@ -371,7 +341,7 @@ function GuildSettingsModalLandingInner(guild) {
     makeURL(arg0) {
       let guildIconURL = arg0;
       if (arg0) {
-        let obj = updateErrors(outer1_3[43]);
+        let obj = updateErrors(closure_1_3[43]);
         obj = { id: null, icon: null, canAnimate: true, size: 64 };
         obj[0] = guild.id;
         obj[1] = arg0;
@@ -409,15 +379,15 @@ function GuildSettingsModalLandingInner(guild) {
 ({ GuildFeatures: unpackModuleId, GuildSettingsSections: closure_12, ChannelTypes: map1, AnalyticEvents: closure_14 } = ME);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let closure_18 = createCacheKey.createStyles({ container: { flex: 1 }, containerContent: { paddingTop: 16 } });
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalLanding.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalLanding.tsx");
 
 export default function GuildSettingsModalLanding(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(guildId));
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
   guildId(589);
-  [][0] = handleFormInit;
+  [][0] = closure_10;
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = { guild: null, contentContainerStyle: null, updateErrors: null };

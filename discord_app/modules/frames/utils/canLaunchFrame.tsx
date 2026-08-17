@@ -1,8 +1,10 @@
 // discord_app/modules/frames/utils/canLaunchFrame.tsx
-import { ApplicationFlags } from "ME";
-import { getShelfBadgeTypeIfActive } from "../../app_launcher/utils/AppLauncherUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8447 */;
 
-const result = require("getApplicationFlags").fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");
+const ApplicationFlags = ME.ApplicationFlags;
+const result = set.fileFinishedImporting("modules/frames/utils/canLaunchFrame.tsx");
 
 export const canLaunchFrame = function canLaunchFrame(application) {
   if (null != application) {

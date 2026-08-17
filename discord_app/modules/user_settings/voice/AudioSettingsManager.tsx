@@ -1,21 +1,20 @@
 // discord_app/modules/user_settings/voice/AudioSettingsManager.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { MediaEngineContextTypes } from "DesktopSources";
-import importDefaultResult from "apply";
-import "initialize";
-import importDefaultResult1 from "apply";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { AudioSettingsDefaultVolumes } from "../../../../discord_common/js/shared/shared-constants/AudioSettingsDefaultVolumes.tsx";
-import { updateUserGuildSettings } from "../UserSettingsProtoActionCreators.tsx";
-import { getPendingAudioSettings } from "AudioSettingsPending.tsx";
+import Storage2 from "Storage" /* 595 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
+import initializeDefault from "initialize" /* 5038 */;
+import AudioSettingsDefaultVolumes from "AudioSettingsDefaultVolumes" /* 9657 */;
+import getPendingAudioSettings from "getPendingAudioSettings" /* 13178 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "set" /* 4540 */;
+import closure_5 from "handleSoundCreateOrUpdate" /* 4780 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
+import importDefaultResult from "apply" /* 12 */;
 
-const require = arg1;
+require = arg1;
 function handleConnectionOpen() {
-  let Storage = Storage.Storage;
+  let Storage = Storage2.Storage;
   const id = store.getId();
   if (typeof SETTINGS_MIGRATION_KEY !== "function") {
     HermesBuiltin.throwTypeError();
@@ -23,8 +22,6 @@ function handleConnectionOpen() {
   if (!Storage.get("AudioContextSettingsMigrated:" + id)) {
     const PreloadedUserSettingsActionCreators = tmp(1374).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
-      let tmp42;
-      let tmp43;
       let flag = false;
       const entries = Object.entries(state.getState().settingsByContext);
       while (tmp2 !== undefined) {
@@ -73,7 +70,7 @@ function handleConnectionOpen() {
             let tmp25 = callback2(item10065, 2);
             let first1 = tmp25[0];
             let tmp27 = obj;
-            let obj1 = { muted: false, modifiedAt: null };
+            obj1 = { muted: false, modifiedAt: null };
             let tmp28 = StringResult;
             obj1[1] = StringResult;
             let tmp29 = obj1;
@@ -129,15 +126,12 @@ function handleConnectionOpen() {
   }
 }
 function handleSetLocalVolume(arg0) {
-  let context;
-  let userId;
-  let volume;
   ({ context, userId, volume } = arg0);
   if (userId !== store.getId()) {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != remoteSessionId) {
       let obj = { muted: null, volume: null };
-      obj[0] = _detectH265HardwareDecode.isLocalMute(userId, context);
+      obj[0] = closure_7.isLocalMute(userId, context);
       obj[1] = volume;
       callback(remoteSessionId, userId, context, obj);
     }
@@ -149,22 +143,20 @@ function handleSetLocalVolume(arg0) {
   }
 }
 function handleSetLocalMute(arg0) {
-  let context;
-  let userId;
   ({ context, userId } = arg0);
   if (userId !== store.getId()) {
     let obj = getPendingAudioSettings;
     obj = { muted: null };
-    obj[0] = _detectH265HardwareDecode.isLocalMute(userId, context);
+    obj[0] = closure_7.isLocalMute(userId, context);
     const result = obj.updatePendingSettings(context, userId, obj);
     lib.cancel();
     const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
       const callback = arg0;
-      let c1 = false;
+      c1 = false;
       let result = callback(table[13]).drainPendingAudioSettings((first) => {
         let diff;
-        let obj = callback(outer1_2[11]);
+        let obj = callback(closure_1_2[11]);
         const result = obj.coerceAudioContextForProto(first);
         let flag = false;
         if (null != result) {
@@ -175,10 +167,10 @@ function handleSetLocalMute(arg0) {
             const _String = String;
             const _Date = Date;
             tmp9[arg1].modifiedAt = String(Date.now());
-            if (typeof outer1_10 !== "function") {
+            if (typeof closure_1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (first === outer1_8.STREAM) {
+            if (first === closure_1_8.STREAM) {
               let USER2 = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.STREAM;
             } else {
               USER2 = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.USER;
@@ -193,8 +185,8 @@ function handleSetLocalMute(arg0) {
               let num3 = 0;
               if (0 < length - 300) {
                 do {
-                  let tmp22 = outer1_3;
-                  first = outer1_3(tmp21[num3], 1)[0];
+                  let tmp22 = closure_1_3;
+                  first = closure_1_3(tmp21[num3], 1)[0];
                   delete tmp2[tmp3];
                   num3 = num3 + 1;
                   flag = true;
@@ -206,10 +198,10 @@ function handleSetLocalMute(arg0) {
             tmp19 = tmp9[arg1].volume !== USER2 || tmp9[arg1].muted || tmp9[arg1].soundboardMuted;
           } else {
             const AudioContextSetting = tmp5(tmp6[8]).AudioContextSetting;
-            if (typeof outer1_10 !== "function") {
+            if (typeof closure_1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (first === outer1_8.STREAM) {
+            if (first === closure_1_8.STREAM) {
               let USER = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.STREAM;
             } else {
               USER = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.USER;
@@ -219,15 +211,15 @@ function handleSetLocalMute(arg0) {
             obj = AudioContextSetting.create(obj);
           }
         }
-        let tmp25 = callback2;
-        if (!callback2) {
+        let tmp25 = flag;
+        if (!flag) {
           tmp25 = flag;
         }
-        callback2 = tmp25;
+        flag = tmp25;
       });
       return c1;
     }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
-    const isLocalMuteResult = _detectH265HardwareDecode.isLocalMute(userId, context);
+    const isLocalMuteResult = closure_7.isLocalMute(userId, context);
   }
 }
 function handleSetLocalSoundboardMute(userId) {
@@ -242,10 +234,10 @@ function handleSetLocalSoundboardMute(userId) {
     const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
       const callback = arg0;
-      let c1 = false;
+      c1 = false;
       let result = callback(table[13]).drainPendingAudioSettings((first) => {
         let diff;
-        let obj = callback(outer1_2[11]);
+        let obj = callback(closure_1_2[11]);
         const result = obj.coerceAudioContextForProto(first);
         let flag = false;
         if (null != result) {
@@ -256,10 +248,10 @@ function handleSetLocalSoundboardMute(userId) {
             const _String = String;
             const _Date = Date;
             tmp9[arg1].modifiedAt = String(Date.now());
-            if (typeof outer1_10 !== "function") {
+            if (typeof closure_1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (first === outer1_8.STREAM) {
+            if (first === closure_1_8.STREAM) {
               let USER2 = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.STREAM;
             } else {
               USER2 = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.USER;
@@ -274,8 +266,8 @@ function handleSetLocalSoundboardMute(userId) {
               let num3 = 0;
               if (0 < length - 300) {
                 do {
-                  let tmp22 = outer1_3;
-                  first = outer1_3(tmp21[num3], 1)[0];
+                  let tmp22 = closure_1_3;
+                  first = closure_1_3(tmp21[num3], 1)[0];
                   delete tmp2[tmp3];
                   num3 = num3 + 1;
                   flag = true;
@@ -287,10 +279,10 @@ function handleSetLocalSoundboardMute(userId) {
             tmp19 = tmp9[arg1].volume !== USER2 || tmp9[arg1].muted || tmp9[arg1].soundboardMuted;
           } else {
             const AudioContextSetting = tmp5(tmp6[8]).AudioContextSetting;
-            if (typeof outer1_10 !== "function") {
+            if (typeof closure_1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            if (first === outer1_8.STREAM) {
+            if (first === closure_1_8.STREAM) {
               let USER = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.STREAM;
             } else {
               USER = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.USER;
@@ -300,11 +292,11 @@ function handleSetLocalSoundboardMute(userId) {
             obj = AudioContextSetting.create(obj);
           }
         }
-        let tmp25 = callback2;
-        if (!callback2) {
+        let tmp25 = flag;
+        if (!flag) {
           tmp25 = flag;
         }
-        callback2 = tmp25;
+        flag = tmp25;
       });
       return c1;
     }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
@@ -332,14 +324,14 @@ function DEFAULT_VOLUME_FOR_CONTEXT(arg0) {
   }
   return USER;
 }
-let closure_12 = require("apply").debounce(() => {
+let closure_12 = importDefaultResult.debounce(() => {
   const PreloadedUserSettingsActionCreators = updateUserGuildSettings.PreloadedUserSettingsActionCreators;
   PreloadedUserSettingsActionCreators.updateAsync("audioContextSettings", (arg0) => {
     const callback = arg0;
-    let c1 = false;
+    c1 = false;
     let result = callback(table[13]).drainPendingAudioSettings((first) => {
       let diff;
-      let obj = callback(outer1_2[11]);
+      let obj = callback(closure_1_2[11]);
       const result = obj.coerceAudioContextForProto(first);
       let flag = false;
       if (null != result) {
@@ -350,10 +342,10 @@ let closure_12 = require("apply").debounce(() => {
           const _String = String;
           const _Date = Date;
           tmp9[arg1].modifiedAt = String(Date.now());
-          if (typeof outer1_10 !== "function") {
+          if (typeof closure_1_10 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (first === outer1_8.STREAM) {
+          if (first === closure_1_8.STREAM) {
             let USER2 = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.STREAM;
           } else {
             USER2 = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.USER;
@@ -368,8 +360,8 @@ let closure_12 = require("apply").debounce(() => {
             let num3 = 0;
             if (0 < length - 300) {
               do {
-                let tmp22 = outer1_3;
-                first = outer1_3(tmp21[num3], 1)[0];
+                let tmp22 = closure_1_3;
+                first = closure_1_3(tmp21[num3], 1)[0];
                 delete tmp2[tmp3];
                 num3 = num3 + 1;
                 flag = true;
@@ -381,10 +373,10 @@ let closure_12 = require("apply").debounce(() => {
           tmp19 = tmp9[arg1].volume !== USER2 || tmp9[arg1].muted || tmp9[arg1].soundboardMuted;
         } else {
           const AudioContextSetting = tmp5(tmp6[8]).AudioContextSetting;
-          if (typeof outer1_10 !== "function") {
+          if (typeof closure_1_10 !== "function") {
             HermesBuiltin.throwTypeError();
           }
-          if (first === outer1_8.STREAM) {
+          if (first === closure_1_8.STREAM) {
             let USER = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.STREAM;
           } else {
             USER = tmp5(tmp6[6]).AudioSettingsDefaultVolumes.USER;
@@ -394,16 +386,17 @@ let closure_12 = require("apply").debounce(() => {
           obj = AudioContextSetting.create(obj);
         }
       }
-      let tmp25 = callback2;
-      if (!callback2) {
+      let tmp25 = flag;
+      if (!flag) {
         tmp25 = flag;
       }
-      callback2 = tmp25;
+      flag = tmp25;
     });
     return c1;
   }, updateUserGuildSettings.UserSettingsDelay.INFREQUENT_USER_ACTION);
 }, 2000);
-let closure_13 = require("apply").debounce(require("disconnectRemote").remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = importDefaultResult.debounce(require("disconnectRemote").remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+initializeDefault;
 let prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { POST_CONNECTION_OPEN: handleConnectionOpen, AUDIO_SET_LOCAL_VOLUME: handleSetLocalVolume, AUDIO_TOGGLE_LOCAL_MUTE: handleSetLocalMute, AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: handleSetLocalSoundboardMute, MEDIA_ENGINE_RESET_SETTINGS: handleResetMediaEngineSettings };
@@ -412,6 +405,7 @@ let prototype = function AudioSettingsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("handleSoundCreateOrUpdate").fileFinishedImporting("modules/user_settings/voice/AudioSettingsManager.tsx");
+const importDefaultResult1 = importDefaultResult;
+let result = require("set").fileFinishedImporting("modules/user_settings/voice/AudioSettingsManager.tsx");
 
 export default prototype;

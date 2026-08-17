@@ -1,22 +1,23 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesLogo.tsx
-import "noop";
-import { PremiumTypes } from "GuildFeatures";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/07408_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09331_registerAsset.js";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import registerAssetDefault from "registerAsset" /* 7408 */;
+import registerAssetDefault2 from "registerAsset" /* 9331 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumFeaturesLogo.tsx");
 
 export default function PremiumFeaturesLogo(premiumType) {
   premiumType = premiumType.premiumType;
   if (premiumType === PremiumTypes.TIER_0) {
-    let tmp3 = registerAsset;
+    let tmp3 = registerAssetDefault2;
     let tmp = importDefault;
   } else {
     tmp = importDefault;
-    tmp3 = registerAsset;
+    tmp3 = registerAssetDefault;
   }
   const obj = { accessible: true, accessibilityLabel: null, accessibilityRole: "header", style: null, resizeMode: "contain", source: null };
   const tmpResult = tmp(5449);

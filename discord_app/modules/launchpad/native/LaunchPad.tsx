@@ -1,51 +1,38 @@
 // discord_app/modules/launchpad/native/LaunchPad.tsx
-import set from "set";
-import importAllResult from "jsxProd";
-import { View } from "updateVoiceState";
-import setContent from "setContent";
-import handleReset from "handleReset";
-import getIdFromHistoryItem from "getIdFromHistoryItem";
-import closure_11 from "getIdFromHistoryItem";
-import rebuild from "rebuild";
-import createChannelRecord from "createChannelRecord";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import init from "init";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import rebuildUnreads from "rebuildUnreads";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import jsxProd from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { createAutocompleterResultForChannelId } from "../../autocompleter/createAutocompleterResultForChannelId.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 7604 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "setContent" /* 4086 */;
+import closure_7 from "handleReset" /* 5250 */;
+import getIdFromHistoryItem from "getIdFromHistoryItem" /* 7291 */;
+import closure_11 from "getIdFromHistoryItem" /* 7291 */;
+import closure_12 from "rebuild" /* 5251 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_15 from "fetchFingerprint" /* 1218 */;
+import closure_16 from "ensureGuildLoaded" /* 1391 */;
+import closure_17 from "init" /* 7472 */;
+import closure_18 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_19 from "createGuildRecordFromRust" /* 1910 */;
+import closure_20 from "rebuildUnreads" /* 13302 */;
+import closure_21 from "generateOldThreadCutoff" /* 4772 */;
+import closure_22 from "insertUnsortedGuilds" /* 5078 */;
+import closure_23 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_24 from "updateVoiceState" /* 4542 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_14;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let map1;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function TabButton(selected) {
-  let accessibilityLabel;
-  let icon;
-  let onPress;
-  let style;
   selected = selected.selected;
   ({ onPress, icon, accessibilityLabel, style } = selected);
   const tmp = callback3();
   const obj = { onPress, style: null, accessibilityLabel: null, accessibilityRole: "tab", accessibilityState: null, children: null };
-  const items = [tmp.tab, style, ];
+  items = [tmp.tab, style, ];
   let tabSelected;
   if (selected) {
     tabSelected = tmp.tabSelected;
@@ -54,7 +41,7 @@ function TabButton(selected) {
   obj[1] = items;
   obj[2] = accessibilityLabel;
   obj[4] = { selected };
-  const colors = Themes.colors;
+  const colors = ThemesDefault.colors;
   obj[5] = icon(selected ? colors.INTERACTIVE_TEXT_ACTIVE : colors.INTERACTIVE_TEXT_DEFAULT);
   return closure_27(PressableBase.PressableHighlight, obj);
 }
@@ -64,7 +51,7 @@ function TabHeader(children) {
 }
 function createAndAppendChannel(arg0, has, arr) {
   if (!has.has(arg0)) {
-    const tmp3 = createAutocompleterResultForChannelId(arg0);
+    const tmp3 = createAutocompleterResultForChannelIdDefault(arg0);
     if (null != tmp3) {
       arr.push(tmp3);
       has.add(arg0);
@@ -72,51 +59,49 @@ function createAndAppendChannel(arg0, has, arr) {
   }
 }
 let c4 = importAllResult;
-({ CHANNEL_PREFIX: metroImportAll, getIdFromHistoryItem: c9, GUILD_PREFIX: c10 } = getIdFromHistoryItem);
+({ CHANNEL_PREFIX: closure_8, getIdFromHistoryItem: c9, GUILD_PREFIX: c10 } = getIdFromHistoryItem);
 ({ isGuildSelectableChannelType: map1, isGuildVocalChannelType: closure_14 } = createChannelRecord);
 ({ AnalyticEvents: closure_25, GuildFeatures: closure_26 } = ME);
 ({ jsx: closure_27, jsxs: closure_28 } = jsxProd);
-const md = require("Themes").radii.md;
+const md = ThemesDefault.radii.md;
 let obj = { wrapper: null, launchPadContent: null, header: null, subheader: null, tabs: null, tab: null, tabSelected: null };
-obj = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
+obj = { flexGrow: 0, marginHorizontal: 16, marginBottom: 16, flexShrink: 1, borderRadius: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", justifyContent: "flex-start", alignItems: "stretch", overflow: "hidden" };
 obj[0] = obj;
 obj[1] = { flex: -1, overflow: "hidden", borderBottomLeftRadius: 24, borderBottomRightRadius: 24 };
 obj[2] = { paddingHorizontal: 16, paddingTop: 16, flexDirection: "row", flexShrink: 0, flexGrow: 0 };
 obj[3] = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", alignSelf: "center", paddingStart: 8 };
-createCacheKey = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: require("Themes").colors.INPUT_BORDER_DEFAULT };
+createCacheKey = { marginStart: 8, flexDirection: "row", flexShrink: 0, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: md, padding: 5, alignItems: "stretch", justifyContent: "center", gap: 5, borderWidth: 1, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT };
 obj[4] = createCacheKey;
 obj[5] = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
-obj[6] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj[6] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 let closure_29 = createCacheKey.createStyles(obj);
 let closure_32 = { SEARCH: 0, [0]: "SEARCH", MEMBERS: 1, [1]: "MEMBERS", NOTIFICATIONS: 2, [2]: "NOTIFICATIONS", DEV_TOOLS: 3, [3]: "DEV_TOOLS" };
 let closure_33 = { code: "function LaunchPadTsx1(){const{sharedState}=this.__closure;return sharedState.get();}" };
 let closure_34 = { code: "function LaunchPadTsx2(sharedState){const{keyboardShown,runOnJS,setFocused}=this.__closure;if(!keyboardShown.get()&&sharedState>0.75){runOnJS(setFocused)(true);}else if(keyboardShown.get()&&sharedState<=0){runOnJS(setFocused)(false);}}" };
 let closure_35 = importAllResult.memo((tab) => {
-  let importDefault;
-  let sharedState;
   tab = tab.tab;
   ({ setTab: importDefault, sharedState } = tab);
   const searchRef = tab.searchRef;
-  let importAllResult;
+  importAllResult = undefined;
   let sharedValue;
-  let setContent;
+  closure_6 = undefined;
   let callback;
   let stateFromStores1;
   let tmp = callback3();
   let obj = tab(sharedState[24]);
-  const items = [init];
+  items = [closure_17];
   const stateFromStores = obj.useStateFromStores(items, () => isDeveloper.isDeveloper);
   importAllResult = importAllResult.useRef(false);
-  let obj1 = tab(sharedState[25]);
+  obj1 = tab(sharedState[25]);
   sharedValue = obj1.useSharedValue(false);
-  setContent = importAllResult.useRef(tab);
+  closure_6 = importAllResult.useRef(tab);
   const effect = importAllResult.useEffect(() => {
-    setContent.current = tab;
+    closure_6.current = tab;
   });
   const items1 = [sharedValue, searchRef];
   callback = importAllResult.useCallback((arg0, arg1) => {
     if (arg0) {
-      if (ref2.current === outer1_32.SEARCH) {
+      if (ref2.current === closure_1_32.SEARCH) {
         const bestActiveInput = tab(sharedState[26]).getBestActiveInput();
         let isFocusedResult;
         if (bestActiveInput != null) {
@@ -156,7 +141,7 @@ let closure_35 = importAllResult.memo((tab) => {
     }
   }, items1);
   let obj2 = tab(sharedState[24]);
-  const items2 = [setContent];
+  const items2 = [closure_6];
   stateFromStores1 = obj2.useStateFromStores(items2, () => ref2.isOpen());
   const items3 = [stateFromStores1, callback];
   const effect1 = importAllResult.useEffect(() => {
@@ -164,7 +149,7 @@ let closure_35 = importAllResult.memo((tab) => {
   }, items3);
   const items4 = [tab, sharedState, callback];
   const effect2 = importAllResult.useEffect(() => {
-    let tmp = tab === outer1_32.SEARCH;
+    let tmp = tab === closure_1_32.SEARCH;
     if (tmp) {
       tmp = 1 === sharedState.get();
     }
@@ -238,7 +223,7 @@ let closure_35 = importAllResult.memo((tab) => {
   const intl3 = tmp2(tmp3[28]).intl;
   obj5[1] = intl3.string(tab(sharedState[28]).t.JqV7IC);
   obj5[2] = function onPress() {
-    callback(outer1_32.SEARCH);
+    callback(closure_1_32.SEARCH);
     const current = searchRef.current;
     if (current != null) {
       current.focus();
@@ -257,7 +242,7 @@ let closure_35 = importAllResult.memo((tab) => {
   const intl4 = tmp2(tmp3[28]).intl;
   obj6[1] = intl4.string(tab(sharedState[28]).t.HcoRu0);
   obj6[2] = function onPress() {
-    callback(outer1_32.NOTIFICATIONS);
+    callback(closure_1_32.NOTIFICATIONS);
     const current = searchRef.current;
     if (current != null) {
       current.blur();
@@ -275,10 +260,10 @@ let closure_35 = importAllResult.memo((tab) => {
     obj7[3] = function onPress() {
       if (obj.isAndroid()) {
         tab(tmp2[33]).navigateToDevTools();
-        outer1_1(tmp2[34])();
+        closure_1_1(tmp2[34])();
         const tmpResult = tab(tmp2[33]);
       } else {
-        callback(outer1_32.DEV_TOOLS);
+        callback(closure_1_32.DEV_TOOLS);
       }
       const current = searchRef.current;
       if (current != null) {
@@ -298,15 +283,8 @@ let items = [require("sortByMatchScore").AutocompleterResultTypes.GUILD, require
 let closure_39 = { code: "function LaunchPadTsx3(){const{sharedState}=this.__closure;return sharedState.get()===0;}" };
 let closure_40 = { code: "function LaunchPadTsx4(hidden,prevHidden){const{runOnJS,clearQuery,cancelTimeout}=this.__closure;if(hidden===prevHidden)return;if(hidden&&hidden!==prevHidden){runOnJS(clearQuery)();}else if(!hidden&&hidden!==prevHidden){runOnJS(cancelTimeout)();}}" };
 let obj2 = { width: 32, height: 32, borderRadius: md - 5, alignItems: "center", justifyContent: "center" };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const memoResult = importAllResult.memo(function LaunchPad(arg0) {
-  let callback1;
-  let ref;
-  let sharedState;
-  let str;
-  let tmp3;
-  let tmp9;
-  let visible;
   ({ visible, sharedState } = arg0);
   callback1 = undefined;
   ref = undefined;
@@ -326,19 +304,19 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   [tmp9, sharedState] = callback(callback2.useState(closure_37), 2);
   const first = callback(callback2.useState(() => new ref(sharedState[41])((arg0, str) => {
     if ("" === str.trim()) {
-      callback(outer1_37);
+      callback(closure_1_37);
     } else {
       callback(arg0);
     }
-  }, outer1_38, undefined, { frecencyBoosters: true })), 1)[0];
+  }, closure_1_38, undefined, { frecencyBoosters: true })), 1)[0];
   callback = first;
-  let items = [first];
-  const effect = callback2.useEffect(() => () => set.clean(), items);
+  items = [first];
+  const effect = callback2.useEffect(() => () => closure_3.clean(), items);
   let items1 = [first];
   const effect1 = callback2.useEffect(() => ref(sharedState[42]).addRouteChangeListener(() => {
-    const items = ["user:" + outer1_15.getId()];
+    items = ["user:" + closure_1_15.getId()];
     const set = new Set(items);
-    const selectedGuildFromRoute = outer1_0(outer1_2[36]).getSelectedGuildFromRoute();
+    const selectedGuildFromRoute = closure_1_0(closure_1_2[36]).getSelectedGuildFromRoute();
     if (null != selectedGuildFromRoute) {
       const _HermesInternal = HermesInternal;
       set.add("guild:" + selectedGuildFromRoute);
@@ -366,21 +344,21 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   callback = undefined;
   callback2 = undefined;
   callback3 = undefined;
-  let setContent;
+  closure_6 = undefined;
   let stateFromStores;
-  let closure_8;
+  closure_8 = undefined;
   let stateFromStoresArray;
-  let closure_10;
+  closure_10 = undefined;
   let stateFromStoresArray1;
   let stateFromStores1;
-  let closure_13;
+  closure_13 = undefined;
   let memo;
-  let fetchFingerprint;
+  closure_15 = undefined;
   let memo1;
   let obj = callback1(sharedState[36]);
   let selectedGuildFromRoute = obj.getSelectedGuildFromRoute();
   sharedState = selectedGuildFromRoute;
-  let obj1 = callback1(sharedState[36]);
+  obj1 = callback1(sharedState[36]);
   const selectedChannelFromRoute = obj1.getSelectedChannelFromRoute();
   callback = selectedChannelFromRoute;
   const tmp20 = callback(callback2.useState(undefined), 2);
@@ -393,52 +371,52 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
       callback3(undefined);
     }
   }, items4);
-  setContent = callback2.useRef([]);
+  closure_6 = callback2.useRef([]);
   let obj2 = callback1(sharedState[24]);
-  let items5 = [rebuildUnreads];
+  let items5 = [closure_20];
   stateFromStores = obj2.useStateFromStores(items5, () => {
     if (ref) {
-      let current = outer1_20.getUnreadPrivateChannelIds();
+      let current = closure_1_20.getUnreadPrivateChannelIds();
     } else {
       current = ref2.current;
     }
     return current;
   });
   const effect4 = callback2.useEffect(() => {
-    setContent.current = stateFromStores;
+    closure_6.current = stateFromStores;
   });
   closure_8 = callback2.useRef([]);
   let obj3 = callback1(sharedState[24]);
-  let items6 = [insertUnsortedGuilds, updateGuildUnreadSentinel, createGuildRecordFromRust];
+  let items6 = [closure_22, closure_18, closure_19];
   const items7 = [visible, selectedGuildFromRoute];
   stateFromStoresArray = obj3.useStateFromStoresArray(items6, () => {
     if (ref) {
-      const items = [];
+      items = [];
       const items1 = [];
-      const flattenedGuildIds = outer1_22.getFlattenedGuildIds();
+      const flattenedGuildIds = closure_1_22.getFlattenedGuildIds();
       const iter = flattenedGuildIds[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
         let tmp10 = sharedState;
         if (nextResult !== sharedState) {
-          let obj = outer1_18;
+          let obj = closure_1_18;
           let tmp30 = nextResult;
-          let hasUnreadResult = outer1_18.getMentionCount(tmp9) > 0;
+          let hasUnreadResult = closure_1_18.getMentionCount(tmp9) > 0;
           let tmp31 = hasUnreadResult;
           if (!hasUnreadResult) {
             let tmp11 = nextResult;
             hasUnreadResult = obj.hasUnread(tmp9);
           }
           if (hasUnreadResult) {
-            let tmp13 = outer1_19;
+            let tmp13 = closure_1_19;
             let tmp14 = nextResult;
-            let guild = outer1_19.getGuild(tmp9);
+            let guild = closure_1_19.getGuild(tmp9);
             let hasItem;
             if (guild != null) {
               let features = guild.features;
-              let tmp17 = outer1_26;
-              hasItem = features.has(outer1_26.HUB);
+              let tmp17 = closure_1_26;
+              hasItem = features.has(closure_1_26.HUB);
             }
             if (!hasItem) {
               let tmp18 = tmp31;
@@ -468,7 +446,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   });
   closure_10 = callback2.useRef([]);
   let obj4 = callback1(sharedState[24]);
-  const items8 = [stateFromStores, updateVoiceState, generateOldThreadCutoff, updateUserGuildSettingsInternal, stateFromStores1];
+  const items8 = [stateFromStores, closure_24, closure_21, closure_23, stateFromStores1];
   const items9 = [tmp15, selectedGuildFromRoute, visible, first1];
   stateFromStoresArray1 = obj4.useStateFromStoresArray(items8, () => {
     let tmp = callback2;
@@ -495,11 +473,11 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
           }
           const guildChannels = stateFromStores.getGuild(tmp).guildChannels;
           guildChannels.forEachChannel((type) => {
-            const tmp2 = outer1_14(type.type);
+            const tmp2 = closure_1_14(type.type);
             if (tmp2) {
-              if (!outer1_23.isChannelMuted(type.guild_id, type.id)) {
+              if (!closure_1_23.isChannelMuted(type.guild_id, type.id)) {
                 if (null == type.parent_id) {
-                  if (outer1_21.getMentionCount(type.id) > 0) {
+                  if (closure_1_21.getMentionCount(type.id) > 0) {
                     items.push(type.id);
                   } else {
                     if (!tmp2) {
@@ -519,10 +497,10 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
                       items2.push(type.id);
                     }
                   }
-                  obj2 = outer1_21;
+                  obj2 = closure_1_21;
                 }
               }
-              const obj = outer1_23;
+              const obj = closure_1_23;
             }
           }, { ignoreRecents: true, withThreads: true });
           const push = items.push;
@@ -561,7 +539,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
         if (null != sharedState) {
           set.add(tmp7);
         }
-        const items = [];
+        items = [];
         const _Set2 = Set;
         const set1 = new Set();
         let diff = stateFromStores1.length - 1;
@@ -581,13 +559,13 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
               let tmp16 = stateFromStoresArray;
               tmp17 = stateFromStoresArray(obj3);
             }
-            let tmp22 = outer1_19;
-            let guild = outer1_19.getGuild(tmp17);
+            let tmp22 = closure_1_19;
+            let guild = closure_1_19.getGuild(tmp17);
             let hasItem = null == tmp17 || set.has(tmp17) || set1.has(tmp17) || null == guild;
             if (!hasItem) {
               let features = guild.features;
-              let tmp25 = outer1_26;
-              hasItem = features.has(outer1_26.HUB);
+              let tmp25 = closure_1_26;
+              hasItem = features.has(closure_1_26.HUB);
             }
             if (!hasItem) {
               let addResult1 = set1.add(tmp17);
@@ -611,17 +589,17 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   const effect7 = callback2.useEffect(() => {
     closure_13.current = memo;
   });
-  fetchFingerprint = callback2.useRef(undefined);
+  closure_15 = callback2.useRef(undefined);
   const items12 = [tmp15, visible, stateFromStoresArray1, selectedChannelFromRoute, first1, stateFromStores1];
   memo1 = callback2.useMemo(() => {
     if (!callback1) {
       if (ref) {
-        const tmp5 = (function getChannelHistory(stateFromStores1, set) {
-          if (null != set) {
+        const tmp5 = (function getChannelHistory(stateFromStores1, closure_3) {
+          if (null != closure_3) {
             const _HermesInternal = HermesInternal;
-            const combined = "" + closure_8 + set;
+            const combined = "" + closure_8 + closure_3;
           }
-          const items = [];
+          items = [];
           let diff = stateFromStores1.length - 1;
           if (0 <= diff) {
             while (null != stateFromStores1[diff]) {
@@ -652,14 +630,14 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
             }
           }
           return items;
-        })(stateFromStores1, set);
-        let items = [];
+        })(stateFromStores1, closure_3);
+        items = [];
         if (null == callback2) {
           const _Set = Set;
           const set = new Set();
           for (const item10022 of tmp5) {
-            let tmp15 = outer1_36;
-            let tmp16 = outer1_36(item10022, set, items);
+            let tmp15 = closure_1_36;
+            let tmp16 = closure_1_36(item10022, set, items);
             continue;
           }
         }
@@ -668,8 +646,8 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
         const set1 = new Set();
         if (stateFromStoresArray1.length > 0) {
           for (const item10040 of tmp22) {
-            let tmp25 = outer1_36;
-            let tmp26 = outer1_36(item10040, set1, items1);
+            let tmp25 = closure_1_36;
+            let tmp26 = closure_1_36(item10040, set1, items1);
             continue;
           }
         }
@@ -686,7 +664,7 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
     }
   }, items12);
   const effect8 = callback2.useEffect(() => {
-    fetchFingerprint.current = memo1;
+    closure_15.current = memo1;
   });
   const deferredValue = callback2.useDeferredValue(memo1);
   const tmp36 = callback(callback2.useState(false), 2);
@@ -711,13 +689,13 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
   const items13 = [height, top, bottom, tmp42];
   const items14 = [str, tmp36[1], first2];
   const memo2 = callback2.useMemo(() => {
-    const items = [callback1.wrapper, { maxHeight: ref - sharedState - set - 16 }];
+    items = [callback1.wrapper, { maxHeight: ref - sharedState - closure_3 - 16 }];
     return items;
   }, items13);
   const effect9 = callback2.useEffect(() => {
     if (ref.length > 0) {
       if (!sharedState) {
-        ref(sharedState[43]).track(outer1_25.LAUNCHPAD_SEARCHED);
+        ref(sharedState[43]).track(closure_1_25.LAUNCHPAD_SEARCHED);
         ref(true);
         const obj = ref(sharedState[43]);
       }
@@ -834,6 +812,6 @@ const memoResult = importAllResult.memo(function LaunchPad(arg0) {
     tmp53Result = tmp53(tmp43(tmp17[48]), {});
   }
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/launchpad/native/LaunchPad.tsx");
+let result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPad.tsx");
 
 export default memoResult;

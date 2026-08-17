@@ -1,15 +1,11 @@
 // discord_app/modules/app_launcher/hooks/useSortedSectionCommands.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { CommandListSortOrder } from "CommandListSortOrder";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { CommandListSortOrder } from "CommandListSortOrder" /* 11313 */;
 
-const result = require("CommandListSortOrder").fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useSortedSectionCommands.tsx");
 
 export default function useSortedSectionCommands(sectionId) {
-  let canSort;
-  let popularSortedCommands;
-  let tmp3;
-  let tmp4;
   sectionId = sectionId.sectionId;
   let memo = sectionId;
   const commandsByActiveSection = sectionId.commandsByActiveSection;
@@ -37,11 +33,11 @@ export default function useSortedSectionCommands(sectionId) {
     } else {
       memo = false;
       const mapped = arr.map((command, alphabeticalSortIndex) => {
-        let tmp = c0;
-        if (!c0) {
+        let tmp = closure_0;
+        if (!closure_0) {
           tmp = null != command.global_popularity_rank;
         }
-        c0 = tmp;
+        closure_0 = tmp;
         return { command, alphabeticalSortIndex };
       });
       if (memo) {
@@ -81,7 +77,7 @@ export default function useSortedSectionCommands(sectionId) {
   const items3 = [canSort];
   const layoutEffect = React.useLayoutEffect(() => {
     if (canSort) {
-      setSortOrder(outer1_5.POPULAR);
+      setSortOrder(closure_1_5.POPULAR);
     }
   }, items3);
   if (CommandListSortOrder.POPULAR !== sortOrder) {

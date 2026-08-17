@@ -1,36 +1,35 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx
-import { dismissUpsellCTA } from "setStoredContacts";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { registerAsset } from "../../../../../_runtime/13318_registerAsset.js";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 13318 */;
+import { dismissUpsellCTA } from "setStoredContacts" /* 11852 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ AnalyticEvents: c4, AnalyticsSections: c5 } = ME);
 let obj = { container: null };
-obj = { padding: 12, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj = { padding: 12, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) {
+const memoResult = importAllResult.memo(function ContactSyncUpsellCTA(location) {
   location = location.location;
   let obj = {
     onPress() {
-      let obj = outer1_1(outer1_2[7]);
-      obj = { type: outer1_5.CONTACT_SYNC_MODAL, location: null };
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
       let str = location;
       let str2 = location;
       if (location == null) {
         str2 = "Friends List Upsell";
       }
       obj[1] = { page: str2 };
-      obj.track(outer1_4.OPEN_MODAL, obj);
+      obj.track(closure_1_4.OPEN_MODAL, obj);
       if (str == null) {
         str = "Friends List Upsell";
       }
-      location(outer1_2[8]).openContactSyncModal({}, { page: str });
+      location(closure_1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
       let obj = location(7172);
@@ -46,31 +45,30 @@ const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) 
       const result = obj.showSimpleActionSheet(obj);
     },
     style: items,
-    iconSource: null,
+    iconSource: registerAssetDefault,
     title: null,
     subtitle: null
   };
   items = [callback().container, location.style];
-  obj[3] = registerAsset;
   let intl = location(1236).intl;
   obj[4] = intl.string(location(1236).t.T6Rfd9);
   const intl2 = location(1236).intl;
   obj[5] = intl2.string(location(1236).t.c6KIpg);
   return jsx(location(8083).FormCTA, {
     onPress() {
-      let obj = outer1_1(outer1_2[7]);
-      obj = { type: outer1_5.CONTACT_SYNC_MODAL, location: null };
+      let obj = closure_1_1(closure_1_2[7]);
+      obj = { type: closure_1_5.CONTACT_SYNC_MODAL, location: null };
       let str = location;
       let str2 = location;
       if (location == null) {
         str2 = "Friends List Upsell";
       }
       obj[1] = { page: str2 };
-      obj.track(outer1_4.OPEN_MODAL, obj);
+      obj.track(closure_1_4.OPEN_MODAL, obj);
       if (str == null) {
         str = "Friends List Upsell";
       }
-      location(outer1_2[8]).openContactSyncModal({}, { page: str });
+      location(closure_1_2[8]).openContactSyncModal({}, { page: str });
     },
     onLongPress() {
       let obj = location(7172);
@@ -86,11 +84,11 @@ const memoResult = require("noop").memo(function ContactSyncUpsellCTA(location) 
       const result = obj.showSimpleActionSheet(obj);
     },
     style: items,
-    iconSource: null,
+    iconSource: registerAssetDefault,
     title: null,
     subtitle: null
   });
 });
-let result = require("ME").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
+let result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncUpsellCTA.tsx");
 
 export default memoResult;

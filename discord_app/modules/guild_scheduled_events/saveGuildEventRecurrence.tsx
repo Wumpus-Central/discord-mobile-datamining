@@ -1,8 +1,10 @@
 // discord_app/modules/guild_scheduled_events/saveGuildEventRecurrence.tsx
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { GuildScheduledEventsActionCreators } from "GuildScheduledEventsActionCreators.tsx";
-import { getRRule } from "utils/ScheduleUtils.tsx";
-let result = require("DISCORD_EPOCH").fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
+import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import _modDef8783 from "module_8783" /* 8783 */;
+import getRRule from "getRRule" /* 8785 */;
+
+let result = set.fileFinishedImporting("modules/guild_scheduled_events/saveGuildEventRecurrence.tsx");
 
 export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_exception_id) {
   let obj = getRRule;
@@ -19,7 +21,7 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
   if (null != event_exception_id) {
     tmpResult = tmp(8785);
     const result = tmpResult.areSchedulesIdentical(startDate, baseScheduleForRecurrence);
-    const obj5 = GuildScheduledEventsActionCreators;
+    const obj5 = _modDef8783;
     if (result) {
       let result1 = obj5.deleteGuildEventException(guild_id.guild_id, guild_id.id, event_exception_id.event_exception_id);
     } else {
@@ -39,8 +41,8 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
     }
     return result1;
   } else {
-    const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(c2);
-    const obj7 = DISCORD_EPOCH;
+    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(c2);
+    const obj7 = DISCORD_EPOCHDefault;
     obj = { original_scheduled_start_time: null, scheduled_start_time: null, scheduled_end_time: null, is_canceled: false };
     const _Date = Date;
     const date = new Date(extractTimestampResult);
@@ -55,7 +57,7 @@ export default function saveGuildEventRecurrence(guild_id, c2, startDate, event_
       toISOStringResult3 = endDate.toISOString();
     }
     obj[2] = toISOStringResult3;
-    return GuildScheduledEventsActionCreators.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
+    return _modDef8783.createGuildEventException(obj, guild_id.guild_id, guild_id.id);
   }
   obj2 = getRRule;
 };

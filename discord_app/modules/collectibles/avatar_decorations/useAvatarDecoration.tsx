@@ -1,18 +1,18 @@
 // discord_app/modules/collectibles/avatar_decorations/useAvatarDecoration.tsx
-import _slicedToArray from "_slicedToArray";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecoration.tsx");
 
 export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
   const _require = user;
-  const dependencyMap = guildId;
-  let items = [trackCommunicationDisabled];
+  dependencyMap = guildId;
+  let items = [closure_3];
   return _defaultAreStatesEqual.useStateFromStores(items, () => {
-    const items = [outer1_3];
-    const first = outer1_2(items, 1)[0];
+    const items = [closure_1_3];
+    const first = closure_1_2(items, 1)[0];
     let member = null;
     if (null != closure_1) {
       member = null;
@@ -34,18 +34,18 @@ export const useAvatarDecoration = function useAvatarDecoration(user, guildId) {
     return avatarDecoration;
   });
 };
-export const getAvatarDecoration = function getAvatarDecoration(user, _slicedToArray) {
+export const getAvatarDecoration = function getAvatarDecoration(user, closure_2) {
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [trackCommunicationDisabled];
+    const items = [closure_3];
     tmp = items;
   }
   const first = callback(tmp, 1)[0];
   let member = null;
-  if (null != _slicedToArray) {
+  if (null != closure_2) {
     member = null;
     if (null != user) {
-      member = first.getMember(_slicedToArray, user.id);
+      member = first.getMember(closure_2, user.id);
     }
   }
   let avatarDecoration;

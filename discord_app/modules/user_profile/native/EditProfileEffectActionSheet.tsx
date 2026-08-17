@@ -1,22 +1,16 @@
 // discord_app/modules/user_profile/native/EditProfileEffectActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import EditCollectiblesCTAButton from "EditCollectiblesCTAButton.tsx";
-import get_ActivityIndicator from "Text";
-import map from "map";
-import { isProfileEffectRecord } from "fromServer";
-import { AnalyticEvents } from "ME";
-import jsxProd from "initialize";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "map" /* 5324 */;
+import { isProfileEffectRecord } from "fromServer" /* 5307 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c5;
-let c9;
-let unpackModuleId;
 const require = arg1;
 function EditProfileEffectInner(user) {
-  let selectedProfileEffect;
-  let setSelectedProfileEffect;
   user = user.user;
   ({ selectedProfileEffect, setSelectedProfileEffect } = user);
   const guildId = user.guildId;
@@ -26,8 +20,8 @@ function EditProfileEffectInner(user) {
   }
   let obj = user(guildId[20]);
   const getOrFetchCollectiblesCategoriesAndPurchases = obj.useGetOrFetchCollectiblesCategoriesAndPurchases();
-  let obj1 = user(guildId[21]);
-  const items = [map];
+  obj1 = user(guildId[21]);
+  const items = [closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => isFetching.isFetching);
   const tmp7 = setSelectedProfileEffect(guildId[9])(user.id, guildId);
   let obj2 = user(guildId[23]);
@@ -60,11 +54,8 @@ function EditProfileEffectInner(user) {
   const items2 = [setSelectedProfileEffect, guildId, flag];
   let skuId;
   const callback = React.useCallback((arg0) => {
-    let items;
-    let selectedSkuId;
-    let size;
     ({ items, size, selectedSkuId } = arg0);
-    return outer1_9(user(guildId[25]).EditProfileEffectRow, { items, size, selectedSkuId, setSelectedProfileEffect, guildId, isTryItOut: flag });
+    return closure_1_9(user(guildId[25]).EditProfileEffectRow, { items, size, selectedSkuId, setSelectedProfileEffect, guildId, isTryItOut: flag });
   }, items2);
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -100,13 +91,10 @@ function EditProfileEffectInner(user) {
   return tmp13(tmp14, obj2);
 }
 function ProfileEffectSectionPreview(arg0) {
-  let guildId;
-  let previewSkuId;
-  let user;
-  let c0;
+  c0 = undefined;
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const tmp2 = purchase(8387)(previewSkuId);
   const product = tmp2.product;
   c0 = product;
@@ -126,7 +114,7 @@ function ProfileEffectSectionPreview(arg0) {
       first = first1;
     }
     let tmp3 = null;
-    if (outer1_7(first)) {
+    if (closure_1_7(first)) {
       tmp3 = first;
     }
     return tmp3;
@@ -142,30 +130,27 @@ function ProfileEffectSectionPreview(arg0) {
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 createCacheKey = { container: null, bounceOffset: null, title: null, previewContainer: null, previewGradient: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: -250, height: 250, right: 0, left: 0 };
-createCacheKey[2] = { alignSelf: "center", color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+createCacheKey[2] = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
 createCacheKey[3] = { overflow: "hidden", height: 300, alignItems: "center" };
 let obj2 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj2.bottom = -1;
-obj2.color = require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND;
+obj2.color = ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
 createCacheKey[4] = obj2;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignSelf: "center", color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/EditProfileEffectActionSheet.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/EditProfileEffectActionSheet.tsx");
 
 export default function EditProfileEffectActionSheet(isTryItOut) {
-  let currentProfileEffect;
-  let guildId;
-  let user;
   ({ user, currentProfileEffect, guildId } = isTryItOut);
   isTryItOut = isTryItOut.isTryItOut;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first;
   let memo;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let str = user.id;
   if (str == null) {
     str = "";
@@ -179,8 +164,8 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   const analyticsLocations = tmp2Result(tmp2(7159).EDIT_PROFILE_EFFECT_SHEET).analyticsLocations;
   const items = [guildId, tmp4Result];
   memo = memo.useMemo(() => {
-    const obj = { type: isTryItOut(_undefined[12]).EDIT_PROFILE_EFFECT_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
-    let tmp = null != _undefined;
+    const obj = { type: isTryItOut(7159).EDIT_PROFILE_EFFECT_SHEET, guild_id: guildId, profile_has_nitro_customization: null };
+    let tmp = null != dependencyMap;
     if (tmp) {
       let result;
       if (obj2 != null) {
@@ -194,11 +179,11 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   const items1 = [memo];
   const items2 = [first, guildId, isTryItOut];
   const callback = memo.useCallback(() => {
-    let obj = isTryItOut(_undefined[13]);
+    let obj = isTryItOut(698);
     obj = {};
     const merged = Object.assign(memo);
     obj.is_fullscreen = true;
-    obj.track(outer1_8.OPEN_POPOUT, obj);
+    obj.track(closure_1_8.OPEN_POPOUT, obj);
   }, items1);
   const callback1 = memo.useCallback(() => {
     if (isTryItOut) {
@@ -222,7 +207,7 @@ export default function EditProfileEffectActionSheet(isTryItOut) {
   }, items2);
   obj = { value: analyticsLocations, children: null };
   obj = { scrollable: true, ref: obj.useBottomSheetRef().bottomSheetRef, onExpand: callback, startExpanded: true, children: null };
-  const obj1 = { style: tmp.container, children: null };
+  obj1 = { style: tmp.container, children: null };
   const items3 = [callback(closure_5, { style: tmp.bounceOffset }), , ];
   const obj3 = { variant: "redesign/heading-18/bold", style: tmp.title, accessibilityRole: "header", children: null };
   const intl = guildId(1236).intl;

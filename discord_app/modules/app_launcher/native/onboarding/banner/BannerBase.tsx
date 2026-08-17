@@ -1,74 +1,69 @@
 // discord_app/modules/app_launcher/native/onboarding/banner/BannerBase.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "set";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { 11238__ } from "../../../../../../_runtime/metro/11238__.js";
 import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
 import { CONFIG_NEVER_ANIMATE } from "../../../../../design/animation/reanimated/spring/spring.tsx";
 import { hexToRgba } from "../../../../../utils/ColorUtils.tsx";
 import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-const PX_12 = require("Themes").space.PX_12;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
+const PX_12 = ThemesDefault.space.PX_12;
 let closure_9 = { mass: 1, stiffness: 100, damping: 15 };
 createCacheKey = { banner: null, bannerGradientColor: null, bannerBackgroundGradient: null, imageContainer: null, trinketsLottie: null, bannerTextContainer: null, bannerText: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, position: "absolute", borderRadius: require("Themes").radii.lg, paddingHorizontal: require("Themes").space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: require("ApplicationsImage").APP_ICON_SIZE + 2 * PX_12 + 4, bottom: require("Themes").space.PX_16, left: require("Themes").space.PX_16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, position: "absolute", borderRadius: ThemesDefault.radii.lg, paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: PX_12, flexDirection: "row", minHeight: require("ApplicationsImage").APP_ICON_SIZE + 2 * PX_12 + 4, bottom: ThemesDefault.space.PX_16, left: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { backgroundColor: "#7eaaff" };
-createCacheKey[2] = { position: "absolute", top: 0, left: 0, borderRadius: require("Themes").radii.lg };
+createCacheKey[2] = { position: "absolute", top: 0, left: 0, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[3] = { width: 72 };
 createCacheKey[4] = { width: 175, height: 175, position: "absolute", top: -38, left: -27, zIndex: 1, pointerEvents: "none" };
-let obj1 = { position: "absolute", top: 0, left: 0, borderRadius: require("Themes").radii.lg };
-createCacheKey[5] = { alignItems: "center", justifyContent: "center", marginLeft: require("Themes").space.PX_12, flexShrink: 1 };
+let obj1 = { position: "absolute", top: 0, left: 0, borderRadius: ThemesDefault.radii.lg };
+createCacheKey[5] = { alignItems: "center", justifyContent: "center", marginLeft: ThemesDefault.space.PX_12, flexShrink: 1 };
 createCacheKey[6] = { width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { code: "function BannerBaseTsx1(){const{bannerMeasured,withDelay,withSpring,SPRING_CONFIG}=this.__closure;return{opacity:bannerMeasured.get()?withDelay(150,withSpring(1,SPRING_CONFIG)):0,transform:[{translateY:bannerMeasured.get()?withDelay(150,withSpring(0,SPRING_CONFIG)):30}]};}" };
-let obj2 = { alignItems: "center", justifyContent: "center", marginLeft: require("Themes").space.PX_12, flexShrink: 1 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BannerBase.tsx");
+let obj2 = { alignItems: "center", justifyContent: "center", marginLeft: ThemesDefault.space.PX_12, flexShrink: 1 };
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/banner/BannerBase.tsx");
 
 export default function BannerBase(arg0) {
-  let c0;
-  let image;
-  let text;
-  let tmp3;
   let _require;
   let sharedValue;
   ({ image, text } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let num = 0;
   [tmp3, c0] = callback(React.useState(0), 2);
   let obj = _ReanimatedRexport;
   sharedValue = obj.useSharedValue(false);
   const diff = sharedValue(1494)().width - 2 * sharedValue(712).space.PX_16;
   const backgroundColor = tmp.bannerGradientColor.backgroundColor;
-  let obj1 = _hexToRgba;
+  obj1 = _hexToRgba;
   let items = [obj1.hexOpacityToRgba(backgroundColor, 0.2), ];
   let obj2 = _hexToRgba;
   items[1] = obj2.hexOpacityToRgba(backgroundColor, 0);
   let obj3 = _initialize;
-  const items1 = [maybeApplyNoTextColorForLightCustomTheme];
+  const items1 = [closure_6];
   const stateFromStores = obj3.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let obj4 = _ReanimatedRexport;
   const fn = function _() {
     let obj = sharedValue;
     let num = 0;
     if (sharedValue.get()) {
-      const obj2 = _undefined(outer1_2[8]);
-      num = obj2.withDelay(150, _undefined(outer1_2[12]).withSpring(1, outer1_9));
-      const obj3 = _undefined(outer1_2[12]);
+      const obj2 = _undefined(closure_1_2[8]);
+      num = obj2.withDelay(150, _undefined(closure_1_2[12]).withSpring(1, closure_1_9));
+      const obj3 = _undefined(closure_1_2[12]);
     }
     obj = { opacity: num, transform: null };
     let num4 = 30;
     if (obj.get()) {
-      const obj5 = _undefined(outer1_2[8]);
-      num4 = obj5.withDelay(150, _undefined(outer1_2[12]).withSpring(0, outer1_9));
-      const obj6 = _undefined(outer1_2[12]);
+      const obj5 = _undefined(closure_1_2[8]);
+      num4 = obj5.withDelay(150, _undefined(closure_1_2[12]).withSpring(0, closure_1_9));
+      const obj6 = _undefined(closure_1_2[12]);
     }
     const items = [{ translateY: num4 }];
     obj[1] = items;

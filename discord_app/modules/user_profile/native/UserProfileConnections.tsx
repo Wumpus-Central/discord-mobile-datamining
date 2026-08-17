@@ -1,46 +1,32 @@
 // discord_app/modules/user_profile/native/UserProfileConnections.tsx
-import importAllResult from "getPlatformUserUrl";
-import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";
-import _getSystemLocale from "_getSystemLocale";
-import initialize from "initialize";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import ME from "ME";
-import { MetadataFields } from "OperatorTypes";
-import jsxProd from "isLinkTrusted";
-import Button from "Button";
-import createCacheKey from "createCacheKey";
-import Button from "Button";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useUserProfileApplicationRoleConnections } from "../hooks/useUserProfileApplicationRoleConnections.tsx";
-import { Divider } from "UserProfileCard.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import map from "map" /* 4097 */;
+import DividerDefault from "Divider" /* 7185 */;
+import useUserProfileApplicationRoleConnectionsDefault from "useUserProfileApplicationRoleConnections" /* 12314 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "_getSystemLocale" /* 1994 */;
+import closure_7 from "initialize" /* 4220 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import ME from "ME" /* 676 */;
+import { MetadataFields } from "OperatorTypes" /* 5225 */;
+import jsxProd from "jsxProd" /* 21 */;
+import Button from "Button" /* 1297 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let CARD_PADDING;
-let CARD_ROWS_COLUMN_GAP;
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_14;
-let closure_15;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function VerifiedIcon(arg0) {
-  let isTwitterVerifiedAccount;
-  let theme;
   ({ theme, isTwitterVerifiedAccount } = arg0);
   if (isTwitterVerifiedAccount === undefined) {
     isTwitterVerifiedAccount = false;
   }
   const tmp = callback3();
   let obj = { size: REFRESH_SMALL_16, style: tmp.verifiedIcon };
-  let obj1 = map;
-  let PLATFORM_TWITTER = obj1.useToken(Themes.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
+  obj1 = map;
+  let PLATFORM_TWITTER = obj1.useToken(ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, theme);
   if (isTwitterVerifiedAccount) {
     PLATFORM_TWITTER = tmp4(712).unsafe_rawColors.PLATFORM_TWITTER;
   }
@@ -67,14 +53,14 @@ function VerifiedIcon(arg0) {
 }
 let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ CARD_ROWS_ICON_SIZE: metroImportAll, CARD_ROWS_ICON_SIZE_VARIANT: c9, CARD_PADDING, CARD_ROWS_COLUMN_GAP } = ARBITRARY_LARGE_OFFSET);
+({ CARD_ROWS_ICON_SIZE: closure_8, CARD_ROWS_ICON_SIZE_VARIANT: c9, CARD_PADDING, CARD_ROWS_COLUMN_GAP } = ARBITRARY_LARGE_OFFSET);
 ({ AnalyticEvents: c10, PlatformTypes: unpackModuleId } = ME);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 const REFRESH_SMALL_16 = require("Button").Icon.Sizes.REFRESH_SMALL_16;
 const iconSize = Button.getIconSize(REFRESH_SMALL_16);
 obj = { cardContainer: obj, cardTitle: { marginBottom: 0 }, connectionRow: { flexDirection: "row", alignItems: "center", columnGap: CARD_ROWS_COLUMN_GAP, paddingVertical: 12, minHeight: 60 }, connectionInfoContainer: { flex: 1 }, connectedAccountName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, connectedAccountNameText: { flexShrink: 1 }, verifiedIconContainer: { height: iconSize, width: iconSize }, verifiedIcon: { position: "absolute", left: 0, top: 0 }, connectionMetadata: { flexDirection: "row", flexWrap: "wrap", alignItems: "center", overflow: "hidden" }, metadataItem: null, poweredByContainer: null, applicationIcon: null };
 obj = { paddingBottom: CARD_PADDING - 12 };
-Button = { color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
+Button = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj[9] = Button;
 obj[10] = { flexDirection: "row", alignItems: "center", marginTop: 6 };
 createCacheKey = { borderRadius: null };
@@ -82,8 +68,6 @@ createCacheKey[0] = Button.getIconSize(require("Button").Icon.Sizes.MEDIUM);
 obj[11] = createCacheKey;
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_19 = importAllResult.memo((userId) => {
-  let showMetadata;
-  let theme;
   userId = userId.userId;
   const account = userId.account;
   ({ theme, showMetadata } = userId);
@@ -92,12 +76,12 @@ let closure_19 = importAllResult.memo((userId) => {
   }
   let trackUserProfileAction;
   let createdAtDate;
-  let c4;
+  c4 = undefined;
   let platformUserUrl;
   const tmp = callback3();
   let obj = userId(trackUserProfileAction[16]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = userId(trackUserProfileAction[12]);
+  obj1 = userId(trackUserProfileAction[12]);
   const token = obj1.useToken(account(trackUserProfileAction[10]).modules.mobile.TABLE_ROW_LABEL_TEXT_STYLE);
   let obj2 = userId(trackUserProfileAction[12]);
   let metadata = account.metadata;
@@ -148,12 +132,12 @@ let closure_19 = importAllResult.memo((userId) => {
         let obj = userId(trackUserProfileAction[21]);
         obj = { href: null, trusted: null, onConfirm: null };
         obj[0] = tmp;
-        obj[1] = account.type !== outer1_11.DOMAIN;
+        obj[1] = account.type !== closure_1_11.DOMAIN;
         obj[2] = function onConfirm() {
-          let obj = outer1_0(outer1_2[22]);
+          let obj = closure_1_0(closure_1_2[22]);
           obj = { platform_type: type.type, other_user_id: closure_0 };
-          obj.trackWithMetadata(outer1_10.CONNECTED_ACCOUNT_VIEWED, obj);
-          outer1_1(outer1_2[23]).openURL(closure_5);
+          obj.trackWithMetadata(closure_1_10.CONNECTED_ACCOUNT_VIEWED, obj);
+          closure_1_1(closure_1_2[23]).openURL(closure_5);
         };
         obj.handleClick(obj);
       }
@@ -431,7 +415,7 @@ let closure_20 = importAllResult.memo((application) => {
     obj[5] = memo1;
     tmp17Result = tmp17(tmp2(tmp3[29]).TableRow, obj);
   } else {
-    const obj1 = { accessibilityLabel: null, accessibilityHint: null, accessibilityRole: "button", onLongPress: null, style: null, children: null };
+    obj1 = { accessibilityLabel: null, accessibilityHint: null, accessibilityRole: "button", onLongPress: null, style: null, children: null };
     obj1[0] = memo;
     obj1[1] = memo1;
     obj1[3] = callback;
@@ -467,7 +451,7 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
   const tmp = callback3();
   let obj = applicationRoleConnection(10772);
   const roleConnectionMetadataItems = obj.generateRoleConnectionMetadataItems(applicationRoleConnection);
-  let obj1 = getAvatarURL;
+  obj1 = getAvatarURLDefault;
   obj = { id: applicationRoleConnection.application.id, icon: applicationRoleConnection.application.icon };
   const applicationIconSource = obj1.getApplicationIconSource(obj);
   if (tmp3) {
@@ -570,32 +554,30 @@ const memoResult = importAllResult.memo((applicationRoleConnection) => {
     obj8[1] = items1;
     return tmp6(closure_5, obj8);
   }
-  tmp3 = useIsMobileVisualRefreshExperimentEnabled("UserProfileConnections");
+  tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileConnections");
 });
-let result = require("_getSystemLocale").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConnections.tsx");
 
 export const ApplicationRoleConnection = memoResult;
 export const UserProfileAccountConnectionsCard = function UserProfileAccountConnectionsCard(userId) {
-  let appIdentities;
-  let connections;
   userId = userId.userId;
   let theme;
-  let dependencyMap;
+  dependencyMap = undefined;
   const tmp = callback3();
   const tmp4 = theme(1367)("UserProfileConnections");
   let obj = userId(4104);
   theme = obj.useThemeContext().theme;
-  let obj1 = userId(589);
-  const items = [_getSystemLocale];
+  obj1 = userId(589);
+  const items = [closure_6];
   dependencyMap = obj1.useStateFromStores(items, () => locale.locale);
-  const items1 = [initialize];
+  const items1 = [closure_7];
   const stateFromStores = userId(589).useStateFromStores(items1, () => obj.hidePersonalInformation);
   const obj3 = userId(589);
   const tmp2 = theme;
   ({ connections, appIdentities } = theme(12311)(userId));
   if (!stateFromStores) {
     const items2 = [];
-    let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => outer1_13(outer1_19, { account, theme, locale: closure_2, userId }, account.id)), 0);
+    let arraySpreadResult = HermesBuiltin.arraySpread(connections.map((account) => closure_1_13(closure_1_19, { account, theme, locale: closure_2, userId }, account.id)), 0);
     arraySpreadResult = HermesBuiltin.arraySpread(appIdentities.map((application) => {
       const identity = application.identity;
       return callback(closure_20, { identity, application: application.application }, "" + identity.application_id + "-" + identity.provider_issued_user_id);
@@ -627,14 +609,12 @@ export const UserProfileAccountConnectionsCard = function UserProfileAccountConn
   return null;
 };
 export const UserProfileApplicationRoleConnectionsCard = function UserProfileApplicationRoleConnectionsCard(arg0) {
-  let style;
-  let userId;
   ({ userId, style } = arg0);
   const tmp = callback3();
-  const tmp4 = useIsMobileVisualRefreshExperimentEnabled("UserProfileConnections");
-  const arr = useUserProfileApplicationRoleConnections(userId);
+  const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("UserProfileConnections");
+  const arr = useUserProfileApplicationRoleConnectionsDefault(userId);
   let obj = initialize;
-  const items = [initialize];
+  const items = [closure_7];
   if (!obj.useStateFromStores(items, () => obj.hidePersonalInformation)) {
     if (0 !== arr.length) {
       const mapped = arr.map((application) => callback(closure_21, { applicationRoleConnection: application }, application.application.id));
@@ -655,12 +635,12 @@ export const UserProfileApplicationRoleConnectionsCard = function UserProfileApp
         obj[2] = mapped;
         let tmp9Result = tmp9(tmp5(6286).TableRowGroup, obj);
       } else {
-        const obj1 = { children: null };
+        obj1 = { children: null };
         obj1[0] = mapped;
         tmp9Result = tmp9(tmp5(7185).UserProfileCardRows, obj1);
       }
       obj[3] = tmp9Result;
-      return closure_13(Divider, obj);
+      return closure_13(DividerDefault, obj);
     }
   }
   return null;

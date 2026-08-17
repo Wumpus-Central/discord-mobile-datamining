@@ -1,17 +1,17 @@
 // discord_app/modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx
-import "noop";
-import { Image } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-let c4;
-let c5;
-let require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let items = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
 let items1 = [require("registerAsset"), require("registerAsset"), require("registerAsset")];
@@ -58,33 +58,32 @@ const items2 = [
   }
 ];
 let closure_9 = createCacheKey.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
-const result = require("jsxProd").fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_following/native/components/ChannelFollowSuccessAlert.tsx");
 
 export default function ChannelFollowSuccessAlert(arg0) {
   const tmp = callback3();
-  let obj = AccessibilityAnnouncer;
-  const tmp6 = obj.isThemeDark(useTheme()) ? items1 : items;
-  require = tmp6;
+  let obj = _AccessibilityAnnouncer;
+  const tmp6 = obj.isThemeDark(useThemeDefault()) ? items1 : items;
+  _require = tmp6;
   let tmp5Result = tmp5(7411);
   items = [tmp6];
-  const stableMemo = tmp5Result.useStableMemo(() => outer1_1(outer1_2[14]).sample(closure_0), items);
+  const stableMemo = tmp5Result.useStableMemo(() => closure_1_1(closure_1_2[14]).sample(closure_0), items);
   tmp5Result = tmp5(7411);
   const stableMemo1 = tmp5Result.useStableMemo(() => callback(table[14]).sample(closure_8), []);
   obj = {};
   const tmp2 = importDefault;
-  const tmp4 = useTheme();
+  const tmp4 = useThemeDefault();
   const merged = Object.assign(arg0);
   const intl = tmp5(1236).intl;
-  obj.confirmText = intl.string(getSystemLocale.t["+IrDzN"]);
+  obj.confirmText = intl.string(_getSystemLocale.t["+IrDzN"]);
   obj = { source: stableMemo, style: tmp.image };
   items1 = [callback(Image, obj), , ];
-  const obj1 = { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  obj1[3] = stableMemo1();
-  items1[1] = callback(Text.Text, obj1);
+  const tmp2Result = componentDidMountDefault;
+  items1[1] = callback(_Text.Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
   const obj2 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
   const intl2 = tmp5(1236).intl;
-  obj2[3] = intl2.string(getSystemLocale.t["2QbSea"]);
-  items1[2] = callback(Text.Text, obj2);
+  obj2[3] = intl2.string(_getSystemLocale.t["2QbSea"]);
+  items1[2] = callback(_Text.Text, obj2);
   obj.children = items1;
-  return callback2(componentDidMount, obj);
+  return callback2(tmp2Result, obj);
 };

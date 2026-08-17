@@ -1,29 +1,25 @@
 // discord_app/modules/auth/native/components/utils/usePasswordScore.tsx
-import set from "set";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/usePasswordScore.tsx");
 
 export const PasswordScore = { WEAK: 2, [2]: "WEAK", MEDIUM: 3, [3]: "MEDIUM", STRONG: 4, [4]: "STRONG" };
 export const usePasswordScore = function usePasswordScore(first) {
-  let set;
-  let dependencyMap;
-  let tmp2;
-  let tmp4;
-  let closure_0 = first;
+  closure_0 = first;
   [tmp2, dependencyMap] = callback(React.useState(null), 2);
   let tmp = callback(React.useState(null), 2);
-  [tmp4, set] = callback(React.useState(null), 2);
+  [tmp4, closure_2] = callback(React.useState(null), 2);
   callback = React.useRef(null);
   const effect = React.useEffect(() => {
     let lib;
-    lib = outer1_2((arg0) => {
-      let closure_0 = arg0;
-      let c5 = 0;
-      let c6 = 0;
-      let c4 = 0;
+    lib = closure_1_2((arg0) => {
+      closure_0 = arg0;
+      c5 = 0;
+      c6 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (c6 === 2) {
           c6 = 3;
@@ -51,13 +47,13 @@ export const usePasswordScore = function usePasswordScore(first) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let set = tmp3;
-                let closure_1 = tmp7;
+                closure_2 = tmp3;
+                closure_1 = tmp7;
                 let lib;
                 if (null != lib) {
                   if (arr.length > 0) {
-                    let c4 = 1;
-                    let obj1 = lib(outer2_1[4]);
+                    c4 = 1;
+                    obj1 = lib(closure_2_1[4]);
                     c5 = 2;
                     c6 = 1;
                     obj1 = { value: null, done: false };
@@ -69,15 +65,15 @@ export const usePasswordScore = function usePasswordScore(first) {
             } else {
               if (1 === tmp7) {
                 c4 = 0;
-                outer1_1(null);
-                outer1_2(null);
+                closure_1_1(null);
+                closure_1_2(null);
               } else if (arg0 === 1) {
                 c6 = 3;
                 throw arg1;
               } else if (arg0 !== 2) {
                 lib = arg1;
-                outer1_1(lib.password_strength);
-                outer1_2(lib.valid);
+                closure_1_1(lib.password_strength);
+                closure_1_2(lib.valid);
                 c4 = 0;
               }
               c4 = 0;
@@ -88,7 +84,7 @@ export const usePasswordScore = function usePasswordScore(first) {
             }
             c6 = 3;
           } catch (tmp24) {
-            let _slicedToArray = tmp24;
+            closure_3 = tmp24;
             if (tmp4 === c4) {
               c6 = tmp2;
               throw tmp24;
@@ -99,7 +95,7 @@ export const usePasswordScore = function usePasswordScore(first) {
         }
       })();
     });
-    _slicedToArray.current = lib(outer1_1[3]).throttle(function() {
+    closure_3.current = lib(closure_1_1[3]).throttle(function() {
       const self = this;
       const apply = closure_0.apply;
       if (typeof apply === "unknown") {

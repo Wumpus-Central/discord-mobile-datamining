@@ -1,20 +1,12 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/FilesScreen.tsx
-import importAllResult from "noop";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ SearchListItemTypes: c4, CARD_ESTIMATED_ITEM_SIZE: c5, FILES_OR_LINKS_NUM_COLUMNS: closure_6, FILES_OR_LINKS_GAP_WIDTH: error } = MessageEmbedTypes);
 const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
-  let isFirstPageLoading;
-  let isFocused;
-  let isNextPageLoading;
-  let width;
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
   let searchMessages;
@@ -32,8 +24,6 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
   onPressMessageItem = searchContext(fileOrLinkImageDimensions[6]).useOnPressMessageItem({ searchContext });
   let items = [onPressMessageItem, searchContext];
   callback = onPressMessageItem.useCallback((arg0, index) => {
-    let channelId;
-    let messageId;
     ({ channelId, messageId } = arg0);
     let obj = searchContext(fileOrLinkImageDimensions[7]);
     obj = { searchContext, channelId, messageId, index };
@@ -48,24 +38,24 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   const memo = onPressMessageItem.useMemo(() => {
     const items = [];
-    let c1 = 0;
+    c1 = 0;
     if (c1 != null) {
       let item = c1.forEach((arg0) => {
         const files = searchContext(fileOrLinkImageDimensions[9]).getFiles(arg0);
         const item = files.forEach((data) => {
           const sum = closure_1 + arg1;
           let arr = sum;
-          let obj = { type: outer2_4.FILE, props: null };
+          let obj = { type: closure_2_4.FILE, props: null };
           obj = {
             data,
             onPress(arg0) {
-              return outer1_4(arg0, closure_0);
+              return closure_1_4(arg0, closure_0);
             },
-            imageStyle: outer1_2,
+            imageStyle: closure_1_2,
             containerStyle: null
           };
-          obj = { itemIndex: sum, spacing: outer2_7, numColumns: outer2_6 };
-          obj[3] = items(outer2_2[9]).getGridItemSpacingStyles(obj);
+          obj = { itemIndex: sum, spacing: closure_2_7, numColumns: closure_2_6 };
+          obj[3] = items(closure_2_2[9]).getGridItemSpacingStyles(obj);
           obj[1] = obj;
           arr = arr.push(obj);
         });
@@ -74,7 +64,7 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
     }
     if (placeholderCount > 0) {
       let obj = { numColumns: null, numResults: null, placeholderCount: null };
-      obj[0] = outer1_6;
+      obj[0] = closure_1_6;
       obj[1] = items.length;
       obj[2] = tmp2;
       const adjustedPlaceholderCount = searchContext(fileOrLinkImageDimensions[10]).getAdjustedPlaceholderCount(obj);
@@ -90,12 +80,12 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
         let tmp5 = searchContext;
         let tmp6 = fileOrLinkImageDimensions;
         let obj3 = searchContext(fileOrLinkImageDimensions[9]);
-        let obj1 = { itemIndex: null, spacing: null, numColumns: null };
+        obj1 = { itemIndex: null, spacing: null, numColumns: null };
         obj1[0] = length + num;
-        let tmp7 = outer1_7;
-        obj1[1] = outer1_7;
-        let tmp8 = outer1_6;
-        obj1[2] = outer1_6;
+        let tmp7 = closure_1_7;
+        obj1[1] = closure_1_7;
+        let tmp8 = closure_1_6;
+        obj1[2] = closure_1_6;
         obj[1] = obj3.getGridItemSpacingStyles(obj1);
         obj[2] = obj;
         let arr = items.push(obj);
@@ -112,6 +102,6 @@ const memoResult = importAllResult.memo(function FilesScreen(searchContext) {
   obj[8] = isNextPageLoading;
   return jsx(searchMessages(fileOrLinkImageDimensions[7]), { data: memo, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.filesOrLinksContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
 });
-let result = require("jsxProd").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/FilesScreen.tsx");
 
 export default memoResult;

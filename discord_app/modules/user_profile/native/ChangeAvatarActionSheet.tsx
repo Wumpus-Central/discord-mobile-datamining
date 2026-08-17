@@ -1,47 +1,41 @@
 // discord_app/modules/user_profile/native/ChangeAvatarActionSheet.tsx
-import "noop";
-import { View } from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticsObjects } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { ActionSheet } from "../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { TableRowInner } from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { UserProfileUpsellButton } from "UserProfileUpsellButton.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import ActionSheet from "ActionSheet" /* 7175 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 14008 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticsObjects } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+require = arg1;
+noopAll;
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 createCacheKey = { nitroWheel: null, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
-createCacheKey = { marginLeft: require("Themes").space.PX_8 };
+createCacheKey = { marginLeft: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: require("Themes").colors.TEXT_DEFAULT };
-let obj1 = { color: require("Themes").colors.TEXT_DEFAULT };
-createCacheKey[2] = { marginBottom: 4, color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
-let obj2 = { marginBottom: 4, color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
-createCacheKey[3] = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-let obj3 = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_8 };
+createCacheKey[1] = { color: ThemesDefault.colors.TEXT_DEFAULT };
+let obj1 = { color: ThemesDefault.colors.TEXT_DEFAULT };
+createCacheKey[2] = { marginBottom: 4, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
+let obj2 = { marginBottom: 4, color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, alignItems: "center", flexDirection: "row" };
+createCacheKey[3] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+let obj3 = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "flex-end" };
 createCacheKey[6] = { flex: 0 };
 createCacheKey[7] = { justifyContent: "flex-start" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_8 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_profile/native/ChangeAvatarActionSheet.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/ChangeAvatarActionSheet.tsx");
 
 export default function ChangeAvatarActionSheet(showRemoveAvatar) {
-  let handleEditAvatarDecorationSelect;
-  let handleRemoveAvatarSelect;
-  let handleUploadAvatarSelect;
-  let handleUploadGIFAvatarSelect;
-  let showAnimatedAvatarUpsell;
   ({ handleUploadGIFAvatarSelect, handleEditAvatarDecorationSelect, showAnimatedAvatarUpsell } = showRemoveAvatar);
   ({ handleUploadAvatarSelect, handleRemoveAvatarSelect } = showRemoveAvatar);
   if (showAnimatedAvatarUpsell === undefined) {
@@ -51,11 +45,11 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = getPremiumPlanItem;
+  obj1 = getPremiumPlanItemDefault;
   let isPremiumResult = obj1.isPremium(stateFromStores);
   obj = { title: null, trailing: null, titleWrapperStyle: null, titleContainerStyle: null };
   const intl = getSystemLocale.intl;
@@ -107,12 +101,12 @@ export default function ChangeAvatarActionSheet(showRemoveAvatar) {
     obj9[0] = AnalyticsObjects.ANIMATED_AVATAR;
     const intl7 = tmp2(1236).intl;
     obj9[1] = intl7.string(tmp2(1236).t.mr4K7D);
-    obj8[1] = tmp8(UserProfileUpsellButton, obj9);
+    obj8[1] = tmp8(UserProfileUpsellButtonDefault, obj9);
     items4[1] = tmp8(View, obj8);
     obj6[0] = items4;
     obj2[1] = tmp7(closure_8, obj6);
     showAnimatedAvatarUpsell = tmp8(tmp2(6291).TableRow, obj2);
-    const tmp5Result = UserProfileUpsellButton;
+    const tmp5Result = UserProfileUpsellButtonDefault;
   }
   items2[2] = showAnimatedAvatarUpsell;
   tmp8Result = null != handleEditAvatarDecorationSelect;

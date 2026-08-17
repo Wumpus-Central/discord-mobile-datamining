@@ -1,28 +1,27 @@
 // discord_app/modules/user_profile/native/UserProfileDismissibleUpsells.tsx
-import XSmallIcon from "XSmallIcon";
-import { View } from "getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "NitroWheelIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { TrackUserProfileActions } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let items = [...require("items").Gradients.PREMIUM_GUILD];
 let closure_10 = items.reverse();
 createCacheKey = { upsellContainer: null, customProfileThemeUpsellContainer: null, header: null, upsellButtonsContainer: null, upsellButton: null };
-createCacheKey = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { paddingVertical: 16, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
 createCacheKey[2] = { display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center" };
 createCacheKey[3] = { display: "flex", flexDirection: "row", justifyContent: "space-between", flexWrap: "wrap", gap: 10, marginTop: 12 };
 createCacheKey[4] = { flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: require("Themes").colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_profile/native/UserProfileDismissibleUpsells.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: ThemesDefault.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileDismissibleUpsells.tsx");
 
 export default function UserProfileDismissibleUpsells(navigateToShop) {
   navigateToShop = navigateToShop.navigateToShop;
@@ -30,20 +29,20 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
   const hasCustomProfileTheme = navigateToShop.hasCustomProfileTheme;
   let React;
   let trackUserProfileAction;
-  let mergeGuildAvatar;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  React = createCacheKey();
+  closure_5 = undefined;
+  closure_6 = undefined;
+  closure_7 = undefined;
+  closure_8 = undefined;
+  React = callback();
   let obj = navigateToShop(hasCustomProfileTheme[9]);
   const isPrivacyNoticeVisible = obj.useIsPrivacyNoticeVisible();
   trackUserProfileAction = navigateToShop(hasCustomProfileTheme[10]).useUserProfileAnalyticsContext().trackUserProfileAction;
   let obj2 = navigateToShop(hasCustomProfileTheme[10]);
   let tmp = navigateToShop;
-  let items = [mergeGuildAvatar];
+  let items = [closure_5];
   const stateFromStores = navigateToShop(hasCustomProfileTheme[11]).useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = navigateToShop(hasCustomProfileTheme[11]);
-  mergeGuildAvatar = navigateToShop(hasCustomProfileTheme[12]).isPremium(stateFromStores);
+  closure_5 = navigateToShop(hasCustomProfileTheme[12]).isPremium(stateFromStores);
   let items1 = [navigateToShop, trackUserProfileAction];
   closure_6 = React.useCallback(() => {
     trackUserProfileAction({ action: constants.VISIT_SHOP });
@@ -74,13 +73,13 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
       } else {
         let obj = { borderWidth: 2, direction: null, colors: null, borderRadius: null, children: null };
         obj[1] = ShopIcon(tmp[15]).GradientBorder.Direction.VERTICAL;
-        obj[2] = outer1_10;
+        obj[2] = closure_1_10;
         obj[3] = navigateToPremium(tmp[8]).radii.lg;
         obj = {};
         let tmp12Result = upsellContainer;
         const merged = Object.assign(upsellContainer.upsellContainer);
         const tmp2 = hasCustomProfileTheme ? tmp12Result.customProfileThemeUpsellContainer : {};
-        let obj1 = { style: null, children: null };
+        obj1 = { style: null, children: null };
         const merged1 = Object.assign(tmp2);
         obj1[0] = obj;
         const obj2 = { style: null, children: null };
@@ -93,12 +92,12 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         const intl2 = ShopIcon(tmp[17]).intl;
         obj4[1] = intl2.string(ShopIcon(tmp[17]).t["6Xcq+Y"]);
         obj4[2] = function onPress() {
-          return markAsDismissed(outer1_7.USER_DISMISS);
+          return markAsDismissed(closure_1_7.USER_DISMISS);
         };
         obj4[3] = closure_8(ShopIcon(tmp[19]).XSmallIcon, { size: "sm" });
         items[1] = closure_8(ShopIcon(tmp[18]).PressableOpacity, obj4);
         obj2[1] = items;
-        const items1 = [outer1_9(trackUserProfileAction, obj2), ];
+        const items1 = [closure_1_9(trackUserProfileAction, obj2), ];
         let obj5 = { style: null, children: null };
         obj5[0] = tmp12Result.upsellButtonsContainer;
         let obj6 = { style: null, children: null };
@@ -107,14 +106,14 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         const intl3 = ShopIcon(tmp[17]).intl;
         const string = intl3.string;
         const t = ShopIcon(tmp[17]).t;
-        if (mergeGuildAvatar) {
+        if (closure_5) {
           let stringResult = string(t["0Q61kF"]);
         } else {
           stringResult = string(t.x6rkDp);
         }
         let obj7 = { text: null, onPress: null, icon: null, iconPosition: "start", variant: "secondary", shiny: true };
         obj7[0] = stringResult;
-        obj7[1] = mergeGuildAvatar ? closure_8 : closure_7;
+        obj7[1] = closure_5 ? closure_8 : closure_7;
         obj7[2] = closure_8(ShopIcon(tmp[21]).NitroWheelIcon, { size: "sm" });
         obj6[1] = closure_8(Button, obj7);
         tmp12Result = tmp12(tmp16, obj6);
@@ -140,7 +139,7 @@ export default function UserProfileDismissibleUpsells(navigateToShop) {
         obj1 = tmp15(tmp16, obj1);
         obj[4] = obj1;
         closure_8(ShopIcon(tmp[15]).GradientBorder, obj);
-        const tmp6 = mergeGuildAvatar;
+        const tmp6 = closure_5;
       }
     };
     tmp5Result = tmp5(tmp6(tmp2[13]), obj);

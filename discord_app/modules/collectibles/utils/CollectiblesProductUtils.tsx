@@ -1,14 +1,12 @@
 // discord_app/modules/collectibles/utils/CollectiblesProductUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { isProfileEffectRecord } from "fromServer";
-import ME from "ME";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { isProfileEffectRecord } from "fromServer" /* 5307 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ CurrencyCodes: c4, PriceSetAssignmentPurchaseTypes: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/utils/CollectiblesProductUtils.tsx");
 
 export const getProductOrbPrice = function getProductOrbPrice(arg0) {
   const tmp2 = arg0.product.prices[arg0.hasShopDiscount ? closure_5.PREMIUM_TIER_2 : closure_5.DEFAULT];

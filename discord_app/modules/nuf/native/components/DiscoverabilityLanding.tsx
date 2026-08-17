@@ -1,20 +1,17 @@
 // discord_app/modules/nuf/native/components/DiscoverabilityLanding.tsx
-import Button from "Button";
-import get_ActivityIndicator from "Form";
-import { useContactSyncModalStore } from "ContactSyncModes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { useContactSyncModalStore } from "ContactSyncModes" /* 11850 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, headerContainer: null, header: null, image: null, button: null, title: null, subtitle: null, formRow: null, formText: null, footerContainer: null, info: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 0, justifyContent: "center", marginBottom: 24 };
 createCacheKey[2] = { paddingHorizontal: 16, alignItems: "center" };
@@ -22,18 +19,18 @@ createCacheKey[3] = { width: "100%", marginHorizontal: 0 };
 createCacheKey[4] = { flexGrow: 0, marginHorizontal: 16, marginBottom: 24 };
 createCacheKey[5] = { textAlign: "center", marginTop: 16 };
 createCacheKey[6] = { textAlign: "center", marginTop: 8 };
-createCacheKey[7] = { paddingVertical: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-let obj1 = { paddingVertical: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[7] = { paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj1 = { paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let obj2 = {};
-const merged = Object.assign(require("createTextStyle")(require("ME").Fonts.PRIMARY_SEMIBOLD, require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, 16));
+const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, 16));
 createCacheKey[8] = obj2;
 createCacheKey[9] = { flexGrow: 1, width: "100%" };
 createCacheKey[10] = { paddingHorizontal: 16, marginTop: 8, marginBottom: 24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ContactSyncModes").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityLanding.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/DiscoverabilityLanding.tsx");
 
 export default function DiscoverabilityLanding(onNext) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   onNext = onNext.onNext;
   const tmp2 = useContactSyncModalStore();
   let allowEmail = tmp2.allowEmail;
@@ -48,9 +45,8 @@ export default function DiscoverabilityLanding(onNext) {
   obj = { paddingTop: onNext(allowPhone[12]).NAV_BAR_HEIGHT + 32, paddingBottom: allowEmail(allowPhone[8])().bottom + 16 };
   obj[1] = obj;
   obj = { style: tmp.headerContainer, children: null };
-  const obj1 = { style: tmp.header, children: null };
-  const obj2 = { resizeMode: "contain", style: tmp.image, source: null };
-  obj2[2] = allowEmail(allowPhone[14]);
+  obj1 = { style: tmp.header, children: null };
+  const obj2 = { resizeMode: "contain", style: tmp.image, source: allowEmail(allowPhone[14]) };
   const items1 = [callback(allowEmail(allowPhone[13]), obj2), , ];
   const obj3 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = onNext(allowPhone[16]).intl;
@@ -81,7 +77,7 @@ export default function DiscoverabilityLanding(onNext) {
   const intl5 = tmp6(tmp3[16]).intl;
   items4[2] = intl5.format(onNext(allowPhone[16]).t.QmF5z4, {
     learnMoreHook(children) {
-      return outer1_7(onNext(allowPhone[15]).Text, { onPress: Button, variant: "text-sm/medium", color: "text-link", children }, arg1);
+      return closure_1_7(onNext(allowPhone[15]).Text, { onPress: closure_3, variant: "text-sm/medium", color: "text-link", children }, arg1);
     }
   });
   obj8[3] = items4;

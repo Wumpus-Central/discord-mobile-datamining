@@ -1,6 +1,6 @@
 // discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts
-import asyncGeneratorStep from "asyncGeneratorStep";
-import _arrayLikeToArray from "../../../../../../_runtime/00036__arrayLikeToArray.js";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "module_36" /* 36 */;
 
 const require = arg1;
 function compareArrays(arg0, arg1) {
@@ -21,31 +21,31 @@ function compareArrays(arg0, arg1) {
 function _generatePairwiseFingerprint() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3, arg4) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let module_36 = arg3;
-    let closure_4 = arg4;
-    let c7 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    closure_4 = arg4;
+    c7 = 0;
+    c8 = 0;
     return (function*(arg0, arg1, arg2, arg3, arg4) {
-      let closure_6 = tmp2;
-      const items = [lib(9696).generateKeyFingerprint(lib, uint8Array, asyncGeneratorStep), ];
+      closure_6 = tmp2;
+      const items = [lib(9696).generateKeyFingerprint(lib, uint8Array, closure_2), ];
       const obj9 = lib(9696);
-      items[1] = lib(9696).generateKeyFingerprint(lib, module_36, closure_4);
+      items[1] = lib(9696).generateKeyFingerprint(lib, closure_3, closure_4);
       lib = yield Promise.all(items);
       const sorted = lib.sort(closure_5);
       const _Uint8Array2 = Uint8Array;
       uint8Array = new Uint8Array(lib[0].byteLength + lib[1].byteLength);
       const result = uint8Array.set(lib[0], 0);
       const result1 = uint8Array.set(lib[1], lib[0].byteLength);
-      asyncGeneratorStep = yield lib(uint8Array[2]).scryptAsync(uint8Array, module_36, closure_4);
+      closure_2 = yield lib(uint8Array[2]).scryptAsync(uint8Array, closure_3, closure_4);
       const _Uint8Array = Uint8Array;
-      const uint8Array1 = new Uint8Array(asyncGeneratorStep);
+      const uint8Array1 = new Uint8Array(closure_2);
       return uint8Array1;
     })();
   });
-  const _generatePairwiseFingerprint = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -55,7 +55,7 @@ function _generatePairwiseFingerprint() {
   return applyArgumentsResult;
 }
 let closure_4 = { N: 16384, r: 8, p: 2, dkLen: 64 };
-let result = require("XorAndSalsa").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/libdave/package/src/PairwiseFingerprint.ts");
 
 export const generatePairwiseFingerprint = function generatePairwiseFingerprint(callback1, uint8Array, arg2, uint8Array1, arg4) {
   const self = this;

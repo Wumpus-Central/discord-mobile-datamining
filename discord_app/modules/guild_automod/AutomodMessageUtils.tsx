@@ -1,23 +1,20 @@
 // discord_app/modules/guild_automod/AutomodMessageUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import Feedback from "Feedback";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AutomodQuarantineUserActionMessageEmbedKeys from "AutomodQuarantineUserActionMessageEmbedKeys" /* 5234 */;
+import AutomodQuarantineUserMessageEmbedKeys from "AutomodQuarantineUserMessageEmbedKeys" /* 5239 */;
+import Feedback from "Feedback" /* 5242 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 import { AutomodNotificationEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodNotificationEmbedKeys.tsx";
-import { AutomodQuarantineUserActionMessageEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserActionMessageEmbedKeys.tsx";
-import { AutomodQuarantineUserMessageEmbedKeys } from "../../../discord_common/js/shared/shared-constants/AutomodQuarantineUserMessageEmbedKeys.tsx";
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { computeChannelName } from "../channel/useChannelName.tsx";
-import { Feedback } from "AutomodFeedback.tsx";
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getDecisionOutcomeFromMessage(embeds) {
   DECISION_OUTCOME = DECISION_OUTCOME(5233).AutomodMessageEmbedKeys.DECISION_OUTCOME;
   embeds = embeds.embeds;
@@ -532,18 +529,18 @@ function extractAutomodMessageFields(message) {
   obj[15] = result;
   return obj;
 }
-({ MessageEmbedTypes: metroImportAll, MessageTypes: c9, NOOP_NULL: c10, Permissions: unpackModuleId } = ME);
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_automod/AutomodMessageUtils.tsx");
+({ MessageEmbedTypes: closure_8, MessageTypes: c9, NOOP_NULL: c10, Permissions: unpackModuleId } = ME);
+let result = require("set").fileFinishedImporting("modules/guild_automod/AutomodMessageUtils.tsx");
 
 export default function useAutomodMessageFields(arg0) {
   const _require = arg0;
   const items = [arg0];
-  const memo = React.useMemo(() => outer1_18(closure_0), items);
+  const memo = React.useMemo(() => closure_1_18(closure_0), items);
   let obj = _require(memo[18]);
-  const items1 = [ensureGuildLoaded];
+  const items1 = [closure_4];
   const items2 = [memo.embedChannelId];
   obj = {};
-  const stateFromStores = obj.useStateFromStores(items1, () => outer1_4.getChannel(memo.embedChannelId), items2);
+  const stateFromStores = obj.useStateFromStores(items1, () => closure_1_4.getChannel(memo.embedChannelId), items2);
   const merged = Object.assign(memo);
   obj.embedChannel = stateFromStores;
   return obj;
@@ -649,7 +646,7 @@ export const getActionHeaderTextMobile = function getActionHeaderTextMobile(mess
       let formatToPlainStringResult1 = intl4.formatToPlainString(Xy2Iw_(1236).t["0Kmtr7"], obj);
     } else {
       const intl3 = Xy2Iw_(1236).intl;
-      const obj1 = { applicationName: null, integrationOwner: null };
+      obj1 = { applicationName: null, integrationOwner: null };
       obj1[0] = tmp15;
       obj1[1] = username.username;
       formatToPlainStringResult1 = intl3.formatToPlainString(Xy2Iw_(1236).t.I0FiWp, obj1);
@@ -675,7 +672,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel)
   }
   if (null != channel) {
     let obj2 = _computeChannelName;
-    let channelName = obj2.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+    let channelName = obj2.computeChannelName(channel, closure_7, closure_6);
     let obj = dependencyMap;
     let format = _require;
     let obj3 = dependencyMap;
@@ -789,7 +786,7 @@ export const getActionHeaderText = function getActionHeaderText(embeds, channel)
       if (tmp15 !== _4xL9Sk(5237).AutomodInteractionCallbackTypeEmbedKeys.MODAL) {
         if (tmp12 !== _4xL9Sk(5238).AutomodDecisionOutcomeEmbedKeys.BLOCKED) {
           const intl6 = _4xL9Sk(1236).intl;
-          const obj1 = { applicationName: null, channelName: null, channelHook: null, integrationOwnerHook: null };
+          obj1 = { applicationName: null, channelName: null, channelHook: null, integrationOwnerHook: null };
           obj1[0] = tmp21;
           obj1[1] = channelName;
           obj1[2] = tmp29;

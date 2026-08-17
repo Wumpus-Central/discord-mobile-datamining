@@ -1,47 +1,46 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDirectMessage.tsx
-import importAllResult from "FacepileGroupDMAvatar";
-import fetchFingerprint from "fetchFingerprint";
-import callConnect from "callConnect";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelTypes } from "ME";
-import { jsx } from "preload";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "callConnect" /* 4496 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let obj = { dm: null };
-obj = { width: require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE, height: require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj[0] = obj;
 let closure_12 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelId) {
-  let badge;
-  let cutouts;
   channelId = channelId.channelId;
   let stateFromStores;
   let channel;
   let dmRecipient;
   let obj = channelId(channel[11]);
   const tmp = callback();
-  let obj1 = channelId(channel[12]);
-  const items = [updateGuildUnreadSentinel];
-  stateFromStores = obj1.useStateFromStores(items, () => outer1_7.getMentionCountForPrivateChannel(channelId).count);
+  obj1 = channelId(channel[12]);
+  const items = [closure_7];
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getMentionCountForPrivateChannel(channelId).count);
   let obj2 = channelId(channel[12]);
-  const items1 = [ensureGuildLoaded, mergeGuildAvatar, markAllUserIdListsStale, callConnect, fetchFingerprint];
+  const items1 = [closure_6, closure_9, closure_8, closure_5, closure_4];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
-    const channel = outer1_6.getChannel(channelId);
+    channel = closure_1_6.getChannel(channelId);
     let type;
     if (channel != null) {
       type = channel.type;
     }
     let user;
-    if (type === outer1_10.DM) {
-      user = outer1_9.getUser(channel.getRecipientId());
+    if (type === closure_1_10.DM) {
+      user = closure_1_9.getUser(channel.getRecipientId());
     }
-    const call = outer1_5.getCall(tmp);
-    const id = outer1_4.getId();
+    const call = closure_1_5.getCall(tmp);
+    const id = closure_1_4.getId();
     let hasItem = null != call && null != id;
     if (hasItem) {
       const ringing = call.ringing;
@@ -88,14 +87,14 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   const memo1 = dmRecipient.useMemo(() => ({
     onPress() {
       if (null != closure_2) {
-        outer1_0(outer1_2[16]).transitionToChannel(tmp.id);
-        const obj = outer1_0(outer1_2[16]);
+        closure_1_0(closure_1_2[16]).transitionToChannel(tmp.id);
+        const obj = closure_1_0(closure_1_2[16]);
       }
     },
     onLongPress() {
       if (null != closure_2) {
-        const result = outer1_0(outer1_2[17]).openChannelLongPressActionSheet(tmp.id);
-        const obj = outer1_0(outer1_2[17]);
+        const result = closure_1_0(closure_1_2[17]).openChannelLongPressActionSheet(tmp.id);
+        const obj = closure_1_0(closure_1_2[17]);
       }
     }
   }), items3);
@@ -138,6 +137,6 @@ const memoResult = importAllResult.memo(function GuildsBarDirectMessage(channelI
   obj[10] = tmp11Result;
   return jsx(stateFromStores(channel[11]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: true, cutouts: false, externalChildren: "done", expandedChildren: "flowing", children: "hourglass" });
 });
-let result = require("callConnect").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarDirectMessage.tsx");
 
 export default memoResult;

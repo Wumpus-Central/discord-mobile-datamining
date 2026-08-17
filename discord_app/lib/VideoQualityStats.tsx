@@ -1,8 +1,10 @@
 // discord_app/lib/VideoQualityStats.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "getStats";
+import getSamples from "getSamples" /* 7490 */;
+import getStatsDefault from "getStats" /* 7496 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function parseEncoder(encoderImplementationName) {
   if (null == encoderImplementationName) {
     return obj.UNKNOWN;
@@ -57,13 +59,10 @@ let RawVideoStats;
 class RawVideoStats {
 }
 RawVideoStats["parseInboundStats"] = function parseInboundStats(found, closure_1) {
-  let framesDecodeErrors;
-  let framesDropped;
-  let totalDecodeTime;
   if (typeof RawVideoStats !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj = Object.create(RawVideoStats.prototype);
+  obj = Object.create(RawVideoStats.prototype);
   if (null != found) {
     ({ bytesReceived: tmp2.bytes, framesDecoded: tmp2.framesCodec, framesDecodeErrors } = found);
     if (framesDecodeErrors == null) {
@@ -177,13 +176,10 @@ RawVideoStats["parseInboundStats"] = function parseInboundStats(found, closure_1
   return obj;
 };
 RawVideoStats["parseOutboundStats"] = function parseOutboundStats(resolution, closure_1) {
-  let framesSent;
-  let freezeCount;
-  let packetsLost;
   if (typeof RawVideoStats !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let obj = Object.create(RawVideoStats.prototype);
+  obj = Object.create(RawVideoStats.prototype);
   if (null != resolution) {
     obj = { bytes: null, framesCodec: null, framesCodecError: null, framesNetwork: null, packets: null, packetsLost: null, framesDropped: 0, networkFramesDropped: 0, resolution: null, minorResolution: null, majorResolution: null, timestamp: null, encoder: null, decoder: null, codecType: null, nackCount: null, pliCount: null, qpSum: null, freezeCount: null, pauseCount: 0, totalFreezesDuration: null, totalPausesDuration: 0, totalFramesDuration: null, totalDecodeTime: 0, outboundSinkWant: null, vmafScore: null, qualityDecodeErrors: null, qualityDecoderReboots: null, qualityScoreErrors: null, qualityFrameDrops: null, qualitySizeMismatches: null, psnrDb: null, keyframes: null, framesDroppedRateLimiter: null, framesDroppedEncoderQueue: null, framesDroppedCongestionWindow: null, framesDroppedEncoder: null, passthroughCount: null, cryptorSuccessCount: null, cryptorFailureCount: null, cryptorDuration: null, cryptorAttempts: null, cryptorMaxAttempts: null, cryptorMissingKeyCount: null, cryptorInvalidNonceCount: 0, localWant: 0, consecutiveStaticColorFrames: null, screenshareFramesUnique: 0 };
     ({ bytesSent: obj[0], framesEncoded: obj[1], framesSent } = resolution);
@@ -364,7 +360,7 @@ class InboundStats {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    values = Object.values(Set);
+    values = Object.values(closure_12);
     obj.decoderBuckets = Object.fromEntries(values.map((arg0) => {
       const items = [arg0, 0];
       return items;
@@ -389,7 +385,7 @@ class InboundStats {
     obj.localWantHistogram = histogram4;
     tmp8 = new require("getStats")();
     obj.systemResources = tmp8;
-    obj.decoderCodec = Object.UNKNOWN;
+    obj.decoderCodec = closure_10.UNKNOWN;
     obj.aggregatedProperties = { framesCodec: 0, framesNetwork: 0, packets: 0, packetsLost: 0, framesDropped: 0, networkFramesDropped: 0, framesCodecError: 0, bytes: 0, nackCount: 0, pliCount: 0, qpSum: 0, freezeCount: 0, pauseCount: 0, totalFreezesDuration: 0, totalPausesDuration: 0, totalFramesDuration: 0, totalDecodeTime: 0, keyframes: 0, passthroughCount: 0, cryptorSuccessCount: 0, cryptorFailureCount: 0, cryptorDuration: 0, cryptorAttempts: 0, cryptorMissingKeyCount: 0, cryptorInvalidNonceCount: 0, qualityDecodeErrors: 0, qualityDecoderReboots: 0, qualityScoreErrors: 0, qualityFrameDrops: 0, qualitySizeMismatches: 0, screenshareFramesUnique: 0 };
     obj.aggregationDuration = 0;
     obj.bitrateBuckets = {};
@@ -403,7 +399,7 @@ class InboundStats {
     obj.minWidth = null;
     obj.minHeight = null;
     obj.maxConsecutiveStaticColorFrames = 0;
-    obj.videoStoppedReason = Object.None;
+    obj.videoStoppedReason = closure_15.None;
     obj.startTime = global.now();
     stopWatch = new require("sleep").StopWatch(global);
     obj.videoStoppedWatch = stopWatch;
@@ -435,8 +431,8 @@ Object.defineProperty(prototype, "videoStoppedDuration", {
 });
 prototype["collectAggregationStats"] = function collectAggregationStats(parseInboundStatsResult, previousAggregationStats) {
   const self = this;
-  let closure_0 = parseInboundStatsResult;
-  let closure_1 = previousAggregationStats;
+  closure_0 = parseInboundStatsResult;
+  closure_1 = previousAggregationStats;
   const iter = dependencyMap[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -494,17 +490,6 @@ prototype["setVideoStopped"] = function setVideoStopped(arg0, SenderStopped) {
   }
 };
 prototype["appendAndIncrementStats"] = function appendAndIncrementStats(parseInboundStatsResult) {
-  let bytes;
-  let bytes2;
-  let codecType;
-  let decoder;
-  let encoder;
-  let framesCodec;
-  let framesCodec2;
-  let localWant;
-  let resolution;
-  let timestamp;
-  let timestamp2;
   let self = this;
   self = this;
   if (!this.isVideoStopped) {
@@ -648,7 +633,7 @@ prototype["appendTransportStats"] = function appendTransportStats(transport) {
   }
 };
 prototype["getCodecsUsed"] = function getCodecsUsed() {
-  const set = new Set();
+  set = new Set();
   const entries = Object.entries(this.codecBuckets);
   while (tmp2 !== undefined) {
     let tmp4 = callback;
@@ -666,12 +651,12 @@ let result = set.fileFinishedImporting("lib/VideoQualityStats.tsx");
 class OutboundStats extends InboundStats {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-    values = Object.values(defineProperty);
+    values = Object.values(closure_11);
     applyArgumentsResult.encoderBuckets = Object.fromEntries(values.map((arg0) => {
       const items = [arg0, 0];
       return items;
     }));
-    applyArgumentsResult.encoderCodec = Object.UNKNOWN;
+    applyArgumentsResult.encoderCodec = closure_10.UNKNOWN;
     applyArgumentsResult.targetFrames = 0;
     applyArgumentsResult.targetBytesMax = 0;
     applyArgumentsResult.targetBytesNetwork = 0;

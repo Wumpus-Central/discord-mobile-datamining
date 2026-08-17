@@ -1,19 +1,19 @@
 // discord_app/modules/parent_tools/RestrictedHoursActionCreators.native.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import _modDef5260 from "module_5260" /* 5260 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function closeRestrictedHoursModal() {
-  ModalActionCreators.popWithKey(RESTRICTED_HOURS_MODAL_KEY);
+  _modDef5260.popWithKey(RESTRICTED_HOURS_MODAL_KEY);
 }
 const RESTRICTED_HOURS_MODAL_KEY = "RESTRICTED_HOURS_MODAL_KEY";
-const result = require("RestrictedHoursLogoutBlockingLayer").fileFinishedImporting("modules/parent_tools/RestrictedHoursActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/RestrictedHoursActionCreators.native.tsx");
 
 export const openRestrictedHoursModal = function openRestrictedHoursModal() {
-  let obj = ModalActionCreators;
+  let obj = _modDef5260;
   obj = { onClose: closeRestrictedHoursModal };
   obj.pushLazy(callback(function*() {
-    yield v0(outer1_2[3])(outer1_2[2], outer1_2.paths);
+    yield v0(closure_1_2[3])(closure_1_2[2], closure_1_2.paths);
     return arg1.default;
   }), obj, RESTRICTED_HOURS_MODAL_KEY, { animation: "none", presentation: "fullScreenModal" });
 };

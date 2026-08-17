@@ -1,35 +1,34 @@
 // discord_app/modules/safety_hub/native/SafetyHubErrorActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { CircleXIcon } from "../../../design/components/Icon/native/redesign/generated/CircleXIcon.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useIsSafetyHubLoading } from "../hooks/useSafetyHubLoading.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import Background from "Background" /* 6950 */;
+import CircleXIcon from "CircleXIcon" /* 7341 */;
+import useIsSafetyHubLoadingDefault from "useIsSafetyHubLoading" /* 14107 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { errorContainer: null, redesignErrorIconContainer: null, redesignErrorIcon: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_24, gap: require("Themes").space.PX_16, minHeight: 120 };
+createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16, minHeight: 120 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.WHITE };
+createCacheKey[1] = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[2] = { height: 50, width: 50 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.WHITE };
-const result = require("jsxProd").fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { display: "flex", justifyContent: "center", alignItems: "center", height: 40, width: 40, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/SafetyHubErrorActionSheet.tsx");
 
 export default function SafetyHubErrorActionSheet(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    const tmp3 = createCacheKey();
-    const tmp6 = useIsSafetyHubLoading();
+    const tmp3 = callback3();
+    const tmp6 = useIsSafetyHubLoadingDefault();
     let obj = { children: null };
     obj = { style: null, children: null };
     const items = [tmp3.errorContainer];
@@ -37,8 +36,8 @@ export default function SafetyHubErrorActionSheet(arg0) {
     obj = { style: null, children: null };
     const items1 = [tmp3.redesignErrorIconContainer];
     obj[0] = items1;
-    const obj1 = { size: "custom", color: null, style: null };
-    obj1[1] = Themes.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
+    obj1 = { size: "custom", color: null, style: null };
+    obj1[1] = ThemesDefault.colors.CONTROL_CRITICAL_PRIMARY_BACKGROUND_DEFAULT;
     const items2 = [tmp3.redesignErrorIcon];
     obj1[2] = items2;
     obj[1] = callback(CircleXIcon.CircleXIcon, obj1);

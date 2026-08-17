@@ -1,23 +1,19 @@
 // discord_app/modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Form } from "../../../../../design/void/Form/native/index.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Form from "Form" /* 8083 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { flexDirection: "row", width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, alignItems: "center" };
+createCacheKey = { flexDirection: "row", width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/boolean/AppLauncherBooleanOption.tsx");
 
 export default function AppLauncherBooleanOption(arg0) {
-  let dependencyMap;
-  let hasError;
-  let option;
-  let require;
-  let style;
   ({ initialValue: require, onPress: dependencyMap } = arg0);
   let first;
   let React;
@@ -34,7 +30,7 @@ export default function AppLauncherBooleanOption(arg0) {
   }), 2);
   first = tmp2[0];
   React = tmp2[1];
-  const items = [createCacheKey().container, style];
+  const items = [callback().container, style];
   return jsx(Form.FormCheckboxRow, {
     start: true,
     end: true,

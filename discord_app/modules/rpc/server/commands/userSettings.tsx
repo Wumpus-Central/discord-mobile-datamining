@@ -1,11 +1,12 @@
 // discord_app/modules/rpc/server/commands/userSettings.tsx
-import _getSystemLocale from "_getSystemLocale";
+import closure_0 from "_getSystemLocale" /* 1994 */;
 
 let obj = {};
-obj = { scope: null, handler: null };
-obj[0] = require("set").OAuth2Scopes.IDENTIFY;
-obj[1] = function handler() {
-  return { locale: locale.locale };
+obj = {
+  scope: require("set").OAuth2Scopes.IDENTIFY,
+  handler() {
+    return { locale: locale.locale };
+  }
 };
 obj[require("ME").RPCCommands.USER_SETTINGS_GET_LOCALE] = obj;
 const result = require("set").fileFinishedImporting("modules/rpc/server/commands/userSettings.tsx");

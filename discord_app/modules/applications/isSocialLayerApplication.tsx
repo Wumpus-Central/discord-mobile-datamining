@@ -1,8 +1,10 @@
 // discord_app/modules/applications/isSocialLayerApplication.tsx
-import { ApplicationFlags } from "ME";
-import { getApplicationFlags } from "utils/ApplicationFlagUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getApplicationFlags from "getApplicationFlags" /* 7873 */;
 
-const result = require("items").fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
+const ApplicationFlags = ME.ApplicationFlags;
+const result = set.fileFinishedImporting("modules/applications/isSocialLayerApplication.tsx");
 
 export default function isSocialLayerApplication(application) {
   let hasApplicationFlagResult = getApplicationFlags.hasApplicationFlag(application, ApplicationFlags.SOCIAL_LAYER_INTEGRATION_LIMITED);

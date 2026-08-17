@@ -1,6 +1,6 @@
 // discord_app/modules/app_launcher/native/hooks/useAwaitAnimationComplete.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(null);

@@ -1,19 +1,19 @@
 // discord_app/modules/premium/powerups/hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
-import { PremiumTypes } from "GuildFeatures";
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "insertUnsortedGuilds" /* 5078 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "handleGuildBoostsUpdate" /* 4267 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/powerups/hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useIsCurrentUserEligibleForPowerupUpsells.tsx");
 
 export default function useIsCurrentUserEligibleForPowerupUpsells() {
-  let items = [mergeGuildAvatar];
+  let items = [closure_4];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = stateFromStores(589);
   const tmp = stateFromStores;
-  const items1 = [handleGuildBoostsUpdate];
+  const items1 = [closure_5];
   const stateFromStoresArray = stateFromStores(589).useStateFromStoresArray(items1, () => {
     if (hasFetched.hasFetched) {
       const _Object = Object;
@@ -24,7 +24,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
     return items;
   });
   const obj3 = stateFromStores(589);
-  const items2 = [insertUnsortedGuilds];
+  const items2 = [closure_3];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items2, () => flattenedGuildIds.getFlattenedGuildIds());
   let tmp3 = null != stateFromStores;
   if (tmp3) {
@@ -34,7 +34,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
       let isPremiumResult = tmp(1945).isPremium(stateFromStores, PremiumTypes.TIER_2);
       if (!isPremiumResult) {
         isPremiumResult = stateFromStoresArray.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription) || stateFromStores1.some((arg0) => {
-          const member = outer1_2.getMember(arg0, currentUser.id);
+          const member = closure_1_2.getMember(arg0, currentUser.id);
           let premiumSince;
           if (member != null) {
             premiumSince = member.premiumSince;
@@ -42,7 +42,7 @@ export default function useIsCurrentUserEligibleForPowerupUpsells() {
           return null != premiumSince;
         });
         const tmp8 = stateFromStoresArray.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription) || stateFromStores1.some((arg0) => {
-          const member = outer1_2.getMember(arg0, currentUser.id);
+          const member = closure_1_2.getMember(arg0, currentUser.id);
           let premiumSince;
           if (member != null) {
             premiumSince = member.premiumSince;
@@ -74,7 +74,7 @@ export const getIsCurrentUserEligibleForPowerupUpsells = function getIsCurrentUs
       let isPremiumResult = currentUser(1945).isPremium(currentUser, PremiumTypes.TIER_2);
       if (!isPremiumResult) {
         isPremiumResult = items.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription) || flattenedGuildIds.some((arg0) => {
-          const member = outer1_2.getMember(arg0, currentUser.id);
+          const member = closure_1_2.getMember(arg0, currentUser.id);
           let premiumSince;
           if (member != null) {
             premiumSince = member.premiumSince;
@@ -82,7 +82,7 @@ export const getIsCurrentUserEligibleForPowerupUpsells = function getIsCurrentUs
           return null != premiumSince;
         });
         const tmp10 = items.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription) || flattenedGuildIds.some((arg0) => {
-          const member = outer1_2.getMember(arg0, currentUser.id);
+          const member = closure_1_2.getMember(arg0, currentUser.id);
           let premiumSince;
           if (member != null) {
             premiumSince = member.premiumSince;

@@ -1,13 +1,13 @@
 // discord_app/modules/messages/useReactionPermissions.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import recomputeGuild from "recomputeGuild";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "initialize" /* 4022 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "recomputeGuild" /* 4977 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/useReactionPermissions.tsx");
 
 export default function useReactionPermissions(guild_id) {
   const _require = guild_id;
@@ -16,42 +16,42 @@ export default function useReactionPermissions(guild_id) {
     guild_id = guild_id.guild_id;
   }
   let obj = _require(stateFromStores[6]);
-  const items = [recomputeGuild];
+  const items = [closure_6];
   const items1 = [guild_id];
   stateFromStores = obj.useStateFromStores(items, () => {
     let canChatInGuildResult = null == guild_id;
     if (!canChatInGuildResult) {
-      canChatInGuildResult = outer1_6.canChatInGuild(tmp);
+      canChatInGuildResult = closure_1_6.canChatInGuild(tmp);
     }
     return canChatInGuildResult;
   }, items1);
-  const items2 = [initialize];
+  const items2 = [closure_4];
   const items3 = [guild_id];
   const stateFromStores1 = _require(stateFromStores[6]).useStateFromStores(items2, () => {
     let isLurkingResult = null != guild_id;
     if (isLurkingResult) {
-      isLurkingResult = outer1_4.isLurking(tmp);
+      isLurkingResult = closure_1_4.isLurking(tmp);
     }
     return isLurkingResult;
   }, items3);
   const obj2 = _require(stateFromStores[6]);
   const tmp2 = stateFromStores;
-  const items4 = [trackCommunicationDisabled];
+  const items4 = [closure_5];
   const items5 = [guild_id];
   const stateFromStores2 = _require(stateFromStores[6]).useStateFromStores(items4, () => {
     let isCurrentUserGuestResult = null != guild_id;
     if (isCurrentUserGuestResult) {
-      isCurrentUserGuestResult = outer1_5.isCurrentUserGuest(tmp);
+      isCurrentUserGuestResult = closure_1_5.isCurrentUserGuest(tmp);
     }
     return isCurrentUserGuestResult;
   }, items5);
   const obj3 = _require(stateFromStores[6]);
-  const items6 = [getUncachedChannelPermissions];
+  const items6 = [closure_7];
   const items7 = [stateFromStores, guild_id];
   const stateFromStores3 = _require(stateFromStores[6]).useStateFromStores(items6, () => {
     let canResult = stateFromStores;
     if (stateFromStores) {
-      canResult = outer1_7.can(outer1_8.ADD_REACTIONS, closure_0);
+      canResult = closure_1_7.can(closure_1_8.ADD_REACTIONS, closure_0);
     }
     return canResult;
   }, items7);

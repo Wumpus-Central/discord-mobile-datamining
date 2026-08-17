@@ -1,14 +1,14 @@
 // discord_app/actions/PruneGuildModalActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("sendRequest").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("actions/PruneGuildModalActionCreators.tsx");
 
 export default {
   updateEstimate(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let num = arg1;
     if (arg1 === undefined) {
       num = 7;
@@ -16,11 +16,11 @@ export default {
     const callback = arg2;
     return callback(function*() {
       const HTTP = v0(530).HTTP;
-      const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-      obj1[0] = outer1_3.GUILD_PRUNE(v0);
+      obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = closure_1_3.GUILD_PRUNE(v0);
       const obj2 = { days: null, include_roles: null };
       obj2[0] = dependencyMap;
-      obj2[1] = outer1_2;
+      obj2[1] = closure_1_2;
       obj1[1] = obj2;
       obj1[3] = v0(530).rejectWithMigratedError();
       yield HTTP.get(obj1);
@@ -28,7 +28,7 @@ export default {
     })();
   },
   updateEstimateV2(id, first) {
-    let closure_0 = id;
+    closure_0 = id;
     let num = first;
     if (first === undefined) {
       num = 7;
@@ -62,11 +62,11 @@ export default {
               return obj;
             } else {
               const HTTP = v0(530).HTTP;
-              const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-              obj1[0] = outer1_3.GUILD_PRUNE_V2(v0);
+              obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+              obj1[0] = closure_1_3.GUILD_PRUNE_V2(v0);
               const obj2 = { days: null, include_roles: null };
               obj2[0] = dependencyMap;
-              obj2[1] = outer1_2;
+              obj2[1] = closure_1_2;
               obj1[1] = obj2;
               obj1[3] = v0(530).rejectWithMigratedError();
               dependencyMap = 1;

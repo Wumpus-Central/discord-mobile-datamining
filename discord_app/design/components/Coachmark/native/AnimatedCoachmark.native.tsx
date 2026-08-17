@@ -1,13 +1,13 @@
 // discord_app/design/components/Coachmark/native/AnimatedCoachmark.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
-import { AnimatedRenderItem } from "../../AnimatedEnterExitItem/native/AnimatedEnterExitItem.tsx";
-import { Coachmark } from "Coachmark.native.tsx";
+import _modDef4115 from "module_4115" /* 4115 */;
+import AnimatedRenderItemDefault from "AnimatedRenderItem" /* 9275 */;
+import Coachmark from "Coachmark" /* 9316 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function renderTooltipItem(arg0, enterExitAnimatedStyles) {
   let obj = { style: items, pointerEvents: "box-none", children: null };
   items = [enterExitAnimatedStyles, StyleSheet.absoluteFill];
@@ -19,16 +19,14 @@ function renderTooltipItem(arg0, enterExitAnimatedStyles) {
     tmpResult = tmp(Coachmark.CoachmarkContainer, obj);
   }
   obj[2] = tmpResult;
-  return jsx(ReanimatedRexport.View, { style: items, pointerEvents: "box-none", children: null });
+  return jsx(_modDef4115.View, { style: items, pointerEvents: "box-none", children: null });
 }
-let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Coachmark/native/AnimatedCoachmark.native.tsx");
 
 export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
-  let c1;
-  let tmp3;
   visible = visible.visible;
   const merged = Object.assign(visible, Object.create(null));
-  let importDefault;
+  importDefault = undefined;
   [tmp3, c1] = callback(React.useState(visible), 2);
   let obj = visible(9274);
   const result = obj.tooltipEnterExitAnimation(merged.position);
@@ -47,5 +45,5 @@ export const AnimatedCoachmark = function AnimatedCoachmark(visible) {
   obj[2] = result;
   obj[3] = result;
   obj[4] = renderTooltipItem;
-  return tmp6(AnimatedRenderItem, obj);
+  return tmp6(AnimatedRenderItemDefault, obj);
 };

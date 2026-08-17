@@ -1,12 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandFrecencyStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
-import { UserSettingsTypes } from "MAX_FAVORITES";
-import { PersistedStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
-let c3;
-let c4;
 function handleUserSettingsProtoStoreChange() {
   const applicationCommandFrecency = obj.frecencyWithoutFetchingLatest.applicationCommandFrecency;
   let applicationCommands;
@@ -16,7 +16,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applicationCommands == null) {
     applicationCommands = {};
   }
-  tmp3.overwriteHistory(apply.mapValues(applicationCommands, (recentUses) => {
+  closure_7.overwriteHistory(applyDefault.mapValues(applicationCommands, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -39,15 +39,16 @@ let obj = {
   },
   numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT
 };
-const error = new require("DEFAULT_FRECENCY")(obj);
+let closure_7 = new DEFAULT_FRECENCYDefault(obj);
+const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationCommandFrecencyStore extends PersistedStore {
 }
 const prototype = ApplicationCommandFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_6 = arg0;
+    closure_6 = arg0;
   }
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_2];
   this.syncWith(items, handleUserSettingsProtoStoreChange);
 };
 prototype["getState"] = function getState() {
@@ -75,21 +76,19 @@ prototype["getScoreWithoutLoadingLatest"] = function getScoreWithoutLoadingLates
     }
     id = id.id;
   }
-  let num = tmp3.getScore(id);
+  let num = closure_7.getScore(id);
   if (num == null) {
     num = 0;
   }
   return num;
 };
 prototype["getTopCommandsWithoutLoadingLatest"] = function getTopCommandsWithoutLoadingLatest() {
-  return tmp3.frequently;
+  return closure_7.frequently;
 };
 ApplicationCommandFrecencyStore.displayName = "ApplicationCommandFrecencyStore";
 ApplicationCommandFrecencyStore.persistKey = "ApplicationCommandFrecencyV2";
 obj = {
   APPLICATION_COMMAND_USED: function handleApplicationCommandUsed(arg0) {
-    let command;
-    let context;
     ({ command, context } = arg0);
     if (Number(command.id) < 0) {
       let id = command.id;
@@ -108,8 +107,8 @@ obj = {
     }
     const pendingUsages = closure_6.pendingUsages;
     pendingUsages.push({ key: id, timestamp: Date.now() });
-    tmp3.track(id);
-    tmp3.compute();
+    closure_7.track(id);
+    closure_7.compute();
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
@@ -120,9 +119,9 @@ obj = {
     return false;
   }
 };
-const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(require("dispatcher"), obj);
-let tmp3 = new require("DEFAULT_FRECENCY")(obj);
-const result = require("ApplicationTypes").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
+const applicationCommandFrecencyStore = new ApplicationCommandFrecencyStore(dispatcherDefault, obj);
+let tmp3 = new DEFAULT_FRECENCYDefault(obj);
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandFrecencyStore.tsx");
 
 export default applicationCommandFrecencyStore;
 export const getTopRealCommands = function getTopRealCommands(arg0) {
@@ -152,7 +151,7 @@ export const getTopRealCommands = function getTopRealCommands(arg0) {
   }
 };
 export const getFilteredTopCommands = function getFilteredTopCommands(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const found = arr.filter((arr) => {
     const hasItem = arr.includes(":");
     let tmp2 = !hasItem;

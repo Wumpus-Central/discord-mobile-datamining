@@ -1,17 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileEditBannerButton.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PencilIcon } from "../../../design/components/Icon/native/redesign/generated/PencilIcon.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { useUserProfileBannerHeight } from "../hooks/native/useUserProfileBannerHeight.tsx";
-import { UserProfileBanner } from "UserProfileBanner.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import useUserProfileBannerHeightDefault from "useUserProfileBannerHeight" /* 8972 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
+import PencilIcon from "PencilIcon" /* 9925 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function ProfilePreviewButton(userId) {
   userId = userId.userId;
   let analyticsLocations;
@@ -36,41 +34,26 @@ function ProfilePreviewButton(userId) {
   return tmp5;
 }
 function EditButton(disabled) {
-  let accessibilityLabel;
-  let onPress;
   let flag = disabled.disabled;
   ({ onPress, accessibilityLabel } = disabled);
   if (flag === undefined) {
     flag = false;
   }
-  let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: createCacheKey().editButton, children: null };
-  obj = { size: "xs", color: null };
-  obj[1] = Themes.colors.WHITE;
+  let obj = { accessibilityRole: "button", accessibilityLabel, onPress, disabled: flag, style: callback2().editButton, children: null };
+  obj = { size: "xs", color: ThemesDefault.colors.WHITE };
   obj[5] = callback(PencilIcon.PencilIcon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { position: "relative" }, editButton: null, previewButton: null };
-createCacheKey = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.round };
+createCacheKey = { position: "absolute", top: 12, right: 12, width: 28, height: 28, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.round };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
-const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
+createCacheKey[2] = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { position: "absolute", justifyContent: "center", minHeight: 28, top: 12, right: 48, paddingVertical: 4, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, zIndex: 1 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditBannerButton.tsx");
 
 export default function UserProfileEditBannerButton(arg0) {
-  let bannerSafeArea;
-  let displayProfile;
-  let editButtonAccessibilityLabel;
-  let editDisabled;
-  let onPressEdit;
-  let pendingAccentColor;
-  let pendingAvatarSrc;
-  let pendingBanner;
-  let pendingThemeColors;
-  let showEditButton;
-  let showProfilePreviewButton;
-  let user;
   ({ user, showProfilePreviewButton, showEditButton } = arg0);
   ({ displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerSafeArea } = arg0);
   if (showEditButton === undefined) {
@@ -80,9 +63,9 @@ export default function UserProfileEditBannerButton(arg0) {
   if (editDisabled === undefined) {
     editDisabled = false;
   }
-  let obj = { style: createCacheKey().container, children: null };
-  const tmp = createCacheKey();
-  const items = [callback(UserProfileBanner, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeight(), bannerSafeArea }), , ];
+  let obj = { style: callback2().container, children: null };
+  const tmp = callback2();
+  const items = [callback(UserProfileBannerDefault, { user, displayProfile, pendingBanner, pendingAvatarSrc, pendingThemeColors, pendingAccentColor, bannerHeight: useUserProfileBannerHeightDefault(), bannerSafeArea }), , ];
   if (showProfilePreviewButton) {
     obj = { userId: null };
     obj[0] = user.id;

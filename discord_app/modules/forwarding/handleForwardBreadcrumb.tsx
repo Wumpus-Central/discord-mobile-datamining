@@ -1,20 +1,17 @@
 // discord_app/modules/forwarding/handleForwardBreadcrumb.tsx
-import showTooManyUserGuildsAlert from "showTooManyUserGuildsAlert";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function _handleForwardBreadcrumb() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (guild === 2) {
         guild = 3;
@@ -60,12 +57,12 @@ function _handleForwardBreadcrumb() {
                   if (null != guild_id) {
                     if (null == guild.getGuild(guild_id)) {
                       message_id = 1;
-                      let obj1 = { object: null };
-                      obj1[0] = outer1_7.FORWARD_BREADCRUMB;
+                      obj1 = { object: null };
+                      obj1[0] = closure_1_7.FORWARD_BREADCRUMB;
                       store = 2;
                       guild = 1;
                       const obj2 = { value: null, done: false };
-                      obj2[0] = lib(outer1_2[4]).startLurking(guild_id, obj1, { shouldNavigate: false });
+                      obj2[0] = lib(closure_1_2[4]).startLurking(guild_id, obj1, { shouldNavigate: false });
                       return obj2;
                     }
                   }
@@ -143,7 +140,7 @@ function _handleForwardBreadcrumb() {
       }
     })();
   });
-  const _handleForwardBreadcrumb = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -152,8 +149,8 @@ function _handleForwardBreadcrumb() {
   }
   return applyArgumentsResult;
 }
-({ AnalyticEvents: closure_6, AnalyticsObjects: error, Routes: metroImportAll } = ME);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
+({ AnalyticEvents: closure_6, AnalyticsObjects: error, Routes: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");
 
 export default function handleForwardBreadcrumb() {
   const self = this;

@@ -1,20 +1,17 @@
 // discord_app/design/components/Sheet/native/ActionSheetIconHeader.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { paddingVertical: 0, flexDirection: "row", alignItems: "center", gap: 12 }, titles: { justifyContent: "center", flex: 1 } });
-const result = require("jsxProd").fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetIconHeader.native.tsx");
 
 export const ActionSheetIconHeader = function ActionSheetIconHeader(subtitle) {
-  let icon;
-  let title;
   subtitle = subtitle.subtitle;
   ({ title, icon } = subtitle);
   const tmp = callback2();

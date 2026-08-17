@@ -1,8 +1,9 @@
 // discord_app/modules/collectibles/records/ShelfBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function ShelfBlockRecord(show_button) {
-  let category_sku_id;
   const obj = Object.create(new.target.prototype);
   obj.type = ShopBlockType.ShopBlockType.SHELF;
   ({ name: tmp.name, ranked_sku_ids: tmp.rankedSkuIds, category_sku_id } = show_button);
@@ -34,7 +35,6 @@ prototype = function ShelfBlockRecord(show_button) {
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(show_button) {
-  let category_sku_id;
   if (typeof prototype !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -68,6 +68,6 @@ prototype["fromServer"] = function fromServer(show_button) {
   obj.mobileBackgroundImage = prop1;
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/ShelfBlockRecord.tsx");
 
 export const ShelfBlockRecord = prototype;

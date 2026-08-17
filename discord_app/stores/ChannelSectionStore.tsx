@@ -1,26 +1,22 @@
 // discord_app/stores/ChannelSectionStore.tsx
-import getHash from "getHash";
-import handleReaction from "handleReaction";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_9 from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import set from "set";
-import { Permissions } from "sum";
-import { PersistedStore } from "initialize";
-import set from "ensureGuildLoaded";
-import { SidebarType } from "../modules/sidebar/SidebarActionTypes.tsx";
-import { ComponentDispatcher } from "../utils/ComponentDispatchUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
+import SidebarType from "SidebarType" /* 4972 */;
+import closure_3 from "getHash" /* 4288 */;
+import closure_4 from "handleReaction" /* 4971 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
+import closure_9 from "handleConnectionOpen" /* 4197 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 1398 */;
+import { Permissions } from "sum" /* 505 */;
 
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function handlePermissionsChange() {
   let flag = false;
   let flag2 = false;
@@ -38,9 +34,9 @@ function handlePermissionsChange() {
         channel = channel.getChannel(tmp15.channelId);
         let canResult = null != channel;
         if (canResult) {
-          let tmp10 = getUncachedChannelPermissions;
+          let tmp10 = closure_7;
           let tmp11 = Permissions;
-          canResult = getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel);
+          canResult = closure_7.can(Permissions.VIEW_CHANNEL, channel);
         }
         if (canResult) {
           continue;
@@ -60,7 +56,7 @@ function handlePermissionsChange() {
 function setIsSearchSidebarOpen() {
   let hasSearchStateResult = null != c23;
   if (hasSearchStateResult) {
-    hasSearchStateResult = handleReaction.hasSearchState(c23);
+    hasSearchStateResult = closure_4.hasSearchState(c23);
   }
   if (hasSearchStateResult === c22) {
     return false;
@@ -78,6 +74,7 @@ let closure_20 = {};
 let closure_21 = {};
 let c22 = false;
 let c23 = null;
+const PersistedStore = initializeDefault.PersistedStore;
 class ChannelSectionStore extends PersistedStore {
 }
 const prototype = ChannelSectionStore.prototype;
@@ -104,11 +101,11 @@ prototype["initialize"] = function initialize(isMembersOpen) {
       guildSidebars = {};
     }
   }
-  const items = [handleReaction];
+  const items = [closure_4];
   this.syncWith(items, setIsSearchSidebarOpen);
-  const items1 = [getUncachedChannelPermissions];
+  const items1 = [closure_7];
   this.syncWith(items1, handlePermissionsChange);
-  this.waitFor(ensureGuildLoaded, getHash, createGuildRecordFromRust, getUncachedChannelPermissions, handleReaction, handleConnectionOpen, closure_9, mergeGuildAvatar);
+  this.waitFor(closure_5, closure_3, closure_6, closure_7, closure_4, closure_8, closure_9, closure_10);
 };
 prototype["getState"] = function getState() {
   return { isMembersOpen: c16, isSummariesOpen: c17, isProfileOpen: c19, sidebars: closure_20, guildSidebars: closure_21 };
@@ -247,12 +244,12 @@ prototype["getCurrentSearchContextId"] = function getCurrentSearchContextId() {
 };
 ChannelSectionStore.displayName = "ChannelSectionStore";
 ChannelSectionStore.persistKey = "ChannelSectionStore2";
-const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
+const channelSectionStore = new ChannelSectionStore(dispatcherDefault, {
   SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: function handleSetSelectedSearchContext(searchContextId) {
     searchContextId = searchContextId.searchContextId;
     let hasSearchStateResult = null != searchContextId;
     if (hasSearchStateResult) {
-      hasSearchStateResult = handleReaction.hasSearchState(searchContextId);
+      hasSearchStateResult = closure_4.hasSearchState(searchContextId);
     }
     if (hasSearchStateResult !== c22) {
       c22 = hasSearchStateResult;
@@ -264,7 +261,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
       const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
-    if (c17) {
+    if (closure_17) {
       let flag2 = false;
       if (c22) {
         c22 = false;
@@ -296,9 +293,9 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
       } else {
         tmp22 = tmp8;
       }
-      c17 = tmp22;
+      closure_17 = tmp22;
     }
-    if (c18) {
+    if (closure_18) {
       let flag4 = false;
       if (c22) {
         c22 = false;
@@ -330,7 +327,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
       } else {
         tmp37 = tmp23;
       }
-      c18 = tmp37;
+      closure_18 = tmp37;
     }
     let flag5 = false;
     if (c22) {
@@ -363,10 +360,10 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     } else {
       tmp49 = tmp38;
     }
-    let c16 = tmp49;
+    closure_16 = tmp49;
   },
   USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function handleUserProfileSidebarToggleSection() {
-    if (!c19) {
+    if (!closure_19) {
       const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
@@ -401,10 +398,10 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     } else {
       tmp18 = tmp7;
     }
-    c19 = tmp18;
+    closure_19 = tmp18;
   },
   CHANNEL_TOGGLE_SUMMARIES_SECTION: function handleChannelToggleSummariesSection() {
-    if (c16) {
+    if (closure_16) {
       let flag2 = false;
       if (c22) {
         c22 = false;
@@ -436,9 +433,9 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
       } else {
         tmp18 = tmp4;
       }
-      c16 = tmp18;
+      closure_16 = tmp18;
     }
-    if (c18) {
+    if (closure_18) {
       let flag4 = false;
       if (c22) {
         c22 = false;
@@ -470,7 +467,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
       } else {
         tmp33 = tmp19;
       }
-      c18 = tmp33;
+      closure_18 = tmp33;
     }
     let flag5 = false;
     if (c22) {
@@ -503,15 +500,15 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     } else {
       tmp45 = tmp34;
     }
-    let c17 = tmp45;
+    closure_17 = tmp45;
   },
   CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function handleChannelToggleConversationsSection() {
     if (c22) {
       const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
       ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
     }
-    let c16 = false;
-    let c17 = false;
+    c16 = false;
+    c17 = false;
     let flag = false;
     if (c22) {
       c22 = false;
@@ -543,7 +540,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     } else {
       tmp18 = tmp7;
     }
-    let c18 = tmp18;
+    closure_18 = tmp18;
   },
   CHANNEL_OPEN_CONVERSATIONS_SECTION: function handleChannelOpenConversationsSection() {
     let flag = !c18;
@@ -552,20 +549,16 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
         const ComponentDispatch = ComponentDispatcher.ComponentDispatch;
         ComponentDispatch.dispatch(constants2.SEARCH_RESULTS_CLOSE);
       }
-      let c16 = false;
-      let c17 = false;
+      c16 = false;
+      c17 = false;
       c18 = true;
       flag = true;
     }
     return flag;
   },
   SIDEBAR_VIEW_CHANNEL: function handleSidebarViewChannel(arg0) {
-    let baseChannelId;
-    let channelId;
-    let details;
-    let sidebarType;
     ({ sidebarType, baseChannelId } = arg0);
-    let c22 = false;
+    c22 = false;
     let tmp = null;
     ({ channelId, details } = arg0);
     if (null != baseChannelId) {
@@ -598,12 +591,8 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     }
   },
   SIDEBAR_VIEW_GUILD: function handleSidebarViewGuild(arg0) {
-    let baseChannelId;
-    let details;
-    let guildId;
-    let sidebarType;
     ({ guildId, baseChannelId } = arg0);
-    let c22 = false;
+    c22 = false;
     let tmp = null;
     ({ sidebarType, details } = arg0);
     if (null != baseChannelId) {
@@ -630,10 +619,8 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
     return flag;
   },
   SIDEBAR_CREATE_THREAD: function handleCreateThread(parentChannelId) {
-    let _location;
-    let parentMessageId;
     parentChannelId = parentChannelId.parentChannelId;
-    let c22 = false;
+    c22 = false;
     let tmp = null;
     ({ parentMessageId, location: _location } = parentChannelId);
     if (null != parentChannelId) {
@@ -724,9 +711,9 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
   },
   CHANNEL_SELECT: function handleChannelSelect() {
     if (tmp) {
-      let c16 = false;
-      let c17 = false;
-      let c18 = false;
+      c16 = false;
+      c17 = false;
+      c18 = false;
     }
   },
   THREAD_CREATE: function handleThreadCreate(channel) {
@@ -744,7 +731,7 @@ const channelSectionStore = new ChannelSectionStore(require("dispatcher"), {
         tmp5 = tmp12.type === SidebarType.SidebarType.CREATE_THREAD;
       }
       if (tmp5) {
-        let obj = DISCORD_EPOCH;
+        let obj = DISCORD_EPOCHDefault;
         tmp5 = tmp12.parentMessageId === obj.castChannelIdAsMessageId(channel.id);
       }
       if (tmp5) {

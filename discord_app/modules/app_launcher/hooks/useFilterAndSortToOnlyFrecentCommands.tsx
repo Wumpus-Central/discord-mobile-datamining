@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx
-import noop from "noop";
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleUserSettingsProtoStoreChange" /* 8450 */;
 
 const require = arg1;
-const result = require("getCommandContext").fileFinishedImporting("modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useFilterAndSortToOnlyFrecentCommands.tsx");
 
 export default function useFilterAndSortToOnlyFrecentCommands(commands) {
   commands = commands.commands;
@@ -27,8 +27,8 @@ export default function useFilterAndSortToOnlyFrecentCommands(commands) {
     const mapped = topCommands.map((arg0) => table[arg0]);
     const found = mapped.filter((arg0) => null != arg0);
     const sorted = found.sort((arg0, arg1) => {
-      const scoreWithoutLoadingLatest = outer1_3.getScoreWithoutLoadingLatest(noop, arg0);
-      return outer1_3.getScoreWithoutLoadingLatest(noop, arg1) - scoreWithoutLoadingLatest;
+      const scoreWithoutLoadingLatest = closure_1_3.getScoreWithoutLoadingLatest(closure_2, arg0);
+      return closure_1_3.getScoreWithoutLoadingLatest(closure_2, arg1) - scoreWithoutLoadingLatest;
     });
     return sorted.slice(0, length);
   }, items1);

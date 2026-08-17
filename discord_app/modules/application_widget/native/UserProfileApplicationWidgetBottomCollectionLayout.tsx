@@ -1,20 +1,15 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12190 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
 function CollectionItem(arg0) {
-  let componentConfig;
-  let resolveFieldValue;
   ({ componentConfig, resolveFieldValue } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let image;
   if (componentConfig != null) {
     image = componentConfig.fields.image;
@@ -23,7 +18,7 @@ function CollectionItem(arg0) {
   const fieldValue = resolveFieldValue(image, items);
   let obj = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(componentConfig, "name", resolveFieldValue);
-  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
+  obj1 = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(componentConfig, "description", resolveFieldValue);
   obj = { style: tmp.item, children: null };
   if (null != fieldValue) {
@@ -63,25 +58,24 @@ function CollectionItem(arg0) {
   obj[1] = items1;
   return closure_5(closure_3, obj);
 }
+noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { grid: null, item: null, itemImage: null, itemContent: null };
-createCacheKey = { flexDirection: "row", flexWrap: "wrap", rowGap: require("Themes").space.PX_16, columnGap: require("Themes").space.PX_16 };
+createCacheKey = { flexDirection: "row", flexWrap: "wrap", rowGap: ThemesDefault.space.PX_16, columnGap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: "47%", flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-obj1 = { width: "47%", flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-createCacheKey[2] = { width: 48, height: 48, borderRadius: require("Themes").radii.sm, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-let obj2 = { width: 48, height: 48, borderRadius: require("Themes").radii.sm, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[3] = { flex: 1, gap: require("Themes").space.PX_4, minWidth: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { flex: 1, gap: require("Themes").space.PX_4, minWidth: 0 };
-const result = require("jsxProd").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx");
+createCacheKey[1] = { width: "47%", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+obj1 = { width: "47%", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+createCacheKey[2] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj2 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey[3] = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
+const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomCollectionLayout.tsx");
 
 export default function UserProfileApplicationWidgetBottomCollectionLayout(arg0) {
-  let bottomConfig;
-  let resolveFieldValue;
   ({ bottomConfig, resolveFieldValue } = arg0);
-  let obj = { style: createCacheKey().grid, children: null };
+  let obj = { style: callback3().grid, children: null };
   obj = { componentConfig: bottomConfig.components.item_1, resolveFieldValue };
   const items = [callback(CollectionItem, obj), , , ];
   obj = { componentConfig: bottomConfig.components.item_2, resolveFieldValue };

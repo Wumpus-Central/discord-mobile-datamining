@@ -1,40 +1,36 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallView.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { componentDidMount } from "../../../status_bar/native/components/StatusBar.android.tsx";
-import { FocusedControlsHeader } from "../../../video_calls/native/components/FocusedControls.tsx";
-import { useStageActionBarAnimation } from "StageChannelAnimationUtils.tsx";
-import { StageChannelBackground } from "StageChannelBackground.tsx";
-import { StageChannelCallList } from "StageChannelCallList.tsx";
+import noopAll from "noop" /* 19 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import componentDidMountDefault from "componentDidMount" /* 8032 */;
+import FocusedControlsHeader from "FocusedControlsHeader" /* 12493 */;
+import useStageActionBarAnimation from "useStageActionBarAnimation" /* 12600 */;
+import StageChannelBackgroundDefault from "StageChannelBackground" /* 12601 */;
+import StageChannelCallListDefault from "StageChannelCallList" /* 12602 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function StageChannelCallBackground(arg0) {
-  let channelId;
-  let children;
   ({ children, channelId } = arg0);
   let obj = useStageActionBarAnimation;
-  const stageActionBarAnimation = obj.useStageActionBarAnimation(channelId, FocusedControlsHeader.FOCUSED_CONTROLS_HEADER_HEIGHT + useSafeAreaInsets().top);
+  const stageActionBarAnimation = obj.useStageActionBarAnimation(channelId, FocusedControlsHeader.FOCUSED_CONTROLS_HEADER_HEIGHT + useSafeAreaInsetsDefault().top);
   obj = { children: null };
   const tmp = callback3();
   const items = [tmp.container, stageActionBarAnimation];
-  obj[0] = callback(ReanimatedRexport.View, { style: items, children });
-  return callback(StageChannelBackground, obj);
+  obj[0] = callback(_modDef4115.View, { style: items, children });
+  return callback(StageChannelBackgroundDefault, obj);
 }
+noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flex: 1, paddingHorizontal: 12 } });
-const result = require("FocusedControlsHeader").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallView.tsx");
 
 export default function StageChannelCallView(channel) {
   channel = channel.channel;
   let obj = { children: null };
-  const items = [callback(componentDidMount, { animated: true, barStyle: "light-content" }), ];
-  obj = { channelId: channel.id, children: callback(StageChannelCallList, { channel }) };
+  const items = [callback(componentDidMountDefault, { animated: true, barStyle: "light-content" }), ];
+  obj = { channelId: channel.id, children: callback(StageChannelCallListDefault, { channel }) };
   items[1] = callback(StageChannelCallBackground, obj);
   obj[0] = items;
   return callback2(closure_4, obj);

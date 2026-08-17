@@ -1,10 +1,10 @@
 // discord_app/modules/quests/native/BountiesModal/useBountySwipeUpNux.tsx
-import _slicedToArray from "_slicedToArray";
-import { apexExperiment } from "../../experiments/BountiesVerticalScrollExperiment.tsx";
-import { FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY } from "bountiesSwipeUpNuxDevTools.tsx";
+import apexExperiment from "apexExperiment" /* 10712 */;
+import FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY from "FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY" /* 14367 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
-const result = require("FORCE_BOUNTIES_SWIPE_UP_NUX_STORAGE_KEY").fileFinishedImporting("modules/quests/native/BountiesModal/useBountySwipeUpNux.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountySwipeUpNux.tsx");
 
 export const useBountySwipeUpNux = function useBountySwipeUpNux(location) {
   let isEligible = location.isEligible;

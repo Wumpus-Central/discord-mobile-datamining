@@ -1,16 +1,17 @@
 // discord_app/modules/activities/Constants.tsx
-import { ChannelTypes } from "ME";
-import set from "set";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
+import ME from "ME" /* 676 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import set from "set" /* 2 */;
 
+const ChannelTypes = ME.ChannelTypes;
 const items = ["1037680572660727838", "235088799074484224", "1007373802981822582", "1067803140071620628", "1194351737264406548", "1245041113882955918", "1245040907732910201", "1245040436427489471", "1208090049871351890", "1235205910863806484", "1227719606223765687"];
 const items1 = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
 let obj = { UNLOCKED: 1, [1]: "UNLOCKED", PORTRAIT: 2, [2]: "PORTRAIT", LANDSCAPE: 3, [3]: "LANDSCAPE" };
 const items2 = ["755600276941176913", "880218832743055411", "1050941315912835122", "880218394199220334"];
 let set = new Set(items2);
-obj = { label_type: require("PermissionOverwriteType").EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
+obj = { label_type: PermissionOverwriteType.EmbeddedActivityLabelTypes.NONE, release_phase: "", label_from: null, label_until: null, omit_badge_from_surfaces: [] };
 obj = { application_id: "", requires_age_gate: false, legacy_responsive_aspect_ratio: false, default_orientation_lock_state: obj.UNLOCKED, tablet_default_orientation_lock_state: obj.UNLOCKED, supported_platforms: null, client_platform_config: null, has_csp_exception: false, displays_advertisements: false, blocked_locales: null, supported_locales: null };
-const items3 = [require("PermissionOverwriteType").EmbeddedActivitySupportedPlatforms.WEB];
+const items3 = [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB];
 obj[5] = items3;
 obj[6] = { [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.WEB]: obj, [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.IOS]: obj, [PermissionOverwriteType.EmbeddedActivitySupportedPlatforms.ANDROID]: obj };
 obj[9] = [];

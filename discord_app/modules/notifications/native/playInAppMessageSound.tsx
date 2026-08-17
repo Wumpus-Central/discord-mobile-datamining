@@ -1,13 +1,13 @@
 // discord_app/modules/notifications/native/playInAppMessageSound.tsx
-import DesktopNotificationTypes from "DesktopNotificationTypes";
-import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled";
-import { InAppNotificationTypes } from "ME";
-import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import closure_2 from "DesktopNotificationTypes" /* 10015 */;
+import { isInAppMessageSoundsEnabled as closure_3 } from "isInAppMessageSoundsEnabled" /* 10039 */;
+import { InAppNotificationTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 const message1 = "message1";
 let c6 = 0;
-const result = require("ME").fileFinishedImporting("modules/notifications/native/playInAppMessageSound.tsx");
+const result = require("set").fileFinishedImporting("modules/notifications/native/playInAppMessageSound.tsx");
 
 export const playInAppMessageSound = function playInAppMessageSound(notification) {
   if (notification.type === InAppNotificationTypes.MESSAGE) {

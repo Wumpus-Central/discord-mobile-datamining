@@ -1,5 +1,8 @@
 // discord_common/js/shared/utils/StringUtils.tsx
+import set from "set" /* 2 */;
+import set2 from "set" /* 1906 */;
 import { 01905__ } from "../../../../_runtime/metro/01905__.js";
+
 const re2 = /[\u0300-\u036f]/g;
 const re3 = /[\uD800-\uDBFF][\uDC00-\uDFFF]/;
 if (null == String.prototype.normalize) {
@@ -15,7 +18,7 @@ if (null == String.prototype.normalize) {
 } else {
   fullNormalize = function fullNormalize(str) {
     _require = _01905__;
-    const dependencyMap = "";
+    dependencyMap = "";
     const items = [...str.normalize("NFD")];
     const item = items.forEach((arg0) => {
       let tmp2 = table[arg0];
@@ -27,9 +30,9 @@ if (null == String.prototype.normalize) {
     return dependencyMap.normalize("NFD").toLocaleLowerCase();
   };
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/StringUtils.tsx");
 
-export const cssValueToNumber = require("set").cssValueToNumber;
+export const cssValueToNumber = set2.cssValueToNumber;
 export const upperCaseFirstChar = function upperCaseFirstChar(str) {
   str = "";
   if (null != str) {

@@ -1,34 +1,38 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2469 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import onFriendOnlineNotificationSettingsChanged from "onFriendOnlineNotificationSettingsChanged" /* 14811 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.A0FVCV);
+    return intl.string(messagesProxyDefault.A0FVCV);
   },
   useDescription() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.vHX6RG);
+    return intl.string(messagesProxyDefault.vHX6RG);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: require("explicitContentFromProto").NotifyFriendsOnComeOnline.useSetting,
-  onValueChange: require("onFriendOnlineNotificationSettingsChanged").onNotifyFriendsOnComeOnlineSettingsChanged
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: explicitContentFromProto.NotifyFriendsOnComeOnline.useSetting,
+  onValueChange: onFriendOnlineNotificationSettingsChanged.onNotifyFriendsOnComeOnlineSettingsChanged
 });
 const obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.A0FVCV);
+    return intl.string(messagesProxyDefault.A0FVCV);
   },
   useDescription() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.vHX6RG);
+    return intl.string(messagesProxyDefault.vHX6RG);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
-  useValue: require("explicitContentFromProto").NotifyFriendsOnComeOnline.useSetting,
-  onValueChange: require("onFriendOnlineNotificationSettingsChanged").onNotifyFriendsOnComeOnlineSettingsChanged
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  useValue: explicitContentFromProto.NotifyFriendsOnComeOnline.useSetting,
+  onValueChange: onFriendOnlineNotificationSettingsChanged.onNotifyFriendsOnComeOnlineSettingsChanged
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx");
 
 export default toggle;

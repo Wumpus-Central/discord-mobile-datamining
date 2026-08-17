@@ -1,8 +1,8 @@
 // discord_app/modules/premium/powerups/hooks/useMarketablePowerupPerks.tsx
-import noop from "noop";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import BoostedGuildTiers from "BoostedGuildTiers";
-import set from "BoostedGuildTiers";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import set from "set" /* 2 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -13,20 +13,20 @@ const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMark
 
 export default function useMarketablePowerupPerks(arg0) {
   const _require = arg0;
-  let items = [calculateAppliedBoosts];
+  let items = [closure_4];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
-    const stateForGuild = outer1_4.getStateForGuild(closure_0);
+    const stateForGuild = closure_1_4.getStateForGuild(closure_0);
     let tmp2;
     if (stateForGuild != null) {
       const powerupCatalog = stateForGuild.powerupCatalog;
       if (powerupCatalog != null) {
-        tmp2 = powerupCatalog[outer1_5.PERK];
+        tmp2 = powerupCatalog[closure_1_5.PERK];
       }
     }
     return tmp2;
   });
   let tmp2 = stateFromStores(11745)(arg0);
-  const dependencyMap = tmp2;
+  dependencyMap = tmp2;
   let items1 = [stateFromStores, tmp2];
   return React.useMemo(() => {
     let items = stateFromStores;

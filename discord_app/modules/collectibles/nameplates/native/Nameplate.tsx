@@ -1,15 +1,11 @@
 // discord_app/modules/collectibles/nameplates/native/Nameplate.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 function NameplateInner(isFocused) {
-  let isPressed;
-  let nameplate;
   ({ nameplate, isPressed } = isFocused);
   if (isPressed === undefined) {
     isPressed = false;
@@ -44,10 +40,10 @@ function NameplateInner(isFocused) {
   }
   let sharedValue;
   let obj = flag6(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const tmp4 = callback2(flag3, isPressed, flag, flag2, flag5);
-  let obj1 = flag6(4115);
+  obj1 = flag6(4115);
   let num = 1;
   if (flag6) {
     num = 0;
@@ -56,17 +52,17 @@ function NameplateInner(isFocused) {
   const items1 = [sharedValue, flag6];
   const effect = React.useEffect(() => {
     if (flag6) {
-      let obj = flag6(outer1_2[7]);
+      let obj = flag6(closure_1_2[7]);
       obj = { duration: 100, easing: null };
-      const Easing = flag6(outer1_2[6]).Easing;
-      obj[1] = Easing.in(flag6(outer1_2[6]).Easing.ease);
+      const Easing = flag6(closure_1_2[6]).Easing;
+      obj[1] = Easing.in(flag6(closure_1_2[6]).Easing.ease);
       const result = sharedValue.set(obj.withTiming(1, obj));
     }
   }, items1);
   let tmpResult = tmp(4115);
   class A {
     constructor() {
-      obj = { opacity: c1.get() };
+      obj = { opacity: closure_1.get() };
       return obj;
     }
   }
@@ -177,7 +173,7 @@ let closure_7 = createCacheKey.createStyles((arg0, arg1, arg2, arg3, arg4) => {
   return obj;
 });
 let closure_8 = { code: "function NameplateTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let result = require("jsxProd").fileFinishedImporting("modules/collectibles/nameplates/native/Nameplate.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/Nameplate.tsx");
 
 export default function Nameplate(nameplate) {
   nameplate = nameplate.nameplate;

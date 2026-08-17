@@ -1,12 +1,13 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import { getReportInboundErrors } from "../AVErrorUtils.tsx";
+import setDefault from "set" /* 687 */;
+import getReportInboundErrors from "getReportInboundErrors" /* 17058 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
 
-const require = arg1;
-let closure_5 = 20 * require("set").Millis.SECOND;
-const result = require("createRTCConnection").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
+require = arg1;
+let closure_5 = 20 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorCameraSendLowFPS.tsx");
 
 export const AVErrorCameraSendLowFPSDefinition = {
   getActiveErrors() {

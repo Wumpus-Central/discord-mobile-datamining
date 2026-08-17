@@ -1,14 +1,14 @@
 // discord_app/modules/tti_analytics/native/AppStartInfo.android.tsx
-import _slicedToArray from "_slicedToArray";
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeTTIModule.tsx";
+import enforcingDefault from "enforcing" /* 5420 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 let closure_4 = {};
-const result = require("enforcing").fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");
+const result = require("set").fileFinishedImporting("modules/tti_analytics/native/AppStartInfo.android.tsx");
 
 export const AppStartInfo = {
   getAppUIViewed() {
-    const mainActivityCreationTime = enforcing.getMainActivityCreationTime();
+    const mainActivityCreationTime = enforcingDefault.getMainActivityCreationTime();
     let tmp2 = null != mainActivityCreationTime;
     if (tmp2) {
       let flag = table[mainActivityCreationTime];
@@ -23,11 +23,11 @@ export const AppStartInfo = {
   getAppStartInfo() {
     return callback(function*() {
       let callback = 0;
-      let obj5 = outer1_0(outer1_1[3]);
+      let obj5 = closure_1_0(closure_1_1[3]);
       callback = yield obj5.getAppStartedTimestamp();
       if (callback <= 0) {
         const _Error = Error;
-        const error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");
+        error = new Error("NativeTTIManager.getAppStartedTimestamp() returned an invalid timestamp. That's unexpected!");
         throw error;
       }
       const items = [callback(4236).getAppStartType(), , ];
@@ -35,9 +35,9 @@ export const AppStartInfo = {
       items[1] = callback(4236).getLaunchScenario();
       const obj13 = callback(4236);
       items[2] = callback(4236).getAppFirstVisibleTimestamp();
-      const dependencyMap = yield Promise.all(items);
-      let closure_4 = 5;
-      let closure_5 = 5420;
+      dependencyMap = yield Promise.all(items);
+      closure_4 = 5;
+      closure_5 = 5420;
       obj5 = { app_start_type: null, app_launch_scenario: null };
       obj5[0] = c3;
       obj5[1] = closure_4;

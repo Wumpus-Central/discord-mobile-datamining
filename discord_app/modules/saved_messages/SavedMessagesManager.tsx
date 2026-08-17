@@ -1,6 +1,6 @@
 // discord_app/modules/saved_messages/SavedMessagesManager.tsx
-import set from "set";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 let require = arg1;
 function _refreshSavedMessages() {
@@ -33,12 +33,12 @@ function _refreshSavedMessages() {
             return obj;
           } else {
             const callback = tmp4;
-            let obj2 = outer1_0(8484);
+            let obj2 = closure_1_0(8484);
             if (obj2.isForLaterExperimentOn("saved_messages_manager")) {
               dependencyMap = 1;
               c2 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(10874).fetchAndUpdateSavedMessages();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(10874).fetchAndUpdateSavedMessages();
               return obj1;
             } else {
               c2 = 3;
@@ -61,7 +61,7 @@ function _refreshSavedMessages() {
       }
     }
   });
-  const _refreshSavedMessages = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -70,9 +70,10 @@ function _refreshSavedMessages() {
   }
   return applyArgumentsResult;
 }
+initializeDefault;
 let prototype = function SavedMessagesManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handlePostConnectionOpen();
@@ -83,7 +84,7 @@ let prototype = function SavedMessagesManager() {
       const self = this;
       const apply = closure_3.apply;
       if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+        applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
         applyArgumentsResult = apply(self, arguments);
       }
@@ -95,6 +96,6 @@ let prototype = function SavedMessagesManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("_upsertSavedMessage").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesManager.tsx");
 
 export default prototype;

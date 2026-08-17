@@ -1,15 +1,15 @@
 // discord_app/modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx
-import noop from "noop";
-import zustandStore from "zustandStore";
-import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "zustandStore" /* 13993 */;
+import { NodeType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
 import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
 const require = arg1;
-const result = require("GUILD_SELECT_ALL_SERVERS_OPTION_ID").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/renderer/hooks/useAutoScrollToSetting.tsx");
 
 export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearchResultSetting(ref, memo, scrollTarget) {
   const _require = ref;
-  const dependencyMap = memo;
+  dependencyMap = memo;
   let current = ref.useField("selected");
   const navigation = _useNavigation.useNavigation();
   ref = navigation.useRef(scrollTarget);
@@ -31,13 +31,13 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
   }
   const items = [memo, flag, ref, navigation, current];
   const effect = navigation.useEffect(() => {
-    let closure_0 = navigation.addListener("transitionEnd", () => {
+    closure_0 = navigation.addListener("transitionEnd", () => {
       if (closure_5) {
-        let obj = ref(outer1_1[4]);
+        let obj = ref(closure_1_1[4]);
         const initialScrollIndex = obj.getInitialScrollIndex(closure_4, closure_1);
         if (null != initialScrollIndex) {
           if (ref != null) {
-            const current = ref.current;
+            current = ref.current;
             if (current != null) {
               obj = { index: null, animated: false, viewOffset: 300 };
               obj[0] = initialScrollIndex;
@@ -46,12 +46,12 @@ export const useAutoScrollToSearchResultSetting = function useAutoScrollToSearch
           }
         }
       }
-      zustandStore.current = undefined;
+      closure_3.current = undefined;
     });
     return () => {
       ref();
       ref.setState({ selected: null });
-      outer1_3.current = undefined;
+      closure_1_3.current = undefined;
     };
   }, items);
 };

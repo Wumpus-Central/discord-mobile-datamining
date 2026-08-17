@@ -1,19 +1,23 @@
 // discord_app/modules/activities/utils/transitionToActivity.native.tsx
-import { setVoiceChatDrawerState } from "VoiceChatDrawerState";
-import participantFromServer from "participantFromServer";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH";
-import { ChannelCallCameraPreview } from "../../video_calls/native/components/ChannelCallModal.tsx";
-import { getEmbeddedActivityLocationChannelId } from "embeddedActivityLocationUtils.tsx";
+import set from "set" /* 2 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
+import ChannelCallCameraPreviewDefault from "ChannelCallCameraPreview" /* 8668 */;
+import VoiceChatDrawerState2 from "VoiceChatDrawerState" /* 8669 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 8703 */;
+import closure_4 from "participantFromServer" /* 1390 */;
 
-let result = require("ActivityPanelModes").fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
+const setVoiceChatDrawerState = VoiceChatDrawerState2.setVoiceChatDrawerState;
+const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;
+const VoiceChatDrawerState = BOX_MODE_ACTIONSHEET_WIDTH.VoiceChatDrawerState;
+let result = set.fileFinishedImporting("modules/activities/utils/transitionToActivity.native.tsx");
 
 export default function transitionToActivity(arg0, _location) {
   let obj = getEmbeddedActivityLocationChannelId;
   const embeddedActivityLocationChannelId = obj.getEmbeddedActivityLocationChannelId(_location);
   if (null != embeddedActivityLocationChannelId) {
     let tmpResult = tmp(4229);
-    const isModalOpenResult = tmpResult.isModalOpen(ChannelCallCameraPreview);
+    const isModalOpenResult = tmpResult.isModalOpen(ChannelCallCameraPreviewDefault);
     let tmp4 = !isModalOpenResult;
     if (!isModalOpenResult) {
       tmp4 = tmp15(8724)(embeddedActivityLocationChannelId);

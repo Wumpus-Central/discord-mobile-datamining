@@ -1,21 +1,22 @@
 // discord_app/modules/chat/native/placeholder/ChatPlaceholder.tsx
-import importAllResult from "noop";
-import { useChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { useChatInputContainerHeight as closure_3 } from "updateChatInputContainerHeight" /* 8682 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 let obj = { placeholder: null };
 obj = {};
 const merged = Object.assign(require("get ActivityIndicator").StyleSheet.absoluteFillObject);
-obj.paddingBottom = require("Themes").space.PX_24;
+obj.paddingBottom = ThemesDefault.space.PX_24;
 obj.flexDirection = "column-reverse";
 obj.overflow = "hidden";
 obj[0] = obj;
 let closure_5 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function ChatPlaceholder(screenIndex) {
-  let importDefault;
+  importDefault = undefined;
   let height;
-  let importAllResult;
+  importAllResult = undefined;
   let callback;
   callback = undefined;
   let tmp2 = callback(screenIndex.screenIndex);
@@ -71,6 +72,6 @@ const memoResult = importAllResult.memo(function ChatPlaceholder(screenIndex) {
   const style = [tmp.placeholder, memo, importDefault(height[9])({ visible: true, animated: true })];
   return callback(importDefault(height[12]).View, { style, pointerEvents: "none", children });
 });
-const result = require("updateChatInputContainerHeight").fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholder.tsx");
 
 export default memoResult;

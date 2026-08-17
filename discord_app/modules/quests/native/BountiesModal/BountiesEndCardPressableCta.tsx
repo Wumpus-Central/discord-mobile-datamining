@@ -1,28 +1,24 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { END_CARD_IMAGE_SIZE } from "END_CARD_IMAGE_SIZE";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { END_CARD_IMAGE_SIZE } from "END_CARD_IMAGE_SIZE" /* 14398 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { image: null, info: null, ctaContainer: null };
-  obj = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: Themes.radii.xl, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED };
+  obj = { width: END_CARD_IMAGE_SIZE, height: END_CARD_IMAGE_SIZE, borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
   obj[0] = obj;
-  obj = { gap: Themes.space.PX_4, alignItems: "center", marginTop: Themes.space.PX_12 };
+  obj = { gap: ThemesDefault.space.PX_4, alignItems: "center", marginTop: ThemesDefault.space.PX_12 };
   obj[1] = obj;
   obj[2] = { position: "relative", alignItems: "center" };
   return obj;
 });
-let result = require("END_CARD_IMAGE_SIZE").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesEndCardPressableCta.tsx");
 
 export default function BountiesEndCardPressableCta(bounty) {
   bounty = bounty.bounty;
@@ -35,7 +31,7 @@ export default function BountiesEndCardPressableCta(bounty) {
   const tmp = callback2();
   let obj = bounty(getQuestImpressionId[6]);
   getQuestImpressionId = obj.useGetQuestImpressionId();
-  let obj1 = bounty(getQuestImpressionId[7]);
+  obj1 = bounty(getQuestImpressionId[7]);
   const bountyCtaInfo = obj1.getBountyCtaInfo(bounty);
   let scaledImageUrl;
   if (null != bountyCtaInfo.iconImageUri) {

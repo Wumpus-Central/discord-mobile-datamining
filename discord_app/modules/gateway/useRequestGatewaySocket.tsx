@@ -1,18 +1,18 @@
 // discord_app/modules/gateway/useRequestGatewaySocket.tsx
-import noop from "noop";
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
+import _modDef10501 from "module_10501" /* 10501 */;
+import closure_3 from "noop" /* 19 */;
 
-const result = require("setRequestedBy").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
+const result = require("set").fileFinishedImporting("modules/gateway/useRequestGatewaySocket.tsx");
 
 export const useRequestGatewaySocket = function useRequestGatewaySocket(arg0) {
-  const importDefault = arg0;
-  const canUIRequestGatewaySocket = DiscordAppState.native.useCanUIRequestGatewaySocket();
+  importDefault = arg0;
+  const canUIRequestGatewaySocket = _modDef10501.useCanUIRequestGatewaySocket();
   const items = [arg0, canUIRequestGatewaySocket];
   const effect = React.useEffect(() => {
     if (canUIRequestGatewaySocket) {
-      canUIRequestGatewaySocket(outer1_2[2]).setRequestedBy(closure_0);
+      canUIRequestGatewaySocket(closure_1_2[2]).setRequestedBy(closure_0);
       return () => {
-        outer1_1(outer1_2[2]).stopRequest(closure_0);
+        closure_1_1(closure_1_2[2]).stopRequest(closure_0);
       };
     }
   }, items);

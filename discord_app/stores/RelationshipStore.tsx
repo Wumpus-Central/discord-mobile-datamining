@@ -1,11 +1,11 @@
 // discord_app/stores/RelationshipStore.tsx
-import _slicedToArray from "_slicedToArray";
-import hasFlag from "hasFlag";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RelationshipTypes } from "ME";
-import { Store } from "initialize";
-import set from "mergeGuildAvatar";
-import { dispatcher } from "../Dispatcher.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "hasFlag" /* 4031 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
 function markAllUserIdListsStale() {
   set3.add("friends");
@@ -37,7 +37,7 @@ function upsertRelationship(id, type) {
     } else {
       const _Set = Set;
       const items = [id];
-      const set = new Set(items);
+      set = new Set(items);
       const result1 = obj3.set(type, set);
     }
     if (value === RelationshipTypes.FRIEND) {
@@ -85,7 +85,7 @@ function recountPending() {
   if (num == null) {
     num = 0;
   }
-  let closure_16 = Math.max(num - size - size, 0);
+  closure_16 = Math.max(num - size - size, 0);
   closure_14 = closure_14 + 1;
 }
 const map = new Map();
@@ -104,11 +104,12 @@ let c18 = 0;
 let closure_19 = { friends: "Array", blocked: "flex", ignored: "y", blockedOrIgnored: "HermesInternal" };
 const set3 = new Set();
 const map1 = new Map();
+const Store = initializeDefault.Store;
 class RelationshipStore extends Store {
 }
 const prototype = RelationshipStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(mergeGuildAvatar);
+  this.waitFor(closure_4);
 };
 prototype["isFriend"] = function isFriend(id) {
   let tmp = null != id;
@@ -140,7 +141,7 @@ prototype["isBlockedForMessage"] = function isBlockedForMessage(message) {
   }
   const self = this;
   const isBlocked = this.isBlocked;
-  if (message instanceof hasFlag) {
+  if (message instanceof closure_3) {
     const interactionMetadata = message.interactionMetadata;
     let id;
     if (interactionMetadata != null) {
@@ -186,7 +187,7 @@ prototype["isIgnoredForMessage"] = function isIgnoredForMessage(message) {
     }
   }
   const isIgnored = self.isIgnored;
-  if (message instanceof hasFlag) {
+  if (message instanceof closure_3) {
     const interactionMetadata = message.interactionMetadata;
     let id;
     if (interactionMetadata != null) {
@@ -312,7 +313,7 @@ prototype["getBlockedOrIgnoredIDs"] = function getBlockedOrIgnoredIDs() {
   let tmp = closure_19;
   if (null == closure_19.blockedOrIgnored) {
     const _Set = Set;
-    const set = new Set(set1);
+    set = new Set(set1);
     const value = map1.get(RelationshipTypes.BLOCKED);
     if (null != value) {
       for (const item10019 of value) {
@@ -339,13 +340,13 @@ prototype["isStranger"] = function isStranger(userId) {
   }
 };
 RelationshipStore.displayName = "RelationshipStore";
-const relationshipStore = new RelationshipStore(require("dispatcher"), {
+const relationshipStore = new RelationshipStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(relationships) {
     map.clear();
     map1.clear();
-    let closure_7 = {};
-    let closure_8 = {};
-    let closure_9 = {};
+    closure_7 = {};
+    closure_8 = {};
+    closure_9 = {};
     set1.clear();
     set.clear();
     set2.clear();
@@ -353,8 +354,8 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     set3.add("blocked");
     set3.add("ignored");
     set3.add("blockedOrIgnored");
-    let closure_13 = {};
-    let closure_15 = {};
+    closure_13 = {};
+    closure_15 = {};
     relationships = relationships.relationships;
     const item = relationships.forEach((id) => {
       callback(id.id, id.type);
@@ -397,7 +398,7 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     if (num == null) {
       num = 0;
     }
-    let closure_16 = Math.max(num - size - size, 0);
+    closure_16 = Math.max(num - size - size, 0);
     closure_14 = closure_14 + 1;
   },
   OVERLAY_INITIALIZE: function handleOverlayInitialize(arg0) {
@@ -433,7 +434,7 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
       obj[relationship.relationship.id] = relationship.relationship.note;
     }
     if (null != relationship.relationship.originApplicationId) {
-      const obj1 = {};
+      obj1 = {};
       const merged3 = Object.assign(obj1);
       obj1[relationship.relationship.id] = relationship.relationship.originApplicationId;
     }
@@ -474,13 +475,13 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     if (num == null) {
       num = 0;
     }
-    let closure_16 = Math.max(num - size - size, 0);
+    closure_16 = Math.max(num - size - size, 0);
     closure_14 = closure_14 + 1;
     if (tmp35) {
       const obj2 = { type: "FRIEND_REQUEST_ACCEPTED", user: null };
       obj2[1] = relationship.relationship.user;
-      dispatcher.dispatch(obj2);
-      const obj7 = dispatcher;
+      dispatcherDefault.dispatch(obj2);
+      const obj7 = dispatcherDefault;
     }
   },
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(relationship) {
@@ -544,7 +545,7 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     if (num == null) {
       num = 0;
     }
-    let closure_16 = Math.max(num - size - size, 0);
+    closure_16 = Math.max(num - size - size, 0);
     closure_14 = closure_14 + 1;
   },
   RELATIONSHIP_UPDATE: function handleRelationshipUpdate(relationship) {
@@ -613,7 +614,7 @@ const relationshipStore = new RelationshipStore(require("dispatcher"), {
     if (num == null) {
       num = 0;
     }
-    let closure_16 = Math.max(num - size - size, 0);
+    closure_16 = Math.max(num - size - size, 0);
     closure_14 = closure_14 + 1;
   },
   RELATIONSHIP_PENDING_INCOMING_REMOVED: function handlePendingIncomingRemoved() {

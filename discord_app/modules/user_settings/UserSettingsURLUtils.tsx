@@ -1,17 +1,15 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { UserSettingsPath } from "MAX_FAVORITES";
-import ME from "ME";
-import { keysSorter } from "../../../_runtime/04376_keysSorter.js";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { WebUserSettings } from "UserSettingsKeys.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import keysSorter from "keysSorter" /* 4376 */;
+import WebUserSettings from "WebUserSettings" /* 6726 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { UserSettingsPath } from "MAX_FAVORITES" /* 685 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ AnalyticEvents: c5, Routes: closure_6 } = ME);
 const re7 = /[_\s]|%20/g;
-const result = require("ME").fileFinishedImporting("modules/user_settings/UserSettingsURLUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsURLUtils.tsx");
 
 export const settingsPathToRoute = function settingsPathToRoute(ACCOUNT) {
   const parts = ACCOUNT.split("/");
@@ -23,10 +21,10 @@ export const trackParseSettingsUrl = function trackParseSettingsUrl(path) {
     let obj = { user_settings_url_path: null, user_settings_url_origin: null };
     obj[0] = path;
     obj[1] = arg1;
-    expandEventProperties.track(constants.USER_SETTINGS_URL_PARSED, obj);
-    const obj3 = expandEventProperties;
+    expandEventPropertiesDefault.track(constants.USER_SETTINGS_URL_PARSED, obj);
+    const obj3 = expandEventPropertiesDefault;
   } else {
-    obj = expandEventProperties;
+    obj = expandEventPropertiesDefault;
     obj = { user_settings_url_origin: null, user_settings_url_path: null };
     obj[0] = arg1;
     obj[1] = path;
@@ -34,47 +32,6 @@ export const trackParseSettingsUrl = function trackParseSettingsUrl(path) {
   }
 };
 export const parseSettingsUrl = function parseSettingsUrl(arg0) {
-  let ACCESSIBILITY;
-  let ACCOUNT_ACCOUNT_STANDING;
-  let ACCOUNT_STANDING;
-  let ACTIVITY_PRIVACY;
-  let ADVANCED;
-  let APPEARANCE;
-  let AUTHORIZED_APPS;
-  let BILLING;
-  let CLIPS;
-  let CONNECTED_GAMES;
-  let CONNECTIONS;
-  let CONTENT_AND_SOCIAL;
-  let CONTENT_AND_SOCIAL_CONNECTED_GAMES;
-  let DATA_AND_PRIVACY;
-  let DEVELOPER_OPTIONS;
-  let EMAILS;
-  let EXPERIMENTS;
-  let FAMILY_CENTER;
-  let GUILD_BOOSTING;
-  let INVENTORY;
-  let KEYBINDS;
-  let LANGUAGE;
-  let LINUX;
-  let NOTIFICATIONS;
-  let NOTIFICATIONS_EMAILS;
-  let OVERLAY;
-  let POGGERMODE;
-  let PREMIUM;
-  let PRIVACY_AND_SAFETY;
-  let PROFILE_CUSTOMIZATION;
-  let REGISTERED_GAMES;
-  let SESSIONS;
-  let STREAMER_MODE;
-  let SUBSCRIPTIONS;
-  let SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS;
-  let SYSTEM;
-  let TEXT;
-  let VOICE;
-  let WINDOWS;
-  let path;
-  let search;
   ({ path, search } = arg0);
   const tmp = callback(path.split("?")[0].split("/"), 4);
   let str4 = "";

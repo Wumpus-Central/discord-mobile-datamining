@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AccountEmailSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef8561 from "module_8561" /* 8561 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -13,7 +13,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountEmailSettingTrailing() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let email;
@@ -24,11 +24,11 @@ createToggle = {
     });
   },
   onPress: function onAccountEmailSettingPress() {
-    EmailVerificationModalActionCreators.open(true);
+    _modDef8561.open(true);
   },
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountEmailSetting.tsx");
 
 export default createToggle;

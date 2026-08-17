@@ -1,14 +1,14 @@
 // discord_app/modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx
-import noop from "noop";
-import { PowerupActiveStatusType } from "BoostedGuildTiers";
+import closure_3 from "noop" /* 19 */;
+import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
 
 const require = arg1;
-const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/useCalculatePowerupCardStatus.tsx");
 
 export const useCalculatePowerupCardStatus = function useCalculatePowerupCardStatus(powerup, arg1, arg2) {
-  let closure_0 = powerup;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = powerup;
+  closure_1 = arg1;
+  closure_2 = arg2;
   const items = [arg1, arg2, powerup];
   return React.useMemo(() => {
     const sourceEntitlement = lib.sourceEntitlement;
@@ -28,7 +28,7 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
           tmp5 = obj;
         }
       }
-      if (tmp.type === outer1_4.LEVEL_ACTIVATED) {
+      if (tmp.type === closure_1_4.LEVEL_ACTIVATED) {
         const intl2 = powerup(1236).intl;
         const sourcePowerup = tmp.sourcePowerup;
         let title;
@@ -39,7 +39,7 @@ export const useCalculatePowerupCardStatus = function useCalculatePowerupCardSta
           const intl3 = tmp9(1236).intl;
           title = intl3.string(tmp9(1236).t.BfF6ED);
         }
-        const obj1 = { type: "active", statusText: null };
+        obj1 = { type: "active", statusText: null };
         const obj2 = { perkName: null };
         obj2[0] = title;
         obj1[1] = intl2.formatToPlainString(lib(2367).WRRYUT, obj2);

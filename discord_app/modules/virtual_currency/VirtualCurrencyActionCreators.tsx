@@ -1,8 +1,9 @@
 // discord_app/modules/virtual_currency/VirtualCurrencyActionCreators.tsx
-import sendRequest from "sendRequest";
-import addSku from "addSku";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "addSku" /* 4521 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function fetchVirtualCurrencyBalance() {
@@ -49,12 +50,12 @@ function _fetchVirtualCurrencyBalance() {
             lib = undefined;
             balance = undefined;
             let billingError;
-            outer1_1(outer1_2[4]).wait(() => {
+            closure_1_1(closure_1_2[4]).wait(() => {
               balance(billingError[4]).dispatch({ type: "VIRTUAL_CURRENCY_BALANCE_FETCH" });
             });
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[5]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
+            c3 = 1;
+            const HTTP = closure_1_0(closure_1_2[5]).HTTP;
+            obj1 = { url: null, rejectWithError: false };
             obj1[0] = constants.VIRTUAL_CURRENCY_USER_BALANCE;
             c4 = 2;
             constants = 1;
@@ -108,7 +109,7 @@ function _fetchVirtualCurrencyBalance() {
       }
     }
   });
-  const _fetchVirtualCurrencyBalance = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -120,17 +121,11 @@ function _fetchVirtualCurrencyBalance() {
 function _redeemVirtualCurrencyForSKU() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let shouldRefetchBalance;
       if (logger === 2) {
         logger = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -163,7 +158,7 @@ function _redeemVirtualCurrencyForSKU() {
                 obj[0] = body;
                 return obj;
               } else {
-                let dependencyMap = tmp3;
+                dependencyMap = tmp3;
                 let callback2 = tmp7;
                 let callback;
                 callback2 = undefined;
@@ -179,11 +174,11 @@ function _redeemVirtualCurrencyForSKU() {
                 c5 = shouldRefetchBalance;
                 logger = undefined;
                 let applicationId;
-                let c8;
+                c8 = undefined;
                 let obj2;
                 body = undefined;
-                let c11;
-                let error;
+                c11 = undefined;
+                error = undefined;
                 let billingError;
                 c5 = 1;
                 logger = 1;
@@ -195,7 +190,7 @@ function _redeemVirtualCurrencyForSKU() {
                 throw body;
               } else if (arg0 === 2) {
                 logger = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = body;
                 return obj1;
               } else {
@@ -240,7 +235,7 @@ function _redeemVirtualCurrencyForSKU() {
               }
             } else if (2 === tmp7) {
               c4 = 0;
-              let closure_14 = c3;
+              closure_14 = c3;
               if (closure_14 instanceof callback(4273).BillingError) {
                 billingError = closure_14;
               } else {
@@ -322,7 +317,7 @@ function _redeemVirtualCurrencyForSKU() {
     iter.next();
     return iter;
   });
-  const _redeemVirtualCurrencyForSKU = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -331,9 +326,9 @@ function _redeemVirtualCurrencyForSKU() {
   }
   return applyArgumentsResult;
 }
-let closure_6 = new require("timestamp")("VirtualCurrencyActionCreators");
-const tmp2 = new require("timestamp")("VirtualCurrencyActionCreators");
-let result = require("ME").fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");
+let closure_6 = new timestampDefault("VirtualCurrencyActionCreators");
+const tmp2 = new timestampDefault("VirtualCurrencyActionCreators");
+let result = require("set").fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");
 
 export { fetchVirtualCurrencyBalance };
 export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU(arg0) {
@@ -347,7 +342,7 @@ export const redeemVirtualCurrencyForSKU = function redeemVirtualCurrencyForSKU(
   return applyArgumentsResult;
 };
 export const setBalancePillOverlay = function setBalancePillOverlay(balancePillOverlay) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY", balancePillOverlay };
   return obj.dispatch(obj);
 };

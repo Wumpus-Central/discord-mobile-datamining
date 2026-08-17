@@ -1,36 +1,25 @@
 // discord_app/modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import usePrimaryActionButtonType from "usePrimaryActionButtonType";
-import { View } from "useSafeAreaInsets";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import scheduledEventSort from "scheduledEventSort";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import jsxProd from "Background";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "scheduledEventSort" /* 4370 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ EventDetailSections: metroImportAll, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
+({ EventDetailSections: closure_8, MAX_RSVP_USER_DISPLAY_COUNT: c9 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { segmentedControl: null, header: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "column" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/GuildScheduledEventDetailsActionSheet.tsx");
 
 export default function GuildScheduledEventDetailsActionSheet(eventId) {
-  let c5;
-  let c6;
-  let c7;
-  let error;
-  let loading;
-  let tmp18;
-  let tmp20;
-  let tmp22;
   eventId = eventId.eventId;
   const event = eventId.event;
   const onCloseActionSheet = eventId.onCloseActionSheet;
@@ -41,15 +30,15 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   c6 = undefined;
   c7 = undefined;
   let items4;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = React;
   const tmp6 = callback(React.useState(eventId.recurrenceId), 2);
   const first = tmp6[0];
-  let obj1 = eventId(stateFromStores[12]);
+  obj1 = eventId(stateFromStores[12]);
   let items = [c7];
   const items1 = [eventId, event];
   stateFromStores = obj1.useStateFromStores(items, () => {
-    let guildScheduledEvent = _undefined4.getGuildScheduledEvent(eventId);
+    let guildScheduledEvent = _undefined3.getGuildScheduledEvent(eventId);
     if (guildScheduledEvent == null) {
       guildScheduledEvent = event;
     }
@@ -63,7 +52,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
-    return null != _undefined3.getGuild(guild_id);
+    return null != _undefined2.getGuild(guild_id);
   });
   if (stateFromStores != null) {
     id = stateFromStores.id;
@@ -116,7 +105,7 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
   [tmp22, c7] = callback(obj.useState(0), 2);
   const bottom = tmp2(tmp3[17])().bottom;
   callback = obj.useCallback((nativeEvent) => {
-    _undefined4(nativeEvent.nativeEvent.layout.height);
+    _undefined3(nativeEvent.nativeEvent.layout.height);
   }, []);
   items4 = [];
   items4[0] = items4.EVENT_INFO;
@@ -136,9 +125,9 @@ export default function GuildScheduledEventDetailsActionSheet(eventId) {
         tmp = items4[arg0] === items4.RSVP_LIST;
       }
       if (tmp) {
-        _undefined2();
+        _undefined();
       }
-      _undefined3(arg0);
+      _undefined2(arg0);
     },
     items: items4.map((arg0) => {
       if (items4.EVENT_INFO === arg0) {

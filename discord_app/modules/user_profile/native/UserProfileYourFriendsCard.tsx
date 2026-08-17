@@ -1,13 +1,14 @@
 // discord_app/modules/user_profile/native/UserProfileYourFriendsCard.tsx
-import _slicedToArray from "_slicedToArray";
-import ChevronSmallRightIcon from "ChevronSmallRightIcon";
-import { View } from "getSystemLocale";
-import recomputeAffinities from "recomputeAffinities";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RelationshipTypes } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "recomputeAffinities" /* 5407 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
@@ -15,27 +16,23 @@ import { PressableBase } from "../../../design/void/Pressables/native/Pressables
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { useGameRelationshipsByType } from "../../game_relationships/GameRelationshipStoreHooks.tsx";
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { direction: require("Button").CutoutDirection.RIGHT, inset: -4 };
 let closure_12 = Object.freeze(obj);
 obj = { pressable: null, label: null, facepile: null, avatars: null };
-obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: require("Themes").radii.lg };
+obj = { flex: 1, flexDirection: "row", alignItems: "center", padding: 16, borderRadius: ThemesDefault.radii.lg };
 obj[0] = obj;
 obj[1] = { flex: 1 };
 obj[2] = { flexDirection: "row", alignItems: "center", marginLeft: "auto", marginRight: 8 };
 obj[3] = { flexDirection: "row" };
 let closure_13 = createCacheKey.createStyles(obj);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
 
 export default function UserProfileYourFriendsCard(arg0) {
-  let navigateToFriends;
-  let style;
   let _require;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStoresArray;
   let stateFromStoresArray1;
   let gameRelationshipsByType;
@@ -46,29 +43,29 @@ export default function UserProfileYourFriendsCard(arg0) {
   first = tmp2[0];
   dependencyMap = tmp2[1];
   let obj = _initialize;
-  let items = [recomputeAffinities];
+  let items = [closure_6];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
     userAffinities = userAffinities.getUserAffinities();
     return userAffinities.map((otherUserId) => otherUserId.otherUserId);
   });
-  const items1 = [markAllUserIdListsStale];
+  const items1 = [closure_7];
   stateFromStoresArray1 = _initialize.useStateFromStoresArray(items1, () => friendIDs.getFriendIDs());
   const obj2 = _initialize;
   gameRelationshipsByType = _useGameRelationshipsByType.useGameRelationshipsByType(RelationshipTypes.FRIEND);
   const effect = stateFromStoresArray1.useEffect(() => {
-    const userAffinitiesV2 = _undefined(9637).fetchUserAffinitiesV2();
+    const userAffinitiesV2 = lib(9637).fetchUserAffinitiesV2();
   }, []);
   const items2 = [stateFromStoresArray, stateFromStoresArray1, gameRelationshipsByType];
   const effect1 = stateFromStoresArray1.useEffect(() => {
     const obj = first(12);
     const tmp = first;
-    const found = first(12).chain(stateFromStoresArray).filter((arg0) => ChevronSmallRightIcon.includes(arg0));
+    const found = first(12).chain(stateFromStoresArray).filter((arg0) => closure_4.includes(arg0));
     const chainResult = first(12).chain(stateFromStoresArray);
-    const mapped = found.take(5).map(outer1_8.getUser);
+    const mapped = found.take(5).map(closure_1_8.getUser);
     const takeResult = found.take(5);
-    const tmp3 = outer1_8;
-    const tmp4 = _undefined;
-    let valueResult = mapped.filter(_undefined(1370).isNotNullish).value();
+    const tmp3 = closure_1_8;
+    const tmp4 = lib;
+    let valueResult = mapped.filter(lib(1370).isNotNullish).value();
     if (valueResult.length >= 5) {
       dependencyMap(valueResult);
     } else {
@@ -88,26 +85,26 @@ export default function UserProfileYourFriendsCard(arg0) {
   const items3 = [first, , ];
   ({ avatars: arr4[1], facepile: arr4[2] } = tmp);
   const memo = stateFromStoresArray1.useMemo(() => {
-    let obj = { style: _undefined.facepile, children: null };
+    let obj = { style: lib.facepile, children: null };
     obj = {
-      style: _undefined.avatars,
+      style: lib.avatars,
       children: first.map((id) => {
         let obj = { style: { transform: items }, children: null };
         obj = { translateX: 4 * (closure_1.length - 1 - arg1) };
         items = [obj];
         obj = { user: id, guildId: "r", size: "ct", cutout: null };
-        obj[2] = outer1_0(outer1_2[8]).AvatarSizes.XSMALL;
+        obj[2] = closure_1_0(closure_1_2[8]).AvatarSizes.XSMALL;
         let tmp3;
         if (arg1 < closure_1.length - 1) {
-          tmp3 = outer1_12;
+          tmp3 = closure_1_12;
         }
         obj[3] = tmp3;
-        obj[1] = outer1_10(outer1_0(outer1_2[8]).CutoutableAvatarImage, obj);
-        return outer1_10(outer1_5, obj, id.id);
+        obj[1] = closure_1_10(closure_1_0(closure_1_2[8]).CutoutableAvatarImage, obj);
+        return closure_1_10(closure_1_5, obj, id.id);
       })
     };
-    obj[1] = outer1_10(gameRelationshipsByType, obj);
-    return outer1_10(gameRelationshipsByType, obj);
+    obj[1] = closure_1_10(gameRelationshipsByType, obj);
+    return closure_1_10(gameRelationshipsByType, obj);
   }, items3);
   obj = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, activeOpacity: 0.8, children: null };
   const intl = _getSystemLocale.intl;

@@ -1,18 +1,18 @@
 // discord_app/modules/quests/utils/VideoQuestUtils.tsx
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import initializeState from "initializeState";
-import _toPropertyKey from "_toPropertyKey";
-import { AnalyticEvents } from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { trackQuestEvent } from "../lib/analytics/AnalyticsActions.tsx";
-import { _manuallyStartConsoleQuest } from "../QuestActionCreators.tsx";
-import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
-import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
+import trackQuestEvent from "trackQuestEvent" /* 7470 */;
+import getApplicationIdsByTaskTypes from "getApplicationIdsByTaskTypes" /* 7476 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10477 */;
+import closure_2 from "handleConnectionInfoChange" /* 4564 */;
+import closure_3 from "initializeState" /* 7453 */;
+import closure_4 from "_toPropertyKey" /* 7455 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 const portrait = "portrait";
-const result = require("_toPropertyKey").fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/utils/VideoQuestUtils.tsx");
 
 export const getVideoQuestWatchCtaText = require("formatWatchRemainingDurationShort").getVideoQuestWatchCtaText;
 export const sendVideoProgress = function sendVideoProgress(quest, currentTime) {
@@ -54,8 +54,6 @@ export const getVideoOrientation = function getVideoOrientation(assets) {
   str = portrait;
 };
 export const getVideoQuestProgressRemainingAccessibilityLabel = function getVideoQuestProgressRemainingAccessibilityLabel(questTaskDetails, arg1) {
-  let minutes;
-  let seconds;
   if (arg1) {
     const intl5 = tmp(1236).intl;
     return intl5.string(tmp(1236).t["ij5E/5"]);
@@ -77,7 +75,7 @@ export const getVideoQuestProgressRemainingAccessibilityLabel = function getVide
     }
     if (minutes > 0) {
       const intl2 = tmp(1236).intl;
-      const obj1 = { count: null };
+      obj1 = { count: null };
       obj1[0] = minutes;
       formatToPlainStringResult = intl2.formatToPlainString(tmp(1236).t["SxnF/O"], obj1);
     } else {
@@ -114,11 +112,6 @@ export const getVideoQuestEndCardCtaText = function getVideoQuestEndCardCtaText(
   return buttonLabel;
 };
 export const handleVideoQuestModalClose = function handleVideoQuestModalClose(arg0) {
-  let duration;
-  let maxTimestampSec;
-  let questId;
-  let sourceQuestContent;
-  let videoSessionId;
   ({ questId, sourceQuestContent, videoSessionId } = arg0);
   const state = store.getState();
   state.setTranscriptEnabled(false);
@@ -193,7 +186,7 @@ export const handleVideoQuestModalClose = function handleVideoQuestModalClose(ar
     obj[3] = sourceQuestContent;
     trackQuestEvent.trackQuestEvent(obj);
     const obj5 = trackQuestEvent;
-    const obj1 = { questId: null, event: null, properties: null, sourceQuestContent: null };
+    obj1 = { questId: null, event: null, properties: null, sourceQuestContent: null };
     obj1[0] = questId;
     obj1[1] = AnalyticEvents.QUEST_VIDEO_MODAL_CLOSED;
     obj2 = { video_progress: null, video_session_id: null, network_connection_speed: null };

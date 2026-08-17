@@ -1,11 +1,13 @@
 // discord_app/modules/public_guilds/PublicGuildsConstants.tsx
-import importAllResult from "fromString";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import importAllResult from "fromString" /* 506 */;
 
 const items = [, , , , , , , , , , , , , ];
-({ ADMINISTRATOR: arr[0], KICK_MEMBERS: arr[1], BAN_MEMBERS: arr[2], MANAGE_GUILD: arr[3], MANAGE_CHANNELS: arr[4], MANAGE_ROLES: arr[5], MANAGE_MESSAGES: arr[6], MANAGE_GUILD_EXPRESSIONS: arr[7], CREATE_GUILD_EXPRESSIONS: arr[8], MANAGE_EVENTS: arr[9], CREATE_EVENTS: arr[10], MODERATE_MEMBERS: arr[11], MENTION_EVERYONE: arr[12], MANAGE_OFFICIAL_MESSAGES: arr[13] } = require("ME").Permissions);
+({ ADMINISTRATOR: arr[0], KICK_MEMBERS: arr[1], BAN_MEMBERS: arr[2], MANAGE_GUILD: arr[3], MANAGE_CHANNELS: arr[4], MANAGE_ROLES: arr[5], MANAGE_MESSAGES: arr[6], MANAGE_GUILD_EXPRESSIONS: arr[7], CREATE_GUILD_EXPRESSIONS: arr[8], MANAGE_EVENTS: arr[9], CREATE_EVENTS: arr[10], MODERATE_MEMBERS: arr[11], MENTION_EVERYONE: arr[12], MANAGE_OFFICIAL_MESSAGES: arr[13] } = ME.Permissions);
 const items1 = [...items];
-const applyResult = require("fromString").combine.apply(items1);
-const result = require("set").fileFinishedImporting("modules/public_guilds/PublicGuildsConstants.tsx");
+const applyResult = importAllResult.combine.apply(items1);
+const result = set.fileFinishedImporting("modules/public_guilds/PublicGuildsConstants.tsx");
 
 export const PUBLIC_SUCCESS_MODAL_SEEN_KEY = "publicSuccessModalSeen";
 export const PUBLIC_GUILD_ANNOUNCEMENTS_GUILD_ID = "667560445975986187";

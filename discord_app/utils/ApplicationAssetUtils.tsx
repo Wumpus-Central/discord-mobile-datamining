@@ -1,16 +1,14 @@
 // discord_app/utils/ApplicationAssetUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import timestamp from "timestamp";
-import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
-import ME from "ME";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { timestamp } from "../modules/debug/Logger.tsx";
-import { handleImageLoad } from "../modules/image_upload/ImageLoaderUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import _modDef38 from "module_38" /* 38 */;
+import sendRequest from "sendRequest" /* 530 */;
+import handleImageLoad from "handleImageLoad" /* 1469 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
+import ME from "ME" /* 676 */;
 
-let PlatformTypes;
-let closure_6;
-const require = arg1;
+require = arg1;
 function updateAssets(closure_0) {
   const self = this;
   const apply = _updateAssets.apply;
@@ -24,15 +22,15 @@ function updateAssets(closure_0) {
 function _updateAssets() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       const table = tmp2;
       body = tmp5;
-      const HTTP = callback(outer1_2[6]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-      obj1[0] = outer1_6.APPLICATION_ASSETS(callback);
+      const HTTP = callback(closure_1_2[6]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+      obj1[0] = closure_1_6.APPLICATION_ASSETS(callback);
       yield HTTP.get(obj1);
       body = body.body;
       const obj = body(table[7]);
@@ -43,7 +41,7 @@ function _updateAssets() {
       return applicationAssets.getApplicationAssets(callback);
     })();
   });
-  const _updateAssets = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -76,19 +74,19 @@ function getAssets() {
 function _getAssets() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp2;
-      assets = yield outer1_15(assets);
+      closure_1 = tmp2;
+      assets = yield closure_1_15(assets);
       if (assets != null) {
         assets = assets.assets;
       }
       return assets;
     })();
   });
-  const _getAssets = tmp;
+  closure_17 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -100,11 +98,11 @@ function _getAssets() {
 function _resolveExternalAssets() {
   const self = this;
   let tmp = callback2((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, body) {
       if (c9 === 2) {
         c9 = 3;
@@ -136,8 +134,8 @@ function _resolveExternalAssets() {
               obj[0] = body;
               return obj;
             } else {
-              let handleFetchEmbeddedActivityShelfSuccess = tmp;
-              let timestamp = tmp4;
+              closure_5 = tmp;
+              closure_4 = tmp4;
               let tmp30 = c1;
               body = undefined;
               c1 = undefined;
@@ -153,11 +151,11 @@ function _resolveExternalAssets() {
               });
               if (0 !== found.length) {
                 let tmp11 = callback;
-                let tmp12 = outer1_2;
-                let HTTP = callback(outer1_2[6]).HTTP;
-                let obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-                let tmp13 = outer1_6;
-                obj1[0] = outer1_6.APPLICATION_EXTERNAL_ASSETS(tmp29);
+                let tmp12 = closure_1_2;
+                let HTTP = callback(closure_1_2[6]).HTTP;
+                obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
+                let tmp13 = closure_1_6;
+                obj1[0] = closure_1_6.APPLICATION_EXTERNAL_ASSETS(tmp29);
                 let obj2 = { urls: null };
                 obj2[0] = found;
                 obj1[1] = obj2;
@@ -181,7 +179,7 @@ function _resolveExternalAssets() {
               obj[0] = body;
               return obj;
             } else {
-              let tmp18 = timestamp;
+              let tmp18 = closure_4;
               body = body.body;
               let tmp19 = body;
               external_asset_path = body;
@@ -191,9 +189,9 @@ function _resolveExternalAssets() {
               let tmp8 = external_asset_path;
               let tmp9 = url;
               while (url !== undefined) {
-                let tmp21 = timestamp;
-                let tmp22 = handleFetchEmbeddedActivityShelfSuccess;
-                let c7 = 1;
+                let tmp21 = closure_4;
+                let tmp22 = closure_5;
+                c7 = 1;
                 c1 = tmp10;
                 let tmp23 = c1;
                 url = c1.url;
@@ -222,7 +220,7 @@ function _resolveExternalAssets() {
       }
     })();
   });
-  const _resolveExternalAssets = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -329,11 +327,11 @@ function fetchAssetIds(id, closure_11) {
 function _fetchAssetIds() {
   let self = this;
   const tmp = callback2((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -362,12 +360,12 @@ function _fetchAssetIds() {
               return obj;
             } else {
               let length = tmp5;
-              let _slicedToArray = tmp2;
+              closure_3 = tmp2;
               let num13;
               if (num13 === undefined) {
                 num13 = 1;
               }
-              _slicedToArray = undefined;
+              closure_3 = undefined;
               length = undefined;
               c5 = undefined;
               c5 = 1;
@@ -381,14 +379,14 @@ function _fetchAssetIds() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c6 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
                 const obj2 = { type: "APPLICATION_ASSETS_FETCH", applicationId: null };
                 obj2[1] = closure_0;
                 lib(num13[7]).dispatch(obj2);
-                _slicedToArray = [];
+                closure_3 = [];
                 length = lib.filter((str) => {
                   let startsWithResult;
                   if (str != null) {
@@ -407,7 +405,7 @@ function _fetchAssetIds() {
                   c5 = 3;
                   c6 = 1;
                   const obj3 = { value: null, done: false };
-                  obj3[0] = (function resolveExternalAssets(closure_0, timestamp) {
+                  obj3[0] = (function resolveExternalAssets(closure_0, closure_4) {
                     const self = this;
                     const apply = closure_18.apply;
                     if (typeof apply === "unknown") {
@@ -436,8 +434,8 @@ function _fetchAssetIds() {
                 obj5[1] = closure_0;
                 obj5[2] = c5;
                 lib(num13[7]).dispatch(obj5);
-                if (callback4(lib, _slicedToArray, c5, num13)) {
-                  callback(closure_0).then(() => outer1_21(closure_0, closure_1, num13 - 1));
+                if (callback4(lib, closure_3, c5, num13)) {
+                  callback(closure_0).then(() => closure_1_21(closure_0, closure_1, num13 - 1));
                   const promise = callback(closure_0);
                 } else {
                   obj1 = lib(num13[7]);
@@ -457,14 +455,14 @@ function _fetchAssetIds() {
               obj[0] = arg1;
               return obj;
             }
-            if (callback3(lib, _slicedToArray)) {
+            if (callback3(lib, closure_3)) {
               obj5 = lib(num13[7]);
               const obj7 = { type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: null };
               obj7[1] = closure_0;
               obj5.dispatch(obj7);
               c6 = 3;
               const obj8 = { value: null, done: true };
-              obj8[0] = _slicedToArray;
+              obj8[0] = closure_3;
               return obj8;
             } else {
               c5 = 2;
@@ -483,7 +481,7 @@ function _fetchAssetIds() {
     iter.next();
     return iter;
   });
-  const _fetchAssetIds = tmp;
+  closure_22 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -536,7 +534,7 @@ let closure_11 = {
   [PlatformTypes.YOUTUBE]: obj,
   mp: {
     deserialize(str) {
-      00038__(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
+      _modDef38(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
       try {
         const _URL = URL;
         const _location = location;
@@ -577,7 +575,7 @@ let closure_11 = {
   }
 };
 const map = new Map();
-let result = require("handleFetchEmbeddedActivityShelfSuccess").fileFinishedImporting("utils/ApplicationAssetUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/ApplicationAssetUtils.tsx");
 
 export const getAssetFromImageURL = function getAssetFromImageURL(SPOTIFY, url) {
   const str = closure_11[SPOTIFY].serialize(url);
@@ -589,8 +587,6 @@ export const getAssetFromImageURL = function getAssetFromImageURL(SPOTIFY, url) 
   return combined;
 };
 export const getAssetImage = function getAssetImage(application_id, media_assets_large_image, items, applicationId) {
-  let tmp21;
-  let tmp22;
   let str = applicationId;
   if (applicationId === undefined) {
     str = "png";
@@ -605,7 +601,7 @@ export const getAssetImage = function getAssetImage(application_id, media_assets
             const obj5 = closure_11[tmp23.TWITCH];
           }
         }
-        const obj3 = new timestamp("ApplicationAssetUtils");
+        const obj3 = new timestampDefault("ApplicationAssetUtils");
         obj3.warn("getAssetImage: size must === [number, number] for Twitch");
       } else {
         const _Object = Object;

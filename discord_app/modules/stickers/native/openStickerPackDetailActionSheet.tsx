@@ -1,19 +1,19 @@
 // discord_app/modules/stickers/native/openStickerPackDetailActionSheet.tsx
-import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 
-const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/stickers/native/openStickerPackDetailActionSheet.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/stickers/native/openStickerPackDetailActionSheet.tsx");
 
 export default function openStickerPackDetailActionSheet(stickerPack) {
-  let analyticsLocation;
-  let analyticsPopoutType;
   stickerPack = stickerPack.stickerPack;
   ({ analyticsLocation, analyticsPopoutType } = stickerPack);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { location: analyticsLocation, sticker_pack_id: stickerPack.id };
   obj.track(AnalyticEvents.STICKER_PACK_VIEW_ALL, obj);
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(10225, dependencyMap.paths), "StickerPackDetailActionSheet", { stickerPack, analyticsPopoutType });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10225, dependencyMap.paths), "StickerPackDetailActionSheet", { stickerPack, analyticsPopoutType });
 };
 export const AnalyticsPopoutType = { EXPRESSION_SUGGESTIONS: "Sticker Pack Detail Sheet (Expression Suggestions Popout)", STICKER_PACK_DETAIL: "Sticker Pack Detail Sheet", STICKER_PACK_UPSELL: "Sticker Pack Detail Sheet (Sticker Upsell Popout)" };

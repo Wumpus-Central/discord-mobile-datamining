@@ -1,15 +1,12 @@
 // discord_app/components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
 const require = arg1;
 function OverrideOption(type) {
-  let onPress;
-  let permissionTitle;
   type = type.type;
   const selected = type.selected;
   const styles = type.styles;
@@ -17,7 +14,7 @@ function OverrideOption(type) {
   let obj = type(styles[10]);
   const radioA11yNative = obj.useRadioA11yNative({ selected });
   obj = { accessibilityRole: radioA11yNative.accessibilityRole, accessibilityLabel: null, accessibilityState: null, style: null, onPress: null, children: null };
-  let items = [permissionTitle, ];
+  items = [permissionTitle, ];
   if (type(styles[5]).DENY === type) {
     const intl2 = tmp(tmp2[6]).intl;
     let stringResult = intl2.string(tmp(tmp2[6]).t["6639O5"]);
@@ -33,7 +30,7 @@ function OverrideOption(type) {
   obj[1] = found.join(", ");
   obj[2] = radioA11yNative.accessibilityState;
   obj[3] = function style(pressed) {
-    let items = selected;
+    items = selected;
     if (!selected) {
       if (!pressed.pressed) {
         return styles.iconWrapper;
@@ -60,7 +57,7 @@ function OverrideOption(type) {
     let tmp4Result = tmp4(tmp(tmp2[7]).DenyIcon, obj);
   } else {
     if (tmp(tmp2[5]).ALLOW === type) {
-      const obj1 = { size: "sm", style: null, color: null };
+      obj1 = { size: "sm", style: null, color: null };
       obj1[1] = styles.icon;
       const colors = selected(tmp2[3]).colors;
       obj1[2] = selected ? colors.WHITE : colors.ICON_FEEDBACK_POSITIVE;
@@ -80,42 +77,40 @@ function OverrideOption(type) {
   }
 }
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
-const PX_4 = require("Themes").space.PX_4;
-const md = require("Themes").radii.md;
+const PX_4 = ThemesDefault.space.PX_4;
+const md = ThemesDefault.radii.md;
 let obj = { ternaryCheckBox: null, iconWrapper: null, icon: null, denyActive: null, denySelected: null, allowActive: null, allowSelected: null, passthroughSelected: null, passthroughActive: null, disabled: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: require("Themes").space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: md, height: ThemesDefault.space.PX_32, paddingVertical: PX_4, paddingHorizontal: PX_4 / 2, flexDirection: "row" };
 obj[0] = obj;
 obj[1] = { borderRadius: md - PX_4, marginHorizontal: PX_4 / 2, justifyContent: "center", height: "100%" };
-createCacheKey = { marginHorizontal: require("Themes").space.PX_8 };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_8 };
 obj[2] = createCacheKey;
-obj[3] = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_CRITICAL };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_CRITICAL };
-obj[4] = { backgroundColor: require("Themes").colors.ICON_FEEDBACK_CRITICAL, borderRadius: require("Themes").radii.sm - 2 };
-const obj3 = { backgroundColor: require("Themes").colors.ICON_FEEDBACK_CRITICAL, borderRadius: require("Themes").radii.sm - 2 };
-obj[5] = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_POSITIVE };
-const obj4 = { backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_POSITIVE };
-obj[6] = { backgroundColor: require("Themes").colors.ICON_FEEDBACK_POSITIVE };
-const obj5 = { backgroundColor: require("Themes").colors.ICON_FEEDBACK_POSITIVE };
-obj[7] = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_SELECTED };
-const obj6 = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_SELECTED };
-obj[8] = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER };
+obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_CRITICAL };
+obj[4] = { backgroundColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.sm - 2 };
+const obj3 = { backgroundColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.sm - 2 };
+obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_POSITIVE };
+const obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_POSITIVE };
+obj[6] = { backgroundColor: ThemesDefault.colors.ICON_FEEDBACK_POSITIVE };
+const obj5 = { backgroundColor: ThemesDefault.colors.ICON_FEEDBACK_POSITIVE };
+obj[7] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+const obj6 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED };
+obj[8] = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 obj[9] = { opacity: 0.3 };
 let closure_6 = createCacheKey.createStyles(obj);
 let items = [require("applyOverwrites").DENY, require("applyOverwrites").PASSTHROUGH, require("applyOverwrites").ALLOW];
-const obj7 = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER };
+const obj7 = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 const memoResult = importAllResult.memo(function ChannelSettingsPermissionsOverrideCheckbox(permissionTitle) {
-  let disabled;
-  let importDefault;
   permissionTitle = permissionTitle.permissionTitle;
   ({ value: importDefault, disabled } = permissionTitle);
   if (disabled === undefined) {
     disabled = false;
   }
   const onValueChange = permissionTitle.onValueChange;
-  let c3;
+  closure_3 = undefined;
   const tmp = callback();
-  c3 = tmp;
-  const items = [tmp.ternaryCheckBox, ];
+  closure_3 = tmp;
+  items = [tmp.ternaryCheckBox, ];
   let disabled2 = disabled;
   if (disabled) {
     disabled2 = tmp.disabled;
@@ -129,25 +124,25 @@ const memoResult = importAllResult.memo(function ChannelSettingsPermissionsOverr
   obj[1] = str;
   obj[3] = permissionTitle;
   obj[4] = items.map((type) => {
-    let closure_0 = type;
-    return outer1_5(outer1_8, {
+    closure_0 = type;
+    return closure_1_5(closure_1_8, {
       permissionTitle: closure_0,
       type,
       selected: closure_1 === type,
-      styles: c3,
+      styles: closure_3,
       onPress() {
-        let tmp2 = null != outer1_2;
+        let tmp2 = null != closure_1_2;
         if (tmp2) {
-          tmp2 = outer1_1 !== closure_0;
+          tmp2 = closure_1_1 !== closure_0;
         }
         if (tmp2) {
-          outer1_2(closure_0);
+          closure_1_2(closure_0);
         }
       }
     }, "checkbox-" + arg1);
   });
   return <closure_4 style={items} pointerEvents={null} accessibilityRole="radiogroup" accessibilityLabel={null}>{null}</closure_4>;
 });
-const result = require("jsxProd").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");
+const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsPermissionsOverrideCheckbox.tsx");
 
 export default memoResult;

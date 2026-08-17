@@ -1,14 +1,14 @@
 // discord_app/modules/routing/useGuildIdForChannelRoute.tsx
-import initializeFromUserSettings from "initializeFromUserSettings";
-import handleConnectionOpen from "handleConnectionOpen";
-import { FAVORITES } from "ME";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "initializeFromUserSettings" /* 1394 */;
+import closure_3 from "handleConnectionOpen" /* 4197 */;
+import { FAVORITES } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");
 
 export default function useGuildIdForChannelRoute(getGuildId) {
-  const items = [handleConnectionOpen];
+  const items = [closure_3];
   let stateFromStores = initialize.useStateFromStores(items, () => guildId.getGuildId());
   if (null == stateFromStores) {
     stateFromStores = getGuildId.getGuildId();

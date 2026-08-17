@@ -1,9 +1,11 @@
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx
-import { AnalyticEvents } from "ME";
-import { noop } from "../../../../lib/RTCControlSocket.tsx";
-import { getHermesInstrumentedStatsSummary } from "../../../../utils/ProcessUtils.native.tsx";
-import { Opcode } from "../../../gateway/GatewaySocketOpcode.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
+import noop from "noop" /* 13081 */;
+import Opcode from "Opcode" /* 13193 */;
 
+const AnalyticEvents = ME.AnalyticEvents;
 let closure_3 = { Gateway: "gateway", RtcControl: "rtc_control", RemoteAuth: "remote_auth", Spotify: "spotify", Rpc: "rpc", GameServerPing: "game_server_ping" };
 let closure_4 = {
   [AnalyticEvents.DEVICE_EVENT]: (data) => {
@@ -42,15 +44,12 @@ let closure_4 = {
         const _Object2 = Object;
         const entries = Object.entries(data);
         const found = entries.filter((arg0) => {
-          let tmp;
           [, tmp] = arg0;
           return null != tmp;
         });
         let joined = null;
         if (0 !== found.length) {
           const mapped = found.map((arg0) => {
-            let tmp;
-            let tmp2;
             [tmp, tmp2] = arg0;
             return "" + tmp + "=" + tmp2;
           });
@@ -309,7 +308,7 @@ let closure_5 = {
       if (typeof touch_action_type === "string") {
         tmp2 = touch_action_type;
       }
-      let obj = getHermesInstrumentedStatsSummary;
+      let obj = getHermesInstrumentedStatsSummaryDefault;
       let currentHermesInstrumentedStatsSummary = obj.getCurrentHermesInstrumentedStatsSummary();
       if (currentHermesInstrumentedStatsSummary == null) {
         currentHermesInstrumentedStatsSummary = null;
@@ -793,7 +792,7 @@ let closure_5 = {
     return obj;
   }
 };
-const result = require("Opcode").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
+const result = set.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInAnalyticBuilder.tsx");
 
 export const buildZoomedInAnalyticsEvent = function buildZoomedInAnalyticsEvent(key) {
   if (key.key in closure_4) {

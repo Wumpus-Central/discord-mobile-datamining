@@ -1,8 +1,8 @@
 // discord_app/hooks/analytics.tsx
-import noop from "noop";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import expandEventProperties from "expandEventProperties" /* 698 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("hooks/analytics.tsx");
 
 export const useAnalyticsContext = function useAnalyticsContext() {

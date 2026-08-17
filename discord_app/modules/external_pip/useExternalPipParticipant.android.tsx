@@ -1,27 +1,21 @@
 // discord_app/modules/external_pip/useExternalPipParticipant.android.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getParticipants from "getParticipants";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import ParticipantTypes from "ParticipantTypes";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import ParticipantTypes from "ParticipantTypes" /* 4544 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ isStreamParticipant: metroImportAll, ParticipantTypes: c9 } = ParticipantTypes);
-const result = require("getParticipants").fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
+({ isStreamParticipant: closure_8, ParticipantTypes: c9 } = ParticipantTypes);
+const result = require("set").fileFinishedImporting("modules/external_pip/useExternalPipParticipant.android.tsx");
 
 export default function useExternalPipParticipant() {
-  let c3;
-  let focusedParticipantType;
-  let focusedParticipantUserId;
-  let tmp7;
-  const items = [createRTCConnection];
+  const items = [closure_7];
   const channelId = selectedParticipantStreamId(focusedParticipantStreamId[7]).useStateFromStores(items, () => channelId.getChannelId());
   let tmpResult = tmp(tmp2[7]);
-  const items1 = [fetchFingerprint];
+  const items1 = [closure_5];
   let stateFromStores1 = tmpResult.useStateFromStores(items1, () => id.getId());
   selectedParticipantStreamId = channelId;
   focusedParticipantStreamId = stateFromStores1;
@@ -36,7 +30,7 @@ export default function useExternalPipParticipant() {
     if (null != selectedParticipantStreamId) {
       selectedParticipant = selectedParticipantSpeaking.getSelectedParticipant(tmp);
     }
-    if (!outer1_8(selectedParticipant)) {
+    if (!closure_1_8(selectedParticipant)) {
       let tmp6 = selectedParticipant;
     } else {
       const user = selectedParticipant.user;
@@ -72,7 +66,7 @@ export default function useExternalPipParticipant() {
         type1 = tmp6.type;
       }
       let tmp14;
-      if (type1 !== outer1_9.ACTIVITY) {
+      if (type1 !== closure_1_9.ACTIVITY) {
         let streamId;
         if (tmp6 != null) {
           streamId = tmp6.streamId;
@@ -102,7 +96,7 @@ export default function useExternalPipParticipant() {
         type3 = tmp6.type;
       }
       obj[2] = type3;
-      tmp13 = outer1_9;
+      tmp13 = closure_1_9;
     }
     return obj;
   });
@@ -133,8 +127,8 @@ export default function useExternalPipParticipant() {
           let tmp5 = nextResult;
           if (!tmp53) {
             let tmp6 = nextResult;
-            let tmp7 = outer1_9;
-            if (tmp5.type === outer1_9.USER) {
+            let tmp7 = closure_1_9;
+            if (tmp5.type === closure_1_9.USER) {
               let tmp8 = nextResult;
               let user = tmp5.user;
               let id;
@@ -147,7 +141,7 @@ export default function useExternalPipParticipant() {
           }
           let tmp11 = nextResult;
           let type = tmp5.type;
-          if (outer1_9.USER === type) {
+          if (closure_1_9.USER === type) {
             let tmp21 = nextResult;
             let speaking = tmp5.speaking;
             if (!speaking) {
@@ -201,9 +195,9 @@ export default function useExternalPipParticipant() {
               tmp14 = null == tmp5.streamId;
             }
             if (!tmp14) {
-              let tmp15 = outer1_8;
+              let tmp15 = closure_1_8;
               let tmp16 = nextResult;
-              let tmp17 = outer1_8(tmp5);
+              let tmp17 = closure_1_8(tmp5);
               if (tmp17) {
                 let tmp18 = nextResult;
                 let tmp19 = stateFromStores1;
@@ -291,10 +285,10 @@ export default function useExternalPipParticipant() {
   const effect1 = obj3.useEffect(() => {
     if (null != closure_0) {
       const useExternalPipParticipant = "useExternalPipParticipant";
-      let mediaEngine = outer1_6.getMediaEngine();
+      let mediaEngine = closure_1_6.getMediaEngine();
       mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, true, useExternalPipParticipant));
       return () => {
-        const mediaEngine = outer1_6.getMediaEngine();
+        const mediaEngine = closure_1_6.getMediaEngine();
         mediaEngine.eachConnection((setHasActiveVideoOutputSink) => setHasActiveVideoOutputSink.setHasActiveVideoOutputSink(closure_0, false, closure_1));
       };
     }

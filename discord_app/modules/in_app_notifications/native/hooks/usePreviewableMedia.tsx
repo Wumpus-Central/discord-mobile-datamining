@@ -1,34 +1,28 @@
 // discord_app/modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CirclePlayIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlayIcon.tsx";
-import { WaveformIcon } from "../../../../design/components/Icon/native/redesign/generated/WaveformIcon.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { urlMatchesFileExtension } from "../../../messages/MediaFormatTesters.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 10071 */;
+import WaveformIcon from "WaveformIcon" /* 10074 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function VoiceMessageIcon() {
-  let obj = map;
-  const token = obj.useToken(Themes.colors.BACKGROUND_MOD_STRONG);
-  let obj1 = map;
+  obj = map;
+  const token = obj.useToken(ThemesDefault.colors.BACKGROUND_MOD_STRONG);
+  obj1 = map;
   obj = { children: null };
-  const token1 = obj1.useToken(Themes.colors.BACKGROUND_MOD_SUBTLE);
+  const token1 = obj1.useToken(ThemesDefault.colors.BACKGROUND_MOD_SUBTLE);
   obj = { width: "100%", height: "100%", viewBox: "0 0 64 61", fill: "none", children: null };
   const tmp = callback3();
   obj[4] = callback(inlineStyles.Path, { d: "M22.2188 59.8545C19.5607 61.6263 16.0003 59.7208 16 56.5264V48C7.16344 48 2.5772e-07 40.8366 0 32V16C0 7.16344 7.16344 0 16 0H48C56.8366 0 64 7.16344 64 16V32C64 40.8366 56.8366 48 48 48H40L22.2188 59.8545Z", fill: token, stroke: token1 });
-  const items = [callback(inlineStyles, obj), ];
+  const items = [callback(inlineStylesDefault, obj), ];
   obj1 = { style: tmp.voiceMessageIconOverlay, children: null };
   const items1 = [callback(CirclePlayIcon.CirclePlayIcon, { size: "md", color: "background-brand", secondaryColor: "white" }), callback(WaveformIcon.WaveformIcon, { size: "md", color: "background-brand" })];
   obj1[1] = items1;
@@ -37,15 +31,13 @@ function VoiceMessageIcon() {
   return callback2(closure_9, obj);
 }
 function getBasePreviewableMedia(arg0) {
-  let isForward;
-  let message;
   ({ message, isForward } = arg0);
   const items = [];
   if (message.attachments.length > 0) {
     const attachments = message.attachments;
     if (message.hasFlag(constants2.IS_VOICE_MESSAGE)) {
       const first = attachments[0];
-      let obj = { id: null, type: null, media: null, icon: null, parentType: null };
+      obj = { id: null, type: null, media: null, icon: null, parentType: null };
       const _HermesInternal5 = HermesInternal;
       obj[0] = "" + first.id + "-" + obj.VOICE_MESSAGE;
       obj[1] = obj.VOICE_MESSAGE;
@@ -85,7 +77,7 @@ function getBasePreviewableMedia(arg0) {
           let tmp8Result = tmp8(4811);
           let tmp10 = filename;
           if (tmp8Result.isVideoFile(tmp7)) {
-            let obj1 = { id: null, type: null, media: null, parentType: null };
+            obj1 = { id: null, type: null, media: null, parentType: null };
             let tmp19 = nextResult;
             let tmp20 = obj;
             let _HermesInternal3 = HermesInternal;
@@ -127,7 +119,7 @@ function getBasePreviewableMedia(arg0) {
               let tmp14 = callback;
               let obj3 = { size: "lg", color: null };
               let tmp15 = importDefault;
-              obj3[1] = Themes.colors.ICON_SUBTLE;
+              obj3[1] = ThemesDefault.colors.ICON_SUBTLE;
               obj2[3] = callback(tmp8(10076).FileIcon, obj3);
               let str4 = null;
               if (isForward) {
@@ -182,7 +174,7 @@ function getBasePreviewableMedia(arg0) {
 }
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ MessageEmbedTypes: c5, MessageFlags: closure_6 } = ME);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let obj = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
 obj = { voiceMessageIconOverlay: null };
 obj = {};
@@ -193,24 +185,24 @@ obj.justifyContent = "center";
 obj.paddingBottom = 13;
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
-const result = require("ME").fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_notifications/native/hooks/usePreviewableMedia.tsx");
 
 export const PreviewableMediaTypes = obj;
 export const usePreviewableMedia = function usePreviewableMedia(message) {
-  let closure_0 = message;
+  closure_0 = message;
   let items = [message];
   return React.useMemo(() => {
     const items = [];
-    let obj = { message: closure_0, isForward: false };
-    const items1 = [...outer1_13(obj)];
+    obj = { message: closure_0, isForward: false };
+    const items1 = [...closure_1_13(obj)];
     items.push.apply(items1);
-    if (outer1_1(outer1_2[12])(closure_0)) {
+    if (closure_1_1(closure_1_2[12])(closure_0)) {
       if (tmp2.messageSnapshots.length > 0) {
         obj = { message: null, isForward: true };
         obj[0] = tmp2.messageSnapshots[0].message;
         const push = items.push;
         const items2 = [];
-        HermesBuiltin.arraySpread(outer1_13(obj), 0);
+        HermesBuiltin.arraySpread(closure_1_13(obj), 0);
         HermesBuiltin.apply(items2, items);
       }
     }

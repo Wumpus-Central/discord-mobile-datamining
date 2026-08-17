@@ -1,25 +1,17 @@
 // discord_app/design/void/Form/native/FormSwitchRow.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
-import { TableSwitchRow } from "../../../components/TableRow/native/TableSwitchRow.native.tsx";
+import context from "context" /* 6939 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function FormSwitchRow(onValueChange) {
-  let accessibilityHint;
-  let label;
-  let numberOfLines;
-  let subLabel;
-  let switchProps;
-  let trailing;
   onValueChange = onValueChange.onValueChange;
   const value = onValueChange.value;
-  const importDefault = value;
+  importDefault = value;
   let flag = onValueChange.disabled;
   if (flag === undefined) {
     flag = false;
@@ -86,7 +78,7 @@ function FormSwitchRow(onValueChange) {
   obj.accessibilityLabel = sum;
   obj.accessibilityState = { disabled: flag, checked: first };
   obj.accessibilityHint = accessibilityHint;
-  const obj1 = { disabled: flag, value, onValueChange };
+  obj1 = { disabled: flag, value, onValueChange };
   const tmp14 = importDefault(first[6]);
   const tmp16 = closure_7;
   const tmp17 = View;
@@ -96,7 +88,7 @@ function FormSwitchRow(onValueChange) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ trailing: { flex: 1, flexDirection: "row", width: "100%", alignItems: "center" } });
-const result = require("get ActivityIndicator").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormSwitchRow.tsx");
 
 export default function FormSwitchRowContainer(DEPRECATED_style) {
   if (React.useContext(context.RedesignCompatContext)) {

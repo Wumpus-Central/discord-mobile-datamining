@@ -1,23 +1,22 @@
 // discord_app/modules/guild_onboarding_home/native/ResourceChannelButtons.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { wrapper: null, buttonWrapper: null, spacer: null, iconColor: null };
-createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { display: "flex", flexDirection: "row", padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { width: 8 };
-createCacheKey[3] = { color: require("Themes").colors.WHITE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").colors.WHITE };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
+createCacheKey[3] = { color: ThemesDefault.colors.WHITE };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { color: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourceChannelButtons.tsx");
 
 export default function ResourceChannelButtons(channel) {
   channel = channel.channel;
@@ -27,8 +26,8 @@ export default function ResourceChannelButtons(channel) {
   let React;
   let obj = channel(first[6]);
   navigation = obj.useNavigation();
-  const tmp4 = createCacheKey();
-  let obj1 = channel(first[7]);
+  const tmp4 = callback3();
+  obj1 = channel(first[7]);
   const tmp5 = callback(obj1.usePreviousAndNextResourceChannel(channel.guild_id, channel.id), 2);
   first = tmp5[0];
   callback = tmp7;
@@ -75,7 +74,7 @@ export default function ResourceChannelButtons(channel) {
       obj6[1] = navigation(tmp2[12]);
       obj5[1] = callback2(tmp(tmp2[10]).Icon, obj6);
       obj5[3] = function onPress() {
-        return callback(_undefined.channelId);
+        return callback(channelId.channelId);
       };
       obj4[1] = callback2(tmp(tmp2[9]).Button, obj5);
       tmp16 = callback2(tmp10, obj4);

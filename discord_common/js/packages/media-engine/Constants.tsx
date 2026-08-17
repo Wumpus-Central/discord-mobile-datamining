@@ -1,7 +1,10 @@
 // discord_common/js/packages/media-engine/Constants.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
+import set from "set" /* 2 */;
+import SystemServiceNotAvailableError from "SystemServiceNotAvailableError" /* 4530 */;
 
-export const DesktopSources = require("SystemServiceNotAvailableError").DesktopSources;
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/Constants.tsx");
+
+export const DesktopSources = SystemServiceNotAvailableError.DesktopSources;
 export const MediaEngineContextTypes = { DEFAULT: "default", STREAM: "stream" };
 export const DeviceTypes = { AUDIO_INPUT: "audioinput", AUDIO_OUTPUT: "audiooutput", VIDEO_INPUT: "videoinput" };
 export const InputModes = { PUSH_TO_TALK: "PUSH_TO_TALK", VOICE_ACTIVITY: "VOICE_ACTIVITY" };

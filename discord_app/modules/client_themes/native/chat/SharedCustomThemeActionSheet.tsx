@@ -1,26 +1,22 @@
 // discord_app/modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import noop from "initialize";
-import { View } from "saveGuildFolders";
-import reset from "reset";
-import { AnalyticEvents } from "ME";
-import { PremiumTypes } from "GuildFeatures";
-import jsxProd from "openPremiumPlanSelectionActionSheet";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_9 from "reset" /* 4045 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let require = arg1;
+const require = arg1;
 function PrimaryActionButton(onPressApply) {
-  const tmp = createCacheKey();
-  const require = tmp;
-  let obj = initialize;
-  let items = [reset];
+  const tmp = callback6();
+  const _require = tmp;
+  let obj = _initialize;
+  let items = [closure_9];
   const stateFromStores = obj.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   if (obj2.getPremiumTypeFromSubscription(stateFromStores) !== PremiumTypes.TIER_2) {
     obj = { text: null, onPress: null, renderIcon: null, style: null };
@@ -34,8 +30,8 @@ function PrimaryActionButton(onPressApply) {
       callback(7393)(obj);
     };
     obj[2] = function renderIcon() {
-      const style = [tmp.nitroWheelButton];
-      return outer1_12(tmp(outer1_2[23]).NitroWheel, { style });
+      const style = [lib.nitroWheelButton];
+      return closure_1_12(lib(closure_1_2[23]).NitroWheel, { style });
     };
     obj[3] = tmp.getNitroButton;
     let tmp6 = callback4(tmp2(1297).ShinyButton, obj);
@@ -51,16 +47,16 @@ function PrimaryActionButton(onPressApply) {
 ({ useEffect: c5, useLayoutEffect: closure_6, useRef: error } = noop);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { contentWrapper: { paddingHorizontal: 43.5, paddingVertical: 12 }, centeredText: { textAlign: "center" }, ctaContainer: { paddingHorizontal: 15, flexDirection: "column", display: "flex", gap: 6 }, nitroWheelButton: { marginStart: -2, width: 20, height: 20 }, getNitroButton: null };
-createCacheKey = { borderRadius: require("Themes").radii.round };
+createCacheKey = { borderRadius: ThemesDefault.radii.round };
 createCacheKey[4] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/client_themes/native/chat/SharedCustomThemeActionSheet.tsx");
 
 export default function _default(message) {
   const sharedClientTheme = message.message.sharedClientTheme;
-  const tmp = createCacheKey();
+  const tmp = callback6();
   let tmp2 = callback3(null);
-  const importDefault = tmp2;
+  importDefault = tmp2;
   let obj = first1;
   let tmp4;
   if (undefined !== sharedClientTheme) {
@@ -97,14 +93,14 @@ export default function _default(message) {
       ({ gradient_angle: obj[2], base_mix: obj[3] } = tmp2);
       tmp4 = obj;
     }
-    _slicedToArray(tmp4);
+    closure_3(tmp4);
     let baseTheme;
     if (undefined !== sharedClientTheme) {
       baseTheme = sharedClientTheme(first[24]).getBaseTheme(tmp2.base_theme);
       const obj2 = sharedClientTheme(first[24]);
     }
     closure_5(baseTheme);
-    sharedClientTheme(first[9]).track(outer1_10.CUSTOM_THEME_SHARE_PREVIEWED, {});
+    ref(first[9]).track(closure_1_10.CUSTOM_THEME_SHARE_PREVIEWED, {});
   }, items);
   const items1 = [first, first1];
   callback2(() => {
@@ -129,14 +125,14 @@ export default function _default(message) {
   const items3 = [ref];
   callback2(() => () => {
     if (ref.current) {
-      outer1_0(outer1_2[10]).clearPreviewTheme();
-      const obj = outer1_0(outer1_2[10]);
-      outer1_0(outer1_2[11]).refreshTheme();
-      const obj2 = outer1_0(outer1_2[11]);
+      closure_1_0(closure_1_2[10]).clearPreviewTheme();
+      const obj = closure_1_0(closure_1_2[10]);
+      closure_1_0(closure_1_2[11]).refreshTheme();
+      const obj2 = closure_1_0(closure_1_2[11]);
     }
   }, items3);
   obj = { ref: tmp2, backdropOpacity: 0, children: null };
-  const obj1 = { title: null };
+  obj1 = { title: null };
   const intl = sharedClientTheme(first[14]).intl;
   obj1[0] = intl.string(importDefault(first[15])["3ej1LT"]);
   const items4 = [callback4(sharedClientTheme(first[13]).BottomSheetTitleHeader, obj1), , ];
@@ -155,7 +151,7 @@ export default function _default(message) {
           tmp2 = undefined !== first1;
         }
         if (tmp2) {
-          tmp2 = null !== tmp2.current;
+          tmp2 = null !== ref.current;
         }
         if (tmp2) {
           callback(true);
@@ -168,10 +164,10 @@ export default function _default(message) {
           const obj2 = sharedClientTheme(first[17]);
           sharedClientTheme(first[10]).clearPreviewTheme();
           const obj4 = sharedClientTheme(first[10]);
-          tmp2(first[9]).track(outer1_10.CUSTOM_THEME_SHARE_APPLIED, {});
-          const current = tmp2.current;
+          ref(first[9]).track(closure_1_10.CUSTOM_THEME_SHARE_APPLIED, {});
+          const current = ref.current;
           current.closeActionSheet();
-          const obj5 = tmp2(first[9]);
+          const obj5 = ref(first[9]);
         }
       }
     }),
@@ -181,10 +177,9 @@ export default function _default(message) {
   const intl3 = sharedClientTheme(first[14]).intl;
   obj6[0] = intl3.string(sharedClientTheme(first[14]).t["13/7kX"]);
   obj6[1] = function onPress() {
-    if (null !== tmp2.current) {
+    if (null !== ref.current) {
       sharedClientTheme(first[10]).clearPreviewTheme();
       const obj = sharedClientTheme(first[10]);
-      tmp2 = sharedClientTheme;
       sharedClientTheme(first[11]).refreshTheme();
       const current = tmp.current;
       current.closeActionSheet();

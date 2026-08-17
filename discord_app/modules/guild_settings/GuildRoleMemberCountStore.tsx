@@ -1,8 +1,10 @@
 // discord_app/modules/guild_settings/GuildRoleMemberCountStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = {};
 let closure_1 = {};
+const Store = initializeDefault.Store;
 class GuildRoleMemberCountStore extends Store {
 }
 const prototype = GuildRoleMemberCountStore.prototype;
@@ -26,7 +28,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0) {
   }
 };
 GuildRoleMemberCountStore.displayName = "GuildRoleMemberCountStore";
-const guildRoleMemberCountStore = new GuildRoleMemberCountStore(require("dispatcher"), {
+const guildRoleMemberCountStore = new GuildRoleMemberCountStore(dispatcherDefault, {
   GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: function handleGuildRoleMemberCountFetchSuccess(guildId) {
     guildId = guildId.guildId;
     closure_0[guildId] = guildId.roleMemberCount;

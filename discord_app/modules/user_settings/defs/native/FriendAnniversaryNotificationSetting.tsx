@@ -1,22 +1,26 @@
 // discord_app/modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../premium/gifting/native/MobileFriendAnniversaryExperiment.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import apexExperimentDefault from "apexExperiment" /* 8293 */;
+import onFriendAnniversaryNotificationSettingsChanged from "onFriendAnniversaryNotificationSettingsChanged" /* 14807 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.BVO96v);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableFriendAnniversaryNotifications.useSetting,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableFriendAnniversaryNotifications.useSetting,
   useDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["00TNo7"]);
   },
-  onValueChange: require("onFriendAnniversaryNotificationSettingsChanged").onFriendAnniversaryNotificationSettingsChanged,
+  onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {
-    return apexExperiment.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
+    return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
   }
 });
 const obj = {
@@ -24,17 +28,17 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.BVO96v);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableFriendAnniversaryNotifications.useSetting,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableFriendAnniversaryNotifications.useSetting,
   useDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["00TNo7"]);
   },
-  onValueChange: require("onFriendAnniversaryNotificationSettingsChanged").onFriendAnniversaryNotificationSettingsChanged,
+  onValueChange: onFriendAnniversaryNotificationSettingsChanged.onFriendAnniversaryNotificationSettingsChanged,
   usePredicate() {
-    return apexExperiment.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
+    return apexExperimentDefault.useConfig({ location: "FriendAnniversaryNotificationSetting" }).enabled;
   }
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/FriendAnniversaryNotificationSetting.tsx");
 
 export default toggle;

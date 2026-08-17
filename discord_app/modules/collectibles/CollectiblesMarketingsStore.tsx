@@ -1,9 +1,11 @@
 // discord_app/modules/collectibles/CollectiblesMarketingsStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 let closure_1 = {};
 let NOT_FETCHED = obj.NOT_FETCHED;
+const Store = initializeDefault.Store;
 class CollectiblesMarketingsStore extends Store {
 }
 const prototype = CollectiblesMarketingsStore.prototype;
@@ -26,11 +28,11 @@ obj = {
     const FETCHED = obj.FETCHED;
   },
   LOGOUT: function reset() {
-    let closure_1 = {};
-    const NOT_FETCHED = obj.NOT_FETCHED;
+    closure_1 = {};
+    NOT_FETCHED = obj.NOT_FETCHED;
   }
 };
-const collectiblesMarketingsStore = new CollectiblesMarketingsStore(require("dispatcher"), obj);
+const collectiblesMarketingsStore = new CollectiblesMarketingsStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesMarketingsStore.tsx");
 
 export default collectiblesMarketingsStore;

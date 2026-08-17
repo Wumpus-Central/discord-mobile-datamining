@@ -1,13 +1,11 @@
 // discord_app/components_native/common/FastImage.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/FastImageNativeComponent.tsx";
+import noopAll from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 5450 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c3;
-let obj1;
 class FastImageAndroid {
   constructor(arg0) {
     obj = {};
@@ -19,13 +17,7 @@ class FastImageAndroid {
 }
 ({ Image: obj1, NativeModules: c3 } = get_ActivityIndicator);
 let closure_5 = createCacheKey.createStyles({ base: { overflow: "hidden" } });
-let merged = Object.assign(require("noop").memo((fade) => {
-  let enableAnimation;
-  let manualPlayback;
-  let paused;
-  let placeholder;
-  let source;
-  let style;
+let merged = Object.assign(noopAll.memo((fade) => {
   ({ placeholder, enableAnimation } = fade);
   let tmp2 = undefined === enableAnimation;
   ({ source, style } = fade);
@@ -62,19 +54,19 @@ let merged = Object.assign(require("noop").memo((fade) => {
     obj.manualPlayback = manualPlayback;
     obj.fade = tmp3;
     obj.usesSmallCache = tmp4;
-    return jsx(__INTERNAL_VIEW_CONFIG, {});
+    return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
   }
   tmp = callback();
   tmp4 = undefined !== usesSmallCache && usesSmallCache;
 }), {
   preload(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let num = arg1;
     if (arg1 === undefined) {
       num = 2000;
     }
     let promise = new Promise((arg0) => {
-      const ImageManager = outer1_3.ImageManager;
+      const ImageManager = closure_1_3.ImageManager;
       ImageManager.preload(closure_0, arg0);
     });
     const items = [promise, ];

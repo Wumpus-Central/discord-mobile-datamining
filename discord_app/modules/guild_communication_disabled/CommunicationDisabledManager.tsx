@@ -1,13 +1,12 @@
 // discord_app/modules/guild_communication_disabled/CommunicationDisabledManager.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import closure_5 from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { isCommunicationDisabled } from "CommunicationDisabledUtils.tsx";
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isCommunicationDisabled from "isCommunicationDisabled" /* 4010 */;
+import initializeDefault from "initialize" /* 5038 */;
+import trackCommunicationDisabled from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
-let c3;
-let c4;
 function clearGuildMemberTimeout(closure_2, closure_1) {
   member = member.getMember(closure_2, closure_1);
   user = user.getUser(closure_1);
@@ -46,10 +45,10 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
         obj.phone = phone;
         obj.user = obj;
         obj.communicationDisabledUntil = null;
-        const obj1 = { type: "GUILD_MEMBER_UPDATE" };
+        obj1 = { type: "GUILD_MEMBER_UPDATE" };
         const merged3 = Object.assign(obj);
-        dispatcher.dispatch(obj1);
-        const obj4 = dispatcher;
+        dispatcherDefault.dispatch(obj1);
+        const obj4 = dispatcherDefault;
       }
       obj6 = isCommunicationDisabled;
     }
@@ -57,6 +56,7 @@ function clearGuildMemberTimeout(closure_2, closure_1) {
 }
 ({ getGuildIdFromCommunicationDisabledUserKey: c3, getUserIdFromCommunicationDisabledUserKey: c4 } = trackCommunicationDisabled);
 let c7 = null;
+initializeDefault;
 class CommunicationDisabledManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -70,10 +70,10 @@ prototype["_initialize"] = function _initialize() {
     communicationDisabledUserMap = communicationDisabledUserMap.getCommunicationDisabledUserMap();
     const keys = Object.keys(communicationDisabledUserMap);
     const item = keys.forEach((arg0) => {
-      const tmp = outer1_3(arg0);
-      const tmp2 = outer1_4(arg0);
+      const tmp = closure_1_3(arg0);
+      const tmp2 = closure_1_4(arg0);
       if (!obj.isCommunicationDisabled(communicationDisabledUserMap[arg0])) {
-        outer1_8(tmp, tmp2);
+        closure_1_8(tmp, tmp2);
       }
     });
   }, 10000);
@@ -82,6 +82,6 @@ prototype["_terminate"] = function _terminate() {
   clearInterval(c7);
 };
 const communicationDisabledManager = new CommunicationDisabledManager();
-const result = require("isCommunicationDisabled").fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
+const result = set.fileFinishedImporting("modules/guild_communication_disabled/CommunicationDisabledManager.tsx");
 
 export default communicationDisabledManager;

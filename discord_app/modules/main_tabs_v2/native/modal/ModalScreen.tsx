@@ -1,41 +1,34 @@
 // discord_app/modules/main_tabs_v2/native/modal/ModalScreen.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NOOP } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import trackImpressionDefault from "trackImpression" /* 9177 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 let closure_3 = ["impressionName", "impressionProperties"];
 ({ View: closure_6, StyleSheet: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { containerWithPadding: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalScreen.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalScreen.tsx");
 
 export default function Modal(route) {
-  let impressionName;
-  let impressionProperties;
-  let left;
-  let right;
   const modal = route.route.params.modal;
-  let importDefault;
+  importDefault = undefined;
   let props = modal.props;
   if (props == null) {
     props = {};
   }
   ({ impressionName, impressionProperties } = props);
-  const tmp = createCacheKey();
-  let obj1 = React;
+  const tmp = callback3();
+  obj1 = React;
   const callback = React.useCallback(() => {
     let arr = callback(5260);
     arr = arr.pop();
@@ -45,7 +38,7 @@ export default function Modal(route) {
   obj[0] = modal(503).ImpressionTypes.MODAL;
   obj[1] = impressionName;
   obj[2] = impressionProperties;
-  trackImpression(obj);
+  trackImpressionDefault(obj);
   let callbacks = modal.callbacks;
   let onExited;
   if (callbacks != null) {
@@ -69,8 +62,8 @@ export default function Modal(route) {
     return currentResult;
   }, []);
   const layoutEffect = obj1.useLayoutEffect(() => modal(5066).trackAppUIViewed("ModalScreen"), []);
-  const tmp6 = trackImpression;
-  ({ left, right } = useSafeAreaInsets());
+  const tmp6 = trackImpressionDefault;
+  ({ left, right } = useSafeAreaInsetsDefault());
   let tmp7Result = tmp7(16088);
   const items = [absoluteFillObject.absoluteFillObject, ];
   let tmp16;

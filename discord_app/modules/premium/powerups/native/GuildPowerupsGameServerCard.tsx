@@ -1,30 +1,33 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useGameServerPerk } from "../../../game_server/hooks/useGameServerPerk.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 11740 */;
+import useGameServerPerkDefault from "useGameServerPerk" /* 11745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "handleGameServerInstanceCreated" /* 4282 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
+noopAll;
 createCacheKey = { riveContainer: null };
-createCacheKey = { flex: 1, paddingVertical: require("Themes").space.PX_8 };
+createCacheKey = { flex: 1, paddingVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsGameServerCard.tsx");
 
 export default function GuildPowerupsGameServerCard(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(589);
-  const items = [handleGameServerInstanceCreated];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getStateForGuild(guildId));
-  const tmp = createCacheKey();
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(guildId));
+  const tmp = callback();
   const tmp2 = guildId;
   const tmp5 = importDefault;
-  const tmp7 = useGameServerPerk(guildId);
-  let obj1 = guildId(589);
-  const items1 = [maybeApplyNoTextColorForLightCustomTheme];
+  const tmp7 = useGameServerPerkDefault(guildId);
+  obj1 = guildId(589);
+  const items1 = [closure_4];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let tmp10 = null;
   if (null != stateFromStores) {
@@ -42,8 +45,8 @@ export default function GuildPowerupsGameServerCard(guildId) {
       obj[4] = <View style={null}>{null}</View>;
       obj[6] = tmp6;
       obj[7] = tmp9;
-      tmp10 = jsx(tmp5(11740), { style: null, children: null });
-      const tmp5Result = tmp5(11740);
+      tmp10 = jsx(GuildPowerupsPerkCardDefault, { style: null, children: null });
+      const tmp5Result = GuildPowerupsPerkCardDefault;
     }
   }
   return tmp10;

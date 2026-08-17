@@ -1,11 +1,12 @@
 // discord_app/modules/billing/native/subscription/useRestorePurchases.tsx
-import set from "set";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
-let c5 = new require("timestamp")("useRestorePurchases");
-const tmp2 = new require("timestamp")("useRestorePurchases");
-const result = require("noop").fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
+let closure_5 = new timestampDefault("useRestorePurchases");
+const tmp2 = new timestampDefault("useRestorePurchases");
+const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useRestorePurchases.tsx");
 
 export default function useRestorePurchases() {
   let obj = arg0;
@@ -16,9 +17,9 @@ export default function useRestorePurchases() {
   if (flag === undefined) {
     flag = true;
   }
-  let closure_1;
-  let set;
-  function _restore(noop, arg1) {
+  closure_1 = undefined;
+  closure_2 = undefined;
+  function _restore(closure_4, arg1) {
     const self = this;
     const tmp = callback(function*() {
       if (logger === 2) {
@@ -47,12 +48,12 @@ export default function useRestorePurchases() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp4;
-              let closure_0 = tmp8;
-              outer1_2(true);
+              closure_1 = tmp4;
+              let callback = tmp8;
+              closure_1_2(true);
               logger.log("isRestoring true");
-              let c3 = 2;
-              let obj1 = outer1_0(outer1_1[4]);
+              c3 = 2;
+              obj1 = callback(closure_1_1[4]);
               c4 = 3;
               logger = 1;
               obj1 = { value: null, done: false };
@@ -61,16 +62,16 @@ export default function useRestorePurchases() {
             }
           } else if (1 === tmp8) {
             c3 = 0;
-            outer1_2(false);
+            closure_1_2(false);
             logger.log("isRestoring false");
-            throw callback;
+            throw callback2;
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              outer1_0 = callback;
-              logger.error(outer1_0);
+              callback = callback2;
+              logger.error(callback);
               c3 = 0;
-              outer1_2(false);
+              closure_1_2(false);
               logger.log("isRestoring false");
               logger = 3;
             } else if (arg0 === 1) {
@@ -82,7 +83,7 @@ export default function useRestorePurchases() {
               c3 = 1;
             }
             c3 = 0;
-            callback(false);
+            callback2(false);
             logger.log("isRestoring false");
             logger = 3;
             obj = { value: null, done: true };
@@ -90,7 +91,7 @@ export default function useRestorePurchases() {
             return obj;
           }
         } catch (tmp43) {
-          callback = tmp43;
+          callback2 = tmp43;
           if (tmp5 === c3) {
             logger = tmp3;
             throw tmp43;
@@ -102,7 +103,7 @@ export default function useRestorePurchases() {
         }
       }
     });
-    const _restore = tmp;
+    closure_3 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -113,7 +114,7 @@ export default function useRestorePurchases() {
   }
   closure_1 = React.useRef(false);
   let tmp = _restore(React.useState(false), 2);
-  set = tmp[1];
+  closure_2 = tmp[1];
   const items = [flag];
   const effect = React.useEffect(() => {
     let tmp = flag;
@@ -123,7 +124,7 @@ export default function useRestorePurchases() {
     if (tmp) {
       (function restore() {
         const self = this;
-        const apply = _slicedToArray.apply;
+        const apply = closure_3.apply;
         if (typeof apply === "unknown") {
           let applyArgumentsResult = HermesBuiltin.applyArguments(self);
         } else {

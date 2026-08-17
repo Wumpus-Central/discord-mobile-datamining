@@ -1,10 +1,12 @@
 // discord_app/modules/rpc/helpers/validateScope.tsx
-import { RPC_SCOPE_CONFIG } from "RPC_SCOPE_CONFIG";
+import set from "set" /* 2 */;
+import RPC_SCOPE_CONFIG2 from "RPC_SCOPE_CONFIG" /* 4277 */;
 
-const result = require("set").fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
+let RPC_SCOPE_CONFIG = RPC_SCOPE_CONFIG2.RPC_SCOPE_CONFIG;
+const result = set.fileFinishedImporting("modules/rpc/helpers/validateScope.tsx");
 
 export default function validateScope(arr, str) {
-  const RPC_SCOPE_CONFIG = arr;
+  RPC_SCOPE_CONFIG = arr;
   if (null == str) {
     return true;
   } else if (typeof str === "string") {

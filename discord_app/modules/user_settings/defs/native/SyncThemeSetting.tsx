@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/defs/native/SyncThemeSetting.tsx
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import initialize from "initialize";
-import handleThemeChange from "handleThemeChange";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { AnalyticEvents } from "ME";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { track } from "../../../../actions/AnalyticsTrackingActionCreators.tsx";
-import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9365 */;
+import track from "track" /* 14655 */;
+import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
+import closure_4 from "initialize" /* 1303 */;
+import closure_5 from "handleThemeChange" /* 1302 */;
+import closure_6 from "handleConnectionClosedOrResumed" /* 1340 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -19,16 +19,16 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   useIsDisabled: function useSyncThemeDisabled() {
-    let stateFromStores = useIsMobileVisualRefreshExperimentEnabled("SyncThemeSetting");
-    const items = [handleThemeChange];
+    let stateFromStores = useIsMobileVisualRefreshExperimentEnabledDefault("SyncThemeSetting");
+    const items = [closure_5];
     if (stateFromStores) {
       stateFromStores = obj.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
     }
     return stateFromStores;
   },
   useValue: function useSyncThemeAcrossClientsValue() {
-    const items = [initialize];
-    return initialize.useStateFromStores(items, () => false !== initialize.shouldSync("appearance"));
+    const items = [closure_4];
+    return initialize.useStateFromStores(items, () => false !== closure_4.shouldSync("appearance"));
   },
   onValueChange: function onSyncThemeAcrossClientsValueChange(is_sync_enabled) {
     gradientPreset = gradientPreset.gradientPreset;
@@ -50,7 +50,7 @@ createToggle = {
     let obj = track;
     obj = { is_sync_enabled, base_theme: theme.theme, client_theme: id, has_custom_theme: null != prop };
     obj.track(AnalyticEvents.SYNC_ACROSS_CLIENTS_TOGGLED, obj);
-    const result = saveGuildFolders.setShouldSyncAppearanceSettings(is_sync_enabled);
+    const result = saveGuildFoldersDefault.setShouldSyncAppearanceSettings(is_sync_enabled);
   },
   useDescription: function useSyncThemeAcrossClientsDescription() {
     const intl = getSystemLocale.intl;
@@ -58,6 +58,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("handleThemeChange").fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncThemeSetting.tsx");
 
 export default createToggle;

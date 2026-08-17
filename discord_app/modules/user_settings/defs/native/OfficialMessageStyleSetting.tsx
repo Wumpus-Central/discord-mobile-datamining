@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setFontSize from "setFontSize" /* 13813 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function useOfficialMessageStyleSettingValue() {
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   return initialize.useStateFromStores(items, () => officialMessageStyle.officialMessageStyle);
 }
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
@@ -28,7 +28,7 @@ function useOfficialMessageStyleSettingOptions() {
     const intl3 = callback(1236).intl;
     obj[0] = intl3.string(callback(1236).t.O2vBoY);
     items[2] = obj;
-    const obj1 = { label: null, value: "hidden" };
+    obj1 = { label: null, value: "hidden" };
     const intl4 = callback(1236).intl;
     obj1[0] = intl4.string(callback(1236).t["+loyQl"]);
     items[3] = obj1;
@@ -46,7 +46,7 @@ createToggle = {
   useOptions: useOfficialMessageStyleSettingOptions
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/OfficialMessageStyleSetting.tsx");
 
 export default createToggle;
 export { useOfficialMessageStyleSettingValue };

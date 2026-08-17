@@ -1,5 +1,5 @@
 // discord_app/modules/message_previews/RemoteFetchData.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 let obj = { Pending: 0, [0]: "Pending", Fetching: 1, [1]: "Fetching" };
 const result = require("set").fileFinishedImporting("modules/message_previews/RemoteFetchData.tsx");
@@ -48,9 +48,9 @@ prototype["nextWants"] = function nextWants(arg0) {
   items.length = Math.min(arg0, items.length);
   return items;
 };
-prototype["markFetching"] = function markFetching(outer1_0) {
+prototype["markFetching"] = function markFetching(closure_1_0) {
   const self = this;
-  const iter = outer1_0[Symbol.iterator]();
+  const iter = closure_1_0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -60,9 +60,9 @@ prototype["markFetching"] = function markFetching(outer1_0) {
     continue;
   }
 };
-prototype["markCompleted"] = function markCompleted(asyncGeneratorStep) {
+prototype["markCompleted"] = function markCompleted(closure_0) {
   const self = this;
-  const iter = asyncGeneratorStep[Symbol.iterator]();
+  const iter = closure_0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -72,9 +72,9 @@ prototype["markCompleted"] = function markCompleted(asyncGeneratorStep) {
     continue;
   }
 };
-prototype["markFailed"] = function markFailed(asyncGeneratorStep) {
+prototype["markFailed"] = function markFailed(closure_0) {
   const self = this;
-  const iter = asyncGeneratorStep[Symbol.iterator]();
+  const iter = closure_0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let pending = self.pending;
@@ -86,7 +86,7 @@ prototype["markFailed"] = function markFailed(asyncGeneratorStep) {
 };
 prototype["try"] = function try(nextWantsResult, arg1) {
   const callback = nextWantsResult;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const self = this;
   return callback(function*() {
     if (c5 === 2) {
@@ -96,7 +96,7 @@ prototype["try"] = function try(nextWantsResult, arg1) {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -115,21 +115,21 @@ prototype["try"] = function try(nextWantsResult, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
-            let asyncGeneratorStep = tmp7;
-            asyncGeneratorStep = undefined;
-            let c3 = 1;
-            outer1_2.markFetching(outer1_0);
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            closure_0 = undefined;
+            c3 = 1;
+            closure_1_2.markFetching(closure_1_0);
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_1();
             return obj1;
           }
         } else if (1 === tmp7) {
           c3 = 0;
           closure_1 = closure_2;
-          closure_2.markFailed(asyncGeneratorStep);
+          closure_2.markFailed(closure_0);
           throw closure_1;
         } else if (arg0 === 1) {
           c5 = 3;
@@ -141,12 +141,12 @@ prototype["try"] = function try(nextWantsResult, arg1) {
           obj2[0] = arg1;
           return obj2;
         } else {
-          asyncGeneratorStep = arg1;
-          closure_2.markCompleted(asyncGeneratorStep);
+          closure_0 = arg1;
+          closure_2.markCompleted(closure_0);
           c3 = 0;
           c5 = 3;
           obj = { value: null, done: true };
-          obj[0] = asyncGeneratorStep;
+          obj[0] = closure_0;
           return obj;
         }
       } catch (tmp25) {

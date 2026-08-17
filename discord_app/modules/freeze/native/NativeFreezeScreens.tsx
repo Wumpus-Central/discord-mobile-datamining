@@ -1,17 +1,15 @@
 // discord_app/modules/freeze/native/NativeFreezeScreens.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ screens: { flex: 1, overflow: "hidden" } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
+const result = require("set").fileFinishedImporting("modules/freeze/native/NativeFreezeScreens.tsx");
 
 export const NativeFreezeScreens = function NativeFreezeScreens(detachInactiveScreens) {
-  let activeIndex;
-  let children;
   ({ children, activeIndex } = detachInactiveScreens);
   let flag = detachInactiveScreens.detachInactiveScreens;
   if (flag === undefined) {

@@ -1,31 +1,21 @@
 // discord_app/modules/activities/handleJoinEmbeddedActivity.tsx
-import participantFromServer from "participantFromServer";
-import addApplication from "addApplication";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_8 from "participantFromServer";
-import { SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES as closure_9 } from "items3";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "participantFromServer" /* 1390 */;
+import { SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES as closure_9 } from "items3" /* 4481 */;
 import { shouldOpenActivityInPopoutWindow } from "ActivityPopoutUtils.native.tsx";
 
 const require = arg1;
 function _handleJoinEmbeddedActivityInternal() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
-      let c9;
       if (application === 2) {
         application = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -56,7 +46,7 @@ function _handleJoinEmbeddedActivityInternal() {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let dependencyMap = tmp2;
+                dependencyMap = tmp2;
                 let callback2 = tmp5;
                 let callback;
                 callback2 = undefined;
@@ -70,15 +60,15 @@ function _handleJoinEmbeddedActivityInternal() {
                 c9 = undefined;
                 throwTypeErrorResult = callback;
                 ({ applicationId: c0, activityChannelId: c1, locationObject: c2, analyticsLocations: c3, componentId: c4, sectionName: c5, source: c6, inviterUserId: c7, customId: c8, referrerId: c9 } = callback);
-                let closure_10;
+                closure_10 = undefined;
                 let _private;
                 let guildId;
                 let currentUser2;
                 let currentEmbeddedActivity2;
                 let application2;
-                let closure_16;
-                let closure_17;
-                let closure_18;
+                closure_16 = undefined;
+                closure_17 = undefined;
+                closure_18 = undefined;
                 c3 = 1;
                 application = 1;
                 return { value: "ct", done: true };
@@ -89,7 +79,7 @@ function _handleJoinEmbeddedActivityInternal() {
                 throw arg1;
               } else if (arg0 === 2) {
                 application = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -304,7 +294,7 @@ function _handleJoinEmbeddedActivityInternal() {
     iter.next();
     return iter;
   });
-  const _handleJoinEmbeddedActivityInternal = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -313,7 +303,7 @@ function _handleJoinEmbeddedActivityInternal() {
   }
   return applyArgumentsResult;
 }
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/activities/handleJoinEmbeddedActivity.tsx");
+let result = require("set").fileFinishedImporting("modules/activities/handleJoinEmbeddedActivity.tsx");
 
 export default function handleJoinEmbeddedActivity(arg0) {
   const _require = arg0;

@@ -1,29 +1,20 @@
 // discord_app/modules/safety_flows/native/SafetyFlowTaskScreen.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ModalContent } from "../../../design/components/Modal/native/ModalContent.native.tsx";
-import { ModalScreen } from "../../../design/components/Modal/native/ModalScreen.native.tsx";
-import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { LogOutDisclaimer } from "LogOutDisclaimer.tsx";
+import noopAll from "noop" /* 19 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import ModalScreen from "ModalScreen" /* 5440 */;
+import ModalContent from "ModalContent" /* 5445 */;
+import LogOutDisclaimerDefault from "LogOutDisclaimer" /* 17091 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ header: { textAlign: "center" } });
-const result = require("createCacheKey").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/SafetyFlowTaskScreen.tsx");
 
 export default function SafetyFlowTaskScreen(action) {
-  let ImageComponent;
-  let children;
-  let footer;
-  let onAction;
-  let submitting;
-  let subtitle;
-  let subtitleColor;
-  let withLogout;
   ({ ImageComponent, subtitle, subtitleColor } = action);
   if (subtitleColor === undefined) {
     subtitleColor = "text-strong";
@@ -59,12 +50,12 @@ export default function SafetyFlowTaskScreen(action) {
   children = [closure_4(ModalContent.ModalContent, obj), ];
   if (undefined === footer) {
     if (withLogout) {
-      withLogout = tmp7(LogOutDisclaimer, {});
+      withLogout = tmp7(LogOutDisclaimerDefault, {});
     }
     const items3 = [withLogout, ];
     tmp7Result = null != action;
     if (tmp7Result) {
-      const obj1 = { variant: "primary", text: null, onPress: null, loading: null };
+      obj1 = { variant: "primary", text: null, onPress: null, loading: null };
       obj1[1] = action;
       obj1[2] = onAction;
       obj1[3] = submitting;

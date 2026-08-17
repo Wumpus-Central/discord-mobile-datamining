@@ -1,15 +1,13 @@
 // discord_app/modules/markup/native/MarkupMessagePreviewReactRules.tsx
-import "noop";
-import { MUTED_OPACITY_CONTENT } from "hairlineWidth";
-import jsxProd from "jsxProd";
-import { ICON_SIZE } from "../../../design/components/Icon/IconSize.tsx";
-import { getLayoutStyles } from "../../main_tabs_v2/native/shared_components/guild_channels/layouts/ChannelListLayout.tsx";
-import { parseLink } from "../MarkupRules.tsx";
-import { smartOutput } from "../MarkupRulesUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import parseLinkDefault from "parseLink" /* 6809 */;
+import ICON_SIZE from "ICON_SIZE" /* 7187 */;
+import smartOutput from "smartOutput" /* 8308 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import { MUTED_OPACITY_CONTENT } from "hairlineWidth" /* 10055 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function defaultReactFn(content, output, state) {
   if (typeof content.content === "string") {
     content = content.content;
@@ -27,35 +25,35 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj = { [closure_0(closure_2[7]).AST_KEY.TEXT]: obj };
   obj = { react: defaultReactFn };
   obj = {};
-  const merged = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.STRIKETHROUGH]);
+  const merged = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.STRIKETHROUGH]);
   obj.react = defaultReactFn;
   obj[num(4765).AST_KEY.STRIKETHROUGH] = obj;
-  let obj1 = {};
-  const merged1 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.UNDERLINE]);
+  obj1 = {};
+  const merged1 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.UNDERLINE]);
   obj1.react = defaultReactFn;
   obj[num(4765).AST_KEY.UNDERLINE] = obj1;
   let obj2 = {};
-  const merged2 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.ITALICS]);
+  const merged2 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.ITALICS]);
   obj2.react = defaultReactFn;
   obj[num(4765).AST_KEY.ITALICS] = obj2;
   const obj3 = {};
-  const merged3 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.STRONG]);
+  const merged3 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.STRONG]);
   obj3.react = defaultReactFn;
   obj[num(4765).AST_KEY.STRONG] = obj3;
   const obj4 = {};
-  const merged4 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.LINK]);
+  const merged4 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.LINK]);
   obj4.react = defaultReactFn;
   obj[num(4765).AST_KEY.LINK] = obj4;
   const obj5 = {};
-  const merged5 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.URL]);
+  const merged5 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.URL]);
   obj5.react = defaultReactFn;
   obj[num(4765).AST_KEY.URL] = obj5;
   const obj6 = {};
-  const merged6 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.AUTOLINK]);
+  const merged6 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.AUTOLINK]);
   obj6.react = defaultReactFn;
   obj[num(4765).AST_KEY.AUTOLINK] = obj6;
   const obj7 = {};
-  const merged7 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.LINE_BREAK]);
+  const merged7 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.LINE_BREAK]);
   obj7.react = function react() {
     return "\n";
   };
@@ -69,11 +67,11 @@ function createMessagePreviewReactRules(customEmojiSize) {
     }
   };
   const obj8 = {};
-  const merged8 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.BLOCK_QUOTE]);
+  const merged8 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.BLOCK_QUOTE]);
   obj8.react = defaultReactFn;
   obj[num(4765).AST_KEY.BLOCK_QUOTE] = obj8;
   const obj9 = {};
-  const merged9 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.PARAGRAPH]);
+  const merged9 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.PARAGRAPH]);
   obj9.order = 600;
   obj9.react = defaultReactFn;
   obj[num(4765).AST_KEY.PARAGRAPH] = obj9;
@@ -85,10 +83,10 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4765).AST_KEY.CUSTOM_EMOJI] = {
     react(src, arg1, muted) {
       if (src.src) {
-        let obj = num(outer1_2[5]);
+        let obj = num(closure_1_2[5]);
         const sizeStyle = obj.makeSizeStyle(num);
         const items = [sizeStyle, { resizeMode: "contain" }, , ];
-        let obj1 = num(outer1_2[11]);
+        obj1 = num(closure_1_2[11]);
         let isAndroidResult = obj1.isAndroid();
         if (isAndroidResult) {
           obj = { transform: null };
@@ -100,7 +98,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
         muted = muted.muted;
         if (muted) {
           obj = { opacity: null };
-          obj[0] = outer1_3;
+          obj[0] = closure_1_3;
           muted = obj;
         }
         obj1 = { style: null, source: null };
@@ -109,7 +107,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
         const obj2 = { uri: null };
         obj2[0] = src.src;
         obj1[1] = obj2;
-        return outer1_4(outer1_1(outer1_2[10]), obj1, muted.key);
+        return closure_1_4(closure_1_1(closure_1_2[10]), obj1, muted.key);
       } else {
         return src.alt;
       }
@@ -134,11 +132,11 @@ function createMessagePreviewReactRules(customEmojiSize) {
     }
   };
   const obj10 = {};
-  const merged10 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.INLINE_CODE]);
+  const merged10 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.INLINE_CODE]);
   obj10.react = defaultReactFn;
   obj[num(4765).AST_KEY.INLINE_CODE] = obj10;
   const obj11 = {};
-  const merged11 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.CODE_BLOCK]);
+  const merged11 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.CODE_BLOCK]);
   obj11.parse = function parse(arg0, arg1, arg2) {
     const parsed = callback(6809).RULES[num(undefined, 4765).AST_KEY.CODE_BLOCK].parse(arg0, arg1, arg2);
     if ("ansi" === str.toLowerCase()) {
@@ -150,15 +148,15 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj11.react = defaultReactFn;
   obj[num(4765).AST_KEY.CODE_BLOCK] = obj11;
   const obj12 = {};
-  const merged12 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.MENTION]);
+  const merged12 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.MENTION]);
   obj12.react = defaultReactFn;
   obj[num(4765).AST_KEY.MENTION] = obj12;
   const obj13 = {};
-  const merged13 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.CHANNEL_MENTION]);
+  const merged13 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.CHANNEL_MENTION]);
   obj13.react = num(10063).inlineChannelMentionReact;
   obj[num(4765).AST_KEY.CHANNEL_MENTION] = obj13;
   const obj14 = {};
-  const merged14 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.ATTACHMENT_LINK]);
+  const merged14 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.ATTACHMENT_LINK]);
   obj14.react = function react(node, output, key) {
     const obj = { children: null };
     const items = ["\u{1F4CE} ", num(8308).smartOutput(node, output, key)];
@@ -167,7 +165,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   };
   obj[num(4765).AST_KEY.ATTACHMENT_LINK] = obj14;
   const obj15 = {};
-  const merged15 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.SOUNDBOARD]);
+  const merged15 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.SOUNDBOARD]);
   obj15.react = defaultReactFn;
   obj[num(4765).AST_KEY.SOUNDBOARD] = obj15;
   obj[num(4765).AST_KEY.GUILD] = { react: defaultReactFn };
@@ -176,7 +174,7 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj16[0] = obj19.createInlineChannelReact("\u{1F4AC}");
   obj[num(4765).AST_KEY.CHANNEL] = obj16;
   const obj17 = {};
-  const merged16 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.COMMAND_MENTION]);
+  const merged16 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.COMMAND_MENTION]);
   obj17.react = function react(node, output, key) {
     const obj = { children: null };
     const items = ["/", num(8308).smartOutput(node, output, key)];
@@ -185,13 +183,13 @@ function createMessagePreviewReactRules(customEmojiSize) {
   };
   obj[num(4765).AST_KEY.COMMAND_MENTION] = obj17;
   const obj18 = {};
-  const merged17 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.TIMESTAMP]);
+  const merged17 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.TIMESTAMP]);
   obj18.react = function react(node, arg1, key) {
     return callback2(callback(10064), { node, style: null }, key.key);
   };
   obj[num(4765).AST_KEY.TIMESTAMP] = obj18;
   obj19 = {};
-  const merged18 = Object.assign(parseLink.RULES[num(undefined, 4765).AST_KEY.LIST]);
+  const merged18 = Object.assign(parseLinkDefault.RULES[num(undefined, 4765).AST_KEY.LIST]);
   obj19.react = function react(arg0, output, state) {
     const first = arg0.items[0];
     let first1 = first;
@@ -210,9 +208,10 @@ function createMessagePreviewReactRules(customEmojiSize) {
   obj[num(4765).AST_KEY.SUBTEXT] = { react: defaultReactFn };
   return obj;
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const regExp = new RegExp(require("regExp").ANSI_CONTROL_SEQUENCE_RE, "g");
-const result = require("jsxProd").fileFinishedImporting("modules/markup/native/MarkupMessagePreviewReactRules.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/native/MarkupMessagePreviewReactRules.tsx");
 
 export default function createChannelListMessagePreviewReactRules(layout) {
   let obj = getLayoutStyles;

@@ -1,11 +1,13 @@
 // discord_app/modules/stickers/StickersTypes.tsx
-import { TypeTag } from "TypeTag";
-import { MetaStickerType } from "../../../discord_common/js/packages/design/components/Stickers/StickerTypes.tsx";
+import set from "set" /* 2 */;
+import TypeTag2 from "TypeTag" /* 1432 */;
+import MetaStickerType from "MetaStickerType" /* 4965 */;
 
-const result = require("set").fileFinishedImporting("modules/stickers/StickersTypes.tsx");
+const TypeTag = TypeTag2.TypeTag;
+const result = set.fileFinishedImporting("modules/stickers/StickersTypes.tsx");
 
-export const StickerFormat = require("MetaStickerType").StickerFormat;
-export const MetaStickerType = require("MetaStickerType").MetaStickerType;
+export const StickerFormat = MetaStickerType.StickerFormat;
+export const MetaStickerType = MetaStickerType.MetaStickerType;
 export const StickerExtensions = { PNG: "png", APNG: "png", LOTTIE: "json", WEBP: "webp", GIF: "gif" };
 export const isAnimatedSticker = function isAnimatedSticker(arg0) {
   return arg0 !== MetaStickerType.StickerFormat.PNG;

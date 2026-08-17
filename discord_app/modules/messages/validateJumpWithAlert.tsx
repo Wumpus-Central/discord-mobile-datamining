@@ -1,14 +1,14 @@
 // discord_app/modules/messages/validateJumpWithAlert.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { Permissions } from "ME";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isSpamSupported } from "isSpam.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setDefault from "set" /* 4827 */;
+import isSpamSupported from "isSpamSupported" /* 5231 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
 
 export default function validateJumpWithAlert(author) {
   let obj = blockedForMessage;
@@ -22,10 +22,10 @@ export default function validateJumpWithAlert(author) {
     obj[1] = intl12.formatToPlainString(getSystemLocale.t.dTNNgr, obj);
     const intl13 = getSystemLocale.intl;
     obj[2] = intl13.string(getSystemLocale.t.BddRzS);
-    set.show(obj);
+    setDefault.show(obj);
     return false;
   } else if (obj.isIgnoredForMessage(author)) {
-    let obj1 = { title: null, body: null, confirmText: null };
+    obj1 = { title: null, body: null, confirmText: null };
     const intl8 = getSystemLocale.intl;
     obj1[0] = intl8.string(getSystemLocale.t.XyWoKV);
     const intl9 = getSystemLocale.intl;
@@ -34,7 +34,7 @@ export default function validateJumpWithAlert(author) {
     obj1[1] = intl9.formatToPlainString(getSystemLocale.t["8t8doK"], obj2);
     const intl10 = getSystemLocale.intl;
     obj1[2] = intl10.string(getSystemLocale.t.BddRzS);
-    set.show(obj1);
+    setDefault.show(obj1);
     return false;
   } else {
     obj1 = isSpamSupported;
@@ -45,8 +45,8 @@ export default function validateJumpWithAlert(author) {
         isPrivateResult = channel.isPrivate();
       }
       if (!isPrivateResult) {
-        if (!getUncachedChannelPermissions.can(Permissions.MODERATE_MEMBERS, channel)) {
-          let obj3 = set;
+        if (!closure_4.can(Permissions.MODERATE_MEMBERS, channel)) {
+          let obj3 = setDefault;
           obj3 = { title: null, body: null, confirmText: null };
           const intl = tmp(1236).intl;
           obj3[0] = intl.string(tmp(1236).t["6vJKFk"]);
@@ -60,7 +60,7 @@ export default function validateJumpWithAlert(author) {
         }
         return false;
       }
-      let obj6 = set;
+      let obj6 = setDefault;
       const obj5 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl4 = tmp(1236).intl;
       obj5[0] = intl4.string(tmp(1236).t["cZcG+P"]);

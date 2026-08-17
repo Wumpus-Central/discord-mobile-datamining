@@ -1,15 +1,15 @@
 // discord_app/modules/game_console/native/beginConsoleTransfer.tsx
-import TransferFooter from "TransferFooter";
-import set from "disconnectRemote";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 function _beginConsoleTransfer() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -37,18 +37,18 @@ function _beginConsoleTransfer() {
               obj[0] = arg1;
               return obj;
             } else {
-              let TransferFooter = tmp5;
-              let closure_2 = tmp2;
+              closure_3 = tmp5;
+              closure_2 = tmp2;
               closure_2 = undefined;
-              TransferFooter = undefined;
+              closure_3 = undefined;
               if (set.has(callback)) {
                 set = 1;
                 c5 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = lib(outer1_2[2]).fetchDevices(tmp44);
+                obj1 = { value: null, done: false };
+                obj1[0] = lib(closure_1_2[2]).fetchDevices(tmp44);
                 return obj1;
               } else {
-                callback(outer1_2[8])(tmp43);
+                callback(closure_1_2[8])(tmp43);
               }
               tmp43 = lib;
               tmp44 = callback;
@@ -77,12 +77,12 @@ function _beginConsoleTransfer() {
                 obj4[0] = obj3.openLazy(lib(closure_2[6])(closure_2[5], closure_2.paths), combined, obj3);
                 return obj4;
               } else {
-                TransferFooter = closure_2[0];
+                closure_3 = closure_2[0];
                 obj1 = lib(closure_2[3]);
                 set = 2;
                 c5 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = obj1.transferToPlaystationWithAlert(callback, TransferFooter, lib);
+                obj5[0] = obj1.transferToPlaystationWithAlert(callback, closure_3, lib);
                 return obj5;
               }
             }
@@ -104,7 +104,7 @@ function _beginConsoleTransfer() {
       }
     })();
   });
-  const _beginConsoleTransfer = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

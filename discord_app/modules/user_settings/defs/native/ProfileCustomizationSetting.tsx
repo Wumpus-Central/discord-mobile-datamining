@@ -1,6 +1,8 @@
 // discord_app/modules/user_settings/defs/native/ProfileCustomizationSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createToggle from "createToggle" /* 10669 */;
 import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCustomizationSettingScreen.tsx";
 
 obj = {
@@ -13,12 +15,12 @@ obj = {
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.PROFILE_CUSTOMIZATION,
+  route: ME.UserSettingsSections.PROFILE_CUSTOMIZATION,
   getComponent() {
     return ProfileCustomizationSubsection.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ProfileCustomizationSetting.tsx");
 
 export default route;

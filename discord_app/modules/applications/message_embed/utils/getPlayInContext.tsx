@@ -1,22 +1,22 @@
 // discord_app/modules/applications/message_embed/utils/getPlayInContext.tsx
-import participantFromServer from "participantFromServer";
-import handleConnectionOpen from "handleConnectionOpen";
+import closure_2 from "participantFromServer" /* 1390 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
 import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/getPlayInContext.tsx");
 
 export const usePlayInContext = function usePlayInContext(arg0) {
   const _require = arg0;
   let obj = _require(stateFromStores[2]);
-  const items = [handleConnectionOpen];
+  const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => channelId.getChannelId());
-  const items1 = [participantFromServer];
+  const items1 = [closure_2];
   const stateFromStores1 = _require(stateFromStores[2]).useStateFromStores(items1, () => {
     if (null == stateFromStores) {
       return null;
     } else {
-      const embeddedActivitiesForChannel = outer1_2.getEmbeddedActivitiesForChannel(tmp);
+      const embeddedActivitiesForChannel = closure_1_2.getEmbeddedActivitiesForChannel(tmp);
       const found = embeddedActivitiesForChannel.filter((applicationId) => applicationId.applicationId === closure_0);
       let first;
       if (found.length > 0) {
@@ -34,7 +34,7 @@ export const usePlayInContext = function usePlayInContext(arg0) {
     _location = stateFromStores1.location;
   }
   let tmpResult = tmp(tmp2[2]);
-  const items2 = [participantFromServer];
+  const items2 = [closure_2];
   const stateFromStores2 = tmpResult.useStateFromStores(items2, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
   tmpResult = tmp(tmp2[3]);
   const embeddedActivityLaunchability = tmpResult.useEmbeddedActivityLaunchability(stateFromStores);

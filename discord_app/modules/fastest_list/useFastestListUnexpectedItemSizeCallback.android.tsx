@@ -1,11 +1,11 @@
 // discord_app/modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/fastest_list/useFastestListUnexpectedItemSizeCallback.android.tsx");
 
 export default function useFastestListUnexpectedItemSizeCallback(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const items = [arg0];
   return React.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
@@ -67,7 +67,7 @@ export default function useFastestListUnexpectedItemSizeCallback(arg0) {
       obj[2] = str;
       obj[3] = joined;
       obj[4] = ref.current.listId;
-      ref(outer1_1[1]).logFastestListError("Expected item size mismatch.", obj);
+      ref(closure_1_1[1]).logFastestListError("Expected item size mismatch.", obj);
     }
     let type1;
     if (type != null) {

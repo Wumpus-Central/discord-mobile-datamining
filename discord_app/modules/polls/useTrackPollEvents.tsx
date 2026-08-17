@@ -1,19 +1,19 @@
 // discord_app/modules/polls/useTrackPollEvents.tsx
-import noop from "noop";
-import { AnalyticEvents } from "ME";
+import closure_3 from "noop" /* 19 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/useTrackPollEvents.tsx");
 
 export const useTrackPollCreationEvents = function useTrackPollCreationEvents(answers, allowMultiSelect) {
-  let closure_0 = answers;
-  let closure_1 = allowMultiSelect;
+  closure_0 = answers;
+  closure_1 = allowMultiSelect;
   const items = [answers, allowMultiSelect];
   return {
     trackPollCreationCancelled: React.useCallback(() => {
-      const answers = 0;
-      let c1 = 0;
-      let c2 = 0;
+      answers = 0;
+      c1 = 0;
+      c2 = 0;
       const item = answers.forEach((image) => {
         image = image.image;
         if (null != image) {
@@ -26,9 +26,9 @@ export const useTrackPollCreationEvents = function useTrackPollCreationEvents(an
           }
         }
       });
-      let obj = allowMultiSelect(outer1_2[2]);
-      obj = { answers_count: answers.length, attachments_count: answers, emojis_count: c1, stickers_count: c2, allow_multiselect: c1, layout_type: answers(outer1_2[3]).PollLayoutTypes.DEFAULT };
-      obj.trackWithMetadata(outer1_4.POLL_CREATION_CANCELLED, obj);
+      let obj = allowMultiSelect(closure_1_2[2]);
+      obj = { answers_count: answers.length, attachments_count: answers, emojis_count: c1, stickers_count: c2, allow_multiselect: c1, layout_type: answers(closure_1_2[3]).PollLayoutTypes.DEFAULT };
+      obj.trackWithMetadata(closure_1_4.POLL_CREATION_CANCELLED, obj);
     }, items)
   };
 };

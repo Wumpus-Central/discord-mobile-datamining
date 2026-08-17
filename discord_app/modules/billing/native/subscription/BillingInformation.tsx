@@ -1,11 +1,11 @@
 // discord_app/modules/billing/native/subscription/BillingInformation.tsx
-import serializePurchaseResponse from "serializePurchaseResponse";
-import { SubscriptionStatusTypes } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { SubscriptionStatusTypes } from "ME" /* 676 */;
 import { PlatformTypes } from "../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
 
 const require = arg1;
-const result = require("getPremiumPlanItem").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/native/subscription/BillingInformation.tsx");
 
 export const getBillingInformationStringNative = function getBillingInformationStringNative(subscription, first, first1, flag, fractionalPremiumInfo) {
   let tmp = first1;
@@ -53,7 +53,7 @@ export const getBillingInformationStringNative = function getBillingInformationS
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = v0(table[5]);
+              obj1 = v0(table[5]);
               table = 1;
               v0 = 1;
               obj1 = { value: null, done: false };

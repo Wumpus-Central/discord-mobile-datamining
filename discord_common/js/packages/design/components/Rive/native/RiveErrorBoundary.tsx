@@ -1,6 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/RiveErrorBoundary.tsx
-import { Component } from "noop";
+import noopAll from "noop" /* 19 */;
 
+const Component = noopAll.Component;
 class RiveErrorBoundary extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

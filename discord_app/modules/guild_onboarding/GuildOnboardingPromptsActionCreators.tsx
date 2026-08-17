@@ -1,39 +1,36 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx
-import serverPromptToClientPrompt from "serverPromptToClientPrompt";
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleUpdate from "handleUpdate";
-import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt";
-import ME from "ME";
-import { GuildMemberFlags } from "GuildMemberFlags";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "handleUpdate" /* 6788 */;
+import { serverApiResponseToClientState as closure_8 } from "serverPromptToClientPrompt" /* 5286 */;
+import ME from "ME" /* 676 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
 
-let c10;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function fetchOnboardingPrompts(guildId) {
   const _require = guildId;
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_START", guildId };
   obj.dispatch(obj);
   const HTTP = _sendRequest.HTTP;
   obj = { url: closure_10.GUILD_ONBOARDING(guildId), rejectWithError: false };
   const value = HTTP.get(obj);
   return value.then((body) => {
-    let c0;
-    const tmp = outer1_8(body.body);
-    c0 = tmp;
-    let obj = outer1_1(outer1_2[10]);
-    obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS", guildId: c0 };
+    closure_0 = undefined;
+    const tmp = closure_1_8(body.body);
+    closure_0 = tmp;
+    let obj = closure_1_1(closure_1_2[10]);
+    obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS", guildId: closure_0 };
     const merged = Object.assign(tmp);
-    return obj.dispatch(obj).then(() => _undefined.prompts);
+    return obj.dispatch(obj).then(() => prompts.prompts);
   }, (arg0) => {
-    let obj = outer1_1(outer1_2[10]);
+    let obj = closure_1_1(closure_1_2[10]);
     obj = { type: "GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE", guildId: closure_0 };
     obj.dispatch(obj);
     return arg0;
@@ -42,9 +39,9 @@ function fetchOnboardingPrompts(guildId) {
 function _maybeFetchOnboardingPrompts() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0) {
       if (member === 2) {
         member = 3;
@@ -73,8 +70,8 @@ function _maybeFetchOnboardingPrompts() {
               obj[0] = arg1;
               return obj;
             } else {
-              let serverPromptToClientPrompt = tmp2;
-              let closure_2 = tmp3;
+              closure_3 = tmp2;
+              closure_2 = tmp3;
               num2 = undefined;
               closure_2 = undefined;
               id = id.getId();
@@ -84,21 +81,21 @@ function _maybeFetchOnboardingPrompts() {
                 flags = member.flags;
               }
               num2 = flags;
-              const hasFlagResult = callback(outer1_2[12]).hasFlag(num2, outer1_12.COMPLETED_ONBOARDING);
+              const hasFlagResult = callback(closure_1_2[12]).hasFlag(num2, closure_1_12.COMPLETED_ONBOARDING);
               num2 = hasFlagResult;
-              const guild = outer1_6.getGuild(tmp49);
+              const guild = closure_1_6.getGuild(tmp49);
               if (null != guild) {
                 const features = guild.features;
-                if (features.has(outer1_11.GUILD_ONBOARDING)) {
-                  const onboardingPrompts = outer1_7.getOnboardingPrompts(tmp49);
+                if (features.has(closure_1_11.GUILD_ONBOARDING)) {
+                  const onboardingPrompts = closure_1_7.getOnboardingPrompts(tmp49);
                   if (!shouldFetchPromptsResult) {
                     if (onboardingPrompts.length > num2) {
                       if (onboardingPrompts.every((inOnboarding) => !inOnboarding.inOnboarding)) {
-                        outer1_17(tmp49);
+                        closure_1_17(tmp49);
                         const resolved = Promise.resolve();
                       } else {
                         if (!hasFlagResult) {
-                          outer1_15(tmp49);
+                          closure_1_15(tmp49);
                         }
                         const resolved1 = Promise.resolve();
                       }
@@ -107,8 +104,8 @@ function _maybeFetchOnboardingPrompts() {
                   }
                   id = 1;
                   member = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = outer1_13(tmp49);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_13(tmp49);
                   return obj1;
                 }
               }
@@ -147,7 +144,7 @@ function _maybeFetchOnboardingPrompts() {
       }
     })();
   });
-  const _maybeFetchOnboardingPrompts = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -157,12 +154,12 @@ function _maybeFetchOnboardingPrompts() {
   return applyArgumentsResult;
 }
 function startOnboarding(guildId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ONBOARDING_START", guildId };
   obj.dispatch(obj);
 }
 function _trackOnboardingDirectJoin(guildId) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
@@ -170,7 +167,7 @@ function _trackOnboardingDirectJoin(guildId) {
   obj.track(constants.GUILD_ONBOARDING_STEP_VIEWED, obj);
   const obj3 = collectGuildAnalyticsMetadata;
   obj = {};
-  const obj4 = expandEventProperties;
+  const obj4 = expandEventPropertiesDefault;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.step = c16;
   obj.skipped = false;
@@ -180,10 +177,10 @@ function _trackOnboardingDirectJoin(guildId) {
 }
 ({ AnalyticEvents: c9, Endpoints: c10, GuildFeatures: unpackModuleId } = ME);
 let c16 = -2;
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsActionCreators.tsx");
 
 export const loadOnboardingPrompts = function loadOnboardingPrompts(guildId) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   obj.has_new_prompts = false;

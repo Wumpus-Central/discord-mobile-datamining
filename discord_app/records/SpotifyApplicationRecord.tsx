@@ -1,15 +1,16 @@
 // discord_app/records/SpotifyApplicationRecord.tsx
-import "createExecutable";
-import importDefaultResult1 from "getPlatformUserUrl";
+import createExecutableDefault from "createExecutable" /* 4479 */;
+import importDefaultResult1 from "getPlatformUserUrl" /* 5097 */;
 
+createExecutableDefault;
 const spotify = "spotify";
-const value = require("getPlatformUserUrl").get("spotify");
+const value = importDefaultResult1.get("spotify");
 class SpotifyApplicationRecord extends tmp4 {
   constructor() {
     tmp = new tmp({}, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
     tmp.id = spotify;
-    tmp.name = get.name;
+    tmp.name = closure_1.name;
     return tmp;
   }
 }

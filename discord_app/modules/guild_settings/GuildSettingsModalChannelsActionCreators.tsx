@@ -1,20 +1,22 @@
 // discord_app/modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx
-import { dispatcher } from "../../Dispatcher.tsx";
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx");
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+
+const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsModalChannelsActionCreators.tsx");
 
 export default {
   terminate() {
-    dispatcher.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE" });
+    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_TERMINATE" });
   },
   startReordering() {
     const items = [...arguments];
-    dispatcher.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER", sortingType: items });
+    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_START_REORDER", sortingType: items });
   },
   stopReordering() {
-    dispatcher.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER" });
+    dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_MODAL_CHANNELS_STOP_REORDER" });
   },
   localChannelUpdate(found) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "GUILD_SETTINGS_MODAL_LOCAL_SORT_CHANGE", updates: found };
     obj.dispatch(obj);
   }

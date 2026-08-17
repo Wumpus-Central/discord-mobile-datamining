@@ -1,14 +1,12 @@
 // discord_app/records/MessageRecord.tsx
-import "toJS";
-import ME from "ME";
-import { ApplicationIntegrationType } from "../../discord_common/js/shared/shared-constants/ApplicationIntegrationType.tsx";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isForwardMessage } from "../modules/forwarding/isForwardMessage.tsx";
+import hasFlag from "hasFlag" /* 1403 */;
+import toJSDefault from "toJS" /* 1931 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 8770 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+toJSDefault;
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
 class MinimalMessageRecord extends tmp2 {
   constructor(arg0) {
@@ -177,20 +175,20 @@ prototype["getChannelId"] = function getChannelId() {
   return this.channel_id;
 };
 prototype["getReaction"] = function getReaction(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const reactions = this.reactions;
-  return reactions.find((emoji) => callback(outer1_2[3]).emojiEquals(emoji.emoji, callback));
+  return reactions.find((emoji) => callback(closure_1_2[3]).emojiEquals(emoji.emoji, callback));
 };
 prototype["getContentMessage"] = function getContentMessage() {
   let self = this;
-  if (isForwardMessage(this)) {
+  if (isForwardMessageDefault(this)) {
     self = this.messageSnapshots[0].message;
   }
   return self;
 };
 prototype["userHasReactedWithEmoji"] = function userHasReactedWithEmoji(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const reactions = this.reactions;
   return reactions.some((emoji) => {
     if (obj.emojiEquals(emoji.emoji, callback)) {
@@ -207,7 +205,7 @@ prototype["userHasReactedWithEmoji"] = function userHasReactedWithEmoji(arg0, ar
       }
       return me;
     }
-    obj = callback(outer1_2[3]);
+    obj = callback(closure_1_2[3]);
   });
 };
 prototype["addReaction"] = function addReaction(arg0) {
@@ -222,8 +220,8 @@ prototype["addReaction"] = function addReaction(arg0) {
   }
   let colors;
   let NORMAL;
-  let c4;
-  let c5;
+  closure_4 = undefined;
+  c5 = undefined;
   colors = obj.colors;
   if (undefined === colors) {
     colors = [];
@@ -234,15 +232,15 @@ prototype["addReaction"] = function addReaction(arg0) {
   }
   const isDMChannel = obj.isDMChannel;
   const self = this;
-  c4 = undefined !== isDMChannel && isDMChannel;
+  closure_4 = undefined !== isDMChannel && isDMChannel;
   c5 = -1;
   const reactions = this.reactions;
   const mapped = reactions.map((emoji) => {
     let obj = callback(colors[3]);
     let tmp3 = emoji;
     if (obj.emojiEquals(emoji.emoji, callback)) {
-      let closure_5 = arg1;
-      if (c4) {
+      closure_5 = arg1;
+      if (closure_4) {
         if (!flag) {
           let num = 0;
           if (emoji.me) {
@@ -308,7 +306,7 @@ prototype["addReaction"] = function addReaction(arg0) {
         } else {
           sum1 = num7;
         }
-        const obj1 = {};
+        obj1 = {};
         const merged2 = Object.assign(emoji);
         const obj2 = {};
         const merged3 = Object.assign(emoji.count_details);
@@ -355,7 +353,7 @@ prototype["addReaction"] = function addReaction(arg0) {
       obj[7] = [];
       mapped.push(obj);
     } else {
-      let obj1 = { emoji: null, me: null, me_burst: false, count: 1, count_details: null, burst_count: 0, burst_colors: null };
+      obj1 = { emoji: null, me: null, me_burst: false, count: 1, count_details: null, burst_count: 0, burst_colors: null };
       obj1[0] = arg0;
       obj1[1] = flag;
       obj1[4] = { burst: 0, normal: 1 };
@@ -368,13 +366,10 @@ prototype["addReaction"] = function addReaction(arg0) {
   return self.set("reactions", mapped);
 };
 prototype["addReactionBatch"] = function addReactionBatch(reactions, id) {
-  let closure_0 = id;
+  closure_0 = id;
   return reactions.reduce((arg0, arg1) => {
-    let closure_0;
-    let closure_1;
-    let users;
     ({ users, emoji: closure_0, reactionType: closure_1 } = arg1);
-    return users.reduce((addReaction) => addReaction.addReaction(closure_0, arg1 === outer1_0, { reactionType: closure_1 }), arg0);
+    return users.reduce((addReaction) => addReaction.addReaction(closure_0, arg1 === closure_1_0, { reactionType: closure_1 }), arg0);
   }, this);
 };
 prototype["removeReaction"] = function removeReaction(arg0) {
@@ -388,7 +383,7 @@ prototype["removeReaction"] = function removeReaction(arg0) {
     NORMAL = _require(NORMAL[5]).ReactionTypes.NORMAL;
   }
   const self = this;
-  let c3 = -1;
+  c3 = -1;
   const reactions = this.reactions;
   const mapped = reactions.map((emoji) => {
     let merged1 = emoji;
@@ -413,8 +408,8 @@ prototype["removeReaction"] = function removeReaction(arg0) {
           merged1 = Object.assign(merged1.count_details);
           obj.burst = burst_count;
           obj.count_details = obj;
-          let obj1 = obj;
-          let closure_3 = arg1;
+          obj1 = obj;
+          closure_3 = arg1;
         }
         burst_count = merged1.burst_count - 1;
       } else if (tmp4 !== tmp2(tmp3[5]).ReactionTypes.VOTE) {
@@ -513,11 +508,9 @@ prototype["removeReaction"] = function removeReaction(arg0) {
   return self.set("reactions", mapped);
 };
 prototype["removeReactionsForEmoji"] = function removeReactionsForEmoji(emoji) {
-  let reactions;
-  let set;
-  let closure_0 = emoji;
+  closure_0 = emoji;
   ({ reactions, set } = this);
-  return set("reactions", reactions.filter((emoji) => !emoji(outer1_2[3]).emojiEquals(emoji.emoji, emoji)));
+  return set("reactions", reactions.filter((emoji) => !emoji(closure_1_2[3]).emojiEquals(emoji.emoji, emoji)));
 };
 prototype["isSystemDM"] = function isSystemDM() {
   const author = this.author;
@@ -579,7 +572,7 @@ prototype["isFirstMessageInForumPost"] = function isFirstMessageInForumPost(chan
   }
   return isForumPostResult;
 };
-const result = require("hasFlag").fileFinishedImporting("records/MessageRecord.tsx");
+const result = require("set").fileFinishedImporting("records/MessageRecord.tsx");
 const prototype2 = function MessageSnapshotRecord(message) {
   const tmp3 = new prototype2(tmp2, new.target, new.target, tmp);
   // ThrowIfThisInitialized (0x7c)

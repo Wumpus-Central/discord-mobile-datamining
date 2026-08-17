@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesCategoriesRecord.tsx
-import fromServer from "fromServer";
-import closure_1 from "fromServer";
+import closure_0 from "fromServer" /* 5327 */;
+import closure_1 from "fromServer" /* 5302 */;
 
 let prototype;
 prototype = function CollectiblesCategoriesRecord(categories) {
@@ -8,7 +8,7 @@ prototype = function CollectiblesCategoriesRecord(categories) {
   categories = categories.categories;
   obj.categories = categories.map((arg0) => closure_1.fromServer(arg0));
   const collections = categories.collections;
-  obj.collections = collections.map((arg0) => fromServer.fromServer(arg0));
+  obj.collections = collections.map((arg0) => closure_0.fromServer(arg0));
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(categories) {
@@ -19,7 +19,7 @@ prototype["fromServer"] = function fromServer(categories) {
   categories = categories.categories;
   obj.categories = categories.map((arg0) => closure_1.fromServer(arg0));
   const collections = categories.collections;
-  obj.collections = collections.map((arg0) => fromServer.fromServer(arg0));
+  obj.collections = collections.map((arg0) => closure_0.fromServer(arg0));
   return obj;
 };
 const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesCategoriesRecord.tsx");

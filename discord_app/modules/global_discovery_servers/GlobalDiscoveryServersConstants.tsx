@@ -1,8 +1,9 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx
-import set from "set";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 let obj = { FEATURED: "featured", GAMING: "gaming", MUSIC: "music", ENTERTAINMENT: "entertainment", TECH: "tech", EDUCATION: "education", HUBS: "hubs" };
 const items = [obj.HUBS];
 let set = new Set(items);
@@ -10,7 +11,7 @@ obj = { Clans: -3, [-3]: "Clans", Hub: -2, [-2]: "Hub", Communities: -1, [-1]: "
 const items1 = [, , , , ];
 ({ Activity: arr2[0], Music: arr2[1], Television: arr2[2], Science: arr2[3], Education: arr2[4] } = obj);
 let closure_2 = ["en-GB"];
-const result = 10 * require("set").Millis.MINUTE;
+const result = 10 * setDefault.Millis.MINUTE;
 const result1 = set.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersConstants.tsx");
 
 export const DEFAULT_DISCOVERY_CATEGORY_ID = 0;

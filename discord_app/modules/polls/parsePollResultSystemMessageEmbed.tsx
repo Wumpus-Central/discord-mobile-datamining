@@ -1,5 +1,7 @@
 // discord_app/modules/polls/parsePollResultSystemMessageEmbed.tsx
-const result = require("set").fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/polls/parsePollResultSystemMessageEmbed.tsx");
 
 export default function parsePollResultSystemMessageEmbed(fields) {
   fields = undefined;

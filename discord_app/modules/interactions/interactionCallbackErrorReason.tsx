@@ -1,13 +1,13 @@
 // discord_app/modules/interactions/interactionCallbackErrorReason.tsx
-import addApplication from "addApplication";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { prototype } from "../errors/InteractionCallbackError.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import prototypeDefault from "prototype" /* 4808 */;
+import closure_3 from "addApplication" /* 4478 */;
 
-const require = arg1;
-const result = require("getSystemLocale").fileFinishedImporting("modules/interactions/interactionCallbackErrorReason.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/interactions/interactionCallbackErrorReason.tsx");
 
 export const interactionCallbackErrorReason = function interactionCallbackErrorReason(reason, applicationId) {
-  if (prototype.ReasonCodes.TIMEOUT === reason) {
+  if (prototypeDefault.ReasonCodes.TIMEOUT === reason) {
     application = application.getApplication(applicationId);
     if (null != application) {
       const intl11 = getSystemLocale.intl;

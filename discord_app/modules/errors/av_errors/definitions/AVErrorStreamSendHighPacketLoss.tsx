@@ -1,10 +1,10 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx
-import reset from "reset";
-import initialize from "initialize";
-import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
+import isStreamKey from "isStreamKey" /* 4531 */;
+import closure_2 from "reset" /* 4652 */;
+import closure_3 from "initialize" /* 4558 */;
 
-const require = arg1;
-const result = require("isStreamKey").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendHighPacketLoss.tsx");
 
 export const AVErrorStreamSendHighPacketLossDefinition = {
   getActiveErrors() {

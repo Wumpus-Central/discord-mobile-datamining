@@ -1,10 +1,11 @@
 // discord_app/modules/emojis/top_emojis/TopEmojisDataManager.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import { EmojiInteractionPoint } from "set";
-import "initialize";
-import { maybeFetchTopEmojisByGuild } from "TopEmojisUtils.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import maybeFetchTopEmojisByGuild from "maybeFetchTopEmojisByGuild" /* 9304 */;
+import closure_2 from "handleConnectionOpen" /* 4197 */;
+import { EmojiInteractionPoint } from "set" /* 1925 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class TopEmojisDataManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,6 +22,6 @@ TopEmojisDataManager.prototype["handleInteraction"] = function handleInteraction
   }
 };
 const topEmojisDataManager = new TopEmojisDataManager();
-let result = require("initialize").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
+let result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisDataManager.tsx");
 
 export default topEmojisDataManager;

@@ -1,5 +1,7 @@
 // discord_app/modules/markup/combineMarkupRules.tsx
-const result = require("set").fileFinishedImporting("modules/markup/combineMarkupRules.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/markup/combineMarkupRules.tsx");
 
 export default function combineMarkupRules(arg0) {
   let obj = {};

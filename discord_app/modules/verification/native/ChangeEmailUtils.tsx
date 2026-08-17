@@ -1,19 +1,17 @@
 // discord_app/modules/verification/native/ChangeEmailUtils.tsx
-import set from "set";
-import ChangeEmailFields from "ChangeEmailFields";
-import { keys } from "../../../ConstantsIOS.tsx";
+import keys from "keys" /* 691 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ChangeEmailFields from "ChangeEmailFields" /* 8563 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function _saveEmail() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -52,7 +50,7 @@ function _saveEmail() {
               c6 = undefined;
               length = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = callback(closure_2[2]).saveAccountChanges(store, { close: false });
               return obj1;
             }
@@ -117,7 +115,7 @@ function _saveEmail() {
       }
     })();
   });
-  const _saveEmail = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -127,9 +125,9 @@ function _saveEmail() {
   return applyArgumentsResult;
 }
 ({ setChangeEmailError: c4, ChangeEmailFields: c5 } = ChangeEmailFields);
-let result = require("saveProfileAndAccountRequest").fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/verification/native/ChangeEmailUtils.tsx");
 
-export const saveEmail = function saveEmail(arg0, c2, outer1_7) {
+export const saveEmail = function saveEmail(arg0, c2, closure_1_7) {
   const self = this;
   const apply = _saveEmail.apply;
   if (typeof apply === "unknown") {

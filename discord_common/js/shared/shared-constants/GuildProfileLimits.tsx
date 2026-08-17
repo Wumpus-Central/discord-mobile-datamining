@@ -1,5 +1,7 @@
 // discord_common/js/shared/shared-constants/GuildProfileLimits.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/GuildProfileLimits.tsx");
 
 export const MAX_TRAITS = 5;
 export const MAX_TRAIT_LABEL_LENGTH = 24;

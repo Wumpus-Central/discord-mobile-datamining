@@ -1,16 +1,15 @@
 // discord_app/modules/game_relationships/GameRelationshipStore.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
 
 function recountRelationshipTypes() {
-  let c0 = 0;
-  let c1 = 0;
-  let c2 = 0;
+  c0 = 0;
+  c1 = 0;
+  c2 = 0;
   const values = secondaryIndexMap.values();
   const item = values.forEach((arg0) => {
-    let id;
-    let type;
     ({ type, id } = arg0);
     if (type === constants.FRIEND) {
       closure_2 = closure_2 + 1;
@@ -19,14 +18,14 @@ function recountRelationshipTypes() {
     } else if (type === tmp.PENDING_INCOMING) {
       if (!spam.isSpam(id)) {
         if (!spam.isIgnored(id)) {
-          markAllUserIdListsStale = markAllUserIdListsStale + 1;
+          closure_0 = closure_0 + 1;
         }
       }
     }
   });
-  let closure_7 = c0;
-  let closure_8 = c1;
-  let closure_9 = c2;
+  closure_7 = c0;
+  closure_8 = c1;
+  closure_9 = c2;
 }
 function remove(arg0, arg1) {
   if (typeof GAME_RELATIONSHIP_KEY !== "function") {
@@ -65,11 +64,12 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function game
 let c7 = 0;
 let c8 = 0;
 let c9 = 0;
+const Store = initializeDefault.Store;
 class GameRelationshipStore extends Store {
 }
 const prototype = GameRelationshipStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(markAllUserIdListsStale);
+  this.waitFor(closure_0);
 };
 prototype["getPendingIncomingCount"] = function getPendingIncomingCount() {
   return c7;
@@ -87,19 +87,19 @@ prototype["getGameFriendsForApplication"] = function getGameFriendsForApplicatio
   const values = secondaryIndexMap.values("application-id-" + arg0, true);
   return values.filter((type) => type.type === constants.FRIEND);
 };
-prototype["getGameRelationshipsForUser"] = function getGameRelationshipsForUser(markAllUserIdListsStale) {
+prototype["getGameRelationshipsForUser"] = function getGameRelationshipsForUser(closure_0) {
   if (typeof GameRelationshipIndexes_BY_USER_ID !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  return secondaryIndexMap.values("user-id-" + markAllUserIdListsStale, true);
+  return secondaryIndexMap.values("user-id-" + closure_0, true);
 };
-prototype["getGameRelationshipsForUserByType"] = function getGameRelationshipsForUserByType(markAllUserIdListsStale, FRIEND) {
-  markAllUserIdListsStale = FRIEND;
-  const gameRelationshipsForUser = this.getGameRelationshipsForUser(markAllUserIdListsStale);
-  return gameRelationshipsForUser.filter((type) => type.type === markAllUserIdListsStale);
+prototype["getGameRelationshipsForUserByType"] = function getGameRelationshipsForUserByType(closure_0, FRIEND) {
+  closure_0 = FRIEND;
+  const gameRelationshipsForUser = this.getGameRelationshipsForUser(closure_0);
+  return gameRelationshipsForUser.filter((type) => type.type === closure_0);
 };
-prototype["getGameFriendsForUser"] = function getGameFriendsForUser(markAllUserIdListsStale) {
-  return this.getGameRelationshipsForUserByType(markAllUserIdListsStale, RelationshipTypes.FRIEND);
+prototype["getGameFriendsForUser"] = function getGameFriendsForUser(closure_0) {
+  return this.getGameRelationshipsForUserByType(closure_0, RelationshipTypes.FRIEND);
 };
 prototype["getGameRelationshipCount"] = function getGameRelationshipCount() {
   return secondaryIndexMap.size();
@@ -117,12 +117,11 @@ prototype["getGameRelationshipsVersion"] = function getGameRelationshipsVersion(
   return secondaryIndexMap.version;
 };
 GameRelationshipStore.displayName = "GameRelationshipStore";
-const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
+const gameRelationshipStore = new GameRelationshipStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(gameRelationships) {
     secondaryIndexMap.clear();
     gameRelationships = gameRelationships.gameRelationships;
     const item = gameRelationships.forEach((id) => {
-      let applicationId;
       const obj = { id: id.id, applicationId: id.application_id, type: id.type, since: id.since, dmAccessType: id.dm_access_type };
       ({ id, applicationId } = obj);
       if (typeof c2 !== "function") {
@@ -130,13 +129,11 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       }
       const result = closure_6.set("" + applicationId + "-" + id, obj);
     });
-    let c0 = 0;
-    let c1 = 0;
-    let c2 = 0;
+    c0 = 0;
+    c1 = 0;
+    c2 = 0;
     const values = secondaryIndexMap.values();
     const item1 = values.forEach((arg0) => {
-      let id;
-      let type;
       ({ type, id } = arg0);
       if (type === constants.FRIEND) {
         closure_2 = closure_2 + 1;
@@ -145,31 +142,27 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       } else if (type === tmp.PENDING_INCOMING) {
         if (!spam.isSpam(id)) {
           if (!spam.isIgnored(id)) {
-            markAllUserIdListsStale = markAllUserIdListsStale + 1;
+            closure_0 = closure_0 + 1;
           }
         }
       }
     });
-    let closure_7 = c0;
-    let closure_8 = c1;
-    let closure_9 = c2;
+    closure_7 = c0;
+    closure_8 = c1;
+    closure_9 = c2;
   },
   GAME_RELATIONSHIP_ADD: function handleGameRelationshipAdd(gameRelationship) {
-    let applicationId;
-    let id;
     gameRelationship = gameRelationship.gameRelationship;
     ({ id, applicationId } = gameRelationship);
     if (typeof c2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     const result = secondaryIndexMap.set("" + applicationId + "-" + id, gameRelationship);
-    let c0 = 0;
-    let c1 = 0;
+    c0 = 0;
+    c1 = 0;
     c2 = 0;
     const values = secondaryIndexMap.values();
     const item = values.forEach((arg0) => {
-      let id;
-      let type;
       ({ type, id } = arg0);
       if (type === constants.FRIEND) {
         closure_2 = closure_2 + 1;
@@ -178,30 +171,26 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       } else if (type === tmp.PENDING_INCOMING) {
         if (!spam.isSpam(id)) {
           if (!spam.isIgnored(id)) {
-            markAllUserIdListsStale = markAllUserIdListsStale + 1;
+            closure_0 = closure_0 + 1;
           }
         }
       }
     });
-    let closure_7 = c0;
-    let closure_8 = c1;
-    let closure_9 = c2;
+    closure_7 = c0;
+    closure_8 = c1;
+    closure_9 = c2;
   },
   GAME_RELATIONSHIP_REMOVE: function handleGameRelationshipRemove(arg0) {
-    let applicationId;
-    let userId;
     ({ userId, applicationId } = arg0);
     if (typeof c2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     secondaryIndexMap.delete("" + applicationId + "-" + userId);
-    let c0 = 0;
-    let c1 = 0;
+    c0 = 0;
+    c1 = 0;
     c2 = 0;
     const values = secondaryIndexMap.values();
     const item = values.forEach((arg0) => {
-      let id;
-      let type;
       ({ type, id } = arg0);
       if (type === constants.FRIEND) {
         closure_2 = closure_2 + 1;
@@ -210,14 +199,14 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
       } else if (type === tmp.PENDING_INCOMING) {
         if (!spam.isSpam(id)) {
           if (!spam.isIgnored(id)) {
-            markAllUserIdListsStale = markAllUserIdListsStale + 1;
+            closure_0 = closure_0 + 1;
           }
         }
       }
     });
-    let closure_7 = c0;
-    let closure_8 = c1;
-    let closure_9 = c2;
+    closure_7 = c0;
+    closure_8 = c1;
+    closure_9 = c2;
   },
   APPLICATIONS_FETCH_SUCCESS: function handleApplicationsFetchSuccess(unknownApplicationIds) {
     unknownApplicationIds = unknownApplicationIds.unknownApplicationIds;
@@ -252,6 +241,6 @@ const gameRelationshipStore = new GameRelationshipStore(require("dispatcher"), {
     }
   }
 });
-let result = require("version").fileFinishedImporting("modules/game_relationships/GameRelationshipStore.tsx");
+let result = require("set").fileFinishedImporting("modules/game_relationships/GameRelationshipStore.tsx");
 
 export default gameRelationshipStore;

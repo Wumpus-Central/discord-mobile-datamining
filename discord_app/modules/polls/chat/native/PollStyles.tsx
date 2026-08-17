@@ -1,7 +1,10 @@
 // discord_app/modules/polls/chat/native/PollStyles.tsx
+import set from "set" /* 2 */;
+import NativeShadowType from "NativeShadowType" /* 8435 */;
 import { t } from "../../../../../_runtime/04486_t.js";
 import { PollLayoutTypes } from "../../../../../discord_common/js/shared/shared-constants/PollLayoutTypes.tsx";
 import { NativeShadowType } from "../PollMessageChatDataTypes.tsx";
+
 function normal(border) {
   const _require = border;
   const obj = { border: border.colors.BORDER_SUBTLE, borderWidth: 1, fill: border.colors.CARD_SECONDARY_BG, label: null, opacity: 1, answerBackground: null, answerFill: null, radioStyle: null, radioBackground: null, radioForeground: null };
@@ -50,7 +53,7 @@ function victorNotSelected(colors) {
   obj.radioStyle = NativeShadowType.PollRadioStyle.NONE;
   return obj;
 }
-const result = require("NativeShadowType").fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
+const result = set.fileFinishedImporting("modules/polls/chat/native/PollStyles.tsx");
 
 export const pollStyleSets = {
   loserSelected(colors) {

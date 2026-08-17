@@ -1,7 +1,7 @@
 // discord_app/modules/image_proxy/ImageProxyUtils.tsx
-import set from "set";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
+import handleImageLoad from "handleImageLoad" /* 1469 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import set from "set" /* 2 */;
 
 let parts;
 if (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS != null) {
@@ -31,10 +31,8 @@ let result = set.fileFinishedImporting("modules/image_proxy/ImageProxyUtils.tsx"
 
 export { isImageProxyURL };
 export const getSizedImageProxyURL = function getSizedImageProxyURL(value, arg1) {
-  let keepAspectRatio;
-  let size;
   ({ size, keepAspectRatio } = arg1);
-  const str = isDiscordProxiedAssetUrl.toURLSafe(value);
+  const str = isDiscordProxiedAssetUrlDefault.toURLSafe(value);
   if (null != str) {
     let startsWithResult = set.has(str.hostname);
     if (startsWithResult) {

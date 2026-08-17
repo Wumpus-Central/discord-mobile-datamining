@@ -1,38 +1,21 @@
 // discord_app/modules/messages/native/renderer/transformMessageComponents.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import { processColor } from "set";
-import { CheckpointVersions } from "CheckpointPersonas";
-import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS";
-import importDefaultResult from "priv";
-import { urlMatchesFileExtension } from "../../MediaFormatTesters.tsx";
-import { MediaGalleryItemType } from "RowGeneratorTypes.tsx";
-import { nativeStyleProperties } from "RowGeneratorUtils.tsx";
+import setDefault from "set" /* 687 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4810 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import sanitizeMediaDimension from "sanitizeMediaDimension" /* 8320 */;
+import nativeStylePropertiesDefault from "nativeStyleProperties" /* 8321 */;
+import MediaGalleryItemType from "MediaGalleryItemType" /* 8340 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import { processColor } from "get ActivityIndicator" /* 17 */;
+import { CheckpointVersions } from "CheckpointPersonas" /* 4806 */;
+import { TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS as closure_7 } from "TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS" /* 8325 */;
+import importDefaultResult from "priv" /* 1405 */;
 
-const require = arg1;
+require = arg1;
 function transformToRowGeneratedComponent(message, accessory) {
-  let colors;
-  let contentType;
-  let guildId;
-  let height;
-  let interaction;
-  let isSpoiler;
-  let isSpoiler2;
-  let markdownConfigs;
-  let obscureAwaitingScan;
-  let obscureAwaitingScan2;
-  let obscureDescription;
-  let obscureDescription2;
-  let processColor;
-  let shouldAgeVerify;
-  let shouldDisableInteractiveComponents;
-  let shouldObscureSpoiler;
-  let spoiler;
-  let spoiler2;
-  let spoilerDescription;
-  let spoilerDescription2;
-  let width;
   const _require = message;
-  const importDefault = accessory;
+  importDefault = accessory;
   message = message.message;
   ({ interaction, guildId, shouldDisableInteractiveComponents, shouldObscureSpoiler } = message);
   const enabledContentHarmTypeFlags = message.enabledContentHarmTypeFlags;
@@ -44,7 +27,7 @@ function transformToRowGeneratedComponent(message, accessory) {
   if (_require(message[6]).ComponentType.ACTION_ROW === type) {
     const components = accessory.components;
     const mapped = components.map((arg0) => {
-      const tmp = outer1_8(closure_0, arg0);
+      const tmp = closure_1_8(closure_0, arg0);
       let tmp2 = null;
       if (null != tmp) {
         tmp2 = tmp;
@@ -74,12 +57,12 @@ function transformToRowGeneratedComponent(message, accessory) {
   } else if (tmp(tmp2[6]).ComponentType.STRING_SELECT === type) {
     const initialStringSelectOptions = tmp(tmp2[10]).getInitialStringSelectOptions(accessory, message.id);
     const mapped1 = initialStringSelectOptions.map((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const options = accessory.options;
       return options.findIndex((value) => value.value === closure_0);
     });
     const found1 = mapped1.filter((arg0) => -1 !== arg0);
-    const obj1 = {};
+    obj1 = {};
     const merged2 = Object.assign(accessory);
     const tmpResult1 = tmp(tmp2[10]);
     obj1.state = tmp(tmp2[9]).getActionComponentState(interaction, accessory, shouldDisableInteractiveComponents);
@@ -126,7 +109,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                 const merged3 = Object.assign(accessory);
                 const components1 = accessory.components;
                 const mapped3 = components1.map((arg0) => {
-                  const tmp = outer1_8(closure_0, arg0);
+                  const tmp = closure_1_8(closure_0, arg0);
                   let tmp2 = null;
                   if (null != tmp) {
                     tmp2 = tmp;
@@ -224,14 +207,6 @@ function transformToRowGeneratedComponent(message, accessory) {
             } else if (tmp(tmp2[6]).ComponentType.MEDIA_GALLERY === type) {
               const items = accessory.items;
               const mapped4 = items.map((media) => {
-                let contentType;
-                let height;
-                let isSpoiler;
-                let obscureAwaitingScan;
-                let obscureDescription;
-                let spoiler;
-                let spoilerDescription;
-                let width;
                 ({ width, height, contentType } = media.media);
                 if (null != width) {
                   if (width > 0) {
@@ -282,7 +257,7 @@ function transformToRowGeneratedComponent(message, accessory) {
                       if (VISUAL_PLACEHOLDER !== tmp4(tmp3[14]).MediaGalleryItemType.VIDEO) {
                         obj = {};
                         const merged = Object.assign(media);
-                        obj.media = outer1_9(media.media, message);
+                        obj.media = closure_1_9(media.media, message);
                         obj.mediaType = VISUAL_PLACEHOLDER;
                         obj.videoPreviewUrl = tmp12;
                         obj.isSpoiler = isSpoiler;
@@ -416,7 +391,7 @@ function transformToRowGeneratedComponent(message, accessory) {
               const merged9 = Object.assign(accessory);
               const components2 = accessory.components;
               const mapped5 = components2.map((arg0) => {
-                const tmp = outer1_8(closure_0, arg0);
+                const tmp = closure_1_8(closure_0, arg0);
                 let tmp2 = null;
                 if (null != tmp) {
                   tmp2 = tmp;
@@ -556,11 +531,6 @@ function transformToRowGeneratedComponent(message, accessory) {
   }
 }
 function transformUnfurledMediaItem(file, shouldShowMedia) {
-  let contentType;
-  let height;
-  let proxyUrl;
-  let width;
-  let width2;
   ({ width, height, contentType } = file);
   if (null != width) {
     if (width > 0) {
@@ -580,14 +550,14 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
         }
         const size = {};
         const merged = Object.assign(file);
-        let tmp4Result = tmp4(1403);
-        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, tmp4(4810).UnfurledMediaItemFlags.IS_ANIMATED);
+        let tmp4Result = hasFlag;
+        size.srcIsAnimated = tmp4Result.hasFlag(file.flags, messageAttachmentToUnfurledMediaItem.UnfurledMediaItemFlags.IS_ANIMATED);
         if (!shouldShowMedia.shouldShowMedia) {
           size.height = 0;
           size.width = 0;
         }
-        if (VISUAL_PLACEHOLDER === tmp4(8340).MediaGalleryItemType.IMAGE) {
-          const obj4 = nativeStyleProperties;
+        if (VISUAL_PLACEHOLDER === MediaGalleryItemType.MediaGalleryItemType.IMAGE) {
+          const obj4 = nativeStylePropertiesDefault;
           ({ proxyUrl, width: width2 } = size);
           if (width2 == null) {
             width2 = 0;
@@ -598,9 +568,9 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
           }
           size.proxyUrl = obj4.getImageSrc(proxyUrl, width2, num3, !shouldShowMedia.shouldAutoPlayGifs);
         }
-        tmp4Result = tmp4(8320);
+        tmp4Result = sanitizeMediaDimension;
         size.width = tmp4Result.sanitizeMediaDimension(size.width);
-        size.height = tmp4(8320).sanitizeMediaDimension(size.height);
+        size.height = sanitizeMediaDimension.sanitizeMediaDimension(size.height);
         return size;
       }
     }
@@ -610,24 +580,20 @@ function transformUnfurledMediaItem(file, shouldShowMedia) {
 }
 let closure_3 = ["checkpointData"];
 let obj = { max: Infinity, maxAge: null, updateAgeOnGet: true };
-obj[1] = 15 * require("set").Millis.MINUTE;
+obj[1] = 15 * setDefault.Millis.MINUTE;
 importDefaultResult = new importDefaultResult(obj);
 let c10 = importDefaultResult;
-let result = require("CheckpointPersonas").fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/transformMessageComponents.tsx");
 
 export default function transformMessageComponents(message, arr) {
-  let obj = { type: "textDisplayComponent", parserState: null };
-  obj[1] = obj(8315).getInitialParserStateFromMessage(message.message, closure_7);
+  obj = { type: "textDisplayComponent", parserState: obj(8315).getInitialParserStateFromMessage(message.message, closure_7) };
   obj = {};
   const merged = Object.assign(message);
   obj.markdownConfigs = { textDisplayComponent: obj };
-  const mapped = arr.map((arg0) => outer1_8(obj, arg0));
+  const mapped = arr.map((arg0) => closure_1_8(obj, arg0));
   return mapped.filter(obj(1370).isNotNullish);
 };
 export const getUnfurledMediaItemType = function getUnfurledMediaItemType(arg0) {
-  let contentType;
-  let height;
-  let width;
   ({ width, height, contentType } = arg0);
   if (null != width) {
     if (width > 0) {

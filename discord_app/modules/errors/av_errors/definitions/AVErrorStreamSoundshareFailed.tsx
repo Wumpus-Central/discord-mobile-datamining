@@ -1,13 +1,13 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx
-import reset from "reset";
-import getHookError from "getHookError";
-import { MediaEngineHookTypes } from "ME";
-import { isStreamKey } from "../../../go_live/utils/StreamKeyUtils.tsx";
-import { mapped } from "../AVError.tsx";
-import { getVoiceChannelErrorContext } from "../AVErrorContext.tsx";
+import isStreamKey from "isStreamKey" /* 4531 */;
+import mapped from "mapped" /* 9668 */;
+import getVoiceChannelErrorContext from "getVoiceChannelErrorContext" /* 17055 */;
+import closure_2 from "reset" /* 4652 */;
+import closure_3 from "getHookError" /* 4563 */;
+import { MediaEngineHookTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSoundshareFailed.tsx");
 
 export const AVErrorStreamSoundshareFailedDefinition = {
   getActiveErrors() {

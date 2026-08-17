@@ -1,31 +1,28 @@
 // discord_app/modules/user_settings/profiles/native/GuildProfileEmptyState.tsx
-import SvgComponent from "SvgComponent";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SvgComponent } from "GuildProfileEmptyStateSvg.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import SvgComponentDefault from "SvgComponent" /* 14070 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { paddingHorizontal: 16, alignItems: "center" }, image: { marginBottom: 16, marginTop: 64, textAlign: "center" }, header: { textAlign: "center", marginStart: 8, marginEnd: 8, marginBottom: 8 }, createButton: { marginTop: 16, marginBottom: 12 } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/profiles/native/GuildProfileEmptyState.tsx");
 
 export default function GuildProfileEmptyState() {
   const tmp = callback4();
   let obj = { contentContainerStyle: tmp.container, children: null };
-  obj = { style: tmp.image, children: callback2(SvgComponent, obj) };
+  obj = { style: tmp.image, children: callback2(SvgComponentDefault, obj) };
   obj = { style: tmp.image };
   const items = [callback2(closure_5, obj), , , , ];
-  let obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
+  obj1 = { style: tmp.header, variant: "heading-xl/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj1[3] = intl.string(getSystemLocale.t.Z1OZCV);
   items[1] = callback2(Text.Text, obj1);
@@ -66,8 +63,8 @@ export default function GuildProfileEmptyState() {
           } else {
             c1 = 1;
             v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = v0(outer1_2[10])(outer1_2[9], outer1_2.paths);
+            obj1 = { value: null, done: false };
+            obj1[0] = v0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -123,8 +120,8 @@ export default function GuildProfileEmptyState() {
           } else {
             c1 = 1;
             v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = v0(outer1_2[10])(outer1_2[9], outer1_2.paths);
+            obj1 = { value: null, done: false };
+            obj1[0] = v0(closure_1_2[10])(closure_1_2[9], closure_1_2.paths);
             return obj1;
           }
         } else if (arg0 === 1) {

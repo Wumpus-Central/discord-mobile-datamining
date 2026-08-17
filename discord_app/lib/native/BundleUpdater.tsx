@@ -1,14 +1,13 @@
 // discord_app/lib/native/BundleUpdater.tsx
-import resolveAssetSource from "resolveAssetSource";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { AnalyticEvents } from "ME";
-import { t } from "../../../_runtime/04486_t.js";
+import timestampDefault from "timestamp" /* 3 */;
+import t from "t" /* 4486 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-let NativeEventEmitter;
-let NativeModules;
-const require = arg1;
+require = arg1;
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
-let c5 = new require("timestamp")("BundleUpdater");
+let closure_5 = new timestampDefault("BundleUpdater");
 const BundleUpdaterManager = NativeModules.BundleUpdaterManager;
 const nativeEventEmitter = new NativeEventEmitter(BundleUpdaterManager);
 let closure_8 = { downloaded: "BundleDownloaded", otaUpdateChecked: "OtaUpdateChecked" };
@@ -74,9 +73,9 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp2;
-            let closure_0;
-            let obj1 = outer1_0(table[4]);
+            closure_1 = tmp2;
+            closure_0 = undefined;
+            obj1 = closure_1_0(table[4]);
             if (obj1.isIOS()) {
               table = 1;
               c3 = 1;
@@ -86,7 +85,7 @@ prototype["setupOTAAssetFallback"] = function setupOTAAssetFallback() {
             } else {
               c3 = 3;
             }
-            tmp14 = outer1_0;
+            tmp14 = closure_1_0;
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -147,14 +146,14 @@ prototype["emitOtaMetric"] = function emitOtaMetric(item10010) {
   }).exhaustive();
 };
 prototype["prepareOtaMetricForDatadog"] = function prepareOtaMetricForDatadog(name, arg1) {
-  let closure_0 = name;
+  closure_0 = name;
   let items = arg1;
   if (arg1 === undefined) {
     items = [];
   }
   return { name: name.type, tags: items.map((arg0) => "" + arg0 + ":" + name[arg0]) };
 };
-const tmp3 = new require("timestamp")("BundleUpdater");
-let result = require("ME").fileFinishedImporting("lib/native/BundleUpdater.tsx");
+const tmp3 = new timestampDefault("BundleUpdater");
+let result = require("set").fileFinishedImporting("lib/native/BundleUpdater.tsx");
 
 export default prototype;

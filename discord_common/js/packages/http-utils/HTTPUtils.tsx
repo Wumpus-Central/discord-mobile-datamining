@@ -1,14 +1,19 @@
 // discord_common/js/packages/http-utils/HTTPUtils.tsx
-import set from "fails";
-import { _createForOfIteratorHelper } from "../../../../_runtime/00531__createForOfIteratorHelper.js";
-import { fails } from "../backoff/Backoff.tsx";
+import log from "log" /* 4 */;
+import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 531 */;
+import failsDefault from "fails" /* 584 */;
+import convertStringArrayToSkemaErrorItems from "convertStringArrayToSkemaErrorItems" /* 585 */;
+import convertSkemaError from "convertSkemaError" /* 586 */;
+import stringifyErrors from "stringifyErrors" /* 587 */;
+import getFieldMessage from "getFieldMessage" /* 588 */;
+import set from "set" /* 2 */;
 
 function sendRequest(arg0, signal) {
-  let closure_0 = arg0;
-  const importDefault = signal;
-  const dependencyMap = arg2;
-  let closure_3 = arg3;
-  let closure_4 = arg4;
+  closure_0 = arg0;
+  importDefault = signal;
+  dependencyMap = arg2;
+  closure_3 = arg3;
+  closure_4 = arg4;
   signal = signal.signal;
   let aborted;
   if (signal != null) {
@@ -17,7 +22,7 @@ function sendRequest(arg0, signal) {
   if (aborted) {
     const _Object = Object;
     const _Error = Error;
-    const error = new Error("Request aborted");
+    error = new Error("Request aborted");
     let merged = Object.assign(error, { code: "ABORTED" });
     cleanupRequestEntry(signal);
     arg3(merged);
@@ -27,7 +32,7 @@ function sendRequest(arg0, signal) {
       arg4(obj);
     }
   } else {
-    const promise = _createForOfIteratorHelper[arg0](signal.url);
+    const promise = _createForOfIteratorHelperDefault[arg0](signal.url);
     if (null != signal.onRequestCreated) {
       signal.onRequestCreated(promise);
     }
@@ -117,8 +122,6 @@ function sendRequest(arg0, signal) {
     }
     promise.ok((status) => null != status.status);
     promise.then((ok) => {
-      let body;
-      let headers;
       if (null != signal.retries) {
         tmp.retries = +tmp.retries - 1;
         if (+tmp.retries > 0) {
@@ -138,11 +141,11 @@ function sendRequest(arg0, signal) {
             }
             tmp.retried = num5 + 1;
             const backoff2 = tmp.backoff;
-            backoff2.fail(() => outer1_11(url.url).then(() => outer1_7(closure_0, closure_1, closure_2, closure_3, closure_4)));
+            backoff2.fail(() => closure_1_11(url.url).then(() => closure_1_7(closure_0, closure_1, closure_2, closure_3, closure_4)));
           }
         }
       }
-      let obj = { ok: ok.ok, headers: ok.headers, body: ok.body, text: ok.text, status: ok.status, retryAfter: null };
+      obj = { ok: ok.ok, headers: ok.headers, body: ok.body, text: ok.text, status: ok.status, retryAfter: null };
       ({ headers, body } = ok);
       let prop;
       if (headers != null) {
@@ -160,24 +163,24 @@ function sendRequest(arg0, signal) {
         let parsed = parseInt(prop, 10);
         const _Number = Number;
         obj[5] = parsed;
-        outer1_9(tmp, obj);
-        let c0 = false;
+        closure_1_9(tmp, obj);
+        c0 = false;
         function interceptRetry(arg0, interceptResponse) {
-          let obj = {};
-          const merged = Object.assign(outer1_1);
           obj = {};
-          const merged1 = Object.assign(outer1_1.headers);
+          const merged = Object.assign(closure_1_1);
+          obj = {};
+          const merged1 = Object.assign(closure_1_1.headers);
           const merged2 = Object.assign(arg0);
           obj.headers = obj;
           obj.interceptResponse = interceptResponse;
-          let c0 = true;
-          retry(c0, obj, outer1_2, outer1_3, outer1_4);
+          c0 = true;
+          retry(c0, obj, closure_1_2, closure_1_3, closure_1_4);
         }
         function interceptCancel(arg0) {
           if (!c0) {
-            outer1_3(arg0);
-            if (outer1_4 != null) {
-              const obj = { ok: false, hasErr: true, err: null };
+            closure_1_3(arg0);
+            if (closure_1_4 != null) {
+              obj = { ok: false, hasErr: true, err: null };
               obj[2] = arg0;
               tmp4(obj);
             }
@@ -192,7 +195,7 @@ function sendRequest(arg0, signal) {
         }
         if (true !== interceptResponseResult) {
           let interceptResponse2Result;
-          if (outer1_10 != null) {
+          if (closure_1_10 != null) {
             const interceptResponse2 = tmp43.interceptResponse;
             if (interceptResponse2 != null) {
               interceptResponse2Result = interceptResponse2(ok, interceptRetry, interceptCancel, closure_8);
@@ -268,14 +271,14 @@ function sendRequest(arg0, signal) {
             }
             tmp.retried = num2 + 1;
             const backoff2 = tmp.backoff;
-            backoff2.fail(() => outer1_11(url.url).then(() => outer1_7(closure_0, closure_1, closure_2, closure_3, closure_4)));
+            backoff2.fail(() => closure_1_11(url.url).then(() => closure_1_7(closure_0, closure_1, closure_2, closure_3, closure_4)));
           }
         }
       }
-      outer1_9(signal);
+      closure_1_9(signal);
       callback2(code);
       if (null != closure_4) {
-        const obj = { ok: false, hasErr: true, err: null };
+        obj = { ok: false, hasErr: true, err: null };
         obj[2] = code;
         tmp5(obj);
       }
@@ -296,9 +299,7 @@ function sendRequest(arg0, signal) {
   }
 }
 function cleanupRequestEntry(url) {
-  let body;
-  let headers;
-  let closure_0 = url;
+  closure_0 = url;
   let obj = map;
   let value = map.get(url.url);
   if (null != arg1) {
@@ -308,7 +309,7 @@ function cleanupRequestEntry(url) {
         backoff = value.backoff;
       }
       if (backoff == null) {
-        backoff = new fails(1000, 60000);
+        backoff = new failsDefault(1000, 60000);
       }
       ({ headers, body } = arg1);
       let prop;
@@ -348,19 +349,19 @@ function cleanupRequestEntry(url) {
         let queue;
         const timerId = setTimeout(() => {
           url = url.url;
-          const value = outer1_8.get(url);
+          const value = closure_1_8.get(url);
           if (null != value) {
             const queue = value.queue;
             const arr = queue.shift();
             if (null == arr) {
-              outer1_3.verbose("rateLimitExpirationHandler: removing key for", url);
-              outer1_8.delete(url);
+              closure_1_3.verbose("rateLimitExpirationHandler: removing key for", url);
+              closure_1_8.delete(url);
             } else {
-              outer1_3.verbose("rateLimitExpirationHandler: moving to next record for ", url);
+              closure_1_3.verbose("rateLimitExpirationHandler: moving to next record for ", url);
               arr();
             }
           } else {
-            outer1_3.verbose("rateLimitExpirationHandler: rate limit for", url, "expired, but record was already removed");
+            closure_1_3.verbose("rateLimitExpirationHandler: rate limit for", url, "expired, but record was already removed");
           }
         }, failResult);
         if (value != null) {
@@ -423,15 +424,15 @@ function cleanupRequestEntry(url) {
   }
 }
 function makeRequest(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
   return new Promise((serializer, bindResult) => {
     if (typeof obj === "string") {
       obj = { url: null, rejectWithError: false };
       obj[0] = tmp;
     }
-    const value = outer1_8.get(obj.url);
+    const value = closure_1_8.get(obj.url);
     if (null != value) {
       if (obj.failImmediatelyWhenRateLimited) {
         const _Date = Date;
@@ -444,7 +445,7 @@ function makeRequest(arg0, arg1, arg2) {
         obj[1] = obj;
         bindResult(obj);
         if (null != closure_2) {
-          const obj1 = { ok: true, hasErr: false, status: null, body: null, text: "", headers: null };
+          obj1 = { ok: true, hasErr: false, status: null, body: null, text: "", headers: null };
           ({ status: obj3[2], body: obj3[3] } = obj);
           obj1[5] = {};
           closure_2(obj1);
@@ -452,11 +453,11 @@ function makeRequest(arg0, arg1, arg2) {
       }
     }
     if (null != value) {
-      outer1_3.verbose("makeRequest: queueing request for ", obj.url);
+      closure_1_3.verbose("makeRequest: queueing request for ", obj.url);
       const queue = value.queue;
-      queue.push(outer1_7.bind(null, closure_0, obj, serializer, bindResult, closure_2));
+      queue.push(closure_1_7.bind(null, closure_0, obj, serializer, bindResult, closure_2));
     } else {
-      outer1_7(closure_0, obj, serializer, bindResult, closure_2);
+      closure_1_7(closure_0, obj, serializer, bindResult, closure_2);
     }
   });
 }
@@ -469,7 +470,7 @@ function encodeProperties(arg0) {
     return null;
   }
 }
-const logger = new require("convertSkemaError").Logger("HTTPUtils");
+const logger = new log.Logger("HTTPUtils");
 let set = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
 const set1 = new Set([429, 503]);
 class HTTPResponseError extends Error {
@@ -596,11 +597,11 @@ function makeRateLimitedResponse(status, message, retry_after) {
 }
 let result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/HTTPUtils.tsx");
 
-export const INVALID_FORM_BODY_ERROR_CODE = require("convertStringArrayToSkemaErrorItems").INVALID_FORM_BODY_ERROR_CODE;
-export const convertSkemaError = require("convertSkemaError").convertSkemaError;
-export const stringifyErrors = require("stringifyErrors").stringifyErrors;
-export const V6OrEarlierAPIError = require("getFieldMessage").APIError;
-export const V8APIError = require("convertStringArrayToSkemaErrorItems").APIError;
+export const INVALID_FORM_BODY_ERROR_CODE = convertStringArrayToSkemaErrorItems.INVALID_FORM_BODY_ERROR_CODE;
+export const convertSkemaError = convertSkemaError.convertSkemaError;
+export const stringifyErrors = stringifyErrors.stringifyErrors;
+export const V6OrEarlierAPIError = getFieldMessage.APIError;
+export const V8APIError = convertStringArrayToSkemaErrorItems.APIError;
 export { isRateLimitedStatus };
 export const DEFAULT_RATE_LIMIT_RETRY_AFTER_SECS = 5;
 export { HTTPResponseError };
@@ -628,13 +629,13 @@ export const getAPIBaseURL = function getAPIBaseURL(arg0) {
   return text + str;
 };
 export function setRequestPatch(ApexExperiment) {
-  let closure_10 = ApexExperiment;
+  closure_10 = ApexExperiment;
 }
 export function setAwaitOnline(arg0) {
-  let closure_11 = arg0;
+  closure_11 = arg0;
 }
 export function setRejectWithMigratedError(arg0) {
-  let closure_12 = arg0;
+  closure_12 = arg0;
 }
 export const rejectWithMigratedError = function rejectWithMigratedError() {
   return migratedRejectEnabled();

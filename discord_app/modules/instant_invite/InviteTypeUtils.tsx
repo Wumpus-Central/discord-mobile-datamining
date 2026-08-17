@@ -1,19 +1,17 @@
 // discord_app/modules/instant_invite/InviteTypeUtils.tsx
-import { isEventUpcoming } from "scheduledEventSort";
-import createChannelRecord from "createChannelRecord";
-import InviteSendStates from "InviteSendStates";
-import { getEstablishedDate } from "../guild_profile/GuildProfileUtils.tsx";
+import set from "set" /* 2 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
+import getEstablishedDate from "getEstablishedDate" /* 4372 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
+const isEventUpcoming = scheduledEventSort.isEventUpcoming;
 ({ isGuildVocalChannelType: c3, isMultiUserDM: c4 } = createChannelRecord);
 ({ InviteTargetTypes: c5, InviteTypes: closure_6 } = InviteSendStates);
 let obj = { EVENT: "event", APPLICATION: "application", PROFILE: "profile", DEFAULT: "default", VOICE_CHANNEL: "voice_channel" };
-const result = require("InviteSendStates").fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
+const result = set.fileFinishedImporting("modules/instant_invite/InviteTypeUtils.tsx");
 
-export const InviteTypes = require("InviteSendStates").InviteTypes;
+export const InviteTypes = InviteSendStates.InviteTypes;
 export const isGroupDMInvite = function isGroupDMInvite(invite) {
   let tmp = invite.type === constants2.GROUP_DM;
   if (!tmp) {

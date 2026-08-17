@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ApplicationDirectoryCollectionType.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { ALL: null, APPLICATION_DIRECTORY: null, APP_LAUNCHER_IN_TEXT: null, APP_LAUNCHER_IN_VOICE_BANNER: null };
 let set = new Set([1, 2, 3, 4, 5, 6, 7]);

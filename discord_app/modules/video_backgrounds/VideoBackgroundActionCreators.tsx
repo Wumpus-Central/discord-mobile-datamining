@@ -1,9 +1,9 @@
 // discord_app/modules/video_backgrounds/VideoBackgroundActionCreators.tsx
-import dispatcher from "dispatcher";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchVideoFilterAssets() {
@@ -38,10 +38,10 @@ function _fetchVideoFilterAssets() {
             let callback = tmp3;
             let body = tmp7;
             body = undefined;
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[4]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
-            obj1[0] = outer1_6.VIDEO_FILTER_ASSETS;
+            c3 = 1;
+            const HTTP = closure_1_0(closure_1_2[4]).HTTP;
+            obj1 = { url: null, rejectWithError: false };
+            obj1[0] = closure_1_6.VIDEO_FILTER_ASSETS;
             c4 = 2;
             c5 = 1;
             const obj2 = { value: null, done: false };
@@ -88,7 +88,7 @@ function _fetchVideoFilterAssets() {
       }
     }
   });
-  const _fetchVideoFilterAssets = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -100,12 +100,12 @@ function _fetchVideoFilterAssets() {
 function _uploadVideoFilterAsset() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
@@ -133,12 +133,12 @@ function _uploadVideoFilterAsset() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _detectH265HardwareDecode = tmp3;
-              let dispatcher = tmp7;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
               let lib;
               let constants = 1;
               const HTTP = lib(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
+              obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = constants.VIDEO_FILTER_ASSETS;
               const obj2 = { type: null, asset: null, last_used: null };
               obj2[0] = callback;
@@ -157,7 +157,7 @@ function _uploadVideoFilterAsset() {
             }
           } else if (1 === tmp7) {
             constants = 0;
-            callback = mergeGuildAvatar;
+            callback = closure_5;
             const tmp24 = new callback(9663)(callback);
             throw tmp24;
           } else if (arg0 === 1) {
@@ -182,7 +182,7 @@ function _uploadVideoFilterAsset() {
             return obj6;
           }
         } catch (tmp27) {
-          mergeGuildAvatar = tmp27;
+          closure_5 = tmp27;
           if (tmp4 === constants) {
             c8 = tmp2;
             throw tmp27;
@@ -193,7 +193,7 @@ function _uploadVideoFilterAsset() {
       }
     })();
   });
-  const _uploadVideoFilterAsset = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -205,9 +205,9 @@ function _uploadVideoFilterAsset() {
 function _deleteVideoFilterAsset() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -235,12 +235,12 @@ function _deleteVideoFilterAsset() {
               obj[0] = arg1;
               return obj;
             } else {
-              const dependencyMap = tmp2;
+              dependencyMap = tmp2;
               let lib2 = tmp5;
               lib2 = undefined;
-              const HTTP = lib(outer1_2[4]).HTTP;
-              const obj1 = { url: null, rejectWithError: false };
-              obj1[0] = outer1_6.VIDEO_FILTER_ASSET(lib.id);
+              const HTTP = lib(closure_1_2[4]).HTTP;
+              obj1 = { url: null, rejectWithError: false };
+              obj1[0] = closure_1_6.VIDEO_FILTER_ASSET(lib.id);
               c3 = 1;
               c4 = 1;
               const obj2 = { value: null, done: false };
@@ -279,7 +279,7 @@ function _deleteVideoFilterAsset() {
       }
     })();
   });
-  const _deleteVideoFilterAsset = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -301,18 +301,18 @@ function saveLastUsedBackgroundOption() {
 function _saveLastUsedBackgroundOption() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      const dependencyMap = tmp2;
-      const PreloadedUserSettingsActionCreators = lib(outer1_2[9]).PreloadedUserSettingsActionCreators;
+      dependencyMap = tmp2;
+      const PreloadedUserSettingsActionCreators = lib(closure_1_2[9]).PreloadedUserSettingsActionCreators;
       yield PreloadedUserSettingsActionCreators.updateAsync("voiceAndVideo", (arg0) => {
         arg0.videoBackgroundFilterDesktop = callback(tmp2[8]).getVideoBackgroundProtoFromOption(callback);
-      }, lib(outer1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION);
+      }, lib(closure_1_2[9]).UserSettingsDelay.FREQUENT_USER_ACTION);
       if (1 === tmp5) {
         if (arg0 === 1) {
-          let c4 = 3;
+          c4 = 3;
           throw arg1;
         } else if (arg0 === 2) {
           c4 = 3;
@@ -324,7 +324,7 @@ function _saveLastUsedBackgroundOption() {
             const HTTP = lib(530).HTTP;
             let obj3 = { url: null, rejectWithError: false };
             obj3[0] = closure_6.VIDEO_FILTER_ASSET_LAST_USED(lib.id);
-            let c3 = 2;
+            c3 = 2;
             c4 = 1;
             const obj4 = { value: null, done: false };
             obj4[0] = HTTP.post(obj3);
@@ -351,7 +351,7 @@ function _saveLastUsedBackgroundOption() {
       return arg1;
     })();
   });
-  const _saveLastUsedBackgroundOption = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -360,7 +360,7 @@ function _saveLastUsedBackgroundOption() {
   }
   return applyArgumentsResult;
 }
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/video_backgrounds/VideoBackgroundActionCreators.tsx");
 
 export const fetchVideoFilterAssets = function fetchVideoFilterAssets() {
   const self = this;
@@ -394,19 +394,19 @@ export const deleteVideoFilterAsset = function deleteVideoFilterAsset() {
 };
 export { saveLastUsedBackgroundOption };
 export const applyMediaFilterSettings = function applyMediaFilterSettings(arg0) {
-  if (_detectH265HardwareDecode.isSupported()) {
-    let obj = dispatcher;
+  if (closure_4.isSupported()) {
+    let obj = dispatcherDefault;
     obj = { type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: null };
     obj[1] = arg0;
     obj.dispatch(obj);
   }
 };
 export const startApplyMediaFilterSettings = function startApplyMediaFilterSettings() {
-  if (_detectH265HardwareDecode.isSupported()) {
-    dispatcher.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
-    const obj = dispatcher;
+  if (closure_4.isSupported()) {
+    dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_START" });
+    const obj = dispatcherDefault;
   }
 };
 export const errorApplyingMediaFilterSettings = function errorApplyingMediaFilterSettings() {
-  dispatcher.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
+  dispatcherDefault.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS_ERROR" });
 };

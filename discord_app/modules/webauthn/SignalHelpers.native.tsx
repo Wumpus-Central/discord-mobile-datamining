@@ -1,15 +1,16 @@
 // discord_app/modules/webauthn/SignalHelpers.native.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { NativeModules } from "get ActivityIndicator";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
 const require = arg1;
-let c4 = new require("encodeUserIdForWebAuthn")("SignalHelpers.native");
+let closure_4 = new timestampDefault("SignalHelpers.native");
 const prototype = function SignalHelpers() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredentials(c0, id, found) {
-  let closure_0 = c0;
-  let closure_1 = id;
+  closure_0 = c0;
+  closure_1 = id;
   return callback(function*() {
     if (v0 === 2) {
       v0 = 3;
@@ -36,23 +37,23 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
-          } else if (undefined !== outer1_3.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
-            let obj1 = v0(table[3]);
+          } else if (undefined !== closure_1_3.DCDSecurityKeyManager.signalAllAcceptedCredentials) {
+            obj1 = v0(table[3]);
             const result = obj1.encodeUserIdForWebAuthn(table);
             const mapped = v0.map((cred_id) => cred_id.cred_id);
             const found = mapped.filter((arg0) => "" !== arg0);
             obj1 = { rpId: null, encodedId: null, allAcceptedCredentialIds: null, credentials: null };
-            obj1[0] = outer1_5;
+            obj1[0] = closure_1_5;
             obj1[1] = result;
             obj1[2] = found;
             obj1[3] = v0;
-            outer1_4.info("signalAllAcceptedCredentials", obj1);
+            closure_1_4.info("signalAllAcceptedCredentials", obj1);
             const DCDSecurityKeyManager = tmp20.DCDSecurityKeyManager;
-            const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(outer1_5, result, found);
+            const result1 = DCDSecurityKeyManager.signalAllAcceptedCredentials(closure_1_5, result, found);
             table = 1;
             v0 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = result1.catch(outer1_4.warn);
+            obj2[0] = result1.catch(closure_1_4.warn);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -74,7 +75,7 @@ prototype["signalAllAcceptedCredentials"] = function signalAllAcceptedCredential
   })();
 };
 prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, result, username, username2) {
-  let closure_0 = c0;
+  closure_0 = c0;
   return callback(function*() {
     if (c2 === 2) {
       c2 = 3;
@@ -102,9 +103,9 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
             obj[0] = arg1;
             return obj;
           } else if (undefined !== obj.DCDSecurityKeyManager.signalCurrentUserDetails) {
-            let obj1 = outer1_0(outer1_1[3]);
-            const result = obj1.encodeUserIdForWebAuthn(outer1_0.id);
-            const email = outer1_0.email;
+            obj1 = closure_1_0(closure_1_1[3]);
+            const result = obj1.encodeUserIdForWebAuthn(closure_1_0.id);
+            const email = closure_1_0.email;
             let global_name = email;
             if (email == null) {
               global_name = tmp7.global_name;
@@ -115,17 +116,17 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
             }
             username = tmp7.username;
             obj1 = { rpId: null, encodedId: null, name: null, displayName: null };
-            obj1[0] = outer1_5;
+            obj1[0] = closure_1_5;
             obj1[1] = result;
             obj1[2] = username;
             obj1[3] = username;
-            outer1_4.info("signalCurrentUserDetails", obj1);
+            closure_1_4.info("signalCurrentUserDetails", obj1);
             const DCDSecurityKeyManager = tmp26.DCDSecurityKeyManager;
-            const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(outer1_5, result, username, username);
+            const result1 = DCDSecurityKeyManager.signalCurrentUserDetails(closure_1_5, result, username, username);
             obj = 1;
             c2 = 1;
             const obj2 = { value: null, done: false };
-            obj2[0] = result1.catch(outer1_4.warn);
+            obj2[0] = result1.catch(closure_1_4.warn);
             return obj2;
           }
         } else if (arg0 === 1) {
@@ -147,7 +148,7 @@ prototype["signalCurrentUserDetails"] = function signalCurrentUserDetails(c0, re
   })();
 };
 prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred_id) {
-  let closure_0 = c0;
+  closure_0 = c0;
   return callback(function*() {
     if (c0 === 2) {
       c0 = 3;
@@ -175,9 +176,9 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
             obj[0] = arg1;
             return obj;
           } else {
-            let _catch = outer1_3;
-            if (undefined !== outer1_3.DCDSecurityKeyManager.signalUnknownCredential) {
-              let obj1 = c0;
+            let _catch = closure_1_3;
+            if (undefined !== closure_1_3.DCDSecurityKeyManager.signalUnknownCredential) {
+              obj1 = c0;
               if (typeof c0 === "string") {
                 const _JSON = JSON;
                 let cred_id = JSON.parse(obj1).id;
@@ -185,13 +186,13 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
                 cred_id = obj1.cred_id;
               }
               obj1 = { rpId: null, credentialId: null };
-              obj1[0] = outer1_5;
+              obj1[0] = closure_1_5;
               obj1[1] = cred_id;
-              outer1_4.info("signalUnknownCredential", obj1);
+              closure_1_4.info("signalUnknownCredential", obj1);
               const DCDSecurityKeyManager = _catch.DCDSecurityKeyManager;
-              const result = DCDSecurityKeyManager.signalUnknownCredential(outer1_5, cred_id);
+              const result = DCDSecurityKeyManager.signalUnknownCredential(closure_1_5, cred_id);
               _catch = result.catch;
-              _catch(outer1_4.warn);
+              _catch(closure_1_4.warn);
               c1 = 1;
               c0 = 1;
             }
@@ -214,7 +215,7 @@ prototype["signalUnknownCredential"] = function signalUnknownCredential(c0, cred
     }
   })();
 };
-const tmp2 = new require("encodeUserIdForWebAuthn")("SignalHelpers.native");
-let result = require("timestamp").fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
+const tmp2 = new timestampDefault("SignalHelpers.native");
+let result = require("set").fileFinishedImporting("modules/webauthn/SignalHelpers.native.tsx");
 
 export default prototype;

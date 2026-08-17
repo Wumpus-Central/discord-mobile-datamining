@@ -1,6 +1,8 @@
 // discord_app/modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx
-import { logFastestListError } from "FastestListLogger.native.tsx";
-const result = require("set").fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");
+import set from "set" /* 2 */;
+import logFastestListError from "logFastestListError" /* 8640 */;
+
+const result = set.fileFinishedImporting("modules/fastest_list/utils/getFastestListSectionsWithErrorChecking.native.tsx");
 
 export default function getFastestListSectionsWithErrorChecking(itemSizes) {
   if (tmp) {

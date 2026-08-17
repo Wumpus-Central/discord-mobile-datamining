@@ -1,64 +1,57 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "ACTION_SHEET_HEIGHT_HALF";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getIsScreenLandscape } from "../../../../screen/useIsScreenLandscape.native.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import Background from "Background" /* 6950 */;
+import getIsScreenLandscape from "getIsScreenLandscape" /* 8944 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import ME from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
-({ GuildSettingsSections: error, GuildSettingsSubsections: metroImportAll } = ME);
+require = arg1;
+({ GuildSettingsSections: error, GuildSettingsSubsections: closure_8 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
 createCacheKey = { container: null, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+createCacheKey[1] = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = { marginTop: 16, alignItems: "center" };
 createCacheKey[3] = { marginTop: 24, textAlign: "center" };
 createCacheKey[4] = { marginTop: 12, textAlign: "center" };
 createCacheKey[5] = { marginTop: 32 };
 createCacheKey[6] = { marginBottom: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateUpsellActionSheet.tsx");
 
 export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0) {
-  let c2;
-  let markAsDismissed;
-  let require;
-  let tmp3;
   ({ guildId: require, markAsDismissed } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   [tmp3, c2] = callback(React.useState(0), 2);
   let obj = getIsScreenLandscape;
   callback = obj.useIsScreenLandscape();
-  let obj1 = defaultAreStatesEqual;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  obj1 = defaultAreStatesEqual;
+  const items = [closure_6];
   const items1 = [markAsDismissed];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  const effect = React.useEffect(() => () => callback(outer1_9.UNKNOWN), items1);
+  const effect = React.useEffect(() => () => callback(closure_1_9.UNKNOWN), items1);
   obj = { startExpanded: true, children: null };
   obj = {
     style: tmp.container,
     onLayout(nativeEvent) {
       const diff = nativeEvent.nativeEvent.layout.width - 32;
       let result = diff;
-      if (_slicedToArray) {
+      if (closure_3) {
         result = diff / 2;
       }
       c2(result);
@@ -88,8 +81,8 @@ export default function GuildRoleSubscriptionTierTemplateUpsellActionSheet(arg0)
   const intl4 = getSystemLocale.intl;
   obj8[0] = intl4.string(getSystemLocale.t.BQq86h);
   obj8[1] = function onPress() {
-    markAsDismissed(_undefined[16]).open(closure_0, outer1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, outer1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
-    markAsDismissed(outer1_9.UNKNOWN);
+    markAsDismissed(_undefined[16]).open(closure_0, closure_1_7.ROLE_SUBSCRIPTIONS_TIERS, undefined, closure_1_8.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+    markAsDismissed(closure_1_9.UNKNOWN);
   };
   obj7[1] = callback2(Button.Button, obj8);
   const items5 = [callback2(View, obj7), ];

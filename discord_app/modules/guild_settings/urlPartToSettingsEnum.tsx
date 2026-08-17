@@ -1,5 +1,7 @@
 // discord_app/modules/guild_settings/urlPartToSettingsEnum.tsx
-const result = require("set").fileFinishedImporting("modules/guild_settings/urlPartToSettingsEnum.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_settings/urlPartToSettingsEnum.tsx");
 
 export default function urlPartToSettingsEnum(arg0, str) {
   let formatted;

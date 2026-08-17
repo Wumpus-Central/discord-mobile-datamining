@@ -1,18 +1,16 @@
 // discord_app/modules/user_profile/maybeFetchUserProfile.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "createUserWidgetFromServer" /* 5365 */;
 import { _fetchProfile } from "../../actions/UserActionCreators.tsx";
 import { hasFetchedColors } from "../avatar/useAvatarColor.tsx";
 import { openCollectiblesShop } from "../collectibles/CollectiblesActionCreators.tsx";
 import { officialApplicationIds } from "../connections/ConnectionsUtils.tsx";
 
 const require = arg1;
-let result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/maybeFetchUserProfile.tsx");
 
 export default function maybeFetchUserProfile(id, closure_0, guildMember) {
-  let type;
-  let withMutualGuilds;
   const _require = id;
   let obj = guildMember;
   if (guildMember === undefined) {
@@ -158,8 +156,8 @@ export default function maybeFetchUserProfile(id, closure_0, guildMember) {
     obj[7] = tmp34;
     if (flag3) {
       obj(709).wait(() => {
-        const obj = id(outer1_2[7]);
-        return obj.fetchProfile(id, obj, obj(outer1_2[8]));
+        obj = id(closure_1_2[7]);
+        return obj.fetchProfile(id, obj, obj(closure_1_2[8]));
       });
       return Promise.resolve();
     } else {

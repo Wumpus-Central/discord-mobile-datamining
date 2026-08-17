@@ -1,5 +1,7 @@
 // discord_app/modules/channel/sanitizeGuildTextChannelName.tsx
-const result = require("set").fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/channel/sanitizeGuildTextChannelName.tsx");
 
 export default function sanitizeGuildTextChannelName(str) {
   str = str.replace(/[\s-~]+/g, "-");

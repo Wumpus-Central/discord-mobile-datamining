@@ -1,22 +1,13 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestPlayerRefactor.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import _toPropertyKey from "_toPropertyKey";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "_toPropertyKey" /* 7455 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c4 = importAllResult;
 const memoResult = importAllResult.memo((onLoad) => {
-  let c15;
-  let externallyPaused;
-  let handleOpenTranscript;
-  let handleToggleCaptions;
-  let hasCaptionAsset;
-  let isFullscreen;
-  let sourceQuestContent;
-  let style;
-  let tmp16;
   onLoad = onLoad.onLoad;
   const onEnd = onLoad.onEnd;
   const onToggleFullscreen = onLoad.onToggleFullscreen;
@@ -40,12 +31,12 @@ const memoResult = importAllResult.memo((onLoad) => {
   let memo;
   let memo1;
   let first;
-  let closure_11;
+  closure_11 = undefined;
   let targetSeconds;
-  let c13;
+  closure_13 = undefined;
   let ref;
   c15 = undefined;
-  let closure_16;
+  closure_16 = undefined;
   let handleBufferAnalytics;
   let handleEndAnalytics;
   let handleErrorAnalytics;
@@ -56,14 +47,14 @@ const memoResult = importAllResult.memo((onLoad) => {
   let handleReadyForDisplayAnalytics;
   let handleResumePlaybackAnalytics;
   let handleSeekAnalytics;
-  let closure_27;
+  closure_27 = undefined;
   let id;
   let gameTitle;
   let url1;
   let videoTitle;
   let str;
-  let closure_33;
-  let closure_34;
+  closure_33 = undefined;
+  closure_34 = undefined;
   let obj = onLoad(onToggleFullscreen[5]);
   const videoQuestModalContext = obj.useVideoQuestModalContext();
   quest = videoQuestModalContext.quest;
@@ -91,7 +82,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   closure_11 = tmp10[1];
   targetSeconds = questTaskDetails.targetSeconds;
   const tmp12 = flag((setVideoProgress) => setVideoProgress.setVideoProgress);
-  c13 = tmp12;
+  closure_13 = tmp12;
   let obj2 = onLoad(onToggleFullscreen[6]);
   ref = obj3.useRef(null);
   const tmp13 = flag((arg0) => {
@@ -160,7 +151,7 @@ const memoResult = importAllResult.memo((onLoad) => {
             obj = { videoRef: null, feature: "quests", appVersion: null, releaseChannel: null, contentMetadata: null };
             obj[0] = tmp.current;
             ({ Version: obj4[2], ReleaseChannel: obj4[3] } = constants);
-            const obj1 = { contentId: null, videoStreamType: null, contentType: "quests", durationMs: null, title: null, questId: null, gameName: null };
+            obj1 = { contentId: null, videoStreamType: null, contentType: "quests", durationMs: null, title: null, questId: null, gameName: null };
             obj1[0] = arr;
             obj1[1] = str;
             obj1[3] = 1000 * targetSeconds;
@@ -188,7 +179,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   }, items2);
   const items3 = [handleReadyForDisplayAnalytics];
   const callback = obj3.useCallback((arg0) => {
-    _undefined2(arg0);
+    _undefined(arg0);
   }, []);
   const items4 = [handleLoadAnalytics, onLoad];
   const callback1 = obj3.useCallback(() => {
@@ -200,10 +191,6 @@ const memoResult = importAllResult.memo((onLoad) => {
   }, items3);
   const items5 = [first, handleSeekAnalytics, quest.id, tmp12];
   const callback2 = obj3.useCallback((arg0) => {
-    let duration;
-    let naturalSize;
-    let trackId;
-    let videoTracks;
     ({ duration, videoTracks, trackId, naturalSize } = arg0);
     callback(duration);
     handleLoadAnalytics();
@@ -240,7 +227,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   const callback3 = obj3.useCallback((currentTime) => {
     closure_16.current = currentTime.currentTime;
     if (first > 0) {
-      _undefined(quest.id, currentTime.currentTime, tmp);
+      callback2(quest.id, currentTime.currentTime, tmp);
     }
     handleSeekAnalytics(currentTime.fromTimeSec, currentTime.currentTime);
     const current = closure_27.current;
@@ -271,7 +258,7 @@ const memoResult = importAllResult.memo((onLoad) => {
       tmp2.current = currentTime.currentTime + 1;
       const obj = onLoad(onToggleFullscreen[15]);
     }
-    _undefined(quest.id, currentTime.currentTime, currentTime.seekableDuration);
+    callback2(quest.id, currentTime.currentTime, currentTime.seekableDuration);
     const current = closure_27.current;
     if (current != null) {
       current.onProgress(currentTime.currentTime);
@@ -313,8 +300,6 @@ const memoResult = importAllResult.memo((onLoad) => {
     }
   }, items9);
   const callback8 = obj3.useCallback((arg0) => {
-    let selectedVideoTrackId;
-    let videoTracks;
     ({ videoTracks, selectedVideoTrackId } = arg0);
     let tmp = null != videoTracks;
     if (tmp) {
@@ -335,8 +320,6 @@ const memoResult = importAllResult.memo((onLoad) => {
   }, []);
   const items10 = [handleResumePlaybackAnalytics];
   const callback9 = obj3.useCallback((nativeEvent) => {
-    let height;
-    let width;
     let layout;
     if (nativeEvent != null) {
       nativeEvent = nativeEvent.nativeEvent;
@@ -488,7 +471,7 @@ const memoResult = importAllResult.memo((onLoad) => {
   }
   const tmpResult = onLoad(onToggleFullscreen[11]);
 });
-let result = require("_toPropertyKey").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerRefactor.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestPlayerRefactor.tsx");
 
 export const PlayerState = require("PlayerState").PlayerState;
 export const VideoQuestPlayer = memoResult;

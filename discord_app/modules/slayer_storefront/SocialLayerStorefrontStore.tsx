@@ -1,22 +1,23 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontStore.tsx
-import _getSystemLocale from "_getSystemLocale";
-import fetchFingerprint from "fetchFingerprint";
-import { Store } from "initialize";
-import set from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_1 from "_getSystemLocale" /* 1994 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 2 */;
 
 function handleUserSettingsStoreUpdate() {
-  if (locale === _getSystemLocale.locale) {
+  if (locale === closure_1.locale) {
     return false;
   } else {
     locale = tmp.locale;
-    let closure_3 = {};
-    let closure_4 = {};
-    let closure_5 = {};
-    let closure_6 = {};
-    let closure_7 = {};
-    let closure_8 = {};
-    let closure_9 = {};
-    let closure_10 = {};
+    closure_3 = {};
+    closure_4 = {};
+    closure_5 = {};
+    closure_6 = {};
+    closure_7 = {};
+    closure_8 = {};
+    closure_9 = {};
+    closure_10 = {};
   }
 }
 let closure_3 = {};
@@ -39,14 +40,15 @@ let closure_19 = {};
 let closure_20 = {};
 let set2 = new Set();
 let c22 = null;
+const Store = initializeDefault.Store;
 class SocialLayerStorefrontStore extends Store {
 }
 const prototype = SocialLayerStorefrontStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, _getSystemLocale);
-  const items = [_getSystemLocale];
+  this.waitFor(closure_2, closure_1);
+  const items = [closure_1];
   this.syncWith(items, handleUserSettingsStoreUpdate);
-  const locale = _getSystemLocale.locale;
+  const locale = closure_1.locale;
 };
 prototype["getStorefrontData"] = function getStorefrontData(arg0) {
   return dependencyMap[arg0];
@@ -84,8 +86,8 @@ prototype["getStorefrontMetadata"] = function getStorefrontMetadata(arg0) {
 prototype["getStorefrontEntries"] = function getStorefrontEntries(closure_0) {
   return table2[closure_0];
 };
-prototype["getStorefrontById"] = function getStorefrontById(_getSystemLocale) {
-  return table3[_getSystemLocale];
+prototype["getStorefrontById"] = function getStorefrontById(closure_1) {
+  return table3[closure_1];
 };
 prototype["getPreviewStorefrontId"] = function getPreviewStorefrontId(closure_0) {
   let tmp = table4[closure_0];
@@ -162,35 +164,35 @@ prototype["getAnnouncementModalContentConfig"] = function getAnnouncementModalCo
   return c22;
 };
 SocialLayerStorefrontStore.displayName = "SocialLayerStorefrontStore";
-const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispatcher"), {
+const socialLayerStorefrontStore = new SocialLayerStorefrontStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
-    let closure_9 = {};
-    let closure_10 = {};
-    let closure_12 = {};
-    let closure_13 = {};
-    let closure_5 = {};
-    let closure_4 = {};
-    let closure_6 = {};
-    let closure_7 = {};
-    let closure_8 = {};
-    const set = new Set();
-    let closure_15 = { state: "idle" };
-    const set1 = new Set();
-    let closure_17 = {};
-    let closure_18 = {};
-    let closure_19 = {};
-    let closure_20 = {};
-    const set2 = new Set();
-    let c22 = null;
+    closure_9 = {};
+    closure_10 = {};
+    closure_12 = {};
+    closure_13 = {};
+    closure_5 = {};
+    closure_4 = {};
+    closure_6 = {};
+    closure_7 = {};
+    closure_8 = {};
+    set = new Set();
+    closure_15 = { state: "idle" };
+    set1 = new Set();
+    closure_17 = {};
+    closure_18 = {};
+    closure_19 = {};
+    closure_20 = {};
+    set2 = new Set();
+    c22 = null;
   },
   STOREFRONT_PROMOTION_ID_OVERRIDE_SET: function handleStorefrontPromotionIdOverrideSet() {
-    let closure_5 = {};
-    let closure_4 = {};
+    closure_5 = {};
+    closure_4 = {};
   },
   POST_CONNECTION_OPEN: function handlePostConnectionOpen() {
-    let closure_12 = {};
-    let closure_13 = {};
-    const set = new Set();
+    closure_12 = {};
+    closure_13 = {};
+    set = new Set();
   },
   ENTITLEMENT_CREATE: function handleEntitlementCreate(entitlement) {
     entitlement = entitlement.entitlement;
@@ -263,8 +265,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     const merged5 = Object.assign(obj2);
   },
   SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS: function handleSocialLayerStorefrontLoadSuccess(arg0) {
-    let guildOrApplicationId;
-    let storefront;
     ({ guildOrApplicationId, storefront } = arg0);
     if ("guild" === guildOrApplicationId.type) {
       let guildId2 = guildOrApplicationId.guildId;
@@ -302,7 +302,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     const applicationId2 = storefront.applicationId;
     obj = { state: "fetched", fetchedAt: Date.now(), storefront };
     if (null != guildId2) {
-      const obj1 = {};
+      obj1 = {};
       const merged2 = Object.assign(obj3[guildId2]);
       const merged3 = Object.assign(obj);
       obj3[guildId2] = obj1;
@@ -329,8 +329,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     const merged1 = Object.assign(assets.assets);
   },
   SOCIAL_LAYER_STOREFRONT_METADATA_LOAD_SUCCESS: function handleSocialLayerStorefrontMetadataLoadSuccess(arg0) {
-    let applicationId;
-    let storefrontMetadata;
     const obj = {};
     ({ applicationId, storefrontMetadata } = arg0);
     const merged = Object.assign(obj);
@@ -366,7 +364,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
             obj8[guildId] = obj;
           }
           if (null != applicationId) {
-            const obj1 = {};
+            obj1 = {};
             const merged2 = Object.assign(obj9[applicationId]);
             const merged3 = Object.assign(obj);
             obj9[applicationId] = obj1;
@@ -424,8 +422,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     obj[guildId.guildId] = { state: "loading" };
   },
   SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT_FETCH_SUCCESS: function handleSocialLayerStorefrontAnnouncementFetchSuccess(arg0) {
-    let announcement;
-    let guildId;
     const obj = {};
     ({ guildId, announcement } = arg0);
     const merged = Object.assign(obj);
@@ -437,37 +433,37 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     obj[guildId.guildId] = { state: "error" };
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START: function handleStorefrontConfigFetchStart() {
-    let closure_15 = { state: "loading" };
+    closure_15 = { state: "loading" };
   },
   SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS: function handleStorefrontConfigFetchSuccess(config) {
     config = config.config;
     const obj = { state: "success", config, fetchedAt: Date.now() };
     const storefronts = config.storefronts;
-    const set = new Set(storefronts.map((applicationId) => applicationId.applicationId));
+    set = new Set(storefronts.map((applicationId) => applicationId.applicationId));
     const storefronts1 = config.storefronts;
     const found = storefronts1.filter((guildId) => null != guildId.guildId);
-    const set1 = new Set(found.map((guildId) => guildId.guildId));
+    set1 = new Set(found.map((guildId) => guildId.guildId));
     const storefronts2 = config.storefronts;
-    let closure_17 = storefronts2.reduce((arg0, guildId) => {
+    closure_17 = storefronts2.reduce((arg0, guildId) => {
       if (null != guildId.guildId) {
         arg0[guildId.guildId] = guildId.applicationId;
       }
       return arg0;
     }, {});
     const storefronts3 = config.storefronts;
-    let closure_18 = storefronts3.reduce((arg0, guildId) => {
+    closure_18 = storefronts3.reduce((arg0, guildId) => {
       if (null != guildId.guildId) {
         ({ guildId: arg0[guildId.applicationId], guildId: arg0[guildId.gameId] } = guildId);
       }
       return arg0;
     }, {});
     const storefronts4 = config.storefronts;
-    let closure_19 = storefronts4.reduce((arg0, arg1) => {
+    closure_19 = storefronts4.reduce((arg0, arg1) => {
       ({ applicationId: arg0[arg1.gameId], applicationId: arg0[arg1.applicationId] } = arg1);
       return arg0;
     }, {});
     const storefronts5 = config.storefronts;
-    let closure_20 = storefronts5.reduce((arg0, applicationId) => {
+    closure_20 = storefronts5.reduce((arg0, applicationId) => {
       arg0[applicationId.applicationId] = applicationId;
       return arg0;
     }, {});
@@ -481,8 +477,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     obj[skuId.skuId] = { state: "checking" };
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_CREATE: function handleSKUPurchaseEligibilityCheckCreate(arg0) {
-    let interactionId;
-    let skuId;
     ({ skuId, interactionId } = arg0);
     let state;
     if (obj[skuId] != null) {
@@ -500,8 +494,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     }
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_CHECK_FAILURE: function handleSKUPurchaseEligibilityCheckFailure(httpStatus) {
-    let reason;
-    let skuId;
     ({ skuId, reason } = httpStatus);
     if (reason === undefined) {
       reason = "http_error";
@@ -520,10 +512,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     obj[skuId] = { state: "error", reason, httpStatus: httpStatus.httpStatus };
   },
   SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE: function handleSKUPurchaseEligibilityResponse(arg0) {
-    let eligible;
-    let ineligibleReason;
-    let recipientId;
-    let skuId;
     ({ skuId, recipientId, eligible, ineligibleReason } = arg0);
     if (id.getId() !== recipientId) {
       return false;
@@ -545,8 +533,6 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     obj[applicationId.applicationId] = { state: "loading" };
   },
   SOCIAL_LAYER_STOREFRONT_ENTRIES_LOAD_SUCCESS: function handleSocialLayerStorefrontEntriesLoadSuccess(arg0) {
-    let applicationId;
-    let entries;
     let obj = {};
     ({ applicationId, entries } = arg0);
     const merged = Object.assign(obj);
@@ -602,7 +588,7 @@ const socialLayerStorefrontStore = new SocialLayerStorefrontStore(require("dispa
     config = config.config;
   },
   SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE: function handleLaunchAnnouncementFetchFailure() {
-    let c22 = null;
+    c22 = null;
   }
 });
 const result = set.fileFinishedImporting("modules/slayer_storefront/SocialLayerStorefrontStore.tsx");

@@ -1,12 +1,13 @@
 // discord_app/design/components/Input/native/useInputClearButton.native.tsx
-import "noop";
-import { Pressable } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CircleXIcon } from "../../Icon/native/redesign/generated/CircleXIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import CircleXIcon from "CircleXIcon" /* 7341 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/components/Input/native/useInputClearButton.native.tsx");
 
 export const useInputClearButton = function useInputClearButton(clearProps, clearState) {
   let tmp;

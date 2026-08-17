@@ -1,9 +1,11 @@
 // discord_app/modules/media_channel/MediaPostEmbedStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCHED: 2, [2]: "FETCHED", FAILED: 3, [3]: "FAILED" };
 let closure_1 = {};
 let closure_2 = {};
+const Store = initializeDefault.Store;
 class MediaPostEmbedStore extends Store {
 }
 const prototype = MediaPostEmbedStore.prototype;
@@ -25,15 +27,15 @@ prototype["getMediaPostEmbeds"] = function getMediaPostEmbeds() {
 MediaPostEmbedStore.displayName = "MediaPostEmbedStore";
 obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_1 = {};
-    let closure_2 = {};
+    closure_1 = {};
+    closure_2 = {};
   },
   MEDIA_POST_EMBED_FETCH: function handleFetchMediaPostEmbed(threadId) {
     closure_2[threadId.threadId] = obj.FETCHING;
   },
   MEDIA_POST_EMBED_FETCH_SUCCESS: function handleFetchMediaPostEmbedSuccess(threadId) {
     threadId = threadId.threadId;
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj[threadId] = threadId.mediaPostEmbed;
     closure_2[threadId] = obj.FETCHED;
@@ -43,12 +45,12 @@ obj = {
   },
   LOGOUT: function handleLogout(isSwitchingAccount) {
     if (!isSwitchingAccount.isSwitchingAccount) {
-      let closure_1 = {};
-      let closure_2 = {};
+      closure_1 = {};
+      closure_2 = {};
     }
   }
 };
-const mediaPostEmbedStore = new MediaPostEmbedStore(require("dispatcher"), obj);
+const mediaPostEmbedStore = new MediaPostEmbedStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostEmbedStore.tsx");
 
 export default mediaPostEmbedStore;

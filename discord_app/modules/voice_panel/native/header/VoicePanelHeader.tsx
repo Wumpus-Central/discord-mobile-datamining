@@ -1,40 +1,36 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelHeader.tsx
-import registerAsset from "registerAsset";
-import importAllResult from "Themes";
-import get_ActivityIndicator from "jsxProd";
-import getParticipants from "getParticipants";
-import getHash from "getHash";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import anyoneHasFlagInContext from "anyoneHasFlagInContext";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import VoicePanelModes from "VoicePanelModes";
-import { EDGE_GUTTER } from "CARD_SIZE";
-import { VoicePanelControlsModes } from "VoicePanelControlsModes";
-import { ParticipantTypes } from "ParticipantTypes";
-import { ThemeTypes } from "sum";
-import jsxProd from "CONFIG_NEVER_ANIMATE";
-import createCacheKey from "createCacheKey";
-import { useMyCurrentStageChannelRole } from "../../../stage_channels/useMyCurrentStageChannelRole.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12591 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getParticipants" /* 4773 */;
+import closure_7 from "getHash" /* 4288 */;
+import closure_8 from "initialize" /* 12506 */;
+import closure_9 from "fetchFingerprint" /* 1218 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_12 from "markAllUserIdListsStale" /* 4030 */;
+import closure_13 from "anyoneHasFlagInContext" /* 4774 */;
+import closure_14 from "mergeGuildAvatar" /* 1922 */;
+import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import { EDGE_GUTTER } from "CARD_SIZE" /* 11443 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_23;
-let closure_24;
 const require = arg1;
 function MusicMuteButton(channelId) {
   channelId = channelId.channelId;
   let stateFromStores;
-  const tmp3 = useMyCurrentStageChannelRole(channelId);
+  const tmp3 = useMyCurrentStageChannelRoleDefault(channelId);
   if (tmp3 != null) {
     const speaker = tmp3.speaker;
   }
   let obj = stateFromStores(589);
-  const items = [initialize];
+  const items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => muted.isMuted());
   let tmp6 = null;
   if (obj2.useShowStageMusicMuteButton(channelId)) {
@@ -52,7 +48,7 @@ function MusicMuteButton(channelId) {
       obj[0] = stringResult;
       obj[1] = tmp(stateFromStores ? 12512 : 9905);
       obj[2] = function onPress() {
-        return stateFromStores(outer1_2[33]).updateStageMusicMuted(!stateFromStores);
+        return stateFromStores(closure_1_2[33]).updateStageMusicMuted(!stateFromStores);
       };
       closure_23(tmp(16254), obj);
       const tmp7 = closure_23;
@@ -80,9 +76,9 @@ obj[6] = { position: "relative" };
 obj[7] = { height: StyleSheet.hairlineWidth, opacity: 0.2 };
 obj[8] = { height: StyleSheet.hairlineWidth, opacity: 0.8 };
 obj[9] = { position: "absolute", left: 0, right: 0, bottom: 0, height: StyleSheet.hairlineWidth };
-createCacheKey = { width: 12, height: 12, borderRadius: require("Themes").radii.round, padding: 2 };
+createCacheKey = { width: 12, height: 12, borderRadius: ThemesDefault.radii.round, padding: 2 };
 obj[10] = createCacheKey;
-obj[11] = { width: 8, height: 8, borderRadius: require("Themes").radii.round };
+obj[11] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round };
 obj[12] = { marginLeft: -8 };
 let closure_26 = createCacheKey.createStyles(obj);
 let closure_27 = { DOWN: 0, [0]: "DOWN", LEFT: 1, [1]: "LEFT" };
@@ -115,7 +111,7 @@ let closure_32 = importAllResult.memo((isHeaderHidden) => {
   fn.__workletHash = 8127245112238;
   fn.__initData = closure_29;
   derivedValue = obj.useDerivedValue(fn);
-  let obj1 = isHeaderHidden(focused[20]);
+  obj1 = isHeaderHidden(focused[20]);
   const fn2 = function c() {
     let obj = isHeaderHidden(focused[21]);
     let num = 0;
@@ -130,14 +126,14 @@ let closure_32 = importAllResult.memo((isHeaderHidden) => {
   fn2.__workletHash = 10074943135400;
   fn2.__initData = closure_30;
   const animatedProps = obj1.useAnimatedProps(fn2);
-  let obj3 = isHeaderHidden(focused[20]);
+  obj3 = isHeaderHidden(focused[20]);
   const fn3 = function u() {
     let obj = isHeaderHidden(focused[21]);
     let num = 0;
     if (derivedValue.get()) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, outer1_28) };
+    obj = { opacity: obj.withSpring(num, closure_1_28) };
     return obj;
   };
   obj = { withSpring: isHeaderHidden(focused[21]).withSpring, showHeaderBlur: derivedValue, HEADER_CHANGE_PHYSICS: obj3 };
@@ -169,20 +165,20 @@ let closure_35 = importAllResult.memo(() => {
   const items = [id, sharedValue];
   const layoutEffect = derivedValue.useLayoutEffect(() => {
     function handleChange() {
-      const result = registerAsset.set(outer1_13.isSpeaking(handleChange));
+      const result = closure_3.set(closure_1_13.isSpeaking(handleChange));
     }
-    let result = sharedValue.set(outer1_13.isSpeaking(handleChange));
-    const result1 = outer1_13.addReactChangeListener(handleChange);
+    let result = sharedValue.set(closure_1_13.isSpeaking(handleChange));
+    const result1 = closure_1_13.addReactChangeListener(handleChange);
     return () => {
-      const result = outer2_13.removeReactChangeListener(handleChange);
+      const result = closure_2_13.removeReactChangeListener(handleChange);
     };
   }, items);
   const tmp5 = callback3();
-  let obj1 = id(controlsSpecs[20]);
+  obj1 = id(controlsSpecs[20]);
   const fn = function u() {
     let value = null != focused.get();
     if (value) {
-      value = controlsSpecs.get().mode !== outer1_20.HIDDEN;
+      value = controlsSpecs.get().mode !== closure_1_20.HIDDEN;
     }
     if (value) {
       value = sharedValue.get();
@@ -219,15 +215,8 @@ let closure_40 = { code: "function VoicePanelHeaderTsx9(){const{calculateVoicePa
 let closure_41 = { code: "function VoicePanelHeaderTsx10(){const{controlsSpecs,VoicePanelControlsModes,isScreenReaderEnabled}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.HIDDEN&&!isScreenReaderEnabled;}" };
 let closure_42 = { code: "function VoicePanelHeaderTsx11(){const{calculateVoicePanelHeaderSpecs,safeArea,edgeGutter,withTiming,isHeaderHidden,OPACITY_TIMING,withSpring,MODE_CHANGE_PHYSICS}=this.__closure;const{height:height}=calculateVoicePanelHeaderSpecs(safeArea.get(),edgeGutter);return{opacity:withTiming(isHeaderHidden.get()?0:1,OPACITY_TIMING),transform:[{translateY:withSpring(isHeaderHidden.get()?-height:0,MODE_CHANGE_PHYSICS)}]};}" };
 let closure_43 = { code: "function VoicePanelHeaderTsx12(){const{isHeaderHidden}=this.__closure;return{pointerEvents:isHeaderHidden.get()?'none':'box-none',importantForAccessibility:isHeaderHidden.get()?'no-hide-descendants':'auto',accessibilityElementsHidden:isHeaderHidden.get()};}" };
-let obj2 = { width: 8, height: 8, borderRadius: require("Themes").radii.round };
+let obj2 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round };
 const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset) {
-  let c10;
-  let c9;
-  let channelType;
-  let guildId;
-  let scrollPosition;
-  let tmp10;
-  let tmp12;
   wrapperOffset = wrapperOffset.wrapperOffset;
   const gestureState = wrapperOffset.gestureState;
   const layout = wrapperOffset.layout;
@@ -245,7 +234,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   let derivedValue;
   let derivedValue1;
   let DOWN;
-  let c16;
+  closure_16 = undefined;
   let tmp = callback3();
   let obj = controlsSpecs;
   const context = controlsSpecs.useContext(gestureState(channelId[25]));
@@ -256,7 +245,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   safeArea = context.safeArea;
   connected = context.connected;
   ({ guildId, channelType, scrollPosition } = context);
-  let obj1 = wrapperOffset(channelId[34]);
+  obj1 = wrapperOffset(channelId[34]);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const tmp7 = gestureState(channelId[35])(channelId);
   let obj2 = wrapperOffset(channelId[27]);
@@ -292,7 +281,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
     c10(tmp3);
     _undefined(arg0);
   }, items2);
-  let obj3 = wrapperOffset(channelId[20]);
+  obj3 = wrapperOffset(channelId[20]);
   class I {
     constructor() {
       value = focused.get();
@@ -323,8 +312,8 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   function ge() {
     const obj = mode;
     const tmp = gestureState(channelId[38]);
-    if (mode.get() === outer1_17.PIP) {
-      let num = -tmpResult.height + outer1_19;
+    if (mode.get() === closure_1_17.PIP) {
+      let num = -tmpResult.height + closure_1_19;
     } else {
       num = 0;
       if (obj.get() === tmp3.DISMISSED) {
@@ -348,13 +337,13 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
     if (connected.get()) {
       let sum = height;
     } else {
-      sum = height - tmp2Result.paddingTop + outer1_19;
+      sum = height - tmp2Result.paddingTop + closure_1_19;
     }
     obj = {};
     const tmp2 = gestureState(channelId[38]);
-    const tmp5 = outer1_17;
+    const tmp5 = closure_1_17;
     const merged = Object.assign(tmp2Result);
-    obj.paddingTop = connected.get() ? tmp2Result.paddingTop : outer1_19;
+    obj.paddingTop = connected.get() ? tmp2Result.paddingTop : closure_1_19;
     let num = 24;
     let num2 = 24;
     if (connected.get()) {
@@ -367,18 +356,18 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
     obj.borderTopRightRadius = num;
     obj.height = sum;
     const tmp10 = wrapperOffset;
-    const tmp8 = connected.get() ? tmp2Result.paddingTop : outer1_19;
-    if (value === outer1_17.PIP) {
+    const tmp8 = connected.get() ? tmp2Result.paddingTop : closure_1_19;
+    if (value === closure_1_17.PIP) {
       let num3 = 0;
     } else {
       num3 = 1;
     }
-    obj.opacity = wrapperOffset(channelId[39]).withTiming(num3, outer1_25);
+    obj.opacity = wrapperOffset(channelId[39]).withTiming(num3, closure_1_25);
     const obj4 = wrapperOffset(channelId[39]);
     value = derivedValue.get();
     if (!connected.get()) {
       if (wrapperOffset.get().gestureActive) {
-        let tmp13 = outer1_18;
+        let tmp13 = closure_1_18;
       }
       obj = { translateY: null };
       obj[0] = tmp10Result.withSpring(value, tmp13);
@@ -386,16 +375,16 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
       obj.transform = items;
       return obj;
     }
-    tmp13 = c16;
+    tmp13 = closure_16;
   }
-  obj1 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[38]), safeArea, edgeGutter: token, mode, VoicePanelModes: closure_17, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[39]).withTiming, OPACITY_TIMING: closure_25, withSpring: wrapperOffset(channelId[21]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18, UI_SHOW_HIDE_PHYSICS: c16 };
+  obj1 = { calculateVoicePanelHeaderSpecs: gestureState(channelId[38]), safeArea, edgeGutter: token, mode, VoicePanelModes: closure_17, connected, EDGE_GUTTER, withTiming: wrapperOffset(channelId[39]).withTiming, OPACITY_TIMING: closure_25, withSpring: wrapperOffset(channelId[21]).withSpring, yOffset: derivedValue, wrapperOffset, DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18, UI_SHOW_HIDE_PHYSICS: closure_16 };
   he.__closure = obj1;
   he.__workletHash = 11065699618122;
   he.__initData = closure_40;
   const animatedStyle = obj8.useAnimatedStyle(he);
   let obj10 = wrapperOffset(channelId[20]);
   function _e() {
-    let tmp = controlsSpecs.get().mode === outer1_20.HIDDEN;
+    let tmp = controlsSpecs.get().mode === closure_1_20.HIDDEN;
     if (tmp) {
       tmp = !isScreenReaderEnabled;
     }
@@ -413,7 +402,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
     if (derivedValue1.get()) {
       num = 0;
     }
-    obj = { opacity: obj.withTiming(num, outer1_25), transform: null };
+    obj = { opacity: obj.withTiming(num, closure_1_25), transform: null };
     const obj2 = derivedValue1;
     const tmp = channelId;
     const tmp2 = gestureState(channelId[38]);
@@ -435,9 +424,9 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   let obj14 = wrapperOffset(channelId[20]);
   class Se {
     constructor() {
-      obj = c14;
+      obj = closure_14;
       str = "box-none";
-      if (c14.get()) {
+      if (closure_14.get()) {
         str = "none";
       }
       obj = { pointerEvents: str, importantForAccessibility: null, accessibilityElementsHidden: null };
@@ -483,12 +472,12 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   }
   let tmp2Result = tmp2(tmp3[44]);
   const tmp2ResultResult = tmp2Result(store.getId(), channelId, guildId);
-  c16 = tmp2ResultResult;
+  closure_16 = tmp2ResultResult;
   let tmp5Result = tmp5(tmp3[27]);
   const items3 = [callback];
   const items4 = [tmp2ResultResult];
   const stateFromStores1 = tmp5Result.useStateFromStores(items3, () => {
-    if (null != c16) {
+    if (null != closure_16) {
       if (obj3.isStableUserParticipant(tmp)) {
         if (tmp10Result.stableParticipantHasVideo(tmp)) {
           const videoDevices = callback.getVideoDevices();
@@ -548,7 +537,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   }, []);
   const memo = obj.useMemo(() => {
     let str = "0deg";
-    if (DOWN === outer1_27.LEFT) {
+    if (DOWN === closure_1_27.LEFT) {
       str = "90deg";
     }
     const transform = [{ rotateZ: str }];
@@ -679,6 +668,6 @@ const memoResult = importAllResult.memo(function VoicePanelHeader(wrapperOffset)
   obj4[1] = closure_24(tmp2Result, obj5);
   return closure_23(wrapperOffset(channelId[48]).ThemeContextProvider, obj4);
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeader.tsx");
 
 export default memoResult;

@@ -1,20 +1,20 @@
 // discord_app/modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { useAppLauncherNavigation } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
 
-let require = arg1;
-const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useNavigationTransitionEnded.tsx");
 
 export default function useNavigationTransitionEnded() {
   const tmp = route(React.useState(false), 2);
-  const require = tmp2;
+  const _require = tmp2;
   const tmp3 = useAppLauncherNavigation();
-  const dependencyMap = tmp3;
-  route = createStandardNavigationFactories.useRoute();
+  dependencyMap = tmp3;
+  route = _createStandardNavigationFactories.useRoute();
   const items = [tmp3, route, tmp[1]];
-  const effect = React.useEffect(() => tmp3.addListener("transitionEnd", () => {
+  const effect = React.useEffect(() => closure_1.addListener("transitionEnd", () => {
     state = state.getState();
     if (state.routes[state.index].key === key.key) {
       callback(true);

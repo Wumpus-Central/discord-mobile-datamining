@@ -1,9 +1,9 @@
 // discord_app/modules/activities/useActivityShelfItems.tsx
-import noop from "noop";
-import initialize from "initialize";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initialize" /* 7872 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/activities/useActivityShelfItems.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItems.tsx");
 
 export default function useActivityShelfItems(enableFilter) {
   let flag = enableFilter.enableFilter;
@@ -11,9 +11,9 @@ export default function useActivityShelfItems(enableFilter) {
     flag = false;
   }
   let filter;
-  let dependencyMap;
+  dependencyMap = undefined;
   let developerActivityShelfItems;
-  let items = [initialize];
+  let items = [closure_4];
   filter = flag(589).useStateFromStoresObject(items, () => ({ filter: filter.getFilter() })).filter;
   const obj = flag(589);
   const activityShelfData = flag(11213).useActivityShelfData(enableFilter.guildId);
@@ -39,7 +39,7 @@ export default function useActivityShelfItems(enableFilter) {
     }
     const items = [...developerActivityShelfItems];
     const found = items.filter(shouldKeepShelfItem);
-    for (const item10023 of c2) {
+    for (const item10023 of closure_2) {
       let tmp = item10023;
       let hasItem = set.has(item10023.application.id);
       let shouldKeepShelfItemResult = !hasItem;

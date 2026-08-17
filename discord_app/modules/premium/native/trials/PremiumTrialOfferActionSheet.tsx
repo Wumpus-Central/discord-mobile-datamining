@@ -1,12 +1,12 @@
 // discord_app/modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx
-import noop from "noop";
-import { PremiumTypes } from "GuildFeatures";
-import { AnalyticEvents } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/trials/PremiumTrialOfferActionSheet.tsx");
 
 export default function _default(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
@@ -23,7 +23,7 @@ export default function _default(markAsDismissed) {
       obj = { location: null, trial_id: null };
       obj[0] = analyticsLocations;
       obj[1] = tmp.trialId;
-      obj.track(outer1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
+      obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_VIEWED, obj);
       const result = userTrialOffer(analyticsLocations[8]).acknowledgeUserTrialOffer(tmp);
       const obj3 = userTrialOffer(analyticsLocations[8]);
     }
@@ -31,7 +31,7 @@ export default function _default(markAsDismissed) {
   const items = [userTrialOffer, markAsDismissed];
   const effect1 = React.useEffect(() => {
     if (null == userTrialOffer) {
-      markAsDismissed(outer1_6.AUTO_DISMISS);
+      markAsDismissed(closure_1_6.AUTO_DISMISS);
     }
   }, items);
   const items1 = [analyticsLocations, markAsDismissed, userTrialOffer];
@@ -44,8 +44,8 @@ export default function _default(markAsDismissed) {
       trialId = userTrialOffer.trialId;
     }
     obj[1] = trialId;
-    obj.track(outer1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_DISMISSED, obj);
-    markAsDismissed(outer1_6.USER_DISMISS);
+    obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_DISMISSED, obj);
+    markAsDismissed(closure_1_6.USER_DISMISS);
   }, items1);
   const callback1 = React.useCallback(() => {
     let obj = userTrialOffer(analyticsLocations[7]);
@@ -55,8 +55,8 @@ export default function _default(markAsDismissed) {
       trialId = userTrialOffer.trialId;
     }
     obj[1] = trialId;
-    obj.track(outer1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_CTA_CLICKED, obj);
-    markAsDismissed(outer1_6.TAKE_ACTION);
+    obj.track(closure_1_5.PREMIUM_TRIAL_OFFER_ACTION_SHEET_CTA_CLICKED, obj);
+    markAsDismissed(closure_1_6.TAKE_ACTION);
     userTrialOffer(analyticsLocations[9])({ analyticsLocations });
   }, items2);
   markAsDismissed(analyticsLocations[10]);

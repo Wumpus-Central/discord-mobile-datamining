@@ -1,11 +1,9 @@
 // discord_app/modules/messages/MediaFormatTesters.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import set from "set";
-import set from "isIOSWithWebM";
-import { isIOSWithWebM } from "WebViewWebmSupportTest.native.tsx";
+import isIOSWithWebM from "isIOSWithWebM" /* 4812 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import set from "set" /* 500 */;
 
-const require = arg1;
+require = arg1;
 const re3 = /\.(png|jpe?g|jfif|webp|gif|heic|heif|dng|avif)$/i;
 const re4 = /\.(webp|gif|avif)$/i;
 if (set.isIOS()) {
@@ -14,7 +12,7 @@ if (set.isIOS()) {
   tmp2 = require("set").isAndroid() ? /\.(mp3|m4a|wav|ogg|opus|flac)$/i : /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i;
   let obj2 = require("set");
 }
-let c5 = tmp2;
+let closure_5 = tmp2;
 const re6 = /\.(webm)$/i;
 const re7 = /\.(riv)$/i;
 if (set.isIOS()) {
@@ -24,7 +22,7 @@ if (set.isIOS()) {
   tmp4 = /\.(mp4|webm|mov|qt)$/i;
   const obj4 = require("set");
 }
-const metroImportAll = tmp4;
+const re8 = tmp4;
 function urlMatchesFileExtension(sourceURI, GIF_RE_IOS) {
   if (null == sourceURI) {
     return false;
@@ -53,7 +51,7 @@ function isWebPlayerVideoFile(filename) {
     const obj = isIOSWithWebM;
   }
   if (isIOSWithWebMResult) {
-    isIOSWithWebMResult = regex2.test(filename);
+    isIOSWithWebMResult = regex3.test(filename);
   }
   return isIOSWithWebMResult;
 }
@@ -94,7 +92,7 @@ export const isAnimatedImageUrl = function isAnimatedImageUrl(coverImage) {
 export const isAudioFile = function isAudioFile(filename) {
   let isMatch = null != filename;
   if (isMatch) {
-    isMatch = tmp2.test(filename);
+    isMatch = regex2.test(filename);
   }
   return isMatch;
 };
@@ -125,7 +123,7 @@ export { isWebPlayerVideoFile };
 export const isVideoFile = function isVideoFile(filename) {
   let tmp = null != filename;
   if (tmp) {
-    let isMatch = tmp4.test(filename);
+    let isMatch = regex5.test(filename);
     if (!isMatch) {
       let isIOSWithWebMResult = null != filename;
       if (isIOSWithWebMResult) {
@@ -133,7 +131,7 @@ export const isVideoFile = function isVideoFile(filename) {
         const obj = isIOSWithWebM;
       }
       if (isIOSWithWebMResult) {
-        isIOSWithWebMResult = regex2.test(filename);
+        isIOSWithWebMResult = regex3.test(filename);
       }
       isMatch = isIOSWithWebMResult;
     }
@@ -144,7 +142,7 @@ export const isVideoFile = function isVideoFile(filename) {
 export const isRiveFile = function isRiveFile(arg0) {
   let isMatch = null != arg0;
   if (isMatch) {
-    isMatch = regex3.test(arg0);
+    isMatch = regex4.test(arg0);
   }
   return isMatch;
 };

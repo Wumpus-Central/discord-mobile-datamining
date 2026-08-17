@@ -1,37 +1,34 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityPage.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { useUserIdsForLinkStatus } from "../hooks/useUserLinks.tsx";
-import { FamilyCenterParentalConsentNotice } from "FamilyCenterParentalConsentNotice.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
+import FamilyCenterParentalConsentNoticeDefault from "FamilyCenterParentalConsentNotice" /* 14230 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { scrollView: { flex: 1 }, dataConfirmation: null, container: null };
-createCacheKey = { marginTop: require("Themes").space.PX_8 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
-const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPage.tsx");
+createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityPage.tsx");
 
 export default function FamilyCenterActivityPage() {
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = useUserIdsForLinkStatus;
   obj = { style: tmp.scrollView, children: null };
   const activeLinkUserIds = obj.useActiveLinkUserIds();
   obj = { style: tmp.container, children: null };
-  const items = [callback(FamilyCenterParentalConsentNotice, {}), ];
+  const items = [callback(FamilyCenterParentalConsentNoticeDefault, {}), ];
   if (0 === activeLinkUserIds.length) {
-    const obj1 = { children: null };
+    obj1 = { children: null };
     const items1 = [tmp3(tmp7(14232), {}), tmp3(tmp7(14242), {}), ];
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.dataConfirmation;

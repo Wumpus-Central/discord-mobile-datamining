@@ -1,26 +1,26 @@
 // discord_app/modules/markup/native/MarkupReactGameMentionRule.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsxs: c3, jsx: c4 } = jsxProd);
 createCacheKey = { icon: null, chip: null, chipText: null };
-createCacheKey = { width: 16, height: 16, borderRadius: require("Themes").radii.xs, marginRight: 2 };
+createCacheKey = { width: 16, height: 16, borderRadius: ThemesDefault.radii.xs, marginRight: 2 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.xs, paddingHorizontal: 2 };
-let obj1 = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.xs, paddingHorizontal: 2 };
-createCacheKey[2] = { color: require("Themes").unsafe_rawColors.BRAND_500 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { color: require("Themes").unsafe_rawColors.BRAND_500 };
-const result = require("createCacheKey").fileFinishedImporting("modules/markup/native/MarkupReactGameMentionRule.tsx");
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 2 };
+let obj1 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 2 };
+createCacheKey[2] = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
+const result = require("set").fileFinishedImporting("modules/markup/native/MarkupReactGameMentionRule.tsx");
 
 export default function MarkupGameMention(state) {
   state = state.state;
   let gameId;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   gameId = state.node.gameId;
   let obj = state(6898);
   const gameMentionData = obj.useGameMentionData(gameId);
@@ -57,7 +57,7 @@ export default function MarkupGameMention(state) {
     }
     let tmp17Result = callback(tmp2(6683).UnknownGameIcon, obj);
     if (tmp11) {
-      const obj1 = { style: null, source: null };
+      obj1 = { style: null, source: null };
       obj1[0] = tmp.icon;
       const obj2 = { uri: null };
       obj2[0] = tmp8Result;
@@ -79,8 +79,8 @@ export default function MarkupGameMention(state) {
     let fn;
     if (!state.noStyleAndInteraction) {
       fn = () => {
-        let obj = gameId(outer1_2[10]);
-        obj = { gameId, gameProfileModalChecks: obj, source: state(outer1_2[11]).GameProfileSources.GameMention, sourceUserId: state.authorId };
+        let obj = gameId(closure_1_2[10]);
+        obj = { gameId, gameProfileModalChecks: obj, source: state(closure_1_2[11]).GameProfileSources.GameMention, sourceUserId: state.authorId };
         obj = { shouldOpenGameProfile: true, gameId };
         obj.openGameProfileModal(obj);
       };

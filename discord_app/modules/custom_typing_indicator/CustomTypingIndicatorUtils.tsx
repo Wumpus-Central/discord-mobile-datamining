@@ -1,9 +1,10 @@
 // discord_app/modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { CustomTypingIndicatorAnimation } from "CustomTypingIndicatorTypes.tsx";
+import messagesProxyDefault from "messagesProxy" /* 3403 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import CustomTypingIndicatorAnimation from "CustomTypingIndicatorAnimation" /* 14707 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function getRandomCustomTypingIndicatorEmojis() {
   const items = [...closure_6];
   const items1 = [];
@@ -15,7 +16,7 @@ function getRandomCustomTypingIndicatorEmojis() {
         let tmp = callback;
         let tmp2 = importDefault;
         let tmp3 = dependencyMap;
-        let obj = parseRawEmojiObject;
+        obj = parseRawEmojiObjectDefault;
         let byName = obj.getByName(callback(items.splice(Math.floor(Math.random() * items.length), 1), 1)[0]);
         let surrogates;
         if (byName != null) {
@@ -38,23 +39,23 @@ function getRandomCustomTypingIndicatorEmojis() {
   return items1;
 }
 let obj = {};
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DEFAULT] = require("messagesProxy")["6Cdy4a"];
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.YAPPING] = require("messagesProxy").E5VRaj;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.VENTING] = require("messagesProxy").xmxdPC;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.OVERSHARING] = require("messagesProxy")["qGaH/9"];
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BARKING] = require("messagesProxy").M282uk;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BABBLING] = require("messagesProxy").myNZDT;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DAYDREAMING] = require("messagesProxy").F7RLTP;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DEFAULT] = messagesProxyDefault["6Cdy4a"];
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.YAPPING] = messagesProxyDefault.E5VRaj;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.VENTING] = messagesProxyDefault.xmxdPC;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.OVERSHARING] = messagesProxyDefault["qGaH/9"];
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BARKING] = messagesProxyDefault.M282uk;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BABBLING] = messagesProxyDefault.myNZDT;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DAYDREAMING] = messagesProxyDefault.F7RLTP;
 obj = {};
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DEFAULT] = require("messagesProxy").kh4K4F;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.YAPPING] = require("messagesProxy").m9AeqG;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.VENTING] = require("messagesProxy")["SZ0/Qu"];
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.OVERSHARING] = require("messagesProxy").N8cWE8;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BARKING] = require("messagesProxy").L5aWEN;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BABBLING] = require("messagesProxy").AoBaEw;
-obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DAYDREAMING] = require("messagesProxy")["3hOLod"];
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DEFAULT] = messagesProxyDefault.kh4K4F;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.YAPPING] = messagesProxyDefault.m9AeqG;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.VENTING] = messagesProxyDefault["SZ0/Qu"];
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.OVERSHARING] = messagesProxyDefault.N8cWE8;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BARKING] = messagesProxyDefault.L5aWEN;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.BABBLING] = messagesProxyDefault.AoBaEw;
+obj[require("CustomTypingIndicatorAnimation").CustomTypingIndicatorSuggestion.DAYDREAMING] = messagesProxyDefault["3hOLod"];
 let closure_6 = ["eyes", "100", "sparkling_heart", "star_struck", "heart", "laughing", "thumbsup", "watermelon", "yum", "books"];
-const result = require("messagesProxy").fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/custom_typing_indicator/CustomTypingIndicatorUtils.tsx");
 
 export { getRandomCustomTypingIndicatorEmojis };
 export const getRandomCustomTypingIndicatorAnimation = function getRandomCustomTypingIndicatorAnimation() {
@@ -75,7 +76,7 @@ export const getRandomCustomTypingIndicatorSuggestion = function getRandomCustom
   return values[Math.floor(Math, Math.random(Math) * values.length)];
 };
 export const getRandomCustomTypingIndicatorConfig = function getRandomCustomTypingIndicatorConfig() {
-  const obj = { emojis: getRandomCustomTypingIndicatorEmojis(), animation: null, typingSuggestion: null };
+  obj = { emojis: getRandomCustomTypingIndicatorEmojis(), animation: null, typingSuggestion: null };
   let values = Object.values(CustomTypingIndicatorAnimation.CustomTypingIndicatorAnimation);
   obj[1] = values[Math.floor(Math, Math.random(Math) * values.length)];
   values = Object.values(CustomTypingIndicatorAnimation.CustomTypingIndicatorSuggestion);

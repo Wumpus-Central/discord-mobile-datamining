@@ -1,18 +1,16 @@
 // discord_app/modules/parent_tools/native/FamilyCenterNativeUtils.tsx
-import initialize from "initialize";
-import items from "items";
-import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { maybeFetchCollectiblesForInvoices } from "../FamilyCenterActionCreators.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
+import closure_3 from "initialize" /* 4993 */;
+import items from "items" /* 5297 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ FAMILY_CENTER_LINK_REQUEST_REGEX: c4, FamilyCenterAction: c5 } = items);
 let c7 = "family-center-request-modal";
-const result = require("ME").fileFinishedImporting("modules/parent_tools/native/FamilyCenterNativeUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterNativeUtils.tsx");
 
 export const FAMILY_CENTER_REQUEST_MODAL_KEY = "family-center-request-modal";
 export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeScan(pathname, FamilyCenterQRCodeScan) {
@@ -20,31 +18,31 @@ export const handleFamilyCenterQRCodeScan = function handleFamilyCenterQRCodeSca
   if (null === match) {
     return null;
   } else {
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { action: null, selected_teen_id: null, source: null };
     obj[0] = ScanQRCode.ScanQRCode;
     obj[1] = match[1];
     obj[2] = FamilyCenterQRCodeScan;
     obj.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj);
-    maybeFetchCollectiblesForInvoices.setPendingConnection(match[1], match[2]);
-    const obj3 = maybeFetchCollectiblesForInvoices;
+    maybeFetchCollectiblesForInvoicesDefault.setPendingConnection(match[1], match[2]);
+    const obj3 = maybeFetchCollectiblesForInvoicesDefault;
     obj = { userId: null, linkCode: null };
     obj[0] = match[1];
     obj[1] = match[2];
-    ModalActionCreators.pushLazy(asyncRequireImpl(11102, dependencyMap.paths), obj, c7);
+    _modDef5260.pushLazy(asyncRequireImpl(11102, dependencyMap.paths), obj, c7);
   }
 };
 export const resumeFamilyCenterConnection = function resumeFamilyCenterConnection() {
   pendingConnection = pendingConnection.getPendingConnection();
   let flag = null != pendingConnection;
   if (flag) {
-    let obj = ModalActionCreators;
+    let obj = _modDef5260;
     obj.popWithKey(c7);
     obj = { userId: null, linkCode: null };
     ({ teenId: obj3[0], linkCode: obj3[1] } = pendingConnection);
-    ModalActionCreators.pushLazy(asyncRequireImpl(11102, dependencyMap.paths), obj, c7);
+    _modDef5260.pushLazy(asyncRequireImpl(11102, dependencyMap.paths), obj, c7);
     flag = true;
-    const obj2 = ModalActionCreators;
+    const obj2 = _modDef5260;
   }
   return flag;
 };

@@ -1,23 +1,21 @@
 // discord_app/modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx
-import initialize from "initialize";
+import closure_3 from "initialize" /* 9692 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("apply").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx");
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesUserVerifiedKeys.tsx");
 
 export const useSecureFramesUserVerifiedKeys = function useSecureFramesUserVerifiedKeys(userId) {
   const _require = userId;
-  const items = [initialize];
+  const items = [closure_3];
   return _initialize.useStateFromStoresArray(items, () => {
-    const tmp = outer1_1(outer1_2[2]);
-    const entries = outer1_1(outer1_2[2])(outer1_3.getUserVerifiedKeys(closure_0)).entries();
+    const tmp = closure_1_1(closure_1_2[2]);
+    const entries = closure_1_1(closure_1_2[2])(closure_1_3.getUserVerifiedKeys(closure_0)).entries();
     const mapped = entries.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       return { verifiedKey, timestamp };
     });
-    const tmpResult = outer1_1(outer1_2[2])(outer1_3.getUserVerifiedKeys(closure_0));
+    const tmpResult = closure_1_1(closure_1_2[2])(closure_1_3.getUserVerifiedKeys(closure_0));
     return mapped.sortBy((timestamp) => -1 * timestamp.timestamp).value();
   });
 };

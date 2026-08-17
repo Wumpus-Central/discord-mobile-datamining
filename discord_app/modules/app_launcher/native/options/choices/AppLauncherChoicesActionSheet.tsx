@@ -1,15 +1,14 @@
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { noop } from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import ThemesDefault from "Themes" /* 712 */;
+import noop from "noop" /* 8029 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function FlashListWrapper(scrollable) {
   const merged = Object.assign(scrollable, Object.create(null));
   const tmp3 = noop;
@@ -24,31 +23,29 @@ function FlashListWrapper(scrollable) {
   }
   return tmp2Result;
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { listItemContainer: { overflow: "hidden" }, listItem: null, firstItem: null, lastItem: null, divider: null };
-createCacheKey = { backgroundColor: require("Themes").colors.CARD_BACKGROUND_DEFAULT };
+createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { borderTopLeftRadius: require("Themes").radii.xl, borderTopRightRadius: require("Themes").radii.xl };
-let obj1 = { borderTopLeftRadius: require("Themes").radii.xl, borderTopRightRadius: require("Themes").radii.xl };
-createCacheKey[3] = { borderBottomLeftRadius: require("Themes").radii.xl, borderBottomRightRadius: require("Themes").radii.xl };
-let obj2 = { borderBottomLeftRadius: require("Themes").radii.xl, borderBottomRightRadius: require("Themes").radii.xl };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginLeft: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginLeft: 16 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx");
+createCacheKey[2] = { borderTopLeftRadius: ThemesDefault.radii.xl, borderTopRightRadius: ThemesDefault.radii.xl };
+let obj1 = { borderTopLeftRadius: ThemesDefault.radii.xl, borderTopRightRadius: ThemesDefault.radii.xl };
+createCacheKey[3] = { borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRadius: ThemesDefault.radii.xl };
+let obj2 = { borderBottomLeftRadius: ThemesDefault.radii.xl, borderBottomRightRadius: ThemesDefault.radii.xl };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginLeft: 16 };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesActionSheet.tsx");
 
 export default function AppLauncherChoicesActionSheet(option) {
-  let initChoiceIndex;
-  let onDismiss;
   option = option.option;
   const onChoiceSelect = option.onChoiceSelect;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first;
   let React;
   let first1;
-  let closure_6;
+  closure_6 = undefined;
   ({ initChoiceIndex, onDismiss } = option);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   dependencyMap = tmp;
   const bottom = onChoiceSelect(1629)().bottom;
   let obj = option(500);
@@ -71,7 +68,7 @@ export default function AppLauncherChoicesActionSheet(option) {
   let items = [option.choices];
   let items1 = [onChoiceSelect, first1, tmp, first];
   const callback = React.useCallback((query) => {
-    let obj = onChoiceSelect(_undefined[10]);
+    let obj = onChoiceSelect(closure_2[10]);
     obj = { query, choices: null, limit: null };
     let choices = option.choices;
     if (choices == null) {
@@ -88,7 +85,7 @@ export default function AppLauncherChoicesActionSheet(option) {
     if (lastItem) {
       lastItem = index === first.length - 1;
     }
-    const items = [_undefined.listItemContainer, , ];
+    const items = [closure_2.listItemContainer, , ];
     let firstItem = 0 === index;
     if (firstItem) {
       firstItem = tmp4.firstItem;
@@ -97,7 +94,7 @@ export default function AppLauncherChoicesActionSheet(option) {
     if (lastItem) {
       lastItem = tmp4.lastItem;
     }
-    obj = { style: items, children: tmp2(option(_undefined[11]).FormRadioRow, obj) };
+    obj = { style: items, children: tmp2(option(closure_2[11]).FormRadioRow, obj) };
     items[2] = lastItem;
     obj = {
       style: items1,
@@ -105,15 +102,15 @@ export default function AppLauncherChoicesActionSheet(option) {
       align: "right",
       selected: first1 === item.originalIndex,
       onPress() {
-        outer1_6(item.originalIndex);
-        outer1_1(item.choice, item.originalIndex);
+        closure_1_6(item.originalIndex);
+        closure_1_1(item.choice, item.originalIndex);
         onChoiceSelect(table[12]).hideActionSheet();
       }
     };
-    items1 = [_undefined.listItem];
-    return outer1_7(first1, obj);
+    items1 = [closure_2.listItem];
+    return closure_1_7(first1, obj);
   }, items1);
-  const callback2 = React.useCallback(() => outer1_7(option(_undefined[11]).FormDivider, { style: _undefined.divider }), items2);
+  callback2 = React.useCallback(() => closure_1_7(option(closure_2[11]).FormDivider, { style: closure_2.divider }), items2);
   let tmp13 = null != option.choices;
   if (tmp13) {
     let choices = option.choices;
@@ -138,7 +135,7 @@ export default function AppLauncherChoicesActionSheet(option) {
   if (0 === first.length) {
     let tmp20 = callback(tmp3(11345).AppLauncherListEmptyState, {});
   } else {
-    const obj1 = { scrollable: null, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
+    obj1 = { scrollable: null, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, data: null, renderItem: null, ItemSeparatorComponent: null, accessibilityRole: "radiogroup" };
     obj1[0] = tmp13;
     const obj2 = { paddingBottom: null };
     obj2[0] = sum;

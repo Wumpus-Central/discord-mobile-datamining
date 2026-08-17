@@ -1,7 +1,9 @@
 // discord_app/utils/ErrorCommonUtils.tsx
-import { add } from "../../discord_common/js/packages/flux/LastFewActions.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-const result = require("set").fileFinishedImporting("utils/ErrorCommonUtils.tsx");
+import set from "set" /* 2 */;
+import add from "add" /* 594 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+
+const result = set.fileFinishedImporting("utils/ErrorCommonUtils.tsx");
 
 export const getUpdatedOptions = function getUpdatedOptions(extra) {
   let obj = {};
@@ -12,10 +14,10 @@ export const getUpdatedOptions = function getUpdatedOptions(extra) {
   }
   obj = {};
   const merged1 = Object.assign(extra);
-  if (null != dispatcher._currentDispatchActionType) {
+  if (null != dispatcherDefault._currentDispatchActionType) {
     obj = { currentAction: null };
-    obj[0] = dispatcher._currentDispatchActionType;
-    let obj1 = obj;
+    obj[0] = dispatcherDefault._currentDispatchActionType;
+    obj1 = obj;
   } else {
     obj1 = {};
   }

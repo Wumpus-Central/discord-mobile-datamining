@@ -1,15 +1,16 @@
 // discord_app/modules/forums/native/ForumOriginalPoster.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 class ForumOriginalPoster {
   constructor() {
-    tmp = jsxs();
+    tmp = closure_5();
     obj = { style: tmp.container, children: null };
     obj = { style: items, children: null };
     items = [, ];
@@ -28,14 +29,15 @@ class ForumOriginalPoster {
     return jsxs(View, obj);
   }
 }
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, opIcon: null, opIconBackground: null };
-createCacheKey = { borderRadius: require("Themes").radii.sm, marginEnd: 8, paddingHorizontal: 4 };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm, marginEnd: 8, paddingHorizontal: 4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_5 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { backgroundColor: require("result").DARK_BRAND_260_LIGHT_BRAND_200 };
-const result = require("jsxProd").fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/ForumOriginalPoster.tsx");
 
 export default ForumOriginalPoster;
 export const getForumOriginalPoster = function getForumOriginalPoster() {

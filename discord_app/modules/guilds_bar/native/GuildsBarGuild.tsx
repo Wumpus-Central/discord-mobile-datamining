@@ -1,42 +1,28 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuild.tsx
-import importAllResult from "initialize";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import handleConnectionOpen from "handleConnectionOpen";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import closure_9 from "handleConnectionOpen";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { useItemDragState } from "withEqualityFn";
-import { TRANSITION_PHYSICS } from "GUILD_ITEM_SIZE";
-import { AnalyticEvents } from "ME";
-import jsxProd from "isGuildsBarGuildDataEqual";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import closure_6 from "handleConnectionOpen" /* 4826 */;
+import closure_7 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "handleConnectionOpen" /* 4197 */;
+import closure_10 from "insertUnsortedGuilds" /* 5078 */;
+import { useItemDragState } from "withEqualityFn" /* 15547 */;
+import { TRANSITION_PHYSICS } from "GUILD_ITEM_SIZE" /* 15548 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_14;
-let closure_15;
-let closure_16;
 const require = arg1;
 let c3 = importAllResult;
 ({ getGuildIconSource: c4, getGuildIconURL: c5 } = GuildNSFWContentLevel);
 ({ Fragment: closure_14, jsxs: closure_15, jsx: closure_16 } = jsxProd);
 let obj = { guildIcon: null };
-obj = { width: require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE, height: require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj = { width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj[0] = obj;
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = { code: "function GuildsBarGuildTsx1(values){const{dragDropInProgress,sharedId,guildId,isDragTarget,withSpring,TRANSITION_PHYSICS}=this.__closure;var _guildId;const shouldAnimate=dragDropInProgress.get()&&sharedId.get()===guildId&&!isDragTarget;sharedId.set((_guildId=guildId)!==null&&_guildId!==void 0?_guildId:null);return{animations:{originY:shouldAnimate?withSpring(values.targetOriginY,TRANSITION_PHYSICS,'animate-always'):values.targetOriginY,height:shouldAnimate?withSpring(values.targetHeight,TRANSITION_PHYSICS,'animate-always'):values.targetHeight},initialValues:{originY:values.currentOriginY,height:values.currentHeight}};}" };
 const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
-  let accessibilityActions;
-  let asset;
-  let badgeBottomRight;
-  let badgeTopRight;
-  let cutouts;
-  let dragState;
-  let icon;
-  let itemSize;
-  let onAccessibilityAction;
-  let overState;
   guildId = guildId.guildId;
   let flag = guildId.isDragPreview;
   if (flag === undefined) {
@@ -48,7 +34,7 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
   }
   let token;
   let drawerOpen;
-  let importAllResult;
+  importAllResult = undefined;
   let selected;
   let isUnavailable;
   let mentionCount;
@@ -63,7 +49,7 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
   const tmp4 = callback2();
   let obj = guildId(drawerOpen[14]);
   token = obj.useToken(token(drawerOpen[12]).modules.mobile.GUILD_BAR_ITEM_SIZE);
-  let obj1 = guildId(drawerOpen[15]);
+  obj1 = guildId(drawerOpen[15]);
   const enableHome = importAllResult.useContext(guildId(drawerOpen[16]).HomeDrawerStateContext).enableHome;
   let obj2 = guildId(drawerOpen[17]);
   drawerOpen = obj2.useDrawerOpen(enableHome);
@@ -111,10 +97,10 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
   const items5 = [guildName, mentionCount, unread, mediaState];
   const memo = importAllResult.useMemo(() => ({
     onPress() {
-      if (null != outer1_8.getGuild(closure_0)) {
+      if (null != closure_1_8.getGuild(closure_0)) {
         if (!closure_5) {
           if (closure_2) {
-            const guildFolders = outer1_10.getGuildFolders();
+            const guildFolders = closure_1_10.getGuildFolders();
             const findIndexResult = guildFolders.findIndex((guildIds) => {
               guildIds = guildIds.guildIds;
               return guildIds.includes(closure_0);
@@ -124,19 +110,19 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
               obj[0] = tmp;
               obj[1] = findIndexResult;
               obj[2] = ref.current;
-              outer1_1(outer1_2[25]).track(outer1_13.HOME_DRAWER_GUILD_CLICKED, obj);
-              const obj2 = outer1_1(outer1_2[25]);
+              closure_1_1(closure_1_2[25]).track(closure_1_13.HOME_DRAWER_GUILD_CLICKED, obj);
+              const obj2 = closure_1_1(closure_1_2[25]);
             }
           }
-          outer1_1(outer1_2[26])(tmp);
+          closure_1_1(closure_1_2[26])(tmp);
         }
       }
       obj = { title: null, body: null };
-      const intl = outer1_0(outer1_2[24]).intl;
-      obj[0] = intl.string(outer1_0(outer1_2[24]).t.R0RpRX);
-      const intl2 = outer1_0(outer1_2[24]).intl;
-      obj[1] = intl2.string(outer1_0(outer1_2[24]).t.m9gRVN);
-      return outer1_1(outer1_2[23]).show(obj);
+      const intl = closure_1_0(closure_1_2[24]).intl;
+      obj[0] = intl.string(closure_1_0(closure_1_2[24]).t.R0RpRX);
+      const intl2 = closure_1_0(closure_1_2[24]).intl;
+      obj[1] = intl2.string(closure_1_0(closure_1_2[24]).t.m9gRVN);
+      return closure_1_1(closure_1_2[23]).show(obj);
     }
   }), items4);
   const memo1 = importAllResult.useMemo(() => {
@@ -210,7 +196,7 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
     return {
       accessibilityActions: items.map((name) => ({ name: name.name, label: name.label })),
       onAccessibilityAction(arg0) {
-        const items = arg0;
+        items = arg0;
         const found = items.find((name) => name.name === nativeEvent.nativeEvent.actionName);
         if (found != null) {
           const action = found.action;
@@ -228,38 +214,38 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
     constructor(arg0) {
       value = dragDropInProgress.get();
       if (value) {
-        tmp2 = useMemo;
+        tmp2 = closure_13;
         tmp3 = guildId;
-        value = useMemo.get() === guildId;
+        value = closure_13.get() === guildId;
       }
       if (value) {
         tmp4 = isDragTarget;
         value = !isDragTarget;
       }
       tmp6 = guildId;
-      tmp5 = useMemo;
+      tmp5 = closure_13;
       if (guildId == null) {
         tmp6 = null;
       }
-      result = useMemo.set(tmp6);
+      result = closure_13.set(tmp6);
       if (value) {
         tmp8 = guildId;
-        tmp9 = c2;
-        obj = guildId(c2[31]);
-        tmp10 = f97423;
+        tmp9 = closure_2;
+        obj = guildId(closure_2[31]);
+        tmp10 = closure_12;
         str = "animate-always";
-        targetOriginY = obj.withSpring(guildId.targetOriginY, f97423, "animate-always");
+        targetOriginY = obj.withSpring(guildId.targetOriginY, closure_12, "animate-always");
       } else {
         targetOriginY = guildId.targetOriginY;
       }
       obj = { originY: targetOriginY, height: null };
       if (value) {
         tmp11 = guildId;
-        tmp12 = c2;
-        obj3 = guildId(c2[31]);
-        tmp13 = f97423;
+        tmp12 = closure_2;
+        obj3 = guildId(closure_2[31]);
+        tmp13 = closure_12;
         str2 = "animate-always";
-        targetHeight = obj3.withSpring(guildId.targetHeight, f97423, "animate-always");
+        targetHeight = obj3.withSpring(guildId.targetHeight, closure_12, "animate-always");
       } else {
         targetHeight = guildId.targetHeight;
       }
@@ -339,6 +325,6 @@ const memoResult = importAllResult.memo(function GuildsBarGuild(guildId) {
   obj[19] = tmp21Result;
   return closure_16(token(drawerOpen[15]), obj);
 });
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGuild.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGuild.tsx");
 
 export default memoResult;

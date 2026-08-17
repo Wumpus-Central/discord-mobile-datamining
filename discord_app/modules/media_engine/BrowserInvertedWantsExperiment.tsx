@@ -1,11 +1,12 @@
 // discord_app/modules/media_engine/BrowserInvertedWantsExperiment.tsx
-import ApexExperiment from "ApexExperiment";
-import { PlatformTypes } from "../../../discord_common/js/shared/utils/PlatformUtils.tsx";
+import set from "set" /* 2 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null };
 obj[1] = { invertWants: true };
 let closure_2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-03-browser-inverted-wants", defaultConfig: { invertWants: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/media_engine/BrowserInvertedWantsExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_engine/BrowserInvertedWantsExperiment.tsx");
 
 export const getBrowserInvertedWantsConfig = function getBrowserInvertedWantsConfig(arg0) {
   let config = PlatformTypes;

@@ -1,10 +1,11 @@
 // discord_app/modules/forums/ForumManager.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { isStaticChannelRoute } from "set";
-import "initialize";
-import { loadForumPostData } from "ForumPostDataLoader.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import loadForumPostData from "loadForumPostData" /* 7269 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import { isStaticChannelRoute } from "set" /* 1398 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class ForumManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -24,6 +25,6 @@ ForumManager.prototype["handleChannelPreload"] = function handleChannelPreload(c
   }
 };
 const forumManager = new ForumManager();
-const result = require("initialize").fileFinishedImporting("modules/forums/ForumManager.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumManager.tsx");
 
 export default forumManager;

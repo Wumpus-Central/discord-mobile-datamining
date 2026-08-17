@@ -1,18 +1,16 @@
 // discord_app/stores/DraftStore.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import { PersistedStore } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleConnectionOpen" /* 4826 */;
 import { isDiscordFrontendDevelopment } from "../utils/GlobalUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
 function handleChanged(type) {
-  let channelId;
-  let draft;
-  let draftType;
   ({ channelId, draft, draftType } = type);
   const channel = store2.getChannel(channelId);
   let template;
@@ -22,7 +20,7 @@ function handleChanged(type) {
   if (draft === template) {
     draft = "";
   }
-  let obj = store;
+  obj = store;
   const id = store.getId();
   if (null != id) {
     if (null != draft) {
@@ -48,7 +46,7 @@ function handleChanged(type) {
           draft = tmp18.draft;
         }
         if (substr !== draft) {
-          const obj1 = { timestamp: null, draft: null };
+          obj1 = { timestamp: null, draft: null };
           const _Date = Date;
           obj1[0] = Date.now();
           obj1[1] = substr;
@@ -71,7 +69,7 @@ function handleChanged(type) {
       if (obj6.isEmpty(tmp11)) {
         delete tmp[tmp3];
       }
-      obj6 = apply;
+      obj6 = applyDefault;
     }
   }
 }
@@ -85,7 +83,7 @@ function deleteDraft(arg0, arg1) {
   } else {
     let tmp8 = dependencyMap[id];
     if (null == tmp8) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
       tmp8 = obj;
     }
@@ -103,7 +101,7 @@ function handleChannelDelete(arg0) {
   const id = store.getId();
   if (null != id) {
     if (null == dependencyMap[id]) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
     }
     delete tmp[tmp2];
@@ -113,16 +111,17 @@ function handleChannelDelete(arg0) {
 let closure_7 = require("ME").MAX_MESSAGE_LENGTH_PREMIUM + 500;
 let obj = { ChannelMessage: 0, [0]: "ChannelMessage", ThreadSettings: 1, [1]: "ThreadSettings", FirstThreadMessage: 2, [2]: "FirstThreadMessage", ApplicationLauncherCommand: 3, [3]: "ApplicationLauncherCommand", Poll: 4, [4]: "Poll", SlashCommand: 5, [5]: "SlashCommand", ForwardContextMessage: 6, [6]: "ForwardContextMessage", InteractionModal: 7, [7]: "InteractionModal", ScheduledMessage: 8, [8]: "ScheduledMessage" };
 let closure_9 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class DraftStore extends PersistedStore {
 }
 const prototype = DraftStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let obj = arg0;
+  obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
   (function pruneEmptyDrafts() {
-    const obj = callback(11);
+    obj = callback(11);
     const entries = obj.entries(obj);
     while (tmp2 !== undefined) {
       let tmp4 = callback2;
@@ -160,7 +159,7 @@ prototype["initialize"] = function initialize(arg0) {
       continue;
     }
   })();
-  this.waitFor(fetchFingerprint, ensureGuildLoaded, handleConnectionOpen);
+  this.waitFor(closure_4, closure_5, closure_6);
 };
 prototype["getState"] = function getState() {
   return closure_9;
@@ -168,12 +167,12 @@ prototype["getState"] = function getState() {
 prototype["getThreadDraftWithParentMessageId"] = function getThreadDraftWithParentMessageId(arg0) {
   let self = this;
   self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const id = store.getId();
   if (null != id) {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -201,37 +200,36 @@ prototype["getRecentlyEditedDrafts"] = function getRecentlyEditedDrafts(ChannelM
   } else {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
-    const obj2 = apply(tmp3);
-    const mapValuesResult = apply(tmp3).mapValues((arg0) => {
+    const obj2 = applyDefault(tmp3);
+    const mapValuesResult = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     });
-    const pickByResult = apply(tmp3).mapValues((arg0) => {
+    const pickByResult = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     }).pickBy(_isDiscordFrontendDevelopment.isNotNullish);
-    const mapped = apply(tmp3).mapValues((arg0) => {
+    const mapped = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
       }
       return tmp;
     }).pickBy(_isDiscordFrontendDevelopment.isNotNullish).toPairs().map((arg0) => {
-      let tmp;
       [tmp, ] = arg0;
       return { channelId, timestamp, draft };
     });
-    const toPairsResult = apply(tmp3).mapValues((arg0) => {
+    const toPairsResult = applyDefault(tmp3).mapValues((arg0) => {
       let tmp;
       if (arg0 != null) {
         tmp = arg0[closure_0];
@@ -248,7 +246,7 @@ prototype["getDraft"] = function getDraft(id, ChannelMessage) {
   } else {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -267,7 +265,7 @@ prototype["getThreadSettings"] = function getThreadSettings(channelId) {
   } else {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -283,7 +281,7 @@ prototype["getScheduledMessage"] = function getScheduledMessage(id) {
   if (null != id) {
     let tmp3 = dependencyMap[id];
     if (null == tmp3) {
-      const obj = {};
+      obj = {};
       dependencyMap[id] = obj;
       tmp3 = obj;
     }
@@ -338,14 +336,14 @@ const items = [
 DraftStore.migrations = items;
 obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let obj = store;
+    obj = store;
     const id = store.getId();
     if (!(id in dependencyMap)) {
       dependencyMap[id] = {};
     }
     const id1 = obj.getId();
     if (null != id1) {
-      if (handleConnectionOpen.totalUnavailableGuilds <= 0) {
+      if (closure_6.totalUnavailableGuilds <= 0) {
         let tmp8 = dependencyMap[id1];
         if (null == tmp8) {
           obj = {};
@@ -369,7 +367,7 @@ obj = {
   },
   LOGOUT: function handleLogout(isSwitchingAccount) {
     if (!isSwitchingAccount.isSwitchingAccount) {
-      let closure_9 = {};
+      closure_9 = {};
     }
   },
   MULTI_ACCOUNT_REMOVE_ACCOUNT: function handleMultiAccountRemove(userId) {
@@ -381,10 +379,10 @@ obj = {
   GUILD_DELETE: function handleGuildDelete() {
     const id = store.getId();
     if (null != id) {
-      if (handleConnectionOpen.totalUnavailableGuilds <= 0) {
+      if (closure_6.totalUnavailableGuilds <= 0) {
         let tmp6 = dependencyMap[id];
         if (null == tmp6) {
-          const obj = {};
+          obj = {};
           dependencyMap[id] = obj;
           tmp6 = obj;
         }
@@ -407,7 +405,7 @@ obj = {
   THREAD_DELETE: handleChannelDelete,
   THREAD_CREATE: function handleThreadCreate(channel) {
     channel = channel.channel;
-    let obj = store;
+    obj = store;
     const id = store.getId();
     if (null != id) {
       if (channel.ownerId !== id) {
@@ -436,7 +434,7 @@ obj = {
             }
             if ("" !== str) {
               obj = {};
-              const obj1 = { timestamp: null, draft: null };
+              obj1 = { timestamp: null, draft: null };
               const _Date = Date;
               obj1[0] = Date.now();
               obj1[1] = str;
@@ -478,7 +476,7 @@ obj = {
               }
             }
           }
-          obj9 = DISCORD_EPOCH;
+          obj9 = DISCORD_EPOCHDefault;
         }
       }
     }
@@ -492,7 +490,7 @@ obj = {
     if (null != id) {
       let tmp7 = dependencyMap[id];
       if (null == tmp7) {
-        const obj = {};
+        obj = {};
         dependencyMap[id] = obj;
         tmp7 = obj;
       }
@@ -502,20 +500,18 @@ obj = {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = apply;
+        obj2 = applyDefault;
       }
     }
     return flag;
   },
   THREAD_SETTINGS_DRAFT_CHANGE: function handleThreadSettingsDraftChanged(arg0) {
-    let channelId;
-    let draft;
     ({ channelId, draft } = arg0);
     const id = store.getId();
     if (null != id) {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        let obj = {};
+        obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
@@ -535,14 +531,12 @@ obj = {
     }
   },
   SCHEDULED_MESSAGE_DRAFT_CHANGE: function handleScheduledMessageDraftChanged(arg0) {
-    let channelId;
-    let draft;
     ({ channelId, draft } = arg0);
     const id = store.getId();
     if (null != id) {
       let tmp3 = dependencyMap[id];
       if (null == tmp3) {
-        let obj = {};
+        obj = {};
         dependencyMap[id] = obj;
         tmp3 = obj;
       }
@@ -566,7 +560,7 @@ obj = {
     if (null != id) {
       let tmp7 = dependencyMap[id];
       if (null == tmp7) {
-        const obj = {};
+        obj = {};
         dependencyMap[id] = obj;
         tmp7 = obj;
       }
@@ -576,14 +570,14 @@ obj = {
         if (obj2.isEmpty(tmp9)) {
           delete tmp[tmp2];
         }
-        obj2 = apply;
+        obj2 = applyDefault;
       }
     }
     return flag;
   }
 };
-const draftStore = new DraftStore(require("dispatcher"), obj);
-const result = require("ensureGuildLoaded").fileFinishedImporting("stores/DraftStore.tsx");
+const draftStore = new DraftStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("stores/DraftStore.tsx");
 
 export default draftStore;
 export const DraftType = obj;

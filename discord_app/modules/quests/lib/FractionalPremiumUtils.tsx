@@ -1,9 +1,11 @@
 // discord_app/modules/quests/lib/FractionalPremiumUtils.tsx
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { resetCache } from "../../../utils/DateUtils.tsx";
-import { set } from "../../../utils/Durations.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-const result = require("QuestRewardTypes").fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
+import set from "set" /* 2 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import resetCache from "resetCache" /* 4063 */;
+
+const result = set.fileFinishedImporting("modules/quests/lib/FractionalPremiumUtils.tsx");
 
 export const getDurationStringOfFractionalPremium = function getDurationStringOfFractionalPremium(arr) {
   let obj = getPremiumPlanItem;
@@ -38,7 +40,7 @@ export const getFractionalPremiumQuestRewardName = function getFractionalPremium
   const obj4 = resetCache;
   const intl = getSystemLocale.intl;
   obj = { time: null };
-  const diffAsUnitsResult = resetCache.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * set.Millis.HOUR);
+  const diffAsUnitsResult = resetCache.diffAsUnits(0, fractionalPremiumUnitsHoursFromSkuIds * setDefault.Millis.HOUR);
   obj[0] = resetCache.unitsAsStrings(diffAsUnitsResult, obj);
   return intl.formatToPlainString(getSystemLocale.t["4SqnVD"], obj);
 };

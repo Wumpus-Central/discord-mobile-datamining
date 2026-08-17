@@ -1,22 +1,18 @@
 // discord_app/modules/user_profile/native/EditAvatarDecorationActionSheet.tsx
-import set from "set";
-import getSystemLocale from "getSystemLocale";
-import { View } from "Background";
-import map from "map";
-import { isAvatarDecorationRecord } from "fromServer";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { AnalyticEvents } from "ME";
-import jsxProd from "useFetchPurchases";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "map" /* 5324 */;
+import { isAvatarDecorationRecord } from "fromServer" /* 5306 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-let c10;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function EditAvatarDecorationInner(pendingAvatarSrc) {
-  let selectedAvatarDecoration;
-  let setSelectedAvatarDecoration;
   const user = pendingAvatarSrc.user;
   ({ selectedAvatarDecoration, setSelectedAvatarDecoration } = pendingAvatarSrc);
   const guildId = pendingAvatarSrc.guildId;
@@ -26,15 +22,15 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
   }
   let obj = user(guildId[21]);
   const getOrFetchCollectiblesCategoriesAndPurchases = obj.useGetOrFetchCollectiblesCategoriesAndPurchases();
-  let obj1 = user(guildId[22]);
-  const items = [map];
+  obj1 = user(guildId[22]);
+  const items = [closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => isFetching.isFetching);
   let obj2 = user(guildId[22]);
-  const items1 = [trackCommunicationDisabled];
+  const items1 = [closure_8];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let member = null;
     if (null != guildId) {
-      member = outer1_8.getMember(tmp, user.id);
+      member = closure_1_8.getMember(tmp, user.id);
     }
     return member;
   });
@@ -56,11 +52,8 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
   const items2 = [setSelectedAvatarDecoration, guildId, flag];
   let skuId;
   const callback = React.useCallback((arg0) => {
-    let items;
-    let selectedSkuId;
-    let size;
     ({ items, size, selectedSkuId } = arg0);
-    return outer1_10(user(guildId[25]).EditAvatarDecorationRow, { items, size, selectedSkuId, setSelectedAvatarDecoration, guildId, isTryItOut: flag });
+    return closure_1_10(user(guildId[25]).EditAvatarDecorationRow, { items, size, selectedSkuId, setSelectedAvatarDecoration, guildId, isTryItOut: flag });
   }, items2);
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -95,9 +88,6 @@ function EditAvatarDecorationInner(pendingAvatarSrc) {
   return tmp12(tmp13, obj2);
 }
 function AvatarDecorationSectionPreview(previewSkuId) {
-  let guildId;
-  let pendingAvatarSrc;
-  let user;
   ({ user, guildId, pendingAvatarSrc } = previewSkuId);
   let _require;
   let purchase;
@@ -119,12 +109,12 @@ function AvatarDecorationSectionPreview(previewSkuId) {
       first = first1;
     }
     let tmp3 = null;
-    if (outer1_7(first)) {
+    if (closure_1_7(first)) {
       tmp3 = first;
     }
     return tmp3;
   }, items);
-  let obj = { style: createCacheKey().avatarDisplayContainer, accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
+  let obj = { style: callback4().avatarDisplayContainer, accessibilityLabel: null, accessibilityRole: "image", accessible: true, children: null };
   if (null != memo) {
     const intl2 = _getSystemLocale.intl;
     obj = { a11y_text: null };
@@ -138,7 +128,7 @@ function AvatarDecorationSectionPreview(previewSkuId) {
   }
   obj[1] = formatToPlainStringResult;
   obj = { user, guildId, pendingAvatarSrc, pendingAvatarDecoration: memo, size: null };
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const tmp6 = closure_11;
   const tmp7 = View;
   obj[4] = tmp10(1297).AvatarSizes.EDIT_AVATAR_DECORATION;
@@ -148,25 +138,20 @@ function AvatarDecorationSectionPreview(previewSkuId) {
 }
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { container: null, bounceOffset: null, title: null, avatarDisplayContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: -250, height: 250, right: 0, left: 0 };
-createCacheKey[2] = { alignSelf: "center", color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+createCacheKey[2] = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
 createCacheKey[3] = { flexDirection: "row", width: "100%", justifyContent: "center", alignItems: "center", paddingVertical: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { alignSelf: "center", color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/EditAvatarDecorationActionSheet.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/EditAvatarDecorationActionSheet.tsx");
 
 export default function EditAvatarDecorationActionSheet(arg0) {
-  let analyticsLocations;
-  let currentAvatarDecoration;
-  let guildId;
-  let isTryItOut;
-  let user;
   ({ user, guildId, currentAvatarDecoration, isTryItOut, analyticsLocations } = arg0);
   let setPendingAvatarDecoration;
   let first;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const tmp4 = first(8369)({ analyticsLocations, isTryItOut, guildId });
   setPendingAvatarDecoration = tmp4.setPendingAvatarDecoration;
   let obj = setPendingAvatarDecoration(8384);
@@ -194,7 +179,7 @@ export default function EditAvatarDecorationActionSheet(arg0) {
     setPendingAvatarDecoration(tmp2);
   }, items);
   obj = { value: analyticsLocations2, children: null };
-  const obj1 = { scrollable: true, ref: obj3.useBottomSheetRef().bottomSheetRef, onExpand: callback, startExpanded: true, children: null };
+  obj1 = { scrollable: true, ref: obj3.useBottomSheetRef().bottomSheetRef, onExpand: callback, startExpanded: true, children: null };
   obj2 = { style: tmp.container, children: null };
   obj3 = { style: tmp.bounceOffset };
   const items1 = [callback2(View, obj3), , ];

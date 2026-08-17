@@ -1,21 +1,20 @@
 // discord_app/modules/storefront/StorefrontProductActionCreators.tsx
-import set from "set";
-import _getSystemLocale from "_getSystemLocale";
-import getFetchState from "getFetchState";
-import fromServer from "fromServer";
-import { Endpoints } from "ME";
+import setDefault from "set" /* 687 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "getFetchState" /* 8963 */;
+import closure_6 from "fromServer" /* 5329 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _maybeFetchProductsWithSkus() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let ignoreCache;
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -63,7 +62,7 @@ function _maybeFetchProductsWithSkus() {
                 throw arg1;
               } else if (arg0 === 2) {
                 fromServer = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -152,7 +151,7 @@ function _maybeFetchProductsWithSkus() {
     iter.next();
     return iter;
   });
-  const _maybeFetchProductsWithSkus = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -183,13 +182,11 @@ function shouldFetchProductBySku(closure_0) {
 function _maybeFetchProductsBySkuIds() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let ignoreCache;
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -237,7 +234,7 @@ function _maybeFetchProductsBySkuIds() {
                 throw arg1;
               } else if (arg0 === 2) {
                 fromServer = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -308,7 +305,7 @@ function _maybeFetchProductsBySkuIds() {
     iter.next();
     return iter;
   });
-  const _maybeFetchProductsBySkuIds = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -317,9 +314,9 @@ function _maybeFetchProductsBySkuIds() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = 12 * require("set").Millis.HOUR;
-let closure_9 = 10 * require("set").Millis.MINUTE;
-const result = require("getFetchState").fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
+let closure_8 = 12 * setDefault.Millis.HOUR;
+let closure_9 = 10 * setDefault.Millis.MINUTE;
+const result = require("set").fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 
 export const maybeFetchProductsWithSkus = function maybeFetchProductsWithSkus() {
   const self = this;

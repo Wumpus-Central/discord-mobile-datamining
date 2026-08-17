@@ -1,22 +1,19 @@
 // discord_app/modules/app_launcher/native/screens/home/InThisServerSection.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import Text from "Text" /* 4734 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function AppInThisServer(onAppSelected) {
   onAppSelected = onAppSelected.onAppSelected;
   let application;
   const tmp3 = application(1367)("AppLauncherInThisServer-native");
-  const tmp4 = createCacheKey();
+  const tmp4 = callback2();
   application = onAppSelected.appItem.application;
   let obj = onAppSelected(11224);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
@@ -32,7 +29,7 @@ function AppInThisServer(onAppSelected) {
       if (tmp2) {
         const obj = { application: null, sectionName: null };
         obj[0] = application;
-        obj[1] = onAppSelected(outer1_2[13]).AppLauncherSectionName.APPS_IN_THIS_SERVER;
+        obj[1] = onAppSelected(closure_1_2[13]).AppLauncherSectionName.APPS_IN_THIS_SERVER;
         onAppSelected(obj);
       }
     },
@@ -57,40 +54,38 @@ function AppInThisServer(onAppSelected) {
   obj[5] = items1;
   return closure_6(onAppSelected(8811).PressableScale, obj, application.id);
 }
+noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { marginBottom: 16 }, headerContainer: { justifyContent: "center" }, viewAll: { position: "absolute", right: 0 }, scrollView: { marginTop: 8, overflow: "visible" }, scrollViewContentContainer: { gap: 8 }, appCardContainer: null, rowShadow: null, iconContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: require("Themes").radii.lg, paddingLeft: 12, paddingRight: 12, paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_ROW_DEFAULT, borderRadius: ThemesDefault.radii.lg, paddingLeft: 12, paddingRight: 12, paddingVertical: 12, flexDirection: "row", justifyContent: "center", alignItems: "center" };
 createCacheKey[5] = createCacheKey;
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[6] = {};
 createCacheKey[7] = { marginEnd: 12, justifyContent: "space-around" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/screens/home/InThisServerSection.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/InThisServerSection.tsx");
 
 export default function InThisServerSection(arg0) {
-  let importDefault;
-  let items;
-  let require;
   ({ items, onAppSelected: require, onViewAllSelected: importDefault } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   items = undefined;
   let mapped1;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   items = [];
   if (0 === items.length) {
     return null;
   } else {
     const item = items.forEach((type) => {
-      if (type.type === outer1_0(_undefined[5]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
+      if (type.type === closure_1_0(_undefined[5]).AppLauncherHomeListItemType.RECOMMENDATION_APP) {
         items.push(type);
       }
-      if (type.type === outer1_0(_undefined[5]).AppLauncherHomeListItemType.VIEW_ALL) {
-        let closure_2 = type;
+      if (type.type === closure_1_0(_undefined[5]).AppLauncherHomeListItemType.VIEW_ALL) {
+        closure_2 = type;
       }
     });
     const substr = items.slice(0, 8);
-    const mapped = substr.map((appItem) => outer1_5(outer1_8, { appItem, onAppSelected: closure_0 }, appItem.application.id));
+    const mapped = substr.map((appItem) => closure_1_5(closure_1_8, { appItem, onAppSelected: closure_0 }, appItem.application.id));
     mapped1 = undefined;
     const found = mapped.filter(isDiscordFrontendDevelopment.isNotNullish);
     if (dependencyMap != null) {
@@ -107,7 +102,7 @@ export default function InThisServerSection(arg0) {
     const items1 = [callback(Text.Text, obj), ];
     let tmp5Result = null != dependencyMap;
     if (tmp5Result) {
-      const obj1 = { style: null, onPress: null, accessibilityRole: "button", children: null };
+      obj1 = { style: null, onPress: null, accessibilityRole: "button", children: null };
       obj1[0] = tmp.viewAll;
       obj1[1] = function onPress() {
         let tmp = null != mapped1;

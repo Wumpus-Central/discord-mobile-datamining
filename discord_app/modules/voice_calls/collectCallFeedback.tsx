@@ -1,16 +1,16 @@
 // discord_app/modules/voice_calls/collectCallFeedback.tsx
-import handleSyncedStoresUpdate from "handleSyncedStoresUpdate";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleAudioRouteChanged from "handleAudioRouteChanged";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import closure_3 from "handleSyncedStoresUpdate" /* 9660 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "handleConnectionOpen" /* 1979 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "handleAudioRouteChanged" /* 9648 */;
 
-const require = arg1;
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/voice_calls/collectCallFeedback.tsx");
 
 export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
@@ -18,7 +18,7 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
   if (null == arg1) {
     if (null != voiceChannelId) {
       if (null != channel) {
-        let obj1 = rTCConnection;
+        obj1 = rTCConnection;
         rTCConnection = rTCConnection.getRTCConnection();
         let voiceDurationStats;
         if (rTCConnection != null) {
@@ -64,13 +64,13 @@ export default function collectCallFeedback(arg0, arg1, arg2, videoEnabled) {
           const tmp5Result1 = tmp5(9661);
           const obj2 = { type: "VIDEO_BACKGROUND_SHOW_FEEDBACK", analyticsData: null };
           obj2[1] = obj;
-          dispatcher.dispatch(obj2);
-          const obj14 = dispatcher;
+          dispatcherDefault.dispatch(obj2);
+          const obj14 = dispatcherDefault;
         } else {
           const obj3 = { type: "VOICE_CHANNEL_SHOW_FEEDBACK", analyticsData: null };
           obj3[1] = obj;
-          dispatcher.dispatch(obj3);
-          const obj6 = dispatcher;
+          dispatcherDefault.dispatch(obj3);
+          const obj6 = dispatcherDefault;
         }
         const obj5 = collectGuildAnalyticsMetadata;
       }

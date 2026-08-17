@@ -1,50 +1,46 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx
-import importAllResult from "VoiceProcessingOptions";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes";
-import jsxProd from "context";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import { getEmbeddedActivityLaunchability } from "../../../activities/utils/getEmbeddedActivityLaunchability.tsx";
-import { apexExperiment } from "../../../go_live/MobileGoLiveEntrypointExperiment.tsx";
-import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
-import { explicitContentFromProto } from "../../../user_settings/UserSettings.tsx";
-import { useSelectedActiveStream } from "../../../video_calls/native/useSelectedActiveStream.tsx";
-import { useIsConnectedToVoiceChannel } from "../hooks/useIsConnectedToVoiceChannel.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import getEmbeddedActivityLaunchability from "getEmbeddedActivityLaunchability" /* 11130 */;
+import dismissPanelDefault from "dismissPanel" /* 11439 */;
+import apexExperimentDefault from "apexExperiment" /* 12136 */;
+import useSelectedActiveStreamDefault from "useSelectedActiveStream" /* 12673 */;
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 16256 */;
+import apexExperimentDefault2 from "apexExperiment" /* 16418 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { CONTROLS_DRAWER_HEADER_EXPANDED_SIZE } from "VoicePanelControlsModes" /* 11438 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function NOOP() {
 
 }
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 let obj = { scrollView: null, scrollViewScreenReader: null, blurRegion: null };
-obj = { flex: 1, paddingHorizontal: require("Themes").space.PX_16 };
+obj = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-createCacheKey = { flex: 1, paddingHorizontal: require("Themes").space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
+createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, marginTop: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 obj[1] = createCacheKey;
 obj[2] = { height: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_8 = createCacheKey.createStyles(obj);
-let closure_9 = require("module_4115").createAnimatedComponent(require("GameConsoleAccountButton").ScrollView);
+let closure_9 = importDefaultResult.createAnimatedComponent(require("get ActivityIndicator").ScrollView);
 let closure_10 = importAllResult.memo((arg0) => {
-  let channel;
-  let openTab;
   ({ channel, openTab } = arg0);
-  const channelId = importAllResult.useContext(dismissPanel).channelId;
-  const tmp2 = useIsConnectedToVoiceChannel(channelId);
+  const channelId = importAllResult.useContext(dismissPanelDefault).channelId;
+  const tmp2 = useIsConnectedToVoiceChannelDefault(channelId);
   let obj = getEmbeddedActivityLaunchability;
   const embeddedActivityLaunchability = obj.useEmbeddedActivityLaunchability(channelId);
   const DeveloperMode = explicitContentFromProto.DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj1 = apexExperiment;
+  obj1 = apexExperimentDefault2;
   const treatment = obj1.useConfig({ location: "VoicePanelVoiceControls" }).treatment;
-  let obj2 = apexExperiment;
+  let obj2 = apexExperimentDefault;
   let nonContextualStreamOutputPresent = obj2.useConfig({ location: "VoicePanelVoiceControls" }).nonContextualStreamOutputPresent;
-  const tmp6 = useSelectedActiveStream(channel);
+  const tmp6 = useSelectedActiveStreamDefault(channel);
   if (!tmp2) {
     const items = [tmp2, , , , , , ];
     obj = { channel: null, connected: null };
@@ -135,8 +131,6 @@ let closure_10 = importAllResult.memo((arg0) => {
 let closure_12 = { top: CONTROLS_DRAWER_HEADER_EXPANDED_SIZE };
 let closure_13 = { code: "function VoicePanelVoiceControlsTsx1({offset:offset}){const{isScrolled}=this.__closure;isScrolled.set(offset>0);}" };
 const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisible) {
-  let animatedProps;
-  let onScroll;
   isVisible = isVisible.isVisible;
   let channelId;
   let sharedValue;
@@ -147,7 +141,7 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
   let obj = isVisible(sharedValue[20]);
   const items = [scrollerRef];
   const stateFromStores = obj.useStateFromStores(items, () => scrollerRef.getChannel(channelId));
-  let obj1 = isVisible(sharedValue[7]);
+  obj1 = isVisible(sharedValue[7]);
   sharedValue = obj1.useSharedValue(false);
   const fn = function s(offset) {
     const result = sharedValue.set(offset.offset > 0);
@@ -218,6 +212,6 @@ const memoResult = importAllResult.memo(function VoicePanelVoiceControls(isVisib
   children[1] = tmp14Result1;
   return closure_6(closure_7, { children });
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelVoiceControls.tsx");
 
 export default memoResult;

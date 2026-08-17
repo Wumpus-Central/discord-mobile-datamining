@@ -1,6 +1,8 @@
 // discord_app/modules/user_affinities/maybeSortByProbability.tsx
+import set from "set" /* 2 */;
 import { apexExperiment } from "VoiceUserAffinityExperiment.tsx";
-const result = require("set").fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
+
+const result = set.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");
 
 export const maybeSortByProbability = function maybeSortByProbability(reduced, userAffinitiesMap, location) {
   let sort = reduced;

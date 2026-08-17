@@ -1,29 +1,27 @@
 // discord_app/modules/favorites/FavoritesDismissibleContent.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { canShowTimeRecurringContent } from "../dismissible_content/useGetDismissibleContent.tsx";
-import { useFavoritesGuildConfig } from "FavoritesGuildExperiment.tsx";
-import { useFavoritesAccess } from "FavoritesHooks.tsx";
-import { useCanShowFavoritesGuildOnboarding } from "hooks/useCanShowFavoritesGuildOnboarding.native.tsx";
-import { hasOfferedFavoritesGuildOnboarding } from "onboarding/FavoritesGuildIntroPopover.tsx";
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
+import canShowTimeRecurringContent from "canShowTimeRecurringContent" /* 7367 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+import useFavoritesGuildConfig from "useFavoritesGuildConfig" /* 9981 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 9988 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9989 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = arg1;
+require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_NEW_BADGE, require("DismissibleContent").DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
 const items1 = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO, require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
 const items2 = [require("DismissibleContent").DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/FavoritesDismissibleContent.tsx");
 
 export const FAVORITES_GUILD_DISMISSIBLE_CONTENT = items;
 export const useFavoritesMenuItemPopoverDismissibleContent = function useFavoritesMenuItemPopoverDismissibleContent(set) {
-  let tmp11;
-  let tmp12;
   let obj = useFavoritesGuildConfig;
   const isFavoritesGuildSelected = useFavoritesAccess.useIsFavoritesGuildSelected();
   const obj2 = useFavoritesAccess;
-  const tmp4 = useCanShowFavoritesGuildOnboarding();
+  const tmp4 = useCanShowFavoritesGuildOnboardingDefault();
   let first = callback(canShowTimeRecurringContent.useDangerouslyPeekDismissibleContents(items1), 1)[0];
   if (first == null) {
     first = null;
@@ -69,8 +67,6 @@ export const useShouldRenderFavoritesMenuItemPopover = function useShouldRenderF
   return tmp8;
 };
 export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTagDismissibleContent(arg0) {
-  let require;
-  let tmp9;
   let obj = useFavoritesGuildConfig;
   useSelectedDismissibleContent;
   if (obj.useFavoritesGuildConfig({ location: "FavoritesDismissibleContent" }).isFreemium) {
@@ -79,12 +75,12 @@ export const useFavoritesBetaTagDismissibleContent = function useFavoritesBetaTa
     }
     [tmp9, require] = callback(tmp4([]), 2);
     const tmp10 = tmp9 === tmp(1377).DismissibleContent.FAVORITES_GUILD_NEW_BADGE;
-    const importDefault = tmp10;
+    closure_1 = tmp10;
     obj = { shouldShowBetaTag: null, dismissBetaTag: null };
     obj[0] = tmp10;
     obj[1] = function dismissBetaTag() {
       if (closure_1) {
-        callback(outer1_5.TAKE_ACTION);
+        callback(closure_1_5.TAKE_ACTION);
       }
     };
     return obj;

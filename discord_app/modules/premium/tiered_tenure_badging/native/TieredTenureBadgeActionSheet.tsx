@@ -1,27 +1,19 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx
-import useSafeAreaInsets from "useSafeAreaInsets";
-import { View } from "trackImpression";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import GuildFeatures from "GuildFeatures";
-import ME from "ME";
-import jsxProd from "ACTION_SHEET_HEIGHT_HALF";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { useMobileTenureBadgeImages } from "hooks/useMobileTenureBadgeImages.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import preloadDefault from "preload" /* 5449 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 9470 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function TieredTenureBadgeItem(arg0) {
-  let badge;
-  let isUsersBadge;
-  let premiumSince;
   ({ badge, isUsersBadge, premiumSince } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = useMobileTenureBadgeImages;
   const mobileTenureBadgeImages = obj.useMobileTenureBadgeImages(badge);
   if (mobileTenureBadgeImages != null) {
@@ -45,8 +37,8 @@ function TieredTenureBadgeItem(arg0) {
     obj[0] = items;
     obj = { resizeMode: "contain", source: null };
     obj[1] = small;
-    const items1 = [callback(preload, obj), , , ];
-    const obj1 = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
+    const items1 = [callback(preloadDefault, obj), , , ];
+    obj1 = { style: null, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.badgeName;
     const intl = tmp2(1236).intl;
     obj1[3] = intl.string(tieredTenureBadgeData.nameUnformatted);
@@ -79,38 +71,36 @@ function TieredTenureBadgeItem(arg0) {
   return tmp9Result;
 }
 ({ PremiumTypes: closure_6, TieredTenureBadge: error } = GuildFeatures);
-({ AnalyticsPages: metroImportAll, UserSettingsSections: c9 } = ME);
+({ AnalyticsPages: closure_8, UserSettingsSections: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
 createCacheKey = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: null, badgeName: null, badgeRequirement: null, badgePremiumSince: null, footer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: require("Themes").radii.sm };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[7] = createCacheKey;
 createCacheKey[8] = { marginTop: 8 };
 createCacheKey[9] = { marginTop: 4 };
 createCacheKey[10] = { width: 90, marginTop: 4, textAlign: "center" };
 createCacheKey[11] = { marginHorizontal: 24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgeActionSheet.tsx");
 
 export default function TieredTenureBadgeActionSheet(userId) {
-  let loading;
-  let onPress;
   userId = userId.userId;
   let flag = userId.shouldShowCTA;
   if (flag === undefined) {
     flag = true;
   }
-  let importDefault;
+  importDefault = undefined;
   let tieredTenureBadgeDataForUser;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   importDefault = tmp;
   let obj = userId(tieredTenureBadgeDataForUser[14]);
   tieredTenureBadgeDataForUser = obj.useTieredTenureBadgeDataForUser(userId);
-  let obj1 = userId(tieredTenureBadgeDataForUser[14]);
+  obj1 = userId(tieredTenureBadgeDataForUser[14]);
   React = obj1.usePremiumSinceForUser(userId);
   let obj2 = userId(tieredTenureBadgeDataForUser[15]);
-  let items = [mergeGuildAvatar];
+  let items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = userId(tieredTenureBadgeDataForUser[16]);
   const isPremiumResult = obj3.isPremium(stateFromStores, TIER_2.TIER_2);
@@ -144,11 +134,11 @@ export default function TieredTenureBadgeActionSheet(userId) {
   const items2 = [userId];
   const callback = React.useCallback(() => {
     let obj = userId(tieredTenureBadgeDataForUser[20]);
-    obj = { screen: outer1_9.PREMIUM };
+    obj = { screen: closure_1_9.PREMIUM };
     obj.openUserSettings(obj);
-    _undefined(tieredTenureBadgeDataForUser[21]).hideActionSheet(outer1_12);
-    const obj3 = _undefined(tieredTenureBadgeDataForUser[21]);
-    const obj4 = _undefined(tieredTenureBadgeDataForUser[21]);
+    lib(tieredTenureBadgeDataForUser[21]).hideActionSheet(closure_1_12);
+    const obj3 = lib(tieredTenureBadgeDataForUser[21]);
+    const obj4 = lib(tieredTenureBadgeDataForUser[21]);
     obj4.hideActionSheet(userId(tieredTenureBadgeDataForUser[22]).getUserProfileActionSheetKey(userId));
   }, items2);
   const tmp11 = importDefault(tieredTenureBadgeDataForUser[17]);
@@ -238,13 +228,13 @@ export default function TieredTenureBadgeActionSheet(userId) {
         }
         return arg0 === id;
       });
-      const items = [_undefined.rowContainer, ];
+      const items = [lib.rowContainer, ];
       let rowContainerWithUsersBadge = someResult;
       if (someResult) {
-        rowContainerWithUsersBadge = _undefined.rowContainerWithUsersBadge;
+        rowContainerWithUsersBadge = lib.rowContainerWithUsersBadge;
       }
       items[1] = rowContainerWithUsersBadge;
-      return outer1_10(outer1_4, {
+      return closure_1_10(closure_1_4, {
         style: items,
         children: arr.map((badge) => {
           const obj = { badge, isUsersBadge: null, premiumSince: null };
@@ -253,8 +243,8 @@ export default function TieredTenureBadgeActionSheet(userId) {
             id = user.id;
           }
           obj[1] = badge === id;
-          obj[2] = useSafeAreaInsets;
-          return outer1_10(outer1_14, obj, arg1);
+          obj[2] = closure_3;
+          return closure_1_10(closure_1_14, obj, arg1);
         })
       }, arg1);
     })

@@ -1,32 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetsBoard.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "WidgetType";
-import get_ActivityIndicator from "useIsMobileVisualRefreshExperimentEnabled";
-import fetchFingerprint from "fetchFingerprint";
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
-import jsxProd from "Divider";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import isFieldEmpty from "isFieldEmpty" /* 5375 */;
+import toSubmission from "toSubmission" /* 5380 */;
+import useOpenGameProfileModalDefault from "useOpenGameProfileModal" /* 9519 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12183 */;
+import UserProfileApplicationWidgetCardDefault from "UserProfileApplicationWidgetCard" /* 12187 */;
+import PersonalWidgetTextDefault from "PersonalWidgetText" /* 12291 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { isNullOrEmpty } from "../../../utils/StringUtils.tsx";
 import { GameProfileEmbedAction } from "../../game_profile/GameProfileAnalyticUtils.tsx";
-import { useOpenGameProfileModal } from "../../game_profile/hooks/useOpenGameProfileModal.tsx";
-import { useGameNameAndCoverImage } from "../../games/hooks/useGameNameAndCoverImage.tsx";
-import { toSubmission } from "../UserProfileApplicationWidgetTypes.tsx";
-import { isFieldEmpty } from "../UserProfilePersonalWidget.tsx";
-import { UserProfileApplicationWidgetCard } from "UserProfileApplicationWidgetCard.tsx";
-import { PersonalWidgetText } from "UserProfilePersonalWidgetCard.tsx";
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function WidgetRenderer(isFirstWidget) {
-  let cardStyle;
-  let userId;
-  let widget;
   ({ userId, widget, cardStyle } = isFirstWidget);
   if (widget instanceof toSubmission.ApplicationWidget) {
     let obj = { userId: null, widget: null, cardStyle: null, isFirstWidget: null };
@@ -34,13 +26,13 @@ function WidgetRenderer(isFirstWidget) {
     obj[1] = widget;
     obj[2] = cardStyle;
     obj[3] = isFirstWidget.isFirstWidget;
-    let tmp3Result = callback2(UserProfileApplicationWidgetCard, obj);
+    let tmp3Result = callback2(UserProfileApplicationWidgetCardDefault, obj);
   } else if (widget instanceof isFieldEmpty.UserProfilePersonalWidget) {
     obj = { userId: null, widget: null, cardStyle: null };
     obj[0] = userId;
     obj[1] = widget;
     obj[2] = cardStyle;
-    tmp3Result = tmp3(PersonalWidgetText, obj);
+    tmp3Result = tmp3(PersonalWidgetTextDefault, obj);
   } else {
     obj = { userId: null, widget: null, cardStyle: null };
     obj[0] = userId;
@@ -55,37 +47,35 @@ let c4 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = { top: 8, bottom: 8, left: 8, right: 8 };
 let obj = { board: null, coverPlaceholder: null, favoriteRow: null, favoriteDetails: null, favoriteCover: null, list: null, listRow: null, listCover: null, listDetails: null, comment: null, commentText: null, grid: null, gridCover: null, tags: null, tag: null, viewMore: null };
-obj = { gap: require("Themes").space.PX_16 };
+obj = { gap: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-createCacheKey = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[1] = createCacheKey;
-obj[2] = { flexDirection: "row", gap: require("Themes").space.PX_12 };
-let obj2 = { flexDirection: "row", gap: require("Themes").space.PX_12 };
-obj[3] = { flex: 1, gap: require("Themes").space.PX_8 };
+obj[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
+let obj2 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
+obj[3] = { flex: 1, gap: ThemesDefault.space.PX_8 };
 obj[4] = { aspectRatio: 0.75 };
-let obj3 = { flex: 1, gap: require("Themes").space.PX_8 };
-obj[5] = { gap: require("Themes").space.PX_16 };
-let obj4 = { gap: require("Themes").space.PX_16 };
-obj[6] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
+let obj3 = { flex: 1, gap: ThemesDefault.space.PX_8 };
+obj[5] = { gap: ThemesDefault.space.PX_16 };
+let obj4 = { gap: ThemesDefault.space.PX_16 };
+obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 obj[7] = { aspectRatio: 0.75 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-obj[8] = { flex: 1, gap: require("Themes").space.PX_8 };
-let obj6 = { flex: 1, gap: require("Themes").space.PX_8 };
-obj[9] = { flexDirection: "row", alignItems: "flex-start", gap: require("Themes").space.PX_4 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+obj[8] = { flex: 1, gap: ThemesDefault.space.PX_8 };
+let obj6 = { flex: 1, gap: ThemesDefault.space.PX_8 };
+obj[9] = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_4 };
 obj[10] = { flex: 1 };
-let obj7 = { flexDirection: "row", alignItems: "flex-start", gap: require("Themes").space.PX_4 };
-obj[11] = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_16 };
+let obj7 = { flexDirection: "row", alignItems: "flex-start", gap: ThemesDefault.space.PX_4 };
+obj[11] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16 };
 obj[12] = { aspectRatio: 0.75 };
-let obj8 = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_16 };
-obj[13] = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_4 };
-let obj9 = { flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_4 };
-obj[14] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_8, paddingVertical: require("Themes").space.PX_4, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-let obj10 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_8, paddingVertical: require("Themes").space.PX_4, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-obj[15] = { marginTop: require("Themes").space.PX_12 };
+let obj8 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_16 };
+obj[13] = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
+let obj9 = { flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_4 };
+obj[14] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj10 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+obj[15] = { marginTop: ThemesDefault.space.PX_12 };
 let closure_14 = createCacheKey.createStyles(obj);
 let closure_15 = importAllResult.memo((arg0) => {
-  let style;
-  let uri;
   ({ uri, style } = arg0);
   const tmp = callback4();
   if (null != uri) {
@@ -106,14 +96,14 @@ let closure_15 = importAllResult.memo((arg0) => {
 });
 let closure_16 = importAllResult.memo((tags) => {
   tags = tags.tags;
-  let c0;
+  closure_0 = undefined;
   const tmp = callback4();
-  c0 = tmp;
+  closure_0 = tmp;
   if (tags == null) {
     tags = [];
   }
   const flatMapResult = tags.flatMap((arg0) => {
-    let obj = _undefined(table[11]);
+    let obj = lib(table[11]);
     const widgetGameTagMetadata = obj.getWidgetGameTagMetadata(arg0);
     if (null != widgetGameTagMetadata) {
       obj = { tag: null, meta: null };
@@ -132,33 +122,27 @@ let closure_16 = importAllResult.memo((tags) => {
     obj[0] = tmp.tags;
     obj[1] = flatMapResult.map((meta) => {
       meta = meta.meta;
-      let obj = { style: _undefined.tag, children: null };
-      obj = { size: "xs", color: outer1_1(outer1_2[7]).colors.TEXT_MUTED };
-      const items = [outer1_10(meta.icon, obj), ];
-      obj = { variant: "text-xs/medium", color: "text-muted", children: null };
-      obj[2] = meta.getText();
-      items[1] = outer1_10(_undefined(outer1_2[12]).Text, obj);
+      let obj = { style: lib.tag, children: null };
+      obj = { size: "xs", color: closure_1_1(closure_1_2[7]).colors.TEXT_MUTED };
+      const items = [closure_1_10(meta.icon, obj), ];
+      obj = { variant: "text-xs/medium", color: "text-muted", children: meta.getText() };
+      items[1] = closure_1_10(lib(closure_1_2[12]).Text, obj);
       obj[1] = items;
-      return outer1_11(outer1_7, obj, meta.tag);
+      return closure_1_11(closure_1_7, obj, meta.tag);
     });
     tmp2 = callback2(closure_7, obj);
   }
   return tmp2;
 });
 let closure_17 = importAllResult.memo((game) => {
-  let coverImageUrl;
-  let coverWidth;
-  let disableInteraction;
-  let gameName;
-  let userId;
   game = game.game;
   let _require;
   ({ userId, coverWidth, disableInteraction } = game);
   let tmp = callback4();
-  ({ gameName, coverImageUrl } = useGameNameAndCoverImage(game.gameId));
+  ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
   const tmp2 = importDefault;
-  const tmp4 = useGameNameAndCoverImage(game.gameId);
+  const tmp4 = useGameNameAndCoverImageDefault(game.gameId);
   obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp5Result;
@@ -170,8 +154,8 @@ let closure_17 = importAllResult.memo((game) => {
   obj = {
     onPress() {
       let tmp;
-      if (_undefined != null) {
-        tmp = _undefined();
+      if (callback != null) {
+        tmp = callback();
       }
       return tmp;
     },
@@ -182,14 +166,14 @@ let closure_17 = importAllResult.memo((game) => {
   };
   items = [tmp.favoriteCover, { width: coverWidth }];
   const items1 = [callback2(closure_6, obj), ];
-  const obj1 = { style: tmp.favoriteDetails, children: null };
-  tmp5 = useOpenGameProfileModal;
+  obj1 = { style: tmp.favoriteDetails, children: null };
+  tmp5 = useOpenGameProfileModalDefault;
   const items2 = [
     callback2(closure_6, {
       onPress() {
         let tmp;
-        if (_undefined != null) {
-          tmp = _undefined();
+        if (callback != null) {
+          tmp = callback();
         }
         return tmp;
       },
@@ -204,8 +188,8 @@ let closure_17 = importAllResult.memo((game) => {
   const obj2 = {
     onPress() {
       let tmp;
-      if (_undefined != null) {
-        tmp = _undefined();
+      if (callback != null) {
+        tmp = callback();
       }
       return tmp;
     },
@@ -224,7 +208,7 @@ let closure_17 = importAllResult.memo((game) => {
     const obj3 = { style: null, children: null };
     obj3[0] = tmp.comment;
     const obj4 = { size: "xxs", color: null };
-    obj4[1] = tmp2(712).colors.TEXT_MUTED;
+    obj4[1] = ThemesDefault.colors.TEXT_MUTED;
     const items3 = [tmp10(tmp6(12184).QuoteIcon, obj4), ];
     const obj5 = { variant: "text-sm/normal", color: "text-muted", lineClamp: 3, style: null, children: null };
     obj5[3] = tmp.commentText;
@@ -241,18 +225,13 @@ let closure_17 = importAllResult.memo((game) => {
   return closure_11(closure_7, obj);
 });
 let closure_18 = importAllResult.memo((game) => {
-  let coverImageUrl;
-  let coverWidth;
-  let disableInteraction;
-  let gameName;
-  let userId;
   game = game.game;
   let _require;
   ({ userId, coverWidth, disableInteraction } = game);
   let tmp = callback4();
-  ({ gameName, coverImageUrl } = useGameNameAndCoverImage(game.gameId));
+  ({ gameName, coverImageUrl } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
-  const tmp3 = useGameNameAndCoverImage(game.gameId);
+  const tmp3 = useGameNameAndCoverImageDefault(game.gameId);
   obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp4Result;
@@ -264,8 +243,8 @@ let closure_18 = importAllResult.memo((game) => {
   obj = {
     onPress() {
       let tmp;
-      if (_undefined != null) {
-        tmp = _undefined();
+      if (callback != null) {
+        tmp = callback();
       }
       return tmp;
     },
@@ -276,15 +255,15 @@ let closure_18 = importAllResult.memo((game) => {
   };
   items = [tmp.listCover, { width: coverWidth }];
   const items1 = [callback2(closure_6, obj), ];
-  const obj1 = { style: tmp.listDetails, children: null };
-  tmp4 = useOpenGameProfileModal;
+  obj1 = { style: tmp.listDetails, children: null };
+  tmp4 = useOpenGameProfileModalDefault;
   const tmp5 = _require;
   const items2 = [
     callback2(closure_6, {
       onPress() {
         let tmp;
-        if (_undefined != null) {
-          tmp = _undefined();
+        if (callback != null) {
+          tmp = callback();
         }
         return tmp;
       },
@@ -301,18 +280,13 @@ let closure_18 = importAllResult.memo((game) => {
   return callback3(closure_7, obj);
 });
 let closure_19 = importAllResult.memo((game) => {
-  let coverImageUrl;
-  let coverWidth;
-  let disableInteraction;
-  let gameName;
-  let userId;
   game = game.game;
   let _require;
   ({ userId, coverWidth, disableInteraction } = game);
   let tmp = callback4();
-  ({ coverImageUrl, gameName } = useGameNameAndCoverImage(game.gameId));
+  ({ coverImageUrl, gameName } = useGameNameAndCoverImageDefault(game.gameId));
   let obj = { location: "UserProfileWidgetsBoard", applicationId: game.gameId, source: null, sourceUserId: null, trackEntryPointImpression: true, stackingBehavior: "stack" };
-  const tmp2 = useGameNameAndCoverImage(game.gameId);
+  const tmp2 = useGameNameAndCoverImageDefault(game.gameId);
   obj[2] = _GameProfileEmbedAction.GameProfileSources.UserProfile;
   obj[3] = userId;
   let tmp3Result;
@@ -323,8 +297,8 @@ let closure_19 = importAllResult.memo((game) => {
   obj = {
     onPress() {
       let tmp;
-      if (_undefined != null) {
-        tmp = _undefined();
+      if (callback != null) {
+        tmp = callback();
       }
       return tmp;
     },
@@ -337,19 +311,15 @@ let closure_19 = importAllResult.memo((game) => {
   return callback2(closure_6, obj);
 });
 const memoResult = importAllResult.memo((style) => {
-  let c3;
-  let c4;
-  let tmp10;
-  let tmp8;
   const userId = style.userId;
   const widget = style.widget;
   const disableInteraction = style.disableInteraction;
   let callback;
-  let c5;
+  c5 = undefined;
   const tmp = callback4();
   let obj = userId(disableInteraction[16]);
-  const items = [fetchFingerprint];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getId() === userId);
+  const items = [closure_8];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getId() === userId);
   const tmp6 = widget(disableInteraction[17])("UserProfileWidgetsBoard");
   [tmp8, c3] = callback(undefined.useState(false), 2);
   const tmp7 = callback(undefined.useState(false), 2);
@@ -379,12 +349,12 @@ const memoResult = importAllResult.memo((style) => {
     obj[0] = tmp.list;
     let mapped = tmp10 > 0;
     if (mapped) {
-      mapped = substr.map((game) => outer1_10(outer1_18, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
+      mapped = substr.map((game) => closure_1_10(closure_1_18, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
     }
     obj[1] = mapped;
     const items2 = [callback2(closure_7, obj), ];
     if (memo.length <= 2) {
-      const obj1 = { children: null };
+      obj1 = { children: null };
       items2[1] = tmp24;
       obj1[0] = items2;
       tmp14Result = tmp25(tmp26, obj1);
@@ -432,7 +402,7 @@ const memoResult = importAllResult.memo((style) => {
     obj5[0] = tmp.grid;
     let mapped1 = tmp10 > 0;
     if (mapped1) {
-      mapped1 = substr1.map((game) => outer1_10(outer1_19, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
+      mapped1 = substr1.map((game) => closure_1_10(closure_1_19, { userId, game, coverWidth: c5, disableInteraction }, game.gameId));
     }
     obj5[1] = mapped1;
     const items3 = [callback2(closure_7, obj5), ];
@@ -495,8 +465,8 @@ const memoResult = importAllResult.memo((style) => {
   });
   return callback2(tmp5Result, obj10);
 });
-let obj11 = { marginTop: require("Themes").space.PX_12 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
+let obj11 = { marginTop: ThemesDefault.space.PX_12 };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetsBoard.tsx");
 
 export default function UserProfileWidgetsBoard(userId) {
   userId = userId.userId;
@@ -510,20 +480,20 @@ export default function UserProfileWidgetsBoard(userId) {
   const displayableBoardWidgets = obj.useDisplayableBoardWidgets(userId);
   cardStyle = tmp2;
   trackUserProfileAction = undefined;
-  let _slicedToArray;
+  closure_3 = undefined;
   const tmp = callback4();
   trackUserProfileAction = flag(trackUserProfileAction[10]).useUserProfileAnalyticsContext().trackUserProfileAction;
-  _slicedToArray = importAllResult.useRef(false);
+  closure_3 = importAllResult.useRef(false);
   const items = [flag, displayableBoardWidgets.length > 0, trackUserProfileAction];
   const effect = importAllResult.useEffect(() => {
     if (flag) {
-      let tmp2 = cardStyle;
-      if (cardStyle) {
+      let tmp2 = closure_1;
+      if (closure_1) {
         tmp2 = !ref.current;
       }
       if (tmp2) {
         const obj = { action: "VIEW", section: null };
-        obj[1] = outer1_9.WIDGETS;
+        obj[1] = closure_1_9.WIDGETS;
         trackUserProfileAction(obj);
         ref.current = true;
       }
@@ -535,7 +505,7 @@ export default function UserProfileWidgetsBoard(userId) {
   if (0 !== displayableBoardWidgets.length) {
     obj = { style: null, children: null };
     obj[0] = tmp.board;
-    obj[1] = displayableBoardWidgets.map((getUniqueKey) => outer1_10(outer1_21, { userId: flag, widget: getUniqueKey, cardStyle, isFirstWidget: 0 === arg1 }, getUniqueKey.getUniqueKey()));
+    obj[1] = displayableBoardWidgets.map((getUniqueKey) => closure_1_10(closure_1_21, { userId: flag, widget: getUniqueKey, cardStyle: closure_1, isFirstWidget: 0 === arg1 }, getUniqueKey.getUniqueKey()));
     tmp4 = callback2(closure_7, obj);
   }
   return tmp4;

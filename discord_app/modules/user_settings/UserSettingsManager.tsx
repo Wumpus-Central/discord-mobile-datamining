@@ -1,8 +1,9 @@
 // discord_app/modules/user_settings/UserSettingsManager.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
 let require = arg1;
 let c2 = false;
+initializeDefault;
 class UserSettingsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -19,7 +20,7 @@ class UserSettingsManager extends tmp2 {
 }
 const prototype = UserSettingsManager.prototype;
 prototype["setVerifyTimezone"] = function setVerifyTimezone() {
-  let c2 = true;
+  c2 = true;
 };
 prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
   if (c2) {
@@ -31,7 +32,7 @@ prototype["ensureTimezoneUpdated"] = function ensureTimezoneUpdated() {
     if (TimezoneOffset.getSetting() !== timezoneOffset) {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        const TimezoneOffset = timezoneOffset(outer1_1[1]).TimezoneOffset;
+        const TimezoneOffset = timezoneOffset(closure_1_1[1]).TimezoneOffset;
         return TimezoneOffset.updateSetting(timezoneOffset);
       });
     }

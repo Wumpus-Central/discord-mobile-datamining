@@ -1,6 +1,8 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx
-import { ApplicationWidgetFieldPresentationType } from "../../../shared/shared-constants/ApplicationWidgetFieldPresentationType.tsx";
+import set from "set" /* 2 */;
+import ApplicationWidgetFieldPresentationType from "ApplicationWidgetFieldPresentationType" /* 12194 */;
 import { ApplicationWidgetFieldValueType } from "../../../shared/shared-constants/ApplicationWidgetFieldValueType.tsx";
+
 function resolveFieldValue(image, items, applicationAssets) {
   const _require = image;
   applicationAssets = applicationAssets.applicationAssets;
@@ -17,7 +19,7 @@ function resolveFieldValue(image, items, applicationAssets) {
       if (hasItem) {
         if (items.includes(iter.type)) {
           if ("playtime_hours" === image.value) {
-            let obj = { type: null, value: null, presentationType: null };
+            obj = { type: null, value: null, presentationType: null };
             obj[0] = iter.type;
             const _Math = Math;
             iter = iter.value;
@@ -43,7 +45,7 @@ function resolveFieldValue(image, items, applicationAssets) {
     if (image.presentation_type === tmp19(12194).ApplicationWidgetFieldPresentationType.TEXT) {
       tmp6 = null;
       if (items.includes(obj.STRING)) {
-        const obj1 = { type: null, value: null, presentationType: null };
+        obj1 = { type: null, value: null, presentationType: null };
         obj1[0] = tmp7.STRING;
         obj1[1] = image.value;
         obj1[2] = tmp19(12194).ApplicationWidgetFieldPresentationType.TEXT;
@@ -82,10 +84,10 @@ const items1 = [obj.NUMBER];
 const items2 = [obj.MEDIA];
 const items3 = [obj.NUMBER];
 let closure_3 = { [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.TEXT]: items, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.NUMBER]: items1, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.IMAGE]: items2, [ApplicationWidgetFieldPresentationType.ApplicationWidgetFieldPresentationType.DURATION]: items3 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValues.tsx");
 
 export const ResolvedValueType = obj;
 export function bindResolveFieldValue(resolutionContext) {
-  let closure_0 = resolutionContext;
-  return (arg0, arg1) => outer1_4(arg0, arg1, closure_0);
+  closure_0 = resolutionContext;
+  return (arg0, arg1) => closure_1_4(arg0, arg1, closure_0);
 }

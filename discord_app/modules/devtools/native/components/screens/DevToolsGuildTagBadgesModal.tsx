@@ -1,15 +1,13 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx
-import { jsx } from "jsxProd";
-import createNativeStackNavigator from "createNativeStackNavigator";
-import importAllResult from "noop";
+import itemsDefault from "items" /* 15158 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import importAllResult from "noop" /* 19 */;
 import { NavigationStack } from "../../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { items } from "DevToolsGuildTagBadgesScreen.tsx";
 
 const require = arg1;
-createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = require("noop").memo(function DevToolsGuildTagBadgesModal() {
-  let Navigator;
-  let Screen;
+let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
+const memoResult = importAllResult.memo(function DevToolsGuildTagBadgesModal() {
   let obj = _NavigationStack;
   _require = obj.useAccessibilityNativeStackOptions();
   obj = {
@@ -20,12 +18,11 @@ const memoResult = require("noop").memo(function DevToolsGuildTagBadgesModal() {
           const merged1 = Object.assign(merged);
           return callback2(callback(table[4]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: null,
+        headerLeft: callback(closure_1_2[4]).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      obj[1] = callback(outer1_2[4]).getRenderModalCloseImage(navigation.navigation);
       let merged = Object.assign(callback);
-      let merged1 = Object.assign(outer1_1(outer1_2[5])());
+      let merged1 = Object.assign(closure_1_1(closure_1_2[5])());
       return obj;
     },
     children: null
@@ -35,16 +32,16 @@ const memoResult = require("noop").memo(function DevToolsGuildTagBadgesModal() {
     options() {
       return { title: "Guild Tag Badges" };
     },
-    component: items
+    component: itemsDefault
   };
-  ({ Navigator, Screen } = createNativeStackNavigator);
+  ({ Navigator, Screen } = closure_4);
   obj[1] = <Screen name="DevToolsGuildTagBadges" options={function options() {
     return { title: "Guild Tag Badges" };
-  }} component={items} />;
+  }} component={itemsDefault} />;
   return <Navigator name="DevToolsGuildTagBadges" options={function options() {
     return { title: "Guild Tag Badges" };
-  }} component={items} />;
+  }} component={itemsDefault} />;
 });
-const result = require("createNativeStackNavigator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsGuildTagBadgesModal.tsx");
 
 export default memoResult;

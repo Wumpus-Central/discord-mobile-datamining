@@ -1,39 +1,36 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx
-import useIsWindowLarge from "useIsWindowLarge";
-import get_ActivityIndicator from "Button";
-import initialize from "initialize";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpenOrResumed from "handleConnectionOpenOrResumed";
-import { GuildFeatures } from "ME";
-import jsxProd from "fromGuildPropertiesWithAdditionalFields";
-import createCacheKey from "createCacheKey";
-import PlatformTypes from "PlatformTypes";
-import { registerAsset } from "../../../../../_runtime/09156_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09159_registerAsset.js";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 9156 */;
+import registerAssetDefault2 from "registerAsset" /* 9159 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "initialize" /* 13428 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "handleConnectionOpenOrResumed" /* 7240 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
 
-let c10;
-let c4;
-let c5;
-let unpackModuleId;
 const require = arg1;
 function CommunityPill(guildVisibility) {
   let GlobeEarthIcon;
-  let importDefault;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  const tmp = callback3();
   const intl = GlobeEarthIcon(1236).intl;
   importDefault = intl.string(GlobeEarthIcon(1236).t.TME4LJ);
-  let tmp4Result = registerAsset;
+  let tmp4Result = registerAssetDefault;
   if (guildVisibility.guildVisibility === GlobeEarthIcon(9155).GuildVisibility.PUBLIC) {
     const intl2 = tmp2(1236).intl;
     importDefault = intl2.string(tmp2(1236).t.op2cJ6);
     GlobeEarthIcon = tmp2(9826).GlobeEarthIcon;
-    tmp4Result = registerAsset;
+    tmp4Result = registerAssetDefault2;
   }
   let obj = {
     style: tmp.communityPill,
     accessibilityRole: "button",
     onPress() {
-      let obj = callback(outer1_2[16]);
+      let obj = callback(closure_1_2[16]);
       obj = { key: "SERVER_BADGE_DESCRIPTION_INVITE_ONLY", content: callback, IconComponent: GlobeEarthIcon };
       obj.open(obj);
     },
@@ -51,14 +48,14 @@ function CommunityPill(guildVisibility) {
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { content: { padding: 16 }, avatar: { borderRadius: 14.117647058823529, height: 60, width: 60 }, headerContainer: null, avatarBackground: null, description: null, memberInfo: null, nameRow: null, communityPill: null, communityPillIcon: null, communityPillText: null, guildBanner: null };
-createCacheKey = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[3] = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[4] = { marginTop: 8 };
 createCacheKey[5] = { marginTop: 16, flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 16 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 8 };
-let obj1 = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: require("Themes").radii.round };
+let obj1 = { height: 68, width: 68, marginBottom: 12, marginLeft: -4, padding: 4, borderRadius: 16, alignContent: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: ThemesDefault.radii.round };
 createCacheKey[8] = { width: 16, height: 16, marginRight: 6 };
 let num;
 if (PlatformTypes.isAndroid()) {
@@ -66,27 +63,23 @@ if (PlatformTypes.isAndroid()) {
 }
 createCacheKey[9] = { lineHeight: num };
 createCacheKey[10] = { position: "absolute", left: "50%", top: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: require("Themes").radii.round };
-let result = require("initialize").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, paddingTop: 4, paddingRight: 8, paddingBottom: 4, paddingLeft: 6, borderRadius: ThemesDefault.radii.round };
+let result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetHeader.tsx");
 
 export default function GuildActionSheetHeader(guild) {
-  let description;
-  let memberCount;
-  let name;
-  let onlineCount;
   guild = guild.guild;
-  let importDefault;
+  importDefault = undefined;
   let stateFromStores;
   let width;
-  let c4;
-  const tmp = createCacheKey();
+  c4 = undefined;
+  const tmp = callback3();
   importDefault = tmp;
   const tmp4 = importDefault(stateFromStores[19])();
   let obj = guild(stateFromStores[20]);
-  const items = [handleConnectionOpenOrResumed];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_8.isSubscribedToAnyGuildChannel(guild.id));
-  let obj1 = width;
+  const items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.isSubscribedToAnyGuildChannel(guild.id));
+  obj1 = width;
   const items1 = [guild, stateFromStores];
   const effect = width.useEffect(() => {
     let isGuildRecordResult = !stateFromStores;
@@ -100,11 +93,11 @@ export default function GuildActionSheetHeader(guild) {
     }
   }, items1);
   let obj2 = guild(stateFromStores[20]);
-  const items2 = [createGuildRecordFromRust];
-  let stateFromStores1 = obj2.useStateFromStores(items2, () => outer1_7.getGuild(guild.id));
+  const items2 = [closure_7];
+  let stateFromStores1 = obj2.useStateFromStores(items2, () => closure_1_7.getGuild(guild.id));
   let obj3 = guild(stateFromStores[20]);
-  const items3 = [initialize];
-  const stateFromStores2 = obj3.useStateFromStores(items3, () => outer1_6.getGuild(guild.id));
+  const items3 = [closure_6];
+  const stateFromStores2 = obj3.useStateFromStores(items3, () => closure_1_6.getGuild(guild.id));
   if (stateFromStores1 == null) {
     stateFromStores1 = stateFromStores2;
   }
@@ -193,7 +186,7 @@ export default function GuildActionSheetHeader(guild) {
   const clientThemesOverride = guild(stateFromStores[28]).useClientThemesOverride();
   const memo = obj1.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(_undefined.guildBanner);
+    const merged = Object.assign(guildBanner.guildBanner);
     obj.width = width;
     obj.height = c4;
     obj.marginLeft = -width / 2;

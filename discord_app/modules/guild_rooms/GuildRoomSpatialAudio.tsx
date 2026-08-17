@@ -1,14 +1,10 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudio.tsx
-import fetchFingerprint from "fetchFingerprint";
-import resolveCreatingNotes from "resolveCreatingNotes";
-import getName from "getName";
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "resolveCreatingNotes" /* 9864 */;
+import items from "items" /* 9867 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 function computeLivingRoomWorldPoints(channelId) {
-  let currentUserId;
-  let users;
   ({ users, currentUserId } = channelId);
   let position;
   let aspectRatio;
@@ -36,15 +32,15 @@ function computeLivingRoomWorldPoints(channelId) {
     const items = [position.userId, ];
     let point = position;
     if (position == null) {
-      point = outer1_7;
+      point = closure_1_7;
     }
     items[1] = { worldX: (position.x - point.x) / 100 * aspectRatio * 8, worldY: 0, worldZ: 8 * ((position.y - point.y) / 100) };
     return items;
   }));
 }
-({ GUILD_ROOM_BACKGROUND_CONFIG: c5, GUILD_ROOM_SPATIAL_AUDIO_MODE: closure_6 } = getName);
+({ GUILD_ROOM_BACKGROUND_CONFIG: c5, GUILD_ROOM_SPATIAL_AUDIO_MODE: closure_6 } = items);
 let closure_7 = { x: 50, y: 50 };
-const result = require("getName").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudio.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudio.tsx");
 
 export { computeLivingRoomWorldPoints };
 export const livingRoomWorldPointToMediaEnginePoint = function livingRoomWorldPointToMediaEnginePoint(worldX) {
@@ -54,9 +50,9 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   channelId = channelId.channelId;
   const guildId = channelId.guildId;
   let stateFromStores;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = channelId(589);
-  const items = [fetchFingerprint];
+  const items = [closure_3];
   stateFromStores = obj.useStateFromStores(items, () => id.getId());
   let interactionsEnabled = stateFromStores(9882).useExperiment({ guildId, location: "SpatialAudioPanel" }).interactionsEnabled;
   if (interactionsEnabled) {
@@ -70,16 +66,16 @@ export const useGuildRoomSpatialAudio = function useGuildRoomSpatialAudio(channe
   obj = { available: interactionsEnabled, worldPoints: null };
   const obj2 = stateFromStores(9882);
   const tmp = channelId;
-  const items1 = [resolveCreatingNotes];
+  const items1 = [closure_4];
   const items2 = [tmp5, channelId, stateFromStores];
   obj[1] = channelId(589).useStateFromStores(items1, () => {
-    if (c2) {
+    if (closure_2) {
       if (null != channelId) {
         const obj = { users: null, currentUserId: null, channelId: null };
-        obj[0] = outer1_4.getRoomUsers(tmp);
+        obj[0] = closure_1_4.getRoomUsers(tmp);
         obj[1] = stateFromStores;
         obj[2] = tmp;
-        outer1_8(obj);
+        closure_1_8(obj);
       }
       return {};
     }

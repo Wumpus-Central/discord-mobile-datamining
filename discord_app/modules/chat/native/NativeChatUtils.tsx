@@ -1,18 +1,17 @@
 // discord_app/modules/chat/native/NativeChatUtils.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeChatModule.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10474 */;
+import enforcingDefault from "enforcing" /* 10476 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c3;
-let c4;
 ({ NativeModules: c3, findNodeHandle: c4 } = get_ActivityIndicator);
 let obj = { TOP: 0, [0]: "TOP", MIDDLE: 1, [1]: "MIDDLE", BOTTOM: 2, [2]: "BOTTOM", NONE: 3, [3]: "NONE" };
 obj = {
   scrollTo(arg0, arg1, arg2) {
     if (null != arg0) {
-      let obj = arg2;
+      obj = arg2;
       if (arg2 == null) {
         obj = {};
       }
@@ -32,7 +31,7 @@ obj = {
         const Commands = tmp5(10474).Commands;
         Commands.scrollTo(arg0, arg1, tmp, tmp2, TOP);
       }
-      obj2 = set;
+      obj2 = set2;
       tmp5 = require;
     }
   },
@@ -48,7 +47,7 @@ obj = {
         const Commands = tmp2(10474).Commands;
         Commands.scrollToBottom(arg0, arg1);
       }
-      obj = set;
+      obj = set2;
       tmp2 = require;
     }
   },
@@ -61,7 +60,7 @@ obj = {
           DCDChatManager.scrollToTop(tmp4, arg1);
         }
       }
-      obj = set;
+      obj = set2;
     }
   },
   scrollToRelativeOffset(arg0, arg1, arg2) {
@@ -73,12 +72,12 @@ obj = {
           const result = DCDChatManager.scrollToRelativeOffset(tmp4, arg1, arg2);
         }
       }
-      obj = set;
+      obj = set2;
     }
   },
   scrollIntoView(arg0, arg1, arg2) {
     if (null != arg0) {
-      let obj = arg2;
+      obj = arg2;
       if (arg2 == null) {
         obj = {};
       }
@@ -94,12 +93,11 @@ obj = {
         const Commands = tmp4(10474).Commands;
         Commands.scrollIntoView(arg0, arg1, tmp, tmp2);
       }
-      obj2 = set;
+      obj2 = set2;
       tmp4 = require;
     }
   },
   updateRows(arg0, rows) {
-    let forceReload;
     if (null != arg0) {
       if (obj6.isIOS()) {
         let tmp31Result = tmp31(10475);
@@ -108,7 +106,7 @@ obj = {
         if (forceReload == null) {
           forceReload = false;
         }
-        let obj = { category: "chat.dispatch", message: null, data: null };
+        obj = { category: "chat.dispatch", message: null, data: null };
         const _HermesInternal = HermesInternal;
         obj[1] = "updateRows dispatch id=" + andIncrementChangesetIdForChat + " ops=" + rows.length;
         obj = { changesetUpdateId: null, opCount: null, rows: null, forceReload: null };
@@ -117,7 +115,7 @@ obj = {
         obj[2] = rows;
         obj[3] = forceReload;
         obj[2] = obj;
-        SentryUtils.native.addBreadcrumb(obj);
+        _modDef1208.addBreadcrumb(obj);
         const Commands = tmp31(10474).Commands;
         const _JSON2 = JSON;
         const json = JSON.stringify(rows.rows);
@@ -140,11 +138,11 @@ obj = {
           flag6 = true;
         }
         Commands.updateRows(arg0, json, isLoadingAtTop, str3, andIncrementChangesetIdForChat, flag4, flag5, flag6);
-        const obj3 = SentryUtils.native;
+        const obj3 = _modDef1208;
       } else {
         const tmp2 = callback(arg0);
         if (null != tmp2) {
-          const obj7 = enforcing;
+          const obj7 = enforcingDefault;
           const _JSON4 = JSON;
           const json1 = JSON.stringify(rows.rows);
           const isLoadingAtTop2 = rows.isLoadingAtTop;
@@ -170,7 +168,7 @@ obj = {
           obj7.updateRows(tmp2, json1, isLoadingAtTop2, json2, andIncrementChangesetIdForChat1, flag, flag2, flag3);
         }
       }
-      obj6 = set;
+      obj6 = set2;
     }
   },
   clearRows(arg0) {
@@ -183,18 +181,18 @@ obj = {
         const tmp2 = callback(arg0);
         if (null != tmp2) {
           tmp6Result = tmp6(10475);
-          enforcing.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
-          const obj = enforcing;
+          enforcingDefault.clearRows(tmp2, tmp6Result.getAndIncrementChangesetIdForChat(arg0));
+          obj = enforcingDefault;
         }
       }
-      obj4 = set;
+      obj4 = set2;
     }
   },
   fadeIn(arg0) {
     let isIOSResult = null != arg0;
     if (isIOSResult) {
-      isIOSResult = set.isIOS();
-      const obj = set;
+      isIOSResult = set2.isIOS();
+      obj = set2;
     }
     if (isIOSResult) {
       const Commands = __INTERNAL_VIEW_CONFIG.Commands;
@@ -213,7 +211,7 @@ obj = {
     }
   }
 };
-let result = require("__INTERNAL_VIEW_CONFIG").fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
+let result = set.fileFinishedImporting("modules/chat/native/NativeChatUtils.tsx");
 
 export default obj;
 export const ChatScrollPosition = obj;

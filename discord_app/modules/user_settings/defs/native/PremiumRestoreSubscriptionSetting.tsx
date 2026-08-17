@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
-import { applyAppleReceipt } from "../../../../actions/native/BillingActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
+import set from "set" /* 500 */;
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import applyAppleReceiptDefault from "applyAppleReceipt" /* 7390 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -17,7 +17,7 @@ createToggle = {
   parent: null,
   IconComponent: require("NitroWheelIcon").NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
-    let obj = applyAppleReceipt;
+    let obj = applyAppleReceiptDefault;
     const result = obj.restoreAndApplyPurchases(true);
     result.then((arg0) => {
       if (arg0.length > 0) {
@@ -47,19 +47,19 @@ createToggle = {
     obj = {
       importer() {
         return callback(paths[6])(paths[5], paths.paths).then((arg0) => {
-          let closure_0 = arg0.default;
+          closure_0 = arg0.default;
           return (arg0) => {
             const merged = Object.assign(arg0);
-            return outer1_4(closure_0, {});
+            return closure_1_4(closure_0, {});
           };
         });
       }
     };
-    AlertActionCreators.openLazy(obj);
+    _modDef4656.openLazy(obj);
   },
   withArrow: true,
   usePredicate: function useHasPremiumRestoreSubscriptionSetting() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
     let tmp4 = null != stateFromStores && stateFromStores.verified;
     if (tmp4) {
@@ -70,6 +70,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("applyAppleReceipt").fileFinishedImporting("modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumRestoreSubscriptionSetting.tsx");
 
 export default createToggle;

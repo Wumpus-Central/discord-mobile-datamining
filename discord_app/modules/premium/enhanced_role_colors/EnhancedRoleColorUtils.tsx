@@ -1,8 +1,10 @@
 // discord_app/modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx
-import { DEFAULT_ROLE_COLOR_HEX } from "ME";
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
 
-const result = require("set").fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
+const DEFAULT_ROLE_COLOR_HEX = ME.DEFAULT_ROLE_COLOR_HEX;
+const result = set.fileFinishedImporting("modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx");
 
 export const extractColorStringsFromServerColors = function extractColorStringsFromServerColors(colors) {
   if (0 === colors.primary_color) {

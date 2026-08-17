@@ -1,26 +1,26 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx
-import { Endpoints } from "ME";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 import { sendRequest } from "../../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../../../Dispatcher.tsx";
 
-const result = require("dispatcher").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx");
 
 export const fetchVanityUrl = function fetchVanityUrl(id) {
   const HTTP = sendRequest.HTTP;
   const value = HTTP.get({ url: Endpoints.GUILD_VANITY_URL(id), oldFormErrors: true, rejectWithError: true });
   return value.then((body) => {
-    let code;
-    let error;
-    let uses;
     ({ code, uses, error } = body.body);
     callback(table[2]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses, error });
   });
 };
 export const resetCode = function resetCode() {
-  dispatcher.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
+  dispatcherDefault.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
 };
 export const setCode = function setCode(code) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_SETTINGS_VANITY_URL_SET", code };
   obj.dispatch(obj);
 };
@@ -32,12 +32,10 @@ export const saveCode = function saveCode(id, code) {
   obj[3] = _sendRequest.rejectWithMigratedError();
   const obj3 = _sendRequest;
   return HTTP.patch(obj).then((body) => {
-    let code;
-    let uses;
     ({ code, uses } = body.body);
     callback(table[2]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
   }, (body) => {
-    let obj = outer1_1(outer1_2[2]);
+    let obj = closure_1_1(closure_1_2[2]);
     obj = { type: "GUILD_SETTINGS_VANITY_URL_ERROR", error: body.body };
     obj.dispatch(obj);
     let throwErr;

@@ -1,11 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx
-import apexExperiment from "apexExperiment";
+import set from "set" /* 2 */;
+import _modDef11814 from "module_11814" /* 11814 */;
+import _modDef11815 from "module_11815" /* 11815 */;
+import apexExperiment from "apexExperiment" /* 10556 */;
 
 if (apexExperiment.isAnimatedAndroidKeyboard()) {
-  let importDefaultResult = require("module_11814");
+  let importDefaultResult = _modDef11814;
 } else {
-  importDefaultResult = require("module_11815");
+  importDefaultResult = _modDef11815;
 }
-const result = require("module_11815").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottom.android.tsx");
 
 export default importDefaultResult;

@@ -1,39 +1,38 @@
 // discord_app/modules/soundboard/searchSounds.tsx
-import getEmojiToGroupId from "getEmojiToGroupId";
-import ME from "ME";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import debounceDefault from "debounce" /* 636 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
 const require = arg1;
 function trackSearchStart(location_stack, channel_id) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { channel_id, search_type: constants2.SOUNDBOARD, location_stack };
   obj.track(constants.SEARCH_STARTED, obj);
 }
 function trackSearchResultViewed(total_results, location_stack, channel_id, query) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { search_type: constants2.SOUNDBOARD, channel_id, query, total_results: total_results.length, location_stack };
   obj.track(constants.SEARCH_RESULT_VIEWED, obj);
 }
 ({ AnalyticEvents: c4, SearchTypes: c5 } = ME);
-let closure_6 = require("debounce")(trackSearchStart, 350);
-let closure_7 = require("debounce")(trackSearchResultViewed, 350);
-let result = require("debounce").fileFinishedImporting("modules/soundboard/searchSounds.tsx");
+let closure_6 = debounceDefault(trackSearchStart, 350);
+let closure_7 = debounceDefault(trackSearchResultViewed, 350);
+let result = require("set").fileFinishedImporting("modules/soundboard/searchSounds.tsx");
 
 export { trackSearchStart };
 export { trackSearchResultViewed };
 export const searchSounds = function searchSounds(arg0, availableSounds, stateFromStores, channel) {
-  let closure_0 = arg0;
-  let closure_1 = stateFromStores;
-  let closure_2 = channel;
-  let getEmojiToGroupId = arg4;
-  let closure_4 = availableSounds.reduce((arg0, name) => {
+  closure_0 = arg0;
+  closure_1 = stateFromStores;
+  closure_2 = channel;
+  closure_3 = arg4;
+  closure_4 = availableSounds.reduce((arg0, name) => {
     let id;
     if (dependencyMap != null) {
       id = tmp3.id;
     }
-    outer1_6(customEmojiById, id);
+    closure_1_6(customEmojiById, id);
     const toLocaleLowerCaseResult = lib.toLocaleLowerCase();
     lib = toLocaleLowerCaseResult;
     name = name.name;
@@ -94,7 +93,7 @@ export const searchSounds = function searchSounds(arg0, availableSounds, stateFr
       sum5 = sum4 + 2;
     }
     let sum6 = sum5;
-    if (names.some((arg0) => outer1_1(outer1_2[5])(closure_0, arg0))) {
+    if (names.some((arg0) => closure_1_1(closure_1_2[5])(closure_0, arg0))) {
       sum6 = sum5 + 1;
     }
     let result1 = sum6 > 0;

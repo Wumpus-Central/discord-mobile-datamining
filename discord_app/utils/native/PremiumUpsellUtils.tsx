@@ -1,28 +1,23 @@
 // discord_app/utils/native/PremiumUpsellUtils.tsx
-import getBestActiveInput from "getBestActiveInput";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import { jsx } from "ACTION_SHEET_HEIGHT_HALF";
-import { registerAsset } from "../../../_runtime/08472_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08473_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08474_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08475_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08476_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08477_registerAsset.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import registerAssetDefault from "registerAsset" /* 8472 */;
+import registerAssetDefault2 from "registerAsset" /* 8473 */;
+import registerAssetDefault3 from "registerAsset" /* 8474 */;
+import registerAssetDefault4 from "registerAsset" /* 8475 */;
+import registerAssetDefault5 from "registerAsset" /* 8476 */;
+import registerAssetDefault6 from "registerAsset" /* 8477 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analyticsLocation) {
   const _require = initialUpsellKey;
-  let closure_1 = analyticsLocations2;
-  const dependencyMap = analyticsLocation;
+  closure_1 = analyticsLocations2;
+  dependencyMap = analyticsLocation;
   let obj = _usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
   let items = [, ];
@@ -43,13 +38,13 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
     }
     tmp4 = skuId === TIER_0.TIER_0;
   }
-  let closure_5 = tmp4;
+  closure_5 = tmp4;
   const items1 = [initialUpsellKey, tmp4];
   const memo = premiumTrialOffer.useMemo(() => {
     if (closure_5) {
       return initialUpsellKey(analyticsLocation[18]).PremiumFeatureCardOrder.TIER_0_LEADING;
     } else {
-      if (outer1_7.UPLOAD !== initialUpsellKey) {
+      if (closure_1_7.UPLOAD !== initialUpsellKey) {
         if (tmp2.ANIMATED_EMOJI !== tmp) {
           if (tmp2.GLOBAL_EMOJI !== tmp) {
             if (tmp2.GLOBAL_STICKER !== tmp) {
@@ -83,11 +78,11 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
       bestActiveInput.closeCustomKeyboard();
     }
     obj = { location: analyticsLocation };
-    analyticsLocations2(analyticsLocation[20]).track(tmp4.PREMIUM_PROMOTION_OPENED, obj);
+    analyticsLocations2(analyticsLocation[20]).track(constants.PREMIUM_PROMOTION_OPENED, obj);
     const obj3 = analyticsLocations2(analyticsLocation[20]);
     analyticsLocations2(analyticsLocation[21]).hideActionSheet();
     obj = { analyticsLocation: null, analyticsLocations: null, premiumFeatureCardOrder: null };
-    const obj1 = {};
+    obj1 = {};
     const obj5 = analyticsLocations2(analyticsLocation[21]);
     const merged = Object.assign(analyticsLocation);
     obj1.object = memo.BUTTON_CTA;
@@ -112,7 +107,7 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
             skuId = subscriptionTrial.skuId;
           }
         }
-        if (outer1_8.TIER_0 === skuId) {
+        if (closure_1_8.TIER_0 === skuId) {
           const intl4 = initialUpsellKey(analyticsLocation[6]).intl;
           return intl4.string(initialUpsellKey(analyticsLocation[6]).t.hz78hE);
         } else if (tmp8.TIER_2 === skuId) {
@@ -130,13 +125,11 @@ function usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analytics
   return obj;
 }
 ({ AnalyticEvents: c5, AnalyticsObjects: closure_6, UpsellTypes: error } = ME);
-({ PremiumSubscriptionSKUs: metroImportAll, PremiumTypes: c9 } = GuildFeatures);
-const result = require("ME").fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
+({ PremiumSubscriptionSKUs: closure_8, PremiumTypes: c9 } = GuildFeatures);
+const result = require("set").fileFinishedImporting("utils/native/PremiumUpsellUtils.tsx");
 
 export default {
   handleShowUpsellAlert(initialUpsellKey) {
-    let mergeGuildAvatar;
-    let closure_5;
     initialUpsellKey = initialUpsellKey.initialUpsellKey;
     let analyticsLocation = initialUpsellKey.analyticsLocation;
     if (undefined === analyticsLocation) {
@@ -150,7 +143,7 @@ export default {
     if (undefined === analyticsProperties) {
       analyticsProperties = {};
     }
-    ({ largestFileSize: mergeGuildAvatar, imageSource: closure_5 } = initialUpsellKey);
+    ({ largestFileSize: closure_4, imageSource: closure_5 } = initialUpsellKey);
     currentUser = currentUser.getCurrentUser();
     let flag = false;
     if (null != currentUser) {
@@ -210,17 +203,17 @@ export default {
         let obj = { importer: null };
         obj[0] = function importer() {
           return initialUpsellKey(analyticsLocations[15])(analyticsLocations[14], analyticsLocations.paths).then((arg0) => {
-            let closure_0 = arg0.default;
+            closure_0 = arg0.default;
             return (arg0) => {
               const obj = {};
               const merged = Object.assign(arg0);
               obj.initialUpsellKey = closure_0;
-              obj.analyticsLocation = outer1_1;
-              obj.analyticsProperties = outer1_3;
-              obj.analyticsLocations = outer1_2;
-              obj.largestFileSize = outer1_4;
-              obj.imageSource = outer1_5;
-              return outer2_10(closure_0, obj);
+              obj.analyticsLocation = closure_1_1;
+              obj.analyticsProperties = closure_1_3;
+              obj.analyticsLocations = closure_1_2;
+              obj.largestFileSize = closure_1_4;
+              obj.imageSource = closure_1_5;
+              return closure_2_10(closure_0, obj);
             };
           });
         };
@@ -234,7 +227,7 @@ export default {
   usePremiumUpsellConfig
 };
 export const getUpsellItems = function getUpsellItems() {
-  let obj = { key: constants.GLOBAL_EMOJI, image: registerAsset, activeTitle: null, passiveTitle: null, description: null };
+  let obj = { key: constants.GLOBAL_EMOJI, image: registerAssetDefault, activeTitle: null, passiveTitle: null, description: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.gKtr8N);
   const intl2 = getSystemLocale.intl;
@@ -242,7 +235,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl3 = getSystemLocale.intl;
   obj[4] = intl3.format(getSystemLocale.t.rf7Ixp, {});
   const items = [obj, , , , , ];
-  obj = { key: constants.ANIMATED_EMOJI, image: registerAsset, activeTitle: null, passiveTitle: null, description: null };
+  obj = { key: constants.ANIMATED_EMOJI, image: registerAssetDefault2, activeTitle: null, passiveTitle: null, description: null };
   const intl4 = getSystemLocale.intl;
   obj[2] = intl4.string(getSystemLocale.t.F6rmyq);
   const intl5 = getSystemLocale.intl;
@@ -250,7 +243,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl6 = getSystemLocale.intl;
   obj[4] = intl6.format(getSystemLocale.t.JxTzzb, {});
   items[1] = obj;
-  obj = { key: constants.ANIMATED_AVATAR, image: registerAsset, activeTitle: null, passiveTitle: null, description: null };
+  obj = { key: constants.ANIMATED_AVATAR, image: registerAssetDefault3, activeTitle: null, passiveTitle: null, description: null };
   const intl7 = getSystemLocale.intl;
   obj[2] = intl7.string(getSystemLocale.t["tQh+gF"]);
   const intl8 = getSystemLocale.intl;
@@ -258,7 +251,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = getSystemLocale.intl;
   obj[4] = intl9.format(getSystemLocale.t["Tso/Fn"], {});
   items[2] = obj;
-  const obj1 = { key: constants.UPLOAD, image: registerAsset, activeTitle: null, passiveTitle: null, description: null };
+  obj1 = { key: constants.UPLOAD, image: registerAssetDefault4, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = getSystemLocale.intl;
   obj1[2] = intl10.string(getSystemLocale.t["1EOZqw"]);
   const intl11 = getSystemLocale.intl;
@@ -271,7 +264,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj2[1] = intl14.string(getSystemLocale.t.EaBfeq);
   obj1[4] = intl12.format(getSystemLocale.t.DUT5IC, obj2);
   items[3] = obj1;
-  const obj3 = { key: constants.BADGE, image: registerAsset, activeTitle: null, passiveTitle: null, description: null };
+  const obj3 = { key: constants.BADGE, image: registerAssetDefault5, activeTitle: null, passiveTitle: null, description: null };
   const intl15 = getSystemLocale.intl;
   obj3[2] = intl15.string(getSystemLocale.t["602BK4"]);
   const intl16 = getSystemLocale.intl;
@@ -279,7 +272,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl17 = getSystemLocale.intl;
   obj3[4] = intl17.format(getSystemLocale.t["p7i+li"], {});
   items[4] = obj3;
-  const obj4 = { key: constants.APP_ICONS, image: registerAsset, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants.APP_ICONS, image: registerAssetDefault6, activeTitle: null, passiveTitle: null, description: null };
   const intl18 = getSystemLocale.intl;
   obj4[2] = intl18.string(getSystemLocale.t["1B1Cyn"]);
   const intl19 = getSystemLocale.intl;

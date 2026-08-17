@@ -1,5 +1,7 @@
 // discord_app/modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx
-const result = require("set").fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");
 
 export function getVoiceAnalyticsMetadataAdditional() {
   return { game_name: null, game_id: null };

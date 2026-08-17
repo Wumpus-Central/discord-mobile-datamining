@@ -1,47 +1,38 @@
 // discord_app/modules/in_app_notifications/native/MessagePreviewText.tsx
-import getSystemLocale from "getSystemLocale";
-import { View } from "MessageEmbedTypes";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import set from "set";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import PlatformTypes from "PlatformTypes";
-import createCacheKey from "createCacheKey";
-import set from "ensureGuildLoaded";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { isForwardMessage } from "../../forwarding/isForwardMessage.tsx";
-import { PreviewIcon } from "../../main_tabs_v2/native/shared_components/ChannelRowPreview.tsx";
-import { useTruncatedGradientColors } from "hooks/useTruncatedGradientColors.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
+import preloadDefault from "preload" /* 5449 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
+import useTruncatedGradientColorsDefault from "useTruncatedGradientColors" /* 10049 */;
+import PreviewIcon from "PreviewIcon" /* 10050 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 10030 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function NativeMessagePreviewContent(arg0) {
-  let gradientColors;
-  let gradientStyles;
-  let lineClamp;
-  let maxHeight;
-  let message;
   ({ message, lineClamp, maxHeight } = arg0);
-  const tmp = useTruncatedGradientColors();
+  const tmp = useTruncatedGradientColorsDefault();
   ({ gradientColors, gradientStyles } = tmp);
   return callback(View, { children: callback(PreviewIcon.NativeChannelRowPreview, { message, lineClamp, maxHeight, gradientStyles, gradientColors }) });
 }
 class SystemMessageText {
   constructor(arg0) {
-    tmp = isIOS();
+    tmp = closure_10();
     obj = require("isReactionMilestoneNotification");
     messagePreviewTextVariant = obj.getMessagePreviewTextVariant();
-    obj = { variant: messagePreviewTextVariant, color: "text-subtle", style: tmp.italic, lineClamp: View, children: global.text };
+    obj = { variant: messagePreviewTextVariant, color: "text-subtle", style: tmp.italic, lineClamp: closure_7, children: global.text };
     return jsx(require("Text").Text, obj);
   }
 }
 function EmbedMediaThumbnail(media) {
   media = media.media;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let url = media.proxyURL;
   if (url == null) {
     url = media.url;
@@ -54,16 +45,14 @@ function EmbedMediaThumbnail(media) {
       num = result;
     }
   }
-  obj = { style: items, children: callback(preload, obj) };
+  obj = { style: items, children: callback(preloadDefault, obj) };
   items = [tmp.embedMediaContainer, { aspectRatio: num }];
   obj = { source: { uri: url }, style: tmp.embedMedia, resizeMode: "contain" };
   return callback(View, obj);
 }
 function EmbedCard(embed) {
-  let rawTitle;
-  let thumbnail;
   embed = embed.embed;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const provider = embed.provider;
   let name;
   if (provider != null) {
@@ -97,7 +86,7 @@ function EmbedCard(embed) {
     tmp7 = callback(tmp6, obj);
   }
   const items1 = [tmp7, , ];
-  const obj1 = { style: tmp.embedTextContainer, children: null };
+  obj1 = { style: tmp.embedTextContainer, children: null };
   let tmp9 = null != name;
   if (tmp9) {
     const obj2 = { variant: "text-xxs/normal", color: "text-subtle", lineClamp: 1, children: null };
@@ -148,30 +137,25 @@ function EmbedCard(embed) {
   return closure_9(View, obj);
 }
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: closure_6, NOTIFICATION_PREVIEW_LINE_CLAMP: error } = set);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let str = "ggsans-MediumItalic, NotoSans-MediumItalic";
 if (PlatformTypes.isIOS()) {
   str = "ggsans-NormalItalic, NotoSans-NormalItalic";
 }
 let closure_10 = createCacheKey.createStyles({ italic: { fontStyle: "italic", fontFamily: str } });
 createCacheKey = { embedContainer: null, embedAccentBar: null, embedTextContainer: null, embedMediaContainer: null, embedMedia: null };
-createCacheKey = { borderRadius: require("Themes").radii.sm, paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8, paddingRight: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "row", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
-PlatformTypes = { width: 4, marginTop: -require("Themes").space.PX_8, marginBottom: -require("Themes").space.PX_8, alignSelf: "stretch" };
+PlatformTypes = { width: 4, marginTop: -ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_8, alignSelf: "stretch" };
 createCacheKey[1] = PlatformTypes;
-createCacheKey = { flex: 1, gap: require("Themes").space.PX_4, paddingVertical: require("Themes").space.PX_4, paddingHorizontal: require("Themes").space.PX_8 };
+createCacheKey = { flex: 1, gap: ThemesDefault.space.PX_4, paddingVertical: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: require("Themes").radii.xs, overflow: "hidden", height: 60, width: "accessibilityRole" };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", height: 60, width: "accessibilityRole" };
 createCacheKey[4] = { width: "100%", height: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/in_app_notifications/native/MessagePreviewText.tsx");
 
 export default function MessagePreviewText(message) {
-  let lineClamp;
-  let maxHeight;
-  let secondaryText;
-  let showMessageAuthor;
-  let text;
   message = message.message;
   ({ lineClamp, maxHeight, showMessageAuthor } = message);
   if (showMessageAuthor === undefined) {
@@ -179,7 +163,7 @@ export default function MessagePreviewText(message) {
   }
   let obj = message(10070);
   const previewableMedia = obj.usePreviewableMedia(message);
-  let obj1 = message(4814);
+  obj1 = message(4814);
   let tmp3 = null;
   if (showMessageAuthor) {
     tmp3 = message;
@@ -216,7 +200,7 @@ export default function MessagePreviewText(message) {
     items1[1] = callback(EmbedCard, obj2);
     obj[0] = items1;
     tmp43 = callback2(View, obj);
-  } else if (isForwardMessage(message)) {
+  } else if (isForwardMessageDefault(message)) {
     let tmp29 = previewableMedia.length > 0;
     if (tmp29) {
       tmp29 = previewableMedia[0].type === tmp(10070).PreviewableMediaTypes.GIF;

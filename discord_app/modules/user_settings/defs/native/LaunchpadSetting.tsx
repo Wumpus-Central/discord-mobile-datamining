@@ -1,17 +1,21 @@
 // discord_app/modules/user_settings/defs/native/LaunchpadSetting.tsx
-import { LaunchPadTypes } from "LAUNCH_PAD_SPRING_CONFIG";
-import createToggle from "createToggle";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import useLaunchPadTypeDefault from "useLaunchPadType" /* 10666 */;
+import createToggle from "createToggle" /* 10669 */;
 
+const LaunchPadTypes = LAUNCH_PAD_SPRING_CONFIG.LaunchPadTypes;
 const radio = createToggle.createRadio({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.JqV7IC);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
-  useValue: require("useLaunchPadType"),
+  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
+  useValue: useLaunchPadTypeDefault,
   onValueChange: function onLaunchpadSettingValueChange(arg0) {
     if (LaunchPadTypes.GESTURE_FULL === arg0) {
       const LaunchPadModeSetting3 = explicitContentFromProto.LaunchPadModeSetting;
@@ -49,7 +53,7 @@ const radio = createToggle.createRadio({
     obj[1] = intl6.string(getSystemLocale.t.uVc5MG);
     obj[2] = LaunchPadTypes.PULL_TAB;
     items[2] = obj;
-    const obj1 = { label: null, subLabel: null, value: null };
+    obj1 = { label: null, subLabel: null, value: null };
     const intl7 = getSystemLocale.intl;
     obj1[0] = intl7.string(getSystemLocale.t.HnzBCZ);
     const intl8 = getSystemLocale.intl;
@@ -64,8 +68,8 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.JqV7IC);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ADVANCED,
-  useValue: require("useLaunchPadType"),
+  parent: MobileUserSettings.MobileUserSettings.ADVANCED,
+  useValue: useLaunchPadTypeDefault,
   onValueChange: function onLaunchpadSettingValueChange(arg0) {
     if (LaunchPadTypes.GESTURE_FULL === arg0) {
       const LaunchPadModeSetting3 = explicitContentFromProto.LaunchPadModeSetting;
@@ -103,7 +107,7 @@ let obj = {
     obj[1] = intl6.string(getSystemLocale.t.uVc5MG);
     obj[2] = LaunchPadTypes.PULL_TAB;
     items[2] = obj;
-    const obj1 = { label: null, subLabel: null, value: null };
+    obj1 = { label: null, subLabel: null, value: null };
     const intl7 = getSystemLocale.intl;
     obj1[0] = intl7.string(getSystemLocale.t.HnzBCZ);
     const intl8 = getSystemLocale.intl;
@@ -113,6 +117,6 @@ let obj = {
     return items;
   }
 };
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/defs/native/LaunchpadSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/LaunchpadSetting.tsx");
 
 export default radio;

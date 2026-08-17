@@ -1,15 +1,15 @@
 // discord_app/modules/rpc/server/commands/logs.tsx
-import ME from "ME";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import ME from "ME" /* 676 */;
 
-let RPCCommands;
-let RPC_APPLICATION_LOGGING_CATEGORY;
 ({ RPC_APPLICATION_LOGGING_CATEGORY, RPCCommands } = ME);
-let c3 = new require("recurseReplaceContentTree")(RPC_APPLICATION_LOGGING_CATEGORY);
+let closure_3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
 let obj = {
   validation(string) {
-    let obj = createRpcJoiSchemaObject(string);
+    let obj = createRpcJoiSchemaObjectDefault(string);
     obj = { level: null, message: null };
     const requiredResult = obj.required();
     const stringResult = string.string();
@@ -20,26 +20,24 @@ let obj = {
     return requiredResult.keys(obj);
   },
   handler(arg0) {
-    let args;
-    let socket;
     ({ socket, args } = arg0);
     const level = args.level;
     const result = recurseReplaceContentTree.validatePostMessageTransport(socket.transport);
     const combined = "" + socket.application.id + " - " + args.message;
     if ("log" === level) {
-      tmp3.log(combined);
+      closure_3.log(combined);
     } else if ("warn" === level) {
-      tmp3.warn(combined);
+      closure_3.warn(combined);
     } else if ("debug" === level) {
-      tmp3.verbose(combined);
+      closure_3.verbose(combined);
     } else if ("info" === level) {
-      tmp3.info(combined);
+      closure_3.info(combined);
     } else if ("error" === level) {
-      tmp3.error(combined);
+      closure_3.error(combined);
     }
   }
 };
-const tmp3 = new require("recurseReplaceContentTree")(RPC_APPLICATION_LOGGING_CATEGORY);
-let result = require("createRpcJoiSchemaObject").fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
+const tmp3 = new timestampDefault(RPC_APPLICATION_LOGGING_CATEGORY);
+let result = set.fileFinishedImporting("modules/rpc/server/commands/logs.tsx");
 
 export default { [RPCCommands.CAPTURE_LOG]: obj };

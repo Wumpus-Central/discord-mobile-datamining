@@ -1,42 +1,38 @@
 // discord_app/modules/game_profile/native/components/GameProfileRankPill.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TrophyIcon } from "../../../../design/components/Icon/native/redesign/generated/TrophyIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import TrophyIcon from "TrophyIcon" /* 8010 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flex: 1, flexDirection: "row", alignItems: "flex-end" }, gameRankPill: null };
-createCacheKey = { flexDirection: "row", backgroundColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.round, paddingHorizontal: require("Themes").space.PX_8, alignItems: "center", gap: require("Themes").space.PX_4 };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+createCacheKey = { flexDirection: "row", backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, paddingHorizontal: ThemesDefault.space.PX_8, alignItems: "center", gap: ThemesDefault.space.PX_4 };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileRankPill.tsx");
 
 export default function GameProfileRankPill(arg0) {
-  let compact;
-  let rank;
   ({ rank, compact } = arg0);
   if (compact === undefined) {
     compact = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.gameRankPill, children: null };
-  obj = { size: "xxs", color: null };
-  obj[1] = Themes.colors.BLACK;
+  obj = { size: "xxs", color: ThemesDefault.colors.BLACK };
   const items = [callback(TrophyIcon.TrophyIcon, obj), ];
   const intl = getSystemLocale.intl;
   const formatToPlainString = intl.formatToPlainString;
   const t = getSystemLocale.t;
   if (compact) {
-    const obj1 = { rank: null };
+    obj1 = { rank: null };
     obj1[0] = rank;
     let str = formatToPlainString(t.UA6RoE, obj1);
   } else {

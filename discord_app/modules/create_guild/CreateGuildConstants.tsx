@@ -1,16 +1,17 @@
 // discord_app/modules/create_guild/CreateGuildConstants.tsx
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import fromStringAll from "fromString" /* 506 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
 let obj = { CREATE: "CREATE", GAMING: "GAMING", FRIENDS: "FRIENDS", STUDY: "STUDY", CLUBS: "CLUBS", CREATORS: "CREATORS", LOCAL_COMMUNITY: "LOCAL_COMMUNITY", SCHOOL_CLUB: "SCHOOL_CLUB" };
-const result = require("applyOverwrites").fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
+const result = set.fileFinishedImporting("modules/create_guild/CreateGuildConstants.tsx");
 
 export const GuildTemplateId = obj;
 export const getGuildTemplatesMap = function getGuildTemplatesMap() {
-  let obj = {};
+  obj = {};
   obj = { id: obj.CREATE, code: "2TffvPucqHkN", label: null, channels: null, system_channel_id: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["H3+6BK"]);
@@ -19,7 +20,7 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   obj = { id: obj.GAMING, code: "hvtBQMfw6uSJ", label: null, channels: null, system_channel_id: "01" };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t.wdOb3H);
-  const obj1 = { id: "00", parent_id: null, name: null, type: null };
+  obj1 = { id: "00", parent_id: null, name: null, type: null };
   const intl3 = getSystemLocale.intl;
   obj1[2] = intl3.string(getSystemLocale.t.mobYpC);
   obj1[3] = constants.GUILD_CATEGORY;
@@ -390,10 +391,10 @@ export const getGuildTemplatesMap = function getGuildTemplatesMap() {
   obj74[3] = constants.GUILD_VOICE;
   items6[11] = obj74;
   obj62[3] = items6;
-  const items7 = [{ id: "00", name: "@everyone", permissions: importAll(4026).DEFAULT }, ];
+  const items7 = [{ id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT }, ];
   const obj76 = { id: "01", name: "officers (example)", mentionable: true, hoist: true, permissions: null, color: 3066993 };
-  const obj75 = { id: "00", name: "@everyone", permissions: importAll(4026).DEFAULT };
-  obj76[4] = importAll(506).combine(importAll(4026).DEFAULT, constants2.MANAGE_ROLES, constants2.MANAGE_CHANNELS, constants2.KICK_MEMBERS, constants2.BAN_MEMBERS, constants2.MANAGE_NICKNAMES, constants2.MANAGE_GUILD_EXPRESSIONS, constants2.MANAGE_MESSAGES, constants2.SEND_TTS_MESSAGES);
+  const obj75 = { id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT };
+  obj76[4] = fromStringAll.combine(applyOverwritesAll.DEFAULT, constants2.MANAGE_ROLES, constants2.MANAGE_CHANNELS, constants2.KICK_MEMBERS, constants2.BAN_MEMBERS, constants2.MANAGE_NICKNAMES, constants2.MANAGE_GUILD_EXPRESSIONS, constants2.MANAGE_MESSAGES, constants2.SEND_TTS_MESSAGES);
   items7[1] = obj76;
   obj62[4] = items7;
   obj[obj.SCHOOL_CLUB] = obj62;

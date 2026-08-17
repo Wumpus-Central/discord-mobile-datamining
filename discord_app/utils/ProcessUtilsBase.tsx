@@ -1,5 +1,7 @@
 // discord_app/utils/ProcessUtilsBase.tsx
-const result = require("set").fileFinishedImporting("utils/ProcessUtilsBase.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/ProcessUtilsBase.tsx");
 class ProcessUtils {
 }
 const prototype = ProcessUtils.prototype;

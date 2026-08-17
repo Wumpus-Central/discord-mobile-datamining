@@ -1,29 +1,24 @@
 // discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx
-import importAllResult from "CollectiblesShopViewAllCategoryItemsHeader";
-import get_ActivityIndicator from "NativePaymentContextProvider";
-import { CollectiblesMobileShopScreen as closure_6 } from "items";
-import { AnalyticEvents } from "ME";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { rootContainer: null, border: null };
-obj = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createCacheKey = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[1] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_11 = { code: "function CollectiblesShopViewAllCategoryItemsTsx1(){const{borderOpacity}=this.__closure;return{opacity:borderOpacity.get()};}" };
 const memoResult = importAllResult.memo((category) => {
-  let logoUrl;
-  let mobileBgUrl;
   category = category.category;
   const analyticsContext = category.analyticsContext;
   let analyticsLocations;
@@ -69,16 +64,16 @@ const memoResult = importAllResult.memo((category) => {
     obj[1] = sessionId;
     obj[2] = analyticsContext(analyticsLocations[9]).COLLECTIBLES_SHOP;
     obj[4] = category.name;
-    obj.track(outer1_7.COLLECTIBLES_SHOP_VIEWED, obj);
+    obj.track(closure_1_7.COLLECTIBLES_SHOP_VIEWED, obj);
     let sessionId1;
     if (analyticsContext != null) {
       sessionId1 = tmp3.sessionId;
     }
-    obj = { sessionId: sessionId1, checkpoint: category(tmp2[15]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED, tab: outer1_6.SHOP_ALL, unpublishedCategoriesShown: false, cacheDisabled: false };
+    obj = { sessionId: sessionId1, checkpoint: category(tmp2[15]).CollectiblesShopPerfCheckpoint.SHOP_MOUNTED, tab: closure_1_6.SHOP_ALL, unpublishedCategoriesShown: false, cacheDisabled: false };
     category(analyticsLocations[15]).trackShopPerf(obj);
   }, items2);
   obj = { value: analyticsLocations, children: null };
-  const obj1 = { newValue: null, children: null };
+  obj1 = { newValue: null, children: null };
   obj2 = {};
   const merged = Object.assign(analyticsContext);
   obj2.pageCategory = category.name;
@@ -111,6 +106,6 @@ const memoResult = importAllResult.memo((category) => {
   obj[1] = callback(category(analyticsLocations[16]).CollectiblesAnalyticsProvider, obj1);
   return callback(category(analyticsLocations[8]).AnalyticsLocationProvider, obj);
 });
-let result = require("items").fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItems.tsx");
 
 export default memoResult;

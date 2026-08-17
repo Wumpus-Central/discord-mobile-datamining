@@ -1,19 +1,13 @@
 // discord_app/design/components/TextField/native/TextField.native.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { InputAttachmentContainer } from "../../Input/native/useInputAttachments.native.tsx";
-import { useInputClearButton } from "../../Input/native/useInputClearButton.native.tsx";
-import { BaseTextField } from "BaseTextField.native.tsx";
-import { useTextFieldState } from "useTextField.native.tsx";
+import useTextFieldState from "useTextFieldState" /* 7339 */;
+import useInputClearButton from "useInputClearButton" /* 7340 */;
+import InputAttachmentContainer from "InputAttachmentContainer" /* 7344 */;
+import BaseTextField from "BaseTextField" /* 7347 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const forwardRefResult = require("noop").forwardRef((onClear, ref) => {
-  let innerRef;
-  let inputProps;
-  let inputStyle;
-  let leading;
-  let state;
-  let trailing;
+require = arg1;
+const forwardRefResult = importAllResult.forwardRef((onClear, ref) => {
   let obj = useTextFieldState;
   const textField = obj.useTextField(onClear, ref);
   ({ inputProps, innerRef, state } = textField);
@@ -35,6 +29,6 @@ const forwardRefResult = require("noop").forwardRef((onClear, ref) => {
   obj.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("useTextFieldState").fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextField/native/TextField.native.tsx");
 
 export const TextField = forwardRefResult;

@@ -1,27 +1,25 @@
 // discord_app/modules/guild_automod/AutomodStore.tsx
-import _slicedToArray from "_slicedToArray";
-import closure_3 from "identity";
-import noop from "noop";
-import { AutomodTriggerType } from "AutomodEventType";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import identity from "identity";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { AutomodTriggerType } from "AutomodEventType" /* 11042 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import identity from "identity" /* 700 */;
 import { isIterable } from "../../../_runtime/04006_isIterable.js";
 
 const require = arg1;
 let closure_7 = {};
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   let obj = {
     rules: {},
     fetching: false,
     error: null,
     updateRule(guildId) {
-      let _slicedToArray;
-      let triggerType;
       const callback = guildId;
       guildId = guildId.guildId;
-      ({ id: _slicedToArray, triggerType } = guildId);
+      ({ id: closure_2, triggerType } = guildId);
       const rules = guildId().rules;
       let obj = rules[guildId];
       if (obj == null) {
@@ -42,7 +40,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       if (someResult) {
         let mapped = found.map((id) => {
           let tmp = id;
-          if (id.id === _slicedToArray) {
+          if (id.id === closure_2) {
             tmp = closure_0;
           }
           return tmp;
@@ -51,9 +49,9 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         mapped = [];
         mapped[HermesBuiltin.arraySpread(found, 0)] = guildId;
       }
-      someResult = items.some((id) => id.id === _slicedToArray);
+      someResult = items.some((id) => id.id === closure_2);
       callback(705).batchUpdates(() => {
-        let obj = { rules: null, error: null };
+        obj = { rules: null, error: null };
         obj = {};
         const merged = Object.assign(rules);
         obj = {};
@@ -66,13 +64,13 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     },
     removeRule(arg0, arg1) {
       const callback = arg0;
-      const dependencyMap = arg1;
+      dependencyMap = arg1;
       const rules = dependencyMap().rules;
-      let closure_3 = tmp;
+      closure_3 = tmp;
       const keys = Object.keys(tmp);
-      let noop = keys.reduce((arg0, arg1) => {
+      closure_4 = keys.reduce((arg0, arg1) => {
         const NumberResult = Number(arg1);
-        let items = tmp[NumberResult];
+        let items = table[NumberResult];
         if (items == null) {
           items = [];
         }
@@ -83,18 +81,18 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
         let obj = { rules: null, error: null };
         obj = {};
         const merged = Object.assign(rules);
-        obj[closure_1] = noop;
+        obj[closure_1] = closure_4;
         obj[0] = obj;
         callback(obj);
       });
     },
     syncRules: null
   };
-  let _slicedToArray = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c4 = 0;
+  closure_2 = callback((arg0) => {
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -137,7 +135,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
               })(callback)) {
                 const _Date = Date;
                 c7[tmp41] = Date.now();
-                let c4 = 1;
+                c4 = 1;
                 callback2 = function convertToRulesByTriggerType(arr) {
                   const obj = { [closure_5.KEYWORD]: [], [closure_5.ML_SPAM]: [], [closure_5.DEFAULT_KEYWORD_LIST]: [], [closure_5.MENTION_SPAM]: [], [closure_5.USER_PROFILE]: [], [closure_5.SERVER_POLICY]: [] };
                   const item = arr.forEach((arg0) => {
@@ -150,8 +148,8 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
                 };
                 c6 = 2;
                 c7 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = callback(outer1_1[8]).fetchAutomodRules(tmp41);
+                obj1 = { value: null, done: false };
+                obj1[0] = callback(closure_1_1[8]).fetchAutomodRules(tmp41);
                 return obj1;
               }
             }
@@ -159,8 +157,8 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             if (1 === tmp7) {
               c4 = 0;
               c4 = closure_5;
-              aPIError = new callback(outer1_1[9]).APIError(c4);
-              let obj2 = callback(outer1_1[7]);
+              aPIError = new callback(closure_1_1[9]).APIError(c4);
+              let obj2 = callback(closure_1_1[7]);
               obj2.batchUpdates(() => {
                 callback({ error: aPIError });
               });
@@ -170,7 +168,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
             } else if (arg0 !== 2) {
               callback2 = callback2(arg1);
               rules = callback2().rules;
-              obj = callback(outer1_1[7]);
+              obj = callback(closure_1_1[7]);
               obj.batchUpdates(() => {
                 let obj = { rules: null, error: null };
                 obj = {};
@@ -202,7 +200,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   });
   obj[5] = function() {
     const self = this;
-    const apply = _slicedToArray.apply;
+    const apply = closure_2.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
@@ -212,7 +210,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-const result = require("noop").fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodStore.tsx");
 
 export const useAutomodStore = withEqualityFn;
 export const getRuleCountByTriggerType = function getRuleCountByTriggerType(arg0, arg1) {
@@ -229,7 +227,7 @@ export const getRuleCountByTriggerType = function getRuleCountByTriggerType(arg0
 export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
   const _require = arg0;
   const tmp = first(React.useState(false), 2);
-  const dependencyMap = tmp[1];
+  dependencyMap = tmp[1];
   const tmp2 = first(withEqualityFn((arg0) => {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
@@ -266,15 +264,15 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
+            closure_0 = tmp3;
             if (!c3) {
-              if (null != outer1_0) {
+              if (null != closure_1_0) {
                 c3 = 1;
                 v0(true);
                 v0 = 2;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_2(tmp20);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_2(tmp20);
                 return obj1;
               }
             }
@@ -283,7 +281,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
         } else if (1 === tmp7) {
           c3 = 0;
           v0(false);
-          throw _slicedToArray;
+          throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
           throw arg1;
@@ -298,7 +296,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
         obj[0] = arg1;
         return obj;
       } catch (tmp24) {
-        _slicedToArray = tmp24;
+        closure_2 = tmp24;
         if (tmp4 === c3) {
           c4 = tmp2;
           throw tmp24;
@@ -313,7 +311,7 @@ export const useSyncAutomodRules = function useSyncAutomodRules(arg0) {
 export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0) {
   let _require = arg0;
   const tmp = first(React.useState(false), 2);
-  const dependencyMap = tmp[1];
+  dependencyMap = tmp[1];
   const tmp2 = first(withEqualityFn((arg0) => {
     const items = [, ];
     ({ syncRules: arr[0], fetching: arr[1] } = arg0);
@@ -350,15 +348,15 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
+            closure_0 = tmp3;
             if (!c3) {
-              if (null != outer1_0) {
+              if (null != closure_1_0) {
                 c3 = 1;
                 v0(true);
                 v0 = 2;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_2(tmp20);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_2(tmp20);
                 return obj1;
               }
             }
@@ -367,7 +365,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
         } else if (1 === tmp7) {
           c3 = 0;
           v0(false);
-          throw _slicedToArray;
+          throw closure_2;
         } else if (arg0 === 1) {
           c4 = 3;
           throw arg1;
@@ -382,7 +380,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
         obj[0] = arg1;
         return obj;
       } catch (tmp24) {
-        _slicedToArray = tmp24;
+        closure_2 = tmp24;
         if (tmp4 === c3) {
           c4 = tmp2;
           throw tmp24;
@@ -396,7 +394,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
   _require = tmp6;
   const items2 = [arg0, tmp5[1]];
   const effect = React.useEffect(() => {
-    tmp4(function*() {
+    callback(function*() {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -425,7 +423,7 @@ export const useSyncAutomodRulesEffect = function useSyncAutomodRulesEffect(arg0
             } else {
               c1 = 1;
               v0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = v0();
               return obj1;
             }
@@ -456,7 +454,7 @@ export const useAutomodRulesList = function useAutomodRulesList(arg0) {
   return withEqualityFn((updateRule) => {
     let tmp = closure_0;
     if (closure_0 == null) {
-      tmp = outer1_6;
+      tmp = closure_1_6;
     }
     let obj = updateRule.rules[tmp];
     if (obj == null) {

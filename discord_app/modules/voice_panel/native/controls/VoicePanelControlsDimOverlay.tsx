@@ -1,12 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx
-import importAllResult from "noop";
-import { BACKDROP_OPAQUE_MAX_OPACITY as closure_4 } from "BACKDROP_OPAQUE_MAX_OPACITY";
-import VoicePanelModes from "VoicePanelModes";
-import { VoicePanelControlsModes } from "VoicePanelControlsModes";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { BACKDROP_OPAQUE_MAX_OPACITY as closure_4 } from "BACKDROP_OPAQUE_MAX_OPACITY" /* 13493 */;
+import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 let c3 = importAllResult;
 ({ PANEL_CONTROLS_HEIGHT_PHYSICS: c5, VoicePanelModes: closure_6 } = VoicePanelModes);
@@ -38,11 +36,11 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDimOverlay(wr
       drawerSpec = obj.getDrawerSpec(windowDimensions.get().height, safeArea.get().top);
       ({ minHeight, maxHeight } = drawerSpec);
       num = 0;
-      if (controlsSpecs.get().mode === interpolate.DRAWER) {
+      if (controlsSpecs.get().mode === closure_7.DRAWER) {
         tmp4 = mode;
-        tmp5 = wrapperSpecs;
+        tmp5 = closure_6;
         num = 0;
-        if (mode.get() === wrapperSpecs.PANEL) {
+        if (mode.get() === closure_6.PANEL) {
           tmpResult = tmp(tmp2[6]);
           tmp6 = wrapperSpecs;
           items = [, ];
@@ -78,13 +76,13 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDimOverlay(wr
     constructor() {
       obj = { zIndex: 1, opacity: null, display: null };
       obj2 = wrapperSpecs(setControlsMode[8]);
-      obj[1] = obj2.withSpring(wrapperSpecs.get(), mode);
+      obj[1] = obj2.withSpring(closure_6.get(), mode);
       accessibilityPreferencesSharedValue = wrapperSpecs(setControlsMode[9]).accessibilityPreferencesSharedValue;
       str = "flex";
       if (accessibilityPreferencesSharedValue.get().screenReaderEnabled) {
-        tmp = interpolate;
+        tmp = closure_7;
         str = "flex";
-        if (!interpolate.get()) {
+        if (!closure_7.get()) {
           str = "none";
         }
       }
@@ -115,6 +113,6 @@ const memoResult = importAllResult.memo(function VoicePanelControlsDimOverlay(wr
   }, items);
   return jsx(wrapperSpecs(setControlsMode[10]).Backdrop, { onDismiss, style, animatedProps, opaque: true, "aria-hidden": true });
 });
-const result = require("VoicePanelModes").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDimOverlay.tsx");
 
 export default memoResult;

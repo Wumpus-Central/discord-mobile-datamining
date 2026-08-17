@@ -1,24 +1,22 @@
 // discord_app/modules/reactions/ReactionUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
-import { ReactionTypes } from "../messages/MessageReactionsTypes.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import ReactionTypes from "ReactionTypes" /* 7510 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import ME from "ME" /* 676 */;
+import { NotificationSettingsUpdateType as closure_6 } from "AccountNotificationFlags" /* 4033 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ AnalyticsSections: c4, AnalyticEvents: c5 } = ME);
-let result = require("AccountNotificationFlags").fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/reactions/ReactionUtils.tsx");
 
 export const MAX_REACTIONS = 20;
 export const getReactionEmojiName = function getReactionEmojiName(emoji) {
   if (null == emoji.id) {
-    let result = parseRawEmojiObject.convertSurrogateToName(emoji.name);
-    const obj = parseRawEmojiObject;
+    let result = parseRawEmojiObjectDefault.convertSurrogateToName(emoji.name);
+    const obj = parseRawEmojiObjectDefault;
   } else {
     const _HermesInternal = HermesInternal;
     result = ":" + emoji.name + ":";
@@ -51,8 +49,8 @@ export const getAccessibleEmojiDisplayName = function getAccessibleEmojiDisplayN
     const obj = { reactions: null, emojiName: null };
     obj[0] = count;
     if (null == emoji.id) {
-      let str2 = parseRawEmojiObject.convertSurrogateToName(emoji.name);
-      const obj2 = parseRawEmojiObject;
+      let str2 = parseRawEmojiObjectDefault.convertSurrogateToName(emoji.name);
+      const obj2 = parseRawEmojiObjectDefault;
     } else {
       const _HermesInternal = HermesInternal;
       str2 = ":" + emoji.name + ":";
@@ -150,7 +148,7 @@ export const shouldApplyReaction = function shouldApplyReaction(optimistic) {
 export const updateReactionNotificationsSetting = function updateReactionNotificationsSetting(NumberResult, setting) {
   const ReactionNotifications = explicitContentFromProto.ReactionNotifications;
   ReactionNotifications.updateSetting(NumberResult);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { update_type: constants3.ACCOUNT, reaction_notifications: NumberResult, reaction_notifications_old: setting };
   obj.track(constants2.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

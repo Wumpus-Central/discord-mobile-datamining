@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/hooks/useAnimationDelayedAutoFocus.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 import { AwaitAnimationContext } from "useAwaitAnimationComplete.tsx";
 
 const require = arg1;
@@ -7,9 +7,9 @@ const result = require("set").fileFinishedImporting("modules/app_launcher/native
 
 export const useAnimationDelayedAutoFocus = function useAnimationDelayedAutoFocus(autoFocus, onPress) {
   const _require = autoFocus;
-  const dependencyMap = onPress;
+  dependencyMap = onPress;
   const awaitAnimationCompletion = _AwaitAnimationContext.useAwaitAnimationCompletion();
-  let closure_3 = awaitAnimationCompletion.useRef(false);
+  closure_3 = awaitAnimationCompletion.useRef(false);
   const items = [autoFocus, onPress, awaitAnimationCompletion];
   const effect = awaitAnimationCompletion.useEffect(() => {
     let tmp = closure_0;

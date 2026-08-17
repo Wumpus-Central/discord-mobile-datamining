@@ -1,13 +1,15 @@
 // discord_app/modules/themes/native/updateSaturation.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 13815 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/themes/native/updateSaturation.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/themes/native/updateSaturation.tsx");
 
 export const updateSaturation = function updateSaturation(saturation) {
   if (obj.isAndroid()) {
-    let updateSaturationResult = enforcing.updateSaturation(saturation);
-    const obj2 = enforcing;
+    let updateSaturationResult = enforcingDefault.updateSaturation(saturation);
+    const obj2 = enforcingDefault;
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     updateSaturationResult = DCDTheme.updateSaturation(saturation);

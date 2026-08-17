@@ -1,43 +1,30 @@
 // discord_app/modules/channel_list_v2/native/items/ThreadChannel.tsx
-import importAllResult from "initialize";
-import { View } from "inlineStyles";
-import storeThread from "storeThread";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateVoiceState from "updateVoiceState";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import hairlineWidth from "hairlineWidth";
-import { Permissions } from "ME";
-import { UnreadSetting } from "ReadStateTypes";
-import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes";
-import jsxProd from "transitionToChannel";
-import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
+import ThemesDefault from "Themes" /* 712 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "storeThread" /* 4023 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "generateOldThreadCutoff" /* 4772 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "updateVoiceState" /* 4542 */;
+import closure_12 from "getVoiceStatesForGuild" /* 4545 */;
+import hairlineWidth from "hairlineWidth" /* 10055 */;
+import { Permissions } from "ME" /* 676 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import { OpenThreadAnalyticsLocations as closure_16 } from "AbortCodes" /* 1235 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let CHANNEL_MARGIN_VERTICAL;
-let closure_17;
-let closure_18;
-let closure_19;
-let map1;
-const require = arg1;
+require = arg1;
 function ThreadChannel(channel) {
-  let hasVideo;
-  let isLocked;
-  let isMentionLowImportance;
-  let mentionCount;
-  let muted;
-  let selected;
-  let selectedVoiceChannelId;
-  let threadIndex;
-  let unread;
-  let voiceStates;
   channel = channel.channel;
   ({ selected, threadIndex } = channel);
   const threadCount = channel.threadCount;
-  let importAllResult;
+  importAllResult = undefined;
   let id;
   let ownerId;
   let parent_id;
@@ -56,13 +43,13 @@ function ThreadChannel(channel) {
     parent_id = channel.parent_id;
   }
   let obj = threadCount;
-  let obj1 = channel(threadCount[18]);
+  obj1 = channel(threadCount[18]);
   fontScale = obj1.useFontScale();
   let obj2 = channel(threadCount[19]);
-  const items = [parent_id, ownerId, mergeGuildAvatar, getVoiceStatesForGuild, updateVoiceState, user, parentChannel, fontScale];
+  const items = [parent_id, ownerId, closure_10, closure_12, closure_11, user, parentChannel, fontScale];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items, () => {
     const isMutedResult = ownerId.isMuted(id);
-    const obj = { user: outer1_10.getUser(ownerId), parentChannel: parent_id.getChannel(parent_id), voiceStates: outer1_12.getVoiceStatesForChannel(channel), hasVideo: outer1_11.hasVideo(channel.id), isLocked: !fontScale.can(outer1_14.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
+    const obj = { user: closure_1_10.getUser(ownerId), parentChannel: parent_id.getChannel(parent_id), voiceStates: closure_1_12.getVoiceStatesForChannel(channel), hasVideo: closure_1_11.hasVideo(channel.id), isLocked: !fontScale.can(closure_1_14.CONNECT, channel), muted: isMutedResult, unread: null, mentionCount: null, isMentionLowImportance: null, selectedVoiceChannelId: null };
     let hasUnreadResult = !isMutedResult;
     if (!isMutedResult) {
       hasUnreadResult = user.hasUnread(tmp);
@@ -81,7 +68,7 @@ function ThreadChannel(channel) {
   ({ isLocked, muted, isMentionLowImportance, selectedVoiceChannelId } = stateFromStoresObject);
   let num = 0;
   const memo = importAllResult.useMemo(() => {
-    const style = [_undefined.threadLineSegment, ];
+    const style = [threadLineSegment.threadLineSegment, ];
     let num = 0;
     const diff = threadCount - 1;
     if (0 === threadIndex) {
@@ -116,7 +103,7 @@ function ThreadChannel(channel) {
     }
     obj[5] = num7;
     style[1] = obj;
-    return outer1_17(id, { style });
+    return closure_1_17(id, { style });
   }, items1);
   if (null != voiceStates) {
     num = voiceStates.length;
@@ -126,7 +113,7 @@ function ThreadChannel(channel) {
   const items3 = [channel, user, parentChannel];
   const callback = obj3.useCallback(() => {
     let obj = channel(threadCount[21]);
-    obj = { source: outer1_16.CHANNEL_LIST };
+    obj = { source: closure_1_16.CHANNEL_LIST };
     obj.transitionToThread(channel, obj);
   }, items2);
   const items4 = [memo, , ];
@@ -218,38 +205,32 @@ let c3 = importAllResult;
 ({ getScaledChannelRowHeight: map1, CHANNEL_MARGIN_VERTICAL } = hairlineWidth);
 ({ jsx: closure_17, jsxs: closure_18, Fragment: closure_19 } = jsxProd);
 let obj = { container: null, threadRow: null, unreadContainer: null, spineSpacer: null, unreadIcon: null, threadLineSegment: null };
-obj = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: require("Themes").radii.md, flex: 1 };
+obj = { marginVertical: CHANNEL_MARGIN_VERTICAL, marginStart: 2, marginEnd: 8, borderRadius: ThemesDefault.radii.md, flex: 1 };
 obj[0] = obj;
 obj[1] = { flex: 0, flexDirection: "row", alignSelf: "stretch" };
 obj[2] = { width: 8, alignItems: "flex-start", justifyContent: "flex-start" };
 obj[3] = { width: 28 };
-createCacheKey = { width: 8, height: 8, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
+createCacheKey = { width: 8, height: 8, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE, marginLeft: -4, marginTop: 12 };
 obj[4] = createCacheKey;
-obj[5] = { backgroundColor: require("Themes").colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
+obj[5] = { backgroundColor: ThemesDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
 let closure_20 = createCacheKey.createStyles(obj);
 let closure_21 = importAllResult.memo((arg0) => {
-  let color;
-  let fontScale;
   ({ color, fontScale } = arg0);
   let obj = { width: 12, height: 16, style: null, children: null };
-  obj = { position: "absolute", left: 23, top: null };
-  obj[2] = callback(fontScale) / 2 - 16 + 2;
+  obj = { position: "absolute", left: 23, top: callback(fontScale) / 2 - 16 + 2 };
   obj[2] = obj;
   obj[3] = callback2(inlineStyles.Path, { fill: color, d: "M11 16C11.5523 16 12 15.5523 12 15C12 14.4477 11.5523 14 11 14H8C2.47715 14 2 8.52285 2 3V0H0V3H0.00542736C0 9.5 1.49449 16 8 16H11Z" });
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 });
-let obj2 = { backgroundColor: require("Themes").colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
-const result = require("storeThread").fileFinishedImporting("modules/channel_list_v2/native/items/ThreadChannel.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.SPINE_DEFAULT, width: 2, position: "absolute", left: 23 };
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/items/ThreadChannel.tsx");
 
 export default function ConnectedThreadChannel(threadId) {
-  let selected;
-  let threadCount;
-  let threadIndex;
   threadId = threadId.threadId;
   ({ threadIndex, threadCount, selected } = threadId);
   let obj = threadId(589);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(threadId));
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(threadId));
   let tmp2 = null;
   if (null != stateFromStores) {
     obj = { channel: null, threadId: null, threadIndex: null, threadCount: null, selected: null };

@@ -1,10 +1,10 @@
 // discord_app/modules/screen/native/useBaseAppContainerDimensions.tsx
-import noop from "noop";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { useWindowDimensions } from "../useWindowDimensions.native.tsx";
+import useWindowDimensions from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("useSafeAreaInsets").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/screen/native/useBaseAppContainerDimensions.tsx");
 
 export default function useBaseAppContainerDimensions() {
   const size = height(left[1])();
@@ -17,8 +17,6 @@ export default function useBaseAppContainerDimensions() {
   return right.useMemo(() => ({ width: width - left - right, height }), items);
 };
 export const getBaseAppContainerDimensions = function getBaseAppContainerDimensions() {
-  let height;
-  let width;
   let obj = useWindowDimensions;
   const windowDimensions = obj.getWindowDimensions();
   ({ width, height } = windowDimensions);

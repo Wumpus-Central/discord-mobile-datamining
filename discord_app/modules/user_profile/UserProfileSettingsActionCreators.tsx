@@ -1,13 +1,13 @@
 // discord_app/modules/user_profile/UserProfileSettingsActionCreators.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import { isEqual } from "../../../_runtime/04632_isEqual.js";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { guildHasTag } from "../guild_tag/GuildTagUtils.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isEqualDefault from "isEqual" /* 4632 */;
+import guildHasTag from "guildHasTag" /* 8375 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createUserWidgetFromServer" /* 5365 */;
 
-const require = arg1;
-const result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileSettingsActionCreators.tsx");
 
 export const setPendingChanges = function setPendingChanges(guildId) {
   guildId = guildId.guildId;
@@ -65,8 +65,8 @@ export const setPendingChanges = function setPendingChanges(guildId) {
       if (displayNameStyles1 == null) {
         displayNameStyles1 = null;
       }
-      obj.pendingDisplayNameStyles = isEqual(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
-      const tmp12 = isEqual;
+      obj.pendingDisplayNameStyles = isEqualDefault(tmp13, displayNameStyles1) ? undefined : displayNameStyles;
+      const tmp12 = isEqualDefault;
     }
     if ("pronouns" in merged) {
       let pronouns;
@@ -269,7 +269,7 @@ export const setPendingChanges = function setPendingChanges(guildId) {
           if (themeColors == null) {
             themeColors = null;
           }
-          if (isEqual(tmp37, themeColors)) {
+          if (isEqualDefault(tmp37, themeColors)) {
             obj.pendingThemeColors = undefined;
           } else {
             obj.pendingThemeColors = merged.themeColors;
@@ -311,8 +311,8 @@ export const setPendingChanges = function setPendingChanges(guildId) {
     obj = { type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: null };
     obj[1] = guildId;
     const merged1 = Object.assign(obj);
-    dispatcher.dispatch(obj);
-    const obj3 = dispatcher;
+    dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
     obj5 = userProfile;
   }
 };

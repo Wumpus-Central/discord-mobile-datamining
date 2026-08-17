@@ -1,16 +1,16 @@
 // discord_app/components_native/chat/contentHandlers.tsx
-import importDefaultResult from "castNativeSyntheticEventData";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import { QUICK_SWITCHER } from "../../modules/app_analytics/AnalyticsLocation.tsx";
-import { showLongPressURLActionSheet } from "../../modules/links/native/showLongPressURLActionSheet.tsx";
-import { presentAddedFriendToast } from "../../modules/toast/native/ToastUtils.tsx";
-import { showUserProfileActionSheet } from "../../modules/user_profile/native/showUserProfileActionSheet.tsx";
-import { _copy } from "../../utils/ClipboardUtils.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import setDefault from "set" /* 4827 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import _copy from "_copy" /* 7167 */;
+import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8929 */;
+import showLongPressURLActionSheetDefault from "showLongPressURLActionSheet" /* 10781 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 let obj = {
   onLongPressLink(nativeEvent) {
     const url = nativeEvent.nativeEvent.url;
@@ -21,7 +21,7 @@ let obj = {
     if (tmp) {
       const obj = { urlString: null };
       obj[0] = url;
-      showLongPressURLActionSheet(obj);
+      showLongPressURLActionSheetDefault(obj);
     }
   },
   onTapAttachmentLink: null,
@@ -32,9 +32,9 @@ let obj = {
   onTapEmoji: null
 };
 let closure_4 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*(arg0) {
     if (c4 === 2) {
       c4 = 3;
@@ -62,7 +62,7 @@ let closure_4 = importDefaultResult((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            const dependencyMap = tmp5;
+            dependencyMap = tmp5;
             let callback = tmp2;
             let attachmentUrl;
             attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
@@ -78,7 +78,7 @@ let closure_4 = importDefaultResult((arg0) => {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -129,9 +129,9 @@ obj[1] = function() {
   return applyArgumentsResult;
 };
 let closure_3 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*(arg0) {
     if (c4 === 2) {
       c4 = 3;
@@ -159,7 +159,7 @@ let closure_3 = importDefaultResult((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            const dependencyMap = tmp5;
+            dependencyMap = tmp5;
             let callback = tmp2;
             let attachmentUrl;
             attachmentUrl = attachmentUrl.nativeEvent.data.attachmentUrl;
@@ -175,7 +175,7 @@ let closure_3 = importDefaultResult((arg0) => {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -225,12 +225,6 @@ obj[2] = function() {
   return applyArgumentsResult;
 };
 obj[3] = function onTapMention(closure_0) {
-  let channelId;
-  let guildId;
-  let parsedUserId;
-  let roleId;
-  let roleName;
-  let userId;
   let obj = parsedUserId(10739);
   const nativeSyntheticEventData = obj.getNativeSyntheticEventData(closure_0);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
@@ -239,10 +233,10 @@ obj[3] = function onTapMention(closure_0) {
     obj = { userId: null, channelId: null, sourceAnalyticsLocations: null };
     obj[0] = userId;
     obj[1] = channelId;
-    const items = [QUICK_SWITCHER.USER_MENTION];
+    const items = [QUICK_SWITCHERDefault.USER_MENTION];
     obj[2] = items;
-    showUserProfileActionSheet(obj);
-    const tmp15 = showUserProfileActionSheet;
+    showUserProfileActionSheetDefault(obj);
+    const tmp15 = showUserProfileActionSheetDefault;
   } else {
     if (null != roleId) {
       if (null != guildId) {
@@ -250,20 +244,20 @@ obj[3] = function onTapMention(closure_0) {
         obj[0] = guildId;
         obj[1] = roleId;
         obj[2] = channelId;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(2007)(10784, tmp2.paths), "RoleMembersActionSheet", obj);
-        const obj9 = ACTION_SHEET_HEIGHT_HALF;
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2007)(10784, tmp2.paths), "RoleMembersActionSheet", obj);
+        const obj9 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
     if ("@everyone" === roleName) {
       if (null != guildId) {
-        const obj1 = { guildId: null, roleId: null, channelId: null };
+        obj1 = { guildId: null, roleId: null, channelId: null };
         obj1[0] = guildId;
-        const obj6 = ACTION_SHEET_HEIGHT_HALF;
+        const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
         const tmp10 = tmp(2007)(10784, tmp2.paths);
-        obj1[1] = DISCORD_EPOCH.castGuildIdAsEveryoneGuildRoleId(guildId);
+        obj1[1] = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj1[2] = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj1);
-        const obj8 = DISCORD_EPOCH;
+        const obj8 = DISCORD_EPOCHDefault;
       }
     }
     if (null == roleName) {
@@ -274,13 +268,13 @@ obj[3] = function onTapMention(closure_0) {
           const intl = tmp(1236).intl;
           obj2[0] = intl.string(tmp(1236).t["/AXYnE"]);
           obj2[1] = function onConfirmSecondary() {
-            parsedUserId(outer1_2[14]).copy(parsedUserId);
-            const obj = parsedUserId(outer1_2[14]);
-            const result = parsedUserId(outer1_2[15]).presentCopiedToClipboard();
+            parsedUserId(closure_1_2[14]).copy(parsedUserId);
+            const obj = parsedUserId(closure_1_2[14]);
+            const result = parsedUserId(closure_1_2[15]).presentCopiedToClipboard();
           };
           let obj4 = obj2;
         }
-        let obj3 = set;
+        let obj3 = setDefault;
         obj3 = { title: null, body: null, confirmText: null, isDismissable: true };
         const intl2 = tmp(1236).intl;
         obj3[0] = intl2.string(tmp(1236).t.r0DLNm);
@@ -308,8 +302,8 @@ obj[5] = function onTapInlineCode(nativeEvent) {
   }
 };
 obj[6] = function onTapEmoji(emojiNode) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9400, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9400, dependencyMap.paths), "MessageEmojiActionSheet", { emojiNode: emojiNode.nativeEvent.node });
 };
-let result = require("shouldRefreshAttachmentUrl").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
+let result = require("set").fileFinishedImporting("components_native/chat/contentHandlers.tsx");
 
 export const contentHandlers = obj;

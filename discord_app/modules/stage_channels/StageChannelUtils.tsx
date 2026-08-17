@@ -1,24 +1,25 @@
 // discord_app/modules/stage_channels/StageChannelUtils.tsx
-import createRTCConnection from "createRTCConnection";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH";
-import { Permissions } from "ME";
-import { RowType } from "RowType";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_5 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import { RequestToSpeakPermissionStates as closure_6 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import { Permissions } from "ME" /* 676 */;
+import { RowType } from "RowType" /* 8064 */;
 import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
 
-let require = arg1;
-const result = require("MAX_STAGE_TOPIC_LENGTH").fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 
 export const fillChunk = function fillChunk(arg0, arg1, arg2) {
   let tmp = arg2;
-  const obj = apply;
+  const obj = _apply;
   if (arg2 == null) {
     tmp = arg1;
   }
-  require = tmp;
-  return apply.chunk(arg0, arg1).reduce((arg0, arg1) => {
+  _require = tmp;
+  return _apply.chunk(arg0, arg1).reduce((arg0, arg1) => {
     if (closure_0 <= arg1.length) {
       const items = [];
       items[HermesBuiltin.arraySpread(arg0, 0)] = arg1;
@@ -39,7 +40,7 @@ export const summarizeUsernamesParticipating = function summarizeUsernamesPartic
   let length = arg3;
   const first = arg1[0];
   let obj = dependencyMap;
-  const name = getNickname.getName(arg0, arg2, first);
+  const name = getNicknameDefault.getName(arg0, arg2, first);
   if (arg3 == null) {
     length = arg1.length;
   }
@@ -121,7 +122,7 @@ export const getStageChannelMetadata = function getStageChannelMetadata(channel_
   }
   obj[2] = topic;
   obj[3] = mediaSessionId.getMediaSessionId();
-  obj[4] = importAll(4026).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, channel_id) ? closure_6.EVERYONE : closure_6.NO_ONE;
+  obj[4] = applyOverwritesAll.canEveryoneRole(Permissions.REQUEST_TO_SPEAK, channel_id) ? closure_6.EVERYONE : closure_6.NO_ONE;
   let id;
   if (stageInstanceByChannel != null) {
     id = stageInstanceByChannel.id;
@@ -147,26 +148,26 @@ export const getParticipantNamesText = function getParticipantNamesText(channel,
   } else if (1 === found.length) {
     const intl2 = set(1236).intl;
     let obj = { a: null };
-    obj[0] = getNickname.getName(channel.getGuildId(), channel.id, found[0].user);
+    obj[0] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[0].user);
     stringResult = intl2.formatToPlainString(set(1236).t.EQwZlN, obj);
-    const obj5 = getNickname;
+    const obj5 = getNicknameDefault;
   } else if (2 === found.length) {
     const intl = set(1236).intl;
     obj = { a: null, b: null };
-    obj[0] = getNickname.getName(channel.getGuildId(), channel.id, found[0].user);
-    const obj2 = getNickname;
-    obj[1] = getNickname.getName(channel.getGuildId(), channel.id, found[1].user);
+    obj[0] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[0].user);
+    const obj2 = getNicknameDefault;
+    obj[1] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[1].user);
     stringResult = intl.formatToPlainString(set(1236).t.zBcKoA, obj);
-    const obj3 = getNickname;
+    const obj3 = getNicknameDefault;
   } else {
     const intl4 = set(1236).intl;
     obj = { a: null, b: null, n: null };
-    obj[0] = getNickname.getName(channel.getGuildId(), channel.id, found[0].user);
-    const obj7 = getNickname;
-    obj[1] = getNickname.getName(channel.getGuildId(), channel.id, found[1].user);
+    obj[0] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[0].user);
+    const obj7 = getNicknameDefault;
+    obj[1] = getNicknameDefault.getName(channel.getGuildId(), channel.id, found[1].user);
     obj[2] = found.length - 2;
     stringResult = intl4.formatToPlainString(set(1236).t["3AqFaG"], obj);
-    const obj8 = getNickname;
+    const obj8 = getNicknameDefault;
   }
   return stringResult;
 };

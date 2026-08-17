@@ -1,22 +1,14 @@
 // discord_app/modules/feedback/native/FeedbackModal.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 let require = arg1;
 function FeedbackForm(result) {
-  let descriptionLabel;
-  let hideHelpdeskLink;
-  let importDefault;
-  let titleLabel;
   result = result.result;
-  const require = result;
+  require = result;
   ({ trackReport: importDefault, titleLabel, descriptionLabel, hideHelpdeskLink } = result);
   let first;
   const tmp = callback3();
@@ -45,7 +37,7 @@ function FeedbackForm(result) {
   items[2] = closure_7(require(first[5]).FormInput, obj);
   obj[0] = items;
   const items1 = [closure_8(require(first[5]).FormSection, obj), ];
-  const obj1 = { style: tmp.bottomContainer, children: null };
+  obj1 = { style: tmp.bottomContainer, children: null };
   let tmp8Result = !hideHelpdeskLink;
   if (!hideHelpdeskLink) {
     const obj2 = { style: null, variant: "text-xs/medium", color: "text-muted", children: null };
@@ -68,7 +60,7 @@ function FeedbackForm(result) {
   const intl4 = tmp6(tmp7[6]).intl;
   obj6[1] = intl4.string(require(first[6]).t.geKm7t);
   obj6[2] = function onPress() {
-    let arr = outer1_1(first[10]);
+    let arr = closure_1_1(first[10]);
     arr = arr.pop();
     const obj = {};
     const merged = Object.assign(closure_0);
@@ -83,18 +75,18 @@ function FeedbackForm(result) {
   return closure_8(closure_6, obj5);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ helpDeskLabel: { lineHeight: 16, marginTop: 8 }, bottomContainer: { paddingHorizontal: 16 }, submitButton: { marginTop: 24, marginBottom: 24 } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");
+let result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackModal.tsx");
 
 export default function FeedbackModal(result) {
   const _require = result;
   result = result.result;
-  const importDefault = result;
+  importDefault = result;
   const trackReport = result.trackReport;
-  let _slicedToArray = React.useRef({ result, trackReport });
+  closure_3 = React.useRef({ result, trackReport });
   const effect = React.useEffect(() => {
-    _slicedToArray.current = { result: closure_1, trackReport };
+    closure_3.current = { result: closure_1, trackReport };
   });
   const callback = React.useCallback(() => {
     let arr = result(trackReport[10]);
@@ -110,7 +102,7 @@ export default function FeedbackModal(result) {
   obj[1] = _require(trackReport[12]).getHeaderCloseButton(callback);
   obj[2] = function render() {
     const merged = Object.assign(closure_0);
-    return outer1_7(outer1_10, {});
+    return closure_1_7(closure_1_10, {});
   };
   obj[0] = obj;
   obj[1] = obj;

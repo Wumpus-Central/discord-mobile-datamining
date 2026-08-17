@@ -1,27 +1,25 @@
 // discord_app/modules/premium/sounds/soundmoji/native/views/SoundmojiActionSheet.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "jsxProd";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, soundmojiContainer: null, emoji: null, textContainer: null };
-createCacheKey = { padding: require("Themes").space.PX_24, gap: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexDirection: "row", alignItems: "center" };
 let num;
 if (set.isIOS()) {
   num = 32;
 }
-createCacheKey[2] = { width: 32, height: 32, fontSize: num, lineHeight: 36, marginEnd: require("Themes").space.PX_16 };
-let obj1 = { width: 32, height: 32, fontSize: num, lineHeight: 36, marginEnd: require("Themes").space.PX_16 };
-createCacheKey[3] = { gap: require("Themes").space.PX_4, display: "flex", flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[2] = { width: 32, height: 32, fontSize: num, lineHeight: 36, marginEnd: ThemesDefault.space.PX_16 };
+let obj1 = { width: 32, height: 32, fontSize: num, lineHeight: 36, marginEnd: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { gap: ThemesDefault.space.PX_4, display: "flex", flex: 1 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/premium/sounds/soundmoji/native/views/SoundmojiActionSheet.tsx");
 
 export default function SoundmojiActionSheet(guildId) {
@@ -29,7 +27,7 @@ export default function SoundmojiActionSheet(guildId) {
   const channelId = guildId.channelId;
   const messageId = guildId.messageId;
   const soundId = guildId.soundId;
-  const tmp = createCacheKey();
+  const tmp = callback();
   const items = [guildId, channelId, messageId, soundId];
   const memo = soundId.useMemo(() => guildId(messageId[6]).getSoundmojiFromMessage(guildId, channelId, messageId, soundId, []), items);
   let tmp4Result = null;
@@ -55,7 +53,7 @@ export default function SoundmojiActionSheet(guildId) {
       const tmp11 = channelId(tmp6[8]);
     }
     const items1 = [tmp4Result, ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.textContainer;
     const obj2 = { variant: "text-sm/bold", children: null };
     obj2[1] = memo.name;

@@ -1,11 +1,13 @@
 // discord_app/modules/collectibles/utils/CollectiblesUtils.tsx
-import { ApplicationStreamPresets } from "RESOLUTION_720";
-import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import { ShopVariantsReturnStyle } from "../../../../discord_common/js/shared/shared-constants/ShopVariantsReturnStyle.tsx";
-import { resetCache } from "../../../utils/DateUtils.tsx";
-import { calculateFractionalPremiumInfo } from "../../billing/hooks/useFractionalPremiumInfo.tsx";
+import set from "set" /* 2 */;
+import resetCache from "resetCache" /* 4063 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 5355 */;
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
 
-const result = require("ShopVariantsReturnStyle").fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
+const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
+const result = set.fileFinishedImporting("modules/collectibles/utils/CollectiblesUtils.tsx");
 
 export const constructGoLiveSource = function constructGoLiveSource(resolution, frameRate, desktopSource) {
   obj = { qualityOptions: obj, context: BaseConnectionEvent.MediaEngineContextTypes.STREAM };
@@ -17,7 +19,7 @@ export const constructGoLiveSource = function constructGoLiveSource(resolution, 
       obj.desktopSettings = obj;
     }
     if (null != desktopSource.cameraSource) {
-      const obj1 = { videoDeviceGuid: null, audioDeviceGuid: null };
+      obj1 = { videoDeviceGuid: null, audioDeviceGuid: null };
       obj1[0] = desktopSource.cameraSource.videoDeviceGuid;
       obj1[1] = desktopSource.cameraSource.audioDeviceGuid;
       obj.cameraSettings = obj1;
@@ -73,7 +75,7 @@ export const getOptimizedProfileEffectThumbnailUrl = function getOptimizedProfil
   }
 };
 export const useFetchFractionalPremiumInfo = function useFetchFractionalPremiumInfo() {
-  const tmp = calculateFractionalPremiumInfo({ forceFetch: true });
+  const tmp = calculateFractionalPremiumInfoDefault({ forceFetch: true });
   let obj = resetCache;
   obj = { isLoading: !tmp.fetched, isFractionalPremiumActive: tmp.isFractionalPremiumActive, expiresAt: obj.dateFormat(tmp.endsAt, "L") };
   return obj;

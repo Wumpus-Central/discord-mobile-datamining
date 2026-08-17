@@ -1,12 +1,11 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeSound.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13377 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = ["#4282d8", "#47baff", "#b5e3ff", "#f0f0f0"];
 let closure_5 = ["#816bee", "#b79cf8", "#f0f0f0"];
@@ -14,13 +13,9 @@ let closure_6 = [0.1, 0.4, 0.8, 1];
 let items = [{ base: 8, tint: 1 }, { base: 2, tint: 1 }, { base: 8, tint: 1 }, { base: 8, tint: 1 }];
 let closure_8 = [0.1, 0.5, 1];
 const items1 = [{ base: 4, tint: 1 }, { base: 1, tint: 1 }, { base: 8, tint: 1 }];
-const result = require("getTransformedBadgeColors").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSound.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeSound.tsx");
 
 export const GuildBadgeSound = function GuildBadgeSound(width) {
-  let primaryColorsTransformed;
-  let primaryTintColor;
-  let secondaryColorsTransformed;
-  let secondaryTintColor;
   let num = width.width;
   if (num === undefined) {
     num = 24;

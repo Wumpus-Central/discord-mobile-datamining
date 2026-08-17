@@ -1,22 +1,16 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { ChatInputActionType } from "TextAreaCta";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import FadeTransitionItemDefault from "FadeTransitionItem" /* 11409 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ChatInputActionType } from "TextAreaCta" /* 11149 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { wrapChildrenDefault } from "../../../../design/components/TransitionGroup/TransitionGroup.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { FadeTransitionItem } from "ChatInputActionButtonTransitionItem.tsx";
 
 const require = arg1;
 function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, cleanup) {
-  let accessible;
-  let canStartThreads;
-  let channel;
-  let onPress;
-  let shouldShowThread;
-  let styleButtonWrapper;
   ({ accessible, onPress } = styleButton);
   styleButton = styleButton.styleButton;
   ({ canStartThreads, channel, shouldShowThread, styleButtonWrapper } = styleButton);
@@ -29,7 +23,7 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     obj[2] = !canStartThreads;
     obj[3] = onPress(11398).ThreadPlusIcon;
     obj[4] = function onPress(arg0) {
-      return onPress(arg0, outer1_5.THREAD);
+      return onPress(arg0, closure_1_5.THREAD);
     };
     obj[5] = styleButton;
     let tmpResult = tmp(tmp2(11402), obj);
@@ -44,7 +38,7 @@ function renderChatInputActionButtonGiftAndThread(arg0, styleButton, state, clea
     tmpResult = tmp(tmp2(11411), obj);
   }
   obj[2] = tmpResult;
-  return jsx(FadeTransitionItem, { cleanup, state, children: null }, arg0);
+  return jsx(FadeTransitionItemDefault, { cleanup, state, children: null }, arg0);
 }
 function getChatInputActionButtonGiftAndThreadKey(shouldShowThread) {
   let str = "gift";
@@ -61,10 +55,10 @@ let closure_7 = createCacheKey.createStyles((height) => {
 const memoResult = importAllResult.memo(function ChatInputActionButtonGiftOrThread(arg0) {
   const _require = arg0;
   let obj = _map;
-  const token = obj.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = obj.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   let items = [arg0];
   const obj2 = _map;
-  obj = { style: callback(token, _map.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container, children: null };
+  obj = { style: callback(token, _map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN)).container, children: null };
   const memo = importAllResult.useMemo(() => {
     const items = [closure_0];
     return items;
@@ -73,6 +67,6 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonGiftOrThre
   obj[1] = jsx(_wrapChildrenDefault.TransitionGroup, { items: memo, renderItem: renderChatInputActionButtonGiftAndThread, getItemKey: getChatInputActionButtonGiftAndThreadKey });
   return <View items={memo} renderItem={renderChatInputActionButtonGiftAndThread} getItemKey={getChatInputActionButtonGiftAndThreadKey} />;
 });
-const result = require("TextAreaCta").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonGiftOrThread.tsx");
 
 export default memoResult;

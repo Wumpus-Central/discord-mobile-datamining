@@ -1,20 +1,20 @@
 // discord_app/modules/voice_panel/native/hooks/useVoiceChannelGames.tsx
-import noop from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import sortActivity from "sortActivity";
-import filterPlayingActivities from "filterPlayingActivities";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "sortActivity" /* 4559 */;
+import closure_6 from "filterPlayingActivities" /* 7250 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useGetGameForAppId } from "../../../games/hooks/useGetGameForAppId.tsx";
 
 const require = arg1;
-let result = require("sortActivity").fileFinishedImporting("modules/voice_panel/native/hooks/useVoiceChannelGames.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoiceChannelGames.tsx");
 
 export default function useVoiceChannelGames(arg0, arg1, arg2) {
   const _require = arg0;
-  let closure_1 = arg1;
-  const dependencyMap = arg2;
-  let items = [stateFromStores, filterPlayingActivities, sortActivity];
+  closure_1 = arg1;
+  dependencyMap = arg2;
+  let items = [stateFromStores, closure_6, closure_5];
   const items1 = [arg0, arg1, arg2];
   const stateFromStoresArray = _initialize.useStateFromStoresArray(items, () => {
     if (closure_2) {
@@ -31,13 +31,13 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
         } else {
           let user = tmp13.user;
           if (user.id === id) {
-            let tmp20 = outer1_6;
-            let activities = outer1_6.getActivities();
+            let tmp20 = closure_1_6;
+            let activities = closure_1_6.getActivities();
           } else {
-            let tmp16 = outer1_5;
+            let tmp16 = closure_1_5;
             let tmp17 = user;
             let tmp18 = closure_1;
-            activities = outer1_5.getActivities(tmp15.id, closure_1);
+            activities = closure_1_5.getActivities(tmp15.id, closure_1);
           }
           let tmp21 = activities;
           let tmp22 = activities[Symbol.iterator]();
@@ -51,7 +51,7 @@ export default function useVoiceChannelGames(arg0, arg1, arg2) {
   const obj = _initialize;
   const getGamesForAppIds = _useGetGameForAppId.useGetGamesForAppIds(stateFromStoresArray);
   let obj2 = _useGetGameForAppId;
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_7];
   stateFromStores = _initialize.useStateFromStores(items2, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;

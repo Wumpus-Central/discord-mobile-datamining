@@ -1,5 +1,7 @@
 // discord_app/modules/search/managers/AbstractSearchFetchManager.tsx
-let result = require("set").fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("modules/search/managers/AbstractSearchFetchManager.tsx");
 class AbstractSearchFetchManager {
   constructor() {
     obj = Object.create(new.target.prototype);

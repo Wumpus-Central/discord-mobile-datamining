@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/SyncContactsSetting.tsx
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PlatformTypes } from "ME";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { syncContacts } from "../../../contact_sync/native/components/ContactSyncSettings.tsx";
-import { _uploadContacts } from "../../../contact_sync/native/ContactSyncUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _uploadContacts from "_uploadContacts" /* 11853 */;
+import syncContacts from "syncContacts" /* 14201 */;
+import closure_2 from "set" /* 5221 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -30,6 +30,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SyncContactsSetting.tsx");
 
 export default createToggle;

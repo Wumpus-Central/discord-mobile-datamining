@@ -1,7 +1,11 @@
 // discord_app/modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../notifications/upcoming_server_event/UpcomingServerEventExperiment.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import apexExperiment from "apexExperiment" /* 14820 */;
+import onUpcomingServerEventNotificationSettingsChanged from "onUpcomingServerEventNotificationSettingsChanged" /* 14821 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -12,9 +16,9 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.R0VpSW);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableUpcomingServerEventNotifications.useSetting,
-  onValueChange: require("onUpcomingServerEventNotificationSettingsChanged").onUpcomingServerEventNotificationSettingsChanged,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableUpcomingServerEventNotifications.useSetting,
+  onValueChange: onUpcomingServerEventNotificationSettingsChanged.onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
   }
@@ -28,13 +32,13 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.R0VpSW);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
-  useValue: require("explicitContentFromProto").EnableUpcomingServerEventNotifications.useSetting,
-  onValueChange: require("onUpcomingServerEventNotificationSettingsChanged").onUpcomingServerEventNotificationSettingsChanged,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
+  useValue: explicitContentFromProto.EnableUpcomingServerEventNotifications.useSetting,
+  onValueChange: onUpcomingServerEventNotificationSettingsChanged.onUpcomingServerEventNotificationSettingsChanged,
   usePredicate: function useExperiment() {
     return apexExperiment.useUpcomingServerEventExperiment("tabsV2Settings").showSettingsToggle;
   }
 };
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/UpcomingServerEventNotificationSetting.tsx");
 
 export default toggle;

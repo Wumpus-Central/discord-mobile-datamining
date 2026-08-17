@@ -1,54 +1,49 @@
 // discord_app/modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import { UserSummaryItem } from "../../../../../components_native/common/UserSummaryItem.tsx";
-import { EllipsisCircle } from "../../../../../design/components/Button/native/ButtonEllipsis.native.tsx";
-import { PillWrapper } from "../../../../../design/components/Button/native/ButtonPill.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { useActivityUsers } from "../../../../activities/useActivityUsers.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import Text from "Text" /* 4734 */;
+import PillWrapper from "PillWrapper" /* 4754 */;
+import EllipsisCircle from "EllipsisCircle" /* 4760 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 10765 */;
+import useActivityUsersDefault from "useActivityUsers" /* 16365 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function ParticipantsSummary(arg0) {
-  let applicationId;
-  let channelId;
   ({ applicationId, channelId } = arg0);
-  const obj = { users: useActivityUsers(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
-  const tmp = useActivityUsers(applicationId, channelId);
+  const obj = { users: useActivityUsersDefault(applicationId, channelId), max: 5, avatarSize: null, withPlusCount: true, style: null, cutout: null };
+  const tmp = useActivityUsersDefault(applicationId, channelId);
   obj[2] = Button.AvatarSizes.REFRESH_MEDIUM_32;
   obj[4] = { marginBottom: 8 };
   obj[5] = { inset: -8 };
-  return callback2(UserSummaryItem, obj);
+  return callback2(UserSummaryItemDefault, obj);
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
-createCacheKey = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: require("Themes").radii.round, backgroundColor: null, marginBottom: 8 };
-createCacheKey[3] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BLACK, 0.64);
+createCacheKey = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: ThemesDefault.radii.round, backgroundColor: null, marginBottom: 8 };
+createCacheKey[3] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.64);
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[2] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[3] = { color: "transparent" };
 createCacheKey[4] = { flex: 1, flexShrink: 1, flexGrow: 0, justifyContent: "center", alignItems: "center", top: -12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/activities/ActivityShelfItemSummary.tsx");
 
 export default function ActivityShelfItemSummary(submitting) {
-  let applicationId;
-  let applicationName;
-  let channelId;
   let flag = submitting.submitting;
   ({ channelId, applicationId, applicationName } = submitting);
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = PillWrapper;
   obj = { style: tmp.ongoingActivityContainer, children: null };
   obj = { style: tmp.overlayActivityName, children: null };
@@ -60,7 +55,7 @@ export default function ActivityShelfItemSummary(submitting) {
     tmp7Result = tmp7(EllipsisCircle.Ellipsis, { variant: "active", size: "md" });
   }
   obj2[1] = tmp7Result;
-  items[1] = closure_5(ReanimatedRexport.View, obj2);
+  items[1] = closure_5(_modDef4115.View, obj2);
   obj[1] = items;
   const items2 = [closure_6(View, obj), closure_5(ParticipantsSummary, { channelId, applicationId })];
   obj[1] = items2;

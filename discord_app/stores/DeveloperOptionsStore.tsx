@@ -1,20 +1,23 @@
 // discord_app/stores/DeveloperOptionsStore.tsx
-import { UserFlags } from "ME";
-import importDefaultResult from "fails";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import importDefaultResult from "fails" /* 584 */;
 
 let closure_0 = require;
 let c1 = importDefault;
 let c2 = importAll;
 let refreshSourceMapCookie = dependencyMap;
+const UserFlags = ME.UserFlags;
 closure_0 = undefined;
 c1 = undefined;
 c2 = undefined;
 refreshSourceMapCookie = function refreshSourceMapCookie() {
   const HTTP = callback(refreshSourceMapCookie[3]).HTTP;
-  let obj = { url: callback, headers: null, oldFormErrors: true, rejectWithError: true };
-  obj = { Authorization: null };
-  obj[0] = _undefined(refreshSourceMapCookie[4]).getToken();
+  obj = { url: callback, headers: null, oldFormErrors: true, rejectWithError: true };
+  obj = { Authorization: _undefined(refreshSourceMapCookie[4]).getToken() };
   obj[1] = obj;
   const obj3 = _undefined(refreshSourceMapCookie[4]);
   HTTP.put(obj).then((status) => {
@@ -26,20 +29,20 @@ refreshSourceMapCookie = function refreshSourceMapCookie() {
         } else {
           closure_2.succeed();
           const _setTimeout = setTimeout;
-          timeout = setTimeout(closure_3, status.body.sourceMapCookieTTLSeconds * outer1_1(outer1_3[2]).Millis.SECOND * 0.75);
+          timeout = setTimeout(closure_3, status.body.sourceMapCookieTTLSeconds * closure_1_1(closure_1_3[2]).Millis.SECOND * 0.75);
         }
       }
     }
     timeout = null;
-    const result = outer1_0(outer1_3[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
+    const result = closure_1_0(closure_1_3[5]).setDeveloperOptionSettings({ sourceMapsEnabled: false });
   }, () => {
     const timeout = setTimeout(closure_3, closure_2.fail());
   });
 };
 closure_0 = "" + location.protocol + "//" + location.host + "/__development/source_maps";
 c1 = null;
-let result = 5 * require("set").Millis.SECOND;
-importDefaultResult = new importDefaultResult(result, require("set").Millis.MINUTE, true);
+let result = 5 * setDefault.Millis.SECOND;
+importDefaultResult = new importDefaultResult(result, setDefault.Millis.MINUTE, true);
 c2 = importDefaultResult;
 let closure_5 = {
   set(arg0) {
@@ -52,7 +55,7 @@ let closure_5 = {
         clearTimeout(timeout);
         timeout = null;
         const HTTP = callback(refreshSourceMapCookie[3]).HTTP;
-        let obj = { url: null, headers: null, oldFormErrors: true, rejectWithError: true };
+        obj = { url: null, headers: null, oldFormErrors: true, rejectWithError: true };
         obj[0] = callback;
         obj = { Authorization: null };
         obj[0] = _undefined(refreshSourceMapCookie[4]).getToken();
@@ -69,6 +72,7 @@ obj = {};
 let merged = Object.assign(obj);
 const DeveloperOptionsRoutingKey = "DeveloperOptionsRoutingKey";
 let closure_10 = [];
+const Store = initializeDefault.Store;
 class DeveloperOptionsStore extends Store {
 }
 const prototype = DeveloperOptionsStore.prototype;
@@ -76,14 +80,14 @@ prototype["initialize"] = function initialize() {
   const Storage = callback(refreshSourceMapCookie[6]).Storage;
   let value = Storage.get(DeveloperOptionsStore);
   if (null != value) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(value);
   }
   const Storage2 = callback(refreshSourceMapCookie[6]).Storage;
   value = Storage2.get(DeveloperOptionsRoutingKey);
   if (null != value) {
-    let closure_10 = value;
+    closure_10 = value;
   }
 };
 Object.defineProperty(prototype, "isTracingRequests", {
@@ -217,14 +221,14 @@ prototype["getRoutingKeyHeaderValue"] = function getRoutingKeyHeaderValue() {
 DeveloperOptionsStore.displayName = "DeveloperOptionsStore";
 obj = {
   LOGOUT: function handleLogout(arg0) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(obj);
     const result = store.set(obj.sourceMapsEnabled);
     const Storage = callback(refreshSourceMapCookie[6]).Storage;
     const result1 = Storage.set(DeveloperOptionsStore, obj);
-    let closure_10 = [];
+    closure_10 = [];
     const Storage2 = callback(refreshSourceMapCookie[6]).Storage;
     const result2 = Storage2.set(DeveloperOptionsRoutingKey, closure_10);
   },
@@ -245,7 +249,7 @@ obj = {
     obj.setTags(obj);
   },
   DEVELOPER_OPTIONS_UPDATE_SETTINGS: function handleUpdateSettings(settings) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(settings.settings);
@@ -259,7 +263,7 @@ obj = {
     const result = Storage.set(DeveloperOptionsRoutingKey, tags);
   }
 };
-const developerOptionsStore = new DeveloperOptionsStore(require("dispatcher"), obj);
-let result1 = require("set").fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
+const developerOptionsStore = new DeveloperOptionsStore(dispatcherDefault, obj);
+let result1 = set.fileFinishedImporting("stores/DeveloperOptionsStore.tsx");
 
 export default developerOptionsStore;

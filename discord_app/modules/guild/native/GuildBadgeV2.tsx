@@ -1,20 +1,19 @@
 // discord_app/modules/guild/native/GuildBadgeV2.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { BadgeCategory } from "../../guild_badge/BadgeCategory.tsx";
-import { GuildVisibility } from "../../guild_badge/GuildTraits.tsx";
-import { badgeVariants } from "../../guild_badge/native/GuildBadgeImageSource.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 1297 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import badgeVariants from "badgeVariants" /* 9153 */;
+import BadgeCategory from "BadgeCategory" /* 9154 */;
+import GuildVisibility from "GuildVisibility" /* 9155 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_3 = createCacheKey.createStyles({ icon: { marginRight: 8 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/native/GuildBadgeV2.tsx");
 
 export default function GuildBadgeV2(arg0) {
-  let guild;
-  let size;
   ({ guild, size } = arg0);
   if (size === undefined) {
     size = Button.Icon.Sizes.MEDIUM;
@@ -46,8 +45,8 @@ export const hasGuildBadge = function hasGuildBadge(fromGuildProfileResult) {
   const tmp5 = badgeVariants.badgeVariants[badgeCategory];
   let tmp6 = null != tmp5;
   if (tmp6) {
-    tmp6 = null != tmp(9153).resolveImageSource(tmp5, guildTraits, arg1);
-    const tmpResult = tmp(9153);
+    tmp6 = null != badgeVariants.resolveImageSource(tmp5, guildTraits, arg1);
+    const tmpResult = badgeVariants;
   }
   return tmp6;
 };

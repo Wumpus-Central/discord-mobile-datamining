@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { registerAsset } from "../../../../../../_runtime/08287_registerAsset.js";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import registerAssetDefault from "registerAsset" /* 8287 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/FriendRequestAcceptedSystemMessage.tsx");
 
 export const createFriendRequestAcceptedSystemMessage = function createFriendRequestAcceptedSystemMessage(message) {
   message = message.message;
@@ -26,12 +26,12 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           obj[3] = message.roleStyle;
           obj = { username: null, usernameOnClick: null };
           obj[0] = colorString.nick;
-          obj[1] = formatUsernameOnClick(obj);
+          obj[1] = formatUsernameOnClickDefault(obj);
           let content = message.content;
           if (null != content) {
             if ("" !== content) {
               let tmp15Result = tmp15(4661);
-              const obj1 = { baseTextColor: null };
+              obj1 = { baseTextColor: null };
               obj1[0] = tmp17(712).colors.TEXT_SUBTLE;
               const intl2 = tmp15(1236).intl;
               const formatToParts2 = intl2.formatToParts;
@@ -68,7 +68,7 @@ export const createFriendRequestAcceptedSystemMessage = function createFriendReq
           const obj4 = { content: null, iconUrl: null, textColor: null };
           obj4[0] = formatToPartsResult;
           tmp15Result = tmp15(8171);
-          obj4[1] = tmp15Result.getAssetUriForEmbed(registerAsset);
+          obj4[1] = tmp15Result.getAssetUriForEmbed(registerAssetDefault);
           obj4[2] = undefined;
           const merged1 = Object.assign(tmp17(8188)(message));
           return obj4;

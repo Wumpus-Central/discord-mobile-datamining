@@ -1,8 +1,9 @@
 // discord_app/modules/collectibles/records/ProfileFrameRecord.tsx
-import "fromServer";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import fromServerDefault from "fromServer" /* 1948 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
-const require = arg1;
+require = arg1;
+fromServerDefault;
 let prototype;
 prototype = function ProfileFrameRecord(arg0) {
   const tmp2 = new prototype(arg0, new.target, new.target, tmp);
@@ -14,10 +15,6 @@ prototype = function ProfileFrameRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
-  let inner_width;
-  let overflow_bottom;
-  let overflow_horizontal;
-  let overflow_top;
   ({ inner_width, overflow_top, overflow_bottom, overflow_horizontal } = arg0);
   let obj = Object.create(null);
   const merged = Object.assign(arg0, obj);

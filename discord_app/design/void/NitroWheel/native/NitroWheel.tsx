@@ -1,14 +1,13 @@
 // discord_app/design/void/NitroWheel/native/NitroWheel.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/09367_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
+import noopAll from "noop" /* 19 */;
+import preloadDefault from "preload" /* 5449 */;
+import registerAssetDefault from "registerAsset" /* 9367 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("preload").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("design/void/NitroWheel/native/NitroWheel.tsx");
 
 export default function NitroWheel(style) {
-  const obj = { source: null, style: null, resizeMode: "contain" };
-  obj[0] = registerAsset;
-  obj[1] = style.style;
-  return jsx(preload, { source: null, style: null, resizeMode: "contain" });
+  const obj = { source: registerAssetDefault, style: style.style, resizeMode: "contain" };
+  return jsx(preloadDefault, { source: registerAssetDefault, style: style.style, resizeMode: "contain" });
 };

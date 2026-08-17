@@ -1,22 +1,24 @@
 // discord_app/modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null, textHeader: null };
-createCacheKey = { marginTop: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_24 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginTop: require("Themes").space.PX_8 };
-const result = require("jsxProd").fileFinishedImporting("modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8 };
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginTop: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouRecentActivitySectionHeader.tsx");
 
 export const ForYouRecentActivitySectionHeader = function ForYouRecentActivitySectionHeader() {
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.textHeader, color: "text-muted", variant: "text-sm/semibold", accessibilityRole: "header", children: null };
   const intl = getSystemLocale.intl;

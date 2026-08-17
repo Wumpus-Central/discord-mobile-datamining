@@ -1,5 +1,7 @@
 // discord_app/modules/game_server/utils/productToGameServerGame.tsx
-const result = require("set").fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/game_server/utils/productToGameServerGame.tsx");
 
 export const productToGameServerGame = function productToGameServerGame(id) {
   const skus = id.skus;

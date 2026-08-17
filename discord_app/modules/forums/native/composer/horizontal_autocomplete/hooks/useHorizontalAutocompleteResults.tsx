@@ -1,13 +1,11 @@
 // discord_app/modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ME from "ME";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ AutoCompleteResultTypes: c4, ChannelTypes: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/composer/horizontal_autocomplete/hooks/useHorizontalAutocompleteResults.tsx");
 
 export const useHorizontalAutocompleteResults = function useHorizontalAutocompleteResults(channel) {
   channel = channel.channel;
@@ -15,12 +13,12 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   const text = channel.text;
   let callback = text;
   let first;
-  let closure_4;
+  closure_4 = undefined;
   let memo;
   let text2;
   let selectionStart;
   let selectionEnd;
-  let closure_9;
+  closure_9 = undefined;
   let autocompleteType;
   let query;
   let queryOptions;
@@ -40,7 +38,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
   const items1 = [text, selection];
   const effect = first.useEffect(() => {
     const timeout = setTimeout(() => {
-      callback({ text: _slicedToArray, selectionStart: closure_1.start, selectionEnd: closure_1.end });
+      callback({ text: closure_2, selectionStart: closure_1.start, selectionEnd: closure_1.end });
     }, 16);
     return () => {
       clearTimeout(closure_0);
@@ -52,7 +50,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
     let tmp12;
     let tmp13;
     let tmp = selectionStart;
-    let _slicedToArray = selectionStart;
+    closure_2 = selectionStart;
     if (null != text2) {
       if (0 !== text2.trim().length) {
         while (true) {
@@ -69,7 +67,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
               tmp8 = tmp;
             }
             let substr = arr.slice(tmp, tmp8);
-            let closure_0 = substr[0];
+            closure_0 = substr[0];
             let str2 = substr.slice(1);
             let formatted = str2.toLowerCase();
             let _Object = Object;
@@ -81,7 +79,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
                 matchesResult = undefined !== formatted;
               }
               if (matchesResult) {
-                matchesResult = obj.matches(closure_0, formatted, _slicedToArray);
+                matchesResult = obj.matches(closure_0, formatted, closure_2);
               }
               return matchesResult;
             });
@@ -94,7 +92,7 @@ export const useHorizontalAutocompleteResults = function useHorizontalAutocomple
             }
           }
           let diff = tmp - 1;
-          _slicedToArray = diff;
+          closure_2 = diff;
           tmp15 = tmp6;
           tmp16 = found;
           tmp = diff;

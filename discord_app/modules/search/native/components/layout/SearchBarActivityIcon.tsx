@@ -1,20 +1,18 @@
 // discord_app/modules/search/native/components/layout/SearchBarActivityIcon.tsx
-import importAllResult from "noop";
-import { ActivityIndicator } from "get ActivityIndicator";
-import handleReaction from "handleReaction";
-import prototype from "prototype";
-import { SEARCH_MESSAGE_TAB_SENTINEL as closure_7 } from "MessageEmbedTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleReaction" /* 4971 */;
+import closure_6 from "prototype" /* 11510 */;
+import { SEARCH_MESSAGE_TAB_SENTINEL as closure_7 } from "MessageEmbedTypes" /* 8507 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let obj = { spinnerColor: null, spinner: null, icon: null };
-obj = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+obj = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[0] = obj;
 obj[1] = { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" };
 obj[2] = { marginLeft: 12, marginRight: 4 };
@@ -30,14 +28,14 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   let sharedValue;
   const tmp = callback2();
   let obj = searchContext(sharedValue[8]);
-  const items = [prototype, handleReaction];
+  items = [closure_6, closure_5];
   const items1 = [searchContext];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const searchResultsQuery = outer1_6.getSearchResultsQuery(searchContext);
-    const isInitialFetchComplete = outer1_5.getIsInitialFetchComplete(searchContext(sharedValue[9]).getSearchTabFetchId(searchContext, outer1_7, searchResultsQuery));
+    const searchResultsQuery = closure_1_6.getSearchResultsQuery(searchContext);
+    const isInitialFetchComplete = closure_1_5.getIsInitialFetchComplete(searchContext(sharedValue[9]).getSearchTabFetchId(searchContext, closure_1_7, searchResultsQuery));
     let tmp3 = !isInitialFetchComplete;
     const obj = searchContext(sharedValue[9]);
-    const result = outer1_6.isAutocompleteVisible(searchContext);
+    const result = closure_1_6.isAutocompleteVisible(searchContext);
     if (!isInitialFetchComplete) {
       tmp3 = !isInitialSearchQueryResult;
     }
@@ -46,7 +44,7 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
     }
     return tmp3;
   }, items1);
-  let obj1 = searchContext(sharedValue[10]);
+  obj1 = searchContext(sharedValue[10]);
   sharedValue = obj1.useSharedValue(createCacheKey.START);
   const items2 = [stateFromStores, sharedValue];
   const effect = importAllResult.useEffect(() => {
@@ -61,8 +59,8 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   class E {
     constructor() {
       obj = { opacity: null };
-      obj2 = searchContext(c2[10]);
-      obj[0] = obj2.interpolate(c2.get(), outer1_13, [0, 0.5]);
+      obj2 = searchContext(closure_2[10]);
+      obj[0] = obj2.interpolate(closure_2.get(), closure_1_13, [0, 0.5]);
       return obj;
     }
   }
@@ -73,8 +71,7 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   const animatedStyle = obj2.useAnimatedStyle(E);
   let obj4 = searchContext(sharedValue[10]);
   const fn = function v() {
-    const obj = { opacity: null };
-    obj[0] = searchContext(sharedValue[10]).interpolate(sharedValue.get(), outer1_13, [1, 0]);
+    const obj = { opacity: searchContext(sharedValue[10]).interpolate(sharedValue.get(), closure_1_13, [1, 0]) };
     return obj;
   };
   obj = { interpolate: searchContext(sharedValue[10]).interpolate, fadeAnimationState: sharedValue, ANIMATION_STATE_INPUT: items };
@@ -82,11 +79,10 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   fn.__workletHash = 11061952032557;
   fn.__initData = closure_15;
   const animatedStyle1 = obj4.useAnimatedStyle(fn);
-  obj1 = { style: animatedStyle, children: null };
+  obj1 = { style: animatedStyle, children: callback(ActivityIndicator, obj2) };
   obj2 = { color: tmp.spinnerColor.color, style: items3 };
   items3 = [, ];
   ({ icon: arr4[0], spinner: arr4[1] } = tmp);
-  obj1[1] = callback(ActivityIndicator, obj2);
   const items4 = [callback(stateFromStores(sharedValue[10]).View, obj1), ];
   const obj3 = { style: animatedStyle1, children: null };
   obj4 = { style: tmp.icon, size: null, color: "interactive-text-default" };
@@ -101,6 +97,6 @@ const memoResult = importAllResult.memo(function SearchBarActivityIcon(searchCon
   obj5[0] = items4;
   return closure_10(closure_9, obj5);
 });
-let result = require("handleReaction").fileFinishedImporting("modules/search/native/components/layout/SearchBarActivityIcon.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/SearchBarActivityIcon.tsx");
 
 export default memoResult;

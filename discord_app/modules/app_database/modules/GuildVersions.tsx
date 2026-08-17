@@ -1,15 +1,17 @@
 // discord_app/modules/app_database/modules/GuildVersions.tsx
-import _slicedToArray from "_slicedToArray";
-import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import set from "createGuildRecordFromRust";
-import { items } from "../DatabaseDaos.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import itemsDefault from "items" /* 1955 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import set from "set" /* 2 */;
 
-let closure_6 = new require("timestamp")("GuildVersions");
+let set = arg1;
+let closure_6 = new timestampDefault("GuildVersions");
 class GuildVersions {
   constructor() {
     obj = Object.create(new.target.prototype);
-    commit = obj;
+    closure_0 = obj;
     map = new Map();
     obj.pending = map;
     map1 = new Map();
@@ -87,16 +89,16 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_2 = tmp3;
-            let closure_1 = tmp7;
-            let closure_0;
-            let c4 = 1;
-            let obj3 = outer1_1(outer1_2[4]);
+            closure_2 = tmp3;
+            closure_1 = tmp7;
+            closure_0 = undefined;
+            c4 = 1;
+            let obj3 = closure_1_1(closure_1_2[4]);
             const guildVersionsResult = obj3.guildVersions();
             if (null == guildVersionsResult) {
               c4 = 0;
               logger = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = {};
               return obj1;
             } else {
@@ -109,7 +111,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           }
         } else if (1 === tmp7) {
           c4 = 0;
-          closure_1 = _slicedToArray;
+          closure_1 = closure_3;
           logger.warn("couldn't load guild versions", closure_1);
           logger = 3;
           obj3 = { value: null, done: true };
@@ -140,7 +142,7 @@ prototype["getCommittedVersions"] = function getCommittedVersions() {
           return obj;
         }
       } catch (tmp20) {
-        _slicedToArray = tmp20;
+        closure_3 = tmp20;
         if (tmp4 === c4) {
           logger = tmp2;
           throw tmp20;
@@ -180,7 +182,7 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGui
   const self = this;
   this.reset();
   const items = [...unavailableGuilds.unavailableGuilds];
-  const result = items.guildVersionsTransaction(database);
+  const result = itemsDefault.guildVersionsTransaction(database);
   result.deleteAllExcept(items);
   for (const item10029 of tmp3) {
     let items1 = [item10029];
@@ -202,8 +204,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op) {
     writes = emojis.writes;
   } else {
-    obj = obj(1370);
-    obj.assertNever(emojis);
+    set(1370).assertNever(emojis);
+    const obj = set(1370);
   }
   this.updateWith(id, writes);
   const stickers = guild.stickers;
@@ -213,8 +215,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op2) {
     writes2 = stickers.writes;
   } else {
-    obj(1370).assertNever(stickers);
-    const obj2 = obj(1370);
+    set(1370).assertNever(stickers);
+    const obj2 = set(1370);
   }
   self.updateWith(id, writes2);
   const channels = guild.channels;
@@ -224,8 +226,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op3) {
     writes3 = channels.writes;
   } else {
-    obj(1370).assertNever(channels);
-    const obj3 = obj(1370);
+    set(1370).assertNever(channels);
+    const obj3 = set(1370);
   }
   self.updateWith(id, writes3);
   const roles = guild.roles;
@@ -235,8 +237,8 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild) {
   } else if ("update" === op4) {
     writes4 = roles.writes;
   } else {
-    obj(1370).assertNever(roles);
-    const obj4 = obj(1370);
+    set(1370).assertNever(roles);
+    const obj4 = set(1370);
   }
   self.updateWith(id, writes4);
   self.commit(arg1);
@@ -350,11 +352,9 @@ prototype["computeLatestVersion"] = function computeLatestVersion(bound, arg1) {
   return bound;
 };
 prototype["commit"] = function commit(database) {
-  let tmp6;
-  let tmp7;
   const self = this;
   if (this.pending.size > 0) {
-    const result = items.guildVersionsTransaction(database);
+    const result = itemsDefault.guildVersionsTransaction(database);
     const pending2 = self.pending;
     const tmp21 = pending2[Symbol.iterator]();
     while (tmp21 !== undefined) {
@@ -381,11 +381,11 @@ prototype["commit"] = function commit(database) {
     }
     const pending = self.pending;
     pending.clear();
-    const obj2 = items;
+    const obj2 = itemsDefault;
   }
 };
-let set = Object.create(GuildVersions.prototype);
-let tmp2 = new require("timestamp")("GuildVersions");
+set = Object.create(GuildVersions.prototype);
+let tmp2 = new timestampDefault("GuildVersions");
 set.pending = new Map();
 let map = new Map();
 set.committed = new Map();

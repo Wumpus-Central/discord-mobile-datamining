@@ -1,34 +1,29 @@
 // discord_app/modules/rtc/SecureFramesUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import closure_8 from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import items from "items";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import ME from "ME";
-import { byteLength } from "../../../_runtime/00206_byteLength.js";
-import { t } from "../../../_runtime/03975_t.js";
-import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
-import { set } from "../../actions/AlertActionCreators.tsx";
+import byteLengthDefault from "byteLength" /* 206 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import tDefault from "t" /* 3975 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import setDefault2 from "set" /* 4827 */;
+import set from "set" /* 9693 */;
+import savePersistentCodesEnabledDefault from "savePersistentCodesEnabled" /* 9711 */;
+import _modDef9712 from "module_9712" /* 9712 */;
+import trackRTCPanelViewed from "trackRTCPanelViewed" /* 9717 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import closure_8 from "initialize" /* 4558 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "items" /* 9709 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import ME from "ME" /* 676 */;
 import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { savePersistentCodesEnabled } from "SecureFramesActionCreators.tsx";
-import { SecureFramesPlatformUtils.native } from "SecureFramesPlatformUtils.native.tsx";
-import { trackRTCPanelViewed } from "SecureFramesTracking.tsx";
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getCurrentUserSigningKey() {
   const self = this;
   const apply = _getCurrentUserSigningKey.apply;
@@ -42,17 +37,17 @@ function getCurrentUserSigningKey() {
 function _getCurrentUserSigningKey() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
-      const staticAuthSessionId = outer1_5.getStaticAuthSessionId();
+      const staticAuthSessionId = closure_1_5.getStaticAuthSessionId();
       v0(table[19])(null != staticAuthSessionId, "[getCurrentUserPublicKey] session id should not be null");
-      yield outer1_6.getMLSSigningKey(staticAuthSessionId, closure_0);
+      yield closure_1_6.getMLSSigningKey(staticAuthSessionId, closure_0);
       return arg1;
     })();
   });
-  const _getCurrentUserSigningKey = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -63,9 +58,9 @@ function _getCurrentUserSigningKey() {
 }
 function toBase64DataUri(arg0) {
   const uint8Array = new Uint8Array(arg0);
-  return "data:application/octet-stream;base64," + byteLength.fromByteArray(uint8Array);
+  return "data:application/octet-stream;base64," + byteLengthDefault.fromByteArray(uint8Array);
 }
-function isPublicKeyMatch(closure_0, closure_1, outer1_2) {
+function isPublicKeyMatch(closure_0, closure_1, closure_1_2) {
   const self = this;
   const apply = _isPublicKeyMatch.apply;
   if (typeof apply === "unknown") {
@@ -78,12 +73,12 @@ function isPublicKeyMatch(closure_0, closure_1, outer1_2) {
 function _isPublicKeyMatch() {
   const self = this;
   const tmp = callback2((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, body) {
       if (c8 === 2) {
         c8 = 3;
@@ -111,14 +106,14 @@ function _isPublicKeyMatch() {
               obj[0] = body;
               return obj;
             } else {
-              let initialize = tmp3;
-              let _slicedToArray = tmp7;
-              let c6 = 1;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
+              c6 = 1;
               const HTTP = callback(530).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
-              obj1[0] = outer1_15.VOICE_MATCH_PUBLIC_KEY(callback);
+              obj1 = { url: null, body: null, rejectWithError: false };
+              obj1[0] = closure_1_15.VOICE_MATCH_PUBLIC_KEY(callback);
               let obj2 = { public_key: null, key_version: null };
-              obj2[0] = outer1_19(callback2);
+              obj2[0] = closure_1_19(callback2);
               obj2[1] = dependencyMap;
               obj1[1] = obj2;
               c7 = 2;
@@ -129,7 +124,7 @@ function _isPublicKeyMatch() {
             }
           } else if (1 === tmp7) {
             c6 = 0;
-            callback = fetchFingerprint;
+            callback = closure_5;
             obj2 = callback2(1208);
             obj2.captureException(callback);
             throw callback;
@@ -150,7 +145,7 @@ function _isPublicKeyMatch() {
             return obj;
           }
         } catch (tmp17) {
-          fetchFingerprint = tmp17;
+          closure_5 = tmp17;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp17;
@@ -161,7 +156,7 @@ function _isPublicKeyMatch() {
       }
     })();
   });
-  const _isPublicKeyMatch = tmp;
+  closure_21 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -183,10 +178,10 @@ function uploadCurrentUserPublicKey() {
 function _uploadCurrentUserPublicKey() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -221,8 +216,8 @@ function _uploadCurrentUserPublicKey() {
               let signature;
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_17(callback);
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_17(callback);
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -238,7 +233,7 @@ function _uploadCurrentUserPublicKey() {
               lib = arg1;
               key = lib.key;
               signature = lib.signature;
-              let c4 = 1;
+              c4 = 1;
               const HTTP = callback(key[21]).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: false };
               obj3[0] = closure_15.VOICE_PUBLIC_KEYS();
@@ -287,7 +282,7 @@ function _uploadCurrentUserPublicKey() {
       }
     })();
   });
-  const _uploadCurrentUserPublicKey = tmp;
+  closure_23 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -303,9 +298,9 @@ function isKeyVersionUploaded(arg0) {
 function _ensureCurrentUserPublicKey() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -333,11 +328,11 @@ function _ensureCurrentUserPublicKey() {
               obj[0] = arg1;
               return obj;
             } else {
-              if (!outer1_24(closure_0)) {
+              if (!closure_1_24(closure_0)) {
                 c2 = 1;
                 c1 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_22(tmp5);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_22(tmp5);
                 return obj1;
               }
               tmp5 = closure_0;
@@ -360,7 +355,7 @@ function _ensureCurrentUserPublicKey() {
       }
     })();
   });
-  const _ensureCurrentUserPublicKey = tmp;
+  closure_25 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -372,9 +367,9 @@ function _ensureCurrentUserPublicKey() {
 function _isCurrentUserPublicKeyMatch() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, key) {
       if (c4 === 2) {
         c4 = 3;
@@ -392,7 +387,7 @@ function _isCurrentUserPublicKeyMatch() {
       } else {
         try {
           c4 = 2;
-          if (0 === _slicedToArray) {
+          if (0 === closure_3) {
             if (arg0 === 1) {
               c4 = 3;
               throw key;
@@ -406,19 +401,19 @@ function _isCurrentUserPublicKeyMatch() {
               let id = tmp2;
               id = undefined;
               key = undefined;
-              _slicedToArray = undefined;
-              if (outer1_24(callback)) {
-                id = outer1_5.getId();
-                _slicedToArray = 2;
+              closure_3 = undefined;
+              if (closure_1_24(callback)) {
+                id = closure_1_5.getId();
+                closure_3 = 2;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_17(tmp29);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_17(tmp29);
                 return obj1;
               } else {
-                _slicedToArray = 1;
+                closure_3 = 1;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_22(tmp29);
+                obj2[0] = closure_1_22(tmp29);
                 return obj2;
               }
             }
@@ -446,7 +441,7 @@ function _isCurrentUserPublicKeyMatch() {
               return obj4;
             } else {
               key = key.key;
-              _slicedToArray = 3;
+              closure_3 = 3;
               c4 = 1;
               const obj5 = { value: null, done: false };
               obj5[0] = callback2(id, key, callback);
@@ -461,14 +456,14 @@ function _isCurrentUserPublicKeyMatch() {
             obj6[0] = key;
             return obj6;
           } else {
-            _slicedToArray = key;
-            if (!_slicedToArray) {
+            closure_3 = key;
+            if (!closure_3) {
               obj = callback(key[12]);
               const result = obj.trackE2EEPublicKeyMismatch(callback);
             }
             c4 = 3;
             const obj7 = { value: null, done: true };
-            obj7[0] = _slicedToArray;
+            obj7[0] = closure_3;
             return obj7;
           }
         } catch (tmp23) {
@@ -478,7 +473,7 @@ function _isCurrentUserPublicKeyMatch() {
       }
     })();
   });
-  const _isCurrentUserPublicKeyMatch = tmp;
+  closure_26 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -488,8 +483,6 @@ function _isCurrentUserPublicKeyMatch() {
   return applyArgumentsResult;
 }
 function getIsSecureFramesKeyInconsistent(userId, items) {
-  let obj;
-  let obj2;
   [obj, obj2] = callback(items, 2);
   if (obj.isUserConnected(userId)) {
     const secureFramesRosterMapEntry = obj.getSecureFramesRosterMapEntry(userId);
@@ -546,19 +539,19 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
 }
 ({ AnalyticsSecureFramesUserVerification: unpackModuleId, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = ME);
-let result = require("fetchFingerprint").fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
 
 export const getSecureFramesHelpdeskArticle = function getSecureFramesHelpdeskArticle() {
-  return combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
+  return combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
 export const getSecureFramesPersistentCodesHelpdeskArticle = function getSecureFramesPersistentCodesHelpdeskArticle() {
-  return combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
+  return combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
 export const getSecureFramesVerifiedDevicesHelpdeskArticle = function getSecureFramesVerifiedDevicesHelpdeskArticle() {
-  return combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
+  return combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
 };
 export const addVerification = function addVerification(userId, userKey, isOtherUserKeyPersistent, channelId, DEEP_LINK) {
-  let obj = savePersistentCodesEnabled;
+  let obj = savePersistentCodesEnabledDefault;
   if (isOtherUserKeyPersistent) {
     const secureFramesVerifiedKey = obj.createSecureFramesVerifiedKey(userId, userKey);
   } else {
@@ -573,33 +566,33 @@ export const deleteVerification = function deleteVerification(userId, arg1, isOt
     const uint8Array = new Uint8Array(arg1);
     const obj2 = set;
     const serializeKeyResult = set.serializeKey(uint8Array);
-    const result = savePersistentCodesEnabled.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
-    const obj3 = savePersistentCodesEnabled;
+    const result = savePersistentCodesEnabledDefault.deleteSecureFramesVerifiedKey(userId, serializeKeyResult);
+    const obj3 = savePersistentCodesEnabledDefault;
   } else {
-    const result1 = savePersistentCodesEnabled.deleteSecureFramesTransientKey(userId);
-    const obj = savePersistentCodesEnabled;
+    const result1 = savePersistentCodesEnabledDefault.deleteSecureFramesTransientKey(userId);
+    const obj = savePersistentCodesEnabledDefault;
   }
 };
 export const deletePersistentVerification = function deletePersistentVerification(userId, verifiedKey) {
   const _require = userId;
-  const importDefault = verifiedKey;
-  let obj = SecureFramesPlatformUtils.native;
+  importDefault = verifiedKey;
+  let obj = _modDef9712;
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.hdL152);
   const intl2 = _getSystemLocale.intl;
   obj[1] = intl2.string(_getSystemLocale.t["8VGYKg"]);
   obj[2] = function onConfirm() {
-    const result = verifiedKey(outer1_2[11]).deleteSecureFramesVerifiedKey(userId, verifiedKey);
-    const obj = verifiedKey(outer1_2[11]);
-    const result1 = userId(outer1_2[12]).trackE2EESettingsDeviceDelete();
+    const result = verifiedKey(closure_1_2[11]).deleteSecureFramesVerifiedKey(userId, verifiedKey);
+    const obj = verifiedKey(closure_1_2[11]);
+    const result1 = userId(closure_1_2[12]).trackE2EESettingsDeviceDelete();
   };
   let result = obj.openSecureFramesUpdateConfirmation(obj);
 };
 export const deleteUserPersistentVerifications = function deleteUserPersistentVerifications(userId) {
   const _require = userId;
   const user = authStore.getUser(userId);
-  let obj = nameFromUser;
+  let obj = nameFromUserDefault;
   const name = obj.getName(user);
   obj = { title: null, subtitle: null, onConfirm: null };
   const intl = _getSystemLocale.intl;
@@ -607,16 +600,16 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
   const intl2 = _getSystemLocale.intl;
   obj[1] = intl2.string(_getSystemLocale.t.F1BQK3);
   obj[2] = function onConfirm() {
-    const result = outer1_1(outer1_2[11]).deleteSecureFramesUserVerifiedKeys(userId);
-    const obj = outer1_1(outer1_2[11]);
-    const result1 = userId(outer1_2[12]).trackE2EESettingsUserDelete();
+    const result = closure_1_1(closure_1_2[11]).deleteSecureFramesUserVerifiedKeys(userId);
+    const obj = closure_1_1(closure_1_2[11]);
+    const result1 = userId(closure_1_2[12]).trackE2EESettingsUserDelete();
   };
-  let result = SecureFramesPlatformUtils.native.openSecureFramesUpdateConfirmation(obj);
+  let result = _modDef9712.openSecureFramesUpdateConfirmation(obj);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  let obj = t();
-  const diffResult = obj.diff(t(timestamp), "s");
-  if (diffResult > 12 * set.Seconds.DAYS_30) {
+  let obj = tDefault();
+  const diffResult = obj.diff(tDefault(timestamp), "s");
+  if (diffResult > 12 * setDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * tmp(687).Seconds.DAYS_30));
     const intl7 = getSystemLocale.intl;
@@ -634,7 +627,7 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
     const _Math4 = Math;
     const rounded2 = Math.round(diffResult / (7 * tmp(687).Seconds.DAY));
     const intl5 = getSystemLocale.intl;
-    const obj1 = { count: null };
+    obj1 = { count: null };
     obj1[0] = rounded2;
     return intl5.formatToPlainString(getSystemLocale.t.dLurKZ, obj1);
   } else if (diffResult > tmp(687).Seconds.DAY) {
@@ -664,7 +657,7 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
     obj5[0] = diffResult;
     return intl.formatToPlainString(getSystemLocale.t["/w0Qpw"], obj5);
   }
-  const tmp3 = t(timestamp);
+  const tmp3 = tDefault(timestamp);
 };
 export const getUserVerificationDeeplink = function getUserVerificationDeeplink(arg0, arg1) {
   return "" + location.protocol + "//" + location.host + closure_14.FEATURE(constants2.DAVE_PROTOCOL_VERIFICATION) + "?userId=" + arg0 + "&fingerprint=" + encodeURIComponent(arg1);
@@ -696,7 +689,7 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
     const intl7 = getSystemLocale.intl;
     const items3 = [intl7.string(getSystemLocale.t.HTJ76H), ];
     const intl8 = getSystemLocale.intl;
-    const obj1 = { username: null };
+    obj1 = { username: null };
     obj1[0] = name;
     items3[1] = intl8.format(getSystemLocale.t.tc6aAc, obj1);
     return items3;
@@ -727,17 +720,14 @@ export const getUserVerifyStateText = function getUserVerifyStateText(memo, name
   }
 };
 export const getUserVerificationFooterText = function getUserVerificationFooterText(arg0) {
-  let isCurrentUserKeyPersistent;
-  let isOtherUserKeyPersistent;
-  let otherUserNickname;
   ({ isCurrentUserKeyPersistent, isOtherUserKeyPersistent, otherUserNickname } = arg0);
   if (isCurrentUserKeyPersistent) {
     if (isOtherUserKeyPersistent) {
       const intl2 = getSystemLocale.intl;
       let obj = { helpArticle: null };
-      obj[0] = combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
+      obj[0] = combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
       let formatResult = intl2.format(getSystemLocale.t["FJN+kh"], obj);
-      const obj8 = combined;
+      const obj8 = combinedDefault;
     }
     return formatResult;
   }
@@ -747,17 +737,17 @@ export const getUserVerificationFooterText = function getUserVerificationFooterT
   if (isCurrentUserKeyPersistent) {
     obj = { username: null, helpArticle: null };
     obj[0] = otherUserNickname;
-    obj[1] = combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
+    obj[1] = combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t["p/9PGp"], obj);
-    const obj6 = combined;
+    const obj6 = combinedDefault;
   } else if (isOtherUserKeyPersistent) {
-    let obj1 = { helpArticle: null };
-    obj1[0] = combined.getArticleURL(constants3.END_TO_END_ENCRYPTION);
+    obj1 = { helpArticle: null };
+    obj1[0] = combinedDefault.getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t.qT5z87, obj1);
-    const obj4 = combined;
+    const obj4 = combinedDefault;
   } else {
     obj = { helpArticle: null };
-    obj1 = combined;
+    obj1 = combinedDefault;
     obj[0] = obj1.getArticleURL(constants3.END_TO_END_ENCRYPTION);
     formatResult = format(t["6JLy+i"], obj);
   }
@@ -774,7 +764,7 @@ export const ensureCurrentUserPublicKey = function ensureCurrentUserPublicKey(c7
   }
   return applyArgumentsResult;
 };
-export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(outer2_6) {
+export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(closure_2_6) {
   const self = this;
   const apply = _isCurrentUserPublicKeyMatch.apply;
   if (typeof apply === "unknown") {
@@ -786,9 +776,6 @@ export const isCurrentUserPublicKeyMatch = function isCurrentUserPublicKeyMatch(
 };
 export { getIsSecureFramesKeyInconsistent };
 export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKeyInconsistentAlert(arg0) {
-  let channelId;
-  let nickname;
-  let userId;
   ({ userId, channelId, nickname } = arg0);
   let obj = trackRTCPanelViewed;
   obj = { userId, channelId, keyVersion: closure_12, reason: constants.OTHER_USER_INCONSISTENT_KEYS };
@@ -798,18 +785,16 @@ export const showSecureFramesKeyInconsistentAlert = function showSecureFramesKey
   obj[0] = intl.string(getSystemLocale.t.mznLyR);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.format(getSystemLocale.t.WY6IKb, { username: nickname });
-  set.show(obj);
+  setDefault2.show(obj);
 };
 export const validateSecureFramesKeyConsistent = function validateSecureFramesKeyConsistent(guildId) {
-  let channelId;
-  let userId;
   ({ userId, channelId } = guildId);
-  const items = [createRTCConnection, closure_8];
+  const items = [closure_7, closure_8];
   if (getIsSecureFramesKeyInconsistent(userId, items)) {
     const user = authStore.getUser(userId);
-    let obj = getNickname;
+    let obj = getNicknameDefault;
     const name = obj.getName(guildId.guildId, channelId, user);
-    let obj1 = trackRTCPanelViewed;
+    obj1 = trackRTCPanelViewed;
     obj = { userId: null, channelId: null, keyVersion: null, reason: null };
     obj[0] = userId;
     obj[1] = channelId;
@@ -823,7 +808,7 @@ export const validateSecureFramesKeyConsistent = function validateSecureFramesKe
     obj1 = { username: null };
     obj1[0] = name;
     obj[1] = intl2.format(getSystemLocale.t.WY6IKb, obj1);
-    set.show(obj);
+    setDefault2.show(obj);
     return false;
   } else {
     return true;

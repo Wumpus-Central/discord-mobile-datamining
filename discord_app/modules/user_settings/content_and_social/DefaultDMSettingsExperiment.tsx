@@ -1,8 +1,10 @@
 // discord_app/modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx
-import { AgeGatedFeature } from "../../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
-import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
-import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-const result = require("useAgeVerificationRunner").fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
+import set from "set" /* 2 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 5039 */;
+
+const result = set.fileFinishedImporting("modules/user_settings/content_and_social/DefaultDMSettingsExperiment.tsx");
 
 export const shouldAgeVerifyForDMDefaultOff = function shouldAgeVerifyForDMDefaultOff() {
   const obj = isFeatureAgeGated;

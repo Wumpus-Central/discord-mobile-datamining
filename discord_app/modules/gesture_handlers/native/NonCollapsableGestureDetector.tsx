@@ -1,14 +1,15 @@
 // discord_app/modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { LegacyBaseButton } from "../../../../_runtime/06377_LegacyBaseButton.js";
+import noopAll from "noop" /* 19 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = ["children"];
+noopAll;
 let closure_6 = { flex: 1 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
+const result = require("set").fileFinishedImporting("modules/gesture_handlers/native/NonCollapsableGestureDetector.tsx");
 
 export const NonCollapsableGestureDetector = function NonCollapsableGestureDetector(children) {
   let obj = {};

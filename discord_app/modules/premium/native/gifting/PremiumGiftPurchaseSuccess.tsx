@@ -1,42 +1,37 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftPurchaseSuccess.tsx
-import PremiumGiftBackgroundAnimation from "PremiumGiftBackgroundAnimation";
-import { View } from "_copy";
-import addSku from "addSku";
-import { SubscriptionIntervalTypes } from "GuildFeatures";
-import { AnalyticsSections } from "ME";
-import jsxProd from "TwinButtons";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "addSku" /* 4521 */;
+import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { disclaimer: null, title: null, description: null, input: null, inputLabel: null };
-createCacheKey = { marginTop: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_24, textAlign: "center" };
-let obj1 = { marginTop: require("Themes").space.PX_24, textAlign: "center" };
-createCacheKey[2] = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
-let obj2 = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
-createCacheKey[3] = { marginTop: require("Themes").space.PX_24 };
-let obj3 = { marginTop: require("Themes").space.PX_24 };
-createCacheKey[4] = { marginBottom: require("Themes").space.PX_4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginBottom: require("Themes").space.PX_4 };
-let result = require("addSku").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseSuccess.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
+createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+createCacheKey[3] = { marginTop: ThemesDefault.space.PX_24 };
+let obj3 = { marginTop: ThemesDefault.space.PX_24 };
+createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_4 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { marginBottom: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseSuccess.tsx");
 
 export default function PremiumGiftSuccessBody(giftCodeRecord) {
-  let giftStyle;
-  let planInterval;
-  let premiumType;
   giftCodeRecord = giftCodeRecord.giftCodeRecord;
   let giftCodeURL;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = giftCodeRecord(9625);
   const nativeGiftContext = obj.useNativeGiftContext();
   ({ giftStyle, premiumType, planInterval } = nativeGiftContext);
-  let obj1 = giftCodeRecord(4381);
+  obj1 = giftCodeRecord(4381);
   giftCodeURL = obj1.getGiftCodeURL(giftCodeRecord.code);
   if (null != giftCodeRecord.giftStyle) {
     giftStyle = giftCodeRecord.giftStyle;
@@ -53,15 +48,15 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   const items = [giftCodeRecord, giftCodeURL];
   obj = { children: null };
   const callback = React.useCallback(() => {
-    const value = outer1_5.get(giftCodeRecord.skuId);
+    const value = closure_1_5.get(giftCodeRecord.skuId);
     if (null != value) {
-      giftCodeRecord(outer1_2[11]).trackGiftCodeCopy(tmp, value);
-      const obj = giftCodeRecord(outer1_2[11]);
+      giftCodeRecord(closure_1_2[11]).trackGiftCodeCopy(tmp, value);
+      const obj = giftCodeRecord(closure_1_2[11]);
     }
-    giftCodeRecord(outer1_2[17]).copy(giftCodeURL);
-    const obj2 = giftCodeRecord(outer1_2[17]);
+    giftCodeRecord(closure_1_2[17]).copy(giftCodeURL);
+    const obj2 = giftCodeRecord(closure_1_2[17]);
     tmp = giftCodeRecord;
-    const result = giftCodeRecord(outer1_2[18]).presentCopiedToClipboard();
+    const result = giftCodeRecord(closure_1_2[18]).presentCopiedToClipboard();
   }, items);
   obj[0] = callback(giftCodeURL(9599), { giftStyle });
   const items1 = [callback(View, obj), , , , ];
@@ -83,11 +78,7 @@ export default function PremiumGiftSuccessBody(giftCodeRecord) {
   obj4 = { style: tmp.inputLabel, variant: "heading-md/bold", children: null };
   const intl3 = tmp2(1236).intl;
   obj4[2] = intl3.string(giftCodeRecord(1236).t["qS+yMo"]);
-  const items2 = [callback(giftCodeRecord(4734).Text, obj4), ];
-  const obj5 = { text: giftCodeURL, icon: null, iconPosition: "end", onPress: null };
-  obj5[1] = giftCodeURL(4323);
-  obj5[3] = callback;
-  items2[1] = callback(giftCodeRecord(8811).InputButton, obj5);
+  const items2 = [callback(giftCodeRecord(4734).Text, obj4), callback(giftCodeRecord(8811).InputButton, { text: giftCodeURL, icon: giftCodeURL(4323), iconPosition: "end", onPress: callback })];
   obj3[1] = items2;
   items1[3] = closure_10(View, obj3);
   const obj6 = { style: tmp.disclaimer, variant: "text-xs/normal", children: null };
@@ -107,7 +98,7 @@ export const PremiumGiftSuccessActions = function PremiumGiftSuccessActions(gift
   const nativeGiftContext = obj.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;
-  let obj1 = onClose(navigation[9]);
+  obj1 = onClose(navigation[9]);
   navigation = obj1.useNavigation();
   const GiftingBadgeExperiment = onClose(navigation[10]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "PremiumGiftSuccessActions" }).enabled;
@@ -128,7 +119,7 @@ export const PremiumGiftSuccessActions = function PremiumGiftSuccessActions(gift
   const callback1 = enabled.useCallback(() => {
     let obj = onClose(navigation[13]);
     obj = { url: giftCodeURL };
-    obj.showShareActionSheet(obj, outer1_7.PREMIUM_GIFT_SUCCESS_MODAL);
+    obj.showShareActionSheet(obj, closure_1_7.PREMIUM_GIFT_SUCCESS_MODAL);
     let tmp4 = enabled;
     if (enabled) {
       tmp4 = null != prePurchaseGiftingBadgeProgress;

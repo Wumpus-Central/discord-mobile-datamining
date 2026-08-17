@@ -1,19 +1,16 @@
 // discord_app/modules/interaction_components/native/layouts/LabelLayoutComponent.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Input } from "../../../../design/components/Input/native/Input.native.tsx";
-import { PermissionOverwriteType } from "../../../../flow/Server.tsx";
-import { isInteractionComponent } from "../../ComponentStateContext.tsx";
+import noopAll from "noop" /* 19 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import Input from "Input" /* 8072 */;
+import isInteractionComponent from "isInteractionComponent" /* 8326 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/layouts/LabelLayoutComponent.tsx");
 
 export default function LabelLayoutComponent(arg0) {
-  let component;
-  let description;
-  let label;
-  let renderComponent;
   ({ component, renderComponent } = arg0);
   ({ label, description } = arg0);
   let obj = isInteractionComponent;

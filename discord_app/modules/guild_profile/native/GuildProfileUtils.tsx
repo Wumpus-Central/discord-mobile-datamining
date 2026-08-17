@@ -1,24 +1,25 @@
 // discord_app/modules/guild_profile/native/GuildProfileUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { hasFetchedColors } from "../../avatar/useAvatarColor.tsx";
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import hasFetchedColors from "hasFetchedColors" /* 8345 */;
+import hasFetchedColorsDefault from "hasFetchedColors" /* 8345 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const require = arg1;
-const result = require("getAvatarURL").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_profile/native/GuildProfileUtils.tsx");
 
 export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfile, token) {
   let guildIconURL = null;
   if (null != guildProfile) {
     guildIconURL = null;
     if (null == guildProfile.brandColorPrimary) {
-      let obj = getAvatarURL;
+      let obj = getAvatarURLDefault;
       obj = { id: null, icon: null, size: 64 };
       ({ id: obj2[0], icon: obj2[1] } = guildProfile);
       guildIconURL = obj.getGuildIconURL(obj);
     }
   }
-  let brandColorPrimary = hasFetchedColors(guildIconURL, token);
+  let brandColorPrimary = hasFetchedColorsDefault(guildIconURL, token);
   brandColorPrimary = undefined;
   if (guildProfile != null) {
     brandColorPrimary = guildProfile.brandColorPrimary;
@@ -29,12 +30,6 @@ export const useProfilePrimaryColor = function useProfilePrimaryColor(guildProfi
   return brandColorPrimary;
 };
 export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfileFromInvite) {
-  let h;
-  let l;
-  let s;
-  let tmp4;
-  let tmp5;
-  let tmp6;
   if (null == guildProfileFromInvite) {
     return null;
   } else if (null != guildProfileFromInvite.brandColorPrimary) {
@@ -42,7 +37,7 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
   } else {
     let obj = { id: null, icon: null, size: 64 };
     ({ id: obj6[0], icon: obj6[1] } = guildProfileFromInvite);
-    const guildIconURL = getAvatarURL.getGuildIconURL(obj);
+    const guildIconURL = getAvatarURLDefault.getGuildIconURL(obj);
     if (null == guildIconURL) {
       return null;
     } else {
@@ -63,8 +58,8 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
         const obj2 = tmp8(5311)(obj);
         let num2 = 1;
         ({ h, s, l } = tmp8(5311)(obj).toHsl());
-        if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
-          num2 = maybeApplyNoTextColorForLightCustomTheme.saturation;
+        if (closure_4.desaturateUserColors) {
+          num2 = closure_4.saturation;
         }
         obj = { h: null, s: null, l: null };
         obj[0] = h;
@@ -77,6 +72,6 @@ export const getProfilePrimaryColor = function getProfilePrimaryColor(guildProfi
       }
       const obj7 = hasFetchedColors;
     }
-    const obj5 = getAvatarURL;
+    const obj5 = getAvatarURLDefault;
   }
 };

@@ -1,31 +1,25 @@
 // discord_app/utils/native/parseURL.tsx
-import _slicedToArray from "_slicedToArray";
-import ME from "ME";
-import items from "items";
-import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
-import CustomCheckoutFlow from "CustomCheckoutFlow";
-import { parse } from "../../../_runtime/01484_parse.js";
-import { t } from "../../../_runtime/04092_t.js";
-import { trimTrailingPunctuation } from "../../modules/coded_links/findCodedLinks.tsx";
-import { _resolveGiftCode } from "../GiftCodeUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import parseDefault from "parse" /* 1484 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import UrlDefault from "Url" /* 1489 */;
+import tDefault from "t" /* 4092 */;
+import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
+import _resolveGiftCode from "_resolveGiftCode" /* 4381 */;
+import urlPartToSettingsEnumDefault from "urlPartToSettingsEnum" /* 4491 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import ME from "ME" /* 676 */;
+import items from "items" /* 678 */;
+import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4356 */;
+import CustomCheckoutFlow from "CustomCheckoutFlow" /* 4357 */;
 
-let c4;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function parseQuery(arg0) {
   try {
     const _Object = Object;
     const _Object2 = Object;
-    const entries = Object.entries(parse.parse(arg0));
+    const entries = Object.entries(parseDefault.parse(arg0));
     return Object.fromEntries(entries.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       const items = [tmp, ];
       let first = tmp2;
@@ -40,7 +34,7 @@ function parseQuery(arg0) {
   }
 }
 ({ AnalyticEvents: c4, GuildSettingsSections: c5, GuildSettingsSubsections: closure_6, LinkingTypes: error } = ME);
-({ CollectibleShopTab: metroImportAll, CollectiblesMobileShopScreen: c9 } = items);
+({ CollectibleShopTab: closure_8, CollectiblesMobileShopScreen: c9 } = items);
 ({ MobileWebRedirectCheckoutDeepLinkActions: unpackModuleId, MobileWebRedirectCheckoutDeepLinkQueryKeys: closure_12 } = CustomCheckoutFlow);
 const re13 = /feature\/([\w-]+)/;
 const re14 = /feature\/boost\/([0-9]+)/;
@@ -58,32 +52,15 @@ const re25 = /^\/quests\/(\d+)/;
 const re26 = /^\/quest-preview\/(\d+)/;
 const re27 = /^\/quest-home/;
 const re28 = /subscriptions\/(\d+)/;
-let result = require("items").fileFinishedImporting("utils/native/parseURL.tsx");
+let result = require("set").fileFinishedImporting("utils/native/parseURL.tsx");
 
 export default function parseURL(arg0) {
-  let attemptId;
-  let custom_id;
-  let filter;
-  let fingerprint;
-  let fingerprint2;
-  let host;
-  let hostname;
-  let installationId;
-  let key;
-  let link_id;
-  let pathname;
-  let protocol;
-  let query;
-  let redirect;
-  let referrer_id;
-  let sort;
-  let username;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
   let uRL = importDefault;
-  let obj = t;
+  let obj = tDefault;
   const sanitizeUrlResult = obj.sanitizeUrl(arg0);
   if (null == sanitizeUrlResult) {
     obj = { payload: null };
@@ -92,7 +69,7 @@ export default function parseURL(arg0) {
     obj[0] = obj;
     return obj;
   } else {
-    const parsed = uRL(1489).parse(sanitizeUrlResult);
+    const parsed = UrlDefault.parse(sanitizeUrlResult);
     ({ host, pathname, query } = parsed);
     let str = query;
     ({ protocol, hostname } = parsed);
@@ -102,7 +79,7 @@ export default function parseURL(arg0) {
     let tmp87Result = tmp87(str);
     ({ fingerprint, attemptId, installationId, referrer_id, sort, filter } = tmp87Result);
     ({ username, custom_id, link_id } = tmp87Result);
-    let obj1 = trimTrailingPunctuation;
+    obj1 = trimTrailingPunctuation;
     const findCodedLinkResult = obj1.findCodedLink(sanitizeUrlResult);
     if (null != findCodedLinkResult) {
       const type = findCodedLinkResult.type;
@@ -255,7 +232,7 @@ export default function parseURL(arg0) {
       }
       if (!uRLResult1.isDiscordHostname(host)) {
         if (!uRLResult2.isDiscordProtocol(protocol)) {
-          const uRLResult3 = uRL(1487);
+          const uRLResult3 = isDiscordProxiedAssetUrlDefault;
         }
         let match;
         if (host != null) {
@@ -368,7 +345,7 @@ export default function parseURL(arg0) {
               if (query == null) {
                 str13 = "";
               }
-              let ad_creative_ids = uRL(1484).parse(str13).ad_creative_ids;
+              let ad_creative_ids = parseDefault.parse(str13).ad_creative_ids;
               if (ad_creative_ids == null) {
                 ad_creative_ids = [];
               }
@@ -536,13 +513,13 @@ export default function parseURL(arg0) {
                     }
                   }
                   const obj52 = { reason: "invalid_query_params", fingerprint: null };
-                  const uRLResult5 = uRL(698);
+                  const uRLResult5 = expandEventPropertiesDefault;
                   obj52[1] = tmp5(513).maybeExtractId(fingerprint2);
                   const obj53 = { fingerprint: null };
                   obj53[0] = fingerprint2;
                   uRLResult5.track(constants.MOBILE_WEB_HANDOFF_FAILURE, obj52, obj53);
                   const _Error = Error;
-                  const error = new Error("Missing nonce or redirect query params");
+                  error = new Error("Missing nonce or redirect query params");
                   throw error;
                 } else {
                   const match6 = pathname.match(closure_20);
@@ -593,8 +570,8 @@ export default function parseURL(arg0) {
                         const obj59 = { type: null, guildId: null, settingsSection: null, settingsSubsection: null };
                         obj59[0] = closure_7.GUILD_SETTINGS;
                         obj59[1] = tmp41[1];
-                        obj59[2] = uRL(4491)(closure_5, tmp41[2]);
-                        obj59[3] = uRL(4491)(closure_6, tmp41[3]);
+                        obj59[2] = urlPartToSettingsEnumDefault(closure_5, tmp41[2]);
+                        obj59[3] = urlPartToSettingsEnumDefault(closure_6, tmp41[3]);
                         obj58[3] = obj59;
                         return obj58;
                       } else {
@@ -612,8 +589,8 @@ export default function parseURL(arg0) {
                           obj60[2] = installationId;
                           const obj61 = { type: null, settingsSection: null, settingsSubsection: null, feature: null };
                           obj61[0] = closure_7.GUILD_SETTINGS_PICKER;
-                          obj61[1] = uRL(4491)(closure_5, tmp36[1]);
-                          obj61[2] = uRL(4491)(closure_6, tmp36[2]);
+                          obj61[1] = urlPartToSettingsEnumDefault(closure_5, tmp36[1]);
+                          obj61[2] = urlPartToSettingsEnumDefault(closure_6, tmp36[2]);
                           obj61[3] = tmp87(str7).feature;
                           obj60[3] = obj61;
                           return obj60;
@@ -647,8 +624,8 @@ export default function parseURL(arg0) {
         }
         const tmp5Result1 = tmp5(4488);
       }
-      uRLResult1 = uRL(1487);
+      uRLResult1 = isDiscordProxiedAssetUrlDefault;
     }
-    const uRLResult = uRL(1489);
+    const uRLResult = UrlDefault;
   }
 };

@@ -1,19 +1,18 @@
 // discord_app/design/components/Sheet/native/ActionSheetCloseButton.native.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
-import { XSmallIcon } from "../../Icon/native/redesign/generated/XSmallIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import XSmallIcon from "XSmallIcon" /* 6368 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = Object.freeze({ radius: 12 });
 let closure_5 = Object.freeze({ top: 8, right: 8, bottom: 8, left: 8 });
-const result = require("PressableBase").fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/ActionSheetCloseButton.native.tsx");
 
 export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
-  let onPress;
-  let variant;
   ({ onPress, variant } = arg0);
   const obj = { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null };
   const intl = getSystemLocale.intl;
@@ -22,9 +21,9 @@ export const ActionSheetCloseButton = function ActionSheetCloseButton(arg0) {
   obj[3] = closure_4;
   obj[4] = onPress;
   if ("overlay" === variant) {
-    let ICON_STRONG = Themes.colors.WHITE;
+    let ICON_STRONG = ThemesDefault.colors.WHITE;
   } else {
-    ICON_STRONG = Themes.colors.ICON_STRONG;
+    ICON_STRONG = ThemesDefault.colors.ICON_STRONG;
   }
   obj[5] = jsx(XSmallIcon.XSmallIcon, { color: ICON_STRONG });
   return jsx(PressableBase.PressableOpacity, { accessibilityRole: "button", accessibilityLabel: null, hitSlop: null, androidRippleConfig: null, onPress: null, children: null });

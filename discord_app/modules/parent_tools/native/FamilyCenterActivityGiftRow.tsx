@@ -1,40 +1,31 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
-import { getCollectibleTypeName } from "../FamilyCenterActivityPurchaseRowUtils.tsx";
-import { useSelectedTeenUser } from "../hooks/useSelectedTeenUser.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8387 */;
+import useSelectedTeenUser from "useSelectedTeenUser" /* 14250 */;
+import getCollectibleTypeName from "getCollectibleTypeName" /* 14259 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, textContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: require("Themes").colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "column", flexShrink: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityGiftRow.tsx");
 
 export default function FamilyCenterActivityGiftRow(arg0) {
-  let claimed;
-  let claimedAt;
-  let displayName;
-  let gifterUserId;
-  let isSubscription;
-  let offeredAt;
-  let price;
-  let skuId;
-  let subscriptionPlanId;
   ({ skuId, subscriptionPlanId } = arg0);
   ({ price, gifterUserId, claimed, offeredAt, claimedAt } = arg0);
-  const tmp = createCacheKey();
-  let product = useCollectiblesData(skuId).product;
+  const tmp = callback();
+  let product = useCollectiblesDataDefault(skuId).product;
   let obj = useSelectedTeenUser;
   const teenUserForId = obj.useTeenUserForId(gifterUserId);
-  let obj1 = getCollectibleTypeName;
+  obj1 = getCollectibleTypeName;
   let tmp7 = product;
   if (product == null) {
     tmp7 = null;

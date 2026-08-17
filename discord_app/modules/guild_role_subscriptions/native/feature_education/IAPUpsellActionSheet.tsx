@@ -1,20 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx
-import "noop";
-import { Routes } from "ME";
-import { StaticChannelRoute } from "set";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import { Routes } from "ME" /* 676 */;
+import { StaticChannelRoute } from "set" /* 1398 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/IAPUpsellActionSheet.tsx");
 
 export default function IAPUpsellActionSheet(arg0) {
-  let markAsDismissed;
-  let require;
   ({ guildId: require, markAsDismissed } = arg0);
-  const obj = { imageSource: null, header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
-  obj[0] = markAsDismissed(15509);
+  const obj = { imageSource: markAsDismissed(15509), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.rBw4cE);
   const intl2 = getSystemLocale.intl;
@@ -22,9 +20,9 @@ export default function IAPUpsellActionSheet(arg0) {
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(getSystemLocale.t.RzWDqY);
   obj[4] = function onCTAPress() {
-    outer1_0(outer1_2[8]).transitionTo(outer1_3.CHANNEL(closure_0, outer1_4.ROLE_SUBSCRIPTIONS));
-    markAsDismissed(outer1_5.UNKNOWN);
+    closure_1_0(closure_1_2[8]).transitionTo(closure_1_3.CHANNEL(closure_0, closure_1_4.ROLE_SUBSCRIPTIONS));
+    markAsDismissed(closure_1_5.UNKNOWN);
   };
   obj[5] = markAsDismissed;
-  return jsx(markAsDismissed(15508), { imageSource: null, header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
+  return jsx(markAsDismissed(15508), { imageSource: markAsDismissed(15509), header: null, body: null, cta: null, onCTAPress: null, markAsDismissed: null });
 };

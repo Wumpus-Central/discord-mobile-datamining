@@ -1,27 +1,18 @@
 // discord_app/modules/rpc/server/commands/providers.tsx
-import importDefaultResult from "sum";
-import closure_5 from "set";
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import items3 from "items3";
-import sum from "sum";
-import set from "RPC_SCOPE_CONFIG";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "set" /* 5221 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
+import items3 from "items3" /* 4481 */;
+import sum from "sum" /* 505 */;
+import set from "set" /* 2 */;
 import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
 
-let AM_HARMONY_PRD_APPLICATION_ID;
-let AM_HARMONY_STG_APPLICATION_ID;
-let RPCCommands;
-let RPC_AUTHENTICATED_SCOPE;
-let RPC_SCOPE_CONFIG;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 let c4 = importDefaultResult;
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
-({ AnalyticsLocations: closure_6, ComponentActions: error, PlatformTypes: metroImportAll } = ME);
+({ AnalyticsLocations: closure_6, ComponentActions: error, PlatformTypes: closure_8 } = ME);
 ({ AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID } = items3);
 ({ RPCCommands, RPCErrors: c9 } = sum);
 const items = [AM_HARMONY_PRD_APPLICATION_ID, AM_HARMONY_STG_APPLICATION_ID];
@@ -30,7 +21,7 @@ obj = { [RPCCommands.GET_PROVIDER_ACCESS_TOKEN]: obj };
 obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items1 },
   validation(string) {
-    let obj = createRpcJoiSchemaObject(string);
+    let obj = createRpcJoiSchemaObjectDefault(string);
     obj = { provider: null, connection_redirect: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
@@ -38,16 +29,14 @@ obj = {
     return requiredResult.keys(obj);
   },
   handler(arg0) {
-    let args;
-    let socket;
     ({ socket, args } = arg0);
     const provider = args.provider;
     let _require = provider;
     const connection_redirect = args.connection_redirect;
-    let dependencyMap;
+    dependencyMap = undefined;
     let obj = _recurseReplaceContentTree;
     const result = obj.validatePostMessageTransport(socket.transport);
-    let obj1 = _recurseReplaceContentTree;
+    obj1 = _recurseReplaceContentTree;
     const validateApplicationResult = obj1.validateApplication(socket.application);
     const value = connection_redirect(5097).get(provider);
     dependencyMap = value;
@@ -66,11 +55,11 @@ obj = {
     } else if (set.has(validateApplicationResult)) {
       _require = undefined;
       _require = importDefaultResult((arg0, arg1) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
-        let c6 = 0;
-        let c7 = 0;
-        let c5 = 0;
+        closure_0 = arg0;
+        closure_1 = arg1;
+        c6 = 0;
+        c7 = 0;
+        c5 = 0;
         return (function*(arg0, arg1) {
           if (c7 === 2) {
             c7 = 3;
@@ -99,9 +88,9 @@ obj = {
                   return obj;
                 } else {
                   let handleConnectionsUpdate = tmp3;
-                  let closure_2 = tmp7;
+                  closure_2 = tmp7;
                   closure_2 = undefined;
-                  const account = outer2_5.getAccount(null, callback);
+                  const account = closure_2_5.getAccount(null, callback);
                   if (null == account) {
                     handleConnectionsUpdate = function handleConnectionsUpdate(accounts) {
                       if (null != closure_2) {
@@ -114,37 +103,37 @@ obj = {
                           const obj = { access_token: null };
                           obj[0] = found.access_token;
                           callback(obj);
-                          callback2(outer2_2[10]).unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
-                          const ComponentDispatch = callback(outer2_2[11]).ComponentDispatch;
+                          callback2(closure_2_2[10]).unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
+                          const ComponentDispatch = callback(closure_2_2[11]).ComponentDispatch;
                           ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
-                          const obj2 = callback2(outer2_2[10]);
+                          const obj2 = callback2(closure_2_2[10]);
                         }
                       }
                     };
                     function handleConnectionsCallbackError() {
-                      let tmp = callback2(outer2_2[9]);
-                      tmp = new tmp({ errorCode: outer2_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + callback + "\" failed");
+                      let tmp = callback2(closure_2_2[9]);
+                      tmp = new tmp({ errorCode: closure_2_9.OAUTH2_ERROR }, "OAuth2 setup for \"" + callback + "\" failed");
                       callback2(tmp);
-                      callback2(outer2_2[10]).unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
-                      const ComponentDispatch = callback(outer2_2[11]).ComponentDispatch;
+                      callback2(closure_2_2[10]).unsubscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
+                      const ComponentDispatch = callback(closure_2_2[11]).ComponentDispatch;
                       ComponentDispatch.unsubscribe(constants.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
                     }
                     const subscription = connection_redirect(709).subscribe("USER_CONNECTIONS_UPDATE", handleConnectionsUpdate);
                     let ComponentDispatch = callback(1231).ComponentDispatch;
-                    const subscription1 = ComponentDispatch.subscribe(outer2_7.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
-                    const obj1 = { platformType: null, location: null, successRedirect: null };
-                    obj1[0] = outer1_2.type;
-                    obj1[1] = outer2_6.ACTIVITY_RPC;
+                    const subscription1 = ComponentDispatch.subscribe(closure_2_7.CONNECTIONS_CALLBACK_ERROR, handleConnectionsCallbackError);
+                    obj1 = { platformType: null, location: null, successRedirect: null };
+                    obj1[0] = closure_1_2.type;
+                    obj1[1] = closure_2_6.ACTIVITY_RPC;
                     obj1[2] = callback2;
                     connection_redirect(9779)(obj1);
                     const obj6 = connection_redirect(709);
                   } else {
-                    let c5 = 1;
+                    c5 = 1;
                     let obj3 = connection_redirect(5223);
                     c6 = 2;
                     c7 = 1;
                     let obj2 = { value: null, done: false };
-                    obj2[0] = obj3.refreshAccessToken(outer1_2.type, account.id);
+                    obj2[0] = obj3.refreshAccessToken(closure_1_2.type, account.id);
                     return obj2;
                   }
                 }
@@ -171,7 +160,7 @@ obj = {
                   }
                 }
                 const obj4 = { errorCode: null };
-                obj4[0] = outer2_9.OAUTH2_ERROR;
+                obj4[0] = closure_2_9.OAUTH2_ERROR;
                 const tmp19 = new connection_redirect(8752)(obj4, "Refreshing access token did not return a new access token");
                 throw tmp19;
               }
@@ -212,7 +201,7 @@ items1 = [RPC_AUTHENTICATED_SCOPE];
 obj = {
   scope: { [RPC_SCOPE_CONFIG.ANY]: items2 },
   validation(string) {
-    let obj = createRpcJoiSchemaObject(string);
+    let obj = createRpcJoiSchemaObjectDefault(string);
     obj = { provider: null };
     const requiredResult = obj.required();
     obj[0] = string.string().required();
@@ -222,9 +211,9 @@ obj = {
 };
 items2 = [RPC_AUTHENTICATED_SCOPE];
 let closure_3 = importDefaultResult((arg0) => {
-  let closure_0 = arg0;
-  let c3 = 0;
-  let c4 = 0;
+  closure_0 = arg0;
+  c3 = 0;
+  c4 = 0;
   const iter = (function*(arg0) {
     if (id === 2) {
       id = 3;
@@ -252,7 +241,7 @@ let closure_3 = importDefaultResult((arg0) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let dependencyMap = tmp5;
+            dependencyMap = tmp5;
             let provider = tmp2;
             let socket;
             provider = undefined;
@@ -272,7 +261,7 @@ let closure_3 = importDefaultResult((arg0) => {
             throw arg1;
           } else if (arg0 === 2) {
             id = 3;
-            const obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {

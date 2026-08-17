@@ -1,66 +1,62 @@
 // discord_app/modules/relationships/native/IgnoreConfirmationActionSheet.tsx
-import encodeProperties from "encodeProperties";
-import importAllResult from "QUICK_SWITCHER";
-import { View } from "useSafeAreaInsets";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserRemediationAction } from "ClearFriendRequestFilters";
-import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY";
-import ME from "ME";
-import jsxProd from "expandEventProperties";
-import createCacheKey from "createCacheKey";
-import { TableRowGroupTitle } from "../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import registerAssetDefault from "registerAsset" /* 4332 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import registerAssetDefault2 from "registerAsset" /* 8933 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { UserRemediationAction } from "ClearFriendRequestFilters" /* 9737 */;
+import IGNORE_CONFIRMATION_ACTION_SHEET_KEY from "IGNORE_CONFIRMATION_ACTION_SHEET_KEY" /* 10594 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function IgnoredInformationTable() {
-  let obj = { hasIcons: true, children: null };
-  obj[1] = items.map((icon) => {
-    let obj = { start: 0 === arg1, end: length.length - 1 === arg1, icon: null, label: null, subLabel: null, accessible: true, accessibilityLabel: null };
-    obj = { size: null, source: null };
-    obj[0] = callback(1297).Icon.Sizes.MEDIUM;
-    obj[1] = icon.icon;
-    obj[2] = callback2(callback(1297).Icon, obj);
-    obj[3] = icon.text();
-    obj[4] = icon.subtext();
-    obj[6] = icon.a11yLabel();
-    return callback2(callback(6291).TableRow, obj, arg1);
+  return callback2(TableRowGroupTitle.TableRowGroup, {
+    hasIcons: true,
+    children: items.map((icon) => {
+      let obj = { start: 0 === arg1, end: length.length - 1 === arg1, icon: null, label: null, subLabel: null, accessible: true, accessibilityLabel: null };
+      obj = { size: callback(1297).Icon.Sizes.MEDIUM, source: icon.icon };
+      obj[2] = callback2(callback(1297).Icon, obj);
+      obj[3] = icon.text();
+      obj[4] = icon.subtext();
+      obj[6] = icon.a11yLabel();
+      return callback2(callback(6291).TableRow, obj, arg1);
+    })
   });
-  return callback2(TableRowGroupTitle.TableRowGroup, obj);
 }
 let c4 = importAllResult;
 ({ BLOCK_CONFIRMATION_ACTION_SHEET_KEY: c9, RESTRICTION_CONFIRMATION_ACTION_SHEET_HEIGHT: c10 } = IGNORE_CONFIRMATION_ACTION_SHEET_KEY);
 ({ AnalyticEvents: unpackModuleId, HelpdeskArticles: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = { button: { alignContent: "center", textAlign: "center" }, tableContainer: null, otherOptions: null, subTitle: null, title: null, container: null, header: null, avatarContainer: null, avatarIconContainer: null, avatar: null, destructiveIcon: null };
-obj = { marginBottom: require("Themes").space.PX_16 };
+obj = { marginBottom: ThemesDefault.space.PX_16 };
 obj[1] = obj;
-createCacheKey = { marginBottom: require("Themes").space.PX_24 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_24 };
 obj[2] = createCacheKey;
 obj[3] = { textAlign: "center" };
-obj[4] = { textAlign: "center", marginBottom: require("Themes").space.PX_4 };
-let obj2 = { textAlign: "center", marginBottom: require("Themes").space.PX_4 };
-obj[5] = { flex: 1, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16 };
-let obj3 = { flex: 1, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16 };
-obj[6] = { marginBottom: require("Themes").space.PX_16 };
-let obj4 = { marginBottom: require("Themes").space.PX_16 };
-obj[7] = { position: "relative", alignSelf: "center", marginBottom: require("Themes").space.PX_16 };
-let obj5 = { position: "relative", alignSelf: "center", marginBottom: require("Themes").space.PX_16 };
-obj[8] = { position: "absolute", bottom: -8, right: -8, padding: require("Themes").space.PX_4, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.round };
+obj[4] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_4 };
+let obj2 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_4 };
+obj[5] = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
+let obj3 = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
+obj[6] = { marginBottom: ThemesDefault.space.PX_16 };
+let obj4 = { marginBottom: ThemesDefault.space.PX_16 };
+obj[7] = { position: "relative", alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj5 = { position: "relative", alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
+obj[8] = { position: "absolute", bottom: -8, right: -8, padding: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
 obj[9] = { alignSelf: "center" };
-let obj6 = { position: "absolute", bottom: -8, right: -8, padding: require("Themes").space.PX_4, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.round };
-obj[10] = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+let obj6 = { position: "absolute", bottom: -8, right: -8, padding: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.round };
+obj[10] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_15 = createCacheKey.createStyles(obj);
-let obj7 = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+let obj7 = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let items = [
   {
-    icon: require("registerAsset"),
+    icon: registerAssetDefault2,
     text() {
       const intl = getSystemLocale.intl;
       return intl.string(getSystemLocale.t.ruhGkg);
@@ -78,7 +74,7 @@ let items = [
 
 ];
 let obj8 = {
-  icon: require("registerAsset"),
+  icon: registerAssetDefault2,
   text() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ruhGkg);
@@ -93,7 +89,7 @@ let obj8 = {
   }
 };
 items[1] = {
-  icon: require("registerAsset"),
+  icon: registerAssetDefault2,
   text() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.N9v3eq);
@@ -108,7 +104,7 @@ items[1] = {
   }
 };
 let obj9 = {
-  icon: require("registerAsset"),
+  icon: registerAssetDefault2,
   text() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.N9v3eq);
@@ -123,7 +119,7 @@ let obj9 = {
   }
 };
 items[2] = {
-  icon: require("registerAsset"),
+  icon: registerAssetDefault,
   text() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["4ycGE0"]);
@@ -138,7 +134,7 @@ items[2] = {
   }
 };
 let obj10 = {
-  icon: require("registerAsset"),
+  icon: registerAssetDefault,
   text() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["4ycGE0"]);
@@ -153,28 +149,24 @@ let obj10 = {
   }
 };
 const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(userId) {
-  let c4;
-  let encodeProperties;
-  let dependencyMap;
-  let tmp3;
   userId = userId.userId;
   const channelId = userId.channelId;
-  ({ onIgnore: dependencyMap, onSuccess: encodeProperties } = userId);
+  ({ onIgnore: dependencyMap, onSuccess: closure_3 } = userId);
   let stateFromStores;
   const tmp = callback3();
   [tmp3, c4] = callback(undefined.useState(false), 2);
   const bottom = channelId(1629)().bottom;
   let tmp2 = callback(undefined.useState(false), 2);
-  const items = [channelId(7159).IGNORE_CONFIRMATION_ACTION_SHEET];
+  items = [channelId(7159).IGNORE_CONFIRMATION_ACTION_SHEET];
   let obj = userId(589);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_7];
   const items2 = [userId];
-  stateFromStores = obj.useStateFromStores(items1, () => outer1_7.getUser(userId), items2);
-  let obj1 = userId(589);
-  const items3 = [ensureGuildLoaded];
+  stateFromStores = obj.useStateFromStores(items1, () => closure_1_7.getUser(userId), items2);
+  obj1 = userId(589);
+  const items3 = [closure_6];
   const items4 = [channelId];
   const stateFromStores1 = obj1.useStateFromStores(items3, () => {
-    const channel = outer1_6.getChannel(channelId);
+    const channel = closure_1_6.getChannel(channelId);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -184,8 +176,8 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
   const items5 = [stateFromStores, userId];
   const effect = importAllResult.useEffect(() => {
     if (null == stateFromStores) {
-      const user = userId(outer1_2[22]).getUser(userId);
-      const obj = userId(outer1_2[22]);
+      const user = userId(closure_1_2[22]).getUser(userId);
+      const obj = userId(closure_1_2[22]);
     }
   }, items5);
   let tmp12Result = null;
@@ -264,12 +256,12 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     const intl6 = tmp7(1236).intl;
     obj14[4] = intl6.string(tmp7(1236).t["fZ+p9C"]);
     obj14[5] = function onPress() {
-      let obj = channelId(outer1_2[21]);
-      obj = { action: outer1_8.GOTO_BLOCK, location: "user-profile-context-menu" };
-      obj.track(outer1_11.USER_REMEDIATION_ACTION, obj);
-      const obj3 = channelId(outer1_2[29]);
-      obj = { userId, channelId, onSuccess: encodeProperties, impressionName: userId(outer1_2[32]).ImpressionNames.BLOCK_USER_CONFIRMATION };
-      obj3.openLazy(userId(outer1_2[31])(outer1_2[30], outer1_2.paths), outer1_9, obj, "replaceTopSheet");
+      let obj = channelId(closure_1_2[21]);
+      obj = { action: closure_1_8.GOTO_BLOCK, location: "user-profile-context-menu" };
+      obj.track(closure_1_11.USER_REMEDIATION_ACTION, obj);
+      const obj3 = channelId(closure_1_2[29]);
+      obj = { userId, channelId, onSuccess: closure_3, impressionName: userId(closure_1_2[32]).ImpressionNames.BLOCK_USER_CONFIRMATION };
+      obj3.openLazy(userId(closure_1_2[31])(closure_1_2[30], closure_1_2.paths), closure_1_9, obj, "replaceTopSheet");
     };
     obj13[2] = closure_13(tmp7(6291).TableRow, obj14);
     obj12[1] = closure_13(tmp7(6286).TableRowGroup, obj13);
@@ -281,20 +273,20 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
     obj18[1] = intl7.string(tmp7(1236).t.ytCpKs);
     obj18[2] = function onPress() {
       _undefined(true);
-      const obj = channelId(outer1_2[34]);
+      const obj = channelId(closure_1_2[34]);
       const tmp2 = channelId;
-      const tmp3 = outer1_2;
-      channelId(outer1_2[34]).ignoreUser(userId, channelId(outer1_2[19]).IGNORE_CONFIRMATION_ACTION_SHEET, channelId).then(() => {
-        if (encodeProperties != null) {
+      const tmp3 = closure_1_2;
+      channelId(closure_1_2[34]).ignoreUser(userId, channelId(closure_1_2[19]).IGNORE_CONFIRMATION_ACTION_SHEET, channelId).then(() => {
+        if (closure_3 != null) {
           tmp();
         }
-        outer1_1(outer1_2[29]).hideActionSheet();
+        closure_1_1(closure_1_2[29]).hideActionSheet();
       });
       if (dependencyMap != null) {
         dependencyMap();
       }
-      const ignoreUserResult = channelId(outer1_2[34]).ignoreUser(userId, channelId(outer1_2[19]).IGNORE_CONFIRMATION_ACTION_SHEET, channelId);
-      tmp2(tmp3[21]).track(outer1_11.IGNORE_USER_CONFIRMED);
+      const ignoreUserResult = channelId(closure_1_2[34]).ignoreUser(userId, channelId(closure_1_2[19]).IGNORE_CONFIRMATION_ACTION_SHEET, channelId);
+      tmp2(tmp3[21]).track(closure_1_11.IGNORE_USER_CONFIRMED);
     };
     obj18[3] = tmp3;
     obj18[4] = tmp3;
@@ -327,6 +319,6 @@ const memoResult = importAllResult.memo(function IgnoreConfirmationActionSheet(u
   }
   return tmp12Result;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/relationships/native/IgnoreConfirmationActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/relationships/native/IgnoreConfirmationActionSheet.tsx");
 
 export default memoResult;

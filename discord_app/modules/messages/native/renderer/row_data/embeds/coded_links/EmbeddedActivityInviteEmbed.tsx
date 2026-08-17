@@ -1,23 +1,23 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx
-import _slicedToArray from "_slicedToArray";
-import { Image } from "computeChannelName";
-import participantFromServer from "participantFromServer";
-import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
-import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess";
-import addApplication from "addApplication";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateInvite from "updateInvite";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CodedLinkExtendedType } from "CodedLinkExtendedType";
-import { InviteTargetTypes } from "InviteSendStates";
-import { dispatcher } from "../../../../../../../Dispatcher.tsx";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import closure_6 from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
+import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
+import closure_8 from "addApplication" /* 4478 */;
+import closure_9 from "fetchFingerprint" /* 1218 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "updateInvite" /* 4359 */;
+import closure_12 from "markAllUserIdListsStale" /* 4030 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
+import { InviteTargetTypes } from "InviteSendStates" /* 4371 */;
 
 const require = arg1;
 let closure_16 = ["embedded_cover"];
-const result = require("participantFromServer").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/EmbeddedActivityInviteEmbed.tsx");
 
 export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivityInviteEmbed(inviteCode) {
   let id;
@@ -29,7 +29,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
     if (invite.target_type === InviteTargetTypes.EMBEDDED_APPLICATION) {
       if (null != target_application) {
         if (null == application.getApplication(target_application.id)) {
-          let obj = dispatcher;
+          let obj = dispatcherDefault;
           obj = { type: "APPLICATION_UPDATE", application: null };
           obj[1] = target_application;
           obj.dispatch(obj);
@@ -39,7 +39,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           let obj2 = id(7247);
           const assetIds = obj2.fetchAssetIds(id, closure_16);
         }
-        const tmp13 = getEmbedThemeColors(inviteCode.theme);
+        const tmp13 = getEmbedThemeColorsDefault(inviteCode.theme);
         const baseColors = tmp13.baseColors;
         const guild = invite.guild;
         let name;
@@ -85,7 +85,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
             const intl2 = tmp25(1236).intl;
             obj = { channelName: null, guildName: null };
             let tmp25Result = tmp25(4984);
-            obj[0] = tmp25Result.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+            obj[0] = tmp25Result.computeChannelName(channel, closure_13, closure_12);
             obj[1] = name;
             let formatToPartsResult = intl2.formatToParts(tmp25(1236).t.omZR7L, obj);
           }
@@ -105,7 +105,7 @@ export const createEmbeddedActivityInviteEmbed = function createEmbeddedActivity
           if (null != id) {
             if (null != id2) {
               tmp25Result = tmp25(12767);
-              const obj1 = { channelId: null, guildId: null, applicationId: null };
+              obj1 = { channelId: null, guildId: null, applicationId: null };
               obj1[0] = id;
               obj1[1] = id2;
               obj1[2] = id;

@@ -1,13 +1,12 @@
 // discord_app/utils/UserUtils.tsx
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "initialize" /* 4220 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function nameFromUser(primary1) {
   const global_name = primary1.global_name;
   let tmp = null != global_name;
@@ -37,7 +36,7 @@ function nameFromUser(primary1) {
 }
 function getName(username) {
   if (null != username) {
-    let hidePersonalInformation = initialize.hidePersonalInformation;
+    let hidePersonalInformation = closure_2.hidePersonalInformation;
     const obj = nameFromUser(username);
     if (hidePersonalInformation) {
       username = username.username;
@@ -60,7 +59,7 @@ function getName(username) {
   }
 }
 function useName(username) {
-  const items = [initialize];
+  const items = [closure_2];
   let stateFromStores = initialize.useStateFromStores(items, () => obj.hidePersonalInformation);
   if (null != username) {
     const obj2 = nameFromUser(username);
@@ -121,7 +120,7 @@ function getFormattedName(inviter, arg1) {
       const merged1 = Object.assign(undefined);
       let hidePersonalInformation = "auto" !== obj.identifiable;
       if (!hidePersonalInformation) {
-        hidePersonalInformation = initialize.hidePersonalInformation;
+        hidePersonalInformation = closure_2.hidePersonalInformation;
       }
       let username = presentUserTag(inviter, obj, hidePersonalInformation);
       const tmp9 = presentUserTag;
@@ -256,26 +255,26 @@ function getUserTag(user, arg1) {
   const merged1 = Object.assign(arg1);
   let hidePersonalInformation = "auto" !== obj.identifiable;
   if (!hidePersonalInformation) {
-    hidePersonalInformation = initialize.hidePersonalInformation;
+    hidePersonalInformation = closure_2.hidePersonalInformation;
   }
   return presentUserTag(user, obj, hidePersonalInformation);
 }
 function useUserTag(user) {
   const merged = Object.assign(closure_8);
   const merged1 = Object.assign(arg1);
-  const items = [initialize];
+  const items = [closure_2];
   return presentUserTag(user, {}, initialize.useStateFromStores(items, () => obj.hidePersonalInformation));
 }
 function useDirectMessageRecipient(arg0) {
   const _require = arg0;
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   return _initialize.useStateFromStores(items, () => {
     if (null != closure_0) {
       let user = null;
       if (obj.isPrivate()) {
         user = null;
         if (obj.isDM()) {
-          user = outer1_3.getUser(obj.getRecipientId());
+          user = closure_1_3.getUser(obj.getRecipientId());
         }
       }
       return user;
@@ -290,7 +289,7 @@ function getUserIsStaff() {
 let c6 = 86400000;
 let c7 = "???";
 let closure_8 = { mode: "full", decoration: "never", identifiable: "auto" };
-const result = require("ME").fileFinishedImporting("utils/UserUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/UserUtils.tsx");
 
 export default {
   getName,
@@ -317,8 +316,6 @@ export { getGlobalName };
 export { getFormattedName };
 export { humanizeStatus };
 export const accountAgeInRange = function accountAgeInRange(createdAt) {
-  let maxDaysOld;
-  let minDaysOld;
   ({ maxDaysOld, minDaysOld } = arg1);
   if (minDaysOld === undefined) {
     minDaysOld = 0;

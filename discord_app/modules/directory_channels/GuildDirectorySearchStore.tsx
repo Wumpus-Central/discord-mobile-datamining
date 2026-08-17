@@ -1,10 +1,12 @@
 // discord_app/modules/directory_channels/GuildDirectorySearchStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 const require = arg1;
 let closure_2 = [];
 let closure_3 = {};
 let closure_4 = {};
+const Store = initializeDefault.Store;
 class GuildDirectorySearchStore extends Store {
 }
 const prototype = GuildDirectorySearchStore.prototype;
@@ -42,13 +44,11 @@ prototype["shouldFetch"] = function shouldFetch(arg0, arg1) {
   return tmp5;
 };
 GuildDirectorySearchStore.displayName = "GuildDirectorySearchStore";
-const guildDirectorySearchStore = new GuildDirectorySearchStore(require("dispatcher"), {
+const guildDirectorySearchStore = new GuildDirectorySearchStore(dispatcherDefault, {
   GUILD_DIRECTORY_SEARCH_START: function handleSearchStart(channelId) {
     closure_3[channelId.channelId] = { fetching: true, mostRecentQuery: channelId.query };
   },
   GUILD_DIRECTORY_SEARCH_SUCCESS: function handleSearchSuccess(query) {
-    let channelId;
-    let results;
     ({ channelId, results } = query);
     let items;
     let obj = {};
@@ -57,13 +57,11 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(require("dispatc
     dependencyMap[channelId] = obj;
     items = [];
     const item = results.forEach((entry) => {
-      items.push(items(outer1_1[0]).guildDirectoryEntryFromServer(entry));
+      items.push(items(closure_1_1[0]).guildDirectoryEntryFromServer(entry));
     });
     obj = {};
     const merged1 = Object.assign(dependencyMap2[channelId]);
-    obj = { results: null, lastSearchedAt: null };
-    obj[0] = items(11471).orderByTotalMemberCount(items);
-    obj[1] = Date.now();
+    obj = { results: items(11471).orderByTotalMemberCount(items), lastSearchedAt: Date.now() };
     obj[query.query] = obj;
     dependencyMap2[channelId] = obj;
   },
@@ -81,8 +79,6 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(require("dispatc
     closure_3[channelId.channelId] = { fetching: false, mostRecentQuery: channelId.query };
   },
   GUILD_DIRECTORY_ENTRY_DELETE: function handleDeleteEntry(arg0) {
-    let channelId;
-    let require;
     ({ channelId, guildId: require } = arg0);
     let mostRecentQuery;
     if (dependencyMap[channelId] != null) {
@@ -103,6 +99,6 @@ const guildDirectorySearchStore = new GuildDirectorySearchStore(require("dispatc
     }
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
+const result = require("set").fileFinishedImporting("modules/directory_channels/GuildDirectorySearchStore.tsx");
 
 export default guildDirectorySearchStore;

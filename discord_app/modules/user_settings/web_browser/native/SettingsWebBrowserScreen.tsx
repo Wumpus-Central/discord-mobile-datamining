@@ -1,8 +1,8 @@
 // discord_app/modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx
-import importAllResult from "noop";
-import { MobileUserSettings } from "MobileUserSettings";
-import { jsx } from "jsxProd";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef13991 from "module_13991" /* 13991 */;
+import importAllResult from "noop" /* 19 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -12,8 +12,8 @@ const memoResult = importAllResult.memo(function SettingsWebBrowserScreen() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(SettingLayout, { node });
+  return jsx(_modDef13991, { node });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/web_browser/native/SettingsWebBrowserScreen.tsx");
 
 export default memoResult;

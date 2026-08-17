@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/isPerModeThemingActive.tsx
-import handleThemeChange from "handleThemeChange";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import { SystemThemeState } from "SystemThemeState";
+import closure_0 from "handleThemeChange" /* 1302 */;
+import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import { SystemThemeState } from "SystemThemeState" /* 1305 */;
 
-let result = require("SystemThemeState").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 
 export const isPerModeThemingActive = function isPerModeThemingActive(isSyncedModeThemesEnabled) {
   let result = useSystemTheme.useSystemTheme === SystemThemeState.ON;

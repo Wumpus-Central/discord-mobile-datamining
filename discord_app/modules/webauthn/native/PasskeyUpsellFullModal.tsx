@@ -1,12 +1,13 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellFullModal.tsx
-import "noop";
-import { WebAuthnScreens } from "WebAuthnScreens";
-import { jsx } from "jsxProd";
-import { Modal } from "../../../design/components/Modal/native/Modal.native.tsx";
-import { getScreens } from "WebAuthnScreens.tsx";
+import noopAll from "noop" /* 19 */;
+import Modal from "Modal" /* 11115 */;
+import getScreens from "getScreens" /* 14081 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellFullModal.tsx");
 
 export default function PasskeyUpsellFullModal() {
   let obj = getScreens;

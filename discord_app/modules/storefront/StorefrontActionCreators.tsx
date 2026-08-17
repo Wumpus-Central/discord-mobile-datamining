@@ -1,12 +1,13 @@
 // discord_app/modules/storefront/StorefrontActionCreators.tsx
-import parseSkuIds from "parseSkuIds";
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
-import "resetStoreState";
-import getPromotionIdOverride from "getPromotionIdOverride";
-import handleReset from "handleReset";
-import closure_7 from "parseSkuIds";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import resetStoreStateDefault from "resetStoreState" /* 7206 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_5 from "getPromotionIdOverride" /* 7870 */;
+import closure_6 from "handleReset" /* 9195 */;
+import closure_7 from "parseSkuIds" /* 9196 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function shouldFetchStorefrontPromotions(arg0) {
@@ -29,9 +30,9 @@ function shouldFetchStorefrontPromotions(arg0) {
 function _maybeFetchStorefrontPromotions() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -59,12 +60,12 @@ function _maybeFetchStorefrontPromotions() {
               obj[0] = arg1;
               return obj;
             } else {
-              const found = closure_0.filter(outer1_11);
+              const found = closure_0.filter(closure_1_11);
               if (0 !== found.length) {
                 c2 = 1;
                 c1 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_13(found);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_13(found);
                 return obj1;
               }
             }
@@ -86,7 +87,7 @@ function _maybeFetchStorefrontPromotions() {
       }
     })();
   });
-  const _maybeFetchStorefrontPromotions = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -108,10 +109,10 @@ function fetchStorefrontPromotions() {
 function _fetchStorefrontPromotions() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0, body) {
       if (promotionIdOverride === 2) {
         promotionIdOverride = 3;
@@ -139,20 +140,20 @@ function _fetchStorefrontPromotions() {
               obj[0] = body;
               return obj;
             } else {
-              const dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback = tmp7;
               callback = undefined;
               if (0 !== lib.length) {
-                let c3 = 1;
-                let obj5 = outer1_1(outer1_2[8]);
-                const obj1 = { type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: null };
+                c3 = 1;
+                let obj5 = closure_1_1(closure_1_2[8]);
+                obj1 = { type: "STOREFRONT_PROMOTIONS_FETCH_START", applicationIds: null };
                 obj1[1] = tmp40;
                 obj5.dispatch(obj1);
                 promotionIdOverride = promotionIdOverride.getPromotionIdOverride();
-                const HTTP = lib(outer1_2[9]).HTTP;
+                const HTTP = lib(closure_1_2[9]).HTTP;
                 let get = HTTP.get;
                 const obj2 = { url: null, query: null, rejectWithError: true };
-                obj2[0] = outer1_8.STOREFRONT_PROMOTIONS;
+                obj2[0] = closure_1_8.STOREFRONT_PROMOTIONS;
                 let obj3 = { application_ids: null };
                 obj3[0] = tmp40;
                 if (null != promotionIdOverride) {
@@ -207,7 +208,7 @@ function _fetchStorefrontPromotions() {
       }
     })();
   });
-  const _fetchStorefrontPromotions = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -219,9 +220,9 @@ function _fetchStorefrontPromotions() {
 function _fetchStorefrontPricesForApplicationId() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -249,8 +250,8 @@ function _fetchStorefrontPricesForApplicationId() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
-              let closure_1 = tmp2;
+              closure_2 = tmp5;
+              closure_1 = tmp2;
               let applicationId;
               applicationId = applicationId.applicationId;
               c3 = 1;
@@ -263,7 +264,7 @@ function _fetchStorefrontPricesForApplicationId() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -296,7 +297,7 @@ function _fetchStorefrontPricesForApplicationId() {
     iter.next();
     return iter;
   });
-  const _fetchStorefrontPricesForApplicationId = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -308,9 +309,9 @@ function _fetchStorefrontPricesForApplicationId() {
 function _fetchStorefrontPricesForSkuIds() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -338,8 +339,8 @@ function _fetchStorefrontPricesForSkuIds() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
-              let closure_1 = tmp2;
+              closure_2 = tmp5;
+              closure_1 = tmp2;
               let skuIds;
               skuIds = skuIds.skuIds;
               c3 = 1;
@@ -352,7 +353,7 @@ function _fetchStorefrontPricesForSkuIds() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -385,7 +386,7 @@ function _fetchStorefrontPricesForSkuIds() {
     iter.next();
     return iter;
   });
-  const _fetchStorefrontPricesForSkuIds = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -440,8 +441,8 @@ function _fetchStorefrontPrices() {
           }
         } else {
           if (1 === tmp7) {
-            let dependencyMap = 0;
-            const obj1 = { type: "SKUS_PRICING_FETCH_FAIL", priceId: null };
+            dependencyMap = 0;
+            obj1 = { type: "SKUS_PRICING_FETCH_FAIL", priceId: null };
             obj1[1] = callback;
             body(709).dispatch(obj1);
             const obj5 = body(709);
@@ -475,7 +476,7 @@ function _fetchStorefrontPrices() {
       }
     }
   });
-  const _fetchStorefrontPrices = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -484,10 +485,11 @@ function _fetchStorefrontPrices() {
   }
   return applyArgumentsResult;
 }
-let closure_9 = 10 * require("set").Millis.MINUTE;
-let MINUTE = require("set").Millis.MINUTE;
-MINUTE = require("set").Millis.MINUTE;
-const result = require("resetStoreState").fileFinishedImporting("modules/storefront/StorefrontActionCreators.tsx");
+resetStoreStateDefault;
+let closure_9 = 10 * setDefault.Millis.MINUTE;
+let MINUTE = setDefault.Millis.MINUTE;
+MINUTE = setDefault.Millis.MINUTE;
+const result = require("set").fileFinishedImporting("modules/storefront/StorefrontActionCreators.tsx");
 
 export const maybeFetchStorefrontPromotions = function maybeFetchStorefrontPromotions() {
   const self = this;
@@ -521,7 +523,7 @@ export const fetchStorefrontPricesForSkuIds = function fetchStorefrontPricesForS
   return applyArgumentsResult;
 };
 export const setStorefrontPromotionIdOverride = function setStorefrontPromotionIdOverride(promotionIdOverride) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "STOREFRONT_PROMOTION_ID_OVERRIDE_SET", promotionIdOverride };
   obj.dispatch(obj);
 };

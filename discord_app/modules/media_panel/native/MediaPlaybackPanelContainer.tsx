@@ -1,17 +1,15 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPanelContainer.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { _initialize } from "../../media/native/MediaPlayerManager.tsx";
-import { MediaPlaybackPanelController } from "MediaPlaybackPanelController.tsx";
-import { MediaPlaybackPanelUI } from "MediaPlaybackPanelUI.tsx";
+import _initialize from "_initialize" /* 13901 */;
+import MediaPlaybackPanelControllerDefault from "MediaPlaybackPanelController" /* 16435 */;
+import MediaPlaybackPanelUIDefault from "MediaPlaybackPanelUI" /* 16437 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo(function MediaPlaybackPanelContainer() {
+require = arg1;
+const memoResult = importAllResult.memo(function MediaPlaybackPanelContainer() {
   let obj = _initialize;
   let tmp2 = null;
   if (obj.useMediaPlayerManagerStore(obj2.useShallow((showPip) => {
-    let activeMediaPlayerSource;
-    let mediaSourceMessage;
     showPip = showPip.showPip;
     let tmp = !showPip;
     if (showPip) {
@@ -55,12 +53,12 @@ const memoResult = require("noop").memo(function MediaPlaybackPanelContainer() {
     return tmp3;
   }))) {
     obj = { children: null };
-    obj[0] = jsx(MediaPlaybackPanelUI, {});
-    tmp2 = jsx(MediaPlaybackPanelController, { children: null });
-    let tmp5 = MediaPlaybackPanelController;
+    obj[0] = jsx(MediaPlaybackPanelUIDefault, {});
+    tmp2 = jsx(MediaPlaybackPanelControllerDefault, { children: null });
+    let tmp5 = MediaPlaybackPanelControllerDefault;
   }
   return tmp2;
 });
-const result = require("_initialize").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPanelContainer.tsx");
 
 export default memoResult;

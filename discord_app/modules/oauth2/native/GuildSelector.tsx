@@ -1,46 +1,43 @@
 // discord_app/modules/oauth2/native/GuildSelector.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { Permissions } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { Permissions } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { selectorGroup: { display: "flex", flexDirection: "column", gap: 8 }, select: null, label: null, error: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, borderRadius: require("Themes").radii.xs };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: require("Themes").colors.TEXT_SUBTLE, fontWeight: "500" };
-const obj1 = { color: require("Themes").colors.TEXT_SUBTLE, fontWeight: "500" };
-createCacheKey[3] = { color: require("Themes").unsafe_rawColors.RED_400 };
+createCacheKey[2] = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+const obj1 = { color: ThemesDefault.colors.TEXT_SUBTLE, fontWeight: "500" };
+createCacheKey[3] = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
 const GuildSelector = "GuildSelector";
-let obj2 = { color: require("Themes").unsafe_rawColors.RED_400 };
-const result = require("ME").fileFinishedImporting("modules/oauth2/native/GuildSelector.tsx");
+let obj2 = { color: ThemesDefault.unsafe_rawColors.RED_400 };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/GuildSelector.tsx");
 
 export default function GuildSelector(disabled) {
-  let error;
-  let selectedGuildId;
   ({ error, selectedGuildId } = disabled);
   const onGuildChange = disabled.onGuildChange;
   const guilds = disabled.guilds;
   const tmp = createCacheKey();
   const items = [guilds, onGuildChange, selectedGuildId];
   const callback = React.useCallback(() => {
-    let obj = onGuildChange(outer1_3[6]);
+    let obj = onGuildChange(closure_1_3[6]);
     obj = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };
-    const intl = selectedGuildId(outer1_3[9]).intl;
-    obj[0] = intl.string(selectedGuildId(outer1_3[9]).t.oM4E1A);
+    const intl = selectedGuildId(closure_1_3[9]).intl;
+    obj[0] = intl.string(selectedGuildId(closure_1_3[9]).t.oM4E1A);
     const found = guilds.filter((permissions) => callback2(table[10]).has(permissions.permissions, constants.MANAGE_GUILD));
     obj[1] = found.map((label) => ({ label: label.name, value: label.id }));
     obj[2] = function onItemSelect(arg0) {
       callback(arg0);
-      outer1_1(outer1_3[6]).hideActionSheet(outer1_10);
+      closure_1_1(closure_1_3[6]).hideActionSheet(closure_1_10);
     };
     obj[3] = selectedGuildId;
-    obj.openLazy(selectedGuildId(outer1_3[8])(outer1_3[7], outer1_3.paths), outer1_10, obj);
+    obj.openLazy(selectedGuildId(closure_1_3[8])(closure_1_3[7], closure_1_3.paths), closure_1_10, obj);
   }, items);
   let found = guilds.find((id) => id.id === selectedGuildId);
   let obj = { style: tmp.selectorGroup, children: null };

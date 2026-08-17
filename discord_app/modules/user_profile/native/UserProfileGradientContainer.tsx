@@ -1,20 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileGradientContainer.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8980 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo((arg0) => {
-  let children;
-  let containerStyle;
-  let fallbackBackground;
-  let primaryColor;
-  let secondaryColor;
+require = arg1;
+const memoResult = importAllResult.memo((arg0) => {
   ({ primaryColor, secondaryColor, fallbackBackground, containerStyle, children } = arg0);
   const colors = useUserProfileGradientColors.useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground);
-  return jsx(LinearGradient, { colors, style, children });
+  return jsx(LinearGradientDefault, { colors, style, children });
 });
-const result = require("useUserProfileGradientColors").fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileGradientContainer.tsx");
 
 export default memoResult;

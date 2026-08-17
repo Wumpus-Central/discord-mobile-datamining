@@ -1,27 +1,23 @@
 // discord_app/modules/messages/LegacyCommands.tsx
-import _slicedToArray from "_slicedToArray";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import reinjectEphemerals from "reinjectEphemerals";
-import ME from "ME";
-import importDefaultResult from "t";
-import importDefaultResult1 from "t";
-import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { checkReactionResponse } from "../reactions/ReactionActionCreators.tsx";
-import { MAX_REACTIONS } from "../reactions/ReactionUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import MAX_REACTIONS from "MAX_REACTIONS" /* 4032 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import checkReactionResponse from "checkReactionResponse" /* 7511 */;
+import _modDef8461 from "module_8461" /* 8461 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getEmojiToGroupId" /* 6727 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
+import ME from "ME" /* 676 */;
+import importDefaultResult from "t" /* 4092 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: metroImportAll } = ME);
+require = arg1;
+({ AnalyticEvents: closure_6, MARKDOWN_SPOILER_WRAPPER: error, ME: closure_8 } = ME);
 const re9 = /\\([*?+/])/g;
 obj = { tts: obj, me: obj, tableflip: obj1, unflip: obj2, shrug: obj3, nick: obj4, reaction: null, searchReplace: null, spoiler: null };
 obj = {
   action() {
-    const obj = { tts: null };
+    obj = { tts: null };
     const EnableTTSCommand = explicitContentFromProto.EnableTTSCommand;
     obj[0] = EnableTTSCommand.getSetting();
     return obj;
@@ -32,50 +28,48 @@ obj = {
     return { content: "_" + arg0 + "_" };
   }
 };
-const obj5 = { match: null, action: null };
-obj5[0] = require("t").anyScopeRegex(/^\+:(.+?): *$/);
-obj5[1] = function action(str, channel) {
-  channel = channel.channel;
-  if (!channel.isEdit) {
-    if (reinjectEphemerals.hasPresent(channel.id)) {
-      const messages = obj.getMessages(channel.id);
-      const lastResult = messages.last();
-      if (null != lastResult) {
-        if (null != lastResult.id) {
-          disambiguatedEmojiContext = disambiguatedEmojiContext.getDisambiguatedEmojiContext(channel.guild_id);
-          const trimmed = str.trim();
-          const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
-          if (null != byName) {
-            const obj3 = checkReactionResponse;
-            obj3.addReaction(channel.id, lastResult.id, MAX_REACTIONS.toReactionEmoji(byName));
-            return { content: "" };
+const obj5 = {
+  match: importDefaultResult.anyScopeRegex(/^\+:(.+?): *$/),
+  action(str, channel) {
+    channel = channel.channel;
+    if (!channel.isEdit) {
+      if (closure_5.hasPresent(channel.id)) {
+        const messages = obj.getMessages(channel.id);
+        const lastResult = messages.last();
+        if (null != lastResult) {
+          if (null != lastResult.id) {
+            disambiguatedEmojiContext = disambiguatedEmojiContext.getDisambiguatedEmojiContext(channel.guild_id);
+            const trimmed = str.trim();
+            const byName = disambiguatedEmojiContext.getByName(trimmed.slice(2, -1));
+            if (null != byName) {
+              const obj3 = checkReactionResponse;
+              obj3.addReaction(channel.id, lastResult.id, MAX_REACTIONS.toReactionEmoji(byName));
+              return { content: "" };
+            }
           }
         }
       }
+      obj = closure_5;
     }
-    obj = reinjectEphemerals;
   }
 };
 obj[6] = obj5;
 const obj6 = { match: null, action: null };
 obj1 = {
   action(arg0) {
-    const obj = { content: null };
-    obj[0] = "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim();
+    obj = { content: "" + arg0 + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
     return obj;
   }
 };
 obj2 = {
   action(arg0) {
-    const obj = { content: null };
-    obj[0] = "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim();
+    obj = { content: "" + arg0 + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
     return obj;
   }
 };
 obj3 = {
   action(arg0) {
-    const obj = { content: null };
-    obj[0] = "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim();
+    obj = { content: "" + arg0 + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
     return obj;
   }
 };
@@ -83,19 +77,17 @@ obj4 = {
   action(arg0, channel) {
     channel = channel.channel;
     if (null != channel.guild_id) {
-      const obj = ChangeNicknameActionCreators;
+      obj = _modDef8461;
       obj.changeNickname(channel.guild_id, channel.id, closure_8, arg0);
       return { content: "" };
     }
   }
 };
-obj6[0] = require("t").anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
+obj6[0] = importDefaultResult.anyScopeRegex(/^s\/([^\/\\]*(?:\\.[^\/\\]*)*)\/([^\/\\]*(?:\\.[^\/\\]*)*)(?:\/([g]*))?$/);
 obj6[1] = function action(str, channel) {
-  let str2;
-  let str3;
   channel = channel.channel;
   if (!channel.isEdit) {
-    const lastEditableMessage = reinjectEphemerals.getLastEditableMessage(channel.id);
+    const lastEditableMessage = closure_5.getLastEditableMessage(channel.id);
     if (null != lastEditableMessage) {
       if (null != lastEditableMessage.id) {
         const self = this;
@@ -120,7 +112,7 @@ obj6[1] = function action(str, channel) {
         }
         if (null == str7) {
           if (0 === lastEditableMessage.attachments.length) {
-            let obj = trackInvite;
+            obj = trackInviteDefault;
             obj.deleteMessage(channel.id, lastEditableMessage.id);
           }
           return { content: "" };
@@ -128,8 +120,8 @@ obj6[1] = function action(str, channel) {
         if (str7 !== lastEditableMessage.content) {
           obj = { content: null };
           obj[0] = str7;
-          trackInvite.editMessage(channel.id, lastEditableMessage.id, obj);
-          const obj2 = trackInvite;
+          trackInviteDefault.editMessage(channel.id, lastEditableMessage.id, obj);
+          const obj2 = trackInviteDefault;
         }
         const tmp5 = callback(Array.from(match), 4);
       }
@@ -140,13 +132,13 @@ obj6[1] = function action(str, channel) {
 obj[7] = obj6;
 obj[8] = {
   action(arg0) {
-    const obj = { content: null };
-    obj[0] = callback2(arg0).trim();
+    obj = { content: callback2(arg0).trim() };
     return obj;
   }
 };
 Object.setPrototypeOf(obj, null);
-const result = require("reinjectEphemerals").fileFinishedImporting("modules/messages/LegacyCommands.tsx");
+const importDefaultResult1 = importDefaultResult;
+const result = require("set").fileFinishedImporting("modules/messages/LegacyCommands.tsx");
 
 export const COMMANDS = obj;
 export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
@@ -168,7 +160,7 @@ export const handleLegacyCommands = function handleLegacyCommands(text, arg1) {
         let tmp2 = arg1;
         let tmp3 = importDefault;
         let tmp4 = dependencyMap;
-        let obj = collectGuildAnalyticsMetadata;
+        obj = collectGuildAnalyticsMetadataDefault;
         let tmp5 = constants;
         obj = { command: null };
         obj[0] = key10005;

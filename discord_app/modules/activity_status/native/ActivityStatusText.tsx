@@ -1,16 +1,15 @@
 // discord_app/modules/activity_status/native/ActivityStatusText.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_3 = createCacheKey.createStyles({ text: { flexShrink: 1 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatusText.tsx");
 
 export default function ActivityStatusText(variant) {
-  let children;
-  let style;
   let str = variant.variant;
   ({ children, style } = variant);
   if (str === undefined) {

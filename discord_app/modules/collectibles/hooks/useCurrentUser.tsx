@@ -1,18 +1,18 @@
 // discord_app/modules/collectibles/hooks/useCurrentUser.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import initialize from "initialize" /* 589 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("module_38").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCurrentUser.tsx");
 
 export const useCurrentUser = function useCurrentUser() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
-  00038__(null != stateFromStores, "user has to be signed in before accessing shop");
+  _modDef38(null != stateFromStores, "user has to be signed in before accessing shop");
   return stateFromStores;
 };
 export const useCurrentUserIfAvailable = function useCurrentUserIfAvailable() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   return initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
 };

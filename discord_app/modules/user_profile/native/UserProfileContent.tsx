@@ -1,35 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileContent.tsx
-import useBadges from "useBadges";
-import importAllResult from "asyncRequireImpl";
-import get_ActivityIndicator from "ACTION_SHEET_HEIGHT_HALF";
-import get from "get";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFormOpen from "handleFormOpen";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import { RelationshipTypes } from "ME";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "EmojiImage";
-import { useSharedStyles } from "UserProfileSharedStyles.tsx";
-import { WidgetRenderer } from "UserProfileWidgetsBoard.tsx";
+import useSharedStylesDefault from "useSharedStyles" /* 8982 */;
+import WidgetRendererDefault from "WidgetRenderer" /* 12174 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "get" /* 9186 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "markAllUserIdListsStale" /* 4030 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "handleFormOpen" /* 8370 */;
+import closure_12 from "createUserWidgetFromServer" /* 5365 */;
+import { UserProfileSections } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_14;
-let closure_15;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_6;
 const require = arg1;
 function CustomStatusBubble(guildId) {
-  let bubbleRef;
-  let customStatusActivity;
-  let hasCustomProfileTheme;
-  let user;
   ({ customStatusActivity, user } = guildId);
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
@@ -37,10 +26,10 @@ function CustomStatusBubble(guildId) {
   ({ hasCustomProfileTheme, bubbleRef } = guildId);
   const tmp3 = guildId(channelId[15])();
   let obj = user(channelId[16]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_10];
   const items1 = [user];
   let stateFromStores = obj.useStateFromStores(items, () => {
-    const currentUser = outer1_10.getCurrentUser();
+    const currentUser = closure_1_10.getCurrentUser();
     let id;
     if (currentUser != null) {
       id = currentUser.id;
@@ -91,7 +80,7 @@ function RemoveFriendIconButton(user) {
   user = user.user;
   let trackUserProfileAction;
   let newestAnalyticsLocation;
-  let closure_4;
+  closure_4 = undefined;
   function handleConfirm() {
     trackUserProfileAction({ action: "REMOVE_FRIEND" });
     let obj = trackUserProfileAction(newestAnalyticsLocation[24]);
@@ -102,8 +91,7 @@ function RemoveFriendIconButton(user) {
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
   newestAnalyticsLocation = trackUserProfileAction(newestAnalyticsLocation[23])().newestAnalyticsLocation;
   closure_4 = trackUserProfileAction(newestAnalyticsLocation[25]).useName(user);
-  obj = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, onPress: null };
-  obj[2] = callback(user(newestAnalyticsLocation[27]).UserCheckIcon, { size: "sm", color: "white" });
+  obj = { size: "sm", variant: "secondary-overlay", icon: callback(user(newestAnalyticsLocation[27]).UserCheckIcon, { size: "sm", color: "white" }), accessibilityLabel: null, onPress: null };
   const intl = user(newestAnalyticsLocation[28]).intl;
   obj[3] = intl.string(user(newestAnalyticsLocation[28]).t.cvSt1J);
   obj[4] = function onPress() {
@@ -123,8 +111,7 @@ function RemoveGameFriendIconButton(user) {
     obj = { user, guildId, channelId };
     obj.openLazy(user(channelId[19])(channelId[30], channelId.paths), "UserProfileGameFriendActionSheet", obj, "stack");
   }, items);
-  let obj = { size: "sm", variant: "secondary-overlay", icon: null, accessibilityLabel: null, onPress: null };
-  obj[2] = callback(user(channelId[31]).UserPlatformIcon, { size: "sm", color: "white" });
+  let obj = { size: "sm", variant: "secondary-overlay", icon: callback(user(channelId[31]).UserPlatformIcon, { size: "sm", color: "white" }), accessibilityLabel: null, onPress: null };
   const intl = user(channelId[28]).intl;
   obj[3] = intl.string(user(channelId[28]).t.cvSt1J);
   obj[4] = callback;
@@ -133,14 +120,14 @@ function RemoveGameFriendIconButton(user) {
 class PrimaryInfo {
   constructor(arg0) {
     ({ user, displayProfile, displayNameOverride, pronounsOverride, badgesOverride, isPreviewingChanges } = global);
-    useUserTag = undefined;
+    closure_0 = undefined;
     trackUserProfileAction = undefined;
     tmp2 = closure_2;
     ({ channelId, pendingDisplayNameStyles, style, badgeContainerBackground } = global);
     tmp = trackUserProfileAction;
     obj = require("nameFromUser");
     userTag = obj.useUserTag(user);
-    useUserTag = userTag;
+    closure_0 = userTag;
     tmp4 = require("useBadges")(displayProfile);
     obj2 = require("getNickname");
     guildId = undefined;
@@ -156,17 +143,17 @@ class PrimaryInfo {
         tmp7 = displayNameOverride;
       }
     }
-    tmp8 = useUserTag;
+    tmp8 = closure_0;
     obj3 = require("UserProfileAnalyticsProvider");
     trackUserProfileAction = obj3.useUserProfileAnalyticsContext().trackUserProfileAction;
     items = [, ];
     items[0] = trackUserProfileAction;
     items[1] = userTag;
-    callback = __esModule.useCallback(() => {
+    callback = closure_4.useCallback(() => {
       trackUserProfileAction({ action: "COPY_USERNAME" });
-      userTag(outer1_2[34]).copy(userTag);
-      const obj = userTag(outer1_2[34]);
-      const result = userTag(outer1_2[35]).presentUsernameCopied();
+      userTag(closure_1_2[34]).copy(userTag);
+      const obj = userTag(closure_1_2[34]);
+      const result = userTag(closure_1_2[35]).presentUsernameCopied();
     }, items);
     tmp10 = jsx;
     obj = { user, guildId: null, displayName: null, pronouns: null, badges: null, style: null, badgeContainerBackground: null, onPressDisplayName: null, displayNameAccessibilityHint: null, onPressUserTag: null, onPressPronouns: null, showBadgeToastOnPress: null, pendingDisplayNameStyles: null };
@@ -207,7 +194,7 @@ class PrimaryInfo {
     if (!isPreviewingChanges) {
       fn = () => {
         trackUserProfileAction({ action: "PRESS_PRONOUNS" });
-        userTag(outer1_2[35]).presentUserPronouns();
+        userTag(closure_1_2[35]).presentUserPronouns();
       };
     }
     obj[10] = fn;
@@ -219,21 +206,20 @@ class PrimaryInfo {
 function EditSection(guildId) {
   guildId = guildId.guildId;
   let trackUserProfileAction;
-  let dependencyMap;
-  let useBadges;
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let obj = guildId(8934);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = guildId(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_8.getGuild(guildId));
+  obj1 = guildId(589);
+  const items = [closure_8];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
   dependencyMap = trackUserProfileAction(9536)();
-  useBadges = trackUserProfileAction(9536)({ guild: stateFromStores });
+  closure_3 = trackUserProfileAction(9536)({ guild: stateFromStores });
   obj = { style: trackUserProfileAction(8982)().primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const tmp = trackUserProfileAction;
   const tmp3 = trackUserProfileAction(8982)();
   obj = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  obj1 = { size: "sm", color: null };
-  obj1[1] = trackUserProfileAction(712).colors.WHITE;
+  obj1 = { size: "sm", color: trackUserProfileAction(712).colors.WHITE };
   obj[1] = callback(guildId(9925).PencilIcon, obj1);
   if (null != stateFromStores) {
     const intl2 = tmp4(1236).intl;
@@ -270,18 +256,15 @@ function EditSection(guildId) {
   return callback(trackUserProfileAction(12093), obj);
 }
 function UserProfileWidgetsBoardContainer(isCurrentUser) {
-  let containerBackground;
-  let isVisible;
-  let userId;
   isCurrentUser = isCurrentUser.isCurrentUser;
   ({ userId, isVisible, containerBackground } = isCurrentUser);
-  const tmp3 = useSharedStyles();
+  const tmp3 = useSharedStylesDefault();
   const items = [tmp3.card, { backgroundColor: containerBackground }];
   const obj = { style: tmp3.profileContent, children: null };
   if (isCurrentUser) {
     isCurrentUser = callback(tmp(12173), {});
   }
-  const items1 = [isCurrentUser, callback(WidgetRenderer, { userId, isVisible, cardStyle: items })];
+  const items1 = [isCurrentUser, callback(WidgetRendererDefault, { userId, isVisible, cardStyle: items })];
   obj[1] = items1;
   return closure_20(closure_6, obj);
 }
@@ -290,42 +273,6 @@ let c4 = importAllResult;
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_14, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_15 } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: closure_19, jsxs: closure_20, Fragment: closure_21 } = jsxProd);
 const memoResult = importAllResult.memo(function UserProfileContent(user) {
-  let _location;
-  let activeProfileTabSection;
-  let activeProfileTabSectionIndex;
-  let avatarBackground;
-  let bannerAnimatedStyle;
-  let bannerImageAnimatedStyle;
-  let blurAnimatedProps;
-  let c25;
-  let contentAnimatedStyle;
-  let disableCalls;
-  let disableMessage;
-  let disableStatus;
-  let fillHeight;
-  let handleTabChange;
-  let initialSection;
-  let isPreviewingChanges;
-  let measureFill;
-  let originApplicationId;
-  let pagerRef;
-  let pendingAccentColor;
-  let pendingAvatar;
-  let pendingAvatarDecoration;
-  let pendingBanner;
-  let pendingDisplayNameStyles;
-  let pendingGlobalName;
-  let pendingLegacyUsernameDisabled;
-  let pendingPronouns;
-  let pendingThemeColors;
-  let relationshipType;
-  let scrollPosition;
-  let secondaryColor;
-  let setActiveProfileTabSection;
-  let showBlur;
-  let statusBackground;
-  let theme;
-  let tmp38;
   user = user.user;
   const channel = user.channel;
   const displayProfile = user.displayProfile;
@@ -333,22 +280,22 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   ({ disableCalls, isPreviewingChanges } = user);
   const navigateToPremium = user.navigateToPremium;
   const navigateToShop = user.navigateToShop;
-  let c7;
+  closure_7 = undefined;
   let trackUserProfileAction;
   let stateFromStores;
-  let c10;
+  closure_10 = undefined;
   let userProfileGameFriendApplicationIds;
   let guild_id;
   let name;
   let pendingBio;
-  let c15;
+  closure_15 = undefined;
   let containerBackground;
-  let c17;
+  closure_17 = undefined;
   let stateFromStores1;
   let stateFromStores2;
   let isEligibleForSocialLayerStorefrontMobilePurchasing;
-  let c21;
-  let c22;
+  closure_21 = undefined;
+  closure_22 = undefined;
   let boardTabIndex;
   let wishlistTabIndex;
   c25 = undefined;
@@ -357,8 +304,8 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   let markAsDismissed;
   setActiveProfileTabSection = undefined;
   let restoreActiveIndex;
-  let c31;
-  let c32;
+  closure_31 = undefined;
+  closure_32 = undefined;
   let callback2;
   let callback3;
   let callback4;
@@ -367,19 +314,19 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   let obj4;
   ({ disableMessage, disableStatus, location: _location, initialSection, scrollPosition } = user);
   const tmp3 = channel(displayProfile[15])();
-  c7 = tmp3;
-  const tmp4 = channel(displayProfile[45])(c17);
+  closure_7 = tmp3;
+  const tmp4 = channel(displayProfile[45])(closure_17);
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = channel(displayProfile[46])({ scrollPosition, bannerHeight: tmp4 }));
   let obj = user(displayProfile[22]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = user(displayProfile[16]);
-  let items = [c10];
-  stateFromStores = obj1.useStateFromStores(items, () => _undefined2.getCurrentUser());
+  obj1 = user(displayProfile[16]);
+  let items = [closure_10];
+  stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  c10 = tmp9;
+  closure_10 = tmp9;
   let tmp6Result = tmp6(tmp2[16]);
   let items1 = [stateFromStores];
   const stateFromStoresObject = tmp6Result.useStateFromStoresObject(items1, () => ({ relationshipType: stateFromStores.getRelationshipType(user.id), originApplicationId: stateFromStores.getOriginApplicationId(user.id) }));
@@ -436,14 +383,14 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   obj1[2] = tmp22;
   const tmpResult1Result = tmpResult(obj1);
   const primaryColor = tmpResult1Result.primaryColor;
-  c15 = tmp24;
+  closure_15 = tmp24;
   ({ theme, secondaryColor } = tmpResult1Result);
   const tmp20 = channel(displayProfile[32])(displayProfile, pendingLegacyUsernameDisabled);
   const userProfileColors = user(displayProfile[55]).useUserProfileColors({ theme, primaryColor, secondaryColor });
   containerBackground = userProfileColors.containerBackground;
   ({ avatarBackground, statusBackground } = userProfileColors);
   let tmp26 = channel(displayProfile[56])("UserProfileContent");
-  c17 = tmp26;
+  closure_17 = tmp26;
   const tmp6Result6 = user(displayProfile[55]);
   const ref1 = obj8.useRef(null);
   const ref = obj8.useRef(null);
@@ -453,12 +400,12 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   const fetchWishlist = user(displayProfile[57]).useFetchWishlist({ wishlistId: stateFromStores1, userId: user.id });
   let obj2 = { wishlistId: stateFromStores1, userId: user.id };
   const tmp6Result8 = user(displayProfile[57]);
-  const items5 = [c7];
+  const items5 = [closure_7];
   const items6 = [stateFromStores1];
   stateFromStores2 = user(displayProfile[16]).useStateFromStores(items5, () => {
     let wishlist = null;
     if (null != stateFromStores1) {
-      wishlist = _undefined.getWishlist(tmp);
+      wishlist = wishlist.getWishlist(tmp);
     }
     return wishlist;
   }, items6);
@@ -473,10 +420,10 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
     }
     tmp33 = tmp34;
   }
-  c21 = tmp33;
+  closure_21 = tmp33;
   const tmp6Result10 = user(displayProfile[58]);
   const tmp35 = user(displayProfile[60]).useDisplayableBoardWidgets(user.id).length > 0;
-  c22 = tmp35;
+  closure_22 = tmp35;
   const tmp6Result11 = user(displayProfile[60]);
   const profileTabIndices = user(displayProfile[61]).useProfileTabIndices(tmp35, tmp33);
   boardTabIndex = profileTabIndices.boardTabIndex;
@@ -484,7 +431,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   const tmp6Result12 = user(displayProfile[61]);
   [tmp38, c25] = showUserProfileActionSheet(obj8.useState(0), 2);
   const callback = obj8.useCallback((nativeEvent) => {
-    _undefined3(nativeEvent.nativeEvent.layout.width);
+    _undefined(nativeEvent.nativeEvent.layout.width);
   }, []);
   const tmp37 = showUserProfileActionSheet(obj8.useState(0), 2);
   const pageHeights = user(displayProfile[62]).usePageHeights();
@@ -504,8 +451,8 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   const profileSectionTabs = user(displayProfile[61]).useProfileSectionTabs({ initialUserProfileSection: initialSection, wishlistTabIndex, boardTabIndex, onTabChange: callback1 });
   ({ activeProfileTabSection, setActiveProfileTabSection } = profileSectionTabs);
   restoreActiveIndex = profileSectionTabs.restoreActiveIndex;
-  c31 = tmp44;
-  c32 = tmp45;
+  closure_31 = tmp44;
+  closure_32 = tmp45;
   const items9 = [navigateToPremium];
   ({ handleTabChange, activeProfileTabSectionIndex } = profileSectionTabs);
   callback2 = obj8.useCallback(() => {
@@ -525,13 +472,13 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   callback4 = obj8.useCallback(() => {
     if (null != user) {
       if (null != stateFromStores) {
-        const items = [_undefined.card, ];
+        const items = [wishlist.card, ];
         let obj = { backgroundColor: null };
         obj[0] = containerBackground;
         items[1] = obj;
         obj = { style: null, children: null };
         const items1 = [, ];
-        ({ cards: arr3[0], profileContent: arr3[1] } = _undefined);
+        ({ cards: arr3[0], profileContent: arr3[1] } = wishlist);
         obj[0] = items1;
         let _private;
         if (displayProfile != null) {
@@ -546,7 +493,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
         const items2 = [_private, , , , , , , , , , ];
         let isProvisional = tmp.isProvisional;
         if (isProvisional) {
-          const obj1 = { style: null, userId: null, iconSize: 16 };
+          obj1 = { style: null, userId: null, iconSize: 16 };
           obj1[0] = items;
           obj1[1] = tmp.id;
           isProvisional = stateFromStores2(user(displayProfile[65]).UserProfileProvisionalAccountExplainerCard, obj1);
@@ -560,7 +507,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
           const obj2 = { navigateToPremium: null, navigateToShop: null, hasCustomProfileTheme: null };
           obj2[0] = callback2;
           obj2[1] = callback3;
-          obj2[2] = c15;
+          obj2[2] = closure_15;
           tmp10 = stateFromStores2(channel(displayProfile[66]), obj2);
         }
         items2[2] = tmp10;
@@ -572,12 +519,12 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
         items2[3] = stateFromStores2(channel(displayProfile[67]), obj3);
         let tmp18Result = userProfileGameFriendApplicationIds.length > 0;
         if (tmp18Result) {
-          const obj4 = { userId: null, applicationIds: null, style: null };
+          obj4 = { userId: null, applicationIds: null, style: null };
           obj4[0] = tmp.id;
           obj4[1] = tmp22;
           let tmp26;
           let tmp19Result = tmp19(tmp20[68]);
-          if (!c17) {
+          if (!closure_17) {
             tmp26 = items;
           }
           obj4[2] = tmp26;
@@ -594,7 +541,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
         }
         obj5[2] = tmp29;
         let tmp31;
-        if (!c17) {
+        if (!closure_17) {
           tmp31 = items;
         }
         obj5[3] = tmp31;
@@ -636,7 +583,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
         const obj8 = { userId: null, style: null };
         obj8[0] = tmp.id;
         let tmp42;
-        if (!c17) {
+        if (!closure_17) {
           tmp42 = items;
         }
         obj8[1] = tmp42;
@@ -644,7 +591,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
         const obj9 = { userId: null, style: null };
         obj9[0] = tmp.id;
         let tmp43;
-        if (!c17) {
+        if (!closure_17) {
           tmp43 = items;
         }
         obj9[1] = tmp43;
@@ -671,7 +618,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
   }, items11);
   const items12 = [tmp3.profileContent, stateFromStores1, activeProfileTabSection === name.WISHLIST, user.id, id === user.id];
   callback5 = obj8.useCallback(() => {
-    let obj = { style: _undefined.profileContent, children: null };
+    let obj = { style: wishlist.profileContent, children: null };
     if (null == stateFromStores1) {
       let tmp10 = stateFromStores2(user(displayProfile[74]).WishlistEmptyState, {});
       let tmp6 = displayProfile;
@@ -680,18 +627,18 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
       tmp6 = displayProfile;
       obj = { wishlistId: null, maxWidth: null, isVisible: null };
       obj[0] = tmp3;
-      obj[1] = c17;
-      obj[2] = c31;
+      obj[1] = closure_17;
+      obj[2] = closure_31;
       tmp9 = stateFromStores2;
       tmp10 = stateFromStores2(channel(displayProfile[74]), obj);
     }
     const items = [tmp10, ];
-    let tmp9Result = c10;
-    if (c10) {
+    let tmp9Result = closure_10;
+    if (closure_10) {
       obj = { userId: null, wishlistId: null, maxWidth: null };
       obj[0] = user.id;
       obj[1] = tmp3;
-      obj[2] = c17;
+      obj[2] = closure_17;
       tmp9Result = tmp9(channel(tmp6[75]), obj);
     }
     items[1] = tmp9Result;
@@ -712,28 +659,28 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
     };
     obj[2] = stateFromStores2(navigateToPremium, obj);
     const items = [obj];
-    if (c22) {
+    if (closure_22) {
       obj = { id: "board", label: null, page: null };
       const intl2 = tmp(tmp2[28]).intl;
       obj[1] = intl2.string(tmp(tmp2[28]).t.laViwx);
-      const obj1 = { scrollEnabled: false, onContentSizeChange: null, children: null };
+      obj1 = { scrollEnabled: false, onContentSizeChange: null, children: null };
       obj1[1] = function onContentSizeChange(arg0, arg1) {
         return callback(closure_23, arg0, arg1);
       };
       const obj2 = { userId: null, isVisible: null, isCurrentUser: null, containerBackground: null };
       obj2[0] = user.id;
-      obj2[1] = c32;
-      obj2[2] = c10;
+      obj2[1] = closure_32;
+      obj2[2] = closure_10;
       obj2[3] = containerBackground;
       obj1[2] = tmp3(isVisible, obj2);
       obj[2] = tmp3(tmp4, obj1, boardTabIndex);
       items.push(obj);
     }
-    if (c21) {
+    if (closure_21) {
       const obj3 = { id: "wishlist", label: null, page: null };
       const intl3 = tmp(tmp2[28]).intl;
       obj3[1] = intl3.string(tmp(tmp2[28]).t["7lZ31J"]);
-      const obj4 = { scrollEnabled: false, onContentSizeChange: null, children: null };
+      obj4 = { scrollEnabled: false, onContentSizeChange: null, children: null };
       obj4[1] = function onContentSizeChange(arg0, arg1) {
         return callback(closure_24, arg0, arg1);
       };
@@ -881,7 +828,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
       if (!tmp9) {
         let num2 = 0;
         if (null == tmp17) {
-          num2 = c15;
+          num2 = closure_15;
         }
       } else {
         num2 = 0;
@@ -905,7 +852,7 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
       obj16[5] = showUserProfileActionSheet;
       obj16[6] = isPreviewingChanges;
       obj16[7] = ref;
-      const items21 = [stateFromStores2(c22, obj16), , ];
+      const items21 = [stateFromStores2(closure_22, obj16), , ];
       tmp55Result = null;
       if (null != stateFromStores) {
         const obj17 = { style: null, children: null };
@@ -1068,14 +1015,14 @@ const memoResult = importAllResult.memo(function UserProfileContent(user) {
       obj28[0] = items25;
       obj25[1] = isEligibleForSocialLayerStorefrontMobilePurchasing(tmp6(tmp2[86]).LayerScope, obj28);
       callback4Result = tmp57(tmp75, obj25);
-      tmp56 = c21;
-      const tmp77 = c22;
+      tmp56 = closure_21;
+      const tmp77 = closure_22;
       const tmpResult1 = tmp(tmp2[78]);
     }
   }
   return null;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileContent.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileContent.tsx");
 
 export default memoResult;
 export { PrimaryInfo };

@@ -1,34 +1,29 @@
 // discord_app/modules/forwarding/canForwardMessage.tsx
-import isSubscriptionGated from "isSubscriptionGated";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
+import hasFlag from "hasFlag" /* 1403 */;
+import closure_2 from "isSubscriptionGated" /* 1981 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
 
-let MessageFlags;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function canForwardMessage(state) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = getUncachedChannelPermissions;
+    obj = closure_5;
   }
   let obj2 = arg2;
   if (arg2 === undefined) {
-    obj2 = isSubscriptionGated;
+    obj2 = closure_2;
   }
   let obj3 = arg3;
   if (arg3 === undefined) {
-    obj3 = ensureGuildLoaded;
+    obj3 = closure_3;
   }
   let obj4 = arg4;
   if (arg4 === undefined) {
-    obj4 = createGuildRecordFromRust;
+    obj4 = closure_4;
   }
   if (null == state) {
     return false;
@@ -100,13 +95,13 @@ function canForwardMessage(state) {
     }
   }
 }
-({ GuildFeatures: closure_6, MessageFlags, MessageStates: error, MessageTypesSets: metroImportAll, Permissions: c9 } = ME);
+({ GuildFeatures: closure_6, MessageFlags, MessageStates: error, MessageTypesSets: closure_8, Permissions: c9 } = ME);
 let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL | MessageFlags.IS_SCHEDULED;
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/forwarding/canForwardMessage.tsx");
 
 export { canForwardMessage };
 export const useCanForwardMessage = function useCanForwardMessage(message) {
   const _require = message;
-  const items = [getUncachedChannelPermissions, isSubscriptionGated, ensureGuildLoaded, createGuildRecordFromRust];
-  return _initialize.useStateFromStores(items, () => outer1_11(closure_0, outer1_5, outer1_2, outer1_3, outer1_4));
+  const items = [closure_5, closure_2, closure_3, closure_4];
+  return _initialize.useStateFromStores(items, () => closure_1_11(closure_0, closure_1_5, closure_1_2, closure_1_3, closure_1_4));
 };

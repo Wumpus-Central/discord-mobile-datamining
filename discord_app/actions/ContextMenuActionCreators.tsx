@@ -1,12 +1,9 @@
 // discord_app/actions/ContextMenuActionCreators.tsx
-import { AppContext } from "ME";
-import { dispatcher } from "../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
-  let bottom;
-  let left;
-  let pageX;
-  let pageY;
   stopPropagation.stopPropagation();
   if (null == stopPropagation.currentTarget.contains) {
     pageY = 0;
@@ -123,9 +120,9 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
       if (tmp16Result.isDesktop()) {
         if (nativeEvent.isTrusted) {
           tmp16Result = tmp16(6915);
-          const importDefault = tmp16Result.addResultListener(() => {
+          importDefault = tmp16Result.addResultListener(() => {
             callback();
-            let obj = callback(outer1_2[1]);
+            obj = callback(closure_1_2[1]);
             obj = { type: "CONTEXT_MENU_OPEN", contextMenu: obj };
             obj.dispatch(obj);
           });
@@ -134,15 +131,16 @@ function openContextMenu(stopPropagation, arg1, enableSpellCheck, arg3) {
     }
     stopPropagation.preventDefault();
     const obj3 = obj(6912);
-    const obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
+    obj1 = { type: "CONTEXT_MENU_OPEN", contextMenu: null };
     obj1[1] = obj;
-    dispatcher.dispatch(obj1);
-    const obj6 = dispatcher;
+    dispatcherDefault.dispatch(obj1);
+    const obj6 = dispatcherDefault;
   } else {
     const currentTarget = stopPropagation.currentTarget;
   }
 }
-const result = require("context").fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
+const AppContext = ME.AppContext;
+const result = set.fileFinishedImporting("actions/ContextMenuActionCreators.tsx");
 
 export function closeContextMenu() {
 

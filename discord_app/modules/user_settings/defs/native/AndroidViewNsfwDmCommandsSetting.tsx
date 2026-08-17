@@ -1,10 +1,12 @@
 // discord_app/modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import { shouldShowAgeGateForVoiceChannel } from "../../../age_gate/AgeGateUtils.tsx";
-import { resolveNsfwTogglesWithDefaults } from "../../content_and_social/AgeRestrictedContentSettingsUtils.tsx";
-import { useNSFWAllowed } from "../../content_and_social/useNSFWAllowed.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel" /* 5252 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
+import useNSFWAllowed from "useNSFWAllowed" /* 8455 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -15,7 +17,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["J4zza/"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
     return resolveNsfwTogglesWithDefaults.useViewNsfwCommandsOrDefault();
   },
@@ -25,8 +27,8 @@ const toggle = createToggle.createToggle({
       if (arg0) {
         obj = { entryPoint: null };
         obj[0] = tmp(5254).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
-        const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
-        const obj2 = openIncodeAgeVerificationModal;
+        const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModalDefault;
       }
     }
     const ViewNsfwCommands = tmp(4066).ViewNsfwCommands;
@@ -62,7 +64,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["J4zza/"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: function useViewNsfwDmCommandsSettingValue() {
     return resolveNsfwTogglesWithDefaults.useViewNsfwCommandsOrDefault();
   },
@@ -72,8 +74,8 @@ let obj = {
       if (arg0) {
         obj = { entryPoint: null };
         obj[0] = tmp(5254).AgeVerificationModalEntryPoint.AGE_RESTRICTED_DM_COMMANDS_SETTINGS;
-        const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
-        const obj2 = openIncodeAgeVerificationModal;
+        const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModalDefault;
       }
     }
     const ViewNsfwCommands = tmp(4066).ViewNsfwCommands;
@@ -100,7 +102,7 @@ let obj = {
     return shouldAgeVerifyForSettingsToggles;
   }
 };
-let result = require("shouldShowAgeGateForVoiceChannel").fileFinishedImporting("modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/AndroidViewNsfwDmCommandsSetting.tsx");
 
 export default toggle;
 export const AndroidViewNsfwDmCommandsSettingV2 = toggle;

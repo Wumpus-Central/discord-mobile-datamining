@@ -1,22 +1,24 @@
 // discord_app/modules/rpc/helpers/unavailableCommand.tsx
-import { RPCErrors } from "ME";
-import { prototype } from "../RPCError.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import prototypeDefault from "prototype" /* 8752 */;
 
+const RPCErrors = ME.RPCErrors;
 let obj = {
   handler(cmd) {
-    let tmp = prototype;
+    let tmp = prototypeDefault;
     tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Unsupported command: " + cmd.cmd);
     throw tmp;
   }
 };
 obj = {
   handler(cmd) {
-    let tmp = prototype;
+    let tmp = prototypeDefault;
     tmp = new tmp({ errorCode: RPCErrors.INVALID_COMMAND }, "Deprecated command: " + cmd.cmd);
     throw tmp;
   }
 };
-const result = require("set").fileFinishedImporting("modules/rpc/helpers/unavailableCommand.tsx");
+const result = set.fileFinishedImporting("modules/rpc/helpers/unavailableCommand.tsx");
 
 export const unsupportedCommand = obj;
 export const deprecatedCommand = obj;

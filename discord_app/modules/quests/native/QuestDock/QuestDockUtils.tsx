@@ -1,8 +1,11 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockUtils.tsx
-import { PixelRatio } from "get ActivityIndicator";
-import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT";
-import { CONFIG_NEVER_ANIMATE } from "../../../../design/animation/reanimated/spring/spring.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import setDefault from "set" /* 687 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
+import QUEST_DOCK_COLLAPSED_HEIGHT from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
 
+const PixelRatio = get_ActivityIndicator.PixelRatio;
 const QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_HORIZONTAL_EDGE_GUTTER_COLLAPSED;
 const QUEST_DOCK_COLLAPSED_MAX_WIDTH = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_COLLAPSED_MAX_WIDTH;
 QUEST_DOCK_COLLAPSED_HEIGHT = QUEST_DOCK_COLLAPSED_HEIGHT.QUEST_DOCK_COLLAPSED_HEIGHT;
@@ -39,12 +42,11 @@ function getQuestDockClosedWidth(width, left, right) {
 getQuestDockClosedWidth.__closure = { QUEST_DOCK_COLLAPSED_MAX_WIDTH };
 getQuestDockClosedWidth.__workletHash = 14159592925974;
 getQuestDockClosedWidth.__initData = { code: "function getQuestDockClosedWidth_QuestDockUtilsTsx5(windowWidth,safeAreaLeft,safeAreaRight){const{QUEST_DOCK_COLLAPSED_MAX_WIDTH}=this.__closure;return Math.min(windowWidth-safeAreaLeft-safeAreaRight,QUEST_DOCK_COLLAPSED_MAX_WIDTH);}" };
-let closure_7 = 3 * require("set").Millis.HOUR;
+let closure_7 = 3 * setDefault.Millis.HOUR;
 function dimensionsLayoutTransition(currentOriginX) {
   obj = { initialValues: obj, animations: null };
   obj = { originX: currentOriginX.currentOriginX, originY: currentOriginX.currentOriginY, width: currentOriginX.currentWidth, height: currentOriginX.currentHeight };
-  obj = { originX: null, originY: null, height: null, width: null };
-  obj[0] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS);
+  obj = { originX: CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginX, QUEST_DOCK_MODE_CHANGE_PHYSICS), originY: null, height: null, width: null };
   const obj4 = CONFIG_NEVER_ANIMATE;
   obj[1] = CONFIG_NEVER_ANIMATE.withSpring(currentOriginX.targetOriginY, QUEST_DOCK_MODE_CHANGE_PHYSICS);
   const obj5 = CONFIG_NEVER_ANIMATE;
@@ -54,11 +56,11 @@ function dimensionsLayoutTransition(currentOriginX) {
   obj[1] = obj;
   return obj;
 }
-dimensionsLayoutTransition.__closure = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+dimensionsLayoutTransition.__closure = { withSpring: CONFIG_NEVER_ANIMATE.withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS };
 dimensionsLayoutTransition.__workletHash = 4497154070776;
 dimensionsLayoutTransition.__initData = { code: "function dimensionsLayoutTransition_QuestDockUtilsTsx6(values){const{withSpring,QUEST_DOCK_MODE_CHANGE_PHYSICS}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:withSpring(values.targetOriginX,QUEST_DOCK_MODE_CHANGE_PHYSICS),originY:withSpring(values.targetOriginY,QUEST_DOCK_MODE_CHANGE_PHYSICS),height:withSpring(values.targetHeight,QUEST_DOCK_MODE_CHANGE_PHYSICS),width:withSpring(values.targetWidth,QUEST_DOCK_MODE_CHANGE_PHYSICS)}};}" };
-let obj = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS };
-const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUtils.tsx");
+let obj = { withSpring: CONFIG_NEVER_ANIMATE.withSpring, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+const result = set.fileFinishedImporting("modules/quests/native/QuestDock/QuestDockUtils.tsx");
 
 export { roundToNearestPixel };
 export { getQuestDockExpandedHeightLimits };

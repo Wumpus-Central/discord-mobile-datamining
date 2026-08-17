@@ -1,41 +1,41 @@
 // discord_app/modules/quickswitcher/QuickSwitcherStore.tsx
-import set from "set";
-import rebuild from "rebuild";
-import handleThemeChange from "handleThemeChange";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleChanged from "handleChanged";
-import { DraftType } from "handleChanged";
-import comparator from "comparator";
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_18 from "handleConnectionOpen";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import ME from "ME";
-import { PersistedStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { createAutocompleterResultForChannelId } from "../autocompleter/createAutocompleterResultForChannelId.tsx";
-import { sortByMatchScore } from "../autocompleter/index.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import sortByMatchScore from "sortByMatchScore" /* 7593 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 7593 */;
+import createAutocompleterResultForChannelIdDefault from "createAutocompleterResultForChannelId" /* 7604 */;
+import closure_4 from "set" /* 6899 */;
+import closure_5 from "rebuild" /* 5251 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "handleChanged" /* 4825 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_11 from "comparator" /* 1980 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
+import closure_13 from "trackCommunicationDisabled" /* 1990 */;
+import closure_14 from "createGuildRecordFromRust" /* 1910 */;
+import closure_15 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_16 from "generateOldThreadCutoff" /* 4772 */;
+import closure_17 from "handleConnectionOpen" /* 1979 */;
+import closure_18 from "handleConnectionOpen" /* 4197 */;
+import closure_19 from "updateUserGuildSettingsInternal" /* 5043 */;
+import ME from "ME" /* 676 */;
 
-let closure_20;
-let closure_21;
-const require = arg1;
+require = arg1;
 function handleConnectionOpen() {
   let tmp = store3.getGuildCount() >= 3;
   if (!tmp) {
-    tmp = apply.size(mutablePrivateChannels.getMutablePrivateChannels()) >= 20;
-    const obj = apply;
+    tmp = applyDefault.size(mutablePrivateChannels.getMutablePrivateChannels()) >= 20;
+    const obj = applyDefault;
   }
-  let c25 = tmp;
-  let closure_30 = [];
+  closure_25 = tmp;
+  closure_30 = [];
 }
 function generateResultFromId(arg0) {
-  const tmp = createAutocompleterResultForChannelId(arg0);
+  const tmp = createAutocompleterResultForChannelIdDefault(arg0);
   let tmp2 = null;
   if (null != tmp) {
     if (null == c26) {
@@ -47,13 +47,11 @@ function generateResultFromId(arg0) {
   return tmp2;
 }
 function generateInitialResults() {
-  let channelId;
-  let result;
   let obj = store4;
   const guildId = store4.getGuildId();
   channelId = channelId.getChannelId();
   if (channelId(set[15]).AutocompleterResultTypes.USER === c26) {
-    const importDefault = store2.getId();
+    importDefault = store2.getId();
     const recentlyTalked = importDefault(tmp5[18]).getRecentlyTalked(channelId, 100);
     return recentlyTalked.filter((record) => record.record.id !== closure_1);
   } else if (tmp4(tmp5[15]).AutocompleterResultTypes.APPLICATION === tmp3) {
@@ -93,9 +91,9 @@ function generateInitialResults() {
             canResult = tmp8.type !== tmp46(tmp47[15]).AutocompleterResultTypes.VOICE_CHANNEL;
           }
           if (!canResult) {
-            let tmp11 = getUncachedChannelPermissions;
+            let tmp11 = closure_15;
             let tmp12 = constants;
-            canResult = getUncachedChannelPermissions.can(constants.VIEW_CHANNEL, tmp8.record);
+            canResult = closure_15.can(constants.VIEW_CHANNEL, tmp8.record);
           }
           if (canResult) {
             let arr = items.push(tmp8);
@@ -111,16 +109,16 @@ function generateInitialResults() {
     }
     const items1 = [];
     let arr1 = (function getDrafts(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const items = [];
       recentlyEditedDrafts = recentlyEditedDrafts.getRecentlyEditedDrafts(ChannelMessage.ChannelMessage);
       const item = recentlyEditedDrafts.forEach((channelId) => {
         channelId = channelId.channelId;
         if (!callback(channelId)) {
-          const tmp3 = items(outer1_2[17])(channelId);
+          const tmp3 = items(closure_1_2[17])(channelId);
           let tmp5 = null;
           if (null != tmp3) {
-            if (null == outer1_26) {
+            if (null == closure_1_26) {
               tmp5 = tmp3;
             } else {
               tmp5 = null;
@@ -171,7 +169,7 @@ function generateInitialResults() {
           let tmp24 = generateResultFromId;
           let tmp25 = generateResultFromId(tmp22);
           if (null != tmp25) {
-            let obj1 = { channelId: null, result: null };
+            obj1 = { channelId: null, result: null };
             obj1[0] = tmp22;
             obj1[1] = tmp25;
             let arr2 = items2.push(obj1);
@@ -196,7 +194,7 @@ function generateInitialResults() {
     if (null != guildId) {
       selectableChannelIds = selectableChannelIds.getSelectableChannelIds(guildId);
       const found1 = selectableChannelIds.filter((id) => {
-        const channel = outer1_8.getChannel(id);
+        const channel = closure_1_8.getChannel(id);
         let hasItem = null == channel;
         if (!hasItem) {
           hasItem = id === channelId;
@@ -205,12 +203,12 @@ function generateInitialResults() {
           hasItem = set.has(id);
         }
         if (!hasItem) {
-          hasItem = outer1_19.isChannelMuted(channel.guild_id, id);
+          hasItem = closure_1_19.isChannelMuted(channel.guild_id, id);
         }
         if (!hasItem) {
           let isChannelMutedResult = null != channel.parent_id;
           if (isChannelMutedResult) {
-            isChannelMutedResult = outer1_19.isChannelMuted(channel.guild_id, channel.parent_id);
+            isChannelMutedResult = closure_1_19.isChannelMuted(channel.guild_id, channel.parent_id);
           }
           hasItem = isChannelMutedResult;
         }
@@ -244,11 +242,11 @@ function generateInitialResults() {
           let tmp11 = callback(set[17])(key10004);
           let tmp3 = null;
           if (null != tmp11) {
-            let tmp = outer1_26;
-            if (null == outer1_26) {
+            let tmp = closure_1_26;
+            if (null == closure_1_26) {
               tmp3 = tmp11;
             } else {
-              let tmp2 = outer1_26;
+              let tmp2 = closure_1_26;
               tmp3 = null;
             }
           }
@@ -296,8 +294,6 @@ function generateInitialResults() {
   }
 }
 function handleQuickSwitcherShow(arg0) {
-  let query;
-  let queryMode;
   ({ query, queryMode } = arg0);
   const trimmed = query.trim();
   const guildId = store4.getGuildId();
@@ -307,10 +303,10 @@ function handleQuickSwitcherShow(arg0) {
     const _HermesInternal = HermesInternal;
     set.add("guild:" + guildId);
   }
-  let closure_32 = Date.now();
+  closure_32 = Date.now();
   let tmp13 = store;
   if (store == null) {
-    tmp13 = sortByMatchScore;
+    tmp13 = sortByMatchScoreDefault;
     const items1 = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.GROUP_DM, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GUILD, sortByMatchScore.AutocompleterResultTypes.APPLICATION, sortByMatchScore.AutocompleterResultTypes.GAME_PROFILE, sortByMatchScore.AutocompleterResultTypes.LINK, sortByMatchScore.AutocompleterResultTypes.IN_APP_NAVIGATION];
     let num = 5;
     if (null != queryMode) {
@@ -321,7 +317,7 @@ function handleQuickSwitcherShow(arg0) {
     tmp13 = new tmp13(tmp14, items1, num, obj, 100);
   }
   store = tmp13;
-  let c28 = null;
+  c28 = null;
   store.search(trimmed);
 }
 function handleUserSearchUpdate(arg0, str) {
@@ -410,7 +406,7 @@ function handleUserSearchUpdate(arg0, str) {
         closure_29 = Math.max(str.length, closure_29);
         str = DOWN(7593).findNextSelectedResult;
         DOWN = DOWN(7593).FindResultDirections.DOWN;
-        let closure_23 = str(DOWN, -1, items);
+        closure_23 = str(DOWN, -1, items);
         const DOWNResult6 = DOWN(7593);
       } else {
         let tmp29 = null != tmp27;
@@ -427,9 +423,9 @@ function handleUserSearchUpdate(arg0, str) {
   }
 }
 function handleQuickSwitcherHide() {
-  let c28 = null;
-  let c29 = 0;
-  let closure_30 = [];
+  c28 = null;
+  c29 = 0;
+  closure_30 = [];
   if (null != store) {
     store.destroy();
     store = null;
@@ -454,15 +450,16 @@ let c29 = 0;
 let closure_30 = [];
 let closure_31 = [];
 let c32 = null;
+const PersistedStore = initializeDefault.PersistedStore;
 class QuickSwitcherStoreClass extends PersistedStore {
 }
 const prototype = QuickSwitcherStoreClass.prototype;
 prototype["initialize"] = function initialize(channelHistory) {
-  this.waitFor(rebuild, fetchFingerprint, ensureGuildLoaded, handleChanged, set, comparator, trackCommunicationDisabled, createGuildRecordFromRust, getUncachedChannelPermissions, generateOldThreadCutoff, handleConnectionOpen, closure_18, handleThemeChange, updateUserGuildSettingsInternal);
-  const items = [handleThemeChange];
+  this.waitFor(closure_5, closure_7, closure_8, closure_9, closure_4, closure_11, closure_13, closure_14, closure_15, closure_16, closure_17, closure_18, closure_6, closure_19);
+  const items = [closure_6];
   this.syncWith(items, () => true);
-  const Storage = Storage.Storage;
-  let c24 = Storage.get(seenQSTutorial) || false;
+  const Storage = Storage2.Storage;
+  closure_24 = Storage.get(seenQSTutorial) || false;
   channelHistory = undefined;
   if (channelHistory != null) {
     channelHistory = channelHistory.channelHistory;
@@ -478,7 +475,7 @@ prototype["isOpen"] = function isOpen() {
   return null != closure_3;
 };
 prototype["getResultTotals"] = function getResultTotals(GROUP_DM) {
-  let closure_0 = GROUP_DM;
+  closure_0 = GROUP_DM;
   if (null == store) {
     return 0;
   } else if (null == GROUP_DM) {
@@ -544,7 +541,7 @@ prototype["getProps"] = function getProps() {
 };
 QuickSwitcherStoreClass.displayName = "QuickSwitcherStore";
 QuickSwitcherStoreClass.persistKey = "QuickSwitcherStore";
-const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"), {
+const quickSwitcherStoreClass = new QuickSwitcherStoreClass(dispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
   QUICKSWITCHER_SHOW: handleQuickSwitcherShow,
@@ -553,8 +550,6 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
   OVERLAY_SET_INPUT_LOCKED: handleQuickSwitcherHide,
   HIDE_ACTION_SHEET_QUICK_SWITCHER: handleQuickSwitcherHide,
   QUICKSWITCHER_SEARCH: function handleQuickSwitcherSearch(arg0) {
-    let query;
-    let queryMode;
     ({ query, queryMode } = arg0);
     const trimmed = query.trim();
     if (null == store) {
@@ -609,7 +604,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
       return false;
     } else {
       c24 = true;
-      const Storage = Storage.Storage;
+      const Storage = Storage2.Storage;
       const result = Storage.set(seenQSTutorial, true);
     }
   },
@@ -628,7 +623,7 @@ const quickSwitcherStoreClass = new QuickSwitcherStoreClass(require("dispatcher"
   GAME_AUTOCOMPLETE_FETCH_SUCCESS: handleGameAutocompleteSettled,
   GAME_AUTOCOMPLETE_FETCH_FAILURE: handleGameAutocompleteSettled
 });
-let result = require("handleThemeChange").fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
+let result = require("set").fileFinishedImporting("modules/quickswitcher/QuickSwitcherStore.tsx");
 
 export default quickSwitcherStoreClass;
 export { generateResultFromId };

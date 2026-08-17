@@ -1,31 +1,27 @@
 // discord_app/modules/guild_settings/roles/GuildSettingsRoleConstants.tsx
-import { RoleColorsStyle } from "handleSetSection";
-import ME from "ME";
-import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS";
-import importAllResult from "fromString";
-import importAllResult1 from "fromString";
-import importAllResult2 from "fromString";
-import importAllResult3 from "fromString";
-import unsafe_getRawColor from "unsafe_getRawColor";
-import unsafe_getRawColor from "unsafe_getRawColor";
-import unsafe_getRawColor from "unsafe_getRawColor";
-import unsafe_getRawColor from "unsafe_getRawColor";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import handleSetSection from "handleSetSection" /* 16831 */;
+import ME from "ME" /* 676 */;
+import HOLOGRAPHIC_ROLE_COLORS from "HOLOGRAPHIC_ROLE_COLORS" /* 16833 */;
+import importAllResult from "fromString" /* 506 */;
+import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
 
-let DEFAULT_GRADIENT_ROLE_COLORS;
-let DEFAULT_ROLE_COLOR;
-let HOLOGRAPHIC_ROLE_COLORS;
-let Permissions;
+const RoleColorsStyle = handleSetSection.RoleColorsStyle;
 ({ Permissions, DEFAULT_ROLE_COLOR } = ME);
 let obj = { COSMETIC: 0, [0]: "COSMETIC", MEMBER: 1, [1]: "MEMBER", MODERATOR: 2, [2]: "MODERATOR", MANAGER: 3, [3]: "MANAGER" };
 ({ DEFAULT_GRADIENT_ROLE_COLORS, HOLOGRAPHIC_ROLE_COLORS } = HOLOGRAPHIC_ROLE_COLORS);
-const removeResult = require("fromString").remove(require("applyOverwrites").DEFAULT, Permissions.MENTION_EVERYONE);
-const combineResult = require("fromString").combine(require("applyOverwrites").DEFAULT, Permissions.VIEW_AUDIT_LOG, Permissions.MANAGE_NICKNAMES, Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.MANAGE_MESSAGES, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS, Permissions.MOVE_MEMBERS, Permissions.PRIORITY_SPEAKER, Permissions.MODERATE_MEMBERS);
-const combineResult1 = require("fromString").combine(combineResult, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_THREADS, Permissions.MANAGE_ROLES, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD, Permissions.MANAGE_WEBHOOKS, Permissions.SEND_TTS_MESSAGES);
+const removeResult = importAllResult.remove(applyOverwritesAll.DEFAULT, Permissions.MENTION_EVERYONE);
+const combineResult = importAllResult.combine(applyOverwritesAll.DEFAULT, Permissions.VIEW_AUDIT_LOG, Permissions.MANAGE_NICKNAMES, Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.MANAGE_MESSAGES, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS, Permissions.MOVE_MEMBERS, Permissions.PRIORITY_SPEAKER, Permissions.MODERATE_MEMBERS);
+const importAllResult1 = importAllResult;
+const combineResult1 = importAllResult.combine(combineResult, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_THREADS, Permissions.MANAGE_ROLES, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD, Permissions.MANAGE_WEBHOOKS, Permissions.SEND_TTS_MESSAGES);
+const importAllResult2 = importAllResult;
 obj = {};
 obj = { key: "template_cosmetic", color: null, permissions: null, title: null, description: null, contents: null, contentPreface: null };
+const importAllResult3 = importAllResult;
 obj[1] = unsafe_getRawColor.unsafe_getRawColor("BRAND_500");
-obj[2] = require("applyOverwrites").NONE;
+obj[2] = applyOverwritesAll.NONE;
 obj[3] = function title() {
   const intl = getSystemLocale.intl;
   return intl.string(getSystemLocale.t.M8jQyg);
@@ -47,7 +43,7 @@ obj[6] = function contentPreface() {
 obj[obj.COSMETIC] = obj;
 const obj1 = { key: "template_member", color: null, permissions: null, communityPermissions: null, title: null, description: null, contents: null, contentPreface: null };
 obj1[1] = unsafe_getRawColor.unsafe_getRawColor("GREEN_360");
-obj1[2] = require("applyOverwrites").DEFAULT;
+obj1[2] = applyOverwritesAll.DEFAULT;
 obj1[3] = removeResult;
 obj1[4] = function title() {
   const intl = getSystemLocale.intl;
@@ -100,7 +96,7 @@ obj[obj.MODERATOR] = obj2;
 const obj3 = { key: "template_manager", color: null, permissions: null, communityPermissions: null, title: null, description: null, contents: null, contentPreface: null };
 obj3[1] = unsafe_getRawColor.unsafe_getRawColor("RED_400");
 obj3[2] = combineResult1;
-obj3[3] = require("fromString").add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
+obj3[3] = importAllResult.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
 obj3[4] = function title() {
   const intl = getSystemLocale.intl;
   return intl.string(getSystemLocale.t.qKmu3w);
@@ -125,14 +121,14 @@ obj3[7] = function contentPreface() {
   return intl.string(getSystemLocale.t["7Dkb62"]);
 };
 obj[obj.MANAGER] = obj3;
-const addResult = require("fromString").add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
-let items = [{ id: RoleColorsStyle.SOLID, colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null }, labelString: require("getSystemLocale").t["8Qyahn"] }, , ];
-const obj4 = { id: RoleColorsStyle.SOLID, colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null }, labelString: require("getSystemLocale").t["8Qyahn"] };
-items[1] = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: require("getSystemLocale").t.XpWmJz };
-const obj5 = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: require("getSystemLocale").t.XpWmJz };
-items[2] = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: require("getSystemLocale").t.QTKppe };
-const obj6 = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: require("getSystemLocale").t.QTKppe };
-const result = require("HOLOGRAPHIC_ROLE_COLORS").fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRoleConstants.tsx");
+const addResult = importAllResult.add(combineResult1, Permissions.VIEW_GUILD_ANALYTICS);
+let items = [{ id: RoleColorsStyle.SOLID, colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null }, labelString: getSystemLocale.t["8Qyahn"] }, , ];
+const obj4 = { id: RoleColorsStyle.SOLID, colors: { primary_color: DEFAULT_ROLE_COLOR, secondary_color: null, tertiary_color: null }, labelString: getSystemLocale.t["8Qyahn"] };
+items[1] = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: getSystemLocale.t.XpWmJz };
+const obj5 = { id: RoleColorsStyle.GRADIENT, colors: DEFAULT_GRADIENT_ROLE_COLORS, labelString: getSystemLocale.t.XpWmJz };
+items[2] = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: getSystemLocale.t.QTKppe };
+const obj6 = { id: RoleColorsStyle.HOLOGRAPHIC, colors: HOLOGRAPHIC_ROLE_COLORS, labelString: getSystemLocale.t.QTKppe };
+const result = set.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRoleConstants.tsx");
 
 export const CREATE_ROLE_DESKTOP_MODAL_WIDTH = 440;
 export const DEFAULT_HEADER_HEIGHT_PX = 371;

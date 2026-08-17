@@ -1,21 +1,16 @@
 // discord_app/modules/media_uploads/uploadMessageAttachments.native.tsx
-import closure_3 from "set";
-import initialize from "initialize";
-import set from "nativeEventEmitter";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 7582 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 function _uploadMessageAttachments() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0, attachments) {
-      let c0;
-      let c2;
-      let c3;
-      let c4;
-      let closure_1;
       if (set === 2) {
         set = 3;
         HermesBuiltin.throwTypeError();
@@ -43,7 +38,7 @@ function _uploadMessageAttachments() {
               return obj;
             } else {
               c3 = tmp5;
-              let dependencyMap = tmp2;
+              dependencyMap = tmp2;
               let callback;
               let callback2;
               dependencyMap = undefined;
@@ -51,8 +46,8 @@ function _uploadMessageAttachments() {
               c4 = undefined;
               ({ channelId: c0, message: closure_1, nonce: c2, items: c3, shouldUploadFailureSendNotification: c4 } = callback);
               set = undefined;
-              let closure_6;
-              let closure_7;
+              closure_6 = undefined;
+              closure_7 = undefined;
               c4 = 1;
               set = 1;
               return { value: "ct", done: true };
@@ -63,7 +58,7 @@ function _uploadMessageAttachments() {
               throw attachments;
             } else if (arg0 === 2) {
               set = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = attachments;
               return obj1;
             } else if (set.has(dependencyMap)) {
@@ -103,7 +98,7 @@ function _uploadMessageAttachments() {
                 obj.dispatch(obj);
               });
               set.on("complete", (id) => {
-                let closure_0 = id;
+                closure_0 = id;
                 set.delete(_undefined);
                 messageForFile = messageForFile.getMessageForFile(id.id);
                 let _aborted = null != messageForFile;
@@ -170,7 +165,7 @@ function _uploadMessageAttachments() {
     iter.next();
     return iter;
   });
-  const _uploadMessageAttachments = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

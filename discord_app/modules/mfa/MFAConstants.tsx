@@ -1,5 +1,7 @@
 // discord_app/modules/mfa/MFAConstants.tsx
+import set from "set" /* 2 */;
 import { getSystemLocale } from "../../intl/index.native.tsx";
+
 const obj = {};
 Object.defineProperty(obj, "webauthn", {
   get: () => {
@@ -36,6 +38,6 @@ Object.defineProperty(obj, "backup", {
   },
   set: undefined
 });
-const result = require("set").fileFinishedImporting("modules/mfa/MFAConstants.tsx");
+const result = set.fileFinishedImporting("modules/mfa/MFAConstants.tsx");
 
 export const SELECT_NAMES = obj;

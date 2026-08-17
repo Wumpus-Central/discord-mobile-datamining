@@ -1,17 +1,15 @@
 // discord_app/modules/favorites/native/action/useFavoritesGuildChannelActions.tsx
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import initializeFromUserSettings from "initializeFromUserSettings";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "initializeFromUserSettings" /* 1394 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useFavoritesAccess } from "../../FavoritesHooks.tsx";
 import { getFavoritesAwareGuildName } from "../../FavoritesUtils.tsx";
 
 const require = arg1;
-const result = require("initializeFromUserSettings").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildChannelActions.tsx");
 
 export default function useFavoritesGuildChannelActions(channelId, FavoritesGuildActionSheet) {
-  let hasAccess;
-  let isExperimentEnabled;
   const _require = channelId;
   let obj = _useFavoritesAccess;
   const favoritesAccess = obj.useFavoritesAccess(FavoritesGuildActionSheet);
@@ -19,17 +17,17 @@ export default function useFavoritesGuildChannelActions(channelId, FavoritesGuil
   let isFavoritableChannelResult = _getFavoritesAwareGuildName.isFavoritableChannel(channelId);
   const obj2 = _getFavoritesAwareGuildName;
   const tmp = _require;
-  const items = [initializeFromUserSettings];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_4.isFavorite(channelId.id));
+  const items = [closure_4];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_4.isFavorite(channelId.id));
   const obj3 = _initialize;
   const isFavoritesGuildSelected = _useFavoritesAccess.useIsFavoritesGuildSelected();
   const obj4 = _useFavoritesAccess;
-  const items1 = [trackCommunicationDisabled, fetchFingerprint];
+  const items1 = [closure_3, closure_2];
   if (isFavoritableChannelResult) {
     isFavoritableChannelResult = obj5.useStateFromStores(items1, () => {
       let isMemberResult = null == channelId.guild_id;
       if (!isMemberResult) {
-        isMemberResult = outer1_3.isMember(tmp.guild_id, outer1_2.getId());
+        isMemberResult = closure_1_3.isMember(tmp.guild_id, closure_1_2.getId());
       }
       return isMemberResult;
     });

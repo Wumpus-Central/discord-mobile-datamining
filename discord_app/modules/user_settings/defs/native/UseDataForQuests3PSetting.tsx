@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx
-import { MobileUserSettings } from "MobileUserSettings";
-import createToggle from "createToggle";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../ads/AdTopicOptOutClientExperiment.tsx";
-import { useAdPersonalizationTogglesDisabled } from "../../../ads/hooks/useAdPersonalizationTogglesDisabled.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 14998 */;
+import apexExperiment from "apexExperiment" /* 14999 */;
+import createToggle from "createToggle" /* 10669 */;
 
 function useDataToSupportQuests3PSettingValue() {
   const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
@@ -30,6 +30,7 @@ function onDataToSupportQuests3PSettingValueChange(arg0) {
   const Quests3PDataOptedOut = explicitContentFromProto.Quests3PDataOptedOut;
   Quests3PDataOptedOut.updateSetting(!arg0);
 }
+const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 let obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -50,13 +51,13 @@ obj = {
     return intl.string(getSystemLocale.t.CyLYKZ);
   },
   parent: MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
-  usePredicate: require("apexExperiment").useIsAdTopicOptOutClientEnabled,
+  usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
   useValue: useDataToSupportQuests3PSettingValue,
   onValueChange: onDataToSupportQuests3PSettingValueChange,
   useIsDisabled: useDataToSupportQuests3PSettingIsDisabled
 };
 const toggle1 = createToggle.createToggle(obj);
-const result = require("useAdPersonalizationTogglesDisabled").fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuests3PSetting.tsx");
 
 export default toggle;
 export const UseDataForQuests3PSponsoredContentSetting = toggle1;

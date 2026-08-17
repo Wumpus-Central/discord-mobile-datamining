@@ -1,41 +1,31 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftPurchaseButton.tsx
-import useNavigation from "useNavigation";
-import get_ActivityIndicator from "LinearGradient";
-import initialize from "initialize";
-import { isAvatarDecorationRecord } from "fromServer";
-import { isNameplateRecord } from "fromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createEmptyPromotionsByType from "createEmptyPromotionsByType";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "initialize";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNameplateData } from "../../../collectibles/nameplates/utils.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { useShouldShowGiftingPromotionDeco } from "../../gifting/native/hooks/useShouldShowGiftingPromotionDeco.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import getNameplateData from "getNameplateData" /* 1946 */;
+import Text from "Text" /* 4734 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10306 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "initialize" /* 8936 */;
+import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 5306 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import closure_10 from "createEmptyPromotionsByType" /* 7628 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_12;
-let closure_14;
-let map1;
-const require = arg1;
+require = arg1;
 function RewardPreview(arg0) {
-  let collectiblesItem;
-  let currentUser;
-  let gradientAngle;
-  let gradientColors;
   ({ collectiblesItem, gradientAngle } = arg0);
   ({ currentUser, gradientColors } = arg0);
-  const tmp3 = callback3(useSafeAreaInsetsKeyboardAware().insets.bottom);
+  const tmp3 = callback3(useSafeAreaInsetsKeyboardAwareDefault().insets.bottom);
   if (isNameplateRecord(collectiblesItem)) {
     let obj = { children: null };
     obj = { style: null, children: null };
     obj[0] = tmp3.nameplateWrapper;
-    const obj1 = { nameplate: null, fullOpacity: true, animate: true };
+    obj1 = { nameplate: null, fullOpacity: true, animate: true };
     let tmpResult = tmp(9221);
     let obj8 = getNameplateData;
     obj1[0] = obj8.getNameplateData(collectiblesItem);
@@ -94,79 +84,73 @@ function RewardPreview(arg0) {
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, chooseRewardContainer: null, gradientBackdrop: null, chooseRewardText: null, backgroundImage: null, inAppFlowImage: null, inAppFlowImageLargeTilted: null, singleAvatarContainer: null, selectedRewardRow: null, selectedRewardBannerContainer: null, selectedRewardBannerGradient: null, selectedRewardText: null, nameplateWrapper: null, promoDetails: null };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_12 + arg0, paddingHorizontal: Themes.space.PX_16, gap: Themes.space.PX_8 };
-  const merged = Object.assign(Themes.shadows.SHADOW_TOP_HIGH);
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 + arg0, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+  const merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
   obj[0] = obj;
   obj[1] = { flexDirection: "row", alignItems: "center", height: 52 };
   obj = {};
   const merged1 = Object.assign(closure_4.absoluteFillObject);
-  obj.borderRadius = Themes.radii.sm;
+  obj.borderRadius = ThemesDefault.radii.sm;
   obj.overflow = "hidden";
   obj[2] = obj;
-  obj[3] = { flex: 1, marginStart: Themes.space.PX_8 };
+  obj[3] = { flex: 1, marginStart: ThemesDefault.space.PX_8 };
   obj[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 1 };
-  const obj1 = { flex: 1, marginStart: Themes.space.PX_8 };
-  obj[5] = { width: 58, height: 58, marginStart: Themes.space.PX_8 };
+  obj1 = { flex: 1, marginStart: ThemesDefault.space.PX_8 };
+  obj[5] = { width: 58, height: 58, marginStart: ThemesDefault.space.PX_8 };
   const items = [{ rotate: "-4deg" }, { translateY: -11 }];
   obj[6] = { width: 86, height: 86, transform: items };
   obj[7] = { flexDirection: "row", paddingRight: 15, justifyContent: "center", alignItems: "center", marginLeft: 5 };
-  const obj2 = { width: 58, height: 58, marginStart: Themes.space.PX_8 };
-  obj[8] = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_16 };
+  const obj2 = { width: 58, height: 58, marginStart: ThemesDefault.space.PX_8 };
+  obj[8] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
   obj[9] = { flex: 1, flexDirection: "row", alignItems: "center", height: 52 };
   const obj4 = {};
   const merged2 = Object.assign(closure_4.absoluteFillObject);
-  obj4.borderRadius = Themes.radii.sm;
-  obj4.top = Themes.space.PX_4;
-  obj4.bottom = Themes.space.PX_4;
-  obj4.start = Themes.space.PX_4;
-  obj4.end = Themes.space.PX_4;
-  obj4.marginStart = Themes.space.PX_12;
+  obj4.borderRadius = ThemesDefault.radii.sm;
+  obj4.top = ThemesDefault.space.PX_4;
+  obj4.bottom = ThemesDefault.space.PX_4;
+  obj4.start = ThemesDefault.space.PX_4;
+  obj4.end = ThemesDefault.space.PX_4;
+  obj4.marginStart = ThemesDefault.space.PX_12;
   obj[10] = obj4;
   obj[11] = { flex: 1 };
-  const obj3 = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_16 };
-  obj[12] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: Themes.radii.sm, overflow: "hidden" };
-  const obj5 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: Themes.radii.sm, overflow: "hidden" };
-  obj[13] = { paddingVertical: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16, borderRadius: Themes.radii.md, backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE };
+  const obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
+  obj[12] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+  const obj5 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+  obj[13] = { paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
   return obj;
 });
-const result = require("initialize").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseButton.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPurchaseButton.tsx");
 
 export default function PremiumGiftPurchaseButton(defaultSelection) {
-  let c2;
-  let c3;
-  let c7;
-  let claimableRewards;
-  let isPurchasing;
-  let productId;
   defaultSelection = defaultSelection.defaultSelection;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let React;
   claimableRewards = undefined;
   let selectedGiftingPromotionReward;
   let setSelectedGiftingPromotionReward;
   c7 = undefined;
-  let c8;
-  let c9;
-  let c10;
-  let tmp3 = callback3(useSafeAreaInsetsKeyboardAware().insets.bottom);
+  closure_8 = undefined;
+  closure_9 = undefined;
+  closure_10 = undefined;
+  let tmp3 = callback3(useSafeAreaInsetsKeyboardAwareDefault().insets.bottom);
   let obj = defaultSelection(1500);
   importDefault = obj.useNavigation();
-  let obj1 = defaultSelection(9625);
+  obj1 = defaultSelection(9625);
   const nativeGiftContext = obj1.useNativeGiftContext();
   ({ onPurchase: c2, isPurchasing, allRewards: c3, claimableRewards } = nativeGiftContext);
   selectedGiftingPromotionReward = nativeGiftContext.selectedGiftingPromotionReward;
   setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
   let obj2 = defaultSelection(589);
-  let items = [c9];
-  const stateFromStores = obj2.useStateFromStores(items, () => _undefined3.getCurrentUser());
+  let items = [closure_9];
+  const stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj3 = defaultSelection(7705);
   const canPurchaseIAP = obj3.useCanPurchaseIAP(productId);
   let obj4 = defaultSelection(589);
-  let items1 = [c10];
+  let items1 = [closure_10];
   const stateFromStores1 = obj4.useStateFromStores(items1, () => {
-    const marketingComponentByType = _undefined4.getMarketingComponentByType(defaultSelection(_undefined[23]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);
+    marketingComponentByType = marketingComponentByType.getMarketingComponentByType(defaultSelection(_undefined[23]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);
     let prop = null;
     if (null != marketingComponentByType) {
       prop = null;
@@ -183,33 +167,31 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
   if (tmp9) {
     tmp9 = claimableRewards.length > 0;
   }
-  c8 = tmp9;
+  closure_8 = tmp9;
   let tmp10 = null != claimableRewards;
   if (tmp10) {
     tmp10 = 1 === claimableRewards.length;
   }
-  c9 = tmp10;
-  const tmp11 = useShouldShowGiftingPromotionDeco();
+  closure_9 = tmp10;
+  const tmp11 = useShouldShowGiftingPromotionDecoDefault();
   let tmp12 = tmp11;
   if (tmp11) {
     tmp12 = null == selectedGiftingPromotionReward;
   }
-  c10 = tmp12;
+  closure_10 = tmp12;
   let tmpResult = tmp(9629);
   const config = tmpResult.useConfig({ location: "PremiumGiftPurchaseButton" });
   const GiftingBadgeExperiment = tmp4(9592).GiftingBadgeExperiment;
   let tmp4Result = tmp4(589);
   const items2 = [setSelectedGiftingPromotionReward];
   const stateFromStoresObject = tmp4Result.useStateFromStoresObject(items2, () => {
-    let getNextTier;
-    let getRemainingToNextTier;
     ({ getNextTier, getRemainingToNextTier } = setSelectedGiftingPromotionReward);
     return { nextTier: getNextTier(defaultSelection(_undefined[29]).BadgeId.GIFTING), giftsToNextTier: getRemainingToNextTier(defaultSelection(_undefined[29]).BadgeId.GIFTING) };
   });
   const nextTier = stateFromStoresObject.nextTier;
   const items3 = [tmp10, claimableRewards, setSelectedGiftingPromotionReward];
   const effect = React.useEffect(() => {
-    if (c9) {
+    if (closure_9) {
       setSelectedGiftingPromotionReward(claimableRewards[0]);
     }
   }, items3);
@@ -300,9 +282,9 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
         fn = () => {
           let obj = defaultSelection(_undefined[43]);
           obj.dismissKeyboard();
-          if (c10) {
-            if (c8) {
-              if (c8) {
+          if (closure_10) {
+            if (closure_8) {
+              if (closure_8) {
                 _undefined2(tmp(tmp2[30]).PaymentFlowStep.REWARD_SKU_SELECT);
                 obj = { defaultHighlightedReward: null, allRewards: null, claimableRewards: null, onSelect: null };
                 obj[0] = defaultSelection;
@@ -318,14 +300,14 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
                 obj[2] = items1;
                 obj[3] = function onSelect(arg0) {
                   callback(arg0);
-                  navigation.navigate(outer1_0(outer1_2[31]).PremiumGiftScreens.CUSTOMIZATION);
+                  navigation.navigate(closure_1_0(closure_1_2[31]).PremiumGiftScreens.CUSTOMIZATION);
                 };
                 navigation.navigate(tmp(tmp2[31]).PremiumGiftScreens.REWARD_SELECT, obj);
               }
             }
           }
           _undefined(() => {
-            navigation.navigate(outer1_0(outer1_2[31]).PremiumGiftScreens.SUCCESS);
+            navigation.navigate(closure_1_0(closure_1_2[31]).PremiumGiftScreens.SUCCESS);
           });
         };
       }
@@ -425,7 +407,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
           obj15[3] = intl2.string(tmp4(1236).t.bt75uw);
           obj15[4] = function onPress() {
             let tmp = selectedGiftingPromotionReward;
-            if (c8) {
+            if (closure_8) {
               _undefined2(defaultSelection(_undefined[30]).PaymentFlowStep.REWARD_SKU_SELECT);
               if (null == tmp) {
                 tmp = defaultSelection;
@@ -444,7 +426,7 @@ export default function PremiumGiftPurchaseButton(defaultSelection) {
               obj[2] = items1;
               obj[3] = function onSelect(arg0) {
                 callback(arg0);
-                navigation.navigate(outer1_0(outer1_2[31]).PremiumGiftScreens.CUSTOMIZATION);
+                navigation.navigate(closure_1_0(closure_1_2[31]).PremiumGiftScreens.CUSTOMIZATION);
               };
               navigation.navigate(defaultSelection(_undefined[31]).PremiumGiftScreens.REWARD_SELECT, obj);
               const tmp3 = defaultSelection;

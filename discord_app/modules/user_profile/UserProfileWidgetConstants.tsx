@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/UserProfileWidgetConstants.tsx
-import addApplication from "addApplication";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "addApplication" /* 4478 */;
 
-const require = arg1;
+require = arg1;
 const items = [require("WidgetType").WidgetType.PERSONAL, require("WidgetType").WidgetType.CLIPS_GALLERY, require("WidgetType").WidgetType.APPLICATION, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.PLAYED_GAMES, require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.WANT_TO_PLAY_GAMES];
 const items1 = [require("WidgetType").WidgetType.FAVORITE_GAMES];
 const items2 = [require("WidgetType").WidgetType.CURRENT_GAMES, require("WidgetType").WidgetType.FAVORITE_GAMES, require("WidgetType").WidgetType.CLIPS_GALLERY];
@@ -43,7 +43,7 @@ const obj = {
     return intl.string(getSystemLocale.t.zY8Ghg);
   }
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileWidgetConstants.tsx");
 
 export const WIDGET_SORT_ORDER = items;
 export const WIDGET_TITLES_BY_TYPE = obj;

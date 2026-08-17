@@ -1,62 +1,64 @@
 // discord_app/modules/native_permissions/NativePermissionBaseUtils.tsx
-import setPermission from "setPermission";
-import initialize from "initialize";
-import NativePermissionStatus from "NativePermissionStatus";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 4845 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 import { getSystemLocale } from "../../intl/index.native.tsx";
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ NativePermissionTypes: c5, NativePermissionStates: closure_6, NativePermissionStatus: error } = NativePermissionStatus);
 let NativePermissionBaseUtils;
 class NativePermissionBaseUtils {
   constructor() {
     obj = Object.create(new.target.prototype);
-    tmp2 = new initialize();
+    tmp2 = new closure_4();
     obj[0] = tmp2;
     return obj;
   }
 }
 const prototype = NativePermissionBaseUtils.prototype;
 prototype["requestAuthorization"] = function requestAuthorization(arg0, hasPermissionLookup, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = hasPermissionLookup;
-  let closure_2 = arg2;
+  closure_0 = arg0;
+  closure_1 = hasPermissionLookup;
+  closure_2 = arg2;
   const self = this;
-  return self(function*() {
-    let c1 = tmp5;
-    let closure_0 = tmp2;
-    if (typeof outer1_1 !== "function") {
-      const _Error = Error;
-      const _HermesInternal = HermesInternal;
-      const error = new Error("requestAuthorization: Was provided with not a function for " + outer1_0 + ".");
-      throw error;
-    }
-    const obj1 = { type: null };
-    obj1[0] = outer1_0;
-    outer1_1(obj[4]).track(outer1_8.PERMISSIONS_REQUESTED, obj1);
-    closure_0 = yield tmp46();
-    let tmp10 = closure_0 === outer1_7.AUTHORIZED;
-    if (!tmp10) {
-      tmp10 = closure_0 === outer1_7.LIMITED;
-    }
-    outer1_1 = tmp10;
-    if (outer1_1) {
-      let DENIED = tmp14.ACCEPTED;
-    } else {
-      DENIED = tmp14.DENIED;
-    }
-    obj.setPermission(closure_0, obj);
-    let showAuthorizationError = !outer1_1;
-    if (!outer1_1) {
-      showAuthorizationError = obj.showAuthorizationError;
-    }
-    if (showAuthorizationError) {
-      c3.showAlert(outer1_0);
-    }
-    return outer1_1;
+  return self(() => {
+    let DENIED = 0;
+    c3 = 0;
+    return (function*() {
+      c1 = tmp5;
+      closure_0 = tmp2;
+      if (typeof callback !== "function") {
+        const _Error = Error;
+        const _HermesInternal = HermesInternal;
+        error = new Error("requestAuthorization: Was provided with not a function for " + closure_1_0 + ".");
+        throw error;
+      }
+      obj1 = { type: null };
+      obj1[0] = closure_1_0;
+      callback(DENIED[4]).track(closure_1_8.PERMISSIONS_REQUESTED, obj1);
+      closure_0 = yield tmp46();
+      let tmp10 = closure_0 === closure_1_7.AUTHORIZED;
+      if (!tmp10) {
+        tmp10 = closure_0 === closure_1_7.LIMITED;
+      }
+      callback = tmp10;
+      if (callback) {
+        DENIED = tmp14.ACCEPTED;
+      } else {
+        DENIED = tmp14.DENIED;
+      }
+      const obj = callback(DENIED[5]);
+      obj.setPermission(closure_0, DENIED);
+      let showAuthorizationError = !callback;
+      if (!callback) {
+        showAuthorizationError = DENIED.showAuthorizationError;
+      }
+      if (showAuthorizationError) {
+        c3.showAlert(closure_1_0);
+      }
+      return callback;
+    })();
   })();
 };
 prototype["requestPermission"] = function requestPermission(arg0, arg1) {
@@ -65,10 +67,10 @@ prototype["requestPermission"] = function requestPermission(arg0, arg1) {
 prototype["hasPermission"] = function hasPermission(arg0, arg1) {
   return this.hasPermissionCore(arg0, NativePermissionBaseUtils.defaultNativePermissionsRequestOptions(arg1));
 };
-prototype["showAlert"] = function showAlert(outer1_0, arg1, arg2) {
+prototype["showAlert"] = function showAlert(closure_1_0, arg1, arg2) {
   let self = this;
   self = this;
-  const _require = outer1_0;
+  const _require = closure_1_0;
   const intl = _getSystemLocale.intl;
   const intl2 = _getSystemLocale.intl;
   const combined = "" + intl.string(_getSystemLocale.t["68G7fD"]) + ". " + intl2.string(_getSystemLocale.t["5Jvu1R"]);
@@ -89,7 +91,7 @@ prototype["showAlert"] = function showAlert(outer1_0, arg1, arg2) {
   const stringResult3 = intl7.string(_getSystemLocale.t.UIBqsS);
   const intl10 = _getSystemLocale.intl;
   obj[constants.CONTACTS] = "" + intl9.string(_getSystemLocale.t.kTtf7o) + ". " + intl10.string(_getSystemLocale.t["5Jvu1R"]);
-  if (null != obj[outer1_0]) {
+  if (null != obj[closure_1_0]) {
     obj = { title: null, body: null, onConfirm: null, cancelText: null, confirmText: null };
     const intl11 = tmp(1236).intl;
     obj[0] = intl11.string(tmp(1236).t.u1Gxpu);
@@ -115,6 +117,6 @@ NativePermissionBaseUtils["defaultNativePermissionsRequestOptions"] = function d
   }
   return tmp;
 };
-const result = require("NativePermissionStatus").fileFinishedImporting("modules/native_permissions/NativePermissionBaseUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionBaseUtils.tsx");
 
 export { NativePermissionBaseUtils };

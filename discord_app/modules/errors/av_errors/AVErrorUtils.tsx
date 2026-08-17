@@ -1,10 +1,11 @@
 // discord_app/modules/errors/av_errors/AVErrorUtils.tsx
-import updateAveragedStatsHelper from "updateAveragedStatsHelper";
-import { isIncomingVideoEnabled } from "../../../lib/WindowVisibilityVideoManager.tsx";
+import setDefault from "set" /* 687 */;
+import isIncomingVideoEnabled from "isIncomingVideoEnabled" /* 12450 */;
+import closure_2 from "updateAveragedStatsHelper" /* 4557 */;
 
-const require = arg1;
-let closure_3 = 10 * require("set").Millis.SECOND;
-let result = require("isIncomingVideoEnabled").fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
+require = arg1;
+let closure_3 = 10 * setDefault.Millis.SECOND;
+let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorUtils.tsx");
 
 export const getReportInboundErrors = function getReportInboundErrors() {
   const WindowVisibilityVideoManager = isIncomingVideoEnabled.WindowVisibilityVideoManager;

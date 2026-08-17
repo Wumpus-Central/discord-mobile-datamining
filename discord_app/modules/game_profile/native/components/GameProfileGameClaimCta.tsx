@@ -1,11 +1,11 @@
 // discord_app/modules/game_profile/native/components/GameProfileGameClaimCta.tsx
-import createHandoffTokenWithLoadingModal from "createHandoffTokenWithLoadingModal";
-import noop from "noop";
-import { RelativeMarketingURLs } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { RelativeMarketingURLs } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileGameClaimCta.tsx");
 
 export default function GameProfileGameClaimCta(trackAction) {
   trackAction = trackAction.trackAction;
@@ -39,12 +39,12 @@ export default function GameProfileGameClaimCta(trackAction) {
             obj[0] = arg1;
             return obj;
           } else {
-            v0(v0(outer1_2[4]).GameProfileTrackActionActions.ClaimGame);
-            let obj1 = v02(outer1_2[5]);
+            v0(v0(closure_1_2[4]).GameProfileTrackActionActions.ClaimGame);
+            obj1 = v02(closure_1_2[5]);
             v02 = 1;
             v0 = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj1.redirectDeveloperPortalWithHandoffToken(outer1_5.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
+            obj1[0] = obj1.redirectDeveloperPortalWithHandoffToken(closure_1_5.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
             return obj1;
           }
         } else if (arg0 === 1) {

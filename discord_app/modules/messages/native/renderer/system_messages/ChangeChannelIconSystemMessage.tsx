@@ -1,22 +1,20 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { result } from "../resolveMessageContentColors.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import resultDefault from "result" /* 8178 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-const result = require("getMessageAuthorWithProcessedColor").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChangeChannelIconSystemMessage.tsx");
 
 export const createChangeChannelIconSystemMessage = function createChangeChannelIconSystemMessage(message) {
-  let roleStyle;
-  let theme;
   message = message.message;
   ({ theme, roleStyle } = message);
-  const tmp3 = result(theme);
+  const tmp3 = resultDefault(theme);
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  const tmp6 = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle });
+  const tmp6 = formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle });
   channel = channel.getChannel(message.channel_id);
   let flag;
   if (channel != null) {
@@ -28,7 +26,7 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
   if (flag == null) {
     flag = false;
   }
-  const tmp8 = createCommonMessage(message);
+  const tmp8 = createCommonMessageDefault(message);
   const intl = tmp4(1236).intl;
   const formatToParts = intl.formatToParts;
   const t = tmp4(1236).t;
@@ -46,7 +44,7 @@ export const createChangeChannelIconSystemMessage = function createChangeChannel
     obj[2] = obj;
     let formatToPartsResult = formatToParts(t.hfeYXC, obj);
   } else {
-    const obj1 = { username: null, usernameOnClick: null };
+    obj1 = { username: null, usernameOnClick: null };
     obj1[0] = messageAuthorWithProcessedColor.nick;
     obj1[1] = tmp6;
     formatToPartsResult = formatToParts(t.wypJZ0, obj1);

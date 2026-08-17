@@ -1,14 +1,13 @@
 // discord_app/design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx
-import { jsx } from "jsxProd";
-import { vanityUrl } from "../../../../../../discord_assets/assets/mana/asset-library/generated/GiftingTier4SmallBadge-2x.png.js";
-import { preload } from "../../../../../components_native/common/FastImage.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import preloadDefault from "preload" /* 5449 */;
+import vanityUrlDefault from "vanityUrl" /* 5871 */;
 
-const result = require("vanityUrl").fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("design/components/mana-assets/native/generated/GiftingTier4SmallBadge.native.tsx");
 
 export const GiftingTier4SmallBadge = function GiftingTier4SmallBadge(width) {
-  let accessibilityLabel;
-  let accessible;
-  let resizeMode;
   let num = width.width;
   ({ accessible, accessibilityLabel, resizeMode } = width);
   if (num === undefined) {
@@ -23,8 +22,7 @@ export const GiftingTier4SmallBadge = function GiftingTier4SmallBadge(width) {
     num3 = 1;
   }
   let obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj = { uri: null };
-  obj[0] = vanityUrl;
+  obj = { uri: vanityUrlDefault };
   obj[1] = obj;
   obj = { width: num * num3, height: num2 * num3 };
   const items = [obj];
@@ -32,5 +30,5 @@ export const GiftingTier4SmallBadge = function GiftingTier4SmallBadge(width) {
   obj[3] = accessible;
   obj[4] = accessibilityLabel;
   obj[5] = resizeMode;
-  return jsx(preload, { width: num * num3, height: num2 * num3 });
+  return jsx(preloadDefault, { width: num * num3, height: num2 * num3 });
 };

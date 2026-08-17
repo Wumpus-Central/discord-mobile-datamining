@@ -1,11 +1,10 @@
 // discord_app/utils/RTCConnectionUtils.tsx
-import ME from "ME";
-import { getSystemLocale } from "../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ RTCConnectionStates: obj1, ConnectionStatus: c3 } = ME);
-const result = require("set").fileFinishedImporting("utils/RTCConnectionUtils.tsx");
+const result = set.fileFinishedImporting("utils/RTCConnectionUtils.tsx");
 
 export default {
   getStatus(arg0) {

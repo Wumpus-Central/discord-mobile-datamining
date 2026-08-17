@@ -1,28 +1,17 @@
 // discord_app/modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort";
-import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { isGuildScheduledEventActive as closure_6 } from "scheduledEventSort" /* 4370 */;
+import { GuildScheduledEventEntityTypes as closure_7 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ error: { paddingVertical: 8 } });
-let result = require("scheduledEventSort").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/EditGuildEventDetails.tsx");
 
 export default function EditGuildEventDetails(guildEvent) {
-  let c11;
-  let c7;
-  let c8;
-  let description;
-  let entityType;
-  let name;
-  let scheduledStartTime;
-  let tmp12;
   guildEvent = guildEvent.guildEvent;
   const onChange = guildEvent.onChange;
   scheduledStartTime = undefined;
@@ -33,9 +22,9 @@ export default function EditGuildEventDetails(guildEvent) {
   let constants;
   let callback;
   let ref;
-  let c10;
+  closure_10 = undefined;
   let callback2;
-  let closure_12;
+  closure_12 = undefined;
   ({ description, scheduledStartTime } = guildEvent);
   scheduledEndTime = guildEvent.scheduledEndTime;
   recurrenceRule = guildEvent.recurrenceRule;
@@ -61,7 +50,7 @@ export default function EditGuildEventDetails(guildEvent) {
   const memo5 = memo.useMemo(() => onChange(scheduledEndTime[7])().add(guildEvent(scheduledEndTime[8]).MAX_DAYS_AHEAD_AN_EVENT_CAN_END, "days"), []);
   ref = memo.useRef(null);
   const tmp10 = memo1(guildEvent.initialGuildEvent);
-  c10 = tmp10;
+  closure_10 = tmp10;
   const tmp4 = recurrenceRule(memo.useState(() => guildEvent(scheduledEndTime[8]).recurrenceRuleToOption(onChange(scheduledEndTime[7])(scheduledStartTime), recurrenceRule)), 2);
   [tmp12, c11] = recurrenceRule(memo.useState(null), 2);
   let obj = guildEvent(scheduledEndTime[9]);
@@ -75,7 +64,7 @@ export default function EditGuildEventDetails(guildEvent) {
   }
   obj = { children: null };
   const items3 = [tmp17, ];
-  const obj1 = { text: null, variant: "primary", onPress: null, disabled: null };
+  obj1 = { text: null, variant: "primary", onPress: null, disabled: null };
   let intl = tmp13(tmp14[6]).intl;
   obj1[0] = intl.string(guildEvent(scheduledEndTime[6]).t.PDTjLN);
   obj1[2] = function onPress() {
@@ -86,7 +75,7 @@ export default function EditGuildEventDetails(guildEvent) {
         if (0 === guildEvent.name.length) {
           const _Error = Error;
           const intl = callback(1236).intl;
-          const error = new Error(intl.string(callback(1236).t.GoV0uR));
+          error = new Error(intl.string(callback(1236).t.GoV0uR));
           throw error;
         }
       })(guildEvent);
@@ -102,8 +91,8 @@ export default function EditGuildEventDetails(guildEvent) {
   obj[0] = items3;
   const tmp11 = recurrenceRule(memo.useState(null), 2);
   const tmp16 = ref;
-  let obj2 = { action: c10(ref, obj), ref, children: null };
-  const tmp15Result = c10(ref, obj);
+  let obj2 = { action: closure_10(ref, obj), ref, children: null };
+  const tmp15Result = closure_10(ref, obj);
   const obj3 = { title: null, subtitle: null };
   const tmp21 = onChange(scheduledEndTime[15]);
   const intl2 = tmp13(tmp14[6]).intl;
@@ -127,7 +116,7 @@ export default function EditGuildEventDetails(guildEvent) {
   const obj5 = {
     date: memo,
     onChange(toISOString) {
-      if (c10) {
+      if (closure_10) {
         const intl = guildEvent(scheduledEndTime[6]).intl;
         return _undefined2(intl.string(guildEvent(scheduledEndTime[6]).t.nKIaRG));
       } else {
@@ -214,5 +203,5 @@ export default function EditGuildEventDetails(guildEvent) {
     }
   });
   obj2[2] = items4;
-  return c10(tmp21, obj2);
+  return closure_10(tmp21, obj2);
 };

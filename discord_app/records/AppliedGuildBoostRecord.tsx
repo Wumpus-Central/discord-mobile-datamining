@@ -1,6 +1,7 @@
 // discord_app/records/AppliedGuildBoostRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let prototype;
 prototype = function AppliedGuildBoostRecord(endsAt) {
   const tmp = new prototype(new.target, endsAt, new.target);
@@ -16,8 +17,6 @@ prototype = function AppliedGuildBoostRecord(endsAt) {
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(user) {
-  let guild_id;
-  let id;
   ({ id, guild_id } = user);
   if (null != user.user) {
     let user_id = user.user.id;

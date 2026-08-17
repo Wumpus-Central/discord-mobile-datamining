@@ -1,41 +1,39 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/ChangeSubscriptionCard.tsx
-import _slicedToArray from "_slicedToArray";
-import "set";
-import { View } from "asyncRequireImpl";
-import { SubscriptionStatusTypes } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { t } from "../../../../../_runtime/03975_t.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import tDefault from "t" /* 3975 */;
+import Text from "Text" /* 4734 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { SubscriptionStatusTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function emphasisHook(children) {
   return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", children });
 }
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+noopAll;
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { paddingVertical: 16, paddingHorizontal: 24, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { paddingVertical: 16, paddingHorizontal: 24, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/ChangeSubscriptionCard.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/ChangeSubscriptionCard.tsx");
 
 export default function ChangeSubscriptionCard(activeSubscription) {
-  let activeListingId;
-  let changeToListingId;
   activeSubscription = activeSubscription.activeSubscription;
   ({ activeListingId, changeToListingId } = activeSubscription);
-  let obj = importAll(14573);
+  let obj = getRoleEmojisAll;
   const first = callback(obj.useName(activeListingId), 1)[0];
-  let obj1 = importAll(14573);
-  let obj2 = t(activeSubscription.currentPeriodEnd);
-  const tmp = createCacheKey();
+  obj1 = getRoleEmojisAll;
+  let obj2 = tDefault(activeSubscription.currentPeriodEnd);
+  const tmp = callback4();
   obj = { style: items, children: null };
   items = [tmp.container, ];
-  obj = { paddingBottom: 16 + useSafeAreaInsets().bottom };
+  obj = { paddingBottom: 16 + useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = activeSubscription(1236).intl;
@@ -58,10 +56,10 @@ export default function ChangeSubscriptionCard(activeSubscription) {
     const intl4 = tmp6(1236).intl;
     obj6[0] = intl4.string(tmp6(1236).t.UwHVxr);
     obj6[1] = function onPress() {
-      let obj = outer1_1(outer1_3[15]);
+      let obj = closure_1_1(closure_1_3[15]);
       obj = { subscriptionId: activeSubscription.id };
-      obj.pushLazy(activeSubscription(outer1_3[17])(outer1_3[16], outer1_3.paths), obj);
-      outer1_1(outer1_3[18]).hideActionSheet();
+      obj.pushLazy(activeSubscription(closure_1_3[17])(closure_1_3[16], closure_1_3.paths), obj);
+      closure_1_1(closure_1_3[18]).hideActionSheet();
     };
     items3[1] = tmp5(tmp6(15797).ArrowButton, obj6);
     obj5[0] = items3;

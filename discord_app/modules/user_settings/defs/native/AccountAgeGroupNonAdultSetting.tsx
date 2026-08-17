@@ -1,17 +1,19 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import { AgeVerificationModalEntryPoint } from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
-import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const pressable = createToggle.createPressable({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
     const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
     const intl = getSystemLocale.intl;
@@ -23,7 +25,7 @@ const pressable = createToggle.createPressable({
     return stringResult;
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    let obj = openIncodeAgeVerificationModal;
+    let obj = openIncodeAgeVerificationModalDefault;
     obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
@@ -49,7 +51,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountAgeGroupNonAdultSettingTrailing() {
     const isAgeVerified = useAgeVerificationRunner.useIsAgeVerified();
     const intl = getSystemLocale.intl;
@@ -61,7 +63,7 @@ let obj = {
     return stringResult;
   },
   onPress: function onAccountAgeGroupNonAdultSettingPress() {
-    let obj = openIncodeAgeVerificationModal;
+    let obj = openIncodeAgeVerificationModalDefault;
     obj = { entryPoint: AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.ACCOUNT_AGE_GROUP };
     const result = obj.showAgeVerificationGetStartedModal(obj);
   },
@@ -82,6 +84,6 @@ let obj = {
     return hasTeenDefaults;
   }
 };
-let result = require("AgeVerificationModalEntryPoint").fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupNonAdultSetting.tsx");
 
 export default pressable;

@@ -1,13 +1,15 @@
 // discord_app/modules/dismissible_content/DismissibleContentShownStateStore.tsx
-import handleUpdateUser from "handleUpdateUser";
-import handleRequiredAction from "handleRequiredAction";
-import identity from "identity";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import batchUpdates from "batchUpdates" /* 705 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isActionRequiredDefault from "isActionRequired" /* 1387 */;
+import closure_3 from "handleUpdateUser" /* 1384 */;
+import closure_4 from "handleRequiredAction" /* 1385 */;
+import identity from "identity" /* 700 */;
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { isActionRequired } from "../core/isActionRequired.tsx";
 import { set } from "DismissibleContentFatigueConfig.tsx";
 
-const require = arg1;
+require = arg1;
 function withContent(currentlyShown, content) {
   const _require = content;
   if (null == content) {
@@ -169,9 +171,7 @@ function withUpdateWinner(candidates) {
 }
 const taskRunner = new require("schedule").TaskRunner();
 let closure_6 = identity.createWithEqualityFn(function initState() {
-  const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
-  obj[0] = new Map();
-  obj[3] = [];
+  const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
   const map = new Map();
   obj[4] = new Set();
   const set = new Set();
@@ -179,26 +179,25 @@ let closure_6 = identity.createWithEqualityFn(function initState() {
   return obj;
 });
 let c7 = false;
+const Store = initializeDefault.Store;
 class DismissibleContentShownStateStore extends Store {
 }
 const prototype = DismissibleContentShownStateStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  this.waitFor(handleUpdateUser, handleRequiredAction);
-  const items = [handleUpdateUser, handleRequiredAction];
+  this.waitFor(closure_3, closure_4);
+  const items = [closure_3, closure_4];
   this.syncWith(items, () => self.setHasRequiredAction());
 };
 prototype["setHasRequiredAction"] = function setHasRequiredAction() {
-  let closure_7 = isActionRequired(handleUpdateUser, handleRequiredAction);
+  closure_7 = isActionRequiredDefault(closure_3, closure_4);
 };
 DismissibleContentShownStateStore.displayName = "DismissibleContentShownStateStore";
 identity = {
   CONNECTION_OPEN() {
     batchUpdates.batchUpdates(() => {
       state.setState(() => {
-        const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
-        obj[0] = new Map();
-        obj[3] = [];
+        const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
         obj[4] = new Set();
         const set = new Set();
@@ -212,9 +211,7 @@ identity = {
   LOGOUT() {
     batchUpdates.batchUpdates(() => {
       state.setState(() => {
-        const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
-        obj[0] = new Map();
-        obj[3] = [];
+        const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
         const map = new Map();
         obj[4] = new Set();
         const set = new Set();
@@ -226,8 +223,8 @@ identity = {
     taskRunner.unschedule();
   }
 };
-const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(require("dispatcher"), identity);
-let result = require("schedule").fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
+const dismissibleContentShownStateStore = new DismissibleContentShownStateStore(dispatcherDefault, identity);
+let result = require("set").fileFinishedImporting("modules/dismissible_content/DismissibleContentShownStateStore.tsx");
 
 export default function useDismissibleContentShownStateStore(arg0, arg1) {
   return store(arg0, arg1);
@@ -252,9 +249,9 @@ export const isStateInCooldown = function isStateInCooldown(shownFatigableCandid
 export const addCandidateContent = function addCandidateContent(content) {
   const _require = content;
   const CONTENT_TYPES_WITH_BYPASS_FATIGUE = _set.CONTENT_TYPES_WITH_BYPASS_FATIGUE;
-  let closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
+  closure_1 = CONTENT_TYPES_WITH_BYPASS_FATIGUE.has(content.content);
   _batchUpdates.batchUpdates(() => {
-    outer1_6.setState((candidates) => {
+    closure_1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
       obj.candidates = new Map(candidates.candidates);
@@ -262,13 +259,13 @@ export const addCandidateContent = function addCandidateContent(content) {
       obj.currentlyShown = new Set(candidates.currentlyShown);
       const set = new Set(candidates.currentlyShown);
       obj.currentlyShownGroup = new Set(candidates.currentlyShownGroup);
-      if (!outer1_7) {
+      if (!closure_1_7) {
         if (closure_1) {
-          outer1_8(obj, content);
+          closure_1_8(obj, content);
         } else {
           candidates = obj.candidates;
           const result = candidates.set(content.content, content);
-          outer1_9(obj);
+          closure_1_9(obj);
         }
       }
       return obj;
@@ -277,9 +274,9 @@ export const addCandidateContent = function addCandidateContent(content) {
 };
 export const removeCandidateContent = function removeCandidateContent(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   _batchUpdates.batchUpdates(() => {
-    outer1_6.setState((candidates) => {
+    closure_1_6.setState((candidates) => {
       const obj = {};
       const merged = Object.assign(candidates);
       obj.candidates = new Map(candidates.candidates);
@@ -308,8 +305,8 @@ export const removeCandidateContent = function removeCandidateContent(arg0, arg1
             obj.shownFatigableCandidate = null;
           }
         }
-        outer1_9(obj);
-        const tmp11 = outer1_9;
+        closure_1_9(obj);
+        const tmp11 = closure_1_9;
       } else {
         candidates = obj.candidates;
         candidates.delete(closure_0.content);
@@ -359,16 +356,16 @@ export const isContentShown = function isContentShown(DOUBLE_TAP_TO_REACT_EXPAND
   return currentlyShown.has(DOUBLE_TAP_TO_REACT_EXPANDED_UPSELL);
 };
 export const useIsContentShown = function useIsContentShown(USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) {
-  let closure_0 = USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS;
+  closure_0 = USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS;
   return store((currentlyShown) => {
     currentlyShown = currentlyShown.currentlyShown;
     return currentlyShown.has(closure_0);
   });
 };
 export const useIsAnyContentShown = function useIsAnyContentShown(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return store((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return closure_0.some((arg0) => {
       currentlyShown = currentlyShown.currentlyShown;
       return currentlyShown.has(arg0);
@@ -393,9 +390,7 @@ export const getCurrentlyShownCounts = function getCurrentlyShownCounts() {
 export const reset = function reset() {
   batchUpdates.batchUpdates(() => {
     state.setState(() => {
-      const obj = { candidates: null, shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: null, currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
-      obj[0] = new Map();
-      obj[3] = [];
+      const obj = { candidates: new Map(), shownFatigableCandidate: null, prevFatigableCandidate: null, recentlyShown: [], currentlyShown: null, currentlyShownGroup: null, lastWinnerTime: 0, postConnectionOpen: false };
       const map = new Map();
       obj[4] = new Set();
       const set = new Set();

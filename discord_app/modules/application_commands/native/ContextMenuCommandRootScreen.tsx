@@ -1,27 +1,23 @@
 // discord_app/modules/application_commands/native/ContextMenuCommandRootScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import FastestList.android from "../../fastest_list/FastestList.android.tsx";
-import { View } from "ContextMenuCommandItem";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import TRUE_OPTION_NAME from "TRUE_OPTION_NAME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: metroImportAll, BuiltInSectionId: c9 } = TRUE_OPTION_NAME);
+({ CONTEXT_MENU_COMMANDS_QUERY_LIMIT: closure_8, BuiltInSectionId: c9 } = TRUE_OPTION_NAME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { content: null, sectionHeader: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
+createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ContextMenuCommandRootScreen.tsx");
 
 export default function ContextMenuCommandRootScreen(navigation) {
   navigation = navigation.navigation;
@@ -31,8 +27,8 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const onPressAppCommand = params.onPressAppCommand;
   const onClose = params.onClose;
   let stateFromStores;
-  let closure_6;
-  let c7;
+  closure_6 = undefined;
+  closure_7 = undefined;
   let commands;
   let commandsByActiveSection;
   let sectionDescriptors;
@@ -43,21 +39,21 @@ export default function ContextMenuCommandRootScreen(navigation) {
   let frecencyItems;
   let appItems;
   let memo1;
-  let c18;
-  let c19;
+  closure_18 = undefined;
+  c19 = undefined;
   let scaledTextLineHeight;
   let obj = navigation(onPressAppCommand[8]);
-  let items = [c7];
-  stateFromStores = obj.useStateFromStores(items, () => _undefined.getGuild(channel.guild_id));
-  let obj1 = stateFromStores;
+  let items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => guild.getGuild(channel.guild_id));
+  obj1 = stateFromStores;
   closure_6 = stateFromStores.useRef(false);
   const tmp4 = onClose(stateFromStores.useState(""), 2);
   const first = tmp4[0];
-  c7 = tmp6;
+  closure_7 = tmp6;
   let items1 = [navigation, onClose];
   const effect = stateFromStores.useEffect(() => navigation.addListener("beforeRemove", () => {
     if (!ref.current) {
-      if (_slicedToArray != null) {
+      if (closure_4 != null) {
         tmp();
       }
     }
@@ -84,7 +80,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   loading = discovery.loading;
   let items3 = [sectionDescriptors];
   sections = obj1.useMemo(() => {
-    const sections = {};
+    sections = {};
     const item = sectionDescriptors.forEach((id) => {
       sections[id.id] = id;
     });
@@ -107,7 +103,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   }, items4);
   let items5 = [commandsByActiveSection, navigation, callback];
   callback1 = obj1.useCallback((section) => {
-    const navigation = section;
+    navigation = section;
     const found = commandsByActiveSection.find((section) => section.section.id === section.id);
     let data;
     if (found != null) {
@@ -154,7 +150,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
         const items2 = [{ type: "no_commands" }];
         const items3 = [items2];
         return items3;
-      } else if (c7) {
+      } else if (closure_7) {
         const items4 = [arr.map((command) => ({ type: "command", command }))];
         return items4;
       } else {
@@ -172,7 +168,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const items8 = [memo1];
   const memo2 = obj1.useMemo(() => memo1.map((arg0) => arg0.length), items8);
   const tmp18 = callback();
-  c18 = tmp18;
+  closure_18 = tmp18;
   c19 = "text-sm/semibold";
   const tmp16 = channel(onPressAppCommand[13])();
   scaledTextLineHeight = navigation(onPressAppCommand[14]).useScaledTextLineHeight("text-sm/semibold");
@@ -181,7 +177,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   const callback2 = obj1.useCallback((arg0) => {
     if (!loading) {
       if (0 !== commands.length) {
-        if (!c7) {
+        if (!closure_7) {
           if (0 === arg0) {
             if (frecencyItems.length > 0) {
               const intl2 = navigation(onPressAppCommand[15]).intl;
@@ -189,7 +185,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
             }
             const obj = { variant: null, color: "text-default", style: null, children: null };
             obj[0] = c19;
-            obj[2] = _undefined2.sectionHeader;
+            obj[2] = closure_18.sectionHeader;
             obj[3] = stringResult;
             return sectionDescriptors(navigation(onPressAppCommand[16]).Text, obj);
           }
@@ -202,7 +198,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
   }, items9);
   const items11 = [loading, commands.length, "" !== first, scaledTextLineHeight, tmp18.sectionHeader.paddingTop, tmp18.sectionHeader.paddingBottom];
   const callback3 = obj1.useCallback((arg0, arg1) => {
-    const navigation = tmp;
+    closure_0 = tmp;
     const type = tmp.type;
     if ("placeholder" === type) {
       let obj = { start: null, end: null };
@@ -215,10 +211,10 @@ export default function ContextMenuCommandRootScreen(navigation) {
       obj[1] = tmp3;
       return sectionDescriptors(navigation(onPressAppCommand[17]).ContextMenuCommandEmptyItem, obj, "no_commands");
     } else if ("command" === type) {
-      const obj1 = { item: null, onPress: null, section: null, start: null, end: null };
+      obj1 = { item: null, onPress: null, section: null, start: null, end: null };
       obj1[0] = tmp.command;
       obj1[1] = function onPress() {
-        return outer1_13(tmp.command);
+        return closure_1_13(closure_0.command);
       };
       obj1[2] = sections[tmp.command.applicationId];
       obj1[3] = tmp2;
@@ -228,7 +224,7 @@ export default function ContextMenuCommandRootScreen(navigation) {
       obj = { section: null, onPress: null, start: null, end: null };
       obj[0] = tmp.section;
       obj[1] = function onPress() {
-        return outer1_14(tmp.section);
+        return closure_1_14(closure_0.section);
       };
       obj[2] = tmp2;
       obj[3] = tmp3;
@@ -242,8 +238,8 @@ export default function ContextMenuCommandRootScreen(navigation) {
       num = 0;
       if (0 !== commands.length) {
         num = 0;
-        if (!c7) {
-          num = scaledTextLineHeight + _undefined2.sectionHeader.paddingTop + _undefined2.sectionHeader.paddingBottom;
+        if (!closure_7) {
+          num = scaledTextLineHeight + closure_18.sectionHeader.paddingTop + closure_18.sectionHeader.paddingBottom;
         }
       }
     }

@@ -1,10 +1,10 @@
 // discord_app/modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "BoostedGuildTiers";
-import { GuildFeatures } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "calculateAppliedBoosts" /* 4261 */;
+import { GUILD_POWERUP_TIER_3_OVERRIDDEN_SKUS as closure_7 } from "BoostedGuildTiers" /* 4262 */;
+import { GuildFeatures } from "ME" /* 676 */;
 
 const require = arg1;
 let obj = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_POWERUP_LEVEL_1_SKU_ID, threshold: 1 };
@@ -21,21 +21,21 @@ items[5] = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_F
 const obj3 = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_FLEX_POWERUP_SKU_ID, threshold: 1 };
 items[6] = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
 const obj4 = { skuId: require("VANITY_URL_POWERUP_SKU_ID").GUILD_TAGS_BADGE_PACK_PETS_POWERUP_SKU_ID, threshold: 1 };
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useBoostToUnlockFeaturedPowerup.tsx");
 
 export default function useBoostToUnlockFeaturedPowerup(arg0) {
   const _require = arg0;
-  let items = [calculateAppliedBoosts];
-  const stateFromStores = _require(available[7]).useStateFromStores(items, () => outer1_6.getStateForGuild(closure_0));
+  items = [closure_6];
+  const stateFromStores = _require(available[7]).useStateFromStores(items, () => closure_1_6.getStateForGuild(closure_0));
   available = stateFromStores(available[8])(arg0).available;
   const obj = _require(available[7]);
-  const items1 = [createGuildRecordFromRust];
+  const items1 = [closure_5];
   const stateFromStores1 = _require(available[7]).useStateFromStores(items1, () => {
-    const guild = outer1_5.getGuild(closure_0);
+    const guild = closure_1_5.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(outer1_8.PREMIUM_TIER_3_OVERRIDE);
+      hasItem = features.has(closure_1_8.PREMIUM_TIER_3_OVERRIDE);
     }
     return true === hasItem;
   });
@@ -44,8 +44,8 @@ export default function useBoostToUnlockFeaturedPowerup(arg0) {
   return first.useMemo(() => {
     if (null != stateFromStores) {
       const unlockedPowerups = stateFromStores.unlockedPowerups;
-      const items = [];
-      const iter = outer1_9[Symbol.iterator]();
+      items = [];
+      const iter = closure_1_9[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let skuId = nextResult.skuId;
@@ -77,7 +77,7 @@ export default function useBoostToUnlockFeaturedPowerup(arg0) {
               }
             }
           } else {
-            let tmp8 = outer1_7;
+            let tmp8 = closure_1_7;
             let tmp9 = skuId;
           }
         }
@@ -87,7 +87,7 @@ export default function useBoostToUnlockFeaturedPowerup(arg0) {
         const _Math = Math;
         return items[Math.floor(Math, first * items.length)];
       }
-      const tmp24 = outer1_9;
+      const tmp24 = closure_1_9;
     }
   }, items2);
 };

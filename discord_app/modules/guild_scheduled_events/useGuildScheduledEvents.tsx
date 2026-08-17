@@ -1,45 +1,40 @@
 // discord_app/modules/guild_scheduled_events/useGuildScheduledEvents.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import scheduledEventSort from "scheduledEventSort";
-import closure_9 from "scheduledEventSort";
-import initialize from "initialize";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import ME from "ME";
+import setDefault from "set" /* 687 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
+import closure_9 from "scheduledEventSort" /* 4370 */;
+import closure_10 from "initialize" /* 8892 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-let closure_12;
-let closure_14;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ isGuildScheduledEventActive: error, StaticGuildEventIndexes: metroImportAll } = scheduledEventSort);
+({ isGuildScheduledEventActive: error, StaticGuildEventIndexes: closure_8 } = scheduledEventSort);
 ({ GuildScheduledEventEntityTypes: unpackModuleId, GuildScheduledEventStatus: closure_12 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = ME);
 let closure_15 = [];
-let closure_16 = 15 * require("set").Millis.MINUTE;
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEvents.tsx");
+let closure_16 = 15 * setDefault.Millis.MINUTE;
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useGuildScheduledEvents.tsx");
 
 export default function useGuildEvents(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  const items = [createGuildRecordFromRust, closure_9, getUncachedChannelPermissions, ensureGuildLoaded];
+  dependencyMap = arg1;
+  const items = [closure_5, closure_9, closure_6, closure_4];
   const items1 = [arg1, arg0];
   return _initialize.useStateFromStoresArray(items, () => {
-    const guild = outer1_5.getGuild(closure_0);
+    const guild = closure_1_5.getGuild(closure_0);
     if (null == guild) {
-      let found = outer1_15;
+      let found = closure_1_15;
     } else {
       let GUILD_EVENT_UPCOMINGResult = closure_1;
       if (closure_1 == null) {
-        GUILD_EVENT_UPCOMINGResult = outer1_8.GUILD_EVENT_UPCOMING(guild.id);
+        GUILD_EVENT_UPCOMINGResult = closure_1_8.GUILD_EVENT_UPCOMING(guild.id);
       }
-      const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
+      const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(GUILD_EVENT_UPCOMINGResult);
       found = guildScheduledEventsByIndex.filter((channel_id) => {
         channel_id = channel_id.channel_id;
         if (null == channel_id) {
@@ -48,7 +43,7 @@ export default function useGuildEvents(arg0, arg1) {
           basicChannel = basicChannel.getBasicChannel(channel_id);
           let canBasicChannelResult = null != basicChannel;
           if (canBasicChannelResult) {
-            canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
+            canBasicChannelResult = closure_6.canBasicChannel(constants.VIEW_CHANNEL, basicChannel);
           }
           return canBasicChannelResult;
         }
@@ -59,12 +54,12 @@ export default function useGuildEvents(arg0, arg1) {
 };
 export const useActiveEvent = function useActiveEvent(id) {
   const _require = id;
-  const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
+  const items = [closure_9, closure_4, closure_6];
   const items1 = [id];
   return _initialize.useStateFromStores(items, () => {
-    const basicChannel = outer1_4.getBasicChannel(closure_0);
+    const basicChannel = closure_1_4.getBasicChannel(closure_0);
     if (null != basicChannel) {
-      if (outer1_6.canBasicChannel(outer1_13.VIEW_CHANNEL, basicChannel)) {
+      if (closure_1_6.canBasicChannel(closure_1_13.VIEW_CHANNEL, basicChannel)) {
         let guild_id;
         if (basicChannel != null) {
           guild_id = basicChannel.guild_id;
@@ -72,7 +67,7 @@ export const useActiveEvent = function useActiveEvent(id) {
         if (null == guild_id) {
           return null;
         } else {
-          const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_ACTIVE(closure_0));
+          const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.CHANNEL_EVENT_ACTIVE(closure_0));
           let first = null;
           if (guildScheduledEventsByIndex.length > 0) {
             first = guildScheduledEventsByIndex[0];
@@ -88,7 +83,7 @@ export const useActiveEventsByChannel = function useActiveEventsByChannel(arg0) 
   const _require = arg0;
   const items = [closure_9];
   const items1 = [arg0];
-  stateFromStoresArray = _require(stateFromStoresArray[10]).useStateFromStoresArray(items, () => outer1_9.getGuildScheduledEventsForGuild(closure_0), items1);
+  stateFromStoresArray = _require(stateFromStoresArray[10]).useStateFromStoresArray(items, () => closure_1_9.getGuildScheduledEventsForGuild(closure_0), items1);
   const items2 = [stateFromStoresArray];
   return React.useMemo(() => {
     const map = new Map();
@@ -103,10 +98,10 @@ export const useActiveEventsByChannel = function useActiveEventsByChannel(arg0) 
 };
 export const useGuildUpcomingEvents = function useGuildUpcomingEvents(arg0) {
   const _require = arg0;
-  const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
+  const items = [closure_9, closure_4, closure_6];
   const items1 = [arg0];
   return _initialize.useStateFromStoresArray(items, () => {
-    const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_UPCOMING(closure_0));
+    const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_UPCOMING(closure_0));
     return guildScheduledEventsByIndex.filter((entity_type) => {
       if (entity_type.entity_type !== constants.NONE) {
         if (entity_type.status === constants2.SCHEDULED) {
@@ -116,7 +111,7 @@ export const useGuildUpcomingEvents = function useGuildUpcomingEvents(arg0) {
             basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
             let canBasicChannelResult = null != basicChannel;
             if (canBasicChannelResult) {
-              canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+              canBasicChannelResult = closure_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
             }
             return canBasicChannelResult;
           }
@@ -131,10 +126,10 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
   let tmp8;
   const _require = arg0;
   let obj = _require(stateFromStoresArray[10]);
-  const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
+  const items = [closure_9, closure_4, closure_6];
   const items1 = [arg0];
   stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
-    const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_UPCOMING(closure_0));
+    const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_UPCOMING(closure_0));
     return guildScheduledEventsByIndex.filter((entity_type) => {
       if (entity_type.entity_type !== constants.NONE) {
         if (entity_type.status === constants2.SCHEDULED) {
@@ -144,7 +139,7 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
             basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
             let canBasicChannelResult = null != basicChannel;
             if (canBasicChannelResult) {
-              canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
+              canBasicChannelResult = closure_6.canBasicChannel(constants3.VIEW_CHANNEL, basicChannel);
             }
             return canBasicChannelResult;
           }
@@ -153,10 +148,10 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
       return false;
     });
   }, items1);
-  const items2 = [initialize];
+  const items2 = [closure_10];
   const stateFromStoresObject = _require(stateFromStoresArray[10]).useStateFromStoresObject(items2, () => store.getAllEventDismissals());
   const obj2 = _require(stateFromStoresArray[10]);
-  const items3 = [initialize];
+  const items3 = [closure_10];
   const stateFromStoresObject1 = _require(stateFromStoresArray[10]).useStateFromStoresObject(items3, () => store.getAllUpcomingNoticeSeenTimes());
   const obj3 = _require(stateFromStoresArray[10]);
   const items4 = [closure_9];
@@ -177,8 +172,8 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
     return reduced;
   }, items5);
   const obj4 = _require(stateFromStoresArray[10]);
-  const items6 = [createGuildRecordFromRust];
-  const stateFromStores = _require(stateFromStoresArray[10]).useStateFromStores(items6, () => outer1_5.getGuild(closure_0));
+  const items6 = [closure_5];
+  const stateFromStores = _require(stateFromStoresArray[10]).useStateFromStores(items6, () => closure_1_5.getGuild(closure_0));
   let hasItem = null != stateFromStores;
   if (hasItem) {
     const features = stateFromStores.features;
@@ -228,10 +223,10 @@ export const useGuildUpcomingEventsNotice = function useGuildUpcomingEventsNotic
 };
 export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
   const _require = guild_id;
-  const items = [closure_9, ensureGuildLoaded, getUncachedChannelPermissions];
+  const items = [closure_9, closure_4, closure_6];
   const items1 = [guild_id];
   return _initialize.useStateFromStores(items, () => {
-    const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_ACTIVE(closure_0));
+    const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_ACTIVE(closure_0));
     return guildScheduledEventsByIndex.find((entity_type) => {
       if (entity_type.entity_type !== constants.NONE) {
         if (callback(entity_type)) {
@@ -241,7 +236,7 @@ export const useGuildActiveEvent = function useGuildActiveEvent(guild_id) {
             basicChannel = basicChannel.getBasicChannel(entity_type.channel_id);
             let canBasicChannelResult = null != basicChannel;
             if (canBasicChannelResult) {
-              canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
+              canBasicChannelResult = closure_6.canBasicChannel(constants2.VIEW_CHANNEL, basicChannel);
             }
             return canBasicChannelResult;
           }
@@ -255,31 +250,29 @@ export const useGuildChannelScheduledEvents = function useGuildChannelScheduledE
   const _require = id;
   const items = [closure_9];
   const items1 = [id];
-  return _initialize.useStateFromStores(items, () => outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
+  return _initialize.useStateFromStores(items, () => closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.CHANNEL_EVENT_UPCOMING(closure_0)), items1);
 };
 export const useFirstActiveEventChannel = function useFirstActiveEventChannel(id) {
   const _require = id;
-  const items = [ensureGuildLoaded, closure_9];
+  const items = [closure_4, closure_9];
   const items1 = [id];
   return _initialize.useStateFromStores(items, () => {
-    const guildScheduledEventsByIndex = outer1_9.getGuildScheduledEventsByIndex(outer1_8.GUILD_EVENT_ACTIVE(closure_0));
+    const guildScheduledEventsByIndex = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.GUILD_EVENT_ACTIVE(closure_0));
     const found = guildScheduledEventsByIndex.find((channel_id) => null != channel.getChannel(channel_id.channel_id));
     let channel_id;
     if (found != null) {
       channel_id = found.channel_id;
     }
-    return outer1_4.getChannel(channel_id);
+    return closure_1_4.getChannel(channel_id);
   }, items1);
 };
 export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildEvents(id) {
-  let dependencyMap;
-  let tmp2;
   const _require = id;
   [tmp2, dependencyMap] = stateFromStores(React.useState(() => Date.now()), 2);
   const effect = React.useEffect(() => {
     const interval = setInterval(() => {
       callback(Date.now());
-    }, outer1_16);
+    }, closure_1_16);
     return () => clearInterval(closure_0);
   }, []);
   const tmp = stateFromStores(React.useState(() => Date.now()), 2);
@@ -289,14 +282,12 @@ export const useImminentUpcomingGuildEvents = function useImminentUpcomingGuildE
     if (null == closure_0) {
       let items = [];
     } else {
-      items = outer1_9.getGuildScheduledEventsByIndex(outer1_8.CHANNEL_EVENT_UPCOMING(tmp));
+      items = closure_1_9.getGuildScheduledEventsByIndex(closure_1_8.CHANNEL_EVENT_UPCOMING(tmp));
     }
     return items;
   }, items1);
   const items2 = [stateFromStores];
   return React.useMemo(() => stateFromStores.filter((status) => {
-    let endTime;
-    let startTime;
     const eventSchedule = callback(8791).getEventSchedule(status);
     ({ startTime, endTime } = eventSchedule);
     const obj = callback(8791);

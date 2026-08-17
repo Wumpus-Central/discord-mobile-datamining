@@ -1,13 +1,13 @@
 // discord_app/utils/ColorUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { n } from "../../_runtime/00689_n.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { timestamp } from "../modules/debug/Logger.tsx";
-import { hslToRgb } from "Color.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import nDefault from "n" /* 689 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import hslToRgbDefault from "hslToRgb" /* 4224 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function hexToRgba(PRIMARY_760) {
-  let obj = n(PRIMARY_760);
+  obj = nDefault(PRIMARY_760);
   const tmp = callback(obj.rgba(), 4);
   obj = { r: tmp[0], g: tmp[1], b: tmp[2], a: tmp[3] };
   return obj;
@@ -27,7 +27,7 @@ function rgbToHslObject(arg0, arg1, arg2) {
       sum = rounded + 360;
     }
     const result2 = (bound1 + bound) / 2;
-    const obj = { h: null, s: null, l: null };
+    obj = { h: null, s: null, l: null };
     obj[0] = sum;
     let num7 = 0;
     if (!tmp6) {
@@ -65,7 +65,7 @@ function hslToHex(sum2, sum, sum1) {
   return "#" + padStartResult + padStartResult1 + str2.padStart(2, "0");
 }
 function hex2rgb2hsv(first4) {
-  let obj = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
+  obj = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i;
   const match = obj.exec(first4);
   if (null == match) {
     return null;
@@ -162,7 +162,7 @@ function rawHslToRgb(hue, saturation, lightness) {
   const result = hue / 360;
   if (0 === saturation) {
     const _Math = Math;
-    let tmp23 = hslToRgb;
+    let tmp23 = hslToRgbDefault;
     const rounded = Math.round(255 * lightness);
     const _Math2 = Math;
     const _Math3 = Math;
@@ -291,7 +291,7 @@ function hexWithOpacity(BLACK, c3) {
     } else {
       const _Error = Error;
       str = "Invalid hex color format";
-      const error = new Error("Invalid hex color format");
+      error = new Error("Invalid hex color format");
       throw error;
     }
   }
@@ -300,11 +300,8 @@ hexWithOpacity.__closure = {};
 hexWithOpacity.__workletHash = 1677228068105;
 hexWithOpacity.__initData = { code: "function hexWithOpacity_ColorUtilsTsx1(color,value){if(color.length===7){const alpha=value*255|0;return color+alpha.toString(16).padStart(2,'0').toUpperCase();}const hex=color.charAt(0)==='#'?color.slice(1):color;let r;let g;let b;let a;switch(hex.length){case 3:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);r+=r;g+=g;b+=b;a=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+a;case 4:r=hex.charAt(0);g=hex.charAt(1);b=hex.charAt(2);a=hex.charAt(3);r+=r;g+=g;b+=b;a+=a;const alpha4=parseInt(a,16)/255*value;const alpha4Hex=(alpha4*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+r+g+b+alpha4Hex;case 6:const alpha6=(value*255|0).toString(16).padStart(2,'0').toUpperCase();return'#'+hex+alpha6;case 8:const baseColor='#'+hex.slice(0,6);const existingAlpha=parseInt(hex.slice(6),16)/255;const alpha8=(existingAlpha*value*255|0).toString(16).padStart(2,'0').toUpperCase();return baseColor+alpha8;default:throw new Error('Invalid hex color format');}}" };
 function hexToRgbaString(colorHex, opacity) {
-  let tmp3;
-  let tmp4;
-  let tmp5;
   let tmp = opacity;
-  const tmp2 = callback(n(colorHex).rgba(), 4);
+  const tmp2 = callback(nDefault(colorHex).rgba(), 4);
   [tmp3, tmp4, tmp5] = tmp2;
   if (opacity == null) {
     tmp = tmp2[3];
@@ -406,25 +403,25 @@ obj["#5865f2"] = () => {
   const intl = getSystemLocale.intl;
   return intl.string(getSystemLocale.t["Cn/LJ4"]);
 };
-let result = require("getSystemLocale").fileFinishedImporting("utils/ColorUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/ColorUtils.tsx");
 
 export { hexWithOpacity };
 export const hexToRgb = function hexToRgb(PRIMARY_800) {
-  let obj = n(PRIMARY_800);
+  obj = nDefault(PRIMARY_800);
   const tmp = callback(obj.rgb(), 3);
   obj = { r: tmp[0], g: tmp[1], b: tmp[2] };
   return obj;
 };
 export const hexToRgbArray = function hexToRgbArray(arg0) {
-  const obj = n(arg0);
+  obj = nDefault(arg0);
   const items = [, , ];
-  [arr[0], arr[1], arr[2]] = callback(n(arg0).rgb(), 3);
+  [arr[0], arr[1], arr[2]] = callback(nDefault(arg0).rgb(), 3);
   return items;
 };
 export { hexToRgba };
 export { hexToRgbaString };
 export const hexOpacityToRgba = function hexOpacityToRgba(backgroundColor, dividerOpacity) {
-  const tmp = callback(n(backgroundColor).rgb(), 3);
+  const tmp = callback(nDefault(backgroundColor).rgb(), 3);
   return "rgba(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ", " + dividerOpacity + ")";
 };
 export { rgbToHslObject };
@@ -462,7 +459,7 @@ export const hexToColorName = function hexToColorName(tmp2Result, arg1) {
       obj[0] = tmp2Result;
       let str4 = intl.formatToPlainString(getSystemLocale.t["7BFCRR"], obj);
     } else {
-      obj = new timestamp("ColorUtils");
+      obj = new timestampDefault("ColorUtils");
       const _HermesInternal = HermesInternal;
       obj.warn("Role color " + tmp2Result + " has not been localized!");
       str4 = "undefined";
@@ -477,13 +474,10 @@ export const mixColors = function mixColors(mixColorOverride, red) {
   const sum1 = (1 - alpha) * red.green + alpha * mixColorOverride.green;
   const sum2 = (1 - alpha) * red.blue + alpha * mixColorOverride.blue;
   const sum3 = mixColorOverride.alpha + red.alpha * (1 - mixColorOverride.alpha);
-  return new hslToRgb(sum, sum1, sum2, sum3);
+  return new hslToRgbDefault(sum, sum1, sum2, sum3);
 };
 export { hex2rgb2hsv };
 export const getComplimentaryPaletteForColor = function getComplimentaryPaletteForColor(items, arg1) {
-  let h;
-  let l;
-  let s;
   let num = arg1;
   if (arg1 === undefined) {
     num = 3;
@@ -513,7 +507,7 @@ export const getComplimentaryPaletteForColor = function getComplimentaryPaletteF
       let tmp9 = importDefault;
       let tmp10 = dependencyMap;
       let tmp8 = hslToHex(sum2, sum, sum1);
-      let obj = n(tmp8);
+      obj = nDefault(tmp8);
       let tmp11 = callback;
       let tmp12 = callback(obj.rgb(), 3);
       let items1 = [, , ];
@@ -548,9 +542,6 @@ export const getColorLightnessAdjusted = function getColorLightnessAdjusted(pars
   return rawHslToRgb(tmp.hue, tmp.saturation, tmp.lightness);
 };
 export const getAccessibleForegroundColor = function getAccessibleForegroundColor(saturationFactor) {
-  let background;
-  let foreground;
-  let ratio;
   ({ foreground, background, ratio } = saturationFactor);
   if (ratio === undefined) {
     ratio = 5;
@@ -582,7 +573,7 @@ export const getAccessibleForegroundColor = function getAccessibleForegroundColo
           let result2 = obj3.set("hsl.l", value + 0.05);
           let tmp7 = importDefault;
           let tmp8 = dependencyMap;
-          let tmp9 = n;
+          let tmp9 = nDefault;
           let sum = num2 + 1;
           obj4 = result2;
           if (sum >= 10) {
@@ -612,7 +603,7 @@ export const getAccessibleForegroundColor = function getAccessibleForegroundColo
 export const findColorByHsv = function findColorByHsv(colors) {
   const substr = colors.slice(0, 3);
   const mapped = substr.map((hex) => {
-    let obj = { hex, hsv: null };
+    obj = { hex, hsv: null };
     obj = callback(hex);
     if (obj == null) {
       obj = { h: 0, s: 0, v: 0 };
@@ -623,8 +614,6 @@ export const findColorByHsv = function findColorByHsv(colors) {
   return mapped.sort(sortColors)[0].hex;
 };
 export const getSaturatedColorHex = function getSaturatedColorHex(arg0) {
-  let colorRGB;
-  let saturationFactor;
   ({ colorRGB, saturationFactor } = arg0);
   if (saturationFactor === undefined) {
     saturationFactor = 1;

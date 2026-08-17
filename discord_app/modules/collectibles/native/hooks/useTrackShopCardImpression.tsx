@@ -1,39 +1,39 @@
 // discord_app/modules/collectibles/native/hooks/useTrackShopCardImpression.tsx
-import noop from "noop";
-import { AnalyticEvents } from "ME";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import contextDefault from "context" /* 7139 */;
+import closure_3 from "noop" /* 19 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 import { context } from "../../CollectiblesAnalyticsContext.tsx";
 import { getItemRecordsFromPurchases } from "../../CollectiblesUtils.tsx";
 import { useCurrentUser } from "../../hooks/useCurrentUser.tsx";
 
 const require = arg1;
-let result = require("context").fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useTrackShopCardImpression.tsx");
 
 export const useTrackShopCardImpression = function useTrackShopCardImpression(product, selectedProduct, flag2) {
   const _require = product;
-  const importDefault = selectedProduct;
-  const dependencyMap = flag2;
+  importDefault = selectedProduct;
+  dependencyMap = flag2;
   const collectiblesAnalyticsContext = _context.useCollectiblesAnalyticsContext();
-  const analyticsLocations = context().analyticsLocations;
-  const size = useWindowDimensions();
+  const analyticsLocations = contextDefault().analyticsLocations;
+  const size = useWindowDimensionsDefault();
   const width = size.width;
   const height = size.height;
   let obj = _context;
   const currentUser = _useCurrentUser.useCurrentUser();
   let obj2 = _useCurrentUser;
-  const canUseCollectiblesResult = getPremiumPlanItem.canUseCollectibles(currentUser);
-  let closure_7 = canUseCollectiblesResult;
-  const obj3 = getPremiumPlanItem;
+  const canUseCollectiblesResult = getPremiumPlanItemDefault.canUseCollectibles(currentUser);
+  closure_7 = canUseCollectiblesResult;
+  const obj3 = getPremiumPlanItemDefault;
   const shopDiscountSource = _getItemRecordsFromPurchases.getShopDiscountSource(currentUser);
   const ref = collectiblesAnalyticsContext.useRef(null);
-  let closure_10 = collectiblesAnalyticsContext.useRef(null);
-  let closure_11 = collectiblesAnalyticsContext.useRef({ windowWidth: width, windowHeight: height });
-  let closure_12 = collectiblesAnalyticsContext.useRef(false);
-  let closure_13 = collectiblesAnalyticsContext.useRef(false);
-  let closure_14 = collectiblesAnalyticsContext.useRef(false);
-  let closure_15 = collectiblesAnalyticsContext.useRef(false);
+  closure_10 = collectiblesAnalyticsContext.useRef(null);
+  closure_11 = collectiblesAnalyticsContext.useRef({ windowWidth: width, windowHeight: height });
+  closure_12 = collectiblesAnalyticsContext.useRef(false);
+  closure_13 = collectiblesAnalyticsContext.useRef(false);
+  closure_14 = collectiblesAnalyticsContext.useRef(false);
+  closure_15 = collectiblesAnalyticsContext.useRef(false);
   const items = [width, height];
   const effect = collectiblesAnalyticsContext.useEffect(() => {
     closure_11.current = { windowWidth: width, windowHeight: height };
@@ -168,8 +168,6 @@ export const useTrackShopCardImpression = function useTrackShopCardImpression(pr
         if (null != ref.current) {
           const current = ref.current;
           current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
-            let windowHeight;
-            let windowWidth;
             ({ windowWidth, windowHeight } = ref.current);
             const bound = Math.min(arg5 + arg3, windowHeight);
             const bound1 = Math.max(0, bound - Math.max(arg5, 0));

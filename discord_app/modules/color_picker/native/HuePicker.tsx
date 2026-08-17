@@ -1,37 +1,30 @@
 // discord_app/modules/color_picker/native/HuePicker.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = [0, 60, 120, 180, 240, 300, 360];
 createCacheKey = { container: { justifyContent: "center", alignItems: "center" }, containerFullWidth: { alignSelf: "stretch", overflow: "visible" }, slider: null, colorBar: null, colorBarFullWidth: null, colorBarInner: null, colorBarInnerFullWidth: null };
-createCacheKey = { left: 0, position: "absolute", borderColor: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: require("Themes").radii.sm, borderWidth: 2 };
+createCacheKey = { left: 0, position: "absolute", borderColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, width: 24, height: 36, borderRadius: ThemesDefault.radii.sm, borderWidth: 2 };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { borderRadius: require("Themes").radii.xs };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.xs };
 createCacheKey[4] = { width: "100%" };
 createCacheKey[5] = { minWidth: 240, height: 32 };
 createCacheKey[6] = { minWidth: 0, width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function setSatVal_HuePickerTsx1({x:x}){const{hue,normalizeValue,barWidth,onPanUpdate,runOnJS}=this.__closure;hue.set(normalizeValue(x/barWidth.get())*360);onPanUpdate!=null&&runOnJS(onPanUpdate)();}" };
 let closure_11 = { code: "function HuePickerTsx2(){const{onPanFinalize,runOnJS}=this.__closure;onPanFinalize!=null&&runOnJS(onPanFinalize)();}" };
 let closure_12 = { code: "function HuePickerTsx3(){const{hslToRgbWorklet,hue,saturation,lightness,fullWidth,sliderWidth,barWidth}=this.__closure;const rgb=hslToRgbWorklet({h:hue.get(),s:saturation,l:lightness});const centerOffset=fullWidth?sliderWidth.get()/2:0;return{backgroundColor:\"rgb(\"+rgb[0]+\", \"+rgb[1]+\", \"+rgb[2]+\")\",transform:[{translateX:barWidth.get()*hue.get()/360-centerOffset}]};}" };
 let closure_13 = { code: "function HuePickerTsx4(){const{sliderHeight,barHeight,fullWidth,sliderWidth}=this.__closure;const paddingTop=sliderHeight.get()-barHeight.get()>0?(sliderHeight.get()-barHeight.get())/2:0;const paddingLeft=fullWidth?0:sliderWidth.get()/2;return{paddingTop:paddingTop,paddingBottom:paddingTop,paddingLeft:paddingLeft,paddingRight:paddingLeft};}" };
-let obj1 = { borderRadius: require("Themes").radii.xs };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/color_picker/native/HuePicker.tsx");
+let obj1 = { borderRadius: ThemesDefault.radii.xs };
+let result = require("set").fileFinishedImporting("modules/color_picker/native/HuePicker.tsx");
 
 export default function HuePicker(hue) {
-  let colorBarInnerStyle;
-  let onPanFinalize;
-  let onPanUpdate;
-  let saturation;
-  let sliderStyle;
-  let style;
   hue = hue.hue;
   ({ onPanUpdate, onPanFinalize, saturation } = hue);
   ({ style, colorBarInnerStyle, sliderStyle } = hue);
@@ -53,10 +46,10 @@ export default function HuePicker(hue) {
   let sharedValue1;
   let sharedValue2;
   sharedValue3 = undefined;
-  let tmp = createCacheKey();
+  let tmp = callback();
   let obj = hue(onPanUpdate[7]);
   sharedValue = obj.useSharedValue(0);
-  let obj1 = hue(onPanUpdate[7]);
+  obj1 = hue(onPanUpdate[7]);
   sharedValue1 = obj1.useSharedValue(tmp.slider.height);
   let obj2 = hue(onPanUpdate[7]);
   sharedValue2 = obj2.useSharedValue(tmp.colorBarInner.height);
@@ -66,35 +59,35 @@ export default function HuePicker(hue) {
   const items1 = [saturation, num];
   const memo = sharedValue.useMemo(() => {
     function setSatVal(arg0) {
-      const result = closure_0.set(360 * outer1_0(outer1_2[6]).normalizeValue(arg0.x / closure_1.get()));
+      const result = closure_0.set(360 * closure_1_0(closure_1_2[6]).normalizeValue(arg0.x / closure_1.get()));
       if (null != closure_2) {
-        outer1_0(outer1_2[7]).runOnJS(tmp4)();
-        const tmpResult = outer1_0(outer1_2[7]);
+        closure_1_0(closure_1_2[7]).runOnJS(tmp4)();
+        const tmpResult = closure_1_0(closure_1_2[7]);
       }
     }
     let obj = { hue, normalizeValue: hue(onPanUpdate[6]).normalizeValue, barWidth: sharedValue3, onPanUpdate, runOnJS: hue(onPanUpdate[7]).runOnJS };
     setSatVal.__closure = obj;
     setSatVal.__workletHash = 17165611898087;
-    setSatVal.__initData = outer1_10;
+    setSatVal.__initData = closure_1_10;
     const Gesture = hue(onPanUpdate[8]).Gesture;
     const PanResult = Gesture.Pan();
     const onBeginResult = Gesture.Pan().onBegin(setSatVal);
     const fn = function r() {
-      if (null != _slicedToArray) {
-        outer1_0(outer1_2[7]).runOnJS(tmp)();
-        const obj = outer1_0(outer1_2[7]);
+      if (null != closure_3) {
+        closure_1_0(closure_1_2[7]).runOnJS(tmp)();
+        const obj = closure_1_0(closure_1_2[7]);
       }
     };
     obj = { onPanFinalize, runOnJS: hue(onPanUpdate[7]).runOnJS };
     fn.__closure = obj;
     fn.__workletHash = 182773971449;
-    fn.__initData = outer1_11;
+    fn.__initData = closure_1_11;
     return Gesture.Pan().onBegin(setSatVal).onUpdate(setSatVal).onFinalize(fn);
   }, items);
-  const memo1 = sharedValue.useMemo(() => outer1_8.map((h) => {
-    let obj = outer1_0(outer1_2[6]);
+  const memo1 = sharedValue.useMemo(() => closure_1_8.map((h) => {
+    let obj = closure_1_0(closure_1_2[6]);
     obj = { h, s: closure_1, l: closure_2 };
-    const tmp = outer1_3(obj.hslToRgbWorklet(obj), 3);
+    const tmp = closure_1_3(obj.hslToRgbWorklet(obj), 3);
     return "rgb(" + tmp[0] + ", " + tmp[1] + ", " + tmp[2] + ")";
   }), items1);
   let fn = function y() {
@@ -106,7 +99,7 @@ export default function HuePicker(hue) {
       num = sharedValue.get() / 2;
     }
     obj = { backgroundColor: "rgb(" + hslToRgbWorkletResult[0] + ", " + hslToRgbWorkletResult[1] + ", " + hslToRgbWorkletResult[2] + ")", transform: null };
-    const obj1 = { translateX: null };
+    obj1 = { translateX: null };
     const value = sharedValue3.get();
     obj1[0] = value * hue.get() / 360 - num;
     const items = [obj1];
@@ -120,7 +113,7 @@ export default function HuePicker(hue) {
   const items2 = [sharedValue];
   const animatedStyle = hue(onPanUpdate[7]).useAnimatedStyle(fn);
   const items3 = [sharedValue3];
-  const callback = sharedValue.useCallback((nativeEvent) => {
+  callback = sharedValue.useCallback((nativeEvent) => {
     const result = sharedValue.set(nativeEvent.nativeEvent.layout.width);
   }, items2);
   const callback1 = sharedValue.useCallback((nativeEvent) => {

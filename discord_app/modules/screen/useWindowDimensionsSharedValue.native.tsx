@@ -1,9 +1,9 @@
 // discord_app/modules/screen/useWindowDimensionsSharedValue.native.tsx
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
-import useWindowDimensions from "useWindowDimensions";
-import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx";
-import useWindowDimensions from "useWindowDimensions";
-import { u } from "../reanimated/utils/updateSharedValueIfChanged.native.tsx";
+import set from "set" /* 2 */;
+import uDefault from "u" /* 10561 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 11156 */;
+import ReanimatedRexport from "../reanimated/ReanimatedRexport.tsx" /* 4115 */;
+import useWindowDimensions from "useWindowDimensions" /* 1494 */;
 
 let obj = {};
 const merged = Object.assign(useWindowDimensions.getWindowDimensions());
@@ -11,9 +11,9 @@ const mutable = module_4115.makeMutable(obj);
 obj = {};
 const merged1 = Object.assign(useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }));
 const mutable1 = module_4115.makeMutable(obj);
-require("subscribeToWindowDimensions")((arg0, arg1) => {
-  u(mutable, arg0);
-  u(mutable1, arg1);
+subscribeToWindowDimensionsDefault((arg0, arg1) => {
+  uDefault(mutable, arg0);
+  uDefault(mutable1, arg1);
 });
 function getWindowDimensionsWorklet(arg0) {
   let ignoreKeyboard;
@@ -30,7 +30,7 @@ function getWindowDimensionsWorklet(arg0) {
 getWindowDimensionsWorklet.__closure = { windowDimensionsSharedValueIgnoringKeyboard: mutable1, windowDimensionsSharedValue: mutable };
 getWindowDimensionsWorklet.__workletHash = 17271034964949;
 getWindowDimensionsWorklet.__initData = { code: "function getWindowDimensionsWorklet_useWindowDimensionsSharedValueNativeTsx1(params=undefined){const{windowDimensionsSharedValueIgnoringKeyboard,windowDimensionsSharedValue}=this.__closure;return(params===null||params===void 0?void 0:params.ignoreKeyboard)===true?windowDimensionsSharedValueIgnoringKeyboard.get():windowDimensionsSharedValue.get();}" };
-const result = require("subscribeToWindowDimensions").fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
+const result = set.fileFinishedImporting("modules/screen/useWindowDimensionsSharedValue.native.tsx");
 
 export default function useWindowDimensionsSharedValue() {
   let ignoreKeyboard;

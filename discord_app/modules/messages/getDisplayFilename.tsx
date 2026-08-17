@@ -1,5 +1,7 @@
 // discord_app/modules/messages/getDisplayFilename.tsx
-const result = require("set").fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/messages/getDisplayFilename.tsx");
 
 export default function getDisplayFilename(title) {
   if (null != title.title) {

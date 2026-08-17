@@ -1,28 +1,27 @@
 // discord_app/modules/collectibles/native/UnlockWithNitroButton.tsx
-import "noop";
-import updateProduct from "updateProduct";
-import map from "map";
-import { ShopCtaEnum } from "items";
-import { jsx } from "jsxProd";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { CollapsingText } from "../../../design/components/Button/native/BaseTextButton.native.tsx";
-import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import { useOpenNitroSubscribeActionSheet } from "useOpenNitroSubscribeActionSheet.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import CollapsingText from "CollapsingText" /* 4746 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
+import useOpenNitroSubscribeActionSheetDefault from "useOpenNitroSubscribeActionSheet" /* 9581 */;
+import closure_3 from "updateProduct" /* 5319 */;
+import closure_4 from "map" /* 5324 */;
+import { ShopCtaEnum } from "items" /* 678 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("map").fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/UnlockWithNitroButton.tsx");
 
 export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink) {
-  let require;
-  let text;
   let flag = shouldShrink.shouldShrink;
   if (flag === undefined) {
     flag = false;
   }
   ({ onTrackPress: require, text } = shouldShrink);
-  let importDefault;
+  importDefault = undefined;
   let obj = initialize;
-  const items = [map, updateProduct];
+  const items = [closure_4, closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPurchasingProductResult = null != isClaiming.isClaiming;
     if (!isPurchasingProductResult) {
@@ -30,7 +29,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
     }
     return isPurchasingProductResult;
   });
-  importDefault = useOpenNitroSubscribeActionSheet();
+  importDefault = useOpenNitroSubscribeActionSheetDefault();
   if (text == null) {
     const intl = tmp(1236).intl;
     text = intl.string(tmp(1236).t.sEAnVH);
@@ -56,7 +55,7 @@ export const UnlockWithNitroButton = function UnlockWithNitroButton(shouldShrink
   obj[6] = jsx(NitroWheelIcon.NitroWheelIcon, { size: "sm", color: "white" });
   obj[7] = function onPress() {
     if (closure_0 != null) {
-      tmp(outer1_5.UNLOCK_WITH_NITRO);
+      tmp(closure_1_5.UNLOCK_WITH_NITRO);
     }
     callback2();
   };

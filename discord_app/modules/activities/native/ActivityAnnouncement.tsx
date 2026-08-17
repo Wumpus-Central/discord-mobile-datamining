@@ -1,13 +1,13 @@
 // discord_app/modules/activities/native/ActivityAnnouncement.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("inlineStyles").fileFinishedImporting("modules/activities/native/ActivityAnnouncement.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/ActivityAnnouncement.tsx");
 
 export default function SvgComponent(arg0) {
   let obj = { width: 324, height: 227, fill: "none" };
@@ -18,7 +18,7 @@ export default function SvgComponent(arg0) {
   const items1 = [callback(inlineStyles.Stop, { stopColor: "#FFE75C" }), callback(inlineStyles.Stop, { offset: 1, stopColor: "#FFC619" })];
   obj[6] = items1;
   const items2 = [callback2(inlineStyles.LinearGradient, obj), , , , , , , ];
-  const obj1 = { id: "b", x1: 221.642, x2: 205.481, y1: 54.413, y2: 125.699, gradientUnits: "userSpaceOnUse", children: null };
+  obj1 = { id: "b", x1: 221.642, x2: 205.481, y1: 54.413, y2: 125.699, gradientUnits: "userSpaceOnUse", children: null };
   const items3 = [callback(inlineStyles.Stop, { offset: 0.24, stopColor: "#57F287" }), callback(inlineStyles.Stop, { offset: 0.66, stopColor: "#29CC7A" })];
   obj1[6] = items3;
   items2[1] = callback2(inlineStyles.LinearGradient, obj1);
@@ -49,5 +49,5 @@ export default function SvgComponent(arg0) {
   obj[0] = items2;
   items[48] = callback2(inlineStyles.Defs, obj);
   obj.children = items;
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 };

@@ -1,36 +1,34 @@
 // discord_app/modules/stickers/useLoadGuildStickerWithCreator.tsx
-import initialize from "initialize";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import parseServerGuildSticker from "parseServerGuildSticker";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "parseServerGuildSticker" /* 6770 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/useLoadGuildStickerWithCreator.tsx");
 
 export default function useLoadGuildStickersWithCreator(arg0) {
-  let dependencyMap;
-  let tmp2;
   const _require = arg0;
   [tmp2, dependencyMap] = callback(React.useState("loading"), 2);
   let obj = _initialize;
-  const items = [parseServerGuildSticker];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getStickersByGuildId(closure_0));
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getStickersByGuildId(closure_0));
   const items1 = [arg0];
   const effect = React.useEffect(() => {
     function _fetch() {
       const self = this;
-      const tmp = outer2_2(function*() {
-        let c0 = tmp3;
-        let c3 = 1;
-        const obj1 = outer2_0(outer2_1[6]);
-        yield obj1.fetchGuildStickersWithCreator(outer1_0, v0);
+      const tmp = closure_2_2(function*() {
+        c0 = tmp3;
+        c3 = 1;
+        obj1 = closure_2_0(closure_2_1[6]);
+        yield obj1.fetchGuildStickersWithCreator(closure_1_0, v0);
         if (1 === tmp7) {
           c3 = 0;
           v0("error");
           c0 = null;
-          let c4 = 3;
+          c4 = 3;
         } else if (arg0 === 1) {
           c4 = 3;
           throw arg1;
@@ -42,7 +40,7 @@ export default function useLoadGuildStickersWithCreator(arg0) {
         c3 = 0;
         return arg1;
       });
-      const _fetch = tmp;
+      closure_2 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);

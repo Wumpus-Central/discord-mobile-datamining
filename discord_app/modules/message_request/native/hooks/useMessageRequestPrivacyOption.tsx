@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { set } from "../../hooks/useIsStricterMessageRequests.tsx";
+import setDefault from "set" /* 11613 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function MessageRequestRestrictedGuildPrivacyOption(guild) {
@@ -16,13 +16,13 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
   const callback = React.useCallback((arg0) => {
-    const sanitizedMessageRequestRestrictedGuilds = id(outer1_2[3]).getSanitizedMessageRequestRestrictedGuilds();
+    const sanitizedMessageRequestRestrictedGuilds = id(closure_1_2[3]).getSanitizedMessageRequestRestrictedGuilds();
     if (arg0) {
       sanitizedMessageRequestRestrictedGuilds.delete(id);
     } else {
       sanitizedMessageRequestRestrictedGuilds.add(id);
     }
-    const MessageRequestRestrictedGuildIds = id(outer1_2[2]).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = id(closure_1_2[2]).MessageRequestRestrictedGuildIds;
     MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
   }, items);
   const obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
@@ -39,11 +39,11 @@ function MessageRequestRestrictedGuildPrivacyOption(guild) {
   obj[4] = hasItem1;
   return jsx(id(7177).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 }
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/native/hooks/useMessageRequestPrivacyOption.tsx");
 
 export const useMessageRequestPrivacyOption = function useMessageRequestPrivacyOption(guild) {
   let tmp = null;
-  if (!set()) {
+  if (!setDefault()) {
     const obj = { guild: null };
     obj[0] = guild.guild;
     tmp = <MessageRequestRestrictedGuildPrivacyOption guild={null} />;

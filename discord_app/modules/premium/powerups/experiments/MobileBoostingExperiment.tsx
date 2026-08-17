@@ -1,8 +1,9 @@
 // discord_app/modules/premium/powerups/experiments/MobileBoostingExperiment.tsx
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ name: "2026-07-mobile-boosting-optimizations", kind: "user", defaultConfig: { enabled: false, removeYearlyUpsell: false, recommendedBoostCount: null }, variations: { 0: { enabled: false, removeYearlyUpsell: false, recommendedBoostCount: null }, 1: { enabled: true, removeYearlyUpsell: false, recommendedBoostCount: 2 }, 2: { enabled: true, removeYearlyUpsell: true, recommendedBoostCount: 2 }, 3: { enabled: true, removeYearlyUpsell: false, recommendedBoostCount: 3 }, 4: { enabled: true, removeYearlyUpsell: true, recommendedBoostCount: 3 } } });
-const result = require("set").fileFinishedImporting("modules/premium/powerups/experiments/MobileBoostingExperiment.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/experiments/MobileBoostingExperiment.tsx");
 
 export default apexExperiment;
 export const getShouldRemoveYearlyUpsell = function getShouldRemoveYearlyUpsell(PremiumPlanSelect) {

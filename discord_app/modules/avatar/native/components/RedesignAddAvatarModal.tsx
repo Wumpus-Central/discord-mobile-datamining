@@ -1,47 +1,42 @@
 // discord_app/modules/avatar/native/components/RedesignAddAvatarModal.tsx
-import ME from "ME";
-import _slicedToArray from "_slicedToArray";
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "useAvatarsWithGuilds";
-import handleFormOpen from "handleFormOpen";
-import { UPLOAD_MEDIUM_SIZE } from "ME";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "handleFormOpen" /* 8370 */;
+import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { container: null, contentContainer: null, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 2, alignItems: "center" };
-createCacheKey[2] = { flexGrow: 2, minHeight: require("Themes").space.PX_24 };
+createCacheKey[2] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { display: "flex", alignItems: "center" };
 createCacheKey[4] = { width: "100%" };
-let obj1 = { flexGrow: 2, minHeight: require("Themes").space.PX_24 };
-createCacheKey[5] = { marginBottom: require("Themes").space.PX_8, textAlign: "center" };
+let obj1 = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
+createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[6] = { textAlign: "center" };
-let obj2 = { marginBottom: require("Themes").space.PX_8, textAlign: "center" };
-createCacheKey[7] = { alignSelf: "center", paddingTop: require("Themes").space.PX_24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { alignSelf: "center", paddingTop: require("Themes").space.PX_24 };
-let result = require("noop").fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
+let obj2 = { marginBottom: ThemesDefault.space.PX_8, textAlign: "center" };
+createCacheKey[7] = { alignSelf: "center", paddingTop: ThemesDefault.space.PX_24 };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { alignSelf: "center", paddingTop: ThemesDefault.space.PX_24 };
+let result = require("set").fileFinishedImporting("modules/avatar/native/components/RedesignAddAvatarModal.tsx");
 
 export default function RedesignAddAvatarModal(route) {
-  let c1;
-  let tmp3;
   const onComplete = route.route.params.onComplete;
-  let importDefault;
+  importDefault = undefined;
   let first;
-  let c3;
+  closure_3 = undefined;
   let pendingImage;
   function _handleSelectAvatar() {
     const self = this;
-    const tmp = _undefined(function*() {
+    const tmp = callback(function*() {
       if (v0 === 2) {
         v0 = 3;
         HermesBuiltin.throwTypeError();
@@ -68,17 +63,17 @@ export default function RedesignAddAvatarModal(route) {
               obj[0] = arg1;
               return obj;
             } else {
-              let c1 = tmp5;
+              c1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
               c1 = undefined;
-              outer1_1(false);
-              const obj1 = { size: null };
-              obj1[0] = outer1_9;
+              pendingImage(false);
+              obj1 = { size: null };
+              obj1[0] = closure_1_9;
               dependencyMap = 1;
               v0 = 1;
               let obj2 = { value: null, done: false };
-              obj2[0] = outer1_0(4838).openImagePicker(obj1);
+              obj2[0] = closure_1_0(4838).openImagePicker(obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -92,30 +87,29 @@ export default function RedesignAddAvatarModal(route) {
           } else {
             base64 = arg1.base64;
             if (null == base64) {
-              let pendingImage;
-              if (null != outer1_0) {
-                obj = outer1_0(14007);
+              pendingImage = undefined;
+              if (null != closure_1_0) {
+                obj = closure_1_0(14007);
                 const obj4 = { imageUri: null, description: null };
                 obj4[0] = base64;
-                obj2 = outer1_0(8384);
+                obj2 = closure_1_0(8384);
                 obj4[1] = obj2.generateAvatarDescription();
                 pendingImage = obj.createPendingImage(obj4);
               }
-              outer1_1 = pendingImage;
-              obj3 = outer1_0(8374);
+              obj3 = closure_1_0(8374);
               let obj5 = { avatar: null };
-              obj5[0] = outer1_1;
+              obj5[0] = pendingImage;
               obj3.setPendingChanges(obj5);
-              obj5 = outer1_0(8376);
+              obj5 = closure_1_0(8376);
               let str = "set";
-              if (null == outer1_1) {
+              if (null == pendingImage) {
                 str = "remove";
               }
               const result = obj5.announcePendingAvatarChange(str);
               v0(undefined);
               v0 = 3;
             }
-            outer1_1(true);
+            pendingImage(true);
           }
         } catch (tmp42) {
           v0 = tmp;
@@ -123,7 +117,7 @@ export default function RedesignAddAvatarModal(route) {
         }
       }
     });
-    const _handleSelectAvatar = tmp;
+    closure_5 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -132,13 +126,13 @@ export default function RedesignAddAvatarModal(route) {
     }
     return applyArgumentsResult;
   }
-  let tmp = createCacheKey();
+  let tmp = callback3();
   [tmp3, c1] = pendingImage(_handleSelectAvatar.useState(false), 2);
   const tmp4 = pendingImage(_handleSelectAvatar.useState(), 2);
   first = tmp4[0];
-  c3 = tmp6;
+  closure_3 = tmp6;
   let obj = onComplete(first[10]);
-  const items = [handleFormOpen];
+  const items = [closure_8];
   pendingImage = undefined;
   const stateFromStores = obj.useStateFromStores(items, () => pendingChanges.getPendingChanges().pendingAvatar);
   if (null != first) {
@@ -159,7 +153,7 @@ export default function RedesignAddAvatarModal(route) {
   }
   obj = { style: tmp.container, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
   const items1 = [tmp.contentContainer, ];
-  let obj1 = { paddingBottom: null, paddingHorizontal: null };
+  obj1 = { paddingBottom: null, paddingHorizontal: null };
   const tmp9Result1 = onComplete(first[14]);
   obj1[0] = importDefault(first[9])().bottom + importDefault(first[8]).space.PX_16;
   obj1[1] = importDefault(first[8]).space.PX_16;

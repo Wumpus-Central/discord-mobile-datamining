@@ -1,27 +1,21 @@
 // discord_app/design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import PX_4 from "PX_4";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { ReanimatedRexport } from "../../../../../modules/reanimated/ReanimatedRexport.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import PX_4 from "PX_4" /* 8812 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let DRAG_HANDLE_BAR_HEIGHT;
-let DRAG_HANDLE_HEIGHT;
-let DRAG_HANDLE_PADDING;
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ TouchableWithoutFeedback: c3, View: c4 } = get_ActivityIndicator);
 ({ DRAG_HANDLE_BAR_HEIGHT, DRAG_HANDLE_PADDING, DRAG_HANDLE_HEIGHT } = PX_4);
 let obj = { container: { height: DRAG_HANDLE_HEIGHT }, containerOverlay: { position: "absolute", top: 0, left: 0, right: 0 }, handle: { alignItems: "center", paddingVertical: DRAG_HANDLE_PADDING }, bar: null };
-obj = { backgroundColor: require("Themes").colors.ICON_MUTED, borderRadius: require("Themes").radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
+obj = { backgroundColor: ThemesDefault.colors.ICON_MUTED, borderRadius: ThemesDefault.radii.xs, height: DRAG_HANDLE_BAR_HEIGHT, width: 31 };
 obj[3] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((accessibilityLabel) => {
-  let onPress;
-  let overlay;
+const memoResult = importAllResult.memo((accessibilityLabel) => {
   accessibilityLabel = accessibilityLabel.accessibilityLabel;
   ({ onPress, overlay } = accessibilityLabel);
   if (accessibilityLabel === undefined) {
@@ -42,9 +36,9 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
     obj = { style: null };
     const items1 = [tmp3.bar, animatedBarStyles];
     obj[0] = items1;
-    let tmp4Result = tmp4(ReanimatedRexport.View, obj);
+    let tmp4Result = tmp4(_modDef4115.View, obj);
   } else {
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp3.bar;
     tmp4Result = tmp4(tmp7, obj1);
   }
@@ -52,6 +46,6 @@ const memoResult = require("noop").memo((accessibilityLabel) => {
   obj[5] = <closure_4 style={tmp3.handle}>{null}</closure_4>;
   return <closure_3 style={tmp3.handle}>{null}</closure_3>;
 });
-const result = require("PX_4").fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/experimental/ActionSheetDragHandle/native/ActionSheetDragHandle.native.tsx");
 
 export const ActionSheetDragHandle = memoResult;

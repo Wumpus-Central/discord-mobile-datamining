@@ -1,6 +1,8 @@
 // discord_app/modules/keyboard/native/subscribeToKeyboardUIStore.tsx
+import set from "set" /* 2 */;
 import { context } from "../../window/native/AppEntryKeyContext.tsx";
-const result = require("set").fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");
+
+const result = set.fileFinishedImporting("modules/keyboard/native/subscribeToKeyboardUIStore.tsx");
 
 export default function subscribeToKeyboardUIStore(arg0) {
   const _require = arg0;

@@ -1,44 +1,40 @@
 // discord_app/modules/feedback/native/UploadLogsActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ AnalyticEvents: c4, DebugLogCategory: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, body: null, buttonSpacer: null };
-createCacheKey = { padding: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginBottom: require("Themes").space.PX_16 };
-let obj1 = { textAlign: "center", marginBottom: require("Themes").space.PX_16 };
-createCacheKey[2] = { height: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { height: require("Themes").space.PX_8 };
-const result = require("ME").fileFinishedImporting("modules/feedback/native/UploadLogsActionSheet.tsx");
+createCacheKey[1] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj1 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { height: ThemesDefault.space.PX_8 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { height: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/feedback/native/UploadLogsActionSheet.tsx");
 
 export default function UploadLogsActionSheet(arg0) {
-  let importDefault;
-  let require;
   ({ mediaSessionId: require, rtcConnectionId: importDefault } = arg0);
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = { header: null, children: null };
   obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.KTjjrG);
   obj[0] = callback(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { style: tmp.container, children: null };
-  const obj1 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
+  obj1 = { variant: "text-sm/normal", color: "text-muted", style: tmp.body, children: null };
   const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t["ZvRR/t"]);
   const items = [callback(Text.Text, obj1), , , ];
@@ -46,8 +42,8 @@ export default function UploadLogsActionSheet(arg0) {
   const intl3 = getSystemLocale.intl;
   obj2[0] = intl3.string(getSystemLocale.t.EbwFfR);
   obj2[1] = function onPress() {
-    let obj = outer1_0(outer1_2[11]);
-    obj.uploadDebugLogFiles(outer1_5.RTC);
+    let obj = closure_1_0(closure_1_2[11]);
+    obj.uploadDebugLogFiles(closure_1_5.RTC);
     let tmp4 = closure_0;
     if (closure_0 == null) {
       tmp4 = null;
@@ -58,11 +54,11 @@ export default function UploadLogsActionSheet(arg0) {
       tmp5 = null;
     }
     obj[1] = tmp5;
-    outer1_1(outer1_2[12]).track(outer1_4.DEBUG_LOG_UPLOADED, obj);
-    const obj2 = outer1_1(outer1_2[12]);
-    const tmp = outer1_2;
-    const tmp3 = outer1_1;
-    outer1_1(outer1_2[13]).hideActionSheet();
+    closure_1_1(closure_1_2[12]).track(closure_1_4.DEBUG_LOG_UPLOADED, obj);
+    const obj2 = closure_1_1(closure_1_2[12]);
+    const tmp = closure_1_2;
+    const tmp3 = closure_1_1;
+    closure_1_1(closure_1_2[13]).hideActionSheet();
   };
   items[1] = callback(Button.Button, obj2);
   items[2] = callback(View, { style: tmp.buttonSpacer });

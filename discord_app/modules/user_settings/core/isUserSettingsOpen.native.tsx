@@ -1,9 +1,9 @@
 // discord_app/modules/user_settings/core/isUserSettingsOpen.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 function isUserSettingsOpen() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   const tmp = null == rootNavigationRef || !rootNavigationRef.isReady();
@@ -87,12 +87,10 @@ function isUserSettingsOpen() {
   }
   return tmp2;
 }
-const result = require("getRootNavigationRef").fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/core/isUserSettingsOpen.native.tsx");
 
 export { isUserSettingsOpen };
 export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
-  let require;
-  let tmp2;
   [tmp2, require] = callback(React.useState(isUserSettingsOpen), 2);
   const effect = React.useEffect(() => {
     function handleStateChange() {
@@ -142,14 +140,14 @@ export const useIsUserSettingsOpen = function useIsUserSettingsOpen() {
         rootNavigationRef(someResult);
       }
     }
-    const rootNavigationRef = outer1_0(outer1_1[2]).getRootNavigationRef();
+    const rootNavigationRef = closure_1_0(closure_1_1[2]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = outer1_0(outer1_1[2]);
+    const obj = closure_1_0(closure_1_1[2]);
   }, []);
   return tmp2;
 };

@@ -1,18 +1,18 @@
 // discord_app/modules/app_database/modules/LowDiskTrim.tsx
-import importDefaultResult from "result";
+import importDefaultResult from "result" /* 5070 */;
 
 let obj = importDefault;
 class LowDiskTrim {
   constructor() {
     obj = Object.create(new.target.prototype);
-    LowDiskTrim = obj;
+    closure_0 = obj;
     obj.isLowDisk = false;
     obj.actions = {
       POST_CONNECTION_OPEN() {
             return obj.handlePostConnectionOpen();
           }
     };
-    addChangeListenerResult = __esModule.addChangeListener(() => obj.handleFileSystemStoreChanged());
+    addChangeListenerResult = closure_2.addChangeListener(() => obj.handleFileSystemStoreChanged());
     return obj;
   }
 }

@@ -1,10 +1,13 @@
 // discord_app/modules/webauthn/native/WebAuthnScreens.tsx
-import { WebAuthnScreens } from "WebAuthnScreens";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { PasskeyUpsellActionCreators } from "PasskeyUpsellActionCreators.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import WebAuthnScreens2 from "WebAuthnScreens" /* 14078 */;
+import _modDef14084 from "module_14084" /* 14084 */;
 
-const result = require("PasskeyUpsellView").fileFinishedImporting("modules/webauthn/native/WebAuthnScreens.tsx");
+const WebAuthnScreens = WebAuthnScreens2.WebAuthnScreens;
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/webauthn/native/WebAuthnScreens.tsx");
 
 export const getScreens = function getScreens(isModal) {
   isModal = isModal.isModal;
@@ -24,11 +27,11 @@ export const getScreens = function getScreens(isModal) {
   let headerCloseButton;
   if (isModal) {
     let tmp2Result = tmp2(6314);
-    headerCloseButton = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreators.closePasskeyUpsellModal);
+    headerCloseButton = tmp2Result.getHeaderCloseButton(_modDef14084.closePasskeyUpsellModal);
   }
   obj[2] = headerCloseButton;
   obj[WebAuthnScreens.INIT] = obj;
-  const obj1 = {
+  obj1 = {
     render(arg0) {
       const merged = Object.assign(arg0);
       return callback2(callback(14094), {});
@@ -60,7 +63,7 @@ export const getScreens = function getScreens(isModal) {
   let headerCloseButton1;
   if (isModal) {
     tmp2Result = tmp2(6314);
-    headerCloseButton1 = tmp2Result.getHeaderCloseButton(PasskeyUpsellActionCreators.closePasskeyUpsellModal);
+    headerCloseButton1 = tmp2Result.getHeaderCloseButton(_modDef14084.closePasskeyUpsellModal);
   }
   obj3[2] = headerCloseButton1;
   obj[WebAuthnScreens.NAME] = obj3;

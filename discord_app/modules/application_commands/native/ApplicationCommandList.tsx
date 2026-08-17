@@ -1,17 +1,13 @@
 // discord_app/modules/application_commands/native/ApplicationCommandList.tsx
-import noop from "noop";
-import { FlatList } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_4 from "noop" /* 19 */;
+import { FlatList } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_7 = 3 * require("AUTOCOMPLETE_ROW_HEIGHT").AUTOCOMPLETE_ROW_HEIGHT;
-const result = require("AUTOCOMPLETE_ROW_HEIGHT").fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandList.tsx");
 
 export default function ApplicationCommandList(channel) {
-  let ItemSeparatorComponent;
-  let getItemLayout;
-  let query;
-  let style;
   channel = channel.channel;
   const onPressCommandItem = channel.onPressCommandItem;
   const onCommandsChange = channel.onCommandsChange;
@@ -34,7 +30,7 @@ export default function ApplicationCommandList(channel) {
     item = item.item;
     let found;
     if (item.inputType === channel(commands[7]).ApplicationCommandInputType.PLACEHOLDER) {
-      return outer1_6(onPressCommandItem(tmp[8]), {});
+      return closure_1_6(onPressCommandItem(tmp[8]), {});
     } else {
       found = undefined;
       if (sections != null) {
@@ -48,7 +44,7 @@ export default function ApplicationCommandList(channel) {
       };
       obj[3] = item.guild_id;
       obj[4] = 0 === item.index;
-      return outer1_6(onPressCommandItem(tmp[9]), obj);
+      return closure_1_6(onPressCommandItem(tmp[9]), obj);
     }
   }, items1);
   if (commands != null) {
@@ -72,7 +68,7 @@ export default function ApplicationCommandList(channel) {
     return id.id;
   }} data={commands} renderItem={callback} ItemSeparatorComponent={ItemSeparatorComponent} getItemLayout={getItemLayout} onScroll={sections.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
-    if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - outer1_7) {
+    if (nativeEvent.contentOffset.y + nativeEvent.layoutMeasurement.height >= nativeEvent.contentSize.height - closure_1_7) {
       scrollDown();
     }
   }, items3)} />;

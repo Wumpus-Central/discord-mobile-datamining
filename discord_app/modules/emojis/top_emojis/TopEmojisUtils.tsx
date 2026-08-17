@@ -1,11 +1,11 @@
 // discord_app/modules/emojis/top_emojis/TopEmojisUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import initialize from "initialize";
-import { fetchTopEmojis } from "TopEmojisActionCreators.tsx";
+import fetchTopEmojis from "fetchTopEmojis" /* 9305 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "getEmojiToGroupId" /* 6727 */;
+import closure_4 from "initialize" /* 6730 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/emojis/top_emojis/TopEmojisUtils.tsx");
 
 export const maybeFetchTopEmojisByGuild = function maybeFetchTopEmojisByGuild(guildId) {
   if (null != guildId) {

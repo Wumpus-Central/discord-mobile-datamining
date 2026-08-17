@@ -1,11 +1,13 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncBackToLanding.tsx
+import set from "set" /* 2 */;
 import { HeaderBackImage } from "../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-let result = require("handleNameInputScreenOrSuggestions").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
+
+let result = set.fileFinishedImporting("modules/contact_sync/native/components/ContactSyncBackToLanding.tsx");
 
 export default function ContactSyncBackToLanding(arg0) {
   const _require = arg0;
-  const dependencyMap = _useNavigation.useNavigation();
+  dependencyMap = _useNavigation.useNavigation();
   const obj = _useNavigation;
   return _HeaderBackImage.getHeaderBackButton(() => {
     if (null != lib.navigateToLandingPage) {

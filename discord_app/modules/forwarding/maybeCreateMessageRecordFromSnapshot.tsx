@@ -1,12 +1,14 @@
 // discord_app/modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx
-import { isForwardMessage } from "isForwardMessage.tsx";
-const result = require("set").fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
+import set from "set" /* 2 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
+
+const result = set.fileFinishedImporting("modules/forwarding/maybeCreateMessageRecordFromSnapshot.tsx");
 
 export default function maybeCreateMessageRecordFromSnapshot(merge) {
   let tmp = arg1;
   if (arg1 == null) {
     let first;
-    if (isForwardMessage(merge)) {
+    if (isForwardMessageDefault(merge)) {
       first = merge.messageSnapshots[0];
     }
     tmp = first;

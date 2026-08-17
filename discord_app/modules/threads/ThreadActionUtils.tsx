@@ -1,5 +1,5 @@
 // discord_app/modules/threads/ThreadActionUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
+import closure_0 from "fetchFingerprint" /* 1218 */;
 
 const result = require("set").fileFinishedImporting("modules/threads/ThreadActionUtils.tsx");
 

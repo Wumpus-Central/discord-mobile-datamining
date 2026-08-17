@@ -1,15 +1,15 @@
 // discord_app/modules/parent_tools/hooks/useOnNewPendingRequest.tsx
-import noop from "noop";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
 
 const require = arg1;
-const result = require("useUserIdsForLinkStatus").fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useOnNewPendingRequest.tsx");
 
 export default function useOnNewPendingRequest(stateFromStores) {
   const _require = stateFromStores;
   const pendingRequestCount = _require(stateFromStores[2]).usePendingRequestCount();
   let obj = _require(stateFromStores[2]);
-  const items = [freshTeenActivityWithMap];
+  const items = [closure_4];
   stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => ref2.getAreLinkedUsersProcessed());
   pendingRequestCount(stateFromStores[4])(() => {
     if (!ref2.getAreLinkedUsersProcessed()) {
@@ -23,9 +23,9 @@ export default function useOnNewPendingRequest(stateFromStores) {
   React = React.useRef(stateFromStores);
   const items1 = [stateFromStores];
   const effect = React.useEffect(() => {
-    noop.current = closure_0;
+    closure_3.current = closure_0;
   }, items1);
-  freshTeenActivityWithMap = React.useRef(null);
+  closure_4 = React.useRef(null);
   const items2 = [stateFromStores, pendingRequestCount];
   const effect1 = React.useEffect(() => {
     if (stateFromStores) {

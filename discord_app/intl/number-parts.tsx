@@ -1,5 +1,7 @@
 // discord_app/intl/number-parts.tsx
-const result = require("set").fileFinishedImporting("intl/number-parts.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("intl/number-parts.tsx");
 const obj = Object.create(null);
 obj[0] = { group: " ", decimal: "," };
 obj[1] = { group: " ", decimal: "," };

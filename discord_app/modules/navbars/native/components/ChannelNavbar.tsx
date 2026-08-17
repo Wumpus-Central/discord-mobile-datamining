@@ -1,40 +1,30 @@
 // discord_app/modules/navbars/native/components/ChannelNavbar.tsx
-import importAllResult from "computeChannelName";
-import { View } from "getSystemLocale";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { StaticChannelRoute } from "set";
-import ContentDismissActionType from "ContentDismissActionType";
-import jsxProd from "SpecialNavigationPath";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ActivityStatus } from "../../../activity_status/native/ActivityStatus.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9893 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "_handleConnectionOpen" /* 4495 */;
+import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "sortActivity" /* 4559 */;
+import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { StaticChannelRoute } from "set" /* 1398 */;
+import ContentDismissActionType from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let Fonts;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-const require = arg1;
+require = arg1;
 function ChannelTitleContent(arg0) {
-  let accessibleTitle;
-  let icon;
-  let subTitle;
-  let title;
-  let titleSuffix;
   ({ title, icon } = arg0);
   ({ titleSuffix, subTitle, accessibleTitle } = arg0);
   const tmp = callback3();
@@ -62,7 +52,7 @@ function ChannelTitleContent(arg0) {
     obj[1] = callback(Text.Text, obj);
     tmp8 = callback(View, obj);
   }
-  const obj1 = { style: tmp.flexRow, children: null };
+  obj1 = { style: tmp.flexRow, children: null };
   const items = [tmp2, ];
   const obj2 = { style: tmp.channelTextContainer, children: null };
   const items1 = [tmp8, titleSuffix];
@@ -78,22 +68,22 @@ function ParentChannelSubTitle(parentChannel) {
   const intl = getSystemLocale.intl;
   obj = { channelName: null };
   const tmp = callback3();
-  obj[0] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
+  obj[0] = computeChannelName.computeChannelName(parentChannel, closure_11, closure_10);
   obj[2] = intl.formatToPlainString(getSystemLocale.t.BjYvHO, obj);
   const obj3 = computeChannelName;
-  obj[6] = computeChannelName.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale, true);
+  obj[6] = computeChannelName.computeChannelName(parentChannel, closure_11, closure_10, true);
   return callback(Text.Text, obj);
 }
 function DMChannelName(style) {
   const userId = style.userId;
   let obj = userId(589);
-  const items = [mergeGuildAvatar, markAllUserIdListsStale];
+  const items = [closure_11, closure_10];
   const items1 = [userId];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let str = outer1_10.getNickname(userId);
+    let str = closure_1_10.getNickname(userId);
     if (str == null) {
-      str = outer1_1(outer1_2[31]).getName(tmp);
-      const obj = outer1_1(outer1_2[31]);
+      str = closure_1_1(closure_1_2[31]).getName(tmp);
+      const obj = closure_1_1(closure_1_2[31]);
     }
     if (str == null) {
       str = "";
@@ -106,23 +96,16 @@ function DMChannelName(style) {
   obj[5] = stateFromStores;
   return callback(userId(1297).LegacyText, obj);
 }
-function ConnectedStatus(userId) {
-  let isMobileOnline;
-  let isVROnline;
-  let status;
-  let streaming;
-  userId = userId.userId;
+function ConnectedStatus(style) {
+  const userId = style.userId;
   let obj = userId(589);
-  const items = [sortActivity];
+  const items = [closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { status: outer1_9.getStatus(userId), isMobileOnline: outer1_9.isMobileOnline(userId), isVROnline: outer1_9.isVROnline(userId), streaming: null };
-    obj[3] = outer1_1(outer1_2[32])(outer1_9.getActivities(userId));
+    const obj = { status: closure_1_9.getStatus(userId), isMobileOnline: closure_1_9.isMobileOnline(userId), isVROnline: closure_1_9.isVROnline(userId), streaming: closure_1_1(closure_1_2[32])(closure_1_9.getActivities(userId)) };
     return obj;
   });
   ({ status, isMobileOnline, isVROnline, streaming } = stateFromStoresObject);
-  obj = { isMobileOnline, isVROnline, status, streaming, size: null, style: null };
-  obj[4] = userId(1297).StatusSizes.SMALL;
-  obj[5] = userId.style;
+  obj = { isMobileOnline, isVROnline, status, streaming, size: userId(1297).StatusSizes.SMALL, style: style.style };
   return callback(userId(1297).Status, obj);
 }
 let c3 = importAllResult;
@@ -131,15 +114,15 @@ let c3 = importAllResult;
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 let obj = { navbarTitleContainer: { height: "100%", flex: 1, flexDirection: "row", alignItems: "center" }, navbarTitlePrimaryText: null, navbarTitleSecondaryText: null, channelIcon: null, channelIconColor: null, homeIcon: null, premiumIcon: null, status: null, channelTextContainer: null, channelNameContainer: null, channelName: null, flexRow: null };
 obj = {};
-const merged = Object.assign(require("createTextStyle")(Fonts.DISPLAY_SEMIBOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
+const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18));
 obj.flexShrink = 1;
 obj[1] = obj;
-createCacheKey = { fontSize: 12, lineHeight: 16, color: require("Themes").colors.TEXT_MUTED, marginTop: -4 };
+createCacheKey = { fontSize: 12, lineHeight: 16, color: ThemesDefault.colors.TEXT_MUTED, marginTop: -4 };
 obj[2] = createCacheKey;
 obj[3] = { height: 18, width: 18, marginRight: 8 };
-obj[4] = { color: require("Themes").colors.CHANNEL_ICON };
-let obj2 = { color: require("Themes").colors.CHANNEL_ICON };
-obj[5] = { height: 20, width: 20, tintColor: require("Themes").colors.TEXT_MUTED, marginTop: 0, marginRight: 8 };
+obj[4] = { color: ThemesDefault.colors.CHANNEL_ICON };
+let obj2 = { color: ThemesDefault.colors.CHANNEL_ICON };
+obj[5] = { height: 20, width: 20, tintColor: ThemesDefault.colors.TEXT_MUTED, marginTop: 0, marginRight: 8 };
 obj[6] = { marginRight: 4 };
 obj[7] = { marginLeft: 1, marginTop: 4 };
 obj[8] = { flex: 1, flexGrow: 1 };
@@ -148,9 +131,6 @@ obj[10] = { textAlign: "left" };
 obj[11] = { flexDirection: "row", alignItems: "center" };
 let closure_18 = createCacheKey.createStyles(obj);
 function ChannelTitleWrapper(arg0) {
-  let children;
-  let onPressTitle;
-  let style;
   ({ children, onPressTitle, style } = arg0);
   const tmp = callback3();
   if (null == onPressTitle) {
@@ -172,46 +152,44 @@ function ChannelTitleWrapper(arg0) {
   }
   return tmp5;
 }
-let obj3 = { height: 20, width: 20, tintColor: require("Themes").colors.TEXT_MUTED, marginTop: 0, marginRight: 8 };
+let obj3 = { height: 20, width: 20, tintColor: ThemesDefault.colors.TEXT_MUTED, marginTop: 0, marginRight: 8 };
 const memoResult = importAllResult.memo((threadDraft) => {
-  let channelId;
-  let onPressTitle;
   ({ onPressTitle, channelId } = threadDraft);
   threadDraft = threadDraft.threadDraft;
   const style = threadDraft.style;
   let stateFromStores1;
   const tmp = callback3();
   let obj = channelId(stateFromStores1[16]);
-  const items = [_handleConnectionOpen];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => connected.isConnected());
-  let obj1 = channelId(stateFromStores1[16]);
-  const items1 = [ensureGuildLoaded];
+  obj1 = channelId(stateFromStores1[16]);
+  const items1 = [closure_7];
   stateFromStores1 = obj1.useStateFromStores(items1, () => {
     let channel = null;
-    if (channelId !== outer1_13.GUILD_HOME) {
+    if (channelId !== closure_1_13.GUILD_HOME) {
       channel = null;
-      if (tmp !== outer1_13.MEMBER_SAFETY) {
-        channel = outer1_7.getChannel(tmp);
+      if (tmp !== closure_1_13.MEMBER_SAFETY) {
+        channel = closure_1_7.getChannel(tmp);
       }
     }
     return channel;
   });
   let obj3 = channelId(stateFromStores1[16]);
-  const items2 = [createGuildRecordFromRust];
+  const items2 = [closure_8];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => {
     let guildId;
     if (stateFromStores1 != null) {
       guildId = stateFromStores1.getGuildId();
     }
-    return outer1_8.getGuild(guildId);
+    return closure_1_8.getGuild(guildId);
   });
   let obj4 = channelId(stateFromStores1[16]);
-  const items3 = [ensureGuildLoaded];
+  const items3 = [closure_7];
   const items4 = [stateFromStores1, threadDraft];
   const stateFromStores3 = obj4.useStateFromStores(items3, () => {
     if (null != threadDraft) {
       if (null != tmp.parentChannelId) {
-        let channel = outer1_7.getChannel(tmp.parentChannelId);
+        let channel = closure_1_7.getChannel(tmp.parentChannelId);
       }
       return channel;
     }
@@ -220,8 +198,8 @@ const memoResult = importAllResult.memo((threadDraft) => {
       channel = null;
       if (null != tmp2.parent_id) {
         channel = null;
-        if (outer1_6.has(tmp2.type)) {
-          channel = outer1_7.getChannel(tmp2.parent_id);
+        if (closure_1_6.has(tmp2.type)) {
+          channel = closure_1_7.getChannel(tmp2.parent_id);
         }
       }
     }
@@ -338,7 +316,7 @@ const memoResult = importAllResult.memo((threadDraft) => {
       obj16[1] = callback(ChannelTitleContent, obj17);
       return callback(ChannelTitleWrapper, obj16);
     } else {
-      const channelName = tmp2(tmp3[19]).computeChannelName(stateFromStores1, mergeGuildAvatar, markAllUserIdListsStale);
+      const channelName = tmp2(tmp3[19]).computeChannelName(stateFromStores1, closure_11, closure_10);
       const tmp2Result1 = tmp2(tmp3[19]);
       const channelIconWithGuild = tmp2(tmp3[18]).getChannelIconWithGuild(stateFromStores1, stateFromStores2);
       if (stateFromStores1.isDM()) {
@@ -415,18 +393,16 @@ const memoResult = importAllResult.memo((threadDraft) => {
   }
   tmp9 = threadDraft(stateFromStores1[22])();
 });
-let result = require("_handleConnectionOpen").fileFinishedImporting("modules/navbars/native/components/ChannelNavbar.tsx");
+let result = require("set").fileFinishedImporting("modules/navbars/native/components/ChannelNavbar.tsx");
 
 export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) {
-  let onPressTitle;
-  let require;
   ({ onPressTitle, channelId: require } = arg0);
   const tmp = callback3();
   let obj = initialize;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(closure_0));
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(closure_0));
   let obj2 = initialize;
-  const items1 = [_handleConnectionOpen];
+  const items1 = [closure_5];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => connected.isConnected());
   const intl = getSystemLocale.intl;
   const string = intl.string;
@@ -444,7 +420,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
   let channelName = null;
   if (null != stateFromStores) {
     tmp2Result = tmp2(4984);
-    channelName = tmp2Result.computeChannelName(stateFromStores, mergeGuildAvatar, markAllUserIdListsStale);
+    channelName = tmp2Result.computeChannelName(stateFromStores, closure_11, closure_10);
   }
   let isDMResult;
   if (stateFromStores != null) {
@@ -463,7 +439,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
       obj[1] = tmp.status;
       tmp16Result = tmp16(ConnectedStatus, obj);
     }
-    const obj1 = { userId: null, guildId: null };
+    obj1 = { userId: null, guildId: null };
     obj1[0] = recipientId;
     obj1[1] = stateFromStores.guild_id;
     obj2 = { onPressTitle: null, children: null };
@@ -472,7 +448,7 @@ export const ChannelTitleWithoutRoute = function ChannelTitleWithoutRoute(arg0) 
     obj3[0] = callback(DMChannelName, obj);
     obj3[1] = channelIcon;
     obj3[2] = tmp16Result;
-    obj3[3] = callback(ActivityStatus, obj1);
+    obj3[3] = callback(ActivityStatusDefault, obj1);
     obj2[1] = callback(ChannelTitleContent, obj3);
     return callback(ChannelTitleWrapper, obj2);
   } else {
@@ -495,13 +471,6 @@ export const ChannelButtons = function ChannelButtons(buttons) {
   let mapped;
   if (buttons != null) {
     mapped = buttons.map((onPress) => {
-      let accessibilityLabel;
-      let children;
-      let color;
-      let disabled;
-      let onLongPress;
-      let source;
-      let style;
       let fn = onPress.onPress;
       const hasActivitiesPrivateChannelTooltip = onPress.hasActivitiesPrivateChannelTooltip;
       ({ onLongPress, source, color, style, accessibilityLabel, children, disabled } = onPress);
@@ -511,9 +480,9 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           if (null != fn) {
             tmp(arg0);
           }
-          let obj = fn(outer1_2[34]);
-          obj = { dismissAction: outer1_14.AUTO };
-          const result = obj.UNSAFE_markDismissibleContentAsDismissed(fn(outer1_2[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
+          let obj = fn(closure_1_2[34]);
+          obj = { dismissAction: closure_1_14.AUTO };
+          const result = obj.UNSAFE_markDismissibleContentAsDismissed(fn(closure_1_2[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP, obj);
         };
       }
       obj[4] = fn;
@@ -534,7 +503,7 @@ export const ChannelButtons = function ChannelButtons(buttons) {
           if (markAsDismissed.visibleContent === markAsDismissed(table[35]).DismissibleContent.ACTIVITY_GDM_CALL_TOOLTIP) {
             const obj = { onClosePress: null };
             obj[0] = function onClosePress() {
-              return markAsDismissed(outer1_14.UNKNOWN);
+              return markAsDismissed(closure_1_14.UNKNOWN);
             };
             tmp2 = callback2(callback(table[37]), obj);
           }

@@ -1,16 +1,17 @@
 // discord_app/modules/messages/native/renderer/createMessageFailedEmbed.tsx
-import { MessageFailureState } from "Changeset";
-import { MessageEmbedTypes } from "ME";
-import { registerAsset } from "../../../../../_runtime/08365_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08366_registerAsset.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { frozen } from "EmbedUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Changeset from "Changeset" /* 8158 */;
+import frozen from "frozen" /* 8171 */;
+import registerAssetDefault from "registerAsset" /* 8365 */;
+import registerAssetDefault2 from "registerAsset" /* 8366 */;
 
-const result = require("frozen").fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
+const MessageFailureState = Changeset.MessageFailureState;
+const MessageEmbedTypes = ME.MessageEmbedTypes;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/createMessageFailedEmbed.tsx");
 
 export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
-  let colors;
-  let uploaderFile;
   ({ uploaderFile, colors } = useAttachmentUploadPreview);
   if (null != uploaderFile) {
     if (useAttachmentUploadPreview.useAttachmentUploadPreview) {
@@ -21,13 +22,13 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
       obj[2] = MessageFailureState.UNSPECIFIED;
       obj[4] = colors.failedMessageBodyTextColor;
       colors = frozen.getAssetUriForEmbed;
-      obj[5] = colors(registerAsset);
+      obj[5] = colors(registerAssetDefault2);
       const tmp14 = frozen;
     } else {
       obj = { type: null, numAttachments: null, failureState: null, attachmentsSize: null, bodyTextColor: null };
       obj[0] = MessageEmbedTypes.TEXT;
       const intl2 = getSystemLocale.intl;
-      const obj1 = { count: null };
+      obj1 = { count: null };
       obj1[0] = uploaderFile.attachmentsCount;
       obj[1] = intl2.formatToPlainString(getSystemLocale.t.D0noUt, obj1);
       obj[2] = MessageFailureState.UPLOAD_FAILED;
@@ -52,7 +53,6 @@ export default function createMessageFailedEmbed(useAttachmentUploadPreview) {
   }
 };
 export const createAutomodBlockedMessageEmbed = function createAutomodBlockedMessageEmbed(errorMessage) {
-  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: null };
-  obj[5] = frozen.getAssetUriForEmbed(registerAsset);
+  const obj = { type: MessageEmbedTypes.TEXT, messageSendError: errorMessage.errorMessage, failureState: MessageFailureState.AUTO_MODERATION_BLOCKED_MESSAGE, disableBackgroundColor: true, bodyTextColor: errorMessage.colors.automodBlockedBodyTextColor, iconURL: frozen.getAssetUriForEmbed(registerAssetDefault) };
   return obj;
 };

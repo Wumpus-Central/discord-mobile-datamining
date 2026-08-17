@@ -1,6 +1,6 @@
 // discord_app/modules/user_profile/utils/getCurrentUserProfile.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
+import closure_0 from "mergeGuildAvatar" /* 1922 */;
+import closure_1 from "createUserWidgetFromServer" /* 5365 */;
 
 const result = require("set").fileFinishedImporting("modules/user_profile/utils/getCurrentUserProfile.tsx");
 

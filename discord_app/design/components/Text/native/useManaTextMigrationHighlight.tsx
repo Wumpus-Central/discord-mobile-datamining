@@ -1,24 +1,27 @@
 // discord_app/design/components/Text/native/useManaTextMigrationHighlight.tsx
-import { StyleSheet } from "get ActivityIndicator";
-import importDefaultResult from "getUserAgnosticState";
-import handleThemeChange from "handleThemeChange";
-import createCacheKey from "createCacheKey";
-import { internal } from "Themes";
-import { internal as internal2 } from "Themes";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import importDefaultResult from "getUserAgnosticState" /* 4737 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
 let c3 = importDefaultResult;
 let obj = { highlight: null, overridden: null };
-obj = { borderWidth: 1, borderColor: require("Themes").colors.STATUS_POSITIVE };
+obj = { borderWidth: 1, borderColor: ThemesDefault.colors.STATUS_POSITIVE };
 obj[0] = obj;
-obj[1] = { borderWidth: 1, borderStyle: "dashed", borderColor: require("Themes").colors.STATUS_DANGER };
+obj[1] = { borderWidth: 1, borderStyle: "dashed", borderColor: ThemesDefault.colors.STATUS_DANGER };
 let closure_5 = createCacheKey.createStyles(obj);
 let closure_6 = importDefaultResult.get("highlight_mana_text");
 const obj2 = { borderWidth: 1, borderColor: null };
-obj2[1] = internal.resolveSemanticColor(require("Themes").themes.DARK, require("Themes").colors.STATUS_WARNING);
+const internal = ThemesDefault.internal;
+obj2[1] = internal.resolveSemanticColor(ThemesDefault.themes.DARK, ThemesDefault.colors.STATUS_WARNING);
 const obj3 = { borderWidth: 1, borderColor: null };
-obj3[1] = internal2.resolveSemanticColor(require("Themes").themes.LIGHT, require("Themes").colors.STATUS_WARNING);
-const obj1 = { borderWidth: 1, borderStyle: "dashed", borderColor: require("Themes").colors.STATUS_DANGER };
-const result = require("handleThemeChange").fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
+const internal2 = ThemesDefault.internal;
+obj3[1] = internal2.resolveSemanticColor(ThemesDefault.themes.LIGHT, ThemesDefault.colors.STATUS_WARNING);
+const obj1 = { borderWidth: 1, borderStyle: "dashed", borderColor: ThemesDefault.colors.STATUS_DANGER };
+const result = set.fileFinishedImporting("design/components/Text/native/useManaTextMigrationHighlight.tsx");
 
 export const useManaTextMigrationHighlight = function useManaTextMigrationHighlight(arg0, style) {
   const tmp = callback();
@@ -27,7 +30,7 @@ export const useManaTextMigrationHighlight = function useManaTextMigrationHighli
     return null;
   } else {
     const _require = arg0;
-    const dependencyMap = StyleSheet.flatten(style);
+    dependencyMap = StyleSheet.flatten(style);
     const _Object = Object;
     const keys = Object.keys(arg0);
     keys.some((arg0) => {

@@ -1,15 +1,15 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { InAppReportsUpsellsTableRow } from "InAppReportsUpsellsTableRow.tsx";
+import InAppReportsUpsellsTableRowDefault from "InAppReportsUpsellsTableRow" /* 12811 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShareWithParentElement.tsx");
 
 export default function _default(parents) {
   parents = parents.parents;
-  let importDefault;
+  importDefault = undefined;
   const tmp = callback(React.useState(false), 2);
   importDefault = tmp[1];
   [][0] = parents;
@@ -53,6 +53,6 @@ export default function _default(parents) {
     obj[3] = intl2.string(parents(1236).t["5l/hlt"]);
     obj[4] = tmp[0];
     obj[5] = tmp2;
-    return jsx(InAppReportsUpsellsTableRow, { count: null, parent1: null, parent2: null, parent3: null });
+    return jsx(InAppReportsUpsellsTableRowDefault, { count: null, parent1: null, parent2: null, parent3: null });
   }
 };

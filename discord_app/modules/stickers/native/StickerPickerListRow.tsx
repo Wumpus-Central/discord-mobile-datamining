@@ -1,52 +1,46 @@
 // discord_app/modules/stickers/native/StickerPickerListRow.tsx
-import _slicedToArray from "_slicedToArray";
-import "PressableBase";
-import { View } from "__INTERNAL_VIEW_CONFIG";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
-import { PADDING_VERTICAL } from "ExpressionPickerViewType";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/StickerPickerListRowNativeComponent.tsx";
+import noopAll from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10232 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
+import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
+noopAll;
 const STICKER_SIZE = PADDING_HORIZONTAL.STICKER_SIZE;
 let closure_10 = createCacheKey.createStyles({ row: { height: PADDING_HORIZONTAL.ROW_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", overflow: "hidden" }, stickerImage: { height: STICKER_SIZE, width: STICKER_SIZE } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/stickers/native/StickerPickerListRow.tsx");
+let result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerListRow.tsx");
 
 export default function StickerPickerListRow(stickers) {
-  let View;
   let arr;
-  let _slicedToArray;
-  let mergeGuildAvatar;
-  let dependencyMap;
-  let importDefault;
-  let nativeRow;
-  let rowSize;
   let sum;
   stickers = stickers.stickers;
-  ({ rowSize, onPressSticker: importDefault, onLongPressStickerDetail: dependencyMap, focusedSticker: _slicedToArray, setFocusedSticker: View, channel: mergeGuildAvatar, nativeRow } = stickers);
+  ({ rowSize, onPressSticker: importDefault, onLongPressStickerDetail: dependencyMap, focusedSticker: closure_3, setFocusedSticker: View, channel: closure_5, nativeRow } = stickers);
   if (nativeRow === undefined) {
     let obj = stickers(500);
     nativeRow = obj.isAndroid();
   }
-  let c6;
-  let closure_7;
+  closure_6 = undefined;
+  closure_7 = undefined;
   let items;
   let callback2;
   function handleOnLongPressSticker(found) {
     if (null != closure_2) {
-      const result = stickers(outer1_2[11]).triggerHapticFeedback(outer1_1(outer1_2[12]).IMPACT_LIGHT);
+      const result = stickers(closure_1_2[11]).triggerHapticFeedback(closure_1_1(closure_1_2[12]).IMPACT_LIGHT);
       tmp(found);
     } else {
-      const AnimateStickers = stickers(outer1_2[10]).AnimateStickers;
-      if (AnimateStickers.getSetting() === _undefined.ANIMATE_ON_INTERACTION) {
-        const result1 = stickers(outer1_2[11]).triggerHapticFeedback(outer1_1(outer1_2[12]).IMPACT_LIGHT);
+      const AnimateStickers = stickers(closure_1_2[10]).AnimateStickers;
+      if (AnimateStickers.getSetting() === closure_6.ANIMATE_ON_INTERACTION) {
+        const result1 = stickers(closure_1_2[11]).triggerHapticFeedback(closure_1_1(closure_1_2[12]).IMPACT_LIGHT);
         if (callback2 != null) {
           callback2(found);
         }
-        const obj = stickers(outer1_2[11]);
+        const obj = stickers(closure_1_2[11]);
       }
     }
   }
@@ -55,18 +49,18 @@ export default function StickerPickerListRow(stickers) {
     if (user != null) {
       id = user.id;
     }
-    const items = [stickers(outer1_2[13]).shouldAnimateSticker(closure_7, id.id === id), , ];
-    let isSendableStickerResult = null == mergeGuildAvatar;
+    items = [stickers(closure_1_2[13]).shouldAnimateSticker(closure_7, id.id === id), , ];
+    let isSendableStickerResult = null == closure_5;
     if (!isSendableStickerResult) {
-      isSendableStickerResult = stickers(outer1_2[14]).isSendableSticker(id, outer1_5.getCurrentUser(), tmp5);
-      const tmpResult = stickers(outer1_2[14]);
+      isSendableStickerResult = stickers(closure_1_2[14]).isSendableSticker(id, closure_1_5.getCurrentUser(), tmp5);
+      const tmpResult = stickers(closure_1_2[14]);
     }
     items[1] = isSendableStickerResult;
     items[2] = null == closure_1;
     return items;
   }
   const tmp6 = callback2();
-  c6 = tmp6;
+  closure_6 = tmp6;
   let AnimateStickers = stickers(4066).AnimateStickers;
   closure_7 = AnimateStickers.useSetting();
   items = [];
@@ -104,7 +98,7 @@ export default function StickerPickerListRow(stickers) {
       } while (num5 < rowSize);
     }
     try {
-      let obj1 = { style: null, rowData: null, onPressSticker: null, onLongPressSticker: null };
+      obj1 = { style: null, rowData: null, onPressSticker: null, onLongPressSticker: null };
       obj1[0] = tmp6.row;
       const obj2 = { rowContentWidth: null, rowContentPaddingVertical: null, itemSize: null, items: null };
       obj2[0] = tmp3;
@@ -113,24 +107,24 @@ export default function StickerPickerListRow(stickers) {
       obj2[3] = items;
       obj1[1] = obj2;
       obj1[2] = function onPressSticker(arg0) {
-        const stickers = arg0;
+        stickers = arg0;
         const found = stickers.find((id) => id.id === nativeEvent.nativeEvent.stickerId);
         if (null != found) {
-          const result = stickers(outer1_2[11]).triggerHapticFeedback(outer1_1(outer1_2[12]).IMPACT_LIGHT);
+          const result = stickers(closure_1_2[11]).triggerHapticFeedback(closure_1_1(closure_1_2[12]).IMPACT_LIGHT);
           if (callback != null) {
             callback(found);
           }
-          const obj = stickers(outer1_2[11]);
+          const obj = stickers(closure_1_2[11]);
         }
       };
       obj1[3] = function onLongPressSticker(arg0) {
-        const stickers = arg0;
+        stickers = arg0;
         const found = stickers.find((id) => id.id === nativeEvent.nativeEvent.stickerId);
         if (null != found) {
           handleOnLongPressSticker(found);
         }
       };
-      return items(__INTERNAL_VIEW_CONFIG, obj1);
+      return items(__INTERNAL_VIEW_CONFIGDefault, obj1);
     } catch (tmp28) {
       const obj3 = { message: "Error in StickerPickerListRowNativeComponent", category: "sticker", data: null };
       obj4 = { itemLength: null, items: null };
@@ -147,51 +141,48 @@ export default function StickerPickerListRow(stickers) {
     if (0 < rowSize) {
       do {
         let tmp8 = (function _loop() {
-          let tmp10;
-          let tmp11;
-          let tmp12;
-          const stickers = tmp2;
+          stickers = tmp2;
           if (undefined === stickers[c10]) {
             let obj = { style: null };
-            obj[0] = _undefined.stickerImage;
-            items.push(items(outer1_4, obj, tmp));
+            obj[0] = closure_6.stickerImage;
+            items.push(items(closure_1_4, obj, tmp));
             return 1;
           } else {
             let id;
             if (user != null) {
               id = user.id;
             }
-            items = [stickers(outer1_2[13]).shouldAnimateSticker(closure_7, tmp2.id === id), , ];
-            let isSendableStickerResult = null == mergeGuildAvatar;
+            items = [stickers(closure_1_2[13]).shouldAnimateSticker(closure_7, tmp2.id === id), , ];
+            let isSendableStickerResult = null == closure_5;
             if (!isSendableStickerResult) {
-              isSendableStickerResult = tmp25(tmp26[14]).isSendableSticker(tmp2, outer1_5.getCurrentUser(), tmp4);
+              isSendableStickerResult = tmp25(tmp26[14]).isSendableSticker(tmp2, closure_1_5.getCurrentUser(), tmp4);
               const tmp25Result = tmp25(tmp26[14]);
             }
             items[1] = isSendableStickerResult;
             items[2] = null == closure_1;
-            const obj5 = stickers(outer1_2[13]);
+            const obj5 = stickers(closure_1_2[13]);
             const tmp27 = closure_7;
-            [tmp10, tmp11, tmp12] = outer1_3(items, 3);
+            [tmp10, tmp11, tmp12] = closure_1_3(items, 3);
             obj = { accessibilityRole: "button", accessibilityLabel: null, style: null, disabled: null, onPress: null, onLongPress: null, children: null };
             obj[1] = tmp2.name;
-            obj[2] = _undefined.stickerImage;
+            obj[2] = closure_6.stickerImage;
             obj[3] = tmp12;
             obj[4] = function onPress() {
-              const result = tmp2(outer1_2[11]).triggerHapticFeedback(outer1_1(outer1_2[12]).IMPACT_LIGHT);
-              if (outer1_1 != null) {
-                outer1_1(tmp2);
+              const result = callback(closure_1_2[11]).triggerHapticFeedback(closure_1_1(closure_1_2[12]).IMPACT_LIGHT);
+              if (closure_1_1 != null) {
+                closure_1_1(callback);
               }
             };
             obj[5] = function onLongPress() {
-              return outer1_8(closure_0);
+              return closure_1_8(closure_0);
             };
-            const obj1 = { sticker: null, size: null, animated: null, opaque: null };
+            obj1 = { sticker: null, size: null, animated: null, opaque: null };
             obj1[0] = tmp2;
             obj1[1] = closure_7;
             obj1[2] = tmp10;
             obj1[3] = tmp11;
-            obj[6] = items(outer1_1(outer1_2[16]), obj1, tmp);
-            items.push(items(stickers(outer1_2[19]).PressableOpacity, obj, tmp2.id));
+            obj[6] = items(closure_1_1(closure_1_2[16]), obj1, tmp);
+            items.push(items(stickers(closure_1_2[19]).PressableOpacity, obj, tmp2.id));
           }
         })();
         sum = num2 + 1;

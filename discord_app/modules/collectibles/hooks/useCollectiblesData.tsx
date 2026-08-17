@@ -1,22 +1,21 @@
 // discord_app/modules/collectibles/hooks/useCollectiblesData.tsx
-import _slicedToArray from "_slicedToArray";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import map from "map";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "map" /* 5324 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 
 const require = arg1;
-const result = require("map").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCollectiblesData.tsx");
 
 export default function useCollectiblesData(arg0) {
   const _require = arg0;
   let obj = _defaultAreStatesEqual;
-  let items = [updateCategoriesAndProducts];
+  let items = [closure_3];
   const tmp = callback(obj.useStateFromStoresArray(items, () => {
-    const items = [outer1_3.getCategoryForProduct(closure_0), outer1_3.getProduct(closure_0)];
+    const items = [closure_1_3.getCategoryForProduct(closure_0), closure_1_3.getProduct(closure_0)];
     return items;
   }), 2);
-  obj = { category: tmp[0], product: tmp[1], purchase: null };
-  const items1 = [map];
-  obj[2] = _defaultAreStatesEqual.useStateFromStores(items1, () => outer1_4.getPurchase(closure_0));
+  obj = { category: tmp[0], product: tmp[1], purchase: _defaultAreStatesEqual.useStateFromStores(items1, () => closure_1_4.getPurchase(closure_0)) };
+  items1 = [closure_4];
   return obj;
 };

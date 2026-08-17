@@ -1,19 +1,20 @@
 // discord_app/modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
+const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { container: null, betaTag: null };
-obj = { alignItems: "center", justifyContent: "center", gap: require("Themes").space.PX_12 };
+obj = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_12 };
 obj[0] = obj;
 obj[1] = { marginLeft: 0 };
 let closure_5 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
+const result = set.fileFinishedImporting("modules/favorites/native/onboarding/FavoritesGuildCoachmarkGraphic.tsx");
 
 export default function FavoritesGuildCoachmarkGraphic() {
   const tmp = callback3();

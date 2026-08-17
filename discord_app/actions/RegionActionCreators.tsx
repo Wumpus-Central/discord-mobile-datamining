@@ -1,8 +1,11 @@
 // discord_app/actions/RegionActionCreators.tsx
-import { Endpoints } from "ME";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
 import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
-const result = require("dispatcher").fileFinishedImporting("actions/RegionActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("actions/RegionActionCreators.tsx");
 
 export default {
   fetchRegions(id) {
@@ -10,11 +13,11 @@ export default {
     const HTTP = _sendRequest.HTTP;
     const value = HTTP.get({ url: Endpoints.REGIONS(id), retries: 1, oldFormErrors: true, rejectWithError: true });
     value.then((body) => {
-      let obj = outer1_1(outer1_2[2]);
+      let obj = closure_1_1(closure_1_2[2]);
       obj = { type: "LOAD_REGIONS", regions: body.body, guildId: closure_0 };
       return obj.dispatch(obj);
     }, () => {
-      let obj = outer1_1(outer1_2[2]);
+      let obj = closure_1_1(closure_1_2[2]);
       obj = { type: "LOAD_REGIONS", regions: [], guildId: closure_0 };
       return obj.dispatch(obj);
     });

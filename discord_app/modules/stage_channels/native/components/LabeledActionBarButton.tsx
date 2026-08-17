@@ -1,16 +1,14 @@
 // discord_app/modules/stage_channels/native/components/LabeledActionBarButton.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/void/native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { buttonContainer: null, container: null, containerWithLabel: null, pressable: null, buttonContent: null, buttonText: null, rightTextMargin: null };
@@ -20,27 +18,21 @@ createCacheKey[1] = { marginHorizontal: 12 };
 createCacheKey[2] = { minWidth: "50%", maxWidth: "70%", flexShrink: 1 };
 createCacheKey[3] = { marginHorizontal: 12, borderRadius: 28 };
 createCacheKey[4] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[5] = { marginStart: 8, fontSize: 14, color: require("Themes").colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
+createCacheKey[5] = { marginStart: 8, fontSize: 14, color: ThemesDefault.colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
 createCacheKey[6] = { marginStart: 0, marginEnd: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { LEFT: 0, [0]: "LEFT", RIGHT: 1, [1]: "RIGHT" };
-obj1 = { marginStart: 8, fontSize: 14, color: require("Themes").colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
-const result = require("sum").fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
+obj1 = { marginStart: 8, fontSize: 14, color: ThemesDefault.colors.WHITE, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, paddingStart: 3 };
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/LabeledActionBarButton.tsx");
 
 export const IconPosition = obj2;
 export const LabeledActionButton = function LabeledActionButton(children) {
-  let backgroundColor;
-  let disabled;
-  let iconPosition;
-  let imageStyle;
-  let label;
-  let source;
   ({ backgroundColor, imageStyle, source, disabled, label, iconPosition } = children);
   if (iconPosition === undefined) {
     iconPosition = obj2.LEFT;
   }
   const merged = Object.assign(children, Object.create(null));
-  const tmp3 = createCacheKey();
+  const tmp3 = callback();
   const items = [tmp3.container, ];
   let containerWithLabel = null;
   if (null != label) {
@@ -62,7 +54,7 @@ export const LabeledActionButton = function LabeledActionButton(children) {
     obj[0] = backgroundColor;
     tmp11 = obj;
   }
-  const obj1 = { style: items1, children: null };
+  obj1 = { style: items1, children: null };
   items1[2] = tmp11;
   const items2 = [tmp3.buttonContent, ];
   obj2 = null;

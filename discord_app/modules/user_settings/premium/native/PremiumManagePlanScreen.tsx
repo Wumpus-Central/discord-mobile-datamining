@@ -1,10 +1,11 @@
 // discord_app/modules/user_settings/premium/native/PremiumManagePlanScreen.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { ManagePlanHeader } from "PremiumManagePlan.tsx";
+import noopAll from "noop" /* 19 */;
+import ManagePlanHeaderDefault from "ManagePlanHeader" /* 12928 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("ManagePlanHeader").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlanScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
-  return jsx(ManagePlanHeader, {});
+  return jsx(ManagePlanHeaderDefault, {});
 };

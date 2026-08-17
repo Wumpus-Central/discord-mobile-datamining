@@ -1,5 +1,6 @@
 // discord_app/modules/memory/MemoryExperiment.tsx
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const obj = { 1: null };
 obj[1] = { enabled: true };
@@ -17,4 +18,4 @@ const interval = setInterval(() => {
     clearInterval(closure_1);
   }
 }, 60000);
-const result = require("set").fileFinishedImporting("modules/memory/MemoryExperiment.tsx");
+const result = set.fileFinishedImporting("modules/memory/MemoryExperiment.tsx");

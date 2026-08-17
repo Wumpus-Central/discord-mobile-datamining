@@ -1,29 +1,28 @@
 // discord_app/modules/rpc/server/commands/certifiedDevices.tsx
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { DeviceTypes } from "DesktopSources";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 4375 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
 
-let RPCCommands;
-let RPC_LOCAL_SCOPE;
-let RPC_SCOPE_CONFIG;
-let c3;
 ({ RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
 ({ RPCErrors: c3, RPCCommands } = ME);
+const DeviceTypes = DesktopSources.DeviceTypes;
 let obj = {};
 obj = { scope: null, validation: null, handler: null };
 obj = {};
-let items = [require("set").OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
+let items = [set2.OAuth2Scopes.RPC, RPC_LOCAL_SCOPE];
 obj[RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function validation(array) {
-  let obj = createRpcJoiSchemaObject(array);
+  let obj = createRpcJoiSchemaObjectDefault(array);
   obj = { devices: null };
   let arrayResult = array.array();
   const requiredResult = obj.required();
   obj = { type: null, id: null, vendor: null, model: null, related: null, echo_cancellation: null, noise_suppression: null, automatic_gain_control: null, hardware_mute: null };
-  const obj5 = createRpcJoiSchemaObject(array);
+  const obj5 = createRpcJoiSchemaObjectDefault(array);
   const stringResult = array.string();
   const items = [, , ];
   ({ AUDIO_INPUT: arr[0], AUDIO_OUTPUT: arr[1], VIDEO_INPUT: arr[2] } = DeviceTypes);
@@ -32,17 +31,17 @@ obj[1] = function validation(array) {
   const stringResult1 = array.string();
   obj[1] = array.string().required().min(1);
   const requiredResult2 = array.string().required();
-  const obj11 = createRpcJoiSchemaObject(array);
-  const obj1 = { name: null, url: null };
-  const requiredResult3 = createRpcJoiSchemaObject(array).required();
+  const obj11 = createRpcJoiSchemaObjectDefault(array);
+  obj1 = { name: null, url: null };
+  const requiredResult3 = createRpcJoiSchemaObjectDefault(array).required();
   obj1[0] = array.string().min(1);
   const stringResult2 = array.string();
   obj1[1] = array.string().min(1);
   obj[2] = requiredResult3.keys(obj1);
   const stringResult3 = array.string();
-  const obj16 = createRpcJoiSchemaObject(array);
+  const obj16 = createRpcJoiSchemaObjectDefault(array);
   const obj2 = { name: null, url: null };
-  const requiredResult4 = createRpcJoiSchemaObject(array).required();
+  const requiredResult4 = createRpcJoiSchemaObjectDefault(array).required();
   obj2[0] = array.string().min(1);
   const stringResult4 = array.string();
   obj2[1] = array.string().min(1);
@@ -63,7 +62,7 @@ obj[2] = function handler(socket) {
   if (null == socket.application.id) {
     let obj = { errorCode: null };
     obj[0] = constants.INVALID_COMMAND;
-    const tmp10 = new prototype(obj, "No application.");
+    const tmp10 = new prototypeDefault(obj, "No application.");
     throw tmp10;
   } else {
     obj = devices(13840);
@@ -75,7 +74,7 @@ obj[2] = function handler(socket) {
         vendor: type.vendor,
         model: type.model,
         related: related.filter((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return closure_0.some((id) => id.id === closure_0);
         }),
         echoCancellation: type.echo_cancellation,
@@ -87,6 +86,6 @@ obj[2] = function handler(socket) {
   }
 };
 obj[RPCCommands.SET_CERTIFIED_DEVICES] = obj;
-const result = require("DesktopSources").fileFinishedImporting("modules/rpc/server/commands/certifiedDevices.tsx");
+const result = set.fileFinishedImporting("modules/rpc/server/commands/certifiedDevices.tsx");
 
 export default obj;

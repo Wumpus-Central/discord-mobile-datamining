@@ -1,17 +1,13 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx
-import noop from "noop";
-import get_ActivityIndicator from "ItemSeparator";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { _initialize } from "../../../nuf_channels/native/NUFChannelsManager.tsx";
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import _initializeDefault from "_initialize" /* 12646 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -20,28 +16,28 @@ createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.overflow = "hidden";
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("getVoiceStatesForGuild").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceActionSheet.tsx");
 
 export default function VoiceActionSheet(channel) {
   channel = channel.channel;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = channel(589);
-  const items = [getVoiceStatesForGuild];
+  const items = [closure_5];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => 0 === outer1_5.countVoiceStatesForChannel(channel.id));
+  const stateFromStores = obj.useStateFromStores(items, () => 0 === closure_1_5.countVoiceStatesForChannel(channel.id));
   const effect = React.useEffect(() => {
-    const obj = channel(outer1_2[8]);
-    const tmp = outer1_2;
+    const obj = channel(closure_1_2[8]);
+    const tmp = closure_1_2;
     if (!obj.isModalOpen(obj2.getVoiceChannelKey(channel.id))) {
-      outer1_1(tmp[10]).initialize(channel);
-      const obj3 = outer1_1(tmp[10]);
+      closure_1_1(tmp[10]).initialize(channel);
+      const obj3 = closure_1_1(tmp[10]);
     }
     return () => {
       callback(table[10]).terminate();
     };
   }, items1);
-  let obj1 = _initialize;
+  obj1 = _initializeDefault;
   if (obj1.requiresVoiceChannelsOnboard()) {
     obj = { children: null };
     obj = { channel: null };
@@ -75,5 +71,5 @@ export default function VoiceActionSheet(channel) {
     obj4[2] = callback2(closure_4, obj5);
     children = callback(tmp5(7175).ActionSheet, obj4);
   }
-  return tmp8(channel(7139).AnalyticsLocationProvider, { value: context(QUICK_SWITCHER.VOICE_ACTION_SHEET).analyticsLocations, children });
+  return tmp8(channel(7139).AnalyticsLocationProvider, { value: contextDefault(QUICK_SWITCHERDefault.VOICE_ACTION_SHEET).analyticsLocations, children });
 };

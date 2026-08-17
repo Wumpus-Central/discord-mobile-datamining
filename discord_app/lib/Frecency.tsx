@@ -1,6 +1,8 @@
 // discord_app/lib/Frecency.tsx
-import { apply } from "../../_runtime/00012_apply.js";
-import { t } from "../../_runtime/03975_t.js";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import tDefault from "t" /* 3975 */;
+
 function DEFAULT_FRECENCY(arg0, arg1, numOfRecentUses) {
   return Math.ceil(arg0 * (arg1 / numOfRecentUses.numOfRecentUses));
 }
@@ -90,8 +92,6 @@ prototype["isDirty"] = function isDirty() {
 prototype["track"] = function track(arg0) {
   let length;
   let maxSamples;
-  let timestamp;
-  let usesSinceLastTrack;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -187,7 +187,7 @@ prototype["getFrecency"] = function getFrecency(id) {
 prototype["compute"] = function compute() {
   let self = this;
   self = this;
-  const dependencyMap = t();
+  dependencyMap = tDefault();
   let maxByResult = null;
   if (this.calculateMaxTotalUse) {
     let tmpResult = tmp(12);
@@ -202,12 +202,12 @@ prototype["compute"] = function compute() {
       const table = self.computeBonus(arg1) / 100;
       recentUses.score = 0;
       const item = maxByResult(table[0]).forEach(recentUses, (arg0, arg1) => {
-        if (arg1 >= outer1_2.maxSamples) {
+        if (arg1 >= closure_1_2.maxSamples) {
           return false;
         } else {
           score.score = score.score + closure_1 * obj.computeWeight(closure_1.diff(maxByResult(closure_1[1])(arg0), "days"));
         }
-        obj = outer1_2;
+        obj = closure_1_2;
       });
       if (recentUses.score > 0) {
         if (recentUses.recentUses.length > 0) {
@@ -228,7 +228,7 @@ prototype["compute"] = function compute() {
       const arr2 = maxByResult(table[0]);
     }
   });
-  const mapped = apply(self.usageHistory).map((frecency) => {
+  const mapped = applyDefault(self.usageHistory).map((frecency) => {
     const lookupKeyResult = self.lookupKey(arg1);
     let tmp2 = null;
     if (null != lookupKeyResult) {
@@ -238,18 +238,15 @@ prototype["compute"] = function compute() {
     return tmp2;
   });
   const found = mapped.filter((arg0) => null !== arg0);
-  let arr2 = apply(self.usageHistory);
+  let arr2 = applyDefault(self.usageHistory);
   const mapped1 = found.sortBy((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return -tmp;
   }).map((arg0) => {
-    let tmp;
     [tmp] = arg0;
     return tmp;
   });
   const sortByResult = found.sortBy((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return -tmp;
   });
@@ -273,6 +270,6 @@ Object.defineProperty(prototype, "frequently", {
     this._frequently = _frequently;
   }
 });
-const result = require("set").fileFinishedImporting("lib/Frecency.tsx");
+const result = set.fileFinishedImporting("lib/Frecency.tsx");
 
 export default Frecency;

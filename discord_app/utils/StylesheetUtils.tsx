@@ -1,5 +1,7 @@
 // discord_app/utils/StylesheetUtils.tsx
-const result = require("set").fileFinishedImporting("utils/StylesheetUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/StylesheetUtils.tsx");
 
 export const getClass = function getClass(arg0, arg1) {
   const substr = [...arguments].slice();

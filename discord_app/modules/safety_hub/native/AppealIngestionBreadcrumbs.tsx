@@ -1,28 +1,28 @@
 // discord_app/modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: { flex: 0, alignSelf: "stretch", marginBottom: 8 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
-createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[4] = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[5] = { marginStart: 8, lineHeight: 20 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-const result = require("jsxProd").fileFinishedImporting("modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionBreadcrumbs.tsx");
 
 export default function AppealIngestionBreadcrumbs(reasons) {
   reasons = reasons.reasons;
   let _require;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   _require = tmp;
   let tmp2 = null;
   if (0 !== reasons.length) {
@@ -35,14 +35,14 @@ export default function AppealIngestionBreadcrumbs(reasons) {
     let items = [
       callback(_Text.Text, obj),
       reasons.map((children) => {
-          let obj = { style: _undefined.breadCrumbItemContainer, children: null };
-          obj = { style: _undefined.breadCrumbBar };
-          const items = [outer1_3(outer1_2, obj), , ];
-          obj = { style: _undefined.breadCrumbDot };
-          items[1] = outer1_3(outer1_2, obj);
-          items[2] = outer1_3(_undefined(outer1_1[5]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: _undefined.breadCrumbText, variant: "text-md/medium", children });
+          let obj = { style: lib.breadCrumbItemContainer, children: null };
+          obj = { style: lib.breadCrumbBar };
+          const items = [closure_1_3(closure_1_2, obj), , ];
+          obj = { style: lib.breadCrumbDot };
+          items[1] = closure_1_3(closure_1_2, obj);
+          items[2] = closure_1_3(lib(closure_1_1[5]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: lib.breadCrumbText, variant: "text-md/medium", children });
           obj[1] = items;
-          return outer1_4(outer1_2, obj, "" + children + "+" + arg1);
+          return closure_1_4(closure_1_2, obj, "" + children + "+" + arg1);
         })
     ];
     obj[1] = items;

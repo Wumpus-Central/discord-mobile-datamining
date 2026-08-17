@@ -1,26 +1,24 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockExternalCoordinationContext.tsx
-import importAllResult from "noop";
-import QuestDockMode from "QuestDockMode";
-import { QuestDockMode } from "QuestsExperimentLocations";
-import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT";
-import { jsx } from "jsxProd";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import set from "set";
-import set from "QuestsExperimentLocations";
+import setDefault from "set" /* 687 */;
+import importAllResult from "noop" /* 19 */;
+import closure_3 from "QuestDockMode" /* 14445 */;
+import { QuestDockMode } from "QuestsExperimentLocations" /* 6716 */;
+import { QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD as closure_5 } from "QUEST_DOCK_COLLAPSED_HEIGHT" /* 14447 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import set from "set" /* 500 */;
 
 const require = arg1;
-const SECOND = require("set").Millis.SECOND;
+const SECOND = setDefault.Millis.SECOND;
 let obj = { restingQuestDockMode: null, setRestingQuestDockMode: null, lastScrollEventSourceId: null, questDockOffset: null };
 obj[0] = createFakeSharedValue.createFakeSharedValue(QuestDockMode.COLLAPSED);
 obj[1] = function setRestingQuestDockMode(COLLAPSED) {
 
 };
 obj[2] = createFakeSharedValue.createFakeSharedValue(null);
-obj[3] = require("noop");
+obj[3] = require("module_0");
 let context = importAllResult.createContext(obj);
-set = set.isAndroid();
+let closure_9 = set.isAndroid();
 let closure_10 = { code: "function QuestDockExternalCoordinationContextTsx1(){const{restingQuestDockMode}=this.__closure;return restingQuestDockMode.get();}" };
 let closure_11 = { code: "function QuestDockExternalCoordinationContextTsx2(nextMode,prevMode){const{runOnJS,cancelReopenQuestDock}=this.__closure;if(nextMode!==prevMode){runOnJS(cancelReopenQuestDock)();}}" };
 let closure_12 = { code: "function QuestDockExternalCoordinationContextTsx3(contentOffsetY,contentHeight,layoutHeight){const{isScrollHandlerEnabled,restingQuestDockMode,QuestDockMode,lastContentOffsetY,lastScrollEventSourceId,id,runOnJS,cancelReopenQuestDock,IS_ANDROID,scheduleReopenQuestDock,setRestingQuestDockMode,QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD}=this.__closure;if(!isScrollHandlerEnabled.get())return;if(restingQuestDockMode.get()===QuestDockMode.SOFT_DISMISSED||restingQuestDockMode.get()===QuestDockMode.EXPANDED){return;}const lastContentOffsetYValue=lastContentOffsetY.get();lastContentOffsetY.set(contentOffsetY);if(lastContentOffsetYValue===contentOffsetY)return;const lastSourceId=lastScrollEventSourceId.get();if(id!=='guilds'){lastScrollEventSourceId.set(id);}const isFirstScrollEvent=id!=='guilds'&&id!==lastSourceId;if(isFirstScrollEvent)return;const isOverscrollingAtTop=contentOffsetY<0&&lastContentOffsetYValue<0;if(isOverscrollingAtTop){runOnJS(cancelReopenQuestDock)();return;}const hasLayoutData=layoutHeight!=null&&contentHeight!=null;const isOverscrollingAtBottom=hasLayoutData&&contentOffsetY+layoutHeight>=contentHeight;if(isOverscrollingAtBottom)return;const isScrolledToTop=contentOffsetY<=0&&(IS_ANDROID||lastContentOffsetYValue<=0);if(isScrolledToTop&&restingQuestDockMode.get()===QuestDockMode.CLOSED){if(IS_ANDROID){runOnJS(scheduleReopenQuestDock)();}else{runOnJS(setRestingQuestDockMode)(QuestDockMode.COLLAPSED);}return;}const isScrollingDown=contentOffsetY>lastContentOffsetYValue&&contentOffsetY>0&&lastContentOffsetYValue>0;const isScrollingUp=contentOffsetY<lastContentOffsetYValue;const scrollDistance=Math.abs(lastContentOffsetYValue-contentOffsetY);if(isScrollingDown&&restingQuestDockMode.get()===QuestDockMode.COLLAPSED){runOnJS(setRestingQuestDockMode)(QuestDockMode.CLOSED);}else if(isScrollingUp&&restingQuestDockMode.get()===QuestDockMode.CLOSED&&scrollDistance>=QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD){runOnJS(scheduleReopenQuestDock)();}}" };
@@ -40,7 +38,7 @@ export const QuestDockExternalCoordinationContextProvider = importAllResult.memo
     if (sharedValue2.get() !== mode) {
       const result1 = sharedValue2.set(mode);
     }
-    if (mode !== outer1_4.RESET_TO_PREVIOUS) {
+    if (mode !== closure_1_4.RESET_TO_PREVIOUS) {
       const result2 = sharedValue(sharedValue1[9]).updatePrevRestingQuestDockMode(mode);
       const obj2 = sharedValue(sharedValue1[9]);
     }
@@ -54,12 +52,12 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
   let setRestingQuestDockMode;
   let restingQuestDockMode;
   let lastScrollEventSourceId;
-  let closure_4;
+  closure_4 = undefined;
   let callback;
   let callback1;
   let sharedValue;
   let sharedValue1;
-  const context = restingQuestDockMode.useContext(sharedValue1);
+  context = restingQuestDockMode.useContext(sharedValue1);
   setRestingQuestDockMode = context.setRestingQuestDockMode;
   restingQuestDockMode = context.restingQuestDockMode;
   lastScrollEventSourceId = context.lastScrollEventSourceId;
@@ -71,7 +69,7 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
       window.clearTimeout(tmp.current);
     }
     ref.current = window.setTimeout(() => {
-      if (closure_2.get() !== outer1_4.EXPANDED) {
+      if (closure_2.get() !== closure_1_4.EXPANDED) {
         callback(tmp.COLLAPSED);
       }
     }, 500);
@@ -116,15 +114,15 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
   }, items1);
   class T {
     constructor(arg0, arg1, arg2) {
-      if (D.get()) {
+      if (closure_8.get()) {
         obj = restingQuestDockMode;
-        tmp = useRef;
-        if (restingQuestDockMode.get() !== useRef.SOFT_DISMISSED) {
+        tmp = closure_4;
+        if (restingQuestDockMode.get() !== closure_4.SOFT_DISMISSED) {
           if (obj.get() !== tmp.EXPANDED) {
             tmp30 = id;
-            tmp31 = useAnimatedReaction;
-            value = useAnimatedReaction.get();
-            result = useAnimatedReaction.set(id);
+            tmp31 = closure_7;
+            value = closure_7.get();
+            result = closure_7.set(id);
             if (value !== id) {
               obj5 = lastScrollEventSourceId;
               tmp35 = id;
@@ -140,8 +138,8 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
                     tmp26 = id;
                     tmp27 = setRestingQuestDockMode;
                     obj4 = id(setRestingQuestDockMode[7]);
-                    tmp28 = useCallback;
-                    tmp29 = obj4.runOnJS(useCallback)();
+                    tmp28 = closure_6;
+                    tmp29 = obj4.runOnJS(closure_6)();
                   }
                 }
                 tmp3 = arg2;
@@ -152,15 +150,15 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
                   }
                 }
                 if (id <= 0) {
-                  if (outer1_9) {
+                  if (closure_1_9) {
                     if (obj.get() === tmp.CLOSED) {
                       tmp19 = id;
                       tmp20 = setRestingQuestDockMode;
                       tmp21 = id(setRestingQuestDockMode[7]);
                       runOnJS = tmp21.runOnJS;
                       if (tmp6) {
-                        tmp24 = c5;
-                        tmp25 = runOnJS(c5)();
+                        tmp24 = closure_5;
+                        tmp25 = runOnJS(closure_5)();
                       } else {
                         tmp22 = setRestingQuestDockMode;
                         tmp23 = runOnJS(setRestingQuestDockMode)(tmp.COLLAPSED);
@@ -186,15 +184,15 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
                 }
                 tmp9 = id < value && obj.get() === tmp.CLOSED;
                 if (tmp9) {
-                  tmp10 = c5;
-                  tmp9 = absolute >= c5;
+                  tmp10 = closure_5;
+                  tmp9 = absolute >= closure_5;
                 }
                 if (tmp9) {
                   tmp11 = id;
                   tmp12 = setRestingQuestDockMode;
                   obj2 = id(setRestingQuestDockMode[7]);
-                  tmp13 = c5;
-                  tmp14 = obj2.runOnJS(c5)();
+                  tmp13 = closure_5;
+                  tmp14 = obj2.runOnJS(closure_5)();
                 }
               }
             }
@@ -204,7 +202,7 @@ export const useExternalScrollEventHandler = function useExternalScrollEventHand
       return;
     }
   }
-  obj = { isScrollHandlerEnabled: sharedValue1, restingQuestDockMode, QuestDockMode: closure_4, lastContentOffsetY: sharedValue, lastScrollEventSourceId, id, runOnJS: id(setRestingQuestDockMode[7]).runOnJS, cancelReopenQuestDock: callback1, IS_ANDROID: set, scheduleReopenQuestDock: callback, setRestingQuestDockMode, QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD: callback };
+  obj = { isScrollHandlerEnabled: sharedValue1, restingQuestDockMode, QuestDockMode: closure_4, lastContentOffsetY: sharedValue, lastScrollEventSourceId, id, runOnJS: id(setRestingQuestDockMode[7]).runOnJS, cancelReopenQuestDock: callback1, IS_ANDROID: closure_9, scheduleReopenQuestDock: callback, setRestingQuestDockMode, QUEST_DOCK_EXTERNAL_SCROLL_DELTA_THRESHOLD: callback };
   T.__closure = obj;
   T.__workletHash = 9824540806898;
   T.__initData = closure_12;

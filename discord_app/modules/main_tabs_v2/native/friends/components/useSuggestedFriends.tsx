@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import initialize from "initialize";
-import { SuggestedFriendSource } from "SuggestedFriendSource";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "initialize" /* 5410 */;
+import { SuggestedFriendSource } from "SuggestedFriendSource" /* 11872 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/useSuggestedFriends.tsx");
 
 export default function useSuggestedFriends(arg0) {
   let obj = arg0;
@@ -13,7 +13,7 @@ export default function useSuggestedFriends(arg0) {
     obj = {};
   }
   let flag = obj.isConnected;
-  const items = [initialize];
+  const items = [closure_5];
   stateFromStoresArray = stateFromStoresArray(flag[4]).useStateFromStoresArray(items, () => suggestions.getSuggestions());
   const tmp = callback(React.useState([]), 2);
   const first = tmp[0];
@@ -25,11 +25,8 @@ export default function useSuggestedFriends(arg0) {
     if (flag) {
       const found = first.filter((source) => source.source === constants.USER_SUGGESTIONS);
       const mapped = stateFromStoresArray.map((user) => {
-        const obj = { user: user.user, friendSuggestionName: null, source: null, contactNames: null };
-        const name = user.name;
-        obj[1] = name;
-        obj[2] = constants.USER_SUGGESTIONS;
-        obj[3] = user.contactNames;
+        const obj = { user: user.user, friendSuggestionName: name, source: constants.USER_SUGGESTIONS, contactNames: user.contactNames };
+        name = user.name;
         return obj;
       });
       let obj = first(flag[5]);

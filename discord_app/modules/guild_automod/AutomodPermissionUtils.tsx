@@ -1,16 +1,16 @@
 // discord_app/modules/guild_automod/AutomodPermissionUtils.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { GuildMemberFlags } from "GuildMemberFlags";
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
 let items = [, , ];
 ({ AUTOMOD_QUARANTINED_BIO: arr[0], AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME: arr[1], AUTOMOD_QUARANTINED_SERVER_TAG: arr[2] } = GuildMemberFlags);
-const result = require("hasFlag").fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodPermissionUtils.tsx");
 
 export const AUTOMOD_QUARANTINED_PROFILE_FLAGS = items;
 export const getAutomodQuarantinedProfileFlags = function getAutomodQuarantinedProfileFlags(flags) {
-  let closure_0 = flags;
+  closure_0 = flags;
   if (null == flags) {
     const _Set2 = Set;
     let set = new Set();
@@ -68,7 +68,7 @@ export const getAutomodReason = function getAutomodReason(automodQuarantinedGuil
   return prop;
 };
 export const hasAutomodQuarantinedProfile = function hasAutomodQuarantinedProfile(member) {
-  let closure_0 = member;
+  closure_0 = member;
   let tmp = null != member;
   if (tmp) {
     let someResult = null != member.flags;
@@ -78,7 +78,7 @@ export const hasAutomodQuarantinedProfile = function hasAutomodQuarantinedProfil
         if (num == null) {
           num = 0;
         }
-        return selfMember(outer1_1[2]).hasFlag(num, arg0);
+        return selfMember(closure_1_1[2]).hasFlag(num, arg0);
       });
     }
     tmp = someResult;
@@ -87,22 +87,22 @@ export const hasAutomodQuarantinedProfile = function hasAutomodQuarantinedProfil
 };
 export const useCurrentUserAutomodQuaratinedProfile = function useCurrentUserAutomodQuaratinedProfile(guild_id) {
   const _require = guild_id;
-  const items = [trackCommunicationDisabled];
+  items = [closure_2];
   const items1 = [guild_id];
   return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != selfMember;
     if (tmp2) {
-      selfMember = outer1_2.getSelfMember(tmp);
+      selfMember = closure_1_2.getSelfMember(tmp);
       let tmp5 = null != selfMember;
       if (tmp5) {
         let someResult = null != selfMember.flags;
         if (someResult) {
-          someResult = outer1_4.some((arg0) => {
+          someResult = closure_1_4.some((arg0) => {
             let num = selfMember.flags;
             if (num == null) {
               num = 0;
             }
-            return selfMember(outer1_1[2]).hasFlag(num, arg0);
+            return selfMember(closure_1_1[2]).hasFlag(num, arg0);
           });
         }
         tmp5 = someResult;

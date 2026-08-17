@@ -1,21 +1,21 @@
 // discord_app/actions/ChannelCollapseActionCreators.tsx
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { dispatcher } from "../Dispatcher.tsx";
-import { handleConnectionOpen } from "../modules/user_settings/UserGuildSettingsManager.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import handleConnectionOpenDefault from "handleConnectionOpen" /* 6797 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
 
-let result = require("handleConnectionOpen").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/ChannelCollapseActionCreators.tsx");
 
 export default {
   update(channelId) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "CHANNEL_COLLAPSE", channelId };
     obj.dispatch(obj);
   },
   toggleCollapseGuild(id) {
-    let obj = handleConnectionOpen;
+    let obj = handleConnectionOpenDefault;
     obj = { hide_muted_channels: !guildCollapsed.isGuildCollapsed(id) };
     const result = obj.saveUserGuildSettings(id, obj);
     obj = { type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: id };
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
   }
 };

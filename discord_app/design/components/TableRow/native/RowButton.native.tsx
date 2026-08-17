@@ -1,10 +1,13 @@
 // discord_app/design/components/TableRow/native/RowButton.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import TableRowIcon from "TableRowIcon" /* 6296 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 class RowButton {
   constructor(arg0) {
     flag = global.arrow;
@@ -26,9 +29,9 @@ class RowButton {
     tmp4 = require("useIsMobileVisualRefreshExperimentEnabled")("RowButton");
     tmp5 = icon;
     if (null != icon) {
-      tmp6 = noop;
+      tmp6 = closure_3;
       tmp5 = icon;
-      if (!noop.isValidElement(icon)) {
+      if (!closure_3.isValidElement(icon)) {
         str2 = "translucent";
         if (!experimental_withBlurBackground) {
           str3 = "secondary";
@@ -62,9 +65,6 @@ class RowButton {
   }
 }
 function RowButtonWrapper(isRefreshEnabled) {
-  let children;
-  let disabled;
-  let onPress;
   let flag = isRefreshEnabled.isRefreshEnabled;
   if (flag === undefined) {
     flag = false;
@@ -72,7 +72,7 @@ function RowButtonWrapper(isRefreshEnabled) {
   ({ onPress, disabled, children } = isRefreshEnabled);
   const merged = Object.assign(isRefreshEnabled, Object.create(null));
   let sharedValue;
-  let dependencyMap;
+  dependencyMap = undefined;
   let React;
   const tmp2 = callback(flag);
   let obj = merged(4115);
@@ -126,7 +126,7 @@ function RowButtonWrapper(isRefreshEnabled) {
       }
       str2 = variant;
     }
-    const obj1 = { shadow: "low", start: true, end: true, onPress: null, style: null, disabled: null };
+    obj1 = { shadow: "low", start: true, end: true, onPress: null, style: null, disabled: null };
     obj1[3] = onPress;
     obj1[4] = tmp2.card;
     obj1[5] = disabled;
@@ -143,13 +143,13 @@ let closure_5 = createCacheKey.createStyles(() => {
     flag = false;
   }
   let obj = { card: null, cardWithBlur: null };
-  obj = { padding: num, borderTopStartRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS };
+  obj = { padding: num, borderTopStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderTopEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomStartRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderBottomEndRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS };
   obj[0] = obj;
   obj[1] = { overflow: "hidden" };
   return obj;
 });
 RowButton.Icon = require("TableRowIcon").TableRowIcon;
-let result = require("createCacheKey").fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/TableRow/native/RowButton.native.tsx");
 
 export const RowButtonIconProps = require("TableRowIcon").TableRowIconProps;
 export { RowButton };

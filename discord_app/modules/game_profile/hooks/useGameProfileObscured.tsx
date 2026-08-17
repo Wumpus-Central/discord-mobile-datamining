@@ -1,14 +1,14 @@
 // discord_app/modules/game_profile/hooks/useGameProfileObscured.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isAgeRestrictedContentClassification } from "../../content_classification/utils.tsx";
+import initialize from "initialize" /* 589 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-let result = require("initialize").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/game_profile/hooks/useGameProfileObscured.tsx");
 
 export default function useGameProfileObscured(contentClassification) {
   initialize;
-  [][0] = mergeGuildAvatar;
+  [][0] = closure_2;
   let result = null != contentClassification;
   if (result) {
     result = false === tmp4;

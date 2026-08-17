@@ -1,20 +1,21 @@
 // discord_app/modules/parent_tools/hooks/useParentalControlSettings.tsx
-import result from "result";
-import noop from "noop";
-import getSettings from "getSettings";
-import { SafetyToastType } from "SafetyToastType";
+import useUserIdsForLinkStatus from "useUserIdsForLinkStatus" /* 7621 */;
+import useSelectedTeen from "useSelectedTeen" /* 7623 */;
+import result2 from "result" /* 14182 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getSettings" /* 5299 */;
+import { SafetyToastType } from "SafetyToastType" /* 5430 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { result } from "../../user_settings/family_center/ParentalControlledUserSettings.tsx";
 import { useSelectedTeen } from "useSelectedTeen.tsx";
-import { useUserIdsForLinkStatus } from "useUserLinks.tsx";
 
-const require = arg1;
-const result = require("getSettings").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useParentalControlSettings.tsx");
 
 export const useParentalControlledExplicitContentSettings = function useParentalControlledExplicitContentSettings() {
   let obj = useSelectedTeen;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledExplicitContent = result.ParentalControlledExplicitContent;
+  const ParentalControlledExplicitContent = result2.ParentalControlledExplicitContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -41,7 +42,7 @@ export const useParentalControlledExplicitContentSettings = function useParental
     if (selectedTeen != null) {
       id2 = selectedTeen.id;
     }
-    const obj1 = { teenId: null, setting: null, isFriend: true };
+    obj1 = { teenId: null, setting: null, isFriend: true };
     obj1[0] = id2;
     let prop1;
     if (controlledSetting != null) {
@@ -55,11 +56,9 @@ export const useParentalControlledExplicitContentSettings = function useParental
   return tmp6;
 };
 export const useParentalControlledGoreContentSettings = function useParentalControlledGoreContentSettings() {
-  let goreContentFriendDm;
-  let goreContentNonFriendDm;
   let obj = useSelectedTeen;
   const selectedTeen = obj.useSelectedTeen();
-  const ParentalControlledGoreContent = result.ParentalControlledGoreContent;
+  const ParentalControlledGoreContent = result2.ParentalControlledGoreContent;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
@@ -90,13 +89,13 @@ export const useParentalControlledGoreContentSettings = function useParentalCont
 };
 export const useDefaultGuildsRestricted = function useDefaultGuildsRestricted() {
   const selectedTeen = useSelectedTeen.useSelectedTeen();
-  const ParentalControlledDefaultGuildsRestricted = result.ParentalControlledDefaultGuildsRestricted;
+  const ParentalControlledDefaultGuildsRestricted = result2.ParentalControlledDefaultGuildsRestricted;
   let id;
   if (selectedTeen != null) {
     id = selectedTeen.id;
   }
   const controlledSetting = ParentalControlledDefaultGuildsRestricted.useControlledSetting(id);
-  const ParentalControlledDefaultGuildsRestrictedV2 = result.ParentalControlledDefaultGuildsRestrictedV2;
+  const ParentalControlledDefaultGuildsRestrictedV2 = result2.ParentalControlledDefaultGuildsRestrictedV2;
   let id1;
   if (selectedTeen != null) {
     id1 = selectedTeen.id;
@@ -117,7 +116,7 @@ export const useAllowFriendsFromMutualGuildsOnlyForTeen = function useAllowFrien
   }
   controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(id);
   const items = [controlledSetting];
-  const memo = React.useMemo(() => controlledSetting(outer1_2[9]).computeFlags(controlledSetting), items);
+  const memo = React.useMemo(() => controlledSetting(closure_1_2[9]).computeFlags(controlledSetting), items);
   return memo.mutualGuilds && !memo.all;
 };
 export const useIsParentallyControlled = function useIsParentallyControlled() {
@@ -127,18 +126,18 @@ export const useParentalControlledConsent = function useParentalControlledConsen
   let _require = PERSONALIZATION;
   let obj = _useSelectedTeen;
   let selectedTeenId = obj.useSelectedTeenId();
-  let items = [getSettings];
+  let items = [closure_5];
   _require = PERSONALIZATION;
   selectedTeenId = undefined;
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.hasConsented(selectedTeenId, closure_0));
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.hasConsented(selectedTeenId, closure_0));
   let obj2 = _initialize;
   selectedTeenId = _useSelectedTeen.useSelectedTeenId();
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c5 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c5 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c5 === 2) {
         c5 = 3;
@@ -166,8 +165,8 @@ export const useParentalControlledConsent = function useParentalControlledConsen
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
-              if (null != outer1_1) {
+              closure_1 = tmp3;
+              if (null != closure_1_1) {
                 if (tmp28) {
                   const items = [closure_0];
                   let items1 = items;
@@ -179,18 +178,18 @@ export const useParentalControlledConsent = function useParentalControlledConsen
                 } else {
                   items2 = [closure_0];
                 }
-                let c4 = 1;
-                selectedTeenId(outer2_2[12]).updateTeenConsents(tmp29, items1, items2);
+                c4 = 1;
+                selectedTeenId(closure_2_2[12]).updateTeenConsents(tmp29, items1, items2);
                 c2 = 2;
                 c5 = 1;
-                const obj3 = selectedTeenId(outer2_2[12]);
+                const obj3 = selectedTeenId(closure_2_2[12]);
               }
             }
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              selectedTeenId(outer2_2[13]).showFailedToast(outer2_6.GENERIC_ERROR);
-              const obj2 = selectedTeenId(outer2_2[13]);
+              selectedTeenId(closure_2_2[13]).showFailedToast(closure_2_6.GENERIC_ERROR);
+              const obj2 = selectedTeenId(closure_2_2[13]);
             } else if (arg0 === 1) {
               c5 = 3;
               throw arg1;
@@ -205,7 +204,7 @@ export const useParentalControlledConsent = function useParentalControlledConsen
           }
           c5 = 3;
         } catch (tmp19) {
-          let result = tmp19;
+          closure_3 = tmp19;
           if (tmp4 === c4) {
             c5 = tmp2;
             throw tmp19;

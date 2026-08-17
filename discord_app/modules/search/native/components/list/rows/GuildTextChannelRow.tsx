@@ -1,20 +1,18 @@
 // discord_app/modules/search/native/components/list/rows/GuildTextChannelRow.tsx
-import importAllResult from "noop";
-import { CHANNEL_LIST_SEARCH_LAYOUT as closure_4 } from "MessageEmbedTypes";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { CHANNEL_LIST_SEARCH_LAYOUT as closure_4 } from "MessageEmbedTypes" /* 8507 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
-  let lastMessageId;
-  let onPress;
   channel = channel.channel;
   ({ lastMessageId, onPress } = channel);
   let extractTimestampResult = null;
   const merged = Object.assign(channel, Object.create(null));
   let id;
   let guild_id;
-  let c4;
+  c4 = undefined;
   id = channel.id;
   guild_id = channel.guild_id;
   if (null != lastMessageId) {
@@ -45,6 +43,6 @@ const memoResult = importAllResult.memo(function GuildTextChannelRow(channel) {
   obj.onPress = callback;
   return jsx(onPress(id[6]), {});
 });
-const result = require("jsxProd").fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/GuildTextChannelRow.tsx");
 
 export default memoResult;

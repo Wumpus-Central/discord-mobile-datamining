@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/IntegrationTypes.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { SYNCABLE: null };
 let set = new Set(["twitch", "youtube"]);

@@ -1,9 +1,10 @@
 // discord_app/modules/guilds_bar/GuildsBarConstants.tsx
-import int2hslRaw from "int2hslRaw";
-import unsafe_getRawColor from "unsafe_getRawColor";
+import set from "set" /* 2 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
 
 const hex2intResult = int2hslRaw.hex2int(unsafe_getRawColor.unsafe_getResolvedRawColor("BRAND_500", { saturation: 1 }));
-const result = require("set").fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");
+const result = set.fileFinishedImporting("modules/guilds_bar/GuildsBarConstants.tsx");
 
 export const DEFAULT_FOLDER_COLOR = hex2intResult;
 export const GuildPeekCardTypes = { WHO: 0, [0]: "WHO", WHAT: 1, [1]: "WHAT" };

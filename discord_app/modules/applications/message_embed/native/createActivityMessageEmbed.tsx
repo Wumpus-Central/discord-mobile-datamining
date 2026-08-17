@@ -1,12 +1,11 @@
 // discord_app/modules/applications/message_embed/native/createActivityMessageEmbed.tsx
-import { createAppMessageEmbed } from "createAppMessageEmbed.tsx";
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
+import set from "set" /* 2 */;
+import createAppMessageEmbed from "createAppMessageEmbed" /* 11126 */;
+import fetchCustomActivityLink from "fetchCustomActivityLink" /* 12411 */;
+
+const result = set.fileFinishedImporting("modules/applications/message_embed/native/createActivityMessageEmbed.tsx");
 
 export const createActivityMessageEmbed = function createActivityMessageEmbed(app) {
-  let embedUrl;
-  let message;
-  let params;
-  let theme;
   app = app.app;
   ({ theme, embedUrl, message, params } = app);
   let obj = createAppMessageEmbed;
@@ -18,7 +17,7 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
     if (null == linkId) {
       return appMessageEmbed;
     } else {
-      const orFetchCustomActivityLink = tmp(12411).getOrFetchCustomActivityLink(app.id, linkId);
+      const orFetchCustomActivityLink = fetchCustomActivityLink.getOrFetchCustomActivityLink(app.id, linkId);
       let tmp8 = null;
       if (null != orFetchCustomActivityLink) {
         obj = {};
@@ -37,5 +36,5 @@ export const createActivityMessageEmbed = function createActivityMessageEmbed(ap
       return tmp8;
     }
   }
-  tmp = require;
+  const tmp = require;
 };

@@ -1,20 +1,20 @@
 // discord_app/modules/voice_panel/native/VoicePanelContainer.tsx
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import withEqualityFn from "withEqualityFn";
-import { jsx } from "jsxProd";
-import { isIterable } from "../../../../_runtime/04006_isIterable.js";
+import isIterable from "isIterable" /* 4006 */;
+import wrapChildrenDefault from "wrapChildrenDefault" /* 4668 */;
+import VoicePanelControllerDefault from "VoicePanelController" /* 16271 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "withEqualityFn" /* 8664 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { wrapChildrenDefault } from "../../../design/components/TransitionGroup/TransitionGroup.tsx";
-import { VoicePanelController } from "VoicePanelController.tsx";
 
-const require = arg1;
+require = arg1;
 function VoicePanel(arg0) {
   const _require = arg0;
   let obj = _initialize;
-  const items = [ensureGuildLoaded];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const channel = outer1_4.getChannel(channelId.channelId);
+    const channel = closure_1_4.getChannel(channelId.channelId);
     let guild_id;
     if (channel != null) {
       guild_id = channel.guild_id;
@@ -25,7 +25,7 @@ function VoicePanel(arg0) {
   const merged = Object.assign(arg0);
   obj.guildId = stateFromStores;
   obj.children = importAllResult.useMemo(() => callback2(callback(table[6]), {}), []);
-  return jsx(VoicePanelController, {});
+  return jsx(VoicePanelControllerDefault, {});
 }
 function getChannelKey(arg0) {
   return arg0;
@@ -38,6 +38,6 @@ const memoResult = importAllResult.memo(function VoicePanelContainer() {
   const tmp = callback((channels) => Array.from(channels.channels), isIterable.shallow);
   return jsx(wrapChildrenDefault.TransitionGroup, { items: callback((channels) => Array.from(channels.channels), isIterable.shallow), getItemKey: getChannelKey, renderItem: renderVoicePanel });
 });
-const result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/VoicePanelContainer.tsx");
 
 export default memoResult;

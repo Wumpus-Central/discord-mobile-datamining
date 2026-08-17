@@ -1,26 +1,24 @@
 // discord_app/modules/icymi/ICYMIUtils.tsx
-import reinjectEphemerals from "reinjectEphemerals";
-import scheduledEventSort from "scheduledEventSort";
-import { ThreadChannelRecord } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import closure_8 from "reinjectEphemerals";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import filterStaffGuild from "filterStaffGuild";
-import initialize from "initialize";
-import ME from "ME";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8344 */;
+import isMediaAttachment from "isMediaAttachment" /* 8515 */;
+import apexExperiment from "apexExperiment" /* 9058 */;
+import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 9062 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "scheduledEventSort" /* 4370 */;
+import { ThreadChannelRecord } from "createChannelRecord" /* 1395 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "generateOldThreadCutoff" /* 4772 */;
+import closure_10 from "filterStaffGuild" /* 9044 */;
+import closure_11 from "initialize" /* 9055 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { ContentInventoryAuthorType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryAuthorType.tsx";
-import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { isMediaAttachment } from "../forums/ForumPostMediaUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { apexExperiment } from "ICYMIExperiment.tsx";
-import { MessageEmbedTypes } from "ICYMITypes.tsx";
 
-let closure_12;
-let map1;
-const require = arg1;
+require = arg1;
 function generateHydrationId(messageItems, activityItems) {
   return "hydration-" + messageItems + "-" + activityItems;
 }
@@ -37,11 +35,11 @@ function hydrateItems(items6, arg1, ICYMI_PAGE_SIZE) {
 function _hydrateItems() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
@@ -50,7 +48,7 @@ function _hydrateItems() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -69,11 +67,11 @@ function _hydrateItems() {
               obj[0] = arg1;
               return obj;
             } else {
-              const arr = outer1_10.getHydratedItems();
+              const arr = closure_1_10.getHydratedItems();
               const substr = arr.slice(callback, dependencyMap);
               if (0 !== substr.length) {
-                let obj1 = callback(9057);
-                const hydratedAttempt = obj1.loadHydratedAttempt(outer1_14(tmp24, tmp25));
+                obj1 = callback(9057);
+                const hydratedAttempt = obj1.loadHydratedAttempt(closure_1_14(tmp24, tmp25));
                 const found = substr.filter((arg0) => null == dependencyMap[arg0.id]);
                 const found1 = found.filter((type) => type.type === dependencyMap(7589).ICYMIItemTypes.MESSAGE);
                 const mapped = found1.map((channel_id) => ({ channel_id: channel_id.data.channel_id, message_id: channel_id.data.message_id }));
@@ -86,7 +84,7 @@ function _hydrateItems() {
                     }
                     const items = [];
                     if (null != reply_message_id) {
-                      let obj = { channel_id: null, message_id: null };
+                      obj = { channel_id: null, message_id: null };
                       obj[0] = type.data.channel_id;
                       obj[1] = type.data.message_context.reply_message_id;
                       items.push(obj);
@@ -153,7 +151,7 @@ function _hydrateItems() {
       }
     })();
   });
-  const _hydrateItems = tmp;
+  closure_17 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -172,7 +170,7 @@ function _hydrateNextPage() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -191,15 +189,15 @@ function _hydrateNextPage() {
             obj[0] = arg1;
             return obj;
           } else {
-            const unreadDisplayItems = outer1_10.getUnreadDisplayItems();
-            const readDisplayItems = outer1_10.getReadDisplayItems();
-            const nextIndexToHydrate = outer1_10.getNextIndexToHydrate();
+            const unreadDisplayItems = closure_1_10.getUnreadDisplayItems();
+            const readDisplayItems = closure_1_10.getReadDisplayItems();
+            const nextIndexToHydrate = closure_1_10.getNextIndexToHydrate();
             const items = [];
             HermesBuiltin.arraySpread(readDisplayItems, HermesBuiltin.arraySpread(unreadDisplayItems, 0));
             c1 = 1;
             v0 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_16(items, nextIndexToHydrate, nextIndexToHydrate + v0(outer1_2[10]).ICYMI_PAGE_SIZE);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_16(items, nextIndexToHydrate, nextIndexToHydrate + v0(closure_1_2[10]).ICYMI_PAGE_SIZE);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -220,7 +218,7 @@ function _hydrateNextPage() {
       }
     }
   });
-  const _hydrateNextPage = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -232,9 +230,9 @@ function _hydrateNextPage() {
 function _regenerateFeedAndClearReadStates() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, ack) {
       if (c4 === 2) {
         c4 = 3;
@@ -243,7 +241,7 @@ function _regenerateFeedAndClearReadStates() {
         if (arg0 === 1) {
           throw ack;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = ack;
           return obj;
         } else {
@@ -268,8 +266,8 @@ function _regenerateFeedAndClearReadStates() {
               AnalyticsObjectTypes = undefined;
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = callback(outer1_2[22])(outer1_2[21], outer1_2.paths);
+              obj1 = { value: null, done: false };
+              obj1[0] = callback(closure_1_2[22])(closure_1_2[21], closure_1_2.paths);
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -304,11 +302,11 @@ function _regenerateFeedAndClearReadStates() {
               const item = dehydratedItems.forEach((type) => {
                 let tmp2 = type.type === callback(AnalyticsObjectTypes[10]).ICYMIItemTypes.MESSAGE;
                 if (tmp2) {
-                  tmp2 = type.data.channel_type === outer1_12.GUILD_ANNOUNCEMENT;
+                  tmp2 = type.data.channel_type === closure_1_12.GUILD_ANNOUNCEMENT;
                 }
                 if (tmp2) {
-                  let obj = ack(tmp[13]);
-                  tmp2 = obj.compare(outer1_9.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
+                  obj = ack(tmp[13]);
+                  tmp2 = obj.compare(closure_1_9.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
                 }
                 if (tmp2) {
                   const channel_id = type.data.channel_id;
@@ -398,7 +396,7 @@ function _regenerateFeedAndClearReadStates() {
       }
     })();
   });
-  const _regenerateFeedAndClearReadStates = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -409,7 +407,7 @@ function _regenerateFeedAndClearReadStates() {
 }
 ({ ChannelTypes: closure_12, GuildNSFWContentLevel: map1 } = ME);
 let obj = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
-let result = require("createChannelRecord").fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/ICYMIUtils.tsx");
 
 export { generateHydrationId };
 export const ICYMICustomScore = obj;
@@ -463,7 +461,7 @@ export const hydrateNextPage = function hydrateNextPage() {
   return applyArgumentsResult;
 };
 export const createGravityMessageFromServer = function createGravityMessageFromServer(message, arg1) {
-  const obj = {};
+  obj = {};
   const merged = Object.assign(arg1);
   obj.message = createMinimalMessageRecord.createMessageRecord(message.message);
   let fromServerResult;
@@ -477,21 +475,21 @@ export const isItemUnreadInChannel = function isItemUnreadInChannel(channel_id, 
   trackedAckMessageId = trackedAckMessageId.getTrackedAckMessageId(channel_id);
   let tmp2 = null == trackedAckMessageId;
   if (!tmp2) {
-    const obj = DISCORD_EPOCH;
-    const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(message_id);
-    tmp2 = extractTimestampResult > DISCORD_EPOCH.extractTimestamp(trackedAckMessageId);
-    const obj2 = DISCORD_EPOCH;
+    obj = DISCORD_EPOCHDefault;
+    const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message_id);
+    tmp2 = extractTimestampResult > DISCORD_EPOCHDefault.extractTimestamp(trackedAckMessageId);
+    const obj2 = DISCORD_EPOCHDefault;
   }
   return tmp2;
 };
 export const useGravityMessage = function useGravityMessage(message) {
   const _require = message;
-  const items = [closure_8, filterStaffGuild];
+  const items = [closure_8, closure_10];
   const items1 = [message];
   return _initialize.useStateFromStores(items, () => {
-    message = outer1_8.getMessage(message.getChannelId(), message.id);
+    message = closure_1_8.getMessage(message.getChannelId(), message.id);
     if (message == null) {
-      const hydratedItem = outer1_10.getHydratedItem(tmp.id);
+      const hydratedItem = closure_1_10.getHydratedItem(tmp.id);
       let message1;
       if (hydratedItem != null) {
         message1 = hydratedItem.message;
@@ -506,21 +504,21 @@ export const useGravityMessage = function useGravityMessage(message) {
 };
 export const useGravityMessageItem = function useGravityMessageItem(id) {
   const _require = id;
-  const items = [filterStaffGuild];
+  const items = [closure_10];
   const items1 = [id.id];
-  return _initialize.useStateFromStores(items, () => outer1_10.getHydratedItem(id.id), items1);
+  return _initialize.useStateFromStores(items, () => closure_1_10.getHydratedItem(id.id), items1);
 };
 export const useICYMIMessage = function useICYMIMessage(id, before_message_id) {
   const _require = id;
-  let closure_1 = before_message_id;
-  const items = [closure_8, filterStaffGuild];
+  closure_1 = before_message_id;
+  const items = [closure_8, closure_10];
   const items1 = [id, before_message_id];
   return _initialize.useStateFromStores(items, () => {
     let tmp2 = null;
     if (null != closure_1) {
-      let message = outer1_8.getMessage(closure_0, tmp);
+      let message = closure_1_8.getMessage(closure_0, tmp);
       if (message == null) {
-        const hydratedItem = outer1_10.getHydratedItem(tmp);
+        const hydratedItem = closure_1_10.getHydratedItem(tmp);
         let message1;
         if (hydratedItem != null) {
           message1 = hydratedItem.message;
@@ -536,7 +534,7 @@ export const icymiEnabled = function icymiEnabled(customScores) {
   return apexExperiment.getICYMIEnabled(customScores);
 };
 export const customStatusToContentInventoryEntry = function customStatusToContentInventoryEntry(data) {
-  let obj = { id: data.id, type: MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
+  obj = { id: data.id, type: MessageEmbedTypes.ICYMIItemTypes.CUSTOM_STATUS, activity: null, score: null, score_components: null };
   obj = { id: data.id, author_id: data.data.user_id, author_type: ContentInventoryAuthorType.ContentInventoryAuthorType.USER, traits: [], participants: [], content_type: ContentInventoryEntryType.ContentInventoryEntryType.CUSTOM_STATUS, extra: null };
   let str = data.data.text;
   if (str == null) {
@@ -581,7 +579,7 @@ export const compareGravityUnreadIds = function compareGravityUnreadIds(id, id2)
 };
 export const getViewableFeedItemsArray = function getViewableFeedItemsArray(viewableItems) {
   let tmp3;
-  const items = [...filterStaffGuild.getUnreadDisplayItems(), ...filterStaffGuild.getReadDisplayItems()];
+  const items = [...closure_10.getUnreadDisplayItems(), ...closure_10.getReadDisplayItems()];
   let id = null;
   let diff = viewableItems.length - 1;
   let tmp2 = null;

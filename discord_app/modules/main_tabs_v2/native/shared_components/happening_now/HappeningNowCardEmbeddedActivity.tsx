@@ -1,32 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx
-import _slicedToArray from "_slicedToArray";
-import encodeProperties from "encodeProperties";
-import { View } from "module_4115";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import { AnalyticEvents } from "ME";
-import jsxProd from "HAPPENING_NOW_CARD_MARGIN_RIGHT";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let HAPPENING_NOW_CONTENT_HEIGHT;
-let c10;
-let c9;
-let error;
 const require = arg1;
 ({ HAPPENING_NOW_CONTENT_HEIGHT, HappeningNowCardTrackingType: error } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { content: { flexShrink: 1, gap: 2 }, cardImage: { height: HAPPENING_NOW_CONTENT_HEIGHT, minWidth: HAPPENING_NOW_CONTENT_HEIGHT, marginRight: 12 }, activityBackground: null, cardTitle: null };
-createCacheKey = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: require("Themes").radii.sm, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { width: HAPPENING_NOW_CONTENT_HEIGHT, height: HAPPENING_NOW_CONTENT_HEIGHT, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function HappeningNowCardEmbeddedActivityTsx1(){const{viewableCardKeys,cardKey}=this.__closure;return viewableCardKeys.get().find(function(key){return key===cardKey;})!=null;}" };
 let closure_13 = { code: "function HappeningNowCardEmbeddedActivityTsx2(isViewable,previous){const{runOnJS,setHasViewed}=this.__closure;if(!isViewable||isViewable===previous)return;runOnJS(setHasViewed)(true);}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEmbeddedActivity.tsx");
 
 export default function HappeningNowCardEmbeddedActivity(guildId) {
-  let fullwidth;
-  let voiceState;
   guildId = guildId.guildId;
   const index = guildId.index;
   const activity = guildId.activity;
@@ -40,10 +35,10 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
   let channelId;
   let first;
   let context;
-  let closure_8;
+  closure_8 = undefined;
   let callback;
-  let closure_10;
-  let tmp = createCacheKey();
+  closure_10 = undefined;
+  let tmp = callback2();
   let obj = guildId(activity[9]);
   let items = [first];
   let items1 = [activity];
@@ -52,7 +47,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     if (null != activity) {
       const userIds = activity.userIds;
       const item = userIds.forEach((arg0) => {
-        const user = outer1_6.getUser(arg0);
+        const user = closure_1_6.getUser(arg0);
         if (null != user) {
           items.push(user);
         }
@@ -60,7 +55,7 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
     }
     return items;
   }, items1);
-  let obj1 = guildId(activity[10]);
+  obj1 = guildId(activity[10]);
   channelId = voiceState.channelId;
   const result = obj1.formatVoiceActivityTitle(stateFromStoresArray, guildId);
   let applicationId;
@@ -123,14 +118,14 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
       ref.current = cardKey;
       const current = ref2.current;
       const value = current.get();
-      _undefined(null != value.find((arg0) => arg0 === encodeProperties));
+      callback(null != value.find((arg0) => arg0 === closure_4));
     }
   }, items4);
   const tmp6 = index(activity[11]);
   const tmp8 = userId;
   const fn = function b() {
     const value = context.get();
-    return null != value.find((arg0) => arg0 === encodeProperties);
+    return null != value.find((arg0) => arg0 === closure_4);
   };
   fn.__closure = { viewableCardKeys: context, cardKey };
   fn.__workletHash = 3043999664691;
@@ -146,9 +141,9 @@ export default function HappeningNowCardEmbeddedActivity(guildId) {
         tmp3 = guildId;
         tmp4 = activity;
         obj = guildId(activity[17]);
-        tmp5 = channelId;
+        tmp5 = closure_9;
         flag = true;
-        tmp6 = obj.runOnJS(channelId)(true);
+        tmp6 = obj.runOnJS(closure_9)(true);
       }
       return;
     }

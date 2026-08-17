@@ -1,13 +1,13 @@
 // discord_app/modules/activities/panel/native/ActivityPanelSystemUIManager.tsx
-import importAllResult from "noop";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import jsxProd from "jsxProd";
-import { useActivityWebViewLock } from "ActivityPanelStateContext.tsx";
+import set from "set" /* 500 */;
+import componentDidMountDefault from "componentDidMount" /* 8032 */;
+import pushStackEntryDefault from "pushStackEntry" /* 8680 */;
+import useActivityWebViewLockDefault from "useActivityWebViewLock" /* 16234 */;
+import importAllResult from "noop" /* 19 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 class BaseActivityPanelSystemUIManager {
   constructor(arg0) {
     ({ mode, isWindowLandscape } = global);
@@ -46,10 +46,10 @@ class BaseActivityPanelSystemUIManager {
 let c3 = importAllResult;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 const memoResult = importAllResult.memo(() => {
-  const context = importAllResult.useContext(useActivityWebViewLock);
+  const context = importAllResult.useContext(useActivityWebViewLockDefault);
   return callback(BaseActivityPanelSystemUIManager, { mode: context.mode, isWindowLandscape: context.wrapperDimensions.isWindowLandscape });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelSystemUIManager.tsx");
 
 export default memoResult;
 export { BaseActivityPanelSystemUIManager };

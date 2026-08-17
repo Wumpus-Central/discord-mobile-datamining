@@ -1,10 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/native/RoleTierEditStore.tsx
-import _slicedToArray from "_slicedToArray";
-import isIterable from "isIterable";
-import identity from "identity";
+import isIterable from "isIterable" /* 4006 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import identity from "identity" /* 700 */;
 import { isIterable } from "../../../../_runtime/04006_isIterable.js";
 
-const require = arg1;
+require = arg1;
 function usePriceTiers(guildId) {
   const _require = guildId;
   let tmp = callback(withEqualityFn((arg0) => {
@@ -13,12 +14,12 @@ function usePriceTiers(guildId) {
     return items;
   }, _isIterable.shallow), 3);
   const first = tmp[0];
-  const importAll = tmp3;
-  const dependencyMap = tmp[2];
+  closure_2 = tmp3;
+  dependencyMap = tmp[2];
   first(4761)(() => {
     let tmp2 = null == first;
     if (tmp2) {
-      tmp2 = closure_2 !== outer1_6.LOADING;
+      tmp2 = closure_2 !== closure_1_6.LOADING;
     }
     if (tmp2) {
       callback(closure_0);
@@ -30,7 +31,7 @@ function usePriceTiers(guildId) {
     onRefresh(arg0) {
       let tmp = null == first;
       if (tmp) {
-        tmp = closure_2 !== outer1_6.LOADING;
+        tmp = closure_2 !== closure_1_6.LOADING;
       }
       if (tmp) {
         callback(arg0);
@@ -42,53 +43,53 @@ function usePriceTiers(guildId) {
 let obj = { IDLE: 0, [0]: "IDLE", LOADING: 1, [1]: "LOADING", ERROR: 2, [2]: "ERROR" };
 let closure_7 = Object.freeze({ currentScene: null, groupCover: null, groupDescription: "", groupIsFullGate: false });
 const withEqualityFn = identity.createWithEqualityFn((arg0) => {
-  let closure_0 = arg0;
-  let obj = {};
+  closure_0 = arg0;
+  obj = {};
   const merged = Object.assign(closure_7);
   obj.setScene = function setScene(arg0) {
     const callback = arg0;
-    callback(outer1_3[2]).batchUpdates(() => callback({ currentScene: callback }));
+    callback(closure_1_3[2]).batchUpdates(() => callback({ currentScene: callback }));
   };
   closure_0 = arg0;
   let groupIsFullGate = "groupCover";
   obj.setGroupCover = (arg0) => {
     const callback = arg0;
-    callback(outer1_3[2]).batchUpdates(() => callback({ [outer1_1]: callback }));
+    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
   closure_0 = arg0;
   groupIsFullGate = "groupDescription";
   obj.setGroupDescription = (arg0) => {
     const callback = arg0;
-    callback(outer1_3[2]).batchUpdates(() => callback({ [outer1_1]: callback }));
+    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
   closure_0 = arg0;
   groupIsFullGate = "groupIsFullGate";
   obj.setGroupIsFullGate = (arg0) => {
     const callback = arg0;
-    callback(outer1_3[2]).batchUpdates(() => callback({ [outer1_1]: callback }));
+    callback(closure_1_3[2]).batchUpdates(() => callback({ [closure_1_1]: callback }));
   };
   obj.priceTiers = null;
   obj.priceTierState = obj.IDLE;
   obj.loadPriceTiers = function loadPriceTiers(arg0) {
-    let closure_0 = arg0;
-    return outer1_5(function*() {
-      let closure_1 = tmp3;
-      let c2 = 1;
-      callback(outer2_3[2]).batchUpdates(() => callback({ priceTierState: outer1_6.LOADING }));
-      const obj4 = callback(outer2_3[2]);
-      yield outer2_2(outer2_3[4]).getPriceTiers(outer1_0);
+    closure_0 = arg0;
+    return closure_1_5(function*() {
+      closure_1 = tmp3;
+      c2 = 1;
+      callback(closure_2_3[2]).batchUpdates(() => callback({ priceTierState: closure_1_6.LOADING }));
+      const obj4 = callback(closure_2_3[2]);
+      yield closure_2_2(closure_2_3[4]).getPriceTiers(closure_1_0);
       if (1 === tmp7) {
         c2 = 0;
-        const obj2 = callback(outer2_3[2]);
-        obj2.batchUpdates(() => callback({ priceTierState: outer1_6.ERROR }));
-        let c4 = 3;
+        const obj2 = callback(closure_2_3[2]);
+        obj2.batchUpdates(() => callback({ priceTierState: closure_1_6.ERROR }));
+        c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         callback = arg1;
-        const obj = callback(outer2_3[2]);
-        obj.batchUpdates(() => callback({ priceTiers: callback, priceTierState: outer2_6.IDLE }));
+        obj = callback(closure_2_3[2]);
+        obj.batchUpdates(() => callback({ priceTiers: callback, priceTierState: closure_2_6.IDLE }));
         c2 = 0;
       }
       c2 = 0;
@@ -96,11 +97,11 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     })();
   };
   obj.reset = function reset() {
-    callback(outer1_3[2]).batchUpdates(() => callback(outer1_7));
+    callback(closure_1_3[2]).batchUpdates(() => callback(closure_1_7));
   };
   return obj;
 });
-const result = require("batchUpdates").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
 
 export const LoadingState = obj;
 export const useRoleTierEditStore = withEqualityFn;
@@ -117,8 +118,6 @@ export const useResetTierEditState = function useResetTierEditState() {
 };
 export { usePriceTiers };
 export const usePriceTiersAvailableInGuild = function usePriceTiersAvailableInGuild(guildId) {
-  let onRefresh;
-  let state;
   const tmp = usePriceTiers(guildId);
   let tiers = tmp.tiers;
   ({ state, onRefresh } = tmp);

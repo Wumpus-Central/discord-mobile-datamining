@@ -1,10 +1,10 @@
 // discord_app/modules/guild_templates/GuildTemplateTooltipActionCreators.tsx
-import set from "set";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 
-const result = require("ME").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 
 export default {
   checkGuildTemplateDirty(closure_0) {
@@ -35,9 +35,9 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = { guildId: null };
+              obj1 = { guildId: null };
               obj1[0] = v0;
-              if (outer1_3.canWithPartialContext(outer1_4.MANAGE_GUILD, obj1)) {
+              if (closure_1_3.canWithPartialContext(closure_1_4.MANAGE_GUILD, obj1)) {
                 obj1 = v0(table[3]);
                 table = 1;
                 v0 = 1;
@@ -66,11 +66,11 @@ export default {
     })();
   },
   hideGuildTemplateDirtyTooltip(guildId) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "GUILD_TEMPLATE_DIRTY_TOOLTIP_HIDE", guildId };
     obj.dispatch(obj);
   },
   hideGuildTemplatePromotionTooltip() {
-    dispatcher.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
+    dispatcherDefault.dispatch({ type: "GUILD_TEMPLATE_PROMOTION_TOOLTIP_HIDE" });
   }
 };

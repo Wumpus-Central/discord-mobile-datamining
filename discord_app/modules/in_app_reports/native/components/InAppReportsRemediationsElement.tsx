@@ -1,20 +1,22 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_32 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsRemediationsElement.tsx");
 
 export default function RemediationsElement(children) {
-  let obj = { style: createCacheKey().container, children: null };
+  let obj = { style: callback().container, children: null };
   obj = { title: null, hasIcons: true, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["k+QA9N"]);

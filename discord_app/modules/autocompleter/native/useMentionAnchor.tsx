@@ -1,22 +1,18 @@
 // discord_app/modules/autocompleter/native/useMentionAnchor.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { AutocompleteFormDivider } from "AutocompleteUtils.tsx";
 
 const require = arg1;
 let closure_4 = { kind: "idle" };
-const result = require("AutocompleteFormDivider").fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
+const result = require("set").fileFinishedImporting("modules/autocompleter/native/useMentionAnchor.tsx");
 
 export default function useMentionAnchor(c22) {
-  let anchor;
-  let anchor2;
-  let seenText;
-  let tmp3;
   const _require = arg2;
   let obj = React;
   let tmp = closure_4;
   [anchor, tmp3] = callback(React.useState(closure_4), 2);
-  const dependencyMap = tmp3;
+  dependencyMap = tmp3;
   anchor = null;
   if ("idle" !== anchor.kind) {
     anchor = anchor.anchor;
@@ -34,7 +30,7 @@ export default function useMentionAnchor(c22) {
       startsWithResult = arg1 >= anchor + arg3.length;
     }
     if (startsWithResult) {
-      let obj1 = _AutocompleteFormDivider;
+      obj1 = _AutocompleteFormDivider;
       startsWithResult = obj1.isUnbrokenRun(c22, anchor + arg3.length, arg1);
     }
     tmp5 = startsWithResult;

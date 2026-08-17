@@ -1,13 +1,12 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsPresets.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
 import { updateGuildPreset } from "../utils/notificationSettingsGuildFlagUtils.tsx";
 
-let c4;
-let c5;
 const require = arg1;
 function NotificationSettingsPresets(preset) {
   const _require = preset;
@@ -23,7 +22,7 @@ function NotificationSettingsPresets(preset) {
     }
     num = num2;
   }
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = {
     pageWidth: 0,
     onSetActiveIndex(arg0) {
@@ -58,7 +57,7 @@ function NotificationSettingsPresets(preset) {
   obj[1] = _require(num[4]).Presets.ALL_MESSAGES;
   obj[2] = callback(_require(num[5]).CircleCheckIcon, {});
   const items = [obj, , ];
-  const obj1 = { label: null, id: null, icon: null, page: null };
+  obj1 = { label: null, id: null, icon: null, page: null };
   const intl2 = tmp2(tmp3[3]).intl;
   obj1[0] = intl2.string(_require(num[3]).t.y59NJm);
   obj1[1] = _require(num[4]).Presets.MENTIONS;
@@ -116,26 +115,28 @@ function NotificationSettingsPresets(preset) {
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { customContainer: null };
-createCacheKey = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.lg + 8, backgroundColor: require("Themes").colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
+createCacheKey = { padding: 16, minHeight: 82, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_ACTIVE_BG };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsPresets.tsx");
 
 export const NotificationSettingsGuildPresets = function NotificationSettingsGuildPresets(guildId) {
   const _require = guildId;
-  const obj = { preset: null, updatePreset: null };
-  obj[0] = _updateGuildPreset.useGuildPresetSettings(guildId.guildId).preset;
-  obj[1] = function updatePreset(arg0) {
-    return guildId(outer1_1[14]).updateGuildPreset(guildId.guildId, arg0);
+  const obj = {
+    preset: _updateGuildPreset.useGuildPresetSettings(guildId.guildId).preset,
+    updatePreset(arg0) {
+      return guildId(closure_1_1[14]).updateGuildPreset(guildId.guildId, arg0);
+    }
   };
   return callback(NotificationSettingsPresets, obj);
 };
 export const NotificationSettingsChannelPresets = function NotificationSettingsChannelPresets(channel) {
   const _require = channel;
-  const obj = { preset: null, updatePreset: null };
-  obj[0] = _useChannelPresetSettings.useChannelPresetSettings(channel.channel).preset;
-  obj[1] = function updatePreset(arg0) {
-    return channel(outer1_1[15]).updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
+  const obj = {
+    preset: _useChannelPresetSettings.useChannelPresetSettings(channel.channel).preset,
+    updatePreset(arg0) {
+      return channel(closure_1_1[15]).updateChannelPreset(channel.channel.guild_id, channel.channel.id, arg0);
+    }
   };
   return callback(NotificationSettingsPresets, obj);
 };

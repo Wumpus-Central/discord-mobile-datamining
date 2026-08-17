@@ -1,4 +1,7 @@
 // discord_app/modules/guild_profile/GuildProfileTypes.tsx
-const result = require("set").fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
+import set from "set" /* 2 */;
+import set2 from "set" /* 6910 */;
 
-export const GuildProfileVisibility = require("set").GuildProfileVisibility;
+const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");
+
+export const GuildProfileVisibility = set2.GuildProfileVisibility;

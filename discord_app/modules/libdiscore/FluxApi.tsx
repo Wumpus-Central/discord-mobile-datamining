@@ -1,8 +1,9 @@
 // discord_app/modules/libdiscore/FluxApi.tsx
-import isBlockedDomain from "isBlockedDomain";
+import set from "set" /* 2 */;
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
 
 isBlockedDomain = isBlockedDomain.getFluxApi();
-const result = require("set").fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
+const result = set.fileFinishedImporting("modules/libdiscore/FluxApi.tsx");
 
 export const FLUX_API = isBlockedDomain;
 export const hasFluxApi = function hasFluxApi() {

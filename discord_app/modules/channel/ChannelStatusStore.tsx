@@ -1,10 +1,11 @@
 // discord_app/modules/channel/ChannelStatusStore.tsx
-import _handleConnectionOpen from "_handleConnectionOpen";
-import { Store } from "initialize";
-import set from "set";
-import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import set2 from "set" /* 692 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "_handleConnectionOpen" /* 4495 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function handleConnectionReset() {
   set.clear();
 }
@@ -13,16 +14,17 @@ function handleGuildReset(guild) {
 }
 let set = new Set();
 let closure_4 = {};
+const Store = initializeDefault.Store;
 class ChannelStatusStore extends Store {
 }
 const prototype = ChannelStatusStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(_handleConnectionOpen);
+  this.waitFor(closure_2);
 };
 prototype["getChannelStatus"] = function getChannelStatus(guild_id) {
   if (null != guild_id) {
     if (null != guild_id.guild_id) {
-      if (guild_id.type === set.ChannelTypes.GUILD_VOICE) {
+      if (guild_id.type === set2.ChannelTypes.GUILD_VOICE) {
         let tmp5;
         if (dependencyMap[guild_id.guild_id] != null) {
           tmp5 = tmp4[guild_id.id];
@@ -36,7 +38,7 @@ prototype["hasRequestedStatuses"] = function hasRequestedStatuses(guild_id) {
   return set.has(guild_id);
 };
 ChannelStatusStore.displayName = "ChannelStatusStore";
-const channelStatusStore = new ChannelStatusStore(require("dispatcher"), {
+const channelStatusStore = new ChannelStatusStore(dispatcherDefault, {
   GUILD_CREATE: handleGuildReset,
   GUILD_DELETE: handleGuildReset,
   CONNECTION_RESUMED: handleConnectionReset,
@@ -48,8 +50,6 @@ const channelStatusStore = new ChannelStatusStore(require("dispatcher"), {
     dependencyMap[guildId.guildId][guildId.id] = guildId.status;
   },
   CHANNEL_INFO: function handleChannelInfo(arg0) {
-    let channels;
-    let guildId;
     ({ guildId, channels } = arg0);
     dependencyMap[guildId] = {};
     for (const item10009 of channels) {

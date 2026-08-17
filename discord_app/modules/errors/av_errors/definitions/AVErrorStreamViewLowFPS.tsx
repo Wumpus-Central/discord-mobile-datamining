@@ -1,12 +1,12 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx
-import getParticipants from "getParticipants";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import initialize from "initialize";
-import { ApplicationStreamStates } from "ME";
+import closure_2 from "getParticipants" /* 4773 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "initialize" /* 4558 */;
+import { ApplicationStreamStates } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("fetchFingerprint").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamViewLowFPS.tsx");
 
 export const AVErrorStreamViewLowFPSDefinition = {
   getActiveErrors() {

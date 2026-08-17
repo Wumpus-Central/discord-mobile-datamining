@@ -1,28 +1,30 @@
 // discord_app/modules/guild_settings/GuildSettingsModalMembersStore.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { FormStates } from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "trackCommunicationDisabled" /* 1990 */;
+import { FormStates } from "ME" /* 676 */;
 
 function handleStopEditingRoles() {
-  let c2 = null;
-  let c3 = false;
-  let c4 = null;
-  let c5 = null;
-  let c6 = null;
+  c2 = null;
+  c3 = false;
+  c4 = null;
+  c5 = null;
+  c6 = null;
 }
 function handleChangeNicknameSuccess() {
-  let c4 = null;
+  c4 = null;
 }
 let c2 = null;
 let c3 = false;
 let c4 = null;
 let c5 = null;
 let c6 = null;
+const Store = initializeDefault.Store;
 class GuildSettingsModalMembersStore extends Store {
 }
 const prototype = GuildSettingsModalMembersStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(trackCommunicationDisabled);
+  this.waitFor(closure_0);
 };
 Object.defineProperty(prototype, "isSubmitting", {
   get: function isSubmitting() {
@@ -55,7 +57,7 @@ Object.defineProperty(prototype, "nicknameError", {
   set: undefined
 });
 GuildSettingsModalMembersStore.displayName = "GuildSettingsModalMembersStore";
-const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(require("dispatcher"), {
+const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(dispatcherDefault, {
   GUILD_SETTINGS_MODAL_MEMBERS_START_EDITING: function handleStartEditingRoles(userId) {
     userId = userId.userId;
     member = member.getMember(userId.guildId, userId);
@@ -63,7 +65,7 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(requir
       return false;
     } else {
       const OPEN = FormStates.OPEN;
-      let c3 = true;
+      c3 = true;
       const roles = member.roles;
     }
   },
@@ -90,6 +92,6 @@ const guildSettingsModalMembersStore = new GuildSettingsModalMembersStore(requir
     error = error.error;
   }
 });
-const result = require("initialize").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsModalMembersStore.tsx");
 
 export default guildSettingsModalMembersStore;

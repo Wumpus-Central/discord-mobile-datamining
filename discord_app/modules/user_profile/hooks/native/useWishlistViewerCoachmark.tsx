@@ -1,13 +1,11 @@
 // discord_app/modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("DismissibleContent").fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useWishlistViewerCoachmark.tsx");
 
 export const useWishlistViewerCoachmark = function useWishlistViewerCoachmark(isCurrentUser) {
-  let tmp3;
-  let tmp4;
   isCurrentUser = isCurrentUser.isCurrentUser;
   const shouldShowWishlistTab = isCurrentUser.shouldShowWishlistTab;
   let items = [isCurrentUser, shouldShowWishlistTab];

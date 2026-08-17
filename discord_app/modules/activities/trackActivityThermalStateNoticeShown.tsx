@@ -1,13 +1,13 @@
 // discord_app/modules/activities/trackActivityThermalStateNoticeShown.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import participantFromServer from "participantFromServer";
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getEmbeddedActivityLocationChannelId } from "utils/embeddedActivityLocationUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getEmbeddedActivityLocationChannelId from "getEmbeddedActivityLocationChannelId" /* 4011 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("participantFromServer").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 
 export const trackActivityThermalStateNoticeShown = function trackActivityThermalStateNoticeShown() {
   currentEmbeddedActivity = currentEmbeddedActivity.getCurrentEmbeddedActivity();
@@ -33,5 +33,5 @@ export const trackActivityThermalStateNoticeShown = function trackActivityTherma
   }
   obj[3] = guild_id;
   obj[4] = mediaSessionId.getMediaSessionId();
-  expandEventProperties.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj);
+  expandEventPropertiesDefault.track(AnalyticEvents.ACTIVITY_THERMAL_STATE_NOTICE_SHOWN, obj);
 };

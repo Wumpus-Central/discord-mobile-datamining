@@ -1,6 +1,8 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetTagMetadata.tsx
-import { WidgetGameTag } from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import WidgetGameTag from "WidgetGameTag" /* 5377 */;
+
 let obj = { RIBBON: "ribbon", THUMBS_UP: "thumbsUp", THUMBS_DOWN: "thumbsDown", FRIENDS: "friends" };
 obj = {
   getText() {
@@ -104,7 +106,7 @@ let closure_2 = {
     iconRole: obj.FRIENDS
   }
 };
-const result = require("set").fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTagMetadata.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetTagMetadata.tsx");
 
 export const WidgetGameTagIconRole = obj;
 export const buildWidgetGameTagMetadata = function buildWidgetGameTagMetadata(arg0) {

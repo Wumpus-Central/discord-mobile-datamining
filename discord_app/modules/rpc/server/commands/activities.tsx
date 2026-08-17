@@ -1,15 +1,11 @@
 // discord_app/modules/rpc/server/commands/activities.tsx
-import getApplicationFlags from "getApplicationFlags";
-import ME from "ME";
-import createRPCCommand from "createRPCCommand";
-import createRPCCommand from "createRPCCommand";
-import { activityInstanceConnectedParticipants } from "../../helpers/activityInstanceConnectedParticipants.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import activityInstanceConnectedParticipants from "activityInstanceConnectedParticipants" /* 13834 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ME from "ME" /* 676 */;
+import createRPCCommand from "createRPCCommand" /* 13846 */;
 
-let RPCCommands;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ RPCCommands, RPCErrors: c4, ApplicationFlags: c5 } = ME);
 let obj = {};
 obj = {
@@ -52,24 +48,24 @@ obj = {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
-              const result = outer1_0(outer1_2[4]).validatePostMessageTransport(outer1_0.transport);
-              const obj9 = outer1_0(outer1_2[4]);
-              const tmp38 = outer1_0;
-              const obj10 = outer1_0(outer1_2[4]);
-              const validateApplicationResult = outer1_0(outer1_2[4]).validateApplication(outer1_0.application);
-              if (obj11.hasApplicationFlag(outer1_0.application, constants2.EMBEDDED)) {
+              closure_1 = tmp3;
+              const result = closure_1_0(closure_1_2[4]).validatePostMessageTransport(closure_1_0.transport);
+              const obj9 = closure_1_0(closure_1_2[4]);
+              const tmp38 = closure_1_0;
+              const obj10 = closure_1_0(closure_1_2[4]);
+              const validateApplicationResult = closure_1_0(closure_1_2[4]).validateApplication(closure_1_0.application);
+              if (obj11.hasApplicationFlag(closure_1_0.application, constants2.EMBEDDED)) {
                 const tmp26 = tmp46(tmp47[7])();
-                let c3 = 1;
-                let closure_0 = {};
+                c3 = 1;
+                closure_0 = {};
                 let id;
                 if (tmp26 != null) {
                   id = tmp26.id;
                 }
                 constants = 2;
                 constants2 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = tmp38(outer1_2[8]).createProxyTicket(validateApplicationResult, id);
+                obj1 = { value: null, done: false };
+                obj1[0] = tmp38(closure_1_2[8]).createProxyTicket(validateApplicationResult, id);
                 return obj1;
               } else {
                 const obj2 = { errorCode: null };
@@ -77,13 +73,13 @@ obj = {
                 const tmp24 = new tmp46(tmp47[6])(obj2, "This application cannot access this API");
                 throw tmp24;
               }
-              obj11 = outer1_0(outer1_2[5]);
+              obj11 = closure_1_0(closure_1_2[5]);
             }
           } else if (1 === tmp7) {
             c3 = 0;
             const obj3 = { errorCode: null };
             obj3[0] = constants.UNKNOWN_ERROR;
-            const tmp18 = new outer1_1(outer1_2[6])(obj3, "Failed to create proxy ticket");
+            const tmp18 = new closure_1_1(closure_1_2[6])(obj3, "Failed to create proxy ticket");
             throw tmp18;
           } else if (arg0 === 1) {
             constants2 = 3;
@@ -103,7 +99,7 @@ obj = {
             return obj;
           }
         } catch (tmp29) {
-          let closure_2 = tmp29;
+          closure_2 = tmp29;
           if (tmp4 === c3) {
             constants2 = tmp2;
             throw tmp29;
@@ -116,6 +112,6 @@ obj = {
   }
 };
 obj[RPCCommands.REQUEST_PROXY_TICKET_REFRESH] = createRPCCommand.createRPCCommand(RPCCommands.REQUEST_PROXY_TICKET_REFRESH, obj);
-let result = require("createRPCCommand").fileFinishedImporting("modules/rpc/server/commands/activities.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/commands/activities.tsx");
 
 export default obj;

@@ -1,22 +1,17 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
-import { SearchMediaTypes } from "MessageEmbedTypes";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { EXPLICIT_MEDIA_SETTINGS_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
+import { SearchMediaTypes } from "MessageEmbedTypes" /* 8507 */;
 
-const require = arg1;
-let result = require("MessageEmbedTypes").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx");
 
 export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilterPress(arg0) {
-  let currentValue;
-  let excluded;
-  let require;
-  let subtitle;
-  let title;
   ({ handlePress: require, excluded } = arg0);
   ({ title, subtitle, currentValue } = arg0);
   currentUser = currentUser.getCurrentUser();
@@ -38,12 +33,12 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     const intl = getSystemLocale.intl;
     obj[1] = intl.string(getSystemLocale.t["5k5OFp"]);
     obj[2] = function onPress() {
-      let obj = outer1_0(outer1_2[5]);
+      let obj = closure_1_0(closure_1_2[5]);
       if (obj.shouldAgeVerifyForExplicitMedia()) {
         obj = { entryPoint: null };
         obj[0] = tmp(tmp2[7]).AgeVerificationModalEntryPoint.OBSCURED_MEDIA;
-        const result = outer1_1(tmp2[6]).showAgeVerificationGetStartedModal(obj);
-        const obj2 = outer1_1(tmp2[6]);
+        const result = closure_1_1(tmp2[6]).showAgeVerificationGetStartedModal(obj);
+        const obj2 = closure_1_1(tmp2[6]);
       } else {
         callback(tmp(tmp2[3]).ExplicitContentRedaction.SHOW);
       }
@@ -60,7 +55,7 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t.S49Uad);
     obj[2] = function onPress() {
-      callback(outer1_0(outer1_2[3]).ExplicitContentRedaction.BLUR);
+      callback(closure_1_0(closure_1_2[3]).ExplicitContentRedaction.BLUR);
     };
     items.push(obj);
   }
@@ -74,11 +69,11 @@ export const handleSensitiveMediaFilterPress = function handleSensitiveMediaFilt
     const intl3 = getSystemLocale.intl;
     obj[1] = intl3.string(getSystemLocale.t["D/157Y"]);
     obj[2] = function onPress() {
-      callback(outer1_0(outer1_2[3]).ExplicitContentRedaction.BLOCK);
+      callback(closure_1_0(closure_1_2[3]).ExplicitContentRedaction.BLOCK);
     };
     items.push(obj);
   }
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(14179, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(14179, dependencyMap.paths), closure_4, { title, subtitle, options: items, currentValue });
 };
 export const shouldAgeVerifyForSearchMedia = function shouldAgeVerifyForSearchMedia(media, found) {
   if (null == found) {

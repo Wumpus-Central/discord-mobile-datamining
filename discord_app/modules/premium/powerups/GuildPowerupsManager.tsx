@@ -1,18 +1,19 @@
 // discord_app/modules/premium/powerups/GuildPowerupsManager.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleConnectionOpen from "handleConnectionOpen";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import "initialize";
-import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
-import { getUnitId } from "../../guild_boosting/experiments/BoostToUnlockMobileCoachmarkExperiment.tsx";
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import initializeDefault from "initialize" /* 5038 */;
+import getUnitIdDefault from "getUnitId" /* 11671 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
+import closure_6 from "calculateAppliedBoosts" /* 4261 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class GuildPowerupsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     map = new Map();
-    applyArgumentsResult.stores = map.set(handleConnectionOpen, applyArgumentsResult.handleSelectedGuildChange);
+    applyArgumentsResult.stores = map.set(closure_5, applyArgumentsResult.handleSelectedGuildChange);
     obj = { GUILD_POWERUP_ENTITLEMENTS_CREATE: handleEntitlementUpdate.bind(applyArgumentsResult), GUILD_POWERUP_ENTITLEMENTS_DELETE: handleEntitlementUpdate2.bind(applyArgumentsResult), GUILD_APPLIED_BOOSTS_UPDATE: handleAppliedBoostUpdate.bind(applyArgumentsResult) };
     ({ handleEntitlementUpdate, handleEntitlementUpdate: handleEntitlementUpdate2, handleAppliedBoostUpdate } = applyArgumentsResult);
     applyArgumentsResult.actions = obj;
@@ -35,7 +36,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
         obj[0] = guild.id;
         FileUpload250MbPowerupExperiment.trackExposure(obj);
         const ServerThemeExperiment = tmp10(4304).ServerThemeExperiment;
-        const obj1 = { guildId: null, location: "GuildPowerupsManager" };
+        obj1 = { guildId: null, location: "GuildPowerupsManager" };
         obj1[0] = guild.id;
         ServerThemeExperiment.trackExposure(obj1);
         const ServerThemeApexShadowExperiment = tmp10(4305).ServerThemeApexShadowExperiment;
@@ -50,7 +51,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
           GameServerPricingExperiment.trackExposure(obj);
         }
         tmp10Result = tmp10(11682);
-        if (!tmp10Result.getHasAllocateBoostPermission(getUncachedChannelPermissions, guild)) {
+        if (!tmp10Result.getHasAllocateBoostPermission(closure_4, guild)) {
           let isCurrentUserEligibleForPowerupUpsells = tmp10(15428).getIsCurrentUserEligibleForPowerupUpsells();
           let isMobile = tmp10(4383).isMobile;
           if (isMobile) {
@@ -71,8 +72,8 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
             const tmp10Result5 = tmp10(15428);
           }
           if (showCoachmark) {
-            showCoachmark = getUnitId.getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
-            const obj8 = getUnitId;
+            showCoachmark = getUnitIdDefault.getConfig({ location: "GuildPowerupsManager" }).showCoachmark;
+            const obj8 = getUnitIdDefault;
           }
           if (tmp10(4383).isMobile) {
             if (!isMobile) {
@@ -82,7 +83,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
           }
           const tmp10Result1 = tmp10(15428);
         }
-        if (calculateAppliedBoosts.shouldFetchCatalogForGuild(guildId)) {
+        if (closure_6.shouldFetchCatalogForGuild(guildId)) {
           const powerupCatalogForGuild = tmp10(11657).fetchPowerupCatalogForGuild(guildId);
           const tmp10Result6 = tmp10(11657);
         }
@@ -90,7 +91,7 @@ prototype["handleSelectedGuildChange"] = function handleSelectedGuildChange() {
           const guildBoostEntitlements = tmp10(11657).fetchGuildBoostEntitlements(guildId);
           const tmp10Result7 = tmp10(11657);
         }
-        obj9 = calculateAppliedBoosts;
+        obj9 = closure_6;
       }
     }
     obj12 = getFavoritesAwareGuildName;
@@ -103,7 +104,7 @@ prototype["handleAppliedBoostUpdate"] = function handleAppliedBoostUpdate(guildI
   this.refreshGuildPowerups(guildId.guildId);
 };
 prototype["refreshGuildPowerups"] = function refreshGuildPowerups(guildId) {
-  if (true === obj.getHasAllocateBoostPermission(getUncachedChannelPermissions, store.getGuild(guildId))) {
+  if (true === obj.getHasAllocateBoostPermission(closure_4, store.getGuild(guildId))) {
     let tmpResult = tmp(11657);
     const guildBoostEntitlements = tmpResult.fetchGuildBoostEntitlements(guildId);
     tmpResult = tmp(4270);
@@ -111,6 +112,6 @@ prototype["refreshGuildPowerups"] = function refreshGuildPowerups(guildId) {
   }
 };
 const guildPowerupsManager = new GuildPowerupsManager();
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/premium/powerups/GuildPowerupsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsManager.tsx");
 
 export default guildPowerupsManager;

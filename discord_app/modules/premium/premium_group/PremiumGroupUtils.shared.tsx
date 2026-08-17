@@ -1,21 +1,19 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.shared.tsx
-import addSubscriptionPlan from "addSubscriptionPlan";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { formatSingleCurrencyPrice } from "../../../utils/PriceUtils.tsx";
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
+import closure_2 from "addSubscriptionPlan" /* 4044 */;
 
-const require = arg1;
-const result = require("formatSingleCurrencyPrice").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.shared.tsx");
 
 export const getPriceString = function getPriceString(hasAnyPremiumGroup) {
-  let interval;
-  let intervalCount;
   if (null != hasAnyPremiumGroup) {
     if (hasAnyPremiumGroup.hasAnyPremiumGroup) {
       const planIdFromItems = hasAnyPremiumGroup.planIdFromItems;
       if (null == planIdFromItems) {
         return null;
       } else {
-        const value = addSubscriptionPlan.get(planIdFromItems);
+        const value = closure_2.get(planIdFromItems);
         if (null == value) {
           return null;
         } else {

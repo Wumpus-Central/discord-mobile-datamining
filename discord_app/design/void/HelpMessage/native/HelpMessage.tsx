@@ -1,56 +1,46 @@
 // discord_app/design/void/HelpMessage/native/HelpMessage.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import int2hslRaw from "int2hslRaw";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { CircleCheckIcon } from "../../../components/Icon/native/redesign/generated/CircleCheckIcon.tsx";
-import { CircleErrorIcon } from "../../../components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { CircleInformationIcon } from "../../../components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
-import { CircleXIcon } from "../../../components/Icon/native/redesign/generated/CircleXIcon.tsx";
-import { Text } from "../../../components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 4335 */;
+import Text from "Text" /* 4734 */;
+import CircleXIcon from "CircleXIcon" /* 7341 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, row: null, content: null, warningContainer: null, infoContainer: null, errorContainer: null, successContainer: null };
-createCacheKey = { padding: require("Themes").space.PX_8, borderWidth: 1, borderStyle: "solid", gap: require("Themes").space.PX_8 };
+createCacheKey = { padding: ThemesDefault.space.PX_8, borderWidth: 1, borderStyle: "solid", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey[2] = { flex: 1, marginLeft: require("Themes").space.PX_8 };
+createCacheKey[2] = { flex: 1, marginLeft: ThemesDefault.space.PX_8 };
 let obj2 = { backgroundColor: null, borderColor: null };
-obj2[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(require("Themes").unsafe_rawColors.YELLOW_300), 0.1);
-obj2[1] = require("Themes").unsafe_rawColors.YELLOW_300;
+obj2[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(ThemesDefault.unsafe_rawColors.YELLOW_300), 0.1);
+obj2[1] = ThemesDefault.unsafe_rawColors.YELLOW_300;
 createCacheKey[3] = obj2;
 let obj3 = { backgroundColor: null, borderColor: null };
-obj3[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(require("Themes").unsafe_rawColors.BLUE_345), 0.1);
-obj3[1] = require("Themes").unsafe_rawColors.BLUE_345;
+obj3[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(ThemesDefault.unsafe_rawColors.BLUE_345), 0.1);
+obj3[1] = ThemesDefault.unsafe_rawColors.BLUE_345;
 createCacheKey[4] = obj3;
 const obj4 = { backgroundColor: null, borderColor: null };
-obj4[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(require("Themes").unsafe_rawColors.RED_400), 0.1);
-obj4[1] = require("Themes").unsafe_rawColors.RED_400;
+obj4[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(ThemesDefault.unsafe_rawColors.RED_400), 0.1);
+obj4[1] = ThemesDefault.unsafe_rawColors.RED_400;
 createCacheKey[5] = obj4;
 int2hslRaw = { backgroundColor: null, borderColor: null };
-int2hslRaw[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(require("Themes").unsafe_rawColors.GREEN_400), 0.1);
-int2hslRaw[1] = require("Themes").unsafe_rawColors.GREEN_400;
+int2hslRaw[0] = int2hslRaw.int2rgba(int2hslRaw.hex2int(ThemesDefault.unsafe_rawColors.GREEN_400), 0.1);
+int2hslRaw[1] = ThemesDefault.unsafe_rawColors.GREEN_400;
 createCacheKey[6] = int2hslRaw;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_6 = createCacheKey.createStyles(createCacheKey);
 int2hslRaw = { WARNING: 0, [0]: "WARNING", INFO: 1, [1]: "INFO", ERROR: 2, [2]: "ERROR", SUCCESS: 3, [3]: "SUCCESS" };
-let obj1 = { flex: 1, marginLeft: require("Themes").space.PX_8 };
-const result = require("jsxProd").fileFinishedImporting("design/void/HelpMessage/native/HelpMessage.tsx");
+let obj1 = { flex: 1, marginLeft: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("design/void/HelpMessage/native/HelpMessage.tsx");
 
 export default function HelpMessage(children) {
-  let messageType;
-  let textVariant;
   ({ messageType, textVariant } = children);
   if (textVariant === undefined) {
     textVariant = "text-sm/medium";
@@ -61,9 +51,9 @@ export default function HelpMessage(children) {
   }
   let xs = children.borderRadius;
   if (xs === undefined) {
-    xs = Themes.radii.xs;
+    xs = ThemesDefault.radii.xs;
   }
-  const tmp3 = createCacheKey();
+  const tmp3 = callback2();
   const items = [tmp3.container, , ];
   if (int2hslRaw.WARNING === messageType) {
     let successContainer = tmp3.warningContainer;
@@ -80,19 +70,19 @@ export default function HelpMessage(children) {
   obj = { style: tmp3.row, children: null };
   if (int2hslRaw.WARNING === messageType) {
     obj = { color: null };
-    obj[0] = Themes.unsafe_rawColors.YELLOW_300;
+    obj[0] = ThemesDefault.unsafe_rawColors.YELLOW_300;
     let tmp7 = callback(CircleErrorIcon.CircleErrorIcon, obj);
   } else if (tmp6.INFO === messageType) {
-    const obj1 = { color: null };
-    obj1[0] = Themes.unsafe_rawColors.BLUE_345;
+    obj1 = { color: null };
+    obj1[0] = ThemesDefault.unsafe_rawColors.BLUE_345;
     tmp7 = callback(CircleInformationIcon.CircleInformationIcon, obj1);
   } else if (tmp6.ERROR === messageType) {
     const obj2 = { color: null };
-    obj2[0] = Themes.unsafe_rawColors.RED_400;
+    obj2[0] = ThemesDefault.unsafe_rawColors.RED_400;
     tmp7 = callback(CircleXIcon.CircleXIcon, obj2);
   } else if (tmp6.SUCCESS === messageType) {
     const obj3 = { color: null };
-    obj3[0] = Themes.unsafe_rawColors.GREEN_400;
+    obj3[0] = ThemesDefault.unsafe_rawColors.GREEN_400;
     tmp7 = callback(CircleCheckIcon.CircleCheckIcon, obj3);
   }
   const items1 = [tmp7, callback(Text.Text, { style: tmp3.content, color: str, variant: textVariant, children: children.children })];

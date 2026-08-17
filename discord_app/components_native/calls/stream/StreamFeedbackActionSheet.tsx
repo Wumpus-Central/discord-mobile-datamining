@@ -1,26 +1,24 @@
 // discord_app/components_native/calls/stream/StreamFeedbackActionSheet.tsx
-import "noop";
-import fetchFingerprint from "fetchFingerprint";
-import { AnalyticEvents } from "ME";
-import FeedbackRating from "FeedbackRating";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import FeedbackRating from "FeedbackRating" /* 10811 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ FeedbackCategory: c5, FeedbackType: closure_6, StreamFeedbackOption: error } = FeedbackRating);
-const result = require("ME").fileFinishedImporting("components_native/calls/stream/StreamFeedbackActionSheet.tsx");
+const result = require("set").fileFinishedImporting("components_native/calls/stream/StreamFeedbackActionSheet.tsx");
 
 export default function StreamFeedbackActionSheet(stream) {
   stream = stream.stream;
   const analyticsData = stream.analyticsData;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = stream(7487);
   dependencyMap = obj.useGetStreamApplication(stream);
-  let obj1 = stream(589);
-  const items = [fetchFingerprint];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_3.getId() === stream.ownerId);
+  obj1 = stream(589);
+  const items = [closure_3];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_3.getId() === stream.ownerId);
   const intl = stream(1236).intl;
   const intl2 = stream(1236).intl;
   const stringResult = intl.string(stream(1236).t["5smP3R"]);
@@ -74,18 +72,14 @@ export default function StreamFeedbackActionSheet(stream) {
       id1 = tmp.id;
     }
     obj[4] = id1;
-    obj.track(outer1_4.OPEN_POPOUT, obj);
+    obj.track(closure_1_4.OPEN_POPOUT, obj);
   };
   obj1[6] = function trackReport(dontShowAgain) {
-    let category;
-    let feedback;
-    let rating;
-    let reason;
     ({ rating, category, reason, feedback } = dontShowAgain);
     if (dontShowAgain.dontShowAgain) {
       let obj = stream(paths[9]);
       obj = { feedbackType: null, location: "StreamFeedbackActionSheet" };
-      obj[0] = outer1_6.STREAM;
+      obj[0] = closure_1_6.STREAM;
       obj.processOptOut(obj);
     }
     if (null != rating) {
@@ -120,7 +114,7 @@ export default function StreamFeedbackActionSheet(stream) {
         if (obj3.shouldShowLogUploadForCategory(rating, category, reason)) {
           ({ media_session_id: obj6[0], rtc_connection_id: obj6[1] } = tmp9);
           tmp22(paths[14]).openLazy(stream(paths[16])(paths[15], paths.paths), "UploadLogs", { mediaSessionId: null, rtcConnectionId: null });
-          const obj1 = { mediaSessionId: null, rtcConnectionId: null };
+          obj1 = { mediaSessionId: null, rtcConnectionId: null };
           const tmp22Result = tmp22(paths[14]);
         }
         obj3 = stream(paths[13]);

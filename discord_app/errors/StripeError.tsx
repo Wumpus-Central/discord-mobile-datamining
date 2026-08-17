@@ -1,9 +1,8 @@
 // discord_app/errors/StripeError.tsx
-import "set";
+import setDefault from "set" /* 4061 */;
 
+setDefault;
 const prototype = function StripeError(error) {
-  let message;
-  let param;
   error = error.error;
   if (null != error.param) {
     let obj = { body: null };

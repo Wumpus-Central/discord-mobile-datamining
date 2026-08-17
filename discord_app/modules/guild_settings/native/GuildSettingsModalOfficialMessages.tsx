@@ -1,47 +1,35 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx
-import resetCache from "resetCache";
-import GuildSettingsActionCreators from "../GuildSettingsActionCreators.tsx";
-import get_ActivityIndicator from "useNavigation";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleFormInit from "handleFormInit";
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
-import { ThemeTypes } from "sum";
-import jsxProd from "HeaderActionButton";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14628_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useCanManageGuildOfficialMessages } from "../../messages/GuildOfficialMessageUtils.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import Text from "Text" /* 4734 */;
+import useCanManageGuildOfficialMessages from "useCanManageGuildOfficialMessages" /* 7232 */;
+import registerAssetDefault from "registerAsset" /* 14628 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "handleFormInit" /* 8875 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c5;
-let c9;
-let closure_12;
-let map1;
-const require = arg1;
+require = arg1;
 function MessagePreview(theme) {
-  let animatedStyles;
-  let selectedColor;
   ({ animatedStyles, selectedColor } = theme);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const memo = React.useMemo(() => {
     const obj = callback(table[32]);
     return obj.calendarFormat(new Date(), true);
   }, []);
-  const internal = Themes.internal;
+  const internal = ThemesDefault.internal;
   let num = 1;
-  const semanticColor = internal.resolveSemanticColor(theme.theme, Themes.colors.BACKGROUND_BASE_LOWER);
-  if (maybeApplyNoTextColorForLightCustomTheme.desaturateUserColors) {
-    num = maybeApplyNoTextColorForLightCustomTheme.saturation;
+  const semanticColor = internal.resolveSemanticColor(theme.theme, ThemesDefault.colors.BACKGROUND_BASE_LOWER);
+  if (closure_6.desaturateUserColors) {
+    num = closure_6.saturation;
   }
   let obj = useCanManageGuildOfficialMessages;
   const accessibleGuildOfficialTextColor = obj.getAccessibleGuildOfficialTextColor(selectedColor, semanticColor, num);
@@ -53,9 +41,8 @@ function MessagePreview(theme) {
   ({ borderStrong: arr[1], bgBaseLow: arr[2] } = animatedStyles);
   obj = { style: items1, children: null };
   items1 = [tmp.chatContainerInner, { backgroundColor: obj2.alpha(closure_10).hex() }];
-  const obj1 = { source: null };
-  obj1[0] = registerAsset;
-  const items2 = [callback(Button.Avatar, obj1), ];
+  const hexResult1 = obj2.alpha(closure_10).hex();
+  const items2 = [callback(Button.Avatar, { source: registerAssetDefault }), ];
   obj2 = { style: tmp.chatContent, children: null };
   const obj3 = { style: tmp.chatHeader, children: null };
   const obj4 = { animated: true, style: animatedStyles.textStrong, variant: "text-md/semibold", lineClamp: 1, children: null };
@@ -74,60 +61,54 @@ function MessagePreview(theme) {
   items2[1] = callback2(closure_5, obj2);
   obj[1] = items2;
   obj[2] = callback2(closure_5, obj);
-  return callback(ReanimatedRexport.View, obj);
+  return callback(_modDef4115.View, obj);
 }
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 ({ DEFAULT_GUILD_OFFICIAL_COLOR: c9, GUILD_OFFICIAL_HIGHLIGHT_ALPHA: c10 } = MESSAGE_GROUP_SPACING);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { container: null, segmentedControlContainer: null, trailingColorContainer: null, colorBlock: null, chatSection: null, chatContainer: null, chatContainerInner: null, chatContent: null, chatHeader: null, chatTimestamp: null };
-createCacheKey = { gap: require("Themes").space.PX_8, height: "100%" };
+createCacheKey = { gap: ThemesDefault.space.PX_8, height: "100%" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: require("Themes").space.PX_16, alignItems: "center", paddingHorizontal: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_16 };
+createCacheKey[1] = { gap: ThemesDefault.space.PX_16, alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
 createCacheKey[3] = { marginHorizontal: 0, marginVertical: 0, marginRight: 8, minWidth: 24, height: 24, borderRadius: 3 };
-let obj1 = { gap: require("Themes").space.PX_16, alignItems: "center", paddingHorizontal: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_16 };
-createCacheKey[4] = { paddingHorizontal: require("TABLE_ROW_HEIGHT").TABLE_ROW_PADDING, gap: require("Themes").space.PX_8 };
-let obj2 = { paddingHorizontal: require("TABLE_ROW_HEIGHT").TABLE_ROW_PADDING, gap: require("Themes").space.PX_8 };
-createCacheKey[5] = { paddingVertical: require("Themes").space.PX_24, borderRadius: require("Themes").radii.xl, borderWidth: StyleSheet.hairlineWidth };
-let obj3 = { paddingVertical: require("Themes").space.PX_24, borderRadius: require("Themes").radii.xl, borderWidth: StyleSheet.hairlineWidth };
-createCacheKey[6] = { flexDirection: "row", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, gap: require("Themes").space.PX_8 };
+let obj1 = { gap: ThemesDefault.space.PX_16, alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { paddingHorizontal: require("TABLE_ROW_HEIGHT").TABLE_ROW_PADDING, gap: ThemesDefault.space.PX_8 };
+let obj2 = { paddingHorizontal: require("TABLE_ROW_HEIGHT").TABLE_ROW_PADDING, gap: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { paddingVertical: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
+let obj3 = { paddingVertical: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.xl, borderWidth: StyleSheet.hairlineWidth };
+createCacheKey[6] = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, gap: ThemesDefault.space.PX_8 };
 createCacheKey[7] = { flex: 1 };
 createCacheKey[8] = { flexDirection: "row", alignItems: "baseline", gap: 6 };
 createCacheKey[9] = { marginTop: -8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { flexDirection: "row", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, gap: require("Themes").space.PX_8 };
-let closure_15 = createCacheKey.createAnimatedThemedStyles({ backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW });
-let obj5 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let closure_16 = createCacheKey.createAnimatedThemedStyles({ borderColor: require("Themes").colors.BORDER_STRONG });
-createCacheKey = { color: require("Themes").colors.TEXT_DEFAULT };
-createCacheKey = createCacheKey.createAnimatedThemedStyles(createCacheKey);
-let obj6 = { borderColor: require("Themes").colors.BORDER_STRONG };
-let closure_18 = createCacheKey.createAnimatedThemedStyles({ color: require("Themes").colors.TEXT_MUTED });
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, gap: ThemesDefault.space.PX_8 };
+let closure_15 = createCacheKey.createAnimatedThemedStyles({ backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW });
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let closure_16 = createCacheKey.createAnimatedThemedStyles({ borderColor: ThemesDefault.colors.BORDER_STRONG });
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
+let closure_17 = createCacheKey.createAnimatedThemedStyles(createCacheKey);
+let obj6 = { borderColor: ThemesDefault.colors.BORDER_STRONG };
+let closure_18 = createCacheKey.createAnimatedThemedStyles({ color: ThemesDefault.colors.TEXT_MUTED });
 let closure_19 = { code: "function GuildSettingsModalOfficialMessagesTsx1(){const{activeIndex}=this.__closure;return activeIndex.get();}" };
 let closure_20 = { code: "function GuildSettingsModalOfficialMessagesTsx2(activeIndex){const{runOnJS,setCurrentThemeIndex}=this.__closure;runOnJS(setCurrentThemeIndex)(Math.round(activeIndex));}" };
-const obj8 = { color: require("Themes").colors.TEXT_MUTED };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx");
+const obj8 = { color: ThemesDefault.colors.TEXT_MUTED };
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalOfficialMessages.tsx");
 
 export default function GuildSettingsModalOfficialMessages(guildId) {
-  let c7;
-  let guild;
-  let submitting;
-  let tmp10;
-  let tmp15;
-  let tmp9;
   guildId = guildId.guildId;
   let navigation;
   submitting = undefined;
   let hasChanges;
   let officialMessageColor;
   let stateFromStores;
-  let c6;
+  c6 = undefined;
   c7 = undefined;
   let activeIndex;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = guildId(submitting[17]);
   navigation = obj.useNavigation();
-  let obj1 = guildId(submitting[18]);
+  obj1 = guildId(submitting[18]);
   let items = [activeIndex];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ guild: activeIndex.getGuild(), submitting: activeIndex.isSubmitting(), hasChanges: activeIndex.hasChanges() }));
   ({ guild, submitting } = stateFromStoresObject);
@@ -144,12 +125,12 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   const items2 = [guildId];
   stateFromStores = tmp2Result.useStateFromStores(items1, () => {
     const guild = _undefined.getGuild(guildId);
-    let officialMessageColor;
+    officialMessageColor = undefined;
     if (guild != null) {
       officialMessageColor = guild.officialMessageColor;
     }
     if (officialMessageColor == null) {
-      officialMessageColor = outer1_9;
+      officialMessageColor = closure_1_9;
     }
     return officialMessageColor;
   }, items2);
@@ -157,13 +138,13 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   c6 = tmp10;
   const items3 = [guildId];
   const effect = officialMessageColor.useEffect(() => () => {
-    outer1_1(outer1_2[19]).cancelChanges(closure_0);
+    closure_1_1(closure_1_2[19]).cancelChanges(closure_0);
   }, items3);
   const items4 = [guildId, officialMessageColor, navigation, submitting, hasChanges];
   const effect1 = officialMessageColor.useEffect(() => {
     function handleSaveChanges() {
-      let obj = outer1_1(outer1_2[19]);
-      obj = { officialMessageColor: module_8874 };
+      let obj = closure_1_1(closure_1_2[19]);
+      obj = { officialMessageColor: closure_4 };
       obj.saveGuild(handleSaveChanges, obj);
     }
     let fn;
@@ -178,7 +159,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
         const obj = { onPress: handleSaveChanges, text: null };
         const intl = guildId(submitting[12]).intl;
         obj[1] = intl.string(guildId(submitting[12]).t["R3BPH+"]);
-        return outer2_12(guildId(submitting[21]).HeaderActionButton, obj);
+        return closure_2_12(guildId(submitting[21]).HeaderActionButton, obj);
       };
     }
     obj[1] = fn2;
@@ -238,7 +219,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   class P {
     constructor(arg0) {
       obj = guildId(submitting[26]);
-      runOnJSResult = obj.runOnJS(c6);
+      runOnJSResult = obj.runOnJS(closure_6);
       tmpResult = runOnJSResult(Math.round(guildId));
       return;
     }
@@ -248,7 +229,7 @@ export default function GuildSettingsModalOfficialMessages(guildId) {
   P.__workletHash = 5332792853021;
   P.__initData = closure_20;
   const animatedReaction = guildId(submitting[26]).useAnimatedReaction(B, P);
-  obj = { bgBaseLow: callback3(activeIndex), borderStrong: callback4(activeIndex), textStrong: createCacheKey(activeIndex), textMuted: callback5(activeIndex) };
+  obj = { bgBaseLow: callback4(activeIndex), borderStrong: callback5(activeIndex), textStrong: callback6(activeIndex), textMuted: callback7(activeIndex) };
   obj1 = { style: tmp.container, children: null };
   const obj2 = { label: null, onPress: null, arrow: true, trailing: null, subLabel: null };
   let intl = tmp2(tmp3[12]).intl;

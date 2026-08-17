@@ -1,11 +1,11 @@
 // discord_app/modules/auth/native/components/utils/usePasswordRegistrationStep.tsx
-import PasswordScore from "PasswordScore";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { useRegistrationUIStore } from "useRegistrationUIStore";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15212 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/usePasswordRegistrationStep.tsx");
 
 export const usePasswordRegistrationStep = function usePasswordRegistrationStep() {
   let obj = React;
@@ -72,14 +72,14 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp3;
-              if (null != outer1_0) {
+              closure_0 = tmp3;
+              if (null != closure_1_0) {
                 if ("" !== arr) {
                   if (arr.length < 8) {
-                    const intl2 = outer1_0(outer1_2[6]).intl;
+                    const intl2 = closure_1_0(closure_1_2[6]).intl;
                     c4 = 3;
-                    const obj1 = { value: null, done: true };
-                    obj1[0] = intl2.string(outer1_0(outer1_2[6]).t.DfaKHr);
+                    obj1 = { value: null, done: true };
+                    obj1[0] = intl2.string(closure_1_0(closure_1_2[6]).t.DfaKHr);
                     return obj1;
                   } else if (null != c1) {
                     c4 = 3;
@@ -87,8 +87,8 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
                     obj2[0] = tmp14;
                     return obj2;
                   } else {
-                    let c3 = 1;
-                    obj2 = outer1_0(outer1_2[7]);
+                    c3 = 1;
+                    obj2 = closure_1_0(closure_1_2[7]);
                     c1 = 2;
                     c4 = 1;
                     const obj3 = { value: null, done: false };
@@ -97,10 +97,10 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
                   }
                 }
               }
-              const intl3 = outer1_0(outer1_2[6]).intl;
+              const intl3 = closure_1_0(closure_1_2[6]).intl;
               c4 = 3;
               const obj4 = { value: null, done: true };
-              obj4[0] = intl3.string(outer1_0(outer1_2[6]).t.R98xD5);
+              obj4[0] = intl3.string(closure_1_0(closure_1_2[6]).t.R98xD5);
               return obj4;
             }
           } else {
@@ -119,15 +119,15 @@ export const usePasswordRegistrationStep = function usePasswordRegistrationStep(
             } else if (false !== arg1.valid) {
               c3 = 0;
             }
-            const intl = outer1_0(outer1_2[6]).intl;
+            const intl = closure_1_0(closure_1_2[6]).intl;
             c3 = 0;
             c4 = 3;
             obj = { value: null, done: true };
-            obj[0] = intl.string(outer1_0(outer1_2[6]).t.DfaKHr);
+            obj[0] = intl.string(closure_1_0(closure_1_2[6]).t.DfaKHr);
             return obj;
           }
         } catch (tmp25) {
-          let closure_2 = tmp25;
+          closure_2 = tmp25;
           if (tmp4 === c3) {
             c4 = tmp2;
             throw tmp25;

@@ -1,16 +1,14 @@
 // discord_app/modules/content_inventory/memberlist/useTimestampTickedNow.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import setDefault from "set" /* 687 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../utils/Durations.tsx";
 
 const require = arg1;
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
+let result = require("set").fileFinishedImporting("modules/content_inventory/memberlist/useTimestampTickedNow.tsx");
 
 export const useTimestampTickedNow = function useTimestampTickedNow() {
-  let hovered;
-  let isAppFocused;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -20,14 +18,14 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
     isAppFocused = true;
   }
   let _require;
-  let importDefault;
+  importDefault = undefined;
   const now = callback(React.useState(() => {
     const timestamp = Date.now();
     const rounded = Math.floor(timestamp / _undefined(687).Millis.SECOND);
     return rounded * _undefined(687).Millis.SECOND;
   }), 2);
   _require = now[1];
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   let stateFromStores = _initialize.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let slowTickMode = !isAppFocused;
   if (isAppFocused) {
@@ -36,7 +34,7 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
     }
     slowTickMode = stateFromStores;
   }
-  const SECOND = set.Millis.SECOND;
+  const SECOND = setDefault.Millis.SECOND;
   if (slowTickMode) {
     let result = 15 * SECOND;
   } else {
@@ -45,11 +43,11 @@ export const useTimestampTickedNow = function useTimestampTickedNow() {
   importDefault = result;
   const items1 = [result];
   const effect = React.useEffect(() => {
-    const interval = new callback(outer1_2[5]).Interval();
+    const interval = new callback(closure_1_2[5]).Interval();
     interval.start(c1, () => {
       const timestamp = Date.now();
-      const rounded = Math.floor(timestamp / outer1_1(outer1_2[3]).Millis.SECOND);
-      interval(rounded * outer1_1(outer1_2[3]).Millis.SECOND);
+      const rounded = Math.floor(timestamp / closure_1_1(closure_1_2[3]).Millis.SECOND);
+      interval(rounded * closure_1_1(closure_1_2[3]).Millis.SECOND);
     });
     return () => interval.stop();
   }, items1);

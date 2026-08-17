@@ -1,10 +1,8 @@
 // discord_app/modules/activities/utils/useJoinFromSupportedPlatformsIconKeys.tsx
-import noop from "noop";
-import { ActivityGamePlatforms } from "ME";
+import closure_0 from "noop" /* 19 */;
+import { ActivityGamePlatforms } from "ME" /* 676 */;
 
 function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
-  let currentPlatform;
-  let platforms;
   ({ platforms, currentPlatform } = isGameLaunchable);
   const set = new Set(platforms);
   if (null != platforms) {
@@ -57,5 +55,5 @@ export const useJoinFromSupportedPlatformsIconKeys = function useJoinFromSupport
   const currentPlatform = platforms.currentPlatform;
   const isGameLaunchable = platforms.isGameLaunchable;
   const items = [currentPlatform, platforms, isGameLaunchable];
-  return platforms.useMemo(() => outer1_4({ platforms, currentPlatform, isGameLaunchable }), items);
+  return platforms.useMemo(() => closure_1_4({ platforms, currentPlatform, isGameLaunchable }), items);
 };

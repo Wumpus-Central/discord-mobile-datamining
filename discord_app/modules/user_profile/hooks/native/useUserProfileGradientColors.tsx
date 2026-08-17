@@ -1,16 +1,16 @@
 // discord_app/modules/user_profile/hooks/native/useUserProfileGradientColors.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useProfileThemeValues } from "../../useProfileThemeValues.native.tsx";
 
 const require = arg1;
-let result = require("initialize").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileGradientColors.tsx");
 
 export const useUserProfileGradientColors = function useUserProfileGradientColors(primaryColor, secondaryColor, fallbackBackground) {
   const _require = primaryColor;
-  const dependencyMap = secondaryColor;
+  dependencyMap = secondaryColor;
   const React = fallbackBackground;
   const items = [overlay];
   const stateFromStores = _initialize.useStateFromStores(items, () => overlay.syncProfileThemeWithUserTheme);
@@ -44,6 +44,6 @@ export const useUserProfileGradientColors = function useUserProfileGradientColor
         const obj2 = primaryColor(secondaryColor[5]);
       }
     }
-    return primaryColor(secondaryColor[5]).getUserProfileGradientContainerColors(result, result1, noop);
+    return primaryColor(secondaryColor[5]).getUserProfileGradientContainerColors(result, result1, closure_2);
   }, items1);
 };

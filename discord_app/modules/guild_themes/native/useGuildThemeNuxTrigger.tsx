@@ -1,14 +1,14 @@
 // discord_app/modules/guild_themes/native/useGuildThemeNuxTrigger.tsx
-import noop from "noop";
-import setContent from "setContent";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildThemeNuxTrigger } from "../useGuildThemeNuxTrigger.tsx";
+import initialize from "initialize" /* 589 */;
+import useGuildThemeNuxTriggerDefault from "useGuildThemeNuxTrigger" /* 15427 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "setContent" /* 4086 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_themes/native/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(arg0) {
-  const items = [setContent];
+  const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     key = key.getKey();
     return key === callback(paths[3]).GUILD_THEME_NUX_ACTION_SHEET_KEY;
@@ -18,5 +18,5 @@ export default function useGuildThemeNuxTrigger(arg0) {
     callback2(paths[6]).openLazy(tmp, callback(paths[3]).GUILD_THEME_NUX_ACTION_SHEET_KEY, arg0, "stack");
     return tmp;
   }, []);
-  useGuildThemeNuxTrigger(arg0, { isNuxOpen: stateFromStores, openNux: callback });
+  useGuildThemeNuxTriggerDefault(arg0, { isNuxOpen: stateFromStores, openNux: callback });
 };

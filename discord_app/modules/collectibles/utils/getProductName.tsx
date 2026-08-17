@@ -1,8 +1,10 @@
 // discord_app/modules/collectibles/utils/getProductName.tsx
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getProductOrbPrice } from "CollectiblesProductUtils.tsx";
-const result = require("getProductOrbPrice").fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
+
+const result = set.fileFinishedImporting("modules/collectibles/utils/getProductName.tsx");
 
 export const getCardProductName = function getCardProductName(product) {
   if (null == product) {
@@ -73,7 +75,7 @@ export const getPurchasedProductName = function getPurchasedProductName(baseVari
 };
 export const getProductNameAndTypeLabel = function getProductNameAndTypeLabel(closure_0) {
   if (null == closure_0) {
-    let obj1 = getProductOrbPrice;
+    obj1 = getProductOrbPrice;
     const productType = obj1.getProductType(closure_0);
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === productType) {
       const intl5 = tmp3(1236).intl;

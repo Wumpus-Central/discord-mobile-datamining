@@ -1,30 +1,26 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { combined } from "../../../../../../utils/HelpdeskUtils.tsx";
-import { styles } from "../TwoWayLinkStyles.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import styles from "styles" /* 9756 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkEducation.tsx");
 
 export default function XboxLinkEducation(onClose) {
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  let obj1 = combined;
+  obj1 = combinedDefault;
   const articleURL = obj1.getArticleURL(HelpdeskArticles.XBOX_CONNECTION);
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };

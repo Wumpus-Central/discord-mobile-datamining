@@ -1,16 +1,17 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { safetyToolsButton: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/SafetyToolsButton.tsx");
 
 export const SafetyToolsButton = function SafetyToolsButton(channelId) {
   channelId = channelId.channelId;
@@ -20,20 +21,20 @@ export const SafetyToolsButton = function SafetyToolsButton(channelId) {
   let safetyToolsButtonTooltipForChannel;
   let shouldShowInitialSafetyToolsButtonTooltip;
   let first;
-  let createCacheKey;
   let callback;
+  callback = undefined;
   let first1;
-  let closure_10;
+  closure_10 = undefined;
   let memo;
   let callback1;
   let callback2;
   let obj = channelId(warningId[6]);
   safetyToolsButtonTooltipForChannel = obj.useSafetyToolsButtonTooltipForChannel(channelId);
-  let tmp = createCacheKey();
+  let tmp = callback();
   shouldShowInitialSafetyToolsButtonTooltip = channelId(warningId[7]).useShouldShowInitialSafetyToolsButtonTooltip(channelId);
   let tmp4 = warningType(safetyToolsButtonTooltipForChannel.useState(false), 2);
   first = tmp4[0];
-  createCacheKey = tmp4[1];
+  callback = tmp4[1];
   let items = [shouldShowInitialSafetyToolsButtonTooltip, safetyToolsButtonTooltipForChannel];
   callback = safetyToolsButtonTooltipForChannel.useCallback(() => {
     if (shouldShowInitialSafetyToolsButtonTooltip) {

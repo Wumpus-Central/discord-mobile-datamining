@@ -1,26 +1,19 @@
 // discord_app/components_native/add_friend/AddFriendModal.tsx
-import _slicedToArray from "_slicedToArray";
-import HeaderActionButton from "HeaderActionButton";
-import get_ActivityIndicator from "getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { ContactPermissions } from "ContactSyncLandingPage";
-import jsxProd from "HeaderBackImage";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 import { NavigationStack } from "../../design/components/Navigator/native/Navigator.native.tsx";
-import { useSafeAreaInsets } from "../../modules/safe_area/useSafeAreaInsets.native.tsx";
 
-let Fonts;
-let c10;
-let c5;
-let closure_6;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 function AddFriendModalScene(onSkip) {
-  let c3;
-  let tmp5;
   onSkip = onSkip.onSkip;
   const sourceMetadata = onSkip.sourceMetadata;
   let contactSyncAccount;
@@ -28,21 +21,21 @@ function AddFriendModalScene(onSkip) {
   let navigation;
   callback = undefined;
   let callback1;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = onSkip(contactSyncAccount[10]);
   contactSyncAccount = obj.useContactSyncAccount();
-  let obj1 = onSkip(contactSyncAccount[10]);
+  obj1 = onSkip(contactSyncAccount[10]);
   [tmp5, c3] = callback(navigation.useState(!obj1.isContactSyncEnabled(contactSyncAccount)), 2);
   sourceMetadata(contactSyncAccount[11])(() => {
-    sourceMetadata(contactSyncAccount[12]).track(outer1_8.FRIEND_ADD_VIEWED, sourceMetadata);
+    sourceMetadata(contactSyncAccount[12]).track(closure_1_8.FRIEND_ADD_VIEWED, sourceMetadata);
     let obj = sourceMetadata(contactSyncAccount[12]);
     const result = onSkip(contactSyncAccount[10]).checkContactPermissions();
     result.then((arg0) => {
-      const obj = outer1_0(outer1_2[13]);
-      const tmp = outer1_9;
-      const tmp2 = outer1_0;
-      const tmp3 = outer1_2;
-      let tmp5 = arg0 === outer1_9.NOT_DETERMINED || outer1_0(outer1_2[13]).isAndroid() && arg0 === outer1_9.UNAUTHORIZED;
+      const obj = closure_1_0(closure_1_2[13]);
+      const tmp = closure_1_9;
+      const tmp2 = closure_1_0;
+      const tmp3 = closure_1_2;
+      let tmp5 = arg0 === closure_1_9.NOT_DETERMINED || closure_1_0(closure_1_2[13]).isAndroid() && arg0 === closure_1_9.UNAUTHORIZED;
       if (!tmp5) {
         tmp5 = !tmp2(tmp3[10]).isContactSyncEnabled(closure_2);
         const tmp2Result = tmp2(tmp3[10]);
@@ -77,16 +70,13 @@ function AddFriendModalScene(onSkip) {
   const layoutEffect = navigation.useLayoutEffect(() => {
     let obj = {
       headerRight() {
-        const obj = { source: null, onPress: null, accessibilityLabel: null };
-        obj[0] = outer1_1(outer1_2[20]);
-        obj[1] = closure_6;
-        const intl = outer1_0(outer1_2[17]).intl;
-        obj[2] = intl.string(outer1_0(outer1_2[17]).t.RDE0Sc);
-        return outer1_10(outer1_0(outer1_2[19]).HeaderActionButton, obj);
+        const obj = { source: closure_1_1(closure_1_2[20]), onPress: closure_6, accessibilityLabel: null };
+        const intl = closure_1_0(closure_1_2[17]).intl;
+        obj[2] = intl.string(closure_1_0(closure_1_2[17]).t.RDE0Sc);
+        return closure_1_10(closure_1_0(closure_1_2[19]).HeaderActionButton, obj);
       },
-      headerLeft: null
+      headerLeft: onSkip(contactSyncAccount[21]).getHeaderCloseButton(callback)
     };
-    obj[1] = onSkip(contactSyncAccount[21]).getHeaderCloseButton(callback);
     navigation.setOptions(obj);
   }, items1);
   obj = { style: tmp.headerText, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
@@ -118,11 +108,11 @@ function AddFriendModalScene(onSkip) {
   return closure_11(callback1, obj5);
 }
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ AnalyticEvents: metroImportAll, Fonts } = ME);
+({ AnalyticEvents: closure_8, Fonts } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
 createCacheKey = {};
-let merged = Object.assign(require("createTextStyle")(Fonts.DISPLAY_EXTRABOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+let merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 createCacheKey.marginTop = 32;
 createCacheKey.marginHorizontal = 16;
 createCacheKey.textAlign = "center";
@@ -130,10 +120,10 @@ createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { lineHeight: 18, marginVertical: 8, marginHorizontal: 16, textAlign: "center" };
 createCacheKey[2] = { marginTop: 16 };
 createCacheKey[3] = { marginTop: 16, paddingHorizontal: 16 };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
-let result = require("get ActivityIndicator").fileFinishedImporting("components_native/add_friend/AddFriendModal.tsx");
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, marginTop: 8 };
+let result = require("set").fileFinishedImporting("components_native/add_friend/AddFriendModal.tsx");
 
 export default function AddFriendModal(arg0) {
   const _require = arg0;
@@ -141,8 +131,8 @@ export default function AddFriendModal(arg0) {
   const screens = React.useMemo(() => {
     let obj = { ADD_FRIEND: null };
     obj = { ignoreKeyboard: true, title: null, initialParams: null, render: null };
-    const intl = callback(outer1_2[17]).intl;
-    obj[1] = intl.string(callback(outer1_2[17]).t.w5uwoI);
+    const intl = callback(closure_1_2[17]).intl;
+    obj[1] = intl.string(callback(closure_1_2[17]).t.w5uwoI);
     obj[2] = callback;
     obj[3] = function render(arg0) {
       const merged = Object.assign(arg0);
@@ -151,5 +141,5 @@ export default function AddFriendModal(arg0) {
     obj[0] = obj;
     return obj;
   }, items);
-  return callback2(_NavigationStack.Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsets().top });
+  return callback2(_NavigationStack.Navigator, { screens, initialRouteName: "ADD_FRIEND", headerStatusBarHeight: useSafeAreaInsetsDefault().top });
 };

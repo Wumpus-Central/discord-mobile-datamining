@@ -1,30 +1,30 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchButton.tsx
-import "noop";
-import { Pressable } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { MagnifyingGlassIcon } from "../../../../design/components/Icon/native/redesign/generated/MagnifyingGlassIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import MagnifyingGlassIcon from "MagnifyingGlassIcon" /* 7351 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { searchButton: null, roundedCorners: null, roundedCornersAlt: null, text: null };
-createCacheKey = { backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, height: 40, alignItems: "center", flexDirection: "row", paddingHorizontal: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { borderRadius: 20 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.round };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.round };
 createCacheKey[3] = { marginLeft: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderRadius: require("Themes").radii.round };
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { borderRadius: ThemesDefault.radii.round };
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchButton.tsx");
 
 export const SEARCH_BAR_HEIGHT = 40;
 export const SearchButtonContent = function SearchButtonContent(panelVariant) {
   const merged = Object.assign(panelVariant, Object.create(null));
-  const tmp2 = createCacheKey();
+  const tmp2 = callback2();
   let obj = {};
   const merged1 = Object.assign(merged);
   const items = [tmp2.searchButton, panelVariant.panelVariant ? tmp2.roundedCornersAlt : tmp2.roundedCorners, merged.style];

@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/useShopOrientationLock.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/collectibles/native/useShopOrientationLock.tsx");

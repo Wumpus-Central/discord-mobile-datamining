@@ -1,21 +1,22 @@
 // discord_app/modules/stage_channels/native/StageChannelAgeVerificationNoticeForEvent.tsx
-import "noop";
-import { View } from "set";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useAgeVerificationRunner } from "../../age_assurance/AgeVerificationUtils.tsx";
-import { useIsStageSpeakingDisabledForCurrentUser } from "../useStageSpeakingForCurrentUser.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 4330 */;
+import Text2 from "Text" /* 4734 */;
+import useIsStageSpeakingDisabledForCurrentUser from "useIsStageSpeakingDisabledForCurrentUser" /* 4991 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
+import WarningIcon2 from "WarningIcon" /* 8078 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
-  let closure_1;
-  closure_1 = createCacheKey();
+  closure_1 = undefined;
+  closure_1 = callback2();
   let obj = onConfirmPress(4992);
   const isVerifiedTeen = obj.useIsVerifiedTeen();
   const intl = onConfirmPress(1236).intl;
@@ -24,13 +25,13 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   if (isVerifiedTeen) {
     obj = { hook: null };
     obj[0] = function hook(children) {
-      return outer1_5(onConfirmPress(outer1_2[8]).Text, {
+      return closure_1_5(onConfirmPress(closure_1_2[8]).Text, {
         variant: "text-sm/medium",
         color: "text-default",
         style: closure_1.linkText,
         onPress() {
-          const tmp = outer1_1(outer1_2[9]);
-          tmp(outer1_1(outer1_2[10]).getArticleURL(outer1_4.TIGGER_PAWTECT_LEARN_MORE));
+          const tmp = closure_1_1(closure_1_2[9]);
+          tmp(closure_1_1(closure_1_2[10]).getArticleURL(closure_1_4.TIGGER_PAWTECT_LEARN_MORE));
           if (callback != null) {
             callback();
           }
@@ -42,13 +43,13 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
   } else {
     obj = { hook: null };
     obj[0] = function hook(children) {
-      return outer1_5(onConfirmPress(outer1_2[8]).Text, {
+      return closure_1_5(onConfirmPress(closure_1_2[8]).Text, {
         variant: "text-sm/medium",
         color: "text-default",
         style: closure_1.linkText,
         onPress() {
-          let obj = outer1_1(outer1_2[11]);
-          obj = { entryPoint: outer1_0(outer1_2[12]).AgeVerificationModalEntryPoint.START_STAGE_PROMPT };
+          let obj = closure_1_1(closure_1_2[11]);
+          obj = { entryPoint: closure_1_0(closure_1_2[12]).AgeVerificationModalEntryPoint.START_STAGE_PROMPT };
           const result = obj.showAgeVerificationGetStartedModal(obj);
           if (callback != null) {
             callback();
@@ -63,7 +64,7 @@ function StageChannelAgeVerificationNoticeContent(onConfirmPress) {
 }
 function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
   onConfirmPress = onConfirmPress.onConfirmPress;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let Text = require;
   let tmp8Result = dependencyMap;
   let obj = useAgeVerificationRunner;
@@ -72,16 +73,16 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     obj = { style: null, children: null };
     obj[0] = tmp.noticeContainer;
     if (isVerifiedTeen) {
-      let WarningIcon = Text(4330).CircleInformationIcon;
+      let WarningIcon = CircleInformationIcon.CircleInformationIcon;
     } else {
-      WarningIcon = Text(8078).WarningIcon;
+      WarningIcon = WarningIcon2.WarningIcon;
     }
     obj = { size: "refresh_sm", color: null, style: null };
-    obj[1] = Themes.colors.TEXT_DEFAULT;
+    obj[1] = ThemesDefault.colors.TEXT_DEFAULT;
     obj[2] = tmp.icon;
     const items = [closure_5(WarningIcon, obj), ];
-    Text = Text(4734).Text;
-    const obj1 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
+    Text = Text2.Text;
+    obj1 = { variant: "text-sm/medium", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.contentText;
     tmp = StageChannelAgeVerificationNoticeContent;
     const obj2 = { onConfirmPress: null };
@@ -94,39 +95,37 @@ function StageChannelAgeVerificationNoticeWrapper(onConfirmPress) {
     const tmp6 = closure_6;
     const tmp7 = View;
   } else {
-    const HelpMessageTypes = Text(1297).HelpMessageTypes;
+    const HelpMessageTypes = Button.HelpMessageTypes;
     const obj3 = { messageType: null, children: null };
     obj3[0] = isVerifiedTeen ? HelpMessageTypes.INFO : HelpMessageTypes.WARNING;
-    const obj4 = { onConfirmPress: null };
+    obj4 = { onConfirmPress: null };
     obj4[0] = onConfirmPress;
     obj3[1] = closure_5(StageChannelAgeVerificationNoticeContent, obj4);
-    return closure_5(Text(1297).HelpMessage, obj3);
+    return closure_5(Button.HelpMessage, obj3);
   }
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { container: null, containerWithDivider: null, divider: null, noticeContainer: null, icon: null, linkText: null, contentText: null };
-createCacheKey = { marginTop: require("Themes").space.PX_16 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingVertical: require("Themes").space.PX_16 };
-let obj1 = { paddingVertical: require("Themes").space.PX_16 };
-createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-let obj2 = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, borderRadius: require("Themes").radii.sm };
+createCacheKey[1] = { paddingVertical: ThemesDefault.space.PX_16 };
+let obj1 = { paddingVertical: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj2 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[4] = { flexShrink: 0 };
 createCacheKey[5] = { textDecorationLine: "underline" };
 createCacheKey[6] = { flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { TOP: 0, [0]: "TOP", BOTTOM: 1, [1]: "BOTTOM" };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, borderRadius: require("Themes").radii.sm };
-let result = require("ME").fileFinishedImporting("modules/stage_channels/native/StageChannelAgeVerificationNoticeForEvent.tsx");
+let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.sm };
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/StageChannelAgeVerificationNoticeForEvent.tsx");
 
 export default function StageChannelAgeVerificationNoticeForEvent(divider) {
-  let noBackground;
-  let onConfirmPress;
-  let style;
   divider = divider.divider;
   ({ noBackground, onConfirmPress, style } = divider);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = useIsStageSpeakingDisabledForCurrentUser;
   if (obj.useShouldShowAgeVerificationForEvent()) {
     const _Array = Array;
@@ -142,7 +141,7 @@ export default function StageChannelAgeVerificationNoticeForEvent(divider) {
       obj = { style: null, children: null };
       const items1 = [arr.length > 0 ? tmp.containerWithDivider : tmp.container, style];
       obj[0] = items1;
-      const obj1 = { noBackground: null, onConfirmPress: null };
+      obj1 = { noBackground: null, onConfirmPress: null };
       obj1[0] = noBackground;
       obj1[1] = onConfirmPress;
       obj[1] = callback(StageChannelAgeVerificationNoticeWrapper, obj1);

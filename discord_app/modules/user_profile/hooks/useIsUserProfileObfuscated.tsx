@@ -1,5 +1,5 @@
 // discord_app/modules/user_profile/hooks/useIsUserProfileObfuscated.tsx
-import createUserWidgetFromServer from "createUserWidgetFromServer";
+import closure_2 from "createUserWidgetFromServer" /* 5365 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -7,8 +7,8 @@ const result = require("set").fileFinishedImporting("modules/user_profile/hooks/
 
 export default function useIsUserProfileObfuscated(flags) {
   const _require = flags;
-  const items = [createUserWidgetFromServer];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_2.getUserProfile(id.id));
+  const items = [closure_2];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_2.getUserProfile(id.id));
   let bio;
   if (stateFromStores != null) {
     bio = stateFromStores.bio;

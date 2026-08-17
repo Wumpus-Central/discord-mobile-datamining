@@ -1,17 +1,17 @@
 // discord_app/utils/BillingUtils.tsx
-import set from "set";
-import { PaymentGateways } from "sum";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { set } from "../errors/BillingError.tsx";
-import { SentryUtils.native } from "SentryUtils.native.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import setDefault from "set" /* 4061 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { PaymentGateways } from "sum" /* 505 */;
 
-const require = arg1;
+require = arg1;
 function _createGatewayCheckoutContext() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (c3 === 2) {
         c3 = 3;
@@ -39,12 +39,12 @@ function _createGatewayCheckoutContext() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp2;
+              closure_1 = tmp2;
               closure_1 = undefined;
               let obj2 = null;
               if (null != obj2) {
-                if (obj2.paymentGateway === outer1_4.BRAINTREE) {
-                  let obj1 = callback(table[2]);
+                if (obj2.paymentGateway === closure_1_4.BRAINTREE) {
+                  obj1 = callback(table[2]);
                   table = 1;
                   c3 = 1;
                   obj1 = { value: null, done: false };
@@ -75,7 +75,7 @@ function _createGatewayCheckoutContext() {
       }
     })();
   });
-  const _createGatewayCheckoutContext = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -84,7 +84,7 @@ function _createGatewayCheckoutContext() {
   }
   return applyArgumentsResult;
 }
-const result = require("getBraintreeSDK").fileFinishedImporting("utils/BillingUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/BillingUtils.tsx");
 
 export const getLocalizedDisplayMonth = function getLocalizedDisplayMonth(arg0, arg1) {
   const date = new Date();
@@ -102,7 +102,7 @@ export const createGatewayCheckoutContext = function createGatewayCheckoutContex
   return applyArgumentsResult;
 };
 export const captureBillingException = function captureBillingException(error, tags) {
-  let obj = SentryUtils.native;
+  let obj = _modDef1208;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;
@@ -115,31 +115,31 @@ export const captureBillingException = function captureBillingException(error, t
   obj.tags = obj;
   obj.captureException(error, obj);
 };
-export const isExpectedHttpClientError = function isExpectedHttpClientError(onSignFailure) {
-  let tmp2 = onSignFailure instanceof sendRequest.HTTPResponseError;
+export const isExpectedHttpClientError = function isExpectedHttpClientError(closure_8) {
+  let tmp2 = closure_8 instanceof sendRequest.HTTPResponseError;
   if (tmp2) {
-    tmp2 = onSignFailure.status >= 400;
+    tmp2 = closure_8.status >= 400;
   }
   if (tmp2) {
-    tmp2 = onSignFailure.status < 500;
+    tmp2 = closure_8.status < 500;
   }
   if (!tmp2) {
-    let tmp4 = onSignFailure instanceof set;
+    let tmp4 = closure_8 instanceof setDefault;
     if (tmp4) {
-      tmp4 = null != onSignFailure.status;
+      tmp4 = null != closure_8.status;
     }
     if (tmp4) {
-      tmp4 = onSignFailure.status >= 400;
+      tmp4 = closure_8.status >= 400;
     }
     if (tmp4) {
-      tmp4 = onSignFailure.status < 500;
+      tmp4 = closure_8.status < 500;
     }
     tmp2 = tmp4;
   }
   return tmp2;
 };
 export const captureBillingMessage = function captureBillingMessage(arg0, tags) {
-  let obj = SentryUtils.native;
+  let obj = _modDef1208;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

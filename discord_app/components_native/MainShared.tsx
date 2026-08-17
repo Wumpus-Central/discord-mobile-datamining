@@ -1,29 +1,36 @@
 // discord_app/components_native/MainShared.tsx
-import ActionSheetPresenter from "ActionSheetPresenter";
-import { NativeModules } from "BurstReactionAnimationContainerInner";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import { jsx } from "MuteDeafen";
-import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { KeyCommandsView } from "../modules/keyboard/native/KeyCommandsView.tsx";
-import { coerceMainRoute } from "../modules/main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { PictureInPictureGlobal } from "../modules/video_calls/native/components/PictureInPictureGlobal.tsx";
-import { usePipVideoOrStream } from "../modules/video_calls/native/usePipVideoOrStream.tsx";
-import { isVoicePanelEnabled } from "../modules/voice_panel/VoicePanelUtils.native.tsx";
+import initialize from "initialize" /* 589 */;
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import isVoicePanelEnabled from "isVoicePanelEnabled" /* 8667 */;
+import usePipVideoOrStream from "usePipVideoOrStream" /* 8687 */;
+import KeyCommandsView from "KeyCommandsView" /* 13940 */;
+import PictureInPictureGlobalDefault from "PictureInPictureGlobal" /* 16125 */;
+import BurstReactionAnimationContainerInnerDefault from "BurstReactionAnimationContainerInner" /* 16128 */;
+import MenuContainerDefault from "MenuContainer" /* 16129 */;
+import ActionSheetPresenterDefault from "ActionSheetPresenter" /* 16130 */;
+import StyleSheetDefault from "StyleSheet" /* 16131 */;
+import MuteDeafenDefault from "MuteDeafen" /* 16139 */;
+import trackActionSheetImpressionDefault from "trackActionSheetImpression" /* 16141 */;
+import AnimatedToastDefault from "AnimatedToast" /* 16172 */;
+import closure_3 from "noop" /* 19 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("ensureGuildLoaded").fileFinishedImporting("components_native/MainShared.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("components_native/MainShared.tsx");
 
-export const BurstReactionAnimationContainer = require("BurstReactionAnimationContainerInner");
-export const MenuContainer = require("MenuContainer");
-export const ActionSheetContainer = require("ActionSheetPresenter");
-export const Alerts = require("StyleSheet");
-export const SoundPlayer = require("MuteDeafen");
-export const MainViewTooltipActionSheetsV2 = require("trackActionSheetImpression");
-export const ToastContainer = require("AnimatedToast");
+export const BurstReactionAnimationContainer = BurstReactionAnimationContainerInnerDefault;
+export const MenuContainer = MenuContainerDefault;
+export const ActionSheetContainer = ActionSheetPresenterDefault;
+export const Alerts = StyleSheetDefault;
+export const SoundPlayer = MuteDeafenDefault;
+export const MainViewTooltipActionSheetsV2 = trackActionSheetImpressionDefault;
+export const ToastContainer = AnimatedToastDefault;
 export const PictureInPictureGlobalContainer = function PictureInPictureGlobalContainer() {
   let obj = initialize;
-  const items = [ensureGuildLoaded, createRTCConnection];
+  const items = [closure_5, closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId.getChannelId()));
   const hasPipParticipant = usePipVideoOrStream.useHasPipParticipant({ isActivityViewFocused: false });
   const obj2 = usePipVideoOrStream;
@@ -39,7 +46,7 @@ export const PictureInPictureGlobalContainer = function PictureInPictureGlobalCo
         if (!tmp6) {
           obj = { channel: null };
           obj[0] = stateFromStores;
-          tmp7 = jsx(PictureInPictureGlobal, { channel: null });
+          tmp7 = jsx(PictureInPictureGlobalDefault, { channel: null });
         }
       }
     }

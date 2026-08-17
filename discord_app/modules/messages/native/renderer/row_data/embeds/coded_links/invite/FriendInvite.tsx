@@ -1,20 +1,17 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx
-import { Image } from "get ActivityIndicator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { InviteTypes } from "InviteSendStates";
-import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
 
-const result = require("InviteSendStates").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
+const Image = get_ActivityIndicator.Image;
+const InviteTypes = InviteSendStates.InviteTypes;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/FriendInvite.tsx");
 
 export const createFriendInvite = function createFriendInvite(inviter) {
-  let acceptLabelDisabledBackgroundColor;
-  let acceptLabelDisabledColor;
-  let acceptLabelGreenBackgroundColor;
-  let acceptLabelGreenColor;
-  let baseColors;
-  let colors;
-  ({ colors, baseColors } = getEmbedThemeColors(arg3));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(arg3));
   const intl = getSystemLocale.intl;
   const string = intl.string;
   const t = getSystemLocale.t;

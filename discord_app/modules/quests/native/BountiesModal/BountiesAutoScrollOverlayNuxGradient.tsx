@@ -1,15 +1,14 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx
-import noop from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const BRAND_500 = require("Themes").unsafe_rawColors.BRAND_500;
+const BRAND_500 = ThemesDefault.unsafe_rawColors.BRAND_500;
 let closure_8 = { code: "function BountiesAutoScrollOverlayNuxGradientTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
-let result = require("jsxProd").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollOverlayNuxGradient.tsx");
 
 export default function BountiesAutoScrollOverlayNuxGradient(active) {
   active = active.active;
@@ -22,9 +21,9 @@ export default function BountiesAutoScrollOverlayNuxGradient(active) {
     if (active) {
       num = 1;
     }
-    const result = sharedValue.set(active(outer1_2[5]).withTiming(num, active(outer1_2[6]).timingSlow));
+    const result = sharedValue.set(active(closure_1_2[5]).withTiming(num, active(closure_1_2[6]).timingSlow));
   }, items);
-  let obj1 = active(4115);
+  obj1 = active(4115);
   const fn = function _() {
     return { opacity: sharedValue.get() };
   };

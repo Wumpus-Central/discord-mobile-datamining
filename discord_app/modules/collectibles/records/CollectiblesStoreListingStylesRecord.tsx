@@ -1,7 +1,8 @@
 // discord_app/modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
 const require = arg1;
+toJSDefault;
 let prototype;
 prototype = function CollectiblesStoreListingStylesRecord(arg0) {
   const tmp = new prototype(new.target, new.target);
@@ -12,9 +13,6 @@ prototype = function CollectiblesStoreListingStylesRecord(arg0) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(arg0) {
-  let background_colors;
-  let button_colors;
-  let confetti_colors;
   ({ background_colors, button_colors, confetti_colors } = arg0);
   const mapped = background_colors.map((color) => {
     const tmp = callback2(5311);
@@ -38,6 +36,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   tmp5.confettiColors = mapped2;
   return tmp5;
 };
-const result = require("int2hslRaw").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesStoreListingStylesRecord.tsx");
 
 export default prototype;

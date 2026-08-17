@@ -1,19 +1,17 @@
 // discord_app/modules/icymi/native/content_inventory/ReactActionSheet.tsx
-import set from "set";
-import SendMessageIcon from "SendMessageIcon";
-import useWindowDimensions from "useWindowDimensions";
-import { View } from "getGuildThemeName";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { EmojiIntention } from "set";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { context } from "../ICYMIContext.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import context from "context" /* 15709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function AddEmojiButton(channel) {
   channel = channel.channel;
   const onOpenPicker = channel.onOpenPicker;
@@ -22,11 +20,11 @@ function AddEmojiButton(channel) {
   const callback = React.useCallback(() => {
     onOpenPicker();
     let obj = channel(onPressEmoji[10]);
-    obj = { pickerIntention: outer1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, reactionType: channel(onPressEmoji[11]).ReactionTypes.NORMAL };
+    obj = { pickerIntention: closure_1_8.REACTION, autoFocus: false, startExpanded: false, onPressEmoji, channel, reactionType: channel(onPressEmoji[11]).ReactionTypes.NORMAL };
     const result = obj.openEmojiPickerActionSheet(obj);
   }, items);
   let obj = { onPress: callback, style: items1, accessible: true, accessibilityLabel: null, disabled: null, children: null };
-  items1 = [createCacheKey().emoji];
+  items1 = [callback3().emoji];
   const intl = channel(onPressEmoji[7]).intl;
   obj[3] = intl.string(channel(onPressEmoji[7]).t.lfIHs4);
   obj[4] = channel.disabled;
@@ -34,10 +32,6 @@ function AddEmojiButton(channel) {
   return callback2(channel(onPressEmoji[12]).PressableHighlight, obj);
 }
 function ReactActionSheetBase(content) {
-  let author;
-  let c10;
-  let channel;
-  let tmp14;
   content = content.content;
   let _require = content;
   const onPressEmoji = content.onPressEmoji;
@@ -47,7 +41,7 @@ function ReactActionSheetBase(content) {
   let React;
   let hotwheels_gaming_activity;
   let first1;
-  let c8;
+  closure_8 = undefined;
   let ref;
   c10 = undefined;
   let callback1;
@@ -75,7 +69,7 @@ function ReactActionSheetBase(content) {
     }
     let tmp2Result = tmp2(obj.useState(""), 2);
     first1 = tmp2Result[0];
-    c8 = tmp10;
+    closure_8 = tmp10;
     ref = obj.useRef(null);
     tmp2Result = tmp2(obj.useState(null), 2);
     [tmp14, c10] = tmp2Result;
@@ -122,19 +116,19 @@ function ReactActionSheetBase(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
-              outer1_5(true);
-              v0(9057).itemInteracted(outer1_0.id, outer1_6, "press_reply_send");
+              closure_0 = tmp4;
+              closure_1_5(true);
+              v0(9057).itemInteracted(closure_1_0.id, closure_1_6, "press_reply_send");
               const obj5 = v0(9057);
-              const obj1 = { itemId: null, itemType: null, actionParameters: null };
-              obj1[0] = outer1_0.id;
-              obj1[1] = outer1_6;
+              obj1 = { itemId: null, itemType: null, actionParameters: null };
+              obj1[0] = closure_1_0.id;
+              obj1[1] = closure_1_6;
               obj1[2] = { actionGestureType: "press", actionTargetElement: "reply_button", actionIntentType: "reply", actionDestinationType: null };
               v0(9057).feedItemActioned(obj1);
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = dependencyMap(outer1_7);
+              obj2[0] = dependencyMap(closure_1_7);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -158,9 +152,9 @@ function ReactActionSheetBase(content) {
       }
     }), items);
     _require = callback((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c3 = 0;
+      closure_0 = arg0;
+      c2 = 0;
+      c3 = 0;
       return (function*(arg0) {
         if (c3 === 2) {
           c3 = 3;
@@ -188,19 +182,19 @@ function ReactActionSheetBase(content) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp2;
-                outer1_5(true);
-                onPressEmoji(sendMessage[15]).itemInteracted(user.id, outer1_6, "press_emoji_send");
+                closure_1 = tmp2;
+                closure_1_5(true);
+                onPressEmoji(sendMessage[15]).itemInteracted(user.id, closure_1_6, "press_emoji_send");
                 const obj5 = onPressEmoji(sendMessage[15]);
-                const obj1 = { itemId: null, itemType: null, actionParameters: null };
+                obj1 = { itemId: null, itemType: null, actionParameters: null };
                 obj1[0] = user.id;
-                obj1[1] = outer1_6;
+                obj1[1] = closure_1_6;
                 obj1[2] = { actionGestureType: "press", actionTargetElement: "reaction_picker_button", actionIntentType: "open", actionDestinationType: null };
                 onPressEmoji(sendMessage[15]).feedItemActioned(obj1);
                 c2 = 1;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_1(user);
+                obj2[0] = closure_1_1(user);
                 return obj2;
               }
             } else if (arg0 === 1) {
@@ -212,7 +206,7 @@ function ReactActionSheetBase(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              outer1_5(false);
+              closure_1_5(false);
               c3 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             }
@@ -244,7 +238,7 @@ function ReactActionSheetBase(content) {
     obj = { header: null, children: null };
     obj = { style: null, children: null };
     obj[0] = tmp.header;
-    let obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+    obj1 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
     obj1[2] = stringResult1;
     obj[1] = ref(tmp5(tmp6[21]).Text, obj1);
     obj[0] = ref(hotwheels_gaming_activity, obj);
@@ -302,13 +296,13 @@ function ReactActionSheetBase(content) {
               if (null != id.id) {
                 let obj = { onPress: null, style: null, disabled: null, children: null };
                 obj[0] = function onPress() {
-                  return outer1_11(closure_0);
+                  return closure_1_11(closure_0);
                 };
-                obj[1] = _undefined.emoji;
+                obj[1] = closure_3.emoji;
                 obj[2] = first;
                 obj = { style: null, source: null };
                 const items = [, ];
-                ({ defaultEmoji: arr[0], emojiImage: arr[1] } = _undefined);
+                ({ defaultEmoji: arr[0], emojiImage: arr[1] } = closure_3);
                 obj[0] = items;
                 obj = { uri: null };
                 let obj3 = onPressEmoji(sendMessage[28]);
@@ -317,18 +311,18 @@ function ReactActionSheetBase(content) {
                 obj[1] = obj;
                 obj[3] = ref(onPressEmoji(sendMessage[27]), obj, id.id);
                 let tmp11 = ref(lib(sendMessage[12]).PressableHighlight, obj);
-                const obj1 = { id: null, animated: null, size: 48 };
+                obj1 = { id: null, animated: null, size: 48 };
                 const tmp9 = onPressEmoji(sendMessage[27]);
               } else {
                 const obj2 = { onPress: null, style: null, disabled: null, children: null };
                 obj2[0] = function onPress() {
-                  return outer1_11(closure_0);
+                  return closure_1_11(closure_0);
                 };
-                obj2[1] = _undefined.emoji;
+                obj2[1] = closure_3.emoji;
                 obj2[2] = first;
                 obj3 = { variant: "text-md/medium", color: "interactive-text-default", style: null, allowFontScaling: false, children: null };
                 const items1 = [, ];
-                ({ defaultEmoji: arr2[0], emojiText: arr2[1] } = _undefined);
+                ({ defaultEmoji: arr2[0], emojiText: arr2[1] } = closure_3);
                 obj3[2] = items1;
                 obj3[4] = id.surrogates;
                 obj2[3] = ref(lib(sendMessage[21]).Text, obj3);
@@ -394,24 +388,24 @@ function ReactActionSheetBase(content) {
 }
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 createCacheKey = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: null, loading: null, base: null, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
-createCacheKey = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { opacity: 0.5 };
 createCacheKey[4] = { position: "relative" };
-createCacheKey[5] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: 8 };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[7] = { flex: 1, borderRadius: require("Themes").radii.round };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[7] = { flex: 1, borderRadius: ThemesDefault.radii.round };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[9] = { opacity: 0.6 };
-let obj2 = { flex: 1, borderRadius: require("Themes").radii.round };
-createCacheKey[10] = { padding: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+let obj2 = { flex: 1, borderRadius: ThemesDefault.radii.round };
+createCacheKey[10] = { padding: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 createCacheKey[11] = { width: 24, height: 24 };
 createCacheKey[12] = { resizeMode: "contain", width: 24, height: 24 };
 createCacheKey[13] = { lineHeight: 24, fontSize: 20, textAlign: "center", paddingTop: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { padding: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
-let result = require("noop").fileFinishedImporting("modules/icymi/native/content_inventory/ReactActionSheet.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { padding: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
+let result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ReactActionSheet.tsx");
 
 export default function ReactActionSheet(arg0) {
   if (arg0 == null) {
@@ -426,11 +420,6 @@ export default function ReactActionSheet(arg0) {
   }
 };
 export const getStatusReplyContent = function getStatusReplyContent(reply) {
-  let attachments;
-  let emojiStr;
-  let isForward;
-  let status;
-  let username;
   ({ username, status, emojiStr, attachments, isForward } = reply);
   if (isForward === undefined) {
     isForward = false;

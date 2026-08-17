@@ -1,63 +1,43 @@
 // discord_app/design/void/Form/native/FreeFormTextInput.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08578_registerAsset.js";
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Button } from "../../native.tsx";
-import { PressableBase } from "../../Pressables/native/Pressables.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import registerAssetDefault from "registerAsset" /* 8578 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ClearButton(onPress) {
   let obj = { style: { borderRadius: 20, padding: 8 }, accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.VkKicb);
   obj[3] = onPress.onPress;
   obj[4] = { top: 8, bottom: 8, right: 8 };
-  obj = { source: null, style: null, size: null };
-  obj[0] = registerAsset;
-  obj[1] = callback2().closeIcon;
-  obj[2] = Button.Icon.Sizes.MEDIUM;
+  obj = { source: registerAssetDefault, style: callback2().closeIcon, size: Button.Icon.Sizes.MEDIUM };
   obj[5] = callback(Button.Icon, obj);
   return callback(PressableBase.PressableOpacity, obj);
 }
 let c3 = importAllResult;
 ({ TouchableWithoutFeedback: c4, View: c5, TouchableOpacity: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { container: null, onPress: null, input: null, error: null, closeIcon: null, placeholder: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, height: 48, borderWidth: 1, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, paddingRight: 6, paddingLeft: 12, flexDirection: "row", alignItems: "center" };
 obj[0] = obj;
 obj[1] = { flexDirection: "row" };
-createCacheKey = { flex: 1, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { flex: 1, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj[2] = createCacheKey;
-obj[3] = { borderColor: require("Themes").unsafe_rawColors.RED_400 };
-let obj2 = { borderColor: require("Themes").unsafe_rawColors.RED_400 };
-obj[4] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
-const obj3 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
-obj[5] = { color: require("Themes").colors.TEXT_MUTED };
+obj[3] = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
+let obj2 = { borderColor: ThemesDefault.unsafe_rawColors.RED_400 };
+obj[4] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
+const obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8, flexShrink: 0 };
+obj[5] = { color: ThemesDefault.colors.TEXT_MUTED };
 let closure_9 = createCacheKey.createStyles(obj);
-const obj4 = { color: require("Themes").colors.TEXT_MUTED };
+const obj4 = { color: ThemesDefault.colors.TEXT_MUTED };
 const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
-  let accessibilityHint;
-  let accessibilityLabel;
-  let accessibilityRole;
-  let dependencyMap;
-  let error;
-  let forceAccessibleContainer;
-  let importDefault;
-  let onChangeText;
-  let onPress;
-  let renderLeadingComponent;
-  let renderTrailingComponent;
-  let style;
-  let value;
   ({ renderLeadingComponent, renderTrailingComponent, onChangeText } = editable);
   ({ onFocus: importDefault, onBlur: dependencyMap, value, onPress } = editable);
   let flag = editable.editable;
@@ -94,7 +74,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   if (tmp11) {
     tmp11 = flag;
   }
-  00038__(!tmp11, "Cannot have an editable input w/ onPress handler");
+  _modDef38(!tmp11, "Cannot have an editable input w/ onPress handler");
   let items = [tmp4.container, , ];
   error = null;
   if (error) {
@@ -163,7 +143,7 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   if (null != onPress) {
     str3 = "none";
   }
-  const obj1 = {
+  obj1 = {
     pointerEvents: str3,
     accessibilityRole,
     accessibilityLabel,
@@ -217,6 +197,6 @@ const forwardRefResult = importAllResult.forwardRef((editable, ref) => {
   obj[7] = closure_8(ref, obj);
   return closure_7(null != onPress ? closure_6 : flag, obj);
 });
-let result = require("jsxProd").fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
+let result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormTextInput.tsx");
 
 export default forwardRefResult;

@@ -1,16 +1,15 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { styles } from "TwoWayLinkStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import styles from "styles" /* 9756 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("styles").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkStepHeader.tsx");
 
 export const TwoWayLinkStepHeader = function TwoWayLinkStepHeader(arg0) {
-  let idx;
-  let total;
   ({ idx, total } = arg0);
   let obj = styles;
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();

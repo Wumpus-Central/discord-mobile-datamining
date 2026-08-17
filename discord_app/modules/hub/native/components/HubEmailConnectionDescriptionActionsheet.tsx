@@ -1,18 +1,17 @@
 // discord_app/modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = createCacheKey.createStyles({ description: { marginBottom: 8 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/native/components/HubEmailConnectionDescriptionActionsheet.tsx");
 
 export default function HubEmailConnectionDescriptionActionsheet() {
   const tmp = callback3();
@@ -25,7 +24,7 @@ export default function HubEmailConnectionDescriptionActionsheet() {
   const intl2 = getSystemLocale.intl;
   obj[3] = intl2.string(getSystemLocale.t.O1k9XX);
   items[1] = callback(Text.Text, obj);
-  const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = getSystemLocale.intl;
   obj1[3] = intl3.string(getSystemLocale.t.FV5dvh);
   items[2] = callback(Text.Text, obj1);

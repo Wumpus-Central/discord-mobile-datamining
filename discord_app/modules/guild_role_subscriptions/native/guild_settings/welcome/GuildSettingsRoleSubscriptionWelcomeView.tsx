@@ -1,40 +1,32 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx
-import encodeProperties from "encodeProperties";
-import Form from "Form";
-import get_ActivityIndicator from "asyncRequireImpl";
-import { CREATOR_REVENUE_PORTAL_URL as closure_8 } from "MAX_SUBSCRIPTION_TIERS";
-import { GuildSettingsSections } from "ME";
-import { CreatorMonetizationOnboardingMarketingSection as closure_10 } from "CreatorMonetizationApplicationState";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { ErrorBlock } from "../../components/ErrorBlock.tsx";
-import { WarningNotice } from "../../components/WarningNotice.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import ErrorBlockDefault from "ErrorBlock" /* 11384 */;
+import WarningNoticeDefault from "WarningNotice" /* 16904 */;
+import HowItWorksCardDefault from "HowItWorksCard" /* 16915 */;
+import EarningPreviewDefault from "EarningPreview" /* 16919 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { CREATOR_REVENUE_PORTAL_URL as closure_8 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import { GuildSettingsSections } from "ME" /* 676 */;
+import { CreatorMonetizationOnboardingMarketingSection as closure_10 } from "CreatorMonetizationApplicationState" /* 16903 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function ApplicationStatusNotice(arg0) {
-  let createEnableRequest;
-  let isApplicationPending;
-  let reapplyNoticeText;
-  let requestRejectedNoticeText;
-  let resubmissionError;
-  let resubmittingEnableRequest;
-  let style;
   ({ style, resubmissionError, requestRejectedNoticeText, reapplyNoticeText } = arg0);
   ({ resubmittingEnableRequest, createEnableRequest, isApplicationPending } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (null != resubmissionError) {
     let obj = { style: null, children: null };
     const items = [tmp.statusNoticeContainer, style];
     obj[0] = items;
     obj = { children: null };
     obj[0] = resubmissionError.getAnyErrorMessage();
-    obj[1] = callback(ErrorBlock, obj);
+    obj[1] = callback(ErrorBlockDefault, obj);
     return callback(closure_6, obj);
   } else {
     if (isApplicationPending) {
@@ -53,12 +45,12 @@ function ApplicationStatusNotice(arg0) {
       obj = { style: null, children: null };
       const items1 = [tmp.statusNoticeContainer, style];
       obj[0] = items1;
-      const obj1 = { notice: null, ctaLabel: null, onClick: null, submitting: null };
+      obj1 = { notice: null, ctaLabel: null, onClick: null, submitting: null };
       obj1[0] = requestRejectedNoticeText;
       obj1[1] = stringResult;
       obj1[2] = createEnableRequest;
       obj1[3] = resubmittingEnableRequest;
-      obj[1] = callback(WarningNotice, obj1);
+      obj[1] = callback(WarningNoticeDefault, obj1);
       tmp7 = callback(closure_6, obj);
     }
     return tmp7;
@@ -68,7 +60,7 @@ class SectionContainer {
   constructor(arg0) {
     footer = global.footer;
     ({ title, children, onLayout } = global);
-    tmp = Fragment();
+    tmp = closure_14();
     obj = { onLayout, style: tmp.container, children: null };
     obj = { style: tmp.divider };
     tmp2 = jsxs;
@@ -94,15 +86,6 @@ class SectionContainer {
   }
 }
 function StartEarningButton(isTermsAccepted) {
-  let acceptTermsCheckboxText;
-  let eligibility;
-  let eligibleForMonetization;
-  let error;
-  let guildId;
-  let importDefault;
-  let loading;
-  let style;
-  let submitAcceptTermsRequest;
   isTermsAccepted = isTermsAccepted.isTermsAccepted;
   ({ setTermsAccepted: importDefault, eligibleForMonetization, eligibility } = isTermsAccepted);
   let flag = isTermsAccepted.isFab;
@@ -112,7 +95,7 @@ function StartEarningButton(isTermsAccepted) {
   }
   submitAcceptTermsRequest = undefined;
   let navigation;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const tmp4 = importDefault(submitAcceptTermsRequest[13])(guildId);
   ({ error, loading, submitAcceptTermsRequest } = tmp4);
   let obj = isTermsAccepted(submitAcceptTermsRequest[14]);
@@ -121,7 +104,7 @@ function StartEarningButton(isTermsAccepted) {
   const items1 = [eligibility, navigation];
   const callback = React.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = React.useCallback(() => {
-    let obj = outer1_1(submitAcceptTermsRequest[15]);
+    let obj = closure_1_1(submitAcceptTermsRequest[15]);
     obj = {
       eligibility,
       onRequireModeratorMFAClick() {
@@ -130,11 +113,13 @@ function StartEarningButton(isTermsAccepted) {
     };
     return obj.openLazy(isTermsAccepted(submitAcceptTermsRequest[17])(submitAcceptTermsRequest[16], submitAcceptTermsRequest.paths), isTermsAccepted(submitAcceptTermsRequest[18]).ELIGIBILITY_ACTION_SHEET_KEY, obj);
   }, items1);
-  obj = { style: tmp.tos, leading: null, label: null, onPress: null };
-  obj[1] = callback(isTermsAccepted(submitAcceptTermsRequest[19]).FormRow.Checkbox, { selected: isTermsAccepted });
-  obj[2] = callback(isTermsAccepted(submitAcceptTermsRequest[12]).Text, { variant: "text-xs/normal", color: "text-default", children: acceptTermsCheckboxText });
-  obj[3] = function onPress() {
-    return callback(!isTermsAccepted);
+  obj = {
+    style: tmp.tos,
+    leading: callback(isTermsAccepted(submitAcceptTermsRequest[19]).FormRow.Checkbox, { selected: isTermsAccepted }),
+    label: callback(isTermsAccepted(submitAcceptTermsRequest[12]).Text, { variant: "text-xs/normal", color: "text-default", children: acceptTermsCheckboxText }),
+    onPress() {
+      return callback(!isTermsAccepted);
+    }
   };
   obj = { style, children: null };
   let tmp13 = eligibleForMonetization;
@@ -146,7 +131,7 @@ function StartEarningButton(isTermsAccepted) {
     tmp13 = tmp10;
   }
   const items2 = [tmp13, ];
-  const obj1 = { style: null, children: null };
+  obj1 = { style: null, children: null };
   if (eligibleForMonetization) {
     obj1[0] = tmp.startEarningButton;
     const obj2 = { loading: null, disabled: null, text: null, onPress: null };
@@ -202,25 +187,25 @@ function StartEarningButton(isTermsAccepted) {
 class MarketingSections {
   constructor(arg0) {
     onboardingMarketing = global.onboardingMarketing;
-    c0 = undefined;
-    c1 = undefined;
+    closure_0 = undefined;
+    closure_1 = undefined;
     obj = { title: null, footer: null, onLayout: null, children: null };
     tmp = jsx;
     intl = require("getSystemLocale").intl;
     obj[0] = intl.string(require("getSystemLocale").t.R9rNIk);
     intl2 = require("getSystemLocale").intl;
-    obj = { creatorPortalUrl: ScrollView };
+    obj = { creatorPortalUrl: closure_8 };
     obj[1] = intl2.format(require("getSystemLocale").t.oxW30N, obj);
     obj[2] = global.onHowItWorksLayoutChange;
     obj[3] = jsx(require("HowItWorksCard"), {});
-    tmp2 = jsx(SectionContainer, obj, GuildSettingsSections.HOW_IT_WORKS);
-    c0 = tmp2;
+    tmp2 = jsx(SectionContainer, obj, closure_10.HOW_IT_WORKS);
+    closure_0 = tmp2;
     obj1 = { title: null, children: null };
     intl3 = require("getSystemLocale").intl;
     obj1[0] = intl3.string(require("getSystemLocale").t["1QHJaW"]);
     obj1[1] = jsx(require("EarningPreview"), {});
-    tmp3 = jsx(SectionContainer, obj1, GuildSettingsSections.BENEFITS);
-    c1 = tmp3;
+    tmp3 = jsx(SectionContainer, obj1, closure_10.BENEFITS);
+    closure_1 = tmp3;
     sections = undefined;
     if (onboardingMarketing != null) {
       sections = onboardingMarketing.sections;
@@ -240,18 +225,18 @@ class MarketingSections {
       sections1 = onboardingMarketing.sections;
       obj3[0] = sections1.map((type) => {
         type = type.type;
-        if (outer1_10.HOW_IT_WORKS === type) {
-          return _undefined;
+        if (closure_1_10.HOW_IT_WORKS === type) {
+          return callback;
         } else if (tmp.BENEFITS === type) {
-          return _undefined2;
+          return callback2;
         } else if (tmp.OTHER_CREATORS === type) {
           let obj = { title: null, children: null };
-          const intl = _undefined(outer1_3[10]).intl;
-          obj[0] = intl.string(_undefined(outer1_3[10]).t["tJp+QV"]);
+          const intl = callback(closure_1_3[10]).intl;
+          obj[0] = intl.string(callback(closure_1_3[10]).t["tJp+QV"]);
           obj = { highlightedCreators: null };
           obj[0] = type.creators;
-          obj[1] = outer1_11(_undefined2(outer1_3[26]), obj);
-          return outer1_11(outer1_16, obj, tmp.OTHER_CREATORS);
+          obj[1] = closure_1_11(callback2(closure_1_3[26]), obj);
+          return closure_1_11(closure_1_16, obj, tmp.OTHER_CREATORS);
         }
       });
       tmpResult = tmp(Fragment, obj3);
@@ -262,48 +247,34 @@ class MarketingSections {
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 createCacheKey = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { resizeMode: "cover", width: "100%" }, subtitle: { marginTop: 8 }, tos: null, startEarningButton: null, startEarningButtonContainer: null, startEarningFabContainer: null, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.sm, marginTop: 10 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.sm, marginTop: 10 };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { marginTop: 12 };
 createCacheKey[6] = { marginTop: 14 };
 createCacheKey[7] = { marginHorizontal: 24 };
-createCacheKey[8] = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+createCacheKey[8] = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[9] = { marginTop: 36, marginBottom: 10 };
 createCacheKey[10] = { marginTop: 36 };
 createCacheKey[11] = { marginHorizontal: 0, marginTop: 14 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx");
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/GuildSettingsRoleSubscriptionWelcomeView.tsx");
 
 export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
-  let acceptTermsCheckboxText;
-  let creatorMonetizationOnboardingMarketing;
-  let eligibility;
-  let eligibilityError;
-  let eligibilityLoading;
-  let eligibleForMonetization;
-  let isGuildOwner;
-  let isLoading;
-  let refreshEligibility;
-  let tmp10;
-  let tmp11;
-  let tmp19;
-  let tmp20;
-  let wasRejectedInV1;
   guild = guild.guild;
   refreshEligibility = undefined;
   let ref;
-  let importAll;
+  importAll = undefined;
   let ref1;
   let first;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = refreshEligibility(ref1[14]);
   const navigation = obj.useNavigation();
   const tmp5 = ref(ref1[27])(guild);
   ({ eligibility, refreshEligibility } = tmp5);
   ({ eligibleForMonetization, acceptTermsCheckboxText, wasRejectedInV1, isGuildOwner, eligibilityLoading, eligibilityError } = tmp5);
-  let obj1 = refreshEligibility(ref1[28]);
+  obj1 = refreshEligibility(ref1[28]);
   const creatorMonetizationIneligibleReasons = obj1.useCreatorMonetizationIneligibleReasons(eligibility);
   let obj2 = React;
   ({ isLoading, creatorMonetizationOnboardingMarketing } = ref(ref1[29])(guild.id));
@@ -344,7 +315,7 @@ export default function GuildSettingsRoleSubscriptionWelcomeView(guild) {
       if (current != null) {
         current.measure((arg0, arg1, arg2, arg3, arg4, arg5) => {
           const diff = arg5 - refreshEligibility(ref1[33]).STATUS_BAR_HEIGHT;
-          outer1_5(closure_0 + (diff - refreshEligibility(ref1[33]).NAV_BAR_HEIGHT));
+          closure_1_5(closure_0 + (diff - refreshEligibility(ref1[33]).NAV_BAR_HEIGHT));
         });
       }
     }

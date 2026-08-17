@@ -1,54 +1,47 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPlanPriceDetails.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import updateProduct from "updateProduct";
-import GuildFeatures from "GuildFeatures";
-import { CurrencyCodes } from "sum";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_3 from "updateProduct" /* 5319 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { CurrencyCodes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
+noopAll;
 ({ SubscriptionIntervalTypes: c4, SubscriptionPlanInfo: c5 } = GuildFeatures);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, centeredText: null };
-createCacheKey = { gap: require("Themes").space.PX_4 };
+createCacheKey = { gap: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("updateProduct").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPlanPriceDetails.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPlanPriceDetails.tsx");
 
 export default function BuyNitroPlanPriceDetails(centered) {
-  let discounted;
-  let item;
-  let planSelection;
-  let priceStringByProductId;
-  let trialTier;
   ({ planSelection, item } = centered);
   let flag = centered.centered;
   if (flag === undefined) {
     flag = false;
   }
   ({ priceStringByProductId, trialTier, discounted } = planSelection);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   if (flag) {
     const centeredText = tmp.centeredText;
   }
   let formatToPlainStringResult = dependencyMap;
   let obj = item(589);
-  const items = [updateProduct];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const product = outer1_3.getProduct(item.productId);
+    const product = closure_1_3.getProduct(item.productId);
     let formatted;
     if (product != null) {
       formatted = product.currencyCode.toLowerCase();
       const str = product.currencyCode;
     }
     if (null == formatted) {
-      formatted = outer1_6.USD;
+      formatted = closure_1_6.USD;
     }
     return formatted;
   });
@@ -61,7 +54,7 @@ export default function BuyNitroPlanPriceDetails(centered) {
       obj = { variant: "text-xs/semibold", color: "text-default", style: null, children: null };
       obj[2] = centeredText;
       const intl3 = tmp2(1236).intl;
-      const obj1 = { price: null };
+      obj1 = { price: null };
       obj1[0] = tmp2Result.formatPrice(0, stateFromStores, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
       obj[3] = intl3.formatToPlainString(tmp2(1236).t.hXcaLT, obj1);
       const items1 = [callback(tmp2(4734).Text, obj), ];

@@ -1,43 +1,42 @@
 // discord_app/modules/parent_tools/native/FamilyCenterTopActivity.tsx
-import noop from "noop";
-import { View } from "GuildIconSizes";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "freshTeenActivityWithMap" /* 5296 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-let require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+const require = arg1;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, section: null, avatarList: null, touchableHitBox: null, guildAvatar: null, guildAvatarText: null };
-createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_8 };
+createCacheKey = { display: "flex", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_4, flexWrap: "wrap", paddingTop: require("Themes").space.PX_12, paddingBottom: require("Themes").space.PX_12 };
+createCacheKey[2] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, flexWrap: "wrap", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 };
 createCacheKey[3] = { width: "100%", alignItems: "flex-start" };
-let obj1 = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_4, flexWrap: "wrap", paddingTop: require("Themes").space.PX_12, paddingBottom: require("Themes").space.PX_12 };
-createCacheKey[4] = { borderRadius: require("Themes").radii.md, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST };
+let obj1 = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, flexWrap: "wrap", paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12 };
+createCacheKey[4] = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
 createCacheKey[5] = { fontSize: 12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: require("Themes").radii.md, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterTopActivity.tsx");
 
 export default function FamilyCenterTopActivity() {
-  const tmp = createCacheKey();
-  const require = tmp;
-  let obj = require(stateFromStores1[7]);
-  const items = [freshTeenActivityWithMap];
+  const tmp = callback2();
+  const _require = tmp;
+  let obj = _require(stateFromStores1[7]);
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => authStore.getTopUserActivities());
-  let obj1 = require(stateFromStores1[7]);
-  const items1 = [freshTeenActivityWithMap];
+  obj1 = _require(stateFromStores1[7]);
+  const items1 = [closure_6];
   stateFromStores1 = obj1.useStateFromStores(items1, () => authStore.getTopGuildActivities());
   const items2 = [stateFromStores];
   [][0] = stateFromStores1;
   const callback = React.useCallback(() => {
     let obj = stateFromStores(stateFromStores1[8]);
     obj = { topUserActivities: stateFromStores };
-    obj.openLazy(tmp(stateFromStores1[10])(stateFromStores1[9], stateFromStores1.paths), "FamilyCenterTopUsers", obj);
+    obj.openLazy(callback(stateFromStores1[10])(stateFromStores1[9], stateFromStores1.paths), "FamilyCenterTopUsers", obj);
   }, items2);
   if (0 !== stateFromStores.length) {
     obj = { style: null, children: null };
@@ -63,8 +62,8 @@ export default function FamilyCenterTopActivity() {
         if (null != user) {
           const obj = { user: null, size: null, guildId: "Array" };
           obj[0] = user;
-          obj[1] = tmp(stateFromStores1[16]).AvatarSizes.SMALL;
-          tmp2 = callback(tmp(stateFromStores1[16]).Avatar, obj, user.id);
+          obj[1] = callback(stateFromStores1[16]).AvatarSizes.SMALL;
+          tmp2 = callback2(callback(stateFromStores1[16]).Avatar, obj, user.id);
         }
         return tmp2;
       });
@@ -91,14 +90,14 @@ export default function FamilyCenterTopActivity() {
       const obj7 = { style: null, children: null };
       obj7[0] = tmp.avatarList;
       obj7[1] = stateFromStores1.map((guild_id) => {
-        const guild = outer1_6.getGuild(guild_id.guild_id);
+        const guild = closure_1_6.getGuild(guild_id.guild_id);
         let tmp2 = null;
         if (null != guild) {
           const obj = { style: null, textStyle: null, guild: null, size: null };
-          ({ guildAvatar: obj[0], guildAvatarText: obj[1] } = tmp);
+          ({ guildAvatar: obj[0], guildAvatarText: obj[1] } = callback);
           obj[2] = guild;
-          obj[3] = tmp(stateFromStores1[17]).GuildIconSizes.SMALL;
-          tmp2 = outer1_7(stateFromStores(stateFromStores1[17]), obj, guild.id);
+          obj[3] = callback(stateFromStores1[17]).GuildIconSizes.SMALL;
+          tmp2 = closure_1_7(stateFromStores(stateFromStores1[17]), obj, guild.id);
           const tmp6 = stateFromStores(stateFromStores1[17]);
         }
         return tmp2;

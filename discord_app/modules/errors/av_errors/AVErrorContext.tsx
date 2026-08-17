@@ -1,13 +1,13 @@
 // discord_app/modules/errors/av_errors/AVErrorContext.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import handleConnectionOpen from "handleConnectionOpen";
-import initialize from "initialize";
-import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
-import { isStreamKey } from "../../go_live/utils/StreamKeyUtils.tsx";
+import isStreamKey from "isStreamKey" /* 4531 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "initialize" /* 4558 */;
 
-const require = arg1;
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorContext.tsx");
 
 export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext() {
   voiceChannelId = voiceChannelId.getVoiceChannelId();
@@ -41,8 +41,6 @@ export const getVoiceChannelErrorContext = function getVoiceChannelErrorContext(
   return obj;
 };
 export const getStreamErrorContext = function getStreamErrorContext(streamKey) {
-  let channelId;
-  let ownerId;
   let obj = isStreamKey;
   ({ channelId, ownerId } = obj.decodeStreamKey(streamKey));
   rTCConnection = rTCConnection.getRTCConnection(streamKey);

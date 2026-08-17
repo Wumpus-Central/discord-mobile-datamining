@@ -1,20 +1,20 @@
 // discord_app/modules/gif_picker/native/GIFPickerItemView.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { transformFavoriteGifUrl } from "GIFPickerUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import transformFavoriteGifUrl from "transformFavoriteGifUrl" /* 10198 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles((height) => {
   let obj = { container: null, gifImage: null, gifImageSelected: null };
-  obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: Themes.radii.xs, width: "100%", height, flex: 1 };
+  obj = { paddingBottom: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING, paddingHorizontal: transformFavoriteGifUrl.GIF_PICKER_GUTTER_SPACING / 2, borderRadius: ThemesDefault.radii.xs, width: "100%", height, flex: 1 };
   obj[0] = obj;
-  obj = { backgroundColor: Themes.colors.BORDER_SUBTLE, borderRadius: Themes.radii.xs, flex: 1 };
+  obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
   obj[1] = obj;
-  obj[2] = { borderWidth: 2, borderColor: Themes.colors.BACKGROUND_BRAND };
+  obj[2] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
   return obj;
 });
 const memoResult = importAllResult.memo((height) => {
@@ -23,7 +23,7 @@ const memoResult = importAllResult.memo((height) => {
   obj = { style: tmp.gifImage };
   return <View style={tmp.gifImage} />;
 });
-let result = require("jsxProd").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
+let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerItemView.tsx");
 
 export default function GIFPickerItemView(onPressGIF) {
   onPressGIF = onPressGIF.onPressGIF;

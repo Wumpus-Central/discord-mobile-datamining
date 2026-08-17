@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx
-import noop from "noop";
-import { MobileUserSettings } from "MobileUserSettings";
-import { jsx } from "jsxProd";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef13991 from "module_13991" /* 13991 */;
+import closure_3 from "noop" /* 19 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemsScreen.tsx");
 
 export default function SettingsDesignSystemsScreen() {
   const node = React.useMemo(() => {
@@ -22,5 +22,5 @@ export default function SettingsDesignSystemsScreen() {
     sections[3] = { label: "Legacy Audit", settings: items4 };
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(SettingLayout, { node });
+  return jsx(_modDef13991, { node });
 };

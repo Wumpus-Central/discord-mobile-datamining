@@ -1,5 +1,6 @@
 // discord_app/modules/bug_reporter/native/BugReportUtils.tsx
-import set from "set";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function uriScheme(str) {
@@ -18,10 +19,10 @@ function uriScheme(str) {
 function _getAttachments() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -57,10 +58,10 @@ function _getAttachments() {
               let name = tmp2;
               let tmp63 = arr;
               let lib;
-              let dependencyMap;
+              dependencyMap = undefined;
               name = undefined;
               logger = undefined;
-              let error;
+              error = undefined;
               arr = [];
               dependencyMap = arr;
               let tmp64 = arr;
@@ -70,7 +71,7 @@ function _getAttachments() {
           } else if (1 === tmp5) {
             let tmp45 = error;
             let tmp46 = error;
-            let c6 = 0;
+            c6 = 0;
             let tmp47 = lib;
             lib.return();
             throw error;
@@ -93,7 +94,7 @@ function _getAttachments() {
             let tmp23 = logger;
             logger = tmp17(uri);
             let tmp24 = logger;
-            let obj1 = { scheme: null, filename: null, mimeType: null, isImage: null, error: null };
+            obj1 = { scheme: null, filename: null, mimeType: null, isImage: null, error: null };
             let tmp25 = logger;
             obj1[0] = logger;
             let tmp26 = lib;
@@ -194,7 +195,7 @@ function _getAttachments() {
       }
     })();
   });
-  const _getAttachments = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -203,11 +204,11 @@ function _getAttachments() {
   }
   return applyArgumentsResult;
 }
-let c4 = new require("openImagePickerUnhandled")("BugReportUtils.tsx");
-const tmp2 = new require("openImagePickerUnhandled")("BugReportUtils.tsx");
-const result = require("v1").fileFinishedImporting("modules/bug_reporter/native/BugReportUtils.tsx");
+let closure_4 = new timestampDefault("BugReportUtils.tsx");
+const tmp2 = new timestampDefault("BugReportUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/bug_reporter/native/BugReportUtils.tsx");
 
-export const getAttachments = function getAttachments(outer1_7) {
+export const getAttachments = function getAttachments(closure_1_7) {
   const self = this;
   const apply = _getAttachments.apply;
   if (typeof apply === "unknown") {

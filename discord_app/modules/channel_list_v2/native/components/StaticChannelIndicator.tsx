@@ -1,14 +1,15 @@
 // discord_app/modules/channel_list_v2/native/components/StaticChannelIndicator.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { UnreadSetting } from "ReadStateTypes";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import ReadStateTypes from "ReadStateTypes" /* 5044 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
+const UnreadSetting = ReadStateTypes.UnreadSetting;
+const jsx = jsxProd.jsx;
 let obj = { indicatorContainer: null, indicator: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -16,22 +17,19 @@ obj.top = 0;
 obj.bottom = 0;
 obj.justifyContent = "center";
 obj[0] = obj;
-obj[1] = { width: 8, height: 8, borderRadius: require("Themes").radii.round, marginLeft: -4 };
+obj[1] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, marginLeft: -4 };
 let closure_6 = createCacheKey.createStyles(obj);
-const obj1 = { width: 8, height: 8, borderRadius: require("Themes").radii.round, marginLeft: -4 };
-const result = require("jsxProd").fileFinishedImporting("modules/channel_list_v2/native/components/StaticChannelIndicator.tsx");
+const obj1 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, marginLeft: -4 };
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/components/StaticChannelIndicator.tsx");
 
 export default function ChannelIndicator(arg0) {
-  let resolvedUnreadSetting;
-  let style;
-  let unread;
   ({ unread, resolvedUnreadSetting, style } = arg0);
   const tmp = callback();
   map;
   if (resolvedUnreadSetting === UnreadSetting.ALL_MESSAGES) {
-    let CHANNELS_DEFAULT = Themes.colors.INTERACTIVE_TEXT_ACTIVE;
+    let CHANNELS_DEFAULT = ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE;
   } else {
-    CHANNELS_DEFAULT = Themes.colors.CHANNELS_DEFAULT;
+    CHANNELS_DEFAULT = ThemesDefault.colors.CHANNELS_DEFAULT;
   }
   let tmp7 = null;
   if (unread) {

@@ -1,13 +1,11 @@
 // discord_app/modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/action_sheet/native/useCustomKeyboardBottomSheetConfig.tsx");
 
 export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
-  let animateOnMount;
-  let initialPosition;
   let flag = forceMaxHeight.forceMaxHeight;
   if (flag === undefined) {
     flag = false;
@@ -16,7 +14,7 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let importDefault;
+  importDefault = undefined;
   let minimum;
   let maximum;
   const tmp2 = importDefault(minimum[6])({ ignoreKeyboard: true });
@@ -26,11 +24,11 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   maximum = tmp3.maximum;
   let items = [flag, maximum, minimum];
   ({ initialPosition, animateOnMount } = importDefault(minimum[8])(() => {
-    let obj = { initialPosition: _undefined.height - minimum, animateOnMount: false };
+    let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
     let tmp3 = obj;
     if (!obj2.isAndroid()) {
       tmp3 = obj;
-      if (!outer1_4.useReducedMotion) {
+      if (!closure_1_4.useReducedMotion) {
         let tmpResult = tmp(tmp2[3]);
         if (0 === tmpResult.getSystemKeyboardHeight()) {
           tmpResult = tmp(tmp2[4]);
@@ -56,11 +54,11 @@ export default function useCustomKeyboardBottomSheetConfig(forceMaxHeight) {
   }, items);
   const tmp = minimum;
   const tmp4 = importDefault(minimum[8])(() => {
-    let obj = { initialPosition: _undefined.height - minimum, animateOnMount: false };
+    let obj = { initialPosition: styles.height - minimum, animateOnMount: false };
     let tmp3 = obj;
     if (!obj2.isAndroid()) {
       tmp3 = obj;
-      if (!outer1_4.useReducedMotion) {
+      if (!closure_1_4.useReducedMotion) {
         let tmpResult = tmp(tmp2[3]);
         if (0 === tmpResult.getSystemKeyboardHeight()) {
           tmpResult = tmp(tmp2[4]);

@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/AccessibilitySetting.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createToggle from "createToggle" /* 10669 */;
 import { SettingsAccessibilityScreen } from "../../accessibility/native/SettingsAccessibilityScreen.tsx";
 
-const require = arg1;
+require = arg1;
 let items = [require("DismissibleContent").DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
 createToggle = {
   useTitle() {
@@ -18,7 +18,6 @@ createToggle = {
   parent: null,
   IconComponent: require("AccessibilityIcon").AccessibilityIcon,
   useTrailing() {
-    let tmp4;
     let obj = useSelectedDismissibleContent;
     [tmp4, r10012] = callback(obj.useSelectedDismissibleContent(items), 2);
     let tmp5 = null;
@@ -40,20 +39,20 @@ createToggle = {
   usePreNavigationAction() {
     const tmp = callback(first(7366).useSelectedDismissibleContent(items), 2);
     first = tmp[0];
-    const dependencyMap = tmp3;
+    dependencyMap = tmp3;
     items = [tmp[1], first];
     return React.useCallback(() => {
       let tmp2 = null != first;
       if (tmp2) {
         let hasItem;
-        if (outer1_6 != null) {
+        if (closure_1_6 != null) {
           hasItem = obj.includes(tmp);
         }
         tmp2 = hasItem;
-        obj = outer1_6;
+        obj = closure_1_6;
       }
       if (tmp2) {
-        tmp3(outer1_4.TAKE_ACTION);
+        callback(closure_1_4.TAKE_ACTION);
       }
       return true;
     }, items);
@@ -67,6 +66,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccessibilitySetting.tsx");
 
 export default createToggle;

@@ -1,8 +1,10 @@
 // discord_app/modules/devtools/design_toggles/DesignTogglesStore.tsx
-import { DeviceSettingsStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { enable_recently_active: "Enable recently active channels", theme_setting_in_account_sheet: "Show theme settings in the Account action sheet", nav_experiment_server_drawer_enabled: "[NavI] Enable expandable server drawer", show_icymi_debug_scores: "Show ICYMI debug scores", channel_list_scrim: "Dim the channel list when chat appears", mana_radio_large_variant: "Larger Radio", mana_checkbox_large_variant: "Larger Checkbox", mana_switch_large_variant: "Larger Switch", show_header_debug_info: "Show header component debug overlays" };
 let closure_1 = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class DesignTogglesStore extends DeviceSettingsStore {
 }
 const prototype = DesignTogglesStore.prototype;
@@ -44,8 +46,6 @@ prototype["all"] = function all(items) {
 prototype["allWithDescriptions"] = function allWithDescriptions() {
   const entries = Object.entries(closure_1);
   return entries.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     const items = [tmp, tmp2, table[tmp]];
     return items;
@@ -58,7 +58,7 @@ obj = {
     closure_1[toggle.toggle] = toggle.value;
   }
 };
-const designTogglesStore = new DesignTogglesStore(require("dispatcher"), obj);
+const designTogglesStore = new DesignTogglesStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/devtools/design_toggles/DesignTogglesStore.tsx");
 
 export default designTogglesStore;

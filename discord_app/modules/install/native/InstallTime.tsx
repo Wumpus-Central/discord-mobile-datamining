@@ -1,17 +1,17 @@
 // discord_app/modules/install/native/InstallTime.tsx
-import fetchFingerprint from "fetchFingerprint";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeInstallTimeModule.tsx";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { sleep } from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import Storage4 from "Storage" /* 595 */;
+import sleep from "sleep" /* 4548 */;
+import enforcingDefault from "enforcing" /* 13250 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
 
-const require = arg1;
+require = arg1;
 function getFirstInstallTimeMillis(arg0) {
-  const firstInstallTimeMillis = enforcing.getFirstInstallTimeMillis();
+  const firstInstallTimeMillis = enforcingDefault.getFirstInstallTimeMillis();
   let str = "InstallTimeLaunch";
   if ("authed" === arg0.from) {
     str = "InstallTimeAuthed";
   }
-  const Storage = Storage.Storage;
+  const Storage = Storage4.Storage;
   const value = Storage.get(str);
   if (null != value) {
     if (value > 0) {
@@ -43,7 +43,7 @@ function getFirstInstallTimeMillis(arg0) {
     const result1 = Storage2.set(str, num2);
   }
 }
-let result = require("enforcing").fileFinishedImporting("modules/install/native/InstallTime.tsx");
+let result = require("set").fileFinishedImporting("modules/install/native/InstallTime.tsx");
 
 export { getFirstInstallTimeMillis };
 export const getFirstInstallTimeElapsed = function getFirstInstallTimeElapsed(unit) {

@@ -1,12 +1,14 @@
 // discord_app/modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
 
-const result = require("collectGuildAnalyticsMetadata").fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/channel_text_area/native/ChannelAutocompleteAnalytics.tsx");
 
 export const iOSTrackAutocompleteOpen = function iOSTrackAutocompleteOpen(autocomplete_type, guild_id, arg2) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(guild_id));
   const obj3 = collectGuildAnalyticsMetadata;
@@ -16,7 +18,7 @@ export const iOSTrackAutocompleteOpen = function iOSTrackAutocompleteOpen(autoco
   obj.track(AnalyticEvents.CHANNEL_AUTOCOMPLETE_OPEN, obj);
 };
 export const iOSTrackAutocompleteSelect = function iOSTrackAutocompleteSelect(autocomplete_type, guild_id, arg2) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadata(guild_id));
   const obj3 = collectGuildAnalyticsMetadata;

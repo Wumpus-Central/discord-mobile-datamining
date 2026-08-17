@@ -1,14 +1,14 @@
 // discord_app/modules/guild_onboarding/useGuildOnboardingAvailable.tsx
-import initialize from "initialize";
-import { GuildFeatures } from "ME";
+import closure_2 from "initialize" /* 1982 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/useGuildOnboardingAvailable.tsx");
 
 export default function useGuildOnboardingAvailable(features) {
   const _require = features;
-  const items = [initialize];
+  const items = [closure_2];
   let stateFromStores = _initialize.useStateFromStores(items, () => {
     let id;
     if (closure_0 != null) {
@@ -17,7 +17,7 @@ export default function useGuildOnboardingAvailable(features) {
     if (null == id) {
       return false;
     } else {
-      return outer1_2.isFullServerPreview(tmp.id) && outer1_2.isOnboardingEnabled(tmp.id);
+      return closure_1_2.isFullServerPreview(tmp.id) && closure_1_2.isOnboardingEnabled(tmp.id);
     }
   });
   if (!stateFromStores) {
@@ -34,7 +34,7 @@ export const isGuildOnboardingAvailable = function isGuildOnboardingAvailable(gu
   if (null == guild) {
     return false;
   } else {
-    let hasItem = initialize.isFullServerPreview(guild.id) && initialize.isOnboardingEnabled(guild.id);
+    let hasItem = closure_2.isFullServerPreview(guild.id) && closure_2.isOnboardingEnabled(guild.id);
     if (!hasItem) {
       const features = guild.features;
       hasItem = features.has(GuildFeatures.GUILD_ONBOARDING_HAS_PROMPTS);

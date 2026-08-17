@@ -1,20 +1,22 @@
 // discord_app/modules/media_keyboard/native/MediaKeyboardConstants.tsx
-import isMetaQuest from "isMetaQuest";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
 
 if (isMetaQuest.isMetaQuest()) {
   let obj = { slotHeight: 24, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };
-  obj[1] = require("Themes").colors.BACKGROUND_MOD_STRONG;
-  obj[2] = require("Themes").space.PX_64;
-  obj[3] = require("Themes").space.PX_8;
-  obj[4] = require("Themes").space.PX_16;
+  obj[1] = ThemesDefault.colors.BACKGROUND_MOD_STRONG;
+  obj[2] = ThemesDefault.space.PX_64;
+  obj[3] = ThemesDefault.space.PX_8;
+  obj[4] = ThemesDefault.space.PX_16;
 } else {
   obj = { slotHeight: 16, barColor: null, barWidth: null, barHeight: null, barMarginTop: null };
-  obj[1] = require("Themes").colors.BACKGROUND_MOD_MUTED;
-  obj[2] = require("Themes").space.PX_32;
-  obj[3] = require("Themes").space.PX_4;
-  obj[4] = require("Themes").space.PX_4;
+  obj[1] = ThemesDefault.colors.BACKGROUND_MOD_MUTED;
+  obj[2] = ThemesDefault.space.PX_32;
+  obj[3] = ThemesDefault.space.PX_4;
+  obj[4] = ThemesDefault.space.PX_4;
 }
-const result = require("set").fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
+const result = set.fileFinishedImporting("modules/media_keyboard/native/MediaKeyboardConstants.tsx");
 
 export const DRAG_HANDLE = obj;
 export const HEADER_HANDLE_HEIGHT = obj.slotHeight;

@@ -1,7 +1,9 @@
 // discord_app/modules/premium/powerups/utils/getBoostLifecyclePhase.tsx
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
+import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+
 let c2 = 259200000;
-const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
+const result = set.fileFinishedImporting("modules/premium/powerups/utils/getBoostLifecyclePhase.tsx");
 
 export const BOOST_EXPIRING_DISPLAY_WINDOW_DAYS = 3;
 export const BOOST_EXPIRING_DISPLAY_WINDOW_MS = 259200000;
@@ -24,7 +26,7 @@ export const getBoostLifecycleInfo = function getBoostLifecycleInfo(ended, closu
 export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id, boostLifecycleInfo) {
   const phase = boostLifecycleInfo.phase;
   if ("gave" === phase) {
-    return DISCORD_EPOCH.extractTimestamp(id.id);
+    return DISCORD_EPOCHDefault.extractTimestamp(id.id);
   } else if ("expiring" === phase) {
     const endsAt2 = boostLifecycleInfo.endsAt;
     return endsAt2.getTime() - c2;
@@ -35,8 +37,8 @@ export const getBoostLifecycleTimestamp = function getBoostLifecycleTimestamp(id
       time = endsAt.getTime();
     }
     if (time == null) {
-      time = DISCORD_EPOCH.extractTimestamp(id.id);
-      const obj = DISCORD_EPOCH;
+      time = DISCORD_EPOCHDefault.extractTimestamp(id.id);
+      const obj = DISCORD_EPOCHDefault;
     }
     return time;
   }

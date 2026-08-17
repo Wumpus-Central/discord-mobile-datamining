@@ -1,15 +1,15 @@
 // discord_app/modules/experiments/native/ExperimentEmbedPlatformUtils.tsx
+import set from "set" /* 2 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import { makeClientVariant } from "../client_override_hooks/useApexExperiments.tsx";
 import { parseRegisteredExperiments } from "../client_override_hooks/useLegacyExperiments.tsx";
+
 const regExp = new RegExp("^dev://experiment/([-\\w._0-9]+)(?:/([0-9]+))?$", "i");
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
+const result = set.fileFinishedImporting("modules/experiments/native/ExperimentEmbedPlatformUtils.tsx");
 
 export const EXPERIMENT_EMBED_URL_REGEX = regExp;
 export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperimentEmbedTap(experimentFromEmbedURL, experimentTreatmentFromEmbedURL) {
-  let experiments;
-  let overridesInfo;
   const _require = experimentTreatmentFromEmbedURL;
   if (null != experimentTreatmentFromEmbedURL) {
     const _Number = Number;
@@ -48,5 +48,5 @@ export const handleCodedLinkExperimentEmbedTap = function handleCodedLinkExperim
     }
   }
   obj = { id: experimentFromEmbedURL };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(_asyncRequireImpl(10986, dependencyMap.paths), "ExperimentOverrideSheet", obj);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(_asyncRequireImpl(10986, dependencyMap.paths), "ExperimentOverrideSheet", obj);
 };

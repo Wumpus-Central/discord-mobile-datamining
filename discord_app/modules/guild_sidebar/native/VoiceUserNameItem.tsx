@@ -1,46 +1,30 @@
 // discord_app/modules/guild_sidebar/native/VoiceUserNameItem.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 4815 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useDisplayNameStyles } from "../../display_name_styles/hooks/useDisplayNameStyles.tsx";
 import { DISPLAY_NAME_STYLES_FONT_FAMILY_MAP } from "../../display_name_styles/native/useDisplayNameStylesFont.tsx";
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsxs: closure_6, jsx: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { marginLeft: 8, flex: 1, flexDirection: "row" }, tag: { flexDirection: "row", alignItems: "center", paddingLeft: 8 }, measuringTag: { opacity: 0 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUserNameItem.tsx");
 
 export default function VoiceUserNameItem(arg0) {
-  let c0;
-  let c1;
-  let c2;
-  let c3;
-  let color;
-  let guildId;
-  let isGuest;
-  let member;
-  let tmp10;
-  let tmp12;
-  let tmp14;
-  let tmp8;
-  let user;
-  let variant;
   ({ member, user, isGuest } = arg0);
   let _require;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let callback;
   ({ guildId, color, variant } = arg0);
   const tmp = callback3();
   let obj = { userId: user.id, guildId };
-  let obj1 = _DISPLAY_NAME_STYLES_FONT_FAMILY_MAP;
-  const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStyles(obj) });
-  const tmp4 = useDisplayNameStyles(obj);
+  obj1 = _DISPLAY_NAME_STYLES_FONT_FAMILY_MAP;
+  const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: useDisplayNameStylesDefault(obj) });
+  const tmp4 = useDisplayNameStylesDefault(obj);
   [tmp8, c0] = callback(React.useState(0), 2);
   const tmp7 = callback(React.useState(0), 2);
   [tmp10, c1] = callback(React.useState(0), 2);

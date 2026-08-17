@@ -1,18 +1,19 @@
 // discord_app/modules/calls/ChannelCallManager.tsx
-import importDefaultResult from "Soundpacks";
-import callConnect from "callConnect";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import DesktopNotificationTypes from "DesktopNotificationTypes";
-import handleConnectionOpen from "handleConnectionOpen";
-import initialize from "initialize";
-import updateVoiceState from "updateVoiceState";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import getParticipants from "getParticipants";
-import createSoundForPack from "createSoundForPack";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import importDefaultResult from "Soundpacks" /* 10041 */;
+import closure_3 from "callConnect" /* 4496 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "DesktopNotificationTypes" /* 10015 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_7 from "initialize" /* 4220 */;
+import closure_8 from "updateVoiceState" /* 4542 */;
+import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
+import closure_10 from "getParticipants" /* 4773 */;
+import createSoundForPack from "createSoundForPack" /* 10040 */;
 
 let require = arg1;
 let closure_11 = createSoundForPack.createSoundForPack("call_calling", importDefaultResult.getSoundpack());
+initializeDefault;
 // CreatePrivateName (0x9e)
 class ChannelCallManager extends tmp2 {
   constructor() {
@@ -38,7 +39,7 @@ class ChannelCallManager extends tmp2 {
         currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(guildId);
         let tmp2 = null != currentClientVoiceChannelId;
         if (tmp2) {
-          tmp2 = getVoiceStatesForGuild.countVoiceStatesForChannel(currentClientVoiceChannelId) >= 2;
+          tmp2 = closure_9.countVoiceStatesForChannel(currentClientVoiceChannelId) >= 2;
         }
         if (null != currentClientVoiceChannelId) {
           if (!tmp2) {
@@ -58,7 +59,7 @@ class ChannelCallManager extends tmp2 {
         closure_11 = applyArgumentsResult(table[9]).createSoundForPack("call_calling", soundpack.getSoundpack());
       };
       applyArgumentsResult.handleRingUpdate = function handleRingUpdate() {
-        const channel = outer1_4.getChannel(outer1_6.getVoiceChannelId());
+        const channel = closure_1_4.getChannel(closure_1_6.getVoiceChannelId());
         let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
@@ -66,7 +67,7 @@ class ChannelCallManager extends tmp2 {
         if (guild_id == null) {
           guild_id = null;
         }
-        const calls = outer1_3.getCalls();
+        const calls = closure_1_3.getCalls();
         let someResult = calls.some((ringing) => {
           let tmp = ringing.ringing.length > 0;
           if (tmp) {
@@ -76,34 +77,30 @@ class ChannelCallManager extends tmp2 {
         });
         if (!someResult) {
           // GetOwnPrivateBySym (0x65)
-          someResult = outer1_12.size > 0;
+          someResult = closure_1_12.size > 0;
         }
         applyArgumentsResult._handleRing(someResult, guild_id);
       };
       applyArgumentsResult.handleGuildRingStart = function handleGuildRingStart(arg0) {
-        let guildId;
-        let ringing;
         ({ ringing, guildId } = arg0);
         const item = ringing.forEach((arg0) => {
           // GetOwnPrivateBySym (0x65)
           obj.add(arg0);
         });
         // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(outer1_12.size > 0, guildId);
+        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
       };
       applyArgumentsResult.handleGuildRingStop = function handleGuildRingStop(arg0) {
-        let guildId;
-        let ringing;
         ({ ringing, guildId } = arg0);
         const item = ringing.forEach((arg0) => {
           // GetOwnPrivateBySym (0x65)
           obj.delete(arg0);
         });
         // GetOwnPrivateBySym (0x65)
-        applyArgumentsResult._handleRing(outer1_12.size > 0, guildId);
+        applyArgumentsResult._handleRing(closure_1_12.size > 0, guildId);
       };
       applyArgumentsResult.handleChannelRTCStoreChange = function handleChannelRTCStoreChange() {
-        const voiceChannelId = outer1_6.getVoiceChannelId();
+        const voiceChannelId = closure_1_6.getVoiceChannelId();
         // GetOwnPrivateBySym (0x65)
         if (tmp.size > 0) {
           if (null == voiceChannelId) {
@@ -113,7 +110,7 @@ class ChannelCallManager extends tmp2 {
             // GetOwnPrivateBySym (0x65)
             obj._handleRing(tmp4.size > 0, null);
           } else if (null != voiceChannelId) {
-            const guildRingingUsers = outer1_10.getGuildRingingUsers(voiceChannelId);
+            const guildRingingUsers = closure_1_10.getGuildRingingUsers(voiceChannelId);
             const _Set2 = Set;
             // GetOwnPrivateBySym (0x65)
             const items = [];
@@ -136,14 +133,14 @@ class ChannelCallManager extends tmp2 {
   }
 }
 ChannelCallManager.prototype["_initialize"] = function _initialize() {
-  const result = new Map().set(callConnect, this.handleRingUpdate);
-  const result1 = result.set(DesktopNotificationTypes, this.handleRingUpdate);
-  const result2 = result1.set(initialize, this.handleRingUpdate);
-  const result3 = result2.set(updateVoiceState, this.handleRingUpdate);
-  const result4 = result3.set(getParticipants, this.handleChannelRTCStoreChange);
+  const result = new Map().set(closure_3, this.handleRingUpdate);
+  const result1 = result.set(closure_5, this.handleRingUpdate);
+  const result2 = result1.set(closure_7, this.handleRingUpdate);
+  const result3 = result2.set(closure_8, this.handleRingUpdate);
+  const result4 = result3.set(closure_10, this.handleChannelRTCStoreChange);
   this.stores = result4.set(closure_2, this.handleSoundpackUpdate);
 };
 const channelCallManager = new ChannelCallManager();
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
+let result = require("set").fileFinishedImporting("modules/calls/ChannelCallManager.tsx");
 
 export default channelCallManager;

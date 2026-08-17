@@ -1,14 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ErrorBlock.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { MessageBlock } from "MessageBlock.tsx";
+import noopAll from "noop" /* 19 */;
+import MessageBlock from "MessageBlock" /* 11385 */;
+import MessageBlockDefault from "MessageBlock" /* 11385 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("MessageBlock").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ErrorBlock.tsx");
 
 export default function ErrorBlock(children) {
-  const obj = { color: null, children: null };
-  obj[0] = MessageBlock.MessageBlockColors.RED;
-  obj[1] = children.children;
-  return jsx(MessageBlock, { color: null, children: null });
+  const obj = { color: MessageBlock.MessageBlockColors.RED, children: children.children };
+  return jsx(MessageBlockDefault, { color: MessageBlock.MessageBlockColors.RED, children: children.children });
 };

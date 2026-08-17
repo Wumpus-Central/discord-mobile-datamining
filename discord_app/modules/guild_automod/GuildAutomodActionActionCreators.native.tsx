@@ -1,22 +1,21 @@
 // discord_app/modules/guild_automod/GuildAutomodActionActionCreators.native.tsx
-import "noop";
-import AutomodEventType from "AutomodEventType";
-import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import noopAll from "noop" /* 19 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import AutomodEventType from "AutomodEventType" /* 11042 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ AutomodActionType: c3, SUBMIT_FEEDBACK_MODAL_KEY: c4 } = AutomodEventType);
-const result = require("jsxProd").fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_automod/GuildAutomodActionActionCreators.native.tsx");
 
 export const getPromiseableActionHandlers = function getPromiseableActionHandlers() {
   return { [closure_3.BLOCK_MESSAGE]: null, [closure_3.FLAG_TO_CHANNEL]: null, [closure_3.USER_COMMUNICATION_DISABLED]: null };
 };
 export const openSubmitFeedback = function openSubmitFeedback(messageId, content, decisionId, channel) {
-  let obj = ModalActionCreators;
+  let obj = _modDef5260;
   obj = {
     onCloseModal() {
       callback(table[3]).popWithKey(closure_4);
@@ -33,17 +32,17 @@ export function openConfirmRemoveMentionRaid(arg0) {
 
 }
 export const openAutomodProfileQuarantineAlert = function openAutomodProfileQuarantineAlert(guildId) {
-  let closure_0 = guildId;
-  let obj = AlertActionCreators;
+  closure_0 = guildId;
+  let obj = _modDef4656;
   obj = {
     importer() {
-      return guildId(outer1_2[5])(outer1_2[7], outer1_2.paths).then((arg0) => {
-        let closure_0 = arg0.default;
+      return guildId(closure_1_2[5])(closure_1_2[7], closure_1_2.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.guildId = closure_0;
-          return outer2_5(closure_0, obj);
+          return closure_2_5(closure_0, obj);
         };
       });
     }

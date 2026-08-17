@@ -1,5 +1,7 @@
 // discord_app/modules/safety_hub/SafetyHubModels.tsx
-const result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubModels.tsx");
 
 export const ContentIdType = { MESSAGE: "message" };
 export const MemberType = { OWNER: 1, [1]: "OWNER", MEMBER: 2, [2]: "MEMBER" };

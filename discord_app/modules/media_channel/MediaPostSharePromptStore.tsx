@@ -1,27 +1,29 @@
 // discord_app/modules/media_channel/MediaPostSharePromptStore.tsx
-import isSubscriptionGated from "isSubscriptionGated";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Store } from "initialize";
-import set from "ensureGuildLoaded";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { useIsFirstMessageInMediaPost } from "useIsFirstMessageInMediaPost.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import useIsFirstMessageInMediaPost from "useIsFirstMessageInMediaPost" /* 8167 */;
+import closure_3 from "isSubscriptionGated" /* 1981 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 let set = new Set();
+const Store = initializeDefault.Store;
 class MediaPostSharePromptStore extends Store {
 }
 const prototype = MediaPostSharePromptStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded, isSubscriptionGated);
+  this.waitFor(closure_4, closure_5, closure_3);
 };
 prototype["shouldDisplayPrompt"] = function shouldDisplayPrompt(id) {
   return set.has(id);
 };
 MediaPostSharePromptStore.displayName = "MediaPostSharePromptStore";
-const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatcher"), {
+const mediaPostSharePromptStore = new MediaPostSharePromptStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const set = new Set();
+    set = new Set();
   },
   MESSAGE_CREATE: function handleMessageCreate(isPushNotification) {
     if (!isPushNotification.isPushNotification) {
@@ -38,8 +40,8 @@ const mediaPostSharePromptStore = new MediaPostSharePromptStore(require("dispatc
           if (null != channel) {
             if (null != channel.parent_id) {
               if (channelGated.isChannelGated(channel.guild_id, channel.parent_id)) {
-                set.add(DISCORD_EPOCH.castMessageIdAsChannelId(isPushNotification.message.id));
-                const obj = DISCORD_EPOCH;
+                set.add(DISCORD_EPOCHDefault.castMessageIdAsChannelId(isPushNotification.message.id));
+                const obj = DISCORD_EPOCHDefault;
               }
             }
           }

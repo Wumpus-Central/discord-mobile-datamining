@@ -1,12 +1,10 @@
 // discord_app/modules/forwarding/ForwardPreviewUtils.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
 
 const require = arg1;
-let result = require("getEffectiveVideoProvider").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/forwarding/ForwardPreviewUtils.tsx");
 
 export const useForwardPreviewContent = function useForwardPreviewContent(message) {
-  let dependencyMap;
-  let forwardOptions;
   message = message.message;
   ({ channel: dependencyMap, forwardOptions } = message);
   let onlyAttachmentIds;
@@ -37,12 +35,12 @@ export const useForwardPreviewContent = function useForwardPreviewContent(messag
   if (obj.useStateFromStores(items1, () => {
     let shouldStripEmbedsResult = null != closure_1;
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = !message(outer1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
-      const obj = message(outer1_1[2]);
+      shouldStripEmbedsResult = !message(closure_1_1[2]).canEmbedLinks(tmp, onlyAttachmentIds);
+      const obj = message(closure_1_1[2]);
     }
     if (shouldStripEmbedsResult) {
-      shouldStripEmbedsResult = message(outer1_1[2]).shouldStripEmbeds(message);
-      const obj2 = message(outer1_1[2]);
+      shouldStripEmbedsResult = message(closure_1_1[2]).shouldStripEmbeds(message);
+      const obj2 = message(closure_1_1[2]);
     }
     return shouldStripEmbedsResult;
   })) {

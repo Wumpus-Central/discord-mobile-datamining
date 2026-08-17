@@ -1,13 +1,13 @@
 // discord_app/modules/activities/panel/native/utils/ActivityPanelUtils.tsx
-import participantFromServer from "participantFromServer";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/utils/ActivityPanelUtils.tsx");
 
 export const useIsActivityPanelFullscreen = function useIsActivityPanelFullscreen() {
-  const items = [participantFromServer];
+  const items = [closure_3];
   return initialize.useStateFromStores(items, () => {
     const embeddedActivityLocationChannelId = callback(table[3]).getEmbeddedActivityLocationChannelId(store.getConnectedActivityLocation());
     let tmp3 = store.getActivityPanelMode() === constants.PANEL;

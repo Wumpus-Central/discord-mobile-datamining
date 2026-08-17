@@ -1,20 +1,15 @@
 // discord_app/modules/webauthn/native/PasskeyUpsellPromoSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { Image } from "get ActivityIndicator";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
+({ jsx: error, jsxs: closure_8 } = jsxProd);
+let result = require("set").fileFinishedImporting("modules/webauthn/native/PasskeyUpsellPromoSheet.tsx");
 
 export default function PasswordlessUpsellPromoSheet() {
-  let importDefault;
-  let require;
-  let tmp7;
   function onRegisterSuccess(closure_0) {
     const result = callback(onRegisterSuccess[6]).closePasskeyUpsellPromoSheet();
     const obj = callback(onRegisterSuccess[6]);
@@ -45,10 +40,10 @@ export default function PasswordlessUpsellPromoSheet() {
   obj = {
     size: "lg",
     onPress() {
-      let obj = outer1_1(onRegisterSuccess[10]);
-      obj.markDismissed(outer1_6.TAKE_ACTION);
+      let obj = closure_1_1(onRegisterSuccess[10]);
+      obj.markDismissed(closure_1_6.TAKE_ACTION);
       obj = { setRegistering: closure_1, setError: closure_0, onRegisterSuccess };
-      outer1_1(onRegisterSuccess[13]).registerPasskey(obj);
+      closure_1_1(onRegisterSuccess[13]).registerPasskey(obj);
     },
     text: null,
     loading: null,
@@ -66,7 +61,7 @@ export default function PasswordlessUpsellPromoSheet() {
   obj[3] = tmp7;
   obj[4] = tmp7;
   const items = [callback2(require(onRegisterSuccess[12]).Button, obj), ];
-  const obj1 = {
+  obj1 = {
     size: "lg",
     variant: "secondary",
     onPress() {

@@ -1,25 +1,19 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { InviteTypes } from "InviteSendStates";
-import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
-import { getChannelAndRecipientsFromInvite } from "getChannelAndRecipientsFromInvite.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import getChannelAndRecipientsFromInviteDefault from "getChannelAndRecipientsFromInvite" /* 10511 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { InviteTypes } from "InviteSendStates" /* 4371 */;
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GroupDMInvite.tsx");
 
 export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, closure_2) {
-  let acceptLabelGreenBackgroundColor;
-  let acceptLabelGreenColor;
-  let baseColors;
-  let channel;
-  let colors;
-  let recipients_;
-  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
-  const tmp2 = getEmbedThemeColors(closure_2);
-  ({ channel, recipients_ } = getChannelAndRecipientsFromInvite(invite));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
+  const tmp2 = getEmbedThemeColorsDefault(closure_2);
+  ({ channel, recipients_ } = getChannelAndRecipientsFromInviteDefault(invite));
   let id;
   if (channel != null) {
     id = channel.id;
@@ -68,7 +62,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName = null;
     if (null != channel) {
-      channelName = tmp8(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+      channelName = tmp8(4984).computeChannelName(channel, closure_5, closure_4);
       const tmp8Result1 = tmp8(4984);
     }
   }
@@ -128,7 +122,7 @@ export const createGroupDMInvite = function createGroupDMInvite(invite, arg1, cl
   if (flag) {
     channelName1 = channelName;
     if (null != channel) {
-      channelName1 = tmp8(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+      channelName1 = tmp8(4984).computeChannelName(channel, closure_5, closure_4);
       const tmp8Result2 = tmp8(4984);
     }
   }

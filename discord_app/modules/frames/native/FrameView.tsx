@@ -1,18 +1,14 @@
 // discord_app/modules/frames/native/FrameView.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import map from "map";
-import FrameLayoutModes from "FrameLayoutModes";
-import { ActivityPlatform } from "items3";
-import { jsx } from "jsxProd";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "map" /* 8708 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
+import { ActivityPlatform } from "items3" /* 4481 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function FrameViewInner(frame) {
-  let isLandscape;
-  let isResetting;
   frame = frame.frame;
   const layoutMode = frame.layoutMode;
   let landscapeSafeAreasConfig = frame.portraitSafeAreasConfig;
@@ -44,7 +40,7 @@ function FrameViewInner(frame) {
   obj = { instance_id: "example-cl-instance", platform: ActivityPlatform.MOBILE, discord_proxy_ticket: frame.data.proxyTicket };
   ({ isResetting, isLandscape } = baseActivityView);
   obj = { wakeLockKey: "FrameActivities", showLoadingIndicator: first, isResetting, children: null };
-  const obj1 = {
+  obj1 = {
     onActivityCrash() {
       setIsResetting(true);
       const timerId = setTimeout(() => callback(false), 0);
@@ -90,7 +86,7 @@ let c4 = importAllResult;
 ({ asLaunched: closure_6, FrameLayoutModes: error } = FrameLayoutModes);
 const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
   let obj = initialize;
-  const items = [map];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => callback(mainFrame.getMainFrame()));
   let tmp2 = null;
   if (null != stateFromStores) {
@@ -101,7 +97,7 @@ const memoResult = importAllResult.memo(function FrameViewGate(arg0) {
   }
   return tmp2;
 });
-const result = require("map").fileFinishedImporting("modules/frames/native/FrameView.tsx");
+const result = require("set").fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default memoResult;
 export const FrameView = memoResult;

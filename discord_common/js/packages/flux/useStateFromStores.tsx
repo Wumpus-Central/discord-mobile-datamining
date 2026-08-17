@@ -1,28 +1,27 @@
 // discord_common/js/packages/flux/useStateFromStores.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import shallowEqual from "shallowEqual" /* 643 */;
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { shallowEqual } from "../shallow-equal/shallowEqual.tsx";
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function defaultAreStatesEqual(arg0, arg1) {
   return arg0 === arg1;
 }
 function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVersionEqual) {
   const _require = items;
-  let closure_1 = getCurrentRestrictedHoursState;
-  const dependencyMap = items1;
+  closure_1 = getCurrentRestrictedHoursState;
+  dependencyMap = items1;
   let tmp = isVersionEqual;
   if (isVersionEqual === undefined) {
     tmp = defaultAreStatesEqual;
   }
   const callback = tmp;
   let current;
-  let state;
   let callback2;
-  const tmp2 = state(null);
+  let callback3;
+  const tmp2 = callback2(null);
   if (null == tmp2.current) {
     const obj = { stores: null, areStatesEqual: null, getStateFromStores: null, prevDeps: "Boolean", state: "alignItems" };
     obj[0] = items;
@@ -31,12 +30,13 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
     tmp2.current = obj;
   }
   current = tmp2.current;
-  state = current.state;
+  const state = current.state;
+  callback2 = state;
   if (null == items1) {
     const tmp6 = getCurrentRestrictedHoursState();
     let tmp5 = state;
     if (!tmp7) {
-      state = tmp6;
+      callback2 = tmp6;
       tmp5 = tmp6;
     }
     tmp7 = null != state && tmp(state, tmp6);
@@ -44,13 +44,13 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
     tmp5 = state;
     const obj2 = _shallowEqual;
   }
-  callback2(() => {
+  callback3(() => {
     current.getStateFromStores = closure_1;
     current.prevDeps = closure_2;
-    current.state = state;
+    current.state = closure_5;
   });
-  callback2 = callback(current(null), 2)[1];
-  callback2(() => {
+  callback3 = callback(current(null), 2)[1];
+  callback3(() => {
     batchedStoreListener = new items(items1[3]).BatchedStoreListener(batchedStoreListener, () => {
       stateFromStores = stateFromStores.getStateFromStores();
       if (!callback(stateFromStores.state, stateFromStores)) {
@@ -64,14 +64,14 @@ function useStateFromStores(items, getCurrentRestrictedHoursState, items1, isVer
   return tmp5;
 }
 ({ useState: c4, useRef: c5, useInsertionEffect: closure_6 } = noop);
-const result = require("shallowEqual").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStores.tsx");
 
 export function statesWillNeverBeEqual() {
   return false;
 }
 export { useStateFromStores };
 export const useStateFromStoresObject = function useStateFromStoresObject(items, getCurrentRestrictedHoursState, items1) {
-  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqual);
+  return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqualDefault);
 };
 export const useStateFromStoresArray = function useStateFromStoresArray(items, getCurrentRestrictedHoursState, items1) {
   return useStateFromStores(items, getCurrentRestrictedHoursState, items1, shallowEqual.areArraysShallowEqual);

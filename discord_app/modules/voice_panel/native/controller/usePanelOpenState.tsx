@@ -1,23 +1,21 @@
 // discord_app/modules/voice_panel/native/controller/usePanelOpenState.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import withEqualityFn from "withEqualityFn";
-import { VoicePanelModes } from "VoicePanelModes";
-import ME from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "withEqualityFn" /* 8664 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
+import ME from "ME" /* 676 */;
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ ComponentActions: error, Routes: metroImportAll } = ME);
+({ ComponentActions: error, Routes: closure_8 } = ME);
 let closure_9 = { code: "function usePanelOpenStateTsx1(){const{connected}=this.__closure;return{connected:connected.get()};}" };
 let closure_10 = { code: "function usePanelOpenStateTsx2(props,previous){const{runOnJS,doCloseChannel}=this.__closure;const isConnected=props.connected;const wasConnected=(previous===null||previous===void 0?void 0:previous.connected)===true;if(wasConnected&&!isConnected){runOnJS(doCloseChannel)();}}" };
-const result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controller/usePanelOpenState.tsx");
 
 export default function usePanelOpenState(arg0, arg1, arg2, connected) {
   const _require = arg0;
-  let closure_1 = arg1;
-  const dependencyMap = arg2;
+  closure_1 = arg1;
+  dependencyMap = arg2;
   const callback = connected;
   function doCloseChannel() {
     const state = first.getState();
@@ -57,59 +55,59 @@ export default function usePanelOpenState(arg0, arg1, arg2, connected) {
     function componentActionOpen(channelId) {
       let tmp = componentActionOpen === channelId.channelId;
       if (tmp) {
-        tmp = componentActionClose.get() !== outer1_6.PANEL;
+        tmp = componentActionClose.get() !== closure_1_6.PANEL;
       }
       if (tmp) {
-        dependencyMap(outer1_6.PANEL);
+        dependencyMap(closure_1_6.PANEL);
       }
     }
     function componentActionClose() {
-      if (_slicedToArray.get()) {
-        if (componentActionClose.get() !== outer1_6.PIP) {
+      if (closure_3.get()) {
+        if (componentActionClose.get() !== closure_1_6.PIP) {
           dependencyMap(tmp5.PIP);
         }
       } else {
-        const state = outer1_5.getState();
+        const state = closure_1_5.getState();
         state.closeChannel(componentActionOpen);
       }
     }
     let ComponentDispatch = callback(1231).ComponentDispatch;
-    const subscription = ComponentDispatch.subscribe(outer1_7.VOICE_PANEL_OPEN, componentActionOpen);
+    const subscription = ComponentDispatch.subscribe(closure_1_7.VOICE_PANEL_OPEN, componentActionOpen);
     let ComponentDispatch2 = callback(1231).ComponentDispatch;
-    const subscription1 = ComponentDispatch2.subscribe(outer1_7.VOICE_PANEL_CLOSE, componentActionClose);
+    const subscription1 = ComponentDispatch2.subscribe(closure_1_7.VOICE_PANEL_CLOSE, componentActionClose);
     return () => {
       const ComponentDispatch = componentActionOpen(1231).ComponentDispatch;
-      ComponentDispatch.unsubscribe(outer2_7.VOICE_PANEL_OPEN, componentActionOpen);
+      ComponentDispatch.unsubscribe(closure_2_7.VOICE_PANEL_OPEN, componentActionOpen);
       const ComponentDispatch2 = componentActionOpen(1231).ComponentDispatch;
-      ComponentDispatch2.unsubscribe(outer2_7.VOICE_PANEL_CLOSE, componentActionClose);
+      ComponentDispatch2.unsubscribe(closure_2_7.VOICE_PANEL_CLOSE, componentActionClose);
     };
   }, items);
   const tmp3 = callback(doCloseChannel.useState(() => callback2(12640).getHistory().location.pathname), 2);
   const first = tmp3[0];
-  let closure_6 = tmp3[1];
+  closure_6 = tmp3[1];
   const items1 = [arg0, first];
   const effect1 = doCloseChannel.useEffect(() => {
-    let closure_0 = callback2(12640).addRouteChangeListener((pathname) => {
-      if (withEqualityFn !== pathname.pathname) {
+    closure_0 = callback2(12640).addRouteChangeListener((pathname) => {
+      if (closure_5 !== pathname.pathname) {
         callback2(tmp);
-        let obj = callback(outer1_2[8]);
+        let obj = callback(closure_1_2[8]);
         obj = { path: null };
-        const RouteParam = callback(outer1_2[9]).RouteParam;
-        const RouteParam2 = callback(outer1_2[9]).RouteParam;
-        obj[0] = outer1_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
+        const RouteParam = callback(closure_1_2[9]).RouteParam;
+        const RouteParam2 = callback(closure_1_2[9]).RouteParam;
+        obj[0] = closure_1_8.CHANNEL(RouteParam.guildId(), RouteParam2.channelId());
         const matchPathResult = obj.matchPath(pathname.pathname, obj);
         const guildIdResult = RouteParam.guildId();
-        const tmp9 = outer1_2;
+        const tmp9 = closure_1_2;
         if (null == obj3.extractParamsFromVoiceModalRoute(pathname).voiceChannelId) {
           let tmp2 = null != matchPathResult;
           if (tmp2) {
             tmp2 = matchPathResult.params.channelId === callback;
           }
           if (!tmp2) {
-            outer1_1(tmp9[11])();
+            closure_1_1(tmp9[11])();
           }
         }
-        obj3 = callback(outer1_2[10]);
+        obj3 = callback(closure_1_2[10]);
       }
     });
     return () => {

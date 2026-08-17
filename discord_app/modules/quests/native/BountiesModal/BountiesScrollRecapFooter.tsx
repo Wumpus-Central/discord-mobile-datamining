@@ -1,26 +1,25 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { OrbsIcon } from "../../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import Text from "Text" /* 4734 */;
+import OrbsIcon from "OrbsIcon" /* 9238 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles(() => {
   let obj = { container: null, headerLabel: null, orbRow: null, rive: null, orbAmount: null };
-  obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: Themes.space.PX_4 };
+  obj = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_4 };
   obj[0] = obj;
   obj[1] = { textTransform: "uppercase" };
-  obj = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_4 };
+  obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
   obj[2] = obj;
   obj[3] = { flex: 1, width: "100%" };
   let num = 0;
@@ -30,7 +29,7 @@ let closure_7 = createCacheKey.createStyles(() => {
   obj[4] = { marginTop: num };
   return obj;
 });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesScrollRecapFooter.tsx");
 
 export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbAmount) {
   orbAmount = orbAmount.orbAmount;
@@ -41,10 +40,7 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
   obj = { variant: "text-xs/bold", color: "text-brand", style: tmp.headerLabel, accessible: false, children: stringResult };
   const items = [callback(Text.Text, obj), ];
   obj = { style: tmp.orbRow, accessible: false, importantForAccessibility: "no-hide-descendants", children: null };
-  const items1 = [callback(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), ];
-  const obj1 = { variant: "display-sm", color: "text-strong", accessible: false, style: tmp.orbAmount, children: null };
-  obj1[4] = "+" + orbAmount;
-  items1[1] = callback(Text.Text, obj1);
+  const items1 = [callback(OrbsIcon.OrbsIcon, { size: "sm", color: "icon-strong", accessible: false }), callback(Text.Text, { variant: "display-sm", color: "text-strong", accessible: false, style: tmp.orbAmount, children: "+" + orbAmount })];
   obj[3] = items1;
   items[1] = callback2(View, obj);
   obj[5] = items;
@@ -52,7 +48,7 @@ export const BountiesScrollRecapFooter = function BountiesScrollRecapFooter(orbA
 };
 export const BountiesScrollRecapFooterGradient = function BountiesScrollRecapFooterGradient() {
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   obj = { style: callback3().rive, children: null };
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let str = "play";

@@ -1,24 +1,24 @@
 // discord_app/modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getHash from "getHash";
-import initialize from "initialize";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "getHash" /* 4288 */;
+import closure_6 from "initialize" /* 1212 */;
 
-const require = arg1;
+require = arg1;
 let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
 let closure_10 = {};
 let closure_11 = {};
 let closure_12 = { legacyExperiments: {}, legacyOverridesInfo: {}, apexExperiments: {}, apexOverridesInfo: {} };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
+const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useCodedLinksExperimentEmbeds.tsx");
 
 export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [mergeGuildAvatar];
+    const items = [closure_4];
     tmp = items;
   }
   const first = callback(tmp, 1)[0];
@@ -38,7 +38,7 @@ export const canSeeExperimentEmbeds = function canSeeExperimentEmbeds() {
   return isStaffResult;
 };
 export const useCanSeeExperimentEmbeds = function useCanSeeExperimentEmbeds() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   return initialize.useStateFromStores(items, () => {
     const items = [stateFromStores2];
     const first = stateFromStoresObject1(items, 1)[0];
@@ -84,7 +84,7 @@ export const useCodedLinksExperimentEmbeds = function useCodedLinksExperimentEmb
     if (stateFromStores) {
       let registeredExperiments = stateFromStores3.getRegisteredExperiments();
     } else {
-      registeredExperiments = outer1_7;
+      registeredExperiments = closure_1_7;
     }
     return registeredExperiments;
   });
@@ -94,37 +94,37 @@ export const useCodedLinksExperimentEmbeds = function useCodedLinksExperimentEmb
     if (stateFromStores) {
       let allExperimentOverrideDescriptors = stateFromStores3.getAllExperimentOverrideDescriptors();
     } else {
-      allExperimentOverrideDescriptors = outer1_8;
+      allExperimentOverrideDescriptors = closure_1_8;
     }
     return allExperimentOverrideDescriptors;
   });
   let obj3 = stateFromStores(stateFromStoresObject[5]);
-  const items3 = [initialize];
+  const items3 = [closure_6];
   const stateFromStores1 = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items3, () => {
     if (stateFromStores) {
-      let experimentsMetadata = outer1_6.getExperimentsMetadata();
+      let experimentsMetadata = closure_1_6.getExperimentsMetadata();
     } else {
-      experimentsMetadata = outer1_9;
+      experimentsMetadata = closure_1_9;
     }
     return experimentsMetadata;
   });
   let obj4 = stateFromStores(stateFromStoresObject[5]);
-  const items4 = [initialize];
+  const items4 = [closure_6];
   stateFromStores2 = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items4, () => {
     if (stateFromStores) {
-      let registeredExperiments = outer1_6.getRegisteredExperiments();
+      let registeredExperiments = closure_1_6.getRegisteredExperiments();
     } else {
-      registeredExperiments = outer1_10;
+      registeredExperiments = closure_1_10;
     }
     return registeredExperiments;
   });
   let obj5 = stateFromStores(stateFromStoresObject[5]);
-  const items5 = [initialize];
+  const items5 = [closure_6];
   stateFromStores3 = stateFromStores(stateFromStoresObject[5]).useStateFromStores(items5, () => {
     if (stateFromStores) {
-      let clientOverrides = outer1_6.getClientOverrides();
+      let clientOverrides = closure_1_6.getClientOverrides();
     } else {
-      clientOverrides = outer1_11;
+      clientOverrides = closure_1_11;
     }
     return clientOverrides;
   });
@@ -142,7 +142,7 @@ export const useCodedLinksExperimentEmbeds = function useCodedLinksExperimentEmb
       let tmp = obj;
       const obj5 = stateFromStores(stateFromStoresObject[7]);
     } else {
-      tmp = outer1_12;
+      tmp = closure_1_12;
     }
     return tmp;
   }, items6);

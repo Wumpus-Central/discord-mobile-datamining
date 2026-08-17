@@ -1,42 +1,43 @@
 // discord_app/modules/collectibles/native/MobileShopButtonCoachmark.tsx
-import noop from "noop";
-import { Image } from "get ActivityIndicator";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { image: null };
-createCacheKey = { height: 80, width: 80, marginTop: require("Themes").space.PX_8, marginBottom: -require("Themes").space.PX_16 };
+createCacheKey = { height: 80, width: 80, marginTop: ThemesDefault.space.PX_8, marginBottom: -ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/collectibles/native/MobileShopButtonCoachmark.tsx");
 
 export default function MobileShopButtonCoachmark(marketing) {
   marketing = marketing.marketing;
   const navigateToShop = marketing.navigateToShop;
   const visible = marketing.visible;
   const onDismiss = marketing.onDismiss;
-  let c4;
+  closure_4 = undefined;
   let assetLight;
-  let createCacheKey;
   let callback;
+  callback = undefined;
   let callback1;
-  let closure_9;
-  const tmp = createCacheKey();
-  c4 = tmp;
+  closure_9 = undefined;
+  const tmp = callback();
+  closure_4 = tmp;
   assetLight = marketing.assetLight;
-  createCacheKey = visible.useRef(false);
+  callback = visible.useRef(false);
   const items = [onDismiss, navigateToShop];
   callback = visible.useCallback(() => {
     closure_6.current = true;
-    onDismiss(_undefined.TAKE_ACTION);
+    onDismiss(constants.TAKE_ACTION);
     navigateToShop();
   }, items);
   const items1 = [onDismiss];
   callback1 = visible.useCallback(() => {
     closure_6.current = true;
-    onDismiss(_undefined.USER_DISMISS);
+    onDismiss(constants.USER_DISMISS);
   }, items1);
   closure_9 = visible.useRef(onDismiss);
   const effect = visible.useEffect(() => {
@@ -44,7 +45,7 @@ export default function MobileShopButtonCoachmark(marketing) {
   });
   const effect1 = visible.useEffect(() => () => {
     if (!ref.current) {
-      ref2.current(outer1_4.AUTO_DISMISS);
+      ref2.current(closure_1_4.AUTO_DISMISS);
     }
   }, []);
   const items2 = [, , , , , , , ];
@@ -63,7 +64,7 @@ export default function MobileShopButtonCoachmark(marketing) {
       renderImgComponent() {
         obj = { style: image.image, source: obj };
         obj = { uri: closure_5 };
-        return outer1_5(outer1_3, obj);
+        return closure_1_5(closure_1_3, obj);
       },
       buttonLabel: null,
       buttonVariant: "secondary",

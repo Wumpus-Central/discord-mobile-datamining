@@ -1,14 +1,16 @@
 // discord_app/modules/user_settings/defs/native/SelectWebBrowserSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { NativeModules } from "../../../links/native/BrowserManager.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import NativeModules from "NativeModules" /* 4340 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 function useWebBrowserSettingOptions() {
   let CHROME = dependencyMap;
   let obj = NativeModules;
   const items = [];
   const browserManagerIsChromeInstalled = obj.useBrowserManagerIsChromeInstalled();
-  let obj1 = NativeModules;
+  obj1 = NativeModules;
   if (obj1.useBrowserManagerSupportsInAppBrowser()) {
     obj = { label: null, value: null };
     const intl = tmp(1236).intl;
@@ -49,7 +51,7 @@ const radio = createToggle.createRadio({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["C+DkPu"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.WEB_BROWSER,
+  parent: MobileUserSettings.MobileUserSettings.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
     return NativeModules.useBrowserManagerSelectedBrowser();
   },
@@ -63,7 +65,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["C+DkPu"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.WEB_BROWSER,
+  parent: MobileUserSettings.MobileUserSettings.WEB_BROWSER,
   useValue: function useWebBrowserSettingValue() {
     return NativeModules.useBrowserManagerSelectedBrowser();
   },
@@ -72,7 +74,7 @@ let obj = {
   },
   useOptions: useWebBrowserSettingOptions
 };
-let result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/SelectWebBrowserSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/SelectWebBrowserSetting.tsx");
 
 export default radio;
 export { useWebBrowserSettingOptions };

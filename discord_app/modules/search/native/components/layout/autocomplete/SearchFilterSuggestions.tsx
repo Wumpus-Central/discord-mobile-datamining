@@ -1,15 +1,16 @@
 // discord_app/modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations" /* 8506 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 let require = arg1;
 function SearchFilterPrefixRow(text) {
   text = text.text;
-  const require = text;
+  require = text;
   const searchTokenType = text.searchTokenType;
   const onPress = text.onPress;
   const merged = Object.assign(text, Object.create(null));
@@ -19,7 +20,7 @@ function SearchFilterPrefixRow(text) {
     const searchTokenIcon = text(onPress[7]).getSearchTokenIcon(searchTokenType);
     let tmp2 = null;
     if (null != searchTokenIcon) {
-      tmp2 = outer1_7(searchTokenIcon, { size: "sm" });
+      tmp2 = closure_1_7(searchTokenIcon, { size: "sm" });
     }
     return tmp2;
   }, items);
@@ -28,11 +29,8 @@ function SearchFilterPrefixRow(text) {
   const callback = importAllResult.useCallback(() => {
     onPress(closure_0);
   }, items2);
-  const obj = { icon: memo, onPress: callback, label: null, subLabel: null };
-  obj[2] = jsx(require(onPress[9]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: text });
-  obj[3] = memo1;
   const merged1 = Object.assign(merged);
-  return jsx(require(onPress[8]).TableRow, { icon: memo, onPress: callback, label: null, subLabel: null });
+  return jsx(require(onPress[8]).TableRow, { icon: memo, onPress: callback, label: jsx(require(onPress[9]).Text, { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: text }), subLabel: memo1 });
 }
 function getSuggestionsKey(arr) {
   const mapped = arr.map((text) => text.text);
@@ -50,20 +48,17 @@ function AnimatedEnterExitContainer(children) {
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_0 === outer1_0(outer1_2[13]).TransitionStates.YEETED;
+        tmp = closure_0 === closure_1_0(closure_1_2[13]).TransitionStates.YEETED;
       }
       if (tmp) {
-        outer1_0(outer1_2[10]).runOnJS(closure_1)();
-        const obj = outer1_0(outer1_2[10]);
+        closure_1_0(closure_1_2[10]).runOnJS(closure_1)();
+        const obj = closure_1_0(closure_1_2[10]);
       }
     };
-    obj = { state, TransitionStates: null, runOnJS: null, cleanUp: null };
-    obj[1] = state(sharedValue[13]).TransitionStates;
-    obj[2] = state(sharedValue[10]).runOnJS;
-    obj[3] = cleanUp;
+    obj = { state, TransitionStates: state(sharedValue[13]).TransitionStates, runOnJS: state(sharedValue[10]).runOnJS, cleanUp };
     fn.__closure = obj;
     fn.__workletHash = 10696166249954;
-    fn.__initData = outer1_12;
+    fn.__initData = closure_1_12;
     obj[0] = state(sharedValue[11]).withSpring(value, state(sharedValue[12]).springStandard, "respect-motion-settings", fn);
     const obj2 = state(sharedValue[11]);
     let tmp = state;
@@ -94,8 +89,8 @@ function AnimatedEnterExitContainer(children) {
 }
 let c4 = importAllResult;
 let obj = { card: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: require("Themes").radii.lg, borderColor: require("Themes").colors.BORDER_SUBTLE, borderWidth: 1 };
-let merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1 };
+let merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj[0] = obj;
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_11 = { code: "function SearchFilterSuggestionsTsx1(){const{withSpring,opacity,springStandard,state,TransitionStates,runOnJS,cleanUp}=this.__closure;return{opacity:withSpring(opacity.get(),springStandard,'respect-motion-settings',function(finished){if(finished&&state===TransitionStates.YEETED){runOnJS(cleanUp)();}}),transform:[{translateY:withSpring(opacity.get()===1?0:-15,springStandard)}]};}" };
@@ -108,12 +103,12 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
   const onLayoutMeasure = searchContext.onLayoutMeasure;
   const containerStyle = searchContext.containerStyle;
   const dismissed = searchContext.dismissed;
-  let importAllResult;
+  importAllResult = undefined;
   let validFilterTokens;
   let first;
-  let jsx;
+  jsx = undefined;
   let memo;
-  let closure_9;
+  closure_9 = undefined;
   let callback;
   const tmp = memo();
   importAllResult = tmp;
@@ -124,25 +119,23 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
   jsx = tmp5;
   let items = [validFilterTokens, searchContext, tmp3[1]];
   const effect = importAllResult.useEffect(() => onLayoutMeasure(containerStyle[15]).subscribeSearchQueryState(searchContext, (getTextInputValue) => ({ textInputValue: getTextInputValue.getTextInputValue(), isAutocompleteVisible: getTextInputValue.isAutocompleteVisible() }), (arg0) => {
-    let isAutocompleteVisible;
-    let textInputValue;
     ({ textInputValue, isAutocompleteVisible } = arg0);
     if ("" !== textInputValue.trim()) {
       if (!isAutocompleteVisible) {
-        const searchFilterSuggestions = outer1_0(outer1_2[7]).getSearchFilterSuggestions(textInputValue);
+        const searchFilterSuggestions = closure_1_0(closure_1_2[7]).getSearchFilterSuggestions(textInputValue);
         if (0 !== searchFilterSuggestions.length) {
-          let closure_1 = [];
+          closure_1 = [];
           const item = searchFilterSuggestions.forEach((token) => {
             token = token.token;
-            if (outer1_5.has(token)) {
+            if (closure_1_5.has(token)) {
               const obj = { text: null, searchTokenType: null, start: null, end: null, onPress: null };
               obj[0] = token.text;
               obj[1] = token;
               obj[2] = 0 === arg1;
               obj[3] = arg1 === searchFilterSuggestions.length - 1;
-              obj[4] = outer2_0(outer2_2[7]).getSearchTokenPressHandler(searchFilterSuggestions, token, outer2_6.SEARCH_INPUT_DROPDOWN);
+              obj[4] = closure_2_0(closure_2_2[7]).getSearchTokenPressHandler(searchFilterSuggestions, token, closure_2_6.SEARCH_INPUT_DROPDOWN);
               arr = arr.push(obj);
-              const obj2 = outer2_0(outer2_2[7]);
+              const obj2 = closure_2_0(closure_2_2[7]);
             }
           });
           callback((arr) => {
@@ -156,12 +149,12 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
             return tmp2;
           });
         } else {
-          callback(outer1_14);
+          callback(closure_1_14);
         }
-        let obj = outer1_0(outer1_2[7]);
+        let obj = closure_1_0(closure_1_2[7]);
       }
     }
-    callback(outer1_14);
+    callback(closure_1_14);
   }), items);
   const fn = function b() {
     return dismissed.get();
@@ -175,9 +168,9 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
         tmp = searchContext;
         tmp2 = containerStyle;
         obj = searchContext(containerStyle[10]);
-        tmp3 = c7;
-        tmp4 = outer1_14;
-        tmp5 = obj.runOnJS(c7)(outer1_14);
+        tmp3 = closure_7;
+        tmp4 = closure_1_14;
+        tmp5 = obj.runOnJS(closure_7)(closure_1_14);
       }
       return;
     }
@@ -189,7 +182,7 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
   const animatedReaction = searchContext(containerStyle[10]).useAnimatedReaction(fn, E);
   let items1 = [containerStyle, tmp.card];
   memo = importAllResult.useMemo(() => {
-    const items = [_undefined.card, containerStyle];
+    const items = [card.card, containerStyle];
     return items;
   }, items1);
   closure_9 = importAllResult.useRef(null);
@@ -227,12 +220,12 @@ const memoResult = importAllResult.memo(function SearchFilterSuggestions(searchC
         return callback(closure_9, {}, text.text);
       })
     };
-    obj[2] = _undefined2(validFilterTokens, obj);
-    return _undefined2(outer1_13, obj, arg0);
+    obj[2] = callback(validFilterTokens, obj);
+    return callback(closure_1_13, obj, arg0);
   }, items4);
   obj = { items: memo1, renderItem: callback1, getItemKey: callback };
   return jsx(searchContext(containerStyle[13]).TransitionGroup, { items: memo1, renderItem: callback1, getItemKey: callback });
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/SearchFilterSuggestions.tsx");
 
 export default memoResult;

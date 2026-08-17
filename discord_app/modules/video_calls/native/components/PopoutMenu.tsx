@@ -1,17 +1,13 @@
 // discord_app/modules/video_calls/native/components/PopoutMenu.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function PopoutMenuRow(onClose) {
-  let icon;
-  let onClick;
   ({ icon, onClick } = onClose);
   onClose = onClose.onClose;
   const tmp = callback();
@@ -35,9 +31,9 @@ function PopoutMenuRow(onClose) {
   return closure_6(onClose(6937), obj);
 }
 let c4 = importAllResult;
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let obj = { container: null, popoutMenuRow: null, popoutMenuRowLabel: null };
-obj = { position: "absolute", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.sm };
+obj = { position: "absolute", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
 obj[1] = { flex: 1 };
 obj[2] = { width: "100%" };
@@ -47,34 +43,26 @@ let closure_12 = { code: "function PopoutMenuTsx2(finished){const{runOnJS,handle
 let closure_13 = { code: "function PopoutMenuTsx3(){const{runOnJS,handleLongPress}=this.__closure;runOnJS(handleLongPress)();}" };
 let closure_14 = { code: "function PopoutMenuTsx4(){const{runOnJS,_setClose}=this.__closure;runOnJS(_setClose)(true);}" };
 const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose, ref) {
-  let disabled;
-  let left;
-  let onOpen;
-  let rows;
-  let style;
-  let title;
-  let top;
-  let trigger;
   ({ title, trigger, rows, onOpen } = onClose);
   onClose = onClose.onClose;
   let width;
   let height;
   let bottom;
-  let c5;
+  closure_5 = undefined;
   let first;
-  let c7;
+  closure_7 = undefined;
   let first1;
   let callback;
   ref = undefined;
   let ref1;
   let first2;
-  let closure_13;
+  closure_13 = undefined;
   let first3;
-  let closure_15;
-  let closure_16;
-  let c17;
+  closure_15 = undefined;
+  closure_16 = undefined;
+  closure_17 = undefined;
   callback = undefined;
-  let closure_19;
+  closure_19 = undefined;
   let callback1;
   ({ disabled, style } = onClose);
   let size = onClose(width[9])();
@@ -83,10 +71,10 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
   bottom = onClose(width[10])().bottom;
   let obj = bottom;
   const tmp4 = height(bottom.useState(0), 2);
-  c5 = tmp5;
+  closure_5 = tmp5;
   const tmp6 = height(bottom.useState(false), 2);
   first = tmp6[0];
-  c7 = tmp8;
+  closure_7 = tmp8;
   const tmp9 = height(bottom.useState(false), 2);
   first1 = tmp9[0];
   callback = tmp9[1];
@@ -154,35 +142,35 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
   closure_16 = bottom.useMemo(() => onClose(width[11]).debounce((arg0) => {
     callback(arg0);
   }, 16), items3);
-  c17 = tmp20;
+  closure_17 = tmp20;
   const items4 = [first, onClose];
   callback = obj.useCallback(() => {
     if (first) {
       onClose();
-      callback(false);
+      callback2(false);
     }
   }, items4);
-  let obj1 = onOpen(tmp3[12]);
+  obj1 = onOpen(tmp3[12]);
   function te() {
     let obj = onOpen(width[13]);
     let num = 0;
-    if (c17) {
+    if (closure_17) {
       num = 1;
     }
     obj = { opacity: null, transform: null };
     obj = { easing: tmp(tmp2[7]).STANDARD_EASING, duration: 250 };
     const fn = function n(arg0) {
       if (arg0) {
-        outer1_0(outer1_2[12]).runOnJS(closure_18)();
-        const obj = outer1_0(outer1_2[12]);
+        closure_1_0(closure_1_2[12]).runOnJS(closure_18)();
+        const obj = closure_1_0(closure_1_2[12]);
       }
     };
     fn.__closure = { runOnJS: onOpen(width[12]).runOnJS, handleClose: callback };
     fn.__workletHash = 7805688342878;
     fn.__initData = first2;
     obj[0] = obj.withTiming(num, obj, "respect-motion-settings", fn);
-    const obj1 = { runOnJS: onOpen(width[12]).runOnJS, handleClose: callback };
-    const tmp3 = c17;
+    obj1 = { runOnJS: onOpen(width[12]).runOnJS, handleClose: callback };
+    const tmp3 = closure_17;
     let num2 = 0;
     if (tmp3) {
       num2 = -8;
@@ -199,12 +187,12 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
   te.__workletHash = 2727321893876;
   te.__initData = ref1;
   const animatedStyle = obj1.useAnimatedStyle(te);
-  closure_19 = obj.useCallback(() => _undefined(true), []);
+  closure_19 = obj.useCallback(() => callback(true), []);
   const items5 = [onOpen];
   callback1 = obj.useCallback(() => {
-    _undefined(false);
+    callback(false);
     onOpen(width[14]).trigger("impactHeavy");
-    callback(true);
+    callback2(true);
     onOpen();
   }, items5);
   [][0] = callback1;
@@ -215,7 +203,7 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
     obj1 = { ref: null, children: null };
     obj1[0] = ref;
     obj1[1] = trigger;
-    obj[1] = first(c5, obj1);
+    obj[1] = first(closure_5, obj1);
     const items6 = [first(tmp22(tmp3[15]).GestureDetector, obj), ];
     tmp27Result = null;
     if (first1) {
@@ -229,7 +217,7 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
       items7[3] = animatedStyle;
       obj2[1] = items7;
       obj2[2] = function onLayout(nativeEvent) {
-        callback2(nativeEvent.nativeEvent.layout.height);
+        callback3(nativeEvent.nativeEvent.layout.height);
       };
       let tmp29Result = null;
       if (null != title) {
@@ -260,6 +248,6 @@ const forwardRefResult = importAllResult.forwardRef(function PopoutMenu(onClose,
   }
   return tmp27Result;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/video_calls/native/components/PopoutMenu.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PopoutMenu.tsx");
 
 export default forwardRefResult;

@@ -1,28 +1,27 @@
 // discord_app/modules/content_inventory/ContentInventoryActionCreators.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_5 from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateImpressionCaches from "updateImpressionCaches";
-import { AnalyticEvents } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import showUserProfileAll from "showUserProfile" /* 11124 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 1979 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "updateImpressionCaches" /* 11123 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 
 export const toggleMemberListContentFeedHidden = function toggleMemberListContentFeedHidden() {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" });
   obj = { channel_id: channelId.getChannelId(), guild_id: guildId.getGuildId(), hidden: hidden.hidden };
-  expandEventProperties.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
+  expandEventPropertiesDefault.track(AnalyticEvents.MEMBERLIST_CONTENT_FEED_HIDDEN, obj);
 };
 export const onGameProfileOpen = function onGameProfileOpen() {
-  dispatcher.dispatch({ type: "GAME_PROFILE_OPEN" });
+  dispatcherDefault.dispatch({ type: "GAME_PROFILE_OPEN" });
 };
 export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEntryEmbed(authorId) {
-  let message;
-  let tappedElement;
   ({ message, tappedElement } = authorId);
   channel = channel.getChannel(message.channel_id);
   if ("avatar" === tappedElement) {
@@ -36,7 +35,7 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
       }
       showUserProfileResult[1] = id;
       showUserProfileResult[2] = message.id;
-      let items = QUICK_SWITCHER;
+      let items = QUICK_SWITCHERDefault;
       if (tmp2) {
         items = [];
         items[0] = items.AVATAR;
@@ -45,11 +44,11 @@ export const onTapContentInventoryEntryEmbed = function onTapContentInventoryEnt
         items1 = [items.USERNAME];
       }
       showUserProfileResult[3] = items1;
-      showUserProfileResult = importAll(11124).showUserProfile(showUserProfileResult);
-      const obj2 = importAll(11124);
+      showUserProfileResult = showUserProfileAll.showUserProfile(showUserProfileResult);
+      const obj2 = showUserProfileAll;
     }
   }
 };
 export const clearDeleteHistoryError = function clearDeleteHistoryError() {
-  dispatcher.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
+  dispatcherDefault.dispatch({ type: "CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR" });
 };

@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx
-import importAllResult from "noop";
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import importAllResult from "noop" /* 19 */;
 
 let context = importAllResult.createContext({ quest: null, videoSessionId: "" });
 const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContext.tsx");
@@ -8,6 +8,6 @@ const result = require("set").fileFinishedImporting("modules/quests/native/Video
 export default context;
 export const useVideoQuestModalContext = function useVideoQuestModalContext() {
   context = importAllResult.useContext(context);
-  00038__(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
+  _modDef38(null != context, "useVideoQuestModalContext must be used within a VideoQuestModalProvider");
   return context;
 };

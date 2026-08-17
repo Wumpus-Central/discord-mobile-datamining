@@ -1,18 +1,18 @@
 // discord_app/modules/activities/native/openActivityDMLauncher.tsx
-import _handleUsePrimaryEntryPointAppCommand from "_handleUsePrimaryEntryPointAppCommand";
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
 
 const require = arg1;
 function _openActivityDMLauncher() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let _handleUsePrimaryEntryPointAppCommand = arg3;
-    let closure_4 = arg4;
-    let c7 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    closure_4 = arg4;
+    c7 = 0;
+    c8 = 0;
     const iter = (function*(arg0, customId) {
       if (customId === 2) {
         customId = 3;
@@ -60,7 +60,7 @@ function _openActivityDMLauncher() {
               throw customId;
             } else if (arg0 === 2) {
               customId = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = customId;
               return obj1;
             } else {
@@ -116,7 +116,7 @@ function _openActivityDMLauncher() {
                 c7 = 4;
                 customId = 1;
                 const obj7 = { value: null, done: false };
-                obj7[0] = obj6.getCustomActivityLinkParams(callback, _handleUsePrimaryEntryPointAppCommand, dependencyMap);
+                obj7[0] = obj6.getCustomActivityLinkParams(callback, closure_3, dependencyMap);
                 return obj7;
               }
             } else if (4 === tmp5) {
@@ -179,7 +179,7 @@ function _openActivityDMLauncher() {
     iter.next();
     return iter;
   });
-  const _openActivityDMLauncher = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -188,7 +188,7 @@ function _openActivityDMLauncher() {
   }
   return applyArgumentsResult;
 }
-const result = require("fetchApplication").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 
 export default function openActivityDMLauncher() {
   const self = this;

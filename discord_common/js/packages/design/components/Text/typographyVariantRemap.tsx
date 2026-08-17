@@ -1,8 +1,8 @@
 // discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx
-import _slicedToArray from "_slicedToArray";
-import { map } from "../../../tokens/typography/generated/TypographyVariantRemap.tsx";
+import map from "map" /* 4741 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Text/typographyVariantRemap.tsx");
 
 export const remapTypographyVariant = function remapTypographyVariant(enabledExperiments, variant, arg2) {

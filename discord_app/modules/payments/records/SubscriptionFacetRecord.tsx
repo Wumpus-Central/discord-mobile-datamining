@@ -1,6 +1,7 @@
 // discord_app/modules/payments/records/SubscriptionFacetRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let prototype;
 prototype = function SubscriptionFacetRecord(subscriptionId) {
   const tmp = new prototype(new.target, new.target);
@@ -30,8 +31,6 @@ prototype = function SubscriptionFacetRecord(subscriptionId) {
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(subscription_id) {
-  let renewal_line_items;
-  let subscription_trial_id;
   let tmp = null;
   if (null != subscription_id) {
     subscription_id = subscription_id.subscription_id;

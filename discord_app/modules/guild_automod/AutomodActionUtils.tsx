@@ -1,7 +1,9 @@
 // discord_app/modules/guild_automod/AutomodActionUtils.tsx
-import { AutomodActionType } from "AutomodEventType";
+import set from "set" /* 2 */;
+import AutomodEventType from "AutomodEventType" /* 11042 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
+let AutomodActionType = AutomodEventType.AutomodActionType;
+const result = set.fileFinishedImporting("modules/guild_automod/AutomodActionUtils.tsx");
 
 export const getRuleDefaultActionsFromConfig = function getRuleDefaultActionsFromConfig(defaultActionTypes) {
   let obj = { type: AutomodActionType.BLOCK_MESSAGE, metadata: { customMessage: "r" } };

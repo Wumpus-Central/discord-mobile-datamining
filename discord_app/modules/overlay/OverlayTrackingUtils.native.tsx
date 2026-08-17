@@ -1,5 +1,7 @@
 // discord_app/modules/overlay/OverlayTrackingUtils.native.tsx
-const result = require("set").fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/overlay/OverlayTrackingUtils.native.tsx");
 
 export function useOverlayTrackedGames() {
   return [];

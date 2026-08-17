@@ -1,15 +1,13 @@
 // discord_app/modules/forums/native/composer/hooks/useFocusHandlers.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 const obj = { TITLE: 0, [0]: "TITLE", CONTENT: 1, [1]: "CONTENT" };
 const result = require("set").fileFinishedImporting("modules/forums/native/composer/hooks/useFocusHandlers.tsx");
 
 export const PostComposerInputs = obj;
 export const useFocusHandlers = function useFocusHandlers(arg0) {
-  let _slicedToArray;
-  let noop;
-  ({ titleInput: _slicedToArray, contentInput: noop } = arg0);
+  ({ titleInput: closure_0, contentInput: closure_1 } = arg0);
   let first;
   const tmp = callback(React.useState(first.TITLE), 2);
   first = tmp[0];

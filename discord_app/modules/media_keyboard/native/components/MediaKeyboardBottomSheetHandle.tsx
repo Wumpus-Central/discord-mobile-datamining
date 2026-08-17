@@ -1,18 +1,16 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { DRAG_HANDLE } from "DRAG_HANDLE";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { TwinButtons } from "../../../../design/components/experimental/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useGradientBottom } from "../../../client_themes/native/ClientThemesOverrides.tsx";
-import { map } from "../../../reanimated/native/useStateFromSharedValue.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useGradientBottom from "useGradientBottom" /* 8501 */;
+import TwinButtons from "TwinButtons" /* 8811 */;
+import map from "map" /* 8995 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { DRAG_HANDLE } from "DRAG_HANDLE" /* 1624 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 let obj = { headerHandleWrap: null, dragHandleBar: null };
 obj = {};
@@ -22,15 +20,15 @@ obj.height = DRAG_HANDLE.slotHeight;
 obj.alignItems = "center";
 obj.bottom = undefined;
 obj[0] = obj;
-createCacheKey = { backgroundColor: DRAG_HANDLE.barColor, borderRadius: require("Themes").radii.xs, marginTop: DRAG_HANDLE.barMarginTop, height: DRAG_HANDLE.barHeight, width: DRAG_HANDLE.barWidth };
+createCacheKey = { backgroundColor: DRAG_HANDLE.barColor, borderRadius: ThemesDefault.radii.xs, marginTop: DRAG_HANDLE.barMarginTop, height: DRAG_HANDLE.barHeight, width: DRAG_HANDLE.barWidth };
 obj[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHandle(onPress) {
+const memoResult = importAllResult.memo(function MediaKeyboardBottomSheetHandle(onPress) {
   onPress = onPress.onPress;
   const tmp = callback();
   let obj = useGradientBottom;
   const gradientBottom = obj.useGradientBottom();
-  let obj1 = map;
+  obj1 = map;
   const derivedStateFromSharedValue = obj1.useDerivedStateFromSharedValue(onPress.animatedIndex, (arg0) => arg0 > 0);
   const intl = getSystemLocale.intl;
   const string = intl.string;
@@ -60,6 +58,6 @@ const memoResult = require("noop").memo(function MediaKeyboardBottomSheetHandle(
   }
   return tmp8Result;
 });
-const result = require("DRAG_HANDLE").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardBottomSheetHandle.tsx");
 
 export default memoResult;

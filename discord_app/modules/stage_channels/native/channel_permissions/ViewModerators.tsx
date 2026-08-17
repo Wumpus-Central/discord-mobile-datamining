@@ -1,37 +1,34 @@
 // discord_app/modules/stage_channels/native/channel_permissions/ViewModerators.tsx
-import ME from "ME";
-import "getSystemLocale";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { AnalyticEvents } from "ME";
-import { RowType } from "RowType";
-import jsxProd from "_updatePermission";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import noopAll from "noop" /* 19 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { RowType } from "RowType" /* 8064 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/stage_channels/native/channel_permissions/ViewModerators.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/channel_permissions/ViewModerators.tsx");
 
 export default function ViewModerators(channel) {
-  let guild;
-  let sortedGuildRoles;
   channel = channel.channel;
   let guildId;
   let canUpdateStageChannelModerators;
   function handleRemovePermission(name) {
-    let closure_0 = name;
+    closure_0 = name;
     let obj = channel(handleRemovePermission[14]);
-    if (name.rowType === outer1_9.ROLE) {
+    if (name.rowType === closure_1_9.ROLE) {
       let MEMBER = tmp(tmp2[17]).PermissionOverwriteType.ROLE;
     } else {
       MEMBER = tmp(tmp2[17]).PermissionOverwriteType.MEMBER;
     }
-    let closure_2 = obj.removeModeratorOverwrite(name.id, MEMBER, closure_0);
+    closure_2 = obj.removeModeratorOverwrite(name.id, MEMBER, closure_0);
     obj = { title: null, body: null, cancelText: null, confirmText: null, onConfirm: null, hideActionSheet: false, confirmColor: null };
     const intl = tmp(tmp2[19]).intl;
     obj[0] = intl.string(channel(handleRemovePermission[19]).t.GuPYQB);
@@ -42,7 +39,7 @@ export default function ViewModerators(channel) {
     obj[2] = intl3.string(channel(handleRemovePermission[19]).t["ETE/oC"]);
     const intl4 = tmp(tmp2[19]).intl;
     obj[3] = intl4.string(channel(handleRemovePermission[19]).t.fKxYb0);
-    let closure_1 = outer1_4(function*() {
+    closure_1 = closure_1_4(function*() {
       if (c2 === 2) {
         c2 = 3;
         HermesBuiltin.throwTypeError();
@@ -73,18 +70,18 @@ export default function ViewModerators(channel) {
               if (obj11.isEmptyOverwrite(c2)) {
                 c1 = 2;
                 c2 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = v0(outer2_3[20]).clearPermissionOverwrite(outer1_0.id, tmp28.id);
+                obj1 = { value: null, done: false };
+                obj1[0] = v0(closure_2_3[20]).clearPermissionOverwrite(closure_1_0.id, tmp28.id);
                 return obj1;
               } else {
                 const items = [tmp28];
                 c1 = 1;
                 c2 = 1;
                 let obj2 = { value: null, done: false };
-                obj2[0] = lib(outer2_3[21]).savePermissionUpdates(outer1_0.id, items);
+                obj2[0] = lib(closure_2_3[21]).savePermissionUpdates(closure_1_0.id, items);
                 return obj2;
               }
-              obj11 = lib(outer2_3[14]);
+              obj11 = lib(closure_2_3[14]);
             }
           } else {
             if (1 === tmp5) {
@@ -106,9 +103,9 @@ export default function ViewModerators(channel) {
               obj[0] = arg1;
               return obj;
             }
-            obj1 = lib(outer2_3[22]);
+            obj1 = lib(closure_2_3[22]);
             const result = obj1.memberOrRoleRemovedToast(lib.name);
-            obj2 = v0(outer2_3[9]);
+            obj2 = v0(closure_2_3[9]);
             obj2.hideActionSheet();
             c2 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
@@ -142,13 +139,13 @@ export default function ViewModerators(channel) {
   navigation.setOptions(obj);
   guildId = channel.getGuildId();
   let obj3 = channel(handleRemovePermission[13]);
-  let items = [createGuildRecordFromRust, createGuildRoleRecordFromRust];
+  let items = [closure_7, closure_6];
   const items1 = [guildId];
   const stateFromStoresObject = obj3.useStateFromStoresObject(items, () => {
-    const obj = { guild: outer1_7.getGuild(guildId), sortedGuildRoles: null };
+    const obj = { guild: closure_1_7.getGuild(guildId), sortedGuildRoles: null };
     let sortedRoles;
     if (null != guildId) {
-      sortedRoles = outer1_6.getSortedRoles(guildId);
+      sortedRoles = closure_1_6.getSortedRoles(guildId);
     }
     obj[1] = sortedRoles;
     return obj;
@@ -171,7 +168,7 @@ export default function ViewModerators(channel) {
       if (isGuildStageVoiceResult) {
         obj = { style: null, spacing: 16, children: null };
         obj[0] = { paddingHorizontal: 16 };
-        let obj1 = { title: null, hasIcons: true, children: null };
+        obj1 = { title: null, hasIcons: true, children: null };
         let intl = tmp(tmp2[19]).intl;
         obj1[0] = intl.string(tmp(tmp2[19]).t.f7VbhF);
         let obj2 = { icon: null, label: null, onPress: null, disabled: null, arrow: true };
@@ -181,7 +178,7 @@ export default function ViewModerators(channel) {
         obj2[2] = function onPress() {
           if (null != channel) {
             let obj = guildId(handleRemovePermission[8]);
-            obj.track(outer1_8.OPEN_POPOUT, { type: "Grant Channel Access" });
+            obj.track(closure_1_8.OPEN_POPOUT, { type: "Grant Channel Access" });
             const _HermesInternal = HermesInternal;
             const obj2 = guildId(handleRemovePermission[9]);
             obj = { channel: null, canSkip: null };
@@ -197,12 +194,12 @@ export default function ViewModerators(channel) {
         obj3 = { title: null, hasIcons: true, children: null };
         let intl3 = tmp(tmp2[19]).intl;
         obj3[0] = intl3.string(tmp(tmp2[19]).t.ghdVJL);
-        obj3[2] = existingRolesRowWithPermissionDisabled.map((id) => outer1_10(guildId(handleRemovePermission[24]), { guildId: channel.guild_id, item: id, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, id.id));
+        obj3[2] = existingRolesRowWithPermissionDisabled.map((id) => closure_1_10(guildId(handleRemovePermission[24]), { guildId: channel.guild_id, item: id, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, id.id));
         items2[1] = callback(tmp(tmp2[26]).TableRowGroup, obj3);
         obj4 = { title: null, hasIcons: true, children: null };
         let intl4 = tmp(tmp2[19]).intl;
         obj4[0] = intl4.string(tmp(tmp2[19]).t.ghdVJL);
-        obj4[2] = existingMembersRows.map((id) => outer1_10(guildId(handleRemovePermission[24]), { guildId: channel.guild_id, item: id, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, id.id));
+        obj4[2] = existingMembersRows.map((id) => closure_1_10(guildId(handleRemovePermission[24]), { guildId: channel.guild_id, item: id, channelId: channel.id, showType: true, showRemove: canUpdateStageChannelModerators, onRemove: handleRemovePermission }, id.id));
         items2[2] = callback(tmp(tmp2[26]).TableRowGroup, obj4);
         obj[2] = items2;
         isGuildStageVoiceResult = callback2(tmp(tmp2[25]).Stack, obj);
@@ -217,9 +214,9 @@ export const openAddModeratorsActionSheet = function openAddModeratorsActionShee
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
-  const obj2 = ACTION_SHEET_HEIGHT_HALF;
+  const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel, canSkip: flag };
   obj2.openLazy(asyncRequireImpl(16042, dependencyMap.paths), "channel-add-moderators-" + channel.id, obj);
 };

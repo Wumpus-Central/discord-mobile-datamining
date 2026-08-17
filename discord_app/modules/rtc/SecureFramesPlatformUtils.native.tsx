@@ -1,34 +1,29 @@
 // discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import ME from "ME";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import { _safeTransitionTo } from "../links/safeTransitionTo.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import _safeTransitionToDefault from "_safeTransitionTo" /* 7211 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY: c5, SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: closure_6, SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: error } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
-({ ME: metroImportAll, Routes: c9 } = ME);
-const result = require("SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY").fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");
+({ ME: closure_8, Routes: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");
 
 export default {
   openSecureFramesStreamVerification(streamKey, channelId) {
-    let obj = ACTION_SHEET_HEIGHT_HALF;
+    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { streamKey, channelId };
     obj.openLazy(asyncRequireImpl(9722, dependencyMap.paths), closure_6, obj);
   },
   openSecureFramesUserVerificationModal(id, id2, arg2) {
     if (arg2()) {
-      let obj = ModalActionCreators;
+      let obj = _modDef5260;
       obj = { userId: null, channelId: null };
       obj[0] = id;
       obj[1] = id2;
@@ -36,8 +31,6 @@ export default {
     }
   },
   openSecureFramesUpdateConfirmation(confirmText) {
-    let subtitle;
-    let title;
     confirmText = confirmText.confirmText;
     ({ title, subtitle } = confirmText);
     if (confirmText === undefined) {
@@ -45,7 +38,7 @@ export default {
       confirmText = intl.string(onConfirm(1236).t["cY+Oob"]);
     }
     onConfirm = confirmText.onConfirm;
-    let obj = AlertActionCreators;
+    let obj = _modDef4656;
     obj = { title, body: subtitle, confirmText, cancelText: null, confirmColor: null };
     const intl2 = onConfirm(1236).intl;
     obj[3] = intl2.string(onConfirm(1236).t["ETE/oC"]);
@@ -57,8 +50,6 @@ export default {
     });
   },
   handleSecureFramesUserVerificationLink(arg0) {
-    let fingerprint;
-    let userId;
     ({ userId, fingerprint } = arg0);
     channelId = channelId.getChannelId();
     channel = channel.getChannel(channelId);
@@ -71,15 +62,15 @@ export default {
     }
     if (null != channelId) {
       if (null != channel) {
-        _safeTransitionTo(closure_9.CHANNEL(guildId, channelId));
-        const tmp6 = _safeTransitionTo;
+        _safeTransitionToDefault(closure_9.CHANNEL(guildId, channelId));
+        const tmp6 = _safeTransitionToDefault;
         let obj = { userId: null, channelId: null, guildId: null, fingerprint: null };
         obj[0] = userId;
         obj[1] = channelId;
         obj[2] = guildId;
         obj[3] = fingerprint;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9725, dependencyMap.paths), closure_5, obj);
-        const obj4 = ACTION_SHEET_HEIGHT_HALF;
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9725, dependencyMap.paths), closure_5, obj);
+        const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
     obj = { title: null, body: null };
@@ -87,6 +78,6 @@ export default {
     obj[0] = intl.string(getSystemLocale.t["5ICxE6"]);
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["v1eXp/"]);
-    AlertActionCreators.show(obj);
+    _modDef4656.show(obj);
   }
 };

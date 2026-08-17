@@ -1,9 +1,9 @@
 // discord_app/lib/uploader_inline/InlineUploader.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { fromBlob } from "../../modules/discord_md5/DiscordMd5.tsx";
-import { ORIGINAL_MD5_HEADER } from "originalMd5Header.tsx";
+import fromBlobDefault from "fromBlob" /* 4858 */;
+import ORIGINAL_MD5_HEADER from "ORIGINAL_MD5_HEADER" /* 8383 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 const re4 = /^[a-f0-9]{32}$/;
 let InlineUploader;
 class InlineUploader {
@@ -16,7 +16,7 @@ class InlineUploader {
 }
 const prototype = InlineUploader.prototype;
 InlineUploader["fromBlob"] = function fromBlob(surface) {
-  let obj = fromBlob;
+  let obj = fromBlobDefault;
   const fromBlobResult = obj.fromBlob(arg1);
   const tmp = InlineUploader;
   if (typeof InlineUploader !== "function") {
@@ -66,8 +66,6 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
       let joined = null;
       if (0 !== items.length) {
         const sorted = items.sort((arg0, arg1) => {
-          let tmp;
-          let tmp2;
           [tmp] = arg0;
           [tmp2] = arg1;
           let num = -1;
@@ -81,8 +79,6 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
           return num;
         });
         const mapped = items.map((arg0) => {
-          let str;
-          let tmp;
           [str, tmp] = arg0;
           return "" + str.toLowerCase() + "=\"" + tmp + "\"";
         });
@@ -101,16 +97,16 @@ InlineUploader["buildHeadersForMd5"] = function buildHeadersForMd5(originalMd5, 
   return tmp2;
 };
 prototype["buildHeaders"] = function buildHeaders(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    let closure_2 = tmp4;
-    let closure_1 = outer1_5;
-    const buildHeadersForMd5 = outer1_5.buildHeadersForMd5;
-    yield outer1_1.originalMd5Promise;
+    closure_2 = tmp4;
+    closure_1 = closure_1_5;
+    const buildHeadersForMd5 = closure_1_5.buildHeadersForMd5;
+    yield closure_1_1.originalMd5Promise;
     return buildHeadersForMd5(arg1, buildHeadersForMd5);
   })();
 };
-const result = require("ORIGINAL_MD5_HEADER").fileFinishedImporting("lib/uploader_inline/InlineUploader.tsx");
+const result = require("set").fileFinishedImporting("lib/uploader_inline/InlineUploader.tsx");
 
 export default InlineUploader;

@@ -1,16 +1,16 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx
-import noop from "noop";
-import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleModifyingAppliedBoostStart" /* 11731 */;
 
 const require = arg1;
-const result = require("useGuildAppliedBoostCount").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx");
 
 export default function useGuildPowerupsWarningConfig(arg0, arg1) {
   const _require = arg0;
-  const importDefault = arg1;
-  const items = [handleModifyingAppliedBoostStart];
+  importDefault = arg1;
+  const items = [closure_4];
   const items1 = [arg0];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => outer1_4.getAppliedGuildBoostsForGuild(closure_0), items1);
+  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getAppliedGuildBoostsForGuild(closure_0), items1);
   const items2 = [stateFromStores];
   const diff = importDefault(stateFromStores[2])(arg0).spent - React.useMemo(() => {
     let num;
@@ -38,7 +38,7 @@ export default function useGuildPowerupsWarningConfig(arg0, arg1) {
   React = diff;
   const items3 = [diff, arg1];
   return React.useMemo(() => {
-    if (noop <= 0) {
+    if (closure_3 <= 0) {
       let obj = { shouldShow: false, title: "", description: "", requiredBoostCount: 0 };
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };

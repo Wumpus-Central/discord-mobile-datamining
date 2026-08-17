@@ -1,6 +1,6 @@
 // discord_app/modules/experiments/trigger_points/Helpers.tsx
-import initialize from "initialize";
-import { CommonTriggerPoints } from "ExperimentBuckets";
+import closure_0 from "initialize" /* 1212 */;
+import { CommonTriggerPoints } from "ExperimentBuckets" /* 4289 */;
 
 let result = require("set").fileFinishedImporting("modules/experiments/trigger_points/Helpers.tsx");
 class CommonTriggerPointConfiguration {
@@ -18,8 +18,6 @@ prototype["registeredExperimentIds"] = function registeredExperimentIds() {
   return experiments.map((definition) => definition.definition.id);
 };
 prototype["trigger"] = function trigger() {
-  let experiments;
-  let triggerPoint;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};

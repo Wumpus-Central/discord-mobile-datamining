@@ -1,18 +1,18 @@
 // discord_app/actions/BoostingActionCreators.tsx
-import sendRequest from "sendRequest";
-import createFromServer from "createFromServer";
-import closure_5 from "createFromServer";
-import reset from "reset";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createFromServer" /* 4271 */;
+import closure_5 from "createFromServer" /* 4272 */;
+import closure_6 from "reset" /* 4045 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchAppliedGuildBoostsForGuild() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0, body) {
       if (c5 === 2) {
         c5 = 3;
@@ -40,10 +40,10 @@ function _fetchAppliedGuildBoostsForGuild() {
               obj[0] = body;
               return obj;
             } else {
-              let sendRequest = tmp5;
-              let dependencyMap = tmp2;
+              closure_3 = tmp5;
+              dependencyMap = tmp2;
               let flag;
-              let obj1 = flag;
+              obj1 = flag;
               if (flag === undefined) {
                 obj1 = {};
               }
@@ -110,7 +110,7 @@ function _fetchAppliedGuildBoostsForGuild() {
     iter.next();
     return iter;
   });
-  const _fetchAppliedGuildBoostsForGuild = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -122,9 +122,9 @@ function _fetchAppliedGuildBoostsForGuild() {
 function _fetchAppliedGuildBoostsForUser() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
       if (c4 === 2) {
         c4 = 3;
@@ -152,7 +152,7 @@ function _fetchAppliedGuildBoostsForUser() {
               obj[0] = body;
               return obj;
             } else {
-              const dependencyMap = tmp5;
+              dependencyMap = tmp5;
               let callback = tmp2;
               let flag;
               if (flag === undefined) {
@@ -169,7 +169,7 @@ function _fetchAppliedGuildBoostsForUser() {
               throw body;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
@@ -214,7 +214,7 @@ function _fetchAppliedGuildBoostsForUser() {
     iter.next();
     return iter;
   });
-  const _fetchAppliedGuildBoostsForUser = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -237,13 +237,13 @@ function _fetchGuildBoostSlots() {
   const self = this;
   const tmp = callback(function*() {
     const callback = tmp2;
-    let closure_0 = tmp5;
-    outer1_1(709).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
-    const HTTP = outer1_0(530).HTTP;
-    const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-    obj1[0] = outer1_7.USER_GUILD_BOOST_SLOTS;
-    const obj8 = outer1_1(709);
-    obj1[2] = outer1_0(530).rejectWithMigratedError();
+    closure_0 = tmp5;
+    closure_1_1(709).dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
+    const HTTP = closure_1_0(530).HTTP;
+    obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
+    obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOTS;
+    const obj8 = closure_1_1(709);
+    obj1[2] = closure_1_0(530).rejectWithMigratedError();
     yield HTTP.get(obj1);
     const body = arg1.body;
     closure_0 = body.map((subscription_id) => closure_5.createFromServer(subscription_id, subscriptionById.getSubscriptionById(subscription_id.subscription_id)));
@@ -253,7 +253,7 @@ function _fetchGuildBoostSlots() {
     obj.dispatch(obj4);
     return closure_0;
   });
-  const _fetchGuildBoostSlots = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -294,11 +294,11 @@ function _fetchAppliedBoostsCooldown() {
             let lib = tmp3;
             let ends_at = tmp7;
             ends_at = undefined;
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[5]).HTTP;
-            const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-            obj1[0] = outer1_7.APPLIED_GUILD_BOOST_COOLDOWN;
-            obj1[2] = outer1_0(outer1_2[5]).rejectWithMigratedError();
+            c3 = 1;
+            const HTTP = closure_1_0(closure_1_2[5]).HTTP;
+            obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
+            obj1[0] = closure_1_7.APPLIED_GUILD_BOOST_COOLDOWN;
+            obj1[2] = closure_1_0(closure_1_2[5]).rejectWithMigratedError();
             c4 = 2;
             c5 = 1;
             const obj2 = { value: null, done: false };
@@ -349,7 +349,7 @@ function _fetchAppliedBoostsCooldown() {
       }
     }
   });
-  const _fetchAppliedBoostsCooldown = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -361,12 +361,12 @@ function _fetchAppliedBoostsCooldown() {
 function _applyToGuild() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -395,12 +395,12 @@ function _applyToGuild() {
               return obj;
             } else {
               let mapped = tmp3;
-              let sendRequest = tmp7;
+              closure_3 = tmp7;
               let flag;
               if (flag === undefined) {
                 flag = false;
               }
-              sendRequest = undefined;
+              closure_3 = undefined;
               mapped = undefined;
               let appliedGuildBoostError;
               c7 = 1;
@@ -413,12 +413,12 @@ function _applyToGuild() {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               callback2(flag[6]).dispatch({ type: "GUILD_APPLY_BOOST_START" });
-              let c6 = 1;
+              c6 = 1;
               const HTTP = callback(flag[5]).HTTP;
               const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
               obj2[0] = c7.APPLIED_GUILD_BOOSTS_FOR_GUILD(callback);
@@ -453,14 +453,14 @@ function _applyToGuild() {
             obj6[0] = arg1;
             return obj6;
           } else {
-            sendRequest = arg1;
+            closure_3 = arg1;
             const _Array = Array;
-            if (Array.isArray(sendRequest.body)) {
-              const body = sendRequest.body;
+            if (Array.isArray(closure_3.body)) {
+              const body = closure_3.body;
               mapped = body.map(mapped.createFromServer);
             } else {
               mapped = [];
-              mapped[0] = mapped.createFromServer(sendRequest.body);
+              mapped[0] = mapped.createFromServer(closure_3.body);
             }
             obj = callback2(flag[6]);
             const obj7 = { type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: null };
@@ -484,7 +484,7 @@ function _applyToGuild() {
     iter.next();
     return iter;
   });
-  const _applyToGuild = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -496,11 +496,11 @@ function _applyToGuild() {
 function _unapplyFromGuild() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -528,17 +528,17 @@ function _unapplyFromGuild() {
               obj[0] = arg1;
               return obj;
             } else {
-              let sendRequest = tmp3;
-              let dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               const callback = appliedGuildBoostError;
               appliedGuildBoostError = undefined;
-              callback2(outer1_2[6]).dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
-              let c5 = 1;
-              const HTTP = callback(outer1_2[5]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
+              callback2(closure_1_2[6]).dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
+              c5 = 1;
+              const HTTP = callback(closure_1_2[5]).HTTP;
+              obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
               obj1[0] = c7.APPLIED_GUILD_BOOST(callback, appliedGuildBoostError);
-              const obj9 = callback2(outer1_2[6]);
-              obj1[2] = callback(outer1_2[5]).rejectWithMigratedError();
+              const obj9 = callback2(closure_1_2[6]);
+              obj1[2] = callback(closure_1_2[5]).rejectWithMigratedError();
               c6 = 2;
               c7 = 1;
               const obj2 = { value: null, done: false };
@@ -547,7 +547,7 @@ function _unapplyFromGuild() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            dependencyMap = createFromServer;
+            dependencyMap = closure_4;
             appliedGuildBoostError = new callback(4273).AppliedGuildBoostError(dependencyMap);
             let obj3 = appliedGuildBoostError(709);
             obj3 = { type: "GUILD_UNAPPLY_BOOST_FAIL", error: null };
@@ -574,7 +574,7 @@ function _unapplyFromGuild() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp33) {
-          createFromServer = tmp33;
+          closure_4 = tmp33;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp33;
@@ -585,7 +585,7 @@ function _unapplyFromGuild() {
       }
     })();
   });
-  const _unapplyFromGuild = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -597,15 +597,15 @@ function _unapplyFromGuild() {
 function _cancelGuildBoostSlot() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
       let callback = tmp5;
-      const HTTP = lib(outer1_2[5]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = outer1_7.USER_GUILD_BOOST_SLOT_CANCEL(lib);
+      const HTTP = lib(closure_1_2[5]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOT_CANCEL(lib);
       lib = yield HTTP.post(obj1);
       callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
       const obj4 = { type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: null };
@@ -614,7 +614,7 @@ function _cancelGuildBoostSlot() {
       return callback;
     })();
   });
-  const _cancelGuildBoostSlot = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -626,15 +626,15 @@ function _cancelGuildBoostSlot() {
 function _uncancelGuildBoostSlot() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
       let callback = tmp5;
-      const HTTP = lib(outer1_2[5]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = outer1_7.USER_GUILD_BOOST_SLOT_UNCANCEL(lib);
+      const HTTP = lib(closure_1_2[5]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = closure_1_7.USER_GUILD_BOOST_SLOT_UNCANCEL(lib);
       lib = yield HTTP.post(obj1);
       callback = closure_5.createFromServer(lib.body, subscriptionById.getSubscriptionById(lib.body.subscription_id));
       const obj4 = { type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: null };
@@ -643,7 +643,7 @@ function _uncancelGuildBoostSlot() {
       return callback;
     })();
   });
-  const _uncancelGuildBoostSlot = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -652,7 +652,7 @@ function _uncancelGuildBoostSlot() {
   }
   return applyArgumentsResult;
 }
-const result = require("createFromServer").fileFinishedImporting("actions/BoostingActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/BoostingActionCreators.tsx");
 
 export const fetchAppliedGuildBoostsForGuild = function fetchAppliedGuildBoostsForGuild(closure_0, arg1) {
   const self = this;

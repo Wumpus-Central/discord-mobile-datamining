@@ -1,6 +1,6 @@
 // discord_app/modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 class InappropriateConversationBlockAndReportAlert {
@@ -14,7 +14,7 @@ class InappropriateConversationBlockAndReportAlert {
     closure_5 = analyticsBlockAndReportContext;
     analyticsCancelContext = global.analyticsCancelContext;
     onDismiss = global.onDismiss;
-    useCallback = undefined;
+    closure_8 = undefined;
     items = [, , , ];
     items[0] = channelId;
     items[1] = warningId;
@@ -25,7 +25,7 @@ class InappropriateConversationBlockAndReportAlert {
       obj = { channelId, warningId, senderId, warningType, cta };
       obj.trackCtaEvent(obj);
     }, items);
-    useCallback = callback;
+    closure_8 = callback;
     items1 = [, ];
     items1[0] = callback;
     items1[1] = analyticsCancelContext;
@@ -59,7 +59,7 @@ class InappropriateConversationBlockAndReportAlert {
     return analyticsBlockContext(tmp5, obj);
   }
 }
-const result = require("trackViewedEvent").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/native/InappropriateConversationBlockAndReportAlert.tsx");
 
 export default InappropriateConversationBlockAndReportAlert;
 export { InappropriateConversationBlockAndReportAlert };

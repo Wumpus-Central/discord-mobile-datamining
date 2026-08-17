@@ -1,15 +1,15 @@
 // discord_app/modules/device/MetaQuestUtils.android.tsx
-import importDefaultResult from "enforcing";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeMetaQuestModule.tsx";
+import getConstantsAll from "getConstants" /* 1626 */;
+import importDefaultResult from "enforcing" /* 670 */;
 
-const isMetaQuestResult = require("enforcing").isMetaQuest();
+const isMetaQuestResult = importDefaultResult.isMetaQuest();
 const result = require("set").fileFinishedImporting("modules/device/MetaQuestUtils.android.tsx");
 
 export const isMetaQuest = function isMetaQuest() {
-  return enforcing.isMetaQuest();
+  return importDefaultResult.isMetaQuest();
 };
 export const isQuestRelease = function isQuestRelease() {
-  const constants = importAll(1626).getConstants();
+  const constants = getConstantsAll.getConstants();
   let flag;
   if (constants != null) {
     const ReleaseChannel = constants.ReleaseChannel;

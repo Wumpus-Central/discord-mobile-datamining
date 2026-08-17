@@ -1,19 +1,18 @@
 // discord_app/components_native/calls/stream/StreamFullAlert.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../_runtime/17077_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { mapped } from "../../../modules/errors/av_errors/AVError.tsx";
-import { componentDidMount } from "../../common/Alert.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import mapped from "mapped" /* 9668 */;
+import registerAssetDefault from "registerAsset" /* 17077 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = { image: { alignSelf: "center", marginTop: 32 }, body: { marginTop: 16 } };
-const result = require("jsxProd").fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
+const result = require("set").fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
 
 export default function StreamFullAlert(arg0) {
   let obj = mapped;
@@ -32,9 +31,9 @@ export default function StreamFullAlert(arg0) {
   const intl3 = tmp(1236).intl;
   obj[2] = intl3.string(getSystemLocale.t.VVZDBL);
   const items = [callback(Text.Text, obj), callback(Text.Text, { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult }), ];
-  const obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
-  const tmp6 = componentDidMount;
-  items[2] = callback(Image, { source: registerAsset, style: closure_6.image });
+  obj1 = { variant: "text-md/normal", selectable: true, color: "text-muted", style: closure_6.body, children: formatToPlainStringResult };
+  const tmp6 = componentDidMountDefault;
+  items[2] = callback(Image, { source: registerAssetDefault, style: closure_6.image });
   obj.children = items;
   return callback2(tmp6, obj);
 };

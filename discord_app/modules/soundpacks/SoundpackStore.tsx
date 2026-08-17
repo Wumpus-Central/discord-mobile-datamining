@@ -1,14 +1,18 @@
 // discord_app/modules/soundpacks/SoundpackStore.tsx
-import { Soundpacks } from "Soundpacks";
-import { PersistedStore } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import Soundpacks2 from "Soundpacks" /* 10042 */;
 
+const Soundpacks = Soundpacks2.Soundpacks;
 let closure_1 = { soundpack: Soundpacks.CLASSIC, lastSoundpackExperimentId: null };
+const PersistedStore = initializeDefault.PersistedStore;
 class SoundpackStore extends PersistedStore {
 }
 const prototype = SoundpackStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_1 = arg0;
+    closure_1 = arg0;
     const _Object = Object;
     const values = Object.values(Soundpacks);
     if (!values.includes(closure_1.soundpack)) {
@@ -28,7 +32,7 @@ prototype["getLastSoundpackExperimentId"] = function getLastSoundpackExperimentI
 };
 SoundpackStore.displayName = "SoundpackStore";
 SoundpackStore.persistKey = "SoundpackStore";
-const soundpackStore = new SoundpackStore(require("dispatcher"), {
+const soundpackStore = new SoundpackStore(dispatcherDefault, {
   SET_SOUNDPACK: function handleSetSoundpack(forExperimentId) {
     let lastSoundpackExperimentId = forExperimentId.forExperimentId;
     const obj = { soundpack: forExperimentId.soundpack, lastSoundpackExperimentId: null };
@@ -38,6 +42,6 @@ const soundpackStore = new SoundpackStore(require("dispatcher"), {
     obj[1] = lastSoundpackExperimentId;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
+const result = set.fileFinishedImporting("modules/soundpacks/SoundpackStore.tsx");
 
 export default soundpackStore;

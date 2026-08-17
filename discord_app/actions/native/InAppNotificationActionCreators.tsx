@@ -1,15 +1,17 @@
 // discord_app/actions/native/InAppNotificationActionCreators.tsx
-import { dispatcher } from "../../Dispatcher.tsx";
-const result = require("set").fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+
+const result = set.fileFinishedImporting("actions/native/InAppNotificationActionCreators.tsx");
 
 export default {
   enqueueNotification(buildResult) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "ENQUEUE_IN_APP_NOTIFICATION", notification: buildResult };
     obj.dispatch(obj);
   },
   clearNotification() {
-    dispatcher.wait(() => {
+    dispatcherDefault.wait(() => {
       callback(table[0]).dispatch({ type: "CLEAR_IN_APP_NOTIFICATION" });
     });
   }

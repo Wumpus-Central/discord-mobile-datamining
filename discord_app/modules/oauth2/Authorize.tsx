@@ -1,16 +1,15 @@
 // discord_app/modules/oauth2/Authorize.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
-import { keysSorter } from "../../../_runtime/04376_keysSorter.js";
-import { set } from "../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
+import fromStringAll from "fromString" /* 506 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import set from "set" /* 4375 */;
+import keysSorter from "keysSorter" /* 4376 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ EMPTY_NUX_SERVER: c5, FAVORITES: closure_6, ME: error } = ME);
-const result = require("ME").fileFinishedImporting("modules/oauth2/Authorize.tsx");
+const result = require("set").fileFinishedImporting("modules/oauth2/Authorize.tsx");
 
 export const filterScopes = function filterScopes(items) {
   const found = items.filter((arg0) => {
@@ -27,11 +26,9 @@ export const filterScopes = function filterScopes(items) {
   return found;
 };
 export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(query) {
-  let channel_id;
-  let guild_id;
   let obj = keysSorter;
   const parsed = obj.parse(query, { arrayFormat: "bracket" });
-  const NONE = importAll(4026).NONE;
+  const NONE = applyOverwritesAll.NONE;
   try {
     let str2 = "0";
     if (null != parsed.permissions) {
@@ -41,7 +38,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       }
     }
     ({ channel_id, guild_id } = parsed);
-    const tmp3Result = importAll(506);
+    const tmp3Result = fromStringAll;
     if (guild_id == null) {
       channel = channel.getChannel(channel_id);
       guild_id = undefined;
@@ -53,7 +50,7 @@ export const parseOAuth2AuthorizeProps = function parseOAuth2AuthorizeProps(quer
       guild_id = guildId.getGuildId();
     }
     let str4 = parsed.client_id;
-    const deserializeResult = importAll(506).deserialize(str2);
+    const deserializeResult = fromStringAll.deserialize(str2);
     if (str4 == null) {
       str4 = "";
     }

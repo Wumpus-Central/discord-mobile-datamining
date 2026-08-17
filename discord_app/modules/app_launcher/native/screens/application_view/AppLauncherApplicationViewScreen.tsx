@@ -1,40 +1,26 @@
 // discord_app/modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import getIndexKey from "getIndexKey";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getIndexKey" /* 8448 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let SCREEN_BACKGROUND_COLOR;
-let c4;
-let c5;
-let error;
 const require = arg1;
 function AppLauncherApplicationViewScreenInner(application) {
-  let context;
-  let entrypoint;
-  let expandBottomSheet;
-  let initiallyExpanded;
-  let installOnDemand;
-  let lockableScrollableContentOffsetY;
-  let onActivityItemSelected;
-  let onCommandExecuted;
-  let onPressBack;
-  let sectionName;
   application = application.application;
   ({ initiallyExpanded, expandBottomSheet } = application);
   let bottomSheetExpandReasonRef;
   let chatInputRef;
-  let c4;
+  closure_4 = undefined;
   initiallyExpanded = undefined;
   ({ context, lockableScrollableContentOffsetY, installOnDemand, sectionName, onPressBack, onActivityItemSelected, entrypoint, onCommandExecuted } = application);
   const requiredAppLauncherContext = application(bottomSheetExpandReasonRef[7]).useRequiredAppLauncherContext();
   bottomSheetExpandReasonRef = requiredAppLauncherContext.bottomSheetExpandReasonRef;
   chatInputRef = requiredAppLauncherContext.chatInputRef;
   const tmp5 = expandBottomSheet(bottomSheetExpandReasonRef[8])();
-  c4 = tmp5;
+  closure_4 = tmp5;
   if (initiallyExpanded == null) {
     initiallyExpanded = application(tmp2[9]).isEmbeddedApp(application);
     const tmpResult = application(tmp2[9]);
@@ -44,13 +30,13 @@ function AppLauncherApplicationViewScreenInner(application) {
   const onAauth2Cancel = chatInputRef.useCallback(() => {
     const current = chatInputRef.current;
     obj = { type: application(bottomSheetExpandReasonRef[10]).KeyboardTypes.APP_LAUNCHER, context: obj };
-    obj = { initialRouteName: outer1_7.APPLICATION_VIEW, application };
+    obj = { initialRouteName: closure_1_7.APPLICATION_VIEW, application };
     current.openCustomKeyboard(obj);
   }, items);
   const effect = chatInputRef.useEffect(() => {
     let tmp = initiallyExpanded;
     if (initiallyExpanded) {
-      tmp = c4;
+      tmp = closure_4;
     }
     if (tmp) {
       bottomSheetExpandReasonRef.current = application(bottomSheetExpandReasonRef[7]).AppLauncherBottomSheetExpandReason.APP_VIEW;
@@ -64,21 +50,9 @@ function AppLauncherApplicationViewScreenInner(application) {
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 ({ AppLauncherRouteName: error, SCREEN_BACKGROUND_COLOR } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
 let closure_10 = createCacheKey.createStyles({ container: { backgroundColor: SCREEN_BACKGROUND_COLOR, flex: 1 } });
-let result = require("getIndexKey").fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/AppLauncherApplicationViewScreen.tsx");
 
 export default function AppLauncherApplicationViewScreen(route) {
-  let application;
-  let applicationId;
-  let c4;
-  let c5;
-  let context;
-  let entrypoint;
-  let expandBottomSheet;
-  let initiallyExpanded;
-  let onActivityItemSelected;
-  let onCommandExecuted;
-  let require;
-  let sectionName;
   const params = route.route.params;
   ({ application, onPressBack: require, context } = params);
   const installOnDemand = params.installOnDemand;
@@ -144,7 +118,7 @@ export default function AppLauncherApplicationViewScreen(route) {
       if (navigation.canGoBack()) {
         arr = arr.pop();
       } else {
-        c5.current = outer1_0(installOnDemand[7]).AppLauncherKeyboardCloseReason.BACK;
+        c5.current = closure_1_0(installOnDemand[7]).AppLauncherKeyboardCloseReason.BACK;
         const current = _undefined.current;
         if (current != null) {
           current.closeCustomKeyboard();
@@ -157,7 +131,7 @@ export default function AppLauncherApplicationViewScreen(route) {
     obj[10] = onCommandExecuted;
     let tmp11Result = tmp11(AppLauncherApplicationViewScreenInner, obj);
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     const obj2 = { paddingTop: null };
     obj2[0] = tmp(tmp2[14]).EXPANDED_HEADER_HEIGHT;
     obj1[0] = obj2;

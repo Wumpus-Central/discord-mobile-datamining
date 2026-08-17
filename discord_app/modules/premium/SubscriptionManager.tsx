@@ -1,19 +1,18 @@
 // discord_app/modules/premium/SubscriptionManager.tsx
-import closure_2 from "GuildFeatures";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
-import reset from "reset";
-import addEntitlement from "addEntitlement";
-import GuildFeatures from "GuildFeatures";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_5 from "reset" /* 4045 */;
+import closure_6 from "addEntitlement" /* 5357 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let error;
-let metroImportAll;
 let require = arg1;
-({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: metroImportAll } = GuildFeatures);
+({ PREMIUM_SUBSCRIPTION_APPLICATION: error, PremiumTypes: closure_8 } = GuildFeatures);
+initializeDefault;
 let prototype = function SubscriptionManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       const result = applyArgumentsResult.maybeFetchSubscriptions();
@@ -48,20 +47,20 @@ let prototype = function SubscriptionManager() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
+            closure_1 = tmp5;
             let paymentSourceId = tmp2;
             paymentSourceId = undefined;
             currentUser = currentUser.getCurrentUser();
             if (obj9.isPremium(currentUser)) {
-              let isSubscriptionFetching = outer1_5.hasFetchedSubscriptions();
+              let isSubscriptionFetching = closure_1_5.hasFetchedSubscriptions();
               if (!isSubscriptionFetching) {
-                isSubscriptionFetching = outer1_4.isSubscriptionFetching;
+                isSubscriptionFetching = closure_1_4.isSubscriptionFetching;
               }
               if (!isSubscriptionFetching) {
-                let obj2 = outer1_0(outer1_1[8]);
+                let obj2 = closure_1_0(closure_1_1[8]);
                 c2 = 1;
                 currentUser = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = obj2.fetchSubscriptions();
                 return obj1;
               }
@@ -88,21 +87,21 @@ let prototype = function SubscriptionManager() {
           obj[0] = arg1;
           return obj;
         }
-        paymentSourceId = outer1_5.getPremiumSubscription();
+        paymentSourceId = closure_1_5.getPremiumSubscription();
         paymentSourceId = undefined;
         if (paymentSourceId != null) {
           paymentSourceId = paymentSourceId.paymentSourceId;
         }
         let hasItem = null != paymentSourceId;
         if (!hasItem) {
-          const applicationIdsFetched = outer1_6.applicationIdsFetched;
-          hasItem = applicationIdsFetched.has(outer1_7);
+          const applicationIdsFetched = closure_1_6.applicationIdsFetched;
+          hasItem = applicationIdsFetched.has(closure_1_7);
         }
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
           const obj3 = { value: null, done: false };
-          obj3[0] = outer1_0(outer1_1[9]).fetchUserEntitlementsForApplication(outer1_7);
+          obj3[0] = closure_1_0(closure_1_1[9]).fetchUserEntitlementsForApplication(closure_1_7);
           return obj3;
         }
       } catch (tmp22) {
@@ -167,15 +166,15 @@ let prototype = function SubscriptionManager() {
             obj[0] = arg1;
             return obj;
           } else {
-            const currentUser = outer1_3.getCurrentUser();
+            const currentUser = closure_1_3.getCurrentUser();
             let isPremiumResult = v0(table[7]).isPremium(currentUser);
             if (isPremiumResult) {
-              isPremiumResult = !outer1_4.ipCountryCodeLoaded;
+              isPremiumResult = !closure_1_4.ipCountryCodeLoaded;
             }
             if (isPremiumResult) {
               table = 1;
               v0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = v0.fetchCountryCode();
               return obj1;
             }
@@ -225,11 +224,11 @@ let prototype = function SubscriptionManager() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
+            closure_0 = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(4466).fetchIpCountryCode();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0(4466).fetchIpCountryCode();
             return obj1;
           }
         } else {
@@ -242,8 +241,8 @@ let prototype = function SubscriptionManager() {
               const obj2 = { value: null, done: true };
               obj2[0] = arg1;
               return obj2;
-            } else if (null != outer1_4.ipCountryCode) {
-              obj1 = outer1_0(4466);
+            } else if (null != closure_1_4.ipCountryCode) {
+              obj1 = closure_1_0(4466);
               dependencyMap = 2;
               c2 = 1;
               const obj3 = { value: null, done: false };
@@ -273,6 +272,6 @@ let prototype = function SubscriptionManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-let result = require("handlePaymentSourceCreateEnd").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/SubscriptionManager.tsx");
 
 export default prototype;

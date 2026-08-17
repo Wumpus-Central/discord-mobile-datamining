@@ -1,33 +1,31 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
 function StackBlock() {
-  return callback(closure_2, { style: createCacheKey().block });
+  return callback(closure_2, { style: callback3().block });
 }
+noopAll;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { padding: 16, flex: 1, alignItems: "center" }, block: null };
-createCacheKey = { borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 80, flex: 1 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemStack.tsx");
 
 export default function UserSettingsDesignSystemStack() {
   let obj = { children: null };
-  obj = { style: createCacheKey().container, children: null };
+  obj = { style: callback3().container, children: null };
   obj = { spacing: 16, children: null };
-  const obj1 = { children: null };
+  obj1 = { children: null };
   const obj2 = { children: null };
   const items = [callback(Text.Text, { variant: "text-lg/bold", children: "Basic Example" }), callback(Text.Text, { variant: "text-md/medium", color: "text-subtle", children: "By default, stacks are vertical and have a spacing of 8." }), ];
   const obj3 = { children: null };

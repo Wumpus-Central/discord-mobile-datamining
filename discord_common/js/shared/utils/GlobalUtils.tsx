@@ -1,5 +1,7 @@
 // discord_common/js/shared/utils/GlobalUtils.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/GlobalUtils.tsx");
 
 export const getGlobalObject = function getGlobalObject() {
   if (typeof globalThis !== "undefined") {

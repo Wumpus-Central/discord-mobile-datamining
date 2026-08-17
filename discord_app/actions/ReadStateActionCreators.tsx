@@ -1,11 +1,11 @@
 // discord_app/actions/ReadStateActionCreators.tsx
-import rebuild from "rebuild";
-import { isReadableType } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import setIndex from "setIndex";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CURRENT_APP_CONTEXT } from "ME";
-import { dispatcher } from "../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "rebuild" /* 5251 */;
+import { isReadableType } from "createChannelRecord" /* 1395 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "setIndex" /* 5278 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { CURRENT_APP_CONTEXT } from "ME" /* 676 */;
 
 function ack(channelId, location, arg2, arg3, messageId) {
   let flag = arg2;
@@ -16,7 +16,7 @@ function ack(channelId, location, arg2, arg3, messageId) {
   if (arg3 === undefined) {
     flag2 = false;
   }
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "CHANNEL_ACK", channelId, messageId, immediate: flag, force: flag2, context: CURRENT_APP_CONTEXT, location };
   obj.dispatch(obj);
 }
@@ -44,7 +44,7 @@ function ackCategory(id, arg1, arg2, arg3) {
           if (guild_id == null) {
             guild_id = channel.guild_id;
           }
-          const activeJoinedThreadsForParent = outer1_2.getActiveJoinedThreadsForParent(guild_id, channel.id);
+          const activeJoinedThreadsForParent = closure_1_2.getActiveJoinedThreadsForParent(guild_id, channel.id);
           for (const key10011 in activeJoinedThreadsForParent) {
             let tmp3 = key10011;
             let tmp4 = mapped;
@@ -66,7 +66,7 @@ function ackCategory(id, arg1, arg2, arg3) {
     }
   }
 }
-const result = require("ensureGuildLoaded").fileFinishedImporting("actions/ReadStateActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/ReadStateActionCreators.tsx");
 
 export { ack };
 export { ackCategory };
@@ -101,28 +101,28 @@ export const ackChannel = function ackChannel(channel, arg1) {
   }
 };
 export const bulkAck = function bulkAck(mapped, onFinished) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "BULK_ACK", channels: mapped, context: CURRENT_APP_CONTEXT, onFinished };
   obj.dispatch(obj);
 };
 export const localAck = function localAck(channelId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "CHANNEL_LOCAL_ACK", channelId };
   obj.dispatch(obj);
 };
 export const enableAutomaticAck = function enableAutomaticAck(channelId, windowId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "ENABLE_AUTOMATIC_ACK", channelId, windowId };
   obj.dispatch(obj);
 };
 export const disableAutomaticAck = function disableAutomaticAck(channelId, windowId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "DISABLE_AUTOMATIC_ACK", channelId, windowId };
   obj.dispatch(obj);
 };
-export const ackGuildFeature = function ackGuildFeature(closure_0, GUILD_EVENT, outer1_11) {
-  let obj = dispatcher;
-  obj = { type: "GUILD_FEATURE_ACK", id: closure_0, ackType: GUILD_EVENT, ackedId: outer1_11, local: false };
+export const ackGuildFeature = function ackGuildFeature(closure_0, GUILD_EVENT, closure_1_11) {
+  let obj = dispatcherDefault;
+  obj = { type: "GUILD_FEATURE_ACK", id: closure_0, ackType: GUILD_EVENT, ackedId: closure_1_11, local: false };
   obj.dispatch(obj);
 };
 export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER) {
@@ -132,7 +132,7 @@ export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER) {
     id = currentUser.id;
   }
   if (null != id) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "USER_NON_CHANNEL_ACK", ackType: null, ackedId: null, local: false };
     obj[1] = NOTIFICATION_CENTER;
     obj[2] = arg1;
@@ -140,7 +140,7 @@ export const ackUserFeature = function ackUserFeature(NOTIFICATION_CENTER) {
   }
 };
 export const clearOldestUnreadMessageId = function clearOldestUnreadMessageId(current) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "CLEAR_OLDEST_UNREAD_MESSAGE", channelId: current };
   obj.dispatch(obj);
 };

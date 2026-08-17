@@ -1,16 +1,14 @@
 // discord_app/design/components/ContextMenu/native/ContextMenuState.native.tsx
-import noop from "noop";
-import keys from "keys";
+import batchUpdates from "batchUpdates" /* 705 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import HapticFeedbackTypes from "HapticFeedbackTypes" /* 4343 */;
+import closure_2 from "noop" /* 19 */;
+import keys from "keys" /* 644 */;
 import { batchUpdates } from "../../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { HapticFeedbackTypes } from "../../../../modules/haptics/HapticUtils.native.tsx";
-import { ReanimatedRexport } from "../../../../modules/reanimated/ReanimatedRexport.tsx";
 
-const require = arg1;
+require = arg1;
 keys = keys.create(() => ({ menu: null }));
 function updateContextMenuState(absoluteX, absoluteY, closure_17) {
-  let activeIndex;
-  let itemMeasurements;
-  let pan;
   ({ pan, itemMeasurements, activeIndex } = closure_17);
   const result = pan.set(absoluteY);
   const value = itemMeasurements.get();
@@ -34,9 +32,9 @@ function updateContextMenuState(absoluteX, absoluteY, closure_17) {
     const result1 = num / 4;
     if (activeIndex.get() !== result1) {
       const result2 = activeIndex.set(result1);
-      const obj = ReanimatedRexport;
-      ReanimatedRexport.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
-      const runOnJSResult = ReanimatedRexport.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
+      const obj = _mod4115;
+      _mod4115.runOnJS(HapticFeedbackTypes.triggerHapticFeedback)(HapticFeedbackTypes.HapticFeedbackTypes.IMPACT_LIGHT);
+      const runOnJSResult = _mod4115.runOnJS(HapticFeedbackTypes.triggerHapticFeedback);
     }
   }
   const result3 = activeIndex.set(-1);
@@ -45,7 +43,7 @@ keys = { INDEX_BOUNDS_WIDTH_OFFSET: 2, INDEX_BOUNDS_HEIGHT_OFFSET: 3, INDEX_BOUN
 updateContextMenuState.__closure = keys;
 updateContextMenuState.__workletHash = 10158111154044;
 updateContextMenuState.__initData = { code: "function updateContextMenuState_ContextMenuStateNativeTsx1(absoluteX,absoluteY,state){const{INDEX_BOUNDS_WIDTH_OFFSET,INDEX_BOUNDS_HEIGHT_OFFSET,INDEX_BOUNDS_PAGE_Y_OFFSET,INDEX_BOUNDS_PAGE_X_OFFSET,INDEX_BOUNDS_OFFSET,runOnJS,triggerHapticFeedback,HapticFeedbackTypes}=this.__closure;const{pan:pan,itemMeasurements:itemMeasurements,activeIndex:activeIndex}=state;pan.set(absoluteY);const bounds=itemMeasurements.get();let offset=0;while(offset<bounds.length){const width=bounds[offset+INDEX_BOUNDS_WIDTH_OFFSET];const height=bounds[offset+INDEX_BOUNDS_HEIGHT_OFFSET];const pageY=bounds[offset+INDEX_BOUNDS_PAGE_Y_OFFSET];const pageX=bounds[offset+INDEX_BOUNDS_PAGE_X_OFFSET];const lowerY=pageY;const upperY=pageY+height;const lowerX=pageX;const upperX=pageX+width;if(absoluteY>=lowerY&&absoluteY<=upperY&&absoluteX>=lowerX&&absoluteX<=upperX){const index=offset/INDEX_BOUNDS_OFFSET;if(activeIndex.get()!==index){activeIndex.set(index);runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_LIGHT);}return;}offset+=INDEX_BOUNDS_OFFSET;}activeIndex.set(-1);}" };
-let result = require("batchUpdates").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuState.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/ContextMenu/native/ContextMenuState.native.tsx");
 
 export const INDEX_BOUNDS_OFFSET = 4;
 export const INDEX_BOUNDS_PAGE_X_OFFSET = 0;
@@ -55,7 +53,7 @@ export const INDEX_BOUNDS_HEIGHT_OFFSET = 3;
 export const ContextMenuStore = keys;
 export const showContextMenu = function showContextMenu(arg0) {
   const _require = arg0;
-  _batchUpdates.batchUpdates(() => outer1_3.setState({ menu: closure_0 }));
+  _batchUpdates.batchUpdates(() => closure_1_3.setState({ menu: closure_0 }));
 };
 export const hideContextMenu = function hideContextMenu() {
   batchUpdates.batchUpdates(() => {
@@ -82,9 +80,6 @@ export const useContextMenuState = function useContextMenuState() {
   return sharedValue2.useMemo(() => ({ pan: sharedValue, itemMeasurements: sharedValue1, activeIndex: sharedValue2 }), items);
 };
 export const resetContextMenuState = function resetContextMenuState(contextMenuState) {
-  let activeIndex;
-  let itemMeasurements;
-  let pan;
   ({ activeIndex, pan, itemMeasurements } = contextMenuState);
   const result = activeIndex.set(-1);
   const result1 = pan.set(-1);

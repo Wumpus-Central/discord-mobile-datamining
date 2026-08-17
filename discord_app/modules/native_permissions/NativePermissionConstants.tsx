@@ -1,5 +1,7 @@
 // discord_app/modules/native_permissions/NativePermissionConstants.tsx
-const result = require("set").fileFinishedImporting("modules/native_permissions/NativePermissionConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/native_permissions/NativePermissionConstants.tsx");
 
 export const NativePermissionStatus = { AUTHORIZED: "authorized", DENIED: "denied", RESTRICTED: "restricted", LIMITED: "limited", UNDETERMINED: "undetermined" };
 export const NativePermissionStates = { DISMISSED: "dismissed", DENIED: "denied", ACCEPTED: "accepted", NO_DEVICES: "no_devices", ERROR: "error", NONE: "none" };

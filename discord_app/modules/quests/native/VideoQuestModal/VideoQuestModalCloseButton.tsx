@@ -1,16 +1,18 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx
-import { jsx } from "jsxProd";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { XSmallIcon } from "../../../../design/components/Icon/native/redesign/generated/XSmallIcon.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import XSmallIcon from "XSmallIcon" /* 6368 */;
 
-const result = require("PressableBase").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalCloseButton.tsx");
 
 export default function VideoQuestModalCloseButton(iconColor) {
   let MOBILE_TEXT_HEADING_PRIMARY = iconColor.iconColor;
   if (MOBILE_TEXT_HEADING_PRIMARY === undefined) {
-    MOBILE_TEXT_HEADING_PRIMARY = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    MOBILE_TEXT_HEADING_PRIMARY = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
   }
   const obj = { accessibilityLabel: null, accessibilityRole: "button", hitSlop: 12, onPress: null, style: null, children: null };
   const intl = getSystemLocale.intl;

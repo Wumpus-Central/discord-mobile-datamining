@@ -1,24 +1,20 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx
-import noop from "noop";
-import get_ActivityIndicator from "Button";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import Button from "Button";
-import { _isNativeReflectConstruct } from "../../../../../_runtime/09019__isNativeReflectConstruct.js";
-import { registerAsset } from "../../../../../_runtime/09835_registerAsset.js";
-import { ShieldIcon } from "../../../../design/components/Icon/native/redesign/generated/ShieldIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { openImagePickerUnhandled } from "../../../../utils/native/UploadUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
-import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 9019 */;
+import ShieldIcon from "ShieldIcon" /* 9834 */;
+import registerAssetDefault from "registerAsset" /* 9835 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import Button from "Button" /* 1297 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ExplicitMediaFalsePositivePreviewEmbed(embed) {
   embed = embed.embed;
   if (undefined !== embed.video) {
@@ -50,7 +46,7 @@ function ExplicitMediaFalsePositivePreviewAttachment(attachment) {
 }
 function ExplicitMediaFalsePositivePreview(url) {
   url = url.url;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = openImagePickerUnhandled;
   obj = { style: items, children: null };
   items = [, ];
@@ -58,10 +54,10 @@ function ExplicitMediaFalsePositivePreview(url) {
   if (obj.isVideo(url)) {
     obj = { volume: 0, resizeMode: "cover", repeat: true, style: null, source: null, controls: true, paused: true };
     obj[3] = tmp.media;
-    const obj1 = { uri: null };
+    obj1 = { uri: null };
     obj1[0] = url;
     obj[4] = obj1;
-    let tmp3Result = tmp3(_isNativeReflectConstruct, obj);
+    let tmp3Result = tmp3(_isNativeReflectConstructDefault, obj);
   } else {
     const obj2 = { style: null, source: null };
     const items1 = [, ];
@@ -76,46 +72,42 @@ function ExplicitMediaFalsePositivePreview(url) {
   return closure_7(closure_4, obj);
 }
 ({ View: c4, Image: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { content: null, contentContainer: null, heading: null, mediaContainer: null, elevationShadow: null, image: null, media: null, footer: null };
-createCacheKey = { padding: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { justifyContent: "center", textAlign: "center", alignItems: "center" };
-createCacheKey[2] = { marginBottom: require("Themes").space.PX_8 };
-let obj1 = { marginBottom: require("Themes").space.PX_8 };
-createCacheKey[3] = { width: "100%", padding: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.xs, marginTop: require("Themes").space.PX_8, aspectRatio: "4 / 3" };
+createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { width: "100%", padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, marginTop: ThemesDefault.space.PX_8, aspectRatio: "4 / 3" };
 createCacheKey[4] = Button.generateBoxShadowStyle(require("Button").FOUR_DP_ELEVATION_SHADOW_PARAMS);
 createCacheKey[5] = { resizeMode: "contain" };
-let obj2 = { width: "100%", padding: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.xs, marginTop: require("Themes").space.PX_8, aspectRatio: "4 / 3" };
-createCacheKey[6] = { flex: 1, borderRadius: require("Themes").radii.xs };
-let obj3 = { flex: 1, borderRadius: require("Themes").radii.xs };
-createCacheKey[7] = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_8 };
-let result = require("jsxProd").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx");
+let obj2 = { width: "100%", padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.xs, marginTop: ThemesDefault.space.PX_8, aspectRatio: "4 / 3" };
+createCacheKey[6] = { flex: 1, borderRadius: ThemesDefault.radii.xs };
+let obj3 = { flex: 1, borderRadius: ThemesDefault.radii.xs };
+createCacheKey[7] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaFalsePositiveActionSheet.tsx");
 
 export const handleSuccess = function handleSuccess(arg0) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj.hideActionSheet(arg0);
-  obj = { key: "explicit_media_report_false_positive_success", icon: registerAsset, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: null };
+  obj = { key: "explicit_media_report_false_positive_success", icon: registerAssetDefault, IconComponent: ShieldIcon.ShieldIcon, iconColor: "text-brand", content: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.gFsTKu);
-  dispatcher.open(obj);
+  dispatcherDefault.open(obj);
 };
 export const handleError = function handleError() {
   const intl = getSystemLocale.intl;
   presentAddedFriendToast.presentError(intl.string(getSystemLocale.t.R0RpRX));
 };
 export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalsePositiveActionSheet(channelId) {
-  let attachmentPreview;
-  let embedPreview;
-  let isReportFalsePositiveLoading;
-  let onConfirmPress;
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   ({ isReportFalsePositiveLoading, attachmentPreview, embedPreview, onConfirmPress } = channelId);
   const analyticsContext = channelId.analyticsContext;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const items = [channelId, messageId, analyticsContext];
   const items1 = [channelId, messageId, analyticsContext, onConfirmPress];
   const callback = analyticsContext.useCallback(() => {
@@ -149,7 +141,7 @@ export const ExplicitMediaFalsePositiveActionSheet = function ExplicitMediaFalse
   items3[1] = callback(channelId(onConfirmPress[16]).Text, obj);
   let tmp5Result = null != attachmentPreview;
   if (tmp5Result) {
-    const obj1 = { attachment: null };
+    obj1 = { attachment: null };
     obj1[0] = attachmentPreview;
     tmp5Result = tmp5(ExplicitMediaFalsePositivePreviewAttachment, obj1);
   }

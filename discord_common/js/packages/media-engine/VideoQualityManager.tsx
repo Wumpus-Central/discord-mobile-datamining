@@ -1,11 +1,8 @@
 // discord_common/js/packages/media-engine/VideoQualityManager.tsx
-import DesktopSources from "DesktopSources";
+import set from "set" /* 2 */;
+import getMaxSinkValue from "getMaxSinkValue" /* 4582 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let VideoQualityMode;
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ defaultVideoQualityOptions: obj1, MediaEngineContextTypes: c3, VideoQualityMode, VIDEO_QUALITY_FRAMERATE: c4, BIT_FLOOR_PER_PIXEL: c5 } = DesktopSources);
 class WantsVideoQuality {
   constructor(arg0) {
@@ -25,8 +22,8 @@ class WantsVideoQuality {
     if (null != global.capture) {
       capture = global.capture;
       tmp3 = new.target;
-      tmp2 = VideoQuality;
-      if (typeof VideoQuality !== "function") {
+      tmp2 = closure_7;
+      if (typeof closure_7 !== "function") {
         str2 = "Trying to call a non-function";
         throwTypeErrorResult = HermesBuiltin.throwTypeError();
       }
@@ -41,8 +38,8 @@ class WantsVideoQuality {
     if (null != global.encode) {
       encode = global.encode;
       tmp8 = new.target;
-      tmp7 = VideoQuality;
-      if (typeof VideoQuality !== "function") {
+      tmp7 = closure_7;
+      if (typeof closure_7 !== "function") {
         str3 = "Trying to call a non-function";
         throwTypeErrorResult1 = HermesBuiltin.throwTypeError();
       }
@@ -128,12 +125,12 @@ prototype["extend"] = function extend(width, width2) {
   }
 };
 const frozen = Object.freeze({ [VideoQualityMode.AUTO]: {}, [VideoQualityMode.FULL]: { encode: { width: 1280, height: 720 } } });
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/VideoQualityManager.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/VideoQualityManager.tsx");
 class VideoQualityManager {
   constructor(arg0, arg1) {
     tmp = importDefault;
     if (importDefault === undefined) {
-      tmp = __esModule;
+      tmp = closure_2;
     }
     obj = Object.create(new.target.prototype);
     obj.contextType = global;

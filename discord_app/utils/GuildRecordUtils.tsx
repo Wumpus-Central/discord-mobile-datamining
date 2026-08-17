@@ -1,22 +1,14 @@
 // discord_app/utils/GuildRecordUtils.tsx
-import isValueEqual from "isValueEqual";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import { GuildNSFWContentLevel } from "ME";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { areSetsEqual } from "../../discord_common/js/shared/utils/SetUtils.tsx";
-import { fromServerGuildIncidentsData } from "../modules/guild_antiraid/guildIncidentsSerialization.tsx";
-import { cloneGuildThemeSettings } from "../modules/guild_themes/guildThemeSerialization.tsx";
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import ME from "ME" /* 676 */;
+import areSetsEqual from "areSetsEqual" /* 1433 */;
+import fromServerGuildIncidentsData from "fromServerGuildIncidentsData" /* 1908 */;
+import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
+import isValueEqual from "isValueEqual" /* 1431 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {
-  let application_id;
-  let discovery_splash;
-  let mfa_level;
   let obj = { id: properties.id, joinedAt: joinedAt.joinedAt, premiumSubscriberCount: joinedAt.premiumSubscriberCount, name: properties.name, description: null, icon: null, splash: null, banner: null, homeHeader: null, features: null, preferredLocale: null, ownerId: null, application_id: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, explicitContentFilter: null, defaultMessageNotifications: null, mfaLevel: null, vanityURLCode: null, premiumTier: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, verificationRoleId: null, gameApplicationIds: null, officialMessageColor: null, incidentsData: null };
   let description = properties.description;
   if (description == null) {
@@ -226,8 +218,9 @@ function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildThem
   return closure_6(closure_8, guildTheme, obj);
 }
 ({ constructInPlace: c3, merge: c4, objectIsPlainRecordOfType: c5, tryReuseExistingInPlacePlainRecord: closure_6 } = isValueEqual);
-({ GUILD_DEFAULT_PROPERTY_VALUES: error, GuildRecordTypeTag: metroImportAll } = GuildNSFWContentLevel);
-const result = require("ME").fileFinishedImporting("utils/GuildRecordUtils.tsx");
+({ GUILD_DEFAULT_PROPERTY_VALUES: error, GuildRecordTypeTag: closure_8 } = GuildNSFWContentLevel);
+GuildNSFWContentLevel = ME.GuildNSFWContentLevel;
+const result = set.fileFinishedImporting("utils/GuildRecordUtils.tsx");
 
 export const isGuildRecord = function isGuildRecord(has) {
   return callback3(closure_8, has);
@@ -251,7 +244,7 @@ export const fromServer = function fromServer(joined_at, joinedAt) {
     num = 0;
   }
   if (null == joined_at.properties) {
-    00038__(null != joinedAt, "If guild.properties is null, existingGuild must be passed in");
+    _modDef38(null != joinedAt, "If guild.properties is null, existingGuild must be passed in");
     let obj = { joinedAt: null, premiumSubscriberCount: null };
     obj[0] = date;
     obj[1] = num;
@@ -315,8 +308,7 @@ export const fromGuild = function fromGuild(guild, fromGuildResult) {
   return fromGuildPropertiesWithAdditionalFields(guild, { joinedAt: date, premiumSubscriberCount: guild.premium_subscription_count }, fromGuildResult);
 };
 export const fromInviteGuild = function fromInviteGuild(guild) {
-  let obj = { id: guild.id, name: guild.name, description: guild.description, icon: guild.icon, splash: guild.splash, banner: guild.banner, features: null, verificationLevel: null, vanityURLCode: null, premiumSubscriberCount: null, nsfwLevel: null, premiumTier: null, homeHeader: null };
-  obj[6] = areSetsEqual.toSetInplace(guild.features);
+  let obj = { id: guild.id, name: guild.name, description: guild.description, icon: guild.icon, splash: guild.splash, banner: guild.banner, features: areSetsEqual.toSetInplace(guild.features), verificationLevel: null, vanityURLCode: null, premiumSubscriberCount: null, nsfwLevel: null, premiumTier: null, homeHeader: null };
   ({ verification_level: obj[7], vanity_url_code: obj[8], premium_subscription_count: obj[9], nsfw_level: obj[10], premium_tier: obj[11], home_header: obj[12] } = guild);
   obj = {};
   const merged = Object.assign(closure_7);
@@ -504,9 +496,7 @@ export const fromGuildBasic = function fromGuildBasic(id) {
   return callback(closure_8, obj);
 };
 export const dangerouslyConstructGuildRecordFromUntypedObject = function dangerouslyConstructGuildRecordFromUntypedObject(c0) {
-  let latestOnboardingQuestionId;
-  const obj = { id: c0.id, name: tmp, description: tmp2, ownerId: tmp3, icon: tmp4, splash: tmp5, banner: tmp6, homeHeader: tmp7, features: null, preferredLocale: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, joinedAt: null, defaultMessageNotifications: null, mfaLevel: null, application_id: null, explicitContentFilter: null, vanityURLCode: null, premiumTier: null, premiumSubscriberCount: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, gameApplicationIds: null, officialMessageColor: null, verificationRoleId: null, incidentsData: null };
-  obj[8] = areSetsEqual.toSetInplace(c0.features);
+  const obj = { id: c0.id, name: tmp, description: tmp2, ownerId: tmp3, icon: tmp4, splash: tmp5, banner: tmp6, homeHeader: tmp7, features: areSetsEqual.toSetInplace(c0.features), preferredLocale: null, afkChannelId: null, afkTimeout: null, systemChannelId: null, verificationLevel: null, joinedAt: null, defaultMessageNotifications: null, mfaLevel: null, application_id: null, explicitContentFilter: null, vanityURLCode: null, premiumTier: null, premiumSubscriberCount: null, premiumProgressBarEnabled: null, premiumProgressBarEnabledUserUpdatedAt: null, systemChannelFlags: null, discoverySplash: null, rulesChannelId: null, safetyAlertsChannelId: null, publicUpdatesChannelId: null, maxStageVideoChannelUsers: null, maxVideoChannelUsers: null, maxMembers: null, nsfwLevel: null, ownerConfiguredContentLevel: null, hubType: null, latestOnboardingQuestionId: null, profile: null, guildTheme: null, premiumFeatures: null, moderatorReporting: null, guildSpaceSettings: null, gameApplicationIds: null, officialMessageColor: null, verificationRoleId: null, incidentsData: null };
   let preferredLocale = c0.preferredLocale;
   if (!preferredLocale) {
     preferredLocale = closure_7.preferredLocale;
@@ -656,7 +646,6 @@ export const dangerouslyConstructGuildRecordFromUntypedObject = function dangero
   return callback(closure_8, obj);
 };
 export const toGuildProperties = function toGuildProperties(id) {
-  let premiumProgressBarEnabledUserUpdatedAt;
   let obj = { id: id.id, name: id.name, description: id.description, icon: id.icon, splash: id.splash, banner: id.banner, home_header: id.homeHeader, features: Array.from(id.features), preferred_locale: id.preferredLocale, owner_id: id.ownerId, application_id: id.application_id, afk_channel_id: id.afkChannelId, afk_timeout: id.afkTimeout, system_channel_id: id.systemChannelId, verification_level: id.verificationLevel, explicit_content_filter: id.explicitContentFilter, default_message_notifications: id.defaultMessageNotifications, mfa_level: id.mfaLevel, vanity_url_code: null, premium_tier: null, premium_progress_bar_enabled: null, premium_progress_bar_enabled_user_updated_at: null, premium_features: null, system_channel_flags: null, discovery_splash: null, rules_channel_id: null, safety_alerts_channel_id: null, public_updates_channel_id: null, max_stage_video_channel_users: null, max_video_channel_users: null, max_members: null, nsfw_level: null, nsfw: null, owner_configured_content_level: null, hub_type: null, latest_onboarding_question_id: null, profile: null, theme: null, moderator_reporting: null, guild_space_settings: null, official_message_color: null, incidents_data: null, game_application_ids: null, verification_role_id: null };
   let vanityURLCode = id.vanityURLCode;
   if (vanityURLCode == null) {
@@ -698,7 +687,7 @@ export const toGuildProperties = function toGuildProperties(id) {
   if (null != id.moderatorReporting) {
     ({ moderatorReportingEnabled: obj5[0], moderatorReportChannelId: obj5[1] } = id.moderatorReporting);
     tmp9 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
-    const obj1 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
+    obj1 = { moderator_reporting_enabled: null, moderator_report_channel_id: null };
   }
   obj[38] = tmp9;
   ({ guildSpaceSettings: obj[39], officialMessageColor: obj[40] } = id);

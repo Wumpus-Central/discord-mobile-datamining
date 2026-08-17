@@ -1,29 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfilePrimaryInfo.tsx
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "getRootNavigationRef";
-import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import ME from "ME";
-import { GuildTagBadgeSize } from "items";
-import jsxProd from "BadgeId";
-import createCacheKey from "createCacheKey";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { guildHasTag } from "../../guild_tag/GuildTagUtils.tsx";
-import { memoResult1 } from "../../guild_tag/native/GuildTag.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import guildHasTag from "guildHasTag" /* 8375 */;
+import AVERAGE_FONT_WIDTH_RATIODefault from "AVERAGE_FONT_WIDTH_RATIO" /* 9452 */;
+import memoResult1Default from "memoResult1" /* 9509 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import USER_PROFILE_TOOLTIP_DELAY from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import ME from "ME" /* 676 */;
+import { GuildTagBadgeSize } from "items" /* 8168 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let UserProfileThemeTypes;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class DisplayName {
   constructor(arg0) {
     user = global.user;
@@ -32,35 +22,35 @@ class DisplayName {
       showChevron = false;
     }
     ({ pendingDisplayNameStyles, displayNameAccessibilityRole } = global);
-    c1 = undefined;
-    tmp = Fragment();
-    c1 = tmp;
+    closure_1 = undefined;
+    tmp = closure_16();
+    closure_1 = tmp;
     tmp2 = undefined;
     if (null != themeType) {
-      tmp3 = Fragment;
-      tmp2 = Fragment[themeType];
+      tmp3 = closure_18;
+      tmp2 = closure_18[themeType];
     }
     if (tmp2 == null) {
-      tmp2 = Fragment;
+      tmp2 = closure_17;
     }
     renderBotTag = function renderBotTag() {
       let obj = user;
       if (user.isSystemUser()) {
         obj = { style: null, type: null, verified: null };
-        obj[0] = _undefined.botTag;
-        obj[1] = _undefined(outer1_2[11]).Types.SYSTEM_DM;
+        obj[0] = lib.botTag;
+        obj[1] = lib(closure_1_2[11]).Types.SYSTEM_DM;
         obj[2] = obj.isVerifiedBot();
-        let tmp = outer1_13(_undefined(outer1_2[11]), obj);
-        const tmp12 = _undefined(outer1_2[11]);
+        let tmp = closure_1_13(lib(closure_1_2[11]), obj);
+        const tmp12 = lib(closure_1_2[11]);
       } else {
         tmp = null;
         if (obj.bot) {
           obj = { style: null, type: null, verified: null };
-          obj[0] = _undefined.botTag;
-          obj[1] = _undefined(outer1_2[11]).Types.BOT;
+          obj[0] = lib.botTag;
+          obj[1] = lib(closure_1_2[11]).Types.BOT;
           obj[2] = obj.isVerifiedBot();
-          tmp = outer1_13(_undefined(outer1_2[11]), obj);
-          const tmp5 = _undefined(outer1_2[11]);
+          tmp = closure_1_13(lib(closure_1_2[11]), obj);
+          const tmp5 = lib(closure_1_2[11]);
         }
       }
       return tmp;
@@ -71,7 +61,7 @@ class DisplayName {
       tmp6 = View;
       obj = { children: null };
       tmp7 = jsx;
-      tmp8 = c1;
+      tmp8 = closure_1;
       tmp9 = closure_2;
       obj = { userId: null, guildId: null, userName: null, variant: null, effectDisplayType: null, lineClamp: 2, pendingDisplayNameStyles: null, defaultColor: "mobile-text-heading-primary", accessibilityRole: null };
       obj[0] = user.id;
@@ -98,7 +88,7 @@ class DisplayName {
       obj1[2] = name;
       obj1[3] = global.accessibilityHint;
       obj1[4] = tmp.displayName;
-      tmp16 = c1;
+      tmp16 = closure_1;
       tmp15 = jsx;
       obj2 = { userId: null, guildId: null, userName: null, variant: null, effectDisplayType: null, lineClamp: 2, pendingDisplayNameStyles: null, defaultColor: "mobile-text-heading-primary", accessibilityRole: null };
       obj2[0] = user.id;
@@ -131,18 +121,18 @@ class UserTagAndPronouns {
     textVariant = undefined;
     ({ onPressPronouns, pronounsAccessibilityHint } = global);
     tmp2 = null != pronouns;
-    tmp = Fragment();
+    tmp = closure_16();
     if (tmp2) {
       num = 0;
       tmp2 = pronouns.length > 0;
     }
     tmp3 = undefined;
     if (null != themeType) {
-      tmp4 = Fragment;
-      tmp3 = Fragment[themeType];
+      tmp4 = closure_18;
+      tmp3 = closure_18[themeType];
     }
     if (tmp3 == null) {
-      tmp3 = Fragment;
+      tmp3 = closure_17;
     }
     textVariant = tmp3.textVariant;
     items = [, , , ];
@@ -161,7 +151,7 @@ class UserTagAndPronouns {
         let obj = { variant: null, color: "mobile-text-heading-primary", lineClamp: 2, children: null };
         obj[0] = textVariant;
         obj[3] = tmp;
-        const tmp9 = outer1_13(userTag(userTagAccessibilityHint[14]).Text, obj);
+        const tmp9 = closure_1_13(userTag(userTagAccessibilityHint[14]).Text, obj);
         if (null != onPressUserTag) {
           obj = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, children: null };
           obj[0] = tmp10;
@@ -172,7 +162,7 @@ class UserTagAndPronouns {
         } else {
           obj = { children: null };
           obj[0] = tmp9;
-          tmp5Result = tmp5(outer1_5, obj);
+          tmp5Result = tmp5(closure_1_5, obj);
         }
         return tmp5Result;
       }
@@ -221,9 +211,6 @@ class UserTagAndPronouns {
   }
 }
 function ProfileBadge(source) {
-  let badgeSize;
-  let showToastOnPress;
-  let themeType;
   source = source.source;
   const id = source.id;
   const label = source.label;
@@ -232,15 +219,15 @@ function ProfileBadge(source) {
     showToastOnPress = true;
   }
   let React;
-  let closure_4;
-  const tmp = createCacheKey();
+  closure_4 = undefined;
+  const tmp = callback3();
   if (null != badgeSize) {
     let obj = { width: null, height: null };
     obj[0] = badgeSize;
     obj[1] = badgeSize;
   }
   const ref = React.useRef(null);
-  let obj1 = source(label[15]);
+  obj1 = source(label[15]);
   React = obj1.useTieredTenureBadgeClickHandler(id, source.userId, themeType);
   let obj2 = source(label[16]);
   closure_4 = obj2.useAdUser("profile_badge");
@@ -297,8 +284,8 @@ function ProfileBadge(source) {
     obj3 = { accessibilityRole: "image", accessibilityLabel: null, onPress: null, ref: null, children: null };
     obj3[1] = formatToPlainStringResult;
     obj3[2] = function onPress() {
-      if (null == getSystemLocale) {
-        if (id !== outer1_7(source(label[21]).BadgeId.GIFTING)) {
+      if (null == closure_3) {
+        if (id !== closure_1_7(source(label[21]).BadgeId.GIFTING)) {
           let obj2 = id(tmp6[23]);
           let obj = { key: null, content: null, icon: null };
           const _HermesInternal = HermesInternal;
@@ -315,7 +302,7 @@ function ProfileBadge(source) {
               obj[1] = tmp5(tmp6[28]).QuestContent.QUEST_BADGE;
               tmp5Result.captureAdUserAction(obj);
             } else {
-              const obj1 = {};
+              obj1 = {};
               const tmp9Result = tmp9(tmp6[29]);
               const merged = Object.assign(tmp5(tmp6[30]).getContentProperties(tmp5(tmp6[28]).QuestContent.QUEST_BADGE));
               let advertisingId = null;
@@ -337,14 +324,14 @@ function ProfileBadge(source) {
               }
               obj1.android_advertising_id = advertisingId1;
               obj1.is_targeted = false;
-              tmp9Result.track(outer1_11.QUEST_CONTENT_VIEWED, obj1);
+              tmp9Result.track(closure_1_11.QUEST_CONTENT_VIEWED, obj1);
               const tmp5Result1 = tmp5(tmp6[30]);
             }
           }
           tmp9 = id;
         } else {
           obj2 = { screen: null, params: null };
-          obj2[0] = outer1_12.PREMIUM_GIFTING;
+          obj2[0] = closure_1_12.PREMIUM_GIFTING;
           obj2[1] = {};
           tmp5(tmp6[22]).openUserSettings(obj2);
           const tmp5Result4 = tmp5(tmp6[22]);
@@ -381,20 +368,20 @@ class ProfileBadgeRows {
     userId = global.userId;
     ({ badges, isTryItOut, style, themeType } = global);
     showToastOnPress = global.showToastOnPress;
-    c4 = undefined;
+    closure_4 = undefined;
     badgeSize = undefined;
     badgeRowHorizontalPadding = undefined;
-    c7 = undefined;
+    closure_7 = undefined;
     width = undefined;
-    tmp = Fragment();
-    c4 = tmp;
+    tmp = closure_16();
+    closure_4 = tmp;
     tmp2 = undefined;
     if (null != themeType) {
-      tmp3 = Fragment;
-      tmp2 = Fragment[themeType];
+      tmp3 = closure_18;
+      tmp2 = closure_18[themeType];
     }
     if (tmp2 == null) {
-      tmp2 = Fragment;
+      tmp2 = closure_17;
     }
     badgeSize = tmp2.badgeSize;
     badgeRowHorizontalPadding = tmp2.badgeRowHorizontalPadding;
@@ -409,9 +396,9 @@ class ProfileBadgeRows {
       obj[4] = badgeSize;
       obj[5] = themeType;
       obj[6] = showToastOnPress;
-      return outer1_13(outer1_21, obj, id.id);
+      return closure_1_13(closure_1_21, obj, id.id);
     });
-    c7 = mapped;
+    closure_7 = mapped;
     if (isTryItOut) {
       isTryItOut = null == badges.find((id) => "premium" === id.id);
     }
@@ -445,8 +432,8 @@ class ProfileBadgeRows {
     items[2] = badgeSize;
     items[3] = width;
     memo = showToastOnPress.useMemo(() => {
-      const rounded = Math.floor((width - 2 * outer1_9 - 2 * badgeRowHorizontalPadding + 4) / (badgeSize + 4));
-      return Array.from({ length: Math.ceil(mapped.length / rounded) }, (arg0, arg1) => outer1_7.slice(arg1 * rounded, (arg1 + 1) * rounded));
+      const rounded = Math.floor((width - 2 * closure_1_9 - 2 * badgeRowHorizontalPadding + 4) / (badgeSize + 4));
+      return Array.from({ length: Math.ceil(mapped.length / rounded) }, (arg0, arg1) => closure_1_7.slice(arg1 * rounded, (arg1 + 1) * rounded));
     }, items);
     obj1 = { style: items1, accessibilityRole: "list", accessibilityLabel: null, children: null };
     items1 = [];
@@ -455,30 +442,21 @@ class ProfileBadgeRows {
     obj1[2] = intl2.string(require("getSystemLocale").t.VWV0y5);
     obj1[3] = memo.map((children) => {
       let obj = { style: items, children };
-      items = [_undefined.badgeRow, , ];
+      items = [badgeRow.badgeRow, , ];
       obj = { paddingHorizontal: badgeRowHorizontalPadding };
       items[1] = obj;
       items[2] = closure_1;
-      return outer1_13(badgeSize, obj, arg1);
+      return closure_1_13(badgeSize, obj, arg1);
     });
     return jsx(badgeSize, obj1);
   }
 }
 function GuildTag(style) {
-  let badgeSize;
-  let guildId;
-  let guildTagBadgeSize;
-  let guildTagHorizontalPadding;
-  let guildTagTextVariant;
-  let showToastOnPress;
-  let tag;
-  let themeType;
-  let user;
   ({ user, themeType, showToastOnPress } = style);
   if (showToastOnPress === undefined) {
     showToastOnPress = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = guildHasTag;
   let primaryGuild;
   if (user != null) {
@@ -506,7 +484,7 @@ function GuildTag(style) {
       items[1] = obj;
       items[2] = style.style;
       obj[0] = items;
-      const obj1 = { userId: null, disabledTooltip: null, containerStyles: null, textStyle: null, badgeSize: null, textVariant: null };
+      obj1 = { userId: null, disabledTooltip: null, containerStyles: null, textStyle: null, badgeSize: null, textVariant: null };
       obj1[0] = user.id;
       obj1[1] = !showToastOnPress;
       obj1[2] = tmp.transparentBackground;
@@ -515,7 +493,7 @@ function GuildTag(style) {
       obj1[3] = obj2;
       obj1[4] = guildTagBadgeSize;
       obj1[5] = guildTagTextVariant;
-      obj[1] = callback(memoResult1, obj1);
+      obj[1] = callback(memoResult1Default, obj1);
       tmp9 = callback(closure_5, obj);
     }
   }
@@ -523,49 +501,31 @@ function GuildTag(style) {
 }
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ getBadgeAssetFromCDN: closure_6, getBadgeName: error } = USER_PROFILE_TOOLTIP_DELAY);
-({ DIVIDER_DOT: metroImportAll, PROFILE_SIDE_PADDING: c9, UserProfileThemeTypes } = ARBITRARY_LARGE_OFFSET);
+({ DIVIDER_DOT: closure_8, PROFILE_SIDE_PADDING: c9, UserProfileThemeTypes } = ARBITRARY_LARGE_OFFSET);
 ({ AnalyticEvents: unpackModuleId, UserSettingsSections: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 createCacheKey = { container: { flexDirection: "column" }, displayName: { flexDirection: "row", alignItems: "center", columnGap: 4 }, details: { flexDirection: "row", flexWrap: "wrap", gap: 8 }, detailsText: { flexDirection: "row", flexWrap: "wrap", alignContent: "center", paddingVertical: 2 }, botTag: { marginLeft: 4 }, guildTag: null, transparentBackground: null, badge: null, badges: null, badgeRow: null };
-createCacheKey = { alignSelf: "center", justifyContent: "center", borderRadius: require("Themes").radii.sm, columnGap: 4 };
+createCacheKey = { alignSelf: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.sm, columnGap: 4 };
 createCacheKey[5] = createCacheKey;
 createCacheKey[6] = { backgroundColor: "transparent" };
 createCacheKey[7] = { resizeMode: "contain" };
 createCacheKey[8] = { alignSelf: "center", flexDirection: "column", justifyContent: "flex-start", rowGap: 8 };
-createCacheKey[9] = { borderRadius: require("Themes").radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[9] = { borderRadius: ThemesDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
+let closure_16 = createCacheKey.createStyles(createCacheKey);
 let closure_17 = { headingVariant: "heading-xl/bold", textVariant: "text-md/normal", badgeSize: 20, badgeRowHorizontalPadding: 7, guildTagBadgeSize: GuildTagBadgeSize.SIZE_16, guildTagTextVariant: "text-sm/medium", guildTagHorizontalPadding: 8 };
 let closure_18 = { [UserProfileThemeTypes.PREVIEW]: { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 } };
-let obj1 = { borderRadius: require("Themes").radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
+let obj1 = { borderRadius: ThemesDefault.radii.sm, paddingVertical: 2, justifyContent: "flex-start", flexDirection: "row", marginRight: "auto", columnGap: 4 };
 let obj2 = { headingVariant: "heading-lg/bold", textVariant: "text-sm/normal", badgeSize: 16, badgeRowHorizontalPadding: 6, guildTagBadgeSize: GuildTagBadgeSize.SIZE_12, guildTagTextVariant: "text-xs/medium", guildTagHorizontalPadding: 6 };
-const result = require("USER_PROFILE_TOOLTIP_DELAY").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryInfo.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfilePrimaryInfo.tsx");
 
 export default function UserProfilePrimaryInfo(arg0) {
-  let badgeContainerBackground;
-  let badges;
-  let displayName;
-  let displayNameAccessibilityHint;
-  let displayNameAccessibilityRole;
-  let guildId;
-  let onPressDisplayName;
-  let onPressPronouns;
-  let onPressUserTag;
-  let pendingDisplayNameStyles;
-  let pronouns;
-  let pronounsAccessibilityHint;
-  let showBadgeToastOnPress;
-  let showChevron;
-  let style;
-  let themeType;
-  let user;
-  let userTagAccessibilityHint;
   ({ user, displayName, themeType, showBadgeToastOnPress } = arg0);
   ({ guildId, pronouns, style, badges, badgeContainerBackground, onPressDisplayName, displayNameAccessibilityHint, displayNameAccessibilityRole, onPressUserTag, userTagAccessibilityHint, onPressPronouns, pronounsAccessibilityHint, showChevron, pendingDisplayNameStyles } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { backgroundColor: badgeContainerBackground };
-  let obj1 = nameFromUser;
+  obj1 = nameFromUserDefault;
   const name = obj1.useName(user);
-  let obj2 = nameFromUser;
+  let obj2 = nameFromUserDefault;
   obj = { style: items, children: null };
   items = [tmp.container, style];
   obj = { user, guildId, name: null, themeType: null, onPress: null, accessibilityHint: null, displayNameAccessibilityRole: null, showChevron: null, pendingDisplayNameStyles: null };

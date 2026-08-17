@@ -1,10 +1,10 @@
 // discord_app/modules/gateway/RequestGatewaySocket.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function setRequestedBy(closure_0) {
-  let c6 = false;
+  c6 = false;
   let num = map.get(closure_0);
   if (num == null) {
     num = 0;
@@ -23,7 +23,7 @@ function setRequestedBy(closure_0) {
   }
 }
 function stopRequest(closure_0) {
-  let c6 = false;
+  c6 = false;
   let num = map.get(closure_0);
   if (num == null) {
     num = 0;
@@ -38,11 +38,11 @@ function stopRequest(closure_0) {
 function _withRequest() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -70,13 +70,13 @@ function _withRequest() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp3;
-              let closure_2 = tmp7;
-              let c5 = 1;
-              outer1_8(closure_0);
+              closure_3 = tmp3;
+              closure_2 = tmp7;
+              c5 = 1;
+              closure_1_8(closure_0);
               c6 = 2;
               c7 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = callback();
               return obj1;
             }
@@ -114,7 +114,7 @@ function _withRequest() {
       }
     })();
   });
-  const _withRequest = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -126,13 +126,13 @@ function _withRequest() {
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
-let result = require("setOriginWindow").fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
+let result = require("set").fileFinishedImporting("modules/gateway/RequestGatewaySocket.tsx");
 
 export const isRequested = function isRequested() {
   return map.size > 0 || c6;
 };
 export function recordStartHeadlessTask() {
-  let c6 = false;
+  c6 = false;
 }
 export const describeConnectionReasons = function describeConnectionReasons() {
   const items = [...c6 ? closure_5 : [], ...map.keys()];
@@ -146,24 +146,24 @@ export const describeConnectionReasons = function describeConnectionReasons() {
 export { setRequestedBy };
 export const startBridgeTo = function startBridgeTo(arg0) {
   const combined = "BRIDGE:" + arg0;
-  let closure_1 = performance.now();
-  let c6 = false;
+  closure_1 = performance.now();
+  c6 = false;
   let num = map.get(combined);
   if (num == null) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
   combined(696).requestSafeIdleCallback(() => {
-    let obj = outer1_7;
-    if (outer1_7.has(combined)) {
+    let obj = closure_1_7;
+    if (closure_1_7.has(combined)) {
       obj = { bridge_token: null, cleared_after: null };
       obj[0] = tmp;
       const _performance = performance;
       obj[1] = performance.now() - callback;
-      callback(outer1_2[3]).track(outer1_4.GATEWAY_BRIDGE_TIMEOUT, obj);
-      const obj2 = callback(outer1_2[3]);
+      callback(closure_1_2[3]).track(closure_1_4.GATEWAY_BRIDGE_TIMEOUT, obj);
+      const obj2 = callback(closure_1_2[3]);
     }
-    let c6 = false;
+    c6 = false;
     let num = obj.get(tmp);
     if (num == null) {
       num = 0;

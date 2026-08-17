@@ -1,19 +1,20 @@
 // discord_app/modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../AgeAssurance.messages.js";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2853 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationQuestUnsupportedAlertModal.tsx");
 
 export default function AgeVerificationQuestUnsupportedAlertModal() {
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
-  obj[0] = intl.string(messagesProxy.gUqXQN);
+  obj[0] = intl.string(messagesProxyDefault.gUqXQN);
   const intl2 = getSystemLocale.intl;
-  obj[1] = intl2.string(messagesProxy.yBHwMy);
+  obj[1] = intl2.string(messagesProxyDefault.yBHwMy);
   obj = { children: null };
   obj = { text: null };
   const intl3 = getSystemLocale.intl;

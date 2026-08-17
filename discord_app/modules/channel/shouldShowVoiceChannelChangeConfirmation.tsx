@@ -1,11 +1,11 @@
 // discord_app/modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx
-import set from "set";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import fetchFingerprint from "fetchFingerprint";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import updateVoiceState from "updateVoiceState";
+import closure_0 from "set" /* 4540 */;
+import closure_1 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 
-const result = require("fetchFingerprint").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
+const result = require("set").fileFinishedImporting("modules/channel/shouldShowVoiceChannelChangeConfirmation.tsx");
 
 export const shouldShowVoiceChannelChangeConfirmation = function shouldShowVoiceChannelChangeConfirmation(id) {
   if (obj.disableVoiceChannelChangeAlert) {

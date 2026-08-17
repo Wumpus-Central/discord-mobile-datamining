@@ -1,29 +1,18 @@
 // discord_app/modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx
-import getSystemLocale from "getSystemLocale";
-import reset from "reset";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "reset" /* 4045 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function _launchGuildBoostFlowOrAlert() {
   const self = this;
   let tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
       if (premiumTypeSubscription === 2) {
         premiumTypeSubscription = 3;
         HermesBuiltin.throwTypeError();
@@ -51,7 +40,7 @@ function _launchGuildBoostFlowOrAlert() {
               return obj;
             } else {
               c3 = tmp2;
-              let dependencyMap = tmp6;
+              dependencyMap = tmp6;
               let callback;
               c1 = undefined;
               dependencyMap = undefined;
@@ -61,7 +50,7 @@ function _launchGuildBoostFlowOrAlert() {
               ({ source: c0, analyticsLocations: c1, guildId: c2, onBack: c3, onPaymentSuccess: c4, onPaymentDismiss: c5 } = callback);
               premiumTypeSubscription = undefined;
               let externalManagementMessage;
-              let c8;
+              c8 = undefined;
               let constants;
               let mobileBoostingEnabled;
               c5 = 1;
@@ -75,7 +64,7 @@ function _launchGuildBoostFlowOrAlert() {
                 throw arg1;
               } else if (arg0 === 2) {
                 premiumTypeSubscription = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else if (c4.hasFetchedSubscriptions()) {
@@ -190,7 +179,7 @@ function _launchGuildBoostFlowOrAlert() {
     iter.next();
     return iter;
   });
-  const _launchGuildBoostFlowOrAlert = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -200,8 +189,8 @@ function _launchGuildBoostFlowOrAlert() {
   return applyArgumentsResult;
 }
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
-({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PremiumTypes: metroImportAll, SubscriptionIntervalTypes: c9 } = GuildFeatures);
-let result = require("ME").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
+({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: error, PremiumTypes: closure_8, SubscriptionIntervalTypes: c9 } = GuildFeatures);
+let result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");
 
 export const launchGuildBoostFlowOrAlert = function launchGuildBoostFlowOrAlert(arg0) {
   const self = this;

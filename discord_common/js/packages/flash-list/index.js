@@ -1,14 +1,12 @@
 // discord_common/js/packages/flash-list/index.js
-import importAllResult from "noop";
-import { RefreshControl } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import set from "set";
-import importDefaultResult from "module_4115";
-import importDefaultResult1 from "module_4115";
-import set from "jsxProd";
-import { 07036__ } from "../../../../_runtime/metro/07036__.js";
+import _mod7036 from "module_7036" /* 7036 */;
+import importAllResult from "noop" /* 19 */;
+import { RefreshControl } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 let obj;
 if (set.isAndroid()) {
@@ -20,9 +18,9 @@ function noop() {
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { maintainVisibleContentPosition: obj, ref };
   const merged = Object.assign(arg0);
-  return jsx(07036__.FlashList, { maintainVisibleContentPosition: obj, ref });
+  return jsx(_mod7036.FlashList, { maintainVisibleContentPosition: obj, ref });
 });
-let closure_8 = require("module_4115").createAnimatedComponent(require("module_7036").FlashList);
+let closure_8 = importDefaultResult.createAnimatedComponent(require("module_7036").FlashList);
 const forwardRefResult1 = importAllResult.forwardRef((arg0, ref) => {
   obj = { maintainVisibleContentPosition: obj, ref };
   const merged = Object.assign(arg0);
@@ -32,12 +30,11 @@ const forwardRefResult2 = importAllResult.forwardRef((arg0, ref) => {
   const merged = Object.assign(arg0, Object.create(null));
   obj = { ref, maintainVisibleContentPosition: obj, masonry: true };
   const merged1 = Object.assign(merged);
-  return jsx(07036__.FlashList, { ref, maintainVisibleContentPosition: obj, masonry: true });
+  return jsx(_mod7036.FlashList, { ref, maintainVisibleContentPosition: obj, masonry: true });
 });
-let closure_9 = require("module_4115").createAnimatedComponent(require("module_7036").FlashList);
+let closure_9 = importDefaultResult.createAnimatedComponent(require("module_7036").FlashList);
+const importDefaultResult1 = importDefaultResult;
 const forwardRefResult3 = importAllResult.forwardRef((arg0, ref) => {
-  let preventNativeModalDismiss;
-  let refreshControl;
   ({ preventNativeModalDismiss, refreshControl } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const items = [preventNativeModalDismiss, refreshControl];
@@ -46,12 +43,12 @@ const forwardRefResult3 = importAllResult.forwardRef((arg0, ref) => {
     if (null == refreshControl) {
       tmp2 = tmp;
       if (true === preventNativeModalDismiss) {
-        let obj = preventNativeModalDismiss(outer1_2[3]);
+        obj = preventNativeModalDismiss(closure_1_2[3]);
         tmp2 = tmp;
         if (obj.isIOS()) {
           obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-          obj[1] = outer1_7;
-          tmp2 = outer1_5(outer1_4, obj);
+          obj[1] = closure_1_7;
+          tmp2 = closure_1_5(closure_1_4, obj);
         }
       }
     }
@@ -75,8 +72,6 @@ export const AnimatedFlashList = forwardRefResult1;
 export const MasonryFlashList = forwardRefResult2;
 export const BottomSheetFlashList = forwardRefResult3;
 export const BottomSheetMasonryFlashList = importAllResult.forwardRef((arg0, ref) => {
-  let preventNativeModalDismiss;
-  let refreshControl;
   ({ preventNativeModalDismiss, refreshControl } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const items = [preventNativeModalDismiss, refreshControl];
@@ -86,12 +81,12 @@ export const BottomSheetMasonryFlashList = importAllResult.forwardRef((arg0, ref
     if (null == refreshControl) {
       tmp2 = tmp;
       if (true === preventNativeModalDismiss) {
-        let obj = preventNativeModalDismiss(outer1_2[3]);
+        obj = preventNativeModalDismiss(closure_1_2[3]);
         tmp2 = tmp;
         if (obj.isIOS()) {
           obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-          obj[1] = outer1_7;
-          tmp2 = outer1_5(outer1_4, obj);
+          obj[1] = closure_1_7;
+          tmp2 = closure_1_5(closure_1_4, obj);
         }
       }
     }

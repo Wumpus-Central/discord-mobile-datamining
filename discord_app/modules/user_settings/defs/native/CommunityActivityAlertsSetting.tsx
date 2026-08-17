@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx
-import computeAlertSettings from "computeAlertSettings";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "computeAlertSettings" /* 10014 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UserSettingsCommunityNotifications } from "../../notifications/native/UserSettingsCommunityNotifications.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -17,7 +17,7 @@ createToggle = {
     return intl.string(getSystemLocale.t["0PhAOH"]);
   },
   usePredicate: function useHasCommunityActivityAlertsSetting() {
-    const items = [computeAlertSettings];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => Object.keys(guildAlertSettings.getGuildAlertSettings()).length > 0);
   },
   screen: createToggle
@@ -29,6 +29,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CommunityActivityAlertsSetting.tsx");
 
 export default createToggle;

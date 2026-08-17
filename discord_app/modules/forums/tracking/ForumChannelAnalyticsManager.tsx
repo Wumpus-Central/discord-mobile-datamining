@@ -1,8 +1,8 @@
 // discord_app/modules/forums/tracking/ForumChannelAnalyticsManager.tsx
-import "ensureGuildLoaded";
-import set from "set";
+import set from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 2 */;
 
-let set = Object.create(function ForumChannelAnalyticsManager() {
+set = Object.create(function ForumChannelAnalyticsManager() {
   const obj = Object.create(new.target.prototype);
   obj.setFilterTagIds = function setFilterTagIds(filterTagIds) {
     obj.filterTagIds = filterTagIds;

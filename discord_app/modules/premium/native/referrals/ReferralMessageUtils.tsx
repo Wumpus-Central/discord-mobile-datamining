@@ -1,12 +1,12 @@
 // discord_app/modules/premium/native/referrals/ReferralMessageUtils.tsx
-import reset from "reset";
-import emitChanges from "emitChanges";
+import closure_0 from "reset" /* 4045 */;
+import closure_1 from "emitChanges" /* 7421 */;
 
 let result = require("set").fileFinishedImporting("modules/premium/native/referrals/ReferralMessageUtils.tsx");
 
 export const canOpenPremiumPlanDirectlyForReferralTrial = function canOpenPremiumPlanDirectlyForReferralTrial() {
-  const premiumTypeSubscription = reset.getPremiumTypeSubscription(false);
-  let result = reset.hasFetchedSubscriptions();
+  const premiumTypeSubscription = closure_0.getPremiumTypeSubscription(false);
+  let result = closure_0.hasFetchedSubscriptions();
   if (result) {
     result = null == premiumTypeSubscription;
   }

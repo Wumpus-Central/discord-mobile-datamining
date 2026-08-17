@@ -1,16 +1,10 @@
 // discord_app/design/components/Input/native/NativeTextInput.native.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore";
-import { KeyboardThemes } from "ME";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "subscribeToKeyboardUIStore" /* 1496 */;
+import { KeyboardThemes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c4;
-let c5;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 let c3 = importAllResult;
 ({ Pressable: c4, TextInput: c5, StyleSheet: closure_6, View: error } = get_ActivityIndicator);
@@ -20,7 +14,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
   const items = [ref];
   const effect = importAllResult.useEffect(() => {
     const keyboardIsOpen = ref(defaultValue[5]).getKeyboardIsOpen();
-    return outer1_8((systemKeyboardOpen) => {
+    return closure_1_8((systemKeyboardOpen) => {
       systemKeyboardOpen = systemKeyboardOpen.systemKeyboardOpen;
       if (!tmp) {
         const current = ref.current;
@@ -58,7 +52,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
     }
   });
   isScreenReaderEnabled = undefined;
-  let obj1 = ref(defaultValue[7]);
+  obj1 = ref(defaultValue[7]);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   const items2 = [ref];
   const items3 = [isScreenReaderEnabled];
@@ -72,7 +66,7 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
   }, items2);
   const memo = importAllResult.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(outer1_6.absoluteFillObject);
+    const merged = Object.assign(closure_1_6.absoluteFillObject);
     let str = "flex";
     if (isScreenReaderEnabled) {
       str = "none";
@@ -120,14 +114,14 @@ const forwardRefResult = importAllResult.forwardRef((value, ref2) => {
     const tmp6Result1 = tmp6(tmp3[10]);
   }
 });
-const result = require("subscribeToKeyboardUIStore").fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Input/native/NativeTextInput.native.tsx");
 
 export const useKeyboardBlurring = function useKeyboardBlurring(ref) {
-  let closure_0 = ref;
+  closure_0 = ref;
   const items = [ref];
   const effect = importAllResult.useEffect(() => {
     const keyboardIsOpen = ref(defaultValue[5]).getKeyboardIsOpen();
-    return outer1_8((systemKeyboardOpen) => {
+    return closure_1_8((systemKeyboardOpen) => {
       systemKeyboardOpen = systemKeyboardOpen.systemKeyboardOpen;
       if (!tmp) {
         const current = ref.current;

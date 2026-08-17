@@ -1,29 +1,31 @@
 // discord_app/modules/application_commands/native/ApplicationCommandUtils.tsx
-import { DraftType } from "handleChanged";
-import map from "map";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { registerAsset } from "../../../../_runtime/01902_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11393_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/11394_registerAsset.js";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { showUploadPreviewActionSheet } from "../../media_uploads/native/showUploadPreviewActionSheet.tsx";
-import { ApplicationCommandSectionType } from "../ApplicationCommandTypes.tsx";
+import set from "set" /* 2 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import registerAssetDefault from "registerAsset" /* 1902 */;
+import handleChanged from "handleChanged" /* 4825 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
+import showUploadPreviewActionSheetDefault from "showUploadPreviewActionSheet" /* 10267 */;
+import registerAssetDefault2 from "registerAsset" /* 11393 */;
+import registerAssetDefault3 from "registerAsset" /* 11394 */;
+import closure_4 from "map" /* 4824 */;
 
-let result = require("TRUE_OPTION_NAME").fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
+const DraftType = handleChanged.DraftType;
+const BuiltInSectionId = TRUE_OPTION_NAME.BuiltInSectionId;
+let result = set.fileFinishedImporting("modules/application_commands/native/ApplicationCommandUtils.tsx");
 
 export const getApplicationCommandsIconSource = function getApplicationCommandsIconSource(section, stateFromStores) {
-  let application;
   if (null == section) {
     return null;
   } else {
     const id = section.id;
     if (BuiltInSectionId.BUILT_IN === id) {
-      return getAvatarURL.makeSource(registerAsset);
+      return getAvatarURLDefault.makeSource(registerAssetDefault2);
     } else if (tmp10.FRECENCY === id) {
-      return getAvatarURL.makeSource(registerAsset);
+      return getAvatarURLDefault.makeSource(registerAssetDefault3);
     } else {
       if (section.type === ApplicationCommandSectionType.ApplicationCommandSectionType.APPLICATION) {
-        let obj = getAvatarURL;
+        let obj = getAvatarURLDefault;
         obj = { id: null, icon: null, bot: null, botIconFirst: true, guildMember: null };
         ({ id: obj2[0], icon: obj2[1], application } = section);
         let bot;
@@ -34,16 +36,16 @@ export const getApplicationCommandsIconSource = function getApplicationCommandsI
         obj[4] = stateFromStores;
         let applicationIconSource = obj.getApplicationIconSource(obj);
       } else {
-        applicationIconSource = registerAsset;
+        applicationIconSource = registerAssetDefault;
       }
       return applicationIconSource;
     }
   }
 };
 export const openCommandAttachmentPreview = function openCommandAttachmentPreview(applicationCommandManager, channelId, name, fn) {
-  let closure_0 = applicationCommandManager;
-  const importDefault = channelId;
-  const dependencyMap = name;
+  closure_0 = applicationCommandManager;
+  importDefault = channelId;
+  dependencyMap = name;
   upload = upload.getUpload(channelId, name, upload.SlashCommand);
   if (null != upload) {
     const obj = { channelId: null, disableSpoiler: true, onClose: null, onRemove: null, upload: null };
@@ -68,6 +70,6 @@ export const openCommandAttachmentPreview = function openCommandAttachmentPrevie
       }
     };
     obj[4] = upload;
-    showUploadPreviewActionSheet(obj);
+    showUploadPreviewActionSheetDefault(obj);
   }
 };

@@ -1,8 +1,10 @@
 // discord_app/modules/forums/FormError.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getAutomodErrorMessageFromErrorResponse } from "../guild_automod/AutomodErrorUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAutomodErrorMessageFromErrorResponse from "getAutomodErrorMessageFromErrorResponse" /* 7608 */;
+
 let obj = { EmptyContent: 0, [0]: "EmptyContent", AutomodViolation: 1, [1]: "AutomodViolation", EmptyTags: 2, [2]: "EmptyTags", ApiValidation: 3, [3]: "ApiValidation" };
-const result = require("set").fileFinishedImporting("modules/forums/FormError.tsx");
+const result = set.fileFinishedImporting("modules/forums/FormError.tsx");
 
 export const FormSubmitErrorType = obj;
 export const makeEmptyTitleError = function makeEmptyTitleError() {
@@ -26,7 +28,7 @@ export const makeEmptyMessageError = function makeEmptyMessageError() {
   return obj;
 };
 export const makeAutomodViolationError = function makeAutomodViolationError(errorResponseBody, id) {
-  let obj = getAutomodErrorMessageFromErrorResponse;
+  obj = getAutomodErrorMessageFromErrorResponse;
   id = undefined;
   if (id != null) {
     id = id.id;

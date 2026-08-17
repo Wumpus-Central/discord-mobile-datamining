@@ -1,5 +1,7 @@
 // discord_app/modules/report_to_mod/getGuildModeratorReportChannelId.tsx
-const result = require("set").fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/report_to_mod/getGuildModeratorReportChannelId.tsx");
 
 export default function getGuildModeratorReportChannelId(moderatorReporting) {
   moderatorReporting = moderatorReporting.moderatorReporting;

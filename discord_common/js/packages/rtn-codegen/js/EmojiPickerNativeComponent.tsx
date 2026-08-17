@@ -1,7 +1,8 @@
 // discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx
-import weakSet from "weakSet";
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
-import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
+import set from "set" /* 2 */;
+import renderElement from "renderElement" /* 114 */;
+import weakSet from "weakSet" /* 106 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 let obj = { uiViewClassName: "EmojiPickerView", directEventTypes: { topStickyHeaderRender: { registrationName: "onStickyHeaderRender" }, topPressEmoji: { registrationName: "onPressEmoji" }, topLongPressEmoji: { registrationName: "onLongPressEmoji" }, topScroll: { registrationName: "onScroll" }, topScrollBeginDrag: { registrationName: "onScrollBeginDrag" }, topScrollEndDrag: { registrationName: "onScrollEndDrag" }, topShowNitroUpsell: { registrationName: "onShowNitroUpsell" } }, validAttributes: null };
 obj = { config: true, paddingTop: true, paddingBottom: true, useTier0UpsellContent: true, emojiData: true, emojiMargin: true, emojiSize: true };
@@ -21,7 +22,7 @@ obj = {
   }
 };
 const value = setRuntimeConfigProvider.get("EmojiPickerView", () => obj);
-const result = require("renderElement").fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/EmojiPickerNativeComponent.tsx");
 
 export default value;
 export const __INTERNAL_VIEW_CONFIG = obj;

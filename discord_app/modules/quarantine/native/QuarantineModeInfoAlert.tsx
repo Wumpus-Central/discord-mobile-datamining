@@ -1,29 +1,29 @@
 // discord_app/modules/quarantine/native/QuarantineModeInfoAlert.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import { componentDidMount } from "../../../components_native/common/Alert.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { header: null, text: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(require("ME").Fonts.PRIMARY_BOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(importDefaultResult(require("ME").Fonts.PRIMARY_BOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 createCacheKey.textAlign = "center";
 createCacheKey.marginVertical = 12;
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginVertical: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/quarantine/native/QuarantineModeInfoAlert.tsx");
 
 export default function QuarantineModeInfoAlert(onClose) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { onClose: onClose.onClose, children: null };
   obj = { style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
@@ -34,5 +34,5 @@ export default function QuarantineModeInfoAlert(onClose) {
   obj[2] = intl2.string(getSystemLocale.t.zNPBMA);
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
-  return callback2(componentDidMount, obj);
+  return callback2(componentDidMountDefault, obj);
 };

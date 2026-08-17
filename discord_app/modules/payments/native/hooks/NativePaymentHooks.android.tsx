@@ -1,16 +1,17 @@
 // discord_app/modules/payments/native/hooks/NativePaymentHooks.android.tsx
-import initialize from "initialize";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import updateProduct from "updateProduct";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "updateProduct" /* 5319 */;
 
 const require = arg1;
 function notSupported() {
-  const error = new Error("Native hook not supported for android");
+  error = new Error("Native hook not supported for android");
   throw error;
 }
 function notSupportedReturnVoid() {
-  const error = new Error("Native hook not supported for android");
+  error = new Error("Native hook not supported for android");
   throw error;
 }
 function useNativeIAPPayments() {
@@ -18,10 +19,10 @@ function useNativeIAPPayments() {
 }
 function useGoogleSkuIds(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
-  const items = [updateProduct];
+  closure_1 = arg1;
+  const items = [closure_6];
   isFetchingGoogleSkus = _require(isFetchingGoogleSkus[5]).useStateFromStores(items, () => fetchingGoogleSkus.isFetchingGoogleSkus());
-  let initialize = React.useRef([]);
+  closure_3 = React.useRef([]);
   const fetchError = callback(React.useState(null), 2);
   callback = fetchError[1];
   const items1 = [arg1, isFetchingGoogleSkus, arg0];
@@ -55,45 +56,45 @@ function useGoogleSkuIds(arg0, arg1) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp3;
-                let c0 = tmp5;
+                closure_1 = tmp3;
+                c0 = tmp5;
                 c0 = undefined;
-                if (outer1_1) {
+                if (closure_1) {
                   ref.current = [];
                 }
-                const differenceResult = outer2_1(outer2_2[6]).difference(outer1_0, ref.current);
+                const differenceResult = closure_2_1(closure_2_2[6]).difference(closure_1_0, ref.current);
                 c0 = differenceResult;
-                if (!outer1_2) {
+                if (!closure_1_2) {
                   if (!tmp47) {
                     if (0 !== arr.length) {
                       if (0 !== differenceResult.length) {
                         ref = 1;
                         v0 = 2;
                         c5 = 1;
-                        const obj1 = { value: null, done: false };
-                        obj1[0] = callback(outer2_2[7]).loadInAppSkus(differenceResult);
+                        obj1 = { value: null, done: false };
+                        obj1[0] = callback(closure_2_2[7]).loadInAppSkus(differenceResult);
                         return obj1;
                       }
                     }
                   }
                 }
-                arr = outer1_0;
-                const obj4 = outer2_1(outer2_2[6]);
-                tmp47 = outer1_1;
+                arr = closure_1_0;
+                const obj4 = closure_2_1(closure_2_2[6]);
+                tmp47 = closure_1;
               }
             } else {
               if (1 === tmp8) {
                 ref = 0;
-                outer1_1 = closure_2;
-                outer2_7.error("Unable to fetch product IDs from google play store: ", outer1_1);
+                closure_1 = closure_2;
+                closure_2_7.error("Unable to fetch product IDs from google play store: ", closure_1);
                 v0("Unable to fetch");
-                let obj2 = callback(outer2_2[8]);
-                const result = obj2.captureBillingException(outer1_1);
+                let obj2 = callback(closure_2_2[8]);
+                const result = obj2.captureBillingException(closure_1);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
               } else if (arg0 !== 2) {
-                obj = outer2_1(outer2_2[6]);
+                obj = closure_2_1(closure_2_2[6]);
                 ref.current = obj.union(ref.current, c0);
                 v0(null);
                 ref = 0;
@@ -116,7 +117,7 @@ function useGoogleSkuIds(arg0, arg1) {
           }
         }
       });
-      const _fetch = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -154,10 +155,10 @@ function useCreateSubscription(arg0) {
     return obj;
   }
 }
-let error = new require("updateProduct")("NativePaymentHooks.android.tsx");
+let closure_7 = new timestampDefault("NativePaymentHooks.android.tsx");
 let closure_8 = { nativePaymentsConnected: true, storeFront: null };
-const tmp2 = new require("updateProduct")("NativePaymentHooks.android.tsx");
-let result = require("noop").fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
+const tmp2 = new timestampDefault("NativePaymentHooks.android.tsx");
+let result = require("set").fileFinishedImporting("modules/payments/native/hooks/NativePaymentHooks.android.tsx");
 
 export default { useNativeIAPPayments, useGoogleSkuIds, useCreateSubscription, useCancelSubscription, useResubscribeSubscription };
 export { useNativeIAPPayments };

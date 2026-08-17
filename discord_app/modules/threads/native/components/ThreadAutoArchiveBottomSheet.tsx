@@ -1,17 +1,13 @@
 // discord_app/modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx
-import { ChannelFlags } from "set";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
+import { ChannelFlags } from "set" /* 1398 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getAutoArchiveOptions } from "../../ThreadAutoArchive.tsx";
 
 const require = arg1;
-const memoResult = require("noop").memo((channel) => {
-  let description;
-  let onSelectDuration;
-  let selected;
-  let title;
+const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   let _require;
   ({ title, description, selected, onSelectDuration } = channel);
@@ -26,9 +22,9 @@ const memoResult = require("noop").memo((channel) => {
   const intl = tmp(1236).intl;
   obj[3] = intl.string(_getSystemLocale.t.H4mGfI);
   obj[4] = onSelectDuration;
-  obj[6] = autoArchiveOptions.map((value) => outer1_3(_undefined(outer1_1[6]).TableRadioRow, { value: value.value, disabled: _undefined, label: value.label }, value.value));
+  obj[6] = autoArchiveOptions.map((value) => closure_1_3(_undefined(closure_1_1[6]).TableRadioRow, { value: value.value, disabled: _undefined, label: value.label }, value.value));
   return jsx(_context.TableRadioGroup, { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx");
 
 export const AutoArchiveDurationOptions = memoResult;

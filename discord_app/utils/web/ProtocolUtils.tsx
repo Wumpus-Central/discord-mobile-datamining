@@ -1,18 +1,19 @@
 // discord_app/utils/web/ProtocolUtils.tsx
-import { os } from "format";
+import formatDefault from "format" /* 4465 */;
 
+const os = formatDefault.os;
 let family;
 if (os != null) {
   family = os.family;
 }
 function launchMobile(href) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   location.href = href;
   process.nextTick(() => callback(true));
 }
 let tmp3 = launchMobile;
 if ("Android" !== family) {
-  const os2 = require("format").os;
+  const os2 = formatDefault.os;
   let family1;
   if (os2 != null) {
     family1 = os2.family;
@@ -20,7 +21,7 @@ if ("Android" !== family) {
   tmp3 = launchMobile;
   if ("iOS" !== family1) {
     function launchFirefox(str) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       if (str.startsWith("discord:")) {
         const _document = document;
         if (null == body) {
@@ -63,13 +64,13 @@ if ("Android" !== family) {
         return process.nextTick(() => callback(true));
       }
     }
-    if ("Gecko" !== require("format").layout) {
+    if ("Gecko" !== formatDefault.layout) {
       function launchChrome(href) {
-        let closure_0 = arg1;
+        closure_0 = arg1;
         function handleBlur() {
-          let c1 = true;
+          c1 = true;
         }
-        let c1 = false;
+        c1 = false;
         const listener = window.addEventListener("blur", handleBlur);
         location.href = href;
         const timerId = setTimeout(() => {
@@ -78,8 +79,8 @@ if ("Android" !== family) {
         }, 1000);
       }
       let launchSteam = launchChrome;
-      if (null != require("format").ua) {
-        const ua = require("format").ua;
+      if (null != formatDefault.ua) {
+        const ua = formatDefault.ua;
         launchSteam = launchChrome;
         if (-1 !== ua.indexOf("Valve Steam GameOverlay")) {
           launchSteam = function launchSteam(arg0, arg1) {

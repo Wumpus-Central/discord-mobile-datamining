@@ -1,14 +1,14 @@
 // discord_app/modules/age_assurance/AgeVerificationMethodsV2.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchAgeVerificationMethodsV() {
   const self = this;
   const tmp = callback(function*() {
-    let closure_1 = tmp4;
-    const HTTP = outer1_0(outer1_1[2]).HTTP;
-    const obj1 = { url: null, rejectWithError: true };
+    closure_1 = tmp4;
+    const HTTP = closure_1_0(closure_1_1[2]).HTTP;
+    obj1 = { url: null, rejectWithError: true };
     obj1[0] = obj.AGE_VERIFICATION_METHODS_V2;
     yield HTTP.get(obj1);
     let body = arg1.body;
@@ -50,7 +50,7 @@ function _fetchAgeVerificationMethodsV() {
     obj[1] = body;
     return obj;
   });
-  const _fetchAgeVerificationMethodsV = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -59,7 +59,7 @@ function _fetchAgeVerificationMethodsV() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/AgeVerificationMethodsV2.tsx");
 
 export const fetchAgeVerificationMethodsV2 = function fetchAgeVerificationMethodsV2() {
   const self = this;

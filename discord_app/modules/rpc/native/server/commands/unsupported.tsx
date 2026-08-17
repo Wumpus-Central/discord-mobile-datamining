@@ -1,40 +1,10 @@
 // discord_app/modules/rpc/native/server/commands/unsupported.tsx
-let ACCEPT_ACTIVITY_INVITE;
-let ACTIVITY_INVITE_USER;
-let BILLING_POPUP_BRIDGE_CALLBACK;
-let BRAINTREE_POPUP_BRIDGE_CALLBACK;
-let BROWSER_HANDOFF;
-let CLOSE_ACTIVITY_JOIN_REQUEST;
-let CONNECTIONS_CALLBACK;
-let DEEP_LINK;
-let ENCOURAGE_HW_ACCELERATION;
-let GET_ENTITLEMENT_TICKET;
-let GIFT_CODE_BROWSER;
-let GUILD_TEMPLATE_BROWSER;
-let INVITE_BROWSER;
-let OPEN_INVITE;
-let OPEN_MESSAGE;
-let OPEN_OVERLAY_ACTIVITY_INVITE;
-let OPEN_OVERLAY_GUILD_INVITE;
-let OPEN_OVERLAY_VOICE_SETTINGS;
-let OPEN_SHARE_MOMENT_DIALOG;
-let PUSH_TO_TALK;
-let SEND_ACTIVITY_JOIN_INVITE;
-let SEND_GENERIC_EVENT;
-let SET_OVERLAY_LOCKED;
-let SET_SUPPRESS_NOTIFICATIONS;
-let SET_USER_VOICE_SETTINGS;
-let SET_USER_VOICE_SETTINGS_2;
-let SET_VOICE_SETTINGS;
-let SET_VOICE_SETTINGS_2;
-let SHARE_INTERACTION;
-let START_PREMIUM_PURCHASE;
-let START_PURCHASE;
-let TOGGLE_SCREENSHARE;
-let TOGGLE_VIDEO;
-let VALIDATE_APPLICATION;
-({ SET_USER_VOICE_SETTINGS, SET_USER_VOICE_SETTINGS_2, PUSH_TO_TALK, SET_VOICE_SETTINGS_2, SET_VOICE_SETTINGS, SEND_ACTIVITY_JOIN_INVITE, CLOSE_ACTIVITY_JOIN_REQUEST, ACTIVITY_INVITE_USER, ACCEPT_ACTIVITY_INVITE, OPEN_SHARE_MOMENT_DIALOG, INVITE_BROWSER, DEEP_LINK, CONNECTIONS_CALLBACK, BILLING_POPUP_BRIDGE_CALLBACK, BRAINTREE_POPUP_BRIDGE_CALLBACK, GIFT_CODE_BROWSER, GUILD_TEMPLATE_BROWSER, BROWSER_HANDOFF, SET_OVERLAY_LOCKED, OPEN_OVERLAY_ACTIVITY_INVITE, OPEN_OVERLAY_GUILD_INVITE, OPEN_OVERLAY_VOICE_SETTINGS, VALIDATE_APPLICATION, GET_ENTITLEMENT_TICKET, START_PURCHASE, START_PREMIUM_PURCHASE, ENCOURAGE_HW_ACCELERATION, TOGGLE_VIDEO, TOGGLE_SCREENSHARE, SEND_GENERIC_EVENT, OPEN_MESSAGE, OPEN_INVITE, SHARE_INTERACTION, SET_SUPPRESS_NOTIFICATIONS } = require("ME").RPCCommands);
-const obj = { [SET_USER_VOICE_SETTINGS]: require("unsupportedCommand").unsupportedCommand, [SET_USER_VOICE_SETTINGS_2]: require("unsupportedCommand").unsupportedCommand, [PUSH_TO_TALK]: require("unsupportedCommand").unsupportedCommand, [SET_VOICE_SETTINGS_2]: require("unsupportedCommand").unsupportedCommand, [SET_VOICE_SETTINGS]: require("unsupportedCommand").unsupportedCommand, [SEND_ACTIVITY_JOIN_INVITE]: require("unsupportedCommand").unsupportedCommand, [CLOSE_ACTIVITY_JOIN_REQUEST]: require("unsupportedCommand").unsupportedCommand, [ACTIVITY_INVITE_USER]: require("unsupportedCommand").unsupportedCommand, [ACCEPT_ACTIVITY_INVITE]: require("unsupportedCommand").unsupportedCommand, [OPEN_SHARE_MOMENT_DIALOG]: require("unsupportedCommand").unsupportedCommand, [INVITE_BROWSER]: require("unsupportedCommand").unsupportedCommand, [DEEP_LINK]: require("unsupportedCommand").unsupportedCommand, [CONNECTIONS_CALLBACK]: require("unsupportedCommand").unsupportedCommand, [BILLING_POPUP_BRIDGE_CALLBACK]: require("unsupportedCommand").unsupportedCommand, [BRAINTREE_POPUP_BRIDGE_CALLBACK]: require("unsupportedCommand").unsupportedCommand, [GIFT_CODE_BROWSER]: require("unsupportedCommand").unsupportedCommand, [GUILD_TEMPLATE_BROWSER]: require("unsupportedCommand").unsupportedCommand, [BROWSER_HANDOFF]: require("unsupportedCommand").unsupportedCommand, [SET_OVERLAY_LOCKED]: require("unsupportedCommand").unsupportedCommand, [OPEN_OVERLAY_ACTIVITY_INVITE]: require("unsupportedCommand").unsupportedCommand, [OPEN_OVERLAY_GUILD_INVITE]: require("unsupportedCommand").unsupportedCommand, [OPEN_OVERLAY_VOICE_SETTINGS]: require("unsupportedCommand").unsupportedCommand, [VALIDATE_APPLICATION]: require("unsupportedCommand").unsupportedCommand, [GET_ENTITLEMENT_TICKET]: require("unsupportedCommand").unsupportedCommand, [START_PURCHASE]: require("unsupportedCommand").unsupportedCommand, [START_PREMIUM_PURCHASE]: require("unsupportedCommand").unsupportedCommand, [ENCOURAGE_HW_ACCELERATION]: require("unsupportedCommand").unsupportedCommand, [TOGGLE_VIDEO]: require("unsupportedCommand").unsupportedCommand, [TOGGLE_SCREENSHARE]: require("unsupportedCommand").unsupportedCommand, [SEND_GENERIC_EVENT]: require("unsupportedCommand").deprecatedCommand, [OPEN_MESSAGE]: require("unsupportedCommand").unsupportedCommand, [OPEN_INVITE]: require("unsupportedCommand").unsupportedCommand, [SHARE_INTERACTION]: require("unsupportedCommand").unsupportedCommand, [SET_SUPPRESS_NOTIFICATIONS]: require("unsupportedCommand").unsupportedCommand };
-const result = require("set").fileFinishedImporting("modules/rpc/native/server/commands/unsupported.tsx");
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import unsupportedCommand from "unsupportedCommand" /* 13885 */;
+
+({ SET_USER_VOICE_SETTINGS, SET_USER_VOICE_SETTINGS_2, PUSH_TO_TALK, SET_VOICE_SETTINGS_2, SET_VOICE_SETTINGS, SEND_ACTIVITY_JOIN_INVITE, CLOSE_ACTIVITY_JOIN_REQUEST, ACTIVITY_INVITE_USER, ACCEPT_ACTIVITY_INVITE, OPEN_SHARE_MOMENT_DIALOG, INVITE_BROWSER, DEEP_LINK, CONNECTIONS_CALLBACK, BILLING_POPUP_BRIDGE_CALLBACK, BRAINTREE_POPUP_BRIDGE_CALLBACK, GIFT_CODE_BROWSER, GUILD_TEMPLATE_BROWSER, BROWSER_HANDOFF, SET_OVERLAY_LOCKED, OPEN_OVERLAY_ACTIVITY_INVITE, OPEN_OVERLAY_GUILD_INVITE, OPEN_OVERLAY_VOICE_SETTINGS, VALIDATE_APPLICATION, GET_ENTITLEMENT_TICKET, START_PURCHASE, START_PREMIUM_PURCHASE, ENCOURAGE_HW_ACCELERATION, TOGGLE_VIDEO, TOGGLE_SCREENSHARE, SEND_GENERIC_EVENT, OPEN_MESSAGE, OPEN_INVITE, SHARE_INTERACTION, SET_SUPPRESS_NOTIFICATIONS } = ME.RPCCommands);
+const obj = { [SET_USER_VOICE_SETTINGS]: unsupportedCommand.unsupportedCommand, [SET_USER_VOICE_SETTINGS_2]: unsupportedCommand.unsupportedCommand, [PUSH_TO_TALK]: unsupportedCommand.unsupportedCommand, [SET_VOICE_SETTINGS_2]: unsupportedCommand.unsupportedCommand, [SET_VOICE_SETTINGS]: unsupportedCommand.unsupportedCommand, [SEND_ACTIVITY_JOIN_INVITE]: unsupportedCommand.unsupportedCommand, [CLOSE_ACTIVITY_JOIN_REQUEST]: unsupportedCommand.unsupportedCommand, [ACTIVITY_INVITE_USER]: unsupportedCommand.unsupportedCommand, [ACCEPT_ACTIVITY_INVITE]: unsupportedCommand.unsupportedCommand, [OPEN_SHARE_MOMENT_DIALOG]: unsupportedCommand.unsupportedCommand, [INVITE_BROWSER]: unsupportedCommand.unsupportedCommand, [DEEP_LINK]: unsupportedCommand.unsupportedCommand, [CONNECTIONS_CALLBACK]: unsupportedCommand.unsupportedCommand, [BILLING_POPUP_BRIDGE_CALLBACK]: unsupportedCommand.unsupportedCommand, [BRAINTREE_POPUP_BRIDGE_CALLBACK]: unsupportedCommand.unsupportedCommand, [GIFT_CODE_BROWSER]: unsupportedCommand.unsupportedCommand, [GUILD_TEMPLATE_BROWSER]: unsupportedCommand.unsupportedCommand, [BROWSER_HANDOFF]: unsupportedCommand.unsupportedCommand, [SET_OVERLAY_LOCKED]: unsupportedCommand.unsupportedCommand, [OPEN_OVERLAY_ACTIVITY_INVITE]: unsupportedCommand.unsupportedCommand, [OPEN_OVERLAY_GUILD_INVITE]: unsupportedCommand.unsupportedCommand, [OPEN_OVERLAY_VOICE_SETTINGS]: unsupportedCommand.unsupportedCommand, [VALIDATE_APPLICATION]: unsupportedCommand.unsupportedCommand, [GET_ENTITLEMENT_TICKET]: unsupportedCommand.unsupportedCommand, [START_PURCHASE]: unsupportedCommand.unsupportedCommand, [START_PREMIUM_PURCHASE]: unsupportedCommand.unsupportedCommand, [ENCOURAGE_HW_ACCELERATION]: unsupportedCommand.unsupportedCommand, [TOGGLE_VIDEO]: unsupportedCommand.unsupportedCommand, [TOGGLE_SCREENSHARE]: unsupportedCommand.unsupportedCommand, [SEND_GENERIC_EVENT]: unsupportedCommand.deprecatedCommand, [OPEN_MESSAGE]: unsupportedCommand.unsupportedCommand, [OPEN_INVITE]: unsupportedCommand.unsupportedCommand, [SHARE_INTERACTION]: unsupportedCommand.unsupportedCommand, [SET_SUPPRESS_NOTIFICATIONS]: unsupportedCommand.unsupportedCommand };
+const result = set.fileFinishedImporting("modules/rpc/native/server/commands/unsupported.tsx");
 
 export default obj;

@@ -1,46 +1,38 @@
 // discord_app/modules/stickers/native/StickerPackHeader.tsx
-import { View } from "get ActivityIndicator";
-import PADDING_HORIZONTAL from "PADDING_HORIZONTAL";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { registerAsset } from "../../../../_runtime/10227_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/10228_registerAsset.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
-import { StickerPackBanner } from "StickerPackBanner.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import registerAssetDefault from "registerAsset" /* 10227 */;
+import registerAssetDefault2 from "registerAsset" /* 10228 */;
+import StickerPackBannerDefault from "StickerPackBanner" /* 10229 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import PADDING_HORIZONTAL from "PADDING_HORIZONTAL" /* 10187 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let PADDING_HORIZONTAL;
-let PADDING_VERTICAL;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ PADDING_VERTICAL, PADDING_HORIZONTAL } = PADDING_HORIZONTAL);
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
 let result = 2 * PADDING_VERTICAL;
 let obj = { section: null, label: null, header: null, bannerContainer: null, banner: null, headline: null, iconContainer: null, icon: null, animatedIcon: null, premiumIcon: null };
-obj = { paddingTop: PADDING_VERTICAL, paddingHorizontal: PADDING_HORIZONTAL, height: 36 + result, justifyContent: "center", overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj = { paddingTop: PADDING_VERTICAL, paddingHorizontal: PADDING_HORIZONTAL, height: 36 + result, justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 obj[1] = { flex: -1 };
 obj[2] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 obj[3] = { aspectRatio: 3.824074074074074, marginVertical: -8, width: "100%" };
 obj[4] = { height: "100%" };
 obj[5] = { height: 20, flex: 1, flexDirection: "row", alignItems: "center" };
-createCacheKey = { marginLeft: 8, height: 16, width: 16, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BORDER_SUBTLE, alignItems: "center", justifyContent: "center" };
+createCacheKey = { marginLeft: 8, height: 16, width: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, alignItems: "center", justifyContent: "center" };
 obj[6] = createCacheKey;
-obj[7] = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+obj[7] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[8] = { position: "relative", left: 1 };
 obj[9] = { position: "relative", left: -1 };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj2 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+let obj2 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 const memoResult = importAllResult.memo((withDescription) => {
-  let onPress;
-  let stickerPack;
-  let style;
-  let withBanner;
   ({ stickerPack, style, onPress, withBanner } = withDescription);
   if (withBanner === undefined) {
     withBanner = false;
@@ -57,10 +49,10 @@ const memoResult = importAllResult.memo((withDescription) => {
   let obj3 = getStickerExtensionFromFormatType;
   let result = obj3.isStickerPackAnimated(stickerPack);
   if (result) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.iconContainer;
     const obj2 = { source: null, style: null, size: null, color: null };
-    obj2[0] = registerAsset;
+    obj2[0] = registerAssetDefault;
     obj2[1] = tmp.animatedIcon;
     obj2[2] = tmp6(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[3] = tmp.icon.color;
@@ -68,13 +60,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     result = tmp4(tmp5, obj1);
   }
   items[1] = result;
-  obj3 = { style: tmp.iconContainer, children: null };
-  const obj4 = { source: null, style: null, size: null, color: null };
-  obj4[0] = registerAsset;
-  obj4[1] = tmp.premiumIcon;
-  obj4[2] = Button.Icon.Sizes.EXTRA_SMALL;
-  obj4[3] = tmp.icon.color;
-  obj3[1] = callback(Button.Icon, obj4);
+  obj3 = { style: tmp.iconContainer, children: callback(Button.Icon, { source: registerAssetDefault2, style: tmp.premiumIcon, size: Button.Icon.Sizes.EXTRA_SMALL, color: tmp.icon.color }) };
   items[2] = callback(View, obj3);
   obj[1] = items;
   obj[1] = closure_5(View, obj);
@@ -99,7 +85,7 @@ const memoResult = importAllResult.memo((withDescription) => {
     const obj9 = { stickerPack: null, containerStyle: null, style: null };
     obj9[0] = stickerPack;
     ({ bannerContainer: obj13[1], banner: obj13[2] } = tmp);
-    withBanner = tmp4(StickerPackBanner, obj9);
+    withBanner = tmp4(StickerPackBannerDefault, obj9);
   }
   const children = [withBanner, ];
   if (null != onPress) {
@@ -119,6 +105,6 @@ const memoResult = importAllResult.memo((withDescription) => {
   children[1] = tmp4Result;
   return closure_5(closure_6, { children });
 });
-const result1 = require("PADDING_HORIZONTAL").fileFinishedImporting("modules/stickers/native/StickerPackHeader.tsx");
+const result1 = require("set").fileFinishedImporting("modules/stickers/native/StickerPackHeader.tsx");
 
 export default memoResult;

@@ -1,25 +1,23 @@
 // discord_app/modules/icymi/native/ICYMIHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createICYMIStyles from "createICYMIStyles";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createICYMIStyles.createICYMIStyles((margin) => {
   obj = { text: obj, separator: null };
   obj = { flexDirection: "row", justifyContent: "space-between", marginHorizontal: margin.margin };
-  obj = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE, marginBottom: Themes.space.PX_16 };
+  obj = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: ThemesDefault.space.PX_16 };
   obj[1] = obj;
   return obj;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIHeader.tsx");
 
 export default function ICYMIHeader() {
   const tmp = callback3();

@@ -1,25 +1,22 @@
 // discord_app/modules/connections/native/DomainVerifyModal.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "NavigationStack";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { EXAMPLE_DOMAIN } from "../DomainVerifyUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import EXAMPLE_DOMAIN from "EXAMPLE_DOMAIN" /* 9809 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function DomainScreen(onClose) {
   onClose = onClose.onClose;
-  let importDefault;
+  importDefault = undefined;
   let first;
   let callback;
   let React;
@@ -27,12 +24,12 @@ function DomainScreen(onClose) {
     callback2(true);
     callback(null);
     const HTTP = onClose(first[8]).HTTP;
-    let obj = { url: outer1_6.CONNECTION(outer1_7.DOMAIN, first), body: {}, rejectWithError: false };
-    const postResult = HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, first), body: {}, rejectWithError: false });
-    const nextPromise = HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, first), body: {}, rejectWithError: false }).then(() => {
+    let obj = { url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false };
+    const postResult = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false });
+    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false }).then(() => {
       callback();
     });
-    HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, first), body: {}, rejectWithError: false }).then(() => {
+    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, first), body: {}, rejectWithError: false }).then(() => {
       callback();
     }).catch((body) => {
       body = body.body;
@@ -44,7 +41,7 @@ function DomainScreen(onClose) {
         const obj = { proof: null, domain: null };
         obj[0] = body.body.proof;
         obj[1] = closure_2;
-        arr = arr.push(outer1_11.PROOF_DNS, obj);
+        arr = arr.push(closure_1_11.PROOF_DNS, obj);
       } else {
         const body2 = body.body;
         let message;
@@ -55,7 +52,7 @@ function DomainScreen(onClose) {
             if (domain != null) {
               const _errors = domain._errors;
               if (_errors != null) {
-                const first = _errors[0];
+                first = _errors[0];
                 if (first != null) {
                   message = first.message;
                 }
@@ -74,14 +71,14 @@ function DomainScreen(onClose) {
         if (!message) {
           message = body.message;
         }
-        _slicedToArray(message);
-        const tmp2 = _slicedToArray;
+        closure_3(message);
+        const tmp2 = closure_3;
       }
     }).finally(() => {
       callback2(false);
     });
   }
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = onClose(first[7]);
   importDefault = obj.useNavigation();
   let tmp2 = callback(React.useState(""), 2);
@@ -95,7 +92,7 @@ function DomainScreen(onClose) {
   const intl = onClose(first[11]).intl;
   obj[3] = intl.string(onClose(first[11]).t.NxPUqY);
   const items = [callback2(onClose(first[10]).Text, obj), , ];
-  const obj1 = { autoFocus: true, style: tmp.input, label: null, placeholder: null, error: null, returnKeyType: "done", onChangeText: null, onSubmitEditing: null };
+  obj1 = { autoFocus: true, style: tmp.input, label: null, placeholder: null, error: null, returnKeyType: "done", onChangeText: null, onSubmitEditing: null };
   const intl2 = onClose(first[11]).intl;
   obj1[2] = intl2.string(onClose(first[11]).t["4jIAa+"]);
   obj1[3] = onClose(first[13]).EXAMPLE_DOMAIN;
@@ -112,18 +109,12 @@ function DomainScreen(onClose) {
   return callback3(onClose(first[9]).SafeAreaPaddingView, obj);
 }
 function DNSProofScreen(proof) {
-  let c4;
-  let c5;
-  let domain;
-  let require;
-  let tmp5;
-  let tmp7;
   ({ onClose: require, domain } = proof);
   proof = proof.proof;
   let callback;
   let React;
   c5 = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = require(proof[7]);
   callback = obj.useNavigation();
   [tmp5, c4] = callback(React.useState(null), 2);
@@ -134,7 +125,7 @@ function DNSProofScreen(proof) {
   const intl = require(proof[11]).intl;
   obj[1] = intl.string(require(proof[11]).t.cSURbq);
   const items = [callback2(require(proof[10]).Text, obj), , , , ];
-  const obj1 = { style: tmp.dns, children: null };
+  obj1 = { style: tmp.dns, children: null };
   const obj2 = { variant: "text-md/normal", children: null };
   const intl2 = require(proof[11]).intl;
   obj2[1] = intl2.string(require(proof[11]).t.GL3q7k);
@@ -170,13 +161,13 @@ function DNSProofScreen(proof) {
   obj10[2] = function onPress() {
     _undefined2(true);
     _undefined(null);
-    const HTTP = outer1_0(proof[8]).HTTP;
-    const obj = { url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false };
-    const postResult = HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false });
-    const nextPromise = HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
+    const HTTP = closure_1_0(proof[8]).HTTP;
+    const obj = { url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false };
+    const postResult = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false });
+    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
     });
-    HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
+    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
     }).catch((body) => {
       body = body.body;
@@ -184,7 +175,7 @@ function DNSProofScreen(proof) {
       if (body != null) {
         const errors = body.errors;
         if (errors != null) {
-          const domain = errors.domain;
+          domain = errors.domain;
           if (domain != null) {
             const _errors = domain._errors;
             if (_errors != null) {
@@ -207,7 +198,7 @@ function DNSProofScreen(proof) {
       if (!message) {
         message = body.message;
       }
-      noop(message);
+      closure_4(message);
     }).finally(() => {
       callback2(false);
     });
@@ -227,17 +218,11 @@ function DNSProofScreen(proof) {
   return callback3(require(proof[9]).SafeAreaPaddingView, obj);
 }
 function HTTPProofScreen(children) {
-  let c3;
-  let c4;
-  let domain;
-  let require;
-  let tmp5;
-  let tmp7;
   ({ onClose: require, domain } = children);
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = useNavigation;
   dependencyMap = obj.useNavigation();
   [tmp5, c3] = callback(React.useState(null), 2);
@@ -248,7 +233,7 @@ function HTTPProofScreen(children) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.p4ql7y);
   const items = [callback2(Text.Text, obj), , , , ];
-  const obj1 = { style: tmp.dns, children: null };
+  obj1 = { style: tmp.dns, children: null };
   const obj2 = { variant: "text-md/normal", children: null };
   const intl2 = getSystemLocale.intl;
   obj2[1] = intl2.string(getSystemLocale.t.GL3q7k);
@@ -279,13 +264,13 @@ function HTTPProofScreen(children) {
   obj8[2] = function onPress() {
     _undefined2(true);
     _undefined(null);
-    const HTTP = outer1_0(arr[8]).HTTP;
-    const obj = { url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false };
-    const postResult = HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false });
-    const nextPromise = HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
+    const HTTP = closure_1_0(arr[8]).HTTP;
+    const obj = { url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false };
+    const postResult = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false });
+    const nextPromise = HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
     });
-    HTTP.post({ url: outer1_6.CONNECTION(outer1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
+    HTTP.post({ url: closure_1_6.CONNECTION(closure_1_7.DOMAIN, domain), body: {}, rejectWithError: false }).then(() => {
       callback();
     }).catch((body) => {
       body = body.body;
@@ -293,7 +278,7 @@ function HTTPProofScreen(children) {
       if (body != null) {
         const errors = body.errors;
         if (errors != null) {
-          const domain = errors.domain;
+          domain = errors.domain;
           if (domain != null) {
             const _errors = domain._errors;
             if (_errors != null) {
@@ -316,7 +301,7 @@ function HTTPProofScreen(children) {
       if (!message) {
         message = body.message;
       }
-      _slicedToArray(message);
+      closure_3(message);
     }).finally(() => {
       callback2(false);
     });
@@ -336,16 +321,16 @@ function HTTPProofScreen(children) {
   return callback3(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 ({ Endpoints: closure_6, PlatformTypes: error } = ME);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: { padding: 16 }, description: { textAlign: "center" }, input: { paddingHorizontal: 0, paddingVertical: 0, marginVertical: 16 }, dns: null, error: null, code: null, button: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs, padding: 8, marginTop: 16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs, padding: 8, marginTop: 16 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { marginTop: 16 };
 createCacheKey[5] = { fontFamily: "monospace", marginBottom: 4 };
 createCacheKey[6] = { marginTop: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_11 = { DOMAIN: "DOMAIN", PROOF_DNS: "PROOF_DNS", PROOF_HTTP: "PROOF_HTTP" };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/connections/native/DomainVerifyModal.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/native/DomainVerifyModal.tsx");
 
 export default function DomainVerifyModal(arg0) {
   if (arg0 == null) {
@@ -361,7 +346,7 @@ export default function DomainVerifyModal(arg0) {
     let obj2 = onClose(6314);
     obj[1] = obj2.getHeaderBackButton(onClose);
     obj[2] = function render() {
-      return outer1_8(outer1_12, { onClose });
+      return closure_1_8(closure_1_12, { onClose });
     };
     obj[constants.DOMAIN] = obj;
     obj = { headerTitle: null, headerLeft: null, render: null };
@@ -369,16 +354,16 @@ export default function DomainVerifyModal(arg0) {
     obj[0] = intl2.string(onClose(1236).t["7lo8+e"]);
     obj[1] = onClose(6314).getHeaderBackButton(onClose);
     obj[2] = function render(domain) {
-      return outer1_8(outer1_13, { domain: domain.domain, proof: domain.proof, onClose });
+      return closure_1_8(closure_1_13, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants.PROOF_DNS] = obj;
-    const obj1 = { headerTitle: null, headerLeft: null, render: null };
+    obj1 = { headerTitle: null, headerLeft: null, render: null };
     const intl3 = onClose(1236).intl;
     obj1[0] = intl3.string(onClose(1236).t["7lo8+e"]);
     const obj5 = onClose(6314);
     obj1[1] = onClose(6314).getHeaderBackButton(onClose);
     obj1[2] = function render(domain) {
-      return outer1_8(outer1_14, { domain: domain.domain, proof: domain.proof, onClose });
+      return closure_1_8(closure_1_14, { domain: domain.domain, proof: domain.proof, onClose });
     };
     obj[constants.PROOF_HTTP] = obj1;
     obj2 = { screens: null, initialRouteName: null, headerBackTitle: null };

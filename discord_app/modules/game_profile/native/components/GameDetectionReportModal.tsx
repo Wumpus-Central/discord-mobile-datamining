@@ -1,26 +1,22 @@
 // discord_app/modules/game_profile/native/components/GameDetectionReportModal.tsx
-import _slicedToArray from "_slicedToArray";
-import TextArea from "TextArea";
-import get_ActivityIndicator from "TextInput";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import NavigationStack from "NavigationStack" /* 6312 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ReportContent(applicationId) {
   applicationId = applicationId.applicationId;
   let navigation;
   let first;
   let callback;
   let str;
-  let closure_5;
+  closure_5 = undefined;
   let first1;
-  let closure_7;
+  closure_7 = undefined;
   let str2;
   let memo;
   let results;
@@ -41,7 +37,7 @@ function ReportContent(applicationId) {
   const tmp10 = callback(str.useState(""), 2);
   str2 = tmp10[0];
   memo = str.useMemo(() => applicationId(first[7]).generateViewId(), []);
-  let obj1 = applicationId(first[8]);
+  obj1 = applicationId(first[8]);
   results = obj1.useDebouncedGameAutocomplete(str).results;
   callback = str.useCallback(() => {
     navigation(first[9]).popWithKey(results);
@@ -56,12 +52,11 @@ function ReportContent(applicationId) {
         return null;
       };
       obj[2] = function headerRight() {
-        const obj = { IconComponent: null, accessibilityLabel: null, onPress: null };
-        obj[0] = outer1_0(outer1_2[12]).XSmallIcon;
-        const intl = outer1_0(outer1_2[10]).intl;
-        obj[1] = intl.string(outer1_0(outer1_2[10]).t.cpT0Cq);
+        const obj = { IconComponent: closure_1_0(closure_1_2[12]).XSmallIcon, accessibilityLabel: null, onPress: null };
+        const intl = closure_1_0(closure_1_2[10]).intl;
+        obj[1] = intl.string(closure_1_0(closure_1_2[10]).t.cpT0Cq);
         obj[2] = closure_11;
-        return outer1_7(outer1_0(outer1_2[11]).HeaderActionButton, obj);
+        return closure_1_7(closure_1_0(closure_1_2[11]).HeaderActionButton, obj);
       };
       navigation.setOptions(obj);
     } else if ("game_search" === tmp) {
@@ -129,13 +124,13 @@ function ReportContent(applicationId) {
     const items3 = [tmp15(tmp2(tmp3[14]).Text, obj1), ];
     let obj2 = { value: "Array", onChange: false, hasIcons: null, children: 2 };
     obj2[1] = function onChange(arg0) {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const timerId = setTimeout(() => {
-        let str = "other_feedback";
+        str = "other_feedback";
         if ("wrong_game_shown" === closure_0) {
           str = "game_search";
         }
-        outer1_3(str);
+        closure_1_3(str);
       }, 100);
     };
     const obj3 = { value: "wrong_game_shown", label: null };
@@ -177,7 +172,7 @@ function ReportContent(applicationId) {
       const obj8 = { value: null, onChange: null, hasIcons: false, children: null };
       obj8[0] = id;
       obj8[1] = function onChange(arg0) {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         let found = memo1.find((id) => id.id === closure_0);
         if (found == null) {
           found = null;
@@ -238,18 +233,18 @@ function ReportContent(applicationId) {
   return closure_7(closure_5, obj);
 }
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let c10 = "game-detection-report";
 createCacheKey = { container: null, content: null, submitContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_24 };
-let obj1 = { padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_24 };
-createCacheKey[2] = { padding: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
+let obj1 = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_24 };
+createCacheKey[2] = { padding: ThemesDefault.space.PX_16 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 const REPORT = "REPORT";
-let obj2 = { padding: require("Themes").space.PX_16 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/game_profile/native/components/GameDetectionReportModal.tsx");
+let obj2 = { padding: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameDetectionReportModal.tsx");
 
 export default function GameDetectionReportModal(applicationId) {
   const screens = React.useMemo(() => ({

@@ -1,8 +1,9 @@
 // discord_app/modules/wishlists/records/PremiumWishlistItemRecord.tsx
-import createFromServer from "createFromServer";
-import "fromServer";
-import { SKUProductLines } from "ME";
+import fromServerDefault from "fromServer" /* 9188 */;
+import closure_0 from "createFromServer" /* 4515 */;
+import { SKUProductLines } from "ME" /* 676 */;
 
+fromServerDefault;
 let prototype;
 prototype = function PremiumWishlistItemRecord(sku) {
   const tmp = new prototype(sku, new.target, new.target);
@@ -14,10 +15,10 @@ prototype = function PremiumWishlistItemRecord(sku) {
 class prototype extends tmp2 {
 }
 prototype["fromServer"] = function fromServer(sku) {
-  const fromServer = createFromServer.createFromServer(sku.sku);
+  const fromServer = closure_0.createFromServer(sku.sku);
   if (null == fromServer) {
     const _Error = Error;
-    const error = new Error("SKU not found");
+    error = new Error("SKU not found");
     throw error;
   } else {
     const obj = {};
@@ -54,7 +55,7 @@ prototype["fromSKU"] = function fromSKU(id) {
   }
   return tmp;
 };
-const result = require("ME").fileFinishedImporting("modules/wishlists/records/PremiumWishlistItemRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/records/PremiumWishlistItemRecord.tsx");
 
 export default prototype;
 export const isPremiumWishlistItemRecord = function isPremiumWishlistItemRecord(arg0) {

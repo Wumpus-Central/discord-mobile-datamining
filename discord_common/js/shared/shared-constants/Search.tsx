@@ -1,5 +1,7 @@
 // discord_common/js/shared/shared-constants/Search.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/shared-constants/Search.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/shared-constants/Search.tsx");
 
 export const MAX_MESSAGE_SEARCH_RESULTS_OFFSET = 9975;
 export const SEARCH_PARTIAL_NAME_MATCH_MIN_QUERY_LENGTH = 3;

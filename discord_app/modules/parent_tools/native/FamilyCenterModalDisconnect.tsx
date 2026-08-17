@@ -1,37 +1,31 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalDisconnect.tsx
-import _slicedToArray from "_slicedToArray";
-import FamilyCenterInlineWarningNotice from "FamilyCenterInlineWarningNotice";
-import { View } from "registerAsset";
-import jsxProd from "Checkbox";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08143_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { messagesProxy } from "../FamilyCenter.messages.js";
-import { FamilyCenterAvatarPair } from "FamilyCenterAvatarPair.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import registerAssetDefault from "registerAsset" /* 8143 */;
+import FamilyCenterAvatarPairDefault from "FamilyCenterAvatarPair" /* 14279 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 function FamilyCenterModalDisconnectScreen(otherUser) {
-  let c1;
-  let c2;
-  let tmp11;
-  let tmp9;
   otherUser = otherUser.otherUser;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let disconnectLinkRequest;
   let isDisconnectLoading;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const callback = isDisconnectLoading.useCallback(() => {
     let arr = _undefined(_undefined2[6]);
     arr = arr.pop();
   }, []);
-  let obj = nameFromUser;
+  let obj = nameFromUserDefault;
   const name = obj.useName(otherUser);
-  let obj1 = otherUser(7621);
+  obj1 = otherUser(7621);
   const requiresParentalConsent = obj1.useRequiresParentalConsent(otherUser.id);
   [tmp9, c1] = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
   const tmp8 = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
@@ -50,34 +44,34 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   let intl = otherUser(1236).intl;
   const tmp10 = disconnectLinkRequest(isDisconnectLoading.useState(false), 2);
   const intl2 = otherUser(1236).intl;
-  const ageSpecificText = obj3.useAgeSpecificText(intl.format(messagesProxy.F2lccv, { username: name }), intl2.string(messagesProxy["WH+Gba"]));
+  const ageSpecificText = obj3.useAgeSpecificText(intl.format(messagesProxyDefault.F2lccv, { username: name }), intl2.string(messagesProxyDefault["WH+Gba"]));
   let obj4 = otherUser(11107);
   const intl3 = otherUser(1236).intl;
-  const formatResult = intl.format(messagesProxy.F2lccv, { username: name });
+  const formatResult = intl.format(messagesProxyDefault.F2lccv, { username: name });
   const intl4 = otherUser(1236).intl;
-  const ageSpecificText1 = obj4.useAgeSpecificText(intl3.string(messagesProxy.hOEHFn), intl4.format(messagesProxy.Or6hgl, { username: name }));
+  const ageSpecificText1 = obj4.useAgeSpecificText(intl3.string(messagesProxyDefault.hOEHFn), intl4.format(messagesProxyDefault.Or6hgl, { username: name }));
   let obj5 = otherUser(11107);
   const intl5 = otherUser(1236).intl;
-  const stringResult = intl3.string(messagesProxy.hOEHFn);
+  const stringResult = intl3.string(messagesProxyDefault.hOEHFn);
   const intl6 = otherUser(1236).intl;
-  const ageSpecificText2 = obj5.useAgeSpecificText(intl5.format(messagesProxy.XyRW4c, { username: name }), intl6.format(messagesProxy.PlrZal, { username: name }));
+  const ageSpecificText2 = obj5.useAgeSpecificText(intl5.format(messagesProxyDefault.XyRW4c, { username: name }), intl6.format(messagesProxyDefault.PlrZal, { username: name }));
   let obj6 = otherUser(11107);
   const intl7 = otherUser(1236).intl;
-  const formatResult1 = intl5.format(messagesProxy.XyRW4c, { username: name });
+  const formatResult1 = intl5.format(messagesProxyDefault.XyRW4c, { username: name });
   const intl8 = otherUser(1236).intl;
-  const ageSpecificText3 = obj6.useAgeSpecificText(intl7.string(messagesProxy.eiABQz), intl8.string(messagesProxy.PGQBnk));
+  const ageSpecificText3 = obj6.useAgeSpecificText(intl7.string(messagesProxyDefault.eiABQz), intl8.string(messagesProxyDefault.PGQBnk));
   let obj7 = otherUser(11107);
   const intl9 = otherUser(1236).intl;
-  const stringResult1 = intl7.string(messagesProxy.eiABQz);
+  const stringResult1 = intl7.string(messagesProxyDefault.eiABQz);
   const intl10 = otherUser(1236).intl;
   const items = [disconnectLinkRequest, otherUser.id];
-  const ageSpecificText4 = obj7.useAgeSpecificText(intl9.string(messagesProxy.sCbKs4), intl10.string(messagesProxy["0ki7+P"]));
+  const ageSpecificText4 = obj7.useAgeSpecificText(intl9.string(messagesProxyDefault.sCbKs4), intl10.string(messagesProxyDefault["0ki7+P"]));
   const items1 = [isDisconnectLoading];
   const callback2 = isDisconnectLoading.useCallback(() => {
     disconnectLinkRequest(otherUser.id);
   }, items);
   const items2 = [isDisconnectLoading];
-  const callback3 = isDisconnectLoading.useCallback((arg0) => {
+  callback3 = isDisconnectLoading.useCallback((arg0) => {
     if (!isDisconnectLoading) {
       _undefined(arg0);
     }
@@ -89,12 +83,12 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   }, items2);
   obj = { style: tmp.header, children: null };
   obj = { otherUser, iconSrc: null };
-  const stringResult2 = intl9.string(messagesProxy.sCbKs4);
-  obj[1] = registerAsset;
-  const items3 = [callback(FamilyCenterAvatarPair, obj), , ];
+  const stringResult2 = intl9.string(messagesProxyDefault.sCbKs4);
+  obj[1] = registerAssetDefault;
+  const items3 = [callback(FamilyCenterAvatarPairDefault, obj), , ];
   obj1 = { style: tmp.title, variant: "text-lg/bold", children: null };
   const intl11 = otherUser(1236).intl;
-  obj1[2] = intl11.format(messagesProxy.o0JXuK, { username: name });
+  obj1[2] = intl11.format(messagesProxyDefault.o0JXuK, { username: name });
   items3[1] = callback(otherUser(4734).Text, obj1);
   obj2 = { style: tmp.subtitle, variant: "text-sm/bold", color: "text-default", children: ageSpecificText };
   items3[2] = callback(otherUser(4734).Text, obj2);
@@ -111,8 +105,7 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   items4[1] = tmp28Result;
   obj5 = { style: tmp.body, variant: "text-md/normal", color: "text-default", children: ageSpecificText2 };
   items4[2] = callback(otherUser(4734).Text, obj5);
-  obj6 = { spacing: null, children: null };
-  obj6[0] = Themes.space.PX_12;
+  obj6 = { spacing: tmp3(712).space.PX_12, children: null };
   const items5 = [callback(otherUser(9824).Checkbox, { label: ageSpecificText3, checked: tmp9, onToggle: callback3 }), callback(otherUser(9824).Checkbox, { label: ageSpecificText4, checked: tmp11, onToggle: callback4 })];
   obj6[1] = items5;
   items4[3] = callback2(otherUser(4733).Stack, obj6);
@@ -130,13 +123,13 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
   const obj9 = { children: null };
   const obj10 = { variant: "destructive", disabled: tmp31, loading: isDisconnectLoading, text: null, onPress: null };
   const intl12 = tmp6(1236).intl;
-  obj10[3] = intl12.string(messagesProxy["c5L+sl"]);
+  obj10[3] = intl12.string(messagesProxyDefault["c5L+sl"]);
   obj10[4] = callback2;
   const items7 = [callback(otherUser(4745).Button, obj10), ];
   const obj11 = { variant: "tertiary", text: null, onPress: null };
   const intl13 = tmp6(1236).intl;
   obj11[1] = intl13.string(otherUser(1236).t["3ilveh"]);
-  obj11[2] = ModalActionCreators.pop;
+  obj11[2] = _modDef5260.pop;
   items7[1] = callback(otherUser(4745).Button, obj11);
   obj9[0] = items7;
   obj8[0] = callback2(otherUser(6687).ButtonGroup, obj9);
@@ -146,31 +139,33 @@ function FamilyCenterModalDisconnectScreen(otherUser) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { header: null, title: null, subtitle: null, warning: null, body: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_24, textAlign: "center" };
-let obj1 = { marginTop: require("Themes").space.PX_24, textAlign: "center" };
-createCacheKey[2] = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
-let obj2 = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_12 };
-let obj3 = { marginBottom: require("Themes").space.PX_12 };
-createCacheKey[4] = { marginBottom: require("Themes").space.PX_24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginBottom: require("Themes").space.PX_24 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDisconnect.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
+createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_12 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_12 };
+createCacheKey[4] = { marginBottom: ThemesDefault.space.PX_24 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { marginBottom: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalDisconnect.tsx");
 
 export default function FamilyCenterModalDisconnect(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
   const memo = React.useMemo(() => {
     let obj = { DISCONNECT: null };
-    obj = { headerShown: true, headerLeft: null, headerTitle: null, render: null };
-    obj[1] = otherUser(outer1_2[25]).getHeaderCloseButton(outer1_1(outer1_2[6]).pop);
-    obj[2] = function headerTitle() {
-      return null;
-    };
-    obj[3] = function render() {
-      return outer1_6(outer1_9, { otherUser: closure_0 });
+    obj = {
+      headerShown: true,
+      headerLeft: otherUser(closure_1_2[25]).getHeaderCloseButton(closure_1_1(closure_1_2[6]).pop),
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return closure_1_6(closure_1_9, { otherUser: closure_0 });
+      }
     };
     obj[0] = obj;
     return obj;

@@ -1,23 +1,20 @@
 // discord_app/modules/devtools/native/useSortedDevToolsScreens.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import { updateDevToolsSettings } from "../DevToolsActionCreators.tsx";
+import updateDevToolsSettings from "updateDevToolsSettings" /* 13951 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "initialize" /* 7471 */;
 
-const require = arg1;
+require = arg1;
 function getSortedDevToolsScreens() {
   let sortedScreenKeys;
   {
-    sortedScreenKeys = initialize.sortedScreenKeys;
+    sortedScreenKeys = closure_3.sortedScreenKeys;
   }
   const entries = Object.entries(sortedScreenKeys(13949).DevToolsScreens);
   const found = entries.filter((arg0) => {
-    let obj;
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
   });
   return found.sort((arg0, arg1) => {
-    let tmp;
-    let tmp2;
     [tmp] = arg0;
     [tmp2] = arg1;
     const index = sortedScreenKeys.indexOf(tmp);
@@ -38,24 +35,21 @@ function getSortedDevToolsScreens() {
     return num2;
   });
 }
-let result = require("DevToolsScreens").fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/useSortedDevToolsScreens.tsx");
 
 export default function useSortedDevToolsScreens() {
-  const items = [initialize];
+  const items = [closure_3];
   sortedScreenKeys = sortedScreenKeys(589).useStateFromStores(items, () => sortedScreenKeys.sortedScreenKeys);
   sortedScreenKeys = undefined;
   if (sortedScreenKeys === undefined) {
-    sortedScreenKeys = initialize.sortedScreenKeys;
+    sortedScreenKeys = closure_3.sortedScreenKeys;
   }
   const entries = Object.entries(sortedScreenKeys(13949).DevToolsScreens);
   const found = entries.filter((arg0) => {
-    let obj;
     [, obj] = arg0;
     return null == obj.predicate || obj.predicate();
   });
   return found.sort((arg0, arg1) => {
-    let tmp;
-    let tmp2;
     [tmp] = arg0;
     [tmp2] = arg1;
     const index = sortedScreenKeys.indexOf(tmp);
@@ -77,7 +71,7 @@ export default function useSortedDevToolsScreens() {
   });
 };
 export const updateSortOrder = function updateSortOrder(closure_0, down) {
-  const items = [...initialize.sortedScreenKeys];
+  const items = [...closure_3.sortedScreenKeys];
   const tmp = getSortedDevToolsScreens();
   while (tmp2 !== undefined) {
     let tmp4 = callback;

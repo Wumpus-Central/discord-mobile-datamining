@@ -1,15 +1,14 @@
 // discord_app/modules/guild_scheduled_events/useEventSchedule.tsx
-import scheduledEventSort from "scheduledEventSort";
+import getRRule from "getRRule" /* 8785 */;
+import useEventException from "useEventException" /* 8790 */;
+import useEventExceptionDefault from "useEventException" /* 8790 */;
+import closure_3 from "scheduledEventSort" /* 4370 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useEventException } from "useEventException.tsx";
-import { getRRule } from "utils/ScheduleUtils.tsx";
 
-const require = arg1;
-const result = require("useEventException").fileFinishedImporting("modules/guild_scheduled_events/useEventSchedule.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useEventSchedule.tsx");
 
 export default function useEventSchedule(recurrence_rule, nextRecurrenceIdInEvent) {
-  let endDate;
-  let startDate;
   if (nextRecurrenceIdInEvent == null) {
     let obj = getRRule;
     nextRecurrenceIdInEvent = obj.getNextRecurrenceIdInEvent(recurrence_rule);
@@ -31,8 +30,7 @@ export default function useEventSchedule(recurrence_rule, nextRecurrenceIdInEven
     }
     return obj;
   }
-  obj = { startTime: null, endTime: null };
-  obj[0] = new Date(recurrence_rule.scheduled_start_time);
+  obj = { startTime: new Date(recurrence_rule.scheduled_start_time), endTime: null };
   let date1 = null;
   if (null != recurrence_rule.scheduled_end_time) {
     const _Date = Date;
@@ -41,19 +39,17 @@ export default function useEventSchedule(recurrence_rule, nextRecurrenceIdInEven
   obj[1] = date1;
 };
 export const useEventScheduleById = function useEventScheduleById(guildEventId, recurrenceId) {
-  let endDate;
-  let startDate;
   const _require = guildEventId;
   let nextRecurrenceIdInEvent = recurrenceId;
   let obj = _initialize;
-  const items = [scheduledEventSort];
-  let stateFromStores = obj.useStateFromStores(items, () => outer1_3.getGuildScheduledEvent(closure_0));
+  const items = [closure_3];
+  let stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuildScheduledEvent(closure_0));
   let tmp5 = null;
   if (recurrenceId == null) {
     let tmp2Result = tmp2(8785);
     nextRecurrenceIdInEvent = tmp2Result.getNextRecurrenceIdInEvent(stateFromStores);
   }
-  useEventException;
+  useEventExceptionDefault;
   if (stateFromStores != tmp5) {
     const id = stateFromStores.id;
   }
@@ -91,8 +87,6 @@ export const useEventScheduleById = function useEventScheduleById(guildEventId, 
   }
 };
 export const getEventSchedule = function getEventSchedule(guildEvent, recurrenceId) {
-  let endDate;
-  let startDate;
   useEventException;
   if (null != guildEvent.recurrence_rule) {
     if (null != recurrenceId) {
@@ -111,8 +105,7 @@ export const getEventSchedule = function getEventSchedule(guildEvent, recurrence
     }
     return obj;
   }
-  obj = { startTime: null, endTime: null };
-  obj[0] = new Date(guildEvent.scheduled_start_time);
+  obj = { startTime: new Date(guildEvent.scheduled_start_time), endTime: null };
   let date1 = null;
   if (null != guildEvent.scheduled_end_time) {
     const _Date = Date;

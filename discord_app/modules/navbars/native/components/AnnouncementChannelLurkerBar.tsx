@@ -1,16 +1,15 @@
 // discord_app/modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
 class AnnouncementChannelLurkerBar {
   constructor(arg0) {
     channel = global.channel;
-    tmp = jsxs();
+    tmp = closure_5();
     obj = { style: tmp.wrapper, children: null };
     obj = { style: tmp.text, variant: "text-sm/medium", color: "mobile-text-heading-primary", children: null };
     intl = require("getSystemLocale").intl;
@@ -21,8 +20,8 @@ class AnnouncementChannelLurkerBar {
       onPress() {
             const guildId = channel.getGuildId();
             if (null != guildId) {
-              const result = channel(outer1_1[8]).showChannelFollowingActionSheet(channel.id, guildId);
-              const obj = channel(outer1_1[8]);
+              const result = channel(closure_1_1[8]).showChannelFollowingActionSheet(channel.id, guildId);
+              const obj = channel(closure_1_1[8]);
             }
           },
       text: null,
@@ -37,13 +36,14 @@ class AnnouncementChannelLurkerBar {
     return jsxs(View, obj);
   }
 }
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { wrapper: null, text: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 16, paddingTop: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("jsxProd").fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/navbars/native/components/AnnouncementChannelLurkerBar.tsx");
 
 export default AnnouncementChannelLurkerBar;
 export { AnnouncementChannelLurkerBar };

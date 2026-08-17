@@ -1,12 +1,13 @@
 // discord_app/modules/guests/GuestUtils.tsx
-import { GuildMemberFlags } from "GuildMemberFlags";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import set from "set" /* 2 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import GuildMemberFlags2 from "GuildMemberFlags" /* 4009 */;
 
-const result = require("set").fileFinishedImporting("modules/guests/GuestUtils.tsx");
+const GuildMemberFlags = GuildMemberFlags2.GuildMemberFlags;
+const result = set.fileFinishedImporting("modules/guests/GuestUtils.tsx");
 
 export default {
   canAcceptInvite(items, guild) {
-    let obj;
     [obj] = items;
     guild = guild.guild;
     let tmp = null == guild;

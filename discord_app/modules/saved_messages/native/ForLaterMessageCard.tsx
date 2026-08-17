@@ -1,22 +1,19 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageCard.tsx
-import closure_3 from "jsxProd";
-import importAllResult from "t";
-import { View } from "expandEventProperties";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import jsxProd from "initialize";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 4334 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 class ForLaterDeletedMessageCard {
   constructor(arg0) {
     savedMessage = global.savedMessage;
-    tmp = jsxs();
+    tmp = closure_12();
     tmp3 = savedMessage;
     tmp4 = closure_2;
     tmp2 = jsxs;
@@ -24,9 +21,8 @@ class ForLaterDeletedMessageCard {
     items = [, ];
     ({ card: arr[0], deletedCard: arr[1] } = tmp);
     tmp5 = jsx;
-    obj = { size: "xs", color: null };
+    obj = { size: "xs", color: require("Themes").colors.ICON_MUTED };
     tmp6 = closure_1;
-    obj[1] = require("Themes").colors.ICON_MUTED;
     items1 = [, , ];
     items1[0] = jsx(require("CircleErrorIcon").CircleErrorIcon, obj);
     obj1 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.deletedText, children: null };
@@ -45,7 +41,7 @@ class ForLaterDeletedMessageCard {
     obj3[1] = intl3.string(require("getSystemLocale").t.SvXS1Z);
     obj3[3] = require("registerAsset");
     obj3[4] = function onPress() {
-      return savedMessage(outer1_2[14]).removeSavedMessage(savedMessage.saveData);
+      return savedMessage(closure_1_2[14]).removeSavedMessage(savedMessage.saveData);
     };
     obj2[1] = tmp5(require("IconButton").IconButton, obj3);
     items1[2] = tmp5(View, obj2);
@@ -54,12 +50,12 @@ class ForLaterDeletedMessageCard {
   }
 }
 let c4 = importAllResult;
-({ AnalyticEvents: error, ChannelTypes: metroImportAll, Permissions: c9 } = ME);
+({ AnalyticEvents: error, ChannelTypes: closure_8, Permissions: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: null, messagePreview: null, deletedCard: null, deletedText: null, deletedActionButton: null };
-obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+obj = { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 obj[1] = obj;
-createCacheKey = { marginHorizontal: -16, marginTop: -9, marginBottom: -16, borderBottomLeftRadius: require("Themes").modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: require("Themes").modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
+createCacheKey = { marginHorizontal: -16, marginTop: -9, marginBottom: -16, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, overflow: "hidden" };
 obj[2] = createCacheKey;
 obj[3] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[4] = { flex: 1 };
@@ -112,7 +108,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
             }
             message = function _jumpTo() {
               const self = this;
-              const tmp = outer2_3(function*() {
+              const tmp = closure_2_3(function*() {
                 if (c2 === 2) {
                   c2 = 3;
                   HermesBuiltin.throwTypeError();
@@ -140,11 +136,11 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
                         return obj;
                       } else {
                         const callback = tmp4;
-                        let obj2 = callback(outer2_2[15]);
+                        let obj2 = callback(closure_2_2[15]);
                         c1 = 1;
                         c2 = 1;
-                        const obj1 = { value: null, done: false };
-                        obj1[0] = obj2.savedMessageJumpToMessage(outer1_0, c1);
+                        obj1 = { value: null, done: false };
+                        obj1[0] = obj2.savedMessageJumpToMessage(closure_1_0, c1);
                         return obj1;
                       }
                     } else if (arg0 === 1) {
@@ -156,30 +152,30 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
                       obj2[0] = arg1;
                       return obj2;
                     } else {
-                      let arr = outer2_1(outer2_2[16]);
+                      let arr = closure_2_1(closure_2_2[16]);
                       arr = arr.pop();
                       const obj3 = { channel_id: null, message_id: null, message_author_id: null, type: null, due_duration: null };
-                      obj3[0] = outer1_0.saveData.channelId;
-                      obj3[1] = outer1_0.saveData.messageId;
-                      const message = outer1_0.message;
+                      obj3[0] = closure_1_0.saveData.channelId;
+                      obj3[1] = closure_1_0.saveData.messageId;
+                      const message = closure_1_0.message;
                       let id;
                       if (message != null) {
                         id = message.author.id;
                       }
                       obj3[2] = id;
-                      if (null != outer1_0.saveData.dueAt) {
-                        let BOOKMARK = callback(outer2_2[18]).SavedMessageSortTypes.REMINDER;
+                      if (null != closure_1_0.saveData.dueAt) {
+                        let BOOKMARK = callback(closure_2_2[18]).SavedMessageSortTypes.REMINDER;
                       } else {
-                        BOOKMARK = callback(outer2_2[18]).SavedMessageSortTypes.BOOKMARK;
+                        BOOKMARK = callback(closure_2_2[18]).SavedMessageSortTypes.BOOKMARK;
                       }
                       obj3[3] = BOOKMARK;
                       let diffResult;
-                      if (null != outer1_0.saveData.dueAt) {
-                        obj = outer2_1(outer2_2[19])();
-                        diffResult = obj.diff(outer1_0.saveData.dueAt);
+                      if (null != closure_1_0.saveData.dueAt) {
+                        obj = closure_2_1(closure_2_2[19])();
+                        diffResult = obj.diff(closure_1_0.saveData.dueAt);
                       }
                       obj3[4] = diffResult;
-                      outer2_1(outer2_2[17]).track(outer2_7.FOR_LATER_SAVED_MESSAGE_JUMP, obj3);
+                      closure_2_1(closure_2_2[17]).track(closure_2_7.FOR_LATER_SAVED_MESSAGE_JUMP, obj3);
                       c2 = 3;
                       return { value: "HermesInternal", done: "HermesInternal" };
                     }
@@ -189,7 +185,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
                   }
                 }
               });
-              let c0 = tmp;
+              closure_0 = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -198,10 +194,10 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
               }
               return applyArgumentsResult;
             };
-            if (v0(outer1_2[20])(message.message, jumpTo)) {
+            if (v0(closure_1_2[20])(message.message, jumpTo)) {
               v0 = 1;
               message = 1;
-              let obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = jumpTo();
               return obj1;
             }
@@ -223,8 +219,8 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
       }
     }
   }), items);
-  let obj1 = savedMessage(589);
-  const items1 = [getUncachedChannelPermissions];
+  obj1 = savedMessage(589);
+  const items1 = [closure_6];
   if (null != savedMessage.message) {
     if (null != savedMessageChannel) {
       if (obj1.useStateFromStores(items1, () => {
@@ -232,7 +228,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
         if (savedMessageChannel != null) {
           type = obj.type;
         }
-        let tmp2 = type === outer1_8.UNKNOWN;
+        let tmp2 = type === closure_1_8.UNKNOWN;
         if (!tmp2) {
           let isPrivateResult;
           if (obj != null) {
@@ -240,7 +236,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
           }
           let canResult = isPrivateResult;
           if (!canResult) {
-            canResult = outer1_6.can(outer1_9.VIEW_CHANNEL, obj);
+            canResult = closure_1_6.can(closure_1_9.VIEW_CHANNEL, obj);
           }
           tmp2 = canResult;
         }
@@ -287,7 +283,7 @@ const memoResult = importAllResult.memo(function ForLaterMessageCard(savedMessag
   }
   return callback2(ForLaterDeletedMessageCard, { savedMessage });
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageCard.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageCard.tsx");
 
 export default memoResult;
 export { ForLaterDeletedMessageCard };

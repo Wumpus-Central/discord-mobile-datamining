@@ -1,28 +1,21 @@
 // discord_app/modules/links/isAccessibleChannelOrThreadPath.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import isSubscriptionGated from "isSubscriptionGated";
-import shouldShowOnboarding from "shouldShowOnboarding";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import closure_8 from "createGuildRecordFromRust";
-import ME from "ME";
-import set from "set";
-import set from "shouldShowOnboarding";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "isSubscriptionGated" /* 1981 */;
+import closure_5 from "shouldShowOnboarding" /* 6784 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 1398 */;
 
-let c10;
-let c9;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function _isAccessibleChannelOrThreadPath() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let obj5;
       if (c5 === 2) {
         c5 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -73,7 +66,7 @@ function _isAccessibleChannelOrThreadPath() {
                   throw arg1;
                 } else if (arg0 === 2) {
                   c5 = 3;
-                  let obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
@@ -423,7 +416,7 @@ function _isAccessibleChannelOrThreadPath() {
     iter.next();
     return iter;
   });
-  const _isAccessibleChannelOrThreadPath = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

@@ -1,27 +1,16 @@
 // discord_app/modules/forums/native/ForumDisplaySettingsActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import TableRadioRow from "TableRadioRow";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import set from "set";
-import jsxProd from "jsxProd";
-import set from "ensureGuildLoaded";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 11177 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ useForumChannelStoreApi: closure_6, useForumChannelStore: error } = set);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let result = set.fileFinishedImporting("modules/forums/native/ForumDisplaySettingsActionSheet.tsx");
 
 export default function ForumDisplaySettingsActionSheet(channelId) {
-  let c10;
-  let c5;
-  let c6;
-  let c7;
-  let c8;
-  let c9;
   channelId = channelId.channelId;
   let stateFromStores;
   let sortOrder;
@@ -89,7 +78,7 @@ export default function ForumDisplaySettingsActionSheet(channelId) {
     obj = { title: null, leading: null };
     const intl = tmp(tmp2[5]).intl;
     obj[0] = intl.string(tmp(tmp2[5]).t.xyYt8A);
-    const obj1 = { onPress: null, label: null };
+    obj1 = { onPress: null, label: null };
     obj1[0] = tmp11;
     const intl2 = tmp(tmp2[5]).intl;
     obj1[1] = intl2.string(tmp(tmp2[5]).t.yBZMsQ);

@@ -1,13 +1,13 @@
 // discord_app/modules/game_console/getErrorMessageForCommandResult.tsx
-import { GameConsoleCommandResultErrorCodes as closure_3 } from "XBOX_URL_BASE";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import XBOX_URL_BASE from "XBOX_URL_BASE" /* 9763 */;
 
-const result = require("combined").fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
+let closure_3 = XBOX_URL_BASE.GameConsoleCommandResultErrorCodes;
+const result = set.fileFinishedImporting("modules/game_console/getErrorMessageForCommandResult.tsx");
 
 export default function getErrorMessageForCommandResult(arg0, arg1, code) {
-  let name;
-  let platform;
   if ("failed" === arg1) {
     code = code.code;
     ({ platform, name } = arg0);
@@ -21,7 +21,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
       obj[1] = intl8.formatToPlainString(getSystemLocale.t["cYX/3E"], obj);
       let obj7 = obj;
     } else if (tmp2.CONSOLE_DEVICE_INVALID_POWER_MODE === code) {
-      const obj1 = { title: null, body: null };
+      obj1 = { title: null, body: null };
       const intl5 = getSystemLocale.intl;
       const obj2 = { deviceType: null };
       obj2[0] = platform;
@@ -82,7 +82,7 @@ export default function getErrorMessageForCommandResult(arg0, arg1, code) {
     if (null != tmp) {
       const intl9 = getSystemLocale.intl;
       const obj13 = { supportURL: null, errorCode: null };
-      obj12 = combined;
+      obj12 = combinedDefault;
       obj13[0] = obj12.getSubmitRequestURL();
       obj13[1] = code.code;
       tmp.errorCodeMessage = intl9.format(getSystemLocale.t["1Bi9Cf"], obj13);

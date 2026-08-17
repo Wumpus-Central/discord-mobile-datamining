@@ -1,7 +1,10 @@
 // discord_app/lib/VoiceDuration.tsx
+import set2 from "set" /* 2 */;
+import sleep from "sleep" /* 4548 */;
+
 let closure_2 = [1, 100, 1000, 10000];
 let closure_3 = [100, 500, 1000, 5000];
-let result = require("set").fileFinishedImporting("lib/VoiceDuration.tsx");
+let result = set2.fileFinishedImporting("lib/VoiceDuration.tsx");
 class VoiceDuration {
   constructor(arg0, arg1) {
     TimeStampProducer = importDefault;
@@ -160,13 +163,13 @@ prototype["onDeafened"] = function onDeafened(flag2) {
 };
 prototype["computeSpeakingDurationMilestones"] = function computeSpeakingDurationMilestones(lastStartTime, lastStartTime2, lastElapsed) {
   const self = this;
-  let closure_1 = lastStartTime;
-  let closure_2 = lastStartTime2;
-  let closure_3 = lastElapsed;
+  closure_1 = lastStartTime;
+  closure_2 = lastStartTime2;
+  closure_3 = lastElapsed;
   if (null != lastStartTime) {
     if (null != lastStartTime2) {
       const speaking = this.speaking;
-      let closure_0 = speaking.elapsed().asMilliseconds();
+      closure_0 = speaking.elapsed().asMilliseconds();
       const found = closure_2.filter((arg0) => {
         const timesUntilSpeakingDurationMilestonesMs = self.timesUntilSpeakingDurationMilestonesMs;
         return !timesUntilSpeakingDurationMilestonesMs.has(arg0);
@@ -185,7 +188,7 @@ prototype["addSpeechChunk"] = function addSpeechChunk() {
   const lastStartTime = this.speaking.lastStartTime;
   if (null != lastStartTime) {
     const timestampProducer = this.timestampProducer;
-    let closure_0 = timestampProducer.now() - lastStartTime;
+    closure_0 = timestampProducer.now() - lastStartTime;
     const found = closure_3.filter((arg0) => closure_0 >= arg0);
     const item = found.forEach((arg0) => {
       const speakingMinimumChunks = self.speakingMinimumChunks;
@@ -237,9 +240,8 @@ prototype["getDurationStats"] = function getDurationStats() {
     num = timestampProducer.now() - lastStartTime;
   }
   const speakingDurationMilestones = self.computeSpeakingDurationMilestones(self.connected.lastStartTime, self.speaking.lastStartTime, self.speaking.lastElapsed);
-  let obj = { duration_listening_ms: null, duration_speaking_ms: null, duration_participation_ms: null, duration_connected_ms: null, duration_muted_ms: null, duration_deafened_ms: null, duration_noise_cancellation_enabled_ms: null, duration_spatial_ms: null, speech_event_count: null };
-  const listening = self.listening;
-  obj[0] = listening.elapsed().asMilliseconds();
+  let obj = { duration_listening_ms: listening.elapsed().asMilliseconds(), duration_speaking_ms: null, duration_participation_ms: null, duration_connected_ms: null, duration_muted_ms: null, duration_deafened_ms: null, duration_noise_cancellation_enabled_ms: null, duration_spatial_ms: null, speech_event_count: null };
+  listening = self.listening;
   const speaking = self.speaking;
   const elapsedResult = listening.elapsed();
   obj[1] = speaking.elapsed().asMilliseconds();
@@ -285,7 +287,7 @@ prototype["getDurationStats"] = function getDurationStats() {
     const merged = Object.assign(arg0);
     const speakingMinimumChunks = self.speakingMinimumChunks;
     const combined = "duration_speaking_gte_" + arg1 + "ms_ms";
-    let num = speakingMinimumChunks.get(arg1);
+    num = speakingMinimumChunks.get(arg1);
     if (num == null) {
       num = 0;
     }

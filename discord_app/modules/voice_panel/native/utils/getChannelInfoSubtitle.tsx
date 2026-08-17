@@ -1,7 +1,9 @@
 // discord_app/modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../utils/NicknameUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+
+const result = set.fileFinishedImporting("modules/voice_panel/native/utils/getChannelInfoSubtitle.tsx");
 
 export default function getChannelInfoSubtitle(arg0, arg1, arg2) {
   let num = arg3;
@@ -11,20 +13,20 @@ export default function getChannelInfoSubtitle(arg0, arg1, arg2) {
   if (0 === arg2.length) {
     return null;
   } else if (1 === length) {
-    return getNickname.getName(arg0, arg1, arg2[0]);
+    return getNicknameDefault.getName(arg0, arg1, arg2[0]);
   } else if (2 === length) {
     const intl = getSystemLocale.intl;
     let obj = { user1: null, user2: null };
-    obj[0] = getNickname.getName(arg0, arg1, arg2[0]);
-    const obj2 = getNickname;
-    obj[1] = getNickname.getName(arg0, arg1, arg2[1]);
+    obj[0] = getNicknameDefault.getName(arg0, arg1, arg2[0]);
+    const obj2 = getNicknameDefault;
+    obj[1] = getNicknameDefault.getName(arg0, arg1, arg2[1]);
     return intl.formatToPlainString(getSystemLocale.t["lRD/ru"], obj);
   } else {
     const intl2 = getSystemLocale.intl;
     obj = { user1: null, user2: null, numPeople: null };
-    obj[0] = getNickname.getName(arg0, arg1, arg2[0]);
-    const obj6 = getNickname;
-    obj[1] = getNickname.getName(arg0, arg1, arg2[1]);
+    obj[0] = getNicknameDefault.getName(arg0, arg1, arg2[0]);
+    const obj6 = getNicknameDefault;
+    obj[1] = getNicknameDefault.getName(arg0, arg1, arg2[1]);
     obj[2] = arg2.length - 2 + num;
     return intl2.formatToPlainString(getSystemLocale.t.RFCI3S, obj);
   }

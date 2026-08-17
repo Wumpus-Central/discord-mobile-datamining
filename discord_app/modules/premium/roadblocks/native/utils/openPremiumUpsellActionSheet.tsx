@@ -1,11 +1,13 @@
 // discord_app/modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx
-import { asyncRequireImpl } from "../../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+
 const PremiumUpsellActionSheetKey = "PremiumUpsellActionSheetKey";
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/openPremiumUpsellActionSheet.tsx");
 
 export default function openPremiumUpsellActionSheet(featureName, subfeatureName, analyticsLocations) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { featureName, subfeatureName, analyticsLocations };
   obj.openLazy(asyncRequireImpl(8480, dependencyMap.paths), PremiumUpsellActionSheetKey, obj);
 };

@@ -1,13 +1,13 @@
 // discord_app/modules/guild_tag/useUserAvailableGuildsWithTags.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_tag/useUserAvailableGuildsWithTags.tsx");
 
 export const useUserAvailableGuildsWithTags = function useUserAvailableGuildsWithTags() {
-  const items = [createGuildRecordFromRust, trackCommunicationDisabled];
+  const items = [closure_3, closure_2];
   return initialize.useStateFromStoresArray(items, () => {
     guildsArray = guildsArray.getGuildsArray();
     return guildsArray.filter((id) => {

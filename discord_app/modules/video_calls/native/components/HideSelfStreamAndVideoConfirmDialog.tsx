@@ -1,21 +1,18 @@
 // discord_app/modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { SelfStreamAndVideoAlertType as closure_4 } from "SelfStreamAndVideoAlertType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import noopAll from "noop" /* 19 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { SelfStreamAndVideoAlertType as closure_4 } from "SelfStreamAndVideoAlertType" /* 16424 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ wrapper: { padding: 16 }, body: { paddingTop: 16 }, description: { lineHeight: 18 }, ctaLink: { paddingTop: 8, textAlign: "center", textDecorationLine: "underline" } });
-let result = require("SelfStreamAndVideoAlertType").fileFinishedImporting("modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/HideSelfStreamAndVideoConfirmDialog.tsx");
 
 export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
-  let onConfirm;
-  let type;
   ({ type, onConfirm } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   const tmp2 = callback2();
@@ -52,11 +49,11 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   obj = { style: tmp2.body, children: null };
   obj = { style: tmp2.description, variant: "text-sm/medium", children: stringResult1 };
   const items = [closure_5(tmp6(4734).Text, obj), ];
-  const obj1 = {
+  obj1 = {
     accessibilityRole: "link",
     style: items1,
     onPress() {
-      const result = outer1_1(outer1_2[8]).updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
+      const result = closure_1_1(closure_1_2[8]).updatedUnsyncedSettings({ disableHideSelfStreamAndVideoConfirmationAlert: true });
       onConfirm();
     },
     variant: "text-sm/medium",
@@ -69,5 +66,5 @@ export default function HideSelfStreamAndVideoConfirmDialog(arg0) {
   items[1] = closure_5(tmp6(4734).Text, obj1);
   obj[1] = items;
   obj.children = callback(View, obj);
-  return closure_5(componentDidMount, obj);
+  return closure_5(componentDidMountDefault, obj);
 };

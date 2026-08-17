@@ -1,29 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { SearchField } from "../../../../design/components/TextField/native/SearchField.native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import SearchField from "SearchField" /* 7337 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let obj1;
-const require = arg1;
+require = arg1;
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { container: null, cancelText: null, cancelIcon: null, flex: null };
-obj = { flexDirection: "row", alignItems: "center", height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, paddingHorizontal: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: require("Themes").colors.BORDER_STRONG };
+obj = { flexDirection: "row", alignItems: "center", height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, paddingHorizontal: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderBottomWidth: StyleSheet.hairlineWidth, borderColor: ThemesDefault.colors.BORDER_STRONG };
 obj[0] = obj;
-createCacheKey = { paddingLeft: require("Themes").space.PX_16 };
+createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
-obj[2] = { marginRight: require("Themes").space.PX_16 };
+obj[2] = { marginRight: ThemesDefault.space.PX_16 };
 obj[3] = { flex: 1 };
 let closure_5 = createCacheKey.createStyles(obj);
-let obj2 = { marginRight: require("Themes").space.PX_16 };
+let obj2 = { marginRight: ThemesDefault.space.PX_16 };
 const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   const merged = Object.assign(onClose, Object.create(null));
   const tmp2 = callback();
@@ -32,7 +29,7 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   obj[1] = intl.string(getSystemLocale.t["ETE/oC"]);
   obj[2] = onClose.onClose;
   obj[3] = { top: 8, right: 8, bottom: 8, left: 8 };
-  let obj1 = set;
+  obj1 = set;
   if (obj1.isAndroid()) {
     obj = { style: null };
     obj[0] = tmp2.cancelIcon;
@@ -68,6 +65,6 @@ const forwardRefResult = importAllResult.forwardRef((onClose, ref) => {
   obj1[1] = items;
   return closure_4(closure_2, obj1);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/SearchBarNav.tsx");
 
 export default forwardRefResult;

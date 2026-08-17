@@ -1,32 +1,25 @@
 // discord_app/modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx
-import importAllResult from "SPRING_CONFIG";
-import { View } from "module_11467";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth";
-import ME from "ME";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { set } from "../../../../hooks/useStableCallback.tsx";
-import { useEventsButtonProps } from "../../../guild_scheduled_events/native/hooks/useEventsButtonProps.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useAlertStore from "useAlertStore" /* 4657 */;
+import setDefault from "set" /* 8601 */;
+import useEventsButtonPropsDefault from "useEventsButtonProps" /* 11548 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "comparator" /* 1980 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "handleConnectionOpen" /* 1979 */;
+import { SEARCH_BAR_MARGIN_BOTTOM } from "hairlineWidth" /* 10055 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function handleInviteDisabledPress() {
   const lazyResult = importAllResult.lazy(() => callback(paths[12])(paths[11], paths.paths));
   useAlertStore.openAlert("invites-disabled", callback(lazyResult, {}));
 }
 function GuildSearchAndInvite(guildId) {
-  let onPressIn;
-  let onPressOut;
-  let pressableStyles;
   guildId = guildId.guildId;
   const canInvite = guildId.canInvite;
   const invitesDisabled = guildId.invitesDisabled;
@@ -35,21 +28,21 @@ function GuildSearchAndInvite(guildId) {
   const hasUnreadEvents = guildId.hasUnreadEvents;
   const useEventsButton = guildId.useEventsButton;
   const useButtonComponent = guildId.useButtonComponent;
-  let c7;
-  let handleConnectionOpen;
-  let closure_9;
+  closure_7 = undefined;
+  closure_8 = undefined;
+  closure_9 = undefined;
   let tmp = callback2(useButtonComponent);
-  c7 = tmp;
+  closure_7 = tmp;
   let obj = guildId(invitesDisabled[14]);
-  handleConnectionOpen = obj.useNavigation();
-  let obj1 = guildId(invitesDisabled[15]);
+  closure_8 = obj.useNavigation();
+  obj1 = guildId(invitesDisabled[15]);
   closure_9 = obj1.useGuildSearchContext(guildId);
   const tmp5 = canInvite(invitesDisabled[16])(() => {
-    const guild = _undefined.getGuild(guildId);
+    guild = guild.getGuild(guildId);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(outer1_10.HUB);
+      hasItem = features.has(closure_1_10.HUB);
     }
     if (hasItem) {
       let directoryChannelIds = useEventsButton.getDirectoryChannelIds(guildId);
@@ -67,7 +60,7 @@ function GuildSearchAndInvite(guildId) {
       const obj2 = canInvite(invitesDisabled[17]);
     } else {
       obj = canInvite(invitesDisabled[18]);
-      const result = obj.navigateToSearchWithPrefetch(handleConnectionOpen, closure_9);
+      const result = obj.navigateToSearchWithPrefetch(closure_8, closure_9);
     }
   });
   let obj2 = guildId(invitesDisabled[19]);
@@ -81,11 +74,11 @@ function GuildSearchAndInvite(guildId) {
       const obj = { variant: "secondary", size: "sm", icon: null, onPress: null, onPressDisabled: null, accessibilityLabel: null, disabled: null, maxFontSizeMultiplier: 2 };
       obj[2] = canInvite(invitesDisabled[21]);
       obj[3] = onInvitePress;
-      obj[4] = outer1_15;
+      obj[4] = closure_1_15;
       const intl = guildId(invitesDisabled[22]).intl;
       obj[5] = intl.string(guildId(invitesDisabled[22]).t.VINpSK);
       obj[6] = invitesDisabled;
-      tmp = outer1_12(guildId(invitesDisabled[20]).IconButton, obj);
+      tmp = closure_1_12(guildId(invitesDisabled[20]).IconButton, obj);
     }
     return tmp;
   }, items);
@@ -130,7 +123,7 @@ let c3 = importAllResult;
 ({ GuildFeatures: c10, InstantInviteSources: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { paddingHorizontal: Themes.space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
+  let obj = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: SEARCH_BAR_MARGIN_BOTTOM, flexDirection: "row", gap: null };
   let num = 10;
   if (arg0) {
     num = tmp(712).space.PX_12;
@@ -152,20 +145,20 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
     flag2 = false;
   }
   let obj = guild(589);
-  const items = [comparator];
+  const items = [closure_6];
   const items1 = [guild];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const channels = outer1_6.getChannels(guild.id);
-    return guild(outer1_2[29]).shouldRenderInvite(channels, guild);
+    const channels = closure_1_6.getChannels(guild.id);
+    return guild(closure_1_2[29]).shouldRenderInvite(channels, guild);
   }, items1);
-  const tmp2 = set(() => {
-    const channelId = outer1_8.getChannelId(guild.id);
-    const channels = outer1_6.getChannels(guild.id);
-    const result = guild(outer1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, outer1_11.GUILD_HEADER);
+  const tmp2 = setDefault(() => {
+    const channelId = closure_1_8.getChannelId(guild.id);
+    const channels = closure_1_6.getChannels(guild.id);
+    const result = guild(closure_1_2[30]).handleOpenInviteActionsheet(guild, channelId, channels, closure_1_11.GUILD_HEADER);
   });
   const shouldShowInvitesDisabledNotif = guild(11545).useShouldShowInvitesDisabledNotif(guild);
   const obj2 = guild(11545);
-  const tmp5 = useEventsButtonProps(guild);
+  const tmp5 = useEventsButtonPropsDefault(guild);
   obj = { guildId: guild.id, canInvite: stateFromStores, invitesDisabled: shouldShowInvitesDisabledNotif, onInvitePress: tmp2, onEventsPress: tmp5.handlePress, onEventsLongPress: tmp5.handleLongPress, hasUnreadEvents: tmp5.hasUnread, useEventsButton: null, useButtonComponent: null };
   if (flag2) {
     flag2 = tmp4;
@@ -174,6 +167,6 @@ const memoResult = importAllResult.memo(function ConnectedGuildSearchAndInviteIn
   obj[8] = flag;
   return closure_12(GuildSearchAndInvite, obj);
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/GuildSearchAndInvite.tsx");
 
 export default memoResult;

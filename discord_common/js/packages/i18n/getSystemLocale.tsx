@@ -1,9 +1,12 @@
 // discord_common/js/packages/i18n/getSystemLocale.tsx
-import { enforcing } from "../rtn-codegen/js/NativeDeviceLocaleModule.tsx";
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcing from "enforcing" /* 666 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/i18n/getSystemLocale.tsx");
 
 export const getSystemLocale = function getSystemLocale() {
-  const tmp3 = require("../../../../_runtime/00017_get_ActivityIndicator.js") /* get ActivityIndicator */ /* get ActivityIndicator */;
+  const tmp3 = get_ActivityIndicator;
   if ("android" === tmp3.Platform.OS) {
     let LocalizationManager = enforcing.default;
   } else {

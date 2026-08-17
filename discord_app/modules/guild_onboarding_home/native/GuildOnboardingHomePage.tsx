@@ -1,26 +1,23 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx
-import useCanSeeOnboardingHome from "useCanSeeOnboardingHome";
-import getHash from "getHash";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import { NO_SETTINGS } from "handleSettingsLoadSuccess";
-import set from "set";
-import { AnalyticEvents } from "ME";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getHash" /* 4288 */;
+import closure_5 from "handleSettingsLoadSuccess" /* 5048 */;
+import { NO_SETTINGS } from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_7 from "set" /* 5049 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let unpackModuleId;
 const require = arg1;
 function GuildOnboardingHomePage(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
-  let dependencyMap;
+  dependencyMap = undefined;
   let tmp = dependencyMap;
   let obj = guildId(4115);
   const sharedValue = obj.useSharedValue(-999);
-  let obj1 = guildId(589);
-  const items = [handleSettingsLoadSuccess];
-  stateFromStores = obj1.useStateFromStores(items, () => outer1_5.getSettings(guildId));
+  obj1 = guildId(589);
+  const items = [closure_5];
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_5.getSettings(guildId));
   let tmp4 = stateFromStores;
   const tmp5 = stateFromStores(5284)(guildId);
   let tmp6 = !tmp5;
@@ -40,13 +37,13 @@ function GuildOnboardingHomePage(guildId) {
   dependencyMap = tmp6;
   const items1 = [guildId, stateFromStores, tmp6];
   const effect = React.useEffect(() => {
-    if (stateFromStores === outer1_6) {
-      const guildHomeSettings = guildId(_undefined[9]).fetchGuildHomeSettings(guildId);
-      const obj2 = guildId(_undefined[9]);
+    if (stateFromStores === closure_1_6) {
+      const guildHomeSettings = guildId(11452).fetchGuildHomeSettings(guildId);
+      const obj2 = guildId(11452);
     } else if (null != tmp) {
       const obj = {};
-      const obj3 = stateFromStores(_undefined[10]);
-      const merged = Object.assign(guildId(_undefined[11]).collectGuildAnalyticsMetadata(guildId));
+      const obj3 = stateFromStores(698);
+      const merged = Object.assign(guildId(5042).collectGuildAnalyticsMetadata(guildId));
       const newMemberActions = tmp.newMemberActions;
       let num;
       if (newMemberActions != null) {
@@ -56,7 +53,7 @@ function GuildOnboardingHomePage(guildId) {
         num = 0;
       }
       obj.num_member_actions = num;
-      let completedActions = outer1_7.getCompletedActions(guildId);
+      let completedActions = closure_1_7.getCompletedActions(guildId);
       if (completedActions == null) {
         completedActions = {};
       }
@@ -70,20 +67,20 @@ function GuildOnboardingHomePage(guildId) {
         num2 = 0;
       }
       obj.num_resource_channels = num2;
-      obj3.track(outer1_8.SERVER_GUIDE_VIEWED, obj);
-      const obj5 = guildId(_undefined[11]);
+      obj3.track(closure_1_8.SERVER_GUIDE_VIEWED, obj);
+      const obj5 = guildId(5042);
       const tmp14 = guildId;
     }
   }, items1);
   const items2 = [guildId, tmp6, stateFromStores];
   const effect1 = React.useEffect(() => {
-    let tmp = _undefined;
-    if (_undefined) {
-      tmp = stateFromStores !== outer1_6;
+    let tmp = dependencyMap;
+    if (dependencyMap) {
+      tmp = stateFromStores !== closure_1_6;
     }
     if (tmp) {
-      const result = stateFromStores(_undefined[12]).escapeToDefaultChannel(guildId);
-      const obj = stateFromStores(_undefined[12]);
+      const result = stateFromStores(6778).escapeToDefaultChannel(guildId);
+      const obj = stateFromStores(6778);
     }
   }, items2);
   if (tmp6) {
@@ -123,13 +120,13 @@ function GuildOnboardingHomePage(guildId) {
   }
 }
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
-let result = require("handleSettingsLoadSuccess").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingHomePage.tsx");
 
 export default function GuildOnboardingHomePageGuard(guildId) {
   guildId = guildId.guildId;
   let stateFromStores;
   let canSeeOnboardingHome;
-  const items = [getHash];
+  const items = [closure_4];
   stateFromStores = guildId(canSeeOnboardingHome[7]).useStateFromStores(items, () => hasLoadedExperiments.hasLoadedExperiments);
   let obj = guildId(canSeeOnboardingHome[7]);
   canSeeOnboardingHome = guildId(canSeeOnboardingHome[19]).useCanSeeOnboardingHome(guildId);

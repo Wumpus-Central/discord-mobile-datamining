@@ -1,10 +1,11 @@
 // discord_app/modules/routing/RouteConstants.tsx
-import { CollectibleShopTab } from "items";
-import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID";
-import getAuthenticationPath from "getAuthenticationPath";
+import set from "set" /* 2 */;
+import items2 from "items" /* 678 */;
+import CONFERENCE_MODE_ENABLED from "CONFERENCE_MODE_ENABLED" /* 683 */;
+import GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID from "GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID" /* 684 */;
+import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
 
-let closure_1;
-let obj1;
+const CollectibleShopTab = items2.CollectibleShopTab;
 ({ ApplicationDirectoryProfileSections: closure_1, GlobalDiscoveryAppsSections: obj1 } = GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID);
 let c3 = "@me";
 const items = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-list"];
@@ -222,7 +223,7 @@ const obj = {
   ICYMI: "/icymi"
 };
 let str = "/login";
-if (require("CONFERENCE_MODE_ENABLED").CONFERENCE_MODE_ENABLED) {
+if (CONFERENCE_MODE_ENABLED.CONFERENCE_MODE_ENABLED) {
   str = "/register";
 }
 obj[36] = str;
@@ -584,7 +585,7 @@ obj[145] = function QUEST_PREVIEW_TOOL_2(arg0) {
 };
 const frozen = Object.freeze(obj);
 const wrapPathsResult = getAuthenticationPath.wrapPaths(frozen, [":", "?", "@"]);
-const result = require("GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID").fileFinishedImporting("modules/routing/RouteConstants.tsx");
+const result = set.fileFinishedImporting("modules/routing/RouteConstants.tsx");
 
 export const ME = "@me";
 export const FAVORITES = "@favorites";

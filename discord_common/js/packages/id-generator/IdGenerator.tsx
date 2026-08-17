@@ -1,7 +1,9 @@
 // discord_common/js/packages/id-generator/IdGenerator.tsx
-import { Integer } from "../../../../_runtime/00014_Integer.js";
-import { Buffer } from "../../../../_runtime/00511_Buffer.js";
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
+import set from "set" /* 2 */;
+import IntegerDefault from "Integer" /* 14 */;
+import Buffer from "Buffer" /* 511 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/id-generator/IdGenerator.tsx");
 class IdGenerator {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -12,7 +14,7 @@ class IdGenerator {
   }
 }
 IdGenerator.prototype["generate"] = function generate(arg0) {
-  const obj = Integer(arg0);
+  const obj = IntegerDefault(arg0);
   this._sequenceNumber = +this._sequenceNumber + 1;
   const str = new Buffer.Buffer(24);
   str.writeInt32LE(obj.mod(4294967296).toJSNumber() | 0, 0, true);

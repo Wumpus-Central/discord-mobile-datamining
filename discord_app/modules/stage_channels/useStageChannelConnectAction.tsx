@@ -1,12 +1,14 @@
 // discord_app/modules/stage_channels/useStageChannelConnectAction.tsx
-import { useCurrentUserStageRoles } from "useCurrentUserStageRoles.tsx";
-import { useStageChannelIsLive } from "useStateChannelIsLive.tsx";
+import set from "set" /* 2 */;
+import useStageChannelIsLiveDefault from "useStageChannelIsLive" /* 8060 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 12489 */;
+
 const obj = { NORMAL: 0, [0]: "NORMAL", START_EVENT: 1, [1]: "START_EVENT" };
-const result = require("set").fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/useStageChannelConnectAction.tsx");
 
 export default function useStageChannelConnectAction(arg0) {
   if (!tmp) {
-    if (useCurrentUserStageRoles(arg0, true).moderator) {
+    if (useCurrentUserStageRolesDefault(arg0, true).moderator) {
       let NORMAL = obj.START_EVENT;
     }
     return NORMAL;
@@ -15,5 +17,5 @@ export default function useStageChannelConnectAction(arg0) {
 };
 export const ChannelConnectAction = obj;
 export const useStageChannelStartEvent = function useStageChannelStartEvent(id) {
-  return { isLive: useStageChannelIsLive(id), isModerator: useCurrentUserStageRoles(id, true).moderator };
+  return { isLive: useStageChannelIsLiveDefault(id), isModerator: useCurrentUserStageRolesDefault(id, true).moderator };
 };

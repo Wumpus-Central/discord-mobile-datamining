@@ -1,24 +1,23 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ShinyButton.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09355_registerAsset.js";
-import { CollapsingText } from "../../../../design/components/Button/native/BaseTextButton.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import CollapsingText from "CollapsingText" /* 4746 */;
+import registerAssetDefault from "registerAsset" /* 9355 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null, sparkleIcon: null, disabled: null };
-createCacheKey = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_DEFAULT };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginRight: 4, tintColor: require("Themes").colors.WHITE };
+createCacheKey[1] = { marginRight: 4, tintColor: ThemesDefault.colors.WHITE };
 createCacheKey[2] = { opacity: 0.5 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginRight: 4, tintColor: require("Themes").colors.WHITE };
-const result = require("createCacheKey").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ShinyButton.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginRight: 4, tintColor: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ShinyButton.tsx");
 
 export default function ShinyButton(style) {
-  let disabled;
-  let loading;
-  let onPress;
   ({ loading, disabled, onPress } = style);
   if (onPress === undefined) {
     onPress = function c() {
@@ -26,14 +25,14 @@ export default function ShinyButton(style) {
     };
   }
   const merged = Object.assign(style, Object.create(null));
-  const tmp2 = createCacheKey();
+  const tmp2 = callback();
   let obj = { onPress, pillStyle: items, loading, disabled, icon: null };
   items = [tmp2.container, style.style];
   let tmp3Result;
   if (!loading) {
     obj = { size: null, source: null, style: null };
     obj[0] = tmp4(1297).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = registerAsset;
+    obj[1] = registerAssetDefault;
     const items1 = [tmp2.sparkleIcon, ];
     if (disabled) {
       disabled = tmp2.disabled;

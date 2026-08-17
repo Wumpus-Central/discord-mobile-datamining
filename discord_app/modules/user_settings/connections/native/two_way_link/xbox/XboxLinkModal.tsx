@@ -1,24 +1,32 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx
-import noop from "noop";
-import { XboxLinkModalScenes } from "XboxLinkModalScenes";
-import { PlatformTypes } from "ME";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08143_registerAsset.js";
-import { HeaderActionButton } from "../../../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import HeaderActionButton from "HeaderActionButton" /* 5432 */;
+import registerAssetDefault from "registerAsset" /* 8143 */;
+import closure_3 from "noop" /* 19 */;
+import { XboxLinkModalScenes } from "XboxLinkModalScenes" /* 9752 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function CloseButton() {
-  const obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = registerAsset;
-  obj[1] = function onPress() {
-    return callback(table[6]).hideModal();
+  const obj = {
+    source: registerAssetDefault,
+    onPress() {
+      return callback(table[6]).hideModal();
+    },
+    accessibilityLabel: null
   };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.cpT0Cq);
-  return jsx(HeaderActionButton.HeaderActionButton, { source: null, onPress: null, accessibilityLabel: null });
+  return jsx(HeaderActionButton.HeaderActionButton, {
+    source: registerAssetDefault,
+    onPress() {
+      return callback(table[6]).hideModal();
+    },
+    accessibilityLabel: null
+  });
 }
-const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/xbox/XboxLinkModal.tsx");
 
 export default function XboxLinkModal(locationStack) {
   let twoWayLinkStyles;
@@ -34,7 +42,7 @@ export default function XboxLinkModal(locationStack) {
     }
     let obj = {
       headerLeft: blank,
-      headerRight: outer1_7,
+      headerRight: closure_1_7,
       headerTitle: blank,
       headerStyle: onClose.navHeader,
       render() {
@@ -43,7 +51,7 @@ export default function XboxLinkModal(locationStack) {
     };
     obj = {
       headerLeft: blank,
-      headerRight: outer1_7,
+      headerRight: closure_1_7,
       headerStyle: onClose.navHeader,
       headerTitle() {
         return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 1, total: 2 });
@@ -54,47 +62,45 @@ export default function XboxLinkModal(locationStack) {
     };
     obj = {
       headerLeft: blank,
-      headerRight: outer1_7,
+      headerRight: closure_1_7,
       headerStyle: onClose.navHeader,
       headerTitle() {
         return callback2(onClose(9757).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
-        let callbackCode;
-        let callbackState;
         ({ callbackCode, callbackState } = arg0);
         return callback2(callback(9762), { callbackCode, callbackState });
       }
     };
     return {
-      [outer1_4.LANDING]: obj,
-      [outer1_4.PRE_CONNECT]: obj,
-      [outer1_4.DISCORD_CONSENT]: obj,
-      [outer1_4.SUCCESS]: {
+      [closure_1_4.LANDING]: obj,
+      [closure_1_4.PRE_CONNECT]: obj,
+      [closure_1_4.DISCORD_CONSENT]: obj,
+      [closure_1_4.SUCCESS]: {
         headerLeft: blank,
-        headerRight: outer1_7,
+        headerRight: closure_1_7,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
           return callback2(callback(9837), {});
         }
       },
-      [outer1_4.EDUCATION]: {
+      [closure_1_4.EDUCATION]: {
         headerLeft: blank,
-        headerRight: outer1_7,
+        headerRight: closure_1_7,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
-          return outer1_6(outer1_1(outer1_2[13]), { onClose });
+          return closure_1_6(closure_1_1(closure_1_2[13]), { onClose });
         }
       },
-      [outer1_4.ERROR]: {
+      [closure_1_4.ERROR]: {
         headerLeft: blank,
-        headerRight: outer1_7,
+        headerRight: closure_1_7,
         headerTitle: blank,
         headerStyle: onClose.navHeader,
         render() {
-          return outer1_6(outer1_1(outer1_2[14]), { onClose });
+          return closure_1_6(closure_1_1(closure_1_2[14]), { onClose });
         }
       }
     };

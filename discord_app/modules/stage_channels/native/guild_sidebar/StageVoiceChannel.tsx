@@ -1,52 +1,41 @@
 // discord_app/modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx
-import importAllResult from "shouldShowMembershipVerificationGate";
-import { View } from "useStageParticipants";
-import handleConnectionOpen from "handleConnectionOpen";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import { NO_VOICE_STATES } from "getVoiceStatesForGuild";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import ME from "ME";
-import { jsx } from "dismissGlobalKeyboard";
-import createCacheKey from "createCacheKey";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
-import { transformParticipantToSortedVoiceState } from "../../useStageChannelSpeakerVoiceStates.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import transformParticipantToSortedVoiceStateDefault from "transformParticipantToSortedVoiceState" /* 15498 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "handleConnectionOpen" /* 5271 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "generateOldThreadCutoff" /* 4772 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_10 from "getVoiceStatesForGuild" /* 4545 */;
+import { NO_VOICE_STATES } from "getVoiceStatesForGuild" /* 4545 */;
+import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let map1;
 const require = arg1;
 let c4 = importAllResult;
 ({ MAX_STAGE_VOICE_USER_LIMIT: map1, Permissions: closure_14 } = ME);
 let obj = { voiceStates: { marginLeft: 36, marginBottom: 8 }, container: null };
-obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: require("Themes").radii.md };
+obj = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 obj[1] = obj;
 let closure_16 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((channel) => {
-  let collapsed;
-  let hasMedia;
-  let hasUnread;
-  let locked;
-  let resolvedUnreadSetting;
-  let stageInstance;
-  let voiceStates;
   channel = channel.channel;
   const selected = channel.selected;
   let tmp = callback();
   let obj = channel(589);
-  const items = [handleStageInstanceCreateOrUpdate, generateOldThreadCutoff, updateUserGuildSettingsInternal, getVoiceStatesForGuild, getUncachedChannelPermissions, handleConnectionOpen];
+  const items = [closure_12, closure_8, closure_9, closure_10, closure_7, closure_6];
   const items1 = [channel];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const obj = { stageInstance: outer1_12.getStageInstanceByChannel(channel.id), hasUnread: outer1_8.hasUnread(channel.id), resolvedUnreadSetting: outer1_9.resolveUnreadSetting(channel), voiceStates: outer1_10.getVoiceStatesForChannel(channel), hasMedia: null, locked: null, collapsed: null };
-    obj[4] = channel(outer1_3[15]).getStageHasMedia(channel.id);
-    obj[5] = !outer1_7.can(outer1_14.CONNECT, channel);
-    obj[6] = outer1_6.isCollapsed(channel.id);
+    const obj = { stageInstance: closure_1_12.getStageInstanceByChannel(channel.id), hasUnread: closure_1_8.hasUnread(channel.id), resolvedUnreadSetting: closure_1_9.resolveUnreadSetting(channel), voiceStates: closure_1_10.getVoiceStatesForChannel(channel), hasMedia: channel(closure_1_3[15]).getStageHasMedia(channel.id), locked: !closure_1_7.can(closure_1_14.CONNECT, channel), collapsed: closure_1_6.isCollapsed(channel.id) };
     return obj;
   }, items1);
   ({ stageInstance, hasUnread, hasMedia, collapsed } = stateFromStoresObject);
   ({ resolvedUnreadSetting, voiceStates, locked } = stateFromStoresObject);
-  let arr3 = transformParticipantToSortedVoiceState(channel.guild_id)[channel.id];
+  let arr3 = transformParticipantToSortedVoiceStateDefault(channel.guild_id)[channel.id];
   if (arr3 == null) {
     arr3 = NO_VOICE_STATES;
   }
@@ -59,19 +48,19 @@ const memoResult = importAllResult.memo((channel) => {
     const guildId = channel.getGuildId();
     if (null != guildId) {
       if (obj.shouldShowMembershipVerificationGate(guildId)) {
-        return channel(outer1_3[20]).openMemberVerificationModal(guildId);
+        return channel(closure_1_3[20]).openMemberVerificationModal(guildId);
       }
-      obj = channel(outer1_3[19]);
+      obj = channel(closure_1_3[19]);
     }
-    const result = outer1_2(outer1_3[21]).dismissGlobalKeyboard();
-    const obj2 = outer1_2(outer1_3[21]);
+    const result = closure_1_2(closure_1_3[21]).dismissGlobalKeyboard();
+    const obj2 = closure_1_2(closure_1_3[21]);
     const tmp = channel;
-    channel(outer1_3[22]).connectAndOpen(tmp);
+    channel(closure_1_3[22]).connectAndOpen(tmp);
   }, items2);
   const callback1 = importAllResult.useCallback(() => {
-    const result = channel(outer1_3[23]).openChannelLongPressActionSheet(channel.id);
+    const result = channel(closure_1_3[23]).openChannelLongPressActionSheet(channel.id);
   }, items3);
-  const tmp10 = computeChannelName(channel, false);
+  const tmp10 = computeChannelNameDefault(channel, false);
   tmp2Result = tmp2(8675);
   const isConnectedToVoiceChannel = tmp2Result.useIsConnectedToVoiceChannel(channel);
   if (stageInstance != null) {
@@ -89,7 +78,7 @@ const memoResult = importAllResult.memo((channel) => {
       let formatToPlainStringResult1 = intl2.formatToPlainString(tmp2(1236).t.rhh6Ev, obj);
     }
     obj = {};
-    const obj1 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null };
+    obj1 = { accessible: true, accessibilityRole: "button", accessibilityLabel: null };
     obj1[2] = formatToPlainStringResult1;
     const merged = Object.assign(obj1);
     obj.onPress = callback;
@@ -144,6 +133,6 @@ const memoResult = importAllResult.memo((channel) => {
     formatToPlainStringResult1 = intl3.formatToPlainString(tmp2(1236).t["7yr3Qc"], obj5);
   }
 });
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/guild_sidebar/StageVoiceChannel.tsx");
 
 export default memoResult;

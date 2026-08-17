@@ -1,51 +1,37 @@
 // discord_app/modules/parent_tools/native/ChangeSpendingLimitModal.tsx
-import Themes from "Themes";
-import TextInput from "TextInput";
-import get_ActivityIndicator from "ModalContent";
-import jsxProd from "ButtonGroup";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { TextInput } from "../../../design/components/TextInput/native/TextInput.native.tsx";
 import { useChangeSpendingLimitFormState } from "../ChangeSpendingLimitFormState.tsx";
 
-let StyleSheet;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 function ChangeSpendingLimitScreen(teenId) {
-  let amountInput;
-  let c0;
-  let canSave;
-  let currencySymbol;
-  let exponent;
-  let handleAmountChange;
-  let isClearingCap;
-  let isOverspending;
-  let isSubmitting;
-  let monthlySpend;
-  let renewalDate;
   let _require;
   function _handleSave(arg0) {
     const self = this;
-    const tmp = outer1_3(function*() {
-      let closure_0 = tmp3;
-      let dependencyMap = 1;
-      yield outer1_0();
+    const tmp = closure_1_3(function*() {
+      closure_0 = tmp3;
+      dependencyMap = 1;
+      yield closure_1_0();
       if (1 === tmp7) {
         dependencyMap = 0;
-        const obj1 = outer1_0(4093);
-        const intl = outer1_0(1236).intl;
+        obj1 = closure_1_0(4093);
+        const intl = closure_1_0(1236).intl;
         obj1.presentFailedToast(intl.string(v0(2335).Wu8BK2));
-        let c3 = 3;
+        c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         const obj2 = { key: "SPENDING_CONTROLS_CHANGED", content: null, IconComponent: null, iconColor: "status-positive" };
-        const intl2 = outer1_0(1236).intl;
+        const intl2 = closure_1_0(1236).intl;
         obj2[1] = intl2.string(v0(2335)["2WKfG1"]);
-        obj2[2] = outer1_0(4335).CircleCheckIcon;
+        obj2[2] = closure_1_0(4335).CircleCheckIcon;
         v0(4094).open(obj2);
         let arr = v0(5260);
         arr = arr.pop();
@@ -55,7 +41,7 @@ function ChangeSpendingLimitScreen(teenId) {
       dependencyMap = 0;
       return arg1;
     });
-    const _handleSave = tmp;
+    closure_1 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -64,7 +50,7 @@ function ChangeSpendingLimitScreen(teenId) {
     }
     return applyArgumentsResult;
   }
-  let formatToPlainStringResult = createCacheKey();
+  let formatToPlainStringResult = callback2();
   let obj = _useChangeSpendingLimitFormState;
   const changeSpendingLimitFormState = obj.useChangeSpendingLimitFormState(teenId.teenId);
   ({ amountInput, isOverspending, canSave, isSubmitting, monthlySpend, save: c0 } = changeSpendingLimitFormState);
@@ -77,14 +63,12 @@ function ChangeSpendingLimitScreen(teenId) {
       const tmp2Result = tmp2(5316);
     }
   }
-  obj = { spacing: null, children: null };
-  obj[0] = _handleSave(712).space.PX_16;
+  obj = { spacing: _handleSave(712).space.PX_16, children: null };
   obj = { variant: "text-sm/normal", children: null };
   let intl = tmp2(1236).intl;
   obj[1] = intl.string(_handleSave(2335).IFguF2);
   const items = [callback(_Text.Text, obj), ];
-  let obj1 = { spacing: null, children: null };
-  obj1[0] = _handleSave(712).space.PX_8;
+  obj1 = { spacing: _handleSave(712).space.PX_8, children: null };
   let obj2 = { variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl2 = tmp2(1236).intl;
   obj2[2] = intl2.string(_handleSave(2335)["1fHSu2"]);
@@ -198,33 +182,35 @@ function ChangeSpendingLimitScreen(teenId) {
 createCacheKey = { warningOverlay: null, warningRow: null, warningText: null };
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.borderRadius = require("Themes").modules.mobile.INPUT_FIELD_RADIUS_LG;
+createCacheKey.borderRadius = ThemesDefault.modules.mobile.INPUT_FIELD_RADIUS_LG;
 createCacheKey.borderWidth = 1;
-createCacheKey.borderColor = require("Themes").colors.ICON_FEEDBACK_WARNING;
-createCacheKey.backgroundColor = require("Themes").colors.BACKGROUND_FEEDBACK_WARNING;
+createCacheKey.borderColor = ThemesDefault.colors.ICON_FEEDBACK_WARNING;
+createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", gap: require("Themes").space.PX_8, alignItems: "flex-start" };
-let obj1 = { flexDirection: "row", gap: require("Themes").space.PX_8, alignItems: "flex-start" };
-createCacheKey[2] = { flex: 1, color: require("Themes").colors.ICON_FEEDBACK_WARNING };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, color: require("Themes").colors.ICON_FEEDBACK_WARNING };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/parent_tools/native/ChangeSpendingLimitModal.tsx");
+createCacheKey[1] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "flex-start" };
+let obj1 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, alignItems: "flex-start" };
+createCacheKey[2] = { flex: 1, color: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { flex: 1, color: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/ChangeSpendingLimitModal.tsx");
 
 export default function ChangeSpendingLimitModal(teenId) {
   teenId = teenId.teenId;
   const items = [teenId];
   const memo = React.useMemo(() => {
     let obj = { CHANGE_SPENDING_LIMIT: null };
-    obj = { headerShown: true, headerLeft: null, headerTitle: null, render: null };
-    obj[1] = teenId(outer1_2[23]).getHeaderCloseButton(outer1_1(outer1_2[13]).pop);
-    obj[2] = function headerTitle() {
-      const obj = { variant: "text-md/semibold", children: null };
-      const intl = callback(1236).intl;
-      obj[1] = intl.string(callback2(2335).xMRO6A);
-      return callback3(callback(4734).Text, obj);
-    };
-    obj[3] = function render() {
-      return outer1_6(outer1_9, { teenId: closure_0 });
+    obj = {
+      headerShown: true,
+      headerLeft: teenId(closure_1_2[23]).getHeaderCloseButton(closure_1_1(closure_1_2[13]).pop),
+      headerTitle() {
+        const obj = { variant: "text-md/semibold", children: null };
+        const intl = callback(1236).intl;
+        obj[1] = intl.string(callback2(2335).xMRO6A);
+        return callback3(callback(4734).Text, obj);
+      },
+      render() {
+        return closure_1_6(closure_1_9, { teenId: closure_0 });
+      }
     };
     obj[0] = obj;
     return obj;

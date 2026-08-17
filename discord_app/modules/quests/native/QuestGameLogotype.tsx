@@ -1,23 +1,21 @@
 // discord_app/modules/quests/native/QuestGameLogotype.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 let obj = {};
 const merged = Object.assign(require("SUBTLE_SPRING").springSlow);
 obj.overshootClamping = true;
-obj = { logo: null };
-obj[0] = { marginBottom: require("Themes").space.PX_4 };
+obj = { logo: { marginBottom: ThemesDefault.space.PX_4 } };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function QuestGameLogotypeTsx1(){const{withSpring,logoDimensionStyles,SPRING_CONFIG}=this.__closure;return{opacity:withSpring(logoDimensionStyles==null?0:1,SPRING_CONFIG,'animate-always')};}" };
-let obj1 = { marginBottom: require("Themes").space.PX_4 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_4 };
 const memoResult = importAllResult.memo((assetUrl) => {
   assetUrl = assetUrl.assetUrl;
   let num = assetUrl.width;
@@ -29,7 +27,7 @@ const memoResult = importAllResult.memo((assetUrl) => {
   const maxHeight = assetUrl.maxHeight;
   const onError = assetUrl.onError;
   let first;
-  let closure_6;
+  closure_6 = undefined;
   let memo;
   const tmp = callback();
   const tmp2 = maxWidth(maxHeight.useState(null), 2);
@@ -41,7 +39,7 @@ const memoResult = importAllResult.memo((assetUrl) => {
     if (null != first) {
       const result = size.width / size.height;
       if (null != height) {
-        const obj = { height: null, width: null };
+        obj = { height: null, width: null };
         obj[0] = tmp2;
         obj[1] = tmp2 * result;
         let size2 = obj;
@@ -67,22 +65,22 @@ const memoResult = importAllResult.memo((assetUrl) => {
   const effect = maxHeight.useEffect(() => {
     size = size.getSize(assetUrl, (arg0, arg1) => {
       if (tmp) {
-        const obj = { width: null, height: null };
+        obj = { width: null, height: null };
         obj[0] = arg0;
         obj[1] = arg1;
         callback(obj);
       }
     });
   }, items1);
-  let obj = assetUrl(height[7]);
+  obj = assetUrl(height[7]);
   class C {
     constructor() {
       obj = assetUrl(height[8]);
       num = 1;
-      if (null == c7) {
+      if (null == closure_7) {
         num = 0;
       }
-      obj = { opacity: obj.withSpring(num, outer1_8, "animate-always") };
+      obj = { opacity: obj.withSpring(num, closure_1_8, "animate-always") };
       return obj;
     }
   }
@@ -96,7 +94,7 @@ const memoResult = importAllResult.memo((assetUrl) => {
   obj = { style: items3, children: null };
   items3 = [animatedStyle, assetUrl.style];
   if (memo1) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     const items4 = [memo, tmp.logo];
     obj1[0] = items4;
     const obj2 = { height: "100%", width: "100%", uri: null, onError: null };
@@ -117,6 +115,6 @@ const memoResult = importAllResult.memo((assetUrl) => {
   obj[1] = tmp10Result;
   return memo(num(height[7]).View, obj);
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/QuestGameLogotype.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestGameLogotype.tsx");
 
 export default memoResult;

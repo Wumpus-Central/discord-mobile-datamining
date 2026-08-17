@@ -1,15 +1,13 @@
 // discord_app/modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let closure_6 = createCacheKey.createStyles({ container: { position: "absolute", opacity: 0 } });
 const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type) {
-  let item;
-  let onMeasured;
   ({ item, onMeasured } = type);
   let str = type.type;
   if (str === undefined) {
@@ -44,6 +42,6 @@ const memoResult = importAllResult.memo(function InstantInviteSelfMeasurer(type)
     onMeasured("height" === str ? layout.height : layout.width);
   }, items)} pointerEvents="none" importantForAccessibility="no-hide-descendants" accessibilityElementsHidden accessible={false}>{null}</View>;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_instant_invites/native/InstantInviteSelfMeasurer.tsx");
 
 export default memoResult;

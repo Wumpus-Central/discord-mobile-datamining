@@ -1,12 +1,10 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeForce.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
+import inlineStyles from "inlineStyles" /* 6571 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13377 */;
+import closure_2 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = ["#be0351", "#ff2c52", "#f0f0f0"];
 let closure_6 = ["#ffb84b", "#ffe361", "#f0f0f0"];
@@ -14,13 +12,9 @@ let closure_7 = [0.3, 0.4, 1];
 let items = [{ base: 8, tint: 1 }, { base: 3, tint: 1 }, { base: 2, tint: 1 }];
 let closure_9 = [0.3, 0.5, 1];
 let items1 = [{ base: 8, tint: 1 }, { base: 3, tint: 1 }, { base: 2, tint: 1 }];
-const result = require("v1").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeForce.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeForce.tsx");
 
 export const GuildBadgeForce = function GuildBadgeForce(width) {
-  let primaryColorsTransformed;
-  let primaryTintColor;
-  let secondaryColorsTransformed;
-  let secondaryTintColor;
   let num = width.width;
   if (num === undefined) {
     num = 24;

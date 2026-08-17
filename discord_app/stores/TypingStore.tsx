@@ -1,15 +1,14 @@
 // discord_app/stores/TypingStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { SlowmodeType } from "setCooldown";
-import { Endpoints } from "ME";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import { SlowmodeType } from "setCooldown" /* 7440 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function handleTypingStart(arg0) {
-  let channelId;
-  let guildId;
-  let userId;
   ({ channelId, userId, guildId } = arg0);
   let tmp = dependencyMap[channelId];
   if (tmp == null) {
@@ -46,9 +45,6 @@ function handleTypingStart(arg0) {
   }
 }
 function handleTypingStop(arg0) {
-  let channelId;
-  let guildId;
-  let userId;
   ({ channelId, userId, guildId } = arg0);
   if (null != dependencyMap[channelId]) {
     if (null != tmp7[userId]) {
@@ -88,20 +84,21 @@ function handleTypingStop(arg0) {
   return false;
 }
 function handleConnectionOpen() {
-  let closure_10 = {};
-  let closure_11 = {};
+  closure_10 = {};
+  closure_11 = {};
 }
-let closure_8 = 10 * require("set").Millis.SECOND;
-let closure_9 = 1.5 * require("set").Millis.SECOND;
+let closure_8 = 10 * setDefault.Millis.SECOND;
+let closure_9 = 1.5 * setDefault.Millis.SECOND;
 let closure_10 = {};
 let closure_11 = {};
 let closure_12 = Object.freeze({});
 let closure_13 = Object.freeze({});
+const Store = initializeDefault.Store;
 class TypingStore extends Store {
 }
 const prototype = TypingStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded);
+  this.waitFor(closure_4, closure_5);
 };
 prototype["getTypingUsers"] = function getTypingUsers(channelId) {
   let tmp = dependencyMap[channelId];
@@ -125,7 +122,7 @@ prototype["isTyping"] = function isTyping(id, id2) {
   return null != tmp[id2];
 };
 TypingStore.displayName = "TypingStore";
-const typingStore = new TypingStore(require("dispatcher"), {
+const typingStore = new TypingStore(dispatcherDefault, {
   TYPING_START: handleTypingStart,
   TYPING_STOP: handleTypingStop,
   TYPING_START_LOCAL: function handleTypingStartLocal(channelId) {
@@ -168,26 +165,26 @@ const typingStore = new TypingStore(require("dispatcher"), {
           tmp = obj.channelId === channelId;
         }
         if (tmp) {
-          tmp = id === outer1_4.getId();
+          tmp = id === closure_1_4.getId();
         }
         if (tmp) {
           tmp = null != obj.timeout;
         }
         if (tmp) {
           obj.timeout = null;
-          let tmp10 = outer1_10[channelId];
+          let tmp10 = closure_1_10[channelId];
           if (tmp10 == null) {
-            tmp10 = outer1_12;
+            tmp10 = closure_1_12;
           }
           let num = 0;
-          if (tmp10 !== outer1_12) {
+          if (tmp10 !== closure_1_12) {
             const _Object = Object;
             num = Object.keys(tmp10).length;
           }
           if (num <= 5) {
-            const HTTP = channelId(outer1_2[6]).HTTP;
+            const HTTP = channelId(closure_1_2[6]).HTTP;
             obj = { url: null, oldFormErrors: true, rejectWithError: true };
-            obj[0] = outer1_7.TYPING(tmp8);
+            obj[0] = closure_1_7.TYPING(tmp8);
             HTTP.post(obj).then((status) => {
               if (200 === status.status) {
                 let num = status.body.message_send_cooldown_ms;
@@ -199,20 +196,20 @@ const typingStore = new TypingStore(require("dispatcher"), {
                   num2 = 0;
                 }
                 if (num > 0) {
-                  let obj = outer1_1(outer1_2[7]);
+                  obj = closure_1_1(closure_1_2[7]);
                   obj = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
                   obj[1] = closure_0;
-                  obj[2] = outer1_6.SendMessage;
+                  obj[2] = closure_1_6.SendMessage;
                   obj[3] = num;
                   obj.dispatch(obj);
                 }
                 if (num2 > 0) {
                   obj = { type: "SLOWMODE_SET_COOLDOWN", channelId: null, slowmodeType: null, cooldownMs: null };
                   obj[1] = closure_0;
-                  obj[2] = outer1_6.CreateThread;
+                  obj[2] = closure_1_6.CreateThread;
                   obj[3] = num2;
-                  outer1_1(outer1_2[7]).dispatch(obj);
-                  const obj3 = outer1_1(outer1_2[7]);
+                  closure_1_1(closure_1_2[7]).dispatch(obj);
+                  const obj3 = closure_1_1(closure_1_2[7]);
                 }
               }
             });
@@ -269,8 +266,6 @@ const typingStore = new TypingStore(require("dispatcher"), {
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   MESSAGE_CREATE: function handleIncomingMessage(message) {
-    let channelId;
-    let guildId;
     ({ channelId, guildId } = message);
     const author = message.message.author;
     if (message.optimistic) {
@@ -303,6 +298,6 @@ const typingStore = new TypingStore(require("dispatcher"), {
     return tmp9Result;
   }
 });
-let result = require("setCooldown").fileFinishedImporting("stores/TypingStore.tsx");
+let result = require("set").fileFinishedImporting("stores/TypingStore.tsx");
 
 export default typingStore;

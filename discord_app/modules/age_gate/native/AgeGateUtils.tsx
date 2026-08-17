@@ -1,13 +1,15 @@
 // discord_app/modules/age_gate/native/AgeGateUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import set from "mergeGuildAvatar";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
+import set2 from "set" /* 500 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import resolveNsfwTogglesWithDefaults from "resolveNsfwTogglesWithDefaults" /* 8454 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 const GuildNSFWContentLevel = ME.GuildNSFWContentLevel;
 const Permissions = ME.Permissions;
 const items = [, ];
@@ -29,7 +31,7 @@ export const isNSFWInvite = function isNSFWInvite(guild) {
   return set.has(nsfw_level);
 };
 export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
-  let obj = set;
+  let obj = set2;
   if (obj.isIOS()) {
     let nsfw_level;
     if (invite != null) {
@@ -55,7 +57,7 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
     let flag2 = !tmp10;
     if (!tmp10) {
       id = undefined;
-      const obj2 = ModalActionCreators;
+      const obj2 = _modDef5260;
       if (invite != null) {
         const guild3 = invite.guild;
         if (guild3 != null) {
@@ -64,15 +66,15 @@ export const handleNSFWGuildInvite = function handleNSFWGuildInvite(invite) {
       }
       obj = { guildId: null };
       obj[0] = id;
-      obj2.pushLazy(tmp(2007)(9347, tmp2.paths), obj);
+      obj2.pushLazy(asyncRequireImpl(9347, tmp2.paths), obj);
       flag2 = true;
-      const tmp12 = tmp(2007)(9347, tmp2.paths);
+      const tmp12 = asyncRequireImpl(9347, tmp2.paths);
     }
     return flag2;
   } else {
     return false;
   }
-  tmp = require;
+  const tmp = require;
   tmp2 = dependencyMap;
 };
 export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
@@ -81,11 +83,11 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
     currentUser = currentUser.getCurrentUser();
     if (null != guild) {
       if (null != currentUser) {
-        const tmp9 = getUncachedChannelPermissions.can(Permissions.ADMINISTRATOR, guild) || getUncachedChannelPermissions.can(Permissions.MANAGE_GUILD, guild) || getUncachedChannelPermissions.can(Permissions.KICK_MEMBERS, guild) || getUncachedChannelPermissions.can(Permissions.BAN_MEMBERS, guild);
+        const tmp9 = closure_4.can(Permissions.ADMINISTRATOR, guild) || closure_4.can(Permissions.MANAGE_GUILD, guild) || closure_4.can(Permissions.KICK_MEMBERS, guild) || closure_4.can(Permissions.BAN_MEMBERS, guild);
         let nsfwAllowed = currentUser.nsfwAllowed;
         if (nsfwAllowed) {
-          nsfwAllowed = tmp(8454).getViewNsfwGuildsOrDefault();
-          const tmpResult = tmp(8454);
+          nsfwAllowed = resolveNsfwTogglesWithDefaults.getViewNsfwGuildsOrDefault();
+          const tmpResult = resolveNsfwTogglesWithDefaults;
         }
         let tmp11 = !tmp9;
         if (!tmp9) {
@@ -103,6 +105,6 @@ export const shouldNSFWGateGuild = function shouldNSFWGateGuild(guildId) {
   } else {
     return false;
   }
-  obj = set;
-  tmp = require;
+  obj = set2;
+  const tmp = require;
 };

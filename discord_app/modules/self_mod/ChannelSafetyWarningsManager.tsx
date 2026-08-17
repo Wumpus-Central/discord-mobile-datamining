@@ -1,10 +1,10 @@
 // discord_app/modules/self_mod/ChannelSafetyWarningsManager.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import "initialize";
-import { InappropriateConversationExperiment } from "inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
 
-const require = arg1;
+require = arg1;
 function handleChannelSelect(channelId) {
   channelId = channelId.channelId;
   if (null == channelId) {
@@ -79,6 +79,7 @@ function handleChannelUpdates(channels) {
     return false;
   }
 }
+initializeDefault;
 let prototype = function ChannelSafetyWarningsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CHANNEL_SELECT: handleChannelSelect, CHANNEL_UPDATES: handleChannelUpdates };
@@ -87,6 +88,6 @@ let prototype = function ChannelSafetyWarningsManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("InappropriateConversationExperiment").fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/self_mod/ChannelSafetyWarningsManager.tsx");
 
 export default prototype;

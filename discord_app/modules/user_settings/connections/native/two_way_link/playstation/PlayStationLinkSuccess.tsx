@@ -1,23 +1,19 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { styles } from "../TwoWayLinkStyles.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import styles from "styles" /* 9756 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ image: { width: 124, height: 160, marginBottom: 24 } });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkSuccess.tsx");
 
 export const PlayStationLinkSuccess = function PlayStationLinkSuccess(onClose) {
   let obj = styles;

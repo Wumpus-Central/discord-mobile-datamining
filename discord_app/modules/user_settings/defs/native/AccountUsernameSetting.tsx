@@ -1,15 +1,16 @@
 // discord_app/modules/user_settings/defs/native/AccountUsernameSetting.tsx
-import "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useCurrentUserHasAutomodQuarantinedProfile } from "../../../guild_automod/AutomodQuarantineUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import useCurrentUserHasAutomodQuarantinedProfile from "useCurrentUserHasAutomodQuarantinedProfile" /* 11051 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UsernameStatusMessage } from "../../account/native/UserSettingsChangeUsername.tsx";
 
-const require = arg1;
+require = arg1;
+noopAll;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -17,7 +18,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountUsernameSettingTrailing() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => callback(table[6]).getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
   },
   useDescription: function useAccountUsernameSettingDescription() {
@@ -47,6 +48,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountUsernameSetting.tsx");
 
 export default createToggle;

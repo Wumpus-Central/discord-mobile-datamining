@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupOnDeactivate.tsx");
 

@@ -1,14 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx
-import closure_4 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import Content from "Content";
-import { ScrollView } from "Themes";
-import { ApplicationTypes } from "ApplicationTypes";
-import jsxProd from "set";
-import { ApplicationRejectedNotice } from "GuildSettingsRoleSubscriptionContainer.tsx";
+import ApplicationRejectedNoticeDefault from "ApplicationRejectedNotice" /* 16955 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
 const require = arg1;
 function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   guildId = guildId.guildId;
@@ -21,12 +19,12 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   let first1;
   let loading;
   let updateSubscriptionsSettings;
-  let error;
-  let c11;
+  error = undefined;
+  closure_11 = undefined;
   callback = undefined;
   let obj = guildId(isFullServerGating[6]);
   navigation = obj.useNavigation();
-  let obj1 = guildId(isFullServerGating[7]);
+  obj1 = guildId(isFullServerGating[7]);
   subscriptionsSettings = obj1.useSubscriptionsSettings(guildId);
   isFullServerGating = navigation(isFullServerGating[8])(guildId).isFullServerGating;
   const application = navigation(isFullServerGating[9])(guildId, loading.GUILD_ROLE_SUBSCRIPTIONS).application;
@@ -64,7 +62,7 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   if (!tmp15) {
     tmp15 = isFullServerGating !== first1;
   }
-  c11 = tmp15;
+  closure_11 = tmp15;
   let tmp18 = first;
   if (first == null) {
     let cover_image_asset;
@@ -112,8 +110,8 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp2;
-            let tmp11 = null != outer1_6;
+            closure_0 = tmp2;
+            let tmp11 = null != closure_1_6;
             if (tmp11) {
               description = undefined;
               if (description != null) {
@@ -124,24 +122,24 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
             if (tmp11) {
               tmp11 = 0 !== arr.length;
             }
-            const obj1 = {};
+            obj1 = {};
             if (tmp11) {
               obj1.description = arr;
             }
-            if (null != outer1_4) {
-              obj1.cover_image = outer1_4.uri;
+            if (null != closure_1_4) {
+              obj1.cover_image = closure_1_4.uri;
             }
-            if (outer1_3 !== outer1_7) {
-              obj1.full_server_gate = outer1_7;
+            if (closure_1_3 !== closure_1_7) {
+              obj1.full_server_gate = closure_1_7;
             }
-            let obj2 = v0(outer1_3[12]);
+            let obj2 = v0(closure_1_3[12]);
             if (obj2.isEmpty(obj1)) {
               description = 3;
             } else {
               v0 = 1;
               description = 1;
               obj2 = { value: null, done: false };
-              obj2[0] = outer1_9(outer1_0, obj1);
+              obj2[0] = closure_1_9(closure_1_0, obj1);
               return obj2;
             }
           }
@@ -165,13 +163,13 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   const layoutEffect = obj2.useLayoutEffect(() => {
     if (loading) {
       let fn = () => callback2(callback(table[13]).HeaderSubmittingIndicator, {});
-    } else if (c11) {
+    } else if (closure_11) {
       fn = () => {
         const obj = { text: null, onPress: null };
-        const intl = outer1_0(outer1_3[15]).intl;
-        obj[0] = intl.string(outer1_0(outer1_3[15]).t["R3BPH+"]);
+        const intl = closure_1_0(closure_1_3[15]).intl;
+        obj[0] = intl.string(closure_1_0(closure_1_3[15]).t["R3BPH+"]);
         obj[1] = closure_12;
-        return outer1_9(outer1_0(outer1_3[14]).HeaderActionButton, obj);
+        return closure_1_9(closure_1_0(closure_1_3[14]).HeaderActionButton, obj);
       };
     } else {
       fn = () => null;
@@ -212,11 +210,10 @@ function GuildSettingsRoleSubscriptionsGroupEditInner(guildId) {
   return error(first1, obj);
 }
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const result = require("noop").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsGroupEdit.tsx");
 
 export default function GuildSettingsRoleSubscriptionsGroupEdit(guildId) {
   guildId = guildId.guildId;
-  const obj = { guildId, children: null };
-  obj[1] = callback2(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId });
-  return callback2(ApplicationRejectedNotice, obj);
+  const obj = { guildId, children: callback2(GuildSettingsRoleSubscriptionsGroupEditInner, { guildId }) };
+  return callback2(ApplicationRejectedNoticeDefault, obj);
 };

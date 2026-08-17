@@ -1,37 +1,42 @@
 // discord_app/utils/SentryUtils.native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 809 */;
+import addBreadcrumbAll from "addBreadcrumb" /* 810 */;
+import _maybeBackfillMissingBreadcrumbsFromTelemetryRing from "_maybeBackfillMissingBreadcrumbsFromTelemetryRing" /* 1209 */;
 import { getUpdatedOptions } from "ErrorCommonUtils.tsx";
 
-let c5 = new require("addBreadcrumb")("Sentry");
+const NativeModules = get_ActivityIndicator.NativeModules;
+let closure_5 = new timestampDefault("Sentry");
 _maybeBackfillMissingBreadcrumbsFromTelemetryRing = _maybeBackfillMissingBreadcrumbsFromTelemetryRing.initSentry();
 let obj = {
   setUser(id, username, email, staff) {
     const obj = { id, username, email, staff };
-    const currentScope = importAll(810).getCurrentScope();
+    const currentScope = addBreadcrumbAll.getCurrentScope();
     currentScope.setUser(obj);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser(obj);
   },
   clearUser() {
-    const currentScope = importAll(810).getCurrentScope();
+    const currentScope = addBreadcrumbAll.getCurrentScope();
     currentScope.setUser(null);
     const CrashReportingManager = NativeModules.CrashReportingManager;
     CrashReportingManager.setUser({ staff: false });
   },
   setTags(arg0) {
-    const currentScope = importAll(810).getCurrentScope();
+    const currentScope = addBreadcrumbAll.getCurrentScope();
     currentScope.setTags(arg0);
   },
   setExtra(arg0) {
-    const currentScope = importAll(810).getCurrentScope();
+    const currentScope = addBreadcrumbAll.getCurrentScope();
     currentScope.setExtras(arg0);
   },
   captureException(arg0, extra) {
     const _require = arg0;
-    const importAll = _getUpdatedOptions.getUpdatedOptions(extra);
+    importAll = _getUpdatedOptions.getUpdatedOptions(extra);
     const obj = _getUpdatedOptions;
-    importAll(810).withScope((setTags) => {
+    addBreadcrumbAll.withScope((setTags) => {
       if (null != callback) {
         if (null != tmp.tags) {
           setTags.setTags(tmp.tags);
@@ -40,7 +45,7 @@ let obj = {
           setTags.setExtras(tmp.extra);
         }
       }
-      let closure_1 = callback(outer1_3[3]).captureException(closure_0);
+      closure_1 = callback(closure_1_3[3]).captureException(closure_0);
     });
     return importDefault;
   },
@@ -57,7 +62,7 @@ let obj = {
         tags1 = updatedOptions.tags;
       }
     }
-    const dependencyMap = Object.assign({ crash: "true" }, {});
+    dependencyMap = Object.assign({ crash: "true" }, {});
     let obj = _getUpdatedOptions;
     updatedOptions(810).withScope((setExtras) => {
       if (tmp2) {
@@ -82,7 +87,7 @@ let obj = {
         }
         return exception;
       });
-      let closure_1 = updatedOptions(table[3]).captureException(closure_0);
+      closure_1 = updatedOptions(table[3]).captureException(closure_0);
     });
     return importDefault;
   },
@@ -90,18 +95,18 @@ let obj = {
     const _require = arg0;
     const updatedOptions = _getUpdatedOptions.getUpdatedOptions(extra);
     const obj = _getUpdatedOptions;
-    importAll(810).withScope((setExtras) => {
+    addBreadcrumbAll.withScope((setExtras) => {
       if (tmp2) {
         setExtras.setExtras(tmp.extra);
       }
       if (tmp4) {
         setExtras.setTags(tmp.tags);
       }
-      outer1_2(outer1_3[3]).captureMessage(closure_0);
+      closure_1_2(closure_1_3[3]).captureMessage(closure_0);
     });
   },
   addFeatureFlag(arg0, arg1) {
-    const getClient = importAll(810).getClient;
+    const getClient = addBreadcrumbAll.getClient;
     let client;
     if (getClient != null) {
       client = getClient();
@@ -121,13 +126,14 @@ let obj = {
     }
   },
   addBreadcrumb(url) {
-    tmp2.verbose("Breadcrumb", url);
+    closure_5.verbose("Breadcrumb", url);
+    addSentryBreadcrumbDefault(url);
   },
   profiledRootComponent(displayName) {
     let withProfilerResult = displayName;
     if ("canaryRelease" === obj.getConstants().ReleaseChannel) {
-      withProfilerResult = importAll(810).withProfiler(displayName, { includeRender: true, includeUpdates: true });
-      const tmpResult = importAll(810);
+      withProfilerResult = addBreadcrumbAll.withProfiler(displayName, { includeRender: true, includeUpdates: true });
+      const tmpResult = addBreadcrumbAll;
     }
     return withProfilerResult;
   },
@@ -148,14 +154,14 @@ let obj = {
           markCrashHandled(event_id);
         }
       } catch (tmp4) {
-        tmp2.warn("Failed to mark crash as handled", tmp4);
+        closure_5.warn("Failed to mark crash as handled", tmp4);
       }
     }
   },
   getLastCrashReport(arg0) {
     return new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       const CrashReportingManager = obj.CrashReportingManager;
       let getLastCrashReport;
       if (CrashReportingManager != null) {
@@ -297,7 +303,7 @@ let obj = {
     });
   }
 };
-const tmp2 = new require("addBreadcrumb")("Sentry");
-let result = require("_maybeBackfillMissingBreadcrumbsFromTelemetryRing").fileFinishedImporting("utils/SentryUtils.native.tsx");
+const tmp2 = new timestampDefault("Sentry");
+let result = set.fileFinishedImporting("utils/SentryUtils.native.tsx");
 
 export default obj;

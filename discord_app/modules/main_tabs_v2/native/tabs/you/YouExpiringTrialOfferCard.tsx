@@ -1,47 +1,42 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx
-import Text from "Text";
-import { View } from "useShouldShowExpiringTrialOfferCard";
-import clearDismissUntil from "clearDismissUntil";
-import ME from "ME";
-import { Gradients } from "items";
-import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures";
-import jsxProd from "PressableBase";
-import createCacheKey from "createCacheKey";
-import { t } from "../../../../../../_runtime/03975_t.js";
-import { useCountdown } from "../../../../../hooks/useCountdown.tsx";
+import setDefault from "set" /* 687 */;
+import ThemesDefault from "Themes" /* 712 */;
+import tDefault from "t" /* 3975 */;
+import useCountdownDefault from "useCountdown" /* 7410 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "clearDismissUntil" /* 13270 */;
+import ME from "ME" /* 676 */;
+import { Gradients } from "items" /* 7403 */;
+import { PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID as closure_11 } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_12;
-let closure_14;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
 const require = arg1;
-({ AnalyticEvents: closure_6, HelpdeskArticles: error, HorizontalGradient: metroImportAll, NoticeTypes: c9 } = ME);
+({ AnalyticEvents: closure_6, HelpdeskArticles: error, HorizontalGradient: closure_8, NoticeTypes: c9 } = ME);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-let closure_15 = 10 * require("set").Millis.SECOND;
+let closure_15 = 10 * setDefault.Millis.SECOND;
 createCacheKey = { header: { flexDirection: "row", alignItems: "flex-start", marginBottom: 16, marginRight: 32 }, closeButton: { position: "absolute", top: 16, right: 16 }, closeIcon: null, linearGradient: null, primaryCTA: null };
-createCacheKey = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { width: "100%", height: "100%", position: "absolute", overflow: "hidden" };
-createCacheKey[4] = { borderRadius: require("Themes").radii.round, gap: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: require("Themes").radii.round, gap: 4 };
-let result = require("clearDismissUntil").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx");
+createCacheKey[4] = { borderRadius: ThemesDefault.radii.round, gap: 4 };
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: ThemesDefault.radii.round, gap: 4 };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouExpiringTrialOfferCard.tsx");
 
 export default function YouExpiringTrialOfferCard(navigateToPremium) {
   navigateToPremium = navigateToPremium.navigateToPremium;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let stateFromStores;
   let premiumTrialOffer;
   let shouldShowExpiringTrialOfferCard;
-  let obj = t();
+  let obj = tDefault();
   importDefault = obj.add(5, "days");
-  const tmp3 = createCacheKey();
+  const tmp3 = callback();
   dependencyMap = tmp3;
-  let obj1 = navigateToPremium(647);
+  obj1 = navigateToPremium(647);
   let items = [shouldShowExpiringTrialOfferCard];
   stateFromStores = obj1.useStateFromStores(items, () => shouldShowExpiringTrialOfferCard.getNoticeType());
   let obj2 = navigateToPremium(7418);
@@ -54,7 +49,7 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
       num = expiresAt.getTime();
     }
   }
-  const tmp7Result = useCountdown(num, closure_15);
+  const tmp7Result = useCountdownDefault(num, closure_15);
   let tmp4Result = tmp4(16022);
   shouldShowExpiringTrialOfferCard = tmp4Result.useShouldShowExpiringTrialOfferCard();
   const items1 = [stateFromStores, shouldShowExpiringTrialOfferCard, premiumTrialOffer];
@@ -67,11 +62,11 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
       tmp = null != premiumTrialOffer;
     }
     if (tmp) {
-      let obj = callback(_undefined[11]);
+      let obj = callback(linearGradient[11]);
       obj = { notice_type: null, trial_id: null };
       obj[0] = stateFromStores;
       obj[1] = premiumTrialOffer.trialId;
-      obj.track(outer1_6.APP_NOTICE_VIEWED, obj);
+      obj.track(closure_1_6.APP_NOTICE_VIEWED, obj);
     }
   }, items1);
   if (shouldShowExpiringTrialOfferCard) {
@@ -135,14 +130,14 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         obj6[3] = { top: 8, right: 8, bottom: 8, left: 8 };
         obj6[4] = function onPress() {
           if (null != stateFromStores) {
-            let obj = callback(_undefined[11]);
+            let obj = callback(linearGradient[11]);
             obj = { notice_type: null, trial_id: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            obj.track(outer1_6.APP_NOTICE_CLOSED, obj);
+            obj.track(closure_1_6.APP_NOTICE_CLOSED, obj);
           }
           obj = { untilAtLeast: callback };
-          callback(_undefined[10]).dismiss(obj);
+          callback(linearGradient[10]).dismiss(obj);
         };
         const obj7 = { width: 16, height: 16, color: null };
         obj7[2] = tmp3.closeIcon.color;
@@ -154,32 +149,32 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
         obj8[1] = intl5.string(tmp4(1236).t.J61px0);
         obj8[2] = function onPress() {
           if (null != stateFromStores) {
-            let obj = callback(_undefined[11]);
+            let obj = callback(linearGradient[11]);
             obj = { notice_type: null, trial_id: null };
             obj[0] = tmp;
             obj[1] = tmp2;
-            obj.track(outer1_6.APP_NOTICE_PRIMARY_CTA_OPENED, obj);
+            obj.track(closure_1_6.APP_NOTICE_PRIMARY_CTA_OPENED, obj);
           }
           navigateToPremium();
         };
         obj8[3] = function renderIcon() {
-          return callback2(navigateToPremium(_undefined[23]).NitroWheelIcon, { color: "white", size: "sm" });
+          return callback2(navigateToPremium(linearGradient[23]).NitroWheelIcon, { color: "white", size: "sm" });
         };
         obj8[4] = function renderLinearGradient() {
-          const obj = { style: items, start: outer1_8.START, end: outer1_8.END, colors: null };
-          items = [_undefined.linearGradient];
-          if (outer1_9.PREMIUM_TIER_0_TRIAL_ENDING === stateFromStores) {
-            let PREMIUM_TIER_2_TRI_COLOR = outer1_10.PREMIUM_TIER_0;
+          const obj = { style: items, start: closure_1_8.START, end: closure_1_8.END, colors: null };
+          items = [linearGradient.linearGradient];
+          if (closure_1_9.PREMIUM_TIER_0_TRIAL_ENDING === stateFromStores) {
+            let PREMIUM_TIER_2_TRI_COLOR = closure_1_10.PREMIUM_TIER_0;
           } else if (tmp4.PREMIUM_TIER_2_TRIAL_ENDING === tmp3) {
-            PREMIUM_TIER_2_TRI_COLOR = outer1_10.PREMIUM_TIER_2_TRI_COLOR;
+            PREMIUM_TIER_2_TRI_COLOR = closure_1_10.PREMIUM_TIER_2_TRI_COLOR;
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("Unsupported notice type: " + tmp3);
+            error = new Error("Unsupported notice type: " + tmp3);
             throw error;
           }
           obj[3] = PREMIUM_TIER_2_TRI_COLOR;
-          return outer1_12(callback(_undefined[24]), obj);
+          return closure_1_12(callback(linearGradient[24]), obj);
         };
         items2[2] = closure_12(tmp4(1297).ShinyButton, obj8);
         obj4[0] = items2;
@@ -197,5 +192,5 @@ export default function YouExpiringTrialOfferCard(navigateToPremium) {
   } else {
     return null;
   }
-  const tmp7 = useCountdown;
+  const tmp7 = useCountdownDefault;
 };

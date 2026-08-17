@@ -1,6 +1,6 @@
 // discord_app/modules/app_startup/ManagerRegistryShared.tsx
-import set from "set";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 function populateMap(actions) {
   actions = actions.actions;
@@ -46,7 +46,7 @@ function handleAction(type) {
     tmp3 = "OVERLAY_INITIALIZE" !== type.type;
   }
   if (!tmp3) {
-    let c3 = true;
+    c3 = true;
   }
   if (type.type in closure_2) {
     const items = [];
@@ -88,5 +88,5 @@ export const initialize = function initialize(obj) {
     let tmp5 = populateMap(tmp3);
     continue;
   }
-  dispatcher.addInterceptor(handleAction);
+  dispatcherDefault.addInterceptor(handleAction);
 };

@@ -1,46 +1,36 @@
 // discord_app/design/void/Form/native/FormCTA.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { Fonts } from "sum";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { FormCheckbox } from "../../../components/Forms/native/FormCheckbox.native.tsx";
-import { RowButtonWrapper } from "../../../components/TableRow/native/RowButton.native.tsx";
-import { Button } from "../../native.tsx";
-import { FormRow } from "FormRow.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import _modDef6937 from "module_6937" /* 6937 */;
+import FormCheckbox2 from "FormCheckbox" /* 8085 */;
+import RowButtonWrapper from "RowButtonWrapper" /* 8086 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { Fonts } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { form: null, title: null, description: null, icon: null, completedIcon: null, completedText: null };
-createCacheKey = { borderRadius: require("Themes").radii.xs, paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_12 };
+createCacheKey = { borderRadius: ThemesDefault.radii.xs, paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { fontSize: require("Themes").space.PX_16, lineHeight: 18, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-let obj1 = { fontSize: require("Themes").space.PX_16, lineHeight: 18, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-createCacheKey[2] = { fontSize: 12, lineHeight: 18, color: require("Themes").colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
-let obj2 = { fontSize: 12, lineHeight: 18, color: require("Themes").colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
-createCacheKey[3] = { width: require("Themes").space.PX_40, height: require("Themes").space.PX_40 };
+createCacheKey[1] = { fontSize: ThemesDefault.space.PX_16, lineHeight: 18, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+let obj1 = { fontSize: ThemesDefault.space.PX_16, lineHeight: 18, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+createCacheKey[2] = { fontSize: 12, lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
+let obj2 = { fontSize: 12, lineHeight: 18, color: ThemesDefault.colors.TEXT_SUBTLE, fontFamily: Fonts.PRIMARY_MEDIUM };
+createCacheKey[3] = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40 };
 createCacheKey[4] = { opacity: 0.3 };
-let obj3 = { width: require("Themes").space.PX_40, height: require("Themes").space.PX_40 };
-createCacheKey[5] = { color: require("Themes").colors.TEXT_MUTED };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { color: require("Themes").colors.TEXT_MUTED };
-const result = require("sum").fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
+let obj3 = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40 };
+createCacheKey[5] = { color: ThemesDefault.colors.TEXT_MUTED };
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { color: ThemesDefault.colors.TEXT_MUTED };
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormCTA.tsx");
 
 export default function FormCTA(arg0) {
-  let completed;
-  let iconContainerStyle;
-  let iconSource;
-  let iconStyle;
-  let onLongPress;
-  let onPress;
-  let style;
-  let subtitle;
-  let title;
-  let titleStyle;
-  let trailing;
-  let variant;
   ({ title, titleStyle, subtitle, completed, iconSource, trailing, onPress, onLongPress, variant } = arg0);
   ({ style, iconStyle, iconContainerStyle } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let tmp3Result = null;
   if (null != iconSource) {
     const items = [iconContainerStyle, ];
@@ -71,13 +61,13 @@ export default function FormCTA(arg0) {
     items2[1] = completedText;
     obj[0] = items2;
     obj[1] = subtitle;
-    tmp9Result = jsx(FormRow.SubLabel, { style: null, text: null });
+    tmp9Result = jsx(_modDef6937.SubLabel, { style: null, text: null });
     const tmp9 = jsx;
   }
   if ("row-button" === variant) {
     let FormCheckbox = require;
     let obj4 = dependencyMap;
-    const obj1 = { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null };
+    obj1 = { arrow: false, onPress: null, onLongPress: null, accessibilityState: null, label: null, subLabel: null, trailing: null, icon: null };
     obj1[1] = onPress;
     obj1[2] = onLongPress;
     const obj2 = { checked: null };
@@ -93,7 +83,7 @@ export default function FormCTA(arg0) {
     items3[2] = titleStyle;
     obj3[0] = items3;
     obj3[1] = title;
-    obj1[4] = jsx(FormRow.Label, { style: null, text: null });
+    obj1[4] = jsx(_modDef6937.Label, { style: null, text: null });
     obj1[5] = tmp9Result;
     if (completed) {
       FormCheckbox = FormCheckbox(8085).FormCheckbox;
@@ -126,18 +116,18 @@ export default function FormCTA(arg0) {
     items5[2] = titleStyle;
     obj7[0] = items5;
     obj7[1] = title;
-    obj5[7] = jsx(FormRow.Label, { style: null, text: null });
+    obj5[7] = jsx(_modDef6937.Label, { style: null, text: null });
     obj5[8] = tmp9Result;
     if (completed) {
-      let tmp20Result = tmp20(FormCheckbox.FormCheckbox, { checked: true });
+      let tmp20Result = tmp20(FormCheckbox2.FormCheckbox, { checked: true });
     } else {
       tmp20Result = trailing;
       if (trailing == null) {
-        tmp20Result = tmp20(FormRow.Arrow, {});
+        tmp20Result = tmp20(_modDef6937.Arrow, {});
       }
     }
     obj5[9] = tmp20Result;
     obj5[10] = tmp3Result;
-    return jsx(FormRow, { start: true, end: true, variant: null, onPress: null, onLongPress: null, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null });
+    return jsx(_modDef6937, { start: true, end: true, variant: null, onPress: null, onLongPress: null, DEPRECATED_style: null, accessibilityState: null, label: null, subLabel: null, trailing: null, leading: null });
   }
 };

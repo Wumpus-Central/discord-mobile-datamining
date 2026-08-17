@@ -1,9 +1,9 @@
 // discord_app/modules/panels/morphable/native/useScreenNameSharedValue.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 const unknown = "unknown";
-let result = require("module_4115").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
+let result = require("set").fileFinishedImporting("modules/panels/morphable/native/useScreenNameSharedValue.tsx");
 
 export default function useScreenNameSharedValue() {
   let rootNavigationRef = sharedValue(4230).getRootNavigationRef();
@@ -43,14 +43,14 @@ export default function useScreenNameSharedValue() {
         }
       }
     }
-    const rootNavigationRef = sharedValue(outer1_1[1]).getRootNavigationRef();
+    const rootNavigationRef = sharedValue(closure_1_1[1]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = sharedValue(outer1_1[1]);
+    const obj = sharedValue(closure_1_1[1]);
   }, items);
   return sharedValue;
 };

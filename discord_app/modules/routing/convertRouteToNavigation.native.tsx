@@ -1,15 +1,12 @@
 // discord_app/modules/routing/convertRouteToNavigation.native.tsx
-import { Routes } from "ME";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
 
-let result = require("coerceMainRoute").fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
+const Routes = ME.Routes;
+let result = set.fileFinishedImporting("modules/routing/convertRouteToNavigation.native.tsx");
 
 export const convertRouteToNavigation = function convertRouteToNavigation(pathname) {
-  let channelId;
-  let guildId;
-  let messageId;
-  let navigationReplace;
-  let openChannel;
   pathname = pathname.pathname;
   let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
@@ -57,7 +54,7 @@ export const convertRouteToNavigation = function convertRouteToNavigation(pathna
                     }
                   }
                   if (channelId === channelId) {
-                    const obj1 = { screen: "guilds", guildId: null, channelId: null, resetRoot: null };
+                    obj1 = { screen: "guilds", guildId: null, channelId: null, resetRoot: null };
                     obj1[1] = guildId;
                     obj1[2] = channelId;
                     obj1[3] = navigationReplace;

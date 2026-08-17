@@ -1,17 +1,17 @@
 // discord_app/modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx
-import noop from "noop";
-import createRTCConnection from "createRTCConnection";
-import { AnalyticsSections } from "ME";
-import { jsx } from "jsxProd";
-import { SecureFramesVerificationBottomSheet } from "SecureFramesVerificationBottomSheet.tsx";
+import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9723 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCallVerificationBottomSheet.tsx");
 
 export default function SecureFramesCallVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
   let obj = channelId(589);
-  const items = [createRTCConnection];
+  const items = [closure_4];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => {
     secureFramesState = secureFramesState.getSecureFramesState();
@@ -22,11 +22,11 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
     return epochAuthenticator;
   });
   const callback = React.useCallback((message) => {
-    let obj = channelId(outer1_2[5]);
+    let obj = channelId(closure_1_2[5]);
     obj = { channelId };
     const result = obj.trackE2EECallVerificationShareClicked(obj);
     obj = { message };
-    channelId(outer1_2[6]).showShareActionSheet(obj, outer1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
+    channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
   obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   const intl = channelId(1236).intl;
@@ -35,7 +35,7 @@ export default function SecureFramesCallVerificationBottomSheet(channelId) {
   obj[1] = intl2.string(channelId(1236).t["MPp7+C"]);
   const intl3 = channelId(1236).intl;
   obj = { helpArticle: null };
-  const tmp3 = SecureFramesVerificationBottomSheet;
+  const tmp3 = SecureFramesVerificationBottomSheetDefault;
   obj[0] = channelId(9708).getSecureFramesHelpdeskArticle();
   obj[2] = intl3.format(channelId(1236).t.wKxADe, obj);
   obj[3] = stateFromStores;

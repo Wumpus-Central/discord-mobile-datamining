@@ -1,22 +1,14 @@
 // discord_app/modules/premium/native/launchPremiumPlanSelect.tsx
-import { UserSettingsSections } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { PremiumModal } from "../../../components_native/premium/PremiumModal.tsx";
-import { getSanitizedRestrictedGuilds } from "../../../utils/UserSettingsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 7357 */;
+import PremiumModal from "PremiumModal" /* 7381 */;
 
-let result = require("module_5260").fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
+const UserSettingsSections = ME.UserSettingsSections;
+let result = set.fileFinishedImporting("modules/premium/native/launchPremiumPlanSelect.tsx");
 
 export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostPurchaseFlow) {
-  let analyticsLocation;
-  let analyticsLocations;
-  let applicationId;
-  let guildId;
-  let navigation;
-  let onPaymentDismiss;
-  let onPaymentSuccess;
-  let planId;
-  let require;
-  let showCurrentPlan;
   ({ predicate: require, navigation, showCurrentPlan } = isBoostPurchaseFlow);
   if (showCurrentPlan === undefined) {
     showCurrentPlan = true;
@@ -31,7 +23,7 @@ export const launchPremiumPlanSelect = function launchPremiumPlanSelect(isBoostP
   }
   ({ analyticsLocation, analyticsLocations, planId, applicationId, guildId, onPaymentSuccess, onPaymentDismiss } = isBoostPurchaseFlow);
   function wrappedPredicate(isDeprecated) {
-    const result = outer1_0(outer1_2[1]).shouldAlwaysExcludeFromPlanSelect(isDeprecated, flag2);
+    const result = closure_1_0(closure_1_2[1]).shouldAlwaysExcludeFromPlanSelect(isDeprecated, flag2);
     let tmp2 = !result;
     if (!result) {
       let flag;

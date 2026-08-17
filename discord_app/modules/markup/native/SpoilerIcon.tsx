@@ -1,13 +1,12 @@
 // discord_app/modules/markup/native/SpoilerIcon.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("inlineStyles").fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/markup/native/SpoilerIcon.tsx");
 
 export default function Spoiler(width) {
   let num = width.width;

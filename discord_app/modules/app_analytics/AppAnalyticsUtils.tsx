@@ -1,37 +1,34 @@
 // discord_app/modules/app_analytics/AppAnalyticsUtils.tsx
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import closure_9 from "comparator";
-import handleInviteData from "handleInviteData";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import sortActivity from "sortActivity";
-import createRTCConnection from "createRTCConnection";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_21 from "handleConnectionOpen";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateVoiceState from "updateVoiceState";
-import ME from "ME";
-import { isStaticChannelRoute } from "set";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { hasPendingMemberAction } from "../guild_onboarding_home/hasPendingMemberAction.tsx";
-import { Presets } from "../notifications/settings/utils/notificationSettingsPresetUtils.tsx";
+import set from "set" /* 2 */;
+import fromStringAll from "fromString" /* 506 */;
+import setDefault from "set" /* 687 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import set2 from "set" /* 1398 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import Presets from "Presets" /* 5046 */;
+import hasPendingMemberAction from "hasPendingMemberAction" /* 5047 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import comparator from "comparator" /* 1980 */;
+import closure_9 from "comparator" /* 1980 */;
+import closure_10 from "handleInviteData" /* 4295 */;
+import closure_11 from "trackCommunicationDisabled" /* 1990 */;
+import closure_12 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_13 from "createGuildRecordFromRust" /* 1910 */;
+import closure_14 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_15 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_16 from "sortActivity" /* 4559 */;
+import closure_17 from "createRTCConnection" /* 4539 */;
+import closure_18 from "generateOldThreadCutoff" /* 4772 */;
+import closure_19 from "markAllUserIdListsStale" /* 4030 */;
+import closure_20 from "handleConnectionOpen" /* 1979 */;
+import closure_21 from "handleConnectionOpen" /* 4197 */;
+import closure_22 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_23 from "mergeGuildAvatar" /* 1922 */;
+import closure_24 from "updateVoiceState" /* 4542 */;
+import ME from "ME" /* 676 */;
 
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let error;
-let metroImportAll;
 function collectGuildAnalyticsMetadata(guildId) {
   if (null == guildId) {
     return null;
@@ -58,7 +55,7 @@ function collectGuildAnalyticsMetadata(guildId) {
       obj[6] = num;
       let NONE = store3.getGuildPermissions(guild);
       if (NONE == null) {
-        NONE = importAll(4026).NONE;
+        NONE = applyOverwritesAll.NONE;
       }
       obj[7] = String(NONE);
       const features = guild.features;
@@ -95,11 +92,11 @@ function collectChannelAnalyticsMetadata(channel) {
       if (null != guildId) {
         let NONE2 = store3.getChannelPermissions(channel);
         if (NONE2 == null) {
-          NONE2 = importAll(4026).NONE;
+          NONE2 = applyOverwritesAll.NONE;
         }
         let NONE = NONE2;
       } else {
-        NONE = importAll(4026).NONE;
+        NONE = applyOverwritesAll.NONE;
       }
       obj[3] = String(NONE);
       obj[4] = false;
@@ -112,7 +109,7 @@ function collectChannelAnalyticsMetadata(channel) {
           if (null != channel) {
             let hasItem = null != tmp2;
             if (hasItem) {
-              obj = importAll(506);
+              obj = fromStringAll;
               hasItem = obj.has(tmp2.deny, constants3.VIEW_CHANNEL);
             }
             flag = hasItem;
@@ -126,8 +123,8 @@ function collectChannelAnalyticsMetadata(channel) {
         if (null != channel) {
           let hasItem1 = null != tmp9;
           if (hasItem1) {
-            hasItem1 = importAll(506).has(tmp9.deny, constants3.VIEW_CHANNEL);
-            const obj2 = importAll(506);
+            hasItem1 = fromStringAll.has(tmp9.deny, constants3.VIEW_CHANNEL);
+            const obj2 = fromStringAll;
           }
           flag2 = hasItem1;
         }
@@ -146,7 +143,7 @@ function trackWithMetadata(IAR_MODAL_OPEN, fileSizeLimitEventProperties, hasItem
     flag = false;
   }
   let track = importDefault;
-  let obj1 = expandEventProperties;
+  obj1 = expandEventPropertiesDefault;
   if (!obj1.isThrottled(IAR_MODAL_OPEN)) {
     let tmp2 = !("location" in obj);
     if (!tmp2) {
@@ -194,11 +191,11 @@ function trackWithMetadata(IAR_MODAL_OPEN, fileSizeLimitEventProperties, hasItem
     if (null != guild_id) {
       if (null != channel_id) {
         const merged2 = Object.assign(tmp22);
-        track = track(698).track;
+        track = expandEventPropertiesDefault.track;
         obj = { flush: null };
         obj[0] = flag;
         track(IAR_MODAL_OPEN, obj, obj);
-        const trackResult = track(698);
+        const trackResult = expandEventPropertiesDefault;
       }
       obj1 = { channel_static_route: null, channel_hidden: false };
       obj1[0] = channel_id;
@@ -220,7 +217,7 @@ function getRecipientFriendCounts(recipients) {
   return { friendCount: num, nonFriendCount: recipients.length - num };
 }
 function getVoiceStateMetadata(guildId, channelId, videoEnabled) {
-  let closure_0 = channelId;
+  closure_0 = channelId;
   const obj = { voice_state_count: 0, video_stream_count: 0, video_enabled: videoEnabled };
   const tmp = obj(12);
   const found = obj(12)(store4.getVoiceStates(guildId)).filter((channelId) => channelId.channelId === id);
@@ -233,9 +230,11 @@ function getVoiceStateMetadata(guildId, channelId, videoEnabled) {
   });
   return obj;
 }
-({ GUILD_SELECTABLE_CHANNELS_KEY: error, GUILD_VOCAL_CHANNELS_KEY: metroImportAll } = comparator);
+const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
+({ GUILD_SELECTABLE_CHANNELS_KEY: error, GUILD_VOCAL_CHANNELS_KEY: closure_8 } = comparator);
 ({ GuildFeatures: closure_25, AnalyticsLocations: closure_26, Permissions: closure_27, ActivityTypes: closure_28 } = ME);
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/app_analytics/AppAnalyticsUtils.tsx");
+const isStaticChannelRoute = set2.isStaticChannelRoute;
+const result = set.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtils.tsx");
 
 export default { trackWithMetadata, getVoiceStateMetadata };
 export { collectGuildAnalyticsMetadata };
@@ -317,7 +316,7 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         } else {
           tmp5 = null;
         }
-        const obj1 = { channel_id: null, is_app_dm: null };
+        obj1 = { channel_id: null, is_app_dm: null };
         obj1[0] = selectedChannelId;
         obj1[1] = flag;
         let tmp7 = null;
@@ -329,23 +328,23 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
         const merged = Object.assign(tmp7);
         return obj1;
       } else {
-        snapshot = snapshot.getSnapshot(selectedChannelId, 10 * set.Millis.SECOND);
+        snapshot = snapshot.getSnapshot(selectedChannelId, 10 * setDefault.Millis.SECOND);
         const obj3 = { channel_id: null, channel_was_unread: null, channel_mention_count: null, channel_is_muted: null, channel_is_nsfw: null, channel_is_spoiler: null, channel_resolved_unread_setting: null, channel_preset: null, guild_id: null, guild_was_unread: null, guild_mention_count: null, guild_is_muted: null, guild_resolved_unread_setting: null, guild_preset: null, parent_id: null, parent_channel_type: null, has_pending_member_action: null, can_send_message: null, is_app_dm: false };
         obj3[0] = selectedChannelId;
         ({ unread: obj6[1], mentionCount: obj6[2] } = snapshot);
-        obj3[3] = updateUserGuildSettingsInternal.isChannelMuted(channel.guild_id, channel.id);
+        obj3[3] = closure_22.isChannelMuted(channel.guild_id, channel.id);
         obj3[4] = channel.isNSFW();
         obj3[5] = channel.isSpoilerChannel();
-        obj3[6] = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
-        const unreadSetting = updateUserGuildSettingsInternal.resolveUnreadSetting(channel);
-        obj3[7] = Presets.presetFromSettings(unreadSetting, updateUserGuildSettingsInternal.resolvedMessageNotifications(channel));
+        obj3[6] = closure_22.resolveUnreadSetting(channel);
+        const unreadSetting = closure_22.resolveUnreadSetting(channel);
+        obj3[7] = Presets.presetFromSettings(unreadSetting, closure_22.resolvedMessageNotifications(channel));
         obj3[8] = channel.guild_id;
         ({ guildUnread: obj6[9], guildMentionCount: obj6[10] } = snapshot);
-        obj3[11] = updateUserGuildSettingsInternal.isMuted(channel.guild_id);
-        obj3[12] = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
+        obj3[11] = closure_22.isMuted(channel.guild_id);
+        obj3[12] = closure_22.resolveGuildUnreadSetting(guild);
         const obj7 = Presets;
-        const guildUnreadSetting = updateUserGuildSettingsInternal.resolveGuildUnreadSetting(guild);
-        obj3[13] = Presets.presetFromSettings(guildUnreadSetting, updateUserGuildSettingsInternal.getMessageNotifications(channel.guild_id));
+        const guildUnreadSetting = closure_22.resolveGuildUnreadSetting(guild);
+        obj3[13] = Presets.presetFromSettings(guildUnreadSetting, closure_22.getMessageNotifications(channel.guild_id));
         ({ parent_id: obj6[14], parentChannelThreadType: obj6[15] } = channel);
         const obj8 = Presets;
         obj3[16] = hasPendingMemberAction.hasPendingMemberAction(channel.guild_id, selectedChannelId);
@@ -358,13 +357,13 @@ export const getChannelOpenedMetadata = function getChannelOpenedMetadata(select
 export { getRecipientFriendCounts };
 export { getVoiceStateMetadata };
 export const getCustomStatusMetadata = function getCustomStatusMetadata(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const obj = { custom_status_count: 0 };
   let tmp = obj(12);
   const item = obj(12)(store4.getVoiceStates(arg0)).forEach((channelId) => {
     let tmp = channelId.channelId === closure_0;
     if (tmp) {
-      tmp = null != outer1_16.findActivity(channelId.userId, (type) => type.type === constants.CUSTOM_STATUS);
+      tmp = null != closure_1_16.findActivity(channelId.userId, (type) => type.type === constants.CUSTOM_STATUS);
     }
     if (tmp) {
       obj.custom_status_count = obj.custom_status_count + 1;

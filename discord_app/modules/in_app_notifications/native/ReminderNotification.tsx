@@ -1,43 +1,29 @@
 // discord_app/modules/in_app_notifications/native/ReminderNotification.tsx
-import importAllResult from "module_38";
-import { View } from "PreviewIcon";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import set from "set";
-import { AnalyticEvents } from "ME";
-import jsxProd from "module_5260";
-import createCacheKey from "createCacheKey";
-import set from "ensureGuildLoaded";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { isReactionMilestoneNotification } from "InAppNotificationUtils.tsx";
-import { VideoBadge } from "MediaPreviewRightAccessory.tsx";
-import { LocationText } from "MessageNotificationHeader.tsx";
-import { NativeMessagePreviewContent } from "MessagePreviewText.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import ClockIcon from "ClockIcon" /* 4338 */;
+import isReactionMilestoneNotification from "isReactionMilestoneNotification" /* 10029 */;
+import NativeMessagePreviewContentDefault from "NativeMessagePreviewContent" /* 10048 */;
+import LocationTextDefault from "LocationText" /* 10115 */;
+import VideoBadge from "VideoBadge" /* 10117 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import set from "set" /* 10030 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let RIGHT_ACCESSORY_LEFT_MARGIN;
-let c10;
-let closure_12;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function NotificationAvatar(arg0) {
-  let guildId;
-  let user;
   ({ user, guildId } = arg0);
   const tmp = callback3();
-  let obj = { style: tmp.avatarContainer, children: null };
-  obj = { user, guildId, size: null, cutout: null };
-  obj[2] = Button.AvatarSizes.NORMAL;
-  obj[3] = obj;
+  obj = { style: tmp.avatarContainer, children: null };
+  obj = { user, guildId, size: Button.AvatarSizes.NORMAL, cutout: obj };
   const items = [callback(Button.Avatar, obj), ];
-  obj = { style: tmp.cutoutIconContainer, children: null };
-  const obj1 = { size: "xs", color: null };
-  obj1[1] = Themes.colors.ICON_SUBTLE;
-  obj[1] = callback(ClockIcon.ClockIcon, obj1);
+  obj = { style: tmp.cutoutIconContainer, children: callback(ClockIcon.ClockIcon, { size: "xs", color: ThemesDefault.colors.ICON_SUBTLE }) };
   items[1] = callback(View, obj);
   obj[1] = items;
   return callback2(View, obj);
@@ -45,12 +31,12 @@ function NotificationAvatar(arg0) {
 function NotificationBody(channel) {
   channel = channel.channel;
   const message = channel.message;
-  let obj = channel(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getGuild(channel.guild_id));
-  let obj1 = channel(589);
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_5.getChannel(channel.parent_id));
+  obj = channel(589);
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getGuild(channel.guild_id));
+  obj1 = channel(589);
+  const items1 = [closure_5];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getChannel(channel.parent_id));
   let obj2 = channel(10029);
   const hasPreviewableMedia = obj2.useHasPreviewableMedia(message);
   const tmp6 = channel.type === channel(692).ChannelTypes.DM;
@@ -65,7 +51,7 @@ function NotificationBody(channel) {
     obj[0] = channel;
     obj[1] = stateFromStores1;
     obj[2] = stateFromStores;
-    tmp10 = callback(LocationText, obj);
+    tmp10 = callback(LocationTextDefault, obj);
   }
   const items2 = [tmp10, ];
   if (!hasPreviewableMedia) {
@@ -84,16 +70,16 @@ function NotificationBody(channel) {
     return closure_11(closure_12, obj1);
   }
   obj2 = { message, lineClamp: num, showMessageAuthor: true, maxHeight: closure_7 };
-  tmp14 = callback(NativeMessagePreviewContent, obj2);
+  tmp14 = callback(NativeMessagePreviewContentDefault, obj2);
 }
 let c3 = importAllResult;
-({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: metroImportAll, RIGHT_ACCESSORY_LEFT_MARGIN } = set);
+({ IN_APP_NOTIFICATION_MAX_HEIGHT: error, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_8, RIGHT_ACCESSORY_LEFT_MARGIN } = set);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ cutoutIconContainer: { position: "absolute", right: 0, bottom: 0 }, avatarContainer: { position: "relative" }, rightAccessoryContainer: { marginLeft: RIGHT_ACCESSORY_LEFT_MARGIN } });
 let obj = { direction: require("Button").CutoutDirection.BOTTOM_RIGHT, radius: 10, inset: -2 };
 let closure_16 = importAllResult.memo((message) => {
   message = message.message;
-  let obj = isReactionMilestoneNotification;
+  obj = isReactionMilestoneNotification;
   let tmp4 = null;
   if (obj.useHasPreviewableMedia(message)) {
     obj = { style: null, children: null };
@@ -111,28 +97,24 @@ export default importAllResult.memo(function ReminderNotification(notification) 
   notification = notification.notification;
   const channel = notification.channel;
   const message = notification.savedMessage.message;
-  00038__(null != message, "Message in a notification should not be null.");
-  let obj = { user: notification.author, guildId: channel.guild_id };
+  _modDef38(null != message, "Message in a notification should not be null.");
+  obj = { user: notification.author, guildId: channel.guild_id };
   const items = [notification];
   const memo = importAllResult.useMemo(() => {
-    const obj = { type: "simple", text: null };
+    obj = { type: "simple", text: null };
     const intl = notification(1236).intl;
     obj[1] = intl.string(notification(1236).t.Whs8tE);
     return obj;
   }, []);
   const callback = importAllResult.useCallback(() => {
-    let author;
-    let savedMessage;
-    let obj = outer1_1(outer1_2[21]);
+    obj = closure_1_1(closure_1_2[21]);
     obj.popAll();
-    notification(outer1_2[22]).showForLaterModal(notification(outer1_2[23]).SavedMessageSortTypes.REMINDER);
+    notification(closure_1_2[22]).showForLaterModal(notification(closure_1_2[23]).SavedMessageSortTypes.REMINDER);
     ({ savedMessage, author } = notification);
-    const obj2 = notification(outer1_2[22]);
+    const obj2 = notification(closure_1_2[22]);
     obj = { message_id: savedMessage.saveData.messageId, message_author_id: author.id, notification_type: "IN_APP" };
-    outer1_1(outer1_2[24]).track(outer1_9.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
+    closure_1_1(closure_1_2[24]).track(closure_1_9.FOR_LATER_REMINDER_NOTIFICATION_CLICKED, obj);
   }, items);
-  obj = { icon: callback(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: null, children: null };
-  obj[4] = callback(closure_16, { message });
-  obj[5] = callback(NotificationBody, { channel, message });
+  obj = { icon: callback(NotificationAvatar, obj), header: memo, onPress: callback, notification, rightAccessory: callback(closure_16, { message }), children: callback(NotificationBody, { channel, message }) };
   return callback(notification(10113).NotificationPressable, obj);
 });

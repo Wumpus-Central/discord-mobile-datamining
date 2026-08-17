@@ -1,23 +1,21 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx
-import _slicedToArray from "_slicedToArray";
-import _getSystemLocale from "_getSystemLocale";
-import { CodedLinkExtendedType } from "CodedLinkExtendedType";
-import { GuildFeatures } from "ME";
-import { InviteTypes } from "InviteSendStates";
-import { Themes } from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import { InviteTypes } from "InviteSendStates" /* 4371 */;
 
 const require = arg1;
-let result = require("CodedLinkExtendedType").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildProfileInvite.tsx");
 
 export const createGuildProfileInvite = function createGuildProfileInvite(invite, closure_2) {
-  let tmp11;
-  let tmp12;
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
   let obj = id(6907);
   const guildProfileFromInvite = obj.buildGuildProfileFromInvite(invite);
-  let obj1 = id(1363);
-  const unsafe_rawColors = Themes.unsafe_rawColors;
+  obj1 = id(1363);
+  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
   let fromGuildProfileResult = null;
   const isThemeDarkResult = obj1.isThemeDark(closure_2);
   if (null != guildProfileFromInvite) {
@@ -179,11 +177,9 @@ export const createGuildProfileInvite = function createGuildProfileInvite(invite
         HermesBuiltin.arraySpread(invite.roles, 0);
         const sorted = items.sort(tmp4(1987).sortInviteRoles);
         mapped = sorted.map((color) => {
-          let customIconSrc;
-          let unicodeEmoji;
-          let obj = id(outer1_2[20]);
+          let obj = id(closure_1_2[20]);
           const result = obj.inviteRoleToDisplayData(id, color);
-          let obj1 = id(outer1_2[21]);
+          obj1 = id(closure_1_2[21]);
           let roleIconData = obj1.getRoleIconData(result, 16);
           if (roleIconData == null) {
             roleIconData = {};

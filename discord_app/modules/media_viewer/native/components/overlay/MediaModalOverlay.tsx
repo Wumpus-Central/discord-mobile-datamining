@@ -1,68 +1,57 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "MediaModalOverlayHeader";
-import get_ActivityIndicator from "ObscuredView";
-import jsxProd from "module_12063";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
-import { render } from "../../../../../design/void/TouchableHitBox/native/TouchableHitBox.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { ReanimatedRexport } from "../../../../reanimated/ReanimatedRexport.tsx";
-import { isBlurDisabled } from "../../../../visual_effect_view/native/VisualEffectView.tsx";
-import { nativeEventEmitter } from "../../MediaPlayerMuteManager.tsx";
-import { useOverlayLayoutDriver } from "../../useOverlayLayoutDriver.tsx";
-import { ObscuredView } from "../MediaViewerThumbnails.tsx";
-import { MediaModalOverlayAltText } from "MediaModalOverlayAltText.tsx";
-import { MediaModalOverlayHeader } from "MediaModalOverlayHeader.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import renderDefault from "render" /* 8910 */;
+import nativeEventEmitter from "nativeEventEmitter" /* 9001 */;
+import useOverlayLayoutDriver from "useOverlayLayoutDriver" /* 12056 */;
+import ObscuredViewDefault from "ObscuredView" /* 12057 */;
+import MediaModalOverlayHeader from "MediaModalOverlayHeader" /* 12059 */;
+import _modDef12063 from "module_12063" /* 12063 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function OverlayMuteButton(arg0) {
-  let isMuted;
-  let onToggleMute;
   ({ isMuted, onToggleMute } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.w4m945);
-  obj = { left: true, right: true, children: null };
-  obj[2] = importDefault(isMuted ? 12052 : 12053);
-  obj[3] = Themes.unsafe_rawColors.WHITE;
+  obj = { left: true, right: true, children: tmp4(isMuted ? 12052 : 12053) };
+  obj[3] = ThemesDefault.unsafe_rawColors.WHITE;
   obj[4] = onToggleMute;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
-  obj[2] = closure_7(render, obj);
+  obj[2] = closure_7(renderDefault, obj);
   return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function OverlayObscureToggleButton(arg0) {
-  let onToggleObscure;
-  let spoilerActive;
   ({ spoilerActive, onToggleObscure } = arg0);
   let obj = { accessibilityRole: "button", accessibilityLabel: null, source: null, color: null, onPress: null, style: null, iconStyle: null };
   const tmp = callback3();
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.UIsxUw);
-  obj = { left: true, right: true, children: null };
-  obj[2] = importDefault(spoilerActive ? 12054 : 12055);
-  obj[3] = Themes.unsafe_rawColors.WHITE;
+  obj = { left: true, right: true, children: tmp4(spoilerActive ? 12054 : 12055) };
+  obj[3] = ThemesDefault.unsafe_rawColors.WHITE;
   obj[4] = onToggleObscure;
   ({ overlayButton: obj[5], overlayButtonIcon: obj[6] } = tmp);
-  obj[2] = closure_7(render, obj);
+  obj[2] = closure_7(renderDefault, obj);
   return closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function MediaModalOverlay(getVideoControls) {
-  let index;
-  let source;
   ({ source, index } = getVideoControls);
   const videoControls = getVideoControls.getVideoControls(index, source);
   let obj = index(12058);
   const items = [index];
   const items1 = [videoControls];
-  const callback = importAllResult.useCallback(() => index(outer1_2[25]).toggleSpoiler(index), items);
+  const callback = importAllResult.useCallback(() => index(closure_1_2[25]).toggleSpoiler(index), items);
   const effect = importAllResult.useEffect(() => {
-    const result = index(outer1_2[22]).setVideoStateControls(videoControls);
+    const result = index(closure_1_2[22]).setVideoStateControls(videoControls);
   }, items1);
   obj = {};
   const merged = Object.assign(getVideoControls);
@@ -80,42 +69,26 @@ function MediaModalOverlay(getVideoControls) {
 let c4 = importAllResult;
 const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let obj = { portraitFooterButtons: null, invisibleFooter: null, overlayIcons: null, overlayButtonIcon: null, overlayButton: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.top = undefined;
 obj.backgroundColor = "transparent";
 obj[0] = obj;
-createCacheKey = { paddingBottom: require("Themes").space.PX_8 };
+createCacheKey = { paddingBottom: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
-obj[2] = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: require("Themes").space.PX_4 };
+obj[2] = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4 };
 obj[3] = { width: 20, height: 20 };
 obj[4] = { width: 32, height: 32, backgroundColor: "rgba(0, 0, 0, 0.7)", borderRadius: 16 };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_13 = importAllResult.memo((arg0) => {
-  let contextIcon;
-  let contextName;
-  let disableDownload;
-  let disableMediaOverlayButton;
-  let disableMediaOverlayFooter;
-  let obscure;
-  let onClose;
-  let overlayEnabled;
-  let shareable;
-  let slider;
-  let source;
-  let spoilerActive;
-  let syncer;
-  let tmp7;
-  let tmp8;
-  let toggleObscure;
   ({ slider, onClose, syncer, source, obscure } = arg0);
   ({ overlayEnabled, disableDownload, disableMediaOverlayButton, disableMediaOverlayFooter, shareable, contextName, contextIcon, spoilerActive, toggleObscure } = arg0);
   const tmp = callback3();
   let obj = useOverlayLayoutDriver;
   const overlayLayoutDriver = obj.useOverlayLayoutDriver();
-  let obj1 = useOverlayLayoutDriver;
+  obj1 = useOverlayLayoutDriver;
   const footerLayoutAnimation = obj1.useFooterLayoutAnimation(overlayLayoutDriver);
   [tmp7, tmp8] = callback(importAllResult.useState(false), 2);
   let obj2 = nativeEventEmitter;
@@ -128,14 +101,14 @@ let closure_13 = importAllResult.memo((arg0) => {
     if (isIOSResult) {
       obj = { blurTheme: "dark", style: null };
       obj[1] = StyleSheet.absoluteFill;
-      isIOSResult = callback2(isBlurDisabled, obj);
+      isIOSResult = callback2(isBlurDisabledDefault, obj);
     }
     const items = [isIOSResult, slider, ];
     let tmp16 = null;
     if (syncer.sources.length > 1) {
       obj1 = { syncer: null };
       obj1[0] = syncer;
-      tmp16 = callback2(ObscuredView, obj1);
+      tmp16 = callback2(ObscuredViewDefault, obj1);
     }
     items[2] = tmp16;
     obj[4] = items;
@@ -153,7 +126,7 @@ let closure_13 = importAllResult.memo((arg0) => {
   if (!tmp7) {
     const obj4 = { description: null };
     obj4[0] = source.description;
-    tmp21Result = tmp21(MediaModalOverlayAltText, obj4);
+    tmp21Result = tmp21(_modDef12063, obj4);
   }
   const items3 = [tmp21Result, , ];
   if (null != slider) {
@@ -199,12 +172,12 @@ let closure_13 = importAllResult.memo((arg0) => {
   const obj10 = { children: null };
   items3[2] = tmp21Result2;
   obj3[1] = items3;
-  items1[1] = closure_8(ReanimatedRexport.View, obj3);
+  items1[1] = closure_8(_modDef4115.View, obj3);
   obj10[0] = items1;
   return closure_8(closure_9, obj10);
 });
-let obj2 = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: require("Themes").space.PX_4 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx");
+let obj2 = { position: "absolute", top: -40, right: 8, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4 };
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlay.tsx");
 
 export default function MediaModalOverlayGuard(onIndexChange) {
   onIndexChange = onIndexChange.onIndexChange;

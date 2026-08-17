@@ -1,39 +1,37 @@
 // discord_app/components_native/premium/OutboundPromotionCard.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchActivePromotions from "fetchActivePromotions";
-import get_ActivityIndicator from "OutboundPromotionClaimAlert";
-import jsxProd from "ACTION_SHEET_HEIGHT_HALF";
-import createCacheKey from "createCacheKey";
-import { Background } from "../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import get_defaultRulesDefault from "get defaultRules" /* 6807 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function TermsAndConditionsActionSheet(termsAndConditions) {
   let obj = { header: null, children: null };
   obj = { title: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.PdKWVT);
   obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
-  obj = { style: createCacheKey().termsAndConditionsText, variant: "text-sm/medium", children: null };
-  const tmp = createCacheKey();
-  obj[2] = require("../../modules/markup/MarkupUtils.tsx") /* get defaultRules */.parse(termsAndConditions.termsAndConditions, false, { allowLinks: true });
+  obj = { style: callback4().termsAndConditionsText, variant: "text-sm/medium", children: null };
+  const tmp = callback4();
+  obj[2] = get_defaultRulesDefault.parse(termsAndConditions.termsAndConditions, false, { allowLinks: true });
   obj[1] = callback2(Text.Text, obj);
   return callback2(Background.BottomSheet, obj);
 }
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { card: null, mainContainer: null, textContainer: null, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
-createCacheKey = { flex: 1, flexDirection: "column", paddingHorizontal: require("ME").USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, marginTop: 8 };
+createCacheKey = { flex: 1, flexDirection: "column", paddingHorizontal: require("ME").USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 createCacheKey[2] = { flexDirection: "row", flexShrink: 1, alignItems: "center" };
-createCacheKey[3] = { width: 32, height: 32, marginRight: 8, borderRadius: require("Themes").radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_BLACK_500_LIGHT_PRIMARY_100 };
+createCacheKey[3] = { width: 32, height: 32, marginRight: 8, borderRadius: ThemesDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_BLACK_500_LIGHT_PRIMARY_100 };
 createCacheKey[4] = { width: 28, height: 28, resizeMode: "contain" };
 createCacheKey[5] = { lineHeight: 20 };
 createCacheKey[6] = { lineHeight: 18 };
@@ -41,16 +39,16 @@ createCacheKey[7] = { paddingHorizontal: 12 };
 createCacheKey[8] = { marginLeft: 40 };
 createCacheKey[9] = { paddingHorizontal: 16, paddingTop: 16 };
 createCacheKey[10] = { flexGrow: 1, flexDirection: "row", marginLeft: 4, justifyContent: "flex-end" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { width: 32, height: 32, marginRight: 8, borderRadius: require("Themes").radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_BLACK_500_LIGHT_PRIMARY_100 };
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/premium/OutboundPromotionCard.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { width: 32, height: 32, marginRight: 8, borderRadius: ThemesDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_BLACK_500_LIGHT_PRIMARY_100 };
+const result = require("set").fileFinishedImporting("components_native/premium/OutboundPromotionCard.tsx");
 
 export default function OutboundPromotionCard(outboundPromotion) {
   outboundPromotion = outboundPromotion.outboundPromotion;
   const code = outboundPromotion.code;
   let first;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = outboundPromotion(first[14]);
   const promotionImageURL = obj.getPromotionImageURL(outboundPromotion.id, code(first[13])());
   const tmp7 = code(first[15])(outboundPromotion, null != code);
@@ -83,23 +81,23 @@ export default function OutboundPromotionCard(outboundPromotion) {
       let obj = code(first[16]);
       obj = { importer: null };
       obj[0] = function importer() {
-        return outer1_0(outer1_2[18])(outer1_2[17], outer1_2.paths).then((arg0) => {
-          let closure_0 = arg0.default;
+        return closure_1_0(closure_1_2[18])(closure_1_2[17], closure_1_2.paths).then((arg0) => {
+          closure_0 = arg0.default;
           return (arg0) => {
             const obj = {};
             const merged = Object.assign(arg0);
             obj.onCancel = function onCancel() { ... };
-            obj.onClaim = outer2_1(outer2_2[19]).addClaimedOutboundPromotionCode;
-            obj.code = outer1_1;
+            obj.onClaim = closure_2_1(closure_2_2[19]).addClaimedOutboundPromotionCode;
+            obj.code = closure_1_1;
             obj.outboundPromotion = closure_0;
-            return outer2_7(closure_0, obj);
+            return closure_2_7(closure_0, obj);
           };
         });
       };
       obj.openLazy(obj);
     }
   }, items);
-  const obj1 = { style: tmp.card, children: null };
+  obj1 = { style: tmp.card, children: null };
   const obj2 = { style: tmp.mainContainer, children: null };
   const tmp3 = code(first[13])();
   const items1 = [callback2(closure_5, { style: tmp.imageContainer, children: callback2(closure_6, obj4) }), , ];

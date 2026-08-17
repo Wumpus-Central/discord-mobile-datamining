@@ -1,23 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx
-import jsxProd from "jsxProd";
-import "noop";
-import { AnalyticEvents } from "ME";
-import { EmojiIntention } from "set";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { getFallbackDoubleTapDisambiguatedEmoji } from "../../../double_tap_to_react/native/DoubleTapToReactUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import EmojiDefault from "Emoji" /* 6930 */;
+import getFallbackDoubleTapDisambiguatedEmoji from "getFallbackDoubleTapDisambiguatedEmoji" /* 8192 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import createToggle from "createToggle" /* 10669 */;
 import { EMOJI_PICKER_ACTION_SHEET_KEY } from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
-import { Emoji } from "../../../emojis/native/Emoji.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 
-const require = arg1;
+require = arg1;
 function SettingsEmoji(emoji) {
   emoji = emoji.emoji;
   if (null != emoji.id) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, size: 24, animated: false };
     obj[0] = emoji.id;
     let url = obj.getEmojiURL(obj);
@@ -26,19 +27,20 @@ function SettingsEmoji(emoji) {
   }
   obj = { fastImageStyle: { height: 24, width: 24 }, src: url, name: null, adjustsFontSizeToFit: true, textEmojiStyle: null };
   let str = "";
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp4 = jsx;
   if (null == emoji.id) {
     str = emoji.surrogates;
   }
   obj[2] = str;
   obj[4] = tmp.textEmoji;
-  return tmp4(Emoji, obj);
+  return tmp4(EmojiDefault, obj);
 }
+noopAll;
 createCacheKey = { textEmoji: null };
-createCacheKey = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 const pressable = createToggle.createPressable({
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -70,9 +72,9 @@ const pressable = createToggle.createPressable({
     let obj = _EMOJI_PICKER_ACTION_SHEET_KEY;
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+      closure_0 = arg0;
+      c3 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (constants === 2) {
           constants = 3;
@@ -100,13 +102,13 @@ const pressable = createToggle.createPressable({
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp5;
-                let closure_1 = tmp2;
-                const obj1 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
+                closure_2 = tmp5;
+                closure_1 = tmp2;
+                obj1 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
                 ({ id: obj8[0], name: obj8[1], animated: obj8[2] } = callback);
-                obj1[4] = outer1_1(outer1_2[14]).USER_SETTINGS;
-                outer1_1(outer1_2[13]).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
-                const DoubleTapReactionEmoji = callback(outer1_2[8]).DoubleTapReactionEmoji;
+                obj1[4] = closure_1_1(closure_1_2[14]).USER_SETTINGS;
+                closure_1_1(closure_1_2[13]).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
+                const DoubleTapReactionEmoji = callback(closure_1_2[8]).DoubleTapReactionEmoji;
                 ({ id: obj9[0], name: obj9[1], animated: obj9[2] } = callback);
                 c3 = 1;
                 constants = 1;
@@ -123,7 +125,7 @@ const pressable = createToggle.createPressable({
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj = callback(outer1_2[15]);
+              obj = callback(closure_1_2[15]);
               const obj5 = { emoji: null };
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
@@ -209,9 +211,9 @@ let obj1 = {
     let obj = _EMOJI_PICKER_ACTION_SHEET_KEY;
     obj = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };
     _require = callback((arg0) => {
-      let closure_0 = arg0;
-      let c3 = 0;
-      let c4 = 0;
+      closure_0 = arg0;
+      c3 = 0;
+      c4 = 0;
       return (function*(arg0) {
         if (constants === 2) {
           constants = 3;
@@ -239,13 +241,13 @@ let obj1 = {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_2 = tmp5;
-                let closure_1 = tmp2;
-                const obj1 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
+                closure_2 = tmp5;
+                closure_1 = tmp2;
+                obj1 = { emoji_id: null, emoji_name: null, emoji_animated: null, recommended: false, location: null };
                 ({ id: obj8[0], name: obj8[1], animated: obj8[2] } = callback);
-                obj1[4] = outer1_1(outer1_2[14]).USER_SETTINGS;
-                outer1_1(outer1_2[13]).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
-                const DoubleTapReactionEmoji = callback(outer1_2[8]).DoubleTapReactionEmoji;
+                obj1[4] = closure_1_1(closure_1_2[14]).USER_SETTINGS;
+                closure_1_1(closure_1_2[13]).track(constants.DOUBLE_TAP_REACT_EMOJI_UPDATED, obj1);
+                const DoubleTapReactionEmoji = callback(closure_1_2[8]).DoubleTapReactionEmoji;
                 ({ id: obj9[0], name: obj9[1], animated: obj9[2] } = callback);
                 c3 = 1;
                 constants = 1;
@@ -262,7 +264,7 @@ let obj1 = {
               obj4[0] = arg1;
               return obj4;
             } else {
-              obj = callback(outer1_2[15]);
+              obj = callback(closure_1_2[15]);
               const obj5 = { emoji: null };
               obj5[0] = callback;
               const result = obj.showDoubleTapEmojiUpdatedToast(obj5);
@@ -317,6 +319,6 @@ let obj1 = {
     return !flag;
   }
 };
-let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DoubleTapEmojiSetting.tsx");
 
 export default pressable;

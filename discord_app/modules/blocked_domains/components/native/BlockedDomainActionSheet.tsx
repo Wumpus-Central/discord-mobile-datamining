@@ -1,34 +1,34 @@
 // discord_app/modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { URLCallout } from "../../../safety_common/native/URLCallout.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import Background from "Background" /* 6950 */;
+import URLCallout from "URLCallout" /* 12420 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: null, title: null, warningMessage: null };
-createCacheKey = { padding: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/blocked_domains/components/native/BlockedDomainActionSheet.tsx");
 
 export default function BlockedDomainActionSheet(url) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { startExpanded: true, children: null };
   obj = { spacing: 16, justify: "center", align: "center", style: tmp.container, children: null };
   obj = { spacing: 8, justify: "center", align: "center", children: null };
   const items = [callback(AccountAgeTier10LargeBadge.TrafficConeSpotIllustration, {}), , ];
-  const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj1[4] = intl.string(getSystemLocale.t["2B3wj8"]);
   items[1] = callback(Text.Text, obj1);

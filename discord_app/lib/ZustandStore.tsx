@@ -1,24 +1,26 @@
 // discord_app/lib/ZustandStore.tsx
+import set from "set" /* 2 */;
 import { identity } from "../../_runtime/00700_identity.js";
 import { createJSONStorage } from "../../_runtime/04242_createJSONStorage.js";
+
 function defaultStatesAreEqual(arg0, arg1) {
   return arg0 === arg1;
 }
-const result = require("batchUpdates").fileFinishedImporting("lib/ZustandStore.tsx");
+const result = set.fileFinishedImporting("lib/ZustandStore.tsx");
 
 export const createZustandStore = function createZustandStore(arg0) {
   const _require = arg0;
   let obj = _identity;
-  const dependencyMap = obj.createWithEqualityFn(_createJSONStorage.subscribeWithSelector((arg0, arg1, arg2) => {
+  dependencyMap = obj.createWithEqualityFn(_createJSONStorage.subscribeWithSelector((arg0, arg1, arg2) => {
     let callback = arg0;
     return callback((arg0) => {
       const callback = arg0;
-      return callback(outer1_1[2]).batchUpdates(() => callback(callback));
+      return callback(closure_1_1[2]).batchUpdates(() => callback(callback));
     }, arg1, arg2);
   }));
   function setState(arg0) {
     const callback = arg0;
-    callback(store[2]).batchUpdates(() => outer1_1.setState(initialState));
+    callback(store[2]).batchUpdates(() => closure_1_1.setState(initialState));
   }
   obj = {
     useState(arg0) {
@@ -37,7 +39,7 @@ export const createZustandStore = function createZustandStore(arg0) {
       return tmp2;
     },
     useField(blocklist) {
-      let closure_0 = blocklist;
+      closure_0 = blocklist;
       let tmp = arg1;
       if (arg1 === undefined) {
         tmp = setState;
@@ -59,7 +61,7 @@ export const createZustandStore = function createZustandStore(arg0) {
       if (typeof setState !== "function") {
         HermesBuiltin.throwTypeError();
       }
-      callback(store[2]).batchUpdates(() => outer1_1.setState(initialState));
+      callback(store[2]).batchUpdates(() => closure_1_1.setState(initialState));
     }
   };
   return obj;

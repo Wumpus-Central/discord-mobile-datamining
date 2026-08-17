@@ -1,26 +1,21 @@
 // discord_app/modules/guild_settings/audit_log/native/AuditLog.tsx
-import importAllResult from "nameFromUser";
-import { View } from "getPermissionChanges";
-import importDefaultResult from "handleThemeChange";
-import createdAt from "createdAt";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "fromGuildPropertiesWithAdditionalFields";
-import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "initialize";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { useGetOrFetchApplications } from "../../../applications/useGetOrFetchApplications.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
+import getPermissionChangesAll from "getPermissionChanges" /* 16759 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import importDefaultResult from "handleThemeChange" /* 1302 */;
+import closure_7 from "createdAt" /* 1930 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult1 from "initialize" /* 589 */;
 
-let Fonts;
-let c10;
-let closure_12;
-let closure_14;
-let closure_15;
-let map1;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 function ApplicationHook(applicationId) {
   let obj = useGetOrFetchApplications;
   const getOrFetchApplication = obj.useGetOrFetchApplication(applicationId.applicationId);
@@ -36,29 +31,29 @@ let c4 = importAllResult;
 ({ AuditLogTargetTypes: c10, AuditLogActionTypes: unpackModuleId, AuditLogActions: closure_12, Fonts, AuditLogChangeKeys: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { container: { marginHorizontal: 8, marginVertical: 4, borderRadius: 3 }, rowContainer: { flex: 1, flexDirection: "row", alignItems: "center" }, titleContainer: { marginRight: 24, flex: 1 }, title: { marginHorizontal: 8 }, discriminator: null, avatar: null, timestamp: null, arrow: null, rotate90: null, changesContainer: null, changeRow: null, changeNumberText: null, changeItemText: null, colorHook: null, colorsHook: null, changeItemContent: null, changeItemTextContainer: null, forumTag: null, imageEmoji: null, textEmoji: null };
-createCacheKey = { fontSize: 12, lineHeight: 30, color: require("Themes").unsafe_rawColors.PRIMARY_400 };
+createCacheKey = { fontSize: 12, lineHeight: 30, color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { marginLeft: 10, height: 32, width: 32 };
-createCacheKey[6] = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: require("Themes").unsafe_rawColors.PRIMARY_400 };
-let obj1 = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: require("Themes").unsafe_rawColors.PRIMARY_400 };
-createCacheKey[7] = { height: 13, width: 8, marginRight: 8, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[6] = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
+let obj1 = { fontSize: 12, marginHorizontal: 8, marginTop: 8, color: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
+createCacheKey[7] = { height: 13, width: 8, marginRight: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 let items = [{ rotate: "90deg" }];
 createCacheKey[8] = { transform: items };
-let obj2 = { height: 13, width: 8, marginRight: 8, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[9] = { marginTop: require("Themes").space.PX_4, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+let obj2 = { height: 13, width: 8, marginRight: 8, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[9] = { marginTop: ThemesDefault.space.PX_4, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[10] = { flexDirection: "row", flex: 1, alignItems: "flex-start" };
 createCacheKey[11] = { marginRight: 10, fontFamily: Fonts.CODE_BOLD, lineHeight: 24 };
-let obj3 = { marginTop: require("Themes").space.PX_4, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
-createCacheKey[12] = { color: require("Themes").unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
-let obj4 = { color: require("Themes").unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
-createCacheKey[13] = { height: 10, width: 10, borderRadius: 5, borderColor: require("Themes").unsafe_rawColors.TRANSPARENT };
+let obj3 = { marginTop: ThemesDefault.space.PX_4, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[12] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
+let obj4 = { color: ThemesDefault.unsafe_rawColors.PRIMARY_400, alignItems: "baseline", fontSize: 14 };
+createCacheKey[13] = { height: 10, width: 10, borderRadius: 5, borderColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 createCacheKey[14] = { display: "flex", flexDirection: "row", fontFamily: Fonts.PRIMARY_MEDIUM, justifyContent: "center", alignItems: "center", marginTop: -2 };
 createCacheKey[15] = { flex: 1, alignItems: "flex-start" };
 createCacheKey[16] = { alignItems: "center", flexDirection: "row", lineHeight: 24 };
 createCacheKey[17] = { height: "auto", paddingVertical: 0, paddingHorizontal: 4 };
 createCacheKey[18] = { height: 14, width: 14 };
 createCacheKey[19] = { fontSize: 14, lineHeight: 16 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_16 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class AuditLog extends PureComponent {
   constructor() {
@@ -73,8 +68,8 @@ class AuditLog extends PureComponent {
 }
 const prototype = AuditLog.prototype;
 prototype["renderTitle"] = function renderTitle() {
-  const tmp = createCacheKey(this.context);
-  const require = tmp;
+  const tmp = callback3(this.context);
+  const _require = tmp;
   const log = this.props.log;
   const user = log.user;
   const target = log.target;
@@ -86,7 +81,7 @@ prototype["renderTitle"] = function renderTitle() {
   } else {
     obj = { style: null, accessibilityRole: "header", variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj[0] = tmp.title;
-    let intl = require(tmp2[18]).intl;
+    let intl = _require(tmp2[18]).intl;
     obj = { user: null, target: null, userHook: null, targetHook: null, count: null, channel: null, channelHook: null, subtarget: null };
     obj[0] = user;
     obj[1] = target;
@@ -98,69 +93,69 @@ prototype["renderTitle"] = function renderTitle() {
         let tmp22 = !hasUniqueUsernameResult;
         if (!hasUniqueUsernameResult) {
           obj = { style: null, children: null };
-          obj[0] = tmp.discriminator;
+          obj[0] = lib.discriminator;
           obj[1] = `#${obj.discriminator}`;
-          tmp22 = outer1_14(tmp(target[20]).LegacyText, obj);
+          tmp22 = closure_1_14(lib(target[20]).LegacyText, obj);
         }
         obj = { variant: "text-md/medium", color: "text-default", children: null };
         items[1] = tmp22;
         obj[2] = items;
-        return outer1_15(tmp(target[15]).Text, obj, "user" + obj.id);
+        return closure_1_15(lib(target[15]).Text, obj, "user" + obj.id);
       } else if (null != subtarget.integration_type) {
-        let obj1 = log(target[12]);
+        obj1 = log(target[12]);
         const value = obj1.get(tmp27.integration_type);
         let name;
         if (value != null) {
           name = value.name;
         }
         if (name == null) {
-          const intl2 = tmp(target[18]).intl;
-          name = intl2.string(tmp(target[18]).t["n+olu7"]);
+          const intl2 = lib(target[18]).intl;
+          name = intl2.string(lib(target[18]).t["n+olu7"]);
         }
         obj1 = { variant: "text-md/medium", color: "text-default", children: null };
         obj1[2] = name;
-        return outer1_14(tmp(target[15]).Text, obj1, "integration" + tmp27.integration_type);
+        return closure_1_14(lib(target[15]).Text, obj1, "integration" + tmp27.integration_type);
       } else {
-        const intl = tmp(target[18]).intl;
-        return intl.string(tmp(target[18]).t["30mdIx"]);
+        const intl = lib(target[18]).intl;
+        return intl.string(lib(target[18]).t["30mdIx"]);
       }
     };
     obj[3] = function targetHook(children) {
-      if (log.targetType === outer1_10.USER) {
-        if (target instanceof outer1_7) {
+      if (log.targetType === closure_1_10.USER) {
+        if (target instanceof closure_1_7) {
           const items = [log(target[19]).getUserTag(tmp3, { mode: "username" }), ];
           let tmp12 = "0" !== tmp3.discriminator;
           if (tmp12) {
             let obj = { style: null, children: null };
-            obj[0] = tmp.discriminator;
+            obj[0] = lib.discriminator;
             obj[1] = `#${tmp3.discriminator}`;
-            tmp12 = outer1_14(tmp9(tmp10[20]).LegacyText, obj);
+            tmp12 = closure_1_14(tmp9(tmp10[20]).LegacyText, obj);
           }
           obj = { variant: "text-md/medium", color: "text-default", children: null };
           items[1] = tmp12;
           obj[2] = items;
-          let tmp8Result = outer1_15(tmp(target[15]).Text, obj, `target${tmp3.id}`);
+          let tmp8Result = closure_1_15(lib(target[15]).Text, obj, `target${tmp3.id}`);
           const obj3 = log(target[19]);
           tmp10 = target;
-          const tmp8 = outer1_15;
-          tmp9 = tmp;
+          const tmp8 = closure_1_15;
+          tmp9 = lib;
         }
         return tmp8Result;
       }
-      if (log.targetType === outer1_10.GUILD) {
+      if (log.targetType === closure_1_10.GUILD) {
         if (typeof target === "object") {
           if (obj6.isGuildRecord(tmp5)) {
-            const obj1 = { variant: "text-md/medium", color: "text-default", children: null };
+            obj1 = { variant: "text-md/medium", color: "text-default", children: null };
             obj1[2] = tmp5.name;
-            tmp8Result = outer1_14(tmp15(tmp16[15]).Text, obj1, `target${tmp5.id}`);
+            tmp8Result = closure_1_14(tmp15(tmp16[15]).Text, obj1, `target${tmp5.id}`);
           }
-          obj6 = tmp(target[21]);
-          tmp15 = tmp;
+          obj6 = lib(target[21]);
+          tmp15 = lib;
           tmp16 = target;
         }
       }
       obj = { variant: "text-md/medium", color: "text-default", children };
-      tmp8Result = outer1_14(tmp(target[15]).Text, obj, arg1);
+      tmp8Result = closure_1_14(lib(target[15]).Text, obj, arg1);
     };
     let str = subtarget.count;
     if (str == null) {
@@ -170,21 +165,21 @@ prototype["renderTitle"] = function renderTitle() {
     if (null != subtarget.channel) {
       if (typeof subtarget.channel !== "string") {
         const tmp5Result = tmp5(tmp2[22]);
-        let channel = tmp5Result.computeChannelName(subtarget.channel, mergeGuildAvatar, markAllUserIdListsStale, true);
+        let channel = tmp5Result.computeChannelName(subtarget.channel, closure_9, closure_8, true);
       }
       obj[5] = channel;
       obj[6] = function channelHook(children) {
-        return callback(tmp(target[15]).Text, { variant: "text-md/medium", color: "text-default", children }, arg1);
+        return callback(lib(target[15]).Text, { variant: "text-md/medium", color: "text-default", children }, arg1);
       };
       subtarget = subtarget.subtarget;
       obj[7] = subtarget;
       obj = intl.format(changeTitle, obj);
       obj[4] = obj;
-      tmp4(require(tmp2[15]).Text, obj);
+      tmp4(_require(tmp2[15]).Text, obj);
     }
     channel = subtarget.channel;
     tmp4 = closure_14;
-    tmp5 = require;
+    tmp5 = _require;
   }
 };
 prototype["renderRoleUpdate"] = function renderRoleUpdate(newValue) {
@@ -201,33 +196,32 @@ prototype["renderPermissionUpdate"] = function renderPermissionUpdate(newValue) 
   let mapped = null;
   if (Array.isArray(newValue)) {
     mapped = newValue.map((arg0) => {
-      const obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      obj[2] = outer1_2(outer1_3[17]).getStringForPermission(arg0, self.props.log);
-      return outer1_14(self(outer1_3[15]).Text, obj, arg0);
+      const obj = { variant: "text-sm/medium", color: "text-muted", children: closure_1_2(closure_1_3[17]).getStringForPermission(arg0, self.props.log) };
+      return closure_1_14(self(closure_1_3[15]).Text, obj, arg0);
     });
   }
   return mapped;
 };
 prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
   const self = this;
-  let closure_1 = changeStrings;
-  const tmp = createCacheKey(this.context);
-  const importAll = tmp;
+  closure_1 = changeStrings;
+  const tmp = callback3(this.context);
+  closure_2 = tmp;
   const log = this.props.log;
   if (null == log.changes) {
     return null;
   } else {
-    let c0 = 0;
+    c0 = 0;
     const changes = log.changes;
     let obj = { style: null, children: null };
     obj[0] = tmp.changesContainer;
     obj[1] = changes.map((key) => {
-      let obj = tmp(log[17]);
+      let obj = lib(log[17]);
       if (obj.shouldNotRenderChangeDetail(log, key)) {
         return null;
       } else {
-        if (tmp2.action === outer1_12.CHANNEL_UPDATE) {
-          if (key.key === outer1_13.TYPE) {
+        if (tmp2.action === closure_1_12.CHANNEL_UPDATE) {
+          if (key.key === closure_1_13.TYPE) {
             let oldValue = key.oldValue;
             if (oldValue == null) {
               let obj7 = v0(tmp[23]);
@@ -240,7 +234,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
             let newValue2 = key.newValue;
             if (newValue2 == null) {
               let obj10 = v0(tmp[23]);
-              let obj1 = { type: null };
+              obj1 = { type: null };
               obj1[0] = key.newValue;
               newValue2 = obj10.channelTypeString(obj1);
             }
@@ -248,7 +242,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
             let obj13 = obj;
           }
           const oldValue2 = obj13.oldValue;
-          let closure_0 = oldValue2;
+          closure_0 = oldValue2;
           let newValue = obj13.newValue;
           if (tmp2.action !== tmp3.MEMBER_ROLE_UPDATE) {
             if (tmp2.action === tmp3.INVITE_CREATE) {
@@ -281,7 +275,7 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   return null;
                 };
                 obj2[5] = function newColorsHook(arg0, arg1) {
-                  let obj = { style: outer1_2.colorsHook, children: null };
+                  let obj = { style: closure_1_2.colorsHook, children: null };
                   let items = [, , ];
                   ({ primary_color: arr[0], secondary_color: arr[1], tertiary_color: arr[2] } = newValue);
                   const found = items.filter(lib(log[25]).isNotNullish);
@@ -294,28 +288,28 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     obj = { variant: "text-sm/bold", children: null };
                     let tmp3Result = tmp3(tmp4[26]);
                     obj[1] = "" + str + tmp3Result.int2hex(color).toUpperCase() + " ";
-                    const items = [outer1_14(outer1_0(outer1_3[15]).Text, obj), ];
+                    const items = [closure_1_14(closure_1_0(closure_1_3[15]).Text, obj), ];
                     obj = { style: null };
                     const items1 = [colorHook.colorHook, ];
-                    const obj1 = { backgroundColor: null };
+                    obj1 = { backgroundColor: null };
                     tmp3Result = tmp3(tmp4[26]);
                     obj1[0] = tmp3Result.int2hex(color);
                     items1[1] = obj1;
                     obj[0] = items1;
-                    items[1] = outer1_14(outer1_5, obj);
+                    items[1] = closure_1_14(closure_1_5, obj);
                     obj[0] = items;
-                    return outer1_15(outer1_4.Fragment, obj, arg1);
+                    return closure_1_15(closure_1_4.Fragment, obj, arg1);
                   });
-                  return outer2_14(outer2_5, obj, arg1);
+                  return closure_2_14(closure_2_5, obj, arg1);
                 };
                 obj2[6] = function oldColorHook() {
                   return null;
                 };
                 obj2[7] = function oldTagHook(arg0, arg1) {
-                  return outer2_14(lib(log[27]).AppliedForumTagPill, { tag: closure_0, containerStyle: outer1_2.forumTag, disableEndMargin: true }, arg1);
+                  return closure_2_14(lib(log[27]).AppliedForumTagPill, { tag: closure_0, containerStyle: closure_1_2.forumTag, disableEndMargin: true }, arg1);
                 };
                 obj2[8] = function newTagHook(arg0, arg1) {
-                  return outer2_14(lib(log[27]).AppliedForumTagPill, { tag: newValue, containerStyle: outer1_2.forumTag, disableEndMargin: true }, arg1);
+                  return closure_2_14(lib(log[27]).AppliedForumTagPill, { tag: newValue, containerStyle: closure_1_2.forumTag, disableEndMargin: true }, arg1);
                 };
                 obj2[9] = function oldEmojiHook(arg0, arg1) {
                   let emojiURL;
@@ -325,8 +319,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     obj[0] = tmp;
                     emojiURL = obj.getEmojiURL(obj);
                   }
-                  obj = { src: emojiURL, name: tmp, textEmojiStyle: outer1_2.textEmoji, fastImageStyle: outer1_2.imageEmoji };
-                  return outer2_14(newValue(log[28]), obj, arg1);
+                  obj = { src: emojiURL, name: tmp, textEmojiStyle: closure_1_2.textEmoji, fastImageStyle: closure_1_2.imageEmoji };
+                  return closure_2_14(newValue(log[28]), obj, arg1);
                 };
                 obj2[10] = function newEmojiHook(arg0, arg1) {
                   let emojiURL;
@@ -336,8 +330,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     obj[0] = tmp;
                     emojiURL = obj.getEmojiURL(obj);
                   }
-                  obj = { src: emojiURL, name: tmp, textEmojiStyle: outer1_2.textEmoji, fastImageStyle: outer1_2.imageEmoji };
-                  return outer2_14(newValue(log[28]), obj, arg1);
+                  obj = { src: emojiURL, name: tmp, textEmojiStyle: closure_1_2.textEmoji, fastImageStyle: closure_1_2.imageEmoji };
+                  return closure_2_14(newValue(log[28]), obj, arg1);
                 };
                 obj2[11] = function applicationHook(arg0, arg1) {
                   let applicationId;
@@ -351,14 +345,14 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                     }
                     applicationId = application_id1;
                   }
-                  return outer2_14(outer2_17, { applicationId }, arg1);
+                  return closure_2_14(closure_2_17, { applicationId }, arg1);
                 };
                 const formatResult = intl.format(tmp19Result, obj2);
                 if (null == formatResult) {
                   return null;
                 } else {
                   const actionType = tmp2.actionType;
-                  if (outer1_11.CREATE === actionType) {
+                  if (closure_1_11.CREATE === actionType) {
                     let RED_400 = changeStrings(tmp[9]).unsafe_rawColors.GREEN_360;
                   } else if (tmp38.UPDATE === actionType) {
                     RED_400 = changeStrings(tmp[9]).unsafe_rawColors.YELLOW_300;
@@ -367,9 +361,9 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   }
                   closure_0 = closure_0 + 1;
                   let obj3 = { style: null, children: null };
-                  obj3[0] = tmp.changeRow;
+                  obj3[0] = lib.changeRow;
                   let obj4 = { variant: "text-sm/bold", style: null, children: null };
-                  let items = [tmp.changeNumberText, ];
+                  let items = [lib.changeNumberText, ];
                   let obj5 = { color: null };
                   obj5[0] = RED_400;
                   items[1] = obj5;
@@ -380,15 +374,15 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                   }
                   let items1 = [str2, closure_0, " \u2014"];
                   obj4[2] = items1;
-                  const items2 = [outer1_15(tmp36(tmp[15]).Text, obj4), ];
+                  const items2 = [closure_1_15(tmp36(tmp[15]).Text, obj4), ];
                   const obj6 = { style: null, children: null };
-                  obj6[0] = tmp.changeItemContent;
+                  obj6[0] = lib.changeItemContent;
                   obj7 = { style: null, children: null };
-                  obj7[0] = tmp.changeItemTextContainer;
+                  obj7[0] = lib.changeItemTextContainer;
                   const obj8 = { variant: "text-sm/normal", style: null, children: null };
-                  obj8[1] = tmp.changeItemTextContainer;
+                  obj8[1] = lib.changeItemTextContainer;
                   obj8[2] = formatResult;
-                  const items3 = [outer1_14(tmp36(tmp[15]).Text, obj8), ];
+                  const items3 = [closure_1_14(tmp36(tmp[15]).Text, obj8), ];
                   let tmp31Result = null;
                   if (null != newValue) {
                     tmp31Result = null;
@@ -399,25 +393,25 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
                       obj10[0] = newValue;
                       items4[1] = obj10;
                       obj9[0] = items4;
-                      tmp31Result = outer1_14(tmp28, obj9);
+                      tmp31Result = closure_1_14(tmp28, obj9);
                     }
                   }
                   items3[1] = tmp31Result;
                   obj7[1] = items3;
-                  const items5 = [outer1_15(outer1_5, obj7), ];
+                  const items5 = [closure_1_15(closure_1_5, obj7), ];
                   let tmp33 = null;
                   if (null != result) {
                     tmp33 = result;
                   }
                   items5[1] = tmp33;
                   obj6[1] = items5;
-                  items2[1] = outer1_15(outer1_5, obj6);
+                  items2[1] = closure_1_15(closure_1_5, obj6);
                   obj3[1] = items2;
-                  return outer1_15(outer1_5, obj3, arg1);
+                  return closure_1_15(closure_1_5, obj3, arg1);
                 }
               }
             }
-            if (tmp2.targetType !== outer1_10.ROLE) {
+            if (tmp2.targetType !== closure_1_10.ROLE) {
               if (tmp2.action !== tmp3.CHANNEL_OVERWRITE_CREATE) {
                 result = null;
               }
@@ -426,8 +420,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
           }
           result = self.renderRoleUpdate(key);
         }
-        if (tmp2.action === outer1_12.MEMBER_UPDATE) {
-          if (key.key === outer1_13.COMMUNICATION_DISABLED_UNTIL) {
+        if (tmp2.action === closure_1_12.MEMBER_UPDATE) {
+          if (key.key === closure_1_13.COMMUNICATION_DISABLED_UNTIL) {
             obj5 = changeStrings(tmp[24])(key.newValue);
             const obj11 = { oldValue: null, newValue: null, transformedValues: true };
             obj11[0] = key.oldValue;
@@ -440,8 +434,8 @@ prototype["renderChangeDetails"] = function renderChangeDetails(changeStrings) {
             obj13 = obj11;
           }
         }
-        if (tmp2.action === outer1_12.GUILD_UPDATE) {
-          if (key.key === outer1_13.OWNER_ID) {
+        if (tmp2.action === closure_1_12.GUILD_UPDATE) {
+          if (key.key === closure_1_13.OWNER_ID) {
             const obj12 = { oldValue: null, newValue: null, transformedValues: true };
             obj3 = changeStrings(tmp[19]);
             obj12[0] = obj3.getUserTag(key.oldValue, { mode: "username" });
@@ -461,25 +455,19 @@ prototype["renderChangeSummary"] = function renderChangeSummary() {
   const self = this;
   let renderChangeDetailsResult = null;
   if (this.props.expanded) {
-    renderChangeDetailsResult = self.renderChangeDetails(importAll(16759).getChangeStrings(tmp));
-    const obj = importAll(16759);
+    renderChangeDetailsResult = self.renderChangeDetails(getPermissionChangesAll.getChangeStrings(tmp));
+    const obj = getPermissionChangesAll;
   }
   return renderChangeDetailsResult;
 };
 prototype["render"] = function render() {
-  let containerStyle;
-  let expanded;
-  let guildId;
-  let log;
-  let require;
-  let theme;
   const self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   const props = this.props;
   ({ log, expanded, guildId, channel: require } = props);
   const user = log.user;
   ({ containerStyle, theme } = props);
-  let obj = importAll(16759);
+  let obj = getPermissionChangesAll;
   const checkChangesToRenderResult = obj.checkChangesToRender(log);
   const timestampStart = log.timestampStart;
   const calendarResult = timestampStart.calendar();
@@ -509,7 +497,7 @@ prototype["render"] = function render() {
   if (expanded) {
     rotate90 = tmp.rotate90;
   }
-  const obj1 = { accessible: false, style: items1, variant: null, border: null, onPress: null, children: null };
+  obj1 = { accessible: false, style: items1, variant: null, border: null, onPress: null, children: null };
   items1 = [tmp.container, containerStyle];
   let str2 = "secondary";
   if (expanded) {
@@ -533,13 +521,13 @@ prototype["render"] = function render() {
   }
   obj4[2] = username;
   obj4[3] = function onPress() {
-    let obj = user(outer1_3[32]);
+    let obj = user(closure_1_3[32]);
     obj.hideActionSheet();
     if (null != user) {
       obj = { userId: null, channelId: null };
       obj[0] = tmp4.id;
       obj[1] = id.id;
-      user(outer1_3[33])(obj);
+      user(closure_1_3[33])(obj);
     }
   };
   const obj5 = { style: tmp.avatar, source: null, size: null };
@@ -611,9 +599,9 @@ prototype["render"] = function render() {
   source = tmp9Result1.ensureAvatarSource(tmp9Result2.makeSource(tmp9(1438).getAutomodAvatarURL()));
 };
 AuditLog.contextType = require("ManaContext").ThemeContext;
-let obj5 = { height: 10, width: 10, borderRadius: 5, borderColor: require("Themes").unsafe_rawColors.TRANSPARENT };
+let obj5 = { height: 10, width: 10, borderRadius: 5, borderColor: ThemesDefault.unsafe_rawColors.TRANSPARENT };
 let items1 = [importDefaultResult];
-const tmp6 = require("initialize").connectStores(items1, () => ({ theme: importDefaultResult.theme }))(AuditLog);
-let result = require("handleThemeChange").fileFinishedImporting("modules/guild_settings/audit_log/native/AuditLog.tsx");
+const tmp6 = importDefaultResult1.connectStores(items1, () => ({ theme: importDefaultResult.theme }))(AuditLog);
+let result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/native/AuditLog.tsx");
 
 export default tmp6;

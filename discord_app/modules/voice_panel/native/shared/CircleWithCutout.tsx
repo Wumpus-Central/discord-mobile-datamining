@@ -1,24 +1,15 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutout.tsx
-import { PixelRatio } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import importAllResult from "noop";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { CircleWithCutout } from "CircleWithCutoutUtils.tsx";
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import CircleWithCutout from "CircleWithCutout" /* 8696 */;
+import { PixelRatio } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = PixelRatio.get();
-const memoResult = require("noop").memo(function CircleWithCutout(arg0) {
-  let alignBadgeEdgeWithCircleEdge;
-  let badgeRadius;
-  let circleRadius;
-  let cutoutPositionInDegrees;
-  let cutoutRadius;
-  let enableCutout;
-  let fill;
-  let scaleToPixelDensity;
+const memoResult = importAllResult.memo(function CircleWithCutout(arg0) {
   ({ cutoutPositionInDegrees, alignBadgeEdgeWithCircleEdge } = arg0);
   ({ fill, circleRadius, cutoutRadius, enableCutout } = arg0);
   if (alignBadgeEdgeWithCircleEdge === undefined) {
@@ -39,7 +30,7 @@ const memoResult = require("noop").memo(function CircleWithCutout(arg0) {
   const result2 = 2 * result;
   let obj = CircleWithCutout;
   const cutoutCenterX = obj.getCutoutCenterX(result, cutoutPositionInDegrees);
-  let obj1 = CircleWithCutout;
+  obj1 = CircleWithCutout;
   const cutoutCenterY = obj1.getCutoutCenterY(result, cutoutPositionInDegrees);
   if (alignBadgeEdgeWithCircleEdge) {
     alignBadgeEdgeWithCircleEdge = null != result1;
@@ -67,9 +58,9 @@ const memoResult = require("noop").memo(function CircleWithCutout(arg0) {
   obj4[4] = str;
   items2[1] = callback(inlineStyles.Circle, obj4);
   obj[3] = items2;
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 });
-let result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutout.tsx");
 
 export default memoResult;
 export const getBadgeLeft = require("CircleWithCutout").getBadgeLeft;

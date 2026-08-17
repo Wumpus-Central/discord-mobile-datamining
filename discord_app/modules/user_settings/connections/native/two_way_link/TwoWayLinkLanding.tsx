@@ -1,44 +1,32 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import set from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "set" /* 5221 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-let obj1;
 const require = arg1;
+noopAll;
 ({ Image: obj1, View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ image: { marginBottom: 32 }, valueProps: { marginTop: 24, maxWidth: "100%" } });
 const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkLanding.tsx");
 
 export const TwoWayLinkLanding = function TwoWayLinkLanding(learnMoreLink) {
-  let body;
-  let headerConnect;
-  let headerReconnect;
-  let img;
-  let imgStyle;
-  let onNext;
-  let require;
-  let valueProps;
   ({ platformType: require, imgStyle, headerConnect, headerReconnect, valueProps } = learnMoreLink);
   learnMoreLink = learnMoreLink.learnMoreLink;
   ({ img, body, onNext } = learnMoreLink);
   const tmp = callback();
   let obj = require(valueProps[5]);
   const twoWayLinkStyles = obj.useTwoWayLinkStyles();
-  let obj1 = require(valueProps[6]);
-  const items = [set];
+  obj1 = require(valueProps[6]);
+  const items = [closure_5];
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
   obj1 = { source: img, style: null };
   const items1 = [tmp.image, ];
   const stateFromStores = obj1.useStateFromStores(items, () => {
-    const account = outer1_5.getAccount(null, closure_0);
+    const account = closure_1_5.getAccount(null, closure_0);
     let twoWayLink;
     if (account != null) {
       twoWayLink = account.twoWayLink;
@@ -65,14 +53,9 @@ export const TwoWayLinkLanding = function TwoWayLinkLanding(learnMoreLink) {
   items2[3] = closure_6(closure_3, {
     style: tmp.valueProps,
     children: valueProps.map((label) => {
-      let icon;
-      let subLabel;
       label = label.label;
       ({ subLabel, icon } = label);
-      const obj = { start: 0 === arg1, end: arg1 === valueProps.length - 1, subLabel, label: null, icon: null };
-      obj[3] = outer1_6(outer1_0(valueProps[7]).Text, { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: label });
-      obj[4] = outer1_6(outer1_0(valueProps[8]).TableRow.Icon, { IconComponent: icon });
-      return outer1_6(outer1_0(valueProps[8]).TableRow, obj, label);
+      return closure_1_6(closure_1_0(valueProps[8]).TableRow, { start: 0 === arg1, end: arg1 === valueProps.length - 1, subLabel, label: closure_1_6(closure_1_0(valueProps[7]).Text, { variant: "text-sm/normal", color: "mobile-text-heading-primary", children: label }), icon: closure_1_6(closure_1_0(valueProps[8]).TableRow.Icon, { IconComponent: icon }) }, label);
     })
   });
   obj[1] = items2;

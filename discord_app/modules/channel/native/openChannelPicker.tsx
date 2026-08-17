@@ -1,18 +1,14 @@
 // discord_app/modules/channel/native/openChannelPicker.tsx
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import closure_3 from "comparator" /* 1980 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
-const require = arg1;
-const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel/native/openChannelPicker.tsx");
 
 export default function openChannelPicker(onClose) {
-  let channelType;
-  let filterFn;
-  let guildId;
-  let selectedChannel;
   ({ guildId, filterFn } = onClose);
   ({ selectedChannel, channelType } = onClose);
   if (filterFn === undefined) {
@@ -26,7 +22,7 @@ export default function openChannelPicker(onClose) {
   if (items == null) {
     items = [];
   }
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { header: null, guild: null, channels: null, selectedChannel: null };
   obj = { title: null, onClose: null };
   const intl = getSystemLocale.intl;

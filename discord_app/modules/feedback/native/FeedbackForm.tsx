@@ -1,40 +1,33 @@
 // discord_app/modules/feedback/native/FeedbackForm.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { FeedbackRating } from "FeedbackRating";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { FeedbackRating } from "FeedbackRating" /* 10811 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { ratingsLabel: { textAlign: "center" }, reasonsHeader: { marginBottom: 8 }, reasonsList: { overflow: "hidden", marginBottom: 12, padding: 0 }, reason: null, doNotShowAgainContainer: null };
-createCacheKey = { color: require("Themes").colors.INTERACTIVE_TEXT_ACTIVE };
+createCacheKey = { color: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-const result = require("FeedbackRating").fileFinishedImporting("modules/feedback/native/FeedbackForm.tsx");
+createCacheKey[4] = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingHorizontal: 0, paddingVertical: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+const result = require("set").fileFinishedImporting("modules/feedback/native/FeedbackForm.tsx");
 
 export const FeedbackForm = function FeedbackForm(otherKey) {
-  let arr;
-  let c6;
-  let ratingsBodyLabel;
-  let reasons;
-  let reasonsHeaderLabel;
-  let showDoNotShowAgainCheckbox;
   ({ ratingsBodyLabel, reasons } = otherKey);
   otherKey = otherKey.otherKey;
   const onFeedbackChanged = otherKey.onFeedbackChanged;
   const trackOpen = otherKey.trackOpen;
   let React;
-  let FeedbackRating;
+  FeedbackRating = undefined;
   let callback;
   let first;
-  let createCacheKey;
+  let callback2;
   ({ showDoNotShowAgainCheckbox, reasonsHeaderLabel } = otherKey);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   React = tmp;
   const tmp4 = otherKey(onFeedbackChanged[6])(reasons);
   FeedbackRating = tmp4;
@@ -42,14 +35,14 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
   [arr, c6] = trackOpen(React.useState(obj.shuffle(reasons)), 2);
   let items = [reasons, tmp4, otherKey];
   const effect = React.useEffect(() => {
-    if (!obj.isEqual(c5, reasons)) {
-      _undefined3(reasons(onFeedbackChanged[8]).shuffleProblems(reasons, otherKey));
+    if (!obj.isEqual(closure_5, reasons)) {
+      _undefined(reasons(onFeedbackChanged[8]).shuffleProblems(reasons, otherKey));
       const obj2 = reasons(onFeedbackChanged[8]);
     }
   }, items);
   const tmp8 = trackOpen(React.useState({}), 2);
   first = tmp8[0];
-  createCacheKey = tmp8[1];
+  callback2 = tmp8[1];
   otherKey(onFeedbackChanged[9])(() => {
     trackOpen();
   });
@@ -75,7 +68,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
       obj[0] = tmp.reasonsHeader;
       obj[3] = reasonsHeaderLabel;
       const items2 = [callback(reasons(tmp3[11]).Text, obj), ];
-      const obj1 = { border: "subtle", style: null, children: null };
+      obj1 = { border: "subtle", style: null, children: null };
       obj1[1] = tmp.reasonsList;
       obj1[2] = tmp13;
       items2[1] = callback(reasons(tmp3[12]).Card, obj1);
@@ -102,7 +95,7 @@ export const FeedbackForm = function FeedbackForm(otherKey) {
     selectedRating: rating,
     onChangeRating(rating) {
       let reason = null;
-      if (rating !== _undefined2.GOOD) {
+      if (rating !== constants.GOOD) {
         reason = first.reason;
       }
       const obj = {};

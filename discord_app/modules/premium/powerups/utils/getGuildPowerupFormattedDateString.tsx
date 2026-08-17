@@ -1,5 +1,5 @@
 // discord_app/modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx
-import _getSystemLocale from "_getSystemLocale";
+import closure_0 from "_getSystemLocale" /* 1994 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/powerups/utils/getGuildPowerupFormattedDateString.tsx");
 

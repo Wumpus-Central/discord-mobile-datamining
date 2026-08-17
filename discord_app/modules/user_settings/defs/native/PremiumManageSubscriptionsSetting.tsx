@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx
-import noop from "noop";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../../utils/PremiumUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import closure_3 from "noop" /* 19 */;
+import createToggle from "createToggle" /* 10669 */;
 import { PremiumPlanSelectSettingScreen } from "../../premium/native/PremiumManagePlanScreen.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -41,6 +41,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("useBlockedPaymentsConfig").fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/PremiumManageSubscriptionsSetting.tsx");
 
 export default createToggle;

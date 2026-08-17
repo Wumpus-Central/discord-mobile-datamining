@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx
-import noop from "noop";
-import { MobileUserSettings } from "MobileUserSettings";
-import { jsx } from "jsxProd";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef13991 from "module_13991" /* 13991 */;
+import closure_3 from "noop" /* 19 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/chat/native/SwipeRightToLeftScreen.tsx");
 
 export default function UserSettingsSwipeRightToLeft() {
   const node = React.useMemo(() => {
@@ -13,5 +13,5 @@ export default function UserSettingsSwipeRightToLeft() {
     const sections = [{ settings: items }];
     return callback(table[3]).createList({ sections });
   }, []);
-  return jsx(SettingLayout, { node });
+  return jsx(_modDef13991, { node });
 };

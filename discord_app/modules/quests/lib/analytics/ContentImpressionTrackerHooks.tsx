@@ -1,10 +1,10 @@
 // discord_app/modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx
-import noop from "noop";
-import initializeState from "initializeState";
-import { set } from "ContentImpressionTracker.tsx";
+import set from "set" /* 10688 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initializeState" /* 7453 */;
 
-const require = arg1;
-const result = require("AdCreativeType").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/ContentImpressionTrackerHooks.tsx");
 
 export const useAdContentImpressionTrackerProps = function useAdContentImpressionTrackerProps(questOrQuests) {
   questOrQuests = undefined;
@@ -50,14 +50,14 @@ export const useAdContentImpressionTrackerProps = function useAdContentImpressio
 export const useQuestStatusChanged = function useQuestStatusChanged(adContentIds) {
   adContentIds = adContentIds.adContentIds;
   const adCreativeType = adContentIds.adCreativeType;
-  const items = [initializeState];
+  const items = [closure_4];
   const items1 = [adContentIds, adCreativeType];
   stateFromStores = adContentIds(stateFromStores[3]).useStateFromStores(items, () => {
     let quest = null;
     if (adCreativeType === adContentIds(stateFromStores[2]).AdCreativeType.QUEST) {
       quest = null;
       if (1 === adContentIds.length) {
-        quest = outer1_4.getQuest(tmp2[0]);
+        quest = closure_1_4.getQuest(tmp2[0]);
       }
     }
     return quest;

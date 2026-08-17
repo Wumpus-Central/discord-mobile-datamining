@@ -1,23 +1,21 @@
 // discord_app/modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx
-import noop from "noop";
-import { Pressable } from "get ActivityIndicator";
-import { NODE_MARGIN } from "ME";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { NODE_MARGIN } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/categories/EmojiPickerCategoriesBackspaceItem.tsx");
 
 export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
-  let iconStyle;
-  let style;
   onBackspace = onBackspace.onBackspace;
-  let dependencyMap;
+  dependencyMap = undefined;
   let React;
   ({ style, iconStyle } = onBackspace);
   const interval = new onBackspace(4259).Interval();
   dependencyMap = React.useRef(interval);
   const delayedCall = new onBackspace(4259).DelayedCall(500, () => {
-    const current = noop.current;
+    const current = closure_2.current;
     current.cancel();
     const current2 = ref.current;
     current2.start(50, onBackspace);
@@ -27,11 +25,11 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   const items1 = [onBackspace];
   const callback = React.useCallback(() => {
     onBackspace();
-    const current = noop.current;
+    const current = closure_2.current;
     current.delay();
   }, items);
   const callback1 = React.useCallback(() => {
-    const current = noop.current;
+    const current = closure_2.current;
     current.cancel();
     const current2 = ref.current;
     current2.stop();
@@ -39,7 +37,7 @@ export default function EmojiPickerCategoriesBackspaceItem(onBackspace) {
   }, items1);
   const effect = React.useEffect(() => {
     current = current.current;
-    current = noop.current;
+    current = closure_2.current;
     return () => {
       current.stop();
       current.cancel();

@@ -1,7 +1,9 @@
 // discord_app/modules/custom_status/utils/removeCustomStatus.tsx
-import { setCustomStatus } from "../setCustomStatus.tsx";
-const result = require("set").fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");
+import set from "set" /* 2 */;
+import setCustomStatusDefault from "setCustomStatus" /* 9295 */;
+
+const result = set.fileFinishedImporting("modules/custom_status/utils/removeCustomStatus.tsx");
 
 export default function removeCustomStatus() {
-  setCustomStatus({ text: "", emojiInfo: null, clearAfter: null });
+  setCustomStatusDefault({ text: "", emojiInfo: null, clearAfter: null });
 };

@@ -1,23 +1,14 @@
 // discord_app/modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import EmojiCategoryTypes from "EmojiCategoryTypes";
-import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE";
-import { GuildNSFWContentLevel } from "../../../age_gate/native/AgeGateUtils.tsx";
-import { parseRawEmojiObject } from "../../../emojis/UnicodeEmojis.tsx";
-import { initializeSearch } from "../../EmojiPickerUtils.tsx";
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import initializeSearch from "initializeSearch" /* 9302 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 9346 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import EmojiCategoryTypes from "EmojiCategoryTypes" /* 6731 */;
+import { EmojiPickerRenderingDataType as closure_7 } from "IMAGE_SIZE" /* 9301 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function _computeCategories(arg0) {
-  let categories;
-  let emojis;
-  let emojisDisabled;
-  let emojisHidden;
-  let guild;
-  let isNativeEmojiPickerEnabled;
-  let rowSize;
   ({ categories, rowSize, isNativeEmojiPickerEnabled } = arg0);
   const items = [];
   const iter = categories[Symbol.iterator]();
@@ -43,7 +34,7 @@ function _computeCategories(arg0) {
       let tmp59 = pushCategory(obj);
     } else if (tmp3.FAVORITES === type) {
       let tmp52 = pushCategory;
-      let obj1 = { emojiSections: null, renderingData: null, rowSize: null };
+      obj1 = { emojiSections: null, renderingData: null, rowSize: null };
       obj1[0] = items;
       let obj2 = { type: null, emojis: null, emojisDisabled: null, label: null, footer: null };
       let tmp53 = constants3;
@@ -129,7 +120,7 @@ function _computeCategories(arg0) {
     } else if (tmp3.UNICODE === type) {
       let tmp60 = importDefault;
       let tmp61 = dependencyMap;
-      let obj19 = parseRawEmojiObject;
+      let obj19 = parseRawEmojiObjectDefault;
       let tmp62 = nextResult;
       let byCategory = obj19.getByCategory(tmp2.name);
       if (isNativeEmojiPickerEnabled) {
@@ -197,10 +188,6 @@ function _computeCategories(arg0) {
   return items;
 }
 function _computeSearchResults(emojis) {
-  let limit;
-  let locked;
-  let rowSize;
-  let unlocked;
   ({ locked, unlocked } = emojis.emojis);
   ({ rowSize, limit } = emojis);
   if (limit === undefined) {
@@ -235,7 +222,7 @@ function _computeSearchResults(emojis) {
     continue;
   }
   obj = { emojiSections: items, renderingData: null, rowSize: null };
-  const obj1 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
+  obj1 = { type: constants3.EMOJI, emojis: substr1, emojisDisabled: set1, label: null, footer: null };
   const set = new Set();
   const tmp2 = pushCategory;
   obj1[3] = initializeSearch.getStringForEmojiCategory(constants.PREMIUM_UPSELL);
@@ -261,12 +248,11 @@ function pushNativeCategory(emojiSections) {
   emojiSections.push(emojiSections.renderingData);
 }
 ({ EmojiCategories: c5, EmojiCategoryTypes: closure_6 } = EmojiCategoryTypes);
-const result = require("EmojiCategoryTypes").fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useComputeEmojiPickerFunctions.tsx");
 
 export default function useComputeEmojiPickerFunctions() {
   return callback(React.useState(() => {
-    const obj = { computeCategories: null, computeSearchResults: null };
-    obj[0] = callback(1989).cachedFunction(closure_8);
+    const obj = { computeCategories: callback(1989).cachedFunction(closure_8), computeSearchResults: null };
     const obj2 = callback(1989);
     obj[1] = callback(1989).cachedFunction(closure_9);
     return obj;

@@ -1,6 +1,8 @@
 // discord_app/modules/activities/records/CustomActivityLinkRecord.tsx
-import { CustomLinkType } from "../../../../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx";
-let result = require("fetchCustomActivityLink").fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
+import set from "set" /* 2 */;
+import CustomLinkType from "CustomLinkType" /* 12414 */;
+
+let result = set.fileFinishedImporting("modules/activities/records/CustomActivityLinkRecord.tsx");
 class CustomActivityLinkRecord {
   constructor(arg0) {
     obj = require("CustomLinkType");

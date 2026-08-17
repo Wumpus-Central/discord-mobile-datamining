@@ -1,14 +1,10 @@
 // discord_app/modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx
-import noop from "noop";
-import { processColor } from "get ActivityIndicator";
-import { FastestListPropsPlaceholderType } from "FastestListPropsPlaceholder.tsx";
+import FastestListPropsPlaceholderType from "FastestListPropsPlaceholderType" /* 8643 */;
+import closure_2 from "noop" /* 19 */;
+import { processColor } from "get ActivityIndicator" /* 17 */;
 
-let require = arg1;
+require = arg1;
 function createNativePlaceholderConfig(type) {
-  let labelPaddingInnerRatio;
-  let labelSecondarySize;
-  let spaceGap;
-  let verticalAlignment;
   type = undefined;
   if (type != null) {
     type = type.type;
@@ -17,7 +13,7 @@ function createNativePlaceholderConfig(type) {
   if (type == null) {
     NONE = FastestListPropsPlaceholderType.FastestListPropsPlaceholderType.NONE;
   }
-  const obj = { borderRadius: "Array", borderTopLeftRadius: "create", borderTopRightRadius: "diversity", borderBottomLeftRadius: "Button", borderBottomRightRadius: "e", divider: "isArray", dividerColor: "isArray", dividerPaddingLeft: "t", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColor: "isArray", placeholderShapeCount: "to", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColor: "Date", placeholderFeedColor: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "TypeError", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "diversity", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
+  obj = { borderRadius: "Array", borderTopLeftRadius: "create", borderTopRightRadius: "diversity", borderBottomLeftRadius: "Button", borderBottomRightRadius: "e", divider: "isArray", dividerColor: "isArray", dividerPaddingLeft: "t", dividerPaddingRight: "e", placeholderShape: "isArray", placeholderShapeColor: "isArray", placeholderShapeCount: "to", placeholderShapeGap: "e", placeholderShapePaddingHorizontal: "isArray", placeholderShapePaddingVertical: "isArray", placeholderFeedBackgroundColor: "Date", placeholderFeedColor: "e", placeholderFeedLabelPadding: "isArray", placeholderFeedLabelPaddingInnerRatio: "isArray", placeholderFeedLabelSize: "TypeError", placeholderFeedLabelSecondarySize: "e", placeholderFeedPadding: "isArray", placeholderFeedShape: "isArray", placeholderFeedShapeSize: "diversity", placeholderType: NONE, width: null, height: null, verticalAlignment: null, horizontalAlignment: null };
   if (null == type) {
     return obj;
   } else {
@@ -127,7 +123,7 @@ function createNativePlaceholderConfig(type) {
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Invalid placeholder type: " + type);
+        error = new Error("Invalid placeholder type: " + type);
         throw error;
       }
     }
@@ -137,14 +133,14 @@ function createNativePlaceholderConfig(type) {
 let obj = { sectionItem: null };
 obj = { type: require("FastestListPropsPlaceholderType").FastestListPropsPlaceholderType.NONE };
 obj[0] = obj;
-const result = require("FastestListPropsPlaceholderType").fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
+const result = require("set").fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 
 export default function useFastestListPropsPlaceholder() {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = obj;
   }
-  const require = tmp;
+  closure_0 = tmp;
   const items = [tmp];
-  return React.useMemo(() => ({ listFooter: outer1_5(tmp.listFooter), listHeader: outer1_5(tmp.listHeader), sectionFooter: outer1_5(tmp.sectionFooter), sectionHeader: outer1_5(tmp.sectionHeader), sectionItem: outer1_5(tmp.sectionItem), sectionItemAtFront: outer1_5(tmp.sectionItemAtFront), sectionItemAtRear: outer1_5(tmp.sectionItemAtRear), sectionItemSingleton: outer1_5(tmp.sectionItemSingleton) }), items);
+  return React.useMemo(() => ({ listFooter: closure_1_5(closure_0.listFooter), listHeader: closure_1_5(closure_0.listHeader), sectionFooter: closure_1_5(closure_0.sectionFooter), sectionHeader: closure_1_5(closure_0.sectionHeader), sectionItem: closure_1_5(closure_0.sectionItem), sectionItemAtFront: closure_1_5(closure_0.sectionItemAtFront), sectionItemAtRear: closure_1_5(closure_0.sectionItemAtRear), sectionItemSingleton: closure_1_5(closure_0.sectionItemSingleton) }), items);
 };

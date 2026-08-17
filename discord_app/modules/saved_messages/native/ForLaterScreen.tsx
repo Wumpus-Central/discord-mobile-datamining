@@ -1,15 +1,14 @@
 // discord_app/modules/saved_messages/native/ForLaterScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "IntroDemo";
-import { View } from "set";
-import getTimeSafe from "getTimeSafe";
-import jsxProd from "ForLaterNitroUpsellBar";
-import createCacheKey from "createCacheKey";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { getSavedMessagesForType } from "../useSavedMessagesForPage.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import getSavedMessagesForTypeDefault from "getSavedMessagesForType" /* 12721 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getTimeSafe" /* 10850 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 function keyExtractor(saveData) {
   return saveData.saveData.messageId;
@@ -17,13 +16,13 @@ function keyExtractor(saveData) {
 function ForLaterPage(type) {
   type = type.type;
   let first;
-  let importDefault;
+  importDefault = undefined;
   const tmp = callback4();
-  const arr = getSavedMessagesForType(type);
+  const arr = getSavedMessagesForTypeDefault(type);
   const tmp5 = type === first(8489).SavedMessageSortTypes.REMINDER;
   let obj = first(8484);
   const forLaterLimit = obj.useForLaterLimit(ForLaterScreen, tmp5);
-  let obj1 = first(8484);
+  obj1 = first(8484);
   const isForLaterLimitUpgradable = obj1.useIsForLaterLimitUpgradable(ForLaterScreen);
   let tmp8 = isForLaterLimitUpgradable;
   if (isForLaterLimitUpgradable) {
@@ -36,7 +35,7 @@ function ForLaterPage(type) {
   if (isForLaterLimitUpgradable) {
     tmp9 = arr.length > 0;
   }
-  const items = [getTimeSafe];
+  const items = [closure_6];
   const stateFromStores = first(589).useStateFromStores(items, () => overdueMessageReminderCount.getOverdueMessageReminderCount());
   let tmp2Result = tmp2(7139);
   const analyticsLocations = tmp2Result(tmp2(7159).FOR_LATER_POPOUT).analyticsLocations;
@@ -63,7 +62,7 @@ function ForLaterPage(type) {
   first = tmp17[0];
   importDefault = tmp17[1];
   const effect = importAllResult.useEffect(() => {
-    const interval = setInterval(() => callback(new Date()), callback(outer1_2[17]).Millis.MINUTE);
+    const interval = setInterval(() => callback(new Date()), callback(closure_1_2[17]).Millis.MINUTE);
     return () => {
       clearInterval(closure_0);
     };
@@ -105,12 +104,12 @@ function ForLaterPage(type) {
   return tmp24Result;
 }
 let c4 = importAllResult;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 const ForLaterScreen = "ForLaterScreen";
 let obj = { container: null, headerBorder: null, cardContainer: null, listContainer: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, flexGrow: 1 };
 obj[0] = obj;
-createCacheKey = { height: 1, width: "100%", backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[1] = createCacheKey;
 obj[2] = { paddingHorizontal: 16, paddingVertical: 8 };
 obj[3] = { flex: 1 };
@@ -127,7 +126,7 @@ const memoResult = importAllResult.memo((type) => {
     if (nativeEvent.nativeEvent.contentOffset.y > 8) {
       num = 1;
     }
-    const result = sharedValue.set(sharedValue(outer1_2[8]).withSpring(num));
+    const result = sharedValue.set(sharedValue(closure_1_2[8]).withSpring(num));
   }, items);
   const fn = function s() {
     return { opacity: sharedValue.get() };
@@ -138,10 +137,10 @@ const memoResult = importAllResult.memo((type) => {
   obj = { style: tmp.container, children: null };
   const animatedStyle = sharedValue(4115).useAnimatedStyle(fn);
   const items1 = [tmp.headerBorder, animatedStyle];
-  const items2 = [callback2(ReanimatedRexport.View, { style: items1 }), callback2(ForLaterPage, { type: type.type, handleScroll: callback })];
+  const items2 = [callback2(_modDef4115.View, { style: items1 }), callback2(ForLaterPage, { type: type.type, handleScroll: callback })];
   obj[1] = items2;
   return callback3(View, obj);
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/saved_messages/native/ForLaterScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterScreen.tsx");
 
 export default memoResult;

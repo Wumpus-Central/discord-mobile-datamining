@@ -1,14 +1,13 @@
 // discord_app/modules/activities/utils/ActivityFlagUtils.tsx
-import ME from "ME";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { isEmbeddedActivity } from "isEmbeddedActivity.tsx";
+import set from "set" /* 2 */;
+import Storage2 from "Storage" /* 595 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ ActivityFlags: c3, ActivityPartyPrivacy: c4 } = ME);
-const result = require("Storage").fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/ActivityFlagUtils.tsx");
 
 export const computeActivityFlags = function computeActivityFlags(activity, flag, arg2, canLaunchFrameResult, privacy) {
   if (flag === undefined) {
@@ -64,7 +63,7 @@ export const computeActivityFlags = function computeActivityFlags(activity, flag
   } else {
     let value = PRIVATE === constants2.PUBLIC;
     if (!value) {
-      const Storage = Storage.Storage;
+      const Storage = Storage2.Storage;
       value = Storage.get("ACTIVITIES_FORCE_PUBLIC");
     }
     if (!value) {
@@ -101,7 +100,7 @@ export const isContextlessEmbeddedActivity = function isContextlessEmbeddedActiv
   }
   let hasFlagResult = hasFlag.hasFlag(num, constants.CONTEXTLESS);
   if (hasFlagResult) {
-    hasFlagResult = isEmbeddedActivity(remoteApplicationActivity);
+    hasFlagResult = isEmbeddedActivityDefault(remoteApplicationActivity);
   }
   return hasFlagResult;
 };

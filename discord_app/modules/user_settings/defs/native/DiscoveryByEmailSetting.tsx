@@ -1,17 +1,20 @@
 // discord_app/modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx
-import { FriendDiscoveryFlags } from "ME";
-import createToggle from "createToggle";
-import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { _updateDiscoverability } from "../../../contact_sync/native/ContactSyncActionCreators.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import _updateDiscoverabilityDefault from "_updateDiscoverability" /* 11857 */;
+import createToggle from "createToggle" /* 10669 */;
 
+const FriendDiscoveryFlags = ME.FriendDiscoveryFlags;
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useDescription: function useDiscoveryByEmailSettingDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ilGsHE);
@@ -27,7 +30,7 @@ const toggle = createToggle.createToggle({
     let obj = hasFlag;
     const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
     obj = { phone: hasFlagResult, email };
-    const result = _updateDiscoverability.updateDiscoverability(obj);
+    const result = _updateDiscoverabilityDefault.updateDiscoverability(obj);
   }
 });
 let obj = {
@@ -35,7 +38,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["w/qqKK"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: MobileUserSettings.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useDescription: function useDiscoveryByEmailSettingDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.ilGsHE);
@@ -51,9 +54,9 @@ let obj = {
     let obj = hasFlag;
     const hasFlagResult = obj.hasFlag(setting, FriendDiscoveryFlags.FIND_BY_PHONE);
     obj = { phone: hasFlagResult, email };
-    const result = _updateDiscoverability.updateDiscoverability(obj);
+    const result = _updateDiscoverabilityDefault.updateDiscoverability(obj);
   }
 };
-let result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/DiscoveryByEmailSetting.tsx");
 
 export default toggle;

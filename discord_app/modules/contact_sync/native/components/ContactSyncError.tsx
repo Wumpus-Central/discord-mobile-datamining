@@ -1,15 +1,17 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncError.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { CONFIG_NEVER_ANIMATE_TIMING } from "../../../../design/animation/reanimated/timing/timing.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
 const require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ container: { justifyContent: "center" }, error: { paddingHorizontal: 16, textAlign: "center" } });
 let closure_5 = { code: "function ContactSyncErrorTsx1(){const{withTiming,hasError,ERROR_HEIGHT}=this.__closure;return{height:withTiming(hasError?ERROR_HEIGHT:0)};}" };
-const result = require("createCacheKey").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncError.tsx");
 
 export default function ContactSyncError(error) {
   error = error.error;
@@ -22,9 +24,9 @@ export default function ContactSyncError(error) {
   _require = tmp2;
   let obj = _ReanimatedRexport;
   const fn = function l() {
-    let obj = _undefined(outer1_2[4]);
+    let obj = callback(closure_1_2[4]);
     let num = 0;
-    if (_undefined) {
+    if (callback) {
       num = 44;
     }
     obj = { height: obj.withTiming(num) };
@@ -35,8 +37,7 @@ export default function ContactSyncError(error) {
   fn.__workletHash = 14558247431913;
   fn.__initData = closure_5;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { style: items, children: null };
+  obj = { style: items, children: jsx(_Text.Text, obj1) };
   items = [tmp.container, error.style, animatedStyle];
-  obj[1] = jsx(_Text.Text, { variant: "text-sm/medium", color: "text-feedback-critical", style: tmp.error, children: error });
-  return jsx(ReanimatedRexport.View, { style: items, children: null });
+  return jsx(_modDef4115.View, { style: items, children: jsx(_Text.Text, obj1) });
 };

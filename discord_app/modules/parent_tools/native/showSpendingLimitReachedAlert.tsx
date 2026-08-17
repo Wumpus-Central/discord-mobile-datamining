@@ -1,7 +1,9 @@
 // discord_app/modules/parent_tools/native/showSpendingLimitReachedAlert.tsx
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { V6OrEarlierAPIError } from "../../../errors/index.tsx";
-const result = require("useUserIdsForLinkStatus").fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
+import set from "set" /* 2 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+
+const result = set.fileFinishedImporting("modules/parent_tools/native/showSpendingLimitReachedAlert.tsx");
 
 export const isSpendingLimitError = function isSpendingLimitError(billingError) {
   let tmp3 = billingError instanceof V6OrEarlierAPIError.BillingError;
@@ -17,7 +19,7 @@ export const isSpendingLimitError = function isSpendingLimitError(billingError) 
 export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAlert() {
   let obj = activeLinkUserIds(7621);
   activeLinkUserIds = obj.getActiveLinkUserIds();
-  let obj1 = AlertActionCreators;
+  obj1 = _modDef4656;
   obj = { title: null, body: null, isDismissable: true };
   const intl = activeLinkUserIds(1236).intl;
   obj[0] = intl.string(activeLinkUserIds(1236).t.QJKKrT);
@@ -28,10 +30,10 @@ export const showSpendingLimitReachedAlert = function showSpendingLimitReachedAl
     const intl3 = tmp(1236).intl;
     obj[0] = intl3.string(tmp(1236).t.GF9RCX);
     obj[1] = function onConfirm() {
-      let obj = activeLinkUserIds(outer1_2[5]);
+      let obj = activeLinkUserIds(closure_1_2[5]);
       obj.popLayer();
       obj = { recipientIds: activeLinkUserIds };
-      outer1_1(outer1_2[6]).openPrivateChannel(obj);
+      closure_1_1(closure_1_2[6]).openPrivateChannel(obj);
     };
     const intl4 = tmp(1236).intl;
     obj[2] = intl4.string(tmp(1236).t.L5eIZ2);

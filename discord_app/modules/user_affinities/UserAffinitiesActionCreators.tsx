@@ -1,24 +1,22 @@
 // discord_app/modules/user_affinities/UserAffinitiesActionCreators.tsx
-import hasConsented from "hasConsented";
-import recomputeAffinities from "recomputeAffinities";
-import ME from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "hasConsented" /* 5258 */;
+import closure_4 from "recomputeAffinities" /* 5407 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ Endpoints: c5, Consents: closure_6 } = ME);
-const result = require("ME").fileFinishedImporting("modules/user_affinities/UserAffinitiesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/user_affinities/UserAffinitiesActionCreators.tsx");
 
 export const fetchUserAffinitiesV2 = function fetchUserAffinitiesV2() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
   }
-  if (recomputeAffinities.shouldFetch()) {
-    if (hasConsented.hasConsented(constants.PERSONALIZATION)) {
-      let obj = dispatcher;
+  if (closure_4.shouldFetch()) {
+    if (closure_3.hasConsented(constants.PERSONALIZATION)) {
+      let obj = dispatcherDefault;
       obj.dispatch({ type: "LOAD_USER_AFFINITIES_V2" });
       const HTTP = sendRequest.HTTP;
       obj = { url: null, retries: null, oldFormErrors: true, rejectWithError: false };

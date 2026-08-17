@@ -1,6 +1,6 @@
 // discord_common/js/packages/design/components/ManaContext/ManaContext.native.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 const obj = {};

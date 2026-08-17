@@ -1,17 +1,13 @@
 // discord_app/modules/reactions/native/MessageReactions.tsx
-import noop from "noop";
-import reinjectEphemerals from "reinjectEphemerals";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let closure_6 = [];
-const result = require("jsxProd").fileFinishedImporting("modules/reactions/native/MessageReactions.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/native/MessageReactions.tsx");
 
 export default function MessageReactions(emoji) {
-  let channelId;
-  let isSelectedBurst;
-  let messageId;
-  let reactions;
   ({ channelId, messageId, reactions, isSelectedBurst } = emoji);
   if (isSelectedBurst === undefined) {
     isSelectedBurst = false;
@@ -21,11 +17,11 @@ export default function MessageReactions(emoji) {
   items3 = channelId;
   let stateFromStores;
   let obj = items3(stateFromStores[3]);
-  const items = [reinjectEphemerals];
+  const items = [closure_4];
   const items1 = [channelId, messageId];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const message = outer1_4.getMessage(items3, messageId);
-    return null != message ? message.reactions : outer1_6;
+    const message = closure_1_4.getMessage(items3, messageId);
+    return null != message ? message.reactions : closure_1_6;
   }, items1);
   const items2 = [stateFromStores];
   const memo = React.useMemo(() => stateFromStores.filter((count_details) => {

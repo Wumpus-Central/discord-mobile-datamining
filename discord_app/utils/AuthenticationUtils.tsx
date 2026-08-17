@@ -1,12 +1,15 @@
 // discord_app/utils/AuthenticationUtils.tsx
-import { registerAsset } from "../../_runtime/01372_registerAsset.js";
-const result = require("set").fileFinishedImporting("utils/AuthenticationUtils.tsx");
+import set from "set" /* 2 */;
+import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
+import registerAsset from "registerAsset" /* 1372 */;
+
+const result = set.fileFinishedImporting("utils/AuthenticationUtils.tsx");
 
 export const getToken = function getToken() {
-  return importAll(707).getToken();
+  return setSecondaryTokenAll.getToken();
 };
 export const isAuthenticated = function isAuthenticated() {
-  return null != importAll(707).getToken();
+  return null != setSecondaryTokenAll.getToken();
 };
 export const getArtForPath = function getArtForPath(arg0) {
   let tmp = null;

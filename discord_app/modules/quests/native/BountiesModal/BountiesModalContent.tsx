@@ -1,48 +1,22 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesModalContent.tsx
-import ME from "ME";
-import useBountiesModalVideoAnalytics from "useBountiesModalVideoAnalytics";
-import { View } from "fetchBountiesAndDispatch";
-import set from "set";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import { AnalyticEvents } from "ME";
-import { ThemeTypes } from "sum";
-import jsxProd from "AdCreativeType";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "set" /* 7452 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function BountiesModalContentInner(bounty) {
-  let handleBufferAnalytics;
-  let handleLoadStartAnalytics;
-  let handleProgress;
-  let handleReadyForDisplayAnalytics;
-  let handleVideoEnd;
-  let handleVideoEndAnalytics;
-  let handleVideoErrorAnalytics;
-  let handleVideoLoopedAnalytics;
-  let handleVideoPaused;
-  let handleVideoPausedAnalytics;
-  let handleVideoProgress;
-  let handleVideoResumed;
-  let handleVideoResumedAnalytics;
-  let handleVideoTracksAnalytics;
-  let initialProgress;
-  let isCtaVisible;
-  let loopingEnabled;
-  let normalizedProgress;
-  let ownedByVerticalScrollExperiment;
-  let rewardRemainingSeconds;
-  let rewardTimerSeconds;
-  let rewardTotalSeconds;
-  let stage1Enabled;
   bounty = bounty.bounty;
   let width = bounty;
   const sourceQuestContent = bounty.sourceQuestContent;
   let height = sourceQuestContent;
-  let dependencyMap;
+  dependencyMap = undefined;
   let memo;
   let React;
   handleProgress = undefined;
@@ -65,14 +39,14 @@ function BountiesModalContentInner(bounty) {
   let items = [width, height, , , , ];
   ({ top: arr[2], bottom: arr[3], left: arr[4], right: arr[5] } = tmp4);
   memo = React.useMemo(() => {
-    const rect = _undefined;
-    const diff = width - _undefined.left - _undefined.right;
-    const diff1 = height - _undefined.top - _undefined.bottom;
-    let result = diff / outer1_13;
+    const rect = closure_2;
+    const diff = width - closure_2.left - closure_2.right;
+    const diff1 = height - closure_2.top - closure_2.bottom;
+    let result = diff / closure_1_13;
     let flag = true;
     let result1 = diff;
     if (result > diff1) {
-      result1 = diff1 * outer1_13;
+      result1 = diff1 * closure_1_13;
       flag = false;
       result = diff1;
     }
@@ -82,23 +56,23 @@ function BountiesModalContentInner(bounty) {
   const items2 = [tmp.closeButton, , , ];
   ({ top: arr3[1], left: arr3[2], width: arr3[3] } = memo);
   const memo1 = React.useMemo(() => {
-    const items = [_undefined.videoWrapper, { top: memo.top, left: memo.left, width: memo.width, height: memo.height }];
+    const items = [closure_2.videoWrapper, { top: memo.top, left: memo.left, width: memo.width, height: memo.height }];
     return items;
   }, items1);
   const items3 = [, , , , , ];
   ({ bottomContainer: arr4[0], bottomContainerFullWidth: arr4[1], bottomContainerNotFullWidth: arr4[2] } = tmp);
   ({ isFullWidth: arr4[3], left: arr4[4], width: arr4[5] } = memo);
   const memo2 = React.useMemo(() => {
-    const items = [_undefined.closeButton, ];
-    const obj = { top: memo.top + height(_undefined[11]).space.PX_8, left: null };
+    const items = [closure_2.closeButton, ];
+    const obj = { top: memo.top + height(closure_2[11]).space.PX_8, left: null };
     const sum = memo.left + memo.width;
-    const diff = sum - height(_undefined[11]).space.PX_32;
-    obj[1] = diff - height(_undefined[11]).space.PX_8;
+    const diff = sum - height(closure_2[11]).space.PX_32;
+    obj[1] = diff - height(closure_2[11]).space.PX_8;
     items[1] = obj;
     return items;
   }, items2);
   const memo3 = React.useMemo(() => {
-    const bottomContainer = _undefined.bottomContainer;
+    const bottomContainer = closure_2.bottomContainer;
     if (memo.isFullWidth) {
       const items = [bottomContainer, tmp2.bottomContainerFullWidth];
       let items1 = items;
@@ -110,7 +84,7 @@ function BountiesModalContentInner(bounty) {
     }
     return items1;
   }, items3);
-  let obj1 = width(589);
+  obj1 = width(589);
   const items4 = [flushProgress];
   const stateFromStores = obj1.useStateFromStores(items4, () => flushProgress.isBountyCompleted(width.id));
   let obj2 = width(9252);
@@ -133,15 +107,15 @@ function BountiesModalContentInner(bounty) {
     flushProgress = bountyVideoProgressPersistence.flushProgress;
     const items5 = [bounty.id, sourceQuestContent];
     const callback = obj.useCallback(memo(function*() {
-      let closure_1 = tmp3;
-      let c3 = 1;
-      yield outer1_0(outer1_2[17]).claimBountyReward(outer1_0.id, outer1_1);
+      closure_1 = tmp3;
+      c3 = 1;
+      yield closure_1_0(closure_1_2[17]).claimBountyReward(closure_1_0.id, closure_1_1);
       if (1 === tmp7) {
         c3 = 0;
-        let closure_0 = closure_2;
-        const obj1 = outer1_0(outer1_2[18]);
+        closure_0 = closure_2;
+        obj1 = closure_1_0(closure_1_2[18]);
         const result = obj1.openBountyRewardClaimErrorToast(closure_0);
-        let c5 = 3;
+        c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
@@ -189,49 +163,45 @@ function BountiesModalContentInner(bounty) {
     ({ isCtaVisible, handleVideoEnd, handleVideoProgress, handleVideoPaused, handleVideoResumed, rewardRemainingSeconds, rewardTotalSeconds, normalizedProgress } = bountiesModalTiming);
     const items8 = [bounty.id, maxVideoProgressSeconds, result, sourceQuestContent, videoDuration, flushProgress];
     const callback2 = obj.useCallback(() => {
-      let obj = width(_undefined[20]);
-      obj = { adContentId: width.id, adCreativeType: width(_undefined[21]).AdCreativeType.BOUNTY, event: isEndCardVisible.AD_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
-      obj = { content_name: null, content_id: null, video_progress: null, threshold_met: null, reward_timer_seconds: null };
-      obj[0] = width(_undefined[22]).getQuestContentName(width(_undefined[23]).QuestContent.VIDEO_MODAL_MOBILE);
-      obj[1] = width(_undefined[23]).QuestContent.VIDEO_MODAL_MOBILE;
-      const obj4 = width(_undefined[22]);
-      const tmp = _undefined;
+      let obj = width(closure_2[20]);
+      obj = { adContentId: width.id, adCreativeType: width(closure_2[21]).AdCreativeType.BOUNTY, event: isEndCardVisible.AD_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
+      obj = { content_name: width(closure_2[22]).getQuestContentName(width(closure_2[23]).QuestContent.VIDEO_MODAL_MOBILE), content_id: width(closure_2[23]).QuestContent.VIDEO_MODAL_MOBILE, video_progress: null, threshold_met: null, reward_timer_seconds: null };
+      const obj4 = width(closure_2[22]);
+      const tmp = closure_2;
       let num = videoDuration;
       if (videoDuration == null) {
         num = 0;
       }
-      obj[2] = width(_undefined[24]).formatVideoProgressRatio(maxVideoProgressSeconds, num);
+      obj[2] = width(closure_2[24]).formatVideoProgressRatio(maxVideoProgressSeconds, num);
       obj[3] = 1000 * maxVideoProgressSeconds >= c4;
       obj[4] = c4 / 1000;
       obj[3] = obj;
       obj[4] = height;
       obj.trackAdContentEvent(obj);
       flushProgress();
-      const obj5 = width(_undefined[24]);
+      const obj5 = width(closure_2[24]);
       height(tmp[25]).hideModal();
     }, items7);
     obj2 = { children: null };
     obj3 = { style: null, children: null };
     obj3[0] = memo1;
     callback3 = obj.useCallback(() => {
-      let obj = width(_undefined[20]);
-      obj = { adContentId: width.id, adCreativeType: width(_undefined[21]).AdCreativeType.BOUNTY, event: isEndCardVisible.AD_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
-      obj = { content_name: null, content_id: null, video_progress: null, threshold_met: true, reward_timer_seconds: null };
-      obj[0] = width(_undefined[22]).getQuestContentName(width(_undefined[23]).QuestContent.VIDEO_MODAL_END_CARD);
-      obj[1] = width(_undefined[23]).QuestContent.VIDEO_MODAL_END_CARD;
-      const obj4 = width(_undefined[22]);
-      const tmp = _undefined;
+      let obj = width(closure_2[20]);
+      obj = { adContentId: width.id, adCreativeType: width(closure_2[21]).AdCreativeType.BOUNTY, event: isEndCardVisible.AD_VIDEO_MODAL_CLOSED, properties: null, sourceQuestContent: null };
+      obj = { content_name: width(closure_2[22]).getQuestContentName(width(closure_2[23]).QuestContent.VIDEO_MODAL_END_CARD), content_id: width(closure_2[23]).QuestContent.VIDEO_MODAL_END_CARD, video_progress: null, threshold_met: true, reward_timer_seconds: null };
+      const obj4 = width(closure_2[22]);
+      const tmp = closure_2;
       let num = videoDuration;
       if (videoDuration == null) {
         num = 0;
       }
-      obj[2] = width(_undefined[24]).formatVideoProgressRatio(maxVideoProgressSeconds, num);
+      obj[2] = width(closure_2[24]).formatVideoProgressRatio(maxVideoProgressSeconds, num);
       obj[4] = c4 / 1000;
       obj[3] = obj;
       obj[4] = height;
       obj.trackAdContentEvent(obj);
       flushProgress();
-      const obj5 = width(_undefined[24]);
+      const obj5 = width(closure_2[24]);
       const tmp2 = maxVideoProgressSeconds;
       height(tmp[25]).hideModal();
     }, items8);
@@ -258,15 +228,16 @@ function BountiesModalContentInner(bounty) {
     obj4[20] = loopingEnabled;
     obj4[21] = initialProgress;
     obj4[22] = function renderEndCard() {
-      const obj = { adContentId: width.id, adCreativeType: null, questContent: null, sourceQuestContent: null, overrideVisibility: null, children: null };
-      obj[1] = width(_undefined[21]).AdCreativeType.BOUNTY;
-      obj[2] = width(_undefined[23]).QuestContent.VIDEO_MODAL_END_CARD;
-      obj[3] = height;
-      obj[4] = isEndCardVisible;
-      obj[5] = function children() {
-        return outer1_10(outer1_1(outer1_2[28]), { bounty: closure_0, visible: closure_8, sourceQuestContent: closure_1 });
-      };
-      return videoDuration(width(_undefined[27]).QuestContentImpressionTrackerNative, obj);
+      return videoDuration(width(closure_2[27]).QuestContentImpressionTrackerNative, {
+        adContentId: width.id,
+        adCreativeType: width(closure_2[21]).AdCreativeType.BOUNTY,
+        questContent: width(closure_2[23]).QuestContent.VIDEO_MODAL_END_CARD,
+        sourceQuestContent: height,
+        overrideVisibility: isEndCardVisible,
+        children() {
+          return closure_1_10(closure_1_1(closure_1_2[28]), { bounty: closure_0, visible: closure_8, sourceQuestContent: closure_1 });
+        }
+      });
     };
     ({ width: obj13[24], height: obj13[25] } = memo);
     obj3[1] = videoDuration(tmp9(14378).BountyVideo, obj4);
@@ -296,18 +267,16 @@ function BountiesModalContentInner(bounty) {
 let c13 = 0.5625;
 let closure_14 = createCacheKey.createStyles(() => {
   let obj = { videoWrapper: { position: "absolute" }, closeButton: { position: "absolute" }, bottomContainer: null, bottomContainerFullWidth: null, bottomContainerNotFullWidth: null };
-  obj = { position: "absolute", bottom: Themes.space.PX_24, justifyContent: "flex-end" };
+  obj = { position: "absolute", bottom: ThemesDefault.space.PX_24, justifyContent: "flex-end" };
   obj[2] = obj;
-  obj = { left: Themes.space.PX_16, right: Themes.space.PX_16 };
+  obj = { left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16 };
   obj[3] = obj;
-  obj[4] = { paddingLeft: Themes.space.PX_16, paddingRight: Themes.space.PX_16 };
+  obj[4] = { paddingLeft: ThemesDefault.space.PX_16, paddingRight: ThemesDefault.space.PX_16 };
   return obj;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContent.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesModalContent.tsx");
 
 export default function BountiesModalContent(arg0) {
-  let require;
-  let sourceQuestContent;
   ({ bountyId: require, sourceQuestContent } = arg0);
   let found;
   let obj = require(found[32]);
@@ -323,7 +292,7 @@ export default function BountiesModalContent(arg0) {
     obj[2] = tmp(tmp2[23]).QuestContent.VIDEO_MODAL_MOBILE;
     obj[3] = sourceQuestContent;
     obj[5] = function children() {
-      return outer1_10(outer1_15, { bounty: found, sourceQuestContent });
+      return closure_1_10(closure_1_15, { bounty: found, sourceQuestContent });
     };
     obj[1] = callback(tmp(tmp2[27]).BillableAdPlacementImpressionTrackerNative, obj);
     tmp4 = callback(tmp(tmp2[33]).ThemeContextProvider, obj);

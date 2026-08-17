@@ -1,42 +1,38 @@
 // discord_app/modules/guild_member_verification/native/components/MemberVerificationGuildHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import BANNER_RATIO_HEIGHT_16_9 from "BANNER_RATIO_HEIGHT_16_9" /* 8525 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let AVATAR_BORDER_WIDTH;
-let AVATAR_SIZE;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = BANNER_RATIO_HEIGHT_16_9);
 const useBannerHeight = BANNER_RATIO_HEIGHT_16_9.useBannerHeight;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let c8 = 1.20225424859375;
 createCacheKey = { header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 }, headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 }, linearGradient: { position: "absolute", height: 140, top: 0, right: 0, left: 0 }, avatar: null, avatarContainer: null, featureIcon: null, headerTitle: null, headerDescription: null };
-createCacheKey = { borderRadius: require("Themes").radii.lg, borderWidth: 0, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE, width: AVATAR_SIZE, margin: 0, backgroundColor: require("Themes").colors.BACKGROUND_SCRIM };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg, borderWidth: 0, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE, width: AVATAR_SIZE, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { borderRadius: 20, borderWidth: AVATAR_BORDER_WIDTH, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, width: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, marginBottom: 16, marginTop: -16, marginLeft: -4, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey[4] = { borderRadius: 20, borderWidth: AVATAR_BORDER_WIDTH, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, width: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, marginBottom: 16, marginTop: -16, marginLeft: -4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[5] = { position: "absolute", top: 56, right: -8 };
 createCacheKey[6] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[7] = { lineHeight: 18, textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function MemberVerificationGuildHeaderTsx1(){const{scrollTop}=this.__closure;return scrollTop.get()*-1;}" };
 let closure_11 = { code: "function MemberVerificationGuildHeaderTsx2(){const{height,interpolate,scrollTop,safeAreaTop,scrollTopNegative}=this.__closure;return{width:'100%',height:height,opacity:interpolate(scrollTop.get(),[0,height-safeAreaTop],[1,0],'clamp'),transform:[{translateY:interpolate(scrollTopNegative.get(),[0,height],[0,-height],'clamp')},{scale:interpolate(scrollTopNegative.get(),[0,height],[1,1.08],'clamp')}]};}" };
 let closure_12 = { code: "function MemberVerificationGuildHeaderTsx3(){const{interpolate,scrollTopNegative,height,ANIMATION_GOLDEN_RATIO,AVATAR_SIZE}=this.__closure;return{transform:[{translateY:interpolate(scrollTopNegative.get(),[0,height],[0,-(height/ANIMATION_GOLDEN_RATIO)],'clamp')},{scale:interpolate(scrollTopNegative.get(),[0,AVATAR_SIZE],[1,ANIMATION_GOLDEN_RATIO],'clamp')}]};}" };
-let obj1 = { borderRadius: 20, borderWidth: AVATAR_BORDER_WIDTH, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, width: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, marginBottom: 16, marginTop: -16, marginLeft: -4, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-const result = require("BANNER_RATIO_HEIGHT_16_9").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationGuildHeader.tsx");
+let obj1 = { borderRadius: 20, borderWidth: AVATAR_BORDER_WIDTH, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, height: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, width: AVATAR_SIZE + 2 * AVATAR_BORDER_WIDTH, marginBottom: 16, marginTop: -16, marginLeft: -4, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/MemberVerificationGuildHeader.tsx");
 
 export default function MemberVerificationGuildHeader(hasManualFormFields) {
-  let guild;
-  let scrollTop;
   ({ guild, scrollTop } = hasManualFormFields);
   hasManualFormFields = hasManualFormFields.hasManualFormFields;
-  let importDefault;
+  importDefault = undefined;
   let top;
   let derivedValue;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (null != guild.banner) {
     let obj = importDefault(top[6]);
     let guildBannerSource = obj.getGuildBannerSource(guild);
@@ -50,7 +46,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
   const tmp8 = useBannerHeight();
   importDefault = tmp8;
   top = tmp5(tmp3[8])().top;
-  let obj1 = scrollTop(tmp3[9]);
+  obj1 = scrollTop(tmp3[9]);
   class N {
     constructor() {
       return -1 * scrollTop.get();
@@ -63,25 +59,25 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
   let obj2 = scrollTop(tmp3[9]);
   class I {
     constructor() {
-      obj = { width: "100%", height: c1, opacity: null, transform: null };
+      obj = { width: "100%", height: closure_1, opacity: null, transform: null };
       obj2 = scrollTop(top[9]);
       items = [0];
-      items[1] = c1 - top;
+      items[1] = closure_1 - top;
       obj[2] = obj2.interpolate(scrollTop.get(), items, [1, 0], "clamp");
       obj = { translateY: null };
       obj4 = scrollTop(top[9]);
       items1 = [0];
-      items1[1] = c1;
+      items1[1] = closure_1;
       items2 = [0];
-      items2[1] = -c1;
-      obj[0] = obj4.interpolate(c3.get(), items1, items2, "clamp");
+      items2[1] = -closure_1;
+      obj[0] = obj4.interpolate(closure_3.get(), items1, items2, "clamp");
       items3 = [, ];
       items3[0] = obj;
       obj1 = { scale: null };
       obj6 = scrollTop(top[9]);
       items4 = [0];
-      items4[1] = c1;
-      obj1[0] = obj6.interpolate(c3.get(), items4, [1, 1.08], "clamp");
+      items4[1] = closure_1;
+      obj1[0] = obj6.interpolate(closure_3.get(), items4, [1, 1.08], "clamp");
       items3[1] = obj1;
       obj[3] = items3;
       return obj;
@@ -95,15 +91,14 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
   let obj4 = scrollTop(tmp3[9]);
   const fn = function b() {
     let obj = { transform: null };
-    obj = { translateY: null };
-    const items = [0, c1];
-    const items1 = [0, -c1 / outer1_8];
-    obj[0] = scrollTop(top[9]).interpolate(derivedValue.get(), items, items1, "clamp");
+    obj = { translateY: scrollTop(top[9]).interpolate(derivedValue.get(), items, items1, "clamp") };
+    items = [0, closure_1];
+    items1 = [0, -closure_1 / closure_1_8];
     const items2 = [obj, ];
     obj = { scale: null };
     const obj3 = scrollTop(top[9]);
-    const items3 = [0, outer1_4];
-    const items4 = [1, outer1_8];
+    const items3 = [0, closure_1_4];
+    const items4 = [1, closure_1_8];
     obj[0] = scrollTop(top[9]).interpolate(derivedValue.get(), items3, items4, "clamp");
     items2[1] = obj;
     obj[0] = items2;
@@ -122,8 +117,7 @@ export default function MemberVerificationGuildHeader(hasManualFormFields) {
   obj4 = { style: tmp.headerContent, children: null };
   const obj5 = { style: items2, children: null };
   items2 = [tmp.avatarContainer, animatedStyle1];
-  const obj6 = { style: tmp.avatar, guild, size: null, animate: true };
-  obj6[2] = scrollTop(tmp3[11]).GuildIconSizes.XLARGE;
+  const obj6 = { style: tmp.avatar, guild, size: scrollTop(tmp3[11]).GuildIconSizes.XLARGE, animate: true };
   let items3 = [callback(tmp5(tmp3[11]), obj6), callback(tmp5(tmp3[12]), { style: tmp.featureIcon, guild, disableColor: true })];
   obj5[1] = items3;
   let items4 = [callback2(tmp5(tmp3[9]).View, obj5), , ];

@@ -1,21 +1,16 @@
 // discord_app/modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { InfoBox } from "../../user_settings/authorized_apps/native/InfoBox.tsx";
-import { SlayerStorefrontItemCard } from "SlayerStorefrontItemCard.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9228 */;
+import InfoBox from "InfoBox" /* 9856 */;
+import InfoBoxDefault from "InfoBox" /* 9856 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function WarningBox(application) {
-  let canStartAuthorization;
-  let hasAccountLinked;
-  let mobileAccountLinkingDisabled;
-  let sku;
   application = application.application;
   ({ canStartAuthorization, hasAccountLinked, mobileAccountLinkingDisabled, sku } = application);
   let tmp2 = null;
@@ -54,22 +49,17 @@ function WarningBox(application) {
       obj[2] = intl.format(tmp6(1236).t["3T0cpx"], {});
       tmp7 = obj;
     }
-    closure_4(InfoBox, tmp7);
+    closure_4(InfoBoxDefault, tmp7);
     const tmp3 = closure_4;
-    const tmp5 = InfoBox;
+    const tmp5 = InfoBoxDefault;
   }
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { alignItems: "center", justifyContent: "center", gap: 16, marginTop: 20 }, text: { textAlign: "center", paddingHorizontal: 32 }, warningBox: { marginHorizontal: 16 } });
-const result = require("jsxProd").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/native/SlayerStorefrontGiftPreview.tsx");
 
 export default function SlayerStorefrontGiftPreview(arg0) {
-  let application;
-  let canStartAuthorization;
-  let hasAccountLinked;
-  let mobileAccountLinkingDisabled;
-  let sender;
-  let sku;
   ({ sku, application, mobileAccountLinkingDisabled } = arg0);
   ({ sender, hasAccountLinked, canStartAuthorization } = arg0);
   if (mobileAccountLinkingDisabled === undefined) {
@@ -82,11 +72,11 @@ export default function SlayerStorefrontGiftPreview(arg0) {
     obj[0] = tmp.container;
     obj = { sku: null };
     obj[0] = sku;
-    const items = [callback(SlayerStorefrontItemCard, obj), , ];
+    const items = [callback(SlayerStorefrontItemCardDefault, obj), , ];
     obj = { variant: "heading-md/normal", color: "mobile-text-heading-primary", style: null, children: null };
     obj[2] = tmp.text;
     const intl = getSystemLocale.intl;
-    const obj1 = { sender: null, skuName: null, applicationName: null };
+    obj1 = { sender: null, skuName: null, applicationName: null };
     obj1[0] = sender;
     obj1[1] = sku.name;
     let name;

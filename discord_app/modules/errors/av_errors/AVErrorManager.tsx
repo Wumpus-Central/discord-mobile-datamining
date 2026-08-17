@@ -1,16 +1,17 @@
 // discord_app/modules/errors/av_errors/AVErrorManager.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import reset from "reset";
-import handleConnectionOpen from "handleConnectionOpen";
-import updateVoiceState from "updateVoiceState";
-import isAVErrorContextOfType from "isAVErrorContextOfType";
-import "initialize";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { mapped } from "AVError.tsx";
-import { getCurrentScreenshareCaptureMethod } from "AVErrorAnalytics.tsx";
-import { ErrorDefinitions } from "definitions/index.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 5038 */;
+import mapped from "mapped" /* 9668 */;
+import ErrorDefinitions from "ErrorDefinitions" /* 17053 */;
+import getCurrentScreenshareCaptureMethod from "getCurrentScreenshareCaptureMethod" /* 17073 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
+import closure_8 from "isAVErrorContextOfType" /* 12440 */;
 
-const require = arg1;
+require = arg1;
 function setDifference(set, set2) {
   set = new Set();
   const iter = set[Symbol.iterator]();
@@ -34,7 +35,8 @@ function makeErrorKey(item10044) {
   return "" + item10044.type + ":" + errorContextKey;
 }
 let closure_3 = ["type"];
-let c9 = new require("updateVoiceState")("AVErrorManager");
+let closure_9 = new timestampDefault("AVErrorManager");
+initializeDefault;
 class AVErrorManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -109,34 +111,32 @@ prototype["updateActiveErrors"] = function updateActiveErrors() {
             let tmp38 = value;
             let tmp39 = callback;
             let tmp40 = closure_3;
-            let tmp41 = tmp2;
+            let tmp41 = logger;
             let _JSON = JSON;
             let _HermesInternal2 = HermesInternal;
-            let infoResult = tmp2.info("Error resolved: " + tmp37.type + " " + JSON.stringify(callback(tmp37, closure_3)));
+            let infoResult = logger.info("Error resolved: " + tmp37.type + " " + JSON.stringify(callback(tmp37, closure_3)));
           }
           continue;
         }
       }
       obj = { type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: null };
       obj[1] = map;
-      dispatcher.dispatch(obj);
-      const obj6 = dispatcher;
+      dispatcherDefault.dispatch(obj);
+      const obj6 = dispatcherDefault;
     }
   } else {
     const _Object = Object;
     const call = toString.call;
     const _HermesInternal = HermesInternal;
-    tmp2.error("existingErrors is not a Map: " + activeErrors1 + " type: " + typeof call === "unknown" ? toString() : call(activeErrors1));
+    logger.error("existingErrors is not a Map: " + activeErrors1 + " type: " + typeof call === "unknown" ? toString() : call(activeErrors1));
   }
 };
 prototype["handleReportAVError"] = function handleReportAVError(arg0) {
-  let context;
-  let error;
   ({ error, context } = arg0);
   const result = getCurrentScreenshareCaptureMethod.sendAVErrorAnalyticsEvent(error, context);
 };
 const aVErrorManager = new AVErrorManager();
-let tmp2 = new require("updateVoiceState")("AVErrorManager");
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/errors/av_errors/AVErrorManager.tsx");
+let tmp2 = new timestampDefault("AVErrorManager");
+let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorManager.tsx");
 
 export default aVErrorManager;

@@ -1,7 +1,9 @@
 // discord_app/modules/popout-window/PopoutWindowStore.native.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class PopoutWindowStore extends PersistedStore {
 }
 const prototype = PopoutWindowStore.prototype;
@@ -46,7 +48,7 @@ prototype["unmountWindow"] = function unmountWindow() {
 };
 PopoutWindowStore.displayName = "PopoutWindowStore";
 PopoutWindowStore.persistKey = "PopoutWindowStoreIOS";
-const popoutWindowStore = new PopoutWindowStore(require("dispatcher"), {});
+const popoutWindowStore = new PopoutWindowStore(dispatcherDefault, {});
 const result = require("set").fileFinishedImporting("modules/popout-window/PopoutWindowStore.native.tsx");
 
 export default popoutWindowStore;

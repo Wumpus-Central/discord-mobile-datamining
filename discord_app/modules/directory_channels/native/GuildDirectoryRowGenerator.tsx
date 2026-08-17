@@ -1,11 +1,13 @@
 // discord_app/modules/directory_channels/native/GuildDirectoryRowGenerator.tsx
-import { DirectoryEntryCategories } from "DirectoryEntryTypes";
-import ArrayResult from "module_20";
+import set2 from "set" /* 2 */;
+import DirectoryEntryTypes from "DirectoryEntryTypes" /* 11472 */;
+import ArrayResult from "module_20" /* 20 */;
 
+const DirectoryEntryCategories = DirectoryEntryTypes.DirectoryEntryCategories;
 let obj = { ENTRY: 0, [0]: "ENTRY", HEADER: 1, [1]: "HEADER", PLACEHOLDER: 2, [2]: "PLACEHOLDER" };
 obj = { type: obj.PLACEHOLDER };
 let closure_4 = require("module_20").fill(obj);
-let result = require("getSystemLocale").fileFinishedImporting("modules/directory_channels/native/GuildDirectoryRowGenerator.tsx");
+let result = set2.fileFinishedImporting("modules/directory_channels/native/GuildDirectoryRowGenerator.tsx");
 
 export const RowType = obj;
 export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, currentCategoryId) {
@@ -26,7 +28,7 @@ export const generateDirectoryRows = function generateDirectoryRows(arg0, arr, c
     set = new Set(rankByDateAddedResult.map((guildId) => guildId.guildId));
     let combined = items;
     if (rankByDateAddedResult.length > 0) {
-      let obj = { type: null, header: null };
+      obj = { type: null, header: null };
       obj[0] = obj.HEADER;
       const intl = tmp12(1236).intl;
       obj[1] = intl.string(tmp12(1236).t.CbaapP);

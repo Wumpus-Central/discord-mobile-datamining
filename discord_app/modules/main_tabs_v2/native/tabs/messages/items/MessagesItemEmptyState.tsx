@@ -1,31 +1,28 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../../_runtime/15317_registerAsset.js";
-import { Button } from "../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import registerAssetDefault from "registerAsset" /* 15317 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { container: null, containerImage: null, image: null, body: null, title: null };
-obj = { padding: require("Themes").space.PX_16, flex: 1, height: 325 };
+obj = { padding: ThemesDefault.space.PX_16, flex: 1, height: 325 };
 obj[0] = obj;
-createCacheKey = { marginBottom: require("Themes").space.PX_16, flexShrink: 1, flexGrow: 1 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_16, flexShrink: 1, flexGrow: 1 };
 obj[1] = createCacheKey;
 obj[2] = { height: "100%", width: "100%" };
-obj[3] = { marginBottom: require("Themes").space.PX_16, marginTop: require("Themes").space.PX_8, textAlign: "center" };
+obj[3] = { marginBottom: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 obj[4] = { textAlign: "center" };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj2 = { marginBottom: require("Themes").space.PX_16, marginTop: require("Themes").space.PX_8, textAlign: "center" };
+let obj2 = { marginBottom: ThemesDefault.space.PX_16, marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
 const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
   const tmp = callback3();
   let obj = { style: tmp.container, collapsable: false, children: null };
@@ -43,11 +40,11 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
       }
     }
   }, []);
-  obj[1] = registerAsset;
+  obj[1] = registerAssetDefault;
   obj[2] = tmp.image;
   obj[1] = callback(closure_4, obj);
   const items = [callback(closure_5, obj), , , ];
-  const obj1 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
+  obj1 = { color: "mobile-text-heading-primary", variant: "heading-lg/bold", style: tmp.title, maxFontSizeMultiplier: 2, children: null };
   const intl = getSystemLocale.intl;
   obj1[4] = intl.string(getSystemLocale.t["8JZof8"]);
   items[1] = callback(Text.Heading, obj1);
@@ -63,7 +60,7 @@ const memoResult = importAllResult.memo(function MessagesItemEmptyState() {
   obj[2] = items;
   return callback2(closure_5, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemEmptyState.tsx");
 
 export default memoResult;
 export const MESSAGES_ITEM_EMPTY_STATE_HEIGHT = 325;

@@ -1,11 +1,13 @@
 // discord_app/modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx
-import { MobileUserSettings } from "MobileUserSettings";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { useExplicitContentSettingOrDefault } from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
-import { handleSensitiveMediaFilterPress } from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
-import { resolveExplicitContentSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
+import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
+import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14177 */;
+import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14178 */;
+import useSensitiveMediaSettingDisabled from "useSensitiveMediaSettingDisabled" /* 14180 */;
+import createToggle from "createToggle" /* 10669 */;
 
 function useObscuredContentNonFriendsDmSettingValue() {
   const obj = useExplicitContentSettingOrDefault;
@@ -26,6 +28,7 @@ function onObscuredContentNonFriendsDmOnPress() {
   obj[3] = obj.getExplicitContentSettingOrDefault().explicitContentNonFriendDm;
   const result = handleSensitiveMediaFilterPress.handleSensitiveMediaFilterPress(obj);
 }
+const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {
     const intl = getSystemLocale.intl;
@@ -45,7 +48,7 @@ const pressable = createToggle.createPressable({
     items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled: require("useSensitiveMediaSettingDisabled").useSensitiveMediaSettingDisabled
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
 });
 let obj = {
   useTitle: function getTitle() {
@@ -66,9 +69,9 @@ let obj = {
     items[2] = intl3.string(getSystemLocale.t["5mnTa7"]);
     return items;
   },
-  useIsDisabled: require("useSensitiveMediaSettingDisabled").useSensitiveMediaSettingDisabled
+  useIsDisabled: useSensitiveMediaSettingDisabled.useSensitiveMediaSettingDisabled
 };
-let result = require("redactionSettingToRenderedString").fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersNonFriendsDMsSetting.tsx");
 
 export default pressable;
 export { useObscuredContentNonFriendsDmSettingValue };

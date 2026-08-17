@@ -1,11 +1,11 @@
 // discord_app/design/components/TextInput/native/TextArea.native.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { Input } from "../../Input/native/Input.native.tsx";
-import { TextAreaField } from "../../TextField/native/TextAreaField.native.tsx";
+import Input from "Input" /* 8072 */;
+import TextAreaField from "TextAreaField" /* 8093 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
+require = arg1;
+const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   let obj = {};
   const merged = Object.assign(arg0);
   obj = { ref };
@@ -13,6 +13,6 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   obj.children = jsx(TextAreaField.TextAreaField, { ref });
   return jsx(Input.Input, { ref });
 });
-const result = require("Input").fileFinishedImporting("design/components/TextInput/native/TextArea.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextInput/native/TextArea.native.tsx");
 
 export const TextArea = forwardRefResult;

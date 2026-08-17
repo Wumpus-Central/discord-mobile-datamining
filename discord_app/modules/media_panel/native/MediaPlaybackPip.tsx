@@ -1,52 +1,42 @@
 // discord_app/modules/media_panel/native/MediaPlaybackPip.tsx
-import PlayIcon from "PlayIcon";
-import trackInvite from "trackInvite";
-import get_ActivityIndicator from "AnimatedChild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { SquarePIPReferenceDimensions } from "VoicePanelPIPModes";
-import jsxProd from "module_4115";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "reinjectEphemerals" /* 4994 */;
+import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { SquarePIPReferenceDimensions } from "VoicePanelPIPModes" /* 16307 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_6;
-let error;
-let map1;
 const require = arg1;
 function MediaInfo(message) {
-  let isControlVisible;
-  let isVoiceMessage;
   message = message.message;
   const activeMediaPlayerSource = message.activeMediaPlayerSource;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let React;
   ({ isVoiceMessage, isControlVisible } = message);
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = message(4097);
   const token = obj.useToken(first(712).colors.BACKGROUND_SURFACE_HIGH);
-  let obj1 = message(589);
-  const items = [ensureGuildLoaded, mergeGuildAvatar, markAllUserIdListsStale];
+  obj1 = message(589);
+  const items = [closure_8, closure_11, closure_10];
   const items1 = [message];
   const stateFromStores = obj1.useStateFromStores(items, () => {
     let channel_id;
     if (message != null) {
       channel_id = message.channel_id;
     }
-    const channel = outer1_8.getChannel(channel_id);
+    const channel = closure_1_8.getChannel(channel_id);
     let channelName = null;
     if (null != channel) {
       const obj = message(4984);
-      channelName = obj.computeChannelName(channel, outer1_11, outer1_10, true, true);
+      channelName = obj.computeChannelName(channel, closure_1_11, closure_1_10, true, true);
     }
     return channelName;
   }, items1);
@@ -127,30 +117,30 @@ function PiPControls(message) {
   message = message.message;
   const visible = message.visible;
   const isVoiceMessage = message.isVoiceMessage;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const items = [message];
   const callback = React.useCallback(() => {
     if (null != message) {
       if (null != tmp.channel_id) {
         if (null != tmp.id) {
-          const obj = visible(outer1_2[19]);
+          const obj = visible(closure_1_2[19]);
           obj.trackJump(tmp.channel_id, tmp.id, "Media PIP", {});
-          const channel = outer1_8.getChannel(tmp.channel_id);
+          const channel = closure_1_8.getChannel(tmp.channel_id);
           let guildId;
           if (channel != null) {
             guildId = channel.getGuildId();
           }
-          visible(outer1_2[20])(outer1_14.CHANNEL(guildId, tmp.channel_id, tmp.id), { navigationReplace: true, openChannel: true });
+          visible(closure_1_2[20])(closure_1_14.CHANNEL(guildId, tmp.channel_id, tmp.id), { navigationReplace: true, openChannel: true });
           const tmp6 = visible;
-          const tmp6Result = visible(outer1_2[20]);
-          const tmp7 = outer1_2;
+          const tmp6Result = visible(closure_1_2[20]);
+          const tmp7 = closure_1_2;
         }
       }
     }
   }, items);
   let obj = message(4115);
   const fn = function c() {
-    let obj = message(outer1_2[22]);
+    let obj = message(closure_1_2[22]);
     let num = 0;
     if (visible) {
       num = 1;
@@ -185,7 +175,7 @@ function PiPControls(message) {
   const items3 = [, ];
   ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
   items2[1] = callback2(closure_6, { disabled: !visible, style: items3, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: callback2(message(6316).ArrowLargeLeftIcon, { size: "sm" }) });
-  const obj1 = { disabled: !visible, style: items3, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: callback2(message(6316).ArrowLargeLeftIcon, { size: "sm" }) };
+  obj1 = { disabled: !visible, style: items3, onPress: callback, accessible: true, accessibilityRole: "button", accessibilityLabel: stringResult, children: callback2(message(6316).ArrowLargeLeftIcon, { size: "sm" }) };
   const items4 = [, ];
   ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);
   items2[2] = callback2(closure_6, { disabled: !visible, style: items4, onPress: message.handleClosePip, accessible: true, accessibilityRole: "button", accessibilityLabel: string2Result, children: callback2(message(4328).XLargeIcon, { size: "sm" }) });
@@ -201,8 +191,8 @@ let obj1 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj1.zIndex = 5;
 createCacheKey[1] = obj1;
-const merged1 = Object.assign(require("Themes").shadows.SHADOW_LOW_HOVER);
-createCacheKey[2] = { position: "absolute", top: 8, padding: 8, borderRadius: require("Themes").radii.round, borderWidth: 1, borderColor: require("Themes").colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW_HOVER);
+createCacheKey[2] = { position: "absolute", top: 8, padding: 8, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 createCacheKey[3] = { right: 8 };
 createCacheKey[4] = { left: 8 };
 createCacheKey[5] = { justifyContent: "center", alignItems: "center", marginBottom: 8, height: 34 };
@@ -210,27 +200,23 @@ const merged2 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[6] = {};
 createCacheKey[7] = { justifyContent: "center", alignItems: "center", alignSelf: "stretch", marginHorizontal: 4 };
 createCacheKey[8] = { justifyContent: "center", alignItems: "center", width: 48, height: 48, zIndex: 100 };
-let obj2 = { position: "absolute", top: 8, padding: 8, borderRadius: require("Themes").radii.round, borderWidth: 1, borderColor: require("Themes").colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+let obj2 = { position: "absolute", top: 8, padding: 8, borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT, tintColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 let obj3 = {};
-createCacheKey[9] = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey[9] = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let obj5 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 obj5.justifyContent = "center";
 obj5.alignItems = "center";
 createCacheKey[10] = obj5;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_17 = createCacheKey.createStyles(createCacheKey);
 let closure_19 = { code: "function MediaPlaybackPipTsx1(){const{withTiming,visible}=this.__closure;return{opacity:withTiming(visible?1:0,{duration:200})};}" };
-let obj4 = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPip.tsx");
+let obj4 = { justifyContent: "center", alignItems: "center", width: 32, height: 32, zIndex: 100, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let result = require("set").fileFinishedImporting("modules/media_panel/native/MediaPlaybackPip.tsx");
 
 export default function MediaPlaybackPip() {
-  let activeMediaPlayerSource;
-  let closePip;
-  let mediaSourceMessage;
-  let progress;
-  let tmp = createCacheKey();
+  let tmp = callback4();
   let obj = React;
-  let obj1 = progress(mediaSourceMessage[28]);
+  obj1 = progress(mediaSourceMessage[28]);
   let obj2 = progress(mediaSourceMessage[29]);
   const mediaPlayerManagerStore = obj1.useMediaPlayerManagerStore(obj2.useShallow((isPlaying) => ({ isPlaying: isPlaying.isPlaying, progress: isPlaying.progress, activeMediaPlayerSource: isPlaying.activeMediaPlayerSource, mediaSourceMessage: isPlaying.mediaSourceMessage, closePip: isPlaying.closePip })));
   const isPlaying = mediaPlayerManagerStore.isPlaying;
@@ -304,11 +290,7 @@ export default function MediaPlaybackPip() {
   const effect1 = obj.useEffect(() => {
     let date = new Date();
     return () => {
-      let activeMediaPlayerSource;
-      let finalProgress;
-      let initialProgress;
-      let message;
-      let current = outer1_3.current;
+      let current = closure_1_3.current;
       if (current == null) {
         current = {};
       }
@@ -343,11 +325,11 @@ export default function MediaPlaybackPip() {
         content_type = tmp2.content_type;
       }
       obj[2] = content_type;
-      let hasFlagResult;
+      hasFlagResult = undefined;
       if (message != null) {
         const contentMessage1 = message.getContentMessage();
         if (contentMessage1 != null) {
-          hasFlagResult = contentMessage1.hasFlag(outer2_13.IS_VOICE_MESSAGE);
+          hasFlagResult = contentMessage1.hasFlag(closure_2_13.IS_VOICE_MESSAGE);
         }
       }
       obj[3] = hasFlagResult;
@@ -381,12 +363,12 @@ export default function MediaPlaybackPip() {
       obj[7] = date.toISOString();
       date = new Date();
       obj[8] = date.toISOString();
-      callback(mediaSourceMessage[27]).track(outer2_12.MEDIA_PIP_ENDED, obj);
+      callback(mediaSourceMessage[27]).track(closure_2_12.MEDIA_PIP_ENDED, obj);
     };
   }, []);
   const tmp12 = callback(obj.useState(false), 2);
   first = tmp12[0];
-  let closure_6 = tmp14;
+  closure_6 = tmp14;
   const items3 = [first, tmp12[1], isPlaying];
   const effect2 = obj.useEffect(() => {
     if (first) {
@@ -439,7 +421,7 @@ export default function MediaPlaybackPip() {
     const obj = callback(mediaSourceMessage[28]);
     if (progress) {
       obj.pauseCurrentPlayer();
-      tmp14(true);
+      callback(true);
     } else {
       obj.playCurrentPlayer();
     }
@@ -453,11 +435,11 @@ export default function MediaPlaybackPip() {
       PlayIcon = tmp2(tmp3[32]).PlayIcon;
       tmp4 = tmp3;
     }
-    return outer1_15(PlayIcon, { color: callback(tmp4[11]).colors.WHITE, size: "md" });
+    return closure_1_15(PlayIcon, { color: callback(tmp4[11]).colors.WHITE, size: "md" });
   }, items7);
   const items9 = [mediaSourceMessage, callback, first, hasFlagResult];
-  const memo1 = obj.useMemo(() => outer1_15(outer1_18, { message: PlayIcon, activeMediaPlayerSource: callback, isVoiceMessage: trackInvite, isControlVisible: first }), items8);
-  const memo2 = obj.useMemo(() => outer1_15(outer1_20, { message: PlayIcon, handleClosePip: callback, visible: first, isVoiceMessage: trackInvite }), items9);
+  const memo1 = obj.useMemo(() => closure_1_15(closure_1_18, { message: closure_3, activeMediaPlayerSource: callback, isVoiceMessage: closure_4, isControlVisible: first }), items8);
+  const memo2 = obj.useMemo(() => closure_1_15(closure_1_20, { message: closure_3, handleClosePip: callback, visible: first, isVoiceMessage: closure_4 }), items9);
   const intl = tmp3(tmp4[23]).intl;
   const string = intl.string;
   const t = tmp3(tmp4[23]).t;
@@ -491,7 +473,7 @@ export default function MediaPlaybackPip() {
         tmp = first;
       }
       if (!tmp) {
-        tmp14(!first);
+        callback(!first);
       }
     },
     accessible: false,
@@ -499,8 +481,7 @@ export default function MediaPlaybackPip() {
   };
   const items10 = [memo2, memo1, ];
   obj = { style: tmp.actionContainer, children: null };
-  obj1 = { style: tmp.progressBar, size: 48, width: 2, prefill: num, easing: null, duration: null, fill: null, rotation: 0, lineCap: "round", ref: null, tintColor: null, backgroundColor: null };
-  obj1[4] = first.out(first.linear);
+  obj1 = { style: tmp.progressBar, size: 48, width: 2, prefill: num, easing: first.out(first.linear), duration: null, fill: null, rotation: 0, lineCap: "round", ref: null, tintColor: null, backgroundColor: null };
   let num4 = 0;
   if (isPlaying) {
     num4 = num3;

@@ -1,14 +1,10 @@
 // discord_app/modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx
-import importAllResult from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 const memoResult = importAllResult.memo((paused) => {
-  let accessibilityLabel;
-  let animate;
-  let layerConfig;
-  let onLoad;
   ({ layerConfig, animate } = paused);
   paused = paused.paused;
   const width = paused.width;
@@ -28,8 +24,7 @@ const memoResult = importAllResult.memo((paused) => {
   }, items);
   obj = { ref, url: layerConfig.src, autoplay: false, style: null, ariaLabel: null, onLoad: null };
   const items1 = [StyleSheet.absoluteFill, ];
-  obj = { position: "absolute", width, height: null, opacity: null };
-  obj[2] = animate(paused[4]).calculateProfileEffectHeight(layerConfig, width);
+  obj = { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null };
   let num = 0;
   if (animate) {
     num = 1;
@@ -39,8 +34,8 @@ const memoResult = importAllResult.memo((paused) => {
   obj[3] = items1;
   obj[4] = accessibilityLabel;
   obj[5] = onLoad;
-  return jsx(animate(paused[3]).APNGPlayer, { position: "absolute", width, height: null, opacity: null });
+  return jsx(animate(paused[3]).APNGPlayer, { position: "absolute", width, height: animate(paused[4]).calculateProfileEffectHeight(layerConfig, width), opacity: null });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/ProfileEffectLayer.android.tsx");
 
 export default memoResult;

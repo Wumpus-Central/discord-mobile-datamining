@@ -1,19 +1,18 @@
 // discord_app/modules/activities/utils/getCanSendInvite.tsx
-import ME from "ME";
-import { getPartySize } from "getPartySize.tsx";
-import { hasPartySize } from "hasPartySize.tsx";
-import { result } from "isInviteActive.tsx";
+import set from "set" /* 2 */;
+import resultDefault from "result" /* 10917 */;
+import getPartySize from "getPartySize" /* 10918 */;
+import hasPartySize from "hasPartySize" /* 10919 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ ActivityFlags: c3, ActivityActionTypes: c4 } = ME);
-const result = require("hasFlag").fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getCanSendInvite.tsx");
 
 export const getCanSendInvite = function getCanSendInvite(findActivityResult, author, application, id1) {
   if (author.author.id === id1) {
     return false;
   } else {
-    if (result(findActivityResult, author, application.id)) {
+    if (resultDefault(findActivityResult, author, application.id)) {
       const activity = author.activity;
       let type;
       if (activity != null) {

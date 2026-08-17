@@ -1,31 +1,26 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx
-import Button from "Button";
-import importAllResult from "BoostedGuildTiers";
-import { View } from "createCacheKey";
-import ME from "ME";
-import { BoostedGuildFeatures } from "GuildFeatures";
-import jsxProd from "module_4115";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CONTROL_RESOLUTION } from "../../../premium/powerups/experiments/ServerBoostStreamQualityMarketingExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import CONTROL_RESOLUTION from "CONTROL_RESOLUTION" /* 13021 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import { BoostedGuildFeatures } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { items } from "MarketingCardsScroller.tsx";
 
-let BoostedGuildTiers;
-let c10;
-let c9;
-let closure_6;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 function TierFeatures(features) {
   const tmp = callback4();
-  const require = tmp;
+  const _require = tmp;
   features = features.features;
   const isVisible = features.isVisible;
-  let obj = require(isVisible[21]);
+  let obj = _require(isVisible[21]);
   const fn = function o() {
-    let obj = tmp(isVisible[21]);
+    let obj = lib(isVisible[21]);
     let num = 0;
     if (isVisible) {
       num = 150;
@@ -37,17 +32,16 @@ function TierFeatures(features) {
     obj = { opacity: null };
     obj = { duration: 150, easing: null };
     const Easing = tmp(tmp2[21]).Easing;
-    obj[1] = Easing.inOut(tmp(isVisible[21]).Easing.quad);
-    obj[0] = obj.withDelay(num, tmp(isVisible[22]).withTiming(num2, obj));
+    obj[1] = Easing.inOut(lib(isVisible[21]).Easing.quad);
+    obj[0] = obj.withDelay(num, lib(isVisible[22]).withTiming(num2, obj));
     return obj;
   };
-  obj = { withDelay: require(isVisible[21]).withDelay, isVisible, TIER_FEATURE_ANIMATION_DURATION_MS: 150, withTiming: require(isVisible[22]).withTiming, Easing: require(isVisible[21]).Easing };
+  obj = { withDelay: _require(isVisible[21]).withDelay, isVisible, TIER_FEATURE_ANIMATION_DURATION_MS: 150, withTiming: _require(isVisible[22]).withTiming, Easing: _require(isVisible[21]).Easing };
   fn.__closure = obj;
   fn.__workletHash = 13329849944491;
   fn.__initData = closure_14;
   const animatedStyle = obj.useAnimatedStyle(fn);
-  obj = { accessibilityElementsHidden: !isVisible, importantForAccessibility: null, style: null, children: null };
-  obj[1] = "no-hide-descendants";
+  obj = { accessibilityElementsHidden: !isVisible, importantForAccessibility: "no-hide-descendants", style: null, children: null };
   let items = [tmp.cardFeatures, , ];
   let cardFeaturesInvisible = !isVisible;
   if (!isVisible) {
@@ -57,7 +51,7 @@ function TierFeatures(features) {
   items[2] = animatedStyle;
   obj[2] = items;
   obj[3] = features.map((isIncluded) => {
-    const items = [tmp.cardFeature, , ];
+    const items = [lib.cardFeature, , ];
     isIncluded = isIncluded.isIncluded;
     let cardFeatureExcluded = !isIncluded;
     if (!isIncluded) {
@@ -65,9 +59,9 @@ function TierFeatures(features) {
     }
     items[1] = cardFeatureExcluded;
     let obj = { style: items, children: null };
-    items[2] = arg1 === features.length - 1 && outer1_10.cardFeatureLast;
+    items[2] = arg1 === features.length - 1 && lib.cardFeatureLast;
     obj = { size: "custom", style: tmp3.cardFeatureIcon, color: "white" };
-    const items1 = [outer1_9(isIncluded.IconComponent, obj), ];
+    items1 = [closure_1_9(isIncluded.IconComponent, obj), ];
     const isIncluded2 = isIncluded.isIncluded;
     let cardFeatureExcludedCopy = !isIncluded2;
     if (!isIncluded2) {
@@ -75,9 +69,9 @@ function TierFeatures(features) {
     }
     obj = { style: items2, color: "text-overlay-light", variant: "text-md/semibold", children: isIncluded.getCopy() };
     items2 = [cardFeatureExcludedCopy];
-    items1[1] = outer1_9(outer1_10(isVisible[23]).Text, obj);
+    items1[1] = closure_1_9(lib(isVisible[23]).Text, obj);
     obj[1] = items1;
-    return outer1_10(outer1_5, obj, arg1);
+    return closure_1_10(closure_1_5, obj, arg1);
   });
   return closure_9(features(isVisible[21]).View, obj);
 }
@@ -339,8 +333,7 @@ items2[2] = {
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
     const intl = getSystemLocale.intl;
-    const obj = { resolution: null };
-    obj[0] = CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
     return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
   }
 };
@@ -350,8 +343,7 @@ let obj14 = {
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
     const intl = getSystemLocale.intl;
-    const obj = { resolution: null };
-    obj[0] = CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
     return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
   }
 };
@@ -557,8 +549,7 @@ items3[2] = {
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
     const intl = getSystemLocale.intl;
-    const obj = { resolution: null };
-    obj[0] = CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
     return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
   }
 };
@@ -567,8 +558,7 @@ const obj26 = {
   IconComponent: require("ScreenArrowIcon").ScreenArrowIcon,
   getCopy() {
     const intl = getSystemLocale.intl;
-    const obj = { resolution: null };
-    obj[0] = CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards");
+    const obj = { resolution: CONTROL_RESOLUTION.getServerBoostStreamQualityMarketingResolution("GuildBoostingMarketingTierCards") };
     return intl.formatToPlainString(getSystemLocale.t.Jbg8oY, obj);
   }
 };
@@ -729,9 +719,9 @@ const obj34 = {
     return intl.string(getSystemLocale.t.adNGjW);
   }
 };
-obj35[1] = { borderRadius: require("Themes").radii.lg, height: "100%" };
+obj35[1] = { borderRadius: ThemesDefault.radii.lg, height: "100%" };
 obj35[2] = { display: "flex", padding: 24, height: "100%" };
-createCacheKey = { borderRadius: require("Themes").radii.lg, overflow: "hidden", height: "100%" };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg, overflow: "hidden", height: "100%" };
 obj35[3] = createCacheKey;
 obj35[4] = { alignItems: "baseline", display: "flex", flexDirection: "row", flexGrow: 0, flexShrink: 0, marginBottom: 16 };
 obj35[5] = { marginRight: 10 };
@@ -743,16 +733,16 @@ obj35[10] = { alignItems: "center", display: "flex", flexDirection: "row", margi
 obj35[11] = { opacity: 0.5 };
 obj35[12] = { textDecorationLine: "line-through" };
 obj35[13] = { marginBottom: 0 };
-const obj36 = { borderRadius: require("Themes").radii.lg, height: "100%" };
+const obj36 = { borderRadius: ThemesDefault.radii.lg, height: "100%" };
 obj35[14] = { flex: 1, marginTop: require("BoostedGuildTiers").PROGRESS_BAR_SPACING };
 obj35[15] = { alignItems: "flex-start", display: "flex", flexDirection: "row", justifyContent: "center", minWidth: "100%", paddingHorizontal: 8, paddingTop: 16, paddingBottom: 20 };
 obj35[16] = { height: 24, marginRight: 6, width: 24 };
 obj35[17] = { display: "flex", flexDirection: "row", marginTop: 24 };
 obj35[18] = { flexGrow: 0, flexShrink: 0, height: 24, marginLeft: 8, width: 24 };
 const obj38 = { flex: 1, marginTop: require("BoostedGuildTiers").PROGRESS_BAR_SPACING };
-obj35[19] = { borderRadius: require("Themes").radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
+obj35[19] = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
 obj35[20] = { textTransform: "uppercase" };
-const obj39 = { borderRadius: require("Themes").radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
+const obj39 = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: 8, paddingVertical: 4, position: "absolute", top: -16, left: 24 };
 obj35[21] = { position: "absolute", tintColor: require("result").DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
 obj35[22] = { height: 15, width: 18 };
 obj35[23] = { height: 45, width: 23 };
@@ -766,10 +756,6 @@ obj35[30] = { left: 48, bottom: 0 };
 let closure_13 = createCacheKey.createStyles(obj35);
 let closure_14 = { code: "function GuildBoostingMarketingTierCardsTsx1(){const{withDelay,isVisible,TIER_FEATURE_ANIMATION_DURATION_MS,withTiming,Easing}=this.__closure;return{opacity:withDelay(isVisible?TIER_FEATURE_ANIMATION_DURATION_MS:0,withTiming(isVisible?1:0,{duration:TIER_FEATURE_ANIMATION_DURATION_MS,easing:Easing.inOut(Easing.quad)}))};}" };
 let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
-  let features;
-  let guild;
-  let isExpanded;
-  let tier;
   const tmp = callback4();
   ({ guild, features } = onCardPress);
   ({ isExpanded, tier } = onCardPress);
@@ -796,9 +782,9 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   }, items);
   const sum = guild.premiumTier + 1;
   let obj = features(1363);
-  const tmp4 = useTheme();
-  const unsafe_rawColors = Themes.unsafe_rawColors;
-  const tmp9 = obj.isThemeDark(useTheme()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
+  const tmp4 = useThemeDefault();
+  const unsafe_rawColors = ThemesDefault.unsafe_rawColors;
+  const tmp9 = obj.isThemeDark(useThemeDefault()) ? unsafe_rawColors.WHITE : unsafe_rawColors.GUILD_BOOSTING_PINK;
   const intl = tmp7(1236).intl;
   const string = intl.string;
   const t = tmp7(1236).t;
@@ -810,11 +796,11 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   obj = { style: tmp.cardWrapper, ref, children: null };
   obj = { angle: 45, angleCenter: { x: 0.5, y: 0.5 }, colors: null, locations: null, style: null, useAngle: true, children: null };
   let tmp2Result = tmp2(4756);
-  const items1 = [Themes.unsafe_rawColors.GUILD_BOOSTING_BLUE, Themes.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  items1 = [ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE, ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj[2] = items1;
   obj[3] = [0, 1];
   obj[4] = tmp.card;
-  const obj1 = { style: tmp.pressableWrapper, children: null };
+  obj1 = { style: tmp.pressableWrapper, children: null };
   const obj2 = { onPress: onCardPress.onCardPress, style: tmp.cardContent, accessibilityRole: "button", accessibilityState: { expanded: isExpanded }, accessibilityLabel: stringResult, children: null };
   const obj3 = { style: tmp.cardHeading, children: null };
   const obj4 = { color: "text-overlay-light", style: tmp.cardTierName, variant: "heading-xxl/extrabold", children: null };
@@ -838,10 +824,10 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   } else {
     ChevronLargeDownIcon = tmp7(13024).ChevronLargeDownIcon;
   }
-  const isThemeDarkResult = obj.isThemeDark(useTheme());
+  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const obj6 = { numSubscriptions: table[tier] };
   const obj8 = { features: memo, isVisible: !isExpanded };
-  items5[1] = callback2(ChevronLargeDownIcon, { color: Themes.colors.WHITE, style: tmp.cardFooterIcon });
+  items5[1] = callback2(ChevronLargeDownIcon, { color: ThemesDefault.colors.WHITE, style: tmp.cardFooterIcon });
   obj9[1] = items5;
   items3[2] = callback3(View, obj9);
   obj2[5] = items3;
@@ -946,20 +932,18 @@ let closure_16 = importAllResult.forwardRef((onCardPress, ref) => {
   }
 });
 const obj40 = { position: "absolute", tintColor: require("result").DARK_WHITE_500_LIGHT_GUILD_BOOSTING_PINK };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingTierCards.tsx");
 
 export default function GuildBoostingMarketingTierCards(guild) {
-  let Button;
-  let dependencyMap;
   function handleCardPress() {
-    const result = callback(outer1_2[35]).DeprecatedLayoutAnimation();
+    const result = callback(closure_1_2[35]).DeprecatedLayoutAnimation();
     callback2((arg0) => !arg0);
   }
   const tmp = callback4();
   guild = guild.guild;
   let _require = guild;
   const ref = handleCardPress.useRef(null);
-  [dependencyMap, Button] = callback(handleCardPress.useState(false), 2);
+  [dependencyMap, closure_3] = callback(handleCardPress.useState(false), 2);
   const items = [guild.premiumTier];
   const effect = handleCardPress.useEffect(() => {
     const timeout = window.setTimeout(() => {
@@ -967,8 +951,8 @@ export default function GuildBoostingMarketingTierCards(guild) {
       if (current != null) {
         let premiumTier;
         const _Math = Math;
-        premiumTier = Math.min(outer1_7.TIER_3, premiumTier.premiumTier + 1);
-        const findIndexResult = outer1_12.findIndex((tier) => tier.tier === closure_0);
+        premiumTier = Math.min(closure_1_7.TIER_3, premiumTier.premiumTier + 1);
+        const findIndexResult = closure_1_12.findIndex((tier) => tier.tier === closure_0);
         let num3 = 0;
         if (-1 !== findIndexResult) {
           num3 = findIndexResult;
@@ -992,7 +976,7 @@ export default function GuildBoostingMarketingTierCards(guild) {
   obj[6] = tmp.cardsScroller;
   obj[7] = items1.map((features) => {
     const tier = features.tier;
-    return outer1_9(outer1_16, { features: features.features, guild: closure_0, isExpanded: closure_2, onCardPress: handleCardPress, tier }, tier);
+    return closure_1_9(closure_1_16, { features: features.features, guild: closure_0, isExpanded: closure_2, onCardPress: handleCardPress, tier }, tier);
   });
   return closure_9(_items.MarketingCardsScroller, obj);
 };

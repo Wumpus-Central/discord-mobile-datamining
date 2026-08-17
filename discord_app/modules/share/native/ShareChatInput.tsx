@@ -1,46 +1,36 @@
 // discord_app/modules/share/native/ShareChatInput.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "get ActivityIndicator";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, chatInput: null, chatText: null, inputPlaceholder: null, emojiButton: null, focused: null };
-createCacheKey = { flex: 1, flexDirection: "row", backgroundColor: require("Themes").colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: require("Themes").modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: require("Themes").modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: require("Themes").colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: require("Themes").space.PX_12 };
+createCacheKey = { flex: 1, flexDirection: "row", backgroundColor: ThemesDefault.colors.SHARE_CHAT_INPUT_BACKGROUND, borderRadius: ThemesDefault.modules.mobile.CHAT_INPUT_BORDER_RADIUS, borderWidth: ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH, borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_DEFAULT, paddingHorizontal: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, paddingVertical: 0, paddingHorizontal: require("Themes").space.PX_4, maxHeight: 80 };
-const obj2 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_NORMAL, color: require("Themes").colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
+createCacheKey[1] = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
+const obj2 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_NORMAL, color: ThemesDefault.colors.TEXT_STRONG, paddingTop: null, paddingBottom: null };
 let num = 2;
 if (set.isAndroid()) {
   num = 0;
 }
-obj2[4] = require("Themes").space.PX_8 + num;
-obj2[5] = require("Themes").space.PX_8;
+obj2[4] = ThemesDefault.space.PX_8 + num;
+obj2[5] = ThemesDefault.space.PX_8;
 createCacheKey[2] = obj2;
-const obj1 = { flex: 1, paddingVertical: 0, paddingHorizontal: require("Themes").space.PX_4, maxHeight: 80 };
-createCacheKey[3] = { color: require("Themes").colors.TEXT_MUTED };
-const obj3 = { color: require("Themes").colors.TEXT_MUTED };
-createCacheKey[4] = { paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8, alignSelf: "flex-end" };
-set = { borderColor: require("Themes").colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
+const obj1 = { flex: 1, paddingVertical: 0, paddingHorizontal: ThemesDefault.space.PX_4, maxHeight: 80 };
+createCacheKey[3] = { color: ThemesDefault.colors.TEXT_MUTED };
+const obj3 = { color: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[4] = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, alignSelf: "flex-end" };
+set = { borderColor: ThemesDefault.colors.MOBILE_CHATINPUT_BORDER_ACTIVE };
 createCacheKey[5] = set;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/share/native/ShareChatInput.tsx");
 
 export default function ShareChatInput(onFocus) {
-  let c2;
-  let focused;
-  let inputRef;
-  let onChange;
-  let onPressEmoji;
-  let onSelectionChange;
-  let onSend;
-  let text;
   onFocus = onFocus.onFocus;
   const onBlur = onFocus.onBlur;
   let flag = onFocus.disabled;
@@ -48,8 +38,8 @@ export default function ShareChatInput(onFocus) {
   if (flag === undefined) {
     flag = false;
   }
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback3();
   const tmp2 = onBlur;
   const tmp4 = onBlur(8462)();
   [focused, c2] = callback(React.useState(false), 2);

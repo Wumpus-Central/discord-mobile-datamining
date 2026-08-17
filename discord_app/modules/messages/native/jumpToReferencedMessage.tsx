@@ -1,6 +1,8 @@
 // discord_app/modules/messages/native/jumpToReferencedMessage.tsx
-import { trackInvite } from "../../../actions/MessageActionCreators.tsx";
-const result = require("set").fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
+import set from "set" /* 2 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/jumpToReferencedMessage.tsx");
 
 export default function jumpToReferencedMessage(messageReference) {
   messageReference = messageReference.messageReference;
@@ -9,7 +11,7 @@ export default function jumpToReferencedMessage(messageReference) {
     channel_id = messageReference.channel_id;
   }
   if (tmp2) {
-    let obj = trackInvite;
+    let obj = trackInviteDefault;
     obj = { channelId: null, messageId: null, flash: true, returnMessageId: null };
     ({ channel_id: obj2[0], message_id: obj2[1] } = messageReference);
     obj[3] = messageReference.id;

@@ -1,15 +1,17 @@
 // discord_app/modules/panels/isChannelFocused.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getParticipants from "getParticipants";
-import getIdFromHistoryItem from "getIdFromHistoryItem";
-import { CHANNEL_PREFIX } from "getIdFromHistoryItem";
-import withEqualityFn from "withEqualityFn";
-import { useChatLayout } from "../chat/native/useChatLayout.tsx";
-import { getInitialGuildState } from "../main_tabs_v2/native/getInitialNavigationState.tsx";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import getInitialGuildStateDefault from "getInitialGuildState" /* 4231 */;
+import useChatLayout from "useChatLayout" /* 4232 */;
+import useChatLayoutDefault from "useChatLayout" /* 4232 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import closure_6 from "getIdFromHistoryItem" /* 7291 */;
+import { CHANNEL_PREFIX } from "getIdFromHistoryItem" /* 7291 */;
+import closure_8 from "withEqualityFn" /* 8664 */;
 
-const require = arg1;
+require = arg1;
 function getFocusedChannelId() {
   let params = require;
   let paramsResult3 = dependencyMap;
@@ -20,11 +22,11 @@ function getFocusedChannelId() {
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       const currentRoute = rootNavigationRef.getCurrentRoute();
-      const coerceChannelRouteResult = params(4229).coerceChannelRoute(currentRoute);
+      const coerceChannelRouteResult = coerceMainRoute.coerceChannelRoute(currentRoute);
       if (tmp2 != coerceChannelRouteResult) {
         return coerceChannelRouteResult.params.channelId;
       } else if (isChatLockedOpen) {
-        const coerceGuildsRouteResult = params(4229).coerceGuildsRoute(currentRoute);
+        const coerceGuildsRouteResult = coerceMainRoute.coerceGuildsRoute(currentRoute);
         let tmp6;
         if (tmp2 != coerceGuildsRouteResult) {
           const params2 = coerceGuildsRouteResult.params;
@@ -36,14 +38,14 @@ function getFocusedChannelId() {
         }
         return tmp6;
       }
-      const paramsResult = params(4229);
+      const paramsResult = coerceMainRoute;
     }
   }
   if (tmp2 !== c9) {
     return c9;
   } else {
-    const tmp19 = getInitialGuildState();
-    let routes2 = params(4229);
+    const tmp19 = getInitialGuildStateDefault();
+    let routes2 = coerceMainRoute;
     let tmp8;
     if (tmp19 != tmp2) {
       const routes = tmp19.routes;
@@ -62,7 +64,7 @@ function getFocusedChannelId() {
     if (tmp2 == num2) {
       c9 = tmp9;
     } else {
-      routes2 = params(4229);
+      routes2 = coerceMainRoute;
       if (!isChatLockedOpen) {
         const state = num2.state;
         let tmp10;
@@ -109,7 +111,7 @@ function getFocusedChannelId() {
     }
     const coerceTabsRouteResult = routes2.coerceTabsRoute(tmp13);
     if (tmp2 != coerceTabsRouteResult) {
-      params = params(4229).coerceGuildsRoute;
+      params = coerceMainRoute.coerceGuildsRoute;
       routes2 = coerceTabsRouteResult.state;
       let tmp16;
       if (routes2 != tmp2) {
@@ -136,12 +138,12 @@ function getFocusedChannelId() {
         }
         tmp9 = paramsResult3;
       }
-      const paramsResult2 = params(4229);
+      const paramsResult2 = coerceMainRoute;
     }
   }
 }
 let c9 = null;
-const result = require("getParticipants").fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
+const result = require("set").fileFinishedImporting("modules/panels/isChannelFocused.native.tsx");
 
 export { getFocusedChannelId };
 export const isChannelFocused = function isChannelFocused() {
@@ -149,23 +151,23 @@ export const isChannelFocused = function isChannelFocused() {
 };
 export const useIsChannelFocused = function useIsChannelFocused() {
   const tmp = callback(React.useState(() => null != callback2()), 2);
-  let closure_0 = tmp[1];
-  const items = [useChatLayout()];
+  closure_0 = tmp[1];
+  const items = [useChatLayoutDefault()];
   const effect = React.useEffect(() => {
-    callback(null != outer1_10());
+    callback(null != closure_1_10());
   }, items);
   const effect1 = React.useEffect(() => {
     function handleStateChange() {
-      rootNavigationRef(null != outer1_10());
+      rootNavigationRef(null != closure_1_10());
     }
-    const rootNavigationRef = callback(outer1_2[7]).getRootNavigationRef();
+    const rootNavigationRef = callback(closure_1_2[7]).getRootNavigationRef();
     if (null != rootNavigationRef) {
       rootNavigationRef.addListener("state", handleStateChange);
       return () => {
         rootNavigationRef.removeListener("state", handleStateChange);
       };
     }
-    const obj = callback(outer1_2[7]);
+    const obj = callback(closure_1_2[7]);
   }, []);
   return tmp[0];
 };

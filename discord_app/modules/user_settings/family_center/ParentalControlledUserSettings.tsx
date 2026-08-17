@@ -1,22 +1,18 @@
 // discord_app/modules/user_settings/family_center/ParentalControlledUserSettings.tsx
-import { ExplicitContentFilterTypes as closure_2 } from "items";
-import { AllFriendSourceFlags } from "ME";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import defineParentalControlledSetting from "defineParentalControlledSetting";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { defineProperty } from "../../../../discord_common/js/packages/protos/google/protobuf/wrappers.tsx";
+import set from "set" /* 2 */;
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+import ME from "ME" /* 676 */;
+import create from "create" /* 1306 */;
+import defineProperty from "defineProperty" /* 1337 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import items from "items" /* 4068 */;
+import spendingLimitEqual from "spendingLimitEqual" /* 14184 */;
+import defineParentalControlledSetting from "defineParentalControlledSetting" /* 14183 */;
 
-let obj = { comparator: null };
-obj[0] = require("shallowEqual");
-const result = defineParentalControlledSetting.defineParentalControlledSetting("textAndImages", "explicitContentSettings", require("explicitContentFromProto").explicitContentFromProto, require("explicitContentFromProto").explicitContentToProto, obj);
+let closure_2 = items.ExplicitContentFilterTypes;
+const AllFriendSourceFlags = ME.AllFriendSourceFlags;
+let obj = { comparator: shallowEqualDefault };
+const result = defineParentalControlledSetting.defineParentalControlledSetting("textAndImages", "explicitContentSettings", explicitContentFromProto.explicitContentFromProto, explicitContentFromProto.explicitContentToProto, obj);
 const result1 = defineParentalControlledSetting.defineParentalControlledSetting("textAndImages", "explicitContentFilter", (value) => {
   let NON_FRIENDS;
   if (value != null) {
@@ -30,9 +26,8 @@ const result1 = defineParentalControlledSetting.defineParentalControlledSetting(
   const UInt32Value = defineProperty.UInt32Value;
   return UInt32Value.create({ value });
 });
-obj = { comparator: null };
-obj[0] = require("shallowEqual");
-const result2 = defineParentalControlledSetting.defineParentalControlledSetting("textAndImages", "goreContentSettings", require("explicitContentFromProto").goreContentFromProto, require("explicitContentFromProto").goreContentToProto, obj);
+obj = { comparator: shallowEqualDefault };
+const result2 = defineParentalControlledSetting.defineParentalControlledSetting("textAndImages", "goreContentSettings", explicitContentFromProto.goreContentFromProto, explicitContentFromProto.goreContentToProto, obj);
 const result3 = defineParentalControlledSetting.defineParentalControlledSetting("privacy", "defaultMessageRequestRestricted", (value) => {
   value = undefined;
   if (value != null) {
@@ -114,8 +109,6 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
   }
   return tmp2;
 }, (arg0) => {
-  let amount;
-  let currency;
   if (null == arg0) {
     const SpendingLimitSettings2 = create.SpendingLimitSettings;
     return SpendingLimitSettings2.create({});
@@ -131,9 +124,9 @@ const result9 = defineParentalControlledSetting.defineParentalControlledSetting(
     obj[0] = SpendingLimit.create(obj);
     return SpendingLimitSettings.create(obj);
   }
-}, { comparator: require("spendingLimitEqual").spendingLimitEqual });
-const obj1 = { comparator: require("spendingLimitEqual").spendingLimitEqual };
-const result10 = require("defineParentalControlledSetting").fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettings.tsx");
+}, { comparator: spendingLimitEqual.spendingLimitEqual });
+const obj1 = { comparator: spendingLimitEqual.spendingLimitEqual };
+const result10 = set.fileFinishedImporting("modules/user_settings/family_center/ParentalControlledUserSettings.tsx");
 
 export const ParentalControlledExplicitContent = result;
 export const ParentalControlledLegacyExplicitContent = result1;

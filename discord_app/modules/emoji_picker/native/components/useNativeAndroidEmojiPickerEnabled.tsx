@@ -1,16 +1,16 @@
 // discord_app/modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx
-import fetchFingerprint from "fetchFingerprint";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { databaseName } from "../../../app_database/system/DatabaseManager.tsx";
+import set from "set" /* 500 */;
+import databaseNameDefault from "databaseName" /* 1971 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
 
-const require = arg1;
-const result = require("databaseName").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/emoji_picker/native/components/useNativeAndroidEmojiPickerEnabled.tsx");
 
 export default function useNativeAndroidEmojiPickerEnabled() {
   let isAndroidResult = set.isAndroid();
   if (isAndroidResult) {
-    isAndroidResult = null != databaseName.database(id.getId());
-    const obj2 = databaseName;
+    isAndroidResult = null != databaseNameDefault.database(id.getId());
+    const obj2 = databaseNameDefault;
   }
   return isAndroidResult;
 };

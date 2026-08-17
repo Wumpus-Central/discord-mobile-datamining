@@ -1,21 +1,25 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx
-import { View } from "get ActivityIndicator";
-import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { trackTabPressed } from "../TabsPerformanceTracker.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import useChatLayoutDefault from "useChatLayout" /* 4232 */;
+import trackTabPressed from "trackTabPressed" /* 15280 */;
+import handleBackButtonPressDefault from "handleBackButtonPress" /* 16003 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { RootNavigatorScreen } from "MODE_CHANGE_PHYSICS" /* 9588 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let obj = { container: null, androidContainer: null, wrapper: null };
-obj = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.xl };
+obj = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.xl };
 obj[0] = obj;
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM, borderRadius: require("Themes").radii.none };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.none };
 obj[1] = createCacheKey;
-obj[2] = { flex: 1, borderRadius: require("Themes").radii.xl, overflow: "hidden" };
+obj[2] = { flex: 1, borderRadius: ThemesDefault.radii.xl, overflow: "hidden" };
 let closure_6 = createCacheKey.createStyles(obj);
-let obj2 = { flex: 1, borderRadius: require("Themes").radii.xl, overflow: "hidden" };
+let obj2 = { flex: 1, borderRadius: ThemesDefault.radii.xl, overflow: "hidden" };
 const memoResult = importAllResult.memo(function YouScreenContainer(route) {
   route = route.route;
   let items1 = callback();
@@ -29,14 +33,14 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
       const initialTab = params.initialTab;
     }
   }
-  if (tmp(4232)().isChatBesideChannelList) {
+  if (useChatLayoutDefault().isChatBesideChannelList) {
     const items = [items1.container, ];
     let tmp3Result = tmp3(501);
     let tmp7;
     if (tmp3Result.isAndroid()) {
       obj = {};
       const merged = Object.assign(items1.androidContainer);
-      obj.paddingTop = useSafeAreaInsets().top;
+      obj.paddingTop = useSafeAreaInsetsDefault().top;
       tmp7 = obj;
     }
     obj = { style: null, children: null };
@@ -44,14 +48,14 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     obj[0] = items;
     tmp3Result = tmp3(501);
     if (tmp3Result.isAndroid()) {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       items1 = [, ];
       items1[0] = items1.wrapper;
       const obj2 = { maxWidth: null };
-      obj2[0] = 0.6 * tmp(1494)().width;
+      obj2[0] = 0.6 * useWindowDimensionsDefault().width;
       items1[1] = obj2;
       obj1[0] = items1;
-      tmp = tmp(16003);
+      tmp = handleBackButtonPressDefault;
       const obj3 = { initialTab: null };
       obj3[0] = initialTab;
       tmp5Result = tmp5(tmp, obj3);
@@ -60,16 +64,16 @@ const memoResult = importAllResult.memo(function YouScreenContainer(route) {
     } else {
       const obj4 = { initialTab: null };
       obj4[0] = initialTab;
-      tmp5Result = tmp5(tmp(16003), obj4);
+      tmp5Result = tmp5(handleBackButtonPressDefault, obj4);
     }
     obj[1] = tmp5Result;
     tmp5(View, obj);
   } else {
     const obj5 = { initialTab: null };
     obj5[0] = initialTab;
-    return tmp5(tmp(16003), obj5);
+    return tmp5(handleBackButtonPressDefault, obj5);
   }
 });
-const result = require("MODE_CHANGE_PHYSICS").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx");
 
 export default memoResult;

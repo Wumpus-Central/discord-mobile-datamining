@@ -1,21 +1,21 @@
 // discord_app/modules/payments/native/utils/BillingStandaloneNativeUtils.tsx
-import { CustomCheckoutFlow } from "CustomCheckoutFlow";
-import { Routes } from "ME";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import ME from "ME" /* 676 */;
+import CustomCheckoutFlow2 from "CustomCheckoutFlow" /* 4357 */;
+import MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG from "MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG" /* 4489 */;
 import { isMetaQuest } from "../../../device/MetaQuestUtils.android.tsx";
 import { goToStandalonePremiumCheckout } from "../../utils/BillingStandaloneUtils.tsx";
-import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../utils/MobileWebRedirectCheckoutUtils.tsx";
 
 function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
-  let tmp4;
-  let tmp5;
   [tmp4, tmp5] = arg0;
   let obj = { destination_url: tmp5, load_id };
   try {
     const _HermesInternal = HermesInternal;
-    tmp2.error("Failed to open mobile web popout to " + tmp5 + ", error response: ", tmp4);
-    let obj1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
+    logger.error("Failed to open mobile web popout to " + tmp5 + ", error response: ", tmp4);
+    obj1 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
     const _Error = Error;
-    const error = new Error("Mobile web redirect checkout mobile app to web popout failed");
+    error = new Error("Mobile web redirect checkout mobile app to web popout failed");
     obj = { extra: null };
     obj = { failure_response: null };
     obj[0] = tmp4;
@@ -31,15 +31,17 @@ function emitMWRCSentryErrorOnFailure(arg0, source, load_id) {
     const obj5 = MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG;
   }
 }
-let c5 = new require("MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG")("BillingStandaloneNativeUtils");
-const tmp2 = new require("MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG")("BillingStandaloneNativeUtils");
-let result = require("timestamp").fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
+let CustomCheckoutFlow = CustomCheckoutFlow2.CustomCheckoutFlow;
+const Routes = ME.Routes;
+let closure_5 = new timestampDefault("BillingStandaloneNativeUtils");
+const tmp2 = new timestampDefault("BillingStandaloneNativeUtils");
+let result = set.fileFinishedImporting("modules/payments/native/utils/BillingStandaloneNativeUtils.tsx");
 
 export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalonePremiumCheckoutFromMobileApp(premium_nitro_marketing_page, arg1, arg2, arg3) {
   const _require = premium_nitro_marketing_page;
-  let closure_1 = arg1;
-  const dependencyMap = arg2;
-  const CustomCheckoutFlow = arg3;
+  closure_1 = arg1;
+  dependencyMap = arg2;
+  CustomCheckoutFlow = arg3;
   let obj = _goToStandalonePremiumCheckout;
   obj = {};
   const obj2 = _isMetaQuest;
@@ -59,15 +61,15 @@ export const goToStandalonePremiumCheckoutFromMobileApp = function goToStandalon
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
-    outer1_6(items, closure_0, lib.loadId);
+    closure_1_6(items, closure_0, lib.loadId);
     callback(...items);
   });
 };
 export const goToStandaloneNitroManagementFromMobileApp = function goToStandaloneNitroManagementFromMobileApp(premium_external_management, loadId, arg2, arg3) {
   const _require = premium_external_management;
   loadId = loadId.loadId;
-  const dependencyMap = arg2;
-  const CustomCheckoutFlow = arg3;
+  dependencyMap = arg2;
+  CustomCheckoutFlow = arg3;
   const obj = _goToStandalonePremiumCheckout;
   const tmp = _require;
   if (obj2.isMetaQuest()) {
@@ -82,15 +84,15 @@ export const goToStandaloneNitroManagementFromMobileApp = function goToStandalon
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
-    outer1_6(items, closure_0, loadId);
+    closure_1_6(items, closure_0, loadId);
     callback(...items);
   });
 };
 export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStandaloneGuildBoostCheckoutFromMobileApp(closure_0, closure_1, newAnalyticsLoadId, arg3, arg4) {
   const _require = closure_0;
   closure_1 = newAnalyticsLoadId;
-  const dependencyMap = arg3;
-  const CustomCheckoutFlow = arg4;
+  dependencyMap = arg3;
+  CustomCheckoutFlow = arg4;
   let prop;
   if (!obj.isMetaQuest()) {
     prop = tmp(691).LinkingTypes.MOBILE_WEB_REDIRECT_CHECKOUT;
@@ -108,7 +110,7 @@ export const goToStandaloneGuildBoostCheckoutFromMobileApp = function goToStanda
     dependencyMap(body, searchParams);
   }, () => {
     const items = [...arguments];
-    outer1_6(items, closure_0, closure_1);
+    closure_1_6(items, closure_0, closure_1);
     callback(...items);
   });
 };

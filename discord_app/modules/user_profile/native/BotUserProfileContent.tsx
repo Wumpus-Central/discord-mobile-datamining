@@ -1,38 +1,21 @@
 // discord_app/modules/user_profile/native/BotUserProfileContent.tsx
-import importAllResult from "_copy";
-import { View } from "useProfileTheme";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "UserProfileOverscrollBanner";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ARBITRARY_LARGE_OFFSET from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 let c3 = importAllResult;
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_6, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: error } = ARBITRARY_LARGE_OFFSET);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
-  let bannerAnimatedStyle;
-  let bannerImageAnimatedStyle;
-  let blurAnimatedProps;
-  let contentAnimatedStyle;
-  let disableMessage;
-  let displayProfile;
-  let primaryColor;
-  let scrollPosition;
-  let secondaryColor;
-  let showBlur;
-  let showUserProfileActionSheet;
-  let theme;
   user = user.user;
   const channel = user.channel;
   ({ displayProfile, showUserProfileActionSheet } = user);
   let trackUserProfileAction;
-  let importAllResult;
+  importAllResult = undefined;
   let guild_id;
   ({ disableMessage, scrollPosition } = user);
   const tmp3 = channel(trackUserProfileAction[6])();
@@ -40,8 +23,8 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, contentAnimatedStyle, blurAnimatedProps, showBlur } = channel(trackUserProfileAction[8])({ scrollPosition, bannerHeight: tmp5 }));
   let obj = user(trackUserProfileAction[10]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = user(trackUserProfileAction[11]);
-  let items = [mergeGuildAvatar];
+  obj1 = user(trackUserProfileAction[11]);
+  let items = [closure_5];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj2 = channel(trackUserProfileAction[12]);
   let guildId;
@@ -286,6 +269,6 @@ const memoResult = importAllResult.memo(function BotUserProfileContent(user) {
   }
   return null;
 });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_profile/native/BotUserProfileContent.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/BotUserProfileContent.tsx");
 
 export default memoResult;

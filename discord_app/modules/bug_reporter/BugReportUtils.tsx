@@ -1,22 +1,20 @@
 // discord_app/modules/bug_reporter/BugReportUtils.tsx
-import _uploadDebugLogFiles from "_uploadDebugLogFiles";
-import handleThemeChange from "handleThemeChange";
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function _fetchBugReportConfig() {
   const self = this;
   const tmp = callback(function*() {
-    const HTTP = v0(outer1_2[3]).HTTP;
-    const obj1 = { url: null, rejectWithError: false };
-    obj1[0] = outer1_6.BUG_REPORTS;
+    const HTTP = v0(closure_1_2[3]).HTTP;
+    obj1 = { url: null, rejectWithError: false };
+    obj1[0] = closure_1_6.BUG_REPORTS;
     yield HTTP.get(obj1);
     return arg1.body;
   });
-  const _fetchBugReportConfig = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -28,12 +26,12 @@ function _fetchBugReportConfig() {
 function _submitReport() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c3 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
@@ -62,7 +60,7 @@ function _submitReport() {
               return obj;
             } else {
               let priority = lib;
-              const obj1 = { name: "name", value: null };
+              obj1 = { name: "name", value: null };
               obj1[1] = lib.name;
               let items = [obj1, , , ];
               const obj2 = { name: "priority", value: null };
@@ -155,7 +153,7 @@ function _submitReport() {
               let obj18 = lib(10131);
               let uploadDebugLogFiles = obj18.uploadDebugLogFiles;
               obj19 = lib(500);
-              let BUG_REPORTS = outer1_5;
+              let BUG_REPORTS = closure_1_5;
               if (obj19.isIOS()) {
                 let ANDROID_APP = BUG_REPORTS.IOS_APP;
               } else {
@@ -217,7 +215,7 @@ function _submitReport() {
       }
     })();
   });
-  const _submitReport = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -227,7 +225,7 @@ function _submitReport() {
   return applyArgumentsResult;
 }
 ({ DebugLogCategory: c5, Endpoints: closure_6 } = ME);
-const result = require("ME").fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/bug_reporter/BugReportUtils.tsx");
 
 export const fetchBugReportConfig = function fetchBugReportConfig() {
   const self = this;
@@ -279,7 +277,7 @@ export const getPriorities = function getPriorities() {
   const intl6 = getSystemLocale.intl;
   obj[1] = intl6.format(getSystemLocale.t.nC7pvx, {});
   items[2] = obj;
-  const obj1 = { title: null, description: null, emoji: "827645852352512021", value: 3 };
+  obj1 = { title: null, description: null, emoji: "827645852352512021", value: 3 };
   const intl7 = getSystemLocale.intl;
   obj1[0] = intl7.string(getSystemLocale.t.Ia0ska);
   const intl8 = getSystemLocale.intl;

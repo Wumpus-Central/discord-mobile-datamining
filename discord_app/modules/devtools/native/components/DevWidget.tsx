@@ -1,24 +1,21 @@
 // discord_app/modules/devtools/native/components/DevWidget.tsx
-import importAllResult from "noop";
-import initialize from "initialize";
-import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { StaffBadgeIcon } from "../../../../design/components/Icon/native/redesign/generated/StaffBadgeIcon.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
-import { VisualEffectViewOverrideOverlay_ } from "../../../visual_effect_view/native/overrides/VEVOO.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import StaffBadgeIcon from "StaffBadgeIcon" /* 14882 */;
+import VisualEffectViewOverrideOverlay_Default from "VisualEffectViewOverrideOverlay_" /* 15193 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "initialize" /* 7471 */;
+import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 710 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function DraggableContainer(children) {
   const x = children.x;
   const _require = x;
   const y = children.y;
-  const importDefault = y;
+  importDefault = y;
   const contentWidth = children.contentWidth;
   const contentHeight = children.contentHeight;
   let num = children.dragBoundsPadding;
@@ -28,22 +25,22 @@ function DraggableContainer(children) {
   const onChangePosition = children.onChangePosition;
   let sharedValue;
   let sharedValue1;
-  let c8;
+  closure_8 = undefined;
   let callback3;
   let callback;
   let obj = _require(contentWidth[6]);
   sharedValue = obj.useSharedValue(x.get());
-  let obj1 = _require(contentWidth[6]);
+  obj1 = _require(contentWidth[6]);
   sharedValue1 = obj1.useSharedValue(y.get());
   const tmp4 = importDefault(contentWidth[7])();
-  c8 = tmp4;
+  closure_8 = tmp4;
   const tmp5 = importDefault(contentWidth[8])();
   callback3 = tmp5;
   class P {
     constructor(arg0, arg1) {
-      value = c9.get();
+      value = closure_9.get();
       ({ width, height } = value);
-      rect = c8.get();
+      rect = closure_8.get();
       obj = { x: null, y: null };
       obj2 = closure_0(contentWidth[6]);
       obj[0] = obj2.clamp(children, rect.left + c4, width - rect.right - contentWidth - c4);
@@ -62,8 +59,8 @@ function DraggableContainer(children) {
   obj = { onActivate: null, onUpdate: null, onDeactivate: null };
   class C {
     constructor() {
-      result = c6.set(closure_0.get());
-      result1 = c7.set(closure_1.get());
+      result = closure_6.set(closure_0.get());
+      result1 = closure_7.set(closure_1.get());
       return;
     }
   }
@@ -102,7 +99,7 @@ function DraggableContainer(children) {
   class W {
     constructor() {
       value = closure_0.get();
-      tmp2 = c10(value, closure_1.get());
+      tmp2 = closure_10(value, closure_1.get());
       obj = { transform: null };
       obj = { translateX: null };
       ({ x, y } = tmp2);
@@ -123,16 +120,15 @@ function DraggableContainer(children) {
   W.__workletHash = 6251354551691;
   W.__initData = closure_14;
   const animatedStyle = obj7.useAnimatedStyle(W);
-  obj3 = { gesture: panGesture, children: null };
-  const items1 = [tmp.widgetContainer, animatedStyle];
-  obj3[1] = sharedValue(importDefault(contentWidth[6]).View, { style: items1, children: children.children });
+  obj3 = { gesture: panGesture, children: sharedValue(importDefault(contentWidth[6]).View, { style: items1, children: children.children }) };
+  items1 = [tmp.widgetContainer, animatedStyle];
   return sharedValue(_require(contentWidth[9]).GestureDetector, obj3);
 }
 let c3 = importAllResult;
-({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 let obj = { widgetContainer: { position: "absolute" }, widget: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: require("Themes").radii.xl };
-const merged = Object.assign(require("Themes").shadows.SHADOW_MOBILE_NAVIGATOR_X);
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: DEV_WIDGET_SIZE, width: DEV_WIDGET_SIZE, borderRadius: ThemesDefault.radii.xl };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function DevWidgetTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
@@ -141,32 +137,31 @@ let closure_12 = { code: "function DevWidgetTsx3(event){const{getClampedPosition
 let closure_13 = { code: "function DevWidgetTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
 let closure_14 = { code: "function DevWidgetTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
 let closure_16 = importAllResult.memo(() => {
-  const obj = {
+  const tmp = callback3();
+  return callback(PressableBase.PressableOpacity, {
     style: callback3().widget,
     accessibilityRole: "button",
     onPress() {
       return callback(table[13]).navigateToDevTools();
     },
     activeOpacity: 0.5,
-    children: null
-  };
-  obj[4] = callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" });
-  return callback(PressableBase.PressableOpacity, obj);
+    children: callback(StaffBadgeIcon.StaffBadgeIcon, { size: "md", color: "white" })
+  });
 });
-let result = require("STORAGE_KEY_LOG_DISPATCHES").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/DevWidget.tsx");
 
 export default function DevWidget() {
-  let obj = ReanimatedRexport;
-  const sharedValue = obj.useSharedValue(initialize.devWidgetPosition.x);
-  const sharedValue1 = ReanimatedRexport.useSharedValue(initialize.devWidgetPosition.y);
+  let obj = _mod4115;
+  const sharedValue = obj.useSharedValue(closure_4.devWidgetPosition.x);
+  const sharedValue1 = _mod4115.useSharedValue(closure_4.devWidgetPosition.y);
   obj = { children: null };
-  const items = [callback(VisualEffectViewOverrideOverlay_, { x: sharedValue, y: sharedValue1 }), ];
+  const items = [callback(VisualEffectViewOverrideOverlay_Default, { x: sharedValue, y: sharedValue1 }), ];
   obj = {
     x: sharedValue,
     y: sharedValue1,
     contentWidth: DEV_WIDGET_SIZE,
     contentHeight: DEV_WIDGET_SIZE,
-    dragBoundsPadding: Themes.space.PX_4,
+    dragBoundsPadding: ThemesDefault.space.PX_4,
     onChangePosition(devWidgetPosition) {
       let obj = callback(table[16]);
       obj = { devWidgetPosition };

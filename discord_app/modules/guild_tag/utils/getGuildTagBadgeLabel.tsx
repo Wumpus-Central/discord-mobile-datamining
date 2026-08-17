@@ -1,9 +1,11 @@
 // discord_app/modules/guild_tag/utils/getGuildTagBadgeLabel.tsx
-import { GuildTagBadgeKind } from "items";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import items from "items" /* 8168 */;
 
-const result = require("isDiscordFrontendDevelopment").fileFinishedImporting("modules/guild_tag/utils/getGuildTagBadgeLabel.tsx");
+const GuildTagBadgeKind = items.GuildTagBadgeKind;
+const result = set.fileFinishedImporting("modules/guild_tag/utils/getGuildTagBadgeLabel.tsx");
 
 export default function getGuildTagBadgeLabel(arg0) {
   if (GuildTagBadgeKind.SWORD === arg0) {

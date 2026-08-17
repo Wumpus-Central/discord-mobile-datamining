@@ -1,15 +1,15 @@
 // discord_app/modules/cache/trackCacheSkipped.native.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getDeviceMetadata } from "../tti_analytics/native/TTIAnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
 
-const result = require("getDeviceMetadata").fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/cache/trackCacheSkipped.native.tsx");
 
 export default function trackCacheSkipped(arg0, message) {
-  let obj = expandEventProperties;
-  obj = { load_id: null, reason: null, error_message: null, error_stack: null };
-  obj[0] = getDeviceMetadata.currentLoadId();
-  obj[1] = arg0;
+  let obj = expandEventPropertiesDefault;
+  obj = { load_id: getDeviceMetadata.currentLoadId(), reason: arg0, error_message: null, error_stack: null };
   message = undefined;
   if (message != null) {
     message = message.message;

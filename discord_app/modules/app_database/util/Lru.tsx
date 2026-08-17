@@ -1,4 +1,6 @@
 // discord_app/modules/app_database/util/Lru.tsx
+import set from "set" /* 2 */;
+
 class Lru {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -54,8 +56,6 @@ prototype["get"] = function get(arg0) {
   return items.get(arg0);
 };
 prototype["put"] = function put(arg0, arg1) {
-  let items3;
-  let items4;
   const self = this;
   let items = this.items;
   items.delete(arg0);
@@ -78,6 +78,6 @@ prototype["oldestKey"] = function oldestKey() {
   const items = this.items;
   return items.keys().next().value;
 };
-let result = require("set").fileFinishedImporting("modules/app_database/util/Lru.tsx");
+let result = set.fileFinishedImporting("modules/app_database/util/Lru.tsx");
 
 export { Lru };

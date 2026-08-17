@@ -1,30 +1,27 @@
 // discord_app/modules/messages/native/renderer/RowGenerator.tsx
-import handleThemeChange from "handleThemeChange";
-import Changeset from "Changeset";
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
-import { generateMessageRowData } from "MessageWithContent.tsx";
-import { generateBlockedGroupRowData } from "rows/BlockedGroup.tsx";
-import { generateLoadingRowData } from "rows/Loading.tsx";
-import { generateSeparatorRowData } from "rows/Separator.tsx";
+import applyDefault from "apply" /* 12 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import generateBlockedGroupRowData from "generateBlockedGroupRowData" /* 8160 */;
+import generateMessageRowData from "generateMessageRowData" /* 8162 */;
+import generateSeparatorRowData from "generateSeparatorRowData" /* 12800 */;
+import generateLoadingRowData from "generateLoadingRowData" /* 12801 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
+import Changeset from "Changeset" /* 8158 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ RowType: c4, SeparatorType: c5, LoadingType: closure_6 } = Changeset);
 let obj = { constrainedWidth: 0, animatingStickerMessageId: null, forcedTheme: null, shouldObscureSpoiler: true, shouldDisableInteractiveComponents: true };
 const merged = Object.assign(require("UserOption").DEFAULT_OPTIONS);
 class RowManager {
   constructor() {
     obj = Object.create(new.target.prototype);
-    obj[0] = LoadingType;
+    obj[0] = closure_7;
     return obj;
   }
 }
 const prototype = RowManager.prototype;
 prototype["setOptions"] = function setOptions(arg0) {
-  const obj = apply;
+  obj = applyDefault;
   this.options = obj.merge({}, obj, this.options, arg0);
 };
 prototype["generate"] = function generate(rowType) {
@@ -59,6 +56,6 @@ prototype["generate"] = function generate(rowType) {
   }
   return generateBlockedGroupRowData.generateBlockedGroupRowData(rowType, theme, self);
 };
-const result = require("UserOption").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/RowGenerator.tsx");
 
 export default RowManager;

@@ -1,6 +1,8 @@
 // discord_app/modules/guild_member_verification/MemberVerificationTypes.tsx
+import set from "set" /* 2 */;
+
 const obj = { TERMS: "TERMS", TEXT_INPUT: "TEXT_INPUT", PARAGRAPH: "PARAGRAPH", MULTIPLE_CHOICE: "MULTIPLE_CHOICE", VERIFICATION: "VERIFICATION" };
-const result = require("set").fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
+const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationTypes.tsx");
 
 export const MAX_RESULTS_PER_PAGE = 25;
 export const MAX_VISIBLE_PAGES = 4;

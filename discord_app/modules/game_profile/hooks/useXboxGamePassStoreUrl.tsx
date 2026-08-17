@@ -1,8 +1,10 @@
 // discord_app/modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx
-import { Distributors } from "ME";
-import { XBOX_DISCORD_OCID } from "../../activities/utils/distributorStoreUrls.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import XBOX_DISCORD_OCID from "XBOX_DISCORD_OCID" /* 9100 */;
 
-const result = require("XBOX_DISCORD_OCID").fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
+const Distributors = ME.Distributors;
+const result = set.fileFinishedImporting("modules/game_profile/hooks/useXboxGamePassStoreUrl.tsx");
 
 export default function useXboxGamePassStoreUrl(thirdPartySkus) {
   if (null == thirdPartySkus) {

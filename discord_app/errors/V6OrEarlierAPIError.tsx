@@ -1,8 +1,11 @@
 // discord_app/errors/V6OrEarlierAPIError.tsx
-import { Links } from "ME";
-import { V6OrEarlierAPIError } from "sendRequest";
-import { getSystemLocale } from "../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
+const Links = ME.Links;
+const V6OrEarlierAPIError = sendRequest.V6OrEarlierAPIError;
 const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
   if (null != arg1) {
     const intl2 = getSystemLocale.intl;
@@ -23,6 +26,6 @@ const prototype = function APIErrorWithDefaultMessage(arg0, arg1) {
 }.prototype;
 class prototype extends V6OrEarlierAPIError {
 }
-const result = require("getSystemLocale").fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
+const result = set.fileFinishedImporting("errors/V6OrEarlierAPIError.tsx");
 
 export default prototype;

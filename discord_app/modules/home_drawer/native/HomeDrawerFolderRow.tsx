@@ -1,33 +1,31 @@
 // discord_app/modules/home_drawer/native/HomeDrawerFolderRow.tsx
-import noop from "noop";
-import { View } from "set";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import updateVoiceState from "updateVoiceState";
-import { NOOP } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "insertUnsortedGuilds" /* 5078 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
+import { NOOP } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function Wrapper(folder) {
   folder = folder.folder;
-  let c1;
+  closure_1 = undefined;
   let memo;
   let stateFromStoresArray;
   let stateFromStoresArray1;
   let stateFromStoresArray2;
   let formatResult3;
-  let c7;
+  c7 = undefined;
   const tmp = callback2();
-  c1 = tmp;
+  closure_1 = tmp;
   let obj = stateFromStoresArray;
   memo = stateFromStoresArray.useMemo(() => ({ isMuted: false }), []);
-  let obj1 = folder(memo[10]);
-  let items = [stateFromStoresArray2, updateUserGuildSettingsInternal];
+  obj1 = folder(memo[10]);
+  let items = [stateFromStoresArray2, closure_8];
   stateFromStoresArray = obj1.useStateFromStoresArray(items, () => {
     const guildIds = folder.guildIds;
     return guildIds.filter((arg0) => {
@@ -55,14 +53,14 @@ function Wrapper(folder) {
     return tmp2;
   });
   let obj3 = folder(memo[10]);
-  const items2 = [stateFromStoresArray2, updateUserGuildSettingsInternal];
+  const items2 = [stateFromStoresArray2, closure_8];
   stateFromStoresArray1 = obj3.useStateFromStoresArray(items2, () => {
     const guildIds = folder.guildIds;
     return guildIds.filter((arg0) => {
       const isMutedResult = muted.isMuted(arg0);
       let hasUnreadResult = !isMutedResult;
       if (!isMutedResult) {
-        hasUnreadResult = updateGuildUnreadSentinel.hasUnread(arg0);
+        hasUnreadResult = closure_5.hasUnread(arg0);
       }
       return hasUnreadResult;
     });
@@ -82,11 +80,11 @@ function Wrapper(folder) {
     return tmp2;
   });
   const obj5 = folder(memo[10]);
-  const items4 = [updateVoiceState, formatResult3, updateUserGuildSettingsInternal];
+  const items4 = [closure_9, formatResult3, closure_8];
   stateFromStoresArray2 = folder(memo[10]).useStateFromStoresArray(items4, () => {
     const guildIds = folder.guildIds;
     return guildIds.filter((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       if (muted.isMuted(arg0)) {
         return false;
       } else {
@@ -114,10 +112,10 @@ function Wrapper(folder) {
         const items = [];
         HermesBuiltin.arraySpread(set, 0);
         return items.some((id) => {
-          const isCategoryMutedResult = outer1_8.isCategoryMuted(closure_0, id);
+          const isCategoryMutedResult = closure_1_8.isCategoryMuted(closure_0, id);
           let tmp3 = !isCategoryMutedResult;
           if (!isCategoryMutedResult) {
-            tmp3 = !outer1_8.isChannelMuted(closure_0, id);
+            tmp3 = !closure_1_8.isChannelMuted(closure_0, id);
           }
           return tmp3;
         });
@@ -145,20 +143,20 @@ function Wrapper(folder) {
     if (memo.isMuted) {
       let BellSlashIcon = folder(memo[11]).BellSlashIcon;
     } else {
-      BellSlashIcon = outer1_10;
+      BellSlashIcon = closure_1_10;
     }
-    let obj = { style: _undefined.title, children: null };
-    const items = [outer1_11(BellSlashIcon, { size: "xs" }), ];
-    obj = { variant: "text-md/medium", style: _undefined.titleText, lineClamp: 1, color: "text-default", children: null };
+    let obj = { style: closure_1.title, children: null };
+    const items = [closure_1_11(BellSlashIcon, { size: "xs" }), ];
+    obj = { variant: "text-md/medium", style: closure_1.titleText, lineClamp: 1, color: "text-default", children: null };
     let folderName = folder.folderName;
     if (folderName == null) {
       const intl = folder(memo[13]).intl;
       folderName = intl.string(folder(memo[13]).t["JQ/1n3"]);
     }
     obj[4] = folderName;
-    items[1] = outer1_11(folder(memo[12]).Text, obj);
+    items[1] = closure_1_11(folder(memo[12]).Text, obj);
     obj[1] = items;
-    return outer1_12(stateFromStoresArray1, obj);
+    return closure_1_12(stateFromStoresArray1, obj);
   }, items6);
   let intl = folder(memo[13]).intl;
   obj = { num: folder.guildIds.length };
@@ -177,7 +175,7 @@ function Wrapper(folder) {
       let tmp14 = formatResult1;
     }
     const items7 = [tmp14, str];
-    const memo2 = obj.useMemo(() => outer1_11(folder(memo[12]).Text, { variant: "text-xs/medium", color: c7, lineClamp: 1, children: formatResult3 }), items7);
+    const memo2 = obj.useMemo(() => closure_1_11(folder(memo[12]).Text, { variant: "text-xs/medium", color: c7, lineClamp: 1, children: formatResult3 }), items7);
     obj1 = { title: null, subtitle: null };
     obj1[0] = memo1;
     let tmp20;
@@ -218,16 +216,16 @@ function Wrapper(folder) {
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
-const result = require("updateGuildUnreadSentinel").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerFolderRow.tsx");
 
 export default function HomeDrawerFolderExpandedChildren(folderId) {
   folderId = folderId.folderId;
   let obj = folderId(589);
-  const items = [insertUnsortedGuilds];
+  const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let guildFolderById = null;
     if (null != folderId) {
-      guildFolderById = outer1_7.getGuildFolderById(tmp);
+      guildFolderById = closure_1_7.getGuildFolderById(tmp);
     }
     return guildFolderById;
   });

@@ -1,24 +1,20 @@
 // discord_app/utils/MaskedLinkUtils.tsx
-import isBlockedDomain from "isBlockedDomain";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import set from "set";
-import reinjectEphemerals from "reinjectEphemerals";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
+import closure_3 from "isBlockedDomain" /* 8776 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "set" /* 8777 */;
+import closure_7 from "reinjectEphemerals" /* 4994 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import ME from "ME" /* 676 */;
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { openInviteModal } from "../lib/getOnClick.tsx";
 import { set1 } from "../modules/masked_link/constants/TrustedURLs.tsx";
 import { getHostname } from "../stores/MaskedLinkStoreMethodsAdditional.native.tsx";
 
-let c10;
-let closure_12;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ ChannelTypes: c10, AnalyticEvents: unpackModuleId, GuildFeatures: closure_12, MessageFlags: map1 } = ME);
-let result = require("createGuildRecordFromRust").fileFinishedImporting("utils/MaskedLinkUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/MaskedLinkUtils.tsx");
 
 export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
   const channel = store.getChannel(channelId.getChannelId());
@@ -40,20 +36,13 @@ export const isLinkTrusted = function isLinkTrusted(arg0, arg1) {
   return tmp4;
 };
 export const handleClick = function handleClick(href, preventDefault) {
-  let c0;
-  let channelId;
-  let messageId;
-  let onCancel;
-  let onClick;
-  let shouldConfirm;
-  let trusted;
   let items = arg2;
   if (arg2 === undefined) {
     items = [];
   }
   let _require;
   channelId = undefined;
-  let dependencyMap;
+  dependencyMap = undefined;
   let guild_id;
   let store;
   let message_id;
@@ -205,7 +194,7 @@ export const handleClick = function handleClick(href, preventDefault) {
         }
         if (hasItem1) {
           tmp3Result = tmp3(698);
-          const obj1 = { url_domain: null, guild_id: null, channel_id: null };
+          obj1 = { url_domain: null, guild_id: null, channel_id: null };
           let obj4 = _getHostname;
           obj1[0] = obj4.getHostname(tmp8);
           obj1[1] = guild1.id;
@@ -252,7 +241,7 @@ export const handleClick = function handleClick(href, preventDefault) {
           tmp55 = "https:" === protocol;
         }
         function handleConfirm() {
-          if (c4) {
+          if (closure_4) {
             let obj = channelId(_undefined[14]);
             obj = { messageId: null, channelId: null, guildId: null, sourceChannelId: null, sourceGuildId: null };
             obj[0] = message_id;

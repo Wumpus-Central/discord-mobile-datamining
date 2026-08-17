@@ -1,16 +1,15 @@
 // discord_app/modules/game_mentions/hooks/useGameMentionData.tsx
-import handleLoadMessages from "handleLoadMessages";
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+import useGameProfileObscured from "useGameProfileObscured" /* 6901 */;
+import closure_3 from "handleLoadMessages" /* 4505 */;
+import closure_4 from "set" /* 6899 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { useGameProfileObscured } from "../../game_profile/hooks/useGameProfileObscured.tsx";
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_mentions/hooks/useGameMentionData.tsx");
 
 export const getGameMentionData = function getGameMentionData(closure_0) {
-  let media;
   currentUser = currentUser.getCurrentUser();
   game = game.getGame(closure_0);
   gameById = gameById.getGameById(closure_0);
@@ -41,13 +40,12 @@ export const getGameMentionData = function getGameMentionData(closure_0) {
 };
 export const useGameMentionData = function useGameMentionData(gameId) {
   const _require = gameId;
-  const items = [handleLoadMessages, set, mergeGuildAvatar];
+  const items = [closure_3, closure_4, closure_5];
   const items1 = [gameId];
   return _initialize.useStateFromStores(items, () => {
-    let media;
-    const currentUser = outer1_5.getCurrentUser();
-    const game = outer1_3.getGame(gameId);
-    const gameById = outer1_4.getGameById(gameId);
+    const currentUser = closure_1_5.getCurrentUser();
+    const game = closure_1_3.getGame(gameId);
+    const gameById = closure_1_4.getGameById(gameId);
     if (null != game) {
       let nsfwAllowed;
       if (currentUser != null) {
@@ -64,7 +62,7 @@ export const useGameMentionData = function useGameMentionData(gameId) {
         obj[2] = icon;
         let tmp5 = obj;
       }
-      obj2 = gameId(outer1_2[3]);
+      obj2 = gameId(closure_1_2[3]);
     } else if (null != gameById) {
       obj = { gameId: null, gameName: null, gameIcon: null };
       obj[0] = tmp;
@@ -72,5 +70,5 @@ export const useGameMentionData = function useGameMentionData(gameId) {
       tmp5 = obj;
     }
     return tmp5;
-  }, items1, shallowEqual);
+  }, items1, shallowEqualDefault);
 };

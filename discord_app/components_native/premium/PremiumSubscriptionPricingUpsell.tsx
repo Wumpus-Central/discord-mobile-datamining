@@ -1,59 +1,43 @@
 // discord_app/components_native/premium/PremiumSubscriptionPricingUpsell.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { View } from "SubscriptionPlans";
-import _getSystemLocale from "_getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import addSubscriptionPlan from "addSubscriptionPlan";
-import reset from "reset";
-import updateProduct from "updateProduct";
-import { CurrencyCodes } from "ME";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "formatSingleCurrencyPrice";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getSubscriptionPlansLoaded } from "../../modules/billing/hooks/useSubscriptionPlansLoaded.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import getSubscriptionPlansLoaded from "getSubscriptionPlansLoaded" /* 12853 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "_getSystemLocale" /* 1994 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "addSubscriptionPlan" /* 4044 */;
+import closure_9 from "reset" /* 4045 */;
+import closure_10 from "updateProduct" /* 5319 */;
+import { CurrencyCodes } from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let map1;
-let require = arg1;
+require = arg1;
 function PricingSubheadingCopy() {
-  let interval;
-  let intervalCount;
-  let tmp12;
-  let tmp13;
-  let tmp14;
-  let tmp15;
-  let tmp16;
   let tmp = callback3();
-  const require = tmp;
-  let obj = require(str3[12]);
-  let items = [mergeGuildAvatar];
+  const _require = tmp;
+  let obj = _require(str3[12]);
+  let items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = importDefault(str3[13]);
+  obj1 = importDefault(str3[13]);
   const hasBoostDiscountResult = obj1.hasBoostDiscount(stateFromStores);
-  let obj2 = require(str3[12]);
-  const items1 = [_getSystemLocale];
+  let obj2 = _require(str3[12]);
+  const items1 = [closure_6];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => locale.locale);
-  let obj3 = require(str3[14]);
+  let obj3 = _require(str3[14]);
   const subscriptionPlansLoaded = obj3.useSubscriptionPlansLoaded();
-  let obj4 = require(str3[12]);
-  const items2 = [reset];
+  let obj4 = _require(str3[12]);
+  const items2 = [closure_9];
   importDefault = obj4.useStateFromStores(items2, () => premiumTypeSubscription.getPremiumTypeSubscription());
-  let obj5 = require(str3[12]);
-  const items3 = [addSubscriptionPlan];
+  let obj5 = _require(str3[12]);
+  const items3 = [closure_8];
   let stateFromStores2 = obj5.useStateFromStores(items3, () => {
     let value;
     if (null != closure_1) {
-      value = outer1_8.get(tmp.planId);
+      value = closure_1_8.get(tmp.planId);
     }
     return value;
   });
@@ -63,11 +47,11 @@ function PricingSubheadingCopy() {
       const obj = callback(str3[15]);
     }
   }, []);
-  let obj6 = require(str3[12]);
-  let obj7 = updateProduct;
-  const items4 = [updateProduct];
+  let obj6 = _require(str3[12]);
+  let obj7 = closure_10;
+  const items4 = [closure_10];
   [tmp12, tmp13, tmp14, tmp15, tmp16] = str2(obj6.useStateFromStoresArray(items4, () => {
-    const items = [store.getProduct(tmp(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY), store.getProduct(tmp(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY), store.getProduct(tmp(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), store.getProduct(tmp(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY), store.getProduct(tmp(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
+    const items = [store.getProduct(lib(str3[17]).ProductIds.PREMIUM_GUILD_1_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_YEARLY), store.getProduct(lib(str3[17]).ProductIds.PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY)];
     return items;
   }), 5);
   if (stateFromStores2 == null) {
@@ -161,9 +145,9 @@ function PricingSubheadingCopy() {
             let tmp = null;
             if (str3 !== str2) {
               const obj = { style: null, variant: "text-sm/medium", color: "text-muted", children: null };
-              obj[0] = tmp.originalPrice;
+              obj[0] = lib.originalPrice;
               obj[3] = arg0;
-              tmp = outer1_18(tmp(str3[18]).Text, obj, arg1);
+              tmp = closure_1_18(lib(str3[18]).Text, obj, arg1);
             }
             return tmp;
           };
@@ -221,12 +205,12 @@ function PricingSubheadingCopy() {
       }
     }
   }
-  return callback(require(str3[18]).Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
+  return callback(_require(str3[18]).Text, { style: tmp.cardText, variant: "text-md/medium", children: "..." });
 }
 ({ SubscriptionPlans: closure_12, SubscriptionPlanInfo: map1, PremiumTypes: closure_14, SubscriptionIntervalTypes: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_17 } = GuildFeatures);
 ({ jsx: closure_18, Fragment: closure_19, jsxs: closure_20 } = jsxProd);
 let closure_21 = createCacheKey.createStyles({ title: { marginTop: 16 }, pricingSection: { alignItems: "center" }, originalPrice: { textDecorationLine: "line-through" }, cardText: { lineHeight: 20, marginTop: 8, textAlign: "center" } });
-let result = require("get ActivityIndicator").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
+let result = require("set").fileFinishedImporting("components_native/premium/PremiumSubscriptionPricingUpsell.tsx");
 
 export default function PremiumSubscriptionPricingUpsell() {
   const tmp = callback3();

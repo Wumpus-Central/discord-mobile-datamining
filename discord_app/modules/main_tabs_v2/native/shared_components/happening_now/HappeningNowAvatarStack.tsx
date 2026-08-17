@@ -1,45 +1,36 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import _getSystemLocale from "_getSystemLocale";
-import { CHANNEL_SPRING_CONFIG } from "n";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "_getSystemLocale" /* 1994 */;
+import { CHANNEL_SPRING_CONFIG } from "n" /* 12126 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+require = arg1;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { damping: 17, stiffness: 320, mass: 0.5 };
 let closure_11 = createCacheKey.createStyles((arg0, marginLeft) => {
   let obj = { avatarStack: { flexDirection: "row" }, stageAvatarStack: null, avatarBubbles: null, avatars: null, shiftedAvatar: null, userCounter: null, ellipsisWrapper: null, ellipsisBorder: null };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
+  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: 24, paddingLeft: 4, paddingRight: 4, paddingVertical: 4 };
   obj[1] = obj;
   obj[2] = { display: "flex", flexDirection: "row" };
   obj[3] = { display: "flex", flexDirection: "row" };
   obj[4] = { marginLeft: -marginLeft };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: Button.AVATAR_SIZE_MAP[arg0], minWidth: Button.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, flexDirection: "row", alignItems: "center", justifyContent: "center", marginLeft: -marginLeft, height: Button.AVATAR_SIZE_MAP[arg0], minWidth: Button.AVATAR_SIZE_MAP[arg0], borderRadius: 10, paddingHorizontal: 4, paddingTop: 1 };
   obj[5] = obj;
   obj[6] = { display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "flex-end", overflow: "hidden", marginLeft: -4 - marginLeft };
-  obj[7] = { borderColor: Themes.colors.CARD_SECONDARY_BG };
+  obj[7] = { borderColor: ThemesDefault.colors.CARD_SECONDARY_BG };
   return obj;
 });
 let closure_12 = { code: "function HappeningNowAvatarStackTsx1(){const{interpolate,typingValue,ELLIPSIS_WIDTH}=this.__closure;return{opacity:interpolate(typingValue.get(),[0,1],[0,1]),width:interpolate(typingValue.get(),[0,1],[0,ELLIPSIS_WIDTH])};}" };
 let closure_13 = { code: "function HappeningNowAvatarStackTsx2(finished){const{runOnJS,setRenderComponents,isTyping}=this.__closure;if(!finished)return;runOnJS(setRenderComponents)(isTyping);}" };
 let closure_14 = { code: "function HappeningNowAvatarStackTsx3(){const{isStage,extraUsers,avatars,AVATAR_SIZE_MAP,avatarSize,avatarOverlap,withSpring,SPRING_CONFIG}=this.__closure;const hasExtraBubble=!isStage&&extraUsers>0;const numBubbles=avatars.length+(hasExtraBubble?1:0);const width=numBubbles>0?numBubbles*AVATAR_SIZE_MAP[avatarSize]-(numBubbles-1)*avatarOverlap:0;return{width:withSpring(width,SPRING_CONFIG),marginRight:numBubbles===0?0:4};}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowAvatarStack.tsx");
 
 export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimit) {
-  let c7;
-  let isStage;
-  let isTyping;
-  let require;
-  let tmp5;
-  let userCount;
-  let users;
   ({ users, guildId: require, isTyping } = userLimit);
   if (isTyping === undefined) {
     isTyping = false;
@@ -62,33 +53,33 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     num3 = 4;
   }
   const style = userLimit.style;
-  let c6;
+  closure_6 = undefined;
   c7 = undefined;
   let sharedValue;
   let substr;
-  let c10;
+  c10 = undefined;
   let mapped;
   const tmp3 = mapped(XSMALL_20, num3);
-  c6 = tmp3;
+  closure_6 = tmp3;
   let obj = num2;
   [tmp5, c7] = XSMALL_20(num2.useState(() => isTyping), 2);
-  let obj1 = require(isStage[9]);
+  obj1 = require(isStage[9]);
   let num4 = 0;
   if (isTyping) {
     num4 = 1;
   }
   sharedValue = obj1.useSharedValue(num4);
   let tmp6Result = tmp6(tmp7[10]);
-  let items = [c6];
-  const stateFromStores = tmp6Result.useStateFromStores(items, () => _undefined.locale);
+  let items = [closure_6];
+  const stateFromStores = tmp6Result.useStateFromStores(items, () => closure_6.locale);
   tmp6Result = tmp6(tmp7[9]);
   class V {
     constructor() {
       obj = { opacity: null, width: null };
       obj2 = guildId(isStage[9]);
-      obj[0] = obj2.interpolate(useSharedValue.get(), [0, 1], [0, 1]);
+      obj[0] = obj2.interpolate(closure_8.get(), [0, 1], [0, 1]);
       obj3 = guildId(isStage[9]);
-      obj[1] = obj3.interpolate(useSharedValue.get(), [0, 1], [0, 28]);
+      obj[1] = obj3.interpolate(closure_8.get(), [0, 1], [0, 28]);
       return obj;
     }
   }
@@ -99,21 +90,21 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
   const items1 = [isTyping, sharedValue];
   const animatedStyle = tmp6Result.useAnimatedStyle(V);
   const effect = obj.useEffect(() => {
-    let obj = outer1_0(isStage[11]);
+    let obj = closure_1_0(isStage[11]);
     let num = 0;
     if (isTyping) {
       num = 1;
     }
     const fn = function t(arg0) {
       if (arg0) {
-        outer1_0(outer1_2[9]).runOnJS(closure_7)(closure_1);
-        const obj = outer1_0(outer1_2[9]);
+        closure_1_0(closure_1_2[9]).runOnJS(closure_7)(closure_1);
+        const obj = closure_1_0(closure_1_2[9]);
       }
     };
-    obj = { runOnJS: outer1_0(isStage[9]).runOnJS, setRenderComponents: c7, isTyping };
+    obj = { runOnJS: closure_1_0(isStage[9]).runOnJS, setRenderComponents: c7, isTyping };
     fn.__closure = obj;
     fn.__workletHash = 2498652829757;
-    fn.__initData = outer1_13;
+    fn.__initData = closure_1_13;
     const result = sharedValue.set(obj.withSpring(num, c7, "respect-motion-settings", fn));
   }, items1);
   substr = users.slice(0, num);
@@ -125,15 +116,15 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
   mapped = substr.map((id) => {
     const diff = substr.length - 1;
     let obj = { user: id, guildId: closure_0, size: XSMALL_20 };
-    const tmp6 = sharedValue(outer1_0(isStage[8]).Avatar, obj);
+    const tmp6 = sharedValue(closure_1_0(isStage[8]).Avatar, obj);
     let shiftedAvatar;
     if (0 !== arg1) {
-      shiftedAvatar = _undefined.shiftedAvatar;
+      shiftedAvatar = closure_6.shiftedAvatar;
     }
     obj = { style: shiftedAvatar, children: null };
     if (arg1 !== diff) {
       obj = { cutouts: null, children: null };
-      const obj1 = { shape: null, x: null, y: null, size: null };
+      obj1 = { shape: null, x: null, y: null, size: null };
       obj1[0] = tmp3(tmp4[12]).CutoutShape.Circle;
       obj1[1] = tmp3(tmp4[8]).AVATAR_SIZE_MAP[tmp5] - num3 - num2;
       obj1[2] = -num2;
@@ -157,13 +148,13 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
     constructor() {
       num = 0;
       if (!isStage) {
-        tmp = c10;
+        tmp = closure_10;
         num = 0;
-        if (c10 > 0) {
+        if (closure_10 > 0) {
           num = 1;
         }
       }
-      sum = c11.length + num;
+      sum = closure_11.length + num;
       num2 = 0;
       if (sum > 0) {
         tmp3 = guildId;
@@ -175,7 +166,7 @@ export const HappeningNowAvatarStack = function HappeningNowAvatarStack(userLimi
       }
       obj = { width: null, marginRight: null };
       obj2 = guildId(isStage[11]);
-      obj[0] = obj2.withSpring(num2, c10);
+      obj[0] = obj2.withSpring(num2, closure_10);
       num4 = 4;
       if (0 === sum) {
         num4 = 0;

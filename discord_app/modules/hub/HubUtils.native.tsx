@@ -1,17 +1,17 @@
 // discord_app/modules/hub/HubUtils.native.tsx
-import updateInvite from "updateInvite";
-import importDefaultResult from "apply";
-import { HubEmailConnectionModalActionCreators } from "native/components/HubEmailConnectionModalActionCreators.tsx";
+import _modDef11922 from "module_11922" /* 11922 */;
+import closure_2 from "updateInvite" /* 4359 */;
+import importDefaultResult from "apply" /* 12 */;
 
-let closure_3 = require("apply").throttle((code) => {
+let closure_3 = importDefaultResult.throttle((code) => {
   invite = invite.getInvite(code.code);
-  HubEmailConnectionModalActionCreators.open({ invite });
+  _modDef11922.open({ invite });
 }, 1000, { trailing: false });
 const obj = {
   onOpenHubInvite(invite) {
     callback(invite);
   }
 };
-const result = require("module_11922").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/HubUtils.native.tsx");
 
 export default obj;

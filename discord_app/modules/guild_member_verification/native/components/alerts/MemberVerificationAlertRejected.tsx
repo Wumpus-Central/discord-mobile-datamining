@@ -1,21 +1,16 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertRejected.tsx
-import closure_3 from "jsxProd";
-import noop from "noop";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import jsxProd from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
-let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertRejected.tsx");
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertRejected.tsx");
 
 export default function MemberVerificationAlertRejected(guildId) {
-  let canReapply;
-  let isLoading;
   guildId = guildId.guildId;
   const onClose = guildId.onClose;
   const merged = Object.assign(guildId, Object.create(null));
@@ -28,7 +23,7 @@ export default function MemberVerificationAlertRejected(guildId) {
     rejectionReason = currentUserGuildJoinRequest.rejectionReason;
   }
   let tmp2Result = tmp2(tmp3[7]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   stateFromStores = tmp2Result.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
@@ -40,16 +35,16 @@ export default function MemberVerificationAlertRejected(guildId) {
   tmp2Result = tmp2(tmp3[8]);
   const canReapplyToRejectedMemberVerificationApplication = tmp2Result.useCanReapplyToRejectedMemberVerificationApplication(guildId);
   ({ isLoading, canReapply } = canReapplyToRejectedMemberVerificationApplication);
-  const items1 = [handleGatewayJoinRequestUpdate];
+  const items1 = [closure_7];
   const items2 = [guildId];
-  const stateFromStores1 = guildId(stateFromStores[7]).useStateFromStores(items1, () => outer1_7.getJoinRequestGuild(guildId), items2);
+  const stateFromStores1 = guildId(stateFromStores[7]).useStateFromStores(items1, () => closure_1_7.getJoinRequestGuild(guildId), items2);
   const tmp2Result1 = guildId(stateFromStores[7]);
-  const items3 = [trackCommunicationDisabled];
+  const items3 = [closure_5];
   const items4 = [stateFromStores, guildId];
   stateFromStores2 = guildId(stateFromStores[7]).useStateFromStores(items3, () => {
     let member = null;
     if (null != stateFromStores) {
-      member = outer1_5.getMember(guildId, tmp);
+      member = closure_1_5.getMember(guildId, tmp);
     }
     return member;
   }, items4);
@@ -89,23 +84,23 @@ export default function MemberVerificationAlertRejected(guildId) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
+            closure_0 = tmp4;
             let isPending;
-            if (outer1_3 != null) {
-              isPending = outer1_3.isPending;
+            if (closure_1_3 != null) {
+              isPending = closure_1_3.isPending;
             }
             let obj3 = v0(8537);
             if (isPending) {
               v0 = 2;
               dependencyMap = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = obj3.removeGuildJoinRequest(outer1_0);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj3.removeGuildJoinRequest(closure_1_0);
               return obj1;
             } else {
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj3.resetGuildJoinRequest(outer1_0);
+              obj2[0] = obj3.resetGuildJoinRequest(closure_1_0);
               return obj2;
             }
           }
@@ -132,7 +127,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (v0 != null) {
             tmp6();
           }
-          obj1 = outer1_0(8522);
+          obj1 = closure_1_0(8522);
           const result = obj1.openMemberVerificationModal(closure_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
@@ -164,7 +159,7 @@ export default function MemberVerificationAlertRejected(guildId) {
       formatToPlainStringResult1 = intl3.formatToPlainString(tmp2(tmp3[11]).t.fU5PPM, obj);
     }
   }
-  let obj1 = {};
+  obj1 = {};
   const tmp11 = stateFromStores2(function*() {
     if (dependencyMap === 2) {
       dependencyMap = 3;
@@ -192,23 +187,23 @@ export default function MemberVerificationAlertRejected(guildId) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
+            closure_0 = tmp4;
             let isPending;
-            if (outer1_3 != null) {
-              isPending = outer1_3.isPending;
+            if (closure_1_3 != null) {
+              isPending = closure_1_3.isPending;
             }
             let obj3 = v0(8537);
             if (isPending) {
               v0 = 2;
               dependencyMap = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = obj3.removeGuildJoinRequest(outer1_0);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj3.removeGuildJoinRequest(closure_1_0);
               return obj1;
             } else {
               v0 = 1;
               dependencyMap = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = obj3.resetGuildJoinRequest(outer1_0);
+              obj2[0] = obj3.resetGuildJoinRequest(closure_1_0);
               return obj2;
             }
           }
@@ -235,7 +230,7 @@ export default function MemberVerificationAlertRejected(guildId) {
           if (v0 != null) {
             tmp6();
           }
-          obj1 = outer1_0(8522);
+          obj1 = closure_1_0(8522);
           const result = obj1.openMemberVerificationModal(closure_0);
           dependencyMap = 3;
           return { value: "HermesInternal", done: "HermesInternal" };

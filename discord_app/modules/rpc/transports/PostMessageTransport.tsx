@@ -1,31 +1,28 @@
 // discord_app/modules/rpc/transports/PostMessageTransport.tsx
-import closure_3 from "set";
-import _slicedToArray from "_slicedToArray";
-import participantFromServer from "participantFromServer";
-import { RPC_EMBEDDED_APP_SCOPE } from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { EventEmitter } from "EventEmitter";
-import set from "participantFromServer";
-import { HANDSHAKE } from "../RPCOpcodes.tsx";
+import setDefault from "set" /* 687 */;
+import HANDSHAKEDefault from "HANDSHAKE" /* 8751 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import { RPC_EMBEDDED_APP_SCOPE } from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
+import { EventEmitter } from "EventEmitter" /* 652 */;
+import set from "set" /* 2 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
-({ AnalyticEvents: error, ComponentActions: metroImportAll, RPCCloseCodes: c9, RPCErrors: c10 } = ME);
-let closure_11 = 10 * require("set").Millis.SECOND;
+({ AnalyticEvents: error, ComponentActions: closure_8, RPCCloseCodes: c9, RPCErrors: c10 } = ME);
+let closure_11 = 10 * setDefault.Millis.SECOND;
 const map = new Map();
 let set = new Set();
 function postClose(source, arg1, postMessageToRPCClient) {
-  const items = [HANDSHAKE.CLOSE, arg1];
+  const items = [HANDSHAKEDefault.CLOSE, arg1];
   postMessageToRPCClient(items, source.origin);
 }
 class PostMessageTransport extends EventEmitter {
   constructor(arg0, arg1, arg2, arg3) {
     tmp4 = new PostMessageTransport(tmp3, tmp2, tmp);
     // ThrowIfThisInitialized (0x7c)
-    f107637 = tmp4;
+    closure_0 = tmp4;
     tmp4.disconnectSocket = function disconnectSocket(closure_0, closure_1, arg2) {
       let flag = arg2;
       if (arg2 === undefined) {
@@ -41,67 +38,60 @@ class PostMessageTransport extends EventEmitter {
         str = "Unknown";
       }
       closure_0.close(closure_1.code, str);
-      let found = Array.from(outer1_12.entries()).find((arg0) => {
-        let tmp;
+      let found = Array.from(closure_1_12.entries()).find((arg0) => {
         [, tmp] = arg0;
         return tmp === closure_0;
       });
       if (found == null) {
         found = [null, null];
       }
-      const first = outer1_4(found, 1)[0];
+      const first = closure_1_4(found, 1)[0];
       if (null != first) {
-        outer1_12.delete(first);
+        closure_1_12.delete(first);
       }
     };
     tmp4.handleIFrameMount = function handleIFrameMount(id) {
-      outer1_13.add(id.id);
+      closure_1_13.add(id.id);
       closure_0.handshakeFailureTimeoutId = setTimeout(() => {
         selfEmbeddedActivities = selfEmbeddedActivities.getSelfEmbeddedActivities();
         const item = Array.from(selfEmbeddedActivities.entries()).forEach((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           let obj = callback2(698);
-          obj = { application_id: tmp, channel_id: null, guild_id: null, timeout_ms: null };
-          obj[1] = callback(4011).getEmbeddedActivityLocationChannelId(tmp2.location);
+          obj = { application_id: tmp, channel_id: callback(4011).getEmbeddedActivityLocationChannelId(tmp2.location), guild_id: null, timeout_ms: null };
           const obj3 = callback(4011);
           obj[2] = callback(4011).getEmbeddedActivityLocationGuildId(tmp2.location);
           obj[3] = closure_11;
           obj.track(constants.ACTIVITY_HANDSHAKE_TIMED_OUT, obj);
         });
-      }, outer1_11);
+      }, closure_1_11);
     };
     tmp4.handleIFrameUnmount = function handleIFrameUnmount(id) {
-      let tmp3;
-      let tmp4;
       id = id.id;
-      outer1_13.delete(id);
-      let obj = outer1_12;
-      let found = Array.from(outer1_12.entries()).find((arg0) => {
-        let tmp;
+      closure_1_13.delete(id);
+      let obj = closure_1_12;
+      let found = Array.from(closure_1_12.entries()).find((arg0) => {
         [, tmp] = arg0;
         return tmp.source.iframeId === id;
       });
       if (found == null) {
         found = [null, null];
       }
-      const arr = Array.from(outer1_12.entries());
-      [tmp3, tmp4] = outer1_4(found, 2);
+      const arr = Array.from(closure_1_12.entries());
+      [tmp3, tmp4] = closure_1_4(found, 2);
       if (tmp5) {
         obj = { code: null, message: "iFrame gone" };
-        obj[0] = outer1_9.CLOSE_NORMAL;
+        obj[0] = closure_1_9.CLOSE_NORMAL;
         id.disconnectSocket(tmp4, obj, true);
         obj.delete(tmp3);
       }
     };
     tmp4.handleMessage = function handleMessage(arg0, iframeId) {
-      const value = outer1_12.get(iframeId.iframeId);
+      const value = closure_1_12.get(iframeId.iframeId);
       try {
         closure_0.routeEvent(value, iframeId, arg0, arg2);
       } catch (tmp12) {
-        if (tmp12 instanceof tmp4(outer1_2[11])) {
-          if (tmp12.errorCode === outer1_10.INVALID_PAYLOAD) {
+        if (tmp12 instanceof callback(closure_1_2[11])) {
+          if (tmp12.errorCode === closure_1_10.INVALID_PAYLOAD) {
             throw tmp12;
           }
         }
@@ -112,15 +102,15 @@ class PostMessageTransport extends EventEmitter {
         } else {
           obj = { code: null, message: null };
           ({ code: obj[0], message: obj[1] } = tmp12);
-          outer1_14(tmp3, obj, tmp2);
+          closure_1_14(tmp3, obj, tmp2);
         }
       }
     };
     tmp4.handleFrame = function handleFrame(origin, source, str) {
       if (origin.origin !== source.source.origin) {
         let obj = { closeCode: null };
-        obj[0] = outer1_9.INVALID_ORIGIN;
-        const tmp24 = new tmp4(outer1_2[11])(obj, "Origin has changed");
+        obj[0] = closure_1_9.INVALID_ORIGIN;
+        const tmp24 = new callback(closure_1_2[11])(obj, "Origin has changed");
         throw tmp24;
       } else {
         try {
@@ -137,21 +127,21 @@ class PostMessageTransport extends EventEmitter {
           obj.emit("request", source, parsed);
         } catch (err) {
           obj = { closeCode: null };
-          obj[0] = outer1_9.CLOSE_UNSUPPORTED;
-          const tmp16 = new tmp4(outer1_2[11])(obj, "Payload not recognized encoding");
+          obj[0] = closure_1_9.CLOSE_UNSUPPORTED;
+          const tmp16 = new callback(closure_1_2[11])(obj, "Payload not recognized encoding");
           throw tmp16;
         }
       }
     };
-    f107637 = undefined;
+    closure_0 = undefined;
     closure_1 = tmp4;
-    f107637 = closure_3((arg0, arg1, arg2) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      let c8 = 0;
-      let c9 = 0;
-      let c7 = 0;
+    closure_0 = closure_3((arg0, arg1, arg2) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      c8 = 0;
+      c9 = 0;
+      c7 = 0;
       return (function*(arg0, arg1, arg2) {
         if (c9 === 2) {
           c9 = 3;
@@ -185,7 +175,7 @@ class PostMessageTransport extends EventEmitter {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let c5 = tmp4;
+                  c5 = tmp4;
                   let user = tmp9;
                   throwTypeErrorResult = lib;
                   throwTypeErrorResult = lib2;
@@ -193,7 +183,7 @@ class PostMessageTransport extends EventEmitter {
                   let json;
                   user = undefined;
                   c5 = undefined;
-                  let c6;
+                  c6 = undefined;
                   throwTypeErrorResult = lib2;
                   if (null != lib2.handshakeFailureTimeoutId) {
                     const _clearTimeout = clearTimeout;
@@ -206,7 +196,7 @@ class PostMessageTransport extends EventEmitter {
                   throwTypeErrorResult = paths;
                   c8 = 1;
                   c9 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = lib(paths[13])(paths[12], paths.paths);
                   return obj1;
                 }
@@ -221,10 +211,10 @@ class PostMessageTransport extends EventEmitter {
                   return obj2;
                 } else {
                   throwTypeErrorResult = user;
-                  const outer1_3 = arg1.default;
+                  closure_3 = arg1.default;
                   throwTypeErrorResult = user;
                   throwTypeErrorResult = c5;
-                  let c7 = 1;
+                  c7 = 1;
                   throwTypeErrorResult = json;
                   throwTypeErrorResult = lib2;
                   throwTypeErrorResult = lib2;
@@ -254,18 +244,18 @@ class PostMessageTransport extends EventEmitter {
                   c7 = 0;
                   throwTypeErrorResult = user;
                   throwTypeErrorResult = lib2;
-                  const outer1_5 = lib2;
-                  throwTypeErrorResult = outer1_5;
-                  const outer1_6 = outer1_5.frame_id;
-                  throwTypeErrorResult = outer1_6;
+                  closure_5 = lib2;
+                  throwTypeErrorResult = closure_5;
+                  frame_id = closure_5.frame_id;
+                  throwTypeErrorResult = frame_id;
                   throwTypeErrorResult = lib;
-                  if (outer1_6 === lib.iframeId) {
+                  if (frame_id === lib.iframeId) {
                     throwTypeErrorResult = user;
                     throwTypeErrorResult = c5;
-                    throwTypeErrorResult = outer1_13;
+                    throwTypeErrorResult = closure_1_13;
                     throwTypeErrorResult = lib;
-                    if (outer1_13.has(lib.iframeId)) {
-                      if (null != outer1_5.sdk_version) {
+                    if (closure_1_13.has(lib.iframeId)) {
+                      if (null != closure_5.sdk_version) {
                         obj3 = lib2(paths[9]);
                         const obj4 = { application_id: null, sdk_version: null };
                         obj4[0] = c5.client_id;
@@ -277,26 +267,26 @@ class PostMessageTransport extends EventEmitter {
                       obj5[0] = lib;
                       obj5[1] = paths;
                       const _Number = Number;
-                      obj5[2] = Number(outer1_5.v);
+                      obj5[2] = Number(closure_5.v);
                       obj5[3] = lib2.logger;
-                      obj5[4] = outer1_14;
-                      const encoding = outer1_5.encoding;
+                      obj5[4] = closure_1_14;
+                      const encoding = closure_5.encoding;
                       json = encoding;
                       if (encoding == null) {
                         json = "json";
                       }
                       obj5[5] = json;
-                      const outer1_4 = lib2.createPostMessageProxySocket(obj5);
+                      user = lib2.createPostMessageProxySocket(obj5);
                       c7 = 0;
                       const logger5 = lib2.logger;
                       const _HermesInternal6 = HermesInternal;
-                      logger5.info("Socket Opened: " + outer1_4.id);
+                      logger5.info("Socket Opened: " + user.id);
                       c7 = 3;
-                      throwTypeErrorResult = outer1_5;
+                      throwTypeErrorResult = closure_5;
                       c8 = 5;
                       c9 = 1;
                       const obj6 = { value: null, done: false };
-                      obj6[0] = lib2.validateSocketClient(outer1_4, lib.origin, outer1_5.client_id);
+                      obj6[0] = lib2.validateSocketClient(user, lib.origin, closure_5.client_id);
                       return obj6;
                     }
                   }
@@ -304,22 +294,22 @@ class PostMessageTransport extends EventEmitter {
                   throwTypeErrorResult = c5;
                   throwTypeErrorResult = lib2;
                   const logger6 = lib2.logger;
-                  throwTypeErrorResult = outer1_6;
+                  throwTypeErrorResult = frame_id;
                   throwTypeErrorResult = lib;
                   const _HermesInternal7 = HermesInternal;
-                  throwTypeErrorResult = logger6.error("Unrecognized iframe ID: reported " + outer1_6 + ", expected " + lib.iframeId);
+                  throwTypeErrorResult = logger6.error("Unrecognized iframe ID: reported " + frame_id + ", expected " + lib.iframeId);
                   throwTypeErrorResult = lib2;
                   throwTypeErrorResult = paths;
                   const obj7 = { closeCode: null };
                   throwTypeErrorResult = c9;
                   obj7[0] = c9.CLOSE_UNSUPPORTED;
-                  throwTypeErrorResult = outer1_6;
+                  throwTypeErrorResult = frame_id;
                   const _HermesInternal8 = HermesInternal;
                   throwTypeErrorResult = lib2(paths[11]);
                   throwTypeErrorResult = new.target;
                   throwTypeErrorResult = new.target;
                   throwTypeErrorResult = obj7;
-                  throwTypeErrorResult = new throwTypeErrorResult(obj7, "Unrecognized iframe ID " + outer1_6);
+                  throwTypeErrorResult = new throwTypeErrorResult(obj7, "Unrecognized iframe ID " + frame_id);
                   throw throwTypeErrorResult;
                 }
               } else if (2 === tmp9) {
@@ -355,15 +345,15 @@ class PostMessageTransport extends EventEmitter {
               } else {
                 throwTypeErrorResult = user;
                 throwTypeErrorResult = c5;
-                throwTypeErrorResult = outer1_13;
+                throwTypeErrorResult = closure_1_13;
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = user;
                 throwTypeErrorResult = c5;
-                if (outer1_13.has(lib.iframeId)) {
-                  const result = outer1_12.set(lib.iframeId, user);
-                  outer1_13.delete(lib.iframeId);
+                if (closure_1_13.has(lib.iframeId)) {
+                  const result = closure_1_12.set(lib.iframeId, user);
+                  closure_1_13.delete(lib.iframeId);
                   const scopes = user.authorization.scopes;
-                  scopes.push(outer1_6);
+                  scopes.push(frame_id);
                   lib2.emit("connect", user);
                   const logger2 = lib2.logger;
                   const _HermesInternal3 = HermesInternal;
@@ -412,14 +402,14 @@ class PostMessageTransport extends EventEmitter {
       }
       return applyArgumentsResult;
     };
-    f107637 = undefined;
+    closure_0 = undefined;
     closure_1 = tmp4;
-    f107637 = closure_3((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+    closure_0 = closure_3((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
@@ -448,12 +438,12 @@ class PostMessageTransport extends EventEmitter {
                 return obj;
               } else {
                 let message = tmp3;
-                let c2 = tmp7;
+                c2 = tmp7;
                 c2 = undefined;
                 c6 = 1;
                 c7 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = callback(outer1_2[13])(outer1_2[12], outer1_2.paths);
+                obj1 = { value: null, done: false };
+                obj1[0] = callback(closure_2[13])(closure_2[12], closure_2.paths);
                 return obj1;
               }
             } else if (1 === tmp7) {
@@ -466,15 +456,15 @@ class PostMessageTransport extends EventEmitter {
                 obj2[0] = arg1;
                 return obj2;
               } else {
-                outer1_2 = arg1.default;
-                let c5 = 1;
-                const obj6 = lib(outer1_2[14])(c2);
+                closure_2 = arg1.default;
+                c5 = 1;
+                const obj6 = lib(closure_2[14])(c2);
                 const obj3 = { code: null, message: null };
-                const requiredResult = lib(outer1_2[14])(c2).required();
+                const requiredResult = lib(closure_2[14])(c2).required();
                 const _Object = Object;
                 const numberResult = c2.number();
-                obj3[0] = c2.number().valid(Object.values(outer1_9)).required();
-                const validResult = c2.number().valid(Object.values(outer1_9));
+                obj3[0] = c2.number().valid(Object.values(closure_1_9)).required();
+                const validResult = c2.number().valid(Object.values(closure_1_9));
                 obj3[1] = c2.string().optional();
                 c2.assert(lib, requiredResult.keys(obj3));
                 c5 = 0;
@@ -484,14 +474,14 @@ class PostMessageTransport extends EventEmitter {
               }
             } else {
               c5 = 0;
-              message = _slicedToArray;
+              message = closure_4;
               obj = { closeCode: null };
-              obj[0] = outer1_9.CLOSE_UNSUPPORTED;
-              const tmp19 = new lib(outer1_2[11])(obj, message.message);
+              obj[0] = closure_1_9.CLOSE_UNSUPPORTED;
+              const tmp19 = new lib(closure_2[11])(obj, message.message);
               throw tmp19;
             }
           } catch (tmp27) {
-            _slicedToArray = tmp27;
+            closure_4 = tmp27;
             if (tmp4 === c5) {
               c7 = tmp2;
               throw tmp27;
@@ -524,12 +514,10 @@ class PostMessageTransport extends EventEmitter {
   }
 }
 PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframeId, arg2, arg3) {
-  let tmp5;
-  let tmp6;
   if (Array.isArray(arg2)) {
     const self = this;
     [tmp5, tmp6] = callback2(arg2, 2);
-    if (HANDSHAKE.HANDSHAKE === tmp5) {
+    if (HANDSHAKEDefault.HANDSHAKE === tmp5) {
       if (null != value) {
         let obj = { closeCode: null };
         obj[0] = constants2.CLOSE_UNSUPPORTED;
@@ -549,7 +537,7 @@ PostMessageTransport.prototype["routeEvent"] = function routeEvent(value, iframe
       }
     } else if (tmp7(8751).CLOSE === tmp5) {
       if (null == value) {
-        const obj1 = { closeCode: null };
+        obj1 = { closeCode: null };
         obj1[0] = constants2.CLOSE_UNSUPPORTED;
         const tmp20 = new tmp7(8752)(obj1, "Not connected");
         throw tmp20;

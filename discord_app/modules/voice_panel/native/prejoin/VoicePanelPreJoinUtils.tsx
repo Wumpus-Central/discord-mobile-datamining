@@ -1,11 +1,13 @@
 // discord_app/modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-const result = require("set").fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
+import set from "set" /* 2 */;
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+
+const result = set.fileFinishedImporting("modules/voice_panel/native/prejoin/VoicePanelPreJoinUtils.tsx");
 
 export const areVoicePanelPreJoinContentPropsEqual = function areVoicePanelPreJoinContentPropsEqual(streamingMembers) {
   if (null != streamingMembers) {
     if (null != arg1) {
-      if (shallowEqual(streamingMembers, arg1, ["streamingMembers"])) {
+      if (shallowEqualDefault(streamingMembers, arg1, ["streamingMembers"])) {
         let num = 0;
         streamingMembers = streamingMembers.streamingMembers;
         for (const item10013 of streamingMembers) {

@@ -1,29 +1,21 @@
 // discord_app/modules/search/native/components/list/rows/DMRow.tsx
-import sortActivity from "sortActivity";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "SearchListRow";
-import get_ActivityIndicator from "registerAsset";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import closure_9 from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../../design/components/Text/native/Text.tsx";
-import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
-import { ActivityStatus } from "../../../../../activity_status/native/ActivityStatus.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import nameFromUser from "nameFromUser" /* 4219 */;
+import Text from "Text" /* 4734 */;
+import ActivityStatusDefault from "ActivityStatus" /* 9893 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_9 from "sortActivity" /* 4559 */;
+import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function FriendPresence(user) {
-  let animate;
-  let guildId;
-  let type;
   user = user.user;
   ({ type, animate, guildId } = user);
   if (type === constants.PENDING_INCOMING) {
@@ -37,7 +29,7 @@ function FriendPresence(user) {
     obj[1] = guildId;
     ({ activityStatusIcon: obj[2], activityStatusText: obj[3] } = tmp);
     obj[5] = animate;
-    tmp5 = callback(ActivityStatus, obj);
+    tmp5 = callback(ActivityStatusDefault, obj);
   }
   return tmp5;
 }
@@ -46,16 +38,12 @@ let c5 = importAllResult;
 ({ StatusTypes: unpackModuleId, RelationshipTypes: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: null, tag: null, title: null };
-obj = { color: require("Themes").colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
+obj = { color: ThemesDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" };
 obj[1] = obj;
 obj[2] = { marginLeft: 4 };
 obj[3] = { flexDirection: "row" };
 let closure_15 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function DMRow(user) {
-  let accessibilityActions;
-  let onAccessibilityAction;
-  let premiumSince;
-  let stateFromStores1;
   user = user.user;
   ({ nickname: stateFromStores1, premiumSince } = user);
   const isOwner = user.isOwner;
@@ -63,8 +51,8 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   const guildId = user.guildId;
   const onPress = user.onPress;
   let trailing = user.trailing;
-  let c7;
-  let maybeApplyNoTextColorForLightCustomTheme;
+  closure_7 = undefined;
+  closure_8 = undefined;
   let isMobileOnline;
   let isVROnline;
   let status;
@@ -72,10 +60,10 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   let name;
   ({ accessibilityActions, onAccessibilityAction } = user);
   const tmp = callback2();
-  c7 = tmp;
+  closure_7 = tmp;
   let obj = guildId;
   const tmp2 = type(guildId.useState(false), 2);
-  maybeApplyNoTextColorForLightCustomTheme = tmp2[1];
+  closure_8 = tmp2[1];
   let items = [isMobileOnline];
   const stateFromStoresObject = user(premiumSince[14]).useStateFromStoresObject(items, () => ({ isMobileOnline: isMobileOnline.isMobileOnline(user.id), isVROnline: isMobileOnline.isVROnline(user.id), status: isMobileOnline.getStatus(user.id) }));
   isMobileOnline = stateFromStoresObject.isMobileOnline;
@@ -83,7 +71,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   status = stateFromStoresObject.status;
   let obj2 = user(premiumSince[14]);
   const tmp3 = user;
-  const items1 = [maybeApplyNoTextColorForLightCustomTheme];
+  const items1 = [closure_8];
   stateFromStores = user(premiumSince[14]).useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   let obj3 = user(premiumSince[14]);
   const items2 = [isVROnline];
@@ -123,13 +111,13 @@ const memoResult = importAllResult.memo(function DMRow(user) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
-            outer1_8(true);
-            let c3 = 1;
+            closure_0 = tmp3;
+            closure_1_8(true);
+            c3 = 1;
             c1 = 2;
             c4 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_6(outer1_0.id);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_6(closure_1_0.id);
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -175,7 +163,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
   items4[5] = premiumSince;
   const items5 = [user, status, isMobileOnline, isVROnline, guildId];
   const memo = obj.useMemo(() => {
-    let obj = { style: _undefined.title, children: null };
+    let obj = { style: title.title, children: null };
     obj = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: name };
     const items = [name(user(premiumSince[11]).Text, obj), , , ];
     let obj2 = user;
@@ -186,7 +174,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
       if (isOwner) {
         obj = { style: null, children: null };
         obj[0] = tmp3.tag;
-        const obj1 = { size: null, source: null, disableColor: true };
+        obj1 = { size: null, source: null, disableColor: true };
         obj1[0] = tmp5(tmp6[16]).Icon.Sizes.REFRESH_SMALL_16;
         obj1[1] = stateFromStores1(tmp6[17]);
         obj[1] = tmp4(tmp5(tmp6[16]).Icon, obj1);
@@ -205,7 +193,7 @@ const memoResult = importAllResult.memo(function DMRow(user) {
       }
       items[3] = tmp4Result;
       obj[1] = items;
-      return outer1_14(tmp2, obj);
+      return closure_1_14(tmp2, obj);
     } else {
       const obj4 = { style: null, verified: null, type: null };
       obj4[0] = tmp3.tag;
@@ -249,19 +237,19 @@ const memoResult = importAllResult.memo(function DMRow(user) {
       obj[1] = guildId;
       obj[2] = tmp7;
       obj[3] = !stateFromStores;
-      tmp8 = name(outer1_16, obj);
+      tmp8 = name(closure_1_16, obj);
     }
     tmp6 = tmp8;
   }, items6);
   obj = { label: memo, subLabel: memo2, icon: memo1, onPress: callback, trailing: null, accessibilityActions: null, onAccessibilityAction: null };
   if (tmp2[0]) {
-    trailing = tmp14(c7, {});
+    trailing = tmp14(closure_7, {});
   }
   obj[4] = trailing;
   obj[5] = accessibilityActions;
   obj[6] = onAccessibilityAction;
   return name(tmp3(premiumSince[19]).SearchListRow, obj);
 });
-const result = require("noop").fileFinishedImporting("modules/search/native/components/list/rows/DMRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/DMRow.tsx");
 
 export default memoResult;

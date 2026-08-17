@@ -1,12 +1,12 @@
 // discord_app/modules/voice_panel/VoicePanelUtils.native.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import withEqualityFn from "withEqualityFn";
-import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useIsStageVoicePanelEnabled } from "../stage_channels/StageVoicePanelExperiment.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import useIsStageVoicePanelEnabled from "useIsStageVoicePanelEnabled" /* 8665 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "withEqualityFn" /* 8664 */;
 
-const require = arg1;
-let result = require("withEqualityFn").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelUtils.native.tsx");
 
 export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
   const result = useIsStageVoicePanelEnabled.isStageVoicePanelEnabled("voice_panel_utils");
@@ -21,7 +21,7 @@ export const isVoicePanelEnabled = function isVoicePanelEnabled(channel2) {
   return !tmp2;
 };
 export const useIsVoicePanelShowing = function useIsVoicePanelShowing() {
-  const items = [ensureGuildLoaded, createRTCConnection];
+  const items = [closure_2, closure_3];
   return defaultAreStatesEqual.useStateFromStores(items, () => {
     channel = channel.getChannel(channelId.getChannelId());
     let tmp = null != channel;
@@ -41,13 +41,13 @@ export const useIsVoicePanelFullscreen = function useIsVoicePanelFullscreen() {
   return callback((isVoicePanelFullscreen) => isVoicePanelFullscreen.isVoicePanelFullscreen());
 };
 export const useIsVoicePanelOpen = function useIsVoicePanelOpen(channelId) {
-  let closure_0 = channelId;
+  closure_0 = channelId;
   return callback((isChannelOpen) => isChannelOpen.isChannelOpen(closure_0));
 };
 export const useIsAnyVoicePanelOpen = function useIsAnyVoicePanelOpen() {
   return callback((isAnyVoicePanelOpen) => isAnyVoicePanelOpen.isAnyVoicePanelOpen());
 };
 export const useIsVoicePanelMounted = function useIsVoicePanelMounted(channelId) {
-  let closure_0 = channelId;
+  closure_0 = channelId;
   return callback((isMounted) => isMounted.isMounted(closure_0));
 };

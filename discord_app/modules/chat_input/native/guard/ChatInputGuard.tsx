@@ -1,27 +1,23 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuard.tsx
-import Button from "Button";
-import get_ActivityIndicator from "componentDidMount";
-import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight";
-import jsxProd from "TwinButtons";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Radius } from "../../../../../discord_common/js/packages/tokens/radii/generated/generated-definitions.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { ButtonGroup } from "../../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useIsUsingClientTheme } from "../../../client_themes/native/useIsUsingClientTheme.tsx";
-import { getChatInputPositionStyle } from "../getChatInputPositionStyle.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Radius from "Radius" /* 806 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import ButtonGroup from "ButtonGroup" /* 6687 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 8502 */;
+import getChatInputPositionStyleDefault from "getChatInputPositionStyle" /* 11425 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { updateChatInputContainerHeight as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, content: null, underlay: null, wrapper: null, floating: null, text: null, subtext: null, spacing: null };
-  obj = { paddingHorizontal: Themes.space.PX_12, paddingBottom: Themes.space.PX_8 };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_8 };
   obj[0] = obj;
   let lg;
   if (arg0) {
@@ -34,44 +30,24 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   }
   obj[1] = str;
   obj[1] = obj;
-  const obj1 = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWER, height: null };
-  obj1[1] = Themes.space.PX_8 + Radius.Radius.lg;
+  obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, height: ThemesDefault.space.PX_8 + Radius.Radius.lg };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj1.top = undefined;
   obj[2] = obj1;
-  obj[3] = { borderColor: Themes.colors.BORDER_MUTED, paddingHorizontal: Themes.space.PX_12, paddingTop: Themes.space.PX_16, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderRadius: Themes.radii.lg, borderWidth: 1 };
-  const obj2 = { borderColor: Themes.colors.BORDER_MUTED, paddingHorizontal: Themes.space.PX_12, paddingTop: Themes.space.PX_16, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderRadius: Themes.radii.lg, borderWidth: 1 };
-  obj[4] = { backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: Themes.colors.BORDER_MUTED, borderWidth: 1 };
+  obj[3] = { borderColor: ThemesDefault.colors.BORDER_MUTED, paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
+  const obj2 = { borderColor: ThemesDefault.colors.BORDER_MUTED, paddingHorizontal: ThemesDefault.space.PX_12, paddingTop: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, borderWidth: 1 };
+  obj[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: ThemesDefault.colors.BORDER_MUTED, borderWidth: 1 };
   obj[5] = { textAlign: "center" };
-  const obj3 = { backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderRadius: Themes.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: Themes.colors.BORDER_MUTED, borderWidth: 1 };
-  obj[6] = { marginTop: Themes.space.PX_4, textAlign: "center" };
-  const obj4 = { marginTop: Themes.space.PX_4, textAlign: "center" };
-  obj[7] = { marginTop: Themes.space.PX_8 };
+  const obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, borderColor: ThemesDefault.colors.BORDER_MUTED, borderWidth: 1 };
+  obj[6] = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
+  const obj4 = { marginTop: ThemesDefault.space.PX_4, textAlign: "center" };
+  obj[7] = { marginTop: ThemesDefault.space.PX_8 };
   return obj;
 });
-const result = require("updateChatInputContainerHeight").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuard.tsx");
 
 export default function ChatInputGuard(type) {
-  let actionIcon;
-  let actionLabel;
-  let actionOnPress;
-  let buttonPrimaryDisabled;
-  let buttonPrimaryLoading;
-  let buttonPrimaryOnPress;
-  let buttonPrimaryText;
-  let buttonPrimaryVariant;
-  let buttonSecondaryDisabled;
-  let buttonSecondaryLoading;
-  let buttonSecondaryOnPress;
-  let buttonSecondaryText;
-  let countdown;
-  let countdown2;
-  let icon;
-  let message;
-  let message2;
-  let subtext;
-  let subtext2;
-  const tmp3 = callback2(useIsUsingClientTheme());
+  const tmp3 = callback2(useIsUsingClientThemeDefault());
   if ("simple-action" === type.type) {
     ({ countdown, actionIcon, actionLabel, actionOnPress } = type);
     let obj = { style: null, children: null };
@@ -82,7 +58,7 @@ export default function ChatInputGuard(type) {
     obj[3] = icon;
     if (null != actionLabel) {
       if (null != actionOnPress) {
-        const obj1 = { accessibilityLabel: null, icon: null, size: "sm", onPress: null };
+        obj1 = { accessibilityLabel: null, icon: null, size: "sm", onPress: null };
         obj1[0] = actionLabel;
         if (actionIcon == null) {
           const obj2 = { color: null };
@@ -175,22 +151,20 @@ export default function ChatInputGuard(type) {
   }
 };
 export const ChatInputGuardContainer = function ChatInputGuardContainer(screenIndex) {
-  let children;
-  let onJumpToPresent;
   screenIndex = screenIndex.screenIndex;
   const channelId = screenIndex.channelId;
   ({ onJumpToPresent, children } = screenIndex);
-  const tmp3 = useIsUsingClientTheme();
+  const tmp3 = useIsUsingClientThemeDefault();
   let obj = screenIndex(1367);
   const chatInputFloating = obj.useMobileVisualRefreshConfig({ location: "ChatInputGuardContainer" }).chatInputFloating;
-  let obj1 = screenIndex(11426);
+  obj1 = screenIndex(11426);
   const chatInputFloatingOverlayStyle = obj1.useChatInputFloatingOverlayStyle();
   const tmp6 = callback2(tmp3);
   const items = [screenIndex];
   const callback = React.useCallback((nativeEvent) => {
-    outer1_6(screenIndex, nativeEvent.nativeEvent.layout.height);
+    closure_1_6(screenIndex, nativeEvent.nativeEvent.layout.height);
   }, items);
-  const items1 = [getChatInputPositionStyle({ isCreatingThread: false }), ];
+  const items1 = [getChatInputPositionStyleDefault({ isCreatingThread: false }), ];
   let tmp10 = chatInputFloating;
   if (chatInputFloating) {
     tmp10 = chatInputFloatingOverlayStyle;

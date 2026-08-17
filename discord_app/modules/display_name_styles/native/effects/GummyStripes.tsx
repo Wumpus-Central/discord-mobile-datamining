@@ -1,19 +1,18 @@
 // discord_app/modules/display_name_styles/native/effects/GummyStripes.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, Fragment: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ stripe: { flex: 1 }, stripeOverlap: { marginLeft: -1 } });
-const result = require("jsxProd").fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");
+const result = require("set").fileFinishedImporting("modules/display_name_styles/native/effects/GummyStripes.tsx");
 
 export default function GummyStripes(colors) {
   colors = colors.colors;
-  let closure_0;
+  closure_0 = undefined;
   closure_0 = callback2();
   return callback(closure_4, {
     children: colors.map((color) => {
@@ -24,11 +23,10 @@ export default function GummyStripes(colors) {
       }
       let obj = { style: null };
       items[1] = stripeOverlap;
-      obj = { backgroundColor: null };
-      obj[0] = lib(outer1_1[4]).int2hex(color);
+      obj = { backgroundColor: lib(closure_1_1[4]).int2hex(color) };
       items[2] = obj;
       obj[0] = items;
-      return outer1_3(outer1_2, obj, arg1);
+      return closure_1_3(closure_1_2, obj, arg1);
     })
   });
 };

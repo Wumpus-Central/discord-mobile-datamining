@@ -1,5 +1,7 @@
 // discord_app/lib/CachedEntriesMap.tsx
-let result = require("set").fileFinishedImporting("lib/CachedEntriesMap.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("lib/CachedEntriesMap.tsx");
 class CachedEntriesMap {
   constructor() {
     obj = Object.create(new.target.prototype);

@@ -1,20 +1,18 @@
 // discord_app/modules/chat_input/native/FloatingChatInputContainer.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { Easing } from "module_4115";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { Easing } from "module_4115" /* 4115 */;
 
 const require = arg1;
 function useKeyboardOpenPaddingStyle() {
-  let importDefault;
-  let tmp5;
-  token = token(4097).useToken(Themes.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
+  token = token(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_CONTENT_PADDING_VERTICAL);
   let obj = token(4097);
   const obj2 = React;
   [tmp5, importDefault] = sharedValue(React.useState(() => {
-    const KeyboardController = token(tmp5[6]).KeyboardController;
+    const KeyboardController = token(1643).KeyboardController;
     const stateResult = KeyboardController.state();
     let num;
     if (stateResult != null) {
@@ -26,17 +24,17 @@ function useKeyboardOpenPaddingStyle() {
     return num > 0;
   }), 2);
   const effect = React.useEffect(() => {
-    const KeyboardEvents = token(tmp5[6]).KeyboardEvents;
-    let closure_0 = KeyboardEvents.addListener("keyboardWillShow", () => lib(true));
-    const KeyboardEvents2 = token(tmp5[6]).KeyboardEvents;
-    let closure_1 = KeyboardEvents2.addListener("keyboardWillHide", () => lib(false));
+    const KeyboardEvents = token(1643).KeyboardEvents;
+    closure_0 = KeyboardEvents.addListener("keyboardWillShow", () => lib(true));
+    const KeyboardEvents2 = token(1643).KeyboardEvents;
+    closure_1 = KeyboardEvents2.addListener("keyboardWillHide", () => lib(false));
     return () => {
       closure_0.remove();
       lib.remove();
     };
   }, []);
   const tmp4 = sharedValue(React.useState(() => {
-    const KeyboardController = token(tmp5[6]).KeyboardController;
+    const KeyboardController = token(1643).KeyboardController;
     const stateResult = KeyboardController.state();
     let num;
     if (stateResult != null) {
@@ -54,7 +52,7 @@ function useKeyboardOpenPaddingStyle() {
   if (!tmp5) {
     tmp5 = tmp7 !== token(1627).KeyboardTypes.SYSTEM;
   }
-  const dependencyMap = tmp5;
+  dependencyMap = tmp5;
   let tmpResult = tmp(4115);
   let num = 0;
   if (tmp5) {
@@ -63,12 +61,12 @@ function useKeyboardOpenPaddingStyle() {
   sharedValue = tmpResult.useSharedValue(num);
   const items = [tmp5, token, sharedValue];
   const effect1 = obj2.useEffect(() => {
-    let obj = token(tmp5[9]);
+    let obj = token(4664);
     let num = 0;
-    if (tmp5) {
+    if (dependencyMap) {
       num = token;
     }
-    obj = { duration: token(tmp5[10]).timingStandardDuration, easing: outer1_6 };
+    obj = { duration: token(4667).timingStandardDuration, easing: closure_1_6 };
     const result = sharedValue.set(obj.withTiming(num, obj));
   }, items);
   tmpResult = tmp(4115);
@@ -82,16 +80,13 @@ function useKeyboardOpenPaddingStyle() {
 }
 let closure_6 = Easing.bezier(0.2, 0, 0, 1);
 let closure_7 = { code: "function FloatingChatInputContainerTsx1(){const{paddingSV}=this.__closure;return{paddingBottom:paddingSV.get()};}" };
-let result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/FloatingChatInputContainer.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/FloatingChatInputContainer.tsx");
 
 export default function FloatingChatInputContainer(arg0) {
-  let children;
-  let onLayout;
-  let style;
   ({ style, onLayout, children } = arg0);
   style = [, ];
   style[0] = style;
   style[1] = useKeyboardOpenPaddingStyle();
-  return jsx(ReanimatedRexport.View, { style, onLayout, children });
+  return jsx(_modDef4115.View, { style, onLayout, children });
 };
 export { useKeyboardOpenPaddingStyle };

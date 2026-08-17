@@ -1,7 +1,9 @@
 // discord_app/design/utils/shared/themes.tsx
-import { ThemeTypes } from "sum";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
 
-const result = require("set").fileFinishedImporting("design/utils/shared/themes.tsx");
+const ThemeTypes = sum.ThemeTypes;
+const result = set.fileFinishedImporting("design/utils/shared/themes.tsx");
 
 export const isThemeLight = function isThemeLight(arg0) {
   return arg0 === ThemeTypes.LIGHT;

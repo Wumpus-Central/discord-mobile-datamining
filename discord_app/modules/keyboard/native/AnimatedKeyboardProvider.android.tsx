@@ -1,7 +1,8 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProvider.android.tsx
-import importDefaultResult from "enforcing";
+import mutableDefault from "mutable" /* 13939 */;
+import importDefaultResult from "enforcing" /* 1641 */;
 
-const result = require("enforcing").setNavigationBarContrastEnforced(false);
-const result1 = require("mutable").fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProvider.android.tsx");
+const result = importDefaultResult.setNavigationBarContrastEnforced(false);
+const result1 = require("set").fileFinishedImporting("modules/keyboard/native/AnimatedKeyboardProvider.android.tsx");
 
-export { default } from "mutable";
+export default mutableDefault;

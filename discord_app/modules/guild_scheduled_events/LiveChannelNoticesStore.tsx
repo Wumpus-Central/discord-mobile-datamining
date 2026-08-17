@@ -1,19 +1,21 @@
 // discord_app/modules/guild_scheduled_events/LiveChannelNoticesStore.tsx
-import { GuildScheduledEventStatus } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { PersistedStore } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
+const GuildScheduledEventStatus = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventStatus;
 let closure_1 = { hiddenEventsAndStages: [] };
+const PersistedStore = initializeDefault.PersistedStore;
 class LiveChannelNoticesStore extends PersistedStore {
 }
 const prototype = LiveChannelNoticesStore.prototype;
 prototype["initialize"] = function initialize(hiddenEventsAndStages) {
   if (tmp) {
-    let closure_1 = hiddenEventsAndStages;
+    closure_1 = hiddenEventsAndStages;
   }
 };
 prototype["isLiveChannelNoticeHidden"] = function isLiveChannelNoticeHidden(arg0) {
-  let eventId;
-  let stageId;
   ({ eventId, stageId } = arg0);
   let tmp = null == stageId;
   if (!tmp) {
@@ -38,10 +40,8 @@ prototype["getState"] = function getState() {
 };
 LiveChannelNoticesStore.displayName = "LiveChannelNoticesStore";
 LiveChannelNoticesStore.persistKey = "liveChannelNotices_v2";
-const liveChannelNoticesStore = new LiveChannelNoticesStore(require("dispatcher"), {
+const liveChannelNoticesStore = new LiveChannelNoticesStore(dispatcherDefault, {
   LIVE_CHANNEL_NOTICE_HIDE: function handleHideNotice(arg0) {
-    let eventId;
-    let stageId;
     ({ eventId, stageId } = arg0);
     if (null != eventId) {
       const prop = closure_1.hiddenEventsAndStages;
@@ -88,6 +88,6 @@ const liveChannelNoticesStore = new LiveChannelNoticesStore(require("dispatcher"
     }
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/LiveChannelNoticesStore.tsx");
 
 export default liveChannelNoticesStore;

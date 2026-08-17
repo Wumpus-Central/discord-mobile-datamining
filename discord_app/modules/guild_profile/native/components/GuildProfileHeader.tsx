@@ -1,32 +1,31 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileHeader.tsx
-import Text from "Text";
-import { View } from "transitionToGuild";
-import _getSystemLocale from "_getSystemLocale";
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { getBadgeTooltip } from "getBadgeTooltip";
-import jsxProd from "GuildBadgeV2";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import { getBadgeTooltip } from "getBadgeTooltip" /* 9517 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
-createCacheKey = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
+createCacheKey = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", flexDirection: "row", gap: 8 };
 createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 };
-createCacheKey[4] = { width: 8, height: 8, borderRadius: 4, backgroundColor: require("Themes").colors.TEXT_STATUS_OFFLINE };
-let obj1 = { width: 8, height: 8, borderRadius: 4, backgroundColor: require("Themes").colors.TEXT_STATUS_OFFLINE };
-createCacheKey[5] = { width: 8, height: 8, borderRadius: 4, backgroundColor: require("Themes").colors.TEXT_STATUS_ONLINE };
+createCacheKey[4] = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
+let obj1 = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
+createCacheKey[5] = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
 createCacheKey[6] = { display: "flex" };
 createCacheKey[7] = { marginTop: 4, display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[8] = { flexShrink: 1 };
 createCacheKey[9] = { marginLeft: 8, height: 24, width: 24 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { width: 8, height: 8, borderRadius: 4, backgroundColor: require("Themes").colors.TEXT_STATUS_ONLINE };
-const result = require("_getSystemLocale").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileHeader.tsx");
+let obj2 = { width: 8, height: 8, borderRadius: 4, backgroundColor: ThemesDefault.colors.TEXT_STATUS_ONLINE };
+const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileHeader.tsx");
 
 export default function GuildProfileHeader(icon) {
   const profile = icon.profile;
@@ -34,24 +33,22 @@ export default function GuildProfileHeader(icon) {
   let stateFromStores1;
   let tmp = createCacheKey();
   let obj = profile(stateFromStores1[9]);
-  const items = [_getSystemLocale];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  let obj1 = profile(stateFromStores1[10]);
+  obj1 = profile(stateFromStores1[10]);
   let obj2 = id(stateFromStores1[11]);
   const establishedDate = obj1.getEstablishedDate(obj2.extractTimestamp(profile.id), stateFromStores);
   let obj3 = profile(stateFromStores1[12]);
   const items1 = [profile];
   id = profile.id;
   const callback = React.useCallback(() => {
-    let tooltipSubtitle;
-    let tooltipTitle;
     let obj = profile(stateFromStores1[12]);
     const fromGuildProfileResult = obj.fromGuildProfile(profile);
     const tmp = stateFromStores1;
     const guildTraits = profile(stateFromStores1[13]).getGuildTraits(fromGuildProfileResult);
     const obj2 = profile(stateFromStores1[13]);
     const obj3 = profile(stateFromStores1[14]);
-    ({ tooltipTitle, tooltipSubtitle } = outer1_8(profile(stateFromStores1[14]).getBadgeCategory(guildTraits), guildTraits.visibility));
+    ({ tooltipTitle, tooltipSubtitle } = closure_1_8(profile(stateFromStores1[14]).getBadgeCategory(guildTraits), guildTraits.visibility));
     if (!tmp5) {
       if (tooltipSubtitle == null) {
         tooltipSubtitle = tooltipTitle;
@@ -63,10 +60,10 @@ export default function GuildProfileHeader(icon) {
     }
   }, items1);
   let obj4 = profile(stateFromStores1[9]);
-  const items2 = [trackCommunicationDisabled, fetchFingerprint];
+  const items2 = [closure_7, closure_6];
   const items3 = [id];
   stateFromStores1 = obj4.useStateFromStores(items2, () => {
-    const member = outer1_7.getMember(id, outer1_6.getId());
+    const member = closure_1_7.getMember(id, closure_1_6.getId());
     let joinedAt;
     if (member != null) {
       joinedAt = member.joinedAt;
@@ -99,8 +96,7 @@ export default function GuildProfileHeader(icon) {
   }
   obj3 = { onPress: tmp15, style: tmp.guildName, accessibilityRole: "header", variant: "heading-xl/semibold", color: "mobile-text-heading-primary", lineClamp: 1, children: profile.name };
   const items6 = [callback(profile(stateFromStores1[19]).Text, obj3), ];
-  obj4 = { onPress: callback, children: null };
-  obj4[1] = callback(tmp5(stateFromStores1[21]), { guild: fromGuildProfileResult, style: tmp.guildIcon });
+  obj4 = { onPress: callback, children: tmp13(tmp5(tmp3[21]), obj5) };
   items6[1] = callback(profile(stateFromStores1[20]).PressableHighlight, obj4);
   obj2[1] = items6;
   items5[1] = closure_10(View, obj2);

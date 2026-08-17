@@ -1,42 +1,38 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx
-import { Image } from "AccessibilityAnnouncer";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import reset from "reset";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import updateInvite from "updateInvite";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CodedLinkExtendedType } from "CodedLinkExtendedType";
-import ME from "ME";
-import InviteSendStates from "InviteSendStates";
-import { registerAsset } from "../../../../../../../../../_runtime/11903_registerAsset.js";
-import { Themes } from "../../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../../../../../../../discord_common/js/shared/shared-constants/GuildInviteFlags.tsx";
-import { getSystemLocale } from "../../../../../../../../intl/index.native.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../../../../../../../utils/GuildRecordUtils.tsx";
-import { combined } from "../../../../../../../../utils/HelpdeskUtils.tsx";
-import { getDescriptiveInviteError } from "../../../../../../../../utils/InviteErrorUtils.tsx";
-import { getHeaderTextForInvite } from "../../../../../../getHeaderTextForInvite.tsx";
-import { frozen } from "../../../../EmbedUtils.tsx";
-import { processColorOrThrow } from "../../../../RowGeneratorStyleSheet.tsx";
-import { getEmbedThemeColors } from "../../getEmbedThemeColors.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import combinedDefault from "combined" /* 1993 */;
+import set2 from "set" /* 8056 */;
+import processColorOrThrow from "processColorOrThrow" /* 8161 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import frozen from "frozen" /* 8171 */;
+import CodedLinkExtendedType2 from "CodedLinkExtendedType" /* 10510 */;
+import getDescriptiveInviteError from "getDescriptiveInviteError" /* 11902 */;
+import registerAssetDefault from "registerAsset" /* 11903 */;
+import getHeaderTextForInvite from "getHeaderTextForInvite" /* 12761 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import closure_6 from "reset" /* 4652 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "updateInvite" /* 4359 */;
+import closure_11 from "markAllUserIdListsStale" /* 4030 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
 
-let c4;
-let c5;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
+const Image = get_ActivityIndicator.Image;
 ({ getGuildIconURL: c4, getGuildAcronym: c5 } = GuildNSFWContentLevel);
+const CodedLinkExtendedType = CodedLinkExtendedType2.CodedLinkExtendedType;
 ({ HelpdeskArticles: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16 } = ME);
 ({ InviteTargetTypes: closure_17, InviteTypes: closure_18 } = InviteSendStates);
-const result = require("reset").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/invite/GuildInvite.tsx");
 
 export const createResolvingGuildInvite = function createResolvingGuildInvite(closure_2) {
-  const tmp = getEmbedThemeColors(closure_2);
+  const tmp = getEmbedThemeColorsDefault(closure_2);
   const obj = { headerText: null, resolvingGradientEnd: null, resolvingGradientStart: null, type: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["N/g9Z4"]).toUpperCase();
@@ -46,7 +42,7 @@ export const createResolvingGuildInvite = function createResolvingGuildInvite(cl
   return obj;
 };
 export const createExpiredGuildInvite = function createExpiredGuildInvite(author, arg1, closure_2) {
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
   let obj = {};
   const merged = Object.assign(tmp3.baseColors);
   const intl = getSystemLocale.intl;
@@ -61,7 +57,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   }
   obj.headerText = str.toUpperCase();
   let tmp6Result = tmp6(8161);
-  obj.titleColor = tmp6Result.processColorOrThrow(Themes.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp6Result.processColorOrThrow(ThemesDefault.unsafe_rawColors.RED_400);
   if (arg1) {
     const intl4 = tmp6(1236).intl;
     let stringResult = intl4.string(tmp6(1236).t["F/OLvL"]);
@@ -97,7 +93,7 @@ export const createExpiredGuildInvite = function createExpiredGuildInvite(author
   return obj;
 };
 export const createDisabledGuildInvite = function createDisabledGuildInvite(invite, closure_2) {
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
   if (null != invite.guild) {
     let obj = fromGuildPropertiesWithAdditionalFields;
     let fromInviteGuildResult = obj.fromInviteGuild(invite.guild);
@@ -126,7 +122,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   const intl2 = getSystemLocale.intl;
   obj.titleText = intl2.string(getSystemLocale.t.tQ4AnN);
   const str = intl.string(getSystemLocale.t["Hyx2F/"]);
-  obj.titleColor = processColorOrThrow.processColorOrThrow(Themes.unsafe_rawColors.RED_345);
+  obj.titleColor = processColorOrThrow.processColorOrThrow(ThemesDefault.unsafe_rawColors.RED_345);
   let name;
   if (fromInviteGuildResult != null) {
     name = fromInviteGuildResult.name;
@@ -141,11 +137,11 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   const intl5 = tmp14(1236).intl;
   obj.helpCenterArticleLabel = intl5.string(getSystemLocale.t["4FlZqw"]);
   const obj3 = processColorOrThrow;
-  obj.helpCenterArticleURL = combined.getArticleURL(constants.INVITE_DISABLED);
+  obj.helpCenterArticleURL = combinedDefault.getArticleURL(constants.INVITE_DISABLED);
   obj.guildIcon = tmp11;
   const tmp16 = tmp11;
-  const tmpResult = combined;
-  obj.thumbnailUrl = frozen.getAssetUriForEmbed(registerAsset);
+  const tmpResult = combinedDefault;
+  obj.thumbnailUrl = frozen.getAssetUriForEmbed(registerAssetDefault);
   let tmp17;
   if (null == tmp11) {
     let tmp18;
@@ -160,9 +156,7 @@ export const createDisabledGuildInvite = function createDisabledGuildInvite(invi
   return obj;
 };
 export const createErroredGuildInvite = function createErroredGuildInvite(code, arg1, closure_2) {
-  let baseColors;
-  let colors;
-  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
   inviteError = inviteError.getInviteError(code);
   let obj = getDescriptiveInviteError;
   code = undefined;
@@ -182,7 +176,7 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   }
   obj.headerText = str.toUpperCase();
   let tmp5Result = tmp5(8161);
-  obj.titleColor = tmp5Result.processColorOrThrow(Themes.unsafe_rawColors.RED_400);
+  obj.titleColor = tmp5Result.processColorOrThrow(ThemesDefault.unsafe_rawColors.RED_400);
   let description;
   if (descriptiveInviteError != null) {
     description = descriptiveInviteError.description;
@@ -216,23 +210,14 @@ export const createErroredGuildInvite = function createErroredGuildInvite(code, 
   return obj;
 };
 export const createGuildInvite = function createGuildInvite(invite, isOwnInvite, closure_2) {
-  let acceptLabelGreenBackgroundColor;
-  let acceptLabelGreenBackgroundColor2;
-  let acceptLabelGreenColor;
-  let acceptLabelGreenColor2;
-  let approximate_member_count;
-  let approximate_presence_count;
-  let baseColors;
-  let colors;
-  let target_user;
-  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
   let guild = null;
   if (null != invite.guild) {
     guild = store.getGuild(invite.guild.id);
   }
   let tmpResult = tmp(10512);
-  const items = [trackCommunicationDisabled];
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const items = [closure_8];
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
   const channel = tmp(10511)(invite).channel;
   const tmp7 = null != channel && channel.isGuildVocal();
   let flag;
@@ -249,7 +234,7 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   }
   let flag2 = true;
   if (tmp8) {
-    let obj1 = fromGuildPropertiesWithAdditionalFields;
+    obj1 = fromGuildPropertiesWithAdditionalFields;
     guild = obj1.fromInviteGuild(invite.guild);
     flag2 = false;
   }
@@ -271,7 +256,7 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
   if (num == null) {
     num = 0;
   }
-  obj[5] = tmp10Result.hasFlag(num, set.GuildInviteFlags.IS_GUEST_INVITE);
+  obj[5] = tmp10Result.hasFlag(num, set2.GuildInviteFlags.IS_GUEST_INVITE);
   const str = obj2.getHeaderTextForInvite(obj);
   if (guild != null) {
     let name = guild.name;
@@ -458,7 +443,7 @@ export const createGuildInvite = function createGuildInvite(invite, isOwnInvite,
     obj6.canBeAccepted = canAcceptInviteResult;
     let channelName;
     if (null != channel) {
-      channelName = tmp10(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+      channelName = tmp10(4984).computeChannelName(channel, closure_12, closure_11);
       const tmp10Result4 = tmp10(4984);
     }
     obj6.channelName = channelName;

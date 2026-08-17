@@ -1,8 +1,8 @@
 // discord_app/modules/media_viewer/native/components/MediaModalYoutube.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { YOUTUBE_EMBED_PAGE_TYPE } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { YOUTUBE_EMBED_PAGE_TYPE } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -12,10 +12,10 @@ const memoResult = importAllResult.memo((visible) => {
   const source = visible.source;
   const merged = Object.assign(visible, Object.create(null));
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
-  let importAllResult;
-  let c5;
+  importAllResult = undefined;
+  closure_5 = undefined;
   let ref;
   let tmp4 = callback(importAllResult.useState(visible(9016).PlayerState.UNREADY), 2);
   first = tmp4[0];
@@ -25,7 +25,7 @@ const memoResult = importAllResult.memo((visible) => {
   const tmp8 = first(6701)(first);
   importAllResult = tmp8;
   const tmp9 = first(6701)(visible);
-  c5 = tmp9;
+  closure_5 = tmp9;
   ref = importAllResult.useRef(null);
   const effect = importAllResult.useEffect(() => {
     const MediaViewerAnalytics = visible(8996).MediaViewerAnalytics;
@@ -33,8 +33,6 @@ const memoResult = importAllResult.memo((visible) => {
   }, []);
   const items = [ref, visible, tmp9, tmp8, first];
   callback = importAllResult.useCallback((arg0) => {
-    let type;
-    let value;
     const parsed = JSON.parse(arg0);
     ({ type, value } = parsed);
     if ("onReady" === type) {
@@ -97,7 +95,7 @@ const memoResult = importAllResult.memo((visible) => {
     if (tmp2) {
       let tmp7 = visible;
       if (visible) {
-        tmp7 = c4 === visible(9016).PlayerState.UNREADY;
+        tmp7 = closure_4 === visible(9016).PlayerState.UNREADY;
       }
       if (tmp7) {
         tmp7 = first === visible(9016).PlayerState.READY;
@@ -108,7 +106,7 @@ const memoResult = importAllResult.memo((visible) => {
       }
       let tmp15 = tmp6;
       if (visible) {
-        tmp15 = !c5;
+        tmp15 = !closure_5;
       }
       if (tmp15) {
         const current2 = tmp.current;
@@ -116,7 +114,7 @@ const memoResult = importAllResult.memo((visible) => {
       }
       let tmp18 = !tmp6;
       if (!visible) {
-        tmp18 = c5;
+        tmp18 = closure_5;
       }
       if (tmp18) {
         const current3 = tmp.current;
@@ -160,10 +158,10 @@ const memoResult = importAllResult.memo((visible) => {
       const _HermesInternal3 = HermesInternal;
       str2 = "'clipt': '" + youtubeVideoIdFromURI.clipt + "',";
     }
-    const obj1 = { html: null, baseUrl: null };
+    obj1 = { html: null, baseUrl: null };
     const _HermesInternal4 = HermesInternal;
     const _HermesInternal5 = HermesInternal;
-    obj1[0] = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>" + "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" + youtubeVideoIdFromURI.videoId + "',\n    playerVars: {\n      'playsinline': 1,\n      'fs': 0,\n      'pageType': " + c5 + ",\n      " + str2 + "\n      " + combined + "\n      " + str3 + "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" + "</script>\n  </head>\n  <body>\n    <div id=\"player\"></div>\n  </body>\n</html>\n";
+    obj1[0] = "\n<html>\n  <head>\n    <meta name=\"viewport\" content=\"initial-scale=1\">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n    </style>\n    <script>" + "\nconst tag = document.createElement('script');\ntag.setAttribute('src', \"https://www.youtube.com/iframe_api\");\ndocument.head.appendChild(tag);\n\nfunction onYouTubeIframeAPIReady() {\n  window.player = new YT.Player('player', {\n    height:     '100%',\n    width:      '100%',\n    videoId:    '" + youtubeVideoIdFromURI.videoId + "',\n    playerVars: {\n      'playsinline': 1,\n      'fs': 0,\n      'pageType': " + closure_5 + ",\n      " + str2 + "\n      " + combined + "\n      " + str3 + "\n    },\n    events: {\n      'onReady': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onReady', value: window.player.getPlayerState()})\n        );\n      },\n      'onError': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onError', value: e.data})\n        );\n      },\n      'onStateChange': (e) => {\n        window.ReactNativeWebView.postMessage(\n          JSON.stringify({type: 'onStateChange', value: e.data})\n        );\n      }\n    }\n  });\n}\n" + "</script>\n  </head>\n  <body>\n    <div id=\"player\"></div>\n  </body>\n</html>\n";
     obj1[1] = closure_7;
     obj[2] = obj1;
     obj[3] = closure_7;
@@ -174,6 +172,6 @@ const memoResult = importAllResult.memo((visible) => {
     return ref(tmp7(9016), obj, youtubeVideoIdFromURI.videoId);
   }
 });
-let result = require("ME").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutube.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutube.tsx");
 
 export default memoResult;

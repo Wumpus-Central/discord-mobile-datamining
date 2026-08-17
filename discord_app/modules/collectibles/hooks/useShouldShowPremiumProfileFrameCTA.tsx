@@ -1,12 +1,14 @@
 // discord_app/modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { useCanPurchaseFrames } from "useCanPurchaseFrames.tsx";
-import { useShouldShowPremiumProfileFrameEA } from "useShouldShowPremiumProfileFrameEA.tsx";
-const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
+import set from "set" /* 2 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import useCanPurchaseFramesDefault from "useCanPurchaseFrames" /* 9233 */;
+import useShouldShowPremiumProfileFrameEADefault from "useShouldShowPremiumProfileFrameEA" /* 11995 */;
+
+const result = set.fileFinishedImporting("modules/collectibles/hooks/useShouldShowPremiumProfileFrameCTA.tsx");
 
 export default function useShouldShowPremiumProfileFrameCTA(location) {
   const _location = location.location;
-  let tmp2 = useShouldShowPremiumProfileFrameEA(_location) && !useCanPurchaseFrames(_location);
+  let tmp2 = useShouldShowPremiumProfileFrameEADefault(_location) && !useCanPurchaseFramesDefault(_location);
   if (tmp2) {
     tmp2 = location.product.type === CollectiblesItemType.CollectiblesItemType.PROFILE_FRAME;
   }

@@ -1,29 +1,25 @@
 // discord_app/modules/stickers/native/NativeLottieView.tsx
-import noop from "noop";
-import closure_2 from "noop";
-import { jsx } from "jsxProd";
-import set from "set";
-import set from "jsxProd";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import codegenNativeCommandsDefault from "codegenNativeCommands" /* 113 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 8219 */;
+import noop from "noop" /* 19 */;
+import closure_2 from "noop" /* 19 */;
+import set from "set" /* 500 */;
 
-let c0;
-let closure_1;
 ({ useEffect: c0, useRef: closure_1 } = noop);
+let jsx = jsxProd.jsx;
 if (set.isAndroid()) {
-  let importDefaultResult = require("__INTERNAL_VIEW_CONFIG");
+  let importDefaultResult = __INTERNAL_VIEW_CONFIGDefault;
 } else {
-  importDefaultResult = require("get ActivityIndicator").requireNativeComponent("NativeLottieNode");
+  importDefaultResult = get_ActivityIndicator.requireNativeComponent("NativeLottieNode");
 }
 let c4 = importDefaultResult;
-let closure_5 = require("codegenNativeCommands")({ supportedCommands: ["setup"] });
+let closure_5 = codegenNativeCommandsDefault({ supportedCommands: ["setup"] });
 let obj = { LOOP: 0, [0]: "LOOP", STILL: 1, [1]: "STILL", ONCE: 2, [2]: "ONCE" };
 const result = set.fileFinishedImporting("modules/stickers/native/NativeLottieView.tsx");
 
 export default function NativeLottieView(accessibilityLabel) {
-  let asset;
-  let height;
-  let opacity;
-  let url;
-  let width;
   ({ width, height, opacity } = accessibilityLabel);
   ({ asset, url } = accessibilityLabel);
   if (opacity === undefined) {
@@ -39,7 +35,7 @@ export default function NativeLottieView(accessibilityLabel) {
   }
   let ref;
   obj = undefined;
-  let jsx;
+  jsx = undefined;
   ref = obj.useRef(null);
   obj = { asset, url, width, height, animating: flag, accessibilityLabel: accessibilityLabel.accessibilityLabel };
   jsx = ref(obj);
@@ -48,12 +44,6 @@ export default function NativeLottieView(accessibilityLabel) {
   });
   const items = [LOOP];
   LOOP(() => {
-    let accessibilityLabel;
-    let animating;
-    let asset;
-    let height;
-    let url;
-    let width;
     ({ asset, url, width, height, animating, accessibilityLabel } = ref.current);
     let tmp2 = "" !== url;
     if (tmp2) {
@@ -63,7 +53,7 @@ export default function NativeLottieView(accessibilityLabel) {
       tmp2 = 0 !== height;
     }
     if (tmp2) {
-      outer1_5.setup(ref.current, asset, url, width, height, tmp, animating, accessibilityLabel);
+      closure_1_5.setup(ref.current, asset, url, width, height, tmp, animating, accessibilityLabel);
     }
   }, items);
   return <closure_4 ref={ref} style={{ width, height, opacity }} />;

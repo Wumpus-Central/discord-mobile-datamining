@@ -1,6 +1,8 @@
 // discord_app/modules/user_settings/GuildThemeSourcePreferenceUtils.tsx
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-const result = require("set").fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+
+const result = set.fileFinishedImporting("modules/user_settings/GuildThemeSourcePreferenceUtils.tsx");
 
 export const resolveDefaultGuildThemePreference = function resolveDefaultGuildThemePreference(arg0) {
   if (arg0 === create.GuildThemeSourcePreference.PERSONAL) {

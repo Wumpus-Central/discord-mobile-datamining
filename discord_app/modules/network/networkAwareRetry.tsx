@@ -1,16 +1,16 @@
 // discord_app/modules/network/networkAwareRetry.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import fetchFingerprint from "fetchFingerprint";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
 
 const require = arg1;
 function _networkAwareRetry() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -38,14 +38,14 @@ function _networkAwareRetry() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp3;
-              let dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               let num14;
               if (num14 === undefined) {
                 num14 = 3;
               }
               dependencyMap = undefined;
-              asyncGeneratorStep = undefined;
+              closure_3 = undefined;
               c6 = 1;
               c7 = 1;
               return { value: "ct", done: true };
@@ -57,28 +57,28 @@ function _networkAwareRetry() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c7 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
                 dependencyMap = store.getId();
-                asyncGeneratorStep = 0;
-                if (asyncGeneratorStep >= num14) {
+                closure_3 = 0;
+                if (closure_3 >= num14) {
                   const _Error2 = Error;
-                  const error = new Error("Unreachable code in networkAwareRetry");
+                  error = new Error("Unreachable code in networkAwareRetry");
                   throw error;
                 }
               }
             } else if (2 === tmp7) {
-              let c5 = 0;
-              if (asyncGeneratorStep + 1 >= num14) {
+              c5 = 0;
+              if (closure_3 + 1 >= num14) {
                 throw store;
               } else {
                 let obj6 = callback(4259);
                 c6 = 4;
                 c7 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = obj6.timeoutPromise(2000 * (asyncGeneratorStep + 1));
+                obj2[0] = obj6.timeoutPromise(2000 * (closure_3 + 1));
                 return obj2;
               }
             } else if (3 === tmp7) {
@@ -128,7 +128,7 @@ function _networkAwareRetry() {
               const error1 = new Error("User changed.");
               throw error1;
             } else {
-              asyncGeneratorStep = asyncGeneratorStep + 1;
+              closure_3 = closure_3 + 1;
             }
             c5 = 1;
             c6 = 3;
@@ -151,7 +151,7 @@ function _networkAwareRetry() {
     iter.next();
     return iter;
   });
-  const _networkAwareRetry = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -160,7 +160,7 @@ function _networkAwareRetry() {
   }
   return applyArgumentsResult;
 }
-const result = require("start").fileFinishedImporting("modules/network/networkAwareRetry.tsx");
+const result = require("set").fileFinishedImporting("modules/network/networkAwareRetry.tsx");
 
 export default function networkAwareRetry() {
   const self = this;

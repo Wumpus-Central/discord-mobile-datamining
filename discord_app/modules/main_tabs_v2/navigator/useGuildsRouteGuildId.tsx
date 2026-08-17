@@ -1,6 +1,8 @@
 // discord_app/modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx
-import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
+import set from "set" /* 2 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+
+const result = set.fileFinishedImporting("modules/main_tabs_v2/navigator/useGuildsRouteGuildId.tsx");
 
 export default function useGuildsRouteGuildId() {
   const params = createStandardNavigationFactories.useRoute().params;

@@ -1,7 +1,9 @@
 // discord_app/modules/holidays/setIncomingRingtone.android.tsx
-import { NativeModules } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-const result = require("set").fileFinishedImporting("modules/holidays/setIncomingRingtone.android.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/holidays/setIncomingRingtone.android.tsx");
 
 export const setIncomingRingtone = function setIncomingRingtone(call_ringing, arg1) {
   const DCDNotificationCategoryUtils = NativeModules.DCDNotificationCategoryUtils;

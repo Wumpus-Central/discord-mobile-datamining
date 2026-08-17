@@ -1,16 +1,14 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx
-import fetchFingerprint from "fetchFingerprint";
-import makeTimeoutKey from "makeTimeoutKey";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "makeTimeoutKey" /* 4776 */;
 
 const require = arg1;
-const result = require("mapped").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx");
+const result = require("set").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorVideoStreamSenderReadyTimeoutNoStream.tsx");
 
 export const AVErrorVideoStreamSenderReadyTimeoutNoStreamDefinition = {
   getActiveErrors() {
     const values = Object.values(timedoutVideos.getTimedoutVideos());
     const found = values.filter((arg0) => {
-      let userId;
-      let videoStreamId;
       ({ userId, videoStreamId } = arg0);
       let tmp = id.getId() === userId;
       if (tmp) {

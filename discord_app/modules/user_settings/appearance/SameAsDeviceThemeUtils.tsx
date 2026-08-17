@@ -1,22 +1,20 @@
 // discord_app/modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import handleThemeChange from "handleThemeChange";
-import SystemThemeState from "SystemThemeState";
-import { saveGuildFolders } from "../../../actions/UserSettingsActionCreators.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { getThemeForColor } from "../../client_themes/ClientThemesUtils.tsx";
-import { setSystemTheme } from "../ThemeActionCreators.tsx";
+import getThemeForColor from "getThemeForColor" /* 1347 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import setSystemTheme from "setSystemTheme" /* 4222 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9365 */;
+import closure_3 from "isSyncedModeThemesEnabled" /* 4195 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import SystemThemeState from "SystemThemeState" /* 1305 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ SystemTheme: c5, SystemThemeState: closure_6 } = SystemThemeState);
-let result = require("SystemThemeState").fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/appearance/SameAsDeviceThemeUtils.tsx");
 
 export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
-  let obj = saveGuildFolders;
+  let obj = saveGuildFoldersDefault;
   const result = obj.setShouldSyncAppearanceSettings(false);
-  let obj1 = syncedClientTheme;
+  obj1 = syncedClientTheme;
   if (null == syncedClientTheme.getSyncedClientTheme(constants.LIGHT)) {
     if (null == obj1.getSyncedClientTheme(tmp3.DARK)) {
       const theme = obj1.theme;
@@ -26,8 +24,8 @@ export const enableSameAsDeviceTheme = function enableSameAsDeviceTheme(arg0) {
         customThemeBaseTheme = obj2.getCustomThemeBaseTheme(theme);
       }
       const tmp8 = AccessibilityAnnouncer.isThemeDark(customThemeBaseTheme) ? tmp3.DARK : tmp3.LIGHT;
-      if (!isSyncedModeThemesEnabled.isPreview) {
-        const gradientPreset = isSyncedModeThemesEnabled.gradientPreset;
+      if (!closure_3.isPreview) {
+        const gradientPreset = closure_3.gradientPreset;
         let id;
         if (gradientPreset != null) {
           id = gradientPreset.id;

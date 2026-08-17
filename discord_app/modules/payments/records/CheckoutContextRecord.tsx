@@ -1,10 +1,11 @@
 // discord_app/modules/payments/records/CheckoutContextRecord.tsx
-import _slicedToArray from "_slicedToArray";
-import "toJS";
-import { add } from "../../../../_runtime/05318_add.js";
-import { formatSingleCurrencyPrice } from "../../../utils/PriceUtils.tsx";
+import toJSDefault from "toJS" /* 1931 */;
+import formatSingleCurrencyPrice from "formatSingleCurrencyPrice" /* 5316 */;
+import addDefault from "add" /* 5318 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
+toJSDefault;
 let AvailablePlanRecord;
 class AvailablePlanRecord extends tmp2 {
   constructor(arg0) {
@@ -20,11 +21,6 @@ class AvailablePlanRecord extends tmp2 {
 }
 const prototype = AvailablePlanRecord.prototype;
 AvailablePlanRecord["createFromServer"] = function createFromServer(arg0) {
-  let add_on_plans;
-  let id;
-  let price;
-  let quantity;
-  let total;
   ({ id, quantity, price, total, add_on_plans } = arg0);
   if (add_on_plans == null) {
     add_on_plans = [];
@@ -83,8 +79,6 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
       return true;
     }
   })(planQuantities, (function toQuantitiesByPlanId(closure_0) {
-    let planId;
-    let quantity;
     const map = new Map();
     const iter = closure_0[Symbol.iterator]();
     while (iter !== undefined) {
@@ -103,8 +97,8 @@ prototype["matchesItems"] = function matchesItems(closure_0) {
 prototype["getPriceString"] = function getPriceString() {
   const total = this.total;
   const obj = formatSingleCurrencyPrice;
-  const obj2 = new add(total.amount);
-  return obj.formatPrice(new add(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, { convertToMajorUnits: false });
+  const obj2 = new addDefault(total.amount);
+  return obj.formatPrice(new addDefault(total.amount).dividedBy(10 ** total.exponent).toNumber(), total.currency, { convertToMajorUnits: false });
 };
 prototype["getAddOnPrice"] = function getAddOnPrice() {
   const self = this;
@@ -116,7 +110,7 @@ prototype["getAddOnPrice"] = function getAddOnPrice() {
     const exponent = price.exponent;
     const addOnPlans = self.addOnPlans;
     const reduced = addOnPlans.reduce((arg0, price) => arg0 + price.price.amount * price.quantity, 0);
-    const obj2 = new add(reduced);
+    const obj2 = new addDefault(reduced);
     obj[0] = obj2.dividedBy(10 ** exponent).toNumber();
     obj[1] = price.currency;
     return obj;
@@ -200,7 +194,7 @@ CheckoutContextRecord["createFromOrder"] = function createFromOrder(checkout_con
   return tmp2;
 };
 CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvailablePlanForItems(subscriptionItemsForProduct) {
-  let closure_0 = subscriptionItemsForProduct;
+  closure_0 = subscriptionItemsForProduct;
   const availablePlans = this.availablePlans;
   let found = availablePlans.find((matchesItems) => matchesItems.matchesItems(closure_0));
   if (found == null) {
@@ -208,7 +202,7 @@ CheckoutContextRecord.prototype["getAvailablePlanForItems"] = function getAvaila
   }
   return found;
 };
-let result = require("add").fileFinishedImporting("modules/payments/records/CheckoutContextRecord.tsx");
+let result = require("set").fileFinishedImporting("modules/payments/records/CheckoutContextRecord.tsx");
 
 export default CheckoutContextRecord;
 export { AvailablePlanRecord };

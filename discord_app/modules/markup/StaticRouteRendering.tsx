@@ -1,8 +1,8 @@
 // discord_app/modules/markup/StaticRouteRendering.tsx
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "createGuildRoleRecordFromRust" /* 1983 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/markup/StaticRouteRendering.tsx");
 
 export const staticRouteToTranslation = function staticRouteToTranslation(arg0) {

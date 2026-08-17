@@ -1,9 +1,9 @@
 // discord_app/modules/reactions/native/useEmojisForReactionRow.tsx
-import noop from "noop";
-import { EmojiIntention } from "set";
+import closure_3 from "noop" /* 19 */;
+import { EmojiIntention } from "set" /* 1925 */;
 
 const require = arg1;
-const result = require("initializeSearch").fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");
 
 export const useEmojisForReactionRow = function useEmojisForReactionRow(channel, closure_4, arg2) {
   const _require = channel;
@@ -14,8 +14,8 @@ export const useEmojisForReactionRow = function useEmojisForReactionRow(channel,
   const memo = React.useMemo(() => {
     let length;
     const found = frequentlyUsedReactionEmojis.filter((emoji) => {
-      let obj = outer1_1(outer1_2[4]);
-      obj = { emoji, channel: closure_0, intention: outer1_4.REACTION };
+      let obj = closure_1_1(closure_1_2[4]);
+      obj = { emoji, channel: closure_0, intention: closure_1_4.REACTION };
       return !obj.isEmojiFilteredOrLocked(obj);
     });
     if (found.length < rounded) {

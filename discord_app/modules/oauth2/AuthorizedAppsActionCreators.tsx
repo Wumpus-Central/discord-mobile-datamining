@@ -1,9 +1,9 @@
 // discord_app/modules/oauth2/AuthorizedAppsActionCreators.tsx
-import sendRequest from "sendRequest";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { FetchState } from "recomputeFromAppTokens";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "recomputeFromAppTokens" /* 5289 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function tokensToAppTokensMap(arg0, arr) {
@@ -39,9 +39,9 @@ function fetchAuthorizedApps() {
 function _fetchAuthorizedApps() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -70,8 +70,8 @@ function _fetchAuthorizedApps() {
               return obj;
             } else {
               const HTTP = callback(table[5]).HTTP;
-              const obj1 = { url: null, oldFormErrors: true, rejectWithError: true, query: null };
-              obj1[0] = outer1_6.OAUTH2_TOKENS;
+              obj1 = { url: null, oldFormErrors: true, rejectWithError: true, query: null };
+              obj1[0] = closure_1_6.OAUTH2_TOKENS;
               const obj2 = { application_ids: null };
               obj2[0] = callback;
               obj1[3] = obj2;
@@ -81,7 +81,7 @@ function _fetchAuthorizedApps() {
               const obj3 = { value: null, done: false };
               obj3[0] = value.then((body) => {
                 let obj = v3(709);
-                obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: outer1_8(body.body, closure_0) };
+                obj = { type: "USER_AUTHORIZED_APPS_UPDATE", isFullFetch: null == closure_0, tokens: closure_1_8(body.body, closure_0) };
                 return obj.dispatch(obj);
               }, () => {
                 let request = v3(709);
@@ -114,7 +114,7 @@ function _fetchAuthorizedApps() {
       }
     })();
   });
-  const _fetchAuthorizedApps = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -128,12 +128,12 @@ let obj = {
     return store.getFetchStateForApplication(arg0) !== FetchState.FETCHING;
   },
   onQueued(applicationIds) {
-    let request = dispatcher;
+    let request = dispatcherDefault;
     request = { type: "partial", applicationIds };
     return request.dispatch({ type: "USER_AUTHORIZED_APPS_REQUEST", request });
   },
   onCancelled(applicationIds) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "USER_AUTHORIZED_APPS_REQUEST_CANCELLED", applicationIds };
     return obj.dispatch(obj);
   }
@@ -151,7 +151,7 @@ obj = {
         const queueResult = batchInvocationManager.queue(arg0);
       } else {
         batchInvocationManager.reset();
-        let obj = dispatcher;
+        let obj = dispatcherDefault;
         obj = { type: "USER_AUTHORIZED_APPS_REQUEST", request: null };
         obj[1] = { type: "full" };
         obj.dispatch(obj);
@@ -168,6 +168,6 @@ obj = {
     });
   }
 };
-const result = require("ME").fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/oauth2/AuthorizedAppsActionCreators.tsx");
 
 export default obj;

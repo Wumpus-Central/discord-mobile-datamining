@@ -1,23 +1,23 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx
-import noop from "noop";
+import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8946 */;
+import useProfileFrameDefault from "useProfileFrame" /* 8957 */;
+import closure_3 from "noop" /* 19 */;
 import { apexExperiment } from "../../experiments/CollectiblesProfileFramesExperiment.tsx";
-import { useFramePreviewOverrideFrame } from "useFramePreviewOverrideFrame.native.tsx";
-import { useProfileFrame } from "useProfileFrame.tsx";
 
 const require = arg1;
-let result = require("apexExperiment").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx");
 
 export default function useMaybeFetchProfileFrame(arg0, location) {
   const _require = arg0;
-  let tmp = useFramePreviewOverrideFrame();
+  let tmp = useFramePreviewOverrideFrameDefault();
   const isProfileFramesEnabled = _apexExperiment.useIsProfileFramesEnabled(location);
-  const tmp3 = useProfileFrame(arg0);
+  const tmp3 = useProfileFrameDefault(arg0);
   importDefault = tmp4;
   const items = [null == tmp && isProfileFramesEnabled && null != arg0 && null == tmp3, arg0];
   const effect = React.useEffect(() => {
     if (closure_1) {
-      const result = callback(outer1_2[4]).maybeFetchCollectiblesProduct(callback);
-      const obj = callback(outer1_2[4]);
+      const result = callback(closure_1_2[4]).maybeFetchCollectiblesProduct(callback);
+      const obj = callback(closure_1_2[4]);
     }
   }, items);
   if (tmp == null) {

@@ -1,17 +1,16 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeMaple.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13377 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = ["#4E0B11", "#730E17", "#AC1F2B", "#EB2823", "#FF514C"];
 let closure_5 = [0.17, 0.25, 0.4, 0.53, 0.65];
 let items = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }, { base: 3, tint: 1 }, { base: 3, tint: 1 }, { base: 3, tint: 1 }];
-const result = require("getTransformedBadgeColors").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeMaple.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeMaple.tsx");
 
 export const GuildBadgeMaple = function GuildBadgeMaple(primaryTintColor) {
   let num = primaryTintColor.width;

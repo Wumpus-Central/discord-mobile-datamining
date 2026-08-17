@@ -1,7 +1,10 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { resolveExplicitContentSettingWithDefaults } from "../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
+import ReportNames from "ReportNames" /* 8137 */;
+
 let obj = {
   getTitle() {
     const intl = getSystemLocale.intl;
@@ -19,12 +22,9 @@ let obj = {
   onApply: null,
   predicate: null
 };
-const items = [require("ReportNames").ReportSubType.SUB_CSAM, require("ReportNames").ReportSubType.SUB_LOLI, require("ReportNames").ReportSubType.SUB_NCP, require("ReportNames").ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT, require("ReportNames").ReportSubType.SUB_UNSOLICITED_PORN];
+const items = [ReportNames.ReportSubType.SUB_CSAM, ReportNames.ReportSubType.SUB_LOLI, ReportNames.ReportSubType.SUB_NCP, ReportNames.ReportSubType.SUB_SEXUALLY_DEGRADING_CONTENT, ReportNames.ReportSubType.SUB_UNSOLICITED_PORN];
 obj[3] = items;
 obj[4] = function onApply() {
-  let explicitContentFriendDm;
-  let explicitContentGuilds;
-  let explicitContentNonFriendDm;
   let obj = resolveExplicitContentSettingWithDefaults;
   const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
   obj = {};
@@ -41,14 +41,11 @@ obj[4] = function onApply() {
   return obj.updateExplicitContentSetting(obj);
 };
 obj[5] = function predicate() {
-  let explicitContentFriendDm;
-  let explicitContentGuilds;
-  let explicitContentNonFriendDm;
   const explicitContentSettingOrDefault = resolveExplicitContentSettingWithDefaults.getExplicitContentSettingOrDefault();
   ({ explicitContentGuilds, explicitContentFriendDm, explicitContentNonFriendDm } = explicitContentSettingOrDefault);
   const obj = resolveExplicitContentSettingWithDefaults;
   return explicitContentGuilds === create.ExplicitContentRedaction.SHOW || explicitContentFriendDm === create.ExplicitContentRedaction.SHOW || explicitContentNonFriendDm === create.ExplicitContentRedaction.SHOW;
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigScFiltersSexualMedia.tsx");
 
 export default obj;

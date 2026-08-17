@@ -1,6 +1,6 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx
-import noop from "noop";
-import { useInitialValue } from "../../../../../../../hooks/useInitialValue.tsx";
+import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import closure_2 from "noop" /* 19 */;
 
 let closure_3 = function SearchFetchPendingManager() {
   const obj = Object.create(new.target.prototype);
@@ -22,7 +22,7 @@ let closure_3 = function SearchFetchPendingManager() {
       if (obj2.fetchNextMessages(searchContext, tab)) {
         obj.remove(tab);
       }
-      obj2 = obj(outer1_1[1]);
+      obj2 = obj(closure_1_1[1]);
     }
   };
   obj.reset = function reset() {
@@ -30,11 +30,11 @@ let closure_3 = function SearchFetchPendingManager() {
   };
   return obj;
 }.prototype;
-const result = require("useInitialValue").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/SearchFetchPendingManager.tsx");
 
 export const useSearchFetchPendingManager = function useSearchFetchPendingManager(searchContext) {
-  const importDefault = searchContext;
-  const tmp = useInitialValue(() => {
+  importDefault = searchContext;
+  const tmp = useInitialValueDefault(() => {
     if (typeof closure_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
@@ -57,7 +57,7 @@ export const useSearchFetchPendingManager = function useSearchFetchPendingManage
         if (obj2.fetchNextMessages(searchContext, tab)) {
           obj.remove(tab);
         }
-        obj2 = obj(outer1_1[1]);
+        obj2 = obj(closure_1_1[1]);
       }
     };
     obj.reset = function reset() {
@@ -65,9 +65,9 @@ export const useSearchFetchPendingManager = function useSearchFetchPendingManage
     };
     return obj;
   });
-  const dependencyMap = tmp;
+  dependencyMap = tmp;
   const items = [searchContext, tmp];
-  const effect = React.useEffect(() => searchContext(tmp[1]).subscribeTextInputValue(searchContext, (arg0, arg1) => {
+  const effect = React.useEffect(() => searchContext(table[1]).subscribeTextInputValue(searchContext, (arg0, arg1) => {
     if (arg1 !== arg0) {
       navigation.reset();
     }

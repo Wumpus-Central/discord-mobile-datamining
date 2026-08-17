@@ -1,4 +1,6 @@
 // discord_app/modules/debug/serializeAppStartLogs.tsx
+import set2 from "set" /* 2 */;
+
 function getDisplayName(tag) {
   if (null == tag.tag) {
     let str3 = tag.label;
@@ -16,10 +18,10 @@ function getDisplayName(tag) {
   }
   return text;
 }
-let result = require("getAccessibilityLabelFormatter").fileFinishedImporting("modules/debug/serializeAppStartLogs.tsx");
+let result = set2.fileFinishedImporting("modules/debug/serializeAppStartLogs.tsx");
 
 export default function serializeAppStartLogs(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -30,11 +32,6 @@ export default function serializeAppStartLogs(arg0) {
   }
   const logGroups = flag(flag2[0]).logGroups;
   let mapped = logGroups.map((arg0) => {
-    let index;
-    let logs;
-    let nativeLogs;
-    let serverTrace;
-    let timestamp;
     ({ index, timestamp, logs, nativeLogs, serverTrace } = arg0);
     let tmp = timestamp;
     if (0 === index) {
@@ -47,16 +44,14 @@ export default function serializeAppStartLogs(arg0) {
       if (found != null) {
         timestamp = found.timestamp;
       }
-      if (timestamp == null) {
-        timestamp = substr;
-      }
       tmp = timestamp;
     }
-    substr = logs;
-    substr = logs.slice();
-    const set = new Set(nativeLogs.map(outer1_3));
-    let c4 = "";
-    let closure_5 = [];
+    timestamp = logs;
+    const substr = logs.slice();
+    timestamp = substr;
+    const set = new Set(nativeLogs.map(closure_1_3));
+    c4 = "";
+    closure_5 = [];
     const item = nativeLogs.forEach((tag) => {
       if (null == tag.tag) {
         let str3 = tag.label;
@@ -127,7 +122,7 @@ export default function serializeAppStartLogs(arg0) {
       let num5 = 0;
       if (0 < str7.length) {
         while (true) {
-          let timestamp = arr2[num4].timestamp;
+          timestamp = arr2[num4].timestamp;
           let tmp14 = num4;
           if (null == timestamp) {
             num4 = num4 + 1;
@@ -150,10 +145,10 @@ export default function serializeAppStartLogs(arg0) {
         arr = arr.push(obj);
       }
     });
-    let c6 = false;
+    c6 = false;
     const found1 = substr.filter((log) => {
-      let tmp = !c6;
-      if (c6) {
+      let tmp = !closure_6;
+      if (closure_6) {
         log = log.log;
         tmp = !log.includes("\u21AA");
       }
@@ -165,12 +160,12 @@ export default function serializeAppStartLogs(arg0) {
         if (!tmp3) {
           tmp3 = false === log.shouldKeep;
         }
-        c6 = tmp3;
+        closure_6 = tmp3;
         tmp = !tmp3;
       }
       return tmp;
     });
-    substr = tmp;
+    timestamp = tmp;
     let num2;
     let num3;
     let items = [];
@@ -200,7 +195,7 @@ export default function serializeAppStartLogs(arg0) {
     const mapped = items.map((timestamp) => {
       let str = "";
       if (null != timestamp.timestamp) {
-        const result = (timestamp.timestamp - substr) / 1000;
+        const result = (timestamp.timestamp - timestamp) / 1000;
         str = result.toFixed(3);
       }
       const obj = { totalTime: str, deltaTime: null, log: null };
@@ -229,9 +224,6 @@ export default function serializeAppStartLogs(arg0) {
       num3 = 0;
     }
     const mapped1 = mapped.map((arg0) => {
-      let deltaTime;
-      let log;
-      let totalTime;
       ({ totalTime, deltaTime, log } = arg0);
       const obj = num2(num3[1]);
       const padStartResult = num2(num3[1]).padStart(totalTime, num2);

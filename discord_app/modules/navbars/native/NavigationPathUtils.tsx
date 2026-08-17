@@ -1,9 +1,11 @@
 // discord_app/modules/navbars/native/NavigationPathUtils.tsx
-import { Routes } from "ME";
-import { _extends } from "../../../../_runtime/metro/04208__extends.js";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import _extends from "_extends" /* 4208 */;
 
+const Routes = ME.Routes;
 let obj = { FRIENDS: 0, [0]: "FRIENDS" };
-const result = require("set").fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
+const result = set.fileFinishedImporting("modules/navbars/native/NavigationPathUtils.tsx");
 
 export const SpecialNavigationPath = obj;
 export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavigationPath(pathname) {
@@ -12,7 +14,7 @@ export const getSelectedSpecialNavigationPath = function getSelectedSpecialNavig
   }
 };
 export const useSelectedSpecialNavigationPath = function useSelectedSpecialNavigationPath() {
-  const obj = _extends;
+  obj = _extends;
   let FRIENDS;
   if (obj.useLocation().pathname === Routes.FRIENDS) {
     FRIENDS = obj.FRIENDS;

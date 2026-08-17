@@ -1,39 +1,34 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import jsxProd from "jsxProd";
-import importDefaultResult from "module_4115";
-import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "module_4115";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_4 from "reset" /* 4652 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importDefaultResult from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Pressable;
-let c3;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ View: c3, Pressable } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = require("module_4115").createAnimatedComponent(Pressable);
-let closure_9 = require("module_4115").createAnimatedComponent(require("Button").Button);
+let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
+let closure_9 = importDefaultResult.createAnimatedComponent(require("Button").Button);
 let closure_10 = { duration: 200 };
 let obj = { roundedCard: null, streamPreviewImage: null, ownStreamTextContainer: null, ownStreamText: null };
-obj = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: require("Themes").colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+obj = { position: "absolute", alignItems: "center", justifyContent: "center", width: "100%", height: "100%", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj[0] = obj;
 obj[1] = { position: "absolute", width: "100%", height: "100%", opacity: 0.5 };
-obj[2] = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM, borderRadius: require("Themes").radii.sm, marginHorizontal: require("Themes").space.PX_16 };
-createCacheKey = { textAlign: "center", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_16 };
+const importDefaultResult1 = importDefaultResult;
+obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.sm, marginHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
 obj[3] = createCacheKey;
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function VoicePanelStreamPreviewTsx1(){const{mode,withTiming,OPACITY_TIMING}=this.__closure;if(mode==null){return{opacity:1};}return{opacity:withTiming(mode.get()==='pip'?0:1,OPACITY_TIMING)};}" };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_SCRIM, borderRadius: require("Themes").radii.sm, marginHorizontal: require("Themes").space.PX_16 };
-const result = require("reset").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SCRIM, borderRadius: ThemesDefault.radii.sm, marginHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelStreamPreview.tsx");
 
 export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
-  let disabled;
-  let layout;
-  let onPress;
   mode = mode.mode;
   const stream = mode.stream;
   ({ disabled, onPress, layout } = mode);
@@ -52,20 +47,20 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
   }
   const previewUrl = stream(12138)(guildId, channelId, ownerId).previewUrl;
   let obj = mode(589);
-  const items = [reset, fetchFingerprint];
+  const items = [closure_4, closure_5];
   const items1 = [stream];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp2 = null != stream;
     if (tmp2) {
-      tmp2 = tmp.ownerId === outer1_5.getId();
+      tmp2 = tmp.ownerId === closure_1_5.getId();
     }
     if (tmp2) {
-      tmp2 = null == outer1_4.getStreamerActiveStreamMetadataForStream(mode(outer1_2[11]).encodeStreamKey(tmp));
-      const obj = mode(outer1_2[11]);
+      tmp2 = null == closure_1_4.getStreamerActiveStreamMetadataForStream(mode(closure_1_2[11]).encodeStreamKey(tmp));
+      const obj = mode(closure_1_2[11]);
     }
     return tmp2;
   }, items1);
-  let obj1 = mode(4115);
+  obj1 = mode(4115);
   class T {
     constructor() {
       obj = mode;
@@ -73,16 +68,16 @@ export const VoicePanelStreamPreview = function VoicePanelStreamPreview(mode) {
         obj = { opacity: 1 };
       } else {
         tmp = mode;
-        tmp2 = outer1_2;
-        obj2 = mode(outer1_2[12]);
+        tmp2 = closure_1_2;
+        obj2 = mode(closure_1_2[12]);
         num = 1;
         str = "pip";
         if ("pip" === obj.get()) {
           num = 0;
         }
         obj = { opacity: null };
-        tmp3 = outer1_10;
-        obj[0] = obj2.withTiming(num, outer1_10);
+        tmp3 = closure_1_10;
+        obj[0] = obj2.withTiming(num, closure_1_10);
       }
       return obj;
     }

@@ -1,20 +1,18 @@
 // discord_app/modules/a11y/AccessibilityStore.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import initialize from "initialize";
-import handleThemeChange from "handleThemeChange";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import ME from "ME";
-import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING";
-import { DeviceSettingsStore } from "initialize";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { set } from "../../utils/CrossPlatformNativeUtils.native.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage7 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import setDefault from "set" /* 4648 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "initialize" /* 1303 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
+import closure_7 from "handleConnectionClosedOrResumed" /* 1340 */;
+import ME from "ME" /* 676 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
-let c10;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function maybeApplyNoTextColorForLightCustomTheme() {
   const officialMessageStyleExplicitlySet = obj.officialMessageStyleExplicitlySet;
   let tmp = !officialMessageStyleExplicitlySet;
@@ -53,7 +51,7 @@ function maybeApplyNoTextColorForLightCustomTheme() {
   return tmp;
 }
 function handleReducedMotionUpdated() {
-  const obj = {};
+  obj = {};
   const merged = Object.assign(obj);
   let str = "animate-never";
   let str2 = "animate-never";
@@ -100,14 +98,15 @@ let obj = { DEFAULT: "default", HIGH: "high" };
 obj = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };
 obj = { fontSize: Accessibility.FONT_SIZE_DEFAULT, zoom: Accessibility.ZOOM_DEFAULT, keyboardModeEnabled: false, contrastMode: obj.DEFAULT, colorblindMode: false, lowContrastMode: false, saturation: 1, contrast: 1, desaturateUserColors: false, forcedColorsModalSeen: false, keyboardNavigationExplainerModalSeen: false, messageGroupSpacing: null, systemPrefersReducedMotion: "no-preference", systemPrefersCrossfades: false, prefersReducedMotion: "auto", systemForcedColors: "none", syncForcedColors: true, systemPrefersContrast: "no-preference", alwaysShowLinkDecorations: false, roleStyle: "username", officialMessageStyle: "default", officialMessageStyleExplicitlySet: false, displayNameStylesEnabled: true, submitButtonEnabled: false, syncProfileThemeWithUserTheme: false, enableCustomCursor: true, switchIconsEnabled: false, appsButtonEnabled: true, expressionPickerFormat: obj.FLEXIBLE, condensePickerWhenNarrow: true, emojiButtonEnabled: true, gifButtonEnabled: true, stickerButtonEnabled: true, youBarNameplateAnimation: "animate-never", youBarAvatarDecoAnimation: "animate-never" };
 let closure_17 = { 12: "font-size-12", 14: "font-size-14", 15: "font-size-15", 16: "font-size-16", 18: "font-size-18", 20: "font-size-20", 24: "font-size-24" };
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class AccessibilityStore extends DeviceSettingsStore {
 }
 const prototype = AccessibilityStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
   let tmp = arg0;
-  this.waitFor(handleConnectionClosedOrResumed);
-  const obj = {};
+  this.waitFor(closure_7);
+  obj = {};
   const merged = Object.assign(obj);
   if (arg0 == null) {
     tmp = null;
@@ -123,7 +122,7 @@ prototype["initialize"] = function initialize(arg0) {
   if (closure_10.indexOf(num) < 0) {
     obj.messageGroupSpacing = null;
   }
-  const items = [handleConnectionClosedOrResumed, initialize];
+  const items = [closure_7, closure_5];
   self.syncWith(items, maybeApplyNoTextColorForLightCustomTheme);
 };
 Object.defineProperty(prototype, "fontScale", {
@@ -463,7 +462,7 @@ AccessibilityStore.displayName = "AccessibilityStore";
 AccessibilityStore.persistKey = "AccessibilityStore";
 let items = [
   () => {
-    const Storage = Storage.Storage;
+    const Storage = Storage7.Storage;
     const fontScale = Storage.get("a11yFontScale") || 100;
     const Storage2 = tmp(595).Storage;
     let zoom = Storage2.get("a11yZoom");
@@ -501,38 +500,38 @@ let items = [
         }
       }
     }
-    const obj = {};
+    obj = {};
     const merged = Object.assign(callback(fontScale, closure_3));
     obj.fontSize = num4;
     return obj;
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.darkSidebar = false;
     return obj;
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.messageGroupSpacing = null;
     return obj;
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.systemPrefersReducedMotion = "no-preference";
     obj.prefersReducedMotion = "auto";
     return obj;
   },
   (saturation) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(saturation);
     obj.alwaysShowLinkDecorations = saturation.saturation <= AccessibilityAnnouncer.LOW_SATURATION_THRESHOLD;
     return obj;
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.disableVoiceBackgrounds = false;
     return obj;
@@ -552,13 +551,13 @@ let items = [
     }
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.enableCustomCursor = true;
     return obj;
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.appsButtonEnabled = true;
     obj.expressionPickerFormat = obj.FLEXIBLE;
@@ -569,7 +568,7 @@ let items = [
     return obj;
   },
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.youBarNameplateAnimation = "animate-never";
     obj.youBarAvatarDecoAnimation = "animate-never";
@@ -577,7 +576,7 @@ let items = [
   }
 ];
 AccessibilityStore.migrations = items;
-const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
+const accessibilityStore = new AccessibilityStore(dispatcherDefault, {
   ACCESSIBILITY_SET_FONT_SIZE: function handleFontScaleTo(fontSize) {
     let FONT_SIZE_DEFAULT = fontSize.fontSize;
     const FONT_SIZES = Accessibility.FONT_SIZES;
@@ -602,7 +601,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
           obj = {};
           const merged = Object.assign(obj);
           obj.zoom = zoom.zoom;
-          set.setZoomFactor(obj.zoom);
+          setDefault.setZoomFactor(obj.zoom);
         }
       }
     }
@@ -621,8 +620,8 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     }
     if (obj.zoom !== Accessibility.ZOOM_DEFAULT) {
       obj.zoom = tmp.ZOOM_DEFAULT;
-      set.setZoomFactor(obj.zoom);
-      const obj2 = set;
+      setDefault.setZoomFactor(obj.zoom);
+      const obj2 = setDefault;
     }
   },
   ACCESSIBILITY_KEYBOARD_MODE_ENABLE: function handleEnableKeyboardMode() {
@@ -644,27 +643,27 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     }
   },
   ACCESSIBILITY_COLORBLIND_TOGGLE: function handleToggleColorblindMode() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.colorblindMode = !obj.colorblindMode;
   },
   ACCESSIBILITY_LOW_CONTRAST_TOGGLE: function handleToggleLowContrastMode() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.lowContrastMode = !obj.lowContrastMode;
   },
   ACCESSIBILITY_SET_SATURATION: function handleSetSaturation(saturation) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.saturation = saturation.saturation;
   },
   ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: function handledesaturateUserColorsToggle() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.desaturateUserColors = !obj.desaturateUserColors;
   },
   ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: function handleSystemColorPreferencesChanged(systemForcedColors) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     let str = systemForcedColors.systemForcedColors;
     if (str == null) {
@@ -714,12 +713,12 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     obj.syncForcedColors = syncForcedColors.syncForcedColors;
   },
   ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: function handleSetAlwaysShowLinkDecorations(alwaysShowLinkDecorations) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.alwaysShowLinkDecorations = alwaysShowLinkDecorations.alwaysShowLinkDecorations;
   },
   ACCESSIBILITY_SET_ENABLE_CUSTOM_CURSOR: function handleSetEnableCustomCursor(enableCustomCursor) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.enableCustomCursor = enableCustomCursor.enableCustomCursor;
   },
@@ -737,42 +736,42 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     obj.forcedColorsModalSeen = true;
   },
   KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: function handleKeyboardNavigationExplainerModalSeen() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.keyboardNavigationExplainerModalSeen = true;
   },
   ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: function handleMessageGroupSpacingChange(messageGroupSpacing) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.messageGroupSpacing = messageGroupSpacing.messageGroupSpacing;
   },
   ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: function handleSubmitButtonToggle() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.submitButtonEnabled = !obj.submitButtonEnabled;
   },
   ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: function handleSyncProfileThemeWithUserThemeToggle() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.syncProfileThemeWithUserTheme = !obj.syncProfileThemeWithUserTheme;
   },
   ACCESSIBILITY_SET_CONTRAST: function handleSetContrast(contrast) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.contrast = contrast.contrast;
   },
   ACCESSIBILITY_SET_CONTRAST_MODE: function handleSetContrastMode(contrastMode) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.contrastMode = contrastMode.contrastMode;
   },
   ACCESSIBILITY_SET_SWITCH_ICONS_ENABLED: function handleSetSwitchIconsEnabled(switchIconsEnabled) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.switchIconsEnabled = switchIconsEnabled.switchIconsEnabled;
   },
   ACCESSIBILITY_SET_CHAT_BAR_SETTINGS: function handleSetChatBarSettings(appsButtonEnabled) {
-    let obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     let tmp2 = null != appsButtonEnabled.appsButtonEnabled;
     if (tmp2) {
@@ -790,7 +789,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     const merged2 = Object.assign(tmp4);
     let tmp6 = null != appsButtonEnabled.condensePickerWhenNarrow;
     if (tmp6) {
-      const obj1 = { condensePickerWhenNarrow: null };
+      obj1 = { condensePickerWhenNarrow: null };
       obj1[0] = appsButtonEnabled.condensePickerWhenNarrow;
       tmp6 = obj1;
     }
@@ -818,7 +817,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     const merged6 = Object.assign(tmp12);
   },
   ACCESSIBILITY_SET_YOU_BAR_ANIMATIONS: function handleSetYouBarAnimations(animateNameplate) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     animateNameplate = animateNameplate.animateNameplate;
     let str = "animate-always";
@@ -844,7 +843,7 @@ const accessibilityStore = new AccessibilityStore(require("dispatcher"), {
     obj.youBarAvatarDecoAnimation = str;
   }
 });
-const result = require("handleThemeChange").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
+const result = require("set").fileFinishedImporting("modules/a11y/AccessibilityStore.tsx");
 
 export default accessibilityStore;
 export const AccessibilityContrastMode = obj;

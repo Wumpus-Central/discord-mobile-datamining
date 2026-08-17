@@ -1,7 +1,10 @@
 // discord_app/lib/uploader/UploadUtils.tsx
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { cancel } from "Upload.tsx";
-const result = require("_getAttachmentFile").fileFinishedImporting("lib/uploader/UploadUtils.tsx");
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import cancel from "cancel" /* 4829 */;
+
+const result = set.fileFinishedImporting("lib/uploader/UploadUtils.tsx");
 class DefaultHttpClient {
 }
 const prototype = DefaultHttpClient.prototype;
@@ -46,7 +49,7 @@ LibdiscoreHttpClient.prototype["doUpload"] = function doUpload(body) {
   httpClientAPI = _require(httpClientAPI[3]).getHttpClientAPI();
   if (null == httpClientAPI) {
     let _Error2 = Error;
-    let error = new Error("Libdiscore client is not available");
+    error = new Error("Libdiscore client is not available");
     throw error;
   } else {
     body = body.body;

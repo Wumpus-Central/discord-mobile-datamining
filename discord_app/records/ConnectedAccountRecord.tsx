@@ -1,6 +1,7 @@
 // discord_app/records/ConnectedAccountRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 const result = require("set").fileFinishedImporting("records/ConnectedAccountRecord.tsx");
 class ConnectedAccountRecord extends tmp2 {
   constructor(arg0) {

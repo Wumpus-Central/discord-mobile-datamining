@@ -1,9 +1,10 @@
 // discord_app/design/void/Checkbox/native/Checkbox.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("jsxProd").fileFinishedImporting("design/void/Checkbox/native/Checkbox.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("design/void/Checkbox/native/Checkbox.tsx");
 
 export default function Checkbox(style) {
   const obj = { style: style.style, source: null };

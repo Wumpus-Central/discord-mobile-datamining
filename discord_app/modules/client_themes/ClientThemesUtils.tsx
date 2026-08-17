@@ -1,13 +1,14 @@
 // discord_app/modules/client_themes/ClientThemesUtils.tsx
-import ThemeTypes from "ThemeTypes";
-import { PROTO_THEME_MAP_WEB_REFRESH as closure_4 } from "SystemThemeState";
-import { ThemeTypes } from "sum";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import SystemThemeState from "SystemThemeState" /* 1305 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import ThemeTypes from "ThemeTypes" /* 1348 */;
 
-let c3;
-let obj1;
 ({ LEGACY_STANDARD_BACKGROUND_THEMES: obj1, REFRESH_STANDARD_BACKGROUND_THEMES: c3 } = ThemeTypes);
-const result = require("sum").fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
+let closure_4 = SystemThemeState.PROTO_THEME_MAP_WEB_REFRESH;
+ThemeTypes = sum.ThemeTypes;
+const result = set.fileFinishedImporting("modules/client_themes/ClientThemesUtils.tsx");
 
 export const getThemeForColor = function getThemeForColor(l) {
   if (l.l <= 0.3) {
@@ -40,12 +41,8 @@ export const resolveThemeWithCustomSettings = function resolveThemeWithCustomSet
   }
 };
 export const getLinearGradientForBackgroundGradient = function getLinearGradientForBackgroundGradient(gradientPreset) {
-  let angle;
-  let colors;
   ({ angle, colors } = gradientPreset);
   const mapped = colors.map((arg0) => {
-    let stop;
-    let token;
     ({ token, stop } = arg0);
     return "" + callback(table[4]).unsafe_getResolvedRawColor(token, { saturation: 1 }) + " " + stop + "%";
   });
@@ -67,7 +64,7 @@ export const getBaseTheme = function getBaseTheme(arg0) {
   return AccessibilityAnnouncer.isThemeDark(table[arg0]) ? ThemeTypes.DARKER : ThemeTypes.LIGHT;
 };
 export const getThemeName = function getThemeName(DARK, closure_1) {
-  let closure_0 = DARK;
+  closure_0 = DARK;
   const found = closure_1 ? closure_3 : closure_2.find((theme) => theme.theme === closure_0);
   let str;
   if (found != null) {

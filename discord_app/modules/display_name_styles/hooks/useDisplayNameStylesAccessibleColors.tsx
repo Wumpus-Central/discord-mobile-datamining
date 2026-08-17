@@ -1,9 +1,9 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
+const result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesAccessibleColors.tsx");
 
 export const useDisplayNameStylesAccessibleColors = function useDisplayNameStylesAccessibleColors(displayNameStyles) {
   displayNameStyles = displayNameStyles.displayNameStyles;
@@ -35,9 +35,9 @@ export const useDisplayNameStylesAccessibleColors = function useDisplayNameStyle
     } else {
       const colors = tmp.colors;
       items = colors.map((arg0) => {
-        let obj = outer1_0(outer1_2[5]);
-        obj = { foreground: outer1_1(outer1_2[6])(arg0), background: null, ratio: null, saturationFactor: null };
-        if (noop === outer1_0(outer1_2[3]).DisplayNameEffect.TOON) {
+        let obj = closure_1_0(closure_1_2[5]);
+        obj = { foreground: closure_1_1(closure_1_2[6])(arg0), background: null, ratio: null, saturationFactor: null };
+        if (closure_3 === closure_1_0(closure_1_2[3]).DisplayNameEffect.TOON) {
           let tmp4 = tmp2(tmp[6])("#333");
         } else {
           tmp4 = tmp2(tmp[6])(closure_1);

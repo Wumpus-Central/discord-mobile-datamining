@@ -1,10 +1,10 @@
 // discord_app/modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { transitionTo } from "../../../routing/router_utils.tsx";
-import { collectThreadMetadata } from "../../ThreadAnalyticsUtils.tsx";
+import transitionTo from "transitionTo" /* 1222 */;
+import collectThreadMetadata from "collectThreadMetadata" /* 7521 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
-let result = require("transitionTo").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/app_analytics/track/channel_opened/getChannelOpenedRouteTrackingProps.tsx");
 
 export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRouteTrackingProps(selectedChannelId) {
   let obj = collectThreadMetadata;
@@ -24,7 +24,7 @@ export const getChannelOpenedRouteTrackingProps = function getChannelOpenedRoute
   obj = {};
   const merged = Object.assign(obj);
   if (null != _location) {
-    const obj1 = { location: null };
+    obj1 = { location: null };
     obj1[0] = _location;
     let obj2 = obj1;
   } else {

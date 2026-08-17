@@ -1,34 +1,27 @@
 // discord_app/design/components/Sheet/native/PromoSheet.native.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 let closure_3 = ["title", "description", "illustration", "graphic", "gradientColor", "actions"];
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { content: { paddingHorizontal: 20, position: "relative" }, title: { textAlign: "center" }, description: { textAlign: "center" }, illustration: { alignSelf: "stretch", alignItems: "center" }, graphic: null };
-createCacheKey = { alignSelf: "center", maxWidth: require("Themes").modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH };
+createCacheKey = { alignSelf: "center", maxWidth: ThemesDefault.modules.mobile.PROMO_SHEET_GRAPHIC_MAX_WIDTH };
 createCacheKey[4] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/Sheet/native/PromoSheet.native.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/components/Sheet/native/PromoSheet.native.tsx");
 
 export const PromoSheet = function PromoSheet(arg0) {
-  let actions;
-  let description;
-  let gradientColor;
-  let graphic;
-  let illustration;
-  let title;
   ({ description, illustration, graphic, gradientColor } = arg0);
   ({ title, actions } = arg0);
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("PromoSheet");
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("PromoSheet");
   importDefault = tmp3;
-  const tmp4 = createCacheKey();
+  const tmp4 = callback2();
   const items = [tmp3, gradientColor];
   const memo = React.useMemo(() => {
     if (closure_1) {
@@ -36,10 +29,9 @@ export const PromoSheet = function PromoSheet(arg0) {
         return (arg0) => {
           let obj = {};
           const merged = Object.assign(arg0);
-          obj = { offsetBottom: 0.25, color: closure_0, backgroundColor: null };
-          obj[2] = outer1_1(outer1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND;
-          obj.children = outer1_7(outer1_0(outer1_2[7]).ExpressiveGradient, obj);
-          return outer1_7(outer1_6, obj);
+          obj = { offsetBottom: 0.25, color: closure_0, backgroundColor: closure_1_1(closure_1_2[5]).colors.MOBILE_ACTIONSHEET_BACKGROUND };
+          obj.children = closure_1_7(closure_1_0(closure_1_2[7]).ExpressiveGradient, obj);
+          return closure_1_7(closure_1_6, obj);
         };
       }
     }
@@ -72,7 +64,7 @@ export const PromoSheet = function PromoSheet(arg0) {
       if (tmp3) {
         str2 = "redesign/heading-18/medium";
       }
-      const obj1 = { variant: null, color: null, style: null, children: null };
+      obj1 = { variant: null, color: null, style: null, children: null };
       obj1[0] = str2;
       let str3 = "text-default";
       if (tmp3) {

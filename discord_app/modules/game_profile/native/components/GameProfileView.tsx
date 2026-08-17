@@ -1,59 +1,46 @@
 // discord_app/modules/game_profile/native/components/GameProfileView.tsx
-import GameProfileReportButton from "GameProfileReportButton";
-import { View } from "GameProfileWebsiteButton";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { EmbedAnnouncementCard } from "GameProfileAnnouncements.tsx";
-import { GameProfileCommunityServer } from "GameProfileCommunity.tsx";
-import { GameProfileWebsiteButton } from "GameProfileDetails.tsx";
-import { GameProfileGameClaimCta } from "GameProfileGameClaimCta.tsx";
-import { GameProfileHeader } from "GameProfileHeader.tsx";
-import { GameProfileLinkAccount } from "GameProfileLinkAccount.tsx";
-import { ImageItem } from "GameProfileMedia.tsx";
-import { GameProfileReportButton } from "GameProfileReportButton.tsx";
-import { SteamReviewRow } from "GameProfileReviews.tsx";
-import { HorizontalSpacing } from "GameProfileShopCarousel.tsx";
-import { Spacer } from "GameProfileSimilarGames.tsx";
-import { GameProfileSummary } from "GameProfileSummary.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import GameProfileHeaderDefault from "GameProfileHeader" /* 9130 */;
+import ImageItemDefault from "ImageItem" /* 9133 */;
+import SteamReviewRowDefault from "SteamReviewRow" /* 9135 */;
+import GameProfileSummaryDefault from "GameProfileSummary" /* 9145 */;
+import GameProfileLinkAccountDefault from "GameProfileLinkAccount" /* 9146 */;
+import GameProfileCommunityServerDefault from "GameProfileCommunityServer" /* 9149 */;
+import EmbedAnnouncementCardDefault from "EmbedAnnouncementCard" /* 9162 */;
+import HorizontalSpacingDefault from "HorizontalSpacing" /* 9171 */;
+import SpacerDefault from "Spacer" /* 12011 */;
+import GameProfileWebsiteButtonDefault from "GameProfileWebsiteButton" /* 12013 */;
+import GameProfileGameClaimCtaDefault from "GameProfileGameClaimCta" /* 12030 */;
+import GameProfileReportButtonDefault from "GameProfileReportButton" /* 12031 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, body: null, buttonsContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, paddingBottom: require("Themes").space.PX_16 };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "column", paddingVertical: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
-let obj1 = { flexDirection: "column", paddingVertical: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
-createCacheKey[2] = { flexDirection: "column", gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flexDirection: "column", gap: require("Themes").space.PX_8 };
-const result = require("jsxProd").fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
+createCacheKey[1] = { flexDirection: "column", paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
+let obj1 = { flexDirection: "column", paddingVertical: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_32, maxWidth: 520, alignSelf: "center", width: "100%" };
+createCacheKey[2] = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { flexDirection: "column", gap: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileView.tsx");
 
 export default function GameProfileView(arg0) {
-  let closeModal;
-  let game;
-  let invite;
-  let onGuildInviteResolved;
-  let onHeaderHeightMeasured;
-  let onStoreLinksMeasured;
-  let scrollOffsetRef;
-  let scrollY;
-  let source;
-  let trackAction;
-  let viewId;
-  let websiteButtons;
   ({ game, viewId, source, trackAction, closeModal, websiteButtons, onStoreLinksMeasured } = arg0);
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let React;
   ({ invite, onGuildInviteResolved, scrollY, onHeaderHeightMeasured, scrollOffsetRef } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   importDefault = React.useRef(null);
   dependencyMap = React.useRef(null);
-  const analyticsLocations = context(QUICK_SWITCHER.GAME_PROFILE).analyticsLocations;
+  const analyticsLocations = contextDefault(QUICK_SWITCHERDefault.GAME_PROFILE).analyticsLocations;
   const items = [onStoreLinksMeasured];
   React = React.useCallback(() => {
     const current = ref.current;
@@ -66,7 +53,7 @@ export default function GameProfileView(arg0) {
   }, items);
   let obj = { value: analyticsLocations, children: null };
   obj = { style: tmp.container, children: null };
-  const items1 = [callback(GameProfileHeader, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
+  const items1 = [callback(GameProfileHeaderDefault, { game, scrollY, onHeightMeasured: onHeaderHeightMeasured }), ];
   obj = {
     style: tmp.body,
     onLayout(nativeEvent) {
@@ -75,10 +62,10 @@ export default function GameProfileView(arg0) {
     },
     children: null
   };
-  const items2 = [callback(ImageItem, { game, viewId, source, trackAction }), , , , , , , , , , ];
+  const items2 = [callback(ImageItemDefault, { game, viewId, source, trackAction }), , , , , , , , , , ];
   let tmp5Result = websiteButtons.length > 0;
   if (tmp5Result) {
-    const obj1 = { onLayout: null, children: null };
+    obj1 = { onLayout: null, children: null };
     obj1[0] = function onLayout(nativeEvent) {
       const layout = nativeEvent.nativeEvent.layout;
       closure_2.current = layout.y + layout.height;
@@ -92,16 +79,16 @@ export default function GameProfileView(arg0) {
     tmp5Result = tmp5(tmp7, obj1);
   }
   items2[1] = tmp5Result;
-  items2[2] = callback(SteamReviewRow, { game, trackAction });
-  items2[3] = callback(GameProfileSummary, { game, viewId, source, trackAction });
-  items2[4] = callback(GameProfileLinkAccount, { game, analyticsLocations, trackAction });
-  items2[5] = callback(GameProfileCommunityServer, { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
-  items2[6] = callback(EmbedAnnouncementCard, { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
-  items2[7] = callback(HorizontalSpacing, { game, closeModal, trackAction });
-  items2[8] = callback(Spacer, { gameId: game.id, trackAction });
-  items2[9] = callback(GameProfileWebsiteButton, { game, viewId, source, trackAction });
+  items2[2] = callback(SteamReviewRowDefault, { game, trackAction });
+  items2[3] = callback(GameProfileSummaryDefault, { game, viewId, source, trackAction });
+  items2[4] = callback(GameProfileLinkAccountDefault, { game, analyticsLocations, trackAction });
+  items2[5] = callback(GameProfileCommunityServerDefault, { closeModal, game, onInviteResolved: onGuildInviteResolved, trackAction });
+  items2[6] = callback(EmbedAnnouncementCardDefault, { gameId: game.id, invite, closeModal, trackAction, scrollOffsetRef });
+  items2[7] = callback(HorizontalSpacingDefault, { game, closeModal, trackAction });
+  items2[8] = callback(SpacerDefault, { gameId: game.id, trackAction });
+  items2[9] = callback(GameProfileWebsiteButtonDefault, { game, viewId, source, trackAction });
   const obj5 = { style: tmp.buttonsContainer, children: null };
-  const items3 = [callback(GameProfileGameClaimCta, { game, trackAction }), callback(GameProfileReportButton, { applicationId: game.id, trackAction })];
+  const items3 = [callback(GameProfileGameClaimCtaDefault, { game, trackAction }), callback(GameProfileReportButtonDefault, { applicationId: game.id, trackAction })];
   obj5[1] = items3;
   items2[10] = closure_6(View, obj5);
   obj[2] = items2;

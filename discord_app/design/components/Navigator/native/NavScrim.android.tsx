@@ -1,22 +1,21 @@
 // discord_app/design/components/Navigator/native/NavScrim.android.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let obj1;
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
 let obj = { androidNavScrim: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.backgroundColor = require("Themes").colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND;
+obj.backgroundColor = ThemesDefault.colors.ANDROID_NAVIGATION_SCRIM_BACKGROUND;
 obj.top = undefined;
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(() => {
-  const insets = useSafeAreaInsetsKeyboardAware({ includeCustomKeyboardHeight: false }).insets;
+const memoResult = importAllResult.memo(() => {
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeCustomKeyboardHeight: false }).insets;
   let tmp2 = null;
   if (0 !== insets.bottom) {
     let obj = { style: null, pointerEvents: "none" };
@@ -29,6 +28,6 @@ const memoResult = require("noop").memo(() => {
   }
   return tmp2;
 });
-const result = require("jsxProd").fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/NavScrim.android.tsx");
 
 export const NavScrim = memoResult;

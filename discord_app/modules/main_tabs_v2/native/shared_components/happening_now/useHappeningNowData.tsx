@@ -1,42 +1,35 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowData.tsx
-import shouldShowAgeGateForVoiceChannel from "shouldShowAgeGateForVoiceChannel";
-import updateVoiceState from "updateVoiceState";
-import participantFromServer from "participantFromServer";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import truncateOldMessageData from "truncateOldMessageData";
-import scheduledEventSort from "scheduledEventSort";
-import closure_11 from "scheduledEventSort";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import recomputeAffinities from "recomputeAffinities";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import importDefaultResult from "getMemberListId";
-import { MemberListRowTypes } from "getMemberListId";
-import importDefaultResult1 from "ensureGuildLoaded";
-import comparator from "comparator";
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_20 } from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import importDefaultResult2 from "mergeGuildAvatar";
-import importDefaultResult3 from "updateVoiceState";
-import { HappeningNowItem } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import ME from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import closure_6 from "_handleConnectionOpen" /* 4495 */;
+import closure_7 from "truncateOldMessageData" /* 13255 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
+import closure_11 from "scheduledEventSort" /* 4370 */;
+import closure_12 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_13 from "recomputeAffinities" /* 5407 */;
+import closure_14 from "reset" /* 4652 */;
+import closure_15 from "fetchFingerprint" /* 1218 */;
+import importDefaultResult from "getMemberListId" /* 7249 */;
+import { MemberListRowTypes } from "getMemberListId" /* 7249 */;
+import importDefaultResult1 from "ensureGuildLoaded" /* 1391 */;
+import closure_19 from "comparator" /* 1980 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_20 } from "comparator" /* 1980 */;
+import closure_21 from "createGuildRecordFromRust" /* 1910 */;
+import closure_22 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_23 from "sortActivity" /* 4559 */;
+import closure_24 from "markAllUserIdListsStale" /* 4030 */;
+import closure_25 from "updateUserGuildSettingsInternal" /* 5043 */;
+import importDefaultResult2 from "mergeGuildAvatar" /* 1922 */;
+import importDefaultResult3 from "updateVoiceState" /* 4542 */;
+import { HappeningNowItem } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c9;
-let closure_29;
-let closure_30;
-let closure_31;
-let closure_32;
-let metroImportAll;
 const require = arg1;
-({ eventScheduledToStartWithin: metroImportAll, isEventUpcoming: c9, isGuildScheduledEventActive: c10 } = scheduledEventSort);
+({ eventScheduledToStartWithin: closure_8, isEventUpcoming: c9, isGuildScheduledEventActive: c10 } = scheduledEventSort);
 ({ ActivityFlags: closure_29, GuildFeatures: closure_30, Permissions: closure_31, StatusTypes: closure_32 } = ME);
 let items = [importDefaultResult1, importDefaultResult, importDefaultResult3, importDefaultResult2];
-let result = require("participantFromServer").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowData.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useHappeningNowData.tsx");
 
 export default function useHappeningNowData(has, guildId) {
   guildId = has;
@@ -49,7 +42,7 @@ export default function useHappeningNowData(has, guildId) {
   isFocused = guildId.isFocused;
   let React = isFocused;
   let hasItem = has.has(callback4.LIVE_GUILD_STAGE);
-  let participantFromServer = hasItem;
+  closure_5 = hasItem;
   const hasItem1 = has.has(callback4.EMBEDDED_ACTIVITY);
   let callback5 = hasItem1;
   const hasItem2 = has.has(callback4.STREAMS);
@@ -59,7 +52,7 @@ export default function useHappeningNowData(has, guildId) {
   const effect = React.useEffect(() => {
     const userAffinitiesV2 = guildId(isFocused[22]).fetchUserAffinitiesV2();
   }, []);
-  let items = [callback5];
+  items = [callback5];
   const stateFromStores = guildId(isFocused[23]).useStateFromStores(items, () => callback5.isConnected());
   let obj2 = guildId(isFocused[23]);
   let items1 = [stateFromStores3];
@@ -70,7 +63,7 @@ export default function useHappeningNowData(has, guildId) {
       if (guildId.has(callback4.ACTIVE_CHANNEL)) {
         if (stateFromStores1) {
           if (stateFromStores) {
-            if (updateVoiceState) {
+            if (closure_4) {
               const activeChannelsFetchStatus = hasItem2.getActiveChannelsFetchStatus(tmp);
               let tmp7 = null == activeChannelsFetchStatus || null == activeChannelsFetchStatus.fetchedAt;
               if (!tmp7) {
@@ -127,7 +120,7 @@ export default function useHappeningNowData(has, guildId) {
       tmp = stateFromStores;
     }
     if (tmp) {
-      tmp = updateVoiceState;
+      tmp = closure_4;
     }
     if (tmp) {
       tmp = null != id;
@@ -162,7 +155,7 @@ export default function useHappeningNowData(has, guildId) {
   const effect3 = React.useEffect(() => {
     const subscription = id(isFocused[28]).subscribe("CONNECTION_OPEN", callback2);
     return () => {
-      outer1_1(outer1_2[28]).unsubscribe("CONNECTION_OPEN", comparator);
+      closure_1_1(closure_1_2[28]).unsubscribe("CONNECTION_OPEN", closure_19);
     };
   }, items10);
   let obj7 = guildId(isFocused[23]);
@@ -170,7 +163,7 @@ export default function useHappeningNowData(has, guildId) {
   if (isFocused) {
     tmp23 = !obj8.useIsVoicePanelFullscreen();
   }
-  let closure_20 = tmp23;
+  closure_20 = tmp23;
   let tmp9Result = tmp9(tmp10[23]);
   const items11 = [firstGloballyViewbleGuildChannelId];
   const stateFromStores5 = tmp9Result.useStateFromStores(items11, () => {
@@ -183,7 +176,7 @@ export default function useHappeningNowData(has, guildId) {
         }
         let tmp6 = !tmp5;
         if (!tmp5) {
-          tmp6 = props.groups[0].id === outer1_32.UNKNOWN;
+          tmp6 = props.groups[0].id === closure_1_32.UNKNOWN;
         }
         return tmp6;
       }
@@ -193,7 +186,7 @@ export default function useHappeningNowData(has, guildId) {
   tmp9Result = tmp9(tmp10[23]);
   const items12 = [hasItem2];
   const items13 = [guildId, has];
-  const stateFromStores6 = tmp9Result.useStateFromStores(items12, () => {
+  let stateFromStores6 = tmp9Result.useStateFromStores(items12, () => {
     let tmp2 = null != id;
     if (tmp2) {
       let hasItem = guildId.has(callback4.ACTIVE_CHANNEL);
@@ -208,8 +201,8 @@ export default function useHappeningNowData(has, guildId) {
   const items14 = [callback];
   stateFromStores7 = guildId(isFocused[23]).useStateFromStores(items14, () => callback.getUserAffinities());
   const tmp9Result1 = guildId(isFocused[23]);
-  const items15 = [markAllUserIdListsStale];
-  const stateFromStoresArray = guildId(isFocused[23]).useStateFromStoresArray(items15, () => tmp32.getFriendIDs());
+  const items15 = [stateFromStores6];
+  const stateFromStoresArray = guildId(isFocused[23]).useStateFromStoresArray(items15, () => stateFromStores6.getFriendIDs());
   const tmp9Result2 = guildId(isFocused[23]);
   const items16 = [stateFromStoresArray];
   const items17 = [guildId];
@@ -237,12 +230,12 @@ export default function useHappeningNowData(has, guildId) {
   const items21 = [guildId];
   const stateFromStoresArray1 = guildId(isFocused[23]).useStateFromStoresArray(items20, () => stateFromStores.getGuildScheduledEventsForGuild(id), items21);
   const tmp9Result5 = guildId(isFocused[23]);
-  const items22 = [participantFromServer];
+  const items22 = [closure_5];
   const items23 = [guildId];
   let tmp32 = !stateFromStores1;
   const stateFromStoresArray2 = guildId(isFocused[23]).useStateFromStoresArray(items22, () => {
     if (null == id) {
-      let items = [];
+      items = [];
     } else {
       items = embeddedActivitiesForGuild.getEmbeddedActivitiesForGuild(tmp);
     }
@@ -254,36 +247,36 @@ export default function useHappeningNowData(has, guildId) {
   if (!tmp32) {
     tmp32 = stateFromStores6;
   }
-  markAllUserIdListsStale = tmp32;
+  stateFromStores6 = tmp32;
   const ref = obj.useRef({ guildId, hasComputed: false });
   const items24 = [guildId, stateFromStores7, stateFromStores3, hasItem, stateFromStoresArray, stateFromStoresArray1, hasItem5, hasItem2, hasItem1, undefined !== showMultipleActivitiesPerChannel && showMultipleActivitiesPerChannel, hasItem3, hasItem4, has, withoutUserCards, stateFromStores2, stateFromStores4, stateFromStores8, stateFromStoresObject, stateFromStoresArray2];
   const callback3 = obj.useCallback(() => id(isFocused[30]).time("\u{1F3A8}", "computeHappeningNowState", () => {
     function addUser(id, type, channelId) {
-      let closure_0 = id;
-      let obj = outer2_24;
-      if (!outer2_24.isBlockedOrIgnored(id)) {
-        let obj1 = outer2_18;
+      closure_0 = id;
+      let obj = closure_2_24;
+      if (!closure_2_24.isBlockedOrIgnored(id)) {
+        obj1 = closure_2_18;
         channelId = undefined;
         if (channelId != null) {
           channelId = channelId.channelId;
         }
-        const channel = outer2_18.getChannel(channelId);
-        let obj3 = outer2_0(outer2_2[32]);
+        const channel = closure_2_18.getChannel(channelId);
+        let obj3 = closure_2_0(closure_2_2[32]);
         if (!obj3.isChannelContentGated(channel)) {
           if (null != channel) {
             if (channel.isGroupDM()) {
               if (null != channelId) {
                 let tmp34 = set1;
                 if (set1 == null) {
-                  let guildId;
+                  guildId = undefined;
                   if (channel != null) {
                     guildId = channel.getGuildId();
                   }
                   tmp34 = guildId;
                 }
-                const streamForUser = outer2_14.getStreamForUser(id, tmp34);
+                const streamForUser = closure_2_14.getStreamForUser(id, tmp34);
                 if (null != streamForUser) {
-                  if (outer1_7) {
+                  if (closure_1_7) {
                     obj = { userId: null, guildId: null, kind: "activity", activity: null, stream: null };
                     obj[0] = id;
                     obj[1] = tmp33;
@@ -297,17 +290,17 @@ export default function useHappeningNowData(has, guildId) {
                       }
                     }
                     obj[4] = tmp54;
-                    participantFromServer[id] = obj;
-                    const tmp52 = participantFromServer;
+                    closure_5[id] = obj;
+                    const tmp52 = closure_5;
                   }
                 }
                 if (null != channel) {
                   if (!set1.has(channel.id)) {
                     if (channel.isGuildStageVoice()) {
                       if (obj.isFriend(id)) {
-                        const stageInstanceByChannel = outer2_12.getStageInstanceByChannel(channel.id);
+                        const stageInstanceByChannel = closure_2_12.getStageInstanceByChannel(channel.id);
                         if (null != stageInstanceByChannel) {
-                          if (outer2_22.can(outer2_31.CONNECT, channel)) {
+                          if (closure_2_22.can(closure_2_31.CONNECT, channel)) {
                             obj = { kind: "live-guild-stage", stage: null };
                             obj[1] = stageInstanceByChannel;
                             closure_2[channel.id] = obj;
@@ -315,14 +308,14 @@ export default function useHappeningNowData(has, guildId) {
                         }
                       }
                     } else {
-                      if (outer1_6) {
-                        const embeddedActivitiesForChannel = outer2_5.getEmbeddedActivitiesForChannel(channel.id);
-                        if (outer1_3) {
+                      if (closure_1_6) {
+                        const embeddedActivitiesForChannel = closure_2_5.getEmbeddedActivitiesForChannel(channel.id);
+                        if (closure_1_3) {
                           const found = embeddedActivitiesForChannel.filter((userIds) => {
-                            const items = [...userIds.userIds];
+                            items = [...userIds.userIds];
                             return items.some(() => { ... });
                           });
-                          updateVoiceState[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId: closure_0, voiceState: closure_1, guildId: closure_1, activity }));
+                          closure_4[channel.id] = found.map((activity) => ({ kind: "embedded-activity", userId: closure_0, voiceState: closure_1, guildId: closure_1, activity }));
                         } else {
                           let tmp3Result = tmp3(tmp4[33]);
                           const result = tmp3Result.findActivityWithMostNonBlockedOrIgnoredParticipants(embeddedActivitiesForChannel);
@@ -332,8 +325,8 @@ export default function useHappeningNowData(has, guildId) {
                             obj1[2] = channelId;
                             obj1[3] = tmp33;
                             obj1[4] = result;
-                            let items = [obj1];
-                            updateVoiceState[channel.id] = items;
+                            items = [obj1];
+                            closure_4[channel.id] = items;
                           }
                         }
                       }
@@ -349,21 +342,21 @@ export default function useHappeningNowData(has, guildId) {
                         tmp45 = guildId2;
                       }
                       obj2[3] = tmp45;
-                      shouldShowAgeGateForVoiceChannel[channel.id] = obj2;
-                      const tmp44 = shouldShowAgeGateForVoiceChannel;
+                      closure_3[channel.id] = obj2;
+                      const tmp44 = closure_3;
                     }
                   }
                 }
               }
             } else {
-              let obj4 = outer2_22;
-              const tmp6 = outer2_31;
+              let obj4 = closure_2_22;
+              const tmp6 = closure_2_31;
             }
           }
           if (null != type) {
             tmp3Result = tmp3(tmp4[34]);
             if (tmp3Result.isActivityPermanentCustomStatus(tmp5)) {
-              if (outer1_8) {
+              if (closure_1_8) {
                 obj3 = { kind: "activity", userId: null, guildId: null, activity: null };
                 obj3[1] = id;
                 obj3[2] = set1;
@@ -372,17 +365,17 @@ export default function useHappeningNowData(has, guildId) {
               }
             } else {
               if (tmp3Result1.isActivityTemporaryCustomStatus(tmp5)) {
-                if (outer1_8) {
+                if (closure_1_8) {
                   obj4 = { userId: null, guildId: null, kind: "activity", activity: null };
                   obj4[0] = id;
                   obj4[1] = set1;
                   obj4[3] = tmp5;
-                  truncateOldMessageData[id] = obj4;
+                  closure_7[id] = obj4;
                 }
-              } else if (outer1_9) {
-                let tmp17 = outer2_1(tmp4[36])(tmp5, outer2_29.EMBEDDED);
+              } else if (closure_1_9) {
+                let tmp17 = closure_2_1(tmp4[36])(tmp5, closure_2_29.EMBEDDED);
                 if (tmp17) {
-                  const voiceStateForSession = outer2_27.getVoiceStateForSession(id, tmp5.session_id);
+                  const voiceStateForSession = closure_2_27.getVoiceStateForSession(id, tmp5.session_id);
                   let channelId1;
                   if (voiceStateForSession != null) {
                     channelId1 = voiceStateForSession.channelId;
@@ -399,15 +392,15 @@ export default function useHappeningNowData(has, guildId) {
                   obj5[0] = id;
                   obj5[1] = set1;
                   obj5[3] = tmp5;
-                  _handleConnectionOpen[id] = obj5;
+                  closure_6[id] = obj5;
                 }
               }
               tmp3Result1 = tmp3(tmp4[35]);
             }
           } else if (addUser) {
-            const status = outer2_23.getStatus(id, set1);
+            const status = closure_2_23.getStatus(id, set1);
             if (null != status) {
-              if (status === outer2_32.OFFLINE) {
+              if (status === closure_2_32.OFFLINE) {
                 const obj6 = { kind: "user", userId: null, guildId: null };
                 obj6[1] = id;
                 obj6[2] = tmp8;
@@ -431,11 +424,11 @@ export default function useHappeningNowData(has, guildId) {
       let tmp2 = length;
       let addResult = set.add(length[num].otherUserId);
     }
-    for (const item10043 of getUncachedChannelPermissions) {
+    for (const item10043 of closure_22) {
       let addResult1 = set.add(item10043);
       continue;
     }
-    const mutablePrivateChannels = outer1_18.getMutablePrivateChannels();
+    const mutablePrivateChannels = closure_1_18.getMutablePrivateChannels();
     for (const key10053 in mutablePrivateChannels) {
       let tmp17 = key10053;
       let obj2 = mutablePrivateChannels[key10053];
@@ -448,9 +441,9 @@ export default function useHappeningNowData(has, guildId) {
       continue;
     }
     if (null == set1) {
-      let items = [];
+      items = [];
       const item = items.forEach((type) => {
-        if (type.type === outer2_17.MEMBER) {
+        if (type.type === closure_2_17.MEMBER) {
           set.add(type.userId);
         }
       });
@@ -461,12 +454,12 @@ export default function useHappeningNowData(has, guildId) {
       dependencyMap[Symbol.iterator]();
       let num2 = 604800;
     } else {
-      num2 = fetchFingerprint;
+      num2 = closure_15;
     }
-    items = outer1_16.getRows(set1, num2.id);
+    items = closure_1_16.getRows(set1, num2.id);
   }), items24);
   const tmp35 = callback4(React.useState(() => {
-    if (markAllUserIdListsStale) {
+    if (stateFromStores6) {
       return [];
     } else {
       const arr = callback3();
@@ -496,7 +489,7 @@ export default function useHappeningNowData(has, guildId) {
       return arr;
     }
   }), 2);
-  let closure_27 = tmp35[1];
+  closure_27 = tmp35[1];
   const items25 = [callback3, guildId];
   callback4 = obj.useCallback(() => {
     const arr = callback3();
@@ -540,7 +533,7 @@ export default function useHappeningNowData(has, guildId) {
         }, 50);
         return () => clearTimeout(closure_0);
       }
-    } else if (!markAllUserIdListsStale) {
+    } else if (!stateFromStores6) {
       callback4();
     }
   }, items26);
@@ -549,7 +542,7 @@ export default function useHappeningNowData(has, guildId) {
     id = stateFromStores3.id;
   }
   React = obj.useRef(-1);
-  participantFromServer = obj.useRef(0);
+  closure_5 = obj.useRef(0);
   const items27 = [guildId, id, callback4, isFocused];
   callback5 = obj.useCallback(() => {
     if (-1 !== ref.current) {
@@ -559,14 +552,14 @@ export default function useHappeningNowData(has, guildId) {
     if (isFocused) {
       const _setTimeout = setTimeout;
       tmp.current = setTimeout(() => {
-        const userStoreVersion = outer1_26.getUserStoreVersion();
-        const sum = userStoreVersion + outer1_18.getPrivateChannelsVersion();
+        const userStoreVersion = closure_1_26.getUserStoreVersion();
+        const sum = userStoreVersion + closure_1_18.getPrivateChannelsVersion();
         let num = -1;
-        const sum1 = sum + outer1_27.getVoiceStateVersion();
+        const sum1 = sum + closure_1_27.getVoiceStateVersion();
         if (null != closure_0) {
           num = -1;
           if (null != closure_1) {
-            num = outer1_16.getProps(tmp4, tmp5).version;
+            num = closure_1_16.getProps(tmp4, tmp5).version;
           }
         }
         const sum2 = sum1 + num;
@@ -579,16 +572,16 @@ export default function useHappeningNowData(has, guildId) {
   }, items27);
   const items28 = [callback5];
   const effect5 = obj.useEffect(() => {
-    let item = outer1_33.forEach((addChangeListener) => {
-      addChangeListener.addChangeListener(_handleConnectionOpen);
+    let item = closure_1_33.forEach((addChangeListener) => {
+      addChangeListener.addChangeListener(closure_6);
     });
     return () => {
       if (-1 !== ref.current) {
         const _clearTimeout = clearTimeout;
         clearTimeout(tmp.current);
       }
-      const item = outer1_33.forEach((removeChangeListener) => {
-        removeChangeListener.removeChangeListener(_handleConnectionOpen);
+      const item = closure_1_33.forEach((removeChangeListener) => {
+        removeChangeListener.removeChangeListener(closure_6);
       });
     };
   }, items28);

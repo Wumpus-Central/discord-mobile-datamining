@@ -1,13 +1,15 @@
 // discord_app/modules/guild_themes/GuildThemeRuntimeStore.tsx
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import { GuildFeatures } from "ME";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { cloneGuildThemeSettings } from "guildThemeSerialization.tsx";
+import apply from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import cloneGuildThemeSettings from "cloneGuildThemeSettings" /* 1909 */;
+import VANITY_URL_POWERUP_SKU_ID from "VANITY_URL_POWERUP_SKU_ID" /* 4265 */;
+import closure_2 from "calculateAppliedBoosts" /* 4261 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import { GuildFeatures } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function snapshotSelectedGuildId(guildId) {
   if (null == guildId) {
     let flag3 = null != obj;
@@ -95,11 +97,12 @@ function handleSavedGuildTheme(guildId) {
 }
 let c6 = null;
 let c7 = null;
+const Store = initializeDefault.Store;
 class GuildThemeRuntimeStore extends Store {
 }
 const prototype = GuildThemeRuntimeStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(calculateAppliedBoosts, createGuildRecordFromRust, handleConnectionOpen);
+  this.waitFor(closure_2, closure_3, closure_4);
 };
 prototype["getGuildThemeSnapshot"] = function getGuildThemeSnapshot(guildId) {
   let tmp = null;
@@ -117,7 +120,7 @@ prototype["getGuildThemeSnapshot"] = function getGuildThemeSnapshot(guildId) {
   return tmp;
 };
 GuildThemeRuntimeStore.displayName = "GuildThemeRuntimeStore";
-const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"), {
+const guildThemeRuntimeStore = new GuildThemeRuntimeStore(dispatcherDefault, {
   CACHE_LOADED: snapshotSelectedGuild,
   CACHE_LOADED_LAZY: snapshotSelectedGuild,
   CHANNEL_SELECT: function handleChannelSelect(guildId) {
@@ -213,7 +216,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"),
             if (stateForGuild != null) {
               const unlockedPowerups = stateForGuild.unlockedPowerups;
               if (unlockedPowerups != null) {
-                tmp14 = unlockedPowerups[require(undefined, 4265) /* VANITY_URL_POWERUP_SKU_ID */.GUILD_POWERUP_GUILD_THEME_SKU_ID];
+                tmp14 = unlockedPowerups[VANITY_URL_POWERUP_SKU_ID.GUILD_POWERUP_GUILD_THEME_SKU_ID];
               }
             }
             let tmp17 = null != tmp14;
@@ -281,8 +284,6 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"),
     return tmp;
   },
   GUILD_POWERUP_ENTITLEMENTS_DELETE: function handleThemePowerupRemoved(arg0) {
-    let entitlements;
-    let guildId;
     ({ guildId, entitlements } = arg0);
     let someResult = entitlements.some((sku_id) => sku_id.sku_id === callback(table[4]).GUILD_POWERUP_GUILD_THEME_SKU_ID);
     if (someResult) {
@@ -305,7 +306,7 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"),
   GUILD_THEME_PREVIEW_SAVE_SUCCESS: handleSavedGuildTheme,
   OVERLAY_INITIALIZE: snapshotSelectedGuild,
   LOGOUT: function handleConnectionReset() {
-    let c7 = null;
+    c7 = null;
     let flag = null != c6;
     if (flag) {
       c6 = null;
@@ -317,6 +318,6 @@ const guildThemeRuntimeStore = new GuildThemeRuntimeStore(require("dispatcher"),
     return flag;
   }
 });
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/guild_themes/GuildThemeRuntimeStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_themes/GuildThemeRuntimeStore.tsx");
 
 export default guildThemeRuntimeStore;

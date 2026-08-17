@@ -1,28 +1,17 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function BackdropCard(arg0) {
-  let buttonLabel;
-  let _slicedToArray;
-  let dependencyMap;
-  let description;
-  let require;
-  let title;
-  ({ blur: require, setShowBackdrop: dependencyMap, setBlurAmount: _slicedToArray } = arg0);
+  ({ blur: require, setShowBackdrop: dependencyMap, setBlurAmount: closure_2 } = arg0);
   ({ buttonLabel, title, description } = arg0);
   let obj = { children: null };
   obj = { spacing: 12, children: null };
@@ -48,26 +37,24 @@ createCacheKey.alignItems = "stretch";
 createCacheKey.justifyContent = "center";
 createCacheKey.padding = 16;
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function UserSettingsDesignSystemBackdropTsx1(){const{withSpring,showBackdrop,SUBTLE_SPRING}=this.__closure;return{opacity:withSpring(showBackdrop?1:0,SUBTLE_SPRING,'animate-always')};}" };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemBackdrop.tsx");
 
 export default function UserSettingsDesignSystemBackdrop() {
-  let tmp6;
-  let tmp7;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const tmp2 = callback(React.useState(false), 2);
   let first = tmp2[0];
-  const dependencyMap = tmp4;
+  dependencyMap = tmp4;
   [tmp6, tmp7] = callback(React.useState("none"), 2);
   let obj = first(4115);
   const fn = function n() {
-    let obj = first(tmp4[10]);
+    let obj = first(4744);
     let num = 0;
     if (first) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, first(tmp4[11]).SUBTLE_SPRING, "animate-always") };
+    obj = { opacity: obj.withSpring(num, first(4748).SUBTLE_SPRING, "animate-always") };
     return obj;
   };
   obj = { withSpring: first(4744).withSpring, showBackdrop: first, SUBTLE_SPRING: first(4748).SUBTLE_SPRING };
@@ -76,13 +63,13 @@ export default function UserSettingsDesignSystemBackdrop() {
   fn.__initData = closure_10;
   obj = { contentContainerStyle: tmp.container, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
-  const obj1 = { spacing: 24, children: null };
+  obj1 = { spacing: 24, children: null };
   const items = [callback2(BackdropCard, { title: "Backdrop", description: "A backdrop is an overlay that appears behind a component to provide separation between the component and the rest of the interface. By default it is a semi-transparent overlay.", buttonLabel: "Show Backdrop", blur: "none", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), callback2(BackdropCard, { title: "Subtle Blur", description: "Backdrop also supports blur. You can use a subtle blur for a lite-touch obfuscation, like for Context Menus that help create seperation but don't completly lift you out of the context", buttonLabel: "Show Subtle Blur Backdrop", blur: "subtle", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 }), callback2(BackdropCard, { title: "Strong Blur", description: "You can use a strong blur for places where you want to completly lift the user out of the context, like for modals", buttonLabel: "Show Strong Blur Backdrop", blur: "strong", setShowBackdrop: tmp2[1], setBlurAmount: tmp7 })];
   obj1[1] = items;
   const items1 = [callback3(first(4733).Stack, obj1), ];
   if (first) {
     function handleClose() {
-      tmp4(false);
+      dependencyMap(false);
     }
     const obj2 = { onDismiss: null, children: null };
     obj2[0] = handleClose;

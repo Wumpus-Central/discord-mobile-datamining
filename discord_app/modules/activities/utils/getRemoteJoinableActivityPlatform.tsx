@@ -1,14 +1,12 @@
 // discord_app/modules/activities/utils/getRemoteJoinableActivityPlatform.tsx
-import isConnected from "isConnected";
-import handleUpdate from "handleUpdate";
-import ME from "ME";
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import hasFlag from "hasFlag" /* 1403 */;
+import closure_2 from "isConnected" /* 5290 */;
+import closure_3 from "handleUpdate" /* 4541 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ ActivityFlags: c4, ActivityGamePlatforms: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");
 
 export const getRemoteJoinableActivityPlatform = function getRemoteJoinableActivityPlatform(presenceActivity) {
   if (null == presenceActivity) {

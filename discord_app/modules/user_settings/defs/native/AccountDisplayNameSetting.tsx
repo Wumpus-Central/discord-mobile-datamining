@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AccountDisplayNameSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import createToggle from "createToggle" /* 10669 */;
 import { ProfileCustomizationSubsection } from "../../profiles/native/ProfileCustomizationSettingScreen.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -13,7 +13,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
   useTrailing: function useAccountDisplayNameSettingTrailing() {
-    const items = [mergeGuildAvatar];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => {
       currentUser = currentUser.getCurrentUser();
       let globalName;
@@ -32,6 +32,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountDisplayNameSetting.tsx");
 
 export default createToggle;

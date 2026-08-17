@@ -1,19 +1,19 @@
 // discord_app/modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx
-import reinjectEphemerals from "reinjectEphemerals";
+import closure_2 from "reinjectEphemerals" /* 4994 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { useEnabledHarmTypesBitmaskForChannelAndAuthorId } from "useContentHarmTypes.tsx";
 
 const require = arg1;
-const result = require("useEnabledHarmTypesBitmaskForChannelAndAuthorId").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useExplicitMediaAttachmentsForMessage.tsx");
 
 export const useRedactableMediaAttachmentsForMessage = function useRedactableMediaAttachmentsForMessage(channelId, messageId, attachmentId) {
   const _require = channelId;
-  const dependencyMap = messageId;
-  let reinjectEphemerals = attachmentId;
-  const items = [reinjectEphemerals];
+  dependencyMap = messageId;
+  closure_2 = attachmentId;
+  const items = [closure_2];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => attachmentId.getMessage(closure_0, closure_1));
   let obj = _defaultAreStatesEqual;
-  let closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {
@@ -33,12 +33,12 @@ export const useRedactableMediaAttachmentsForMessage = function useRedactableMed
 };
 export const useRedactableMediaEmbedsForMessage = function useRedactableMediaEmbedsForMessage(channelId, messageId, embedId) {
   const _require = channelId;
-  const dependencyMap = messageId;
-  let reinjectEphemerals = embedId;
-  const items = [reinjectEphemerals];
+  dependencyMap = messageId;
+  closure_2 = embedId;
+  const items = [closure_2];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => embedId.getMessage(closure_0, closure_1));
   let obj = _defaultAreStatesEqual;
-  let closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
+  closure_3 = _useEnabledHarmTypesBitmaskForChannelAndAuthorId.useEnabledHarmTypesBitmaskForMessage(stateFromStores);
   if (null == stateFromStores) {
     return [];
   } else {

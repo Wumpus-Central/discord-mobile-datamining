@@ -1,27 +1,26 @@
 // discord_app/design/void/BetaTag/native/BetaTag.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { Gradients } from "items";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { keys } from "../../../../ConstantsIOS.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Text } from "../../../components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import keys from "keys" /* 691 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { Gradients } from "items" /* 7403 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null, text: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, borderRadius: require("Themes").radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, borderRadius: ThemesDefault.radii.lg, marginLeft: 8, paddingHorizontal: 8, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textTransform: "uppercase" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_6 = createCacheKey.createStyles(createCacheKey);
 let obj1 = { SMALL: "small", MEDIUM: "medium" };
-const result = require("items").fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
+const result = require("set").fileFinishedImporting("design/void/BetaTag/native/BetaTag.tsx");
 
 export default function BetaTag(gradient) {
-  let size;
-  let style;
-  let textStyle;
   ({ style, textStyle, size } = gradient);
   if (size === undefined) {
     size = obj1.MEDIUM;
@@ -30,7 +29,7 @@ export default function BetaTag(gradient) {
   if (flag === undefined) {
     flag = false;
   }
-  const tmp2 = createCacheKey();
+  const tmp2 = callback();
   let str = "text-xs/bold";
   if (obj1.SMALL !== size) {
     if (obj1.MEDIUM === size) {
@@ -51,8 +50,8 @@ export default function BetaTag(gradient) {
     const intl2 = getSystemLocale.intl;
     obj[3] = intl2.string(getSystemLocale.t.oW0eUd);
     obj[4] = tmp3(Text.Text, obj);
-    let tmp3Result = tmp3(LinearGradient, obj);
-    const tmp10 = LinearGradient;
+    let tmp3Result = tmp3(LinearGradientDefault, obj);
+    const tmp10 = LinearGradientDefault;
   } else {
     obj = { style: null, children: null };
     const items2 = [tmp2.container, style];

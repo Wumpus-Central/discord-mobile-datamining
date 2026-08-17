@@ -1,9 +1,11 @@
 // discord_app/utils/native/StringUtils.tsx
-import { raw } from "../../../_runtime/09460_raw.js";
-const result = require("set").fileFinishedImporting("utils/native/StringUtils.tsx");
+import set from "set" /* 2 */;
+import rawDefault from "raw" /* 9460 */;
+
+const result = set.fileFinishedImporting("utils/native/StringUtils.tsx");
 
 export const splitGraphemes = function splitGraphemes(closure_0) {
-  const obj = raw();
+  const obj = rawDefault();
   const items = [];
   let match = obj.exec(closure_0);
   let num = 0;

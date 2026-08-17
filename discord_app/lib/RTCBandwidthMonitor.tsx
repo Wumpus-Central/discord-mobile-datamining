@@ -1,5 +1,7 @@
 // discord_app/lib/RTCBandwidthMonitor.tsx
-import { apply } from "../../_runtime/00012_apply.js";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+
 let closure_2 = [];
 let RTCBandwidthMonitor;
 class RTCBandwidthMonitor {
@@ -117,11 +119,11 @@ RTCBandwidthMonitor["create"] = function create() {
   return obj.record;
 };
 RTCBandwidthMonitor.prototype["getTotalBytes"] = function getTotalBytes() {
-  return apply.sum(Object.values(this.bytes));
+  return applyDefault.sum(Object.values(this.bytes));
 };
-const result = require("set").fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
+const result = set.fileFinishedImporting("lib/RTCBandwidthMonitor.tsx");
 
 export default RTCBandwidthMonitor;
 export const getRTCTotalBytes = function getRTCTotalBytes() {
-  return apply.sum(arr.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
+  return applyDefault.sum(arr.map((getTotalBytes) => getTotalBytes.getTotalBytes()));
 };

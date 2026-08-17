@@ -1,14 +1,14 @@
 // discord_app/hooks/useLocalStorageState.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { useMountLayoutEffect } from "useMountEffect.tsx";
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
-let result = require("Storage").fileFinishedImporting("hooks/useLocalStorageState.tsx");
+let result = require("set").fileFinishedImporting("hooks/useLocalStorageState.tsx");
 
 export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
-  let closure_0 = c2;
-  const importDefault = arg1;
+  closure_0 = c2;
+  importDefault = arg1;
   const tmp = callback(React.useState(() => {
     const Storage = c2(595).Storage;
     let value = Storage.get(c2);
@@ -17,8 +17,8 @@ export const useLocalStorageState = function useLocalStorageState(c2, arg1) {
     }
     return value;
   }), 2);
-  const dependencyMap = tmp[1];
-  useMountLayoutEffect(() => {
+  dependencyMap = tmp[1];
+  useMountLayoutEffectDefault(() => {
     const Storage = c2(595).Storage;
     if (null == Storage.get(c2)) {
       const Storage2 = c2(595).Storage;

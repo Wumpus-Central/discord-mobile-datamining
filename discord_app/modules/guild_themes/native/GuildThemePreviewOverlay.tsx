@@ -1,13 +1,13 @@
 // discord_app/modules/guild_themes/native/GuildThemePreviewOverlay.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("inlineStyles").fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_themes/native/GuildThemePreviewOverlay.tsx");
 
 export default function GuildThemePreviewOverlay(arg0) {
   let obj = {};
@@ -30,7 +30,7 @@ export default function GuildThemePreviewOverlay(arg0) {
   items[7] = callback(inlineStyles.Path, { opacity: "0.2", d: "M9.44965 31.2709H4.72483C2.11537 31.2709 0 33.4096 0 36.0474V40.8239C0 43.4618 2.11537 45.6005 4.72483 45.6005H9.44965C12.0591 45.6005 14.1745 43.4618 14.1745 40.8239V36.0474C14.1745 33.4096 12.0591 31.2709 9.44965 31.2709Z", fill: "white" });
   items[8] = callback(inlineStyles.Path, { opacity: "0.5", d: "M9.44965 51.5718H4.72483C2.11537 51.5718 0 53.7103 0 56.3481V61.1246C0 63.7627 2.11537 65.9012 4.72483 65.9012H9.44965C12.0591 65.9012 14.1745 63.7627 14.1745 61.1246V56.3481C14.1745 53.7103 12.0591 51.5718 9.44965 51.5718Z", fill: "white" });
   items[9] = callback(inlineStyles.Path, { opacity: "0.05", d: "M259.862 18.1359H21.2575V19.3299H259.862V18.1359Z", fill: "white" });
-  const obj1 = { opacity: "0.2", children: null };
+  obj1 = { opacity: "0.2", children: null };
   const items2 = [callback(inlineStyles.Path, { d: "M44.2994 29.7789H30.1249C29.6356 29.7789 29.239 30.18 29.239 30.6745C29.239 31.1692 29.6356 31.5701 30.1249 31.5701H44.2994C44.7885 31.5701 45.1853 31.1692 45.1853 30.6745C45.1853 30.18 44.7885 29.7789 44.2994 29.7789Z", fill: "white", stroke: "white", strokeWidth: "0.723776" }), callback(inlineStyles.Path, { d: "M33.6659 47.9852C36.6001 47.9852 38.9791 45.5804 38.9791 42.6139C38.9791 39.6474 36.6001 37.2427 33.6659 37.2427C30.7315 37.2427 28.3528 39.6474 28.3528 42.6139C28.3528 45.5804 30.7315 47.9852 33.6659 47.9852Z", fill: "white" }), callback(inlineStyles.Path, { d: "M59.6471 41.7178H45.4727C44.9833 41.7178 44.5868 42.1187 44.5868 42.6132C44.5868 43.1079 44.9833 43.5088 45.4727 43.5088H59.6471C60.1363 43.5088 60.5331 43.1079 60.5331 42.6132C60.5331 42.1187 60.1363 41.7178 59.6471 41.7178Z", fill: "white", stroke: "white", strokeWidth: "0.723776" }), callback(inlineStyles.Path, { d: "M33.6659 63.5031C36.6001 63.5031 38.9791 61.0984 38.9791 58.1319C38.9791 55.1654 36.6001 52.7607 33.6659 52.7607C30.7315 52.7607 28.3528 55.1654 28.3528 58.1319C28.3528 61.0984 30.7315 63.5031 33.6659 63.5031Z", fill: "white" }), callback(inlineStyles.Path, { d: "M73.8216 57.2358H45.4727C44.9833 57.2358 44.5868 57.6367 44.5868 58.1314C44.5868 58.6259 44.9833 59.0268 45.4727 59.0268H73.8216C74.311 59.0268 74.7075 58.6259 74.7075 58.1314C74.7075 57.6367 74.311 57.2358 73.8216 57.2358Z", fill: "white", stroke: "white", strokeWidth: "0.723776" }), callback(inlineStyles.Path, { d: "M33.6659 79.0211C36.6001 79.0211 38.9791 76.6164 38.9791 73.6499C38.9791 70.6836 36.6001 68.2787 33.6659 68.2787C30.7315 68.2787 28.3528 70.6836 28.3528 73.6499C28.3528 76.6164 30.7315 79.0211 33.6659 79.0211Z", fill: "white" }), callback(inlineStyles.Path, { d: "M67.9155 72.7538H45.4727C44.9833 72.7538 44.5868 73.1547 44.5868 73.6494C44.5868 74.1438 44.9833 74.5448 45.4727 74.5448H67.9155C68.4049 74.5448 68.8015 74.1438 68.8015 73.6494C68.8015 73.1547 68.4049 72.7538 67.9155 72.7538Z", fill: "white", stroke: "white", strokeWidth: "0.723776" })];
   obj1[1] = items2;
   items[10] = callback2(inlineStyles.G, obj1);
@@ -40,10 +40,9 @@ export default function GuildThemePreviewOverlay(arg0) {
   const items3 = [callback(inlineStyles.Path, { d: "M56.1027 131.209H25.3914C24.4127 131.209 23.6196 132.011 23.6196 133C23.6196 133.989 24.4127 134.791 25.3914 134.791H56.1027C57.0811 134.791 57.8745 133.989 57.8745 133C57.8745 132.011 57.0811 131.209 56.1027 131.209Z", fill: "white" }), callback(inlineStyles.Path, { d: "M44.2905 137.918H25.3914C24.4127 137.918 23.6196 138.72 23.6196 139.709C23.6196 140.698 24.4127 141.5 25.3914 141.5H44.2905C45.2693 141.5 46.0624 140.698 46.0624 139.709C46.0624 138.72 45.2693 137.918 44.2905 137.918Z", fill: "white" })];
   obj2[1] = items3;
   items[13] = callback2(inlineStyles.G, obj2);
-  const obj3 = { opacity: "0.5", children: null };
-  obj3[1] = callback(inlineStyles.Path, { d: "M235.061 124.413H98.041C94.779 124.413 92.1349 127.086 92.1349 130.383V142.324C92.1349 145.622 94.779 148.295 98.041 148.295H235.061C238.322 148.295 240.966 145.622 240.966 142.324V130.383C240.966 127.086 238.322 124.413 235.061 124.413Z", fill: "white", fillOpacity: "0.08" });
-  items[14] = callback(inlineStyles.G, obj3);
+  const tmp = inlineStylesDefault;
+  items[14] = callback(inlineStyles.G, { opacity: "0.5", children: callback(inlineStyles.Path, { d: "M235.061 124.413H98.041C94.779 124.413 92.1349 127.086 92.1349 130.383V142.324C92.1349 145.622 94.779 148.295 98.041 148.295H235.061C238.322 148.295 240.966 145.622 240.966 142.324V130.383C240.966 127.086 238.322 124.413 235.061 124.413Z", fill: "white", fillOpacity: "0.08" }) });
   obj[0] = items;
   obj.children = callback2(inlineStyles.G, obj);
-  return callback(inlineStyles, obj);
+  return callback(tmp, obj);
 };

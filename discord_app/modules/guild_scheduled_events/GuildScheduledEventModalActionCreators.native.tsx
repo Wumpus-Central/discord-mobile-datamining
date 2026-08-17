@@ -1,20 +1,16 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx
-import asyncRequireImpl from "asyncRequireImpl";
-import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_5 } from "CREATE_GUILD_EVENT_MODAL_KEY";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
-import { getRRule } from "utils/ScheduleUtils.tsx";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import getRRule from "getRRule" /* 8785 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { EXPLICIT_END_EVENT_SHEET_KEY as closure_4 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_5 } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
 
-const require = arg1;
+require = arg1;
 function openGuildEventDetails(arg0) {
-  let event;
-  let eventId;
-  let onClose;
-  let recurrenceId;
   ({ event, recurrenceId } = arg0);
   ({ eventId, onClose } = arg0);
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { eventId, event, onCloseActionSheet: onClose, recurrenceId: null };
   if (recurrenceId == null) {
     recurrenceId = getRRule.getNextRecurrenceIdInEvent(event);
@@ -26,10 +22,10 @@ function openGuildEventDetails(arg0) {
 function _transitionToEventDetailsFromInvite() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -57,11 +53,11 @@ function _transitionToEventDetailsFromInvite() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncRequireImpl = tmp5;
-              let closure_2 = tmp2;
+              closure_3 = tmp5;
+              closure_2 = tmp2;
               c4 = 1;
               c5 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = Promise.resolve();
               return obj1;
             }
@@ -93,7 +89,7 @@ function _transitionToEventDetailsFromInvite() {
       }
     })();
   });
-  const _transitionToEventDetailsFromInvite = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -102,7 +98,7 @@ function _transitionToEventDetailsFromInvite() {
   }
   return applyArgumentsResult;
 }
-const result = require("CREATE_GUILD_EVENT_MODAL_KEY").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventModalActionCreators.native.tsx");
 
 export { openGuildEventDetails };
 export const transitionToEventDetailsFromInvite = function transitionToEventDetailsFromInvite() {
@@ -116,7 +112,7 @@ export const transitionToEventDetailsFromInvite = function transitionToEventDeta
   return applyArgumentsResult;
 };
 export const openEndEventModal = function openEndEventModal(channel) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { channel };
   obj.openLazy(asyncRequireImpl(12410, dependencyMap.paths), closure_4, obj);
 };

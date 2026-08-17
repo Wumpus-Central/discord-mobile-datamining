@@ -1,34 +1,29 @@
 // discord_app/modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useSoundboardConfig } from "../../hooks/useSoundboardConfig.tsx";
-import { dismissPanel } from "../../VoicePanelStateContext.tsx";
-import { useVoicePanelButtonStyles } from "VoicePanelStyles.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import dismissPanelDefault from "dismissPanel" /* 11439 */;
+import useVoicePanelButtonStyles from "useVoicePanelButtonStyles" /* 16397 */;
+import useSoundboardConfig from "useSoundboardConfig" /* 16413 */;
+import useSoundboardConfigDefault from "useSoundboardConfig" /* 16413 */;
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { circle: null, iconContainer: null };
-createCacheKey = { width: "100%", height: "100%", borderRadius: require("Themes").radii.round };
+createCacheKey = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", justifyContent: "center", alignItems: "center", width: "100%", height: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/buttons/VoicePanelSoundboardButton.tsx");
 
 export default function SoundboardButton(arg0) {
-  let disabled;
-  let handlePress;
-  let props;
-  let visible;
-  let wrapperSpecs;
   ({ props, wrapperSpecs } = arg0);
-  const tmp3 = createCacheKey();
+  const tmp3 = callback3();
   let obj = useVoicePanelButtonStyles;
   const voicePanelButtonStyles = obj.useVoicePanelButtonStyles(wrapperSpecs);
-  const tmp6 = useSoundboardConfig;
-  ({ disabled, handlePress, visible } = useSoundboardConfig(React.useContext(dismissPanel).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
+  const tmp6 = useSoundboardConfigDefault;
+  ({ disabled, handlePress, visible } = useSoundboardConfigDefault(React.useContext(dismissPanelDefault).channelId, useSoundboardConfig.SoundboardButtonLocation.VOICE_PANEL_CONTROLS));
   if (disabled) {
     let color = tmp(712).colors.ICON_MUTED;
   } else {
@@ -45,7 +40,7 @@ export default function SoundboardButton(arg0) {
     obj[3] = intl.string(tmp4(1236).t["6EJvHt"]);
     obj = { style: null };
     const items = [tmp3.circle, ];
-    const obj1 = { backgroundColor: null };
+    obj1 = { backgroundColor: null };
     obj1[0] = voicePanelButtonStyles.iconBg.backgroundColor;
     items[1] = obj1;
     obj[0] = items;

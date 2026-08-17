@@ -1,9 +1,9 @@
 // discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("json").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/ThemeContextProvider/ThemeContextProvider.tsx");
 
 export const ThemeContextProvider = function ThemeContextProvider(children) {
   let theme = children.theme;

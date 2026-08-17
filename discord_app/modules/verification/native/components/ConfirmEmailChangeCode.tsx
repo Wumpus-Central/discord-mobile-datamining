@@ -1,13 +1,13 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeCode.tsx
-import keys from "keys";
-import noop from "noop";
-import { setEmailToken } from "ChangeEmailFields";
-import { jsx } from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { setEmailToken } from "ChangeEmailFields" /* 8563 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
 const require = arg1;
-const result = require("ChangeEmailFields").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeCode.tsx");
 
 export default function ConfirmEmailChangeCode(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
@@ -21,9 +21,9 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
     if (arg0 == null) {
       tmp = null;
     }
-    outer1_5(tmp);
+    closure_1_5(tmp);
     const push = navigation.push;
-    const VerificationModalScenes = callback(outer1_2[5]).VerificationModalScenes;
+    const VerificationModalScenes = callback(closure_1_2[5]).VerificationModalScenes;
     if (callback) {
       push(VerificationModalScenes.CHANGE_EMAIL_COLLECT_REASONS);
     } else {
@@ -33,9 +33,9 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
   obj = { onFormSubmit: null, onSuccess: null, onResend: null, headerText: null, confirmButtonText: null };
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       const obj2 = callback(table[7]);
       yield obj2.confirmEmailChange(callback);
@@ -80,7 +80,7 @@ export default function ConfirmEmailChangeCode(isChangeEmail) {
             obj[0] = arg1;
             return obj;
           } else {
-            let obj1 = v0(outer1_2[7]);
+            obj1 = v0(closure_1_2[7]);
             c1 = 1;
             v0 = 1;
             obj1 = { value: null, done: false };

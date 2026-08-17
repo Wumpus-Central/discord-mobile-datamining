@@ -1,30 +1,30 @@
 // discord_app/modules/activate_device/useUserCodeSubmit.tsx
-import getLocationContextServer from "getLocationContextServer";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { OAuthConstants } from "OAuthConstants";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { OAuthConstants } from "OAuthConstants" /* 13342 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/activate_device/useUserCodeSubmit.tsx");
+const result = require("set").fileFinishedImporting("modules/activate_device/useUserCodeSubmit.tsx");
 
 export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccepted, onClose) {
-  let closure_0 = arr;
-  let closure_1 = onUserCodeAccepted;
+  closure_0 = arr;
+  closure_1 = onUserCodeAccepted;
   const callback = onClose;
   const submitting = callback2(React.useState(false), 2);
   callback2 = submitting[1];
-  const error = callback2(React.useState(null), 2);
+  error = callback2(React.useState(null), 2);
   React = error[1];
   const items = [arr, onUserCodeAccepted, onClose];
   const manualSubmit = React.useCallback(callback(function*() {
     let lib = tmp3;
     let v0 = 1;
     v0(true);
-    const obj2 = outer1_0(outer1_1[5]);
-    yield obj2.verifyUserCode(outer1_0);
+    const obj2 = closure_1_0(closure_1_1[5]);
+    yield obj2.verifyUserCode(closure_1_0);
     if (1 === tmp7) {
       v0 = 0;
-      lib = getLocationContextServer;
+      lib = closure_2;
       let status;
       if (lib != null) {
         status = lib.status;
@@ -47,19 +47,19 @@ export const useUserCodeSubmit = function useUserCodeSubmit(arr, onUserCodeAccep
       })(status));
       v0(false);
       let status1;
-      if (outer1_1 != null) {
-        status1 = outer1_1.status;
+      if (closure_1_1 != null) {
+        status1 = closure_1_1.status;
       }
       if (401 === status1) {
-        outer1_2();
+        closure_1_2();
       }
-      let c5 = 3;
+      c5 = 3;
       const tmp22 = c4;
     } else if (arg0 === 1) {
       c5 = 3;
       throw arg1;
     } else if (arg0 !== 2) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
       v0(false);
       const obj = { userCode: null, clientId: null, scopes: null, twoWayLinkCode: null };
       obj[0] = closure_0;

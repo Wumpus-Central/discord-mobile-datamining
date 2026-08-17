@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/ClipsSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ClipsIcon from "ClipsIcon" /* 14329 */;
+import createToggle from "createToggle" /* 10669 */;
 import { ClipsSettingsScreen } from "../../clips/native/SettingsClipsScreen.tsx";
 
 obj = {
@@ -9,16 +12,16 @@ obj = {
     return intl.string(getSystemLocale.t.z2jK6X);
   },
   parent: null,
-  IconComponent: require("ClipsIcon").ClipsIcon,
+  IconComponent: ClipsIcon.ClipsIcon,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.CLIPS,
+  route: ME.UserSettingsSections.CLIPS,
   getComponent() {
     return ClipsSettingsScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/ClipsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ClipsSetting.tsx");
 
 export default route;

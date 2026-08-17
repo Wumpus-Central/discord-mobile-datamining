@@ -1,49 +1,42 @@
 // discord_app/modules/search/native/components/list/rows/MessageRow.tsx
-import importAllResult from "nameFromUser";
-import get_ActivityIndicator from "registerAsset";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { MessageFlags } from "ME";
-import jsxProd from "useSearchMessageTimestamp";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../../../design/void/native.tsx";
-import { computeChannelName } from "../../../../../channel/useChannelName.tsx";
-import { useNullableMessageAuthor } from "../../../../../messages/useMessageAuthor.tsx";
-import { PollBadge } from "../../../../../polls/native/PollBadge.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import useNullableMessageAuthorDefault from "useNullableMessageAuthor" /* 4814 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import PollBadgeDefault from "PollBadge" /* 15895 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "initializeFromUserSettings" /* 1394 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { MessageFlags } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Platform;
-let c4;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function GuildChannelMessageRowHeader(channel) {
-  let isFavorite;
-  let muted;
   channel = channel.channel;
   ({ muted, isFavorite } = channel);
   const tmp = callback2();
   let obj = channel(589);
-  const items = [createGuildRecordFromRust];
+  const items = [closure_8];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const guild = outer1_8.getGuild(channel.guild_id);
+    const guild = closure_1_8.getGuild(channel.guild_id);
     let rulesChannelId;
     if (guild != null) {
       rulesChannelId = guild.rulesChannelId;
     }
     return rulesChannelId;
   });
-  let obj1 = channel(6832);
+  obj1 = channel(6832);
   obj = { isRulesChannel: stateFromStores === channel.id };
   const channelIcon = obj1.getChannelIcon(channel, obj);
   obj = { style: tmp.header, children: null };
-  obj1 = { source: channelIcon, size: null, style: null };
-  obj1[1] = channel(1297).Icon.Sizes.REFRESH_SMALL_16;
-  obj1[2] = tmp.channelIcon;
-  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4734).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: computeChannelName(channel) }), , , ];
+  obj1 = { source: channelIcon, size: channel(1297).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon };
+  const items1 = [callback(channel(1297).Icon, obj1), callback(channel(4734).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: computeChannelNameDefault(channel) }), , , ];
   if (muted) {
     const obj2 = { source: null, size: null, style: null };
     obj2[0] = tmp6(10086);
@@ -73,21 +66,16 @@ function GuildChannelMessageRowHeader(channel) {
 }
 function MessageRowIcon(guildId) {
   const message = guildId.message;
-  const obj = { user: message.author, guildId: guildId.channel.guild_id, size: null, avatarDecoration: null };
-  obj[2] = Button.AvatarSizes.LARGE_48;
-  obj[3] = message.author.avatarDecoration;
-  return callback(Button.Avatar, obj);
+  return callback(Button.Avatar, { user: message.author, guildId: guildId.channel.guild_id, size: Button.AvatarSizes.LARGE_48, avatarDecoration: message.author.avatarDecoration });
 }
 function PrivateChannelMessageRowLabel(message) {
-  let timestamp;
-  let timestampAccessibilityLabel;
   message = message.message;
   const channel = message.channel;
   let muted = message.muted;
   const tmp = callback2();
   const items = [message.author];
   const items1 = [channel];
-  const memo = importAllResult.useMemo(() => channel(outer1_2[19]).getName(message.author), items);
+  const memo = importAllResult.useMemo(() => channel(closure_1_2[19]).getName(message.author), items);
   const effect = importAllResult.useEffect(() => {
     if (tmp) {
       const recipients = obj.recipients;
@@ -101,7 +89,7 @@ function PrivateChannelMessageRowLabel(message) {
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
   const items2 = [callback(message(4734).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
   if (muted) {
-    const obj1 = { source: null, size: null, style: null };
+    obj1 = { source: null, size: null, style: null };
     obj1[0] = channel(10086);
     obj1[1] = tmp4(1297).Icon.Sizes.EXTRA_SMALL;
     obj1[2] = tmp.channelStatus;
@@ -136,18 +124,12 @@ function PrivateChannelMessageRowLabel(message) {
   return closure_12(closure_4, obj);
 }
 function GuildChannelMessageRowLabel(arg0) {
-  let channel;
-  let colorString;
-  let colorStrings;
-  let message;
-  let timestamp;
-  let timestampAccessibilityLabel;
   ({ message, channel } = arg0);
   const tmp = callback2();
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
-  ({ colorString, colorStrings } = useNullableMessageAuthor(message));
+  ({ colorString, colorStrings } = useNullableMessageAuthorDefault(message));
   if ("username" === stateFromStores) {
     if (null != colorString) {
       obj = { color: null };
@@ -160,7 +142,7 @@ function GuildChannelMessageRowLabel(arg0) {
     const searchMessageTimestamp = tmp2(15894).useSearchMessageTimestamp(message, channel);
     obj = { style: null, children: null };
     obj[0] = tmp.labelContainer;
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.authorRow;
     let tmp18 = "dot" === stateFromStores;
     ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
@@ -201,7 +183,7 @@ function GuildChannelMessageRowLabel(arg0) {
     if (message.isPoll()) {
       const obj6 = { style: null };
       obj6[0] = tmp.pollBadge;
-      tmp21Result = tmp21(PollBadge, obj6);
+      tmp21Result = tmp21(PollBadgeDefault, obj6);
     }
     items2[3] = tmp21Result;
     obj[1] = items2;
@@ -212,7 +194,7 @@ let c3 = importAllResult;
 ({ Platform, View: c4 } = get_ActivityIndicator);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let obj = { channelIcon: { marginRight: 5, alignSelf: "center" }, channelStatus: null, labelContainer: null, authorRow: null, timestamp: null, header: null, body: null, pollBadge: null, suppressNotificationsIcon: null, spoilerText: null };
-obj = { marginLeft: 5, alignSelf: "center", tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+obj = { marginLeft: 5, alignSelf: "center", tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = obj;
 obj[2] = { flexDirection: "row", width: "100%", marginBottom: 2, alignItems: "center" };
 obj[3] = { flexShrink: 1, minWidth: 0, flexDirection: "row" };
@@ -224,8 +206,6 @@ obj[8] = { marginLeft: 4 };
 obj[9] = { fontStyle: "italic" };
 let closure_13 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function MessageRow(message) {
-  let lineClamp;
-  let messageSizeCacheRef;
   message = message.message;
   const onPress = message.onPress;
   let stateFromStores;
@@ -236,24 +216,24 @@ const memoResult = importAllResult.memo(function MessageRow(message) {
   let body = callback2();
   let stringResult = stateFromStores;
   let obj = message(stateFromStores[11]);
-  const items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(message.channel_id));
+  const items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(message.channel_id));
   guild_id = undefined;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
   }
   let tmpResult = tmp(stringResult[11]);
-  const items1 = [initializeFromUserSettings];
+  const items1 = [closure_6];
   stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
     let isFavoriteResult = null != guild_id;
     if (isFavoriteResult) {
-      isFavoriteResult = outer1_6.isFavorite(message.channel_id);
+      isFavoriteResult = closure_1_6.isFavorite(message.channel_id);
     }
     return isFavoriteResult;
   });
   tmpResult = tmp(stringResult[11]);
-  const items2 = [updateUserGuildSettingsInternal];
-  stateFromStores2 = tmpResult.useStateFromStores(items2, () => outer1_9.isChannelMuted(guild_id, message.channel_id));
+  const items2 = [closure_9];
+  stateFromStores2 = tmpResult.useStateFromStores(items2, () => closure_1_9.isChannelMuted(guild_id, message.channel_id));
   const items3 = [, , ];
   ({ channel_id: arr4[0], id: arr4[1] } = message);
   items3[2] = onPress;
@@ -268,11 +248,11 @@ const memoResult = importAllResult.memo(function MessageRow(message) {
   const items4 = [guild_id1];
   const items5 = [stateFromStores, stateFromStores1, stateFromStores2];
   const memo = guild_id.useMemo(() => {
-    let guild_id;
+    guild_id = undefined;
     if (stateFromStores != null) {
       guild_id = stateFromStores.guild_id;
     }
-    return null == guild_id ? outer1_16 : outer1_17;
+    return null == guild_id ? closure_1_16 : closure_1_17;
   }, items4);
   if (null == stateFromStores) {
     return null;
@@ -283,7 +263,7 @@ const memoResult = importAllResult.memo(function MessageRow(message) {
     obj[0] = message;
     obj[1] = stateFromStores;
     obj[1] = callback(MessageRowIcon, obj);
-    const obj1 = { message: null, channel: null, muted: null };
+    obj1 = { message: null, channel: null, muted: null };
     obj1[0] = message;
     obj1[1] = stateFromStores;
     obj1[2] = stateFromStores2;
@@ -311,6 +291,6 @@ const memoResult = importAllResult.memo(function MessageRow(message) {
     tmp13Result = tmp13(tmp(stringResult[27]).SearchListRow, obj);
   }
 });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/search/native/components/list/rows/MessageRow.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/MessageRow.tsx");
 
 export default memoResult;

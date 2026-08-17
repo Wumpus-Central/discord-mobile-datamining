@@ -1,17 +1,16 @@
 // discord_app/design/components/Navigator/native/SceneLoadingIndicator.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ActivityIndicator } from "../../ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { NavScrim } from "NavScrim.android.tsx";
+import noopAll from "noop" /* 19 */;
+import ActivityIndicator from "ActivityIndicator" /* 5446 */;
+import NavScrim from "NavScrim" /* 6550 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ loadingContainer: { flex: 1, paddingTop: 40 } });
-const result = require("jsxProd").fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/SceneLoadingIndicator.native.tsx");
 
 export const SceneLoadingIndicator = function SceneLoadingIndicator() {
   const obj = { style: callback3().loadingContainer, children: null };

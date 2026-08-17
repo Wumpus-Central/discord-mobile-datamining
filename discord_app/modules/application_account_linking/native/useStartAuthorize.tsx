@@ -1,17 +1,15 @@
 // discord_app/modules/application_account_linking/native/useStartAuthorize.tsx
-import useAuthorizedAppsTokens from "useAuthorizedAppsTokens";
-import noop from "noop";
-import { AuthorizeFlow } from "AuthorizeFlow";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { AuthorizeFlow } from "AuthorizeFlow" /* 7143 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
 import { useAuthorizedAppsTokens } from "../hooks/useAuthorizedAppsToken.tsx";
 
 const require = arg1;
-let result = require("AuthorizeFlow").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
+let result = require("set").fileFinishedImporting("modules/application_account_linking/native/useStartAuthorize.tsx");
 
 export default function useStartAuthorize(getOfficialApplicationId) {
-  let fetched;
-  let token;
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -46,10 +44,10 @@ export default function useStartAuthorize(getOfficialApplicationId) {
   ({ token, fetched } = authorizedAppsToken);
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -77,8 +75,8 @@ export default function useStartAuthorize(getOfficialApplicationId) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp5;
+              closure_2 = tmp3;
+              closure_1 = tmp5;
               let prop;
               if (lib != null) {
                 prop = lib.connectionEntrypointUrl;
@@ -87,20 +85,20 @@ export default function useStartAuthorize(getOfficialApplicationId) {
                 c6 = 3;
                 return { value: false, done: true };
               } else {
-                let c4 = 1;
+                c4 = 1;
                 c5 = 2;
                 c6 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer2_1(outer2_2[6]).openURL(lib.connectionEntrypointUrl);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_2_1(closure_2_2[6]).openURL(lib.connectionEntrypointUrl);
                 return obj1;
               }
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            const outer1_1 = useAuthorizedAppsTokens;
+            closure_1 = closure_3;
             const onError = lib.onError;
             if (onError != null) {
-              onError(outer1_1);
+              onError(closure_1);
             }
             c6 = 3;
             return { value: false, done: true };
@@ -118,13 +116,13 @@ export default function useStartAuthorize(getOfficialApplicationId) {
             if (onConfirm != null) {
               onConfirm();
             }
-            obj = outer2_1(outer2_2[7]);
+            obj = closure_2_1(closure_2_2[7]);
             const obj3 = { location_stack: null, application_id: null, flow_type: null };
             obj3[0] = lib.analyticsLocations;
             obj3[1] = lib.id;
-            obj3[2] = outer2_5.WEB;
-            obj.track(outer2_6.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
-            obj2 = lib(outer2_2[8]);
+            obj3[2] = closure_2_5.WEB;
+            obj.track(closure_2_6.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, obj3);
+            obj2 = lib(closure_2_2[8]);
             const obj4 = { onSuccess: null, onError: null };
             obj4[0] = lib.onSuccess;
             obj4[1] = lib.onError;
@@ -134,7 +132,7 @@ export default function useStartAuthorize(getOfficialApplicationId) {
             return { value: true, done: true };
           }
         } catch (tmp36) {
-          useAuthorizedAppsTokens = tmp36;
+          closure_3 = tmp36;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp36;

@@ -1,7 +1,8 @@
 // discord_app/design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx
-import ReanimatedRexport from "../../../modules/reanimated/ReanimatedRexport.tsx";
+import set from "set" /* 2 */;
+import ReanimatedRexport from "../../../modules/reanimated/ReanimatedRexport.tsx" /* 4115 */;
 
 const mutable = module_4115.makeMutable({ reduceMotion: false, prefersCrossfades: false, screenReaderEnabled: false });
-const result = require("set").fileFinishedImporting("design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx");
+const result = set.fileFinishedImporting("design/animation/reanimated/AccessibilityPreferencesSharedValue.native.tsx");
 
 export const accessibilityPreferencesSharedValue = mutable;

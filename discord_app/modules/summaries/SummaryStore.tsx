@@ -1,20 +1,21 @@
 // discord_app/modules/summaries/SummaryStore.tsx
-import _slicedToArray from "_slicedToArray";
-import getHash from "getHash";
-import handleConnectionOpen from "handleConnectionOpen";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import closure_13 from "handleConnectionOpen";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { SUMMARY_POLL_INTERVAL } from "result";
-import { PersistedStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { canSeeChannelSummaries } from "../../experiments/ChannelSummariesExperiment.tsx";
-import { set } from "../../utils/Durations.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import canSeeChannelSummaries from "canSeeChannelSummaries" /* 10553 */;
+import closure_7 from "_slicedToArray" /* 32 */;
+import closure_8 from "getHash" /* 4288 */;
+import closure_9 from "handleConnectionOpen" /* 7592 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "createGuildRecordFromRust" /* 1910 */;
+import closure_12 from "generateOldThreadCutoff" /* 4772 */;
+import closure_13 from "handleConnectionOpen" /* 1979 */;
+import closure_14 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_15 from "mergeGuildAvatar" /* 1922 */;
+import { SUMMARY_POLL_INTERVAL } from "result" /* 10552 */;
 
-const require = arg1;
+require = arg1;
 function handleQuickSwitcherUpdate() {
   const results = props.getProps().results;
   const found = results.filter((type) => {
@@ -24,7 +25,7 @@ function handleQuickSwitcherUpdate() {
     }
     return tmp;
   });
-  let closure_24 = found.map((record) => record.record.id);
+  closure_24 = found.map((record) => record.record.id);
 }
 let obj = { FETCHING: "fetching", OK: "ok", ERROR: "error" };
 let closure_18 = {};
@@ -35,6 +36,7 @@ let closure_22 = {};
 let closure_23 = { status: obj.OK, lastRequest: null, lastResponse: null };
 let closure_24 = [];
 let closure_25 = [];
+const PersistedStore = initializeDefault.PersistedStore;
 class SummaryStore extends PersistedStore {
 }
 const prototype = SummaryStore.prototype;
@@ -49,8 +51,8 @@ prototype["initialize"] = function initialize(shouldShowTopicsBar) {
   if (flag == null) {
     flag = true;
   }
-  this.waitFor(ensureGuildLoaded, getHash, createGuildRecordFromRust, handleConnectionOpen, generateOldThreadCutoff, closure_13, updateUserGuildSettingsInternal, mergeGuildAvatar);
-  const items = [handleConnectionOpen];
+  this.waitFor(closure_10, closure_8, closure_11, closure_9, closure_12, closure_13, closure_14, closure_15);
+  const items = [closure_9];
   this.syncWith(items, handleQuickSwitcherUpdate);
 };
 prototype["allSummaries"] = function allSummaries() {
@@ -62,7 +64,7 @@ prototype["topSummaries"] = function topSummaries() {
     let tmp = people.people.length > 1;
     if (tmp) {
       const _Date = Date;
-      const obj = callback(11);
+      obj = callback(11);
       const date = new Date();
       const time = date.getTime();
       tmp = callback(11).extractTimestamp(people.endId) > time - 5 * callback(687).Millis.HOUR;
@@ -71,7 +73,7 @@ prototype["topSummaries"] = function topSummaries() {
     return tmp;
   });
   return found.sort((endId, endId2) => {
-    const obj = callback(11);
+    obj = callback(11);
     const extractTimestampResult = callback(11).extractTimestamp(endId2.endId);
     return extractTimestampResult - callback(11).extractTimestamp(endId.endId);
   });
@@ -87,7 +89,7 @@ prototype["shouldShowTopicsBar"] = function shouldShowTopicsBar() {
   return closure_3;
 };
 prototype["findSummary"] = function findSummary(channelId, summaryId) {
-  let closure_0 = summaryId;
+  closure_0 = summaryId;
   let found = this.summaries(channelId).find((id) => id.id === closure_0);
   if (found == null) {
     found = null;
@@ -200,16 +202,13 @@ prototype["shouldFetchChannelAffinities"] = function shouldFetchChannelAffinitie
     if (tmp4) {
       const _Date = Date;
       const diff = Date.now() - closure_23.lastResponse;
-      tmp4 = diff < 30 * set.Millis.SECOND;
+      tmp4 = diff < 30 * setDefault.Millis.SECOND;
     }
     tmp = !tmp4;
   }
   return tmp;
 };
 prototype["defaultChannelIds"] = function defaultChannelIds(numChannels) {
-  let withChannelAffinities;
-  let withQuickSwitcher;
-  let withUnreads;
   let num = numChannels.numChannels;
   ({ withQuickSwitcher, withChannelAffinities, withUnreads } = numChannels);
   if (num === undefined) {
@@ -233,7 +232,7 @@ prototype["defaultChannelIds"] = function defaultChannelIds(numChannels) {
         hasUnreadResult = !channelMuted.isChannelMuted(channel.guild_id, id);
       }
       if (hasUnreadResult) {
-        hasUnreadResult = generateOldThreadCutoff.hasUnread(id);
+        hasUnreadResult = closure_12.hasUnread(id);
       }
       return hasUnreadResult;
     });
@@ -265,17 +264,13 @@ obj = {
     closure_3 = !closure_3;
   },
   RECEIVE_CHANNEL_SUMMARY(arg0) {
-    let channelId;
-    let error;
-    let receivedAt;
-    let summary;
     ({ summary, channelId } = arg0);
     let summaryFromServer;
     ({ error, receivedAt } = arg0);
     if (null != summary) {
       const _Object = Object;
       if (Object.keys(summary).length > 0) {
-        let obj = summaryFromServer(10554);
+        obj = summaryFromServer(10554);
         summaryFromServer = obj.createSummaryFromServer(summary, channelId);
         let items = dependencyMap2[channelId];
         if (items == null) {
@@ -311,10 +306,8 @@ obj = {
     dependencyMap3[channelId] = obj;
   },
   REQUEST_CHANNEL_SUMMARY(channelId) {
-    let requestedAt;
-    let summaryId;
     channelId = channelId.channelId;
-    let obj = dependencyMap3[channelId];
+    obj = dependencyMap3[channelId];
     ({ summaryId, requestedAt } = channelId);
     if (obj == null) {
       obj = { fetching: false };
@@ -326,12 +319,10 @@ obj = {
     dependencyMap3[channelId] = obj;
   },
   RECEIVE_CHANNEL_SUMMARIES(error) {
-    let channelId;
-    let summaries;
     ({ summaries, channelId } = error);
     error = error.error;
     const found = summaries.filter((arg0) => Object.keys(arg0).length > 0);
-    const mapped = found.map((summary) => channelId(outer1_2[16]).createSummaryFromServer(summary, channelId));
+    const mapped = found.map((summary) => channelId(closure_1_2[16]).createSummaryFromServer(summary, channelId));
     if (null != closure_6) {
       if (closure_6.channelId === channelId) {
         if (!mapped.some((id) => {
@@ -358,7 +349,7 @@ obj = {
         }
       }
     }
-    let obj = channelId(12);
+    obj = channelId(12);
     dependencyMap2[channelId] = obj.sortBy(mapped, (startId) => callback(table[12]).extractTimestamp(startId.startId)).reverse();
     obj = {};
     const merged = Object.assign(dependencyMap3[channelId]);
@@ -371,7 +362,7 @@ obj = {
     dependencyMap3[channelId] = obj;
   },
   REQUEST_CHANNEL_SUMMARIES(requestedAt) {
-    let obj = dependencyMap3[requestedAt.channelId];
+    obj = dependencyMap3[requestedAt.channelId];
     if (obj == null) {
       obj = {};
     }
@@ -382,20 +373,19 @@ obj = {
     dependencyMap3[requestedAt.channelId] = obj;
   },
   SET_HIGHLIGHTED_SUMMARY(channelId) {
-    let summaryId;
-    if (null == closure_4) {
+    if (null == obj) {
       if (null == channelId.channelId) {
         return false;
       }
     }
     channelId = undefined;
-    if (closure_4 != null) {
-      channelId = closure_4.channelId;
+    if (obj != null) {
+      channelId = obj.channelId;
     }
     if (channelId.channelId === channelId) {
       summaryId = undefined;
-      if (closure_4 != null) {
-        summaryId = closure_4.summaryId;
+      if (obj != null) {
+        summaryId = obj.summaryId;
       }
       if (channelId.summaryId === summaryId) {
         return false;
@@ -403,7 +393,7 @@ obj = {
     }
     let tmp3 = null;
     if (null != channelId.channelId) {
-      const obj = { channelId: null, summaryId: null };
+      obj = { channelId: null, summaryId: null };
       ({ channelId: obj[0], summaryId } = channelId);
       if (summaryId == null) {
         summaryId = null;
@@ -411,27 +401,27 @@ obj = {
       obj[1] = summaryId;
       tmp3 = obj;
     }
-    closure_4 = tmp3;
+    obj = tmp3;
     if (null != tmp3) {
-      if (closure_4.channelId === channelId.channelId) {
-        if (null != closure_4.summaryId) {
+      if (obj.channelId === channelId.channelId) {
+        if (null != obj.summaryId) {
           let findIndexResult;
-          if (dependencyMap2[closure_4.channelId] != null) {
+          if (dependencyMap2[obj.channelId] != null) {
             findIndexResult = obj2.findIndex((id) => {
               let summaryId;
-              if (tmp3 != null) {
-                summaryId = tmp3.summaryId;
+              if (obj != null) {
+                summaryId = obj.summaryId;
               }
               return id.id === summaryId;
             });
           }
-          let closure_5 = findIndexResult;
+          closure_5 = findIndexResult;
         }
       }
     }
   },
   UPDATE_VISIBLE_MESSAGES(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     channelId = channelId.getChannelId();
     if (null != channelId) {
       if (null != closure_4) {
@@ -454,8 +444,6 @@ obj = {
       findIndexResult1 = undefined;
       if (dependencyMap2[channelId] != null) {
         findIndexResult1 = obj.findIndex((endId) => {
-          let bottomVisibleMessage;
-          let topVisibleMessage;
           ({ topVisibleMessage, bottomVisibleMessage } = closure_0);
           let tmp = null == topVisibleMessage;
           if (!tmp) {
@@ -502,8 +490,6 @@ obj = {
     return tmp;
   },
   SET_SUMMARY_FEEDBACK(arg0) {
-    let rating;
-    let summary;
     ({ summary, rating } = arg0);
     if (null != rating) {
       closure_20[summary.id] = rating;
@@ -513,7 +499,7 @@ obj = {
     }
   },
   REQUEST_CHANNEL_AFFINITIES() {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.status = obj.FETCHING;
     obj.lastRequest = Date.now();
@@ -523,7 +509,7 @@ obj = {
     if (null != affinities.error) {
       let items = [];
       let reduced = {};
-      let obj = {};
+      obj = {};
       const merged = Object.assign(obj);
       obj.status = obj.ERROR;
       const _Date2 = Date;
@@ -551,8 +537,6 @@ obj = {
     }
   },
   REQUEST_CHANNEL_SUMMARIES_BULK(arg0) {
-    let channelIds;
-    let require;
     ({ channelIds, requestedAt: require } = arg0);
     const reduced = channelIds.reduce((arg0, arg1) => {
       obj = obj[arg1];
@@ -567,26 +551,24 @@ obj = {
       arg0[arg1] = obj;
       return arg0;
     }, {});
-    let obj = {};
+    obj = {};
     let merged = Object.assign(obj);
     const merged1 = Object.assign(reduced);
   },
   RECEIVE_CHANNEL_SUMMARIES_BULK(requestArgs) {
-    let importDefault;
-    let require;
     ({ receivedAt: require, error: importDefault } = requestArgs);
     const channelIds = requestArgs.requestArgs.channelIds;
-    let dependencyMap;
-    let obj = apply;
+    dependencyMap = undefined;
+    obj = applyDefault;
     dependencyMap = obj.toPairs(requestArgs.summaries).reduce((arg0, arg1) => {
       const tmp = callback2(arg1, 2);
       const first = tmp[0];
       const arr = tmp[1];
-      const obj = callback(12);
-      const chainResult = callback(12).chain(tmp[1].map((summary) => first(outer1_2[16]).createSummaryFromServer(summary, first)));
-      const sortByResult = callback(12).chain(tmp[1].map((summary) => first(outer1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId));
-      const reversed = callback(12).chain(tmp[1].map((summary) => first(outer1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId)).takeRight(75).reverse();
-      const takeRightResult = callback(12).chain(tmp[1].map((summary) => first(outer1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId)).takeRight(75);
+      obj = callback(12);
+      const chainResult = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first)));
+      const sortByResult = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId));
+      const reversed = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId)).takeRight(75).reverse();
+      const takeRightResult = callback(12).chain(tmp[1].map((summary) => first(closure_1_2[16]).createSummaryFromServer(summary, first))).sortBy((startId) => callback(table[12]).extractTimestamp(startId.startId)).takeRight(75);
       arg0[first] = reversed.filter((arg0) => Object.keys(arg0).length > 0).value();
       return arg0;
     }, {});
@@ -616,11 +598,11 @@ obj = {
   CONVERSATION_SUMMARY_UPDATE(channel_id) {
     channel_id = channel_id.channel_id;
     const timestamp = Date.now();
-    let obj = apply;
+    obj = applyDefault;
     const chainResult = obj.chain(channel_id.summaries);
     const tmp2 = importDefault;
     const found = obj.chain(channel_id.summaries).sortBy((start_id) => callback(11).extractTimestamp(start_id.start_id)).filter((arg0) => Object.keys(arg0).length > 0);
-    const mapped = found.map((summary) => channel_id(outer1_2[16]).createSummaryFromServer(summary, channel_id));
+    const mapped = found.map((summary) => channel_id(closure_1_2[16]).createSummaryFromServer(summary, channel_id));
     const sortByResult = obj.chain(channel_id.summaries).sortBy((start_id) => callback(11).extractTimestamp(start_id.start_id));
     let items = dependencyMap2[channel_id];
     const iter = mapped.reverse();
@@ -628,9 +610,9 @@ obj = {
       items = [];
     }
     const valueResult = mapped.reverse().value();
-    const tmp2Result = tmp2(12);
-    const combined = tmp2(12).chain(valueResult).concat(items);
-    const chainResult1 = tmp2(12).chain(valueResult);
+    const tmp2Result = applyDefault;
+    const combined = applyDefault.chain(valueResult).concat(items);
+    const chainResult1 = applyDefault.chain(valueResult);
     const sortByResult1 = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId));
     const takeRightResult = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId)).takeRight(75);
     const uniqByResult = combined.sortBy((startId) => callback(11).extractTimestamp(startId.startId)).takeRight(75).uniqBy("id");
@@ -650,8 +632,8 @@ obj = {
     dependencyMap3[channel_id] = obj;
   },
   CLEAR_CONVERSATION_SUMMARIES() {
-    let closure_18 = {};
-    let closure_19 = {};
+    closure_18 = {};
+    closure_19 = {};
   },
   DELETE_SUMMARY(summary) {
     const channelId = summary.summary.channelId;
@@ -666,7 +648,7 @@ obj = {
     }
   }
 };
-const summaryStore = new SummaryStore(require("dispatcher"), obj);
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/summaries/SummaryStore.tsx");
+const summaryStore = new SummaryStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("modules/summaries/SummaryStore.tsx");
 
 export default summaryStore;

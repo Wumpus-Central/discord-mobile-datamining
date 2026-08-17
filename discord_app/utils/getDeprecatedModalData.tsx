@@ -1,6 +1,6 @@
 // discord_app/utils/getDeprecatedModalData.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { ModalAnimation } from "ME";
+import closure_0 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { ModalAnimation } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("utils/getDeprecatedModalData.tsx");
 

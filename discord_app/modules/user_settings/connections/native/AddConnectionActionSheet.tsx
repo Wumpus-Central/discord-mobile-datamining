@@ -1,19 +1,14 @@
 // discord_app/modules/user_settings/connections/native/AddConnectionActionSheet.tsx
-import { AnalyticsLocations } from "ME";
-import { getMigratedApplicationIdentityConnectionsScreenApplications as closure_4 } from "items";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import Button from "Button";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import items2 from "items" /* 4483 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import Button from "Button" /* 1297 */;
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { Button } from "../../../../design/void/native.tsx";
 
-let c5;
-let closure_6;
 function AddApplicationIdentityTableRow(application) {
-  let c0;
-  let canStartAuthorization;
-  let end;
-  let start;
   application = application.application;
   let _require;
   let analyticsLocations;
@@ -29,7 +24,7 @@ function AddApplicationIdentityTableRow(application) {
     end,
     label: application.name,
     onPress() {
-      let obj = analyticsLocations(outer1_2[14]);
+      let obj = analyticsLocations(closure_1_2[14]);
       obj.hideActionSheet();
       obj = { analyticsLocations };
       _undefined(obj);
@@ -50,13 +45,15 @@ function AddApplicationIdentityTableRow(application) {
   obj[6] = !canStartAuthorization;
   return closure_5(_TableRowInner.TableRow, obj, application.id);
 }
+const AnalyticsLocations = ME.AnalyticsLocations;
+let closure_4 = items2.getMigratedApplicationIdentityConnectionsScreenApplications;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { list: { paddingHorizontal: 16 }, icon: null };
 obj = { borderRadius: null };
-obj[0] = Button.getIconSize(require("Button").Icon.Sizes.LARGE);
+obj[0] = Button.getIconSize(Button.Icon.Sizes.LARGE);
 obj[1] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/connections/native/AddConnectionActionSheet.tsx");
 
 export default function AddConnectionActionSheet() {
   const _require = found(found1[5])();
@@ -78,7 +75,7 @@ export default function AddConnectionActionSheet() {
   const intl = _require(found1[11]).intl;
   obj[0] = intl.string(_require(found1[11]).t.Zhcj9X);
   obj[2] = callback2(_require(found1[10]).BottomSheetTitleHeader, obj);
-  const obj1 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
+  obj1 = { style: tmp.list, contentContainerStyle: { paddingBottom: found(found1[6])().bottom }, children: null };
   const items = [
     found1.map((application) => {
       const obj = { application, start: 0 === arg1, end: null };
@@ -87,7 +84,7 @@ export default function AddConnectionActionSheet() {
         tmp3 = 0 === found.length;
       }
       obj[2] = tmp3;
-      return outer1_5(outer1_8, obj, application.id);
+      return closure_1_5(closure_1_8, obj, application.id);
     }),
     found.map((label) => {
       const type = label.type;
@@ -101,10 +98,10 @@ export default function AddConnectionActionSheet() {
         end: arg1 === found.length - 1,
         label: label.name,
         onPress() {
-          let obj = outer1_1(outer1_2[14]);
+          let obj = closure_1_1(closure_1_2[14]);
           obj.hideActionSheet();
-          obj = { platformType: type, location: outer1_3.USER_SETTINGS };
-          outer1_1(outer1_2[15])(obj);
+          obj = { platformType: type, location: closure_1_3.USER_SETTINGS };
+          closure_1_1(closure_1_2[15])(obj);
         },
         icon: null,
         trailing: null
@@ -112,9 +109,9 @@ export default function AddConnectionActionSheet() {
       let tmp2Result = tmp2(tmp3[16]);
       tmp2Result = tmp2(tmp3[17]);
       obj = { source: tmp2Result.makeSource(tmp2Result.isThemeDark(type) ? icon.darkPNG : icon.lightPNG), disableColor: true };
-      obj[4] = outer1_5(callback(found1[4]).Icon, obj);
-      obj[5] = outer1_5(callback(found1[13]).TableRow.Arrow, {});
-      return outer1_5(callback(found1[13]).TableRow, obj, type);
+      obj[4] = closure_1_5(callback(found1[4]).Icon, obj);
+      obj[5] = closure_1_5(callback(found1[13]).TableRow.Arrow, {});
+      return closure_1_5(callback(found1[13]).TableRow, obj, type);
     })
   ];
   obj1[2] = items;

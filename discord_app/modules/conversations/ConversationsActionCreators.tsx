@@ -1,31 +1,24 @@
 // discord_app/modules/conversations/ConversationsActionCreators.tsx
-import apexExperiment from "apexExperiment";
-import removePendingListFetch from "removePendingListFetch";
-import initialize from "initialize";
-import { FETCH_LIMIT } from "CONVERSATION_COLORS";
-import { Endpoints } from "ME";
-import { SurveyActionTypes } from "../../../discord_common/js/shared/shared-constants/SurveyActionTypes.tsx";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { fetchSurveyDetails } from "../qualtrics/QualtricsActionCreators.tsx";
-import { ConversationsAnalytics } from "ConversationsAnalytics.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import fetchSurveyDetailsDefault from "fetchSurveyDetails" /* 9873 */;
+import SurveyActionTypes from "SurveyActionTypes" /* 9880 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 12686 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "removePendingListFetch" /* 5014 */;
+import closure_5 from "initialize" /* 12685 */;
+import { FETCH_LIMIT } from "CONVERSATION_COLORS" /* 5016 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function _fetchChannelConversations() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, body) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c5;
-      let limit2;
-      let throwOnError;
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -56,11 +49,11 @@ function _fetchChannelConversations() {
               limit2 = tmp7;
               let callback;
               let callback2;
-              let dependencyMap;
+              dependencyMap = undefined;
               c3 = undefined;
               limit2 = undefined;
               c5 = undefined;
-              let c6;
+              c6 = undefined;
               hydrateMessages = undefined;
               ({ channelId: c0, guildId: c1, direction: c2, anchor: c3, limit: limit2 } = callback);
               if (limit2 === undefined) {
@@ -86,7 +79,7 @@ function _fetchChannelConversations() {
                 throw body;
               } else if (arg0 === 2) {
                 c8 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = body;
                 return obj1;
               } else {
@@ -149,7 +142,7 @@ function _fetchChannelConversations() {
               obj2.dispatch(obj6);
               if (c6) {
                 const _Error = Error;
-                const error = new Error("Failed to fetch conversations");
+                error = new Error("Failed to fetch conversations");
                 throw error;
               }
             } else if (arg0 === 1) {
@@ -202,7 +195,7 @@ function _fetchChannelConversations() {
     iter.next();
     return iter;
   });
-  const _fetchChannelConversations = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -224,16 +217,14 @@ function fetchConversationMessages(channelId, guildId, id, arg3) {
 function _fetchConversationMessages() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let apexExperiment = arg3;
-    let c9 = 0;
-    let c10 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c9 = 0;
+    c10 = 0;
+    c8 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
-      let includeMessageReferences;
-      let includeReactions;
       if (c10 === 2) {
         c10 = 3;
         HermesBuiltin.throwTypeError();
@@ -260,11 +251,11 @@ function _fetchConversationMessages() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_6 = tmp3;
-              let initialize = tmp7;
+              closure_6 = tmp3;
+              closure_5 = tmp7;
               const callback2 = dependencyMap;
               dependencyMap = undefined;
-              let apexExperiment;
+              closure_3 = undefined;
               if (obj14.isTopicalNavEnabled(callback2, "fetch_conversation")) {
                 let previewLimit = tmp51;
                 if (tmp51 == null) {
@@ -272,9 +263,9 @@ function _fetchConversationMessages() {
                 }
                 previewLimit = previewLimit.previewLimit;
                 dependencyMap = tmp18;
-                let obj3 = outer1_4;
+                let obj3 = closure_1_4;
                 ({ includeMessageReferences, includeReactions } = previewLimit);
-                const conversationMetadata = outer1_4.getConversationMetadata(tmp48, tmp50);
+                const conversationMetadata = closure_1_4.getConversationMetadata(tmp48, tmp50);
                 if (null == previewLimit) {
                   let fullyHydrated;
                   if (!tmp20) {
@@ -291,15 +282,15 @@ function _fetchConversationMessages() {
                 if (tmp22) {
                   if (!obj3.isConversationFetchPending(tmp50, tmp18)) {
                     let obj4 = callback2(709);
-                    let obj1 = { type: "CONVERSATION_FETCH_START", channelId: null, conversationId: null, full: null };
+                    obj1 = { type: "CONVERSATION_FETCH_START", channelId: null, conversationId: null, full: null };
                     obj1[1] = tmp48;
                     obj1[2] = tmp50;
                     obj1[3] = tmp18;
                     obj4.dispatch(obj1);
-                    let c8 = 1;
+                    c8 = 1;
                     const HTTP = tmp52(530).HTTP;
                     const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: true };
-                    obj2[0] = outer1_7.CHANNEL_CONVERSATION_MESSAGES(tmp48, tmp50);
+                    obj2[0] = closure_1_7.CHANNEL_CONVERSATION_MESSAGES(tmp48, tmp50);
                     obj3 = { limit: null, include_message_references: null, include_reactions: null };
                     obj3[0] = previewLimit;
                     obj3[1] = includeMessageReferences;
@@ -329,12 +320,12 @@ function _fetchConversationMessages() {
               c10 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              apexExperiment = arg1;
+              closure_3 = arg1;
               const obj6 = { type: "CONVERSATION_FETCH_SUCCESS", channelId: null, conversationId: null, messages: null, messageReferences: null, fullyHydrated: null };
               obj6[1] = callback;
               obj6[2] = callback2;
-              obj6[3] = apexExperiment.body.messages;
-              obj6[4] = apexExperiment.body.reference_messages;
+              obj6[3] = closure_3.body.messages;
+              obj6[4] = closure_3.body.reference_messages;
               obj6[5] = dependencyMap;
               callback2(709).dispatch(obj6);
               c8 = 0;
@@ -348,7 +339,7 @@ function _fetchConversationMessages() {
           }
           c10 = 3;
         } catch (tmp29) {
-          let closure_7 = tmp29;
+          closure_7 = tmp29;
           if (tmp4 === c8) {
             c10 = tmp2;
             throw tmp29;
@@ -359,7 +350,7 @@ function _fetchConversationMessages() {
       }
     })();
   });
-  const _fetchConversationMessages = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -368,7 +359,7 @@ function _fetchConversationMessages() {
   }
   return applyArgumentsResult;
 }
-let result = require("initialize").fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/conversations/ConversationsActionCreators.tsx");
 
 export const fetchChannelConversations = function fetchChannelConversations(arg0) {
   const self = this;
@@ -381,14 +372,14 @@ export const fetchChannelConversations = function fetchChannelConversations(arg0
   return applyArgumentsResult;
 };
 export const toggleConversationHighlighting = function toggleConversationHighlighting() {
-  dispatcher.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+  dispatcherDefault.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 };
 export const setSelectedConversation = function setSelectedConversation(channelId, guildId, conversationId) {
   let flag = arg3;
   if (arg3 === undefined) {
     flag = true;
   }
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "SET_SELECTED_CONVERSATION", channelId, conversationId };
   obj.dispatch(obj);
   fetchConversationMessages(channelId, guildId, conversationId, { includeReactions: true, includeMessageReferences: true });
@@ -404,27 +395,27 @@ export const setSelectedConversation = function setSelectedConversation(channelI
     obj = { channelId: null, messageId: null, flash: false };
     obj[0] = channelId;
     obj[1] = conversationMetadata.conversation.startMessageId;
-    trackInvite.jumpToMessage(obj);
-    const tmpResult = trackInvite;
+    trackInviteDefault.jumpToMessage(obj);
+    const tmpResult = trackInviteDefault;
   }
 };
 export const clearConversationSelection = function clearConversationSelection(channelId, conversationId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "CLEAR_CONVERSATION_SELECTION", channelId, conversationId };
   obj.dispatch(obj);
 };
 export const setConversationFeedbackRating = function setConversationFeedbackRating(closure_0, closure_1, down) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: closure_0, conversationId: closure_1, rating: down };
   obj.dispatch(obj);
 };
 export { fetchConversationMessages };
 export const trackTopicalNavigationEntrypointImpression = function trackTopicalNavigationEntrypointImpression(id, stateFromStores1) {
-  const ConversationsAnalytics = ConversationsAnalytics.ConversationsAnalytics;
+  const ConversationsAnalytics = ConversationsAnalytics2.ConversationsAnalytics;
   const result = ConversationsAnalytics.trackEntrypointImpression({ channelId: id, conversationCount: stateFromStores1 });
-  if (initialize.shouldTriggerOnNextExposure()) {
-    fetchSurveyDetails.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
-    const obj2 = fetchSurveyDetails;
+  if (closure_5.shouldTriggerOnNextExposure()) {
+    fetchSurveyDetailsDefault.fireSurveyAction(SurveyActionTypes.SurveyActionTypes.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS);
+    const obj2 = fetchSurveyDetailsDefault;
   }
-  dispatcher.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
+  dispatcherDefault.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
 };

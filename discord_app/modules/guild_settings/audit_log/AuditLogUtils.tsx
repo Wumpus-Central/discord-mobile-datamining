@@ -1,56 +1,42 @@
 // discord_app/modules/guild_settings/audit_log/AuditLogUtils.tsx
-import getEmojiToGroupId from "getEmojiToGroupId";
-import handleUpdate from "handleUpdate";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import { AuditLogChange } from "getTargetType";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import AuditLogActions from "AuditLogActions";
-import ME from "ME";
-import { ChannelFlags } from "set";
-import { AutomodTriggerType } from "AutomodEventType";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { set } from "../../../../discord_common/js/shared/shared-constants/GuildFeedItemTypes.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import fromStringAll from "fromString" /* 506 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set2 from "set" /* 16760 */;
+import closure_4 from "getEmojiToGroupId" /* 6727 */;
+import closure_5 from "handleUpdate" /* 6788 */;
+import closure_6 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_7 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_8 from "loadSavedGuildStickers" /* 6769 */;
+import { AuditLogChange } from "getTargetType" /* 16758 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_12 from "markAllUserIdListsStale" /* 4030 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "AuditLogActions" /* 16757 */;
+import ME from "ME" /* 676 */;
+import { ChannelFlags } from "set" /* 1398 */;
+import { AutomodTriggerType } from "AutomodEventType" /* 11042 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 
-let AuditLogChangeKeys;
-let closure_15;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_24;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let closure_29;
-let closure_32;
-let closure_33;
-let closure_34;
-const require = arg1;
+require = arg1;
 function getPermissionChanges(str, str2) {
   let num = 0;
   if (typeof str === "string") {
     num = str;
   }
-  const obj = importAll(506);
+  obj = fromStringAll;
   let tmpResult = tmp(506);
   let num2 = 0;
   if (typeof str2 === "string") {
     num2 = str2;
   }
-  const deserializeResult = importAll(506).deserialize(num);
+  const deserializeResult = fromStringAll.deserialize(num);
   tmpResult = tmp(506);
   const deserializeResult1 = tmpResult.deserialize(num2);
-  importAll(506);
+  fromStringAll;
   const added = [];
   const removed = [];
   for (const key10027 in closure_23) {
@@ -59,7 +45,7 @@ function getPermissionChanges(str, str2) {
     let tmp12 = constants7[key10027];
     let tmp13 = importAll;
     let tmp14 = dependencyMap;
-    let obj5 = importAll(506);
+    let obj5 = fromStringAll;
     if (obj5.has(removeResult, tmp12)) {
       let arr = added.push(tmp12);
     }
@@ -78,7 +64,7 @@ function transformAppliedForumTagChange(oldValue, targetId) {
   let tmp = oldValue;
   let arr = Array.isArray(oldValue.oldValue) ? tmp.oldValue : [];
   const arr2 = Array.isArray(tmp.newValue) ? tmp.newValue : [];
-  let obj = channel;
+  obj = channel;
   channel = channel.getChannel(targetId.targetId);
   let parent_id;
   if (channel != null) {
@@ -103,7 +89,7 @@ function transformAppliedForumTagChange(oldValue, targetId) {
   const set1 = new Set(arr2);
   const found = arr2.filter((arg0) => !set.has(arg0));
   const found1 = arr.filter((arg0) => !set1.has(arg0));
-  const items = [];
+  items = [];
   for (const item10055 of found) {
     let tmp10 = item10055;
     let tmp11 = obj[item10055];
@@ -129,7 +115,7 @@ function transformAppliedForumTagChange(oldValue, targetId) {
     let tmp22 = item10076;
     let tmp23 = obj[item10076];
     if (tmp23 == null) {
-      let obj1 = { id: null, name: null };
+      obj1 = { id: null, name: null };
       let tmp24 = item10076;
       obj1[0] = tmp22;
       obj1[1] = tmp22;
@@ -152,8 +138,6 @@ function transformAppliedForumTagChange(oldValue, targetId) {
   return tmp;
 }
 function transformAvailableForumTagChange(arg0) {
-  let newValue;
-  let oldValue;
   ({ oldValue, newValue } = arg0);
   if (!Array.isArray(oldValue)) {
     oldValue = [];
@@ -166,7 +150,7 @@ function transformAvailableForumTagChange(arg0) {
       return arg0;
     }
   }
-  let obj = {};
+  obj = {};
   obj = {};
   const item = oldValue.forEach((id) => {
     obj[id.id] = id;
@@ -219,7 +203,7 @@ function transformAvailableForumTagChange(arg0) {
         let tmp18 = null;
         let tmp15 = AuditLogChange;
         if (null != tmp17) {
-          let obj1 = { id: null, name: null, emojiId: null, emojiName: null, moderated: null };
+          obj1 = { id: null, name: null, emojiId: null, emojiName: null, moderated: null };
           ({ id: obj4[0], name: obj4[1] } = tmp17);
           let emoji_id1;
           if (0 !== tmp17.emoji_id) {
@@ -302,7 +286,7 @@ function transformAvailableForumTagChange(arg0) {
 const AuditLogTargetTypes = ME.AuditLogTargetTypes;
 ({ MFALevels: closure_18, VerificationLevels: closure_19, UserNotificationSettings: closure_20, GuildExplicitContentFilterTypes: closure_21, ChannelTypes: closure_22, Permissions: closure_23, NOOP_NULL: closure_24, VideoQualityMode: closure_25, ApplicationCommandPermissionTypes: closure_26, AuditLogSubtargetTypes: closure_27, SystemChannelFlags: closure_28, AuditLogActionTypes: closure_29 } = ME);
 ({ GuildScheduledEventEntityTypes: closure_32, GuildScheduledEventStatus: closure_33, GuildScheduledEventPrivacyLevel: closure_34 } = GUILD_EVENT_MAX_NAME_LENGTH);
-let closure_35 = new require("handleStageInstanceCreateOrUpdate")("AuditLogUtils");
+let closure_35 = new timestampDefault("AuditLogUtils");
 let items = [require("sleep").TimeUnits.DAYS, require("sleep").TimeUnits.HOURS, require("sleep").TimeUnits.MINUTES, require("sleep").TimeUnits.SECONDS];
 let closure_37 = { [AuditLogTargetTypes.CHANNEL]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.CHANNEL_OVERWRITE]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.PERMISSION_OVERWRITES]: true }, [AuditLogTargetTypes.INVITE]: { [AuditLogChangeKeys.INVITER_ID]: true, [AuditLogChangeKeys.USES]: true }, [AuditLogTargetTypes.WEBHOOK]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.APPLICATION_ID]: true }, [AuditLogTargetTypes.INTEGRATION]: { [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.NAME]: true }, [AuditLogTargetTypes.THREAD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true }, [AuditLogTargetTypes.STICKER]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.TYPE]: true, [AuditLogChangeKeys.ASSET]: true, [AuditLogChangeKeys.FORMAT_TYPE]: true, [AuditLogChangeKeys.AVAILABLE]: true, [AuditLogChangeKeys.GUILD_ID]: true }, [AuditLogTargetTypes.GUILD_HOME]: { [AuditLogChangeKeys.ENTITY_TYPE]: true }, [AuditLogTargetTypes.GUILD_ONBOARDING]: { [AuditLogChangeKeys.PROMPTS]: true }, [AuditLogTargetTypes.GUILD_SOUNDBOARD]: { [AuditLogChangeKeys.ID]: true, [AuditLogChangeKeys.SOUND_ID]: true } };
 class ACTION_FILTER_ITEMS {
@@ -599,14 +583,14 @@ let obj = {
     return intl.formatToPlainString(getSystemLocale.t["k2UNz+"], { days });
   }
 };
-let tmp4 = new require("handleStageInstanceCreateOrUpdate")("AuditLogUtils");
-let result = require("handleSettingsLoadSuccess").fileFinishedImporting("modules/guild_settings/audit_log/AuditLogUtils.tsx");
+let tmp4 = new timestampDefault("AuditLogUtils");
+let result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/AuditLogUtils.tsx");
 
 export const getChangeStrings = function getChangeStrings(targetType) {
   targetType = targetType.targetType;
   let merged = AuditLogTargetTypes;
   if (AuditLogTargetTypes.GUILD === targetType) {
-    let obj = {};
+    obj = {};
     merged = AuditLogChangeKeys;
     obj[AuditLogChangeKeys.NAME] = () => __3TkD(1236).t.CkDiNH;
     merged = __3TkD;
@@ -640,7 +624,7 @@ export const getChangeStrings = function getChangeStrings(targetType) {
     obj[AuditLogChangeKeys.WIDGET_ENABLED] = (newValue) => newValue.newValue ? __3TkD : _5kDYS3;
     __3TkD = __3TkD(1236).t["6SBsDc"];
     obj[AuditLogChangeKeys.WIDGET_CHANNEL_ID] = (newValue) => null == newValue.newValue ? __3TkD : _5kDYS3;
-    const obj1 = {};
+    obj1 = {};
     merged = constants3;
     obj1[constants3.NONE] = __3TkD(1236).t.W27rsc;
     obj1[constants3.LOW] = __3TkD(1236).t["V8P+Pw"];
@@ -1218,14 +1202,14 @@ export const shouldNotRenderChangeDetail = function shouldNotRenderChangeDetail(
   return tmp3;
 };
 export const checkChangesToRender = function checkChangesToRender(log) {
-  let closure_0 = log;
+  closure_0 = log;
   const changes = log.changes;
   return null != changes && changes.some((key) => {
-    if (log.actionType === outer1_29.DELETE) {
-      if (tmp.action !== outer1_15.MEMBER_BAN_ADD) {
+    if (log.actionType === closure_1_29.DELETE) {
+      if (tmp.action !== closure_1_15.MEMBER_BAN_ADD) {
         if (tmp.action !== tmp2.MEMBER_KICK) {
           if (tmp.action !== tmp2.MEMBER_PRUNE) {
-            let tmp4 = key.key !== outer1_16.REASON;
+            let tmp4 = key.key !== closure_1_16.REASON;
           }
           return !tmp4;
         }
@@ -1239,7 +1223,7 @@ export const checkChangesToRender = function checkChangesToRender(log) {
 };
 export { ACTION_FILTER_ITEMS };
 export const findChangeByKey = function findChangeByKey(arg0, changes) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let found = null;
   if (null != changes.changes) {
     changes = changes.changes;
@@ -1271,8 +1255,6 @@ export const getSimpleAuditLogTitleFromChange = function getSimpleAuditLogTitleF
   return stringResult;
 };
 export const getSimpleAuditLogTitleContextFromChange = function getSimpleAuditLogTitleContextFromChange(changes) {
-  let unit;
-  let unit2;
   let ROLES_REMOVE = AuditLogChangeKeys.COMMUNICATION_DISABLED_UNTIL;
   let found = null;
   if (null != changes.changes) {
@@ -1305,10 +1287,10 @@ export const getSimpleAuditLogTitleContextFromChange = function getSimpleAuditLo
       }
       const date = new Date(newValue1);
       let time = date.getTime();
-      const diff = time - DISCORD_EPOCH.extractTimestamp(changes.id);
+      const diff = time - DISCORD_EPOCHDefault.extractTimestamp(changes.id);
       const _Math = Math;
       const rounded = Math.round(diff / 1000 / 60);
-      const obj2 = DISCORD_EPOCH;
+      const obj2 = DISCORD_EPOCHDefault;
       const tmp25 = ROLES_REMOVE;
       const timeAndUnit = ROLES_REMOVE(4548).getTimeAndUnit(rounded, items);
       if (null != timeAndUnit.unit) {
@@ -1400,7 +1382,7 @@ export const getSimpleAuditLogChangeDetails = function getSimpleAuditLogChangeDe
   if (found.length > 0) {
     if (found1.length > 0) {
       const intl3 = ROLES_REMOVE(1236).intl;
-      let obj = { roleNamesAdded: null, roleNamesRemoved: null };
+      obj = { roleNamesAdded: null, roleNamesRemoved: null };
       obj[0] = joined;
       obj[1] = joined1;
       let formatToPlainStringResult = intl3.formatToPlainString(ROLES_REMOVE(1236).t.tZw1EW, obj);
@@ -1416,7 +1398,7 @@ export const getSimpleAuditLogChangeDetails = function getSimpleAuditLogChangeDe
     formatToPlainStringResult = null;
     if (found1.length > 0) {
       const intl = ROLES_REMOVE(1236).intl;
-      const obj1 = { roleNames: null };
+      obj1 = { roleNames: null };
       obj1[0] = joined1;
       formatToPlainStringResult = intl.formatToPlainString(ROLES_REMOVE(1236).t.Wk4pAJ, obj1);
     }
@@ -1650,7 +1632,7 @@ export const getChangeTitle = function getChangeTitle(log) {
           }
           if (null == found1) {
             const _Error = Error;
-            const error = new Error("[AuditLog] Could not find type change for thread create");
+            error = new Error("[AuditLog] Could not find type change for thread create");
             throw error;
           } else {
             const newValue2 = found1.newValue;
@@ -1722,7 +1704,7 @@ export const getChangeTitle = function getChangeTitle(log) {
             const newValue = found2.newValue;
             found = require;
             found = dependencyMap;
-            if (set.GuildFeedItemTypes.MESSAGE === newValue) {
+            if (set2.GuildFeedItemTypes.MESSAGE === newValue) {
               return found(1236).t["PyEa+J"];
             } else if (found(16760).GuildFeedItemTypes.FORUM_POST === newValue) {
               return found(1236).t.hCuAb1;
@@ -1984,15 +1966,15 @@ export const getStringForPermission = function getStringForPermission(arg0, log)
   }
 };
 export const transformLogs = function transformLogs(arr, arg1) {
-  let closure_0 = arg1;
-  let items = [];
+  closure_0 = arg1;
+  items = [];
   const item = arr.forEach((targetType) => {
     let found = targetType;
     found = targetType;
-    let items = found;
+    items = found;
     targetType = targetType.targetType;
     let tmp3 = found;
-    if (outer1_17.GUILD !== targetType) {
+    if (closure_1_17.GUILD !== targetType) {
       tmp3 = found;
       if (tmp2.GUILD_HOME !== targetType) {
         tmp3 = found;
@@ -2000,8 +1982,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
           if (tmp2.CHANNEL !== targetType) {
             if (tmp2.CHANNEL_OVERWRITE !== targetType) {
               if (tmp2.USER === targetType) {
-                found = outer1_16;
-                found = outer1_16.NICK;
+                found = closure_1_16;
+                found = closure_1_16.NICK;
                 const targetId15 = targetType.targetId;
                 found = ((targetId15) => user.getUser(targetId15))(targetId15);
                 found = null;
@@ -2011,8 +1993,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   found = ((found) => found)(found);
                 }
                 if (null == found) {
-                  found = outer1_14;
-                  found = outer1_14.deletedTargets[targetType.targetType];
+                  found = closure_1_14;
+                  found = closure_1_14.deletedTargets[targetType.targetType];
                   found = null != found && null != found[targetId15];
                   if (found) {
                     found = found[targetId15];
@@ -2032,10 +2014,10 @@ export const transformLogs = function transformLogs(arr, arg1) {
                 }
                 tmp3 = found;
               } else if (tmp2.ROLE === targetType) {
-                found = outer1_16;
-                found = outer1_16.NAME;
+                found = closure_1_16;
+                found = closure_1_16.NAME;
                 const targetId14 = targetType.targetId;
-                found = ((targetId14) => outer1_11.getRole(items.id, targetId14))(targetId14);
+                found = ((targetId14) => closure_1_11.getRole(items.id, targetId14))(targetId14);
                 found = null;
                 found = null != found && true;
                 found = null;
@@ -2043,8 +2025,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   found = ((found) => found.name)(found);
                 }
                 if (null == found) {
-                  found = outer1_14;
-                  found = outer1_14.deletedTargets[targetType.targetType];
+                  found = closure_1_14;
+                  found = closure_1_14.deletedTargets[targetType.targetType];
                   found = null != found && null != found[targetId14];
                   if (found) {
                     found = found[targetId14];
@@ -2064,8 +2046,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                 }
                 tmp3 = found;
               } else if (tmp2.ONBOARDING_PROMPT === targetType) {
-                found = outer1_16;
-                found = outer1_16.ID;
+                found = closure_1_16;
+                found = closure_1_16.ID;
                 const targetId13 = targetType.targetId;
                 found = ((targetId13) => onboardingPrompt.getOnboardingPrompt(targetId13))(targetId13);
                 found = null;
@@ -2075,8 +2057,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   found = ((found) => found.title)(found);
                 }
                 if (null == found) {
-                  found = outer1_14;
-                  found = outer1_14.deletedTargets[targetType.targetType];
+                  found = closure_1_14;
+                  found = closure_1_14.deletedTargets[targetType.targetType];
                   found = null != found && null != found[targetId13];
                   if (found) {
                     found = found[targetId13];
@@ -2096,10 +2078,10 @@ export const transformLogs = function transformLogs(arr, arg1) {
                 }
                 if (null == found) {
                   found = callback;
-                  found = outer1_3;
-                  let intl = callback(outer1_3[17]).intl;
-                  found = outer1_3;
-                  found = intl.string(callback(outer1_3[17]).t.ZNQyiR);
+                  found = closure_1_3;
+                  let intl = callback(closure_1_3[17]).intl;
+                  found = closure_1_3;
+                  found = intl.string(callback(closure_1_3[17]).t.ZNQyiR);
                 }
                 tmp3 = found;
               } else {
@@ -2108,11 +2090,11 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   tmp3 = found;
                   if (tmp2.GUILD_MEMBER_VERIFICATION !== targetType) {
                     if (tmp2.INVITE === targetType) {
-                      found = outer1_16;
-                      found = outer1_24;
-                      found = outer1_16.CODE;
+                      found = closure_1_16;
+                      found = closure_1_24;
+                      found = closure_1_16.CODE;
                       const targetId12 = targetType.targetId;
-                      found = outer1_24(targetId12);
+                      found = closure_1_24(targetId12);
                       found = null;
                       found = null != found && false;
                       found = null;
@@ -2120,8 +2102,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         found = undefined(found);
                       }
                       if (null == found) {
-                        found = outer1_14;
-                        found = outer1_14.deletedTargets[targetType.targetType];
+                        found = closure_1_14;
+                        found = closure_1_14.deletedTargets[targetType.targetType];
                         found = null != found && null != found[targetId12];
                         if (found) {
                           found = found[targetId12];
@@ -2141,12 +2123,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = found;
                     } else if (tmp2.INTEGRATION === targetType) {
-                      found = outer1_16;
-                      found = outer1_16.TYPE;
+                      found = closure_1_16;
+                      found = closure_1_16.TYPE;
                       const targetId11 = targetType.targetId;
                       found = ((targetId11) => {
-                        let closure_0 = targetId11;
-                        const integrations = AuditLogActions.integrations;
+                        closure_0 = targetId11;
+                        const integrations = closure_14.integrations;
                         return integrations.find((id) => id.id === closure_0);
                       })(targetId11);
                       found = null;
@@ -2156,8 +2138,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         found = ((found) => found.name)(found);
                       }
                       if (null == found) {
-                        found = outer1_14;
-                        found = outer1_14.deletedTargets[targetType.targetType];
+                        found = closure_1_14;
+                        found = closure_1_14.deletedTargets[targetType.targetType];
                         found = null != found && null != found[targetId11];
                         if (found) {
                           found = found[targetId11];
@@ -2177,12 +2159,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = found;
                     } else if (tmp2.WEBHOOK === targetType) {
-                      found = outer1_16;
-                      found = outer1_16.NAME;
+                      found = closure_1_16;
+                      found = closure_1_16.NAME;
                       const targetId10 = targetType.targetId;
                       found = ((targetId10) => {
-                        let closure_0 = targetId10;
-                        const webhooks = AuditLogActions.webhooks;
+                        closure_0 = targetId10;
+                        const webhooks = closure_14.webhooks;
                         return webhooks.find((id) => id.id === closure_0);
                       })(targetId10);
                       found = null;
@@ -2192,8 +2174,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         found = ((found) => found.name)(found);
                       }
                       if (null == found) {
-                        found = outer1_14;
-                        found = outer1_14.deletedTargets[targetType.targetType];
+                        found = closure_1_14;
+                        found = closure_1_14.deletedTargets[targetType.targetType];
                         found = null != found && null != found[targetId10];
                         if (found) {
                           found = found[targetId10];
@@ -2213,12 +2195,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = found;
                     } else if (tmp2.EMOJI === targetType) {
-                      found = outer1_16;
-                      found = outer1_16.NAME;
+                      found = closure_1_16;
+                      found = closure_1_16.NAME;
                       const targetId9 = targetType.targetId;
                       found = ((targetId9) => {
-                        let closure_0 = targetId9;
-                        const guildEmoji = outer1_4.getGuildEmoji(items.id);
+                        closure_0 = targetId9;
+                        const guildEmoji = closure_1_4.getGuildEmoji(items.id);
                         return guildEmoji.find((id) => id.id === closure_0);
                       })(targetId9);
                       found = null;
@@ -2228,8 +2210,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         found = ((found) => found.name)(found);
                       }
                       if (null == found) {
-                        found = outer1_14;
-                        found = outer1_14.deletedTargets[targetType.targetType];
+                        found = closure_1_14;
+                        found = closure_1_14.deletedTargets[targetType.targetType];
                         found = null != found && null != found[targetId9];
                         if (found) {
                           found = found[targetId9];
@@ -2249,8 +2231,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = found;
                     } else if (tmp2.STICKER === targetType) {
-                      found = outer1_16;
-                      found = outer1_16.NAME;
+                      found = closure_1_16;
+                      found = closure_1_16.NAME;
                       const targetId8 = targetType.targetId;
                       found = ((targetId8) => stickerById.getStickerById(targetId8))(targetId8);
                       found = null;
@@ -2260,8 +2242,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         found = ((found) => found.name)(found);
                       }
                       if (null == found) {
-                        found = outer1_14;
-                        found = outer1_14.deletedTargets[targetType.targetType];
+                        found = closure_1_14;
+                        found = closure_1_14.deletedTargets[targetType.targetType];
                         found = null != found && null != found[targetId8];
                         if (found) {
                           found = found[targetId8];
@@ -2281,12 +2263,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       }
                       tmp3 = found;
                     } else if (tmp2.STAGE_INSTANCE === targetType) {
-                      found = outer1_16.TOPIC;
+                      found = closure_1_16.TOPIC;
                       const targetId7 = targetType.targetId;
                       const tmp92 = ((targetId7) => {
-                        let closure_0 = targetId7;
-                        const values = Object.values(outer1_7.getStageInstancesByGuild(items.id));
-                        let found;
+                        closure_0 = targetId7;
+                        const values = Object.values(closure_1_7.getStageInstancesByGuild(items.id));
+                        found = undefined;
                         if (values != null) {
                           found = values.find((id) => id.id === closure_0);
                         }
@@ -2302,7 +2284,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (tmp99) {
                           tmp96 = tmp98[targetId7];
                         }
-                        tmp99 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId7];
+                        tmp99 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId7];
                       }
                       found = tmp96;
                       if (null == tmp96) {
@@ -2325,11 +2307,11 @@ export const transformLogs = function transformLogs(arr, arg1) {
                       if (tmp2.GUILD_SCHEDULED_EVENT !== targetType) {
                         if (tmp2.GUILD_SCHEDULED_EVENT_EXCEPTION !== targetType) {
                           if (tmp2.THREAD === targetType) {
-                            found = outer1_16.NAME;
+                            found = closure_1_16.NAME;
                             const targetId5 = targetType.targetId;
                             const tmp68 = ((targetId5) => {
-                              let closure_0 = targetId5;
-                              const threads = AuditLogActions.threads;
+                              closure_0 = targetId5;
+                              const threads = closure_14.threads;
                               return threads.find((id) => id.id === closure_0);
                             })(targetId5);
                             let tmp71 = null;
@@ -2342,7 +2324,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp75) {
                                 tmp72 = tmp74[targetId5];
                               }
-                              tmp75 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId5];
+                              tmp75 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId5];
                             }
                             let tmp76 = tmp72;
                             if (null == tmp72) {
@@ -2364,7 +2346,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             tmp70 = null != tmp68 && true;
                           } else if (tmp2.APPLICATION_COMMAND === targetType) {
                             if (targetType.targetId === targetType.options.application_id) {
-                              let integrations = outer1_14.integrations;
+                              let integrations = closure_1_14.integrations;
                               let found2 = integrations.find((application) => {
                                 application = application.application;
                                 let id;
@@ -2375,12 +2357,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               });
                               tmp3 = null != found2 ? found2.name : targetType.targetId;
                             } else {
-                              found = outer1_16;
-                              found = outer1_16.NAME;
+                              found = closure_1_16;
+                              found = closure_1_16.NAME;
                               const targetId18 = targetType.targetId;
                               found = ((targetId18) => {
-                                let closure_0 = targetId18;
-                                const applicationCommands = AuditLogActions.applicationCommands;
+                                closure_0 = targetId18;
+                                const applicationCommands = closure_14.applicationCommands;
                                 return applicationCommands.find((id) => id.id === closure_0);
                               })(targetId18);
                               found = null;
@@ -2407,7 +2389,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 if (tmp60) {
                                   tmp57 = tmp59[targetId18];
                                 }
-                                tmp60 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId18];
+                                tmp60 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId18];
                               }
                               let tmp61 = tmp57;
                               if (null == tmp57) {
@@ -2429,11 +2411,11 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               tmp55 = null != found && true;
                             }
                           } else if (tmp2.AUTO_MODERATION_RULE === targetType) {
-                            found = outer1_16.NAME;
+                            found = closure_1_16.NAME;
                             const targetId4 = targetType.targetId;
                             const tmp44 = ((targetId4) => {
-                              let closure_0 = targetId4;
-                              const automodRules = AuditLogActions.automodRules;
+                              closure_0 = targetId4;
+                              const automodRules = closure_14.automodRules;
                               return automodRules.find((id) => id.id === closure_0);
                             })(targetId4);
                             let tmp47 = null;
@@ -2446,7 +2428,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp51) {
                                 tmp48 = tmp50[targetId4];
                               }
-                              tmp51 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId4];
+                              tmp51 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId4];
                             }
                             let tmp52 = tmp48;
                             if (null == tmp48) {
@@ -2467,9 +2449,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             tmp3 = tmp52;
                             tmp46 = null != tmp44 && true;
                           } else if (tmp2.GUILD_SOUNDBOARD === targetType) {
-                            found = outer1_16.NAME;
+                            found = closure_1_16.NAME;
                             const targetId3 = targetType.targetId;
-                            const tmp32 = outer1_24(targetId3);
+                            const tmp32 = closure_1_24(targetId3);
                             let tmp35 = null;
                             if (tmp34) {
                               tmp35 = undefined(tmp32);
@@ -2480,7 +2462,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp39) {
                                 tmp36 = tmp38[targetId3];
                               }
-                              tmp39 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId3];
+                              tmp39 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId3];
                             }
                             let tmp40 = tmp36;
                             if (null == tmp36) {
@@ -2502,7 +2484,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             tmp34 = null != tmp32 && false;
                           } else if (tmp2.HOME_SETTINGS === targetType) {
                             let targetId2 = found.id;
-                            found = outer1_16.GUILD_ID;
+                            found = closure_1_16.GUILD_ID;
                             if (targetId2 == null) {
                               targetId2 = targetType.targetId;
                             }
@@ -2524,7 +2506,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp26) {
                                 tmp23 = tmp25[targetId2];
                               }
-                              tmp26 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId2];
+                              tmp26 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId2];
                             }
                             let tmp27 = tmp23;
                             if (null == tmp23) {
@@ -2544,12 +2526,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             }
                             tmp3 = tmp27;
                           } else if (tmp2.VOICE_CHANNEL_STATUS === targetType) {
-                            found = outer1_16.STATUS;
+                            found = closure_1_16.STATUS;
                             const targetId = targetType.targetId;
                             let tmp7 = ((targetId) => store.getChannel(targetId))(targetId);
                             let tmp10 = null;
                             if (tmp9) {
-                              tmp10 = ((channel) => found(4984).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true))(tmp7);
+                              tmp10 = ((channel) => found(4984).computeChannelName(channel, closure_13, closure_12, true))(tmp7);
                             }
                             let tmp11 = tmp10;
                             if (null == tmp10) {
@@ -2557,7 +2539,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                               if (tmp14) {
                                 tmp11 = tmp13[targetId];
                               }
-                              tmp14 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId];
+                              tmp14 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId];
                             }
                             let tmp15 = tmp11;
                             if (null == tmp11) {
@@ -2578,16 +2560,16 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             tmp3 = tmp15;
                             tmp9 = null != tmp7 && true;
                           } else {
-                            outer1_35.warn("Unknown targetType for log", targetType);
+                            closure_1_35.warn("Unknown targetType for log", targetType);
                             tmp3 = null;
                           }
                         }
                       }
-                      found = outer1_16.NAME;
+                      found = closure_1_16.NAME;
                       const targetId6 = targetType.targetId;
                       const tmp80 = ((targetId6) => {
-                        let closure_0 = targetId6;
-                        const guildScheduledEvents = AuditLogActions.guildScheduledEvents;
+                        closure_0 = targetId6;
+                        const guildScheduledEvents = closure_14.guildScheduledEvents;
                         return guildScheduledEvents.find((id) => id.id === closure_0);
                       })(targetId6);
                       let tmp83 = null;
@@ -2600,7 +2582,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                         if (tmp87) {
                           tmp84 = tmp86[targetId6];
                         }
-                        tmp87 = null != outer1_14.deletedTargets[targetType.targetType] && null != outer1_14.deletedTargets[targetType.targetType][targetId6];
+                        tmp87 = null != closure_1_14.deletedTargets[targetType.targetType] && null != closure_1_14.deletedTargets[targetType.targetType][targetId6];
                       }
                       let tmp88 = tmp84;
                       if (null == tmp84) {
@@ -2626,19 +2608,19 @@ export const transformLogs = function transformLogs(arr, arg1) {
               }
             }
           }
-          found = outer1_16;
-          found = outer1_16.NAME;
+          found = closure_1_16;
+          found = closure_1_16.NAME;
           const targetId16 = targetType.targetId;
           found = ((targetId16) => store.getChannel(targetId16))(targetId16);
           found = null;
           found = null != found && true;
           found = null;
           if (found) {
-            found = ((found) => found(4984).computeChannelName(found, mergeGuildAvatar, markAllUserIdListsStale, true))(found);
+            found = ((found) => found(4984).computeChannelName(found, closure_13, closure_12, true))(found);
           }
           if (null == found) {
-            found = outer1_14;
-            found = outer1_14.deletedTargets[targetType.targetType];
+            found = closure_1_14;
+            found = closure_1_14.deletedTargets[targetType.targetType];
             found = null != found && null != found[targetId16];
             if (found) {
               found = found[targetId16];
@@ -2667,26 +2649,26 @@ export const transformLogs = function transformLogs(arr, arg1) {
       found = result1;
       found = result1;
       if (null != result1.options) {
-        let obj = {};
+        obj = {};
         found = obj;
         found = Object.assign(result1.options);
         let type = result1.options.type;
-        if (outer1_27.USER === type) {
+        if (closure_1_27.USER === type) {
           let id = result1.options.id;
-          found = outer1_13;
-          found = outer1_13.getUser(id);
+          found = closure_1_13;
+          found = closure_1_13.getUser(id);
           found = null != found && true;
           if (found) {
             found = items;
-            found = outer1_3;
-            id = items(outer1_3[25]).getUserTag(found);
-            const obj4 = items(outer1_3[25]);
+            found = closure_1_3;
+            id = items(closure_1_3[25]).getUserTag(found);
+            const obj4 = items(closure_1_3[25]);
           }
           obj.subtarget = id;
         } else if (found.ROLE === type) {
           let role_name = result1.options.role_name;
-          found = outer1_24;
-          found = outer1_24(role_name);
+          found = closure_1_24;
+          found = closure_1_24(role_name);
           found = null != found && false;
           if (found) {
             role_name = undefined(found);
@@ -2706,8 +2688,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
             found = ((found) => found)(found);
           }
           if (null == found) {
-            found = outer1_14;
-            found = outer1_14.deletedTargets[result1.targetType];
+            found = closure_1_14;
+            found = closure_1_14.deletedTargets[result1.targetType];
             found = null != found && null != found[targetId17];
             if (found) {
               found = found[targetId17];
@@ -2736,8 +2718,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
         }
         let options = obj;
         if (null != result1.options.event_exception_id) {
-          found = outer1_14;
-          let guildScheduledEvents = outer1_14.guildScheduledEvents;
+          found = closure_1_14;
+          let guildScheduledEvents = closure_1_14.guildScheduledEvents;
           found = guildScheduledEvents.find((id) => id.id === found.targetId);
           found = undefined;
           if (found != null) {
@@ -2745,13 +2727,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
             found = prop.find((event_exception_id) => event_exception_id.event_exception_id === found.options.event_exception_id);
           }
           found = callback;
-          found = outer1_3;
+          found = closure_1_3;
           found = items;
-          found = outer1_3;
+          found = closure_1_3;
           found = items;
-          found = outer1_3;
-          found = items(outer1_3[31]);
-          const obj5 = callback(outer1_3[30]);
+          found = closure_1_3;
+          found = items(closure_1_3[31]);
+          const obj5 = callback(closure_1_3[30]);
           let str5;
           if (found != null) {
             str5 = found.event_exception_id;
@@ -2759,9 +2741,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
           if (str5 == null) {
             str5 = "0";
           }
-          obj.subtarget = obj5.dateFormat(found(items(outer1_3[19]).extractTimestamp(str5)), "LL");
+          obj.subtarget = obj5.dateFormat(found(items(closure_1_3[19]).extractTimestamp(str5)), "LL");
           options = obj;
-          const obj6 = items(outer1_3[19]);
+          const obj6 = items(closure_1_3[19]);
         }
       } else {
         options = result1.options;
@@ -2773,57 +2755,16 @@ export const transformLogs = function transformLogs(arr, arg1) {
         items = [];
         const changes18 = result2.changes;
         found = changes18.forEach((newValue) => {
-          let added;
-          let added2;
-          let newValue10;
-          let newValue11;
-          let newValue12;
-          let newValue13;
-          let newValue14;
-          let newValue15;
-          let newValue16;
-          let newValue18;
-          let newValue19;
-          let newValue20;
-          let newValue21;
-          let newValue22;
-          let newValue3;
-          let newValue4;
-          let newValue5;
-          let newValue6;
-          let newValue8;
-          let newValue9;
-          let oldValue;
-          let oldValue10;
-          let oldValue11;
-          let oldValue12;
-          let oldValue13;
-          let oldValue14;
-          let oldValue15;
-          let oldValue16;
-          let oldValue18;
-          let oldValue19;
-          let oldValue20;
-          let oldValue21;
-          let oldValue22;
-          let oldValue3;
-          let oldValue4;
-          let oldValue5;
-          let oldValue6;
-          let oldValue8;
-          let oldValue9;
-          let removed;
-          let removed2;
           let role = lib;
           lib = found;
-          if (lib.action === outer2_15.APPLICATION_COMMAND_PERMISSION_UPDATE) {
+          if (lib.action === closure_2_15.APPLICATION_COMMAND_PERMISSION_UPDATE) {
             role = newValue.newValue || newValue.oldValue;
             const type = role.type;
-            role = outer2_26;
-            if (outer2_26.ROLE === type) {
+            role = closure_2_26;
+            if (closure_2_26.ROLE === type) {
               let name = role.id;
-              role = outer2_11;
-              role = outer2_11.getRole(tmp2.id, name);
+              role = closure_2_11;
+              role = closure_2_11.getRole(tmp2.id, name);
               role = null;
               role = null != role && true;
               if (role) {
@@ -2833,15 +2774,15 @@ export const transformLogs = function transformLogs(arr, arg1) {
               role = newValue;
             } else if (role.USER === type) {
               let id2 = role.id;
-              role = outer2_13;
-              role = outer2_13.getUser(id2);
+              role = closure_2_13;
+              role = closure_2_13.getUser(id2);
               role = null;
               role = null != role && true;
               if (role) {
                 role = items;
-                role = outer2_3;
-                id2 = items(outer2_3[25]).getUserTag(role);
-                const obj25 = items(outer2_3[25]);
+                role = closure_2_3;
+                id2 = items(closure_2_3[25]).getUserTag(role);
+                const obj25 = items(closure_2_3[25]);
               }
               newValue.subtarget = id2;
               role = newValue;
@@ -2849,8 +2790,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
               role = newValue;
               if (role.CHANNEL === type) {
                 role = items;
-                role = outer2_3;
-                const obj27 = items(outer2_3[26])(tmp2.id);
+                role = closure_2_3;
+                const obj27 = items(closure_2_3[26])(tmp2.id);
                 if (role.id === str23.toString()) {
                   role = lib;
                   const intl11 = lib(role[17]).intl;
@@ -2858,38 +2799,38 @@ export const transformLogs = function transformLogs(arr, arg1) {
                   role = newValue;
                 } else {
                   let id = role.id;
-                  role = outer2_10;
-                  role = outer2_10.getChannel(id);
+                  role = closure_2_10;
+                  role = closure_2_10.getChannel(id);
                   role = null;
                   role = null != role && true;
                   if (role) {
                     role = lib;
                     const obj24 = lib(role[23]);
-                    role = outer2_13;
-                    role = outer2_12;
+                    role = closure_2_13;
+                    role = closure_2_12;
                     role = obj24;
-                    id = obj24.computeChannelName(role, outer2_13, outer2_12, true);
+                    id = obj24.computeChannelName(role, closure_2_13, closure_2_12, true);
                   }
                   newValue.subtarget = id;
                   role = newValue;
                 }
-                str23 = items(outer2_3[26])(tmp2.id).subtract(1);
+                str23 = items(closure_2_3[26])(tmp2.id).subtract(1);
               }
             }
           } else {
-            role = outer2_16;
-            if (outer2_16.OWNER_ID === newValue.key) {
+            role = closure_2_16;
+            if (closure_2_16.OWNER_ID === newValue.key) {
               ({ newValue: newValue22, oldValue: oldValue22 } = newValue);
               role = null;
               if (null != newValue.newValue) {
-                role = outer2_13;
-                newValue22 = outer2_13.getUser(newValue.newValue);
+                role = closure_2_13;
+                newValue22 = closure_2_13.getUser(newValue.newValue);
               }
               if (null != newValue.oldValue) {
-                role = outer2_13;
-                oldValue22 = outer2_13.getUser(newValue.oldValue);
+                role = closure_2_13;
+                oldValue22 = closure_2_13.getUser(newValue.oldValue);
               }
-              role = outer2_9;
+              role = closure_2_9;
               if (!oldValue22) {
                 oldValue22 = newValue.oldValue;
               }
@@ -2917,7 +2858,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           if (null != newValue.oldValue) {
                             oldValue20 = newValue.oldValue / 60;
                           }
-                          role = outer2_9;
+                          role = closure_2_9;
                           if (!oldValue20) {
                             oldValue20 = newValue.oldValue;
                           }
@@ -2939,7 +2880,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           if (null != newValue.oldValue) {
                             oldValue19 = newValue.oldValue / 1000;
                           }
-                          role = outer2_9;
+                          role = closure_2_9;
                           if (!oldValue19) {
                             oldValue19 = newValue.oldValue;
                           }
@@ -2957,19 +2898,19 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           role = null;
                           if (null != newValue.newValue) {
                             role = lib;
-                            role = outer2_3;
-                            const obj20 = lib(outer2_3[27]);
-                            newValue18 = lib(outer2_3[27]).int2hex(newValue.newValue).toUpperCase();
-                            const str21 = lib(outer2_3[27]).int2hex(newValue.newValue);
+                            role = closure_2_3;
+                            const obj20 = lib(closure_2_3[27]);
+                            newValue18 = lib(closure_2_3[27]).int2hex(newValue.newValue).toUpperCase();
+                            const str21 = lib(closure_2_3[27]).int2hex(newValue.newValue);
                           }
                           if (null != newValue.oldValue) {
                             role = lib;
-                            role = outer2_3;
-                            const obj21 = lib(outer2_3[27]);
-                            oldValue18 = lib(outer2_3[27]).int2hex(newValue.oldValue).toUpperCase();
-                            const str22 = lib(outer2_3[27]).int2hex(newValue.oldValue);
+                            role = closure_2_3;
+                            const obj21 = lib(closure_2_3[27]);
+                            oldValue18 = lib(closure_2_3[27]).int2hex(newValue.oldValue).toUpperCase();
+                            const str22 = lib(closure_2_3[27]).int2hex(newValue.oldValue);
                           }
-                          role = outer2_9;
+                          role = closure_2_9;
                           if (!oldValue18) {
                             oldValue18 = newValue.oldValue;
                           }
@@ -2988,30 +2929,30 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           if (null != newValue.newValue) {
                             const newValue17 = newValue.newValue;
                             role = lib;
-                            role = outer2_3;
-                            const obj16 = lib(outer2_3[27]);
-                            role = lib(outer2_3[27]).int2hex(newValue17[0]).toUpperCase();
-                            const str13 = lib(outer2_3[27]).int2hex(newValue17[0]);
-                            const obj17 = lib(outer2_3[27]);
+                            role = closure_2_3;
+                            const obj16 = lib(closure_2_3[27]);
+                            role = lib(closure_2_3[27]).int2hex(newValue17[0]).toUpperCase();
+                            const str13 = lib(closure_2_3[27]).int2hex(newValue17[0]);
+                            const obj17 = lib(closure_2_3[27]);
                             role = globalThis;
                             const _HermesInternal = HermesInternal;
-                            newValue16 = "" + role + ", " + lib(outer2_3[27]).int2hex(newValue17[1]).toUpperCase();
-                            const str14 = lib(outer2_3[27]).int2hex(newValue17[1]);
+                            newValue16 = "" + role + ", " + lib(closure_2_3[27]).int2hex(newValue17[1]).toUpperCase();
+                            const str14 = lib(closure_2_3[27]).int2hex(newValue17[1]);
                           }
                           if (null != newValue.oldValue) {
                             const oldValue17 = newValue.oldValue;
                             role = lib;
-                            role = outer2_3;
-                            const obj18 = lib(outer2_3[27]);
-                            role = lib(outer2_3[27]).int2hex(oldValue17[0]).toUpperCase();
-                            const str17 = lib(outer2_3[27]).int2hex(oldValue17[0]);
-                            const obj19 = lib(outer2_3[27]);
+                            role = closure_2_3;
+                            const obj18 = lib(closure_2_3[27]);
+                            role = lib(closure_2_3[27]).int2hex(oldValue17[0]).toUpperCase();
+                            const str17 = lib(closure_2_3[27]).int2hex(oldValue17[0]);
+                            const obj19 = lib(closure_2_3[27]);
                             role = globalThis;
                             const _HermesInternal2 = HermesInternal;
-                            oldValue16 = "" + role + ", " + lib(outer2_3[27]).int2hex(oldValue17[1]).toUpperCase();
-                            const str18 = lib(outer2_3[27]).int2hex(oldValue17[1]);
+                            oldValue16 = "" + role + ", " + lib(closure_2_3[27]).int2hex(oldValue17[1]).toUpperCase();
+                            const str18 = lib(closure_2_3[27]).int2hex(oldValue17[1]);
                           }
-                          role = outer2_9;
+                          role = closure_2_9;
                           if (!oldValue16) {
                             oldValue16 = newValue.oldValue;
                           }
@@ -3030,26 +2971,26 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           if (null != newValue.newValue) {
                             let label = newValue.newValue;
                             role = items;
-                            role = outer2_3;
-                            role = items(outer2_3[28]).getMaxAgeOptionByValue(label);
+                            role = closure_2_3;
+                            role = items(closure_2_3[28]).getMaxAgeOptionByValue(label);
                             if (null !== role) {
                               label = role.label;
                             }
                             newValue15 = label;
-                            const obj14 = items(outer2_3[28]);
+                            const obj14 = items(closure_2_3[28]);
                           }
                           if (null != newValue.oldValue) {
                             let label2 = newValue.oldValue;
                             role = items;
-                            role = outer2_3;
-                            role = items(outer2_3[28]).getMaxAgeOptionByValue(label2);
+                            role = closure_2_3;
+                            role = items(closure_2_3[28]).getMaxAgeOptionByValue(label2);
                             if (null !== role) {
                               label2 = role.label;
                             }
                             oldValue15 = label2;
-                            const obj15 = items(outer2_3[28]);
+                            const obj15 = items(closure_2_3[28]);
                           }
-                          role = outer2_9;
+                          role = closure_2_9;
                           if (!oldValue15) {
                             oldValue15 = newValue.oldValue;
                           }
@@ -3064,26 +3005,26 @@ export const transformLogs = function transformLogs(arr, arg1) {
                           role = new role(key12, oldValue15, newValue15);
                         } else if (role.PERMISSIONS === key19) {
                           items = [];
-                          role = outer2_40;
-                          role = outer2_40(newValue.oldValue, newValue.newValue);
+                          role = closure_2_40;
+                          role = closure_2_40(newValue.oldValue, newValue.newValue);
                           ({ added: added2, removed: removed2 } = role);
                           if (added2.length > 0) {
-                            role = outer2_9;
+                            role = closure_2_9;
                             role = new.target;
                             role = null;
                             role = new.target;
                             role = added2;
-                            role = new outer2_9(role.PERMISSIONS_GRANTED, null, added2);
+                            role = new closure_2_9(role.PERMISSIONS_GRANTED, null, added2);
                             role = items.push(role);
                           }
                           role = items;
                           if (removed2.length > 0) {
-                            role = outer2_9;
+                            role = closure_2_9;
                             role = new.target;
                             role = null;
                             role = new.target;
                             role = removed2;
-                            role = new outer2_9(role.PERMISSIONS_DENIED, null, removed2);
+                            role = new closure_2_9(role.PERMISSIONS_DENIED, null, removed2);
                             role = items.push(role);
                             role = items;
                           }
@@ -3100,20 +3041,20 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 if (typeof newValue14 === "number") {
                                   num7 = newValue14;
                                 }
-                                role = outer2_2;
-                                role = outer2_3;
-                                role = outer2_2(outer2_3[22]).removeFlag(num7, num6);
-                                role = outer2_2(outer2_3[22]);
+                                role = closure_2_2;
+                                role = closure_2_3;
+                                role = closure_2_2(closure_2_3[22]).removeFlag(num7, num6);
+                                role = closure_2_2(closure_2_3[22]);
                                 const items1 = [];
                                 const items2 = [];
-                                role = outer2_30;
-                                for (const key10535 in outer2_30) {
+                                role = closure_2_30;
+                                for (const key10535 in closure_2_30) {
                                   role = key10535;
-                                  role = outer2_30;
-                                  role = outer2_30[key10535];
-                                  role = outer2_2;
-                                  role = outer2_3;
-                                  let obj26 = outer2_2(outer2_3[22]);
+                                  role = closure_2_30;
+                                  role = closure_2_30[key10535];
+                                  role = closure_2_2;
+                                  role = closure_2_3;
+                                  let obj26 = closure_2_2(closure_2_3[22]);
                                   if (obj26.hasFlag(role, role)) {
                                     role = items1.push(role);
                                   }
@@ -3128,56 +3069,56 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 }
                                 const items3 = [];
                                 if (items1.length > 0) {
-                                  role = outer2_9;
+                                  role = closure_2_9;
                                   role = new.target;
                                   role = null;
                                   role = new.target;
                                   role = items1;
-                                  role = new outer2_9(newValue.key, null, items1);
+                                  role = new closure_2_9(newValue.key, null, items1);
                                   role = items3.push(role);
                                 }
                                 role = items3;
                                 if (items2.length > 0) {
-                                  role = outer2_9;
+                                  role = closure_2_9;
                                   role = new.target;
                                   role = null;
                                   role = new.target;
                                   role = items2;
-                                  role = new outer2_9(newValue.key, items2, null);
+                                  role = new closure_2_9(newValue.key, items2, null);
                                   role = items3.push(role);
                                   role = items3;
                                 }
-                                const obj12 = outer2_2(outer2_3[22]);
+                                const obj12 = closure_2_2(closure_2_3[22]);
                               } else if (role.PREFERRED_LOCALE === key19) {
                                 ({ newValue: newValue13, oldValue: oldValue13 } = newValue);
                                 role = null;
                                 if (null != newValue.newValue) {
                                   lib = newValue.newValue;
                                   role = lib;
-                                  role = outer2_3;
-                                  const availableLocales = lib(outer2_3[17]).getAvailableLocales();
+                                  role = closure_2_3;
+                                  const availableLocales = lib(closure_2_3[17]).getAvailableLocales();
                                   role = availableLocales.find((value) => value.value === closure_0);
                                   role = null;
                                   if (null != role) {
                                     role = role.name;
                                   }
                                   newValue13 = role;
-                                  const obj10 = lib(outer2_3[17]);
+                                  const obj10 = lib(closure_2_3[17]);
                                 }
                                 if (null != newValue.oldValue) {
                                   lib = newValue.oldValue;
                                   role = lib;
-                                  role = outer2_3;
-                                  const availableLocales1 = lib(outer2_3[17]).getAvailableLocales();
+                                  role = closure_2_3;
+                                  const availableLocales1 = lib(closure_2_3[17]).getAvailableLocales();
                                   role = availableLocales1.find((value) => value.value === closure_0);
                                   role = null;
                                   if (null != role) {
                                     role = role.name;
                                   }
                                   oldValue13 = role;
-                                  const obj11 = lib(outer2_3[17]);
+                                  const obj11 = lib(closure_2_3[17]);
                                 }
-                                role = outer2_9;
+                                role = closure_2_9;
                                 if (!oldValue13) {
                                   oldValue13 = newValue.oldValue;
                                 }
@@ -3195,7 +3136,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 role = null;
                                 if (null == newValue.newValue) {
                                   if (null == newValue.oldValue) {
-                                    role = outer2_9;
+                                    role = closure_2_9;
                                     if (!oldValue12) {
                                       oldValue12 = newValue.oldValue;
                                     }
@@ -3209,53 +3150,53 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     role = newValue12;
                                     role = new role(key10, oldValue12, newValue12);
                                   } else {
-                                    role = outer2_25;
-                                    if (newValue.oldValue === outer2_25.FULL) {
+                                    role = closure_2_25;
+                                    if (newValue.oldValue === closure_2_25.FULL) {
                                       role = lib;
-                                      role = outer2_3;
-                                      const intl10 = lib(outer2_3[17]).intl;
-                                      role = intl10.string(lib(outer2_3[17]).t["7jOoJE"]);
+                                      role = closure_2_3;
+                                      const intl10 = lib(closure_2_3[17]).intl;
+                                      role = intl10.string(lib(closure_2_3[17]).t["7jOoJE"]);
                                     } else {
                                       role = lib;
-                                      role = outer2_3;
-                                      const intl9 = lib(outer2_3[17]).intl;
-                                      role = intl9.string(lib(outer2_3[17]).t.jjKYpu);
+                                      role = closure_2_3;
+                                      const intl9 = lib(closure_2_3[17]).intl;
+                                      role = intl9.string(lib(closure_2_3[17]).t.jjKYpu);
                                     }
                                   }
                                 } else {
-                                  role = outer2_25;
-                                  if (newValue.newValue === outer2_25.FULL) {
+                                  role = closure_2_25;
+                                  if (newValue.newValue === closure_2_25.FULL) {
                                     role = lib;
-                                    role = outer2_3;
-                                    const intl8 = lib(outer2_3[17]).intl;
-                                    role = intl8.string(lib(outer2_3[17]).t["7jOoJE"]);
+                                    role = closure_2_3;
+                                    const intl8 = lib(closure_2_3[17]).intl;
+                                    role = intl8.string(lib(closure_2_3[17]).t["7jOoJE"]);
                                   } else {
                                     role = lib;
-                                    role = outer2_3;
-                                    const intl7 = lib(outer2_3[17]).intl;
-                                    role = intl7.string(lib(outer2_3[17]).t.jjKYpu);
+                                    role = closure_2_3;
+                                    const intl7 = lib(closure_2_3[17]).intl;
+                                    role = intl7.string(lib(closure_2_3[17]).t.jjKYpu);
                                   }
                                 }
                               } else if (role.SYSTEM_CHANNEL_FLAGS === key19) {
                                 lib = newValue;
-                                let obj = {};
-                                role = outer2_28;
-                                ({ SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS: obj9[outer2_28.SUPPRESS_JOIN_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS: obj9[outer2_28.SUPPRESS_PREMIUM_SUBSCRIPTIONS], SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS: obj9[outer2_28.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES: obj9[outer2_28.SUPPRESS_JOIN_NOTIFICATION_REPLIES] } = role);
+                                obj = {};
+                                role = closure_2_28;
+                                ({ SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATIONS: obj9[closure_2_28.SUPPRESS_JOIN_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_PREMIUM_SUBSCRIPTIONS: obj9[closure_2_28.SUPPRESS_PREMIUM_SUBSCRIPTIONS], SYSTEM_CHANNEL_FLAG_REMINDER_NOTIFICATIONS: obj9[closure_2_28.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS], SYSTEM_CHANNEL_FLAG_JOIN_NOTIFICATION_REPLIES: obj9[closure_2_28.SUPPRESS_JOIN_NOTIFICATION_REPLIES] } = role);
                                 const items4 = [];
                                 role = globalThis;
                                 const _Object = Object;
-                                const values = Object.values(outer2_28);
+                                const values = Object.values(closure_2_28);
                                 role = values.forEach((arg0) => {
                                   if ((newValue.oldValue & arg0) === arg0 !== (newValue.newValue & arg0) === arg0) {
-                                    const tmp7 = new outer1_9(obj[arg0], !tmp, !tmp2);
+                                    const tmp7 = new closure_1_9(obj[arg0], !tmp, !tmp2);
                                     items4.push(tmp7);
                                   }
                                 });
                                 role = items4;
                               } else if (role.AUTO_MODERATION_ACTIONS === key19) {
-                                role = outer2_17;
+                                role = closure_2_17;
                                 role = newValue;
-                                if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                   ({ newValue: newValue11, oldValue: oldValue11 } = newValue);
                                   role = null;
                                   if (null != newValue.newValue) {
@@ -3264,8 +3205,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     role = mapped;
                                     if (null != mapped) {
                                       role = lib;
-                                      role = outer2_3;
-                                      const mapped1 = mapped.map(lib(outer2_3[29]).actionTypeToName);
+                                      role = closure_2_3;
+                                      const mapped1 = mapped.map(lib(closure_2_3[29]).actionTypeToName);
                                       role = mapped1.join(", ");
                                     }
                                     newValue11 = role;
@@ -3276,13 +3217,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                     role = mapped2;
                                     if (null != mapped2) {
                                       role = lib;
-                                      role = outer2_3;
-                                      const mapped3 = mapped2.map(lib(outer2_3[29]).actionTypeToName);
+                                      role = closure_2_3;
+                                      const mapped3 = mapped2.map(lib(closure_2_3[29]).actionTypeToName);
                                       role = mapped3.join(", ");
                                     }
                                     oldValue11 = role;
                                   }
-                                  role = outer2_9;
+                                  role = closure_2_9;
                                   if (!oldValue11) {
                                     oldValue11 = newValue.oldValue;
                                   }
@@ -3297,12 +3238,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   role = new role(key9, oldValue11, newValue11);
                                 }
                               } else if (role.AUTO_MODERATION_EVENT_TYPE === key19) {
-                                role = outer2_17;
+                                role = closure_2_17;
                                 role = newValue;
-                                if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                   role = lib;
-                                  role = outer2_3;
-                                  const eventTypeToName = lib(outer2_3[29]).eventTypeToName;
+                                  role = closure_2_3;
+                                  const eventTypeToName = lib(closure_2_3[29]).eventTypeToName;
                                   ({ newValue: newValue10, oldValue: oldValue10 } = newValue);
                                   role = null;
                                   if (null != newValue.newValue) {
@@ -3311,7 +3252,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   if (null != newValue.oldValue) {
                                     oldValue10 = eventTypeToName(newValue.oldValue);
                                   }
-                                  role = outer2_9;
+                                  role = closure_2_9;
                                   if (!oldValue10) {
                                     oldValue10 = newValue.oldValue;
                                   }
@@ -3326,12 +3267,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   role = new role(key8, oldValue10, newValue10);
                                 }
                               } else if (role.AUTO_MODERATION_TRIGGER_TYPE === key19) {
-                                role = outer2_17;
+                                role = closure_2_17;
                                 role = newValue;
-                                if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                   role = lib;
-                                  role = outer2_3;
-                                  const triggerTypeToName = lib(outer2_3[29]).triggerTypeToName;
+                                  role = closure_2_3;
+                                  const triggerTypeToName = lib(closure_2_3[29]).triggerTypeToName;
                                   ({ newValue: newValue9, oldValue: oldValue9 } = newValue);
                                   role = null;
                                   if (null != newValue.newValue) {
@@ -3340,7 +3281,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   if (null != newValue.oldValue) {
                                     oldValue9 = triggerTypeToName(newValue.oldValue);
                                   }
-                                  role = outer2_9;
+                                  role = closure_2_9;
                                   if (!oldValue9) {
                                     oldValue9 = newValue.oldValue;
                                   }
@@ -3356,7 +3297,7 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                 }
                               } else if (role.AUTO_MODERATION_TRIGGER_METADATA === key19) {
                                 let role1 = newValue;
-                                if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                   ({ newValue: newValue8, oldValue: oldValue8 } = newValue);
                                   role = null;
                                   if (null != newValue.newValue) {
@@ -3371,13 +3312,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                         } else {
                                           const _Array3 = Array;
                                         }
-                                        const intl5 = lib(outer2_3[17]).intl;
+                                        const intl5 = lib(closure_2_3[17]).intl;
                                         obj = { newValue: null };
                                         const keyword_filter = newValue7.keyword_filter;
                                         const mapped4 = keyword_filter.map((arg0) => "'" + arg0 + "'");
                                         newValue7 = mapped4.join(", ");
                                         obj[0] = newValue7;
-                                        json = intl5.formatToMarkdownString(lib(outer2_3[17]).t.y91UXV, obj);
+                                        json = intl5.formatToMarkdownString(lib(closure_2_3[17]).t.y91UXV, obj);
                                       }
                                     }
                                     newValue8 = role;
@@ -3395,19 +3336,19 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                         } else {
                                           const _Array4 = Array;
                                         }
-                                        role = outer2_3;
-                                        const intl6 = lib(outer2_3[17]).intl;
-                                        let obj1 = { newValue: null };
+                                        role = closure_2_3;
+                                        const intl6 = lib(closure_2_3[17]).intl;
+                                        obj1 = { newValue: null };
                                         const keyword_filter1 = oldValue7.keyword_filter;
                                         const mapped5 = keyword_filter1.map((arg0) => "'" + arg0 + "'");
                                         oldValue7 = mapped5.join(", ");
                                         obj1[0] = oldValue7;
-                                        json1 = intl6.formatToMarkdownString(lib(outer2_3[17]).t.y91UXV, obj1);
+                                        json1 = intl6.formatToMarkdownString(lib(closure_2_3[17]).t.y91UXV, obj1);
                                       }
                                     }
                                     oldValue8 = role;
                                   }
-                                  role = outer2_9;
+                                  role = closure_2_9;
                                   if (!oldValue8) {
                                     oldValue8 = newValue.oldValue;
                                   }
@@ -3431,44 +3372,44 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                           if (role.AUTO_MODERATION_REMOVE_ALLOW_LIST !== key19) {
                                             if (role.AUTO_MODERATION_EXEMPT_CHANNELS === key19) {
                                               let tmp66 = newValue;
-                                              if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                              if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                                 ({ newValue: newValue5, oldValue: oldValue5 } = newValue);
                                                 role = null;
                                                 if (null != newValue.newValue) {
                                                   const newValue1 = newValue.newValue;
-                                                  role = outer2_10;
-                                                  const mapped6 = newValue1.map(outer2_10.getChannel);
+                                                  role = closure_2_10;
+                                                  const mapped6 = newValue1.map(closure_2_10.getChannel);
                                                   found = mapped6.filter((arg0) => null != arg0);
-                                                  const mapped7 = found.map((channel) => newValue(table[23]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true));
+                                                  const mapped7 = found.map((channel) => newValue(table[23]).computeChannelName(channel, closure_13, closure_12, true));
                                                   role = mapped7;
                                                   if (null == mapped7) {
                                                     newValue5 = mapped7;
                                                   } else {
                                                     if (null == mapped7) {
-                                                      const intl3 = lib(outer2_3[17]).intl;
-                                                      let stringResult = intl3.string(lib(outer2_3[17]).t["K/EdV8"]);
+                                                      const intl3 = lib(closure_2_3[17]).intl;
+                                                      let stringResult = intl3.string(lib(closure_2_3[17]).t["K/EdV8"]);
                                                     }
                                                     stringResult = mapped7.join(", ");
                                                   }
                                                 }
                                                 if (null != newValue.oldValue) {
                                                   const oldValue1 = newValue.oldValue;
-                                                  role = outer2_10;
-                                                  const mapped8 = oldValue1.map(outer2_10.getChannel);
+                                                  role = closure_2_10;
+                                                  const mapped8 = oldValue1.map(closure_2_10.getChannel);
                                                   const found1 = mapped8.filter((arg0) => null != arg0);
-                                                  const mapped9 = found1.map((channel) => newValue(table[23]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale, true));
+                                                  const mapped9 = found1.map((channel) => newValue(table[23]).computeChannelName(channel, closure_13, closure_12, true));
                                                   role = mapped9;
                                                   if (null == mapped9) {
                                                     oldValue5 = mapped9;
                                                   } else {
                                                     if (null == mapped9) {
-                                                      const intl4 = lib(outer2_3[17]).intl;
-                                                      let stringResult1 = intl4.string(lib(outer2_3[17]).t["K/EdV8"]);
+                                                      const intl4 = lib(closure_2_3[17]).intl;
+                                                      let stringResult1 = intl4.string(lib(closure_2_3[17]).t["K/EdV8"]);
                                                     }
                                                     stringResult1 = mapped9.join(", ");
                                                   }
                                                 }
-                                                tmp66 = outer2_9;
+                                                tmp66 = closure_2_9;
                                                 if (!oldValue5) {
                                                   oldValue5 = newValue.oldValue;
                                                 }
@@ -3480,12 +3421,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               role = tmp66;
                                             } else if (role.AUTO_MODERATION_EXEMPT_ROLES === key19) {
                                               let tmp50 = newValue;
-                                              if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                              if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                                 ({ newValue: newValue4, oldValue: oldValue4 } = newValue);
                                                 role = null;
                                                 if (null != newValue.newValue) {
                                                   let newValue2 = newValue.newValue;
-                                                  const mapped10 = newValue2.map((arg0) => outer1_11.getRole(newValue.id, arg0));
+                                                  const mapped10 = newValue2.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
                                                   const found2 = mapped10.filter((arg0) => null != arg0);
                                                   const mapped11 = found2.map((name) => name.name);
                                                   role = mapped11;
@@ -3493,15 +3434,15 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                     newValue4 = mapped11;
                                                   } else {
                                                     if (null == mapped11) {
-                                                      const intl = lib(outer2_3[17]).intl;
-                                                      let stringResult2 = intl.string(lib(outer2_3[17]).t["K/EdV8"]);
+                                                      const intl = lib(closure_2_3[17]).intl;
+                                                      let stringResult2 = intl.string(lib(closure_2_3[17]).t["K/EdV8"]);
                                                     }
                                                     stringResult2 = mapped11.join(", ");
                                                   }
                                                 }
                                                 if (null != newValue.oldValue) {
                                                   let oldValue2 = newValue.oldValue;
-                                                  const mapped12 = oldValue2.map((arg0) => outer1_11.getRole(newValue.id, arg0));
+                                                  const mapped12 = oldValue2.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
                                                   const found3 = mapped12.filter((arg0) => null != arg0);
                                                   const mapped13 = found3.map((name) => name.name);
                                                   role = mapped13;
@@ -3509,13 +3450,13 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                                     oldValue4 = mapped13;
                                                   } else {
                                                     if (null == mapped13) {
-                                                      const intl2 = lib(outer2_3[17]).intl;
-                                                      let stringResult3 = intl2.string(lib(outer2_3[17]).t["K/EdV8"]);
+                                                      const intl2 = lib(closure_2_3[17]).intl;
+                                                      let stringResult3 = intl2.string(lib(closure_2_3[17]).t["K/EdV8"]);
                                                     }
                                                     stringResult3 = mapped13.join(", ");
                                                   }
                                                 }
-                                                tmp50 = outer2_9;
+                                                tmp50 = closure_2_9;
                                                 if (!oldValue4) {
                                                   oldValue4 = newValue.oldValue;
                                                 }
@@ -3527,22 +3468,22 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               role = tmp50;
                                             } else if (role.ROLE_IDS === key19) {
                                               let tmp34 = newValue;
-                                              if (role.targetType === outer2_17.INVITE) {
+                                              if (role.targetType === closure_2_17.INVITE) {
                                                 ({ newValue: newValue3, oldValue: oldValue3 } = newValue);
                                                 role = null;
                                                 if (null != newValue.newValue) {
                                                   newValue3 = newValue.newValue;
-                                                  const mapped14 = newValue3.map((arg0) => outer1_11.getRole(newValue.id, arg0));
+                                                  const mapped14 = newValue3.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
                                                   const found4 = mapped14.filter((arg0) => null != arg0);
                                                   newValue3 = found4.map((id) => ({ id: id.id, name: id.name }));
                                                 }
                                                 if (null != newValue.oldValue) {
                                                   oldValue3 = newValue.oldValue;
-                                                  const mapped15 = oldValue3.map((arg0) => outer1_11.getRole(newValue.id, arg0));
+                                                  const mapped15 = oldValue3.map((arg0) => closure_1_11.getRole(newValue.id, arg0));
                                                   const found5 = mapped15.filter((arg0) => null != arg0);
                                                   oldValue3 = found5.map((id) => ({ id: id.id, name: id.name }));
                                                 }
-                                                tmp34 = outer2_9;
+                                                tmp34 = closure_2_9;
                                                 if (!oldValue3) {
                                                   oldValue3 = newValue.oldValue;
                                                 }
@@ -3553,26 +3494,26 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               }
                                               role = tmp34;
                                             } else if (role.AVAILABLE_TAGS === key19) {
-                                              role = outer2_42(newValue);
+                                              role = closure_2_42(newValue);
                                             } else if (role.APPLIED_TAGS === key19) {
-                                              role = outer2_41(newValue, role);
+                                              role = closure_2_41(newValue, role);
                                             } else if (role.SCHEDULED_START_TIME === key19) {
                                               ({ newValue, oldValue } = newValue);
                                               if (null != newValue.newValue) {
                                                 newValue2 = newValue.newValue;
-                                                obj = lib(outer2_3[30]);
+                                                obj = lib(closure_2_3[30]);
                                                 const _Date = Date;
                                                 const date = new Date(newValue2);
-                                                newValue = obj.dateFormat(items(outer2_3[31])(date), "LLLL");
-                                                let tmp7 = items(outer2_3[31]);
+                                                newValue = obj.dateFormat(items(closure_2_3[31])(date), "LLLL");
+                                                let tmp7 = items(closure_2_3[31]);
                                               }
                                               if (null != newValue.oldValue) {
                                                 oldValue2 = newValue.oldValue;
-                                                obj1 = lib(outer2_3[30]);
+                                                obj1 = lib(closure_2_3[30]);
                                                 const _Date2 = Date;
                                                 const date1 = new Date(oldValue2);
-                                                oldValue = obj1.dateFormat(items(outer2_3[31])(date1), "LLLL");
-                                                const tmp17 = items(outer2_3[31]);
+                                                oldValue = obj1.dateFormat(items(closure_2_3[31])(date1), "LLLL");
+                                                const tmp17 = items(closure_2_3[31]);
                                               }
                                               if (!oldValue) {
                                                 oldValue = newValue.oldValue;
@@ -3580,8 +3521,8 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                               if (!newValue) {
                                                 newValue = newValue.newValue;
                                               }
-                                              role = new outer2_9(key, oldValue, newValue);
-                                              const tmp24 = outer2_9;
+                                              role = new closure_2_9(key, oldValue, newValue);
+                                              const tmp24 = closure_2_9;
                                             } else {
                                               role = newValue;
                                             }
@@ -3592,12 +3533,12 @@ export const transformLogs = function transformLogs(arr, arg1) {
                                   }
                                 }
                                 let tmp82 = newValue;
-                                if (role.targetType === outer2_17.AUTO_MODERATION_RULE) {
+                                if (role.targetType === closure_2_17.AUTO_MODERATION_RULE) {
                                   ({ newValue: newValue6, oldValue: oldValue6 } = newValue);
                                   role = null;
                                   if (null == newValue.newValue) {
                                     if (null == newValue.oldValue) {
-                                      tmp82 = outer2_9;
+                                      tmp82 = closure_2_9;
                                       if (!oldValue6) {
                                         oldValue6 = newValue.oldValue;
                                       }
@@ -3633,26 +3574,26 @@ export const transformLogs = function transformLogs(arr, arg1) {
                             }
                           }
                           const items5 = [];
-                          role = outer2_40;
-                          role = outer2_40(newValue.oldValue, newValue.newValue);
+                          role = closure_2_40;
+                          role = closure_2_40(newValue.oldValue, newValue.newValue);
                           ({ added, removed } = role);
                           if (added.length > 0) {
-                            role = outer2_9;
+                            role = closure_2_9;
                             role = new.target;
                             role = null;
                             role = new.target;
                             role = added;
-                            role = new outer2_9(newValue.key, null, added);
+                            role = new closure_2_9(newValue.key, null, added);
                             role = items5.push(role);
                           }
                           role = items5;
                           if (removed.length > 0) {
-                            role = outer2_9;
+                            role = closure_2_9;
                             role = new.target;
                             role = new.target;
                             role = removed;
                             role = removed;
-                            role = new outer2_9(role.PERMISSIONS_RESET, removed, removed);
+                            role = new closure_2_9(role.PERMISSIONS_RESET, removed, removed);
                             role = items5.push(role);
                             role = items5;
                           }
@@ -3665,34 +3606,34 @@ export const transformLogs = function transformLogs(arr, arg1) {
               ({ newValue: newValue21, oldValue: oldValue21 } = newValue);
               role = null;
               if (null != newValue.newValue) {
-                role = outer2_10;
-                role = outer2_10.getChannel(newValue.newValue);
+                role = closure_2_10;
+                role = closure_2_10.getChannel(newValue.newValue);
                 if (null != role) {
                   role = lib;
-                  role = outer2_3;
-                  const obj22 = lib(outer2_3[23]);
-                  role = outer2_13;
-                  role = outer2_12;
+                  role = closure_2_3;
+                  const obj22 = lib(closure_2_3[23]);
+                  role = closure_2_13;
+                  role = closure_2_12;
                   role = obj22;
-                  role = obj22.computeChannelName(role, outer2_13, outer2_12, true);
+                  role = obj22.computeChannelName(role, closure_2_13, closure_2_12, true);
                 }
                 newValue21 = role;
               }
               if (null != newValue.oldValue) {
-                role = outer2_10;
-                role = outer2_10.getChannel(newValue.oldValue);
+                role = closure_2_10;
+                role = closure_2_10.getChannel(newValue.oldValue);
                 if (null != role) {
                   role = lib;
-                  role = outer2_3;
-                  const obj23 = lib(outer2_3[23]);
-                  role = outer2_13;
-                  role = outer2_12;
+                  role = closure_2_3;
+                  const obj23 = lib(closure_2_3[23]);
+                  role = closure_2_13;
+                  role = closure_2_12;
                   role = obj23;
-                  role = obj23.computeChannelName(role, outer2_13, outer2_12, true);
+                  role = obj23.computeChannelName(role, closure_2_13, closure_2_12, true);
                 }
                 oldValue21 = role;
               }
-              role = outer2_9;
+              role = closure_2_9;
               if (!oldValue21) {
                 oldValue21 = newValue.oldValue;
               }
@@ -3719,9 +3660,9 @@ export const transformLogs = function transformLogs(arr, arg1) {
       found = items;
       found = items.push(found);
     } else {
-      found = outer1_15;
+      found = closure_1_15;
       let items1 = [, , , , ];
-      ({ MEMBER_PRUNE: arr19[0], MEMBER_DISCONNECT: arr19[1], MEMBER_MOVE: arr19[2], CREATOR_MONETIZATION_REQUEST_CREATED: arr19[3], CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[4] } = outer1_15);
+      ({ MEMBER_PRUNE: arr19[0], MEMBER_DISCONNECT: arr19[1], MEMBER_MOVE: arr19[2], CREATOR_MONETIZATION_REQUEST_CREATED: arr19[3], CREATOR_MONETIZATION_TERMS_ACCEPTED: arr19[4] } = closure_1_15);
     }
   });
   return items;

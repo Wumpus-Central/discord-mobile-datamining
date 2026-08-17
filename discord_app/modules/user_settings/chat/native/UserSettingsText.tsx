@@ -1,39 +1,33 @@
 // discord_app/modules/user_settings/chat/native/UserSettingsText.tsx
-import "registerAsset";
-import { View } from "dispatcher";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import initialize from "initialize";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH";
-import ME from "ME";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import { saveGuildFolders } from "../../../../actions/UserSettingsActionCreators.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import noopAll from "noop" /* 19 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import ThemesDefault from "Themes" /* 712 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import saveGuildFoldersDefault from "saveGuildFolders" /* 9365 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "reset" /* 4045 */;
+import closure_6 from "initialize" /* 1303 */;
+import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import { VideoQualitySettings } from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ AnalyticEvents: c9, AnalyticsSections: c10, UserSettingsSections: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 createCacheKey = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
-createCacheKey = { width: 16, height: 16, tintColor: require("Themes").unsafe_rawColors.PRIMARY_400 };
+createCacheKey = { width: 16, height: 16, tintColor: ThemesDefault.unsafe_rawColors.PRIMARY_400 };
 createCacheKey[2] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_settings/chat/native/UserSettingsText.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/user_settings/chat/native/UserSettingsText.tsx");
 
 export default function UserSettingsText() {
-  let require;
-  let videoUploadQuality;
   let obj = require(dataSavingMode[13]);
   const token = obj.useToken(videoUploadQuality(dataSavingMode[9]).modules.mobile.TABLE_ROW_PADDING);
-  const tmp5 = createCacheKey();
+  const tmp5 = callback3();
   const InlineAttachmentMedia = require(dataSavingMode[11]).InlineAttachmentMedia;
   const setting = InlineAttachmentMedia.useSetting();
   const InlineEmbedMedia = require(dataSavingMode[11]).InlineEmbedMedia;
@@ -42,30 +36,28 @@ export default function UserSettingsText() {
   const setting2 = RenderEmbeds.useSetting();
   const RenderReactions = require(dataSavingMode[11]).RenderReactions;
   const setting3 = RenderReactions.useSetting();
-  let obj1 = require(dataSavingMode[14]);
-  const items = [CHANNEL_SIDEBAR_WIDTH];
-  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ lowQualityImageMode: CHANNEL_SIDEBAR_WIDTH.dataSavingMode, videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, dataSavingMode: CHANNEL_SIDEBAR_WIDTH.dataSavingMode }));
+  obj1 = require(dataSavingMode[14]);
+  const items = [closure_7];
+  const stateFromStoresObject = obj1.useStateFromStoresObject(items, () => ({ lowQualityImageMode: closure_7.dataSavingMode, videoUploadQuality: closure_7.videoUploadQuality, dataSavingMode: closure_7.dataSavingMode }));
   ({ lowQualityImageMode: require, videoUploadQuality } = stateFromStoresObject);
   dataSavingMode = stateFromStoresObject.dataSavingMode;
   let obj2 = require(dataSavingMode[14]);
-  const items1 = [reset];
+  const items1 = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let obj3 = require(dataSavingMode[14]);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_4];
   const stateFromStores1 = obj3.useStateFromStores(items2, () => arr.getCurrentUser());
   let obj4 = require(dataSavingMode[15]);
   let result = obj4.hasPremiumSubscriptionToDisplay(stateFromStores1, stateFromStores);
   let obj5 = require(dataSavingMode[14]);
-  const items3 = [initialize];
-  const stateFromStores2 = obj5.useStateFromStores(items3, () => initialize.shouldSync("text"));
+  const items3 = [closure_6];
+  const stateFromStores2 = obj5.useStateFromStores(items3, () => closure_6.shouldSync("text"));
   let ViewImageDescriptions = require(dataSavingMode[11]).ViewImageDescriptions;
   const setting4 = ViewImageDescriptions.useSetting();
   let obj6 = require(dataSavingMode[16]);
-  mergeGuildAvatar = obj6.useNavigation();
+  closure_4 = obj6.useNavigation();
   obj = { style: tmp5.flex, children: null };
-  obj = { spacing: null, style: null, children: null };
-  obj[0] = videoUploadQuality(dataSavingMode[9]).space.PX_24;
-  obj[1] = { paddingHorizontal: token };
+  obj = { spacing: videoUploadQuality(dataSavingMode[9]).space.PX_24, style: { paddingHorizontal: token }, children: null };
   obj1 = { children: null };
   obj2 = { title: null, description: null, hasIcons: false, children: null };
   const intl = require(dataSavingMode[21]).intl;
@@ -96,8 +88,8 @@ export default function UserSettingsText() {
   obj6[2] = function updateImageDescriptions(image_descriptions) {
     let obj = videoUploadQuality(dataSavingMode[10]);
     obj = { video_upload_quality: videoUploadQuality, image_descriptions, low_quality_image_mode: closure_0, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" };
-    obj.track(outer1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
-    const ViewImageDescriptions = outer1_0(dataSavingMode[11]).ViewImageDescriptions;
+    obj.track(closure_1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
+    const ViewImageDescriptions = closure_1_0(dataSavingMode[11]).ViewImageDescriptions;
     ViewImageDescriptions.updateSetting(image_descriptions);
   };
   obj5[2] = callback(require(dataSavingMode[25]).TableSwitchRow, obj6);
@@ -111,7 +103,7 @@ export default function UserSettingsText() {
   obj7[2] = function updateVideoUploadQuality(videoUploadQuality) {
     let obj = videoUploadQuality(dataSavingMode[10]);
     obj = { video_upload_quality: videoUploadQuality, image_descriptions: setting4, low_quality_image_mode: closure_0, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" };
-    obj.track(outer1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
+    obj.track(closure_1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
     obj = { videoUploadQuality };
     const result = videoUploadQuality(dataSavingMode[12]).updatedUnsyncedSettings(obj);
   };
@@ -148,7 +140,7 @@ export default function UserSettingsText() {
     const intl12 = tmp(tmp2[21]).intl;
     const obj14 = { onClick: null };
     obj14[0] = function onClick() {
-      videoUploadQuality(dataSavingMode[17]).setSection(outer1_11.PREMIUM);
+      videoUploadQuality(dataSavingMode[17]).setSection(closure_1_11.PREMIUM);
       const obj = videoUploadQuality(dataSavingMode[17]);
     };
     obj13[3] = intl12.format(tmp(tmp2[21]).t.uW1zul, obj14);
@@ -164,7 +156,7 @@ export default function UserSettingsText() {
   function toggleDataSavingMode(dataSavingMode) {
     let obj = videoUploadQuality(dataSavingMode[10]);
     obj = { video_upload_quality: videoUploadQuality, image_descriptions: setting4, low_quality_image_mode: closure_0, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" };
-    obj.track(outer1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
+    obj.track(closure_1_9.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, obj);
     obj = { dataSavingMode };
     const result = videoUploadQuality(dataSavingMode[12]).updatedUnsyncedSettings(obj);
   }
@@ -219,7 +211,7 @@ export default function UserSettingsText() {
   return callback(setting4, obj);
 };
 export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { enabled, location: obj };
   obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
   obj.track(constants.STICKERS_IN_AUTOCOMPLETE_TOGGLED, obj);
@@ -227,42 +219,30 @@ export const setStickerAutocomplete = function setStickerAutocomplete(enabled) {
   IncludeStickersInAutocomplete.updateSetting(enabled);
 };
 export const setLowQualityImageMode = function setLowQualityImageMode(lowQualityImageMode) {
-  let dataSavingMode;
-  let videoUploadQuality;
-  let viewImageDescriptions;
   lowQualityImageMode = lowQualityImageMode.lowQualityImageMode;
   ({ videoUploadQuality, viewImageDescriptions, dataSavingMode } = lowQualityImageMode);
-  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
-  const obj = expandEventProperties;
-  const result = saveGuildFolders.updatedUnsyncedSettings({ lowQualityImageMode });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "low_quality_image_mode" });
+  const obj = expandEventPropertiesDefault;
+  const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ lowQualityImageMode });
 };
 export const setDataSavingMode = function setDataSavingMode(dataSavingMode) {
-  let lowQualityImageMode;
-  let videoUploadQuality;
-  let viewImageDescriptions;
   dataSavingMode = dataSavingMode.dataSavingMode;
   ({ videoUploadQuality, viewImageDescriptions, lowQualityImageMode } = dataSavingMode);
-  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
-  const obj = expandEventProperties;
-  const result = saveGuildFolders.updatedUnsyncedSettings({ dataSavingMode });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "data_saving_mode" });
+  const obj = expandEventPropertiesDefault;
+  const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ dataSavingMode });
 };
 export const setVideoUploadQuality = function setVideoUploadQuality(videoUploadQuality) {
-  let dataSavingMode;
-  let lowQualityImageMode;
-  let viewImageDescriptions;
   videoUploadQuality = videoUploadQuality.videoUploadQuality;
   ({ viewImageDescriptions, lowQualityImageMode, dataSavingMode } = videoUploadQuality);
-  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
-  const obj = expandEventProperties;
-  const result = saveGuildFolders.updatedUnsyncedSettings({ videoUploadQuality });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "video_upload_quality" });
+  const obj = expandEventPropertiesDefault;
+  const result = saveGuildFoldersDefault.updatedUnsyncedSettings({ videoUploadQuality });
 };
 export const setImageDescriptions = function setImageDescriptions(viewImageDescriptions) {
-  let dataSavingMode;
-  let lowQualityImageMode;
-  let videoUploadQuality;
   viewImageDescriptions = viewImageDescriptions.viewImageDescriptions;
   ({ videoUploadQuality, lowQualityImageMode, dataSavingMode } = viewImageDescriptions);
-  expandEventProperties.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
+  expandEventPropertiesDefault.track(constants.IMAGE_VIDEO_DATA_SETTINGS_UPDATED, { video_upload_quality: videoUploadQuality, image_descriptions: viewImageDescriptions, low_quality_image_mode: lowQualityImageMode, data_saving_mode: dataSavingMode, updated_setting: "image_descriptions" });
   const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
   ViewImageDescriptions.updateSetting(viewImageDescriptions);
 };

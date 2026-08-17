@@ -1,12 +1,10 @@
 // discord_common/js/packages/http-utils/V8APIError.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 function convertStringArrayToSkemaErrorItems(arr) {
   return arr.map((message) => ({ code: "UNKNOWN", message }));
 }
 function convertOldFormError(captcha_key) {
-  let tmp6;
-  let tmp8;
   let obj = {};
   const entries = Object.entries(captcha_key);
   while (tmp2 !== undefined) {
@@ -166,21 +164,17 @@ prototype["getAllFieldErrorsUnder"] = function getAllFieldErrorsUnder(errors) {
     let _Object = Object;
     let entries = Object.entries(errors);
     let item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       if ("_errors" !== tmp) {
         const _Object = Object;
         const entries = Object.entries(self.getAllFieldErrorsUnder(tmp2));
         const item = entries.forEach((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           if (tmp === self) {
-            outer1_0[_slicedToArray] = tmp2;
+            closure_1_0[closure_0] = tmp2;
           } else {
             const _HermesInternal = HermesInternal;
-            outer1_0["" + _slicedToArray + "." + tmp] = tmp2;
+            closure_1_0["" + closure_0 + "." + tmp] = tmp2;
           }
         });
       }
@@ -201,7 +195,7 @@ prototype["getFirstFieldErrorMessage"] = function getFirstFieldErrorMessage(name
 };
 prototype["getAnyErrorMessage"] = function getAnyErrorMessage() {
   const anyErrorMessageAndField = this.getAnyErrorMessageAndField();
-  let error;
+  error = undefined;
   if (anyErrorMessageAndField != null) {
     error = anyErrorMessageAndField.error;
   }

@@ -1,6 +1,6 @@
 // discord_app/modules/app_startup/StartupProfiler.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let obj = { App: "App", AppContainer: "AppContainer", MainNavigator: "MainNavigator", StackNavigator: "StackNavigator", MainTabs: "MainTabs", MainDrawers: "MainDrawers", PrivateChannels: "PrivateChannels", Members: "Members", LeftPanel: "LeftPanel", Guilds: "Guilds", Channels: "Channels", RightPanel: "RightPanel", CenterPanel: "CenterPanel", Channel: "Channel", ChatView: "ChatView", Messages: "Messages" };
 obj = {};
@@ -34,21 +34,21 @@ for (const key10073 in obj) {
   }
   continue;
 }
-const result = require("isTracing").fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
+const result = require("set").fileFinishedImporting("modules/app_startup/StartupProfiler.tsx");
 
 export default function StartupProfiler(children) {
   const profile = children.profile;
-  let obj = profile(10);
+  obj = profile(10);
   obj.mark("\u{1F3A8}", "" + obj[profile] + profile + " render");
   obj = {
     id: profile,
     onRender(arg0, arg1, arg2) {
-      profile(outer1_1[2]).mark("\u{1F3A8}", "" + outer1_4[profile] + profile + " " + arg1, arg2);
+      profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
     },
     children: children.children
   };
   return <Profiler.Profiler id={profile} onRender={function onRender(arg0, arg1, arg2) {
-    profile(outer1_1[2]).mark("\u{1F3A8}", "" + outer1_4[profile] + profile + " " + arg1, arg2);
+    profile(closure_1_1[2]).mark("\u{1F3A8}", "" + closure_1_4[profile] + profile + " " + arg1, arg2);
   }}>{arg0.children}</Profiler.Profiler>;
 };
 export const Profiles = obj;

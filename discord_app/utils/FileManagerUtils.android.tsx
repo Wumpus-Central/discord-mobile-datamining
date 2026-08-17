@@ -1,16 +1,17 @@
 // discord_app/utils/FileManagerUtils.android.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { enforcing } from "../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import enforcingDefault from "enforcing" /* 1271 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function _readFile() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
@@ -38,11 +39,11 @@ function _readFile() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp3;
+              closure_4 = tmp3;
               let logger = tmp5;
               const callback = dependencyMap;
-              dependencyMap = c2;
-              c2 = undefined;
+              dependencyMap = closure_2;
+              closure_2 = undefined;
               const tmp37 = (function getBaseDirectory(closure_0) {
                 if (null == callback(table[2])) {
                   return null;
@@ -57,14 +58,14 @@ function _readFile() {
                   return DocumentsDirPath;
                 }
               })(callback);
-              c2 = tmp37;
+              closure_2 = tmp37;
               if (null == tmp37) {
                 c8 = 3;
                 return { value: null, done: true };
               } else {
                 c7 = 1;
                 c8 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = callback(1271).fileExists(tmp37 + "/" + tmp35);
                 return obj1;
               }
@@ -80,12 +81,12 @@ function _readFile() {
               obj2[0] = arg1;
               return obj2;
             } else if (arg1) {
-              let c6 = 1;
+              c6 = 1;
               obj2 = callback(1271);
               c7 = 3;
               c8 = 1;
               const obj3 = { value: null, done: false };
-              obj3[0] = obj2.readFile(c2 + "/" + callback, dependencyMap);
+              obj3[0] = obj2.readFile(closure_2 + "/" + callback, dependencyMap);
               return obj3;
             } else {
               c8 = 3;
@@ -125,7 +126,7 @@ function _readFile() {
       }
     })();
   });
-  const _readFile = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -134,12 +135,12 @@ function _readFile() {
   }
   return applyArgumentsResult;
 }
-let c3 = new require("set")("FileManagerUtils");
-const tmp2 = new require("set")("FileManagerUtils");
-const result = require("enforcing").fileFinishedImporting("utils/FileManagerUtils.android.tsx");
+let closure_3 = new timestampDefault("FileManagerUtils");
+const tmp2 = new timestampDefault("FileManagerUtils");
+const result = require("set").fileFinishedImporting("utils/FileManagerUtils.android.tsx");
 
 export const writeFile = function writeFile(cache, c5, c6, utf8) {
-  const obj = enforcing;
+  const obj = enforcingDefault;
   let nextPromise;
   if (obj != null) {
     nextPromise = obj.writeFile(cache, c5, c6, utf8).then((arg0) => "file:" + arg0);
@@ -151,7 +152,7 @@ export const writeFile = function writeFile(cache, c5, c6, utf8) {
   return nextPromise;
 };
 export const moveFile = function moveFile(closure_0, closure_02, closure_1) {
-  const obj = enforcing;
+  const obj = enforcingDefault;
   let moveFileResult;
   if (obj != null) {
     moveFileResult = obj.moveFile(closure_0, closure_02, closure_1);
@@ -162,7 +163,7 @@ export const moveFile = function moveFile(closure_0, closure_02, closure_1) {
   return moveFileResult;
 };
 export const removeFile = function removeFile(cache, closure_1) {
-  const obj = enforcing;
+  const obj = enforcingDefault;
   let removeFileResult;
   if (obj != null) {
     removeFileResult = obj.removeFile(cache, closure_1);
@@ -172,11 +173,11 @@ export const removeFile = function removeFile(cache, closure_1) {
   }
   return removeFileResult;
 };
-export const clearFolder = function clearFolder(cache, outer1_5) {
-  const obj = enforcing;
+export const clearFolder = function clearFolder(cache, closure_1_5) {
+  const obj = enforcingDefault;
   let clearFolderResult;
   if (obj != null) {
-    clearFolderResult = obj.clearFolder(cache, outer1_5);
+    clearFolderResult = obj.clearFolder(cache, closure_1_5);
   }
   if (clearFolderResult == null) {
     clearFolderResult = Promise.reject(false);

@@ -1,23 +1,20 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx
-import _slicedToArray from "_slicedToArray";
-import closure_4 from "jsxProd";
-import Button from "Button";
-import get_ActivityIndicator from "getSystemLocale";
-import { WebBrowserType } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { WebBrowserType } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 function _authorizeLink() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c4 === 2) {
         c4 = 3;
@@ -45,15 +42,15 @@ function _authorizeLink() {
               obj[0] = body;
               return obj;
             } else {
-              const dependencyMap = tmp2;
+              dependencyMap = tmp2;
               const callback2 = tmp5;
               let url;
-              const obj1 = { twoWayLinkType: null };
-              obj1[0] = callback(outer1_2[9]).TwoWayLinkType.MOBILE;
+              obj1 = { twoWayLinkType: null };
+              obj1[0] = callback(closure_1_2[9]).TwoWayLinkType.MOBILE;
               c3 = 1;
               c4 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = outer1_1(outer1_2[8]).authorize(url, obj1);
+              obj2[0] = closure_1_1(closure_1_2[8]).authorize(url, obj1);
               return obj2;
             }
           } else if (arg0 === 1) {
@@ -86,7 +83,7 @@ function _authorizeLink() {
       }
     })();
   });
-  const _authorizeLink = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -97,19 +94,12 @@ function _authorizeLink() {
 }
 ({ Image: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-const unpackModuleId = new require("get ActivityIndicator")("TwoWayLink");
+let closure_11 = new timestampDefault("TwoWayLink");
 let closure_12 = createCacheKey.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
-const tmp4 = new require("get ActivityIndicator")("TwoWayLink");
-const result = require("noop").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
+const tmp4 = new timestampDefault("TwoWayLink");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkPreConnect.tsx");
 
 export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) {
-  let body;
-  let c3;
-  let img;
-  let imgStyle;
-  let redirectDestination;
-  let title;
-  let tmp6;
   platformType = platformType.platformType;
   const onError = platformType.onError;
   const onNext = platformType.onNext;
@@ -153,15 +143,15 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
             return obj;
           } else {
             let state = tmp3;
-            let closure_0 = tmp7;
+            closure_0 = tmp7;
             closure_0 = undefined;
             state = undefined;
             v0(true);
             v0 = 1;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = (function authorizeLink(outer1_0) {
+            obj1 = { value: null, done: false };
+            obj1[0] = (function authorizeLink(closure_1_0) {
               const self = this;
               const apply = closure_13.apply;
               if (typeof apply === "unknown") {
@@ -170,7 +160,7 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
                 applyArgumentsResult = apply(self, arguments);
               }
               return applyArgumentsResult;
-            })(outer1_0);
+            })(closure_1_0);
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -193,14 +183,14 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
           closure_0 = arg1;
           v0 = 0;
           v0(false);
-          state = outer1_0(outer1_2[13]).getCallbackParamsFromURL(closure_0).state;
-          outer1_1(outer1_2[14])(null != state, "Authorize URL state query parameter must be present");
+          state = closure_1_0(closure_1_2[13]).getCallbackParamsFromURL(closure_0).state;
+          closure_1_1(closure_1_2[14])(null != state, "Authorize URL state query parameter must be present");
           c4.current = state;
           c5 = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp15) {
-        let closure_2 = tmp15;
+        closure_2 = tmp15;
         if (tmp4 === v0) {
           c5 = tmp2;
           throw tmp15;
@@ -219,19 +209,19 @@ export const TwoWayLinkPreConnect = function TwoWayLinkPreConnect(platformType) 
       onNext(obj);
     } else {
       const _HermesInternal = HermesInternal;
-      outer1_11.warn("" + platformType + " link: received mismatching callback state!");
+      closure_1_11.warn("" + platformType + " link: received mismatching callback state!");
     }
   }, items1);
   const items2 = [callback1];
   const effect = callback1.useEffect(() => {
     const subscription = onError(onNext[15]).subscribe("USER_CONNECTIONS_LINK_CALLBACK", callback1);
     return () => {
-      outer1_1(outer1_2[15]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", Button);
+      closure_1_1(closure_1_2[15]).unsubscribe("USER_CONNECTIONS_LINK_CALLBACK", closure_5);
     };
   }, items2);
   obj = { style: twoWayLinkStyles.container, children: null };
   obj = { style: twoWayLinkStyles.content, children: null };
-  let obj1 = { source: img, style: null };
+  obj1 = { source: img, style: null };
   const items3 = [tmp.image, ];
   if (imgStyle == null) {
     imgStyle = false;

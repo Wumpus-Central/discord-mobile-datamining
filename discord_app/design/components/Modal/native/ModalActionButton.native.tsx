@@ -1,17 +1,15 @@
 // discord_app/design/components/Modal/native/ModalActionButton.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../Button/native/Button.native.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 4745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ spacer: { marginTop: 12 } });
-const result = require("jsxProd").fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalActionButton.native.tsx");
 
 export const ModalActionButton = function ModalActionButton(variant) {
   variant = variant.variant;

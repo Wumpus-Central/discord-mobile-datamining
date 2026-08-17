@@ -1,33 +1,30 @@
 // discord_app/hooks/useResettingValue.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { useInitialValue } from "useInitialValue.tsx";
+import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ useState: c4, useCallback: c5, useEffect: closure_6 } = noop);
-const result = require("useInitialValue").fileFinishedImporting("hooks/useResettingValue.tsx");
+const result = require("set").fileFinishedImporting("hooks/useResettingValue.tsx");
 
 export default function useResettingValue(arg0, arg1) {
-  let closure_0 = arg0;
-  const importDefault = arg1;
+  closure_0 = arg0;
+  importDefault = arg1;
   const tmp = callback(callback2(arg0), 2);
-  const dependencyMap = tmp[1];
-  const tmp2 = useInitialValue(() => {
+  dependencyMap = tmp[1];
+  const tmp2 = useInitialValueDefault(() => {
     const timeout = new callback(4259).Timeout();
     return timeout;
   });
   callback = tmp2;
   const items = [tmp2];
-  callback4(() => () => _slicedToArray.stop(), items);
+  callback4(() => () => closure_3.stop(), items);
   const items1 = [tmp[0], ];
   const items2 = [arg1, arg0, tmp2];
   items1[1] = callback3((arg0) => {
     dependencyMap(arg0);
     if (arg0 !== closure_0) {
-      tmp2.start(closure_1, () => callback(closure_0));
+      closure_3.start(closure_1, () => callback(closure_0));
     }
   }, items2);
   return items1;

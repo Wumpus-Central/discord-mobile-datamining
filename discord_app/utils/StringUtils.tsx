@@ -1,5 +1,8 @@
 // discord_app/utils/StringUtils.tsx
-const result = require("set").fileFinishedImporting("utils/StringUtils.tsx");
+import set from "set" /* 2 */;
+import cssValueToNumber from "cssValueToNumber" /* 1904 */;
+
+const result = set.fileFinishedImporting("utils/StringUtils.tsx");
 
 export const isNullOrEmpty = function isNullOrEmpty(application_id) {
   let tmp = null == application_id;
@@ -8,9 +11,9 @@ export const isNullOrEmpty = function isNullOrEmpty(application_id) {
   }
   return tmp;
 };
-export const upperCaseFirstChar = require("cssValueToNumber").upperCaseFirstChar;
-export const getAcronym = require("cssValueToNumber").getAcronym;
-export const cssValueToNumber = require("cssValueToNumber").cssValueToNumber;
-export const stripDiacritics = require("cssValueToNumber").stripDiacritics;
-export const truncateText = require("cssValueToNumber").truncateText;
-export const normalize = require("cssValueToNumber").normalize;
+export const upperCaseFirstChar = cssValueToNumber.upperCaseFirstChar;
+export const getAcronym = cssValueToNumber.getAcronym;
+export const cssValueToNumber = cssValueToNumber.cssValueToNumber;
+export const stripDiacritics = cssValueToNumber.stripDiacritics;
+export const truncateText = cssValueToNumber.truncateText;
+export const normalize = cssValueToNumber.normalize;

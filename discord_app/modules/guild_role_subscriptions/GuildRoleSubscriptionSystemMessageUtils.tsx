@@ -1,19 +1,14 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getJoinButtonLabels from "getJoinButtonLabels";
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { useIsCreatorMonetizationEnabledGuild } from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7217 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import getJoinButtonLabels from "getJoinButtonLabels" /* 8212 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function identityHook(arg0) {
   return arg0;
 }
@@ -66,8 +61,8 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
   }
 }
 ({ getJoinButtonLabels: c5, getRenewButtonLabels: closure_6, STICKERS: error } = getJoinButtonLabels);
-({ AnalyticEvents: metroImportAll, NOOP: c9 } = ME);
-const result = require("getJoinButtonLabels").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
+({ AnalyticEvents: closure_8, NOOP: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
 
 export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscriptionPurchaseSticker(id) {
   const currentUser = authStore.getCurrentUser();
@@ -77,10 +72,10 @@ export const pickRoleSubscriptionPurchaseSticker = function pickRoleSubscription
   }
   let num = 0;
   if (null != id) {
-    num = DISCORD_EPOCH.extractTimestamp(id);
-    const obj = DISCORD_EPOCH;
+    num = DISCORD_EPOCHDefault.extractTimestamp(id);
+    const obj = DISCORD_EPOCHDefault;
   }
-  const obj2 = DISCORD_EPOCH;
+  const obj2 = DISCORD_EPOCHDefault;
   return length[(num + obj2.extractTimestamp(obj2, id)) % length.length];
 };
 export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptionPurchaseStickerCTA(id, arg1) {
@@ -89,19 +84,15 @@ export const getRoleSubscriptionPurchaseStickerCTA = function getRoleSubscriptio
   } else {
     arr = callback();
   }
-  const obj = DISCORD_EPOCH;
+  const obj = DISCORD_EPOCHDefault;
   return arr[obj.extractTimestamp(obj, id) % arr.length];
 };
 export const getRoleSubscriptionPurchaseSystemMessageFormattedContent = function getRoleSubscriptionPurchaseSystemMessageFormattedContent(username) {
-  let content;
-  let formatParams;
   ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
   const intl = getSystemLocale.intl;
   return intl.format(content, formatParams);
 };
 export const getRoleSubscriptionPurchaseSystemMessageAstFormattedContent = function getRoleSubscriptionPurchaseSystemMessageAstFormattedContent(username) {
-  let content;
-  let formatParams;
   ({ content, formatParams } = getRoleSubscriptionPurchaseSystemMessageContent({ username: username.username, usernameOnClickHandler: username.usernameOnClickHandler, roleSubscriptionOnClickHandler: username.roleSubscriptionOnClickHandler, guildId: username.guildId, roleSubscriptionData: username.roleSubscriptionData }));
   const intl = getSystemLocale.intl;
   return intl.formatToParts(content, formatParams);
@@ -171,7 +162,7 @@ export const isEligibleForRoleSubscriptionPurchaseSystemMessageSettings = functi
   return useIsCreatorMonetizationEnabledGuild.isCreatorMonetizationEnabledGuild(guild);
 };
 export const trackRoleSubscriptionPurchaseMessageTierClick = function trackRoleSubscriptionPurchaseMessageTierClick(guild_id) {
-  let obj = collectGuildAnalyticsMetadata;
+  let obj = collectGuildAnalyticsMetadataDefault;
   obj = { guild_id, user_id: null, channel_id: null, message_id: null, role_subscription_listing_id: null };
   const currentUser = authStore.getCurrentUser();
   let id;

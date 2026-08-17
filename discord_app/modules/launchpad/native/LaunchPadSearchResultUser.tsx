@@ -1,36 +1,27 @@
 // discord_app/modules/launchpad/native/LaunchPadSearchResultUser.tsx
-import importAllResult from "PressableBase";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import _getSystemLocale from "_getSystemLocale";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import sortActivity from "sortActivity";
-import handleTypingStart from "handleTypingStart";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { StatusTypes } from "ME";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "module_16200";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { _isStreaming } from "../../activities/utils/isStreaming.tsx";
-import { getLayoutStyle } from "shared/getLayoutStyles.tsx";
-import { renderChannelBadge } from "shared/renderChannelBadge.tsx";
-import { ChannelContent } from "shared/renderChannelContent.tsx";
-import { renderChannelWrapper } from "shared/renderChannelWrapper.tsx";
-import { UnreadBadge } from "shared/UnreadBadge.tsx";
-import { useChannelUnreadBadgeState } from "shared/useChannelUnreadBadgeState.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _isStreamingDefault from "_isStreaming" /* 8411 */;
+import useChannelUnreadBadgeState from "useChannelUnreadBadgeState" /* 15606 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import renderChannelWrapperDefault from "renderChannelWrapper" /* 16198 */;
+import _modDef16200 from "module_16200" /* 16200 */;
+import ChannelContentDefault from "ChannelContent" /* 16201 */;
+import renderChannelBadgeDefault from "renderChannelBadge" /* 16203 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "sortActivity" /* 4559 */;
+import closure_8 from "handleTypingStart" /* 11152 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { StatusTypes } from "ME" /* 676 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let map1;
-const require = arg1;
+require = arg1;
 function UserResult(user) {
-  let activities;
-  let channel;
-  let comparator;
-  let isMobileOnline;
-  let isVROnline;
-  let lastMessage;
-  let unread;
   user = user.user;
   ({ comparator, channel, lastMessage, unread } = user);
   if (unread === undefined) {
@@ -49,23 +40,23 @@ function UserResult(user) {
     flag2 = false;
   }
   const tmp = callback2();
-  const tmp4 = getLayoutStyle();
+  const tmp4 = getLayoutStyleDefault();
   let items = [user.id];
   const callback = importAllResult.useCallback(() => {
     const items = [user.id];
-    outer1_1(outer1_2[13]).openPrivateChannel({ recipientIds: items });
+    closure_1_1(closure_1_2[13]).openPrivateChannel({ recipientIds: items });
   }, items);
   let obj = user(4751);
   const fontScale = obj.useFontScale();
-  let obj1 = user(589);
-  const items1 = [_getSystemLocale];
+  obj1 = user(589);
+  const items1 = [closure_5];
   const stateFromStores = obj1.useStateFromStores(items1, () => locale.locale);
   let obj2 = user(589);
-  const items2 = [maybeApplyNoTextColorForLightCustomTheme];
+  const items2 = [closure_4];
   const stateFromStores1 = obj2.useStateFromStores(items2, () => useReducedMotion.useReducedMotion);
   let obj3 = user(589);
-  const items3 = [sortActivity];
-  const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({ isMobileOnline: outer1_7.isMobileOnline(user.id), isVROnline: outer1_7.isVROnline(user.id), status: outer1_7.getStatus(user.id), activities: outer1_7.getActivities(user.id) }));
+  const items3 = [closure_7];
+  const stateFromStoresObject = obj3.useStateFromStoresObject(items3, () => ({ isMobileOnline: closure_1_7.isMobileOnline(user.id), isVROnline: closure_1_7.isVROnline(user.id), status: closure_1_7.getStatus(user.id), activities: closure_1_7.getActivities(user.id) }));
   const status = stateFromStoresObject.status;
   let extractTimestampResult;
   ({ isMobileOnline, isVROnline, activities } = stateFromStoresObject);
@@ -89,7 +80,7 @@ function UserResult(user) {
   obj = { onPress: callback, underlayColor: tmp.pressableUnderlayColor.backgroundColor, style: items4, children: null };
   items4 = [tmp.pressable, { borderRadius: tmp4.container.borderRadius }];
   obj = { unread, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES };
-  const items5 = [callback(UnreadBadge, obj), , ];
+  const items5 = [callback(_modDef16200, obj), , ];
   obj1 = { user, guildId: "e", isMobileOnline: true, isVROnline: null, status: false, streaming: false, style: null, size: null, animate: null, typing: null, autoStatusCutout: null };
   obj1[2] = isMobileOnline;
   obj1[3] = isVROnline;
@@ -101,7 +92,7 @@ function UserResult(user) {
     }
   }
   obj1[4] = tmp19;
-  obj1[5] = _isStreaming(activities);
+  obj1[5] = _isStreamingDefault(activities);
   obj1[6] = tmp4.icon.margin;
   obj1[7] = tmp4.icon.avatarSize;
   let tmp21 = !stateFromStores1;
@@ -118,7 +109,7 @@ function UserResult(user) {
   const tmp16 = closure_14;
   const tmp17 = closure_13;
   const tmp18 = UnreadSetting;
-  const tmp2Result1 = renderChannelWrapper;
+  const tmp2Result1 = renderChannelWrapperDefault;
   if (comparator == null) {
     comparator = tmp2(4219).getUserTag(user);
     const tmp2Result3 = tmp2(4219);
@@ -143,26 +134,22 @@ function UserResult(user) {
   obj2[4] = flag;
   obj2[5] = relativeTimestamp;
   obj2[6] = num;
-  obj2[7] = renderChannelBadge({ mentionCount: num, locale: stateFromStores });
-  items5[2] = ChannelContent(obj2);
+  obj2[7] = renderChannelBadgeDefault({ mentionCount: num, locale: stateFromStores });
+  items5[2] = ChannelContentDefault(obj2);
   obj4[0] = items5;
   obj[3] = tmp2Result1(tmp16(tmp17, obj4), { fontScale });
   return tmp2Result(callback(user(5433).PressableHighlight, obj));
 }
 function UserResultWithChannel(arg0) {
-  let channel;
-  let mentionCount;
-  let require;
-  let unread;
   ({ user: require, channel } = arg0);
   let obj = initialize;
-  const items = [updateUserGuildSettingsInternal];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_9.isChannelMuted(undefined, channel.id));
+  const items = [closure_9];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.isChannelMuted(undefined, channel.id));
   const baseChannelUnreadBadgeState = useChannelUnreadBadgeState.useBaseChannelUnreadBadgeState(channel, stateFromStores);
   ({ unread, mentionCount } = baseChannelUnreadBadgeState);
   const obj2 = useChannelUnreadBadgeState;
-  const items1 = [handleTypingStart];
-  const stateFromStores1 = initialize.useStateFromStores(items1, () => outer1_8.isTyping(channel.id, id.id));
+  const items1 = [closure_8];
+  const stateFromStores1 = initialize.useStateFromStores(items1, () => closure_1_8.isTyping(channel.id, id.id));
   obj = {};
   const obj3 = initialize;
   const merged = Object.assign(arg0);
@@ -177,16 +164,16 @@ function UserResultWithChannel(arg0) {
 let c3 = importAllResult;
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
 let obj = { pressable: { flex: 1 }, pressableUnderlayColor: null };
-obj = { backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE };
+obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE };
 obj[1] = obj;
 let closure_15 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((user) => {
   user = user.user;
   let obj = user(589);
-  const items = [ensureGuildLoaded];
-  let closure_1 = obj.useStateFromStores(items, () => outer1_6.getDMFromUserId(user.id));
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores = user(589).useStateFromStores(items1, () => outer1_6.getChannel(closure_1));
+  const items = [closure_6];
+  closure_1 = obj.useStateFromStores(items, () => closure_1_6.getDMFromUserId(user.id));
+  const items1 = [closure_6];
+  const stateFromStores = user(589).useStateFromStores(items1, () => closure_1_6.getChannel(closure_1));
   if (null != stateFromStores) {
     obj = {};
     const merged = Object.assign(user);
@@ -199,6 +186,6 @@ const memoResult = importAllResult.memo((user) => {
   }
   return tmp7;
 });
-const result = require("_getSystemLocale").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadSearchResultUser.tsx");
 
 export default memoResult;

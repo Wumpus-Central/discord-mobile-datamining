@@ -1,7 +1,9 @@
 // discord_app/stores/VideoStreamStore.tsx
-import { NULL_STRING_GUILD_ID } from "ME";
-import { MediaEngineContextTypes } from "DesktopSources";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
 function makeTimeoutKey(arg0, arg1) {
   return "" + arg0 + ":" + arg1;
@@ -46,10 +48,13 @@ function clearUser(arg0, arg1) {
     }
   }
 }
+const NULL_STRING_GUILD_ID = ME.NULL_STRING_GUILD_ID;
+const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
 let c2 = null;
 let c3 = null;
 let closure_4 = {};
 let closure_5 = {};
+const Store = initializeDefault.Store;
 class VideoStreamStore extends Store {
 }
 const prototype = VideoStreamStore.prototype;
@@ -96,7 +101,7 @@ prototype["getTimedoutVideo"] = function getTimedoutVideo(arg0, arg1) {
   return dependencyMap2["" + arg0 + ":" + arg1];
 };
 VideoStreamStore.displayName = "VideoStreamStore";
-const videoStreamStore = new VideoStreamStore(require("dispatcher"), {
+const videoStreamStore = new VideoStreamStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(user) {
     const id = user.user.id;
     const sessionId = user.sessionId;
@@ -106,10 +111,6 @@ const videoStreamStore = new VideoStreamStore(require("dispatcher"), {
     const sessionId = user.sessionId;
   },
   RTC_CONNECTION_VIDEO: function handleVideo(arg0) {
-    let context;
-    let guildId;
-    let streamId;
-    let userId;
     ({ userId, guildId, streamId, context } = arg0);
     if (null != streamId) {
       if (!(userId in dependencyMap)) {
@@ -143,9 +144,6 @@ const videoStreamStore = new VideoStreamStore(require("dispatcher"), {
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
     return voiceStates.reduce((arg0, arg1) => {
-      let channelId;
-      let guildId;
-      let userId;
       ({ userId, channelId, guildId } = arg1);
       if (null == channelId) {
         if (userId === closure_2) {
@@ -153,7 +151,7 @@ const videoStreamStore = new VideoStreamStore(require("dispatcher"), {
             return arg0;
           } else {
             const table = {};
-            let closure_5 = {};
+            closure_5 = {};
           }
         }
         return true;
@@ -175,10 +173,6 @@ const videoStreamStore = new VideoStreamStore(require("dispatcher"), {
     }, false);
   },
   VIDEO_STREAM_READY_TIMEOUT: function handleVideoStreamReadyTimeout(arg0) {
-    let mediaContext;
-    let streamKey;
-    let userId;
-    let videoStreamId;
     ({ userId, mediaContext } = arg0);
     ({ videoStreamId, streamKey } = arg0);
     closure_5["" + mediaContext + ":" + userId] = { videoStreamId, userId, streamKey, mediaContext };
@@ -191,6 +185,6 @@ const videoStreamStore = new VideoStreamStore(require("dispatcher"), {
     }
   }
 });
-const result = require("initialize").fileFinishedImporting("stores/VideoStreamStore.tsx");
+const result = set.fileFinishedImporting("stores/VideoStreamStore.tsx");
 
 export default videoStreamStore;

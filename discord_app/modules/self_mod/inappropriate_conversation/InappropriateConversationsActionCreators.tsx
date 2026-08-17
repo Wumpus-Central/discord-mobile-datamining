@@ -1,23 +1,24 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = require("sendRequest").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationsActionCreators.tsx");
 
 export const playVibingWumpusMusic = function playVibingWumpusMusic() {
-  dispatcher.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
+  dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
 };
 export const stopVibingWumpusMusic = function stopVibingWumpusMusic() {
-  dispatcher.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
+  dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
 };
 export const pauseVibingWumpusMusic = function pauseVibingWumpusMusic() {
-  dispatcher.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
+  dispatcherDefault.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
 };
 export const deleteAllSafetyWarnings = function deleteAllSafetyWarnings(arg0) {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.DELETE_SAFETY_WARNINGS(arg0), rejectWithError: null };
-  obj[1] = sendRequest.rejectWithMigratedError();
+  const obj = { url: Endpoints.DELETE_SAFETY_WARNINGS(arg0), rejectWithError: sendRequest.rejectWithMigratedError() };
   return HTTP.del(obj);
 };
 export const markAsInappropriateConversation = function markAsInappropriateConversation(id, INAPPROPRIATE_CONVERSATION_TIER_1) {

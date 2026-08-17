@@ -1,18 +1,18 @@
 // discord_app/modules/nuf/native/NewUserManager.tsx
-import NewUserTypes from "NewUserTypes";
-import handleSetLocationMetadata from "handleSetLocationMetadata";
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import { NewUserTypes } from "NewUserTypes";
-import { PlatformTypes } from "ME";
-import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps";
-import "initialize";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { _startContactSyncForDiscoverability } from "NUFActionCreators.tsx";
+import keys from "keys" /* 691 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 5038 */;
+import _startContactSyncForDiscoverability from "_startContactSyncForDiscoverability" /* 11877 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleSetLocationMetadata" /* 8581 */;
+import closure_5 from "set" /* 5221 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "initialize" /* 4494 */;
+import { NewUserTypes } from "NewUserTypes" /* 11878 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import { HUBS_IN_ONBOARDING_COUNTRIES as closure_10 } from "HubEmailConnectionSteps" /* 11897 */;
 
-const require = arg1;
+require = arg1;
 let obj = { REGISTRATION: "Registration", ADD_AVATAR: "Add Avatar", CONTACT_SYNC: "Contact Sync", GUILD_TEMPLATE: "Guild Template", STUDENT_HUB: "Student Hub", NEW_USER_INTENT: "New User Intent", ACCEPT_INVITE: "Accept Invite", DISCOVERABILITY: "Discoverability" };
 obj = {
   key: obj.ADD_AVATAR,
@@ -97,12 +97,13 @@ items[5] = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
-    dispatcher.dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
+initializeDefault;
 let prototype = function NewUserManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  let closure_0 = applyArgumentsResult;
+  closure_0 = applyArgumentsResult;
   applyArgumentsResult._onboardingStepIndex = -1;
   applyArgumentsResult._lastStep = null;
   applyArgumentsResult.actions = {
@@ -111,14 +112,13 @@ let prototype = function NewUserManager() {
     }
   };
   closure_0 = undefined;
-  const importDefault = applyArgumentsResult;
+  importDefault = applyArgumentsResult;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    let transitionToStep = 0;
     const iter = (function*(arg0) {
-      if (v0 === 2) {
-        v0 = 3;
+      if (c6 === 2) {
+        c6 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp4 === 3) {
         if (arg0 === 1) {
@@ -132,22 +132,22 @@ let prototype = function NewUserManager() {
         }
       } else {
         try {
-          v0 = 2;
-          if (0 === key2) {
+          c6 = 2;
+          if (0 === c5) {
             if (arg0 === 1) {
-              v0 = 3;
+              c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v0 = 3;
+              c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              let c4 = 0;
+              c4 = 0;
               let _onboardingStepIndex = tmp2;
               let flag;
-              let c1;
-              let c2;
+              c1 = undefined;
+              c2 = undefined;
               flag = flag.skip;
               if (flag === undefined) {
                 flag = false;
@@ -164,30 +164,30 @@ let prototype = function NewUserManager() {
               c2 = flag3;
               _onboardingStepIndex = undefined;
               c4 = undefined;
-              key2 = undefined;
-              v0 = undefined;
-              let c7;
-              let c8;
-              let c9;
-              let callback2;
-              key2 = 1;
-              v0 = 1;
+              c5 = undefined;
+              c6 = undefined;
+              c7 = undefined;
+              c8 = undefined;
+              c9 = undefined;
+              transitionToStep = undefined;
+              c5 = 1;
+              c6 = 1;
               return { value: "ct", done: true };
             }
           } else if (1 === tmp5) {
             if (arg0 === 1) {
-              v0 = 3;
+              c6 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              v0 = 3;
-              let obj1 = { value: null, done: true };
+              c6 = 3;
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               _onboardingStepIndex = c1._onboardingStepIndex;
               if (c2) {
-                let key;
-                if (outer1_11[outer1_3] != null) {
+                key = undefined;
+                if (closure_1_11[closure_1_3] != null) {
                   key = tmp53.key;
                 }
                 c1 = key;
@@ -195,59 +195,59 @@ let prototype = function NewUserManager() {
                   c1 = null;
                 }
                 c1._lastStep = c1;
-                outer1_1._onboardingStepIndex = outer1_1._onboardingStepIndex - 1;
-                const outer1_4 = outer1_11[outer1_1._onboardingStepIndex];
-                key2 = outer1_4.key;
-                v0 = outer1_4.transitionToStep;
-                callback(outer1_2[15]).trackNUFStep(outer1_1._lastStep, key2, { back: true });
-                v0();
-                v0 = 3;
+                closure_1_1._onboardingStepIndex = closure_1_1._onboardingStepIndex - 1;
+                closure_4 = closure_1_11[closure_1_1._onboardingStepIndex];
+                key = closure_4.key;
+                transitionToStep = closure_4.transitionToStep;
+                callback(closure_1_2[15]).trackNUFStep(closure_1_1._lastStep, key, { back: true });
+                transitionToStep();
+                c6 = 3;
                 const obj2 = { value: null, done: true };
                 obj2[0] = undefined;
                 return obj2;
               } else {
                 c1._onboardingStepIndex = c1._onboardingStepIndex + 1;
-                if (c1._onboardingStepIndex >= outer1_11.length) {
-                  let obj5 = callback(outer1_2[15]);
+                if (c1._onboardingStepIndex >= closure_1_11.length) {
+                  let obj5 = callback(closure_1_2[15]);
                   const obj3 = { skip_attempt: null };
                   obj3[0] = c1;
                   obj5.trackNUFStep(c1._lastStep, "NUF Complete", obj3);
-                  let obj7 = callback(outer1_2[16]);
+                  let obj7 = callback(closure_1_2[16]);
                   const result = obj7.setNewUserFlowCompleted();
-                  v0 = 3;
+                  c6 = 3;
                   const obj4 = { value: null, done: true };
                   obj4[0] = undefined;
                   return obj4;
                 } else {
-                  const outer1_7 = outer1_11[c1._onboardingStepIndex];
-                  const outer1_8 = outer1_7.key;
-                  const outer1_9 = outer1_7.shouldShowStep;
-                  const outer1_10 = outer1_7.transitionToStep;
-                  key2 = 2;
-                  v0 = 1;
+                  closure_7 = closure_1_11[c1._onboardingStepIndex];
+                  key = closure_7.key;
+                  shouldShowStep = closure_7.shouldShowStep;
+                  transitionToStep = closure_7.transitionToStep;
+                  c5 = 2;
+                  c6 = 1;
                   obj5 = { value: null, done: false };
-                  obj5[0] = outer1_9();
+                  obj5[0] = shouldShowStep();
                   return obj5;
                 }
               }
             }
           } else if (arg0 === 1) {
-            v0 = 3;
+            c6 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            v0 = 3;
+            c6 = 3;
             const obj6 = { value: null, done: true };
             obj6[0] = arg1;
             return obj6;
           } else {
             if (arg1) {
-              obj1 = callback(outer1_2[15]);
+              obj1 = callback(closure_1_2[15]);
               obj7 = { skip: null, skip_attempt: null };
               obj7[0] = flag;
               obj7[1] = c1;
               obj1.trackNUFStep(c1._lastStep, c8, obj7);
               let key1;
-              if (outer1_11[_onboardingStepIndex] != null) {
+              if (closure_1_11[_onboardingStepIndex] != null) {
                 key1 = tmp19.key;
               }
               c2 = key1;
@@ -255,17 +255,17 @@ let prototype = function NewUserManager() {
                 c2 = null;
               }
               c1._lastStep = c2;
-              callback2();
+              transitionToStep();
               const tmp16 = c1;
             } else {
               obj = { skip: null };
               obj[0] = flag;
               c1.handleOnboardingStep(obj);
             }
-            v0 = 3;
+            c6 = 3;
           }
         } catch (tmp71) {
-          v0 = tmp;
+          c6 = tmp;
           throw tmp71;
         }
       }
@@ -277,7 +277,7 @@ let prototype = function NewUserManager() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+      applyArgumentsResult = HermesBuiltin.applyArguments(self);
     } else {
       applyArgumentsResult = apply(self, arguments);
     }
@@ -292,7 +292,7 @@ let obj2 = {
   key: obj.ACCEPT_INVITE,
   shouldShowStep: require("showInstantInviteActionSheet").hasDeferredInvite,
   transitionToStep() {
-    dispatcher.dispatch({ type: "DEFERRED_INVITE_SHOW" });
+    dispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
   }
 };
 let result = require("set").fileFinishedImporting("modules/nuf/native/NewUserManager.tsx");

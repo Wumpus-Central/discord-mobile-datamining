@@ -1,42 +1,33 @@
 // discord_app/modules/premium/promotions/native/MarketingPageBannerTile.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { trackImpression } from "../../../app_analytics/useTrackImpression.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import contextDefault from "context" /* 7139 */;
+import trackImpressionDefault from "trackImpression" /* 9177 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { width: "100%" }, card: null, image: null, bodyText: null, ctaButton: null };
-createCacheKey = { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", padding: require("Themes").space.PX_16, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_SECONDARY_ALT, overflow: "hidden" };
+createCacheKey = { display: "flex", width: "100%", flexDirection: "column", justifyContent: "flex-start", padding: ThemesDefault.space.PX_16, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SECONDARY_ALT, overflow: "hidden" };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: "100%", maxWidth: 317, height: 144, borderRadius: require("Themes").radii.md, marginBottom: require("Themes").space.PX_16, padding: require("Themes").space.PX_8, alignSelf: "center" };
-const obj1 = { width: "100%", maxWidth: 317, height: 144, borderRadius: require("Themes").radii.md, marginBottom: require("Themes").space.PX_16, padding: require("Themes").space.PX_8, alignSelf: "center" };
-createCacheKey[3] = { marginTop: require("Themes").space.PX_4 };
-let obj2 = { marginTop: require("Themes").space.PX_4 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: require("Themes").space.PX_16 };
-const result = require("jsxProd").fileFinishedImporting("modules/premium/promotions/native/MarketingPageBannerTile.tsx");
+createCacheKey[2] = { width: "100%", maxWidth: 317, height: 144, borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_8, alignSelf: "center" };
+const obj1 = { width: "100%", maxWidth: 317, height: 144, borderRadius: ThemesDefault.radii.md, marginBottom: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_8, alignSelf: "center" };
+createCacheKey[3] = { marginTop: ThemesDefault.space.PX_4 };
+let obj2 = { marginTop: ThemesDefault.space.PX_4 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_16 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { marginTop: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/premium/promotions/native/MarketingPageBannerTile.tsx");
 
 export default function MarketingPageBannerTile(bannerFields) {
-  let analyticsPage;
-  let cardStyle;
-  let componentId;
-  let onPaymentDismiss;
-  let onPaymentSuccess;
-  let promotionId;
-  let style;
   bannerFields = bannerFields.bannerFields;
   let helpArticleLinkProps;
   ({ style, cardStyle, componentId, promotionId, analyticsPage, onPaymentSuccess, onPaymentDismiss } = bannerFields);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = helpArticleLinkProps(8039);
   const button = bannerFields.button;
   let buttonAction;
@@ -52,7 +43,7 @@ export default function MarketingPageBannerTile(bannerFields) {
     }
   }
   obj[1] = value;
-  obj[2] = context().analyticsLocations;
+  obj[2] = contextDefault().analyticsLocations;
   obj[3] = analyticsPage;
   obj[4] = onPaymentSuccess;
   obj[5] = onPaymentDismiss;
@@ -60,7 +51,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   const buttonActionHandler = obj.getButtonActionHandler(obj);
   obj[0] = helpArticleLinkProps(503).ImpressionTypes.VIEW;
   obj[1] = helpArticleLinkProps(503).ImpressionNames.PREMIUM_MARKETING_COMPONENT;
-  const tmp2Result = trackImpression;
+  const tmp2Result = trackImpressionDefault;
   obj[2] = { component_type: helpArticleLinkProps(7931).MarketingComponentType.MARKETING_PAGE_BANNER, component_id: componentId, promotion_id: promotionId };
   tmp2Result(obj);
   let tmp4Result = tmp4(12838);
@@ -87,7 +78,7 @@ export default function MarketingPageBannerTile(bannerFields) {
   if (tmp12Result) {
     const obj8 = { color: "text-link", variant: "text-sm/medium", accessibilityRole: "link", onPress: null, children: null };
     obj8[3] = function onPress() {
-      return outer1_1(outer1_2[12]).openURL(helpArticleLinkProps.url);
+      return closure_1_1(closure_1_2[12]).openURL(helpArticleLinkProps.url);
     };
     obj8[4] = helpArticleLinkProps.linkText;
     tmp12Result = tmp12(tmp4(4734).Text, obj8);

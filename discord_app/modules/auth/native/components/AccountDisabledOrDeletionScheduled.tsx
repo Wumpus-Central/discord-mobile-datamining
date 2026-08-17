@@ -1,18 +1,16 @@
 // discord_app/modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx
-import noop from "noop";
-import { View } from "set";
-import fetchFingerprint from "fetchFingerprint";
-import { LoginStates } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import { LoginStates } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  const space = Themes.space;
+  const space = ThemesDefault.space;
   if (arg0) {
     let PX_16 = space.PX_8;
     let tmp4 = tmp;
@@ -38,18 +36,18 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   container[6] = str2;
   return { container, image: { marginBottom: 32, alignSelf: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, marginBottom: 24, textAlign: "center" } };
 });
-const result = require("fetchFingerprint").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/AccountDisabledOrDeletionScheduled.tsx");
 
 export default function AccountDisabledOrDeletionScheduled(handleLogin) {
   handleLogin = handleLogin.handleLogin;
   const onReset = handleLogin.onReset;
   let navigation;
   let stateFromStores;
-  let closure_4;
+  closure_4 = undefined;
   let obj = handleLogin(navigation[7]);
   navigation = obj.useNavigation();
-  let obj1 = handleLogin(navigation[8]);
-  const items = [fetchFingerprint];
+  obj1 = handleLogin(navigation[8]);
+  const items = [closure_5];
   stateFromStores = obj1.useStateFromStores(items, () => loginStatus.getLoginStatus());
   closure_4 = stateFromStores.useRef(null);
   const items1 = [stateFromStores, navigation];
@@ -59,7 +57,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
         if (tmp4) {
           navigation.pop();
         }
-        tmp4 = tmp2 !== outer1_6.ACCOUNT_SCHEDULED_FOR_DELETION && tmp2 !== outer1_6.ACCOUNT_DISABLED;
+        tmp4 = tmp2 !== closure_1_6.ACCOUNT_SCHEDULED_FOR_DELETION && tmp2 !== closure_1_6.ACCOUNT_DISABLED;
       } else {
         tmp.current = tmp2;
       }
@@ -76,7 +74,7 @@ export default function AccountDisabledOrDeletionScheduled(handleLogin) {
     }
   }, items2);
   const callback1 = stateFromStores.useCallback(() => {
-    const credentials = outer1_5.getCredentials();
+    const credentials = closure_1_5.getCredentials();
     const password = credentials.password;
     let str = "";
     if (undefined !== password) {

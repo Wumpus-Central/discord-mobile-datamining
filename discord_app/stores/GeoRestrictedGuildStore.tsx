@@ -1,14 +1,16 @@
 // discord_app/stores/GeoRestrictedGuildStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = [];
+const Store = initializeDefault.Store;
 class GeoRestrictedGuildStore extends Store {
 }
 GeoRestrictedGuildStore.prototype["getGeoRestrictedGuilds"] = function getGeoRestrictedGuilds() {
   return closure_0;
 };
 GeoRestrictedGuildStore.displayName = "GeoRestrictedGuildStore";
-const geoRestrictedGuildStore = new GeoRestrictedGuildStore(require("dispatcher"), {
+const geoRestrictedGuildStore = new GeoRestrictedGuildStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(geoRestrictedGuilds) {
     geoRestrictedGuilds = geoRestrictedGuilds.geoRestrictedGuilds;
   },

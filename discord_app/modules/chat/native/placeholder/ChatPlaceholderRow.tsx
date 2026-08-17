@@ -1,23 +1,22 @@
 // discord_app/modules/chat/native/placeholder/ChatPlaceholderRow.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { getChatPlaceholderRowWidth } from "getChatPlaceholderRowWidth.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getChatPlaceholderRowWidthDefault from "getChatPlaceholderRowWidth" /* 11508 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 const tmp3 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
 let obj = { row: null, rowInner: null, placeholderAvatar: null, placeholderText: null, placeholderBody: null };
-obj = { paddingLeft: require("Themes").space.PX_12, paddingTop: require("PX_24").CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
+obj = { paddingLeft: ThemesDefault.space.PX_12, paddingTop: require("PX_24").CHAT_PLACEHOLDER_ROW_MARGIN_TOP, flexDirection: "row" };
 obj[0] = obj;
-createCacheKey = { marginHorizontal: require("Themes").space.PX_12, flex: 1 };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_12, flex: 1 };
 obj[1] = createCacheKey;
-obj[2] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: require("Themes").radii.round };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: require("Themes").radii.round };
-obj[3] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: require("Themes").radii.sm };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: require("Themes").radii.sm };
+obj[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: ThemesDefault.radii.round };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: tmp3, width: tmp3, borderRadius: ThemesDefault.radii.round };
+obj[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: ThemesDefault.radii.sm };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_HEIGHT, borderRadius: ThemesDefault.radii.sm };
 obj[4] = { marginTop: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
 let closure_5 = createCacheKey.createStyles(obj);
 const obj4 = { marginTop: require("PX_24").CHAT_PLACEHOLDER_ROW_LINE_MARGIN_TOP, width: "100%" };
@@ -38,7 +37,7 @@ const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
       let items1 = [tmp.placeholderText, tmp.placeholderBody, ];
       obj = { width: null };
       let _HermesInternal = HermesInternal;
-      obj[0] = "" + getChatPlaceholderRowWidth(rounded + num) + "%";
+      obj[0] = "" + getChatPlaceholderRowWidthDefault(rounded + num) + "%";
       items1[2] = obj;
       obj[0] = items1;
       let arr = items.push(callback(View, obj, num));
@@ -57,6 +56,6 @@ const memoResult = importAllResult.memo(function ChatPlaceholderRow(lines) {
   obj[1] = items2;
   return callback2(View, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/placeholder/ChatPlaceholderRow.tsx");
 
 export default memoResult;

@@ -1,5 +1,9 @@
 // discord_common/js/packages/application-widget-renderer/src/index.tsx
-const result = require("resolveTextComponentValues").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
+import set from "set" /* 2 */;
+import isVisualUnfurledMedia from "isVisualUnfurledMedia" /* 12275 */;
+import isVisualUnfurledMediaDefault from "isVisualUnfurledMedia" /* 12275 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/index.tsx");
 for (const key10018 in require("toAsciiDigits")) {
   let tmp3 = key10018;
   arg5[key10018] = require("toAsciiDigits")[key10018];
@@ -26,5 +30,5 @@ for (const key10034 in require("set")) {
   continue;
 }
 
-export const resolvedValuesFromUserApplicationIdentityProfile = require("isVisualUnfurledMedia");
-export const UnfurledMediaLoadingState = require("isVisualUnfurledMedia").UnfurledMediaLoadingState;
+export const resolvedValuesFromUserApplicationIdentityProfile = isVisualUnfurledMediaDefault;
+export const UnfurledMediaLoadingState = isVisualUnfurledMedia.UnfurledMediaLoadingState;

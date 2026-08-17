@@ -1,7 +1,9 @@
 // discord_app/modules/markup/TimestampUtils.tsx
-import { t } from "../../../_runtime/03975_t.js";
-import { resetCache } from "../../utils/DateUtils.tsx";
-import { set } from "../../utils/Durations.tsx";
+import set from "set" /* 2 */;
+import setDefault from "set" /* 687 */;
+import tDefault from "t" /* 3975 */;
+import resetCache from "resetCache" /* 4063 */;
+
 let obj = {
   t(date) {
     return resetCache.dateFormat(date, "LT");
@@ -28,17 +30,17 @@ let obj = {
     return resetCache.dateFormat(date, "L LTS");
   },
   R(toDate) {
-    const result = t.relativeTimeThreshold("s");
-    const obj = t;
-    const result1 = t.relativeTimeThreshold("s", 60);
-    const obj2 = t;
-    const result2 = t.relativeTimeThreshold("ss");
-    const obj3 = t;
-    const result3 = t.relativeTimeThreshold("ss", -1);
-    const obj4 = t;
-    const result4 = t.relativeTimeThreshold("m");
-    const obj5 = t;
-    const result5 = t.relativeTimeThreshold("m", 60);
+    const result = tDefault.relativeTimeThreshold("s");
+    obj = tDefault;
+    const result1 = tDefault.relativeTimeThreshold("s", 60);
+    const obj2 = tDefault;
+    const result2 = tDefault.relativeTimeThreshold("ss");
+    const obj3 = tDefault;
+    const result3 = tDefault.relativeTimeThreshold("ss", -1);
+    const obj4 = tDefault;
+    const result4 = tDefault.relativeTimeThreshold("m");
+    const obj5 = tDefault;
+    const result5 = tDefault.relativeTimeThreshold("m", 60);
     try {
       let tmpResult = tmp(3975);
       let fromNowResult = tmpResult(toDate.toDate()).fromNow();
@@ -61,17 +63,15 @@ let obj = {
 Object.setPrototypeOf(obj, null);
 const keys = Object.keys(obj);
 const regExp = new RegExp("^<t:(-?\\d{1,17})(?::(" + keys.join("|") + "))?>");
-let result = require("set").fileFinishedImporting("modules/markup/TimestampUtils.tsx");
+let result = set.fileFinishedImporting("modules/markup/TimestampUtils.tsx");
 
 export const TIMESTAMP_FORMATS = obj;
 export const DEFAULT_TIMESTAMP_FORMAT = "f";
 export const TIMESTAMP_REGEX = regExp;
 export const formatTimestampMention = function formatTimestampMention(arg0) {
-  let format;
-  let timestamp;
   ({ timestamp, format } = arg0);
-  const tmp = t;
-  const tmpResult = tmp(Number(timestamp) * set.Millis.SECOND);
+  const tmp = tDefault;
+  const tmpResult = tmp(Number(timestamp) * setDefault.Millis.SECOND);
   if (tmpResult.isValid()) {
     let f;
     if (null != format) {
@@ -93,8 +93,8 @@ export const formatTimestampMention = function formatTimestampMention(arg0) {
   const NumberResult = Number(timestamp);
 };
 export const parseTimestamp = function parseTimestamp(arg0, arg1) {
-  const tmp = t;
-  const tmpResult = tmp(Number(arg0) * set.Millis.SECOND);
+  const tmp = tDefault;
+  const tmpResult = tmp(Number(arg0) * setDefault.Millis.SECOND);
   let tmp3 = null;
   if (tmpResult.isValid()) {
     let f;

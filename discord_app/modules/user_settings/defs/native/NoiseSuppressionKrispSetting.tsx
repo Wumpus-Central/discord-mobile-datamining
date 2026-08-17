@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getNoiseCancellationDeferredToSystem } from "../../../noise_cancellation/NoiseCancellationUtils.tsx";
-import { handleAutomaticGainControlChange } from "../../voice/native/UserSettingsVoiceUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import handleAutomaticGainControlChange from "handleAutomaticGainControlChange" /* 12557 */;
+import getNoiseCancellationDeferredToSystem from "getNoiseCancellationDeferredToSystem" /* 12558 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -31,14 +31,14 @@ createToggle = {
     const intl2 = getSystemLocale.intl;
     obj[2] = intl2.string(getSystemLocale.t.qXeYHw);
     items[1] = obj;
-    const obj1 = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
+    obj1 = { value: handleAutomaticGainControlChange.NoiseSuppressionOpt.NONE, disabled: noiseCancellationDeferredToSystem, label: null };
     const intl3 = getSystemLocale.intl;
     obj1[2] = intl3.string(getSystemLocale.t.wkYAlz);
     items[2] = obj1;
     return items;
   },
   usePredicate: function useHasNoiseSuppressionKrispSetting() {
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => noiseCancellationSupported.isNoiseCancellationSupported());
   },
   useSearchTerms() {
@@ -48,6 +48,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-let result = require("handleAutomaticGainControlChange").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/NoiseSuppressionKrispSetting.tsx");
 
 export default createToggle;

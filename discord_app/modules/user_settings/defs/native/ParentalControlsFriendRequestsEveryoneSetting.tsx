@@ -1,14 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx
-import noop from "noop";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import ME from "ME";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { result } from "../../family_center/ParentalControlledUserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import result2 from "result" /* 14182 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import ME from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ AllFriendSourceFlags: c4, FriendSourceFlags: c5 } = ME);
 createToggle = {
   useTitle() {
@@ -21,12 +19,12 @@ createToggle = {
     const ParentalControlledFriendSourceFlags = controlledSetting(14182).ParentalControlledFriendSourceFlags;
     controlledSetting = ParentalControlledFriendSourceFlags.useControlledSetting(selectedTeenId);
     const items = [controlledSetting];
-    return React.useMemo(() => controlledSetting(outer1_1[6]).computeFlags(controlledSetting), items).all;
+    return React.useMemo(() => controlledSetting(closure_1_1[6]).computeFlags(controlledSetting), items).all;
   },
   onValueChange: function onFriendRequestsEveryoneSettingValueChange(arg0) {
     selectedTeenId = selectedTeenId.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const ParentalControlledFriendSourceFlags = result.ParentalControlledFriendSourceFlags;
+      const ParentalControlledFriendSourceFlags = result2.ParentalControlledFriendSourceFlags;
       if (arg0) {
         let tmp7 = tmp5;
       } else {
@@ -38,6 +36,6 @@ createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsFriendRequestsEveryoneSetting.tsx");
 
 export default createToggle;

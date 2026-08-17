@@ -1,21 +1,19 @@
 // discord_app/modules/main_tabs_v2/useMessagePreviews.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
+import useIsNsfwGatedDefault from "useIsNsfwGated" /* 8512 */;
+import useLatestChannelMessageDefault from "useLatestChannelMessage" /* 14664 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useIsNsfwGated } from "../age_gate/useIsNsfwGated.tsx";
-import { useLatestChannelMessage } from "../message_previews/useLatestChannelMessage.tsx";
 
 const require = arg1;
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useMessagePreviews.tsx");
 
 export default function useMessagePreview(guild_id) {
-  let disabled;
-  let unread;
   ({ unread, disabled } = arg1);
   guild_id = guild_id.guild_id;
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_3];
   const stateFromStores = guild_id(589).useStateFromStores(items, () => {
-    const guilds = outer1_3.settings.guilds;
+    const guilds = closure_1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {
       let messagePreviews;
@@ -30,26 +28,26 @@ export default function useMessagePreview(guild_id) {
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(outer1_2[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(outer1_2[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
   const obj = guild_id(589);
-  const items1 = [generateOldThreadCutoff];
+  const items1 = [closure_4];
   const stateFromStores1 = guild_id(589).useStateFromStores(items1, () => {
     let hasUnreadResult = null != guild_id;
     if (hasUnreadResult) {
-      hasUnreadResult = outer1_4.hasUnread(tmp.id);
+      hasUnreadResult = closure_1_4.hasUnread(tmp.id);
     }
     return hasUnreadResult;
   });
   if (!disabled) {
-    disabled = useIsNsfwGated(guild_id);
+    disabled = useIsNsfwGatedDefault(guild_id);
   }
   if (!disabled) {
     disabled = stateFromStores === tmp(4071).MessagePreviewTypes.NONE;
@@ -64,13 +62,13 @@ export default function useMessagePreview(guild_id) {
     }
     disabled = tmp6;
   }
-  return useLatestChannelMessage(guild_id, disabled);
+  return useLatestChannelMessageDefault(guild_id, disabled);
 };
 export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) {
   const _require = arg0;
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_3];
   return _initialize.useStateFromStores(items, () => {
-    const guilds = outer1_3.settings.guilds;
+    const guilds = closure_1_3.settings.guilds;
     let tmp2 = null;
     if (null != guild_id) {
       let messagePreviews;
@@ -85,13 +83,13 @@ export const useMessagePreviewSetting = function useMessagePreviewSetting(arg0) 
       tmp2 = messagePreviews;
     }
     if (null != tmp2) {
-      const ValidMessagePreviewTypes = guild_id(outer1_2[2]).ValidMessagePreviewTypes;
+      const ValidMessagePreviewTypes = guild_id(closure_1_2[2]).ValidMessagePreviewTypes;
       if (ValidMessagePreviewTypes.has(tmp2.value)) {
         let setting = tmp2.value;
       }
       return setting;
     }
-    const MessagePreviewSetting = guild_id(outer1_2[2]).MessagePreviewSetting;
+    const MessagePreviewSetting = guild_id(closure_1_2[2]).MessagePreviewSetting;
     setting = MessagePreviewSetting.getSetting();
   });
 };

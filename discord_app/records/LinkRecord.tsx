@@ -1,7 +1,8 @@
 // discord_app/records/LinkRecord.tsx
-import "toJS";
-import { Routes } from "ME";
+import toJSDefault from "toJS" /* 1931 */;
+import { Routes } from "ME" /* 676 */;
 
+toJSDefault;
 let prototype;
 prototype = function LinkRecord(arg0) {
   const tmp = new prototype(new.target, new.target);

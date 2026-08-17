@@ -1,49 +1,41 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx
-import _slicedToArray from "_slicedToArray";
-import getAvatarURL from "getAvatarURL";
-import get_ActivityIndicator from "dispatcher";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "nameFromUser";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "get ActivityIndicator";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c5, Image: closure_6, Pressable: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { flex: { flex: 1 }, flexCenterRow: { flexDirection: "row", alignItems: "center" }, nameContainer: null, activeNameContainer: null, usernameContainer: null, emojiText: null, colon: null, username: null, emojiImage: null, overflowIcon: null };
-createCacheKey = { paddingVertical: 4, borderRadius: require("Themes").radii.xs, alignItems: "center", flexDirection: "row" };
+createCacheKey = { paddingVertical: 4, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createCacheKey[2] = createCacheKey;
 let num = 4;
 if (set.isAndroid()) {
   num = 0;
 }
-createCacheKey[3] = { padding: num, borderRadius: require("Themes").radii.xs, alignItems: "center", flexDirection: "row" };
+createCacheKey[3] = { padding: num, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
 createCacheKey[4] = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
 let num2;
 if (set.isAndroid()) {
   num2 = 0;
 }
-let obj1 = { padding: num, borderRadius: require("Themes").radii.xs, alignItems: "center", flexDirection: "row" };
-createCacheKey[5] = { fontSize: 16, padding: num2, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj1 = { padding: num, borderRadius: ThemesDefault.radii.xs, alignItems: "center", flexDirection: "row" };
+createCacheKey[5] = { fontSize: 16, padding: num2, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[6] = { width: 4 };
-set = { fontSize: 13, color: require("Themes").colors.TEXT_MUTED };
+set = { fontSize: 13, color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[7] = set;
 createCacheKey[8] = { width: 30, height: 30, resizeMode: "contain" };
-let obj2 = { fontSize: 16, padding: num2, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[9] = { paddingLeft: require("Themes").space.PX_8, alignItems: "center", flexDirection: "row", height: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj2 = { fontSize: 16, padding: num2, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[9] = { paddingLeft: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", height: "100%" };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let result = set.fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji/EmojiRow.tsx");
 
 export const EmojiRow = function EmojiRow(guildId) {
-  let end;
-  let start;
   guildId = guildId.guildId;
   const emoji = guildId.emoji;
   let flag = guildId.disabled;
@@ -53,19 +45,19 @@ export const EmojiRow = function EmojiRow(guildId) {
   const onSelectRolesForEmoji = guildId.onSelectRolesForEmoji;
   let first;
   let React;
-  let closure_5;
+  closure_5 = undefined;
   let callback;
   ({ start, end } = guildId);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp2 = first(React.useState(emoji.name), 2);
   first = tmp2[0];
   React = tmp2[1];
   const tmp4 = first(React.useState(false), 2);
   closure_5 = tmp4[1];
   let obj = guildId(onSelectRolesForEmoji[8]);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(guildId));
-  let obj1 = guildId(onSelectRolesForEmoji[9]);
+  const items = [closure_8];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(guildId));
+  obj1 = guildId(onSelectRolesForEmoji[9]);
   const items1 = [guildId, emoji, onSelectRolesForEmoji];
   const result = obj1.useManageResourcePermissions(stateFromStores).canManageGuildExpression(emoji);
   callback = React.useCallback(() => {
@@ -87,7 +79,7 @@ export const EmojiRow = function EmojiRow(guildId) {
       callback2(true);
     }
   }, items2);
-  const callback2 = React.useCallback(() => {
+  callback2 = React.useCallback(() => {
     callback();
   }, items3);
   obj = { icon: null, trailing: null, label: null, disabled: null, onPress: null, onLongPress: null, start: null, end: null };
@@ -121,13 +113,11 @@ export const EmojiRow = function EmojiRow(guildId) {
     tmp12Result = tmp12(tmp5(tmp6[15]).LegacyText, obj6);
   }
   const items4 = [tmp12Result, ];
-  const obj7 = { numberOfLines: 1, style: tmp.username, children: null };
-  obj7[2] = emoji(onSelectRolesForEmoji[21]).getUserTag(emoji.user);
+  const obj7 = { numberOfLines: 1, style: tmp.username, children: emoji(onSelectRolesForEmoji[21]).getUserTag(emoji.user) };
   items4[1] = callback(guildId(onSelectRolesForEmoji[15]).LegacyText, obj7);
   obj5[1] = items4;
   const items5 = [closure_10(closure_5, obj5), , ];
-  obj8 = { user: emoji.user, guildId, size: null };
-  obj8[2] = guildId(onSelectRolesForEmoji[15]).AvatarSizes.XSMALL;
+  obj8 = { user: emoji.user, guildId, size: tmp5(tmp6[15]).AvatarSizes.XSMALL };
   items5[1] = callback(guildId(onSelectRolesForEmoji[15]).Avatar, obj8);
   tmp12Result = null;
   if (!flag) {

@@ -1,13 +1,13 @@
 // discord_app/modules/collectibles/hooks/useDefaultVariantIndex.tsx
-import map from "map";
+import closure_2 from "map" /* 5324 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
 
 const require = arg1;
-const result = require("getProductOrbPrice").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useDefaultVariantIndex.tsx");
 
 export const useDefaultVariantIndex = function useDefaultVariantIndex(product) {
-  const items = [map];
+  const items = [closure_2];
   _require = _initialize.useStateFromStores(items, () => purchases.purchases);
   let num = 0;
   if (null != product) {

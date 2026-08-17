@@ -1,15 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx
-import "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
-import { ApplicationTypes } from "ApplicationTypes";
-import { jsx } from "jsxProd";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Placeholder } from "../components/Placeholder.tsx";
+import noopAll from "noop" /* 19 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import PlaceholderDefault from "Placeholder" /* 16901 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   guild = guild.guild;
   let obj = useNavigation;
@@ -37,16 +35,17 @@ function GuildSettingsRoleSubscriptionsEmptyContent(guild) {
   }
   return tmp7;
 }
+noopAll;
 ({ GuildFeatures: c4, GuildSettingsSections: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/GuildSettingsRoleSubscriptionsEmpty.tsx");
 
 export default function GuildSettingsRoleSubscriptionsEmpty(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_3.getGuild(guildId));
+  const items = [closure_3];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_3.getGuild(guildId));
   if (null == stateFromStores) {
-    let tmp5 = jsx(Placeholder, {});
+    let tmp5 = jsx(PlaceholderDefault, {});
   } else {
     obj = { guild: null };
     obj[0] = stateFromStores;

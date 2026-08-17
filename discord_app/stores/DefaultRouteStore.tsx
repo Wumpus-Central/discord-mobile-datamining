@@ -1,10 +1,14 @@
 // discord_app/stores/DefaultRouteStore.tsx
-import { Routes } from "ME";
-import { PersistedStore } from "initialize";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage3 from "Storage" /* 595 */;
+import ME2 from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
+const Routes = ME2.Routes;
 let obj = { lastViewedPath: null, lastViewedNonVoicePath: null };
 const LAST_VIEWED_PATH = "LAST_VIEWED_PATH";
+const PersistedStore = initializeDefault.PersistedStore;
 class DefaultRouteStore extends PersistedStore {
 }
 const prototype = DefaultRouteStore.prototype;
@@ -16,6 +20,7 @@ prototype["initialize"] = function initialize() {
   if (tmp == null) {
     tmp = obj;
   }
+  closure_4 = tmp;
 };
 Object.defineProperty(prototype, "defaultRoute", {
   get: function defaultRoute() {
@@ -50,9 +55,9 @@ DefaultRouteStore.displayName = "DefaultRouteStore";
 DefaultRouteStore.persistKey = "DefaultRouteStore";
 const items = [
   () => {
-    const Storage = Storage.Storage;
+    const Storage = Storage3.Storage;
     const lastViewedPath = Storage.get(LAST_VIEWED_PATH, null);
-    const Storage2 = Storage.Storage;
+    const Storage2 = Storage3.Storage;
     Storage2.remove(LAST_VIEWED_PATH);
     return { lastViewedPath };
   }
@@ -68,10 +73,10 @@ obj = {
     return true;
   },
   LOGOUT: function handleLogout() {
-    let closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
+    closure_4 = { lastViewedPath: null, lastViewedNonVoicePath: null };
   }
 };
-const defaultRouteStore = new DefaultRouteStore(require("dispatcher"), obj);
-const result = require("Storage").fileFinishedImporting("stores/DefaultRouteStore.tsx");
+const defaultRouteStore = new DefaultRouteStore(dispatcherDefault, obj);
+const result = set.fileFinishedImporting("stores/DefaultRouteStore.tsx");
 
 export default defaultRouteStore;

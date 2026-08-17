@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/FavoritesGuildExperiment.tsx
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null, 2: { enabled: true } };
 obj[2] = { enabled: true };
@@ -8,7 +8,7 @@ let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-01-favorites-s
 obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-favorites-server", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
+const result = set.fileFinishedImporting("modules/favorites/FavoritesGuildExperiment.tsx");
 
 export const useFavoritesGuildConfig = function useFavoritesGuildConfig(location) {
   const _location = location.location;

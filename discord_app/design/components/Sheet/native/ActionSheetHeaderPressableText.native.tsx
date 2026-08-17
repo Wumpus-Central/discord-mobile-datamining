@@ -1,19 +1,19 @@
 // discord_app/design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
-import { Text } from "../../Text/native/Text.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const jsx = jsxProd.jsx;
 let closure_4 = createCacheKey.createStyles(() => ({ container: { marginTop: 3 } }));
-const result = require("useIsMobileVisualRefreshExperimentEnabled").fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
+const result = set.fileFinishedImporting("design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx");
 
 export const ActionSheetHeaderPressableText = function ActionSheetHeaderPressableText(onPress) {
-  let accessibilityLabel;
-  let label;
   ({ label, accessibilityLabel } = onPress);
   let str = "text-md/semibold";
-  if (useIsMobileVisualRefreshExperimentEnabled("ActionSheetHeaderPressableText")) {
+  if (useIsMobileVisualRefreshExperimentEnabledDefault("ActionSheetHeaderPressableText")) {
     str = "text-md/medium";
   }
   const obj = { style: callback().container, accessibilityRole: "button", onPress: onPress.onPress, accessibilityLabel: null, children: null };

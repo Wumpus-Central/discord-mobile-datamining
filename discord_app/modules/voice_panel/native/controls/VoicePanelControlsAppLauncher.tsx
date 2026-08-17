@@ -1,32 +1,24 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx
-import importAllResult from "set";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import VoicePanelControlsModes from "VoicePanelControlsModes";
-import { ComponentActions } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
+import { ComponentActions } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let CONTROLS_DRAWER_HEADER_SIZE;
-let c5;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
 ({ VoicePanelControlsModes: c5, CONTROLS_DRAWER_HEADER_SIZE } = VoicePanelControlsModes);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { width: "100%", paddingTop: CONTROLS_DRAWER_HEADER_SIZE } });
 let closure_11 = { code: "function VoicePanelControlsAppLauncherTsx1(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().active;}" };
 let closure_12 = { code: "function VoicePanelControlsAppLauncherTsx2(){const{gestureSpecs}=this.__closure;return gestureSpecs.get().isDrawer;}" };
 let closure_13 = { code: "function VoicePanelControlsAppLauncherTsx3(){const{isGestureActive,isGestureDrawerMode,windowDimensions,safeArea}=this.__closure;const height=isGestureActive.get()||!isGestureDrawerMode.get()?windowDimensions.height-safeArea.top:'100%';return{height:height};}" };
 const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(gestureSpecs) {
-  let c2;
-  let safeArea;
-  let windowDimensions;
   gestureSpecs = gestureSpecs.gestureSpecs;
   let setControlsMode;
-  let dependencyMap;
-  let importAllResult;
+  dependencyMap = undefined;
+  importAllResult = undefined;
   let rect;
   let derivedValue;
   let derivedValue1;
@@ -38,7 +30,7 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   const tmp4 = setControlsMode(8995)(windowDimensions);
   importAllResult = tmp4;
   rect = setControlsMode(8995)(safeArea);
-  let obj1 = gestureSpecs(589);
+  obj1 = gestureSpecs(589);
   const items = [rect];
   const stateFromStores = obj1.useStateFromStores(items, () => rect.getChannel(c2));
   setControlsMode(38)(null != stateFromStores, "channel should not be null");
@@ -79,12 +71,12 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   const obj8 = gestureSpecs(4115);
   class L {
     constructor() {
-      if (c5.get()) {
-        tmp2 = windowDimensions;
-        tmp3 = safeArea;
-        height = windowDimensions.height - safeArea.top;
+      if (closure_5.get()) {
+        tmp2 = closure_3;
+        tmp3 = closure_4;
+        height = closure_3.height - closure_4.top;
       } else {
-        tmp = c6;
+        tmp = closure_6;
         height = "100%";
       }
       return { height };
@@ -107,6 +99,6 @@ const memoResult = importAllResult.memo(function VoicePanelControlsAppLauncher(g
   obj[0] = callback2(setControlsMode(4115).View, obj);
   return callback(closure_9, obj);
 });
-const result = require("VoicePanelControlsModes").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsAppLauncher.tsx");
 
 export default memoResult;

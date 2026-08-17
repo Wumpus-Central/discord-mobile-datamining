@@ -1,18 +1,15 @@
 // discord_app/modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import isValidFormResponse from "isValidFormResponse" /* 6859 */;
+import closure_2 from "trackCommunicationDisabled" /* 1990 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { isValidFormResponse } from "../MemberVerificationUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function shouldShowMembershipVerificationGate(guildId, items) {
-  let obj;
-  let obj2;
-  let obj3;
   let tmp = items;
   if (items === undefined) {
-    items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
+    items = [closure_3, closure_4, closure_2];
     tmp = items;
   }
   [obj, obj2, obj3] = tmp;
@@ -40,18 +37,18 @@ function shouldShowMembershipVerificationGate(guildId, items) {
     return flag;
   }
 }
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/hooks/useShowMemberVerificationGate.tsx");
 
 export { shouldShowMembershipVerificationGate };
 export const useShowMemberVerificationGate = function useShowMemberVerificationGate(guild_id) {
   const _require = guild_id;
-  let items = [createGuildRecordFromRust, mergeGuildAvatar, trackCommunicationDisabled];
+  let items = [closure_3, closure_4, closure_2];
   const items1 = [guild_id];
   return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      const items = [outer1_3, outer1_4, outer1_2];
-      tmp2 = outer1_5(tmp, items);
+      const items = [closure_1_3, closure_1_4, closure_1_2];
+      tmp2 = closure_1_5(tmp, items);
     }
     return tmp2;
   }, items1);

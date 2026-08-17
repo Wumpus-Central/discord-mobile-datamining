@@ -1,24 +1,22 @@
 // discord_app/modules/saved_messages/SavedMessageUtils.tsx
-import getSystemLocale from "getSystemLocale";
-import noop from "noop";
-import { UnknownChannelRecord } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import ME from "ME";
-import { t } from "../../../_runtime/03975_t.js";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { UnknownChannelRecord } from "createChannelRecord" /* 1395 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _savedMessageJumpToMessage() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (constants === 2) {
         constants = 3;
@@ -27,7 +25,7 @@ function _savedMessageJumpToMessage() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -46,8 +44,8 @@ function _savedMessageJumpToMessage() {
               obj[0] = arg1;
               return obj;
             } else {
-              let getSystemLocale = tmp3;
-              let closure_2 = tmp5;
+              closure_3 = tmp3;
+              closure_2 = tmp5;
               closure_2 = undefined;
               let type;
               if (lib != null) {
@@ -55,11 +53,11 @@ function _savedMessageJumpToMessage() {
               }
               if (type === constants.UNKNOWN) {
                 if (null == tmp43.saveData.guildId) {
-                  let c5 = 1;
+                  c5 = 1;
                   c6 = 2;
                   constants = 1;
-                  let obj1 = { value: null, done: false };
-                  obj1[0] = lib(outer1_2[8]).fetchChannel(tmp43.saveData.channelId);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = lib(closure_1_2[8]).fetchChannel(tmp43.saveData.channelId);
                   return obj1;
                 }
               }
@@ -116,7 +114,7 @@ function _savedMessageJumpToMessage() {
           constants = 3;
           return { value: "HermesInternal", done: "HermesInternal" };
         } catch (tmp30) {
-          let noop = tmp30;
+          closure_4 = tmp30;
           if (tmp4 === c5) {
             constants = tmp2;
             throw tmp30;
@@ -127,7 +125,7 @@ function _savedMessageJumpToMessage() {
       }
     })();
   });
-  const _savedMessageJumpToMessage = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -136,15 +134,12 @@ function _savedMessageJumpToMessage() {
   }
   return applyArgumentsResult;
 }
-({ ChannelTypes: error, Routes: metroImportAll } = ME);
+({ ChannelTypes: error, Routes: closure_8 } = ME);
 let obj = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };
-const result = require("createChannelRecord").fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessageUtils.tsx");
 
 export const DueInStringTypes = obj;
 export const useDueInString = function useDueInString(arg0) {
-  let dueAt;
-  let now;
-  let type;
   ({ dueAt, now, type } = arg0);
   if (null == dueAt) {
     return { string: "", isOverdue: false };
@@ -168,9 +163,9 @@ export const useDueInString = function useDueInString(arg0) {
     const intl = tmp(1236).intl;
     obj = { duration: null };
     const time = dueAt.getTime();
-    const obj3 = t;
+    const obj3 = tDefault;
     tmp8 = obj;
-    obj[0] = t.duration(time - now.getTime(), "millisecond").humanize();
+    obj[0] = tDefault.duration(time - now.getTime(), "millisecond").humanize();
     obj[0] = intl.formatToPlainString(H4gnX9, obj);
     obj[1] = now > dueAt;
     return obj;
@@ -178,28 +173,28 @@ export const useDueInString = function useDueInString(arg0) {
 };
 export const useSavedMessageChannel = function useSavedMessageChannel(savedMessage) {
   const _require = savedMessage;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_6.getChannel(savedMessage.saveData.channelId));
+  const items = [closure_6];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_6.getChannel(savedMessage.saveData.channelId));
   const items1 = [stateFromStores, savedMessage];
   return React.useMemo(() => {
     let tmp = stateFromStores;
     if (null == stateFromStores) {
       let tmp9;
       if (null != savedMessage.message) {
-        const obj = { id: null, guild_id: null, type: null, name: null };
+        obj = { id: null, guild_id: null, type: null, name: null };
         obj[0] = tmp10.saveData.channelId;
         obj[1] = tmp10.saveData.guildId;
-        obj[2] = outer1_7.UNKNOWN;
-        const intl = savedMessage(outer1_2[5]).intl;
-        obj[3] = intl.string(savedMessage(outer1_2[5]).t.J90oLW);
-        tmp9 = new outer1_5(obj);
+        obj[2] = closure_1_7.UNKNOWN;
+        const intl = savedMessage(closure_1_2[5]).intl;
+        obj[3] = intl.string(savedMessage(closure_1_2[5]).t.J90oLW);
+        tmp9 = new closure_1_5(obj);
       }
       tmp = tmp9;
     }
     return tmp;
   }, items1);
 };
-export const savedMessageJumpToMessage = function savedMessageJumpToMessage(outer1_0, c1) {
+export const savedMessageJumpToMessage = function savedMessageJumpToMessage(closure_1_0, c1) {
   const self = this;
   const apply = _savedMessageJumpToMessage.apply;
   if (typeof apply === "unknown") {

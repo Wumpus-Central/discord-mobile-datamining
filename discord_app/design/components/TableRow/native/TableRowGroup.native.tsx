@@ -1,21 +1,20 @@
 // discord_app/design/components/TableRow/native/TableRowGroup.native.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
-import { context } from "TableRowGroupContext.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import map from "map" /* 4097 */;
+import Text from "Text" /* 4734 */;
+import context from "context" /* 6290 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 class TableRowGroupTitle {
   constructor(arg0) {
     ({ title, style, lineClamp } = global);
     tmp = require("useIsMobileVisualRefreshExperimentEnabled")("TableRowGroup");
-    tmp2 = jsxs();
+    tmp2 = closure_8();
     tmp3 = jsx;
     str = "text-sm/semibold";
     if (tmp) {
@@ -38,23 +37,18 @@ class TableRowGroupTitle {
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { flexShrink: 0 }, content: null, title: null, description: null, hasTrailingText: null, helperText: null };
-createCacheKey = { borderRadius: require("Themes").modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
+createCacheKey = { borderRadius: ThemesDefault.modules.mobile.TABLE_ROW_BORDER_RADIUS, overflow: "hidden", flexGrow: 1, flexShrink: 0, padding: 0 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginBottom: 8 };
 createCacheKey[3] = { marginBottom: 8 };
-createCacheKey[4] = { borderBottomLeftRadius: require("Themes").radii.none, borderBottomRightRadius: require("Themes").radii.none };
+createCacheKey[4] = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
 createCacheKey[5] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderBottomLeftRadius: require("Themes").radii.none, borderBottomRightRadius: require("Themes").radii.none };
-const result = require("jsxProd").fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderBottomLeftRadius: ThemesDefault.radii.none, borderBottomRightRadius: ThemesDefault.radii.none };
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowGroup.native.tsx");
 
 export { TableRowGroupTitle };
 export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
-  let description;
-  let hasTrailingText;
-  let helperText;
-  let require;
-  let title;
   ({ title, description, helperText, hasIcons: require, hasTrailingText } = accessibilityLabel);
   if (hasTrailingText === undefined) {
     hasTrailingText = false;
@@ -63,12 +57,12 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   if (str === undefined) {
     str = "none";
   }
-  let importDefault;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  const tmp = callback();
   let obj = map;
   importDefault = false;
   const Children = React.Children;
-  const token = obj.useToken(Themes.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
+  const token = obj.useToken(ThemesDefault.modules.mobile.TABLE_ROW_GROUP_HELPER_TEXT_STYLE);
   const mapped = Children.map(accessibilityLabel.children, (arg0) => {
     if (null == arg0) {
       return null;
@@ -76,9 +70,9 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
       let obj = { children: null };
       obj = { adjustSpacingForIcon: null };
       obj[0] = closure_0;
-      const items = [outer1_5(outer1_0(outer1_2[8]).TableRowDivider, obj), arg0];
+      const items = [closure_1_5(closure_1_0(closure_1_2[8]).TableRowDivider, obj), arg0];
       obj[0] = items;
-      let tmp2 = outer1_7(outer1_6, obj);
+      let tmp2 = closure_1_7(closure_1_6, obj);
     } else {
       c1 = true;
       tmp2 = arg0;
@@ -94,7 +88,7 @@ export const TableRowGroup = function TableRowGroup(accessibilityLabel) {
   let items = [tmp6Result, , , ];
   tmp6Result = null != description;
   if (tmp6Result) {
-    const obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
+    obj1 = { variant: "text-sm/normal", color: "text-subtle", style: null, children: null };
     obj1[2] = tmp.description;
     obj1[3] = description;
     tmp6Result = tmp6(tmp2(4734).Text, obj1);

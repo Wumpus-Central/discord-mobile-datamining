@@ -1,48 +1,46 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import useGuildsBarBottomRightBadge from "useGuildsBarBottomRightBadge";
-import computeAlertSettings from "computeAlertSettings";
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "computeAlertSettings" /* 10014 */;
+import closure_7 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let map1;
 const require = arg1;
 let closure_3 = ["guildActivityIndicatorSource"];
 ({ GuildFeatures: closure_12, Permissions: map1 } = ME);
 let closure_15 = createCacheKey.createStyles({ topRightBadge: { position: "absolute", right: 9, backgroundColor: "transparent", borderColor: "transparent" } });
-const result = require("computeAlertSettings").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarBadges.tsx");
 
 export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImportance) {
   const _require = arg0;
   const tmp = callback();
-  const importDefault = tmp;
+  importDefault = tmp;
   let obj = _require(stateFromStores[11]);
-  let items = [createGuildRecordFromRust];
+  let items = [closure_9];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const guild = outer1_9.getGuild(closure_0);
+    const guild = closure_1_9.getGuild(closure_0);
     let flag;
     if (guild != null) {
       const features = guild.features;
-      flag = features.has(outer1_12.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+      flag = features.has(closure_1_12.MEMBER_VERIFICATION_MANUAL_APPROVAL);
     }
     if (flag == null) {
       flag = false;
     }
     return flag;
   });
-  const items1 = [cutoutTopRight, mergeGuildAvatar, cutout];
+  const items1 = [cutoutTopRight, closure_11, cutout];
   const items2 = [arg0, stateFromStores];
   const stateFromStores1 = _require(stateFromStores[11]).useStateFromStores(items1, () => {
     if (stateFromStores) {
       const request = cutoutTopRight.getRequest(callback);
-      const currentUser = outer1_11.getCurrentUser();
+      const currentUser = closure_1_11.getCurrentUser();
       if (null != currentUser) {
         if (null != request) {
           if (request.userId === currentUser.id) {
@@ -60,19 +58,19 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
     }
   }, items2);
   let obj2 = _require(stateFromStores[11]);
-  const items3 = [getUncachedChannelPermissions, createGuildRecordFromRust, memo];
+  const items3 = [closure_10, closure_9, memo];
   const items4 = [arg0];
   const stateFromStores2 = _require(stateFromStores[11]).useStateFromStores(items3, () => {
-    const guild = outer1_9.getGuild(closure_0);
+    const guild = closure_1_9.getGuild(closure_0);
     if (null != guild) {
-      if (outer1_10.can(outer1_13.MANAGE_GUILD, guild)) {
+      if (closure_1_10.can(closure_1_13.MANAGE_GUILD, guild)) {
         const guildIncident = memo.getGuildIncident(closure_0);
         let hasItem;
         if (guild != null) {
           const features = guild.features;
           const has = features.has;
           if (has != null) {
-            hasItem = has(outer1_12.INVITES_DISABLED);
+            hasItem = has(closure_1_12.INVITES_DISABLED);
           }
         }
         if (!hasItem) {
@@ -96,14 +94,14 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
     return false;
   }, items4);
   const tmp5 = importDefault(stateFromStores[13])(arg0);
-  let closure_3 = tmp5;
+  closure_3 = tmp5;
   const obj3 = _require(stateFromStores[11]);
   const token = _require(stateFromStores[14]).useToken(importDefault(stateFromStores[15]).modules.mobile.GUILD_BAR_ITEM_SIZE);
   const obj4 = _require(stateFromStores[14]);
   const token1 = _require(stateFromStores[14]).useToken(importDefault(stateFromStores[15]).modules.mobile.GUILD_BAR_ITEM_MARGIN);
   const items5 = [tmp.topRightBadge, token1];
   memo = token1.useMemo(() => {
-    const items = [tmp.topRightBadge, { top: token1 - callback(stateFromStores[16]).BADGE_PADDING }];
+    const items = [lib.topRightBadge, { top: token1 - callback(stateFromStores[16]).BADGE_PADDING }];
     return items;
   }, items5);
   const items6 = [tmp5, memo, token];
@@ -132,14 +130,14 @@ export default function useGuildsBarBadges(arg0, mentionCount, isMentionLowImpor
       obj[0] = memo;
       obj[1] = guildActivityIndicatorSource;
       const merged = Object.assign(tmp7);
-      tmp8 = outer1_14(tmp(tmp2[17]).GuildsBarActivityIndicatorBase, obj);
+      tmp8 = closure_1_14(callback(tmp2[17]).GuildsBarActivityIndicatorBase, obj);
     }
-    const obj1 = { badgeTopRight: tmp8, cutoutTopRight: null };
+    obj1 = { badgeTopRight: tmp8, cutoutTopRight: null };
     let tmp14;
     if (null != guildActivityIndicatorSource) {
       const obj2 = { position: "top-right", containerSize: null };
       obj2[1] = token;
-      tmp14 = tmp(tmp2[18])(obj2);
+      tmp14 = lib(tmp2[18])(obj2);
     }
     obj1[1] = tmp14;
     return obj1;

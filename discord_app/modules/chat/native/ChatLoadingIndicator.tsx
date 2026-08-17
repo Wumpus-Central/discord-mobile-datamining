@@ -1,25 +1,23 @@
 // discord_app/modules/chat/native/ChatLoadingIndicator.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_4115";
-import { View } from "Text";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import reinjectEphemerals from "reinjectEphemerals";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getState from "getState";
-import { AppStates } from "ME";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import Text from "Text" /* 4734 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "_handleConnectionOpen" /* 4495 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "getState" /* 7383 */;
+import { AppStates } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_15;
-let map1;
-const require = arg1;
+require = arg1;
 function openLoadingIndicatorDebugBody() {
   currentUser = currentUser.getCurrentUser();
   let isStaffResult;
@@ -37,32 +35,29 @@ function openLoadingIndicatorDebugBody() {
     let obj = { importer: null, isDismissable: true };
     obj[0] = function importer() {
       return callback(paths[15])(paths[14], paths.paths).then((arg0) => {
-        let closure_0 = arg0.default;
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.title = "Chat Loading indicator";
-          obj.children = outer1_13(outer1_18, {});
-          return outer1_13(closure_0, obj);
+          obj.children = closure_1_13(closure_1_18, {});
+          return closure_1_13(closure_0, obj);
         };
       });
     };
-    AlertActionCreators.openLazy(obj);
-    const obj2 = AlertActionCreators;
+    _modDef4656.openLazy(obj);
+    const obj2 = _modDef4656;
   }
 }
 let c4 = importAllResult;
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4 }, pulse: null };
-obj = { height: 8, width: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+obj = { height: 8, width: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[1] = obj;
 let closure_16 = createCacheKey.createStyles(obj);
 let closure_18 = importAllResult.memo(() => {
-  let connected;
-  let messagesCached;
-  let messagesReady;
   let obj = initialize;
-  const items = [reinjectEphemerals, _handleConnectionOpen, handleConnectionOpen];
+  const items = [closure_8, closure_7, closure_9];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     channelId = channelId.getChannelId();
     const isConnectedResult = connected.isConnected();
@@ -107,7 +102,7 @@ let closure_18 = importAllResult.memo(() => {
   if (messagesReady) {
     str6 = "text-feedback-positive";
   }
-  const obj1 = { variant: "text-md/normal", color: str6, children: null };
+  obj1 = { variant: "text-md/normal", color: str6, children: null };
   let str7 = str3;
   if (messagesReady) {
     str7 = "true";
@@ -169,21 +164,21 @@ let closure_18 = importAllResult.memo(() => {
   return closure_14(Text.Text, obj6);
 });
 let closure_19 = { code: "function ChatLoadingIndicatorTsx1(){const{useReducedMotion,withRepeat,withSequence,withTiming,Easing}=this.__closure;if(useReducedMotion){return{transform:[]};}return{transform:[{scale:withRepeat(withSequence(withTiming(1,{duration:0}),withTiming(0.5,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)}),withTiming(1,{duration:1500,easing:Easing.bezier(0.4,0,0.2,1)})),-1)}]};}" };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/ChatLoadingIndicator.tsx");
 
 export const useShouldChannelShowLoadingIndicator = function useShouldChannelShowLoadingIndicator(channelId) {
   const _require = channelId;
   const ChatLoadingIndicatorExperiment = _require(stateFromStores[18]).ChatLoadingIndicatorExperiment;
   const enabled = ChatLoadingIndicatorExperiment.useConfig({ location: "ChatLoadingIndicatorGuard" }).enabled;
-  const items = [reinjectEphemerals, _handleConnectionOpen, getState];
+  const items = [closure_8, closure_7, closure_11];
   stateFromStores = _require(stateFromStores[16]).useStateFromStores(items, () => {
     if (enabled) {
       if (null == closure_0) {
         return false;
-      } else if (outer1_11.getState() !== outer1_12.ACTIVE) {
+      } else if (closure_1_11.getState() !== closure_1_12.ACTIVE) {
         return false;
       } else {
-        const messages = outer1_8.getMessages(tmp);
+        const messages = closure_1_8.getMessages(tmp);
         let cached = messages.cached;
         if (!cached) {
           cached = !messages.ready;
@@ -218,10 +213,10 @@ export const useShouldChannelShowLoadingIndicator = function useShouldChannelSho
 export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndicator() {
   const tmp = callback4();
   let obj = stateFromStores(589);
-  let items = [maybeApplyNoTextColorForLightCustomTheme];
+  let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = stateFromStores(589);
-  const items1 = [mergeGuildAvatar];
+  obj1 = stateFromStores(589);
+  const items1 = [closure_10];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let isStaffResult;
@@ -245,23 +240,23 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
       let tmp7 = obj;
     } else {
       obj = { scale: null };
-      const obj3 = stateFromStores(outer1_2[19]);
-      const obj4 = stateFromStores(outer1_2[19]);
-      const obj5 = stateFromStores(outer1_2[20]);
-      const withTimingResult = stateFromStores(outer1_2[20]).withTiming(1, { duration: 0 });
+      const obj3 = stateFromStores(closure_1_2[19]);
+      const obj4 = stateFromStores(closure_1_2[19]);
+      const obj5 = stateFromStores(closure_1_2[20]);
+      const withTimingResult = stateFromStores(closure_1_2[20]).withTiming(1, { duration: 0 });
       obj = { duration: 1500, easing: null };
-      const Easing = stateFromStores(outer1_2[19]).Easing;
+      const Easing = stateFromStores(closure_1_2[19]).Easing;
       obj[1] = Easing.bezier(0.4, 0, 0.2, 1);
-      const obj6 = stateFromStores(outer1_2[20]);
-      const withTimingResult1 = stateFromStores(outer1_2[20]).withTiming(0.5, obj);
-      const obj1 = { duration: 1500, easing: null };
-      const Easing2 = stateFromStores(outer1_2[19]).Easing;
+      const obj6 = stateFromStores(closure_1_2[20]);
+      const withTimingResult1 = stateFromStores(closure_1_2[20]).withTiming(0.5, obj);
+      obj1 = { duration: 1500, easing: null };
+      const Easing2 = stateFromStores(closure_1_2[19]).Easing;
       obj1[1] = Easing2.bezier(0.4, 0, 0.2, 1);
-      obj[0] = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(outer1_2[20]).withTiming(1, obj1)), -1);
+      obj[0] = obj3.withRepeat(obj4.withSequence(withTimingResult, withTimingResult1, stateFromStores(closure_1_2[20]).withTiming(1, obj1)), -1);
       const items = [obj];
       obj[0] = items;
       tmp7 = obj;
-      const obj8 = stateFromStores(outer1_2[20]);
+      const obj8 = stateFromStores(closure_1_2[20]);
     }
     return tmp7;
   };
@@ -272,7 +267,7 @@ export const ChannelHeaderLoadingIndicator = function ChannelHeaderLoadingIndica
   obj = { style: tmp.container, children: null };
   const animatedStyle = obj2.useAnimatedStyle(fn);
   const items2 = [tmp.pulse, animatedStyle];
-  const items3 = [callback2(ReanimatedRexport.View, { style: items2 }), ];
+  const items3 = [callback2(_modDef4115.View, { style: items2 }), ];
   obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = stateFromStores(1236).intl;
   obj1[2] = intl.string(stateFromStores(1236).t.JwIJMV);

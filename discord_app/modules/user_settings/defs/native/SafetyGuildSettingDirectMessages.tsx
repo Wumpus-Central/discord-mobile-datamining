@@ -1,20 +1,20 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import createToggle from "createToggle";
-import { set } from "../../../../actions/AlertActionCreators.tsx";
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import setDefault from "set" /* 4827 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15018 */;
+import useAllowFriendsFromMutualGuildsOnly from "useAllowFriendsFromMutualGuildsOnly" /* 15019 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
+import createToggle from "createToggle" /* 10669 */;
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { getSanitizedRestrictedGuilds } from "../../../../utils/UserSettingsUtils.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import { useAllowFriendsFromMutualGuildsOnly } from "../../content_and_social/useAllowFriendsFromMutualGuildsOnly.tsx";
-import { useDefaultGuildsRestricted } from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
 import { explicitContentFromProto } from "../../UserSettings.tsx";
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ getSelectedGuildId: c4, useUserSafetySettingsSelectedGuildStore: c5 } = GUILD_SELECT_ALL_SERVERS_OPTION_ID);
 createToggle = {
   useTitle() {
@@ -78,24 +78,24 @@ createToggle = {
       obj[2] = intl3.string(_getSystemLocale.t.p89ACt);
       const intl4 = _getSystemLocale.intl;
       obj[3] = intl4.string(_getSystemLocale.t.gm1Vej);
-      obj[4] = componentDidMount.Colors.RED;
+      obj[4] = componentDidMountDefault.Colors.RED;
       obj[5] = function onConfirm() {
-        const DefaultGuildsRestrictedV2 = callback(outer1_2[6]).DefaultGuildsRestrictedV2;
+        const DefaultGuildsRestrictedV2 = callback(closure_1_2[6]).DefaultGuildsRestrictedV2;
         DefaultGuildsRestrictedV2.updateSetting(callback);
-        const RestrictedGuildIds = callback(outer1_2[6]).RestrictedGuildIds;
+        const RestrictedGuildIds = callback(closure_1_2[6]).RestrictedGuildIds;
         if (callback) {
-          let guildIds = outer1_3.getGuildIds();
+          let guildIds = closure_1_3.getGuildIds();
         } else {
           guildIds = [];
         }
         RestrictedGuildIds.updateSetting(guildIds);
       };
       obj[6] = function onCancel() {
-        const DefaultGuildsRestrictedV2 = callback(outer1_2[6]).DefaultGuildsRestrictedV2;
+        const DefaultGuildsRestrictedV2 = callback(closure_1_2[6]).DefaultGuildsRestrictedV2;
         DefaultGuildsRestrictedV2.updateSetting(callback);
       };
-      set.show(obj);
-      const obj3 = set;
+      setDefault.show(obj);
+      const obj3 = setDefault;
     } else {
       obj = _getSanitizedRestrictedGuilds;
       const sanitizedRestrictedGuilds = obj.getSanitizedRestrictedGuilds();
@@ -119,6 +119,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingDirectMessages.tsx");
 
 export default createToggle;

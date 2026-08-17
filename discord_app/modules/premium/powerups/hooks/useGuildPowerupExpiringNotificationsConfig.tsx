@@ -1,12 +1,14 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useGameServerGetExpiringEntitlements } from "../../../game_server/hooks/useGameServerGetExpiringEntitlements.tsx";
-import { useGetExpiringGuildPowerups } from "useGetExpiringGuildPowerups.tsx";
-const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useGetExpiringGuildPowerupsDefault from "useGetExpiringGuildPowerups" /* 11727 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 11728 */;
+
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupExpiringNotificationsConfig.tsx");
 
 export default function useGuildPowerupExpiringNotificationsConfig(arg0) {
-  let arr = useGetExpiringGuildPowerups(arg0);
-  const arr2 = useGameServerGetExpiringEntitlements(arg0);
+  let arr = useGetExpiringGuildPowerupsDefault(arg0);
+  const arr2 = useGameServerGetExpiringEntitlementsDefault(arg0);
   if (arr.length > 0 || arr2.length > 0) {
     let stringResult;
     if (arr2.length > 0) {

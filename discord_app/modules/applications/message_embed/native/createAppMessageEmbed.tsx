@@ -1,36 +1,32 @@
 // discord_app/modules/applications/message_embed/native/createAppMessageEmbed.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleFetchEmbeddedActivityShelfSuccess from "handleFetchEmbeddedActivityShelfSuccess";
-import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess";
-import addApplication from "addApplication";
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { MAIN_SURFACE } from "FrameLayoutModes";
-import { CodedLinkExtendedType } from "CodedLinkExtendedType";
-import { _copy } from "../../../../utils/ClipboardUtils.native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../../utils/GlobalUtils.tsx";
-import { installApplication } from "../../../../utils/native/ApplicationUtils.tsx";
-import { getBestActiveInput } from "../../../../utils/native/ChatInputUtils.tsx";
-import { isDiscordProxiedAssetUrl } from "../../../../utils/URLUtils.tsx";
-import { _launchActivityInBotDM } from "../../../app_launcher/utils/AppLauncherPlayUtils.tsx";
-import { getShelfBadgeTypeIfActive } from "../../../app_launcher/utils/AppLauncherUtils.tsx";
-import { ApplicationCommandSectionType } from "../../../application_commands/ApplicationCommandTypes.tsx";
-import { ContentClassificationVisibility } from "../../../content_classification/ContentClassificationVisibility.tsx";
-import { getEmbedThemeColors } from "../../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
-import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
-import { fetchApplication } from "../../ApplicationActionCreators.tsx";
-import { _joinOrStartActivityInChannel } from "utils/joinOrStartActivityInChannel.tsx";
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
+import getBestActiveInput from "getBestActiveInput" /* 4237 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
+import fetchApplication from "fetchApplication" /* 7140 */;
+import _copy from "_copy" /* 7167 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8447 */;
+import installApplication from "installApplication" /* 8773 */;
+import _launchActivityInBotDM from "_launchActivityInBotDM" /* 10710 */;
+import ContentClassificationVisibility from "ContentClassificationVisibility" /* 11127 */;
+import _joinOrStartActivityInChannel from "_joinOrStartActivityInChannel" /* 11132 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
+import { FetchState } from "handleFetchEmbeddedActivityShelfSuccess" /* 7248 */;
+import closure_7 from "addApplication" /* 4478 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import { MAIN_SURFACE } from "FrameLayoutModes" /* 8709 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
 
-const require = arg1;
+require = arg1;
 let closure_11 = ["embedded_cover"];
 let c12 = 512;
-let result = require("handleFetchEmbeddedActivityShelfSuccess").fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
+let result = require("set").fileFinishedImporting("modules/applications/message_embed/native/createAppMessageEmbed.tsx");
 
 export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
-  let appId;
-  let channel;
-  let message;
-  let theme;
   ({ appId, message } = arg0);
   let obj = store;
   ({ channel, theme } = arg0);
@@ -48,10 +44,10 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
       nsfwAllowed = currentUser.nsfwAllowed;
     }
     let messageResult = dependencyMap;
-    let obj1 = ContentClassificationVisibility;
+    obj1 = ContentClassificationVisibility;
     const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.contentClassification, channel, nsfwAllowed);
     if (contentClassificationVisibility !== ContentClassificationVisibility.ContentClassificationVisibility.DISPLAY) {
-      let intl = getEmbedThemeColors(theme).baseColors;
+      let intl = getEmbedThemeColorsDefault(theme).baseColors;
       if (contentClassificationVisibility === tmp3(11127).ContentClassificationVisibility.BLOCK_UNDERAGE) {
         const intl3 = tmp3(1236).intl;
         let stringResult = intl3.string(tmp3(1236).t.LPOzxB);
@@ -90,21 +86,9 @@ export const getAppLinkGateResult = function getAppLinkGateResult(arg0) {
   }
 };
 export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
-  let app;
-  let bot;
-  let bot2;
-  let embedUrl;
-  let icon;
-  let id;
-  let id2;
-  let maxParticipants;
-  let message;
-  let name;
-  let tags;
-  let theme;
   ({ message, app } = arg0);
   ({ theme, embedUrl } = arg0);
-  const baseColors = getEmbedThemeColors(theme).baseColors;
+  const baseColors = getEmbedThemeColorsDefault(theme).baseColors;
   ({ id, tags, maxParticipants, icon } = app);
   ({ name, bot } = app);
   let obj = getShelfBadgeTypeIfActive;
@@ -149,7 +133,7 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
               stringResult = intl4.string(tmp2(1236).t.VJlc0S);
             }
           }
-          const obj1 = { id: "play_in_channel", label: null, disabled: null };
+          obj1 = { id: "play_in_channel", label: null, disabled: null };
           obj1[1] = stringResult;
           obj1[2] = isCurrentlyInInstance;
           items.push(obj1);
@@ -229,7 +213,7 @@ export const createAppMessageEmbed = function createAppMessageEmbed(arg0) {
 };
 export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId) {
   const application = store.getApplication(appId.appId);
-  let obj = isDiscordProxiedAssetUrl;
+  let obj = isDiscordProxiedAssetUrlDefault;
   const toURLSafeResult = obj.toURLSafe(appId.embedUrl);
   let id;
   if (toURLSafeResult != null) {
@@ -273,7 +257,7 @@ export const handleTapAppMessageEmbed = function handleTapAppMessageEmbed(appId)
       const obj15 = _launchActivityInBotDM;
     }
   } else if ("play_frame" === actionId) {
-    let obj1 = { applicationId: null, surface: null };
+    obj1 = { applicationId: null, surface: null };
     obj1[0] = appId.appId;
     obj1[1] = MAIN_SURFACE;
     tmp2(8705).launchFrame(obj1);

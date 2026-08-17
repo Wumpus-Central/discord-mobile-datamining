@@ -1,17 +1,18 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyStore.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GuildMemberSafetyPageStore as closure_8 } from "getSearchIndex";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import { Store } from "initialize";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { hasMemberSupplemental } from "MemberSafetyStoreSupplemental.tsx";
-import { createFetchKeys } from "MemberSafetySupplementalUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import hasMemberSupplemental from "hasMemberSupplemental" /* 5095 */;
+import createFetchKeys from "createFetchKeys" /* 5096 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { GuildMemberSafetyPageStore as closure_8 } from "getSearchIndex" /* 5089 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function getMemberSafetyPageStore(guildId) {
   if (null == dependencyMap[guildId]) {
     const tmp6 = new closure_8(guildId);
@@ -45,11 +46,12 @@ function handleGuildRoleMemberUpdate(guildId) {
 }
 let c10 = false;
 let closure_11 = {};
+const Store = initializeDefault.Store;
 class MemberSafetyStore extends Store {
 }
 const prototype = MemberSafetyStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, trackCommunicationDisabled, createGuildRecordFromRust, mergeGuildAvatar);
+  this.waitFor(closure_4, closure_5, closure_6, closure_7);
 };
 prototype["isInitialized"] = function isInitialized(arg0) {
   if (null == dependencyMap[arg0]) {
@@ -73,8 +75,6 @@ prototype["getMembersCountByGuildId"] = function getMembersCountByGuildId(arg0, 
   return dependencyMap[arg0].countMembersByIndex(searchIndex);
 };
 prototype["getEstimatedMemberSearchCountByGuildId"] = function getEstimatedMemberSearchCountByGuildId(arg0) {
-  let countMembersByIndex;
-  let searchChunkSize;
   if (null == dependencyMap[arg0]) {
     const tmp6 = new closure_8(arg0);
     tmp[arg0] = tmp6;
@@ -164,7 +164,7 @@ prototype["getLastCursorTimestamp"] = function getLastCursorTimestamp(arg0) {
   return dependencyMap[arg0].lastCursorTimestamp;
 };
 MemberSafetyStore.displayName = "MemberSafetyStore";
-const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
+const memberSafetyStore = new MemberSafetyStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     if (c10) {
       c10 = false;
@@ -185,31 +185,30 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
         continue;
       }
     }
-    let c0 = false;
+    c0 = false;
     guilds = guilds.guilds;
     const item = guilds.forEach((id) => {
       id = id.id;
-      if (null == outer1_11[id]) {
-        const tmp6 = new outer1_8(id);
+      if (null == closure_1_11[id]) {
+        const tmp6 = new closure_1_8(id);
         tmp[id] = tmp6;
       }
-      c0 = outer1_11[id].updateServerMembers(id.members) || c0;
+      closure_0 = closure_1_11[id].updateServerMembers(id.members) || closure_0;
     });
     return c0;
   },
   CONNECTION_OPEN_SUPPLEMENTAL: function handleConnectionOpenSupplemental(guilds) {
-    let c0 = false;
+    c0 = false;
     guilds = guilds.guilds;
     let item = guilds.forEach((arg0) => {
-      let activity_instances;
-      let id;
       ({ id, activity_instances } = arg0);
-      let items;
-      if (null == outer1_11[id]) {
-        const tmp6 = new outer1_8(id);
+      closure_0 = undefined;
+      if (null == closure_1_11[id]) {
+        const tmp6 = new closure_1_8(id);
         tmp[id] = tmp6;
       }
-      items = [];
+      const items = [];
+      closure_0 = items;
       if (activity_instances != null) {
         let item = activity_instances.forEach((participants) => {
           participants = participants.participants;
@@ -222,17 +221,15 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
           }
         });
       }
-      items = outer1_11[id].updateServerMembers(items) || items;
+      closure_0 = closure_1_11[id].updateServerMembers(items) || closure_0;
     });
     return c0;
   },
   LOCAL_MESSAGES_LOADED: function handleLocalMessagesLoaded(arg0) {
-    let guildId;
-    let members;
     ({ guildId, members } = arg0);
     if (null != guildId) {
       if (null != guild.getGuild(guildId)) {
-        let c10 = true;
+        c10 = true;
         const obj = getMemberSafetyPageStore(guildId);
         const items = [];
         for (const item10014 of members) {
@@ -249,24 +246,20 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     return false;
   },
   CACHE_LOADED: function handleCacheLoaded(guildMembers) {
-    let c0 = false;
-    let c10 = true;
-    const entries = DISCORD_EPOCH.entries(guildMembers.guildMembers);
+    c0 = false;
+    c10 = true;
+    const entries = DISCORD_EPOCHDefault.entries(guildMembers.guildMembers);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
-      if (null == outer1_11[tmp]) {
-        const tmp8 = new outer1_8(tmp);
+      if (null == closure_1_11[tmp]) {
+        const tmp8 = new closure_1_8(tmp);
         tmp3[tmp] = tmp8;
       }
-      c0 = outer1_11[tmp].updateClientMembers(Object.values(tmp2)) || c0;
+      closure_0 = closure_1_11[tmp].updateClientMembers(Object.values(tmp2)) || closure_0;
     });
     return c0;
   },
   PASSIVE_UPDATE_V2: function handlePassiveUpdateV2(arg0) {
-    let guildId;
-    let members;
     ({ members, guildId } = arg0);
     let updateServerMembersResult = members.length > 0;
     if (updateServerMembersResult) {
@@ -352,8 +345,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
   GUILD_ROLE_MEMBER_REMOVE: handleGuildRoleMemberUpdate,
   GUILD_ROLE_MEMBER_ADD: handleGuildRoleMemberUpdate,
   THREAD_MEMBER_LIST_UPDATE: function handleThreadMemberListUpdate(arg0) {
-    let guildId;
-    let members;
     ({ guildId, members } = arg0);
     if (null != members) {
       if (0 !== members.length) {
@@ -372,8 +363,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     return false;
   },
   THREAD_MEMBERS_UPDATE: function handleThreadMembersUpdate(arg0) {
-    let addedMembers;
-    let guildId;
     ({ guildId, addedMembers } = arg0);
     if (null != addedMembers) {
       if (0 !== addedMembers.length) {
@@ -390,8 +379,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     return false;
   },
   LOAD_ARCHIVED_THREADS_SUCCESS: function handleLoadArchivedThreadsSuccess(arg0) {
-    let guildId;
-    let members;
     ({ guildId, members } = arg0);
     if (null != members) {
       if (0 !== members.length) {
@@ -466,8 +453,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     return dependencyMap[guildId].updateSearchState(guildId.searchState);
   },
   FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: function handleFetchGuildMemberSupplementalSuccess(arg0) {
-    let guildId;
-    let memberSupplementals;
     ({ guildId, memberSupplementals } = arg0);
     const result = hasMemberSupplemental.syncMemberSupplemental(guildId, memberSupplementals);
     if (result) {
@@ -481,8 +466,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     return result;
   },
   MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function handleMemberSafetyGuildMemberSearchSuccess(totalResultsCount) {
-    let guildId;
-    let members;
     ({ guildId, members } = totalResultsCount);
     if (null == dependencyMap[guildId]) {
       const tmp6 = new closure_8(guildId);
@@ -490,11 +473,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     }
     let obj = tmp[guildId];
     const reduced = members.reduce((memberIds, member) => {
-      let inviter_id;
-      let join_source_application_id;
-      let join_source_channel_id;
-      let join_source_type;
-      let source_invite_code;
       const user = member.member.user;
       memberIds = memberIds.memberIds;
       ({ source_invite_code, join_source_type, join_source_application_id, join_source_channel_id, inviter_id } = member);
@@ -504,7 +482,7 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
       return memberIds;
     }, { memberIds: [], memberSupplementals: [] });
     let memberIds = reduced.memberIds;
-    let obj1 = hasMemberSupplemental;
+    obj1 = hasMemberSupplemental;
     let result = obj1.syncMemberSupplemental(guildId, reduced.memberSupplementals);
     let obj2 = createFetchKeys;
     const result1 = obj2.registerFetchedSupplementals(guildId, memberIds);
@@ -576,6 +554,6 @@ const memberSafetyStore = new MemberSafetyStore(require("dispatcher"), {
     return dependencyMap[guildId].updateMembersByMemberIds(guildId.userIds);
   }
 });
-let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyStore.tsx");
 
 export default memberSafetyStore;

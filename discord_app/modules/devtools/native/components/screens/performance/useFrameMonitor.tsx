@@ -1,19 +1,19 @@
 // discord_app/modules/devtools/native/components/screens/performance/useFrameMonitor.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("FRAME_BUDGET_MS").fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/useFrameMonitor.tsx");
 
 export default function useFrameMonitor(stateFromStores) {
-  let closure_0 = stateFromStores;
+  closure_0 = stateFromStores;
   const monitoring = callback(React.useState(false), 2);
-  let closure_1 = monitoring[1];
+  closure_1 = monitoring[1];
   callback = React.useRef(null);
   React = React.useRef(stateFromStores);
   const items = [stateFromStores];
   const effect = React.useEffect(() => {
-    noop.current = closure_0;
+    closure_3.current = closure_0;
   }, items);
   const start = React.useCallback(() => {
     const current = ref.current;

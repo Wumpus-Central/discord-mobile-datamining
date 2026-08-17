@@ -1,10 +1,9 @@
 // discord_app/modules/game_console/activityPlatformToConnectedAccountType.tsx
-import ME from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-let c0;
-let closure_1;
 ({ ActivityGamePlatforms: c0, PlatformTypes: closure_1 } = ME);
-const result = require("set").fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
+const result = set.fileFinishedImporting("modules/game_console/activityPlatformToConnectedAccountType.tsx");
 
 export default function activityPlatformToConnectedAccountType(arg0) {
   if (PS4.PS4 !== arg0) {

@@ -1,23 +1,23 @@
 // discord_app/modules/quests/utils/QuestRewardUtils.tsx
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import set from "QuestRewardTypes";
-import { QuestRewardAssignmentMethods } from "../../../../discord_common/js/shared/shared-constants/QuestRewardAssignmentMethods.tsx";
-import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getQuestOrbMultiplierEligibilityForUser } from "../hooks/QuestOrbMultiplierHooks.tsx";
-import { getDurationStringOfFractionalPremium } from "../lib/FractionalPremiumUtils.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../QuestTypes.tsx";
-import { getContextualEntrypointHeading } from "QuestCopyUtils.tsx";
-import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
+import getQuestOrbMultiplierEligibilityForUser from "getQuestOrbMultiplierEligibilityForUser" /* 10493 */;
+import getDurationStringOfFractionalPremium from "getDurationStringOfFractionalPremium" /* 10495 */;
+import getContextualEntrypointHeading from "getContextualEntrypointHeading" /* 10496 */;
+import QuestRewardAssignmentMethods from "QuestRewardAssignmentMethods" /* 10497 */;
+import closure_2 from "updateCategoriesAndProducts" /* 5301 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function _getDefaultRewardName(rewardsConfig, stateFromStores, arg2) {
   let rewards = rewardsConfig.rewardsConfig.rewards;
-  if (rewards.some((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM)) {
+  if (rewards.some((type) => type.type === callback(7458).QuestRewardTypes.FRACTIONAL_PREMIUM)) {
     return getDurationStringOfFractionalPremium.getFractionalPremiumQuestRewardName(rewardsConfig);
   } else {
     let rewards2 = rewardsConfig.rewardsConfig.rewards;
-    if (rewards2.some((type) => type.type === callback(table[2]).QuestRewardTypes.VIRTUAL_CURRENCY)) {
+    if (rewards2.some((type) => type.type === callback(7458).QuestRewardTypes.VIRTUAL_CURRENCY)) {
       rewards = rewardsConfig.rewardsConfig.rewards;
       const found = rewards.find((type) => type.type === callback(7458).QuestRewardTypes.VIRTUAL_CURRENCY);
       let num = null;
@@ -162,7 +162,7 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
             const _Math = Math;
             const rounded2 = Math.ceil(differenceInDaysResult1 / 7);
             const intl2 = tmp3(1236).intl;
-            const obj1 = { weeks: null };
+            obj1 = { weeks: null };
             obj1[0] = rounded2;
             return intl2.formatToPlainString(tmp3(1236).t.EmoBD2, obj1);
           } else {
@@ -179,11 +179,11 @@ export const getCollectibleQuestRewardDuration = function getCollectibleQuestRew
 };
 export const hasFractionalPremiumQuestReward = function hasFractionalPremiumQuestReward(rewardsConfig) {
   const rewards = rewardsConfig.rewardsConfig.rewards;
-  return rewards.some((type) => type.type === callback(table[2]).QuestRewardTypes.FRACTIONAL_PREMIUM);
+  return rewards.some((type) => type.type === callback(7458).QuestRewardTypes.FRACTIONAL_PREMIUM);
 };
 export const hasVirtualCurrencyReward = function hasVirtualCurrencyReward(config) {
   const rewards = config.rewardsConfig.rewards;
-  return rewards.some((type) => type.type === callback(table[2]).QuestRewardTypes.VIRTUAL_CURRENCY);
+  return rewards.some((type) => type.type === callback(7458).QuestRewardTypes.VIRTUAL_CURRENCY);
 };
 export const hasPremiumOrbQuantity = function hasPremiumOrbQuantity(config) {
   const rewards = config.rewardsConfig.rewards;
@@ -352,8 +352,6 @@ export const getQuestPrimaryReward = function getQuestPrimaryReward(quest) {
   return tmp;
 };
 export const getQuestOrbMultiplier = function getQuestOrbMultiplier(config) {
-  let orbQuantity;
-  let premiumOrbQuantity;
   const rewards = config.rewardsConfig.rewards;
   const found = rewards.find((type) => type.type === callback(7458).QuestRewardTypes.VIRTUAL_CURRENCY);
   let type;
@@ -376,8 +374,6 @@ export const getQuestOrbMultiplier = function getQuestOrbMultiplier(config) {
   }
 };
 export const getQuestOrbMultiplierForUser = function getQuestOrbMultiplierForUser(rewardsConfig, isFractionalPremiumWithNoStandardSub) {
-  let orbQuantity;
-  let premiumOrbQuantity;
   if (null == isFractionalPremiumWithNoStandardSub) {
     return 1;
   } else {

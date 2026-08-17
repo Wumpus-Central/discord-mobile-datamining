@@ -1,7 +1,10 @@
 // discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx
-let obj = { fill: require("DataBindByName").Fit.Fill, contain: require("DataBindByName").Fit.Contain, cover: require("DataBindByName").Fit.Cover, "fit-width": require("DataBindByName").Fit.FitWidth, "fit-height": require("DataBindByName").Fit.FitHeight, none: require("DataBindByName").Fit.None, "scale-down": require("DataBindByName").Fit.ScaleDown, layout: require("DataBindByName").Fit.Layout };
-obj = { "top-left": require("DataBindByName").Alignment.TopLeft, "top-center": require("DataBindByName").Alignment.TopCenter, "top-right": require("DataBindByName").Alignment.TopRight, "center-left": require("DataBindByName").Alignment.CenterLeft, center: require("DataBindByName").Alignment.Center, "center-right": require("DataBindByName").Alignment.CenterRight, "bottom-left": require("DataBindByName").Alignment.BottomLeft, "bottom-center": require("DataBindByName").Alignment.BottomCenter, "bottom-right": require("DataBindByName").Alignment.BottomRight };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx");
+import set from "set" /* 2 */;
+import DataBindByName from "DataBindByName" /* 4110 */;
+
+let obj = { fill: DataBindByName.Fit.Fill, contain: DataBindByName.Fit.Contain, cover: DataBindByName.Fit.Cover, "fit-width": DataBindByName.Fit.FitWidth, "fit-height": DataBindByName.Fit.FitHeight, none: DataBindByName.Fit.None, "scale-down": DataBindByName.Fit.ScaleDown, layout: DataBindByName.Fit.Layout };
+obj = { "top-left": DataBindByName.Alignment.TopLeft, "top-center": DataBindByName.Alignment.TopCenter, "top-right": DataBindByName.Alignment.TopRight, "center-left": DataBindByName.Alignment.CenterLeft, center: DataBindByName.Alignment.Center, "center-right": DataBindByName.Alignment.CenterRight, "bottom-left": DataBindByName.Alignment.BottomLeft, "bottom-center": DataBindByName.Alignment.BottomCenter, "bottom-right": DataBindByName.Alignment.BottomRight };
+const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/RiveTypes.tsx");
 
 export const FIT_MAP = obj;
 export const ALIGNMENT_MAP = obj;

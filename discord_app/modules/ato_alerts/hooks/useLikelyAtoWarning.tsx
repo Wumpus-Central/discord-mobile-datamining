@@ -1,11 +1,13 @@
 // discord_app/modules/ato_alerts/hooks/useLikelyAtoWarning.tsx
-import { SafetyWarningTypes } from "handleConnectionOpen";
-import { useIsMessageRequest } from "../../message_request/hooks/useIsMessageRequest.tsx";
-import { useIsSpamMessageRequest } from "../../message_request/hooks/useIsSpamMessageRequest.tsx";
-import { useChannelSafetyWarning } from "../../self_mod/hooks/useChannelSafetyWarning.tsx";
-import { useInappropriateConversationWarningsForChannel } from "../../self_mod/inappropriate_conversation/hooks/useInappropriateConversationWarningsForChannel.tsx";
+import set from "set" /* 2 */;
+import handleConnectionOpen from "handleConnectionOpen" /* 9921 */;
+import useIsSpamMessageRequest from "useIsSpamMessageRequest" /* 10571 */;
+import useIsMessageRequest from "useIsMessageRequest" /* 10572 */;
+import useChannelSafetyWarning from "useChannelSafetyWarning" /* 10573 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10574 */;
 
-const result = require("useIsMessageRequest").fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
+const SafetyWarningTypes = handleConnectionOpen.SafetyWarningTypes;
+const result = set.fileFinishedImporting("modules/ato_alerts/hooks/useLikelyAtoWarning.tsx");
 
 export const useLikelyAtoWarning = function useLikelyAtoWarning(channelId) {
   const isSpamMessageRequest = useIsSpamMessageRequest.useIsSpamMessageRequest(channelId);

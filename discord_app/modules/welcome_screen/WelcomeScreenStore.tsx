@@ -1,5 +1,6 @@
 // discord_app/modules/welcome_screen/WelcomeScreenStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function handleInviteData(invite) {
   const guild = invite.invite.guild;
@@ -27,6 +28,7 @@ let closure_2 = {};
 let c3 = false;
 let c4 = false;
 let c5 = false;
+const Store = initializeDefault.Store;
 class WelcomeScreenStore extends Store {
 }
 const prototype = WelcomeScreenStore.prototype;
@@ -74,22 +76,22 @@ obj = {
   WELCOME_SCREEN_VIEW: function handleWelcomeScreenView(guildId) {
     closure_2[guildId.guildId] = true;
     if (guildId.isLurking) {
-      let c3 = true;
+      c3 = true;
     }
   },
   GUILD_STOP_LURKING: function handleGuildStopLurking() {
-    let c3 = false;
+    c3 = false;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     closure_2[guild.guild.id] = false;
   },
   WELCOME_SCREEN_FETCH_START: function handleFetchWelcomeScreen() {
-    let c4 = true;
-    let c5 = false;
+    c4 = true;
+    c5 = false;
   },
   WELCOME_SCREEN_FETCH_SUCCESS: function handleFetchWelcomeScreenSuccess(welcomeScreen) {
-    let c4 = false;
-    let c5 = false;
+    c4 = false;
+    c5 = false;
     welcomeScreen = welcomeScreen.welcomeScreen;
     if (welcomeScreen == null) {
       welcomeScreen = obj;
@@ -97,11 +99,11 @@ obj = {
     closure_1[welcomeScreen.guildId] = welcomeScreen;
   },
   WELCOME_SCREEN_FETCH_FAIL: function handleFetchWelcomeScreenFail() {
-    let c4 = false;
-    let c5 = true;
+    c4 = false;
+    c5 = true;
   }
 };
-const welcomeScreenStore = new WelcomeScreenStore(require("dispatcher"), obj);
+const welcomeScreenStore = new WelcomeScreenStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenStore.tsx");
 
 export default welcomeScreenStore;

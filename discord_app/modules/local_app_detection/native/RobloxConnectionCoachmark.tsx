@@ -1,45 +1,40 @@
 // discord_app/modules/local_app_detection/native/RobloxConnectionCoachmark.tsx
-import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed";
-import getSystemLocale from "getSystemLocale";
-import { View } from "Stack";
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "WindowLaunchIcon";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import isThemeLight from "isThemeLight" /* 1364 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "set" /* 5221 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "initialize" /* 13258 */;
+import ME from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function RobloxIcon(theme) {
   let obj = isThemeLight;
   const isThemeDarkResult = obj.isThemeDark(theme.theme);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let str = "white";
-  const value = getPlatformUserUrl.get(constants.ROBLOX);
+  const value = getPlatformUserUrlDefault.get(constants.ROBLOX);
   if (isThemeDarkResult) {
     str = "black";
   }
-  const obj2 = getPlatformUserUrl;
+  const obj2 = getPlatformUserUrlDefault;
   const icon = value.icon;
   obj = { style: items, children: null };
   items = [tmp.robloxIconContainer, { backgroundColor: str }];
   const source = getAvatarURL.makeSource(isThemeDarkResult ? icon.darkPNG : icon.lightPNG);
-  obj = { size: null, source: null, disableColor: true };
-  obj[0] = Button.IconSizes.LARGE;
-  obj[1] = source;
+  obj = { size: tmp2(1297).IconSizes.LARGE, source, disableColor: true };
   obj[1] = callback(Button.Icon, obj);
   return callback(View, obj);
 }
@@ -52,7 +47,7 @@ class UnionIcon {
     if (obj.isThemeDark(global.theme)) {
       str = "white";
     }
-    id = getSystemLocale.useId();
+    id = closure_4.useId();
     obj = { width: 25, height: 4, viewBox: "0 0 25 4", id, children: null };
     tmp4 = require("inlineStyles");
     items = [, ];
@@ -70,53 +65,48 @@ class UnionIcon {
   }
 }
 function UserIcon() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_7];
   obj = { style: tmp.avatarContainer, children: null };
   obj = { style: tmp.avatarInnerBorder };
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [callback(View, obj), ];
-  const obj1 = { size: null, user: null, guildId: "Array" };
-  obj1[0] = Button.AvatarSizes.NORMAL;
-  obj1[1] = stateFromStores;
-  items1[1] = callback(Button.Avatar, obj1);
+  const items1 = [callback(View, obj), callback(Button.Avatar, { size: Button.AvatarSizes.NORMAL, user: stateFromStores, guildId: "Array" })];
   obj[1] = items1;
   return callback2(View, obj);
 }
 ({ AnalyticsLocations: c9, PlatformTypes: c10, UserSettingsSections: unpackModuleId } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { robloxIconContainer: null, content: null, text: null, avatarContainer: null, avatarInnerBorder: null };
-createCacheKey = { width: 40, height: 40, borderRadius: require("Themes").radii.md, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { width: 40, height: 40, borderRadius: ThemesDefault.radii.md, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { position: "relative" };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[4] = { zIndex: 1, position: "absolute", borderColor: require("Themes").colors.BORDER_STRONG, borderRadius: require("Themes").radii.round, borderWidth: 1, width: "100%", height: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { zIndex: 1, position: "absolute", borderColor: require("Themes").colors.BORDER_STRONG, borderRadius: require("Themes").radii.round, borderWidth: 1, width: "100%", height: "100%" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/local_app_detection/native/RobloxConnectionCoachmark.tsx");
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { zIndex: 1, position: "absolute", borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.round, borderWidth: 1, width: "100%", height: "100%" };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { zIndex: 1, position: "absolute", borderColor: ThemesDefault.colors.BORDER_STRONG, borderRadius: ThemesDefault.radii.round, borderWidth: 1, width: "100%", height: "100%" };
+let result = require("set").fileFinishedImporting("modules/local_app_detection/native/RobloxConnectionCoachmark.tsx");
 
 export default function RobloxConnectionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
   function handleCancel() {
-    outer1_1(outer1_2[13]).hideActionSheet();
+    closure_1_1(closure_1_2[13]).hideActionSheet();
     if (markAsDismissed != null) {
-      tmp2(outer1_12.DISMISS);
+      tmp2(closure_1_12.DISMISS);
     }
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = markAsDismissed(4104);
   const theme = obj.useThemeContext().theme;
   obj = { startExpanded: true, contentStyles: tmp.content, header: null, onDismiss: null, children: null };
-  obj = { title: null, leading: null };
-  obj[1] = callback(markAsDismissed(7176).ActionSheetCloseButton, { onPress: handleCancel });
+  obj = { title: null, leading: callback(markAsDismissed(7176).ActionSheetCloseButton, { onPress: handleCancel }) };
   obj[2] = callback(markAsDismissed(6949).BottomSheetTitleHeader, obj);
   obj[3] = function onDismiss() {
-    return markAsDismissed(outer1_12.DISMISS);
+    return markAsDismissed(closure_1_12.DISMISS);
   };
-  const obj1 = { spacing: 24, style: { paddingBottom: useSafeAreaInsets().bottom }, children: null };
+  obj1 = { spacing: 24, style: { paddingBottom: useSafeAreaInsetsDefault().bottom }, children: null };
   const obj2 = { justify: "center", align: "center", direction: "horizontal", children: null };
   const items = [callback(RobloxIcon, { theme }), callback(UnionIcon, { theme }), callback(UserIcon, {})];
   obj2[3] = items;
@@ -136,19 +126,17 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
   const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl3 = markAsDismissed(1236).intl;
   obj7[0] = intl3.string(markAsDismissed(1236).t.ItuabN);
-  const obj8 = { size: "sm", color: null };
-  obj8[1] = Themes.colors.WHITE;
-  obj7[1] = callback(markAsDismissed(12049).WindowLaunchIcon, obj8);
+  obj7[1] = callback(markAsDismissed(12049).WindowLaunchIcon, { size: "sm", color: ThemesDefault.colors.WHITE });
   obj7[4] = function onPress() {
-    let obj = outer1_1(outer1_2[13]);
+    let obj = closure_1_1(closure_1_2[13]);
     obj.hideActionSheet();
     if (markAsDismissed != null) {
-      tmp4(outer1_12.PRIMARY);
+      tmp4(closure_1_12.PRIMARY);
     }
-    obj = { platformType: outer1_10.ROBLOX, location: outer1_9.ROBLOX_CONNECTION_ACTION_SHEET };
-    outer1_1(outer1_2[22])(obj);
-    obj = { screen: outer1_11.CONNECTIONS };
-    markAsDismissed(outer1_2[23]).openUserSettings(obj);
+    obj = { platformType: closure_1_10.ROBLOX, location: closure_1_9.ROBLOX_CONNECTION_ACTION_SHEET };
+    closure_1_1(closure_1_2[22])(obj);
+    obj = { screen: closure_1_11.CONNECTIONS };
+    markAsDismissed(closure_1_2[23]).openUserSettings(obj);
   };
   const items3 = [callback(markAsDismissed(4745).Button, obj7), ];
   const obj9 = { text: null, variant: "secondary", size: "lg", onPress: null };
@@ -164,18 +152,16 @@ export default function RobloxConnectionActionSheet(markAsDismissed) {
 };
 export { UnionIcon };
 export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobloxConnectionCoachmark() {
-  let fetchingAccounts;
-  let hasRoloxAccount;
-  const items = [initialize];
+  const items = [closure_8];
   stateFromStores = stateFromStores(589).useStateFromStores(items, () => appInstalled.isAppInstalled(stateFromStores(13259).DetectableAppNames.ROBLOX));
   const tmp2 = hasRoloxAccount(React.useState(false), 2);
   const first = tmp2[0];
-  const dependencyMap = tmp2[1];
+  dependencyMap = tmp2[1];
   let obj = stateFromStores(589);
-  const items1 = [set];
+  const items1 = [closure_6];
   const stateFromStoresObject = stateFromStores(589).useStateFromStoresObject(items1, () => {
-    const obj = { fetchingAccounts: set.isFetching(), hasRoloxAccount: null };
-    const accounts = set.getAccounts();
+    const obj = { fetchingAccounts: closure_6.isFetching(), hasRoloxAccount: null };
+    const accounts = closure_6.getAccounts();
     obj[1] = null != accounts.find((type) => type.type === constants.ROBLOX);
     return obj;
   });
@@ -197,7 +183,7 @@ export const useShouldShowRobloxConnectionCoachmark = function useShouldShowRobl
     if (hasRoloxAccount) {
       let obj = stateFromStores(4196);
       obj = { dismissAction: null };
-      obj[0] = outer1_12.INDIRECT_ACTION;
+      obj[0] = closure_1_12.INDIRECT_ACTION;
       const result = obj.UNSAFE_markDismissibleContentAsDismissed(stateFromStores(1377).DismissibleContent.ROBLOX_CONNECTION_COACHMARK, obj);
     }
   }, items3);

@@ -1,38 +1,35 @@
 // discord_app/modules/collectibles/native/FeaturedCategorySubblock.tsx
-import "NewBadge";
-import { Image } from "QUICK_SWITCHER";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { CollectiblesMobileShopScreen as closure_5 } from "items";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { onChange } from "VisibilitySensor.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import onChangeDefault from "onChange" /* 12008 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import { CollectiblesMobileShopScreen as closure_5 } from "items" /* 678 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
+noopAll;
 ({ AnalyticEvents: closure_6, UserSettingsSections: error } = ME);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { position: "relative" }, bannerImage: { width: "100%", aspectRatio: 2.237580993520518, resizeMode: "contain" }, limitedTimeBadge: { position: "absolute", bottom: "68%", left: "3%", zIndex: 1 } });
-let result = require("updateCategoriesAndProducts").fileFinishedImporting("modules/collectibles/native/FeaturedCategorySubblock.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/FeaturedCategorySubblock.tsx");
 
 export default function _default(subblock) {
   subblock = subblock.subblock;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let stateFromStores;
   const tmp = callback();
   let obj = subblock(1500);
   importDefault = obj.useNavigation();
-  let obj1 = subblock(9175);
+  obj1 = subblock(9175);
   dependencyMap = obj1.useCollectiblesAnalyticsContext();
   const assetUrl = subblock.assetUrl;
   let obj2 = subblock(589);
-  let items = [updateCategoriesAndProducts];
-  stateFromStores = obj2.useStateFromStores(items, () => outer1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId));
+  let items = [closure_4];
+  stateFromStores = obj2.useStateFromStores(items, () => closure_1_4.getCategoryByStoreListingId(subblock.categoryStoreListingId));
   let obj3 = subblock(12005);
   let unpublishedAt = subblock.unpublishedAt;
   if (unpublishedAt == null) {
@@ -53,7 +50,7 @@ export default function _default(subblock) {
   obj[1] = intl.formatToPlainString(subblock(1236).t.FNtLb3, obj1);
   const intl2 = tmp2(1236).intl;
   obj[2] = intl2.string(subblock(1236).t.F8ma9x);
-  obj2 = { radius: Themes.radii.lg };
+  obj2 = { radius: ThemesDefault.radii.lg };
   obj[4] = obj2;
   obj[6] = function onPress() {
     let obj = navigation(table[15]);
@@ -77,21 +74,21 @@ export default function _default(subblock) {
       tilePosition = tmp3.tilePosition;
     }
     obj[6] = String(tilePosition);
-    obj.track(outer1_6.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
+    obj.track(closure_1_6.COLLECTIBLES_SHOP_ELEMENT_CLICKED, obj);
     if (null != stateFromStores) {
       if (tmp9.isOrbsExclusive) {
         obj = { analyticsLocations: null, analyticsSource: null, screen: null };
         const items = [tmp(tmp2[17]).COLLECTIBLES_SHOP];
         obj[0] = items;
         obj[1] = tmp(tmp2[17]).COLLECTIBLES_SHOP;
-        obj[2] = outer1_5.ORBS;
+        obj[2] = closure_1_5.ORBS;
         const result = subblock(tmp2[16]).openCollectiblesShopMobile(obj);
         const obj4 = subblock(tmp2[16]);
       } else {
-        const obj1 = { category: null, analyticsContext: null };
+        obj1 = { category: null, analyticsContext: null };
         obj1[0] = tmp9;
         obj1[1] = tmp3;
-        navigation.navigate(outer1_7.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj1);
+        navigation.navigate(closure_1_7.COLLECTIBLES_SHOP_VIEW_ALL_CATEGORY_ITEMS, obj1);
       }
     }
   };
@@ -106,7 +103,7 @@ export default function _default(subblock) {
     tmp11Result = tmp11(stateFromStores, obj3);
   }
   const items1 = [tmp11Result, ];
-  const tmp12 = onChange;
+  const tmp12 = onChangeDefault;
   const tmp13 = closure_9;
   let result = subblock(5313).shouldShowLimitedTimeBadge(date);
   if (result) {

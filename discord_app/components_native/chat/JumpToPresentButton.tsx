@@ -1,27 +1,27 @@
 // discord_app/components_native/chat/JumpToPresentButton.tsx
-import "noop";
-import { View } from "memoResult1";
-import updateChatInputContainerHeight from "updateChatInputContainerHeight";
-import { useChatInputContainerHeight as closure_5 } from "updateChatInputContainerHeight";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import reinjectEphemerals from "reinjectEphemerals";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "updateChatInputContainerHeight";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "updateChatInputContainerHeight" /* 8682 */;
+import { useChatInputContainerHeight as closure_5 } from "updateChatInputContainerHeight" /* 8682 */;
+import closure_6 from "_handleConnectionOpen" /* 4495 */;
+import closure_7 from "reinjectEphemerals" /* 4994 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null, containerIOS: null };
-createCacheKey = { borderRadius: require("Themes").radii.round, position: "absolute", right: require("Themes").modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING };
+createCacheKey = { borderRadius: ThemesDefault.radii.round, position: "absolute", right: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { bottom: "100%", marginBottom: require("Themes").modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING, pointerEvents: "box-none" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { bottom: "100%", marginBottom: ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING, pointerEvents: "box-none" };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = set.isIOS() ? (() => null) : ((arg0) => {
   let obj = map;
   obj = { bottom: null };
-  const token = obj.useToken(Themes.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
+  const token = obj.useToken(ThemesDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
   obj[0] = callback2(arg0) + token;
   return obj;
 });
@@ -31,12 +31,12 @@ export default function JumpToPresentButton(channelId) {
   channelId = channelId.channelId;
   const screenIndex = channelId.screenIndex;
   const onJumpToPresent = channelId.onJumpToPresent;
-  let dependencyMap;
-  let tmp = createCacheKey();
-  const tmp2 = callback3(screenIndex);
+  dependencyMap = undefined;
+  let tmp = callback3();
+  const tmp2 = callback4(screenIndex);
   let tmp3Result = dependencyMap;
   let obj = channelId(589);
-  const items = [_handleConnectionOpen];
+  const items = [closure_6];
   dependencyMap = obj.useStateFromStores(items, () => connected.isConnected(), []);
   const tmp7 = callback((showingAutoComplete) => {
     let tmp = closure_2;
@@ -53,13 +53,13 @@ export default function JumpToPresentButton(channelId) {
     }
     return tmp;
   });
-  let obj1 = channelId(8667);
+  obj1 = channelId(8667);
   const isVoicePanelMounted = obj1.useIsVoicePanelMounted(channelId);
   let tmp5 = screenIndex(1367)("JumpToPresentButton");
   const isVoicePanelOpen = channelId(8667).useIsVoicePanelOpen(channelId);
   const obj3 = channelId(8667);
-  const items1 = [reinjectEphemerals];
-  const stateFromStores = channelId(589).useStateFromStores(items1, () => null != outer1_7.getMessages(channelId).jumpReturnTargetId);
+  const items1 = [closure_7];
+  const stateFromStores = channelId(589).useStateFromStores(items1, () => null != closure_1_7.getMessages(channelId).jumpReturnTargetId);
   if (!tmp7) {
     return null;
   }

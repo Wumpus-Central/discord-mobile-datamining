@@ -1,12 +1,12 @@
 // discord_app/modules/channel/getChannelIcon.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelTypes } from "ME";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/channel/getChannelIcon.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/channel/getChannelIcon.tsx");
 
 export const getChannelIconURL = function getChannelIconURL(type) {
   let num = arg1;
@@ -16,7 +16,7 @@ export const getChannelIconURL = function getChannelIconURL(type) {
   type = type.type;
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
-    const mapped = recipients.map(mergeGuildAvatar.getUser);
+    const mapped = recipients.map(closure_4.getUser);
     const first = callback(mapped.filter(isDiscordFrontendDevelopment.isNotNullish), 1)[0];
     let avatarURL = null;
     if (null != first) {
@@ -24,7 +24,7 @@ export const getChannelIconURL = function getChannelIconURL(type) {
     }
     return avatarURL;
   } else if (tmp.GROUP_DM === type) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, icon: null, applicationId: null, size: null };
     ({ id: obj2[0], icon: obj2[1] } = type);
     obj[2] = type.getApplicationId();
@@ -36,7 +36,7 @@ export const getChannelIconSource = function getChannelIconSource(type) {
   type = type.type;
   if (ChannelTypes.DM === type) {
     const recipients = type.recipients;
-    const mapped = recipients.map(mergeGuildAvatar.getUser);
+    const mapped = recipients.map(closure_4.getUser);
     const first = callback(mapped.filter(isDiscordFrontendDevelopment.isNotNullish), 1)[0];
     let avatarSource = null;
     if (null != first) {
@@ -44,7 +44,7 @@ export const getChannelIconSource = function getChannelIconSource(type) {
     }
     return avatarSource;
   } else if (tmp.GROUP_DM === type) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, icon: null, applicationId: null, size: 128 };
     ({ id: obj2[0], icon: obj2[1] } = type);
     obj[2] = type.getApplicationId();

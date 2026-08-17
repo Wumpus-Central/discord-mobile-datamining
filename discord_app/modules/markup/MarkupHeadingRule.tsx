@@ -1,9 +1,11 @@
 // discord_app/modules/markup/MarkupHeadingRule.tsx
-import { t } from "../../../_runtime/04092_t.js";
-const require = arg1;
+import t from "t" /* 4092 */;
+import tDefault from "t" /* 4092 */;
+
+require = arg1;
 const re2 = /\n$/;
 let obj = {};
-const merged = Object.assign(require("t").defaultRules.heading);
+const merged = Object.assign(tDefault.defaultRules.heading);
 obj.requiredFirstCharacters = [" ", "#"];
 obj.match = function match(arg0, allowHeading, str) {
   let tmp = null;

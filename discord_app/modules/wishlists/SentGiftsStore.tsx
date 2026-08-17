@@ -1,15 +1,17 @@
 // discord_app/modules/wishlists/SentGiftsStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "_slicedToArray" /* 32 */;
 
 let closure_1 = { sentGifts: {} };
+const PersistedStore = initializeDefault.PersistedStore;
 class SentGiftsStore extends PersistedStore {
 }
 const prototype = SentGiftsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
     const self = this;
-    let closure_1 = arg0;
+    closure_1 = arg0;
     this.cleanupExpiredGifts();
   }
 };
@@ -65,7 +67,7 @@ prototype["cleanupExpiredGifts"] = function cleanupExpiredGifts() {
 };
 SentGiftsStore.displayName = "SentGiftsStore";
 SentGiftsStore.persistKey = "SentGiftsStore";
-const sentGiftsStore = new SentGiftsStore(require("dispatcher"), {
+const sentGiftsStore = new SentGiftsStore(dispatcherDefault, {
   WISHLIST_GIFT_SENT: function handleGiftSent(skuId) {
     const combined = "" + skuId.skuId + ":" + skuId.recipientId;
     const date = new Date();
@@ -73,6 +75,6 @@ const sentGiftsStore = new SentGiftsStore(require("dispatcher"), {
     closure_1.sentGifts[combined] = { skuId: skuId.skuId, recipientId: skuId.recipientId, sentAt: date.toISOString(), expiresAt: new Date(date.getTime() + 172800000).toISOString() };
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/wishlists/SentGiftsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/SentGiftsStore.tsx");
 
 export default sentGiftsStore;

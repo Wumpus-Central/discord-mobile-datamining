@@ -1,40 +1,36 @@
 // discord_app/modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx
-import importAllResult from "noop";
-import handleConnectionOpen from "handleConnectionOpen";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import { jsx } from "jsxProd";
-import { usePendingFolderGuildIds } from "../usePendingFolderGuildIds.tsx";
-import { UnreadIndicator } from "GuildsBarAnimatedItemWrapper.tsx";
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9535 */;
+import UnreadIndicatorDefault from "UnreadIndicator" /* 15558 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id) {
-  let accessibilityActions;
-  let childNodes;
-  let expanded;
-  let onAccessibilityAction;
   id = id.id;
-  let importDefault;
+  importDefault = undefined;
   ({ expanded, childNodes } = id);
   let obj = id(15558);
-  importDefault = usePendingFolderGuildIds();
+  importDefault = usePendingFolderGuildIdsDefault();
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles({ disableSelectedColor: true, disableBGColor: false });
-  const items = [handleConnectionOpen];
+  const items = [closure_4];
   const items1 = [id];
   const stateFromStores = id(589).useStateFromStores(items, () => {
-    let guildId = outer1_4.getGuildId();
+    let guildId = closure_1_4.getGuildId();
     if (guildId == null) {
-      guildId = outer1_5;
+      guildId = closure_1_5;
     }
     return closure_1.includes(guildId);
   });
   const memo = importAllResult.useMemo(() => {
-    let obj = id(outer1_2[7]);
+    let obj = id(closure_1_2[7]);
     guildFolderMenuItems = obj.getGuildFolderMenuItems(guildFolderMenuItems);
     obj = {
       accessibilityActions: guildFolderMenuItems.map((label) => ({ name: label.label, label: label.label })),
       onAccessibilityAction(arg0) {
-        const guildFolderMenuItems = arg0;
+        guildFolderMenuItems = arg0;
         const found = guildFolderMenuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
         if (found != null) {
           const action = found.action;
@@ -52,9 +48,9 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   const sharedValue = id(4115).useSharedValue("" + id);
   const memo1 = importAllResult.useMemo(() => ({
     onPress() {
-      const result = outer1_0(outer1_2[9]).triggerHapticFeedback(outer1_0(outer1_2[9]).HapticFeedbackTypes.IMPACT_LIGHT);
-      const obj = outer1_0(outer1_2[9]);
-      const result1 = outer1_1(outer1_2[10]).toggleGuildFolderExpand(closure_0);
+      const result = closure_1_0(closure_1_2[9]).triggerHapticFeedback(closure_1_0(closure_1_2[9]).HapticFeedbackTypes.IMPACT_LIGHT);
+      const obj = closure_1_0(closure_1_2[9]);
+      const result1 = closure_1_1(closure_1_2[10]).toggleGuildFolderExpand(closure_0);
     }
   }), items2);
   obj = { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "disabled", config: null, externalChildren: null, children: "INSTANTIATION_OPTION_REQUIRED" };
@@ -77,8 +73,8 @@ const memoResult = importAllResult.memo(function GuildsBarPendingGuildFolder(id)
   }
   obj[12] = tmp8Result;
   obj[13] = jsx(id(11400).HourglassIcon, {});
-  return jsx(UnreadIndicator, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "disabled", config: null, externalChildren: null, children: "INSTANTIATION_OPTION_REQUIRED" });
+  return jsx(UnreadIndicatorDefault, { id: null, accessibilityActions: null, onAccessibilityAction: null, selected: null, unread: false, circle: false, styles: null, label: null, sharedId: null, cutouts: "a", overState: "disabled", config: null, externalChildren: null, children: "INSTANTIATION_OPTION_REQUIRED" });
 });
-let result = require("ME").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
+let result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarPendingGuildFolder.tsx");
 
 export default memoResult;

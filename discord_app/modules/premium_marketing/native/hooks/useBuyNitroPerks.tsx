@@ -1,52 +1,49 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPerks.tsx
-import registerAsset from "registerAsset";
-import { Gradients } from "items";
-import GuildFeatures from "GuildFeatures";
-import importDefaultResult from "n";
-import importDefaultResult1 from "n";
-import { calculateFractionalPremiumInfo } from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
+import closure_3 from "noop" /* 19 */;
+import { Gradients } from "items" /* 7403 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import importDefaultResult from "n" /* 689 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ FractionalPremiumStates: c4, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: c5, PremiumTypes: closure_6 } = GuildFeatures);
 let items = [...Gradients.PREMIUM_TIER_2];
-let closure_7 = require("n").scale(items.reverse()).mode("lab");
-const scaleResult = require("n").scale(items.reverse());
+let closure_7 = importDefaultResult.scale(items.reverse()).mode("lab");
+const scaleResult = importDefaultResult.scale(items.reverse());
 let items1 = [...Gradients.PREMIUM_TIER_0];
-let closure_8 = require("n").scale(items1.reverse()).mode("lab");
-const scaleResult1 = require("n").scale(items1.reverse());
-let result = require("GuildFeatures").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPerks.tsx");
+const importDefaultResult1 = importDefaultResult;
+let closure_8 = importDefaultResult.scale(items1.reverse()).mode("lab");
+const scaleResult1 = importDefaultResult.scale(items1.reverse());
+let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPerks.tsx");
 
 export default function useBuyNitroPerks(arg0) {
-  let closure_0 = arg0;
-  let tmp = calculateFractionalPremiumInfo({ forceFetch: true }).fractionalState === constants.FP_ONLY;
+  closure_0 = arg0;
+  let tmp = calculateFractionalPremiumInfoDefault({ forceFetch: true }).fractionalState === constants.FP_ONLY;
   importDefault = tmp;
   let items = [arg0, tmp];
   return React.useMemo(() => {
     let obj = { id: "emoji", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
-    let tmp = callback;
-    const tmp2 = outer1_2;
-    const intl = callback(outer1_2[5]).intl;
-    obj[1] = intl.string(callback(outer1_2[5]).t["R2IV/Q"]);
-    const intl2 = callback(outer1_2[5]).intl;
-    obj[2] = intl2.string(callback(outer1_2[5]).t["3cyhe3"]);
-    obj[3] = callback(outer1_2[6]).ReactionIcon;
-    obj = { image: tmp(outer1_2[7]), description: callback(outer1_2[5]).t["3SUJLd"] };
+    const tmp = callback;
+    const tmp2 = closure_1_2;
+    const intl = callback(closure_1_2[5]).intl;
+    obj[1] = intl.string(callback(closure_1_2[5]).t["R2IV/Q"]);
+    const intl2 = callback(closure_1_2[5]).intl;
+    obj[2] = intl2.string(callback(closure_1_2[5]).t["3cyhe3"]);
+    obj[3] = callback(closure_1_2[6]).ReactionIcon;
+    obj = { image: callback2(closure_1_2[7]), description: callback(closure_1_2[5]).t["3SUJLd"] };
     obj[5] = obj;
     let items = [obj, , , , , , , , , , , , , , , ];
     obj = { id: "uploads", label: null, labelBasic: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
-    const intl3 = callback(outer1_2[5]).intl;
-    obj[1] = intl3.string(callback(outer1_2[5]).t["3BtVbk"]);
-    const intl4 = callback(outer1_2[5]).intl;
-    obj[2] = intl4.string(callback(outer1_2[5]).t["Zs49/V"]);
-    const intl5 = callback(outer1_2[5]).intl;
-    obj[3] = intl5.string(callback(outer1_2[5]).t["8AhJqy"]);
-    obj[4] = callback(outer1_2[8]).UploadIcon;
-    obj[6] = { image: tmp(outer1_2[9]), description: callback(outer1_2[5]).t.i1UuMk };
+    const intl3 = callback(closure_1_2[5]).intl;
+    obj[1] = intl3.string(callback(closure_1_2[5]).t["3BtVbk"]);
+    const intl4 = callback(closure_1_2[5]).intl;
+    obj[2] = intl4.string(callback(closure_1_2[5]).t["Zs49/V"]);
+    const intl5 = callback(closure_1_2[5]).intl;
+    obj[3] = intl5.string(callback(closure_1_2[5]).t["8AhJqy"]);
+    obj[4] = callback(closure_1_2[8]).UploadIcon;
+    obj[6] = { image: callback2(closure_1_2[9]), description: callback(closure_1_2[5]).t.i1UuMk };
     items[1] = obj;
-    let obj4 = callback(outer1_2[10]);
+    let obj4 = callback(closure_1_2[10]);
     if (obj4.isAppIconsSupported()) {
       let obj2 = { id: "custom-app-icons", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
       const intl6 = tmp(tmp2[5]).intl;
@@ -69,13 +66,13 @@ export default function useBuyNitroPerks(arg0) {
     obj4 = { image: tmp3(tmp2[13]), description: tmp(tmp2[5]).t.kWcDK8 };
     obj3[5] = obj4;
     items[arraySpreadResult] = obj3;
-    if (tmp) {
+    if (callback2) {
       let items3 = [];
     } else {
       const obj5 = { id: "boosts", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
       const intl10 = tmp(tmp2[5]).intl;
       const obj6 = { numBoosts: null };
-      obj6[0] = outer1_5;
+      obj6[0] = closure_1_5;
       obj5[1] = intl10.formatToPlainString(tmp(tmp2[5]).t.DbkNFj, obj6);
       const intl11 = tmp(tmp2[5]).intl;
       obj5[2] = intl11.string(tmp(tmp2[5]).t["n+DGY/"]);
@@ -93,9 +90,9 @@ export default function useBuyNitroPerks(arg0) {
     const intl13 = tmp(tmp2[5]).intl;
     obj8[2] = intl13.string(tmp(tmp2[5]).t.ymCPxp);
     obj8[3] = tmp(tmp2[16]).ScreenStreamIcon;
-    const obj1 = { image: tmp(outer1_2[9]), description: callback(outer1_2[5]).t.i1UuMk };
-    const tmp5 = tmp;
-    obj8[5] = { image: tmp(tmp2[17]), description: tmp(tmp2[5]).t.ymCPxp };
+    obj1 = { image: callback2(closure_1_2[9]), description: callback(closure_1_2[5]).t.i1UuMk };
+    const tmp5 = callback2;
+    obj8[5] = { image: callback2(tmp2[17]), description: tmp(tmp2[5]).t.ymCPxp };
     items[arraySpreadResult] = obj8;
     const sum = arraySpreadResult + 1;
     const obj10 = { id: "super-reactions", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: true, detail: null };
@@ -104,8 +101,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl15 = tmp(tmp2[5]).intl;
     obj10[2] = intl15.string(tmp(tmp2[5]).t.ZK3ZoX);
     obj10[3] = tmp(tmp2[18]).SuperReactionIcon;
-    const obj9 = { image: tmp(tmp2[17]), description: tmp(tmp2[5]).t.ymCPxp };
-    obj10[5] = { image: tmp(tmp2[19]), description: tmp(tmp2[5]).t.A0U9fk };
+    const obj9 = { image: callback2(tmp2[17]), description: tmp(tmp2[5]).t.ymCPxp };
+    obj10[5] = { image: callback2(tmp2[19]), description: tmp(tmp2[5]).t.A0U9fk };
     items[sum] = obj10;
     if (tmp5) {
       let items4 = [];
@@ -125,8 +122,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl19 = tmp(tmp2[5]).intl;
     obj13[2] = intl19.string(tmp(tmp2[5]).t.hJG8ZN);
     obj13[3] = tmp(tmp2[21]).StickerIcon;
-    const obj11 = { image: tmp(tmp2[19]), description: tmp(tmp2[5]).t.A0U9fk };
-    obj13[5] = { image: tmp(tmp2[22]), description: tmp(tmp2[5]).t.FXlU24 };
+    const obj11 = { image: callback2(tmp2[19]), description: tmp(tmp2[5]).t.A0U9fk };
+    obj13[5] = { image: callback2(tmp2[22]), description: tmp(tmp2[5]).t.FXlU24 };
     items[arraySpreadResult1] = obj13;
     const sum1 = arraySpreadResult1 + 1;
     const obj15 = { id: "custom-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -135,8 +132,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl21 = tmp(tmp2[5]).intl;
     obj15[2] = intl21.string(tmp(tmp2[5]).t["4lSyCY"]);
     obj15[3] = tmp(tmp2[23]).SoundboardIcon;
-    const obj14 = { image: tmp(tmp2[22]), description: tmp(tmp2[5]).t.FXlU24 };
-    obj15[5] = { image: tmp(tmp2[24]), description: tmp(tmp2[5]).t["4lSyCY"] };
+    const obj14 = { image: callback2(tmp2[22]), description: tmp(tmp2[5]).t.FXlU24 };
+    obj15[5] = { image: callback2(tmp2[24]), description: tmp(tmp2[5]).t["4lSyCY"] };
     items[sum1] = obj15;
     const sum2 = sum1 + 1;
     const obj17 = { id: "entrance-sounds", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -153,8 +150,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl25 = tmp(tmp2[5]).intl;
     obj18[2] = intl25.string(tmp(tmp2[5]).t["A8O/Qw"]);
     obj18[3] = tmp(tmp2[26]).VideoIcon;
-    const obj16 = { image: tmp(tmp2[24]), description: tmp(tmp2[5]).t["4lSyCY"] };
-    obj18[5] = { image: tmp(tmp2[27]), description: tmp(tmp2[5]).t["A8O/Qw"] };
+    const obj16 = { image: callback2(tmp2[24]), description: tmp(tmp2[5]).t["4lSyCY"] };
+    obj18[5] = { image: callback2(tmp2[27]), description: tmp(tmp2[5]).t["A8O/Qw"] };
     items[sum3] = obj18;
     const sum4 = sum3 + 1;
     const obj20 = { id: "longer-messages", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -163,8 +160,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl27 = tmp(tmp2[5]).intl;
     obj20[2] = intl27.string(tmp(tmp2[5]).t.vN6XpQ);
     obj20[3] = tmp(tmp2[28]).ChatIcon;
-    const obj19 = { image: tmp(tmp2[27]), description: tmp(tmp2[5]).t["A8O/Qw"] };
-    obj20[5] = { image: tmp(tmp2[29]), description: tmp(tmp2[5]).t.vN6XpQ };
+    const obj19 = { image: callback2(tmp2[27]), description: tmp(tmp2[5]).t["A8O/Qw"] };
+    obj20[5] = { image: callback2(tmp2[29]), description: tmp(tmp2[5]).t.vN6XpQ };
     items[sum4] = obj20;
     const sum5 = sum4 + 1;
     const obj22 = { id: "more-servers", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -173,8 +170,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl29 = tmp(tmp2[5]).intl;
     obj22[2] = intl29.string(tmp(tmp2[5]).t.JMfaTU);
     obj22[3] = tmp(tmp2[30]).ServerGridIcon;
-    const obj21 = { image: tmp(tmp2[29]), description: tmp(tmp2[5]).t.vN6XpQ };
-    obj22[5] = { image: tmp(tmp2[31]), description: tmp(tmp2[5]).t.JMfaTU };
+    const obj21 = { image: callback2(tmp2[29]), description: tmp(tmp2[5]).t.vN6XpQ };
+    obj22[5] = { image: callback2(tmp2[31]), description: tmp(tmp2[5]).t.JMfaTU };
     items[sum5] = obj22;
     const sum6 = sum5 + 1;
     const obj24 = { id: "client-themes", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -183,8 +180,8 @@ export default function useBuyNitroPerks(arg0) {
     const intl31 = tmp(tmp2[5]).intl;
     obj24[2] = intl31.string(tmp(tmp2[5]).t.CjRASJ);
     obj24[3] = tmp(tmp2[32]).PaintPaletteIcon;
-    const obj23 = { image: tmp(tmp2[31]), description: tmp(tmp2[5]).t.JMfaTU };
-    obj24[5] = { image: tmp(tmp2[33]), description: tmp(tmp2[5]).t.jBTTws };
+    const obj23 = { image: callback2(tmp2[31]), description: tmp(tmp2[5]).t.JMfaTU };
+    obj24[5] = { image: callback2(tmp2[33]), description: tmp(tmp2[5]).t.jBTTws };
     items[sum6] = obj24;
     const sum7 = sum6 + 1;
     const obj26 = { id: "display-name-styles", label: null, subLabel: null, IconComponent: null, includedInNitroBasic: false, detail: null };
@@ -218,16 +215,16 @@ export default function useBuyNitroPerks(arg0) {
     obj29[3] = tmp(tmp2[37]).TagIcon;
     items[sum9 + 1] = obj29;
     let mapped = items;
-    tmp = tmp19;
+    callback2 = tmp19;
     mapped = items.map((includedInNitroBasic) => {
       const result = arg1 / mapped.length;
       const result1 = (arg1 + 1) / mapped.length;
-      let obj = outer1_7(result);
-      const items = [obj.hex(), outer1_7(result1).hex()];
-      const obj2 = outer1_7(result1);
-      const items1 = [outer1_8(result).hex(), ];
-      const obj3 = outer1_8(result);
-      items1[1] = outer1_8(result1).hex();
+      let obj = closure_1_7(result);
+      const items = [obj.hex(), closure_1_7(result1).hex()];
+      const obj2 = closure_1_7(result1);
+      const items1 = [closure_1_8(result).hex(), ];
+      const obj3 = closure_1_8(result);
+      items1[1] = closure_1_8(result1).hex();
       let tmp4 = closure_1;
       if (closure_1) {
         tmp4 = !includedInNitroBasic.includedInNitroBasic;
@@ -249,7 +246,7 @@ export default function useBuyNitroPerks(arg0) {
     const obj30 = { kind: "section-header", id: "explore-perks-header", title: null };
     const intl40 = tmp(tmp2[5]).intl;
     obj30[2] = intl40.string(tmp(tmp2[5]).t["eQX+gg"]);
-    if (mapped === outer1_6.TIER_0) {
+    if (mapped === closure_1_6.TIER_0) {
       const found = mapped.filter((includedInNitroBasic) => includedInNitroBasic.includedInNitroBasic);
       const found1 = mapped.filter((includedInNitroBasic) => !includedInNitroBasic.includedInNitroBasic);
       if (0 === found1.length) {
@@ -274,6 +271,6 @@ export default function useBuyNitroPerks(arg0) {
       HermesBuiltin.arraySpread(mapped.map((perk) => ({ kind: "perk", perk, start: 0 === arg1, end: arg1 === mapped.length - 1 })), 1);
       return items7;
     }
-    const obj25 = { image: tmp(tmp2[33]), description: tmp(tmp2[5]).t.jBTTws };
+    const obj25 = { image: callback2(tmp2[33]), description: tmp(tmp2[5]).t.jBTTws };
   }, items);
 };

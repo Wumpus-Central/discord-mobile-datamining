@@ -1,28 +1,25 @@
 // discord_app/modules/user_settings/billing/native/OrbsFlowTestModal.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "BalanceWidgetPill";
-import get_ActivityIndicator from "TextInput";
-import jsxProd from "useSafeAreaInsetsKeyboardAware";
-import createNativeStackNavigator from "createNativeStackNavigator";
-import createCacheKey from "createCacheKey";
-import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import Layer from "Layer" /* 7126 */;
+import BalanceWidgetDefault from "BalanceWidget" /* 15149 */;
+import OrbCheckoutMenuDefault from "OrbCheckoutMenu" /* 15151 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { BalanceWidget } from "../../../virtual_currency/native/BalanceWidgetMenu.tsx";
-import { OrbCheckoutMenu } from "../../../virtual_currency/native/OrbCheckoutMenu.tsx";
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function BalanceWidgetMenuSection() {
   const tmp = callback4();
   let obj = { spacing: 16, style: tmp.container, children: null };
   obj = { variant: "text-lg/semibold", style: tmp.title, children: "Balance Widget Menu" };
-  const items = [callback2(Text.Text, obj), callback2(BalanceWidget, {})];
+  const items = [callback2(Text.Text, obj), callback2(BalanceWidgetDefault, {})];
   obj[2] = items;
   return callback3(Stack.Stack, obj);
 }
@@ -30,7 +27,7 @@ function BalanceWidgetPillSection() {
   const tmp = callback4();
   const tmp2 = callback(importAllResult.useState(1000), 2);
   const first = tmp2[0];
-  let closure_1 = tmp2[1];
+  closure_1 = tmp2[1];
   const tmp4 = callback(importAllResult.useState("1000"), 2);
   const first1 = tmp4[0];
   callback = tmp4[1];
@@ -60,7 +57,7 @@ function BalanceWidgetPillSection() {
       callback2(paths[13]).hideActionSheet();
     };
     obj[1] = obj;
-    const obj1 = { buttonText: null, onButtonPress: null };
+    obj1 = { buttonText: null, onButtonPress: null };
     const intl2 = first(first1[16]).intl;
     obj1[0] = intl2.string(first(first1[16]).t.WAI6xu);
     obj1[1] = function onButtonPress() {
@@ -80,26 +77,26 @@ function BalanceWidgetPillSection() {
   return callback3(first(first1[10]).Stack, obj);
 }
 function OrbsFlowTest() {
-  const insets = useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets;
+  const insets = useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets;
   let obj = { children: null };
   obj = { style: callback4().wrap, contentContainerStyle: obj, children: null };
   obj = { paddingBottom: insets.bottom, paddingTop: insets.top, paddingLeft: insets.left, paddingRight: insets.right };
-  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(OrbCheckoutMenu, {})];
+  const items = [callback2(BalanceWidgetMenuSection, {}), callback2(BalanceWidgetPillSection, {}), callback2(OrbCheckoutMenuDefault, {})];
   obj[2] = items;
   obj[0] = callback3(closure_5, obj);
   return callback2(Layer.LayerScope, obj);
 }
 let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();
+({ jsx: error, jsxs: closure_8 } = jsxProd);
+let closure_9 = createNativeStackNavigator.createNativeStackNavigator();
 let obj = { wrap: null, container: null, title: null, balancePillContainer: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[0] = obj;
-createNativeStackNavigator = { padding: require("Themes").space.PX_16 };
+createNativeStackNavigator = { padding: ThemesDefault.space.PX_16 };
 obj[1] = createNativeStackNavigator;
 obj[2] = { marginBottom: 8 };
-createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
+createCacheKey = { flexDirection: "row", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 obj[3] = createCacheKey;
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
@@ -113,15 +110,14 @@ const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
           const merged1 = Object.assign(merged);
           return callback2(callback(table[6]).GenericHeaderTitle, { title: children.children });
         },
-        headerLeft: null,
+        headerLeft: callback(closure_1_2[6]).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      obj[1] = callback(outer1_2[6]).getRenderModalCloseImage(navigation.navigation);
       let merged = Object.assign(callback);
-      let merged1 = Object.assign(outer1_1(outer1_2[7])());
+      let merged1 = Object.assign(closure_1_1(closure_1_2[7])());
       return obj;
     },
-    children: callback2(createNativeStackNavigator.Screen, obj)
+    children: callback2(closure_9.Screen, obj)
   };
   obj = {
     name: "OrbsFlowTest",
@@ -130,8 +126,8 @@ const memoResult = importAllResult.memo(function OrbsFlowTestModal() {
     },
     component: OrbsFlowTest
   };
-  return callback2(createNativeStackNavigator.Navigator, obj);
+  return callback2(closure_9.Navigator, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/billing/native/OrbsFlowTestModal.tsx");
 
 export default memoResult;

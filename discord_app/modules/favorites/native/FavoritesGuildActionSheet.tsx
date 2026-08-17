@@ -1,28 +1,27 @@
 // discord_app/modules/favorites/native/FavoritesGuildActionSheet.tsx
-import "noop";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import jsxProd from "jsxProd";
-import { useFavoritesGuildHideAction } from "../hooks/useFavoritesGuildHideAction.tsx";
-import { useFavoritesGuildResetAction } from "../hooks/useFavoritesGuildResetAction.tsx";
+import noopAll from "noop" /* 19 */;
+import useFavoritesGuildHideActionDefault from "useFavoritesGuildHideAction" /* 15400 */;
+import useFavoritesGuildResetActionDefault from "useFavoritesGuildResetAction" /* 15401 */;
+import closure_3 from "initializeFromUserSettings" /* 1394 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
 const require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildActionSheet.tsx");
 
 export default function FavoritesGuildActionSheet(onClose) {
   onClose = onClose.onClose;
-  let importDefault;
-  let dependencyMap;
-  const tmp2 = useFavoritesGuildHideAction();
+  importDefault = undefined;
+  dependencyMap = undefined;
+  const tmp2 = useFavoritesGuildHideActionDefault();
   importDefault = tmp2;
-  const tmp3 = useFavoritesGuildResetAction();
+  const tmp3 = useFavoritesGuildResetActionDefault();
   dependencyMap = tmp3;
   let obj = onClose(9979);
-  let obj1 = onClose(589);
-  const items = [initializeFromUserSettings];
-  const stateFromStores = obj1.useStateFromStores(items, () => initializeFromUserSettings.hasStoredFavorites());
+  obj1 = onClose(589);
+  const items = [closure_3];
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_3.hasStoredFavorites());
   obj = { header: null, children: null };
   obj = { title: null };
   const intl = onClose(1236).intl;
@@ -41,7 +40,7 @@ export default function FavoritesGuildActionSheet(onClose) {
       obj2[1] = tmp7(tmp4(7177).ActionSheetRow.Icon, obj3);
       obj2[2] = function onPress() {
         onClose();
-        _undefined(_undefined2[12])();
+        lib(closure_2[12])();
       };
       obj1[1] = tmp7(tmp4(7177).ActionSheetRow, obj2);
       tmp7Result = tmp7(tmp4(7177).ActionSheetRow.Group, obj1);
@@ -62,7 +61,7 @@ export default function FavoritesGuildActionSheet(onClose) {
   obj4[3] = str;
   obj4[4] = function onPress() {
     onClose();
-    _undefined.perform();
+    lib.perform();
   };
   const items2 = [callback(onClose(7177).ActionSheetRow, obj4), ];
   tmp7Result = null;
@@ -74,7 +73,7 @@ export default function FavoritesGuildActionSheet(onClose) {
     obj5[2] = tmp7(tmp4(7177).ActionSheetRow.Icon, obj6);
     obj5[4] = function onPress() {
       onClose();
-      _undefined2.perform();
+      closure_2.perform();
     };
     tmp7Result = tmp7(tmp4(7177).ActionSheetRow, obj5);
   }

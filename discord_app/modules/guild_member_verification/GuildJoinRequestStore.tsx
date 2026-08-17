@@ -1,31 +1,31 @@
 // discord_app/modules/guild_member_verification/GuildJoinRequestStore.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate";
-import { Store } from "initialize";
-import { t } from "../../../_runtime/03975_t.js";
-import { isActionedApplicationStatus } from "GuildJoinRequestUtils.tsx";
-import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import tDefault from "t" /* 3975 */;
+import isActionedApplicationStatus from "isActionedApplicationStatus" /* 4199 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { joinRequestFromServer } from "handleGatewayJoinRequestUpdate" /* 4198 */;
 
-const require = arg1;
+require = arg1;
 function updateSubmittedGuildJoinRequestTotal(guildId, DELETED, applicationStatus) {
   if (DELETED !== applicationStatus) {
     if (null != DELETED) {
       if (DELETED === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
         dependencyMap[guildId] = dependencyMap[guildId] + 1;
-        const result = map.set(guildId, t());
+        const result = map.set(guildId, tDefault());
       }
       if (applicationStatus === tmp12(4200).GuildJoinRequestApplicationStatuses.SUBMITTED) {
         const _Math = Math;
         dependencyMap[guildId] = Math.max(0, dependencyMap[guildId] - 1);
-        const result1 = map.set(guildId, t());
+        const result1 = map.set(guildId, tDefault());
       }
       tmp12 = require;
     }
   }
 }
 function guildJoinRequestsIndex(joinRequestId) {
-  let applicationStatus;
-  let guildId;
   const items = [];
   if (typeof StaticGuildJoinRequestIndexes_GUILD_JOIN_REQUESTS_BY_ID !== "function") {
     HermesBuiltin.throwTypeError();
@@ -98,12 +98,13 @@ let closure_16 = {};
 let closure_17 = {};
 let closure_18 = {};
 let closure_19 = {};
-let closure_20 = 10 * require("set").Seconds.MINUTE;
+let closure_20 = 10 * setDefault.Seconds.MINUTE;
+const Store = initializeDefault.Store;
 class GuildJoinRequestStoreV2 extends Store {
 }
 const prototype = GuildJoinRequestStoreV2.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(mergeGuildAvatar);
+  this.waitFor(closure_3);
 };
 prototype["getRequest"] = function getRequest(arg0) {
   return table3[arg0];
@@ -136,8 +137,8 @@ prototype["hasFetched"] = function hasFetched(arg0) {
     const value = obj.get(arg0);
     let tmp3 = null != value;
     if (tmp3) {
-      tmp3 = t().diff(value, "seconds") < closure_20;
-      const obj2 = t();
+      tmp3 = tDefault().diff(value, "seconds") < closure_20;
+      const obj2 = tDefault();
     }
     return tmp3;
   } else {
@@ -176,7 +177,7 @@ prototype["getRequestsForUser"] = function getRequestsForUser(guildId, userId) {
   return found;
 };
 GuildJoinRequestStoreV2.displayName = "GuildJoinRequestStoreV2";
-const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"), {
+const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(dispatcherDefault, {
   GUILD_JOIN_REQUEST_BY_ID_FETCH_SUCCESS: function handleFetchByIdSuccess(joinRequest) {
     joinRequest = joinRequest.joinRequest;
     closure_19[joinRequest.joinRequestId] = joinRequest;
@@ -193,8 +194,6 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
     }
   },
   GUILD_JOIN_REQUESTS_FOR_USER_FETCH_SUCCESS: function handleFetchForUserSuccess(requests) {
-    let guildId;
-    let userId;
     requests = requests.requests;
     ({ guildId, userId } = requests);
     const item = requests.forEach(upsert);
@@ -202,16 +201,12 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
     closure_8[combined] = requests.map((joinRequestId) => joinRequestId.joinRequestId);
   },
   GUILD_JOIN_REQUESTS_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let guildId;
-    let requests;
-    let status;
-    let total;
     ({ requests, guildId } = arg0);
-    let c9 = false;
+    c9 = false;
     ({ status, total } = arg0);
     if (status === MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.SUBMITTED) {
       closure_6[guildId] = total;
-      let result = map.set(guildId, t());
+      let result = map.set(guildId, tDefault());
     }
     const item = requests.forEach((joinRequestId) => {
       closure_19[joinRequestId.joinRequestId] = joinRequestId;
@@ -230,10 +225,10 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
     });
   },
   GUILD_JOIN_REQUESTS_FETCH_START: function handleFetchStart() {
-    let c9 = true;
+    c9 = true;
   },
   GUILD_JOIN_REQUESTS_FETCH_FAILURE: function handleFetchFailure() {
-    let c9 = false;
+    c9 = false;
   },
   GUILD_JOIN_REQUEST_CREATE: handleGuildJoinRequestCreateOrUpdate,
   GUILD_JOIN_REQUEST_UPDATE: handleGuildJoinRequestCreateOrUpdate,
@@ -249,17 +244,12 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
     }
   },
   GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function handleSetApplicationTab(arg0) {
-    let applicationTab;
-    let guildId;
     ({ guildId, applicationTab } = arg0);
     if (applicationTab !== dependencyMap2[guildId]) {
       dependencyMap2[guildId] = applicationTab;
     }
   },
   GUILD_JOIN_REQUESTS_SET_SORT_ORDER: function handleSetSortOrder(arg0) {
-    let applicationStatus;
-    let guildId;
-    let sortOrder;
     ({ guildId, sortOrder, applicationStatus } = arg0);
     if (sortOrder !== dependencyMap3[guildId]) {
       dependencyMap3[guildId] = sortOrder;
@@ -278,6 +268,6 @@ const guildJoinRequestStoreV2 = new GuildJoinRequestStoreV2(require("dispatcher"
     closure_18[guildId.guildId] = guildId.request;
   }
 });
-let result = require("t").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestStore.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestStore.tsx");
 
 export default guildJoinRequestStoreV2;

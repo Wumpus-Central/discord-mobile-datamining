@@ -1,27 +1,27 @@
 // discord_app/modules/forums/native/posts/ForumPostPinIcon.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/11180_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import registerAssetDefault from "registerAsset" /* 11180 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { pin: null, pinIcon: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, width: 23, height: 23, marginEnd: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 14, width: 14, tintColor: require("Themes").colors.WHITE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { height: 14, width: 14, tintColor: require("Themes").colors.WHITE };
-const result = require("jsxProd").fileFinishedImporting("modules/forums/native/posts/ForumPostPinIcon.tsx");
+createCacheKey[1] = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { height: 14, width: 14, tintColor: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostPinIcon.tsx");
 
 export default function ForumPostPinIcon(containerStyle) {
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = { style: items, children: null };
   items = [tmp.pin, containerStyle.containerStyle];
-  obj = { source: null, style: null };
-  obj[0] = registerAsset;
-  obj[1] = tmp.pinIcon;
-  obj[1] = jsx(Button.Icon, { source: null, style: null });
-  return <View source={null} style={null} />;
+  obj = { source: registerAssetDefault, style: tmp.pinIcon };
+  obj[1] = jsx(Button.Icon, { source: registerAssetDefault, style: tmp.pinIcon });
+  return <View source={registerAssetDefault} style={tmp.pinIcon} />;
 };

@@ -1,7 +1,9 @@
 // discord_app/modules/errors/av_errors/definitions/AVErrorStreamReconnecting.tsx
-import { ApplicationStreamStates } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("getVoiceChannelErrorContext").fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamReconnecting.tsx");
+const ApplicationStreamStates = ME.ApplicationStreamStates;
+const result = set.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamReconnecting.tsx");
 
 export const AVErrorStreamReconnectingDefinition = {
   getActiveErrors(activeStreams) {

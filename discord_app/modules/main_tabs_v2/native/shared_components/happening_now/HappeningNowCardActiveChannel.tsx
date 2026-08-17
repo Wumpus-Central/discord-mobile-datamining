@@ -1,20 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx
-import importAllResult from "getChannelIcon";
-import { View } from "computeChannelName";
-import truncateOldMessageData from "truncateOldMessageData";
-import { MAX_STORED_MESSAGES } from "truncateOldMessageData";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleTypingStart from "handleTypingStart";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import ME from "ME";
-import jsxProd from "HappeningNowAvatarStack";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "truncateOldMessageData" /* 13255 */;
+import { MAX_STORED_MESSAGES } from "truncateOldMessageData" /* 13255 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "handleTypingStart" /* 11152 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { HappeningNowCardTrackingType as closure_10 } from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
 const require = arg1;
 let c3 = importAllResult;
 ({ AnalyticEvents: unpackModuleId, Routes: closure_12 } = ME);
@@ -31,19 +27,19 @@ const memoResult = importAllResult.memo((index) => {
   let stateFromStoresArray;
   const tmp = callback2();
   let obj = index(channelId[10]);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(channelId));
-  let obj1 = index(channelId[10]);
-  const items1 = [handleTypingStart, mergeGuildAvatar];
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(channelId));
+  obj1 = index(channelId[10]);
+  const items1 = [closure_8, closure_9];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => {
-    const keys = guildId(channelId[11]).keys(outer1_8.getTypingUsers(channelId));
+    const keys = guildId(channelId[11]).keys(closure_1_8.getTypingUsers(channelId));
     const mapped = keys.map((arg0) => user.getUser(arg0));
     return mapped.filter(index(channelId[12]).isNotNullish)[0];
   });
   let obj2 = index(channelId[10]);
-  const items2 = [truncateOldMessageData];
+  const items2 = [closure_5];
   stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
-    let channelMessageData = outer1_5.getChannelMessageData(channelId);
+    let channelMessageData = closure_1_5.getChannelMessageData(channelId);
     if (channelMessageData == null) {
       channelMessageData = [];
     }
@@ -58,7 +54,7 @@ const memoResult = importAllResult.memo((index) => {
   let obj3 = index(channelId[14]);
   const ensureHydratedUsers = obj3.useEnsureHydratedUsers(guildId, memo);
   let obj4 = index(channelId[10]);
-  const items4 = [mergeGuildAvatar];
+  const items4 = [closure_9];
   const stateFromStoresArray1 = obj4.useStateFromStoresArray(items4, () => {
     const obj = guildId(channelId[13]);
     const arr = guildId(channelId[13]);
@@ -68,9 +64,9 @@ const memoResult = importAllResult.memo((index) => {
   const items5 = [channelId, index, guildId];
   const callback = stateFromStoresArray.useCallback(() => {
     let obj = guildId(channelId[15]);
-    obj = { order: index, guild_id: guildId, type: outer1_10.ACTIVE_CHANNEL_CARD, destination_channel_id: channelId };
-    obj.track(outer1_11.ACTIVITY_CARD_CLICKED, obj);
-    index(channelId[16]).transitionTo(outer1_12.CHANNEL(guildId, channelId));
+    obj = { order: index, guild_id: guildId, type: closure_1_10.ACTIVE_CHANNEL_CARD, destination_channel_id: channelId };
+    obj.track(closure_1_11.ACTIVITY_CARD_CLICKED, obj);
+    index(channelId[16]).transitionTo(closure_1_12.CHANNEL(guildId, channelId));
   }, items5);
   if (null == stateFromStores) {
     return null;
@@ -119,6 +115,6 @@ const memoResult = importAllResult.memo((index) => {
   }
   tmp9 = guildId;
 });
-const result = require("truncateOldMessageData").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActiveChannel.tsx");
 
 export default memoResult;

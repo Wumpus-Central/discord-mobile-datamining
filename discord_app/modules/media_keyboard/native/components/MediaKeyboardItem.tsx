@@ -1,55 +1,34 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardItem.tsx
-import importAllResult from "registerAsset";
-import get_ActivityIndicator from "openImagePickerUnhandled";
-import map from "map";
-import frozen from "frozen";
-import jsxProd from "useWindowDimensions";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10227_registerAsset.js";
-import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import Text from "Text" /* 4734 */;
+import ImageIcon from "ImageIcon" /* 6882 */;
+import AttachmentIcon from "AttachmentIcon" /* 10051 */;
+import registerAssetDefault from "registerAsset" /* 10227 */;
+import CameraIcon from "CameraIcon" /* 10287 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "map" /* 4824 */;
+import frozen from "frozen" /* 10283 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let Pressable;
-let c10;
-let c4;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function NewCaption(arg0) {
-  let label;
-  let style;
-  let textStyle;
   ({ label, style, textStyle } = arg0);
   const tmp = callback3();
   let obj = { style: items, children: null };
   items = [tmp.labelContainer, style];
-  obj = { source: null, style: null };
-  obj[0] = registerAsset;
-  obj[1] = tmp.icon;
+  obj = { source: registerAssetDefault, style: tmp.icon };
   const items1 = [callback(Button.Icon, obj), callback(Text.Text, { style: textStyle, color: "text-overlay-light", variant: "text-xs/bold", children: label })];
   obj[1] = items1;
   return callback2(closure_4, obj);
 }
 function MediaKeyboardImage(draftType) {
-  let channelId;
-  let disableWhenReachedLimit;
-  let disabled;
-  let index;
-  let numItemsPerRow;
-  let size;
-  let totalNumItems;
-  let uploadLimit;
   draftType = draftType.draftType;
   index = draftType;
   const item = draftType.item;
@@ -72,7 +51,7 @@ function MediaKeyboardImage(draftType) {
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     const obj = {
       upload: image.findUpload(totalNumItems, index, (id) => {
-        let doesImageMatchUploadResult = outer1_0(outer1_2[13]).doesImageMatchUpload(map, id);
+        let doesImageMatchUploadResult = closure_1_0(closure_1_2[13]).doesImageMatchUpload(closure_6, id);
         if (doesImageMatchUploadResult) {
           doesImageMatchUploadResult = null == closure_5 || closure_5.includes(id.id);
           const obj2 = closure_5;
@@ -93,17 +72,17 @@ function MediaKeyboardImage(draftType) {
     return obj;
   }, items1);
   constants = tmp5;
-  let obj1 = onPressItem;
+  obj1 = onPressItem;
   const items2 = [channelId, item, null != stateFromStoresObject.upload, onPressItem, onLongPressItem];
   const memo = onPressItem.useMemo(() => ({
     onPress() {
-      let obj = outer1_1(outer1_2[14]);
+      let obj = closure_1_1(closure_1_2[14]);
       obj.hideNativeMenu();
       obj = { channelId: closure_2, item: closure_1, isIncluded: closure_7 };
       callback(obj);
     },
     onLongPress() {
-      let obj = outer1_1(outer1_2[14]);
+      let obj = closure_1_1(closure_1_2[14]);
       obj.hideNativeMenu();
       if (closure_4 != null) {
         obj = { channelId: null, item: null, isIncluded: null };
@@ -257,8 +236,6 @@ function MediaKeyboardImage(draftType) {
   stringResult = intl2.string(tmp2(tmp3[15]).t.SkfkEJ);
 }
 function MediaKeyboardDummy(arg0) {
-  let isFirstInRow;
-  let size;
   ({ size, isFirstInRow } = arg0);
   const tmp = callback3();
   const items = [tmp.imageContainer, ];
@@ -272,14 +249,6 @@ function MediaKeyboardDummy(arg0) {
   return closure_9(closure_4, obj);
 }
 function MediaKeyboardSpecialButton(arg0) {
-  let accessibilityLabel;
-  let children;
-  let disabled;
-  let index;
-  let numItemsPerRow;
-  let onPress;
-  let size;
-  let totalNumItems;
   ({ size, disabled, index, totalNumItems, numItemsPerRow } = arg0);
   index = undefined;
   numItemsPerRow = undefined;
@@ -289,7 +258,7 @@ function MediaKeyboardSpecialButton(arg0) {
   let obj = index(totalNumItems[5]);
   const sharedValue = obj.useSharedValue(0);
   index = sharedValue;
-  const tmp3 = hexToRgba();
+  const tmp3 = callback4();
   const backgroundColor = tmp3.backgroundColor;
   numItemsPerRow = backgroundColor;
   const pressedBackgroundColor = tmp3.pressedBackgroundColor;
@@ -385,60 +354,45 @@ function MediaKeyboardSpecialButton(arg0) {
 }
 let c3 = importAllResult;
 ({ View: c4, Pressable } = get_ActivityIndicator);
-({ ALAssetsType: error, DeviceMediaType: metroImportAll } = frozen);
+({ ALAssetsType: error, DeviceMediaType: closure_8 } = frozen);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
-let closure_11 = require("module_4115").createAnimatedComponent(Pressable);
+let closure_11 = importDefaultResult.createAnimatedComponent(Pressable);
 let obj = { container: { flexDirection: "row", paddingHorizontal: 12, alignItems: "center" }, image: null, imageContainer: null, labelContainer: null, mediaKeyboardItemLabelContainer: null, icon: null, checkIcon: null, checkIconContainer: null, selectedOverlay: null, specialButton: null, disabled: null, imageDisabled: null };
-obj = { backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 obj[1] = obj;
-obj[2] = { borderRadius: require("Themes").radii.xs, overflow: "hidden", position: "relative" };
+obj[2] = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
 createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: null, borderRadius: null, paddingHorizontal: 5, paddingVertical: 4, position: "absolute", left: 8, bottom: 8 };
-createCacheKey[2] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_700, 0.6);
-createCacheKey[3] = require("Themes").radii.xs;
+createCacheKey[2] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_700, 0.6);
+createCacheKey[3] = ThemesDefault.radii.xs;
 obj[3] = createCacheKey;
 obj[4] = { right: 10 };
-let obj1 = { borderRadius: require("Themes").radii.xs, overflow: "hidden", position: "relative" };
-obj[5] = { width: 12, height: 12, tintColor: require("Themes").colors.WHITE, marginEnd: 4 };
-let obj3 = { width: 12, height: 12, tintColor: require("Themes").colors.WHITE, marginEnd: 4 };
-obj[6] = { width: 14, height: 14, color: require("Themes").colors.BACKGROUND_BRAND };
-let obj5 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.WHITE, borderWidth: 1, borderColor: null };
-obj5[10] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BLACK, 0.1);
+let obj1 = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
+obj[5] = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE, marginEnd: 4 };
+let obj3 = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE, marginEnd: 4 };
+obj[6] = { width: 14, height: 14, color: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj5 = { width: 24, height: 24, position: "absolute", justifyContent: "center", alignItems: "center", right: 6, top: 6, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.WHITE, borderWidth: 1, borderColor: null };
+obj5[10] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.1);
 obj[7] = obj5;
 let obj6 = {};
 const merged = Object.assign(get_ActivityIndicator.StyleSheet.absoluteFillObject);
-obj6.borderRadius = require("Themes").radii.xs;
-obj6.backgroundColor = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BLACK, 0.3);
+obj6.borderRadius = ThemesDefault.radii.xs;
+obj6.backgroundColor = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.3);
 obj[8] = obj6;
 obj[9] = { flexDirection: "column", justifyContent: "center", alignItems: "center", gap: 8 };
 obj[10] = { opacity: 0.4 };
 obj[11] = { opacity: 0.2 };
 let closure_12 = createCacheKey.createStyles(obj);
-hexToRgba = { backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE };
-hexToRgba = createCacheKey.createStyleProperties(hexToRgba);
+hexToRgba = { backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, pressedBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_ACTIVE };
+let closure_16 = createCacheKey.createStyleProperties(hexToRgba);
 let closure_17 = { code: "function MediaKeyboardItemTsx1(){const{withTiming,interpolateColor,pressed,backgroundColor,pressedBackgroundColor,Easing}=this.__closure;return{backgroundColor:withTiming(interpolateColor(pressed.get(),[0,1],[backgroundColor,pressedBackgroundColor]),{duration:200,easing:Easing.out(Easing.quad)})};}" };
-let obj4 = { width: 14, height: 14, color: require("Themes").colors.BACKGROUND_BRAND };
+let obj4 = { width: 14, height: 14, color: ThemesDefault.colors.BACKGROUND_BRAND };
 const memoResult = importAllResult.memo((arg0) => {
-  let Pressable;
-  let closure_10;
-  let closure_3;
-  let closure_4;
-  let closure_7;
-  let closure_8;
-  let closure_9;
-  let dependencyMap;
-  let handleAttachPress;
-  let handleCameraPress;
-  let handleViewAllPhotosPress;
-  let importDefault;
-  let items;
-  let numPerRow;
-  let require;
   ({ items, channel: require, draftType: importDefault, onPressItem: dependencyMap, onLongPressItem: closure_3, rowIndex: closure_4, totalNumItems: Pressable, numPerRow } = arg0);
   ({ includedUploadIds: closure_7, uploadLimit: closure_8, disableWhenReachedLimit: closure_9, disabled: closure_10 } = arg0);
-  let closure_11;
+  closure_11 = undefined;
   let obj;
   ({ handleCameraPress, handleAttachPress, handleViewAllPhotosPress } = arg0);
-  closure_11 = (useWindowDimensions().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
+  closure_11 = (useWindowDimensionsDefault().width - (24 + 4 * (numPerRow - 1))) / numPerRow;
   obj = { camera: null, allphotos: null, attach: null };
   obj = { text: getSystemLocale.t.uje3P9, onPress: handleCameraPress, Icon: CameraIcon.CameraIcon };
   obj[0] = obj;
@@ -446,15 +400,15 @@ const memoResult = importAllResult.memo((arg0) => {
   obj[1] = obj;
   const tmp = obj();
   obj[2] = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
-  let obj1 = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
+  obj1 = { text: getSystemLocale.t["8Hvr3+"], onPress: handleAttachPress, Icon: AttachmentIcon.AttachmentIcon };
   return callback(closure_4, {
     style: tmp.container,
     children: items.map((type) => {
       if (null == type) {
-        let obj = { size: null, isFirstInRow: null };
+        obj = { size: null, isFirstInRow: null };
         obj[0] = closure_11;
         obj[1] = 0 === arg1;
-        return outer1_9(outer1_15, obj, arg1);
+        return closure_1_9(closure_1_15, obj, arg1);
       } else {
         let hasItem = "type" in type;
         if (hasItem) {
@@ -466,15 +420,15 @@ const memoResult = importAllResult.memo((arg0) => {
           obj[0] = closure_11;
           obj[1] = obj[type.type].onPress;
           obj[2] = closure_10;
-          const intl = outer1_0(outer1_2[15]).intl;
+          const intl = closure_1_0(closure_1_2[15]).intl;
           obj[3] = intl.string(obj[type.type].text);
           obj[4] = closure_4 * numPerRow + arg1;
           obj[5] = closure_5;
           obj[6] = numPerRow;
-          const obj1 = { color: null, size: "lg" };
-          obj1[0] = outer1_1(outer1_2[7]).colors.ICON_SUBTLE;
-          obj[7] = outer1_9(obj[type.type].Icon, obj1);
-          return outer1_9(outer1_18, obj, arg1);
+          obj1 = { color: null, size: "lg" };
+          obj1[0] = closure_1_1(closure_1_2[7]).colors.ICON_SUBTLE;
+          obj[7] = closure_1_9(obj[type.type].Icon, obj1);
+          return closure_1_9(closure_1_18, obj, arg1);
         } else {
           obj = { channelId: null, draftType: null, index: null, totalNumItems: null, numItemsPerRow: null, item: null, includedUploadIds: null, uploadLimit: null, disableWhenReachedLimit: null, size: null, onPressItem: null, onLongPressItem: null, disabled: null };
           obj[0] = id.id;
@@ -490,13 +444,13 @@ const memoResult = importAllResult.memo((arg0) => {
           obj[10] = closure_2;
           obj[11] = closure_3;
           obj[12] = closure_10;
-          return outer1_9(outer1_14, obj, arg1);
+          return closure_1_9(closure_1_14, obj, arg1);
         }
       }
     })
   });
 });
-let result = require("map").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");
+let result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardItem.tsx");
 
 export default memoResult;
 export const PARENT_PADDING = 24;

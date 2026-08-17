@@ -1,27 +1,26 @@
 // discord_app/modules/gif_picker/native/GIFPickerSearchSuggestions.tsx
-import { View } from "get ActivityIndicator";
-import getFormatFromUrl from "getFormatFromUrl";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "getFormatFromUrl" /* 10194 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { suggestionsContainer: null, footerSuggestionsContainer: null, footerSuggestionsTitle: null };
-obj = { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: require("Themes").space.PX_8 };
+obj = { justifyContent: "center", flexDirection: "row", flexWrap: "wrap", gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-createCacheKey = { justifyContent: "flex-start", paddingVertical: require("Themes").space.PX_16 };
+createCacheKey = { justifyContent: "flex-start", paddingVertical: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
-obj[2] = { marginBottom: require("Themes").space.PX_16, textAlign: "center" };
+obj[2] = { marginBottom: ThemesDefault.space.PX_16, textAlign: "center" };
 let closure_7 = createCacheKey.createStyles(obj);
-const obj2 = { marginBottom: require("Themes").space.PX_16, textAlign: "center" };
+const obj2 = { marginBottom: ThemesDefault.space.PX_16, textAlign: "center" };
 const memoResult = importAllResult.memo(function GIFPickerSearchSuggestions(onClickSuggestion) {
   onClickSuggestion = onClickSuggestion.onClickSuggestion;
   const tmp = callback3();
   let obj = onClickSuggestion(589);
-  const items = [getFormatFromUrl];
+  const items = [closure_4];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => suggestions.getSuggestions());
   let tmp4 = null;
   if (0 !== stateFromStoresArray.length) {
@@ -32,17 +31,19 @@ const memoResult = importAllResult.memo(function GIFPickerSearchSuggestions(onCl
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t["3JGJo2"]);
     const items1 = [callback(tmp2(4734).Text, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.suggestionsContainer;
-    obj1[1] = stateFromStoresArray.map((arg0) => {
-      let closure_0 = arg0;
-      const obj = { size: "sm", variant: "secondary", hitSlop: null, text: null, onPress: null };
-      obj[2] = outer1_1(outer1_2[5]).space.PX_8;
-      obj[3] = arg0;
-      obj[4] = function onPress() {
-        return callback(callback);
-      };
-      return outer1_5(onClickSuggestion(outer1_2[9]).Button, obj, arg0);
+    obj1[1] = stateFromStoresArray.map((text) => {
+      closure_0 = text;
+      return closure_1_5(onClickSuggestion(closure_1_2[9]).Button, {
+        size: "sm",
+        variant: "secondary",
+        hitSlop: closure_1_1(closure_1_2[5]).space.PX_8,
+        text,
+        onPress() {
+          return text(text);
+        }
+      }, text);
     });
     items1[1] = callback(View, obj1);
     obj[1] = items1;
@@ -50,6 +51,6 @@ const memoResult = importAllResult.memo(function GIFPickerSearchSuggestions(onCl
   }
   return tmp4;
 });
-const result = require("getFormatFromUrl").fileFinishedImporting("modules/gif_picker/native/GIFPickerSearchSuggestions.tsx");
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerSearchSuggestions.tsx");
 
 export default memoResult;

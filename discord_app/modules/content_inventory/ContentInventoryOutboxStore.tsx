@@ -1,14 +1,16 @@
 // discord_app/modules/content_inventory/ContentInventoryOutboxStore.tsx
-import { Store } from "initialize";
-import set from "dispatcher";
-import { isMatchingListeningActivity } from "matchUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isMatchingListeningActivity from "isMatchingListeningActivity" /* 9046 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 let map = new Map();
 let set = new Set();
 let c4 = null;
 let c5 = false;
 let c6 = false;
+const Store = initializeDefault.Store;
 class ContentInventoryOutboxStore extends Store {
 }
 const prototype = ContentInventoryOutboxStore.prototype;
@@ -46,19 +48,19 @@ Object.defineProperty(prototype, "hasInitialized", {
   set: undefined
 });
 ContentInventoryOutboxStore.displayName = "ContentInventoryOutboxStore";
-const contentInventoryOutboxStore = new ContentInventoryOutboxStore(require("dispatcher"), {
+const contentInventoryOutboxStore = new ContentInventoryOutboxStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const map = new Map();
-    const set = new Set();
-    let c4 = null;
-    let c5 = false;
-    let c6 = true;
+    map = new Map();
+    set = new Set();
+    c4 = null;
+    c5 = false;
+    c6 = true;
   },
   LOGOUT: function handleLogOut() {
-    const map = new Map();
-    const set = new Set();
-    let c4 = null;
-    let c5 = false;
+    map = new Map();
+    set = new Set();
+    c4 = null;
+    c5 = false;
   },
   CONTENT_INVENTORY_FETCH_OUTBOX_START: function handleFetchOutboxStart(userId) {
     set.add(userId.userId);
@@ -75,14 +77,12 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(require("dis
     set.delete(userId.userId);
   },
   CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function handleDeleteOutboxEntryStart() {
-    let c4 = null;
-    let c5 = true;
+    c4 = null;
+    c5 = true;
   },
   CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function handleDeleteOutboxEntrySuccess(arg0) {
-    let require;
-    let userId;
     ({ entry: require, userId } = arg0);
-    let c4 = null;
+    c4 = null;
     const value = map.get(userId);
     if (null == value) {
       return false;
@@ -93,16 +93,16 @@ const contentInventoryOutboxStore = new ContentInventoryOutboxStore(require("dis
       const merged = Object.assign(value);
       obj.entries = found;
       const result = map.set(userId, obj);
-      let c5 = false;
+      c5 = false;
     }
   },
   CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function handleDeleteOutboxEntryFailure(error) {
     error = error.error;
-    let c5 = false;
+    c5 = false;
   },
   CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function handleClearError() {
-    let c4 = null;
-    let c5 = false;
+    c4 = null;
+    c5 = false;
   }
 });
 let result = set.fileFinishedImporting("modules/content_inventory/ContentInventoryOutboxStore.tsx");

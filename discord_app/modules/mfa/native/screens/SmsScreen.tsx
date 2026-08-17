@@ -1,27 +1,19 @@
 // discord_app/modules/mfa/native/screens/SmsScreen.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { Endpoints } from "ME";
-import jsxProd from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { Endpoints } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-const result = require("noop").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/SmsScreen.tsx");
 
 export default function SmsScreen(mfaChallenge) {
-  let c3;
-  let c6;
-  let c7;
-  let tmp10;
-  let tmp12;
-  let tmp6;
   mfaChallenge = mfaChallenge.mfaChallenge;
   const finish = mfaChallenge.finish;
-  let dependencyMap;
+  dependencyMap = undefined;
   c3 = undefined;
   let first;
   let React;
@@ -40,10 +32,10 @@ export default function SmsScreen(mfaChallenge) {
   function _handleChange(c6, arg1) {
     const self = this;
     const tmp = _undefined((arg0) => {
-      let closure_0 = arg0;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0) {
         if (v02 === 2) {
           v02 = 3;
@@ -74,17 +66,17 @@ export default function SmsScreen(mfaChallenge) {
               } else {
                 const callback = tmp3;
                 v0(lib);
-                SMS_CODE_LENGTH = lib(outer1_2[10]).SMS_CODE_LENGTH;
+                SMS_CODE_LENGTH = lib(closure_1_2[10]).SMS_CODE_LENGTH;
                 if (lib.length === SMS_CODE_LENGTH) {
-                  outer1_2(null);
-                  outer1_3(true);
+                  closure_1_2(null);
+                  closure_1_3(true);
                   v0 = 1;
-                  const obj1 = { mfaType: "sms", data: null };
+                  obj1 = { mfaType: "sms", data: null };
                   obj1[1] = tmp37;
                   c6 = 2;
                   v02 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = outer1_1(obj1);
+                  obj2[0] = closure_1_1(obj1);
                   return obj2;
                 }
                 tmp37 = lib;
@@ -92,7 +84,7 @@ export default function SmsScreen(mfaChallenge) {
             } else {
               if (1 === SMS_CODE_LENGTH) {
                 v0 = 0;
-                lib = _slicedToArray;
+                lib = closure_4;
                 const body = lib.body;
                 let message;
                 if (body != null) {
@@ -120,7 +112,7 @@ export default function SmsScreen(mfaChallenge) {
             }
             v02 = 3;
           } catch (tmp28) {
-            _slicedToArray = tmp28;
+            closure_4 = tmp28;
             if (tmp4 === v0) {
               v02 = tmp2;
               throw tmp28;
@@ -131,7 +123,7 @@ export default function SmsScreen(mfaChallenge) {
         }
       })();
     });
-    const _handleChange = tmp;
+    closure_9 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -169,19 +161,19 @@ export default function SmsScreen(mfaChallenge) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let body;
-              outer1_2(null);
-              outer1_3(true);
-              const intl2 = outer1_0(outer1_2[8]).intl;
-              v0(intl2.string(outer1_0(outer1_2[8]).t.LQdCQE));
-              let c4 = 2;
-              const HTTP = outer1_0(outer1_2[9]).HTTP;
-              const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-              obj1[0] = outer1_7.LOGIN_SMS_SEND;
+              closure_1_2(null);
+              closure_1_3(true);
+              const intl2 = closure_1_0(closure_1_2[8]).intl;
+              v0(intl2.string(closure_1_0(closure_1_2[8]).t.LQdCQE));
+              c4 = 2;
+              const HTTP = closure_1_0(closure_1_2[9]).HTTP;
+              obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
+              obj1[0] = closure_1_7.LOGIN_SMS_SEND;
               const obj2 = { ticket: null };
-              obj2[0] = outer1_0.ticket;
+              obj2[0] = closure_1_0.ticket;
               obj1[1] = obj2;
               c5 = 3;
               v0 = 1;
@@ -196,11 +188,11 @@ export default function SmsScreen(mfaChallenge) {
           } else {
             if (2 === tmp8) {
               c4 = 1;
-              const outer1_1 = callback;
-              let message = outer1_1.message;
+              closure_1 = callback;
+              let message = closure_1.message;
               body = message;
               if (message == null) {
-                body = outer1_1.body;
+                body = closure_1.body;
                 message = undefined;
                 if (body != null) {
                   message = body.message;
@@ -210,7 +202,7 @@ export default function SmsScreen(mfaChallenge) {
               closure_2(body);
               v0(undefined);
               c4 = 0;
-              outer1_3(false);
+              closure_1_3(false);
               v0 = 3;
               const tmp16 = closure_2;
             } else if (arg0 === 1) {
@@ -218,14 +210,14 @@ export default function SmsScreen(mfaChallenge) {
               throw arg1;
             } else if (arg0 !== 2) {
               body = arg1;
-              const intl = outer1_0(outer1_2[8]).intl;
+              const intl = closure_1_0(closure_1_2[8]).intl;
               const obj4 = { phoneNumber: null };
               obj4[0] = body.body.phone;
-              v0(intl.formatToPlainString(outer1_0(outer1_2[8]).t["8r6h7+"], obj4));
+              v0(intl.formatToPlainString(closure_1_0(closure_1_2[8]).t["8r6h7+"], obj4));
               c4 = 1;
             }
             c4 = 0;
-            outer1_3(false);
+            closure_1_3(false);
             v0 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
@@ -244,7 +236,7 @@ export default function SmsScreen(mfaChallenge) {
         }
       }
     });
-    const _handleResend = tmp;
+    closure_10 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -276,8 +268,8 @@ export default function SmsScreen(mfaChallenge) {
     obj = { ticket: mfaChallenge.ticket };
     const postResult = HTTP.post(obj);
     HTTP.post(obj).then((body) => {
-      const intl = outer1_0(outer1_2[8]).intl;
-      callback(intl.formatToPlainString(outer1_0(outer1_2[8]).t["8r6h7+"], { phoneNumber: body.body.phone }));
+      const intl = closure_1_0(closure_1_2[8]).intl;
+      callback(intl.formatToPlainString(closure_1_0(closure_1_2[8]).t["8r6h7+"], { phoneNumber: body.body.phone }));
     }).catch((body) => {
       body = body.body;
       let message;
@@ -297,9 +289,7 @@ export default function SmsScreen(mfaChallenge) {
   obj[0] = intl2.string(mfaChallenge(1236).t.o4JNrO);
   obj[1] = tmp10;
   obj = { style: screenStyles.inputContainer, children: null };
-  let obj1 = { autoFocus: true, autoCapitalize: "characters", maxLength: null, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: null, label: null, accessibilityLabel: null, placeholder: null, errorMessage: null };
-  obj1[2] = mfaChallenge(15129).SMS_CODE_LENGTH;
-  obj1[6] = handleChange;
+  obj1 = { autoFocus: true, autoCapitalize: "characters", maxLength: mfaChallenge(15129).SMS_CODE_LENGTH, autoComplete: "sms-otp", textContentType: "oneTimeCode", keyboardType: "number-pad", onChange: handleChange, label: null, accessibilityLabel: null, placeholder: null, errorMessage: null };
   const intl3 = mfaChallenge(1236).intl;
   obj1[7] = intl3.string(mfaChallenge(1236).t["/sHnXc"]);
   const intl4 = mfaChallenge(1236).intl;

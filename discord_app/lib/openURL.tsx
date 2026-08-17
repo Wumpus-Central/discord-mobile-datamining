@@ -1,14 +1,14 @@
 // discord_app/lib/openURL.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _openURL() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
       if (c4 === 2) {
         c4 = 3;
@@ -36,11 +36,11 @@ function _openURL() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp2;
+              closure_2 = tmp2;
               callback(paths[1]).default(callback);
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = callback(paths[3])(paths[2], paths.paths);
               return obj1;
             }
@@ -67,7 +67,7 @@ function _openURL() {
       }
     })();
   });
-  const _openURL = tmp;
+  closure_3 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -76,7 +76,7 @@ function _openURL() {
   }
   return applyArgumentsResult;
 }
-const result = require("openInviteModal").fileFinishedImporting("lib/openURL.tsx");
+const result = require("set").fileFinishedImporting("lib/openURL.tsx");
 
 export default function openURL() {
   const self = this;

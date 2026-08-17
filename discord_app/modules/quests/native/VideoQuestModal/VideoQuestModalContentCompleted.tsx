@@ -1,48 +1,38 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx
-import preload from "preload";
-import importAllResult from "map";
-import get_ActivityIndicator from "applyOrientationLock";
-import jsxProd from "SafeAreaPaddingView";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
 ({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: false };
 let obj = { wrapper: { flexGrow: 1, flexShrink: 1 }, headerContentCopy: { flexGrow: 1, flexShrink: 1 }, closeButton: { opacity: 0.5 }, scroll: { flexGrow: 1, flexShrink: 1 }, scrollContent: { flexGrow: 1 }, content: null, contentRewardsAnimatedWrapper: null, contentRewardsWrapper: null, contentRewards: null, contentRewardsCopy: null, contentEndCardHeader: null, contentEndCardHeaderCopy: null, contentEndCard: null, image: null };
-obj = { padding: require("Themes").space.PX_16 };
+obj = { padding: ThemesDefault.space.PX_16 };
 obj[5] = obj;
 obj[6] = { flexGrow: 1, flexShrink: 0 };
 obj[7] = { flexGrow: 1, flexShrink: 0 };
 obj[8] = { alignItems: "center" };
 obj[9] = { textAlign: "center" };
-createCacheKey = { marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 obj[10] = createCacheKey;
 obj[11] = { flexGrow: 1, flexShrink: 1 };
-obj[12] = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_STRONG, paddingTop: require("Themes").space.PX_24, flexShrink: 0 };
-let obj2 = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_STRONG, paddingTop: require("Themes").space.PX_24, flexShrink: 0 };
-obj[13] = { height: 210, marginBottom: require("Themes").space.PX_24, borderRadius: require("Themes").radii.xl };
+obj[12] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_STRONG, paddingTop: ThemesDefault.space.PX_24, flexShrink: 0 };
+let obj2 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_STRONG, paddingTop: ThemesDefault.space.PX_24, flexShrink: 0 };
+obj[13] = { height: 210, marginBottom: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.xl };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function VideoQuestModalContentCompletedTsx1(){const{withDelay,ANIMATION_DELAY,withSpring,isComponentMounted,ANIMATED_CONTENT_SPRING_CONFIG,interpolate,ANIMATED_CONTENT_OFFSET_Y}=this.__closure;return{opacity:withDelay(ANIMATION_DELAY,withSpring(isComponentMounted.get(),ANIMATED_CONTENT_SPRING_CONFIG)),transform:[{translateY:withDelay(ANIMATION_DELAY,withSpring(interpolate(isComponentMounted.get(),[0,1],[ANIMATED_CONTENT_OFFSET_Y,0]),ANIMATED_CONTENT_SPRING_CONFIG))}]};}" };
-let obj3 = { height: 210, marginBottom: require("Themes").space.PX_24, borderRadius: require("Themes").radii.xl };
+let obj3 = { height: 210, marginBottom: ThemesDefault.space.PX_24, borderRadius: ThemesDefault.radii.xl };
 const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted(onRestartVideo) {
-  let claim;
-  let preload;
-  let isLoading;
-  let onClose;
-  let sourceQuestContent;
-  let tmp18;
   ({ onClose, sourceQuestContent } = onRestartVideo);
   const tmp = callback4();
   let obj = quest(14478);
   quest = obj.useVideoQuestModalContext().quest;
-  let obj1 = importAllResult;
+  obj1 = importAllResult;
   let items = [quest];
   const memo = importAllResult.useMemo(() => quest(isShareableQuestResult[7]).getQuestAsset(quest, quest(isShareableQuestResult[7]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items);
   let obj2 = quest(14508);
@@ -64,12 +54,12 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   const fn = function u() {
     let obj = { opacity: null, transform: null };
     const obj2 = quest(isShareableQuestResult[12]);
-    obj[0] = obj2.withDelay(125, quest(isShareableQuestResult[13]).withSpring(sharedValue.get(), outer1_10));
+    obj[0] = obj2.withDelay(125, quest(isShareableQuestResult[13]).withSpring(sharedValue.get(), closure_1_10));
     obj = { translateY: null };
     const obj3 = quest(isShareableQuestResult[13]);
     const obj5 = quest(isShareableQuestResult[12]);
     const obj6 = quest(isShareableQuestResult[13]);
-    obj[0] = obj5.withDelay(125, obj6.withSpring(quest(isShareableQuestResult[12]).interpolate(sharedValue.get(), [0, 1], [75, 0]), outer1_10));
+    obj[0] = obj5.withDelay(125, obj6.withSpring(quest(isShareableQuestResult[12]).interpolate(sharedValue.get(), [0, 1], [75, 0]), closure_1_10));
     const items = [obj];
     obj[1] = items;
     return obj;
@@ -85,7 +75,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   }, items1);
   const tmp2Result1 = quest(4115);
   let isShareableQuestResult = quest(7474).isShareableQuest(quest.config);
-  const dependencyMap = isShareableQuestResult;
+  dependencyMap = isShareableQuestResult;
   const items2 = [isShareableQuestResult, quest.id];
   const callback = obj1.useCallback(() => {
     if (closure_2) {
@@ -109,7 +99,7 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
     str = str2;
   }
   const tmp2Result2 = quest(7474);
-  [tmp18, preload] = callback(obj1.useState(null), 2);
+  [tmp18, closure_3] = callback(obj1.useState(null), 2);
   const callback1 = obj1.useCallback((nativeEvent) => {
     callback(nativeEvent.nativeEvent.layout.height);
   }, []);
@@ -129,11 +119,9 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   const obj7 = { style: items5, children: null };
   items5 = [tmp.contentRewardsAnimatedWrapper, { minHeight: sum }, animatedStyle];
   let tmp6Result = tmp6(8125);
-  const obj8 = { align: "center", justify: "center", spacing: null, style: null, children: null };
-  obj8[2] = sharedValue(712).space.PX_24;
-  const items6 = [, ];
+  const obj8 = { align: "center", justify: "center", spacing: sharedValue(712).space.PX_24, style: items6, children: null };
+  items6 = [, ];
   ({ content: arr7[0], contentRewardsWrapper: arr7[1] } = tmp);
-  obj8[3] = items6;
   if (isLoading) {
     if (!isClaiming) {
       const items7 = [tmp22(closure_5, {}), ];
@@ -248,6 +236,6 @@ const memoResult = importAllResult.memo(function VideoQuestModalContentCompleted
   obj25[2] = items14;
   callback3(closure_7, obj25);
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalContentCompleted.tsx");
 
 export default memoResult;

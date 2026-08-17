@@ -1,8 +1,10 @@
 // discord_app/modules/guilds_bar/GuildsTree.tsx
-import { apply } from "../../../_runtime/00012_apply.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import set from "set" /* 2 */;
+import apply from "apply" /* 12 */;
+import _modDef38 from "module_38" /* 38 */;
+
 let obj = { ROOT: "root", FOLDER: "folder", GUILD: "guild" };
-const result = require("set").fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
+const result = set.fileFinishedImporting("modules/guilds_bar/GuildsTree.tsx");
 class GuildsTree {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -16,7 +18,7 @@ class GuildsTree {
 const prototype = GuildsTree.prototype;
 prototype["getSnapshot"] = function getSnapshot() {
   const self = this;
-  let obj = {};
+  obj = {};
   for (const key10005 in this.nodes) {
     let tmp = key10005;
     let tmp2 = self.nodes[key10005];
@@ -73,10 +75,10 @@ prototype["moveNextTo"] = function moveNextTo(node, node1, moveToBelow) {
   if (tmp7) {
     tmp7 = root.type === tmp6.FOLDER;
   }
-  00038__(!tmp7, "[GUILDS TREE] Tried moving a folder (" + node.id + ") inside of another folder (" + root.id + ")");
+  _modDef38(!tmp7, "[GUILDS TREE] Tried moving a folder (" + node.id + ") inside of another folder (" + root.id + ")");
   const tmp3 = importDefault;
-  const tmp5 = 00038__;
-  00038__(index >= 0, "[GUILDS TREE] target node (" + node1.id + ") did not exist within its specified parent (" + node1.parentId + ")");
+  const tmp5 = _modDef38;
+  _modDef38(index >= 0, "[GUILDS TREE] target node (" + node1.id + ") did not exist within its specified parent (" + node1.parentId + ")");
   let num = 0;
   if (flag) {
     num = 1;
@@ -116,16 +118,16 @@ prototype["addNode"] = function addNode(type, c0, flag) {
   if (flag === undefined) {
     flag = true;
   }
-  00038__(type.type !== obj.ROOT, "[GUILDS TREE] Tried adding another root node into the tree");
-  00038__(null != type.id, "[GUILDS TREE] Tried adding a node without an id");
-  00038__(null == self.nodes[type.id], "[GUILDS TREE] Tried adding a node that already exists (" + type.id + ")");
+  _modDef38(type.type !== obj.ROOT, "[GUILDS TREE] Tried adding another root node into the tree");
+  _modDef38(null != type.id, "[GUILDS TREE] Tried adding a node without an id");
+  _modDef38(null == self.nodes[type.id], "[GUILDS TREE] Tried adding a node that already exists (" + type.id + ")");
   self.nodes[type.id] = type;
   self.version = self.version + 1;
   return self.moveInto(type, root, flag);
 };
 prototype["removeNode"] = function removeNode(id) {
-  00038__(id !== this.root, "[GUILDS TREE] Tried removing the root node from the tree");
-  00038__(null != id.id, "[GUILDS TREE] Tried removing a node without an id");
+  _modDef38(id !== this.root, "[GUILDS TREE] Tried removing the root node from the tree");
+  _modDef38(null != id.id, "[GUILDS TREE] Tried removing a node without an id");
   this._pluckNode(id);
   id.parentId = undefined;
   delete tmp2[tmp];
@@ -134,8 +136,8 @@ prototype["removeNode"] = function removeNode(id) {
 };
 prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   const self = this;
-  00038__(null != node.id, "[GUILDS TREE] Tried replacing a node without an id");
-  00038__(null != cloneNodeResult.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id");
+  _modDef38(null != node.id, "[GUILDS TREE] Tried replacing a node without an id");
+  _modDef38(null != cloneNodeResult.id, "[GUILDS TREE] Tried replacing a node with one that does not have an id");
   if (null != node.parentId) {
     let root = self.nodes[node.parentId];
   } else {
@@ -143,7 +145,7 @@ prototype["replaceNode"] = function replaceNode(node, cloneNodeResult) {
   }
   const children = root.children;
   const index = children.indexOf(node);
-  00038__(index >= 0, "[GUILDS TREE] existing node (" + node.id + ") did not exist within its specified parent (" + node.parentId + ")");
+  _modDef38(index >= 0, "[GUILDS TREE] existing node (" + node.id + ") did not exist within its specified parent (" + node.parentId + ")");
   const items = [...root.children];
   root.children = items;
   const children1 = root.children;
@@ -202,7 +204,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
   } else {
     const children = root.children;
     const mapped = children.map((type) => {
-      if (type.type === closure_3.GUILD) {
+      if (type.type === constants.GUILD) {
         let items = [type];
         let items1 = items;
       } else if (null == type.children) {
@@ -210,7 +212,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
       } else {
         let children = type.children;
         let mapped = children.map((type) => {
-          if (type.type === closure_3.GUILD) {
+          if (type.type === constants.GUILD) {
             let items = [type];
             let items1 = items;
           } else if (null == type.children) {
@@ -218,7 +220,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
           } else {
             let children = type.children;
             let mapped = children.map((type) => {
-              if (type.type === closure_3.GUILD) {
+              if (type.type === constants.GUILD) {
                 let items = [type];
                 let items1 = items;
               } else if (null == type.children) {
@@ -226,7 +228,7 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
               } else {
                 let children = type.children;
                 let mapped = children.map((type) => {
-                  if (type.type === closure_3.GUILD) {
+                  if (type.type === constants.GUILD) {
                     let items = [type];
                     let items1 = items;
                   } else if (null == type.children) {
@@ -256,17 +258,17 @@ prototype["sortedGuildNodes"] = function sortedGuildNodes() {
 };
 prototype["_pluckNode"] = function _pluckNode(parentId) {
   const self = this;
-  let closure_0 = parentId;
+  closure_0 = parentId;
   if (null != parentId.parentId) {
     let root = self.nodes[parentId.parentId];
   } else {
     root = self.root;
   }
-  00038__(null != root, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which doesn't exist in the tree");
+  _modDef38(null != root, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which doesn't exist in the tree");
   const children = root.children;
-  const tmp = 00038__;
+  const tmp = _modDef38;
   const tmp2 = null != root;
-  00038__(null != children, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which contains no children");
+  _modDef38(null != children, "[GUILDS TREE] source node (" + parentId.id + ") had a parent id (" + parentId.parentId + ") which contains no children");
   root.children = children.filter((arg0) => arg0 !== closure_0);
   parentId.parentId = undefined;
   self.version = self.version + 1;
@@ -279,12 +281,10 @@ export const createGuildNode = function createGuildNode(item10030, id) {
   return obj;
 };
 export const createFolderNode = function createFolderNode(folderId, parentId, closure_7) {
-  obj = { type: obj.FOLDER, id: folderId.folderId, parentId, name: null, color: null, expanded: null, children: null };
-  const folderName = folderId.folderName;
-  obj[3] = folderName;
-  const folderColor = folderId.folderColor;
+  obj = { type: obj.FOLDER, id: folderId.folderId, parentId, name: folderName, color: folderColor, expanded: null, children: null };
+  folderName = folderId.folderName;
+  folderColor = folderId.folderColor;
   let tmp = closure_7;
-  obj[4] = folderColor;
   if (null == closure_7) {
     let flag = folderId.expanded;
     if (flag == null) {

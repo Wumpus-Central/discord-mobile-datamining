@@ -1,22 +1,19 @@
 // discord_app/modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { UploadPlaceholder } from "ICYMICustomStatusRow.tsx";
-import { useReplyActions } from "useReplyActions.tsx";
+import noopAll from "noop" /* 19 */;
+import useReplyActions from "useReplyActions" /* 15762 */;
+import UploadPlaceholderDefault from "UploadPlaceholder" /* 15767 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useReplyActions").fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/CustomStatusEntryRow.tsx");
 
 export default function CustomStatusEntryRow(content) {
-  let openEmojiPicker;
-  let openReplyActionSheet;
-  let renderForScreenshot;
-  let visible;
   content = content.content;
   ({ renderForScreenshot, visible } = content);
   let obj = useReplyActions;
   const replyActions = obj.useReplyActions({ content });
   ({ openEmojiPicker, openReplyActionSheet } = replyActions);
   obj = { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } };
-  return jsx(UploadPlaceholder, { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } });
+  return jsx(UploadPlaceholderDefault, { id: content.id, userId: content.author_id, customStatusExtra: content.extra, renderForScreenshot, visible, variant: { kind: "otherUserStatus", handlePressPrimary: openReplyActionSheet, handlePressSecondary: openEmojiPicker } });
 };

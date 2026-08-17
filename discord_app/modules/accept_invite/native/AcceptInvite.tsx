@@ -1,23 +1,18 @@
 // discord_app/modules/accept_invite/native/AcceptInvite.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import { InviteStates } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { PressableCard } from "../../../design/components/Card/native/Card.native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { isDiscordFrontendDevelopment } from "../../../utils/GlobalUtils.tsx";
-import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import handleImageLoad from "handleImageLoad" /* 1469 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import map from "map" /* 4097 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { InviteStates } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function getInviteState(invite) {
   let state;
   if (invite != null) {
@@ -66,8 +61,8 @@ function getInviteState(invite) {
 }
 function InviteResolving() {
   let obj = map;
-  obj = { style: createCacheKey().resolvingContainer, children: null };
-  obj = { color: obj.useToken(Themes.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
+  obj = { style: callback4().resolvingContainer, children: null };
+  obj = { color: obj.useToken(ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT), size: "large" };
   obj[1] = callback2(closure_5, obj);
   return callback2(closure_7, obj);
 }
@@ -75,10 +70,10 @@ function AcceptInviteCardComponent(invite) {
   invite = invite.invite;
   let tmp = callback(React.useState(getInviteState(invite)), 2);
   const first = tmp[0];
-  const dependencyMap = tmp[1];
+  dependencyMap = tmp[1];
   const items = [invite, first];
   const effect = React.useEffect(() => {
-    const tmp = outer1_13(invite);
+    const tmp = closure_1_13(invite);
     if (tmp !== first) {
       const result = invite(5443).DeprecatedLayoutAnimation();
       dependencyMap(tmp);
@@ -104,24 +99,22 @@ function AcceptInviteCardComponent(invite) {
 ({ ActivityIndicator: c5, ImageBackground: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { parentContainer: null, imageStyle: null, cardContainer: null, cardContent: null, resolvingContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginVertical: 0, resizeMode: "cover" };
-createCacheKey[2] = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[2] = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[3] = { padding: 16, flex: 1, justifyContent: "center", alignItems: "center", width: "100%" };
 createCacheKey[4] = { padding: 64 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { LOADING: 0, [0]: "LOADING", DETAILS: 1, [1]: "DETAILS", ERROR: 2, [2]: "ERROR" };
-const obj1 = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
+const obj1 = { position: "absolute", flex: 1, width: "90%", alignItems: "center", justifyContent: "center", padding: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let result = require("set").fileFinishedImporting("modules/accept_invite/native/AcceptInvite.tsx");
 
 export default function AcceptInvite(invite) {
-  let height;
-  let width;
   invite = invite.invite;
   const merged = Object.assign(invite, Object.create(null));
-  const tmp2 = createCacheKey();
-  ({ height, width } = useWindowDimensions());
+  const tmp2 = callback4();
+  ({ height, width } = useWindowDimensionsDefault());
   let obj = invite;
   if (invite == null) {
     obj = {};

@@ -1,23 +1,23 @@
 // discord_app/modules/analytics_sessions/SessionHeartbeatScheduler.tsx
-import closure_3 from "ME";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import importDefaultResult from "fetchFingerprint";
-import checkIdleAFK from "checkIdleAFK";
-import importDefaultResult1 from "createRTCConnection";
-import ME from "ME";
-import isForegrounded from "isForegrounded";
-import isActiveUserRoute from "isActiveUserRoute";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { isForegrounded } from "SessionForegroundUtils.native.tsx";
-import { isActiveUserRoute } from "SessionRouteUtils.native.tsx";
-import { result } from "SessionUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import isForegrounded2 from "isForegrounded" /* 5055 */;
+import isActiveUserRoute2 from "isActiveUserRoute" /* 5056 */;
+import result2 from "result" /* 5063 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_handleConnectionOpen" /* 4495 */;
+import importDefaultResult from "fetchFingerprint" /* 1218 */;
+import closure_6 from "checkIdleAFK" /* 4974 */;
+import importDefaultResult1 from "createRTCConnection" /* 4539 */;
+import ME from "ME" /* 676 */;
+import isForegrounded from "isForegrounded" /* 5055 */;
+import isActiveUserRoute from "isActiveUserRoute" /* 5056 */;
 
-let c10;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function trackHeartbeat() {
   const self = this;
   const apply = _trackHeartbeat.apply;
@@ -58,7 +58,7 @@ function _trackHeartbeat() {
             obj[0] = arg1;
             return obj;
           } else {
-            let dependencyMap = tmp5;
+            dependencyMap = tmp5;
             let lib = tmp2;
             num2 = undefined;
             lib = undefined;
@@ -69,8 +69,8 @@ function _trackHeartbeat() {
             num2 = Date.now();
             closure_3 = 1;
             c4 = 1;
-            let obj1 = { value: null, done: false };
-            obj1[0] = outer1_38();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_38();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -114,7 +114,7 @@ function _trackHeartbeat() {
             track = lib(698).track;
             track(constants.CLIENT_HEARTBEAT, c4);
             const _performance = obj8.performance;
-            let closure_19 = _performance.now();
+            closure_19 = _performance.now();
             obj8 = num2(5057);
             num2 = obj8.drainClickstream();
             const tmp40 = lib(698);
@@ -132,7 +132,7 @@ function _trackHeartbeat() {
       }
     }
   });
-  const _trackHeartbeat = tmp;
+  closure_26 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -144,7 +144,7 @@ function _trackHeartbeat() {
 function isActive() {
   const items = [];
   if (tmp) {
-    if (isForegrounded) {
+    if (closure_22) {
       items.push("foregrounded");
     }
     if (closure_21 === constants2.RTC_CONNECTED) {
@@ -154,12 +154,12 @@ function isActive() {
   return items.length > 0;
 }
 function scheduleHeartbeatTracking() {
-  let obj = SentryUtils.native;
-  obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${isForegrounded}, Connection State: ${closure_21}` };
+  let obj = _modDef1208;
+  obj = { message: `Heartbeat Track State Parameters Changed. Foregrounded ${closure_22}, Connection State: ${closure_21}` };
   obj.addBreadcrumb(obj);
   const items = [];
   if (tmp4) {
-    if (isForegrounded) {
+    if (closure_22) {
       items.push("foregrounded");
     }
     if (closure_21 === constants2.RTC_CONNECTED) {
@@ -176,8 +176,8 @@ function scheduleHeartbeatTracking() {
       obj = { message: null };
       const _HermesInternal = HermesInternal;
       obj[0] = "Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: " + num / 1000 + " seconds. Scheduling Heartbeat";
-      SentryUtils.native.addBreadcrumb(obj);
-      const obj1 = { type: "timeout", id: null };
+      _modDef1208.addBreadcrumb(obj);
+      obj1 = { type: "timeout", id: null };
       const _setTimeout = setTimeout;
       obj1[1] = setTimeout(() => {
         callback();
@@ -189,7 +189,7 @@ function scheduleHeartbeatTracking() {
         };
       }, num);
       _null = obj1;
-      const tmpResult = SentryUtils.native;
+      const tmpResult = _modDef1208;
     }
   } else if (null == _null) {
     // // eliminated: always false
@@ -209,11 +209,11 @@ function scheduleHeartbeatTracking() {
   if (socket != null) {
     let tmp25 = null != closure_24;
     if (tmp25) {
-      tmp25 = isActiveUserRoute;
+      tmp25 = closure_23;
     }
     const items1 = [];
     if (tmp25) {
-      if (isForegrounded) {
+      if (closure_22) {
         items1.push("foregrounded");
       }
       if (closure_21 === constants2.RTC_CONNECTED) {
@@ -230,9 +230,9 @@ function validateClientSession(version) {
   let tmp = null;
   if (null != version) {
     let tmp4 = version;
-    if (version.version !== result.CLIENT_SESSION_STORAGE_VERSION) {
+    if (version.version !== result2.CLIENT_SESSION_STORAGE_VERSION) {
       const _HermesInternal = HermesInternal;
-      tmp3.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(5063).CLIENT_SESSION_STORAGE_VERSION);
+      logger.warn("Throwing away client session with invalid version: " + version.version + ", expected " + tmp2(5063).CLIENT_SESSION_STORAGE_VERSION);
       tmp4 = null;
     }
     tmp = tmp4;
@@ -253,8 +253,6 @@ function forceDispatchSessionIdUpdate() {
 function _forceDispatchSessionIdUpdate() {
   const self = this;
   const tmp = callback(function*() {
-    let createdAtTimestamp;
-    let uuid;
     if (c3 === 2) {
       c3 = 3;
       HermesBuiltin.throwTypeError();
@@ -281,13 +279,13 @@ function _forceDispatchSessionIdUpdate() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
+            closure_1 = tmp5;
             let callback = tmp2;
             callback = undefined;
             table = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_38(false);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_38(false);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -316,7 +314,7 @@ function _forceDispatchSessionIdUpdate() {
       }
     }
   });
-  const _forceDispatchSessionIdUpdate = tmp;
+  closure_31 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -328,12 +326,12 @@ function _forceDispatchSessionIdUpdate() {
 function handleAuthenticationChange() {
   const token = importDefaultResult.getToken();
   if (token !== token) {
-    const Storage = Storage.Storage;
+    const Storage = Storage2.Storage;
     Storage.remove(LAST_CLIENT_HEARTBEAT_SESSION);
-    let closure_20 = { state: "loaded", session: null };
+    closure_20 = { state: "loaded", session: null };
     if (null == _null) {
       // // eliminated: always false
-      let c19 = 0;
+      c19 = 0;
     } else {
       const type = _null.type;
       if ("timeout" === type) {
@@ -362,23 +360,22 @@ function handleWindowFocus(focused) {
   }
 }
 function handleLocationChange() {
-  const isActiveUserRouteResult = isActiveUserRoute.isActiveUserRoute();
-  if (isActiveUserRoute !== isActiveUserRouteResult) {
-    isActiveUserRoute = isActiveUserRouteResult;
+  const isActiveUserRouteResult = isActiveUserRoute2.isActiveUserRoute();
+  if (isActiveUserRouteResult !== isActiveUserRouteResult) {
     scheduleHeartbeatTracking();
   }
 }
 function handleAppStateUpdate(state) {
-  if (isForegrounded !== state.state === constants.ACTIVE) {
-    isForegrounded = tmp;
+  if (closure_22 !== state.state === constants.ACTIVE) {
+    closure_22 = tmp;
     scheduleHeartbeatTracking();
   }
 }
 function handleFluxInitialized() {
   const state = importDefaultResult1.getState();
-  let closure_22 = isForegrounded.isForegrounded();
-  const obj = isForegrounded;
-  let closure_23 = isActiveUserRoute.isActiveUserRoute();
+  closure_22 = isForegrounded2.isForegrounded();
+  const obj = isForegrounded2;
+  closure_23 = isActiveUserRoute2.isActiveUserRoute();
   handleAuthenticationChange();
 }
 function getSession() {
@@ -394,13 +391,11 @@ function getSession() {
 function _getSession() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c4 = 0;
     const iter = (function*() {
-      let createdAtTimestamp;
-      let uuid;
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -427,7 +422,7 @@ function _getSession() {
               obj[0] = arg1;
               return obj;
             } else {
-              let c3 = tmp3;
+              uuid = tmp3;
               uuid = tmp7;
               let flag;
               if (flag === undefined) {
@@ -435,7 +430,7 @@ function _getSession() {
               }
               let callback2;
               uuid = undefined;
-              c3 = undefined;
+              uuid = undefined;
               c6 = 1;
               c7 = 1;
               return { value: "ct", done: true };
@@ -447,7 +442,7 @@ function _getSession() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c7 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -461,15 +456,15 @@ function _getSession() {
                   }
                   tmp21 = uuid;
                 }
-                c3 = tmp21;
+                uuid = tmp21;
                 let socket = 1;
                 if ("uninitialized" === obj4.state) {
-                  callback2 = outer1_29;
-                  let Storage = callback(outer1_2[15]).Storage;
+                  callback2 = closure_1_29;
+                  let Storage = callback(closure_1_2[15]).Storage;
                   c6 = 3;
                   c7 = 1;
                   let obj2 = { value: null, done: false };
-                  obj2[0] = Storage.getAfterRefresh(outer1_13);
+                  obj2[0] = Storage.getAfterRefresh(closure_1_13);
                   return obj2;
                 } else {
                   uuid = obj4.session;
@@ -497,7 +492,7 @@ function _getSession() {
                   obj3[2] = callback2;
                   obj3[3] = flag(uuid[16]).CLIENT_SESSION_STORAGE_VERSION;
                   uuid = obj3;
-                  let c18 = 0;
+                  c18 = 0;
                 }
                 uuid.lastUsedTimestamp = callback2;
                 (function maybeFlushSessionToStorage(c2) {
@@ -524,10 +519,10 @@ function _getSession() {
                 }
               }
               obj4 = { state: "loaded", session: null };
-              obj4[1] = outer1_2;
-              let tmp61 = null != outer1_2;
+              obj4[1] = closure_1_2;
+              let tmp61 = null != closure_1_2;
               if (tmp61) {
-                tmp61 = c3 !== uuid.uuid;
+                tmp61 = uuid !== uuid.uuid;
               }
               if (tmp61) {
                 tmp61 = flag;
@@ -536,12 +531,12 @@ function _getSession() {
                 socket = socket.getSocket();
                 if (socket != null) {
                   ({ createdAtTimestamp, uuid } = uuid);
-                  let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(outer1_2[17]).clientLaunchId);
+                  let result = socket.handleUpdateTimeSpentSessionId(createdAtTimestamp, uuid, callback(closure_1_2[17]).clientLaunchId);
                 }
               }
               c7 = 3;
               obj5 = { value: null, done: true };
-              obj5[0] = outer1_2;
+              obj5[0] = closure_1_2;
               return obj5;
             } else if (arg0 === 1) {
               c7 = 3;
@@ -569,7 +564,7 @@ function _getSession() {
     iter.next();
     return iter;
   });
-  const _getSession = tmp;
+  closure_39 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -579,37 +574,37 @@ function _getSession() {
   return applyArgumentsResult;
 }
 let c5 = importDefaultResult;
-({ AnalyticEvents: metroImportAll, AppStates: c9, RTCConnectionStates: c10 } = ME);
-let closure_11 = 15 * require("set").Millis.MINUTE;
-const SECOND = require("set").Millis.SECOND;
+({ AnalyticEvents: closure_8, AppStates: c9, RTCConnectionStates: c10 } = ME);
+let closure_11 = 15 * setDefault.Millis.MINUTE;
+const SECOND = setDefault.Millis.SECOND;
 const LAST_CLIENT_HEARTBEAT_SESSION = "LAST_CLIENT_HEARTBEAT_SESSION";
 const user = "user";
-let closure_15 = new require("checkIdleAFK")("SessionHeartbeatScheduler");
+let closure_15 = new timestampDefault("SessionHeartbeatScheduler");
 let c16 = null;
 let c17 = null;
 let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = importDefaultResult1.getState();
-isForegrounded = isForegrounded.isForegrounded();
-isActiveUserRoute = isActiveUserRoute.isActiveUserRoute();
+let closure_22 = isForegrounded.isForegrounded();
+let closure_23 = isActiveUserRoute.isActiveUserRoute();
 let token = importDefaultResult.getToken();
-const tmp3 = new require("checkIdleAFK")("SessionHeartbeatScheduler");
-let result = require("fetchFingerprint").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
+const tmp3 = new timestampDefault("SessionHeartbeatScheduler");
+let result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionHeartbeatScheduler.tsx");
 
 export const initSessionHeartbeatScheduler = function initSessionHeartbeatScheduler() {
-  let obj = SentryUtils.native;
+  let obj = _modDef1208;
   obj.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" });
   importDefaultResult1.addChangeListener(handleRTCStateChange);
   importDefaultResult.addChangeListener(handleAuthenticationChange);
-  const subscription = dispatcher.subscribe("WINDOW_FOCUS", handleWindowFocus);
-  let obj2 = dispatcher;
+  const subscription = dispatcherDefault.subscribe("WINDOW_FOCUS", handleWindowFocus);
+  let obj2 = dispatcherDefault;
   const tmp = importDefault;
-  const subscription1 = dispatcher.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
-  const obj3 = dispatcher;
-  const subscription2 = dispatcher.subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
-  const obj4 = dispatcher;
-  let result = isActiveUserRoute.subscribeToLocationChanges(handleLocationChange);
+  const subscription1 = dispatcherDefault.subscribe("APP_STATE_UPDATE", handleAppStateUpdate);
+  const obj3 = dispatcherDefault;
+  const subscription2 = dispatcherDefault.subscribe("CONNECTION_OPEN", forceDispatchSessionIdUpdate);
+  const obj4 = dispatcherDefault;
+  let result = isActiveUserRoute2.subscribeToLocationChanges(handleLocationChange);
   scheduleHeartbeatTracking();
   if (null == obj) {
     obj = { id: null, type: "interval" };
@@ -618,7 +613,7 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
       let result = null != closure_24;
       if (result) {
         result = callback(5061).shouldLogClientHeartbeatSkipped();
-        const obj = callback(5061);
+        obj = callback(5061);
       }
       if (result) {
         const _performance = performance;
@@ -629,20 +624,20 @@ export const initSessionHeartbeatScheduler = function initSessionHeartbeatSchedu
       }
     }, closure_11);
   }
-  const initialized = tmp(589).initialized;
+  const initialized = initializeDefault.initialized;
   initialized.then(handleFluxInitialized);
 };
 export { getSession };
 export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
   if ("uninitialized" === closure_20.state) {
-    const Storage = Storage.Storage;
+    const Storage = Storage2.Storage;
     const value = Storage.get(LAST_CLIENT_HEARTBEAT_SESSION);
     let tmp7 = null;
     if (null != value) {
       let tmp8 = value;
       if (value.version !== tmp2(5063).CLIENT_SESSION_STORAGE_VERSION) {
         const _HermesInternal = HermesInternal;
-        tmp3.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(5063).CLIENT_SESSION_STORAGE_VERSION);
+        logger.warn("Throwing away client session with invalid version: " + value.version + ", expected " + tmp2(5063).CLIENT_SESSION_STORAGE_VERSION);
         tmp8 = null;
       }
       tmp7 = tmp8;
@@ -657,7 +652,7 @@ export const getActiveSessionUnsafe = function getActiveSessionUnsafe() {
     if (!obj.isSessionExpired(session)) {
       tmp12 = session;
     }
-    obj = result;
+    obj = result2;
   }
   return tmp12;
 };

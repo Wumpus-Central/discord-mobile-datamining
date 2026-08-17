@@ -1,19 +1,14 @@
 // discord_app/modules/safety_hub/SafetyHubUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import SafetyHubView from "SafetyHubView";
-import ME from "ME";
-import { t } from "../../../_runtime/03975_t.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
-import { ContentIdType } from "SafetyHubModels.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import ContentIdType from "ContentIdType" /* 5439 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import SafetyHubView from "SafetyHubView" /* 5438 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function parseMessageEmbedForProps(fields) {
   if (null != fields.fields) {
     fields = fields.fields;
@@ -51,11 +46,11 @@ function parseMessageEmbedForProps(fields) {
   }
 }
 ({ AppealIngestionSignal: c4, SafetySystemNotificationCtaType: c5, SafetySystemNotificationEmbedKeys: closure_6 } = SafetyHubView);
-({ AbortCodes: error, MessageAttachmentFlags: metroImportAll } = ME);
-const result = require("ME").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
+({ AbortCodes: error, MessageAttachmentFlags: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/safety_hub/SafetyHubUtils.tsx");
 
 export const getClassificationRelativeIncidentTime = function getClassificationRelativeIncidentTime(timestamp) {
-  return t().to(t(timestamp));
+  return tDefault().to(tDefault(timestamp));
 };
 export const getSpoilerFlagsForAttachment = function getSpoilerFlagsForAttachment(filename) {
   if (obj.isImageFile(filename.filename)) {
@@ -163,7 +158,7 @@ export const getClassificationExpiration = function getClassificationExpiration(
   }
 };
 export const useIsSuspendedUser = function useIsSuspendedUser() {
-  const items = [fetchFingerprint];
+  const items = [closure_3];
   return null != initialize.useStateFromStores(items, () => suspendedUserToken.getSuspendedUserToken());
 };
 export const isCurrentUserSuspended = function isCurrentUserSuspended() {

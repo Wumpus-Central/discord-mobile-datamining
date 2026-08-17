@@ -1,13 +1,14 @@
 // discord_app/records/GiftCodeRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
-import closure_4 from "createFromServer";
-import closure_5 from "createFromServer";
-import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures";
-import { t } from "../../_runtime/03975_t.js";
+import toJSDefault from "toJS" /* 1931 */;
+import tDefault from "t" /* 3975 */;
+import closure_3 from "createFromServer" /* 7426 */;
+import closure_4 from "createFromServer" /* 7629 */;
+import closure_5 from "createFromServer" /* 4040 */;
+import { PremiumSubscriptionSKUToPremiumType as closure_6 } from "GuildFeatures" /* 1924 */;
 import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
 
 const require = arg1;
+toJSDefault;
 const frozen = Object.freeze({ PAYMENT_SOURCE_REQUIRED: 1, EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2, NOT_SELF_REDEEMABLE: 4 });
 let GiftCodeRecord;
 class GiftCodeRecord extends tmp2 {
@@ -20,11 +21,6 @@ class GiftCodeRecord extends tmp2 {
 }
 const prototype = GiftCodeRecord.prototype;
 GiftCodeRecord["createFromServer"] = function createFromServer(user) {
-  let application_id;
-  let code;
-  let max_uses;
-  let sku_id;
-  let uses;
   let id = null;
   if (null != user.user) {
     id = user.user.id;
@@ -36,7 +32,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp4 = null;
   if (null != user.expires_at) {
-    tmp4 = t(user.expires_at);
+    tmp4 = tDefault(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -58,8 +54,8 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let fromServer1 = null;
   if (null != user.subscription_trial) {
-    fromServer1 = createFromServer.createFromServer(user.subscription_trial);
-    const tmp11 = createFromServer;
+    fromServer1 = closure_3.createFromServer(user.subscription_trial);
+    const tmp11 = closure_3;
   }
   const promotion = user.promotion;
   let fromServer2 = null;
@@ -95,8 +91,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = t().isAfter(expiresAt);
-    const obj = t();
+    isAfterResult = tDefault().isAfter(expiresAt);
+    const obj = tDefault();
   }
   return isAfterResult;
 };
@@ -159,7 +155,7 @@ Object.defineProperty(prototype, "analyticsData", {
 prototype["toString"] = function toString() {
   return this.code;
 };
-const result = require("createFromServer").fileFinishedImporting("records/GiftCodeRecord.tsx");
+const result = require("set").fileFinishedImporting("records/GiftCodeRecord.tsx");
 
 export default GiftCodeRecord;
 export const GiftCodeFlags = frozen;

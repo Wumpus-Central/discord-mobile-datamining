@@ -1,7 +1,9 @@
 // discord_app/modules/threads/ThreadMembersStore.tsx
-import { ALL_CHANNEL_TYPES } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 
 function updateFromGuild(threads) {
   threads = threads.threads;
@@ -10,7 +12,6 @@ function updateFromGuild(threads) {
   }
 }
 function updateFromThread(type) {
-  let memberCount;
   if (ALL_CHANNEL_TYPES.has(type.type)) {
     if (!(type.id in dependencyMap)) {
       const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
@@ -38,7 +39,6 @@ function updateFromThread(type) {
   }
 }
 function handleThreadCreateOrUpdate(channel) {
-  let memberCount;
   channel = channel.channel;
   if (ALL_CHANNEL_TYPES.has(channel.type)) {
     if (!(channel.id in dependencyMap)) {
@@ -71,25 +71,22 @@ function handleLoadArchivedThreadsSuccess(threads) {
 }
 function handleSearchMessagesSuccess(data) {
   data = data.data;
-  let c0 = false;
+  c0 = false;
   let item = data.forEach((arg0) => {
-    let messages;
-    let threads;
     ({ threads, messages } = arg0);
     let item = messages.forEach((arr) => {
       const item = arr.forEach((thread) => {
-        let memberCount;
         thread = thread.thread;
         let flag = false;
         if (null != thread) {
           flag = false;
-          if (!(thread.id in outer1_4)) {
-            const channel = outer1_3.getChannel(thread.id);
+          if (!(thread.id in closure_1_4)) {
+            const channel = closure_1_3.getChannel(thread.id);
             flag = false;
             if (null != channel) {
               flag = true;
-              if (outer1_2.has(channel.type)) {
-                if (!(channel.id in outer1_4)) {
+              if (closure_1_2.has(channel.type)) {
+                if (!(channel.id in closure_1_4)) {
                   const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
                   ({ guild_id: obj[0], parent_id: obj[1], memberCount } = channel);
                   if (memberCount == null) {
@@ -101,8 +98,8 @@ function handleSearchMessagesSuccess(data) {
                     memberIdsPreview = [];
                   }
                   obj[3] = memberIdsPreview;
-                  outer1_4[channel.id] = obj;
-                  const tmp6 = outer1_4;
+                  closure_1_4[channel.id] = obj;
+                  const tmp6 = closure_1_4;
                 }
                 if (null != channel.memberCount) {
                   tmp8.memberCount = channel.memberCount;
@@ -119,17 +116,16 @@ function handleSearchMessagesSuccess(data) {
       });
     });
     const item1 = threads.forEach((id) => {
-      let memberCount;
       let flag = false;
       if (null != id) {
         flag = false;
-        if (!(id.id in outer1_4)) {
-          const channel = outer1_3.getChannel(id.id);
+        if (!(id.id in closure_1_4)) {
+          const channel = closure_1_3.getChannel(id.id);
           flag = false;
           if (null != channel) {
             flag = true;
-            if (outer1_2.has(channel.type)) {
-              if (!(channel.id in outer1_4)) {
+            if (closure_1_2.has(channel.type)) {
+              if (!(channel.id in closure_1_4)) {
                 const obj = { guildId: null, parentId: null, memberCount: null, memberIdsPreview: null };
                 ({ guild_id: obj[0], parent_id: obj[1], memberCount } = channel);
                 if (memberCount == null) {
@@ -141,8 +137,8 @@ function handleSearchMessagesSuccess(data) {
                   memberIdsPreview = [];
                 }
                 obj[3] = memberIdsPreview;
-                outer1_4[channel.id] = obj;
-                const tmp6 = outer1_4;
+                closure_1_4[channel.id] = obj;
+                const tmp6 = closure_1_4;
               }
               if (null != channel.memberCount) {
                 tmp8.memberCount = channel.memberCount;
@@ -161,7 +157,6 @@ function handleSearchMessagesSuccess(data) {
   return c0;
 }
 function updateFromServerThread(id) {
-  let memberCount;
   if (null != id) {
     if (!(id.id in dependencyMap)) {
       channel = channel.getChannel(id.id);
@@ -195,12 +190,14 @@ function updateFromServerThread(id) {
   }
   return false;
 }
+const ALL_CHANNEL_TYPES = createChannelRecord.ALL_CHANNEL_TYPES;
 let closure_4 = {};
+const Store = initializeDefault.Store;
 class ThreadMembersStore extends Store {
 }
 const prototype = ThreadMembersStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded);
+  this.waitFor(closure_3);
 };
 prototype["getMemberCount"] = function getMemberCount(arg0) {
   let memberCount;
@@ -226,9 +223,9 @@ prototype["getInitialOverlayState"] = function getInitialOverlayState() {
   return closure_4;
 };
 ThreadMembersStore.displayName = "ThreadMembersStore";
-const threadMembersStore = new ThreadMembersStore(require("dispatcher"), {
+const threadMembersStore = new ThreadMembersStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
-    let closure_4 = {};
+    closure_4 = {};
     guilds = guilds.guilds;
     const item = guilds.forEach(updateFromGuild);
   },
@@ -287,6 +284,6 @@ const threadMembersStore = new ThreadMembersStore(require("dispatcher"), {
     return flag;
   }
 });
-const result = require("apply").fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
+const result = set.fileFinishedImporting("modules/threads/ThreadMembersStore.tsx");
 
 export default threadMembersStore;

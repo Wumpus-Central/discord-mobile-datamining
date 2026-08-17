@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/system_messages/transformSticker.tsx
-import noop from "noop";
-import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
-import { getStickerExtensionFromFormatType } from "../../../../stickers/StickersUtils.tsx";
-import { explicitContentFromProto } from "../../../../user_settings/UserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import apexExperiment from "apexExperiment" /* 8177 */;
+import closure_2 from "noop" /* 19 */;
+import { StickerAnimationSettings } from "STICKER_PICKER_TAB_PANEL_ID" /* 4069 */;
 
-const require = arg1;
+require = arg1;
 function transform(id, isPreview) {
   let obj = {};
   const merged = Object.assign(id);
@@ -36,13 +36,13 @@ function transform(id, isPreview) {
   obj.accessibilityHint = intl2.string(getSystemLocale.t.GCEruV);
   return obj;
 }
-let result = require("getStickerExtensionFromFormatType").fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/transformSticker.tsx");
 
 export default function useTransformedSticker(sticker) {
   sticker = sticker.sticker;
   const isStickerReplyEnabled = sticker.isStickerReplyEnabled;
   let React;
-  let StickerAnimationSettings;
+  StickerAnimationSettings = undefined;
   const AnimateStickers = sticker(isStickerReplyEnabled[5]).AnimateStickers;
   let tmp = AnimateStickers.useSetting() === StickerAnimationSettings.ALWAYS_ANIMATE;
   React = tmp;
@@ -52,7 +52,7 @@ export default function useTransformedSticker(sticker) {
   return React.useMemo(() => {
     let tmp;
     if (isStickerReplyEnabled) {
-      tmp = outer1_4(sticker, c2, c3);
+      tmp = closure_1_4(sticker, closure_2, c3);
     }
     return tmp;
   }, items);

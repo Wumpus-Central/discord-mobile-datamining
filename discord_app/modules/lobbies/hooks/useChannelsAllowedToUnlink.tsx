@@ -1,26 +1,26 @@
 // discord_app/modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx
-import comparator from "comparator";
-import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
+import closure_2 from "comparator" /* 1980 */;
+import { GUILD_SELECTABLE_CHANNELS_KEY as closure_3 } from "comparator" /* 1980 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-let require = arg1;
-const result = require("canUnlinkLobbyChannel").fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/lobbies/hooks/useChannelsAllowedToUnlink.tsx");
 
 export const getChannelsAllowedToUnlink = function getChannelsAllowedToUnlink(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = comparator;
+    obj = closure_2;
   }
   let tmp = arg2;
   if (arg2 === undefined) {
-    tmp = getUncachedChannelPermissions;
+    tmp = closure_4;
   }
-  const require = tmp;
+  closure_0 = tmp;
   if (null == arg0) {
     let items = [];
   } else {
-    const found = obj.getChannels(arg0)[closure_3].filter((channel) => tmp2(outer1_1[2]).canUnlinkLobbyChannel(channel.channel, tmp2));
+    const found = obj.getChannels(arg0)[closure_3].filter((channel) => callback(closure_1_1[2]).canUnlinkLobbyChannel(channel.channel, callback));
     items = found.map((channel) => channel.channel);
     const arr = obj.getChannels(arg0)[closure_3];
   }
@@ -28,17 +28,17 @@ export const getChannelsAllowedToUnlink = function getChannelsAllowedToUnlink(ar
 };
 export const useChannelsAllowedToUnlink = function useChannelsAllowedToUnlink(id) {
   const _require = id;
-  let items = [getUncachedChannelPermissions, comparator];
+  let items = [closure_4, closure_2];
   return _initialize.useStateFromStoresArray(items, () => {
-    if (outer1_2 !== undefined) {
+    if (closure_1_2 !== undefined) {
       if (tmp2 !== undefined) {
-        let closure_0 = tmp2;
+        closure_0 = tmp2;
         if (null == tmp) {
           let items = [];
         } else {
-          const found = outer1_2.getChannels(tmp)[outer1_3].filter((channel) => tmp2(outer1_1[2]).canUnlinkLobbyChannel(channel.channel, tmp2));
+          const found = closure_1_2.getChannels(tmp)[closure_1_3].filter((channel) => callback(closure_1_1[2]).canUnlinkLobbyChannel(channel.channel, callback));
           items = found.map((channel) => channel.channel);
-          const arr = outer1_2.getChannels(tmp)[outer1_3];
+          const arr = closure_1_2.getChannels(tmp)[closure_1_3];
         }
         return items;
       }

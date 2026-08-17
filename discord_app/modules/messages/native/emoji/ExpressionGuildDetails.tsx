@@ -1,33 +1,36 @@
 // discord_app/modules/messages/native/emoji/ExpressionGuildDetails.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import preloadDefault from "preload" /* 5449 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import getGuildBadgeSourceDefault from "getGuildBadgeSource" /* 8548 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ExpressionSourceGuildRecord as closure_4 } from "getEmojiSourceData" /* 7189 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { guildDetailsContainer: { flexDirection: "column" }, guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" }, guildIcon: null, guildNameAndOnlineMembers: null, guildNameWrapper: null, guildPartnerIcon: null, guildDescriptionSection: null, dotSeparator: null, joinGuildButton: null };
-createCacheKey = { width: 40, height: 40, borderRadius: require("Themes").radii.sm, marginRight: 12 };
+createCacheKey = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm, marginRight: 12 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flexDirection: "column" };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center", marginRight: 32 };
 createCacheKey[5] = { marginRight: 8 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", marginTop: 4 };
-createCacheKey[7] = { width: 4, height: 4, borderRadius: require("Themes").radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
-let obj1 = { width: 4, height: 4, borderRadius: require("Themes").radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
-createCacheKey[8] = { borderRadius: require("Themes").radii.sm, borderColor: require("Themes").colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[7] = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+let obj1 = { width: 4, height: 4, borderRadius: ThemesDefault.radii.xs, marginRight: 8, marginLeft: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[8] = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 class ExpressionGuildDetails {
   constructor(arg0) {
     guild = global.guild;
     hasJoinedGuild = global.hasJoinedGuild;
     ({ title, showingJoinGuildCta } = global);
-    tmp = jsxs();
-    fromGuildType = View.createFromGuildType(guild);
+    tmp = closure_8();
+    fromGuildType = closure_4.createFromGuildType(guild);
     isDiscoverableResult = fromGuildType.isDiscoverable();
     if (!isDiscoverableResult) {
       if (!hasJoinedGuild) {
@@ -96,7 +99,7 @@ class ExpressionGuildDetails {
               obj13 = { style: null, onPress: null, children: null };
               obj13[0] = tmp.joinGuildButton;
               obj13[1] = function onPress() {
-                return guild(outer1_2[12]).handleJoinGuild(guild.id);
+                return guild(closure_1_2[12]).handleJoinGuild(guild.id);
               };
               obj14 = { variant: "text-xs/medium", color: "text-default", children: null };
               intl3 = require("getSystemLocale").intl;
@@ -138,8 +141,8 @@ class ExpressionGuildDetails {
     return;
   }
 }
-let obj2 = { borderRadius: require("Themes").radii.sm, borderColor: require("Themes").colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
-const result = require("getEmojiSourceData").fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
+let obj2 = { borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, paddingHorizontal: 4, paddingBottom: 2 };
+const result = require("set").fileFinishedImporting("modules/messages/native/emoji/ExpressionGuildDetails.tsx");
 
 export default ExpressionGuildDetails;
 export { ExpressionGuildDetails };

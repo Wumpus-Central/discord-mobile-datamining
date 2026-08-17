@@ -1,10 +1,11 @@
 // discord_app/records/PromotionRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
+import hasFlag from "hasFlag" /* 1403 */;
+import toJSDefault from "toJS" /* 1931 */;
+import closure_2 from "createFromServer" /* 7630 */;
 import { CountryListMode } from "../modules/premium/promotions/constants.tsx";
 
-const require = arg1;
+require = arg1;
+toJSDefault;
 let PromotionRecord;
 class PromotionRecord extends tmp2 {
   constructor(arg0) {
@@ -48,8 +49,6 @@ class PromotionRecord extends tmp2 {
 }
 const prototype = PromotionRecord.prototype;
 PromotionRecord["createFromServer"] = function createFromServer(id) {
-  let allowed_countries;
-  let partner_id;
   const date = new Date(id.start_date);
   const date1 = new Date(id.end_date);
   const obj = { id: id.id, trialId: id.trial_id, startDate: date, endDate: date1, outboundRedemptionEndDate: null, inboundHeaderText: null, inboundBodyText: null, inboundHelpCenterLink: null, outboundTitle: null, outboundRedemptionModalBody: null, outboundTermsAndConditions: null, outboundRedemptionPageLink: null, outboundRedemptionUrlFormat: null, flags: null, inboundRestrictedCountries: null, outboundRestrictedCountries: null, allowedCountries: null, countryListMode: null, promotionType: null, partnerId: null, marketingComponents: null, rewardSkuIds: null, bogoRewardEnabled: null, promotionKey: null };
@@ -118,7 +117,7 @@ PromotionRecord["createFromServer"] = function createFromServer(id) {
   if (marketing_components == null) {
     marketing_components = [];
   }
-  obj[20] = marketing_components.map((arg0) => outer1_2.createFromServer(arg0, { startDate: date, endDate: date1 }));
+  obj[20] = marketing_components.map((arg0) => closure_1_2.createFromServer(arg0, { startDate: date, endDate: date1 }));
   const metadata = id.metadata;
   let reward_sku_ids;
   if (metadata != null) {
@@ -207,6 +206,6 @@ prototype["isCountryRestricted"] = function isCountryRestricted(arg0) {
     return inboundRestrictedCountries.includes(arg0);
   }
 };
-const result = require("CountryListMode").fileFinishedImporting("records/PromotionRecord.tsx");
+const result = require("set").fileFinishedImporting("records/PromotionRecord.tsx");
 
 export default PromotionRecord;

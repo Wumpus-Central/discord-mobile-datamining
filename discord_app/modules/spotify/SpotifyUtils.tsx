@@ -1,31 +1,29 @@
 // discord_app/modules/spotify/SpotifyUtils.tsx
-import ME from "ME";
-import initialize from "initialize";
-import isProtocolRegistered from "isProtocolRegistered";
-import upsertAccount from "upsertAccount";
-import WEB_OPEN from "WEB_OPEN";
-import { PlatformTypes } from "ME";
+import setDefault from "set" /* 687 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 4504 */;
+import closure_5 from "isProtocolRegistered" /* 7244 */;
+import closure_6 from "upsertAccount" /* 7241 */;
+import SPOTIFY_APP_PROTOCOL from "SPOTIFY_APP_PROTOCOL" /* 7242 */;
+import { PlatformTypes } from "ME" /* 676 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function asString(str) {
   if (typeof str === "string") {
     return str;
   } else {
     const _Error = Error;
-    const error = new Error("value is not a string");
+    error = new Error("value is not a string");
     throw error;
   }
 }
 function _getSpotifyMetadataFromActivity() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -53,14 +51,14 @@ function _getSpotifyMetadataFromActivity() {
               obj[0] = arg1;
               return obj;
             } else {
-              let initialize = tmp5;
-              let ME = tmp2;
+              closure_4 = tmp5;
+              closure_3 = tmp2;
               let lib;
-              let closure_1;
-              let obj2 = lib(outer1_2[9]);
+              closure_1 = undefined;
+              let obj2 = lib(closure_1_2[9]);
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj2.getMetadata(lib, closure_1);
               return obj1;
             }
@@ -84,7 +82,7 @@ function _getSpotifyMetadataFromActivity() {
             if (null === closure_1) {
               const _Error = Error;
               const _HermesInternal = HermesInternal;
-              const error = new Error("invalid type " + lib.type);
+              error = new Error("invalid type " + lib.type);
               throw error;
             } else {
               let context_uri;
@@ -125,7 +123,7 @@ function _getSpotifyMetadataFromActivity() {
       }
     })();
   });
-  const _getSpotifyMetadataFromActivity = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -134,25 +132,23 @@ function _getSpotifyMetadataFromActivity() {
   }
   return applyArgumentsResult;
 }
-({ SPOTIFY_APP_PROTOCOL: error, SpotifyResourceTypes: metroImportAll, getSpotifyResourceType: c9 } = WEB_OPEN);
-let closure_11 = 30 * require("set").Millis.SECOND;
-const result = require("isProtocolRegistered").fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
+({ SPOTIFY_APP_PROTOCOL: error, SpotifyResourceTypes: closure_8, getSpotifyResourceType: c9 } = SPOTIFY_APP_PROTOCOL);
+let closure_11 = 30 * setDefault.Millis.SECOND;
+const result = require("set").fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
 
 export const isSpotifyPlayable = function isSpotifyPlayable(getActiveSocketAndDevice) {
   let isProtocolRegisteredResult = null != getActiveSocketAndDevice.getActiveSocketAndDevice();
   if (!isProtocolRegisteredResult) {
-    isProtocolRegisteredResult = isProtocolRegistered.isProtocolRegistered();
+    isProtocolRegisteredResult = closure_5.isProtocolRegistered();
   }
   return isProtocolRegisteredResult;
 };
 export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
-  let device;
-  let socket;
   let obj = store;
   const activeSocketAndDevice = store.getActiveSocketAndDevice();
   if (null != activeSocketAndDevice) {
     return Promise.resolve(activeSocketAndDevice);
-  } else if (isProtocolRegistered.isProtocolRegistered()) {
+  } else if (closure_5.isProtocolRegistered()) {
     let playableComputerDevices = obj.getPlayableComputerDevices();
     if (observedAppRunning.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
@@ -165,17 +161,17 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
       }
     }
     const promise = new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       function onSpotifyStoreChange() {
-        const playableComputerDevices = outer2_6.getPlayableComputerDevices();
+        playableComputerDevices = closure_2_6.getPlayableComputerDevices();
         function _loop(socket, device) {
-          let closure_0 = socket;
-          let closure_1 = device;
-          if (null == outer1_0.find((device) => device.device.id === device.id)) {
+          closure_0 = socket;
+          closure_1 = device;
+          if (null == closure_1_0.find((device) => device.device.id === device.id)) {
             const _clearTimeout = clearTimeout;
             clearTimeout(closure_2);
-            outer2_6.removeChangeListener(ME);
+            closure_2_6.removeChangeListener(closure_3);
             const _setImmediate = setImmediate;
             setImmediate(() => {
               let obj = socket(table[8]);
@@ -193,17 +189,17 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
         }
       }
       const timeout = setTimeout(() => {
-        outer2_6.removeChangeListener(onSpotifyStoreChange);
-        const error = new Error("timeout launching spotify");
+        closure_2_6.removeChangeListener(onSpotifyStoreChange);
+        error = new Error("timeout launching spotify");
         callback(error);
-      }, outer1_11);
-      outer1_6.addChangeListener(onSpotifyStoreChange);
-      window.open("" + outer1_7 + ":");
+      }, closure_1_11);
+      closure_1_6.addChangeListener(onSpotifyStoreChange);
+      window.open("" + closure_1_7 + ":");
     });
     return promise;
   } else {
     const _Error = Error;
-    let error = new Error("protocol is not registered");
+    error = new Error("protocol is not registered");
     return Promise.reject(error);
   }
 };
@@ -219,7 +215,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
   const activeSocketAndDevice = store.getActiveSocketAndDevice();
   if (null == activeSocketAndDevice) {
     let _Error = Error;
-    let error = new Error("no active profile");
+    error = new Error("no active profile");
     return Promise.reject(error);
   } else {
     const socket = activeSocketAndDevice.socket;
@@ -230,7 +226,7 @@ export const ensureSpotifyPremium = function ensureSpotifyPremium() {
       resolved = profile.then(() => {
         if (!socket.isPremium) {
           const _Error = Error;
-          const error = new Error("spotify account is not premium");
+          error = new Error("spotify account is not premium");
           return Promise.reject(error);
         }
       });

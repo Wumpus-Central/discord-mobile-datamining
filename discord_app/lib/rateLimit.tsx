@@ -1,11 +1,13 @@
 // discord_app/lib/rateLimit.tsx
-const result = require("set").fileFinishedImporting("lib/rateLimit.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("lib/rateLimit.tsx");
 
 export default function rateLimit(arg0, arg1, arg2) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
-  let closure_4 = [];
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_4 = [];
   function wrapper() {
     const items = [...arguments];
     const timestamp = Date.now();
@@ -35,7 +37,7 @@ export default function rateLimit(arg0, arg1, arg2) {
       HermesBuiltin.apply(items1, undefined);
     } else {
       const _setTimeout = setTimeout;
-      timeout = setTimeout(() => outer1_5(...items), arr2[0] - timestamp);
+      timeout = setTimeout(() => closure_1_5(...items), arr2[0] - timestamp);
     }
   }
   return wrapper;

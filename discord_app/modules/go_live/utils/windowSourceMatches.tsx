@@ -1,5 +1,5 @@
 // discord_app/modules/go_live/utils/windowSourceMatches.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 const result = require("set").fileFinishedImporting("modules/go_live/utils/windowSourceMatches.tsx");
 

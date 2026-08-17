@@ -1,37 +1,37 @@
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx
-import "noop";
-import { View } from "set";
-import reset from "reset";
-import onInitializeSync from "onInitializeSync";
-import { HelpdeskArticles } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import combinedDefault from "combined" /* 1993 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "reset" /* 4045 */;
+import closure_5 from "onInitializeSync" /* 16149 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+noopAll;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, textContainer: null, header: null, body: null };
-createCacheKey = { padding: require("Themes").space.PX_32, paddingTop: require("Themes").space.PX_24 };
+createCacheKey = { padding: ThemesDefault.space.PX_32, paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: require("Themes").space.PX_24 };
-let obj1 = { marginBottom: require("Themes").space.PX_24 };
-createCacheKey[2] = { marginBottom: require("Themes").space.PX_16, alignItems: "center", textAlign: "center" };
+createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_24 };
+let obj1 = { marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, alignItems: "center", textAlign: "center" };
 createCacheKey[3] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: require("Themes").space.PX_16, alignItems: "center", textAlign: "center" };
-const result = require("reset").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { marginBottom: ThemesDefault.space.PX_16, alignItems: "center", textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeActionSheet.tsx");
 
 export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = markAsDismissed(589);
-  const items = [onInitializeSync];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => priceChangeRecord.priceChangeRecord);
-  let obj1 = markAsDismissed(589);
-  const items1 = [reset];
+  obj1 = markAsDismissed(589);
+  const items1 = [closure_4];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => premiumSubscription.getPremiumSubscription(true));
   let str;
   if (stateFromStores1 != null) {
@@ -64,7 +64,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   obj4[3] = formatPriceResult1;
   obj4[4] = formatPriceResult;
   const date = new Date(stateFromStores.expectedChargeTime);
-  obj4[5] = combined.getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
+  obj4[5] = combinedDefault.getArticleURL(HelpdeskArticles.SUBSCRIPTION_CANCEL);
   obj3[2] = intl2.format(markAsDismissed(1236).t["n+Hrjb"], obj4);
   items2[1] = callback(markAsDismissed(4734).Text, obj3);
   obj1[1] = items2;
@@ -73,7 +73,7 @@ export default function GooglePlayPriceChangeActionSheet(markAsDismissed) {
   const intl3 = tmp2(1236).intl;
   obj5[1] = intl3.string(markAsDismissed(1236).t.BddRzS);
   obj5[2] = function onPress() {
-    markAsDismissed(outer1_7.USER_DISMISS);
+    markAsDismissed(closure_1_7.USER_DISMISS);
   };
   items3[1] = callback(markAsDismissed(4745).Button, obj5);
   obj[1] = items3;

@@ -1,5 +1,7 @@
 // discord_app/modules/svg/native/getReactNativeSVGImageSource.tsx
-const result = require("set").fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/svg/native/getReactNativeSVGImageSource.tsx");
 
 export default function getReactNativeSVGImageSource(arg0) {
   let first = arg0;

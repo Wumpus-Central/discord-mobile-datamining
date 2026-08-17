@@ -1,6 +1,8 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx
-import { resolveFieldValue } from "resolvedValues.tsx";
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
+import set from "set" /* 2 */;
+import resolveFieldValue2 from "resolveFieldValue" /* 12193 */;
+
+let result = set.fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedDisplayField.tsx");
 
 export const resolveTextComponentValues = function resolveTextComponentValues(subtitle_1, resolveFieldValue, numberFormat, arg3) {
   let flag = arg3;
@@ -14,7 +16,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
   if (null == subtitle_1) {
     return flag ? { status: "skeleton" } : { status: "hidden" };
   } else {
-    const items = [resolveFieldValue.ResolvedValueType.STRING, resolveFieldValue.ResolvedValueType.NUMBER];
+    const items = [resolveFieldValue2.ResolvedValueType.STRING, resolveFieldValue2.ResolvedValueType.NUMBER];
     let iter = resolveFieldValue(subtitle_1.fields.text, items);
     let str = null;
     if (!flag2) {
@@ -26,7 +28,7 @@ export const resolveTextComponentValues = function resolveTextComponentValues(su
         return { status: "skeleton" };
       }
     }
-    const items2 = [resolveFieldValue.ResolvedValueType.MEDIA];
+    const items2 = [resolveFieldValue2.ResolvedValueType.MEDIA];
     const tmp2 = resolveFieldValue(subtitle_1.fields.icon, items2);
     let str3 = "";
     if (null != str) {
@@ -83,11 +85,11 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     }
     return tmp4;
   } else {
-    const items = [resolveFieldValue.ResolvedValueType.STRING, resolveFieldValue.ResolvedValueType.NUMBER];
+    const items = [resolveFieldValue2.ResolvedValueType.STRING, resolveFieldValue2.ResolvedValueType.NUMBER];
     const iter = closure_1(fields.fields.value, items);
-    const items1 = [resolveFieldValue.ResolvedValueType.STRING];
+    const items1 = [resolveFieldValue2.ResolvedValueType.STRING];
     const iter2 = closure_1(fields.fields.label, items1);
-    const items2 = [resolveFieldValue.ResolvedValueType.MEDIA];
+    const items2 = [resolveFieldValue2.ResolvedValueType.MEDIA];
     const tmp8 = closure_1(fields.fields.icon, items2);
     if (null == iter) {
       obj = { status: "skeleton" };
@@ -113,7 +115,7 @@ export const resolveStatComponentValues = function resolveStatComponentValues(fi
     obj = { value: null, label: null };
     obj[0] = obj;
     if (null == fields.fields.label) {
-      let obj1 = { status: "hidden" };
+      obj1 = { status: "hidden" };
     } else if (null == iter2) {
       obj1 = { status: "skeleton" };
     } else {
@@ -129,7 +131,7 @@ export const resolveSingleStringOrSkeleton = function resolveSingleStringOrSkele
   if (componentConfig != null) {
     tmp = componentConfig.fields[description];
   }
-  const items = [resolveFieldValue.ResolvedValueType.STRING];
+  const items = [resolveFieldValue2.ResolvedValueType.STRING];
   const iter = resolveFieldValue(tmp, items);
   if (null == iter) {
     let obj = { status: "skeleton" };

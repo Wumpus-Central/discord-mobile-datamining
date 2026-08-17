@@ -1,8 +1,10 @@
 // discord_app/modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { canShowBotsBanner: false, canShowAppsOrActivitiesBanner: false, willShowGlobalSearchOnboarding: false, timeMs: 0, channelId: "0" };
 let closure_1 = { lastSeenTimeMs: null, triggeredOnboardingContentMetadata: obj };
+const PersistedStore = initializeDefault.PersistedStore;
 class AppLauncherOnboardingPersistedStore extends PersistedStore {
 }
 const prototype = AppLauncherOnboardingPersistedStore.prototype;
@@ -31,7 +33,7 @@ const items = [
     if (lastSeenTimeMs == null) {
       lastSeenTimeMs = null;
     }
-    let obj = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
+    obj = { lastSeenTimeMs, triggeredOnboardingContentMetadata: null };
     let canShowBotsBanner;
     if (lastSeenTimeMs != null) {
       const triggeredOnboardingContentMetadata = lastSeenTimeMs.triggeredOnboardingContentMetadata;
@@ -100,7 +102,7 @@ obj = {
     closure_1.triggeredOnboardingContentMetadata = triggeredOnboardingContentMetadata.triggeredOnboardingContentMetadata;
   }
 };
-const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(require("dispatcher"), obj);
+const appLauncherOnboardingPersistedStore = new AppLauncherOnboardingPersistedStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/stores/AppLauncherOnboardingPersistedStore.tsx");
 
 export default appLauncherOnboardingPersistedStore;

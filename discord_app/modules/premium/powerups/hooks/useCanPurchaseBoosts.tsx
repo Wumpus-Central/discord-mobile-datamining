@@ -1,16 +1,16 @@
 // discord_app/modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { FractionalPremiumStates } from "GuildFeatures";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { calculateFractionalPremiumInfo } from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
+import initialize from "initialize" /* 589 */;
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-const result = require("calculateFractionalPremiumInfo").fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");
 
 export default function useCanPurchaseBoosts() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const obj = initialize;
-  return calculateFractionalPremiumInfo().fractionalState === FractionalPremiumStates.NONE && !initialize.useStateFromStores(items, () => {
+  return calculateFractionalPremiumInfoDefault().fractionalState === FractionalPremiumStates.NONE && !initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let isPremiumGroupMemberResult;
     if (currentUser != null) {

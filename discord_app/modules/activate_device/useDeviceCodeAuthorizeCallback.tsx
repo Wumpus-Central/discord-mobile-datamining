@@ -1,17 +1,17 @@
 // discord_app/modules/activate_device/useDeviceCodeAuthorizeCallback.tsx
-import 00038__ from "../../../_runtime/metro/00038__.js";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
 function _createTwoWayLink() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c9 = 0;
-    let c10 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c9 = 0;
+    c10 = 0;
+    c8 = 0;
     return (function*(arg0, body) {
       if (c10 === 2) {
         c10 = 3;
@@ -45,19 +45,19 @@ function _createTwoWayLink() {
               callback2 = dependencyMap;
               dependencyMap = undefined;
               let url;
-              let c4;
+              c4 = undefined;
               state = undefined;
               const result = callback(13337).clientIdToActivateDevicePlatform(callback);
               dependencyMap = result;
               if (null == result) {
                 c9 = 1;
                 c10 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_6(tmp84, 1, "authorize");
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_6(tmp84, 1, "authorize");
                 return obj1;
               } else {
                 url = null;
-                let c8 = 1;
+                c8 = 1;
                 let obj10 = callback2(5223);
                 const obj2 = { twoWayLinkType: null, userCode: null };
                 obj2[0] = callback(9761).TwoWayLinkType.DEVICE_CODE;
@@ -81,7 +81,7 @@ function _createTwoWayLink() {
               return obj4;
             } else {
               const _Error4 = Error;
-              const error = new Error("Unsupported client_id for two way link");
+              error = new Error("Unsupported client_id for two way link");
               throw error;
             }
           } else if (2 === tmp9) {
@@ -228,7 +228,7 @@ function _createTwoWayLink() {
       }
     })();
   });
-  const _createTwoWayLink = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -250,19 +250,19 @@ function silentlyFinishTwoWayLinkError() {
 function _silentlyFinishTwoWayLinkError() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c3 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      let c6 = 1;
-      const obj1 = callback(table[7]);
+      c6 = 1;
+      obj1 = callback(table[7]);
       yield obj1.finishUserCodeTwoWayLinkError(callback, closure_1, table);
       if (1 === tmp6) {
         c6 = 0;
-        let c3 = 3;
+        c3 = 3;
       } else if (arg0 === 1) {
         c3 = 3;
         throw arg1;
@@ -273,7 +273,7 @@ function _silentlyFinishTwoWayLinkError() {
       return arg1;
     })();
   });
-  const _silentlyFinishTwoWayLinkError = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -282,19 +282,19 @@ function _silentlyFinishTwoWayLinkError() {
   }
   return applyArgumentsResult;
 }
-let result = require("clientIdToActivateDevicePlatform").fileFinishedImporting("modules/activate_device/useDeviceCodeAuthorizeCallback.tsx");
+let result = require("set").fileFinishedImporting("modules/activate_device/useDeviceCodeAuthorizeCallback.tsx");
 
 export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCallback(callback, callback2, callback1) {
-  let closure_0 = callback;
-  let closure_1 = callback2;
-  let closure_2 = callback1;
+  closure_0 = callback;
+  closure_1 = callback2;
+  closure_2 = callback1;
   closure_0 = undefined;
   closure_0 = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -322,14 +322,14 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
               obj[0] = arg1;
               return obj;
             } else {
-              let module_38 = tmp4;
-              const dependencyMap = tmp6;
+              closure_3 = tmp4;
+              dependencyMap = tmp6;
               if (callback2) {
                 if (null == tmp49.twoWayLinkCode) {
-                  let c5 = 2;
+                  c5 = 2;
                   c6 = 4;
                   c7 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = callback(9772).finishUserCode(tmp49.userCode, "granted");
                   return obj1;
                 } else {
@@ -382,7 +382,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                     obj4[0] = arg1;
                     return obj4;
                   } else {
-                    outer1_2(callback);
+                    closure_1_2(callback);
                     c5 = 0;
                   }
                 } else if (5 === tmp9) {
@@ -390,7 +390,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
                     c7 = 3;
                     throw arg1;
                   } else if (arg0 !== 2) {
-                    outer1_2(callback);
+                    closure_1_2(callback);
                     c5 = 0;
                   }
                 } else if (arg0 === 1) {
@@ -414,7 +414,7 @@ export const useDeviceCodeAuthorizeCallback = function useDeviceCodeAuthorizeCal
             return obj;
           }
         } catch (tmp40) {
-          let noop = tmp40;
+          closure_4 = tmp40;
           if (tmp5 === c5) {
             c7 = tmp3;
             throw tmp40;

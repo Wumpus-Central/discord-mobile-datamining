@@ -1,14 +1,12 @@
 // discord_app/modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx
-import importAllResult from "set";
-import { View } from "noop";
-import { GuildTagBadgeSize } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "items";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { GuildTagBadgeSize } from "items" /* 8168 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -18,13 +16,11 @@ if (set.isAndroid()) {
   num = 16;
 }
 obj[3] = { lineHeight: num };
-obj = { backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+obj = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[4] = obj;
 obj[5] = { flexDirection: "row", alignItems: "center", gap: 8, height: 20 };
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_9 = importAllResult.memo((item) => {
-  let end;
-  let start;
   item = item.item;
   const selected = item.selected;
   const onSelectGuild = item.onSelectGuild;
@@ -81,7 +77,7 @@ let closure_9 = importAllResult.memo((item) => {
     const tmp12 = selected(tmp9[11]);
   }
   obj[4] = tmp7Result;
-  const obj1 = { style: tmp.itemTrailingStyle, children: null };
+  obj1 = { style: tmp.itemTrailingStyle, children: null };
   tmp7Result = null != item;
   if (tmp7Result) {
     tmp7Result = null != profile;
@@ -103,18 +99,16 @@ let closure_9 = importAllResult.memo((item) => {
 const result = set.fileFinishedImporting("modules/user_settings/profiles/native/UserPrimaryGuildListBottomSheet.tsx");
 
 export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
-  let dependencyMap;
-  let importDefault;
   availableGuilds = availableGuilds.availableGuilds;
   ({ userPrimaryGuild: importDefault, onSelectGuild: dependencyMap } = availableGuilds);
-  let importAllResult;
+  importAllResult = undefined;
   let memo;
   const tmp = callback2();
   importAllResult = tmp;
   let items = [availableGuilds];
   memo = importAllResult.useMemo(() => {
     const items = [null];
-    HermesBuiltin.arraySpread(outer1_1(outer1_2[14]).sortBy(availableGuilds, (name) => name.name.toLowerCase()), 1);
+    HermesBuiltin.arraySpread(closure_1_1(closure_1_2[14]).sortBy(availableGuilds, (name) => name.name.toLowerCase()), 1);
     return items;
   }, items);
   let obj = { scrollable: true, startExpanded: true, header: null, children: null };
@@ -126,7 +120,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
   obj[2] = callback(memo, obj);
   obj[3] = callback(availableGuilds(8029).BottomSheetFlashList, {
     ItemSeparatorComponent() {
-      return outer1_6(availableGuilds(outer1_2[18]).FormDivider, { iconPush: true, style: _undefined.divider });
+      return closure_1_6(availableGuilds(closure_1_2[18]).FormDivider, { iconPush: true, style: divider.divider });
     },
     data: memo,
     contentContainerStyle: { padding: 16 },
@@ -138,8 +132,6 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       return str;
     },
     renderItem(arg0) {
-      let index;
-      let item;
       ({ item, index } = arg0);
       const obj = { start: 0 === index, end: index === memo.length - 1, item, selected: null, onSelectGuild: null };
       let id;
@@ -152,7 +144,7 @@ export default function UserPrimaryGuildListBottomSheet(availableGuilds) {
       }
       obj[3] = id === id1;
       obj[4] = closure_2;
-      return outer1_6(outer1_9, obj);
+      return closure_1_6(closure_1_9, obj);
     }
   });
   return callback(availableGuilds(6950).BottomSheet, obj);

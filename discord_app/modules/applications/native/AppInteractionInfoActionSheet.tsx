@@ -1,35 +1,31 @@
 // discord_app/modules/applications/native/AppInteractionInfoActionSheet.tsx
-import set from "set";
-import { View } from "Button";
-import createdAt from "createdAt";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createdAt" /* 1930 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ itemContainer: { flexDirection: "row", paddingVertical: 12, paddingHorizontal: 16, alignItems: "center" }, itemLabel: { flexDirection: "column", alignItems: "flex-start", paddingLeft: 12 } });
-const result = require("createdAt").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/native/AppInteractionInfoActionSheet.tsx");
 
 export default function AppInteractionInfoActionSheet(message) {
-  let guildId;
-  let onBack;
   message = message.message;
   ({ guildId, onBack } = message);
-  let dependencyMap;
+  dependencyMap = undefined;
   let React;
   let id;
   let stateFromStores;
-  let stateFromStores2;
+  closure_6 = undefined;
   let tmp = callback3();
   let obj = React;
   const items = [onBack];
   const interactionMetadata = message.interactionMetadata;
   let tmp5;
-  const memo = React.useMemo(() => outer1_8(onBack(_undefined[8]), { onBack }), items);
+  const memo = React.useMemo(() => closure_1_8(onBack(10891), { onBack }), items);
   if (interactionMetadata != null) {
     tmp5 = interactionMetadata.authorizing_integration_owners[message(undefined, 8770).ApplicationIntegrationType.USER_INSTALL];
   }
@@ -45,24 +41,25 @@ export default function AppInteractionInfoActionSheet(message) {
   if (interactionMetadata3 != null) {
     id = interactionMetadata3.user.id;
   }
-  let obj1 = message(589);
-  const items1 = [mergeGuildAvatar];
-  stateFromStores = obj1.useStateFromStores(items1, () => outer1_7.getUser(c2));
+  obj1 = message(589);
+  const items1 = [closure_7];
+  stateFromStores = obj1.useStateFromStores(items1, () => closure_1_7.getUser(closure_2));
   let obj2 = message(589);
-  const items2 = [stateFromStores2];
-  const stateFromStores1 = obj2.useStateFromStores(items2, () => stateFromStores2.getGuild(c3));
+  const items2 = [closure_6];
+  const stateFromStores1 = obj2.useStateFromStores(items2, () => guild.getGuild(closure_3));
   let obj3 = message(589);
-  const items3 = [mergeGuildAvatar];
-  stateFromStores2 = obj3.useStateFromStores(items3, () => outer1_7.getUser(id));
+  const items3 = [closure_7];
+  const stateFromStores2 = obj3.useStateFromStores(items3, () => closure_1_7.getUser(id));
+  closure_6 = stateFromStores2;
   const items4 = [stateFromStores, tmp5];
   const effect = obj.useEffect(() => {
     let tmp = null == stateFromStores;
     if (tmp) {
-      tmp = null != _undefined;
+      tmp = null != dependencyMap;
     }
     if (tmp) {
-      const user = message(_undefined[11]).getUser(_undefined);
-      const obj = message(_undefined[11]);
+      const user = message(8418).getUser(dependencyMap);
+      const obj = message(8418);
     }
   }, items4);
   let tmp15 = stateFromStores2;
@@ -74,7 +71,7 @@ export default function AppInteractionInfoActionSheet(message) {
       user = interactionMetadata4.user;
     }
     tmp16 = new tmp16(user);
-    stateFromStores2 = tmp16;
+    closure_6 = tmp16;
     tmp15 = tmp16;
   }
   if (null != stateFromStores1) {
@@ -105,7 +102,7 @@ export default function AppInteractionInfoActionSheet(message) {
     if (null != stateFromStores) {
       const obj5 = { onPress: null, children: null };
       obj5[0] = function onPress() {
-        return onBack(_undefined[16])({ userId: stateFromStores.id, channelId: message.channel_id });
+        return onBack(8929)({ userId: stateFromStores.id, channelId: message.channel_id });
       };
       const obj6 = { style: null, children: null };
       obj6[0] = tmp.itemContainer;
@@ -138,7 +135,7 @@ export default function AppInteractionInfoActionSheet(message) {
   if (null != tmp15) {
     const obj13 = { onPress: null, children: null };
     obj13[0] = function onPress() {
-      return onBack(_undefined[16])({ userId: stateFromStores2.id, channelId: message.channel_id });
+      return onBack(8929)({ userId: guild.id, channelId: message.channel_id });
     };
     const obj14 = { style: null, children: null };
     obj14[0] = tmp.itemContainer;

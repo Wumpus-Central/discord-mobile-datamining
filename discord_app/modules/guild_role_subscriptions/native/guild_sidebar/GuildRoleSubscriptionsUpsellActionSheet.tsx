@@ -1,51 +1,47 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { GuildSettingsSections } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/15506_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import preloadDefault from "preload" /* 5449 */;
+import Background from "Background" /* 6950 */;
+import registerAssetDefault from "registerAsset" /* 15506 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { GuildSettingsSections } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ title: { marginTop: 24, textAlign: "center" }, description: { marginTop: 8, marginBottom: 24, textAlign: "center" }, dismissButton: { marginTop: 4 } });
-const result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_sidebar/GuildRoleSubscriptionsUpsellActionSheet.tsx");
 
 export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
-  let importDefault;
-  let require;
   ({ guildId: require, markAsDismissed: importDefault } = arg0);
   const tmp = callback3();
   let obj = {
     startExpanded: true,
     onDismiss() {
-      return callback(outer1_5.UNKNOWN);
+      return callback(closure_1_5.UNKNOWN);
     },
     children: null
   };
-  obj = { source: null };
-  obj[0] = registerAsset;
-  const items = [callback(preload, obj), , , , ];
+  obj = { source: registerAssetDefault };
+  const items = [callback(preloadDefault, obj), , , , ];
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t.C0m4rQ);
   items[1] = callback(Text.Text, obj);
-  const obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
+  obj1 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t.zOHfEX);
   items[2] = callback(Text.Text, obj1);
   const obj2 = {
     onPress() {
-      callback(outer1_5.UNKNOWN);
-      outer1_1(outer1_2[12]).open(closure_0, outer1_4.ROLE_SUBSCRIPTIONS);
+      callback(closure_1_5.UNKNOWN);
+      closure_1_1(closure_1_2[12]).open(closure_0, closure_1_4.ROLE_SUBSCRIPTIONS);
     },
     text: null
   };
@@ -55,7 +51,7 @@ export default function GuildRoleSubscriptionsUpsellActionSheet(arg0) {
   const obj3 = { style: tmp.dismissButton, children: null };
   const obj4 = {
     onPress() {
-      return callback(outer1_5.UNKNOWN);
+      return callback(closure_1_5.UNKNOWN);
     },
     text: null,
     variant: "secondary"

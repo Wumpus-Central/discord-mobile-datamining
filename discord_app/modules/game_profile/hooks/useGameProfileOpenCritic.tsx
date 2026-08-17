@@ -1,10 +1,12 @@
 // discord_app/modules/game_profile/hooks/useGameProfileOpenCritic.tsx
-import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-fair.png.js";
-import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-mighty.png.js";
-import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-strong.png.js";
-import { metadata } from "../../../../discord_assets/assets/game-profile/opencritic-weak.png.js";
-import { OpenCriticTier } from "../../../../discord_common/js/shared/shared-constants/OpenCriticTier.tsx";
-const result = require("metadata").fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
+import set from "set" /* 2 */;
+import OpenCriticTier from "OpenCriticTier" /* 9139 */;
+import metadataDefault from "metadata" /* 9140 */;
+import metadataDefault2 from "metadata" /* 9141 */;
+import metadataDefault3 from "metadata" /* 9142 */;
+import metadataDefault4 from "metadata" /* 9143 */;
+
+const result = set.fileFinishedImporting("modules/game_profile/hooks/useGameProfileOpenCritic.tsx");
 
 export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
@@ -23,13 +25,13 @@ export const getOpenCriticTierText = function getOpenCriticTierText(tier) {
 };
 export const getOpenCriticTierImage = function getOpenCriticTierImage(tier) {
   if (OpenCriticTier.OpenCriticTier.MIGHTY === tier) {
-    return metadata;
+    return metadataDefault;
   } else if (tmp(9139).OpenCriticTier.STRONG === tier) {
-    return metadata;
+    return metadataDefault2;
   } else if (tmp(9139).OpenCriticTier.FAIR === tier) {
-    return metadata;
+    return metadataDefault3;
   } else if (tmp(9139).OpenCriticTier.WEAK === tier) {
-    return metadata;
+    return metadataDefault4;
   }
 };
 export const getOpenCriticCircleRatingColor = function getOpenCriticCircleRatingColor(tier) {

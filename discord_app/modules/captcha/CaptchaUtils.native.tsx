@@ -1,17 +1,15 @@
 // discord_app/modules/captcha/CaptchaUtils.native.tsx
-import setContent from "setContent";
-import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS";
+import initialize from "initialize" /* 589 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import closure_3 from "setContent" /* 4086 */;
+import { CAPTCHA_MODAL_KEY } from "CAPTCHA_SERVE_VOLUME_DISTRIBUTION_AGGREGATION_WINDOW_MS" /* 10480 */;
 import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../action_sheet/native/ActionSheetActionCreators.tsx";
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/captcha/CaptchaUtils.native.tsx");
 
 export default {
   showCaptcha(options) {
-    let captchaService;
-    let sitekey;
     const _require = arg1;
     let obj = arg2;
     if (arg2 === undefined) {
@@ -28,16 +26,12 @@ export default {
         return callback2(table[3]).hideActionSheet(closure_4);
       }
     };
-    const obj2 = ACTION_SHEET_HEIGHT_HALF;
+    const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged = Object.assign(obj);
     const merged1 = Object.assign(options.options);
     obj2.openLazy(_asyncRequireImpl(16500, dependencyMap.paths), CAPTCHA_MODAL_KEY, obj);
   },
   showCaptchaAsync(nextResult1) {
-    let c1;
-    let c2;
-    let c3;
-    let c4;
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -48,14 +42,14 @@ export default {
     c4 = undefined;
     ({ sitekey: c1, captchaService: c2, captchaSessionId: c3, options: c4 } = nextResult1);
     return new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let obj = _undefined(_undefined2[3]);
+      closure_0 = arg0;
+      closure_1 = arg1;
+      obj = _undefined(_undefined2[3]);
       obj = {
         sitekey: closure_1,
         captchaService: _undefined2,
         onCaptchaVerify(captcha_key, captcha_rqtoken) {
-          return callback({ captcha_key, captcha_rqtoken, captcha_session_id: outer1_3 });
+          return callback({ captcha_key, captcha_rqtoken, captcha_session_id: closure_1_3 });
         },
         onReject(arg0) {
           if (arg0 === obj(10478).CaptchaError.CANCEL) {
@@ -64,7 +58,7 @@ export default {
           } else {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("Failed to display captcha for service " + outer1_2 + ".");
+            error = new Error("Failed to display captcha for service " + closure_1_2 + ".");
             callback2(error);
           }
         },
@@ -78,7 +72,7 @@ export default {
     });
   },
   useIsCaptchaModalOpen() {
-    const items = [setContent];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => key.getKey() === closure_4);
   }
 };

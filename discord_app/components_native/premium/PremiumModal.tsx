@@ -1,29 +1,13 @@
 // discord_app/components_native/premium/PremiumModal.tsx
-import "noop";
-import { UserSettingsSections } from "ME";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("components_native/premium/PremiumModal.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumModal.tsx");
 
 export default function PremiumModal(arg0) {
-  let activitySessionId;
-  let analyticsLocation;
-  let analyticsLocations;
-  let applicationId;
-  let channelId;
-  let giftRecipientId;
-  let guildId;
-  let initialRoute;
-  let isBoostPurchaseFlow;
-  let onBack;
-  let onClose;
-  let onPaymentDismiss;
-  let onPaymentSuccess;
-  let planId;
-  let predicate;
-  let premiumFeatureCardOrder;
-  let showCurrentPlan;
   ({ initialRoute, onClose } = arg0);
   ({ applicationId, analyticsLocation, analyticsLocations, onBack, giftRecipientId, predicate, showCurrentPlan, isBoostPurchaseFlow, planId, activitySessionId, channelId, guildId, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss } = arg0);
   if (initialRoute == null) {
@@ -32,7 +16,7 @@ export default function PremiumModal(arg0) {
   let obj = { value: onClose(onBack[10])(analyticsLocations).analyticsLocations, children: null };
   obj = { screens: null, initialRouteName: null };
   obj = {};
-  const obj1 = { title: null, headerLeft: null, render: null };
+  obj1 = { title: null, headerLeft: null, render: null };
   const intl = analyticsLocation(tmp[3]).intl;
   obj1[0] = intl.string(analyticsLocation(onBack[3]).t.lpNrPu);
   let obj4 = analyticsLocation(tmp[4]);
@@ -70,9 +54,6 @@ export default function PremiumModal(arg0) {
   };
   obj4[2] = { predicate, showCurrentPlan, isBoostPurchaseFlow };
   obj4[3] = function render(arg0) {
-    let isBoostPurchaseFlow;
-    let predicate;
-    let showCurrentPlan;
     ({ predicate, showCurrentPlan, isBoostPurchaseFlow } = arg0);
     return planId(onClose(onBack[8]), { analyticsLocation, predicate, showCurrentPlan, isBoostPurchaseFlow, planId, applicationId, guildId });
   };

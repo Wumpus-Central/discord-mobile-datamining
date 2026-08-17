@@ -1,33 +1,26 @@
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { WebAuthnScreens } from "WebAuthnScreens";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import Button2 from "Button" /* 4745 */;
+import Form from "Form" /* 8083 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+require = arg1;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ margin: { margin: 16 } });
-const result = require("noop").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
+const result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnNameStep.tsx");
 
 export default function WebAuthnNameStep(arg0) {
-  let c4;
-  let importDefault;
-  let name;
-  let require;
-  let tmp8;
   ({ ticket: require, credential: importDefault, name } = arg0);
-  let dependencyMap;
-  let closure_3;
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let callback;
   let first;
   function _onPress() {
@@ -59,14 +52,14 @@ export default function WebAuthnNameStep(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
+              closure_0 = tmp4;
               let v02 = 2;
               v02(true);
-              let obj2 = outer1_0(outer1_2[8]);
+              let obj2 = closure_1_0(closure_1_2[8]);
               v0 = 3;
               v03 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj2.finishRegisterWebAuthnCredential(outer1_5, outer1_0, v0);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj2.finishRegisterWebAuthnCredential(closure_1_5, closure_1_0, v0);
               return obj1;
             }
           } else if (1 === tmp8) {
@@ -96,12 +89,12 @@ export default function WebAuthnNameStep(arg0) {
             v02 = 0;
             v02(false);
             const obj3 = { key: "WEBAUTHN_CREDENTIAL_REGISTER_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-success" };
-            const intl = outer1_0(outer1_2[10]).intl;
-            obj3[1] = intl.string(outer1_0(outer1_2[10]).t.j3d5qI);
-            obj3[2] = v0(outer1_2[11]);
-            obj3[3] = outer1_0(outer1_2[12]).CircleCheckIcon;
-            v0(outer1_2[9]).open(obj3);
-            arr = arr.push(outer1_7.SUCCESS, {});
+            const intl = closure_1_0(closure_1_2[10]).intl;
+            obj3[1] = intl.string(closure_1_0(closure_1_2[10]).t.j3d5qI);
+            obj3[2] = v0(closure_1_2[11]);
+            obj3[3] = closure_1_0(closure_1_2[12]).CircleCheckIcon;
+            v0(closure_1_2[9]).open(obj3);
+            arr = arr.push(closure_1_7.SUCCESS, {});
             v03 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -118,7 +111,7 @@ export default function WebAuthnNameStep(arg0) {
         }
       }
     });
-    const _onPress = tmp;
+    closure_6 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -147,7 +140,7 @@ export default function WebAuthnNameStep(arg0) {
   obj[7] = tmp6[0];
   obj[8] = Button.ClearButtonVisibility.WITH_CONTENT;
   const items = [callback2(Form.FormInput, obj), callback2(Form.FormDivider, {}), ];
-  let obj1 = { style: tmp.margin, children: null };
+  obj1 = { style: tmp.margin, children: null };
   let obj2 = {
     onPress() {
       const self = this;
@@ -166,7 +159,7 @@ export default function WebAuthnNameStep(arg0) {
   const intl3 = tmp2(1236).intl;
   obj2[1] = intl3.string(getSystemLocale.t["5dyZ1S"]);
   obj2[2] = "" === first;
-  obj1[1] = callback2(Button.Button, obj2);
+  obj1[1] = callback2(Button2.Button, obj2);
   items[2] = callback2(_onPress, obj1);
   obj[0] = items;
   return callback3(Form.Form, obj);

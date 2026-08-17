@@ -1,26 +1,23 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { emptyContainer: null, container: null };
-createCacheKey = { flex: 1, paddingTop: require("Themes").space.PX_32 };
+createCacheKey = { flex: 1, paddingTop: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ME").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/SuggestedFriendsScreen.tsx");
 
 export default function SuggestedFriendsScreen() {
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const analyticsLocations = added(setAdded[6])(added(setAdded[7]).SUGGESTED_FRIENDS).analyticsLocations;
   const effect = friendSuggestions.useEffect(() => {
     let obj = added(setAdded[8]);
@@ -37,8 +34,8 @@ export default function SuggestedFriendsScreen() {
   }, items);
   const items1 = [added, friendSuggestions, callback, setAdded];
   const callback1 = friendSuggestions.useCallback((arg0, arg1) => {
-    let closure_0 = arg1;
-    const added = tmp;
+    closure_0 = arg1;
+    closure_1 = tmp;
     let mutualFriendsCount;
     if (friendSuggestions[arg1] != null) {
       mutualFriendsCount = tmp.mutualFriendsCount;
@@ -51,7 +48,7 @@ export default function SuggestedFriendsScreen() {
       }
       tmp3 = mutualFriendsCount1 > 0;
     }
-    let closure_2 = arg1 === friendSuggestions.length - 1;
+    closure_2 = arg1 === friendSuggestions.length - 1;
     let str = "contactSuggestionNoMutualCount";
     if (tmp3) {
       str = "contactSuggestionMutualCount";
@@ -61,25 +58,25 @@ export default function SuggestedFriendsScreen() {
       itemType: str,
       key: friendSuggestions[arg1].user.id,
       component() {
-        const obj = { added: null, suggestedFriend: null, start: null, end: null, onPress: null, onAddSuggestion: null, location: null };
-        obj[0] = tmp.includes(tmp);
-        obj[1] = tmp;
-        obj[2] = 0 === closure_0;
-        obj[3] = closure_2;
-        obj[4] = outer1_4;
-        obj[5] = function onAddSuggestion() {
-          return outer1_2((arg0) => {
-            const items = [];
-            items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1;
-            return items;
-          });
-        };
-        obj[6] = outer2_6.FRIENDS_SUGGESTED_FRIENDS_MODAL;
-        return outer2_7(analyticsLocations(setAdded[11]).ContactSuggestionRow, obj);
+        return closure_2_7(analyticsLocations(setAdded[11]).ContactSuggestionRow, {
+          added: closure_1.includes(closure_1),
+          suggestedFriend: closure_1,
+          start: 0 === closure_0,
+          end: closure_2,
+          onPress: closure_1_4,
+          onAddSuggestion() {
+            return closure_1_2((arg0) => {
+              const items = [];
+              items[HermesBuiltin.arraySpread(arg0, 0)] = closure_1;
+              return items;
+            });
+          },
+          location: closure_2_6.FRIENDS_SUGGESTED_FRIENDS_MODAL
+        });
       }
     };
   }, items1);
-  const callback2 = friendSuggestions.useCallback(() => {
+  callback2 = friendSuggestions.useCallback(() => {
 
   }, []);
   let obj = { value: analyticsLocations, children: null };
@@ -93,7 +90,7 @@ export default function SuggestedFriendsScreen() {
     obj[2] = callback2;
     let tmp12Result = tmp12(tmp11(tmp3[13]).UsersFastList, obj);
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.emptyContainer;
     const obj2 = { title: null, disableBackgroundOverlay: true };
     const intl = tmp11(tmp3[15]).intl;

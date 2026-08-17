@@ -1,29 +1,26 @@
 // discord_app/modules/guild_settings/native/MembersFilterActionSheet.tsx
-import noop from "noop";
-import { View } from "BottomSheetModal";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import handleFormInit from "handleFormInit";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_7 from "handleFormInit" /* 8875 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { listView: null, roleDot: null, labelContainer: null, label: null };
-createCacheKey = { marginVertical: 8, borderRadius: require("Themes").radii.lg, overflow: "hidden" };
+createCacheKey = { marginVertical: 8, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginEnd: 4 };
 createCacheKey[2] = { flexDirection: "row" };
-createCacheKey[3] = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_settings/native/MembersFilterActionSheet.tsx");
+createCacheKey[3] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/guild_settings/native/MembersFilterActionSheet.tsx");
 
 export default function MembersFilterActionSheet(onFilterRoleId) {
-  let require;
-  let selectedRoleId;
   ({ guild: require, selectedRoleId } = onFilterRoleId);
   if (selectedRoleId === undefined) {
     selectedRoleId = props.getProps().selectedRoleId;
@@ -32,11 +29,11 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
   let React;
   let callback;
   let stateFromStores1;
-  const tmp2 = createCacheKey();
+  const tmp2 = callback2();
   React = tmp2;
   let obj = require(onFilterRoleId[8]);
-  let items = [createGuildRoleRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getSortedRoles(id.id));
+  let items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getSortedRoles(id.id));
   const mapped = stateFromStores.map((id) => {
     const merged = Object.assign(id);
     return { value: id.id };
@@ -57,14 +54,14 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
       const tmp9 = selectedRoleId(onFilterRoleId[10]);
     }
   }, items1);
-  let obj1 = require(onFilterRoleId[8]);
+  obj1 = require(onFilterRoleId[8]);
   const items2 = [stateFromStores1];
   stateFromStores1 = obj1.useStateFromStores(items2, () => stateFromStores1.roleStyle);
   const items3 = [callback, stateFromStores1, selectedRoleId, tmp2];
   const callback1 = React.useCallback((item) => {
     item = item.item;
     let obj = { value: item.id, label: null, legacyCompat_onPress: null, legacyCompat_selected: null };
-    obj = { style: _undefined.labelContainer, children: null };
+    obj = { style: labelContainer.labelContainer, children: null };
     let tmpResult = "dot" === stateFromStores1;
     if (tmpResult) {
       tmpResult = null != item.colorString;
@@ -76,25 +73,25 @@ export default function MembersFilterActionSheet(onFilterRoleId) {
       tmpResult = tmp(tmp2(tmp3[12]).RoleDot, obj);
     }
     const items = [tmpResult, ];
-    const items1 = [_undefined.label, ];
+    const items1 = [labelContainer.label, ];
     let tmp10 = null;
     if (null != item.colorString) {
       tmp10 = null;
       if ("username" === stateFromStores1) {
-        const obj1 = { color: null };
+        obj1 = { color: null };
         obj1[0] = item.colorString;
         tmp10 = obj1;
       }
     }
     items1[1] = tmp10;
-    items[1] = outer1_8(outer1_0(onFilterRoleId[13]).Text, { variant: "text-md/medium", style: items1, children: item.name });
+    items[1] = closure_1_8(closure_1_0(onFilterRoleId[13]).Text, { variant: "text-md/medium", style: items1, children: item.name });
     obj[1] = items;
-    obj[1] = outer1_9(callback, obj);
+    obj[1] = closure_1_9(callback, obj);
     obj[2] = function legacyCompat_onPress() {
-      return outer1_4(item.id);
+      return closure_1_4(item.id);
     };
     obj[3] = item.id === selectedRoleId;
-    return outer1_8(outer1_0(onFilterRoleId[11]).TableRadioRow, obj);
+    return closure_1_8(closure_1_0(onFilterRoleId[11]).TableRadioRow, obj);
   }, items3);
   obj = { scrollable: true, header: null, children: null };
   obj = { title: null };

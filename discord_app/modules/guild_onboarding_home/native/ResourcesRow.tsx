@@ -1,42 +1,42 @@
 // discord_app/modules/guild_onboarding_home/native/ResourcesRow.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useResourceChannels } from "../useResourceChannels.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { ONBOARDING_HOME_RESOURCES_SHEET_KEY as closure_4 } from "ONBOARDING_HOME_RESOURCES_SHEET_KEY" /* 15814 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { display: "flex", flexDirection: "row", paddingBottom: 8, marginBottom: 16 }, channelItem: null };
-createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 };
+createCacheKey = { display: "flex", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.round, marginLeft: 8, paddingVertical: 8, paddingHorizontal: 12 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ONBOARDING_HOME_RESOURCES_SHEET_KEY").fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/ResourcesRow.tsx");
 
 export default function ResourcesRow(guildId) {
   guildId = guildId.guildId;
-  let importDefault;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  const tmp = callback2();
   importDefault = tmp;
-  const arr = useResourceChannels(guildId);
+  const arr = useResourceChannelsDefault(guildId);
   let obj = { horizontal: true, style: tmp.container, children: null };
   const substr = arr.slice(0, 2);
   const items = [
     substr.map((children) => {
-      let closure_0 = children;
+      closure_0 = children;
       let obj = {
-        style: _undefined.channelItem,
+        style: lib.channelItem,
         onPress() {
-          const homeResourceChannel = guildId(outer2_2[7]).selectHomeResourceChannel(channelId, channelId.channelId);
+          const homeResourceChannel = guildId(closure_2_2[7]).selectHomeResourceChannel(channelId, channelId.channelId);
         },
         children: null
       };
       obj = { variant: "text-md/medium", color: "text-default", children: children.title };
-      obj[2] = outer1_5(guildId(outer1_2[12]).Text, obj);
-      return outer1_5(guildId(outer1_2[11]).PressableOpacity, obj, children.channelId);
+      obj[2] = closure_1_5(guildId(closure_1_2[12]).Text, obj);
+      return closure_1_5(guildId(closure_1_2[11]).PressableOpacity, obj, children.channelId);
     }),
 
   ];
@@ -45,13 +45,13 @@ export default function ResourcesRow(guildId) {
     obj = { style: null, onPress: null, children: null };
     obj[0] = tmp.channelItem;
     obj[1] = function onPress() {
-      let obj = _undefined(outer1_2[8]);
+      let obj = lib(closure_1_2[8]);
       obj = { guildId };
-      obj.openLazy(guildId(outer1_2[10])(outer1_2[9], outer1_2.paths), outer1_4, obj);
+      obj.openLazy(guildId(closure_1_2[10])(closure_1_2[9], closure_1_2.paths), closure_1_4, obj);
     };
     obj = { variant: "text-md/medium", color: "text-default", children: null };
     const intl = guildId(1236).intl;
-    const obj1 = { count: null };
+    obj1 = { count: null };
     obj1[0] = arr.length - 2;
     obj[2] = intl.format(guildId(1236).t.F6iMs4, obj1);
     obj[2] = callback(guildId(4734).Text, obj);

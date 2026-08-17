@@ -1,8 +1,10 @@
 // discord_app/modules/user_settings/voice/AudioSettingsUtils.tsx
-import { ProtoAudioSettingsContextTypes as closure_2 } from "MAX_FAVORITES";
-import { BaseConnectionEvent } from "../../../../discord_common/js/packages/media-engine/index.tsx";
+import set from "set" /* 2 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
 
-let result = require("AudioSettingsDefaultVolumes").fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
+let closure_2 = MAX_FAVORITES.ProtoAudioSettingsContextTypes;
+let result = set.fileFinishedImporting("modules/user_settings/voice/AudioSettingsUtils.tsx");
 
 export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
   if (DEFAULT === BaseConnectionEvent.MediaEngineContextTypes.STREAM) {
@@ -22,8 +24,8 @@ export const snapVolumeToDefault = function snapVolumeToDefault(USER, DEFAULT) {
 export const coerceAudioContextForProto = function coerceAudioContextForProto(first) {
   if (BaseConnectionEvent.MediaEngineContextTypes.DEFAULT === first) {
     return constants.USER;
-  } else if (tmp(4569).MediaEngineContextTypes.STREAM === first) {
+  } else if (BaseConnectionEvent.MediaEngineContextTypes.STREAM === first) {
     return constants.STREAM;
   }
-  tmp = require;
+  const tmp = require;
 };

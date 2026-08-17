@@ -1,10 +1,16 @@
 // discord_app/design/utils/native.tsx
-const result = require("chainCallbacks").fileFinishedImporting("design/utils/native.tsx");
+import set from "set" /* 2 */;
+import isThemeLight from "isThemeLight" /* 1364 */;
+import getNodeText from "getNodeText" /* 4100 */;
+import chainCallbacks from "chainCallbacks" /* 4101 */;
+import useFocus from "useFocus" /* 4102 */;
 
-export const getNodeText = require("getNodeText").getNodeText;
-export const chainCallbacks = require("chainCallbacks").chainCallbacks;
-export const mergeProps = require("chainCallbacks").mergeProps;
-export const mergeRefs = require("chainCallbacks").mergeRefs;
-export const useFocus = require("useFocus").useFocus;
-export const isThemeLight = require("isThemeLight").isThemeLight;
-export const isThemeDark = require("isThemeLight").isThemeDark;
+const result = set.fileFinishedImporting("design/utils/native.tsx");
+
+export const getNodeText = getNodeText.getNodeText;
+export const chainCallbacks = chainCallbacks.chainCallbacks;
+export const mergeProps = chainCallbacks.mergeProps;
+export const mergeRefs = chainCallbacks.mergeRefs;
+export const useFocus = useFocus.useFocus;
+export const isThemeLight = isThemeLight.isThemeLight;
+export const isThemeDark = isThemeLight.isThemeDark;

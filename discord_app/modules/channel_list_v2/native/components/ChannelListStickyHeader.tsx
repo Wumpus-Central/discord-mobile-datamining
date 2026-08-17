@@ -1,31 +1,27 @@
 // discord_app/modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx
-import Button from "Button";
-import get_ActivityIndicator from "Text";
-import { JoinGuildSources } from "ME";
-import jsxProd from "FavoritesGuildHeaderActionButton";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { GuildBadgeV2 } from "../../../guild/native/GuildBadgeV2.tsx";
-import { useIsGameCommunityServerPreview } from "../../../lurker_mode/native/useIsGameCommunityServerPreview.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useStickyServerHeaderSubtitle } from "../hooks/useStickyServerHeaderSubtitle.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import GuildBadgeV2Default from "GuildBadgeV2" /* 9152 */;
+import useIsGameCommunityServerPreviewDefault from "useIsGameCommunityServerPreview" /* 15367 */;
+import useStickyServerHeaderSubtitleDefault from "useStickyServerHeaderSubtitle" /* 15396 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { JoinGuildSources } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-let Pressable;
-let c4;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, Pressable } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let closure_8 = require("module_4115").createAnimatedComponent(Pressable);
+let closure_8 = importDefaultResult.createAnimatedComponent(Pressable);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
   }
   let obj = { chevron: { flexShrink: 0, flexGrow: 0 }, container: null, divider: null, guildBadge: null, flex: null, header: null, headerRow: null, headerRowTitle: null, headerRowInset: null, headerIcon: null, subheader: null, ellipse: null, joinButton: null };
-  obj = { gap: Themes.space.PX_8, paddingTop: Themes.space.PX_16, paddingBottom: null };
+  obj = { gap: ThemesDefault.space.PX_8, paddingTop: ThemesDefault.space.PX_16, paddingBottom: null };
   if (flag) {
     let num = 0;
     if (!arg0) {
@@ -45,33 +41,30 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   const merged = Object.assign(obj);
   obj.zIndex = 1;
   obj[1] = obj;
-  obj[2] = { height: 1, backgroundColor: Themes.colors.BORDER_SUBTLE, marginHorizontal: Themes.space.PX_16 };
+  obj[2] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: ThemesDefault.space.PX_16 };
   obj[3] = { margin: 0 };
   obj[4] = { flexShrink: 1 };
-  const obj1 = { height: 1, backgroundColor: Themes.colors.BORDER_SUBTLE, marginHorizontal: Themes.space.PX_16 };
-  obj[5] = { alignItems: "center", flexDirection: "row", gap: Themes.space.PX_4, paddingHorizontal: Themes.space.PX_16 };
-  const obj2 = { alignItems: "center", flexDirection: "row", gap: Themes.space.PX_4, paddingHorizontal: Themes.space.PX_16 };
-  obj[6] = { alignItems: "center", flexDirection: "row", gap: Themes.space.PX_8 };
+  obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: ThemesDefault.space.PX_16 };
+  obj[5] = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
+  const obj2 = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_4, paddingHorizontal: ThemesDefault.space.PX_16 };
+  obj[6] = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
   obj[7] = { flexGrow: 1, flexShrink: 1 };
-  const obj3 = { alignItems: "center", flexDirection: "row", gap: Themes.space.PX_8 };
-  obj[8] = { paddingEnd: Themes.space.PX_16 };
-  const obj4 = { paddingEnd: Themes.space.PX_16 };
-  obj[9] = { marginRight: Themes.space.PX_4 };
-  const obj5 = { marginRight: Themes.space.PX_4 };
-  obj[10] = { flexDirection: "row", alignItems: "center", paddingHorizontal: Themes.space.PX_16, gap: Themes.space.PX_8 };
+  const obj3 = { alignItems: "center", flexDirection: "row", gap: ThemesDefault.space.PX_8 };
+  obj[8] = { paddingEnd: ThemesDefault.space.PX_16 };
+  const obj4 = { paddingEnd: ThemesDefault.space.PX_16 };
+  obj[9] = { marginRight: ThemesDefault.space.PX_4 };
+  const obj5 = { marginRight: ThemesDefault.space.PX_4 };
+  obj[10] = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
   const colors = tmp(712).colors;
-  const obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: Themes.space.PX_16, gap: Themes.space.PX_8 };
-  obj[11] = { width: 4, height: 4, backgroundColor: arg0 ? colors.TEXT_SUBTLE : colors.BACKGROUND_MOD_STRONG, borderRadius: Themes.radii.round };
-  const obj7 = { width: 4, height: 4, backgroundColor: arg0 ? colors.TEXT_SUBTLE : colors.BACKGROUND_MOD_STRONG, borderRadius: Themes.radii.round };
-  obj[12] = { marginHorizontal: Themes.space.PX_16, marginBottom: Themes.space.PX_8 };
+  const obj6 = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+  obj[11] = { width: 4, height: 4, backgroundColor: arg0 ? colors.TEXT_SUBTLE : colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round };
+  const obj7 = { width: 4, height: 4, backgroundColor: arg0 ? colors.TEXT_SUBTLE : colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round };
+  obj[12] = { marginHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_8 };
   return obj;
 });
-const result = require("ME").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelListStickyHeader.tsx");
 
 export default function ChannelListStickyHeader(guild) {
-  let onPressIn;
-  let onPressOut;
-  let pressableStyles;
   guild = guild.guild;
   let flag = guild.showExtraButtons;
   if (flag === undefined) {
@@ -85,13 +78,13 @@ export default function ChannelListStickyHeader(guild) {
   if (flag3 === undefined) {
     flag3 = false;
   }
-  let importDefault;
-  const tmp3 = useIsMobileVisualRefreshExperimentEnabled("ChannelListStickyHeader");
+  importDefault = undefined;
+  const tmp3 = useIsMobileVisualRefreshExperimentEnabledDefault("ChannelListStickyHeader");
   const tmp4 = callback2(tmp3, flag);
-  let tmp25Result2 = useIsGameCommunityServerPreview(guild.id);
+  let tmp25Result2 = useIsGameCommunityServerPreviewDefault(guild.id);
   let obj = React;
   const ref = React.useRef(null);
-  let obj1 = guild(1913);
+  obj1 = guild(1913);
   const isFavoritesGuildIdResult = obj1.isFavoritesGuildId(guild.id);
   importDefault = isFavoritesGuildIdResult;
   if (!flag2) {
@@ -106,7 +99,7 @@ export default function ChannelListStickyHeader(guild) {
       tmp(tmp2[12])(guild);
     }
   }, items);
-  const tmp11 = useStickyServerHeaderSubtitle(guild);
+  const tmp11 = useStickyServerHeaderSubtitleDefault(guild);
   let tmp7Result = tmp7(6295);
   const iOSPressEffects = tmp7Result.useIOSPressEffects(4);
   ({ onPressIn, onPressOut, pressableStyles } = iOSPressEffects);
@@ -160,7 +153,7 @@ export default function ChannelListStickyHeader(guild) {
   const obj2 = { ref, collapsable: false, style: tmp4.flex, children: callback(guild(4734).Text, { experimental_useNativeText: true, color: "mobile-text-heading-primary", variant: token, lineClamp: 1, children: favoritesAwareGuildName }) };
   obj3[1] = guild(1297).Icon.Sizes.REFRESH_SMALL_16;
   obj3[2] = tmp4.guildBadge;
-  items2[2] = callback(GuildBadgeV2, obj3);
+  items2[2] = callback(GuildBadgeV2Default, obj3);
   let tmp25Result = null;
   if (flag2) {
     const obj4 = { size: "xxs", color: null, style: null };

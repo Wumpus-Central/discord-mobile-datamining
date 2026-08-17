@@ -1,22 +1,17 @@
 // discord_app/modules/hub/native/components/HubSidebar.tsx
-import "UserPlusIcon";
-import { View } from "PlusMediumIcon";
-import comparator from "comparator";
-import handleConnectionOpen from "handleConnectionOpen";
-import { InstantInviteSources } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { BaseChannelSubtitle } from "../../../guild_sidebar/native/BaseChannelItem.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import BaseChannelSubtitle from "BaseChannelSubtitle" /* 11553 */;
+import BaseChannelSubtitleDefault from "BaseChannelSubtitle" /* 11553 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "comparator" /* 1980 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import { InstantInviteSources } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function HubItem(arg0) {
-  let IconComponent;
-  let active;
-  let handleItemClick;
-  let label;
-  let unreadCount;
   ({ label, unreadCount } = arg0);
   ({ IconComponent, handleItemClick, active } = arg0);
   const ChannelModes = BaseChannelSubtitle.ChannelModes;
@@ -27,8 +22,8 @@ function HubItem(arg0) {
     DEFAULT = ChannelModes.DEFAULT;
     tmp5 = tmp2;
   }
-  let obj = { style: createCacheKey().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
-  const tmp = createCacheKey();
+  let obj = { style: callback2().container, accessibilityLabel: label, accessibilityRole: "menuitem", onPress: handleItemClick, disableHighlightOnPress: true, mode: DEFAULT, name: null, icon: null, channelInfo: null };
+  const tmp = callback2();
   obj[6] = callback(tmp5(11553).BaseChannelName, { name: label, mode: DEFAULT });
   obj[7] = callback(tmp5(11553).BaseChannelIcon, { mode: DEFAULT, IconComponent });
   let tmp6Result = null;
@@ -38,33 +33,34 @@ function HubItem(arg0) {
     tmp6Result = tmp6(tmp5(1297).Badge, obj);
   }
   obj[8] = tmp6Result;
-  return callback(BaseChannelSubtitle, obj);
+  return callback(BaseChannelSubtitleDefault, obj);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+noopAll;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, row: null };
-createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: require("Themes").radii.md };
+createCacheKey = { marginVertical: require("hairlineWidth").CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("comparator").fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/hub/native/components/HubSidebar.tsx");
 
 export default function HubSidebar(guild) {
   guild = guild.guild;
   let stateFromStores;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = guild(589);
-  const items = [comparator];
+  const items = [closure_4];
   const items1 = [guild.id];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_4.getDefaultChannel(guild.id), items1);
-  let obj1 = guild(589);
-  const items2 = [comparator];
-  dependencyMap = obj1.useStateFromStoresObject(items2, () => outer1_4.getChannels(guild.id));
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getDefaultChannel(guild.id), items1);
+  obj1 = guild(589);
+  const items2 = [closure_4];
+  dependencyMap = obj1.useStateFromStoresObject(items2, () => closure_1_4.getChannels(guild.id));
   let obj2 = guild(589);
-  const items3 = [handleConnectionOpen];
+  const items3 = [closure_5];
   const stateFromStores1 = obj2.useStateFromStores(items3, () => {
     let tmp2 = null != stateFromStores;
     if (tmp2) {
-      tmp2 = outer1_5.getChannelId() === tmp.id;
+      tmp2 = closure_1_5.getChannelId() === tmp.id;
     }
     return tmp2;
   });
@@ -105,7 +101,7 @@ export default function HubSidebar(guild) {
     const intl3 = tmp(1236).intl;
     obj3[1] = intl3.string(tmp(1236).t.MJQOuJ);
     obj3[2] = function handleItemClick() {
-      const result = guild(8918).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, outer1_6.GUILD_HEADER);
+      const result = guild(8918).handleOpenInviteActionsheet(guild, stateFromStores.id, dependencyMap, closure_1_6.GUILD_HEADER);
     };
     items4[3] = callback(HubItem, obj3);
     obj[1] = items4;

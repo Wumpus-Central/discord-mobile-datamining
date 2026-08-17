@@ -1,24 +1,24 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import reinjectEphemerals from "reinjectEphemerals";
-import { AnalyticEvents } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("reinjectEphemerals").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsDeleteMessageElement.tsx");
 
 export default function DeleteMessageElement(message) {
   message = message.message;
   const reportId = message.reportId;
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
   const tmp = stateFromStores(React.useState(false), 2);
   dependencyMap = tmp[1];
   let obj = message(589);
-  const items = [reinjectEphemerals];
+  const items = [closure_5];
   const items1 = [message];
-  stateFromStores = obj.useStateFromStores(items, () => null == outer1_5.getMessage(message.getChannelId(), message.id), items1);
+  stateFromStores = obj.useStateFromStores(items, () => null == closure_1_5.getMessage(message.getChannelId(), message.id), items1);
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     dependencyMap(stateFromStores);
@@ -28,7 +28,7 @@ export default function DeleteMessageElement(message) {
     dependencyMap(true);
     let obj = reportId(5042);
     obj = { report_id: reportId };
-    obj.trackWithMetadata(outer1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
+    obj.trackWithMetadata(closure_1_6.IAR_DELETE_MESSAGE_BUTTON_CLICKED, obj);
     reportId(7427).deleteMessage(message.getChannelId(), message.id);
   }, items3);
   obj = { title: null, disabledTitle: null, description: null, disabled: null, variant: "danger", onPress: null, icon: null };

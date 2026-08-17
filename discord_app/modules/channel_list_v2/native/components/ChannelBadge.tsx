@@ -1,19 +1,17 @@
 // discord_app/modules/channel_list_v2/native/components/ChannelBadge.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { shortenAndLocalizeNumber } from "../../../../utils/NumberUtils.tsx";
-import { renderChannelBadge } from "index.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import shortenAndLocalizeNumber from "shortenAndLocalizeNumber" /* 1898 */;
+import Text from "Text" /* 4734 */;
+import renderChannelBadge from "renderChannelBadge" /* 11458 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Button").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelBadge.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/channel_list_v2/native/components/ChannelBadge.tsx");
 
 export const renderChannelBadge = function renderChannelBadge(newChannel) {
-  let eventsMentionCount;
-  let newPostCount;
-  let postsWithUnreadsCount;
   let flag = newChannel.newChannel;
   if (flag === undefined) {
     flag = false;
@@ -39,7 +37,7 @@ export const renderChannelBadge = function renderChannelBadge(newChannel) {
       if (newPostCount > 0) {
         obj = { variant: "text-xs/bold", color: "text-brand", children: null };
         const intl = getSystemLocale.intl;
-        const obj1 = { count: null };
+        obj1 = { count: null };
         obj1[0] = shortenAndLocalizeNumber.humanizeValue(newPostCount, newChannel.locale);
         obj[2] = intl.format(getSystemLocale.t.GkAbqY, obj1);
         tmp2 = jsx(Text.Text, { variant: "text-xs/bold", color: "text-brand", children: null });

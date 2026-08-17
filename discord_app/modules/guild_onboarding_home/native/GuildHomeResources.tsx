@@ -1,40 +1,33 @@
 // discord_app/modules/guild_onboarding_home/native/GuildHomeResources.tsx
-import getDefaultRules from "get defaultRules";
-import get_ActivityIndicator from "PressableBase";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import reinjectEphemerals from "reinjectEphemerals";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import jsxProd from "transitionTo";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/15823_registerAsset.js";
-import { useResourceChannels } from "../useResourceChannels.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useResourceChannelsDefault from "useResourceChannels" /* 15815 */;
+import registerAssetDefault from "registerAsset" /* 15823 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "comparator" /* 1980 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let closure_12;
-let map1;
-let unpackModuleId;
 const require = arg1;
 function ResourceChannelRow(channelId) {
-  let description;
-  let icon;
   channelId = channelId.channelId;
   ({ icon, description } = channelId);
   let stateFromStores;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback3();
   let obj = channelId(589);
-  const items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(channelId));
-  let obj1 = channelId(589);
-  const items1 = [getUncachedChannelPermissions];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_9.can(outer1_10.VIEW_CHANNEL, stateFromStores));
+  const items = [closure_6];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
+  obj1 = channelId(589);
+  const items1 = [closure_9];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_9.can(closure_1_10.VIEW_CHANNEL, stateFromStores));
   let obj2 = channelId(589);
-  const items2 = [reinjectEphemerals];
-  const stateFromStores2 = obj2.useStateFromStores(items2, () => outer1_8.getMessages(channelId));
+  const items2 = [closure_8];
+  const stateFromStores2 = obj2.useStateFromStores(items2, () => closure_1_8.getMessages(channelId));
   const firstResult = stateFromStores2.first();
   let obj4 = channelId(8515);
   const forumPostMediaProperties = obj4.useForumPostMediaProperties(firstResult, false);
@@ -55,8 +48,8 @@ function ResourceChannelRow(channelId) {
   dependencyMap = tmp12;
   const items3 = [channelId, tmp12];
   const effect = React.useEffect(() => {
-    if (_undefined) {
-      let obj = stateFromStores(_undefined[14]);
+    if (dependencyMap) {
+      let obj = stateFromStores(7427);
       obj = { channelId: null, after: null, limit: 5 };
       obj[0] = channelId;
       obj[1] = channelId;
@@ -162,20 +155,20 @@ function ResourceChannelRow(channelId) {
 ({ Permissions: c10, Routes: unpackModuleId } = ME);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { container: { paddingHorizontal: 12, display: "flex", flexDirection: "column", alignItems: "center" }, emptyStateContainer: { padding: 20, display: "flex", flexDirection: "column", alignItems: "center" }, channelContainer: null, messageContent: null, textContent: null, thumbnail: null, emptyStateImage: null, icon: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: require("Themes").radii.sm, display: "flex", flexDirection: "row", alignItems: "flex-start" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "flex-start" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { marginTop: 8 };
 createCacheKey[4] = { flex: 1 };
 createCacheKey[5] = { marginLeft: 8 };
 createCacheKey[6] = { marginTop: 12, marginBottom: 20 };
 createCacheKey[7] = { width: 72, height: 72 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_onboarding_home/native/GuildHomeResources.tsx");
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildHomeResources.tsx");
 
 export default function GuildHomeResources(guildId) {
   guildId = guildId.guildId;
-  const tmp = createCacheKey();
-  const arr = useResourceChannels(guildId);
+  const tmp = callback3();
+  const arr = useResourceChannelsDefault(guildId);
   if (0 === arr.length) {
     let obj = { style: null, children: null };
     obj[0] = tmp.emptyStateContainer;
@@ -183,16 +176,16 @@ export default function GuildHomeResources(guildId) {
     const intl = guildId(1236).intl;
     obj[2] = intl.string(guildId(1236).t.owvC9U);
     const items = [callback(guildId(4734).Text, obj), , ];
-    const obj1 = { style: null, source: null };
+    obj1 = { style: null, source: null };
     obj1[0] = tmp.emptyStateImage;
-    obj1[1] = registerAsset;
+    obj1[1] = registerAssetDefault;
     items[1] = callback(closure_5, obj1);
     const obj2 = { onPress: null, text: null };
     obj2[0] = function onPress() {
-      const defaultChannel = outer1_7.getDefaultChannel(guildId);
+      const defaultChannel = closure_1_7.getDefaultChannel(guildId);
       if (null != defaultChannel) {
-        guildId(outer1_2[21]).transitionTo(outer1_11.CHANNEL(guildId, defaultChannel.id));
-        const obj = guildId(outer1_2[21]);
+        guildId(closure_1_2[21]).transitionTo(closure_1_11.CHANNEL(guildId, defaultChannel.id));
+        const obj = guildId(closure_1_2[21]);
       }
     };
     const intl2 = guildId(1236).intl;

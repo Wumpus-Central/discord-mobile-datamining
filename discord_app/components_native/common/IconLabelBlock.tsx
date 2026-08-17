@@ -1,29 +1,26 @@
 // discord_app/components_native/common/IconLabelBlock.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../design/shared.tsx";
-import { Button } from "../../design/void/native.tsx";
-import { IconUploader } from "IconUploader.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import Text from "Text" /* 4734 */;
+import IconUploaderDefault from "IconUploader" /* 9944 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 let closure_3 = ["error"];
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { wrapper: { alignItems: "center", paddingTop: 26, paddingBottom: 16 }, error: null, label: null, iconUploaderWrapper: null, text: null };
-createCacheKey = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: require("Themes").unsafe_rawColors.RED_400 };
+createCacheKey = { fontSize: 12, textAlign: "center", alignSelf: "center", marginBottom: 10, color: ThemesDefault.unsafe_rawColors.RED_400 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { fontSize: 12, marginTop: 20, color: require("Themes").colors.TEXT_SUBTLE };
+createCacheKey[2] = { fontSize: 12, marginTop: 20, color: ThemesDefault.colors.TEXT_SUBTLE };
 createCacheKey[3] = { alignSelf: "stretch", alignItems: "center" };
 createCacheKey[4] = { marginTop: 9 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_9 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class IconLabelBlock extends PureComponent {
 }
@@ -54,14 +51,10 @@ prototype["renderText"] = function renderText() {
   return tmp4;
 };
 prototype["renderIcon"] = function renderIcon() {
-  let darkSource;
-  let errorProps;
-  let iconProps;
-  let source;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback4(this.context);
   ({ iconProps, source, darkSource, errorProps } = this.props);
   if (null != iconProps) {
-    const error = iconProps.error;
+    error = iconProps.error;
     let obj = { style: null, children: null };
     obj[0] = tmp.iconUploaderWrapper;
     obj = {};
@@ -70,10 +63,10 @@ prototype["renderIcon"] = function renderIcon() {
     const tmp13 = closure_5;
     const tmp14 = callback2;
     const merged = Object.assign(tmp11);
-    const items = [callback2(IconUploader, obj), ];
+    const items = [callback2(IconUploaderDefault, obj), ];
     let tmp14Result = null;
     if (null != error) {
-      const obj1 = { style: null };
+      obj1 = { style: null };
       const items1 = [tmp.error, tmp4];
       obj1[0] = items1;
       const merged1 = Object.assign(errorProps);
@@ -99,14 +92,14 @@ prototype["renderIcon"] = function renderIcon() {
 };
 prototype["render"] = function render() {
   const obj = { style: null, children: null };
-  const items = [createCacheKey(this.context).wrapper, this.props.wrapperStyles];
+  const items = [callback4(this.context).wrapper, this.props.wrapperStyles];
   obj[0] = items;
   const items1 = [this.renderIcon(), this.props.children, this.renderLabel(), this.renderText()];
   obj[1] = items1;
   return callback3(closure_5, obj);
 };
 IconLabelBlock.contextType = require("ManaContext").ThemeContext;
-let obj1 = { fontSize: 12, marginTop: 20, color: require("Themes").colors.TEXT_SUBTLE };
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
+let obj1 = { fontSize: 12, marginTop: 20, color: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("components_native/common/IconLabelBlock.tsx");
 
 export default IconLabelBlock;

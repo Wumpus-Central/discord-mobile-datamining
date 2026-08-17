@@ -1,8 +1,8 @@
 // discord_app/modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { GuildsNodeType } from "../../GuildsTree.tsx";
+import GuildsNodeType from "GuildsNodeType" /* 5080 */;
+import closure_2 from "insertUnsortedGuilds" /* 5078 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/getGuildBarNeighbors.tsx");
 
 export default function getGuildBarNeighbors(arg0) {
@@ -39,7 +39,7 @@ export default function getGuildBarNeighbors(arg0) {
           obj[1] = tmp3;
           let tmp4 = null;
           if (null != root.children[index + 1]) {
-            const obj1 = { node: null, isFolder: null };
+            obj1 = { node: null, isFolder: null };
             obj1[0] = tmp9;
             obj1[1] = tmp9.type === tmp5(5080).GuildsNodeType.FOLDER;
             tmp4 = obj1;

@@ -1,6 +1,6 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 function getRecapOrbCountFromPullProgress(arg0, arg1) {
@@ -20,12 +20,10 @@ getRecapOrbCountFromPullProgress.__workletHash = 14295638108053;
 getRecapOrbCountFromPullProgress.__initData = { code: "function getRecapOrbCountFromPullProgress_useBountiesRecapOrbCountTsx1(progress,targetOrbAmount){if(targetOrbAmount<=0||!Number.isFinite(targetOrbAmount)){return 0;}const clampedProgress=Math.min(1,Math.max(0,progress));return Math.round(clampedProgress*targetOrbAmount);}" };
 let closure_5 = { code: "function useBountiesRecapOrbCountTsx2(){const{enabled,recapRevealHeight,getRevealProgress,scrollY,lastBountyScrollOffset,RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS,getRecapOrbCountFromPullProgress,targetOrbAmount}=this.__closure;if(!enabled||recapRevealHeight<=0){return{count:0,revealed:false};}const pullProgress=getRevealProgress(scrollY.get(),lastBountyScrollOffset,recapRevealHeight)/RECAP_ORB_COUNT_REACHES_TARGET_AT_PROGRESS;if(pullProgress<=0.1){return{count:0,revealed:false};}return{count:getRecapOrbCountFromPullProgress(pullProgress,targetOrbAmount),revealed:true};}" };
 let closure_6 = { code: "function useBountiesRecapOrbCountTsx3({count:count,revealed:revealed}){const{runOnJS,resetDisplayCount,setDisplayCountMonotonic}=this.__closure;if(!revealed){runOnJS(resetDisplayCount)();return;}runOnJS(setDisplayCountMonotonic)(count);}" };
-let result = require("module_4115").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/useBountiesRecapOrbCount.tsx");
 
 export { getRecapOrbCountFromPullProgress };
 export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scrollY) {
-  let c5;
-  let tmp2;
   scrollY = scrollY.scrollY;
   const lastBountyScrollOffset = scrollY.lastBountyScrollOffset;
   const recapRevealHeight = scrollY.recapRevealHeight;
@@ -36,7 +34,7 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
   let callback1;
   [tmp2, c5] = recapRevealHeight(targetOrbAmount.useState(0), 2);
   callback = targetOrbAmount.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     _undefined((arg0) => {
       let tmp = arg0;
       if (closure_0 > arg0) {
@@ -83,8 +81,6 @@ export const useBountiesRecapOrbCount = function useBountiesRecapOrbCount(scroll
   fn.__workletHash = 2855285055570;
   fn.__initData = c5;
   const fn2 = function p(arg0) {
-    let count;
-    let revealed;
     ({ count, revealed } = arg0);
     const runOnJS = scrollY(lastBountyScrollOffset[2]).runOnJS;
     if (revealed) {

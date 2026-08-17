@@ -1,16 +1,13 @@
 // discord_app/modules/channel_permissions/ChannelPermissionsConstants.tsx
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
-import { getSystemLocale } from "../forums/ForumPlatformUtils.native.tsx";
-import { getSystemLocale } from "../text_in_voice/GuildTiVPlatformUtils.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import getSystemLocaleDefault from "getSystemLocale" /* 8065 */;
+import getSystemLocaleDefault2 from "getSystemLocale" /* 8066 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 ({ ChannelTypes: c3, ChannelTypesSets: c4, HelpdeskArticles: c5, Permissions: closure_6 } = ME);
-const result = require("getSystemLocale").fileFinishedImporting("modules/channel_permissions/ChannelPermissionsConstants.tsx");
+const result = set.fileFinishedImporting("modules/channel_permissions/ChannelPermissionsConstants.tsx");
 
 export const RowType = { EMPTY_STATE: 0, [0]: "EMPTY_STATE", ADMINISTRATOR: 1, [1]: "ADMINISTRATOR", ROLE: 2, [2]: "ROLE", OWNER: 3, [3]: "OWNER", MEMBER: 4, [4]: "MEMBER", USER: 5, [5]: "USER", GUILD: 6, [6]: "GUILD" };
 export const AudienceSelectorSections = { ROLES: 0, [0]: "ROLES", MEMBERS: 1, [1]: "MEMBERS", USERS: 2, [2]: "USERS", GUILDS: 3, [3]: "GUILDS" };
@@ -19,7 +16,6 @@ export const ADVANCED_MODE_ON_KEY = "channelPermissionSettingsAdvancedModeOn";
 export const TrackExposureLocations = { SETTINGS_PAGE: "settings-page", MEMBERS_LIST: "members-list", EMPTY_STATE: "empty-state", CREATE_CHANNEL: "create-channel" };
 export const SettingMode = { BASIC: "basic", ADVANCED: "advanced" };
 export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(type, arg1, createPostsDisabled) {
-  let MANAGE_CHANNELS;
   type = type.type;
   const tmp = constants4;
   let str = constants4.VIEW_CHANNEL;
@@ -78,7 +74,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   obj[2] = tmp.MANAGE_CHANNELS;
   obj[MANAGE_CHANNELS.toString()] = obj;
   let str2 = tmp.MANAGE_ROLES;
-  const obj1 = { title: null, description: null, flag: null };
+  obj1 = { title: null, description: null, flag: null };
   str2 = str2.toString();
   const intl5 = tmp10(1236).intl;
   obj1[0] = intl5.string(tmp10(1236).t.ICb6am);
@@ -146,7 +142,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     if (createPostsDisabled) {
       if (!type.isMediaChannel()) {
-        let obj10 = getSystemLocale;
+        let obj10 = getSystemLocaleDefault;
         let LG9VAi = obj10.getForumChannelPermissionText();
       }
       WQ6zpT = LG9VAi;
@@ -157,11 +153,11 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else if (tmp3.GUILD_ANNOUNCEMENT === type) {
     const intl11 = tmp8(1236).intl;
     const obj5 = { articleURL: null };
-    let obj9 = combined;
+    let obj9 = combinedDefault;
     obj5[0] = obj9.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS);
     WQ6zpT = intl11.format(tmp8(1236).t.WFwfSD, obj5);
   } else if (tmp3.GUILD_VOICE === type) {
-    let obj7 = getSystemLocale;
+    let obj7 = getSystemLocaleDefault2;
     let sendMessagesDisabled;
     if (createPostsDisabled != null) {
       sendMessagesDisabled = createPostsDisabled.sendMessagesDisabled;
@@ -267,7 +263,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   } else if (tmp3.GUILD_ANNOUNCEMENT === type) {
     const intl20 = tmp8(1236).intl;
     const obj13 = { articleURL: null };
-    let obj19 = combined;
+    let obj19 = combinedDefault;
     obj13[0] = obj19.getArticleURL(constants3.ANNOUNCEMENT_CHANNELS);
     SeA_G9 = intl20.format(tmp8(1236).t.XRxOo0, obj13);
   } else {
@@ -329,7 +325,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   if (tmp3.GUILD_CATEGORY === type) {
     let RqCc7i = tmp8(1236).t["cJRv/g"];
   } else if (tmp3.GUILD_VOICE === type) {
-    let obj24 = getSystemLocale;
+    let obj24 = getSystemLocaleDefault2;
     let prop;
     if (createPostsDisabled != null) {
       prop = createPostsDisabled.readMessageHistoryDisabled;
@@ -526,7 +522,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
   if (tmp3.GUILD_CATEGORY === type) {
     const intl37 = tmp8(1236).intl;
     const obj28 = { helpCenterArticle: null };
-    let obj40 = combined;
+    let obj40 = combinedDefault;
     obj28[0] = obj40.getArticleURL(constants3.SOUNDBOARD);
     let formatResult = intl37.format(tmp8(1236).t["0kBp/0"], obj28);
   } else {
@@ -535,7 +531,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
         if (tmp3.GUILD_MEDIA !== type) {
           const intl35 = tmp8(1236).intl;
           const obj29 = { helpCenterArticle: null };
-          let obj36 = combined;
+          let obj36 = combinedDefault;
           obj29[0] = obj36.getArticleURL(constants3.SOUNDBOARD);
           formatResult = intl35.format(tmp8(1236).t.GEi6Ym, obj29);
         }
@@ -543,7 +539,7 @@ export const getChannelPermissionSpecMap = function getChannelPermissionSpecMap(
     }
     const intl36 = tmp8(1236).intl;
     const obj30 = { helpCenterArticle: null };
-    let obj38 = combined;
+    let obj38 = combinedDefault;
     obj30[0] = obj38.getArticleURL(constants3.SOUNDBOARD);
     formatResult = intl36.format(tmp8(1236).t["6eYqU1"], obj30);
   }

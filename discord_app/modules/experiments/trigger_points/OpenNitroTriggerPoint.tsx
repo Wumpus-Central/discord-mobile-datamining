@@ -1,5 +1,9 @@
 // discord_app/modules/experiments/trigger_points/OpenNitroTriggerPoint.tsx
-const commonTriggerPointConfiguration = new require("registeredExperimentIds").CommonTriggerPointConfiguration([], require("ExperimentBuckets").CommonTriggerPoints.OPEN_NITRO, { location: "open nitro tab/settings" });
-const result = require("set").fileFinishedImporting("modules/experiments/trigger_points/OpenNitroTriggerPoint.tsx");
+import set from "set" /* 2 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
+import registeredExperimentIds from "registeredExperimentIds" /* 7660 */;
+
+const commonTriggerPointConfiguration = new registeredExperimentIds.CommonTriggerPointConfiguration([], ExperimentBuckets.CommonTriggerPoints.OPEN_NITRO, { location: "open nitro tab/settings" });
+const result = set.fileFinishedImporting("modules/experiments/trigger_points/OpenNitroTriggerPoint.tsx");
 
 export const OpenNitroTriggerPoint = commonTriggerPointConfiguration;

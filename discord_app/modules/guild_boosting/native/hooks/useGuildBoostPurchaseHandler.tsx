@@ -1,13 +1,14 @@
 // discord_app/modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx
-import PaymentFlowStep from "PaymentFlowStep";
-import noop from "noop";
-import { AnalyticEvents } from "ME";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 import { MOBILE_WEB_REDIRECT_CHECKOUT_ERROR_TAG } from "../../../payments/utils/MobileWebRedirectCheckoutUtils.tsx";
 
 const require = arg1;
-let closure_6 = new require("timestamp")("useGuildBoostPurchaseHandler");
-const tmp2 = new require("timestamp")("useGuildBoostPurchaseHandler");
-let result = require("ME").fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
+let closure_6 = new timestampDefault("useGuildBoostPurchaseHandler");
+const tmp2 = new timestampDefault("useGuildBoostPurchaseHandler");
+let result = require("set").fileFinishedImporting("modules/guild_boosting/native/hooks/useGuildBoostPurchaseHandler.tsx");
 
 export default function useGuildBoostPurchaseHandler(arg0) {
   let _require = arg0;
@@ -15,10 +16,10 @@ export default function useGuildBoostPurchaseHandler(arg0) {
   _require = undefined;
   const result = obj.isMobileWebRedirectCheckoutEnabled();
   _require = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
       if (c4 === 2) {
         c4 = 3;
@@ -48,19 +49,17 @@ export default function useGuildBoostPurchaseHandler(arg0) {
             } else {
               let newAnalyticsLoadId = tmp2;
               newAnalyticsLoadId = undefined;
-              newAnalyticsLoadId = callback(outer2_2[5]).getNewAnalyticsLoadId();
-              const obj7 = callback(outer2_2[6]);
+              newAnalyticsLoadId = callback(closure_2_2[5]).getNewAnalyticsLoadId();
+              const obj7 = callback(closure_2_2[6]);
               c3 = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj7.goToStandaloneGuildBoostCheckoutFromMobileApp(callback, closure_1, newAnalyticsLoadId, () => {
                 let obj = callback(newAnalyticsLoadId[7]);
-                obj = { guild_id: callback, load_id: newAnalyticsLoadId, location_stack: null, custom_checkout_flow: null };
-                const items = [...closure_0];
-                obj[2] = items;
-                obj[3] = args(newAnalyticsLoadId[4]).getCustomCheckoutFlowForAnalytics();
-                obj.track(outer1_5.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj);
-                outer1_6.log("Successfully opened mobile web Guild Boost Management page");
+                obj = { guild_id: callback, load_id: newAnalyticsLoadId, location_stack: items, custom_checkout_flow: args(newAnalyticsLoadId[4]).getCustomCheckoutFlowForAnalytics() };
+                items = [...closure_0];
+                obj.track(closure_1_5.MOBILE_OPEN_STANDALONE_GUILD_BOOST_CHECKOUT_PAGE, obj);
+                closure_1_6.log("Successfully opened mobile web Guild Boost Management page");
               }, (arg0) => {
                 logger.error("Failed to open mobile web Guild Boost Management page, error response: ", arg0);
                 let obj = callback(newAnalyticsLoadId[8]);
@@ -82,7 +81,7 @@ export default function useGuildBoostPurchaseHandler(arg0) {
             obj2[0] = arg1;
             return obj2;
           } else {
-            obj = callback(outer2_2[10]);
+            obj = callback(closure_2_2[10]);
             obj.closeApplyBoostModal();
             c4 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };

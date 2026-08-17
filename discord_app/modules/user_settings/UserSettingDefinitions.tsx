@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/UserSettingDefinitions.tsx
-import initialize from "initialize";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { UserSettingsDelay } from "MAX_FAVORITES";
+import closure_3 from "initialize" /* 1303 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
+import { UserSettingsDelay } from "MAX_FAVORITES" /* 685 */;
 
 const require = arg1;
-const result = require("MAX_FAVORITES").fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingDefinitions.tsx");
 
 export const defineProtoSetting = function defineProtoSetting(textAndImages, activityRestrictedGuildIds, explicitContentFromProto, explicitContentToProto, set) {
   let getSetting = textAndImages;
   let f74454 = activityRestrictedGuildIds;
-  let closure_2 = explicitContentFromProto;
-  let initialize = explicitContentToProto;
+  closure_2 = explicitContentFromProto;
+  closure_3 = explicitContentToProto;
   let obj = set;
   if (set === undefined) {
     obj = {};
@@ -47,10 +47,10 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
     }
   };
   f74454 = (favorites) => {
-    let closure_0 = favorites;
+    closure_0 = favorites;
     const PreloadedUserSettingsActionCreators = getSetting(explicitContentFromProto[3]).PreloadedUserSettingsActionCreators;
     return PreloadedUserSettingsActionCreators.updateAsync(closure_0, (arg0) => {
-      arg0[outer1_1] = outer1_3(closure_0, arg0[outer1_1]);
+      arg0[closure_1_1] = closure_1_3(closure_0, arg0[closure_1_1]);
     }, INFREQUENT_USER_ACTION);
   };
   return obj;
@@ -58,9 +58,9 @@ export const defineProtoSetting = function defineProtoSetting(textAndImages, act
 export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animateEmoji) {
   let getSetting = defineProtoSetting;
   let f74458 = text;
-  let closure_2 = animateEmoji;
+  closure_2 = animateEmoji;
   getSetting = function getSetting() {
-    const tmp = outer1_3.getState()[f74458];
+    const tmp = closure_1_3.getState()[f74458];
     let setting;
     if (tmp != null) {
       setting = tmp.settings[closure_2];
@@ -71,13 +71,13 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     return setting;
   };
   f74458 = (arg0) => {
-    if (outer1_3.shouldSync(f74458)) {
+    if (closure_1_3.shouldSync(f74458)) {
       let updateSettingResult = getSetting.updateSetting(arg0);
     } else {
       let obj = f74458(animateEmoji[5]);
       obj = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
       obj = {};
-      const obj1 = { settings: null };
+      obj1 = { settings: null };
       const obj2 = {};
       obj2[animateEmoji] = arg0;
       obj1[0] = obj2;
@@ -92,9 +92,9 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
     getSetting,
     useSetting() {
       const setting = getSetting.useSetting();
-      const items = [outer1_3];
+      const items = [closure_1_3];
       let stateFromStores = getSetting(animateEmoji[4]).useStateFromStores(items, () => {
-        const tmp = outer1_3.getState()[closure_1];
+        const tmp = closure_1_3.getState()[closure_1];
         let tmp2;
         if (tmp != null) {
           tmp2 = tmp.settings[closure_2];
@@ -118,8 +118,8 @@ export function wrapSettingWithSelectiveSyncing(defineProtoSetting, text, animat
 export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, arg3) {
   let getSetting = defineProtoSetting;
   let f74461 = animateEmoji;
-  let closure_2 = arg2;
-  let initialize = arg3;
+  closure_2 = arg2;
+  closure_3 = arg3;
   getSetting = function getSetting() {
     let setting = dependencyMap();
     if (setting == null) {
@@ -152,13 +152,7 @@ export function wrapSettingWithOverride(defineProtoSetting, animateEmoji, arg2, 
   };
 }
 export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperimentDefaults(set) {
-  let UserSettingsDelay;
-  let initialize;
-  let handleConnectionClosedOrResumed;
-  let dependencyMap;
-  let importDefault;
-  let require;
-  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: initialize, ineligibleDefault: handleConnectionClosedOrResumed, onUseDefault: UserSettingsDelay } = set);
+  ({ baseSetting: require, isEligible: importDefault, useIsEligible: dependencyMap, eligibleDefault: closure_3, ineligibleDefault: closure_4, onUseDefault: UserSettingsDelay } = set);
   return {
     getSetting() {
       const setting = closure_0.getSetting();
@@ -171,7 +165,7 @@ export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperim
         if (callback()) {
           let tmp5 = callback2();
         } else {
-          tmp5 = handleConnectionClosedOrResumed;
+          tmp5 = closure_4;
         }
       }
     },
@@ -186,7 +180,7 @@ export const wrapSettingWithExperimentDefaults = function wrapSettingWithExperim
         if (tmp2) {
           let tmp4 = callback2();
         } else {
-          tmp4 = handleConnectionClosedOrResumed;
+          tmp4 = closure_4;
         }
       }
     },

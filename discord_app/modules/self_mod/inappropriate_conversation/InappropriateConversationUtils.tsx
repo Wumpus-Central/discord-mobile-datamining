@@ -1,12 +1,12 @@
 // discord_app/modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleConnectionOpen from "handleConnectionOpen";
-import { SafetyWarningTypes } from "handleConnectionOpen";
-import { trackViewedEvent } from "../shared/SafetyWarningUtils.tsx";
+import trackViewedEvent from "trackViewedEvent" /* 10582 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "handleConnectionOpen" /* 9921 */;
+import { SafetyWarningTypes } from "handleConnectionOpen" /* 9921 */;
 
-const require = arg1;
-const result = require("handleConnectionOpen").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/self_mod/inappropriate_conversation/InappropriateConversationUtils.tsx");
 
 export const getSafetyAlertsSettingOrDefault = function getSafetyAlertsSettingOrDefault() {
   currentUser = currentUser.getCurrentUser();

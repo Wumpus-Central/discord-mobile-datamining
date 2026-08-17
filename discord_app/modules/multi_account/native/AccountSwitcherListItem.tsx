@@ -1,20 +1,17 @@
 // discord_app/modules/multi_account/native/AccountSwitcherListItem.tsx
-import "noop";
-import get_ActivityIndicator from "nameFromUser";
-import createdAt from "createdAt";
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MultiAccountTokenStatus } from "initialize";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createdAt" /* 1930 */;
+import closure_6 from "initialize" /* 4220 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c3;
-let c4;
-let c9;
-const require = arg1;
+require = arg1;
 class AccountStatusIcon {
   constructor(arg0) {
     user = global.user;
@@ -22,7 +19,7 @@ class AccountStatusIcon {
     tmp2 = closure_2;
     obj = require("initialize");
     items = [];
-    items[0] = View;
+    items[0] = closure_7;
     stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
     id = undefined;
     if (stateFromStores != null) {
@@ -48,19 +45,13 @@ class AccountStatusIcon {
     return tmp6;
   }
 }
+noopAll;
 ({ Pressable: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ accountListTag: { marginLeft: 12, flex: 1 }, tagContainer: { display: "flex", flexDirection: "row" }, accountSwitcherListItem: { display: "flex", flexDirection: "row", justifyContent: "flex-start", alignItems: "center", paddingVertical: 8, paddingHorizontal: 16 }, username: { flexShrink: 1 }, accountInfo: { flex: 1, minWidth: "30%", display: "flex", flexDirection: "row", alignItems: "center" } });
-const result = require("createdAt").fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
+const result = require("set").fileFinishedImporting("modules/multi_account/native/AccountSwitcherListItem.tsx");
 
 export default function AccountSwitcherListItem(arg0) {
-  let delayLongPress;
-  let leading;
-  let onPressUser;
-  let showActiveAccountLabel;
-  let sortHandlers;
-  let trailing;
-  let user;
   ({ user, onPressUser, showActiveAccountLabel } = arg0);
   if (showActiveAccountLabel === undefined) {
     showActiveAccountLabel = false;
@@ -69,16 +60,16 @@ export default function AccountSwitcherListItem(arg0) {
   ({ delayLongPress, leading } = arg0);
   const tmp = callback2();
   let obj = initialize;
-  const items = [initialize];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => obj.hidePersonalInformation);
-  let obj1 = initialize;
-  const items1 = [mergeGuildAvatar];
+  obj1 = initialize;
+  const items1 = [closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let id;
   if (stateFromStores1 != null) {
     id = stateFromStores1.id;
   }
-  let obj2 = new createdAt(user);
+  let obj2 = new closure_5(user);
   if (user.id === id) {
     if (showActiveAccountLabel) {
       obj = { variant: "text-sm/semibold", color: "text-brand", children: null };
@@ -125,7 +116,7 @@ export default function AccountSwitcherListItem(arg0) {
     }
     const obj7 = { mode: "username", identifiable: null };
     obj7[1] = str;
-    obj6[4] = nameFromUser.getUserTag(obj2, obj7);
+    obj6[4] = nameFromUserDefault.getUserTag(obj2, obj7);
     const items4 = [callback(tmp2(4734).Text, obj6), ];
     let tmp18Result = !stateFromStores;
     if (!stateFromStores) {

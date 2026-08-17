@@ -1,10 +1,12 @@
 // discord_app/modules/rtc/VerifiedKeyStore.tsx
-import { PersistedStore } from "initialize";
-import { set } from "../../../discord_common/js/packages/libdave/index.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 9693 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class VerifiedKeyStore extends PersistedStore {
 }
 const prototype = VerifiedKeyStore.prototype;
@@ -32,17 +34,15 @@ prototype["isKeyVerified"] = function isKeyVerified(arg0, uint8Array) {
   return null != this.getKeyTrustedAt(arg0, uint8Array);
 };
 prototype["getUserIds"] = function getUserIds() {
-  return DISCORD_EPOCH.keys(closure_3);
+  return DISCORD_EPOCHDefault.keys(closure_3);
 };
 prototype["getUserVerifiedKeys"] = function getUserVerifiedKeys(closure_0) {
   return dependencyMap[closure_0];
 };
 VerifiedKeyStore.displayName = "VerifiedKeyStore";
 VerifiedKeyStore.persistKey = "VerifiedKeyStore";
-const verifiedKeyStore = new VerifiedKeyStore(require("dispatcher"), {
+const verifiedKeyStore = new VerifiedKeyStore(dispatcherDefault, {
   SECURE_FRAMES_VERIFIED_KEY_CREATE: function handleSecureFramesVerifiedKeyCreate(arg0) {
-    let key;
-    let userId;
     ({ userId, key } = arg0);
     let obj = dependencyMap[userId];
     if (obj == null) {
@@ -78,6 +78,6 @@ const verifiedKeyStore = new VerifiedKeyStore(require("dispatcher"), {
     return null != dependencyMap[arg0.userId];
   }
 });
-const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/rtc/VerifiedKeyStore.tsx");
 
 export default verifiedKeyStore;

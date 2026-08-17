@@ -1,15 +1,15 @@
 // discord_app/modules/app_dms/useAppDMChatInputState.tsx
-import noop from "noop";
-import { useQueryState } from "getIndexKey";
-import addApplication from "addApplication";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import createExecutable from "createExecutable";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
+import closure_3 from "noop" /* 19 */;
+import { useQueryState } from "getIndexKey" /* 8448 */;
+import closure_5 from "addApplication" /* 4478 */;
+import closure_6 from "createUserWidgetFromServer" /* 5365 */;
+import closure_7 from "createExecutable" /* 4479 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
 const require = arg1;
 let items = [require("PermissionOverwriteType").ApplicationCommandType.PRIMARY_ENTRY_POINT, require("PermissionOverwriteType").ApplicationCommandType.CHAT, require("PermissionOverwriteType").ApplicationCommandType.MESSAGE, require("PermissionOverwriteType").ApplicationCommandType.USER];
-const result = require("addApplication").fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
+const result = require("set").fileFinishedImporting("modules/app_dms/useAppDMChatInputState.tsx");
 
 export default function useAppDMChatInputState(context) {
   let channel;
@@ -18,11 +18,11 @@ export default function useAppDMChatInputState(context) {
   let application;
   channel = context.context.channel;
   let obj = application;
-  const items = [channel];
+  items = [channel];
   memo = application.useMemo(() => {
     if (null != channel) {
       if (true === obj.isDM()) {
-        const user = outer1_8.getUser(obj.getRecipientId());
+        const user = closure_1_8.getUser(obj.getRecipientId());
         let tmp3 = null;
         if (undefined !== user) {
           tmp3 = null;
@@ -35,16 +35,16 @@ export default function useAppDMChatInputState(context) {
     }
     return null;
   }, items);
-  let obj1 = channel(stateFromStores[8]);
-  const items1 = [addApplication];
+  obj1 = channel(stateFromStores[8]);
+  const items1 = [closure_5];
   stateFromStores = obj1.useStateFromStores(items1, () => {
     let id;
     if (memo != null) {
       id = memo.id;
     }
-    return outer1_5.getAppIdForBotUserId(id);
+    return closure_1_5.getAppIdForBotUserId(id);
   });
-  const items2 = [createUserWidgetFromServer];
+  const items2 = [closure_6];
   const stateFromStores1 = channel(stateFromStores[8]).useStateFromStores(items2, () => {
     let tmp2;
     if (null !== memo) {
@@ -52,8 +52,8 @@ export default function useAppDMChatInputState(context) {
       if (tmp != null) {
         id = tmp.id;
       }
-      const userProfile = outer1_6.getUserProfile(id);
-      let application;
+      const userProfile = closure_1_6.getUserProfile(id);
+      application = undefined;
       if (userProfile != null) {
         application = userProfile.application;
       }
@@ -76,7 +76,7 @@ export default function useAppDMChatInputState(context) {
         id = memo.id;
       }
       if (id == null) {
-        id = outer1_9;
+        id = closure_1_9;
       }
       memo(stateFromStores[9])(id, undefined, { withMutualGuilds: true });
       const tmp3 = memo(stateFromStores[9]);
@@ -123,7 +123,7 @@ export default function useAppDMChatInputState(context) {
   let memo1 = obj.useMemo(() => {
     let fromServer;
     if (null != application) {
-      fromServer = outer1_7.createFromServer(tmp);
+      fromServer = closure_1_7.createFromServer(tmp);
     }
     return fromServer;
   }, items5);

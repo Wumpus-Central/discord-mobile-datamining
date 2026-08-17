@@ -1,27 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileEditFormControls.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { FormSwitch } from "../../../design/components/Forms/native/FormSwitch.native.tsx";
-import { NitroWheelIcon } from "../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
-import { Input } from "../../../design/components/Input/native/Input.native.tsx";
-import { TableRowArrow } from "../../../design/components/TableRow/native/TableRowArrow.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { set } from "../../../utils/PlatformUtils.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import TableRowArrow from "TableRowArrow" /* 6297 */;
+import FormSwitch from "FormSwitch" /* 7179 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
+import Input from "Input" /* 8072 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let require = arg1;
+require = arg1;
 function FormControlText(children) {
-  const tmp = createCacheKey();
-  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", style: createCacheKey().formControlText, children: children.text });
+  const tmp = callback3();
+  return callback2(Text.Text, { variant: "text-sm/medium", color: "text-default", style: callback3().formControlText, children: children.text });
 }
 function FormControlSubtext(text) {
   text = text.text;
@@ -37,15 +34,15 @@ function FormControlSubtext(text) {
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { button: null, buttonTextContainer: null, formControlText: null, labelTrailing: null, newBadge: null };
-createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: require("Themes").colors.BORDER_STRONG, borderWidth: 1, borderRadius: require("Themes").radii.md };
+createCacheKey = { flexGrow: 1, flexShrink: 1, flexDirection: "row", alignItems: "center", gap: 12, padding: 12, borderColor: ThemesDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1, flexShrink: 1, flexDirection: "column" };
 createCacheKey[2] = { marginRight: "auto", flexShrink: 1 };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginLeft: require("Themes").space.PX_4, gap: require("Themes").space.PX_4 };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
 createCacheKey[4] = { paddingTop: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexDirection: "row", alignItems: "center", marginLeft: require("Themes").space.PX_4, gap: require("Themes").space.PX_4 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormControls.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_4, gap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditFormControls.tsx");
 
 export const UserProfileEditFormLabelBadges = function UserProfileEditFormLabelBadges(showPremiumIcon) {
   let flag = showPremiumIcon.showPremiumIcon;
@@ -56,7 +53,7 @@ export const UserProfileEditFormLabelBadges = function UserProfileEditFormLabelB
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (flag) {
     let obj = { style: null, "aria-hidden": true, children: null };
     obj[0] = tmp.labelTrailing;
@@ -84,16 +81,6 @@ export const UserProfileEditFormLabelBadges = function UserProfileEditFormLabelB
   return tmp3Result;
 };
 export const UserProfileEditFormButton = function UserProfileEditFormButton(loading) {
-  let accessibilityValue;
-  let buttonSubtext;
-  let buttonText;
-  let content;
-  let disabled;
-  let label;
-  let labelTrailing;
-  let leading;
-  let onPress;
-  let trailing;
   ({ label, buttonText, content, disabled } = loading);
   ({ labelTrailing, buttonSubtext, onPress, leading, trailing, accessibilityValue } = loading);
   if (disabled === undefined) {
@@ -107,7 +94,7 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { label, labelTrailing, children: null };
   obj = { onPress, style: tmp.button, accessibilityRole: "button", accessibilityLabel: label, accessibilityValue, accessibilityHint: null, accessibilityState: null, disabled: null, children: null };
   const intl = getSystemLocale.intl;
@@ -120,7 +107,7 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
     obj[0] = tmp.buttonTextContainer;
     let tmp2Result = null != buttonText;
     if (tmp2Result) {
-      const obj1 = { text: null };
+      obj1 = { text: null };
       obj1[0] = buttonText;
       tmp2Result = tmp2(FormControlText, obj1);
     }
@@ -144,15 +131,8 @@ export const UserProfileEditFormButton = function UserProfileEditFormButton(load
   return closure_6(Input.Input, obj);
 };
 export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0) {
-  let accessibilityHint;
-  let accessibilityLabel;
-  let dependencyMap;
-  let disabled;
-  let label;
-  let subLabel;
-  let value;
   ({ subLabel, value } = arg0);
-  const require = value;
+  require = value;
   ({ onValueChange: dependencyMap, accessibilityLabel, disabled } = arg0);
   ({ label, accessibilityHint } = arg0);
   if (disabled === undefined) {
@@ -194,7 +174,7 @@ export const UserProfileEditFormSwitch = function UserProfileEditFormSwitch(arg0
         }
       });
     },
-    style: createCacheKey().button,
+    style: callback3().button,
     accessibilityRole: "switch",
     accessibilityLabel: null,
     accessibilityHint: null,

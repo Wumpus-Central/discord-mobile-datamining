@@ -1,25 +1,25 @@
 // discord_app/modules/guild_templates/native/AcceptGuildTemplateModal.tsx
-import jsxProd from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import handleGuildTemplateResolveSuccess from "handleGuildTemplateResolveSuccess";
-import { UPLOAD_MEDIUM_SIZE } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import closure_7 from "handleGuildTemplateResolveSuccess" /* 7429 */;
+import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 function ConnectedAcceptGuildTemplate(code) {
   code = code.code;
   let stateFromStores;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let callback;
   let React;
   let obj = code(589);
-  const items = [handleGuildTemplateResolveSuccess];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuildTemplate(code));
-  const tmp = createCacheKey();
+  const items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuildTemplate(code));
+  const tmp = callback2();
   const tmp3 = callback(React.useState(first(6777).getGuildNameSuggestion()), 2);
   first = tmp3[0];
   dependencyMap = tmp3[1];
@@ -70,12 +70,12 @@ function ConnectedAcceptGuildTemplate(code) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
+            closure_1 = tmp5;
             let base64 = tmp2;
             base64 = undefined;
-            let obj1 = outer1_1(table[13]);
+            obj1 = closure_1_1(table[13]);
             obj1 = { size: null };
-            obj1[0] = outer1_8;
+            obj1[0] = closure_1_8;
             c2 = 1;
             table = 1;
             const obj2 = { value: null, done: false };
@@ -139,9 +139,9 @@ function ConnectedAcceptGuildTemplate(code) {
 createCacheKey = { container: null };
 createCacheKey = { flex: 1, marginTop: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 const ACCEPT_GUILD_TEMPLATE = "ACCEPT_GUILD_TEMPLATE";
-const result = require("noop").fileFinishedImporting("modules/guild_templates/native/AcceptGuildTemplateModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_templates/native/AcceptGuildTemplateModal.tsx");
 
 export default function AcceptGuildTemplateModal(code) {
   code = code.code;
@@ -149,14 +149,17 @@ export default function AcceptGuildTemplateModal(code) {
   const memo = React.useMemo(() => {
     obj = { code: obj };
     obj = {};
-    obj = { title: "", fullscreen: true, headerLeft: null, render: null };
-    obj[2] = code(outer1_3[16]).getHeaderCloseButton(() => callback(table[15]).hideModal());
-    obj[3] = function render() {
-      const obj = {};
-      const merged = Object.assign(obj);
-      return outer1_9(outer1_11, obj);
+    obj = {
+      title: "",
+      fullscreen: true,
+      headerLeft: code(closure_1_3[16]).getHeaderCloseButton(() => callback(table[15]).hideModal()),
+      render() {
+        obj = {};
+        const merged = Object.assign(obj);
+        return closure_1_9(closure_1_11, obj);
+      }
     };
-    obj[outer1_12] = obj;
+    obj[closure_1_12] = obj;
     return obj;
   }, items);
   return jsx(code(6312).Navigator, { initialRouteName: ACCEPT_GUILD_TEMPLATE, screens: memo });

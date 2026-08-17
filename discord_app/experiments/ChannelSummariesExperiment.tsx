@@ -1,15 +1,12 @@
 // discord_app/experiments/ChannelSummariesExperiment.tsx
-import { isGuildNSFW } from "GuildNSFWContentLevel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
-import { ChannelFlags } from "set";
+import set from "set" /* 2 */;
+import set2 from "set" /* 1398 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
 import { defaultAreStatesEqual } from "../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
 
-let c4;
-let c5;
-let closure_6;
-let error;
 function canSeeChannelSummaries(channel, flag, arg2) {
   if (flag === undefined) {
     flag = false;
@@ -83,8 +80,10 @@ function canSeeChannelSummaries(channel, flag, arg2) {
   }
   return tmp;
 }
+const isGuildNSFW = GuildNSFWContentLevel.isGuildNSFW;
 ({ ME: c4, ChannelTypesSets: c5, GuildFeatures: closure_6, EMPTY_STRING_SNOWFLAKE_ID: error } = ME);
-const result = require("ME").fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
+const ChannelFlags = set2.ChannelFlags;
+const result = set.fileFinishedImporting("experiments/ChannelSummariesExperiment.tsx");
 
 export const channelEligibleForSummaries = function channelEligibleForSummaries(channel) {
   return canSeeChannelSummaries(channel, true, false);
@@ -133,7 +132,7 @@ export const useChannelSummariesExperiment = function useChannelSummariesExperim
 };
 export const useGuildEligibleForSummaries = function useGuildEligibleForSummaries(arg0) {
   const _require = arg0;
-  const items = [createGuildRecordFromRust];
+  const items = [closure_3];
   const items1 = [arg0];
   return _defaultAreStatesEqual.useStateFromStores(items, () => {
     let id;
@@ -141,25 +140,25 @@ export const useGuildEligibleForSummaries = function useGuildEligibleForSummarie
       id = lib.id;
     }
     if (id == null) {
-      id = outer1_7;
+      id = closure_1_7;
     }
-    const guild = outer1_3.getGuild(id);
+    const guild = closure_1_3.getGuild(id);
     let tmp4 = null != guild;
     if (tmp4) {
       id = guild.id;
       let tmp5 = null != id;
       if (tmp5) {
-        let isFavoritesGuildIdResult = id === outer1_4;
+        let isFavoritesGuildIdResult = id === closure_1_4;
         if (!isFavoritesGuildIdResult) {
-          isFavoritesGuildIdResult = lib(outer1_1[4]).isFavoritesGuildId(id);
-          const obj = lib(outer1_1[4]);
+          isFavoritesGuildIdResult = lib(closure_1_1[4]).isFavoritesGuildId(id);
+          const obj = lib(closure_1_1[4]);
         }
         tmp5 = isFavoritesGuildIdResult;
       }
       let tmp10 = !tmp5;
       if (!tmp5) {
         const features = guild.features;
-        let hasItem = features.has(outer1_6.SUMMARIES_ENABLED_GA);
+        let hasItem = features.has(closure_1_6.SUMMARIES_ENABLED_GA);
         if (hasItem) {
           // // eliminated: always false
           hasItem = flag2;

@@ -1,10 +1,7 @@
 // discord_app/modules/interaction_components/native/actions/RadioGroupActionComponent.tsx
-import importAllResult from "noop";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
@@ -24,7 +21,7 @@ const memoResult = importAllResult.memo((type) => {
     }
     return value;
   }, items);
-  let obj1 = type(required[2]);
+  obj1 = type(required[2]);
   let tmp5;
   if (null != memo) {
     obj = { type: null, value: null };
@@ -37,7 +34,7 @@ const memoResult = importAllResult.memo((type) => {
   const executeStateUpdate = componentState.executeStateUpdate;
   const items1 = [state, type];
   const memo1 = obj.useMemo(() => {
-    let type;
+    type = undefined;
     if (state != null) {
       type = iter.type;
     }
@@ -47,7 +44,7 @@ const memoResult = importAllResult.memo((type) => {
     }
     return value;
   }, items1);
-  let closure_7 = tmp8;
+  closure_7 = tmp8;
   const fn = function p() {
     let obj = type(required[4]);
     let num = 0;
@@ -132,6 +129,6 @@ const memoResult = importAllResult.memo((type) => {
   children[1] = tmp12Result;
   return memo1(executeStateUpdate, { children });
 });
-const result = require("isInteractionComponent").fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/actions/RadioGroupActionComponent.tsx");
 
 export default memoResult;

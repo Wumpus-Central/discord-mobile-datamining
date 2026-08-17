@@ -1,35 +1,26 @@
 // discord_app/modules/share/native/ShareScreen.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import HeaderBackImage from "HeaderBackImage";
-import allSettled from "allSettled";
-import { View } from "isDiscordFrontendDevelopment";
-import createChannelRecord from "createChannelRecord";
-import closure_9 from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT";
-import { UserRowModes } from "UserRowModes";
-import jsxProd from "fetchMessages";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "noop";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
+import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 9080 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_12;
-let closure_16;
-let closure_17;
-let closure_18;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getAttachmentsRestriction(type) {
   if (type instanceof closure_7) {
     if (callback2(type.type)) {
       let tmp4;
-      if (!getUncachedChannelPermissions.can(constants.ATTACH_FILES, type)) {
+      if (!closure_10.can(constants.ATTACH_FILES, type)) {
         const obj = { label: null };
         const intl = getSystemLocale.intl;
         obj[0] = intl.string(getSystemLocale.t.P7yvbm);
@@ -39,28 +30,26 @@ function getAttachmentsRestriction(type) {
     }
   }
 }
-({ ChannelRecordBase: error, isGuildChannelType: metroImportAll } = createChannelRecord);
+({ ChannelRecordBase: error, isGuildChannelType: closure_8 } = createChannelRecord);
 ({ AnalyticEvents: unpackModuleId, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = ME);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
 createCacheKey = { container: null, headerLeftContainer: null, headerRightContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 let num = 0;
 if (set.isIOS()) {
-  num = require("Themes").space.PX_16;
+  num = ThemesDefault.space.PX_16;
 }
 createCacheKey[1] = { paddingLeft: num };
 let num2 = 0;
 if (set.isIOS()) {
-  num2 = require("Themes").space.PX_16;
+  num2 = ThemesDefault.space.PX_16;
 }
 createCacheKey[2] = { paddingRight: num2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_19 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/share/native/ShareScreen.tsx");
 
 export default function ShareScreen(sharedContent) {
-  let c6;
-  let tmp7;
   sharedContent = sharedContent.sharedContent;
   const onClose = sharedContent.onClose;
   let first;
@@ -68,11 +57,11 @@ export default function ShareScreen(sharedContent) {
   let length;
   let React;
   c6 = undefined;
-  let closure_7;
+  closure_7 = undefined;
   let first1;
   let embed;
   let isLoading;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = React;
   let items = [sharedContent];
   const tmp3 = length(React.useState(React.useMemo(() => {
@@ -139,7 +128,7 @@ export default function ShareScreen(sharedContent) {
     } else {
       try {
         React = 2;
-        if (0 === c4) {
+        if (0 === closure_4) {
           if (arg0 === 1) {
             React = 3;
             throw arg1;
@@ -149,33 +138,33 @@ export default function ShareScreen(sharedContent) {
             obj[0] = arg1;
             return obj;
           } else {
-            let c1 = tmp3;
-            let table = tmp7;
-            table = undefined;
+            c1 = tmp3;
+            let lib = tmp7;
+            lib = undefined;
             c1 = undefined;
-            let c2;
-            let c3;
-            c4 = undefined;
+            c2 = undefined;
+            c3 = undefined;
+            closure_4 = undefined;
             React = undefined;
             let callback;
-            let tmp = outer1_7;
-            if (outer1_7.current) {
+            let tmp = closure_1_7;
+            if (closure_1_7.current) {
               React = 3;
             } else {
-              outer1_7.current = true;
-              outer1_6(true);
+              closure_1_7.current = true;
+              closure_1_6(true);
               c3 = 1;
-              c4 = 2;
+              closure_4 = 2;
               React = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = Promise.all(outer1_2.map(outer1_0(outer1_2[16]).getOrResolveChannelIdFromDestinationId));
+              obj1 = { value: null, done: false };
+              obj1[0] = Promise.all(closure_2.map(lib(closure_2[16]).getOrResolveChannelIdFromDestinationId));
               return obj1;
             }
           }
         } else if (1 === tmp7) {
           c3 = 0;
-          outer1_6(false);
-          outer1_7.current = false;
+          closure_1_6(false);
+          closure_1_7.current = false;
           throw c2;
         } else if (2 === tmp7) {
           if (arg0 === 1) {
@@ -183,55 +172,55 @@ export default function ShareScreen(sharedContent) {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
-            outer1_6(false);
-            outer1_7.current = false;
+            closure_1_6(false);
+            closure_1_7.current = false;
             React = 3;
             let obj2 = { value: null, done: true };
             obj2[0] = arg1;
             return obj2;
           } else {
-            tmp = table;
+            tmp = lib;
             tmp = c1;
-            tmp = outer1_0;
-            tmp = outer1_2;
-            outer1_0 = arg1.filter(outer1_0(outer1_2[17]).isNotNullish);
-            tmp = outer1_0;
-            if (0 === outer1_0.length) {
-              let obj11 = outer1_0(outer1_2[18]);
-              const intl3 = outer1_0(outer1_2[14]).intl;
-              obj11.showInformationToast(intl3.string(outer1_0(outer1_2[14]).t.wFcUiF));
+            tmp = lib;
+            tmp = closure_2;
+            lib = arg1.filter(lib(closure_2[17]).isNotNullish);
+            tmp = lib;
+            if (0 === lib.length) {
+              let obj11 = lib(closure_2[18]);
+              const intl3 = lib(closure_2[14]).intl;
+              obj11.showInformationToast(intl3.string(lib(closure_2[14]).t.wFcUiF));
               c3 = 0;
-              outer1_6(false);
-              outer1_7.current = false;
+              closure_1_6(false);
+              closure_1_7.current = false;
               React = 3;
               let obj3 = { value: null, done: true };
               obj3[0] = undefined;
               return obj3;
             } else {
-              tmp = table;
+              tmp = lib;
               tmp = c1;
-              tmp = outer1_0;
-              const outer1_1 = outer1_0.attachments;
-              tmp = outer1_1;
-              outer1_2 = outer1_1.map((mimeType) => {
+              tmp = lib;
+              const attachments = lib.attachments;
+              tmp = attachments;
+              closure_2 = attachments.map((mimeType) => {
                 let str = mimeType.mimeType;
                 if (str == null) {
                   str = "unknown";
                 }
                 return str;
               });
-              tmp = outer1_1;
-              tmp = outer1_2;
-              tmp = outer1_0;
-              tmp = outer1_1(outer1_2[19]);
-              c4 = 3;
+              tmp = attachments;
+              tmp = closure_2;
+              tmp = lib;
+              tmp = attachments(closure_2[19]);
+              closure_4 = 3;
               React = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = tmp(outer1_0.map((() => {
-                let closure_0 = dependencyMap((arg0) => {
-                  let closure_0 = arg0;
-                  let c3 = 0;
-                  let c4 = 0;
+              obj4[0] = tmp(lib.map((() => {
+                closure_0 = dependencyMap((arg0) => {
+                  closure_0 = arg0;
+                  c3 = 0;
+                  c4 = 0;
                   return (function*(arg0) {
                     if (c4 === 2) {
                       c4 = 3;
@@ -259,19 +248,19 @@ export default function ShareScreen(sharedContent) {
                             obj[0] = arg1;
                             return obj;
                           } else {
-                            let closure_2 = tmp3;
-                            let closure_1 = tmp2;
+                            closure_2 = tmp3;
+                            closure_1 = tmp2;
                             let channel;
-                            channel = outer3_9.getChannel(channel);
+                            channel = closure_3_9.getChannel(channel);
                             if (null == channel) {
                               c4 = 3;
                               return { value: false, done: true };
                             } else {
-                              let obj1 = callback(13362);
+                              obj1 = callback(13362);
                               obj1 = { attachments: null, channel: null, comment: null };
-                              obj1[0] = outer1_1;
+                              obj1[0] = closure_1_1;
                               obj1[1] = channel;
-                              obj1[2] = outer2_8;
+                              obj1[2] = closure_2_8;
                               c3 = 1;
                               c4 = 1;
                               const obj2 = { value: null, done: false };
@@ -292,9 +281,9 @@ export default function ShareScreen(sharedContent) {
                           obj3[0] = channel.guild_id;
                           obj3[1] = channel.id;
                           obj3[2] = channel.type;
-                          obj3[3] = outer1_1.length;
-                          obj3[4] = outer1_2;
-                          callback2(698).track(outer3_11.SHARE_MESSAGE_SENT, obj3);
+                          obj3[3] = closure_1_1.length;
+                          obj3[4] = closure_1_2;
+                          callback2(698).track(closure_3_11.SHARE_MESSAGE_SENT, obj3);
                           c4 = 3;
                           return { value: "HermesInternal", done: "HermesInternal" };
                         }
@@ -325,28 +314,28 @@ export default function ShareScreen(sharedContent) {
             throw arg1;
           } else if (arg0 === 2) {
             c3 = 0;
-            outer1_6(false);
-            outer1_7.current = false;
+            closure_1_6(false);
+            closure_1_7.current = false;
             React = 3;
             const obj5 = { value: null, done: true };
             obj5[0] = arg1;
             return obj5;
           } else {
-            c3 = arg1;
+            closure_3 = arg1;
             tmp = c1;
-            if (!c3.every((status) => "fulfilled" === status.status)) {
-              React = outer1_2.filter((arg0, arg1) => "rejected" === dependencyMap[arg1].status);
+            if (!closure_3.every((status) => "fulfilled" === status.status)) {
+              React = closure_2.filter((arg0, arg1) => "rejected" === dependencyMap[arg1].status);
               callback = React.lazy(() => _undefined(_undefined2[25])(_undefined2[24], _undefined2.paths));
-              obj3 = outer1_0(outer1_2[26]);
+              obj3 = lib(closure_2[26]);
               let obj6 = { title: null, content: null, failedDestinations: null };
-              const intl = outer1_0(outer1_2[14]).intl;
-              obj6[0] = intl.string(outer1_0(outer1_2[14]).t.dA1gbw);
-              const intl2 = outer1_0(outer1_2[14]).intl;
+              const intl = lib(closure_2[14]).intl;
+              obj6[0] = intl.string(lib(closure_2[14]).t.dA1gbw);
+              const intl2 = lib(closure_2[14]).intl;
               const obj7 = { count: null };
               obj7[0] = React.length;
-              obj6[1] = intl2.formatToPlainString(outer1_0(outer1_2[14]).t.thm88D, obj7);
+              obj6[1] = intl2.formatToPlainString(lib(closure_2[14]).t.thm88D, obj7);
               obj6[2] = React;
-              obj3.openAlert("share-failed-alert-modal", outer1_16(callback, obj6));
+              obj3.openAlert("share-failed-alert-modal", closure_1_16(callback, obj6));
               c3 = 0;
               callback(false);
               closure_7.current = false;
@@ -357,20 +346,20 @@ export default function ShareScreen(sharedContent) {
           throw arg1;
         } else if (arg0 === 2) {
           c3 = 0;
-          outer1_6(false);
-          outer1_7.current = false;
+          closure_1_6(false);
+          closure_1_7.current = false;
           React = 3;
           const obj8 = { value: null, done: true };
           obj8[0] = arg1;
           return obj8;
         } else {
-          outer1_0(outer1_2[22]).transitionToChannel(c4, { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
-          const obj18 = outer1_0(outer1_2[22]);
+          lib(closure_2[22]).transitionToChannel(closure_4, { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
+          const obj18 = lib(closure_2[22]);
           if (obj19.isAndroid()) {
-            obj = outer1_1(outer1_2[23]);
+            obj = attachments(closure_2[23]);
             obj.launchApp();
           }
-          outer1_1();
+          attachments();
           c3 = 0;
           callback(false);
           closure_7.current = false;
@@ -379,11 +368,11 @@ export default function ShareScreen(sharedContent) {
           obj9[0] = undefined;
           return obj9;
         }
-        c4 = table[0];
-        obj6 = outer1_1(outer1_2[21]);
+        closure_4 = lib[0];
+        obj6 = attachments(closure_2[21]);
         const obj10 = { channelId: null };
-        obj10[0] = c4;
-        c4 = 4;
+        obj10[0] = closure_4;
+        closure_4 = 4;
         React = 1;
         obj11 = { value: null, done: false };
         obj11[0] = obj6.fetchMessages(obj10);
@@ -394,7 +383,7 @@ export default function ShareScreen(sharedContent) {
           React = tmp2;
           throw tmp80;
         } else {
-          c4 = tmp;
+          closure_4 = tmp;
         }
       }
     }
@@ -403,7 +392,7 @@ export default function ShareScreen(sharedContent) {
     if (null != embed) {
       let obj = { attachments: null, isRevamp: true };
       obj[0] = sharedContent.attachments;
-      const items = [outer1_16(onClose(first[27]), obj), ];
+      const items = [closure_1_16(onClose(first[27]), obj), ];
       embed = undefined;
       if (tmp != null) {
         embed = tmp.embed;
@@ -412,35 +401,35 @@ export default function ShareScreen(sharedContent) {
       obj = { embed: null, isLoadingEmbed: null, isRevamp: true };
       obj[0] = embed;
       obj[1] = isLoading;
-      items[1] = outer1_16(onClose(first[28]), obj);
+      items[1] = closure_1_16(onClose(first[28]), obj);
       obj[0] = items;
-      let tmp4Result = outer1_18(outer1_17, obj);
+      let tmp4Result = closure_1_18(closure_1_17, obj);
       const tmp10 = onClose(first[28]);
-      const tmp4 = outer1_18;
-      const tmp5 = outer1_17;
-      const tmp6 = outer1_16;
+      const tmp4 = closure_1_18;
+      const tmp5 = closure_1_17;
+      const tmp6 = closure_1_16;
     } else {
       tmp4Result = null;
     }
     return tmp4Result;
   }, items2);
   obj = { style: tmp.container, children: null };
-  let obj1 = { title: null, headerTitle: null, headerTitleAlign: "center", headerLeft: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
+  obj1 = { title: null, headerTitle: null, headerTitleAlign: "center", headerLeft: null, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
   let intl3 = tmp11(tmp9[14]).intl;
   obj1[0] = intl3.string(tmp11(tmp9[14]).t["MR7/kg"]);
   obj1[1] = function headerTitle(title) {
-    if (c5) {
+    if (closure_5) {
       const intl2 = sharedContent(first[14]).intl;
       let obj = { limit: null };
-      obj[0] = outer1_13;
+      obj[0] = closure_1_13;
       let subtitle = intl2.formatToPlainString(sharedContent(first[14]).t["qqyp/e"], obj);
-    } else if (length >= outer1_14) {
+    } else if (length >= closure_1_14) {
       const intl = sharedContent(first[14]).intl;
       obj = { count: null };
       obj[0] = tmp2;
       subtitle = intl.formatToPlainString(sharedContent(first[14]).t["3Fbkir"], obj);
     }
-    return outer1_16(sharedContent(first[30]).GenericHeaderTitle, { title: title.children, subtitle, subtitleColor: "text-feedback-warning", variant: "redesign/heading-18/bold" });
+    return closure_1_16(sharedContent(first[30]).GenericHeaderTitle, { title: title.children, subtitle, subtitleColor: "text-feedback-warning", variant: "redesign/heading-18/bold" });
   };
   let tmp11Result = tmp11(tmp9[31]);
   let headerCloseButton;

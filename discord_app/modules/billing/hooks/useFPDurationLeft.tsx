@@ -1,8 +1,10 @@
 // discord_app/modules/billing/hooks/useFPDurationLeft.tsx
-import { useCountdown } from "../../../hooks/useCountdown.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useCountdownDefault from "useCountdown" /* 7410 */;
+
 function roundFPCountdownUnits(arg0) {
-  let obj = {};
+  obj = {};
   const merged = Object.assign(arg0);
   if (obj.seconds > 0) {
     obj.minutes = obj.minutes + 1;
@@ -43,7 +45,7 @@ function roundFPCountdownUnits(arg0) {
     if (obj.minutes > 45) {
       num5 = 1;
     }
-    const obj1 = { days: 0, hours: null, minutes: null, seconds: 0 };
+    obj1 = { days: 0, hours: null, minutes: null, seconds: 0 };
     obj1[1] = num5;
     let num7 = 0;
     if (1 !== num5) {
@@ -60,7 +62,7 @@ function roundFPCountdownUnits(arg0) {
   }
 }
 let obj = { SHORT_TIME_LEFT: 0, [0]: "SHORT_TIME_LEFT", LONG_TIME_LEFT: 1, [1]: "LONG_TIME_LEFT", ENDS_IN: 2, [2]: "ENDS_IN", SHORT_TIME: 3, [3]: "SHORT_TIME", CREDITS_ENDS_IN: 4, [4]: "CREDITS_ENDS_IN" };
-const result = require("resetCache").fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
+const result = set.fileFinishedImporting("modules/billing/hooks/useFPDurationLeft.tsx");
 
 export default function useFPDurationLeft(toDate) {
   if (obj.SHORT_TIME_LEFT === arg1) {
@@ -75,7 +77,7 @@ export default function useFPDurationLeft(toDate) {
     obj[2] = getSystemLocale.t.XSbQZZ;
   } else {
     if (tmp.ENDS_IN === arg1) {
-      const obj1 = { days: null, hours: null, minutes: null };
+      obj1 = { days: null, hours: null, minutes: null };
       obj1[0] = getSystemLocale.t.rLqNad;
       obj1[1] = getSystemLocale.t.d1LvCA;
       obj1[2] = getSystemLocale.t.Z2LX7K;
@@ -88,7 +90,7 @@ export default function useFPDurationLeft(toDate) {
       } else {
         const _Error = Error;
         const _HermesInternal = HermesInternal;
-        const error = new Error("Unknown messageType (" + arg1 + ") when rendering time left");
+        error = new Error("Unknown messageType (" + arg1 + ") when rendering time left");
         throw error;
       }
     }
@@ -97,7 +99,7 @@ export default function useFPDurationLeft(toDate) {
     obj2[1] = getSystemLocale.t.SFU7QN;
     obj2[2] = getSystemLocale.t.Y4FNdL;
   }
-  roundFPCountdownUnits(useCountdown(toDate.toDate(), 60000));
+  roundFPCountdownUnits(useCountdownDefault(toDate.toDate(), 60000));
 };
 export const CountDownMessageTypes = obj;
 export { roundFPCountdownUnits };

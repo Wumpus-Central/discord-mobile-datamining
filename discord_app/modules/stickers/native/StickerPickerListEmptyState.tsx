@@ -1,25 +1,24 @@
 // discord_app/modules/stickers/native/StickerPickerListEmptyState.tsx
-import importAllResult from "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { EXPRESSION_FOOTER_HEIGHT } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { EXPRESSION_FOOTER_HEIGHT } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let obj = { emptyStateContainer: { padding: 0, flex: 1 }, emptyStateBody: null, emptyStateImage: null };
-obj = { color: require("Themes").colors.TEXT_SUBTLE };
+obj = { color: ThemesDefault.colors.TEXT_SUBTLE };
 obj[1] = obj;
-createCacheKey = { marginBottom: require("Themes").space.PX_8, marginTop: 0 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: 0 };
 obj[2] = createCacheKey;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function StickerPickerListEmptyState(insetBottom) {
-  let inActionSheet;
-  let insetTop;
   ({ inActionSheet, insetTop } = insetBottom);
   insetBottom = insetBottom.insetBottom;
   const items = [insetBottom, insetTop];
-  const memo = importAllResult.useMemo(() => ({ marginBottom: insetBottom + outer1_5, marginTop: insetTop, flex: 1 }), items);
+  const memo = importAllResult.useMemo(() => ({ marginBottom: insetBottom + closure_1_5, marginTop: insetTop, flex: 1 }), items);
   let obj = insetTop(9387);
   const modalDismissGuardRefreshControl = obj.useModalDismissGuardRefreshControl();
   if (inActionSheet) {
@@ -42,6 +41,6 @@ const memoResult = importAllResult.memo(function StickerPickerListEmptyState(ins
   obj[3] = jsx(insetTop(1297).RefreshEmptyState, { body: null, bodyStyle: null, containerStyle: null, imageStyle: null, source: null, titleStyle: null });
   return <BottomSheetScrollView body={null} bodyStyle={null} containerStyle={null} imageStyle={null} source={null} titleStyle={null} />;
 });
-const result = require("ME").fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPickerListEmptyState.tsx");
 
 export default memoResult;

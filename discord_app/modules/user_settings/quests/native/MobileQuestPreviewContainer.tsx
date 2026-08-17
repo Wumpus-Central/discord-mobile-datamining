@@ -1,19 +1,20 @@
 // discord_app/modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
+const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { container: null, title: null };
-obj = { marginTop: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16 };
+obj = { marginTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-obj[1] = { marginBottom: require("Themes").space.PX_16 };
+obj[1] = { marginBottom: ThemesDefault.space.PX_16 };
 let closure_5 = createCacheKey.createStyles(obj);
-const obj1 = { marginBottom: require("Themes").space.PX_16 };
-const result = require("createCacheKey").fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
+const obj1 = { marginBottom: ThemesDefault.space.PX_16 };
+const result = set.fileFinishedImporting("modules/user_settings/quests/native/MobileQuestPreviewContainer.tsx");
 
 export default function MobileQuestPreviewContainer(title) {
   title = title.title;

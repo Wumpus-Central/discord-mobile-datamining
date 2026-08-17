@@ -1,9 +1,10 @@
 // discord_app/modules/video_calls/native/components/ChannelCallModalManager.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateVoiceState from "updateVoiceState";
-import "initialize";
+import initializeDefault from "initialize" /* 4720 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 
 let require = arg1;
+initializeDefault;
 class ChannelCallModalManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -11,17 +12,17 @@ class ChannelCallModalManager extends tmp2 {
     applyArgumentsResult.inVoiceChannel = false;
     applyArgumentsResult.handleCloseModal = function handleCloseModal() {
       channel = channel.channel;
-      const currentUser = outer1_3.getCurrentUser();
+      const currentUser = closure_1_3.getCurrentUser();
       let isInChannelResult = null != channel && null != currentUser;
       if (isInChannelResult) {
-        isInChannelResult = outer1_4.isInChannel(channel.id, currentUser.id);
+        isInChannelResult = closure_1_4.isInChannel(channel.id, currentUser.id);
       }
       if (tmp4) {
-        outer1_1(outer1_2[3]).wait(() => {
-          const result = channel(outer1_2[4]).dismissVoiceChannelScreens(channel);
+        closure_1_1(closure_1_2[3]).wait(() => {
+          const result = channel(closure_1_2[4]).dismissVoiceChannelScreens(channel);
         });
         obj.terminate();
-        const obj2 = outer1_1(outer1_2[3]);
+        const obj2 = closure_1_1(closure_1_2[3]);
       }
       channel.inVoiceChannel = isInChannelResult;
     };
@@ -35,15 +36,15 @@ prototype["_initialize"] = function _initialize(channel) {
   currentUser = currentUser.getCurrentUser();
   let isInChannelResult = null != channel && null != currentUser;
   if (isInChannelResult) {
-    isInChannelResult = updateVoiceState.isInChannel(channel.id, currentUser.id);
+    isInChannelResult = closure_4.isInChannel(channel.id, currentUser.id);
   }
   self.inVoiceChannel = isInChannelResult;
-  updateVoiceState.addChangeListener(self.handleCloseModal);
+  closure_4.addChangeListener(self.handleCloseModal);
 };
 prototype["_terminate"] = function _terminate() {
-  updateVoiceState.removeChangeListener(this.handleCloseModal);
+  closure_4.removeChangeListener(this.handleCloseModal);
 };
 const channelCallModalManager = new ChannelCallModalManager();
-let result = require("initialize").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModalManager.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModalManager.tsx");
 
 export default channelCallModalManager;

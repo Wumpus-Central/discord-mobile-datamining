@@ -1,7 +1,9 @@
 // discord_app/modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { parseSkuIdFromServerData } from "../utils/mappers.tsx";
-let result = require("set").fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
+import set from "set" /* 2 */;
+import apply from "apply" /* 12 */;
+import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1900 */;
+
+let result = set.fileFinishedImporting("modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx");
 
 export const parseAvatarDecorationData = function parseAvatarDecorationData(avatar_decoration_data) {
   if (typeof avatar_decoration_data === "object") {

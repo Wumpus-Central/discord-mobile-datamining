@@ -1,12 +1,12 @@
 // discord_app/modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx
-import noop from "noop";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { isAnimatedBackgroundOption } from "VideoBackgroundUtils.tsx";
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import isAnimatedBackgroundOption from "isAnimatedBackgroundOption" /* 9661 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/video_backgrounds/LastUsedVideoBackgroundOption.tsx");
 
 export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgroundOption(currentUser) {
   const voiceAndVideo = settings.settings.voiceAndVideo;
@@ -22,20 +22,20 @@ export const getLastUsedVideoBackgroundOption = function getLastUsedVideoBackgro
       let tmp7 = videoBackgroundOptionFromProto;
     } else {
       tmp7 = null;
-      const tmp2Result = tmp2(9661);
+      const tmp2Result = isAnimatedBackgroundOption;
     }
     let tmp6 = tmp7;
   } else {
     tmp6 = null;
-    const obj3 = getPremiumPlanItem;
+    const obj3 = getPremiumPlanItemDefault;
   }
   return tmp6;
 };
 export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgroundOption() {
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_4];
   const stateFromStores = stateFromStores1(589).useStateFromStores(items, () => settings.settings);
   let obj = stateFromStores1(589);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_5];
   stateFromStores1 = stateFromStores1(589).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const voiceAndVideo = stateFromStores.voiceAndVideo;
   let prop;
@@ -46,8 +46,8 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
   return React.useMemo(() => {
     let tmp2 = null;
     if (null != stateFromStores1) {
-      const videoBackgroundOptionFromProto = stateFromStores1(outer1_2[3]).getVideoBackgroundOptionFromProto(prop, tmp.id);
-      const obj = stateFromStores1(outer1_2[3]);
+      const videoBackgroundOptionFromProto = stateFromStores1(closure_1_2[3]).getVideoBackgroundOptionFromProto(prop, tmp.id);
+      const obj = stateFromStores1(closure_1_2[3]);
       const tmp4 = stateFromStores1;
       if (!obj2.isCustomBackgroundOption(videoBackgroundOptionFromProto)) {
         if (typeof videoBackgroundOptionFromProto !== "number") {
@@ -62,7 +62,7 @@ export const useLastUsedVideoBackgroundOption = function useLastUsedVideoBackgro
         const obj3 = prop(tmp5[4]);
       }
       tmp2 = tmp8;
-      obj2 = stateFromStores1(outer1_2[3]);
+      obj2 = stateFromStores1(closure_1_2[3]);
     }
     return tmp2;
   }, items2);

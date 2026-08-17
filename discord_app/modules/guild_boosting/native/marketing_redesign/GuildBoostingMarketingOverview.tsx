@@ -1,27 +1,20 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx
-import _slicedToArray from "_slicedToArray";
-import GuildBoostingMarketingPersistentCta from "GuildBoostingMarketingPersistentCta";
-import { ScrollView } from "fetchSubscriptionPlansForSKU";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "BoostedGuildTiers";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ AnalyticEvents: metroImportAll, AnalyticsPages: c9 } = ME);
+({ AnalyticEvents: closure_8, AnalyticsPages: c9 } = ME);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ wrapper: { paddingBottom: 24 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingOverview.tsx");
 
 export default function GuildBoostingMarketingOverview(guildId) {
-  let createGuildRecordFromRust;
-  let mergeGuildAvatar;
   guildId = guildId.guildId;
   const guildBoostSlots = guildId.guildBoostSlots;
   let obj = guildId(stateFromStores[8]);
@@ -30,22 +23,22 @@ export default function GuildBoostingMarketingOverview(guildId) {
     const first = guildBoostSlots[0];
   }
   let tmp2Result = tmp2(tmp3[9]);
-  const items = [createGuildRecordFromRust];
-  stateFromStores = tmp2Result.useStateFromStores(items, () => outer1_6.getGuild(guildId));
+  const items = [closure_6];
+  stateFromStores = tmp2Result.useStateFromStores(items, () => closure_1_6.getGuild(guildId));
   tmp2Result = tmp2(tmp3[10]);
   const navigation = tmp2Result.useNavigation();
   const analyticsLocations = guildBoostSlots(tmp3[11])().analyticsLocations;
   let obj3 = analyticsLocations;
   const tmp9 = navigation(analyticsLocations.useState(false), 2);
-  let closure_5 = tmp9[1];
+  closure_5 = tmp9[1];
   let tmp = callback3();
-  [createGuildRecordFromRust, mergeGuildAvatar] = navigation(analyticsLocations.useState(0), 2);
-  let closure_8 = analyticsLocations.useRef(false);
+  [closure_6, closure_7] = navigation(analyticsLocations.useState(0), 2);
+  closure_8 = analyticsLocations.useRef(false);
   const tmp11 = guildBoostSlots(stateFromStores[12])(() => Date.now());
-  let closure_9 = tmp11;
+  closure_9 = tmp11;
   const tmp12 = guildBoostSlots(stateFromStores[13])({ forceFetch: true });
   const tmp10 = navigation(analyticsLocations.useState(0), 2);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_7];
   const stateFromStores1 = guildId(stateFromStores[9]).useStateFromStores(items1, () => currentUser.getCurrentUser());
   if (null != stateFromStores1) {
     let UNSPECIFIED = stateFromStores1.premiumGroupRole;
@@ -78,9 +71,9 @@ export default function GuildBoostingMarketingOverview(guildId) {
   }, items2);
   const items3 = [guildId, analyticsLocations, tmp11];
   const effect = obj3.useEffect(() => () => {
-    let obj = outer1_1(outer1_2[15]);
-    obj = { type: outer1_9.PREMIUM_GUILD_USER_MODAL, location_stack: GuildBoostingMarketingPersistentCta, guild_id: closure_0, duration_open_ms: Date.now() - closure_9 };
-    obj.track(outer1_8.MODAL_DISMISSED, obj);
+    let obj = closure_1_1(closure_1_2[15]);
+    obj = { type: closure_1_9.PREMIUM_GUILD_USER_MODAL, location_stack: closure_4, guild_id: closure_0, duration_open_ms: Date.now() - closure_9 };
+    obj.track(closure_1_8.MODAL_DISMISSED, obj);
   }, items3);
   const effect1 = obj3.useEffect(() => {
     guildBoostSlots(stateFromStores[16]).wait(() => {
@@ -106,15 +99,15 @@ export default function GuildBoostingMarketingOverview(guildId) {
       if (tmp3) {
         let obj = guildBoostSlots(stateFromStores[15]);
         obj = { type: null, location_stack: null, guild_id: null };
-        obj[0] = tmp11.PREMIUM_GUILD_USER_MODAL;
+        obj[0] = constants.PREMIUM_GUILD_USER_MODAL;
         obj[1] = analyticsLocations;
         obj[2] = stateFromStores.id;
         obj.track(ref.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, obj);
         ref.current = true;
       }
-      callback(contentOffset.y >= createGuildRecordFromRust);
+      callback(contentOffset.y >= closure_6);
     };
-    const obj1 = { guild: null, previousGuildSubscriptionSlot: null, onLayout: null, fractionalPremiumInfo: null, premiumGroupRole: null };
+    obj1 = { guild: null, previousGuildSubscriptionSlot: null, onLayout: null, fractionalPremiumInfo: null, premiumGroupRole: null };
     obj1[0] = stateFromStores;
     obj1[1] = first;
     obj1[2] = function onLayout(nativeEvent) {

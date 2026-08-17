@@ -1,7 +1,10 @@
 // discord_app/modules/user_settings/defs/native/QuestPreviewToolSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useQuests } from "../../../quests/hooks/QuestHooks.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useQuests from "useQuests" /* 10684 */;
+import QuestsIcon from "QuestsIcon" /* 14351 */;
+import createToggle from "createToggle" /* 10669 */;
 import { SettingsQuestPreviewScreen } from "../../quests/native/SettingsQuestPreviewScreen.tsx";
 
 obj = {
@@ -13,16 +16,16 @@ obj = {
     return useQuests.useIsPreviewerOnAnyQuest();
   },
   parent: null,
-  IconComponent: require("QuestsIcon").QuestsIcon,
+  IconComponent: QuestsIcon.QuestsIcon,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.QUEST_PREVIEW_TOOL_2,
+  route: ME.UserSettingsSections.QUEST_PREVIEW_TOOL_2,
   getComponent() {
     return SettingsQuestPreviewScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestPreviewToolSetting.tsx");
 
 export default route;

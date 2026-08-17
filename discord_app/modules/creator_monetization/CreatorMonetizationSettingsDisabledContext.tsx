@@ -1,26 +1,24 @@
 // discord_app/modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
+import useShouldHideGuildPurchaseEntryPoints from "useShouldHideGuildPurchaseEntryPoints" /* 7219 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let context = importAllResult.createContext(undefined);
-const result = require("useShouldHideGuildPurchaseEntryPoints").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization/CreatorMonetizationSettingsDisabledContext.tsx");
 
 export default context;
 export const useCreatorMonetizationSettingsDisabled = function useCreatorMonetizationSettingsDisabled() {
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
+    error = new Error("useCreatorMonetizationSettingsDisabled must be used within a CreatorMonetizationSettingsDisabledContext");
     throw error;
   } else {
     return context;
   }
 };
 export const CreatorMonetizationSettingsDisabledContextProvider = function CreatorMonetizationSettingsDisabledContextProvider(arg0) {
-  let children;
-  let guildId;
   ({ guildId, children } = arg0);
   let obj = useShouldHideGuildPurchaseEntryPoints;
   obj = { value: obj.useShouldRestrictUpdatingCreatorMonetizationSettings(guildId).shouldRestrictUpdatingCreatorMonetizationSettings, children };

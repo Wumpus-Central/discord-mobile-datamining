@@ -1,37 +1,28 @@
 // discord_app/modules/accept_invite/native/InviteError.tsx
-import "set";
-import get_ActivityIndicator from "GuildIconSizes";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11903_registerAsset.js";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
-import { getDescriptiveInviteError } from "../../../utils/InviteErrorUtils.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import combinedDefault from "combined" /* 1993 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import getDescriptiveInviteError from "getDescriptiveInviteError" /* 11902 */;
+import registerAssetDefault from "registerAsset" /* 11903 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c3;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function InviteErrorBase(invite) {
-  let inviteError;
-  let require;
   ({ onPressClose: require, inviteError } = invite);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = AccessibilityAnnouncer;
   const tmp4 = importDefault;
-  const tmp4Result = importDefault(obj.isThemeDark(useTheme()) ? 11900 : 11901);
+  const tmp4Result = importDefault(obj.isThemeDark(useThemeDefault()) ? 11900 : 11901);
   let code;
   if (inviteError != null) {
     code = inviteError.code;
@@ -61,7 +52,7 @@ function InviteErrorBase(invite) {
     const intl3 = tmp2(1236).intl;
     title = intl3.string(tmp2(1236).t.u9zxnX);
   }
-  const obj1 = { children: null };
+  obj1 = { children: null };
   obj[3] = title;
   function handlePressClose() {
     callback();
@@ -78,7 +69,7 @@ function InviteErrorBase(invite) {
 }
 function InviteDisabledError(onPressClose) {
   onPressClose = onPressClose.onPressClose;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const guild = onPressClose.invite.guild;
   if (null == guild) {
     return null;
@@ -86,22 +77,22 @@ function InviteDisabledError(onPressClose) {
     function handlePressClose() {
       onPressClose();
     }
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, icon: null, size: 64, canAnimate: false };
     ({ id: obj2[0], icon: obj2[1] } = guild);
     obj = { children: null };
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.disabledView;
     const guildIconURL = obj.getGuildIconURL(obj);
     const obj2 = { style: null, source: null };
     obj2[0] = tmp.disabledPauseIcon;
-    obj2[1] = registerAsset;
+    obj2[1] = registerAssetDefault;
     const items = [callback(onPressClose(1297).Icon, obj2), ];
     const obj3 = { style: null, icon: null, size: null };
     obj3[0] = tmp.guildIcon;
     obj3[1] = guildIconURL;
     obj3[2] = onPressClose(7188).GuildIconSizes.XLARGE;
-    items[1] = callback(GuildIconSizes, obj3);
+    items[1] = callback(GuildIconSizesDefault, obj3);
     obj1[1] = items;
     const items1 = [callback2(closure_4, obj1), , , ];
     const obj4 = { style: null, variant: "heading-xl/semibold", color: "text-feedback-critical", children: null };
@@ -113,8 +104,8 @@ function InviteDisabledError(onPressClose) {
     obj5[0] = tmp.disabledBody;
     const intl2 = onPressClose(1236).intl;
     const obj6 = { articleLink: null };
-    const tmp10 = GuildIconSizes;
-    obj6[0] = combined.getArticleURL(constants2.INVITE_DISABLED);
+    const tmp10 = GuildIconSizesDefault;
+    obj6[0] = combinedDefault.getArticleURL(constants2.INVITE_DISABLED);
     obj5[3] = intl2.format(onPressClose(1236).t.RXSeLl, obj6);
     items1[2] = callback(onPressClose(4734).Text, obj5);
     const obj7 = { variant: "primary", size: "lg", text: null, onPress: null };
@@ -126,18 +117,19 @@ function InviteDisabledError(onPressClose) {
     return callback2(closure_9, obj);
   }
 }
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ AbortCodes: c5, HelpdeskArticles: closure_6, InviteStates: error } = ME);
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { expiredImage: { marginTop: 32, marginBottom: 32 }, expiredTitle: { marginBottom: 8, backgroundColor: "transparent", textAlign: "center" }, expiredBody: { backgroundColor: "transparent", marginBottom: 24 }, disabledView: { justifyContent: "center", alignItems: "center" }, disabledPauseIcon: null, guildIcon: null, disabledTitle: null, disabledBody: null };
-createCacheKey = { position: "absolute", alignSelf: "center", tintColor: require("Themes").colors.WHITE, width: 42, height: 42 };
+createCacheKey = { position: "absolute", alignSelf: "center", tintColor: ThemesDefault.colors.WHITE, width: 42, height: 42 };
 createCacheKey[4] = createCacheKey;
-createCacheKey[5] = { borderRadius: require("Themes").radii.lg, opacity: 0.2, zIndex: -999 };
+createCacheKey[5] = { borderRadius: ThemesDefault.radii.lg, opacity: 0.2, zIndex: -999 };
 createCacheKey[6] = { marginTop: 16, marginBottom: 8, textAlign: "center" };
 createCacheKey[7] = { textAlign: "center", marginBottom: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: require("Themes").radii.lg, opacity: 0.2, zIndex: -999 };
-const result = require("ME").fileFinishedImporting("modules/accept_invite/native/InviteError.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: ThemesDefault.radii.lg, opacity: 0.2, zIndex: -999 };
+const result = require("set").fileFinishedImporting("modules/accept_invite/native/InviteError.tsx");
 
 export default function InviteError(inviteError) {
   inviteError = inviteError.inviteError;

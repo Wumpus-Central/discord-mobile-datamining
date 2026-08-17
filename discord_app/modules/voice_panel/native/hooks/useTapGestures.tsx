@@ -1,20 +1,20 @@
 // discord_app/modules/voice_panel/native/hooks/useTapGestures.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = { code: "function useTapGesturesTsx1(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('double');}" };
 let closure_5 = { code: "function useTapGesturesTsx2(event,manager){const{isFocusedVideoZoomed}=this.__closure;if(isFocusedVideoZoomed.get()){manager.fail();}}" };
 let closure_6 = { code: "function useTapGesturesTsx3(){const{runOnJS,handleEvent}=this.__closure;return runOnJS(handleEvent)('single');}" };
 let closure_7 = { code: "function useTapGesturesTsx4(){const{runOnJS,triggerHapticFeedback,HapticFeedbackTypes,handleEvent}=this.__closure;runOnJS(triggerHapticFeedback)(HapticFeedbackTypes.IMPACT_MEDIUM);runOnJS(handleEvent)('long');}" };
-const result = require("LegacyBaseButton").fileFinishedImporting("modules/voice_panel/native/hooks/useTapGestures.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useTapGestures.tsx");
 
 export default function useTapGestures(onSingleTap) {
-  let closure_0 = onSingleTap;
+  closure_0 = onSingleTap;
   isFocusedVideoZoomed = React.useContext(isFocusedVideoZoomed(11439)).isFocusedVideoZoomed;
-  const dependencyMap = React.useRef(onSingleTap);
+  dependencyMap = React.useRef(onSingleTap);
   React = tmp;
-  let closure_4 = tmp2;
-  let closure_5 = tmp3;
+  closure_4 = tmp2;
+  closure_5 = tmp3;
   const gesturesEnabled = onSingleTap.gesturesEnabled;
   const layoutEffect = React.useLayoutEffect(() => {
     closure_2.current = closure_0;
@@ -24,7 +24,7 @@ export default function useTapGestures(onSingleTap) {
     function handleEvent(arg0) {
       if ("single" === arg0) {
         const current3 = ref.current;
-        const onSingleTap = current3.onSingleTap;
+        onSingleTap = current3.onSingleTap;
         if (onSingleTap != null) {
           onSingleTap();
         }
@@ -78,7 +78,7 @@ export default function useTapGestures(onSingleTap) {
     const onStartResult = Gesture2.Tap().enabled(tmp4).maxDistance(30).numberOfTaps(2).onTouchesDown(S).onStart(fn);
     let tmp6 = tmp3;
     if (tmp3) {
-      tmp6 = noop;
+      tmp6 = closure_3;
     }
     const TapResult1 = Gesture3.Tap();
     const enabledResult1 = Gesture3.Tap().enabled(tmp6);
@@ -89,7 +89,7 @@ export default function useTapGestures(onSingleTap) {
     fn2.__closure = { runOnJS: onSingleTap(4115).runOnJS, handleEvent };
     fn2.__workletHash = 14109132753191;
     fn2.__initData = gesturesEnabled;
-    const obj1 = { runOnJS: onSingleTap(4115).runOnJS, handleEvent };
+    obj1 = { runOnJS: onSingleTap(4115).runOnJS, handleEvent };
     const Gesture4 = tmp(6377).Gesture;
     const onStartResult1 = maxDistanceResult1.onStart(fn2);
     if (tmp3) {
@@ -105,7 +105,7 @@ export default function useTapGestures(onSingleTap) {
     const enabledResult2 = Gesture4.LongPress().enabled(tmp3);
     fn3.__closure = { runOnJS: onSingleTap(4115).runOnJS, triggerHapticFeedback: onSingleTap(4343).triggerHapticFeedback, HapticFeedbackTypes: onSingleTap(4343).HapticFeedbackTypes, handleEvent };
     fn3.__workletHash = 1947700378974;
-    fn3.__initData = outer1_7;
+    fn3.__initData = closure_1_7;
     return Gesture.Exclusive(onStartResult, onStartResult1, enabledResult2.onStart(fn3));
   }, items);
 };

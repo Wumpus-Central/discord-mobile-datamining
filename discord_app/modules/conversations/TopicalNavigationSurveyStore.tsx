@@ -1,7 +1,9 @@
 // discord_app/modules/conversations/TopicalNavigationSurveyStore.tsx
-import { DeviceSettingsStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = 0;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class TopicalNavigationSurveyStore extends DeviceSettingsStore {
 }
 const prototype = TopicalNavigationSurveyStore.prototype;
@@ -25,7 +27,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 TopicalNavigationSurveyStore.displayName = "TopicalNavigationSurveyStore";
 TopicalNavigationSurveyStore.persistKey = "TopicalNavigationSurveyStore";
-const topicalNavigationSurveyStore = new TopicalNavigationSurveyStore(require("dispatcher"), {
+const topicalNavigationSurveyStore = new TopicalNavigationSurveyStore(dispatcherDefault, {
   TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function handleTopicalNavigationEntrypointImpression() {
     closure_0 = closure_0 + 1;
   }

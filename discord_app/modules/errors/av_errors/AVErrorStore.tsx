@@ -1,14 +1,16 @@
 // discord_app/modules/errors/av_errors/AVErrorStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { Store } from "initialize";
-import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import areSetsEqual from "areSetsEqual" /* 1433 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function isAVErrorContextOfType(type, CAMERA_SEND_LOW_FPS) {
   return type.type === CAMERA_SEND_LOW_FPS;
 }
 let map = new Map();
 let map1 = new Map();
+const Store = initializeDefault.Store;
 class AVErrorStore extends Store {
 }
 const prototype = AVErrorStore.prototype;
@@ -53,16 +55,14 @@ prototype["getActiveErrorsOfType"] = function getActiveErrorsOfType(CAMERA_SEND_
   }
 };
 AVErrorStore.displayName = "AVErrorStore";
-const aVErrorStore = new AVErrorStore(require("dispatcher"), {
+const aVErrorStore = new AVErrorStore(dispatcherDefault, {
   ACTIVE_AV_ERRORS_CHANGED: function handleActiveErrorsChanged(activeErrors) {
-    let tmp31;
-    let tmp32;
     activeErrors = activeErrors.activeErrors;
     if (activeErrors instanceof Map) {
       const _Map = Map;
       if (!(activeErrors instanceof Map)) {
         const _Map2 = Map;
-        const map = new Map();
+        map = new Map();
         activeErrors = map;
       }
       const _Set = Set;
@@ -73,7 +73,7 @@ const aVErrorStore = new AVErrorStore(require("dispatcher"), {
         return false;
       } else {
         const _Map3 = Map;
-        const map1 = new Map();
+        map1 = new Map();
         const entries = activeErrors.entries();
         const tmp24 = entries[Symbol.iterator]();
         while (tmp24 !== undefined) {
@@ -100,6 +100,6 @@ const aVErrorStore = new AVErrorStore(require("dispatcher"), {
     }
   }
 });
-let result = require("areSetsEqual").fileFinishedImporting("modules/errors/av_errors/AVErrorStore.tsx");
+let result = require("set").fileFinishedImporting("modules/errors/av_errors/AVErrorStore.tsx");
 
 export default aVErrorStore;

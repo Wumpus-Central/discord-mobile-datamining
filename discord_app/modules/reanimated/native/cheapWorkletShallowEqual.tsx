@@ -1,4 +1,6 @@
 // discord_app/modules/reanimated/native/cheapWorkletShallowEqual.tsx
+import set from "set" /* 2 */;
+
 function cheapWorkletShallowEqual(safeAreaState, current) {
   if (safeAreaState === current) {
     return true;
@@ -49,7 +51,7 @@ function cheapWorkletArrayShallowEqual(activeIndex, arg1) {
 cheapWorkletArrayShallowEqual.__closure = {};
 cheapWorkletArrayShallowEqual.__workletHash = 3679738010781;
 cheapWorkletArrayShallowEqual.__initData = { code: "function cheapWorkletArrayShallowEqual_cheapWorkletShallowEqualTsx2(a,b){if(a===b)return true;if(a==null||b==null)return false;if(a.length!==b.length)return false;for(let i=0;i<a.length;i++){if(a[i]!==b[i])return false;}return true;}" };
-const result = require("set").fileFinishedImporting("modules/reanimated/native/cheapWorkletShallowEqual.tsx");
+const result = set.fileFinishedImporting("modules/reanimated/native/cheapWorkletShallowEqual.tsx");
 
 export { cheapWorkletShallowEqual };
 export { cheapWorkletArrayShallowEqual };

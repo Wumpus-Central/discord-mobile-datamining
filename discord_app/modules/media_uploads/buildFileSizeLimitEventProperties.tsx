@@ -1,18 +1,9 @@
 // discord_app/modules/media_uploads/buildFileSizeLimitEventProperties.tsx
-const result = require("set").fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/media_uploads/buildFileSizeLimitEventProperties.tsx");
 
 export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEventProperties(arg0) {
-  let attachmentMimeTypes;
-  let channelId;
-  let errorType;
-  let guildId;
-  let kestrelVariant;
-  let numAttachments;
-  let postCompressionAggregateSize;
-  let postCompressionFileSizes;
-  let preCompressionAggregateSize;
-  let preCompressionFileSizes;
-  let userIndividualFileSizeLimit;
   ({ guildId, channelId } = arg0);
   ({ userIndividualFileSizeLimit, numAttachments, preCompressionFileSizes, preCompressionAggregateSize, postCompressionFileSizes, postCompressionAggregateSize, attachmentMimeTypes, errorType, kestrelVariant } = arg0);
   if (undefined !== channelId) {
@@ -24,7 +15,7 @@ export const buildFileSizeLimitEventProperties = function buildFileSizeLimitEven
   obj = {};
   const merged = Object.assign(obj);
   if (undefined !== guildId) {
-    const obj1 = { guild_id: null };
+    obj1 = { guild_id: null };
     obj1[0] = guildId;
     let obj2 = obj1;
   } else {

@@ -1,11 +1,14 @@
 // discord_app/modules/search/native/stores/SearchQueryTagManager.tsx
-import { SearchQueryTagTypes } from "MessageEmbedTypes";
-import { SearchFilterAddLocations } from "SearchEntrypointAnalyticsLocations";
+import set2 from "set" /* 2 */;
+import SearchEntrypointAnalyticsLocations from "SearchEntrypointAnalyticsLocations" /* 8506 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
 
 function isComplete(type) {
   return type.type === SearchQueryTagTypes.COMPLETE;
 }
-const result = require("set").fileFinishedImporting("modules/search/native/stores/SearchQueryTagManager.tsx");
+let SearchQueryTagTypes = MessageEmbedTypes.SearchQueryTagTypes;
+const SearchFilterAddLocations = SearchEntrypointAnalyticsLocations.SearchFilterAddLocations;
+const result = set2.fileFinishedImporting("modules/search/native/stores/SearchQueryTagManager.tsx");
 class SearchQueryTagManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -37,8 +40,8 @@ prototype["markChanged"] = function markChanged() {
   this.version = this.version + 1;
 };
 prototype["mergeTag"] = function mergeTag(location, channelId) {
-  const SearchQueryTagTypes = location;
-  let closure_1 = channelId;
+  SearchQueryTagTypes = location;
+  closure_1 = channelId;
   const tags = this.tags;
   const items = [];
   items[HermesBuiltin.arraySpread(tags.filter((arg0) => {
@@ -51,8 +54,8 @@ prototype["mergeTag"] = function mergeTag(location, channelId) {
   this.tags = items;
 };
 prototype["replaceTag"] = function replaceTag(arg0, type) {
-  let closure_0 = arg0;
-  let closure_1 = type;
+  closure_0 = arg0;
+  closure_1 = type;
   const tags = this.tags;
   this.tags = tags.map((arg0) => {
     let tmp = arg0;
@@ -70,7 +73,7 @@ prototype["getChannelIds"] = function getChannelIds() {
   return this.channelIds;
 };
 prototype["getUserIds"] = function getUserIds(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const set = new Set();
   const tags = this.tags;
   const item = tags.forEach((type) => {

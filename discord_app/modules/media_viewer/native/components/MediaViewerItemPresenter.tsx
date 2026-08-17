@@ -1,25 +1,15 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItemPresenter.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ View: c4, StyleSheet: c5 } = get_ActivityIndicator);
 let closure_7 = { platformStyles: { position: "absolute", width: "100%", height: "100%" } };
 let closure_8 = { code: "function MediaViewerItemPresenterTsx1(){const{entranceAnimationDriver,interpolate,Extrapolation,startHeight,sourceHeight,startWidth,sourceWidth,startTranslateY,startTranslateX,startScale}=this.__closure;const entranceValue=entranceAnimationDriver.get();function interpolateProxy(from,to){return interpolate(entranceValue,from,to,Extrapolation.CLAMP);}return{height:interpolateProxy([0,1],[startHeight,sourceHeight]),width:interpolateProxy([0,1],[startWidth,sourceWidth]),top:interpolateProxy([0,1],[startTranslateY,0]),left:interpolateProxy([0,1],[startTranslateX,0]),borderRadius:interpolateProxy([0,0.25],[16,0]),transform:[{scale:interpolateProxy([0,1],[startScale,1])}]};}" };
-let result = require("jsxProd").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItemPresenter.tsx");
 
 export default function MediaViewerItemPresenter(windowHeight) {
-  let handleError;
-  let handleLoad;
-  let handleLoadStart;
-  let loads;
-  let originLayout;
-  let renderMedia;
-  let source;
-  let windowWidth;
   ({ source, originLayout, renderMedia, windowWidth } = windowHeight);
   windowHeight = windowHeight.windowHeight;
   const entranceAnimationDriver = windowHeight.entranceAnimationDriver;
@@ -38,7 +28,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
   ({ loads, handleLoad, handleError, handleLoadStart } = entranceAnimation);
   const MediaViewerSourcesStore = windowWidth(entranceAnimationDriver[4]).MediaViewerSourcesStore;
   field = MediaViewerSourcesStore.useField("spoilerIndexes");
-  let obj1 = index;
+  obj1 = index;
   let items = [index, field];
   const memo = index.useMemo(() => field.has(index), items);
   const size = windowHeight(entranceAnimationDriver[5])(windowWidth, windowHeight, source);
@@ -139,12 +129,12 @@ export default function MediaViewerItemPresenter(windowHeight) {
       obj3 = windowWidth(entranceAnimationDriver[6]);
       obj[1] = obj3.interpolate(value, [0, 1], items1, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
       items2 = [, ];
-      items2[0] = c9;
+      items2[0] = closure_9;
       items2[1] = 0;
       obj4 = windowWidth(entranceAnimationDriver[6]);
       obj[2] = obj4.interpolate(value, [0, 1], items2, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
       items3 = [, ];
-      items3[0] = c8;
+      items3[0] = closure_8;
       items3[1] = 0;
       obj5 = windowWidth(entranceAnimationDriver[6]);
       obj[3] = obj5.interpolate(value, [0, 1], items3, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
@@ -152,7 +142,7 @@ export default function MediaViewerItemPresenter(windowHeight) {
       obj[4] = obj6.interpolate(value, [0, 0.25], [16, 0], windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);
       obj = { scale: null };
       items4 = [, ];
-      items4[0] = c7;
+      items4[0] = closure_7;
       items4[1] = 1;
       obj8 = windowWidth(entranceAnimationDriver[6]);
       obj[0] = obj8.interpolate(value, [0, 1], items4, windowWidth(entranceAnimationDriver[6]).Extrapolation.CLAMP);

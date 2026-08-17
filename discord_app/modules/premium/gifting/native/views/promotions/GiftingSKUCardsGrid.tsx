@@ -1,41 +1,33 @@
 // discord_app/modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { isAvatarDecorationRecord } from "fromServer";
-import { isNameplateRecord } from "fromServer";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 5306 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { card: null, overlayContainer: null, selected: null, claimed: null, checkmark: null, checkmarkContainer: null, textContainer: null };
-obj = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: require("Themes").radii.sm, overflow: "hidden", borderColor: require("Themes").colors.BORDER_SUBTLE, margin: require("Themes").space.PX_4 };
+obj = { height: 178, width: 150, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", borderWidth: 1, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderColor: ThemesDefault.colors.BORDER_SUBTLE, margin: ThemesDefault.space.PX_4 };
 obj[0] = obj;
 obj[1] = { position: "absolute", top: 10, zIndex: 2, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
-createCacheKey = { borderColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { borderColor: ThemesDefault.colors.BACKGROUND_BRAND };
 obj[2] = createCacheKey;
 obj[3] = { opacity: 0.4 };
 obj[4] = { position: "absolute", opacity: 1, fontWeight: "bold" };
 obj[5] = { position: "absolute", top: 10, zIndex: 3, display: "flex", justifyContent: "center", alignItems: "center", width: "100%", height: "75%" };
-obj[6] = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: require("Themes").space.PX_16, alignItems: "flex-start" };
+obj[6] = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = importAllResult.memo((rewardSkuId) => {
-  let accessibilityRole;
-  let accessibilityState;
-  let claimed;
-  let importDefault;
-  let isSelected;
   rewardSkuId = rewardSkuId.rewardSkuId;
   ({ claimed, onSelect: importDefault, isSelected } = rewardSkuId);
   let currentUser;
   const tmp = callback2();
   let obj = rewardSkuId(isSelected[7]);
   currentUser = obj.useCurrentUser();
-  let obj1 = rewardSkuId(isSelected[8]);
+  obj1 = rewardSkuId(isSelected[8]);
   const radioA11yNative = obj1.useRadioA11yNative({ selected: isSelected });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   let obj2 = rewardSkuId(isSelected[9]);
@@ -114,20 +106,16 @@ let closure_10 = importAllResult.memo((rewardSkuId) => {
   }
 });
 let closure_11 = createCacheKey.createStyles({ grid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center" } });
-let obj2 = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: require("Themes").space.PX_16, alignItems: "flex-start" };
-const result = require("fromServer").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
+let obj2 = { position: "absolute", bottom: 20, left: 0, right: 0, paddingHorizontal: ThemesDefault.space.PX_16, alignItems: "flex-start" };
+const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/promotions/GiftingSKUCardsGrid.tsx");
 
 export default function GiftingSKUCardsGrid(arg0) {
-  let dependencyMap;
-  let importDefault;
-  let require;
-  let rewardsToDisplay;
   ({ rewardsToDisplay, claimableRewards: require, onSelect: importDefault, highlightedSkuId: dependencyMap } = arg0);
   return callback(View, {
     style: callback3().grid,
     children: rewardsToDisplay.map((rewardSkuId) => {
-      let closure_0 = rewardSkuId;
-      return outer1_7(outer1_10, { rewardSkuId, claimed: !closure_0.some((arg0) => arg0 === closure_0), isSelected: closure_2 === rewardSkuId, onSelect: closure_1 }, rewardSkuId);
+      closure_0 = rewardSkuId;
+      return closure_1_7(closure_1_10, { rewardSkuId, claimed: !closure_0.some((arg0) => arg0 === closure_0), isSelected: closure_2 === rewardSkuId, onSelect: closure_1 }, rewardSkuId);
     })
   });
 };

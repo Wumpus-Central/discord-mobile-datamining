@@ -1,12 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormImagePicker.tsx
-import Themes from "Themes";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import preloadDefault from "preload" /* 5449 */;
+import renderDefault from "render" /* 8910 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 function pickImage() {
   const self = this;
@@ -21,10 +22,10 @@ function pickImage() {
 function _pickImage() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, base64) {
       if (c4 === 2) {
         c4 = 3;
@@ -52,11 +53,11 @@ function _pickImage() {
               obj[0] = base64;
               return obj;
             } else {
-              let closure_2 = tmp2;
+              closure_2 = tmp2;
               const callback = base64;
               base64 = undefined;
-              let obj2 = callback2(outer1_2[6]);
-              const obj1 = { size: null };
+              let obj2 = callback2(closure_1_2[6]);
+              obj1 = { size: null };
               obj1[0] = callback;
               c3 = 1;
               c4 = 1;
@@ -69,7 +70,7 @@ function _pickImage() {
             throw base64;
           } else if (arg0 === 2) {
             c4 = 3;
-            const obj3 = { value: null, done: true };
+            obj3 = { value: null, done: true };
             obj3[0] = base64;
             return obj3;
           } else {
@@ -89,7 +90,7 @@ function _pickImage() {
       }
     })();
   });
-  const _pickImage = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -106,14 +107,14 @@ class ImagePickerIcon {
     if (flag === undefined) {
       flag = false;
     }
-    tmp = jsxs();
-    tmp3 = global.previewShape === jsxs.CIRCLE ? tmp.imageCircle : tmp.imageSquircle;
+    tmp = closure_8();
+    tmp3 = global.previewShape === closure_9.CIRCLE ? tmp.imageCircle : tmp.imageSquircle;
     items = [, ];
     items[0] = image;
     items[1] = size;
     tmp2 = "center" === previewResizeMode ? tmp.imageCentered : tmp.image;
     tmp7 = setImage;
-    memo = noop.useMemo(() => {
+    memo = closure_4.useMemo(() => {
       let uri;
       if (image != null) {
         uri = tmp.uri;
@@ -122,11 +123,11 @@ class ImagePickerIcon {
         uri = tmp.uri;
         if (!uri.startsWith("data:")) {
           if (null != size) {
-            const obj = image(outer1_2[7]);
+            const obj = image(closure_1_2[7]);
             const _HermesInternal = HermesInternal;
-            let uri2 = tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * image(outer1_2[7]).getDevicePixelRatio());
+            let uri2 = tmp.uri + "?size=" + obj.getBestMediaProxySize(tmp3 * image(closure_1_2[7]).getDevicePixelRatio());
             tmp.uri = uri2;
-            const obj2 = image(outer1_2[7]);
+            const obj2 = image(closure_1_2[7]);
           }
           return uri2;
         }
@@ -142,7 +143,7 @@ class ImagePickerIcon {
     obj[1] = intl.string(require("getSystemLocale").t.HNo5cG);
     obj[2] = { disabled: flag };
     obj[3] = function onPress() {
-      return outer1_10(closure_1, closure_2);
+      return closure_1_10(closure_1, closure_2);
     };
     items1 = [, , , , ];
     items1[0] = tmp.image;
@@ -201,26 +202,24 @@ class ImagePickerIcon {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { imageSelectionRow: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 16 }, buttonColumn: { flex: 1, flexDirection: "column", marginEnd: 16 }, imageDescription: { flexWrap: "wrap", marginBottom: 16 }, image: { alignSelf: "center", width: 84, height: 84 }, imageCentered: { alignSelf: "center", width: 20, height: 20 }, imageCircle: { borderRadius: 42 }, imageSquircle: null, imageContainerEmpty: null, editImageIcon: null, standaloneIcon: null, disabled: null };
-createCacheKey = { borderRadius: require("Themes").radii.sm };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm };
 createCacheKey[6] = createCacheKey;
-createCacheKey[7] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[8] = { alignItems: "center", backgroundColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: require("Themes").radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
+createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[8] = { alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
 createCacheKey[9] = { top: -4, right: -4 };
 createCacheKey[10] = { opacity: 0.3 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { CIRCLE: 0, [0]: "CIRCLE", SQUIRCLE: 1, [1]: "SQUIRCLE" };
-let obj2 = { alignItems: "center", backgroundColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: require("Themes").radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
+let obj2 = { alignItems: "center", backgroundColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, borderRadius: ThemesDefault.radii.lg, top: 0, height: 24, justifyContent: "center", right: 0, padding: 4, position: "absolute", width: 24 };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormImagePicker.tsx");
 
 export default function FormImagePicker(children) {
-  let image;
-  let setImage;
   const imageUploadSize = children.imageUploadSize;
   ({ image, setImage } = children);
   const disabled = children.disabled;
   const merged = Object.assign(children, Object.create(null));
-  const tmp2 = createCacheKey();
+  const tmp2 = callback4();
   if (null == image) {
     const intl2 = imageUploadSize(1236).intl;
     let stringResult = intl2.string(imageUploadSize(1236).t.bGPfSp);
@@ -239,7 +238,7 @@ export default function FormImagePicker(children) {
       text: stringResult,
       variant: "secondary",
       onPress() {
-        return outer1_10(imageUploadSize, setImage);
+        return closure_1_10(imageUploadSize, setImage);
       },
       size: "md",
       disabled

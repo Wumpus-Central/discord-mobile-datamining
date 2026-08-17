@@ -1,12 +1,13 @@
 // discord_app/modules/icymi/native/ContentInventoryEntryRow.tsx
-import "noop";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { jsx } from "jsxProd";
-import { CustomStatusEntryRow } from "content_inventory/CustomStatusEntryRow.tsx";
-import { items } from "content_inventory/GamingLikeEntryRow.tsx";
+import noopAll from "noop" /* 19 */;
+import itemsDefault from "items" /* 15757 */;
+import CustomStatusEntryRowDefault from "CustomStatusEntryRow" /* 15766 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/icymi/native/ContentInventoryEntryRow.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/icymi/native/ContentInventoryEntryRow.tsx");
 
 export default function ContentInventoryEntryRow(content) {
   content = content.content;
@@ -16,8 +17,8 @@ export default function ContentInventoryEntryRow(content) {
   }
   let flag2 = content.visible;
   let obj = content(589);
-  const items = [markAllUserIdListsStale];
-  if (obj.useStateFromStores(items, () => outer1_3.isBlockedOrIgnored(content.author_id))) {
+  const items = [closure_3];
+  if (obj.useStateFromStores(items, () => closure_1_3.isBlockedOrIgnored(content.author_id))) {
     return null;
   } else {
     const content_type = content.content_type;
@@ -31,7 +32,7 @@ export default function ContentInventoryEntryRow(content) {
             flag2 = false;
           }
           obj[2] = flag2;
-          return jsx(CustomStatusEntryRow, { content: null, renderForScreenshot: null, visible: null });
+          return jsx(CustomStatusEntryRowDefault, { content: null, renderForScreenshot: null, visible: null });
         } else {
           return null;
         }
@@ -40,6 +41,6 @@ export default function ContentInventoryEntryRow(content) {
     obj = { content: null, renderForScreenshot: null };
     obj[0] = content;
     obj[1] = flag;
-    return jsx(items, { content: null, renderForScreenshot: null });
+    return jsx(itemsDefault, { content: null, renderForScreenshot: null });
   }
 };

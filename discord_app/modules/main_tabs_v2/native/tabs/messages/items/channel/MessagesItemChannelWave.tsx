@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { Button } from "../../../../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo(function MessagesItemChannelWave(hasNameplate) {
+require = arg1;
+const memoResult = importAllResult.memo(function MessagesItemChannelWave(hasNameplate) {
   let flag = hasNameplate.hasNameplate;
   if (flag === undefined) {
     flag = false;
@@ -23,6 +23,6 @@ const memoResult = require("noop").memo(function MessagesItemChannelWave(hasName
   obj[4] = hasNameplate.wavePressed;
   return jsx(Button.Button, { text: null, icon: null, variant: null, size: "sm", onPress: null });
 });
-const result = require("Button").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/channel/MessagesItemChannelWave.tsx");
 
 export default memoResult;

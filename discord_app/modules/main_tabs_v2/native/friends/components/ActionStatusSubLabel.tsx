@@ -1,34 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import { AccessibilityAnnouncer } from "../../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
+import noopAll from "noop" /* 19 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 1351 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 function announceActioned(intl) {
-  const AccessibilityAnnouncer = AccessibilityAnnouncer.AccessibilityAnnouncer;
+  const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(intl);
 }
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles(() => ({ container: { overflow: "hidden" }, actionStatus: { position: "absolute" } }));
-let closure_7 = require("module_4115").createAnimatedComponent(require("Text").Text);
+let closure_7 = importDefaultResult.createAnimatedComponent(require("Text").Text);
 let closure_8 = { code: "function ActionStatusSubLabelTsx1(){const{hasSecondLine,actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const currentlyHasSecondLine=hasSecondLine&&!actioned.get();const lineHeightValue=lineHeight*fontScale;const currentLineHeightValue=currentlyHasSecondLine?lineHeightValue*2:lineHeightValue;return{height:!animate||!actioned.get()?currentLineHeightValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[currentlyHasSecondLine?lineHeightValue*2:lineHeightValue,lineHeightValue]))};}" };
 let closure_9 = { code: "function ActionStatusSubLabelTsx2(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?lineHeight*fontScale:0;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[0,translateYValue]))}]};}" };
 let closure_10 = { code: "function ActionStatusSubLabelTsx3(){const{actioned,lineHeight,fontScale,animate,withTiming,interpolate}=this.__closure;const translateYValue=actioned.get()?0:-lineHeight*fontScale;return{transform:[{translateY:!animate?translateYValue:withTiming(interpolate(actioned.get()?1:0,[0,1],[translateYValue,0]))}],opacity:!animate?actioned.get()?1:0:withTiming(actioned.get()?1:0)};}" };
 let closure_11 = { code: "function ActionStatusSubLabelTsx4(){const{actioned}=this.__closure;return actioned.get();}" };
 let closure_12 = { code: "function ActionStatusSubLabelTsx5(actioned,actionedPrev){const{actionStatusAccessibilityLabel,runOnJS,announceActioned}=this.__closure;const isActioned=actioned&&actionedPrev===false;if(!isActioned||actionStatusAccessibilityLabel==null){return;}runOnJS(announceActioned)(actionStatusAccessibilityLabel);}" };
-let result = require("createCacheKey").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/ActionStatusSubLabel.tsx");
 
 export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
-  let actionStatus;
-  let actionStatusAccessibilityLabel;
-  let animate;
-  let label;
-  let maxFontSizeMultiplier;
-  let secondaryLabel;
   let num = lineHeight.lineHeight;
   if (num === undefined) {
     num = 16;
@@ -40,23 +33,23 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   const actioned = lineHeight.actioned;
   ({ secondaryLabel, actionStatusAccessibilityLabel } = lineHeight);
   ({ maxFontSizeMultiplier, animate } = lineHeight);
-  let c4;
+  closure_4 = undefined;
   let fontScale;
   let tmp = null != secondaryLabel;
-  c4 = tmp;
+  closure_4 = tmp;
   ({ label, actionStatus } = lineHeight);
   let obj = num(actionStatusAccessibilityLabel[6]);
   fontScale = obj.useFontScale();
   const tmp3 = fontScale();
-  let obj1 = num(actionStatusAccessibilityLabel[4]);
+  obj1 = num(actionStatusAccessibilityLabel[4]);
   class L {
     constructor() {
-      tmp = c4;
-      if (c4) {
+      tmp = closure_4;
+      if (closure_4) {
         tmp2 = actioned;
         tmp = !actioned.get();
       }
-      result = c0 * c5;
+      result = c0 * closure_5;
       result1 = result;
       if (tmp) {
         num = 2;
@@ -68,9 +61,9 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
         withTimingResult = result1;
         if (actioned.get()) {
           tmp6 = c0;
-          tmp7 = outer1_2;
-          obj2 = c0(outer1_2[7]);
-          obj3 = c0(outer1_2[4]);
+          tmp7 = closure_2;
+          obj2 = c0(closure_2[7]);
+          obj3 = c0(closure_2[4]);
           num2 = 0;
           if (obj.get()) {
             num2 = 1;
@@ -96,7 +89,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   const animatedStyle = obj1.useAnimatedStyle(L);
   let obj3 = num(actionStatusAccessibilityLabel[4]);
   const fn = function y() {
-    let num = 0;
+    num = 0;
     if (actioned.get()) {
       num = num * fontScale;
     }
@@ -125,18 +118,18 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       num = 0;
       if (!actioned.get()) {
         tmp = c0;
-        tmp2 = c5;
-        num = -c0 * c5;
+        tmp2 = closure_5;
+        num = -c0 * closure_5;
       }
       withTimingResult = num;
       tmp3 = animate;
       if (animate) {
         tmp5 = c0;
-        tmp6 = outer1_2;
-        obj2 = c0(outer1_2[7]);
+        tmp6 = closure_2;
+        obj2 = c0(closure_2[7]);
         tmp7 = c0;
-        tmp8 = outer1_2;
-        obj3 = c0(outer1_2[4]);
+        tmp8 = closure_2;
+        obj3 = c0(closure_2[4]);
         num2 = 0;
         if (obj.get()) {
           num2 = 1;
@@ -151,8 +144,8 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       items1[0] = { translateY: withTimingResult };
       if (tmp3) {
         tmp9 = c0;
-        tmp10 = outer1_2;
-        obj5 = c0(outer1_2[7]);
+        tmp10 = closure_2;
+        obj5 = c0(closure_2[7]);
         num4 = 0;
         if (obj.get()) {
           num4 = 1;
@@ -191,7 +184,7 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
       tmp = null != actionStatusAccessibilityLabel;
     }
     if (tmp) {
-      num(actionStatusAccessibilityLabel[4]).runOnJS(outer1_6)(actionStatusAccessibilityLabel);
+      num(actionStatusAccessibilityLabel[4]).runOnJS(closure_1_6)(actionStatusAccessibilityLabel);
       const obj = num(actionStatusAccessibilityLabel[4]);
     }
   };
@@ -215,5 +208,5 @@ export const ActionStatusSubLabel = function ActionStatusSubLabel(lineHeight) {
   const items2 = [tmp3.actionStatus, animatedStyle2];
   items1[2] = animate(closure_7, { variant: str, maxFontSizeMultiplier, color: "text-default", style: items2, lineClamp: 1, children: actionStatus });
   obj3[1] = items1;
-  return c4(actioned(actionStatusAccessibilityLabel[4]).View, obj3);
+  return closure_4(actioned(actionStatusAccessibilityLabel[4]).View, obj3);
 };

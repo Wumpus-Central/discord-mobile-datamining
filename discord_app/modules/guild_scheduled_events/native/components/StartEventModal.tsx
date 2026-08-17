@@ -1,23 +1,21 @@
 // discord_app/modules/guild_scheduled_events/native/components/StartEventModal.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import _slicedToArray from "_slicedToArray";
-import canManageResource from "canManageResource";
-import { View } from "GuildEventCardControls";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "createGuildRecordFromRust";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY";
-import jsxProd from "SafeAreaPaddingView";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08176_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 8176 */;
+import GuildEventCardControlsDefault from "GuildEventCardControls" /* 8899 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { START_EVENT_MODAL_KEY } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let map1;
-const require = arg1;
+require = arg1;
 function NavigationBar(onClose) {
   onClose = onClose.onClose;
   let obj = { children: null };
@@ -27,14 +25,13 @@ function NavigationBar(onClose) {
   obj[2] = function onPress() {
     return onClose();
   };
-  obj = { source: null };
-  obj[0] = registerAsset;
+  obj = { source: registerAssetDefault };
   obj[3] = callback(onClose(1297).Icon, obj);
   obj[0] = callback(onClose(5433).PressableOpacity, obj);
   return callback(View, obj);
 }
 function StartEventHeader(children) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.header, children: null };
   obj = { style: tmp.headerPrivacyLevel, variant: "heading-lg/bold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
@@ -47,7 +44,7 @@ function StartEventHeader(children) {
 }
 class PreviewEventCard {
   constructor(arg0) {
-    tmp = jsxs();
+    tmp = closure_14();
     obj = { event: global.event, hideControls: true, style: tmp.previewCard, hideAgeVerificationNotice: true };
     return jsx(require("GuildEventCardControls"), obj);
   }
@@ -55,32 +52,28 @@ class PreviewEventCard {
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: c9, GuildScheduledEventEntityTypes: c10 } = GUILD_EVENT_MAX_NAME_LENGTH);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { mainContainer: null, container: null, headerContainer: null, footerContainer: null, header: null, headerTitle: null, buttonContainer: null, previewCard: null, headerPrivacyLevel: null };
-createCacheKey = { flex: 1, padding: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, padding: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, flexDirection: "column", justifyContent: "space-between", alignContent: "center" };
-createCacheKey[2] = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_24 };
+createCacheKey[2] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { display: "flex", flexDirection: "column" };
-let obj1 = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_24 };
-createCacheKey[4] = { alignItems: "center", paddingTop: require("Themes").space.PX_24 };
+let obj1 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_24 };
+createCacheKey[4] = { alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
 createCacheKey[5] = { lineHeight: 24, textAlign: "center" };
-let obj2 = { alignItems: "center", paddingTop: require("Themes").space.PX_24 };
-createCacheKey[6] = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_16 };
-let obj3 = { display: "flex", flexDirection: "column", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_16 };
-createCacheKey[7] = { borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
+let obj2 = { alignItems: "center", paddingTop: ThemesDefault.space.PX_24 };
+createCacheKey[6] = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
+let obj3 = { display: "flex", flexDirection: "column", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
+createCacheKey[7] = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
 createCacheKey[8] = { textAlign: "center", lineHeight: 18 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
-const result = require("noop").fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, shadowColor: "#000", shadowOpacity: 0.2, shadowRadius: 16, shadowOffset: { height: 8, width: 0 } };
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/StartEventModal.tsx");
 
 export default function StartEventModal(event) {
-  let c6;
-  let error;
-  let loading;
-  let tmp11;
   event = event.event;
   const onCloseActionSheet = event.onCloseActionSheet;
   let guild_id;
-  let createGuildRecordFromRust;
+  closure_3 = undefined;
   let first;
   let React;
   c6 = undefined;
@@ -89,7 +82,7 @@ export default function StartEventModal(event) {
     if (arg0 === undefined) {
       flag = false;
     }
-    onCloseActionSheet(guild_id[11]).popWithKey(outer1_11);
+    onCloseActionSheet(guild_id[11]).popWithKey(closure_1_11);
     if (onCloseActionSheet != null) {
       onCloseActionSheet(flag);
     }
@@ -122,10 +115,10 @@ export default function StartEventModal(event) {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else if (outer1_3) {
-              const obj1 = { onSuccess: null };
+            } else if (closure_1_3) {
+              obj1 = { onSuccess: null };
               obj1[0] = function onSuccess() {
-                v1(outer1_2[11]).popWithKey(outer1_11);
+                v1(closure_1_2[11]).popWithKey(closure_1_11);
                 if (v1 != null) {
                   tmp2(true);
                 }
@@ -133,10 +126,10 @@ export default function StartEventModal(event) {
               c1 = 1;
               c0 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = outer1_6(c0, outer1_4, obj1);
+              obj2[0] = closure_1_6(c0, closure_1_4, obj1);
               return obj2;
             } else {
-              outer1_7(false);
+              closure_1_7(false);
             }
           } else if (arg0 === 1) {
             c0 = 3;
@@ -155,7 +148,7 @@ export default function StartEventModal(event) {
         }
       }
     });
-    const _handleStart = tmp;
+    closure_8 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -164,12 +157,12 @@ export default function StartEventModal(event) {
     }
     return applyArgumentsResult;
   }
-  let tmp = createCacheKey();
+  let tmp = callback3();
   guild_id = event.guild_id;
   let obj = event(guild_id[18]);
   const items = [_handleStart];
   const stateFromStores = obj.useStateFromStores(items, () => _handleStart.getGuild(guild_id));
-  let obj1 = event(guild_id[18]);
+  obj1 = event(guild_id[18]);
   const items1 = [onCloseModal];
   const items2 = [event];
   let stateFromStores1 = obj1.useStateFromStores(items1, () => onCloseModal.getChannel(event.channel_id), items2);
@@ -177,7 +170,7 @@ export default function StartEventModal(event) {
   if (stateFromStores1 == null) {
     stateFromStores1 = stateFromStores;
   }
-  createGuildRecordFromRust = obj2.useManageResourcePermissions(stateFromStores1).canManageGuildEvent(event);
+  closure_3 = obj2.useManageResourcePermissions(stateFromStores1).canManageGuildEvent(event);
   const tmp7 = first(React.useState(event.entity_type === constants.STAGE_INSTANCE), 2);
   first = tmp7[0];
   React = tmp7[1];

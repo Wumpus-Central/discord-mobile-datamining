@@ -1,13 +1,13 @@
 // discord_app/modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx
-import _getSystemLocale from "_getSystemLocale";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "_getSystemLocale" /* 1994 */;
 
-const require = arg1;
-const result = require("getSystemLocale").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/polls/useMaybeAddPollsMarketingEasterEggNote.tsx");
 
 export default function useMaybeAddPollsMarketingEasterEggNote(arg0) {
   initialize;
-  [][0] = _getSystemLocale;
+  [][0] = closure_2;
   let formatToPlainStringResult = arg0;
   if (":pizza:" === arg0) {
     formatToPlainStringResult = arg0;

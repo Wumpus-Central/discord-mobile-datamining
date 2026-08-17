@@ -1,18 +1,11 @@
 // discord_app/design/components/LottieIcon/native/LottieIcon.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((color, ref) => {
-  let height;
-  let layers;
-  let markers;
-  let require;
-  let size;
-  let useLottieDefaultColors;
-  let width;
   ({ animation: require, size } = color);
   if (size === undefined) {
     size = "md";
@@ -28,7 +21,7 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   ({ markers, layers } = color);
   autoPlay = color.autoPlay;
   let start;
-  let c4;
+  c4 = undefined;
   let num2;
   let sum1;
   ref = undefined;
@@ -118,7 +111,7 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
       }
     }
   }, items3);
-  const obj1 = { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
+  obj1 = { ref, source: color.dotLottie, colorFilters: null, hardwareAccelerationAndroid: true, loop: false, onAnimationLoaded: null, resizeMode: "cover", style: null };
   let tmp21;
   const tmp19 = c4;
   const tmp3Result = require(autoPlay[6]);
@@ -132,6 +125,6 @@ const forwardRefResult = importAllResult.forwardRef((color, ref) => {
   obj[1] = num2(layers(autoPlay[7]), obj1);
   return num2(tmp19, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/LottieIcon/native/LottieIcon.tsx");
 
 export const LottieIcon = forwardRefResult;

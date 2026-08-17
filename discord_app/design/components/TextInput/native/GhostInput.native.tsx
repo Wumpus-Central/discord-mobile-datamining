@@ -1,15 +1,16 @@
 // discord_app/design/components/TextInput/native/GhostInput.native.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Input } from "../../Input/native/Input.native.tsx";
-import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
-import { useKeyboardBlurring } from "../../Input/native/NativeTextInput.native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
-import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import useTextFieldState from "useTextFieldState" /* 7339 */;
+import useInputStyles from "useInputStyles" /* 7345 */;
+import useKeyboardBlurring from "useKeyboardBlurring" /* 7348 */;
+import Input from "Input" /* 8072 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles(() => {
   let str = arg0;
   if (arg0 === undefined) {
@@ -22,15 +23,15 @@ let closure_4 = createCacheKey.createStyles(() => {
   const input = {};
   const merged = Object.assign({ md: Text.TextStyleSheet["text-md/semibold"], lg: Text.TextStyleSheet["text-lg/semibold"] }[str]);
   if ("error" === str2) {
-    let TEXT_DEFAULT = Themes.colors.TEXT_FEEDBACK_CRITICAL;
+    let TEXT_DEFAULT = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
   } else {
-    TEXT_DEFAULT = Themes.colors.TEXT_DEFAULT;
+    TEXT_DEFAULT = ThemesDefault.colors.TEXT_DEFAULT;
   }
   input.color = TEXT_DEFAULT;
   input.minWidth = 48;
   return { input, centeredContainerStyle: { alignItems: "center" } };
 });
-const result = require("createCacheKey").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TextInput/native/GhostInput.native.tsx");
 
 export const GhostInput = function GhostInput(size) {
   let obj = useInputStyles;
@@ -49,7 +50,7 @@ export const GhostInput = function GhostInput(size) {
   }
   items[1] = prop;
   obj.containerStyle = items;
-  const obj1 = {};
+  obj1 = {};
   const merged1 = Object.assign(textField.inputProps);
   obj1.ref = textField.innerRef;
   const items1 = [tmp4.input];

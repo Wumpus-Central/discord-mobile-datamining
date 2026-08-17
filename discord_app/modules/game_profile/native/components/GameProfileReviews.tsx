@@ -1,39 +1,30 @@
 // discord_app/modules/game_profile/native/components/GameProfileReviews.tsx
-import noop from "noop";
-import get_ActivityIndicator from "SteamReleaseStatus";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { buildSteamStoreUrl } from "../../hooks/useSteamWebsiteUrl.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import buildSteamStoreUrl from "buildSteamStoreUrl" /* 9105 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function SteamReviewRow(url) {
-  let isRecentRating;
-  let rating;
-  let showBorderBottom;
-  let title;
-  let trackAction;
   url = url.url;
   ({ showBorderBottom, trackAction } = url);
   const ratingCount = url.ratingCount;
-  let dependencyMap;
+  dependencyMap = undefined;
   ({ title, rating, isRecentRating } = url);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp4Result = trackAction(9099)(trackAction(4090).openURL);
   dependencyMap = tmp4Result;
   let obj = url(9136);
   const result = obj.calculateSteamReviewScoreDescription(rating, ratingCount, isRecentRating);
-  let obj1 = url(9137);
+  obj1 = url(9137);
   const items = [tmp4Result, url, trackAction];
   const steamReviewScoreDescriptionColor = obj1.getSteamReviewScoreDescriptionColor(result);
   obj = {
     onPress: React.useCallback(() => {
-      trackAction(url(_undefined[9]).GameProfileTrackActionActions.SteamReviews);
-      _undefined(url);
+      trackAction(url(9101).GameProfileTrackActionActions.SteamReviews);
+      dependencyMap(url);
     }, items),
     accessibilityRole: "link",
     accessibilityLabel: null,
@@ -49,8 +40,7 @@ function SteamReviewRow(url) {
   items1[1] = showBorderBottom;
   obj[3] = items1;
   obj = { style: tmp.steamNameContainer, children: null };
-  obj1 = { size: "sm", color: null };
-  obj1[1] = trackAction(712).colors.ICON_STRONG;
+  obj1 = { size: "sm", color: trackAction(712).colors.ICON_STRONG };
   const items2 = [callback(url(9109).SteamNeutralIcon, obj1), callback(url(4734).Text, { variant: "heading-sm/medium", color: "mobile-text-heading-primary", children: title })];
   obj[1] = items2;
   const items3 = [closure_8(closure_4, obj), ];
@@ -80,14 +70,10 @@ function SteamReviewRow(url) {
   return closure_8(tmp10, obj);
 }
 function OpenCriticReview(url) {
-  let backgroundColor;
-  let foregroundColor;
-  let tier;
-  let topCriticRating;
   url = url.url;
   const trackAction = url.trackAction;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback2();
   const reviews = url.game.reviews;
   let opencritic;
   if (reviews != null) {
@@ -109,11 +95,11 @@ function OpenCriticReview(url) {
   const items = [tmp4Result, url, trackAction];
   let str = "";
   const callback = React.useCallback(() => {
-    trackAction(url(_undefined[9]).GameProfileTrackActionActions.OpenCriticReviews);
-    _undefined(url);
+    trackAction(url(9101).GameProfileTrackActionActions.OpenCriticReviews);
+    dependencyMap(url);
   }, items);
   if (null != tier) {
-    let obj1 = url(9138);
+    obj1 = url(9138);
     str = obj1.getOpenCriticTierText(tier);
   }
   if (null != tier) {
@@ -199,36 +185,34 @@ function OpenCriticReview(url) {
   return closure_8(closure_5, obj);
 }
 ({ View: c4, Pressable: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, headerText: null, reviewContainer: null, reviewRow: null, reviewRowNotLast: null, steamNameContainer: null, steamRatingContainer: null, opencriticRightContainer: null, opencriticTopCriticContainer: null, opencriticTopCriticImage: null, opencriticTopCriticRatingContainer: null };
-createCacheKey = { gap: require("Themes").space.PX_8 };
+createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_8 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_8 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden" };
-let obj2 = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden" };
-createCacheKey[3] = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: require("Themes").space.PX_12 };
-let obj3 = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: require("Themes").space.PX_12 };
-createCacheKey[4] = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-let obj4 = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[5] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-let obj5 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-createCacheKey[6] = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: require("Themes").space.PX_32, gap: require("Themes").space.PX_4 };
-let obj6 = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: require("Themes").space.PX_32, gap: require("Themes").space.PX_4 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-let obj7 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-createCacheKey[8] = { width: 32, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
+createCacheKey[3] = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
+let obj3 = { height: 56, flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
+createCacheKey[4] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj4 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey[5] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_4 };
+let obj6 = { flexDirection: "row", alignItems: "flex-end", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32, gap: ThemesDefault.space.PX_4 };
+createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+createCacheKey[8] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
 createCacheKey[9] = { width: 32, height: 32 };
 createCacheKey[10] = { position: "absolute", top: 0, left: 1, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj8 = { width: 32, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
-let result = require("jsxProd").fileFinishedImporting("modules/game_profile/native/components/GameProfileReviews.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj8 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center", justifyContent: "center" };
+let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileReviews.tsx");
 
 export default function GameProfileReviews(arg0) {
-  let game;
-  let trackAction;
   ({ game, trackAction } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = buildSteamStoreUrl;
   let id;
   if (game != null) {
@@ -298,7 +282,7 @@ export default function GameProfileReviews(arg0) {
     const intl = tmp2(1236).intl;
     obj[3] = intl.string(tmp2(1236).t.GaAQXP);
     const items = [callback(tmp2(4734).Text, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.reviewContainer;
     let tmp22Result = null;
     if (tmp10) {

@@ -1,15 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfilePrivateInfoBanner.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const View = get_ActivityIndicator.View;
+const jsx = jsxProd.jsx;
 let obj = { banner: null };
-obj = { padding: require("Themes").space.PX_12, borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj = { padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/native/UserProfilePrivateInfoBanner.tsx");
 
 export default function UserProfilePrivateInfoBanner(username) {
   const containerBackground = username.containerBackground;

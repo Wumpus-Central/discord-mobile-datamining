@@ -1,31 +1,26 @@
 // discord_app/records/UserRecord.tsx
-import "toJS";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
+import hasFlag from "hasFlag" /* 1403 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import parseAvatarDecorationData from "parseAvatarDecorationData" /* 1899 */;
+import toJSDefault from "toJS" /* 1931 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { create } from "../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { hasFlag } from "../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { parseAvatarDecorationData } from "../modules/collectibles/avatar_decorations/AvatarDecorationUtils.tsx";
 import { getNameplateData } from "../modules/collectibles/nameplates/utils.tsx";
-import { getAvatarURL } from "../utils/AvatarUtils.tsx";
-import { isPremiumAtLeast } from "../utils/PremiumTypeUtils.tsx";
 import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
+toJSDefault;
 ({ LOCAL_BOT_ID: c4, NON_USER_BOT_DISCRIMINATOR: c5, PREMIUM_TYPE_NONE: closure_6, UserFlags: error } = ME);
-({ SKU_ID_PURCHASED_FLAGS: metroImportAll, PremiumTypes: c9, PurchasedFlags: c10 } = GuildFeatures);
+({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: c9, PurchasedFlags: c10 } = GuildFeatures);
 class UserRecord extends tmp2 {
   constructor(arg0) {
-    c0 = undefined;
+    closure_0 = undefined;
     tmp6 = new UserRecord(tmp5, tmp4, tmp3, tmp2, new.target, tmp, global, new.target, undefined);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp6;
+    closure_0 = tmp6;
     tmp6.hasFlag = function hasFlag() {
       return false;
     };
@@ -49,7 +44,7 @@ class UserRecord extends tmp2 {
     tmp6.username = username;
     discriminator = global.discriminator;
     if (discriminator == null) {
-      discriminator = LOCAL_BOT_ID;
+      discriminator = closure_5;
     }
     tmp6.discriminator = discriminator;
     avatar = global.avatar;
@@ -176,7 +171,7 @@ class UserRecord extends tmp2 {
     }
     tmp6.globalName = globalName;
     tmp6.banner = global.banner;
-    tmp12 = c0;
+    tmp12 = closure_0;
     tmp13 = closure_3;
     obj2 = require("isUserPrimaryGuildEqual");
     primary_guild = global.primary_guild;
@@ -254,7 +249,7 @@ class UserRecord extends tmp2 {
       configurable: false,
       enumerable: false,
       value() {
-            return obj.hasFlag(outer1_7.STAFF);
+            return obj.hasFlag(closure_1_7.STAFF);
           }
     };
     obj2 = {
@@ -262,7 +257,7 @@ class UserRecord extends tmp2 {
       configurable: false,
       enumerable: false,
       value() {
-            const hasFlagResult = obj.hasFlag(outer1_7.STAFF);
+            const hasFlagResult = obj.hasFlag(closure_1_7.STAFF);
             let tmp3 = !hasFlagResult;
             if (!hasFlagResult) {
               tmp3 = null != tmp.personalConnectionId;
@@ -275,7 +270,7 @@ class UserRecord extends tmp2 {
       configurable: false,
       enumerable: false,
       value() {
-            let hasFlagResult = obj2.hasFlag(outer1_7.STAFF);
+            let hasFlagResult = obj2.hasFlag(closure_1_7.STAFF);
             if (!hasFlagResult) {
               hasFlagResult = obj.hasFlag(tmp.COLLABORATOR);
             }
@@ -333,12 +328,12 @@ prototype["getAvatarURL"] = function getAvatarURL(arg0, closure_2, flag, SUPPORT
       obj[3] = flag;
       obj[4] = closure_2;
       obj[5] = SUPPORTS_WEBP;
-      let guildMemberAvatarURLSimple = getAvatarURL.getGuildMemberAvatarURLSimple(obj);
-      const obj2 = getAvatarURL;
+      let guildMemberAvatarURLSimple = getAvatarURLDefault.getGuildMemberAvatarURLSimple(obj);
+      const obj2 = getAvatarURLDefault;
     }
     return guildMemberAvatarURLSimple;
   }
-  obj = getAvatarURL;
+  obj = getAvatarURLDefault;
   guildMemberAvatarURLSimple = obj.getUserAvatarURL(self, flag, closure_2, null, SUPPORTS_WEBP);
 };
 prototype["addGuildAvatarHash"] = function addGuildAvatarHash(guildId, avatar) {
@@ -369,18 +364,18 @@ prototype["removeGuildAvatarHash"] = function removeGuildAvatarHash(guildId) {
 };
 prototype["getAvatarSource"] = function getAvatarSource(arg0, flag) {
   const self = this;
-  const importDefault = arg0;
+  importDefault = arg0;
   if (flag === undefined) {
     flag = false;
   }
-  let closure_2 = arg2;
-  let c0;
+  closure_2 = arg2;
+  closure_0 = undefined;
   if (null != arg0) {
-    c0 = tmp;
+    closure_0 = tmp;
     if (null != this.guildMemberAvatars[arg0]) {
       return importDefault(self[11]).getAnimatableSourceWithFallback(flag, (canAnimate) => {
         let obj = callback(self[11]);
-        obj = { guildId: callback, avatar: c0, userId: self.id, canAnimate, size: closure_2 };
+        obj = { guildId: callback, avatar: closure_0, userId: self.id, canAnimate, size: closure_2 };
         return obj.makeSource(callback(self[11]).getGuildMemberAvatarURLSimple(obj));
       });
     }
@@ -666,7 +661,7 @@ Object.defineProperty(prototype, "premiumGroupRole", {
   set: undefined
 });
 const userRecord = new UserRecord({ id: "0" });
-let result = require("GuildFeatures").fileFinishedImporting("records/UserRecord.tsx");
+let result = require("set").fileFinishedImporting("records/UserRecord.tsx");
 
 export default UserRecord;
 export const PLACEHOLDER_USER_RECORD = userRecord;

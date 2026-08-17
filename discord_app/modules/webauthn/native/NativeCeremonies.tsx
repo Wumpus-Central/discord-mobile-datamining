@@ -1,6 +1,7 @@
 // discord_app/modules/webauthn/native/NativeCeremonies.tsx
-import set from "set";
-import { NativeModules } from "get ActivityIndicator";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
 import { set } from "../../../utils/PlatformUtils.tsx";
 import { isMetaQuest } from "../../device/MetaQuestUtils.android.tsx";
 
@@ -8,9 +9,9 @@ const require = arg1;
 function _promptForRegisterCredential() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0, credential) {
       if (c5 === 2) {
         c5 = 3;
@@ -42,7 +43,7 @@ function _promptForRegisterCredential() {
               let ticket = tmp2;
               let register;
               if (register === undefined) {
-                register = outer1_3.DCDSecurityKeyManager.register;
+                register = closure_1_3.DCDSecurityKeyManager.register;
               }
               let obj4;
               ticket = undefined;
@@ -57,7 +58,7 @@ function _promptForRegisterCredential() {
               throw credential;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = credential;
               return obj1;
             } else {
@@ -112,7 +113,7 @@ function _promptForRegisterCredential() {
     iter.next();
     return iter;
   });
-  const _promptForRegisterCredential = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -121,7 +122,7 @@ function _promptForRegisterCredential() {
   }
   return applyArgumentsResult;
 }
-let c4 = new require("_fetchWebAuthnConditionalChallenge")("WebAuthnUtils");
+let closure_4 = new timestampDefault("WebAuthnUtils");
 let obj = {};
 Object.defineProperty(obj, "hasAndroidPasskeySupport", {
   get: () => {
@@ -164,10 +165,10 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
     authenticatePasskey = tmp.DCDSecurityKeyManager.authenticatePasskey;
   }
   return callback(() => {
-    let closure_0 = [...arguments];
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = [...arguments];
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (c6 === 2) {
         c6 = 3;
@@ -195,7 +196,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               obj[0] = arg1;
               return obj;
             } else {
-              let set = tmp3;
+              closure_2 = tmp3;
               let code = tmp5;
               c5 = 1;
               c6 = 1;
@@ -207,7 +208,7 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -226,14 +227,14 @@ obj.getPasskeyAuthenticator = function getPasskeyAuthenticator() {
             code = code.code;
             if ("AbortError" !== code) {
               if ("NotAllowedError" !== code) {
-                obj2 = callback(outer1_1[7]);
+                obj2 = callback(closure_1_1[7]);
                 const result = obj2.captureWebAuthnException(code);
                 logger.error(code);
                 throw code;
               }
             }
-            logger.warn(outer1_1);
-            const ignorableWebAuthnError = new callback(outer1_1[6]).IgnorableWebAuthnError();
+            logger.warn(closure_1_1);
+            const ignorableWebAuthnError = new callback(closure_1_1[6]).IgnorableWebAuthnError();
             throw ignorableWebAuthnError;
           } else if (arg0 === 1) {
             c6 = 3;
@@ -569,7 +570,7 @@ obj.registerSecurityKey = function registerSecurityKey(setError, fn) {
     }
   }).finally(() => setRegistering(false));
 };
-const tmp2 = new require("_fetchWebAuthnConditionalChallenge")("WebAuthnUtils");
-let result = require("timestamp").fileFinishedImporting("modules/webauthn/native/NativeCeremonies.tsx");
+const tmp2 = new timestampDefault("WebAuthnUtils");
+let result = require("set").fileFinishedImporting("modules/webauthn/native/NativeCeremonies.tsx");
 
 export default obj;

@@ -1,18 +1,8 @@
 // discord_app/modules/premium/native/ProductIds.android.tsx
-import GuildFeatures from "GuildFeatures";
-import isMetaQuest from "isMetaQuest";
+import set from "set" /* 2 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
 
-let PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID;
-let PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID;
-let PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID;
-let PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID;
-let PREMIUM_TIER_2_REACTIVATION_TRIAL_ID;
-let PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID;
-let PREMIUM_TIER_2_REFERRAL_TRIAL_ID;
-let PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
-let PremiumTypes;
-let SubscriptionIntervalTypes;
-let SubscriptionPlans;
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = GuildFeatures);
 ({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID, PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID, PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID, PREMIUM_TIER_2_REFERRAL_TRIAL_ID, PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID, PREMIUM_TIER_2_LIKELIHOOD_1_MONTH_40_PERCENT_DISCOUNT_ID, PREMIUM_TIER_2_REENGAGEMENT_1_MONTH_40_PERCENT_DISCOUNT_ID } = GuildFeatures);
 const frozen = Object.freeze({ PREMIUM_GIFT_MONTH_TIER_0: "premium_month_tier_0.2", PREMIUM_GIFT_YEAR_TIER_0: "premium_year_tier_0", PREMIUM_GIFT_MONTH_TIER_1: "premium_month_tier_1", PREMIUM_GIFT_YEAR_TIER_1: "premium_year_tier_1", PREMIUM_GIFT_MONTH_TIER_2: "premium_month_tier_2", PREMIUM_GIFT_YEAR_TIER_2: "premium_year_tier_2", PREMIUM_TIER_2_MONTHLY: "premium_tier_2_monthly", PREMIUM_TIER_2_YEARLY: "premium_tier_2_yearly", PREMIUM_TIER_1_MONTHLY: "premium_tier_1_monthly", PREMIUM_TIER_1_YEARLY: "premium_tier_1_yearly", PREMIUM_TIER_0_MONTHLY: "premium_tier_0_month", PREMIUM_TIER_0_YEARLY: "premium_tier_0_yearly", PREMIUM_TIER_2_PREMIUM_GUILD_1_MONTHLY: "premium_tier_2_premium_guild_1_monthly", PREMIUM_TIER_2_PREMIUM_GUILD_1_YEARLY: "premium_tier_2_premium_guild_1_yearly", PREMIUM_TIER_2_PREMIUM_GUILD_2_MONTHLY: "premium_tier_2_premium_guild_2_monthly", PREMIUM_TIER_2_PREMIUM_GUILD_2_YEARLY: "premium_tier_2_premium_guild_2_yearly", PREMIUM_TIER_2_PREMIUM_GUILD_3_MONTHLY: "premium_tier_2_premium_guild_3_monthly", PREMIUM_TIER_2_PREMIUM_GUILD_3_YEARLY: "premium_tier_2_premium_guild_3_yearly", PREMIUM_TIER_2_PREMIUM_GUILD_5_MONTHLY: "premium_tier_2_premium_guild_5_monthly", PREMIUM_TIER_2_PREMIUM_GUILD_5_YEARLY: "premium_tier_2_premium_guild_5_yearly", PREMIUM_TIER_2_PREMIUM_GUILD_10_MONTHLY: "premium_tier_2_premium_guild_10_monthly", PREMIUM_TIER_2_PREMIUM_GUILD_13_MONTHLY: "premium_tier_2_premium_guild_13_monthly", PREMIUM_TIER_2_PREMIUM_GUILD_28_MONTHLY: "premium_tier_2_premium_guild_28_monthly", PREMIUM_TIER_1_PREMIUM_GUILD_1_MONTHLY: "premium_tier_1_premium_guild_1_monthly", PREMIUM_TIER_1_PREMIUM_GUILD_1_YEARLY: "premium_tier_1_premium_guild_1_yearly", PREMIUM_GUILD_1_MONTHLY: "premium_guild_1_monthly", PREMIUM_GUILD_2_MONTHLY: "premium_guild_2_monthly" });
@@ -45,7 +35,7 @@ const items15 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_YEAR_GUILD }];
 const items16 = [{ quantity: 1, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
 const items17 = [{ quantity: 2, planId: SubscriptionPlans.PREMIUM_MONTH_GUILD }];
 const frozen1 = Object.freeze(obj);
-const result = require("set").fileFinishedImporting("modules/premium/native/ProductIds.android.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/ProductIds.android.tsx");
 
 export const ProductIds = frozen;
 export const GenericProductIds = [];
@@ -71,7 +61,7 @@ export const getProductIdForGift = function getProductIdForGift(arg0) {
     return frozen.PREMIUM_GIFT_YEAR_TIER_2;
   } else {
     const _Error = Error;
-    const error = new Error("Tried to get Product for Plan not configured for IAP!");
+    error = new Error("Tried to get Product for Plan not configured for IAP!");
     throw error;
   }
 };
@@ -90,7 +80,7 @@ export const getPlanIdForGift = function getPlanIdForGift(arg0) {
     return SubscriptionPlans.PREMIUM_YEAR_TIER_2;
   } else {
     const _Error = Error;
-    const error = new Error("Tried to get Plan for Product not configured for IAP!");
+    error = new Error("Tried to get Plan for Product not configured for IAP!");
     throw error;
   }
 };

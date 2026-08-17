@@ -1,35 +1,18 @@
 // discord_app/modules/messages/native/createChannelStream.tsx
-import initialize from "initialize";
-import closure_4 from "initialize";
-import closure_5 from "initialize";
-import Changeset from "Changeset";
-import { MessageFlags } from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "initialize" /* 10640 */;
+import closure_4 from "initialize" /* 7435 */;
+import closure_5 from "initialize" /* 7582 */;
+import Changeset from "Changeset" /* 8158 */;
+import { MessageFlags } from "ME" /* 676 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ Changeset: closure_6, LoadingType: error, RowType: metroImportAll, SeparatorType: c9 } = Changeset);
-let result = require("initialize").fileFinishedImporting("modules/messages/native/createChannelStream.tsx");
+require = arg1;
+({ Changeset: closure_6, LoadingType: error, RowType: closure_8, SeparatorType: c9 } = Changeset);
+let result = require("set").fileFinishedImporting("modules/messages/native/createChannelStream.tsx");
 
 export default function createChannelStream(forceRender) {
-  let MessageFlags;
-  let closure_11;
-  let closure_12;
-  let initialize;
-  let closure_4;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let dependencyMap;
-  let messages;
-  let require;
-  let roleStyle;
-  let uploads;
   ({ channel: require, messages } = forceRender);
-  ({ uploads, oldestUnreadMessageId: dependencyMap, replyingMessageId: initialize, currentUserId: closure_4, canAddNewReactions: closure_5, selectedSummary: closure_6, chatManager: closure_7, roleStyle } = forceRender);
+  ({ uploads, oldestUnreadMessageId: dependencyMap, replyingMessageId: closure_3, currentUserId: closure_4, canAddNewReactions: closure_5, selectedSummary: closure_6, chatManager: closure_7, roleStyle } = forceRender);
   forceRender = forceRender.forceRender;
   ({ updateMessageIds: MessageFlags, isResourceChannel: closure_11, unloadableContentEntryMessageIds: closure_12 } = forceRender);
   let items1;
@@ -37,8 +20,8 @@ export default function createChannelStream(forceRender) {
     if (closure_0.isForumPost()) {
       let tmp4 = tmp2;
       if (tmp2) {
-        tmp4 = id.id !== messages(outer1_2[5]).castChannelIdAsMessageId(closure_0.id);
-        const obj = messages(outer1_2[5]);
+        tmp4 = id.id !== messages(closure_1_2[5]).castChannelIdAsMessageId(closure_0.id);
+        const obj = messages(closure_1_2[5]);
       }
       let tmp3 = tmp4;
     } else {
@@ -47,22 +30,22 @@ export default function createChannelStream(forceRender) {
     return tmp3;
   }
   function insertMessage(message) {
-    let arr = items1;
+    arr = items1;
     const first = items1[0];
     if (null != first) {
       if (closure_0.isForumPost()) {
         let tmp2 = tmp12;
         if (tmp12) {
-          tmp2 = message.id !== messages(outer1_2[5]).castChannelIdAsMessageId(tmp10.id);
-          const obj = messages(outer1_2[5]);
+          tmp2 = message.id !== messages(closure_1_2[5]).castChannelIdAsMessageId(tmp10.id);
+          const obj = messages(closure_1_2[5]);
         }
         let tmp = tmp2;
       } else {
         tmp = tmp12;
       }
       if (!tmp) {
-        if (messages(outer1_2[6])(tmp10, first[first.length - 1], message)) {
-          const items = [message];
+        if (messages(closure_1_2[6])(tmp10, first[first.length - 1], message)) {
+          items = [message];
           arr = arr.unshift(items);
         } else {
           arr = first.unshift(message);
@@ -103,7 +86,7 @@ export default function createChannelStream(forceRender) {
   }
   items1 = [];
   const item = messages.forEach((id) => {
-    const result = outer1_0(outer1_2[7]).tryCreateInjectedMessage(id, closure_0);
+    const result = closure_1_0(closure_1_2[7]).tryCreateInjectedMessage(id, closure_0);
     let tmp2 = null != result;
     if (tmp2) {
       tmp2 = "before" === result.position;
@@ -124,7 +107,7 @@ export default function createChannelStream(forceRender) {
     }
   });
   const item1 = items1.forEach((id) => {
-    let closure_0 = id;
+    closure_0 = id;
     let obj = id[id.length - 1];
     let hasMoreAfter = 0 === arg1;
     let merged = items1;
@@ -160,18 +143,17 @@ export default function createChannelStream(forceRender) {
           flag = true;
         }
       } else {
-        let obj2 = outer1_0(outer1_2[9]);
+        let obj2 = closure_1_0(closure_1_2[9]);
         flag = true;
       }
       function processHiddenMessageRow(merged) {
-        let obj;
         const iter = systemDM[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           obj = nextResult;
-          let tmp3 = outer1_18;
-          let tmp4 = outer2_6;
-          let tmp5 = outer1_18(nextResult) !== outer2_6.NOOP && merged.changeType === tmp4.NOOP;
+          let tmp3 = closure_1_18;
+          let tmp4 = closure_2_6;
+          let tmp5 = closure_1_18(nextResult) !== closure_2_6.NOOP && merged.changeType === tmp4.NOOP;
           if (tmp5) {
             merged.changeType = tmp4.UPDATE;
           }
@@ -180,8 +162,8 @@ export default function createChannelStream(forceRender) {
           let tmp6 = roleStyle;
           obj[0] = roleStyle.MESSAGE;
           obj[1] = tmp4.NOOP;
-          let tmp7 = outer1_8;
-          obj[2] = outer1_8;
+          let tmp7 = closure_1_8;
+          obj[2] = closure_1_8;
           let tmp8 = nextResult;
           obj[3] = obj;
           let tmp9 = systemDM;
@@ -194,9 +176,9 @@ export default function createChannelStream(forceRender) {
           let tmp12 = nextResult;
           let tmp13 = obj;
           obj[5] = obj === obj;
-          let tmp14 = outer1_5;
-          obj[6] = outer1_5;
-          let arr = content.unshift(obj);
+          let tmp14 = closure_1_5;
+          obj[6] = closure_1_5;
+          arr = content.unshift(obj);
           continue;
         }
         merged.revealed = obj.id === obj.revealedMessageId;
@@ -207,9 +189,9 @@ export default function createChannelStream(forceRender) {
       obj[0] = roleStyle;
       obj[1] = obj;
       obj[3] = [];
-      let arr = items;
+      arr = items;
       let tmp32 = items[items.length - 1];
-      if (obj.hasFlag(outer1_10.HIDDEN_SUSPENDED_USER)) {
+      if (obj.hasFlag(closure_1_10.HIDDEN_SUSPENDED_USER)) {
         if (null == tmp32) {
           merged = determineChangeType;
           obj = {};
@@ -228,27 +210,27 @@ export default function createChannelStream(forceRender) {
           merged = roleStyle;
         }
         merged = processHiddenMessageRow(tmp32);
-        merged = outer1_0;
-        merged = outer1_2;
-        const intl4 = outer1_0(outer1_2[8]).intl;
-        merged = outer1_0;
-        merged = outer1_2;
-        const obj1 = { count: null };
+        merged = closure_1_0;
+        merged = closure_1_2;
+        const intl4 = closure_1_0(closure_1_2[8]).intl;
+        merged = closure_1_0;
+        merged = closure_1_2;
+        obj1 = { count: null };
         obj1[0] = tmp32.content.length;
-        tmp32.text = intl4.formatToPlainString(outer1_0(outer1_2[8]).t.rHRovo, obj1);
+        tmp32.text = intl4.formatToPlainString(closure_1_0(closure_1_2[8]).t.rHRovo, obj1);
       } else if (obj.blocked) {
         if (null == tmp32) {
           merged = determineChangeType;
           let INSERT2 = determineChangeType(obj);
-          merged = outer1_6;
-          merged = INSERT2 === outer1_6.NOOP;
+          merged = closure_1_6;
+          merged = INSERT2 === closure_1_6.NOOP;
           if (merged) {
             merged = store;
             merged = store.getBlocked(obj);
           }
           if (merged) {
-            merged = outer1_6;
-            INSERT2 = outer1_6.INSERT;
+            merged = closure_1_6;
+            INSERT2 = closure_1_6.INSERT;
           }
           obj2 = {};
           merged = obj2;
@@ -265,27 +247,27 @@ export default function createChannelStream(forceRender) {
           merged = tmp32;
         }
         merged = processHiddenMessageRow(merged);
-        merged = outer1_0;
-        merged = outer1_2;
-        const intl3 = outer1_0(outer1_2[8]).intl;
-        merged = outer1_0;
-        merged = outer1_2;
+        merged = closure_1_0;
+        merged = closure_1_2;
+        const intl3 = closure_1_0(closure_1_2[8]).intl;
+        merged = closure_1_0;
+        merged = closure_1_2;
         obj3 = { count: null };
         obj3[0] = merged.content.length;
-        merged.text = intl3.formatToPlainString(outer1_0(outer1_2[8]).t["+FcYM/"], obj3);
+        merged.text = intl3.formatToPlainString(closure_1_0(closure_1_2[8]).t["+FcYM/"], obj3);
       } else if (obj.ignored) {
         if (null == tmp32) {
           merged = determineChangeType;
           let INSERT = determineChangeType(obj);
-          merged = outer1_6;
-          merged = INSERT === outer1_6.NOOP;
+          merged = closure_1_6;
+          merged = INSERT === closure_1_6.NOOP;
           if (merged) {
             merged = store;
             merged = store.getIgnored(obj);
           }
           if (merged) {
-            merged = outer1_6;
-            INSERT = outer1_6.INSERT;
+            merged = closure_1_6;
+            INSERT = closure_1_6.INSERT;
           }
           const obj4 = {};
           merged = obj4;
@@ -302,46 +284,46 @@ export default function createChannelStream(forceRender) {
           merged = tmp32;
         }
         merged = processHiddenMessageRow(merged);
-        merged = outer1_0;
-        merged = outer1_2;
-        const intl2 = outer1_0(outer1_2[8]).intl;
-        merged = outer1_0;
-        merged = outer1_2;
+        merged = closure_1_0;
+        merged = closure_1_2;
+        const intl2 = closure_1_0(closure_1_2[8]).intl;
+        merged = closure_1_0;
+        merged = closure_1_2;
         let obj5 = { count: null };
         obj5[0] = merged.content.length;
-        merged.text = intl2.formatToPlainString(outer1_0(outer1_2[8]).t["VFWjc+"], obj5);
+        merged.text = intl2.formatToPlainString(closure_1_0(closure_1_2[8]).t["VFWjc+"], obj5);
       } else {
         let iter = id[Symbol.iterator]();
         let nextResult = iter.next();
         while (iter !== undefined) {
           obj5 = nextResult;
           let tmp38 = nextResult !== obj;
-          let tmp39 = outer1_4;
+          let tmp39 = closure_1_4;
           let tmp40 = closure_0;
           let obj6 = closure_0;
-          let isEditingResult = outer1_4.isEditing(closure_0.id, nextResult.id);
+          let isEditingResult = closure_1_4.isEditing(closure_0.id, nextResult.id);
           if (!isEditingResult) {
-            let tmp42 = initialize;
+            let tmp42 = closure_3;
             let tmp43 = nextResult;
-            isEditingResult = initialize === obj5.id;
+            isEditingResult = closure_3 === obj5.id;
           }
-          let tmp45 = outer1_3;
+          let tmp45 = closure_1_3;
           let tmp46 = nextResult;
           let tmp44 = isEditingResult;
-          let pushFeedback = outer1_3.getPushFeedback(obj5.channel_id, obj5.id);
-          let tmp48 = outer1_0;
-          let tmp49 = outer1_2;
-          let obj7 = outer1_0(outer1_2[10]);
+          let pushFeedback = closure_1_3.getPushFeedback(obj5.channel_id, obj5.id);
+          let tmp48 = closure_1_0;
+          let tmp49 = closure_1_2;
+          let obj7 = closure_1_0(closure_1_2[10]);
           let tmp50 = tmp40;
-          let tmp53 = outer1_2;
+          let tmp53 = closure_1_2;
           let canReplyToMessageResult = obj7.canReplyToMessage(obj6, obj5);
           let tmp52 = messages;
           let tmp54 = closure_4;
-          let tmp55 = messages(outer1_2[11])(obj5, closure_4);
+          let tmp55 = messages(closure_1_2[11])(obj5, closure_4);
           if (tmp55) {
-            let tmp56 = outer1_0;
-            let tmp57 = outer1_2;
-            let obj8 = outer1_0(outer1_2[12]);
+            let tmp56 = closure_1_0;
+            let tmp57 = closure_1_2;
+            let obj8 = closure_1_0(closure_1_2[12]);
             let tmp58 = tmp40;
             tmp55 = !obj8.isNonModInLockedThread(obj6);
           }
@@ -424,8 +406,8 @@ export default function createChannelStream(forceRender) {
           let isForumPostResult = obj6.isForumPost();
           if (isForumPostResult) {
             let tmp95 = nextResult;
-            let tmp96 = outer1_2;
-            let tmp52Result = tmp52(outer1_2[5]);
+            let tmp96 = closure_1_2;
+            let tmp52Result = tmp52(closure_1_2[5]);
             let tmp97 = tmp40;
             isForumPostResult = obj5.id === tmp52Result.castChannelIdAsMessageId(obj6.id);
           }
@@ -493,13 +475,13 @@ export default function createChannelStream(forceRender) {
         if (!closure_11) {
           merged = determineChangeType;
           let NOOP = determineChangeType(obj);
-          merged = outer1_6;
-          if (NOOP === outer1_6.UPDATE) {
-            merged = outer1_6;
-            NOOP = outer1_6.NOOP;
+          merged = closure_1_6;
+          if (NOOP === closure_1_6.UPDATE) {
+            merged = closure_1_6;
+            NOOP = closure_1_6.NOOP;
           }
-          merged = outer1_0;
-          merged = outer1_2;
+          merged = closure_1_0;
+          merged = closure_1_2;
           merged = items;
           merged = items;
           const obj9 = { rowType: null, changeType: null, roleStyle: null, text: null };
@@ -509,9 +491,9 @@ export default function createChannelStream(forceRender) {
           merged = roleStyle;
           merged = roleStyle;
           obj9[2] = roleStyle;
-          obj9[3] = outer1_0(outer1_2[9]).dateFormat(obj.timestamp, "LL");
+          obj9[3] = closure_1_0(closure_1_2[9]).dateFormat(obj.timestamp, "LL");
           merged = items.push(obj9);
-          const obj21 = outer1_0(outer1_2[9]);
+          const obj21 = closure_1_0(closure_1_2[9]);
         }
       }
       if (tmp19) {
@@ -530,14 +512,14 @@ export default function createChannelStream(forceRender) {
         merged = roleStyle;
         merged = roleStyle;
         obj10[2] = roleStyle;
-        merged = outer1_0;
-        merged = outer1_2;
-        const intl5 = outer1_0(outer1_2[8]).intl;
-        merged = outer1_0;
-        merged = outer1_2;
-        obj10[3] = intl5.string(outer1_0(outer1_2[8]).t.q7hm3m).toUpperCase();
+        merged = closure_1_0;
+        merged = closure_1_2;
+        const intl5 = closure_1_0(closure_1_2[8]).intl;
+        merged = closure_1_0;
+        merged = closure_1_2;
+        obj10[3] = intl5.string(closure_1_0(closure_1_2[8]).t.q7hm3m).toUpperCase();
         merged = items.push(obj10);
-        const str2 = intl5.string(outer1_0(outer1_2[8]).t.q7hm3m);
+        const str2 = intl5.string(closure_1_0(closure_1_2[8]).t.q7hm3m);
       }
       if (tmp17) {
         merged = closure_11;
@@ -547,34 +529,34 @@ export default function createChannelStream(forceRender) {
       if (tmp17) {
         merged = items;
         let obj11 = { rowType: null, changeType: null, roleStyle: null, isLoading: null, text: null };
-        merged = outer1_7;
-        obj11[0] = outer1_7.LOAD_BEFORE;
+        merged = closure_1_7;
+        obj11[0] = closure_1_7.LOAD_BEFORE;
         merged = forceRender;
-        merged = outer1_6;
+        merged = closure_1_6;
         obj11[1] = forceRender ? merged.UPDATE : merged.NOOP;
         merged = roleStyle;
         merged = roleStyle;
         obj11[2] = roleStyle;
         merged = obj;
         obj11[3] = obj.loadingMore;
-        merged = outer1_0;
-        merged = outer1_2;
+        merged = closure_1_0;
+        merged = closure_1_2;
         merged = items;
-        const intl6 = outer1_0(outer1_2[8]).intl;
-        merged = outer1_0;
-        merged = outer1_2;
-        obj11[4] = intl6.string(outer1_0(outer1_2[8]).t.XBlaiC);
+        const intl6 = closure_1_0(closure_1_2[8]).intl;
+        merged = closure_1_0;
+        merged = closure_1_2;
+        obj11[4] = intl6.string(closure_1_0(closure_1_2[8]).t.XBlaiC);
         obj11 = items.push(obj11);
       }
     } else {
       obj12 = { rowType: null, changeType: null, roleStyle: null, isLoading: null, text: null };
-      obj12[0] = outer1_7.LOAD_AFTER;
-      let intl = outer1_6;
+      obj12[0] = closure_1_7.LOAD_AFTER;
+      let intl = closure_1_6;
       obj12[1] = forceRender ? intl.UPDATE : intl.NOOP;
       obj12[2] = roleStyle;
       obj12[3] = obj.loadingMore;
-      intl = outer1_0(outer1_2[8]).intl;
-      obj12[4] = intl.string(outer1_0(outer1_2[8]).t.XBlaiC);
+      intl = closure_1_0(closure_1_2[8]).intl;
+      obj12[4] = intl.string(closure_1_0(closure_1_2[8]).t.XBlaiC);
       obj12 = items.push(obj12);
     }
   });

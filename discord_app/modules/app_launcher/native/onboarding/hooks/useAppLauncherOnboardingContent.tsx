@@ -1,20 +1,19 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx
-import _slicedToArray from "_slicedToArray";
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { DismissibleContentGroupName as closure_6 } from "ContentDismissActionType";
-import { result } from "useCanShowAppLauncherOnboarding.tsx";
+import resultDefault from "result" /* 11216 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "handleUserSettingsProtoStoreChange" /* 8449 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import { DismissibleContentGroupName as closure_6 } from "ContentDismissActionType" /* 1388 */;
 
 const require = arg1;
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useAppLauncherOnboardingContent.tsx");
 
 export default function useAppLauncherOnboardingContent(channelId) {
   channelId = channelId.channelId;
   let items = [];
-  let obj = { channel: null };
-  const items1 = [ensureGuildLoaded];
-  obj[0] = channelId(589).useStateFromStores(items1, () => outer1_5.getChannel(channelId));
-  const tmp3 = result({ channelId });
+  let obj = { channel: channelId(589).useStateFromStores(items1, () => closure_1_5.getChannel(channelId)) };
+  items1 = [closure_5];
+  const tmp3 = resultDefault({ channelId });
   if (tmp3.canShowBotsBanner) {
     items.push(tmp(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_BOTS_BANNER);
   }
@@ -28,7 +27,7 @@ export default function useAppLauncherOnboardingContent(channelId) {
       const result1 = channelId(4196).useIsDismissibleContentDismissed_UNSAFE(channelId(1377).DismissibleContent.APP_LAUNCHER_ONBOARDING_APPS_BANNER);
       const obj2 = channelId(4196);
       const tmp = channelId;
-      const items = [handleUserSettingsProtoStoreChange];
+      const items = [closure_4];
       const stateFromStores = channelId(589).useStateFromStores(items, () => applicationFrecencyWithoutLoadingLatest.getApplicationFrecencyWithoutLoadingLatest());
       let guild_id;
       if (channel != null) {

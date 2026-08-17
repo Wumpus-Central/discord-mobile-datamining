@@ -1,5 +1,7 @@
 // discord_app/modules/media_uploads/getUploaderFileSizeMetrics.tsx
-const result = require("set").fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/media_uploads/getUploaderFileSizeMetrics.tsx");
 
 export const getUploaderChannelId = function getUploaderChannelId(file) {
   const items = file.items;

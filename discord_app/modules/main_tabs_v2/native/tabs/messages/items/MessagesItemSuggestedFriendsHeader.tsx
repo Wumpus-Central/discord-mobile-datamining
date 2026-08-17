@@ -1,25 +1,21 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const sum = require("Text").TextStyleSheet["text-md/semibold"].lineHeight + require("Themes").space.PX_24;
+const sum = require("Text").TextStyleSheet["text-md/semibold"].lineHeight + ThemesDefault.space.PX_24;
 let obj = { headerContainer: { height: sum, justifyContent: "center", overflow: "hidden" }, stickyOverlay: null, headerText: null };
 obj = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.backgroundColor = require("Themes").colors.PANEL_BG;
+obj.backgroundColor = ThemesDefault.colors.PANEL_BG;
 obj[1] = obj;
-createCacheKey = { marginHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 obj[2] = createCacheKey;
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_9 = { code: "function MessagesItemSuggestedFriendsHeaderTsx1(){const{stickyAt,scrollPosition}=this.__closure;return stickyAt!=null&&scrollPosition.get()>=stickyAt;}" };
@@ -46,7 +42,7 @@ const memoResult = importAllResult.memo(function MessagesItemSuggestedFriendsHea
   let tmp8Result = null;
   if (tmp6) {
     obj = { children: null };
-    const obj1 = { absolute: true, wide: true, componentStyles: null, tall: true, mix: true };
+    obj1 = { absolute: true, wide: true, componentStyles: null, tall: true, mix: true };
     obj1[2] = tmp7;
     const items1 = [callback(scrollPosition(tmp3[8]), obj1), ];
     const obj2 = { style: null };
@@ -63,7 +59,7 @@ const memoResult = importAllResult.memo(function MessagesItemSuggestedFriendsHea
   obj[2] = items2;
   return closure_7(closure_4, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriendsHeader.tsx");
 
 export default memoResult;
 export const MESSAGES_ITEM_SUGGESTED_FRIENDS_HEADER_HEIGHT = sum;

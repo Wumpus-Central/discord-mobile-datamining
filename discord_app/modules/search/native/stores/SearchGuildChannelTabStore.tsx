@@ -1,14 +1,16 @@
 // discord_app/modules/search/native/stores/SearchGuildChannelTabStore.tsx
-import comparator from "comparator";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { Store } from "initialize";
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { NOOP } from "../../../../utils/AutocompleteUtils.tsx";
+import set from "set" /* 2 */;
+import apply from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import NOOP from "NOOP" /* 6714 */;
+import NOOPDefault from "NOOP" /* 6714 */;
+import HeaderRecord from "HeaderRecord" /* 6773 */;
+import comparator from "comparator" /* 1980 */;
+import closure_5 from "generateOldThreadCutoff" /* 4772 */;
 
-let c3;
-let c4;
 ({ GUILD_VOCAL_CHANNELS_KEY: c3, GUILD_SELECTABLE_CHANNELS_KEY: c4 } = comparator);
-require("HeaderRecord").AutocompleterResultTypes;
+HeaderRecord.AutocompleterResultTypes;
 let closure_7 = [];
 let closure_8 = [];
 class GuildChannelSearchManager {
@@ -24,7 +26,7 @@ prototype["search"] = function search(query, guildId) {
   const self = this;
   let obj = NOOP;
   const boosterMap = obj.getBoosterMap(AutocompleterResultTypes.TEXT_CHANNEL);
-  let obj1 = NOOP;
+  obj1 = NOOP;
   obj = {
     query,
     guildId,
@@ -41,19 +43,19 @@ prototype["search"] = function search(query, guildId) {
   const merged = Object.assign(obj);
   obj.type = closure_4;
   obj.boosters = boosterMap;
-  const obj4 = NOOP;
-  const queryChannelsResult = NOOP.queryChannels(obj);
+  const obj4 = NOOPDefault;
+  const queryChannelsResult = NOOPDefault.queryChannels(obj);
   obj1 = {};
   const merged1 = Object.assign(obj);
   obj1.type = closure_3;
   obj1.boosters = boosterMap1;
-  const obj6 = NOOP;
-  this.voiceChannels = NOOP.queryChannels(obj1).map((channel) => ({ channel: channel.record }));
-  const queryChannelsResult1 = NOOP.queryChannels(obj1);
+  const obj6 = NOOPDefault;
+  this.voiceChannels = NOOPDefault.queryChannels(obj1).map((channel) => ({ channel: channel.record }));
+  const queryChannelsResult1 = NOOPDefault.queryChannels(obj1);
   const obj8 = apply;
   const mapped = apply.chain(queryChannelsResult).map((channel) => {
     const obj = { channel: channel.record, lastMessageId: null };
-    let lastMessageId = generateOldThreadCutoff.lastMessageId(channel.record.id);
+    let lastMessageId = closure_5.lastMessageId(channel.record.id);
     if (lastMessageId == null) {
       lastMessageId = channel.record.lastMessageId;
     }
@@ -78,11 +80,12 @@ prototype["getCount"] = function getCount() {
   return this.count;
 };
 const map = new Map();
+const Store = initializeDefault.Store;
 class SearchGuildChannelTabStore extends Store {
 }
 const prototype2 = SearchGuildChannelTabStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(generateOldThreadCutoff);
+  this.waitFor(closure_5);
 };
 prototype2["getTextChannels"] = function getTextChannels(arg0) {
   const value = map.get(arg0);
@@ -118,10 +121,8 @@ prototype2["getCount"] = function getCount(arg0) {
   return count;
 };
 SearchGuildChannelTabStore.displayName = "SearchGuildChannelTabStore";
-const searchGuildChannelTabStore = new SearchGuildChannelTabStore(require("dispatcher"), {
+const searchGuildChannelTabStore = new SearchGuildChannelTabStore(dispatcherDefault, {
   SEARCH_GUILD_CHANNEL_TAB_SEARCH: function handleSearchGuildChannelTabSearch(id) {
-    let guildId;
-    let searchQueryString;
     id = id.id;
     let obj = map;
     ({ guildId, searchQueryString } = id);
@@ -143,6 +144,6 @@ const searchGuildChannelTabStore = new SearchGuildChannelTabStore(require("dispa
     return map.delete(id.id);
   }
 });
-let result = require("HeaderRecord").fileFinishedImporting("modules/search/native/stores/SearchGuildChannelTabStore.tsx");
+let result = set.fileFinishedImporting("modules/search/native/stores/SearchGuildChannelTabStore.tsx");
 
 export default searchGuildChannelTabStore;

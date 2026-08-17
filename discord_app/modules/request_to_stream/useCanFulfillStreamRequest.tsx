@@ -1,37 +1,35 @@
 // discord_app/modules/request_to_stream/useCanFulfillStreamRequest.tsx
-import initialize from "initialize";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import sortActivity from "sortActivity";
-import createRTCConnection from "createRTCConnection";
-import ME from "ME";
+import closure_2 from "initialize" /* 4504 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "sortActivity" /* 4559 */;
+import closure_9 from "createRTCConnection" /* 4539 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 function canFulfillStreamRequest(channel_id, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = arg2;
+  obj = arg2;
   if (arg2 === undefined) {
-    obj = reset;
+    obj = closure_3;
   }
   let obj2 = arg3;
   if (arg3 === undefined) {
-    obj2 = ensureGuildLoaded;
+    obj2 = closure_5;
   }
   let obj3 = arg4;
   if (arg4 === undefined) {
-    obj3 = sortActivity;
+    obj3 = closure_8;
   }
   let obj4 = arg6;
   if (arg6 === undefined) {
-    obj4 = createRTCConnection;
+    obj4 = closure_9;
   }
   let id;
   let DESKTOP;
@@ -86,7 +84,7 @@ function canFulfillStreamRequest(channel_id, arg1) {
 }
 ({ ActivityGamePlatforms: c10, ActivityTypes: unpackModuleId } = ME);
 let obj = { NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL", NOT_RUNNING_GAME: "NOT_RUNNING_GAME", ALREADY_STREAMING: "ALREADY_STREAMING", NO_PERMISSION: "NO_PERMISSION", PENDING_REQUEST: "PENDING_REQUEST", EXPIRED: "EXPIRED" };
-const result = require("fetchFingerprint").fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/request_to_stream/useCanFulfillStreamRequest.tsx");
 
 export default function useCanFulfillStreamRequest(arg0) {
   const _require = arg0;
@@ -94,8 +92,8 @@ export default function useCanFulfillStreamRequest(arg0) {
   if (arg1 === undefined) {
     flag = false;
   }
-  const items = [reset, ensureGuildLoaded, sortActivity, initialize, createRTCConnection, createGuildRecordFromRust, getUncachedChannelPermissions];
-  return _require(flag[11]).useStateFromStores(items, () => outer1_13(closure_0, flag, outer1_3, outer1_5, outer1_8, outer1_2, outer1_9, outer1_6, outer1_7));
+  const items = [closure_3, closure_5, closure_8, closure_2, closure_9, closure_6, closure_7];
+  return _require(flag[11]).useStateFromStores(items, () => closure_1_13(closure_0, flag, closure_1_3, closure_1_5, closure_1_8, closure_1_2, closure_1_9, closure_1_6, closure_1_7));
 };
 export const StreamRequestUnfulfillableReason = obj;
 export { canFulfillStreamRequest };

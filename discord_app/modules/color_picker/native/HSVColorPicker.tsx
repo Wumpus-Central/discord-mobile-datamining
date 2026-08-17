@@ -1,42 +1,30 @@
 // discord_app/modules/color_picker/native/HSVColorPicker.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { ColorBox } from "SaturationValueColorPicker.tsx";
+import noopAll from "noop" /* 19 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import ColorBoxDefault from "ColorBox" /* 14014 */;
+import HuePickerDefault from "HuePicker" /* 14015 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ hsvColorPicker: { alignItems: "center" } });
-const result = require("jsxProd").fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/color_picker/native/HSVColorPicker.tsx");
 
 export default function HSVColorPicker(arg0) {
-  let hue;
-  let hueColorBarInnerStyle;
-  let huePickerStyle;
-  let hueSliderStyle;
-  let onPanFinalize;
-  let onPanUpdate;
-  let saturation;
-  let saturationValueColorBoxInnerStyle;
-  let saturationValueColorBoxStyle;
-  let saturationValuePickerStyle;
-  let saturationValueSelectorStyle;
-  let value;
   ({ hue, saturation, value, onPanUpdate, onPanFinalize } = arg0);
   ({ saturationValuePickerStyle, saturationValueColorBoxStyle, saturationValueColorBoxInnerStyle, saturationValueSelectorStyle, huePickerStyle, hueColorBarInnerStyle, hueSliderStyle } = arg0);
-  let obj = ReanimatedRexport;
+  let obj = _mod4115;
   const sharedValue = obj.useSharedValue(0);
   const tmp = callback();
-  const sharedValue1 = ReanimatedRexport.useSharedValue(1);
-  const obj2 = ReanimatedRexport;
+  const sharedValue1 = _mod4115.useSharedValue(1);
+  const obj2 = _mod4115;
   obj = { style: tmp.hsvColorPicker, children: null };
-  const sharedValue2 = ReanimatedRexport.useSharedValue(1);
+  const sharedValue2 = _mod4115.useSharedValue(1);
   let tmp11 = hue;
-  const obj3 = ReanimatedRexport;
+  const obj3 = _mod4115;
   const tmp6 = closure_5;
   const tmp7 = View;
   const tmp9 = importDefault;
@@ -58,12 +46,12 @@ export default function HSVColorPicker(arg0) {
   obj[6] = saturationValueSelectorStyle;
   obj[7] = onPanUpdate;
   obj[8] = onPanFinalize;
-  const items = [closure_4(ColorBox, obj), ];
-  const tmp10 = ColorBox;
+  const items = [closure_4(ColorBoxDefault, obj), ];
+  const tmp10 = ColorBoxDefault;
   if (hue == null) {
     hue = sharedValue;
   }
-  items[1] = closure_4(tmp9(14015), { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
+  items[1] = closure_4(HuePickerDefault, { hue, style: huePickerStyle, colorBarInnerStyle: hueColorBarInnerStyle, sliderStyle: hueSliderStyle, onPanUpdate, onPanFinalize });
   obj[1] = items;
   return tmp6(tmp7, obj);
 };

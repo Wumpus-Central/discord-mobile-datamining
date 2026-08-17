@@ -1,32 +1,28 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBottomButton.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { messagesProxy } from "../../../report_to_mod/ReportToMod.messages.js";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import messagesProxyDefault from "messagesProxy" /* 2435 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flex: 0, alignSelf: "stretch", paddingBottom: 12 }, paddingHorizontal: { paddingHorizontal: 16 }, divider: null, descriptionText: null, errorText: null };
-createCacheKey = { height: 1, alignSelf: "stretch", backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginBottom: 16 };
+createCacheKey = { height: 1, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginBottom: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { lineHeight: 16, textAlign: "center", marginBottom: 12 };
-createCacheKey[4] = { color: require("Themes").unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
-const result = require("sum").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
+createCacheKey[4] = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, lineHeight: 16, fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, textAlign: "center", marginTop: 12 };
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBottomButton.tsx");
 
 export default function InAppReportsBottomButton(button) {
-  let disabled;
-  let hasError;
-  let importDefault;
-  let isModeratorReport;
   button = button.button;
   ({ onPress: importDefault, isModeratorReport } = button);
   ({ disabled, hasError } = button);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   if (null == button) {
     return null;
   } else {
@@ -35,7 +31,7 @@ export default function InAppReportsBottomButton(button) {
       const intl2 = tmp17(1236).intl;
       const string = intl2.string;
       if (isModeratorReport) {
-        let stringResult = string(messagesProxy.ZUyreS);
+        let stringResult = string(messagesProxyDefault.ZUyreS);
       } else {
         const intl3 = tmp17(1236).intl;
         const stringResult1 = string(tmp17(1236).t["G+vU89"]);
@@ -56,7 +52,7 @@ export default function InAppReportsBottomButton(button) {
       const intl4 = tmp17(1236).intl;
       const string2 = intl4.string;
       if (isModeratorReport) {
-        let string2Result = string2(messagesProxy.psKFdJ);
+        let string2Result = string2(messagesProxyDefault.psKFdJ);
       } else {
         string2Result = string2(tmp17(1236).t.h6D8Vy);
       }
@@ -69,7 +65,7 @@ export default function InAppReportsBottomButton(button) {
       obj[0] = tmp.paddingHorizontal;
       let tmp14Result = null;
       if (null != tmp3) {
-        const obj1 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
+        obj1 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };
         obj1[0] = tmp.descriptionText;
         obj1[3] = tmp3;
         tmp14Result = tmp14(tmp17(4734).Text, obj1);

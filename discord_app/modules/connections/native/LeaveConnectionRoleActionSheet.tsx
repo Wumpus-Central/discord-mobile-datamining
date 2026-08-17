@@ -1,19 +1,18 @@
 // discord_app/modules/connections/native/LeaveConnectionRoleActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Background } from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import Background from "Background" /* 6950 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { padding: 12 }, marginTop: { marginTop: 8 }, button: { marginTop: 8, marginBottom: 16 } });
-const result = require("jsxProd").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/native/LeaveConnectionRoleActionSheet.tsx");
 
 export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const tmp = callback3();
@@ -23,7 +22,7 @@ export default function LeaveConnectionRoleActionSheet(onLeaveRolePressed) {
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.vytvJF);
   const items = [callback(Text.Text, obj), , ];
-  const obj1 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
+  obj1 = { style: tmp.marginTop, variant: "text-md/normal", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[3] = intl2.string(getSystemLocale.t.caJwb5);
   items[1] = callback(Text.Text, obj1);

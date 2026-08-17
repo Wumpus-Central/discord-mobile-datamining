@@ -1,21 +1,21 @@
 // discord_app/modules/stage_channels/useMyCurrentStageChannelRole.tsx
-import fetchFingerprint from "fetchFingerprint";
-import handleConnectionOpen from "handleConnectionOpen";
-import buildStageChannelUserRoles from "buildStageChannelUserRoles";
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
+import closure_4 from "buildStageChannelUserRoles" /* 4990 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("buildStageChannelUserRoles").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/useMyCurrentStageChannelRole.tsx");
 
 export default function useMyCurrentStageChannelRole(arg0) {
   const _require = arg0;
-  const items = [fetchFingerprint, handleConnectionOpen, buildStageChannelUserRoles];
+  const items = [closure_2, closure_3, closure_4];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
-    const id = outer1_2.getId();
+    const id = closure_1_2.getId();
     let permissionsForUser = null;
-    if (outer1_3.getVoiceChannelId() === closure_0) {
-      permissionsForUser = outer1_4.getPermissionsForUser(id, tmp2);
+    if (closure_1_3.getVoiceChannelId() === closure_0) {
+      permissionsForUser = closure_1_4.getPermissionsForUser(id, tmp2);
     }
     return permissionsForUser;
   }, items1);

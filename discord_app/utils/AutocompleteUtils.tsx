@@ -1,66 +1,54 @@
 // discord_app/utils/AutocompleteUtils.tsx
-import fuzzysearch from "fuzzysearch";
-import fromType from "fromType";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
-import handleStickersStoreUpdate from "handleStickersStoreUpdate";
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import rebuild from "rebuild";
-import storeThread from "storeThread";
-import createChannelRecord from "createChannelRecord";
-import { isEveryoneRole } from "GuildRoleRecordTypeTag";
-import createdAt from "createdAt";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleChannelSelect from "handleChannelSelect";
-import comparator from "comparator";
-import closure_26 from "comparator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import reinjectEphemerals from "reinjectEphemerals";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_35 from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import addSku from "addSku";
-import ME from "ME";
-import { StaticChannelId } from "set";
-import areArraysShallowlyEqual from "areArraysShallowlyEqual";
-import { apply } from "../../_runtime/00012_apply.js";
-import { fuzzysearch } from "../../_runtime/06775_fuzzysearch.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { sortByMatchScore } from "../modules/autocompleter/sortByMatchScore.tsx";
-import { compareChannelsByScoreAndPosition } from "../modules/channel_text_area/compareChannelsByScoreAndPosition.tsx";
-import { computeChannelName } from "../modules/channel/useChannelName.tsx";
-import { useCanSeeOnboardingHome } from "../modules/guild_onboarding_home/OnboardingHomeUtils.tsx";
-import { useGuildOnboardingAvailable } from "../modules/guild_onboarding/useGuildOnboardingAvailable.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import applyDefault from "apply" /* 12 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import updateUserGuildSettings from "updateUserGuildSettings" /* 1374 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import setDefault from "set" /* 4362 */;
+import StickerFormat from "StickerFormat" /* 4964 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import useCanSeeOnboardingHome from "useCanSeeOnboardingHome" /* 5283 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6775 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 6776 */;
+import getGuildNameSuggestionDefault from "getGuildNameSuggestion" /* 6777 */;
+import useGuildOnboardingAvailable from "useGuildOnboardingAvailable" /* 7296 */;
+import compareChannelsByScoreAndPositionDefault from "compareChannelsByScoreAndPosition" /* 7297 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import fromType from "fromType" /* 6715 */;
+import closure_7 from "getEmojiToGroupId" /* 6727 */;
+import closure_8 from "handleSoundCreateOrUpdate" /* 4780 */;
+import closure_9 from "handleStickersStoreUpdate" /* 6768 */;
+import closure_10 from "loadSavedGuildStickers" /* 6769 */;
+import closure_11 from "rebuild" /* 5251 */;
+import closure_12 from "storeThread" /* 4023 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_21 from "createdAt" /* 1930 */;
+import closure_22 from "ensureGuildLoaded" /* 1391 */;
+import closure_23 from "handleChannelSelect" /* 6772 */;
+import comparator from "comparator" /* 1980 */;
+import closure_26 from "comparator" /* 1980 */;
+import closure_27 from "trackCommunicationDisabled" /* 1990 */;
+import closure_28 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_29 from "createGuildRecordFromRust" /* 1910 */;
+import closure_30 from "reinjectEphemerals" /* 4994 */;
+import closure_31 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_32 from "sortActivity" /* 4559 */;
+import closure_33 from "markAllUserIdListsStale" /* 4030 */;
+import closure_34 from "handleConnectionOpen" /* 1979 */;
+import closure_35 from "handleConnectionOpen" /* 4197 */;
+import closure_36 from "mergeGuildAvatar" /* 1922 */;
+import closure_37 from "addSku" /* 4521 */;
+import ME from "ME" /* 676 */;
+import { StaticChannelId } from "set" /* 1398 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
 import { trackSearchStart } from "../modules/soundboard/searchSounds.tsx";
 import { _fetchDefaultSoundsFromApi2 } from "../modules/soundboard/SoundboardActionCreators.tsx";
-import { StickerFormat } from "../modules/stickers/StickersTypes.tsx";
 import { updateUserGuildSettings } from "../modules/user_settings/UserSettingsProtoActionCreators.tsx";
-import { isDiscordFrontendDevelopment } from "GlobalUtils.tsx";
-import { getGuildNameSuggestion } from "GuildUtils.tsx";
-import { set } from "RegexUtils.tsx";
-import { isNullOrEmpty } from "StringUtils.tsx";
-import { nameFromUser } from "UserUtils.tsx";
 
-let ChannelTypes;
-let c5;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_38;
-let closure_39;
-let closure_41;
-let closure_42;
-let closure_6;
-let map1;
-const require = arg1;
+require = arg1;
 function NOOP() {
   return true;
 }
@@ -77,9 +65,6 @@ function calculateScore() {
   return result * num2;
 }
 function getMatchValue(toLocaleLowerCaseResult1, nextResult, flag) {
-  let containQuery;
-  let exactQuery;
-  let queryLower;
   ({ exactQuery, containQuery, queryLower } = nextResult);
   if (flag === undefined) {
     flag = true;
@@ -94,24 +79,24 @@ function getMatchValue(toLocaleLowerCaseResult1, nextResult, flag) {
     } else if (containQuery.test(toLocaleLowerCaseResult1)) {
       return 5;
     } else if ((function multiTokenMatch(queryLower, toLocaleLowerCaseResult1) {
-      let closure_0 = toLocaleLowerCaseResult1;
+      closure_0 = toLocaleLowerCaseResult1;
       const parts = queryLower.split(/(?:,| )+/);
       return parts.every((arg0) => {
-        const regExp = new RegExp(outer1_1(outer1_3[31]).escape(arg0), "i");
+        const regExp = new RegExp(closure_1_1(closure_1_3[31]).escape(arg0), "i");
         return regExp.test(closure_0);
       });
     })(queryLower, toLocaleLowerCaseResult1)) {
       return 3;
     } else {
       if (flag) {
-        if (fuzzysearch(queryLower, toLocaleLowerCaseResult1)) {
+        if (fuzzysearchDefault(queryLower, toLocaleLowerCaseResult1)) {
           return 1;
         }
       }
       return 0;
     }
   } catch (tmp4) {
-    tmp6.error(tmp4);
+    logger.error(tmp4);
   }
 }
 function isValidGuildMember(joinedAt) {
@@ -122,32 +107,23 @@ function isValidGuildMember(joinedAt) {
   return null != joinedAt && !joinedAt.isPending;
 }
 function queryMemberList(arg0) {
-  let boosters;
-  let filter;
-  let limit;
-  let members;
-  let query;
-  let str6;
-  let str7;
-  let str8;
-  let str9;
   ({ query, members, limit, filter, boosters } = arg0);
   const users = authStore2.getUsers();
   guildId = guildId.getGuildId();
   const toLocaleLowerCaseResult = query.toLocaleLowerCase();
   let obj = isNullOrEmpty;
   const normalizeResult = obj.normalize(toLocaleLowerCaseResult);
-  const items = [];
+  items = [];
   const items1 = [];
   let num = 0;
   let num2 = 0;
   if (0 < members.length) {
     do {
       let tmp5 = members[num2];
-      let tmp6 = createdAt;
+      let tmp6 = closure_21;
       let tmp7 = num;
       let tmp8 = num2;
-      if (tmp5 instanceof createdAt) {
+      if (tmp5 instanceof closure_21) {
         let tmp10 = store2;
         let nick = store2.getNick(guildId, tmp5.id);
         let toLocaleLowerCaseResult1;
@@ -165,7 +141,7 @@ function queryMemberList(arg0) {
       }
       let tmp12 = importDefault;
       let tmp13 = dependencyMap;
-      let obj3 = nameFromUser;
+      let obj3 = nameFromUserDefault;
       let globalName = obj3.getGlobalName(tmp9);
       let tmp14 = tmp9;
       if (globalName != null) {
@@ -332,7 +308,7 @@ function queryMemberList(arg0) {
               }
             }
           }
-          let obj1 = { type: null, record: null, score: null, comparator: null, sortable: null };
+          obj1 = { type: null, record: null, score: null, comparator: null, sortable: null };
           let tmp42 = AutocompleterResultTypes;
           obj1[0] = AutocompleterResultTypes.USER;
           obj1[1] = tmp9;
@@ -373,10 +349,10 @@ function queryMemberList(arg0) {
       let tmp4 = tmp13;
     } while (num2 < length);
   }
-  const sorted = items.sort(sortByMatchScore);
+  const sorted = items.sort(sortByMatchScoreDefault);
   let combined = items;
   if (items.length < limit) {
-    const sorted1 = items1.sort(sortByMatchScore);
+    const sorted1 = items1.sort(sortByMatchScoreDefault);
     const _Math = Math;
     combined = items.concat(items1.slice(0, Math.max(0, limit - items.length)));
   }
@@ -473,10 +449,10 @@ const GUILD_VOCAL_CHANNELS_KEY = comparator.GUILD_VOCAL_CHANNELS_KEY;
 ({ Permissions: closure_38, GuildFeatures: closure_39, ChannelTypes } = ME);
 ({ SKUTypes: closure_41, MAX_AUTOCOMPLETE_RESULTS: closure_42 } = ME);
 require("HeaderRecord").AutocompleterResultTypes;
-let closure_45 = new require("handleSoundCreateOrUpdate")("AutocompleteUtils");
+let closure_45 = new timestampDefault("AutocompleteUtils");
 let c46 = 10;
 let tmp7 = /(\t|\s)/;
-let closure_48 = tmp7;
+const re48 = tmp7;
 let closure_49 = [];
 const MENTION_EVERYONE = require("map").default.MENTION_EVERYONE;
 const MENTION_HERE = require("map").default.MENTION_HERE;
@@ -563,7 +539,7 @@ prototype["build"] = function build(arg0) {
   frequentlyWithoutFetchingLatest = found[Symbol.iterator]();
 };
 let areArraysShallowlyEqual = Object.create(AutocompleteBoostersCache.prototype);
-let tmp6 = new require("handleSoundCreateOrUpdate")("AutocompleteUtils");
+let tmp6 = new timestampDefault("AutocompleteUtils");
 areArraysShallowlyEqual[3] = new Map();
 let items = [GUILD_SELECTABLE_CHANNELS_KEY, GUILD_VOCAL_CHANNELS_KEY, ChannelTypes.GUILD_CATEGORY];
 let closure_66 = areArraysShallowlyEqual.cachedFunction(() => {
@@ -576,7 +552,7 @@ let closure_66 = areArraysShallowlyEqual.cachedFunction(() => {
   const item = recipientsById(12)(authStore.getMutablePrivateChannels()).values().value().forEach((isDM) => {
     if (isDM.isDM()) {
       const recipientId = isDM.getRecipientId();
-      const user = outer1_36.getUser(recipientId);
+      const user = closure_1_36.getUser(recipientId);
       let hasItem = null == recipientId || null == user;
       if (!hasItem) {
         hasItem = channelsByRecipientId.has(recipientId);
@@ -585,7 +561,7 @@ let closure_66 = areArraysShallowlyEqual.cachedFunction(() => {
         const result = channelsByRecipientId.set(recipientId, isDM);
         const obj = { userId: null, nick: null };
         obj[0] = recipientId;
-        obj[1] = outer1_33.getNickname(recipientId);
+        obj[1] = closure_1_33.getNickname(recipientId);
         recipients.push(obj);
         const result1 = recipientsById.set(recipientId, user);
       }
@@ -621,8 +597,6 @@ areArraysShallowlyEqual = {
     return queryMemberList(obj);
   },
   queryChannelUsers(request) {
-    let limit;
-    let query;
     ({ query, limit } = request);
     if (limit === undefined) {
       limit = 10;
@@ -684,9 +658,9 @@ areArraysShallowlyEqual = {
               if (null != id) {
                 if (null != channel2) {
                   const messages = store5.getMessages(id);
-                  const tmp16 = apply;
-                  const reversed = apply(messages.toArray()).reverse();
-                  const tmp16Result = apply(messages.toArray());
+                  const tmp16 = applyDefault;
+                  const reversed = applyDefault(messages.toArray()).reverse();
+                  const tmp16Result = applyDefault(messages.toArray());
                   const mapped1 = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
                   const found = mapped1.filter((isNonUserBot) => {
                     if (null == isNonUserBot) {
@@ -697,7 +671,7 @@ areArraysShallowlyEqual = {
                       const guildId = channel.getGuildId();
                       let tmp3 = null == guildId;
                       if (!tmp3) {
-                        const member = outer1_27.getMember(guildId, isNonUserBot.id);
+                        const member = closure_1_27.getMember(guildId, isNonUserBot.id);
                         let joinedAt;
                         if (member != null) {
                           joinedAt = member.joinedAt;
@@ -712,22 +686,22 @@ areArraysShallowlyEqual = {
                     const guildId = channel.getGuildId();
                     let member = null;
                     if (null != guildId) {
-                      member = outer1_27.getMember(guildId, id.id);
+                      member = closure_1_27.getMember(guildId, id.id);
                     }
-                    const obj = { type: outer1_43.USER, record: id, score: 0, comparator: null };
+                    const obj = { type: closure_1_43.USER, record: id, score: 0, comparator: null };
                     let nick;
                     if (member != null) {
                       nick = member.nick;
                     }
                     if (nick == null) {
-                      nick = outer1_1(outer1_3[34]).getName(id);
-                      const obj2 = outer1_1(outer1_3[34]);
+                      nick = closure_1_1(closure_1_3[34]).getName(id);
+                      const obj2 = closure_1_1(closure_1_3[34]);
                     }
                     obj[3] = nick;
                     return obj;
                   });
                   const uniqByResult = reversed.uniqBy((author) => author.author.id);
-                  let items = mapped2.take(limit).value();
+                  items = mapped2.take(limit).value();
                   const iter = mapped2.take(limit);
                 }
                 if (items.length > 0) {
@@ -741,9 +715,9 @@ areArraysShallowlyEqual = {
           const found1 = members.filter(isValidGuildMember);
           tmp6 = found1;
           if (flag) {
-            const members1 = getGuildNameSuggestion.requestMembers(channel1.guild_id, query, limit);
+            const members1 = getGuildNameSuggestionDefault.requestMembers(channel1.guild_id, query, limit);
             tmp6 = found1;
-            const obj3 = getGuildNameSuggestion;
+            const obj3 = getGuildNameSuggestionDefault;
           }
         }
         obj = { query: null, members: null, limit: null, filter: null, allowSnowflake: null };
@@ -753,9 +727,9 @@ areArraysShallowlyEqual = {
         obj[3] = function filter(arg0) {
           let isPrivateResult = channel2.isPrivate();
           if (!isPrivateResult) {
-            let obj = outer1_2(outer1_3[41]);
+            let obj = closure_1_2(closure_1_3[41]);
             obj = { permission: null, user: null, context: null };
-            obj[0] = outer1_38.VIEW_CHANNEL;
+            obj[0] = closure_1_38.VIEW_CHANNEL;
             obj[1] = arg0;
             obj[2] = channel2;
             isPrivateResult = obj.can(obj);
@@ -768,11 +742,6 @@ areArraysShallowlyEqual = {
     }
   },
   queryGuildUsers(request) {
-    let allowSnowflake;
-    let filter;
-    let guildId;
-    let limit;
-    let query;
     ({ guildId, query, limit } = request);
     if (limit === undefined) {
       limit = 10;
@@ -797,9 +766,9 @@ areArraysShallowlyEqual = {
           if (null != channelId) {
             if (null != channel) {
               const messages = store5.getMessages(channelId);
-              const tmp14 = apply;
-              const reversed = apply(messages.toArray()).reverse();
-              const tmp14Result = apply(messages.toArray());
+              const tmp14 = applyDefault;
+              const reversed = applyDefault(messages.toArray()).reverse();
+              const tmp14Result = applyDefault(messages.toArray());
               const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
               const found = mapped.filter((isNonUserBot) => {
                 if (null == isNonUserBot) {
@@ -810,7 +779,7 @@ areArraysShallowlyEqual = {
                   const guildId = channel.getGuildId();
                   let tmp3 = null == guildId;
                   if (!tmp3) {
-                    const member = outer1_27.getMember(guildId, isNonUserBot.id);
+                    const member = closure_1_27.getMember(guildId, isNonUserBot.id);
                     let joinedAt;
                     if (member != null) {
                       joinedAt = member.joinedAt;
@@ -825,22 +794,22 @@ areArraysShallowlyEqual = {
                 const guildId = channel.getGuildId();
                 let member = null;
                 if (null != guildId) {
-                  member = outer1_27.getMember(guildId, id.id);
+                  member = closure_1_27.getMember(guildId, id.id);
                 }
-                const obj = { type: outer1_43.USER, record: id, score: 0, comparator: null };
+                const obj = { type: closure_1_43.USER, record: id, score: 0, comparator: null };
                 let nick;
                 if (member != null) {
                   nick = member.nick;
                 }
                 if (nick == null) {
-                  nick = outer1_1(outer1_3[34]).getName(id);
-                  const obj2 = outer1_1(outer1_3[34]);
+                  nick = closure_1_1(closure_1_3[34]).getName(id);
+                  const obj2 = closure_1_1(closure_1_3[34]);
                 }
                 obj[3] = nick;
                 return obj;
               });
               const uniqByResult = reversed.uniqBy((author) => author.author.id);
-              let items = mapped1.take(limit).value();
+              items = mapped1.take(limit).value();
               const iter = mapped1.take(limit);
             }
             if (items.length > 0) {
@@ -856,7 +825,7 @@ areArraysShallowlyEqual = {
         flag = query.length > 0;
       }
       if (flag) {
-        let obj = getGuildNameSuggestion;
+        let obj = getGuildNameSuggestionDefault;
         const members1 = obj.requestMembers(guildId, query, limit);
       }
       obj = { query: null, members: null, limit: null, filter: null, allowSnowflake: null };
@@ -869,9 +838,6 @@ areArraysShallowlyEqual = {
     }
   },
   queryUsers(limit) {
-    let boosters;
-    let filter;
-    let query;
     let num = limit.limit;
     ({ query, filter, boosters } = limit);
     if (num === undefined) {
@@ -880,10 +846,6 @@ areArraysShallowlyEqual = {
     return queryMemberList({ query, members: limit.users, limit: num, filter, allowSnowflake: limit.allowSnowflake, boosters });
   },
   queryAllUsers(request) {
-    let boosters;
-    let filter;
-    let limit;
-    let query;
     ({ query, limit } = request);
     ({ filter, boosters } = request);
     if (limit === undefined) {
@@ -898,18 +860,16 @@ areArraysShallowlyEqual = {
       tmp = query.length > 0;
     }
     if (tmp) {
-      let obj = getGuildNameSuggestion;
+      let obj = getGuildNameSuggestionDefault;
       const members = obj.requestMembers(null, query, limit);
     }
     obj = { query, limit, request: flag, filter, boosters, users: null };
-    const tmp6 = apply;
-    const tmp6Result = apply(authStore2.getUsers());
-    obj[5] = apply(authStore2.getUsers()).values().value();
+    const tmp6 = applyDefault;
+    const tmp6Result = applyDefault(authStore2.getUsers());
+    obj[5] = applyDefault(authStore2.getUsers()).values().value();
     return this.queryUsers(obj);
   },
   queryChannels(guildId) {
-    let allowSnowflake;
-    let includeAllThreads;
     guildId = guildId.guildId;
     let type = guildId.type;
     if (type === undefined) {
@@ -956,7 +916,7 @@ areArraysShallowlyEqual = {
       }
       return mapped;
     })(guildId.query, flag2);
-    let items = (function includesThreads(type) {
+    items = (function includesThreads(type) {
       let tmp = type === closure_24;
       if (!tmp) {
         let tmp3 = type !== closure_25;
@@ -968,14 +928,14 @@ areArraysShallowlyEqual = {
       return tmp;
     })(type);
     if (null == guildId) {
-      const tmp6 = apply;
-      const values = apply(authStore.loadAllGuildAndPrivateChannelsFromDisk()).values();
+      const tmp6 = applyDefault;
+      const values = applyDefault(authStore.loadAllGuildAndPrivateChannelsFromDisk()).values();
       if (items) {
-        let allActiveJoinedThreads = rebuild.computeAllActiveJoinedThreads();
+        let allActiveJoinedThreads = closure_11.computeAllActiveJoinedThreads();
       } else {
         allActiveJoinedThreads = [];
       }
-      const tmp6Result = apply(authStore.loadAllGuildAndPrivateChannelsFromDisk());
+      const tmp6Result = applyDefault(authStore.loadAllGuildAndPrivateChannelsFromDisk());
       let valueResult = values.concat(allActiveJoinedThreads).value();
       items = [];
       const maxScore = store.getMaxScore();
@@ -983,8 +943,8 @@ areArraysShallowlyEqual = {
       includeAllThreads = 6;
       const iter = values.concat(allActiveJoinedThreads);
     }
-    const tmp10 = apply;
-    let mapped = apply(channels.getChannels(guildId)[type]).map((channel) => channel.channel);
+    const tmp10 = applyDefault;
+    let mapped = applyDefault(channels.getChannels(guildId)[type]).map((channel) => channel.channel);
     if (!items) {
       valueResult = tmp12([]).value();
       const iter2 = tmp12([]);
@@ -992,14 +952,10 @@ areArraysShallowlyEqual = {
     if (includeAllThreads) {
       let allThreadsForGuild = authStore.getAllThreadsForGuild(guildId);
     } else {
-      allThreadsForGuild = rebuild.computeAllActiveJoinedThreads(guildId);
+      allThreadsForGuild = closure_11.computeAllActiveJoinedThreads(guildId);
     }
   },
   queryGuilds(fuzzy) {
-    let allowSnowflake;
-    let filter;
-    let limit;
-    let query;
     ({ query, limit } = fuzzy);
     if (limit === undefined) {
       limit = 10;
@@ -1021,13 +977,13 @@ areArraysShallowlyEqual = {
       str = query.toLocaleLowerCase();
     }
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + set.escape(str), "i");
+    const regExp = new RegExp("^" + setDefault.escape(str), "i");
     obj[0] = regExp;
-    const obj3 = set;
-    const regExp1 = new RegExp(set.escape(str), "i");
+    const obj3 = setDefault;
+    const regExp1 = new RegExp(setDefault.escape(str), "i");
     obj[1] = regExp1;
     obj[2] = str;
-    const items = [];
+    items = [];
     const guildsArray = store4.getGuildsArray();
     const iter = guildsArray[Symbol.iterator]();
     const nextResult = iter.next();
@@ -1063,16 +1019,13 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(sortByMatchScore);
+    const sorted = items.sort(sortByMatchScoreDefault);
     if (items.length > limit) {
       items.length = limit;
     }
     return items;
   },
   queryDMChannels(limit) {
-    let c0;
-    let c1;
-    let recipients;
     let num = limit.limit;
     if (num === undefined) {
       num = 10;
@@ -1082,8 +1035,8 @@ areArraysShallowlyEqual = {
       boosters = {};
     }
     c0 = undefined;
-    let importDefault;
-    let items;
+    importDefault = undefined;
+    items = undefined;
     const privateChannelsVersion = authStore.getPrivateChannelsVersion();
     const version = store6.getVersion();
     ({ channelsByRecipientId: c0, recipientsById: c1, recipients } = callback3(privateChannelsVersion, version, authStore2.getUserStoreVersion()));
@@ -1094,24 +1047,22 @@ areArraysShallowlyEqual = {
       const value = _undefined.get(record.record.id);
       if (null != value) {
         const obj = { type: null, record: null, score: null, comparator: null, sortable: null };
-        obj[0] = outer1_43.DM;
+        obj[0] = closure_1_43.DM;
         obj[1] = value;
         obj[2] = record.score;
-        obj[3] = _undefined2(outer1_3[34]).getUserTag(_undefined2.get(record.record.id));
+        obj[3] = _undefined2(closure_1_3[34]).getUserTag(_undefined2.get(record.record.id));
         obj[4] = record.sortable;
         items.push(obj);
-        const obj2 = _undefined2(outer1_3[34]);
+        const obj2 = _undefined2(closure_1_3[34]);
       }
     });
-    const sorted = items.sort(sortByMatchScore);
+    const sorted = items.sort(sortByMatchScoreDefault);
     if (items.length > num) {
       items.length = num;
     }
     return items;
   },
   queryGroupDMs(fuzzy) {
-    let limit;
-    let query;
     ({ query, limit } = fuzzy);
     if (limit === undefined) {
       limit = 10;
@@ -1132,18 +1083,18 @@ areArraysShallowlyEqual = {
     const stripDiacriticsResult = obj2.stripDiacritics(isNullOrEmpty.normalize(query.toLocaleLowerCase()));
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
     const obj3 = isNullOrEmpty;
-    const regExp = new RegExp("^" + set.escape(stripDiacriticsResult), "i");
+    const regExp = new RegExp("^" + setDefault.escape(stripDiacriticsResult), "i");
     obj[0] = regExp;
-    const obj5 = set;
-    const regExp1 = new RegExp(set.escape(stripDiacriticsResult), "i");
+    const obj5 = setDefault;
+    const regExp1 = new RegExp(setDefault.escape(stripDiacriticsResult), "i");
     obj[1] = regExp1;
     obj[2] = stripDiacriticsResult;
-    const obj6 = set;
-    const tmp4 = apply;
-    const tmp4Result = apply(authStore.getMutablePrivateChannels());
-    const iter = apply(authStore.getMutablePrivateChannels()).values();
-    const items = [];
-    const iter2 = apply(authStore.getMutablePrivateChannels()).values().value()[Symbol.iterator]();
+    const obj6 = setDefault;
+    const tmp4 = applyDefault;
+    const tmp4Result = applyDefault(authStore.getMutablePrivateChannels());
+    const iter = applyDefault(authStore.getMutablePrivateChannels()).values();
+    items = [];
+    const iter2 = applyDefault(authStore.getMutablePrivateChannels()).values().value()[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp6 = nextResult;
@@ -1179,7 +1130,7 @@ areArraysShallowlyEqual = {
               let tmp57 = importDefault;
               let tmp58 = dependencyMap;
               let tmp56 = username;
-              let obj17 = nameFromUser;
+              let obj17 = nameFromUserDefault;
               let globalName = obj17.getGlobalName(tmp23);
               let tmp60 = store6;
               let tmp61 = item10107;
@@ -1245,15 +1196,13 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(sortByMatchScore);
+    const sorted = items.sort(sortByMatchScoreDefault);
     if (items.length > limit) {
       items.length = limit;
     }
     return items;
   },
   queryApplications(fuzzy) {
-    let limit;
-    let query;
     ({ query, limit } = fuzzy);
     if (limit === undefined) {
       limit = 10;
@@ -1268,14 +1217,14 @@ areArraysShallowlyEqual = {
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + set.escape(toLocaleLowerCaseResult), "i");
+    const regExp = new RegExp("^" + setDefault.escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    const obj2 = set;
-    const regExp1 = new RegExp(set.escape(toLocaleLowerCaseResult), "i");
+    const obj2 = setDefault;
+    const regExp1 = new RegExp(setDefault.escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
-    const obj3 = set;
-    const items = [];
+    const obj3 = setDefault;
+    items = [];
     const iter = LAUNCHABLE_APPLICATIONS()[Symbol.iterator]();
     while (iter !== undefined) {
       let application = iter.next().application;
@@ -1303,15 +1252,13 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(sortByMatchScore);
+    const sorted = items.sort(sortByMatchScoreDefault);
     if (items.length > limit) {
       items.length = limit;
     }
     return items;
   },
   queryInAppNavigations(fuzzy) {
-    let limit;
-    let query;
     ({ query, limit } = fuzzy);
     if (limit === undefined) {
       limit = 10;
@@ -1322,15 +1269,15 @@ areArraysShallowlyEqual = {
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + set.escape(toLocaleLowerCaseResult), "i");
+    const regExp = new RegExp("^" + setDefault.escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    const obj2 = set;
-    const regExp1 = new RegExp(set.escape(toLocaleLowerCaseResult), "i");
+    const obj2 = setDefault;
+    const regExp1 = new RegExp(setDefault.escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
     obj = {};
     const intl = getSystemLocale.intl;
-    const items = [intl.string(getSystemLocale.t.pWG4ze)];
+    items = [intl.string(getSystemLocale.t.pWG4ze)];
     obj[constants.SHOP] = items;
     const intl2 = getSystemLocale.intl;
     const items1 = [intl2.string(getSystemLocale.t.ElYQFS), , ];
@@ -1395,15 +1342,13 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items7.sort(sortByMatchScore);
+    const sorted = items7.sort(sortByMatchScoreDefault);
     if (items7.length > limit) {
       items7.length = limit;
     }
     return items7;
   },
   querySKUs(fuzzy) {
-    let limit;
-    let query;
     ({ query, limit } = fuzzy);
     if (limit === undefined) {
       limit = 10;
@@ -1418,18 +1363,18 @@ areArraysShallowlyEqual = {
     }
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    const regExp = new RegExp("^" + set.escape(toLocaleLowerCaseResult), "i");
+    const regExp = new RegExp("^" + setDefault.escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    const obj2 = set;
-    const regExp1 = new RegExp(set.escape(toLocaleLowerCaseResult), "i");
+    const obj2 = setDefault;
+    const regExp1 = new RegExp(setDefault.escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
-    const obj3 = set;
-    const tmp4 = apply;
-    const tmp4Result = apply(sKUs.getSKUs());
-    const iter = apply(sKUs.getSKUs()).values();
-    const items = [];
-    const iter2 = apply(sKUs.getSKUs()).values().value()[Symbol.iterator]();
+    const obj3 = setDefault;
+    const tmp4 = applyDefault;
+    const tmp4Result = applyDefault(sKUs.getSKUs());
+    const iter = applyDefault(sKUs.getSKUs()).values();
+    items = [];
+    const iter2 = applyDefault(sKUs.getSKUs()).values().value()[Symbol.iterator]();
     const nextResult = iter2.next();
     while (iter2 !== undefined) {
       let tmp7 = nextResult;
@@ -1460,7 +1405,7 @@ areArraysShallowlyEqual = {
       }
       continue;
     }
-    const sorted = items.sort(sortByMatchScore);
+    const sorted = items.sort(sortByMatchScoreDefault);
     if (items.length > limit) {
       items.length = limit;
     }
@@ -1471,9 +1416,9 @@ areArraysShallowlyEqual = {
     if (null != channelId) {
       if (null != channel) {
         const messages = store5.getMessages(channelId);
-        const tmp6 = apply;
-        const reversed = apply(messages.toArray()).reverse();
-        const tmp6Result = apply(messages.toArray());
+        const tmp6 = applyDefault;
+        const reversed = applyDefault(messages.toArray()).reverse();
+        const tmp6Result = applyDefault(messages.toArray());
         const mapped = reversed.uniqBy((author) => author.author.id).map((author) => user.getUser(author.author.id));
         const found = mapped.filter((isNonUserBot) => {
           if (null == isNonUserBot) {
@@ -1484,7 +1429,7 @@ areArraysShallowlyEqual = {
             const guildId = channel.getGuildId();
             let tmp3 = null == guildId;
             if (!tmp3) {
-              const member = outer1_27.getMember(guildId, isNonUserBot.id);
+              const member = closure_1_27.getMember(guildId, isNonUserBot.id);
               let joinedAt;
               if (member != null) {
                 joinedAt = member.joinedAt;
@@ -1499,16 +1444,16 @@ areArraysShallowlyEqual = {
           const guildId = channel.getGuildId();
           let member = null;
           if (null != guildId) {
-            member = outer1_27.getMember(guildId, id.id);
+            member = closure_1_27.getMember(guildId, id.id);
           }
-          const obj = { type: outer1_43.USER, record: id, score: 0, comparator: null };
+          const obj = { type: closure_1_43.USER, record: id, score: 0, comparator: null };
           let nick;
           if (member != null) {
             nick = member.nick;
           }
           if (nick == null) {
-            nick = outer1_1(outer1_3[34]).getName(id);
-            const obj2 = outer1_1(outer1_3[34]);
+            nick = closure_1_1(closure_1_3[34]).getName(id);
+            const obj2 = closure_1_1(closure_1_3[34]);
           }
           obj[3] = nick;
           return obj;
@@ -1521,10 +1466,6 @@ areArraysShallowlyEqual = {
     }
   },
   queryMentionResults(canMentionEveryone) {
-    let allowSnowflake;
-    let channel;
-    let query;
-    let request;
     ({ query, channel } = canMentionEveryone);
     let flag = canMentionEveryone.canMentionEveryone;
     if (flag === undefined) {
@@ -1566,8 +1507,8 @@ areArraysShallowlyEqual = {
     if (allowSnowflake === undefined) {
       allowSnowflake = false;
     }
-    let items;
-    let getEmojiToGroupId;
+    items = undefined;
+    closure_7 = undefined;
     let formatted;
     let substr;
     let guildId;
@@ -1584,7 +1525,7 @@ areArraysShallowlyEqual = {
         let queryChannelUsersResult = self.queryChannelUsers(obj);
         const mapped = queryChannelUsersResult.map((record) => {
           record = record.record;
-          return { user: record, score: record.score, comparator: record.comparator, nick: outer1_27.getNick(channel.guild_id, record.id), status: outer1_32.getStatus(record.id) };
+          return { user: record, score: record.score, comparator: record.comparator, nick: closure_1_27.getNick(channel.guild_id, record.id), status: closure_1_32.getStatus(record.id) };
         });
       }
       obj = { guildId: null, query: null, limit: null, checkRecentlyTalkedOnEmptyQuery: null, request: null, allowSnowflake: null };
@@ -1597,12 +1538,12 @@ areArraysShallowlyEqual = {
       queryChannelUsersResult = self.queryGuildUsers(obj);
     } else {
       items = [];
-      getEmojiToGroupId = items.length;
+      closure_7 = items.length;
       formatted = query.toLowerCase();
       const items1 = [];
       substr = items1;
       let tmp5 = items1;
-      if (getEmojiToGroupId < limit) {
+      if (closure_7 < limit) {
         tmp5 = items1;
         if (flag4) {
           guildId = channel.getGuildId();
@@ -1612,9 +1553,6 @@ areArraysShallowlyEqual = {
             const tmp42 = flag(flag7[37]);
             const tmp42Result = flag(flag7[37])(store3.getSortedRoles(guild.id));
             const iter = flag(flag7[37])(store3.getSortedRoles(guild.id)).filter((arg0) => {
-              let id;
-              let mentionable;
-              let name;
               ({ mentionable, name, id } = arg0);
               if (!mentionable) {
                 mentionable = flag;
@@ -1642,9 +1580,6 @@ areArraysShallowlyEqual = {
               return mentionable;
             });
             const valueResult = flag(flag7[37])(store3.getSortedRoles(guild.id)).filter((arg0) => {
-              let id;
-              let mentionable;
-              let name;
               ({ mentionable, name, id } = arg0);
               if (!mentionable) {
                 mentionable = flag;
@@ -1674,8 +1609,8 @@ areArraysShallowlyEqual = {
             obj = { keys: null };
             obj[0] = ["name"];
             const obj4 = channel(flag7[45]);
-            substr = channel(flag7[45]).matchSorter(valueResult, query, obj).slice(0, limit - getEmojiToGroupId);
-            getEmojiToGroupId = getEmojiToGroupId + substr.length;
+            substr = channel(flag7[45]).matchSorter(valueResult, query, obj).slice(0, limit - closure_7);
+            closure_7 = closure_7 + substr.length;
             tmp5 = substr;
             const matchSorterResult = channel(flag7[45]).matchSorter(valueResult, query, obj);
           }
@@ -1691,17 +1626,17 @@ areArraysShallowlyEqual = {
         tmp11 = flag4;
       }
       if (tmp11) {
-        let tmp16Result = getEmojiToGroupId < limit;
+        let tmp16Result = closure_7 < limit;
         if (tmp16Result) {
           tmp16Result = flag(flag7[32])(formatted, MENTION_EVERYONE().test);
           const tmp16 = flag(flag7[32]);
         }
         if (tmp16Result) {
           items2.push(MENTION_EVERYONE());
-          getEmojiToGroupId = getEmojiToGroupId + 1;
+          closure_7 = closure_7 + 1;
         }
         if (flag2) {
-          flag2 = getEmojiToGroupId < limit;
+          flag2 = closure_7 < limit;
         }
         if (flag2) {
           flag2 = flag(flag7[32])(formatted, MENTION_HERE().test);
@@ -1709,7 +1644,7 @@ areArraysShallowlyEqual = {
         }
         if (flag2) {
           items2.push(MENTION_HERE());
-          getEmojiToGroupId = getEmojiToGroupId + 1;
+          closure_7 = closure_7 + 1;
         }
       }
       const IncludeGameMentionsInAutocomplete = channel(flag7[46]).IncludeGameMentionsInAutocomplete;
@@ -1722,7 +1657,7 @@ areArraysShallowlyEqual = {
           tmp = null != test;
         }
         if (tmp) {
-          let tmp5 = getEmojiToGroupId < limit;
+          let tmp5 = closure_7 < limit;
           if (!tmp5) {
             tmp5 = 0 === formatted.length;
           }
@@ -1733,10 +1668,10 @@ areArraysShallowlyEqual = {
             tmp5 = formatted === test.test;
           }
           if (tmp5) {
-            if (getEmojiToGroupId < tmp4) {
+            if (closure_7 < tmp4) {
               let arr = items2;
               arr = items2.push(test);
-              getEmojiToGroupId = getEmojiToGroupId + 1;
+              closure_7 = closure_7 + 1;
             } else {
               arr = substr;
               if (substr.length <= 0) {
@@ -1763,7 +1698,7 @@ areArraysShallowlyEqual = {
         tmp38 = MENTION_TIMESTAMP();
       }
       maybePushOtherGlobal(tmp38);
-      const obj1 = { users: null, globals: null, roles: null };
+      obj1 = { users: null, globals: null, roles: null };
       obj1[0] = items;
       obj1[1] = items2;
       obj1[2] = tmp5;
@@ -1771,9 +1706,6 @@ areArraysShallowlyEqual = {
     }
   },
   queryGuildMentionResults(canMentionUsers) {
-    let canMentionEveryone;
-    let guildId;
-    let query;
     ({ query, guildId, canMentionEveryone } = canMentionUsers);
     if (canMentionEveryone === undefined) {
       canMentionEveryone = false;
@@ -1825,7 +1757,7 @@ areArraysShallowlyEqual = {
               const tmp4 = flag3(roles[32]);
             }
             if (tmp) {
-              tmp = !outer1_20(mentionable);
+              tmp = !closure_1_20(mentionable);
             }
             return tmp;
           });
@@ -1865,8 +1797,6 @@ areArraysShallowlyEqual = {
     return { users, globals, roles };
   },
   queryChoice(fuzzy) {
-    let limit;
-    let query;
     ({ query, limit } = fuzzy);
     if (limit === undefined) {
       limit = 10;
@@ -1875,7 +1805,7 @@ areArraysShallowlyEqual = {
     if (flag === undefined) {
       flag = true;
     }
-    let importDefault;
+    importDefault = undefined;
     let regExp;
     let regExp1;
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
@@ -1887,7 +1817,7 @@ areArraysShallowlyEqual = {
     const mapped = importDefault(regExp1[37])(fuzzy.choices).map((displayName) => {
       displayName = displayName.displayName;
       let obj = { exactQuery: regExp, containQuery: regExp1, queryLower: c1 };
-      const tmp = outer1_58(displayName.toLocaleLowerCase(), obj, flag);
+      const tmp = closure_1_58(displayName.toLocaleLowerCase(), obj, flag);
       let tmp2 = null;
       if (tmp > 0) {
         obj = { choice: null, score: null, originalIndex: null };
@@ -1907,15 +1837,13 @@ areArraysShallowlyEqual = {
     return iter.value();
   },
   queryStaticRouteChannels(arg0) {
-    let guild;
-    let query;
     ({ query, guild } = arg0);
     const toLocaleLowerCaseResult = query.toLocaleLowerCase();
     let obj = { exactQuery: null, containQuery: null, queryLower: null };
-    let obj1 = set;
+    obj1 = setDefault;
     const regExp = new RegExp("^" + obj1.escape(toLocaleLowerCaseResult), "i");
     obj[0] = regExp;
-    let obj2 = set;
+    let obj2 = setDefault;
     const regExp1 = new RegExp(obj2.escape(toLocaleLowerCaseResult), "i");
     obj[1] = regExp1;
     obj[2] = toLocaleLowerCaseResult;
@@ -1936,7 +1864,7 @@ areArraysShallowlyEqual = {
     obj = { id: StaticChannelId.SERVER_GUIDE, name: null };
     const intl = tmp5(1236).intl;
     obj[1] = intl.string(getSystemLocale.t.VbpLyU);
-    const items = [obj, , ];
+    items = [obj, , ];
     obj = { id: StaticChannelId.CHANNEL_BROWSER, name: null };
     const intl2 = tmp5(1236).intl;
     obj[1] = intl2.string(getSystemLocale.t.et6wav);
@@ -1985,8 +1913,6 @@ areArraysShallowlyEqual = {
     return items1;
   },
   queryChannelResults(channelTypes) {
-    let channel;
-    let type;
     ({ channel, type } = channelTypes);
     if (type === undefined) {
       type = GUILD_SELECTABLE_CHANNELS_KEY;
@@ -2012,8 +1938,6 @@ areArraysShallowlyEqual = {
     return obj;
   },
   queryApplicationCommandChannelResults(limit) {
-    let channel;
-    let channelTypes;
     const self = this;
     ({ channel, channelTypes } = limit);
     limit = limit.limit;
@@ -2021,7 +1945,7 @@ areArraysShallowlyEqual = {
       limit = closure_42;
     }
     if (null == channel.guild_id) {
-      const items = [];
+      items = [];
       if (tmp12) {
         items.push(channel);
       }
@@ -2049,7 +1973,7 @@ areArraysShallowlyEqual = {
         continue;
       }
       const found = items1.filter((record) => "null" !== record.record.id);
-      let sorted = found.sort(compareChannelsByScoreAndPosition);
+      let sorted = found.sort(compareChannelsByScoreAndPositionDefault);
       let tmp8 = null != limit;
       if (tmp8) {
         tmp8 = sorted.length > limit;
@@ -2069,9 +1993,6 @@ areArraysShallowlyEqual = {
     return obj;
   },
   queryEmojiResults(matchComparator) {
-    let channel;
-    let intention;
-    let query;
     let maxCount = matchComparator.maxCount;
     ({ query, channel, intention } = matchComparator);
     if (maxCount === undefined) {
@@ -2079,10 +2000,9 @@ areArraysShallowlyEqual = {
     }
     const FrecencyUserSettingsActionCreators = updateUserGuildSettings.FrecencyUserSettingsActionCreators;
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
-    return { emojis: getEmojiToGroupId.searchWithoutFetchingLatest({ channel, query, count: maxCount, intention, matchComparator: matchComparator.matchComparator }) };
+    return { emojis: closure_7.searchWithoutFetchingLatest({ channel, query, count: maxCount, intention, matchComparator: matchComparator.matchComparator }) };
   },
   queryStickers(items, arg1, items1) {
-    let importDefault;
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
@@ -2093,10 +2013,10 @@ areArraysShallowlyEqual = {
       tmp = items;
     }
     [importDefault, ] = tmp;
-    let dependencyMap;
+    dependencyMap = undefined;
     let set;
-    let closure_5;
-    let closure_6;
+    closure_5 = undefined;
+    closure_6 = undefined;
     dependencyMap = authStore2.getCurrentUser();
     set = new Set();
     items1 = [];
@@ -2117,31 +2037,31 @@ areArraysShallowlyEqual = {
         const obj3 = nextResult(4362);
         const _HermesInternal2 = HermesInternal;
         const regExp1 = new RegExp("" + nextResult(4362).escape(stripDiacriticsResult), "i");
-        const stickerMetadataArrays = outer1_10.getStickerMetadataArrays();
+        const stickerMetadataArrays = closure_1_10.getStickerMetadataArrays();
         let item = stickerMetadataArrays.forEach((arr) => {
           const item = arr.forEach((arg0, id) => {
             let num = 0;
             let tmp = null;
-            const stickerById = outer2_10.getStickerById(id);
+            const stickerById = closure_2_10.getStickerById(id);
             if (null != stickerById) {
-              if (outer1_2(stickerById, obj2.getStickerSendability(stickerById, outer1_3, outer1_1))) {
+              if (closure_1_2(stickerById, obj2.getStickerSendability(stickerById, closure_1_3, closure_1_1))) {
                 const iter = arg0[Symbol.iterator]();
                 const iter2 = iter.next();
                 while (iter !== undefined) {
                   let type = iter2.type;
                   let tmp7 = type;
                   let value = iter2.value;
-                  let tmp8 = outer2_61;
-                  let tmp9 = outer2_61(type);
+                  let tmp8 = closure_2_61;
+                  let tmp9 = closure_2_61(type);
                   let num4 = 0;
-                  let tmp10 = outer1_0;
+                  let tmp10 = closure_1_0;
                   let tmp11 = value;
                   let tmp12 = closure_0;
-                  if (outer1_0) {
+                  if (closure_1_0) {
                     if (value === tmp12) {
-                      let tmp29 = outer2_46;
+                      let tmp29 = closure_2_46;
                       let tmp30 = tmp9;
-                      num4 = outer2_46 * tmp9;
+                      num4 = closure_2_46 * tmp9;
                     } else {
                       let tmp53 = regex;
                       let tmp54 = value;
@@ -2152,9 +2072,9 @@ areArraysShallowlyEqual = {
                         let tmp13 = type;
                         let tmp14 = toLocaleLowerCaseResult;
                         let tmp15 = toLocaleLowerCaseResult;
-                        let tmp16 = outer2_3;
-                        let tmp17 = outer2_3;
-                        let tmp18 = tmp7 !== toLocaleLowerCaseResult(outer2_3[36]).StickerMetadataTypes.GUILD_NAME;
+                        let tmp16 = closure_2_3;
+                        let tmp17 = closure_2_3;
+                        let tmp18 = tmp7 !== toLocaleLowerCaseResult(closure_2_3[36]).StickerMetadataTypes.GUILD_NAME;
                         if (tmp18) {
                           let tmp19 = type;
                           let tmp20 = tmp14;
@@ -2179,9 +2099,9 @@ areArraysShallowlyEqual = {
                       }
                     }
                   } else if (value === tmp12) {
-                    let tmp51 = outer2_46;
+                    let tmp51 = closure_2_46;
                     let tmp52 = tmp9;
-                    num4 = outer2_46 * tmp9;
+                    num4 = closure_2_46 * tmp9;
                     tmp = value;
                   }
                   let tmp31 = num4;
@@ -2192,7 +2112,7 @@ areArraysShallowlyEqual = {
                   }
                   continue;
                 }
-                const stickerFrecencyWithoutFetchingLatest = outer2_9.stickerFrecencyWithoutFetchingLatest;
+                const stickerFrecencyWithoutFetchingLatest = closure_2_9.stickerFrecencyWithoutFetchingLatest;
                 const score = stickerFrecencyWithoutFetchingLatest.getScore(id);
                 if (null != score) {
                   num = num * (score / 100);
@@ -2202,18 +2122,18 @@ areArraysShallowlyEqual = {
                   tmp37 = null != tmp;
                 }
                 if (tmp37) {
-                  tmp37 = !outer1_4.has(stickerById.id);
+                  tmp37 = !closure_1_4.has(stickerById.id);
                 }
                 if (tmp37) {
-                  outer1_4.add(stickerById.id);
+                  closure_1_4.add(stickerById.id);
                   const obj = { sticker: null, comparator: null, score: null };
                   obj[0] = stickerById;
                   obj[1] = tmp;
                   obj[2] = num;
-                  outer1_5.push(obj);
+                  closure_1_5.push(obj);
                 }
               }
-              obj2 = toLocaleLowerCaseResult(outer2_3[52]);
+              obj2 = toLocaleLowerCaseResult(closure_2_3[52]);
             }
           });
         });
@@ -2226,8 +2146,8 @@ areArraysShallowlyEqual = {
       let _loopResult = _loop();
       continue;
     }
-    let obj = apply(items1);
-    let valueResult = apply(items1).sortBy((score) => -1 * score.score).value();
+    let obj = applyDefault(items1);
+    let valueResult = applyDefault(items1).sortBy((score) => -1 * score.score).value();
     closure_5 = valueResult;
     if (0 === valueResult.length) {
       closure_5 = closure_49;
@@ -2251,7 +2171,7 @@ areArraysShallowlyEqual = {
     const ifNecessary = FrecencyUserSettingsActionCreators.loadIfNecessary();
     const sounds = obj.getSounds();
     const reduced = Array.from(sounds.values()).reduce((arg0, arr) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const item = arr.forEach((arg0) => {
         let guild_id;
         if (arr != null) {
@@ -2270,11 +2190,11 @@ areArraysShallowlyEqual = {
     let arr = Array.from(sounds.values());
     return _trackSearchStart.searchSounds(arg0, reduced, currentUser, channel);
   },
-  matchSentinel(arg0, arg1, storeThread) {
-    const isMatch = tmp7.test(arg1);
+  matchSentinel(arg0, arg1, closure_12) {
+    const isMatch = regex.test(arg1);
     let tmp2 = !isMatch;
     if (!isMatch) {
-      tmp2 = arg0 === storeThread;
+      tmp2 = arg0 === closure_12;
     }
     return tmp2;
   },
@@ -2294,7 +2214,7 @@ areArraysShallowlyEqual = {
   queryMemberList
 };
 const map = new Map();
-let result = require("getEmojiToGroupId").fileFinishedImporting("utils/AutocompleteUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/AutocompleteUtils.tsx");
 
 export default areArraysShallowlyEqual;
 export const WHITESPACE_REGEX = tmp7;
@@ -2313,6 +2233,6 @@ export const getGameProfileMatchTier = function getGameProfileMatchTier(name, cl
   return num2;
 };
 export const getBoosterMap = function getBoosterMap(USER) {
-  return obj.get(USER);
+  return areArraysShallowlyEqual.get(USER);
 };
 export const COMMAND_SUPPORTED_CHANNEL_TYPE_KEYS = items;

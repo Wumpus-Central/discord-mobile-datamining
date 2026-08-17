@@ -1,9 +1,9 @@
 // discord_app/design/void/Form/native/FreeFormErrorLabel.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("getNodeText").fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FreeFormErrorLabel.tsx");
 
 export default function Label(style) {
   const children = style.children;
@@ -16,7 +16,7 @@ export default function Label(style) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(outer1_1[3]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

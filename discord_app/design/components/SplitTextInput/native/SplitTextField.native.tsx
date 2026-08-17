@@ -1,22 +1,15 @@
 // discord_app/design/components/SplitTextInput/native/SplitTextField.native.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { useInputStyles } from "../../Input/native/InputFieldContainer.native.tsx";
-import { useInputClearButton } from "../../Input/native/useInputClearButton.native.tsx";
-import { BaseTextField } from "../../TextField/native/BaseTextField.native.tsx";
-import { useTextFieldState } from "../../TextField/native/useTextField.native.tsx";
+import useTextFieldState from "useTextFieldState" /* 7339 */;
+import useInputClearButton from "useInputClearButton" /* 7340 */;
+import useInputStyles from "useInputStyles" /* 7345 */;
+import BaseTextField from "BaseTextField" /* 7347 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
 ({ Pressable: obj1, View: c3 } = get_ActivityIndicator);
-const forwardRefResult = require("noop").forwardRef((size, ref) => {
-  let innerRef;
-  let inputProps;
-  let inputStyle;
-  let state;
-  let trailing;
+const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   let obj = useInputStyles;
   obj = { size: size.size, isRound: size.isRound };
   const inputStyles = obj.useInputStyles(obj);
@@ -38,7 +31,7 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   if (null != size.leadingText) {
     tmp8 = null;
     if (size.leadingText.length > 0) {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = inputStyles.splitBorder;
       obj2 = { style: null };
       obj2[0] = function style(pressed) {
@@ -64,6 +57,6 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
   obj3.inputStyle = inputStyle;
   return jsx(BaseTextField.BaseTextField, {});
 });
-const result = require("jsxProd").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/SplitTextInput/native/SplitTextField.native.tsx");
 
 export const SplitTextField = forwardRefResult;

@@ -1,20 +1,22 @@
 // discord_app/modules/safety_hub/native/AppealIngestionModalActionCreators.tsx
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+
 const APPEAL_INGESTION_MODAL_KEY = "APPEAL_INGESTION_MODAL_KEY";
-const result = require("AppealIngestionModal").fileFinishedImporting("modules/safety_hub/native/AppealIngestionModalActionCreators.tsx");
+const result = set.fileFinishedImporting("modules/safety_hub/native/AppealIngestionModalActionCreators.tsx");
 
 export default {
   open(classificationId) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "SAFETY_HUB_APPEAL_OPEN", classificationId: classificationId.classificationId };
     obj.dispatch(obj);
-    ModalActionCreators.pushLazy(asyncRequireImpl(11081, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
+    _modDef5260.pushLazy(asyncRequireImpl(11081, dependencyMap.paths), classificationId, APPEAL_INGESTION_MODAL_KEY);
   },
   close() {
-    ModalActionCreators.popWithKey(APPEAL_INGESTION_MODAL_KEY);
-    const obj = ModalActionCreators;
-    dispatcher.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
+    _modDef5260.popWithKey(APPEAL_INGESTION_MODAL_KEY);
+    const obj = _modDef5260;
+    dispatcherDefault.dispatch({ type: "SAFETY_HUB_APPEAL_CLOSE" });
   }
 };

@@ -1,6 +1,10 @@
 // discord_app/utils/MFAUtils.tsx
-import { encode } from "../../_runtime/08589_encode.js";
-import { SentryUtils.native } from "SentryUtils.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import encodeDefault from "encode" /* 8589 */;
+
 let _crypto;
 if (window != null) {
   _crypto = window.crypto;
@@ -19,27 +23,27 @@ if (tmp5) {
 if (tmp5) {
   tmp5 = tmp4;
 }
-let tmp6 = null != require("get ActivityIndicator").NativeModules.DCDSecurityKeyManager;
+let tmp6 = null != get_ActivityIndicator.NativeModules.DCDSecurityKeyManager;
 if (tmp6) {
-  const _module = require("isMetaQuest");
+  const _module = isMetaQuest;
   tmp6 = !_module.isMetaQuest();
 }
 function encodeTotpSecret(totpSecret) {
   return totpSecret.replace(/[\s._-]+/g, "").toUpperCase();
 }
-const result = require("encode").fileFinishedImporting("utils/MFAUtils.tsx");
+const result = set.fileFinishedImporting("utils/MFAUtils.tsx");
 
 export const hasCrypto = tmp5;
 export const hasWebAuthn = tmp6;
 export const generateTotpSecret = function generateTotpSecret() {
   const uint8Array = new Uint8Array(20);
   const randomValues = _crypto.getRandomValues(uint8Array);
-  const obj = encode;
-  const str = encode.encode(randomValues);
-  const str2 = encode.encode(randomValues).toString("utf8");
-  const str3 = encode.encode(randomValues).toString("utf8").replace(/=/g, "");
-  const str4 = encode.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
-  return encode.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase().replace(/(\w{4})/g, "$1 ").trim();
+  const obj = encodeDefault;
+  const str = encodeDefault.encode(randomValues);
+  const str2 = encodeDefault.encode(randomValues).toString("utf8");
+  const str3 = encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "");
+  const str4 = encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase();
+  return encodeDefault.encode(randomValues).toString("utf8").replace(/=/g, "").toLowerCase().replace(/(\w{4})/g, "$1 ").trim();
 };
 export { encodeTotpSecret };
 export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
@@ -53,7 +57,7 @@ export const encodeTotpSecretAsUrl = function encodeTotpSecretAsUrl(arg0, str) {
   return "otpauth://totp/" + encodeURIResult + ":" + encodeURIResult1 + "?secret=" + formatted + "&issuer=" + encodeURIComponent(str);
 };
 export const captureWebAuthnException = function captureWebAuthnException(closure_1, tags) {
-  let obj = SentryUtils.native;
+  let obj = _modDef1208;
   obj = {};
   const merged = Object.assign(tags);
   tags = undefined;

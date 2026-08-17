@@ -1,18 +1,20 @@
 // discord_app/stores/EditMessageStore.tsx
-import reinjectEphemerals from "reinjectEphemerals";
-import { Store } from "initialize";
-import { createEmptyState } from "../modules/channel_text_area/slate/SlateUtils.tsx";
-import { rebuild } from "../modules/messages/MessageParser.tsx";
-import { explicitContentFromProto } from "../modules/user_settings/UserSettings.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import rebuildDefault from "rebuild" /* 7436 */;
+import createEmptyState from "createEmptyState" /* 7439 */;
+import closure_3 from "reinjectEphemerals" /* 4994 */;
 
-const require = arg1;
+require = arg1;
 let closure_4 = {};
 let closure_5 = {};
+const Store = initializeDefault.Store;
 class EditMessageStore extends Store {
 }
 const prototype = EditMessageStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(reinjectEphemerals);
+  this.waitFor(closure_3);
 };
 prototype["isEditing"] = function isEditing(arg0, arg1) {
   let messageId;
@@ -55,21 +57,17 @@ prototype["getEditingMessage"] = function getEditingMessage(id) {
   }
   return message;
 };
-prototype["getEditActionSource"] = function getEditActionSource(outer1_0) {
-  return table[outer1_0];
+prototype["getEditActionSource"] = function getEditActionSource(closure_1_0) {
+  return table[closure_1_0];
 };
 EditMessageStore.displayName = "EditMessageStore";
-const editMessageStore = new EditMessageStore(require("dispatcher"), {
+const editMessageStore = new EditMessageStore(dispatcherDefault, {
   MESSAGE_START_EDIT: function handleMessageStartEdit(arg0) {
-    let channelId;
-    let content;
-    let messageId;
-    let source;
     ({ channelId, content } = arg0);
     ({ messageId, source } = arg0);
     const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;
     const setting = UseLegacyChatInput.getSetting();
-    let obj = rebuild;
+    let obj = rebuildDefault;
     const unparseResult = obj.unparse(content, channelId);
     obj = { channelId, messageId, textValue: unparseResult, richValue: null };
     if (setting) {
@@ -112,10 +110,10 @@ const editMessageStore = new EditMessageStore(require("dispatcher"), {
     }
   },
   LOGOUT: function handleLogout() {
-    let closure_4 = {};
-    let closure_5 = {};
+    closure_4 = {};
+    closure_5 = {};
   }
 });
-const result = require("rebuild").fileFinishedImporting("stores/EditMessageStore.tsx");
+const result = require("set").fileFinishedImporting("stores/EditMessageStore.tsx");
 
 export default editMessageStore;

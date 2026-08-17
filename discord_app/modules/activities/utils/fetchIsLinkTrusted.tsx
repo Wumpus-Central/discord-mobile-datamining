@@ -1,16 +1,16 @@
 // discord_app/modules/activities/utils/fetchIsLinkTrusted.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchIsLinkTrusted() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c5 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c5 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c5 === 2) {
         c5 = 3;
@@ -38,15 +38,15 @@ function _fetchIsLinkTrusted() {
               obj[0] = body;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp6;
+              closure_2 = tmp6;
               body = undefined;
               if (undefined === body) {
                 c5 = 3;
                 return { value: false, done: true };
               } else {
-                let c4 = 1;
+                c4 = 1;
                 const HTTP = callback(table[2]).HTTP;
-                const obj1 = { url: null, rejectWithError: false, query: null, timeout: 500 };
+                obj1 = { url: null, rejectWithError: false, query: null, timeout: 500 };
                 obj1[0] = c3.ACTIVITIES_TRUSTED_LINKS(tmp20);
                 const obj2 = { url: null };
                 obj2[0] = tmp21;
@@ -91,7 +91,7 @@ function _fetchIsLinkTrusted() {
       }
     })();
   });
-  const _fetchIsLinkTrusted = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -100,7 +100,7 @@ function _fetchIsLinkTrusted() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");
 
 export const fetchIsLinkTrusted = function fetchIsLinkTrusted(id1, arg1) {
   const self = this;

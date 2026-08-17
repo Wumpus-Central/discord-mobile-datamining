@@ -1,4 +1,6 @@
 // discord_app/modules/collectibles/records/ShopAssetConfigRecord.tsx
+import set from "set" /* 2 */;
+
 let AssetDisplayConfigRecord;
 class AssetDisplayConfigRecord {
   constructor(arg0) {
@@ -45,6 +47,6 @@ prototype["toMobileStyles"] = function toMobileStyles() {
   }
   return tmp;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/ShopAssetConfigRecord.tsx");
 
 export { AssetDisplayConfigRecord };

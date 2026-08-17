@@ -1,28 +1,25 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateProductPreview.tsx
-import Button from "Button";
-import { View } from "AVERAGE_FONT_WIDTH_RATIO";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "TableRowInner";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { firstAvatarDecoration } from "../../hooks/useShopProductItems.tsx";
-import { getNameplateData } from "../utils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import getNameplateData from "getNameplateData" /* 1946 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import firstAvatarDecoration from "firstAvatarDecoration" /* 9205 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function NameplateUser(arg0) {
-  let previewAvatarDecoration;
-  let previewNameplate;
   let currentUser;
-  let importDefault;
+  importDefault = undefined;
   let stateFromStores;
   ({ previewNameplate, previewAvatarDecoration } = arg0);
   let obj = currentUser(stateFromStores[11]);
   currentUser = obj.useCurrentUser();
-  let obj1 = currentUser(stateFromStores[13]);
+  obj1 = currentUser(stateFromStores[13]);
   obj = { pendingValue: previewAvatarDecoration, userValue: null };
   let avatarDecoration;
   if (currentUser != null) {
@@ -32,7 +29,7 @@ function NameplateUser(arg0) {
   const tmp5Result = importDefault(stateFromStores[12])(obj1.getProfilePreviewValue(obj));
   importDefault = tmp5Result;
   const tmp5 = importDefault(stateFromStores[12]);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   stateFromStores = currentUser(stateFromStores[14]).useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let tmp4Result = tmp4(tmp2[15]);
   const name = tmp4Result.getName(currentUser);
@@ -50,15 +47,13 @@ function NameplateUser(arg0) {
   const icon = React.useMemo(() => {
     const obj = { user: currentUser, guildId: "a", size: true, avatarDecoration: true, animate: "cartesianOffset", autoStatusCutout: null, "aria-hidden": "\u{1F473}" };
     obj[2] = currentUser(stateFromStores[19]).AvatarSizes.NORMAL;
-    obj[3] = c1;
+    obj[3] = closure_1;
     obj[4] = !stateFromStores;
-    return outer1_6(currentUser(stateFromStores[19]).Avatar, obj);
+    return closure_1_6(currentUser(stateFromStores[19]).Avatar, obj);
   }, items1);
   return callback(currentUser(stateFromStores[20]).UserNameplateRow, { nameplate, icon, label, isPreviewRow: true });
 }
 function PlaceholderUser(end) {
-  let start;
-  let user;
   ({ user, start } = end);
   if (start === undefined) {
     start = false;
@@ -68,9 +63,8 @@ function PlaceholderUser(end) {
     flag = false;
   }
   let obj = { icon: null, label: null, start: null, end: null };
-  obj = { source: obj, size: null, "aria-hidden": true };
+  obj = { source: obj, size: Button.AvatarSizes.NORMAL, "aria-hidden": true };
   obj = { uri: user.avatarSrc };
-  obj[1] = Button.AvatarSizes.NORMAL;
   obj[0] = callback(Button.Avatar, obj);
   obj[1] = user.name;
   obj[2] = start;
@@ -79,23 +73,21 @@ function PlaceholderUser(end) {
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { position: "relative", flex: 1, justifyContent: "center", overflow: "hidden" }, memberListContainer: null, memberListTitle: null, memberListGradient: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingVertical: require("Themes").space.PX_8 };
-let obj1 = { paddingVertical: require("Themes").space.PX_8 };
-createCacheKey[3] = { position: "absolute", right: 0, left: 0, top: 0, bottom: 0, color: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", right: 0, left: 0, top: 0, bottom: 0, color: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
+createCacheKey[2] = { paddingVertical: ThemesDefault.space.PX_8 };
+let obj1 = { paddingVertical: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { position: "absolute", right: 0, left: 0, top: 0, bottom: 0, color: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { position: "absolute", right: 0, left: 0, top: 0, bottom: 0, color: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateProductPreview.tsx");
 
 export default function NameplateProductPreview(product) {
-  let firstAvatarDecoration;
-  let firstNameplate;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = firstAvatarDecoration;
   const shopProductItems = obj.useShopProductItems(product.product);
   ({ firstNameplate, firstAvatarDecoration } = shopProductItems);
-  let obj1 = getNameplateData;
+  obj1 = getNameplateData;
   const nameplateData = obj1.getNameplateData(firstNameplate);
   let obj2 = getNameplateData;
   const nameplateSampleUsers = obj2.getNameplateSampleUsers();
@@ -147,19 +139,19 @@ export default function NameplateProductPreview(product) {
     const _HermesInternal = HermesInternal;
     items4[1] = "" + tmp.memberListGradient.color + "00";
     obj9[3] = items4;
-    items3[1] = callback(LinearGradient, obj9);
+    items3[1] = callback(LinearGradientDefault, obj9);
     const obj10 = { style: null, start: null, end: null, colors: null };
     obj10[0] = tmp.memberListGradient;
     obj10[1] = { x: 0, y: 0.6 };
     obj10[2] = { x: 0, y: 1 };
     const _HermesInternal2 = HermesInternal;
-    const tmp14 = LinearGradient;
+    const tmp14 = LinearGradientDefault;
     const items5 = ["" + tmp.memberListGradient.color + "00", tmp.memberListGradient.color];
     obj10[3] = items5;
-    items3[2] = callback(LinearGradient, obj10);
+    items3[2] = callback(LinearGradientDefault, obj10);
     obj[5] = items3;
     tmp7 = callback2(View, obj);
-    const tmp16 = LinearGradient;
+    const tmp16 = LinearGradientDefault;
   }
   return tmp7;
 };

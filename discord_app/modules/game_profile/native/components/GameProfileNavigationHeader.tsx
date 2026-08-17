@@ -1,40 +1,36 @@
 // discord_app/modules/game_profile/native/components/GameProfileNavigationHeader.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ Image: c4, View: c5, StyleSheet } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { headerContainer: null, headerRow: null, icon: null, titleContainer: null, headerRight: null, rankPillContainer: null };
-createCacheKey = { height: 56, paddingHorizontal: require("Themes").space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
+createCacheKey = { height: 56, paddingHorizontal: ThemesDefault.space.PX_16, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-let obj1 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-createCacheKey[2] = { width: 32, height: 32, borderRadius: require("Themes").radii.sm };
-let obj2 = { width: 32, height: 32, borderRadius: require("Themes").radii.sm };
-createCacheKey[3] = { flex: 1, flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, minWidth: 0 };
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj1 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
+let obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[3] = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, minWidth: 0 };
 createCacheKey[4] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[5] = { flex: 1, flexDirection: "row", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function GameProfileNavigationHeaderTsx1(){const{headerRightProgress}=this.__closure;return{opacity:headerRightProgress.get()};}" };
 let closure_11 = { code: "function GameProfileNavigationHeaderTsx2(){const{headerRightProgress}=this.__closure;return{opacity:1-headerRightProgress.get()};}" };
-let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, minWidth: 0 };
-let result = require("jsxProd").fileFinishedImporting("modules/game_profile/native/components/GameProfileNavigationHeader.tsx");
+let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, minWidth: 0 };
+let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileNavigationHeader.tsx");
 
 export default function GameProfileNavigationHeader(game) {
   game = game.game;
   const application = game.application;
   const headerRight = game.headerRight;
-  let dependencyMap;
+  dependencyMap = undefined;
   let sharedValue;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   dependencyMap = tmp2;
   let obj = game(4115);
   let num = 0;
@@ -45,10 +41,10 @@ export default function GameProfileNavigationHeader(game) {
   const items = [null != headerRight, sharedValue];
   const effect = sharedValue.useEffect(() => {
     let num = 0;
-    if (_undefined) {
+    if (dependencyMap) {
       num = 1;
     }
-    const result = sharedValue.set(game(_undefined[6]).withTiming(num, { duration: 200 }));
+    const result = sharedValue.set(game(4664).withTiming(num, { duration: 200 }));
   }, items);
   let tmp3Result = tmp3(4115);
   const fn = function x() {
@@ -71,7 +67,7 @@ export default function GameProfileNavigationHeader(game) {
     let iconURL;
     if (game != null) {
       let str = "png";
-      if (game(_undefined[7]).SUPPORTS_WEBP) {
+      if (game(1435).SUPPORTS_WEBP) {
         str = "webp";
       }
       iconURL = game.getIconURL(32, str);
@@ -80,7 +76,7 @@ export default function GameProfileNavigationHeader(game) {
       let iconURL1;
       if (application != null) {
         let str2 = "png";
-        if (game(_undefined[7]).SUPPORTS_WEBP) {
+        if (game(1435).SUPPORTS_WEBP) {
           str2 = "webp";
         }
         iconURL1 = obj2.getIconURL(32, str2);
@@ -113,7 +109,7 @@ export default function GameProfileNavigationHeader(game) {
     obj[0] = tmp.headerRow;
     let tmp15Result = null != memo;
     if (tmp15Result) {
-      const obj1 = { source: null, style: null };
+      obj1 = { source: null, style: null };
       let obj2 = { uri: null };
       obj2[0] = memo;
       obj1[0] = obj2;

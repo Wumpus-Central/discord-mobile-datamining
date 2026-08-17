@@ -1,14 +1,15 @@
 // discord_app/modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import set from "set" /* 2 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
+const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/RemoveRecipientSystemMessage.tsx");
 
 export const createRemoveRecipientSystemMessage = function createRemoveRecipientSystemMessage(message) {
-  let roleStyle;
   ({ message, roleStyle } = message);
   const first = message.mentions[0];
   channel = channel.getChannel(message.channel_id);
@@ -18,7 +19,7 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
   }
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle }) };
   if (message.author.id === first) {
     const intl = tmp5(1236).intl;
     const formatToParts = intl.formatToParts;
@@ -35,7 +36,7 @@ export const createRemoveRecipientSystemMessage = function createRemoveRecipient
   } else {
     user = user.getUser(first);
     const userAuthorWithProcessedColor = tmp5(8185).getUserAuthorWithProcessedColor(user, channel);
-    const obj1 = {};
+    obj1 = {};
     const merged1 = Object.assign(obj);
     obj1.otherUsername = userAuthorWithProcessedColor.nick;
     const obj2 = { userId: null, message: null, author: null, roleStyle: null };

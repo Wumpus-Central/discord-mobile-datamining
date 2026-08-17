@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx
-import noop from "noop";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { useIsInActivityPrivacyCopyExperiment } from "../../../activity_privacy/ActivityPrivacyMatchingExperiment.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import useIsInActivityPrivacyCopyExperiment from "useIsInActivityPrivacyCopyExperiment" /* 15049 */;
+import closure_3 from "noop" /* 19 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -57,13 +57,13 @@ createToggle = {
         obj = { direction: null, affectedGuildIds: null, settingName: null };
         ({ direction: obj5[0], affectedGuildIds: obj5[1] } = affectedGuilds);
         obj[2] = activityRestrictionSettingName;
-        ACTION_SHEET_HEIGHT_HALF.openLazy(tmp2(2007)(15050, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
-        const obj4 = ACTION_SHEET_HEIGHT_HALF;
+        ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp2(2007)(15050, dependencyMap.paths), "ActivityPrivacyUpsellActionSheet", obj);
+        const obj4 = ACTION_SHEET_HEIGHT_HALFDefault;
       }
     }
   }
 };
 createToggle = createToggle.createRadio(createToggle);
-const result = require("create").fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ActivityPrivacyDefaultSharingSetting.tsx");
 
 export default createToggle;

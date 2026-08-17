@@ -1,8 +1,9 @@
 // discord_app/modules/telemetry_ring/native/channels/NormalTelemetry.tsx
-import importDefaultResult from "append";
-import importDefaultResult1 from "TelemetryChannel";
+import TelemetryChannel from "TelemetryChannel" /* 13562 */;
+import importDefaultResult from "append" /* 13561 */;
+import importDefaultResult1 from "TelemetryChannel" /* 13562 */;
 
-const require = arg1;
+require = arg1;
 class NormalTelemetryImpl extends tmp3 {
   constructor() {
     tmp2 = require("TelemetryChannel");

@@ -1,11 +1,11 @@
 // discord_app/modules/activities/ActivitiesInTextUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
+import set from "set" /* 692 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "sum" /* 505 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ChannelTypes.tsx";
 
-const require = arg1;
+require = arg1;
 function isActivityInTextSupportedForChannel(channel) {
   if (null == channel) {
     return false;
@@ -26,7 +26,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const result = require("sum").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/ActivitiesInTextUtils.tsx");
 
 export { isActivityInTextSupportedForChannel };
 export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(channel) {
@@ -39,7 +39,7 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
         flag = true;
         if (null != channel.guild_id) {
           flag = true;
-          if (!getUncachedChannelPermissions.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
+          if (!closure_3.can(Permissions.USE_EMBEDDED_ACTIVITIES, channel)) {
             flag = false;
           }
         }
@@ -50,19 +50,19 @@ export const isActivitiesInTextEnabled = function isActivitiesInTextEnabled(chan
 };
 export const useIsActivitiesInTextEnabled = function useIsActivitiesInTextEnabled(id) {
   const _require = id;
-  const items = [ensureGuildLoaded, getUncachedChannelPermissions];
+  const items = [closure_2, closure_3];
   return _initialize.useStateFromStores(items, () => {
-    const channel = outer1_2.getChannel(closure_0);
+    const channel = closure_1_2.getChannel(closure_0);
     let flag = false;
     if (null != channel) {
       flag = false;
       if (undefined !== channel) {
         flag = false;
-        if (outer1_5(channel)) {
+        if (closure_1_5(channel)) {
           flag = true;
           if (null != channel.guild_id) {
             flag = true;
-            if (!outer1_3.can(outer1_4.USE_EMBEDDED_ACTIVITIES, channel)) {
+            if (!closure_1_3.can(closure_1_4.USE_EMBEDDED_ACTIVITIES, channel)) {
               flag = false;
             }
           }
@@ -85,9 +85,9 @@ export const getIsAppLauncherEnabled = function getIsAppLauncherEnabled(channel)
 };
 export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
   const _require = id;
-  const items = [ensureGuildLoaded];
+  const items = [closure_2];
   return _initialize.useStateFromStores(items, () => {
-    const channel = outer1_2.getChannel(closure_0);
+    const channel = closure_1_2.getChannel(closure_0);
     let tmp2 = null != channel;
     if (tmp2) {
       let guild_id;
@@ -96,7 +96,7 @@ export const useIsAppLauncherEnabled = function useIsAppLauncherEnabled(id) {
       }
       let tmp4 = null != guild_id;
       if (!tmp4) {
-        tmp4 = outer1_5(channel);
+        tmp4 = closure_1_5(channel);
       }
       tmp2 = tmp4;
     }

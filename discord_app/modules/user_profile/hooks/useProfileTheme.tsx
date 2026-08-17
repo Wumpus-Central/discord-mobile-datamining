@@ -1,27 +1,21 @@
 // discord_app/modules/user_profile/hooks/useProfileTheme.tsx
-import _slicedToArray from "_slicedToArray";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore";
-import { ThemeTypes } from "ME";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
+import initialize from "initialize" /* 589 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { useEffectiveThemeOverride } from "useProfileThemeOverrideStore" /* 8971 */;
+import { ThemeTypes } from "ME" /* 676 */;
 
-const require = arg1;
-let result = require("useProfileThemeOverrideStore").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/user_profile/hooks/useProfileTheme.tsx");
 
 export default function useProfileTheme(arg0) {
-  let displayProfile;
-  let forceUserTheme;
-  let isPreview;
-  let pendingAvatarSrc;
-  let pendingThemeColors;
-  let user;
   ({ user, displayProfile, pendingAvatarSrc } = arg0);
   ({ pendingThemeColors, isPreview, forceUserTheme } = arg0);
-  const tmp2 = useTheme();
+  const tmp2 = useThemeDefault();
   const tmp3 = useEffectiveThemeOverride();
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => obj.syncProfileThemeWithUserTheme);
   if (pendingAvatarSrc == null) {
     let avatarURL;

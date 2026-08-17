@@ -1,35 +1,30 @@
 // discord_app/modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx
-import addSku from "addSku";
-import _slicedToArray from "_slicedToArray";
-import AlertActionCreators from "../../../../actions/native/AlertActionCreators.tsx";
-import { View } from "useMobileCollectiblesPurchaseSKU";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_8 from "addSku";
-import { PriceSetAssignmentPurchaseTypes as closure_9 } from "ME";
-import { PremiumTypes } from "GuildFeatures";
-import jsxProd from "Stack";
+import timestampDefault from "timestamp" /* 3 */;
+import NativePaymentContextProvider from "NativePaymentContextProvider" /* 9585 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "addSku" /* 4521 */;
+import { PriceSetAssignmentPurchaseTypes as closure_9 } from "ME" /* 676 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
 import { v1 } from "../../../../../_runtime/00514_v1.js";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { NativePaymentContextProvider } from "../../../payments/native/NativePaymentContext.tsx";
 
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function GiftPurchaseSKUView(selectedSkuId) {
-  let giftMessage;
-  let giftRecipientId;
-  let tmp16;
-  let tmp17;
   selectedSkuId = selectedSkuId.selectedSkuId;
   ({ giftRecipientId, giftMessage } = selectedSkuId);
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let currentUser;
   let callback;
   let React;
   let memo;
   let memo1;
-  let closure_8;
+  closure_8 = undefined;
   function _submitGiftPurchase() {
     const self = this;
     const tmp = currentUser(function*() {
@@ -59,30 +54,30 @@ function GiftPurchaseSKUView(selectedSkuId) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let message = tmp7;
-              let c3 = 1;
+              c3 = 1;
               if (null == c5) {
-                outer1_13.error("Cannot proceed with purchase: collectibleProduct is undefined");
-                outer1_1(outer1_2[19]).show({ title: "Product Not Found", body: "The product information could not be loaded. Please try again." });
+                closure_1_13.error("Cannot proceed with purchase: collectibleProduct is undefined");
+                closure_1_1(closure_1_2[19]).show({ title: "Product Not Found", body: "The product information could not be loaded. Please try again." });
                 c3 = 0;
                 c5 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = undefined;
                 return obj1;
               } else {
                 if (null != tmp43.googleSkuIds) {
-                  if (0 !== outer1_6.length) {
+                  if (0 !== closure_1_6.length) {
                     c4 = 2;
                     c5 = 1;
                     const obj2 = { value: null, done: false };
-                    obj2[0] = outer1_8();
+                    obj2[0] = closure_1_8();
                     return obj2;
                   }
                 }
                 const _HermesInternal2 = HermesInternal;
-                outer1_13.error("No Google SKU IDs available for product " + tmp43.skuId);
-                let obj4 = outer1_1(outer1_2[19]);
+                closure_1_13.error("No Google SKU IDs available for product " + tmp43.skuId);
+                let obj4 = closure_1_1(closure_1_2[19]);
                 obj4.show({ title: "Product Not Available", body: "This product is not available for purchase on Google Play." });
                 c3 = 0;
                 c5 = 3;
@@ -95,8 +90,8 @@ function GiftPurchaseSKUView(selectedSkuId) {
             if (1 === tmp7) {
               c3 = 0;
               message = closure_2;
-              outer1_13.warn("Error creating gift purchase:", message);
-              obj1 = outer1_1(outer1_2[19]);
+              closure_1_13.warn("Error creating gift purchase:", message);
+              obj1 = closure_1_1(closure_1_2[19]);
               message = undefined;
               if (message != null) {
                 message = message.message;
@@ -133,7 +128,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
         }
       }
     });
-    const _submitGiftPurchase = tmp;
+    closure_9 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -149,7 +144,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
   dependencyMap = tmp4[1];
   currentUser = memo1.getCurrentUser();
   callback = React.useRef({});
-  let obj1 = selectedSkuId(9625);
+  obj1 = selectedSkuId(9625);
   const giftStyle = obj1.useNativeGiftContext().giftStyle;
   let obj2 = selectedSkuId(589);
   let items = [closure_8];
@@ -171,7 +166,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
     if (null != c5) {
       if (null != tmp.googleSkuIds) {
         const googleSkuIds = tmp.googleSkuIds;
-        if (obj.isPremium(currentUser, outer1_10.TIER_2)) {
+        if (obj.isPremium(currentUser, closure_1_10.TIER_2)) {
           let tmp2 = googleSkuIds[tmp10.MOBILE_PREMIUM_TIER_2];
         } else {
           tmp2 = googleSkuIds[tmp10.MOBILE];
@@ -186,7 +181,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
         return values;
       }
     }
-    outer1_13.warn("No googleSkuIds available for product: " + selectedSkuId);
+    closure_1_13.warn("No googleSkuIds available for product: " + selectedSkuId);
     return [];
   }, items2);
   const items3 = [memo];
@@ -225,14 +220,14 @@ function GiftPurchaseSKUView(selectedSkuId) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp3;
+                closure_1 = tmp3;
                 let callback = tmp7;
-                if (null == outer1_7) {
-                  if (0 !== outer1_6.length) {
-                    if (!outer1_1) {
-                      outer1_2(true);
-                      let c3 = 1;
-                      let obj1 = callback(outer2_2[16]);
+                if (null == closure_1_7) {
+                  if (0 !== closure_1_6.length) {
+                    if (!closure_1_1) {
+                      closure_1_2(true);
+                      c3 = 1;
+                      obj1 = callback(closure_2_2[16]);
                       ref = 2;
                       c5 = 1;
                       obj1 = { value: null, done: false };
@@ -246,16 +241,16 @@ function GiftPurchaseSKUView(selectedSkuId) {
               if (1 === tmp7) {
                 c3 = 0;
                 callback = closure_2;
-                outer2_13.error("Unable to fetch product IDs from Google Play store:", callback);
-                outer1_2(false);
+                closure_2_13.error("Unable to fetch product IDs from Google Play store:", callback);
+                closure_1_2(false);
               } else if (arg0 === 1) {
                 c5 = 3;
                 throw arg1;
               } else if (arg0 !== 2) {
-                if (null != outer1_7) {
-                  ref.current[outer1_7] = true;
+                if (null != closure_1_7) {
+                  ref.current[closure_1_7] = true;
                 }
-                outer1_2(false);
+                closure_1_2(false);
                 c3 = 0;
               }
               c3 = 0;
@@ -276,7 +271,7 @@ function GiftPurchaseSKUView(selectedSkuId) {
           }
         }
       });
-      const _loadGoogleSkus = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -367,9 +362,6 @@ function GiftPurchaseSKUView(selectedSkuId) {
   return closure_11(selectedSkuId(4733).Stack, obj1);
 }
 function SimpleRequestOTPActionSheet(giftMessage) {
-  let giftRecipientId;
-  let requestType;
-  let selectedSkuId;
   ({ selectedSkuId, requestType, giftRecipientId } = giftMessage);
   let _require;
   let obj = _v1;
@@ -395,7 +387,7 @@ function SimpleRequestOTPActionSheet(giftMessage) {
         let tmp6Result = callback2(tmp(9625).NativeGiftContextProvider, obj);
         let tmp8 = callback2;
       }
-      const obj1 = { children: null };
+      obj1 = { children: null };
       obj1[0] = tmp6Result;
       return tmp8(tmp(6950).BottomSheet, obj1);
     }
@@ -413,8 +405,9 @@ function SimpleRequestOTPActionSheet(giftMessage) {
   tmp6Result = tmp6(View, obj2);
 }
 ({ jsxs: unpackModuleId, jsx: closure_12 } = jsxProd);
-const tmp3 = new require("get ActivityIndicator")("PaymentFlowTest.android");
-const result = require("noop").fileFinishedImporting("modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx");
+let closure_13 = new timestampDefault("PaymentFlowTest.android");
+const tmp3 = new timestampDefault("PaymentFlowTest.android");
+const result = require("set").fileFinishedImporting("modules/billing/native/otp/SimpleRequestOTPActionSheet.tsx");
 
 export default function SimpleCreateOTPActionSheetWrapper(arg0) {
   let obj = { skuIDs: [], activeSubscription: null, children: null };

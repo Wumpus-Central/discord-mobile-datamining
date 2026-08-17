@@ -1,12 +1,14 @@
 // discord_app/modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx
-import getMemberListId from "getMemberListId";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleInviteData from "handleInviteData";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import updateVoiceState from "updateVoiceState";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "getMemberListId" /* 7249 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
+import closure_2 from "handleInviteData" /* 4295 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "updateVoiceState" /* 4542 */;
 
 let obj = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildHeaderCountsStore extends PersistedStore {
 }
 const prototype = GuildHeaderCountsStore.prototype;
@@ -15,10 +17,11 @@ prototype["initialize"] = function initialize() {
   if (arg0 === undefined) {
     tmp = obj;
   }
-  this.waitFor(handleInviteData, getMemberListId, mergeGuildAvatar, ensureGuildLoaded, updateVoiceState, getMemberListId);
+  this.waitFor(closure_2, closure_0, closure_3, closure_1, closure_4, closure_0);
   if (tmp == null) {
     tmp = obj;
   }
+  closure_6 = tmp;
 };
 prototype["getState"] = function getState() {
   return obj;
@@ -69,7 +72,7 @@ obj = {
     obj[guildId].activeChannelsCount = guildId.count;
   }
 };
-const guildHeaderCountsStore = new GuildHeaderCountsStore(require("dispatcher"), obj);
-const result = require("handleInviteData").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
+const guildHeaderCountsStore = new GuildHeaderCountsStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/GuildHeaderCountsStore.tsx");
 
 export default guildHeaderCountsStore;

@@ -1,14 +1,17 @@
 // discord_app/modules/clips/native/ClipsManager.tsx
-import { CLIPS_TOAST_DURATION } from "result";
-import "handleRTCConnectionState";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import result2 from "result" /* 4523 */;
+import handleRTCConnectionStateDefault from "handleRTCConnectionState" /* 17024 */;
 
+const CLIPS_TOAST_DURATION = result2.CLIPS_TOAST_DURATION;
+handleRTCConnectionStateDefault;
 class ClipsManager extends tmp2 {
 }
 const prototype = ClipsManager.prototype;
 prototype["showClipsToast"] = function showClipsToast() {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { key: "CLIPS_IN_CALL_WARNING", content: null, toastDurationMs: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t["d+41qJ"]);
@@ -31,6 +34,6 @@ prototype["handleStreamEnded"] = function handleStreamEnded(arg0) {
 
 };
 const clipsManager = new ClipsManager();
-const result = require("dispatcher").fileFinishedImporting("modules/clips/native/ClipsManager.tsx");
+const result = set.fileFinishedImporting("modules/clips/native/ClipsManager.tsx");
 
 export default clipsManager;

@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx
-import noop from "noop";
-import getActiveStageChannelIds from "getActiveStageChannelIds";
-import ensureGuildLoaded from "ensureGuildLoaded";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getActiveStageChannelIds" /* 4989 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/useLiveStageData.tsx");
 
 export const useLiveStageData = function useLiveStageData(stage) {
   const _require = stage;

@@ -1,7 +1,9 @@
 // discord_app/modules/game_claim/UnclaimedGamesStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = null;
+const Store = initializeDefault.Store;
 class UnclaimedGamesStore extends Store {
 }
 const prototype = UnclaimedGamesStore.prototype;
@@ -45,9 +47,9 @@ prototype["getGuildIdsWithUnclaimedGames"] = function getGuildIdsWithUnclaimedGa
   }
 };
 UnclaimedGamesStore.displayName = "UnclaimedGamesStore";
-const unclaimedGamesStore = new UnclaimedGamesStore(require("dispatcher"), {
+const unclaimedGamesStore = new UnclaimedGamesStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
-    let c0 = null;
+    c0 = null;
   },
   UNCLAIMED_GAMES_FETCH_SUCCESS: function handleFetchSuccess(guildIdToGameIds) {
     guildIdToGameIds = guildIdToGameIds.guildIdToGameIds;

@@ -1,29 +1,21 @@
 // discord_app/components_native/warnings/GatedContent.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { container: null, title: null, description: null, buttonGroup: null };
-createCacheKey = { flex: 1, padding: 20, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, textAlign: "center" };
+createCacheKey = { flex: 1, padding: 20, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { width: "100%", maxWidth: 400 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("createCacheKey").fileFinishedImporting("components_native/warnings/GatedContent.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("components_native/warnings/GatedContent.tsx");
 
 export default function GatedContent(onAgree) {
-  let agreement;
-  let agreementButtonVariant;
-  let description;
-  let disagreement;
-  let disagreementButtonVariant;
-  let subtitle;
-  let title;
   ({ agreement, agreementButtonVariant } = onAgree);
   ({ title, subtitle, description } = onAgree);
   if (agreementButtonVariant === undefined) {
@@ -38,14 +30,14 @@ export default function GatedContent(onAgree) {
   const modalType = onAgree.modalType;
   const channelId = onAgree.channelId;
   const guildId = onAgree.guildId;
-  const tmp = createCacheKey();
+  const tmp = callback();
   const items = [modalType, channelId, guildId];
   const effect = modalType.useEffect(() => {
     const result = onAgree(onDisagree[4]).trackNsfwSpaceWarningModalViewed(modalType, channelId, guildId);
   }, items);
   const items1 = [onDisagree, modalType, channelId, guildId];
   const items2 = [onAgree, modalType, channelId, guildId];
-  const callback = modalType.useCallback(() => {
+  callback = modalType.useCallback(() => {
     const result = onAgree(onDisagree[4]).trackNsfwSpaceWarningModalClicked(onAgree(onDisagree[4]).NsfwSpaceWarningModalCta.NSFW_CHANNEL_DISAGREE_CTA, modalType, channelId, guildId);
     if (onDisagree != null) {
       onDisagree();

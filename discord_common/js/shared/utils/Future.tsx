@@ -1,5 +1,7 @@
 // discord_common/js/shared/utils/Future.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/Future.tsx");
 
 export const Future = function Future() {
   const obj = Object.create(new.target.prototype);

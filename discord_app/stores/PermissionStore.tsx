@@ -1,28 +1,27 @@
 // discord_app/stores/PermissionStore.tsx
-import initialize from "initialize";
-import closure_5 from "initialize";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import storeThread from "storeThread";
-import createChannelRecord from "createChannelRecord";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import createdAt from "createdAt";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Permissions } from "ME";
-import { MemberSafetyPagePermissions as closure_18 } from "MemberSafetyPagePermissions";
-import { Store } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
-import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
-import { has } from "../utils/BasicPermissionUtils.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../utils/GuildRecordUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import fromStringAll from "fromString" /* 506 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4028 */;
+import hasDefault from "has" /* 4029 */;
+import closure_4 from "initialize" /* 1982 */;
+import closure_5 from "initialize" /* 4022 */;
+import closure_6 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import closure_7 from "storeThread" /* 4023 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import closure_12 from "createdAt" /* 1930 */;
+import closure_13 from "ensureGuildLoaded" /* 1391 */;
+import closure_14 from "trackCommunicationDisabled" /* 1990 */;
+import closure_15 from "createGuildRecordFromRust" /* 1910 */;
+import closure_16 from "mergeGuildAvatar" /* 1922 */;
+import { Permissions } from "ME" /* 676 */;
+import { MemberSafetyPagePermissions as closure_18 } from "MemberSafetyPagePermissions" /* 4025 */;
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getUncachedChannelPermissions(id, arg1) {
   let flag = arg1;
   if (arg1 === undefined) {
@@ -31,18 +30,18 @@ function getUncachedChannelPermissions(id, arg1) {
   let obj = authStore;
   const currentUser = authStore.getCurrentUser();
   if (null == currentUser) {
-    return importAll(4026).NONE;
+    return applyOverwritesAll.NONE;
   } else {
     const channel = store.getChannel(id);
     if (null == channel) {
-      return importAll(4026).NONE;
+      return applyOverwritesAll.NONE;
     } else {
       const guildId = channel.getGuildId();
       let tmp7 = null != guildId;
       if (tmp7) {
         let isLurkingResult = lurking.isLurking(guildId);
         if (!isLurkingResult) {
-          const member = trackCommunicationDisabled.getMember(guildId, currentUser.id);
+          const member = closure_14.getMember(guildId, currentUser.id);
           let isPending;
           if (member != null) {
             isPending = member.isPending;
@@ -59,19 +58,19 @@ function getUncachedChannelPermissions(id, arg1) {
               if (null == NONE2) {
                 const currentUser1 = obj.getCurrentUser();
                 if (null == currentUser1) {
-                  NONE2 = importAll(4026).NONE;
+                  NONE2 = applyOverwritesAll.NONE;
                 } else {
                   const guild = store2.getGuild(guildId);
                   if (null == guild) {
-                    let NONE = importAll(4026).NONE;
+                    let NONE = applyOverwritesAll.NONE;
                   } else {
                     obj = { user: null, context: null, checkElevated: null };
                     obj[0] = currentUser1;
                     obj[1] = guild;
                     obj[2] = true;
-                    NONE = importAll(4026).computePermissions(obj);
+                    NONE = applyOverwritesAll.computePermissions(obj);
                     dependencyMap[guildId] = NONE;
-                    const obj3 = importAll(4026);
+                    const obj3 = applyOverwritesAll;
                   }
                   NONE2 = NONE;
                 }
@@ -79,15 +78,15 @@ function getUncachedChannelPermissions(id, arg1) {
             }
             return NONE2;
           }
-          obj2 = apply;
+          obj2 = applyDefault;
         }
       }
       obj = { user: null, context: null, checkElevated: null };
       obj[0] = currentUser;
       obj[1] = channel;
       obj[2] = flag;
-      NONE2 = importAll(4026).computePermissions(obj);
-      const obj5 = importAll(4026);
+      NONE2 = applyOverwritesAll.computePermissions(obj);
+      const obj5 = applyOverwritesAll;
     }
   }
 }
@@ -102,8 +101,8 @@ function updateGuildVersion(guildId) {
   }
 }
 function handleConnectionOpen() {
-  let closure_19 = {};
-  let closure_20 = {};
+  closure_19 = {};
+  closure_20 = {};
   for (const key10005 in closure_21) {
     let tmp = key10005;
     let tmp2 = dependencyMap3;
@@ -113,8 +112,8 @@ function handleConnectionOpen() {
   closure_22 = closure_22 + 1;
 }
 function handleGuild() {
-  let closure_19 = {};
-  let closure_20 = {};
+  closure_19 = {};
+  closure_20 = {};
   for (const key10005 in closure_21) {
     let tmp = key10005;
     let tmp2 = dependencyMap3;
@@ -132,8 +131,8 @@ function handleGuildMemberUpdate(user) {
   if (user.user.id !== id) {
     return false;
   } else {
-    let closure_19 = {};
-    let closure_20 = {};
+    closure_19 = {};
+    closure_20 = {};
     for (const key10015 in closure_21) {
       let tmp5 = key10015;
       let tmp6 = dependencyMap3;
@@ -161,7 +160,7 @@ function handleGuildRole(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = apply.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = applyDefault.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -180,7 +179,7 @@ function handleStageInstancesChanged(instance) {
     return false;
   } else {
     const currentUser = authStore.getCurrentUser();
-    let obj = importAll(4026);
+    let obj = applyOverwritesAll;
     obj = { user: null, context: null };
     obj[0] = currentUser;
     obj[1] = channel;
@@ -197,7 +196,7 @@ function handleImpersonateUpdate(guildId) {
   guildId = guildId.guildId;
   delete tmp[tmp2];
   const mutableBasicGuildChannelsForGuild = store.getMutableBasicGuildChannelsForGuild(guildId);
-  const item = apply.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
+  const item = applyDefault.forEach(mutableBasicGuildChannelsForGuild, (arg0) => {
     delete tmp2[tmp];
   });
   closure_22 = closure_22 + 1;
@@ -211,7 +210,7 @@ function handleImpersonateUpdate(guildId) {
   }
 }
 function computePermissions(context, overwrites, roles, excludeGuildPermissions) {
-  let NONE = importAll(4026).NONE;
+  let NONE = applyOverwritesAll.NONE;
   if (context instanceof closure_8) {
     if (set.has(context.type)) {
       const channel = store.getChannel(context.parent_id);
@@ -220,8 +219,8 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
       } else {
         let tmpResult = tmp(4026);
         const tmp24 = computePermissions(channel, overwrites, roles, excludeGuildPermissions);
-        NONE4 = tmpResult.applyThreadPermissions(context, tmp24, storeThread.hasJoined(context.id), trackCommunicationDisabled.isCurrentUserGuest(context.guild_id));
-        const hasJoinedResult = storeThread.hasJoined(context.id);
+        NONE4 = tmpResult.applyThreadPermissions(context, tmp24, closure_7.hasJoined(context.id), closure_14.isCurrentUserGuest(context.guild_id));
+        const hasJoinedResult = closure_7.hasJoined(context.id);
       }
       return NONE4;
     } else {
@@ -266,19 +265,20 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     return NONE;
   }
   obj = { user: authStore.getCurrentUser(), context, overwrites, roles, checkElevated: true, excludeGuildPermissions };
-  NONE = importAll(4026).computePermissions(obj);
+  NONE = applyOverwritesAll.computePermissions(obj);
 }
-({ ChannelRecordBase: metroImportAll, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
+({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: c9 } = createChannelRecord);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: unpackModuleId } = GuildNSFWContentLevel);
 let closure_19 = {};
 let closure_20 = {};
 let closure_21 = {};
 let c22 = 0;
+const Store = initializeDefault.Store;
 class PermissionStore extends Store {
 }
 const prototype = PermissionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, initialize, storeThread, closure_5, handleStageInstanceCreateOrUpdate, mergeGuildAvatar);
+  this.waitFor(closure_13, closure_14, closure_15, closure_4, closure_7, closure_5, closure_6, closure_16);
 };
 prototype["getChannelPermissions"] = function getChannelPermissions(type) {
   if (set.has(type.type)) {
@@ -300,13 +300,13 @@ prototype["getGuildPermissions"] = function getGuildPermissions(guild) {
   if (null == NONE) {
     const currentUser = authStore.getCurrentUser();
     if (null == currentUser) {
-      NONE = importAll(4026).NONE;
+      NONE = applyOverwritesAll.NONE;
     } else {
       guild = store2.getGuild(id);
       if (null == guild) {
-        let NONE2 = importAll(4026).NONE;
+        let NONE2 = applyOverwritesAll.NONE;
       } else {
-        let obj = importAll(4026);
+        let obj = applyOverwritesAll;
         obj = { user: null, context: null, checkElevated: null };
         obj[0] = currentUser;
         obj[1] = guild;
@@ -322,14 +322,7 @@ prototype["getGuildPermissions"] = function getGuildPermissions(guild) {
 prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   const self = this;
   const currentUser = authStore.getCurrentUser();
-  const obj = { canManageGuild: this.can(Permissions.MANAGE_GUILD, guild), canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild), canManageRoles: this.can(Permissions.MANAGE_ROLES, guild), canManageBans: this.can(Permissions.BAN_MEMBERS, guild), canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild), canManageGuildExpressions: null, canViewAuditLog: null, canViewAuditLogV2: null, canManageWebhooks: null, canViewGuildAnalytics: null, canAccessMembersPage: null, isGuildAdmin: null, isOwner: null, isOwnerWithRequiredMfaLevel: null, guild: null };
-  obj[5] = this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild);
-  obj[6] = self.can(Permissions.VIEW_AUDIT_LOG, guild);
-  obj[7] = self.can(Permissions.VIEW_AUDIT_LOG, guild);
-  obj[8] = self.can(Permissions.MANAGE_WEBHOOKS, guild);
-  obj[9] = self.can(Permissions.VIEW_GUILD_ANALYTICS, guild);
-  obj[10] = self.canAccessMemberSafetyPage(guild);
-  obj[11] = self.can(Permissions.ADMINISTRATOR, guild);
+  const obj = { canManageGuild: this.can(Permissions.MANAGE_GUILD, guild), canManageChannels: this.can(Permissions.MANAGE_CHANNELS, guild), canManageRoles: this.can(Permissions.MANAGE_ROLES, guild), canManageBans: this.can(Permissions.BAN_MEMBERS, guild), canManageNicknames: this.can(Permissions.MANAGE_NICKNAMES, guild), canManageGuildExpressions: this.can(Permissions.MANAGE_GUILD_EXPRESSIONS, guild) || self.can(Permissions.CREATE_GUILD_EXPRESSIONS, guild), canViewAuditLog: self.can(Permissions.VIEW_AUDIT_LOG, guild), canViewAuditLogV2: self.can(Permissions.VIEW_AUDIT_LOG, guild), canManageWebhooks: self.can(Permissions.MANAGE_WEBHOOKS, guild), canViewGuildAnalytics: self.can(Permissions.VIEW_GUILD_ANALYTICS, guild), canAccessMembersPage: self.canAccessMemberSafetyPage(guild), isGuildAdmin: self.can(Permissions.ADMINISTRATOR, guild), isOwner: null, isOwnerWithRequiredMfaLevel: null, guild: null };
   let tmp4 = null != currentUser;
   if (tmp4) {
     tmp4 = callback(guild, currentUser);
@@ -344,7 +337,7 @@ prototype["getGuildPermissionProps"] = function getGuildPermissionProps(guild) {
   return obj;
 };
 prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) {
-  let obj = importAll(506);
+  let obj = fromStringAll;
   id = id.id;
   let NONE = dependencyMap[id];
   if (null == NONE) {
@@ -370,7 +363,7 @@ prototype["canAccessMemberSafetyPage"] = function canAccessMemberSafetyPage(id) 
   return obj.hasAny(NONE, closure_18);
 };
 prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
-  let obj = importAll(506);
+  let obj = fromStringAll;
   const id = guild.id;
   let NONE = dependencyMap[id];
   if (null == NONE) {
@@ -393,7 +386,7 @@ prototype["canAccessGuildSettings"] = function canAccessGuildSettings(guild) {
       NONE = NONE2;
     }
   }
-  return obj.hasAny(NONE, importAll(4026).VIEW_GUILD_SETTINGS);
+  return obj.hasAny(NONE, applyOverwritesAll.VIEW_GUILD_SETTINGS);
 };
 prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_MESSAGES, channelId) {
   const self = this;
@@ -410,17 +403,17 @@ prototype["canWithPartialContext"] = function canWithPartialContext(MANAGE_MESSA
 };
 prototype["can"] = function can(arg0, arg1, arg2, arg3, arg4) {
   const tmp = computePermissions(arg1, arg2, arg3, arg4);
-  return importAll(506).has(tmp, arg0);
+  return fromStringAll.has(tmp, arg0);
 };
 prototype["canBasicChannel"] = function canBasicChannel(VIEW_CHANNEL, basicChannel) {
   if ("basicPermissions" in basicChannel) {
-    let hasItem = has.has(basicChannel.basicPermissions, VIEW_CHANNEL);
-    const obj3 = has;
+    let hasItem = hasDefault.has(basicChannel.basicPermissions, VIEW_CHANNEL);
+    const obj3 = hasDefault;
   } else {
-    const obj = importAll(506);
+    const obj = fromStringAll;
     const tmp8 = computePermissions(basicChannel, arg2, arg3, arg4);
-    hasItem = obj.has(tmp8, has.asBigFlag(VIEW_CHANNEL));
-    const obj2 = has;
+    hasItem = obj.has(tmp8, hasDefault.asBigFlag(VIEW_CHANNEL));
+    const obj2 = hasDefault;
   }
   return hasItem;
 };
@@ -431,14 +424,14 @@ prototype["computeBasicPermissions"] = function computeBasicPermissions(basicCha
   if ("basicPermissions" in basicChannel) {
     let basicPermissions = basicChannel.basicPermissions;
   } else {
-    basicPermissions = has.asBasicFlag(computePermissions(basicChannel));
-    const obj = has;
+    basicPermissions = hasDefault.asBasicFlag(computePermissions(basicChannel));
+    const obj = hasDefault;
   }
   return basicPermissions;
 };
 prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, guild) {
   let id = user;
-  if (user instanceof createdAt) {
+  if (user instanceof closure_12) {
     id = user.id;
   }
   if (callback(guild, id)) {
@@ -448,13 +441,13 @@ prototype["canManageUser"] = function canManageUser(BAN_MEMBERS, user, guild) {
     const currentUser = authStore.getCurrentUser();
     if (this.can(BAN_MEMBERS, guild)) {
       if (null != currentUser) {
-        const highestRole = importAll(4026).getHighestRole(guild, currentUser.id);
-        const obj = importAll(4026);
+        const highestRole = applyOverwritesAll.getHighestRole(guild, currentUser.id);
+        const obj = applyOverwritesAll;
       }
-      const highestRole1 = importAll(4026).getHighestRole(guild, id);
+      const highestRole1 = applyOverwritesAll.getHighestRole(guild, id);
       let isRoleHigherResult = null != currentUser;
       if (isRoleHigherResult) {
-        const tmp8Result = importAll(4026);
+        const tmp8Result = applyOverwritesAll;
         isRoleHigherResult = tmp8Result.isRoleHigher(guild, currentUser.id, highestRole, highestRole1);
       }
       return isRoleHigherResult;
@@ -467,8 +460,8 @@ prototype["getHighestRole"] = function getHighestRole(arg0) {
   const currentUser = authStore.getCurrentUser();
   let highestRole = null;
   if (null != currentUser) {
-    highestRole = importAll(4026).getHighestRole(arg0, currentUser.id);
-    const obj = importAll(4026);
+    highestRole = applyOverwritesAll.getHighestRole(arg0, currentUser.id);
+    const obj = applyOverwritesAll;
   }
   return highestRole;
 };
@@ -483,7 +476,7 @@ prototype["isRoleHigher"] = function isRoleHigher(id) {
     }
     tmp3 = id;
   }
-  return importAll(4026).isRoleHigher(id, tmp3, arg1, arg2);
+  return applyOverwritesAll.isRoleHigher(id, tmp3, arg1, arg2);
 };
 prototype["canImpersonateRole"] = function canImpersonateRole(arg0, id) {
   const self = this;
@@ -513,17 +506,17 @@ prototype["getChannelsVersion"] = function getChannelsVersion() {
   return c22;
 };
 PermissionStore.displayName = "PermissionStore";
-const permissionStore = new PermissionStore(require("dispatcher"), {
+const permissionStore = new PermissionStore(dispatcherDefault, {
   BACKGROUND_SYNC: handleConnectionOpen,
   CONNECTION_OPEN: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
   CACHE_LOADED: handleConnectionOpen,
   CACHE_LOADED_LAZY: handleConnectionOpen,
   CONNECTION_CLOSED: function handleConnectionClose() {
-    let closure_20 = {};
-    let closure_19 = {};
-    let closure_21 = {};
-    let c22 = 0;
+    closure_20 = {};
+    closure_19 = {};
+    closure_21 = {};
+    c22 = 0;
   },
   GUILD_CREATE: handleGuild,
   GUILD_UPDATE: handleGuild,
@@ -539,7 +532,7 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
         const obj = { user: null, context: null };
         obj[0] = currentUser;
         obj[1] = channel;
-        const permissions = importAll(4026).computePermissions(obj);
+        const permissions = applyOverwritesAll.computePermissions(obj);
         if (dependencyMap2[channel.id] === permissions) {
           return false;
         } else {
@@ -555,7 +548,7 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
             const tmp10 = dependencyMap3;
           }
         }
-        const obj2 = importAll(4026);
+        const obj2 = applyOverwritesAll;
       }
     }
     return false;
@@ -579,7 +572,7 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
           let tmp5 = importAll;
           let tmp6 = dependencyMap;
           let currentUser = authStore.getCurrentUser();
-          let obj2 = importAll(4026);
+          let obj2 = applyOverwritesAll;
           obj = { user: null, context: null };
           obj[0] = currentUser;
           let tmp7 = channel;
@@ -669,10 +662,10 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
   GUILD_ROLE_UPDATE: handleGuildRole,
   GUILD_ROLE_DELETE: handleGuildRole,
   LOGOUT: function resetState() {
-    let closure_20 = {};
-    let closure_19 = {};
-    let closure_21 = {};
-    let c22 = 0;
+    closure_20 = {};
+    closure_19 = {};
+    closure_21 = {};
+    c22 = 0;
   },
   STAGE_INSTANCE_CREATE: handleStageInstancesChanged,
   STAGE_INSTANCE_UPDATE: handleStageInstancesChanged,
@@ -680,6 +673,6 @@ const permissionStore = new PermissionStore(require("dispatcher"), {
   IMPERSONATE_UPDATE: handleImpersonateUpdate,
   IMPERSONATE_STOP: handleImpersonateUpdate
 });
-const result = require("handleStageInstanceCreateOrUpdate").fileFinishedImporting("stores/PermissionStore.tsx");
+const result = require("set").fileFinishedImporting("stores/PermissionStore.tsx");
 
 export default permissionStore;

@@ -1,8 +1,10 @@
 // discord_app/modules/routing/native/BackPressManager.tsx
-import "initialize";
-import { updateContextMenuState } from "../../../design/components/ContextMenu/native/ContextMenuState.native.tsx";
-import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
-import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import KeyboardTypes from "KeyboardTypes" /* 1627 */;
+import useKeyboardType from "useKeyboardType" /* 4239 */;
+import initializeDefault from "initialize" /* 4720 */;
+import updateContextMenuState from "updateContextMenuState" /* 9959 */;
 
 function handleBackPress() {
   let obj = updateContextMenuState;
@@ -18,7 +20,8 @@ function handleBackPress() {
   }
   return flag;
 }
-require("get ActivityIndicator").BackHandler;
+get_ActivityIndicator.BackHandler;
+initializeDefault;
 class BackPressManager extends tmp2 {
 }
 const prototype = BackPressManager.prototype;
@@ -38,6 +41,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const backPressManager = new BackPressManager();
-let result = require("useKeyboardType").fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
+let result = set.fileFinishedImporting("modules/routing/native/BackPressManager.tsx");
 
 export default backPressManager;

@@ -1,5 +1,7 @@
 // discord_common/js/shared/utils/SetUtils.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
+import set2 from "set" /* 2 */;
+
+const result = set2.fileFinishedImporting("../discord_common/js/shared/utils/SetUtils.tsx");
 
 export const areSetsEqual = function areSetsEqual(set, set1) {
   if (set === set1) {

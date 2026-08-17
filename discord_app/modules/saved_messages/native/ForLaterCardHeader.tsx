@@ -1,26 +1,26 @@
 // discord_app/modules/saved_messages/native/ForLaterCardHeader.tsx
-import { View } from "get ActivityIndicator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
-import { FacepileGroupDMAvatar } from "../../group_dm/native/GroupDMAvatar.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6685 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import FacepileGroupDMAvatarDefault from "FacepileGroupDMAvatar" /* 9916 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 function HeaderIcon(channel) {
   channel = channel.channel;
   let obj = channel(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
   if (null != stateFromStores) {
     obj = { guild: null, size: null };
     obj[0] = stateFromStores;
     obj[1] = tmp2(7188).GuildIconSizes.XSMALL;
-    let tmp6Result = callback(GuildIconSizes, obj);
-    const tmp13 = GuildIconSizes;
+    let tmp6Result = callback(GuildIconSizesDefault, obj);
+    const tmp13 = GuildIconSizesDefault;
   } else {
     let isGroupDMResult;
     if (channel != null) {
@@ -30,10 +30,10 @@ function HeaderIcon(channel) {
       obj = { channel: null, size: null };
       obj[0] = channel;
       obj[1] = tmp2(1297).AvatarSizes.XSMALL;
-      tmp6Result = tmp6(FacepileGroupDMAvatar, obj);
-      const tmp10 = FacepileGroupDMAvatar;
+      tmp6Result = tmp6(FacepileGroupDMAvatarDefault, obj);
+      const tmp10 = FacepileGroupDMAvatarDefault;
     } else {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp.dmIcon;
       obj1[1] = tmp6(tmp2(6867).ChatIcon, { size: "xxs" });
       tmp6Result = tmp6(View, obj1);
@@ -45,10 +45,10 @@ function ChannelName(channel) {
   channel = channel.channel;
   const tmp = callback2();
   let obj = channel(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(channel.guild_id));
-  const tmp5 = computeChannelName(channel, false);
-  let obj1 = channel(6832);
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(channel.guild_id));
+  const tmp5 = computeChannelNameDefault(channel, false);
+  obj1 = channel(6832);
   const channelIconComponentWithGuild = obj1.getChannelIconComponentWithGuild(channel, stateFromStores);
   let isPrivateResult = channel.isPrivate();
   if (!isPrivateResult) {
@@ -72,16 +72,17 @@ function ChannelName(channel) {
   obj[1] = items1;
   return closure_6(View, obj);
 }
+const View = get_ActivityIndicator.View;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { cardHeader: { flexDirection: "row", alignItems: "center", gap: 8 }, dmIcon: null, channelNameContainer: null, channelName: null, channelTypeIcon: null, actionsContainer: null };
-obj = { padding: 6, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.sm };
+obj = { padding: 6, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 obj[2] = { flexDirection: "row", alignItems: "center", flexShrink: 1 };
 obj[3] = { flexShrink: 1 };
 obj[4] = { marginRight: 4 };
 obj[5] = { marginVertical: -4, marginLeft: "auto" };
 let closure_7 = createCacheKey.createStyles(obj);
-const result = require("jsxProd").fileFinishedImporting("modules/saved_messages/native/ForLaterCardHeader.tsx");
+const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterCardHeader.tsx");
 
 export const ForLaterCardHeader = function ForLaterCardHeader(channel) {
   channel = channel.channel;

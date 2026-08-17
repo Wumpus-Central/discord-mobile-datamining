@@ -1,38 +1,31 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "set";
-import VoicePanelModes from "VoicePanelModes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { memoResult1 } from "VoicePanelChatView.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import memoResult1Default from "memoResult1" /* 11437 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import VoicePanelModes from "VoicePanelModes" /* 11440 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function renderChat(shown) {
-  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(memoResult1, obj) };
+  obj = { collapsable: false, style: absoluteFill.absoluteFill, children: callback(memoResult1Default, obj) };
   obj = { shown };
   return callback(closure_6, obj);
 }
 let c4 = importAllResult;
 ({ StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
-({ MODE_CHANGE_PHYSICS: error, VoicePanelModes: metroImportAll } = VoicePanelModes);
+({ MODE_CHANGE_PHYSICS: error, VoicePanelModes: closure_8 } = VoicePanelModes);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { drawer: null };
-obj = { flex: 1, zIndex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+obj = { flex: 1, zIndex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((shown) => {
-  let tmp2;
-  let tmp3;
   shown = shown.shown;
   const renderContent = shown.renderContent;
-  let dependencyMap;
+  dependencyMap = undefined;
   let ref;
   let obj = importAllResult;
   [tmp2, tmp3] = ref(importAllResult.useState(!shown), 2);
@@ -74,18 +67,13 @@ let closure_14 = { code: "function VoicePanelControlsDrawerTsx1(){const{getContr
 let closure_15 = { code: "function VoicePanelControlsDrawerTsx2(){const{wrapperSpecs,mode}=this.__closure;return[wrapperSpecs.get().drawerMode,mode.get()];}" };
 let closure_16 = { code: "function VoicePanelControlsDrawerTsx3(props,previous){const{cheapWorkletArrayShallowEqual,VoicePanelModes,runOnJS,setFreeze}=this.__closure;if(cheapWorkletArrayShallowEqual(props,previous!==null&&previous!==void 0?previous:undefined))return;const[isDrawer,mode]=props;if(previous!=null&&isDrawer===previous[0]&&mode===previous[1]){return;}if(mode!==VoicePanelModes.PANEL||!isDrawer){runOnJS(setFreeze)(true);}else{runOnJS(setFreeze)(false);}}" };
 const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestureSpecs) {
-  let sharedTab;
-  let tab;
-  let tmp6;
-  let tmp7;
-  let wrapperSpecs;
   ({ tab, sharedTab, wrapperSpecs } = gestureSpecs);
   gestureSpecs = gestureSpecs.gestureSpecs;
   const openTab = gestureSpecs.openTab;
   let mode;
   let windowDimensions;
   let safeArea;
-  let c6;
+  c6 = undefined;
   let obj = windowDimensions;
   const context = windowDimensions.useContext(gestureSpecs(openTab[10]));
   mode = context.mode;
@@ -99,16 +87,15 @@ const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestu
   if (tmp8) {
     tmp7(false);
   }
-  let obj1 = wrapperSpecs(tmp2[11]);
+  obj1 = wrapperSpecs(tmp2[11]);
   const fn = function b() {
-    const obj = { width: null, opacity: null };
-    obj[0] = wrapperSpecs(openTab[12]).getControlsDrawerOpenWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
+    const obj = { width: wrapperSpecs(openTab[12]).getControlsDrawerOpenWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right), opacity: null };
     const obj2 = wrapperSpecs(openTab[12]);
     let num = 0;
     if (wrapperSpecs.get().height >= 200) {
       num = 1;
     }
-    obj[1] = wrapperSpecs(openTab[13]).withSpring(num, outer1_7);
+    obj[1] = wrapperSpecs(openTab[13]).withSpring(num, closure_1_7);
     return obj;
   };
   obj = { getControlsDrawerOpenWidth: wrapperSpecs(tmp2[12]).getControlsDrawerOpenWidth, windowDimensions, safeArea, withSpring: wrapperSpecs(tmp2[13]).withSpring, wrapperSpecs, TRANSITIONAL_HEIGHT: 200, MODE_CHANGE_PHYSICS: closure_7 };
@@ -141,19 +128,19 @@ const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestu
         [tmp6, tmp7] = tmp5;
         tmp8 = null != arg1 && tmp6 === arg1[0] && tmp7 === arg1[1];
         if (!tmp8) {
-          tmp9 = outer1_8;
-          if (tmp7 === outer1_8.PANEL) {
+          tmp9 = closure_1_8;
+          if (tmp7 === closure_1_8.PANEL) {
             if (tmp6) {
               tmpResult = tmp(tmp2[11]);
-              tmp12 = c6;
+              tmp12 = closure_6;
               flag2 = false;
-              tmp13 = tmpResult.runOnJS(c6)(false);
+              tmp13 = tmpResult.runOnJS(closure_6)(false);
             }
           }
           tmpResult1 = tmp(tmp2[11]);
-          tmp10 = c6;
+          tmp10 = closure_6;
           flag = true;
-          tmp11 = tmpResult1.runOnJS(c6)(true);
+          tmp11 = tmpResult1.runOnJS(closure_6)(true);
         }
       }
       return;
@@ -166,8 +153,8 @@ const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestu
   const animatedReaction = wrapperSpecs(openTab[11]).useAnimatedReaction(V, M);
   let items = [openTab];
   const items1 = [gestureSpecs];
-  const callback = obj.useCallback((isVisible) => outer1_9(gestureSpecs(openTab[15]), { isVisible, openTab }), items);
-  const callback1 = obj.useCallback(() => outer1_9(gestureSpecs(openTab[16]), { gestureSpecs }), items1);
+  const callback = obj.useCallback((isVisible) => closure_1_9(gestureSpecs(openTab[15]), { isVisible, openTab }), items);
+  const callback1 = obj.useCallback(() => closure_1_9(gestureSpecs(openTab[16]), { gestureSpecs }), items1);
   obj1 = { style: items2, children: null };
   items2 = [tmp4.drawer, animatedStyle];
   let tmp17 = !tmp6;
@@ -188,7 +175,7 @@ const memoResult1 = importAllResult.memo(function VoicePanelControlsDrawer(gestu
   obj1[1] = items3;
   return closure_10(tmp(openTab[11]).View, obj1);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelControlsDrawer.tsx");
 
 export default memoResult1;
 export const LazyContentFreezer = memoResult;

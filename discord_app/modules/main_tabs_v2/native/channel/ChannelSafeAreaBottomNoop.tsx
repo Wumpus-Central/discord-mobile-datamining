@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const memoResult = require("noop").memo(function ChannelSafeAreaNoop() {
+const memoResult = importAllResult.memo(function ChannelSafeAreaNoop() {
   return <View />;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/ChannelSafeAreaBottomNoop.tsx");
 
 export default memoResult;

@@ -1,13 +1,13 @@
 // discord_app/stores/MessageReactionsStore.tsx
-import initialize from "initialize";
-import createdAt from "createdAt";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import checkReactionResponseAll from "checkReactionResponse" /* 7511 */;
+import closure_2 from "initialize" /* 4022 */;
+import closure_3 from "createdAt" /* 1930 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
 function reactionKey(arg0, arg1, item10022) {
-  let id;
-  let name;
   ({ name, id } = arg1);
   if (id == null) {
     id = "";
@@ -38,8 +38,6 @@ prototype = function Reaction() {
   return obj;
 }.prototype;
 prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
-  let id;
-  let name;
   ({ name, id } = emoji);
   if (id == null) {
     id = "";
@@ -61,11 +59,12 @@ prototype["ensure"] = function ensure(messageId, emoji, reactionType) {
   dependencyMap[combined] = tmp3;
   return tmp3;
 };
+const Store = initializeDefault.Store;
 class MessageReactionsStore extends Store {
 }
 const prototype2 = MessageReactionsStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, initialize, mergeGuildAvatar);
+  this.waitFor(closure_4, closure_2, closure_5);
 };
 prototype2["getKnownReactorIds"] = function getKnownReactorIds(arg0, arg1) {
   const set = new Set();
@@ -95,7 +94,7 @@ prototype2["getKnownReactorIds"] = function getKnownReactorIds(arg0, arg1) {
   }
   return set;
 };
-prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, closure_9, VOTE) {
+prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, closure_1_15, VOTE) {
   const ensureResult = prototype.ensure(messageId, emoji, VOTE);
   if (!ensureResult.fetched) {
     channel = channel.getChannel(channelId);
@@ -107,31 +106,31 @@ prototype2["getReactions"] = function getReactions(channelId, messageId, emoji, 
     obj[0] = channelId;
     obj[1] = messageId;
     obj[2] = emoji;
-    obj[3] = closure_9;
+    obj[3] = closure_1_15;
     obj[4] = VOTE;
-    const reactors = importAll(7511).getReactors(obj);
+    const reactors = checkReactionResponseAll.getReactors(obj);
     ensureResult.fetched = true;
-    const obj2 = importAll(7511);
+    const obj2 = checkReactionResponseAll;
   }
   return ensureResult.users;
 };
 MessageReactionsStore.displayName = "MessageReactionsStore";
-const messageReactionsStore = new MessageReactionsStore(require("dispatcher"), {
+const messageReactionsStore = new MessageReactionsStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_6 = {};
+    closure_6 = {};
   },
   MESSAGE_REACTION_ADD: handleReaction,
   MESSAGE_REACTION_REMOVE: handleReaction,
   MESSAGE_REACTION_ADD_USERS: function handleAddUserReactions(users) {
     users = users.users;
-    let closure_0;
+    closure_0 = undefined;
     closure_0 = prototype.ensure(users.messageId, users.emoji, users.reactionType);
     const item = users.forEach((id) => {
       users = users.users;
-      return users.set(id.id, new outer1_3(id));
+      return users.set(id.id, new closure_1_3(id));
     });
   }
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("stores/MessageReactionsStore.tsx");
+let result = require("set").fileFinishedImporting("stores/MessageReactionsStore.tsx");
 
 export default messageReactionsStore;

@@ -1,22 +1,18 @@
 // discord_app/modules/auth/native/components/AuthFormView.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useWideAuthView } from "../useWideAuthView.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { context } from "WideAuthScrollContext.tsx";
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0) => {
   let obj = { container: null, flex: null, content: null, subHeader: null };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, flex: 1 };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
   obj[0] = obj;
   obj[1] = { flex: 1 };
   let num = 0;
@@ -48,19 +44,13 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   obj[3] = { marginTop: 8, alignItems: "center" };
   return obj;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/AuthFormView.tsx");
 
 export default function AuthFormView(arg0) {
-  let backgroundImageCover;
-  let backgroundImageSource;
-  let children;
-  let contentStyle;
-  let headerText;
-  let subHeader;
   ({ children, headerText, subHeader, contentStyle } = arg0);
   let _require;
   ({ backgroundImageSource, backgroundImageCover } = arg0);
-  const tmp3 = useWideAuthView();
+  const tmp3 = useWideAuthViewDefault();
   const tmp4 = callback2(tmp3);
   _require = React.useContext(_context.WideAuthScrollContext);
   if (tmp3) {
@@ -81,7 +71,7 @@ export default function AuthFormView(arg0) {
     const items1 = [tmp15, , ];
     let tmp17 = null;
     if (null != subHeader) {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp4.subHeader;
       obj1[1] = subHeader;
       tmp17 = callback(closure_4, obj1);

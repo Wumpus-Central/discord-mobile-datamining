@@ -1,11 +1,10 @@
 // discord_app/modules/instant_invite/native/DCDSendUtils.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeIntentsModule.tsx";
+import set from "set" /* 2 */;
+import enforcingDefault from "enforcing" /* 4647 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
-let c3;
-let c4;
 ({ Linking: c3, NativeModules: c4 } = get_ActivityIndicator);
-const result = require("enforcing").fileFinishedImporting("modules/instant_invite/native/DCDSendUtils.tsx");
+const result = set.fileFinishedImporting("modules/instant_invite/native/DCDSendUtils.tsx");
 
 export const sendSMS = function sendSMS(body, recipients) {
   if (obj.isAndroid()) {
@@ -17,8 +16,8 @@ export const sendSMS = function sendSMS(body, recipients) {
     if (recipients == null) {
       recipients = [];
     }
-    enforcing.sendSMS(str, recipients);
-    const obj2 = enforcing;
+    enforcingDefault.sendSMS(str, recipients);
+    const obj2 = enforcingDefault;
   } else {
     const DCDSend = closure_4.DCDSend;
     DCDSend.sendSMS(body, recipients);
@@ -38,8 +37,8 @@ export const sendMail = function sendMail(subject, subject, recipients) {
     if (recipients == null) {
       recipients = [];
     }
-    enforcing.sendMail(str, str2, recipients);
-    const obj2 = enforcing;
+    enforcingDefault.sendMail(str, str2, recipients);
+    const obj2 = enforcingDefault;
   } else {
     const DCDSend = closure_4.DCDSend;
     DCDSend.sendMail(subject, subject);
@@ -47,8 +46,8 @@ export const sendMail = function sendMail(subject, subject, recipients) {
 };
 export const canSendSMS = function canSendSMS() {
   if (obj.isAndroid()) {
-    let resolved = Promise.resolve(enforcing.canSendSMS());
-    const obj2 = enforcing;
+    let resolved = Promise.resolve(enforcingDefault.canSendSMS());
+    const obj2 = enforcingDefault;
   } else {
     const DCDSend = closure_4.DCDSend;
     resolved = DCDSend.canSendSMS();
@@ -57,8 +56,8 @@ export const canSendSMS = function canSendSMS() {
 };
 export const canSendMail = function canSendMail() {
   if (obj.isAndroid()) {
-    let resolved = Promise.resolve(enforcing.canSendMail());
-    const obj2 = enforcing;
+    let resolved = Promise.resolve(enforcingDefault.canSendMail());
+    const obj2 = enforcingDefault;
   } else {
     const DCDSend = closure_4.DCDSend;
     resolved = DCDSend.canSendMail();
@@ -69,15 +68,15 @@ export const canOpenUrlScheme = function canOpenUrlScheme(closure_3) {
   const _require = closure_3;
   if (obj.isAndroid()) {
     try {
-      return Promise.resolve(enforcing.canOpenUrlScheme(closure_3));
+      return Promise.resolve(enforcingDefault.canOpenUrlScheme(closure_3));
     } catch (err) {
       return Promise.resolve(false);
     }
   } else {
     const promise = new Promise((arg0) => {
-      let closure_0 = arg0;
-      const canOpenURLResult = outer1_3.canOpenURL("" + closure_0 + "://app");
-      outer1_3.canOpenURL("" + closure_0 + "://app").then((arg0) => {
+      closure_0 = arg0;
+      const canOpenURLResult = closure_1_3.canOpenURL("" + closure_0 + "://app");
+      closure_1_3.canOpenURL("" + closure_0 + "://app").then((arg0) => {
         callback(arg0);
       }).catch(() => {
         callback(false);

@@ -1,20 +1,20 @@
 // discord_app/modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx
-import noop from "noop";
-import initialize from "initialize";
-import { AnalyticsSections } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initialize" /* 4558 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesStreamVerificationBottomSheet.tsx");
 
 export default function SecureFramesStreamVerificationBottomSheet(channelId) {
   channelId = channelId.channelId;
   const streamKey = channelId.streamKey;
   let obj = channelId(589);
-  const items = [initialize];
+  const items = [closure_4];
   const items1 = [channelId];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const secureFramesState = outer1_4.getSecureFramesState(streamKey);
+    const secureFramesState = closure_1_4.getSecureFramesState(streamKey);
     let epochAuthenticator;
     if (secureFramesState != null) {
       epochAuthenticator = secureFramesState.epochAuthenticator;
@@ -22,11 +22,11 @@ export default function SecureFramesStreamVerificationBottomSheet(channelId) {
     return epochAuthenticator;
   });
   const callback = React.useCallback((message) => {
-    let obj = channelId(outer1_2[5]);
+    let obj = channelId(closure_1_2[5]);
     obj = { channelId };
     const result = obj.trackE2EEStreamVerificationShareClicked(obj);
     obj = { message };
-    channelId(outer1_2[6]).showShareActionSheet(obj, outer1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
+    channelId(closure_1_2[6]).showShareActionSheet(obj, closure_1_5.SECURE_FRAMES_STREAM_BOTTOM_SHEET);
   }, items1);
   obj = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   const intl = channelId(1236).intl;

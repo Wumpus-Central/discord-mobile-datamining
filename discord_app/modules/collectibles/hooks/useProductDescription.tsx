@@ -1,7 +1,8 @@
 // discord_app/modules/collectibles/hooks/useProductDescription.tsx
-import { useMemo } from "noop";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
 
 function getBundleDescription(bundledProducts) {
   let flag = arg1;
@@ -58,7 +59,7 @@ function getBundleDescription(bundledProducts) {
             let tmp37 = tmp5;
             let tmp38 = tmp7;
             let intl6 = tmp6(1236).intl;
-            let obj1 = { itemName: null };
+            obj1 = { itemName: null };
             let tmp39 = item10012;
             obj1[0] = tmp4.name;
             let arr1 = items.push(intl6.formatToPlainString(tmp6(1236).t["2keXky"], obj1));
@@ -84,10 +85,11 @@ function getBundleDescription(bundledProducts) {
     }
   }
 }
-const result = require("CollectiblesItemType").fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
+const useMemo = noop.useMemo;
+const result = set.fileFinishedImporting("modules/collectibles/hooks/useProductDescription.tsx");
 
 export const useProductDescription = function useProductDescription(product) {
-  let closure_0 = product;
+  closure_0 = product;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -100,7 +102,7 @@ export const useProductDescription = function useProductDescription(product) {
           if (tmp.type === product(flag[2]).CollectiblesItemType.BUNDLE) {
             const summary = tmp.summary;
             if (summary.includes("{joinedItems}")) {
-              return tmp.summary.replace("{joinedItems}", outer1_3(tmp, flag));
+              return tmp.summary.replace("{joinedItems}", closure_1_3(tmp, flag));
             }
           }
           return tmp.summary;
@@ -124,7 +126,7 @@ export const useProductDescription = function useProductDescription(product) {
       const intl = product(flag[1]).intl;
       return intl.string(product(flag[1]).t.fWzWPp);
     } else if (product(flag[2]).CollectiblesItemType.BUNDLE === type) {
-      return outer1_3(tmp, flag);
+      return closure_1_3(tmp, flag);
     } else {
       return "";
     }

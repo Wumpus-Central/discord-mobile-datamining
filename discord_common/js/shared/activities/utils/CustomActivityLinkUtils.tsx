@@ -1,5 +1,5 @@
 // discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 let obj = { MANAGED: 0, [0]: "MANAGED", QUICK: 1, [1]: "QUICK" };
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/activities/utils/CustomActivityLinkUtils.tsx");

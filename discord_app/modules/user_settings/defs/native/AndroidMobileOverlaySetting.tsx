@@ -1,10 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx
-import getUserAgnosticState from "getUserAgnosticState";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import dispatcherDefault from "dispatcher" /* 12555 */;
+import closure_2 from "getUserAgnosticState" /* 12548 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -12,10 +13,10 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   useValue: function useAndroidMobileOverlaySettingValue() {
-    const items = [getUserAgnosticState];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => enabled.getEnabled());
   },
-  onValueChange: require("dispatcher").setEnabled,
+  onValueChange: dispatcherDefault.setEnabled,
   useDescription: function useAndroidMobileOverlaySettingDescription() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.Wfoivk);
@@ -23,6 +24,6 @@ createToggle = {
   usePredicate: require("getUserAgnosticState").isMobileOverlaySupported
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AndroidMobileOverlaySetting.tsx");
 
 export default createToggle;

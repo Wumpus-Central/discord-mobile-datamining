@@ -1,16 +1,17 @@
 // discord_app/modules/collectibles/native/OrbBadgePreview.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { filterLayer } from "../../user_profile/native/UserProfilePreview.tsx";
-import { useCurrentUser } from "../hooks/useCurrentUser.tsx";
-import { hasAtLeastOneGPlaySynced } from "CollectiblesUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useCurrentUser from "useCurrentUser" /* 9176 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9249 */;
+import filterLayerDefault from "filterLayer" /* 9284 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_5 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/OrbBadgePreview.tsx");
 
 export const OrbBadgePreview = function OrbBadgePreview() {
   let obj = useCurrentUser;
@@ -18,7 +19,7 @@ export const OrbBadgePreview = function OrbBadgePreview() {
   const currentUser = obj.useCurrentUser();
   obj = { compact: true, user: currentUser, additionalBadges: null, accessibilityLabel: null };
   const tmp = callback();
-  const tmp3 = filterLayer;
+  const tmp3 = filterLayerDefault;
   const items = [hasAtLeastOneGPlaySynced.createOrbProfileBadge()];
   obj[2] = items;
   const intl = getSystemLocale.intl;

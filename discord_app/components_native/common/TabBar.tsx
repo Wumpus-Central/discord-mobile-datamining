@@ -1,29 +1,19 @@
 // discord_app/components_native/common/TabBar.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NOOP } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 function Tab(index) {
-  let children;
-  let isSelected;
-  let onSelect;
-  let tabStyle;
-  let tabStyleActive;
-  let tabStyleSelected;
-  let tmp3;
-  let tmp4;
   index = index.index;
   ({ isSelected, onSelect } = index);
   let callback;
   ({ children, tabStyle, tabStyleActive, tabStyleSelected } = index);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   [tmp3, tmp4] = callback(React.useState(() => false), 2);
   callback = tmp4;
   const items = [tmp4];
@@ -58,16 +48,13 @@ function Tab(index) {
 }
 ({ View: c4, TouchableWithoutFeedback: c5, FlatList: closure_6 } = get_ActivityIndicator);
 createCacheKey = { innerContainer: { flexDirection: "row", alignItems: "stretch" }, tab: { flexGrow: 1, flexBasis: "auto", flexShrink: 0, alignItems: "center", justifyContent: "center", marginBottom: 1, marginHorizontal: 1, padding: 10, borderBottomWidth: 2, borderBottomColor: "transparent" }, tabActive: { backgroundColor: "rgba(0,0,0,0.1)" }, tabSelected: null, container: null };
-createCacheKey = { borderBottomColor: require("Themes").unsafe_rawColors.BRAND_600 };
+createCacheKey = { borderBottomColor: ThemesDefault.unsafe_rawColors.BRAND_600 };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/common/TabBar.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("components_native/common/TabBar.tsx");
 
 export default function TabBar(tabIndexSelected) {
-  let containerStyle;
-  let initialNumTabsToRender;
-  let tabs;
   tabIndexSelected = tabIndexSelected.tabIndexSelected;
   const tabStyle = tabIndexSelected.tabStyle;
   let first = tabStyle;
@@ -84,9 +71,9 @@ export default function TabBar(tabIndexSelected) {
     flag2 = false;
   }
   let ref;
-  let closure_7;
+  closure_7 = undefined;
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   ref = tabStyleSelected.useRef(null);
   closure_7 = tabStyleSelected.useRef(tabIndexSelected);
   const items = [tabIndexSelected];
@@ -108,8 +95,8 @@ export default function TabBar(tabIndexSelected) {
   const items2 = [first];
   const effect1 = tabStyleSelected.useEffect(() => {
     const timeout = setTimeout(() => {
-      if (outer1_7.current === closure_1) {
-        const current = outer1_6.current;
+      if (closure_1_7.current === closure_1) {
+        const current = closure_1_6.current;
         if (current != null) {
           const obj = { index: null, viewPosition: 1 };
           obj[0] = tmp;
@@ -123,9 +110,9 @@ export default function TabBar(tabIndexSelected) {
   }, items2);
   const items3 = [tabIndexSelected, tabStyle, tabStyleActive, tabStyleSelected, flag2, onSelect, callback];
   const callback1 = tabStyleSelected.useCallback((arg0, arg1) => "tab-" + arg1, []);
-  const callback2 = tabStyleSelected.useCallback((children) => {
+  callback2 = tabStyleSelected.useCallback((children) => {
     const index = children.index;
-    return callback(outer1_10, { index, isSelected: index === tabIndexSelected, tabStyle: first, tabStyleActive, tabStyleSelected, onSelect: flag2 ? callback : onSelect, children: children.item });
+    return callback(closure_1_10, { index, isSelected: index === tabIndexSelected, tabStyle: first, tabStyleActive, tabStyleSelected, onSelect: flag2 ? callback : onSelect, children: children.item });
   }, items3);
   let obj = { style: tmp.container, accessibilityRole: "tablist", accessibilityLabel: null, children: null };
   const memo = tabStyleSelected.useMemo(() => {
@@ -134,10 +121,9 @@ export default function TabBar(tabIndexSelected) {
   }, []);
   const intl = tabIndexSelected(first[8]).intl;
   obj[2] = intl.string(tabIndexSelected(first[8]).t.t1qXlK);
-  obj = { gesture: memo, children: null };
+  obj = { gesture: memo, children: callback(ref, obj) };
   obj = { ref, contentContainerStyle: items4, horizontal: true, data: tabs, renderItem: callback2, keyExtractor: callback1, initialNumToRender: initialNumTabsToRender, onScrollToIndexFailed: closure_7, showsHorizontalScrollIndicator: !flag };
   items4 = [containerStyle, tmp.innerContainer];
-  obj[1] = callback(ref, obj);
   obj[3] = callback(tabIndexSelected(first[7]).GestureDetector, obj);
   return callback(onSelect, obj);
 };

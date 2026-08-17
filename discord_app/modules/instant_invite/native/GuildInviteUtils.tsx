@@ -1,32 +1,30 @@
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getSystemLocale from "getSystemLocale";
-import comparator from "comparator";
-import handleInviteData from "handleInviteData";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import closure_8 from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { setSendState } from "setSendState";
-import { InviteSendStates } from "InviteSendStates";
-import ME from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "comparator" /* 1980 */;
+import closure_6 from "handleInviteData" /* 4295 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_10 from "insertUnsortedGuilds" /* 5078 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import { setSendState } from "setSendState" /* 12332 */;
+import { InviteSendStates } from "InviteSendStates" /* 4371 */;
+import ME from "ME" /* 676 */;
 
-let closure_14;
-let closure_15;
-const require = arg1;
+require = arg1;
 function _sendGuildInvite() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
@@ -54,20 +52,20 @@ function _sendGuildInvite() {
               obj[0] = arg1;
               return obj;
             } else {
-              let getSystemLocale = tmp3;
+              closure_4 = tmp3;
               let code = tmp7;
               code = undefined;
               let defaultChannel = 1;
-              outer1_12(callback, callback2, outer1_13.SENDING);
+              closure_1_12(callback, callback2, closure_1_13.SENDING);
               const AccessibilityAnnouncer2 = callback(1351).AccessibilityAnnouncer;
               const intl2 = callback(1236).intl;
               AccessibilityAnnouncer2.announce(intl2.string(callback(1236).t.kC3ZRG));
-              defaultChannel = defaultChannel.getDefaultChannel(callback2, true, outer1_14.CREATE_INSTANT_INVITE);
+              defaultChannel = defaultChannel.getDefaultChannel(callback2, true, closure_1_14.CREATE_INSTANT_INVITE);
               if (null == defaultChannel) {
                 const _Error = Error;
                 throw Error();
               } else {
-                const obj1 = { max_uses: null, max_age: null, unique: true };
+                obj1 = { max_uses: null, max_age: null, unique: true };
                 obj1[0] = callback2(8920).INVITE_OPTIONS_ONCE.value;
                 obj1[1] = callback2(8920).INVITE_OPTIONS_7_DAYS.value;
                 c6 = 2;
@@ -101,7 +99,7 @@ function _sendGuildInvite() {
               obj4[0] = dependencyMap;
               obj3[4] = obj4;
               obj4.enqueue(obj3, () => {
-                outer1_12(callback, closure_1, outer1_13.SENT);
+                closure_1_12(callback, closure_1, closure_1_13.SENT);
                 const AccessibilityAnnouncer = callback(1351).AccessibilityAnnouncer;
                 const intl = callback(1236).intl;
                 AccessibilityAnnouncer.announce(intl.string(callback(1236).t.PuLLzP));
@@ -125,7 +123,7 @@ function _sendGuildInvite() {
       }
     })();
   });
-  const _sendGuildInvite = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -135,25 +133,25 @@ function _sendGuildInvite() {
   return applyArgumentsResult;
 }
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = ME);
-const result = require("comparator").fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/GuildInviteUtils.tsx");
 
 export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id, newestAnalyticsLocation) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   obj.track(constants.OPEN_POPOUT, obj);
-  const obj3 = ACTION_SHEET_HEIGHT_HALF;
+  const obj3 = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { recipientId: id, source: newestAnalyticsLocation };
   obj3.openLazy(asyncRequireImpl(12333, dependencyMap.paths), "invite-to-guilds-" + id, obj);
 };
 export const useServerInviteRows = function useServerInviteRows(id, query) {
   const _require = id;
-  let closure_1 = query;
-  let items = [insertUnsortedGuilds, closure_8];
+  closure_1 = query;
+  let items = [closure_10, closure_8];
   stateFromStoresArray = _require(stateFromStoresArray[17]).useStateFromStoresArray(items, () => {
     flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
     const items = [];
     const item = flattenedGuildIds.forEach((arg0) => {
-      const guild = outer1_8.getGuild(arg0);
+      const guild = closure_1_8.getGuild(arg0);
       if (null != guild) {
         items.push(guild);
       }
@@ -166,11 +164,11 @@ export const useServerInviteRows = function useServerInviteRows(id, query) {
       const items = [[], []];
       return items;
     } else {
-      memberCounts = outer1_6.getMemberCounts();
+      memberCounts = closure_1_6.getMemberCounts();
       const items1 = [];
       const items2 = [];
       const item = items2.forEach((vanityURLCode) => {
-        let canResult = outer2_9.can(outer2_14.CREATE_INSTANT_INVITE, vanityURLCode);
+        let canResult = closure_2_9.can(closure_2_14.CREATE_INSTANT_INVITE, vanityURLCode);
         if (!canResult) {
           canResult = null != vanityURLCode.vanityURLCode;
         }
@@ -182,7 +180,7 @@ export const useServerInviteRows = function useServerInviteRows(id, query) {
             const tmp7 = items1(stateFromStoresArray[16]);
           }
           if (tmp7Result) {
-            if (!outer2_7.isMember(vanityURLCode.id, table)) {
+            if (!closure_2_7.isMember(vanityURLCode.id, table)) {
               const obj = { guild: null, memberCount: null };
               obj[0] = vanityURLCode;
               let num = table[vanityURLCode.id];
@@ -190,8 +188,8 @@ export const useServerInviteRows = function useServerInviteRows(id, query) {
                 num = 0;
               }
               obj[1] = num;
-              const currentUser = outer2_11.getCurrentUser();
-              let id;
+              const currentUser = closure_2_11.getCurrentUser();
+              id = undefined;
               if (currentUser != null) {
                 id = currentUser.id;
               }

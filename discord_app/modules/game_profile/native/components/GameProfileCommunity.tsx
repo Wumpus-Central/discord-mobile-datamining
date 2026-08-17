@@ -1,47 +1,46 @@
 // discord_app/modules/game_profile/native/components/GameProfileCommunity.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import GuildIconSizes from "GuildIconSizes";
-import { View } from "Text";
-import allGuildIds from "allGuildIds";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "allGuildIds" /* 1393 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, headerText: null, card: null, guildContent: null, guildHeaderRow: null, guildIcon: null, guildIconImage: null, guildInfo: null, guildNameDescriptionContainer: null, guildNameRow: null, memberCountsContainer: null, memberCountContainer: null, onlineEllipse: null, membersEllipse: null };
-createCacheKey = { gap: require("Themes").space.PX_8 };
+createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_8 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_8 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj2 = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[3] = { flexDirection: "column", padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-let obj3 = { flexDirection: "column", padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-createCacheKey[4] = { flexDirection: "row", gap: require("Themes").space.PX_16 };
-let obj4 = { flexDirection: "row", gap: require("Themes").space.PX_16 };
-createCacheKey[5] = { width: 56, height: 56, borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: require("Themes").space.PX_4, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, marginLeft: -require("Themes").space.PX_4 };
-let obj5 = { width: 56, height: 56, borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: require("Themes").space.PX_4, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, marginLeft: -require("Themes").space.PX_4 };
-createCacheKey[6] = { width: "100%", height: "100%", borderRadius: require("Themes").radii.none };
-let obj6 = { width: "100%", height: "100%", borderRadius: require("Themes").radii.none };
-createCacheKey[7] = { flex: 1, gap: require("Themes").space.PX_16 };
-let obj7 = { flex: 1, gap: require("Themes").space.PX_16 };
-createCacheKey[8] = { gap: require("Themes").space.PX_4 };
-let obj8 = { gap: require("Themes").space.PX_4 };
-createCacheKey[9] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-let obj9 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-createCacheKey[10] = { flexDirection: "row", gap: require("Themes").space.PX_16 };
-let obj10 = { flexDirection: "row", gap: require("Themes").space.PX_16 };
-createCacheKey[11] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-let obj11 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
-createCacheKey[12] = { width: 8, height: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.STATUS_POSITIVE };
-let obj12 = { width: 8, height: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.STATUS_POSITIVE };
-createCacheKey[13] = { width: 8, height: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.TEXT_DEFAULT };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj13 = { width: 8, height: 8, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.TEXT_DEFAULT };
-const result = require("noop").fileFinishedImporting("modules/game_profile/native/components/GameProfileCommunity.tsx");
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[3] = { flexDirection: "column", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+let obj3 = { flexDirection: "column", padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
+let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
+createCacheKey[5] = { width: 56, height: 56, borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: ThemesDefault.space.PX_4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginLeft: -ThemesDefault.space.PX_4 };
+let obj5 = { width: 56, height: 56, borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: ThemesDefault.space.PX_4, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginLeft: -ThemesDefault.space.PX_4 };
+createCacheKey[6] = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.none };
+let obj6 = { width: "100%", height: "100%", borderRadius: ThemesDefault.radii.none };
+createCacheKey[7] = { flex: 1, gap: ThemesDefault.space.PX_16 };
+let obj7 = { flex: 1, gap: ThemesDefault.space.PX_16 };
+createCacheKey[8] = { gap: ThemesDefault.space.PX_4 };
+let obj8 = { gap: ThemesDefault.space.PX_4 };
+createCacheKey[9] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let obj9 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey[10] = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
+let obj10 = { flexDirection: "row", gap: ThemesDefault.space.PX_16 };
+createCacheKey[11] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+let obj11 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+createCacheKey[12] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
+let obj12 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.STATUS_POSITIVE };
+createCacheKey[13] = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.TEXT_DEFAULT };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj13 = { width: 8, height: 8, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileCommunity.tsx");
 
 export default function GameProfileCommunityServer(game) {
   game = game.game;
@@ -50,10 +49,10 @@ export default function GameProfileCommunityServer(game) {
   const closeModal = game.closeModal;
   let first;
   let React;
-  let closure_6;
+  closure_6 = undefined;
   let memo;
   let stateFromStores;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = React;
   const tmp2 = first(React.useState(null), 2);
   first = tmp2[0];
@@ -114,8 +113,8 @@ export default function GameProfileCommunityServer(game) {
                 lib = undefined;
                 invite = undefined;
                 let banned;
-                if (null != outer1_7) {
-                  let obj1 = lib(outer2_2[9]);
+                if (null != closure_1_7) {
+                  obj1 = lib(closure_2_2[9]);
                   const findCodedLinkResult = obj1.findCodedLink(tmp36.url);
                   if (null != findCodedLinkResult) {
                     if (findCodedLinkResult.type === tmp20(tmp21[10]).CodedLinkType.INVITE) {
@@ -123,7 +122,7 @@ export default function GameProfileCommunityServer(game) {
                       c3 = 2;
                       c4 = 1;
                       obj1 = { value: null, done: false };
-                      obj1[0] = outer2_1(tmp21[11])(findCodedLinkResult.code, "game_profile");
+                      obj1[0] = closure_2_1(tmp21[11])(findCodedLinkResult.code, "game_profile");
                       return obj1;
                     }
                   }
@@ -145,10 +144,10 @@ export default function GameProfileCommunityServer(game) {
                   tmp10 = true !== banned;
                 }
                 if (tmp10) {
-                  outer1_5(invite);
-                  const current = outer1_6.current;
+                  closure_1_5(invite);
+                  const current = closure_1_6.current;
                   if (current != null) {
-                    current(outer1_1);
+                    current(closure_1_1);
                   }
                 }
                 banned = 0;
@@ -170,7 +169,7 @@ export default function GameProfileCommunityServer(game) {
           }
         }
       });
-      const _resolve = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -192,7 +191,7 @@ export default function GameProfileCommunityServer(game) {
       })();
     }
   }, items2);
-  let obj1 = game(onInviteResolved[12]);
+  obj1 = game(onInviteResolved[12]);
   const items3 = [memo];
   stateFromStores = obj1.useStateFromStores(items3, () => {
     let id;

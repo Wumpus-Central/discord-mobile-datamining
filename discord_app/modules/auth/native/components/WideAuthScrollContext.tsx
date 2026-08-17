@@ -1,7 +1,7 @@
 // discord_app/modules/auth/native/components/WideAuthScrollContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
-const context = require("noop").createContext(() => {
+const context = importAllResult.createContext(() => {
 
 });
 const result = require("set").fileFinishedImporting("modules/auth/native/components/WideAuthScrollContext.tsx");

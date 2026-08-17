@@ -1,14 +1,13 @@
 // discord_app/modules/guild/native/GuildIcon.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { ExpressionSourceGuildRecord as closure_5 } from "getEmojiSourceData";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import { Fonts } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { ExpressionSourceGuildRecord as closure_5 } from "getEmojiSourceData" /* 7189 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import { Fonts } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c4 = importAllResult;
 ({ getGuildIconSource: closure_6, getGuildAcronym: error } = GuildNSFWContentLevel);
@@ -28,21 +27,19 @@ obj1[obj.NORMAL] = { width: 40, height: 40, borderRadius: 13.333333333333334 };
 obj1[obj.LARGE] = { width: 48, height: 48, borderRadius: 16 };
 obj1[obj.XLARGE] = { width: 64, height: 64, borderRadius: 21.333333333333332 };
 obj1[obj.XXLARGE] = { width: 80, height: 80, borderRadius: 26.666666666666668 };
-obj1.guildTextContainer = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-createCacheKey = { backgroundColor: require("Themes").colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT };
+obj1.guildTextContainer = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_GUILDBAR_ICON_BACKGROUND_DEFAULT };
 obj1.guildTextContainerInactive = createCacheKey;
-const obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-obj1.guildTextContainerInactiveNested = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-const obj4 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-obj1.guildText = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-const obj5 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD };
-obj1.guildTextActive = { fontFamily: Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.WHITE };
+const obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+obj1.guildTextContainerInactiveNested = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+obj1.guildText = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+const obj5 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, fontFamily: Fonts.PRIMARY_SEMIBOLD };
+obj1.guildTextActive = { fontFamily: Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.WHITE };
 obj1.guildTextContainerInactiveAlt = { backgroundColor: "transparent" };
 let closure_12 = createCacheKey.createStyles(obj1);
-const obj6 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.WHITE };
+const obj6 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.WHITE };
 const memoResult = importAllResult.memo(function GuildIconInner(guild) {
-  let loadingStyle;
-  let size;
   guild = guild.guild;
   let icon = guild.icon;
   if (icon === undefined) {
@@ -72,19 +69,19 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     str = "";
   }
   const style = guild.style;
-  let c8;
+  closure_8 = undefined;
   ref = undefined;
   let table;
-  let obj;
+  obj = undefined;
   let callback;
-  let c13;
-  let c14;
-  let c15;
-  let c16;
-  let c17;
-  let c18;
+  closure_13 = undefined;
+  closure_14 = undefined;
+  closure_15 = undefined;
+  loadingStyle = undefined;
+  c17 = undefined;
+  closure_18 = undefined;
   const tmp3 = callback();
-  c8 = tmp3;
+  closure_8 = tmp3;
   if (null != guild) {
     if (null != guild.icon) {
       if (guild instanceof textStyle) {
@@ -100,7 +97,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     obj[0] = icon;
     tmp4 = obj;
   }
-  let obj1 = selected;
+  obj1 = selected;
   ref = selected.useRef(tmp4);
   table = size(selected.useState({}), 2)[1];
   const tmp12 = size(selected.useState(false), 2);
@@ -135,7 +132,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     }
     tmp19 = uri2;
   }
-  c13 = tmp22;
+  closure_13 = tmp22;
   let tmp23 = !tmp22;
   if (tmp16 !== tmp19) {
     let tmp24 = preloadAnimation;
@@ -144,14 +141,13 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     }
     tmp23 = tmp24;
   }
-  c14 = tmp25;
+  closure_14 = tmp25;
   const effect = obj1.useEffect(() => () => {
     closure_12.current = false;
   }, []);
   let items = [!tmp23, flag, tmp16 !== tmp19, guild, icon, preloadAnimation, size];
   const effect1 = obj1.useEffect(() => {
-    let obj = guild;
-    if (null != guild) {
+    if (null != obj) {
       if (null != obj.icon) {
         if (obj instanceof textStyle) {
           let iconSource = obj.getIconSource(dependencyMap[tmp], tmp2);
@@ -166,7 +162,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
       obj[0] = tmp3;
       tmp4 = obj;
     }
-    guild = tmp4;
+    obj = tmp4;
     if (Array.isArray(tmp4)) {
       const first = tmp4[0];
       let uri;
@@ -181,16 +177,16 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
       }
       tmp11 = uri;
     }
-    if (!c14) {
-      if (c13) {
+    if (!closure_14) {
+      if (closure_13) {
         if (preloadAnimation) {
           if (typeof tmp11 === "string") {
             const obj3 = icon(flag[10]);
             icon(flag[10]).preload(tmp11).then(() => {
               const timerId = setTimeout(() => {
-                if (outer1_12.current) {
-                  outer1_9.current = closure_0;
-                  outer1_10({});
+                if (closure_1_12.current) {
+                  closure_1_9.current = closure_0;
+                  closure_1_10({});
                 }
               }, 0);
             });
@@ -199,14 +195,14 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
         }
       }
     }
-    if (c13) {
+    if (closure_13) {
       ref.current = tmp4;
     }
   }, items);
   if (!tmp23) {
     tmp15 = tmp4;
   }
-  c15 = tmp28;
+  closure_15 = tmp28;
   let tmp29;
   if (null != tmp15) {
     if (!tmp12[0]) {
@@ -215,7 +211,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
       }
     }
   }
-  c16 = tmp29;
+  loadingStyle = tmp29;
   if (null == tmp15) {
     if (false === selected) {
       if (flag3) {
@@ -243,35 +239,35 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
     }
     tmp34 = tmp36;
   }
-  c18 = tmp34;
+  closure_18 = tmp34;
   let items1 = [style, size, tmp3, tmp29, undefined, tmp34, selected, textStyle, null == tmp15];
   const memo = obj1.useMemo(() => {
-    let items1 = _undefined;
-    const items = [_undefined.guildIcon, _undefined[size], style];
-    if (null != c16) {
+    let items1 = guildIcon;
+    const items = [guildIcon.guildIcon, guildIcon[size], style];
+    if (null != loadingStyle) {
       items.push(tmp);
     }
-    if (c15) {
+    if (closure_15) {
       items.unshift(items1.guildTextContainer);
     }
     if (null != c17) {
       items.push(tmp5);
     }
-    let obj = {
+    obj = {
       handleLoaded() {
         return callback(true);
       },
       wrapperStyle: items,
       textComponentStyle: null
     };
-    if (!c15) {
+    if (!closure_15) {
       obj[2] = undefined;
       return obj;
     } else {
       items1 = [, , ];
       items1[0] = false === selected ? items1.guildText : items1.guildTextActive;
       obj = { fontSize: null };
-      obj[0] = c18;
+      obj[0] = closure_18;
       items1[1] = obj;
       items1[2] = textStyle;
       const tmp8 = false === selected ? items1.guildText : items1.guildTextActive;
@@ -301,7 +297,7 @@ const memoResult = importAllResult.memo(function GuildIconInner(guild) {
   }
   return tmp40Result;
 });
-const result = require("getEmojiSourceData").fileFinishedImporting("modules/guild/native/GuildIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/guild/native/GuildIcon.tsx");
 
 export default memoResult;
 export const GuildIconSizes = obj;

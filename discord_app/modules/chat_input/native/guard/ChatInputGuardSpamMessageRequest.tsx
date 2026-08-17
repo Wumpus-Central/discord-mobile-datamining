@@ -1,19 +1,14 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx
-import importAllResult from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageRequest(channel) {
-  let c3;
-  let c4;
-  let isOptimisticRejected;
-  let isRejectLoading;
-  let isUserProfileLoading;
   channel = channel.channel;
   let navigation;
-  let dependencyMap;
+  dependencyMap = undefined;
   c4 = undefined;
   let obj = channel(1500);
   navigation = obj.useNavigation();
@@ -69,12 +64,12 @@ const memoResult = importAllResult.memo(function ChatInputGuardSpamMessageReques
   obj[8] = intl4.string(channel(1236).t.olZgw5);
   obj[9] = function buttonSecondaryOnPress(stopPropagation) {
     stopPropagation.stopPropagation();
-    _undefined2(channel, closure_2, () => outer1_0(outer1_2[11]).transitionToChannel(id.id, { navigationReplace: true }));
+    _undefined2(channel, closure_2, () => closure_1_0(closure_1_2[11]).transitionToChannel(id.id, { navigationReplace: true }));
   };
   obj[10] = tmp7;
   obj[11] = isUserProfileLoading;
   return tmp8(navigation(11616), obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardSpamMessageRequest.tsx");
 
 export default memoResult;

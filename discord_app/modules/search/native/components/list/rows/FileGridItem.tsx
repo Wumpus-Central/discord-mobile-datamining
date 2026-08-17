@@ -1,38 +1,32 @@
 // discord_app/modules/search/native/components/list/rows/FileGridItem.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, useWindowDimensions: c5 } = get_ActivityIndicator);
-({ FILE_OR_LINK_IMAGE_BUFFER: error, SearchFileTypes: metroImportAll } = MessageEmbedTypes);
+({ FILE_OR_LINK_IMAGE_BUFFER: error, SearchFileTypes: closure_8 } = MessageEmbedTypes);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ icon: { alignItems: "center", justifyContent: "center" } });
 const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
   const data = containerStyle.data;
   const onPress = containerStyle.onPress;
   const imageStyle = containerStyle.imageStyle;
-  let importAllResult;
+  importAllResult = undefined;
   let scale;
   let stateFromStores;
-  let c6;
+  closure_6 = undefined;
   const tmp = callback2();
   importAllResult = tmp;
   scale = stateFromStores().scale;
   let obj = data(imageStyle[10]);
-  let items = [c6];
-  stateFromStores = obj.useStateFromStores(items, () => _undefined.getChannel(data.channelId));
-  let obj1 = importAllResult;
+  let items = [closure_6];
+  stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(data.channelId));
+  obj1 = importAllResult;
   const items1 = [data.author, ];
   let guild_id;
   if (stateFromStores != null) {
@@ -48,7 +42,7 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
     return author.getAvatarSource(guild_id);
   }, items1);
   const tmp7 = onPress(imageStyle[11])(data.attachment);
-  c6 = tmp7;
+  closure_6 = tmp7;
   const size = data.attachment.size;
   const items2 = [, , ];
   ({ channelId: arr3[0], messageId: arr3[1] } = data);
@@ -59,14 +53,14 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
   }, items2);
   const memo1 = obj1.useMemo(() => {
     const type = data.type;
-    if (outer1_8.MEDIA_ATTACHMENT === type) {
+    if (closure_1_8.MEDIA_ATTACHMENT === type) {
       let obj = { containerStyle: null, attachment: null, channelId: null, authorId: null, scale: null, containerHeight: null, containerWidth: null, renderFallback: null };
       obj[0] = imageStyle;
       ({ attachment: obj3[1], channelId: obj3[2] } = tmp);
       obj[3] = tmp.author.id;
       obj[4] = scale;
-      obj[5] = imageStyle.height + outer1_7;
-      obj[6] = imageStyle.width + outer1_7;
+      obj[5] = imageStyle.height + closure_1_7;
+      obj[6] = imageStyle.width + closure_1_7;
       obj[7] = function renderFallback() {
         const obj = { style: items, children: null };
         items = [icon.icon, closure_2];
@@ -82,20 +76,20 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
           tmp3Result = tmp3(tmp4[6]);
         }
         obj[1] = tmpResult;
-        return outer1_9(outer1_4, obj);
+        return closure_1_9(closure_1_4, obj);
       };
-      return outer1_9(data(imageStyle[12]).SearchAttachmentMediaImage, obj);
+      return closure_1_9(data(imageStyle[12]).SearchAttachmentMediaImage, obj);
     } else if (tmp2.ATTACHMENT === type) {
       obj = { fileName: null, containerStyle: null, height: null, width: null };
-      obj[0] = c6;
+      obj[0] = closure_6;
       obj[1] = imageStyle;
       ({ height: obj2[2], width: obj2[3] } = imageStyle);
-      return outer1_9(data(imageStyle[12]).SearchFileMediaImage, obj);
+      return closure_1_9(data(imageStyle[12]).SearchFileMediaImage, obj);
     } else if (tmp2.AUDIO === type) {
       obj = { containerStyle: null, height: null, width: null };
       obj[0] = imageStyle;
       ({ height: obj[1], width: obj[2] } = imageStyle);
-      return outer1_9(data(imageStyle[12]).SearchSoundMediaImage, obj);
+      return closure_1_9(data(imageStyle[12]).SearchSoundMediaImage, obj);
     }
   }, items3);
   obj = { containerStyle: containerStyle.containerStyle, onPress: callback, children: null };
@@ -113,6 +107,6 @@ const memoResult = importAllResult.memo(function FileGridItem(containerStyle) {
   obj[2] = items4;
   return closure_10(data(imageStyle[13]).SearchListCardContainer, obj);
 });
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/list/rows/FileGridItem.tsx");
 
 export default memoResult;

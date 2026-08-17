@@ -1,51 +1,49 @@
 // discord_app/modules/oauth2/native/ConnectAccountStep.tsx
-import authorizeConnection from "authorizeConnection";
-import { View } from "getSystemLocale";
-import addApplication from "addApplication";
-import fetchFingerprint from "fetchFingerprint";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "CheckmarkLargeIcon";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { CheckmarkLargeIcon } from "../../../design/components/Icon/native/redesign/generated/CheckmarkLargeIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPlatformUserUrl } from "../../../lib/Platforms.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 4326 */;
+import Text from "Text" /* 4734 */;
+import getPlatformUserUrlDefault from "getPlatformUserUrl" /* 5097 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "addApplication" /* 4478 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+require = arg1;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: { flexDirection: "column", gap: 16, width: "100%" }, header: { flexDirection: "column", alignItems: "center", gap: 8, marginBottom: 8 }, headerIcons: { flexDirection: "row", alignItems: "center", gap: 16, marginBottom: 8 }, card: null, cardName: null, cardInfo: null, platformIcon: null, platformIconSmall: null, infoNotice: null, infoText: null, divider: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderColor: require("Themes").colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: require("Themes").radii.md };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: 12, padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, borderRadius: ThemesDefault.radii.md };
 createCacheKey[3] = createCacheKey;
 createCacheKey[4] = { flex: 1, minWidth: 0 };
 createCacheKey[5] = { flex: 1, minWidth: 0, flexDirection: "column", gap: 2 };
-createCacheKey[6] = { width: 40, height: 40, borderRadius: require("Themes").radii.sm };
-let obj1 = { width: 40, height: 40, borderRadius: require("Themes").radii.sm };
-createCacheKey[7] = { width: 32, height: 32, borderRadius: require("Themes").radii.sm };
-let obj2 = { width: 32, height: 32, borderRadius: require("Themes").radii.sm };
-createCacheKey[8] = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_INFO, borderColor: require("Themes").colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: require("Themes").radii.sm };
+createCacheKey[6] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
+let obj1 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[7] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
+let obj2 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[8] = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[9] = { flex: 1 };
-let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_INFO, borderColor: require("Themes").colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: require("Themes").radii.sm };
-createCacheKey[10] = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginVertical: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginVertical: 8 };
-const result = require("addApplication").fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
+let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO, borderColor: ThemesDefault.colors.ICON_FEEDBACK_INFO, borderWidth: 1, borderRadius: ThemesDefault.radii.sm };
+createCacheKey[10] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 8 };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/ConnectAccountStep.tsx");
 
 export default function ConnectAccountStep(clientId) {
   clientId = clientId.clientId;
   const platformType = clientId.platformType;
   const platformName = clientId.platformName;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = clientId(589);
-  const items = [addApplication];
+  const items = [closure_5];
   const items1 = [clientId];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getApplication(clientId), items1);
-  let obj1 = clientId(589);
-  const items2 = [fetchFingerprint, mergeGuildAvatar];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getApplication(clientId), items1);
+  obj1 = clientId(589);
+  const items2 = [closure_6, closure_7];
   const stateFromStores1 = obj1.useStateFromStores(items2, () => {
     let currentUser = null;
     if (null != id.getId()) {
@@ -77,7 +75,7 @@ export default function ConnectAccountStep(clientId) {
     }
     const items3 = [clientId];
     const effect = React.useEffect(() => {
-      const application = platformType(outer1_2[13]).fetchApplication(clientId);
+      const application = platformType(closure_1_2[13]).fetchApplication(clientId);
     }, items3);
     obj = { style: null, children: null };
     obj[0] = tmp.container;
@@ -130,7 +128,7 @@ export default function ConnectAccountStep(clientId) {
     items7[1] = callback(tmp5(4734).Text, obj12);
     const obj13 = { variant: "primary", size: "sm", onPress: null, text: null };
     obj13[2] = function onPress() {
-      platformType(outer1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
+      platformType(closure_1_2[19])({ platformType, location: "OAuth2 Connect Account Step" });
     };
     const intl3 = tmp5(1236).intl;
     obj13[3] = intl3.string(tmp5(1236).t.S0W8Z5);
@@ -162,21 +160,17 @@ export default function ConnectAccountStep(clientId) {
   }
 };
 export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
-  let applicationName;
-  let connectedAccount;
-  let platformName;
-  let platformType;
   ({ platformName, connectedAccount } = arg0);
   ({ platformType, applicationName } = arg0);
-  const tmp = createCacheKey();
-  let obj = getPlatformUserUrl;
+  const tmp = callback3();
+  let obj = getPlatformUserUrlDefault;
   const value = obj.get(platformType);
   if (null == value) {
     obj = { style: null, children: null };
     obj[0] = tmp.container;
     obj = { variant: "text-sm/normal", color: "text-default", children: null };
     const intl = getSystemLocale.intl;
-    let obj1 = { platformName: null };
+    obj1 = { platformName: null };
     obj1[0] = platformName;
     obj[2] = intl.format(getSystemLocale.t["+oaRw3"], obj1);
     const items = [callback(Text.Text, obj), , , ];
@@ -205,7 +199,7 @@ export const ConnectedAccountCard = function ConnectedAccountCard(arg0) {
     obj4[1] = items2;
     items1[1] = closure_9(View, obj4);
     const obj8 = { color: null, size: "sm" };
-    obj8[0] = Themes.colors.TEXT_FEEDBACK_POSITIVE;
+    obj8[0] = ThemesDefault.colors.TEXT_FEEDBACK_POSITIVE;
     items1[2] = callback(CheckmarkLargeIcon.CheckmarkLargeIcon, obj8);
     obj2[1] = items1;
     items[1] = closure_9(View, obj2);

@@ -1,9 +1,12 @@
 // discord_app/modules/guild_profile/GuildProfileUtils.tsx
-import { createChannelRecordFromInvite as closure_2 } from "createChannelRecord";
-import { GuildFeatures } from "ME";
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 
-const result = require("fromGuildPropertiesWithAdditionalFields").fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
+let closure_2 = createChannelRecord.createChannelRecordFromInvite;
+const GuildFeatures = ME.GuildFeatures;
+const result = set.fileFinishedImporting("modules/guild_profile/GuildProfileUtils.tsx");
 
 export const getEstablishedDate = function getEstablishedDate(tmpResult1, locale) {
   if (null != tmpResult1) {

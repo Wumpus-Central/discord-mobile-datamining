@@ -1,35 +1,29 @@
 // discord_app/modules/voice_panel/native/pip/useControllerPIPState.tsx
-import _slicedToArray from "_slicedToArray";
-import useExternalPipAspectRatioUpdater from "useExternalPipAspectRatioUpdater";
-import participantFromServer from "participantFromServer";
-import getParticipants from "getParticipants";
-import map from "map";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import anyoneHasFlagInContext from "anyoneHasFlagInContext";
-import { VoicePanelModes } from "VoicePanelModes";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { asLaunched } from "FrameLayoutModes";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "participantFromServer" /* 1390 */;
+import closure_6 from "getParticipants" /* 4773 */;
+import closure_7 from "map" /* 8708 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "anyoneHasFlagInContext" /* 4774 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import { asLaunched } from "FrameLayoutModes" /* 8709 */;
 
 const require = arg1;
-let result = require("participantFromServer").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/pip/useControllerPIPState.tsx");
 
 export const useControllerPIPState = function useControllerPIPState(channelId) {
-  let c7;
-  let connected;
-  let dimensions;
-  let focusedId;
-  let participant;
-  let tmp14;
   channelId = channelId.channelId;
   let obj = channelId;
   ({ connected, focusedId } = channelId);
   let ref = focusedId;
   const layoutManager = channelId.layoutManager;
-  let dependencyMap = layoutManager;
+  dependencyMap = layoutManager;
   const mode = channelId.mode;
   let first;
   let React;
-  let participantFromServer;
+  closure_5 = undefined;
   let first1;
   c7 = undefined;
   obj = React;
@@ -37,19 +31,19 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   const tmp2 = first(React.useState(undefined), 2);
   first = tmp2[0];
   React = tmp2[1];
-  participantFromServer = React.useRef(first);
+  closure_5 = React.useRef(first);
   const insertionEffect = React.useInsertionEffect(() => {
-    participantFromServer.current = first;
+    closure_5.current = first;
   });
   obj = channelId;
   ref = mode;
   dependencyMap = undefined;
   const tmp7 = ref(16256)(channelId);
   dependencyMap = tmp7;
-  let items = [participantFromServer, c7, ensureGuildLoaded];
+  let items = [closure_5, c7, closure_8];
   const items1 = [channelId, tmp7, mode];
   const stateFromStores = obj(589).useStateFromStores(items, () => {
-    const channel = outer1_8.getChannel(obj);
+    const channel = closure_1_8.getChannel(obj);
     let isVocalResult;
     if (channel != null) {
       isVocalResult = channel.isVocal();
@@ -59,9 +53,9 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
         return false;
       }
     }
-    const tmp4 = outer1_12(_undefined.getMainFrame());
+    const tmp4 = closure_1_12(_undefined.getMainFrame());
     if (null != tmp4) {
-      if (tmp4.data.activityPanelMode === outer1_11.PIP) {
+      if (tmp4.data.activityPanelMode === closure_1_11.PIP) {
         return true;
       }
     }
@@ -80,10 +74,10 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
       if (result) {
         result = embeddedActivityLocationChannelId !== tmp;
       }
-      let tmp10 = activityPanelMode === outer1_11.PIP;
+      let tmp10 = activityPanelMode === closure_1_11.PIP;
       if (tmp10) {
-        tmp10 = ref === outer1_10.PIP || embeddedActivityLocationChannelId !== tmp;
-        const tmp13 = ref === outer1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+        tmp10 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
+        const tmp13 = ref === closure_1_10.PIP || embeddedActivityLocationChannelId !== tmp;
       }
       if (result) {
         result = tmp10;
@@ -95,7 +89,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   let tmp10 = ref(16304)(channelId);
   first1 = first(React.useState(() => ref(closure_2[16])((arg0) => arg0(), 1000, { leading: true })), 1)[0];
   const items2 = [first1];
-  const layoutEffect = React.useLayoutEffect(() => () => getParticipants.cancel(), items2);
+  const layoutEffect = React.useLayoutEffect(() => () => closure_6.cancel(), items2);
   const obj2 = obj(589);
   let tmp5 = ref;
   [tmp14, c7] = first(React.useState(() => closure_2.getTargetDimensions(ref)), 2);
@@ -127,24 +121,24 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
   }
   const items3 = [channelId, first1];
   const effect1 = obj.useEffect(() => {
-    const items = [outer1_9, first1];
-    let batchedStoreListener = new obj(closure_2[11]).BatchedStoreListener(items, () => {
+    const items = [closure_1_9, first1];
+    const batchedStoreListener = new obj(closure_2[11]).BatchedStoreListener(items, () => {
       const tmp = (() => {
-        const speakers = outer1_9.getSpeakers();
+        const speakers = closure_1_9.getSpeakers();
         const iter = speakers[Symbol.iterator]();
         const nextResult = iter.next();
         while (iter !== undefined) {
           let tmp3 = nextResult;
-          let tmp4 = outer1_6;
+          let tmp4 = closure_1_6;
           let tmp5 = closure_0;
-          if (null != outer1_6.getParticipant(closure_0, nextResult)) {
+          if (null != closure_1_6.getParticipant(closure_0, nextResult)) {
             let tmp6 = iter;
             iter.return();
             return nextResult;
           }
         }
       })();
-      const batchedStoreListener = tmp;
+      closure_0 = tmp;
       let tmp3 = tmp !== ref.current;
       if (tmp3) {
         tmp3 = null != tmp;
@@ -153,7 +147,7 @@ export const useControllerPIPState = function useControllerPIPState(channelId) {
         if (null == ref.current) {
           callback(tmp);
         } else {
-          callback2(() => outer1_4(closure_0));
+          callback2(() => closure_1_4(closure_0));
         }
       }
     });

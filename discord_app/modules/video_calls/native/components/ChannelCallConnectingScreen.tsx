@@ -1,48 +1,44 @@
 // discord_app/modules/video_calls/native/components/ChannelCallConnectingScreen.tsx
-import VoiceChatCallScreenHeaderIconInner from "VoiceChatCallScreenHeaderIconInner";
-import { View } from "useIsVoiceChannelFull";
-import set from "set";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleUpdate from "handleUpdate";
-import { resetFocus } from "VoiceChatDrawerState";
-import { InstantInviteSources } from "ME";
-import { Permissions } from "sum";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import { BottomSheetModal } from "../../../../../_runtime/06952_BottomSheetModal.js";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { UserSettingsVoice } from "../../../user_settings/voice/native/UserSettingsVoice.tsx";
-import { ChannelCallMicButton } from "ChannelCallMicButton.tsx";
+import useThemeDefault from "useTheme" /* 4310 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import Background from "Background" /* 6950 */;
+import BottomSheetModal from "BottomSheetModal" /* 6952 */;
+import UserSettingsVoiceDefault from "UserSettingsVoice" /* 12547 */;
+import ChannelCallMicButton from "ChannelCallMicButton" /* 12566 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "set" /* 4540 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "handleUpdate" /* 4541 */;
+import { resetFocus } from "VoiceChatDrawerState" /* 8669 */;
+import { InstantInviteSources } from "ME" /* 676 */;
+import { Permissions } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let map1;
-const require = arg1;
+require = arg1;
 function VoiceSettingsActionSheet() {
   let obj = { scrollable: true, children: null };
-  obj = { children: null };
-  obj[0] = callback(UserSettingsVoice, {});
+  obj = { children: callback(UserSettingsVoiceDefault, {}) };
   obj[1] = callback(BottomSheetModal.BottomSheetScrollView, obj);
   return callback(Background.BottomSheet, obj);
 }
 function JoinMutedButton(channel) {
-  const tmp = useTheme();
-  return callback(ChannelCallMicButton.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useTheme(), isSmallSize: false });
+  const tmp = useThemeDefault();
+  return callback(ChannelCallMicButton.ChannelCallMicButton, { channel: channel.channel, disableTint: "light" === useThemeDefault(), isSmallSize: false });
 }
 function JoinVoiceButton(channel) {
   channel = channel.channel;
-  let importDefault;
+  importDefault = undefined;
   let stateFromStores1;
   let React;
-  let c4;
+  closure_4 = undefined;
   importDefault = importDefault(stateFromStores1[26])();
   let obj = channel(stateFromStores1[27]);
-  const items = [set];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
-  const items1 = [handleUpdate];
+  const items1 = [closure_8];
   stateFromStores1 = channel(stateFromStores1[27]).useStateFromStores(items1, () => {
     let str;
     if (lib != null) {
@@ -51,7 +47,7 @@ function JoinVoiceButton(channel) {
     if (str == null) {
       str = "";
     }
-    const sessionById = outer1_8.getSessionById(str);
+    const sessionById = closure_1_8.getSessionById(str);
     let os;
     if (sessionById != null) {
       os = sessionById.clientInfo.os;
@@ -61,17 +57,17 @@ function JoinVoiceButton(channel) {
   const tmp6 = importDefault(stateFromStores1[28])();
   React = tmp6;
   const tmp7 = importDefault(stateFromStores1[29])(channel);
-  c4 = tmp8;
+  closure_4 = tmp8;
   const items2 = [channel, stateFromStores1, tmp6, tmp7.selfMute || tmp7.mute || tmp7.suppress];
   const callback = React.useCallback(() => {
     if (null != stateFromStores1) {
-      const result = channel(stateFromStores1[30]).coerceConsoleTypeToPlatformType(tmp, c3);
+      const result = channel(stateFromStores1[30]).coerceConsoleTypeToPlatformType(tmp, closure_3);
       if (null != result) {
         return channel(stateFromStores1[31]).beginConsoleTransfer(channel, result);
       }
       const obj = channel(stateFromStores1[30]);
     }
-    outer1_9();
+    closure_1_9();
     const tmp8 = channel(stateFromStores1[1]);
     if (tmp8 != null) {
       const NativeModules = tmp8.NativeModules;
@@ -85,8 +81,8 @@ function JoinVoiceButton(channel) {
         }
       }
     }
-    if (c4) {
-      if (!outer1_6.getSettings().mute) {
+    if (closure_4) {
+      if (!closure_1_6.getSettings().mute) {
         lib(stateFromStores1[22]).toggleSelfMute();
         const obj2 = lib(stateFromStores1[22]);
       }
@@ -130,26 +126,26 @@ function JoinVoiceButton(channel) {
 createCacheKey = { spacer: { width: 8 }, actionBarContainer: null };
 createCacheKey = { paddingHorizontal: 12, paddingTop: 16, justifyContent: "center", alignItems: "flex-start", flexDirection: "row", height: require("sum").CALL_ACTION_BAR_HEIGHT };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_15 = createCacheKey.createStyles(createCacheKey);
 let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallConnectingScreen.tsx");
 
 export const showVoiceSettingsActionSheet = function showVoiceSettingsActionSheet(guildId) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { guildId };
   obj.openLazy(() => Promise.resolve(closure_16), "voice settings", obj);
 };
 export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(channel) {
   channel = channel.channel;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = channel(12535);
   const isVoiceChannelLocked = obj.useIsVoiceChannelLocked(channel);
   let fn = null;
-  if (getUncachedChannelPermissions.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
+  if (closure_7.can(Permissions.CREATE_INSTANT_INVITE, channel)) {
     fn = null;
     if (!isVoiceChannelLocked) {
       fn = () => {
-        let obj = channel(outer1_2[18]);
-        obj = { source: outer1_10.VOICE_CHANNEL };
+        let obj = channel(closure_1_2[18]);
+        obj = { source: closure_1_10.VOICE_CHANNEL };
         return obj.showInstantInviteActionSheet(channel, obj);
       };
     }
@@ -167,7 +163,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
     tmp9Result = tmp9(tmp2(12564), obj);
     const tmp2Result = tmp2(12564);
   }
-  const obj1 = { children: null };
+  obj1 = { children: null };
   items[1] = tmp9Result;
   items[2] = callback(View, { style: tmp.spacer });
   items[3] = callback(View, { style: { width: 4 } });
@@ -176,7 +172,7 @@ export const ChannelCallConnectingHeader = function ChannelCallConnectingHeader(
 };
 export const CallConnectingActionBar = function CallConnectingActionBar(channel) {
   channel = channel.channel;
-  const obj = { style: createCacheKey().actionBarContainer, children: null };
+  const obj = { style: callback3().actionBarContainer, children: null };
   const items = [callback(JoinMutedButton, { channel }), callback(JoinVoiceButton, { channel })];
   obj[1] = items;
   return callback2(View, obj);

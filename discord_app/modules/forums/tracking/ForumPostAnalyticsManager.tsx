@@ -1,10 +1,11 @@
 // discord_app/modules/forums/tracking/ForumPostAnalyticsManager.tsx
-import handleThreadCreateOrUpdate from "handleThreadCreateOrUpdate";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "handleThreadCreateOrUpdate" /* 4969 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 
 let require = arg1;
+initializeDefault;
 class ForumPostAnalyticsManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -21,7 +22,7 @@ class ForumPostAnalyticsManager extends tmp2 {
     applyArgumentsResult.handleChannelSelect = function handleChannelSelect(channelId) {
       channelId = channelId.channelId;
       if (null != channelId) {
-        const channel = outer1_5.getChannel(channelId);
+        const channel = closure_1_5.getChannel(channelId);
         if (tmp2) {
           applyArgumentsResult.readStateSnapshots = {};
           applyArgumentsResult.processForumChannel(channel.guild_id, channelId);
@@ -30,10 +31,10 @@ class ForumPostAnalyticsManager extends tmp2 {
       }
     };
     applyArgumentsResult.processForumChannel = function processForumChannel(guild_id, channelId) {
-      const threadsForParent = outer1_3.getThreadsForParent(guild_id, channelId);
-      const keys = outer1_1(outer1_2[4]).keys(threadsForParent);
+      const threadsForParent = closure_1_3.getThreadsForParent(guild_id, channelId);
+      const keys = closure_1_1(closure_1_2[4]).keys(threadsForParent);
       const item = keys.forEach((arg0) => {
-        const forumPostReadStatesById = outer1_0(outer1_2[5]).getForumPostReadStatesById(arg0);
+        const forumPostReadStatesById = closure_1_0(closure_1_2[5]).getForumPostReadStatesById(arg0);
         if (null != forumPostReadStatesById) {
           readStateSnapshots.readStateSnapshots[arg0] = forumPostReadStatesById;
         }
@@ -57,6 +58,6 @@ ForumPostAnalyticsManager.prototype["handleThreadCreate"] = function handleThrea
   }
 };
 const forumPostAnalyticsManager = new ForumPostAnalyticsManager();
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/tracking/ForumPostAnalyticsManager.tsx");
 
 export default forumPostAnalyticsManager;

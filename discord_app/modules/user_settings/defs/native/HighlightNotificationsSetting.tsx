@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/HighlightNotificationsSetting.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import createToggle from "createToggle" /* 10669 */;
 import { Row } from "../../notifications/native/UserSettingsHighlightNotifications.tsx";
 
-const require = arg1;
+require = arg1;
 function useHighlightNotifications() {
-  const items = [createGuildRecordFromRust];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
 }
 createToggle = {
@@ -30,7 +30,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/HighlightNotificationsSetting.tsx");
 
 export default createToggle;
 export { useHighlightNotifications };

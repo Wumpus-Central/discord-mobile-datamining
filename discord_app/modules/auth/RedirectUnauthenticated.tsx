@@ -1,13 +1,14 @@
 // discord_app/modules/auth/RedirectUnauthenticated.tsx
-import "noop";
-import { Routes } from "ME";
-import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
-import { jsx } from "jsxProd";
-import { _extends } from "../../../_runtime/metro/04208__extends.js";
-import { getAuthenticationPath } from "../../../discord_common/js/shared/utils/PathUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getAuthenticationPath from "getAuthenticationPath" /* 507 */;
+import _extends from "_extends" /* 4208 */;
+import { Routes } from "ME" /* 676 */;
+import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED" /* 683 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("CONFERENCE_MODE_ENABLED").fileFinishedImporting("modules/auth/RedirectUnauthenticated.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/auth/RedirectUnauthenticated.tsx");
 
 export default function RedirectUnauthenticated() {
   if (CONFERENCE_MODE_ENABLED) {

@@ -1,24 +1,24 @@
 // discord_app/modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx
-import noop from "noop";
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import set from "set";
-import { usePendingFolderGuildIds } from "../../usePendingFolderGuildIds.tsx";
+import usePendingFolderGuildIdsDefault from "usePendingFolderGuildIds" /* 9535 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_5 from "set" /* 5079 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/useGuildsBarCreatePendingFolderNode.tsx");
 
 export default function useGuildsBarCreatePendingFolderNode() {
   let obj = stateFromStores(589);
-  const items = [handleGatewayJoinRequestUpdate];
+  const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => obj.hasFetchedRequestToJoinGuilds);
-  const arr2 = usePendingFolderGuildIds();
-  const items1 = [set];
+  const arr2 = usePendingFolderGuildIdsDefault();
+  const items1 = [closure_5];
   const stateFromStores1 = stateFromStores(589).useStateFromStores(items1, () => folderExpanded.isFolderExpanded(stateFromStores(table[5]).SpecialGuildsNodeIds.PENDING_JOIN_REQUESTS_FOLDER));
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
-      const requestToJoinGuilds = outer1_1(outer1_2[6]).fetchRequestToJoinGuilds();
-      const obj = outer1_1(outer1_2[6]);
+      const requestToJoinGuilds = closure_1_1(closure_1_2[6]).fetchRequestToJoinGuilds();
+      const obj = closure_1_1(closure_1_2[6]);
     }
   }, items2);
   if (arr2.length > 0) {

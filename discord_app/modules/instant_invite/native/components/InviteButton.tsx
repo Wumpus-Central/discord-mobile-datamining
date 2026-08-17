@@ -1,17 +1,15 @@
 // discord_app/modules/instant_invite/native/components/InviteButton.tsx
-import { View } from "get ActivityIndicator";
-import { InviteSendStates } from "InviteSendStates";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { InviteSendStates } from "InviteSendStates" /* 4371 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_5 = createCacheKey.createStyles({ buttonWrapper: { minWidth: 66, flexDirection: "row" } });
-const memoResult = require("noop").memo(function InviteButton(onPress) {
-  let disabled;
-  let sendState;
+const memoResult = importAllResult.memo(function InviteButton(onPress) {
   ({ sendState, disabled } = onPress);
   if (disabled === undefined) {
     disabled = false;
@@ -47,6 +45,6 @@ const memoResult = require("noop").memo(function InviteButton(onPress) {
   obj[1] = jsx(Button.Button, { accessibilityRole: "none", size: "sm", variant: "secondary", text: stringResult1, onPress: onPress.onPressSend, disabled: null, grow: true });
   return <View accessibilityRole="none" size="sm" variant="secondary" text={stringResult1} onPress={arg0.onPressSend} disabled={null} grow />;
 });
-const result = require("InviteSendStates").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InviteButton.tsx");
 
 export default memoResult;

@@ -1,16 +1,16 @@
 // discord_app/actions/HubActionCreators.tsx
-import sendRequest from "sendRequest";
-import { Endpoints } from "ME";
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { TrackedHTTPUtils } from "../utils/TrackedHTTPUtils.tsx";
+import encodeProperties from "encodeProperties" /* 503 */;
+import sendRequest from "sendRequest" /* 530 */;
+import _modDef5227 from "module_5227" /* 5227 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("module_5227").fileFinishedImporting("actions/HubActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("actions/HubActionCreators.tsx");
 
 export default {
   signup(email, school) {
-    let obj = TrackedHTTPUtils;
+    let obj = _modDef5227;
     obj = { url: Endpoints.HUB_WAITLIST_SIGNUP, body: obj, trackedActionData: null, rejectWithError: null };
     obj = { email, school };
     obj[2] = {
@@ -31,7 +31,7 @@ export default {
         return callback(table[4]).exact({ is_edu_email });
       }
     };
-    const obj1 = {
+    obj1 = {
       event: encodeProperties.NetworkActionNames.HUB_WAITLIST_SIGNUP,
       properties(body) {
         let email_domain;
@@ -52,21 +52,21 @@ export default {
     obj[3] = sendRequest.rejectWithMigratedError();
     return obj.post(obj);
   },
-  sendVerificationEmail(outer1_0, arg1, outer1_02) {
-    let closure_0 = outer1_0;
-    let closure_1 = arg1;
-    let closure_2 = outer1_02;
+  sendVerificationEmail(closure_3, arg1, closure_0) {
+    closure_0 = closure_3;
+    closure_1 = arg1;
+    closure_2 = closure_0;
     return callback(function*() {
-      const obj5 = v02(outer1_2[2]);
-      const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
-      obj1[0] = outer1_4.HUB_EMAIL_VERIFY_SEND;
+      const obj5 = v02(closure_1_2[2]);
+      obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
+      obj1[0] = closure_1_4.HUB_EMAIL_VERIFY_SEND;
       const obj2 = { email: null, guild_id: null, allow_multiple_guilds: null, use_verification_code: true };
       obj2[0] = v0;
-      obj2[1] = outer1_2;
+      obj2[1] = closure_1_2;
       obj2[2] = v02;
       obj1[1] = obj2;
       const obj3 = { event: null, properties: null };
-      obj3[0] = v0(outer1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY_SEND;
+      obj3[0] = v0(closure_1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY_SEND;
       obj3[1] = function properties(body) {
         let has_matching_guild;
         if (body != null) {
@@ -78,13 +78,13 @@ export default {
         return v3(table[4]).exact({ has_matching_guild });
       };
       obj1[2] = obj3;
-      obj1[3] = v0(outer1_2[5]).rejectWithMigratedError();
+      obj1[3] = v0(closure_1_2[5]).rejectWithMigratedError();
       yield obj5.post(obj1);
       return arg1.body;
     })();
   },
   verify(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -116,18 +116,18 @@ export default {
               let body = tmp7;
               body = undefined;
               id = undefined;
-              if (null != outer1_0) {
-                let c3 = 1;
-                let obj5 = outer1_1(outer1_2[2]);
-                const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
+              if (null != closure_1_0) {
+                c3 = 1;
+                let obj5 = closure_1_1(closure_1_2[2]);
+                obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
                 obj1[0] = constants.HUB_EMAIL_VERIFY;
                 const obj2 = { token: null };
                 obj2[0] = tmp40;
                 obj1[1] = obj2;
                 let obj3 = { event: null };
-                obj3[0] = outer1_0(outer1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY;
+                obj3[0] = closure_1_0(closure_1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY;
                 obj1[2] = obj3;
-                obj1[3] = outer1_0(outer1_2[5]).rejectWithMigratedError();
+                obj1[3] = closure_1_0(closure_1_2[5]).rejectWithMigratedError();
                 constants = 2;
                 c5 = 1;
                 const obj4 = { value: null, done: false };
@@ -138,7 +138,7 @@ export default {
           } else {
             if (1 === tmp7) {
               c3 = 0;
-              obj3 = outer1_1(outer1_2[6]);
+              obj3 = closure_1_1(closure_1_2[6]);
               obj5 = { type: "HUB_VERIFY_EMAIL_FAILURE", errors: null };
               obj5[1] = body2.body;
               obj3.dispatch(obj5);
@@ -152,7 +152,7 @@ export default {
               if (guild != null) {
                 id = guild.id;
               }
-              obj = outer1_1(outer1_2[6]);
+              obj = closure_1_1(closure_1_2[6]);
               const obj6 = { type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: null };
               obj6[1] = id;
               obj.dispatch(obj6);
@@ -177,9 +177,9 @@ export default {
       }
     })();
   },
-  verifyCode(closure_0, outer1_1, closure_02) {
-    let closure_1 = outer1_1;
-    let closure_2 = closure_02;
+  verifyCode(closure_0, closure_1_1, closure_02) {
+    closure_1 = closure_1_1;
+    closure_2 = closure_02;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -208,23 +208,23 @@ export default {
               return obj;
             } else {
               let id = tmp3;
-              let closure_0 = tmp7;
+              closure_0 = tmp7;
               closure_0 = undefined;
               id = undefined;
-              if (null != outer1_0) {
-                let c3 = 1;
-                let obj6 = outer1_1(outer1_2[2]);
-                const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
+              if (null != closure_1_0) {
+                c3 = 1;
+                let obj6 = closure_1_1(closure_1_2[2]);
+                obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: null };
                 obj1[0] = constants.HUB_EMAIL_VERIFY_CODE;
                 const obj2 = { code: null, guild_id: null, email: null };
                 obj2[0] = tmp44;
-                obj2[1] = outer1_1;
-                obj2[2] = outer1_2;
+                obj2[1] = closure_1_1;
+                obj2[2] = closure_1_2;
                 obj1[1] = obj2;
                 const obj3 = { event: null };
-                obj3[0] = outer1_0(outer1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY;
+                obj3[0] = closure_1_0(closure_1_2[3]).NetworkActionNames.HUB_EMAIL_VERIFY;
                 obj1[2] = obj3;
-                obj1[3] = outer1_0(outer1_2[5]).rejectWithMigratedError();
+                obj1[3] = closure_1_0(closure_1_2[5]).rejectWithMigratedError();
                 constants = 2;
                 c5 = 1;
                 let obj4 = { value: null, done: false };
@@ -237,7 +237,7 @@ export default {
             }
           } else if (1 === tmp7) {
             c3 = 0;
-            obj4 = outer1_1(outer1_2[6]);
+            obj4 = closure_1_1(closure_1_2[6]);
             const obj5 = { type: "HUB_VERIFY_EMAIL_FAILURE", errors: null };
             obj5[1] = body.body;
             obj4.dispatch(obj5);
@@ -258,7 +258,7 @@ export default {
             if (guild != null) {
               id = guild.id;
             }
-            obj = outer1_1(outer1_2[6]);
+            obj = closure_1_1(closure_1_2[6]);
             const obj7 = { type: "HUB_VERIFY_EMAIL_SUCCESS", guildId: null };
             obj7[1] = id;
             obj.dispatch(obj7);

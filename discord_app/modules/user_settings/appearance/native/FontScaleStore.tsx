@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/appearance/native/FontScaleStore.tsx
-import set from "set";
-import identity from "identity";
-import set from "identity";
+import enforcingDefault from "enforcing" /* 9289 */;
+import set from "set" /* 500 */;
+import identity from "identity" /* 700 */;
 
 if (set.isAndroid()) {
-  let customFontScale = require("enforcing").getCustomFontScale();
-  const importDefaultResult = require("enforcing");
+  let customFontScale = enforcingDefault.getCustomFontScale();
+  const importDefaultResult = enforcingDefault;
 } else {
   customFontScale = { fontScale: 1, isClassicChatFontScaleEnabled: false };
 }

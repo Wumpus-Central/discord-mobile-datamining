@@ -1,51 +1,43 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsAccountLinkingScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import Button from "Button";
-import get_ActivityIndicator from "Text";
-import addApplication from "addApplication";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "addApplication" /* 4478 */;
+import closure_9 from "recomputeFromAppTokens" /* 5289 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "handleConnectionOpen" /* 4197 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let map1;
 const require = arg1;
 ({ Image: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { container: null, scrollContainer: null, buttonRow: null, rewardImage: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-let obj1 = { padding: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-createCacheKey[2] = { gap: require("Themes").space.PX_8 };
-let obj2 = { gap: require("Themes").space.PX_8 };
-createCacheKey[3] = { width: 64, height: 64, borderRadius: require("Themes").radii.sm };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { width: 64, height: 64, borderRadius: require("Themes").radii.sm };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAccountLinkingScreen.tsx");
+createCacheKey[1] = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+let obj1 = { padding: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { gap: ThemesDefault.space.PX_8 };
+let obj2 = { gap: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { width: 64, height: 64, borderRadius: ThemesDefault.radii.sm };
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { width: 64, height: 64, borderRadius: ThemesDefault.radii.sm };
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsAccountLinkingScreen.tsx");
 
 export default function DevToolsAccountLinkingScreen() {
-  let Button;
-  let connectionApp;
-  let debug;
-  let hasAlreadyLinked;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = React;
   const tmp5 = getOrFetchApplication(React.useState(""), 2);
   const first = tmp5[0];
   let id = first;
   let stateFromStores1 = tmp7;
-  let obj1 = id(589);
-  const items = [handleConnectionOpen];
-  const dependencyMap = obj1.useStateFromStores(items, () => guildId.getGuildId());
+  obj1 = id(589);
+  const items = [closure_11];
+  dependencyMap = obj1.useStateFromStores(items, () => guildId.getGuildId());
   let obj2 = id(589);
-  const items1 = [createGuildRecordFromRust];
-  const stateFromStores = obj2.useStateFromStores(items1, () => outer1_10.getGuild(closure_2));
+  const items1 = [closure_10];
+  const stateFromStores = obj2.useStateFromStores(items1, () => closure_1_10.getGuild(closure_2));
   let gameApplicationIds;
   if (stateFromStores != null) {
     gameApplicationIds = stateFromStores.gameApplicationIds;
@@ -58,7 +50,7 @@ export default function DevToolsAccountLinkingScreen() {
   let tmp8Result = tmp8(7145);
   getOrFetchApplication = tmp8Result.useGetOrFetchApplication(first);
   tmp8Result = tmp8(589);
-  const items2 = [addApplication];
+  const items2 = [closure_8];
   const stateFromStoresArray = tmp8Result.useStateFromStoresArray(items2, () => {
     let found;
     if (getOrFetchApplication != null) {
@@ -74,18 +66,18 @@ export default function DevToolsAccountLinkingScreen() {
     return found;
   });
   const tmp11 = stateFromStores1(7142)(getOrFetchApplication, { debug: true });
-  ({ startAuthorization: Button, hasAlreadyLinked, debug, connectionApp } = tmp11);
+  ({ startAuthorization: closure_4, hasAlreadyLinked, debug, connectionApp } = tmp11);
   id = undefined;
   if (connectionApp != null) {
     id = connectionApp.id;
   }
   const arr4 = stateFromStores1(7145)(gameApplicationIds);
-  const items3 = [recomputeFromAppTokens];
-  stateFromStores1 = id(589).useStateFromStores(items3, () => outer1_9.getNewestTokenForApplication(id));
+  const items3 = [closure_9];
+  stateFromStores1 = id(589).useStateFromStores(items3, () => closure_1_9.getNewestTokenForApplication(id));
   const items4 = [stateFromStores1];
   let str = "N/A";
   let str2 = "N/A";
-  const callback = obj.useCallback(() => {
+  callback = obj.useCallback(() => {
     if (null != stateFromStores1) {
       stateFromStores1(7147).delete(tmp.id);
       const obj = stateFromStores1(7147);
@@ -123,18 +115,20 @@ export default function DevToolsAccountLinkingScreen() {
   if (null != stateFromStores) {
     if (found.length > 0) {
       let mapped1 = found.map((name) => {
-        let closure_0 = name;
-        const obj = { label: null, onPress: null, trailing: null };
-        obj[0] = "" + name.name + " (" + name.id + ")";
-        obj[1] = function onPress() {
-          return outer1_1(name.id);
+        closure_0 = name;
+        const obj = {
+          label: "" + name.name + " (" + name.id + ")",
+          onPress() {
+            return closure_1_1(name.id);
+          },
+          trailing: null
         };
         let tmpResult;
         if (closure_0 === name.id) {
           tmpResult = tmp(id(4734).Text, { variant: "text-sm/semibold", children: "Selected" });
         }
         obj[2] = tmpResult;
-        return outer1_12(id(6291).TableRow, obj, name.id);
+        return closure_1_12(id(6291).TableRow, obj, name.id);
       });
     } else {
       mapped1 = tmp18(tmp8(6291).TableRow, { label: "No official games" });

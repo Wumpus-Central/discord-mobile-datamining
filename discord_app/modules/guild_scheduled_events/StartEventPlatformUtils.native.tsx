@@ -1,22 +1,20 @@
 // discord_app/modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx
-import ME from "ME";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import handleConnectionOpen from "handleConnectionOpen";
-import { GuildScheduledEventEntityTypes as closure_8 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { Routes } from "ME";
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "handleConnectionOpen" /* 4197 */;
+import { GuildScheduledEventEntityTypes as closure_8 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { Routes } from "ME" /* 676 */;
 
 const require = arg1;
 function _navigateToEvent() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      let entity_type;
-      let guild_id;
       if (store === 2) {
         store = 3;
         HermesBuiltin.throwTypeError();
@@ -43,40 +41,40 @@ function _navigateToEvent() {
               obj[0] = arg1;
               return obj;
             } else {
-              const dependencyMap = tmp5;
+              dependencyMap = tmp5;
               const callback3 = tmp2;
               let tmp27 = channel;
               const callback = channel;
               channel = undefined;
               ({ entity_type, guild_id } = callback);
-              if (outer1_8.STAGE_INSTANCE === entity_type) {
-                const channelId = outer1_6.getChannelId();
+              if (closure_1_8.STAGE_INSTANCE === entity_type) {
+                const channelId = closure_1_6.getChannelId();
                 channel = store.getChannel(tmp53.channel_id);
-                callback2(outer1_3[6])(null != channel, "could not find channel");
+                callback2(closure_1_3[6])(null != channel, "could not find channel");
                 if (channelId !== channel.id) {
                   c4 = 1;
                   store = 1;
-                  let obj1 = { value: null, done: false };
-                  obj1[0] = outer1_2(outer1_3[7]).connectToStage(channel, true);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_1_2(closure_1_3[7]).connectToStage(channel, true);
                   return obj1;
                 }
               } else {
                 if (tmp54.VOICE === entity_type) {
-                  const channelId1 = outer1_6.getChannelId();
+                  const channelId1 = closure_1_6.getChannelId();
                   const channel1 = store.getChannel(tmp53.channel_id);
-                  callback2(outer1_3[6])(null != channel1, "could not find channel");
+                  callback2(closure_1_3[6])(null != channel1, "could not find channel");
                   if (channelId1 !== channel1.id) {
-                    const voiceChannel = tmp21(outer1_3[9]).selectVoiceChannel(channel1.id);
-                    const tmp21Result = tmp21(outer1_3[9]);
+                    const voiceChannel = tmp21(closure_1_3[9]).selectVoiceChannel(channel1.id);
+                    const tmp21Result = tmp21(closure_1_3[9]);
                   }
                   if (tmp27 != null) {
                     tmp27 = tmp27();
                   }
                   tmp21 = callback2;
                 } else if (tmp54.EXTERNAL === entity_type) {
-                  if (outer1_7.getGuildId() !== guild_id) {
-                    let obj5 = callback(outer1_3[10]);
-                    obj5.transitionTo(outer1_9.CHANNEL(guild_id));
+                  if (closure_1_7.getGuildId() !== guild_id) {
+                    let obj5 = callback(closure_1_3[10]);
+                    obj5.transitionTo(closure_1_9.CHANNEL(guild_id));
                   }
                   if (tmp27 != null) {
                     tmp27();
@@ -136,7 +134,7 @@ function _navigateToEvent() {
       }
     })();
   });
-  const _navigateToEvent = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -145,7 +143,7 @@ function _navigateToEvent() {
   }
   return applyArgumentsResult;
 }
-const result = require("createRTCConnection").fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/StartEventPlatformUtils.native.tsx");
 
 export const navigateToEvent = function navigateToEvent(closure_0, onSuccess) {
   const self = this;

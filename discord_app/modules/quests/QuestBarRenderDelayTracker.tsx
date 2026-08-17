@@ -1,10 +1,12 @@
 // discord_app/modules/quests/QuestBarRenderDelayTracker.tsx
-import { AnalyticEvents } from "ME";
-import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
-import { set } from "../monitoring/MonitoringAgent.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import setDefault from "set" /* 5006 */;
+import set2 from "set" /* 5011 */;
+import _modDef10501 from "module_10501" /* 10501 */;
 
+const AnalyticEvents = ME.AnalyticEvents;
 let c4 = 30000;
 class QuestBarRenderDelayTracker {
 }
@@ -19,9 +21,9 @@ prototype["clearTimeoutTimer"] = function clearTimeoutTimer() {
 };
 prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
   if (Math.random() <= 0.1) {
-    let obj = set;
+    let obj = setDefault;
     obj = { name: null, tags: null };
-    obj[0] = set.MetricEvents.QUEST_BAR_RENDER_DELAY;
+    obj[0] = set2.MetricEvents.QUEST_BAR_RENDER_DELAY;
     const _HermesInternal = HermesInternal;
     const items = ["quest_id:" + arg0, ];
     const _HermesInternal2 = HermesInternal;
@@ -32,13 +34,13 @@ prototype["sendMetric"] = function sendMetric(arg0, arg1, arg2) {
     obj[0] = arg0;
     obj[1] = arg1;
     obj[2] = arg2;
-    expandEventProperties.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
-    const obj3 = expandEventProperties;
+    expandEventPropertiesDefault.track(AnalyticEvents.QUEST_BAR_RENDER_DELAY, obj);
+    const obj3 = expandEventPropertiesDefault;
   }
 };
 prototype["startTracking"] = function startTracking(questId) {
   const self = this;
-  let closure_0 = questId;
+  closure_0 = questId;
   this.clearTracking();
   this.startTime = performance.now();
   this.questId = questId;
@@ -67,7 +69,7 @@ prototype["stopTracking"] = function stopTracking(arg0) {
         const _Math2 = Math;
         self.sendMetric(arg0, flag, Math.min(rounded, c4));
       }
-      obj = DiscordAppState.native;
+      obj = _modDef10501;
     }
   }
 };
@@ -76,6 +78,6 @@ prototype["clearTracking"] = function clearTracking() {
   this.startTime = null;
   this.questId = null;
 };
-const result = require("set").fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
+const result = set.fileFinishedImporting("modules/quests/QuestBarRenderDelayTracker.tsx");
 
 export default Object.create(QuestBarRenderDelayTracker.prototype);

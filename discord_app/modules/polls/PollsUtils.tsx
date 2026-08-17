@@ -1,22 +1,18 @@
 // discord_app/modules/polls/PollsUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reactionKey from "reactionKey";
-import reinjectEphemerals from "reinjectEphemerals";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER";
-import ME from "ME";
-import { v1 } from "../../../_runtime/00514_v1.js";
+import v1 from "v1" /* 514 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "reactionKey" /* 7509 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { useNullableMessageAuthor } from "../messages/useMessageAuthor.tsx";
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getSampleOfVoterUsernamesForAnswer(message, id) {
   const channelId = message.getChannelId();
   reactions = reactions.getReactions(channelId, message.id, { id, name: "", animated: false }, closure_9, channel(7510).ReactionTypes.VOTE);
@@ -46,7 +42,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     if (channel != null) {
       id = channel.id;
     }
-    return guildId(outer1_2[16]).getName(guildId, id, arg0);
+    return guildId(closure_1_2[16]).getName(guildId, id, arg0);
   }).value();
 }
 function formatVoterTooltipText(arr, arg1) {
@@ -74,7 +70,7 @@ function formatVoterTooltipText(arr, arg1) {
       const intl4 = getSystemLocale.intl;
       [obj4[0], obj4[1]] = first;
       formatToPlainStringResult1 = intl4.formatToPlainString(getSystemLocale.t["O5+f5c"], { a: null, b: null });
-      const obj1 = { a: null, b: null };
+      obj1 = { a: null, b: null };
     }
   } else if (3 === first.length) {
     if (bound > 0) {
@@ -96,13 +92,12 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(getSystemLocale.t.yVX6kE, obj);
   }
 }
-({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: metroImportAll, VOTES_TOOLTIP_MAX_USERS: c9 } = POLL_ATTACHMENT_FOLDER);
+({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: c9 } = POLL_ATTACHMENT_FOLDER);
 ({ ChannelTypesSets: c10, Permissions: unpackModuleId } = ME);
-const result = require("reinjectEphemerals").fileFinishedImporting("modules/polls/PollsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/PollsUtils.tsx");
 
 export const generateEmptyPollAnswer = function generateEmptyPollAnswer() {
-  const obj = { text: "Array", image: "ct", localCreationAnswerId: null };
-  obj[2] = v1.v4();
+  const obj = { text: "Array", image: "ct", localCreationAnswerId: v1.v4() };
   return obj;
 };
 export const generateLocalCreationAnswerId = function generateLocalCreationAnswerId() {
@@ -125,22 +120,22 @@ export const hasNonVoteReactions = function hasNonVoteReactions(message) {
 };
 export const useCanPostPollsInChannel = function useCanPostPollsInChannel(channel) {
   const _require = channel;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_6];
   return _initialize.useStateFromStores(items, () => {
     let tmp = null != channel;
     if (tmp) {
-      tmp = obj.id !== channel(outer1_2[9]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
+      tmp = obj.id !== channel(closure_1_2[9]).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID;
     }
     if (tmp) {
-      const POLLS = outer1_10.POLLS;
+      const POLLS = closure_1_10.POLLS;
       let hasItem = POLLS.has(obj.type);
       if (hasItem) {
         let isPrivateResult = obj.isPrivate();
         if (!isPrivateResult) {
-          isPrivateResult = outer1_6.can(outer1_11.SEND_MESSAGES, obj) && outer1_6.can(outer1_11.SEND_POLLS, obj);
-          const obj2 = outer1_6;
-          const tmp7 = outer1_11;
-          const tmp8 = outer1_6.can(outer1_11.SEND_MESSAGES, obj) && outer1_6.can(outer1_11.SEND_POLLS, obj);
+          isPrivateResult = closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
+          const obj2 = closure_1_6;
+          const tmp7 = closure_1_11;
+          const tmp8 = closure_1_6.can(closure_1_11.SEND_MESSAGES, obj) && closure_1_6.can(closure_1_11.SEND_POLLS, obj);
         }
         hasItem = isPrivateResult;
       }
@@ -193,7 +188,7 @@ export const isIncompleteAnswer = function isIncompleteAnswer(text) {
 };
 export const createPollExpiryTimestamp = function createPollExpiryTimestamp(arg0) {
   const timestamp = Date.now();
-  return new Date(timestamp + arg0 * set.Millis.HOUR).toISOString();
+  return new Date(timestamp + arg0 * setDefault.Millis.HOUR).toISOString();
 };
 export const createPollServerDataFromCreateRequest = function createPollServerDataFromCreateRequest(poll) {
   if (null != poll) {
@@ -202,7 +197,6 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
       const answers = poll.answers;
       if (answers != null) {
         mapped = answers.map((poll_media) => {
-          let name;
           poll_media = poll_media.poll_media;
           let emoji;
           if (poll_media != null) {
@@ -238,7 +232,7 @@ export const createPollServerDataFromCreateRequest = function createPollServerDa
       const _Date = Date;
       const _Date2 = Date;
       const timestamp = Date.now();
-      const date = new Date(timestamp + poll.duration * set.Millis.HOUR);
+      const date = new Date(timestamp + poll.duration * setDefault.Millis.HOUR);
       str = date.toISOString();
     }
     let obj = {};
@@ -362,9 +356,6 @@ export const getPollAnswerVotesTooltipText = function getPollAnswerVotesTooltipT
   }
 };
 export const formatPollResultNotificationCenterText = function formatPollResultNotificationCenterText(totalVotes) {
-  let questionText;
-  let victorAnswerId;
-  let victorAnswerText;
   ({ questionText, totalVotes } = totalVotes);
   let num = 0;
   ({ victorAnswerText, victorAnswerId } = totalVotes);

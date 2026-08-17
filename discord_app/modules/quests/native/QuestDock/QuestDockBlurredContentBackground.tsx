@@ -1,11 +1,9 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx
-import importAllResult from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const memoResult = importAllResult.memo(function QuestDockBlurredContentBackground(blurTheme) {
-  let animatedLayout;
-  let animatedStyle;
   blurTheme = blurTheme.blurTheme;
   let str = "dark";
   ({ animatedStyle, animatedLayout } = blurTheme);
@@ -15,14 +13,14 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   const items = [str];
   const items1 = [str];
   const android_fallbackColor = importAllResult.useMemo(() => {
-    let str = "rgba(255, 255, 255, 0.1)";
+    str = "rgba(255, 255, 255, 0.1)";
     if ("dark" === str) {
       str = "rgba(38, 39, 50, 0.65)";
     }
     return str;
   }, items);
   const tintColor = importAllResult.useMemo(() => {
-    let str = "rgba(255, 255, 255, 0.1)";
+    str = "rgba(255, 255, 255, 0.1)";
     if ("dark" === str) {
       str = "rgba(38, 39, 50, 0.1)";
     }
@@ -31,6 +29,6 @@ const memoResult = importAllResult.memo(function QuestDockBlurredContentBackgrou
   const style = [StyleSheet.absoluteFillObject, animatedStyle];
   return jsx(str(4724), { nativeID: "quest-dock-blurred-background", tintColor, blurAmount: 0.5, blurTheme: "dark", android_fallbackColor, style, layout });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockBlurredContentBackground.tsx");
 
 export default memoResult;

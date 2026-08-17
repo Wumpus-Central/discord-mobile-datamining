@@ -1,23 +1,29 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx
-import importAllResult from "useTheme";
-import { View } from "map";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import jsxProd from "Themes";
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import map from "map" /* 4097 */;
+import LinkIcon from "LinkIcon" /* 4318 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import Text from "Text" /* 4734 */;
+import getFontScale from "getFontScale" /* 4751 */;
+import ImageIcon from "ImageIcon" /* 6882 */;
+import StickerIcon from "StickerIcon" /* 7990 */;
+import VideoIcon from "VideoIcon" /* 7998 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 8508 */;
+import PhoneHangUpIcon from "PhoneHangUpIcon" /* 8510 */;
+import map2 from "map" /* 9288 */;
+import MusicIcon from "MusicIcon" /* 9904 */;
+import formatMessagePreview from "formatMessagePreview" /* 10028 */;
+import AttachmentIcon from "AttachmentIcon" /* 10051 */;
+import getOrParseMessagePreviewMarkupAST from "getOrParseMessagePreviewMarkupAST" /* 10053 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import jsxProd from "jsxProd" /* 21 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { AttachmentIcon } from "../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
-import { ImageIcon } from "../../../../design/components/Icon/native/redesign/generated/ImageIcon.tsx";
-import { LinkIcon } from "../../../../design/components/Icon/native/redesign/generated/LinkIcon.tsx";
-import { MusicIcon } from "../../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import { PhoneCallIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneCallIcon.tsx";
-import { PhoneHangUpIcon } from "../../../../design/components/Icon/native/redesign/generated/PhoneHangUpIcon.tsx";
-import { StickerIcon } from "../../../../design/components/Icon/native/redesign/generated/StickerIcon.tsx";
-import { VideoIcon } from "../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import { getOrParseMessagePreviewMarkupAST } from "../../../message_previews/native/MessagePreviewMarkup.tsx";
-import { getFontScale } from "../../../screen/native/useFontScale.tsx";
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function PreviewIcon(icon) {
   icon = icon.icon;
   const merged = Object.assign(icon, Object.create(null));
@@ -30,7 +36,7 @@ function PreviewIcon(icon) {
     const merged2 = Object.assign(merged);
     return callback(VideoIcon.VideoIcon, obj);
   } else if ("audio" === icon) {
-    const obj1 = {};
+    obj1 = {};
     const merged3 = Object.assign(merged);
     return callback(MusicIcon.MusicIcon, obj1);
   } else if ("attachment" === icon) {
@@ -87,7 +93,7 @@ class ChannelRowPreview {
         str2 = "markup";
         if ("markup" === type) {
           tmp9 = jsx;
-          tmp10 = f48286;
+          tmp10 = closure_9;
           if ("markup" === formattedMessagePreview.type) {
             content = formattedMessagePreview.markup;
           } else {
@@ -162,33 +168,33 @@ class NativeChannelRowPreview {
       gifAutoPlay = false;
     }
     c1 = gifAutoPlay;
-    c2 = undefined;
-    useToken = undefined;
-    c4 = undefined;
-    c5 = undefined;
-    textColor = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
     ({ textColor, gradientStyles, gradientColors } = global);
     tmp = require("useTheme")();
     obj = require("createCacheKey");
     obj = { seeMoreLabelColor: require("Themes").colors.TEXT_DEFAULT };
-    c2 = obj.createNativeStyleProperties(obj)(tmp);
+    closure_2 = obj.createNativeStyleProperties(obj)(tmp);
     obj3 = require("map");
-    useToken = obj3.useToken(textColor);
+    closure_3 = obj3.useToken(textColor);
     RenderEmbeds = require("explicitContentFromProto").RenderEmbeds;
     setting = RenderEmbeds.getSetting();
-    c4 = setting;
+    closure_4 = setting;
     InlineEmbedMedia = require("explicitContentFromProto").InlineEmbedMedia;
     setting1 = InlineEmbedMedia.getSetting();
-    c5 = setting1;
+    closure_5 = setting1;
     InlineAttachmentMedia = require("explicitContentFromProto").InlineAttachmentMedia;
     setting2 = InlineAttachmentMedia.getSetting();
-    textColor = setting2;
+    closure_6 = setting2;
     items = [, , , ];
     items[0] = setting;
     items[1] = setting1;
     items[2] = setting2;
     items[3] = gifAutoPlay;
-    memo = useToken.useMemo(() => {
+    memo = closure_3.useMemo(() => {
       let obj = new gifAutoPlay(seeMoreLabelColor[24])();
       obj = { renderEmbeds: setting, inlineEmbedMedia: setting1, inlineAttachmentMedia: setting2, renderReactions: false, animateEmoji: false, gifAutoPlay, renderReplies: false, renderCodedLinks: false, renderGiftCode: false, renderActivityInviteEmbed: false, renderThreadEmbeds: false, renderForumPostActions: false, renderComponents: false, ignoreMentioned: true, enableSwipeActions: false, renderExecutedCommands: false, useAlternateEmbedColors: true };
       obj.setOptions(obj);
@@ -199,11 +205,11 @@ class NativeChannelRowPreview {
       horizontalOffset: 0,
       modifyRow(message) {
             let processColorOrThrowResult;
-            message.contextType = outer1_0(seeMoreLabelColor[26]).MessageContextType.SEARCH;
+            message.contextType = closure_1_0(seeMoreLabelColor[26]).MessageContextType.SEARCH;
             if (null != closure_3) {
               try {
-                processColorOrThrowResult = outer1_0(seeMoreLabelColor[27]).processColorOrThrow(tmp4);
-                const tmp2Result = outer1_0(seeMoreLabelColor[27]);
+                processColorOrThrowResult = closure_1_0(seeMoreLabelColor[27]).processColorOrThrow(tmp4);
+                const tmp2Result = closure_1_0(seeMoreLabelColor[27]);
               } catch (err) {
               }
             }
@@ -227,18 +233,12 @@ class NativeChannelRowPreview {
       gradientStyles,
       gradientColors
     };
-    return textColor(require("DCDChatItem"), obj1);
+    return closure_6(require("DCDChatItem"), obj1);
   }
 }
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_9 = importAllResult.memo((arg0) => {
-  let channelId;
-  let color;
-  let guildId;
-  let layout;
-  let markup;
-  let muted;
   ({ markup, channelId, guildId, muted, layout, color } = arg0);
   const fontScale = getFontScale.useFontScale();
   const obj = getFontScale;
@@ -247,9 +247,9 @@ let closure_9 = importAllResult.memo((arg0) => {
 const memoResult = importAllResult.memo((message) => {
   const _require = message;
   let obj = _initialize;
-  const items = [markAllUserIdListsStale];
+  const items = [closure_5];
   const items1 = [message.message.author.id];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.isBlockedOrIgnored(message.message.author.id), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.isBlockedOrIgnored(message.message.author.id), items1);
   if (obj2.isMessageContentPreviewable(message.message)) {
     if (!stateFromStores) {
       obj = {};
@@ -262,7 +262,7 @@ const memoResult = importAllResult.memo((message) => {
   const merged1 = Object.assign(message);
   tmp7 = callback(ChannelRowPreview, obj);
 });
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/ChannelRowPreview.tsx");
 
 export { ChannelRowPreview };
 export { NativeChannelRowPreview };

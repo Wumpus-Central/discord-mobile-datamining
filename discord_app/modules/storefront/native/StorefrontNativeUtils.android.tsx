@@ -1,9 +1,9 @@
 // discord_app/modules/storefront/native/StorefrontNativeUtils.android.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
+const result = require("set").fileFinishedImporting("modules/storefront/native/StorefrontNativeUtils.android.tsx");
 
 export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   sku = sku.sku;
@@ -22,10 +22,10 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   _require = tmp2;
   let items = [tmp2];
   const effect = React.useEffect(() => {
-    if (null != _undefined) {
+    if (null != _null) {
       const items = [tmp];
-      const inAppSkus = _undefined(outer1_2[1]).loadInAppSkus(items);
-      const obj = _undefined(outer1_2[1]);
+      const inAppSkus = _null(closure_1_2[1]).loadInAppSkus(items);
+      const obj = _null(closure_1_2[1]);
     }
   }, items);
   const items1 = [stateFromStores(5319)];
@@ -33,8 +33,8 @@ export const useFormattedSKUPrice = function useFormattedSKUPrice(sku) {
   stateFromStores = _initialize.useStateFromStores(items1, () => {
     let product = null;
     if (null != c0) {
-      product = stateFromStores(outer1_2[3]).getProduct(tmp);
-      const obj = stateFromStores(outer1_2[3]);
+      product = stateFromStores(closure_1_2[3]).getProduct(tmp);
+      const obj = stateFromStores(closure_1_2[3]);
     }
     return product;
   }, items2);

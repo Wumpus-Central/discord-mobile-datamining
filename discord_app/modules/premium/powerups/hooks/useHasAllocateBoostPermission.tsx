@@ -1,22 +1,22 @@
 // discord_app/modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "sum" /* 505 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("sum").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useHasAllocateBoostPermission.tsx");
 
 export default function useHasAllocateBoostPermission(arg0) {
   const _require = arg0;
-  const items = [getUncachedChannelPermissions, createGuildRecordFromRust];
+  const items = [closure_3, closure_2];
   return _initialize.useStateFromStores(items, () => {
-    const guild = outer1_2.getGuild(closure_0);
+    const guild = closure_1_2.getGuild(closure_0);
     let canResult = null;
     if (null != guild) {
       canResult = null;
       if (null != obj.getGuildPermissions(guild)) {
-        canResult = obj.can(outer1_4.ADMINISTRATOR, guild);
+        canResult = obj.can(closure_1_4.ADMINISTRATOR, guild);
       }
     }
     return canResult;

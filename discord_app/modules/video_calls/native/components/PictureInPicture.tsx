@@ -1,15 +1,13 @@
 // discord_app/modules/video_calls/native/components/PictureInPicture.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "set";
-import { toggleFocus } from "VoiceChatDrawerState";
-import { PictureInPicturePositions } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import Button from "Button";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { toggleFocus } from "VoiceChatDrawerState" /* 8669 */;
+import { PictureInPicturePositions } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import Button from "Button" /* 1297 */;
 
-let StyleSheet;
-let c5;
 const require = arg1;
 let c4 = importAllResult;
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
@@ -32,21 +30,13 @@ getSpringAnimationConfig.__workletHash = 6627401186753;
 getSpringAnimationConfig.__initData = { code: "function getSpringAnimationConfig_PictureInPictureTsx1(velocity){return{mass:0.2,damping:7.5,stiffness:100,restDisplacementThreshold:0.1,restSpeedThreshold:0.1,overshootClamping:true,velocity:velocity};}" };
 let closure_11 = { code: "function PictureInPictureTsx2(){const{insets,withSpring,getSpringAnimationConfig}=this.__closure;return{marginTop:insets.top,marginBottom:withSpring(insets.bottom,getSpringAnimationConfig())};}" };
 const memoResult = importAllResult.memo((preferredPosition) => {
-  let c1;
-  let children;
-  let draggableGridItemStyles;
-  let gesture;
-  let height;
-  let size2;
-  let style;
-  let width;
   ({ children, style } = preferredPosition);
   if (preferredPosition.preferredPosition === undefined) {
     const TOP_LEFT = PictureInPicturePositions.TOP_LEFT;
   }
   const channel = preferredPosition.channel;
   let insets;
-  let importDefault;
+  importDefault = undefined;
   let ref;
   const tmp2 = callback2();
   let obj = insets(ref[8]);
@@ -61,7 +51,7 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   let obj3 = insets(ref[12]);
   const fn = function w() {
     const obj = { marginTop: insets.top, marginBottom: null };
-    if (typeof outer1_10 !== "function") {
+    if (typeof closure_1_10 !== "function") {
       HermesBuiltin.throwTypeError();
     }
     obj[1] = insets(ref[13]).withSpring(insets.bottom, { mass: 0.2, damping: 7.5, stiffness: 100, restDisplacementThreshold: 0.1, restSpeedThreshold: 0.1, overshootClamping: true, velocity: undefined });
@@ -74,7 +64,7 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   const animatedStyle = obj3.useAnimatedStyle(fn);
   let obj5 = insets(ref[14]);
   const isViewingActivity = obj5.useIsViewingActivity({ channelId: channel.id });
-  const obj1 = { channelId: channel.id };
+  obj1 = { channelId: channel.id };
   const tmp8 = callback(importAllResult.useState({ x: 0, y: 0, width, height, pageX: 0, pageY: 0 }), 2);
   obj2 = { width: size.width, height: size.height, containerWidth: size2.width, containerHeight: size2.height, snapToCorners: !isViewingActivity, onPress: null };
   let tmp11;
@@ -122,7 +112,7 @@ const memoResult = importAllResult.memo((preferredPosition) => {
   }}>{null}</closure_5>;
   return jsx(importDefault(ref[12]).View, { style: items, pointerEvents: "box-none", children: null });
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/PictureInPicture.tsx");
 
 export default memoResult;
 export const DEFAULT_PIP_POSITION = PictureInPicturePositions.TOP_LEFT;

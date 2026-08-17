@@ -1,18 +1,16 @@
 // discord_app/modules/chat/native/Chat.android.tsx
-import importAllResult from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LegacyBaseButton } from "../../../../_runtime/06377_LegacyBaseButton.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatListNativeComponent.tsx";
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatNativeComponent.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { TTIFirstContentfulPaint } from "../../tti_analytics/native/TTIFirstContentfulPaint.tsx";
+import initialize from "initialize" /* 589 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 10474 */;
+import __INTERNAL_VIEW_CONFIGDefault2 from "__INTERNAL_VIEW_CONFIG" /* 11074 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11075 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function DCDChatList() {
   let obj = useIsMobileVisualRefreshExperimentEnabled;
   const memo = importAllResult.useMemo(() => {
@@ -24,7 +22,7 @@ function DCDChatList() {
   obj = { style: callback3().chatList, floatingChatInputEnabled: obj.useMobileVisualRefreshConfig({ location: "DCDChatList" }).chatInputFloating, children: null };
   const tmp = callback3();
   obj[2] = callback(TTIFirstContentfulPaint.TTIFirstContentfulPaint, { label: "chat_list_android" });
-  obj[1] = callback(__INTERNAL_VIEW_CONFIG, obj);
+  obj[1] = callback(__INTERNAL_VIEW_CONFIGDefault2, obj);
   return callback(LegacyBaseButton.GestureDetector, obj);
 }
 let c3 = importAllResult;
@@ -32,7 +30,7 @@ let c3 = importAllResult;
 let closure_7 = createCacheKey.createStyles({ chatList: { flex: 1 } });
 const forwardRefResult = importAllResult.forwardRef((children, ref) => {
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   obj = {};
   const merged = Object.assign(children);
@@ -40,8 +38,8 @@ const forwardRefResult = importAllResult.forwardRef((children, ref) => {
   obj.ref = ref;
   const items1 = [callback(DCDChatList, {}), children.children];
   obj.children = items1;
-  return callback2(__INTERNAL_VIEW_CONFIG, obj);
+  return callback2(__INTERNAL_VIEW_CONFIGDefault, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/chat/native/Chat.android.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/Chat.android.tsx");
 
 export default forwardRefResult;

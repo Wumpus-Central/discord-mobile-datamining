@@ -1,35 +1,28 @@
 // discord_app/modules/guilds_bar/native/GuildsBarFavorites.tsx
-import importAllResult from "StarIcon";
-import { View } from "getSystemLocale";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import { FAVORITES } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "initializeFromUserSettings" /* 1394 */;
+import { FAVORITES } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let c10 = "more-options";
 let obj = { anchor: null };
-obj = { position: "absolute", top: require("Themes").modules.mobile.GUILD_BAR_ITEM_MARGIN, left: 12, width: require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE, height: require("Themes").modules.mobile.GUILD_BAR_ITEM_SIZE };
+obj = { position: "absolute", top: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_MARGIN, left: 12, width: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: ThemesDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GuildsBarFavorites() {
-  let accessibilityActions;
-  let badge;
-  let badge2;
-  let cutouts;
-  let onAccessibilityAction;
-  let unread;
   const tmp3 = markPopoverAsDismissed(1367)("GuildsBarFavorites");
   let obj = shouldShowPopover(15558);
-  let obj1 = shouldShowPopover(9979);
+  obj1 = shouldShowPopover(9979);
   const isFavoritesGuildSelected = obj1.useIsFavoritesGuildSelected();
   let obj2 = shouldShowPopover(589);
-  let items = [initializeFromUserSettings];
+  let items = [closure_5];
   const stateFromStores = obj2.useStateFromStores(items, () => favoriteChannels.getFavoriteChannels());
   const guildsBarAnimatedWrapperStyles = obj.useGuildsBarAnimatedWrapperStyles();
   ({ badge, unread } = markPopoverAsDismissed(15575)(stateFromStores));
@@ -45,9 +38,9 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   const memo = importAllResult.useMemo(() => ({
     onPress() {
       if (closure_0) {
-        callback(outer1_7.TAKE_ACTION);
+        callback(closure_1_7.TAKE_ACTION);
       }
-      outer1_1(outer1_2[15])(outer1_6);
+      closure_1_1(closure_1_2[15])(closure_1_6);
     },
     onLongPress() {
       callback(table[16])();
@@ -101,6 +94,6 @@ const memoResult = importAllResult.memo(function GuildsBarFavorites() {
   children[2] = shouldShowPopover;
   return tmp15(View, { children });
 });
-const result = require("initializeFromUserSettings").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarFavorites.tsx");
 
 export default memoResult;

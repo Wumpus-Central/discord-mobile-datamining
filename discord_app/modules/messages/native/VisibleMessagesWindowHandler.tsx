@@ -1,7 +1,9 @@
 // discord_app/modules/messages/native/VisibleMessagesWindowHandler.tsx
-import { RowType } from "Changeset";
+import set from "set" /* 2 */;
+import Changeset from "Changeset" /* 8158 */;
 
-const result = require("set").fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");
+const RowType = Changeset.RowType;
+const result = set.fileFinishedImporting("modules/messages/native/VisibleMessagesWindowHandler.tsx");
 
 export default function VisibleMessagesWindowHandler() {
   let obj = Object.create(new.target.prototype);
@@ -18,9 +20,6 @@ export default function VisibleMessagesWindowHandler() {
     obj.data = null;
   };
   obj.handleScrollPosition = function handleScrollPosition(arg0) {
-    let firstVisibleMessageRowIndex;
-    let lastVisibleMessageRowIndex;
-    let rows;
     ({ rows, firstVisibleMessageRowIndex, lastVisibleMessageRowIndex } = arg0);
     if (null != obj.callback) {
       let tmp2 = null;

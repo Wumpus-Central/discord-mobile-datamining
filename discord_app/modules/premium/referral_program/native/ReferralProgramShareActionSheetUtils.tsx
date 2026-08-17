@@ -1,14 +1,10 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { UserRowModes } from "UserRowModes";
+import closure_0 from "markAllUserIdListsStale" /* 4030 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
 
 const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheetUtils.tsx");
 
 export const buildReferralUserRow = function buildReferralUserRow(selectedNotResendUsers) {
-  let eligibleUsers;
-  let resendUsers;
-  let row;
-  let selectedUserIds;
   ({ eligibleUsers, row, selectedUserIds, resendUsers } = selectedNotResendUsers);
   if (null != eligibleUsers[row]) {
     let tmp4 = selectedNotResendUsers.selectedNotResendUsers.length >= tmp;

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersFriendsDMsSetting.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle: function getTitle() {
     const intl = getSystemLocale.intl;
@@ -36,7 +36,7 @@ createToggle = {
       const intl2 = selectedTeenId(1236).intl;
       obj[1] = intl2.string(selectedTeenId(1236).t["+uI23H"]);
       obj[2] = function handlePress(explicitContentFriendDm) {
-        let obj = selectedTeenId(outer1_1[4]);
+        let obj = selectedTeenId(closure_1_1[4]);
         obj = { explicitContentFriendDm };
         return obj.updateExplicitContentSetting(selectedTeenId, obj);
       };
@@ -50,6 +50,6 @@ createToggle = {
   unsearchable: true
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("useParentalControlledExplicitContentSettings").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersFriendsDMsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsExplicitMediaFiltersFriendsDMsSetting.tsx");
 
 export default createToggle;

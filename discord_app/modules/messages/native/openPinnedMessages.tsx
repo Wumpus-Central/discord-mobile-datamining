@@ -1,8 +1,10 @@
 // discord_app/modules/messages/native/openPinnedMessages.tsx
-import { ChannelDetailsNavigatorScreens as closure_2 } from "ChannelDetailsNavigatorScreens";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
+import set from "set" /* 2 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
 
-const result = require("set").fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
+let closure_2 = ChannelDetailsNavigatorScreens.ChannelDetailsNavigatorScreens;
+const result = set.fileFinishedImporting("modules/messages/native/openPinnedMessages.tsx");
 
 export default function openPinnedMessages(arg0, arg1) {
   let obj = getRootNavigationRef;

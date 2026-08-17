@@ -1,6 +1,7 @@
 // discord_app/modules/gateway/GatewayEncoding.tsx
-import getErlpackEncoding from "getErlpackEncoding";
-import { ProcessArgs } from "get";
+import set from "set" /* 2 */;
+import get from "get" /* 4842 */;
+import getErlpackEncoding from "getErlpackEncoding" /* 13190 */;
 
 getErlpackEncoding = getErlpackEncoding.getErlpackEncoding();
 class JSONEncoding {
@@ -16,7 +17,7 @@ prototype["unpack"] = function unpack(str) {
       tmp2 = typeof str;
     }
     const _HermesInternal = HermesInternal;
-    const error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
+    error = new Error("Expected a string to be passed to JSONEncoding.unpack, got " + tmp2);
     throw error;
   } else {
     const _JSON = JSON;
@@ -33,9 +34,10 @@ let tmp3 = JSONEncoding;
 if (undefined !== getErlpackEncoding) {
   tmp3 = getErlpackEncoding;
 }
+const ProcessArgs = get.ProcessArgs;
 if (ProcessArgs.isDiscordGatewayPlaintextSet()) {
   tmp3 = JSONEncoding;
 }
-const result = require("set").fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
+const result = set.fileFinishedImporting("modules/gateway/GatewayEncoding.tsx");
 
 export default tmp3;

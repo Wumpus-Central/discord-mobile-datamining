@@ -1,10 +1,11 @@
 // discord_app/modules/home_drawer/native/HomeDrawerSubtitleStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 
 let c0 = null;
 const obj = keys.create((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  c0 = arg0;
+  closure_1 = arg1;
   return {
     currentType: "voice",
     startTimer() {
@@ -21,15 +22,15 @@ const obj = keys.create((arg0, arg1) => {
       }, 3500);
     },
     stopTimer() {
-      if (null != callback) {
+      if (null != _null) {
         const _clearInterval = clearInterval;
-        clearInterval(callback);
-        callback = null;
+        clearInterval(_null);
+        _null = null;
       }
-      callback({ currentType: "voice" });
+      _null({ currentType: "voice" });
     }
   };
 });
-const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
+const result = set.fileFinishedImporting("modules/home_drawer/native/HomeDrawerSubtitleStore.tsx");
 
 export default obj;

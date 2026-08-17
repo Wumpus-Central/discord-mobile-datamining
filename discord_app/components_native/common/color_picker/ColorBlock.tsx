@@ -1,17 +1,16 @@
 // discord_app/components_native/common/color_picker/ColorBlock.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let obj = { colorBlock: null };
-obj = { minWidth: 44, height: 44, borderRadius: require("Themes").radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
+obj = { minWidth: 44, height: 44, borderRadius: ThemesDefault.radii.xl, marginHorizontal: 12, marginVertical: 8, justifyContent: "center", alignItems: "center" };
 obj[0] = obj;
 const styles = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((color) => {
-  let selected;
-  let style;
+const memoResult = importAllResult.memo((color) => {
   color = color.color;
   ({ style, selected } = color);
   if (selected === undefined) {
@@ -34,7 +33,7 @@ const memoResult = require("noop").memo((color) => {
       return onSelect(color);
     };
     const items = [tmp.colorBlock, style, ];
-    const obj1 = { backgroundColor: null };
+    obj1 = { backgroundColor: null };
     obj1[0] = tmp2(688).int2hex(color);
     items[2] = obj1;
     obj[4] = items;
@@ -80,7 +79,7 @@ const memoResult = require("noop").memo((color) => {
   }
   return tmp10Result;
 });
-const result = require("jsxProd").fileFinishedImporting("components_native/common/color_picker/ColorBlock.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/color_picker/ColorBlock.tsx");
 
 export default memoResult;
 export const useStyles = styles;

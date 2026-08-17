@@ -1,25 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfileTextButtonGroup.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import noopAll from "noop" /* 19 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { PROFILE_SIDE_PADDING } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
-let result = require("ARBITRARY_LARGE_OFFSET").fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileTextButtonGroup.tsx");
 
 export default function UserProfileTextButtonGroup(arg0) {
-  let maxWidth;
-  let primaryButton;
-  let secondaryButton;
-  let style;
   ({ primaryButton, secondaryButton, maxWidth, style } = arg0);
   let items = callback3();
-  const width = useWindowDimensions().width;
+  const width = useWindowDimensionsDefault().width;
   let bound = width;
   if (null != maxWidth) {
     const _Math = Math;
@@ -50,7 +45,7 @@ export default function UserProfileTextButtonGroup(arg0) {
     obj = { style: null, children: null };
     const items2 = [items.container, style];
     obj[0] = items2;
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     const items3 = [items.buttonArea, ];
     const obj2 = { minWidth: null };
     obj2[0] = result;

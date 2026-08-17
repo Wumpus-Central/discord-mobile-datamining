@@ -1,20 +1,16 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx
-import participantFromServer from "participantFromServer";
-import addApplication from "addApplication";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import sortActivity from "sortActivity";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { CodedLinkExtendedType } from "CodedLinkExtendedType";
+import closure_2 from "participantFromServer" /* 1390 */;
+import closure_3 from "addApplication" /* 4478 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "sortActivity" /* 4559 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { CodedLinkExtendedType } from "CodedLinkExtendedType" /* 10510 */;
 
 const require = arg1;
-const result = require("fetchFingerprint").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/EmbeddedActivityInstanceEmbed.tsx");
 
 export const createActivityInstanceEmbed = function createActivityInstanceEmbed(message) {
-  let activityInstance;
-  let application;
-  let canLaunchInChannel;
-  let instanceId;
   ({ application, activityInstance } = message);
   channel = channel.getChannel(message.channel_id);
   if (null != application) {
@@ -29,7 +25,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
         if (currentUser != null) {
           nsfwAllowed = currentUser.nsfwAllowed;
         }
-        let obj1 = id(11127);
+        obj1 = id(11127);
         const contentClassificationVisibility = obj1.getContentClassificationVisibility(application.content_classification, channel, nsfwAllowed);
         if (id(11127).ContentClassificationVisibility.DISPLAY === contentClassificationVisibility) {
           id = application;
@@ -139,7 +135,7 @@ export const createActivityInstanceEmbed = function createActivityInstanceEmbed(
           obj2[4] = str2;
           obj2[8] = appIconSrc;
           obj13 = application;
-          obj8 = sortActivity;
+          obj8 = closure_6;
           const tmp5Result1 = tmp5(11129);
           const obj3 = { applicationId: null, referrerId: null };
           obj3[0] = application.id;

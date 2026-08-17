@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/images/HomeEmptyState.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("inlineStyles").fileFinishedImporting("modules/app_launcher/native/images/HomeEmptyState.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/images/HomeEmptyState.tsx");
 
 export default function SvgComponent(arg0) {
   let obj = { width: 113, height: 124, fill: "none" };
@@ -18,7 +18,7 @@ export default function SvgComponent(arg0) {
   const items1 = [callback(inlineStyles.Stop, { offset: 0.2, stopColor: "#E8E8E8" }), callback(inlineStyles.Stop, { offset: 0.6, stopColor: "#E6E6E7" }), callback(inlineStyles.Stop, { offset: 0.7, stopColor: "#DFE1E6" }), callback(inlineStyles.Stop, { offset: 0.8, stopColor: "#D3D8E4" }), callback(inlineStyles.Stop, { offset: 0.9, stopColor: "#C2CBE1" }), callback(inlineStyles.Stop, { offset: 1, stopColor: "#ABB9DD" })];
   obj[6] = items1;
   const items2 = [callback2(inlineStyles.LinearGradient, obj), , , , , , ];
-  const obj1 = { id: "b", x1: 48.605, x2: 55.288, y1: 22.456, y2: 74.486, gradientUnits: "userSpaceOnUse", children: null };
+  obj1 = { id: "b", x1: 48.605, x2: 55.288, y1: 22.456, y2: 74.486, gradientUnits: "userSpaceOnUse", children: null };
   const items3 = [callback(inlineStyles.Stop, { offset: 0.2, stopColor: "#E8E8E8" }), callback(inlineStyles.Stop, { offset: 0.6, stopColor: "#E6E6E7" }), callback(inlineStyles.Stop, { offset: 0.7, stopColor: "#DFE1E6" }), callback(inlineStyles.Stop, { offset: 0.8, stopColor: "#D3D8E4" }), callback(inlineStyles.Stop, { offset: 0.9, stopColor: "#C2CBE1" }), callback(inlineStyles.Stop, { offset: 1, stopColor: "#ABB9DD" })];
   obj1[6] = items3;
   items2[1] = callback2(inlineStyles.LinearGradient, obj1);
@@ -45,5 +45,5 @@ export default function SvgComponent(arg0) {
   obj[0] = items2;
   items[34] = callback2(inlineStyles.Defs, obj);
   obj.children = items;
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 };

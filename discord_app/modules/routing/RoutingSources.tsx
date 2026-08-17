@@ -1,8 +1,9 @@
 // discord_app/modules/routing/RoutingSources.tsx
-import set from "set";
+import AbortCodes from "AbortCodes" /* 1235 */;
+import set from "set" /* 2 */;
 
 const items = [, ];
-({ EMBED: arr[0], FORUM: arr[1] } = require("AbortCodes").OpenThreadAnalyticsLocations);
+({ EMBED: arr[0], FORUM: arr[1] } = AbortCodes.OpenThreadAnalyticsLocations);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/routing/RoutingSources.tsx");
 

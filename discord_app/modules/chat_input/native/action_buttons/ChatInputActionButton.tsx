@@ -1,15 +1,16 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButton.tsx
-import importAllResult from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import map from "map" /* 4097 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import importAllResult from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let closure_5 = createCacheKey.createStyles((arg0, height, marginHorizontal) => {
-  const radii = Themes.radii;
+  const radii = ThemesDefault.radii;
   if (arg0) {
     let round = radii.sm;
     let tmp4 = tmp;
@@ -27,25 +28,11 @@ let closure_5 = createCacheKey.createStyles((arg0, height, marginHorizontal) => 
   obj = { tintColor: tmp4(712).colors.CHAT_INPUT_ACTION_BUTTON_ICON_DEFAULT_TINT, width: tmp4(712).modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE, height: tmp4(712).modules.mobile.CHAT_INPUT_ACTION_ICON_PIXEL_SIZE };
   obj[1] = obj;
   obj[2] = { tintColor: tmp4(712).colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
-  const obj1 = { tintColor: tmp4(712).colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
+  obj1 = { tintColor: tmp4(712).colors.REDESIGN_BUTTON_TERTIARY_PRESSED_TEXT };
   obj[3] = { tintColor: tmp4(712).colors.ICON_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref) => {
-  let IconComponent;
-  let accessibilityActions;
-  let accessibilityHint;
-  let accessibilityLabel;
-  let accessibilityState;
-  let accessible;
-  let activeIconStyle;
-  let activeStyle;
-  let chatInputFloating;
-  let disabled;
-  let enabled;
-  let onAccessibilityAction;
-  let onPress;
-  let style;
   let flag = active.active;
   if (flag === undefined) {
     flag = false;
@@ -54,12 +41,12 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
   let obj = useIsMobileVisualRefreshExperimentEnabled;
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputActionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = map.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const obj2 = map;
   const tmp = require;
-  const token1 = map.useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const token1 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   const obj3 = map;
-  const token2 = map.useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token2 = map.useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   const tmp7 = callback(enabled, token, token1);
   let tmp8;
   if (chatInputFloating) {
@@ -116,8 +103,8 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((active, ref)
   }
   items1[3] = disabled;
   obj[12] = <IconComponent size="custom" style={items1} />;
-  return jsx(tmp(5433).PressableOpacity, { disabled });
+  return jsx(PressableBase.PressableOpacity, { disabled });
 }));
-const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButton.tsx");
 
 export default memoResult;

@@ -1,14 +1,14 @@
 // discord_app/modules/share/useShareSearchResults.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import fetchFingerprint from "fetchFingerprint";
-import handleChannelSelect from "handleChannelSelect";
-import { ALLOWED_TYPES } from "ALLOWED_TYPES";
-import { trackClose } from "../quickswitcher/QuickSwitcherActionCreators.tsx";
+import trackClose from "trackClose" /* 9094 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "_handleConnectionOpen" /* 4495 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "handleChannelSelect" /* 6772 */;
+import { ALLOWED_TYPES } from "ALLOWED_TYPES" /* 7606 */;
 
-const require = arg1;
-const result = require("_handleConnectionOpen").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/share/useShareSearchResults.tsx");
 
 export const makeAutocompleterSearchParams = function makeAutocompleterSearchParams(arg0) {
   const query = trackClose.getQuickSwitcherOptions(arg0);
@@ -43,14 +43,14 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   let query;
   let results;
   let first;
-  let c10;
+  closure_10 = undefined;
   let queryMode2;
   let ref;
   let ref1;
   let current;
   let stateFromStores1;
   let stateFromStores2;
-  let c17;
+  closure_17 = undefined;
   let obj = targetDestination(originDestination[7]);
   let items = [search];
   stateFromStores = obj.useStateFromStores(items, () => search.getId());
@@ -82,11 +82,11 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   }
   const tmp9 = channelFilter(flag.useState({ query: quickSwitcherOptions.query, queryMode: tmp8, resultTypes: obj4 }), 2);
   first = tmp9[0];
-  c10 = tmp11;
+  closure_10 = tmp11;
   const items3 = [tmp9[1]];
   queryMode2 = first.queryMode;
   const callback = obj2.useCallback((arg0) => {
-    const query = targetDestination(originDestination[6]).getQuickSwitcherOptions(arg0);
+    query = targetDestination(originDestination[6]).getQuickSwitcherOptions(arg0);
     let queryMode = query.queryMode;
     let resultTypes = results;
     let hasItem = null != queryMode;
@@ -98,7 +98,7 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
       const items = [queryMode];
       resultTypes = items;
     }
-    return c10({ query: query.query, queryMode, resultTypes });
+    return closure_10({ query: query.query, queryMode, resultTypes });
   }, items3);
   ref = obj2.useRef(null);
   ref1 = obj2.useRef(selectedDestinations);
@@ -125,8 +125,8 @@ export const useShareSearchResults = function useShareSearchResults(targetDestin
   const obj3 = targetDestination(originDestination[6]);
   const items7 = [stateFromStores];
   stateFromStores2 = targetDestination(originDestination[7]).useStateFromStores(items7, () => stateFromStores.isConnected());
-  c17 = tmp20;
-  obj = { results: obj2.useMemo(() => selectedDestinations(originDestination[10])({ results, hasQuery: c17, queryMode: queryMode2, targetDestination, frequentChannels: stateFromStores1, selectedDestinations, pinnedDestinations: current, originDestination, channelFilter, includeMissingDMs: flag, isConnected: stateFromStores2 }), items8), updateSearchText: callback };
+  closure_17 = tmp20;
+  obj = { results: obj2.useMemo(() => selectedDestinations(originDestination[10])({ results, hasQuery: closure_17, queryMode: queryMode2, targetDestination, frequentChannels: stateFromStores1, selectedDestinations, pinnedDestinations: current, originDestination, channelFilter, includeMissingDMs: flag, isConnected: stateFromStores2 }), items8), updateSearchText: callback };
   items8 = [results, "" !== query, queryMode2, targetDestination, stateFromStores1, selectedDestinations, current, originDestination, channelFilter, flag, stateFromStores2];
   return obj;
 };

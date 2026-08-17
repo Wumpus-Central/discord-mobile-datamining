@@ -1,41 +1,41 @@
 // discord_app/modules/notification_center/native/ForYouMentionPlaceholder.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let require = arg1;
+const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { placeholder: { flexDirection: "row", marginBottom: 16, marginHorizontal: 24 }, placeholderImage: null, placeholderText: null, placeholderTextContainer: null, placeholderBody: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, height: 52, width: 52, borderRadius: 26, marginEnd: 12 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 52, width: 52, borderRadius: 26, marginEnd: 12 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, height: 15, borderRadius: require("Themes").radii.sm, marginRight: 12, marginBottom: 4 };
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 15, borderRadius: ThemesDefault.radii.sm, marginRight: 12, marginBottom: 4 };
 createCacheKey[3] = { flexDirection: "row", flexWrap: "wrap" };
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, height: 15, borderRadius: require("Themes").radii.sm, marginRight: 12, marginBottom: 4 };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, height: 40, borderRadius: require("Themes").radii.sm, marginTop: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 15, borderRadius: ThemesDefault.radii.sm, marginRight: 12, marginBottom: 4 };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 40, borderRadius: ThemesDefault.radii.sm, marginTop: 4 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = [70, 50];
 let closure_9 = { code: "function ForYouMentionPlaceholderTsx1(){const{reducedMotion,opacity}=this.__closure;return{opacity:reducedMotion?0.7:opacity.get()};}" };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, height: 40, borderRadius: require("Themes").radii.sm, marginTop: 4 };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/notification_center/native/ForYouMentionPlaceholder.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, height: 40, borderRadius: ThemesDefault.radii.sm, marginTop: 4 };
+let result = require("set").fileFinishedImporting("modules/notification_center/native/ForYouMentionPlaceholder.tsx");
 
 export const ForYouMentionPlaceholder = function ForYouMentionPlaceholder() {
-  const tmp = createCacheKey();
-  const require = tmp;
-  let obj = require(sharedValue[6]);
-  let items = [maybeApplyNoTextColorForLightCustomTheme];
+  const tmp = callback3();
+  const _require = tmp;
+  let obj = _require(sharedValue[6]);
+  let items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = require(sharedValue[7]);
+  obj1 = _require(sharedValue[7]);
   sharedValue = obj1.useSharedValue(0.3);
-  let obj3 = require(sharedValue[7]);
+  let obj3 = _require(sharedValue[7]);
   obj = { duration: 1000, easing: null };
-  const Easing = require(sharedValue[7]).Easing;
-  obj[1] = Easing.inOut(require(sharedValue[7]).Easing.ease);
-  const result = sharedValue.set(obj3.withRepeat(require(sharedValue[8]).withTiming(0.7, obj), -1, true));
-  const obj5 = require(sharedValue[8]);
+  const Easing = _require(sharedValue[7]).Easing;
+  obj[1] = Easing.inOut(_require(sharedValue[7]).Easing.ease);
+  const result = sharedValue.set(obj3.withRepeat(_require(sharedValue[8]).withTiming(0.7, obj), -1, true));
+  const obj5 = _require(sharedValue[8]);
   const fn = function y() {
     let opacity = 0.7;
     if (!stateFromStores) {
@@ -46,7 +46,7 @@ export const ForYouMentionPlaceholder = function ForYouMentionPlaceholder() {
   fn.__closure = { reducedMotion: stateFromStores, opacity: sharedValue };
   fn.__workletHash = 8828208724188;
   fn.__initData = closure_9;
-  const animatedStyle = require(sharedValue[7]).useAnimatedStyle(fn);
+  const animatedStyle = _require(sharedValue[7]).useAnimatedStyle(fn);
   obj = { style: items1, children: null };
   items1 = [tmp.placeholder, animatedStyle];
   obj1 = { style: tmp.placeholderImage };
@@ -56,11 +56,11 @@ export const ForYouMentionPlaceholder = function ForYouMentionPlaceholder() {
     style: tmp.placeholderTextContainer,
     children: closure_8.map((arg0, arg1) => {
       let obj = { style: null };
-      const items = [tmp.placeholderText, ];
+      const items = [placeholderText.placeholderText, ];
       obj = { width: "" + arg0 + "%" };
       items[1] = obj;
       obj[0] = items;
-      return outer1_5(outer1_3, obj, arg1);
+      return closure_1_5(closure_1_3, obj, arg1);
     })
   };
   const items3 = [callback(View, obj3), ];

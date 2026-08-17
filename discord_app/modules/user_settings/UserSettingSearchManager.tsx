@@ -1,5 +1,7 @@
 // discord_app/modules/user_settings/UserSettingSearchManager.tsx
-let result = require("set").fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
+import set2 from "set" /* 2 */;
+
+let result = set2.fileFinishedImporting("modules/user_settings/UserSettingSearchManager.tsx");
 class SettingSearchManager {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -11,8 +13,6 @@ class SettingSearchManager {
     obj.cacheScored = map1;
     obj.preprocessed = [];
     item = global.forEach((arg0) => {
-      let arr;
-      let tmp;
       [tmp, arr] = arg0;
       let set;
       const items = [];
@@ -40,7 +40,7 @@ class SettingSearchManager {
 const prototype = SettingSearchManager.prototype;
 prototype["search"] = function search(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0) => {
     arg0(self.getMatchingSettings(closure_0));
   });
@@ -55,14 +55,12 @@ prototype["getMatchingSettings"] = function getMatchingSettings(closure_0) {
     const items = [];
     const terms = self.terms;
     const item = terms.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       for (const item10015 of tmp2) {
         let tmp3 = items;
-        let tmp4 = outer1_2;
+        let tmp4 = closure_1_2;
         let tmp6 = closure_0;
-        let tmp5 = items(outer1_2[0]);
+        let tmp5 = items(closure_1_2[0]);
         let formatted = closure_0.toLowerCase();
         if (tmp5(formatted, item10015.toLowerCase())) {
           let tmp8 = items;
@@ -81,7 +79,7 @@ prototype["getMatchingSettings"] = function getMatchingSettings(closure_0) {
 prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
   const trimmed = str.trim();
   const toLocaleLowerCaseResult = trimmed.toLocaleLowerCase();
-  const require = toLocaleLowerCaseResult;
+  require = toLocaleLowerCaseResult;
   if (0 === toLocaleLowerCaseResult.length) {
     return [];
   } else {
@@ -94,16 +92,15 @@ prototype["getScoredSearchResults"] = function getScoredSearchResults(str) {
       const items = [];
       const preprocessed = self.preprocessed;
       let item = preprocessed.forEach((arg0) => {
-        let tmp;
         [tmp, ] = arg0;
-        let c0 = 0;
+        c0 = 0;
         if (arr.some((arg0) => arg0 === c0)) {
           c0 = 1;
         } else if (obj.some((str) => str.startsWith(c0))) {
           c0 = 0.95;
         } else {
           const item = arr.forEach((arg0) => {
-            const result = toLocaleLowerCaseResult(outer2_2[1]).calculateJaroWinklerSimilarity(c0, arg0);
+            const result = toLocaleLowerCaseResult(closure_2_2[1]).calculateJaroWinklerSimilarity(c0, arg0);
             let num = 0;
             if (result >= 0.8) {
               num = result;

@@ -1,28 +1,21 @@
 // discord_app/modules/application_account_linking/native/AccountLinkBanner.tsx
-import get_ActivityIndicator from "Button";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "ExperimentalGameControllerLinkIcon";
-import createCacheKey from "createCacheKey";
-import importAllResult from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import { apexExperiment } from "../experiments/mobileAccountLinkingExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import apexExperiment from "apexExperiment" /* 15456 */;
+import apexExperimentDefault from "apexExperiment" /* 15456 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function AccountLinkLargeBanner(arg0) {
-  let application;
-  let importDefault;
-  let require;
   ({ application, markAsDismissed: require, startAuthorization: importDefault } = arg0);
   let analyticsLocations;
   const tmp = callback3();
   let obj = require(analyticsLocations[11]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   analyticsLocations = importDefault(analyticsLocations[12])(importDefault(analyticsLocations[13]).MOBILE_ACCOUNT_LINK_LARGE_BANNER).analyticsLocations;
   const applicationAccountLinkBenefitConfig = application.applicationAccountLinkBenefitConfig;
@@ -36,12 +29,12 @@ function AccountLinkLargeBanner(arg0) {
     obj[1] = tmp.card;
     obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
     obj[1] = function onPress() {
-      return callback(outer1_6.USER_DISMISS);
+      return callback(closure_1_6.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
     obj[3] = callback(tmp2(tmp3[16]).XSmallIcon, { size: "sm", color: "text-muted" });
     const items1 = [callback(tmp2(tmp3[15]).PressableOpacity, obj), , , , ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.imagesContainer;
     const obj2 = { game: null, size: null };
     obj2[0] = application;
@@ -99,9 +92,6 @@ function AccountLinkLargeBanner(arg0) {
   return tmp8;
 }
 function AccountLinkMediumBanner(arg0) {
-  let application;
-  let importDefault;
-  let require;
   ({ application, markAsDismissed: require, startAuthorization: importDefault } = arg0);
   let analyticsLocations;
   const tmp = callback4();
@@ -124,7 +114,7 @@ function AccountLinkMediumBanner(arg0) {
       obj = { style: null, children: null };
       obj[0] = tmp.contentContainer;
       obj = { source: null, style: null, resizeMode: "contain" };
-      const obj1 = { uri: null };
+      obj1 = { uri: null };
       obj1[0] = reward_image;
       obj[0] = obj1;
       obj[1] = tmp.rewardImage;
@@ -139,7 +129,7 @@ function AccountLinkMediumBanner(arg0) {
       items[1] = callback(require(tmp2[18]).Text, obj2);
       const obj4 = { accessibilityRole: "button", onPress: null, style: null, children: null };
       obj4[1] = function onPress() {
-        return callback(outer1_6.USER_DISMISS);
+        return callback(closure_1_6.USER_DISMISS);
       };
       obj4[2] = tmp.closeButton;
       obj4[3] = callback(require(tmp2[16]).XSmallIcon, { size: "sm", color: "text-muted" });
@@ -164,39 +154,39 @@ function AccountLinkMediumBanner(arg0) {
   return tmp5;
 }
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
-const PX_8 = require("Themes").space.PX_8;
-const PX_82 = require("Themes").space.PX_8;
-const PX_12 = require("Themes").space.PX_12;
-const PX_16 = require("Themes").space.PX_16;
-const PX_4 = require("Themes").space.PX_4;
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
+const PX_8 = ThemesDefault.space.PX_8;
+const PX_82 = ThemesDefault.space.PX_8;
+const PX_12 = ThemesDefault.space.PX_12;
+const PX_16 = ThemesDefault.space.PX_16;
+const PX_4 = ThemesDefault.space.PX_4;
 const NORMAL = require("GameIcon").GameIconSizes.NORMAL;
 let closure_16 = require("GameIcon").GameIconImageSize[NORMAL];
 let c17 = "heading-md/bold";
 let c18 = "text-sm/medium";
-const PX_162 = require("Themes").space.PX_16;
-const PX_122 = require("Themes").space.PX_12;
+const PX_162 = ThemesDefault.space.PX_16;
+const PX_122 = ThemesDefault.space.PX_12;
 let obj = { card: { padding: PX_12 }, closeButton: null, imagesContainer: null, ellipsisContainer: null, ellipsisDot: null, title: null, body: null, ctaContainer: null };
-obj = { position: "absolute", top: require("Themes").space.PX_12, right: require("Themes").space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
+obj = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj[1] = obj;
 obj[2] = { flexDirection: "row", alignItems: "center", justifyContent: "center" };
-createCacheKey = { flexDirection: "row", alignItems: "center", marginHorizontal: require("Themes").space.PX_8, gap: require("Themes").space.PX_4 };
+createCacheKey = { flexDirection: "row", alignItems: "center", marginHorizontal: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
 obj[3] = createCacheKey;
-obj[4] = { width: require("Themes").space.PX_4, height: require("Themes").space.PX_4, borderRadius: require("Themes").space.PX_4 / 2, backgroundColor: require("Themes").colors.INTERACTIVE_MUTED };
+obj[4] = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
 obj[5] = { marginTop: PX_16, textAlign: "center" };
 obj[6] = { marginTop: PX_4, textAlign: "center" };
 obj[7] = { marginTop: PX_162 };
 let closure_21 = createCacheKey.createStyles(obj);
 let obj3 = { card: { padding: PX_12 }, closeButton: { width: 24, height: 24, alignItems: "center", justifyContent: "center", alignSelf: "flex-start" }, contentContainer: null, rewardImage: null, bodyText: null, ctaContainer: null };
-let obj2 = { width: require("Themes").space.PX_4, height: require("Themes").space.PX_4, borderRadius: require("Themes").space.PX_4 / 2, backgroundColor: require("Themes").colors.INTERACTIVE_MUTED };
-obj3[2] = { flexDirection: "row", gap: require("Themes").space.PX_12 };
+let obj2 = { width: ThemesDefault.space.PX_4, height: ThemesDefault.space.PX_4, borderRadius: ThemesDefault.space.PX_4 / 2, backgroundColor: ThemesDefault.colors.INTERACTIVE_MUTED };
+obj3[2] = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 obj3[3] = { width: 48, height: 48 };
 obj3[4] = { flexGrow: 1, flexShrink: 1, alignSelf: "center" };
 obj3[5] = { marginTop: PX_122, width: "100%" };
 let closure_23 = createCacheKey.createStyles(obj3);
-let obj4 = { flexDirection: "row", gap: require("Themes").space.PX_12 };
+let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_12 };
 const memoResult = importAllResult.memo((arg0) => {
-  let obj = apexExperiment;
+  let obj = apexExperimentDefault;
   const config = obj.useConfig({ location: "AccountLinkBanner" });
   const bannerSize = config.bannerSize;
   let tmp5Result = null;
@@ -214,7 +204,7 @@ const memoResult = importAllResult.memo((arg0) => {
       const merged1 = Object.assign(arg0);
       tmp14 = callback(AccountLinkMediumBanner, obj);
     }
-    const obj1 = { children: null };
+    obj1 = { children: null };
     items[1] = tmp14;
     obj1[0] = items;
     tmp5Result = closure_8(closure_9, obj1);
@@ -224,14 +214,14 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   return tmp5Result;
 });
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/application_account_linking/native/AccountLinkBanner.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/AccountLinkBanner.tsx");
 
 export default memoResult;
 export const ACCOUNT_LINK_BANNER_MARGIN_TOP = PX_8;
 export const ACCOUNT_LINK_BANNER_MARGIN_BOTTOM = PX_82;
 export const getScaledAccountLinkBannerHeight = function getScaledAccountLinkBannerHeight(fontScale) {
   let sum3 = dependencyMap;
-  const config = apexExperiment.getConfig({ location: "getScaledAccountLinkBannerHeight" });
+  const config = apexExperimentDefault.getConfig({ location: "getScaledAccountLinkBannerHeight" });
   const bannerSize = config.bannerSize;
   if (!config.enabled) {
     return 0;

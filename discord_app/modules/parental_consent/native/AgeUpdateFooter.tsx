@@ -1,14 +1,15 @@
 // discord_app/modules/parental_consent/native/AgeUpdateFooter.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "../../safety_flows/SafetyFlows.messages.js";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2597 */;
+import Text from "Text" /* 4734 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ text: { textAlign: "center" } });
-const result = require("createCacheKey").fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
+const result = require("set").fileFinishedImporting("modules/parental_consent/native/AgeUpdateFooter.tsx");
 
 export default function AgeUpdateFooter() {
   let obj = { variant: "text-md/medium", color: "text-muted", style: callback().text, children: null };
@@ -20,7 +21,7 @@ export default function AgeUpdateFooter() {
       return obj.showAgeVerificationGetStartedModal(obj);
     }
   };
-  obj[3] = intl.format(messagesProxy.ifObbX, obj);
+  obj[3] = intl.format(messagesProxyDefault.ifObbX, obj);
   return jsx(Text.Text, {
     handleAgeVerifyHook() {
       let obj = callback2(5428);

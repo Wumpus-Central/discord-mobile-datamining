@@ -1,10 +1,12 @@
 // discord_app/modules/messages/MosaicMediaType.tsx
-import { MessageAttachmentFlags } from "ME";
-import { urlMatchesFileExtension } from "MediaFormatTesters.tsx";
-import { set } from "PlaintextFilePreviewHelpers.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+import set2 from "set" /* 12043 */;
 
+const MessageAttachmentFlags = ME.MessageAttachmentFlags;
 const re3 = /\.(mp3|m4a|ogg|opus|wav|flac)$/i;
-const result = require("hasFlag").fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
+const result = set.fileFinishedImporting("modules/messages/MosaicMediaType.tsx");
 
 export function isVisualMedia(arg0) {
   let tmp = "IMAGE" === arg0;
@@ -20,9 +22,6 @@ export function isVisualMedia(arg0) {
   return tmp;
 }
 export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAttachment(proxy_url, arg1) {
-  let filename;
-  let height;
-  let width;
   ({ filename, width, height } = proxy_url);
   if (arg1) {
     if (null != width) {
@@ -69,14 +68,11 @@ export const getMosaicMediaTypeForAttachment = function getMosaicMediaTypeForAtt
     if (obj.isPlaintextPreviewableFile(filename)) {
       str2 = "PLAINTEXT_PREVIEW";
     }
-    obj = set;
+    obj = set2;
   }
   str = str2;
 };
 export const getMosaicMediaTypeForUnfurledMediaItem = function getMosaicMediaTypeForUnfurledMediaItem(arg0) {
-  let contentType;
-  let height;
-  let width;
   ({ contentType, width, height } = arg0);
   if (null != width) {
     if (width > 0) {

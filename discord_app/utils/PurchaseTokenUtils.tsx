@@ -1,11 +1,12 @@
 // discord_app/utils/PurchaseTokenUtils.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { v1 } from "../../_runtime/00514_v1.js";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import v1 from "v1" /* 514 */;
+import Storage3 from "Storage" /* 595 */;
+import setDefault from "set" /* 687 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 function getPurchaseToken() {
-  const Storage = Storage.Storage;
+  const Storage = Storage3.Storage;
   const value = Storage.get(purchase_token);
   if (null != value) {
     const _Date = Date;
@@ -23,12 +24,12 @@ function getPurchaseToken() {
 function _getPurchaseTokenHash() {
   const self = this;
   const tmp = callback(function*() {
-    let closure_1 = tmp2;
+    closure_1 = tmp2;
     const _Uint8Array2 = Uint8Array;
-    const parts = outer1_5().split("");
+    const parts = closure_1_5().split("");
     const uint8Array = new Uint8Array(parts.map((str) => str.charCodeAt(0)));
     const _window = window;
-    let closure_0 = yield subtle.digest({ name: "SHA-256" }, uint8Array);
+    closure_0 = yield subtle.digest({ name: "SHA-256" }, uint8Array);
     const _btoa = btoa;
     const _String = String;
     closure_0 = 0;
@@ -39,7 +40,7 @@ function _getPurchaseTokenHash() {
     const _String2 = String;
     return btoa(HermesBuiltin.apply(items, String));
   });
-  const _getPurchaseTokenHash = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -49,8 +50,8 @@ function _getPurchaseTokenHash() {
   return applyArgumentsResult;
 }
 const purchase_token = "purchase_token";
-let closure_4 = 60 * require("set").Millis.DAY;
-let result = require("Storage").fileFinishedImporting("utils/PurchaseTokenUtils.tsx");
+let closure_4 = 60 * setDefault.Millis.DAY;
+let result = require("set").fileFinishedImporting("utils/PurchaseTokenUtils.tsx");
 
 export { getPurchaseToken };
 export const getPurchaseTokenHash = function getPurchaseTokenHash() {

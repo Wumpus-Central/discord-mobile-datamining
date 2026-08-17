@@ -1,9 +1,9 @@
 // discord_app/modules/forwarding/native/ForwardFailedAlertModal.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("FORWARD_MODAL_KEY").fileFinishedImporting("modules/forwarding/native/ForwardFailedAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardFailedAlertModal.tsx");
 
 export default function ForwardFailedAlertModal(message) {
   message = message.message;

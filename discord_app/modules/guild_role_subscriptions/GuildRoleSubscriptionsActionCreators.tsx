@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx
-import _slicedToArray from "_slicedToArray";
-import _deletePaymentSource from "_deletePaymentSource";
-import { AnalyticEvents } from "ME";
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchSubscriptionsSettings() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -37,13 +37,13 @@ function _fetchSubscriptionsSettings() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
+              closure_2 = tmp5;
               const callback = tmp2;
-              let closure_0;
-              let obj3 = outer1_2(7222);
+              closure_0 = undefined;
+              let obj3 = closure_1_2(7222);
               dependencyMap = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.getGuildRoleSubscriptionsSettings(closure_0);
               return obj1;
             }
@@ -71,7 +71,7 @@ function _fetchSubscriptionsSettings() {
       }
     })();
   });
-  const _fetchSubscriptionsSettings = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -83,10 +83,10 @@ function _fetchSubscriptionsSettings() {
 function _updateSubscriptionsSettings() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -115,12 +115,12 @@ function _updateSubscriptionsSettings() {
               return obj;
             } else {
               const table = tmp5;
-              let closure_2 = tmp2;
-              let closure_0;
-              let obj3 = outer1_2(outer1_3[3]);
+              closure_2 = tmp2;
+              closure_0 = undefined;
+              let obj3 = closure_1_2(closure_1_3[3]);
               c4 = 1;
               c5 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.updateGuildRoleSubscriptionsSettings(closure_0, callback);
               return obj1;
             }
@@ -148,7 +148,7 @@ function _updateSubscriptionsSettings() {
       }
     })();
   });
-  const _updateSubscriptionsSettings = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -160,11 +160,11 @@ function _updateSubscriptionsSettings() {
 function _fetchAllSubscriptionListingsDataForGuild() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c11 = 0;
-    let c12 = 0;
-    let c10 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c11 = 0;
+    c12 = 0;
+    c10 = 0;
     const iter = (function*(arg0) {
       if (c12 === 2) {
         c12 = 3;
@@ -197,11 +197,11 @@ function _fetchAllSubscriptionListingsDataForGuild() {
               return obj;
             } else {
               obj = tmp;
-              let closure_7 = tmp4;
+              closure_7 = tmp4;
               let flag;
               let lib;
               let tmp80 = callback;
-              let obj1 = flag;
+              obj1 = flag;
               if (flag === undefined) {
                 obj1 = {};
               }
@@ -210,14 +210,14 @@ function _fetchAllSubscriptionListingsDataForGuild() {
                 flag = true;
               }
               lib = obj1.countryCode;
-              let dependencyMap;
+              dependencyMap = undefined;
               let dependencyMap2;
               let lib2;
-              let closure_6;
+              closure_6 = undefined;
               closure_7 = undefined;
               obj = undefined;
-              let c9;
-              let c10;
+              c9 = undefined;
+              c10 = undefined;
               c11 = 1;
               let num7 = 1;
               c12 = 1;
@@ -409,7 +409,7 @@ function _fetchAllSubscriptionListingsDataForGuild() {
     iter.next();
     return iter;
   });
-  const _fetchAllSubscriptionListingsDataForGuild = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -421,14 +421,14 @@ function _fetchAllSubscriptionListingsDataForGuild() {
 function _createSubscriptionGroupListing() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       const table = tmp5;
-      let closure_2 = tmp2;
-      const obj4 = outer1_2(outer1_3[3]);
+      closure_2 = tmp2;
+      const obj4 = closure_1_2(closure_1_3[3]);
       closure_0 = yield obj4.createGuildRoleSubscriptionGroupListing(closure_0, callback);
       const obj = callback(table[4]);
       const obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
@@ -437,7 +437,7 @@ function _createSubscriptionGroupListing() {
       return closure_0;
     })();
   });
-  const _createSubscriptionGroupListing = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -449,15 +449,15 @@ function _createSubscriptionGroupListing() {
 function _updateSubscriptionGroupListing() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
-      let _slicedToArray = tmp5;
+      closure_4 = tmp5;
       const table = tmp2;
-      const obj4 = callback2(outer1_3[3]);
+      const obj4 = callback2(closure_1_3[3]);
       closure_0 = yield obj4.updateGuildRoleSubscriptionGroupListing(closure_0, callback, callback2);
       const obj = callback(table[4]);
       const obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_UPDATE_GROUP_LISTING", listing: null };
@@ -466,7 +466,7 @@ function _updateSubscriptionGroupListing() {
       return closure_0;
     })();
   });
-  const _updateSubscriptionGroupListing = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -478,15 +478,15 @@ function _updateSubscriptionGroupListing() {
 function _deleteSubscriptionGroupListing() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       const table = tmp5;
-      let closure_2 = tmp2;
-      let closure_0 = callback;
-      let obj3 = outer1_2(outer1_3[3]);
+      closure_2 = tmp2;
+      closure_0 = callback;
+      let obj3 = closure_1_2(closure_1_3[3]);
       yield obj3.deleteGuildRoleSubscriptionGroupListing(closure_0, callback);
       const obj = callback(table[4]);
       obj3 = { type: "GUILD_ROLE_SUBSCRIPTIONS_DELETE_GROUP_LISTING", groupListingId: null };
@@ -495,7 +495,7 @@ function _deleteSubscriptionGroupListing() {
       return true;
     })();
   });
-  const _deleteSubscriptionGroupListing = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -507,10 +507,10 @@ function _deleteSubscriptionGroupListing() {
 function _fetchSubscriptionListingForPlan() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0) {
       if (c9 === 2) {
         c9 = 3;
@@ -542,21 +542,21 @@ function _fetchSubscriptionListingForPlan() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _deletePaymentSource = tmp;
-              let _slicedToArray = tmp4;
+              closure_5 = tmp;
+              closure_4 = tmp4;
               let tmp37 = closure_0;
               let lib;
               let lib2;
-              let closure_3;
-              let tmp38 = outer1_1;
-              let tmp39 = outer1_3;
-              let obj10 = outer1_1(outer1_3[4]);
-              let obj1 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: null };
+              closure_3 = undefined;
+              let tmp38 = closure_1_1;
+              let tmp39 = closure_1_3;
+              let obj10 = closure_1_1(closure_1_3[4]);
+              obj1 = { type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_LISTING_FOR_PLAN", planId: null };
               obj1[1] = closure_0;
               let dispatchResult = obj10.dispatch(obj1);
-              let tmp41 = outer1_2;
-              let tmp42 = outer1_3;
-              let obj12 = outer1_2(outer1_3[3]);
+              let tmp41 = closure_1_2;
+              let tmp42 = closure_1_3;
+              let obj12 = closure_1_2(closure_1_3[3]);
               c8 = 1;
               let num15 = 1;
               c9 = 1;
@@ -577,8 +577,8 @@ function _fetchSubscriptionListingForPlan() {
                 obj3[0] = arg1;
                 return obj3;
               } else {
-                let tmp27 = _slicedToArray;
-                let tmp28 = _deletePaymentSource;
+                let tmp27 = closure_4;
+                let tmp28 = closure_5;
                 lib = arg1;
                 let tmp29 = lib;
                 let tmp30 = closure_3;
@@ -593,7 +593,7 @@ function _fetchSubscriptionListingForPlan() {
                 if (subscription_listings == null) {
                   lib = [];
                 }
-                let tmp8 = _slicedToArray;
+                let tmp8 = closure_4;
                 let tmp9 = lib;
                 lib2 = lib;
                 let tmp10 = lib2;
@@ -608,14 +608,14 @@ function _fetchSubscriptionListingForPlan() {
                   c9 = 3;
                   return { value: "HermesInternal", done: "HermesInternal" };
                 } else {
-                  let tmp34 = _slicedToArray;
-                  let c7 = 1;
+                  let tmp34 = closure_4;
+                  c7 = 1;
                   closure_3 = tmp14;
                   let tmp35 = closure_3;
                   let tmp36 = closure_0;
                   if (closure_3.subscription_plans[0].id === closure_0) {
-                    let tmp15 = _slicedToArray;
-                    let tmp16 = _deletePaymentSource;
+                    let tmp15 = closure_4;
+                    let tmp16 = closure_5;
                     let tmp17 = lib2;
                     let tmp18 = closure_3;
                     obj1 = lib2(closure_3[6]);
@@ -658,7 +658,7 @@ function _fetchSubscriptionListingForPlan() {
       }
     })();
   });
-  const _fetchSubscriptionListingForPlan = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -670,11 +670,11 @@ function _fetchSubscriptionListingForPlan() {
 function _deleteSubscriptionListing() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -702,13 +702,13 @@ function _deleteSubscriptionListing() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _slicedToArray = tmp5;
+              closure_4 = tmp5;
               const table = tmp2;
-              let closure_0 = callback2;
-              let obj3 = callback2(outer1_3[3]);
+              closure_0 = callback2;
+              let obj3 = callback2(closure_1_3[3]);
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.deleteGuildRoleSubscriptionListing(closure_0, callback, callback2);
               return obj1;
             }
@@ -735,7 +735,7 @@ function _deleteSubscriptionListing() {
       }
     })();
   });
-  const _deleteSubscriptionListing = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -747,11 +747,11 @@ function _deleteSubscriptionListing() {
 function _archiveSubscriptionListing() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -779,13 +779,13 @@ function _archiveSubscriptionListing() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _slicedToArray = tmp5;
+              closure_4 = tmp5;
               const table = tmp2;
-              let closure_0;
-              let obj3 = callback2(outer1_3[3]);
+              closure_0 = undefined;
+              let obj3 = callback2(closure_1_3[3]);
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.archiveGuildRoleSubscriptionListing(closure_0, callback, callback2);
               return obj1;
             }
@@ -813,7 +813,7 @@ function _archiveSubscriptionListing() {
       }
     })();
   });
-  const _archiveSubscriptionListing = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -825,11 +825,11 @@ function _archiveSubscriptionListing() {
 function _updateSubscriptionTrial() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -857,13 +857,13 @@ function _updateSubscriptionTrial() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _slicedToArray = tmp5;
+              closure_4 = tmp5;
               const table = tmp2;
-              let closure_0;
-              let obj3 = callback2(outer1_3[3]);
+              closure_0 = undefined;
+              let obj3 = callback2(closure_1_3[3]);
               c5 = 1;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.updateGuildRoleSubscriptionsTrial(closure_0, callback, callback2);
               return obj1;
             }
@@ -891,7 +891,7 @@ function _updateSubscriptionTrial() {
       }
     })();
   });
-  const _updateSubscriptionTrial = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -913,11 +913,11 @@ function fetchGuildRoleSubscriptionGroupListing() {
 function _fetchGuildRoleSubscriptionGroupListing() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -945,9 +945,9 @@ function _fetchGuildRoleSubscriptionGroupListing() {
               obj[0] = arg1;
               return obj;
             } else {
-              let _slicedToArray = tmp5;
-              let dependencyMap = tmp2;
-              let obj1;
+              closure_4 = tmp5;
+              dependencyMap = tmp2;
+              obj1 = undefined;
               if (obj1 === undefined) {
                 obj1 = {};
               }
@@ -1001,7 +1001,7 @@ function _fetchGuildRoleSubscriptionGroupListing() {
     iter.next();
     return iter;
   });
-  const _fetchGuildRoleSubscriptionGroupListing = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1013,15 +1013,10 @@ function _fetchGuildRoleSubscriptionGroupListing() {
 function _createSubscriptionListing() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -1067,7 +1062,7 @@ function _createSubscriptionListing() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -1133,7 +1128,7 @@ function _createSubscriptionListing() {
     iter.next();
     return iter;
   });
-  const _createSubscriptionListing = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1145,14 +1140,10 @@ function _createSubscriptionListing() {
 function _updateSubscriptionListing() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -1197,7 +1188,7 @@ function _updateSubscriptionListing() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -1252,7 +1243,7 @@ function _updateSubscriptionListing() {
     iter.next();
     return iter;
   });
-  const _updateSubscriptionListing = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1264,11 +1255,11 @@ function _updateSubscriptionListing() {
 function _fetchMonetizationRestrictions() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, restrictions) {
       if (c8 === 2) {
         c8 = 3;
@@ -1297,9 +1288,9 @@ function _fetchMonetizationRestrictions() {
               return obj;
             } else {
               restrictions = tmp3;
-              let dependencyMap = tmp7;
+              dependencyMap = tmp7;
               let signal;
-              let obj1 = signal;
+              obj1 = signal;
               if (signal === undefined) {
                 obj1 = {};
               }
@@ -1336,7 +1327,7 @@ function _fetchMonetizationRestrictions() {
                 }
               }
             } else if (2 === tmp7) {
-              let c6 = 0;
+              c6 = 0;
               let obj4 = callback(4548);
               c7 = 3;
               c8 = 1;
@@ -1409,7 +1400,7 @@ function _fetchMonetizationRestrictions() {
             const tmp40 = signal(709);
           }
         } catch (tmp50) {
-          let _deletePaymentSource = tmp50;
+          closure_5 = tmp50;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp50;
@@ -1422,7 +1413,7 @@ function _fetchMonetizationRestrictions() {
     iter.next();
     return iter;
   });
-  const _fetchMonetizationRestrictions = tmp;
+  closure_21 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1431,7 +1422,7 @@ function _fetchMonetizationRestrictions() {
   }
   return applyArgumentsResult;
 }
-const result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionsActionCreators.tsx");
 
 export const fetchSubscriptionsSettings = function fetchSubscriptionsSettings(closure_0) {
   const self = this;
@@ -1523,7 +1514,7 @@ export const archiveSubscriptionListing = function archiveSubscriptionListing() 
   }
   return applyArgumentsResult;
 };
-export const updateSubscriptionTrial = function updateSubscriptionTrial(c0, c4, closure_2) {
+export const updateSubscriptionTrial = function updateSubscriptionTrial(c0, closure_1, closure_2) {
   const self = this;
   const apply = _updateSubscriptionTrial.apply;
   if (typeof apply === "unknown") {

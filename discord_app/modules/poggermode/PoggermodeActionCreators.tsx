@@ -1,29 +1,29 @@
 // discord_app/modules/poggermode/PoggermodeActionCreators.tsx
-import fetchFingerprint from "fetchFingerprint";
-import initialize from "initialize";
-import updateCombo from "updateCombo";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getScreenshakeLocationName } from "trackPoggermodeSettingsUpdated.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getScreenshakeLocationNameDefault from "getScreenshakeLocationName" /* 7580 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "initialize" /* 7432 */;
+import closure_4 from "updateCombo" /* 7578 */;
 
-const result = require("updateCombo").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/poggermode/PoggermodeActionCreators.tsx");
 
 export const updatePoggermodeSettings = function updatePoggermodeSettings(settings) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "POGGERMODE_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
   obj = {};
   const merged = Object.assign(state.getState());
   const merged1 = Object.assign(settings);
-  getScreenshakeLocationName(obj);
+  getScreenshakeLocationNameDefault(obj);
 };
 export const updateCombo = function updateCombo(arg0) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "POGGERMODE_UPDATE_COMBO" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
 };
 export const clearMessageCombo = function clearMessageCombo(arg0) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
   obj = {};
   const merged = Object.assign(arg0);
@@ -35,7 +35,7 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(throwT
   id = id.getId();
   const iter = userCombo.getUserCombo(id, throwTypeErrorResult);
   if (null != iter) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: null };
     obj = { combo: null, channelId: null, messageId: null, displayed: false };
     obj[0] = iter;
@@ -62,5 +62,5 @@ export const updateComboOnMessageSend = function updateComboOnMessageSend(throwT
       num = num3 + 1;
     }
   }
-  dispatcher.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId: throwTypeErrorResult, userId: id, multiplier: num, value: 0 });
+  dispatcherDefault.dispatch({ type: "POGGERMODE_UPDATE_COMBO", channelId: throwTypeErrorResult, userId: id, multiplier: num, value: 0 });
 };

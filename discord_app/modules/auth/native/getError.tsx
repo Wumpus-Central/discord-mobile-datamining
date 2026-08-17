@@ -1,5 +1,7 @@
 // discord_app/modules/auth/native/getError.tsx
-const result = require("set").fileFinishedImporting("modules/auth/native/getError.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/auth/native/getError.tsx");
 
 export default function getError(arg0, arg1) {
   let tmp2 = null;

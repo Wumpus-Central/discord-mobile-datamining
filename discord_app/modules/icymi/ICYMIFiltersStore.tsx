@@ -1,9 +1,11 @@
 // discord_app/modules/icymi/ICYMIFiltersStore.tsx
-import { DeviceSettingsStore } from "initialize";
-import { MessageEmbedTypes } from "ICYMITypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 7589 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class ICYMIFiltersStore extends DeviceSettingsStore {
 }
 const prototype = ICYMIFiltersStore.prototype;
@@ -31,11 +33,11 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 ICYMIFiltersStore.displayName = "ICYMIFiltersStore";
 ICYMIFiltersStore.persistKey = "ICYMIFiltersStore";
-const iCYMIFiltersStore = new ICYMIFiltersStore(require("dispatcher"), {
+const iCYMIFiltersStore = new ICYMIFiltersStore(dispatcherDefault, {
   SET_ICYMI_FILTERS: function handleFilters(filters) {
     filters = filters.filters;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/ICYMIFiltersStore.tsx");
 
 export default iCYMIFiltersStore;

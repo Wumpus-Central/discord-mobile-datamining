@@ -1,7 +1,9 @@
 // discord_app/modules/guild_badge/GuildBadgeConstants.tsx
-import { BadgeCategory } from "BadgeCategory.tsx";
-import { GuildVisibility } from "GuildTraits.tsx";
-const result = require("BadgeCategory").fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
+import set from "set" /* 2 */;
+import BadgeCategory from "BadgeCategory" /* 9154 */;
+import GuildVisibility from "GuildVisibility" /* 9155 */;
+
+const result = set.fileFinishedImporting("modules/guild_badge/GuildBadgeConstants.tsx");
 
 export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {
   if (arg1 === GuildVisibility.GuildVisibility.PUBLIC) {
@@ -32,7 +34,7 @@ export const getBadgeTooltip = function getBadgeTooltip(arg0, arg1) {
     obj[2] = stringResult;
     return obj;
   } else if (tmp(9154).BadgeCategory.PARTNERED === arg0) {
-    const obj1 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
+    obj1 = { tooltipTitle: null, tooltipSubtitle: null, tooltipDescription: null };
     const intl10 = tmp(1236).intl;
     obj1[0] = intl10.string(tmp(1236).t.K7iRig);
     const intl11 = tmp(1236).intl;

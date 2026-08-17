@@ -1,19 +1,17 @@
 // discord_app/modules/auth/native/components/MFA.tsx
-import noop from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import { jsx } from "jsxProd";
-import { apply } from "../../../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function statesAreEqual(arg0, arg1) {
-  return apply.isEqual(arg0, arg1);
+  return applyDefault.isEqual(arg0, arg1);
 }
 let closure_7 = { flex: 1, position: "relative" };
-const result = require("jsxProd").fileFinishedImporting("modules/auth/native/components/MFA.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/MFA.tsx");
 
 export default function ConnectedMFA() {
-  let inContainer;
-  let isMultiAccount;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -25,16 +23,13 @@ export default function ConnectedMFA() {
     inContainer = navigation(8582)();
   }
   let tmpResult = tmp(589);
-  const items = [fetchFingerprint];
+  const items = [closure_4];
   const items1 = [isMultiAccount];
   const stateFromStores = tmpResult.useStateFromStores(items, () => ({ ticket: store.getMFATicket(), methods: store.getMFAMethods() }), [], statesAreEqual);
   const items2 = [navigation];
   const callback = React.useCallback((arg0) => {
-    let data;
-    let mfaType;
-    let ticket;
     ({ mfaType, data, ticket } = arg0);
-    let obj = navigation(outer1_2[7]);
+    let obj = navigation(closure_1_2[7]);
     obj = { code: data, ticket, mfaType, isMultiAccount };
     return obj.loginMFAv2(obj);
   }, items1);

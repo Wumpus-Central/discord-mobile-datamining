@@ -1,25 +1,28 @@
 // discord_app/modules/user_settings/defs/native/AnimateEmojiSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.iIaOlc);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
-  useValue: require("explicitContentFromProto").AnimateEmoji.useSetting,
-  onValueChange: require("explicitContentFromProto").AnimateEmoji.updateSetting
+  parent: MobileUserSettings.MobileUserSettings.ACCESSIBILITY,
+  useValue: explicitContentFromProto.AnimateEmoji.useSetting,
+  onValueChange: explicitContentFromProto.AnimateEmoji.updateSetting
 });
 const obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.iIaOlc);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
-  useValue: require("explicitContentFromProto").AnimateEmoji.useSetting,
-  onValueChange: require("explicitContentFromProto").AnimateEmoji.updateSetting
+  parent: MobileUserSettings.MobileUserSettings.ACCESSIBILITY,
+  useValue: explicitContentFromProto.AnimateEmoji.useSetting,
+  onValueChange: explicitContentFromProto.AnimateEmoji.updateSetting
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/AnimateEmojiSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AnimateEmojiSetting.tsx");
 
 export default toggle;

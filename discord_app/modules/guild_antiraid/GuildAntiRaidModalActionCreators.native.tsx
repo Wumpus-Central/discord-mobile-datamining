@@ -1,12 +1,14 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx
-import { GUILD_REPORT_RAID_MOBILE_KEY as closure_3 } from "GUILD_REPORT_RAID_MOBILE_KEY";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 */;
 
-const result = require("ReportModal").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx");
+let closure_3 = GUILD_REPORT_RAID_MOBILE_KEY.GUILD_REPORT_RAID_MOBILE_KEY;
+const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidModalActionCreators.native.tsx");
 
 export const openReportRaidModal = function openReportRaidModal(id) {
-  let obj = ModalActionCreators;
+  let obj = _modDef5260;
   obj = {
     onCloseModal() {
       callback(table[1]).popWithKey(closure_3);

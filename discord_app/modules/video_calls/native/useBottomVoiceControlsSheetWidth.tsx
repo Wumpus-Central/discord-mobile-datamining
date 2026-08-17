@@ -1,14 +1,13 @@
 // discord_app/modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import set from "set" /* 2 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 
-let c3;
-let obj1;
 ({ BOX_MODE_ACTIONSHEET_WIDTH: obj1, BOX_MODE_THRESHOLD_WIDTH: c3 } = BOX_MODE_ACTIONSHEET_WIDTH);
-const result = require("set").fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");
+const result = set.fileFinishedImporting("modules/video_calls/native/useBottomVoiceControlsSheetWidth.tsx");
 
 export default function useBottomVoiceControlsSheetWidth() {
-  let width = useWindowDimensions().width;
+  let width = useWindowDimensionsDefault().width;
   if (width > closure_3) {
     width = closure_2;
   }

@@ -1,74 +1,70 @@
 // discord_app/modules/auth/native/components/utils/useWithPostLoginRouting.tsx
-import initialize from "initialize";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import ME from "ME" /* 676 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ LoginStates: error, AuthStates: metroImportAll } = ME);
-const result = require("noop").fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
+({ LoginStates: error, AuthStates: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useWithPostLoginRouting.tsx");
 
 export default function useWithPostLoginRouting(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const tmp = loginStatus(React.useState(), 2);
   const first = tmp[0];
-  let initialize = tmp[1];
-  const items = [fetchFingerprint];
+  closure_3 = tmp[1];
+  const items = [closure_6];
   loginStatus = _require(first[5]).useStateFromStoresObject(items, () => ({ loginStatus: loginStatus.getLoginStatus() })).loginStatus;
   const items1 = [arg0, arg1, loginStatus, first];
   const effect = React.useEffect(() => {
-    let closure_0;
-    let closure_1;
-    if (closure_2 !== outer1_7.LOGGING_IN) {
+    if (closure_2 !== closure_1_7.LOGGING_IN) {
       if (tmp !== tmp2.FORGOT_PASSWORD) {
         callback(loginStatus);
       }
     }
-    if (outer1_7.MFA_STEP === loginStatus) {
-      arr = arr.push(outer1_8.MFA);
+    if (closure_1_7.MFA_STEP === loginStatus) {
+      arr = arr.push(closure_1_8.MFA);
     } else {
       if (tmp2.ACCOUNT_SCHEDULED_FOR_DELETION !== tmp6) {
         if (tmp2.ACCOUNT_DISABLED !== tmp6) {
           if (tmp2.LOGIN_AGE_GATE === tmp6) {
-            arr = arr.push(outer1_8.AGE_GATE_UNDERAGE, { existingUser: true });
+            arr = arr.push(closure_1_8.AGE_GATE_UNDERAGE, { existingUser: true });
           }
         }
       }
       let obj = { handleLogin: null };
       obj[0] = closure_1;
-      arr.push(outer1_8.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED, obj);
+      arr.push(closure_1_8.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED, obj);
     }
-    if (outer1_7.PASSWORD_RECOVERY_PHONE_VERIFICATION === loginStatus) {
+    if (closure_1_7.PASSWORD_RECOVERY_PHONE_VERIFICATION === loginStatus) {
       obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
       const intl = arr(first[6]).intl;
       obj[0] = intl.string(arr(first[6]).t["+xqy3d"]);
       const intl2 = arr(first[6]).intl;
       obj[1] = intl2.string(arr(first[6]).t.myKyqh);
-      obj[2] = outer1_6.getCredentials().login;
+      obj[2] = closure_1_6.getCredentials().login;
       obj[3] = function onPhoneTokenReceived(arg0) {
-        const replaced = closure_0.replace(outer1_8.EXTERNAL_LINK, { externalURL: outer1_1(8593)(arg0) });
+        const replaced = closure_0.replace(closure_1_8.EXTERNAL_LINK, { externalURL: closure_1_1(8593)(arg0) });
       };
       obj[4] = function onClose() {
         callback(5256).loginReset();
       };
-      let replaced = arr.replace(outer1_8.VERIFY_PHONE, obj);
+      let replaced = arr.replace(closure_1_8.VERIFY_PHONE, obj);
     } else if (tmp2.PHONE_IP_AUTHORIZATION === tmp6) {
-      const credentials = outer1_6.getCredentials();
+      const credentials = closure_1_6.getCredentials();
       ({ login: closure_0, password: closure_1 } = credentials);
       obj = { title: null, description: null, phone: null, onPhoneTokenReceived: null, onClose: null };
       const intl3 = arr(first[6]).intl;
       obj[0] = intl3.string(arr(first[6]).t.w55Oco);
       const intl4 = arr(first[6]).intl;
       obj[1] = intl4.string(arr(first[6]).t["0/ALaJ"]);
-      obj[2] = outer1_6.getCredentials().login;
+      obj[2] = closure_1_6.getCredentials().login;
       closure_2 = callback((arg0) => {
-        let closure_0 = arg0;
-        let c3 = 0;
-        let c4 = 0;
+        closure_0 = arg0;
+        c3 = 0;
+        c4 = 0;
         return (function*(arg0) {
           if (c4 === 2) {
             c4 = 3;
@@ -96,10 +92,10 @@ export default function useWithPostLoginRouting(arg0, arg1) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let c2 = 0;
-                  let closure_1 = tmp2;
+                  c2 = 0;
+                  closure_1 = tmp2;
                   let arr;
-                  let obj1 = outer2_1(table[8]);
+                  obj1 = closure_2_1(table[8]);
                   c3 = 1;
                   c4 = 1;
                   obj1 = { value: null, done: false };
@@ -148,14 +144,14 @@ export default function useWithPostLoginRouting(arg0, arg1) {
             tmp6 = "" !== tmp4;
           }
           if (tmp6) {
-            outer1_1(closure_0, tmp4);
+            closure_1_1(closure_0, tmp4);
           }
         } else {
           callback(first[8]).loginReset();
           const obj = callback(first[8]);
         }
       };
-      arr.push(outer1_8.VERIFY_PHONE, obj);
+      arr.push(closure_1_8.VERIFY_PHONE, obj);
     }
     callback(loginStatus);
   }, items1);

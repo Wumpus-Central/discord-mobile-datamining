@@ -1,13 +1,11 @@
 // discord_app/utils/ExperimentUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import getHash from "getHash";
-import ExperimentBuckets from "ExperimentBuckets";
-import { apply } from "../../_runtime/00012_apply.js";
-import { trackExposureToExperiment } from "../modules/experiments/ExperimentManager.tsx";
+import applyDefault from "apply" /* 12 */;
+import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getHash" /* 4288 */;
+import ExperimentBuckets from "ExperimentBuckets" /* 4289 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function getFirstEligibleUserExperiment(arg0) {
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
@@ -27,7 +25,7 @@ function getFirstEligibleUserExperiment(arg0) {
   return null;
 }
 ({ ExperimentTypes: c5, ExperimentBuckets: closure_6 } = ExperimentBuckets);
-let result = require("ExperimentBuckets").fileFinishedImporting("utils/ExperimentUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/ExperimentUtils.tsx");
 
 export default {
   getFirstEligibleUserExperiment,
@@ -63,7 +61,7 @@ export default {
             return false;
           } else if (type.type === constants.USER) {
             if (type2.type === tmp.USER) {
-              return apply.isEqual(type.context, type2.context);
+              return applyDefault.isEqual(type.context, type2.context);
             }
           }
         }
@@ -92,15 +90,11 @@ export default {
     return str;
   },
   getRecentExperimentBuckets(arg0, arg1) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     const entries = Object.entries(arg0);
     return entries.reduce((arg0, arg1) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg1;
       let tmp3 = (function isRecentExperiment(str, closure_0) {
-        let tmp4;
-        let tmp5;
         try {
           [tmp4, tmp5] = callback(str.split("-"), 2);
           if (null == tmp5) {
@@ -118,7 +112,7 @@ export default {
         }
       })(tmp, closure_0);
       if (tmp3) {
-        tmp3 = tmp2 > outer1_6.CONTROL;
+        tmp3 = tmp2 > closure_1_6.CONTROL;
       }
       if (tmp3) {
         arg0[tmp] = tmp2;

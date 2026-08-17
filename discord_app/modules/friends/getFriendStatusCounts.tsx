@@ -1,9 +1,9 @@
 // discord_app/modules/friends/getFriendStatusCounts.tsx
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { StatusTypes } from "ME";
+import closure_0 from "sortActivity" /* 4559 */;
+import closure_1 from "markAllUserIdListsStale" /* 4030 */;
+import { StatusTypes } from "ME" /* 676 */;
 
-const result = require("ME").fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
+const result = require("set").fileFinishedImporting("modules/friends/getFriendStatusCounts.tsx");
 
 export default function getFriendStatusCounts() {
   let num_friends_online = 0;

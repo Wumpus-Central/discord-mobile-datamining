@@ -1,6 +1,7 @@
 // discord_app/records/GuildBoostSlotRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let GuildBoostSlotRecord;
 class GuildBoostSlotRecord extends tmp2 {
   constructor(arg0) {
@@ -12,10 +13,6 @@ class GuildBoostSlotRecord extends tmp2 {
 }
 const prototype = GuildBoostSlotRecord.prototype;
 GuildBoostSlotRecord["createFromServer"] = function createFromServer(premium_guild_subscription, subscription) {
-  let canceled;
-  let cooldown_ends_at;
-  let id;
-  let subscription_id;
   ({ id, subscription_id } = premium_guild_subscription);
   let tmp2 = null;
   if (null != premium_guild_subscription.premium_guild_subscription) {

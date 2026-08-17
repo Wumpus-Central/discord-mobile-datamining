@@ -1,31 +1,31 @@
 // discord_app/modules/game_profile/hooks/useGameAnnouncements.tsx
-import { useEffect } from "noop";
-import getSimilarGames from "getSimilarGames";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_3 from "getSimilarGames" /* 9098 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-let result = require("initialize").fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
+const useEffect = noop.useEffect;
+let result = set.fileFinishedImporting("modules/game_profile/hooks/useGameAnnouncements.tsx");
 
 export default function useGameAnnouncements(arg0, arg1) {
-  let data;
-  let hasFetched;
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   let obj = _initialize;
-  const items = [getSimilarGames];
+  const items = [closure_3];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
     let announcements;
     if (null != closure_0) {
-      announcements = outer1_3.getAnnouncements(tmp);
+      announcements = closure_1_3.getAnnouncements(tmp);
     }
     const obj = { data: announcements, hasFetched: null, isFetching: null };
     let result = null != tmp;
     if (result) {
-      result = outer1_3.hasAnnouncementsBeenFetched(tmp);
+      result = closure_1_3.hasAnnouncementsBeenFetched(tmp);
     }
     obj[1] = result;
     let result1 = null != tmp;
     if (result1) {
-      result1 = outer1_3.isAnnouncementsFetching(tmp);
+      result1 = closure_1_3.isAnnouncementsFetching(tmp);
     }
     obj[2] = result1;
     return obj;
@@ -35,7 +35,7 @@ export default function useGameAnnouncements(arg0, arg1) {
   hasFetched(() => {
     let result = null == callback || hasFetched;
     if (!result) {
-      result = outer1_3.isAnnouncementsFetching(tmp);
+      result = closure_1_3.isAnnouncementsFetching(tmp);
     }
     if (!result) {
       let obj = callback(table[3]);

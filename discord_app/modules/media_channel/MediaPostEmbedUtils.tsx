@@ -1,29 +1,18 @@
 // discord_app/modules/media_channel/MediaPostEmbedUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { trimTrailingPunctuation } from "../coded_links/findCodedLinks.tsx";
-import { MAX_THUMBNAIL_COUNT } from "MediaPostThumbnailUtils.tsx";
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import trimTrailingPunctuation from "trimTrailingPunctuation" /* 4358 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import MAX_THUMBNAIL_COUNT from "MAX_THUMBNAIL_COUNT" /* 4983 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ GuildFeatures: closure_6, MessageAttachmentFlags: error } = ME);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/media_channel/MediaPostEmbedUtils.tsx");
 
 export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(arg0) {
-  let canAccess;
-  let guild;
-  let height;
-  let mediaPostEmbedData;
-  let parentChannel;
-  let postThread;
-  let selectedGuildId;
-  let user;
-  let width;
   ({ mediaPostEmbedData, guild, parentChannel, user, canAccess } = arg0);
   ({ postThread, selectedGuildId } = arg0);
   if (canAccess === undefined) {
@@ -47,7 +36,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     }
     let name;
     if (null != user) {
-      let obj = getNickname;
+      let obj = getNicknameDefault;
       name = obj.getName(mediaPostEmbedData.guild_id, mediaPostEmbedData.channel_id, user);
     }
     let avatarURL;
@@ -61,8 +50,8 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     if (!tmp6) {
       obj = { id: null, icon: null, size: 40, canAnimate: false };
       ({ guild_id: obj3[0], guild_icon: obj3[1] } = mediaPostEmbedData);
-      avatarURL = getAvatarURL.getGuildIconURL(obj);
-      const obj2 = getAvatarURL;
+      avatarURL = getAvatarURLDefault.getGuildIconURL(obj);
+      const obj2 = getAvatarURLDefault;
     }
     const thumbnail = mediaPostEmbedData.thumbnail;
     let flag = false;
@@ -122,7 +111,7 @@ export const getMediaPostEmbedCommonData = function getMediaPostEmbedCommonData(
     let channelName;
     if (null != parentChannel) {
       tmp17Result = tmp17(4984);
-      channelName = tmp17Result.computeChannelName(parentChannel, mergeGuildAvatar, markAllUserIdListsStale);
+      channelName = tmp17Result.computeChannelName(parentChannel, closure_5, closure_4);
     }
     obj[14] = channelName;
     obj[15] = avatarURL;

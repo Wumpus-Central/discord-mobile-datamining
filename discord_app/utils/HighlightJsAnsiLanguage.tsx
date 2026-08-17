@@ -1,11 +1,13 @@
 // discord_app/utils/HighlightJsAnsiLanguage.tsx
+import set from "set" /* 2 */;
+
 let closure_0 = { 1: "bold", 4: "underline" };
 let closure_1 = { 30: "black", 31: "red", 32: "green", 33: "yellow", 34: "blue", 35: "magenta", 36: "cyan", 37: "white" };
 let closure_2 = { 40: "black", 41: "red", 42: "green", 43: "yellow", 44: "blue", 45: "magenta", 46: "cyan", 47: "white" };
 const tmp2 = /\x1B\[(\d+(?:[:;]\d+)*)m/;
-let c3 = tmp2;
+const re3 = tmp2;
 const regExp = new RegExp("(?=" + tmp2.source + ")");
-const result = require("set").fileFinishedImporting("utils/HighlightJsAnsiLanguage.tsx");
+const result = set.fileFinishedImporting("utils/HighlightJsAnsiLanguage.tsx");
 
 export default function highlightJsAnsiLanguage() {
   let length;
@@ -20,14 +22,12 @@ export default function highlightJsAnsiLanguage() {
   const entries = Object.entries(items5);
   const items2 = [
     ...entries.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
-      const style = tmp;
+      style = tmp;
       return {
         className: "ansi-" + style + "-" + tmp2,
         endsParent: true,
-        begin: outer1_4,
+        begin: closure_1_4,
         (arg0, data) => {
           const parts = arg0[1].split(";");
           if (undefined === data.data.isOn) {
@@ -71,14 +71,12 @@ export default function highlightJsAnsiLanguage() {
   obj = { className: "ansi-control-sequence", begin: closure_3, starts: obj };
   obj = { end: regExp, endsParent: true };
   items2[HermesBuiltin.arraySpread(entries2.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
-    const style = tmp;
+    style = tmp;
     return {
       className: "ansi-" + style + "-" + tmp2,
       endsParent: true,
-      begin: outer1_4,
+      begin: closure_1_4,
       (arg0, data) => {
         const parts = arg0[1].split(";");
         if (undefined === data.data.isOn) {
@@ -105,14 +103,12 @@ export default function highlightJsAnsiLanguage() {
       }
     };
   }), HermesBuiltin.arraySpread(entries1.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
-    const style = tmp;
+    style = tmp;
     return {
       className: "ansi-" + style + "-" + tmp2,
       endsParent: true,
-      begin: outer1_4,
+      begin: closure_1_4,
       (arg0, data) => {
         const parts = arg0[1].split(";");
         if (undefined === data.data.isOn) {

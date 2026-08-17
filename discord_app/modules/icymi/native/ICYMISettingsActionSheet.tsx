@@ -1,31 +1,28 @@
 // discord_app/modules/icymi/native/ICYMISettingsActionSheet.tsx
-import filterStaffGuild from "filterStaffGuild";
-import "set";
-import { View } from "TableRowInner";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import initialize from "initialize";
-import closure_7 from "filterStaffGuild";
-import ME from "ME";
-import jsxProd from "ack";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "generateOldThreadCutoff" /* 4772 */;
+import closure_6 from "initialize" /* 9054 */;
+import closure_7 from "filterStaffGuild" /* 9044 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ AnalyticsObjectTypes: metroImportAll, AnalyticsObjects: c9 } = ME);
+noopAll;
+({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: c9 } = ME);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { padding: null };
-createCacheKey = { bottomPadding: require("Themes").space.PX_16, width: "100%" };
+createCacheKey = { bottomPadding: ThemesDefault.space.PX_16, width: "100%" };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/icymi/native/ICYMISettingsActionSheet.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/icymi/native/ICYMISettingsActionSheet.tsx");
 
 export default function ICYMISettingsActionSheet() {
   let obj = stateFromStoresObject(589);
-  const items = [initialize];
+  const items = [closure_6];
   stateFromStoresObject = obj.useStateFromStoresObject(items, () => state.getState());
   const ICYMIStaffDebuggingUtilityExperiment = stateFromStoresObject(9058).ICYMIStaffDebuggingUtilityExperiment;
   obj = { title: null, hasIcons: false, children: null };
@@ -40,15 +37,15 @@ export default function ICYMISettingsActionSheet() {
     if (flag == null) {
       flag = false;
     }
-    let obj1 = { children: null };
+    obj1 = { children: null };
     obj[1] = flag;
     obj[2] = function onValueChange() {
-      let obj = outer1_1(outer1_2[16]);
+      let obj = closure_1_1(closure_1_2[16]);
       obj = {};
       const merged = Object.assign(stateFromStoresObject);
       obj.filterStaffContent = !stateFromStoresObject.filterStaffContent;
       obj.setFilters(obj);
-      const dehydrated = outer1_1(outer1_2[16]).fetchDehydrated();
+      const dehydrated = closure_1_1(closure_1_2[16]).fetchDehydrated();
     };
     const items1 = [callback2(tmp(7178).TableSwitchRow, obj), , ];
     let obj2 = { label: "Clear read states", onPress: null };
@@ -61,7 +58,7 @@ export default function ICYMISettingsActionSheet() {
         }
         if (tmp3) {
           let obj = callback2(tmp2[20]);
-          tmp3 = obj.compare(generateOldThreadCutoff.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
+          tmp3 = obj.compare(closure_5.ackMessageId(type.data.channel_id), type.data.message_id) >= 0;
         }
         if (tmp3) {
           const tmpResult = tmp(tmp2[21]);
@@ -106,12 +103,12 @@ export default function ICYMISettingsActionSheet() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp4;
-              let obj2 = outer1_0(9056);
+              closure_0 = tmp4;
+              let obj2 = closure_1_0(9056);
               v0 = 1;
               dependencyMap = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj2.regenerateFeedAndClearReadStates(outer1_9.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj2.regenerateFeedAndClearReadStates(closure_1_9.ACK_GRAVITY_REGENERATE_FEED_AND_CLEAR_READ_STATES_BUTTON);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -157,8 +154,8 @@ export default function ICYMISettingsActionSheet() {
   items2[1] = callback2(stateFromStoresObject(6291).TableRow, obj5);
   obj[2] = items2;
   const items3 = [closure_12(stateFromStoresObject(6286).TableRowGroup, obj), ];
-  const tmp4 = createCacheKey();
-  items3[1] = callback2(View, { style: createCacheKey().padding });
+  const tmp4 = callback3();
+  items3[1] = callback2(View, { style: callback3().padding });
   obj4[2] = items3;
   return closure_12(stateFromStoresObject(7175).ActionSheet, obj4);
 };

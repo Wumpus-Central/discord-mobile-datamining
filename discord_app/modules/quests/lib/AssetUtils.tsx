@@ -1,20 +1,19 @@
 // discord_app/modules/quests/lib/AssetUtils.tsx
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_5 } from "ME";
-import { metadata } from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
-import { metadata } from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
-import { set } from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
-import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import { getDevicePixelRatio } from "../../../utils/getDevicePixelRatio.native.tsx";
-import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1896 */;
+import set2 from "set" /* 6723 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
+import metadataDefault from "metadata" /* 10487 */;
+import metadataDefault2 from "metadata" /* 10488 */;
+import metadataDefault3 from "metadata" /* 10489 */;
+import metadataDefault4 from "metadata" /* 10490 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 10491 */;
+import metadataDefault5 from "metadata" /* 10498 */;
+import metadataDefault6 from "metadata" /* 10499 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
-let TIER_1;
-let TIER_2;
-let TIER_3;
-let TIER_4;
-let c3;
-let c4;
 function resolveAsset(id, questBarHeroVideo) {
   if (questBarHeroVideo.startsWith("blob:")) {
     const parts = questBarHeroVideo.split("?", 1);
@@ -40,7 +39,7 @@ function resolveAsset(id, questBarHeroVideo) {
     combined = "" + tmp + id + str3 + "/" + questBarHeroVideo;
   }
   const tmp16 = getMimetype(questBarHeroVideo);
-  const obj = { url: combined, mimetype: tmp16, isAnimated: null };
+  obj = { url: combined, mimetype: tmp16, isAnimated: null };
   let hasItem = null != tmp16;
   if (hasItem) {
     hasItem = items.includes(tmp16);
@@ -50,7 +49,7 @@ function resolveAsset(id, questBarHeroVideo) {
 }
 function getMimetype(questBarHeroVideo) {
   const startsWithResult = questBarHeroVideo.startsWith("blob:");
-  const toURLSafeResult = isDiscordProxiedAssetUrl.toURLSafe(questBarHeroVideo);
+  const toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(questBarHeroVideo);
   if (startsWithResult) {
     let value;
     if (!tmp3) {
@@ -73,7 +72,7 @@ function getMimetype(questBarHeroVideo) {
       }
     }
     if (formatted == null) {
-      const match = tmp3.exec(questBarHeroVideo);
+      const match = regex.exec(questBarHeroVideo);
       let formatted1;
       if (match != null) {
         if (match[1] != null) {
@@ -398,7 +397,7 @@ function getAssetUrlWithMediaProxyQueryParams(assetUrl, arg1) {
   if (assetUrl.startsWith("blob:")) {
     return assetUrl;
   } else {
-    let str = isDiscordProxiedAssetUrl.toURLSafe(assetUrl);
+    let str = isDiscordProxiedAssetUrlDefault.toURLSafe(assetUrl);
     str = assetUrl;
     if (null != str) {
       if (null != size.format) {
@@ -428,7 +427,7 @@ function convertVideoToFirstFrameImageWithMediaProxy(assetUrl, width) {
   if (assetUrl.startsWith("blob:")) {
     return assetUrl;
   } else {
-    let str = isDiscordProxiedAssetUrl.toURLSafe(assetUrl);
+    let str = isDiscordProxiedAssetUrlDefault.toURLSafe(assetUrl);
     str = null;
     if (null != str) {
       const searchParams = str.searchParams;
@@ -451,17 +450,18 @@ function convertVideoToFirstFrameImageWithMediaProxy(assetUrl, width) {
   }
 }
 ({ CDN_URL_BASE: c3, QUESTS_CDN_URL_BASE: c4 } = QuestsExperimentLocations);
+let closure_5 = ME.MEDIA_PROXY_MAX_TARGET_RESOLUTION;
 const tmp3 = /\.([a-zA-Z0-9]+)$/;
-let closure_6 = tmp3;
+const re6 = tmp3;
 const items = ["video/mp4", "video/webm"];
 let obj = { HERO: "hero", HERO_IMAGE: "hero_image", HERO_VIDEO: "hero_video", QUEST_BAR_HERO: "quest_bar_hero", QUEST_BAR_HERO_VIDEO: "quest_bar_hero_video", QUEST_BAR_HERO_IMAGE: "quest_bar_hero_image", REWARD: "reward", REWARD_IMAGE: "reward_image", GAME_TILE: "game_tile", LOGO_TYPE: "logo_type", COSPONSOR_LOGO_TYPE: "cosponsor_logo_type", VIDEO_PLAYER_VIDEO: "video_player_video", VIDEO_PLAYER_VIDEO_LOW_RES: "video_player_video_low_res", VIDEO_PLAYER_VIDEO_HLS: "video_player_video_hls", VIDEO_PLAYER_THUMBNAIL: "video_player_thumbnail", VIDEO_PLAYER_CAPTION: "video_player_caption", VIDEO_PLAYER_TRANSCRIPT: "video_player_transcript" };
 obj = { VIDEO: "video", VIDEO_LOW_RES: "videoLowRes", VIDEO_HLS: "videoHls" };
 obj = { VIDEO: "url", THUMBNAIL: "thumbnail", CAPTION: "caption", TRANSCRIPT: "transcript" };
 let obj1 = { TIER_1: 1, [1]: "TIER_1", TIER_2: 2, [2]: "TIER_2", TIER_3: 3, [3]: "TIER_3", TIER_4: 4, [4]: "TIER_4" };
 let closure_10 = { [obj.VIDEO_PLAYER_VIDEO]: { variant: obj.VIDEO, property: obj.VIDEO }, [obj.VIDEO_PLAYER_VIDEO_LOW_RES]: { variant: obj.VIDEO_LOW_RES, property: obj.VIDEO }, [obj.VIDEO_PLAYER_VIDEO_HLS]: { variant: obj.VIDEO_HLS, property: obj.VIDEO }, [obj.VIDEO_PLAYER_THUMBNAIL]: { variant: obj.VIDEO, property: obj.THUMBNAIL }, [obj.VIDEO_PLAYER_CAPTION]: { variant: obj.VIDEO, property: obj.CAPTION }, [obj.VIDEO_PLAYER_TRANSCRIPT]: { variant: obj.VIDEO, property: obj.TRANSCRIPT } };
-const obj8 = { [TIER_1]: require("metadata"), [TIER_2]: require("metadata"), [TIER_3]: require("metadata"), [TIER_4]: require("metadata") };
+const obj8 = { [TIER_1]: metadataDefault, [TIER_2]: metadataDefault2, [TIER_3]: metadataDefault3, [TIER_4]: metadataDefault4 };
 ({ TIER_1, TIER_2, TIER_3, TIER_4 } = obj1);
-let result = require("metadata").fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
+let result = set.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
 
 export const EXTENSION_RE = tmp3;
 export const ANIMATED_MIMETYPES = items;
@@ -469,8 +469,6 @@ export const QuestAssetType = obj;
 export { resolveAsset };
 export const OrbsValueTier = obj1;
 export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRIPT, DARK, flag) {
-  let asset;
-  let assetVideo;
   if (obj.HERO === VIDEO_PLAYER_TRANSCRIPT) {
     const heroVideo2 = quest.config.assets.heroVideo;
     asset = quest.config.assets.hero;
@@ -506,7 +504,7 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
     flag = false;
     flag2 = false;
   } else if (tmp.REWARD === VIDEO_PLAYER_TRANSCRIPT) {
-    let obj1 = _getDefaultRewardName;
+    obj1 = _getDefaultRewardName;
     const questPrimaryReward = obj1.getQuestPrimaryReward(quest);
     if (questPrimaryReward.type === QuestRewardTypes.QuestRewardTypes.VIRTUAL_CURRENCY) {
       let tmp25;
@@ -519,11 +517,11 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
         obj1 = obj;
       } else if (flag) {
         obj = { url: null, mimetype: "video/mp4", isAnimated: true };
-        obj[0] = metadata;
+        obj[0] = metadataDefault5;
         obj1 = obj;
       } else {
         obj1 = { url: null, mimetype: "video/webm", isAnimated: true };
-        obj1[0] = metadata;
+        obj1[0] = metadataDefault6;
       }
       return obj1;
     } else {
@@ -613,7 +611,7 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_TRANSCRI
       }
     }
     if ("taskConfigV2" in quest.config) {
-      const FirstPartyQuestTaskTypes = set.FirstPartyQuestTaskTypes;
+      const FirstPartyQuestTaskTypes = set2.FirstPartyQuestTaskTypes;
       const tmp5 = quest.config.taskConfigV2.tasks[flag ? FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE : FirstPartyQuestTaskTypes.WATCH_VIDEO];
       let tmp9;
       if (tmp5 != null) {
@@ -703,9 +701,9 @@ export const resolveAdCreativeCdnUrl = function resolveAdCreativeCdnUrl(hero_ima
 };
 export { getMimetype };
 export const getDevicePixelScaledDimensions = function getDevicePixelScaledDimensions(arg0, arg1) {
-  const tmp = getDevicePixelRatio();
+  const tmp = getDevicePixelRatioDefault();
   if (tmp < 3) {
-    let obj = { width: null, height: null };
+    obj = { width: null, height: null };
     obj[0] = arg0;
     obj[1] = arg1;
   } else {
@@ -717,19 +715,13 @@ export const getDevicePixelScaledDimensions = function getDevicePixelScaledDimen
 };
 export { getAssetUrlWithMediaProxyQueryParams };
 export const getScaledImageUrl = function getScaledImageUrl(arg0) {
-  let assetUrl;
-  let height;
-  let width;
   ({ assetUrl, width, height } = arg0);
-  const tmp = getDevicePixelRatio();
+  const tmp = getDevicePixelRatioDefault();
   return getAssetUrlWithMediaProxyQueryParams(assetUrl, { width: width * tmp, height: height * tmp, format: "webp" });
 };
 export { convertVideoToFirstFrameImageWithMediaProxy };
 export const getScaledFirstFrameImageUrl = function getScaledFirstFrameImageUrl(arg0) {
-  let assetUrl;
-  let height;
-  let width;
   ({ assetUrl, width, height } = arg0);
-  const tmp = getDevicePixelRatio();
+  const tmp = getDevicePixelRatioDefault();
   return convertVideoToFirstFrameImageWithMediaProxy(assetUrl, { width: width * tmp, height: height * tmp });
 };

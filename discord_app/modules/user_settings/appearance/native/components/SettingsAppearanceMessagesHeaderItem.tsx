@@ -1,20 +1,22 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceMessagesHeaderItem.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { messagesHeaderContainer: null };
-createCacheKey = { flexDirection: "row", gap: require("Themes").space.PX_12, alignItems: "center", marginHorizontal: require("Themes").space.PX_24 };
+createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_12, alignItems: "center", marginHorizontal: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceMessagesHeaderItem.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceMessagesHeaderItem.tsx");
 
 export default function MessagesHeaderItem(animatedStyles) {
-  let obj = { style: createCacheKey().messagesHeaderContainer, children: null };
+  let obj = { style: callback().messagesHeaderContainer, children: null };
   obj = { animated: true, style: animatedStyles.animatedStyles.textNormal, variant: "text-lg/bold", children: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.OIgYlQ);

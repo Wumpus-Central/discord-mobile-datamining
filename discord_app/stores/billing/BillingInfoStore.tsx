@@ -1,22 +1,25 @@
 // discord_app/stores/billing/BillingInfoStore.tsx
-import { FallbackCurrencyCountry } from "ME";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function handlePaymentSourceCreateEnd() {
-  let c6 = false;
+  c6 = false;
 }
 function handlePaymentSourcesFetchEnd() {
-  let c0;
+  c0 = undefined;
 }
 function handleSubscriptionFetchEnd() {
-  let c9 = false;
+  c9 = false;
 }
 function handleSubscriptionUpdateStart() {
-  let c10 = true;
+  c10 = true;
 }
 function handleSubscriptionUpdateEnd() {
-  let c10 = false;
+  c10 = false;
 }
+const FallbackCurrencyCountry = ME.FallbackCurrencyCountry;
 let c6 = false;
 let c7 = false;
 let c8 = false;
@@ -26,6 +29,7 @@ let c11 = null;
 let c12 = null;
 let c13 = false;
 let c14 = false;
+const Store = initializeDefault.Store;
 class BillingInfoStore extends Store {
 }
 const prototype = BillingInfoStore.prototype;
@@ -152,38 +156,38 @@ Object.defineProperty(prototype, "paymentSourcesFetchRequest", {
   set: undefined
 });
 BillingInfoStore.displayName = "BillingInfoStore";
-const billingInfoStore = new BillingInfoStore(require("dispatcher"), {
+const billingInfoStore = new BillingInfoStore(dispatcherDefault, {
   BILLING_PAYMENT_SOURCE_CREATE_START: function handlePaymentSourceCreateStart() {
-    let c6 = true;
+    c6 = true;
   },
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: handlePaymentSourceCreateEnd,
   BILLING_PAYMENT_SOURCE_CREATE_FAIL: handlePaymentSourceCreateEnd,
   STRIPE_TOKEN_FAILURE: handlePaymentSourceCreateEnd,
   BILLING_PAYMENT_SOURCE_REMOVE_START: function handlePaymentSourceRemoveStart() {
-    let c8 = true;
+    c8 = true;
   },
   BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function handlePaymentSourceRemoveSuccess() {
-    let c8 = false;
+    c8 = false;
   },
   BILLING_PAYMENT_SOURCE_REMOVE_FAIL: function handlePaymentSourceRemoveFail(error) {
-    let c8 = false;
+    c8 = false;
     error = error.error;
   },
   BILLING_PAYMENT_SOURCE_REMOVE_CLEAR_ERROR: function handleClearRemoveError() {
-    let c12 = null;
+    c12 = null;
   },
   BILLING_PAYMENT_SOURCE_UPDATE_START: function handlePaymentSourceUpdateStart() {
-    let c7 = true;
+    c7 = true;
   },
   BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: function handlePaymentSourceUpdateSuccess() {
-    let c7 = false;
+    c7 = false;
   },
   BILLING_PAYMENT_SOURCE_UPDATE_FAIL: function handlePaymentSourceUpdateFail(error) {
-    let c7 = false;
+    c7 = false;
     error = error.error;
   },
   BILLING_PAYMENT_SOURCE_UPDATE_CLEAR_ERROR: function handleClearUpdateError() {
-    let c11 = null;
+    c11 = null;
   },
   BILLING_PAYMENT_SOURCES_FETCH_START: function handlePaymentSourcesFetchStart(request) {
     request = request.request;
@@ -191,7 +195,7 @@ const billingInfoStore = new BillingInfoStore(require("dispatcher"), {
   BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: handlePaymentSourcesFetchEnd,
   BILLING_PAYMENT_SOURCES_FETCH_FAIL: handlePaymentSourcesFetchEnd,
   BILLING_SUBSCRIPTION_FETCH_START: function handleSubscriptionFetchStart() {
-    let c9 = true;
+    c9 = true;
   },
   BILLING_SUBSCRIPTION_FETCH_SUCCESS: handleSubscriptionFetchEnd,
   BILLING_SUBSCRIPTION_FETCH_FAIL: handleSubscriptionFetchEnd,
@@ -208,8 +212,8 @@ const billingInfoStore = new BillingInfoStore(require("dispatcher"), {
     countryCode = countryCode.countryCode;
   },
   BILLING_IP_COUNTRY_CODE_FAILURE: function handleIpCountryCodeFailure() {
-    let c1 = null;
-    let c13 = true;
+    c1 = null;
+    c13 = true;
   },
   BILLING_IP_LOCATION_FETCH_START: function handleIpLocationFetchStart(request) {
     request = request.request;
@@ -218,24 +222,24 @@ const billingInfoStore = new BillingInfoStore(require("dispatcher"), {
     location = location.location;
   },
   BILLING_IP_LOCATION_FAILURE: function handleIpLocationFailure() {
-    let c3 = null;
-    let c14 = true;
+    c3 = null;
+    c14 = true;
   },
   LOGOUT: function handleLogout() {
-    let c0;
-    let c2;
-    let c1;
-    let c13 = false;
-    let c3;
-    let c14 = false;
-    let c4;
-    let c12 = null;
-    let c11 = null;
+    c0 = undefined;
+    c2 = undefined;
+    c1 = undefined;
+    c13 = false;
+    c3 = undefined;
+    c14 = false;
+    c4 = undefined;
+    c12 = null;
+    c11 = null;
   },
   CONNECTION_OPEN: function handleConnectionOpen(countryCode) {
     countryCode = countryCode.countryCode;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
+const result = set.fileFinishedImporting("stores/billing/BillingInfoStore.tsx");
 
 export default billingInfoStore;

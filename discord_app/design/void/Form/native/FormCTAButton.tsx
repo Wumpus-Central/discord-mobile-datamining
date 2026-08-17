@@ -1,28 +1,22 @@
 // discord_app/design/void/Form/native/FormCTAButton.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import semanticColor from "semanticColor";
-import { Fonts } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import importDefaultResult1 from "createTextStyle";
-import importDefaultResult2 from "createTextStyle";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import context from "context" /* 6939 */;
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import semanticColor from "semanticColor" /* 1301 */;
+import { Fonts } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let Platform;
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 class FormCTAButton {
   constructor(arg0) {
     BRAND = global.color;
     if (undefined === BRAND) {
-      tmp = jsx;
-      BRAND = jsx.BRAND;
+      tmp = closure_10;
+      BRAND = closure_10.BRAND;
     }
     fontSize = global.fontSize;
     num = 16;
@@ -36,14 +30,14 @@ class FormCTAButton {
     loading = global.loading;
     tmp3 = undefined !== loading && loading;
     ({ testID, onPress } = global);
-    tmp4 = jsx();
+    tmp4 = closure_9();
     tmp5 = jsx;
     tmp6 = closure_0;
     tmp7 = closure_1;
     items = [, , , ];
     items[0] = tmp4.text;
-    tmp8 = jsx;
-    if (jsx.BRAND === BRAND) {
+    tmp8 = closure_10;
+    if (closure_10.BRAND === BRAND) {
       textWarning = tmp4.textBrand;
     } else if (tmp8.DANGER === BRAND) {
       textWarning = tmp4.textDanger;
@@ -65,7 +59,7 @@ class FormCTAButton {
     }
     obj = { style: null, children: null };
     tmp11 = View;
-    if (noop.useContext(require("context").RedesignCompatContext)) {
+    if (closure_2.useContext(require("context").RedesignCompatContext)) {
       obj[0] = tmp4.rowButton;
       obj1 = { label: null, onPress: null, arrow: false, disabled: null, testID: null };
       obj1[0] = tmp5Result;
@@ -111,20 +105,22 @@ class FormCTAButton {
 ({ ANDROID_FOREGROUND_RIPPLE: closure_6, getThemedRippleConfig: error } = semanticColor);
 createCacheKey = { rowButton: { paddingHorizontal: 16 }, sectionBody: {}, button: { minHeight: 44, justifyContent: "center" }, text: { lineHeight: 44, paddingHorizontal: 17, textAlign: "left" }, textBrand: null, textDanger: null, textWarning: null, alignLeft: null, disabled: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(Fonts.PRIMARY_SEMIBOLD, require("Themes").colors.CONTROL_BRAND_FOREGROUND, 16));
+const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.CONTROL_BRAND_FOREGROUND, 16));
 createCacheKey[4] = createCacheKey;
 let obj1 = {};
-const merged1 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_SEMIBOLD, require("Themes").colors.TEXT_FEEDBACK_CRITICAL, 16));
+const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, 16));
 createCacheKey[5] = obj1;
+const importDefaultResult1 = importDefaultResult;
 const obj2 = {};
-const merged2 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_SEMIBOLD, require("Themes").colors.STATUS_WARNING, 16));
+const merged2 = Object.assign(importDefaultResult(Fonts.PRIMARY_SEMIBOLD, ThemesDefault.colors.STATUS_WARNING, 16));
 createCacheKey[6] = obj2;
 createCacheKey[7] = { textAlign: "left" };
 createCacheKey[8] = { opacity: 0.5 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 const obj3 = { BRAND: "brand", DANGER: "danger", WARNING: "warning" };
 FormCTAButton.Colors = obj3;
-const result = require("semanticColor").fileFinishedImporting("design/void/Form/native/FormCTAButton.tsx");
+const importDefaultResult2 = importDefaultResult;
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormCTAButton.tsx");
 
 export default FormCTAButton;
 export const FormCTAButtonColors = obj3;

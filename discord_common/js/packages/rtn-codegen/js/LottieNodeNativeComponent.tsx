@@ -1,6 +1,7 @@
 // discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx
-import setRuntimeConfigProvider from "setRuntimeConfigProvider";
-import { renderElement } from "../../../../../_runtime/00114_renderElement.js";
+import set from "set" /* 2 */;
+import renderElement from "renderElement" /* 114 */;
+import setRuntimeConfigProvider from "setRuntimeConfigProvider" /* 65 */;
 
 let obj = { uiViewClassName: "NativeLottieNode", validAttributes: {} };
 obj = {
@@ -10,7 +11,7 @@ obj = {
   }
 };
 const value = setRuntimeConfigProvider.get("NativeLottieNode", () => obj);
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/LottieNodeNativeComponent.tsx");
 
 export default value;
 export const __INTERNAL_VIEW_CONFIG = obj;

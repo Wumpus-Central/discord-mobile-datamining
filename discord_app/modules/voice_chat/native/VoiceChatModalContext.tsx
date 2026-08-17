@@ -1,5 +1,5 @@
 // discord_app/modules/voice_chat/native/VoiceChatModalContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 const context = importAllResult.createContext(null);

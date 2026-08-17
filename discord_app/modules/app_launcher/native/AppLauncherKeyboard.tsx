@@ -1,29 +1,27 @@
 // discord_app/modules/app_launcher/native/AppLauncherKeyboard.tsx
-import importAllResult from "collectGuildAnalyticsMetadata";
-import { View } from "module_11220";
-import { AnalyticEvents } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION";
-import jsxProd from "computeEntryState";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION" /* 11208 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let obj = { onboardingRoundingView: null, onboardingHeader: null, onboardingNavigatorContent: null };
-obj = { borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm };
+obj = { borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[0] = obj;
-createCacheKey = { borderWidth: 2, borderBottomWidth: 0, borderColor: require("Themes").colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm };
+createCacheKey = { borderWidth: 2, borderBottomWidth: 0, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: "transparent", borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 obj[1] = createCacheKey;
-obj[2] = { borderWidth: 2, borderColor: require("Themes").colors.BACKGROUND_BRAND, borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm };
+obj[2] = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 let closure_11 = createCacheKey.createStyles(obj);
 let c12 = null;
 let closure_13 = { code: "function AppLauncherKeyboardTsx1(){const{bottomSheetIndex}=this.__closure;return bottomSheetIndex.get();}" };
 let closure_14 = { code: "function AppLauncherKeyboardTsx2(i,prev){const{runOnJS,handleOnboardingParamChange,showOnboarding}=this.__closure;if(i===prev)return;runOnJS(handleOnboardingParamChange)(i,showOnboarding);}" };
-let obj2 = { borderWidth: 2, borderColor: require("Themes").colors.BACKGROUND_BRAND, borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm };
+let obj2 = { borderWidth: 2, borderColor: ThemesDefault.colors.BACKGROUND_BRAND, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm };
 const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   context = context.context;
   const chatInputRef = context.chatInputRef;
@@ -33,12 +31,12 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   let ref;
   let ref1;
   let minimum;
-  let closure_7;
-  let closure_8;
+  closure_7 = undefined;
+  closure_8 = undefined;
   let isScreenReaderEnabled;
   let visibleContent;
   let onboardingNavigatorContent;
-  let sharedValue;
+  c12 = undefined;
   let ref2;
   let callback1;
   let obj = context(onClose[8]);
@@ -50,13 +48,14 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   minimum = tmp8.minimum;
   closure_7 = transitionState.useRef(Date.now());
   closure_8 = transitionState.useRef(false);
-  let obj1 = context(onClose[11]);
+  obj1 = context(onClose[11]);
   isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   obj = { channelId: context.channel.id };
   visibleContent = chatInputRef(onClose[12])(obj).visibleContent;
   onboardingNavigatorContent = null != visibleContent;
   let obj3 = context(onClose[13]);
-  sharedValue = obj3.useSharedValue(-1);
+  const sharedValue = obj3.useSharedValue(-1);
+  c12 = sharedValue;
   const sharedValue1 = context(onClose[13]).useSharedValue(0);
   ref2 = transitionState.useRef(null);
   const items = [ref2];
@@ -79,7 +78,7 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   }, []);
   const items1 = [onboardingNavigatorContent, sharedValue, callback1];
   const effect = transitionState.useEffect(() => {
-    callback1(sharedValue.get(), onboardingNavigatorContent);
+    callback1(_null.get(), onboardingNavigatorContent);
   }, items1);
   const obj5 = context(onClose[13]);
   const tmp7 = chatInputRef;
@@ -182,14 +181,14 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
       obj[0] = context(onClose[22]).KeyboardTypes.SYSTEM;
       context(onClose[21]).setKeyboardType(obj);
       current = undefined;
-      if (sharedValue != null) {
-        current = sharedValue.current;
+      if (_null != null) {
+        current = _null.current;
       }
       if (null != current) {
-        const obj1 = { ref: null };
-        obj1[0] = sharedValue;
+        obj1 = { ref: null };
+        obj1[0] = _null;
         const result = context(onClose[23]).setAccessibilityFocus(obj1);
-        sharedValue = null;
+        _null = null;
         const obj6 = context(onClose[23]);
       }
       const obj4 = context(onClose[21]);
@@ -241,9 +240,9 @@ const memoResult = importAllResult.memo(function AppLauncherKeyboard(context) {
   obj1[17] = closure_8(tmp24, obj2);
   return closure_8(tmp22, obj1);
 });
-let result = require("ME").fileFinishedImporting("modules/app_launcher/native/AppLauncherKeyboard.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherKeyboard.tsx");
 
 export default memoResult;
 export function setAppLauncherA11yFocusReturnRef(current2) {
-  let closure_12 = current2;
+  closure_12 = current2;
 }

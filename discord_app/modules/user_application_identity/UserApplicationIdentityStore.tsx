@@ -1,9 +1,11 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 let map = new Map();
 const map1 = new Map();
+const Store = initializeDefault.Store;
 class UserApplicationIdentityStore extends Store {
 }
 const prototype = UserApplicationIdentityStore.prototype;
@@ -45,10 +47,9 @@ obj = {
     const result = map1.set(userId.userId, obj.FETCHING);
   },
   USER_APPLICATION_IDENTITY_FETCH_USER_SUCCESS: function handleFetchUserSuccess(userId) {
-    let identities;
     const result = map1.set(userId.userId, obj.FETCHED);
     ({ userId, identities } = userId);
-    const map = new Map(identities.map((application_id) => {
+    map = new Map(identities.map((application_id) => {
       const items = [application_id.application_id, application_id];
       return items;
     }));
@@ -59,7 +60,7 @@ obj = {
     const result = map1.set(userId.userId, obj.FETCHED);
   },
   USER_APPLICATION_IDENTITY_REMOVE: function handleRemoveIdentity(user_id) {
-    let obj = user_id;
+    obj = user_id;
     obj = map;
     const value = map.get(user_id.user_id);
     if (null == value) {
@@ -81,7 +82,7 @@ obj = {
     }
   }
 };
-const userApplicationIdentityStore = new UserApplicationIdentityStore(require("dispatcher"), obj);
+const userApplicationIdentityStore = new UserApplicationIdentityStore(dispatcherDefault, obj);
 let result = require("set").fileFinishedImporting("modules/user_application_identity/UserApplicationIdentityStore.tsx");
 
 export default userApplicationIdentityStore;

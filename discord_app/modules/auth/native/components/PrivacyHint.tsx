@@ -1,21 +1,17 @@
 // discord_app/modules/auth/native/components/PrivacyHint.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { usePromoEmailConsentStore } from "setPromoEmailConsentState";
-import { useRegistrationUIStore } from "useRegistrationUIStore";
-import { MarketingURLs } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { PromotionalEmailCheckBox } from "PromotionalEmailCheckBox.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
+import Text from "Text" /* 4734 */;
+import PromotionalEmailCheckBoxDefault from "PromotionalEmailCheckBox" /* 15251 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { usePromoEmailConsentStore } from "setPromoEmailConsentState" /* 5257 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15212 */;
+import { MarketingURLs } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function PrivacyPolicyDescription(style) {
   let obj = { style: style.style, variant: "text-xs/medium", color: "text-muted", children: null };
   const intl = getSystemLocale.intl;
@@ -24,8 +20,6 @@ function PrivacyPolicyDescription(style) {
   return callback(Text.Text, obj);
 }
 function PrivacyPolicyCheckbox(onToggleConsent) {
-  let asCheckbox;
-  let consent;
   ({ consent, asCheckbox } = onToggleConsent);
   if (asCheckbox === undefined) {
     asCheckbox = false;
@@ -44,7 +38,7 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
     let tmp7Result = tmp7(tmp2(8085).FormCheckbox, obj);
     let tmp9 = tmp7;
   } else {
-    const obj1 = { selected: null };
+    obj1 = { selected: null };
     obj1[0] = consent;
     tmp7Result = tmp7(tmp2(8083).FormRow.Radio, obj1);
     tmp9 = tmp7;
@@ -57,15 +51,13 @@ function PrivacyPolicyCheckbox(onToggleConsent) {
   obj[6] = items;
   return closure_9(closure_4, obj);
 }
+noopAll;
 ({ View: c3, Pressable: c4 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ multiItem: { flexDirection: "column", gap: 16 }, checkbox: { flexDirection: "row", alignItems: "flex-start", gap: 8 }, radio: { flexDirection: "row", alignItems: "center", gap: 8 }, checkboxLabel: { flex: 1 } });
-const result = require("setPromoEmailConsentState").fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/PrivacyHint.tsx");
 
 export default function PrivacyHint(arg0) {
-  let consent;
-  let consentRequired;
-  let onToggleConsent;
   ({ consent, consentRequired, onToggleConsent } = arg0);
   let items1 = callback3();
   const tmp2 = useRegistrationUIStore((registrationOptions) => null != registrationOptions.registrationOptions.email) && usePromoEmailConsentStore((required) => required.required);
@@ -73,7 +65,7 @@ export default function PrivacyHint(arg0) {
     if (tmp2) {
       let obj = { style: null, children: null };
       obj[0] = items1.multiItem;
-      const items = [callback(PromotionalEmailCheckBox, {}), callback(PrivacyPolicyDescription, {})];
+      const items = [callback(PromotionalEmailCheckBoxDefault, {}), callback(PrivacyPolicyDescription, {})];
       obj[1] = items;
       return callback2(closure_3, obj);
     }
@@ -89,7 +81,7 @@ export default function PrivacyHint(arg0) {
     }
   }
   obj = { style: items1.multiItem, children: null };
-  items1 = [callback(PromotionalEmailCheckBox, {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
+  items1 = [callback(PromotionalEmailCheckBoxDefault, {}), callback(PrivacyPolicyCheckbox, { consent, onToggleConsent, asCheckbox: true })];
   obj[1] = items1;
   tmp9Result = callback2(closure_3, obj);
 };

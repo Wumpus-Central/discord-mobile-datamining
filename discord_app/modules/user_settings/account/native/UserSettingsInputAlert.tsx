@@ -1,20 +1,18 @@
 // discord_app/modules/user_settings/account/native/UserSettingsInputAlert.tsx
-import jsxProd from "jsxProd";
-import { PureComponent } from "noop";
-import importAllResult from "noop";
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
-import { KeyboardAwareView } from "../../../keyboard/native/KeyboardAwareView.tsx";
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import _modDef6551 from "module_6551" /* 6551 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
 let require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = { input: "", error: "accessibilityRole" };
+const PureComponent = importAllResult.PureComponent;
 class UserSettingsInputAlert extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
-    applyArgumentsResult.state = jsxs;
+    applyArgumentsResult.state = closure_5;
     applyArgumentsResult.close = function close() {
       const onClose = applyArgumentsResult.props.onClose;
       if (null != onClose) {
@@ -22,12 +20,6 @@ class UserSettingsInputAlert extends PureComponent {
       }
     };
     applyArgumentsResult.handleSubmit = function handleSubmit() {
-      let closure_0;
-      let closure_1;
-      let closure_2;
-      let closure_3;
-      let isLoading;
-      let onSubmit;
       ({ isLoading, onSubmit, onSuccess: closure_0, closeOnSuccess: closure_1, onError: closure_2, skipErrorMsgAbortCode: closure_3 } = applyArgumentsResult.props);
       if (!isLoading) {
         isLoading = null == onSubmit;
@@ -39,7 +31,7 @@ class UserSettingsInputAlert extends PureComponent {
             tmp();
           }
           if (closure_1) {
-            outer1_0.close();
+            closure_1_0.close();
           }
         }).catch((body) => {
           if (closure_2 != null) {
@@ -47,11 +39,11 @@ class UserSettingsInputAlert extends PureComponent {
           }
           if (body) {
             if (body.body) {
-              const v6OrEarlierAPIError = new applyArgumentsResult(outer2_2[2]).V6OrEarlierAPIError(body);
+              const v6OrEarlierAPIError = new applyArgumentsResult(closure_2_2[2]).V6OrEarlierAPIError(body);
               if (v6OrEarlierAPIError.code !== closure_3) {
                 const obj = { error: null };
                 obj[0] = v6OrEarlierAPIError.message;
-                outer1_0.setState(obj);
+                closure_1_0.setState(obj);
               }
             }
           }
@@ -61,7 +53,7 @@ class UserSettingsInputAlert extends PureComponent {
             tmp();
           }
           if (closure_1) {
-            outer1_0.close();
+            closure_1_0.close();
           }
         });
       }
@@ -76,7 +68,7 @@ prototype["renderContent"] = function renderContent() {
   const helpText = this.props.helpText;
   if (null != this.props.error) {
     if ("" !== self.props.error) {
-      let error = self.props.error;
+      error = self.props.error;
     }
     let tmp7 = null != helpText;
     if (tmp7) {
@@ -107,24 +99,18 @@ prototype["renderContent"] = function renderContent() {
   error = self.state.error;
 };
 prototype["render"] = function render() {
-  let actionText;
-  let cancelText;
-  let confirmColor;
-  let title;
-  let useKeyboardAwareWrapper;
   ({ title, actionText, cancelText, confirmColor, useKeyboardAwareWrapper } = this.props);
-  let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: null };
-  obj[6] = this.renderContent();
-  const tmp5 = callback(componentDidMount, obj);
+  let obj = { title, confirmText: actionText, confirmColor, onConfirm: this.handleSubmit, cancelText, onCancel: this.close, children: this.renderContent() };
+  const tmp5 = callback(componentDidMountDefault, obj);
   let tmpResult = tmp5;
   if (useKeyboardAwareWrapper) {
     obj = { children: null };
     obj[0] = tmp5;
-    tmpResult = callback(KeyboardAwareView, obj);
+    tmpResult = callback(_modDef6551, obj);
   }
   return tmpResult;
 };
 UserSettingsInputAlert.defaultProps = { isLoading: false, useKeyboardAwareWrapper: false, secureTextEntry: true };
-const result = require("sendRequest").fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsInputAlert.tsx");
 
 export default UserSettingsInputAlert;

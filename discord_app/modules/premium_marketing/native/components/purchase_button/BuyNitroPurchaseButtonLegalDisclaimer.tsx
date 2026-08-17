@@ -1,28 +1,25 @@
 // discord_app/modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx
-import "noop";
-import ME from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { combined } from "../../../../../utils/HelpdeskUtils.tsx";
-import { set } from "../../../../../utils/PlatformUtils.tsx";
-import { getPremiumPlanItem } from "../../../../../utils/PremiumUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ HelpdeskArticles: c3, MarketingURLs: c4 } = ME);
 createCacheKey = { disclaimer: null };
-createCacheKey = { marginTop: require("Themes").space.PX_12, textAlign: "center" };
+createCacheKey = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/purchase_button/BuyNitroPurchaseButtonLegalDisclaimer.tsx");
 
 export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
-  let ctaText;
-  let isDiscounted;
-  let isTrial;
-  let item;
   ({ item, ctaText } = arg0);
   ({ isTrial, isDiscounted } = arg0);
   let interval;
@@ -38,14 +35,14 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
       if (isDiscounted) {
         let obj = { buttonText: null, interval: null, cancelSubscriptionArticle: null, paidServiceTermsArticle: null };
         obj[0] = ctaText;
-        obj[1] = getPremiumPlanItem.formatInterval(item.interval);
-        const obj5 = getPremiumPlanItem;
-        obj[2] = combined.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
-        const obj6 = combined;
-        obj[3] = combined.getArticleURL(constants.PAID_TERMS);
+        obj[1] = getPremiumPlanItemDefault.formatInterval(item.interval);
+        const obj5 = getPremiumPlanItemDefault;
+        obj[2] = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+        const obj6 = combinedDefault;
+        obj[3] = combinedDefault.getArticleURL(constants.PAID_TERMS);
         let formatResult = format(tmp3(1236).t["3uC7vj"], obj);
         let tmp10 = tmp3;
-        const obj7 = combined;
+        const obj7 = combinedDefault;
       } else {
         let tmp3Result = tmp3(500);
         let t = tmp3(1236).t;
@@ -59,7 +56,7 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
         tmp10 = tmp3;
         const tmp6 = tmp3Result.isAndroid() ? t.COObWR : t["7wpqfj"];
       }
-      const obj1 = { style: null, variant: "text-xxs/medium", children: null };
+      obj1 = { style: null, variant: "text-xxs/medium", children: null };
       obj1[0] = tmp.disclaimer;
       obj1[2] = formatResult;
       jsx(tmp10(4734).Text, { style: null, variant: "text-xxs/medium", children: null });
@@ -72,9 +69,9 @@ export default function BuyNitroPurchaseButtonLegalDisclaimer(arg0) {
     const tmp14 = set.isAndroid() ? t.tINI9V : t.ZWXtAj;
     t[1] = getPremiumPlanItem.getIntervalStringAsNoun(item.interval);
     const tmp3Result2 = getPremiumPlanItem;
-    item = combined.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
+    item = combinedDefault.getArticleURL(constants.PREMIUM_DETAILS_CANCEL_SUB);
     t[2] = item;
     format(tmp14, t);
-    const obj11 = combined;
+    const obj11 = combinedDefault;
   }
 };

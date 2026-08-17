@@ -1,11 +1,13 @@
 // discord_app/stores/NetworkStore.tsx
-import ME from "ME";
-import { Store } from "initialize";
-import { awaitOnline } from "../utils/NetworkUtils.tsx";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import awaitOnlineDefault from "awaitOnline" /* 1474 */;
+import ME from "ME" /* 676 */;
 
 function handleConnectionInfoChange(type) {
   if (null != type.type) {
-    let UNKNOWN = type.type;
+    UNKNOWN = type.type;
   } else {
     UNKNOWN = NetworkConnectionTypes.UNKNOWN;
   }
@@ -21,14 +23,15 @@ const NetworkConnectionSpeeds = ME.NetworkConnectionSpeeds;
 let UNKNOWN = NetworkConnectionTypes.UNKNOWN;
 UNKNOWN = NetworkConnectionSpeeds.UNKNOWN;
 let c6 = null;
+const Store = initializeDefault.Store;
 class NetworkStoreClass extends Store {
 }
 const prototype = NetworkStoreClass.prototype;
 prototype["initialize"] = function initialize() {
-  const networkInformation = awaitOnline.getNetworkInformation();
+  const networkInformation = awaitOnlineDefault.getNetworkInformation();
   networkInformation.then(handleConnectionInfoChange);
-  const obj = awaitOnline;
-  awaitOnline.addChangeCallback(handleConnectionInfoChange);
+  const obj = awaitOnlineDefault;
+  awaitOnlineDefault.addChangeCallback(handleConnectionInfoChange);
 };
 prototype["getType"] = function getType() {
   return UNKNOWN;
@@ -40,7 +43,7 @@ prototype["getServiceProvider"] = function getServiceProvider() {
   return c6;
 };
 NetworkStoreClass.displayName = "NetworkStore";
-const networkStoreClass = new NetworkStoreClass(require("dispatcher"), {});
-const result = require("awaitOnline").fileFinishedImporting("stores/NetworkStore.tsx");
+const networkStoreClass = new NetworkStoreClass(dispatcherDefault, {});
+const result = set.fileFinishedImporting("stores/NetworkStore.tsx");
 
 export default networkStoreClass;

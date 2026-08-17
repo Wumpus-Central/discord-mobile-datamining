@@ -1,22 +1,21 @@
 // discord_app/modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { container: null, avatarContainer: null, avatarWrapper: null, avatar: null, disconnectedAvatar: null, textContainer: null, text: null };
-obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
+obj = { width: "100%", height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND };
 obj[0] = obj;
 obj[1] = { flexDirection: "row", gap: 24 };
-createCacheKey = { width: 80, height: 80, borderRadius: require("Themes").radii.round, overflow: "hidden" };
+createCacheKey = { width: 80, height: 80, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
 obj[2] = createCacheKey;
 obj[3] = { width: 80, height: 80 };
 obj[4] = { opacity: 0.2 };
@@ -24,9 +23,6 @@ obj[5] = { position: "absolute", left: 0, right: 0, bottom: 0, padding: 16, widt
 obj[6] = { textAlign: "center" };
 let closure_10 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconnected() {
-  let tmp10;
-  let tmp11;
-  let tmp9;
   const channelId = importAllResult.useContext(first(id[8])).channelId;
   const tmp3 = callback3();
   channel = channel.getChannel(channelId);
@@ -40,11 +36,11 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   first = callback(recipients, 1)[0];
   id = id.getId();
   let obj = channelId(tmp2[9]);
-  let items = [mergeGuildAvatar];
+  let items = [closure_7];
   const items1 = [channelId, id, first];
   [tmp9, tmp10, tmp11] = callback(obj.useStateFromStoresArray(items, () => {
-    const user = outer1_7.getUser(id);
-    const user1 = outer1_7.getUser(first);
+    const user = closure_1_7.getUser(id);
+    const user1 = closure_1_7.getUser(first);
     let avatarURL;
     if (user != null) {
       avatarURL = user.getAvatarURL(undefined, 80);
@@ -64,7 +60,7 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   let tmp16Result = null != tmp9;
   tmpResult = tmp(tmp2[11]);
   if (tmp16Result) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp3.avatarWrapper;
     let tmp19 = tmp9;
     const tmpResult1 = tmp(tmp2[11]);
@@ -106,8 +102,8 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   const items4 = [closure_9(tmpResult, obj), ];
   const obj7 = { style: tmp3.textContainer, children: null };
   const tmp8 = callback(obj.useStateFromStoresArray(items, () => {
-    const user = outer1_7.getUser(id);
-    const user1 = outer1_7.getUser(first);
+    const user = closure_1_7.getUser(id);
+    const user1 = closure_1_7.getUser(first);
     let avatarURL;
     if (user != null) {
       avatarURL = user.getAvatarURL(undefined, 80);
@@ -141,6 +137,6 @@ const memoResult = importAllResult.memo(function VoicePanelCTACardCallerDisconne
   obj[1] = items4;
   return closure_9(tmpResult, obj);
 });
-const result = require("fetchFingerprint").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/card/VoicePanelCTACardCallerDisconnected.tsx");
 
 export default memoResult;

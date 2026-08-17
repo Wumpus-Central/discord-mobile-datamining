@@ -1,25 +1,23 @@
 // discord_app/modules/saved_messages/native/ForLaterCardReminderHeader.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { _savedMessageJumpToMessage } from "../SavedMessageUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _savedMessageJumpToMessage from "_savedMessageJumpToMessage" /* 10880 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
+const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, icon: null, actionsContainer: null };
-obj = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, borderTopLeftRadius: require("Themes").radii.lg, borderTopRightRadius: require("Themes").radii.lg, overflow: "hidden", gap: 8, marginHorizontal: -16, marginTop: -16, paddingHorizontal: 16, paddingVertical: 12 };
+obj = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderTopLeftRadius: ThemesDefault.radii.lg, borderTopRightRadius: ThemesDefault.radii.lg, overflow: "hidden", gap: 8, marginHorizontal: -16, marginTop: -16, paddingHorizontal: 16, paddingVertical: 12 };
 obj[0] = obj;
-obj[1] = { width: 24, height: 24, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.CARD_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
+obj[1] = { width: 24, height: 24, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
 obj[2] = { marginVertical: -4, marginLeft: "auto" };
 let closure_6 = createCacheKey.createStyles(obj);
-let obj1 = { width: 24, height: 24, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.CARD_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
-const result = require("createCacheKey").fileFinishedImporting("modules/saved_messages/native/ForLaterCardReminderHeader.tsx");
+let obj1 = { width: 24, height: 24, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, alignItems: "center", justifyContent: "center" };
+const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterCardReminderHeader.tsx");
 
 export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(savedMessage) {
-  let actions;
-  let throttledNow;
   savedMessage = savedMessage.savedMessage;
   ({ throttledNow, actions } = savedMessage);
   const tmp = callback3();
@@ -38,10 +36,10 @@ export const ForLaterCardReminderHeader = function ForLaterCardReminderHeader(sa
     if (isOverdue) {
       str = "text-feedback-critical";
     }
-    const colors = Themes.colors;
+    const colors = ThemesDefault.colors;
     obj = { style: null, children: null };
     obj[0] = tmp.container;
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.icon;
     const obj2 = { size: "xxs", color: null };
     obj2[1] = isOverdue ? colors.TEXT_FEEDBACK_CRITICAL : colors.INTERACTIVE_TEXT_DEFAULT;

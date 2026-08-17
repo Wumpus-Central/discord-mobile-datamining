@@ -1,10 +1,10 @@
 // discord_app/modules/media_uploads/experiments/KestrelExperiment.tsx
-import ApexExperiment from "ApexExperiment";
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let closure_0 = ApexExperiment.createApexExperiment({ name: "2026-04-kestrel", kind: "user", defaultConfig: { enabled: false, threshold: 0 }, variations: { 0: { enabled: false, threshold: 0 }, 1: { enabled: true, threshold: 15 }, 2: { enabled: true, threshold: 20 }, 3: { enabled: true, threshold: 25 } } });
 let closure_1 = ApexExperiment.createApexExperiment({ name: "2026-08-kestrel-ga", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });
-const result = require("set").fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_uploads/experiments/KestrelExperiment.tsx");
 
 export const KESTREL_GA_UPLOAD_LIMIT_MB = 20;
 export const getKestrelConfig = function getKestrelConfig(location) {

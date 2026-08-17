@@ -1,34 +1,28 @@
 // discord_app/modules/application_commands/native/ApplicationCommandItem.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import { AUTOCOMPLETE_ROW_HEIGHT } from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { applicationCommandItem: null, highlightedApplicationCommandItem: null, applicationCommandIcon: null, applicationCommandDescriptionWrapper: null, applicationCommandSectionName: null };
   obj = { flexDirection: "row", paddingVertical: 8, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) };
   obj[0] = obj;
-  obj = { backgroundColor: Themes.colors.INTERACTIVE_BACKGROUND_HOVER };
+  obj = { backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
   obj[1] = obj;
-  obj[2] = { width: 32, height: 32, borderRadius: Themes.radii.lg, marginRight: 16 };
+  obj[2] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, marginRight: 16 };
   obj[3] = { flexDirection: "column", flexShrink: 1, alignSelf: "flex-end" };
   obj[4] = { paddingLeft: 16, marginLeft: "auto" };
   return obj;
 });
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/application_commands/native/ApplicationCommandItem.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandItem.tsx");
 
 export default function ApplicationCommandItem(highlighted) {
-  let command;
-  let importDefault;
-  let section;
-  let showIcon;
   ({ command, section } = highlighted);
   ({ guildId: importDefault, showIcon } = highlighted);
   if (showIcon === undefined) {
@@ -41,8 +35,8 @@ export default function ApplicationCommandItem(highlighted) {
   let stateFromStores;
   let obj = section(stateFromStores[7]);
   const tmp3 = callback2(obj.useFontScale());
-  let obj1 = section(stateFromStores[8]);
-  const items = [trackCommunicationDisabled];
+  obj1 = section(stateFromStores[8]);
+  const items = [closure_5];
   stateFromStores = obj1.useStateFromStores(items, () => {
     if (null != closure_1) {
       let botId;
@@ -50,7 +44,7 @@ export default function ApplicationCommandItem(highlighted) {
         botId = tmp2.botId;
       }
       if (null != botId) {
-        return outer1_5.getMember(tmp, tmp2.botId);
+        return closure_1_5.getMember(tmp, tmp2.botId);
       }
     }
   });

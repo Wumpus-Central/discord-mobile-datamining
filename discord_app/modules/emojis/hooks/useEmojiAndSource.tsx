@@ -1,34 +1,25 @@
 // discord_app/modules/emojis/hooks/useEmojiAndSource.tsx
-import closure_2 from "getEmojiSourceData";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import getEmojiSourceData from "getEmojiSourceData";
-import { GuildFeatures } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getEmojiToGroupId" /* 6727 */;
+import getEmojiSourceData from "getEmojiSourceData" /* 7189 */;
+import { GuildFeatures } from "ME" /* 676 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
-({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: metroImportAll, getEmojiSourceData: c9 } = getEmojiSourceData);
-const result = require("noop").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
+({ ExpressionSourceGuildRecord: error, EmojiSourceDataTypes: closure_8, getEmojiSourceData: c9 } = getEmojiSourceData);
+const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
 
 export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
-  let c3;
-  let c5;
-  let c6;
-  let tmp13;
-  let tmp15;
-  let tmp8;
   emojiId = emojiId.emojiId;
   const refreshPositionKey = emojiId.refreshPositionKey;
-  let c2;
+  closure_2 = undefined;
   let callback;
   let React;
   c5 = undefined;
   c6 = undefined;
-  let closure_7;
+  closure_7 = undefined;
   const items = [c6, c5];
   const emoji = emojiId(refreshPositionKey[8]).useStateFromStoresObject(items, () => {
     let obj = c6;
@@ -67,7 +58,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
   if (tmp5) {
     tmp5 = null != emojiId;
   }
-  c2 = tmp5;
+  closure_2 = tmp5;
   let obj = emojiId(refreshPositionKey[8]);
   [tmp8, c3] = callback(React.useState(tmp5), 2);
   const sourceType = callback(React.useState(null), 2);
@@ -115,15 +106,15 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp5;
-                let c0 = tmp2;
-                c0 = undefined;
+                closure_1 = tmp5;
+                closure_0 = tmp2;
+                closure_0 = undefined;
                 let tmp6 = null;
-                if (null != outer1_0) {
+                if (null != closure_1_0) {
                   c2 = 1;
                   v0 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = outer2_9(tmp33);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = closure_2_9(tmp33);
                   return obj1;
                 }
               }
@@ -139,18 +130,18 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
                 return obj;
               }
             }
-            c0 = tmp6;
-            if (null != c0) {
-              outer1_4(c0.type);
-              const type = c0.type;
-              if (outer2_8.APPLICATION === type) {
-                outer1_6(closure_0.application);
-              } else if (outer2_8.GUILD === type) {
-                outer1_5(closure_0.guild);
+            closure_0 = tmp6;
+            if (null != closure_0) {
+              closure_1_4(closure_0.type);
+              const type = closure_0.type;
+              if (closure_2_8.APPLICATION === type) {
+                closure_1_6(closure_0.application);
+              } else if (closure_2_8.GUILD === type) {
+                closure_1_5(closure_0.guild);
               }
             }
             v0(false);
-            const current = outer1_7.current;
+            const current = closure_1_7.current;
             if (current != null) {
               current();
             }
@@ -162,7 +153,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
           }
         }
       });
-      const _fetch = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -175,7 +166,7 @@ export const useEmojiAndSource = function useEmojiAndSource(emojiId) {
     if (current != null) {
       current();
     }
-    if (c2) {
+    if (closure_2) {
       (function fetch() {
         const self = this;
         const apply = _fetch.apply;

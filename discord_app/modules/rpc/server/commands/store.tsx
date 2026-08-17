@@ -1,18 +1,12 @@
 // discord_app/modules/rpc/server/commands/store.tsx
-import prototype from "prototype";
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { validateTransportType } from "../../helpers/validateTransportType.tsx";
-import { prototype } from "../../RPCError.tsx";
+import _fetchUserEntitlementsAll from "_fetchUserEntitlements" /* 5358 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import validateTransportType from "validateTransportType" /* 13864 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
 
-let RPCCommands;
-let RPC_AUTHENTICATED_SCOPE;
-let RPC_LOCAL_SCOPE;
-let RPC_SCOPE_CONFIG;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function getSubscriptionSkusViaListings() {
   const self = this;
   const apply = _getSubscriptionSkusViaListings.apply;
@@ -26,18 +20,18 @@ function getSubscriptionSkusViaListings() {
 function _getSubscriptionSkusViaListings() {
   let self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
-      let closure_2 = tmp2;
+      closure_2 = tmp2;
       let found = closure_1.filter((type) => type.type === constants.SUBSCRIPTION_GROUP);
       closure_2 = yield Promise.all(found.map((() => {
-        let closure_0 = v3((arg0) => {
-          let closure_0 = arg0;
-          let c2 = 0;
-          let c1 = 0;
+        closure_0 = v3((arg0) => {
+          closure_0 = arg0;
+          c2 = 0;
+          c1 = 0;
           return (/* F120784 */ function*() { ... })();
         });
         return function() {
@@ -61,7 +55,7 @@ function _getSubscriptionSkusViaListings() {
           } else {
             const items = [];
             let item = prop.forEach((subscription_plans) => {
-              let closure_0 = subscription_plans;
+              closure_0 = subscription_plans;
               subscription_plans = subscription_plans.subscription_plans;
               const item = subscription_plans.forEach(() => { ... });
             });
@@ -79,7 +73,7 @@ function _getSubscriptionSkusViaListings() {
       return closure_3;
     })();
   });
-  const _getSubscriptionSkusViaListings = tmp;
+  closure_9 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -101,9 +95,9 @@ function getSkusHandler() {
 function _getSkusHandler() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
     const iter = (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -131,14 +125,14 @@ function _getSkusHandler() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_5 = tmp2;
-              let prototype = tmp5;
+              closure_5 = tmp2;
+              closure_4 = tmp5;
               let socket;
               socket = socket.socket;
               let callback;
-              let closure_2;
-              let dependencyMap;
-              prototype = undefined;
+              closure_2 = undefined;
+              dependencyMap = undefined;
+              closure_4 = undefined;
               constants = 1;
               c7 = 1;
               return { value: "ct", done: true };
@@ -149,7 +143,7 @@ function _getSkusHandler() {
               throw arg1;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -207,9 +201,9 @@ function _getSkusHandler() {
               obj7[0] = arg1;
               return obj7;
             } else {
-              prototype = arg1;
+              closure_4 = arg1;
               closure_2 = 0;
-              const found = prototype.filter((sku) => sku.sku.type !== constants.SUBSCRIPTION_GROUP);
+              const found = closure_4.filter((sku) => sku.sku.type !== constants.SUBSCRIPTION_GROUP);
               const mapped = found.map((sku) => sku.sku);
               const items = [];
               dependencyMap = items;
@@ -217,7 +211,7 @@ function _getSkusHandler() {
               constants = 5;
               c7 = 1;
               const obj8 = { value: null, done: false };
-              obj8[0] = callback2(callback, prototype.map((sku) => sku.sku));
+              obj8[0] = callback2(callback, closure_4.map((sku) => sku.sku));
               return obj8;
             }
           } else if (4 === tmp5) {
@@ -265,6 +259,7 @@ function _getSkusHandler() {
     iter.next();
     return iter;
   });
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -281,10 +276,10 @@ function getEntitlementsHandler(socket) {
   if (null == id) {
     obj = { errorCode: null };
     obj[0] = constants.INVALID_COMMAND;
-    const tmp9 = new prototype(obj, "No application.");
+    const tmp9 = new prototypeDefault(obj, "No application.");
     throw tmp9;
   } else {
-    return importAll(5358).fetchUserEntitlementsForApplication(id);
+    return _fetchUserEntitlementsAll.fetchUserEntitlementsForApplication(id);
   }
 }
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = RPC_SCOPE_CONFIG);
@@ -294,10 +289,10 @@ let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 let obj = {
   [RPC_SCOPE_CONFIG.ANY]: items2,
   handler(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
-      let closure_0 = {};
-      closure_0.skus = yield outer1_10(outer1_0);
+      closure_0 = {};
+      closure_0.skus = yield closure_1_10(closure_1_0);
       return closure_0;
     })();
   }
@@ -306,15 +301,15 @@ items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj = {
   [RPC_SCOPE_CONFIG.ANY]: items3,
   handler(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
-      let closure_0 = {};
-      closure_0.entitlements = yield outer1_12(outer1_0);
+      closure_0 = {};
+      closure_0.entitlements = yield closure_1_12(closure_1_0);
       return closure_0;
     })();
   }
 };
 items3 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
-let result = require("ME").fileFinishedImporting("modules/rpc/server/commands/store.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/commands/store.tsx");
 
 export default { [RPCCommands.GET_SKUS]: { [RPC_SCOPE_CONFIG.ANY]: items, handler: getSkusHandler }, [RPCCommands.GET_ENTITLEMENTS]: { [RPC_SCOPE_CONFIG.ANY]: items1, handler: getEntitlementsHandler }, [RPCCommands.GET_SKUS_EMBEDDED]: obj, [RPCCommands.GET_ENTITLEMENTS_EMBEDDED]: obj };

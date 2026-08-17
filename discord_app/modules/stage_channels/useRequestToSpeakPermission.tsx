@@ -1,25 +1,23 @@
 // discord_app/modules/stage_channels/useRequestToSpeakPermission.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Permissions } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import { Permissions } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/useRequestToSpeakPermission.tsx");
 
 export const useRequestToSpeakPermission = function useRequestToSpeakPermission(id) {
-  let tmp4;
-  let tmp5;
   const _require = id;
-  const items = [ensureGuildLoaded];
+  const items = [closure_5];
   const items1 = [id];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getChannel(closure_0), items1);
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getChannel(closure_0), items1);
   let obj = _initialize;
   const canEveryoneRoleResult = stateFromStores(4026).canEveryoneRole(Permissions.REQUEST_TO_SPEAK, stateFromStores);
   const obj2 = stateFromStores(4026);
   [tmp4, tmp5] = callback(React.useState(canEveryoneRoleResult), 2);
-  const dependencyMap = tmp5;
+  dependencyMap = tmp5;
   if (canEveryoneRoleResult !== tmp4) {
     tmp5(canEveryoneRoleResult);
   }
@@ -28,7 +26,7 @@ export const useRequestToSpeakPermission = function useRequestToSpeakPermission(
     (arg0) => {
       if (null != stateFromStores) {
         tmp5(arg0);
-        const result = id(id[6]).setEveryoneRolePermissionAllowed(tmp, outer1_6.REQUEST_TO_SPEAK, arg0);
+        const result = id(id[6]).setEveryoneRolePermissionAllowed(tmp, closure_1_6.REQUEST_TO_SPEAK, arg0);
         const obj = id(id[6]);
       }
     }

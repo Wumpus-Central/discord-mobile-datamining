@@ -1,5 +1,7 @@
 // discord_app/utils/CrossPlatformNativeUtils.native.tsx
-const result = require("set").fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/CrossPlatformNativeUtils.native.tsx");
 
 export default {
   clearNavigationHistory() {

@@ -1,8 +1,10 @@
 // discord_app/modules/messages/setupLoadFromMessageManagerHandlers.tsx
-const result = require("set").fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
+import set2 from "set" /* 2 */;
+
+const result = set2.fileFinishedImporting("modules/messages/setupLoadFromMessageManagerHandlers.tsx");
 
 export default function setupLoadFromMessageManagerHandlers(actions) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};

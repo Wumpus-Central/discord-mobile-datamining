@@ -1,22 +1,15 @@
 // discord_app/components_native/common/SortableChannels.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { createElement } from "noop";
-import importDefaultResult from "apply";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import { createElement } from "noop" /* 19 */;
+import importDefaultResult from "apply" /* 12 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 let require = arg1;
 ({ View: c3, Animated: c4, PanResponder: c5, SectionList: closure_6, StyleSheet } = get_ActivityIndicator);
-({ jsxs: error, jsx: metroImportAll } = jsxProd);
+({ jsxs: error, jsx: closure_8 } = jsxProd);
 let closure_10 = 24 + StyleSheet.hairlineWidth;
-let closure_11 = require("apply").memoize((arr) => {
+let closure_11 = importDefaultResult.memoize((arr) => {
   const mapped = arr.map((category) => {
     const items = [{ type: "section", data: category.category }, ...data.map((data) => ({ type: "row", data }))];
     data = category.data;
@@ -33,8 +26,6 @@ class Row extends Component {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleLongPress = function handleLongPress(arg0) {
-      let closure_1;
-      let closure_2;
       ({ onRowActive: closure_1, rowData: closure_2 } = arg0.props);
       const _view = applyArgumentsResult._view;
       if (_view != null) {
@@ -65,14 +56,6 @@ class Row extends Component {
   }
 }
 Row.prototype["render"] = function render() {
-  let active;
-  let activeDivider;
-  let isAfter;
-  let list;
-  let renderItem;
-  let rowData;
-  let sortingEnabled;
-  let style;
   const self = this;
   const props = this.props;
   ({ rowData, list, activeDivider, isAfter } = props);
@@ -98,7 +81,7 @@ Row.prototype["render"] = function render() {
   if (active) {
     obj = { opacity: 0.2 };
   }
-  const obj1 = { style: items, ref: self.setViewRef, collapsable: false, children: null };
+  obj1 = { style: items, ref: self.setViewRef, collapsable: false, children: null };
   items = [obj, style];
   let tmp8 = null;
   if (!isAfter) {
@@ -157,8 +140,6 @@ class SortRow extends Component2 {
   }
 }
 SortRow.prototype["render"] = function render() {
-  let renderItem;
-  let rowData;
   const props = this.props;
   const obj = { style: null, children: null };
   const items = [this.state.style, props.sortRowStyle, ];
@@ -172,10 +153,10 @@ SortRow.prototype["render"] = function render() {
 const Component3 = importAllResult.Component;
 class SortableChannels extends Component3 {
   constructor(arg0) {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = new SortableChannels(global, tmp3, tmp2, global, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
-    c0 = obj;
+    closure_0 = obj;
     obj.cancel = function cancel() {
       if (!obj.moved) {
         const onMoveCancel = obj.props.onMoveCancel;
@@ -330,16 +311,12 @@ class SortableChannels extends Component3 {
           obj = { height: null };
           obj[0] = frameHeight;
           obj[0] = obj;
-          renderActiveDividerResult = outer1_8(outer1_3, obj);
+          renderActiveDividerResult = closure_1_8(closure_1_3, obj);
         }
         return renderActiveDividerResult;
       }
     };
     obj.renderSectionHeader = function renderSectionHeader(data) {
-      let active;
-      let activeIndex;
-      let hoveringIndex;
-      let panResponder;
       let tmp = arg1;
       const state = obj.state;
       ({ active, hoveringIndex } = state);
@@ -384,13 +361,9 @@ class SortableChannels extends Component3 {
       obj.rowData = obj;
       obj.onRowActive = obj.handleRowActive;
       obj.isAfter = hoveringIndex > activeIndex;
-      return outer1_9(arg1 ? outer1_13 : outer1_12, obj);
+      return closure_1_9(arg1 ? closure_1_13 : closure_1_12, obj);
     };
     obj.renderItem = function renderItem(data) {
-      let active;
-      let activeIndex;
-      let hoveringIndex;
-      let panResponder;
       let tmp = arg1;
       const state = obj.state;
       ({ active, hoveringIndex } = state);
@@ -431,7 +404,7 @@ class SortableChannels extends Component3 {
       obj.rowData = obj;
       obj.onRowActive = obj.handleRowActive;
       obj.isAfter = hoveringIndex > activeIndex;
-      return outer1_9(arg1 ? outer1_13 : outer1_12, obj);
+      return closure_1_9(arg1 ? closure_1_13 : closure_1_12, obj);
     };
     obj.getItemLayout = function getItemLayout(arg0, index) {
       return obj.getItemLayoutProps(index);
@@ -449,13 +422,12 @@ class SortableChannels extends Component3 {
       return bound;
     };
     obj.getRowHeight = function getRowHeight() {
-      return Math.max(outer1_10 + 20 * obj.props.fontScale, 48);
+      return Math.max(closure_1_10 + 20 * obj.props.fontScale, 48);
     };
     obj.getItemLayoutProps = function getItemLayoutProps(index) {
-      let obj;
       let num = 0;
       let num2 = 0;
-      const iter = outer1_11(obj.props.sections)[Symbol.iterator]();
+      const iter = closure_1_11(obj.props.sections)[Symbol.iterator]();
       const nextResult = iter.next();
       while (iter !== undefined) {
         let tmp2 = nextResult;
@@ -565,11 +537,11 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
 };
 prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueXY) {
   const self = this;
-  let closure_1 = arg0;
-  let closure_2 = arg1;
+  closure_1 = arg0;
+  closure_2 = arg1;
   let obj = { dx: valueXY.x, dy: valueXY.y };
   const items = [null, obj];
-  let closure_0 = RN.event(items, { useNativeDriver: false });
+  closure_0 = RN.event(items, { useNativeDriver: false });
   obj = {
     onStartShouldSetPanResponder() {
       return true;
@@ -620,8 +592,6 @@ prototype["createPanResponder"] = function createPanResponder(arg0, arg1, valueX
       self.setState({ active: null, hoveringIndex: -1, activeIndex: -1 });
     },
     onPanResponderRelease() {
-      let active;
-      let hoveringIndex;
       let obj = self;
       ({ active, hoveringIndex } = self.state);
       const onRowMoved = self.props.onRowMoved;
@@ -683,8 +653,6 @@ prototype["renderActive"] = function renderActive() {
   }
 };
 prototype["render"] = function render() {
-  let active;
-  let panResponder;
   const self = this;
   let obj = { style: { flex: 1 }, onLayout: this.handleWrapperLayout, ref: this.setWrapperRef, children: null };
   obj = { enableEmptySections: true };
@@ -708,6 +676,6 @@ prototype["render"] = function render() {
   obj[3] = items;
   return closure_7(closure_3, obj);
 };
-const result = require("jsxProd").fileFinishedImporting("components_native/common/SortableChannels.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/SortableChannels.tsx");
 
 export default SortableChannels;

@@ -1,4 +1,6 @@
 // discord_app/modules/gateway/ActionBatcher.tsx
+import set from "set" /* 2 */;
+
 let ActionBatcher;
 class ActionBatcher {
   constructor(arg0, arg1, arg2) {
@@ -51,6 +53,6 @@ ActionBatcher.prototype["flush"] = function flush() {
   }
 };
 ActionBatcher.batchers = [];
-const result = require("set").fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
+const result = set.fileFinishedImporting("modules/gateway/ActionBatcher.tsx");
 
 export default ActionBatcher;

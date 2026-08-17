@@ -1,6 +1,7 @@
 // discord_app/modules/generated_test_users/GeneratedTestUsersModels.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let GeneratedTestPoolRecord;
 class GeneratedTestPoolRecord extends tmp2 {
   constructor(arg0) {

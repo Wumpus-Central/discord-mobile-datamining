@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx
-const result = require("ProfileFrameLayerAnchor").fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/collectibles/profile_frames/tooling/computeProfileFrameDimensions.tsx");
 
 export const computeProfileFrameDimensions = function computeProfileFrameDimensions(closure_4) {
   innerWidth = innerWidth(8955).DefaultProfileFrameDimensions.INNER_WIDTH;

@@ -1,28 +1,31 @@
 // discord_app/modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../NotificationSettings.messages.js";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2629 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import frozen from "frozen" /* 15058 */;
+import createToggle from "createToggle" /* 10669 */;
 
 let obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.Iy9grw);
+    return intl.string(messagesProxyDefault.Iy9grw);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   usePredicate() {
     return false;
   },
   screen: null
 };
 obj = {
-  route: require("frozen").MobileNotifSettingsSections.VOICE_ACTIVITY,
+  route: frozen.MobileNotifSettingsSections.VOICE_ACTIVITY,
   getComponent() {
-    const error = new Error("Not yet supported");
+    error = new Error("Not yet supported");
     throw error;
   }
 };
 obj[3] = obj;
 const route = createToggle.createRoute(obj);
-const result = require("getSystemLocale").fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx");
+const result = set.fileFinishedImporting("modules/notifications/settings/native/MobileNotifSettingsRoutes.tsx");
 
 export const VoiceActivityTitleSetting = route;

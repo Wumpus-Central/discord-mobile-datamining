@@ -1,7 +1,8 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx
-import set from "set";
+import MessageEmbedTypes from "MessageEmbedTypes" /* 693 */;
+import set from "set" /* 2 */;
 
-const items = [require("MessageEmbedTypes").MessageEmbedTypes.IMAGE, require("MessageEmbedTypes").MessageEmbedTypes.VIDEO, require("MessageEmbedTypes").MessageEmbedTypes.GIFV];
+const items = [MessageEmbedTypes.MessageEmbedTypes.IMAGE, MessageEmbedTypes.MessageEmbedTypes.VIDEO, MessageEmbedTypes.MessageEmbedTypes.GIFV];
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaRedactionConstants.tsx");
 

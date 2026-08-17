@@ -1,17 +1,15 @@
 // discord_app/modules/favorites/FavoriteStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { createChannelRecord } from "createChannelRecord";
-import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date";
-import ME from "ME";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import apply from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import create from "create" /* 1306 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import { createChannelRecord } from "createChannelRecord" /* 1395 */;
+import { FAVORITES_UNCATEGORIZED_PARENT_ID as closure_5 } from "date" /* 1429 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function initializeFromUserSettings() {
-  let channelType;
   const favorites = settings.settings.favorites;
   let flag;
   if (favorites != null) {
@@ -85,7 +83,7 @@ function initializeFromUserSettings() {
   }
   let flag2 = flag !== flag;
   if (!flag2) {
-    flag2 = c12 !== tmp14;
+    flag2 = closure_12 !== tmp14;
   }
   if (!flag2) {
     flag2 = closure_2 !== value;
@@ -95,7 +93,7 @@ function initializeFromUserSettings() {
     const obj4 = apply;
   }
   if (flag2) {
-    c12 = tmp14;
+    closure_12 = tmp14;
     closure_2 = value;
     flag2 = true;
   }
@@ -107,13 +105,14 @@ let c9 = 0;
 let c10 = 0;
 let c11 = false;
 let c12 = false;
+const Store = initializeDefault.Store;
 class FavoriteStore extends Store {
 }
 const prototype = FavoriteStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(handleConnectionClosedOrResumed);
+  this.waitFor(closure_3);
   initializeFromUserSettings();
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_3];
   this.syncWith(items, initializeFromUserSettings);
 };
 prototype["getFavoriteChannels"] = function getFavoriteChannels() {
@@ -159,7 +158,6 @@ prototype["getFavorite"] = function getFavorite(categoryId) {
   }
 };
 prototype["getCategoryRecord"] = function getCategoryRecord(categoryId) {
-  let nickname;
   let tmp = null;
   if (categoryId in dependencyMap) {
     tmp = null;
@@ -197,7 +195,7 @@ prototype["hasStoredFavorites"] = function hasStoredFavorites() {
   return !apply.isEmpty(this.getFavoriteChannels());
 };
 FavoriteStore.displayName = "FavoriteStore";
-const favoriteStore = new FavoriteStore(require("dispatcher"), {});
-const result = require("date").fileFinishedImporting("modules/favorites/FavoriteStore.tsx");
+const favoriteStore = new FavoriteStore(dispatcherDefault, {});
+const result = require("set").fileFinishedImporting("modules/favorites/FavoriteStore.tsx");
 
 export default favoriteStore;

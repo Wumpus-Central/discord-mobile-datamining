@@ -1,58 +1,52 @@
 // discord_app/modules/message_request/hooks/useMessageRequestTimestampText.tsx
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { t } from "../../../../_runtime/03975_t.js";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import tDefault from "t" /* 3975 */;
+import closure_3 from "generateOldThreadCutoff" /* 4772 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
 import { getAccessibilityLabelFormatter } from "../../threads/ThreadUtils.tsx";
 import { loadMessageRequestData } from "useMessageRequestPreview.tsx";
 
 const require = arg1;
-const result = require("loadMessageRequestData").fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useMessageRequestTimestampText.tsx");
 
 export const useMessageRequestTimestampText = function useMessageRequestTimestampText(channel) {
-  let lastMessageId;
-  let message;
   const _require = channel;
   let obj = _loadMessageRequestData;
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = { lastMessageId: null };
-  const items = [generateOldThreadCutoff];
-  obj[0] = _initialize.useStateFromStores(items, () => outer1_3.lastMessageId(id.id));
+  obj = { lastMessageId: _initialize.useStateFromStores(items, () => closure_1_3.lastMessageId(id.id)) };
+  items = [closure_3];
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
   if (obj.loaded) {
     if (null != message) {
-      let extractTimestampResult = DISCORD_EPOCH.extractTimestamp(message.id);
-      const obj5 = DISCORD_EPOCH;
+      let extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
+      const obj5 = DISCORD_EPOCHDefault;
     }
     let str = "";
     if (null != extractTimestampResult) {
-      str = t(extractTimestampResult).calendar();
-      const obj6 = t(extractTimestampResult);
+      str = tDefault(extractTimestampResult).calendar();
+      const obj6 = tDefault(extractTimestampResult);
     }
     return str;
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
-    extractTimestampResult = DISCORD_EPOCH.extractTimestamp(lastMessageId);
-    const obj4 = DISCORD_EPOCH;
+    extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(lastMessageId);
+    const obj4 = DISCORD_EPOCHDefault;
   }
 };
 export const useMessageRequestRelativeTimestampText = function useMessageRequestRelativeTimestampText(channel) {
-  let lastMessageId;
-  let message;
   const _require = channel;
   let obj = _loadMessageRequestData;
   const messageRequestPreview = obj.useMessageRequestPreview(channel);
-  obj = { lastMessageId: null };
-  const items = [generateOldThreadCutoff];
-  obj[0] = _initialize.useStateFromStores(items, () => outer1_3.lastMessageId(id.id));
+  obj = { lastMessageId: _initialize.useStateFromStores(items, () => closure_1_3.lastMessageId(id.id)) };
+  items = [closure_3];
   const merged = Object.assign(messageRequestPreview);
   ({ lastMessageId, message } = obj);
   if (obj.loaded) {
     if (null != message) {
-      let extractTimestampResult = DISCORD_EPOCH.extractTimestamp(message.id);
-      const obj5 = DISCORD_EPOCH;
+      let extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(message.id);
+      const obj5 = DISCORD_EPOCHDefault;
     }
     let str = "";
     if (null != extractTimestampResult) {
@@ -63,7 +57,7 @@ export const useMessageRequestRelativeTimestampText = function useMessageRequest
   }
   extractTimestampResult = null;
   if (null != lastMessageId) {
-    extractTimestampResult = DISCORD_EPOCH.extractTimestamp(lastMessageId);
-    const obj4 = DISCORD_EPOCH;
+    extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(lastMessageId);
+    const obj4 = DISCORD_EPOCHDefault;
   }
 };

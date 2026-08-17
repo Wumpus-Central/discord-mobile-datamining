@@ -1,15 +1,15 @@
 // discord_app/modules/voice_calls/CallIdleManager.tsx
-import participantFromServer from "participantFromServer";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateVoiceState from "updateVoiceState";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import "initialize";
-import { start } from "../../../discord_common/js/packages/timers/Timers.tsx";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { SelectedChannelActionCreators } from "../../actions/SelectedChannelActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import start from "start" /* 4259 */;
+import _modDef4975 from "module_4975" /* 4975 */;
+import initializeDefault from "initialize" /* 5038 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
+import closure_6 from "getVoiceStatesForGuild" /* 4545 */;
 
-let require = arg1;
+require = arg1;
 function disconnect() {
   currentClientVoiceChannelId = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
   let flag = false;
@@ -20,7 +20,7 @@ function disconnect() {
     if (!tmp3) {
       let tmp5 = channel.recipients.length <= 1;
       if (tmp5) {
-        let tmp7 = getVoiceStatesForGuild.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
+        let tmp7 = closure_6.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
         if (tmp7) {
           tmp7 = null == selfEmbeddedActivityForChannel.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
         }
@@ -34,17 +34,18 @@ function disconnect() {
     const currentClientVoiceChannelId1 = currentClientVoiceChannelId.getCurrentClientVoiceChannelId(null);
     if (null != currentClientVoiceChannelId1) {
       const intl = getSystemLocale.intl;
-      trackInvite.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
-      const obj3 = trackInvite;
-      const voiceChannel = SelectedChannelActionCreators.selectVoiceChannel(null);
-      const obj4 = SelectedChannelActionCreators;
+      trackInviteDefault.sendBotMessage(currentClientVoiceChannelId1, intl.formatToPlainString(getSystemLocale.t.XYof5G, { number: 3 }));
+      const obj3 = trackInviteDefault;
+      const voiceChannel = _modDef4975.selectVoiceChannel(null);
+      const obj4 = _modDef4975;
     }
   }
 }
 let c7 = 180000;
+initializeDefault;
 let prototype = function CallIdleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   const timeout = new start.Timeout();
   applyArgumentsResult.idleTimeout = timeout;
   applyArgumentsResult.handleConnectionClosed = function handleConnectionClosed() {
@@ -52,18 +53,18 @@ let prototype = function CallIdleManager() {
     idleTimeout.stop();
   };
   applyArgumentsResult.handleEmbeddedActivityDisconnect = function handleEmbeddedActivityDisconnect() {
-    const currentClientVoiceChannelId = outer1_5.getCurrentClientVoiceChannelId(null);
+    const currentClientVoiceChannelId = closure_1_5.getCurrentClientVoiceChannelId(null);
     let flag = false;
     if (null != currentClientVoiceChannelId) {
-      const channel = outer1_4.getChannel(currentClientVoiceChannelId);
+      const channel = closure_1_4.getChannel(currentClientVoiceChannelId);
       const tmp3 = null == channel || !channel.isPrivate();
       let tmp4 = !tmp3;
       if (!tmp3) {
         let tmp5 = channel.recipients.length <= 1;
         if (tmp5) {
-          let tmp7 = outer1_6.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
+          let tmp7 = closure_1_6.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
           if (tmp7) {
-            tmp7 = null == outer1_3.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+            tmp7 = null == closure_1_3.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
           }
           tmp5 = tmp7;
         }
@@ -73,22 +74,22 @@ let prototype = function CallIdleManager() {
     }
     if (flag) {
       const idleTimeout = applyArgumentsResult.idleTimeout;
-      idleTimeout.start(outer1_7, outer1_8, true);
+      idleTimeout.start(closure_1_7, closure_1_8, true);
     }
   };
   applyArgumentsResult.handleVoiceStateUpdates = function handleVoiceStateUpdates() {
-    const currentClientVoiceChannelId = outer1_5.getCurrentClientVoiceChannelId(null);
+    const currentClientVoiceChannelId = closure_1_5.getCurrentClientVoiceChannelId(null);
     let flag = false;
     if (null != currentClientVoiceChannelId) {
-      const channel = outer1_4.getChannel(currentClientVoiceChannelId);
+      const channel = closure_1_4.getChannel(currentClientVoiceChannelId);
       const tmp3 = null == channel || !channel.isPrivate();
       let tmp4 = !tmp3;
       if (!tmp3) {
         let tmp5 = channel.recipients.length <= 1;
         if (tmp5) {
-          let tmp7 = outer1_6.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
+          let tmp7 = closure_1_6.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
           if (tmp7) {
-            tmp7 = null == outer1_3.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+            tmp7 = null == closure_1_3.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
           }
           tmp5 = tmp7;
         }
@@ -98,7 +99,7 @@ let prototype = function CallIdleManager() {
     }
     const idleTimeout = applyArgumentsResult.idleTimeout;
     if (flag) {
-      idleTimeout.start(outer1_7, outer1_8, false);
+      idleTimeout.start(closure_1_7, closure_1_8, false);
     } else {
       idleTimeout.stop();
     }
@@ -109,6 +110,6 @@ let prototype = function CallIdleManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("updateVoiceState").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/CallIdleManager.tsx");
 
 export default prototype;

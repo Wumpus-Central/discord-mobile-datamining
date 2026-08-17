@@ -1,19 +1,19 @@
 // discord_app/modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import handleModifyingAppliedBoostStart from "handleModifyingAppliedBoostStart";
-import handleConnectionReset from "handleConnectionReset";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "handleModifyingAppliedBoostStart" /* 11731 */;
+import closure_6 from "handleConnectionReset" /* 6704 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
 
 const require = arg1;
-const result = require("handleModifyingAppliedBoostStart").fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useMaybeGetSortedBoosts.tsx");
 
 export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const items = [stateFromStoresArray1];
   const items1 = [arg0];
   stateFromStoresArray = _require(stateFromStoresArray[6]).useStateFromStoresArray(items, () => {
@@ -27,9 +27,9 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const items2 = [stateFromStoresArray, arg1, first];
   memo = memo.useMemo(() => {
     const mapped = stateFromStoresArray.map((ended) => {
-      let obj = outer1_0(outer1_2[7]);
-      const boostLifecycleInfo = obj.getBoostLifecycleInfo(ended, _slicedToArray);
-      const boostLifecycleTimestamp = outer1_0(outer1_2[7]).getBoostLifecycleTimestamp(ended, boostLifecycleInfo);
+      let obj = closure_1_0(closure_1_2[7]);
+      const boostLifecycleInfo = obj.getBoostLifecycleInfo(ended, closure_3);
+      const boostLifecycleTimestamp = closure_1_0(closure_1_2[7]).getBoostLifecycleTimestamp(ended, boostLifecycleInfo);
       if ("expiring" === boostLifecycleInfo.phase) {
         obj = { boost: null, phase: "expiring", sortKey: null, endsAt: null };
         obj[0] = ended;
@@ -62,7 +62,7 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
   const items5 = [arg0, stateFromStoresArray1];
   const effect = memo.useEffect(() => {
     if (stateFromStoresArray1.length > 0) {
-      const item = stateFromStoresArray1.forEach((id) => outer1_6.requestMember(closure_0, id));
+      const item = stateFromStoresArray1.forEach((id) => closure_1_6.requestMember(closure_0, id));
     }
   }, items5);
   const obj2 = _require(stateFromStoresArray[6]);
@@ -92,13 +92,13 @@ export default function useMaybeGetSortedBoosts(arg0, arg1) {
 };
 export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
   const _require = boost;
-  let obj = DISCORD_EPOCH;
+  let obj = DISCORD_EPOCHDefault;
   const date = new Date(obj.extractTimestamp(boost.id));
-  const items = [trackCommunicationDisabled];
+  const items = [closure_7];
   const items1 = [boost];
   const stateFromStoresObject = _initialize.useStateFromStoresObject(items, () => {
-    const member = outer1_7.getMember(boost.guildId, boost.userId);
-    let nick = outer1_7.getNick(boost.guildId, boost.userId);
+    const member = closure_1_7.getMember(boost.guildId, boost.userId);
+    let nick = closure_1_7.getNick(boost.guildId, boost.userId);
     if (nick == null) {
       const user = boost.user;
       let username;
@@ -108,8 +108,8 @@ export const useGetBoostUserConfig = function useGetBoostUserConfig(boost) {
       nick = username;
     }
     if (nick == null) {
-      const intl = boost(outer1_2[10]).intl;
-      nick = intl.string(boost(outer1_2[10]).t["30mdIx"]);
+      const intl = boost(closure_1_2[10]).intl;
+      nick = intl.string(boost(closure_1_2[10]).t["30mdIx"]);
     }
     const obj = { username: nick, roleColor: null, roleColorStrings: null };
     let colorString;

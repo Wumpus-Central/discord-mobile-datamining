@@ -1,19 +1,20 @@
 // discord_app/modules/guild_home/ActiveChannelsStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import { isGuildHomeChannel } from "set";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "handleConnectionOpen" /* 4197 */;
+import { isGuildHomeChannel } from "set" /* 1398 */;
 
 function truncateOldMessageData(channelId) {
   if (null != dependencyMap2[channelId]) {
     let nowResult = globalThis;
     const _Date2 = Date;
-    importDefault = DISCORD_EPOCH.fromTimestamp(Date.now() - c5);
-    const obj = DISCORD_EPOCH;
+    importDefault = DISCORD_EPOCHDefault.fromTimestamp(Date.now() - c5);
+    const obj = DISCORD_EPOCHDefault;
     const tmp6 = importDefault;
-    const findIndexResult = apply.findIndex(arr, (id) => callback(outer1_1[3]).compare(id.id, callback) > 0);
+    const findIndexResult = applyDefault.findIndex(arr, (id) => callback(closure_1_1[3]).compare(id.id, callback) > 0);
     if (-1 === findIndexResult) {
       dependencyMap2[channelId] = [];
     } else {
@@ -25,7 +26,7 @@ function truncateOldMessageData(channelId) {
     const _Date = nowResult.Date;
     nowResult = _Date.now();
     closure_8[channelId] = nowResult;
-    const obj2 = apply;
+    const obj2 = applyDefault;
   }
 }
 function handleChannelDelete(channel) {
@@ -38,11 +39,12 @@ let closure_6 = {};
 let closure_7 = {};
 let closure_8 = {};
 let closure_9 = {};
+const Store = initializeDefault.Store;
 class ActiveChannelsStore extends Store {
 }
 const prototype = ActiveChannelsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, handleConnectionOpen);
+  this.waitFor(closure_2, closure_3);
 };
 prototype["getActiveChannelsFetchStatus"] = function getActiveChannelsFetchStatus(arg0) {
   return dependencyMap3[arg0];
@@ -65,7 +67,7 @@ prototype["shouldFetch"] = function shouldFetch(arg0) {
   return tmp;
 };
 ActiveChannelsStore.displayName = "ActiveChannelsStore";
-const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
+const activeChannelsStore = new ActiveChannelsStore(dispatcherDefault, {
   CHANNEL_SELECT: function handleRefreshChannels(guildId) {
     guildId = guildId.guildId;
     if (isGuildHomeChannel(guildId.channelId)) {
@@ -84,9 +86,9 @@ const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
             }
           });
           const _Array = Array;
-          const obj = apply;
-          const found = apply.chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
-          const chainResult = apply.chain(Array.from(arr));
+          const obj = applyDefault;
+          const found = applyDefault.chain(Array.from(arr)).filter((arg0) => arg0 in closure_7);
+          const chainResult = applyDefault.chain(Array.from(arr));
           const _Set = Set;
           const set = new Set(found.sortBy((arg0) => {
             let num;
@@ -105,8 +107,6 @@ const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
     return false;
   },
   MESSAGE_CREATE: function handleMessageCreate(optimistic) {
-    let channelId;
-    let message;
     ({ channelId, message } = optimistic);
     if (!optimistic.optimistic) {
       if (!optimistic.isPushNotification) {
@@ -166,14 +166,10 @@ const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
     const obj = { loading: false, error: null, fetchedAt: Date.now() };
     closure_6[guildId] = new Set();
     let item = channels.forEach((arg0) => {
-      let guildId;
-      let messages;
       ({ channel_id: guildId, messages } = arg0);
       const item = messages.forEach((arg0) => {
-        let message_id;
-        let user_id;
         ({ message_id, user_id } = arg0);
-        outer2_6[outer1_0].add(closure_0);
+        closure_2_6[closure_1_0].add(closure_0);
         let tmp4 = null == tmp3;
         if (!tmp4) {
           const _Date = Date;
@@ -181,12 +177,12 @@ const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
           tmp4 = sum > Date.now();
         }
         if (tmp4) {
-          outer2_10(tmp);
+          closure_2_10(tmp);
         }
-        if (null == outer2_7[closure_0]) {
-          outer2_7[tmp] = [];
+        if (null == closure_2_7[closure_0]) {
+          closure_2_7[tmp] = [];
         }
-        let arr = outer2_7[tmp];
+        let arr = closure_2_7[tmp];
         arr = arr.push({ id: message_id, userId: user_id });
       });
     });
@@ -210,8 +206,8 @@ const activeChannelsStore = new ActiveChannelsStore(require("dispatcher"), {
         return arg0;
       }, {});
       dependencyMap = {};
-      let closure_7 = {};
-      let closure_8 = {};
+      closure_7 = {};
+      closure_8 = {};
       let dependencyMap3 = {};
       const _Date = Date;
       let num;

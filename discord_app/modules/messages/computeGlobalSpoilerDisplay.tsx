@@ -1,14 +1,12 @@
 // discord_app/modules/messages/computeGlobalSpoilerDisplay.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 import { defaultAreStatesEqual } from "../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
-let c3;
-let c4;
 const require = arg1;
 ({ Permissions: c3, SpoilerRenderSetting: c4 } = ME);
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/messages/computeGlobalSpoilerDisplay.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/computeGlobalSpoilerDisplay.tsx");
 
 export default function computeGlobalSpoilerDisplay(arg0, arg1) {
   if (constants.ALWAYS === arg0) {
@@ -22,8 +20,8 @@ export default function computeGlobalSpoilerDisplay(arg0, arg1) {
 };
 export const useShouldDisplaySpoilerObscurity = function useShouldDisplaySpoilerObscurity(channel) {
   const _require = channel;
-  const items = [getUncachedChannelPermissions];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_2.can(outer1_3.MANAGE_MESSAGES, closure_0));
+  const items = [closure_2];
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_2.can(closure_1_3.MANAGE_MESSAGES, closure_0));
   const RenderSpoilers = _explicitContentFromProto.RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   let flag = true;

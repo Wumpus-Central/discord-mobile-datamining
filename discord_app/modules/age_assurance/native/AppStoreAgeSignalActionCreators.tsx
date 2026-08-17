@@ -1,15 +1,15 @@
 // discord_app/modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _requestAgeSignalChallenge() {
   const self = this;
   const tmp = callback(function*() {
     let body = tmp2;
-    const HTTP = outer1_0(table[2]).HTTP;
-    const obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-    obj1[0] = outer1_3.AGE_SIGNAL_CHALLENGE;
+    const HTTP = closure_1_0(table[2]).HTTP;
+    obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+    obj1[0] = closure_1_3.AGE_SIGNAL_CHALLENGE;
     obj1[1] = {};
     body = yield HTTP.post(obj1);
     body = body.body;
@@ -23,7 +23,7 @@ function _requestAgeSignalChallenge() {
     }
     return tmp12;
   });
-  const _requestAgeSignalChallenge = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -35,19 +35,19 @@ function _requestAgeSignalChallenge() {
 function _submitAgeSignal() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1, arg2) {
-      let closure_3 = tmp4;
+      closure_3 = tmp4;
       const HTTP = lib(table[2]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-      obj1[0] = outer1_3.AGE_SIGNAL;
+      obj1 = { url: null, body: null, rejectWithError: true, failImmediatelyWhenRateLimited: true };
+      obj1[0] = closure_1_3.AGE_SIGNAL;
       const obj2 = { platform: null, age_lower: null, age_upper: null, google_user_status: null, apple_verified_method: null, is_cold_launch: null, integrity_token: null };
       ({ platform: obj7[0], ageLower: obj7[1], ageUpper: obj7[2], googleUserStatus: obj7[3], appleVerifiedMethod: obj7[4] } = lib);
-      obj2[5] = asyncGeneratorStep;
+      obj2[5] = closure_2;
       obj2[6] = table;
       obj1[1] = obj2;
       lib = yield HTTP.post(obj1);
@@ -58,7 +58,7 @@ function _submitAgeSignal() {
       return true === should_block;
     })();
   });
-  const _submitAgeSignal = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -67,7 +67,7 @@ function _submitAgeSignal() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");
 
 export const requestAgeSignalChallenge = function requestAgeSignalChallenge() {
   const self = this;

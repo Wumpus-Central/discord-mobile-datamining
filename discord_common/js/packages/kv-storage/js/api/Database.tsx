@@ -1,10 +1,10 @@
 // discord_common/js/packages/kv-storage/js/api/Database.tsx
-import set from "set";
-import { open } from "../raw/Host.tsx";
-import { logger } from "../raw/Runtime.tsx";
-import { TableId } from "../types/index.tsx";
+import TableId from "TableId" /* 1962 */;
+import open from "open" /* 1964 */;
+import logger from "logger" /* 1965 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 let Database;
 class Database {
   constructor(arg0) {
@@ -25,12 +25,12 @@ class Database {
 }
 const prototype = Database.prototype;
 Database["open"] = function open(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return callback(function*() {
-    let closure_0 = outer1_5;
-    const Host = outer1_0(table[1]).Host;
-    yield Host.open(outer1_0, c1);
+    closure_0 = closure_1_5;
+    const Host = closure_1_0(table[1]).Host;
+    yield Host.open(closure_1_0, c1);
     return new closure_0(arg1);
   })();
 };
@@ -82,13 +82,13 @@ prototype["disable"] = function disable(arg0) {
 };
 prototype["execute"] = function execute(table) {
   const self = this;
-  const importDefault = table;
+  importDefault = table;
   let type = arg1;
   const _require = arg1;
   if (null == this.raw) {
     const _Error = Error;
     const _HermesInternal2 = HermesInternal;
-    const error = new Error("database is no longer open (database: " + tmp);
+    error = new Error("database is no longer open (database: " + tmp);
     throw error;
   } else {
     if ("key" in table) {
@@ -139,11 +139,11 @@ prototype["execute"] = function execute(table) {
 };
 prototype["executeSync"] = function executeSync(table) {
   const self = this;
-  let closure_0 = table;
+  closure_0 = table;
   if (null == this.raw) {
     const _Error = Error;
     const _HermesInternal2 = HermesInternal;
-    const error = new Error("database is no longer open (database: " + tmp);
+    error = new Error("database is no longer open (database: " + tmp);
     throw error;
   } else {
     if ("key" in table) {
@@ -212,14 +212,14 @@ prototype["instantaneousStateAsync"] = function instantaneousStateAsync() {
             obj[0] = arg1;
             return obj;
           } else {
-            const obj5 = outer1_0;
-            if (null == outer1_0.raw) {
-              const Closed = outer1_0(table[2]).DatabaseState.Closed;
+            const obj5 = closure_1_0;
+            if (null == closure_1_0.raw) {
+              const Closed = closure_1_0(table[2]).DatabaseState.Closed;
               table = 3;
             } else {
               c1 = 1;
               table = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj5.execute({ type: "db.state" });
               return obj1;
             }
@@ -246,7 +246,7 @@ prototype["state"] = function state() {
 };
 prototype["transaction"] = function transaction(arg0, arg1) {
   const self = this;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   if (typeof DatabaseTransaction !== "function") {
     HermesBuiltin.throwTypeError();
   }
@@ -289,7 +289,7 @@ prototype2["complete"] = function complete() {
 prototype2["toString"] = function toString() {
   return "[DatabaseTransaction " + this.database.handle + ": " + this.operations.length + " ops]";
 };
-let result = require("TableId").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Database.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Database.tsx");
 
 export { Database };
 export { DatabaseTransaction };

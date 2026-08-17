@@ -1,16 +1,15 @@
 // discord_app/modules/stage_channels/useGuildEligibleForStageChannels.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/useGuildEligibleForStageChannels.tsx");
 
 export const isGuildEligibleForStageChannels = function isGuildEligibleForStageChannels(id) {
-  let obj;
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [createGuildRecordFromRust];
+    const items = [closure_2];
     tmp = items;
   }
   [obj] = tmp;
@@ -24,17 +23,16 @@ export const isGuildEligibleForStageChannels = function isGuildEligibleForStageC
 };
 export const useGuildEligibleForStageChannels = function useGuildEligibleForStageChannels(arg0) {
   const _require = arg0;
-  let items = [createGuildRecordFromRust];
+  let items = [closure_2];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
-    let obj;
-    const items = [outer1_2];
+    const items = [closure_1_2];
     [obj] = items;
     const guild = obj.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(outer1_3.COMMUNITY);
+      hasItem = features.has(closure_1_3.COMMUNITY);
     }
     return Boolean(hasItem);
   }, items1);

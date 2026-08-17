@@ -1,27 +1,23 @@
 // discord_app/modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx
-import _slicedToArray from "_slicedToArray";
-import useGetOrFetchApplications from "useGetOrFetchApplications";
-import addApplication from "addApplication";
-import addSku from "addSku";
-import { PaymentGateways } from "ME";
-import { InviteTypes } from "InviteSendStates";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getEmbedThemeColors } from "../../messages/native/renderer/row_data/embeds/getEmbedThemeColors.tsx";
-import { useSKUPrice } from "../../storefront/StorefrontUtils.tsx";
-import { getPrice } from "../SlayerStorefrontUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPrice from "getPrice" /* 7200 */;
+import useSKUPrice from "useSKUPrice" /* 7205 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "addApplication" /* 4478 */;
+import closure_6 from "addSku" /* 4521 */;
+import { PaymentGateways } from "ME" /* 676 */;
+import { InviteTypes } from "InviteSendStates" /* 4371 */;
 
-const require = arg1;
-let result = require("addApplication").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/slayer_storefront/native/createSocialLayerStorefrontProductDetailsEmbed.tsx");
 
 export const createSocialLayerStorefrontProductDetailsEmbed = function createSocialLayerStorefrontProductDetailsEmbed(theme) {
-  let baseColors;
-  let colors;
-  let guildOrApplication;
-  let skuId;
   ({ skuId, guildOrApplication } = theme);
-  ({ colors, baseColors } = getEmbedThemeColors(theme.theme));
-  let obj = addSku;
-  const value = addSku.get(skuId);
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(theme.theme));
+  let obj = closure_6;
+  const value = closure_6.get(skuId);
   let applicationId;
   if (value != null) {
     applicationId = value.applicationId;
@@ -29,7 +25,7 @@ export const createSocialLayerStorefrontProductDetailsEmbed = function createSoc
   application = application.getApplication(applicationId);
   const isFetchingResult = obj.isFetching(skuId);
   let result = null != applicationId;
-  const tmp3 = getEmbedThemeColors(theme.theme);
+  const tmp3 = getEmbedThemeColorsDefault(theme.theme);
   if (result) {
     result = obj2.isFetchingApplication(applicationId);
   }
@@ -121,10 +117,6 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
       items1[0] = items;
       items1[1] = [];
       let reduced = stateFromStores.reduce((arg0, arg1) => {
-        let arr;
-        let arr2;
-        let code;
-        let type;
         [arr, arr2] = arg0;
         const iter = arg1.codedLinks[Symbol.iterator]();
         while (iter !== undefined) {
@@ -164,17 +156,17 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
       first = tmp5[0];
       let tmp7 = first;
       let tmp8 = tmp5[1];
-      let tmp9 = outer1_6;
-      let isFetchingResult = null != outer1_6.get(first);
+      let tmp9 = closure_1_6;
+      let isFetchingResult = null != closure_1_6.get(first);
       if (!isFetchingResult) {
-        let tmp11 = outer1_6;
+        let tmp11 = closure_1_6;
         let tmp12 = first;
-        isFetchingResult = outer1_6.isFetching(tmp7);
+        isFetchingResult = closure_1_6.isFetching(tmp7);
       }
       if (!isFetchingResult) {
-        let tmp13 = outer1_6;
+        let tmp13 = closure_1_6;
         let tmp14 = first;
-        isFetchingResult = outer1_6.didFetchingSkuFail(tmp7);
+        isFetchingResult = closure_1_6.didFetchingSkuFail(tmp7);
       }
       if (!isFetchingResult) {
         let tmp15 = stateFromStores;
@@ -194,31 +186,31 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
         let obj4 = stateFromStores(country[16]);
         let APPLE;
         if (obj4.isIOS()) {
-          let tmp25 = outer1_7;
-          APPLE = outer1_7.APPLE;
+          let tmp25 = closure_1_7;
+          APPLE = closure_1_7.APPLE;
         }
         obj[2] = APPLE;
         let socialLayerStorefrontSku = obj.fetchSocialLayerStorefrontSku(tmp8, tmp7, obj);
       }
       continue;
     }
-    for (const item10057 of useGetOrFetchApplications) {
+    for (const item10057 of closure_4) {
       let tmp27 = first;
       let tmp28 = first(item10057, 2);
       let first1 = tmp28[0];
       let tmp30 = first1;
       let tmp31 = tmp28[1];
-      let tmp32 = outer1_6;
-      let isFetchingResult1 = null != outer1_6.get(first1);
+      let tmp32 = closure_1_6;
+      let isFetchingResult1 = null != closure_1_6.get(first1);
       if (!isFetchingResult1) {
-        let tmp34 = outer1_6;
+        let tmp34 = closure_1_6;
         let tmp35 = first1;
-        isFetchingResult1 = outer1_6.isFetching(tmp30);
+        isFetchingResult1 = closure_1_6.isFetching(tmp30);
       }
       if (!isFetchingResult1) {
-        let tmp36 = outer1_6;
+        let tmp36 = closure_1_6;
         let tmp37 = first1;
-        isFetchingResult1 = outer1_6.didFetchingSkuFail(tmp30);
+        isFetchingResult1 = closure_1_6.didFetchingSkuFail(tmp30);
       }
       if (!isFetchingResult1) {
         let tmp38 = stateFromStores;
@@ -238,8 +230,8 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
         let obj8 = stateFromStores(country[16]);
         let APPLE1;
         if (obj8.isIOS()) {
-          let tmp48 = outer1_7;
-          APPLE1 = outer1_7.APPLE;
+          let tmp48 = closure_1_7;
+          APPLE1 = closure_1_7.APPLE;
         }
         obj[2] = APPLE1;
         let socialLayerStorefrontSkuForApplication = obj5.fetchSocialLayerStorefrontSkuForApplication(tmp31, tmp30, obj);
@@ -248,17 +240,15 @@ export const useFetchSocialLayerStorefrontProductDetailsEmbedData = function use
     }
   }, items1);
   const obj2 = isEligibleForSocialLayerStorefrontMobilePurchasing(country[13]);
-  const items2 = [addSku];
+  const items2 = [closure_6];
   const items3 = [tmp6[1], first];
   const stateFromStoresArray = tmp(country[17]).useStateFromStoresArray(items2, () => {
     const items = [
       ...first.map((arg0) => {
-        let tmp;
         [tmp] = arg0;
         return store.get(tmp);
       }),
-      ...useGetOrFetchApplications.map((arg0) => {
-        let tmp;
+      ...closure_4.map((arg0) => {
         [tmp] = arg0;
         return store.get(tmp);
       })

@@ -1,21 +1,21 @@
 // discord_app/modules/calls/mobile/useIsCallActive.tsx
-import callConnect from "callConnect";
-import getParticipants from "getParticipants";
-import { ParticipantTypes } from "ParticipantTypes";
+import closure_2 from "callConnect" /* 4496 */;
+import closure_3 from "getParticipants" /* 4773 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("ParticipantTypes").fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/mobile/useIsCallActive.tsx");
 
 export default function useIsCallActive(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
-  const items = [callConnect, getParticipants];
+  dependencyMap = arg1;
+  const items = [closure_2, closure_3];
   const items1 = [arg0, arg1];
   return _initialize.useStateFromStores(items, () => {
-    let isCallActiveResult = outer1_2.isCallActive(closure_0, closure_1);
+    let isCallActiveResult = closure_1_2.isCallActive(closure_0, closure_1);
     if (isCallActiveResult) {
-      const participants = outer1_3.getParticipants(closure_0);
+      const participants = closure_1_3.getParticipants(closure_0);
       isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
     }
     return isCallActiveResult;
@@ -31,15 +31,15 @@ export const checkIsCallActive = function checkIsCallActive(channelId, id) {
 };
 export const useIsCallActiveNullable = function useIsCallActiveNullable(id) {
   const _require = id;
-  const dependencyMap = arg1;
-  const items = [callConnect, getParticipants];
+  dependencyMap = arg1;
+  const items = [closure_2, closure_3];
   const items1 = [id, arg1];
   return _initialize.useStateFromStores(items, () => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      let isCallActiveResult = outer1_2.isCallActive(tmp, closure_1);
+      let isCallActiveResult = closure_1_2.isCallActive(tmp, closure_1);
       if (isCallActiveResult) {
-        const participants = outer1_3.getParticipants(tmp);
+        const participants = closure_1_3.getParticipants(tmp);
         isCallActiveResult = participants.some((type) => type.type === constants.USER && !type.ringing);
       }
       tmp2 = isCallActiveResult;

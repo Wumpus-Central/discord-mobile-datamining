@@ -1,10 +1,11 @@
 // discord_app/modules/tti_analytics/TTITracker.tsx
-import set from "set";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { isTracing } from "../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import setAll from "set" /* 2 */;
+import isTracingDefault from "isTracing" /* 10 */;
+import DISCORD_EPOCH from "DISCORD_EPOCH" /* 11 */;
+import apply from "apply" /* 12 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 function serialize(arg0, arg1) {
   if (0 !== arg1) {
     if (null != arg1) {
@@ -58,12 +59,12 @@ prototype["recordStart"] = function recordStart() {
   if (0 === this.start_) {
     self.recordStart_();
   }
-  isTracing.mark(self.emoji, "Start " + self.name);
+  isTracingDefault.mark(self.emoji, "Start " + self.name);
   loggerCallback();
 };
 prototype["recordStart_"] = function recordStart_() {
   this.start_ = Date.now();
-  this.startNumImports = importAll(2).size();
+  this.startNumImports = setAll.size();
   this.startImportTime = callback2();
 };
 prototype["recordEnd"] = function recordEnd() {
@@ -72,16 +73,16 @@ prototype["recordEnd"] = function recordEnd() {
     if (0 !== self.start_) {
       self.recordEnd_();
       const _HermesInternal = HermesInternal;
-      isTracing.mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
-      const obj2 = isTracing;
+      isTracingDefault.mark(self.emoji, "Finish " + self.name, self.end_ - self.start_);
+      const obj2 = isTracingDefault;
     }
     loggerCallback();
   }
-  isTracing.mark(self.emoji, "Finish " + self.name);
+  isTracingDefault.mark(self.emoji, "Finish " + self.name);
 };
 prototype["recordEnd_"] = function recordEnd_() {
   this.end_ = Date.now();
-  this.endNumImports = importAll(2).size();
+  this.endNumImports = setAll.size();
   this.endImportTime = callback2();
 };
 prototype["set"] = function set(start_) {
@@ -89,11 +90,11 @@ prototype["set"] = function set(start_) {
   if (0 === this.start_) {
     self.start_ = start_;
     self.end_ = start_ + arg1;
-    self.endNumImports = importAll(2).size();
+    self.endNumImports = setAll.size();
     self.endImportTime = callback2();
-    const obj = importAll(2);
+    const obj = setAll;
   }
-  isTracing.mark(self.emoji, self.name, arg1);
+  isTracingDefault.mark(self.emoji, self.name, arg1);
   loggerCallback();
 };
 prototype["serializeStart"] = function serializeStart(startTime) {
@@ -137,54 +138,54 @@ prototype["serializeEnd"] = function serializeEnd(startTime) {
 prototype["measure"] = function measure(arg0) {
   const self = this;
   if (this.start_ > 0) {
-    return isTracing.time(self.emoji, self.name, arg0);
+    return isTracingDefault.time(self.emoji, self.name, arg0);
   } else {
     self.recordStart_();
-    const obj = isTracing;
+    const obj = isTracingDefault;
     self.recordEnd_();
     loggerCallback();
-    return isTracing.time(self.emoji, self.name, arg0);
+    return isTracingDefault.time(self.emoji, self.name, arg0);
   }
 };
-prototype["measureAsync"] = function measureAsync(outer1_5) {
-  let closure_0 = outer1_5;
+prototype["measureAsync"] = function measureAsync(closure_1_5) {
+  closure_0 = closure_1_5;
   const self = this;
   return callback(function*() {
-    let closure_1 = tmp5;
-    let closure_0 = tmp2;
-    if (outer1_1.start_ > 0) {
-      return v0(outer1_4[1]).timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
+    closure_1 = tmp5;
+    closure_0 = tmp2;
+    if (closure_1_1.start_ > 0) {
+      return v0(closure_1_4[1]).timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
     }
-    outer1_1.recordStart_();
-    const obj2 = v0(outer1_4[1]);
-    closure_0 = yield obj2.timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
+    closure_1_1.recordStart_();
+    const obj2 = v0(closure_1_4[1]);
+    closure_0 = yield obj2.timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
     closure_1.recordEnd_();
-    outer1_6();
+    closure_1_6();
     return closure_0;
   })();
 };
 prototype["measureAsyncWithoutNesting"] = function measureAsyncWithoutNesting(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const self = this;
   return callback(function*() {
-    let closure_1 = tmp5;
-    let closure_0 = tmp2;
-    if (outer1_1.start_ > 0) {
-      const obj3 = v0(outer1_4[1]);
-      return obj3.timeAsync(outer1_1.emoji, outer1_1.name, outer1_0);
+    closure_1 = tmp5;
+    closure_0 = tmp2;
+    if (closure_1_1.start_ > 0) {
+      const obj3 = v0(closure_1_4[1]);
+      return obj3.timeAsync(closure_1_1.emoji, closure_1_1.name, closure_1_0);
     }
-    outer1_1.recordStart_();
+    closure_1_1.recordStart_();
     const _Date2 = Date;
     closure_0 = Date.now();
     const _HermesInternal2 = HermesInternal;
-    v0(outer1_4[1]).mark(outer1_1.emoji, "Start " + outer1_1.name);
-    closure_1 = yield outer1_0();
+    v0(closure_1_4[1]).mark(closure_1_1.emoji, "Start " + closure_1_1.name);
+    closure_1 = yield closure_1_0();
     const _HermesInternal = HermesInternal;
     const _Date = Date;
     const combined = "Finish " + closure_1.name;
-    v0(outer1_4[1]).mark(closure_1.emoji, combined, Date.now() - closure_0);
+    v0(closure_1_4[1]).mark(closure_1.emoji, combined, Date.now() - closure_0);
     closure_1.recordEnd_();
-    outer1_6();
+    closure_1_6();
     return closure_1;
   })();
 };
@@ -226,18 +227,18 @@ prototype2["record"] = function record(timestamp) {
       self.recordState_(timestamp);
       loggerCallback();
     } else {
-      isTracing.mark(self.emoji, self.name);
-      const obj = isTracing;
+      isTracingDefault.mark(self.emoji, self.name);
+      const obj = isTracingDefault;
     }
   }
   loggerCallback();
 };
 prototype2["recordState_"] = function recordState_(timestamp) {
   this.time_ = timestamp;
-  this.numImports = importAll(2).size();
+  this.numImports = setAll.size();
   this.importTime = callback2();
-  const obj = importAll(2);
-  isTracing.mark(this.emoji, this.name);
+  const obj = setAll;
+  isTracingDefault.mark(this.emoji, this.name);
 };
 prototype2["hasData"] = function hasData() {
   return this.time_ > 0;
@@ -288,7 +289,7 @@ const prototype4 = function TTITrackers() {
   if (typeof tmp !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj1 = Object.create(tmp.prototype);
+  obj1 = Object.create(tmp.prototype);
   obj1.emoji = "\u{1F4BE}";
   obj1.name = "Load fast_connect native module";
   obj[1] = obj1;
@@ -624,14 +625,14 @@ class TTITracker extends prototype4 {
 }
 const prototype5 = TTITracker.prototype;
 prototype5["setTTICallback"] = function setTTICallback(arg0) {
-  let closure_0 = arg0;
-  function loggerCallback() {
+  closure_0 = arg0;
+  loggerCallback = function loggerCallback() {
     if (true === callback()) {
-      function loggerCallback() {
+      loggerCallback = function loggerCallback() {
         return false;
-      }
+      };
     }
-  }
+  };
 };
 prototype5["setInitialPage"] = function setInitialPage(page) {
   this.initialPage = page;
@@ -680,19 +681,19 @@ prototype5["appStateChanged"] = function appStateChanged(state) {
     self.didBackgroundApp = self.didBackgroundApp || "active" !== state;
   }
 };
-prototype5["recordRender"] = function recordRender(length, outer1_6) {
+prototype5["recordRender"] = function recordRender(length, closure_1_6) {
   const self = this;
   const renderMessages = this.renderMessages;
   renderMessages.record();
-  let tmp2 = outer1_6;
-  if (!outer1_6) {
+  let tmp2 = closure_1_6;
+  if (!closure_1_6) {
     tmp2 = length > 0;
   }
   if (tmp2) {
     const renderMessagesWithCache = self.renderMessagesWithCache;
     renderMessagesWithCache.record();
   }
-  if (outer1_6) {
+  if (closure_1_6) {
     const renderLatestMessages = self.renderLatestMessages;
     renderLatestMessages.record();
   }
@@ -790,7 +791,6 @@ prototype5["serializeAppStartupMetrics"] = function serializeAppStartupMetrics()
   return { ready_packing_algorithm: this.readyProperties.packing_algorithm, ready_unpack_duration_ms: this.readyProperties.unpack_duration_ms };
 };
 prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupMetrics(arg0) {
-  let firstRenderAfterReadyPayload;
   const obj = {};
   const merged = Object.assign(this.serializeAppStartupMetrics());
   ({ wasAuthenticated: obj.was_authenticated, firstRenderAfterReadyPayload } = this);
@@ -798,11 +798,10 @@ prototype5["serializeWebPerfStartupMetrics"] = function serializeWebPerfStartupM
   return obj;
 };
 prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
-  let loadIndex;
   const self = this;
   const startTime = this.getStartTime(c3);
   const tmp2 = apply;
-  const found = apply(isTracing.logGroups[0].logs).filter((log) => {
+  const found = apply(isTracingDefault.logGroups[0].logs).filter((log) => {
     log = log.log;
     return log.startsWith("Require ");
   });
@@ -813,7 +812,7 @@ prototype5["serializeTTITracker"] = function serializeTTITracker(c3) {
     }
     return num;
   });
-  const tmp2Result = apply(isTracing.logGroups[0].logs);
+  const tmp2Result = apply(isTracingDefault.logGroups[0].logs);
   const result = this.serializeAppStartupMetrics();
   const obj = {};
   const merged = Object.assign(this.extraProperties);

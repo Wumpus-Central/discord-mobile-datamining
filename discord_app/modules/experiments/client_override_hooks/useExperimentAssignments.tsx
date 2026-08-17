@@ -1,27 +1,27 @@
 // discord_app/modules/experiments/client_override_hooks/useExperimentAssignments.tsx
-import _slicedToArray from "_slicedToArray";
-import getHash from "getHash";
-import initialize from "initialize";
+import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "getHash" /* 4288 */;
+import closure_4 from "initialize" /* 1212 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { trackExposureToExperiment } from "../ExperimentManager.tsx";
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/experiments/client_override_hooks/useExperimentAssignments.tsx");
 
 export const useExperimentAssignment = function useExperimentAssignment(experiment, arg1) {
   const _require = experiment;
-  const dependencyMap = arg1;
-  const items = [getHash, initialize];
+  dependencyMap = arg1;
+  const items = [closure_3, closure_4];
   return _initialize.useStateFromStores(items, () => {
     if (experiment.system === experiment(table[4]).ExperimentSystem.LEGACY) {
-      const userExperimentDescriptor = outer1_3.getUserExperimentDescriptor(tmp.name);
+      const userExperimentDescriptor = closure_1_3.getUserExperimentDescriptor(tmp.name);
       let bucket;
       if (userExperimentDescriptor != null) {
         bucket = userExperimentDescriptor.bucket;
       }
       let variantId = bucket;
     } else {
-      const assignment = outer1_4.getAssignment(tmp.kind, table, tmp.name);
+      const assignment = closure_1_4.getAssignment(tmp.kind, table, tmp.name);
       if (assignment != null) {
         variantId = assignment.variantId;
       }
@@ -30,11 +30,9 @@ export const useExperimentAssignment = function useExperimentAssignment(experime
   });
 };
 export const getExperimentServerAssignment = function getExperimentServerAssignment(name, id) {
-  let obj;
-  let obj2;
   let tmp = arg2;
   if (arg2 === undefined) {
-    const items = [getHash, initialize];
+    const items = [closure_3, closure_4];
     tmp = items;
   }
   [obj, obj2] = callback(tmp, 2);
@@ -49,14 +47,12 @@ export const getExperimentServerAssignment = function getExperimentServerAssignm
 };
 export const useExperimentServerAssignment = function useExperimentServerAssignment(experiment, arg1) {
   const _require = experiment;
-  const dependencyMap = arg1;
-  let items = [getHash, initialize];
+  dependencyMap = arg1;
+  let items = [closure_3, closure_4];
   return _initialize.useStateFromStores(items, () => {
-    let obj;
-    let obj2;
     let name = experiment;
-    const items = [outer1_3, outer1_4];
-    [obj, obj2] = outer1_2(items, 2);
+    const items = [closure_1_3, closure_1_4];
+    [obj, obj2] = closure_1_2(items, 2);
     if (null == experiment) {
       return null;
     } else if (name.system === experiment(table[4]).ExperimentSystem.LEGACY) {

@@ -1,6 +1,6 @@
 // discord_app/modules/labs/LabFeatureActions.tsx
-import getUserAgnosticState from "getUserAgnosticState";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "getUserAgnosticState" /* 9059 */;
 
 let closure_3 = {};
 const result = require("set").fileFinishedImporting("modules/labs/LabFeatureActions.tsx");
@@ -12,9 +12,9 @@ export const toggleLabFeature = function toggleLabFeature(ICYMI_LAB_FEATURE, arg
   }
   let enabled = tmp.enabled;
   if (enabled === undefined) {
-    enabled = !getUserAgnosticState.get(ICYMI_LAB_FEATURE);
+    enabled = !closure_2.get(ICYMI_LAB_FEATURE);
   }
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "LAB_FEATURE_TOGGLE", labFeature: ICYMI_LAB_FEATURE, enabled };
   obj.dispatch(obj);
 };

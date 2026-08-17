@@ -1,31 +1,28 @@
 // discord_app/modules/forwarding/native/ForwardModal.tsx
-import filterStaffGuild from "filterStaffGuild";
-import HapticFeedbackTypes from "HapticFeedbackTypes";
-import useNavigatorBackPressHandler from "useNavigatorBackPressHandler";
-import { View } from "trackForwardStart";
-import removePendingListFetch from "removePendingListFetch";
-import closure_8 from "filterStaffGuild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import messages from "messages";
-import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT";
-import { UserRowModes } from "UserRowModes";
-import jsxProd from "dispatcher";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "removePendingListFetch" /* 5014 */;
+import closure_8 from "filterStaffGuild" /* 9044 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "reinjectEphemerals" /* 4994 */;
+import closure_11 from "messages" /* 9066 */;
+import { MAX_DESTINATION_COUNT } from "MAX_DESTINATION_COUNT" /* 9080 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_15;
 const require = arg1;
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { container: null };
-createCacheKey = { flex: 1, display: "flex", backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { flex: 1, display: "flex", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("noop").fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/forwarding/native/ForwardModal.tsx");
 
 export default function ForwardModal(message) {
-  let c7;
-  let tmp7;
   message = message.message;
   let _require = message;
   const forwardOptions = message.forwardOptions;
@@ -41,19 +38,19 @@ export default function ForwardModal(message) {
   c7 = undefined;
   let stateFromStores;
   let stateFromStores1;
-  let reinjectEphemerals;
+  closure_10 = undefined;
   let trackForwardAddRecipientOnce;
   let trackForwardEditSearchOnce;
-  let UserRowModes;
-  let closure_14;
+  UserRowModes = undefined;
+  closure_14 = undefined;
   let first;
-  let createCacheKey;
-  let closure_17;
+  let callback;
+  closure_17 = undefined;
   let first1;
-  let closure_19;
+  closure_19 = undefined;
   let callback4;
-  let closure_21;
-  let tmp = createCacheKey();
+  closure_21 = undefined;
+  let tmp = callback();
   height = forwardOptions(source[14])({ ignoreKeyboard: true }).height;
   channel_id = message.channel_id;
   id = message.id;
@@ -61,8 +58,8 @@ export default function ForwardModal(message) {
   const items = [channel_id];
   const memo = channel_id.useMemo(() => callback(source[15]).getDestinationIdFromChannelId(channel_id), items);
   [tmp7, c7] = height(channel_id.useState(false), 2);
-  let obj1 = _require(source[16]);
-  const items1 = [reinjectEphemerals, stateFromStores, trackForwardAddRecipientOnce, c7];
+  obj1 = _require(source[16]);
+  const items1 = [closure_10, stateFromStores, trackForwardAddRecipientOnce, c7];
   const items2 = [channel_id, id, source, message];
   stateFromStores = obj1.useStateFromStores(items1, () => {
     if ("checkpoint" === source) {
@@ -90,7 +87,7 @@ export default function ForwardModal(message) {
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  reinjectEphemerals = null != id;
+  closure_10 = null != id;
   let tmp8Result = tmp8(tmp3[17]);
   trackForwardAddRecipientOnce = tmp8Result.useTrackForwardAddRecipientOnce();
   tmp8Result = tmp8(tmp3[17]);
@@ -99,10 +96,10 @@ export default function ForwardModal(message) {
   closure_14 = obj.useRef(0);
   let tmp5Result = tmp5(obj.useState(""), 2);
   first = tmp5Result[0];
-  createCacheKey = tmp5Result[1];
+  callback = tmp5Result[1];
   closure_17 = obj.useRef("");
   const items5 = [channel_id, id, trackForwardEditSearchOnce];
-  let callback = obj.useCallback((current) => {
+  callback = obj.useCallback((current) => {
     callback2(current);
     if (current !== ref3.current) {
       ref2.current = ref2.current + 1;
@@ -153,9 +150,9 @@ export default function ForwardModal(message) {
     return destinationIsUnavailable;
   }, items8);
   _require = customSendHandler((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, arr) {
       if (c4 === 2) {
         c4 = 3;
@@ -186,19 +183,19 @@ export default function ForwardModal(message) {
                 obj[0] = arr;
                 return obj;
               } else {
-                let closure_2 = tmp2;
-                let length = tmp3;
-                length = undefined;
+                closure_2 = tmp2;
+                c1 = tmp3;
+                c1 = undefined;
                 closure_2 = undefined;
                 c3 = undefined;
                 openResult = null;
                 if (null == c3) {
-                  if (null != outer1_8) {
-                    outer1_7(true);
+                  if (null != closure_1_8) {
+                    closure_1_7(true);
                     c3 = 2;
                     c4 = 1;
-                    let obj1 = { value: null, done: false };
-                    obj1[0] = Promise.all(outer1_18.map(callback(source[15]).getOrResolveChannelIdFromDestinationId));
+                    obj1 = { value: null, done: false };
+                    obj1[0] = Promise.all(closure_1_18.map(callback(source[15]).getOrResolveChannelIdFromDestinationId));
                     return obj1;
                   } else {
                     openResult = forwardOptions;
@@ -219,7 +216,7 @@ export default function ForwardModal(message) {
                   c3 = 1;
                   c4 = 1;
                   let obj4 = { value: null, done: false };
-                  obj4[0] = openResult(outer1_18, obj3, outer1_7);
+                  obj4[0] = openResult(closure_1_18, obj3, closure_1_7);
                   return obj4;
                 }
               }
@@ -245,16 +242,16 @@ export default function ForwardModal(message) {
                     obj6[0] = arr;
                     return obj6;
                   } else {
-                    openResult = length;
+                    openResult = c1;
                     openResult = closure_2;
                     openResult = callback;
                     openResult = source;
-                    const outer1_1 = arr.filter(callback(source[23]).isNotNullish);
+                    closure_1 = arr.filter(callback(source[23]).isNotNullish);
                     openResult = forwardOptions;
                     openResult = source;
-                    openResult = outer1_8;
-                    openResult = outer1_1;
-                    if (forwardOptions(source[24])(outer1_8, outer1_1)) {
+                    openResult = closure_1_8;
+                    openResult = closure_1;
+                    if (forwardOptions(source[24])(closure_1_8, closure_1)) {
                       const promise = new Promise((arg0) => {
                         const callback = arg0;
                         let obj = callback(arr[25]);
@@ -286,7 +283,7 @@ export default function ForwardModal(message) {
                       obj8[0] = arr;
                       return obj8;
                     } else if (!arr) {
-                      outer1_7(false);
+                      closure_1_7(false);
                       c4 = 3;
                       const obj9 = { value: null, done: true };
                       obj9[0] = undefined;
@@ -298,12 +295,12 @@ export default function ForwardModal(message) {
                       throw arr;
                     } else if (arg0 !== 2) {
                       obj8 = callback(source[28]);
-                      obj8.transitionToChannel(length[0], { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
+                      obj8.transitionToChannel(c1[0], { navigationReplace: true, openTextInVoiceIfVoiceChannel: true });
                       let obj13 = forwardOptions(source[29]);
                       const obj10 = {};
-                      const merged = Object.assign(outer1_1);
+                      const merged = Object.assign(closure_1);
                       obj10.withMessage = callback;
-                      obj13.sendForwards(outer1_8, length, obj10);
+                      obj13.sendForwards(closure_1_8, c1, obj10);
                       c3 = 5;
                       c4 = 1;
                     }
@@ -316,33 +313,33 @@ export default function ForwardModal(message) {
                     obj11[0] = arr;
                     return obj11;
                   } else {
-                    openResult = length;
+                    openResult = c1;
                     closure_2 = arr;
                     openResult = closure_2;
-                    openResult = length;
+                    openResult = c1;
                     openResult = closure_2;
                     openResult = callback;
                     openResult = source;
                     openResult = closure_2.every((status) => "fulfilled" === status.status);
                     if (!openResult) {
                       obj = { channelId: null, messageId: null, hasError: true, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null };
-                      obj[0] = outer1_5;
-                      obj[1] = outer1_6;
+                      obj[0] = closure_1_5;
+                      obj[1] = closure_1_6;
                       let tmp11 = null != callback;
                       if (tmp11) {
                         tmp11 = "" !== callback;
                       }
                       obj[3] = tmp11;
-                      obj[4] = length.length;
-                      obj[5] = outer1_13.current;
-                      obj[6] = outer1_14.current;
+                      obj[4] = c1.length;
+                      obj[5] = closure_1_13.current;
+                      obj[6] = closure_1_14.current;
                       obj27.trackForwardSent(obj);
-                      c3 = outer1_18.filter((arg0, arg1) => "rejected" === arr[arg1].status);
+                      c3 = closure_1_18.filter((arg0, arg1) => "rejected" === arr[arg1].status);
                       obj1 = callback(source[18]);
                       let obj12 = { message: null, failedDestinations: null, forwardOptions: null };
-                      obj12[0] = outer1_8;
+                      obj12[0] = closure_1_8;
                       obj12[1] = c3;
-                      obj12[2] = outer1_1;
+                      obj12[2] = closure_1;
                       const result = obj1.showForwardFailedAlertModal(obj12);
                     }
                     obj27 = callback(source[17]);
@@ -354,7 +351,7 @@ export default function ForwardModal(message) {
                 }
                 obj12 = callback(source[18]);
                 obj12.closeForwardModal();
-                if (1 === outer1_1.length) {
+                if (1 === closure_1.length) {
                   let obj15 = forwardOptions(source[27]);
                   const obj14 = { channelId: null };
                   obj14[0] = forwardOptions[0];
@@ -366,17 +363,17 @@ export default function ForwardModal(message) {
                 }
               }
               const obj16 = { channelId: null, messageId: null, hasError: false, hasContextMessage: null, numDestinations: null, numDestinationChanges: null, numQueryChanges: null, source: null };
-              obj16[0] = outer1_5;
-              obj16[1] = outer1_6;
+              obj16[0] = closure_1_5;
+              obj16[1] = closure_1_6;
               let tmp31 = null != callback;
               if (tmp31) {
                 tmp31 = "" !== callback;
               }
               obj16[3] = tmp31;
-              obj16[4] = outer1_1.length;
-              obj16[5] = outer1_13.current;
-              obj16[6] = outer1_14.current;
-              obj16[7] = outer1_2;
+              obj16[4] = closure_1.length;
+              obj16[5] = closure_1_13.current;
+              obj16[6] = closure_1_14.current;
+              obj16[7] = closure_1_2;
               openResult(obj16);
               obj4 = forwardOptions(source[21]);
               const obj17 = { key: "FORWARD_SUCCESS", IconComponent: null, content: null };
@@ -432,7 +429,7 @@ export default function ForwardModal(message) {
   }, items11);
   const items12 = [height];
   const memo1 = obj.useMemo(() => {
-    const height = "100%";
+    height = "100%";
     return { height };
   }, items12);
   if (first1.length <= 1) {
@@ -459,7 +456,7 @@ export default function ForwardModal(message) {
   obj1[2] = formatToPlainStringResult;
   obj1[3] = function headerRight(arg0) {
     let tmp = null;
-    if (reinjectEphemerals) {
+    if (closure_10) {
       const obj = {};
       const merged = Object.assign(arg0);
       obj.onPress = closure_21;

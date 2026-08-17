@@ -1,8 +1,10 @@
 // discord_common/js/shared/utils/PlatformUtils.tsx
+import set from "set" /* 2 */;
+
 let obj = { WINDOWS: "WINDOWS", OSX: "OSX", LINUX: "LINUX", WEB: "WEB" };
 let c1 = true;
 const android = "android";
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/PlatformUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/PlatformUtils.tsx");
 
 export const PlatformTypes = obj;
 export const isPlatformEmbedded = true;
@@ -81,7 +83,7 @@ export const platformSupportsActivityJoin = function platformSupportsActivityJoi
   return tmp;
 };
 export const getPlatform = function getPlatform() {
-  const obj = /^win/;
+  obj = /^win/;
   return obj.test(android) ? obj.WINDOWS : obj.WEB;
 };
 export function getPlatformName() {

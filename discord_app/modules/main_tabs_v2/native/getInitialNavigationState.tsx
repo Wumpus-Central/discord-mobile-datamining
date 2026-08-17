@@ -1,18 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/getInitialNavigationState.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import initialize from "initialize";
-import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
-import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
-import { MobileHomeDrawerExperiment } from "../../home_drawer/native/HomeDrawerExperiment.tsx";
-import { matchPath } from "../../routing/matchPathCompat.tsx";
-import { transitionTo } from "../../routing/router_utils.tsx";
-import { RouteParam } from "../../routing/RouteUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import matchPath from "matchPath" /* 4202 */;
+import RouteParam5 from "RouteParam" /* 4215 */;
+import useChatLayout from "useChatLayout" /* 4232 */;
+import MobileHomeDrawerExperiment2 from "MobileHomeDrawerExperiment" /* 4235 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "initialize" /* 4201 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-let require = arg1;
+require = arg1;
 function getInitialGuildState(closure_6, channelId, flag, flag2) {
   flag = flag2;
   if (flag2 === undefined) {
@@ -30,7 +29,7 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
           let items = [true, ];
           obj = { index: 0, routes: null };
           obj = { name: "tabs", state: null };
-          const obj1 = { routes: null, index: 0 };
+          obj1 = { routes: null, index: 0 };
           const obj2 = { name: "guilds", params: null };
           const obj3 = { guildId: null, channelId: null };
           obj3[0] = closure_6;
@@ -67,18 +66,16 @@ function getInitialGuildState(closure_6, channelId, flag, flag2) {
   items = items4;
 }
 function computeInitialNavigationStateWithoutLogging() {
-  let channelId;
-  let guildId;
   if (null != token.getToken()) {
-    let obj1 = transitionTo;
+    obj1 = transitionTo;
     const _location = obj1.getHistory().location;
     let obj2 = matchPath;
     let obj = { path: null };
-    const RouteParam = RouteParam.RouteParam;
-    const RouteParam2 = RouteParam.RouteParam;
+    const RouteParam = RouteParam5.RouteParam;
+    const RouteParam2 = RouteParam5.RouteParam;
     obj[0] = closure_7.CHANNEL(RouteParam.guildId(), RouteParam2.channelId({ optional: true }), ":messageId?");
     const matchPathResult = obj2.matchPath(_location.pathname, obj);
-    const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment.MobileHomeDrawerExperiment;
+    const MobileHomeDrawerExperiment = MobileHomeDrawerExperiment2.MobileHomeDrawerExperiment;
     const tmp5 = MobileHomeDrawerExperiment.getConfig({ location: "app-start" }).landOnHome && null == matchPathResult;
     if (null == matchPathResult) {
       obj = { path: null };
@@ -150,16 +147,16 @@ function computeInitialNavigationStateWithoutLogging() {
   }
 }
 ({ ME: closure_6, Routes: error } = ME);
-const metroImportAll = new require("handleConnectionOpen")("getInitialNavigationState");
-const tmp3 = new require("handleConnectionOpen")("getInitialNavigationState");
-const result = require("initialize").fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");
+let closure_8 = new timestampDefault("getInitialNavigationState");
+const tmp3 = new timestampDefault("getInitialNavigationState");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/getInitialNavigationState.tsx");
 
 export default function getInitialNavigationState(arr) {
   const tmp = computeInitialNavigationStateWithoutLogging()[1];
-  const require = tmp;
+  closure_0 = tmp;
   if (null != arr) {
     const item = arr.forEach((arg0) => {
-      const routes = tmp.routes;
+      routes = routes.routes;
       return routes.push(arg0);
     });
   }
@@ -176,6 +173,6 @@ export function getInitialAuthState() {
 export { getInitialGuildState };
 export const computeInitialNavigationState = function computeInitialNavigationState() {
   const tmp = computeInitialNavigationStateWithoutLogging();
-  tmp3.log("Initial State:", tmp);
+  logger.log("Initial State:", tmp);
   return tmp;
 };

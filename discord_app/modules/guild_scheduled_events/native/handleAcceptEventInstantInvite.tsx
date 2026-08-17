@@ -1,9 +1,9 @@
 // discord_app/modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx
-import scheduledEventSort from "scheduledEventSort";
-import { generateAcceptInviteOptions } from "../../../actions/InstantInviteActionCreators.tsx";
+import generateAcceptInviteOptionsDefault from "generateAcceptInviteOptions" /* 8042 */;
+import closure_3 from "scheduledEventSort" /* 4370 */;
 
 const require = arg1;
-let result = require("InviteTypes").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/handleAcceptEventInstantInvite.tsx");
 
 export default function handleAcceptEventInstantInvite(code) {
   let obj = guildScheduledEvent(9346);
@@ -21,10 +21,10 @@ export default function handleAcceptEventInstantInvite(code) {
           obj[0] = code.code;
           obj[1] = { location: "Guild Scheduled Event Invite Button Embed" };
           obj[2] = function callback() {
-            const result = guildScheduledEvent(outer1_2[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
+            const result = guildScheduledEvent(closure_1_2[4]).transitionToEventDetailsFromInvite(guildScheduledEvent);
           };
-          generateAcceptInviteOptions.acceptInvite(obj);
-          const obj3 = generateAcceptInviteOptions;
+          generateAcceptInviteOptionsDefault.acceptInvite(obj);
+          const obj3 = generateAcceptInviteOptionsDefault;
         }
       }
     }

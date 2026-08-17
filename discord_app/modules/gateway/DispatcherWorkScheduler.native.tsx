@@ -1,20 +1,19 @@
 // discord_app/modules/gateway/DispatcherWorkScheduler.native.tsx
-import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS";
-import { AppStates } from "ME";
-import { BasicWorkScheduler } from "_trackAppBackgrounded";
-import { dispatcher } from "../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _trackAppBackgrounded from "_trackAppBackgrounded" /* 13199 */;
+import DISPATCHER_STANDARD_TIMEOUT_MS from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13197 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: obj1, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: c4, WorkIdleDeadline: c5 } = DISPATCHER_STANDARD_TIMEOUT_MS);
+const AppStates = ME.AppStates;
+const BasicWorkScheduler = _trackAppBackgrounded.BasicWorkScheduler;
 class DispatcherWorkScheduler extends BasicWorkScheduler {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     tmp3 = new DispatcherWorkScheduler(tmp2, tmp, new.target, new.target, undefined);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp3;
+    closure_0 = tmp3;
     obj = require("dispatcher");
     subscription = obj.subscribe("APP_STATE_UPDATE", (arg0) => {
       const result = obj._trackAppBackgrounded(tmp2 === tmp);
@@ -29,13 +28,11 @@ prototype["_queueIdleCallback"] = function _queueIdleCallback() {
   if (this._enableRequestIdleCallback) {
     if (!self._criticalWorkScheduled) {
       const _performance = performance;
-      let closure_0 = performance.now();
+      closure_0 = performance.now();
       const _setTimeout = setTimeout;
       self._flushIdleHandler = setTimeout(() => {
-        let _consecutiveFlushesBeforeQueueEmpty;
-        let _processWorkCallback;
         ({ _processWorkCallback, _consecutiveFlushesBeforeQueueEmpty } = self);
-        _processWorkCallback(new outer1_5(Math.max(Math.max(0, outer1_4 - (performance.now() - closure_0)) + outer1_3 * _consecutiveFlushesBeforeQueueEmpty, outer1_2), false));
+        _processWorkCallback(new closure_1_5(Math.max(Math.max(0, closure_1_4 - (performance.now() - closure_0)) + closure_1_3 * _consecutiveFlushesBeforeQueueEmpty, closure_1_2), false));
       }, 1);
     }
   }
@@ -49,17 +46,17 @@ prototype["_clearIdleCallback"] = function _clearIdleCallback() {
     self._flushIdleHandler = null;
   }
 };
-let result = require("_trackAppBackgrounded").fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
+let result = set.fileFinishedImporting("modules/gateway/DispatcherWorkScheduler.native.tsx");
 
 export const createDispatcherWorkScheduler = function createDispatcherWorkScheduler() {
   if (typeof DispatcherWorkScheduler !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  let importDefault;
+  importDefault = undefined;
   const tmp3 = new DispatcherWorkScheduler("Trying to call a non-function", tmp, DispatcherWorkScheduler, new.target, undefined);
   // ThrowIfThisInitialized (0x7c)
   importDefault = tmp3;
-  const subscription = dispatcher.subscribe("APP_STATE_UPDATE", (arg0) => {
+  const subscription = dispatcherDefault.subscribe("APP_STATE_UPDATE", (arg0) => {
     const result = obj._trackAppBackgrounded(tmp2 === tmp);
   });
   return tmp3;

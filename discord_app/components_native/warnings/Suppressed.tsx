@@ -1,13 +1,13 @@
 // discord_app/components_native/warnings/Suppressed.tsx
-import initialize from "initialize";
-import { jsx } from "jsxProd";
-import { Component } from "noop";
-import importAllResult from "noop";
-import { registerAsset } from "../../../_runtime/16135_registerAsset.js";
-import { registerAsset } from "../../../_runtime/16136_registerAsset.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import registerAssetDefault from "registerAsset" /* 16135 */;
+import registerAssetDefault2 from "registerAsset" /* 16136 */;
+import closure_3 from "initialize" /* 13300 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
+const Component = importAllResult.Component;
 class Suppressed extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -25,17 +25,17 @@ Suppressed.prototype["render"] = function render() {
     let stringResult = string(t.KuYcnU);
     const intl3 = tmp2(1236).intl;
     let stringResult1 = intl3.string(tmp2(1236).t["RaFZ3+"]);
-    let tmp7 = registerAsset;
+    let tmp7 = registerAssetDefault;
     let tmp6 = importDefault;
   } else {
     stringResult = string(t.FJSZVM);
     const intl2 = tmp2(1236).intl;
     stringResult1 = intl2.string(tmp2(1236).t.etJjgW);
     tmp6 = importDefault;
-    tmp7 = registerAsset;
+    tmp7 = registerAssetDefault2;
   }
   return jsx(tmp6(4763), { title: stringResult, body: stringResult1, iconSource: tmp7, onConfirm: this.close });
 };
-const result = require("jsxProd").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
+const result = require("set").fileFinishedImporting("components_native/warnings/Suppressed.tsx");
 
 export default Suppressed;

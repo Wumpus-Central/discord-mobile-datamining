@@ -1,34 +1,35 @@
 // discord_app/lib/spellcheck/Spellchecker.tsx
-import set from "set";
-import _slicedToArray from "_slicedToArray";
-import _getSystemLocale from "_getSystemLocale";
-import importDefaultResult from "set";
-import importDefaultResult1 from "set";
-import { set } from "../../../discord_common/js/shared/utils/DOMUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import set from "set" /* 1906 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import importDefaultResult from "set" /* 4004 */;
+import importDefaultResult1 from "apply" /* 12 */;
 
-const require = arg1;
+require = arg1;
 function _install() {
   const self = this;
   const tmp = callback(function*() {
-    let closure_2 = tmp2;
+    closure_2 = tmp2;
     let usesMultilang = tmp3;
-    let closure_0 = yield outer1_7.getAvailableDictionaries();
+    closure_0 = yield closure_1_7.getAvailableDictionaries();
     if (arg1 == null) {
       closure_0 = [];
     }
     usesMultilang = new closure_8(closure_0);
     if (!usesMultilang.usesMultilang) {
       (function attachToInput(closure_1) {
-        let closure_0 = closure_1;
+        closure_0 = closure_1;
         if (null != document.body) {
           const _document = document;
-          const listener = body.addEventListener("beforeinput", (target) => outer1_9(closure_0, target.target), true);
+          const listener = body.addEventListener("beforeinput", (target) => closure_1_9(closure_0, target.target), true);
         }
       })(usesMultilang);
     }
-    return outer1_1;
+    return closure_1_1;
   });
-  const _install = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -37,7 +38,7 @@ function _install() {
   }
   return applyArgumentsResult;
 }
-let closure_6 = new require("timestamp")("Spellchecker");
+let closure_6 = new timestampDefault("Spellchecker");
 let spellCheck;
 if (importDefaultResult != null) {
   spellCheck = importDefaultResult.spellCheck;
@@ -85,7 +86,7 @@ class Spellchecker {
           }
         }
       }
-      outer1_6.error("" + str2 + " is not a valid locale.");
+      closure_1_6.error("" + str2 + " is not a valid locale.");
     });
     obj.availableLocales = items;
     tmp2 = closure_2;
@@ -93,19 +94,19 @@ class Spellchecker {
     obj.useMultilang = obj2.isElectronMultilangSpellcheckEnabled();
     obj.availableLanguagesByLanguage = obj.buildLanguageIndex(items);
     if (obj.useMultilang) {
-      tmp13 = _install;
-      applyLanguagesResult = obj.applyLanguages(_install.locale);
+      tmp13 = closure_5;
+      applyLanguagesResult = obj.applyLanguages(closure_5.locale);
     } else {
-      tmp3 = _install;
-      str = _install.locale;
+      tmp3 = closure_5;
+      str = closure_5.locale;
       str2 = "-";
-      tmp4 = _install;
+      tmp4 = closure_4;
       num = 2;
-      tmp5 = _install(str.split("-"), 2);
+      tmp5 = closure_4(str.split("-"), 2);
       first = tmp5[0];
-      locale = first;
+      closure_1 = first;
       obj.regionPreference = tmp5[1];
-      tmp7 = locale;
+      tmp7 = closure_1;
       tmp8 = new.target;
       tmp9 = new.target;
       tmp10 = first;
@@ -132,7 +133,7 @@ class Spellchecker {
       if (arg0 == null) {
         str = "";
       }
-      let items = arg1;
+      items = arg1;
       obj.misspelledWord = str;
       if (arg1 == null) {
         items = [];
@@ -203,16 +204,16 @@ prototype["replaceMisspelling"] = function replaceMisspelling(closure_0) {
   spellCheck.replaceMisspelling(closure_0);
 };
 prototype["applyLocale"] = function applyLocale(combined) {
-  let closure_0 = combined;
+  closure_0 = combined;
   const setLocaleResult = spellCheck.setLocale(combined);
   if (setLocaleResult != null) {
     setLocaleResult.then((arg0) => {
       let str = "(unavailable)";
-      const combined = "Switching to " + closure_0;
+      combined = "Switching to " + closure_0;
       if (arg0) {
         str = "(available)";
       }
-      outer1_6.info(combined, str);
+      closure_1_6.info(combined, str);
     });
   }
 };
@@ -222,11 +223,11 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
   const items = [locale, ...navigator.languages];
   const mapped = items.map((str) => {
     str = "nb";
-    let str2 = self(outer1_2[5])[str];
+    let str2 = self(closure_1_2[5])[str];
     if (str2 == null) {
       str2 = str;
     }
-    const parsed = mapped1(outer1_2[6]).parse(str2.replace(/[_-]/g, "-"));
+    const parsed = mapped1(closure_1_2[6]).parse(str2.replace(/[_-]/g, "-"));
     if (null != parsed) {
       if (null != parsed.langtag.language) {
         if (null != parsed.langtag.region) {
@@ -243,7 +244,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
             return combined;
           }
         }
-        const str7 = outer1_4(str.replace(/_/g, "-").split("-"), 1)[0];
+        const str7 = closure_1_4(str.replace(/_/g, "-").split("-"), 1)[0];
         let tmp10 = self.availableLanguagesByLanguage[str7.toLowerCase(str7)];
         if (tmp10 == null) {
           tmp10 = null;
@@ -251,7 +252,7 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
         return tmp10;
       }
     }
-    outer1_6.error("" + str2 + " is not a valid locale.");
+    closure_1_6.error("" + str2 + " is not a valid locale.");
   });
   const arr = Array.from(new Set(mapped.filter(mapped1(1370).isNotNullish)));
   if (0 !== arr.length) {
@@ -264,13 +265,13 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     });
     if (null == spellCheck.setSpellCheckerLanguages) {
       let _HermesInternal2 = HermesInternal;
-      tmp2.info("setSpellCheckerLanguages unavailable, falling back to single-locale: " + mapped1[0]);
+      logger.info("setSpellCheckerLanguages unavailable, falling back to single-locale: " + mapped1[0]);
       self.applyLocale(mapped1[0]);
     } else {
       const result = obj.setSpellCheckerLanguages(mapped1);
       if (result != null) {
         result.then((arg0) => {
-          const info = outer1_6.info;
+          const info = closure_1_6.info;
           if (arg0) {
             const _HermesInternal2 = HermesInternal;
             info("Spellcheck languages: " + obj.join(", "), "(applied)");
@@ -285,13 +286,13 @@ prototype["applyLanguages"] = function applyLanguages(locale) {
     obj = spellCheck;
   } else {
     let _HermesInternal = HermesInternal;
-    tmp2.info("No spellcheck languages resolved from candidates: " + items.join(", "));
+    logger.info("No spellcheck languages resolved from candidates: " + items.join(", "));
   }
 };
 prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
   const obj = {};
   const item = items.forEach((arg0) => {
-    const first = outer1_4(arg0.split("-"), 1)[0];
+    const first = closure_1_4(arg0.split("-"), 1)[0];
     let tmp3 = obj[first];
     if (tmp3 == null) {
       tmp3 = arg0;
@@ -300,8 +301,8 @@ prototype["buildLanguageIndex"] = function buildLanguageIndex(items) {
   });
   return obj;
 };
-let tmp2 = new require("timestamp")("Spellchecker");
-let closure_9 = require("set").debounce((detectLanguage, hasAttribute) => {
+let tmp2 = new timestampDefault("Spellchecker");
+let closure_9 = importDefaultResult1.debounce((detectLanguage, hasAttribute) => {
   let textContent = null;
   if (null != hasAttribute) {
     if (!obj.isElement(hasAttribute, globalThis.HTMLInputElement)) {
@@ -322,7 +323,7 @@ let closure_9 = require("set").debounce((detectLanguage, hasAttribute) => {
     detectLanguage.detectLanguage(textContent);
   }
 }, 250);
-let result = require("_getSystemLocale").fileFinishedImporting("lib/spellcheck/Spellchecker.tsx");
+let result = require("set").fileFinishedImporting("lib/spellcheck/Spellchecker.tsx");
 
 export { Spellchecker };
 export const install = function install() {

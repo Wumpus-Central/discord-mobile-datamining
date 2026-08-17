@@ -1,17 +1,17 @@
 // discord_app/modules/connections/ConnectionsRoleActionCreators.tsx
-import set from "set";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 
 const require = arg1;
 function _putRoleConnectionsConfigurations() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -39,14 +39,14 @@ function _putRoleConnectionsConfigurations() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp3;
-              let set = tmp2;
-              let closure_2;
-              set = undefined;
+              closure_4 = tmp3;
+              closure_3 = tmp2;
+              closure_2 = undefined;
+              closure_3 = undefined;
               let mapped = closure_2.map((arr) => arr.map((connectionType) => ({ connection_type: connectionType.connectionType, connection_metadata_field: connectionType.connectionMetadataField, application_id: connectionType.applicationId, operator: connectionType.operator, value: connectionType.value })));
               const HTTP = callback(closure_2[2]).HTTP;
-              const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
-              obj1[0] = outer1_4.GUILD_ROLE_CONNECTIONS_CONFIGURATION(callback, callback2);
+              obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: false };
+              obj1[0] = closure_1_4.GUILD_ROLE_CONNECTIONS_CONFIGURATION(callback, callback2);
               if (0 === mapped.length) {
                 mapped = [];
               }
@@ -90,13 +90,13 @@ function _putRoleConnectionsConfigurations() {
             obj5[0] = arg1;
             return obj5;
           } else {
-            set = arg1;
-            if (null != set) {
+            closure_3 = arg1;
+            if (null != closure_3) {
               obj = callback2(closure_2[3]);
               const obj6 = { type: "GUILD_ROLE_MEMBER_COUNT_UPDATE", guildId: null, roleId: null, count: null };
               obj6[1] = callback;
               obj6[2] = callback2;
-              obj6[3] = set;
+              obj6[3] = closure_3;
               obj.dispatch(obj6);
             }
             obj2 = callback2(closure_2[3]);
@@ -114,7 +114,7 @@ function _putRoleConnectionsConfigurations() {
       }
     })();
   });
-  const _putRoleConnectionsConfigurations = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -126,13 +126,13 @@ function _putRoleConnectionsConfigurations() {
 function _fetchUserApplicationRoleConnections() {
   const self = this;
   const tmp = callback(function*() {
-    const HTTP = v0(outer1_2[2]).HTTP;
-    const obj1 = { url: null, rejectWithError: false };
-    obj1[0] = outer1_4.APPLICATION_USER_ROLE_CONNECTIONS;
+    const HTTP = v0(closure_1_2[2]).HTTP;
+    obj1 = { url: null, rejectWithError: false };
+    obj1[0] = closure_1_4.APPLICATION_USER_ROLE_CONNECTIONS;
     yield HTTP.get(obj1);
     return arg1.body;
   });
-  const _fetchUserApplicationRoleConnections = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -141,7 +141,7 @@ function _fetchUserApplicationRoleConnections() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/connections/ConnectionsRoleActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/connections/ConnectionsRoleActionCreators.tsx");
 
 export const fetchRoleConnectionsConfiguration = function fetchRoleConnectionsConfiguration(guildId, id) {
   const _require = id;
@@ -153,14 +153,14 @@ export const fetchRoleConnectionsConfiguration = function fetchRoleConnectionsCo
       body = body.body;
       const mapped = body.map((arr) => arr.map((connectionType) => ({ connectionType: connectionType.connection_type, connectionMetadataField: connectionType.connection_metadata_field, applicationId: connectionType.application_id, operator: connectionType.operator, value: connectionType.value })));
     }
-    let obj = outer1_1(outer1_2[3]);
+    let obj = closure_1_1(closure_1_2[3]);
     obj = { type: "GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS", roleId: closure_0, roleConnectionConfigurations: [] };
     obj.dispatch(obj);
   }).catch(() => {
 
   });
 };
-export const putRoleConnectionsConfigurations = function putRoleConnectionsConfigurations(closure_4, id, arg2) {
+export const putRoleConnectionsConfigurations = function putRoleConnectionsConfigurations(closure_1_4, id, arg2) {
   const self = this;
   const apply = _putRoleConnectionsConfigurations.apply;
   if (typeof apply === "unknown") {

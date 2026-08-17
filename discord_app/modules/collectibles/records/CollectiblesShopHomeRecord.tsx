@@ -1,15 +1,6 @@
 // discord_app/modules/collectibles/records/CollectiblesShopHomeRecord.tsx
-import fromServer from "fromServer";
-import { CountdownTimerBlockRecord } from "fromServer";
-import { FeaturedBlockRecord } from "fromServer";
-import { FeedBlockRecord } from "fromServer";
-import { GameServerHostingBannerBlockRecord as closure_6 } from "fromServer";
-import { HeroBlockRecord } from "fromServer";
-import { ImmersiveBannerBlockRecord as closure_8 } from "fromServer";
-import { RewardHeroBlockRecord } from "fromServer";
-import { ShelfBlockRecord } from "fromServer";
-import { SocialLayerStorefrontPromotionalBannerBlockRecord as closure_11 } from "fromServer";
-import { WideBannerBlockRecord } from "fromServer";
+import closure_2 from "fromServer" /* 5302 */;
+import { CountdownTimerBlockRecord, FeaturedBlockRecord, FeedBlockRecord, GameServerHostingBannerBlockRecord as closure_6, HeroBlockRecord, ImmersiveBannerBlockRecord as closure_8, RewardHeroBlockRecord, ShelfBlockRecord, SocialLayerStorefrontPromotionalBannerBlockRecord as closure_11, WideBannerBlockRecord } from "fromServer" /* 5338 */;
 
 const require = arg1;
 let prototype;
@@ -42,7 +33,7 @@ prototype = function CollectiblesShopHomeRecord(shop_blocks) {
   });
   obj.shopBlocks = mapped.filter((arg0) => undefined !== arg0);
   const categories = shop_blocks.categories;
-  obj.categories = categories.map((arg0) => fromServer.fromServer(arg0));
+  obj.categories = categories.map((arg0) => closure_2.fromServer(arg0));
   return obj;
 }.prototype;
 prototype["fromServer"] = function fromServer(shop_blocks) {
@@ -77,9 +68,9 @@ prototype["fromServer"] = function fromServer(shop_blocks) {
   });
   obj.shopBlocks = mapped.filter((arg0) => undefined !== arg0);
   const categories = shop_blocks.categories;
-  obj.categories = categories.map((arg0) => fromServer.fromServer(arg0));
+  obj.categories = categories.map((arg0) => closure_2.fromServer(arg0));
   return obj;
 };
-const result = require("fromServer").fileFinishedImporting("modules/collectibles/records/CollectiblesShopHomeRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesShopHomeRecord.tsx");
 
 export const CollectiblesShopHomeRecord = prototype;

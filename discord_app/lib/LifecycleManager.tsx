@@ -1,5 +1,7 @@
 // discord_app/lib/LifecycleManager.tsx
-const result = require("set").fileFinishedImporting("lib/LifecycleManager.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("lib/LifecycleManager.tsx");
 class LifecycleManager {
 }
 const prototype = LifecycleManager.prototype;

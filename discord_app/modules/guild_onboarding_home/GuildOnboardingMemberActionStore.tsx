@@ -1,10 +1,12 @@
 // discord_app/modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx
-import { Store } from "initialize";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 let obj = {};
 let closure_1 = {};
 let set = new Set();
+const Store = initializeDefault.Store;
 class GuildOnboardingMemberActionStore extends Store {
 }
 const prototype = GuildOnboardingMemberActionStore.prototype;
@@ -25,7 +27,7 @@ prototype["hasCompletedActionForChannel"] = function hasCompletedActionForChanne
 };
 prototype["getState"] = function getState(arg0) {
   if (null == arg0) {
-    let obj = {};
+    obj = {};
   } else {
     obj = { completedActions: null, loading: null };
     obj[0] = dependencyMap[arg0];
@@ -39,8 +41,6 @@ obj = {
     set.add(guildId.guildId);
   },
   GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: function handleMemberActionsFetchSuccess(arg0) {
-    let guildId;
-    let memberActions;
     ({ memberActions, guildId } = arg0);
     if (null != memberActions) {
       closure_1[guildId] = memberActions;
@@ -61,7 +61,7 @@ obj = {
   },
   COMPLETE_NEW_MEMBER_ACTION: function handleCompleteNewMemberAction(guildId) {
     guildId = guildId.guildId;
-    let obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj = {};
     const merged1 = Object.assign(obj[guildId]);
@@ -78,7 +78,7 @@ obj = {
     }
   }
 };
-const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(require("dispatcher"), obj);
+const guildOnboardingMemberActionStore = new GuildOnboardingMemberActionStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/guild_onboarding_home/GuildOnboardingMemberActionStore.tsx");
 
 export default guildOnboardingMemberActionStore;

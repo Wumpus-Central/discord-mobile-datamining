@@ -1,11 +1,11 @@
 // discord_app/components_native/warnings/VADPermission.tsx
-import { jsx } from "jsxProd";
-import { Component } from "noop";
-import importAllResult from "noop";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { componentDidMount } from "../common/Alert.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
+const Component = importAllResult.Component;
 class VADPermission extends Component {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -22,8 +22,8 @@ VADPermission.prototype["render"] = function render() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.EJ26Oh);
   obj[2] = this.close;
-  return jsx(componentDidMount, { title: null, body: null, onConfirm: null });
+  return jsx(componentDidMountDefault, { title: null, body: null, onConfirm: null });
 };
-const result = require("dispatcher").fileFinishedImporting("components_native/warnings/VADPermission.tsx");
+const result = require("set").fileFinishedImporting("components_native/warnings/VADPermission.tsx");
 
 export default VADPermission;

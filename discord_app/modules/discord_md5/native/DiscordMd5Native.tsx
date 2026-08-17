@@ -1,8 +1,11 @@
 // discord_app/modules/discord_md5/native/DiscordMd5Native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import "fromBlob";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeFileModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 1271 */;
+import fromBlobDefault from "fromBlob" /* 4858 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
+fromBlobDefault;
 const prototype = function DiscordMd5Native() {
   return HermesBuiltin.applyArguments(new.target, new.target);
 }.prototype;
@@ -14,9 +17,9 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
     num = 4096;
   }
   if (obj.isAndroid()) {
-    if (null == enforcing) {
+    if (null == enforcingDefault) {
       const _Error = Error;
-      const error = new Error("RTNFileManager doesn't exist?");
+      error = new Error("RTNFileManager doesn't exist?");
       let rejectResult = Promise.reject(error);
     } else {
       rejectResult = tmp3(1271).getFileHash(uri, "md5", num);
@@ -28,6 +31,6 @@ prototype["fromFileUri"] = function fromFileUri(uri) {
     return DCDFileManager.getFileHash(uri, "md5", num);
   }
 };
-const result = require("set").fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
+const result = set.fileFinishedImporting("modules/discord_md5/native/DiscordMd5Native.tsx");
 
 export default prototype;

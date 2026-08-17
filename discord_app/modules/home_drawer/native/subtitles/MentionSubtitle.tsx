@@ -1,21 +1,17 @@
 // discord_app/modules/home_drawer/native/subtitles/MentionSubtitle.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { styles } from "useSubtitleStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import styles from "styles" /* 15589 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/home_drawer/native/subtitles/MentionSubtitle.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/MentionSubtitle.tsx");
 
 export default function MentionSubtitle(channel) {
-  let channelName;
-  let count;
-  let guild;
   channel = channel.channel;
   ({ guild, channelName, count } = channel);
   let obj = styles;
@@ -31,7 +27,7 @@ export default function MentionSubtitle(channel) {
   obj = { style: subtitleStyles.subtitleRow, children: null };
   obj = { size: "xxs", color: "icon-muted", style: subtitleStyles.channelIcon };
   const items = [callback(channelIconComponentWithGuild, obj), ];
-  const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   const intl = tmp(1236).intl;
   obj1[4] = intl.format(getSystemLocale.t.L9YdGH, {
     channelName,

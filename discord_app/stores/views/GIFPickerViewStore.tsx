@@ -1,8 +1,10 @@
 // discord_app/stores/views/GIFPickerViewStore.tsx
-import { GIFType } from "create";
-import { Store } from "initialize";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1341 */;
 
 function getFormatFromUrl(src) {
   try {
@@ -18,8 +20,9 @@ function getFormatFromUrl(src) {
   } catch (err) {
   }
 }
-require("ME").GIFPickerResultTypes;
+ME.GIFPickerResultTypes;
 const tinywebp = "tinywebp";
+const GIFType = create.GIFType;
 const IMAGE = GIFType.IMAGE;
 let c5 = null;
 let c6 = "";
@@ -28,6 +31,7 @@ let closure_8 = [];
 let closure_9 = [];
 let closure_10 = [];
 let closure_11 = [];
+const Store = initializeDefault.Store;
 class GIFPickerViewStore extends Store {
 }
 const prototype = GIFPickerViewStore.prototype;
@@ -56,16 +60,16 @@ prototype["getTrendingSearchTerms"] = function getTrendingSearchTerms() {
   return closure_11;
 };
 GIFPickerViewStore.displayName = "GIFPickerViewStore";
-const gIFPickerViewStore = new GIFPickerViewStore(require("dispatcher"), {
+const gIFPickerViewStore = new GIFPickerViewStore(dispatcherDefault, {
   GIF_PICKER_INITIALIZE: function handleInitialize(analyticsID) {
     analyticsID = analyticsID.analyticsID;
   },
   GIF_PICKER_QUERY: function handleQuery(query) {
     query = query.query;
     if ("" === query) {
-      let c7 = "";
-      let closure_8 = [];
-      let closure_10 = [];
+      c7 = "";
+      closure_8 = [];
+      closure_10 = [];
     }
   },
   GIF_PICKER_QUERY_SUCCESS: function handleQuerySuccess(query) {
@@ -78,14 +82,14 @@ const gIFPickerViewStore = new GIFPickerViewStore(require("dispatcher"), {
       query = query.query;
     }
     const items = query.items;
-    let closure_8 = items.map((width) => ({ width: width.width, height: width.height, src: width.src, gifSrc: width.gif_src, url: width.url, id: width.id, format: closure_4 }));
+    closure_8 = items.map((width) => ({ width: width.width, height: width.height, src: width.src, gifSrc: width.gif_src, url: width.url, id: width.id, format: closure_4 }));
   },
   GIF_PICKER_QUERY_FAILURE: function handleQueryFailure(query) {
     query = query.query;
     if (null == query) {
       return false;
     } else {
-      let closure_8 = [];
+      closure_8 = [];
     }
   },
   GIF_PICKER_TRENDING_FETCH_SUCCESS: function handleTrendingFetchSuccess(trendingCategories) {
@@ -121,6 +125,6 @@ const gIFPickerViewStore = new GIFPickerViewStore(require("dispatcher"), {
     items = items.items;
   }
 });
-const result = require("getSystemLocale").fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
+const result = set.fileFinishedImporting("stores/views/GIFPickerViewStore.tsx");
 
 export default gIFPickerViewStore;

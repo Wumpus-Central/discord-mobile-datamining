@@ -1,4 +1,6 @@
 // discord_common/js/packages/performance-utils/performance-polyfill.js
+import set from "set" /* 2 */;
+
 let _Date = Date;
 if (Date.now) {
   let nowResult = _Date.now();
@@ -21,7 +23,7 @@ if (!tmp6.now) {
   tmp6.now = tmp6.webkitNow || tmp6.mozNow || tmp6.msNow || (() => {
     let _Date = Date;
     if (Date.now) {
-      let nowResult = _Date.now();
+      nowResult = _Date.now();
     } else {
       _Date = new _Date();
       nowResult = +_Date;
@@ -31,7 +33,7 @@ if (!tmp6.now) {
 }
 if (!tmp6.mark) {
   tmp6.mark = tmp6.webkitMark || ((name) => {
-    const obj = { name, entryType: "mark", startTime: tmp6.now(), duration: 0 };
+    const obj = { name, entryType: "mark", startTime: closure_1.now(), duration: 0 };
     closure_3[name] = obj;
   });
 }
@@ -58,7 +60,7 @@ if (!tmp6.measure) {
     if (dependencyMap[arg2]) {
       let startTime = tmp3[arg2].startTime;
     } else {
-      startTime = tmp6.now();
+      startTime = closure_1.now();
     }
   });
 }
@@ -160,4 +162,4 @@ if (typeof globalThis.define === "function") {
 if (tmp7) {
   globalThis.define("performance", [], () => closure_1);
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/performance-utils/performance-polyfill.js");
+const result = set.fileFinishedImporting("../discord_common/js/packages/performance-utils/performance-polyfill.js");

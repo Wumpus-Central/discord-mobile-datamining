@@ -1,26 +1,13 @@
 // discord_app/modules/messages/native/renderer/MessageWithContent.tsx
-import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";
-import { RowType } from "Changeset";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { createThreadEmbed } from "createMessageContent.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createThreadEmbedDefault from "createThreadEmbed" /* 8164 */;
+import closure_3 from "handleMessageSendFailedAutomod" /* 8163 */;
+import { RowType } from "Changeset" /* 8158 */;
 
-const require = arg1;
-const result = require("createThreadEmbed").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/MessageWithContent.tsx");
 
 export const generateMessageRowData = function generateMessageRowData(canShowImages, options, theme) {
-  let alwaysShowAddReaction;
-  let canAddNewReactions;
-  let changeType;
-  let isEditing;
-  let isFirst;
-  let isSystemDM;
-  let message;
-  let pushFeedbackType;
-  let reactionsTheme;
-  let renderContentOnly;
-  let roleStyle;
-  let separatorBefore;
-  let truncation;
   ({ message, isEditing, isSystemDM } = canShowImages);
   let tmp = undefined !== isSystemDM;
   ({ changeType, roleStyle, isFirst, separatorBefore, canAddNewReactions, reactionsTheme } = canShowImages);
@@ -35,7 +22,7 @@ export const generateMessageRowData = function generateMessageRowData(canShowIma
     tmp3 = alwaysShowAddReaction;
   }
   let overrideBackgroundHighlight = canShowImages.overrideBackgroundHighlight;
-  obj = { type: RowType.MESSAGE, message: createThreadEmbed(obj), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
+  obj = { type: RowType.MESSAGE, message: createThreadEmbedDefault(obj), canAddNewReactions, addNewReactionAccessibilityLabel: null, reactionsTheme: null, highlightLabel: null, renderContentOnly: null, separatorBefore: null, changeType: null, truncation: null, alwaysShowAddReaction: null, backgroundHighlight: null, swipeActions: null, replyAccessibilityLabel: null, forwardAccessibilityLabel: null, threadAccessibilityLabel: null, forcedTheme: null };
   obj = { options, message, roleStyle, isFirst, isEditing, canShowImages: undefined === canShowImages || canShowImages, isSystemDM: tmp, isInlineReplyPreview: false, pushFeedbackType, renderContentOnly, showContentInventoryEntryFallbackEmbed: canShowImages.showContentInventoryEntryFallbackEmbed };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t.lfIHs4);

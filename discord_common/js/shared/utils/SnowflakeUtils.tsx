@@ -1,11 +1,13 @@
 // discord_common/js/shared/utils/SnowflakeUtils.tsx
-import { Integer } from "../../../../_runtime/00014_Integer.js";
+import set from "set" /* 2 */;
+import IntegerDefault from "Integer" /* 14 */;
+
 function extractTimestamp(arg0) {
   return Math.floor(Number(arg0) / 4194304) + c2;
 }
 let c2 = 1420070400000;
 let c3 = 4095;
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/SnowflakeUtils.tsx");
 class SnowflakeSequence {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -19,7 +21,7 @@ prototype["next"] = function next() {
   if (this.seq > c3) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Snowflake sequence number overflow: " + self.seq);
+    error = new Error("Snowflake sequence number overflow: " + self.seq);
     throw error;
   } else {
     self.seq = +self.seq + 1;
@@ -40,9 +42,9 @@ export const fromTimestamp = function fromTimestamp(arg0) {
   const diff = arg0 - c2;
   let str = "0";
   if (diff > 0) {
-    const obj = Integer(diff);
-    str = Integer(diff).shiftLeft(22).toString();
-    const str2 = Integer(diff).shiftLeft(22);
+    const obj = IntegerDefault(diff);
+    str = IntegerDefault(diff).shiftLeft(22).toString();
+    const str2 = IntegerDefault(diff).shiftLeft(22);
   }
   return str;
 };
@@ -52,18 +54,18 @@ export const fromTimestampWithSequence = function fromTimestampWithSequence(arg0
   if (diff > 0) {
     num = diff;
   }
-  const tmp2 = Integer;
-  const tmp2Result = Integer(num);
-  const shiftLeftResult = Integer(num).shiftLeft(22);
-  return Integer(num).shiftLeft(22).add(next.next()).toString();
+  const tmp2 = IntegerDefault;
+  const tmp2Result = IntegerDefault(num);
+  const shiftLeftResult = IntegerDefault(num).shiftLeft(22);
+  return IntegerDefault(num).shiftLeft(22).add(next.next()).toString();
 };
 export const atPreviousMillisecond = function atPreviousMillisecond(arg0) {
   const diff = Math.floor(Number(arg0) / 4194304) + c2 - 1 - c2;
   let str = "0";
   if (diff > 0) {
-    const obj = Integer(diff);
-    str = Integer(diff).shiftLeft(22).toString();
-    const str2 = Integer(diff).shiftLeft(22);
+    const obj = IntegerDefault(diff);
+    str = IntegerDefault(diff).shiftLeft(22).toString();
+    const str2 = IntegerDefault(diff).shiftLeft(22);
   }
   return str;
 };
@@ -71,9 +73,9 @@ export const atNextMillisecond = function atNextMillisecond(arg0) {
   const diff = Math.floor(Number(arg0) / 4194304) + c2 + 1 - c2;
   let str = "0";
   if (diff > 0) {
-    const obj = Integer(diff);
-    str = Integer(diff).shiftLeft(22).toString();
-    const str2 = Integer(diff).shiftLeft(22);
+    const obj = IntegerDefault(diff);
+    str = IntegerDefault(diff).shiftLeft(22).toString();
+    const str2 = IntegerDefault(diff).shiftLeft(22);
   }
   return str;
 };

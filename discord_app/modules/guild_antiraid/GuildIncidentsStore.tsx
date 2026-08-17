@@ -1,19 +1,20 @@
 // discord_app/modules/guild_antiraid/GuildIncidentsStore.tsx
-import getHash from "getHash";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Store } from "initialize";
-import { DATE_CONFIG } from "GuildAntiRaidUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DATE_CONFIG from "DATE_CONFIG" /* 8234 */;
+import closure_2 from "getHash" /* 4288 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
 
-const require = arg1;
+require = arg1;
 function computeAlertSettings() {
   guildsProto = guildsProto.getGuildsProto();
   if (guildsProto == null) {
     guildsProto = {};
   }
   const guildsArray = store.getGuildsArray();
-  let closure_7 = {};
+  closure_7 = {};
   for (const item10012 of guildsArray) {
     let tmp2 = closure_7;
     let obj = { guildId: null, guildName: null };
@@ -57,12 +58,13 @@ function updateGuildIncident(id) {
 }
 let closure_6 = {};
 let closure_7 = {};
+const Store = initializeDefault.Store;
 class GuildIncidentsStore extends Store {
 }
 const prototype = GuildIncidentsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(handleConnectionClosedOrResumed, createGuildRecordFromRust, getUncachedChannelPermissions, getHash);
-  const items = [handleConnectionClosedOrResumed, createGuildRecordFromRust, getUncachedChannelPermissions, getHash];
+  this.waitFor(closure_3, closure_4, closure_5, closure_2);
+  const items = [closure_3, closure_4, closure_5, closure_2];
   this.syncWith(items, computeAlertSettings);
 };
 prototype["getGuildIncident"] = function getGuildIncident(id) {
@@ -75,9 +77,9 @@ prototype["getGuildAlertSettings"] = function getGuildAlertSettings() {
   return closure_7;
 };
 GuildIncidentsStore.displayName = "GuildIncidentsStore";
-const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
+const guildIncidentsStore = new GuildIncidentsStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(arg0) {
-    let closure_6 = {};
+    closure_6 = {};
     while (tmp !== undefined) {
       let tmp3 = updateGuildIncident;
       let tmp4 = updateGuildIncident(tmp2.id);
@@ -152,9 +154,9 @@ const guildIncidentsStore = new GuildIncidentsStore(require("dispatcher"), {
     delete tmp2[tmp];
   },
   LOGOUT: function handleLogout() {
-    let closure_6 = {};
+    closure_6 = {};
   }
 });
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_antiraid/GuildIncidentsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildIncidentsStore.tsx");
 
 export default guildIncidentsStore;

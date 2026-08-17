@@ -1,23 +1,24 @@
 // discord_app/modules/collectibles/hooks/useCanPurchaseFrames.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PremiumTypes } from "GuildFeatures";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { isPremiumAtLeast } from "../../../utils/PremiumTypeUtils.tsx";
-import { apexExperiment } from "../experiments/CollectiblesProfileFramesExperiment.tsx";
-import { apexExperiment } from "../experiments/CollectiblesProfileFramesPurchaseExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import create from "create" /* 1940 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import apexExperiment from "apexExperiment" /* 8956 */;
+import apexExperiment2 from "apexExperiment" /* 9234 */;
+import apexExperimentDefault from "apexExperiment" /* 9234 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-const result = require("apexExperiment").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useCanPurchaseFrames.tsx");
 
 export default function useCanPurchaseFrames(location) {
   let obj = apexExperiment;
   let isProfileFramesEnabled = obj.useIsProfileFramesEnabled(location);
   obj = { location };
-  const bucket = apexExperiment.useConfig(obj).bucket;
-  const obj2 = apexExperiment;
+  const bucket = apexExperimentDefault.useConfig(obj).bucket;
+  const obj2 = apexExperimentDefault;
   const tmp = require;
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let isPremiumExactlyResult = callback(table[4]).isPremiumExactly(currentUser, TIER_2.TIER_2);
@@ -33,10 +34,10 @@ export default function useCanPurchaseFrames(location) {
     }
     return isPremiumExactlyResult;
   });
-  let tmp5 = bucket === apexExperiment.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
+  let tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.OPEN_PURCHASE;
   if (!tmp5) {
-    tmp5 = bucket === tmp(9234).ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
-    const tmp6 = bucket === tmp(9234).ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    tmp5 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
+    const tmp6 = bucket === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY && stateFromStores;
   }
   if (isProfileFramesEnabled) {
     isProfileFramesEnabled = tmp5;
@@ -45,17 +46,17 @@ export default function useCanPurchaseFrames(location) {
 };
 export const useCanViewProfileFramesInCollectiblesShop = function useCanViewProfileFramesInCollectiblesShop(UserProfileFrameEditButton) {
   let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(UserProfileFrameEditButton);
-  apexExperiment;
+  apexExperimentDefault;
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 !== apexExperiment.ProfileFramesPurchaseBucket.CONTROL;
+    isProfileFramesEnabled = tmp5 !== apexExperiment2.ProfileFramesPurchaseBucket.CONTROL;
   }
   return isProfileFramesEnabled;
 };
 export const useIsProfileFramesEarlyAccessPhase = function useIsProfileFramesEarlyAccessPhase(CollectiblesShopCardCardDetailsV2) {
   let isProfileFramesEnabled = apexExperiment.useIsProfileFramesEnabled(CollectiblesShopCardCardDetailsV2);
-  apexExperiment;
+  apexExperimentDefault;
   if (isProfileFramesEnabled) {
-    isProfileFramesEnabled = tmp5 === apexExperiment.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+    isProfileFramesEnabled = tmp5 === apexExperiment2.ProfileFramesPurchaseBucket.PAID_PREMIUM_SUBSCRIBERS_ONLY;
   }
   return isProfileFramesEnabled;
 };

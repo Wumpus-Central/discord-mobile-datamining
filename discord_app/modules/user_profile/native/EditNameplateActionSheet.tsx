@@ -1,36 +1,32 @@
 // discord_app/modules/user_profile/native/EditNameplateActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import useFetchPurchases from "useFetchPurchases";
-import { View } from "getSystemLocale";
-import map from "map";
-import { isNameplateRecord } from "fromServer";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { AnalyticEvents } from "ME";
-import jsxProd from "useNameplateSections";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "map" /* 5324 */;
+import { isNameplateRecord } from "fromServer" /* 1947 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-let c10;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 function EditNameplateInner(user) {
-  let selectedNameplate;
-  let setSelectedNameplate;
   user = user.user;
   ({ selectedNameplate, setSelectedNameplate } = user);
   const guildId = user.guildId;
   let obj = user(guildId[19]);
   const getOrFetchCollectiblesCategoriesAndPurchases = obj.useGetOrFetchCollectiblesCategoriesAndPurchases();
-  let obj1 = user(guildId[20]);
-  const items = [map];
+  obj1 = user(guildId[20]);
+  const items = [closure_6];
   const stateFromStores = obj1.useStateFromStores(items, () => isFetching.isFetching);
   let obj2 = user(guildId[20]);
-  const items1 = [trackCommunicationDisabled];
+  const items1 = [closure_8];
   const stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let member = null;
     if (null != guildId) {
-      member = outer1_8.getMember(tmp, user.id);
+      member = closure_1_8.getMember(tmp, user.id);
     }
     return member;
   });
@@ -58,11 +54,8 @@ function EditNameplateInner(user) {
   const items2 = [setSelectedNameplate, guildId];
   let skuId;
   const callback = React.useCallback((arg0) => {
-    let items;
-    let selectedSkuId;
-    let size;
     ({ items, size, selectedSkuId } = arg0);
-    return outer1_10(user(guildId[23]).EditNameplateRow, { items, size, selectedSkuId, setSelectedNameplate, guildId });
+    return closure_1_10(user(guildId[23]).EditNameplateRow, { items, size, selectedSkuId, setSelectedNameplate, guildId });
   }, items2);
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
@@ -97,13 +90,10 @@ function EditNameplateInner(user) {
   return tmp12(tmp13, obj2);
 }
 function NameplateActionSheetPreview(arg0) {
-  let guildId;
-  let previewSkuId;
-  let user;
   let _require;
   let purchase;
   ({ previewSkuId, user, guildId } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const tmp4 = purchase(8387)(previewSkuId);
   const product = tmp4.product;
   _require = product;
@@ -122,7 +112,7 @@ function NameplateActionSheetPreview(arg0) {
       first = first1;
     }
     let tmp3 = null;
-    if (outer1_7(first)) {
+    if (closure_1_7(first)) {
       tmp3 = first;
     }
     return tmp3;
@@ -142,7 +132,7 @@ function NameplateActionSheetPreview(arg0) {
   obj[1] = formatToPlainStringResult;
   obj = { style: tmp.nameplateGradientContainer, children: null };
   const items1 = [callback2(tmp10(9220).NameplateDummyUserPreview, { width: 100 }), callback2(tmp10(9220).NameplateDummyUserPreview, { width: 140 }), ];
-  const obj1 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
+  obj1 = { style: tmp.nameplatePreviewGradient, start: { x: 0, y: 0.1 }, end: { x: 0, y: 0.8 }, colors: null };
   const items2 = [tmp.nameplatePreviewGradient.color, ];
   let tmp2Result = tmp2(4756);
   items2[1] = "" + tmp.nameplatePreviewGradient.color + "00";
@@ -164,27 +154,24 @@ function NameplateActionSheetPreview(arg0) {
 }
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { container: null, bounceOffset: null, title: null, nameplatePreviewContainer: null, nameplateGradientContainer: null, nameplatePreviewGradient: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "absolute", top: -250, height: 250, right: 0, left: 0 };
-createCacheKey[2] = { alignSelf: "center", color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+createCacheKey[2] = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
 createCacheKey[3] = { width: "80%", alignSelf: "center", justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { width: "100%" };
-let obj1 = { alignSelf: "center", color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
-createCacheKey[5] = { position: "absolute", width: "100%", height: "100%", color: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", width: "100%", height: "100%", color: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/EditNameplateActionSheet.tsx");
+let obj1 = { alignSelf: "center", color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, margin: 25 };
+createCacheKey[5] = { position: "absolute", width: "100%", height: "100%", color: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { position: "absolute", width: "100%", height: "100%", color: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/EditNameplateActionSheet.tsx");
 
 export default function EditNameplateActionSheet(arg0) {
-  let currentNameplate;
-  let guildId;
-  let user;
   ({ user, currentNameplate, guildId } = arg0);
   let first;
-  let tmp = createCacheKey();
+  let tmp = callback4();
   let obj = guildId(7688);
-  let obj1 = React;
+  obj1 = React;
   const tmp4 = callback(React.useState(undefined), 2);
   first = tmp4[0];
   let tmp6 = currentNameplate;
@@ -199,7 +186,7 @@ export default function EditNameplateActionSheet(arg0) {
     obj.track(constants.OPEN_POPOUT, obj);
   }, []);
   const callback1 = obj1.useCallback(() => {
-    let obj = guildId(outer1_2[14]);
+    let obj = guildId(closure_1_2[14]);
     obj = { guildId, nameplate: null };
     let tmp = first;
     if (first == null) {

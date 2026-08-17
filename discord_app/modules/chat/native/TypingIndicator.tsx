@@ -1,25 +1,20 @@
 // discord_app/modules/chat/native/TypingIndicator.tsx
-import importAllResult from "noop";
-import { View } from "useTypingUserIds";
-import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight";
-import { SlowmodeType } from "setCooldown";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { useChatShowingAutoComplete as closure_5 } from "updateChatInputContainerHeight" /* 8682 */;
+import { SlowmodeType } from "setCooldown" /* 7440 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 function TypingIndicatorInner(cleanUp) {
-  let channel;
-  let transitionState;
   ({ channel, transitionState } = cleanUp);
   cleanUp = cleanUp.cleanUp;
   let sharedValue;
   let sharedValue1;
   let obj = transitionState(sharedValue[7]);
-  obj = { channelId: channel.id, guildId: null, typingUserIds: null };
-  obj[1] = channel.getGuildId();
-  obj[2] = cleanUp.typingUserIds;
+  obj = { channelId: channel.id, guildId: channel.getGuildId(), typingUserIds: cleanUp.typingUserIds };
   const tmp4Result = cleanUp(sharedValue[8])(obj);
   let obj2 = transitionState(sharedValue[9]);
   sharedValue = obj2.useSharedValue(undefined);
@@ -40,7 +35,7 @@ function TypingIndicatorInner(cleanUp) {
   let obj4 = transitionState(sharedValue[9]);
   class S {
     constructor() {
-      return c2.get();
+      return closure_2.get();
     }
   }
   S.__closure = { typingIndicatorLayout: sharedValue };
@@ -71,14 +66,14 @@ function TypingIndicatorInner(cleanUp) {
   let obj6 = transitionState(sharedValue[9]);
   class E {
     constructor() {
-      value = c2.get();
-      obj = getGuildId;
-      if (0 === getGuildId.get()) {
+      value = closure_2.get();
+      obj = closure_3;
+      if (0 === closure_3.get()) {
         num = 0;
       } else {
         tmp2 = transitionState;
         tmp3 = transitionState;
-        tmp4 = c2;
+        tmp4 = closure_2;
         num = 1;
       }
       obj = { opacity: num, top: null, transform: null };
@@ -100,7 +95,7 @@ function TypingIndicatorInner(cleanUp) {
   E.__workletHash = 15240163018691;
   E.__initData = closure_12;
   const animatedStyle = obj6.useAnimatedStyle(E);
-  const obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: transitionState(sharedValue[10]).TransitionStates };
+  obj1 = { typingIndicatorLayout: sharedValue, translateYValue: sharedValue1, transitionState, TransitionStates: transitionState(sharedValue[10]).TransitionStates };
   const token = transitionState(sharedValue[13]).useToken(cleanUp(sharedValue[6]).modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING);
   const items2 = [tmp8.typingWrapper, , ];
   let tmp15;
@@ -146,32 +141,32 @@ function renderTypingIndicator(arg0, arg1, transitionState, cleanUp) {
   return callback2(TypingIndicatorInner, obj, arg0);
 }
 let c3 = importAllResult;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { typingWrapper: null, floatingWrapper: null, wrapperHoriz: null, horiz: null, text: null };
-obj = { paddingTop: require("Themes").modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: require("Themes").colors.MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT };
+obj = { paddingTop: ThemesDefault.modules.mobile.CHAT_INPUT_FLOATING_ACCESSORY_PADDING_TOP, paddingBottom: 4, paddingHorizontal: 16, alignSelf: "stretch", backgroundColor: ThemesDefault.colors.MOBILE_TYPING_INDICATOR_BACKGROUND_DEFAULT };
 obj[0] = obj;
-createCacheKey = { backgroundColor: "transparent", paddingRight: require("Themes").modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING };
+createCacheKey = { backgroundColor: "transparent", paddingRight: ThemesDefault.modules.mobile.CHAT_INPUT_CONTAINER_HORIZONTAL_PADDING };
 obj[1] = createCacheKey;
 obj[2] = { justifyContent: "space-between", flexDirection: "row", alignItems: "center" };
-obj[3] = { marginRight: require("Themes").space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
+obj[3] = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
 obj[4] = { flex: 1 };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function TypingIndicatorTsx1(){const{typingIndicatorLayout}=this.__closure;return typingIndicatorLayout.get();}" };
 let closure_11 = { code: "function TypingIndicatorTsx2(current,prev){const{translateYValue,withSpring,springStandard}=this.__closure;if(current===prev)return;if(current==null)return;if(current.y.toFixed(2)!==current.height.toFixed(2))return;translateYValue.set(withSpring(-current.height,springStandard,'respect-motion-settings'));}" };
 let closure_12 = { code: "function TypingIndicatorTsx3(){const{typingIndicatorLayout,translateYValue,transitionState,TransitionStates}=this.__closure;const layout=typingIndicatorLayout.get();return{opacity:translateYValue.get()===0||transitionState===TransitionStates.YEETED?0:1,top:layout===null||layout===void 0?void 0:layout.height,transform:[{translateY:translateYValue.get()}]};}" };
-let obj2 = { marginRight: require("Themes").space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
+let obj2 = { marginRight: ThemesDefault.space.PX_8, alignItems: "center", flexDirection: "row", flex: 1 };
 const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  let c1;
+  closure_1 = undefined;
   let typingUserIds;
   const tmp = callback(channel.screenIndex);
-  c1 = tmp;
+  closure_1 = tmp;
   let obj = channel(typingUserIds[17]);
   typingUserIds = obj.useTypingUserIds(channel.id, 4);
   const items = [channel, typingUserIds, tmp];
   const memo = importAllResult.useMemo(() => {
     if (channel.rateLimitPerUser > 0) {
-      if (!c1) {
+      if (!closure_1) {
         const obj = { channel: null, typingUserIds: null };
         obj[0] = tmp;
         obj[1] = typingUserIds;
@@ -183,6 +178,6 @@ const memoResult = importAllResult.memo((channel) => {
   obj = { item: memo, renderItem: renderTypingIndicator };
   return callback2(channel(typingUserIds[10]).TransitionItem, obj);
 });
-let result = require("updateChatInputContainerHeight").fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
+let result = require("set").fileFinishedImporting("modules/chat/native/TypingIndicator.tsx");
 
 export default memoResult;

@@ -1,10 +1,12 @@
 // discord_app/modules/devtools/dev_settings/DevSettingsStore.tsx
-import { DeviceSettingsStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { MESSAGING: 0, [0]: "MESSAGING", OVERLAYS: 1, [1]: "OVERLAYS", PREMIUM: 2, [2]: "PREMIUM", REPORTING: 3, [3]: "REPORTING", APP_COLLECTIONS: 4, [4]: "APP_COLLECTIONS", SHOP: 5, [5]: "SHOP", LIBDISCORE: 6, [6]: "LIBDISCORE" };
 obj = { visual_effect_view_overrides: obj, obscure_blur_effect_explicit_content_enabled: obj1, obscure_blur_effect_gore_content_enabled: obj2, obscure_blur_effect_self_harm_content_enabled: obj3, explicit_media_redaction_ignore_pending_scan: obj4, analytics_debugger: obj5, idle_status_indicator: obj6, highlight_mana_text: obj7, upload_fail_50: obj8, send_fail_100: obj9, premium_roadblocks: obj10, force_mock_iap: obj11, iar_testing: obj12, iar_skip_api_report_submit: obj13, iar_show_report_sub_type_labels: obj14, only_show_preview_app_collections: obj15, disable_app_collections_cache: obj16, shop_disable_cache: obj17, shop_include_unpublished: obj18, shop_show_debug_overlay: obj19, bypass_google_sku_sync: obj20, libdiscore_verbose_telemetry_logging: obj21 };
 obj = { label: "Blur view overrides for designers to test with", category: obj.OVERLAYS };
 let closure_1 = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class DevSettingsStore extends DeviceSettingsStore {
 }
 const prototype = DevSettingsStore.prototype;
@@ -45,16 +47,13 @@ prototype["enabled"] = function enabled() {
   return closure_1;
 };
 prototype["allByCategory"] = function allByCategory(PREMIUM) {
-  let closure_0 = PREMIUM;
+  closure_0 = PREMIUM;
   const entries = Object.entries(closure_0);
   const found = entries.filter((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return tmp.category === closure_0;
   });
   return found.map((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     const items = [tmp, , ];
     let flag = table[tmp];
@@ -68,7 +67,7 @@ prototype["allByCategory"] = function allByCategory(PREMIUM) {
 };
 DevSettingsStore.displayName = "DevToolsDevSettingsStore";
 DevSettingsStore.persistKey = "DevToolsDevSettingsStore";
-const devSettingsStore = new DevSettingsStore(require("dispatcher"), {
+const devSettingsStore = new DevSettingsStore(dispatcherDefault, {
   DEV_TOOLS_DEV_SETTING_SET: function handleSet(value) {
     if (false !== value.value) {
       closure_1[value.toggle] = value.value;

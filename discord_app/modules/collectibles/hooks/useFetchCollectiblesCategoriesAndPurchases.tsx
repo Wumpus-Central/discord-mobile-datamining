@@ -1,12 +1,10 @@
 // discord_app/modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getHash from "getHash";
-import map from "map";
-import { set } from "useMaybeFetchCollectiblesCategories.tsx";
+import setDefault from "set" /* 8390 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
+import closure_6 from "getHash" /* 4288 */;
+import closure_7 from "map" /* 5324 */;
 
-let c4;
-let c5;
 const require = arg1;
 function useFetchPurchases(flag) {
   if (flag === undefined) {
@@ -17,34 +15,34 @@ function useFetchPurchases(flag) {
   let fetchPurchasesError;
   let hasPreviouslyFetched;
   let callback;
-  let getHash;
-  let map;
-  let items = [getHash];
+  closure_6 = undefined;
+  closure_7 = undefined;
+  let items = [closure_6];
   stateFromStores = flag(isFetching[4]).useStateFromStores(items, () => ref2.hasLoadedExperiments);
   let obj = flag(isFetching[4]);
-  const items1 = [map];
+  const items1 = [closure_7];
   const isClaiming = fetchPurchasesError(flag(isFetching[4]).useStateFromStoresArray(items1, () => {
     const items = [, , , , , ];
-    ({ isFetching: arr[0], isClaiming: arr[1], fetchError: arr[2], claimError: arr[3], purchases: arr[4], hasPreviouslyFetched: arr[5] } = map);
+    ({ isFetching: arr[0], isClaiming: arr[1], fetchError: arr[2], claimError: arr[3], purchases: arr[4], hasPreviouslyFetched: arr[5] } = closure_7);
     return items;
   }), 6);
   isFetching = isClaiming[0];
   fetchPurchasesError = isClaiming[2];
   hasPreviouslyFetched = isClaiming[5];
-  callback = callback(map.hasPreviouslyFetched);
+  callback = callback(closure_7.hasPreviouslyFetched);
   const items2 = [hasPreviouslyFetched];
   hasPreviouslyFetched(() => {
     closure_5.current = hasPreviouslyFetched;
   }, items2);
-  getHash = callback(map.fetchError);
+  closure_6 = callback(closure_7.fetchError);
   const items3 = [fetchPurchasesError];
   hasPreviouslyFetched(() => {
-    getHash.current = fetchPurchasesError;
+    closure_6.current = fetchPurchasesError;
   }, items3);
-  map = callback(map.isFetching);
+  closure_7 = callback(closure_7.isFetching);
   const items4 = [isFetching];
   hasPreviouslyFetched(() => {
-    map.current = isFetching;
+    closure_7.current = isFetching;
   }, items4);
   const items5 = [flag, stateFromStores];
   hasPreviouslyFetched(() => {
@@ -70,12 +68,6 @@ function useFetchPurchases(flag) {
   return { isClaiming: isClaiming[1], fetchPurchasesError, claimError: isClaiming[3], isFetching, purchases: isClaiming[4], hasPreviouslyFetched };
 }
 function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
-  let categories;
-  let claimError;
-  let fetchCategoriesError;
-  let fetchPurchasesError;
-  let isClaiming;
-  let refreshCategories;
   paymentGateway = undefined;
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
@@ -96,7 +88,7 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
     countryCode = paymentGateway.countryCode;
   }
   obj[3] = countryCode;
-  const tmp2Result = set(obj, arg1);
+  const tmp2Result = setDefault(obj, arg1);
   const isFetching = tmp2Result.isFetching;
   let stalePurchasesOK;
   ({ categories, fetchCategoriesError, refreshCategories } = tmp2Result);
@@ -114,7 +106,7 @@ function useFetchCollectiblesCategoriesAndPurchases(paymentGateway) {
   return obj;
 }
 ({ useEffect: c4, useRef: c5 } = noop);
-const result = require("getHash").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useFetchCollectiblesCategoriesAndPurchases.tsx");
 
 export default useFetchCollectiblesCategoriesAndPurchases;
 export { useFetchPurchases };

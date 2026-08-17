@@ -1,22 +1,20 @@
 // discord_app/modules/app_startup/native/executeHeadlessTask.tsx
-import timestamp from "timestamp";
-import { AppState } from "get ActivityIndicator";
-import fetchFingerprint from "fetchFingerprint";
-import linkFromAppsFlyer from "linkFromAppsFlyer";
-import { AnalyticEvents } from "ME";
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import { AppState } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import linkFromAppsFlyer from "linkFromAppsFlyer" /* 16441 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 function _executeHeadlessTask() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c11 = 0;
-    let c12 = 0;
-    let c9 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c11 = 0;
+    c12 = 0;
+    c9 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c12 === 2) {
         c12 = 3;
@@ -38,7 +36,7 @@ function _executeHeadlessTask() {
             throw arg1;
           } else {
             if (arg0 !== 2) {
-              let c9 = 0;
+              c9 = 0;
               c12 = 3;
             }
             c9 = 0;
@@ -48,12 +46,12 @@ function _executeHeadlessTask() {
             return obj;
           }
         } catch (tmp12) {
-          let closure_10 = tmp12;
+          closure_10 = tmp12;
           if (tmp4 === c9) {
             c12 = tmp3;
             throw tmp12;
           } else if (tmp2 === tmp14) {
-            let c11 = tmp2;
+            c11 = tmp2;
           } else if (tmp === tmp14) {
             c11 = tmp;
           } else if (tmp3 === tmp14) {
@@ -69,7 +67,7 @@ function _executeHeadlessTask() {
       }
     })();
   });
-  const _executeHeadlessTask = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -78,8 +76,8 @@ function _executeHeadlessTask() {
   }
   return applyArgumentsResult;
 }
-({ initHeadlessTask: error, applicationReady: metroImportAll } = linkFromAppsFlyer);
-const result = require("fetchFingerprint").fileFinishedImporting("modules/app_startup/native/executeHeadlessTask.tsx");
+({ initHeadlessTask: error, applicationReady: closure_8 } = linkFromAppsFlyer);
+const result = require("set").fileFinishedImporting("modules/app_startup/native/executeHeadlessTask.tsx");
 
 export default function executeHeadlessTask() {
   const self = this;

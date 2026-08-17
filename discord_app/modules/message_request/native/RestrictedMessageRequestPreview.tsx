@@ -1,55 +1,52 @@
 // discord_app/modules/message_request/native/RestrictedMessageRequestPreview.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "reinjectEphemerals" /* 4994 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_6;
-let unpackModuleId;
 const require = arg1;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { container: null, scroll: null, hidden: null, scrollContent: null, footer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { opacity: 0 };
-createCacheKey[3] = { paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8 };
-createCacheKey[4] = { paddingHorizontal: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingHorizontal: require("Themes").space.PX_12 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/message_request/native/RestrictedMessageRequestPreview.tsx");
+createCacheKey[3] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[4] = { paddingHorizontal: ThemesDefault.space.PX_12 };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingHorizontal: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessageRequestPreview.tsx");
 
 export default function RestrictedMessageRequestPreview(channelId) {
   channelId = channelId.channelId;
   let ref;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first;
   let React;
-  let closure_5;
+  closure_5 = undefined;
   let first1;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = React;
   ref = React.useRef(null);
   dependencyMap = React.useRef(false);
   const tmp5 = first(React.useState(false), 2);
   first = tmp5[0];
   React = tmp5[1];
-  let obj1 = channelId(589);
-  const items = [reinjectEphemerals];
+  obj1 = channelId(589);
+  const items = [closure_8];
   const items1 = [channelId];
-  closure_5 = obj1.useStateFromStores(items, () => outer1_8.getMessages(channelId).length > 0, items1);
+  closure_5 = obj1.useStateFromStores(items, () => closure_1_8.getMessages(channelId).length > 0, items1);
   let obj2 = channelId(589);
-  const items2 = [ensureGuildLoaded];
+  const items2 = [closure_7];
   const items3 = [channelId];
-  const stateFromStores = obj2.useStateFromStores(items2, () => outer1_7.getChannel(channelId), items3);
+  const stateFromStores = obj2.useStateFromStores(items2, () => closure_1_7.getChannel(channelId), items3);
   first1 = undefined;
   if (stateFromStores != null) {
     const recipients = stateFromStores.recipients;
@@ -57,12 +54,12 @@ export default function RestrictedMessageRequestPreview(channelId) {
       first1 = recipients[0];
     }
   }
-  const items4 = [mergeGuildAvatar];
+  const items4 = [closure_9];
   const items5 = [first1];
   const stateFromStores1 = channelId(589).useStateFromStores(items4, () => {
     let user;
     if (null != first1) {
-      user = outer1_9.getUser(tmp);
+      user = closure_1_9.getUser(tmp);
     }
     return user;
   }, items5);

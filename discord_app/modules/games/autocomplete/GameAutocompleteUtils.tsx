@@ -1,6 +1,8 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteUtils.tsx
-import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
-const result = require("set").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
+import set from "set" /* 2 */;
+import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
+
+const result = set.fileFinishedImporting("modules/games/autocomplete/GameAutocompleteUtils.tsx");
 
 export const GAME_AUTOCOMPLETE_MAX_QUERY_LENGTH = 100;
 export const MIN_TRUSTED_EMPTY_PREFIX_LENGTH = 7;

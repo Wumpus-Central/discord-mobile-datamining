@@ -1,9 +1,8 @@
 // discord_common/js/shared/lib/TokenManager.tsx
-import sum from "sum";
-import { Storage } from "../../packages/storage/Storage.tsx";
+import set from "set" /* 2 */;
+import Storage6 from "Storage" /* 595 */;
+import sum from "sum" /* 505 */;
 
-let c3;
-let obj1;
 function setSecondaryToken(token, __analytics__) {
   if (null != __analytics__) {
     closure_10[__analytics__] = token;
@@ -11,21 +10,21 @@ function setSecondaryToken(token, __analytics__) {
   if (c9) {
     encryptAndStoreTokens();
   } else {
-    let closure_8 = closure_7;
-    let closure_11 = closure_10;
+    closure_8 = closure_7;
+    closure_11 = closure_10;
     if (c12) {
-      const Storage4 = Storage.Storage;
+      const Storage4 = Storage6.Storage;
       Storage4.remove(closure_3);
-      const Storage5 = Storage.Storage;
+      const Storage5 = Storage6.Storage;
       Storage5.remove(closure_2);
     } else {
       if (null != tmp3) {
-        const Storage2 = Storage.Storage;
+        const Storage2 = Storage6.Storage;
         const result = Storage2.set(closure_3, closure_8);
         let tmp6 = require;
       } else {
         tmp6 = require;
-        const Storage = Storage.Storage;
+        const Storage = Storage6.Storage;
         Storage.remove(closure_3);
       }
       const Storage3 = tmp6(595).Storage;
@@ -42,21 +41,21 @@ function removeToken(__analytics__) {
   }
   if (tmp3 === c7) {
     c7 = null;
-    let c8 = null;
+    c8 = null;
   }
   if (c12) {
-    const Storage4 = Storage.Storage;
+    const Storage4 = Storage6.Storage;
     Storage4.remove(closure_3);
-    const Storage5 = Storage.Storage;
+    const Storage5 = Storage6.Storage;
     Storage5.remove(closure_2);
   } else {
     if (null != c8) {
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage6.Storage;
       const result = Storage2.set(closure_3, c8);
       let tmp8 = require;
     } else {
       tmp8 = require;
-      const Storage = Storage.Storage;
+      const Storage = Storage6.Storage;
       Storage.remove(closure_3);
     }
     const Storage3 = tmp8(595).Storage;
@@ -84,13 +83,12 @@ function encryptAndStoreTokens() {
         }
         tmp6 = c4;
       }
+      closure_8 = combined;
     }
     const _Object = Object;
     const entries = Object.entries(closure_10);
     let items = [];
     HermesBuiltin.arraySpread(entries.map((arg0) => {
-      let obj;
-      let tmp;
       [tmp, obj] = arg0;
       const items = [tmp, ];
       let result;
@@ -109,31 +107,29 @@ function encryptAndStoreTokens() {
       items[1] = combined;
       return items;
     }), 0);
-    let closure_11 = items.reduce((arg0, arg1) => {
-      let tmp;
-      let tmp2;
+    closure_11 = items.reduce((arg0, arg1) => {
       [tmp, tmp2] = arg1;
       arg0[tmp] = tmp2;
       return arg0;
     }, {});
-    let c9 = true;
+    c9 = true;
   } else {
-    combined = tmp2;
+    closure_8 = tmp2;
     closure_11 = closure_10;
   }
   if (c12) {
-    const Storage4 = Storage.Storage;
+    const Storage4 = Storage6.Storage;
     Storage4.remove(closure_3);
-    const Storage5 = Storage.Storage;
+    const Storage5 = Storage6.Storage;
     Storage5.remove(closure_2);
   } else {
-    if (null != combined) {
-      const Storage2 = Storage.Storage;
-      const result2 = Storage2.set(closure_3, combined);
+    if (null != closure_8) {
+      const Storage2 = Storage6.Storage;
+      const result2 = Storage2.set(closure_3, closure_8);
       let tmp13 = require;
     } else {
       tmp13 = require;
-      const Storage = Storage.Storage;
+      const Storage = Storage6.Storage;
       Storage.remove(closure_3);
     }
     const Storage3 = tmp13(595).Storage;
@@ -160,16 +156,14 @@ function getToken(arg0) {
   }
   return tmp;
 }
-let result = require("set").fileFinishedImporting("../discord_common/js/shared/lib/TokenManager.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/shared/lib/TokenManager.tsx");
 
 export const init = function init() {
-  let c9;
-  let closure_7;
   if (!c13) {
-    const Storage = Storage.Storage;
-    let closure_8 = Storage.get(closure_3);
-    const Storage2 = Storage.Storage;
-    let closure_11 = Storage2.get(closure_2) || {};
+    const Storage = Storage6.Storage;
+    closure_8 = Storage.get(closure_3);
+    const Storage2 = Storage6.Storage;
+    closure_11 = Storage2.get(closure_2) || {};
     if (null != closure_8) {
       if (0 !== arr.length) {
         let obj = safeStorage;
@@ -190,10 +184,6 @@ export const init = function init() {
       const _Object = Object;
       const entries = Object.entries(closure_11);
       const mapped = entries.map((arg0) => {
-        let arr;
-        let decryptedToken;
-        let tmp;
-        let wasEncrypted;
         [tmp, arr] = arg0;
         if (null != arr) {
           if (0 !== arr.length) {
@@ -219,13 +209,10 @@ export const init = function init() {
       });
       let items = [];
       HermesBuiltin.arraySpread(mapped.filter((arg0) => {
-        let tmp;
         [, tmp] = arg0;
         return null != tmp;
       }), 0);
-      let closure_10 = items.reduce((arg0, arg1) => {
-        let tmp;
-        let tmp2;
+      closure_10 = items.reduce((arg0, arg1) => {
         [tmp, tmp2] = arg1;
         arg0[tmp] = tmp2;
         return arg0;
@@ -254,7 +241,7 @@ export const setAnalyticsToken = function setAnalyticsToken(analyticsToken) {
 };
 export const setToken = function setToken(token, id) {
   if (null != token) {
-    let closure_7 = token;
+    closure_7 = token;
     setSecondaryToken(token, id);
   } else {
     removeToken(id);
@@ -263,9 +250,9 @@ export const setToken = function setToken(token, id) {
 export const hideToken = function hideToken() {
   if (!c12) {
     c12 = true;
-    const Storage = Storage.Storage;
+    const Storage = Storage6.Storage;
     Storage.remove(closure_3);
-    const Storage2 = Storage.Storage;
+    const Storage2 = Storage6.Storage;
     Storage2.remove(closure_2);
   }
 };
@@ -273,12 +260,12 @@ export const showToken = function showToken() {
   if (c12) {
     c12 = false;
     if (null != closure_8) {
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage6.Storage;
       const result = Storage2.set(closure_3, closure_8);
       let tmp3 = require;
     } else {
       tmp3 = require;
-      const Storage = Storage.Storage;
+      const Storage = Storage6.Storage;
       Storage.remove(closure_3);
     }
     const Storage3 = tmp3(595).Storage;

@@ -1,26 +1,25 @@
 // discord_app/modules/forums/ForumUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET";
-import { ChannelFlags } from "set";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "set" /* 1400 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import { ForumTimestampFormats } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
+import { ChannelFlags } from "set" /* 1398 */;
 
-const require = arg1;
+require = arg1;
 function getCreationDefaultFormatter() {
   const obj = { minutes: getSystemLocale.t.nFt9ck, hours: getSystemLocale.t.jzCewe, days: getSystemLocale.t.U4I0sw, month: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["nBNJ/L"]);
   return obj;
 }
-const result = require("generateOldThreadCutoff").fileFinishedImporting("modules/forums/ForumUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumUtils.tsx");
 
 export const getForumPostReadStates = function getForumPostReadStates(isArchivedThread, guild, items) {
-  let obj;
   let tmp = items;
   if (items === undefined) {
-    items = [generateOldThreadCutoff];
+    items = [closure_4];
     tmp = items;
   }
   [obj] = tmp;
@@ -39,13 +38,9 @@ export const getForumPostReadStates = function getForumPostReadStates(isArchived
   return obj;
 };
 export const getForumPostReadStatesById = function getForumPostReadStatesById(arg0) {
-  let obj;
-  let obj2;
-  let obj4;
-  let tmp5;
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [ensureGuildLoaded, createGuildRecordFromRust, generateOldThreadCutoff];
+    const items = [closure_2, closure_3, closure_4];
     tmp = items;
   }
   [obj, obj2, tmp5] = tmp;
@@ -84,7 +79,6 @@ export const getForumTimestampFormatter = function getForumTimestampFormatter(cl
   }
 };
 export const canDisplayPostUnreadMessageCount = function canDisplayPostUnreadMessageCount(id, items) {
-  let obj;
   [obj] = items;
   let hasTrackedUnreadResult = obj.hasTrackedUnread(id);
   const hasOpenedThreadResult = obj.hasOpenedThread(id);

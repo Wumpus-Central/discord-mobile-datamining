@@ -1,8 +1,10 @@
 // discord_app/modules/activities/utils/hasFlag.tsx
-import { ActivityFlags } from "ME";
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import hasFlag from "hasFlag" /* 1403 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/hasFlag.tsx");
+const ActivityFlags = ME.ActivityFlags;
+const result = set.fileFinishedImporting("modules/activities/utils/hasFlag.tsx");
 
 export default function hasFlag(flags) {
   let tmp = arg1 !== ActivityFlags.INSTANCE;

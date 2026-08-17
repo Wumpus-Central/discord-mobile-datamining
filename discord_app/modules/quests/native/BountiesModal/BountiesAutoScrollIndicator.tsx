@@ -1,36 +1,34 @@
 // discord_app/modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { CircularProgress } from "../../../../../_runtime/14411_CircularProgress.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import { ArrowSmallUpIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowSmallUpIcon.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { map } from "../../../../design/tokens/native/useToken.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
 
-let c5;
-let closure_6;
 const require = arg1;
 function BouncingArrow(children) {
   let sharedValue;
   sharedValue = sharedValue(4115).useSharedValue(0);
   let items = [sharedValue];
   const effect = React.useEffect(() => {
-    let obj = sharedValue(outer1_2[3]);
-    const obj2 = sharedValue(outer1_2[3]);
+    let obj = sharedValue(closure_1_2[3]);
+    const obj2 = sharedValue(closure_1_2[3]);
     obj = { duration: 500, easing: null };
-    const Easing = sharedValue(outer1_2[3]).Easing;
-    obj[1] = Easing.inOut(sharedValue(outer1_2[3]).Easing.quad);
-    const obj3 = sharedValue(outer1_2[4]);
-    const withTimingResult = sharedValue(outer1_2[4]).withTiming(-6, obj);
+    const Easing = sharedValue(closure_1_2[3]).Easing;
+    obj[1] = Easing.inOut(sharedValue(closure_1_2[3]).Easing.quad);
+    const obj3 = sharedValue(closure_1_2[4]);
+    const withTimingResult = sharedValue(closure_1_2[4]).withTiming(-6, obj);
     obj = { duration: 500, easing: null };
-    const Easing2 = sharedValue(outer1_2[3]).Easing;
-    obj[1] = Easing2.inOut(sharedValue(outer1_2[3]).Easing.quad);
-    const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(outer1_2[4]).withTiming(0, obj)), -1));
-    return () => outer1_0(outer1_2[3]).cancelAnimation(closure_0);
+    const Easing2 = sharedValue(closure_1_2[3]).Easing;
+    obj[1] = Easing2.inOut(sharedValue(closure_1_2[3]).Easing.quad);
+    const result = sharedValue.set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[4]).withTiming(0, obj)), -1));
+    return () => closure_1_0(closure_1_2[3]).cancelAnimation(closure_0);
   }, items);
   let obj = sharedValue(4115);
   const fn = function l() {
@@ -44,16 +42,16 @@ function BouncingArrow(children) {
   fn.__workletHash = 10126349088819;
   fn.__initData = closure_7;
   const style = sharedValue(4115).useAnimatedStyle(fn);
-  return callback(ReanimatedRexport.View, { style, children: children.children });
+  return callback(_modDef4115.View, { style, children: children.children });
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { code: "function BountiesAutoScrollIndicatorTsx1(){const{translateY}=this.__closure;return{transform:[{translateY:translateY.get()}]};}" };
 createCacheKey = { root: null, ringContainer: null };
-createCacheKey = { alignItems: "center", gap: require("Themes").space.PX_8 };
+createCacheKey = { alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", justifyContent: "center", width: 40, height: 40 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("jsxProd").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountiesAutoScrollIndicator.tsx");
 
 export default function BountiesAutoScrollIndicator(showProgressRing) {
   let flag = showProgressRing.showProgressRing;
@@ -61,15 +59,14 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     flag = true;
   }
   let _require;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = _map;
-  const token = obj.useToken(Themes.colors.WHITE);
-  obj = { size: "md", color: null };
-  obj[1] = Themes.colors.WHITE;
+  const token = obj.useToken(ThemesDefault.colors.WHITE);
+  obj = { size: "md", color: ThemesDefault.colors.WHITE };
   const tmp6 = callback(_ArrowSmallUpIcon.ArrowSmallUpIcon, obj);
   _require = tmp6;
   obj = { style: tmp.root, children: null };
-  const obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
+  obj1 = { variant: "text-md/semibold", color: "text-default", children: null };
   const intl = _getSystemLocale.intl;
   obj1[2] = intl.string(_getSystemLocale.t.eafsh4);
   const items = [callback(_Text.Text, obj1), ];
@@ -79,7 +76,7 @@ export default function BountiesAutoScrollIndicator(showProgressRing) {
     obj3[2] = 100 * showProgressRing.progress;
     obj3[6] = token;
     obj3[8] = function children() {
-      return c0;
+      return closure_0;
     };
     let tmp5Result = tmp5(_CircularProgress.AnimatedCircularProgress, obj3);
   } else {

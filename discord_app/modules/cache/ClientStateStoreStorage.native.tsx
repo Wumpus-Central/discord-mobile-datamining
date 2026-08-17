@@ -1,8 +1,10 @@
 // discord_app/modules/cache/ClientStateStoreStorage.native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeFastConnectModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 502 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/cache/ClientStateStoreStorage.native.tsx");
 
 export const setClientState = function setClientState(closure_17, arg1) {
   if (obj.isAndroid()) {
@@ -10,8 +12,8 @@ export const setClientState = function setClientState(closure_17, arg1) {
     if (closure_17 != null) {
       str = closure_17.toString();
     }
-    enforcing.setClientState(str, undefined);
-    const obj2 = enforcing;
+    enforcingDefault.setClientState(str, undefined);
+    const obj2 = enforcingDefault;
   } else {
     const DCDFastConnectManager = NativeModules.DCDFastConnectManager;
     let tmp4 = closure_17;

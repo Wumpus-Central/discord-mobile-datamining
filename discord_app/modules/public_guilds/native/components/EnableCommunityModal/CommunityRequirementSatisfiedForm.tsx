@@ -1,13 +1,12 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-let result = require("jsxProd").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
+let result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/CommunityRequirementSatisfiedForm.tsx");
 
 export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
   formSwitchDisabled = formSwitchDisabled.formSwitchDisabled;
@@ -21,8 +20,8 @@ export default function CommunityRequirementSatisfiedForm(formSwitchDisabled) {
     obj[1] = enableCommunitySharedStyles.communityRequirementSatisfiedFormPressable;
     obj[2] = function onPress() {
       if (formSwitchDisabled) {
-        const result = formSwitchDisabled(outer1_1[3]).communityRequirementSatisfied();
-        const obj = formSwitchDisabled(outer1_1[3]);
+        const result = formSwitchDisabled(closure_1_1[3]).communityRequirementSatisfied();
+        const obj = formSwitchDisabled(closure_1_1[3]);
       }
     };
     tmp6 = callback(formSwitchDisabled(5433).PressableOpacity, obj);

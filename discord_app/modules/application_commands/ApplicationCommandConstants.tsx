@@ -1,10 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandConstants.tsx
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+
 const items = [{ name: "True", displayName: "True", value: "true" }, { name: "False", displayName: "False", value: "false" }];
 const frozen = Object.freeze([]);
 const frozen1 = Object.freeze([]);
-const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandConstants.tsx");
+const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandConstants.tsx");
 
 export const TRUE_OPTION_NAME = "True";
 export const FALSE_OPTION_NAME = "False";

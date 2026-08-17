@@ -1,8 +1,10 @@
 // discord_app/modules/channel_autocomplete/ChannelAutocompleteConstants.tsx
+import set from "set" /* 2 */;
+
 let closure_0 = [];
 const tmp2 = /^<@\$(\d+)>/;
 const regExp = new RegExp(tmp2.source.replace(/^\^/, ""), "g");
-const result = require("set").fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
+const result = set.fileFinishedImporting("modules/channel_autocomplete/ChannelAutocompleteConstants.tsx");
 
 export const MENTION_SENTINEL = "@";
 export const GAME_MENTION_SENTINEL = "$";

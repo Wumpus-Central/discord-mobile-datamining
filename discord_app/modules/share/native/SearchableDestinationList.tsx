@@ -1,38 +1,25 @@
 // discord_app/modules/share/native/SearchableDestinationList.tsx
-import _slicedToArray from "_slicedToArray";
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "Placeholder";
-import { NOOP } from "ME";
-import { UserRowModes } from "UserRowModes";
-import jsxProd from "SearchField";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "ME" /* 676 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let unpackModuleId;
 const require = arg1;
 ({ View: c5, Keyboard: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { searchBarContainer: null, noResults: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/share/native/SearchableDestinationList.tsx");
+createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/share/native/SearchableDestinationList.tsx");
 
 export default function SearchableDestinationList(getRowIsUnavailable) {
-  let c13;
-  let channelFilter;
-  let defaultNoResultsFound;
-  let disableGradient;
-  let disableSelection;
-  let disabledDestinations;
-  let initialSelectedDestinations;
-  let originDestination;
-  let tmp14;
   ({ initialSelectedDestinations, disabledDestinations } = getRowIsUnavailable);
   getRowIsUnavailable = getRowIsUnavailable.getRowIsUnavailable;
   const onSelectedDestinationChange = getRowIsUnavailable.onSelectedDestinationChange;
@@ -62,22 +49,22 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   const disableLongPress = getRowIsUnavailable.disableLongPress;
   let ref;
   first = undefined;
-  let closure_9;
+  closure_9 = undefined;
   let results;
   let updateSearchText;
-  let createCacheKey;
-  c13 = undefined;
-  let closure_14;
   let callback;
+  c13 = undefined;
+  closure_14 = undefined;
+  callback = undefined;
   let memo1;
   let memo2;
   let callback2;
   let callback3;
   let callback4;
   let ref1;
-  let c22;
+  closure_22 = undefined;
   let scaledTextLineHeight;
-  let tmp6 = createCacheKey();
+  let tmp6 = callback();
   let obj = NONE;
   ref = NONE.useRef(null);
   if (initialSelectedDestinations == null) {
@@ -86,11 +73,11 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   const tmp8 = onSearchTextChange(NONE.useState(initialSelectedDestinations), 2);
   first = tmp8[0];
   closure_9 = tmp8[1];
-  let obj1 = disabledDestinations(onSelectedDestinationChange[8]);
+  obj1 = disabledDestinations(onSelectedDestinationChange[8]);
   const shareSearchResults = obj1.useShareSearchResults({ selectedDestinations: first, originDestination, channelFilter, includeMissingDMs: true });
   results = shareSearchResults.results;
   updateSearchText = shareSearchResults.updateSearchText;
-  createCacheKey = obj.useRef("");
+  callback = obj.useRef("");
   [tmp14, c13] = onSearchTextChange(obj.useState(false), 2);
   closure_14 = obj.useRef(null);
   const effect = obj.useEffect(() => () => {
@@ -167,11 +154,11 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   }, items4);
   const items5 = [disableSelection];
   callback2 = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     callback((arr) => {
       const findIndexResult = arr.findIndex((id) => id.id === id.id);
       if (-1 === findIndexResult) {
-        if (outer1_5) {
+        if (closure_1_5) {
           return arr;
         } else {
           const items = [closure_0];
@@ -192,8 +179,6 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   callback4 = obj.useCallback((id) => callback2({ type: "channel", id: id.id }), items7);
   const items8 = [results, getRowIsUnavailable, memo2, memo1, disableSelection, disableLongPress, NONE, callback3, callback4];
   const callback5 = obj.useCallback((arg0, arg1) => {
-    let record;
-    let type;
     ({ type, record } = results[arg1]);
     if (type !== disabledDestinations(onSelectedDestinationChange[11]).AutocompleterResultTypes.HEADER) {
       let tmp2Result = tmp2(tmp3[10]);
@@ -219,7 +204,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       obj[0] = tmp11;
       obj[1] = hasItem;
       if (null != tmp6) {
-        const NONE = first.NONE;
+        NONE = first.NONE;
       }
       obj[2] = NONE;
       let label;
@@ -246,7 +231,7 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
       }
       const merged = Object.assign(tmp16);
       if (tmp2(tmp3[11]).AutocompleterResultTypes.USER === type) {
-        const obj1 = { type: "user", props: null };
+        obj1 = { type: "user", props: null };
         const obj2 = {};
         const merged1 = Object.assign(obj);
         obj2.user = record;
@@ -281,13 +266,11 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
   }, items8);
   ref1 = obj.useRef(null);
   const tmp27 = getRowIsUnavailable(onSelectedDestinationChange[14])();
-  c22 = tmp27;
+  closure_22 = tmp27;
   let obj3 = disabledDestinations(onSelectedDestinationChange[15]);
   scaledTextLineHeight = obj3.useScaledTextLineHeight("text-xs/medium");
   const items9 = [results, getRowIsUnavailable, tmp27, scaledTextLineHeight];
   const callback6 = obj.useCallback((arg0, arg1) => {
-    let record;
-    let type;
     ({ type, record } = results[arg1]);
     let tmp2;
     if (type !== disabledDestinations(onSelectedDestinationChange[11]).AutocompleterResultTypes.HEADER) {
@@ -302,11 +285,11 @@ export default function SearchableDestinationList(getRowIsUnavailable) {
     }
     if (null != tmp2) {
       if (tmp2 > 1) {
-        let tmp6 = getRowIsUnavailable(onSelectedDestinationChange[16])(c22 + (tmp2 - 1) * scaledTextLineHeight);
+        let tmp6 = getRowIsUnavailable(onSelectedDestinationChange[16])(closure_22 + (tmp2 - 1) * scaledTextLineHeight);
       }
       return tmp6;
     }
-    tmp6 = c22;
+    tmp6 = closure_22;
   }, items9);
   const someResult = memo.some((arg0) => arg0 > 0);
   if (someResult) {

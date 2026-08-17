@@ -1,13 +1,13 @@
 // discord_app/modules/routing/transitionToChannel.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Routes } from "ME";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { ChannelActionCreators } from "../../actions/ChannelActionCreators.tsx";
-import { transitionTo } from "router_utils.tsx";
-import { useGuildIdForChannelRoute } from "useGuildIdForChannelRoute.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import useGuildIdForChannelRoute from "useGuildIdForChannelRoute" /* 4769 */;
+import _modDef4770 from "module_4770" /* 4770 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import { Routes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("useGuildIdForChannelRoute").fileFinishedImporting("modules/routing/transitionToChannel.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/routing/transitionToChannel.tsx");
 
 export const transitionToChannel = function transitionToChannel(id, openTextInVoiceIfVoiceChannel) {
   const channel = store.getChannel(id);
@@ -15,8 +15,8 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = useGuildIdForChannelRoute;
     const tmp7 = importDefault;
-    ChannelActionCreators.preload(channel.guild_id, channel.id);
-    const obj4 = ChannelActionCreators;
+    _modDef4770.preload(channel.guild_id, channel.id);
+    const obj4 = _modDef4770;
     const obj = { openChannel: true };
     const obj5 = transitionTo;
     const merged = Object.assign(openTextInVoiceIfVoiceChannel);
@@ -36,7 +36,7 @@ export const transitionToChannel = function transitionToChannel(id, openTextInVo
   }
 };
 export const transitionToThread = function transitionToThread(channel, arg1) {
-  00038__(null != channel.parent_id, "Thread must have a parent ID.");
+  _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
   let obj = useGuildIdForChannelRoute;
   const guildIdForGenericRedirect = obj.getGuildIdForGenericRedirect(channel);
   obj = { openChannel: true };
@@ -45,7 +45,7 @@ export const transitionToThread = function transitionToThread(channel, arg1) {
   obj2.transitionTo(Routes.CHANNEL(guildIdForGenericRedirect, channel.id), obj);
 };
 export const transitionToThreadMessage = function transitionToThreadMessage(channel, id, arg2) {
-  00038__(null != channel.parent_id, "Thread must have a parent ID.");
+  _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
   let obj = useGuildIdForChannelRoute;
   const guildIdForGenericRedirect = obj.getGuildIdForGenericRedirect(channel);
   obj = { openChannel: true };
@@ -57,7 +57,7 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
   let obj = store;
   const channel = store.getChannel(threadId);
   if (null != channel) {
-    00038__(null != channel.parent_id, "Thread must have a parent ID.");
+    _modDef38(null != channel.parent_id, "Thread must have a parent ID.");
     const guildIdForGenericRedirect = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel);
     const obj3 = useGuildIdForChannelRoute;
     obj = { openChannel: true };
@@ -71,8 +71,8 @@ export const tryTransitionToThreadMessage = function tryTransitionToThreadMessag
       const guildIdForGenericRedirect1 = useGuildIdForChannelRoute.getGuildIdForGenericRedirect(channel1);
       const obj7 = useGuildIdForChannelRoute;
       const tmp20 = importDefault;
-      ChannelActionCreators.preload(channel1.guild_id, channel1.id);
-      const obj8 = ChannelActionCreators;
+      _modDef4770.preload(channel1.guild_id, channel1.id);
+      const obj8 = _modDef4770;
       obj = { openChannel: true };
       const obj9 = transitionTo;
       const merged1 = Object.assign(arg3);

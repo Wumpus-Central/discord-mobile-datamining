@@ -1,20 +1,18 @@
 // discord_app/modules/safety_flows/native/tasks/VerifyEmailScreen.tsx
-import fetchAndUpdateTask from "fetchAndUpdateTask";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-const result = require("noop").fileFinishedImporting("modules/safety_flows/native/tasks/VerifyEmailScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/tasks/VerifyEmailScreen.tsx");
 
 export default function _default() {
   let obj = onTaskComplete(first[4]);
-  let obj1 = onTaskComplete(first[5]);
+  obj1 = onTaskComplete(first[5]);
   onTaskComplete = obj1.useOnTaskComplete();
-  const importDefault = React.useRef("");
+  importDefault = React.useRef("");
   const tmp2 = first1(React.useState(""), 2);
   first = tmp2[0];
   const tmp4 = first1(React.useState(false), 2);
@@ -50,20 +48,20 @@ export default function _default() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
+            closure_0 = tmp3;
             const current = ref.current;
             if (null != current) {
               if ("" !== current) {
                 let v0 = 1;
                 v0(true);
-                outer1_5(true);
-                let obj1 = { verification_code: null, type: null };
+                closure_1_5(true);
+                obj1 = { verification_code: null, type: null };
                 obj1[0] = current;
-                obj1[1] = outer1_0(outer1_2[6]).TaskInputType.VerificationCode;
+                obj1[1] = closure_1_0(closure_1_2[6]).TaskInputType.VerificationCode;
                 ref = 2;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_0(obj1);
+                obj2[0] = closure_1_0(obj1);
                 return obj2;
               }
             }
@@ -73,10 +71,10 @@ export default function _default() {
             v0 = 0;
             v0(false);
             callback(false);
-            obj1 = ref(outer1_2[7]);
+            obj1 = ref(closure_1_2[7]);
             const obj3 = { key: "SAFETY_FLOWS_VERIFY_EMAIL_ERROR", content: null };
-            const intl = outer1_0(outer1_2[8]).intl;
-            obj3[1] = intl.string(ref(outer1_2[9]).PfbG6H);
+            const intl = closure_1_0(closure_1_2[8]).intl;
+            obj3[1] = intl.string(ref(closure_1_2[9]).PfbG6H);
             obj1.open(obj3);
           } else if (arg0 === 1) {
             c4 = 3;
@@ -93,7 +91,7 @@ export default function _default() {
         }
         c4 = 3;
       } catch (tmp30) {
-        let closure_2 = tmp30;
+        closure_2 = tmp30;
         if (tmp4 === v0) {
           c4 = tmp2;
           throw tmp30;
@@ -120,14 +118,12 @@ export default function _default() {
   obj[1] = intl2.string(importDefault(first[9]).wq2RDq);
   obj[2] = callback;
   obj[3] = tmp4[0];
-  obj = { spacing: null, children: null };
-  obj[0] = importDefault(first[12]).space.PX_16;
+  obj = { spacing: importDefault(first[12]).space.PX_16, children: null };
   obj1 = { variant: "text-sm/medium", color: "text-subtle", children: null };
   const intl3 = onTaskComplete(first[8]).intl;
   obj1[2] = intl3.string(importDefault(first[9]).aveKoG);
   const items3 = [callback(onTaskComplete(first[13]).Text, obj1), ];
-  let obj2 = { spacing: null, children: null };
-  obj2[0] = importDefault(first[12]).space.PX_8;
+  let obj2 = { spacing: importDefault(first[12]).space.PX_8, children: null };
   let obj3 = { placeholder: null, maxLength: 6, returnKeyType: "done", value: null, onChange: null };
   const intl4 = onTaskComplete(first[8]).intl;
   obj3[0] = intl4.string(importDefault(first[9]).d9Ykjr);

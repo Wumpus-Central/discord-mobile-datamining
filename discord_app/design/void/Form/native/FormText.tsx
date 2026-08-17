@@ -1,14 +1,15 @@
 // discord_app/design/void/Form/native/FormText.tsx
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { result } from "../../../migrations/native/LegacyTokens.tsx";
-import { Button } from "../../native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import result2 from "result" /* 6289 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = createCacheKey.createStyles((arg0) => {
   let obj = { primary: null, text: null };
-  obj = { color: result.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
+  obj = { color: result2.DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
   obj[0] = obj;
   let num = 16;
   if ("small" === arg0) {
@@ -24,18 +25,18 @@ let closure_3 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 let obj = { BRAND: null, RED: null, GREEN: null, YELLOW: null, LINK: null, WHITE: null };
-obj = { color: require("Themes").unsafe_rawColors.BRAND_500 };
+obj = { color: ThemesDefault.unsafe_rawColors.BRAND_500 };
 obj[0] = obj;
-createCacheKey = { color: require("Themes").unsafe_rawColors.RED_400 };
+createCacheKey = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 obj[1] = createCacheKey;
-obj[2] = { color: require("Themes").unsafe_rawColors.GREEN_360 };
-const obj2 = { color: require("Themes").unsafe_rawColors.GREEN_360 };
-obj[3] = { color: require("Themes").unsafe_rawColors.YELLOW_300 };
-const obj3 = { color: require("Themes").unsafe_rawColors.YELLOW_300 };
-obj[4] = { color: require("Themes").unsafe_rawColors.BLUE_345 };
-const obj4 = { color: require("Themes").unsafe_rawColors.BLUE_345 };
-obj[5] = { color: require("Themes").unsafe_rawColors.WHITE };
-const obj5 = { color: require("Themes").unsafe_rawColors.WHITE };
+obj[2] = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
+const obj2 = { color: ThemesDefault.unsafe_rawColors.GREEN_360 };
+obj[3] = { color: ThemesDefault.unsafe_rawColors.YELLOW_300 };
+const obj3 = { color: ThemesDefault.unsafe_rawColors.YELLOW_300 };
+obj[4] = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+const obj4 = { color: ThemesDefault.unsafe_rawColors.BLUE_345 };
+obj[5] = { color: ThemesDefault.unsafe_rawColors.WHITE };
+const obj5 = { color: ThemesDefault.unsafe_rawColors.WHITE };
 const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   let str = size.size;
   if (str === undefined) {
@@ -54,7 +55,7 @@ const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   obj[2] = size.children;
   return jsx(Button.LegacyText, { ref, style: null, children: null });
 });
-const result = require("createCacheKey").fileFinishedImporting("design/void/Form/native/FormText.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormText.tsx");
 
 export default forwardRefResult;
 export const FormTextColors = obj;

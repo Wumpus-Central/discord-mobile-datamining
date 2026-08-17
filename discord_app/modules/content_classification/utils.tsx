@@ -1,7 +1,9 @@
 // discord_app/modules/content_classification/utils.tsx
-import { contentClassificationToAgeRestrictionConclusion } from "../../../discord_common/js/shared/modules/content_classification/lib/ContentClassificationToAgeRestriction.tsx";
-import { AgeRestrictionStatus } from "../../../discord_common/js/shared/shared-constants/AgeRestrictionStatus.tsx";
-let result = require("set").fileFinishedImporting("modules/content_classification/utils.tsx");
+import set from "set" /* 2 */;
+import contentClassificationToAgeRestrictionConclusion from "contentClassificationToAgeRestrictionConclusion" /* 4787 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 4789 */;
+
+let result = set.fileFinishedImporting("modules/content_classification/utils.tsx");
 
 export const isAgeRestrictedContentClassification = function isAgeRestrictedContentClassification(contentClassification) {
   let tmp = null != contentClassification;

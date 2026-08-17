@@ -1,17 +1,17 @@
 // discord_app/modules/media_viewer/native/MediaViewerDimensionsContext.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let context = importAllResult.createContext(null);
-const result = require("useWindowDimensions").fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/MediaViewerDimensionsContext.tsx");
 
 export const MediaViewerDimensionsProvider = function MediaViewerDimensionsProvider(children) {
-  return <redux.Provider value={useWindowDimensions({ ignoreKeyboard: true })}>{arg0.children}</redux.Provider>;
+  return <redux.Provider value={useWindowDimensionsDefault({ ignoreKeyboard: true })}>{arg0.children}</redux.Provider>;
 };
 export const useMediaViewerDimensions = function useMediaViewerDimensions() {
   const context = importAllResult.useContext(closure_4);
-  00038__(null != context, "useMediaViewerDimensions must be used inside MediaViewerDimensionsProvider");
+  _modDef38(null != context, "useMediaViewerDimensions must be used inside MediaViewerDimensionsProvider");
   return context;
 };

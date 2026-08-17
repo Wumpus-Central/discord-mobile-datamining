@@ -1,48 +1,41 @@
 // discord_app/modules/oauth2/native/SuccessResult.tsx
-import SafeAreaPaddingView from "SafeAreaPaddingView";
-import get_ActivityIndicator from "getBestActiveInput";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleConnectionOpen from "handleConnectionOpen";
-import ME from "ME";
-import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_9 from "handleConnectionOpen" /* 1979 */;
+import ME from "ME" /* 676 */;
+import { AppLauncherRouteName } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let closure_14;
-let closure_15;
-let closure_6;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ Image: c4, View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
 ({ AnalyticEvents: c10, Permissions: unpackModuleId } = ME);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 createCacheKey = { container: null, scrollView: null, scrollViewContentContainer: null, inner: null, text: null, footer: null, footerLandscape: null, footerPortrait: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { height: "100%", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+createCacheKey[2] = { height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
 createCacheKey[3] = { flexDirection: "column", alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 createCacheKey[4] = { marginTop: 24, paddingHorizontal: 40, textAlign: "center" };
 createCacheKey[5] = { flexDirection: "column", justifyContent: "space-between", padding: 16, gap: 16 };
 createCacheKey[6] = { flexDirection: "row-reverse", padding: 16 };
 createCacheKey[7] = { flexDirection: "column", padding: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: "100%", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/oauth2/native/SuccessResult.tsx");
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center" };
+const result = require("set").fileFinishedImporting("modules/oauth2/native/SuccessResult.tsx");
 
 export default function SuccessResultModal(guild) {
   guild = guild.guild;
   const application = guild.application;
   let stateFromStores;
   let React;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = guild(stateFromStores[10]);
-  let obj1 = React;
+  obj1 = React;
   const items = [application, guild];
   const memo = React.useMemo(() => {
     let obj = application;
@@ -111,16 +104,16 @@ export default function SuccessResultModal(guild) {
         id3 = tmp.id;
       }
       obj[1] = id3;
-      application(stateFromStores[14]).track(outer1_10.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
+      application(stateFromStores[14]).track(closure_1_10.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, obj);
       const tmp9Result = application(stateFromStores[14]);
     }
   }, items1);
   let tmp2Result = tmp2(tmp3[15]);
-  const items2 = [handleConnectionOpen];
+  const items2 = [closure_9];
   stateFromStores = tmp2Result.useStateFromStores(items2, () => channelId.getChannelId());
   tmp2Result = tmp2(tmp3[15]);
-  const items3 = [ensureGuildLoaded];
-  React = tmp2Result.useStateFromStores(items3, () => outer1_7.getChannel(stateFromStores));
+  const items3 = [closure_7];
+  React = tmp2Result.useStateFromStores(items3, () => closure_1_7.getChannel(stateFromStores));
   const items4 = [application, stateFromStores];
   let id1;
   const callback1 = obj1.useCallback(() => {
@@ -135,16 +128,16 @@ export default function SuccessResultModal(guild) {
     if (tmp5) {
       obj = { application_id: null };
       obj[0] = application.id;
-      application(stateFromStores[14]).track(outer1_10.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj);
+      application(stateFromStores[14]).track(closure_1_10.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, obj);
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        let obj = outer1_0(outer1_2[17]);
+        let obj = closure_1_0(closure_1_2[17]);
         const bestActiveInput = obj.getBestActiveInput();
         if (bestActiveInput != null) {
           obj = { type: null, context: null };
-          obj[0] = outer1_0(outer1_2[18]).KeyboardTypes.APP_LAUNCHER;
+          obj[0] = closure_1_0(closure_1_2[18]).KeyboardTypes.APP_LAUNCHER;
           obj = { initialRouteName: null, application: null };
-          obj[0] = outer1_12.APPLICATION_VIEW;
+          obj[0] = closure_1_12.APPLICATION_VIEW;
           obj[1] = closure_1;
           obj[1] = obj;
           bestActiveInput.openCustomKeyboard(obj);
@@ -158,14 +151,14 @@ export default function SuccessResultModal(guild) {
   }
   const items5 = [id1];
   let id2;
-  const callback2 = obj1.useCallback(() => {
+  callback2 = obj1.useCallback(() => {
     let arr = application(stateFromStores[12]);
     arr = arr.pop();
     let id;
     if (application != null) {
       id = application.id;
     }
-    application(stateFromStores[14]).track(outer1_10.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
+    application(stateFromStores[14]).track(closure_1_10.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: id });
   }, items5);
   if (application != null) {
     id2 = application.id;
@@ -176,16 +169,15 @@ export default function SuccessResultModal(guild) {
     if (application != null) {
       id = application.id;
     }
-    application(stateFromStores[14]).track(outer1_10.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
+    application(stateFromStores[14]).track(closure_1_10.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: id });
   }, items6);
-  const items7 = [getUncachedChannelPermissions];
-  const stateFromStores1 = guild(stateFromStores[15]).useStateFromStores(items7, () => outer1_8.can(outer1_11.SEND_MESSAGES, SafeAreaPaddingView));
+  const items7 = [closure_8];
+  const stateFromStores1 = guild(stateFromStores[15]).useStateFromStores(items7, () => closure_1_8.can(closure_1_11.SEND_MESSAGES, closure_3));
   obj = { bottom: true, style: tmp.container, children: null };
   obj = { style: tmp.scrollView, contentContainerStyle: tmp.scrollViewContentContainer, children: null };
   obj1 = { style: tmp.inner, children: null };
-  const obj2 = { source: null };
-  obj2[0] = application(stateFromStores[20]);
-  const items8 = [callback(closure_4, obj2), , ];
+  const tmp2Result1 = guild(stateFromStores[15]);
+  const items8 = [callback(closure_4, { source: application(stateFromStores[20]) }), , ];
   let obj3 = { style: tmp.text, variant: "text-lg/medium", children: null };
   let intl = tmp2(tmp3[11]).intl;
   obj3[2] = intl.string(guild(stateFromStores[11]).t.se5gLj);

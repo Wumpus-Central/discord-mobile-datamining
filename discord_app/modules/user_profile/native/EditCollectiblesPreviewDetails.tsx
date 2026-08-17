@@ -1,32 +1,24 @@
 // discord_app/modules/user_profile/native/EditCollectiblesPreviewDetails.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import _getSystemLocale from "_getSystemLocale";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { getItemRecordsFromPurchases } from "../../collectibles/CollectiblesUtils.tsx";
-import { useCollectiblesData } from "../../collectibles/hooks/useCollectiblesData.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import Text2 from "Text" /* 4734 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import useCollectiblesDataDefault from "useCollectiblesData" /* 8387 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function EditCollectiblesPreviewDescription(arg0) {
-  let nitroJoinCTA;
-  let nitroUpgradeCTA;
-  let product;
-  let purchase;
-  let user;
   ({ user, purchase } = arg0);
   let stringResult = dependencyMap;
   ({ product, nitroJoinCTA, nitroUpgradeCTA } = arg0);
   let obj = initialize;
-  const items = [_getSystemLocale];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
-  let obj1 = getPremiumPlanItem;
+  obj1 = getPremiumPlanItemDefault;
   const canUseCollectiblesResult = obj1.canUseCollectibles(user);
   let obj2 = getItemRecordsFromPurchases;
   let result = obj2.isPremiumCollectiblesProduct(product);
@@ -102,7 +94,7 @@ function EditCollectiblesPreviewDescription(arg0) {
       obj6[2] = stringResult;
       let tmp25Result = callback(tmp(4734).Text, obj6);
     } else {
-      const tmp4Result = getPremiumPlanItem;
+      const tmp4Result = getPremiumPlanItemDefault;
       const Text = tmp(4734).Text;
       const obj7 = { variant: "text-sm/medium", color: "text-default", children: null };
       if (isPremiumResult) {
@@ -112,7 +104,7 @@ function EditCollectiblesPreviewDescription(arg0) {
         obj7[2] = nitroJoinCTA;
         tmp25Result = tmp25(Text, obj7);
       }
-      isPremiumResult = getPremiumPlanItem.isPremium(user);
+      isPremiumResult = getPremiumPlanItemDefault.isPremium(user);
     }
   } else {
     const obj8 = { variant: "text-sm/medium", color: "text-default", children: null };
@@ -121,20 +113,16 @@ function EditCollectiblesPreviewDescription(arg0) {
     return callback(tmp(4734).Text, obj8);
   }
 }
+noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ productDetailsContainer: { width: "100%", marginTop: 16, alignItems: "center", gap: 2 } });
-let result = require("_getSystemLocale").fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/EditCollectiblesPreviewDetails.tsx");
 
 export default function EditCollectiblesPreviewDetails(previewSkuId) {
-  let nitroJoinCTA;
-  let nitroUpgradeCTA;
-  let product;
-  let purchase;
-  let user;
   previewSkuId = previewSkuId.previewSkuId;
   ({ user, nitroJoinCTA, nitroUpgradeCTA } = previewSkuId);
   const tmp = callback2();
-  ({ product, purchase } = useCollectiblesData(previewSkuId));
+  ({ product, purchase } = useCollectiblesDataDefault(previewSkuId));
   let tmp5Result = null;
   if (null != previewSkuId) {
     if (null != product) {
@@ -153,7 +141,7 @@ export default function EditCollectiblesPreviewDetails(previewSkuId) {
       }
       obj = { variant: "text-md/bold", color: "text-default", children: null };
       obj[2] = name;
-      const items = [closure_5(Text.Text, obj), ];
+      const items = [closure_5(Text2.Text, obj), ];
       obj = { user: null, product: null, purchase: null, nitroJoinCTA: null, nitroUpgradeCTA: null };
       obj[0] = user;
       obj[1] = product;

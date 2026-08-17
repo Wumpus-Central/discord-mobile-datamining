@@ -1,11 +1,12 @@
 // discord_app/modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { filterLayer } from "../../../../user_profile/native/UserProfilePreview.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import filterLayerDefault from "filterLayer" /* 9284 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("filterLayer").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/collectibles/profile_effects/native/previews/ProfileEffectUserPreview.tsx");
 
 export default function ProfileEffectUserPreview(profileEffect) {
   profileEffect = profileEffect.profileEffect;
@@ -22,5 +23,5 @@ export default function ProfileEffectUserPreview(profileEffect) {
   }
   obj[1] = formatToPlainStringResult;
   const merged1 = Object.assign(merged);
-  return jsx(filterLayer, { profileEffectOverride: profileEffect, accessibilityLabel: null });
+  return jsx(filterLayerDefault, { profileEffectOverride: profileEffect, accessibilityLabel: null });
 };

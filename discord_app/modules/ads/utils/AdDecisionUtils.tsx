@@ -1,7 +1,9 @@
 // discord_app/modules/ads/utils/AdDecisionUtils.tsx
-import { AdCreativeType } from "../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-const require = arg1;
-let result = 6 * require("set").Millis.HOUR;
+import setDefault from "set" /* 687 */;
+import AdCreativeType from "AdCreativeType" /* 7469 */;
+
+require = arg1;
+let result = 6 * setDefault.Millis.HOUR;
 const result1 = require("set").fileFinishedImporting("modules/ads/utils/AdDecisionUtils.tsx");
 
 export const MAX_RESPONSE_TTL_MS = result;
@@ -45,7 +47,7 @@ export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds
   if (null == responseTtlSeconds) {
     return closure_2;
   } else {
-    const result = 1000 * responseTtlSeconds;
+    result = 1000 * responseTtlSeconds;
     let tmp3 = closure_2;
     if (result < closure_2) {
       tmp3 = tmp2;
@@ -62,7 +64,7 @@ export const questAdDecisionFromAdDecision = function questAdDecisionFromAdDecis
   if (null == response_ttl_seconds) {
     let tmp3 = closure_2;
   } else {
-    const result = 1000 * response_ttl_seconds;
+    result = 1000 * response_ttl_seconds;
     tmp3 = closure_2;
     if (result < closure_2) {
       tmp3 = tmp2;

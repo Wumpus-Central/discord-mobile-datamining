@@ -1,7 +1,8 @@
 // discord_app/modules/messages/EmbedConstants.tsx
-import { MessageEmbedTypes } from "ME";
-import set from "set";
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
+const MessageEmbedTypes = ME.MessageEmbedTypes;
 const items = [, , , , , , , ];
 ({ AUTO_MODERATION_MESSAGE: arr[0], AUTO_MODERATION_NOTIFICATION: arr[1], RICH: arr[2], SAFETY_POLICY_NOTICE: arr[3], SAFETY_SYSTEM_NOTIFICATION: arr[4], AGE_VERIFICATION_SYSTEM_NOTIFICATION: arr[5], VOICE_CHANNEL: arr[6], POLL_RESULT: arr[7] } = MessageEmbedTypes);
 let set = new Set(items);

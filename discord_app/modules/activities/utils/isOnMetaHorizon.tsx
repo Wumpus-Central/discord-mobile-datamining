@@ -1,8 +1,11 @@
 // discord_app/modules/activities/utils/isOnMetaHorizon.tsx
-import { META_PRESENCE_APPLICATION_ID as closure_0 } from "items3";
-import { ActivityGamePlatforms } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import items3 from "items3" /* 4481 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
+let closure_0 = items3.META_PRESENCE_APPLICATION_ID;
+const ActivityGamePlatforms = ME.ActivityGamePlatforms;
+const result = set.fileFinishedImporting("modules/activities/utils/isOnMetaHorizon.tsx");
 
 export default function isOnMetaHorizon(application_id) {
   application_id = undefined;

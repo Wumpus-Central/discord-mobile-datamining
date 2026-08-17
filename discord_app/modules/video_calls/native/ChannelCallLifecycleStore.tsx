@@ -1,7 +1,9 @@
 // discord_app/modules/video_calls/native/ChannelCallLifecycleStore.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "handleConnectionOpen" /* 1979 */;
+import { VoiceCallOverlayType } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
 
 let c4 = false;
 let c5 = false;
@@ -13,11 +15,12 @@ obj[VoiceCallOverlayType.VOICE_CONTROLS_TOGGLE_BUTTON] = obj;
 obj = { x: "Array", y: "flex", width: "y", height: "HermesInternal", screenOrientation: require("handleOrientationChange").OrientationType.PORTRAIT, hasUserInteractedSinceOrientationChange: true, isInitialized: true, isVisible: false };
 obj[VoiceCallOverlayType.CAMERA_PREVIEW_PICTURE_IN_PICTURE] = obj;
 let c10 = true;
+const Store = initializeDefault.Store;
 class ChannelCallLifecycleStore extends Store {
 }
 const prototype = ChannelCallLifecycleStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(handleConnectionOpen);
+  this.waitFor(closure_3);
 };
 prototype["shouldReactToSeriousThermalStateWhenActivityFocused"] = function shouldReactToSeriousThermalStateWhenActivityFocused() {
   return c4;
@@ -45,18 +48,18 @@ prototype["isPipEnabledWhileFocusedOnActivityOrStream"] = function isPipEnabledW
   return c10;
 };
 ChannelCallLifecycleStore.displayName = "ChannelCallLifecycleStore";
-const channelCallLifecycleStore = new ChannelCallLifecycleStore(require("dispatcher"), {
+const channelCallLifecycleStore = new ChannelCallLifecycleStore(dispatcherDefault, {
   VOICE_CHANNEL_SELECT: function handleVoiceChannelSelect(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
       voiceChannelId = voiceChannelId.getVoiceChannelId();
       if (voiceChannelId !== voiceChannelId) {
-        let c4 = false;
-        let c5 = false;
-        let c7 = false;
-        let c6 = false;
-        let closure_9 = obj;
+        c4 = false;
+        c5 = false;
+        c7 = false;
+        c6 = false;
+        closure_9 = obj;
       }
     }
   },
@@ -64,52 +67,50 @@ const channelCallLifecycleStore = new ChannelCallLifecycleStore(require("dispatc
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c4 = true;
+      c4 = true;
     }
   },
   EMBEDDED_ACTIVITY_CONSUME_RESPOND_TO_SERIOUS_THERMAL_STATE_REQUEST: function handleConsumeReactToSeriousThermalStateRequest(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c5 = true;
+      c5 = true;
     }
   },
   EMBEDDED_ACTIVITY_DISREGARD_SERIOUS_THERMAL_STATE: function handleDisregardSeriousThermalState(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c6 = true;
+      c6 = true;
     }
   },
   EMBEDDED_ACTIVITY_SET_DEBUG_OVERLAY_VISIBILITY: function handleSetDebugOverlayVisibility(visible) {
     visible = visible.visible;
   },
   VOICE_CALL_OVERLAY_LAYOUT_STATE_UPDATE: function handleVoiceCallOverlayLayoutStateUpdate(arg0) {
-    let voiceCallOverlayLayoutState;
-    let voiceCallOverlayType;
-    const obj = {};
+    obj = {};
     ({ voiceCallOverlayType, voiceCallOverlayLayoutState } = arg0);
     const merged = Object.assign(obj);
     obj[voiceCallOverlayType] = voiceCallOverlayLayoutState;
   },
   VOICE_CALL_SET_PIP_ENABLED_FOR_ACTIVITY_OR_STREAM: function handleSetPipEnabledForActivityOrStream(pipEnabledWhileFocusedOnActivityOrStream) {
-    let closure_10 = pipEnabledWhileFocusedOnActivityOrStream.pipEnabledWhileFocusedOnActivityOrStream;
+    closure_10 = pipEnabledWhileFocusedOnActivityOrStream.pipEnabledWhileFocusedOnActivityOrStream;
   },
   EMBEDDED_ACTIVITY_OPEN: function handleEmbeddedActivityOpen(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c10 = true;
+      c10 = true;
     }
   },
   STREAM_WATCH: function handleStreamWatch(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c10 = true;
+      c10 = true;
     }
   }
 });
-const result = require("handleOrientationChange").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallLifecycleStore.tsx");
 
 export default channelCallLifecycleStore;

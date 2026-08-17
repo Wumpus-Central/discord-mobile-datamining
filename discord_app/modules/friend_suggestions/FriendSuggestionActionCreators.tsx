@@ -1,25 +1,25 @@
 // discord_app/modules/friend_suggestions/FriendSuggestionActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("sendRequest").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/friend_suggestions/FriendSuggestionActionCreators.tsx");
 
 export default {
   fetch() {
     return callback(function*() {
       const callback = tmp3;
-      let c3 = 1;
-      const HTTP = outer1_0(outer1_2[2]).HTTP;
-      const obj1 = { url: null, rejectWithError: true };
+      c3 = 1;
+      const HTTP = closure_1_0(closure_1_2[2]).HTTP;
+      obj1 = { url: null, rejectWithError: true };
       obj1[0] = constants.FRIEND_SUGGESTIONS;
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
         let obj3 = callback(709);
         obj3.dispatch({ type: "LOAD_FRIEND_SUGGESTIONS_FAILURE" });
-        let c5 = 3;
+        c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;

@@ -1,11 +1,13 @@
 // discord_app/modules/panels/morphable/native/AppFreezer.tsx
-import "noop";
-import AppFreezeStore from "../AppFreezeStore.tsx";
-import { jsx } from "jsxProd";
-import set from "set";
+import noopAll from "noop" /* 19 */;
+import setDefault from "set" /* 7190 */;
+import closure_2 from "module_9010" /* 9010 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
+noopAll;
+let closure_4 = jsx(setDefault, { style: { flex: 1 } });
+const result = require("set").fileFinishedImporting("modules/panels/morphable/native/AppFreezer.tsx");
 
 export default function AppFreezer(children) {
   let flag = children.manualFreeze;
@@ -14,7 +16,7 @@ export default function AppFreezer(children) {
   }
   let placeholder = children.placeholder;
   if (placeholder === undefined) {
-    placeholder = set;
+    placeholder = closure_4;
   }
   let lockKeys = children.lockKeys;
   let freeze = callback((lockKeys) => {

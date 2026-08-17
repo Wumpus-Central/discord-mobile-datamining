@@ -1,9 +1,11 @@
 // discord_app/modules/forums/native/composer/ForumComposerModalActionCreators.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
-import { trackForumChannelSeenBatch } from "../../tracking/Tracking.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import trackForumChannelSeenBatch from "trackForumChannelSeenBatch" /* 7514 */;
+
 let c3 = "create-forum-post";
-let result = require("ForumComposerModal").fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
+let result = set.fileFinishedImporting("modules/forums/native/composer/ForumComposerModalActionCreators.tsx");
 
 export const openCreateForumPostModal = function openCreateForumPostModal(guildId) {
   let obj = trackForumChannelSeenBatch;
@@ -15,7 +17,7 @@ export const openCreateForumPostModal = function openCreateForumPostModal(guildI
     const result1 = tmp(7514).trackForumCreateNewPostStarted(obj);
     const tmpResult = tmp(7514);
   }
-  ModalActionCreators.pushLazy(asyncRequireImpl(10166, dependencyMap.paths), guildId, c3);
+  _modDef5260.pushLazy(asyncRequireImpl(10166, dependencyMap.paths), guildId, c3);
 };
 export const closeCreateForumPostModal = function closeCreateForumPostModal() {
   let flag = arg0;
@@ -26,5 +28,5 @@ export const closeCreateForumPostModal = function closeCreateForumPostModal() {
     const result = trackForumChannelSeenBatch.trackMobileForumComposerDismissed();
     const obj = trackForumChannelSeenBatch;
   }
-  ModalActionCreators.popWithKey(c3);
+  _modDef5260.popWithKey(c3);
 };

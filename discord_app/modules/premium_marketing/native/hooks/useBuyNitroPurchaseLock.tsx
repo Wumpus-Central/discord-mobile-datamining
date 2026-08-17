@@ -1,6 +1,6 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx
-import updateProduct from "updateProduct";
-import keys from "keys";
+import closure_2 from "updateProduct" /* 5319 */;
+import keys from "keys" /* 644 */;
 
 const require = arg1;
 let closure_3 = keys.create(() => ({ isLocked: false, hasCompletedInitialLoad: false }));
@@ -29,7 +29,7 @@ keys = {
     store.setState({ hasCompletedInitialLoad: promotionMarketingComponent });
   }
 };
-const result = require("initialize").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPurchaseLock.tsx");
 
 export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocked() {
   let stateFromStores = store((hasCompletedInitialLoad) => {
@@ -40,7 +40,7 @@ export const useIsBuyNitroPurchaseBlocked = function useIsBuyNitroPurchaseBlocke
     }
     return isLocked;
   });
-  const items = [updateProduct];
+  const items = [closure_2];
   if (!stateFromStores) {
     stateFromStores = obj.useStateFromStores(items, () => busy.isBusy());
   }

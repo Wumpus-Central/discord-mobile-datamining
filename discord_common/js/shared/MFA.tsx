@@ -1,5 +1,5 @@
 // discord_common/js/shared/MFA.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function finishMFACheck() {
@@ -15,15 +15,12 @@ function finishMFACheck() {
 function _finishMFACheck() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     const iter = (function*(arg0, body) {
-      let c0;
-      let c1;
-      let c2;
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -71,11 +68,11 @@ function _finishMFACheck() {
               throw body;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
-              let c5 = 1;
+              c5 = 1;
               const HTTP = callback(table[1]).HTTP;
               const obj2 = { url: "/mfa/finish", body: null, retries: null, rejectWithError: false };
               const obj3 = { ticket: null, mfa_type: null, data: null };
@@ -99,7 +96,7 @@ function _finishMFACheck() {
             }
             if (message) {
               const _Error = Error;
-              const error = new Error(closure_4.body.message);
+              error = new Error(closure_4.body.message);
               throw error;
             } else {
               throw closure_4;
@@ -134,7 +131,7 @@ function _finishMFACheck() {
     iter.next();
     return iter;
   });
-  const _finishMFACheck = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -146,18 +143,18 @@ function _finishMFACheck() {
 function _trySubmit() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, token) {
-      let asyncGeneratorStep = tmp4;
-      let closure_0 = token;
+      closure_2 = tmp4;
+      closure_0 = token;
       yield v0(closure_0);
       token = token.token;
       const promise = new Promise((arg0, arg1) => {
         const callback = arg0;
-        let closure_1 = arg1;
+        closure_1 = arg1;
         callback({ "X-Discord-MFA-Authorization": closure_1 }, (body) => {
           body = body.body;
           let code;
@@ -176,7 +173,7 @@ function _trySubmit() {
             }
             return flag;
           }
-          const error = new Error(body.body.message);
+          error = new Error(body.body.message);
           callback2(error);
           flag = true;
         });
@@ -184,7 +181,7 @@ function _trySubmit() {
       return promise;
     })();
   });
-  const _trySubmit = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

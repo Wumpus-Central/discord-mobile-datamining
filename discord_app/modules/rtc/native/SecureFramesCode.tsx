@@ -1,22 +1,18 @@
 // discord_app/modules/rtc/native/SecureFramesCode.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function SecureFramesCodeGrid(chunks) {
   chunks = chunks.chunks;
   const columns = chunks.columns;
   let React;
   let memo;
-  React = createCacheKey();
+  React = callback3();
   let items = [chunks, columns];
   memo = React.useMemo(() => {
     const items = [];
@@ -36,16 +32,16 @@ function SecureFramesCodeGrid(chunks) {
   }, items);
   return callback(closure_7, {
     children: memo.map((arr) => {
-      let obj = { style: row.row, children: arr.map((children) => outer1_5(outer1_0(outer1_1[6]).Text, { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children }, "" + children + "-" + arg1)) };
-      const children = [outer1_5(outer1_4, obj), ];
+      let obj = { style: row.row, children: arr.map((children) => closure_1_5(closure_1_0(closure_1_1[6]).Text, { style: codeText.codeText, variant: "text-md/normal", color: "text-default", children }, "" + children + "-" + arg1)) };
+      const children = [closure_1_5(closure_1_4, obj), ];
       let tmp3Result = arg1 < memo.length - 1;
       if (tmp3Result) {
         obj = { style: null };
         obj[0] = row.divider;
-        tmp3Result = outer1_5(tmp2, obj);
+        tmp3Result = closure_1_5(tmp2, obj);
       }
       children[1] = tmp3Result;
-      return outer1_6(outer1_4, { children }, "" + arr.join(" ") + "-" + arg1);
+      return closure_1_6(closure_1_4, { children }, "" + arr.join(" ") + "-" + arg1);
     })
   });
 }
@@ -53,23 +49,20 @@ function SecureFramesCodeGrid(chunks) {
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { codeText: createCacheKey, row: { flexDirection: "row", justifyContent: "space-around", paddingVertical: 8 }, divider: null, codeHeader: null, code: null, loading: null };
 createCacheKey = { fontFamily: require("sum").Fonts.CODE_NORMAL };
-createCacheKey[2] = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-let obj1 = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: require("Themes").radii.lg, borderTopLeftRadius: require("Themes").radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: require("Themes").radii.lg, borderTopLeftRadius: require("Themes").radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: require("Themes").radii.lg, borderBottomLeftRadius: require("Themes").radii.lg };
+createCacheKey[2] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: ThemesDefault.radii.lg, borderTopLeftRadius: ThemesDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderTopRightRadius: ThemesDefault.radii.lg, borderTopLeftRadius: ThemesDefault.radii.lg, paddingVertical: 10, paddingHorizontal: 16, justifyContent: "space-between", alignItems: "center", flexDirection: "row" };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: ThemesDefault.radii.lg, borderBottomLeftRadius: ThemesDefault.radii.lg };
 createCacheKey[5] = { minHeight: 126 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj3 = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: require("Themes").radii.lg, borderBottomLeftRadius: require("Themes").radii.lg };
-const result = require("sum").fileFinishedImporting("modules/rtc/native/SecureFramesCode.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const obj3 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, paddingVertical: 8, paddingHorizontal: 16, borderBottomRightRadius: ThemesDefault.radii.lg, borderBottomLeftRadius: ThemesDefault.radii.lg };
+const result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesCode.tsx");
 
 export default function SecureFramesCode(chunks) {
-  let columns;
-  let title;
-  let trailing;
   chunks = chunks.chunks;
   ({ title, trailing, columns } = chunks);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.codeHeader, children: null };
   const items = [callback(Text.Text, { color: "mobile-text-heading-primary", variant: "heading-md/semibold", children: title }), trailing];
   obj[1] = items;
@@ -81,7 +74,7 @@ export default function SecureFramesCode(chunks) {
     obj[1] = columns;
     let tmp5Result = tmp5(SecureFramesCodeGrid, obj);
   } else {
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp.loading;
     tmp5Result = tmp5(closure_3, obj1);
   }

@@ -1,5 +1,7 @@
 // discord_app/modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx
-const result = 2 * require("set").Millis.DAY;
+import setDefault from "set" /* 687 */;
+
+const result = 2 * setDefault.Millis.DAY;
 const result1 = require("set").fileFinishedImporting("modules/guild_mod_dash_member_safety/MemberSafetyElasticSearchQueryTypes.tsx");
 
 export const UNUSUAL_DM_COMPARISON_DELTA = result;

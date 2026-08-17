@@ -1,26 +1,26 @@
 // discord_app/modules/autocompleter/createAutocompleterResultForChannelId.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelTypes } from "ME";
-import { computeChannelName } from "../channel/useChannelName.tsx";
+import computeChannelName from "computeChannelName" /* 4984 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 require("HeaderRecord").AutocompleterResultTypes;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
+const result = require("set").fileFinishedImporting("modules/autocompleter/createAutocompleterResultForChannelId.tsx");
 
 export default function createAutocompleterResultForChannelId(arg0, arg1, closure_9, closure_7) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = ensureGuildLoaded;
+    obj = closure_2;
   }
-  let obj1 = closure_9;
+  obj1 = closure_9;
   if (closure_9 === undefined) {
-    obj1 = mergeGuildAvatar;
+    obj1 = closure_4;
   }
   let tmp = closure_7;
   if (closure_7 === undefined) {
-    tmp = markAllUserIdListsStale;
+    tmp = closure_3;
   }
   const channel = obj.getChannel(arg0);
   if (null == channel) {

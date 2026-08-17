@@ -1,19 +1,20 @@
 // discord_app/modules/create_guild/native/components/AcceptInviteContainer.tsx
-import GuildMemberFlags from "GuildMemberFlags";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import updateInvite from "updateInvite";
-import { GuildMemberFlags } from "GuildMemberFlags";
-import { jsx } from "SafeAreaPaddingView";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "updateInvite" /* 4359 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { flex: { flex: 1 }, paddingContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("trackCommunicationDisabled").fileFinishedImporting("modules/create_guild/native/components/AcceptInviteContainer.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/create_guild/native/components/AcceptInviteContainer.tsx");
 
 export default function AcceptInviteContainer(code) {
   code = code.code;
@@ -27,12 +28,12 @@ export default function AcceptInviteContainer(code) {
   isRegistration = merged.isRegistration;
   let obj = code(inviteInstanceId[9]);
   navigation = obj.useNavigation();
-  const tmp2 = createCacheKey();
-  const items = [updateInvite, stateFromStoresObject, callback];
+  const tmp2 = callback();
+  const items = [closure_7, stateFromStoresObject, callback];
   stateFromStoresObject = code(inviteInstanceId[10]).useStateFromStoresObject(items, () => {
-    const invite = outer1_7.getInvite(set);
+    const invite = closure_1_7.getInvite(set);
     let guild;
-    const inviteError = outer1_7.getInviteError(set);
+    const inviteError = closure_1_7.getInviteError(set);
     if (invite != null) {
       guild = invite.guild;
     }
@@ -117,27 +118,27 @@ export default function AcceptInviteContainer(code) {
             obj[0] = arg1;
             return obj;
           } else {
-            let callback = tmp2;
+            callback = tmp2;
             let guildId;
             callback = undefined;
-            const guildMember = outer1_5.guildMember;
+            const guildMember = closure_1_5.guildMember;
             guildId = guildMember;
             if (c3) {
               if (null != guildMember) {
-                let obj4 = outer1_0(table[12]);
+                let obj4 = closure_1_0(table[12]);
                 const flags = guildMember.flags;
                 guildId = flags;
                 if (flags == null) {
                   guildId = 0;
                 }
-                if (!obj4.hasFlag(guildId, outer1_8.COMPLETED_ONBOARDING)) {
+                if (!obj4.hasFlag(guildId, closure_1_8.COMPLETED_ONBOARDING)) {
                   table = 1;
                   c3 = 1;
-                  const obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = tmp10(tmp11[14])(tmp11[13], tmp11.paths);
                   return obj1;
                 }
-                tmp10 = outer1_0;
+                tmp10 = closure_1_0;
               }
             }
           }
@@ -219,11 +220,11 @@ export default function AcceptInviteContainer(code) {
             };
             table = function _transitionToInviteChannel() {
               const self = this;
-              const tmp = outer2_3((arg0) => {
-                let closure_0 = arg0;
-                let c5 = 0;
-                let c6 = 0;
-                let c4 = 0;
+              const tmp = closure_2_3((arg0) => {
+                closure_0 = arg0;
+                c5 = 0;
+                c6 = 0;
+                c4 = 0;
                 return (function*(arg0) {
                   if (c6 === 2) {
                     c6 = 3;
@@ -252,9 +253,9 @@ export default function AcceptInviteContainer(code) {
                           return obj;
                         } else {
                           const table = tmp3;
-                          let closure_1 = tmp7;
+                          closure_1 = tmp7;
                           if (null != channel) {
-                            let obj1 = outer2_0(table[15]);
+                            obj1 = closure_2_0(table[15]);
                             if (obj1.isGuildScheduledEventInviteEmbed(tmp38)) {
                               let prop;
                               if (tmp38 != null) {
@@ -264,7 +265,7 @@ export default function AcceptInviteContainer(code) {
                                 c6 = 3;
                                 return { value: "HermesInternal", done: "HermesInternal" };
                               } else {
-                                outer1_1();
+                                closure_1_1();
                                 let tmp11Result = tmp11(tmp12[16]);
                                 const result = tmp11Result.transitionToEventDetailsFromInvite(prop);
                                 c6 = 3;
@@ -280,17 +281,17 @@ export default function AcceptInviteContainer(code) {
                               tmp11Result = tmp11(tmp12[15]);
                               if (tmp11Result.isRoleSubscriptionInvite(tmp38)) {
                                 if (null != id) {
-                                  let c4 = 1;
+                                  c4 = 1;
                                   c5 = 2;
                                   c6 = 1;
                                   const obj2 = { value: null, done: false };
-                                  obj2[0] = outer2_1(tmp12[17]).performRoleSubscriptionUpsellRedirect(id);
+                                  obj2[0] = closure_2_1(tmp12[17]).performRoleSubscriptionUpsellRedirect(id);
                                   return obj2;
                                 }
                               }
                             }
                           } else {
-                            outer1_1();
+                            closure_1_1();
                           }
                           c6 = 3;
                         }
@@ -309,14 +310,14 @@ export default function AcceptInviteContainer(code) {
                         c4 = 0;
                       }
                       if (null != channel.channel) {
-                        outer1_1();
+                        closure_1_1();
                         const _setTimeout = setTimeout;
                         const timerId = setTimeout(() => { ... }, 1);
                       } else {
-                        outer1_1();
+                        closure_1_1();
                       }
                     } catch (tmp28) {
-                      let GuildMemberFlags = tmp28;
+                      closure_3 = tmp28;
                       if (tmp4 === c4) {
                         c6 = tmp2;
                         throw tmp28;
@@ -327,7 +328,7 @@ export default function AcceptInviteContainer(code) {
                   }
                 })();
               });
-              let c2 = tmp;
+              closure_2 = tmp;
               const apply = tmp.apply;
               if (typeof apply === "unknown") {
                 let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -336,17 +337,17 @@ export default function AcceptInviteContainer(code) {
               }
               return applyArgumentsResult;
             };
-            invite = outer1_5.invite;
+            invite = closure_1_5.invite;
             if (obj10.handleNSFWGuildInvite(invite)) {
               table = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = v0();
               return obj1;
             } else {
-              if (!outer1_5.isGuildMember) {
+              if (!closure_1_5.isGuildMember) {
                 if (null != invite) {
                   let obj2 = { inviteKey: null, context: null, callback: null };
-                  obj2[0] = outer1_0;
+                  obj2[0] = closure_1_0;
                   if (null != table) {
                     const obj3 = { invite_instance_id: null };
                     obj3[0] = tmp27;
@@ -367,10 +368,10 @@ export default function AcceptInviteContainer(code) {
               v0 = 1;
               table = 1;
               const obj6 = { value: null, done: false };
-              obj6[0] = outer1_6();
+              obj6[0] = closure_1_6();
               return obj6;
             }
-            obj10 = outer1_0(table[19]);
+            obj10 = closure_1_0(table[19]);
             tmp24 = table;
           }
         } else if (arg0 === 1) {
@@ -397,9 +398,8 @@ export default function AcceptInviteContainer(code) {
   const merged1 = Object.assign(merged);
   const merged2 = Object.assign(stateFromStoresObject);
   const tmp8 = onPressClose(inviteInstanceId[20]);
-  obj = { style: items4, bottom: true, children: null };
+  obj = { style: items4, bottom: true, children: jsx(code(inviteInstanceId[22]).ThemeContextProvider, { theme: "darker", children: jsx(onPressClose(inviteInstanceId[20]), { code, onPressClose, onPressJoin: callback1 }) }) };
   items4 = [, ];
   ({ flex: arr5[0], paddingContainer: arr5[1] } = tmp2);
-  obj[2] = jsx(code(inviteInstanceId[22]).ThemeContextProvider, { theme: "darker", children: jsx(onPressClose(inviteInstanceId[20]), { style: items4, bottom: true, children: null }) });
-  return jsx(code(inviteInstanceId[21]).SafeAreaPaddingView, { style: items4, bottom: true, children: null });
+  return jsx(code(inviteInstanceId[21]).SafeAreaPaddingView, { style: items4, bottom: true, children: jsx(code(inviteInstanceId[22]).ThemeContextProvider, { theme: "darker", children: jsx(onPressClose(inviteInstanceId[20]), { code, onPressClose, onPressJoin: callback1 }) }) });
 };

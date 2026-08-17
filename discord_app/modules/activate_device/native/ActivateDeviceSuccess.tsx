@@ -1,26 +1,22 @@
 // discord_app/modules/activate_device/native/ActivateDeviceSuccess.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { innerContent } from "ActivateDeviceSharedStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import preloadDefault from "preload" /* 5449 */;
+import innerContentDefault from "innerContent" /* 13344 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5, Fragment: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ image: { width: 300, height: 200, alignSelf: "center" } });
-const result = require("jsxProd").fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
+const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDeviceSuccess.tsx");
 
 export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) {
-  let data;
-  let successImage;
   ({ data, successImage } = onComplete);
   if (null != data.twoWayLinkCode) {
     const intl2 = getSystemLocale.intl;
@@ -36,23 +32,22 @@ export const ActivateDeviceSuccess = function ActivateDeviceSuccess(onComplete) 
   let tmp9 = null;
   if (null != successImage) {
     let obj = { source: null, style: null, resizeMode: "contain" };
-    let obj1 = getAvatarURL;
+    obj1 = getAvatarURL;
     obj[0] = obj1.makeSource(successImage);
     obj[1] = tmp.image;
-    tmp9 = callback(preload, obj);
-    const tmp13 = preload;
+    tmp9 = callback(preloadDefault, obj);
+    const tmp13 = preloadDefault;
   }
   const items = [tmp9, , ];
-  obj = { style: innerContent.innerContent, children: null };
-  obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: null, children: null };
-  obj[2] = innerContent.centerText;
+  obj = { style: innerContentDefault.innerContent, children: null };
+  obj = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: innerContentDefault.centerText, children: null };
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(getSystemLocale.t.qDtJmD);
   const items1 = [callback(Text.Text, obj), ];
   let tmp18Result = null;
   if (null != stringResult) {
     obj1 = { variant: "text-md/medium", color: "text-default", style: null, children: null };
-    obj1[2] = innerContent.centerText;
+    obj1[2] = innerContentDefault.centerText;
     obj1[3] = stringResult;
     tmp18Result = tmp18(tmp19(4734).Text, obj1);
   }

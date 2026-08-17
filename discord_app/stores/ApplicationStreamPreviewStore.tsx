@@ -1,17 +1,20 @@
 // discord_app/stores/ApplicationStreamPreviewStore.tsx
-import { StreamTypes } from "StreamIssueReportReasons";
-import { Store } from "initialize";
-import set from "isStreamKey";
-import { apply } from "../../_runtime/00012_apply.js";
-import { isStreamKey } from "../modules/go_live/utils/StreamKeyUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isStreamKey from "isStreamKey" /* 4531 */;
+import StreamIssueReportReasons from "StreamIssueReportReasons" /* 4532 */;
+import set from "set" /* 2 */;
 
 function reset() {
-  let closure_4 = {};
-  let closure_5 = {};
+  closure_4 = {};
+  closure_5 = {};
 }
+const StreamTypes = StreamIssueReportReasons.StreamTypes;
 let closure_4 = {};
 let closure_5 = {};
 let set = new Set();
+const Store = initializeDefault.Store;
 class ApplicationStreamPreviewStore extends Store {
 }
 const prototype = ApplicationStreamPreviewStore.prototype;
@@ -75,7 +78,7 @@ prototype["getIsPreviewLoading"] = function getIsPreviewLoading(closure_0, closu
   return set.has(obj.encodeStreamKey(obj));
 };
 ApplicationStreamPreviewStore.displayName = "ApplicationStreamPreviewStore";
-const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(require("dispatcher"), {
+const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(dispatcherDefault, {
   CONNECTION_OPEN: reset,
   LOGOUT: reset,
   STREAM_PREVIEW_FETCH_START: function handleStreamPreviewFetch(streamKey) {
@@ -94,8 +97,6 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(require(
     set.delete(streamKey);
   },
   STREAM_PREVIEW_FETCH_FAIL: function handleStreamPreviewFetchFail(arg0) {
-    let retryAfter;
-    let streamKey;
     ({ streamKey, retryAfter } = arg0);
     const timestamp = Date.now();
     if (null == retryAfter) {
@@ -106,11 +107,11 @@ const applicationStreamPreviewStore = new ApplicationStreamPreviewStore(require(
   },
   VOICE_STATE_UPDATES: function handleVoiceStateUpdates(voiceStates) {
     voiceStates = voiceStates.voiceStates;
-    const isEmptyResult = apply.isEmpty(closure_4);
+    const isEmptyResult = applyDefault.isEmpty(closure_4);
     let reduced = !isEmptyResult;
     if (isEmptyResult) {
-      reduced = !apply.isEmpty(closure_5);
-      const tmpResult = apply;
+      reduced = !applyDefault.isEmpty(closure_5);
+      const tmpResult = applyDefault;
     }
     if (reduced) {
       reduced = voiceStates.reduce((arg0, guildId) => {

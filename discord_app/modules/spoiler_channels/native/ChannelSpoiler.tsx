@@ -1,47 +1,46 @@
 // discord_app/modules/spoiler_channels/native/ChannelSpoiler.tsx
-import _slicedToArray from "_slicedToArray";
-import Stack from "Stack";
-import { View } from "Text";
-import getParticipants from "getParticipants";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { VoicePanelControlsModes } from "VoicePanelControlsModes";
-import jsxProd from "PressableBase";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import GatedContentDefault from "GatedContent" /* 11839 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "getParticipants" /* 4773 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { GatedContent } from "../../../components_native/warnings/GatedContent.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { AgeVerificationModalEntryPoint } from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
-createCacheKey = { height: 1, width: "100%", backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginVertical: 16 };
+createCacheKey = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { position: "absolute", opacity: 0, left: 0, right: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/spoiler_channels/native/ChannelSpoiler.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/spoiler_channels/native/ChannelSpoiler.tsx");
 
 export default function ChannelSpoiler(channelId) {
   const _require = channelId;
   let obj = _initialize;
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getGuild(channelId.guildId));
-  let obj1 = _initialize;
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_7.getChannel(channelId.channelId));
-  const tmp4 = createCacheKey();
+  const items = [closure_8];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getGuild(channelId.guildId));
+  obj1 = _initialize;
+  const items1 = [closure_7];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getChannel(channelId.channelId));
+  const tmp4 = callback3();
   let obj3 = React;
   const tmp5 = setControlsMode(React.useState(false), 2);
-  const importDefault = tmp5[1];
+  importDefault = tmp5[1];
   let isVocalResult;
   if (stateFromStores1 != null) {
     isVocalResult = stateFromStores1.isVocal();
   }
-  const dependencyMap = isVocalResult;
+  dependencyMap = isVocalResult;
   setControlsMode = obj3.useContext(tmp6(11439)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
@@ -49,10 +48,10 @@ export default function ChannelSpoiler(channelId) {
   items2[3] = isVocalResult;
   const callback = obj3.useCallback(() => {
     if (closure_2) {
-      if (outer1_6.getChatOpen(channelId.channelId)) {
+      if (closure_1_6.getChatOpen(channelId.channelId)) {
         callback(isVocalResult[13]).updateChatOpen(tmp2.channelId, false);
         let obj = { mode: null };
-        obj[0] = outer1_9.FLOATING_DEFAULT;
+        obj[0] = closure_1_9.FLOATING_DEFAULT;
         setControlsMode(obj);
       }
       tmp2 = channelId;
@@ -143,7 +142,7 @@ export default function ChannelSpoiler(channelId) {
   }
   const obj10 = { modalType: null, onAgree: null, onDisagree: null, title: null, subtitle: null, description: null, agreement: null, disagreement: null, guildId: null, channelId: null };
   const tmp20 = callback;
-  tmp7 = computeChannelName(stateFromStores1);
+  tmp7 = computeChannelNameDefault(stateFromStores1);
   obj10[0] = _AgeVerificationModalEntryPoint.NsfwSpaceWarningModalType.SPOILER_CHANNEL;
   obj10[1] = function onAgree() {
     callback(isVocalResult[14]).spoilerAgree(channelId.channelId);
@@ -163,5 +162,5 @@ export default function ChannelSpoiler(channelId) {
   }
   obj10[8] = id;
   obj10[9] = channelId.channelId;
-  return tmp20(GatedContent, obj10);
+  return tmp20(GatedContentDefault, obj10);
 };

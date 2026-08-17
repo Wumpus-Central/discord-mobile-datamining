@@ -1,25 +1,24 @@
 // discord_app/modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const sum = require("AppLauncherBackButton").BACK_BUTTON_SIZE + 2 * DEFAULT_CONTENT_PADDING + 36 + 4;
 let closure_8 = sum - 56;
 createCacheKey = { headerContainer: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", position: "absolute", top: -16, left: 0, right: 0, padding: DEFAULT_CONTENT_PADDING, zIndex: 1 }, loadingHeaderContainer: null, appIconMask: null, appIcon: null, loadingIcon: null, appSmallName: null, icon: null, headerBannerOverlay: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: APP_LAUNCHER_BUILT_IN_SECTION_ICON.SCREEN_BACKGROUND_COLOR, borderRadius: require("Themes").radii.xl + 4 };
-let obj1 = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: APP_LAUNCHER_BUILT_IN_SECTION_ICON.SCREEN_BACKGROUND_COLOR, borderRadius: require("Themes").radii.xl + 4 };
-createCacheKey[3] = { width: 72, height: 72, borderRadius: require("Themes").radii.xl };
-let obj2 = { width: 72, height: 72, borderRadius: require("Themes").radii.xl };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+createCacheKey[2] = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: APP_LAUNCHER_BUILT_IN_SECTION_ICON.SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
+let obj1 = { position: "absolute", padding: 4, bottom: -36, left: "50%", backgroundColor: APP_LAUNCHER_BUILT_IN_SECTION_ICON.SCREEN_BACKGROUND_COLOR, borderRadius: ThemesDefault.radii.xl + 4 };
+createCacheKey[3] = { width: 72, height: 72, borderRadius: ThemesDefault.radii.xl };
+let obj2 = { width: 72, height: 72, borderRadius: ThemesDefault.radii.xl };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[5] = { textAlign: "center", pointerEvents: "none", flexGrow: 1, marginHorizontal: 8 };
 let items = [{ rotate: "180deg" }];
 createCacheKey[6] = { transform: items };
@@ -28,15 +27,13 @@ createCacheKey = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function AppLauncherCommandViewHeaderTsx1(){const{interpolate,scrollOffsetY,TOTAL_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[0,1],'clamp'),transform:[{translateY:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[12,0],'clamp')}]};}" };
 let closure_11 = { code: "function AppLauncherCommandViewHeaderTsx2(){const{APP_ICON_SIZE,APP_ICON_BORDER_WIDTH,DEFAULT_CONTENT_PADDING,interpolate,scrollOffsetY,TOTAL_SCROLL_RANGE}=this.__closure;return{transform:[{translateX:-APP_ICON_SIZE/2-APP_ICON_BORDER_WIDTH+DEFAULT_CONTENT_PADDING},{translateY:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[0,-APP_ICON_SIZE/2],'clamp')},{scale:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[1,0],'clamp')}],opacity:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[1,0],'clamp')};}" };
 let closure_12 = { code: "function AppLauncherCommandViewHeaderTsx3(){const{interpolate,scrollOffsetY,TOTAL_SCROLL_RANGE}=this.__closure;return{opacity:interpolate(scrollOffsetY.get(),[0,TOTAL_SCROLL_RANGE],[0,0.5],'clamp')};}" };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
-const result = require("APP_LAUNCHER_BUILT_IN_SECTION_ICON").fileFinishedImporting("modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx");
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/command_view/AppLauncherCommandViewHeader.tsx");
 
 export const COLLAPSED_HEADER_HEIGHT = 56;
 export const EXPANDED_HEADER_TOTAL_CONSUMED_SPACE_IN_PARENT = sum + -16;
 export const useStyles = createCacheKey;
 export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeader(onPress) {
-  let command;
-  let scrollOffsetY;
   ({ command, scrollOffsetY } = onPress);
   const section = onPress.section;
   const tmp = createCacheKey();
@@ -46,20 +43,20 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
     if (section != null) {
       application = section.application;
     }
-    return scrollOffsetY(outer1_2[7]).getAppLauncherIconSource(application);
+    return scrollOffsetY(closure_1_2[7]).getAppLauncherIconSource(application);
   }, items);
   let obj = scrollOffsetY(4115);
   class A {
     constructor() {
       obj = { opacity: null, transform: null };
-      obj2 = scrollOffsetY(outer1_2[8]);
+      obj2 = scrollOffsetY(closure_1_2[8]);
       items = [0];
-      items[1] = outer1_8;
+      items[1] = closure_1_8;
       obj[0] = obj2.interpolate(scrollOffsetY.get(), items, [0, 1], "clamp");
       obj = { translateY: null };
-      obj4 = scrollOffsetY(outer1_2[8]);
+      obj4 = scrollOffsetY(closure_1_2[8]);
       items1 = [0];
-      items1[1] = outer1_8;
+      items1[1] = closure_1_8;
       obj[0] = obj4.interpolate(scrollOffsetY.get(), items1, [12, 0], "clamp");
       items2 = [];
       items2[0] = obj;
@@ -76,25 +73,25 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   class E {
     constructor() {
       obj = { transform: null, opacity: null };
-      obj = { translateX: -40 + outer1_5 };
+      obj = { translateX: -40 + closure_1_5 };
       items = [, , ];
       items[0] = obj;
       obj1 = { translateY: null };
-      obj4 = scrollOffsetY(outer1_2[8]);
+      obj4 = scrollOffsetY(closure_1_2[8]);
       items1 = [0];
-      items1[1] = outer1_8;
+      items1[1] = closure_1_8;
       obj1[0] = obj4.interpolate(scrollOffsetY.get(), items1, [0, -36], "clamp");
       items[1] = obj1;
       obj2 = { scale: null };
-      obj6 = scrollOffsetY(outer1_2[8]);
+      obj6 = scrollOffsetY(closure_1_2[8]);
       items2 = [0];
-      items2[1] = outer1_8;
+      items2[1] = closure_1_8;
       obj2[0] = obj6.interpolate(scrollOffsetY.get(), items2, [1, 0], "clamp");
       items[2] = obj2;
       obj[0] = items;
-      obj7 = scrollOffsetY(outer1_2[8]);
+      obj7 = scrollOffsetY(closure_1_2[8]);
       items3 = [0];
-      items3[1] = outer1_8;
+      items3[1] = closure_1_8;
       obj[1] = obj7.interpolate(scrollOffsetY.get(), items3, [1, 0], "clamp");
       return obj;
     }
@@ -108,9 +105,9 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   class N {
     constructor() {
       obj = { opacity: null };
-      obj2 = scrollOffsetY(outer1_2[8]);
+      obj2 = scrollOffsetY(closure_1_2[8]);
       items = [0];
-      items[1] = outer1_8;
+      items[1] = closure_1_8;
       obj[0] = obj2.interpolate(scrollOffsetY.get(), items, [0, 0.5], "clamp");
       return obj;
     }
@@ -119,7 +116,7 @@ export const AppLauncherCommandViewHeader = function AppLauncherCommandViewHeade
   N.__workletHash = 2637023147700;
   N.__initData = closure_12;
   const animatedStyle2 = obj4.useAnimatedStyle(N);
-  let obj1 = { interpolate: scrollOffsetY(4115).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE: closure_8 };
+  obj1 = { interpolate: scrollOffsetY(4115).interpolate, scrollOffsetY, TOTAL_SCROLL_RANGE: closure_8 };
   let str = scrollOffsetY(4097).useToken(section(712).colors.BACKGROUND_BASE_LOW);
   let tmp10 = memo;
   const obj7 = scrollOffsetY(4097);

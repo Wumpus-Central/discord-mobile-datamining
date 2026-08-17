@@ -1,17 +1,15 @@
 // discord_app/modules/soundboard/trackSoundPlayed.tsx
-import initialize from "initialize";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import handleConnectionOpen from "handleConnectionOpen";
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
-import { AnalyticEvents } from "ME";
-import GuildFeatures from "GuildFeatures";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import closure_2 from "initialize" /* 4504 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c9;
-let metroImportAll;
-({ AnalyticsPremiumFeatureNames: metroImportAll, AnalyticsPremiumFeatureTiers: c9 } = GuildFeatures);
-const result = require("createRTCConnection").fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");
+({ AnalyticsPremiumFeatureNames: closure_8, AnalyticsPremiumFeatureTiers: c9 } = GuildFeatures);
+const result = require("set").fileFinishedImporting("modules/soundboard/trackSoundPlayed.tsx");
 
 export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
   channel = channel.getChannel(voiceChannelId.getVoiceChannelId());
@@ -53,5 +51,5 @@ export default function trackSoundPlayed(location_stack, in_overlay, guildId) {
     sum = arg4 + 1;
   }
   obj[13] = sum;
-  expandEventProperties.track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
+  expandEventPropertiesDefault.track(AnalyticEvents.PREMIUM_FEATURE_USAGE, obj);
 };

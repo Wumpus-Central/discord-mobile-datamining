@@ -1,5 +1,7 @@
 // discord_common/js/shared/utils/FlagUtils.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/FlagUtils.tsx");
 
 export const hasFlag = function hasFlag(arg0, arg1) {
   return (arg0 & arg1) === arg1;

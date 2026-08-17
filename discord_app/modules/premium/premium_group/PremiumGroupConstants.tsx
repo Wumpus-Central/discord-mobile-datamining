@@ -1,28 +1,28 @@
 // discord_app/modules/premium/premium_group/PremiumGroupConstants.tsx
-import ME from "ME";
-import importDefaultResult from "combined";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { messagesProxy } from "PremiumGroup.messages.js";
+import set from "set" /* 2 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2917 */;
+import ME from "ME" /* 676 */;
+import importDefaultResult from "combined" /* 1993 */;
 
-let HelpdeskArticles;
-let SubscriptionStatusTypes;
 ({ SubscriptionStatusTypes, HelpdeskArticles } = ME);
 const items = [, , , , ];
 ({ CANCELED: arr[0], PAUSED: arr[1], PAST_DUE: arr[2], ACCOUNT_HOLD: arr[3], BILLING_RETRY: arr[4] } = SubscriptionStatusTypes);
-const articleURL = require("combined").getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
-const result = require("combined").fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
+const articleURL = importDefaultResult.getArticleURL(HelpdeskArticles.PREMIUM_GROUP_ABOUT);
+const result = set.fileFinishedImporting("modules/premium/premium_group/PremiumGroupConstants.tsx");
 
 export const TOTAL_PREMIUM_GROUP_MEMBER_SEATS = 5;
 export const TOTAL_PREMIUM_GROUP_USERS = 6;
 export const MIN_AVAILABLE_SEATS_FOR_REMINDER = 3;
-export const MIN_SUBSCRIPTION_AGE_FOR_PRIMARY_REMINDER_IN_MS = require("set").Millis.DAY;
+export const MIN_SUBSCRIPTION_AGE_FOR_PRIMARY_REMINDER_IN_MS = setDefault.Millis.DAY;
 export const PREMIUM_GROUP_COOLDOWN_MONTHS = 12;
 export const PREMIUM_GROUP_ANNOUNCEMENT_MODAL_PROMOTION_KEY = "2026-07-premium-group-announcement-modal";
 export const HELP_CENTER_LINK = articleURL;
 export const CANNOT_INVITE_STATUSES = items;
 export const getPremiumGroupProductName = function getPremiumGroupProductName() {
   const intl = getSystemLocale.intl;
-  return intl.string(messagesProxy.aFBQ3d);
+  return intl.string(messagesProxyDefault.aFBQ3d);
 };
 export const getPremiumGroupCountryName = function getPremiumGroupCountryName() {
   const intl = getSystemLocale.intl;

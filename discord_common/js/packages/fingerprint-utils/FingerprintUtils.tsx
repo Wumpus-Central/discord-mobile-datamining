@@ -1,5 +1,7 @@
 // discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx");
 
 export const extractId = function extractId(fingerprint) {
   return fingerprint.split(".")[0];

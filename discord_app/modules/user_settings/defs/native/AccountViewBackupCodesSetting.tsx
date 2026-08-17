@@ -1,13 +1,11 @@
 // discord_app/modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx
-import noop from "noop";
-import ME from "ME";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "noop" /* 19 */;
+import ME from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 import { CodeRow } from "../../account/native/UserSettingsAccountBackupCodes.tsx";
 
-let UserSettingsSections;
-let c4;
-const require = arg1;
+require = arg1;
 ({ NOOP_NULL: c4, UserSettingsSections } = ME);
 createToggle = {
   useTitle() {
@@ -21,7 +19,7 @@ createToggle = {
       const callback = arg0;
       let obj = {
         onSubmit(password) {
-          const result = outer1_1(outer1_2[3]).sendMFABackupCodesVerificationKeyEmail(password);
+          const result = closure_1_1(closure_1_2[3]).sendMFABackupCodesVerificationKeyEmail(password);
           return result.then(() => {
             const obj = {
               onSubmit(verificationKey) {
@@ -37,17 +35,17 @@ createToggle = {
               confirmColor: null,
               useKeyboardAwareWrapper: true
             };
-            const intl = outer1_0(outer1_2[4]).intl;
-            obj[1] = intl.string(outer1_0(outer1_2[4]).t["mGppp/"]);
-            const intl2 = outer1_0(outer1_2[4]).intl;
-            obj[2] = intl2.string(outer1_0(outer1_2[4]).t["37S9yU"]);
-            const intl3 = outer1_0(outer1_2[4]).intl;
-            obj[3] = intl3.string(outer1_0(outer1_2[4]).t.TjGb4Q);
+            const intl = closure_1_0(closure_1_2[4]).intl;
+            obj[1] = intl.string(closure_1_0(closure_1_2[4]).t["mGppp/"]);
+            const intl2 = closure_1_0(closure_1_2[4]).intl;
+            obj[2] = intl2.string(closure_1_0(closure_1_2[4]).t["37S9yU"]);
+            const intl3 = closure_1_0(closure_1_2[4]).intl;
+            obj[3] = intl3.string(closure_1_0(closure_1_2[4]).t.TjGb4Q);
             obj[5] = closure_0;
-            const intl4 = outer1_0(outer1_2[4]).intl;
-            obj[7] = intl4.string(outer1_0(outer1_2[4]).t.geKm7t);
-            obj[8] = outer1_0(outer1_2[5]).ButtonColors.BRAND;
-            outer1_1(outer1_2[6])(obj);
+            const intl4 = closure_1_0(closure_1_2[4]).intl;
+            obj[7] = intl4.string(closure_1_0(closure_1_2[4]).t.geKm7t);
+            obj[8] = closure_1_0(closure_1_2[5]).ButtonColors.BRAND;
+            closure_1_1(closure_1_2[6])(obj);
           });
         },
         onSuccess: closure_4,
@@ -78,6 +76,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-let result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountViewBackupCodesSetting.tsx");
 
 export default createToggle;

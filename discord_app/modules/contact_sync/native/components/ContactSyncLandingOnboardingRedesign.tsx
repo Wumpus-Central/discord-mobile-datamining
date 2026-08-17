@@ -1,48 +1,39 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx
-import closure_3 from "createCacheKey";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NativePermissionTypes } from "NativePermissionStatus";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/11866_registerAsset.js";
-import { ContactSyncError } from "ContactSyncError.tsx";
-import { RedesignContactSyncDiscoverabilityFooter } from "RedesignContactSyncDiscoverabilityFooter.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 11859 */;
+import registerAssetDefault from "registerAsset" /* 11866 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 11867 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 createCacheKey = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: null };
-createCacheKey[4] = -require("Themes").space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT;
+createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -ThemesDefault.space.PX_32 - require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT };
 createCacheKey[0] = createCacheKey;
-const tmp4 = -require("Themes").space.PX_32;
-createCacheKey[1] = { height: 135, width: 216, marginBottom: require("Themes").space.PX_24 };
-let obj1 = { height: 135, width: 216, marginBottom: require("Themes").space.PX_24 };
-createCacheKey[2] = { marginBottom: require("Themes").space.PX_8 };
-let obj2 = { marginBottom: require("Themes").space.PX_8 };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_24 };
-let obj3 = { marginBottom: require("Themes").space.PX_24 };
-createCacheKey[4] = { height: 48, width: "100%", paddingHorizontal: require("Themes").space.PX_16 };
-let obj4 = { height: 48, width: "100%", paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[5] = { paddingBottom: require("Themes").space.PX_4, justifyContent: "flex-end", paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj5 = { paddingBottom: require("Themes").space.PX_4, justifyContent: "flex-end", paddingHorizontal: require("Themes").space.PX_16 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
+const tmp4 = -ThemesDefault.space.PX_32;
+createCacheKey[1] = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
+let obj1 = { height: 135, width: 216, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8 };
+let obj2 = { marginBottom: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[4] = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj4 = { height: 48, width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[5] = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+const obj5 = { paddingBottom: ThemesDefault.space.PX_4, justifyContent: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncLandingOnboardingRedesign.tsx");
 
 export default function ContactSyncLandingOnboardingRedesign(onNext) {
-  let discoverabilityEnabled;
-  let error;
-  let loading;
-  let setDiscoverabilityEnabled;
   onNext = onNext.onNext;
   ({ loading, error, discoverabilityEnabled, setDiscoverabilityEnabled } = onNext);
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const items = [onNext];
   let obj = { children: null };
   obj = { style: tmp.content, children: null };
@@ -75,11 +66,11 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
             return obj;
           } else {
             const callback = tmp4;
-            let obj1 = v0(table[8]);
+            obj1 = v0(table[8]);
             v0 = 1;
             table = 1;
             obj1 = { value: null, done: false };
-            obj1[0] = obj1.requestPermission(outer1_7.CONTACTS);
+            obj1[0] = obj1.requestPermission(closure_1_7.CONTACTS);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -103,9 +94,9 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
       }
     }
   }), items);
-  obj[2] = registerAsset;
+  obj[2] = registerAssetDefault;
   const items1 = [callback2(closure_6, obj), , , , ];
-  let obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
+  obj1 = { style: tmp.title, variant: "heading-xl/bold", children: null };
   const intl = onNext(1236).intl;
   obj1[2] = intl.string(onNext(1236).t["/G+nci"]);
   items1[1] = callback2(onNext(4734).Text, obj1);
@@ -121,9 +112,9 @@ export default function ContactSyncLandingOnboardingRedesign(onNext) {
   obj4[4] = loading;
   obj3[1] = callback2(onNext(4745).Button, obj4);
   items1[3] = callback2(closure_5, obj3);
-  items1[4] = callback2(ContactSyncError, { error });
+  items1[4] = callback2(ContactSyncErrorDefault, { error });
   obj[1] = items1;
-  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(RedesignContactSyncDiscoverabilityFooter, { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
+  const items2 = [callback3(closure_5, obj), callback2(closure_5, { style: tmp.trailing, children: callback2(RedesignContactSyncDiscoverabilityFooterDefault, { discoverabilityEnabled, onValueChanged: setDiscoverabilityEnabled }) })];
   obj[0] = items2;
   return callback3(closure_10, obj);
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/age_assurance/native/PlayAgeSignals.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _getAgeSignals() {
@@ -31,14 +31,12 @@ function _getAgeSignals() {
             obj[0] = arg1;
             return obj;
           } else {
-            if (null == v0(outer1_2[1])) {
+            if (null == v0(closure_1_2[1])) {
               const _Error = Error;
-              const error = new Error("NativePlayAgeSignalsModule is not available on this platform");
+              error = new Error("NativePlayAgeSignalsModule is not available on this platform");
               throw error;
             } else {
               (function applyFakeAgeSignalsScenarioFromExperiment() {
-                let enabled;
-                let scenario;
                 if (null != v1(table[1])) {
                   const fakePlayAgeSignalsConfig = v3(tmp2[2]).getFakePlayAgeSignalsConfig("PlayAgeSignals.getAgeSignals");
                   ({ enabled, scenario } = fakePlayAgeSignalsConfig);
@@ -53,12 +51,12 @@ function _getAgeSignals() {
               })();
               v0 = 1;
               c0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = tmp5(tmp6[1]).getAgeSignals();
               return obj1;
             }
             tmp5 = v0;
-            tmp6 = outer1_2;
+            tmp6 = closure_1_2;
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -80,7 +78,7 @@ function _getAgeSignals() {
       }
     }
   });
-  const _getAgeSignals = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -89,7 +87,7 @@ function _getAgeSignals() {
   }
   return applyArgumentsResult;
 }
-let result = require("apexExperiment").fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/PlayAgeSignals.tsx");
 
 export const AgeSignalsVerificationStatus = { VERIFIED: 0, SUPERVISED: 1, SUPERVISED_APPROVAL_PENDING: 2, SUPERVISED_APPROVAL_DENIED: 3, UNKNOWN: 4, DECLARED: 5 };
 export const getAgeSignals = function getAgeSignals() {

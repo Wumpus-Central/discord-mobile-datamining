@@ -1,9 +1,10 @@
 // discord_app/modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("useNavigatorBackHandler").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/native/GuildDisableCommunicationModal.tsx");
 
 export default function GuildDisableCommunicationModal(onBeforeGoBack) {
   const guildId = onBeforeGoBack.guildId;
@@ -17,7 +18,7 @@ export default function GuildDisableCommunicationModal(onBeforeGoBack) {
   obj[0] = user(onGoBack[5]).getName(guildId, null, user);
   obj[1] = intl.formatToPlainString(guildId(onGoBack[4]).t.FN7NIS, obj);
   obj[2] = function render() {
-    return outer1_3(user(onGoBack[6]), { user, guildId, onClose: onGoBack });
+    return closure_1_3(user(onGoBack[6]), { user, guildId, onClose: onGoBack });
   };
   return <tmp user={null} />;
 };

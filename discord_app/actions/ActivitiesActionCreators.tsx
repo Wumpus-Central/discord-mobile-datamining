@@ -1,17 +1,13 @@
 // discord_app/actions/ActivitiesActionCreators.tsx
-import sendRequest from "sendRequest";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import ME from "ME";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { ChannelActionCreators } from "ChannelActionCreators.tsx";
+import _modDef4770 from "module_4770" /* 4770 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import ME from "ME" /* 676 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ Endpoints: c5, ActivityTypes: closure_6, AnalyticEvents: error, LoggingInviteTypes: metroImportAll } = ME);
-const result = require("ME").fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
+({ Endpoints: c5, ActivityTypes: closure_6, AnalyticEvents: error, LoggingInviteTypes: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("actions/ActivitiesActionCreators.tsx");
 
 export default {
   updateActivity(share_activity) {
@@ -65,10 +61,6 @@ export default {
     });
   },
   sendActivityInvite(activity) {
-    let content;
-    let importDefault;
-    let targetUserId;
-    let type;
     activity = activity.activity;
     ({ content, location: importDefault } = activity);
     let channel;
@@ -93,12 +85,12 @@ export default {
       const tmp7 = importDefault;
       const tmp8 = channel;
       return tmp7Result.sendMessage(channel.id, parsed, false, obj).then((body) => {
-        let obj = outer1_1(channel[8]);
+        let obj = closure_1_1(channel[8]);
         obj = { location: closure_1, invite_type: null, application_id: null, guild_id: null, channel_id: null, message_id: null };
-        if (activity.type === outer1_6.LISTENING) {
-          let APPLICATION = outer1_8.SPOTIFY;
+        if (activity.type === closure_1_6.LISTENING) {
+          let APPLICATION = closure_1_8.SPOTIFY;
         } else {
-          APPLICATION = outer1_8.APPLICATION;
+          APPLICATION = closure_1_8.APPLICATION;
         }
         obj[1] = APPLICATION;
         obj[2] = activity.application_id;
@@ -109,7 +101,7 @@ export default {
           id = body.body.id;
         }
         obj[5] = id;
-        obj.trackWithMetadata(outer1_7.INVITE_SENT, obj);
+        obj.trackWithMetadata(closure_1_7.INVITE_SENT, obj);
         const activitySessionKey = activity(channel[9]).getActivitySessionKey(tmp2);
         if (null != activitySessionKey) {
           activity(tmp[10]).markChannelInvited(activitySessionKey, tmp5.id);
@@ -120,35 +112,31 @@ export default {
     }
   },
   sendActivityInviteUser(userId) {
-    let sendRequest;
-    let dependencyMap;
-    let importDefault;
-    let require;
     const self = this;
-    ({ type: importDefault, activity: dependencyMap, content: sendRequest, location: require } = userId);
-    const obj = ChannelActionCreators;
-    return ChannelActionCreators.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: sendRequest, location: closure_0 }));
+    ({ type: importDefault, activity: dependencyMap, content: closure_3, location: require } = userId);
+    const obj = _modDef4770;
+    return _modDef4770.ensurePrivateChannel(userId.userId).then((channelId) => self.sendActivityInvite({ channelId, type: closure_1, activity: closure_2, content: closure_3, location: closure_0 }));
   },
   getJoinSecret(arg0, arg1, arg2, arg3, arg4) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
     const callback = arg3;
-    let ensureGuildLoaded = arg4;
+    closure_4 = arg4;
     return callback(function*() {
-      let closure_0 = tmp4;
-      const obj1 = {};
-      if (null != outer1_3) {
-        obj1.channel_id = outer1_3;
+      closure_0 = tmp4;
+      obj1 = {};
+      if (null != closure_1_3) {
+        obj1.channel_id = closure_1_3;
       }
-      if (null != outer1_4) {
-        obj1.message_id = outer1_4;
+      if (null != closure_1_4) {
+        obj1.message_id = closure_1_4;
       }
-      const HTTP = outer1_0(530).HTTP;
+      const HTTP = closure_1_0(530).HTTP;
       const obj2 = { url: null, retries: 3, query: null, rejectWithError: null };
-      obj2[0] = outer1_5.USER_ACTIVITY_JOIN(outer1_0, c1, dependencyMap);
+      obj2[0] = closure_1_5.USER_ACTIVITY_JOIN(closure_1_0, c1, dependencyMap);
       obj2[2] = obj1;
-      const obj4 = outer1_0(530);
+      const obj4 = closure_1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.get(obj2);
       const obj = { secret: null, joinUrl: null };
@@ -158,16 +146,16 @@ export default {
     })();
   },
   subscribeActivities(items) {
-    let closure_0 = items;
+    closure_0 = items;
     return callback(function*() {
       const mapped = v0.map((userId) => ({ user_id: userId.userId, application_id: userId.applicationId, party_id: userId.partyId, message_id: userId.messageId, channel_id: userId.channelId }));
-      const HTTP = v0(outer1_2[5]).HTTP;
-      const obj1 = { url: null, body: null, retries: 1, rejectWithError: null };
-      obj1[0] = outer1_5.USER_ACTIVITY_SUBSCRIBE;
+      const HTTP = v0(closure_1_2[5]).HTTP;
+      obj1 = { url: null, body: null, retries: 1, rejectWithError: null };
+      obj1[0] = closure_1_5.USER_ACTIVITY_SUBSCRIBE;
       const obj2 = { subscriptions: null };
       obj2[0] = mapped;
       obj1[1] = obj2;
-      obj1[3] = v0(outer1_2[5]).rejectWithMigratedError();
+      obj1[3] = v0(closure_1_2[5]).rejectWithMigratedError();
       yield HTTP.post(obj1);
       return arg1.body;
     })();

@@ -1,7 +1,9 @@
 // discord_app/modules/applications/getBotTagFromUser.tsx
-import { BotTagTypes } from "ApplicationTypes";
+import set from "set" /* 2 */;
+import ApplicationTypes from "ApplicationTypes" /* 4482 */;
 
-const result = require("set").fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");
+const BotTagTypes = ApplicationTypes.BotTagTypes;
+const result = set.fileFinishedImporting("modules/applications/getBotTagFromUser.tsx");
 
 export const getBotTagTypeFromUser = function getBotTagTypeFromUser(user) {
   if (user.isSystemUser()) {

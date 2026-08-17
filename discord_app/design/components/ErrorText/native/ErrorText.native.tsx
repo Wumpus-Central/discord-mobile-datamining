@@ -1,12 +1,10 @@
 // discord_app/design/components/ErrorText/native/ErrorText.native.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
 const require = arg1;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("getNodeText").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/ErrorText/native/ErrorText.native.tsx");
 
 export const ErrorText = function ErrorText(children) {
   children = children.children;
@@ -20,7 +18,7 @@ export const ErrorText = function ErrorText(children) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = nodeText(outer1_1[3]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = nodeText(closure_1_1[3]).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

@@ -1,24 +1,13 @@
 // discord_app/modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { ChatInputActionType } from "TextAreaCta";
-import jsxProd from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ChatInputActionType } from "TextAreaCta" /* 11149 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPress) {
-  let accessible;
-  let active;
-  let canShowBotsBanner;
-  let canShowOnboarding;
-  let channel;
-  let disabled;
-  let styleActive;
-  let styleActiveIcon;
-  let styleButton;
   ({ active, channel } = onPress);
   onPress = onPress.onPress;
   let ref;
@@ -26,7 +15,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
   let canShowAppsOrActivitiesBanner;
   let willShowGlobalSearchOnboarding;
   canShowOnboarding = undefined;
-  let closure_7;
+  closure_7 = undefined;
   let obj = canShowBotsBanner;
   ({ accessible, disabled, styleButton, styleActive, styleActiveIcon } = onPress);
   ref = canShowBotsBanner.useRef(null);
@@ -79,7 +68,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
         tmp5 = channel;
       }
       if (willShowGlobalSearchOnboarding) {
-        const obj1 = { channelId: null, timeMs: null, guildId: null, canShowAppsOrActivitiesBanner: null, canShowBotsBanner: null, willShowGlobalSearchOnboarding: true };
+        obj1 = { channelId: null, timeMs: null, guildId: null, canShowAppsOrActivitiesBanner: null, canShowBotsBanner: null, willShowGlobalSearchOnboarding: true };
         obj1[0] = channel.id;
         const _Date3 = Date;
         obj1[1] = Date.now();
@@ -110,7 +99,7 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
       tmp9 = canShowOnboarding(channel(tmp3[6]).AppLauncherOnboardingChatInputButtonAnimation, obj);
     }
   }
-  let obj1 = { children: null };
+  obj1 = { children: null };
   const items1 = [tmp9, ];
   const obj2 = {
     ref,
@@ -127,11 +116,10 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
       obj = { ref };
       const result = obj.setAccessibilityFocus(obj);
     },
-    IconComponent: null,
+    IconComponent: channel(ref[9]).AppLauncherButtonIcon,
     accessibilityLabel: null,
     accessibilityState: null
   };
-  obj2[8] = channel(ref[9]).AppLauncherButtonIcon;
   const intl = channel(tmp3[10]).intl;
   obj2[9] = intl.string(channel(ref[10]).t.rugBPp);
   obj2[10] = { expanded: active };
@@ -139,6 +127,6 @@ const memoResult = importAllResult.memo(function ChatInputActionButtonApps(onPre
   obj1[0] = items1;
   return closure_7(canShowAppsOrActivitiesBanner, obj1);
 });
-let result = require("TextAreaCta").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/action_buttons/ChatInputActionButtonApps.tsx");
 
 export default memoResult;

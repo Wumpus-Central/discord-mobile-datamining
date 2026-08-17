@@ -1,8 +1,10 @@
 // discord_app/modules/guild_products/GuildProductSystemMessageUtils.tsx
-import { NOOP } from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
+const NOOP = ME.NOOP;
+const result = set.fileFinishedImporting("modules/guild_products/GuildProductSystemMessageUtils.tsx");
 
 export const getGuildProductPurchaseSystemMessageContentMobile = function getGuildProductPurchaseSystemMessageContentMobile(username) {
   let usernameHook = username.usernameOnClickHandler;

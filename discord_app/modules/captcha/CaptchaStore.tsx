@@ -1,13 +1,14 @@
 // discord_app/modules/captcha/CaptchaStore.tsx
-import _slicedToArray from "_slicedToArray";
-import keys from "keys";
-import { set } from "../../../discord_common/js/shared/shared-constants/MetricEvents.tsx";
+import batchUpdates from "batchUpdates" /* 705 */;
+import setDefault from "set" /* 5006 */;
+import set from "set" /* 5011 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import keys from "keys" /* 644 */;
 import { batchUpdates } from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
-import { set } from "../monitoring/MonitoringAgent.tsx";
 
-const require = arg1;
+require = arg1;
 keys = keys.create(() => ({ captchaServeVolume: {} }));
-const result = require("batchUpdates").fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
+const result = require("set").fileFinishedImporting("modules/captcha/CaptchaStore.tsx");
 
 export const useCaptchaStore = keys;
 export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
@@ -16,7 +17,7 @@ export const isCaptchaStoreVolumeEmpty = function isCaptchaStoreVolumeEmpty() {
 export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(arg0) {
   const _require = arg0;
   _batchUpdates.batchUpdates(() => {
-    outer1_4.setState((arg0) => {
+    closure_1_4.setState((arg0) => {
       let sum = arg0;
       if (null == closure_0) {
         return sum;
@@ -40,8 +41,6 @@ export const incrementCaptchaServeVolume = function incrementCaptchaServeVolume(
   });
 };
 export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
-  let tmp6;
-  let tmp7;
   const entries = Object.entries(keys.getState().captchaServeVolume);
   while (tmp2 !== undefined) {
     let tmp4 = callback;
@@ -49,7 +48,7 @@ export const flushCaptchaServeVolume = function flushCaptchaServeVolume() {
     let tmp8 = importDefault;
     let tmp9 = dependencyMap;
     [tmp6, tmp7] = tmp5;
-    let obj = set;
+    let obj = setDefault;
     obj = { name: null, tags: null };
     let tmp10 = require;
     obj[0] = set.MetricEvents.CAPTCHA_SERVE_VOLUME_DISTRIBUTION;

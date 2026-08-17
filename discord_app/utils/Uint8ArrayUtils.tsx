@@ -1,5 +1,7 @@
 // discord_app/utils/Uint8ArrayUtils.tsx
-let result = require("set").fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
+import set from "set" /* 2 */;
+
+let result = set.fileFinishedImporting("utils/Uint8ArrayUtils.tsx");
 
 export const hasBit = function hasBit(dismissedContents, closure_0) {
   let tmp = 0 !== dismissedContents.length;

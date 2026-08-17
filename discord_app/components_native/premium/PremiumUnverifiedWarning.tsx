@@ -1,18 +1,19 @@
 // discord_app/components_native/premium/PremiumUnverifiedWarning.tsx
-import importDefaultResult from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PureComponent } from "noop";
-import importAllResult from "noop";
-import importDefaultResult1 from "initialize";
-import { Button } from "../../design/void/native.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import importDefaultResult from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
+import importDefaultResult1 from "initialize" /* 589 */;
 
-const require = arg1;
+require = arg1;
 createCacheKey = { warning: null };
-createCacheKey = { color: require("Themes").unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
+createCacheKey = { color: ThemesDefault.unsafe_rawColors.RED_400, fontSize: 12, marginTop: 10 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_4 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+const PureComponent = importAllResult.PureComponent;
 class PremiumUnverifiedWarning extends PureComponent {
 }
 PremiumUnverifiedWarning.prototype["render"] = function render() {
@@ -29,7 +30,7 @@ PremiumUnverifiedWarning.prototype["render"] = function render() {
 };
 PremiumUnverifiedWarning.contextType = require("ManaContext").ThemeContext;
 let items = [importDefaultResult];
-const tmp4 = require("initialize").connectStores(items, () => {
+const tmp4 = importDefaultResult1.connectStores(items, () => {
   const currentUser = importDefaultResult.getCurrentUser();
   let verified;
   if (currentUser != null) {
@@ -40,6 +41,6 @@ const tmp4 = require("initialize").connectStores(items, () => {
   }
   return { verified };
 })(PremiumUnverifiedWarning);
-const result = require("jsxProd").fileFinishedImporting("components_native/premium/PremiumUnverifiedWarning.tsx");
+const result = require("set").fileFinishedImporting("components_native/premium/PremiumUnverifiedWarning.tsx");
 
 export default tmp4;

@@ -1,13 +1,12 @@
 // discord_app/modules/custom_status/utils/getRandomCustomStatusPrompt.tsx
-import StatusTypes from "StatusTypes";
+import set from "set" /* 2 */;
+import StatusTypes from "StatusTypes" /* 9292 */;
 
-let c3;
-let obj1;
 ({ CustomStatusPrompts: obj1, CustomStatusPromptValues: c3 } = StatusTypes);
-const result = require("set").fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");
+const result = set.fileFinishedImporting("modules/custom_status/utils/getRandomCustomStatusPrompt.tsx");
 
 export default function getRandomCustomStatusPrompt(size) {
-  let closure_0 = size;
+  closure_0 = size;
   if (null != size) {
     if (size.size > 0) {
       let found = closure_2.filter((value) => !size.has(value.value));

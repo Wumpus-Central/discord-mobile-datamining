@@ -1,11 +1,11 @@
 // discord_app/modules/message_previews/PreviewData.tsx
-import hasFlag from "hasFlag";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import closure_3 from "hasFlag" /* 4031 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
 
-const require = arg1;
-let result = require("createMinimalMessageRecord").fileFinishedImporting("modules/message_previews/PreviewData.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/message_previews/PreviewData.tsx");
 class PreviewData {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -55,7 +55,7 @@ prototype["messageRecord"] = function messageRecord(arg0) {
   const value = messages.get(arg0);
   let tmp2 = null == value || null == value.message;
   if (!tmp2) {
-    tmp2 = value.message instanceof hasFlag;
+    tmp2 = value.message instanceof closure_3;
   }
   if (!tmp2) {
     value.message = createMinimalMessageRecord.createMessageRecord(value.message);
@@ -93,8 +93,8 @@ prototype["putNew"] = function putNew(channelId, first, c6) {
     }
     let tmp4 = null == id;
     if (!tmp4) {
-      tmp4 = DISCORD_EPOCH.compare(first.id, id) > 0;
-      const obj = DISCORD_EPOCH;
+      tmp4 = DISCORD_EPOCHDefault.compare(first.id, id) > 0;
+      const obj = DISCORD_EPOCHDefault;
     }
     tmp2 = tmp4;
   }
@@ -137,7 +137,7 @@ prototype["update"] = function update(id) {
         merged = Object.assign(merged);
         obj.message = updateMessageRecordResult;
         self = messages.set(channel_id, obj);
-        tmp3 = merged.message instanceof hasFlag;
+        tmp3 = merged.message instanceof closure_3;
       }
     }
   }

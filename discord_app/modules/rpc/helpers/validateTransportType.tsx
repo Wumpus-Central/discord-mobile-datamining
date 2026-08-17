@@ -1,16 +1,19 @@
 // discord_app/modules/rpc/helpers/validateTransportType.tsx
-import { TransportTypes } from "RPC_SCOPE_CONFIG";
-import { RPCErrors } from "ME";
-import { prototype } from "../RPCError.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import prototypeDefault from "prototype" /* 8752 */;
 
-const result = require("prototype").fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
+const TransportTypes = RPC_SCOPE_CONFIG.TransportTypes;
+const RPCErrors = ME.RPCErrors;
+const result = set.fileFinishedImporting("modules/rpc/helpers/validateTransportType.tsx");
 
 export const validateTransportType = function validateTransportType(transport) {
   if (TransportTypes.IPC !== transport) {
     if (TransportTypes.POST_MESSAGE !== transport) {
       const obj = { errorCode: null };
       obj[0] = RPCErrors.INVALID_COMMAND;
-      const tmp7 = new prototype(obj, "Invalid transport.");
+      const tmp7 = new prototypeDefault(obj, "Invalid transport.");
       throw tmp7;
     }
   }

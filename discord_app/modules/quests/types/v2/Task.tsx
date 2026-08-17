@@ -1,6 +1,8 @@
 // discord_app/modules/quests/types/v2/Task.tsx
-import { QuestTaskConfigTypes } from "../../../../../discord_common/js/shared/shared-constants/QuestTaskConfigTypes.tsx";
-import { QuestTaskJoinOperator } from "../../../../../discord_common/js/shared/shared-constants/QuestTaskJoinOperator.tsx";
+import set from "set" /* 2 */;
+import QuestTaskConfigTypes from "QuestTaskConfigTypes" /* 7463 */;
+import QuestTaskJoinOperator from "QuestTaskJoinOperator" /* 7465 */;
+
 function _firstPartyTasksFromServer(tasks) {
   let obj = {};
   const keys = Object.keys(tasks);
@@ -39,7 +41,7 @@ function _thirdPartyTasksFromServer(tasks) {
   }
   return obj;
 }
-const result = require("videoAssetFromServer").fileFinishedImporting("modules/quests/types/v2/Task.tsx");
+const result = set.fileFinishedImporting("modules/quests/types/v2/Task.tsx");
 
 export const questTaskConfigFromServer = function questTaskConfigFromServer(type) {
   type = type.type;
@@ -62,8 +64,6 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     const _Object = Object;
     const entries = Object.entries(task_config_v2.tasks);
     const mapped = entries.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       const items = [tmp, ];
       const type = tmp2.type;
@@ -86,7 +86,7 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
         tmp5 = obj;
         const tmp3Result2 = tmp3(tmp4[2]);
       } else if (tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP === type) {
-        const obj1 = { type: null, target: null, applications: null };
+        obj1 = { type: null, target: null, applications: null };
         obj1[0] = tmp3(tmp4[1]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP;
         ({ target: obj7[1], applications: obj7[2] } = tmp2);
         tmp5 = obj1;
@@ -140,7 +140,6 @@ export const questTaskConfigV2FromServer = function questTaskConfigV2FromServer(
     let obj = { tasks: null, joinOperator: null };
     const _Object2 = Object;
     obj[0] = Object.fromEntries(mapped.filter((arg0) => {
-      let tmp;
       [, tmp] = arg0;
       return null !== tmp;
     }));

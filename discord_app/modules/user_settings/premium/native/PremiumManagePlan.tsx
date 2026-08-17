@@ -1,59 +1,45 @@
 // discord_app/modules/user_settings/premium/native/PremiumManagePlan.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import AccessibilityAnnouncer from "AccessibilityAnnouncer";
-import Themes from "Themes";
-import get_ActivityIndicator from "timestamp";
-import { isNoneSubscription } from "createFromServer";
-import closure_12 from "mergeGuildAvatar";
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
-import addSubscriptionPlan from "addSubscriptionPlan";
-import reset from "reset";
-import addEntitlement from "addEntitlement";
-import getState from "getState";
-import updateProduct from "updateProduct";
-import ME from "ME";
-import { getTableDividerWidth } from "TABLE_ROW_HEIGHT";
-import { CustomCheckoutFlow } from "CustomCheckoutFlow";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "PressableBase";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07989_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import Text from "Text" /* 4734 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
+import calculateFractionalPremiumInfoDefault from "calculateFractionalPremiumInfo" /* 5356 */;
+import result2 from "result" /* 6289 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import registerAssetDefault from "registerAsset" /* 7989 */;
+import roundFPCountdownUnitsDefault from "roundFPCountdownUnits" /* 12893 */;
+import CheckIconDefault from "CheckIcon" /* 12907 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { isNoneSubscription } from "createFromServer" /* 4040 */;
+import closure_12 from "mergeGuildAvatar" /* 1922 */;
+import closure_13 from "handlePaymentSourceCreateEnd" /* 4041 */;
+import closure_14 from "addSubscriptionPlan" /* 4044 */;
+import closure_15 from "reset" /* 4045 */;
+import closure_16 from "addEntitlement" /* 5357 */;
+import closure_17 from "getState" /* 7383 */;
+import closure_18 from "updateProduct" /* 5319 */;
+import ME from "ME" /* 676 */;
+import { getTableDividerWidth } from "TABLE_ROW_HEIGHT" /* 6288 */;
+import { CustomCheckoutFlow } from "CustomCheckoutFlow" /* 4357 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { ArrowLargeLeftIcon } from "../../../../design/components/Icon/native/redesign/generated/ArrowLargeLeftIcon.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
-import { Button } from "../../../../design/void/native.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { roundFPCountdownUnits } from "../../../billing/hooks/useFPDurationLeft.tsx";
-import { calculateFractionalPremiumInfo } from "../../../billing/hooks/useFractionalPremiumInfo.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { CheckIcon } from "PremiumFeaturesTable.tsx";
 
-let c10;
-let c9;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let closure_29;
-let closure_30;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ManagePlanHeader() {
-  const tmp = callback5();
+  const tmp = callback6();
   let obj = _useNavigation;
   _require = obj.useNavigation();
   obj = { style: tmp.headerContainer, children: null };
@@ -62,11 +48,10 @@ function ManagePlanHeader() {
     onPress() {
       return arr.pop();
     },
-    children: null
+    children: callback3(_ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" })
   };
-  obj[2] = callback3(_ArrowLargeLeftIcon.ArrowLargeLeftIcon, { size: "md" });
   const items = [callback3(_PressableBase.PressableOpacity, obj), , ];
-  const obj1 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
+  obj1 = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
   const intl = _getSystemLocale.intl;
   obj1[2] = intl.string(_getSystemLocale.t["1bX7Tx"]);
   items[1] = callback3(_Text.Text, obj1);
@@ -75,11 +60,6 @@ function ManagePlanHeader() {
   return callback4(closure_8, obj);
 }
 function SubscriptionAndBillingInfo(subscription) {
-  let c8;
-  let fractionalPremiumInfo;
-  let isPremiumGroup;
-  let premiumGroupRole;
-  let tmp21;
   subscription = subscription.subscription;
   ({ fractionalPremiumInfo, isPremiumGroup, premiumGroupRole } = subscription);
   let analyticsLocations;
@@ -88,10 +68,10 @@ function SubscriptionAndBillingInfo(subscription) {
   let first2;
   let React;
   let stateFromStores3;
-  let c7;
+  closure_7 = undefined;
   c8 = undefined;
   let tmp2 = stateFromStores2;
-  let tmp3 = callback6(analyticsLocations(stateFromStores2[26])("PremiumManagePlan"));
+  let tmp3 = callback7(analyticsLocations(stateFromStores2[26])("PremiumManagePlan"));
   analyticsLocations = analyticsLocations(stateFromStores2[27])().analyticsLocations;
   const tmp4 = subscription;
   let obj = subscription(stateFromStores2[28]);
@@ -101,26 +81,26 @@ function SubscriptionAndBillingInfo(subscription) {
   obj = { subscriptionId: subscription.id, preventFetch: subscription.status !== constants2.PAST_DUE };
   const first1 = first2(obj2.useGetSubscriptionInvoice(obj), 1)[0];
   let obj4 = subscription(stateFromStores2[30]);
-  let items = [updateProduct];
+  let items = [closure_18];
   const stateFromStores = obj4.useStateFromStores(items, () => {
     if (subscription.isOnPlatformMatchingExternalPaymentGateway) {
       if (null != tmp.paymentGatewayPlanId) {
         if ("" !== tmp.paymentGatewayPlanId) {
-          return outer1_18.getProduct(tmp.paymentGatewayPlanId);
+          return closure_1_18.getProduct(tmp.paymentGatewayPlanId);
         }
       }
       const _Error = Error;
-      const error = new Error("Subscription missing plan ID");
+      error = new Error("Subscription missing plan ID");
       throw error;
     } else {
       return null;
     }
   });
   let obj5 = subscription(stateFromStores2[30]);
-  const items1 = [reset];
+  const items1 = [closure_15];
   const stateFromStores1 = obj5.useStateFromStores(items1, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let obj6 = subscription(stateFromStores2[30]);
-  const items2 = [handlePaymentSourceCreateEnd];
+  const items2 = [closure_13];
   stateFromStores2 = obj6.useStateFromStores(items2, () => obj.isSubscriptionFetching);
   let tmp12 = null !== stateFromStores1 && stateFromStores1.hasActiveTrial;
   let tmp4Result = tmp4(tmp2[20]);
@@ -131,7 +111,7 @@ function SubscriptionAndBillingInfo(subscription) {
   first2 = tmp5Result[0];
   React = tmp5Result[1];
   const tmp4Result1 = tmp4(tmp2[32]);
-  const items3 = [getState];
+  const items3 = [closure_17];
   stateFromStores3 = tmp4(tmp2[30]).useStateFromStores(items3, () => state.getState());
   const items4 = [first2, stateFromStores2, stateFromStores3];
   const effect = React.useEffect(() => {
@@ -159,21 +139,21 @@ function SubscriptionAndBillingInfo(subscription) {
     }
   }, items4);
   const tmp18 = analyticsLocations(tmp2[35])(() => subscription(stateFromStores2[36]).getNewAnalyticsLoadId());
-  c7 = tmp18;
+  closure_7 = tmp18;
   const items5 = [subscription, first2, analyticsLocations, tmp18];
   const memo = React.useMemo(() => {
     if ("start_fetching_update" !== first2) {
       if ("fetching_update" !== tmp) {
         let obj = { returnCtaAsComponent: true, loadId: null, shouldAllowExternalManagement: true, onSuccessCallback: null };
-        obj[1] = c7;
+        obj[1] = closure_7;
         obj[3] = function onSuccessCallback() {
-          outer1_31.log("Successfully opened mobile web Nitro Management page");
-          let obj = outer1_1(outer1_2[38]);
+          closure_1_31.log("Successfully opened mobile web Nitro Management page");
+          let obj = closure_1_1(closure_1_2[38]);
           obj = { load_id: closure_7, location_stack: null, custom_checkout_flow: null };
-          const items = [...closure_1, outer1_1(outer1_2[29]).MOBILE_APP_MANAGE_PREMIUM_SUBSCRIPTION_CTA];
+          const items = [...closure_1, closure_1_1(closure_1_2[29]).MOBILE_APP_MANAGE_PREMIUM_SUBSCRIPTION_CTA];
           obj[1] = items;
-          obj[2] = outer1_24.MOBILE_WEB_REDIRECT_CHECKOUT;
-          obj.track(outer1_19.MOBILE_OPEN_STANDALONE_MANAGE_SUBSCRIPTION_PAGE, obj);
+          obj[2] = closure_1_24.MOBILE_WEB_REDIRECT_CHECKOUT;
+          obj.track(closure_1_19.MOBILE_OPEN_STANDALONE_MANAGE_SUBSCRIPTION_PAGE, obj);
           callback("opening_mobile_web");
         };
         const externalManagementMessage = subscription(stateFromStores2[37]).getExternalManagementMessage(subscription, obj);
@@ -183,14 +163,14 @@ function SubscriptionAndBillingInfo(subscription) {
           if (!validElement.isValidElement(externalManagementMessage)) {
             obj = { variant: "text-sm/medium", color: "text-default", children: null };
             obj[2] = externalManagementMessage;
-            tmp3 = outer1_29(subscription(stateFromStores2[23]).Text, obj);
+            tmp3 = closure_1_29(subscription(stateFromStores2[23]).Text, obj);
           }
           tmp5 = tmp3;
         }
         return tmp5;
       }
     }
-    return outer1_29(outer1_10, { size: "small" });
+    return closure_1_29(closure_1_10, { size: "small" });
   }, items5);
   tmp5Result = tmp5(React.useState(false), 2);
   [tmp21, c8] = tmp5Result;
@@ -202,7 +182,7 @@ function SubscriptionAndBillingInfo(subscription) {
     tmpResult = tmp(tmp2[39]);
     const statusFromInvoice = tmpResult.getStatusFromInvoice(subscription, first);
     tmp(tmp2[40])(null != table[planIdFromInvoice], "missing subscription planInfo");
-    let obj1 = { subscription: null, planId: null, price: null, includePremiumGuilds: true };
+    obj1 = { subscription: null, planId: null, price: null, includePremiumGuilds: true };
     obj1[0] = subscription;
     obj1[1] = planIdFromInvoice;
     let formatRateResult = null;
@@ -308,7 +288,7 @@ function SubscriptionAndBillingInfo(subscription) {
               const intl2 = tmp4(tmp2[24]).intl;
               const obj19 = { onSwitchPlans: null, onCancel: null };
               obj19[0] = function onSwitchPlans() {
-                return subscription(stateFromStores2[48]).handleManageSubscription(subscription, mergeGuildAvatar, analyticsLocations);
+                return subscription(stateFromStores2[48]).handleManageSubscription(subscription, closure_3, analyticsLocations);
               };
               obj19[1] = function onCancel() {
                 return subscription(stateFromStores2[48]).onCancelClick(subscription, analyticsLocations);
@@ -372,7 +352,7 @@ function SubscriptionAndBillingInfo(subscription) {
     obj32[2] = planDescription;
     items17[1] = callback3(tmp4(tmp2[23]).Text, obj32);
     obj28[2] = items17;
-    const items18 = [closure_30(c7, obj28), ];
+    const items18 = [closure_30(closure_7, obj28), ];
     let isOnPlatformMatchingExternalPaymentGateway = subscription.isOnPlatformMatchingExternalPaymentGateway;
     if (isOnPlatformMatchingExternalPaymentGateway) {
       const obj33 = { style: null, children: null };
@@ -407,14 +387,14 @@ function SubscriptionAndBillingInfo(subscription) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_0 = tmp3;
-                outer1_8(true);
-                let c3 = 1;
-                let obj1 = outer1_0(outer1_2[48]);
+                closure_0 = tmp3;
+                closure_1_8(true);
+                c3 = 1;
+                obj1 = closure_1_0(closure_1_2[48]);
                 c1 = 2;
                 c4 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj1.onResubscribeClick(outer1_0);
+                obj1[0] = obj1.onResubscribeClick(closure_1_0);
                 return obj1;
               }
             } else if (1 === tmp7) {
@@ -469,7 +449,7 @@ function SubscriptionAndBillingInfo(subscription) {
     obj38[2] = intl11.string(tmp4(tmp2[24]).t["MTG+3O"]);
     const items21 = [callback3(tmp4(tmp2[23]).Text, obj38), , , ];
     const obj39 = { variant: "text-sm/medium", color: "text-default", children: null };
-    const tmp49 = c7;
+    const tmp49 = closure_7;
     const tmp51 = stateFromStores3;
     const tmpResult1 = tmp(tmp2[39]);
     obj39[2] = tmp4(tmp2[49]).getBillingInformationStringNative(subscription, first, first1);
@@ -488,13 +468,8 @@ function SubscriptionAndBillingInfo(subscription) {
   const tmp4Result2 = tmp4(tmp2[30]);
 }
 function FractionalPremiumCredits(durationText) {
-  let activationDate;
-  let fractionalPremiumInfo;
-  let hasUnactivatedUnits;
-  let showPremiumFeaturesCard;
-  let unactivatedHoursString;
   ({ fractionalPremiumInfo, showPremiumFeaturesCard, hasUnactivatedUnits, unactivatedHoursString, activationDate } = durationText);
-  const tmp3 = callback6(useIsMobileVisualRefreshExperimentEnabled("FractionalPremiumCredits"));
+  const tmp3 = callback7(useIsMobileVisualRefreshExperimentEnabledDefault("FractionalPremiumCredits"));
   let obj = { style: tmp3.container, children: null };
   if (showPremiumFeaturesCard) {
     obj = { premiumType: null, forFractionalPremium: true, hideButton: true };
@@ -503,7 +478,7 @@ function FractionalPremiumCredits(durationText) {
   }
   const items = [showPremiumFeaturesCard, ];
   obj = { style: tmp3.extraInfoContainer, children: null };
-  const obj1 = { variant: "eyebrow", color: "text-default", children: null };
+  obj1 = { variant: "eyebrow", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.Obre8v);
   const items1 = [callback3(Text.Text, obj1), , ];
@@ -519,18 +494,13 @@ function FractionalPremiumCredits(durationText) {
   const obj6 = { style: null, start: null, end: null, colors: null, children: null };
   const obj7 = { padding: 6, borderRadius: null };
   tmpResult = tmp(4756);
-  obj7[1] = Themes.radii.sm;
+  obj7[1] = ThemesDefault.radii.sm;
   obj6[0] = obj7;
   obj6[1] = { x: 0, y: 0 };
   obj6[2] = { x: 0, y: 1 };
-  const items2 = [Themes.unsafe_rawColors.GUILD_BOOSTING_BLUE, Themes.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
+  const items2 = [ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_BLUE, ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PURPLE];
   obj6[3] = items2;
-  const obj8 = { children: null };
-  const obj9 = { color: null, source: null, size: null };
-  obj9[0] = Themes.unsafe_rawColors.WHITE;
-  obj9[1] = registerAsset;
-  obj9[2] = Button.IconSizes.LARGE;
-  obj8[0] = callback3(Button.Icon, obj9);
+  const obj8 = { children: callback3(Button.Icon, { color: ThemesDefault.unsafe_rawColors.WHITE, source: registerAssetDefault, size: Button.IconSizes.LARGE }) };
   obj6[4] = callback3(closure_8, obj8);
   obj5[1] = callback3(tmpResult, obj6);
   const items3 = [callback3(closure_8, obj5), ];
@@ -622,33 +592,33 @@ function FractionalPremiumCredits(durationText) {
   obj27[2] = intl4.string(getSystemLocale.t["B66Z+f"]);
   tmp8Result = tmp8(tmp9(4734).Text, obj27);
 }
-({ Image: closure_6, ImageBackground: error, View: metroImportAll, ScrollView: c9, ActivityIndicator: c10 } = get_ActivityIndicator);
+({ Image: closure_6, ImageBackground: error, View: closure_8, ScrollView: c9, ActivityIndicator: c10 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_19, HelpdeskArticles: closure_20, SubscriptionStatusTypes: closure_21, UserSettingsSections: closure_22 } = ME);
 ({ FractionalPremiumStates: closure_25, PREMIUM_SUBSCRIPTION_APPLICATION: closure_26, PremiumTypes: closure_27, SubscriptionPlanInfo: closure_28 } = GuildFeatures);
 ({ jsx: closure_29, jsxs: closure_30 } = jsxProd);
-let closure_31 = new require("get ActivityIndicator")("PremiumManagePlan");
+let closure_31 = new timestampDefault("PremiumManagePlan");
 createCacheKey = { background: null, container: null, contentContainer: null, topBlur: null, accountCredit: null, accountCreditList: null, featuresTable: null, subscriptionHeader: null, billingInfo: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, height: "100%" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 createCacheKey[0] = createCacheKey;
-const tmp6 = new require("get ActivityIndicator")("PremiumManagePlan");
-createCacheKey[1] = { display: "flex", paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
+const tmp6 = new timestampDefault("PremiumManagePlan");
+createCacheKey[1] = { display: "flex", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[2] = { marginTop: 24, display: "flex", gap: 12 };
 createCacheKey[3] = { position: "absolute", zIndex: 5, top: 0, left: 0, right: 0 };
 createCacheKey[4] = { paddingHorizontal: 16 };
-let obj1 = { display: "flex", paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
-createCacheKey[5] = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+let obj1 = { display: "flex", paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[6] = { paddingTop: 16 };
 createCacheKey[7] = { marginTop: 20, width: "100%" };
 createCacheKey[8] = { marginTop: 20, width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_32 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { headerContainer: { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingVertical: 8, justifyContent: "space-between" }, backButtonWrapper: null };
-let obj2 = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-obj3[1] = { width: 24, height: 24, borderRadius: require("Themes").radii.lg, alignItems: "center", justifyContent: "center" };
+let obj2 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj3[1] = { width: 24, height: 24, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center" };
 let closure_33 = createCacheKey.createStyles(obj3);
 let closure_35 = createCacheKey.createStyles((arg0) => {
   const tmp = getTableDividerWidth(arg0);
   let obj = { container: { display: "flex", flexDirection: "column", gap: 12 }, errorHeader: null, headerBackground: null, logoContainer: null, wumpusImg: null, logoStyle: null, errorHeaderPrimaryButton: null, extraInfoContainer: null, extraInfoTextContainer: null, mutationWarningContainer: null, mutationText: null, fpTimeRemaining: null, fpTimeRemainingPill: null, fpUnactivatedHoursPill: null, fpTimeRemainingText: null, fpUnitsTitle: null, fpUnitsStatusText: null, fpRowStart: null, fpRowIcon: null, fpRowContent: null, fpRowEnd: null, dividerContainer: null, divider: null, pillAndCardContainer: null, pillPosition: null };
-  obj = { backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, borderRadius: Themes.radii.lg, overflow: "hidden" };
+  obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, overflow: "hidden" };
   obj[1] = obj;
   obj[2] = { padding: 16 };
   obj[3] = { flexDirection: "row", alignItems: "center", marginBottom: 12 };
@@ -656,29 +626,29 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   obj[5] = { height: 32, width: 78 };
   obj[6] = { marginBottom: 16, marginHorizontal: 16 };
   obj[7] = { paddingTop: 16, paddingHorizontal: 16, display: "flex", gap: 8 };
-  obj = { padding: 16, borderRadius: Themes.radii.sm, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
+  obj = { padding: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", gap: 18 };
   obj[8] = obj;
-  obj[9] = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
+  obj[9] = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
   obj[10] = { flex: 1 };
-  const obj1 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
-  obj[11] = { color: Themes.colors.TEXT_BRAND };
-  const obj2 = { color: Themes.colors.TEXT_BRAND };
-  obj[12] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj3 = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
-  obj[13] = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  const obj4 = { borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
-  obj[14] = { color: Themes.colors.WHITE };
-  const obj5 = { color: Themes.colors.WHITE };
-  obj[15] = { color: Themes.colors.MOBILE_TEXT_HEADING_PRIMARY };
-  const obj6 = { color: Themes.colors.MOBILE_TEXT_HEADING_PRIMARY };
-  obj[16] = { color: Themes.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  const obj7 = { color: Themes.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
-  obj[17] = { padding: Themes.modules.mobile.TABLE_ROW_PADDING, minHeight: Themes.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
-  const obj8 = { padding: Themes.modules.mobile.TABLE_ROW_PADDING, minHeight: Themes.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
-  obj[18] = { marginEnd: Themes.modules.mobile.TABLE_ROW_PADDING };
+  obj1 = { display: "flex", flexDirection: "row", alignItems: "flex-start", gap: 8, padding: 16, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  obj[11] = { color: ThemesDefault.colors.TEXT_BRAND };
+  const obj2 = { color: ThemesDefault.colors.TEXT_BRAND };
+  obj[12] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj3 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.CONTROL_PRIMARY_BACKGROUND_ACTIVE, paddingVertical: 4, paddingHorizontal: 8 };
+  obj[13] = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  const obj4 = { borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, paddingVertical: 4, paddingHorizontal: 8 };
+  obj[14] = { color: ThemesDefault.colors.WHITE };
+  const obj5 = { color: ThemesDefault.colors.WHITE };
+  obj[15] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  const obj6 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+  obj[16] = { color: ThemesDefault.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  const obj7 = { color: ThemesDefault.colors.TEXT_BRAND, marginStart: 18, flexShrink: 1 };
+  obj[17] = { padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  const obj8 = { padding: ThemesDefault.modules.mobile.TABLE_ROW_PADDING, minHeight: ThemesDefault.modules.mobile.TABLE_ROW_HEIGHT, flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  obj[18] = { marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
   obj[19] = { flexShrink: 1, flexGrow: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-  const obj9 = { marginEnd: Themes.modules.mobile.TABLE_ROW_PADDING };
-  obj[20] = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOWEST };
+  const obj9 = { marginEnd: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+  obj[20] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
   let prop;
   if (!arg0) {
     prop = tmp2(712).colors.TABLEROW_BACKGROUND_DEFAULT;
@@ -688,7 +658,7 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   if (arg0) {
     let DIVIDER_BACKGROUND = tmp2(712).colors.BORDER_SUBTLE;
   } else {
-    DIVIDER_BACKGROUND = result.DIVIDER_BACKGROUND;
+    DIVIDER_BACKGROUND = result2.DIVIDER_BACKGROUND;
   }
   obj11[1] = DIVIDER_BACKGROUND;
   obj[22] = obj11;
@@ -696,18 +666,16 @@ let closure_35 = createCacheKey.createStyles((arg0) => {
   obj[24] = { position: "absolute", top: -18, left: 5, zIndex: 99 };
   return obj;
 });
-let obj4 = { width: 24, height: 24, borderRadius: require("Themes").radii.lg, alignItems: "center", justifyContent: "center" };
-let result = require("noop").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlan.tsx");
+let obj4 = { width: 24, height: 24, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center" };
+let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumManagePlan.tsx");
 
 export default function PremiumManagePlan() {
-  let tmp10;
-  let tmp11;
-  const tmp = createCacheKey();
-  const rect = useSafeAreaInsets();
+  const tmp = callback5();
+  const rect = useSafeAreaInsetsDefault();
   const top = rect.top;
   let obj = navigation(7924);
   const youBarSettingsOutsideSafeAreaTop = obj.useYouBarSettingsOutsideSafeAreaTop();
-  let obj1 = navigation(1500);
+  obj1 = navigation(1500);
   navigation = obj1.useNavigation();
   let obj2 = React;
   let items = [navigation];
@@ -715,20 +683,20 @@ export default function PremiumManagePlan() {
     navigation.setOptions({ headerShown: false });
   }, items);
   let obj3 = navigation(589);
-  const items1 = [addSubscriptionPlan];
-  const stateFromStores = obj3.useStateFromStores(items1, () => addSubscriptionPlan.isLoadedForPremiumSKUs());
+  const items1 = [closure_14];
+  const stateFromStores = obj3.useStateFromStores(items1, () => closure_14.isLoadedForPremiumSKUs());
   let obj4 = navigation(589);
-  const items2 = [reset];
+  const items2 = [closure_15];
   [tmp10, tmp11] = callback2(obj4.useStateFromStoresArray(items2, () => {
-    const items = [reset.getPremiumTypeSubscription(), reset.hasFetchedSubscriptions()];
+    const items = [closure_15.getPremiumTypeSubscription(), closure_15.hasFetchedSubscriptions()];
     return items;
   }), 2);
   let obj5 = navigation(589);
   const items3 = [closure_12];
   const stateFromStores1 = obj5.useStateFromStores(items3, () => currentUser.getCurrentUser());
-  const tmp12 = calculateFractionalPremiumInfo({ forceFetch: true });
-  useMountLayoutEffect(() => {
-    let isSubscriptionFetching = reset.hasFetchedSubscriptions();
+  const tmp12 = calculateFractionalPremiumInfoDefault({ forceFetch: true });
+  useMountLayoutEffectDefault(() => {
+    let isSubscriptionFetching = closure_15.hasFetchedSubscriptions();
     if (!isSubscriptionFetching) {
       isSubscriptionFetching = obj.isSubscriptionFetching;
     }
@@ -744,10 +712,10 @@ export default function PremiumManagePlan() {
   let obj7 = navigation(8278);
   let isInReverseTrial = obj7.useIsInReverseTrial();
   const tmp9 = callback2(obj4.useStateFromStoresArray(items2, () => {
-    const items = [reset.getPremiumTypeSubscription(), reset.hasFetchedSubscriptions()];
+    const items = [closure_15.getPremiumTypeSubscription(), closure_15.hasFetchedSubscriptions()];
     return items;
   }), 2);
-  const tmp15 = roundFPCountdownUnits;
+  const tmp15 = roundFPCountdownUnitsDefault;
   let obj8 = navigation(4039);
   const unactivatedFractionalPremiumDurationString = obj8.getUnactivatedFractionalPremiumDurationString(tmp12);
   if (null !== tmp10) {
@@ -769,12 +737,12 @@ export default function PremiumManagePlan() {
   let tmp4Result = tmp4(4104);
   importDefault = obj2.useRef(false);
   const callback = obj2.useCallback((nativeEvent) => {
-    let obj = navigation(outer1_2[66]);
+    let obj = navigation(closure_1_2[66]);
     obj = { nativeEvent: nativeEvent.nativeEvent, trackedType: "your_nitro_plan", hasTrackedScrolledToBottom: closure_1 };
     return obj.trackIfScrolledToBottom(obj);
   }, []);
   tmp4Result = tmp4(589);
-  const items4 = [addEntitlement];
+  const items4 = [closure_16];
   let tmp23 = null != tmp10;
   const stateFromStores2 = tmp4Result.useStateFromStores(items4, () => {
     forApplication = forApplication.getForApplication(closure_26);
@@ -866,10 +834,10 @@ export default function PremiumManagePlan() {
       let arr = navigation;
       const routes = navigation.getState().routes;
       const found = routes.find((name) => name.name === constants.GUILD_BOOSTING);
-      let obj = callback(outer1_2[69]);
-      obj.setSection(outer1_22.GUILD_BOOSTING);
-      obj = { destinationPane: outer1_22.GUILD_BOOSTING };
-      const result = navigation(outer1_2[70]).trackUserSettingsPaneViewed(obj);
+      let obj = callback(closure_1_2[69]);
+      obj.setSection(closure_1_22.GUILD_BOOSTING);
+      obj = { destinationPane: closure_1_22.GUILD_BOOSTING };
+      const result = navigation(closure_1_2[70]).trackUserSettingsPaneViewed(obj);
       if (null != found) {
         arr.navigate(tmp2.GUILD_BOOSTING, undefined, { pop: true });
       } else {
@@ -895,14 +863,14 @@ export default function PremiumManagePlan() {
   obj9[4] = flag;
   items9[5] = closure_29(tmp2Result, obj9);
   const obj10 = { style: tmp.featuresTable, variant: "nitro_home", titleOverride: null, isFractionalOnly: null, isPremiumGroup: null, premiumGroupRole: null };
-  tmp15Result = roundFPCountdownUnits(tmp12.endsAt, navigation(12893).CountDownMessageTypes.SHORT_TIME);
+  tmp15Result = roundFPCountdownUnitsDefault(tmp12.endsAt, navigation(12893).CountDownMessageTypes.SHORT_TIME);
   const tmp31 = closure_9;
   const intl = tmp4(1236).intl;
   obj10[2] = intl.string(navigation(1236).t.QXx2gs);
   obj10[3] = tmp12.fractionalState === constants3.FP_ONLY;
   obj10[4] = result;
   obj10[5] = premiumGroupRole;
-  items9[6] = closure_29(CheckIcon, obj10);
+  items9[6] = closure_29(CheckIconDefault, obj10);
   obj1[1] = items9;
   items8[1] = closure_30(closure_8, obj1);
   obj[4] = items8;

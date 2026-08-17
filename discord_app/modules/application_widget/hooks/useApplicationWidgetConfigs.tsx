@@ -1,10 +1,10 @@
 // discord_app/modules/application_widget/hooks/useApplicationWidgetConfigs.tsx
-import noop from "noop";
-import updateApplicationConfigs from "updateApplicationConfigs";
-import { FetchState } from "updateApplicationConfigs";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "updateApplicationConfigs" /* 12288 */;
+import { FetchState } from "updateApplicationConfigs" /* 12288 */;
 
 const require = arg1;
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
+const result = require("set").fileFinishedImporting("modules/application_widget/hooks/useApplicationWidgetConfigs.tsx");
 
 export default function useApplicationWidgetConfigs(arg0) {
   const _require = arg0;

@@ -1,26 +1,18 @@
 // discord_app/modules/guild_identity/GuildIdentityActionCreators.tsx
-import SafetyScannedUploadSurface from "SafetyScannedUploadSurface";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _saveGuildIdentityChanges() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
       if (c8 === 2) {
         c8 = 3;
         HermesBuiltin.throwTypeError();
@@ -50,7 +42,7 @@ function _saveGuildIdentityChanges() {
               c4 = tmp4;
               c3 = tmp9;
               let callback2;
-              let dependencyMap;
+              dependencyMap = undefined;
               c3 = undefined;
               c4 = undefined;
               let skuId;
@@ -74,14 +66,14 @@ function _saveGuildIdentityChanges() {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               dispatchResult = callback;
               if (null == callback) {
                 const _Error = Error;
-                const error = new Error("Need guildId");
+                error = new Error("Need guildId");
                 throw error;
               } else {
                 dispatchResult = c3;
@@ -173,7 +165,7 @@ function _saveGuildIdentityChanges() {
             }
           } else if (2 === tmp9) {
             skuId2 = 0;
-            let closure_13 = skuId;
+            closure_13 = skuId;
             body = closure_13.body;
             let username;
             if (body != null) {
@@ -240,7 +232,7 @@ function _saveGuildIdentityChanges() {
     iter.next();
     return iter;
   });
-  const _saveGuildIdentityChanges = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -249,7 +241,7 @@ function _saveGuildIdentityChanges() {
   }
   return applyArgumentsResult;
 }
-const result = require("dispatcher").fileFinishedImporting("modules/guild_identity/GuildIdentityActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_identity/GuildIdentityActionCreators.tsx");
 
 export const saveGuildIdentityChanges = function saveGuildIdentityChanges(id1, guildMemberChangesForUpdateRequest) {
   const self = this;
@@ -262,24 +254,24 @@ export const saveGuildIdentityChanges = function saveGuildIdentityChanges(id1, g
   return applyArgumentsResult;
 };
 export const setCurrentGuild = function setCurrentGuild(id) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: id };
   obj.dispatch(obj);
 };
 export const initGuildIdentitySettings = function initGuildIdentitySettings(id) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "USER_PROFILE_SETTINGS_INIT", guildId: id };
   obj.dispatch(obj);
 };
 export const resetPendingMemberChanges = function resetPendingMemberChanges() {
-  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 };
 export const resetPendingProfileChanges = function resetPendingProfileChanges() {
-  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 };
 export const resetAllPending = function resetAllPending() {
-  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 };
 export const clearErrors = function clearErrors() {
-  dispatcher.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+  dispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 };

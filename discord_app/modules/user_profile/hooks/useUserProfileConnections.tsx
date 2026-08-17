@@ -1,16 +1,18 @@
 // discord_app/modules/user_profile/hooks/useUserProfileConnections.tsx
-import { useMemo } from "noop";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "createUserWidgetFromServer" /* 5365 */;
 
+const useMemo = noop.useMemo;
 let closure_5 = [];
-const result = require("PlatformTypes").fileFinishedImporting("modules/user_profile/hooks/useUserProfileConnections.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/hooks/useUserProfileConnections.tsx");
 
 export default function useUserProfileConnections(arg0) {
   const _require = arg0;
   const platformAllowed = _require(stateFromStores[2]).usePlatformAllowed({ forUserProfile: true });
   const obj = _require(stateFromStores[2]);
-  const items = [createUserWidgetFromServer];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => outer1_4.getUserProfile(closure_0));
+  const items = [closure_4];
+  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getUserProfile(closure_0));
   let connectedAccounts;
   if (stateFromStores != null) {
     connectedAccounts = stateFromStores.connectedAccounts;
@@ -22,16 +24,16 @@ export default function useUserProfileConnections(arg0) {
       connectedAccounts = tmp.connectedAccounts;
     }
     if (null == connectedAccounts) {
-      let found = outer1_5;
+      let found = closure_1_5;
     } else {
       const connectedAccounts1 = tmp.connectedAccounts;
       found = connectedAccounts1.filter((type) => {
         type = type.type;
-        const value = outer1_1(outer1_2[4]).get(type);
+        const value = closure_1_1(closure_1_2[4]).get(type);
         let isSupportedResult = null != value;
         if (isSupportedResult) {
-          isSupportedResult = outer1_1(outer1_2[4]).isSupported(type);
-          const tmpResult = outer1_1(outer1_2[4]);
+          isSupportedResult = closure_1_1(closure_1_2[4]).isSupported(type);
+          const tmpResult = closure_1_1(closure_1_2[4]);
         }
         if (isSupportedResult) {
           isSupportedResult = callback(value);

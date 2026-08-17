@@ -1,13 +1,11 @@
 // discord_app/modules/user_settings/defs/native/VoiceSetting.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import ME from "ME";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "_detectH265HardwareDecode" /* 4497 */;
+import ME from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 import { KrispLogo } from "../../voice/native/SettingsVoiceScreen.tsx";
 
-let UserSettingsSections;
-let c3;
-const require = arg1;
+require = arg1;
 ({ InputModes: c3, UserSettingsSections } = ME);
 createToggle = {
   useTitle() {
@@ -17,7 +15,7 @@ createToggle = {
   parent: null,
   IconComponent: require("MicrophoneIcon").MicrophoneIcon,
   useTrailing: function useVoiceSettingTrailing() {
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_2];
     if (obj.useStateFromStores(items, () => mode.getMode()) === constants.PUSH_TO_TALK) {
       const intl2 = tmp(1236).intl;
       let stringResult = intl2.string(tmp(1236).t.Q8gkVL);
@@ -41,6 +39,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/VoiceSetting.tsx");
 
 export default createToggle;

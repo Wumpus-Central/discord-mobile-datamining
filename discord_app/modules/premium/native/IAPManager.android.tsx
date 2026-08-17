@@ -1,6 +1,7 @@
 // discord_app/modules/premium/native/IAPManager.android.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
+initializeDefault;
 let prototype = function IAPManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

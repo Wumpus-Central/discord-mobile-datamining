@@ -1,34 +1,29 @@
 // discord_app/modules/collectibles/CollectiblesActionCreators.tsx
-import map from "map";
-import getUserAgnosticState from "getUserAgnosticState";
-import _getSystemLocale from "_getSystemLocale";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { addDebugLog } from "useCollectiblesDebugStore";
-import closure_8 from "map";
-import items from "items";
-import { CollectiblesCategoriesRecord as closure_10 } from "fromServer";
-import { CollectiblesMarketingsRecord as closure_11 } from "fromServer";
-import fromServer from "fromServer";
-import closure_13 from "fromServer";
-import { CollectiblesShopHomeRecord as closure_14 } from "fromServer";
-import { CollectiblesMobileShopScreen as closure_15 } from "items";
-import ME from "ME";
-import getMarketingBySurface from "getMarketingBySurface";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import pushLayer from "pushLayer" /* 5353 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getUserAgnosticState" /* 4737 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
+import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
+import { addDebugLog } from "useCollectiblesDebugStore" /* 5323 */;
+import closure_8 from "map" /* 5324 */;
+import closure_9 from "items" /* 5325 */;
+import { CollectiblesCategoriesRecord as closure_10, CollectiblesMarketingsRecord as closure_11, CollectiblesShopHomeRecord as closure_14 } from "fromServer" /* 5326 */;
+import closure_12 from "fromServer" /* 5303 */;
+import closure_13 from "fromServer" /* 5336 */;
+import { CollectiblesMobileShopScreen as closure_15 } from "items" /* 678 */;
+import ME from "ME" /* 676 */;
+import getMarketingBySurface from "getMarketingBySurface" /* 5351 */;
 import "map";
-import { pushLayer } from "../../actions/LayerActionCreators.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { getRootNavigationRef } from "../main_tabs_v2/RootNavigationRef.native.tsx";
-import { getItemRecordsFromPurchases } from "CollectiblesUtils.tsx";
 
-let Routes;
-let closure_16;
-let closure_17;
-const require = arg1;
+require = arg1;
 function openCollectiblesShop(arg0) {
   openCollectiblesShopMobile(Object.assign(arg0, Object.create(null)));
 }
 function openCollectiblesShopMobile(screen) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(screen);
   obj.dispatch(obj);
@@ -48,7 +43,7 @@ function openCollectiblesShopMobile(screen) {
         if (screen !== screen) {
           obj = { screen: null, params: null };
           obj[0] = constants2.COLLECTIBLES_SHOP;
-          const obj1 = { analyticsSource: null, screen: null, onNavigateAway: null };
+          obj1 = { analyticsSource: null, screen: null, onNavigateAway: null };
           obj1[0] = screen.analyticsSource;
           obj1[1] = screen;
           obj1[2] = screen.onNavigateAway;
@@ -64,35 +59,35 @@ function openCollectiblesShopMobile(screen) {
   }
 }
 function closeCollectiblesShop() {
-  dispatcher.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
-  const obj = dispatcher;
+  dispatcherDefault.dispatch({ type: "COLLECTIBLES_SHOP_CLOSE" });
+  const obj = dispatcherDefault;
   pushLayer.popLayer();
 }
 function _fetchCollectiblesCategories() {
   const self = this;
   let tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
       let aPIError = tmp3;
-      let getUserAgnosticState = tmp5;
+      closure_4 = tmp5;
       let tmp = callback;
       tmp = closure_2;
-      let map = lib;
+      closure_3 = lib;
       if (lib == null) {
-        map = {};
+        closure_3 = {};
       }
-      const obj1 = { type: "COLLECTIBLES_CATEGORIES_FETCH", options: null };
-      obj1[1] = map;
+      obj1 = { type: "COLLECTIBLES_CATEGORIES_FETCH", options: null };
+      obj1[1] = closure_3;
       callback(closure_2[17]).dispatch(obj1);
       const obj17 = callback(closure_2[17]);
       const fetchCollectiblesOptionsQuery = lib(closure_2[19]).buildFetchCollectiblesOptionsQuery(tmp97);
-      const value = outer1_4.get("shop_show_debug_overlay");
-      map = value;
+      const value = closure_1_4.get("shop_show_debug_overlay");
+      closure_3 = value;
       if (lib != null) {
         const logPerf = tmp97.logPerf;
       }
@@ -130,28 +125,28 @@ function _fetchCollectiblesCategories() {
       v0 = 1;
       const HTTP = lib(closure_2[21]).HTTP;
       const obj3 = { url: null, query: null, rejectWithError: true };
-      obj3[0] = outer1_16.COLLECTIBLES_CATEGORIES_V2;
+      obj3[0] = closure_1_16.COLLECTIBLES_CATEGORIES_V2;
       obj3[1] = fetchCollectiblesOptionsQuery;
       yield HTTP.get(obj3);
       if (1 === tmp8) {
         v0 = 0;
-        aPIError = new lib(closure_2[22]).APIError(updateCategoriesAndProducts);
+        aPIError = new lib(closure_2[22]).APIError(closure_6);
         let obj5 = lib(closure_2[23]);
         const result = obj5.captureOrIgnoreApiError(aPIError);
         let obj6 = callback(closure_2[17]);
         obj5 = { type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: null };
         obj5[1] = aPIError;
         obj6.dispatch(obj5);
-        if (map) {
+        if (closure_3) {
           const _HermesInternal2 = HermesInternal;
           v0("fetchCollectiblesCategories failed: " + aPIError.message);
         }
-        let c9 = 3;
+        c9 = 3;
       } else if (arg0 === 1) {
         c9 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        getUserAgnosticState = arg1;
+        closure_4 = arg1;
         let logPerf1;
         if (lib != null) {
           logPerf1 = lib.logPerf;
@@ -182,13 +177,13 @@ function _fetchCollectiblesCategories() {
           obj6[4] = noCache1;
           obj.trackShopPerf(obj6);
         }
-        if (map) {
+        if (closure_3) {
           const _HermesInternal = HermesInternal;
-          v0("fetchCollectiblesCategories completed " + getUserAgnosticState.body.categories.length + " categories");
+          v0("fetchCollectiblesCategories completed " + closure_4.body.categories.length + " categories");
         }
         obj2 = callback(closure_2[17]);
         const obj7 = { type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: null, noOp: null };
-        obj7[1] = closure_10.fromServer(getUserAgnosticState.body);
+        obj7[1] = closure_10.fromServer(closure_4.body);
         obj7[2] = callback;
         obj2.dispatch(obj7);
         v0 = 0;
@@ -197,7 +192,7 @@ function _fetchCollectiblesCategories() {
       return arg1;
     })();
   });
-  const _fetchCollectiblesCategories = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -250,28 +245,28 @@ function _fetchCollectiblesPurchases() {
             callback = undefined;
             lib = undefined;
             let aPIError;
-            if (outer1_8.isFetching) {
+            if (closure_1_8.isFetching) {
               c5 = 3;
             } else {
-              let obj6 = outer1_1(outer1_2[17]);
+              let obj6 = closure_1_1(closure_1_2[17]);
               obj6.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
               const value = c4.get("shop_show_debug_overlay");
               callback = value;
               if (value) {
-                outer1_7("fetchCollectiblesPurchases started");
+                closure_1_7("fetchCollectiblesPurchases started");
               }
-              let c3 = 1;
-              const obj1 = { url: null, rejectWithError: true, query: null };
-              obj1[0] = outer1_16.COLLECTIBLES_PURCHASES;
+              c3 = 1;
+              obj1 = { url: null, rejectWithError: true, query: null };
+              obj1[0] = closure_1_16.COLLECTIBLES_PURCHASES;
               const obj2 = { variants_return_style: null };
-              obj2[0] = outer1_0(outer1_2[24]).ShopVariantsReturnStyle.VARIANTS_GROUP;
+              obj2[0] = closure_1_0(closure_1_2[24]).ShopVariantsReturnStyle.VARIANTS_GROUP;
               obj1[2] = obj2;
               if (value) {
                 const _JSON = JSON;
                 const _HermesInternal3 = HermesInternal;
-                outer1_7("fetchCollectiblesPurchases request: " + JSON.stringify(obj1, null, 2));
+                closure_1_7("fetchCollectiblesPurchases request: " + JSON.stringify(obj1, null, 2));
               }
-              const HTTP = outer1_0(outer1_2[21]).HTTP;
+              const HTTP = closure_1_0(closure_1_2[21]).HTTP;
               c4 = 2;
               c5 = 1;
               let obj3 = { value: null, done: false };
@@ -326,7 +321,7 @@ function _fetchCollectiblesPurchases() {
       }
     }
   });
-  const _fetchCollectiblesPurchases = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -348,18 +343,18 @@ function fetchCollectiblesProduct(closure_0, arg1) {
 function _fetchCollectiblesProduct() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      let map = tmp3;
-      const obj1 = { type: "COLLECTIBLES_PRODUCT_FETCH", skuId: null, startedAt: null };
+      closure_3 = tmp3;
+      obj1 = { type: "COLLECTIBLES_PRODUCT_FETCH", skuId: null, startedAt: null };
       obj1[1] = callback;
       const _Date3 = Date;
       obj1[2] = Date.now();
-      lib(outer1_2[17]).dispatch(obj1);
+      lib(closure_1_2[17]).dispatch(obj1);
       let locale = 1;
       const obj2 = { locale: null };
       obj2[0] = locale.locale;
@@ -393,15 +388,15 @@ function _fetchCollectiblesProduct() {
         }
         obj2.include_bundles = includeBundles1;
       }
-      const HTTP = callback(outer1_2[21]).HTTP;
+      const HTTP = callback(closure_1_2[21]).HTTP;
       let obj3 = { url: null, rejectWithError: true, query: null };
-      obj3[0] = outer1_16.COLLECTIBLES_PRODUCTS(callback);
+      obj3[0] = closure_1_16.COLLECTIBLES_PRODUCTS(callback);
       obj3[2] = obj2;
       yield HTTP.get(obj3);
       if (1 === tmp7) {
         locale = 0;
-        map = getUserAgnosticState;
-        aPIError = new callback(aPIError[22]).APIError(map);
+        closure_3 = closure_4;
+        aPIError = new callback(aPIError[22]).APIError(closure_3);
         obj3 = callback(aPIError[23]);
         const result = obj3.captureOrIgnoreApiError(aPIError);
         const obj4 = lib(aPIError[17]);
@@ -411,7 +406,7 @@ function _fetchCollectiblesProduct() {
         const _Date2 = Date;
         obj5[3] = Date.now();
         obj4.dispatch(obj5);
-        let c7 = 3;
+        c7 = 3;
       } else if (arg0 === 1) {
         c7 = 3;
         throw arg1;
@@ -420,7 +415,7 @@ function _fetchCollectiblesProduct() {
         const obj = lib(aPIError[17]);
         const obj6 = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
         obj6[1] = callback;
-        obj6[2] = fromServer.fromServer(lib.body);
+        obj6[2] = closure_12.fromServer(lib.body);
         const _Date = Date;
         obj6[3] = Date.now();
         obj.dispatch(obj6);
@@ -430,7 +425,7 @@ function _fetchCollectiblesProduct() {
       return arg1;
     })();
   });
-  const _fetchCollectiblesProduct = tmp;
+  closure_22 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -442,10 +437,10 @@ function _fetchCollectiblesProduct() {
 function _maybeFetchCollectiblesProduct() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c2 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c2 = 0;
     return (function*(arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
@@ -473,8 +468,8 @@ function _maybeFetchCollectiblesProduct() {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = outer1_6;
-              let isFetchingProductResult = outer1_6.isFetchingProduct(closure_0);
+              obj1 = closure_1_6;
+              let isFetchingProductResult = closure_1_6.isFetchingProduct(closure_0);
               if (!isFetchingProductResult) {
                 isFetchingProductResult = obj1.isProductFetchBackedOff(tmp5);
               }
@@ -482,7 +477,7 @@ function _maybeFetchCollectiblesProduct() {
                 c3 = 1;
                 c2 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = outer1_21(tmp5, tmp6);
+                obj1[0] = closure_1_21(tmp5, tmp6);
                 return obj1;
               }
               tmp6 = closure_1;
@@ -505,7 +500,7 @@ function _maybeFetchCollectiblesProduct() {
       }
     })();
   });
-  const _maybeFetchCollectiblesProduct = tmp;
+  closure_23 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -527,10 +522,10 @@ function claimPremiumCollectiblesProduct(skuId) {
 function _claimPremiumCollectiblesProduct() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -562,13 +557,13 @@ function _claimPremiumCollectiblesProduct() {
               let lib = tmp7;
               lib = undefined;
               aPIError = undefined;
-              let obj1 = { type: "COLLECTIBLES_CLAIM", skuId: null };
+              obj1 = { type: "COLLECTIBLES_CLAIM", skuId: null };
               obj1[1] = callback;
-              outer1_1(outer1_2[17]).dispatch(obj1);
-              let c4 = 1;
-              const HTTP = callback(outer1_2[21]).HTTP;
+              closure_1_1(closure_1_2[17]).dispatch(obj1);
+              c4 = 1;
+              const HTTP = callback(closure_1_2[21]).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: true };
-              obj2[0] = outer1_16.COLLECTIBLES_CLAIM;
+              obj2[0] = closure_1_16.COLLECTIBLES_CLAIM;
               const obj3 = { sku_id: null };
               obj3[0] = callback;
               obj2[1] = obj3;
@@ -580,7 +575,7 @@ function _claimPremiumCollectiblesProduct() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            aPIError = new callback(aPIError[22]).APIError(map);
+            aPIError = new callback(aPIError[22]).APIError(closure_3);
             obj1 = lib(aPIError[17]);
             const obj5 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: null, error: null };
             obj5[1] = callback;
@@ -613,7 +608,7 @@ function _claimPremiumCollectiblesProduct() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp29) {
-          map = tmp29;
+          closure_3 = tmp29;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp29;
@@ -624,7 +619,7 @@ function _claimPremiumCollectiblesProduct() {
       }
     })();
   });
-  const _claimPremiumCollectiblesProduct = tmp;
+  closure_24 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -636,11 +631,11 @@ function _claimPremiumCollectiblesProduct() {
 function _validateCollectiblesRecipient() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
       if (c7 === 2) {
         c7 = 3;
@@ -668,12 +663,12 @@ function _validateCollectiblesRecipient() {
               obj[0] = body;
               return obj;
             } else {
-              let map = tmp3;
-              const dependencyMap = tmp7;
-              let c5 = 1;
-              const HTTP = callback(outer1_2[21]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = outer1_16.COLLECTIBLES_VALID_GIFT_RECIPIENT;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
+              c5 = 1;
+              const HTTP = callback(closure_1_2[21]).HTTP;
+              obj1 = { url: null, query: null, rejectWithError: true };
+              obj1[0] = closure_1_16.COLLECTIBLES_VALID_GIFT_RECIPIENT;
               let obj2 = { sku_id: null, recipient_id: null };
               obj2[0] = closure_1;
               obj2[1] = callback;
@@ -686,7 +681,7 @@ function _validateCollectiblesRecipient() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            callback = getUserAgnosticState;
+            callback = closure_4;
             obj2 = callback(5360);
             const aPIError = new callback(4273).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
@@ -709,7 +704,7 @@ function _validateCollectiblesRecipient() {
             return obj;
           }
         } catch (tmp22) {
-          getUserAgnosticState = tmp22;
+          closure_4 = tmp22;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp22;
@@ -720,7 +715,7 @@ function _validateCollectiblesRecipient() {
       }
     })();
   });
-  const _validateCollectiblesRecipient = tmp;
+  closure_25 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -732,11 +727,11 @@ function _validateCollectiblesRecipient() {
 function _validateCollectiblesRecipientsBatch() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
       if (c7 === 2) {
         c7 = 3;
@@ -764,12 +759,12 @@ function _validateCollectiblesRecipientsBatch() {
               obj[0] = body;
               return obj;
             } else {
-              let map = tmp3;
-              const dependencyMap = tmp7;
-              let c5 = 1;
-              const HTTP = callback(outer1_2[21]).HTTP;
-              const obj1 = { url: null, query: null, rejectWithError: true };
-              obj1[0] = outer1_16.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
+              c5 = 1;
+              const HTTP = callback(closure_1_2[21]).HTTP;
+              obj1 = { url: null, query: null, rejectWithError: true };
+              obj1[0] = closure_1_16.COLLECTIBLES_VALID_GIFT_RECIPIENTS_BATCH;
               let obj2 = { sku_ids: null, recipient_id: null };
               obj2[0] = closure_1;
               obj2[1] = callback;
@@ -782,7 +777,7 @@ function _validateCollectiblesRecipientsBatch() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            callback = getUserAgnosticState;
+            callback = closure_4;
             obj2 = callback(5360);
             const aPIError = new callback(4273).APIError(callback);
             const result = obj2.captureOrIgnoreApiError(aPIError);
@@ -807,7 +802,7 @@ function _validateCollectiblesRecipientsBatch() {
             return obj;
           }
         } catch (tmp22) {
-          getUserAgnosticState = tmp22;
+          closure_4 = tmp22;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp22;
@@ -818,7 +813,7 @@ function _validateCollectiblesRecipientsBatch() {
       }
     })();
   });
-  const _validateCollectiblesRecipientsBatch = tmp;
+  closure_26 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -830,10 +825,10 @@ function _validateCollectiblesRecipientsBatch() {
 function _fetchCollectiblesMarketings() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -866,7 +861,7 @@ function _fetchCollectiblesMarketings() {
               let PROD;
               PROD = PROD.release;
               if (PROD === undefined) {
-                PROD = callback(outer1_2[26]).CollectiblesMarketingReleaseType.PROD;
+                PROD = callback(closure_1_2[26]).CollectiblesMarketingReleaseType.PROD;
               }
               obj2 = undefined;
               body = undefined;
@@ -880,7 +875,7 @@ function _fetchCollectiblesMarketings() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -890,7 +885,7 @@ function _fetchCollectiblesMarketings() {
               if (PROD !== PROD(body[26]).CollectiblesMarketingReleaseType.PROD) {
                 obj2.release = PROD;
               }
-              let c4 = 1;
+              c4 = 1;
               const HTTP = PROD(body[21]).HTTP;
               let obj3 = { url: null, query: null, rejectWithError: true };
               obj3[0] = constants.COLLECTIBLES_MARKETING;
@@ -905,7 +900,7 @@ function _fetchCollectiblesMarketings() {
             if (2 === tmp7) {
               c4 = 0;
               obj3 = PROD(body[23]);
-              const aPIError = new PROD(body[22]).APIError(map);
+              const aPIError = new PROD(body[22]).APIError(closure_3);
               const result = obj3.captureOrIgnoreApiError(aPIError);
               obj4 = obj2(body[17]);
               obj4.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
@@ -928,7 +923,7 @@ function _fetchCollectiblesMarketings() {
             return obj6;
           }
         } catch (tmp44) {
-          map = tmp44;
+          closure_3 = tmp44;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp44;
@@ -941,7 +936,7 @@ function _fetchCollectiblesMarketings() {
     iter.next();
     return iter;
   });
-  const _fetchCollectiblesMarketings = tmp;
+  closure_27 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -953,15 +948,15 @@ function _fetchCollectiblesMarketings() {
 function _fetchCollectiblesShopHome() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
-      let _getSystemLocale = tmp3;
-      const obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: null, options: null };
+      closure_5 = tmp3;
+      obj1 = { type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: null, options: null };
       obj1[1] = callback;
       let body = lib;
       if (lib == null) {
@@ -1000,16 +995,16 @@ function _fetchCollectiblesShopHome() {
         callback(closure_2[20]).trackShopPerf(obj2);
         const obj10 = callback(closure_2[20]);
       }
-      let c7 = 1;
+      c7 = 1;
       const HTTP = callback(closure_2[21]).HTTP;
       const obj3 = { url: null, query: null, rejectWithError: true };
-      obj3[0] = outer1_16.COLLECTIBLES_SHOP;
+      obj3[0] = closure_1_16.COLLECTIBLES_SHOP;
       obj3[1] = fetchCollectiblesOptionsQuery;
       yield HTTP.get(obj3);
       if (1 === tmp7) {
         c7 = 0;
-        _getSystemLocale = updateCategoriesAndProducts;
-        const aPIError = new callback(closure_2[22]).APIError(_getSystemLocale);
+        closure_5 = closure_6;
+        const aPIError = new callback(closure_2[22]).APIError(closure_5);
         let obj5 = callback(closure_2[23]);
         const result = obj5.captureOrIgnoreApiError(aPIError);
         let obj6 = lib(closure_2[17]);
@@ -1017,7 +1012,7 @@ function _fetchCollectiblesShopHome() {
         obj5[1] = callback;
         obj5[2] = aPIError;
         obj6.dispatch(obj5);
-        let c9 = 3;
+        c9 = 3;
       } else if (arg0 === 1) {
         c9 = 3;
         throw arg1;
@@ -1064,7 +1059,7 @@ function _fetchCollectiblesShopHome() {
       return arg1;
     })();
   });
-  const _fetchCollectiblesShopHome = tmp;
+  closure_28 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1076,11 +1071,11 @@ function _fetchCollectiblesShopHome() {
 function _claimCollectiblesCategoryReward() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -1108,18 +1103,18 @@ function _claimCollectiblesCategoryReward() {
               obj[0] = arg1;
               return obj;
             } else {
-              let map = tmp3;
+              closure_3 = tmp3;
               let aPIError = tmp7;
               const callback = lib;
               lib = undefined;
               aPIError = undefined;
-              let obj1 = { type: "COLLECTIBLES_CLAIM", skuId: null };
+              obj1 = { type: "COLLECTIBLES_CLAIM", skuId: null };
               obj1[1] = lib;
-              lib(outer1_2[17]).dispatch(obj1);
-              let c5 = 1;
-              const HTTP = callback(outer1_2[21]).HTTP;
+              lib(closure_1_2[17]).dispatch(obj1);
+              c5 = 1;
+              const HTTP = callback(closure_1_2[21]).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: true };
-              obj2[0] = outer1_16.COLLECTIBLES_CLAIM_CATEGORY_REWARD;
+              obj2[0] = closure_1_16.COLLECTIBLES_CLAIM_CATEGORY_REWARD;
               const obj3 = { category_id: null };
               obj3[0] = callback;
               obj2[1] = obj3;
@@ -1131,8 +1126,8 @@ function _claimCollectiblesCategoryReward() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            map = getUserAgnosticState;
-            aPIError = new callback(aPIError[22]).APIError(map);
+            closure_3 = closure_4;
+            aPIError = new callback(aPIError[22]).APIError(closure_3);
             obj1 = lib(aPIError[17]);
             const obj5 = { type: "COLLECTIBLES_CLAIM_FAILURE", skuId: null, error: null };
             obj5[1] = callback;
@@ -1165,7 +1160,7 @@ function _claimCollectiblesCategoryReward() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp29) {
-          getUserAgnosticState = tmp29;
+          closure_4 = tmp29;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp29;
@@ -1176,7 +1171,7 @@ function _claimCollectiblesCategoryReward() {
       }
     })();
   });
-  const _claimCollectiblesCategoryReward = tmp;
+  closure_29 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1188,13 +1183,11 @@ function _claimCollectiblesCategoryReward() {
 function _maybeFetchCollectiblesShopTabLayout() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -1228,7 +1221,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
               ({ tab: c0, abortSignal: c1 } = callback);
               layoutFetchError = undefined;
               let body;
-              let c4;
+              c4 = undefined;
               c5 = 1;
               c6 = 1;
               return { value: "ct", done: true };
@@ -1240,12 +1233,12 @@ function _maybeFetchCollectiblesShopTabLayout() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c6 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                if (!items.isFetchingLayout(callback)) {
-                  layoutFetchError = items.getLayoutFetchError(callback);
+                if (!closure_9.isFetchingLayout(callback)) {
+                  layoutFetchError = closure_9.getLayoutFetchError(callback);
                   let status;
                   if (layoutFetchError != null) {
                     status = layoutFetchError.status;
@@ -1317,7 +1310,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
     iter.next();
     return iter;
   });
-  const _maybeFetchCollectiblesShopTabLayout = tmp;
+  closure_30 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1327,7 +1320,7 @@ function _maybeFetchCollectiblesShopTabLayout() {
   return applyArgumentsResult;
 }
 ({ Endpoints: closure_16, Routes, UserSettingsSections: closure_17 } = ME);
-let result = require("_getSystemLocale").fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/CollectiblesActionCreators.tsx");
 
 export default { openCollectiblesShop, closeCollectiblesShop, fetchCollectiblesPurchases, fetchCollectiblesProduct, claimPremiumCollectiblesProduct };
 export { openCollectiblesShop };
@@ -1399,35 +1392,35 @@ export const isCollectiblesShopOpen = function isCollectiblesShopOpen() {
   return tmp2;
 };
 export const dispatchOpenCollectiblesShop = function dispatchOpenCollectiblesShop(arg0) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "COLLECTIBLES_SHOP_OPEN" };
   const merged = Object.assign(arg0);
   obj.dispatch(obj);
 };
 export { closeCollectiblesShop };
 export const productDetailsOpened = function productDetailsOpened(skuId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId };
   obj.dispatch(obj);
 };
-export const areRequestOptionsEqual = function areRequestOptionsEqual(c7, c12) {
+export const areRequestOptionsEqual = function areRequestOptionsEqual(closure_4, closure_12) {
   let noCache;
-  if (c7 != null) {
-    noCache = c7.noCache;
+  if (closure_4 != null) {
+    noCache = closure_4.noCache;
   }
   let noCache1;
-  if (c12 != null) {
-    noCache1 = c12.noCache;
+  if (closure_12 != null) {
+    noCache1 = closure_12.noCache;
   }
   let tmp4 = Boolean(noCache) === Boolean(noCache1);
   if (tmp4) {
     let includeUnpublished;
-    if (c7 != null) {
-      includeUnpublished = c7.includeUnpublished;
+    if (closure_4 != null) {
+      includeUnpublished = closure_4.includeUnpublished;
     }
     let includeUnpublished1;
-    if (c12 != null) {
-      includeUnpublished1 = c12.includeUnpublished;
+    if (closure_12 != null) {
+      includeUnpublished1 = closure_12.includeUnpublished;
     }
     const _Boolean = Boolean;
     const _Boolean2 = Boolean;
@@ -1436,12 +1429,12 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(c7, c12) {
   }
   if (tmp4) {
     let includeBundles;
-    if (c7 != null) {
-      includeBundles = c7.includeBundles;
+    if (closure_4 != null) {
+      includeBundles = closure_4.includeBundles;
     }
     let includeBundles1;
-    if (c12 != null) {
-      includeBundles1 = c12.includeBundles;
+    if (closure_12 != null) {
+      includeBundles1 = closure_12.includeBundles;
     }
     const _Boolean3 = Boolean;
     const _Boolean4 = Boolean;
@@ -1450,12 +1443,12 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(c7, c12) {
   }
   if (tmp4) {
     let includeDynamicBlocks;
-    if (c7 != null) {
-      includeDynamicBlocks = c7.includeDynamicBlocks;
+    if (closure_4 != null) {
+      includeDynamicBlocks = closure_4.includeDynamicBlocks;
     }
     let includeDynamicBlocks1;
-    if (c12 != null) {
-      includeDynamicBlocks1 = c12.includeDynamicBlocks;
+    if (closure_12 != null) {
+      includeDynamicBlocks1 = closure_12.includeDynamicBlocks;
     }
     const _Boolean5 = Boolean;
     const _Boolean6 = Boolean;
@@ -1464,45 +1457,45 @@ export const areRequestOptionsEqual = function areRequestOptionsEqual(c7, c12) {
   }
   if (tmp4) {
     let countryCode;
-    if (c7 != null) {
-      countryCode = c7.countryCode;
+    if (closure_4 != null) {
+      countryCode = closure_4.countryCode;
     }
     let countryCode1;
-    if (c12 != null) {
-      countryCode1 = c12.countryCode;
+    if (closure_12 != null) {
+      countryCode1 = closure_12.countryCode;
     }
     tmp4 = countryCode === countryCode1;
   }
   if (tmp4) {
     let paymentGateway;
-    if (c7 != null) {
-      paymentGateway = c7.paymentGateway;
+    if (closure_4 != null) {
+      paymentGateway = closure_4.paymentGateway;
     }
     let paymentGateway1;
-    if (c12 != null) {
-      paymentGateway1 = c12.paymentGateway;
+    if (closure_12 != null) {
+      paymentGateway1 = closure_12.paymentGateway;
     }
     tmp4 = paymentGateway === paymentGateway1;
   }
   if (tmp4) {
     let shopHomeConfig;
-    if (c7 != null) {
-      shopHomeConfig = c7.shopHomeConfig;
+    if (closure_4 != null) {
+      shopHomeConfig = closure_4.shopHomeConfig;
     }
     let shopHomeConfig1;
-    if (c12 != null) {
-      shopHomeConfig1 = c12.shopHomeConfig;
+    if (closure_12 != null) {
+      shopHomeConfig1 = closure_12.shopHomeConfig;
     }
     tmp4 = shopHomeConfig === shopHomeConfig1;
   }
   if (tmp4) {
     let skipNumCategories;
-    if (c7 != null) {
-      skipNumCategories = c7.skipNumCategories;
+    if (closure_4 != null) {
+      skipNumCategories = closure_4.skipNumCategories;
     }
     let skipNumCategories1;
-    if (c12 != null) {
-      skipNumCategories1 = c12.skipNumCategories;
+    if (closure_12 != null) {
+      skipNumCategories1 = closure_12.skipNumCategories;
     }
     tmp4 = skipNumCategories === skipNumCategories1;
   }
@@ -1543,7 +1536,7 @@ export const seedCollectiblesProductFromStandaloneLoad = function seedCollectibl
     if (null == product.getProduct(nextResult.skuId)) {
       let tmp6 = importDefault;
       let tmp7 = dependencyMap;
-      let obj2 = dispatcher;
+      let obj2 = dispatcherDefault;
       obj = { type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: null, product: null, endedAt: null };
       let tmp8 = nextResult;
       obj[1] = tmp4.skuId;
@@ -1585,7 +1578,7 @@ export const fetchCollectiblesMarketings = function fetchCollectiblesMarketings(
   }
   return applyArgumentsResult;
 };
-export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(closure_0, c12, closure_2) {
+export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(closure_0, closure_12, closure_2) {
   const self = this;
   const apply = _fetchCollectiblesShopHome.apply;
   if (typeof apply === "unknown") {
@@ -1596,17 +1589,17 @@ export const fetchCollectiblesShopHome = function fetchCollectiblesShopHome(clos
   return applyArgumentsResult;
 };
 export const setShopHomeConfigOverride = function setShopHomeConfigOverride(shopHomeConfigOverride) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride };
   obj.dispatch(obj);
 };
 export const setShopLayoutUrlOverride = function setShopLayoutUrlOverride(shopLayoutUrlOverride) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride };
   obj.dispatch(obj);
 };
 export const setSkipNumCategories = function setSkipNumCategories(skipNumCategories) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories };
   obj.dispatch(obj);
 };

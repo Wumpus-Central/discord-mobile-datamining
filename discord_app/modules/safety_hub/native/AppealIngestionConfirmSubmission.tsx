@@ -1,40 +1,39 @@
 // discord_app/modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx
-import "set";
-import { View } from "AppealIngestionActivitySummary";
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useSafetyHubClassifications } from "../hooks/useSafetyHubClassifications.tsx";
-import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
-import { AppealIngestionBreadcrumbs } from "AppealIngestionBreadcrumbs.tsx";
-import { AppealIngestionModal } from "AppealIngestionModal.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 5437 */;
+import useSafetyHubClassifications from "useSafetyHubClassifications" /* 11066 */;
+import AppealIngestionModal from "AppealIngestionModal" /* 11081 */;
+import AppealIngestionBreadcrumbsDefault from "AppealIngestionBreadcrumbs" /* 11090 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1, paddingHorizontal: 16 }, detailsAction: { marginBottom: 16 } });
-const result = require("handleSafetyHubRequestAgeVerificationResetModalAction").fileFinishedImporting("modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionConfirmSubmission.tsx");
 
 export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   isDsaEligible = isDsaEligible.isDsaEligible;
   const tmp = callback2();
   let obj = initialize;
-  const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  const items = [closure_4];
   let stateFromStores = obj.useStateFromStores(items, () => store.getAppealClassificationId());
-  let obj1 = useSafetyHubClassifications;
+  obj1 = useSafetyHubClassifications;
   if (stateFromStores == null) {
     stateFromStores = EMPTY_STRING_SNOWFLAKE_ID;
   }
   const safetyHubClassification = obj1.useSafetyHubClassification(stateFromStores);
   let tmp2Result = tmp2(589);
-  const items1 = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  const items1 = [closure_4];
   const stateFromStores1 = tmp2Result.useStateFromStores(items1, () => store.getAppealSignal());
   tmp2Result = tmp2(589);
-  const items2 = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  const items2 = [closure_4];
   const stateFromStores2 = tmp2Result.useStateFromStores(items2, () => store.getFreeTextAppealReason());
   const classification = safetyHubClassification.classification;
   let flagged_content;
@@ -52,7 +51,7 @@ export default function AppealIngestionConfirmSubmission(isDsaEligible) {
   obj = { reasons: null };
   const stringResult1 = intl2.string(getSystemLocale.t["G2g/g5"]);
   const tmp12 = View;
-  const tmp14 = AppealIngestionBreadcrumbs;
+  const tmp14 = AppealIngestionBreadcrumbsDefault;
   const items4 = [parseMessageEmbedForProps.getAppealSignalDisplayText(stateFromStores1), stateFromStores2];
   obj[0] = items4.filter((arg0) => arg0.length > 0);
   const items5 = [callback(tmp14, obj), , , ];

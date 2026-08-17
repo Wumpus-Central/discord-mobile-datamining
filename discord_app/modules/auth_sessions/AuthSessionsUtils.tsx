@@ -1,20 +1,20 @@
 // discord_app/modules/auth_sessions/AuthSessionsUtils.tsx
-import noop from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import handleInit from "handleInit";
-import { t } from "../../../_runtime/03975_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "handleInit" /* 14093 */;
 
-const require = arg1;
-const result = require("handleInit").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/auth_sessions/AuthSessionsUtils.tsx");
 
 export const useAuthSessions = function useAuthSessions() {
-  const items = [handleInit];
+  const items = [closure_5];
   stateFromStoresObject = stateFromStoresObject(589).useStateFromStoresObject(items, () => sessions.getSessions());
   const items1 = [stateFromStoresObject];
   return React.useMemo(() => {
     const otherSessions = [...authSessionIdHash];
-    authSessionIdHash = outer1_4.getAuthSessionIdHash();
+    authSessionIdHash = closure_1_4.getAuthSessionIdHash();
     let currentSession = null;
     if (null != authSessionIdHash) {
       const findIndexResult = otherSessions.findIndex((id_hash) => id_hash.id_hash === authSessionIdHash);
@@ -37,8 +37,8 @@ export const formatDate = function formatDate(arg0) {
     const intl = getSystemLocale.intl;
     let stringResult = intl.string(getSystemLocale.t.TXCmfL);
   } else {
-    stringResult = t(arg0).fromNow();
-    const obj = t(arg0);
+    stringResult = tDefault(arg0).fromNow();
+    const obj = tDefault(arg0);
   }
   return stringResult;
 };

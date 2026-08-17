@@ -1,11 +1,12 @@
 // discord_app/modules/user_settings/defs/native/LanguageSetting.tsx
-import _getSystemLocale from "_getSystemLocale";
-import createToggle from "createToggle";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "_getSystemLocale" /* 1994 */;
+import createToggle from "createToggle" /* 10669 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { handleLanguageChange } from "../../language_and_time/native/UserSettingsLocale.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -14,7 +15,7 @@ createToggle = {
   parent: null,
   IconComponent: require("LanguageIcon").LanguageIcon,
   useTrailing: function useLanguageSettingTrailing() {
-    const items = [_getSystemLocale];
+    const items = [closure_2];
     _require = _initialize.useStateFromStores(items, () => locale.locale);
     const obj = _initialize;
     const tmp = _require;
@@ -36,6 +37,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/LanguageSetting.tsx");
 
 export default createToggle;

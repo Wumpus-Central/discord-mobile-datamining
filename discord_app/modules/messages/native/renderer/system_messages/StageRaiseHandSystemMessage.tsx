@@ -1,28 +1,23 @@
 // discord_app/modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx
-import getActiveStageChannelIds from "getActiveStageChannelIds";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import closure_3 from "getActiveStageChannelIds" /* 4989 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: metroImportAll, Permissions: c9 } = ME);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
+require = arg1;
+({ HelpdeskArticles: closure_6, MessageFlags: error, MessageTypes: closure_8, Permissions: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");
 
 export const createStageRaiseHandSystemMessage = function createStageRaiseHandSystemMessage(roleStyle) {
   const message = roleStyle.message;
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  let canResult = getUncachedChannelPermissions.can(constants4.MUTE_MEMBERS, channel.getChannel(message.channel_id));
+  let canResult = closure_5.can(constants4.MUTE_MEMBERS, channel.getChannel(message.channel_id));
   participant = participant.getParticipant(message.channel_id, message.author.id);
-  let obj1 = DISCORD_EPOCH;
+  obj1 = DISCORD_EPOCHDefault;
   let num;
   const date = new Date(obj1.extractTimestamp(message.id));
   if (participant != null) {
@@ -48,8 +43,7 @@ export const createStageRaiseHandSystemMessage = function createStageRaiseHandSy
   }
   obj = { content: null, showInviteToSpeakButton: null, buttonLabel: null, ephemeralIndication: null };
   const intl = tmp(1236).intl;
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
-  obj[1] = formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle });
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: tmp6(8187)({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }) };
   obj[0] = intl.formatToParts(getSystemLocale.t.M87x7Y, obj);
   obj[1] = canResult;
   const intl2 = tmp(1236).intl;

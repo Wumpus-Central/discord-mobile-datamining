@@ -1,34 +1,31 @@
 // discord_common/js/packages/apex/ApexExperiment.tsx
-import _slicedToArray from "_slicedToArray";
-import { useEffect } from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import { useEffect } from "noop" /* 19 */;
 
 const require = arg1;
-const logger = new require("set").Logger("ApexExperiment");
-let result = require("log").fileFinishedImporting("../discord_common/js/packages/apex/ApexExperiment.tsx");
+const logger = new require("log").Logger("ApexExperiment");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/apex/ApexExperiment.tsx");
 
 export default function createApexExperimentCommon(definition, registerExperiment) {
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let logger;
-  let closure_0 = registerExperiment;
-  let closure_1 = arg2;
-  let _slicedToArray = arg3;
+  closure_0 = registerExperiment;
+  closure_1 = arg2;
+  closure_2 = arg3;
   ({ name: logger, kind: closure_5, variations: closure_6, defaultConfig: closure_7 } = definition);
   registerExperiment.registerExperiment(definition);
-  let c8 = null;
+  c8 = null;
   return {
     definition,
     useConfig(location) {
       const evaluationAndAssignment = location;
       const tmp = callback(revision, location);
-      const dependencyMap = tmp;
+      dependencyMap = tmp;
       let tmp2 = callback("user", location);
       callback = tmp2;
       const items = [evaluationAndAssignment];
       const items1 = [tmp, tmp2];
-      const tmp3 = callback(evaluationAndAssignment(589).useStateFromStoresArray(items, () => _location.getEvaluationAndAssignment(revision, closure_1, trackedVariantId, _slicedToArray), items1), 2);
-      let first = tmp3[0];
+      const tmp3 = callback(evaluationAndAssignment(589).useStateFromStoresArray(items, () => _location.getEvaluationAndAssignment(revision, closure_1, trackedVariantId, closure_2), items1), 2);
+      const first = tmp3[0];
+      closure_3 = first;
       let variantId;
       if (tmp3[1] != null) {
         variantId = tmp5.variantId;
@@ -56,11 +53,11 @@ export default function createApexExperimentCommon(definition, registerExperimen
       if (tmp3[1] != null) {
         useAsEligibility = tmp5.useAsEligibility;
       }
-      let closure_8 = useAsEligibility;
+      closure_8 = useAsEligibility;
       let tmp12 = null;
       if (null != tmp3[1]) {
-        if (tmp5 !== first) {
-          first = tmp5;
+        if (tmp5 !== closure_3) {
+          closure_3 = tmp5;
           closure_8 = (function computeVariantConfig(config) {
             let tmp2 = table[config.variantId];
             if (tmp2 == null) {
@@ -75,7 +72,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
                 return tmp2(config.config);
               } catch (tmp3) {
                 const _HermesInternal = HermesInternal;
-                outer1_4.error("Failed to parse dynamic config for experiment " + closure_4, tmp3);
+                closure_1_4.error("Failed to parse dynamic config for experiment " + closure_4, tmp3);
                 return tmp;
               }
             }
@@ -83,10 +80,10 @@ export default function createApexExperimentCommon(definition, registerExperimen
         }
         tmp12 = closure_8;
       }
-      let closure_9 = tmp14;
+      closure_9 = tmp14;
       const items2 = [tmp, first, trackedVariantId, revision, location.location, isOverride, prop, useAsEligibility, null == tmp12];
-      outer1_3(() => {
-        let tmp2 = null == first;
+      closure_1_3(() => {
+        let tmp2 = null == closure_3;
         if (!tmp2) {
           tmp2 = null == trackedVariantId;
         }
@@ -115,8 +112,6 @@ export default function createApexExperimentCommon(definition, registerExperimen
       tmp12 = prop;
     },
     getConfig(location) {
-      let tmp7;
-      let tmp8;
       const tmp3 = dependencyMap(closure_5, location);
       let tmpResult;
       if ("guild" === closure_5) {
@@ -153,7 +148,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
       if (null != tmp8) {
         if (tmp8 !== closure_3) {
           closure_3 = tmp8;
-          let closure_8 = (function computeVariantConfig(config) {
+          closure_8 = (function computeVariantConfig(config) {
             let tmp2 = table[config.variantId];
             if (tmp2 == null) {
               tmp2 = closure_7;
@@ -167,7 +162,7 @@ export default function createApexExperimentCommon(definition, registerExperimen
                 return tmp2(config.config);
               } catch (tmp3) {
                 const _HermesInternal = HermesInternal;
-                outer1_4.error("Failed to parse dynamic config for experiment " + closure_4, tmp3);
+                closure_1_4.error("Failed to parse dynamic config for experiment " + closure_4, tmp3);
                 return tmp;
               }
             }

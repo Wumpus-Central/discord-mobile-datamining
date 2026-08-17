@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setFontSize from "setFontSize" /* 13813 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -13,7 +13,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue() {
-    const items = [maybeApplyNoTextColorForLightCustomTheme];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => obj.animateYouBarAvatarDeco);
   },
   onValueChange(animateAvatarDeco) {
@@ -23,6 +23,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/YouBarAvatarDecoAccessibilitySetting.tsx");
 
 export default createToggle;

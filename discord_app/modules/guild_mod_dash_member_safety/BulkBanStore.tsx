@@ -1,24 +1,26 @@
 // discord_app/modules/guild_mod_dash_member_safety/BulkBanStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import { Store } from "initialize";
-import set from "dispatcher";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 2 */;
 
 let set = new Set();
 const set1 = new Set();
+const Store = initializeDefault.Store;
 class BulkBanStore extends Store {
 }
 const prototype = BulkBanStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint);
+  this.waitFor(closure_0);
 };
 prototype["hasPendingBulkBan"] = function hasPendingBulkBan(arg0) {
   return set.has(arg0);
 };
-prototype["consumeCompletedBeforeStarted"] = function consumeCompletedBeforeStarted(fetchFingerprint, id) {
-  return set1.delete("" + fetchFingerprint + ":" + id);
+prototype["consumeCompletedBeforeStarted"] = function consumeCompletedBeforeStarted(closure_0, id) {
+  return set1.delete("" + closure_0 + ":" + id);
 };
 BulkBanStore.displayName = "BulkBanStore";
-const bulkBanStore = new BulkBanStore(require("dispatcher"), {
+const bulkBanStore = new BulkBanStore(dispatcherDefault, {
   GUILD_BULK_BAN_STARTED: function handleBulkBanStarted(guildId) {
     set.add(guildId.guildId);
   },

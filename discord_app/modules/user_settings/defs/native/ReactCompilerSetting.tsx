@@ -1,12 +1,14 @@
 // discord_app/modules/user_settings/defs/native/ReactCompilerSetting.tsx
-import createToggle from "createToggle";
+import set from "set" /* 2 */;
+import WrenchIcon from "WrenchIcon" /* 14870 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const obj = {
   useTitle() {
     return "React Compiler";
   },
   parent: null,
-  IconComponent: require("WrenchIcon").WrenchIcon,
+  IconComponent: WrenchIcon.WrenchIcon,
   useTrailing() {
     return "Enabled";
   },
@@ -19,7 +21,7 @@ const createStaticResult = createToggle.createStatic({
     return "React Compiler";
   },
   parent: null,
-  IconComponent: require("WrenchIcon").WrenchIcon,
+  IconComponent: WrenchIcon.WrenchIcon,
   useTrailing() {
     return "Enabled";
   },
@@ -27,6 +29,6 @@ const createStaticResult = createToggle.createStatic({
     return false;
   }
 });
-const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ReactCompilerSetting.tsx");
 
 export default createStaticResult;

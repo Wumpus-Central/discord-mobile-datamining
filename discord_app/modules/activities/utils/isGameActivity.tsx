@@ -1,7 +1,9 @@
 // discord_app/modules/activities/utils/isGameActivity.tsx
-import { ActivityTypes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");
+const ActivityTypes = ME.ActivityTypes;
+const result = set.fileFinishedImporting("modules/activities/utils/isGameActivity.tsx");
 
 export default function isGameActivity(type) {
   let tmp = null != type;

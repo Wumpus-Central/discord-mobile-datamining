@@ -1,15 +1,12 @@
 // discord_app/modules/recent_avatars/RecentAvatarUtils.tsx
-import { Endpoints } from "ME";
-import { parse } from "../../../_runtime/01484_parse.js";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { handleImageLoad } from "../image_upload/ImageLoaderUtils.tsx";
-import { AssetOriginTypes } from "../profile_customization/ProfilePendingImageTypes.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import handleImageLoad from "handleImageLoad" /* 1469 */;
+import parseDefault from "parse" /* 1484 */;
+import AssetOriginTypes from "AssetOriginTypes" /* 8385 */;
 
 function getArchivedAvatarURL(allowWebp) {
-  let avatarId;
-  let canAnimate;
-  let storageHash;
-  let userId;
   ({ userId, avatarId, storageHash, canAnimate } = allowWebp);
   if (canAnimate === undefined) {
     canAnimate = false;
@@ -61,7 +58,7 @@ function getArchivedAvatarURL(allowWebp) {
     const obj4 = handleImageLoad;
     const ARCHIVED_AVATARResult = Endpoints.ARCHIVED_AVATAR(userId, avatarId, storageHash, str2);
     const _HermesInternal2 = HermesInternal;
-    return "" + combined + ARCHIVED_AVATARResult + "?" + parse.stringify(obj);
+    return "" + combined + ARCHIVED_AVATARResult + "?" + parseDefault.stringify(obj);
   }
   str2 = "jpg";
   if (null != window.GLOBAL_ENV.CDN_HOST) {
@@ -75,7 +72,8 @@ function getArchivedAvatarURL(allowWebp) {
     str2 = str4;
   }
 }
-const result = require("handleImageLoad").fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/recent_avatars/RecentAvatarUtils.tsx");
 
 export const getImageFormat = function getImageFormat(canAnimate) {
   let flag = canAnimate.canAnimate;
@@ -113,8 +111,6 @@ export const getImageFormat = function getImageFormat(canAnimate) {
 };
 export { getArchivedAvatarURL };
 export const generateAvatarDescription = function generateAvatarDescription(maxSettingsForPreset) {
-  let assetOrigin;
-  let filename;
   let obj = maxSettingsForPreset;
   if (maxSettingsForPreset == null) {
     obj = {};
@@ -195,9 +191,6 @@ export const generateRecentAvatarFileDetails = function generateRecentAvatarFile
   return obj;
 };
 export const getPendingAvatarSrc = function getPendingAvatarSrc(canAnimate) {
-  let image;
-  let size;
-  let userId;
   ({ userId, image, size } = canAnimate);
   if (size === undefined) {
     size = 80;

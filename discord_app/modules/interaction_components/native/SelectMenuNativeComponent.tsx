@@ -1,13 +1,14 @@
 // discord_app/modules/interaction_components/native/SelectMenuNativeComponent.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/SelectActionComponentViewNativeComponent.tsx";
+import noopAll from "noop" /* 19 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 15167 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("__INTERNAL_VIEW_CONFIG").fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/SelectMenuNativeComponent.tsx");
 
 export default function SelectMenuNativeComponent(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
   obj.style = { width: "100%" };
-  return jsx(__INTERNAL_VIEW_CONFIG, {});
+  return jsx(__INTERNAL_VIEW_CONFIGDefault, {});
 };

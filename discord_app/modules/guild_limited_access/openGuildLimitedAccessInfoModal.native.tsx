@@ -1,12 +1,13 @@
 // discord_app/modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx
-import "noop";
-import { Keyboard } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { AlertActionCreators } from "../../actions/native/AlertActionCreators.tsx";
+import noopAll from "noop" /* 19 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import { Keyboard } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { getBestActiveInput } from "../../utils/native/ChatInputUtils.tsx";
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_limited_access/openGuildLimitedAccessInfoModal.native.tsx");
 
 export default function openGuildLimitedAccessInfoModal(arg0) {
   const _require = arg0;
@@ -18,16 +19,16 @@ export default function openGuildLimitedAccessInfoModal(arg0) {
   }
   obj = {
     importer() {
-      return callback(outer1_2[6])(outer1_2[5], outer1_2.paths).then((arg0) => {
-        let closure_0 = arg0.default;
+      return callback(closure_1_2[6])(closure_1_2[5], closure_1_2.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.guildId = closure_0;
-          return outer2_4(closure_0, obj);
+          return closure_2_4(closure_0, obj);
         };
       });
     }
   };
-  AlertActionCreators.openLazy(obj);
+  _modDef4656.openLazy(obj);
 };

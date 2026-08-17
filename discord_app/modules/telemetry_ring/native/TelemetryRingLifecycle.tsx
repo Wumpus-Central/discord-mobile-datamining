@@ -1,13 +1,14 @@
 // discord_app/modules/telemetry_ring/native/TelemetryRingLifecycle.tsx
-import initialize from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getState from "getState";
-import { AppStates } from "ME";
-import "initialize";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getHermesInstrumentedStatsSummary } from "../../../utils/ProcessUtils.native.tsx";
-import { shouldRun } from "channels/ZoomedInTelemetry.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 4720 */;
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
+import shouldRunDefault from "shouldRun" /* 13558 */;
+import closure_2 from "initialize" /* 1212 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import closure_4 from "getState" /* 7383 */;
+import { AppStates } from "ME" /* 676 */;
 
+initializeDefault;
 class TelemetryRingLifecycleImpl extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -27,13 +28,13 @@ class TelemetryRingLifecycleImpl extends tmp2 {
 }
 const prototype = TelemetryRingLifecycleImpl.prototype;
 prototype["_updateZoomedInExport"] = function _updateZoomedInExport() {
-  const state = getState.getState();
+  const state = closure_4.getState();
   let shouldRunResult = state === AppStates.ACTIVE;
   if (shouldRunResult) {
-    shouldRunResult = shouldRun.shouldRun();
-    const obj = shouldRun;
+    shouldRunResult = shouldRunDefault.shouldRun();
+    const obj = shouldRunDefault;
   }
-  const result = getHermesInstrumentedStatsSummary.setShouldCollectHermesInstrumentedStats(shouldRunResult);
+  const result = getHermesInstrumentedStatsSummaryDefault.setShouldCollectHermesInstrumentedStats(shouldRunResult);
   if (state === AppStates.ACTIVE) {
     let tmp6Result = tmp6(13558);
     tmp6Result.start();
@@ -48,11 +49,11 @@ prototype["_initialize"] = function _initialize() {
   if (!this._initialized) {
     self._initialized = true;
     const subscription = self(709).subscribe("LOGOUT", self._handleLogout);
-    getState.addChangeListener(self._handleEligibilityChange);
-    mergeGuildAvatar.addChangeListener(self._handleEligibilityChange);
-    initialize.addChangeListener(self._handleEligibilityChange);
+    closure_4.addChangeListener(self._handleEligibilityChange);
+    closure_3.addChangeListener(self._handleEligibilityChange);
+    closure_2.addChangeListener(self._handleEligibilityChange);
     self._experimentUnsubscribe = () => {
-      outer1_2.removeChangeListener(self._handleEligibilityChange);
+      closure_1_2.removeChangeListener(self._handleEligibilityChange);
     };
     const obj = self(709);
     self(13558).initialize();
@@ -62,9 +63,9 @@ prototype["_initialize"] = function _initialize() {
 };
 prototype["_terminate"] = function _terminate() {
   const self = this;
-  dispatcher.unsubscribe("LOGOUT", this._handleLogout);
-  getState.removeChangeListener(this._handleEligibilityChange);
-  mergeGuildAvatar.removeChangeListener(this._handleEligibilityChange);
+  dispatcherDefault.unsubscribe("LOGOUT", this._handleLogout);
+  closure_4.removeChangeListener(this._handleEligibilityChange);
+  closure_3.removeChangeListener(this._handleEligibilityChange);
   if (null != this._experimentUnsubscribe) {
     const result = self._experimentUnsubscribe();
     self._experimentUnsubscribe = null;
@@ -76,6 +77,6 @@ prototype["_terminate"] = function _terminate() {
   self._initialized = false;
 };
 const telemetryRingLifecycleImpl = new TelemetryRingLifecycleImpl();
-let result = require("getState").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
+let result = require("set").fileFinishedImporting("modules/telemetry_ring/native/TelemetryRingLifecycle.tsx");
 
 export default telemetryRingLifecycleImpl;

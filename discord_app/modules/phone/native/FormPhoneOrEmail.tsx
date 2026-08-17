@@ -1,19 +1,15 @@
 // discord_app/modules/phone/native/FormPhoneOrEmail.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function CountryCodeSelector(alpha2) {
-  let countryCode;
-  let onPress;
-  let show;
   let str = alpha2.alpha2;
   ({ show, countryCode, onPress } = alpha2);
   const tmp = callback3();
@@ -34,7 +30,7 @@ function CountryCodeSelector(alpha2) {
     obj[4] = combined;
     const intl = getSystemLocale.intl;
     obj[5] = intl.string(getSystemLocale.t.GwAW3k);
-    const obj1 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
+    obj1 = { style: null, variant: "text-md/medium", color: "mobile-text-heading-primary", children: null };
     obj1[0] = tmp.selectorText;
     obj1[3] = combined;
     obj[6] = callback(Text.Text, obj1);
@@ -51,21 +47,10 @@ function CountryCodeSelector(alpha2) {
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { label: { marginBottom: 8 }, input: { flexGrow: 1, marginBottom: 8 }, error: { marginBottom: 8 }, hint: { marginBottom: 8 }, selectorOuterContainer: { overflow: "hidden" }, selectorContainer: { flex: 1, flexDirection: "row" }, selectorPressable: { justifyContent: "center" }, selectorText: { alignSelf: "center" }, separator: null };
-obj = { borderLeftWidth: 1, borderLeftColor: require("Themes").colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 };
+obj = { borderLeftWidth: 1, borderLeftColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_SELECTED, marginHorizontal: 12, marginVertical: -4 };
 obj[8] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let closure_3;
-  let countryCode;
-  let error;
-  let forceMode;
-  let hint;
-  let importDefault;
-  let label;
-  let require;
-  let style;
-  let textInputStyle;
-  let value;
   ({ label, error, value, hint, onChangeText: require, alpha2: importDefault, countryCode } = arg0);
   ({ onPressCountrySelector: closure_3, forceMode } = arg0);
   ({ style, textInputStyle } = arg0);
@@ -97,7 +82,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj = { style, children: null };
   let tmp9 = null;
   if (null != label) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp2.label;
     obj1[1] = label;
     tmp9 = callback(importDefault(tmp4[9]), obj1);
@@ -106,7 +91,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const obj2 = {};
   const merged1 = Object.assign(merged);
   obj2.renderLeadingComponent = function renderLeadingComponent() {
-    return callback2(outer1_8, { show: callback2, alpha2: closure_1, countryCode, onPress: closure_3 });
+    return callback2(closure_1_8, { show: callback2, alpha2: closure_1, countryCode, onPress: closure_3 });
   };
   obj2.error = null != error;
   obj2.ref = ref;
@@ -146,6 +131,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   obj[1] = items1;
   return obj(forceMode, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/phone/native/FormPhoneOrEmail.tsx");
+const result = require("set").fileFinishedImporting("modules/phone/native/FormPhoneOrEmail.tsx");
 
 export default forwardRefResult;

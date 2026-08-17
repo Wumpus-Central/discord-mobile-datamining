@@ -1,5 +1,7 @@
 // discord_app/modules/soundboard/native/SoundboardStyleConstants.tsx
-const result = require("set").fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/soundboard/native/SoundboardStyleConstants.tsx");
 
 export const SOUND_BUTTON_HEIGHT = 88;
 export const SOUND_ROW_HORIZONTAL_PADDING = 12;

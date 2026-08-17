@@ -1,11 +1,13 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesSeenStore.tsx
-import { PersistedStore } from "initialize";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 let obj = { seenFontIds: null, seenEffectIds: null, newFontsBadgeDismissed: false, newEffectsBadgeDismissed: false };
 let set = new Set();
 obj[0] = set;
 obj[1] = new Set();
+const PersistedStore = initializeDefault.PersistedStore;
 class DisplayNameStylesSeenStore extends PersistedStore {
 }
 const prototype = DisplayNameStylesSeenStore.prototype;
@@ -17,8 +19,7 @@ prototype["initialize"] = function initialize(seenFontIds) {
   if (seenFontIds == null) {
     seenFontIds = [];
   }
-  const obj = { seenFontIds: null, seenEffectIds: null, newFontsBadgeDismissed: null, newEffectsBadgeDismissed: null };
-  obj[0] = new Set(seenFontIds);
+  obj = { seenFontIds: new Set(seenFontIds), seenEffectIds: null, newFontsBadgeDismissed: null, newEffectsBadgeDismissed: null };
   let seenEffectIds;
   if (seenFontIds != null) {
     seenEffectIds = seenFontIds.seenEffectIds;
@@ -65,7 +66,7 @@ DisplayNameStylesSeenStore.displayName = "DisplayNameStylesSeenStore";
 DisplayNameStylesSeenStore.persistKey = "DisplayNameStylesSeenStore";
 let items = [
   (arg0) => {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(arg0);
     obj.newFontsBadgeDismissed = false;
     obj.newEffectsBadgeDismissed = false;
@@ -123,7 +124,7 @@ obj = {
     }
   }
 };
-const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(require("dispatcher"), obj);
+const displayNameStylesSeenStore = new DisplayNameStylesSeenStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesSeenStore.tsx");
 
 export default displayNameStylesSeenStore;

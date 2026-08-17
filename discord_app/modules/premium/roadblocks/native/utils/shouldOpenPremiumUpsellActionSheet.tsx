@@ -1,24 +1,26 @@
 // discord_app/modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx
-import { keys } from "../../../../../ConstantsIOS.tsx";
-import { openPremiumUpsellActionSheet } from "openPremiumUpsellActionSheet.tsx";
-const result = require("EntitlementFeatureNames").fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
+import set from "set" /* 2 */;
+import keys from "keys" /* 691 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 8479 */;
+
+const result = set.fileFinishedImporting("modules/premium/roadblocks/native/utils/shouldOpenPremiumUpsellActionSheet.tsx");
 
 export default function maybeOpenPremiumUpsellActionSheet(initialUpsellKey) {
   initialUpsellKey = initialUpsellKey.initialUpsellKey;
   if (keys.UpsellTypes.UPLOAD === initialUpsellKey) {
-    openPremiumUpsellActionSheet(tmp(8482).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
+    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE);
     return true;
   } else if (tmp(691).UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {
-    openPremiumUpsellActionSheet(tmp(8482).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
+    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
     return true;
   } else if (tmp(691).UpsellTypes.ANIMATED_EMOJI === initialUpsellKey) {
-    openPremiumUpsellActionSheet(tmp(8482).EntitlementFeatureNames.ANIMATED_EMOJIS);
+    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.ANIMATED_EMOJIS);
     return true;
   } else if (tmp(691).UpsellTypes.SOUNDBOARD === initialUpsellKey) {
-    openPremiumUpsellActionSheet(tmp(8482).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
+    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE);
     return true;
   } else if (tmp(691).UpsellTypes.STREAM_HIGH_QUALITY === initialUpsellKey) {
-    openPremiumUpsellActionSheet(tmp(8482).EntitlementFeatureNames.STREAM_HIGH_QUALITY);
+    openPremiumUpsellActionSheetDefault(tmp(8482).EntitlementFeatureNames.STREAM_HIGH_QUALITY);
     return true;
   } else {
     return false;

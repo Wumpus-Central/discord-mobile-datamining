@@ -1,15 +1,13 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx
-import getHash from "getHash";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "getHash" /* 4288 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ GuildFeatures: c4, Permissions: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");
 
 export default {
   title() {
@@ -22,7 +20,7 @@ export default {
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [getHash, getUncachedChannelPermissions];
+    const items = [closure_2, closure_3];
     return initialize.useStateFromStores(items, () => (features) => {
       features = features.features;
       let hasItem = features.has(constants.ROLE_SUBSCRIPTIONS_ENABLED);
@@ -31,7 +29,7 @@ export default {
         hasItem = !features2.has(constants.CREATOR_MONETIZABLE_RESTRICTED);
       }
       if (hasItem) {
-        hasItem = getUncachedChannelPermissions.can(constants2.ADMINISTRATOR, features);
+        hasItem = closure_3.can(constants2.ADMINISTRATOR, features);
       }
       if (hasItem) {
         hasItem = callback(table[5]).isGuildEligibleForTierTemplates(features.id);

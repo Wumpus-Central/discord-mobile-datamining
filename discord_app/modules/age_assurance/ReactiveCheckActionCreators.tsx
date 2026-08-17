@@ -1,6 +1,6 @@
 // discord_app/modules/age_assurance/ReactiveCheckActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchReactiveCheckResult() {
@@ -35,9 +35,9 @@ function _fetchReactiveCheckResult() {
             const callback = tmp3;
             let body = tmp7;
             body = undefined;
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[2]).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
+            c3 = 1;
+            const HTTP = closure_1_0(closure_1_2[2]).HTTP;
+            obj1 = { url: null, rejectWithError: true };
             obj1[0] = constants.AGE_VERIFICATION_REACTIVE_CHECK;
             constants = 2;
             c5 = 1;
@@ -81,6 +81,7 @@ function _fetchReactiveCheckResult() {
       }
     }
   });
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -118,10 +119,10 @@ function _resetAgeVerification() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp2;
-            const HTTP = outer1_0(530).HTTP;
-            const obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_4.AGE_VERIFICATION_RESET;
+            closure_0 = tmp2;
+            const HTTP = closure_1_0(530).HTTP;
+            obj1 = { url: null, rejectWithError: true };
+            obj1[0] = closure_1_4.AGE_VERIFICATION_RESET;
             v0 = 1;
             dependencyMap = 1;
             const obj2 = { value: null, done: false };
@@ -148,7 +149,7 @@ function _resetAgeVerification() {
       }
     }
   });
-  const _resetAgeVerification = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -157,7 +158,7 @@ function _resetAgeVerification() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
 
 export const fetchReactiveCheckResult = function fetchReactiveCheckResult() {
   const self = this;

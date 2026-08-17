@@ -1,6 +1,6 @@
 // discord_app/modules/collectibles/CollectiblesAnalyticsContext.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(null);
@@ -12,7 +12,7 @@ export const useCollectiblesAnalyticsContext = function useCollectiblesAnalytics
 };
 export const CollectiblesAnalyticsProvider = function CollectiblesAnalyticsProvider(children) {
   const newValue = children.newValue;
-  let context;
+  context = undefined;
   context = newValue.useContext(context);
   const items = [context, newValue];
   return context(context.Provider, {

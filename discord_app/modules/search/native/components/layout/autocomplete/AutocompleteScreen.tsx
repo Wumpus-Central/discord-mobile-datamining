@@ -1,20 +1,15 @@
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "getMatch";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleUserSearchResults from "handleUserSearchResults";
-import prototype from "prototype";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import ME from "ME";
-import { jsx } from "useMessageSearchErrorScreen";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "handleUserSearchResults" /* 11513 */;
+import closure_9 from "prototype" /* 11510 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
 const require = arg1;
 let c4 = importAllResult;
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: unpackModuleId, USER_ESTIMATED_ITEM_SIZE: closure_12 } = MessageEmbedTypes);
@@ -37,10 +32,10 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   const tmp4 = callback(fullscreenPlaceholderCount.useState(false), 2);
   first = tmp4[0];
   callback = tmp4[1];
-  let obj1 = searchContext(first[10]);
-  const items2 = [prototype];
+  obj1 = searchContext(first[10]);
+  const items2 = [closure_9];
   const items3 = [searchContext];
-  const stateFromStores1 = obj1.useStateFromStores(items2, () => outer1_9.isTextInputValueEmpty(searchContext), items3);
+  const stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_9.isTextInputValueEmpty(searchContext), items3);
   let obj2 = searchContext(first[11]);
   obj = { placeholderHeight: closure_12, numColumns: 1 };
   fullscreenPlaceholderCount = obj2.useFullscreenPlaceholderCount(obj);
@@ -52,13 +47,13 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }, items4);
   const items5 = [callback, searchContext];
   callback1 = fullscreenPlaceholderCount.useCallback((arg0) => {
-    let closure_0 = arg0;
-    const prefixTag = outer1_9.getPrefixTag(closure_0);
+    closure_0 = arg0;
+    const prefixTag = closure_1_9.getPrefixTag(closure_0);
     if (null != prefixTag) {
       let obj = stateFromStores(first[13]);
       obj.updateSearchQuery(tmp, (setTextInputValue) => {
         setTextInputValue.setTextInputValue("");
-        setTextInputValue.addTag({ type: outer1_11.ANSWER, text: closure_0 });
+        setTextInputValue.addTag({ type: closure_1_11.ANSWER, text: closure_0 });
         const result = setTextInputValue.restoreDraftTextInputValue();
       });
       obj = { searchContext: null, searchTokenType: null, location: null };
@@ -73,14 +68,12 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   callback2 = fullscreenPlaceholderCount.useCallback((arg0) => {
     const user = callback2.getUser(arg0);
     if (null != user) {
-      const prefixTag = outer1_9.getPrefixTag(user);
+      const prefixTag = closure_1_9.getPrefixTag(user);
       if (null != prefixTag) {
         let obj = stateFromStores(first[13]);
         obj.updateSearchQuery(tmp9, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = { type: outer1_11.ANSWER, text: null, userId: null };
-          obj[1] = outer1_1(outer1_2[15]).getUserTag(user);
-          obj[2] = user.id;
+          const obj = { type: closure_1_11.ANSWER, text: closure_1_1(closure_1_2[15]).getUserTag(user), userId: user.id };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
@@ -95,10 +88,10 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }, items6);
   const items7 = [callback, searchContext];
   callback3 = fullscreenPlaceholderCount.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const channel = callback.getChannel(arg0);
     if (null != channel) {
-      const prefixTag = outer1_9.getPrefixTag(closure_0);
+      const prefixTag = closure_1_9.getPrefixTag(closure_0);
       if (null != prefixTag) {
         let userTag = searchContext(first[16]).computeChannelName(channel, callback2, callback1);
         if (channel.isDM()) {
@@ -112,9 +105,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
         obj6 = callback2;
         stateFromStores(first[13]).updateSearchQuery(tmp8, (setTextInputValue) => {
           setTextInputValue.setTextInputValue("");
-          const obj = { type: outer1_11.ANSWER, text: null, channelId: null };
-          obj[1] = callback(outer1_2[17]).quoteChannelName(closure_1);
-          obj[2] = callback;
+          const obj = { type: closure_1_11.ANSWER, text: callback(closure_1_2[17]).quoteChannelName(closure_1), channelId: callback };
           setTextInputValue.addTag(obj);
           const result = setTextInputValue.restoreDraftTextInputValue();
         });
@@ -162,17 +153,14 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }, items9);
   const items10 = [first, searchContext, fullscreenPlaceholderCount, stateFromStores, callback2, callback3, callback1];
   const memo = fullscreenPlaceholderCount.useMemo(() => {
-    let autocompletes;
-    let mode;
-    let tokens;
     const items = [];
     if (set1) {
       let num2 = 0;
       if (0 < fullscreenPlaceholderCount) {
         do {
           let obj = { type: null, key: null };
-          let tmp28 = outer1_10;
-          obj[0] = outer1_10.MESSAGE_PLACEHOLDER;
+          let tmp28 = closure_1_10;
+          obj[0] = closure_1_10.MESSAGE_PLACEHOLDER;
           let _HermesInternal = HermesInternal;
           obj[1] = "message-placeholder-" + num2;
           let arr = items.push(obj);
@@ -189,71 +177,66 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       set1 = new Set(searchContext(first[18]).getSearchQueryChannelIds(items));
       ({ autocompletes, tokens, mode } = set);
       let item = autocompletes.forEach((arg0) => {
-        let items;
-        let results;
-        if (mode.type === outer2_13.FILTER) {
+        if (mode.type === closure_2_13.FILTER) {
           ({ results, group: items } = arg0);
           if (0 !== results.length) {
             const item = results.forEach((arg0) => {
-              let channel;
-              let text;
-              let user;
               ({ user, channel, text } = arg0);
               let obj = searchContext(first[18]);
-              const toSearchListUserItemResult = obj.toSearchListUserItem(items, user, outer2_7);
+              const toSearchListUserItemResult = obj.toSearchListUserItem(items, user, closure_2_7);
               let id;
               if (user != null) {
                 id = user.id;
               }
               let hasItem = null == toSearchListUserItemResult || null == id;
               if (!hasItem) {
-                hasItem = outer1_1.has(id);
+                hasItem = closure_1_1.has(id);
               }
               if (!hasItem) {
-                hasItem = outer2_6.isBlockedOrIgnored(id);
+                hasItem = closure_2_6.isBlockedOrIgnored(id);
               }
               if (!hasItem) {
-                outer1_1.add(id);
-                outer1_0.push(toSearchListUserItemResult);
+                closure_1_1.add(id);
+                closure_1_0.push(toSearchListUserItemResult);
               }
               let tmpResult = tmp(tmp2[18]);
-              const result = tmpResult.toSearchListChannelItem(channel, outer2_8);
+              const result = tmpResult.toSearchListChannelItem(channel, closure_2_8);
               let id1;
               if (channel != null) {
                 id1 = channel.id;
               }
               let hasItem1 = null == result || null == id1;
               if (!hasItem1) {
-                hasItem1 = outer1_2.has(id1);
+                hasItem1 = closure_1_2.has(id1);
               }
               if (!hasItem1) {
-                outer1_2.add(id1);
-                outer1_0.push(result);
+                closure_1_2.add(id1);
+                closure_1_0.push(result);
               }
-              let tmp22 = closure_0 === outer3_14.FILTER_HAS;
+              let tmp22 = closure_0 === closure_3_14.FILTER_HAS;
               if (tmp22) {
                 tmp22 = null != text;
               }
               if (tmp22) {
                 obj = { type: null, props: null };
-                obj[0] = outer3_10.GENERIC;
+                obj[0] = closure_3_10.GENERIC;
                 obj = { text: null, icon: null, onPress: null };
                 obj[0] = text;
                 tmpResult = tmp(tmp2[18]);
                 obj[1] = tmpResult.getSearchFilterHasIcon(text);
-                obj[2] = outer2_6;
+                obj[2] = closure_2_6;
                 obj[1] = obj;
-                outer1_0.push(obj);
+                closure_1_0.push(obj);
               }
               if (tmp27) {
-                const obj1 = { type: null, props: null };
-                obj1[0] = outer3_10.GENERIC;
+                obj1 = { type: null, props: null };
+                obj1[0] = closure_3_10.GENERIC;
                 const obj2 = { text: null, icon: null, onPress: null };
                 obj2[0] = text;
                 obj2[1] = tmp(tmp2[18]).getSearchFilterAuthorTypeIcon(text);
-                obj2[2] = outer2_6;
+                obj2[2] = closure_2_6;
                 obj1[1] = obj2;
-                outer1_0.push(obj1);
+                closure_1_0.push(obj1);
                 const tmpResult1 = tmp(tmp2[18]);
               }
             });
@@ -261,10 +244,10 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
         }
       });
       if (0 === items.length) {
-        if (mode.type !== outer1_13.FILTER) {
+        if (mode.type !== closure_1_13.FILTER) {
           if (null != tokens[tokens.length - 1]) {
             const token = new tmp2(tmp3[19]).Token(tmp32);
-            if (token.type === outer1_14.ANSWER_USERNAME_FROM) {
+            if (token.type === closure_1_14.ANSWER_USERNAME_FROM) {
               let tmp2Result = tmp2(tmp3[20]);
               if (tmp2Result.isValidUserAutocomplete(token)) {
                 const data = token.getData("userId");
@@ -287,13 +270,13 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
                 }
               }
             }
-            if (token.type === outer1_14.ANSWER_IN) {
+            if (token.type === closure_1_14.ANSWER_IN) {
               if (tmp2Result1.isValidChannelAutocomplete(token, tmp4)) {
                 const data1 = token.getData("channelIds");
                 if (null != data1) {
                   const item1 = data1.forEach((arg0) => {
                     const channel = callback.getChannel(arg0);
-                    const result = searchContext(first[18]).toSearchListChannelItem(channel, outer1_8);
+                    const result = searchContext(first[18]).toSearchListChannelItem(channel, closure_1_8);
                     let id;
                     if (channel != null) {
                       id = channel.id;
@@ -316,7 +299,7 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
       }
       let tmp25 = items;
       if (items.length <= 0) {
-        tmp25 = outer1_16;
+        tmp25 = closure_1_16;
       }
       return tmp25;
     }
@@ -353,6 +336,6 @@ const memoResult = importAllResult.memo(function AutocompleteScreen(searchContex
   }
   return tmp18;
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreen.tsx");
 
 export default memoResult;

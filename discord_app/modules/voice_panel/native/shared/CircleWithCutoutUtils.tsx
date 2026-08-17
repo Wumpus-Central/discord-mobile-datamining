@@ -1,21 +1,16 @@
 // discord_app/modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = Math.PI / 180;
-let result = require("inlineStyles").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/CircleWithCutoutUtils.tsx");
 
 export default function CircleWithCutout(arg0) {
-  let circleFillColor;
-  let circleRadius;
-  let cutoutPositionInDegrees;
-  let cutoutRadius;
-  let enableCutout;
   ({ circleRadius, cutoutPositionInDegrees } = arg0);
   const result = 2 * circleRadius;
   ({ cutoutRadius, enableCutout, circleFillColor } = arg0);
@@ -28,7 +23,7 @@ export default function CircleWithCutout(arg0) {
   obj[1] = items;
   obj[0] = callback2(inlineStyles.Mask, obj);
   const items1 = [callback(inlineStyles.Defs, obj), ];
-  const obj1 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
+  obj1 = { cx: circleRadius, cy: circleRadius, r: circleRadius, fill: circleFillColor, mask: null };
   let str;
   if (enableCutout) {
     str = "url(#mask)";
@@ -36,7 +31,7 @@ export default function CircleWithCutout(arg0) {
   obj1[4] = str;
   items1[1] = callback(inlineStyles.Circle, obj1);
   obj[2] = items1;
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 };
 export const getBadgeTop = function getBadgeTop(badgeRadius, buttonRadius, arg2) {
   return buttonRadius - buttonRadius * Math.cos(arg2 * closure_5) - badgeRadius;

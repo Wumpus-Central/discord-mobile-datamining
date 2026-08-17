@@ -1,14 +1,16 @@
 // discord_app/modules/user_settings/defs/native/DoubleTapToReactSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["4qhAjx"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue() {
     const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
@@ -41,7 +43,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["4qhAjx"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.CHAT,
+  parent: MobileUserSettings.MobileUserSettings.CHAT,
   useValue() {
     const DoubleTapReactionEmoji = explicitContentFromProto.DoubleTapReactionEmoji;
     return !DoubleTapReactionEmoji.useSetting().disableDoubleTap;
@@ -69,6 +71,6 @@ let obj = {
     DoubleTapReactionEmoji2.updateSetting(obj);
   }
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/DoubleTapToReactSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DoubleTapToReactSetting.tsx");
 
 export default toggle;

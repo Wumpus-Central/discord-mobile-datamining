@@ -1,5 +1,7 @@
 // discord_app/modules/virtual_currency/hooks/index.tsx
-const result = require("useRedeemVirtualCurrency").fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/virtual_currency/hooks/index.tsx");
 for (const key10018 in require("useFetchVirtualCurrencyBalance")) {
   let tmp3 = key10018;
   arg5[key10018] = require("useFetchVirtualCurrencyBalance")[key10018];

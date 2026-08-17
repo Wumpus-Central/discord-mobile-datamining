@@ -1,18 +1,15 @@
 // discord_app/modules/rpc/server/commands/relationships.tsx
-import _slicedToArray from "_slicedToArray";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import createRPCCommand from "createRPCCommand";
-import { prototype } from "../../RPCError.tsx";
-import { recurseReplaceContentTree } from "../../RPCHelpers.tsx";
+import fromStringAll from "fromString" /* 506 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import recurseReplaceContentTree from "recurseReplaceContentTree" /* 8757 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import createRPCCommand from "createRPCCommand" /* 13846 */;
 
-let RPCCommands;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ ApplicationFlags: error, RelationshipTypes: metroImportAll, RPCCommands, RPCErrors: c9 } = ME);
+require = arg1;
+({ ApplicationFlags: error, RelationshipTypes: closure_8, RPCCommands, RPCErrors: c9 } = ME);
 let obj = {};
 obj = { scope: null, handler: null };
 obj = {};
@@ -20,20 +17,18 @@ let items = [require("set").OAuth2Scopes.RELATIONSHIPS_READ];
 obj[require("RPC_SCOPE_CONFIG").RPC_SCOPE_CONFIG.ANY] = items;
 obj[0] = obj;
 obj[1] = function handler(socket) {
-  let tmp14;
-  let tmp15;
-  let obj = importAll(506);
+  let obj = fromStringAll;
   let num = socket.socket.application.flags;
   if (num == null) {
     num = 0;
   }
-  const obj2 = importAll(506);
+  const obj2 = fromStringAll;
   const tmp = importAll;
-  const deserializeResult = importAll(506).deserialize(num);
+  const deserializeResult = fromStringAll.deserialize(num);
   if (obj.has(deserializeResult, tmpResult.deserialize(constants.DISABLE_RELATIONSHIPS_ACCESS))) {
     obj = { errorCode: null };
     obj[0] = constants3.INVALID_PERMISSIONS;
-    const tmp34 = new prototype(obj, "Missing Permissions");
+    const tmp34 = new prototypeDefault(obj, "Missing Permissions");
     throw tmp34;
   } else {
     const items = [];
@@ -67,9 +62,9 @@ obj[1] = function handler(socket) {
     obj[0] = items;
     return obj;
   }
-  tmpResult = tmp(506);
+  tmpResult = fromStringAll;
 };
 obj[RPCCommands.GET_RELATIONSHIPS] = createRPCCommand.createRPCCommand(RPCCommands.GET_RELATIONSHIPS, obj);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
+let result = require("set").fileFinishedImporting("modules/rpc/server/commands/relationships.tsx");
 
 export default obj;

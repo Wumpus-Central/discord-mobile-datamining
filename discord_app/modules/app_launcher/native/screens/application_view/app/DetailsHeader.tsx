@@ -1,59 +1,49 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "set";
-import get_ActivityIndicator from "LinearGradient";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, Pressable: closure_6, StyleSheet: error } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 let closure_11 = ["black", "transparent"];
 let obj = { animatedViewContainer: { overflow: "hidden" }, container: { position: "relative", width: "100%" }, measuringContainer: { width: "100%", position: "absolute" }, descriptionContainer: { marginTop: 8 }, viewMoreCTA: { position: "absolute", right: 0, bottom: 0, pointerEvents: "none" }, maskFill: { flex: 1, backgroundColor: "black" }, maskLastLine: { flexDirection: "row" }, maskFade: { width: 32 }, collapseDescriptionCTA: { marginTop: 4 }, nameContainer: null, nameText: null, partnerLabelWrapper: null };
-obj = { display: "flex", flexDirection: "row", gap: require("Themes").space.PX_4, overflow: "hidden" };
+obj = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_4, overflow: "hidden" };
 obj[9] = obj;
 obj[10] = { flexShrink: 1 };
-createCacheKey = { justifyContent: "center", paddingVertical: 2, paddingHorizontal: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: require("Themes").radii.lg };
+createCacheKey = { justifyContent: "center", paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: ThemesDefault.radii.lg };
 obj[11] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = { code: "function DetailsHeaderTsx1(){const{height}=this.__closure;return{height:height.get()};}" };
 let closure_14 = { code: "function DetailsHeaderTsx2(){const{runOnJS,setShouldLineClamp}=this.__closure;runOnJS(setShouldLineClamp)(true);}" };
 const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyle) {
-  let application;
-  let c14;
-  let hideName;
-  let mainContainerStyle;
-  let tmp18;
   ({ application, mainContainerStyle, hideName } = viewContainerStyle);
   let sharedValue;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
-  let importAllResult;
-  let closure_5;
+  importAllResult = undefined;
+  closure_5 = undefined;
   sharedValue = undefined;
   let str;
   let num2;
-  let closure_9;
+  closure_9 = undefined;
   let num3;
-  let closure_11;
+  closure_11 = undefined;
   let callback;
-  let closure_13;
+  closure_13 = undefined;
   c14 = undefined;
   let first2;
-  let closure_16;
+  closure_16 = undefined;
   let isScreenLandscape;
-  let c18;
+  closure_18 = undefined;
   let tmp = callback();
   let obj = sharedValue(8447);
-  let obj1 = importAllResult;
+  obj1 = importAllResult;
   const ref = importAllResult.useRef(null);
   sharedValue = ref;
   const tmp7 = first1(importAllResult.useState(false), 2);
@@ -107,10 +97,10 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   const tmp6Result1 = first1(obj1.useState(false), 2);
   isScreenLandscape = sharedValue(8944).useIsScreenLandscape();
   const tmp24 = first(6701)(isScreenLandscape);
-  c18 = tmp24;
+  closure_18 = tmp24;
   const items1 = [isScreenLandscape, tmp24];
   const effect = obj1.useEffect(() => {
-    if (isScreenLandscape !== c18) {
+    if (isScreenLandscape !== closure_18) {
       callback4(false);
       closure_13.current = 0;
       closure_12.current = 0;
@@ -176,7 +166,7 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
           const obj2 = sharedValue(4664);
           const current = ref.current;
           const fn = function t() {
-            outer1_0(outer1_2[6]).runOnJS(closure_14)(true);
+            closure_1_0(closure_1_2[6]).runOnJS(closure_14)(true);
           };
           let obj = { runOnJS: null, setShouldLineClamp: null };
           obj[0] = sharedValue(4115).runOnJS;
@@ -342,6 +332,6 @@ const memoResult = importAllResult.memo(function DetailsHeader(viewContainerStyl
   children[1] = tmp28Result2;
   return closure_9(num3, { children });
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/DetailsHeader.tsx");
 
 export default memoResult;

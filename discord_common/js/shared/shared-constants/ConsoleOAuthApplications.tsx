@@ -1,5 +1,5 @@
 // discord_common/js/shared/shared-constants/ConsoleOAuthApplications.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { PLAYSTATION_APPLICATION_IDS: null, IMPLICIT_IDENTIFY_PREMIUM_APPLICATION_IDS: null, ALL: null };
 let set = new Set(["984193235868065795", "1008890872156405890"]);

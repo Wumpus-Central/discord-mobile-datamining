@@ -1,29 +1,22 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { encodeProperties } from "../../../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { Button } from "../../../../../design/components/Button/native/Button.native.tsx";
-import { useNavigation } from "../../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import encodeProperties from "encodeProperties" /* 503 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ View: c5, Image: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center" }, scrollViewContentContainer: { flexGrow: 2 }, innerContainer: { alignItems: "center", justifyContent: "center" }, imageContainer: { alignItems: "center", marginBottom: 24 }, textWrapper: { paddingHorizontal: 48 }, body: { marginBottom: 24, textAlign: "center" }, title: { textAlign: "center", fontSize: 18, marginBottom: 8 }, buttonWrapper: { paddingHorizontal: 16, paddingBottom: 16 } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesEmptyState.tsx");
 
 export default function MessagesEmptyState() {
-  let require;
-  let tmp5;
   const tmp = callback2();
   let width = navigation(1494)().width;
   [tmp5, require] = callback(React.useState(0), 2);
@@ -56,7 +49,7 @@ export default function MessagesEmptyState() {
     obj[0] = tmp15;
     tmp18 = obj;
   }
-  const obj1 = { alwaysBounceVertical: false, bounces: false, contentContainerStyle: items1, children: null };
+  obj1 = { alwaysBounceVertical: false, bounces: false, contentContainerStyle: items1, children: null };
   items1[1] = tmp18;
   const obj2 = { style: tmp.container, onLayout: callback, children: null };
   const obj3 = { style: tmp.innerContainer, children: null };

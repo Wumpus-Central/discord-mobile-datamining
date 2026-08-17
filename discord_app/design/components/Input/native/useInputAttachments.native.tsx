@@ -1,15 +1,12 @@
 // discord_app/design/components/Input/native/useInputAttachments.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { ICON_SIZE } from "../../Icon/IconSize.tsx";
-import { Text } from "../../Text/native/Text.tsx";
+import Text from "Text" /* 4734 */;
+import ICON_SIZE from "ICON_SIZE" /* 7187 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let Platform;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 class InputAttachmentContainer {
   constructor(arg0) {
     ({ content, style } = global);
@@ -56,7 +53,7 @@ class InputAttachmentContainer {
   }
 }
 ({ Platform, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/Input/native/useInputAttachments.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Input/native/useInputAttachments.native.tsx");
 
 export const estimateAttachmentWidth = function estimateAttachmentWidth(arg0, arg1) {
   let num = 0;
@@ -81,12 +78,6 @@ export const renderInputAttachment = function renderInputAttachment(arg0, leadin
 };
 export { InputAttachmentContainer };
 export const useInputAttachments = function useInputAttachments(size, leading) {
-  let leadingPressableProps;
-  let leadingText;
-  let tmp22;
-  let tmp23;
-  let trailingIcon;
-  let trailingPressableProps;
   let obj = inputStyles(trailingIcon[7]);
   obj = { size: size.size, hasLeadingIcon: null != size.leadingIcon, isRefreshEnabled: leadingIcon(trailingIcon[6])("useInputAttachments") };
   inputStyles = obj.useInputStyles(obj);
@@ -145,7 +136,7 @@ export const useInputAttachments = function useInputAttachments(size, leading) {
           if (prop == null) {
             prop = leadingPressableProps;
           }
-          const obj1 = { leading: null, trailing: null, inputStyle: null };
+          obj1 = { leading: null, trailing: null, inputStyle: null };
           obj[2] = prop;
           obj[3] = leadingIcon2;
           obj1[0] = <InputAttachmentContainer content={null} setWidth={null} pressableProps={null} style={null} />;

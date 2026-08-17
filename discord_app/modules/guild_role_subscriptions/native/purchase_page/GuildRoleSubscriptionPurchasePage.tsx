@@ -1,30 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx
-import "registerAsset";
-import get_ActivityIndicator from "useTrackRoleSubscriptionUpsellAnalytics";
-import handleThemeChange from "handleThemeChange";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
-import jsxProd from "getCoverImageURI";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/11640_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 11640 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "handleThemeChange" /* 1302 */;
+import closure_9 from "ensureGuildLoaded" /* 1391 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function Separator() {
-  return callback(closure_6, { style: createCacheKey().separator });
+  return callback(closure_6, { style: callback2().separator });
 }
 function LegalDisclaimer() {
   let obj = { variant: "text-xs/normal", color: "text-muted", children: null };
@@ -34,11 +25,9 @@ function LegalDisclaimer() {
   return callback(Text.Text, obj);
 }
 function SocialBadge(onPress) {
-  let iconSource;
-  let text;
   onPress = onPress.onPress;
   ({ iconSource, text } = onPress);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let tmp5Result = null != onPress;
   let obj = { style: tmp.socialBadge, activeOpacity: null, onPress: null, children: null };
   let num = 1;
@@ -51,7 +40,7 @@ function SocialBadge(onPress) {
   const items = [callback(Button.Icon, obj), callback(Text.Text, { variant: "text-sm/medium", color: "text-default", children: text }), ];
   if (tmp5Result) {
     obj = { source: null, style: null };
-    obj[0] = registerAsset;
+    obj[0] = registerAssetDefault;
     obj[1] = tmp.socialBadgeArrow;
     tmp5Result = callback(Button.Icon, obj);
   }
@@ -59,54 +48,55 @@ function SocialBadge(onPress) {
   obj[3] = items;
   return closure_15(closure_5, obj);
 }
+noopAll;
 ({ ActivityIndicator: c4, TouchableOpacity: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticsLocations: unpackModuleId, GuildFeatures: closure_12, MarketingURLs: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 createCacheKey = { container: null, heroImage: null, guildIconContainer: null, guildIcon: null, contentCard: null, loadingContainer: null, socialContainer: null, socialBadge: null, socialBadgeIcon: null, socialBadgeArrow: null, separator: null, moneyBirbPlaceholder: null, gatedChannel: null, gatedChannelIcon: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { aspectRatio: 4, width: "100%" };
-createCacheKey[2] = { borderWidth: 3, borderRadius: require("Themes").radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, position: "absolute" };
-let obj1 = { borderWidth: 3, borderRadius: require("Themes").radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, position: "absolute" };
-createCacheKey[3] = { borderRadius: require("Themes").radii.sm };
-let obj2 = { borderRadius: require("Themes").radii.sm };
-createCacheKey[4] = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: require("Themes").radii.md, borderTopRightRadius: require("Themes").radii.md, marginTop: -15 };
+createCacheKey[2] = { borderWidth: 3, borderRadius: ThemesDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
+let obj1 = { borderWidth: 3, borderRadius: ThemesDefault.radii.md, alignSelf: "flex-start", top: -35, left: 16, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, position: "absolute" };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
+let obj2 = { borderRadius: ThemesDefault.radii.sm };
+createCacheKey[4] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md, marginTop: -15 };
 createCacheKey[5] = { flex: 1, justifyContent: "center", alignItems: "center", paddingBottom: 40 };
 createCacheKey[6] = { flexDirection: "row" };
-let obj3 = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: require("Themes").radii.md, borderTopRightRadius: require("Themes").radii.md, marginTop: -15 };
-createCacheKey[7] = { flexDirection: "row", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
+let obj3 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingTop: 47, paddingHorizontal: 16, borderTopLeftRadius: ThemesDefault.radii.md, borderTopRightRadius: ThemesDefault.radii.md, marginTop: -15 };
+createCacheKey[7] = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
 createCacheKey[8] = { height: 24, marginRight: 6 };
-let obj4 = { flexDirection: "row", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderRadius: require("Themes").radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
-createCacheKey[9] = { height: 24, marginLeft: 6, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let obj5 = { height: 24, marginLeft: 6, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[10] = { width: "100%", height: 1, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 24 };
+let obj4 = { flexDirection: "row", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderRadius: ThemesDefault.radii.xl, paddingVertical: 4, paddingHorizontal: 8, alignItems: "center" };
+createCacheKey[9] = { height: 24, marginLeft: 6, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj5 = { height: 24, marginLeft: 6, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[10] = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 24 };
 createCacheKey[11] = { marginVertical: 64, alignSelf: "center", backgroundColor: "transparent" };
 createCacheKey[12] = { flexDirection: "row", alignItems: "center", marginBottom: -4 };
-let obj6 = { width: "100%", height: 1, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 24 };
-createCacheKey[13] = { tintColor: require("Themes").colors.TEXT_DEFAULT };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { tintColor: require("Themes").colors.TEXT_DEFAULT };
-const result = require("handleThemeChange").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx");
+let obj6 = { width: "100%", height: 1, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER, marginVertical: 24 };
+createCacheKey[13] = { tintColor: ThemesDefault.colors.TEXT_DEFAULT };
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { tintColor: ThemesDefault.colors.TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/purchase_page/GuildRoleSubscriptionPurchasePage.tsx");
 
 export default function GuildRoleSubscriptionPurchasePage(guildId) {
   guildId = guildId.guildId;
   const gatedChannelId = guildId.gatedChannelId;
-  let importAll;
+  importAll = undefined;
   let stateFromStores1;
-  let closure_4;
+  closure_4 = undefined;
   let store_page_trailer_url;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   importAll = tmp;
   gatedChannelId(stateFromStores1[13])({ forceRestore: true });
   let obj = guildId(stateFromStores1[14]);
   const first = obj.useGroupListingsForGuild(guildId)[0];
-  let obj1 = guildId(stateFromStores1[15]);
+  obj1 = guildId(stateFromStores1[15]);
   const groupListingsFetchContext = obj1.useGroupListingsFetchContext();
   let obj2 = guildId(stateFromStores1[14]);
   const subscriptionsSettings = obj2.useSubscriptionsSettings(guildId);
   let obj3 = guildId(stateFromStores1[16]);
-  let items = [createGuildRecordFromRust];
-  const stateFromStores = obj3.useStateFromStores(items, () => outer1_10.getGuild(guildId));
+  let items = [closure_10];
+  const stateFromStores = obj3.useStateFromStores(items, () => closure_1_10.getGuild(guildId));
   let obj4 = guildId(stateFromStores1[14]);
   let id;
   if (first != null) {
@@ -130,12 +120,12 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
   obj[3] = mapped;
   tmp2Result(obj);
   let tmp5Result = tmp5(tmp3[16]);
-  const items1 = [ensureGuildLoaded];
+  const items1 = [closure_9];
   const items2 = [gatedChannelId];
-  stateFromStores1 = tmp5Result.useStateFromStores(items1, () => outer1_9.getChannel(gatedChannelId), items2);
+  stateFromStores1 = tmp5Result.useStateFromStores(items1, () => closure_1_9.getChannel(gatedChannelId), items2);
   closure_4 = tmp2(tmp3[18])(stateFromStores1);
   tmp5Result = tmp5(tmp3[16]);
-  [][0] = handleThemeChange;
+  [][0] = closure_8;
   if (groupListingsFetchContext) {
     if (null != subscriptionsSettings) {
       if (null != stateFromStores) {
@@ -149,18 +139,15 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
               const intl2 = tmp5(tmp3[10]).intl;
               obj = { unlockHook: null };
               obj[0] = function unlockHook() {
-                let obj = { style: _undefined.gatedChannel, children: null };
-                const items = [outer1_14(guildId(stateFromStores1[11]).Spacer, { size: 3 }), , , ];
-                obj = { size: null, style: null, source: null };
-                obj[0] = guildId(stateFromStores1[11]).Icon.Sizes.SMALL_20;
-                obj[1] = _undefined.gatedChannelIcon;
-                obj[2] = guildId(stateFromStores1[22]).getChannelIcon(stateFromStores1);
-                items[1] = outer1_14(guildId(stateFromStores1[11]).Icon, obj);
-                items[2] = outer1_14(guildId(stateFromStores1[11]).Spacer, { size: 3 });
+                let obj = { style: closure_2.gatedChannel, children: null };
+                const items = [closure_1_14(guildId(stateFromStores1[11]).Spacer, { size: 3 }), , , ];
+                obj = { size: guildId(stateFromStores1[11]).Icon.Sizes.SMALL_20, style: closure_2.gatedChannelIcon, source: guildId(stateFromStores1[22]).getChannelIcon(stateFromStores1) };
+                items[1] = closure_1_14(guildId(stateFromStores1[11]).Icon, obj);
+                items[2] = closure_1_14(guildId(stateFromStores1[11]).Spacer, { size: 3 });
                 obj = { variant: "text-xs/semibold", color: "text-default", children: closure_4 };
-                items[3] = outer1_14(guildId(stateFromStores1[9]).Text, obj);
+                items[3] = closure_1_14(guildId(stateFromStores1[9]).Text, obj);
                 obj[1] = items;
-                return outer1_15(outer1_6, obj);
+                return closure_1_15(closure_1_6, obj);
               };
               let formatResult = intl2.format(tmp5(tmp3[10]).t.A1L1hU, obj);
             }
@@ -239,7 +226,7 @@ export default function GuildRoleSubscriptionPurchasePage(guildId) {
             items4[8] = callback(tmp5(tmp3[9]).Text, obj14);
             items4[9] = callback(tmp5(tmp3[11]).Spacer, { size: 24 });
             const obj15 = { gap: 16, children: null };
-            obj15[1] = mapped.map((listingId) => outer1_14(gatedChannelId(stateFromStores1[30]), { listingId, guildId }, listingId));
+            obj15[1] = mapped.map((listingId) => closure_1_14(gatedChannelId(stateFromStores1[30]), { listingId, guildId }, listingId));
             items4[10] = callback(tmp5(tmp3[26]).GappedList, obj15);
             obj3[1] = items4;
             items3[1] = closure_15(closure_6, obj3);

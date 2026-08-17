@@ -1,7 +1,11 @@
 // discord_app/modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 692 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import ReportNames from "ReportNames" /* 8137 */;
+
 const obj = {
   getTitle() {
     const intl = getSystemLocale.intl;
@@ -20,9 +24,9 @@ const obj = {
   onApply: null,
   predicate: null
 };
-const items = [require("ReportNames").ReportSubType.SUB_SPAM];
+const items = [ReportNames.ReportSubType.SUB_SPAM];
 obj[3] = items;
-const items1 = [require("set").ChannelTypes.DM, require("set").ChannelTypes.GROUP_DM];
+const items1 = [set2.ChannelTypes.DM, set2.ChannelTypes.GROUP_DM];
 obj[4] = items1;
 obj[5] = function onApply() {
   const DmSpamFilterV2 = explicitContentFromProto.DmSpamFilterV2;
@@ -33,6 +37,6 @@ obj[6] = function predicate() {
   const setting = DmSpamFilterV2.getSetting();
   return setting === create.DmSpamFilterV2.DISABLED;
 };
-const result = require("set").fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/IarSettingsUpsellsConfigDmSpamFilter.tsx");
 
 export default obj;

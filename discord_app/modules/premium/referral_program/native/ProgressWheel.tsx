@@ -1,30 +1,30 @@
 // discord_app/modules/premium/referral_program/native/ProgressWheel.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { metadata } from "../../../../../discord_assets/assets/premium/referral_program/referralTrial.png.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
-import { MAX_REFERRALS_SENT } from "../hooks/useReferralProgramBannerDetails.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import preloadDefault from "preload" /* 5449 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import MAX_REFERRALS_SENT from "MAX_REFERRALS_SENT" /* 12880 */;
+import metadataDefault from "metadata" /* 12890 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
+const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let c6 = 160;
 let closure_7 = 2 * Math.PI * 77;
 let closure_8 = createCacheKey.createStyles({ progressCircleContainer: { width: 160, height: 160, alignItems: "center", justifyContent: "center", marginTop: 24 }, progressCircleImage: { position: "absolute", width: 93, height: 93, borderRadius: 46.5 }, glowImage: { position: "absolute", width: 180, height: 180 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
+const result = set.fileFinishedImporting("modules/premium/referral_program/native/ProgressWheel.tsx");
 
 export default function ProgressWheel(nReferralsSent) {
   nReferralsSent = nReferralsSent.nReferralsSent;
   const tmp = callback2();
   let obj = map;
-  const token = obj.useToken(Themes.colors.BACKGROUND_MOD_STRONG);
-  let obj1 = map;
+  const token = obj.useToken(ThemesDefault.colors.BACKGROUND_MOD_STRONG);
+  obj1 = map;
   obj = { style: tmp.progressCircleContainer, children: null };
-  const token1 = obj1.useToken(Themes.colors.BACKGROUND_SURFACE_HIGH);
+  const token1 = obj1.useToken(ThemesDefault.colors.BACKGROUND_SURFACE_HIGH);
   let tmp9 = nReferralsSent === MAX_REFERRALS_SENT.MAX_REFERRALS_SENT;
   if (tmp9) {
     obj = { source: null, style: null };
@@ -40,11 +40,10 @@ export default function ProgressWheel(nReferralsSent) {
   obj1[2] = items1;
   items[1] = closure_5(tmp4Result, obj1);
   const obj3 = { source: null, style: null };
-  const obj4 = { uri: null };
-  obj4[0] = metadata;
+  const obj4 = { uri: metadataDefault };
   obj3[0] = obj4;
   obj3[1] = tmp.progressCircleImage;
-  items[2] = callback(preload, obj3);
+  items[2] = callback(preloadDefault, obj3);
   obj[1] = items;
   return closure_5(View, obj);
 };

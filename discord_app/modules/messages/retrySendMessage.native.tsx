@@ -1,21 +1,19 @@
 // discord_app/modules/messages/retrySendMessage.native.tsx
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
+import set from "set" /* 2 */;
+import MESSAGE_GROUP_SPACING from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
 import { _executeCommand } from "../application_commands/executeCommand.tsx";
 
-let result = require("_executeCommand").fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
+const MessageSendLocation = MESSAGE_GROUP_SPACING.MessageSendLocation;
+let result = set.fileFinishedImporting("modules/messages/retrySendMessage.native.tsx");
 
 export default function retrySendMessage(id, id2, arr) {
-  let content;
-  let flags;
-  let nonce;
-  let tts;
   const _require = id;
   let obj = arg3;
   if (arg3 === undefined) {
     obj = {};
   }
-  trackInvite.deleteMessage(id.id, id2.id, true);
+  trackInviteDefault.deleteMessage(id.id, id2.id, true);
   if (id2.isCommandType()) {
     if (tmp17) {
       __executeCommand.retryCommandMessage(id2, id, obj);
@@ -36,7 +34,7 @@ export default function retrySendMessage(id, id2, arr) {
         return fromJsonResult;
       });
     }
-    const tmpResult = trackInvite;
+    const tmpResult = trackInviteDefault;
     id = id.id;
     obj = { content: null, tts: null, invalidEmojis: null, validNonShortcutEmojis: null };
     obj[0] = content;
@@ -51,7 +49,7 @@ export default function retrySendMessage(id, id2, arr) {
     obj.location = MessageSendLocation.RETRY;
     obj.attachmentsToUpload = mapped;
     obj.onAttachmentUploadError = function onAttachmentUploadError(file, code, reason) {
-      let obj = guildId(outer1_2[4]);
+      let obj = guildId(closure_1_2[4]);
       obj = { file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason };
       const result = obj.handleUploadMessageAttachmentsErrors(obj);
     };

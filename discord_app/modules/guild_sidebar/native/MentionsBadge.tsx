@@ -1,14 +1,13 @@
 // discord_app/modules/guild_sidebar/native/MentionsBadge.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Button } from "../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 1297 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Button").fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/MentionsBadge.tsx");
 
 export default function MentionsBadge(arg0) {
-  let isMentionLowImportance;
-  let mentionsCount;
   ({ mentionsCount, isMentionLowImportance } = arg0);
   return jsx(Button.Badge, { value, isMentionLowImportance });
 };

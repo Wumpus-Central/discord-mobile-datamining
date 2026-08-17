@@ -1,45 +1,41 @@
 // discord_app/modules/gif_picker/native/GIFPickerCategoryView.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ StyleSheet, View: c4, TouchableOpacity: c5 } = get_ActivityIndicator);
 require("ME").GIFPickerResultTypes;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, gifImage: null, gifOverlay: null, categoryName: null, categoryNameIcon: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.xs, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.xs, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderRadius: require("Themes").radii.xs, flex: 1 };
+createCacheKey[1] = { borderRadius: ThemesDefault.radii.xs, flex: 1 };
 const obj2 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.backgroundColor = require("Themes").unsafe_rawColors.BLACK;
-obj2.borderRadius = require("Themes").radii.xs;
+obj2.backgroundColor = ThemesDefault.unsafe_rawColors.BLACK;
+obj2.borderRadius = ThemesDefault.radii.xs;
 obj2.opacity = 0.6;
 createCacheKey[2] = obj2;
 let obj3 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-obj3.margin = require("Themes").space.PX_8;
+obj3.margin = ThemesDefault.space.PX_8;
 obj3.justifyContent = "center";
 obj3.flexDirection = "row";
 obj3.alignItems = "center";
 createCacheKey[3] = obj3;
-const obj1 = { borderRadius: require("Themes").radii.xs, flex: 1 };
-createCacheKey[4] = { marginRight: require("Themes").space.PX_4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginRight: require("Themes").space.PX_4 };
-const result = require("ME").fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
+const obj1 = { borderRadius: ThemesDefault.radii.xs, flex: 1 };
+createCacheKey[4] = { marginRight: ThemesDefault.space.PX_4 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { marginRight: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerCategoryView.tsx");
 
 export default function GIFPickerCategoryView(onSelectCategory) {
   onSelectCategory = onSelectCategory.onSelectCategory;
   const item = onSelectCategory.item;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const items = [onSelectCategory, item];
   const callback = React.useCallback(() => {
     onSelectCategory(item.type, item.name);

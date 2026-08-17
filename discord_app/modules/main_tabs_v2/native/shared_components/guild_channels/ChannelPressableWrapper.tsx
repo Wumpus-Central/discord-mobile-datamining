@@ -1,16 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
+import noopAll from "noop" /* 19 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelPressableWrapper.tsx");
 
 export const renderChannelPressableWrapper = function renderChannelPressableWrapper(children, panelVariant) {
-  let isThread;
-  let launchpad;
-  let layout;
   let flag = panelVariant.panelVariant;
   ({ layout, launchpad, isThread } = panelVariant);
   if (flag === undefined) {

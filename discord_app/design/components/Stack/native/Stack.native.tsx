@@ -1,9 +1,10 @@
 // discord_app/design/components/Stack/native/Stack.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+noopAll;
 let closure_2 = createCacheKey.createStyles((gap, arg1, alignItems, justifyContent) => {
   const stack = { width: "100%", gap, alignItems, justifyContent, flexDirection: null };
   let str = "column";
@@ -13,12 +14,9 @@ let closure_2 = createCacheKey.createStyles((gap, arg1, alignItems, justifyConte
   stack[4] = str;
   return { stack };
 });
-const result = require("jsxProd").fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Stack/native/Stack.native.tsx");
 
 export const Stack = function Stack(spacing) {
-  let children;
-  let onLayout;
-  let style;
   spacing = spacing.spacing;
   let num = 8;
   if (undefined !== spacing) {

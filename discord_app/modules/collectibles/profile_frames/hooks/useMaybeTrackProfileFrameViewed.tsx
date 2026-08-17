@@ -1,23 +1,20 @@
 // discord_app/modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx
-import noop from "noop";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
 
-let c3;
-let obj1;
 ({ useEffect: obj1, useRef: c3 } = noop);
-let result = require("defaultAreStatesEqual").fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx");
+let result = set.fileFinishedImporting("modules/collectibles/profile_frames/hooks/useMaybeTrackProfileFrameViewed.tsx");
 
 export default function useMaybeTrackProfileFrameViewed(skuId) {
-  let closure_2;
-  let closure_3;
   skuId = skuId.skuId;
   const openedAt = skuId.openedAt;
   ({ context: closure_2, analyticsLocations: closure_3 } = skuId);
   let stateFromStores;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let closure_8;
+  closure_5 = undefined;
+  closure_6 = undefined;
+  closure_7 = undefined;
+  closure_8 = undefined;
   const items = [stateFromStores];
   stateFromStores = skuId(openedAt[2]).useStateFromStores(items, () => stateFromStores.getProductFetch(skuId));
   closure_5 = callback2(undefined);

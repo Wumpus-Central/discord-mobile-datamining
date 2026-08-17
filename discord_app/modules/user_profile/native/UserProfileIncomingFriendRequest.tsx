@@ -1,26 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfileIncomingFriendRequest.tsx
-import noop from "noop";
-import { View } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: null };
-createCacheKey = { borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[3] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileIncomingFriendRequest.tsx");
 
 export default function UserProfileIncomingFriendRequest(style) {
-  let applicationId;
-  let channelId;
-  let guildId;
-  let isGameRelationship;
-  let showUserProfile;
-  let user;
   ({ user, isGameRelationship } = style);
   ({ channelId, guildId } = style);
   if (isGameRelationship === undefined) {
@@ -32,12 +25,12 @@ export default function UserProfileIncomingFriendRequest(style) {
   let acceptFriendRequest;
   let cancelFriendRequest;
   let getOrFetchApplication;
-  items4 = createCacheKey();
+  items4 = callback();
   let tmp = items4;
   let userResult = trackUserProfileAction;
   let obj = isGameRelationship(trackUserProfileAction[6]);
   trackUserProfileAction = obj.useUserProfileAnalyticsContext().trackUserProfileAction;
-  let obj1 = isGameRelationship(trackUserProfileAction[8]);
+  obj1 = isGameRelationship(trackUserProfileAction[8]);
   obj = { userId: user.id, applicationId, isGameRelationship, location: items4(trackUserProfileAction[7])().newestAnalyticsLocation, onConfirm: showUserProfile, onCancel: showUserProfile };
   const friendRequestActions = obj1.useFriendRequestActions(obj);
   acceptFriendRequest = friendRequestActions.acceptFriendRequest;
@@ -55,7 +48,7 @@ export default function UserProfileIncomingFriendRequest(style) {
   }, items);
   const items1 = [cancelFriendRequest, isGameRelationship, trackUserProfileAction];
   let tmp8 = null;
-  const callback = acceptFriendRequest.useCallback(() => {
+  callback = acceptFriendRequest.useCallback(() => {
     cancelFriendRequest();
     let str = "IGNORE_FRIEND_REQUEST";
     if (isGameRelationship) {

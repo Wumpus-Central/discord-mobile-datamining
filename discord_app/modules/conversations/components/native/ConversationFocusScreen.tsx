@@ -1,46 +1,40 @@
 // discord_app/modules/conversations/components/native/ConversationFocusScreen.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import removePendingListFetch from "removePendingListFetch";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "removePendingListFetch" /* 5014 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ ActivityIndicator: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, pendingContent: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, paddingVertical: require("Themes").space.PX_24, alignItems: "center", gap: require("Themes").space.PX_32, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flex: 1, paddingVertical: require("Themes").space.PX_24, alignItems: "center", gap: require("Themes").space.PX_32, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let result = require("removePendingListFetch").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
+createCacheKey[1] = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flex: 1, paddingVertical: ThemesDefault.space.PX_24, alignItems: "center", gap: ThemesDefault.space.PX_32, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationFocusScreen.tsx");
 
 export default function ConversationFocusScreen() {
-  let fullyHydrated;
-  let startMessageId;
-  let container = createCacheKey();
+  let container = callback2();
   let ChatPreview = channelId;
   let tmp = conversationId;
   let obj = channelId(conversationId[6]);
   const params = obj.useRoute().params;
   channelId = params.channelId;
   conversationId = params.conversationId;
-  let obj1 = channelId(conversationId[7]);
-  const items = [removePendingListFetch];
+  obj1 = channelId(conversationId[7]);
+  const items = [closure_6];
   const items1 = [channelId, conversationId];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_6.getHydratedMessages(channelId, conversationId), items1);
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getHydratedMessages(channelId, conversationId), items1);
   let obj2 = channelId(conversationId[7]);
-  const items2 = [removePendingListFetch];
+  const items2 = [closure_6];
   const items3 = [channelId, conversationId];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => {
-    let obj = outer1_6;
-    const conversationMetadata = outer1_6.getConversationMetadata(channelId, conversationId);
+    let obj = closure_1_6;
+    const conversationMetadata = closure_1_6.getConversationMetadata(channelId, conversationId);
     let flag;
     if (conversationMetadata != null) {
       flag = conversationMetadata.fullyHydrated;
@@ -49,7 +43,7 @@ export default function ConversationFocusScreen() {
       flag = false;
     }
     obj = { fullyHydrated: flag, isFullFetchPending: obj.isConversationFetchPending(conversationId, true), startMessageId: null };
-    let startMessageId;
+    startMessageId = undefined;
     if (conversationMetadata != null) {
       startMessageId = conversationMetadata.conversation.startMessageId;
     }

@@ -1,10 +1,10 @@
 // discord_app/modules/activities/utils/native/useHandleOAuthNavigation.tsx
-import noop from "noop";
-import { ComponentActions } from "ME";
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY";
+import closure_3 from "noop" /* 19 */;
+import { ComponentActions } from "ME" /* 676 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_5 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
 
 const require = arg1;
-const result = require("OAUTH2_AUTHORIZE_MODAL_KEY").fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 
 export default function useHandleOAuthNavigation() {
   const effect = React.useEffect(() => {
@@ -22,8 +22,8 @@ export default function useHandleOAuthNavigation() {
     let ComponentDispatch = showOAuth2Modal(table[6]).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     return () => {
-      const ComponentDispatch = showOAuth2Modal(outer1_2[6]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(outer1_4.SHOW_OAUTH2_MODAL, showOAuth2Modal);
+      const ComponentDispatch = showOAuth2Modal(closure_1_2[6]).ComponentDispatch;
+      ComponentDispatch.unsubscribe(closure_1_4.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     };
   }, []);
 };

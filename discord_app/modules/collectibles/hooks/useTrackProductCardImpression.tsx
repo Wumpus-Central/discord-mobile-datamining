@@ -1,22 +1,22 @@
 // discord_app/modules/collectibles/hooks/useTrackProductCardImpression.tsx
-import noop from "noop";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { AnalyticEvents } from "ME";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useTrackProductCardImpression.tsx");
 
 export const useTrackProductCardImpression = function useTrackProductCardImpression(categoryStoreListingId, mobile_home, featured_block) {
   const _require = categoryStoreListingId;
-  const importDefault = mobile_home;
+  importDefault = mobile_home;
   let str = featured_block;
   if (featured_block === undefined) {
     str = "product";
   }
   let collectiblesAnalyticsContext;
   let stateFromStores;
-  let c5;
-  let closure_6;
+  c5 = undefined;
+  closure_6 = undefined;
   let callback;
   collectiblesAnalyticsContext = _require(str[3]).useCollectiblesAnalyticsContext();
   let obj = _require(str[3]);

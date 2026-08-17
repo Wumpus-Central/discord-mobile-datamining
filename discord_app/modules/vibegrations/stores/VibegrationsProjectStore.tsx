@@ -1,7 +1,8 @@
 // discord_app/modules/vibegrations/stores/VibegrationsProjectStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { Store } from "initialize";
-import set from "dispatcher";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import set from "set" /* 2 */;
 
 function handleProjectUpsert(project) {
   project = project.project;
@@ -26,6 +27,7 @@ let c4 = null;
 let set = new Set();
 let closure_6 = [];
 const map3 = new Map();
+const Store = initializeDefault.Store;
 class VibegrationsProjectStore extends Store {
 }
 const prototype = VibegrationsProjectStore.prototype;
@@ -70,7 +72,7 @@ prototype["isOwnedVibegrationsProjectApplication"] = function isOwnedVibegration
   }
   return hasItem;
 };
-const vibegrationsProjectStore = new VibegrationsProjectStore(require("dispatcher"), {
+const vibegrationsProjectStore = new VibegrationsProjectStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
     if (0 === map.size) {
       if (0 === map1.size) {
@@ -91,7 +93,7 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(require("dispatche
     c4 = null;
   },
   VIBEGRATIONS_PROJECTS_FETCH_START: function handleProjectsFetchStart() {
-    let closure_4 = { type: "loading" };
+    closure_4 = { type: "loading" };
   },
   VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function handleProjectsFetchSuccess(arg0) {
     map.clear();
@@ -171,8 +173,6 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(require("dispatche
     }
   },
   VIBEGRATIONS_PROJECT_SELECT: function handleProjectSelect(arg0) {
-    let guildId;
-    let projectId;
     ({ guildId, projectId } = arg0);
     let value = map2.get(guildId);
     if (value == null) {
@@ -187,8 +187,6 @@ const vibegrationsProjectStore = new VibegrationsProjectStore(require("dispatche
     }
   },
   VIBEGRATIONS_LOG_APPEND: function handleLogAppend(arg0) {
-    let log;
-    let projectId;
     ({ projectId, log } = arg0);
     const value = map3.get(projectId);
     if (null == value) {

@@ -1,13 +1,15 @@
 // discord_app/modules/activities/panel/native/LeaveActivityButton.tsx
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import registerAssetDefault from "registerAsset" /* 12515 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 class BaseLeaveActivityButton {
   constructor(arg0) {
-    obj = { onPress: global.onPress, icon: null, text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
-    obj[1] = require("registerAsset");
+    obj = { onPress: global.onPress, icon: require("registerAsset"), text: null, accessibilityLabel: null, variant: "destructive", size: "sm", maxFontSizeMultiplier: 1 };
     intl = require("getSystemLocale").intl;
     obj[2] = intl.string(require("getSystemLocale").t["Hi1/aQ"]);
     intl2 = require("getSystemLocale").intl;
@@ -15,14 +17,12 @@ class BaseLeaveActivityButton {
     return jsx(require("Button").Button, obj);
   }
 }
-const memoResult = require("noop").memo(function LeaveActivityButton(arg0) {
-  let importDefault;
-  let require;
+const memoResult = importAllResult.memo(function LeaveActivityButton(arg0) {
   ({ selfEmbeddedActivity: require, setMode: importDefault } = arg0);
   return <BaseLeaveActivityButton onPress={function onPress() {
-    callback(outer1_3.DISCONNECTED);
+    callback(closure_1_3.DISCONNECTED);
     const timerId = setTimeout(() => {
-      let obj = outer1_1(outer1_2[6]);
+      let obj = closure_1_1(closure_1_2[6]);
       let _location;
       if (closure_0 != null) {
         _location = tmp.location;
@@ -37,7 +37,7 @@ const memoResult = require("noop").memo(function LeaveActivityButton(arg0) {
     }, 400);
   }} />;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/LeaveActivityButton.tsx");
 
 export default memoResult;
 export { BaseLeaveActivityButton };

@@ -1,12 +1,13 @@
 // discord_app/modules/quests/QuestHomeHeroTypes.tsx
-import { resolveAsset } from "lib/AssetUtils.tsx";
-import { questHomeHeroCtaFromServer } from "QuestHomeHeroCta.tsx";
-const result = require("set").fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
+import set from "set" /* 2 */;
+import resolveAsset from "resolveAsset" /* 10486 */;
+import questHomeHeroCtaFromServer from "questHomeHeroCtaFromServer" /* 10504 */;
+
+const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroTypes.tsx");
 
 export const questHomeHeroFromServer = function questHomeHeroFromServer(c7) {
   const creative_content = c7.creative_content;
-  let obj = { id: creative_content.id, labelTitle: creative_content.label_title, labelSubtitle: creative_content.label_subtitle, heroImage: null, heroVideo: null, sponsorImage: null, cta: null, questIds: null, questHomeEntrypoint: null, shelfImage: null, shelfVideo: null, startsAt: null, endsAt: null };
-  obj[3] = resolveAsset.resolveAdCreativeCdnUrl(creative_content.hero_image);
+  let obj = { id: creative_content.id, labelTitle: creative_content.label_title, labelSubtitle: creative_content.label_subtitle, heroImage: resolveAsset.resolveAdCreativeCdnUrl(creative_content.hero_image), heroVideo: null, sponsorImage: null, cta: null, questIds: null, questHomeEntrypoint: null, shelfImage: null, shelfVideo: null, startsAt: null, endsAt: null };
   const obj2 = resolveAsset;
   obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.hero_video);
   const obj3 = resolveAsset;

@@ -1,26 +1,25 @@
 // discord_app/modules/reactions/native/MessagePreviewReactions.tsx
-import "noop";
-import removePendingListFetch from "removePendingListFetch";
-import messages from "messages";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "removePendingListFetch" /* 5014 */;
+import closure_4 from "messages" /* 9066 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
+noopAll;
 let closure_6 = [];
-const result = require("messages").fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
+const result = require("set").fileFinishedImporting("modules/reactions/native/MessagePreviewReactions.tsx");
 
 export default function MessagePreviewReactions(emoji) {
-  let channelId;
-  let messageId;
   ({ channelId, messageId } = emoji);
   let obj = channelId(589);
-  const items = [messages, removePendingListFetch];
+  const items = [closure_4, closure_3];
   const items1 = [channelId, messageId];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    let message = outer1_4.getMessage(messageId);
+    let message = closure_1_4.getMessage(messageId);
     if (message == null) {
-      message = outer1_3.getMessage(channelId, messageId);
+      message = closure_1_3.getMessage(channelId, messageId);
     }
-    return null != message ? message.reactions : outer1_6;
+    return null != message ? message.reactions : closure_1_6;
   }, items1);
   obj = { value: messageId(7139)(messageId(7159).MESSAGE_PREVIEW_REACTIONS).analyticsLocations, children: null };
   if (stateFromStores.length > 0) {

@@ -1,9 +1,11 @@
 // discord_app/modules/i18n/CountryCodeUtils.tsx
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { items } from "../../../discord_common/js/shared/Countries.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/CountryCodes.tsx";
-import { CountryCodesISO3to2 } from "../../../discord_common/js/shared/shared-constants/CountryCodesISO3to2.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import itemsDefault from "items" /* 4075 */;
+import set2 from "set" /* 4076 */;
+import CountryCodesISO3to2 from "CountryCodesISO3to2" /* 4077 */;
+
 let c3 = "United States";
 let closure_4 = {
   AF() {
@@ -1027,39 +1029,39 @@ let closure_4 = {
     return intl.string(getSystemLocale.t.kQ6oLs);
   }
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/i18n/CountryCodeUtils.tsx");
+const result = set.fileFinishedImporting("modules/i18n/CountryCodeUtils.tsx");
 
 export const DEFAULT_COUNTRY_CODE_NAME = "United States";
 export const getCountryCodeByCountryName = function getCountryCodeByCountryName(arg0) {
-  let closure_0 = arg0;
-  const found = items.find((name) => name.name === closure_0);
+  closure_0 = arg0;
+  const found = itemsDefault.find((name) => name.name === closure_0);
   if (null != found) {
     const obj = { name: null, code: null, alpha2: null };
     ({ name: obj[0], phoneCountryCode: obj[1], alpha2: obj[2] } = found);
     return obj;
   }
-  const arr = items;
+  const arr = itemsDefault;
 };
 export const getCountryCodeByAlpha2 = function getCountryCodeByAlpha2(countryCode) {
-  let closure_0 = countryCode;
-  const found = items.find((alpha2) => alpha2.alpha2 === closure_0);
+  closure_0 = countryCode;
+  const found = itemsDefault.find((alpha2) => alpha2.alpha2 === closure_0);
   if (null != found) {
     const obj = { name: null, code: null, alpha2: null };
     ({ name: obj[0], phoneCountryCode: obj[1], alpha2: obj[2] } = found);
     return obj;
   }
-  const arr = items;
+  const arr = itemsDefault;
 };
 export const getDefaultCountryCode = function getDefaultCountryCode() {
-  let closure_0 = c3;
-  const found = items.find((name) => name.name === closure_0);
+  closure_0 = c3;
+  const found = itemsDefault.find((name) => name.name === closure_0);
   let tmp4;
   if (null != found) {
     const obj = { name: null, code: null, alpha2: null };
     ({ name: obj[0], phoneCountryCode: obj[1], alpha2: obj[2] } = found);
     tmp4 = obj;
   }
-  00038__(null != tmp4, "Default country code cannot be missing.");
+  _modDef38(null != tmp4, "Default country code cannot be missing.");
   return tmp4;
 };
 export const getI18NCountryName = function getI18NCountryName(arg0) {
@@ -1074,11 +1076,11 @@ export const getI18NCountryNameSafe = function getI18NCountryNameSafe(arg0) {
 };
 export const convertToAlpha2 = function convertToAlpha2(countryCode) {
   if (2 === countryCode.length) {
-    const tmp17 = set.CountryCodes[countryCode];
+    const tmp17 = set2.CountryCodes[countryCode];
     if (null == tmp17) {
       const _Error3 = Error;
       const _HermesInternal3 = HermesInternal;
-      const error = new Error("Invalid country code alpha2 " + countryCode);
+      error = new Error("Invalid country code alpha2 " + countryCode);
       throw error;
     } else {
       return tmp17;

@@ -1,39 +1,22 @@
 // discord_app/modules/messages/native/long_press/LongPressMessageActionSheet.tsx
-import handleEdit from "handleEdit";
-import initialize from "initialize";
-import handleMessageSendFailedAutomod from "handleMessageSendFailedAutomod";
-import handleSelectedGuildChange from "handleSelectedGuildChange";
-import getTimeSafe from "getTimeSafe";
-import { isMessageComponentsV2 } from "hasFlag";
-import fetchFingerprint from "fetchFingerprint";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING";
-import ME from "ME";
-import { jsx } from "useShouldHideMediaOptions";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "handleMessageSendFailedAutomod" /* 8163 */;
+import closure_6 from "handleSelectedGuildChange" /* 10849 */;
+import closure_7 from "getTimeSafe" /* 10850 */;
+import { isMessageComponentsV2 } from "hasFlag" /* 4031 */;
+import closure_9 from "fetchFingerprint" /* 1218 */;
+import closure_10 from "createGuildRecordFromRust" /* 1910 */;
+import closure_11 from "getUncachedChannelPermissions" /* 4021 */;
+import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_23;
-let map1;
 const require = arg1;
 ({ AnalyticEvents: map1, AnalyticsPages: closure_14, ChannelTypes: closure_15, GuildFeatures: closure_16, LOCAL_BOT_ID: closure_17, MessageAttachmentFlags: closure_18, MessageFlags: closure_19, MessageStates: closure_20, MessageTypes: closure_21, MessageTypesSets: closure_22, Permissions: closure_23 } = ME);
-let result = require("handleMessageSendFailedAutomod").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheet.tsx");
 
 export default function LongPressMessageActionSheet(analyticsLocation) {
-  let handleMessageSendFailedAutomod;
-  let message;
-  let selectedMedia;
-  let tmp14;
-  let tmp15;
-  let user;
   const _require = analyticsLocation;
   let props = analyticsLocations;
   const tmp3 = analyticsLocation;
@@ -44,15 +27,15 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   }
   ({ user, message } = analyticsLocation);
   const channel = analyticsLocation.channel;
-  ({ chatInputRef: handleMessageSendFailedAutomod, selectedMedia } = analyticsLocation);
-  const actionSheetSource = analyticsLocation.actionSheetSource;
+  ({ chatInputRef: closure_5, selectedMedia } = analyticsLocation);
+  let actionSheetSource = analyticsLocation.actionSheetSource;
   let tmp5;
   if (undefined !== actionSheetSource) {
     tmp5 = actionSheetSource;
   }
-  let getTimeSafe = tmp5;
+  actionSheetSource = tmp5;
   const canAddNewReactions = analyticsLocation.canAddNewReactions;
-  const isMessageComponentsV2 = undefined !== canAddNewReactions && canAddNewReactions;
+  isMessageComponentsV2 = undefined !== canAddNewReactions && canAddNewReactions;
   let items = [analyticsLocation, channel];
   const effect = channel.useEffect(() => {
     let obj = analyticsLocations(analyticsLocation[14]);
@@ -67,7 +50,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     const result = analyticsLocation(analyticsLocation[15]).showLongPressMessageActionSheet(analyticsLocation);
   }, items1);
   const tmp8 = _require;
-  let obj1 = _require(tmp3[16]);
+  obj1 = _require(tmp3[16]);
   const canReplyToMessage = obj1.useCanReplyToMessage(channel, message);
   let obj2 = _require(tmp3[17]);
   const canForwardMessage = obj2.useCanForwardMessage(message);
@@ -75,10 +58,10 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   let obj3 = _require(tmp3[18]);
   let isForLaterExperimentOn = obj3.useIsForLaterExperimentOn("LongPressMessageActionSheet");
   let obj4 = _require(tmp3[19]);
-  const items2 = [getTimeSafe];
+  const items2 = [actionSheetSource];
   const tmp4 = analyticsLocations(analyticsLocation[12]);
   [tmp14, tmp15] = message(obj4.useStateFromStoresArray(items2, () => {
-    const items = [tmp5.isMessageReminder(channel.id, message.id), tmp5.isMessageBookmarked(channel.id, message.id)];
+    const items = [actionSheetSource.isMessageReminder(channel.id, message.id), actionSheetSource.isMessageBookmarked(channel.id, message.id)];
     return items;
   }), 2);
   let obj5 = _require(tmp3[18]);
@@ -87,7 +70,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   const isNonModInLockedThread = obj6.useIsNonModInLockedThread(channel);
   id = undefined;
   const tmp13 = message(obj4.useStateFromStoresArray(items2, () => {
-    const items = [tmp5.isMessageReminder(channel.id, message.id), tmp5.isMessageBookmarked(channel.id, message.id)];
+    const items = [actionSheetSource.isMessageReminder(channel.id, message.id), actionSheetSource.isMessageBookmarked(channel.id, message.id)];
     return items;
   }), 2);
   if (channel != null) {
@@ -198,10 +181,6 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     id = guild.id;
   }
   function getProps(arrow) {
-    let IconComponent;
-    let analyticsLocations;
-    let disabled;
-    let variant;
     const label = arrow.label;
     ({ onActionExecuted: analyticsLocations, disabled } = arrow);
     ({ IconComponent, variant } = arrow);
@@ -210,7 +189,7 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
       icon: props(analyticsLocation(analyticsLocation[31]).ActionSheetRow.Icon, { IconComponent }),
       label,
       onPress() {
-        const result = label(analyticsLocation[32]).longPressMessageOptionHandler({ actionSheetSource: outer1_7, analyticsLocations: outer1_1, channel: outer1_4, chatInputRef: outer1_5, label, message: outer1_3, onBack: outer1_9, onActionExecuted: closure_1, selectedMedia: outer1_6, disabled });
+        const result = label(analyticsLocation[32]).longPressMessageOptionHandler({ actionSheetSource: closure_1_7, analyticsLocations: closure_1_1, channel: closure_1_4, chatInputRef: closure_1_5, label, message: closure_1_3, onBack: closure_1_9, onActionExecuted: closure_1, selectedMedia: closure_1_6, disabled });
       },
       variant,
       disabled
@@ -218,11 +197,10 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
   }
   function render(items5) {
     let obj = { value: analyticsLocations, children: null };
-    obj = { showGradient: true, startExpanded: null, header: null, children: null };
-    obj[1] = analyticsLocation(analyticsLocation[34]).isMetaQuest();
+    obj = { showGradient: true, startExpanded: analyticsLocation(analyticsLocation[34]).isMetaQuest(), header: null, children: null };
     const obj3 = analyticsLocation(analyticsLocation[34]);
     const tmp2 = analyticsLocation;
-    let shouldShowEmojiRowResult = analyticsLocation(analyticsLocation[35]).shouldShowEmojiRow(closure_8, message, createGuildRecordFromRust);
+    let shouldShowEmojiRowResult = analyticsLocation(analyticsLocation[35]).shouldShowEmojiRow(closure_8, message, closure_10);
     if (shouldShowEmojiRowResult) {
       obj = { message: null, channel: null };
       obj[0] = message;
@@ -232,20 +210,13 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
     obj[2] = shouldShowEmojiRowResult;
     let mapped;
     if (items5 != null) {
-      mapped = items5.map((arr) => {
-        const obj = { hasIcons: true, children: null };
-        obj[1] = arr.map((arg0, arg1) => {
-          let arrow;
-          let disabled;
-          let icon;
-          let label;
-          let onPress;
-          let variant;
+      mapped = items5.map((arr) => callback2(callback(table[31]).ActionSheetRow.Group, {
+        hasIcons: true,
+        children: arr.map((arg0, arg1) => {
           ({ icon, arrow, label, onPress, variant, disabled } = arg0);
           return callback2(callback(table[31]).ActionSheetRow, { icon, arrow, label, onPress, variant, disabled }, arg1);
-        });
-        return callback2(callback(table[31]).ActionSheetRow.Group, obj, arg1);
-      });
+        })
+      }, arg1));
     }
     obj[3] = mapped;
     obj[1] = props(analyticsLocation(analyticsLocation[33]).ActionSheet, obj);
@@ -545,8 +516,8 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
       obj42[0] = intl13.string(tmp8(tmp3[37]).t.xwMqD7);
       obj42[1] = tmp8(tmp3[40]).TrashIcon;
       const props11 = getProps(obj42);
-      let closure_37 = (() => {
-        let hasFlagResult = "Preview" === getTimeSafe;
+      closure_37 = (() => {
+        let hasFlagResult = "Preview" === actionSheetSource;
         if (!hasFlagResult) {
           hasFlagResult = analyticsLocation(analyticsLocation[27]).hasFlag(message.flags, props.EPHEMERAL);
           const obj = analyticsLocation(analyticsLocation[27]);
@@ -555,8 +526,8 @@ export default function LongPressMessageActionSheet(analyticsLocation) {
         if (hasFlagResult) {
           items.push(props, props, props, props, props, props, props, props4, props11, props, props, props, props, props5);
         }
-        let tmp22 = createGuildRecordFromRust;
-        if (createGuildRecordFromRust) {
+        let tmp22 = closure_10;
+        if (closure_10) {
           tmp22 = !analyticsLocation(analyticsLocation[27]).hasFlag(message.flags, props.EPHEMERAL);
           const obj2 = analyticsLocation(analyticsLocation[27]);
         }

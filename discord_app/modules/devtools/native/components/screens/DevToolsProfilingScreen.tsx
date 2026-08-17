@@ -1,47 +1,42 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { addValue } from "../../../../profiling/ComponentProfiler.tsx";
-import { DevToolsProfilingUseStateFromStores } from "DevToolsProfilingUseStateFromStores.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Stack from "Stack" /* 4733 */;
+import addValue from "addValue" /* 10137 */;
+import DevToolsProfilingUseStateFromStores from "DevToolsProfilingUseStateFromStores" /* 15115 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ ScrollView: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, monospace: null };
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOW;
+createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOW;
 createCacheKey.padding = 16;
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { fontFamily: require("ME").Fonts.CODE_BOLD };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsProfilingScreen.tsx");
 
 export default function DevToolsProfilingScreen() {
-  let require;
   [r10008, require] = componentRenderStats(React.useState(false), 2);
   const callback = React.useCallback(() => {
-    const result = outer1_0(tmp3[7]).clearComponentRenderStats();
+    const result = closure_1_0(10137).clearComponentRenderStats();
     callback(true);
   }, []);
-  const tmp3 = createCacheKey();
-  const dependencyMap = tmp3;
+  const tmp3 = callback();
+  dependencyMap = tmp3;
   let obj = addValue;
   componentRenderStats = obj.getComponentRenderStats();
   obj = { style: tmp3.container, children: null };
   const tmp = componentRenderStats(React.useState(false), 2);
   if (tmp7) {
     obj = { children: null };
-    let obj1 = { title: "Component Profiler", hasIcons: false, children: null };
+    obj1 = { title: "Component Profiler", hasIcons: false, children: null };
     const obj2 = { variant: "danger", arrow: true, label: "Reset Stats", onPress: null };
     obj2[3] = callback;
     obj1[2] = tmp8(tmp4(6291).TableRow, obj2);
@@ -49,29 +44,23 @@ export default function DevToolsProfilingScreen() {
     const _Object = Object;
     const keys = Object.keys(componentRenderStats);
     items[1] = keys.map((arg0) => {
-      let mount;
-      let nestedUpdate;
-      let update;
       ({ mount, update, nestedUpdate } = componentRenderStats[arg0]);
-      let obj = { title: null, hasIcons: false, children: null };
-      obj[0] = "Component Profiler Target: '" + arg0 + "'";
       let items = [{ stat: mount, label: "Mount" }, { stat: update, label: "Update" }, { stat: nestedUpdate, label: "Nested Update" }];
-      obj[2] = items.map((stat) => {
-        stat = stat.stat;
-        let obj = { subLabel: null, label: null };
-        obj = { children: null };
-        obj = { variant: "text-sm/medium", color: "text-subtle", style: closure_1.monospace, children: null };
-        obj[3] = "Count - " + stat.count;
-        const items = [outer1_5(outer1_0(outer1_1[11]).Text, obj), ];
-        const obj1 = { variant: "text-sm/medium", color: "text-subtle", style: closure_1.monospace, children: null };
-        obj1[3] = "Mean - " + stat.mean;
-        items[1] = outer1_5(outer1_0(outer1_1[11]).Text, obj1);
-        obj[0] = items;
-        obj[0] = outer1_7(outer1_6, obj);
-        obj[1] = stat.label;
-        return outer1_5(outer1_0(outer1_1[10]).TableRow, obj, arg1);
-      });
-      return outer1_5(outer1_0(tmp3[9]).TableRowGroup, obj, arg0);
+      return closure_1_5(closure_1_0(6286).TableRowGroup, {
+        title: "Component Profiler Target: '" + arg0 + "'",
+        hasIcons: false,
+        children: items.map((stat) => {
+          stat = stat.stat;
+          let obj = { subLabel: null, label: null };
+          obj = { children: null };
+          obj = { variant: "text-sm/medium", color: "text-subtle", style: closure_1.monospace, children: "Count - " + stat.count };
+          const items = [closure_1_5(closure_1_0(closure_1_1[11]).Text, obj), closure_1_5(closure_1_0(closure_1_1[11]).Text, { variant: "text-sm/medium", color: "text-subtle", style: closure_1.monospace, children: "Mean - " + stat.mean })];
+          obj[0] = items;
+          obj[0] = closure_1_7(closure_1_6, obj);
+          obj[1] = stat.label;
+          return closure_1_5(closure_1_0(closure_1_1[10]).TableRow, obj, arg1);
+        })
+      }, arg0);
     });
     obj[0] = items;
     let tmp8Result = tmp10(closure_6, obj);

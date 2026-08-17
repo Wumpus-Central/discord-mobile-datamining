@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { SettingsDefaultFeature } from "../../../../discord_common/js/shared/shared-constants/SettingsDefaultFeature.tsx";
-import { isFeatureAgeGated } from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
-import { explicitContentFromProto } from "../UserSettings.tsx";
+import initialize from "initialize" /* 589 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
+import SettingsDefaultFeature from "SettingsDefaultFeature" /* 4079 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { ExplicitContentFilterToDmSpamFilterV2 as closure_3 } from "items" /* 4068 */;
 
-const require = arg1;
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/useDerivedDMSpamFilterSetting.tsx");
 
 export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilterSettingValue() {
   let DmSpamFilterV2 = dependencyMap;
@@ -16,7 +16,7 @@ export const useDerivedDmSpamFilterSettingValue = function useDerivedDmSpamFilte
   const setting = DmSpamFilterV22.useSetting();
   const ExplicitContentFilter = explicitContentFromProto.ExplicitContentFilter;
   const setting1 = ExplicitContentFilter.useSetting();
-  const items = [mergeGuildAvatar];
+  const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = initialize;
   const isSettingTeenByDefault = isFeatureAgeGated.useIsSettingTeenByDefault(SettingsDefaultFeature.SettingsDefaultFeature.SPAM_FILTERS);

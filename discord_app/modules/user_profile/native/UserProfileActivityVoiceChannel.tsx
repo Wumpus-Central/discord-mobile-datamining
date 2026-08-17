@@ -1,14 +1,13 @@
 // discord_app/modules/user_profile/native/UserProfileActivityVoiceChannel.tsx
-import { View } from "dispatcher";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
-import jsxProd from "openChannelCallModal";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "sum";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import sum from "sum" /* 505 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_6;
-let error;
+const View = get_ActivityIndicator.View;
+const Permissions = sum.Permissions;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { container: { flexDirection: "row", alignItems: "center", gap: 4, overflow: "hidden" }, channelButton: { flex: 1, flexDirection: "row", alignItems: "center", gap: 2 }, channelName: null };
 let num = -1;
@@ -30,7 +29,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   newestAnalyticsLocation = channel(onAction[6])().newestAnalyticsLocation;
   let obj = guild(onAction[7]);
   context = obj.useUserProfileAnalyticsContext().context;
-  let obj1 = guild(onAction[8]);
+  obj1 = guild(onAction[8]);
   const isScreenReaderEnabled = obj1.useIsScreenReaderEnabled();
   arr = channel(onAction[9])(channel);
   const tmp6 = channel(onAction[10])(channel);
@@ -73,10 +72,8 @@ export default function UserProfileActivityVoiceChannel(guild) {
         key: "GUILD_NAME_TOAST",
         content: guild.name,
         icon() {
-          const obj = { size: null, guild: null };
-          obj[0] = outer1_0(outer1_2[15]).GuildIconSizes.XSMALL;
-          obj[1] = closure_0;
-          return outer1_6(outer1_1(outer1_2[15]), obj);
+          const obj = { size: closure_1_0(closure_1_2[15]).GuildIconSizes.XSMALL, guild: closure_0 };
+          return closure_1_6(closure_1_1(closure_1_2[15]), obj);
         }
       };
       obj.open(obj);
@@ -134,29 +131,19 @@ export default function UserProfileActivityVoiceChannel(guild) {
       channel,
       onPressUser(userId) {
         const obj = {};
-        const merged = Object.assign(getUncachedChannelPermissions);
+        const merged = Object.assign(closure_4);
         obj.userId = userId;
-        return outer1_1(outer1_2[25])(obj);
+        return closure_1_1(closure_1_2[25])(obj);
       }
     };
     obj.openLazy(guild(onAction[24])(onAction[23], onAction.paths), "UserProfileActivityVoiceChannelUsers", obj, "stack");
   };
-  const obj12 = { size: null, totalCount: null, names: null, children: null };
-  obj12[0] = guild(onAction[27]).AvatarSizes.SIZE_16;
-  obj12[1] = arr.length;
-  obj12[2] = arr.map((username) => username.username);
+  const obj12 = { size: guild(onAction[27]).AvatarSizes.SIZE_16, totalCount: arr.length, names: arr.map((username) => username.username), children: null };
   let substr = arr;
   if (arr.length > 3) {
     substr = arr.slice(0, 3);
   }
-  obj12[3] = substr.map((id) => {
-    const obj = { size: null, channel: null, guildId: null, user: null };
-    obj[0] = guild(onAction[27]).AvatarSizes.SIZE_16;
-    obj[1] = channel;
-    obj[2] = guild.id;
-    obj[3] = id;
-    return outer1_6(guild(onAction[27]).Avatar, obj, id.id);
-  });
+  obj12[3] = substr.map((id) => closure_1_6(guild(onAction[27]).Avatar, { size: guild(onAction[27]).AvatarSizes.SIZE_16, channel, guildId: guild.id, user: id }, id.id));
   obj10[3] = tmp13(guild(onAction[26]).AvatarPile, obj12);
   items2[3] = tmp13(guild(onAction[16]).PressableOpacity, obj10);
   obj[1] = items2;

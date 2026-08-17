@@ -1,15 +1,15 @@
 // discord_app/modules/forwarding/formatMessageForwards.tsx
-import getGuild from "getGuild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { resetCache } from "../../utils/DateUtils.tsx";
-import { isForwardMessage } from "isForwardMessage.tsx";
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import resetCache from "resetCache" /* 4063 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5026 */;
+import closure_3 from "getGuild" /* 8180 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 class MessageForward {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
@@ -19,32 +19,30 @@ class MessageForward {
     return obj;
   }
 }
-MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, markAllUserIdListsStale, arg3, arg4, maxSettingsForPreset) {
-  let parentMessage;
-  let snapshotIndex;
+MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closure_9, closure_7, arg3, arg4, maxSettingsForPreset) {
   let obj = arg0;
   if (arg0 === undefined) {
-    obj = ensureGuildLoaded;
+    obj = closure_4;
   }
   let tmp = closure_9;
   if (closure_9 === undefined) {
-    tmp = mergeGuildAvatar;
+    tmp = closure_8;
   }
-  let tmp2 = markAllUserIdListsStale;
-  if (markAllUserIdListsStale === undefined) {
-    tmp2 = markAllUserIdListsStale;
+  let tmp2 = closure_7;
+  if (closure_7 === undefined) {
+    tmp2 = closure_7;
   }
-  let obj1 = arg3;
+  obj1 = arg3;
   if (arg3 === undefined) {
-    obj1 = getUncachedChannelPermissions;
+    obj1 = closure_6;
   }
   let obj2 = arg4;
   if (arg4 === undefined) {
-    obj2 = createGuildRecordFromRust;
+    obj2 = closure_5;
   }
   let obj3 = maxSettingsForPreset;
   if (maxSettingsForPreset === undefined) {
-    obj3 = getGuild;
+    obj3 = closure_3;
   }
   ({ snapshotIndex, parentMessage } = this);
   let obj4 = resetCache;
@@ -75,7 +73,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           obj1[0] = guild.name;
           obj2 = { id: null, size: 16, icon: null, canAnimate: false };
           ({ id: obj22[0], icon: obj22[2] } = guild);
-          obj1[1] = getAvatarURL.getGuildIconURL(obj2);
+          obj1[1] = getAvatarURLDefault.getGuildIconURL(obj2);
           obj1[2] = result;
           const intl3 = tmp3(1236).intl;
           obj3 = { origin: null, timestamp: null };
@@ -83,7 +81,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
           obj3[1] = result;
           obj1[3] = intl3.formatToPlainString(tmp3(1236).t["+l04BN"], obj3);
           obj[1] = obj1;
-          const obj21 = getAvatarURL;
+          const obj21 = getAvatarURLDefault;
         }
         return obj;
       } else {
@@ -134,7 +132,7 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
       const obj11 = { originLabel: null, originIconUrl: null, timestampLabel: null, accessibilityLabel: null };
       obj11[0] = guild1.name;
       ({ id: obj18[0], icon: obj18[2] } = guild1);
-      obj11[1] = getAvatarURL.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
+      obj11[1] = getAvatarURLDefault.getGuildIconURL({ id: null, size: 16, icon: null, canAnimate: false });
       obj11[2] = result;
       const intl2 = tmp3(1236).intl;
       const obj13 = { origin: null, timestamp: null };
@@ -143,16 +141,16 @@ MessageForward.prototype["getForwardInfo"] = function getForwardInfo(arg0, closu
       obj11[3] = intl2.formatToPlainString(tmp3(1236).t["+l04BN"], obj13);
       obj10[1] = obj11;
       const obj12 = { id: null, size: 16, icon: null, canAnimate: false };
-      const obj17 = getAvatarURL;
+      const obj17 = getAvatarURLDefault;
     }
     return obj10;
   }
 };
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/forwarding/formatMessageForwards.tsx");
+let result = require("set").fileFinishedImporting("modules/forwarding/formatMessageForwards.tsx");
 
 export { MessageForward };
 export const maybeCreateSingleForwardForMessage = function maybeCreateSingleForwardForMessage(message) {
-  if (isForwardMessage(message)) {
+  if (isForwardMessageDefault(message)) {
     const first = message.messageSnapshots[0];
     if (null != first) {
       if (typeof MessageForward !== "function") {

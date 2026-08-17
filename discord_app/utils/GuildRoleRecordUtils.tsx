@@ -1,11 +1,11 @@
 // discord_app/utils/GuildRoleRecordUtils.tsx
-import isValueEqual from "isValueEqual";
-import { GuildRoleRecordTypeTag } from "GuildRoleRecordTypeTag";
-import { int2hslRaw } from "../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { extractColorStringsFromServerColors } from "../modules/premium/enhanced_role_colors/EnhancedRoleColorUtils.tsx";
+import set from "set" /* 2 */;
+import fromStringAll from "fromString" /* 506 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import GuildRoleRecordTypeTag2 from "GuildRoleRecordTypeTag" /* 1984 */;
+import extractColorStringsFromServerColors from "extractColorStringsFromServerColors" /* 1986 */;
+import isValueEqual from "isValueEqual" /* 1431 */;
 
-let c3;
-let c4;
 function fromServerArray(id, roles) {
   const obj = {};
   const iter = roles[Symbol.iterator]();
@@ -18,10 +18,7 @@ function fromServerArray(id, roles) {
   return obj;
 }
 function fromServer(guildId, id) {
-  let flags;
-  let managed;
-  const obj = { id: id.id, name: id.name, guildId, permissions: null, mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
-  obj[3] = importAll(506).deserialize(id.permissions);
+  const obj = { id: id.id, name: id.name, guildId, permissions: fromStringAll.deserialize(id.permissions), mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
   ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
   let int2hexResult = null;
   if (0 !== id.color) {
@@ -64,10 +61,7 @@ function fromServer(guildId, id) {
   return callback(GuildRoleRecordTypeTag, obj);
 }
 function fromSerialized(guildId, id) {
-  let flags;
-  let managed;
-  const obj = { id: id.id, name: id.name, guildId, permissions: null, mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
-  obj[3] = importAll(506).deserialize(id.permissions);
+  const obj = { id: id.id, name: id.name, guildId, permissions: fromStringAll.deserialize(id.permissions), mentionable: null, position: null, color: null, colorString: null, colors: null, colorStrings: null, hoist: null, managed: null, tags: null, icon: null, unicodeEmoji: null, flags: null, description: null, version: null };
   ({ mentionable: obj[4], position: obj[5], color: obj[6] } = id);
   let int2hexResult = null;
   if (null != id.color) {
@@ -113,7 +107,8 @@ function fromSerialized(guildId, id) {
   return callback(GuildRoleRecordTypeTag, obj);
 }
 ({ constructInPlace: c3, objectIsPlainRecordOfType: c4 } = isValueEqual);
-let result = require("fromString").fileFinishedImporting("utils/GuildRoleRecordUtils.tsx");
+const GuildRoleRecordTypeTag = GuildRoleRecordTypeTag2.GuildRoleRecordTypeTag;
+let result = set.fileFinishedImporting("utils/GuildRoleRecordUtils.tsx");
 
 export const isGuildRoleRecord = function isGuildRoleRecord(arg0) {
   return callback2(GuildRoleRecordTypeTag, arg0);

@@ -1,30 +1,22 @@
 // discord_app/modules/search/native/components/tabs/pages/messages/MediaScreen.tsx
-import importAllResult from "handleSensitiveMediaFilterPress";
-import initialize from "initialize";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleReaction from "handleReaction";
-import prototype from "prototype";
-import MessageEmbedTypes from "MessageEmbedTypes";
-import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME";
-import { MEDIA_MODAL_KEY } from "ME";
-import { jsx } from "AgeVerificationModalEntryPoint";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "initialize" /* 5268 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleReaction" /* 4971 */;
+import closure_7 from "prototype" /* 11510 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+import { EMPTY_MEDIA_RESULTS } from "SEARCH_TEXT_INPUT_DEBOUNCE_TIME" /* 11524 */;
+import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let c3 = importAllResult;
-({ SearchListItemTypes: metroImportAll, MEDIA_NUM_COLUMNS: c9, MEDIA_ITEM_GAP_WIDTH: c10, SearchMediaTypes: unpackModuleId } = MessageEmbedTypes);
+({ SearchListItemTypes: closure_8, MEDIA_NUM_COLUMNS: c9, MEDIA_ITEM_GAP_WIDTH: c10, SearchMediaTypes: unpackModuleId } = MessageEmbedTypes);
 let closure_15 = [];
 const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
-  let isFirstPageLoading;
-  let isFocused;
-  let isNextPageLoading;
-  let width;
   searchContext = searchContext.searchContext;
   const tab = searchContext.tab;
-  let dependencyMap;
+  dependencyMap = undefined;
   let searchMessages;
   let placeholderCount;
   let memo;
@@ -51,7 +43,7 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
         let id = null;
         if (isSpoilerChannelResult) {
           id = null;
-          if (!initialize.didAgree(channel.id)) {
+          if (!closure_4.didAgree(channel.id)) {
             id = channel.id;
           }
         }
@@ -60,7 +52,7 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
       found = mapped.filter((arg0) => null != arg0);
     }
     if (found == null) {
-      found = outer1_15;
+      found = closure_1_15;
     }
     return found;
   }, items1);
@@ -72,20 +64,20 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
   ({ isFirstPageLoading, isNextPageLoading } = searchMessagesLoadingState);
   memo = searchMessages.useMemo(() => {
     if (null != searchMessages) {
-      let media = searchContext(_undefined[14]).getMedia(searchContext, tmp);
-      const obj = searchContext(_undefined[14]);
+      let media = searchContext(11509).getMedia(searchContext, tmp);
+      const obj = searchContext(11509);
     } else {
-      media = outer1_12;
+      media = closure_1_12;
     }
     return media;
   }, items2);
   const items3 = [searchContext, tab];
   const callback = searchMessages.useCallback(() => {
-    const nextMessages = tab(_undefined[14]).fetchNextMessages(searchContext, tab, () => {
-      let obj = outer1_0(outer1_2[15]);
-      if (obj.isModalOpen(outer1_13)) {
+    const nextMessages = tab(11509).fetchNextMessages(searchContext, tab, () => {
+      let obj = closure_1_0(closure_1_2[15]);
+      if (obj.isModalOpen(closure_1_13)) {
         let tmpResult = tmp(tmp2[16]);
-        const messages = outer1_6.getMessages(tmpResult.getSearchTabFetchId(items, closure_1, outer1_7.getSearchResultsQuery(items)));
+        const messages = closure_1_6.getMessages(tmpResult.getSearchTabFetchId(items, closure_1, closure_1_7.getSearchResultsQuery(items)));
         if (null != messages) {
           tmpResult = tmp(tmp2[14]);
           const media = tmpResult.getMedia(tmp4, messages);
@@ -100,7 +92,7 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
           const result = tmp(tmp2[17]).setMediaViewerSources(obj);
           const tmpResult1 = tmp(tmp2[17]);
         }
-        const searchResultsQuery = outer1_7.getSearchResultsQuery(items);
+        const searchResultsQuery = closure_1_7.getSearchResultsQuery(items);
         tmp4 = items;
       }
     });
@@ -114,72 +106,72 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
     if (searchMessages != null) {
       found = searchMessages.find((id) => id.id === media.messageId);
     }
-    let obj = searchContext(_undefined[19]);
+    let obj = searchContext(14178);
     if (obj.shouldAgeVerifyForSearchMedia(media, found)) {
       obj = { entryPoint: null };
-      obj[0] = tmp2(tmp3[21]).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
-      const result = tab(tmp3[20]).showAgeVerificationGetStartedModal(obj);
-      const obj4 = tab(tmp3[20]);
+      obj[0] = tmp2(5254).AgeVerificationModalEntryPoint.SEARCH_MEDIA_PREVIEW;
+      const result = tab(5428).showAgeVerificationGetStartedModal(obj);
+      const obj4 = tab(5428);
     } else {
       obj = { searchContext: null, channelId: null, messageId: null, index: null };
       obj[0] = media;
       ({ channelId: obj3[1], messageId: obj3[2] } = media);
       obj[3] = arg1;
-      const result1 = tmp2(tmp3[22]).trackMessageItemPress(obj);
+      const result1 = tmp2(15916).trackMessageItemPress(obj);
       onPressMediaItem(media, media.originView);
-      const tmp2Result = tmp2(tmp3[22]);
+      const tmp2Result = tmp2(15916);
     }
   }, items4);
   const items5 = [callback1, memo, tmp2, placeholderCount];
   const memo1 = searchMessages.useMemo(() => {
     let items = [];
     const item = memo.forEach((media, itemIndex) => {
-      const items = itemIndex;
-      let obj = { type: outer2_8.MEDIA, props: null };
+      items = itemIndex;
+      let obj = { type: closure_2_8.MEDIA, props: null };
       obj = {
         media,
-        size: outer1_2,
+        size: closure_1_2,
         onPress(arg0) {
-          return outer1_7(arg0, closure_0);
+          return closure_1_7(arg0, closure_0);
         },
         containerStyle: null
       };
-      obj = { itemIndex, numItems: outer1_5.length, numColumns: outer2_9, spacing: outer2_10 - 2 };
+      obj = { itemIndex, numItems: closure_1_5.length, numColumns: closure_2_9, spacing: closure_2_10 - 2 };
       obj[3] = searchContext(table[14]).getMediaGridItemStyles(obj);
       obj[1] = obj;
       items.push(obj);
     });
     if (placeholderCount > 0) {
       let obj = { numColumns: null, numResults: null, placeholderCount: null };
-      obj[0] = outer1_9;
+      obj[0] = closure_1_9;
       obj[1] = items.length;
       obj[2] = tmp2;
-      const adjustedPlaceholderCount = searchContext(_undefined[23]).getAdjustedPlaceholderCount(obj);
+      const adjustedPlaceholderCount = searchContext(15920).getAdjustedPlaceholderCount(obj);
       for (let num = 0; num < adjustedPlaceholderCount; num = num + 1) {
         obj = { type: null, key: null, props: null };
-        let tmp3 = outer1_8;
-        obj[0] = outer1_8.MEDIA_PLACEHOLDER;
+        let tmp3 = closure_1_8;
+        obj[0] = closure_1_8.MEDIA_PLACEHOLDER;
         let _HermesInternal = HermesInternal;
         obj[1] = "media-placeholder-" + length + num;
         obj = { size: null, containerStyle: null };
-        let tmp4 = _undefined;
-        obj[0] = _undefined;
+        let tmp4 = dependencyMap;
+        obj[0] = dependencyMap;
         let tmp5 = searchContext;
-        let tmp6 = _undefined;
-        let obj3 = searchContext(_undefined[14]);
-        let obj1 = { itemIndex: null, numItems: null, numColumns: null, spacing: null };
+        let tmp6 = dependencyMap;
+        let obj3 = searchContext(11509);
+        obj1 = { itemIndex: null, numItems: null, numColumns: null, spacing: null };
         obj1[0] = length + num;
         let tmp7 = memo;
         obj1[1] = memo.length;
-        let tmp8 = outer1_9;
-        obj1[2] = outer1_9;
-        let tmp9 = outer1_10;
-        obj1[3] = outer1_10 - 2;
+        let tmp8 = closure_1_9;
+        obj1[2] = closure_1_9;
+        let tmp9 = closure_1_10;
+        obj1[3] = closure_1_10 - 2;
         obj[1] = obj3.getMediaGridItemStyles(obj1);
         obj[2] = obj;
         let arr = items.push(obj);
       }
-      const obj5 = searchContext(_undefined[23]);
+      const obj5 = searchContext(15920);
     }
     return items;
   }, items5);
@@ -191,6 +183,6 @@ const memoResult = importAllResult.memo(function MediaScreen(searchContext) {
   obj[8] = isNextPageLoading;
   return jsx(tab(15916), { data: memo1, searchContext, tab, isFocused, contentContainerStyle: contentContainerStyles.mediaContentContainer, ItemSeparatorComponent: null, numColumns: null, isFirstPageLoading: null, isNextPageLoading: null });
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MediaScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/messages/MediaScreen.tsx");
 
 export default memoResult;

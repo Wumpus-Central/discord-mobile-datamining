@@ -1,23 +1,23 @@
 // discord_app/modules/media_channel/MediaChannelActionCreators.tsx
-import set from "set";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchMediaPostEmbed() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
-      const dependencyMap = tmp3;
-      const obj1 = { type: "MEDIA_POST_EMBED_FETCH", threadId: null };
+      dependencyMap = tmp3;
+      obj1 = { type: "MEDIA_POST_EMBED_FETCH", threadId: null };
       obj1[1] = callback;
-      outer1_1(outer1_2[2]).dispatch(obj1);
-      let c4 = 1;
-      const HTTP = callback(outer1_2[3]).HTTP;
+      closure_1_1(closure_1_2[2]).dispatch(obj1);
+      c4 = 1;
+      const HTTP = callback(closure_1_2[3]).HTTP;
       const obj2 = { url: null, rejectWithError: true };
       obj2[0] = c4.MEDIA_POST_RESHARE_GET_PREVIEW(callback);
       yield HTTP.get(obj2);
@@ -27,7 +27,7 @@ function _fetchMediaPostEmbed() {
         const obj4 = { type: "MEDIA_POST_EMBED_FETCH_FAILURE", threadId: null };
         obj4[1] = callback;
         obj3.dispatch(obj4);
-        let c6 = 3;
+        c6 = 3;
       } else if (arg0 === 1) {
         c6 = 3;
         throw body;
@@ -44,7 +44,7 @@ function _fetchMediaPostEmbed() {
       return body;
     })();
   });
-  const _fetchMediaPostEmbed = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -56,10 +56,10 @@ function _fetchMediaPostEmbed() {
 function _unfurlEmbedUrl() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c6 === 2) {
         c6 = 3;
@@ -88,10 +88,10 @@ function _unfurlEmbedUrl() {
               return obj;
             } else {
               const table = tmp3;
-              let closure_1 = tmp7;
+              closure_1 = tmp7;
               let constants = 1;
-              const HTTP = callback(outer1_2[3]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
+              const HTTP = callback(closure_1_2[3]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = constants.UNFURL_EMBED_URLS;
               const obj2 = { urls: null };
               obj2[0] = callback;
@@ -104,7 +104,7 @@ function _unfurlEmbedUrl() {
             }
           } else if (1 === tmp7) {
             constants = 0;
-            callback = set;
+            callback = closure_3;
             const aPIError = new callback(table[4]).APIError(callback);
             throw aPIError;
           } else if (arg0 === 1) {
@@ -124,7 +124,7 @@ function _unfurlEmbedUrl() {
             return obj;
           }
         } catch (tmp19) {
-          set = tmp19;
+          closure_3 = tmp19;
           if (tmp4 === constants) {
             c6 = tmp2;
             throw tmp19;
@@ -135,7 +135,7 @@ function _unfurlEmbedUrl() {
       }
     })();
   });
-  const _unfurlEmbedUrl = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -144,10 +144,10 @@ function _unfurlEmbedUrl() {
   }
   return applyArgumentsResult;
 }
-const result = require("dispatcher").fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/media_channel/MediaChannelActionCreators.tsx");
 
 export const dismissMediaPostSharePrompt = function dismissMediaPostSharePrompt(threadId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "DISMISS_MEDIA_POST_SHARE_PROMPT", threadId };
   obj.dispatch(obj);
 };

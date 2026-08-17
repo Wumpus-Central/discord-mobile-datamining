@@ -1,14 +1,14 @@
 // discord_app/modules/collectibles/hooks/useProductDisableState.tsx
-import reset from "reset";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../../discord_common/js/shared/shared-constants/FractionalPremiumSKUs.tsx";
+import initialize from "initialize" /* 589 */;
+import set from "set" /* 679 */;
+import closure_2 from "reset" /* 4045 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useProductDisableState.tsx");
 
 export const useProductDisableState = function useProductDisableState(skuId) {
   let obj = initialize;
-  const items = [reset];
+  const items = [closure_2];
   const stateFromStores = obj.useStateFromStores(items, () => {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     let prop;

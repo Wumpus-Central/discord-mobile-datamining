@@ -1,5 +1,5 @@
 // discord_app/design/components/Tooltip/native/MeasurementUtils.native.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function retryMeasurements() {
   const self = this;
@@ -14,14 +14,14 @@ function retryMeasurements() {
 function _retryMeasurements() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let asyncGeneratorStep = arg2;
-    let closure_3 = arg3;
-    let closure_4 = arg4;
-    let c9 = 0;
-    let c10 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    closure_4 = arg4;
+    c9 = 0;
+    c10 = 0;
+    c8 = 0;
     const iter = (function*(arg0, arg1, arg2, arg3) {
       if (c10 === 2) {
         c10 = 3;
@@ -49,8 +49,8 @@ function _retryMeasurements() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_6 = tmp3;
-              let closure_5 = tmp7;
+              closure_6 = tmp3;
+              closure_5 = tmp7;
               let num10;
               if (num10 === undefined) {
                 num10 = 0;
@@ -66,7 +66,7 @@ function _retryMeasurements() {
               throw arg1;
             } else if (arg0 === 2) {
               c10 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else if (num10 > 3) {
@@ -75,13 +75,13 @@ function _retryMeasurements() {
               obj2[0] = callback2();
               return obj2;
             } else {
-              let c8 = 1;
+              c8 = 1;
               c9 = 3;
               c10 = 1;
               const obj3 = { value: null, done: false };
               obj3[0] = (function measure(closure_0) {
                 return new Promise((arg0, arg1) => {
-                  let closure_1 = arg1;
+                  closure_1 = arg1;
                   if (null == ref.current) {
                     return arg1();
                   } else {
@@ -97,7 +97,7 @@ function _retryMeasurements() {
             if (2 === tmp7) {
               c8 = 0;
               const _setTimeout2 = setTimeout;
-              const timerId = setTimeout(() => callback(closure_0, closure_1, asyncGeneratorStep, callback, num10 + 1), 500);
+              const timerId = setTimeout(() => callback(closure_0, closure_1, closure_2, callback, num10 + 1), 500);
               c10 = 3;
             } else if (arg0 === 1) {
               c10 = 3;
@@ -114,7 +114,7 @@ function _retryMeasurements() {
                 obj = callback(12);
                 if (!obj.isEqual(closure_5, closure_3)) {
                   const _setTimeout = setTimeout;
-                  const timerId1 = setTimeout(() => callback(closure_0, closure_1, asyncGeneratorStep, closure_5), 500);
+                  const timerId1 = setTimeout(() => callback(closure_0, closure_1, closure_2, closure_5), 500);
                   c8 = 0;
                 }
               }
@@ -126,7 +126,7 @@ function _retryMeasurements() {
             return obj5;
           }
         } catch (tmp32) {
-          let closure_7 = tmp32;
+          closure_7 = tmp32;
           if (tmp4 === c8) {
             c10 = tmp2;
             throw tmp32;
@@ -139,7 +139,7 @@ function _retryMeasurements() {
     iter.next();
     return iter;
   });
-  const _retryMeasurements = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -150,8 +150,8 @@ function _retryMeasurements() {
 }
 const result = require("set").fileFinishedImporting("design/components/Tooltip/native/MeasurementUtils.native.tsx");
 
-export const getMeasurements = function getMeasurements(outer1_1, closure_0) {
-  closure_0 = outer1_1;
+export const getMeasurements = function getMeasurements(closure_1_1, closure_0) {
+  closure_0 = closure_1_1;
   let flag = closure_0;
   if (closure_0 === undefined) {
     flag = false;
@@ -161,6 +161,6 @@ export const getMeasurements = function getMeasurements(outer1_1, closure_0) {
     if (flag) {
       obj = { x: 0, y: 0, width: 0, height: 0 };
     }
-    outer1_3(closure_0, arg0, arg1, obj);
+    closure_1_3(closure_0, arg0, arg1, obj);
   });
 };

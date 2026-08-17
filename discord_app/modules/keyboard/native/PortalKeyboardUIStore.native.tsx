@@ -1,12 +1,13 @@
 // discord_app/modules/keyboard/native/PortalKeyboardUIStore.native.tsx
-import { PortalKeyboardState } from "PortalKeyboard.tsx";
-const zustandStore = require("defaultStatesAreEqual").createZustandStore(() => ({ keyboard: null, state: PortalKeyboardState.PortalKeyboardState.EMPTY, renderers: [] }));
-const result = require("v1").fileFinishedImporting("modules/keyboard/native/PortalKeyboardUIStore.native.tsx");
+import set from "set" /* 2 */;
+import defaultStatesAreEqual from "defaultStatesAreEqual" /* 4241 */;
+import PortalKeyboardState from "PortalKeyboardState" /* 4243 */;
+
+const zustandStore = defaultStatesAreEqual.createZustandStore(() => ({ keyboard: null, state: PortalKeyboardState.PortalKeyboardState.EMPTY, renderers: [] }));
+const result = set.fileFinishedImporting("modules/keyboard/native/PortalKeyboardUIStore.native.tsx");
 
 export const PortalKeyboardUIStore = { getField: zustandStore.getField, useField: zustandStore.useField };
 export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForChannel(arg0) {
-  let keyboard;
-  let state;
   state = zustandStore.getState();
   ({ state, keyboard } = state);
   let channelId;
@@ -21,8 +22,6 @@ export const isPortalKeyboardOpenForChannel = function isPortalKeyboardOpenForCh
   return tmp3;
 };
 export const openPortalKeyboard = function openPortalKeyboard(type, closure_0, arg2) {
-  let keyboard;
-  let state;
   let obj = zustandStore;
   state = zustandStore.getState();
   ({ state, keyboard } = state);
@@ -55,7 +54,7 @@ export const openPortalKeyboard = function openPortalKeyboard(type, closure_0, a
   }
 };
 export const registerPortalKeyboardRenderer = function registerPortalKeyboardRenderer(id) {
-  let closure_0 = id;
+  closure_0 = id;
   zustandStore.setState((renderers) => {
     renderers = renderers.renderers;
     let tmp2 = renderers;
@@ -69,14 +68,14 @@ export const registerPortalKeyboardRenderer = function registerPortalKeyboardRen
     return tmp2;
   });
   return () => {
-    outer1_2.setState((renderers) => {
+    closure_1_2.setState((renderers) => {
       renderers = renderers.renderers;
       return { renderers: renderers.filter((arg0) => arg0 !== closure_0) };
     });
   };
 };
 export const handlePortalKeyboardOpen = function handlePortalKeyboardOpen(id) {
-  let closure_0 = id;
+  closure_0 = id;
   zustandStore.setState((keyboard) => {
     let tmp = keyboard;
     if (null != keyboard.keyboard) {
@@ -87,7 +86,7 @@ export const handlePortalKeyboardOpen = function handlePortalKeyboardOpen(id) {
         const merged = Object.assign(keyboard.keyboard);
         obj.handlerId = tmp2;
         obj[0] = obj;
-        obj[1] = id(outer1_1[1]).PortalKeyboardState.OPEN;
+        obj[1] = id(closure_1_1[1]).PortalKeyboardState.OPEN;
         tmp = obj;
       }
     }

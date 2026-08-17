@@ -1,17 +1,15 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { openCollectiblesShop } from "../CollectiblesActionCreators.tsx";
-import { getProductOrbPrice } from "../utils/CollectiblesProductUtils.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import openCollectiblesShop from "openCollectiblesShop" /* 5300 */;
+import getProductOrbPrice from "getProductOrbPrice" /* 5312 */;
+
 let c3 = "Shop Product Preview";
-const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/native/openProductDetailsActionSheet.tsx");
 
 export const PRODUCT_DETAILS_ACTION_SHEET_KEY = "Shop Product Preview";
 export const openProductDetailsActionSheet = function openProductDetailsActionSheet(arg0, stack) {
-  let analyticsLocations;
-  let initialVariantIndex;
-  let product;
-  let shopAnalyticsContext;
   ({ product, initialVariantIndex } = arg0);
   if (initialVariantIndex === undefined) {
     initialVariantIndex = 0;
@@ -35,16 +33,13 @@ export const openProductDetailsActionSheet = function openProductDetailsActionSh
   const tmp2 = dependencyMap;
   const tmpResult = openCollectiblesShop;
   obj = { product, initialVariantIndex: num, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9265, tmp2.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9265, tmp2.paths), c3, obj, stack);
 };
 export const openProductDetailsActionSheetForSku = function openProductDetailsActionSheetForSku(skuId, stack) {
-  let analyticsLocations;
-  let initialVariantIndex;
-  let shopAnalyticsContext;
   skuId = skuId.skuId;
   ({ initialVariantIndex, analyticsLocations, shopAnalyticsContext } = skuId);
   let obj = openCollectiblesShop;
   obj.productDetailsOpened(skuId);
   obj = { skuId, initialVariantIndex, analyticsLocations, shopAnalyticsContext };
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9265, dependencyMap.paths), c3, obj, stack);
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9265, dependencyMap.paths), c3, obj, stack);
 };

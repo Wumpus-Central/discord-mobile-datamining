@@ -1,19 +1,19 @@
 // discord_app/modules/hub/native/components/progress_bar/HubProgressHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import items from "items";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import items from "items" /* 11506 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
+noopAll;
 ({ HUB_PROGRESS_ACTION_SHEET_ID: c4, HUB_PROGRESS_NUM_TOTAL_STEPS: c5 } = items);
 createCacheKey = { container: { overflow: "hidden", height: require("GuildDirectoryCreate").GUILD_DIRECTORY_PROGRESS_BAR_HEIGHT, padding: 16 }, icon: { width: 48, height: 48 }, innerContainer: null };
-createCacheKey = { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { paddingVertical: 8, paddingLeft: 8, paddingRight: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[2] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("items").fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressHeader.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/hub/native/components/progress_bar/HubProgressHeader.tsx");
 
 export default function HubProgressHeader(guild) {
   guild = guild.guild;
@@ -22,10 +22,10 @@ export default function HubProgressHeader(guild) {
     flag = false;
   }
   let nextHubProgressStep;
-  let tmp = createCacheKey();
+  let tmp = callback();
   let obj = guild(nextHubProgressStep[7]);
   const hubProgressBarCompletedSteps = obj.useHubProgressBarCompletedSteps(guild);
-  let obj1 = guild(nextHubProgressStep[7]);
+  obj1 = guild(nextHubProgressStep[7]);
   nextHubProgressStep = obj1.getNextHubProgressStep(hubProgressBarCompletedSteps);
   if (null == nextHubProgressStep) {
     return null;
@@ -59,7 +59,7 @@ export default function HubProgressHeader(guild) {
         let obj = flag(nextHubProgressStep[11]);
         obj = { guild: null, analyticsSource: "Directory Channel Header" };
         obj[0] = guild;
-        obj.openLazy(guild(nextHubProgressStep[13])(nextHubProgressStep[12], nextHubProgressStep.paths), outer1_4, obj);
+        obj.openLazy(guild(nextHubProgressStep[13])(nextHubProgressStep[12], nextHubProgressStep.paths), closure_1_4, obj);
       }
     };
     obj1[3] = flag(tmp3[14]);

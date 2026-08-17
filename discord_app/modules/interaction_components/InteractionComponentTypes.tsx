@@ -1,5 +1,7 @@
 // discord_app/modules/interaction_components/InteractionComponentTypes.tsx
-const result = require("set").fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentTypes.tsx");
 
 export const ActionComponentState = { NORMAL: 0, [0]: "NORMAL", LOADING: 1, [1]: "LOADING", DISABLED: 2, [2]: "DISABLED" };
 export function asComponentId(componentId) {

@@ -1,25 +1,23 @@
 // discord_app/modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx
-import noop from "noop";
-import { View } from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useQuests } from "../hooks/QuestHooks.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useQuests from "useQuests" /* 10684 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function QuestRewardDetailsBottomSheet(quest) {
   quest = quest.quest;
   let memo;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const items = [quest.config];
-  memo = React.useMemo(() => quest(outer1_2[9]).isCollectibleQuestRewardPremiumExtendable(quest.config), items);
+  memo = React.useMemo(() => quest(closure_1_2[9]).isCollectibleQuestRewardPremiumExtendable(quest.config), items);
   const items1 = [quest, memo];
   const memo1 = React.useMemo(() => {
-    const type = quest(outer1_2[9]).getQuestPrimaryReward(quest).type;
-    if (quest(outer1_2[10]).QuestRewardTypes.COLLECTIBLE === type) {
+    const type = quest(closure_1_2[9]).getQuestPrimaryReward(quest).type;
+    if (quest(closure_1_2[10]).QuestRewardTypes.COLLECTIBLE === type) {
       const intl2 = tmp(tmp2[11]).intl;
       const t = tmp(tmp2[11]).t;
       return intl2.string(memo ? t["66YyBJ"] : t.ABD2CN);
@@ -29,22 +27,17 @@ function QuestRewardDetailsBottomSheet(quest) {
     } else {
       return null;
     }
-    const obj = quest(outer1_2[9]);
+    const obj = quest(closure_1_2[9]);
   }, items1);
   let obj = quest(589);
-  const items2 = [mergeGuildAvatar];
+  const items2 = [closure_5];
   const stateFromStores = obj.useStateFromStores(items2, () => currentUser.getCurrentUser());
-  let obj1 = quest(10491);
+  obj1 = quest(10491);
   const defaultRewardName = obj1.getDefaultRewardName(quest.config, stateFromStores);
-  obj = { direction: "vertical", spacing: null, style: null, children: null };
-  obj[1] = memo(712).space.PX_16;
-  obj[2] = tmp.wrapper;
-  obj = { align: "center", direction: "horizontal", spacing: null, children: null };
-  obj[2] = memo(712).space.PX_16;
+  obj = { direction: "vertical", spacing: memo(712).space.PX_16, style: tmp.wrapper, children: null };
+  obj = { align: "center", direction: "horizontal", spacing: memo(712).space.PX_16, children: null };
   const items3 = [callback(memo(10950), { quest, height: 56, width: 56, withAnimation: true }), ];
-  obj1 = { direction: "vertical", spacing: null, style: null, children: null };
-  obj1[1] = memo(712).space.PX_4;
-  obj1[2] = tmp.rewardDetailsCopy;
+  obj1 = { direction: "vertical", spacing: memo(712).space.PX_4, style: tmp.rewardDetailsCopy, children: null };
   const obj2 = { variant: "eyebrow", color: "text-subtle", children: null };
   let intl = quest(1236).intl;
   obj2[2] = intl.string(quest(1236).t["jyYgZ+"]);
@@ -69,15 +62,15 @@ function QuestRewardDetailsBottomSheet(quest) {
   obj[3] = items5;
   return callback(quest(6950).BottomSheet, { startExpanded: true, children: callback2(quest(4733).Stack, obj) });
 }
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 createCacheKey = { wrapper: null, rewardDetailsCopy: null, separator: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexShrink: 1 };
-createCacheKey[2] = { height: 1, backgroundColor: require("Themes").colors.BORDER_STRONG };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { height: 1, backgroundColor: require("Themes").colors.BORDER_STRONG };
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx");
+createCacheKey[2] = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_STRONG };
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestRewardDetailsBottomSheet.native.tsx");
 
 export default function QuestRewardDetailsBottomSheetConnected(questId) {
   const callback = React.useCallback(() => {

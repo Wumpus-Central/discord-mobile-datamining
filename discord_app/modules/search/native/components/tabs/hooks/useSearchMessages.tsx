@@ -1,18 +1,18 @@
 // discord_app/modules/search/native/components/tabs/hooks/useSearchMessages.tsx
-import handleReaction from "handleReaction";
-import prototype from "prototype";
+import closure_2 from "handleReaction" /* 4971 */;
+import closure_3 from "prototype" /* 11510 */;
 import { initialize } from "../../../../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/hooks/useSearchMessages.tsx");
 
 export const useSearchMessages = function useSearchMessages(searchContext, tab) {
   const _require = searchContext;
-  const dependencyMap = tab;
-  const items = [prototype, handleReaction];
+  dependencyMap = tab;
+  const items = [closure_3, closure_2];
   const items1 = [searchContext, tab];
   return _initialize.useStateFromStores(items, () => {
-    const searchResultsQuery = outer1_3.getSearchResultsQuery(searchContext);
-    return outer1_2.getMessages(searchContext(tab[3]).getSearchTabFetchId(searchContext, tab, searchResultsQuery));
+    const searchResultsQuery = closure_1_3.getSearchResultsQuery(searchContext);
+    return closure_1_2.getMessages(searchContext(tab[3]).getSearchTabFetchId(searchContext, tab, searchResultsQuery));
   }, items1);
 };

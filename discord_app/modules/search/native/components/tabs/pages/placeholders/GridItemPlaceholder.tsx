@@ -1,23 +1,21 @@
 // discord_app/modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 let obj = { imageContainer: null };
-obj = { flex: 1, borderRadius: require("Themes").radii.xs, overflow: "hidden", backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+obj = { flex: 1, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 obj[0] = obj;
 let closure_2 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((arg0) => {
-  let height;
-  let style;
-  let width;
+const memoResult = importAllResult.memo((arg0) => {
   ({ width, height, style } = arg0);
   const obj = { style: null };
   const items = [{ width, height }, callback().imageContainer, style];
   obj[0] = items;
   return <View style={null} />;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/components/tabs/pages/placeholders/GridItemPlaceholder.tsx");
 
 export default memoResult;

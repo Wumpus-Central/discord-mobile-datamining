@@ -1,11 +1,12 @@
 // discord_app/modules/app_launcher/native/AppLauncherButtonIcon.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
+import noopAll from "noop" /* 19 */;
+import KeyboardTypes from "KeyboardTypes" /* 1627 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherButtonIcon.tsx");
 
 export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
   style = style.style;
@@ -22,7 +23,7 @@ export const AppLauncherButtonIcon = function AppLauncherButtonIcon(style) {
     obj.style = items;
     let tmp4Result = tmp4(tmp6(9975).PlusLargeIcon, obj);
   } else {
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = style;
     const merged2 = Object.assign(merged);
     tmp4Result = tmp4(tmp6(7974).AppsIcon, obj1);

@@ -1,17 +1,16 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsStore.tsx
-import initialize from "initialize";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import shouldShowOnboarding from "shouldShowOnboarding";
-import { GuildOnboardingStatus } from "shouldShowOnboarding";
-import { GuildOnboardingMode } from "serverPromptToClientPrompt";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { set } from "../../utils/Durations.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "initialize" /* 1982 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "shouldShowOnboarding" /* 6784 */;
+import { GuildOnboardingStatus } from "shouldShowOnboarding" /* 6784 */;
+import { GuildOnboardingMode } from "serverPromptToClientPrompt" /* 5286 */;
 
 const require = arg1;
 function handleUpdate(arg0) {
-  let guildId;
-  let updates;
   ({ guildId, updates } = arg0);
   let prop = updates.onboardingPromptsSeen;
   if (prop == null) {
@@ -61,7 +60,7 @@ function handleUpdate(arg0) {
         if (tmp4) {
           flag3 = true;
         }
-        let obj = {};
+        obj = {};
         let tmp6 = obj;
         let tmp7 = tmp3;
         let merged = Object.assign(tmp3);
@@ -92,11 +91,12 @@ let closure_12 = [];
 let closure_13 = [];
 let closure_14 = [];
 let closure_15 = [];
+const Store = initializeDefault.Store;
 class GuildOnboardingPromptsStore extends Store {
 }
 const prototype = GuildOnboardingPromptsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, shouldShowOnboarding, initialize);
+  this.waitFor(closure_4, closure_5, closure_3);
 };
 prototype["getOnboardingPromptsForOnboarding"] = function getOnboardingPromptsForOnboarding(guildId) {
   let onboardingPrompts;
@@ -119,8 +119,8 @@ prototype["getOnboardingPrompts"] = function getOnboardingPrompts(guildId) {
   return prompts;
 };
 prototype["getOnboardingResponses"] = function getOnboardingResponses(closure_0) {
-  if (initialize.isFullServerPreview(closure_0)) {
-    let onboardingResponses = initialize.getOnboardingResponses(closure_0);
+  if (closure_3.isFullServerPreview(closure_0)) {
+    let onboardingResponses = closure_3.getOnboardingResponses(closure_0);
     if (onboardingResponses == null) {
       onboardingResponses = closure_13;
     }
@@ -143,7 +143,7 @@ prototype["getSelectedOptions"] = function getSelectedOptions(guildId) {
   return mapped.flat().filter((id) => closure_0.includes(id.id));
 };
 prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesForPrompt(guildId, id) {
-  let closure_0 = id;
+  closure_0 = id;
   if (null == dependencyMap[guildId]) {
     return closure_13;
   } else {
@@ -155,14 +155,14 @@ prototype["getOnboardingResponsesForPrompt"] = function getOnboardingResponsesFo
       const self = this;
       const options = found.options;
       const mapped = options.map((id) => id.id);
-      intersectionResult = apply.intersection(mapped, this.getOnboardingResponses(guildId));
-      const obj = apply;
+      intersectionResult = applyDefault.intersection(mapped, this.getOnboardingResponses(guildId));
+      const obj = applyDefault;
     }
     return intersectionResult;
   }
 };
 prototype["getEnabledOnboardingPrompts"] = function getEnabledOnboardingPrompts(closure_0) {
-  if (initialize.isFullServerPreview(closure_0)) {
+  if (closure_3.isFullServerPreview(closure_0)) {
     let prompts;
     if (tmp != null) {
       prompts = tmp.prompts;
@@ -196,7 +196,7 @@ prototype["getDefaultChannelIds"] = function getDefaultChannelIds(closure_0) {
   return defaultChannelIds;
 };
 prototype["getEnabled"] = function getEnabled(closure_0) {
-  if (initialize.isFullServerPreview(closure_0)) {
+  if (closure_3.isFullServerPreview(closure_0)) {
     let flag = null != tmp;
   } else {
     flag = undefined;
@@ -210,7 +210,7 @@ prototype["getEnabled"] = function getEnabled(closure_0) {
   return flag;
 };
 prototype["getOnboardingPrompt"] = function getOnboardingPrompt(closure_1) {
-  let closure_0 = closure_1;
+  closure_0 = closure_1;
   const values = Object.values(closure_8);
   const mapped = values.map((prompts) => prompts.prompts);
   return mapped.flat().find((id) => id.id === closure_0);
@@ -221,7 +221,7 @@ prototype["isLoading"] = function isLoading() {
 prototype["shouldFetchPrompts"] = function shouldFetchPrompts(arg0) {
   let HOUR = arg1;
   if (arg1 === undefined) {
-    HOUR = set.Millis.HOUR;
+    HOUR = setDefault.Millis.HOUR;
   }
   if (c11) {
     return false;
@@ -239,7 +239,7 @@ prototype["getPendingResponseOptions"] = function getPendingResponseOptions(clos
 };
 prototype["ackIdForGuild"] = function ackIdForGuild(closure_0) {
   const enabledOnboardingPrompts = this.getEnabledOnboardingPrompts(closure_0);
-  let c0 = "0";
+  c0 = "0";
   let item = enabledOnboardingPrompts.forEach((options) => {
     options = options.options;
     const item = options.forEach((id) => {
@@ -303,10 +303,10 @@ prototype["getOnboardingConnections"] = function getOnboardingConnections(guildI
   }
 };
 GuildOnboardingPromptsStore.displayName = "GuildOnboardingPromptsStore";
-const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dispatcher"), {
+const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let c11 = false;
-    let closure_8 = {};
+    c11 = false;
+    closure_8 = {};
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
     guild = guild.guild;
@@ -315,22 +315,12 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
     delete tmp2[tmp];
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_START: function handleStart() {
-    let c11 = true;
+    c11 = true;
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: function handleSuccess(guildId) {
-    let additionalConnections;
-    let belowRequirements;
-    let connections;
-    let defaultChannelIds;
-    let enabled;
-    let mode;
-    let onboardingPromptsSeen;
-    let onboardingResponsesSeen;
-    let prompts;
-    let responses;
     guildId = guildId.guildId;
     ({ prompts, defaultChannelIds, responses, onboardingPromptsSeen, onboardingResponsesSeen, connections, additionalConnections } = guildId);
-    let c11 = false;
+    c11 = false;
     ({ enabled, mode, belowRequirements } = guildId);
     const tmp = onboardingStatus.getOnboardingStatus(guildId) === GuildOnboardingStatus.READY;
     guildId = onboardingPromptsSeen;
@@ -349,7 +339,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
           if (tmp4) {
             flag3 = true;
           }
-          let obj = {};
+          obj = {};
           let tmp6 = obj;
           let tmp7 = tmp3;
           let merged = Object.assign(tmp3);
@@ -406,13 +396,13 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
         const keys = Object.keys(tmp3[guildId]);
         const item = keys.forEach((arg0) => {
           if (!options_seen.includes(arg0)) {
-            if (outer1_9[prompts_seen][arg0]) {
+            if (closure_1_9[prompts_seen][arg0]) {
               obj[arg0] = true;
             }
           }
           let hasItem = obj.includes(arg0);
           if (hasItem) {
-            hasItem = false === outer1_9[prompts_seen][arg0];
+            hasItem = false === closure_1_9[prompts_seen][arg0];
           }
           if (hasItem) {
             obj[arg0] = false;
@@ -446,15 +436,12 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
     closure_10[guildId] = Date.now();
   },
   GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function handleFailure() {
-    let c11 = false;
+    c11 = false;
   },
   GUILD_ONBOARDING_SELECT_OPTION: function handleOptionSelect(guildId) {
-    let optionId;
-    let removedOptionIds;
-    let selected;
     guildId = guildId.guildId;
     ({ optionId, selected, removedOptionIds } = guildId);
-    let isFullServerPreviewResult = initialize.isFullServerPreview(guildId);
+    let isFullServerPreviewResult = closure_3.isFullServerPreview(guildId);
     if (!isFullServerPreviewResult) {
       let flag = null != dependencyMap[guildId];
       if (flag) {
@@ -463,15 +450,15 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
           tmp4 = removedOptionIds.length > 0;
         }
         if (tmp4) {
-          let obj = apply;
+          let obj = applyDefault;
           obj.pullAll(dependencyMap[guildId].responses, removedOptionIds);
         }
         if (selected) {
           const responses = dependencyMap[guildId].responses;
           responses.push(optionId);
         } else {
-          apply.pull(dependencyMap[guildId].responses, optionId);
-          const obj2 = apply;
+          applyDefault.pull(dependencyMap[guildId].responses, optionId);
+          const obj2 = applyDefault;
         }
         if (null == dependencyMap2[guildId]) {
           tmp15[guildId] = {};
@@ -479,7 +466,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
         dependencyMap2[guildId][optionId] = selected;
         if (null != removedOptionIds) {
           const item = removedOptionIds.forEach((arg0) => {
-            outer1_9[guildId][arg0] = false;
+            closure_1_9[guildId][arg0] = false;
             return false;
           });
         }
@@ -493,10 +480,6 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
     return isFullServerPreviewResult;
   },
   GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function handleUpdateResponsesSuccess(arg0) {
-    let guildId;
-    let options;
-    let options_seen;
-    let prompts_seen;
     ({ guildId, options, prompts_seen, options_seen } = arg0);
     prompts_seen = guildId;
     options_seen = options;
@@ -508,13 +491,13 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
       const keys = Object.keys(tmp[guildId]);
       const item = keys.forEach((arg0) => {
         if (!options_seen.includes(arg0)) {
-          if (outer1_9[prompts_seen][arg0]) {
+          if (closure_1_9[prompts_seen][arg0]) {
             obj[arg0] = true;
           }
         }
         let hasItem = obj.includes(arg0);
         if (hasItem) {
-          hasItem = false === outer1_9[prompts_seen][arg0];
+          hasItem = false === closure_1_9[prompts_seen][arg0];
         }
         if (hasItem) {
           obj[arg0] = false;
@@ -562,7 +545,7 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
             if (tmp4) {
               flag3 = true;
             }
-            let obj = {};
+            obj = {};
             let tmp6 = obj;
             let tmp7 = tmp3;
             let merged = Object.assign(tmp3);
@@ -615,6 +598,6 @@ const guildOnboardingPromptsStore = new GuildOnboardingPromptsStore(require("dis
     }
   }
 });
-const result = require("shouldShowOnboarding").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/GuildOnboardingPromptsStore.tsx");
 
 export default guildOnboardingPromptsStore;

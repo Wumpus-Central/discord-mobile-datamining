@@ -1,18 +1,18 @@
 // discord_app/modules/activities/confirmActivityChangeAlert.tsx
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { computeChannelName } from "../channel/useChannelName.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setDefault from "set" /* 4827 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("computeChannelName").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/activities/confirmActivityChangeAlert.tsx");
 
 export default function confirmActivityChangeModal(name, channel) {
   let str = "";
   if (null != channel) {
     let obj = computeChannelName;
-    str = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+    str = obj.computeChannelName(channel, closure_4, closure_3);
   }
   obj = { title: null, cancelText: null, confirmText: null, onConfirm: null, onCancel: null, body: null };
   const intl = getSystemLocale.intl;
@@ -33,7 +33,7 @@ export default function confirmActivityChangeModal(name, channel) {
     name = intl5.string(tmp6(1236).t.G99XFs);
   }
   obj = { currentApplicationName: name, currentApplicationChannelName: null };
-  const obj2 = set;
+  const obj2 = setDefault;
   if (tmp6Result.isNullOrEmpty(str)) {
     const intl6 = tmp6(1236).intl;
     str = intl6.string(tmp6(1236).t.OGUjmt);

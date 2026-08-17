@@ -1,14 +1,10 @@
 // discord_app/design/components/SegmentedControl/native/SegmentedControl.native.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -16,10 +12,10 @@ let c8 = 0.04;
 let closure_9 = { mass: 0.3, damping: 13, stiffness: 100, restDisplacementThreshold: 0.001, overshootClamping: true };
 let closure_10 = createCacheKey.createStyles((borderRadius, paddingVertical) => {
   let obj = { scrollContentContainer: { flexGrow: 1 }, controlsContainer: null, indicatorContainer: null, indicator: null };
-  obj = { backgroundColor: Themes.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
+  obj = { backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_BACKGROUND, borderRadius: borderRadius + paddingVertical, paddingVertical, display: "flex", flexDirection: "row", alignItems: "center" };
   obj[1] = obj;
   obj[2] = { position: "absolute", width: "100%", height: "100%", borderRadius, flexDirection: "row" };
-  obj = { flex: 1, backgroundColor: Themes.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
+  obj = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_SEGMENTED_CONTROL_INDICATOR_BACKGROUND, borderRadius };
   obj[3] = obj;
   return obj;
 });
@@ -31,7 +27,7 @@ let closure_15 = { code: "function SegmentedControlNativeTsx5(){const{indicatorT
 let closure_16 = { code: "function onPanGestureUpdate_SegmentedControlNativeTsx6(event){const{indicatorWidth,panIndex,activeIndex,itemCount}=this.__closure;const progess=event.translationX/indicatorWidth.get();const index=panIndex.get()+progess;activeIndex.set(Math.min(Math.max(index,0),itemCount-1));}" };
 let closure_17 = { code: "function SegmentedControlNativeTsx7(){const{panIndex,activeIndex,runOnJS,setActiveIndex}=this.__closure;panIndex.set(-1);activeIndex.set(Math.round(activeIndex.get()));runOnJS(setActiveIndex)(activeIndex.get());}" };
 let closure_18 = { code: "function SegmentedControlNativeTsx8(){const{panIndex,activeIndex}=this.__closure;panIndex.set(activeIndex.get());}" };
-let result = require("jsxProd").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/SegmentedControl/native/SegmentedControl.native.tsx");
 
 export const SegmentedControl = function SegmentedControl(keyboardShouldPersistTaps) {
   const state = keyboardShouldPersistTaps.state;
@@ -46,7 +42,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   let setActiveIndex;
   let callback;
   let num;
-  let c9;
+  closure_9 = undefined;
   let length;
   let sharedValue;
   let sharedValue1;
@@ -68,9 +64,9 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   }
   let obj = state(activeIndex[5]);
   const tmp4 = length(obj.useToken(str(activeIndex[4]).modules.mobile.SEGMENTED_CONTROL_BORDER_RADIUS), num);
-  c9 = tmp4;
+  closure_9 = tmp4;
   length = items.length;
-  let obj1 = state(activeIndex[6]);
+  obj1 = state(activeIndex[6]);
   sharedValue = obj1.useSharedValue(-1);
   let obj2 = state(activeIndex[6]);
   sharedValue1 = obj2.useSharedValue(0);
@@ -79,7 +75,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   let obj4 = state(activeIndex[6]);
   class T {
     constructor() {
-      return c12.get();
+      return closure_12.get();
     }
   }
   T.__closure = { indicatorWidth: sharedValue1 };
@@ -88,8 +84,8 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   class R {
     constructor(arg0, arg1) {
       if (null != arg1) {
-        tmp = c13;
-        result = c13.set(arg1);
+        tmp = closure_13;
+        result = closure_13.set(arg1);
       }
       return;
     }
@@ -116,9 +112,9 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   const obj7 = state(activeIndex[6]);
   class G {
     constructor() {
-      value = c16.get();
-      diff = value - c15.get();
-      return diff * c12.get();
+      value = closure_16.get();
+      diff = value - closure_15.get();
+      return diff * closure_12.get();
     }
   }
   G.__closure = { clampedActiveIndex: derivedValue, defaultActiveIndex: sharedValue3, indicatorWidth: sharedValue1 };
@@ -128,7 +124,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   let obj8 = state(activeIndex[6]);
   class B {
     constructor() {
-      value = c17.get();
+      value = closure_17.get();
       obj = pressedIndex;
       num = 1;
       if (pressedIndex.get() < 0) {
@@ -140,9 +136,9 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
           str = "clamp";
           tmp13 = obj4;
           interpolateResult = obj4.interpolate(obj3.get(), [-50, 0], [0.9, 1], "clamp");
-          tmp15 = c12;
+          tmp15 = closure_12;
           num5 = 2;
-          sum = value + -c12.get() * (1 - interpolateResult) / 2;
+          sum = value + -closure_12.get() * (1 - interpolateResult) / 2;
           num = interpolateResult;
         } else {
           sum = value;
@@ -153,14 +149,14 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
             str2 = "clamp";
             tmp33 = obj13;
             interpolateResult1 = obj13.interpolate(obj3.get(), [50, 0], [0.9, 1], "clamp");
-            tmp35 = c12;
+            tmp35 = closure_12;
             num6 = 2;
-            sum = value + c12.get() * (1 - interpolateResult1) / 2;
+            sum = value + closure_12.get() * (1 - interpolateResult1) / 2;
             num = interpolateResult1;
           }
         }
-        obj5 = c16;
-        if (0 === c16.get()) {
+        obj5 = closure_16;
+        if (0 === closure_16.get()) {
           tmp20 = c8;
           sum1 = sum + c8;
         } else {
@@ -171,10 +167,10 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
             sum1 = sum - c8;
           }
         }
-        obj6 = c12;
-        obj7 = c13;
-        value1 = c12.get();
-        tmp22 = value1 === c13.get();
+        obj6 = closure_12;
+        obj7 = closure_13;
+        value1 = closure_12.get();
+        tmp22 = value1 === closure_13.get();
         if (!tmp22) {
           result = obj7.set(obj6.get());
         }
@@ -183,8 +179,8 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
           tmp25 = state;
           tmp26 = activeIndex;
           obj8 = state(activeIndex[7]);
-          tmp27 = useToken;
-          withSpringResult = obj8.withSpring(sum1, useToken);
+          tmp27 = closure_9;
+          withSpringResult = obj8.withSpring(sum1, closure_9);
         }
         obj = { transform: null };
         obj1 = { translateX: null };
@@ -195,20 +191,20 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
         tmp28 = state;
         tmp29 = activeIndex;
         obj12 = state(activeIndex[7]);
-        tmp30 = useToken;
-        obj2[0] = obj12.withSpring(num, useToken);
+        tmp30 = closure_9;
+        obj2[0] = obj12.withSpring(num, closure_9);
         items[1] = obj2;
         obj[0] = items;
         return obj;
       } else {
-        obj2 = c16;
+        obj2 = closure_16;
         value2 = obj.get();
-        if (value2 < c16.get()) {
+        if (value2 < closure_16.get()) {
           tmp7 = c8;
           num2 = 1 + c8;
-          tmp8 = c12;
+          tmp8 = closure_12;
           num4 = 0.02;
-          diff = value - 0.02 * c12.get();
+          diff = value - 0.02 * closure_12.get();
         } else {
           value3 = obj.get();
           num2 = 1;
@@ -216,9 +212,9 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
           if (value3 > obj2.get()) {
             tmp5 = c8;
             num2 = 1 + c8;
-            tmp6 = c12;
+            tmp6 = closure_12;
             num3 = 0.02;
-            diff = value + 0.02 * c12.get();
+            diff = value + 0.02 * closure_12.get();
           }
         }
         tmp9 = num2;
@@ -227,7 +223,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
       return;
     }
   }
-  obj = { indicatorTranslateX: derivedValue1, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT: num, indicatorWidth: sharedValue1, scrollOverflow, interpolate: state(activeIndex[6]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: 0.9, segmentSpacing: num, itemCount: length, previousIndicatorWidth: sharedValue2, withSpring: state(activeIndex[7]).withSpring, SELECTED_INDICATOR_SPRING: c9 };
+  obj = { indicatorTranslateX: derivedValue1, pressedIndex, clampedActiveIndex: derivedValue, PRESSED_TRANSLATE_AMOUNT: num, indicatorWidth: sharedValue1, scrollOverflow, interpolate: state(activeIndex[6]).interpolate, SCROLL_OVERFLOW_UPPER_BOUND: 50, SCROLL_OVERFLOW_MAX_SCALE: 0.9, segmentSpacing: num, itemCount: length, previousIndicatorWidth: sharedValue2, withSpring: state(activeIndex[7]).withSpring, SELECTED_INDICATOR_SPRING: closure_9 };
   B.__closure = obj;
   B.__workletHash = 5537358752627;
   B.__initData = sharedValue3;
@@ -241,7 +237,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
       onLayout = closure_14;
     }
     const style = [indicator.indicator, tmp ? closure_18 : { opacity: 0 }];
-    return outer1_6(outer1_1(outer1_2[6]).View, { onLayout, style }, id.id);
+    return closure_1_6(closure_1_1(closure_1_2[6]).View, { onLayout, style }, id.id);
   }), items2);
   function onPanGestureUpdate(translationX) {
     const result = translationX.translationX / sharedValue1.get();
@@ -251,10 +247,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   onPanGestureUpdate.__workletHash = 4853281820821;
   onPanGestureUpdate.__initData = derivedValue;
   const memo1 = scrollOverflow.useMemo(() => items.map((arg0, index) => {
-    let icon;
-    let id;
-    let label;
-    let closure_0 = index;
+    closure_0 = index;
     ({ label, id, icon } = arg0);
     if (0 === index) {
       let tmp3 = closure_8;
@@ -274,10 +267,10 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
       state: closure_0,
       pressed: closure_5,
       onPress() {
-        outer1_6(closure_0);
+        closure_1_6(closure_0);
       },
       onPressIn() {
-        const result = outer1_5.set(closure_0);
+        const result = closure_1_5.set(closure_0);
       },
       onPressOut() {
         const result = closure_5.set(-1);
@@ -292,13 +285,13 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
     }
     obj[9] = tmp9;
     obj[10] = closure_1;
-    return outer1_6(outer1_0(outer1_2[8]).SegmentedControlItem, obj, id);
+    return closure_1_6(closure_1_0(closure_1_2[8]).SegmentedControlItem, obj, id);
   }), items3);
   const Gesture = state(activeIndex[9]).Gesture;
   const obj9 = state(activeIndex[6]);
   class J {
     constructor() {
-      result = c11.set(activeIndex.get());
+      result = closure_11.set(activeIndex.get());
       return;
     }
   }
@@ -309,7 +302,7 @@ export const SegmentedControl = function SegmentedControl(keyboardShouldPersistT
   const onStartResult = Gesture.Pan().onStart(J);
   class H {
     constructor() {
-      result = c11.set(-1);
+      result = closure_11.set(-1);
       result1 = activeIndex.set(Math.round(activeIndex.get()));
       obj = state(activeIndex[6]);
       runOnJSResult = obj.runOnJS(setActiveIndex);

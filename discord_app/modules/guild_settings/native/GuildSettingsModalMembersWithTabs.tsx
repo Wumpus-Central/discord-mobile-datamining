@@ -1,27 +1,26 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "showMembersManagementActionSheet";
-import { View } from "useNavigation";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
 const require = arg1;
 let c4 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { container: null, content: null, tabContainer: null };
-obj = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+obj = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[0] = obj;
 obj[1] = { flex: 1 };
 obj[2] = { marginTop: 12, minHeight: 32 };
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
-  let closure_1;
+  closure_1 = undefined;
   let num;
   let stateFromStores;
   let stateFromStores1;
@@ -32,7 +31,7 @@ const memoResult = importAllResult.memo((guildId) => {
   let obj = stateFromStores1;
   let tmp = stateFromStores(stateFromStores1.useState(0), 2);
   closure_1 = tmp[1];
-  let obj1 = guildId(num[9]);
+  obj1 = guildId(num[9]);
   num = obj1.useSubmittedGuildJoinRequestTotal({ guildId });
   if (num == null) {
     num = 0;
@@ -60,7 +59,7 @@ const memoResult = importAllResult.memo((guildId) => {
     obj[0] = intl.string(guildId(num[12]).t.NOOm1Z);
     obj[1] = guildId(num[13]).MemberSafetyPageTab.ALL_MEMBERS;
     obj = { guildId };
-    obj[2] = outer1_9(callback(num[14]), obj);
+    obj[2] = closure_1_9(callback(num[14]), obj);
     const items = [obj, , , ];
     obj = { label: null, id: null, count: null, page: null };
     const intl2 = guildId(num[12]).intl;
@@ -71,10 +70,10 @@ const memoResult = importAllResult.memo((guildId) => {
       tmp6 = num;
     }
     obj[2] = tmp6;
-    const obj1 = { guildId, applicationStatus: null };
+    obj1 = { guildId, applicationStatus: null };
     let tmp4Result = tmp4(tmp2[15]);
     obj1[1] = guildId(num[16]).GuildJoinRequestApplicationStatuses.SUBMITTED;
-    obj[3] = outer1_9(tmp4Result, obj1);
+    obj[3] = closure_1_9(tmp4Result, obj1);
     items[1] = obj;
     const obj2 = { label: null, id: null, page: null };
     const intl3 = tmp(tmp2[12]).intl;
@@ -83,15 +82,14 @@ const memoResult = importAllResult.memo((guildId) => {
     const obj3 = { guildId, applicationStatus: null };
     tmp4Result = tmp4(tmp2[15]);
     obj3[1] = guildId(num[16]).GuildJoinRequestApplicationStatuses.REJECTED;
-    obj2[2] = outer1_9(tmp4Result, obj3);
+    obj2[2] = closure_1_9(tmp4Result, obj3);
     items[2] = obj2;
     const obj4 = { label: null, id: null, page: null };
     const intl4 = tmp(tmp2[12]).intl;
     obj4[0] = intl4.string(guildId(num[12]).t.aURgY2);
     obj4[1] = guildId(num[13]).MemberSafetyPageTab.APPROVED;
-    const obj5 = { guildId, applicationStatus: null };
-    obj5[1] = guildId(num[16]).GuildJoinRequestApplicationStatuses.APPROVED;
-    obj4[2] = outer1_9(callback(num[15]), obj5);
+    const obj5 = { guildId, applicationStatus: guildId(num[16]).GuildJoinRequestApplicationStatuses.APPROVED };
+    obj4[2] = closure_1_9(callback(num[15]), obj5);
     items[3] = obj4;
     return items;
   }, items4);
@@ -111,8 +109,7 @@ const memoResult = importAllResult.memo((guildId) => {
       items: membersManagementActions,
       children(ref) {
         const merged = Object.assign(ref, Object.create(null));
-        const obj = { source: null, accessibilityLabel: null, ref: null };
-        obj[0] = callback2(8904);
+        const obj = { source: callback2(8904), accessibilityLabel: null, ref: null };
         const intl = callback(1236).intl;
         obj[1] = intl.string(callback(1236).t.ogxXGq);
         obj[2] = ref.ref;
@@ -120,16 +117,16 @@ const memoResult = importAllResult.memo((guildId) => {
         return callback3(callback(5432).HeaderActionButton, obj);
       }
     };
-    return outer1_9(guildId(num[18]).ContextMenu, obj);
+    return closure_1_9(guildId(num[18]).ContextMenu, obj);
   }, items5);
   const items6 = [navigation, callback];
   callback1 = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     navigation.setOptions({
       headerRight() {
         let tmp = null;
         if (0 === closure_0) {
-          tmp = outer1_6();
+          tmp = closure_1_6();
         }
         return tmp;
       }
@@ -162,6 +159,6 @@ const memoResult = importAllResult.memo((guildId) => {
   obj[1] = items8;
   return callback2(navigation, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWithTabs.tsx");
 
 export default memoResult;

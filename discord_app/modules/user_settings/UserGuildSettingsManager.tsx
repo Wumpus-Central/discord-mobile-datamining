@@ -1,13 +1,11 @@
 // discord_app/modules/user_settings/UserGuildSettingsManager.tsx
-import sendRequest from "sendRequest";
-import incrementVersion from "incrementVersion";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import ME from "ME";
-import "initialize";
+import setDefault from "set" /* 687 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "incrementVersion" /* 5270 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 function handleConnectionOpen() {
   const obj = {};
@@ -30,10 +28,10 @@ function saveUserGuildSettings(id, muteSettings) {
 function _saveUserGuildSettings() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0, arg1) {
       if (c3 === 2) {
         c3 = 3;
@@ -63,29 +61,29 @@ function _saveUserGuildSettings() {
             } else {
               let tmp7 = null;
               if (null != callback) {
-                if (tmp19 !== outer1_7) {
+                if (tmp19 !== closure_1_7) {
                   if (tmp7 != tmp20) {
-                    let sendRequest = tmp19;
+                    closure_2 = tmp19;
                     if (tmp19 == tmp7) {
-                      sendRequest = tmp5;
+                      closure_2 = tmp5;
                     }
-                    const obj1 = {};
-                    tmp7 = sendRequest;
-                    obj1[sendRequest] = tmp20;
+                    obj1 = {};
+                    tmp7 = closure_2;
+                    obj1[closure_2] = tmp20;
                     let obj2 = obj1;
                   } else {
                     obj2 = {};
                   }
-                  outer1_15(obj2);
+                  closure_1_15(obj2);
                   c4 = 2;
                   c3 = 1;
-                  const tmp6 = outer1_15;
+                  const tmp6 = closure_1_15;
                 }
-                tmp5 = outer1_7;
+                tmp5 = closure_1_7;
               }
               const HTTP = callback(table[5]).HTTP;
               const obj3 = { url: null, body: null, rejectWithError: false };
-              obj3[0] = outer1_5.USER_GUILD_SETTINGS(outer1_7);
+              obj3[0] = closure_1_5.USER_GUILD_SETTINGS(closure_1_7);
               obj3[1] = table;
               c4 = 1;
               c3 = 1;
@@ -123,7 +121,7 @@ function _saveUserGuildSettings() {
       }
     })();
   });
-  const _saveUserGuildSettings = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -145,9 +143,9 @@ function saveUserGuildSettingsBulk(arg0) {
 function _saveUserGuildSettingsBulk() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c6 = 0;
     return (function*(arg0, body) {
       if (c6 === 2) {
         c6 = 3;
@@ -176,13 +174,13 @@ function _saveUserGuildSettingsBulk() {
               return obj;
             } else {
               const _clearTimeout = clearTimeout;
-              clearTimeout(outer1_9);
+              clearTimeout(closure_1_9);
               const _Object = Object;
               const tmp34 = 0 !== Object.keys(callback).length;
-              let collapsedCategories = outer1_3.getCollapsedCategories();
+              let collapsedCategories = closure_1_3.getCollapsedCategories();
               const tmp37 = (function getChangedCategories() {
                 const obj = {};
-                const collapsedCategories = tmp9.getCollapsedCategories();
+                collapsedCategories = collapsedCategories.getCollapsedCategories();
                 for (const key10007 in collapsedCategories) {
                   let tmp2 = key10007;
                   let tmp3 = dependencyMap;
@@ -207,32 +205,34 @@ function _saveUserGuildSettingsBulk() {
                 }
                 return obj;
               })();
-              let sendRequest = tmp37;
-              let keys = Object.keys();
+              closure_2 = tmp37;
+              const keys = Object.keys();
               if (keys === undefined) {
-                let ensureGuildLoaded = tmp41;
-                let incrementVersion = tmp40;
-                sendRequest = tmp37;
+                closure_4 = tmp41;
+                closure_3 = tmp40;
+                closure_2 = tmp37;
+                let table = keys;
                 let tmp12 = tmp34;
               } else {
-                ensureGuildLoaded = tmp41;
-                incrementVersion = tmp40;
-                sendRequest = tmp39;
+                closure_4 = tmp41;
+                closure_3 = tmp40;
+                closure_2 = tmp39;
+                table = keys;
                 let flag = tmp34;
                 tmp12 = flag;
-                while (keys[incrementVersion] !== undefined) {
+                while (table[closure_3] !== undefined) {
                   let tmp48 = tmp13;
-                  let closure_5 = tmp13;
+                  closure_5 = tmp13;
                   let tmp49 = tmp10;
-                  ensureGuildLoaded = tmp10;
+                  closure_4 = tmp10;
                   let tmp50 = tmp9;
-                  incrementVersion = tmp9;
+                  closure_3 = tmp9;
                   let tmp51 = tmp8;
-                  sendRequest = tmp8;
+                  closure_2 = tmp8;
                   let tmp52 = tmp7;
-                  keys = tmp7;
-                  let tmp53 = outer1_4;
-                  let channel = outer1_4.getChannel(tmp13);
+                  table = tmp7;
+                  let tmp53 = closure_1_4;
+                  let channel = closure_1_4.getChannel(tmp13);
                   let tmp14 = null != channel;
                   if (tmp14) {
                     tmp14 = null != channel.guild_id;
@@ -247,7 +247,7 @@ function _saveUserGuildSettingsBulk() {
                     if (null == tmp30[channel.guild_id].channel_overrides) {
                       tmp30[channel.guild_id].channel_overrides = {};
                     }
-                    let obj1 = {};
+                    obj1 = {};
                     let tmp15 = obj1;
                     let merged = Object.assign(tmp30[channel.guild_id].channel_overrides[channel.id]);
                     obj1.collapsed = channel.id in collapsedCategories;
@@ -258,19 +258,18 @@ function _saveUserGuildSettingsBulk() {
                   continue;
                 }
                 closure_5 = tmp13;
-                ensureGuildLoaded = tmp10;
-                incrementVersion = tmp9;
-                sendRequest = tmp8;
-                keys = tmp7;
+                closure_4 = tmp10;
+                closure_3 = tmp9;
+                closure_2 = tmp8;
+                table = tmp7;
               }
               if (tmp12) {
-                const obj2 = {};
+                obj2 = {};
                 const merged1 = Object.assign(collapsedCategories);
-                const outer1_8 = obj2;
                 delete tmp3[tmp2];
-                const HTTP = callback(outer1_1[5]).HTTP;
+                const HTTP = callback(closure_1_1[5]).HTTP;
                 const obj3 = { url: null, body: null, rejectWithError: false };
-                obj3[0] = outer1_5.USER_GUILD_SETTINGS_BULK;
+                obj3[0] = closure_1_5.USER_GUILD_SETTINGS_BULK;
                 const obj4 = { guilds: null };
                 obj4[0] = tmp30;
                 obj3[1] = obj4;
@@ -302,7 +301,7 @@ function _saveUserGuildSettingsBulk() {
       }
     })();
   });
-  const _saveUserGuildSettingsBulk = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -318,7 +317,8 @@ function handleUserGuildSettingsFullUpdate() {
 ({ Endpoints: c5, FAVORITES: closure_6, ME: error } = ME);
 let closure_8 = {};
 let c9 = 0;
-let closure_10 = 15 * require("set").Millis.SECOND;
+let closure_10 = 15 * setDefault.Millis.SECOND;
+initializeDefault;
 let prototype = function UserGuildSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CATEGORY_COLLAPSE: scheduleSync, CATEGORY_EXPAND: scheduleSync, CATEGORY_COLLAPSE_ALL: scheduleSync, CATEGORY_EXPAND_ALL: scheduleSync, POST_CONNECTION_OPEN: handleConnectionOpen, USER_GUILD_SETTINGS_FULL_UPDATE: handleUserGuildSettingsFullUpdate };
@@ -329,6 +329,6 @@ let prototype = function UserGuildSettingsManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/user_settings/UserGuildSettingsManager.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserGuildSettingsManager.tsx");
 
 export default prototype;

@@ -1,12 +1,14 @@
 // discord_app/modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx
-import importDefaultResult from "map";
-import { stripSensitiveLoggingData } from "../../../helpers/stripSensitiveLoggingData.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import stripSensitiveLoggingDataDefault from "stripSensitiveLoggingData" /* 8749 */;
+import loggerDefault from "logger" /* 8760 */;
+import importDefaultResult from "map" /* 8750 */;
 
-importDefaultResult = new importDefaultResult(require("validateSocketClient").validateSocketClient, new require("validateSocketClient")("RPCServer:PostMessage"), require("logger"), (arg0, info, id) => {
+importDefaultResult = new importDefaultResult(require("validateSocketClient").validateSocketClient, new timestampDefault("RPCServer:PostMessage"), loggerDefault, (arg0, info, id) => {
   const combined = "Socket Message: " + id.id;
-  info.info(combined, stripSensitiveLoggingData(arg0));
+  info.info(combined, stripSensitiveLoggingDataDefault(arg0));
 });
-const tmp2 = new require("validateSocketClient")("RPCServer:PostMessage");
-const result = require("map").fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
+const tmp2 = new timestampDefault("RPCServer:PostMessage");
+const result = require("set").fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
 
 export default importDefaultResult;

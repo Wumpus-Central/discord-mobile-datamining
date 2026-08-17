@@ -1,28 +1,24 @@
 // discord_app/modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx
-import DisplayNameStylesFontPickerSheet from "DisplayNameStylesFontPickerSheet";
-import apexExperiment from "apexExperiment";
-import get_ActivityIndicator from "DisplayNameFont";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticEvents } from "ME";
-import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_11 } from "DRAG_HANDLE";
-import jsxProd from "useDisplayNameStylesEffectDefaultColors";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { MEDIA_PICKER_SEND_BUTTON_SPRING as closure_11 } from "DRAG_HANDLE" /* 1624 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let map1;
 const require = arg1;
 function ApplyButton(onPress) {
   onPress = onPress.onPress;
   const visible = onPress.visible;
   let stateFromStores;
   let obj = onPress(stateFromStores[12]);
-  let items = [maybeApplyNoTextColorForLightCustomTheme];
+  items = [closure_8];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = onPress(stateFromStores[53]);
+  obj1 = onPress(stateFromStores[53]);
   const fn = function o() {
     let pointerEvents = "none";
     if (visible) {
@@ -51,20 +47,20 @@ function ApplyButton(onPress) {
     const obj = { position: "absolute", bottom: 0, left: 0, right: 0, marginHorizontal: visible(stateFromStores[10]).space.PX_16, flexDirection: "column", justifyContent: "flex-end", transform: null, opacity: null };
     let withSpringResult = num2;
     if (!stateFromStores) {
-      withSpringResult = onPress(tmp2[54]).withSpring(num2, outer1_11);
+      withSpringResult = onPress(tmp2[54]).withSpring(num2, closure_1_11);
       const obj2 = onPress(tmp2[54]);
     }
-    const items = [{ translateY: withSpringResult }, ];
+    items = [{ translateY: withSpringResult }, ];
     let withSpringResult1 = num3;
     if (!stateFromStores) {
-      withSpringResult1 = onPress(tmp2[54]).withSpring(num3, outer1_11);
+      withSpringResult1 = onPress(tmp2[54]).withSpring(num3, closure_1_11);
       const obj3 = onPress(tmp2[54]);
     }
     items[1] = { scale: withSpringResult1 };
     obj[7] = items;
     let withSpringResult2 = num;
     if (!stateFromStores) {
-      withSpringResult2 = onPress(tmp2[54]).withSpring(num, outer1_11);
+      withSpringResult2 = onPress(tmp2[54]).withSpring(num, closure_1_11);
       const obj4 = onPress(tmp2[54]);
     }
     obj[8] = withSpringResult2;
@@ -93,37 +89,35 @@ function ApplyButton(onPress) {
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let items = [require("DisplayNameEffect").DisplayNameEffect.GRADIENT, require("DisplayNameEffect").DisplayNameEffect.GUMMY, require("DisplayNameEffect").DisplayNameEffect.PRISM];
 createCacheKey = { container: null, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { padding: require("Themes").space.PX_16 };
-let obj1 = { padding: require("Themes").space.PX_16 };
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderRadius: require("Themes").radii.md };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderRadius: require("Themes").radii.md };
-createCacheKey[3] = { padding: require("Themes").space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-let obj3 = { padding: require("Themes").space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-createCacheKey[4] = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-let obj4 = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[5] = { flex: 1, marginRight: require("Themes").space.PX_12 };
-let obj5 = { flex: 1, marginRight: require("Themes").space.PX_12 };
-createCacheKey[6] = { flexDirection: "row", gap: require("Themes").space.PX_8, flexShrink: 0 };
-let obj6 = { flexDirection: "row", gap: require("Themes").space.PX_8, flexShrink: 0 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-let obj7 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
-createCacheKey[8] = { marginVertical: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_MUTED, gap: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { padding: ThemesDefault.space.PX_16 };
+let obj1 = { padding: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: ThemesDefault.radii.md };
+createCacheKey[3] = { padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+let obj3 = { padding: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
+createCacheKey[4] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj4 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[5] = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
+let obj5 = { flex: 1, marginRight: ThemesDefault.space.PX_12 };
+createCacheKey[6] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, flexShrink: 0 };
+let obj6 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, flexShrink: 0 };
+createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey[8] = { marginVertical: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_MUTED, gap: ThemesDefault.space.PX_16 };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
 let closure_16 = { code: "function DisplayNameStylesEditScreenTsx1(){const{visible}=this.__closure;return{pointerEvents:visible?'box-none':'none'};}" };
 let closure_17 = { code: "function DisplayNameStylesEditScreenTsx2(){const{visible,tokens,reducedMotion,withSpring,MEDIA_PICKER_SEND_BUTTON_SPRING}=this.__closure;const targetOpacity=visible?1:0;const targetTranslateY=visible?0:60;const targetScale=visible?1:0.9;return{position:'absolute',bottom:0,left:0,right:0,marginHorizontal:tokens.space.PX_16,flexDirection:'column',justifyContent:'flex-end',transform:[{translateY:reducedMotion?targetTranslateY:withSpring(targetTranslateY,MEDIA_PICKER_SEND_BUTTON_SPRING)},{scale:reducedMotion?targetScale:withSpring(targetScale,MEDIA_PICKER_SEND_BUTTON_SPRING)}],opacity:reducedMotion?targetOpacity:withSpring(targetOpacity,MEDIA_PICKER_SEND_BUTTON_SPRING)};}" };
-let obj8 = { marginVertical: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_MUTED, gap: require("Themes").space.PX_16 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx");
+let obj8 = { marginVertical: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_MUTED, gap: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/display_name_styles/native/DisplayNameStylesEditScreen.tsx");
 
 export default function DisplayNameStylesEditScreen() {
-  let guildDisplayNameStyles;
-  let tryItOutDisplayNameStyles;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   const tmp3 = isTryItOut;
   let obj = navigation(isTryItOut[11]);
   const route = obj.useRoute();
-  let obj1 = navigation(isTryItOut[11]);
+  obj1 = navigation(isTryItOut[11]);
   navigation = obj1.useNavigation();
   let params = route.params;
   if (params == null) {
@@ -132,7 +126,7 @@ export default function DisplayNameStylesEditScreen() {
   const guildId = params.guildId;
   isTryItOut = params.isTryItOut;
   let tmp2Result = tmp2(tmp3[12]);
-  let items = [mergeGuildAvatar];
+  items = [closure_9];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => currentUser.getCurrentUser());
   tmp2Result = tmp2(tmp3[13]);
   const displayNameStylesPendingName = tmp2Result.useDisplayNameStylesPendingName(stateFromStores, guildId);
@@ -151,7 +145,7 @@ export default function DisplayNameStylesEditScreen() {
   }
   obj[2] = tmp12;
   const tmp10Result = guildId(tmp3[15])(obj);
-  let closure_5 = tmp10Result;
+  closure_5 = tmp10Result;
   let obj7 = displayNameStylesPendingName;
   let fontId;
   const tmp10 = guildId(tmp3[15]);
@@ -163,7 +157,7 @@ export default function DisplayNameStylesEditScreen() {
   }
   const tmp17 = stateFromStores(displayNameStylesPendingName.useState(fontId), 2);
   const first = tmp17[0];
-  let closure_7 = tmp17[1];
+  closure_7 = tmp17[1];
   let effectId;
   if (tmp10Result != null) {
     effectId = tmp10Result.effectId;
@@ -173,15 +167,15 @@ export default function DisplayNameStylesEditScreen() {
   }
   let tmp16Result = tmp16(obj7.useState(effectId), 2);
   const first1 = tmp16Result[0];
-  mergeGuildAvatar = tmp16Result[1];
+  closure_9 = tmp16Result[1];
   let tmp14 = guildId(tmp3[16])();
   const tmp22 = navigation(tmp3[18]).getEffectColorCount(first1) > 1;
-  const AnalyticEvents = tmp22;
+  closure_10 = tmp22;
   const tmp2Result2 = navigation(tmp3[18]);
   const isDisplayNameStylesFlywheelSettersEnabled = navigation(tmp3[19]).useIsDisplayNameStylesFlywheelSettersEnabled("DisplayNameStylesEditScreen");
   const tmp2Result3 = navigation(tmp3[19]);
   const displayNameStylesEffectConfig = navigation(tmp3[20]).useDisplayNameStylesEffectConfig(first1);
-  let closure_12 = tmp9(tmp3[21])();
+  closure_12 = tmp9(tmp3[21])();
   let colors;
   if (tmp10Result != null) {
     colors = tmp10Result.colors;
@@ -195,9 +189,9 @@ export default function DisplayNameStylesEditScreen() {
     }
     tmp16Result = tmp16(tmp25(first2), 2);
     const first3 = tmp16Result[0];
-    createCacheKey = tmp16Result[1];
+    callback2 = tmp16Result[1];
     const tmp16Result1 = tmp16(obj7.useState(() => Object.fromEntries(first3.map((arg0) => {
-      const items = [arg0, ];
+      items = [arg0, ];
       let tmp = length;
       if (length.length <= 0) {
         tmp = table[arg0];
@@ -206,10 +200,10 @@ export default function DisplayNameStylesEditScreen() {
       return items;
     }))), 2);
     const first4 = tmp16Result1[0];
-    let closure_17 = tmp16Result1[1];
+    closure_17 = tmp16Result1[1];
     const callback = obj7.useCallback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       callback3((arg0) => {
         const obj = {};
         const merged = Object.assign(arg0);
@@ -224,7 +218,7 @@ export default function DisplayNameStylesEditScreen() {
         if (defaultColors == null) {
           defaultColors = displayNameStylesEffectConfig.defaultColors;
         }
-        let items = defaultColors;
+        items = defaultColors;
       } else {
         items = [first3];
       }
@@ -246,7 +240,7 @@ export default function DisplayNameStylesEditScreen() {
         const tmp5 = first1;
       }
       if (!tmp4) {
-        let colors;
+        colors = undefined;
         if (tmp2 != null) {
           colors = tmp2.colors;
         }
@@ -286,8 +280,6 @@ export default function DisplayNameStylesEditScreen() {
     const items3 = [callback, visibleFontOrder, visibleEffectOrder];
     const items4 = [navigation, isTryItOut];
     const callback1 = obj7.useCallback(() => {
-      let colors;
-      let effectId;
       const randomDisplayNameStyles = navigation(isTryItOut[18]).generateRandomDisplayNameStyles(visibleFontOrder, visibleEffectOrder);
       ({ effectId, colors } = randomDisplayNameStyles);
       callback(randomDisplayNameStyles.fontId);
@@ -300,10 +292,10 @@ export default function DisplayNameStylesEditScreen() {
         callback2(colors[0]);
       }
       obj2 = navigation(isTryItOut[18]);
-      guildId(tmp[27]).track(tmp22.DISPLAY_NAME_STYLES_SURPRISE_ME);
+      guildId(tmp[27]).track(constants.DISPLAY_NAME_STYLES_SURPRISE_ME);
     }, items3);
     const items5 = [guildId, navigation];
-    const callback2 = obj7.useCallback(() => {
+    callback2 = obj7.useCallback(() => {
       const result = navigation(isTryItOut[28]).triggerHapticFeedback(navigation(isTryItOut[28]).HapticFeedbackTypes.IMPACT_MEDIUM);
       if (isTryItOut) {
         let tmpResult = tmp(tmp2[29]);
@@ -313,7 +305,7 @@ export default function DisplayNameStylesEditScreen() {
         tmpResult.setPendingChanges({ displayNameStyles: null });
       }
       const obj = navigation(isTryItOut[28]);
-      guildId(isTryItOut[27]).track(tmp22.DISPLAY_NAME_STYLES_REMOVED);
+      guildId(isTryItOut[27]).track(constants.DISPLAY_NAME_STYLES_REMOVED);
       navigation.goBack();
     }, items4);
     const items6 = [first, displayNameStylesPendingName, showFontsBadge, dismissFontsBadge];
@@ -350,7 +342,7 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj = { userId: id, selectedEffectId: first1, onSelectEffect: mergeGuildAvatar };
+      obj = { userId: id, selectedEffectId: first1, onSelectEffect: closure_9 };
       obj.openLazy(navigation(isTryItOut[33])(isTryItOut[34], isTryItOut.paths), "DisplayNameStylesEffectPickerSheet", obj);
     }, items7);
     const callback6 = obj7.useCallback(() => {
@@ -358,7 +350,7 @@ export default function DisplayNameStylesEditScreen() {
         let obj = { selectedColors: null, onSelectColors: null };
         obj[0] = memo;
         obj[1] = function onSelectColors(arg0) {
-          return callback(outer1_0(outer1_2[8]).DisplayNameEffect.GUMMY, arg0);
+          return callback(closure_1_0(closure_1_2[8]).DisplayNameEffect.GUMMY, arg0);
         };
         guildId(tmp3[31]).openLazy(tmp2(tmp3[33])(tmp3[35], tmp3.paths), "DisplayNameStylesGummyColorPickerSheet", obj);
         const obj3 = guildId(tmp3[31]);
@@ -370,7 +362,7 @@ export default function DisplayNameStylesEditScreen() {
           obj[0] = memo;
           obj[1] = tmp;
           obj[2] = function onSelectColors(arg0) {
-            return callback(maybeApplyNoTextColorForLightCustomTheme, arg0);
+            return callback(closure_8, arg0);
           };
           openLazy(tmp2Result(tmp3[36], tmp3.paths), "DisplayNameStylesGradientPickerSheet", obj);
         } else {

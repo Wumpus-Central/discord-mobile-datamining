@@ -1,17 +1,13 @@
 // discord_app/utils/InviteErrorUtils.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { combined } from "HelpdeskUtils.tsx";
-import { getPremiumPlanItem } from "PremiumUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ AbortCodes: c4, HelpdeskArticles: c5, MAX_USER_GUILDS: closure_6, MAX_USER_GUILDS_PREMIUM: error } = ME);
-const result = require("getPremiumPlanItem").fileFinishedImporting("utils/InviteErrorUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/InviteErrorUtils.tsx");
 
 export const getDescriptiveInviteError = function getDescriptiveInviteError(code) {
   if (constants.TOO_MANY_USER_GUILDS === code) {
@@ -34,9 +30,9 @@ export const getDescriptiveInviteError = function getDescriptiveInviteError(code
       return obj;
     }
     tmp14 = closure_7;
-    obj5 = getPremiumPlanItem;
+    obj5 = getPremiumPlanItemDefault;
   } else if (tmp.GUILD_AT_CAPACITY === code) {
-    const obj1 = { title: null, description: null };
+    obj1 = { title: null, description: null };
     const intl5 = getSystemLocale.intl;
     obj1[0] = intl5.string(getSystemLocale.t.ZZlox4);
     const intl6 = getSystemLocale.intl;
@@ -76,7 +72,7 @@ export const getInviteError = function getInviteError(arg0) {
   } else if (tmp.INVITES_DISABLED === arg0) {
     const intl2 = getSystemLocale.intl;
     const obj = { articleLink: null };
-    obj[0] = combined.getArticleURL(constants2.INVITE_DISABLED);
+    obj[0] = combinedDefault.getArticleURL(constants2.INVITE_DISABLED);
     return intl2.format(getSystemLocale.t.RXSeLl, obj);
   } else {
     const intl = getSystemLocale.intl;

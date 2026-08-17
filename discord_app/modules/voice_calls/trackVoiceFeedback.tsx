@@ -1,23 +1,16 @@
 // discord_app/modules/voice_calls/trackVoiceFeedback.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import set from "set";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
 
 function _trackVoiceFeedback() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
     const iter = (function*(arg0, arg1) {
-      let c1;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let closure_2;
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -46,7 +39,7 @@ function _trackVoiceFeedback() {
             } else {
               let store = tmp5;
               c4 = tmp2;
-              let dependencyMap;
+              dependencyMap = undefined;
               closure_2 = undefined;
               let callback2;
               c4 = undefined;
@@ -64,10 +57,10 @@ function _trackVoiceFeedback() {
               let noiseCancellation;
               let audioSubsystem;
               let audioLayer;
-              let closure_18;
+              closure_18 = undefined;
               obj = undefined;
               let output_audio_route_type;
-              let closure_21;
+              closure_21 = undefined;
               c6 = 1;
               c7 = 1;
               return { value: "ct", done: true };
@@ -78,7 +71,7 @@ function _trackVoiceFeedback() {
               throw arg1;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -172,7 +165,7 @@ function _trackVoiceFeedback() {
     iter.next();
     return iter;
   });
-  const _trackVoiceFeedback = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -182,7 +175,7 @@ function _trackVoiceFeedback() {
   return applyArgumentsResult;
 }
 let closure_2 = ["output_audio_route_type"];
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/voice_calls/trackVoiceFeedback.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/trackVoiceFeedback.tsx");
 
 export default function trackVoiceFeedback() {
   const self = this;

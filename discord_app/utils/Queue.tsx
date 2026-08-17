@@ -1,5 +1,9 @@
 // discord_app/utils/Queue.tsx
-const tmp2 = new require("timestamp")("Queue");
+import timestampDefault from "timestamp" /* 3 */;
+import DequeDefault from "Deque" /* 8 */;
+
+let closure_2 = new timestampDefault("Queue");
+const tmp2 = new timestampDefault("Queue");
 const result = require("set").fileFinishedImporting("utils/Queue.tsx");
 class Queue {
   constructor() {
@@ -32,8 +36,6 @@ Object.defineProperty(prototype, "length", {
   set: undefined
 });
 prototype["_drainIfNecessary"] = function _drainIfNecessary() {
-  let closure_2;
-  let logId;
   let self = this;
   self = this;
   if (null === this.timeout) {

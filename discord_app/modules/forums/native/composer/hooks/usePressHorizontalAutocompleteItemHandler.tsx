@@ -1,6 +1,6 @@
 // discord_app/modules/forums/native/composer/hooks/usePressHorizontalAutocompleteItemHandler.tsx
-import noop from "noop";
-import set from "AutocompleteFormDivider";
+import closure_2 from "noop" /* 19 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 let items = [, , , ];

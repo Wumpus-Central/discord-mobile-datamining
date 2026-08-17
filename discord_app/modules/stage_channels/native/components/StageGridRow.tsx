@@ -1,15 +1,13 @@
 // discord_app/modules/stage_channels/native/components/StageGridRow.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { getIsScreenLandscape } from "../../../screen/useIsScreenLandscape.native.tsx";
+import getIsScreenLandscape from "getIsScreenLandscape" /* 8944 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_5 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });
-const memoResult = require("noop").memo((row) => {
-  let participants;
-  let require;
+const memoResult = importAllResult.memo((row) => {
   ({ channel: require, participants } = row);
   let THIRD;
   const tmp = callback();
@@ -35,9 +33,9 @@ const memoResult = require("noop").memo((row) => {
     children: participants.map((type) => {
       type = type.type;
       let flag = true;
-      if (outer1_0(outer1_2[5]).StageChannelParticipantTypes.STREAM !== type) {
+      if (closure_1_0(closure_1_2[5]).StageChannelParticipantTypes.STREAM !== type) {
         flag = false;
-        if (outer1_0(tmp2[5]).StageChannelParticipantTypes.VOICE === type) {
+        if (closure_1_0(tmp2[5]).StageChannelParticipantTypes.VOICE === type) {
           const voiceState = type.voiceState;
           let selfVideo;
           if (voiceState != null) {
@@ -70,9 +68,9 @@ const memoResult = require("noop").memo((row) => {
   return <View style={items}>{participants.map((type) => {
     type = type.type;
     let flag = true;
-    if (outer1_0(outer1_2[5]).StageChannelParticipantTypes.STREAM !== type) {
+    if (closure_1_0(closure_1_2[5]).StageChannelParticipantTypes.STREAM !== type) {
       flag = false;
-      if (outer1_0(tmp2[5]).StageChannelParticipantTypes.VOICE === type) {
+      if (closure_1_0(tmp2[5]).StageChannelParticipantTypes.VOICE === type) {
         const voiceState = type.voiceState;
         let selfVideo;
         if (voiceState != null) {
@@ -101,6 +99,6 @@ const memoResult = require("noop").memo((row) => {
     return tmp5Result;
   })}</View>;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageGridRow.tsx");
 
 export default memoResult;

@@ -1,33 +1,32 @@
 // discord_app/modules/checkout/native/gifting/LockedRecipientField.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { nameFromUser } from "../../../../utils/UserUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, avatar: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", marginLeft: require("Themes").space.PX_16 };
+createCacheKey = { flexDirection: "row", alignItems: "center", marginLeft: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginEnd: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginEnd: require("Themes").space.PX_8 };
-const result = require("jsxProd").fileFinishedImporting("modules/checkout/native/gifting/LockedRecipientField.tsx");
+createCacheKey[1] = { marginEnd: ThemesDefault.space.PX_8 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginEnd: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/LockedRecipientField.tsx");
 
 export default function LockedRecipientField(user) {
   user = user.user;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.avatar, user, guildId: "Array", size: true };
   obj[3] = Button.AvatarSizes.NORMAL;
   const items = [callback(Button.Avatar, obj), ];
-  obj = { variant: "text-md/semibold", children: null };
-  obj[1] = nameFromUser.getName(user);
+  obj = { variant: "text-md/semibold", children: nameFromUserDefault.getName(user) };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);

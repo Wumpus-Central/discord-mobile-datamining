@@ -1,13 +1,13 @@
 // discord_app/modules/interaction_components/openInteractionIframeModal.native.tsx
-import set from "set";
-import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { INTERACTION_IFRAME_MODAL_KEY as closure_4 } from "INTERACTION_IFRAME_MODAL_KEY" /* 16613 */;
 
 const require = arg1;
 function _openInteractionIframeModal() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c1 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -34,8 +34,8 @@ function _openInteractionIframeModal() {
             obj[0] = arg1;
             return obj;
           } else {
-            obj = v0(outer1_2[2]);
-            obj.pushLazy(callback(outer1_2[4])(outer1_2[3], outer1_2.paths), callback, outer1_4);
+            obj = v0(closure_1_2[2]);
+            obj.pushLazy(callback(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), callback, closure_1_4);
             v0 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -46,7 +46,7 @@ function _openInteractionIframeModal() {
       }
     })();
   });
-  const _openInteractionIframeModal = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -55,7 +55,7 @@ function _openInteractionIframeModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_5260").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
+const result = require("set").fileFinishedImporting("modules/interaction_components/openInteractionIframeModal.native.tsx");
 
 export default function openInteractionIframeModal() {
   const self = this;

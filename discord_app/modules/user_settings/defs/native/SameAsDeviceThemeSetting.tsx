@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx
-import handleThemeChange from "handleThemeChange";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { handleSaveTheme } from "../../appearance/native/UserSettingsAppearanceThemeUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import handleSaveTheme from "handleSaveTheme" /* 14528 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -14,10 +14,10 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate() {
-    return useIsMobileVisualRefreshExperimentEnabled("SameAsDeviceThemeSetting");
+    return useIsMobileVisualRefreshExperimentEnabledDefault("SameAsDeviceThemeSetting");
   },
   useValue: function useSameAsDeviceThemeValue() {
-    const items = [handleThemeChange];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => sameAsDeviceThemeEnabled.isSameAsDeviceThemeEnabled());
   },
   onValueChange: function onSameAsDeviceThemeValueChange(arg0) {
@@ -34,6 +34,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SameAsDeviceThemeSetting.tsx");
 
 export default createToggle;

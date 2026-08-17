@@ -1,38 +1,31 @@
 // discord_app/modules/app_launcher/native/screens/home/AppLauncherHomeScreen.tsx
-import TwinButtons from "TwinButtons";
-import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive";
-import get_ActivityIndicator from "getSystemLocale";
-import participantFromServer from "participantFromServer";
-import getIndexKey from "getIndexKey";
-import getUserAgnosticState from "getUserAgnosticState";
-import getLastFetchTimeMs from "getLastFetchTimeMs";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import initialize from "initialize";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "ChannelListLayoutTypes";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import { handleApplicationSelected } from "../../AppLauncherNativeUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import Text from "Text" /* 4734 */;
+import handleApplicationSelected from "handleApplicationSelected" /* 11224 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11229 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "participantFromServer" /* 1390 */;
+import getIndexKey from "getIndexKey" /* 8448 */;
+import closure_10 from "getUserAgnosticState" /* 4737 */;
+import closure_11 from "getLastFetchTimeMs" /* 11249 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_13 from "initialize" /* 11217 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import ME from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { ExpandableList } from "../../base_components/ExpandableList.tsx";
 import { AppLauncherHomeListItemType } from "AppLauncherHomeTypes.tsx";
 
-let StyleSheet;
-let c9;
-let closure_16;
-let closure_17;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function AppRowLabel(renderedName) {
   renderedName = renderedName.renderedName;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   if (renderedName.showsPromoted) {
     let obj = { style: null, children: null };
     obj[0] = tmp.appRowLabelWithPromotedContainer;
@@ -40,7 +33,7 @@ function AppRowLabel(renderedName) {
     obj[0] = tmp.appRowLabelWithPromotedTextContainer;
     obj[4] = renderedName;
     const items = [callback2(Text.Text, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.promotedLabel;
     const obj2 = { variant: "text-xxs/semibold", color: "text-muted", children: null };
     const intl = getSystemLocale.intl;
@@ -98,8 +91,8 @@ class BaseAppRow {
     }
     items = [];
     items[0] = application;
-    memo = getRecommendationItemsWithViewAll.useMemo(() => {
-      let obj = application(outer1_3[19]);
+    memo = closure_5.useMemo(() => {
+      let obj = application(closure_1_3[19]);
       let FAKE_BUILT_IN_APP = application;
       if (application == null) {
         FAKE_BUILT_IN_APP = tmp(tmp2[19]).FAKE_BUILT_IN_APP;
@@ -118,18 +111,11 @@ class BaseAppRow {
       }
       return result;
     }, items);
-    obj = { icon: tmp, label: null, labelLineClamp: 1, subLabel: null, subLabelLineClamp: 1, start: null, end: null, arrow: true, onPress: null };
-    obj[1] = jsx(AppRowLabel, { renderedName: sectionName, showsPromoted: flag2 });
-    obj[3] = memo;
-    obj[5] = isFirstRow;
-    obj[6] = flag;
-    obj[8] = global.onPress;
+    obj = { icon: tmp, label: jsx(AppRowLabel, { renderedName: sectionName, showsPromoted: flag2 }), labelLineClamp: 1, subLabel: memo, subLabelLineClamp: 1, start: isFirstRow, end: flag, arrow: true, onPress: global.onPress };
     return jsx(require("TableRowInner").TableRow, obj);
   }
 }
 function AppRow(isLastRow) {
-  let isFirstRow;
-  let section;
   ({ section, isFirstRow } = isLastRow);
   if (isFirstRow === undefined) {
     isFirstRow = false;
@@ -176,10 +162,10 @@ function ActivityRow(section) {
     if (null != description) {
       result = null;
       if ("" !== description) {
-        let obj = section(outer1_3[20]);
+        let obj = section(closure_1_3[20]);
         obj = { content: null, muted: false, layout: null, color: "text-muted" };
         obj[0] = description;
-        obj[2] = section(outer1_3[21]).ChannelListLayoutTypes.COMPACT;
+        obj[2] = section(closure_1_3[21]).ChannelListLayoutTypes.COMPACT;
         result = obj.renderMessagePreviewMarkup(obj);
       }
     }
@@ -191,28 +177,18 @@ function ActivityRow(section) {
   return callback2(section(6291).TableRow, { icon: tmp5, label: section.application.name, subLabel: memo, subLabelLineClamp: 1, start: flag, end: flag2, arrow: true, onPress: callback });
 }
 function ActivityItemTuple(arg0) {
-  let containerWidth;
-  let context;
-  let entrypoint;
-  let isLastTuple;
-  let onActivityItemSelected;
-  let onPress;
-  let sectionName;
-  let shelfItem1;
-  let shelfItem2;
-  let usesHandleActivityItemSelected;
   ({ context, sectionName, onPress, usesHandleActivityItemSelected, onActivityItemSelected, shelfItem2, entrypoint, containerWidth } = arg0);
   ({ shelfItem1, isLastTuple } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const items = [containerWidth];
   const size = React.useMemo(() => {
     if (null == containerWidth) {
       return { width: "r", height: "accessibilityRole" };
     } else {
-      const tmp5 = outer1_1(outer1_3[25])(tmp / 2 - outer1_14 - 6);
+      const tmp5 = closure_1_1(closure_1_3[25])(tmp / 2 - closure_1_14 - 6);
       const obj = { width: null, height: null };
       obj[0] = tmp5;
-      obj[1] = outer1_1(outer1_3[25])(tmp5 / outer1_22);
+      obj[1] = closure_1_1(closure_1_3[25])(tmp5 / closure_1_22);
       return obj;
     }
   }, items);
@@ -224,7 +200,7 @@ function ActivityItemTuple(arg0) {
   const items2 = [callback2(closure_6, obj), ];
   let tmp4Result = null != shelfItem2;
   if (tmp4Result) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.activityItemTupleShelfItemContainer;
     const obj2 = { context: null, sectionName: null, onPress: null, usesHandleActivityItemSelected: null, onActivityItemSelected: null, shelfItem: null, entrypoint: null, imageWidth: null, imageHeight: null };
     obj2[0] = context;
@@ -243,10 +219,6 @@ function ActivityItemTuple(arg0) {
   return closure_20(closure_6, obj);
 }
 function ActivityItem(context) {
-  let entrypoint;
-  let imageHeight;
-  let imageWidth;
-  let onActivityItemSelected;
   context = context.context;
   const shelfItem = context.shelfItem;
   const onPress = context.onPress;
@@ -258,9 +230,9 @@ function ActivityItem(context) {
   let callback;
   let handleActivityItemSelected;
   ({ onActivityItemSelected, entrypoint } = context);
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = context(flag[26]);
-  let obj1 = handleActivityItemSelected;
+  obj1 = handleActivityItemSelected;
   const heroMediaDimensions = obj.useHeroMediaDimensions();
   const tmp6 = callback(handleActivityItemSelected.useState(false), 2);
   callback = tmp6[1];
@@ -274,14 +246,14 @@ function ActivityItem(context) {
   const tmp8Result = shelfItem(flag[27])(obj);
   let id = obj1.useId();
   let tmp2Result = tmp2(tmp3[28]);
-  let items = [participantFromServer];
+  let items = [closure_7];
   const tmp5Result = callback(tmp2Result.useStateFromStoresArray(items, () => {
-    const items = [outer1_7.isLaunchingActivity(), ];
+    const items = [closure_1_7.isLaunchingActivity(), ];
     let id;
     if ("channel" === context.type) {
       id = context.channel.id;
     }
-    items[1] = outer1_7.getLaunchState(shelfItem.application.id, id);
+    items[1] = closure_1_7.getLaunchState(shelfItem.application.id, id);
     return items;
   }), 2);
   let isLaunching = null != tmp12;
@@ -349,26 +321,18 @@ function ActivityItem(context) {
   return closure_20(context(flag[32]).PressableScale, obj3);
 }
 function RecommendationItemTuple(arg0) {
-  let containerWidth;
-  let context;
-  let entrypoint;
-  let isLastTuple;
-  let item1;
-  let item2;
-  let onPress;
-  let sectionName;
   ({ context, sectionName, onPress, item2, entrypoint, containerWidth } = arg0);
   ({ item1, isLastTuple } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const items = [containerWidth];
   const size = React.useMemo(() => {
     if (null == containerWidth) {
       return { width: "r", height: "accessibilityRole" };
     } else {
-      const tmp5 = outer1_1(outer1_3[25])(tmp / 2 - outer1_14 - 6);
+      const tmp5 = closure_1_1(closure_1_3[25])(tmp / 2 - closure_1_14 - 6);
       const obj = { width: null, height: null };
       obj[0] = tmp5;
-      obj[1] = outer1_1(outer1_3[25])(tmp5 / outer1_22);
+      obj[1] = closure_1_1(closure_1_3[25])(tmp5 / closure_1_22);
       return obj;
     }
   }, items);
@@ -380,7 +344,7 @@ function RecommendationItemTuple(arg0) {
   const items2 = [callback2(closure_6, obj), ];
   let tmp4Result = null != item2;
   if (tmp4Result) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.activityItemTupleShelfItemContainer;
     const obj2 = { context: null, sectionName: null, onPress: null, item: null, entrypoint: null, imageWidth: null, imageHeight: null };
     obj2[0] = context;
@@ -397,20 +361,14 @@ function RecommendationItemTuple(arg0) {
   return closure_20(closure_6, obj);
 }
 function RecommendationItem(onPress) {
-  let context;
-  let entrypoint;
-  let imageHeight;
-  let imageWidth;
-  let item;
-  let sectionName;
   ({ item, sectionName } = onPress);
   onPress = onPress.onPress;
   ({ imageWidth, imageHeight, context, entrypoint } = onPress);
-  let closure_2;
+  closure_2 = undefined;
   let application;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = sectionName(application[26]);
-  let obj1 = React;
+  obj1 = React;
   const heroMediaDimensions = obj.useHeroMediaDimensions();
   const tmp5 = callback(React.useState(false), 2);
   closure_2 = tmp5[1];
@@ -486,15 +444,13 @@ function RecommendationItem(onPress) {
   return closure_20(sectionName(application[32]).PressableScale, obj3);
 }
 function Divider() {
-  const rect = useSafeAreaInsets();
-  const style = [createCacheKey().divider, { marginLeft: -DEFAULT_CONTENT_PADDING - rect.left, marginRight: -DEFAULT_CONTENT_PADDING - rect.right }];
+  const rect = useSafeAreaInsetsDefault();
+  const style = [callback4().divider, { marginLeft: -DEFAULT_CONTENT_PADDING - rect.left, marginRight: -DEFAULT_CONTENT_PADDING - rect.right }];
   return callback2(closure_6, { style });
 }
 function RecommendationSectionHeader(arg0) {
-  let children;
-  let index;
   ({ index, children } = arg0);
-  const style = [createCacheKey().sectionHeader, ];
+  const style = [callback4().sectionHeader, ];
   let obj = null;
   if (0 !== index) {
     obj = { marginTop: 24 };
@@ -508,9 +464,9 @@ function getRecommendationItemsWithViewAll(arr) {
   if (arg3 === undefined) {
     COLLAPSED_LIST_ITEM_MAX = _ExpandableList.COLLAPSED_LIST_ITEM_MAX;
   }
-  const importDefault = tmp3;
+  closure_1 = tmp3;
   let bound;
-  let dependencyMap;
+  dependencyMap = undefined;
   let items;
   if (0 === arr.length) {
     return [];
@@ -528,10 +484,10 @@ function getRecommendationItemsWithViewAll(arr) {
     items.push(obj);
     const substr = arr.slice(0, bound);
     const item = substr.forEach((application) => {
-      const obj = { type: callback(_undefined[44]).AppLauncherHomeListItemType.RECOMMENDATION_APP, application: application.application, showsPromoted: application.showsPromoted, isFirstRow: 0 === arg1, isLastRow: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null };
+      const obj = { type: callback(table[44]).AppLauncherHomeListItemType.RECOMMENDATION_APP, application: application.application, showsPromoted: application.showsPromoted, isFirstRow: 0 === arg1, isLastRow: null, sectionName: null, sectionPosition: null, sectionOverallPosition: null };
       let tmp2 = arg1 === bound - 1;
       if (tmp2) {
-        tmp2 = !_undefined;
+        tmp2 = !table;
       }
       obj[4] = tmp2;
       obj[5] = callback;
@@ -560,7 +516,7 @@ function getRecommendationItemsWithViewAll(arr) {
   }
 }
 ({ View: closure_6, StyleSheet } = get_ActivityIndicator);
-({ useContextIndexState: metroImportAll, useUserIndexState: c9 } = getIndexKey);
+({ useContextIndexState: closure_8, useUserIndexState: c9 } = getIndexKey);
 const DEFAULT_CONTENT_PADDING = APP_LAUNCHER_BUILT_IN_SECTION_ICON.DEFAULT_CONTENT_PADDING;
 let closure_15 = APP_LAUNCHER_BUILT_IN_SECTION_ICON.FLASH_LIST_ITEM_IMPRESSION_VIEWABILITY_CONFIG;
 ({ AnalyticEvents: closure_16, Permissions: closure_17 } = ME);
@@ -569,53 +525,41 @@ let c22 = 1.7777777777777777;
 let closure_23 = [];
 const APP_LAUNCHER_IN_TEXT = require("ApplicationCollectionSurface").ApplicationCollectionSurface.APP_LAUNCHER_IN_TEXT;
 createCacheKey = { container: null, topBackgroundFill: null, sectionHeader: null, list: null, searchBarContainer: null, divider: null, appRowLabelWithPromotedContainer: null, appRowLabelWithPromotedTextContainer: null, promotedLabel: null, activityItemContainer: null, activityImageContainer: null, activityDetailsContainer: null, activityItemTupleContainer: null, activityItemTupleShelfItemContainer: null, activityItemImage: null, submittingOverlay: null };
-createCacheKey = { backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, flex: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
+createCacheKey[1] = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
 createCacheKey[2] = { marginBottom: 8, marginTop: 8 };
-let obj1 = { backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
-createCacheKey[3] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+let obj1 = { backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, position: "absolute", top: -16, left: 0, right: 0, height: 16 };
+createCacheKey[3] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
 createCacheKey[4] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingBottom: DEFAULT_CONTENT_PADDING };
-let obj2 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-createCacheKey[5] = { borderColor: require("Themes").colors.BORDER_STRONG, borderTopWidth: 1, marginTop: require("Themes").space.PX_24 };
-createCacheKey[6] = { overflow: "hidden", flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
+let obj2 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+createCacheKey[5] = { borderColor: ThemesDefault.colors.BORDER_STRONG, borderTopWidth: 1, marginTop: ThemesDefault.space.PX_24 };
+createCacheKey[6] = { overflow: "hidden", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[7] = { flexShrink: 1 };
-let obj3 = { borderColor: require("Themes").colors.BORDER_STRONG, borderTopWidth: 1, marginTop: require("Themes").space.PX_24 };
-createCacheKey[8] = { alignSelf: "center", justifyContent: "center", paddingVertical: 2, paddingHorizontal: require("Themes").space.PX_4, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: require("Themes").radii.lg };
-let obj4 = { alignSelf: "center", justifyContent: "center", paddingVertical: 2, paddingHorizontal: require("Themes").space.PX_4, backgroundColor: require("Themes").colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: require("Themes").radii.lg };
-createCacheKey[9] = { borderRadius: require("Themes").radii.md, overflow: "hidden", height: "100%", backgroundColor: require("Themes").colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-let obj5 = { borderRadius: require("Themes").radii.md, overflow: "hidden", height: "100%", backgroundColor: require("Themes").colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[10] = { justifyContent: "center", alignItems: "center", height: 120, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-let obj6 = { justifyContent: "center", alignItems: "center", height: 120, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[11] = { padding: require("Themes").space.PX_12, flexGrow: 1, flexShrink: 1 };
+let obj3 = { borderColor: ThemesDefault.colors.BORDER_STRONG, borderTopWidth: 1, marginTop: ThemesDefault.space.PX_24 };
+createCacheKey[8] = { alignSelf: "center", justifyContent: "center", paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: ThemesDefault.radii.lg };
+let obj4 = { alignSelf: "center", justifyContent: "center", paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_4, backgroundColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_ACTIVE, borderRadius: ThemesDefault.radii.lg };
+createCacheKey[9] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj5 = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", height: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[10] = { justifyContent: "center", alignItems: "center", height: 120, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj6 = { justifyContent: "center", alignItems: "center", height: 120, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderBottomWidth: StyleSheet.hairlineWidth, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[11] = { padding: ThemesDefault.space.PX_12, flexGrow: 1, flexShrink: 1 };
 createCacheKey[12] = { flexDirection: "row", gap: 12 };
 createCacheKey[13] = { width: "50%", flexShrink: 1 };
 createCacheKey[14] = { height: "100%", width: "100%" };
 createCacheKey[15] = { position: "absolute", top: 0, left: 0, height: "100%", width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { padding: require("Themes").space.PX_12, flexGrow: 1, flexShrink: 1 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/app_launcher/native/screens/home/AppLauncherHomeScreen.tsx");
+let closure_25 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { padding: ThemesDefault.space.PX_12, flexGrow: 1, flexShrink: 1 };
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/AppLauncherHomeScreen.tsx");
 
 export default function AppLauncherHomeScreen(route) {
-  let bottomVisibilityInsetRef;
-  let c23;
-  let c32;
-  let flashListRef;
-  let frecencyCommands;
-  let frecentApps;
-  let hasViewedActivityItem;
-  let hasViewedLearnMoreItem;
-  let loading;
-  let sectionDescriptors;
-  let tmp51;
-  let tmp64;
   const params = route.route.params;
   const context = params.context;
   const initialSearchQuery = params.initialSearchQuery;
   let entrypoint = initialSearchQuery;
   const navigation = route.navigation;
-  let c2 = navigation;
-  let dependencyMap;
+  closure_2 = navigation;
+  dependencyMap = undefined;
   frecentApps = undefined;
   let React;
   let appsInThisServer;
@@ -624,8 +568,8 @@ export default function AppLauncherHomeScreen(route) {
   let stateFromStores1;
   let memo3;
   let memo4;
-  let c12;
-  let c13;
+  closure_12 = undefined;
+  closure_13 = undefined;
   let memo2;
   let memo8;
   frecencyCommands = undefined;
@@ -637,13 +581,13 @@ export default function AppLauncherHomeScreen(route) {
   let ref;
   c23 = undefined;
   let memo9;
-  let createCacheKey;
+  let callback4;
   let callback5;
-  let closure_27;
-  let closure_28;
+  closure_27 = undefined;
+  closure_28 = undefined;
   let pinnedSearchBarBottomBorder;
   let ref1;
-  let c31;
+  c31 = undefined;
   c32 = undefined;
   let stateFromStores3;
   let callback6;
@@ -657,11 +601,11 @@ export default function AppLauncherHomeScreen(route) {
   const tmp5 = entrypoint(8995)(hasViewedActivityItem);
   const tmp6 = entrypoint(8995)(hasViewedLearnMoreItem);
   frecentApps = tmp6;
-  let tmp7 = createCacheKey();
+  let tmp7 = callback4();
   React = tmp7;
   let tmp8 = entrypoint(8633)();
   appsInThisServer = tmp8;
-  let obj1 = context(9565);
+  obj1 = context(9565);
   const requiredAppLauncherContext = obj1.useRequiredAppLauncherContext();
   const chatInputRef = requiredAppLauncherContext.chatInputRef;
   isActivitiesInTextEnabled = chatInputRef;
@@ -674,54 +618,52 @@ export default function AppLauncherHomeScreen(route) {
   const onActivityItemSelected = requiredAppLauncherContext.onActivityItemSelected;
   memo4 = onActivityItemSelected;
   const size = entrypoint(1494)();
-  c12 = tmp10;
+  closure_12 = tmp10;
   let obj2 = React;
   let items = [entrypoint];
   const effect = React.useEffect(() => {
-    if (memo3 === context(_undefined2[41]).AppLauncherEntrypoint.VOICE) {
-      const result = _undefined(_undefined2[42]).dismissNewActivityIndicator();
-      const obj = _undefined(_undefined2[42]);
+    if (memo3 === context(9566).AppLauncherEntrypoint.VOICE) {
+      const result = lib(8701).dismissNewActivityIndicator();
+      const obj = lib(8701);
     }
   }, items);
   let items1 = [chatInputRef, keyboardCloseReasonRef];
   const items2 = [context, entrypoint, navigation];
   const callback = React.useCallback(() => {
-    PREVIEW.current = context(_undefined2[39]).AppLauncherKeyboardCloseReason.COMMAND;
+    PREVIEW.current = context(9565).AppLauncherKeyboardCloseReason.COMMAND;
     const current = isActivitiesInTextEnabled.current;
     if (current != null) {
       current.closeCustomKeyboard();
     }
   }, items1);
   const callback1 = React.useCallback((application) => {
-    let obj = context(_undefined2[23]);
-    obj = { location: context(_undefined2[29]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application: null, navigation: null, context: null, sectionName: null, entrypoint: null };
+    let obj = context(11224);
+    obj = { location: context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application: null, navigation: null, context: null, sectionName: null, entrypoint: null };
     let FAKE_BUILT_IN_APP = application.application;
     if (FAKE_BUILT_IN_APP == null) {
-      FAKE_BUILT_IN_APP = context(_undefined2[19]).FAKE_BUILT_IN_APP;
+      FAKE_BUILT_IN_APP = context(8447).FAKE_BUILT_IN_APP;
     }
     obj[1] = FAKE_BUILT_IN_APP;
-    obj[2] = c2;
+    obj[2] = closure_2;
     obj[3] = context;
     obj[4] = arg1;
     obj[5] = memo3;
     const result = obj.handleApplicationSelected(obj);
   }, items2);
-  c13 = callback1;
+  closure_13 = callback1;
   const items3 = [context, entrypoint, navigation];
   const callback2 = React.useCallback((navigates) => {
-    let sectionName;
-    let shelfData;
     let flag = navigates.navigates;
     ({ shelfData, sectionName } = navigates);
     if (flag === undefined) {
       flag = true;
     }
-    let obj = context(_undefined2[23]);
-    obj = { location: context(_undefined2[29]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application: shelfData.application, navigation: c2, context, sectionName, navigates: flag, entrypoint: memo3 };
+    let obj = context(11224);
+    obj = { location: context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application: shelfData.application, navigation: closure_2, context, sectionName, navigates: flag, entrypoint: memo3 };
     const result = obj.handleApplicationSelected(obj);
   }, items3);
   memo2 = callback2;
-  c2 = undefined;
+  closure_2 = undefined;
   dependencyMap = undefined;
   frecentApps = undefined;
   React = undefined;
@@ -731,8 +673,8 @@ export default function AppLauncherHomeScreen(route) {
   stateFromStores1 = undefined;
   memo3 = undefined;
   memo4 = undefined;
-  c12 = undefined;
-  c13 = undefined;
+  closure_12 = undefined;
+  closure_13 = undefined;
   memo2 = undefined;
   memo8 = undefined;
   frecencyCommands = undefined;
@@ -743,7 +685,7 @@ export default function AppLauncherHomeScreen(route) {
     guild_id = context.channel.guild_id;
   }
   const tmp16Result = entrypoint(11212)({ guildId: guild_id });
-  c2 = tmp16Result;
+  closure_2 = tmp16Result;
   const tmp19 = entrypoint === context(9566).AppLauncherEntrypoint.VOICE;
   dependencyMap = tmp19;
   let tmp20 = entrypoint(11296)({ context, onlyActivityApps: tmp19 });
@@ -754,16 +696,16 @@ export default function AppLauncherHomeScreen(route) {
   appsInThisServer = tmp4(11299)({ context }).appsInThisServer;
   const items4 = [appsInThisServer, tmp21];
   memo = obj2.useMemo(() => {
-    const intl = context(_undefined2[17]).intl;
-    const mapped = c5 ? appsInThisServer : c23.map((application) => ({ application: application.application }));
-    return callback8(mapped, "in_this_server", intl.string(context(_undefined2[17]).t.oJyzCu), context(_undefined2[67]).IN_THIS_SERVER_ITEM_MAX);
+    const intl = context(1236).intl;
+    const mapped = closure_5 ? appsInThisServer : c23.map((application) => ({ application: application.application }));
+    return callback8(mapped, "in_this_server", intl.string(context(1236).t.oJyzCu), context(11287).IN_THIS_SERVER_ITEM_MAX);
   }, items4);
   const items5 = [frecentApps];
-  memo1 = obj2.useMemo(() => frecentApps.map((applicationId) => ({ type: outer1_0(outer1_3[44]).AppLauncherHomeListItemType.APP, applicationId: applicationId.id, section: applicationId, isFirstRow: 0 === arg1, isLastRow: arg1 === length.length - 1, sectionName: "recents" })), items5);
+  memo1 = obj2.useMemo(() => frecentApps.map((applicationId) => ({ type: closure_1_0(closure_1_3[44]).AppLauncherHomeListItemType.APP, applicationId: applicationId.id, section: applicationId, isFirstRow: 0 === arg1, isLastRow: arg1 === length.length - 1, sectionName: "recents" })), items5);
   const items6 = [tmp21, frecentApps];
   memo2 = obj2.useMemo(() => {
-    let tmp = !c5;
-    if (c5) {
+    let tmp = !closure_5;
+    if (closure_5) {
       tmp = !frecentApps.some((application) => null != application.application);
     }
     return tmp;
@@ -778,10 +720,10 @@ export default function AppLauncherHomeScreen(route) {
   const effect1 = obj2.useEffect(() => {
     let tmp = isActivitiesInTextEnabled;
     if (!isActivitiesInTextEnabled) {
-      tmp = entrypoint === context(_undefined2[41]).AppLauncherEntrypoint.VOICE;
+      tmp = entrypoint === context(9566).AppLauncherEntrypoint.VOICE;
     }
     if (tmp) {
-      let obj = context(_undefined2[42]);
+      let obj = context(8701);
       let guild_id;
       if ("channel" === context.type) {
         guild_id = context.channel.guild_id;
@@ -806,9 +748,9 @@ export default function AppLauncherHomeScreen(route) {
   stateFromStores1 = context(589).useStateFromStores(items9, () => memo4.getCollections({ surface: memo9, activeState: PREVIEW }));
   const items10 = [stateFromStores1, tmp19];
   memo3 = obj2.useMemo(() => {
-    if (_undefined2) {
-      let result = context(_undefined2[19]).ensureRecommendationSectionsOnlyContainActivities(stateFromStores1);
-      const obj = context(_undefined2[19]);
+    if (dependencyMap) {
+      let result = context(8447).ensureRecommendationSectionsOnlyContainActivities(stateFromStores1);
+      const obj = context(8447);
     } else {
       result = stateFromStores1;
     }
@@ -816,49 +758,48 @@ export default function AppLauncherHomeScreen(route) {
   }, items10);
   const items11 = [PREVIEW, entrypoint];
   const effect2 = obj2.useEffect(() => {
-    let obj = context(_undefined2[19]);
+    let obj = context(8447);
     if (obj.appLauncherShowsRecommendations(entrypoint)) {
       obj = { surface: null, activeState: null };
       obj[0] = memo9;
       obj[1] = PREVIEW;
-      const collections = context(_undefined2[78]).fetchCollections(obj);
-      const tmpResult = context(_undefined2[78]);
+      const collections = context(11247).fetchCollections(obj);
+      const tmpResult = context(11247);
     }
   }, items11);
   const items12 = [entrypoint, tmp16Result];
   memo4 = obj2.useMemo(() => {
     let diff;
-    let arr = _undefined;
-    if (0 !== _undefined.length) {
-      let tmp7 = _undefined2;
-      if (entrypoint === context(_undefined2[41]).AppLauncherEntrypoint.VOICE) {
+    let arr = lib;
+    if (0 !== lib.length) {
+      if (entrypoint === context(9566).AppLauncherEntrypoint.VOICE) {
         const items = [];
         let tmp8 = tmp15;
         let num = 0;
         if (0 < arr.length - 1) {
           do {
             let sum = num + 1;
-            let tmp2 = _undefined;
+            let tmp2 = lib;
             let obj = { type: null, shelfItem1: null, shelfItem2: null, sectionName: "activities", shelfItem1SectionPosition: null, shelfItem2SectionPosition: null, sectionOverallPosition: 0, isLastTuple: false };
             let tmp3 = context;
-            let tmp4 = _undefined2;
-            obj[0] = context(_undefined2[44]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
-            obj[1] = _undefined[num];
-            obj[2] = _undefined[sum];
+            let tmp4 = dependencyMap;
+            obj[0] = context(11265).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+            obj[1] = lib[num];
+            obj[2] = lib[sum];
             obj[4] = num;
             obj[5] = sum;
             arr = items.push(obj);
             num = num + 2;
-            tmp7 = _undefined2;
+            let tmp7 = dependencyMap;
             tmp8 = context;
-            arr = _undefined;
-            diff = _undefined.length - 1;
+            arr = lib;
+            diff = lib.length - 1;
           } while (num < diff);
         }
         if (arr.length % 2 === 1) {
           obj = { type: null, shelfItem1: null, shelfItem2: null, sectionName: "activities", shelfItem1SectionPosition: null, shelfItem2SectionPosition: null, sectionOverallPosition: 0, isLastTuple: false };
           const diff1 = arr.length - 1;
-          obj[0] = tmp8(tmp7[44]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
+          obj[0] = tmp8(11265).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE;
           obj[1] = arr[arr.length - 1];
           obj[2] = undefined;
           obj[4] = diff1;
@@ -867,9 +808,9 @@ export default function AppLauncherHomeScreen(route) {
         }
         items[items.length - 1].isLastTuple = true;
         obj = { type: null, section: null, sectionName: "activities", numItems: null, numVisibleItems: null };
-        obj[0] = tmp8(tmp7[44]).AppLauncherHomeListItemType.SECTION_HEADER;
-        const intl = tmp8(tmp7[17]).intl;
-        obj[1] = intl.string(tmp8(tmp7[17]).t.aeuOoh);
+        obj[0] = tmp8(11265).AppLauncherHomeListItemType.SECTION_HEADER;
+        const intl = tmp8(1236).intl;
+        obj[1] = intl.string(tmp8(1236).t.aeuOoh);
         ({ length: obj3[3], length: obj3[4] } = arr);
         const items1 = [obj];
         HermesBuiltin.arraySpread(items, 1);
@@ -880,9 +821,9 @@ export default function AppLauncherHomeScreen(route) {
     return [];
   }, items12);
   const tmp33 = PREVIEW(context, true, false);
-  c12 = tmp33;
+  closure_12 = tmp33;
   const tmp34 = stateFromStores1(true, false);
-  c13 = tmp34;
+  closure_13 = tmp34;
   let result = tmp33.result;
   let sections;
   if (result != null) {
@@ -896,7 +837,7 @@ export default function AppLauncherHomeScreen(route) {
   }
   items13[1] = sections1;
   let memo5 = obj2.useMemo(() => {
-    const result = _undefined4.result;
+    const result = closure_12.result;
     let sections;
     if (result != null) {
       sections = result.sections;
@@ -904,7 +845,7 @@ export default function AppLauncherHomeScreen(route) {
     if (sections == null) {
       sections = {};
     }
-    const result2 = _undefined5.result;
+    const result2 = store.result;
     let sections1;
     if (result2 != null) {
       sections1 = result2.sections;
@@ -922,7 +863,7 @@ export default function AppLauncherHomeScreen(route) {
     return someResult;
   }, items13);
   const tmpResult1 = context(589);
-  const items14 = [c12];
+  const items14 = [closure_12];
   let channel = null;
   const stateFromStores2 = context(589).useStateFromStores(items14, () => {
     let tmp2 = "channel" === context.type;
@@ -934,7 +875,7 @@ export default function AppLauncherHomeScreen(route) {
         isDMResult = channel2.isMultiUserDM();
       }
       if (!isDMResult) {
-        isDMResult = _undefined4.can(memo1.USE_APPLICATION_COMMANDS, tmp.channel);
+        isDMResult = closure_12.can(memo1.USE_APPLICATION_COMMANDS, tmp.channel);
       }
       tmp2 = isDMResult;
     }
@@ -987,12 +928,12 @@ export default function AppLauncherHomeScreen(route) {
       let item = memo3.forEach((application_directory_collection_items) => {
         const prop = application_directory_collection_items.application_directory_collection_items;
         const item = prop.forEach((type) => {
-          if (type.type === outer1_0(outer1_3[79]).ApplicationDirectoryCollectionItemType.APPLICATION) {
+          if (type.type === closure_1_0(closure_1_3[79]).ApplicationDirectoryCollectionItemType.APPLICATION) {
             set.add(type.application.id);
           }
         });
       });
-      const item1 = _undefined.forEach((application) => {
+      const item1 = lib.forEach((application) => {
         if (!set.has(application.application.id)) {
           items.push(application);
         }
@@ -1008,8 +949,6 @@ export default function AppLauncherHomeScreen(route) {
       items = [];
     } else {
       let item = memo3.forEach((title) => {
-        let application_directory_collection_items;
-        let type;
         ({ type, application_directory_collection_items } = title);
         if (type === context(11301).ApplicationDirectoryCollectionType.BANNER_CARDS) {
           const _Math = Math;
@@ -1050,7 +989,7 @@ export default function AppLauncherHomeScreen(route) {
                   let collectionItemAssetUrl1;
                   if (tmp29) {
                     let tmp24Result1 = tmp24(11302);
-                    let obj1 = { itemId: null, hash: null };
+                    obj1 = { itemId: null, hash: null };
                     ({ id: obj7[0], image_hash: obj7[1] } = tmp23);
                     collectionItemAssetUrl1 = tmp24Result1.getCollectionItemAssetUrl(obj1);
                   }
@@ -1091,12 +1030,12 @@ export default function AppLauncherHomeScreen(route) {
           });
           found = mapped.filter(tmp(1370).isNotNullish);
           if (tmpResult.hasFlag(title.flags, tmp(11304).ApplicationCollectionFlags.APPENDS_REMAINING_ACTIVITIES)) {
-            const item = outer1_15.forEach((application) => {
+            const item = closure_1_15.forEach((application) => {
               found.push({ application: application.application, showsPromoted: false });
             });
           }
           const push = found.push;
-          const items = [];
+          items = [];
           HermesBuiltin.arraySpread(callback8(found, title.title, title.title, undefined, arg1), 0);
           HermesBuiltin.apply(items, found);
           tmpResult = tmp(1403);
@@ -1108,10 +1047,10 @@ export default function AppLauncherHomeScreen(route) {
   frecencyCommands = memo7;
   const items17 = [entrypoint, memo7, memo4];
   memo8 = obj2.useMemo(() => {
-    let obj = context(_undefined2[19]);
+    let obj = context(8447);
     if (obj.appLauncherShowsRecommendations(entrypoint)) {
       obj = { type: null };
-      obj[0] = tmp(tmp2[44]).AppLauncherHomeListItemType.LEARN_MORE;
+      obj[0] = tmp(11265).AppLauncherHomeListItemType.LEARN_MORE;
       const items = [];
       items[HermesBuiltin.arraySpread(frecencyCommands, 0)] = obj;
       return items;
@@ -1121,38 +1060,37 @@ export default function AppLauncherHomeScreen(route) {
       return items1;
     }
     tmp = context;
-    tmp2 = _undefined2;
   }, items17);
   const items18 = [context, entrypoint, navigation, sectionDescriptors];
   callback3 = obj2.useCallback((application) => {
     application = application.application;
-    let obj = context(_undefined2[19]);
+    let obj = context(8447);
     const isEmbeddedAppResult = obj.isEmbeddedApp(application);
     let tmp4 = !isEmbeddedAppResult;
     if (!isEmbeddedAppResult) {
       tmp4 = null != sectionDescriptors.find((id) => id.id === application.id);
     }
-    obj = { location: tmp(tmp2[29]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application, navigation: c2, context: application, installOnDemand: !tmp4, sectionName: application.sectionName, entrypoint: memo3 };
-    const result = context(_undefined2[23]).handleApplicationSelected(obj);
+    obj = { location: tmp(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, application, navigation: closure_2, context: application, installOnDemand: !tmp4, sectionName: application.sectionName, entrypoint: memo3 };
+    const result = context(11224).handleApplicationSelected(obj);
   }, items18);
   const tmpResult2 = context(589);
   clickOnHomeActivityOpensAppDetails = context(11266).useClickOnHomeActivityOpensAppDetails();
   const items19 = [clickOnHomeActivityOpensAppDetails, context, entrypoint, tmp6, size.width > size.height, memo8.length, navigation, onActivityItemSelected, callback2, callback1, callback3, tmp8, tmp7.sectionHeader, width];
-  const callback4 = obj2.useCallback((item) => {
+  callback4 = obj2.useCallback((item) => {
     item = item.item;
     const index = item.index;
     const type = item.type;
-    if (context(_undefined2[44]).AppLauncherHomeListItemType.PLACEHOLDER === type) {
+    if (context(11265).AppLauncherHomeListItemType.PLACEHOLDER === type) {
       let obj = { isFirstRow: null, isLastRow: null, style: null };
       obj[0] = 0 === index;
       obj[1] = index === memo8.length - 1;
       obj = { height: null };
       obj[0] = appsInThisServer;
       obj[2] = obj;
-      return memo(entrypoint(tmp2[45]), obj);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.SECTION_HEADER === type) {
-      const items = [_undefined3.sectionHeader, ];
-      let obj1 = null;
+      return memo(entrypoint(11267), obj);
+    } else if (tmp(11265).AppLauncherHomeListItemType.SECTION_HEADER === type) {
+      const items = [closure_5.sectionHeader, ];
+      obj1 = null;
       if (0 !== index) {
         obj1 = { marginTop: 24 };
       }
@@ -1160,31 +1098,31 @@ export default function AppLauncherHomeScreen(route) {
       items[1] = obj1;
       obj2[3] = items;
       obj2[4] = item.section;
-      return memo(tmp(tmp2[16]).Text, obj2);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.SHELF_ITEM === type) {
+      return memo(tmp(4734).Text, obj2);
+    } else if (tmp(11265).AppLauncherHomeListItemType.SHELF_ITEM === type) {
       const obj3 = { section: null, onPress: null, isFirstRow: null, isLastRow: null };
       obj3[0] = item.section;
       obj3[1] = function onPress(shelfData) {
-        outer1_14({ shelfData, sectionName: item.sectionName });
+        closure_1_14({ shelfData, sectionName: item.sectionName });
       };
       ({ isFirstRow: obj10[2], isLastRow: obj10[3] } = item);
       return memo(pinnedSearchBarBottomBorder, obj3, item.section.application.id);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE === type) {
+    } else if (tmp(11265).AppLauncherHomeListItemType.SHELF_ITEM_TUPLE === type) {
       const obj4 = { context: null, sectionName: null, onPress: null, usesHandleActivityItemSelected: null, onActivityItemSelected: null, shelfItem1: null, shelfItem2: null, isLastTuple: null, entrypoint: null, containerWidth: null };
       obj4[0] = item;
-      obj4[1] = tmp(tmp2[41]).AppLauncherSectionName.ACTIVITIES;
+      obj4[1] = tmp(9566).AppLauncherSectionName.ACTIVITIES;
       obj4[2] = function onPress(shelfData) {
         const obj = { shelfData, sectionName: item.sectionName, navigates: null };
-        let tmp2 = outer1_21;
+        let tmp2 = closure_1_21;
         if (!tmp2) {
-          tmp2 = outer1_10 !== context(9566).AppLauncherEntrypoint.VOICE;
+          tmp2 = closure_1_10 !== context(9566).AppLauncherEntrypoint.VOICE;
         }
         obj[2] = tmp2;
-        outer1_14(obj);
+        closure_1_14(obj);
       };
       let tmp31 = !clickOnHomeActivityOpensAppDetails;
       if (!clickOnHomeActivityOpensAppDetails) {
-        tmp31 = memo3 === tmp(tmp2[41]).AppLauncherEntrypoint.VOICE;
+        tmp31 = memo3 === tmp(9566).AppLauncherEntrypoint.VOICE;
       }
       obj4[3] = tmp31;
       obj4[4] = memo4;
@@ -1192,7 +1130,7 @@ export default function AppLauncherHomeScreen(route) {
       obj4[8] = memo3;
       obj4[9] = stateFromStores1;
       return memo(ref1, obj4, item.shelfItem1.application.id);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.RECOMMENDATION_TUPLE === type) {
+    } else if (tmp(11265).AppLauncherHomeListItemType.RECOMMENDATION_TUPLE === type) {
       const obj5 = { context: null, sectionName: null, onPress: null, item1: null, item2: null, isLastTuple: null, entrypoint: null, containerWidth: null };
       obj5[0] = item;
       obj5[1] = item.sectionName;
@@ -1203,57 +1141,57 @@ export default function AppLauncherHomeScreen(route) {
       obj5[6] = memo3;
       obj5[7] = stateFromStores1;
       return memo(c32, obj5);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.APP === type) {
+    } else if (tmp(11265).AppLauncherHomeListItemType.APP === type) {
       const obj6 = { section: null, onPress: null, isFirstRow: null, isLastRow: null, style: null };
       obj6[0] = item.section;
       obj6[1] = function onPress() {
-        outer1_13(item.section, context(9566).AppLauncherSectionName.INSTALLED);
+        closure_1_13(item.section, context(9566).AppLauncherSectionName.INSTALLED);
       };
       ({ isFirstRow: obj6[2], isLastRow: obj6[3] } = item);
       const obj7 = { height: null };
       obj7[0] = appsInThisServer;
       obj6[4] = obj7;
       return memo(closure_28, obj6, item.section.id);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER === type) {
+    } else if (tmp(11265).AppLauncherHomeListItemType.RECOMMENDATION_SECTION_HEADER === type) {
       const obj8 = { index: null, children: null };
       obj8[0] = index;
       obj8[1] = item.section;
       return memo(trackAppLauncherHomeItemImpression, obj8);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD === type) {
+    } else if (tmp(11265).AppLauncherHomeListItemType.RECOMMENDATION_BANNER_CARD === type) {
       const obj9 = { application: null, isFirst: null, isLast: null, onPress: null, isLandscape: null, showsPromoted: null, overrideImageUrl: null };
       obj9[0] = item.item.application;
       ({ isFirst: obj4[1], isLast: obj4[2] } = item);
       obj9[3] = function onPress() {
-        return outer1_20({ application: item.item.application, sectionName: item.sectionName });
+        return closure_1_20({ application: item.item.application, sectionName: item.sectionName });
       };
-      obj9[4] = c12;
+      obj9[4] = closure_12;
       ({ showsPromoted: obj4[5], overrideImageUrl: obj4[6] } = item);
-      return memo(entrypoint(tmp2[46]), obj9);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.RECOMMENDATION_APP === type) {
+      return memo(entrypoint(11268), obj9);
+    } else if (tmp(11265).AppLauncherHomeListItemType.RECOMMENDATION_APP === type) {
       const obj10 = { application: null, isFirstRow: null, isLastRow: null, onPress: null, showsPromoted: null };
       ({ application: obj3[0], isFirstRow: obj3[1], isLastRow: obj3[2] } = item);
       obj10[3] = function onPress() {
-        return outer1_20({ application: item.application, sectionName: item.sectionName });
+        return closure_1_20({ application: item.application, sectionName: item.sectionName });
       };
       obj10[4] = item.showsPromoted;
-      return memo(entrypoint(tmp2[47]), obj10, item.application.id);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.VIEW_ALL === type) {
+      return memo(entrypoint(11270), obj10, item.application.id);
+    } else if (tmp(11265).AppLauncherHomeListItemType.VIEW_ALL === type) {
       const obj11 = { title: null, onPress: null };
       obj11[0] = item.title;
       obj11[1] = function onPress() {
         const applications = item.applications;
         const mapped = applications.map((arg0) => arg0);
         let obj = context(11224);
-        obj = { location: context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, navigation: outer1_2, context: item, sectionName: item.sectionName, sectionOverallPosition: item.sectionOverallPosition, applications: mapped, sectionItemType: context(11225).SectionItemType.APPS, commands: [], sectionDescriptors: mapped.map((application) => callback(table[50]).getApplicationCommandSection(application)), title: item.title, promotedApplicationIds: item.promotedApplicationIds };
+        obj = { location: context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, navigation: closure_1_2, context: item, sectionName: item.sectionName, sectionOverallPosition: item.sectionOverallPosition, applications: mapped, sectionItemType: context(11225).SectionItemType.APPS, commands: [], sectionDescriptors: mapped.map((application) => callback(table[50]).getApplicationCommandSection(application)), title: item.title, promotedApplicationIds: item.promotedApplicationIds };
         const result = obj.handleViewAllSelected(obj);
       };
-      return memo(entrypoint(tmp2[48]), obj11);
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.DIVIDER_ITEM === type) {
+      return memo(entrypoint(11271), obj11);
+    } else if (tmp(11265).AppLauncherHomeListItemType.DIVIDER_ITEM === type) {
       return memo(callback6, {});
-    } else if (tmp(tmp2[44]).AppLauncherHomeListItemType.LEARN_MORE === type) {
+    } else if (tmp(11265).AppLauncherHomeListItemType.LEARN_MORE === type) {
       obj = { visible: null };
       obj[0] = frecentApps.valueOf();
-      return memo(entrypoint(tmp2[51]), obj);
+      return memo(entrypoint(11272), obj);
     } else {
       return null;
     }
@@ -1263,12 +1201,12 @@ export default function AppLauncherHomeScreen(route) {
   const tmpResult3 = context(11266);
   [tmp51, c23] = frecentApps(obj2.useState(false), 2);
   const items20 = [entrypoint];
-  memo9 = obj2.useMemo(() => entrypoint(_undefined2[52]).debounce((query) => {
-    let obj = outer1_0(outer1_3[53]);
-    obj = { query, source: getUserAgnosticState };
-    obj.trackWithMetadata(outer1_16.APP_LAUNCHER_SEARCH_QUERY_TYPED, obj);
+  memo9 = obj2.useMemo(() => entrypoint(12).debounce((query) => {
+    let obj = closure_1_0(closure_1_3[53]);
+    obj = { query, source: closure_10 };
+    obj.trackWithMetadata(closure_1_16.APP_LAUNCHER_SEARCH_QUERY_TYPED, obj);
   }, 400, { leading: false, trailing: true }), items20);
-  createCacheKey = obj2.useRef(null);
+  callback4 = obj2.useRef(null);
   const effect3 = obj2.useEffect(() => () => {
     const current = ref.current;
     if (current != null) {
@@ -1277,14 +1215,14 @@ export default function AppLauncherHomeScreen(route) {
   }, []);
   const items21 = [memo9];
   callback5 = obj2.useCallback((arg0) => {
-    let closure_0 = arg0;
-    _undefined6(0 !== arg0.length);
+    closure_0 = arg0;
+    _undefined(0 !== arg0.length);
     let current = ref.current;
     if (current != null) {
       current.cancel();
     }
-    ref.current = context(_undefined2[54]).runAfterInteractions(() => {
-      const current = outer1_22.current;
+    ref.current = context(6548).runAfterInteractions(() => {
+      const current = closure_1_22.current;
       if (current != null) {
         current.setQuery(closure_0);
       }
@@ -1298,7 +1236,7 @@ export default function AppLauncherHomeScreen(route) {
   }, items22);
   const items23 = [entrypoint];
   closure_28 = obj2.useCallback(() => {
-    let obj = context(_undefined2[53]);
+    let obj = context(5042);
     obj = { source: memo3 };
     obj.trackWithMetadata(frecencyCommands.APP_LAUNCHER_SEARCH_FOCUSED, obj);
   }, items23);
@@ -1339,23 +1277,23 @@ export default function AppLauncherHomeScreen(route) {
   const tmpResult5 = context(11275);
   [tmp64, c32] = tmp49(obj2.useState(false), 2);
   const effect5 = obj2.useEffect(() => {
-    _undefined7(true);
+    _undefined2(true);
   }, []);
   const tmp49Result = tmp49(obj2.useState(false), 2);
-  const items26 = [c13];
-  stateFromStores3 = context(589).useStateFromStores(items26, () => _undefined5.getTriggeredOnboardingContentMetadata().willShowGlobalSearchOnboarding);
+  const items26 = [closure_13];
+  stateFromStores3 = context(589).useStateFromStores(items26, () => store.getTriggeredOnboardingContentMetadata().willShowGlobalSearchOnboarding);
   const items27 = [stateFromStores3];
   callback6 = obj2.useCallback((arg0) => {
     if (stateFromStores3) {
-      let obj = context(_undefined2[59]);
+      let obj = context(4196);
       obj = { dismissAction: null };
       obj[0] = tmp;
-      const result = obj.UNSAFE_markDismissibleContentAsDismissed(context(_undefined2[60]).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING, obj);
+      const result = obj.UNSAFE_markDismissibleContentAsDismissed(context(1377).DismissibleContent.APP_LAUNCHER_GLOBAL_SEARCH_ONBOARDING, obj);
       obj = {};
-      const merged = Object.assign(_undefined5.getTriggeredOnboardingContentMetadata());
+      const merged = Object.assign(store.getTriggeredOnboardingContentMetadata());
       obj.willShowGlobalSearchOnboarding = false;
-      const result1 = context(_undefined2[61]).setTriggeredOnboardingContentMetadata(obj);
-      const obj3 = context(_undefined2[61]);
+      const result1 = context(11276).setTriggeredOnboardingContentMetadata(obj);
+      const obj3 = context(11276);
     }
   }, items27);
   const tmpResult6 = context(589);
@@ -1364,7 +1302,7 @@ export default function AppLauncherHomeScreen(route) {
   const items29 = [sum];
   const memo10 = obj2.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(_undefined3.list);
+    const merged = Object.assign(closure_5.list);
     obj.paddingBottom = c31;
     return obj;
   }, items28);
@@ -1385,7 +1323,7 @@ export default function AppLauncherHomeScreen(route) {
   obj1 = { style: tmp7.container, children: null };
   obj2 = { style: tmp7.topBackgroundFill };
   const memo12 = obj2.useMemo(() => {
-    let obj = { viewabilityConfig: {}, onViewableItemsChanged: c3 };
+    let obj = { viewabilityConfig: {}, onViewableItemsChanged: closure_3 };
     const items = [obj, ];
     obj = { viewabilityConfig: memo8, onViewableItemsChanged: trackAppLauncherHomeItemImpression };
     items[1] = obj;
@@ -1429,15 +1367,15 @@ export default function AppLauncherHomeScreen(route) {
     obj7[4] = memo1;
     obj7[5] = callback3;
     obj7[6] = function onCommandSelected(command, section) {
-      let obj = context(_undefined2[23]);
-      obj = { location: context(_undefined2[29]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, context, command, section, sectionDescriptors, query: "", navigation: c2, sectionName: context(_undefined2[41]).AppLauncherSectionName.RECENT_COMMANDS, entrypoint: memo3 };
+      let obj = context(11224);
+      obj = { location: context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME, context, command, section, sectionDescriptors, query: "", navigation: closure_2, sectionName: context(9566).AppLauncherSectionName.RECENT_COMMANDS, entrypoint: memo3 };
       const result = obj.handleApplicationCommandSelected(obj);
     };
     obj7[7] = function onViewAllSelected(arg0) {
-      let obj = context(_undefined2[23]);
-      obj = { location: context(_undefined2[29]).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, navigation: c2, context, sectionName: null, applications: null, sectionItemType: null, commands: null, sectionDescriptors: null, title: null };
+      let obj = context(11224);
+      obj = { location: context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_APPLICATION_VIEW_FRECENCT, navigation: closure_2, context, sectionName: null, applications: null, sectionItemType: null, commands: null, sectionDescriptors: null, title: null };
       let str = "recent_apps_view_more";
-      if (arg0 === context(_undefined2[49]).SectionItemType.COMMANDS) {
+      if (arg0 === context(11225).SectionItemType.COMMANDS) {
         str = "recent_commands_view_more";
       }
       obj[3] = str;
@@ -1449,19 +1387,19 @@ export default function AppLauncherHomeScreen(route) {
         }
         return application;
       });
-      obj[4] = mapped.filter(context(_undefined2[66]).isNotNullish);
+      obj[4] = mapped.filter(context(1370).isNotNullish);
       obj[5] = arg0;
       obj[6] = frecencyCommands;
       obj[7] = sectionDescriptors;
-      if (memo3 === context(_undefined2[41]).AppLauncherEntrypoint.VOICE) {
-        const intl3 = tmp(tmp2[17]).intl;
-        let stringResult = intl3.string(tmp(tmp2[17]).t["2pFD8L"]);
-      } else if (arg0 === tmp(tmp2[49]).SectionItemType.COMMANDS) {
-        const intl2 = tmp(tmp2[17]).intl;
-        stringResult = intl2.string(tmp(tmp2[17]).t.V3Sq95);
+      if (memo3 === context(9566).AppLauncherEntrypoint.VOICE) {
+        const intl3 = tmp(1236).intl;
+        let stringResult = intl3.string(tmp(1236).t["2pFD8L"]);
+      } else if (arg0 === tmp(11225).SectionItemType.COMMANDS) {
+        const intl2 = tmp(1236).intl;
+        stringResult = intl2.string(tmp(1236).t.V3Sq95);
       } else {
-        const intl = tmp(tmp2[17]).intl;
-        stringResult = intl.string(tmp(tmp2[17]).t.SCViVk);
+        const intl = tmp(1236).intl;
+        stringResult = intl.string(tmp(1236).t.SCViVk);
       }
       obj[8] = stringResult;
       const result = obj.handleViewAllSelected(obj);
@@ -1480,18 +1418,18 @@ export default function AppLauncherHomeScreen(route) {
         }
       }
       if (null != mapped) {
-        let obj = context(_undefined2[23]);
+        let obj = context(11224);
         obj = { location: null, navigation: null, context: null, sectionName: null, applications: null, sectionItemType: null, commands: null, sectionDescriptors: null, title: null };
-        obj[0] = context(_undefined2[29]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME;
-        obj[1] = c2;
+        obj[0] = context(5248).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME;
+        obj[1] = closure_2;
         obj[2] = context;
-        obj[3] = context(_undefined2[41]).AppLauncherSectionName.APPS_IN_THIS_SERVER;
+        obj[3] = context(9566).AppLauncherSectionName.APPS_IN_THIS_SERVER;
         obj[4] = mapped;
-        obj[5] = context(_undefined2[49]).SectionItemType.APPS;
+        obj[5] = context(11225).SectionItemType.APPS;
         obj[6] = [];
         obj[7] = mapped.map((application) => callback(5245).getApplicationCommandSection(application));
-        const intl = context(_undefined2[17]).intl;
-        obj[8] = intl.string(context(_undefined2[17]).t.oJyzCu);
+        const intl = context(1236).intl;
+        obj[8] = intl.string(context(1236).t.oJyzCu);
         const result = obj.handleViewAllSelected(obj);
       }
     };

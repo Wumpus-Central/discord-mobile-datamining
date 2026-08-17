@@ -1,6 +1,9 @@
 // discord_app/modules/hub/HubProgressBarConstants.tsx
-const items = [require("create").HubProgressStep.JOIN_GUILD, require("create").HubProgressStep.INVITE_USER, require("create").HubProgressStep.CONTACT_SYNC];
-const result = require("set").fileFinishedImporting("modules/hub/HubProgressBarConstants.tsx");
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+
+const items = [create.HubProgressStep.JOIN_GUILD, create.HubProgressStep.INVITE_USER, create.HubProgressStep.CONTACT_SYNC];
+const result = set.fileFinishedImporting("modules/hub/HubProgressBarConstants.tsx");
 
 export const HUB_PROGRESS_STEP_ORDER = items;
 export const HUB_PROGRESS_NUM_TOTAL_STEPS = items.length;

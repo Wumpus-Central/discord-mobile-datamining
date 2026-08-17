@@ -1,38 +1,34 @@
 // discord_app/design/components/Navigator/native/PostponeRender.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useMountLayoutEffect } from "../../../../hooks/useMountEffect.tsx";
-import { KeyboardAwareView } from "../../../../modules/keyboard/native/KeyboardAwareView.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
+import _modDef6551 from "module_6551" /* 6551 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c5;
 const require = arg1;
 ({ View: c5, StyleSheet } = get_ActivityIndicator);
 createCacheKey = { view: null };
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOWER;
+createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWER;
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/PostponeRender.native.tsx");
 
 export const PostponeRender = function PostponeRender(children) {
-  let ignoreKeyboard;
-  let postpone;
-  let viewStyle;
   children = children.children;
   let first;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   ({ postpone, ignoreKeyboard, viewStyle } = children);
   const tmp2 = callback(React.useState(postpone), 2);
   first = tmp2[0];
   importDefault = tmp2[1];
   dependencyMap = React.useRef(undefined);
-  useMountLayoutEffect(() => {
+  useMountLayoutEffectDefault(() => {
     if (first) {
       table.current = first(table[7]).runAfterInteractions(() => {
         callback(false);
@@ -51,8 +47,8 @@ export const PostponeRender = function PostponeRender(children) {
   if (ignoreKeyboard) {
     let tmp4Result = closure_5;
   } else {
-    tmp4Result = KeyboardAwareView;
+    tmp4Result = _modDef6551;
   }
-  const style = [createCacheKey().view, viewStyle];
+  const style = [callback2().view, viewStyle];
   return <tmp4Result style={style}>{children}</tmp4Result>;
 };

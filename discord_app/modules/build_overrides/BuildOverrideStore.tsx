@@ -1,12 +1,15 @@
 // discord_app/modules/build_overrides/BuildOverrideStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import Version from "Version" /* 4290 */;
 import { Version } from "BuildOverrideUtils.tsx";
 
-const require = arg1;
+require = arg1;
 let obj = { NotResolved: 0, [0]: "NotResolved", Resolving: 1, [1]: "Resolving", Resolved: 2, [2]: "Resolved", Invalid: 3, [3]: "Invalid" };
 const NotResolved = obj.NotResolved;
 let c5 = null;
 let closure_6 = {};
+const Store = initializeDefault.Store;
 class BuildOverrideStore extends Store {
 }
 const prototype = BuildOverrideStore.prototype;
@@ -16,7 +19,7 @@ prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
     obj = Version;
     const buildOverride = obj.getBuildOverride();
     buildOverride.then((overrides) => {
-      let obj = callback(table[1]);
+      obj = callback(table[1]);
       obj = { type: "CURRENT_BUILD_OVERRIDE_RESOLVED", overrides };
       obj.dispatch(obj);
     });
@@ -27,7 +30,7 @@ prototype["getCurrentBuildOverride"] = function getCurrentBuildOverride() {
 prototype["getBuildOverride"] = function getBuildOverride(target) {
   const _require = target;
   if (!(target in obj1)) {
-    let obj = _Version;
+    obj = _Version;
     const validateURLResult = obj.validateURL(target);
     if (null != validateURLResult) {
       obj = {};
@@ -42,7 +45,7 @@ prototype["getBuildOverride"] = function getBuildOverride(target) {
       obj1 = obj;
       const buildOverrideMeta = tmp(4290).getBuildOverrideMeta(validateURLResult.url);
       buildOverrideMeta.then((override) => {
-        let obj = outer1_1(outer1_2[1]);
+        obj = closure_1_1(closure_1_2[1]);
         obj = { type: "BUILD_OVERRIDE_RESOLVED", url: closure_0, override };
         obj.dispatch(obj);
       });
@@ -65,8 +68,6 @@ prototype["getBuildOverrides"] = function getBuildOverrides() {
 BuildOverrideStore.displayName = "BuildOverrideStore";
 obj = {
   BUILD_OVERRIDE_RESOLVED: function handleBuildOverrideResolved(arg0) {
-    let override;
-    let url;
     ({ url, override } = arg0);
     if (null == override) {
       let Resolved = obj.Invalid;
@@ -86,8 +87,8 @@ obj = {
     overrides = overrides.overrides;
   }
 };
-const buildOverrideStore = new BuildOverrideStore(require("dispatcher"), obj);
-const result = require("initialize").fileFinishedImporting("modules/build_overrides/BuildOverrideStore.tsx");
+const buildOverrideStore = new BuildOverrideStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("modules/build_overrides/BuildOverrideStore.tsx");
 
 export default buildOverrideStore;
 export const State = obj;

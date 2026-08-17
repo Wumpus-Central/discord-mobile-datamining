@@ -1,17 +1,17 @@
 // discord_app/modules/video_calls/native/components/SingleScreenshare.tsx
-import "noop";
-import VoiceChatDrawerState from "VoiceChatDrawerState";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
+noopAll;
 ({ resetFocus: obj1, toggleFocus: c3 } = VoiceChatDrawerState);
 createCacheKey = { stageStreamContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BLACK };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/video_calls/native/components/SingleScreenshare.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/SingleScreenshare.tsx");
 
 export default function SingleScreenshare(channel) {
   channel = channel.channel;
@@ -24,12 +24,12 @@ export default function SingleScreenshare(channel) {
       callback2();
     },
     onDoubleTap() {
-      outer1_2();
-      const participant = channel(outer1_1[7]).selectParticipant(channel.id, null);
+      closure_1_2();
+      const participant = channel(closure_1_1[7]).selectParticipant(channel.id, null);
     },
     containerStyle: null
   };
-  const tmp = createCacheKey();
+  const tmp = callback();
   const tmp3 = jsx;
   let stageStreamContainer;
   if (channel.isGuildStageVoice()) {

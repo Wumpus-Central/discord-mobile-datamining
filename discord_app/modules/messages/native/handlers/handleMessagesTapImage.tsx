@@ -1,29 +1,15 @@
 // discord_app/modules/messages/native/handlers/handleMessagesTapImage.tsx
-import processMessage from "processMessage";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageTypes } from "ME";
+import closure_3 from "processMessage" /* 5013 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { MessageTypes } from "ME" /* 676 */;
 
 const require = arg1;
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapImage.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapImage.tsx");
 
 export const handleMessagesTapImage = function handleMessagesTapImage(tapImageData) {
-  let allowWithinModal;
-  let componentId;
-  let componentMediaIndex;
-  let embedId;
-  let embedIndex;
   let flattenSourceResult;
-  let index;
-  let message;
-  let messageChannel;
-  let num2;
-  let portal;
-  let selectedChannelId;
-  let showContextName;
-  let sources;
   let tmp20;
-  let type;
   tapImageData = tapImageData.tapImageData;
   ({ index, type, portal, embedIndex, componentId, componentMediaIndex, embedId } = tapImageData);
   ({ message, messageChannel, showContextName } = tapImageData);
@@ -40,7 +26,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           if ("component" !== type) {
             const _Error = Error;
             const _HermesInternal = HermesInternal;
-            const error = new Error("Unsupported thumbnail type: " + type);
+            error = new Error("Unsupported thumbnail type: " + type);
             throw error;
           }
         }
@@ -104,7 +90,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           let channelName;
           if (showContextName) {
             tmp25Result = tmp25(4984);
-            channelName = tmp25Result.computeChannelName(messageChannel, mergeGuildAvatar, markAllUserIdListsStale, false);
+            channelName = tmp25Result.computeChannelName(messageChannel, closure_5, closure_4, false);
           }
           obj[6] = channelName;
           let channelIcon;
@@ -184,7 +170,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
             tmp20Result = tmp20(8994);
             tmp20Result.setMediaSourcePortal(result2[num2], portal);
             found2 = result2.filter((closure_1) => {
-              const flattenSourceResult = embedId(outer1_2[7]).flattenSource(closure_1);
+              const flattenSourceResult = embedId(closure_1_2[7]).flattenSource(closure_1);
               let tmp3 = !tmp2;
               if (!(null != flattenSourceResult && !flattenSourceResult.noCarousel)) {
                 tmp3 = closure_1 >= arg1;

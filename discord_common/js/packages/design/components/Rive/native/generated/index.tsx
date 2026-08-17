@@ -1,5 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/generated/index.tsx
-const result = require("BountiesScrollGradientRive").fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/index.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/design/components/Rive/native/generated/index.tsx");
 for (const key10018 in require("BoostThisServerRive")) {
   let tmp3 = key10018;
   arg5[key10018] = require("BoostThisServerRive")[key10018];

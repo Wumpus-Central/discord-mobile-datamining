@@ -1,7 +1,9 @@
 // discord_app/modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx
-import { usePreloadedAsset } from "../../../../image/usePreloadedAsset.native.tsx";
-import { useThemeAndReducedMotionAwareAssetUrl } from "../../../promotions/MarketingComponentHooks.tsx";
-const result = require("set").fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
+import set from "set" /* 2 */;
+import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10304 */;
+import usePreloadedAssetDefault from "usePreloadedAsset" /* 16170 */;
+
+const result = set.fileFinishedImporting("modules/premium/gifting/native/hooks/useGiftingPromotionAssetsReady.tsx");
 
 export default function useGiftingPromotionAssetsReady(asset, asset2) {
   let obj = useThemeAndReducedMotionAwareAssetUrl;
@@ -10,13 +12,13 @@ export default function useGiftingPromotionAssetsReady(asset, asset2) {
     asset = asset.asset;
   }
   const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(asset);
-  const status = usePreloadedAsset(themeAndReducedMotionAwareAssetUrl).status;
+  const status = usePreloadedAssetDefault(themeAndReducedMotionAwareAssetUrl).status;
   let asset1;
   if (asset2 != null) {
     asset1 = asset2.asset;
   }
   const themeAndReducedMotionAwareAssetUrl1 = useThemeAndReducedMotionAwareAssetUrl.useThemeAndReducedMotionAwareAssetUrl(asset1);
-  const status2 = usePreloadedAsset(themeAndReducedMotionAwareAssetUrl1).status;
+  const status2 = usePreloadedAssetDefault(themeAndReducedMotionAwareAssetUrl1).status;
   let tmp8 = "skipped" === status;
   if (!tmp8) {
     tmp8 = "preloaded" === status;

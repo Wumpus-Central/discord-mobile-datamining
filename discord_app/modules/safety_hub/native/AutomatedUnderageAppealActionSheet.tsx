@@ -1,43 +1,35 @@
 // discord_app/modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx
-import Linking from "../../../lib/native/Linking.tsx";
-import { View } from "TableRowGroupTitle";
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
-import SafetyHubView from "SafetyHubView";
-import jsxProd from "_getSafetyHubData";
-import createCacheKey from "createCacheKey";
-import { intl } from "getSystemLocale";
-import { intl as intl2 } from "getSystemLocale";
-import { intl as intl3 } from "getSystemLocale";
-import { intl as intl4 } from "getSystemLocale";
-import { intl as intl5 } from "getSystemLocale";
-import { intl as intl6 } from "getSystemLocale";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import SafetyHubView from "SafetyHubView" /* 5438 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import { intl, intl as intl2, intl as intl3, intl as intl4, intl as intl5, intl as intl6 } from "getSystemLocale" /* 1236 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ AGE_APPEAL_ACTION_SHEET_NAME: closure_6, SafetyHubLinks: error } = SafetyHubView);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, header: null, content: null, moreInfo: null, learnMore: null, footer: null, number: null };
-createCacheKey = { flex: 1, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8 };
+createCacheKey = { flex: 1, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center" };
-createCacheKey[2] = { flex: 1, gap: require("Themes").space.PX_16 };
-let obj1 = { flex: 1, gap: require("Themes").space.PX_16 };
-createCacheKey[3] = { gap: require("Themes").space.PX_4 };
-let obj2 = { gap: require("Themes").space.PX_4 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_12, textAlign: "center", paddingBottom: require("Themes").space.PX_32 };
-let obj3 = { marginTop: require("Themes").space.PX_12, textAlign: "center", paddingBottom: require("Themes").space.PX_32 };
-createCacheKey[5] = { marginTop: require("Themes").space.PX_8 };
-let obj4 = { marginTop: require("Themes").space.PX_8 };
-createCacheKey[6] = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[2] = { flex: 1, gap: ThemesDefault.space.PX_16 };
+let obj1 = { flex: 1, gap: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { gap: ThemesDefault.space.PX_4 };
+let obj2 = { gap: ThemesDefault.space.PX_4 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_12, textAlign: "center", paddingBottom: ThemesDefault.space.PX_32 };
+let obj3 = { marginTop: ThemesDefault.space.PX_12, textAlign: "center", paddingBottom: ThemesDefault.space.PX_32 };
+createCacheKey[5] = { marginTop: ThemesDefault.space.PX_8 };
+let obj4 = { marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let obj6 = { title: null, description: null };
 obj6[0] = intl.string(require("getSystemLocale").t["1+E7LP"]);
 obj6[1] = intl2.string(require("getSystemLocale").t["BXiat/"]);
 let items = [obj6, , ];
-let obj7 = { title: null, description: null };
+const obj7 = { title: null, description: null };
 obj7[0] = intl3.string(require("getSystemLocale").t.iMQXtK);
 obj7[1] = intl4.string(require("getSystemLocale").t.oQ0vwu);
 items[1] = obj7;
@@ -45,22 +37,22 @@ let obj8 = { title: null, description: null };
 obj8[0] = intl5.string(require("getSystemLocale").t["oY/z1Q"]);
 obj8[1] = intl6.string(require("getSystemLocale").t.wtj02W);
 items[2] = obj8;
-let obj5 = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-let result = require("handleSafetyHubRequestAgeVerificationResetModalAction").fileFinishedImporting("modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx");
+let obj5 = { alignItems: "center", justifyContent: "center", width: 32, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/safety_hub/native/AutomatedUnderageAppealActionSheet.tsx");
 
 export default function AutomatedUnderageAppealActionSheet(onClose) {
   onClose = onClose.onClose;
   const classificationId = onClose.classificationId;
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
   let callback;
   let callback1;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   dependencyMap = tmp;
   let obj = onClose(589);
-  const items = [callback1];
+  items = [callback1];
   stateFromStores = obj.useStateFromStores(items, () => callback1.getAgeVerificationWebviewUrl());
-  let obj1 = onClose(589);
+  obj1 = onClose(589);
   const items1 = [callback1];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => callback1.getIsLoadingAgeVerification());
   const bottom = classificationId(1629)().bottom;
@@ -69,26 +61,26 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
     if (onClose != null) {
       tmp();
     }
-    classificationId(_undefined[10]).close();
+    classificationId(number[10]).close();
   }, items2);
   const items3 = [callback];
   callback1 = stateFromStores.useCallback(() => {
-    classificationId(_undefined[10]).success();
+    classificationId(number[10]).success();
     callback();
-    const obj = classificationId(_undefined[10]);
-    const result = classificationId(_undefined[10]).start_verification_check();
+    const obj = classificationId(number[10]);
+    const result = classificationId(number[10]).start_verification_check();
   }, items3);
   const items4 = [stateFromStores, callback1];
   const effect = stateFromStores.useEffect(() => {
     if ("" !== stateFromStores) {
-      let obj = classificationId(_undefined[11]);
+      let obj = classificationId(number[11]);
       obj = { webviewUrl: null, onComplete: null, entryPoint: null };
       obj[0] = tmp;
       obj[1] = callback1;
-      obj[2] = onClose(_undefined[12]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS;
+      obj[2] = onClose(number[12]).AgeVerificationModalEntryPoint.AUTOMATED_UNDERAGE_APPEALS;
       obj.showAgeVerification(obj);
-      classificationId(_undefined[13]).hideActionSheet(outer1_6);
-      const obj3 = classificationId(_undefined[13]);
+      classificationId(number[13]).hideActionSheet(closure_1_6);
+      const obj3 = classificationId(number[13]);
     }
   }, items4);
   obj = { scrollable: true, startHeight: null, children: null };
@@ -112,20 +104,19 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   items5[1] = callback(onClose(4734).Text, obj5);
   obj3[1] = items5;
   const items6 = [callback2(callback, obj3), , , ];
-  const obj6 = { children: null };
-  const obj7 = { hasIcons: true, children: null };
-  obj7[1] = items.map((arg0, arg1) => {
-    let description;
-    let title;
-    ({ title, description } = arg0);
-    let obj = { label: title, subLabel: description, icon: null };
-    obj = { style: _undefined.number, children: null };
-    obj = { variant: "heading-md/semibold", color: "text-brand", children: arg1 + 1 };
-    obj[1] = outer1_8(onClose(_undefined[16]).Text, obj);
-    obj[2] = outer1_8(callback, obj);
-    return outer1_8(onClose(_undefined[18]).TableRow, obj, arg1);
-  });
-  obj6[0] = callback(onClose(6286).TableRowGroup, obj7);
+  const obj6 = {
+    children: callback(onClose(6286).TableRowGroup, {
+      hasIcons: true,
+      children: items.map((arg0, arg1) => {
+        ({ title, description } = arg0);
+        let obj = { label: title, subLabel: description, icon: null };
+        obj = { style: number.number, children: closure_1_8(onClose(number[16]).Text, obj) };
+        obj = { variant: "heading-md/semibold", color: "text-brand", children: arg1 + 1 };
+        obj[2] = closure_1_8(callback, obj);
+        return closure_1_8(onClose(number[18]).TableRow, obj, arg1);
+      })
+    })
+  };
   items6[1] = callback(callback, obj6);
   const obj8 = { style: tmp.moreInfo, children: null };
   const obj9 = { title: null, hasIcons: false, children: null };
@@ -137,7 +128,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const intl5 = onClose(1236).intl;
   obj10[1] = intl5.string(onClose(1236).t.NHq382);
   obj10[2] = function onPress() {
-    return classificationId(_undefined[19]).openURL(constants.AGE_VERIFICATION_LINK);
+    return classificationId(number[19]).openURL(constants.AGE_VERIFICATION_LINK);
   };
   obj9[2] = callback(onClose(6291).TableRow, obj10);
   obj8[1] = callback(onClose(6286).TableRowGroup, obj9);
@@ -145,7 +136,7 @@ export default function AutomatedUnderageAppealActionSheet(onClose) {
   const obj11 = { style: tmp.footer, children: null };
   const obj12 = {
     onPress() {
-      return onClose(_undefined[21]).requestSuspendedUserAgeVerification(classificationId);
+      return onClose(number[21]).requestSuspendedUserAgeVerification(classificationId);
     },
     loading: stateFromStores1,
     disabled: stateFromStores1,

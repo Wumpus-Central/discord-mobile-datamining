@@ -1,32 +1,27 @@
 // discord_app/modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx
-import items from "items";
-import { View } from "openPremiumModal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getIconById } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "getSystemLocale";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { BackwardsCompatibleAppIconRows } from "../../../app_icons/native/AppIconRows.tsx";
-import { NitroUpsellButton } from "../../../premium/components/native/NitroUpsellButton.tsx";
+import contextDefault from "context" /* 7139 */;
+import _modDef9498 from "module_9498" /* 9498 */;
+import BackwardsCompatibleAppIconRowsDefault from "BackwardsCompatibleAppIconRows" /* 14835 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { getIconById } from "items" /* 7946 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ UpsellTypes: closure_6, AnalyticsPages: error } = ME);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ upsellButtonContainer: { padding: 0, position: "absolute", bottom: 56, width: 350, alignSelf: "center" } });
-const memoResult = require("getSystemLocale").memo(() => {
+const memoResult = importAllResult.memo(() => {
   function _onSelect() {
     const self = this;
     const tmp = analyticsLocations((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c1 = 0;
+      closure_0 = arg0;
+      c2 = 0;
+      c1 = 0;
       return (function*(arg0) {
         if (v0 === 2) {
           v0 = 3;
@@ -35,7 +30,7 @@ const memoResult = require("getSystemLocale").memo(() => {
           if (arg0 === 1) {
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
+            obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
@@ -54,7 +49,7 @@ const memoResult = require("getSystemLocale").memo(() => {
                 obj[0] = arg1;
                 return obj;
               } else {
-                const tmp25 = outer1_8(lib);
+                const tmp25 = closure_1_8(lib);
                 if (null != tmp25) {
                   const id = tmp25.id;
                   if (id === tmp23) {
@@ -62,8 +57,8 @@ const memoResult = require("getSystemLocale").memo(() => {
                       if (tmp27) {
                         if (!dependencyMap) {
                           let obj4 = v0(8471);
-                          const obj1 = { initialUpsellKey: null, imageSource: null };
-                          obj1[0] = outer1_6.APP_ICONS;
+                          obj1 = { initialUpsellKey: null, imageSource: null };
+                          obj1[0] = closure_1_6.APP_ICONS;
                           obj1[1] = tmp28;
                           const result = obj4.handleShowUpsellAlert(obj1);
                         }
@@ -121,7 +116,7 @@ const memoResult = require("getSystemLocale").memo(() => {
         }
       })();
     });
-    const _onSelect = tmp;
+    closure_5 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -133,15 +128,15 @@ const memoResult = require("getSystemLocale").memo(() => {
   let obj = stateFromStores(589);
   const items = [_onSelect];
   stateFromStores = obj.useStateFromStores(items, () => _onSelect.getCurrentUser());
-  let obj1 = stateFromStores(7945);
-  const importDefault = obj1.useCurrentAppIcon();
+  obj1 = stateFromStores(7945);
+  importDefault = obj1.useCurrentAppIcon();
   let obj2 = stateFromStores(1945);
   const isPremiumResult = obj2.isPremium(stateFromStores);
-  let dependencyMap = isPremiumResult;
-  const analyticsLocations = context().analyticsLocations;
+  dependencyMap = isPremiumResult;
+  const analyticsLocations = contextDefault().analyticsLocations;
   obj = { page: constants.APP_ICONS };
   obj = { children: null };
-  obj1 = { accessibilityRole: "radiogroup", children: null };
+  obj1 = { accessibilityRole: "radiogroup", children: callback(BackwardsCompatibleAppIconRowsDefault, obj2) };
   obj2 = {
     onSelect(arg0) {
       const self = this;
@@ -154,7 +149,6 @@ const memoResult = require("getSystemLocale").memo(() => {
       return applyArgumentsResult;
     }
   };
-  obj1[1] = callback(BackwardsCompatibleAppIconRows, obj2);
   obj[0] = callback(obj, obj1);
   const children = [callback(stateFromStores(8083).Form, obj), ];
   let tmp9Result = !isPremiumResult;
@@ -163,19 +157,18 @@ const memoResult = require("getSystemLocale").memo(() => {
     obj3[0] = tmp.upsellButtonContainer;
     let obj4 = { onPress: null, text: null };
     obj4[0] = function onPress() {
-      obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: null };
-      obj[2] = stateFromStores(isPremiumResult[18]).PremiumFeatureCardOrder.TIER_2_LEADING;
+      obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: stateFromStores(isPremiumResult[18]).PremiumFeatureCardOrder.TIER_2_LEADING };
       callback(isPremiumResult[17])(obj);
     };
     const intl = tmp2(1236).intl;
     obj4[1] = intl.string(tmp2(1236).t.M0rDSO);
-    obj3[1] = tmp9(NitroUpsellButton, obj4);
+    obj3[1] = tmp9(_modDef9498, obj4);
     tmp9Result = tmp9(obj, obj3);
-    const tmp6Result = NitroUpsellButton;
+    const tmp6Result = _modDef9498;
   }
   children[1] = tmp9Result;
   return closure_11(closure_10, { children });
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/app_icon/native/UserSettingsAppIcons.tsx");
 
 export default memoResult;

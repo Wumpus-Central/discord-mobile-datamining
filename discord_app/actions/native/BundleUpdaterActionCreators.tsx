@@ -1,15 +1,17 @@
 // discord_app/actions/native/BundleUpdaterActionCreators.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../AlertActionCreators.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import setDefault from "set" /* 4827 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
 let c4 = false;
-const result = require("getSystemLocale").fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/native/BundleUpdaterActionCreators.tsx");
 
 export default {
   prepareUpdate(versionRequired) {
     if (versionRequired) {
-      let obj = set;
+      let obj = setDefault;
       obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t.GQZdmI);
@@ -24,7 +26,7 @@ export default {
         return BundleUpdaterManager.reload();
       };
       obj.show(obj);
-      let c4 = true;
+      c4 = true;
     }
   },
   deferUpdate() {

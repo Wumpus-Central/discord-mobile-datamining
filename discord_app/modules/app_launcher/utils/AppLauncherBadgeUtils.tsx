@@ -1,9 +1,9 @@
 // discord_app/modules/app_launcher/utils/AppLauncherBadgeUtils.tsx
-const result = require("set").fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/app_launcher/utils/AppLauncherBadgeUtils.tsx");
 
 export const getNewestBadgeableVersion = function getNewestBadgeableVersion(arg0) {
-  let storeState;
-  let surface;
   ({ storeState, surface } = arg0);
   const timestamp = Date.now();
   const dateRangesForSurfaces = storeState.dateRangesForSurfaces;

@@ -1,14 +1,14 @@
 // discord_app/modules/messages/VoiceSessionUtils.tsx
-import noop from "noop";
-import recomputeAffinities from "recomputeAffinities";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8203 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "recomputeAffinities" /* 5407 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { maybeSortByProbability } from "../user_affinities/maybeSortByProbability.tsx";
-import { getHumanizedCallDuration } from "getHumanizedCallDuration.tsx";
 import { useNullableMessageAuthor } from "useMessageAuthor.tsx";
 
 const require = arg1;
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/VoiceSessionUtils.tsx");
 
 export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionParticipants(message) {
   const _require = message;
@@ -17,7 +17,7 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
   if (call != null) {
     const participants = call.participants;
     reduced = participants.reduce((arg0, arg1) => {
-      const user = outer1_6.getUser(arg1);
+      const user = closure_1_6.getUser(arg1);
       let tmp2 = arg0;
       if (null != user) {
         tmp2 = arg0;
@@ -38,7 +38,7 @@ export const getSortedVoiceSessionParticipants = function getSortedVoiceSessionP
 };
 export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionParticipants(author) {
   let stateFromStoresArray = author;
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   const items1 = [author.author.id, author.call];
   stateFromStoresArray = stateFromStoresArray(589).useStateFromStoresArray(items, () => {
     const call = stateFromStoresArray.call;
@@ -57,14 +57,14 @@ export const useSortedVoiceSessionParticipants = function useSortedVoiceSessionP
     return found1;
   }, items1);
   const obj = stateFromStoresArray(589);
-  const items2 = [recomputeAffinities];
+  const items2 = [closure_4];
   const stateFromStores = stateFromStoresArray(589).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap(), []);
   const items3 = [stateFromStoresArray, stateFromStores];
-  return React.useMemo(() => stateFromStoresArray(outer1_2[4]).maybeSortByProbability(stateFromStoresArray, stateFromStores, "VoiceSessionUtils - participants"), items3);
+  return React.useMemo(() => stateFromStoresArray(closure_1_2[4]).maybeSortByProbability(stateFromStoresArray, stateFromStores, "VoiceSessionUtils - participants"), items3);
 };
 export const getVoiceSessionMessageContent = function getVoiceSessionMessageContent(channel_id) {
   let _require = channel.getChannel(channel_id.channel_id);
-  let tmp2 = getHumanizedCallDuration(channel_id);
+  let tmp2 = getHumanizedCallDurationDefault(channel_id);
   let obj = _useNullableMessageAuthor;
   const messageAuthor = obj.getMessageAuthor(channel_id);
   _require = channel_id;
@@ -73,7 +73,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
   if (call != null) {
     const participants = call.participants;
     reduced = participants.reduce((arg0, arg1) => {
-      const user = outer1_6.getUser(arg1);
+      const user = closure_1_6.getUser(arg1);
       let tmp2 = arg0;
       if (null != user) {
         tmp2 = arg0;
@@ -92,8 +92,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
   const userAffinitiesMap = authStore.getUserAffinitiesMap();
   const result = _maybeSortByProbability.maybeSortByProbability(reduced, userAffinitiesMap, "VoiceSessionUtils - participants");
   const mapped = result.map((user) => {
-    const obj = { user, messageAuthor: null };
-    obj[1] = channel_id(outer1_2[7]).getUserAuthor(user, channel_id);
+    const obj = { user, messageAuthor: channel_id(closure_1_2[7]).getUserAuthor(user, channel_id) };
     return obj;
   });
   if (null == tmp2) {

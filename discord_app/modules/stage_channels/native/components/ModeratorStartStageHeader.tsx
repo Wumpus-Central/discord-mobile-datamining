@@ -1,22 +1,20 @@
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageHeader.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { useMyCurrentStageChannelRole } from "../../useMyCurrentStageChannelRole.tsx";
-import { HideStageChannelCallIcon } from "StageActionHeader.tsx";
+import HideStageChannelCallIcon from "HideStageChannelCallIcon" /* 12587 */;
+import useMyCurrentStageChannelRoleDefault from "useMyCurrentStageChannelRole" /* 12591 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { header: null };
 obj = { height: require("NAV_BAR_HEIGHT").NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center", paddingHorizontal: 8, marginTop: 4, overflow: "visible" };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((channel) => {
+const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
-  const tmp3 = useMyCurrentStageChannelRole(channel.id);
+  const tmp3 = useMyCurrentStageChannelRoleDefault(channel.id);
   let speaker;
   if (tmp3 != null) {
     speaker = tmp3.speaker;
@@ -34,6 +32,6 @@ const memoResult = require("noop").memo((channel) => {
   obj[2] = items;
   return closure_5(View, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageHeader.tsx");
 
 export default memoResult;

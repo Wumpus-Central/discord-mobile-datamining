@@ -1,5 +1,7 @@
 // discord_app/stores/MaskedLinkStoreMethodsAdditional.native.tsx
-const result = require("set").fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("stores/MaskedLinkStoreMethodsAdditional.native.tsx");
 
 export const getHostname = function getHostname(arg0) {
   try {

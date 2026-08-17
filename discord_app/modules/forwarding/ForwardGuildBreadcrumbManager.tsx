@@ -1,7 +1,9 @@
 // discord_app/modules/forwarding/ForwardGuildBreadcrumbManager.tsx
-import { MessageReferenceTypes } from "ME";
-import "initialize";
-import { _fetchBasicGuild } from "../guild/BasicGuildActionCreators.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import initializeDefault from "initialize" /* 5038 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 16635 */;
+import _fetchBasicGuild from "_fetchBasicGuild" /* 17046 */;
 
 function fetchForwardReferencedGuilds(message_reference) {
   message_reference = message_reference.message_reference;
@@ -17,6 +19,8 @@ function fetchForwardReferencedGuilds(message_reference) {
     }
   }
 }
+const MessageReferenceTypes = ME.MessageReferenceTypes;
+initializeDefault;
 class ForwardGuildBreadcrumbManager extends tmp6 {
   constructor() {
     tmp3 = new ForwardGuildBreadcrumbManager(tmp2, tmp, new.target);
@@ -27,7 +31,7 @@ class ForwardGuildBreadcrumbManager extends tmp6 {
 }
 tmp = new tmp(tmp4, tmp3, tmp2, Object, defineProperty, ForwardGuildBreadcrumbManager, importDefault);
 // ThrowIfThisInitialized (0x7c)
-require("setupLoadFromMessageManagerHandlers")(tmp, fetchForwardReferencedGuilds);
-const result = require("initialize").fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
+setupLoadFromMessageManagerHandlersDefault(tmp, fetchForwardReferencedGuilds);
+const result = set.fileFinishedImporting("modules/forwarding/ForwardGuildBreadcrumbManager.tsx");
 
 export default tmp;

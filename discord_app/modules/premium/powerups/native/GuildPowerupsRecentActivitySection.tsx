@@ -1,36 +1,30 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx
-import { View } from "set";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { resetCache } from "../../../../utils/DateUtils.tsx";
-import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
-import { useMaybeGetSortedBoosts } from "../hooks/useMaybeGetSortedBoosts.tsx";
-import { getBoostRowMessageText } from "../utils/getBoostRowMessageText.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import resetCache from "resetCache" /* 4063 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import useMaybeGetSortedBoosts from "useMaybeGetSortedBoosts" /* 11749 */;
+import useMaybeGetSortedBoostsDefault from "useMaybeGetSortedBoosts" /* 11749 */;
+import getBoostRowMessageTextDefault from "getBoostRowMessageText" /* 11755 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 function GuildPowerupsRecentActivityRow(row) {
-  let boost;
-  let phase;
-  let roleColor;
-  let roleColorStrings;
-  let sortKey;
-  let username;
   row = row.row;
   let obj = apexExperiment;
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivityRow");
   ({ boost, phase, sortKey } = row);
   const tmp4 = callback();
-  let obj1 = useMaybeGetSortedBoosts;
+  obj1 = useMaybeGetSortedBoosts;
   const getBoostUserConfig = obj1.useGetBoostUserConfig(boost);
   ({ roleColor, roleColorStrings, username } = getBoostUserConfig);
   let obj2 = resetCache;
   const date = new Date(sortKey);
   let obj3 = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj3.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != roleColor) {
@@ -52,7 +46,7 @@ function GuildPowerupsRecentActivityRow(row) {
     obj[0] = tmp4.boostRowContainer;
     if ("gave" === phase) {
       obj1 = { color: null, size: "sm" };
-      obj1[0] = Themes.unsafe_rawColors.GUILD_BOOSTING_PINK;
+      obj1[0] = ThemesDefault.unsafe_rawColors.GUILD_BOOSTING_PINK;
       obj2 = obj1;
     } else {
       obj2 = { size: "sm" };
@@ -84,7 +78,7 @@ function GuildPowerupsRecentActivityRow(row) {
     items2[2] = closure_5(tmp(4734).Text, { variant: "text-md/medium", color: "interactive-text-active", children: " " });
     const obj6 = { variant: "text-md/medium", lineClamp: 1, style: null, children: null };
     obj6[2] = tmp4.messageText;
-    obj6[3] = getBoostRowMessageText(row);
+    obj6[3] = getBoostRowMessageTextDefault(row);
     items2[3] = closure_5(tmp(4734).Text, obj6);
     obj3[1] = items2;
     items1[1] = closure_6(View, obj3);
@@ -106,25 +100,26 @@ function GuildPowerupsRecentActivityRow(row) {
     return closure_6(View, obj);
   }
 }
+const View = get_ActivityIndicator.View;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { sectionContainer: null, boostContainer: null, boostRowContainer: null, boostMessage: null, username: null, messageText: null, timestamp: null };
-obj = { marginTop: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_16 };
+obj = { marginTop: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 obj[0] = obj;
-obj[1] = { gap: require("Themes").space.PX_12, marginTop: require("Themes").space.PX_16 };
+obj[1] = { gap: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_16 };
 obj[2] = { flexDirection: "row", alignItems: "center", gap: 8 };
 obj[3] = { flex: 1, flexDirection: "row", alignItems: "center" };
 obj[4] = { maxWidth: 170, flexShrink: 1 };
 obj[5] = { flexShrink: 0 };
 obj[6] = { flexShrink: 0 };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj1 = { gap: require("Themes").space.PX_12, marginTop: require("Themes").space.PX_16 };
-const result = require("jsxProd").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
+let obj1 = { gap: ThemesDefault.space.PX_12, marginTop: ThemesDefault.space.PX_16 };
+const result = set.fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsRecentActivitySection.tsx");
 
 export default function GuildPowerupsRecentActivitySection(guildId) {
   let obj = apexExperiment;
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GuildPowerupsRecentActivitySection");
   const tmp4 = callback();
-  const arr = useMaybeGetSortedBoosts(guildId.guildId, 10);
+  const arr = useMaybeGetSortedBoostsDefault(guildId.guildId, 10);
   let tmp6Result = null;
   if (0 !== arr.length) {
     obj = { style: null, children: null };
@@ -138,7 +133,7 @@ export default function GuildPowerupsRecentActivitySection(guildId) {
     const intl = tmp(1236).intl;
     obj[2] = intl.string(tmp(1236).t.yM9Krm);
     const items = [closure_5(tmp(4734).Text, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp4.boostContainer;
     obj1[1] = arr.map((boost) => callback(closure_8, { row: boost }, "boost-" + boost.boost.id));
     items[1] = closure_5(View, obj1);

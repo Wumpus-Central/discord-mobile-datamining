@@ -1,12 +1,13 @@
 // discord_app/modules/stage_channels/StageChannelNewUserManager.tsx
-import fetchFingerprint from "fetchFingerprint";
-import handleConnectionOpen from "handleConnectionOpen";
-import buildStageChannelUserRoles from "buildStageChannelUserRoles";
-import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH";
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 4720 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "buildStageChannelUserRoles" /* 4990 */;
+import { STAGE_AUDIENCE_NOTICE_SHOWN_STORAGE_KEY as closure_7 } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
 
 let require = arg1;
+initializeDefault;
 class StageChannelNewUserManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -15,24 +16,24 @@ class StageChannelNewUserManager extends tmp2 {
       voiceStates = voiceStates.voiceStates;
       const item = voiceStates.forEach((channelId) => {
         if (null != channelId.channelId) {
-          if (channelId.userId === outer1_4.getId()) {
+          if (channelId.userId === closure_1_4.getId()) {
             closure_0.terminate();
-            const Storage2 = outer1_0(outer1_3[6]).Storage;
-            if (!Storage2.get(outer1_7, false)) {
-              const voiceChannelId = outer1_5.getVoiceChannelId();
+            const Storage2 = closure_1_0(closure_1_3[6]).Storage;
+            if (!Storage2.get(closure_1_7, false)) {
+              const voiceChannelId = closure_1_5.getVoiceChannelId();
               let isAudienceMemberResult = null != voiceChannelId && channelId.channelId === voiceChannelId;
               if (isAudienceMemberResult) {
-                isAudienceMemberResult = outer1_6.isAudienceMember(channelId.userId, voiceChannelId);
+                isAudienceMemberResult = closure_1_6.isAudienceMember(channelId.userId, voiceChannelId);
               }
               if (isAudienceMemberResult) {
                 const Storage = tmp11(tmp12[6]).Storage;
                 const result = Storage.set(tmp13, true);
-                const result1 = outer1_2(tmp12[7]).openStageChannelAudienceNoticeModal(voiceChannelId);
-                const obj = outer1_2(tmp12[7]);
+                const result1 = closure_1_2(tmp12[7]).openStageChannelAudienceNoticeModal(voiceChannelId);
+                const obj = closure_1_2(tmp12[7]);
               }
             }
-            tmp11 = outer1_0;
-            tmp13 = outer1_7;
+            tmp11 = closure_1_0;
+            tmp13 = closure_1_7;
           }
         }
       });
@@ -42,12 +43,12 @@ class StageChannelNewUserManager extends tmp2 {
 }
 const prototype = StageChannelNewUserManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcher.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  const subscription = dispatcherDefault.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcher.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+  dispatcherDefault.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
 };
 const stageChannelNewUserManager = new StageChannelNewUserManager();
-let result = require("buildStageChannelUserRoles").fileFinishedImporting("modules/stage_channels/StageChannelNewUserManager.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelNewUserManager.tsx");
 
 export default stageChannelNewUserManager;

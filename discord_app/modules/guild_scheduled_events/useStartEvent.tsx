@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/useStartEvent.tsx
-import V6OrEarlierAPIError from "V6OrEarlierAPIError";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_6 = {
@@ -10,18 +10,18 @@ let closure_6 = {
   },
   permissionOverwrites: []
 };
-const result = require("noop").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/useStartEvent.tsx");
 
 export default function useStartEvent() {
   function _startEvent() {
     const self = this;
-    const tmp = outer1_3((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
-      let c7 = 0;
-      let c8 = 0;
-      let c6 = 0;
+    const tmp = closure_1_3((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
+      c7 = 0;
+      c8 = 0;
+      c6 = 0;
       const iter = (function*(arg0, arg1) {
         if (c8 === 2) {
           c8 = 3;
@@ -49,7 +49,7 @@ export default function useStartEvent() {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let c4 = tmp3;
+                c4 = tmp3;
                 let permissionOverwrites = tmp7;
                 let onSuccess;
                 permissionOverwrites = undefined;
@@ -76,7 +76,7 @@ export default function useStartEvent() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c8 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -91,10 +91,8 @@ export default function useStartEvent() {
             } else {
               if (2 === tmp7) {
                 c6 = 0;
-                const outer1_5 = noop;
-                const aPIError = new callback(4273).APIError(outer1_5);
-                const outer1_4 = aPIError;
-                callback2(outer1_4);
+                aPIError = new callback(4273).APIError(closure_5);
+                callback2(aPIError);
                 callback(false);
                 callback(false);
                 c8 = 3;
@@ -166,7 +164,7 @@ export default function useStartEvent() {
               return obj;
             }
           } catch (tmp60) {
-            noop = tmp60;
+            closure_5 = tmp60;
             if (tmp4 === c6) {
               c8 = tmp2;
               throw tmp60;
@@ -179,7 +177,7 @@ export default function useStartEvent() {
       iter.next();
       return iter;
     });
-    const _startEvent = tmp;
+    closure_2 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -189,9 +187,9 @@ export default function useStartEvent() {
     return applyArgumentsResult;
   }
   let tmp = callback(React.useState(false), 2);
-  let closure_0 = tmp[1];
+  closure_0 = tmp[1];
   const tmp2 = callback(React.useState(null), 2);
-  let closure_1 = tmp2[1];
+  closure_1 = tmp2[1];
   const items = [
     function startEvent(arg0, arg1) {
       const self = this;

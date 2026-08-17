@@ -1,22 +1,17 @@
 // discord_app/modules/messages/native/burst_reactions/BurstReactionAnimation.tsx
-import "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { _generateAnimationSource } from "BurstReactionEffectUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import _generateAnimationSource from "_generateAnimationSource" /* 7531 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_5 = createCacheKey.createStyles({ content: { width: "100%" } });
-const result = require("jsxProd").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/BurstReactionAnimation.tsx");
 
 export default function BurstReactionAnimation(arg0) {
-  let channelId;
-  let emoji;
-  let isFullscreen;
-  let messageId;
-  let onComplete;
-  let withFadeOut;
   ({ onComplete, withFadeOut } = arg0);
   ({ channelId, messageId, emoji, isFullscreen } = arg0);
   if (withFadeOut === undefined) {
@@ -26,7 +21,7 @@ export default function BurstReactionAnimation(arg0) {
   let obj = _generateAnimationSource;
   const burstReactionAnimationSource = obj.useBurstReactionAnimationSource({ emoji, messageId, channelId, isFullscreen });
   initialize;
-  [][0] = maybeApplyNoTextColorForLightCustomTheme;
+  [][0] = closure_3;
   if (null == burstReactionAnimationSource) {
     return null;
   } else {
@@ -37,7 +32,7 @@ export default function BurstReactionAnimation(arg0) {
       obj = { onAnimationFinish: null };
       obj[0] = onComplete;
     }
-    const obj1 = { style: null, loop: false, speed: null };
+    obj1 = { style: null, loop: false, speed: null };
     obj1[0] = tmp2.content;
     let num = 1.2;
     if (tmp6) {

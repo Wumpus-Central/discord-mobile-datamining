@@ -1,36 +1,30 @@
 // discord_app/modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useEmbeddedActivityBackground } from "../utils/useEmbeddedActivityBackground.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11231 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
 ({ ImageBackground: c4, View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
 createCacheKey = { overlay: null };
-createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: require("Themes").colors.BLACK };
+createCacheKey = { flex: 1, opacity: 0.6, backgroundColor: ThemesDefault.colors.BLACK };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = ["embedded_background"];
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/native/EmbeddedActivityBackgroundImageWithOverlay.tsx");
 
 export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
-  let application;
-  let borderRadius;
-  let dimensionsStyle;
-  let resizeMode;
   ({ application, dimensionsStyle, borderRadius, resizeMode } = arg0);
   if (resizeMode === undefined) {
     resizeMode = "contain";
   }
-  let importDefault;
+  importDefault = undefined;
   const tmp2 = callback(React.useState(false), 2);
   importDefault = tmp2[1];
   let str;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   if (application != null) {
     str = application.id;
   }
@@ -38,7 +32,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
     str = "";
   }
   let obj = { applicationId: str, names: closure_9, size: 1024 };
-  const url = useEmbeddedActivityBackground(obj).url;
+  const url = useEmbeddedActivityBackgroundDefault(obj).url;
   let tmp7Result = null;
   if (!tmp2[0]) {
     tmp7Result = null;
@@ -54,7 +48,7 @@ export default function EmbeddedActivityBackgroundImageWithOverlay(arg0) {
           dimensionsStyle = absoluteFillObject.absoluteFillObject;
         }
         obj[2] = dimensionsStyle;
-        const obj1 = { borderRadius: null };
+        obj1 = { borderRadius: null };
         obj1[0] = borderRadius;
         obj[3] = obj1;
         obj[4] = function onError() {

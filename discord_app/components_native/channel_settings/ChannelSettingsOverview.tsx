@@ -1,92 +1,65 @@
 // discord_app/components_native/channel_settings/ChannelSettingsOverview.tsx
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import importAllResult from "AbortCodes";
-import { View } from "set";
-import storeThread from "storeThread";
-import createChannelRecord from "createChannelRecord";
-import { isGuildNSFW } from "GuildNSFWContentLevel";
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import initialize from "initialize";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelSettingsAutoFocusElement as closure_21 } from "ChannelSettingsAutoFocusElement";
-import ME from "ME";
-import set from "set";
-import { MAX_FORUM_TAGS } from "FORUM_GUIDELINES_ACTION_SHEET";
-import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_42 } from "AbortCodes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import set from "get ActivityIndicator";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSearchTagSetting.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/ThreadSortOrder.tsx";
-import { RegionActionCreators } from "../../actions/RegionActionCreators.tsx";
-import { PressableCard } from "../../design/components/Card/native/Card.native.tsx";
-import { Slider } from "../../design/components/Slider/native/Slider.native.tsx";
-import { Stack } from "../../design/components/Stack/native/Stack.native.tsx";
-import { context } from "../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { TableRadioRow } from "../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import { TableRowGroupTitle } from "../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { Form } from "../../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { collectGuildAnalyticsMetadata } from "../../modules/app_analytics/AppAnalyticsUtils.tsx";
-import { computeChannelName } from "../../modules/channel/useChannelName.tsx";
-import { parseRawEmojiObject } from "../../modules/emojis/UnicodeEmojis.tsx";
-import { AutoArchiveDurationOptions } from "../../modules/threads/native/components/ThreadAutoArchiveBottomSheet.tsx";
-import { getAutoArchiveOptions } from "../../modules/threads/ThreadAutoArchive.tsx";
-import { useCanUnarchiveThread } from "../../modules/threads/ThreadHooks.tsx";
-import { allowChannelAccess } from "../../utils/ChannelUtils.tsx";
-import { combined } from "../../utils/HelpdeskUtils.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { getSecondsSliderLabel } from "../../utils/SecondsSliderUtils.tsx";
-import { getIsChannelNameSettingEditable } from "ChannelSettingsUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import set2 from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set3 from "set" /* 1400 */;
+import set4 from "set" /* 1402 */;
+import combinedDefault from "combined" /* 1993 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import allowChannelAccess from "allowChannelAccess" /* 4979 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
+import Form from "Form" /* 8083 */;
+import TableRadioRow from "TableRadioRow" /* 8100 */;
+import context from "context" /* 8101 */;
+import getAutoArchiveOptions from "getAutoArchiveOptions" /* 8465 */;
+import Slider from "Slider" /* 13542 */;
+import _modDef16031 from "module_16031" /* 16031 */;
+import getSecondsSliderLabel from "getSecondsSliderLabel" /* 16032 */;
+import getIsChannelNameSettingEditable from "getIsChannelNameSettingEditable" /* 16033 */;
+import AutoArchiveDurationOptions from "AutoArchiveDurationOptions" /* 16034 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "storeThread" /* 4023 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_12 from "normalizeChannelPropertyForCompare" /* 8133 */;
+import closure_13 from "ensureGuildLoaded" /* 1391 */;
+import closure_14 from "comparator" /* 1980 */;
+import closure_15 from "createGuildRecordFromRust" /* 1910 */;
+import closure_16 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_17 from "generateOldThreadCutoff" /* 4772 */;
+import closure_18 from "initialize" /* 16029 */;
+import closure_19 from "markAllUserIdListsStale" /* 4030 */;
+import closure_20 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelSettingsAutoFocusElement as closure_21 } from "ChannelSettingsAutoFocusElement" /* 16030 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 1398 */;
+import { MAX_FORUM_TAGS } from "FORUM_GUIDELINES_ACTION_SHEET" /* 7273 */;
+import { DEFAULT_AUTO_ARCHIVE_DURATION as closure_42 } from "AbortCodes" /* 1235 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_22;
-let closure_23;
-let closure_24;
-let closure_25;
-let closure_26;
-let closure_27;
-let closure_28;
-let closure_29;
-let closure_30;
-let closure_31;
-let closure_32;
-let closure_33;
-let closure_34;
-let closure_35;
-let closure_36;
-let closure_37;
-let closure_38;
-let closure_39;
-let closure_40;
-let closure_43;
-let closure_44;
-let closure_45;
-let error;
-let metroImportAll;
-let require = arg1;
+require = arg1;
 class PinImage {
   constructor(arg0) {
     channelId = global.channelId;
-    tmp = Fragment();
+    tmp = closure_46();
     tmp2 = channelId;
     tmp3 = closure_2;
     obj = require("initialize");
     items = [];
-    items[0] = isGuildNSFW;
+    items[0] = closure_17;
     tmp4 = undefined;
-    if (obj.useStateFromStores(items, () => outer1_17.hasUnreadPins(channelId))) {
+    if (obj.useStateFromStores(items, () => closure_1_17.hasUnreadPins(channelId))) {
       tmp5 = jsx;
       tmp6 = View;
       obj = { style: null, children: null };
@@ -105,27 +78,27 @@ class PinImage {
   }
 }
 let c4 = importAllResult;
-({ EDITABLE_VOICE_SETTINGS_TYPES: error, isGuildTextChannelType: metroImportAll, THREADED_CHANNEL_TYPES: c9, THREAD_CHANNEL_TYPES: c10 } = createChannelRecord);
+({ EDITABLE_VOICE_SETTINGS_TYPES: error, isGuildTextChannelType: closure_8, THREADED_CHANNEL_TYPES: c9, THREAD_CHANNEL_TYPES: c10 } = createChannelRecord);
 ({ AnalyticEvents: closure_22, BITRATE_DEFAULT: closure_23, BITRATE_MIN: closure_24, ChannelSettingsSections: closure_25, ChannelTypes: closure_26, ChannelTypesSets: closure_27, GuildFeatures: closure_28, GuildSettingsSections: closure_29, HelpdeskArticles: closure_30, MAX_CHANNEL_NAME_LENGTH: closure_31, MAX_VOICE_USER_LIMIT: closure_32, MAX_STAGE_VOICE_USER_LIMIT: closure_33, Permissions: closure_34, SettingsPaneTypes: closure_35, SLOWMODE_VALUES: closure_36, VideoQualityMode: closure_37 } = ME);
 ({ ChannelFlags: closure_38, MAX_CHANNEL_TOPIC_LENGTH: closure_39, MAX_FORUM_CHANNEL_TOPIC_LENGTH: closure_40 } = set);
 ({ jsx: closure_43, jsxs: closure_44, Fragment: closure_45 } = jsxProd);
 createCacheKey = { outer: null, badge: null };
-createCacheKey = { position: "absolute", top: 2, right: -4, width: 12, height: 12, borderRadius: require("Themes").radii.md, justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { position: "absolute", top: 2, right: -4, width: 12, height: 12, borderRadius: ThemesDefault.radii.md, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { backgroundColor: require("Themes").unsafe_rawColors.RED_400, width: 8, height: 8, borderRadius: require("Themes").radii.xs };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, width: 8, height: 8, borderRadius: ThemesDefault.radii.xs };
+let closure_46 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { screenContainer: null, slider: null, stackPadding: null, alertText: null, tagsWrapper: null, addTagIconButtonWrapper: null, createTagButton: null, createTagButtonText: null };
-let obj1 = { backgroundColor: require("Themes").unsafe_rawColors.RED_400, width: 8, height: 8, borderRadius: require("Themes").radii.xs };
-obj2[0] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingTop: require("Themes").space.PX_16 };
+let obj1 = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, width: 8, height: 8, borderRadius: ThemesDefault.radii.xs };
+obj2[0] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingTop: ThemesDefault.space.PX_16 };
 obj2[1] = { marginHorizontal: 15 };
-createCacheKey = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 obj2[2] = createCacheKey;
 obj2[3] = { marginTop: 16 };
 obj2[4] = { display: "flex", flexDirection: "row", flexWrap: "wrap" };
-let obj3 = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingTop: require("Themes").space.PX_16 };
-obj2[5] = { justifyContent: "center", margin: require("Themes").space.PX_4 };
-let obj5 = { justifyContent: "center", margin: require("Themes").space.PX_4 };
-obj2[6] = { backgroundColor: "transparent", paddingHorizontal: 0, marginTop: require("Themes").space.PX_4 };
+let obj3 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingTop: ThemesDefault.space.PX_16 };
+obj2[5] = { justifyContent: "center", margin: ThemesDefault.space.PX_4 };
+let obj5 = { justifyContent: "center", margin: ThemesDefault.space.PX_4 };
+obj2[6] = { backgroundColor: "transparent", paddingHorizontal: 0, marginTop: ThemesDefault.space.PX_4 };
 obj2[7] = { fontFamily: require("sum").Fonts.PRIMARY_SEMIBOLD, fontSize: 14 };
 let closure_48 = createCacheKey.createLegacyClassComponentStyles(obj2);
 const PureComponent = importAllResult.PureComponent;
@@ -135,23 +108,22 @@ class ChannelSettingsOverview extends PureComponent {
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp;
     obj = require("apply");
-    tmp._cooldown = obj.findIndex(SLOWMODE_VALUES, (arg0) => arg0 >= tmp.props.channel.rateLimitPerUser);
+    tmp._cooldown = obj.findIndex(SLOWMODE_VALUES, (arg0) => arg0 >= store.props.channel.rateLimitPerUser);
     tmp.state = { hasChanges: false };
     tmp.pushScreen = function pushScreen(INSTANT_INVITES, arg1) {
       const items = [...arguments];
-      const navigation = tmp.props.navigation;
+      const navigation = store.props.navigation;
       const items1 = [...items];
       navigation.push.apply(items1);
-      if (items[0] !== outer1_25.PERMISSIONS) {
-        let obj = outer1_1(outer1_2[29]);
+      if (items[0] !== closure_1_25.PERMISSIONS) {
+        let obj = closure_1_1(closure_1_2[29]);
         obj = { settings_type: "channel", origin_pane: null, destination_pane: null };
-        obj[1] = outer1_35.CHANNEL_SETTINGS;
+        obj[1] = closure_1_35.CHANNEL_SETTINGS;
         obj[2] = items[0];
-        obj.trackWithMetadata(outer1_22.SETTINGS_PANE_VIEWED, obj);
+        obj.trackWithMetadata(closure_1_22.SETTINGS_PANE_VIEWED, obj);
       }
     };
     tmp.handleSave = function handleSave() {
-      let threadMetadata;
       let obj = channel;
       if (channel.state.hasChanges) {
         channel = obj.props.channel;
@@ -179,16 +151,16 @@ class ChannelSettingsOverview extends PureComponent {
         obj[15] = channel.defaultForumLayout;
         obj[16] = channel.getDefaultTagSetting();
         ({ iconEmoji: obj3[17], themeColor: obj3[18] } = channel);
-        const obj2 = outer1_1(outer1_2[33]);
-        outer1_1(outer1_2[33]).saveChannel(channel.id, obj).then((status) => {
+        const obj2 = closure_1_1(closure_1_2[33]);
+        closure_1_1(closure_1_2[33]).saveChannel(channel.id, obj).then((status) => {
           if (200 === status.status) {
-            let navigation = outer2_1(outer2_2[34]).open;
+            let navigation = closure_2_1(closure_2_2[34]).open;
             let goBackResult = { key: "THREAD_SETTINGS_UPDATED", icon: null, content: null };
-            goBackResult[1] = outer2_1(outer2_2[35]);
-            const tmp6 = outer2_1(outer2_2[34]);
-            const intl = channel(outer2_2[30]).intl;
+            goBackResult[1] = closure_2_1(closure_2_2[35]);
+            const tmp6 = closure_2_1(closure_2_2[34]);
+            const intl = channel(closure_2_2[30]).intl;
             const string = intl.string;
-            let n2Y84J = channel(outer2_2[30]).t;
+            let n2Y84J = channel(closure_2_2[30]).t;
             if (isThreadResult) {
               n2Y84J = n2Y84J.n2Y84J;
               let stringResult = string(n2Y84J);
@@ -203,29 +175,29 @@ class ChannelSettingsOverview extends PureComponent {
           }
         });
         obj.setState({ hasChanges: false });
-        const saveChannelResult = outer1_1(outer1_2[33]).saveChannel(channel.id, obj);
+        const saveChannelResult = closure_1_1(closure_1_2[33]).saveChannel(channel.id, obj);
       }
     };
     tmp.handleChangeName = function handleChangeName(arg0) {
-      const channel = tmp.props.channel;
+      const channel = store.props.channel;
       if (channel.isThread()) {
-        let result = outer1_1(outer1_2[36])(arg0, false);
+        let result = closure_1_1(closure_1_2[36])(arg0, false);
       } else {
-        const LIMITED_CHANNEL_NAME = outer1_27.LIMITED_CHANNEL_NAME;
+        const LIMITED_CHANNEL_NAME = closure_1_27.LIMITED_CHANNEL_NAME;
         result = arg0;
         if (LIMITED_CHANNEL_NAME.has(channel.type)) {
-          result = tmp(outer1_2[37]).sanitizeGuildTextChannelName(arg0);
-          const obj2 = tmp(outer1_2[37]);
+          result = store(closure_1_2[37]).sanitizeGuildTextChannelName(arg0);
+          const obj2 = store(closure_1_2[37]);
         }
       }
-      outer1_1(outer1_2[33]).updateChannel({ name: result });
-      tmp.setState({ hasChanges: true });
+      closure_1_1(closure_1_2[33]).updateChannel({ name: result });
+      store.setState({ hasChanges: true });
     };
     tmp.handleBlurName = function handleBlurName() {
-      let obj = tmp;
-      const channel = tmp.props.channel;
+      let obj = store;
+      const channel = store.props.channel;
       if (channel.isThread()) {
-        const tmp3 = outer1_1(outer1_2[36])(channel.name, true);
+        const tmp3 = closure_1_1(closure_1_2[36])(channel.name, true);
         if (tmp3 !== channel.name) {
           obj = { name: null };
           obj[0] = tmp3;
@@ -233,103 +205,103 @@ class ChannelSettingsOverview extends PureComponent {
           obj.setState({ hasChanges: true });
           const tmpResult = tmp(tmp2[33]);
         }
-        tmp2 = outer1_2;
+        tmp = closure_1_1;
+        tmp2 = closure_1_2;
       }
     };
     tmp.handleChangeTopic = function handleChangeTopic(emojiName) {
-      let obj = outer1_1(outer1_2[33]);
-      obj = { topic: null };
-      obj[0] = outer1_1(outer1_2[38]).translateInlineEmojiToSurrogates(emojiName);
+      let obj = closure_1_1(closure_1_2[33]);
+      obj = { topic: closure_1_1(closure_1_2[38]).translateInlineEmojiToSurrogates(emojiName) };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleBitRateChange = function handleBitRateChange(arg0) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { bitrate: Math.round(arg0) };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleVideoQualityModeChange = function handleVideoQualityModeChange(videoQualityMode) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { videoQualityMode };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleNsfwChange = function handleNsfwChange(nsfw) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { nsfw };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleThreadSpoilerChange = function handleThreadSpoilerChange(arg0) {
-      const obj = tmp(outer1_2[39]);
-      const setFlagResult = tmp(outer1_2[39]).setFlag(tmp.props.channel.flags, outer1_38.IS_SPOILER_CHANNEL, arg0);
-      outer1_1(outer1_2[33]).updateChannel({ flags: setFlagResult });
-      tmp.setState({ hasChanges: true });
+      const obj = store(closure_1_2[39]);
+      const setFlagResult = store(closure_1_2[39]).setFlag(store.props.channel.flags, closure_1_38.IS_SPOILER_CHANNEL, arg0);
+      closure_1_1(closure_1_2[33]).updateChannel({ flags: setFlagResult });
+      store.setState({ hasChanges: true });
     };
     tmp.handleSlowmodeChange = function handleSlowmodeChange(arg0) {
-      let hasChanges = tmp.state.hasChanges;
-      const tmp2 = outer1_36[Math.round(Math, arg0)];
-      outer1_1(outer1_2[33]).updateChannel({ rateLimitPerUser: tmp2 });
-      const AccessibilityAnnouncer = tmp(outer1_2[40]).AccessibilityAnnouncer;
-      const obj = outer1_1(outer1_2[33]);
-      const intl = tmp(outer1_2[30]).intl;
-      AccessibilityAnnouncer.announce(tmp(outer1_2[41]).getSecondsSliderLabel(tmp2, false, intl.string(tmp(outer1_2[30]).t.zvDu4h)));
+      let hasChanges = store.state.hasChanges;
+      const tmp2 = closure_1_36[Math.round(Math, arg0)];
+      closure_1_1(closure_1_2[33]).updateChannel({ rateLimitPerUser: tmp2 });
+      const AccessibilityAnnouncer = store(closure_1_2[40]).AccessibilityAnnouncer;
+      const obj = closure_1_1(closure_1_2[33]);
+      const intl = store(closure_1_2[30]).intl;
+      AccessibilityAnnouncer.announce(store(closure_1_2[41]).getSecondsSliderLabel(tmp2, false, intl.string(store(closure_1_2[30]).t.zvDu4h)));
       if (!hasChanges) {
-        hasChanges = tmp.props.channel.rateLimitPerUser !== tmp2;
+        hasChanges = store.props.channel.rateLimitPerUser !== tmp2;
       }
-      tmp.setState({ hasChanges });
+      store.setState({ hasChanges });
     };
     tmp.handleDefaultAutoArchiveDurationChange = function handleDefaultAutoArchiveDurationChange(defaultAutoArchiveDuration) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { defaultAutoArchiveDuration };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleAutoArchiveDurationChange = function handleAutoArchiveDurationChange(autoArchiveDuration) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { autoArchiveDuration };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleDefaultSortOrderChange = function handleDefaultSortOrderChange(defaultSortOrder) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { defaultSortOrder };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleDefaultTagSettingChange = function handleDefaultTagSettingChange(defaultTagSetting) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { defaultTagSetting };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleInvitableChange = function handleInvitableChange(invitable) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { invitable };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleAnnouncementChange = function handleAnnouncementChange(arg0) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { type: arg0 ? tmp.GUILD_TEXT : tmp.GUILD_ANNOUNCEMENT };
       obj.updateChannel(obj);
-      outer1_26.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     tmp.handleActiveChannelsRemovedChange = function handleActiveChannelsRemovedChange(arg0) {
-      const obj = tmp(outer1_2[39]);
-      const setFlagResult = tmp(outer1_2[39]).setFlag(tmp.props.channel.flags, outer1_38.ACTIVE_CHANNELS_REMOVED, !arg0);
-      outer1_1(outer1_2[33]).updateChannel({ flags: setFlagResult });
-      tmp.setState({ hasChanges: true });
+      const obj = store(closure_1_2[39]);
+      const setFlagResult = store(closure_1_2[39]).setFlag(store.props.channel.flags, closure_1_38.ACTIVE_CHANNELS_REMOVED, !arg0);
+      closure_1_1(closure_1_2[33]).updateChannel({ flags: setFlagResult });
+      store.setState({ hasChanges: true });
     };
     tmp.handleUserLimitChange = function handleUserLimitChange(arg0) {
-      let obj = outer1_1(outer1_2[33]);
+      let obj = closure_1_1(closure_1_2[33]);
       obj = { userLimit: Math.round(arg0) };
       obj.updateChannel(obj);
-      tmp.setState({ hasChanges: true });
+      store.setState({ hasChanges: true });
     };
     closure_0 = tmp;
-    tmp.handleDeleteChannel = GuildNSFWContentLevel(function*() {
+    tmp.handleDeleteChannel = closure_3(function*() {
       if (c3 === 2) {
         c3 = 3;
         let throwTypeErrorResult = HermesBuiltin.throwTypeError();
@@ -361,26 +333,26 @@ class ChannelSettingsOverview extends PureComponent {
                 return obj;
               } else {
                 let channel = tmp5;
-                let closure_0 = tmp2;
+                closure_0 = tmp2;
                 closure_0 = undefined;
                 channel = undefined;
                 guild = undefined;
                 c3 = undefined;
-                let closure_4;
-                let c5;
-                throwTypeErrorResult = outer1_48;
-                throwTypeErrorResult = outer1_0;
-                closure_0 = outer1_48(outer1_0.context);
-                throwTypeErrorResult = outer1_0;
-                channel = outer1_0.props.channel;
-                throwTypeErrorResult = outer1_15;
-                guild = outer1_15.getGuild(channel.getGuildId());
-                throwTypeErrorResult = outer1_0;
+                closure_4 = undefined;
+                c5 = undefined;
+                throwTypeErrorResult = closure_1_48;
+                throwTypeErrorResult = closure_1_0;
+                closure_0 = closure_1_48(closure_1_0.context);
+                throwTypeErrorResult = closure_1_0;
+                channel = closure_1_0.props.channel;
+                throwTypeErrorResult = closure_1_15;
+                guild = closure_1_15.getGuild(channel.getGuildId());
+                throwTypeErrorResult = closure_1_0;
                 throwTypeErrorResult = guild;
                 guild = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0(guild[42]).isDefaultChannelThresholdMetAfterDelete(channel.getGuildId(), channel.id);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(guild[42]).isDefaultChannelThresholdMetAfterDelete(channel.getGuildId(), channel.id);
                 return obj1;
               }
             } else if (arg0 === 1) {
@@ -400,43 +372,43 @@ class ChannelSettingsOverview extends PureComponent {
                 throwTypeErrorResult = channel;
                 throwTypeErrorResult = guild;
                 const features = guild.features;
-                throwTypeErrorResult = outer1_28;
-                if (features.has(outer1_28.COMMUNITY)) {
-                  if (guild.rulesChannelId === outer1_1.id) {
-                    if (guild.rulesChannelId === outer1_1.id) {
-                      const intl2 = outer1_0(guild[30]).intl;
-                      let stringResult = intl2.string(outer1_0(guild[30]).t.yjrZPl);
+                throwTypeErrorResult = closure_1_28;
+                if (features.has(closure_1_28.COMMUNITY)) {
+                  if (guild.rulesChannelId === closure_1_1.id) {
+                    if (guild.rulesChannelId === closure_1_1.id) {
+                      const intl2 = closure_1_0(guild[30]).intl;
+                      let stringResult = intl2.string(closure_1_0(guild[30]).t.yjrZPl);
                     } else {
-                      const intl = outer1_0(guild[30]).intl;
-                      stringResult = intl.string(outer1_0(guild[30]).t["1B1/NB"]);
+                      const intl = closure_1_0(guild[30]).intl;
+                      stringResult = intl.string(closure_1_0(guild[30]).t["1B1/NB"]);
                     }
                     c5 = stringResult;
-                    obj = outer1_1(guild[43]);
+                    obj = closure_1_1(guild[43]);
                     const obj3 = { title: null, confirmText: null, children: null };
-                    const intl3 = outer1_0(guild[30]).intl;
-                    obj3[0] = intl3.string(outer1_0(guild[30]).t["TY/V+H"]);
-                    const intl4 = outer1_0(guild[30]).intl;
-                    obj3[1] = intl4.string(outer1_0(guild[30]).t.BddRzS);
+                    const intl3 = closure_1_0(guild[30]).intl;
+                    obj3[0] = intl3.string(closure_1_0(guild[30]).t["TY/V+H"]);
+                    const intl4 = closure_1_0(guild[30]).intl;
+                    obj3[1] = intl4.string(closure_1_0(guild[30]).t.BddRzS);
                     const obj4 = { children: null };
                     const obj5 = { style: null, variant: "text-md/medium", children: null };
                     obj5[0] = closure_0.alertText;
                     obj5[2] = c5;
-                    const items = [outer1_43(outer1_0(guild[44]).Text, obj5), ];
+                    const items = [closure_1_43(closure_1_0(guild[44]).Text, obj5), ];
                     let obj6 = { style: null, variant: "text-md/medium", children: null };
                     obj6[0] = closure_0.alertText;
-                    const intl5 = outer1_0(guild[30]).intl;
+                    const intl5 = closure_1_0(guild[30]).intl;
                     const obj7 = { onClick: null };
                     obj7[0] = function onClick() {
                       channel(user[43]).close();
                       const obj = channel(user[43]);
                       channel(user[33]).close();
                       const obj2 = channel(user[33]);
-                      channel(user[45]).open(user.id, outer1_29.COMMUNITY);
+                      channel(user[45]).open(user.id, closure_1_29.COMMUNITY);
                     };
-                    obj6[2] = intl5.format(outer1_0(guild[30]).t.LAJbDm, obj7);
-                    items[1] = outer1_43(outer1_0(guild[44]).Text, obj6);
+                    obj6[2] = intl5.format(closure_1_0(guild[30]).t.LAJbDm, obj7);
+                    items[1] = closure_1_43(closure_1_0(guild[44]).Text, obj6);
                     obj4[0] = items;
-                    obj3[2] = outer1_44(outer1_45, obj4);
+                    obj3[2] = closure_1_44(closure_1_45, obj4);
                     obj.show(obj3);
                     c3 = 3;
                   }
@@ -446,56 +418,56 @@ class ChannelSettingsOverview extends PureComponent {
                 throwTypeErrorResult = closure_0;
                 throwTypeErrorResult = c3;
                 if (!c3) {
-                  obj6 = outer1_1(guild[43]);
+                  obj6 = closure_1_1(guild[43]);
                   const obj8 = { title: null, confirmText: null, children: null };
-                  const intl6 = outer1_0(guild[30]).intl;
-                  obj8[0] = intl6.string(outer1_0(guild[30]).t["TY/V+H"]);
-                  const intl7 = outer1_0(guild[30]).intl;
-                  obj8[1] = intl7.string(outer1_0(guild[30]).t.BddRzS);
+                  const intl6 = closure_1_0(guild[30]).intl;
+                  obj8[0] = intl6.string(closure_1_0(guild[30]).t["TY/V+H"]);
+                  const intl7 = closure_1_0(guild[30]).intl;
+                  obj8[1] = intl7.string(closure_1_0(guild[30]).t.BddRzS);
                   const obj9 = { children: null };
                   const obj10 = { style: null, variant: "text-md/medium", children: null };
                   obj10[0] = closure_0.alertText;
-                  const intl8 = outer1_0(guild[30]).intl;
-                  obj10[2] = intl8.string(outer1_0(guild[30]).t.iWlB6h);
-                  const items1 = [outer1_43(outer1_0(guild[44]).Text, obj10), ];
+                  const intl8 = closure_1_0(guild[30]).intl;
+                  obj10[2] = intl8.string(closure_1_0(guild[30]).t.iWlB6h);
+                  const items1 = [closure_1_43(closure_1_0(guild[44]).Text, obj10), ];
                   const obj11 = { style: null, variant: "text-md/medium", children: null };
                   obj11[0] = closure_0.alertText;
-                  const intl9 = outer1_0(guild[30]).intl;
+                  const intl9 = closure_1_0(guild[30]).intl;
                   let obj12 = { onClick: null };
                   obj12[0] = function onClick() {
                     channel(user[43]).close();
                     const obj = channel(user[43]);
                     channel(user[33]).close();
                     const obj2 = channel(user[33]);
-                    channel(user[45]).open(user.id, outer1_29.ONBOARDING);
+                    channel(user[45]).open(user.id, closure_1_29.ONBOARDING);
                   };
-                  obj11[2] = intl9.format(outer1_0(guild[30]).t.ajiBwB, obj12);
-                  items1[1] = outer1_43(outer1_0(guild[44]).Text, obj11);
+                  obj11[2] = intl9.format(closure_1_0(guild[30]).t.ajiBwB, obj12);
+                  items1[1] = closure_1_43(closure_1_0(guild[44]).Text, obj11);
                   obj9[0] = items1;
-                  obj8[2] = outer1_44(outer1_45, obj9);
+                  obj8[2] = closure_1_44(closure_1_45, obj9);
                   obj6.show(obj8);
                 }
               }
-              obj12 = outer1_0(guild[46]);
-              closure_4 = obj12.computeChannelName(channel, outer1_20, outer1_19, true);
-              let obj13 = outer1_1(guild[43]);
-              if (outer1_0.props.isForumPost) {
-                throwTypeErrorResult = outer1_0;
+              obj12 = closure_1_0(guild[46]);
+              closure_4 = obj12.computeChannelName(channel, closure_1_20, closure_1_19, true);
+              let obj13 = closure_1_1(guild[43]);
+              if (closure_1_0.props.isForumPost) {
+                throwTypeErrorResult = closure_1_0;
                 throwTypeErrorResult = guild;
-                const intl11 = outer1_0(guild[30]).intl;
-                throwTypeErrorResult = outer1_0;
+                const intl11 = closure_1_0(guild[30]).intl;
+                throwTypeErrorResult = closure_1_0;
                 throwTypeErrorResult = guild;
-                throwTypeErrorResult = intl11.string(outer1_0(guild[30]).t.nEOg1N);
+                throwTypeErrorResult = intl11.string(closure_1_0(guild[30]).t.nEOg1N);
               } else {
                 throwTypeErrorResult = channel;
-                throwTypeErrorResult = outer1_0;
+                throwTypeErrorResult = closure_1_0;
                 throwTypeErrorResult = guild;
-                const intl10 = outer1_0(guild[30]).intl;
+                const intl10 = closure_1_0(guild[30]).intl;
                 const string = intl10.string;
-                throwTypeErrorResult = outer1_0;
+                throwTypeErrorResult = closure_1_0;
                 throwTypeErrorResult = guild;
-                const t = outer1_0(guild[30]).t;
-                if (outer1_0.props.isThread) {
+                const t = closure_1_0(guild[30]).t;
+                if (closure_1_0.props.isThread) {
                   throwTypeErrorResult = string(t.H7vTe2);
                 } else {
                   throwTypeErrorResult = string(t["8D8Rsb"]);
@@ -505,32 +477,32 @@ class ChannelSettingsOverview extends PureComponent {
               throwTypeErrorResult = closure_0;
               throwTypeErrorResult = channel;
               obj13[0] = throwTypeErrorResult;
-              throwTypeErrorResult = outer1_0;
+              throwTypeErrorResult = closure_1_0;
               throwTypeErrorResult = guild;
-              const intl12 = outer1_0(guild[30]).intl;
-              throwTypeErrorResult = outer1_0;
+              const intl12 = closure_1_0(guild[30]).intl;
+              throwTypeErrorResult = closure_1_0;
               throwTypeErrorResult = guild;
               const obj14 = { channelName: null };
               throwTypeErrorResult = closure_4;
               obj14[0] = closure_4;
-              obj13[1] = intl12.format(outer1_0(guild[30]).t.a6Gz9J, obj14);
-              throwTypeErrorResult = outer1_0;
+              obj13[1] = intl12.format(closure_1_0(guild[30]).t.a6Gz9J, obj14);
+              throwTypeErrorResult = closure_1_0;
               throwTypeErrorResult = guild;
-              const intl13 = outer1_0(guild[30]).intl;
-              throwTypeErrorResult = outer1_0;
+              const intl13 = closure_1_0(guild[30]).intl;
+              throwTypeErrorResult = closure_1_0;
               throwTypeErrorResult = guild;
-              obj13[2] = intl13.string(outer1_0(guild[30]).t.gm1Vej);
-              throwTypeErrorResult = outer1_0;
+              obj13[2] = intl13.string(closure_1_0(guild[30]).t.gm1Vej);
+              throwTypeErrorResult = closure_1_0;
               throwTypeErrorResult = guild;
-              const intl14 = outer1_0(guild[30]).intl;
-              throwTypeErrorResult = outer1_0;
+              const intl14 = closure_1_0(guild[30]).intl;
+              throwTypeErrorResult = closure_1_0;
               throwTypeErrorResult = guild;
-              obj13[3] = intl14.string(outer1_0(guild[30]).t.p89ACt);
-              throwTypeErrorResult = outer1_0;
-              obj13[4] = outer1_0.handleConfirmDeleteChannel;
-              throwTypeErrorResult = outer1_1;
+              obj13[3] = intl14.string(closure_1_0(guild[30]).t.p89ACt);
+              throwTypeErrorResult = closure_1_0;
+              obj13[4] = closure_1_0.handleConfirmDeleteChannel;
+              throwTypeErrorResult = closure_1_1;
               throwTypeErrorResult = guild;
-              obj13[5] = outer1_1(guild[47]).Colors.RED;
+              obj13[5] = closure_1_1(guild[47]).Colors.RED;
               throwTypeErrorResult = obj13.show(obj13);
             }
           } catch (throwTypeErrorResult) {
@@ -541,32 +513,32 @@ class ChannelSettingsOverview extends PureComponent {
       }
     });
     closure_0 = tmp;
-    tmp.handleConfirmDeleteChannel = GuildNSFWContentLevel(function*() {
-      let closure_2 = tmp3;
-      let c4 = 1;
-      yield outer1_1(outer1_2[33]).deleteChannel(outer1_0.props.channel.id);
+    tmp.handleConfirmDeleteChannel = closure_3(function*() {
+      closure_2 = tmp3;
+      c4 = 1;
+      yield closure_1_1(closure_1_2[33]).deleteChannel(closure_1_0.props.channel.id);
       if (1 === tmp7) {
         c4 = 0;
-        closure_2 = GuildNSFWContentLevel;
-        const aPIError = new outer1_0(outer1_2[49]).APIError(closure_2);
+        closure_2 = closure_3;
+        const aPIError = new closure_1_0(closure_1_2[49]).APIError(closure_2);
         const anyErrorMessage = aPIError.getAnyErrorMessage();
         let navigation = anyErrorMessage;
         if (anyErrorMessage == null) {
-          const intl = outer1_0(outer1_2[30]).intl;
-          navigation = intl.string(outer1_0(outer1_2[30]).t.CKsXk3);
+          const intl = closure_1_0(closure_1_2[30]).intl;
+          navigation = intl.string(closure_1_0(closure_1_2[30]).t.CKsXk3);
         }
         const obj2 = { key: "CHANNEL_SETTINGS_DELETE_CHANNEL_ERROR", content: null };
         obj2[1] = navigation;
-        outer1_1(outer1_2[34]).open(obj2);
-        let c6 = 3;
-        const obj5 = outer1_1(outer1_2[34]);
+        closure_1_1(closure_1_2[34]).open(obj2);
+        c6 = 3;
+        const obj5 = closure_1_1(closure_1_2[34]);
       } else if (arg0 === 1) {
         c6 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        const obj = outer1_0(outer1_2[48]);
+        const obj = closure_1_0(closure_1_2[48]);
         navigation = obj.getRootNavigationRef();
-        const obj1 = navigation;
+        obj1 = navigation;
         let isReadyResult;
         if (navigation != null) {
           isReadyResult = obj1.isReady();
@@ -580,45 +552,45 @@ class ChannelSettingsOverview extends PureComponent {
       return arg1;
     });
     tmp.handlePressTag = function handlePressTag(tag) {
-      tmp.pushScreen(outer1_25.EDIT_FORUM_TAG, { tag });
+      store.pushScreen(closure_1_25.EDIT_FORUM_TAG, { tag });
     };
     tmp.handleToggleRequireTag = function handleToggleRequireTag() {
-      let obj = tmp;
-      if (tmp.props.canManageChannels) {
+      let obj = store;
+      if (store.props.canManageChannels) {
         const channel = obj.props.channel;
-        const hasFlagResult = channel.hasFlag(outer1_38.REQUIRE_TAG);
-        const obj2 = outer1_38(outer1_2[39]);
-        const setFlagResult = outer1_38(outer1_2[39]).setFlag(obj.props.channel.flags, outer1_38.REQUIRE_TAG, !hasFlagResult);
+        const hasFlagResult = channel.hasFlag(closure_1_38.REQUIRE_TAG);
+        const obj2 = store(closure_1_2[39]);
+        const setFlagResult = store(closure_1_2[39]).setFlag(obj.props.channel.flags, closure_1_38.REQUIRE_TAG, !hasFlagResult);
         obj = { flags: null };
         obj[0] = setFlagResult;
-        outer1_1(outer1_2[33]).updateChannel(obj);
+        closure_1_1(closure_1_2[33]).updateChannel(obj);
         obj.setState({ hasChanges: true });
-        const obj3 = outer1_1(outer1_2[33]);
+        const obj3 = closure_1_1(closure_1_2[33]);
       }
     };
     tmp.handleToggleShowMediaDownloadOptions = function handleToggleShowMediaDownloadOptions() {
-      let obj = tmp;
-      if (tmp.props.canManageChannels) {
+      let obj = store;
+      if (store.props.canManageChannels) {
         const channel = obj.props.channel;
-        const hasFlagResult = channel.hasFlag(outer1_38.HIDE_MEDIA_DOWNLOAD_OPTIONS);
-        const obj2 = outer1_38(outer1_2[39]);
-        const setFlagResult = outer1_38(outer1_2[39]).setFlag(obj.props.channel.flags, outer1_38.HIDE_MEDIA_DOWNLOAD_OPTIONS, !hasFlagResult);
+        const hasFlagResult = channel.hasFlag(closure_1_38.HIDE_MEDIA_DOWNLOAD_OPTIONS);
+        const obj2 = store(closure_1_2[39]);
+        const setFlagResult = store(closure_1_2[39]).setFlag(obj.props.channel.flags, closure_1_38.HIDE_MEDIA_DOWNLOAD_OPTIONS, !hasFlagResult);
         obj = { flags: null };
         obj[0] = setFlagResult;
-        outer1_1(outer1_2[33]).updateChannel(obj);
+        closure_1_1(closure_1_2[33]).updateChannel(obj);
         obj.setState({ hasChanges: true });
-        const obj3 = outer1_1(outer1_2[33]);
+        const obj3 = closure_1_1(closure_1_2[33]);
       }
     };
     tmp.getError = function getError(arg0) {
-      const errors = tmp.props.errors;
-      tmp = undefined;
+      const errors = store.props.errors;
+      let tmp;
       if (errors != null) {
         tmp = errors[arg0];
       }
       return tmp;
     };
-    tmp.state.hasChanges = isGuildNSFW.hasChanges();
+    tmp.state.hasChanges = closure_12.hasChanges();
     return tmp;
   }
 }
@@ -627,18 +599,16 @@ prototype["componentDidMount"] = function componentDidMount() {
   const self = this;
   this.updateNavigation(undefined, this.state);
   if (tmp2) {
-    let obj = RegionActionCreators;
+    let obj = _modDef16031;
     const regions = obj.fetchRegions(self.props.guild.id);
   }
   obj = { settings_type: "channel", destination_pane: constants6.CHANNEL_SETTINGS };
-  collectGuildAnalyticsMetadata.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
+  collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.SETTINGS_PANE_VIEWED, obj);
 };
 prototype["componentDidUpdate"] = function componentDidUpdate(arg0, arg1) {
   this.updateNavigation(arg0, arg1);
 };
 prototype["updateNavigation"] = function updateNavigation(submitting, hasChanges) {
-  let isThread;
-  let navigation;
   const self = this;
   const props = this.props;
   ({ navigation, submitting, isThread } = props);
@@ -675,10 +645,10 @@ prototype["updateNavigation"] = function updateNavigation(submitting, hasChanges
         const obj = {};
         const merged = Object.assign(arg0);
         obj.onPress = self.handleSave;
-        const intl = hasChanges(outer1_2[30]).intl;
-        obj.label = intl.string(hasChanges(outer1_2[30]).t["R3BPH+"]);
+        const intl = hasChanges(closure_1_2[30]).intl;
+        obj.label = intl.string(hasChanges(closure_1_2[30]).t["R3BPH+"]);
         obj.disabled = !hasChanges;
-        return outer1_43(hasChanges(outer1_2[32]).HeaderTextButton, obj);
+        return closure_1_43(hasChanges(closure_1_2[32]).HeaderTextButton, obj);
       };
     }
     let obj = { headerRight: null, title: null };
@@ -688,13 +658,6 @@ prototype["updateNavigation"] = function updateNavigation(submitting, hasChanges
   }
 };
 prototype["renderChannelInfo"] = function renderChannelInfo() {
-  let canManageChannels;
-  let canManageThread;
-  let canSendMessages;
-  let channel;
-  let isChannelOwner;
-  let isForumPost;
-  let isThread;
   const self = this;
   const props = this.props;
   ({ channel, canManageChannels, isThread } = props);
@@ -721,7 +684,7 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
   }
   obj = { ref: self.props.channelNameRef, label: stringResult, accessibilityLabel: stringResult, value: null, onChange: null, onBlur: null, isDisabled: null, maxLength: null, errorMessage: null, enableAndroidSanitizedInputWorkaround: true };
   const TextInput = tmp3(8071).TextInput;
-  obj[3] = computeChannelName.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+  obj[3] = computeChannelName.computeChannelName(channel, closure_20, closure_19);
   ({ handleChangeName: obj2[4], handleBlurName: obj2[5] } = self);
   obj[6] = !isChannelNameSettingEditable;
   obj[7] = closure_31;
@@ -740,17 +703,17 @@ prototype["renderChannelInfo"] = function renderChannelInfo() {
     } else {
       stringResult1 = string(t.X8jMDh);
     }
-    const obj1 = { label: null, accessibilityLabel: null, value: null, onChange: null, isDisabled: null, autoCorrect: true, maxLength: null, errorMessage: null };
+    obj1 = { label: null, accessibilityLabel: null, value: null, onChange: null, isDisabled: null, autoCorrect: true, maxLength: null, errorMessage: null };
     obj1[0] = stringResult1;
     obj1[1] = stringResult1;
     isForumLikeChannelResult = channel.isForumLikeChannel();
-    obj1[2] = parseRawEmojiObject.translateSurrogatesToInlineEmoji(channel.topic);
+    obj1[2] = parseRawEmojiObjectDefault.translateSurrogatesToInlineEmoji(channel.topic);
     obj1[3] = self.handleChangeTopic;
     obj1[4] = !canManageChannels;
     obj1[6] = channel.isForumLikeChannel() ? closure_40 : closure_39;
     obj1[7] = self.getError("topic");
     closure_43(tmp3(8092).TextArea, obj1);
-    const obj5 = parseRawEmojiObject;
+    const obj5 = parseRawEmojiObjectDefault;
   }
 };
 prototype["renderNsfwConfig"] = function renderNsfwConfig() {
@@ -759,7 +722,7 @@ prototype["renderNsfwConfig"] = function renderNsfwConfig() {
   if (channel.type === constants2.GUILD_TEXT) {
     tmp7Result = null;
     if (tmp2) {
-      let obj = set;
+      let obj = set2;
       tmp7Result = null;
       if (!obj.isIOS()) {
         obj = { helperText: null, hasIcons: false, children: null };
@@ -830,7 +793,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   const items = [];
   obj = { helperText: stringResult, hasIcons: false, children: null };
   obj = { border: "none", children: null };
-  const obj1 = { style: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" }, children: null };
+  obj1 = { style: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" }, children: null };
   const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: { flexShrink: 1 }, children: null };
   const intl4 = tmp5(1236).intl;
   obj2[3] = intl4.string(getSystemLocale.t.piZgKF);
@@ -838,7 +801,7 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   obj1[1] = items1;
   const items2 = [callback4(View, obj1), ];
   const obj3 = { style: items3, value: self._cooldown, minimumValue: 0, maximumValue: length.length - 1, onValueChange: self.handleSlowmodeChange, accessibilityLabel: null, accessibilityValue: null };
-  items3 = [callback5(this.context).slider, { marginStart: -4, marginTop: 8 }];
+  items3 = [callback6(this.context).slider, { marginStart: -4, marginTop: 8 }];
   const intl5 = tmp5(1236).intl;
   obj3[5] = intl5.string(getSystemLocale.t.piZgKF);
   obj3[6] = { text: secondsSliderLabel };
@@ -849,8 +812,6 @@ prototype["renderSlowmode"] = function renderSlowmode() {
   return items;
 };
 prototype["renderAutoArchiveDuration"] = function renderAutoArchiveDuration() {
-  let canManageThread;
-  let isForumPost;
   const props = this.props;
   const channel = props.channel;
   ({ canManageThread, isForumPost } = props);
@@ -954,12 +915,12 @@ prototype["renderDefaultSortOrder"] = function renderDefaultSortOrder() {
       obj = { label: null, value: null };
       const intl3 = getSystemLocale.intl;
       obj[0] = intl3.string(getSystemLocale.t.ElZtzj);
-      obj[1] = set.ThreadSortOrder.LATEST_ACTIVITY;
+      obj[1] = set3.ThreadSortOrder.LATEST_ACTIVITY;
       const items = [callback3(TableRadioRow.TableRadioRow, obj), ];
       obj = { label: null, value: null };
       const intl4 = getSystemLocale.intl;
       obj[0] = intl4.string(getSystemLocale.t.w28f3F);
-      obj[1] = set.ThreadSortOrder.CREATION_DATE;
+      obj[1] = set3.ThreadSortOrder.CREATION_DATE;
       items[1] = callback3(TableRadioRow.TableRadioRow, obj);
       obj[5] = items;
       return callback4(context.TableRadioGroup, obj);
@@ -983,12 +944,12 @@ prototype["renderDefaultTagSetting"] = function renderDefaultTagSetting() {
       obj = { label: null, value: null };
       const intl3 = getSystemLocale.intl;
       obj[0] = intl3.string(getSystemLocale.t.rQ0ctQ);
-      obj[1] = set.ThreadSearchTagSetting.MATCH_SOME;
+      obj[1] = set4.ThreadSearchTagSetting.MATCH_SOME;
       const items = [callback3(TableRadioRow.TableRadioRow, obj), ];
       obj = { label: null, value: null };
       const intl4 = getSystemLocale.intl;
       obj[0] = intl4.string(getSystemLocale.t.FCXUu0);
-      obj[1] = set.ThreadSearchTagSetting.MATCH_ALL;
+      obj[1] = set4.ThreadSearchTagSetting.MATCH_ALL;
       items[1] = callback3(TableRadioRow.TableRadioRow, obj);
       obj[5] = items;
       return callback4(context.TableRadioGroup, obj);
@@ -997,8 +958,6 @@ prototype["renderDefaultTagSetting"] = function renderDefaultTagSetting() {
   return null;
 };
 prototype["renderAnnouncement"] = function renderAnnouncement() {
-  let channel;
-  let guild;
   const self = this;
   const props = this.props;
   ({ channel, guild } = props);
@@ -1021,13 +980,13 @@ prototype["renderAnnouncement"] = function renderAnnouncement() {
             obj = { children: null };
             const intl = getSystemLocale.intl;
             obj = { documentationLink: null };
-            obj[0] = combined.getArticleURL(constants5.ANNOUNCEMENT_CHANNELS);
+            obj[0] = combinedDefault.getArticleURL(constants5.ANNOUNCEMENT_CHANNELS);
             const items1 = [intl.format(getSystemLocale.t.tI7KNX, obj), "\n\n", ];
             const intl2 = getSystemLocale.intl;
             items1[2] = intl2.string(getSystemLocale.t["2Ab4Id"]);
             obj[0] = items1;
             obj[0] = callback4(closure_45, obj);
-            const obj1 = { disabled: null, label: null, value: null, onValueChange: null };
+            obj1 = { disabled: null, label: null, value: null, onValueChange: null };
             obj1[0] = !props.canManageChannels;
             const intl3 = getSystemLocale.intl;
             obj1[1] = intl3.string(getSystemLocale.t.Au2b7m);
@@ -1045,8 +1004,6 @@ prototype["renderAnnouncement"] = function renderAnnouncement() {
   return null;
 };
 prototype["renderBitrateSettings"] = function renderBitrateSettings() {
-  let canManageChannels;
-  let guild;
   const props = this.props;
   const channel = props.channel;
   ({ canManageChannels, guild } = props);
@@ -1060,7 +1017,7 @@ prototype["renderBitrateSettings"] = function renderBitrateSettings() {
       obj = { bitrate: null };
       obj[0] = closure_23 / 1000;
       obj[0] = intl.format(getSystemLocale.t.SbQJk5, obj);
-      const obj1 = { children: null };
+      obj1 = { children: null };
       const obj2 = { style: null, children: null };
       obj2[0] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" };
       const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
@@ -1092,8 +1049,6 @@ prototype["renderBitrateSettings"] = function renderBitrateSettings() {
   return null;
 };
 prototype["renderVideoQualityModeSettings"] = function renderVideoQualityModeSettings() {
-  let canManageChannels;
-  let channel;
   ({ channel, canManageChannels } = this.props);
   if (this.showVoiceSettings()) {
     if (canManageChannels) {
@@ -1157,7 +1112,7 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
       obj = { description: null, hasIcons: false, children: null };
       obj[0] = formatResult;
       obj = { children: null };
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap" };
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: null, children: null };
       obj2[2] = { flexShrink: 1 };
@@ -1185,8 +1140,6 @@ prototype["renderUserLimitSettings"] = function renderUserLimitSettings() {
   return null;
 };
 prototype["renderRegionOverride"] = function renderRegionOverride() {
-  let channel;
-  let regions;
   let self = this;
   self = this;
   const props = this.props;
@@ -1225,7 +1178,7 @@ prototype["renderRegionOverride"] = function renderRegionOverride() {
           obj[1] = callback3(channel(6291).TableRow.TrailingText, obj);
           obj[3] = tmp2;
           obj[4] = function onPress() {
-            return self.pushScreen(outer1_25.CHANGE_RTC_REGION);
+            return self.pushScreen(closure_1_25.CHANGE_RTC_REGION);
           };
           obj[3] = callback3(channel(6291).TableRow, obj);
           items.push(callback3(channel(6286).TableRowGroup, obj, "channel-region-override"));
@@ -1277,7 +1230,7 @@ prototype["renderPermissions"] = function renderPermissions() {
     tmp2Result = tmp2(ShieldUserIcon, {});
     obj[2] = tmp2Result;
     obj[3] = function onPress() {
-      return self.pushScreen(outer1_25.PERMISSIONS, { origin: outer1_25.OVERVIEW });
+      return self.pushScreen(closure_1_25.PERMISSIONS, { origin: closure_1_25.OVERVIEW });
     };
     obj[2] = closure_43(self(6291).TableRow, obj);
     tmp2Result = tmp2(self(6286).TableRowGroup, obj);
@@ -1306,10 +1259,10 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     obj[2] = callback3(channel(10003).BellIcon, {});
     obj[3] = function onPress() {
       if (channel.isThread()) {
-        let result = channel(outer1_2[70]).showThreadNotificationsBottomSheet(channel);
-        const obj = channel(outer1_2[70]);
+        let result = channel(closure_1_2[70]).showThreadNotificationsBottomSheet(channel);
+        const obj = channel(closure_1_2[70]);
       } else {
-        result = self.pushScreen(outer1_25.NOTIFICATIONS);
+        result = self.pushScreen(closure_1_25.NOTIFICATIONS);
       }
       return result;
     };
@@ -1323,7 +1276,7 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     obj[0] = channel.id;
     obj[2] = callback3(PinImage, obj);
     obj[3] = function onPress() {
-      return self.pushScreen(outer1_25.PINNED_MESSAGES);
+      return self.pushScreen(closure_1_25.PINNED_MESSAGES);
     };
     obj[4] = self.props.pinDisabled;
     items.push(callback3(channel(6291).TableRow, obj, "rowPinnedMessages"));
@@ -1335,12 +1288,12 @@ prototype["renderCommonSettingsSection"] = function renderCommonSettingsSection(
     canManageChannels = !channel.isThread();
   }
   if (canManageChannels) {
-    const obj1 = { label: null, arrow: true, icon: null, onPress: null };
+    obj1 = { label: null, arrow: true, icon: null, onPress: null };
     const intl3 = channel(1236).intl;
     obj1[0] = intl3.string(channel(1236).t.ngRFjZ);
     obj1[2] = callback3(channel(4318).LinkIcon, {});
     obj1[3] = function onPress() {
-      return self.pushScreen(outer1_25.INSTANT_INVITES);
+      return self.pushScreen(closure_1_25.INSTANT_INVITES);
     };
     items.push(callback3(channel(6291).TableRow, obj1, "rowInstantInvites"));
   }
@@ -1367,7 +1320,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
       const intl3 = GridSquareIcon(1236).intl;
       stringResult = intl3.string(GridSquareIcon(1236).t["4HXEZG"]);
     }
-    const obj1 = { text: null };
+    obj1 = { text: null };
     obj1[0] = stringResult;
     obj[1] = closure_43(self(6291).TableRow.TrailingText, obj1);
     if (channel.defaultForumLayout === GridSquareIcon(1401).ForumLayout.GRID) {
@@ -1379,7 +1332,7 @@ prototype["renderDefaultForumLayout"] = function renderDefaultForumLayout() {
     }
     obj[3] = tmpResult;
     obj[4] = function onPress() {
-      return self.pushScreen(outer1_25.DEFAULT_FORUM_LAYOUT);
+      return self.pushScreen(closure_1_25.DEFAULT_FORUM_LAYOUT);
     };
     obj[2] = closure_43(self(6291).TableRow, obj, "forumDefaultLayout");
     tmpResult = tmp(self(6286).TableRowGroup, obj, "default-forum-layout");
@@ -1391,7 +1344,7 @@ prototype["renderUncommonSettingsSection"] = function renderUncommonSettingsSect
   const props = this.props;
   const canManageWebhooks = props.canManageWebhooks;
   let tmp = undefined !== canManageWebhooks && canManageWebhooks;
-  const importDefault = tmp;
+  closure_1 = tmp;
   let obj = require(self[75]);
   const result = obj.canUnlinkLobbyChannel(props.channel);
   require = result;
@@ -1405,21 +1358,13 @@ prototype["renderUncommonSettingsSection"] = function renderUncommonSettingsSect
     obj[0] = intl.string(tmp2(tmp3[30]).t.CIsNZw);
     obj[2] = callback3(tmp2(tmp3[76]).PuzzlePieceIcon, {});
     obj[3] = function onPress() {
-      return self.pushScreen(outer1_25.INTEGRATIONS, { canManageWebhooks: closure_1, canUnlinkLobby: closure_0 });
+      return self.pushScreen(closure_1_25.INTEGRATIONS, { canManageWebhooks: closure_1, canUnlinkLobby: closure_0 });
     };
     items.push(callback3(tmp2(tmp3[66]).TableRow, obj, "rowIntegrations"));
   }
   return self.renderSettingsSection(items);
 };
 prototype["renderThreadManagementActions"] = function renderThreadManagementActions() {
-  let canManageThread;
-  let canUnarchiveThread;
-  let hasJoinedThread;
-  let isArchivedThread;
-  let isForumPost;
-  let isLockedThread;
-  let isThreadModerator;
-  let require;
   const props = this.props;
   ({ channel: require, isThreadModerator, isLockedThread, isArchivedThread, isForumPost } = props);
   ({ canManageThread, canUnarchiveThread, hasJoinedThread } = props);
@@ -1442,7 +1387,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         }
         obj[1] = string2Result;
         obj[2] = function onPress() {
-          return outer1_1(outer1_2[78]).unarchiveThread(closure_0, false);
+          return closure_1_1(closure_1_2[78]).unarchiveThread(closure_0, false);
         };
         callback3(tmp2(6291).TableRow, obj);
         const tmp9 = callback3;
@@ -1466,7 +1411,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         }
         obj[1] = string3Result;
         obj[2] = function onPress() {
-          return outer1_1(outer1_2[78]).archiveThread(closure_0, false);
+          return closure_1_1(closure_1_2[78]).archiveThread(closure_0, false);
         };
         callback3(tmp2(6291).TableRow, obj);
         const tmp13 = callback3;
@@ -1477,7 +1422,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     if (isThreadModerator) {
       tmp16 = null;
       if (isLockedThread) {
-        const obj1 = { icon: null, label: null, onPress: null };
+        obj1 = { icon: null, label: null, onPress: null };
         obj1[0] = callback3(tmp2(6890).LockIcon, {});
         const intl4 = tmp2(1236).intl;
         const string4 = intl4.string;
@@ -1490,7 +1435,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         }
         obj1[1] = string4Result;
         obj1[2] = function onPress() {
-          return outer1_1(outer1_2[78]).unlockThread(closure_0);
+          return closure_1_1(closure_1_2[78]).unlockThread(closure_0);
         };
         callback3(tmp2(6291).TableRow, obj1);
         const tmp17 = callback3;
@@ -1514,7 +1459,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
         }
         obj2[1] = string5Result;
         obj2[2] = function onPress() {
-          return outer1_1(outer1_2[78]).lockThread(closure_0);
+          return closure_1_1(closure_1_2[78]).lockThread(closure_0);
         };
         callback3(tmp2(6291).TableRow, obj2);
         const tmp21 = callback3;
@@ -1527,7 +1472,7 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     const intl6 = tmp2(1236).intl;
     obj4[1] = intl6.string(tmp2(1236).t.WqhZss);
     obj4[2] = function onPress() {
-      return outer1_0(outer1_2[82]).copyGuildChannelOrThreadLink(closure_0.guild_id, closure_0.id);
+      return closure_1_0(closure_1_2[82]).copyGuildChannelOrThreadLink(closure_0.guild_id, closure_0.id);
     };
     items[5] = callback3(tmp2(6291).TableRow, obj4);
     obj3[1] = items;
@@ -1546,17 +1491,13 @@ prototype["renderThreadManagementActions"] = function renderThreadManagementActi
     }
     obj[1] = stringResult;
     obj[2] = function onPress() {
-      return outer1_1(outer1_2[78]).joinThread(closure_0, "Context Menu");
+      return closure_1_1(closure_1_2[78]).joinThread(closure_0, "Context Menu");
     };
     callback3(tmp2(6291).TableRow, obj);
     const tmp5 = callback3;
   }
 };
 prototype["renderDeleteButton"] = function renderDeleteButton() {
-  let canManageChannels;
-  let hasJoinedThread;
-  let isForumPost;
-  let isThreadModerator;
   const props = this.props;
   const channel = props.channel;
   ({ canManageChannels, isForumPost } = props);
@@ -1609,7 +1550,7 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
       }
       obj[2] = string2Result;
       obj[3] = function onPress() {
-        return outer1_1(outer1_2[78]).leaveThread(channel, "Context Menu");
+        return closure_1_1(closure_1_2[78]).leaveThread(channel, "Context Menu");
       };
       callback3(tmp8(6291).TableRow, obj);
       const tmp17 = callback3;
@@ -1619,11 +1560,9 @@ prototype["renderDeleteButton"] = function renderDeleteButton() {
   return tmp;
 };
 prototype["renderForumTags"] = function renderForumTags() {
-  let canManageChannels;
-  let channel;
   let self = this;
   self = this;
-  const tmp = callback5(this.context);
+  const tmp = callback6(this.context);
   ({ channel, canManageChannels } = this.props);
   if (channel.isForumLikeChannel()) {
     let availableTags = channel.availableTags;
@@ -1634,7 +1573,7 @@ prototype["renderForumTags"] = function renderForumTags() {
     if (canManageChannels) {
       tmp3 = channel.availableTags.length < MAX_FORUM_TAGS;
     }
-    const error = self.getError("available_tags");
+    error = self.getError("available_tags");
     let obj = { spacing: null, children: null };
     obj[0] = self(712).space.PX_12;
     obj = { title: null, description: null, hasIcons: false, children: null };
@@ -1651,10 +1590,10 @@ prototype["renderForumTags"] = function renderForumTags() {
     let tmp6Result = null;
     if (channel.availableTags.length > 0) {
       availableTags = channel.availableTags;
-      const items = [availableTags.map((id) => outer1_43(self(outer1_2[86]), { tag: id, onPress: self.handlePressTag, disabled: !canManageChannels }, id.id)), ];
+      const items = [availableTags.map((id) => closure_1_43(self(closure_1_2[86]), { tag: id, onPress: self.handlePressTag, disabled: !canManageChannels }, id.id)), ];
       let tmp10Result = null;
       if (tmp3) {
-        const obj1 = { style: null, children: null };
+        obj1 = { style: null, children: null };
         obj1[0] = tmp.addTagIconButtonWrapper;
         const obj2 = { icon: null, size: "sm", onPress: null, accessibilityLabel: null };
         const obj3 = { size: "sm", color: null };
@@ -1739,8 +1678,6 @@ prototype["renderShowMediaDownloadOptions"] = function renderShowMediaDownloadOp
   return tmp;
 };
 prototype["renderCategory"] = function renderCategory() {
-  let canManageParent;
-  let category;
   const self = this;
   const props = this.props;
   ({ category, canManageParent } = props);
@@ -1752,7 +1689,7 @@ prototype["renderCategory"] = function renderCategory() {
         let tmp7 = self;
       } else {
         let obj = self(4984);
-        stringResult = obj.computeChannelName(category, mergeGuildAvatar, markAllUserIdListsStale);
+        stringResult = obj.computeChannelName(category, closure_20, closure_19);
         tmp7 = self;
       }
       obj = { icon: null, label: null, trailing: null, arrow: null, onPress: null };
@@ -1765,9 +1702,9 @@ prototype["renderCategory"] = function renderCategory() {
       obj[3] = canManageParent;
       let fn;
       if (canManageParent) {
-        fn = () => self.pushScreen(outer1_25.CHANGE_CATEGORY);
+        fn = () => self.pushScreen(closure_1_25.CHANGE_CATEGORY);
       }
-      const obj1 = { hasIcons: true, children: null };
+      obj1 = { hasIcons: true, children: null };
       obj[4] = fn;
       obj1[1] = callback3(tmp7(6291).TableRow, obj);
       return callback3(tmp7(6286).TableRowGroup, obj1);
@@ -1777,9 +1714,7 @@ prototype["renderCategory"] = function renderCategory() {
 };
 prototype["renderThreadSettings"] = function renderThreadSettings() {
   let obj = { children: null };
-  obj = { spacing: null, style: null, children: null };
-  obj[0] = Themes.space.PX_24;
-  obj[1] = callback5(this.context).stackPadding;
+  obj = { spacing: ThemesDefault.space.PX_24, style: callback6(this.context).stackPadding, children: null };
   const items = [this.renderChannelInfo(), this.renderCommonSettingsSection(), this.renderThreadManagementActions(), this.renderThreadSpoiler(), this.renderSlowmode(), this.renderAutoArchiveDuration(), this.renderInvitable(), this.renderDeleteButton()];
   obj[2] = items;
   obj[0] = callback4(Stack.Stack, obj);
@@ -1787,9 +1722,7 @@ prototype["renderThreadSettings"] = function renderThreadSettings() {
 };
 prototype["renderChannelSettings"] = function renderChannelSettings() {
   let obj = { children: null };
-  obj = { spacing: null, style: null, children: null };
-  obj[0] = Themes.space.PX_24;
-  obj[1] = callback5(this.context).stackPadding;
+  obj = { spacing: ThemesDefault.space.PX_24, style: callback6(this.context).stackPadding, children: null };
   const items = [this.renderChannelInfo(), this.renderForumTags(), this.renderCategory(), this.renderPermissions(), this.renderCommonSettingsSection(), this.renderDefaultForumLayout(), this.renderDefaultSortOrder(), this.renderDefaultTagSetting(), this.renderAnnouncement(), this.renderNsfwConfig(), this.renderSlowmode(), this.renderDefaultAutoArchiveDuration(), this.renderBitrateSettings(), this.renderVideoQualityModeSettings(), this.renderUserLimitSettings(), this.renderRegionOverride(), this.renderUncommonSettingsSection(), this.renderShowMediaDownloadOptions(), this.renderDeleteButton()];
   obj[2] = items;
   obj[0] = callback4(Stack.Stack, obj);
@@ -1802,17 +1735,13 @@ prototype["render"] = function render() {
   } else {
     renderThreadSettingsResult = self.renderChannelSettings();
   }
-  const tmp = callback5(this.context);
-  return callback3(View, { style: callback5(this.context).screenContainer, children: renderThreadSettingsResult });
+  const tmp = callback6(this.context);
+  return callback3(View, { style: callback6(this.context).screenContainer, children: renderThreadSettingsResult });
 };
 ChannelSettingsOverview.contextType = require("ManaContext").ThemeContext;
 let result = set.fileFinishedImporting("components_native/channel_settings/ChannelSettingsOverview.tsx");
 
 export default function ConnectedChannelSettingsOverview(arg0) {
-  let autoFocusElement;
-  let hasJoinedThread;
-  let isMutedThread;
-  let require;
   ({ channelId: require, autoFocusElement } = arg0);
   let navigation;
   let stateFromStores;
@@ -1820,24 +1749,24 @@ export default function ConnectedChannelSettingsOverview(arg0) {
   let ref;
   let obj = require(navigation[92]);
   navigation = obj.useNavigation();
-  const items = [ensureGuildLoaded];
-  stateFromStores = require(navigation[24]).useStateFromStores(items, () => outer1_13.getChannel(closure_0));
+  const items = [closure_13];
+  stateFromStores = require(navigation[24]).useStateFromStores(items, () => closure_1_13.getChannel(closure_0));
   let obj2 = require(navigation[24]);
-  const items1 = [normalizeChannelPropertyForCompare];
+  const items1 = [closure_12];
   const stateFromStores1 = require(navigation[24]).useStateFromStores(items1, () => channel.getChannel());
   const obj4 = require(navigation[24]);
   const isThreadModerator = require(navigation[67]).useIsThreadModerator(stateFromStores);
   const obj5 = require(navigation[67]);
-  const items2 = [storeThread];
+  const items2 = [closure_6];
   const stateFromStoresObject = require(navigation[24]).useStateFromStoresObject(items2, () => {
     let isMutedResult;
     if (null != stateFromStores) {
-      isMutedResult = outer1_6.isMuted(tmp.id);
+      isMutedResult = closure_1_6.isMuted(tmp.id);
     }
     const obj = { isMutedThread: isMutedResult, hasJoinedThread: null };
     let hasJoinedResult;
     if (null != stateFromStores) {
-      hasJoinedResult = outer1_6.hasJoined(tmp.id);
+      hasJoinedResult = closure_1_6.hasJoined(tmp.id);
     }
     obj[1] = hasJoinedResult;
     return obj;
@@ -1848,12 +1777,10 @@ export default function ConnectedChannelSettingsOverview(arg0) {
   const obj7 = require(navigation[67]);
   shouldHideChannelContent = require(navigation[56]).useShouldHideChannelContent(stateFromStores);
   const obj8 = require(navigation[56]);
-  const items3 = [normalizeChannelPropertyForCompare, createGuildRecordFromRust, ensureGuildLoaded, mergeGuildAvatar, initialize, comparator, getUncachedChannelPermissions];
+  const items3 = [closure_12, closure_15, closure_13, closure_20, closure_18, closure_14, closure_16];
   const items4 = [stateFromStores, shouldHideChannelContent];
   const stateFromStoresObject1 = require(navigation[24]).useStateFromStoresObject(items3, () => {
-    let errors;
-    let submitting;
-    const props = outer1_12.getProps();
+    const props = closure_1_12.getProps();
     ({ submitting, errors } = props);
     let obj = stateFromStores;
     if (null == stateFromStores) {
@@ -1862,18 +1789,18 @@ export default function ConnectedChannelSettingsOverview(arg0) {
       obj[2] = errors;
       return obj;
     } else {
-      const guild = outer1_15.getGuild(obj.getGuildId());
-      const channel = outer1_13.getChannel(obj.parent_id);
-      const currentUser = outer1_20.getCurrentUser();
-      const hasItem = outer1_10.has(obj.type);
+      const guild = closure_1_15.getGuild(obj.getGuildId());
+      const channel = closure_1_13.getChannel(obj.parent_id);
+      const currentUser = closure_1_20.getCurrentUser();
+      const hasItem = closure_1_10.has(obj.type);
       obj = { isThread: null, guild: null, category: null, hasCategories: null, pinDisabled: null, canManageChannels: null, isChannelOwner: null, canManageParent: null, canManageRoles: null, canSendMessages: null, canManageWebhooks: null, canUnarchiveThread: null, regions: null, submitting: null, errors: null, isNSFWDisabled: null };
       obj[0] = hasItem;
       obj[1] = guild;
       obj[2] = channel;
-      const regions = outer1_18.getRegions(obj.getGuildId());
-      obj[3] = outer1_14.hasCategories(obj.guild_id);
+      const regions = closure_1_18.getRegions(obj.getGuildId());
+      obj[3] = closure_1_14.hasCategories(obj.guild_id);
       obj[4] = shouldHideChannelContent;
-      obj[5] = outer1_16.can(outer1_34.MANAGE_CHANNELS, obj);
+      obj[5] = closure_1_16.can(closure_1_34.MANAGE_CHANNELS, obj);
       obj[6] = null != currentUser && obj.ownerId === currentUser.id;
       if (null != channel) {
         let canResult = obj5.can(tmp21.MANAGE_CHANNELS, channel);
@@ -1881,16 +1808,16 @@ export default function ConnectedChannelSettingsOverview(arg0) {
         canResult = obj5.can(tmp21.MANAGE_CHANNELS, guild);
       }
       obj[7] = canResult;
-      obj[8] = outer1_16.can(outer1_34.MANAGE_ROLES, obj);
-      obj[9] = outer1_16.can(outer1_34.SEND_MESSAGES, obj);
-      obj[10] = outer1_8(obj.type) && outer1_16.can(outer1_34.MANAGE_WEBHOOKS, obj);
-      const tmp4 = outer1_8(obj.type) && outer1_16.can(outer1_34.MANAGE_WEBHOOKS, obj);
-      obj[11] = outer1_0(navigation[67]).canUnarchiveThread(obj);
+      obj[8] = closure_1_16.can(closure_1_34.MANAGE_ROLES, obj);
+      obj[9] = closure_1_16.can(closure_1_34.SEND_MESSAGES, obj);
+      obj[10] = closure_1_8(obj.type) && closure_1_16.can(closure_1_34.MANAGE_WEBHOOKS, obj);
+      const tmp4 = closure_1_8(obj.type) && closure_1_16.can(closure_1_34.MANAGE_WEBHOOKS, obj);
+      obj[11] = closure_1_0(navigation[67]).canUnarchiveThread(obj);
       obj[12] = regions;
       obj[13] = submitting;
       obj[14] = errors;
-      const obj2 = outer1_0(navigation[67]);
-      obj[15] = outer1_11(guild) || null != obj.linkedLobby;
+      const obj2 = closure_1_0(navigation[67]);
+      obj[15] = closure_1_11(guild) || null != obj.linkedLobby;
       return obj;
     }
   }, items4);
@@ -1898,7 +1825,7 @@ export default function ConnectedChannelSettingsOverview(arg0) {
   const items5 = [autoFocusElement, navigation];
   const effect = shouldHideChannelContent.useEffect(() => navigation.addListener("transitionEnd", (data) => {
     if (!data.data.closing) {
-      if (closure_1 === outer1_21.CHANNEL_NAME) {
+      if (closure_1 === closure_1_21.CHANNEL_NAME) {
         const current = ref.current;
         let focusResult;
         if (current != null) {

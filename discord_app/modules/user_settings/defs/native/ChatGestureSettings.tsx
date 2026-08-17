@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/ChatGestureSettings.tsx
-import ME from "ME";
-import createToggle from "createToggle";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import ME from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let c3;
-let c4;
 function useSwipeToReplySettingValue() {
   const SwipeRightToLeftModeSetting = explicitContentFromProto.SwipeRightToLeftModeSetting;
   let SWIPE_RIGHT_TO_LEFT_REPLY = SwipeRightToLeftModeSetting.useSetting();
@@ -27,11 +27,11 @@ const radio = createToggle.createRadio({
     const items = [intl.string(getSystemLocale.t["9BGJ1m"])];
     return items;
   },
-  parent: require("MobileUserSettings").MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
+  parent: MobileUserSettings.MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
   useValue: useSwipeToReplySettingValue,
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { enabled: NumberResult === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: obj };
     obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
     obj.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj);
@@ -62,11 +62,11 @@ let obj = {
     const items = [intl.string(getSystemLocale.t["9BGJ1m"])];
     return items;
   },
-  parent: require("MobileUserSettings").MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
+  parent: MobileUserSettings.MobileUserSettings.SWIPE_RIGHT_TO_LEFT,
   useValue: useSwipeToReplySettingValue,
   onValueChange: function onSwipeToReplyValueChange(arg0) {
     const NumberResult = Number(arg0);
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { enabled: NumberResult === create.SwipeRightToLeftMode.SWIPE_RIGHT_TO_LEFT_REPLY, location: obj };
     obj = { section: constants2.SETTINGS_TEXT_AND_IMAGES };
     obj.track(constants.USER_SETTINGS_SWIPE_TO_REPLY_TOGGLE, obj);
@@ -87,7 +87,7 @@ let obj = {
     return items;
   }
 };
-const result = require("create").fileFinishedImporting("modules/user_settings/defs/native/ChatGestureSettings.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ChatGestureSettings.tsx");
 
 export default radio;
 export { useSwipeToReplySettingValue };

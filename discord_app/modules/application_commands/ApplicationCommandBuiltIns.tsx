@@ -1,30 +1,23 @@
 // discord_app/modules/application_commands/ApplicationCommandBuiltIns.tsx
-import importDefaultResult from "ME";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import ME from "ME";
-import ROLL_DURATION_MS from "ROLL_DURATION_MS";
-import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { ChangeNicknameActionCreators } from "../../actions/ChangeNicknameActionCreators.tsx";
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
+import _modDef8461 from "module_8461" /* 8461 */;
+import importDefaultResult from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
+import ME from "ME" /* 676 */;
+import ROLL_DURATION_MS from "ROLL_DURATION_MS" /* 8459 */;
+import { getDisableCommunicationDurationOptions as closure_11 } from "getFriendlyDurationString" /* 1992 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 import { getSystemLocale } from "../../intl/index.native.tsx";
 import { set } from "../../utils/Durations.tsx";
 import { useMessageMaxLength } from "../messages/useMessageMaxLength.tsx";
-import { useCanUnarchiveThread } from "../threads/ThreadHooks.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
 
-let ALLOWED_DICE_SIDES;
-let DISPLAY_NAME_MAX_LENGTH;
-let MAX_CHANNEL_NAME_LENGTH;
-let MAX_DICE_COUNT;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getOptionValue(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const iter = arr.find((name) => name.name === size);
   let value;
   if (iter != null) {
@@ -33,7 +26,7 @@ function getOptionValue(arr) {
   return value;
 }
 let c3 = importDefaultResult;
-({ Permissions: error, MARKDOWN_SPOILER_WRAPPER: metroImportAll, ME: c9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = ME);
+({ Permissions: error, MARKDOWN_SPOILER_WRAPPER: closure_8, ME: c9, DISPLAY_NAME_MAX_LENGTH, MAX_CHANNEL_NAME_LENGTH } = ME);
 ({ ALLOWED_DICE_SIDES, MAX_DICE_COUNT } = ROLL_DURATION_MS);
 let obj = {};
 obj = { id: BuiltInSectionId.BUILT_IN, type: require("ApplicationCommandSectionType").ApplicationCommandSectionType.BUILT_IN };
@@ -97,8 +90,7 @@ obj1.execute = function execute(arr) {
   if (str == null) {
     str = "";
   }
-  const obj = { content: null };
-  obj[0] = "" + str + " \u00AF\\_(\u30C4)_/\u00AF".trim();
+  const obj = { content: "" + str + " \u00AF\\_(\u30C4)_/\u00AF".trim() };
   return obj;
 };
 items[tmp5] = obj1;
@@ -145,8 +137,7 @@ obj3.execute = function execute(arr) {
   if (str == null) {
     str = "";
   }
-  const obj = { content: null };
-  obj[0] = "" + str + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim();
+  const obj = { content: "" + str + " (\u256F\u00B0\u25A1\u00B0)\u256F\uFE35 \u253B\u2501\u253B".trim() };
   return obj;
 };
 items[sum] = obj3;
@@ -193,8 +184,7 @@ obj5.execute = function execute(arr) {
   if (str == null) {
     str = "";
   }
-  const obj = { content: null };
-  obj[0] = "" + str + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim();
+  const obj = { content: "" + str + " \u252C\u2500\u252C\u30CE( \u00BA _ \u00BA\u30CE)".trim() };
   return obj;
 };
 items[sum1] = obj5;
@@ -240,7 +230,7 @@ obj7.predicate = function predicate(channel) {
     setting = EnableTTSCommand.getSetting();
   }
   if (setting) {
-    setting = getUncachedChannelPermissions.can(constants.SEND_TTS_MESSAGES, channel);
+    setting = closure_5.can(constants.SEND_TTS_MESSAGES, channel);
   }
   return setting;
 };
@@ -348,8 +338,7 @@ obj11.execute = function execute(arr) {
   if (str == null) {
     str = "";
   }
-  const obj = { content: null };
-  obj[0] = callback(str).trim();
+  const obj = { content: callback(str).trim() };
   return obj;
 };
 items[sum4] = obj11;
@@ -391,16 +380,14 @@ obj13.predicate = function predicate(channel) {
   channel = channel.channel;
   let tmp = null != channel && !channel.isPrivate();
   if (tmp) {
-    tmp = getUncachedChannelPermissions.can(constants.CHANGE_NICKNAME, channel) || getUncachedChannelPermissions.can(constants.MANAGE_NICKNAMES, channel);
-    const obj = getUncachedChannelPermissions;
+    tmp = closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
+    const obj = closure_5;
     const tmp2 = constants;
-    const tmp3 = getUncachedChannelPermissions.can(constants.CHANGE_NICKNAME, channel) || getUncachedChannelPermissions.can(constants.MANAGE_NICKNAMES, channel);
+    const tmp3 = closure_5.can(constants.CHANGE_NICKNAME, channel) || closure_5.can(constants.MANAGE_NICKNAMES, channel);
   }
   return tmp;
 };
 obj13.execute = function execute(arr) {
-  let channel;
-  let guild;
   ({ guild, channel } = arg1);
   if (null != guild) {
     if (null != channel) {
@@ -413,7 +400,7 @@ obj13.execute = function execute(arr) {
       if (str == null) {
         str = "";
       }
-      const obj = ChangeNicknameActionCreators;
+      const obj = _modDef8461;
       const id = guild.id;
       const id2 = channel.id;
       if (!str) {
@@ -487,10 +474,10 @@ obj15.predicate = function predicate(channel) {
   return canStartPublicThread;
 };
 let closure_14 = importDefaultResult((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let c6 = 0;
-  let c7 = 0;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  c6 = 0;
+  c7 = 0;
   const iter = (function*(arg0, arg1) {
     if (c7 === 2) {
       c7 = 3;
@@ -518,12 +505,12 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let getUncachedChannelPermissions = tmp5;
+            closure_5 = tmp5;
             let id = tmp2;
             let channel;
             channel = channel.channel;
-            let dependencyMap;
-            let closure_3;
+            dependencyMap = undefined;
+            closure_3 = undefined;
             id = undefined;
             c6 = 1;
             c7 = 1;
@@ -535,7 +522,7 @@ let closure_14 = importDefaultResult((arg0, arg1) => {
             throw arg1;
           } else if (arg0 === 2) {
             c7 = 3;
-            let obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
@@ -647,7 +634,7 @@ obj20.required = false;
 items9[1] = obj20;
 obj18.options = items9;
 obj18.predicate = function predicate(guild) {
-  return getUncachedChannelPermissions.can(constants.KICK_MEMBERS, guild.guild);
+  return closure_5.can(constants.KICK_MEMBERS, guild.guild);
 };
 obj18.execute = function execute(arr, guild) {
   let user = arr;
@@ -684,19 +671,19 @@ obj18.execute = function execute(arr, guild) {
               return obj;
             } else {
               const id = tmp2;
-              let closure_1 = tmp3;
-              let c0;
-              if (null != outer1_1) {
-                if (null != outer1_2) {
-                  const user = outer1_6.getUser(c3);
+              closure_1 = tmp3;
+              c0 = undefined;
+              if (null != closure_1_1) {
+                if (null != closure_1_2) {
+                  user = closure_1_6.getUser(c3);
                   c0 = user;
                   if (null == user) {
                     const _Error = Error;
-                    const error = new Error();
+                    error = new Error();
                     throw error;
                   } else {
-                    let obj1 = outer1_1(outer1_2[22]);
-                    const tmp15 = outer1_13(outer1_0, "reason");
+                    obj1 = closure_1_1(closure_1_2[22]);
+                    const tmp15 = closure_1_13(closure_1_0, "reason");
                     c0 = tmp15;
                     if (tmp15 == null) {
                       c0 = "";
@@ -716,12 +703,12 @@ obj18.execute = function execute(arr, guild) {
             c4 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            const intl = outer1_0(outer1_2[10]).intl;
+            const intl = closure_1_0(closure_1_2[10]).intl;
             const obj2 = { user: null };
-            const obj6 = outer1_1(outer1_2[20]);
-            obj2[0] = outer1_1(outer1_2[23]).getUserTag(c0);
-            obj6.sendBotMessage(id.id, intl.formatToPlainString(outer1_0(outer1_2[10]).t["9wzHDV"], obj2));
-            const obj8 = outer1_1(outer1_2[23]);
+            const obj6 = closure_1_1(closure_1_2[20]);
+            obj2[0] = closure_1_1(closure_1_2[23]).getUserTag(c0);
+            obj6.sendBotMessage(id.id, intl.formatToPlainString(closure_1_0(closure_1_2[10]).t["9wzHDV"], obj2));
+            const obj8 = closure_1_1(closure_1_2[23]);
           }
           c4 = 3;
           obj = { value: null, done: true };
@@ -733,7 +720,7 @@ obj18.execute = function execute(arr, guild) {
         }
       }
     });
-    const _handler = tmp;
+    closure_4 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -753,7 +740,7 @@ obj18.execute = function execute(arr, guild) {
       if (str == null) {
         str = "";
       }
-      if (getUncachedChannelPermissions.canManageUser(constants.KICK_MEMBERS, str, guild)) {
+      if (closure_5.canManageUser(constants.KICK_MEMBERS, str, guild)) {
         (function handler() {
           const self = this;
           const apply = _handler.apply;
@@ -842,7 +829,7 @@ Object.defineProperty(obj23, "choices", {
     obj[0] = intl.string(getSystemLocale.t["4obaMS"]);
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t["4obaMS"]);
-    const items = [obj, , , , , , ];
+    items = [obj, , , , , , ];
     obj = { name: null, displayName: null, value: null };
     const intl3 = getSystemLocale.intl;
     obj[0] = intl3.string(getSystemLocale.t.RKpitY);
@@ -857,7 +844,7 @@ Object.defineProperty(obj23, "choices", {
     obj[1] = intl6.string(getSystemLocale.t["8WfJZ8"]);
     obj[2] = 6 * set.Seconds.HOUR;
     items[2] = obj;
-    const obj1 = { name: null, displayName: null, value: null };
+    obj1 = { name: null, displayName: null, value: null };
     const intl7 = getSystemLocale.intl;
     obj1[0] = intl7.string(getSystemLocale.t.p1up7u);
     const intl8 = getSystemLocale.intl;
@@ -909,7 +896,7 @@ obj24.required = false;
 items10[2] = obj24;
 obj21.options = items10;
 obj21.predicate = function predicate(guild) {
-  return getUncachedChannelPermissions.can(constants.BAN_MEMBERS, guild.guild);
+  return closure_5.can(constants.BAN_MEMBERS, guild.guild);
 };
 obj21.execute = function execute(arr, guild) {
   let user = arr;
@@ -945,32 +932,32 @@ obj21.execute = function execute(arr, guild) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp2;
+              closure_3 = tmp2;
               const id = tmp3;
-              let user;
-              if (null != outer1_1) {
-                if (null != outer1_2) {
-                  if ("" === outer1_3) {
+              user = undefined;
+              if (null != closure_1_1) {
+                if (null != closure_1_2) {
+                  if ("" === closure_1_3) {
                     const _Error = Error;
-                    const error = new Error();
+                    error = new Error();
                     throw error;
                   } else {
-                    const tmp52 = outer1_13(outer1_0, "delete_messages");
+                    const tmp52 = closure_1_13(closure_1_0, "delete_messages");
                     user = tmp52;
                     if (tmp52 == null) {
                       user = 0;
                     }
-                    const tmp50Result = outer1_13(outer1_0, "reason");
-                    let c1 = tmp50Result;
+                    const tmp50Result = closure_1_13(closure_1_0, "reason");
+                    c1 = tmp50Result;
                     if (tmp50Result == null) {
                       c1 = "";
                     }
-                    user = outer1_6.getUser(outer1_3);
-                    let obj3 = outer1_1(outer1_2[22]);
+                    user = closure_1_6.getUser(closure_1_3);
+                    let obj3 = closure_1_1(closure_1_2[22]);
                     c4 = 1;
                     c5 = 1;
-                    const obj1 = { value: null, done: false };
-                    obj1[0] = obj3.banUser(tmp48.id, outer1_3, user, c1);
+                    obj1 = { value: null, done: false };
+                    obj1[0] = obj3.banUser(tmp48.id, closure_1_3, user, c1);
                     return obj1;
                   }
                 }
@@ -981,17 +968,17 @@ obj21.execute = function execute(arr, guild) {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            const intl = outer1_0(outer1_2[10]).intl;
+            const intl = closure_1_0(closure_1_2[10]).intl;
             if (null != user) {
-              obj = outer1_1(outer1_2[23]);
+              obj = closure_1_1(closure_1_2[23]);
               let userTag = obj.getUserTag(user);
             } else {
               userTag = closure_3;
             }
             const obj2 = { user: null };
             obj2[0] = userTag;
-            outer1_1(outer1_2[20]).sendBotMessage(id.id, intl.formatToPlainString(outer1_0(outer1_2[10]).t.YflWdM, obj2));
-            const obj8 = outer1_1(outer1_2[20]);
+            closure_1_1(closure_1_2[20]).sendBotMessage(id.id, intl.formatToPlainString(closure_1_0(closure_1_2[10]).t.YflWdM, obj2));
+            const obj8 = closure_1_1(closure_1_2[20]);
           }
           c5 = 3;
           obj3 = { value: null, done: true };
@@ -1003,7 +990,7 @@ obj21.execute = function execute(arr, guild) {
         }
       }
     });
-    const _handler2 = tmp;
+    closure_4 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1023,7 +1010,7 @@ obj21.execute = function execute(arr, guild) {
       if (str == null) {
         str = "";
       }
-      if (getUncachedChannelPermissions.canManageUser(constants.BAN_MEMBERS, str, guild)) {
+      if (closure_5.canManageUser(constants.BAN_MEMBERS, str, guild)) {
         (function handler() {
           const self = this;
           const apply = _handler2.apply;
@@ -1134,13 +1121,13 @@ obj28.required = false;
 items11[2] = obj28;
 obj25.options = items11;
 obj25.predicate = function predicate(guild) {
-  return getUncachedChannelPermissions.can(constants.MODERATE_MEMBERS, guild.guild);
+  return closure_5.can(constants.MODERATE_MEMBERS, guild.guild);
 };
 obj25.execute = function execute(arr, guild) {
   let user = arr;
   guild = guild.guild;
   const channel = guild.channel;
-  let c3;
+  c3 = undefined;
   function _handler3() {
     const self = this;
     const tmp = _undefined(function*() {
@@ -1170,34 +1157,34 @@ obj25.execute = function execute(arr, guild) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp3;
+              closure_3 = tmp3;
               const id = tmp2;
-              let closure_0;
-              let user;
-              if (null != outer1_1) {
-                if (null != outer1_2) {
-                  const tmp10 = outer1_13(outer1_0, "duration");
+              closure_0 = undefined;
+              user = undefined;
+              if (null != closure_1_1) {
+                if (null != closure_1_2) {
+                  const tmp10 = closure_1_13(closure_1_0, "duration");
                   closure_0 = tmp10;
                   if (tmp10 == null) {
                     closure_0 = "";
                   }
-                  const tmp8Result = outer1_13(outer1_0, "reason");
+                  const tmp8Result = closure_1_13(closure_1_0, "reason");
                   user = tmp8Result;
                   if (tmp8Result == null) {
                     user = "";
                   }
-                  user = outer1_6.getUser(outer1_3);
+                  user = closure_1_6.getUser(closure_1_3);
                   if (null == user) {
                     const _Error = Error;
-                    const error = new Error();
+                    error = new Error();
                     throw error;
                   } else {
-                    const obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null };
+                    obj1 = { guildId: null, userId: null, communicationDisabledUntilTimestamp: null, duration: null, reason: null };
                     obj1[0] = tmp41.id;
                     obj1[1] = tmp15;
-                    const obj8 = outer1_1(outer1_2[22]);
-                    const obj10 = outer1_1(outer1_2[26])();
-                    obj1[2] = outer1_1(outer1_2[26])().add(tmp11, "s").toISOString();
+                    const obj8 = closure_1_1(closure_1_2[22]);
+                    const obj10 = closure_1_1(closure_1_2[26])();
+                    obj1[2] = closure_1_1(closure_1_2[26])().add(tmp11, "s").toISOString();
                     obj1[3] = tmp11;
                     obj1[4] = tmp13;
                     c4 = 1;
@@ -1207,9 +1194,9 @@ obj25.execute = function execute(arr, guild) {
                     return obj2;
                   }
                   tmp13 = user;
-                  tmp15 = outer1_3;
-                  const tmp8 = outer1_13;
-                  const tmp9 = outer1_0;
+                  tmp15 = closure_1_3;
+                  const tmp8 = closure_1_13;
+                  const tmp9 = closure_1_0;
                 }
               }
               c5 = 3;
@@ -1218,13 +1205,13 @@ obj25.execute = function execute(arr, guild) {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            const intl = outer1_0(outer1_2[10]).intl;
+            const intl = closure_1_0(closure_1_2[10]).intl;
             const obj3 = { user: null, duration: null };
-            const obj5 = outer1_1(outer1_2[20]);
-            obj3[0] = outer1_1(outer1_2[23]).getUserTag(user);
+            const obj5 = closure_1_1(closure_1_2[20]);
+            obj3[0] = closure_1_1(closure_1_2[23]).getUserTag(user);
             obj3[1] = closure_0;
-            obj5.sendBotMessage(id.id, intl.formatToPlainString(outer1_0(outer1_2[10]).t.BbRV6o, obj3));
-            const obj7 = outer1_1(outer1_2[23]);
+            obj5.sendBotMessage(id.id, intl.formatToPlainString(closure_1_0(closure_1_2[10]).t.BbRV6o, obj3));
+            const obj7 = closure_1_1(closure_1_2[23]);
           }
           c5 = 3;
           obj = { value: null, done: true };
@@ -1236,7 +1223,7 @@ obj25.execute = function execute(arr, guild) {
         }
       }
     });
-    const _handler3 = tmp;
+    closure_4 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1343,7 +1330,7 @@ obj29.options = items12;
 obj29.execute = function execute(arr, channel) {
   channel = channel.channel;
   let message = channel;
-  let c1;
+  c1 = undefined;
   let str2;
   function _handler4(arg0) {
     const self = this;
@@ -1374,18 +1361,18 @@ obj29.execute = function execute(arr, channel) {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = v0(outer1_2[27]);
+              obj1 = v0(closure_1_2[27]);
               obj1 = { recipientIds: null };
               obj1[0] = v0;
               v0 = 1;
               c0 = 1;
               const obj2 = { value: null, done: false };
               obj2[0] = obj1.openPrivateChannel(obj1).then((arg0) => {
-                const channel = outer1_4.getChannel(arg0);
-                v1(outer1_2[28])(null != channel, "Newly created PrivateChannel is null");
-                let obj = v1(outer1_2[20]);
-                obj = { location: outer1_12.PRIVATE_MESSAGE_COMMAND };
-                obj.sendMessage(channel.id, v1(outer1_2[21]).parse(channel, closure_2), true, obj);
+                const channel = closure_1_4.getChannel(arg0);
+                v1(closure_1_2[28])(null != channel, "Newly created PrivateChannel is null");
+                let obj = v1(closure_1_2[20]);
+                obj = { location: closure_1_12.PRIVATE_MESSAGE_COMMAND };
+                obj.sendMessage(channel.id, v1(closure_1_2[21]).parse(channel, closure_2), true, obj);
               });
               return obj2;
             }
@@ -1407,7 +1394,7 @@ obj29.execute = function execute(arr, channel) {
         }
       }
     });
-    _handler4 = tmp;
+    closure_3 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1539,18 +1526,18 @@ obj32.execute = function execute(arr, channel) {
 };
 items[sum10 + 1] = obj32;
 const found = items.filter((untranslatedName) => {
-  const items = ["gif", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"];
+  items = ["gif", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"];
   return items.includes(untranslatedName.untranslatedName);
 });
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandBuiltIns.tsx");
 
 export const PLATFORM_COMMANDS = require("get untranslatedDescription").default;
 export const BUILT_IN_SECTIONS = obj;
 export const BUILT_IN_COMMANDS = items;
 export const BUILT_IN_COMMANDS_ORIGINAL = found;
 export const getBuiltInCommands = function getBuiltInCommands(commandTypes, arg1, arg2) {
-  let closure_0 = commandTypes;
-  const importDefault = arg2;
+  closure_0 = commandTypes;
+  importDefault = arg2;
   enabled = importDefault(enabled[30]).getConfig({ location: "getBuiltInCommands" }).enabled;
   return arg1 ? items : found.filter((type) => {
     let hasItem = commandTypes.includes(type.type);

@@ -1,8 +1,11 @@
 // discord_app/modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx
-import { getThreadNotificationOptions as closure_3 } from "AbortCodes";
-import { jsx } from "jsxProd";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import AbortCodes from "AbortCodes" /* 1235 */;
 
-const result = require("computeThreadNotificationSetting").fileFinishedImporting("modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx");
+let closure_3 = AbortCodes.getThreadNotificationOptions;
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/threads/native/components/ThreadNotificationSettingsBottomSheet.tsx");
 
 export default function ThreadNotificationsBottomSheet(channel) {
   channel = channel.channel;
@@ -13,11 +16,11 @@ export default function ThreadNotificationsBottomSheet(channel) {
   const intl = channel(1236).intl;
   obj[0] = intl.string(channel(1236).t.h850Ss);
   obj[0] = jsx(channel(6949).BottomSheetTitleHeader, { title: null });
-  const obj1 = {
+  obj1 = {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
-      let obj = outer1_1(outer1_2[7]);
+      let obj = closure_1_1(closure_1_2[7]);
       obj = { flags };
       return obj.setNotificationSettings(channel, obj);
     },
@@ -34,7 +37,7 @@ export default function ThreadNotificationsBottomSheet(channel) {
     hasIcons: false,
     value: threadNotificationSetting,
     onChange(flags) {
-      let obj = outer1_1(outer1_2[7]);
+      let obj = closure_1_1(closure_1_2[7]);
       obj = { flags };
       return obj.setNotificationSettings(channel, obj);
     },

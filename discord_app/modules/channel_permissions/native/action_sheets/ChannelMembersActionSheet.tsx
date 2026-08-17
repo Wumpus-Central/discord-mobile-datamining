@@ -1,49 +1,42 @@
 // discord_app/modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx
-import "PressableBase";
-import { View } from "Background";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import jsxProd from "init";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useNavigation from "useNavigation" /* 1500 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ ChannelSettingsSections: c9, Permissions: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: { paddingHorizontal: 16, flex: 1 }, sectionRowWrapper: null, warning: null };
-createCacheKey = { paddingVertical: require("Themes").space.PX_12 };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_12 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { margin: 16, marginBottom: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/channel_permissions/native/action_sheets/ChannelMembersActionSheet.tsx");
 
 export default function ChannelMembersActionSheet(arg0) {
-  let guild;
-  let importDefault;
-  let require;
-  let sortedGuildRoles;
   ({ channelId: require, guildId: importDefault } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
-  let ensureGuildLoaded;
-  let c5;
-  const tmp = createCacheKey();
+  closure_4 = undefined;
+  c5 = undefined;
+  const tmp = callback();
   dependencyMap = tmp;
   let obj = initialize;
-  const items = [ensureGuildLoaded];
+  const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(closure_0));
-  let obj1 = initialize;
-  const items1 = [createGuildRecordFromRust, createGuildRoleRecordFromRust];
+  obj1 = initialize;
+  const items1 = [closure_7, closure_6];
   const items2 = [stateFromStores];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
     let obj = stateFromStores;
@@ -51,11 +44,11 @@ export default function ChannelMembersActionSheet(arg0) {
     if (stateFromStores != null) {
       guildId = obj.getGuildId();
     }
-    const guild = outer1_7.getGuild(guildId);
+    const guild = closure_1_7.getGuild(guildId);
     obj = { guild, sortedGuildRoles: null };
     let sortedRoles;
     if (null != guild) {
-      sortedRoles = outer1_6.getSortedRoles(guild.id);
+      sortedRoles = closure_1_6.getSortedRoles(guild.id);
     }
     obj[1] = sortedRoles;
     return obj;
@@ -69,14 +62,14 @@ export default function ChannelMembersActionSheet(arg0) {
     if (stateFromStores != null) {
       guildId = stateFromStores.getGuildId();
     }
-    return _undefined2.getMemberIds(guildId);
+    return _undefined.getMemberIds(guildId);
   }, items4);
   let obj3 = useNavigation;
-  ensureGuildLoaded = obj3.useNavigation();
+  closure_4 = obj3.useNavigation();
   if (null != stateFromStores) {
     if (null != guild) {
       if (null != sortedGuildRoles) {
-        const canResult = getUncachedChannelPermissions.can(constants.MANAGE_ROLES, stateFromStores);
+        const canResult = closure_8.can(constants.MANAGE_ROLES, stateFromStores);
         c5 = canResult;
         let tmp5Result = tmp5(8850);
         const existingRolesRows = tmp5Result.getExistingRolesRows(guild, sortedGuildRoles, stateFromStores, stateFromStores.accessPermissions);
@@ -102,11 +95,11 @@ export default function ChannelMembersActionSheet(arg0) {
         if (canResult) {
           obj2 = { onPress: null, accessibilityRole: "button", accessibilityLabel: null, children: null };
           obj2[0] = function onPress() {
-            outer1_1(_undefined[20]).hideActionSheet();
-            const obj = outer1_1(_undefined[20]);
-            outer1_1(_undefined[21]).init(closure_0);
-            const obj2 = outer1_1(_undefined[21]);
-            const result = outer1_0(_undefined[22]).navigateToChannelDetailsScreen(ensureGuildLoaded, outer1_9.PERMISSIONS, closure_0, "channel-members-action-sheet");
+            closure_1_1(sectionRowWrapper[20]).hideActionSheet();
+            const obj = closure_1_1(sectionRowWrapper[20]);
+            closure_1_1(sectionRowWrapper[21]).init(closure_0);
+            const obj2 = closure_1_1(sectionRowWrapper[21]);
+            const result = closure_1_0(sectionRowWrapper[22]).navigateToChannelDetailsScreen(closure_4, closure_1_9.PERMISSIONS, closure_0, "channel-members-action-sheet");
           };
           let intl = tmp5(1236).intl;
           obj2[2] = intl.string(tmp5(1236).t.XPDhcc);
@@ -123,7 +116,7 @@ export default function ChannelMembersActionSheet(arg0) {
           const intl3 = tmp5(1236).intl;
           obj5[0] = intl3.string(tmp5(1236).t.dMJ3Y6);
           obj5[1] = function onPress() {
-            return outer1_0(_undefined[25]).openAddMembersActionSheet(stateFromStores);
+            return closure_1_0(sectionRowWrapper[25]).openAddMembersActionSheet(stateFromStores);
           };
           obj5[2] = tmp29(tmp5(9991).GroupPlusIcon, {});
           tmp29Result = tmp29(tmp5(8086).RowButton, obj5);
@@ -140,24 +133,20 @@ export default function ChannelMembersActionSheet(arg0) {
         const items6 = [tmp29Result, ];
         const obj8 = { contentContainerStyle: null, renderItem: null, renderSectionHeader: null, sections: null, stickySectionHeadersEnabled: false };
         const obj9 = { paddingBottom: null };
-        obj9[0] = tmp4.bottom + Themes.space.PX_16;
+        obj9[0] = tmp4.bottom + ThemesDefault.space.PX_16;
         obj8[0] = obj9;
         obj8[1] = function renderItem(index) {
-          let item;
-          let section;
           index = index.index;
           ({ item, section } = index);
-          return outer1_11(outer1_1(_undefined[29]), { start: 0 === index, end: index === section.data.length - 1, guildId: closure_1, item, channelId: closure_0, showType: true, showRemove: c5 });
+          return closure_1_11(closure_1_1(sectionRowWrapper[29]), { start: 0 === index, end: index === section.data.length - 1, guildId: closure_1, item, channelId: closure_0, showType: true, showRemove: c5 });
         };
         obj8[2] = function renderSectionHeader(section) {
-          let data;
-          let title;
           ({ title, data } = section.section);
-          let obj = { style: _undefined.sectionRowWrapper, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
-          const intl = outer1_0(_undefined[16]).intl;
+          let obj = { style: sectionRowWrapper.sectionRowWrapper, maxFontSizeMultiplier: 2, accessibilityRole: "header", variant: "text-sm/semibold", color: "interactive-text-default", children: null };
+          const intl = closure_1_0(sectionRowWrapper[16]).intl;
           obj = { numberOfItems: data.length, sectionTitle: title };
-          obj[5] = intl.format(outer1_0(_undefined[16]).t.u8CWLl, obj);
-          return outer1_11(outer1_0(_undefined[30]).Text, obj);
+          obj[5] = intl.format(closure_1_0(sectionRowWrapper[16]).t.u8CWLl, obj);
+          return closure_1_11(closure_1_0(sectionRowWrapper[30]).Text, obj);
         };
         obj8[3] = items5;
         items6[1] = closure_11(tmp5(6952).BottomSheetSectionList, obj8);

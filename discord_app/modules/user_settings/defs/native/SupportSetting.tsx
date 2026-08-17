@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/SupportSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 10415 */;
+import _emailSupport from "_emailSupport" /* 14845 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const pressable = createToggle.createPressable({
   useTitle() {
@@ -8,8 +11,8 @@ const pressable = createToggle.createPressable({
     return intl.string(getSystemLocale.t["Yl/Riu"]);
   },
   parent: null,
-  IconComponent: require("CircleQuestionIcon").CircleQuestionIcon,
-  onPress: require("_emailSupport").emailSupport,
+  IconComponent: CircleQuestionIcon.CircleQuestionIcon,
+  onPress: _emailSupport.emailSupport,
   withArrow: true
 });
 const obj = {
@@ -18,10 +21,10 @@ const obj = {
     return intl.string(getSystemLocale.t["Yl/Riu"]);
   },
   parent: null,
-  IconComponent: require("CircleQuestionIcon").CircleQuestionIcon,
-  onPress: require("_emailSupport").emailSupport,
+  IconComponent: CircleQuestionIcon.CircleQuestionIcon,
+  onPress: _emailSupport.emailSupport,
   withArrow: true
 };
-const result = require("CircleQuestionIcon").fileFinishedImporting("modules/user_settings/defs/native/SupportSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/SupportSetting.tsx");
 
 export default pressable;

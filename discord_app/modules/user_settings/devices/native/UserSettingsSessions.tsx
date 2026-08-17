@@ -1,47 +1,37 @@
 // discord_app/modules/user_settings/devices/native/UserSettingsSessions.tsx
-import _slicedToArray from "_slicedToArray";
-import PressableBase from "PressableBase";
-import get_ActivityIndicator from "Text";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import { registerAsset } from "../../../../../_runtime/11429_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/12620_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14307_registerAsset.js";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 8143 */;
+import registerAssetDefault2 from "registerAsset" /* 11429 */;
+import registerAssetDefault3 from "registerAsset" /* 12620 */;
+import registerAssetDefault4 from "registerAsset" /* 14307 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-let Fonts;
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 function UserSettingsSessions() {
-  let currentSession;
-  let importDefault;
-  let otherSessions;
-  let tmp7;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = otherSessions(14092);
   let authSessions = obj.useAuthSessions();
   ({ currentSession, otherSessions } = authSessions);
-  let obj1 = otherSessions(589);
-  const items = [mergeGuildAvatar];
+  obj1 = otherSessions(589);
+  const items = [closure_8];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   [tmp7, importDefault] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {
-    const authSessions = otherSessions(outer1_2[11]).fetchAuthSessions();
+    const authSessions = otherSessions(closure_1_2[11]).fetchAuthSessions();
     const timeout = setTimeout(() => callback(true), 500);
     return () => {
       clearTimeout(closure_0);
-      otherSessions(outer2_2[11]).clearAuthSessions();
+      otherSessions(closure_2_2[11]).clearAuthSessions();
     };
   }, []);
   if (null == currentSession) {
@@ -90,7 +80,7 @@ function UserSettingsSessions() {
       const intl3 = tmp2(1236).intl;
       obj4[4] = intl3.string(tmp2(1236).t.OTXyaf);
       obj4[5] = function onPress() {
-        return otherSessions(outer1_2[11]).logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
+        return otherSessions(closure_1_2[11]).logOutSessions(otherSessions.map((id_hash) => id_hash.id_hash));
       };
       tmp21Result = tmp21(tmp2(6291).TableRow, obj4);
     }
@@ -109,12 +99,9 @@ function UserSettingsSessions() {
   return callback2(closure_7, obj5);
 }
 function SessionInfo(session) {
-  let IconComponent;
-  let iconSource;
-  let text;
   session = session.session;
   const current = session.current;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const client_info = session.client_info;
   let _location;
   if (client_info != null) {
@@ -150,14 +137,14 @@ function SessionInfo(session) {
             if ("horizon os" === trimmed) {
               let obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
-              obj[1] = registerAsset;
+              obj[1] = registerAssetDefault3;
               obj[2] = session(14308).VrHeadsetIcon;
               let tmp9 = session;
               let tmp10 = importDefault;
             } else {
               obj = { text: null, iconSource: null, IconComponent: null };
               obj[0] = os;
-              obj[1] = registerAsset;
+              obj[1] = registerAssetDefault4;
               obj[2] = session(12015).ScreenIcon;
               tmp9 = session;
               tmp10 = importDefault;
@@ -166,7 +153,7 @@ function SessionInfo(session) {
         }
         obj = { text: null, iconSource: null, IconComponent: null };
         obj[0] = os;
-        obj[1] = registerAsset;
+        obj[1] = registerAssetDefault3;
         obj[2] = session(8597).MobilePhoneIcon;
         tmp9 = session;
         tmp10 = importDefault;
@@ -181,16 +168,16 @@ function SessionInfo(session) {
       const found = items.filter(tmp9(1370).isNotNullish);
       let tmp18 = null;
       if (!current) {
-        const obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
+        obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, hitSlop: null, children: null };
         const intl2 = tmp9(1236).intl;
         obj1[1] = intl2.string(tmp9(1236).t.E4MJNt);
         obj1[2] = function onPress() {
-          return session(outer1_2[11]).logOutSessions(session.id_hash);
+          return session(closure_1_2[11]).logOutSessions(session.id_hash);
         };
         obj1[3] = { top: 5, left: 5, bottom: 5, right: 5 };
         const obj2 = { style: null, source: null };
         obj2[0] = tmp.logoutButton;
-        obj2[1] = tmp10(8143);
+        obj2[1] = registerAssetDefault;
         obj1[4] = callback2(tmp9(1297).Icon, obj2);
         tmp18 = callback2(tmp9(5433).PressableOpacity, obj1);
       }
@@ -255,7 +242,7 @@ function SessionInfo(session) {
   const obj16 = { text: null, iconSource: null, IconComponent: null };
   const intl = session(1236).intl;
   obj16[0] = intl.string(session(1236).t.cDHCNY);
-  obj16[1] = registerAsset;
+  obj16[1] = registerAssetDefault4;
   obj16[2] = session(12015).ScreenIcon;
   tmp9 = session;
   tmp10 = importDefault;
@@ -265,16 +252,15 @@ function UnknownLegacySessionsInfo() {
   let obj = _useNavigation;
   _require = obj.useNavigation();
   obj = { icon: null, label: null, subLabel: null };
-  obj = { variant: "translucent", source: null };
-  obj[1] = registerAsset;
+  obj = { variant: "translucent", source: registerAssetDefault2 };
   obj[0] = callback2(_TableRowInner.TableRow.Icon, obj);
   const intl = _getSystemLocale.intl;
   obj[1] = intl.string(_getSystemLocale.t.iUa0sn);
   const intl2 = _getSystemLocale.intl;
   obj[2] = intl2.format(_getSystemLocale.t["044+8i"], {
     onClick() {
-      outer1_1(outer1_2[24]).setSection(outer1_9.ACCOUNT);
-      const obj = outer1_1(outer1_2[24]);
+      closure_1_1(closure_1_2[24]).setSection(closure_1_9.ACCOUNT);
+      const obj = closure_1_1(closure_1_2[24]);
     }
   });
   return callback2(_TableRowInner.TableRow, obj);
@@ -284,7 +270,7 @@ function UnknownLegacySessionsInfo() {
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { description: { paddingHorizontal: 16, paddingTop: 8, marginBottom: 8 }, detailsText: null, container: null, loading: null, sessionInfo: null, sessionInfoRow: null, sessionInfoRowSpacing: null, logoutButton: null, list: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_DEFAULT, 14));
+const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 14));
 createCacheKey.fontWeight = "500";
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { display: "flex", flex: 1 };
@@ -292,11 +278,11 @@ createCacheKey[3] = { marginTop: 16 };
 createCacheKey[4] = { display: "flex" };
 createCacheKey[5] = { display: "flex", flexDirection: "row", flexWrap: "wrap" };
 createCacheKey[6] = { marginHorizontal: 4 };
-createCacheKey[7] = { marginRight: 10, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[7] = { marginRight: 10, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[8] = { paddingHorizontal: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginRight: 10, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/devices/native/UserSettingsSessions.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { marginRight: 10, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/user_settings/devices/native/UserSettingsSessions.tsx");
 
 export default function UserSettingsSessionsContainer() {
   return callback2(UserSettingsSessions, {});

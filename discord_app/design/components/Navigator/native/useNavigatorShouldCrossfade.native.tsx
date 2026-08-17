@@ -1,12 +1,12 @@
 // discord_app/design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx
-import noop from "noop";
-import { context } from "../../../../../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
+import context2 from "context" /* 1356 */;
+import closure_2 from "noop" /* 19 */;
 
-const require = arg1;
-const result = require("context").fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigatorShouldCrossfade.native.tsx");
 
 export const useNavigatorShouldCrossfade = function useNavigatorShouldCrossfade() {
-  const context = React.useContext(context.AccessibilityPreferencesContext);
+  const context = React.useContext(context2.AccessibilityPreferencesContext);
   let enabled = context.prefersCrossfades;
   if (obj.isAndroid()) {
     enabled = context.reducedMotion.enabled;

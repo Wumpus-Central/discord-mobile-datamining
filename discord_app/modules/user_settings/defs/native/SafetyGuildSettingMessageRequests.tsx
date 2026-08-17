@@ -1,25 +1,24 @@
 // discord_app/modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import createToggle from "createToggle";
-import { set } from "../../../../actions/AlertActionCreators.tsx";
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import setDefault from "set" /* 4827 */;
+import AgeVerificationModalEntryPoint from "AgeVerificationModalEntryPoint" /* 5254 */;
+import openIncodeAgeVerificationModalDefault from "openIncodeAgeVerificationModal" /* 5428 */;
+import getSanitizedRestrictedGuilds from "getSanitizedRestrictedGuilds" /* 7357 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import useDefaultGuildsRestricted from "useDefaultGuildsRestricted" /* 15018 */;
+import shouldAgeVerifyForDMDefaultOff from "shouldAgeVerifyForDMDefaultOff" /* 15021 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import GUILD_SELECT_ALL_SERVERS_OPTION_ID from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 15011 */;
+import { GUILD_SELECT_ALL_SERVERS_OPTION_ID as closure_6 } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
+import createToggle from "createToggle" /* 10669 */;
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getSanitizedRestrictedGuilds } from "../../../../utils/UserSettingsUtils.tsx";
-import { openIncodeAgeVerificationModal } from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
-import { AgeVerificationModalEntryPoint } from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
-import { shouldAgeVerifyForDMDefaultOff } from "../../content_and_social/DefaultDMSettingsExperiment.tsx";
-import { useDefaultGuildsRestricted } from "../../privacy_and_safety/DefultGuildsRestrictedSetting.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function showMessageRequestRestrictionModal(arg0) {
   const _require = arg0;
-  let obj = set;
+  let obj = setDefault;
   obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null, onCancel: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.yAfu1p);
@@ -29,20 +28,20 @@ function showMessageRequestRestrictionModal(arg0) {
   obj[2] = intl3.string(_getSystemLocale.t.p89ACt);
   const intl4 = _getSystemLocale.intl;
   obj[3] = intl4.string(_getSystemLocale.t.gm1Vej);
-  obj[4] = componentDidMount.Colors.RED;
+  obj[4] = componentDidMountDefault.Colors.RED;
   obj[5] = function onConfirm() {
-    const MessageRequestRestrictedDefault = callback(outer1_2[4]).MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedDefault = callback(closure_1_2[4]).MessageRequestRestrictedDefault;
     MessageRequestRestrictedDefault.updateSetting(callback);
-    const MessageRequestRestrictedGuildIds = callback(outer1_2[4]).MessageRequestRestrictedGuildIds;
+    const MessageRequestRestrictedGuildIds = callback(closure_1_2[4]).MessageRequestRestrictedGuildIds;
     if (callback) {
-      let guildIds = outer1_3.getGuildIds();
+      let guildIds = closure_1_3.getGuildIds();
     } else {
       guildIds = [];
     }
     MessageRequestRestrictedGuildIds.updateSetting(guildIds);
   };
   obj[6] = function onCancel() {
-    const MessageRequestRestrictedDefault = callback(outer1_2[4]).MessageRequestRestrictedDefault;
+    const MessageRequestRestrictedDefault = callback(closure_1_2[4]).MessageRequestRestrictedDefault;
     MessageRequestRestrictedDefault.updateSetting(callback);
   };
   obj.show(obj);
@@ -114,8 +113,8 @@ createToggle = {
       if (obj.shouldAgeVerifyForDMDefaultOff()) {
         obj = { entryPoint: null };
         obj[0] = AgeVerificationModalEntryPoint.AgeVerificationModalEntryPoint.MESSAGE_REQUESTS_SETTINGS;
-        const result = openIncodeAgeVerificationModal.showAgeVerificationGetStartedModal(obj);
-        const obj2 = openIncodeAgeVerificationModal;
+        const result = openIncodeAgeVerificationModalDefault.showAgeVerificationGetStartedModal(obj);
+        const obj2 = openIncodeAgeVerificationModalDefault;
       }
     }
     const tmp5 = callback();
@@ -137,7 +136,7 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SafetyGuildSettingMessageRequests.tsx");
 
 export default createToggle;
 export { showMessageRequestRestrictionModal };

@@ -1,7 +1,7 @@
 // discord_app/modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx
-import getTimeSafe from "getTimeSafe";
-import "initialize";
-import { set } from "../../../utils/Durations.tsx";
+import setDefault from "set" /* 687 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "getTimeSafe" /* 10850 */;
 
 let require = arg1;
 function scheduleNextNotification() {
@@ -31,20 +31,20 @@ function scheduleNextNotification() {
       let _Date = Date;
       const timestamp = Date.now();
       dueAt = found.saveData.dueAt;
-      const sum = timestamp + set.Millis.WEEK;
+      const sum = timestamp + setDefault.Millis.WEEK;
       if (dueAt.getTime() <= sum) {
         const dueAt2 = found.saveData.dueAt;
         const _Date2 = Date;
         const time = dueAt2.getTime();
         const _setTimeout = setTimeout;
         timeout = setTimeout(() => {
-          let obj = found(outer1_2[1]);
+          let obj = found(closure_1_2[1]);
           if (obj.isForLaterExperimentOn("MessageRemindersNotificationManager")) {
             obj = { type: "MESSAGE_REMINDER_DUE", savedMessage: null };
             obj[1] = found;
-            outer1_1(outer1_2[2]).dispatch(obj);
-            outer1_5();
-            const obj2 = outer1_1(outer1_2[2]);
+            closure_1_1(closure_1_2[2]).dispatch(obj);
+            closure_1_5();
+            const obj2 = closure_1_1(closure_1_2[2]);
           }
         }, time - Date.now());
       }
@@ -54,9 +54,10 @@ function scheduleNextNotification() {
   }
 }
 let c4 = null;
+initializeDefault;
 let prototype = function MessageRemindersNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     SAVED_MESSAGES_UPDATE() {
       return applyArgumentsResult.handleUpdates();
@@ -76,6 +77,6 @@ let prototype = function MessageRemindersNotificationManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("dispatcher").fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/message_reminders/MessageRemindersNotificationManager.tsx");
 
 export default prototype;

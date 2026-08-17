@@ -1,30 +1,27 @@
 // discord_app/modules/webauthn/native/nav_steps/WebAuthnEditStep.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { inputField: null, form: null };
-createCacheKey = { marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingHorizontal: require("Themes").space.PX_16 };
-let result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnEditStep.tsx");
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/webauthn/native/nav_steps/WebAuthnEditStep.tsx");
 
 export default function EditCredentialModal(credential) {
-  let c2;
-  let tmp6;
   credential = credential.credential;
   let navigation;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = credential(1500);
   navigation = obj.useNavigation();
   [tmp6, c2] = first(React.useState(false), 2);
@@ -34,10 +31,11 @@ export default function EditCredentialModal(credential) {
   React = tmp9[1];
   const items = [navigation];
   const layoutEffect = React.useLayoutEffect(() => {
-    const obj = { headerLeft: null };
-    obj[0] = credential(_undefined[6]).getHeaderBackButton(() => {
+    const obj = {
+      headerLeft: credential(_undefined[6]).getHeaderBackButton(() => {
 
-    });
+      })
+    };
     navigation.setOptions(obj);
   }, items);
   obj = { style: tmp.form, children: null };
@@ -48,29 +46,29 @@ export default function EditCredentialModal(credential) {
   obj[7] = tmp6;
   obj[8] = credential(1297).ClearButtonVisibility.WITH_CONTENT;
   const items1 = [callback(credential(8083).FormInput, obj), callback(credential(8083).FormDivider, {}), ];
-  const obj1 = {
+  obj1 = {
     onPress() {
       _undefined(true);
       callback(null);
       const result = credential(_undefined[11]).editWebAuthnCredential(credential.id, first);
       let obj = credential(_undefined[11]);
       const nextPromise = result.then(() => {
-        let obj = outer1_1(outer1_2[12]);
+        let obj = closure_1_1(closure_1_2[12]);
         obj = { key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
-        const intl = outer1_0(outer1_2[8]).intl;
-        obj[1] = intl.string(outer1_0(outer1_2[8]).t.IV13mH);
-        obj[2] = outer1_1(outer1_2[13]);
-        obj[3] = outer1_0(outer1_2[14]).CircleCheckIcon;
+        const intl = closure_1_0(closure_1_2[8]).intl;
+        obj[1] = intl.string(closure_1_0(closure_1_2[8]).t.IV13mH);
+        obj[2] = closure_1_1(closure_1_2[13]);
+        obj[3] = closure_1_0(closure_1_2[14]).CircleCheckIcon;
         obj.open(obj);
         closure_1.popToTop();
       });
       result.then(() => {
-        let obj = outer1_1(outer1_2[12]);
+        let obj = closure_1_1(closure_1_2[12]);
         obj = { key: "WEBAUTHN_CREDENTIAL_EDIT_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };
-        const intl = outer1_0(outer1_2[8]).intl;
-        obj[1] = intl.string(outer1_0(outer1_2[8]).t.IV13mH);
-        obj[2] = outer1_1(outer1_2[13]);
-        obj[3] = outer1_0(outer1_2[14]).CircleCheckIcon;
+        const intl = closure_1_0(closure_1_2[8]).intl;
+        obj[1] = intl.string(closure_1_0(closure_1_2[8]).t.IV13mH);
+        obj[2] = closure_1_1(closure_1_2[13]);
+        obj[3] = closure_1_0(closure_1_2[14]).CircleCheckIcon;
         obj.open(obj);
         closure_1.popToTop();
       }).catch((body) => {

@@ -1,21 +1,23 @@
 // discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx
-import { ExperimentFlags } from "DesktopSources";
+import set2 from "set" /* 2 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
+const ExperimentFlags = DesktopSources.ExperimentFlags;
 let items = [{ name: "H264", encode: true, decode: true }, { name: "VP8", encode: true, decode: true }];
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
+const result = set2.fileFinishedImporting("../discord_common/js/packages/media-engine/utils/VideoCodecUtils.tsx");
 
 export const filterParsedVideoCodecs = function filterParsedVideoCodecs(parseNativeCodecsResult, experimentCodecs, arg2) {
-  let closure_0 = parseNativeCodecsResult;
+  closure_0 = parseNativeCodecsResult;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  let items;
+  items = undefined;
   let set;
   const combined = experimentCodecs.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
-    const mapped = encode;
+    mapped = encode;
     const found = mapped.find((name) => encode.name === name.name);
     if (null != found) {
       const obj = { name: null, encode: null, decode: null };
@@ -48,7 +50,7 @@ export const getExperimentCodecs = function getExperimentCodecs(experimentFlags)
   if (!hasItem) {
     tmp4 = hasItem1;
   }
-  const items = [];
+  items = [];
   if (tmp4) {
     const obj = { name: "AV1", encode: null, decode: null };
     obj[1] = hasItem;
@@ -87,12 +89,12 @@ export const filterVideoCodecs = function filterVideoCodecs(arg0, arr) {
   if (flag === undefined) {
     flag = false;
   }
-  let items;
+  items = undefined;
   let set;
   const combined = arr.concat(items);
   items = [];
   const item = combined.forEach((encode) => {
-    const mapped = encode;
+    mapped = encode;
     const found = mapped.find((name) => encode.name === name.name);
     if (null != found) {
       const obj = { name: null, encode: null, decode: null };

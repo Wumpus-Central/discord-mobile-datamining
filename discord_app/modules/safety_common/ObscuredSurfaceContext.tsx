@@ -1,5 +1,5 @@
 // discord_app/modules/safety_common/ObscuredSurfaceContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 const context = importAllResult.createContext({ obscured: false });

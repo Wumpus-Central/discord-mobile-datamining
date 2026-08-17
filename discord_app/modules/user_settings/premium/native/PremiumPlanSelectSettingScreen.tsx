@@ -1,16 +1,17 @@
 // discord_app/modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { BoostPurchaseNitroBanner } from "../../../premium/native/PremiumPlanSelect.tsx";
-import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
+import noopAll from "noop" /* 19 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
+import BoostPurchaseNitroBannerDefault from "BoostPurchaseNitroBanner" /* 12973 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useSettingNavigationRoute").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumPlanSelectSettingScreen.tsx");
 
 export default function PremiumPlanSelectSettingScreen() {
   let obj = useSettingNavigationRoute;
   const settingNavigationRoute = obj.useSettingNavigationRoute();
   obj = {};
   const merged = Object.assign(settingNavigationRoute.params);
-  return jsx(BoostPurchaseNitroBanner, {});
+  return jsx(BoostPurchaseNitroBannerDefault, {});
 };

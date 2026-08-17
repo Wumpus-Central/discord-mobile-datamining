@@ -1,17 +1,17 @@
 // discord_app/modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx
-import getShelfItemData from "getShelfItemData";
-import addApplication from "addApplication";
-import createExecutable from "createExecutable";
-import ensureGuildLoaded from "ensureGuildLoaded";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "addApplication" /* 4478 */;
+import closure_5 from "createExecutable" /* 4479 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;
 function _getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c5 === 2) {
         c5 = 3;
@@ -47,18 +47,18 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
               application = undefined;
               c5 = undefined;
               application = application.getApplication(callback);
-              if (outer1_8(application)) {
+              if (closure_1_8(application)) {
                 c5 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = application;
                 return obj1;
               } else {
-                const channel = outer1_6.getChannel(tmp42);
+                const channel = closure_1_6.getChannel(tmp42);
                 let guild_id;
                 if (channel != null) {
                   guild_id = channel.guild_id;
                 }
-                let obj6 = callback(outer1_2[4]);
+                let obj6 = callback(closure_1_2[4]);
                 let obj2 = { guildId: null };
                 obj2[0] = guild_id;
                 application = 1;
@@ -132,7 +132,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
       }
     })();
   });
-  const _getCachedOrFetchActivityApplicationForLaunch = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -144,7 +144,7 @@ function _getCachedOrFetchActivityApplicationForLaunch() {
 function isUsableApplicationRecord(embeddedActivityConfig) {
   return null != embeddedActivityConfig && null != embeddedActivityConfig.embeddedActivityConfig;
 }
-const result = require("createExecutable").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/utils/getCachedOrFetchActivityApplicationForLaunch.tsx");
 
 export default function getCachedOrFetchActivityApplicationForLaunch() {
   const self = this;

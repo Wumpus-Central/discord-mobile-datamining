@@ -1,5 +1,7 @@
 // discord_app/utils/ErrorUtils.tsx
-import { BAGGAGE_HEADER_NAME } from "../../_runtime/07732_BAGGAGE_HEADER_NAME.js";
+import set from "set" /* 2 */;
+import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 7732 */;
+
 function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   if (null != NSUnderlyingError.userInfo.NSUnderlyingError) {
     const tmp2 = getUnderlyingIOSExceptionRecursively(NSUnderlyingError.userInfo.NSUnderlyingError);
@@ -9,7 +11,7 @@ function getUnderlyingIOSExceptionRecursively(NSUnderlyingError) {
   }
   return NSUnderlyingError.userInfo.NSLocalizedDescription;
 }
-const result = require("set").fileFinishedImporting("utils/ErrorUtils.tsx");
+const result = set.fileFinishedImporting("utils/ErrorUtils.tsx");
 
 export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
   try {
@@ -23,7 +25,7 @@ export const getUnderlyingIOSError = function getUnderlyingIOSError(c11) {
   }
 };
 export const serializeError = function serializeError(arg0) {
-  let error = arg0;
+  error = arg0;
   if (!Boolean(arg0)) {
     const _Error = Error;
     error = new Error("unknown error");

@@ -1,13 +1,14 @@
 // discord_app/modules/gateway/GatewaySocketDispatcher.tsx
-import _slicedToArray from "_slicedToArray";
-import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS";
-import set from "timestamp";
-import { CLOSED } from "ConnectionState.tsx";
-import { prettyPrintTrace_ } from "GatewaySocketAnalytics.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import prettyPrintTrace_ from "prettyPrintTrace_" /* 13201 */;
+import CLOSEDDefault from "CLOSED" /* 13202 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { DISPATCHER_IDEAL_TIME_LIMIT_MS as closure_4 } from "DISPATCHER_STANDARD_TIMEOUT_MS" /* 13197 */;
+import set from "set" /* 2 */;
 import { WorkSchedulerTelemetryEvent } from "WorkSchedulerTelemetry.tsx";
 
-const require = arg1;
-let c5 = new require("_queueIdleCallback")("GatewaySocket");
+require = arg1;
+let closure_5 = new timestampDefault("GatewaySocket");
 let set = new Set(["INITIAL_GUILD", "READY"]);
 const set1 = new Set(["READY", "INITIAL_GUILD"]);
 const set2 = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]);
@@ -37,15 +38,15 @@ class GatewaySocketDispatcher {
           let num4 = 0;
           num2 = 0;
           obj = tmp;
-          if (tmp.queue[0].status === outer1_10.Loaded) {
+          if (tmp.queue[0].status === closure_1_10.Loaded) {
             const sum = num4 + 1;
             num2 = sum;
             while (sum < obj.queue.length) {
-              let tmp7 = outer1_10;
+              let tmp7 = closure_1_10;
               num4 = sum;
               num2 = sum;
               obj = tmp6;
-              if (tmp6.queue[sum].status !== outer1_10.Loaded) {
+              if (tmp6.queue[sum].status !== closure_1_10.Loaded) {
                 break;
               }
             }
@@ -59,13 +60,13 @@ class GatewaySocketDispatcher {
           const dispatchMultipleResult = obj.dispatchMultiple(spliceResult, arg0);
           if (dispatchMultipleResult) {
             const telemetry = obj.scheduler.telemetry;
-            telemetry.timeEnd(obj(outer1_2[5]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
+            telemetry.timeEnd(obj(closure_1_2[5]).WorkSchedulerTelemetryTiming.TIME_TO_QUEUE_EMPTY);
           }
           const _performance2 = performance;
           const diff = performance.now() - nowResult;
           if (tmp13) {
             const _HermesInternal = HermesInternal;
-            outer1_5.log("Dispatched " + spliceResult.length + " messages in " + diff + "ms");
+            closure_1_5.log("Dispatched " + spliceResult.length + " messages in " + diff + "ms");
           }
           return dispatchMultipleResult;
         }
@@ -137,7 +138,7 @@ prototype["receiveDispatch"] = function receiveDispatch(d, type, arg2) {
 prototype["maybePreload"] = function maybePreload(item10007) {
   let self = this;
   self = this;
-  let closure_0 = item10007;
+  closure_0 = item10007;
   if (this.paused) {
     if (!set.has(item10007.type)) {
       return false;
@@ -154,7 +155,7 @@ prototype["maybePreload"] = function maybePreload(item10007) {
     if (null != preloadResult) {
       preloadResult.then((preloadedData) => {
         item10007.preloadedData = preloadedData;
-        item10007.status = outer1_10.Loaded;
+        item10007.status = closure_1_10.Loaded;
         self.scheduleFlush(item10007.type);
       }).catch((error) => {
         const socket = self.socket;
@@ -201,19 +202,18 @@ prototype["getIsRequestIdleCallbackEnabled"] = function getIsRequestIdleCallback
 prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
   let self = this;
   self = this;
-  const importDefault = items;
-  const dependencyMap = arg1;
+  importDefault = items;
+  dependencyMap = arg1;
   if (0 === items.length) {
     return true;
   } else {
     const none = "none";
-    let c4 = false;
+    c4 = false;
     const telemetry2 = self.scheduler.telemetry;
     telemetry2.measure(_WorkSchedulerTelemetryEvent.WorkSchedulerTelemetryMeasurement.COUNT_INITIAL_DISPATCHS_LENGTH, items.length);
     try {
-      let tmp2 = [];
-      tmp2 = importDefault;
-      if (self.socket.connectionState === CLOSED.RESUMING) {
+      closure_5 = [];
+      if (self.socket.connectionState === CLOSEDDefault.RESUMING) {
         const Emitter = tmp2(589).Emitter;
         Emitter.pause(150);
       }
@@ -221,7 +221,6 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
       const Emitter2 = tmp2(589).Emitter;
       Emitter2.batched(() => {
         let arr;
-        let items;
         let obj;
         let sum;
         let tmp6;
@@ -233,19 +232,19 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
             let type = tmp.type;
             let tmp3 = num;
             if (!hasItem) {
-              let tmp4 = outer1_8;
-              hasItem = outer1_8.has(tmp.type);
+              let tmp4 = closure_1_8;
+              hasItem = closure_1_8.has(tmp.type);
             }
             let _performance = performance;
             let nowResult = performance.now();
             tmp6 = self;
             let dispatchOneResult = self.dispatchOne(tmp);
             let _performance2 = performance;
-            let closure_0 = performance.now() - nowResult;
+            closure_0 = performance.now() - nowResult;
             type = tmp.type;
-            items = outer1_11[type];
+            items = closure_1_11[type];
             let tmp8 = closure_0;
-            let tmp9 = outer1_11;
+            let tmp9 = closure_1_11;
             if (items == null) {
               items = [0, 0];
             }
@@ -283,7 +282,7 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
               num = sum;
             }
           }
-          let closure_5 = arr.slice(sum);
+          closure_5 = arr.slice(sum);
           if (tmp18) {
             const telemetry = tmp6.scheduler.telemetry;
             telemetry.timeTrack(v0(13200).WorkSchedulerTelemetryTiming.TIME_OVER_DEADLINE, obj.timeSinceExpiration);
@@ -296,13 +295,13 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
         const Emitter3 = tmp2(589).Emitter;
         Emitter3.resume();
       }
-      if (tmp2.length > 0) {
+      if (closure_5.length > 0) {
         let telemetry = self.scheduler.telemetry;
-        telemetry.measure(tmp21(13200).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, tmp2.length);
+        telemetry.measure(tmp21(13200).WorkSchedulerTelemetryMeasurement.COUNT_DISPATCHES_LEFT_AFTER_YIELD, closure_5.length);
         const queue = self.queue;
         const unshift = queue.unshift;
         items = [];
-        HermesBuiltin.arraySpread(tmp2, 0);
+        HermesBuiltin.arraySpread(closure_5, 0);
         HermesBuiltin.apply(items, queue);
         const scheduler = self.scheduler;
         const workTimeout = scheduler.requestWorkTimeout(self.flush, true);
@@ -321,14 +320,10 @@ prototype["dispatchMultiple"] = function dispatchMultiple(items, arg1) {
   }
 };
 prototype["dispatchOne"] = function dispatchOne(arg0) {
-  let compressionAnalytics;
-  let data;
-  let preloadedData;
-  let type;
   const self = this;
   ({ data, type, compressionAnalytics, preloadedData } = arg0);
   const nowResult = performance.now();
-  if (this.socket.connectionState !== CLOSED.RESUMING) {
+  if (this.socket.connectionState !== CLOSEDDefault.RESUMING) {
     tmp2(13203).flush(type, data);
     if ("READY" === type) {
       const readyPayloadByteSizeAnalytics = prettyPrintTrace_.getReadyPayloadByteSizeAnalytics(data);

@@ -1,12 +1,14 @@
 // discord_app/modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef13351 from "module_13351" /* 13351 */;
+import _modDef13352 from "module_13352" /* 13352 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
 
-const require = arg1;
-let obj = { "server-subscriptions-onboarding": require("module_13351"), "server-subscriptions-create-tier-from-template": require("module_13352") };
+require = arg1;
+let obj = { "server-subscriptions-onboarding": _modDef13351, "server-subscriptions-create-tier-from-template": _modDef13352 };
 let closure_6 = {
   title() {
     const intl = getSystemLocale.intl;
@@ -30,11 +32,11 @@ let closure_6 = {
   },
   canCreateGuild: true,
   useIsGuildSupported() {
-    const items = [getUncachedChannelPermissions];
-    return initialize.useStateFromStores(items, () => (guild) => getUncachedChannelPermissions.canAccessGuildSettings(guild), [], initialize.statesWillNeverBeEqual);
+    const items = [closure_4];
+    return initialize.useStateFromStores(items, () => (guild) => closure_4.canAccessGuildSettings(guild), [], initialize.statesWillNeverBeEqual);
   }
 };
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings_picker/GuildSettingsPickerFeatures.tsx");
 
 export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeature(feature) {
   let tmp2;
@@ -42,7 +44,7 @@ export const useGuildSettingsPickerFeature = function useGuildSettingsPickerFeat
     tmp2 = obj[feature];
   }
   let first = callback(React.useState(tmp2), 1)[0];
-  let closure_0 = closure_6.useIsGuildSupported();
+  closure_0 = closure_6.useIsGuildSupported();
   let isGuildSupported;
   if (first != null) {
     const useIsGuildSupported = first.useIsGuildSupported;

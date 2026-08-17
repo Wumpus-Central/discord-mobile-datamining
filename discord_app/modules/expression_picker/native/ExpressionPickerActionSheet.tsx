@@ -1,44 +1,33 @@
 // discord_app/modules/expression_picker/native/ExpressionPickerActionSheet.tsx
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { STICKER_FORMATS } from "PADDING_HORIZONTAL";
-import jsxProd from "jsxProd";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import { KeyboardTypes } from "../../keyboard/native/KeyboardTypes.tsx";
-import { useKeyboardType } from "../../keyboard/native/useKeyboardType.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import initialize from "initialize" /* 589 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import KeyboardTypes from "KeyboardTypes" /* 1627 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import _mod4115 from "module_4115" /* 4115 */;
+import useKeyboardType from "useKeyboardType" /* 4239 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { ACTION_SHEET_START_HEIGHT_RATIO as closure_5 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { STICKER_FORMATS } from "PADDING_HORIZONTAL" /* 10187 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
-const result = require("ACTION_SHEET_START_HEIGHT_RATIO").fileFinishedImporting("modules/expression_picker/native/ExpressionPickerActionSheet.tsx");
+require = arg1;
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
+const result = require("set").fileFinishedImporting("modules/expression_picker/native/ExpressionPickerActionSheet.tsx");
 
 export default function ExpressionPickerActionSheet(arg0) {
-  let noop;
-  let dependencyMap;
-  let hideGifFavorites;
-  let importDefault;
-  let initialGifQuery;
-  let onDismiss;
-  let require;
-  let visibleTabs;
-  ({ channelId: require, onPressEmoji: importDefault, onPressSticker: dependencyMap, onPressGIF: noop } = arg0);
+  ({ channelId: require, onPressEmoji: importDefault, onPressSticker: dependencyMap, onPressGIF: closure_3 } = arg0);
   ({ hideGifFavorites, onDismiss, visibleTabs, initialGifQuery } = arg0);
-  let obj = ReanimatedRexport;
+  let obj = _mod4115;
   const sharedValue = obj.useSharedValue(-1);
-  let obj1 = useKeyboardType;
+  obj1 = useKeyboardType;
   const keyboardContextForType = obj1.useKeyboardContextForType(KeyboardTypes.KeyboardTypes.EXPRESSION);
   let obj2 = initialize;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj2.useStateFromStores(items, () => outer1_4.getChannel(closure_0));
-  const height = useWindowDimensions({ ignoreKeyboard: true }).height;
-  const diff = height - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsets().top;
+  const items = [closure_4];
+  const stateFromStores = obj2.useStateFromStores(items, () => closure_1_4.getChannel(closure_0));
+  const height = useWindowDimensionsDefault({ ignoreKeyboard: true }).height;
+  const diff = height - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE - useSafeAreaInsetsDefault().top;
   let tmp15Result = null;
   if (undefined !== stateFromStores) {
     let isIOSResult = tmp2(500).isIOS();
@@ -62,21 +51,21 @@ export default function ExpressionPickerActionSheet(arg0) {
     obj2[4] = hideGifFavorites;
     obj2[5] = function onPressEmoji(arg0) {
       callback(arg0);
-      outer1_0(outer1_2[9]).dismissKeyboard();
-      const obj = outer1_0(outer1_2[9]);
-      outer1_1(outer1_2[10]).hideActionSheet();
+      closure_1_0(closure_1_2[9]).dismissKeyboard();
+      const obj = closure_1_0(closure_1_2[9]);
+      closure_1_1(closure_1_2[10]).hideActionSheet();
     };
     obj2[6] = function onPressGIF(arg0) {
       callback3(arg0);
-      outer1_0(outer1_2[9]).dismissKeyboard();
-      const obj = outer1_0(outer1_2[9]);
-      outer1_1(outer1_2[10]).hideActionSheet();
+      closure_1_0(closure_1_2[9]).dismissKeyboard();
+      const obj = closure_1_0(closure_1_2[9]);
+      closure_1_1(closure_1_2[10]).hideActionSheet();
     };
     obj2[7] = function onPressSticker(arg0) {
       callback2(arg0);
-      outer1_0(outer1_2[9]).dismissKeyboard();
-      const obj = outer1_0(outer1_2[9]);
-      outer1_1(outer1_2[10]).hideActionSheet();
+      closure_1_0(closure_1_2[9]).dismissKeyboard();
+      const obj = closure_1_0(closure_1_2[9]);
+      closure_1_1(closure_1_2[10]).hideActionSheet();
     };
     obj2[8] = visibleTabs;
     obj2[9] = initialGifQuery;

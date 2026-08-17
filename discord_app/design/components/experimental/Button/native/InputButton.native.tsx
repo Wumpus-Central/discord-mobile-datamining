@@ -1,29 +1,23 @@
 // discord_app/design/components/experimental/Button/native/InputButton.native.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import { Text } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { CollapsingText } from "../../../Button/native/BaseTextButton.native.tsx";
-import { MINIMUM_HIT_AREA } from "../../../Button/native/ButtonConstants.native.tsx";
-import { useInputStyles } from "../../../Input/native/InputFieldContainer.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import CollapsingText from "CollapsingText" /* 4746 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
+import useInputStyles from "useInputStyles" /* 7345 */;
+import closure_3 from "_objectWithoutProperties" /* 109 */;
+import { Text } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = ["size", "isRound", "text", "value", "icon", "iconPosition", "accessibilityLabel", "accessibilityValue", "maxFontSizeMultiplier"];
 let obj = { buttonText: { flexGrow: 1, flexShrink: 1, width: "100%" }, buttonTextPlaceholder: null, buttonTextValue: null };
-obj = { color: require("Themes").colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+obj = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
 obj[1] = obj;
-createCacheKey = { color: require("Themes").colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+createCacheKey = { color: ThemesDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
 obj[2] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
-const forwardRefResult = require("noop").forwardRef((size, ref) => {
-  let accessibilityLabel;
-  let accessibilityValue;
-  let icon;
-  let iconPosition;
-  let maxFontSizeMultiplier;
-  let text;
-  let value;
+const forwardRefResult = importAllResult.forwardRef((size, ref) => {
   size = size.size;
   let str = "lg";
   if (undefined !== size) {
@@ -90,6 +84,6 @@ const forwardRefResult = require("noop").forwardRef((size, ref) => {
     return jsx(CollapsingText.BaseTextButton, {});
   }
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/experimental/Button/native/InputButton.native.tsx");
 
 export const InputButton = forwardRefResult;

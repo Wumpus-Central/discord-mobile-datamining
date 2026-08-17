@@ -1,16 +1,18 @@
 // discord_app/modules/custom_status/utils/getClearAfterDuration.tsx
-import { ClearAfterValues } from "StatusTypes";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { set } from "../../../utils/Durations.tsx";
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import setDefault from "set" /* 687 */;
+import StatusTypes from "StatusTypes" /* 9292 */;
 
-const result = require("module_38").fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");
+const ClearAfterValues = StatusTypes.ClearAfterValues;
+const result = set.fileFinishedImporting("modules/custom_status/utils/getClearAfterDuration.tsx");
 
 export default function getClearAfterDuration(arg0) {
   let DAY = arg0;
   if (arg0 === ClearAfterValues.TODAY) {
-    DAY = set.Millis.DAY;
+    DAY = setDefault.Millis.DAY;
   } else {
-    00038__(typeof DAY === "number", "Invalid custom status clear timeout");
+    _modDef38(typeof DAY === "number", "Invalid custom status clear timeout");
   }
   return DAY;
 };

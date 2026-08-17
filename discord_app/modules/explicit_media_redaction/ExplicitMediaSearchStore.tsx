@@ -1,12 +1,13 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx
-import { Store } from "initialize";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-import { redactionSettingToRenderedString } from "ExplicitMediaRedactionUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
 
-const require = arg1;
+require = arg1;
 function handleSearchMessagesSuccess(data) {
   data = data.data;
-  let closure_2 = {};
+  closure_2 = {};
   let item = data.forEach((messages) => {
     messages = messages.messages;
     let item = messages.forEach((arr) => {
@@ -18,13 +19,14 @@ function handleSearchMessagesSuccess(data) {
   });
 }
 let closure_2 = {};
+const Store = initializeDefault.Store;
 class ExplicitMediaSearchStore extends Store {
 }
 ExplicitMediaSearchStore.prototype["getMessage"] = function getMessage(arg0, arg1) {
   return dependencyMap["" + arg1 + ":" + arg0];
 };
 ExplicitMediaSearchStore.displayName = "SearchMessageStore";
-const explicitMediaSearchStore = new ExplicitMediaSearchStore(require("dispatcher"), {
+const explicitMediaSearchStore = new ExplicitMediaSearchStore(dispatcherDefault, {
   SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MOD_VIEW_SEARCH_MESSAGES_SUCCESS: handleSearchMessagesSuccess,
   MESSAGE_UPDATE: function handleMessageUpdate(message) {
@@ -47,10 +49,10 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(require("dispatche
     return false;
   },
   LOGOUT: function handleLogout() {
-    let closure_2 = {};
+    closure_2 = {};
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_2 = {};
+    closure_2 = {};
   },
   MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function handleScanTimeout(channelId) {
     const combined = "" + channelId.channelId + ":" + channelId.messageId;
@@ -60,6 +62,6 @@ const explicitMediaSearchStore = new ExplicitMediaSearchStore(require("dispatche
     }
   }
 });
-const result = require("initialize").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaSearchStore.tsx");
 
 export default explicitMediaSearchStore;

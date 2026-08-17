@@ -1,26 +1,23 @@
 // discord_app/components_native/premium/GuildBoostingGuildList.tsx
-import "set";
-import get_ActivityIndicator from "getSystemLocale";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING as closure_7 } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildAppliedBoostCount } from "../../modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4281 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "insertUnsortedGuilds" /* 5078 */;
+import { NUMBER_OF_GUILDS_TO_RECOMMEND_BOOSTING as closure_7 } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function GuildBoostingGuildListItem(guildId) {
   guildId = guildId.guildId;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = guildId(589);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(guildId));
-  useGuildAppliedBoostCount;
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(guildId));
+  useGuildAppliedBoostCountDefault;
   if (stateFromStores != null) {
     const id = stateFromStores.id;
   }
@@ -29,9 +26,9 @@ function GuildBoostingGuildListItem(guildId) {
     obj = { style: null, activeOpacity: 0.5, accessibilityRole: "button", onPress: null, children: null };
     obj[0] = tmp.guildCard;
     obj[3] = function onPress() {
-      guildId(outer1_2[12]).transitionToGuild(guildId, { state: { shouldShowSubscribeTooltip: true } });
-      const obj = guildId(outer1_2[12]);
-      outer1_1(outer1_2[13]).close();
+      guildId(closure_1_2[12]).transitionToGuild(guildId, { state: { shouldShowSubscribeTooltip: true } });
+      const obj = guildId(closure_1_2[12]);
+      closure_1_1(closure_1_2[13]).close();
     };
     let tmp2Result = tmp2(8910);
     obj = { guild: null, size: null, style: null, selected: false };
@@ -40,7 +37,7 @@ function GuildBoostingGuildListItem(guildId) {
     obj[1] = tmp5(7188).GuildIconSizes.LARGE;
     obj[2] = tmp.guildIcon;
     const items1 = [callback(tmp2Result, obj), , ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.guildCardDescription;
     const obj2 = { variant: "text-md/bold", children: null };
     obj2[1] = stateFromStores.name;
@@ -70,17 +67,18 @@ function GuildBoostingGuildListItem(guildId) {
   }
   return tmp9;
 }
+noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { guildCard: null, guildIcon: null, guildCardDescription: null, subscriptionInfo: null, premiumGuildImage: null };
-createCacheKey = { padding: 12, paddingLeft: 16, borderRadius: require("Themes").radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { padding: 12, paddingLeft: 16, borderRadius: ThemesDefault.radii.xs, marginBottom: 8, minHeight: 96, flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginRight: 16 };
 createCacheKey[2] = { flex: 1 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[4] = { width: 18, height: 12, marginLeft: -5 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("components_native/premium/GuildBoostingGuildList.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("components_native/premium/GuildBoostingGuildList.tsx");
 
 export default function GuildBoostingGuildList(guildCount) {
   guildCount = guildCount.guildCount;
@@ -88,7 +86,7 @@ export default function GuildBoostingGuildList(guildCount) {
     guildCount = closure_7;
   }
   let obj = initialize;
-  const items = [insertUnsortedGuilds];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => flattenedGuildIds.getFlattenedGuildIds());
   obj = { style: guildCount.style, children: null };
   const substr = stateFromStores.slice(0, guildCount);

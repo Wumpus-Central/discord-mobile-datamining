@@ -1,10 +1,10 @@
 // discord_app/modules/screen/useWindowDimensions.native.tsx
-import noop from "noop";
-import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "getDimensionsStoreStateForEntry" /* 1495 */;
 
 const require = arg1;
 let closure_4 = { ignoreKeyboard: false };
-const result = require("context").fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
+const result = require("set").fileFinishedImporting("modules/screen/useWindowDimensions.native.tsx");
 
 export default function useWindowDimensions() {
   let tmp = arg0;
@@ -22,11 +22,11 @@ export default function useWindowDimensions() {
   }
   const items = [flag, appEntryKey];
   return state(React.useMemo(() => {
-    if (flag) {
-      flag = tmp;
+    if (closure_0) {
+      closure_0 = tmp;
       let fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensionsIgnoringKeyboard;
     } else {
-      flag = tmp;
+      closure_0 = tmp;
       fn = (arg0) => arg0.byAppEntry[closure_0].windowDimensions;
     }
     return fn;

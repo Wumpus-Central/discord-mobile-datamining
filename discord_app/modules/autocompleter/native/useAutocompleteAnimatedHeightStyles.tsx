@@ -1,14 +1,15 @@
 // discord_app/modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx
+import set from "set" /* 2 */;
+
 let closure_2 = { code: "function useAutocompleteAnimatedHeightStylesTsx1(){const{withTiming,height,timingStandard,isFrozenSharedValue}=this.__closure;return{height:withTiming(height,timingStandard),display:!isFrozenSharedValue.get()?'flex':'none'};}" };
-const result = require("CONFIG_NEVER_ANIMATE_TIMING").fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
+const result = set.fileFinishedImporting("modules/autocompleter/native/useAutocompleteAnimatedHeightStyles.tsx");
 
 export default function useAutocompleteAnimatedHeightStyles(height) {
   const _require = height;
   let obj = _require(isScreenIndexFrozenSharedValue[0]);
   isScreenIndexFrozenSharedValue = obj.useIsScreenIndexFrozenSharedValue(arg1);
   const fn = function s() {
-    const obj = { height: null, display: null };
-    obj[0] = height(isScreenIndexFrozenSharedValue[2]).withTiming(height, height(isScreenIndexFrozenSharedValue[3]).timingStandard);
+    const obj = { height: height(isScreenIndexFrozenSharedValue[2]).withTiming(height, height(isScreenIndexFrozenSharedValue[3]).timingStandard), display: null };
     let str = "flex";
     if (isScreenIndexFrozenSharedValue.get()) {
       str = "none";

@@ -1,25 +1,21 @@
 // discord_app/modules/collectibles/native/WishlistButton.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import _slicedToArray from "_slicedToArray";
-import CONFIG_NEVER_ANIMATE_TIMING from "CONFIG_NEVER_ANIMATE_TIMING";
-import get_ActivityIndicator from "dispatcher";
-import fetchFingerprint from "fetchFingerprint";
-import closure_9 from "mergeGuildAvatar";
-import { ShopCtaEnum } from "items";
-import { ThemeTypes } from "sum";
-import jsxProd from "SUBTLE_SPRING";
-import { Easing } from "module_4115";
-import createCacheKey from "createCacheKey";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getProductNameAndTypeFromSku } from "../../wishlists/CollectiblesWishlistUtils.tsx";
-import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import getProductNameAndTypeFromSku from "getProductNameAndTypeFromSku" /* 9178 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 9243 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { ShopCtaEnum } from "items" /* 678 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import { Easing } from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_6;
-let error;
-let map1;
-let require = arg1;
+require = arg1;
 class WishlistButtonBase {
   constructor(arg0) {
     isWishlisted = global.isWishlisted;
@@ -35,46 +31,46 @@ class WishlistButtonBase {
       size = "sm";
     }
     onTrackPress = global.onTrackPress;
-    c6 = undefined;
-    c7 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
     dark = undefined;
     darkPressed = undefined;
     enabled = undefined;
-    useState = undefined;
-    useContext = undefined;
-    c13 = undefined;
-    c14 = undefined;
-    tmp = f46478(size);
-    c6 = tmp;
+    closure_11 = undefined;
+    closure_12 = undefined;
+    closure_13 = undefined;
+    closure_14 = undefined;
+    tmp = closure_17(size);
+    closure_6 = tmp;
     tmp2 = isWishlisted;
     tmp3 = busy;
-    tmp4 = jsxs;
-    tmp5 = require("ICON_SIZE").ICON_SIZE[jsxs[size]];
+    tmp4 = closure_16;
+    tmp5 = require("ICON_SIZE").ICON_SIZE[closure_16[size]];
     obj = require("ManaContext");
     theme = obj.useThemeContext().theme;
     obj2 = require("AccessibilityAnnouncer");
     isThemeLightResult = obj2.isThemeLight(theme);
-    c7 = theme === useState.MIDNIGHT;
+    closure_7 = theme === closure_11.MIDNIGHT;
     dark = isThemeLightResult ? tmp.light : tmp.dark;
     darkPressed = isThemeLightResult ? tmp.lightPressed : tmp.darkPressed;
     obj3 = onTrackPress;
     enabled = onTrackPress.useContext(require("context").AccessibilityPreferencesContext).reducedMotion.enabled;
     tmp7 = style(onTrackPress.useState(false), 2);
     first = tmp7[0];
-    useState = first;
-    useContext = tmp7[1];
+    closure_11 = first;
+    closure_12 = tmp7[1];
     tmp9 = isWishlisted;
     if (!isWishlisted) {
       tmp9 = first;
     }
-    c13 = tmp9;
+    closure_13 = tmp9;
     tmp2Result = require("module_4115");
     num = 0;
     if (isWishlisted) {
       num = 1;
     }
     sharedValue = tmp2Result.useSharedValue(num);
-    c14 = sharedValue;
+    closure_14 = sharedValue;
     items = [, , , , , , ];
     items[0] = disabled;
     items[1] = busy;
@@ -89,7 +85,7 @@ class WishlistButtonBase {
     items1[2] = sharedValue;
     callback = obj3.useCallback(() => {
       if (disabled) {
-        let obj = onPress(busy[17]);
+        obj = onPress(busy[17]);
         obj = { key: "WISHLIST_DISABLED", content: null };
         const intl = isWishlisted(busy[18]).intl;
         obj[1] = intl.string(isWishlisted(busy[18]).t["50TX9k"]);
@@ -132,19 +128,19 @@ class WishlistButtonBase {
       if (first) {
         let result = sharedValue.set(0);
         const _requestAnimationFrame = requestAnimationFrame;
-        let closure_0 = requestAnimationFrame(() => {
-          let obj = callback(outer1_2[19]);
+        closure_0 = requestAnimationFrame(() => {
+          obj = callback(closure_1_2[19]);
           const fn = function t(arg0) {
             if (arg0) {
-              outer1_0(outer1_2[9]).runOnJS(closure_12)(false);
-              const obj = outer1_0(outer1_2[9]);
+              closure_1_0(closure_1_2[9]).runOnJS(closure_12)(false);
+              obj = closure_1_0(closure_1_2[9]);
             }
           };
-          obj = { runOnJS: callback(outer1_2[9]).runOnJS, setIsClickAnimating: closure_12 };
+          obj = { runOnJS: callback(closure_1_2[9]).runOnJS, setIsClickAnimating: closure_12 };
           fn.__closure = obj;
           fn.__workletHash = 13061953734403;
-          fn.__initData = outer1_18;
-          const result = closure_14.set(obj.withTiming(1, outer1_14, "animate-always", fn));
+          fn.__initData = closure_1_18;
+          const result = closure_14.set(obj.withTiming(1, closure_1_14, "animate-always", fn));
         });
         return () => cancelAnimationFrame(closure_0);
       }
@@ -153,14 +149,14 @@ class WishlistButtonBase {
     class J {
       constructor() {
         obj = {};
-        merged = Object.assign(c6.animationFill);
+        merged = Object.assign(closure_6.animationFill);
         tmp2 = isWishlisted;
         tmp3 = busy;
         obj2 = require("CONFIG_NEVER_ANIMATE");
         num = 1;
         num2 = 1;
-        tmp4 = c13;
-        if (c13) {
+        tmp4 = closure_13;
+        if (closure_13) {
           num2 = 0;
         }
         obj.opacity = obj2.withSpring(num2, require("SUBTLE_SPRING").SUBTLE_SPRING, "animate-always");
@@ -178,19 +174,19 @@ class WishlistButtonBase {
     obj = { styles: tmp, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, showFilled: tmp9, SUBTLE_SPRING: require("SUBTLE_SPRING").SUBTLE_SPRING };
     J.__closure = obj;
     J.__workletHash = 1357254413161;
-    J.__initData = f46478;
+    J.__initData = closure_19;
     animatedStyle = tmp2Result1.useAnimatedStyle(J);
     tmp2Result2 = require("module_4115");
     class Y {
       constructor() {
-        value = c14.get();
+        value = closure_14.get();
         obj = {};
-        merged = Object.assign(c6.animationFill);
+        merged = Object.assign(closure_6.animationFill);
         tmp3 = isWishlisted;
         tmp4 = busy;
         obj2 = require("CONFIG_NEVER_ANIMATE");
         num = 0;
-        if (c13) {
+        if (closure_13) {
           num = 1;
         }
         obj.opacity = obj2.withSpring(num, require("SUBTLE_SPRING").SUBTLE_SPRING, "animate-always");
@@ -206,16 +202,16 @@ class WishlistButtonBase {
     obj1 = { animationFillProgress: sharedValue, styles: tmp, withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, showFilled: tmp9, SUBTLE_SPRING: require("SUBTLE_SPRING").SUBTLE_SPRING, interpolate: require("module_4115").interpolate, Extrapolation: require("module_4115").Extrapolation };
     Y.__closure = obj1;
     Y.__workletHash = 15039903885060;
-    Y.__initData = f46478;
+    Y.__initData = closure_20;
     animatedStyle1 = tmp2Result2.useAnimatedStyle(Y);
     tmp2Result3 = require("module_4115");
     class K {
       constructor() {
-        value = c14.get();
+        value = closure_14.get();
         obj = {};
-        merged = Object.assign(c6.animationFill);
+        merged = Object.assign(closure_6.animationFill);
         num = 0;
-        if (c13) {
+        if (closure_13) {
           tmp3 = isWishlisted;
           tmp4 = busy;
           obj2 = require("module_4115");
@@ -238,12 +234,12 @@ class WishlistButtonBase {
     obj2 = { animationFillProgress: sharedValue, styles: tmp, showFilled: tmp9, interpolate: require("module_4115").interpolate, Extrapolation: require("module_4115").Extrapolation };
     K.__closure = obj2;
     K.__workletHash = 12429379889426;
-    K.__initData = f46478;
-    tmp17 = useContext;
+    K.__initData = closure_21;
+    tmp17 = closure_12;
     obj3 = {
       style(pressed) {
             pressed = pressed.pressed;
-            const items = [_undefined.button, fetchFingerprint, , , , ];
+            const items = [closure_6.button, closure_8, , , , ];
             let midnight = closure_7;
             if (closure_7) {
               midnight = tmp.midnight;
@@ -260,7 +256,7 @@ class WishlistButtonBase {
               disabled = tmp.disabled;
             }
             items[4] = disabled;
-            items[5] = _slicedToArray;
+            items[5] = closure_4;
             return items;
           },
       onPress: callback,
@@ -273,7 +269,7 @@ class WishlistButtonBase {
     };
     str = "togglebutton";
     animatedStyle2 = tmp2Result3.useAnimatedStyle(K);
-    tmp18 = c6;
+    tmp18 = closure_6;
     if (flag) {
       str = "none";
     }
@@ -303,22 +299,19 @@ class WishlistButtonBase {
     items3[0] = tmp.iconContainer;
     items3[1] = { width: tmp5, height: tmp5 };
     obj6 = { style: animatedStyle, pointerEvents: "none", children: null };
-    obj7 = { size: tmp4[size], color: null };
-    obj7[1] = require("Themes").colors.INTERACTIVE_ICON_DEFAULT;
+    obj7 = { size: tmp4[size], color: require("Themes").colors.INTERACTIVE_ICON_DEFAULT };
     obj6[2] = tmp17(require("HeartOutlineIcon").HeartOutlineIcon, obj7);
     items4 = [, , ];
     items4[0] = tmp17(require("module_4115").View, obj6);
     obj8 = { style: animatedStyle1, pointerEvents: "none", children: null };
-    obj9 = { size: tmp4[size], color: null };
-    obj9[1] = require("Themes").unsafe_rawColors.RED_NEW_50;
+    obj9 = { size: tmp4[size], color: require("Themes").unsafe_rawColors.RED_NEW_50 };
     obj8[2] = tmp17(require("HeartIcon").HeartIcon, obj9);
     items4[1] = tmp17(require("module_4115").View, obj8);
-    obj10 = { style: animatedStyle2, pointerEvents: "none", children: null };
+    obj10 = { style: animatedStyle2, pointerEvents: "none", children: tmp17(require("HeartIcon").HeartIcon, obj11) };
     obj11 = { size: tmp4[size], color: "white" };
-    obj10[2] = tmp17(require("HeartIcon").HeartIcon, obj11);
     items4[2] = tmp17(require("module_4115").View, obj10);
     obj5[1] = items4;
-    obj3[7] = c13(c7, obj5);
+    obj3[7] = closure_13(closure_7, obj5);
     return tmp17(tmp18, obj3);
   }
 }
@@ -330,24 +323,24 @@ class WishlistButton {
     onTrackPress = global.onTrackPress;
     tmp = null;
     merged = Object.assign(global, Object.create(null));
-    useStateFromStores = undefined;
-    c4 = undefined;
-    F8FvUy = undefined;
+    closure_3 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
     isWishlisted = undefined;
     handleToggle = undefined;
     obj = require("initialize");
     items = [];
-    items[0] = View;
+    items[0] = closure_8;
     stateFromStores = obj.useStateFromStores(items, () => id.getId());
     obj2 = require("initialize");
     items1 = [];
-    items1[0] = View;
+    items1[0] = closure_9;
     stateFromStores1 = obj2.useStateFromStores(items1, () => currentUser.getCurrentUser());
     tmp5 = require("useWishlistNUXActionSheet")();
     shouldShowWishlistNUXActionSheet = tmp5.shouldShowWishlistNUXActionSheet;
-    useStateFromStores = shouldShowWishlistNUXActionSheet;
+    closure_3 = shouldShowWishlistNUXActionSheet;
     showWishlistNUXActionSheet = tmp5.showWishlistNUXActionSheet;
-    c4 = showWishlistNUXActionSheet;
+    closure_4 = showWishlistNUXActionSheet;
     intl = require("getSystemLocale").intl;
     obj = { productName: product.name };
     items2 = [, , ];
@@ -355,18 +348,18 @@ class WishlistButton {
     items2[1] = showWishlistNUXActionSheet;
     items2[2] = product;
     formatToPlainStringResult = intl.formatToPlainString(require("getSystemLocale").t["7kFjeK"], obj);
-    callback = F8FvUy.useCallback(() => {
+    callback = closure_5.useCallback(() => {
       if (shouldShowWishlistNUXActionSheet) {
         showWishlistNUXActionSheet(closure_0);
       }
     }, items2);
     intl2 = require("getSystemLocale").intl;
     stringResult = intl2.string(require("getSystemLocale").t.F8FvUy);
-    F8FvUy = stringResult;
+    closure_5 = stringResult;
     items3 = [];
     items3[0] = stringResult;
-    callback1 = F8FvUy.useCallback(() => {
-      let obj = onPress(onTrackPress[17]);
+    callback1 = closure_5.useCallback(() => {
+      obj = onPress(onTrackPress[17]);
       obj = { key: "WISHLIST_ERROR", content: c5 };
       obj.open(obj);
     }, items3);
@@ -402,22 +395,21 @@ obj[1] = Easing.bezier(0.67, 0, 0.26, 1);
 obj = { sm: require("MINIMUM_HIT_AREA").SMALL_BUTTON_HEIGHT, md: require("MINIMUM_HIT_AREA").MEDIUM_BUTTON_HEIGHT };
 let closure_16 = { sm: "sm", md: "md" };
 let closure_17 = createCacheKey.createStyles((arg0) => {
-  let obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
-  obj = { width: obj[arg0], height: obj[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: Themes.radii.round, borderWidth: 1, borderColor: Themes.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
+  obj = { button: null, light: null, lightPressed: null, dark: null, darkPressed: null, midnight: null, disabled: null, iconContainer: null, animationFill: null };
+  obj = { width: obj[arg0], height: obj[arg0], display: "flex", alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: 1, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BORDER_DEFAULT };
   obj[0] = obj;
   obj = { backgroundColor: null };
   let obj3 = ManaContext;
   obj[0] = obj3.setColorOpacity("white", 0.72);
   obj[1] = obj;
-  const obj1 = { backgroundColor: null };
-  obj1[0] = ManaContext.setColorOpacity("white", 0.62);
+  obj1 = { backgroundColor: ManaContext.setColorOpacity("white", 0.62) };
   obj[2] = obj1;
   const obj6 = ManaContext;
-  obj[3] = { backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-  obj3 = { backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
+  obj[3] = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  obj3 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_ACTIVE };
   obj[4] = obj3;
-  const obj2 = { backgroundColor: Themes.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-  obj[5] = { borderColor: Themes.colors.BORDER_STRONG };
+  const obj2 = { backgroundColor: ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+  obj[5] = { borderColor: ThemesDefault.colors.BORDER_STRONG };
   obj[6] = { opacity: 0.5 };
   obj[7] = { position: "relative", alignItems: "center", justifyContent: "center" };
   obj[8] = { position: "absolute", inset: 0, alignItems: "center", justifyContent: "center" };
@@ -427,13 +419,13 @@ let closure_18 = { code: "function WishlistButtonTsx1(done){const{runOnJS,setIsC
 let closure_19 = { code: "function WishlistButtonTsx2(){const{styles,withSpring,showFilled,SUBTLE_SPRING}=this.__closure;return{...styles.animationFill,opacity:withSpring(showFilled?0:1,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(showFilled?0.9:1,SUBTLE_SPRING,'animate-always')}]};}" };
 let closure_20 = { code: "function WishlistButtonTsx3(){const{animationFillProgress,styles,withSpring,showFilled,SUBTLE_SPRING,interpolate,Extrapolation}=this.__closure;const progress=animationFillProgress.get();return{...styles.animationFill,opacity:withSpring(showFilled?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:interpolate(progress,[0,0.625,1],[0,1.35,1],Extrapolation.CLAMP)}]};}" };
 let closure_21 = { code: "function WishlistButtonTsx4(){const{animationFillProgress,styles,showFilled,interpolate,Extrapolation}=this.__closure;const progress=animationFillProgress.get();return{...styles.animationFill,opacity:showFilled?interpolate(progress,[0,0.7],[1,0],Extrapolation.CLAMP):0,transform:[{scale:interpolate(progress,[0,0.625,1],[0,1.35,1],Extrapolation.CLAMP)}]};}" };
-let result = require("noop").fileFinishedImporting("modules/collectibles/native/WishlistButton.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/WishlistButton.tsx");
 
 export default function CollectiblesWishlistButton(selectedProduct) {
   selectedProduct = selectedProduct.selectedProduct;
   let tmp = null;
   const merged = Object.assign(selectedProduct, Object.create(null));
-  let obj = getProductPurchaseState;
+  obj = getProductPurchaseState;
   getProductNameAndTypeFromSku;
   if (!obj.useProductPurchaseState(selectedProduct).isPurchased) {
     obj = { skuId: null, product: null, disabled: null, onTrackPress: null };

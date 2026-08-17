@@ -1,30 +1,26 @@
 // discord_app/modules/activities/confirmExternalAppLaunchAlert.native.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { PRIVATE_APPS_HELP_ARTICLE } from "items3";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/08743_registerAsset.js";
-import { set } from "../../actions/AlertActionCreators.tsx";
-import { Button } from "../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import setDefault from "set" /* 4827 */;
+import registerAssetDefault from "registerAsset" /* 8743 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { PRIVATE_APPS_HELP_ARTICLE } from "items3" /* 4481 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function ConfirmActivityGateContent(activityName) {
   const tmp = callback3();
   let obj = { style: tmp.alertContainer, children: null };
-  obj = { source: registerAsset, style: tmp.announcementBirb };
+  obj = { source: registerAssetDefault, style: tmp.announcementBirb };
   const items = [callback(closure_3, obj), , , ];
   obj = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["06YebE"]);
   items[1] = callback(Text.Text, obj);
-  const obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
+  obj1 = { style: tmp.alertTitleText, variant: "heading-lg/bold", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[2] = intl2.format(getSystemLocale.t["Z/eMDT"], { activityName: activityName.application.name });
   items[2] = callback(Text.Text, obj1);
@@ -50,17 +46,15 @@ function LinkButton() {
   obj[1] = callback(Button.Button, obj);
   return callback(closure_4, obj);
 }
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
-const result = require("items3").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/confirmExternalAppLaunchAlert.native.tsx");
 
 export const confirmExternalAppLaunchAlert = function confirmExternalAppLaunchAlert(arg0) {
-  let application;
-  let onCancel;
-  let onConfirm;
   ({ application, onConfirm, onCancel } = arg0);
-  let obj = set;
+  let obj = setDefault;
   obj = { title: "", children: callback(ConfirmActivityGateContent, { application }), onConfirm, confirmText: null, onCancel: null, cancelText: null, footer: null };
   const intl = getSystemLocale.intl;
   obj[3] = intl.string(getSystemLocale.t["3PatSz"]);

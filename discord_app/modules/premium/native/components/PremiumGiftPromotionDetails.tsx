@@ -1,20 +1,15 @@
 // discord_app/modules/premium/native/components/PremiumGiftPromotionDetails.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function AnimatedImage(arg0) {
-  let imageUrl;
-  let shouldAnimate;
-  let style;
   ({ imageUrl, style, shouldAnimate } = arg0);
   if (shouldAnimate === undefined) {
     shouldAnimate = true;
@@ -24,7 +19,7 @@ function AnimatedImage(arg0) {
   let first;
   let React;
   let obj = shouldAnimate(aPNGPlayerControls[7]);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let num = null;
   const ref = React.useRef(null);
@@ -71,23 +66,19 @@ function AnimatedImage(arg0) {
   }
   tmp13 = callback(tmp9(tmp2[11]), { style, resizeMode: "contain", source: { uri: imageUrl } });
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles(() => {
   let obj = { container: null, image: null, textContainer: null };
-  obj = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_12 };
+  obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
   obj[0] = obj;
-  obj = { width: Themes.space.PX_40, height: Themes.space.PX_40, borderRadius: Themes.radii.xs };
+  obj = { width: ThemesDefault.space.PX_40, height: ThemesDefault.space.PX_40, borderRadius: ThemesDefault.radii.xs };
   obj[1] = obj;
   obj[2] = { flex: 1 };
   return obj;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/components/PremiumGiftPromotionDetails.tsx");
 
 export default function PremiumGiftPromotionDetails(imageUrl) {
-  let shouldAnimate;
-  let style;
-  let subtitle;
-  let title;
   imageUrl = imageUrl.imageUrl;
   ({ style, title, subtitle, shouldAnimate } = imageUrl);
   const tmp = callback2();

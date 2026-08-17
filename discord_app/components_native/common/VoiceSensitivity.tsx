@@ -1,74 +1,71 @@
 // discord_app/components_native/common/VoiceSensitivity.tsx
-import anyoneHasFlagInContext from "anyoneHasFlagInContext";
-import _slicedToArray from "_slicedToArray";
-import Button from "Button";
-import { View } from "AccessibilityAnnouncer";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import closure_8 from "anyoneHasFlagInContext";
-import getState from "getState";
-import { AppStates } from "ME";
-import { NativePermissionTypes } from "NativePermissionStatus";
-import jsxProd from "_getRequireWildcardCache";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_8 from "anyoneHasFlagInContext" /* 4774 */;
+import closure_9 from "getState" /* 7383 */;
+import { AppStates } from "ME" /* 676 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let closure_12;
-let map1;
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 createCacheKey = { sensitivity: { position: "relative", height: 20 }, sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" }, sensitivityFill: null, sensitivityCommon: null, sensitivityMin: null, sensitivityMax: null, sensitivityDefault: null, sensitivitySpeaking: null, sensitivitySlider: null };
-createCacheKey = { position: "absolute", backgroundColor: require("Themes").unsafe_rawColors.WHITE, opacity: 0.5, top: 7, left: 0, right: 0, bottom: 7 };
+createCacheKey = { position: "absolute", backgroundColor: ThemesDefault.unsafe_rawColors.WHITE, opacity: 0.5, top: 7, left: 0, right: 0, bottom: 7 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { height: 6, borderRadius: 3 };
-createCacheKey[4] = { backgroundColor: require("Themes").unsafe_rawColors.YELLOW_300 };
-let obj1 = { backgroundColor: require("Themes").unsafe_rawColors.YELLOW_300 };
-createCacheKey[5] = { backgroundColor: require("Themes").unsafe_rawColors.GREEN_360 };
+createCacheKey[4] = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300 };
+let obj1 = { backgroundColor: ThemesDefault.unsafe_rawColors.YELLOW_300 };
+createCacheKey[5] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 let obj3 = { flex: 1, backgroundColor: null };
-obj3[1] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_400, 0.6);
+obj3[1] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 createCacheKey[6] = obj3;
-let obj2 = { backgroundColor: require("Themes").unsafe_rawColors.GREEN_360 };
-createCacheKey[7] = { flex: 1, backgroundColor: require("Themes").unsafe_rawColors.GREEN_360 };
+let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+createCacheKey[7] = { flex: 1, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
 createCacheKey[8] = { flex: 1, backgroundColor: "transparent", marginVertical: -10 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { flex: 1, backgroundColor: require("Themes").unsafe_rawColors.GREEN_360 };
-const result = require("noop").fileFinishedImporting("components_native/common/VoiceSensitivity.tsx");
+let closure_14 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { flex: 1, backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_360 };
+const result = require("set").fileFinishedImporting("components_native/common/VoiceSensitivity.tsx");
 
 export default function VoiceSensitivity(auto) {
-  let c10;
-  let tmp17;
   auto = auto.auto;
   const onThresholdChange = auto.onThresholdChange;
   let first;
-  let anyoneHasFlagInContext;
+  closure_3 = undefined;
   let width;
   let stateFromStores;
   let first1;
-  let _detectH265HardwareDecode;
+  closure_7 = undefined;
   let first2;
-  let getState;
+  closure_9 = undefined;
   c10 = undefined;
-  let closure_11;
+  closure_11 = undefined;
   let callback;
   callback = undefined;
-  let createCacheKey;
-  let closure_15;
-  let tmp = createCacheKey();
+  let callback2;
+  closure_15 = undefined;
+  let tmp = callback2();
   const sum = auto.threshold + 100;
   const ref = stateFromStores.useRef(null);
   const ref1 = stateFromStores.useRef(null);
   const tmp6 = width(stateFromStores.useState(first2.isCurrentUserSpeaking()), 2);
   first = tmp6[0];
-  anyoneHasFlagInContext = tmp6[1];
+  closure_3 = tmp6[1];
   width = onThresholdChange(first[13])().width;
   let obj = auto(first[14]);
-  const items = [getState];
+  const items = [closure_9];
   stateFromStores = obj.useStateFromStores(items, () => state.getState(), []);
   const tmp12 = width(stateFromStores.useState(0), 2);
   first1 = tmp12[0];
-  _detectH265HardwareDecode = tmp12[1];
+  closure_7 = tmp12[1];
   const tmp14 = width(stateFromStores.useState(sum), 2);
   first2 = tmp14[0];
-  getState = tmp14[1];
+  closure_9 = tmp14[1];
   const ref2 = stateFromStores.useRef(null);
   const tmp8 = onThresholdChange;
   [tmp17, c10] = width(stateFromStores.useState(first2 / 100), 2);
@@ -124,12 +121,12 @@ export default function VoiceSensitivity(auto) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_0 = tmp4;
-                let obj2 = v0(outer2_2[15]);
+                closure_0 = tmp4;
+                let obj2 = v0(closure_2_2[15]);
                 c1 = 1;
                 c2 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = obj2.hasPermission(outer2_11.AUDIO, { showAuthorizationError: false });
+                obj1 = { value: null, done: false };
+                obj1[0] = obj2.hasPermission(closure_2_11.AUDIO, { showAuthorizationError: false });
                 return obj1;
               }
             } else if (arg0 === 1) {
@@ -146,8 +143,8 @@ export default function VoiceSensitivity(auto) {
                 tmp5 = !closure_0;
               }
               if (tmp5) {
-                const mediaEngine = outer2_7.getMediaEngine();
-                mediaEngine.on(outer2_0(outer2_2[16]).MediaEngineEvent.VoiceActivity, outer1_12);
+                const mediaEngine = closure_2_7.getMediaEngine();
+                mediaEngine.on(closure_2_0(closure_2_2[16]).MediaEngineEvent.VoiceActivity, closure_1_12);
               }
               c2 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
@@ -158,7 +155,7 @@ export default function VoiceSensitivity(auto) {
           }
         }
       });
-      const _listenOnlyIfWeHavePermission = tmp;
+      closure_1 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -168,7 +165,7 @@ export default function VoiceSensitivity(auto) {
       return applyArgumentsResult;
     }
     if (stateFromStores === _undefined.ACTIVE) {
-      let c0 = false;
+      c0 = false;
       (function listenOnlyIfWeHavePermission() {
         const self = this;
         const apply = _listenOnlyIfWeHavePermission.apply;
@@ -180,14 +177,14 @@ export default function VoiceSensitivity(auto) {
         return applyArgumentsResult;
       })();
       return () => {
-        let c0 = true;
+        c0 = true;
         mediaEngine = mediaEngine.getMediaEngine();
-        mediaEngine.removeListener(auto(first[16]).MediaEngineEvent.VoiceActivity, outer1_12);
+        mediaEngine.removeListener(auto(first[16]).MediaEngineEvent.VoiceActivity, closure_1_12);
       };
     }
   }, items3);
   callback = stateFromStores.useRef(false);
-  createCacheKey = stateFromStores.useRef(false);
+  callback2 = stateFromStores.useRef(false);
   closure_15 = stateFromStores.useRef(null);
   const items4 = [auto, first];
   const effect3 = stateFromStores.useEffect(() => {
@@ -207,9 +204,9 @@ export default function VoiceSensitivity(auto) {
             const _setTimeout = setTimeout;
             tmp5.current = setTimeout(() => {
               closure_15.current = null;
-              const AccessibilityAnnouncer = outer1_0(outer1_2[17]).AccessibilityAnnouncer;
-              const intl = outer1_0(outer1_2[18]).intl;
-              AccessibilityAnnouncer.announce(intl.string(outer1_0(outer1_2[18]).t.X2hJL7));
+              const AccessibilityAnnouncer = closure_1_0(closure_1_2[17]).AccessibilityAnnouncer;
+              const intl = closure_1_0(closure_1_2[18]).intl;
+              AccessibilityAnnouncer.announce(intl.string(closure_1_0(closure_1_2[18]).t.X2hJL7));
             }, 1000);
           }
           return () => {
@@ -258,7 +255,7 @@ export default function VoiceSensitivity(auto) {
       }
     };
     obj[9] = tmp.sensitivity;
-    let obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.sensitivityBar;
     let obj2 = { style: null };
     const items5 = [tmp.sensitivityCommon, first ? tmp.sensitivitySpeaking : tmp.sensitivityDefault];

@@ -1,8 +1,10 @@
 // discord_app/modules/launchpad/native/hideLaunchPad.tsx
-import { ComponentActions } from "ME";
-import { ComponentDispatcher } from "../../../utils/ComponentDispatchUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import ComponentDispatcher from "ComponentDispatcher" /* 1231 */;
 
-const result = require("set").fileFinishedImporting("modules/launchpad/native/hideLaunchPad.tsx");
+const ComponentActions = ME.ComponentActions;
+const result = set.fileFinishedImporting("modules/launchpad/native/hideLaunchPad.tsx");
 
 export default function hideLaunchPad() {
   const ComponentDispatch = ComponentDispatcher.ComponentDispatch;

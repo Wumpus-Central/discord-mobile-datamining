@@ -1,8 +1,10 @@
 // discord_app/modules/activities/utils/getCoverImageFromActivity.tsx
-import { ACTIVITY_INVITE_COVER_IMAGE_SIZE as closure_2 } from "items3";
-import { updateAssets } from "../../../utils/ApplicationAssetUtils.tsx";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
+import updateAssets from "updateAssets" /* 7247 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");
+let closure_2 = items3.ACTIVITY_INVITE_COVER_IMAGE_SIZE;
+const result = set.fileFinishedImporting("modules/activities/utils/getCoverImageFromActivity.tsx");
 
 export default function getCoverImageFromActivity(assets, application_id) {
   let assetImage = null;

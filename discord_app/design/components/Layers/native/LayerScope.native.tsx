@@ -1,21 +1,17 @@
 // discord_app/design/components/Layers/native/LayerScope.native.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NOOP } from "ME";
-import jsxProd from "jsxProd";
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
-import { add } from "LayerContext.native.tsx";
+import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import add from "add" /* 7128 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Layer(zIndex) {
   zIndex = zIndex.zIndex;
   let context;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   context = React.useContext(zIndex(7128).LayerContext);
   dependencyMap = callback(React.useState({}), 2)[1];
@@ -32,12 +28,12 @@ function Layer(zIndex) {
   return callback2(closure_5, {
     style: React.useMemo(() => {
       const obj = {};
-      const merged = Object.assign(outer1_6.absoluteFillObject);
+      const merged = Object.assign(closure_1_6.absoluteFillObject);
       obj.zIndex = zIndex;
       return obj;
     }, items2),
     ref(current) {
-      _slicedToArray.current = current;
+      closure_3.current = current;
       context.setSurfaceRef(current);
     },
     onLayout: NOOP,
@@ -46,15 +42,13 @@ function Layer(zIndex) {
   });
 }
 ({ View: c5, StyleSheet: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
+const result = require("set").fileFinishedImporting("design/components/Layers/native/LayerScope.native.tsx");
 
 export const LayerScope = function LayerScope(arg0) {
-  let children;
-  let zIndex;
   ({ children, zIndex } = arg0);
   const obj = {
-    value: useInitialValue(() => {
+    value: useInitialValueDefault(() => {
       const layerContextManager = new callback(table[6]).LayerContextManager();
       return layerContextManager;
     }),

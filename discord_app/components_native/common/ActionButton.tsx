@@ -1,12 +1,13 @@
 // discord_app/components_native/common/ActionButton.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { styleProperties } from "../../design/components/Button/native/ButtonHooks.native.tsx";
-import { IconButton } from "../../design/components/Button/native/IconButton.native.tsx";
+import noopAll from "noop" /* 19 */;
+import styleProperties from "styleProperties" /* 4750 */;
+import IconButton from "IconButton" /* 8035 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("components_native/common/ActionButton.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("components_native/common/ActionButton.tsx");
 
 export default function ActionButton(style) {
   let str = "tertiary";
@@ -15,10 +16,7 @@ export default function ActionButton(style) {
   }
   let obj = styleProperties;
   obj = { style: style.styles, children: null };
-  obj = { icon: null, onPress: null, accessibilityLabel: null, variant: null, size: "sm" };
-  obj[0] = jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" });
+  obj = { icon: jsx(style.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" }), onPress: jsx(IconButton.IconButton, { style: style.styles, children: null }), accessibilityLabel: null, variant: str, size: "sm" };
   ({ onPress: obj3[1], accessibilityLabel: obj3[2] } = style);
-  obj[3] = str;
-  obj[1] = jsx(IconButton.IconButton, { icon: null, onPress: null, accessibilityLabel: null, variant: null, size: "sm" });
-  return <View icon={null} onPress={null} accessibilityLabel={null} variant={null} size="sm" />;
+  return <View icon={jsx(arg0.IconComponent, { color: obj.useButtonTextColorStyles(str).color, size: "sm" })} onPress={jsx(IconButton.IconButton, { style: arg0.styles, children: null })} accessibilityLabel={null} variant={str} size="sm" />;
 };

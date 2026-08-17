@@ -1,16 +1,15 @@
 // discord_app/modules/parent_tools/native/FamilyCenterModalAccept.tsx
-import Button from "Button";
-import { View } from "ModalFooter";
-import jsxProd from "Modal";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 function FamilyCenterModalAcceptScreen(otherUser) {
   otherUser = otherUser.otherUser;
   let acceptLinkRequest;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const callback = React.useCallback(() => {
     let arr = acceptLinkRequest(5260);
     arr = arr.pop();
@@ -29,10 +28,8 @@ function FamilyCenterModalAcceptScreen(otherUser) {
   }, items);
   obj = { children: null };
   obj = { children: null };
-  const obj1 = { style: tmp.header, children: null };
-  const obj2 = { otherUser, iconSrc: null, iconStyles: null };
-  obj2[1] = acceptLinkRequest(4319);
-  obj2[2] = tmp.icon;
+  obj1 = { style: tmp.header, children: null };
+  const obj2 = { otherUser, iconSrc: acceptLinkRequest(4319), iconStyles: tmp.icon };
   const items1 = [callback(acceptLinkRequest(14279), obj2), , ];
   const obj3 = { style: tmp.headerText, variant: "text-lg/bold", children: null };
   let intl = otherUser(1236).intl;
@@ -67,30 +64,32 @@ function FamilyCenterModalAcceptScreen(otherUser) {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { header: null, headerText: null, icon: null, disclaimer: null };
-createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { display: "flex", alignItems: "center", justifyContent: "center", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_4 };
-let obj1 = { marginTop: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_4 };
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
+let obj1 = { marginTop: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_4 };
 let items = [{ rotate: "45deg" }];
-createCacheKey[2] = { transform: items, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let obj2 = { transform: items, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[3] = { marginTop: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: require("Themes").space.PX_12 };
-const result = require("jsxProd").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalAccept.tsx");
+createCacheKey[2] = { transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let obj2 = { transform: items, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[3] = { marginTop: ThemesDefault.space.PX_12 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { marginTop: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterModalAccept.tsx");
 
 export default function FamilyCenterModalAccept(otherUser) {
   otherUser = otherUser.otherUser;
   const items = [otherUser];
   const memo = React.useMemo(() => {
     let obj = { ACCEPT: null };
-    obj = { headerShown: true, headerLeft: null, headerTitle: null, render: null };
-    obj[1] = otherUser(outer1_2[20]).getHeaderCloseButton(outer1_1(outer1_2[5]).pop);
-    obj[2] = function headerTitle() {
-      return null;
-    };
-    obj[3] = function render() {
-      return outer1_5(outer1_8, { otherUser: closure_0 });
+    obj = {
+      headerShown: true,
+      headerLeft: otherUser(closure_1_2[20]).getHeaderCloseButton(closure_1_1(closure_1_2[5]).pop),
+      headerTitle() {
+        return null;
+      },
+      render() {
+        return closure_1_5(closure_1_8, { otherUser: closure_0 });
+      }
     };
     obj[0] = obj;
     return obj;

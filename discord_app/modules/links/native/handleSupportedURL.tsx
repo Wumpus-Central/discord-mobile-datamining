@@ -1,47 +1,28 @@
 // discord_app/modules/links/native/handleSupportedURL.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import zustandStore from "zustandStore";
-import scheduledEventSort from "scheduledEventSort";
-import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore";
-import closure_10 from "zustandStore";
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import { StaticChannelRoute } from "set";
-import { StreamTypes } from "StreamIssueReportReasons";
-import { NativePermissionTypes } from "NativePermissionStatus";
-import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY";
-import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items";
-import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow";
-import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY";
-import { AccountSettingsTabs } from "AccountSettingsTabs";
-import { MobileUserSettings } from "MobileUserSettings";
+import closure_5 from "_objectWithoutProperties" /* 109 */;
+import closure_6 from "asyncGeneratorStep" /* 5 */;
+import closure_8 from "scheduledEventSort" /* 4370 */;
+import { handleMobileWebCheckoutStatus as closure_9 } from "usePremiumPlanPurchasedStore" /* 7392 */;
+import closure_10 from "zustandStore" /* 12849 */;
+import closure_11 from "fetchFingerprint" /* 1218 */;
+import ME from "ME" /* 676 */;
+import { StaticChannelRoute } from "set" /* 1398 */;
+import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
+import { NativePermissionTypes } from "NativePermissionStatus" /* 4839 */;
+import { OAUTH2_AUTHORIZE_MODAL_KEY as closure_20 } from "OAUTH2_AUTHORIZE_MODAL_KEY" /* 8774 */;
+import { FAMILY_CENTER_LINK_REQUEST_REGEX as closure_21 } from "items" /* 5297 */;
+import { MobileWebRedirectCheckoutDeepLinkActions as closure_22 } from "CustomCheckoutFlow" /* 4357 */;
+import { SHARE_SCREEN_MODAL_KEY } from "SHARE_SCREEN_MODAL_KEY" /* 13311 */;
+import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let map1;
 const require = arg1;
 let closure_4 = ["code", "state"];
 require("processCallbacks").addPostConnectionCallback;
 ({ AnalyticEvents: closure_12, LinkingTypes: map1, Routes: closure_14, UserSettingsSections: closure_15, PlatformTypes: closure_16 } = ME);
-let result = require("processCallbacks").fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
+let result = require("set").fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
 export default function handleSupportedURL(payload) {
-  let channelId;
-  let channelId2;
-  let diceCount;
-  let diceSides;
-  let fingerprint;
-  let guildId;
-  let guildId2;
-  let messageId;
-  let navigationReplace;
-  let nonce;
-  let safe;
-  let skipMessageFetch;
-  let summaryId;
-  let waitForConnection;
   payload = payload.payload;
   ({ safe, navigationReplace, waitForConnection, skipMessageFetch } = payload);
   let rootNavigationRef1;
@@ -50,7 +31,7 @@ export default function handleSupportedURL(payload) {
   let username;
   let deeplinkAttemptId;
   let guildTemplateCode;
-  let addPostConnectionCallback;
+  addPostConnectionCallback = undefined;
   let remoteAuthFingerprint;
   let deepLinkAction;
   let gameId;
@@ -122,7 +103,7 @@ export default function handleSupportedURL(payload) {
     }
     flag = true;
     if (null != payload.userId) {
-      let obj1 = { userId: null };
+      obj1 = { userId: null };
       obj1[0] = payload.userId;
       result = result(result[21]).showUserProfileActionSheetPostConnection(obj1);
       flag = true;
@@ -261,11 +242,11 @@ export default function handleSupportedURL(payload) {
           result = addPostConnectionCallback(() => {
             let obj = rootNavigationRef1(inviteCode[18]);
             obj.popAll();
-            obj = { screen: outer1_15.FAMILY_CENTER };
+            obj = { screen: closure_1_15.FAMILY_CENTER };
             payload(inviteCode[22]).openUserSettings(obj);
             let isMatch = null != c7;
             if (isMatch) {
-              isMatch = outer1_21.test(tmp5);
+              isMatch = closure_1_21.test(tmp5);
             }
             if (isMatch) {
               const result = payload(inviteCode[31]).handleFamilyCenterQRCodeScan(tmp5, "NativeCameraScan");
@@ -280,19 +261,19 @@ export default function handleSupportedURL(payload) {
             obj.popAll();
             if (obj2.isMidjourneyOnboardingFlow()) {
               tmp(tmp2[33]).openCreateGuildModal((guildId) => {
-                if (type.type === outer1_13.OAUTH2_AUTHORIZE) {
-                  let obj = outer1_1(outer1_3[18]);
+                if (type.type === closure_1_13.OAUTH2_AUTHORIZE) {
+                  let obj = closure_1_1(closure_1_3[18]);
                   obj.popAll();
                   obj = {};
-                  const obj2 = outer1_1(outer1_3[18]);
+                  const obj2 = closure_1_1(closure_1_3[18]);
                   const merged = Object.assign(tmp.props);
                   obj.guildId = guildId;
-                  obj.callback = outer1_1(outer1_3[36]);
+                  obj.callback = closure_1_1(closure_1_3[36]);
                   obj.dismissOAuthModal = function dismissOAuthModal() {
                     callback(table[18]).popWithKey(closure_20);
                   };
-                  obj2.pushLazy(outer1_0(outer1_3[35])(outer1_3[34], outer1_3.paths), obj, outer1_20);
-                  const tmp7 = outer1_0(outer1_3[35])(outer1_3[34], outer1_3.paths);
+                  obj2.pushLazy(closure_1_0(closure_1_3[35])(closure_1_3[34], closure_1_3.paths), obj, closure_1_20);
+                  const tmp7 = closure_1_0(closure_1_3[35])(closure_1_3[34], closure_1_3.paths);
                 }
               });
               const tmpResult = tmp(tmp2[33]);
@@ -367,8 +348,6 @@ export default function handleSupportedURL(payload) {
           flag = true;
         } else if (result.GUILD_EVENT_DETAILS === type) {
           addPostConnectionCallback(guildTemplateCode(function*() {
-            let c1;
-            let closure_0;
             if (c4 === 2) {
               c4 = 3;
               HermesBuiltin.throwTypeError();
@@ -400,12 +379,12 @@ export default function handleSupportedURL(payload) {
                     closure_0 = undefined;
                     c1 = undefined;
                     id = undefined;
-                    outer1_1(paths[18]).popAll();
-                    ({ guildId: closure_0, guildEventId: c1 } = outer1_0);
+                    closure_1_1(paths[18]).popAll();
+                    ({ guildId: closure_0, guildEventId: c1 } = closure_1_0);
                     paths = 1;
                     c4 = 1;
-                    let obj1 = { value: null, done: false };
-                    obj1[0] = outer1_0(paths[35])(paths[45], paths.paths);
+                    obj1 = { value: null, done: false };
+                    obj1[0] = closure_1_0(paths[35])(paths[45], paths.paths);
                     return obj1;
                   }
                 } else {
@@ -420,17 +399,17 @@ export default function handleSupportedURL(payload) {
                       return obj2;
                     } else {
                       if (null != _default.getGuild(closure_0)) {
-                        obj1 = outer1_0(paths[46]);
+                        obj1 = closure_1_0(paths[46]);
                         obj1.transitionToGuild(closure_0);
                       }
-                      const guildScheduledEvent = outer1_8.getGuildScheduledEvent(c1);
+                      const guildScheduledEvent = closure_1_8.getGuildScheduledEvent(c1);
                       closure_0 = guildScheduledEvent;
                       if (guildScheduledEvent == null) {
-                        let obj4 = outer1_1(paths[47]);
+                        let obj4 = closure_1_1(paths[47]);
                         paths = 2;
                         c4 = 1;
                         const obj3 = { value: null, done: false };
-                        obj3[0] = obj4.fetchGuildEvent(outer1_0, outer1_1);
+                        obj3[0] = obj4.fetchGuildEvent(closure_1_0, closure_1_1);
                         return obj3;
                       }
                       _default = arg1.default;
@@ -448,7 +427,7 @@ export default function handleSupportedURL(payload) {
                   }
                   id = closure_0;
                   if (null != id) {
-                    obj2 = outer1_0(paths[48]);
+                    obj2 = closure_1_0(paths[48]);
                     obj4 = { eventId: null, event: null };
                     obj4[0] = id.id;
                     obj4[1] = id;
@@ -502,20 +481,20 @@ export default function handleSupportedURL(payload) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    let closure_0 = tmp4;
-                    let tmp19 = null != outer1_0.guildId;
+                    closure_0 = tmp4;
+                    let tmp19 = null != closure_1_0.guildId;
                     if (tmp19) {
-                      tmp19 = null != outer1_0.channelId;
+                      tmp19 = null != closure_1_0.channelId;
                     }
                     if (tmp19) {
-                      tmp19 = null != outer1_0.userId;
+                      tmp19 = null != closure_1_0.userId;
                     }
                     if (tmp19) {
-                      v0(outer1_3[18]).popAll();
+                      v0(closure_1_3[18]).popAll();
                       v0 = 1;
                       c2 = 1;
-                      const obj1 = { value: null, done: false };
-                      obj1[0] = outer1_0(outer1_3[35])(outer1_3[45], outer1_3.paths);
+                      obj1 = { value: null, done: false };
+                      obj1[0] = closure_1_0(closure_1_3[35])(closure_1_3[45], closure_1_3.paths);
                       return obj1;
                     }
                   }
@@ -529,15 +508,15 @@ export default function handleSupportedURL(payload) {
                   return obj2;
                 } else {
                   if (null != _default.getGuild(closure_0.guildId)) {
-                    obj = outer1_0(outer1_3[46]);
+                    obj = closure_1_0(closure_1_3[46]);
                     obj.transitionToGuild(closure_0.guildId);
                   }
                   let obj3 = { streamType: null, ownerId: null, guildId: null, channelId: null };
-                  obj3[0] = outer1_18.GUILD;
+                  obj3[0] = closure_1_18.GUILD;
                   obj3[1] = closure_0.userId;
                   obj3[2] = closure_0.guildId;
                   obj3[3] = closure_0.channelId;
-                  v0(outer1_3[50])(obj3);
+                  v0(closure_1_3[50])(obj3);
                   _default = arg1.default;
                 }
                 let tmp23 = "transfer_cancelled" === closure_0.action;
@@ -545,7 +524,7 @@ export default function handleSupportedURL(payload) {
                   tmp23 = "xbox" === closure_0.via;
                 }
                 if (tmp23) {
-                  obj3 = outer1_0(outer1_3[51]);
+                  obj3 = closure_1_0(closure_1_3[51]);
                   obj3.disconnectRemote();
                 }
                 c2 = 3;
@@ -585,7 +564,7 @@ export default function handleSupportedURL(payload) {
             let hasItem = null != payload.callbackCode && null != tmp.callbackState && null != tmp.provider;
             if (hasItem) {
               const items = [, , , ];
-              ({ XBOX: arr[0], PLAYSTATION: arr[1], PLAYSTATION_STAGING: arr[2], CRUNCHYROLL: arr[3] } = outer1_16);
+              ({ XBOX: arr[0], PLAYSTATION: arr[1], PLAYSTATION_STAGING: arr[2], CRUNCHYROLL: arr[3] } = closure_1_16);
               hasItem = items.includes(tmp.provider);
             }
             if (hasItem) {
@@ -624,22 +603,22 @@ export default function handleSupportedURL(payload) {
                     obj[0] = arg1;
                     return obj;
                   } else {
-                    let zustandStore = tmp5;
-                    let _objectWithoutProperties = tmp2;
+                    closure_6 = tmp5;
+                    closure_5 = tmp2;
                     let body;
-                    let closure_1;
-                    const searchParams = outer1_0.searchParams;
+                    closure_1 = undefined;
+                    const searchParams = closure_1_0.searchParams;
                     const state = searchParams.state;
-                    const tmp51 = outer1_5(searchParams, outer1_4);
+                    const tmp51 = closure_1_5(searchParams, closure_1_4);
                     if (null != state) {
-                      const obj1 = { code: null, state: null };
+                      obj1 = { code: null, state: null };
                       obj1[0] = searchParams.code;
                       obj1[1] = state;
                       closure_1 = tmp51;
                       const keys = Object.keys();
                       if (keys === undefined) {
-                        let closure_3 = tmp12;
-                        let closure_2 = tmp11;
+                        closure_3 = tmp12;
+                        closure_2 = tmp11;
                         closure_1 = tmp51;
                         body = keys;
                       } else {
@@ -681,17 +660,17 @@ export default function handleSupportedURL(payload) {
                       if (null != tmp19) {
                         obj1.openid_params = tmp19;
                       }
-                      let obj4 = outer1_1(outer1_3[18]);
+                      let obj4 = closure_1_1(closure_1_3[18]);
                       obj4.popAll();
                       const obj3 = { screen: null };
-                      obj3[0] = outer1_15.CONNECTIONS;
-                      outer1_0(outer1_3[22]).openUserSettings(obj3);
-                      const obj6 = outer1_0(outer1_3[22]);
+                      obj3[0] = closure_1_15.CONNECTIONS;
+                      closure_1_0(closure_1_3[22]).openUserSettings(obj3);
+                      const obj6 = closure_1_0(closure_1_3[22]);
                       tmp10 = tmp51;
                       c7 = 1;
                       c8 = 1;
                       obj4 = { value: null, done: false };
-                      obj4[0] = outer1_1(outer1_3[56]).callback(outer1_0.provider, obj1);
+                      obj4[0] = closure_1_1(closure_1_3[56]).callback(closure_1_0.provider, obj1);
                       return obj4;
                     } else {
                       c8 = 3;
@@ -707,12 +686,12 @@ export default function handleSupportedURL(payload) {
                   if (body != null) {
                     redirect = body.redirect;
                   }
-                  closure_1 = outer1_1(outer1_3[57]).toURLSafe(redirect);
+                  closure_1 = closure_1_1(closure_1_3[57]).toURLSafe(redirect);
                   if (null != closure_1) {
-                    outer1_1(outer1_3[43]).openURL(closure_1.toString());
-                    const obj13 = outer1_1(outer1_3[43]);
+                    closure_1_1(closure_1_3[43]).openURL(closure_1.toString());
+                    const obj13 = closure_1_1(closure_1_3[43]);
                   }
-                  const obj12 = outer1_1(outer1_3[57]);
+                  const obj12 = closure_1_1(closure_1_3[57]);
                 }
                 c8 = 3;
                 obj = { value: null, done: true };
@@ -814,18 +793,18 @@ export default function handleSupportedURL(payload) {
                           let guildId = tmp3;
                           guildId = undefined;
                           guild = undefined;
-                          if (outer1_9 === outer1_22.PREMIUM_CHECKOUT_SUCCESS) {
-                            outer1_9("succeeded");
+                          if (closure_1_9 === closure_1_22.PREMIUM_CHECKOUT_SUCCESS) {
+                            closure_1_9("succeeded");
                           } else if (tmp32 === tmp33.PREMIUM_SUBSCRIPTION_UPDATE) {
-                            const subscriptions = outer1_0(paths[65]).fetchSubscriptions();
-                            const obj3 = outer1_0(paths[65]);
+                            const subscriptions = closure_1_0(paths[65]).fetchSubscriptions();
+                            const obj3 = closure_1_0(paths[65]);
                           } else if (tmp32 === tmp33.GUILD_BOOST_CHECKOUT_SUCCESS) {
-                            outer1_1(paths[18]).popAll();
-                            guildId = outer1_0.guildId;
+                            closure_1_1(paths[18]).popAll();
+                            guildId = closure_1_0.guildId;
                             c2 = 1;
                             paths = 1;
-                            const obj1 = { value: null, done: false };
-                            obj1[0] = outer1_0(paths[35])(paths[45], paths.paths);
+                            obj1 = { value: null, done: false };
+                            obj1[0] = closure_1_0(paths[35])(paths[45], paths.paths);
                             return obj1;
                           }
                           paths = 3;
@@ -836,9 +815,9 @@ export default function handleSupportedURL(payload) {
                       } else if (arg0 !== 2) {
                         guild = arg1.default.getGuild(guildId);
                         if (null != guild) {
-                          outer1_0(paths[46]).transitionToGuild(guildId);
-                          outer1_1(paths[66])(guild);
-                          const obj6 = outer1_0(paths[46]);
+                          closure_1_0(paths[46]).transitionToGuild(guildId);
+                          closure_1_1(paths[66])(guild);
+                          const obj6 = closure_1_0(paths[46]);
                         }
                         const _default = arg1.default;
                       }
@@ -885,7 +864,7 @@ export default function handleSupportedURL(payload) {
                   if (null != payload.questId) {
                     let obj = { questId: null, event: null, sourceQuestContent: null, properties: null };
                     obj[0] = arr.questId;
-                    obj[1] = outer1_12.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT;
+                    obj[1] = closure_1_12.QUEST_SHARE_LINK_DEEP_LINKED_INTO_MOBILE_CLIENT;
                     obj[2] = payload(inviteCode[71]).QuestContent.QUEST_EMBED_MOBILE;
                     obj = { referrer_id: null };
                     obj[0] = arr.referrerId;
@@ -902,7 +881,7 @@ export default function handleSupportedURL(payload) {
                     filter = arr.filter;
                   }
                   obj = payload(inviteCode[72]);
-                  const obj1 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
+                  obj1 = { scrollToQuestId: payload.questId, sort: null, filter: null, fromContent: null };
                   let tmp3 = null;
                   if (null != sort) {
                     tmp3 = null;
@@ -926,7 +905,7 @@ export default function handleSupportedURL(payload) {
               } else if (result.QUEST_HOME_PREVIEW === type) {
                 addPostConnectionCallback(() => {
                   let obj = payload(inviteCode[22]);
-                  obj = { screen: outer1_15.QUESTS, params: obj };
+                  obj = { screen: closure_1_15.QUESTS, params: obj };
                   obj = { previewAdCreativeIds: payload.adCreativeIds };
                   obj.openUserSettings(obj);
                 });
@@ -945,7 +924,7 @@ export default function handleSupportedURL(payload) {
                   const section = payload.section;
                   gameId.setState({ scrollToSectionId: section });
                   let obj = payload(inviteCode[22]);
-                  obj = { screen: outer1_15.PREMIUM };
+                  obj = { screen: closure_1_15.PREMIUM };
                   obj.openUserSettings(obj);
                 });
                 flag = true;
@@ -979,8 +958,8 @@ export default function handleSupportedURL(payload) {
                   rootNavigationRef1(inviteCode[18]).popAll();
                   rootNavigationRef1(inviteCode[76])();
                   const timerId = setTimeout(() => {
-                    let obj = outer1_0(outer1_3[22]);
-                    obj = { screen: outer1_15.QUEST_PREVIEW_TOOL_2, params: obj };
+                    let obj = closure_1_0(closure_1_3[22]);
+                    obj = { screen: closure_1_15.QUEST_PREVIEW_TOOL_2, params: obj };
                     obj = { questId: questId.questId };
                     obj.openUserSettings(obj);
                   }, 1);

@@ -1,13 +1,12 @@
 // discord_app/lib/uploader/UploadTargets.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import ME from "ME";
-import { getCreateAttachmentURL } from "../../modules/guild_products/GuildProductAttachmentUploadTarget.tsx";
-import { getCreateAttachmentURL } from "../../modules/icymi/ICYMIAttachmentUploadTarget.tsx";
-import { items } from "../../utils/UploadUtils.tsx";
+import items from "items" /* 4830 */;
+import getUploadFileSizeSumAll from "getUploadFileSizeSum" /* 4834 */;
+import getCreateAttachmentURLDefault from "getCreateAttachmentURL" /* 4872 */;
+import getCreateAttachmentURLDefault2 from "getCreateAttachmentURL" /* 4874 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ Endpoints: c5, MAX_UPLOAD_COUNT: closure_6 } = ME);
 class MessageAttachmentUploadTarget {
 }
@@ -24,7 +23,7 @@ prototype["getMaxFileSize"] = function getMaxFileSize(arg0) {
   if (basicChannel != null) {
     guild_id = basicChannel.guild_id;
   }
-  return importAll(4834).maxFileSize(guild_id);
+  return getUploadFileSizeSumAll.maxFileSize(guild_id);
 };
 prototype["getMaxAttachmentsCount"] = function getMaxAttachmentsCount() {
   return closure_6;
@@ -39,15 +38,15 @@ Object.defineProperty(prototype, "shouldReactNativeCompressUploads", {
   set: undefined
 });
 const obj = { MESSAGE_ATTACHMENT: 0, [0]: "MESSAGE_ATTACHMENT", GUILD_PRODUCT_ATTACHMENT: 1, [1]: "GUILD_PRODUCT_ATTACHMENT", GRAVITY_ATTACHMENT: 2, [2]: "GRAVITY_ATTACHMENT" };
-const result = require("getUploadFileSizeSum").fileFinishedImporting("lib/uploader/UploadTargets.tsx");
+const result = require("set").fileFinishedImporting("lib/uploader/UploadTargets.tsx");
 
 export const UploadTargets = obj;
 export const getUploadTarget = function getUploadTarget(target) {
   if (obj.GUILD_PRODUCT_ATTACHMENT === target) {
-    const tmp14 = new getCreateAttachmentURL();
+    const tmp14 = new getCreateAttachmentURLDefault();
     return tmp14;
   } else if (tmp.GRAVITY_ATTACHMENT === target) {
-    const tmp8 = new getCreateAttachmentURL();
+    const tmp8 = new getCreateAttachmentURLDefault2();
     return tmp8;
   } else {
     const MESSAGE_ATTACHMENT = tmp.MESSAGE_ATTACHMENT;

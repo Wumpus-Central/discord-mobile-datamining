@@ -1,27 +1,28 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx
-import "noop";
-import { View } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import Text from "Text" /* 4734 */;
+import SectionTitle from "SectionTitle" /* 14583 */;
+import SubscriptionGatedChannelIconDefault from "SubscriptionGatedChannelIcon" /* 15380 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { BottomSheetModal } from "../../../../../../_runtime/06952_BottomSheetModal.js";
 import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
 import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 import { GappedList } from "../../components/LayoutUtils.tsx";
-import { SectionTitle } from "../../components/listing_elements/GuildRoleSubscriptionCard.tsx";
-import { SubscriptionGatedChannelIcon } from "../../premium_channel/GuildRoleSubscriptionGatedChannelIcon.tsx";
 import { GuildRoleSubscriptionTierTemplateBasicInfo } from "GuildRoleSubscriptionTierTemplateBasicInfo.tsx";
 import { GuildRoleSubscriptionRolePreview } from "GuildRoleSubscriptionTierTemplateRolePreview.tsx";
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function SectionSeparator() {
   let obj = { children: null };
   const items = [callback(Button.Spacer, { size: 24 }), , ];
-  obj = { style: createCacheKey().separator };
+  obj = { style: callback3().separator };
   items[1] = callback(View, obj);
   items[2] = callback(Button.Spacer, { size: 24 });
   obj[0] = items;
@@ -29,15 +30,15 @@ function SectionSeparator() {
 }
 function BenefitRow(description) {
   description = description.description;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.benefitRowContainer, children: null };
-  obj = { children: callback(SubscriptionGatedChannelIcon, {}) };
+  obj = { children: callback(SubscriptionGatedChannelIconDefault, {}) };
   const items = [callback(View, obj), ];
   obj = { style: tmp.benefitTextContainer, children: null };
   const items1 = [description.title, ];
   let tmp4Result = null;
   if (null != description) {
-    const obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
+    obj1 = { style: null, variant: "text-sm/normal", color: "interactive-text-default", children: null };
     obj1[0] = tmp.benefitDescription;
     obj1[3] = description;
     tmp4Result = callback(Text.Text, obj1);
@@ -49,45 +50,37 @@ function BenefitRow(description) {
   return closure_6(View, obj);
 }
 function BenefitSection(arg0) {
-  let children;
-  let sectionTitle;
   const obj = { children: null };
   ({ sectionTitle, children } = arg0);
   const items = [callback(SectionTitle.SectionTitle, { children: sectionTitle }), callback(Button.Spacer, { size: 14 }), children];
   obj[0] = items;
   return callback2(closure_5, obj);
 }
+noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, subscriptionPlanTextStyle: null, descriptionPlanTextStyle: null, content: null, separator: null, benefitRowContainer: null, benefitTextContainer: null, benefitDescription: null, channelTitle: null, channelIcon: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, flex: 1, padding: 16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[2] = { color: require("Themes").colors.TEXT_DEFAULT, paddingTop: 16, paddingBottom: 24 };
+createCacheKey[1] = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj1 = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[2] = { color: ThemesDefault.colors.TEXT_DEFAULT, paddingTop: 16, paddingBottom: 24 };
 createCacheKey[3] = { paddingTop: 24 };
-let obj2 = { color: require("Themes").colors.TEXT_DEFAULT, paddingTop: 16, paddingBottom: 24 };
-createCacheKey[4] = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER };
+let obj2 = { color: ThemesDefault.colors.TEXT_DEFAULT, paddingTop: 16, paddingBottom: 24 };
+createCacheKey[4] = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
 createCacheKey[5] = { flexDirection: "row", justifyContent: "flex-start" };
 createCacheKey[6] = { flex: 1, justifyContent: "center", marginLeft: 16 };
 createCacheKey[7] = { marginTop: 2 };
 createCacheKey[8] = { flexDirection: "row", alignItems: "center" };
 createCacheKey[9] = { marginEnd: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj3 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: require("Themes").colors.INTERACTIVE_BACKGROUND_HOVER };
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { borderBottomWidth: 1, marginLeft: -16, marginRight: -16, borderColor: ThemesDefault.colors.INTERACTIVE_BACKGROUND_HOVER };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/tier_templates/GuildRoleSubscriptionTierTemplateFullCard.tsx");
 
 export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
-  let additional_perks;
-  let channels;
-  let guildId;
-  let handleSelectTemplateInPreview;
-  let image;
-  let name;
-  let role_color;
   template = template.template;
   let _require;
   ({ guildId, handleSelectTemplateInPreview } = template);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   _require = tmp;
   const first = template.listings[0];
   ({ channels, additional_perks } = first);
@@ -116,28 +109,43 @@ export default function GuildRoleSubscriptionTierTemplateFullCard(template) {
   const obj7 = { sectionTitle: null, children: null };
   const intl4 = _getSystemLocale.intl;
   obj7[0] = intl4.string(_getSystemLocale.t.Ofvpfs);
-  const obj8 = { gap: 14, children: null };
-  obj8[1] = channels.map((children) => {
-    let obj = _undefined(outer1_2[16]);
-    obj = { style: _undefined.channelTitle, children: null };
-    obj = { style: _undefined.channelIcon, size: "xs" };
-    const items = [outer1_4(obj.getPrivateChannelIconComponent(children.type), obj), outer1_4(_undefined(outer1_2[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name })];
-    obj[1] = items;
-    return outer1_4(outer1_9, { title: outer1_6(outer1_3, obj), description: children.description }, children.id);
+  obj1 = { style: tmp.separator };
+  obj3 = { paddingBottom: 32 + useSafeAreaInsetsDefault().bottom };
+  obj7[1] = callback(_GappedList.GappedList, {
+    gap: 14,
+    children: channels.map((children) => {
+      let obj = lib(closure_1_2[16]);
+      obj = { style: lib.channelTitle, children: null };
+      obj = { style: lib.channelIcon, size: "xs" };
+      const items = [closure_1_4(obj.getPrivateChannelIconComponent(children.type), obj), closure_1_4(lib(closure_1_2[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name })];
+      obj[1] = items;
+      return closure_1_4(closure_1_9, { title: closure_1_6(closure_1_3, obj), description: children.description }, children.id);
+    })
   });
-  obj7[1] = callback(_GappedList.GappedList, obj8);
   items1[8] = callback(BenefitSection, obj7);
   items1[9] = callback(SectionSeparator, {});
   const obj9 = { sectionTitle: null, children: null };
   const intl5 = _getSystemLocale.intl;
   obj9[0] = intl5.string(_getSystemLocale.t.w7KA8R);
-  const obj10 = { gap: 14, children: null };
-  obj10[1] = additional_perks.map((children) => {
-    let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
-    obj = { title: callback(_undefined(table[7]).Text, obj) };
-    return callback(closure_9, obj, arg1);
+  const obj8 = {
+    gap: 14,
+    children: channels.map((children) => {
+      let obj = lib(closure_1_2[16]);
+      obj = { style: lib.channelTitle, children: null };
+      obj = { style: lib.channelIcon, size: "xs" };
+      const items = [closure_1_4(obj.getPrivateChannelIconComponent(children.type), obj), closure_1_4(lib(closure_1_2[7]).Text, { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name })];
+      obj[1] = items;
+      return closure_1_4(closure_1_9, { title: closure_1_6(closure_1_3, obj), description: children.description }, children.id);
+    })
+  };
+  obj9[1] = callback(_GappedList.GappedList, {
+    gap: 14,
+    children: additional_perks.map((children) => {
+      let obj = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: children.name };
+      obj = { title: callback(lib(table[7]).Text, obj) };
+      return callback(closure_9, obj, arg1);
+    })
   });
-  obj9[1] = callback(_GappedList.GappedList, obj10);
   items1[10] = callback(BenefitSection, obj9);
   obj2[3] = items1;
   items[2] = callback2(_BottomSheetModal.BottomSheetScrollView, obj2);

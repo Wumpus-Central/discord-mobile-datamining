@@ -1,28 +1,20 @@
 // discord_app/modules/activity_status/native/ActivityStatus.tsx
-import set from "set";
-import { View } from "ActivityEmoji";
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { DOT_UNICODE } from "TOOLTIP_DELAY_MS";
-import { ActivityTypes } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "sortActivity" /* 4559 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { DOT_UNICODE } from "TOOLTIP_DELAY_MS" /* 9894 */;
+import { ActivityTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", gap: 4 }, icon: { marginTop: 1 }, emoji: { marginRight: 0 } });
-const result = require("sortActivity").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ActivityStatus.tsx");
 
 export default function ActivityStatus(guildId) {
-  let animate;
-  let emojiSize;
-  let iconStyle;
-  let maxFontSizeMultiplier;
-  let textStyle;
   const userId = guildId.userId;
   ({ iconStyle, textStyle, emojiSize } = guildId);
   if (emojiSize === undefined) {
@@ -39,11 +31,11 @@ export default function ActivityStatus(guildId) {
   let stateFromStores1;
   const tmp = callback2();
   let obj = userId(589);
-  const items = [mergeGuildAvatar];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getUser(userId));
-  let obj1 = userId(589);
-  const items1 = [sortActivity];
-  stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_5.getActivities(userId));
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getUser(userId));
+  obj1 = userId(589);
+  const items1 = [closure_5];
+  stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getActivities(userId));
   const voiceChannel = stateFromStores1(9896)({ userId, guildId: guildId.guildId }).voiceChannel;
   const items2 = [stateFromStores1];
   const memo = React.useMemo(() => {
@@ -82,8 +74,8 @@ export default function ActivityStatus(guildId) {
   const gameMentionsAsPlainText = obj2.useGameMentionsAsPlainText(state);
   const tmp2 = userId;
   const tmp6 = stateFromStores1(9895)(userId);
-  const items3 = [markAllUserIdListsStale];
-  if (tmp2Result.useStateFromStores(items3, () => outer1_6.isBlockedOrIgnored(userId))) {
+  const items3 = [closure_6];
+  if (tmp2Result.useStateFromStores(items3, () => closure_1_6.isBlockedOrIgnored(userId))) {
     return null;
   } else {
     let bot;

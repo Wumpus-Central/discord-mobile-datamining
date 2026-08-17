@@ -1,30 +1,30 @@
 // discord_app/modules/polls/PollAttachmentUtils.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import { POLL_ATTACHMENT_FOLDER } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
 
 function _downloadPollGif() {
   const self = this;
   const tmp = callback((arg0) => {
-    let asyncGeneratorStep = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const _fetch = fetch;
-      asyncGeneratorStep = yield fetch(asyncGeneratorStep);
+      closure_0 = yield fetch(closure_0);
       function convertBlobToBase64(arg0) {
-        let asyncGeneratorStep = arg0;
+        closure_0 = arg0;
         const fileReader = new FileReader();
-        return new Promise((asyncGeneratorStep, onerror) => {
+        return new Promise((closure_0, onerror) => {
           fileReader.onload = function onload() { ... };
           fileReader.onerror = onerror;
-          const asDataURL = fileReader.readAsDataURL(asyncGeneratorStep);
+          const asDataURL = fileReader.readAsDataURL(closure_0);
         });
       }
-      yield asyncGeneratorStep.blob();
+      yield closure_0.blob();
       return convertBlobToBase64(arg1);
     })();
   });
-  const _downloadPollGif = tmp;
+  closure_2 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

@@ -1,17 +1,17 @@
 // discord_app/modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import prototype from "prototype";
-import { SearchListItemTypes } from "MessageEmbedTypes";
-import { RelationshipTypes } from "ME";
-import { getSystemLocale } from "../../../../../../intl/index.native.tsx";
-import { nameFromUser } from "../../../../../../utils/UserUtils.tsx";
-import { ForwardingIcon } from "../../../../../forwarding/native/ForwardingIcon.tsx";
-import { SearchTokenTypes } from "../../../../SearchUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import ForwardingIconDefault from "ForwardingIcon" /* 9087 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "prototype" /* 11510 */;
+import { SearchListItemTypes } from "MessageEmbedTypes" /* 8507 */;
+import { RelationshipTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx");
 
 export const getSearchQueryChannelIds = function getSearchQueryChannelIds(items) {
   return new Set(store2.getChannelIds(items));
@@ -32,7 +32,7 @@ export const getSearchQueryUserIds = function getSearchQueryUserIds(items) {
 export const getSearchFilterHasIcon = function getSearchFilterHasIcon(text) {
   const intl = getSystemLocale.intl;
   if (intl.string(getSystemLocale.t.nrpA5E) === text) {
-    return ForwardingIcon;
+    return ForwardingIconDefault;
   } else {
     const intl3 = tmp(1236).intl;
     if (intl3.string(tmp(1236).t.ZNR2fi) === text) {
@@ -105,8 +105,8 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
       nickname = nick.getNick(guildIdFromSearchContext, user.id);
     }
     if (nickname == null) {
-      nickname = nameFromUser.getName(user);
-      const obj2 = nameFromUser;
+      nickname = nameFromUserDefault.getName(user);
+      const obj2 = nameFromUserDefault;
     }
     obj = { type: null, props: null };
     obj[0] = SearchListItemTypes.DM;
@@ -120,9 +120,9 @@ export const toSearchListUserItem = function toSearchListUserItem(items, user, c
     return obj;
   }
 };
-export const toSearchListChannelItem = function toSearchListChannelItem(channel, outer1_8) {
-  let closure_0 = channel;
-  const importDefault = outer1_8;
+export const toSearchListChannelItem = function toSearchListChannelItem(channel, closure_1_8) {
+  closure_0 = channel;
+  importDefault = closure_1_8;
   if (null == channel) {
     return null;
   } else if (channel.isDM()) {
@@ -136,12 +136,12 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
       obj[1] = user;
       let nickname = store.getNickname(user.id);
       if (nickname == null) {
-        nickname = nameFromUser.getName(user);
-        const obj6 = nameFromUser;
+        nickname = nameFromUserDefault.getName(user);
+        const obj6 = nameFromUserDefault;
       }
       obj[2] = nickname;
       obj[3] = function onPress() {
-        return outer1_8(id.id);
+        return callback(id.id);
       };
       obj[1] = obj;
       tmp5 = obj;
@@ -151,16 +151,16 @@ export const toSearchListChannelItem = function toSearchListChannelItem(channel,
     obj = { type: null, props: null };
     if (channel.isGroupDM()) {
       obj[0] = tmp.GROUP_DM;
-      const obj1 = { channel: null, onPress: null };
+      obj1 = { channel: null, onPress: null };
       obj1[0] = channel;
-      obj1[1] = outer1_8;
+      obj1[1] = closure_1_8;
       obj[1] = obj1;
       let tmp2 = obj;
     } else {
       obj[0] = tmp.GUILD_TEXT_CHANNEL;
       const obj2 = { channel: null, onPress: null };
       obj2[0] = channel;
-      obj2[1] = outer1_8;
+      obj2[1] = closure_1_8;
       obj[1] = obj2;
       tmp2 = obj;
     }

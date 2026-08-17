@@ -1,19 +1,22 @@
 // discord_app/modules/messages/native/renderer/row_data/interaction/ExecutedCommand.tsx
-import { processColor } from "get ActivityIndicator";
-import createdAt from "createdAt";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageTypes } from "ME";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PermissionOverwriteType } from "../../../../../../flow/Server.tsx";
-import { getAvatarURL } from "../../../../../../utils/AvatarUtils.tsx";
-import { ensureAvatarSource } from "../../../../../../utils/native/AvatarUtils.tsx";
-import { buildCommand } from "../../../../../application_commands/ApplicationCommandUtils.tsx";
-import { canViewInteractionInfo } from "../../../../../applications/ApplicationInteractionInfoUtils.tsx";
-import { processColorStrings } from "../../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import { useNullableMessageAuthor } from "../../../../useMessageAuthor.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import buildCommand from "buildCommand" /* 5245 */;
+import processColorStrings from "processColorStrings" /* 8186 */;
+import canViewInteractionInfo from "canViewInteractionInfo" /* 8445 */;
+import closure_4 from "createdAt" /* 1930 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/ExecutedCommand.tsx");
+const processColor = get_ActivityIndicator.processColor;
+const MessageTypes = ME.MessageTypes;
+let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/interaction/ExecutedCommand.tsx");
 
 export const createExecutedCommand = function createExecutedCommand(message, channel, roleStyle, theme, defaultUsernameColor) {
   let tmp = null != message.activityInstance;
@@ -38,8 +41,8 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       const userAuthor = obj5.getUserAuthor(message.interaction.user, channel);
       const colorString = userAuthor.colorString;
       const displayName = message.interaction.displayName;
-      const internal = Themes.internal;
-      const semanticColor = internal.resolveSemanticColor(theme, Themes.colors.MENTION_BACKGROUND);
+      const internal = ThemesDefault.internal;
+      const semanticColor = internal.resolveSemanticColor(theme, ThemesDefault.colors.MENTION_BACKGROUND);
       let obj6 = buildCommand;
       const initialInteractionMetadata = obj6.getInitialInteractionMetadata(message);
       let type;
@@ -50,7 +53,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
       if (type === PermissionOverwriteType.InteractionTypes.APPLICATION_COMMAND) {
         tmp25 = null;
         if (null != initialInteractionMetadata.target_user) {
-          tmp25 = new createdAt(initialInteractionMetadata.target_user);
+          tmp25 = new closure_4(initialInteractionMetadata.target_user);
         }
       }
       let tmp17Result = tmp17(4814);
@@ -126,7 +129,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
           const formatToParts = intl.formatToParts;
           const t = tmp17(1236).t;
           if (result3) {
-            const obj1 = {};
+            obj1 = {};
             const merged = Object.assign(obj);
             let obj2 = { action: "bindTapActivityText", applicationUserId: null, messageChannelId: null };
             obj2[1] = message.author.id;
@@ -221,7 +224,7 @@ export const createExecutedCommand = function createExecutedCommand(message, cha
         let avatarSource = user1.getAvatarSource(undefined);
         const uri = tmp11(avatarSource).uri;
       }
-      obj3 = getAvatarURL;
+      obj3 = getAvatarURLDefault;
       obj11 = { userId: null, avatar: null, guildId: null };
       obj11[0] = user1.id;
       obj11[1] = guildMemberAvatar;

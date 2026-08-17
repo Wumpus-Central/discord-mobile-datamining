@@ -1,32 +1,28 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getNickname } from "../../../../../utils/NicknameUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import int2hslRawAll from "int2hslRaw" /* 688 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ jsx: closure_6, Fragment: error, jsxs: metroImportAll } = jsxProd);
+require = arg1;
+noopAll;
+({ jsx: closure_6, Fragment: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, avatar: null, content: null, contextRow: null };
-createCacheKey = { flexDirection: "row", padding: 16, borderRadius: require("Themes").radii.xs, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 40, height: 40, borderRadius: 20 };
 createCacheKey[2] = { marginStart: 16 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionMemberPreview.tsx");
 
 export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscriptionMemberPreview(content) {
-  let guildId;
-  let role;
-  let style;
-  let textStyle;
   content = content.content;
   if (content === undefined) {
     const intl = getSystemLocale.intl;
@@ -34,11 +30,11 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
   }
   ({ guildId, role } = content);
   ({ style, textStyle } = content);
-  const tmp3 = createCacheKey();
+  const tmp3 = callback2();
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  getNickname;
+  getNicknameDefault;
   if (null == role) {
     return null;
   } else {
@@ -60,14 +56,14 @@ export const GuildRoleSubscriptionMemberPreview = function GuildRoleSubscription
     obj[0] = tmp3.avatar;
     obj[1] = source;
     const items2 = [callback(tmp6(5449), obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp3.content;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp3.contextRow;
     const obj3 = { variant: "text-md/semibold", color: "interactive-text-active", style: null, children: null };
     const obj4 = { color: null };
     const tmp4Result = tmp4(7164);
-    obj4[0] = importAll(688).int2hex(role.color);
+    obj4[0] = int2hslRawAll.int2hex(role.color);
     obj3[2] = obj4;
     obj3[3] = tmp8;
     const items3 = [callback(tmp4(4734).Text, obj3), , , ];

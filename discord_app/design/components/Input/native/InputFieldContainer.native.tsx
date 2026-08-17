@@ -1,19 +1,14 @@
 // discord_app/design/components/Input/native/InputFieldContainer.native.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
-import { InputHeights } from "InputTypes.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import Text from "Text" /* 4734 */;
+import InputHeights from "InputHeights" /* 7346 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Platform;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let require = arg1;
+require = arg1;
 function useInputStyles(size) {
   let str = size.size;
   if (str === undefined) {
@@ -32,16 +27,16 @@ function useInputStyles(size) {
     flag3 = true;
   }
   if ("sm" === str) {
-    let INPUT_FIELD_RADIUS_LG = Themes.modules.mobile.INPUT_FIELD_RADIUS_SM;
+    let INPUT_FIELD_RADIUS_LG = ThemesDefault.modules.mobile.INPUT_FIELD_RADIUS_SM;
   } else if ("md" === str) {
-    INPUT_FIELD_RADIUS_LG = Themes.modules.mobile.INPUT_FIELD_RADIUS_MD;
+    INPUT_FIELD_RADIUS_LG = ThemesDefault.modules.mobile.INPUT_FIELD_RADIUS_MD;
   } else if ("lg" === str) {
-    INPUT_FIELD_RADIUS_LG = Themes.modules.mobile.INPUT_FIELD_RADIUS_LG;
+    INPUT_FIELD_RADIUS_LG = ThemesDefault.modules.mobile.INPUT_FIELD_RADIUS_LG;
   }
   let token = map.useToken(INPUT_FIELD_RADIUS_LG);
   let tmpResult = tmp(4097);
   if (flag) {
-    token = tmpResult.useToken(Themes.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
+    token = tmpResult.useToken(ThemesDefault.modules.mobile.INPUT_FIELD_ROUND_RADIUS);
   }
   tmpResult = tmp(4097);
   if ("sm" === str) {
@@ -53,8 +48,9 @@ function useInputStyles(size) {
   }
   const token1 = tmpResult.useToken(INPUT_FIELD_TEXT_STYLE_LG);
   const obj = map;
-  return callback3(str, flag2, flag3, token, token1, map.useToken(Themes.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
+  return callback3(str, flag2, flag3, token, token1, map.useToken(ThemesDefault.modules.mobile.INPUT_FIELD_PADDING_VERTICAL_SM_IOS));
 }
+noopAll;
 ({ Platform, StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = { mass: 0.5, damping: 15, stiffness: 200, overshootClamping: true };
@@ -80,15 +76,14 @@ let closure_9 = createCacheKey.createStyles(() => {
     str2 = "text-md/medium";
   }
   let obj = { sm: InputHeights.InputHeights.SM, md: InputHeights.InputHeights.MD, lg: InputHeights.InputHeights.LG };
-  obj = { sm: Themes.space.PX_8, md: Themes.space.PX_12, lg: Themes.space.PX_16 };
-  obj = { sm: Themes.space.PX_4, md: Themes.space.PX_8, lg: Themes.space.PX_8 };
-  const obj1 = { sm: null, md: null, lg: null };
-  obj1[0] = { paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4 };
-  const obj2 = { paddingHorizontal: Themes.space.PX_8, paddingVertical: Themes.space.PX_4 };
+  obj = { sm: ThemesDefault.space.PX_8, md: ThemesDefault.space.PX_12, lg: ThemesDefault.space.PX_16 };
+  obj = { sm: ThemesDefault.space.PX_4, md: ThemesDefault.space.PX_8, lg: ThemesDefault.space.PX_8 };
+  obj1 = { sm: { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 }, md: null, lg: null };
+  const obj2 = { paddingHorizontal: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_4 };
   const tmp = require;
-  obj1[1] = { paddingHorizontal: Themes.space.PX_12, paddingVertical: Themes.space.PX_8 };
-  const obj3 = { paddingHorizontal: Themes.space.PX_12, paddingVertical: Themes.space.PX_8 };
-  obj1[2] = { paddingHorizontal: Themes.space.PX_16, paddingVertical: Themes.space.PX_8 + 2 };
+  obj1[1] = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
+  const obj3 = { paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8 };
+  obj1[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_8 + 2 };
   let num2 = 1;
   if (flag) {
     num2 = 0.5;
@@ -105,15 +100,15 @@ let closure_9 = createCacheKey.createStyles(() => {
   }
   const obj6 = { container: obj5, background: null, placeholderText: null, minHeight: null, radius: null, padding: null, text: null, leadingText: null, trailingText: null, leadingIcon: null, trailingIcon: null, splitBorder: null };
   obj5[3] = num3;
-  const obj4 = { paddingHorizontal: Themes.space.PX_16, paddingVertical: Themes.space.PX_8 + 2 };
-  obj6[1] = { backgroundColor: Themes.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: Themes.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: Themes.colors.INPUT_BORDER_DEFAULT };
-  const obj7 = { backgroundColor: Themes.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: Themes.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: Themes.colors.INPUT_BORDER_DEFAULT };
-  obj6[2] = { color: Themes.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
+  const obj4 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_8 + 2 };
+  obj6[1] = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT };
+  const obj7 = { backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderWidth: ThemesDefault.modules.mobile.INPUT_FIELD_BORDER_WIDTH, borderColor: ThemesDefault.colors.INPUT_BORDER_DEFAULT };
+  obj6[2] = { color: ThemesDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT };
   obj6[3] = { minHeight: obj[str] };
   obj6[4] = { borderRadius: num };
   obj6[5] = obj1[str];
   const obj9 = {};
-  const merged = Object.assign(tmp(4734).TextStyleSheet[str2]);
+  const merged = Object.assign(Text.TextStyleSheet[str2]);
   obj9.lineHeight = undefined;
   const colors = tmp3(712).colors;
   obj9.color = flag ? colors.TEXT_MUTED : colors.TEXT_DEFAULT;
@@ -136,21 +131,21 @@ let closure_9 = createCacheKey.createStyles(() => {
   const obj12 = {};
   const merged3 = Object.assign(tmp6);
   obj12.borderRightWidth = 1;
-  obj12.borderRightColor = Themes.colors.BORDER_STRONG;
+  obj12.borderRightColor = ThemesDefault.colors.BORDER_STRONG;
   obj6[11] = obj12;
   return obj6;
 });
-createCacheKey = { error: require("Themes").colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: require("Themes").colors.INPUT_BORDER_ACTIVE };
-createCacheKey = createCacheKey.createStyleProperties(createCacheKey);
+createCacheKey = { error: ThemesDefault.colors.INPUT_BORDER_ERROR_DEFAULT, default: "transparent", focused: ThemesDefault.colors.INPUT_BORDER_ACTIVE };
+let closure_10 = createCacheKey.createStyleProperties(createCacheKey);
 let closure_11 = { code: "function InputFieldContainerNativeTsx1(){const{status,ringColors,isFocused,withSpring,RING_SPRING_CONFIG}=this.__closure;let borderWidth=0;let borderColor='transparent';if(status!=='default'){borderWidth=2;borderColor=ringColors.error;}else if(isFocused){borderWidth=1;borderColor=ringColors.focused;}return{borderWidth:withSpring(borderWidth,RING_SPRING_CONFIG),borderColor:withSpring(borderColor,RING_SPRING_CONFIG),left:-borderWidth,right:-borderWidth,top:-borderWidth,bottom:-borderWidth};}" };
-const result = require("jsxProd").fileFinishedImporting("design/components/Input/native/InputFieldContainer.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Input/native/InputFieldContainer.native.tsx");
 
 export { useInputStyles };
 export const InputFieldContainer = function InputFieldContainer(isFocused) {
-  const tmp = createCacheKey();
-  const require = tmp;
+  const tmp = callback4();
+  const _require = tmp;
   isFocused = isFocused.isFocused;
-  const importDefault = tmp2;
+  importDefault = tmp2;
   const status = isFocused.status;
   let str = "default";
   if (undefined !== status) {
@@ -160,34 +155,33 @@ export const InputFieldContainer = function InputFieldContainer(isFocused) {
   const tmp3 = useInputStyles(obj);
   const fn = function s() {
     if ("default" !== str) {
-      str = tmp.error;
+      str = lib.error;
       let num = 2;
     } else {
       str = "transparent";
       num = 0;
       if (closure_1) {
-        str = tmp.focused;
+        str = lib.focused;
         num = 1;
       }
     }
-    const obj = { borderWidth: null, borderColor: null, left: null, right: null, top: null, bottom: null };
-    obj[0] = tmp(str[9]).withSpring(num, outer1_7);
-    const obj2 = tmp(str[9]);
-    obj[1] = tmp(str[9]).withSpring(str, outer1_7);
+    const obj = { borderWidth: lib(str[9]).withSpring(num, closure_1_7), borderColor: null, left: null, right: null, top: null, bottom: null };
+    const obj2 = lib(str[9]);
+    obj[1] = lib(str[9]).withSpring(str, closure_1_7);
     obj[2] = -num;
     obj[3] = -num;
     obj[4] = -num;
     obj[5] = -num;
     return obj;
   };
-  obj = { status: str, ringColors: tmp, isFocused: tmp2, withSpring: require(str[9]).withSpring, RING_SPRING_CONFIG: closure_7 };
+  obj = { status: str, ringColors: tmp, isFocused: tmp2, withSpring: _require(str[9]).withSpring, RING_SPRING_CONFIG: closure_7 };
   fn.__closure = obj;
   fn.__workletHash = 1037178877006;
   fn.__initData = closure_11;
   obj = { style: items, children: null };
   items = [, , , ];
   ({ container: arr[0], background: arr[1], radius: arr[2], minHeight: arr[3] } = tmp3);
-  const animatedStyle = require(str[8]).useAnimatedStyle(fn);
+  const animatedStyle = _require(str[8]).useAnimatedStyle(fn);
   const items1 = [absoluteFill.absoluteFill, tmp3.radius, animatedStyle];
   const items2 = [callback(importDefault(str[8]).View, { style: items1 }), isFocused.children];
   obj[1] = items2;

@@ -1,8 +1,10 @@
 // discord_app/modules/guild/BasicGuildStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = 0;
 let closure_1 = {};
+const Store = initializeDefault.Store;
 class BasicGuildStore extends Store {
 }
 const prototype = BasicGuildStore.prototype;
@@ -30,7 +32,7 @@ prototype["getVersion"] = function getVersion() {
   return c0;
 };
 BasicGuildStore.displayName = "BasicGuildStore";
-const basicGuildStore = new BasicGuildStore(require("dispatcher"), {
+const basicGuildStore = new BasicGuildStore(dispatcherDefault, {
   BASIC_GUILD_FETCH: function handleBasicGuildFetch(guildId) {
     closure_1[guildId.guildId] = { type: "loading" };
     return false;

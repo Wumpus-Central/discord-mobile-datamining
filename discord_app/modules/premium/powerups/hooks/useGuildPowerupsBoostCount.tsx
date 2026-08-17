@@ -1,12 +1,12 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx
-import noop from "noop";
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import { experiment } from "../../../game_server/GameServerExperiment.tsx";
+import experiment from "experiment" /* 4285 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "calculateAppliedBoosts" /* 4261 */;
 
-const require = arg1;
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostCount.tsx");
 
 export default function useGuildAppliedBoostCount(guildId) {
   const _require = guildId;
@@ -25,9 +25,9 @@ export default function useGuildAppliedBoostCount(guildId) {
   let tmpResult = tmp(tmp2[4]);
   const gameServerEnabled = tmpResult.useGameServerEnabled(guildId, "GuildPowerupsBoostCount");
   tmpResult = tmp(tmp2[5]);
-  const items1 = [calculateAppliedBoosts];
+  const items1 = [closure_5];
   const stateFromStores = tmpResult.useStateFromStores(items1, () => {
-    const stateForGuild = outer1_5.getStateForGuild(closure_0);
+    const stateForGuild = closure_1_5.getStateForGuild(closure_0);
     let appliedBoosts;
     if (stateForGuild != null) {
       appliedBoosts = stateForGuild.appliedBoosts;
@@ -47,7 +47,7 @@ export default function useGuildAppliedBoostCount(guildId) {
   const items3 = [num, stateFromStores, stateFromStores1, gameServerEnabled];
   return gameServerEnabled.useMemo(() => {
     if (null != stateFromStores) {
-      let num = stateFromStores1;
+      num = stateFromStores1;
       if (stateFromStores1 == null) {
         num = 0;
       }

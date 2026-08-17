@@ -1,44 +1,41 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountScreen.tsx
-import expandEventProperties from "expandEventProperties";
-import importAllResult from "UserSettingsWebAuthn";
-import { View } from "Button";
-import hasFetchedCredentials from "hasFetchedCredentials";
-import { MobileUserSettings } from "MobileUserSettings";
-import { AccountSettingsTabs } from "AccountSettingsTabs";
-import { AnalyticEvents } from "ME";
-import { WebAuthnScreens } from "WebAuthnScreens";
-import jsxProd from "initialize";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import preloadDefault from "preload" /* 5449 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7385 */;
+import useSegmentedControlState from "useSegmentedControlState" /* 8799 */;
+import SegmentedControl from "SegmentedControl" /* 10096 */;
+import SegmentedControlPage from "SegmentedControlPage" /* 11785 */;
+import _modDef13991 from "module_13991" /* 13991 */;
+import AutomatedUnderageAppealStatus from "AutomatedUnderageAppealStatus" /* 14106 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "hasFetchedCredentials" /* 14077 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { AccountSettingsTabs } from "AccountSettingsTabs" /* 11059 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { WebAuthnScreens } from "WebAuthnScreens" /* 14078 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { registerAsset } from "../../../../../_runtime/14079_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
 import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
 import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
-import { SegmentedControl } from "../../../../design/components/SegmentedControl/native/SegmentedControl.native.tsx";
-import { SegmentedControlPage } from "../../../../design/components/SegmentedControl/native/SegmentedControlPages.native.tsx";
-import { useSegmentedControlState } from "../../../../design/components/SegmentedControl/native/SegmentedControlState.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { AutomatedUnderageAppealStatus } from "../../../safety_hub/native/SafetyHubPage.tsx";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
-import { useSettingNavigationRoute } from "../../core/native/useSettingNavigationRoute.tsx";
 
-let closure_12;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function PasswordlessUpsell() {
   const tmp = callback4();
   let obj = _useNavigation;
   _require = obj.useNavigation();
   obj = { style: tmp.upsellPasswordless, children: null };
   obj = { border: "none", shadow: "none", children: null };
-  const obj1 = { style: { flexDirection: "row", gap: 8 }, children: null };
+  obj1 = { style: { flexDirection: "row", gap: 8 }, children: null };
   const obj2 = { style: { width: 70, height: 70 }, children: null };
-  const obj3 = { source: null, resizeMode: "contain", style: null };
-  obj3[0] = _registerAsset;
-  obj3[2] = tmp.upsellImagePasswordless;
-  obj2[1] = callback2(preload, obj3);
+  const obj3 = { source: _registerAsset, resizeMode: "contain", style: tmp.upsellImagePasswordless };
+  obj2[1] = callback2(preloadDefault, obj3);
   const items = [callback2(View, obj2), ];
   const obj4 = { style: { flex: 1 }, children: null };
   const obj5 = { style: { flexShrink: 1, width: "90%", gap: 8 }, children: null };
@@ -55,9 +52,9 @@ function PasswordlessUpsell() {
   const intl3 = _getSystemLocale.intl;
   obj9[0] = intl3.string(_getSystemLocale.t.piGf5c);
   obj9[1] = function onPress() {
-    let obj = outer1_1(outer1_2[18]);
-    obj = { navigation: callback, initialRouteName: outer1_10.REGISTER, showNav: true };
-    obj.pushLazy(callback(outer1_2[20])(outer1_2[19], outer1_2.paths), obj);
+    let obj = closure_1_1(closure_1_2[18]);
+    obj = { navigation: callback, initialRouteName: closure_1_10.REGISTER, showNav: true };
+    obj.pushLazy(callback(closure_1_2[20])(closure_1_2[19], closure_1_2.paths), obj);
   };
   const items2 = [callback2(_Button.Button, obj9), callback2(View, {})];
   obj8[1] = items2;
@@ -72,13 +69,13 @@ function PasswordlessUpsell() {
 }
 function AccountTwoFALabel() {
   let obj = first(isUserVerified[21]);
-  let items = [hasFetchedCredentials];
+  let items = [closure_6];
   const tmp3 = callback(obj.useStateFromStoresObject(items, () => {
-    const items = [hasFetchedCredentials.hasCredentials, hasFetchedCredentials.hasFetchedCredentials()];
+    const items = [closure_6.hasCredentials, closure_6.hasFetchedCredentials()];
     return items;
   }), 2);
   first = tmp3[0];
-  const importDefault = tmp5;
+  closure_1 = tmp5;
   isUserVerified = first(isUserVerified[22]).useIsUserVerified();
   const items1 = [tmp3[1], first, isUserVerified];
   const memo = importAllResult.useMemo(() => {
@@ -133,7 +130,7 @@ function AccountSecurityPage() {
     obj[1] = callback2(14103);
     return obj.createList(obj);
   }, []);
-  return callback2(SettingLayout, { node });
+  return callback2(_modDef13991, { node });
 }
 function AccountStandingPage() {
   return callback2(AutomatedUnderageAppealStatus.default, { visible: true });
@@ -141,18 +138,16 @@ function AccountStandingPage() {
 let c4 = importAllResult;
 ({ jsx: unpackModuleId, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let obj = { upsellPasswordless: null, upsellImagePasswordless: null, controlContainer: null, pageContainer: null, standingPage: null };
-obj = { marginBottom: 16, borderColor: require("Themes").colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: require("Themes").radii.lg };
+obj = { marginBottom: 16, borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, borderWidth: 1, borderRadius: ThemesDefault.radii.lg };
 obj[0] = obj;
 obj[1] = { height: "100%", width: "100%" };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
 obj[2] = createCacheKey;
 obj[3] = { flex: 1 };
-obj[4] = { paddingTop: require("Themes").space.PX_24 };
+obj[4] = { paddingTop: ThemesDefault.space.PX_24 };
 let closure_14 = createCacheKey.createStyles(obj);
-let obj2 = { paddingTop: require("Themes").space.PX_24 };
+let obj2 = { paddingTop: ThemesDefault.space.PX_24 };
 const memoResult = importAllResult.memo(() => {
-  let require;
-  let tmp3;
   const tmp = callback4();
   [tmp3, require] = callback(importAllResult.useState(0), 2);
   callback = importAllResult.useCallback((nativeEvent) => {
@@ -172,7 +167,7 @@ const memoResult = importAllResult.memo(() => {
   obj[1] = AccountSettingsTabs.SECURITY;
   obj[2] = callback2(AccountSecurityPage, {});
   const items = [obj, ];
-  const obj1 = { label: null, id: null, page: null };
+  obj1 = { label: null, id: null, page: null };
   const intl2 = tmp5(1236).intl;
   obj1[0] = intl2.string(getSystemLocale.t["00Sfl/"]);
   obj1[1] = AccountSettingsTabs.STANDING;
@@ -203,6 +198,6 @@ const memoResult = importAllResult.memo(() => {
   obj3[0] = items1;
   return callback3(closure_13, obj3);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountScreen.tsx");
 
 export default memoResult;

@@ -1,17 +1,19 @@
 // discord_app/modules/forums/native/posts/ForumPostNewTag.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null };
-createCacheKey = { paddingVertical: 1, backgroundColor: require("Themes").colors.BADGE_BACKGROUND_BRAND };
+createCacheKey = { paddingVertical: 1, backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/forums/native/posts/ForumPostNewTag.tsx");
+let closure_3 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostNewTag.tsx");
 
 export default function ForumPostNewTag(containerStyle) {
-  containerStyle = [containerStyle.containerStyle, createCacheKey().container];
+  containerStyle = [containerStyle.containerStyle, callback().container];
   return jsx(Button.NewTag, { containerStyle, variant: "text-xs/bold", color: "badge-text-brand" });
 };

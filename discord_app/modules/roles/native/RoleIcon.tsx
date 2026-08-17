@@ -1,16 +1,14 @@
 // discord_app/modules/roles/native/RoleIcon.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Button } from "../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 1297 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/roles/native/RoleIcon.tsx");
 
 export default function RoleIcon(arg0) {
-  let size;
-  let source;
-  let unicodeEmoji;
   ({ source, unicodeEmoji, size } = arg0);
   if (size === undefined) {
     size = 20;

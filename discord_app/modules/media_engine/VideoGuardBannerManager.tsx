@@ -1,13 +1,14 @@
 // discord_app/modules/media_engine/VideoGuardBannerManager.tsx
-import initialize from "initialize";
-import { RTCConnectionStates } from "ME";
-import { MediaEngineContextTypes } from "DesktopSources";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "initialize" /* 16722 */;
+import { RTCConnectionStates } from "ME" /* 676 */;
+import { MediaEngineContextTypes } from "DesktopSources" /* 4529 */;
 
 let require = arg1;
+initializeDefault;
 let prototype = function VideoGuardBannerManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     RTC_CONNECTION_STATE(state) {
       return applyArgumentsResult.handleConnectionState(state);
@@ -19,7 +20,7 @@ let prototype = function VideoGuardBannerManager() {
       tmp = state.context === constants2.DEFAULT;
     }
     if (tmp) {
-      let videoEnabled = initialize.hasShownBanner();
+      let videoEnabled = closure_3.hasShownBanner();
       if (!videoEnabled) {
         const VideoGuardExperiment = applyArgumentsResult(13106).VideoGuardExperiment;
         videoEnabled = VideoGuardExperiment.getConfig({ location: "VideoGuardBannerManager" }).videoEnabled;
@@ -37,6 +38,6 @@ let prototype = function VideoGuardBannerManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("DesktopSources").fileFinishedImporting("modules/media_engine/VideoGuardBannerManager.tsx");
+let result = require("set").fileFinishedImporting("modules/media_engine/VideoGuardBannerManager.tsx");
 
 export default prototype;

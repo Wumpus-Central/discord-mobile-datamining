@@ -1,10 +1,10 @@
 // discord_app/modules/verification/native/components/CountrySelectModal.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import NavigationStack from "NavigationStack" /* 6312 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("getSystemLocale").fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/verification/native/components/CountrySelectModal.tsx");
 
 export default function CountrySelectModal() {
   const screens = React.useMemo(() => {

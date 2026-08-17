@@ -1,8 +1,8 @@
 // discord_app/modules/premium/premium_group/PremiumGroupActionCreators.tsx
-import sendRequest from "sendRequest";
-import createdAt from "createdAt";
-import createFromServer from "createFromServer";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createdAt" /* 1930 */;
+import closure_5 from "createFromServer" /* 12922 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchPremiumGroupMembership() {
@@ -37,11 +37,11 @@ function _fetchPremiumGroupMembership() {
             const callback = tmp3;
             let body = tmp7;
             body = undefined;
-            outer1_1(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
-            let c3 = 1;
-            const HTTP = outer1_0(outer1_2[5]).HTTP;
-            let obj1 = { url: null, rejectWithError: true };
-            obj1[0] = outer1_6.PREMIUM_GROUP_MEMBERSHIP;
+            closure_1_1(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_MEMBERSHIP_FETCH_START" });
+            c3 = 1;
+            const HTTP = closure_1_0(closure_1_2[5]).HTTP;
+            obj1 = { url: null, rejectWithError: true };
+            obj1[0] = closure_1_6.PREMIUM_GROUP_MEMBERSHIP;
             c4 = 2;
             c5 = 1;
             const obj2 = { value: null, done: false };
@@ -85,7 +85,7 @@ function _fetchPremiumGroupMembership() {
           c5 = 3;
         }
       } catch (tmp32) {
-        const dependencyMap = tmp32;
+        dependencyMap = tmp32;
         if (tmp4 === c3) {
           c5 = tmp2;
           throw tmp32;
@@ -95,7 +95,7 @@ function _fetchPremiumGroupMembership() {
       }
     }
   });
-  const _fetchPremiumGroupMembership = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -107,20 +107,20 @@ function _fetchPremiumGroupMembership() {
 function _fetchEligibleUsers() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let sendRequest = arg3;
-    let c8 = 0;
-    let c9 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c8 = 0;
+    c9 = 0;
     return (function*(arg0, body) {
-      let c7 = 0;
+      c7 = 0;
       const HTTP = callback(table[5]).HTTP;
-      const obj1 = { url: null, query: null, rejectWithError: true };
-      obj1[0] = outer1_6.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(body);
+      obj1 = { url: null, query: null, rejectWithError: true };
+      obj1[0] = closure_1_6.BILLING_SUBSCRIPTION_ELIGIBLE_USERS(body);
       const obj2 = { index: null, limit: null, search_query: null, include_ineligible: true };
       obj2[0] = users;
-      let c4 = ineligible_users;
+      c4 = ineligible_users;
       if (ineligible_users == null) {
         c4 = 10;
       }
@@ -132,21 +132,21 @@ function _fetchEligibleUsers() {
       users = body.users;
       next_index = body.next_index;
       ineligible_users = body.ineligible_users;
-      let createFromServer = 0;
+      closure_5 = 0;
       const items = [];
-      createFromServer = HermesBuiltin.arraySpread(users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })), createFromServer);
-      let closure_6 = ineligible_users;
+      closure_5 = HermesBuiltin.arraySpread(users.map((arg0) => Object.assign(new c4(arg0), { eligible: true })), closure_5);
+      closure_6 = ineligible_users;
       if (ineligible_users == null) {
         closure_6 = [];
       }
       const obj = { users: null, nextIndex: null };
-      createFromServer = HermesBuiltin.arraySpread(closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })), createFromServer);
+      closure_5 = HermesBuiltin.arraySpread(closure_6.map((arg0) => Object.assign(new c4(arg0), { eligible: false })), closure_5);
       obj[0] = items;
       obj[1] = next_index;
       return obj;
     })();
   });
-  const _fetchEligibleUsers = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -158,11 +158,11 @@ function _fetchEligibleUsers() {
 function _inviteUsersToSubscriptionGroup() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -190,13 +190,13 @@ function _inviteUsersToSubscriptionGroup() {
               obj[0] = arg1;
               return obj;
             } else {
-              let sendRequest = tmp3;
-              const dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               let lib;
-              lib(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_START" });
-              let c5 = 1;
-              const HTTP = callback(outer1_2[5]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: true };
+              lib(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITE_USERS_START" });
+              c5 = 1;
+              const HTTP = callback(closure_1_2[5]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: true };
               obj1[0] = c6.BILLING_SUBSCRIPTION_INVITES(callback);
               let obj2 = { user_ids: null };
               obj2[0] = lib;
@@ -238,7 +238,7 @@ function _inviteUsersToSubscriptionGroup() {
             return obj;
           }
         } catch (tmp13) {
-          let createdAt = tmp13;
+          closure_4 = tmp13;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp13;
@@ -249,7 +249,7 @@ function _inviteUsersToSubscriptionGroup() {
       }
     })();
   });
-  const _inviteUsersToSubscriptionGroup = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -261,11 +261,11 @@ function _inviteUsersToSubscriptionGroup() {
 function _removeUserFromSubscriptionGroup() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -293,13 +293,13 @@ function _removeUserFromSubscriptionGroup() {
               obj[0] = arg1;
               return obj;
             } else {
-              let sendRequest = tmp3;
-              let dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               let callback2;
-              callback2(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
-              let c5 = 1;
-              const HTTP = callback(outer1_2[5]).HTTP;
-              const obj1 = { url: null, rejectWithError: true };
+              callback2(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_START" });
+              c5 = 1;
+              const HTTP = callback(closure_1_2[5]).HTTP;
+              obj1 = { url: null, rejectWithError: true };
               obj1[0] = c6.BILLING_SUBSCRIPTION_REMOVE_USER(callback, callback2);
               c6 = 2;
               c7 = 1;
@@ -309,7 +309,7 @@ function _removeUserFromSubscriptionGroup() {
             }
           } else if (1 === tmp7) {
             c5 = 0;
-            dependencyMap = createdAt;
+            dependencyMap = closure_4;
             let obj4 = callback2(709);
             obj4.dispatch({ type: "PREMIUM_GROUP_REMOVE_MEMBER_FAILURE" });
             c7 = 3;
@@ -338,7 +338,7 @@ function _removeUserFromSubscriptionGroup() {
             return obj6;
           }
         } catch (tmp21) {
-          createdAt = tmp21;
+          closure_4 = tmp21;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp21;
@@ -349,7 +349,7 @@ function _removeUserFromSubscriptionGroup() {
       }
     })();
   });
-  const _removeUserFromSubscriptionGroup = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -361,10 +361,10 @@ function _removeUserFromSubscriptionGroup() {
 function _fetchSubscriptionGroupMembers() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c6 === 2) {
         c6 = 3;
@@ -392,14 +392,14 @@ function _fetchSubscriptionGroupMembers() {
               obj[0] = body;
               return obj;
             } else {
-              const dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let lib2 = tmp7;
               let lib;
               lib2 = undefined;
-              outer1_1(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
-              let c4 = 1;
-              const HTTP = lib(outer1_2[5]).HTTP;
-              const obj1 = { url: null, rejectWithError: true };
+              closure_1_1(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_MEMBERS_FETCH_START" });
+              c4 = 1;
+              const HTTP = lib(closure_1_2[5]).HTTP;
+              obj1 = { url: null, rejectWithError: true };
               obj1[0] = c6.BILLING_SUBSCRIPTION_MEMBERS(lib);
               createFromServer = 2;
               c6 = 1;
@@ -445,7 +445,7 @@ function _fetchSubscriptionGroupMembers() {
             return obj;
           }
         } catch (tmp13) {
-          let sendRequest = tmp13;
+          closure_3 = tmp13;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp13;
@@ -456,7 +456,7 @@ function _fetchSubscriptionGroupMembers() {
       }
     })();
   });
-  const _fetchSubscriptionGroupMembers = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -468,12 +468,12 @@ function _fetchSubscriptionGroupMembers() {
 function _acceptSubscriptionGroupInvite() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
@@ -501,14 +501,14 @@ function _acceptSubscriptionGroupInvite() {
               obj[0] = arg1;
               return obj;
             } else {
-              let createdAt = tmp3;
-              let sendRequest = tmp7;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
               const callback = dependencyMap;
               let callback2;
-              const obj1 = { type: "PREMIUM_GROUP_ACCEPT_INVITE_START", subscriptionGroupMemberId: null };
+              obj1 = { type: "PREMIUM_GROUP_ACCEPT_INVITE_START", subscriptionGroupMemberId: null };
               obj1[1] = dependencyMap;
               callback2(709).dispatch(obj1);
-              let c6 = 1;
+              c6 = 1;
               const HTTP = callback(530).HTTP;
               const obj2 = { url: null, rejectWithError: true };
               obj2[0] = c6.BILLING_SUBSCRIPTION_INVITE(callback, callback2);
@@ -520,7 +520,7 @@ function _acceptSubscriptionGroupInvite() {
             }
           } else if (1 === tmp7) {
             c6 = 0;
-            dependencyMap = createFromServer;
+            dependencyMap = closure_5;
             let obj4 = callback2(709);
             obj4 = { type: "PREMIUM_GROUP_ACCEPT_INVITE_FAIL", subscriptionGroupMemberId: null };
             obj4[1] = callback;
@@ -551,7 +551,7 @@ function _acceptSubscriptionGroupInvite() {
             return obj8;
           }
         } catch (tmp22) {
-          createFromServer = tmp22;
+          closure_5 = tmp22;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp22;
@@ -562,7 +562,7 @@ function _acceptSubscriptionGroupInvite() {
       }
     })();
   });
-  const _acceptSubscriptionGroupInvite = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -574,12 +574,12 @@ function _acceptSubscriptionGroupInvite() {
 function _removeSubscriptionGroupInvite() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
@@ -607,14 +607,14 @@ function _removeSubscriptionGroupInvite() {
               obj[0] = arg1;
               return obj;
             } else {
-              let createdAt = tmp3;
+              closure_4 = tmp3;
               let body = tmp7;
               const callback2 = dependencyMap;
               dependencyMap = undefined;
-              const obj1 = { type: "PREMIUM_GROUP_REMOVE_INVITE_START", subscriptionGroupMemberId: null };
+              obj1 = { type: "PREMIUM_GROUP_REMOVE_INVITE_START", subscriptionGroupMemberId: null };
               obj1[1] = dependencyMap;
               callback2(709).dispatch(obj1);
-              let c6 = 1;
+              c6 = 1;
               const HTTP = callback(530).HTTP;
               const obj2 = { url: null, rejectWithError: true };
               obj2[0] = c6.BILLING_SUBSCRIPTION_INVITE(callback, callback2);
@@ -626,7 +626,7 @@ function _removeSubscriptionGroupInvite() {
             }
           } else if (1 === tmp7) {
             c6 = 0;
-            body = createFromServer;
+            body = closure_5;
             let obj4 = callback2(709);
             obj4 = { type: "PREMIUM_GROUP_REMOVE_INVITE_FAILURE", subscriptionGroupMemberId: null, errorCode: null, subscriptionId: null };
             obj4[1] = callback2;
@@ -665,7 +665,7 @@ function _removeSubscriptionGroupInvite() {
             return obj8;
           }
         } catch (tmp27) {
-          createFromServer = tmp27;
+          closure_5 = tmp27;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp27;
@@ -676,7 +676,7 @@ function _removeSubscriptionGroupInvite() {
       }
     })();
   });
-  const _removeSubscriptionGroupInvite = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -689,17 +689,17 @@ function _fetchPremiumGroupInvites() {
   const self = this;
   const tmp = callback(function*() {
     const callback = tmp3;
-    outer1_1(outer1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_START" });
-    let c3 = 1;
-    const HTTP = outer1_0(outer1_2[5]).HTTP;
-    const obj1 = { url: null, rejectWithError: true };
-    obj1[0] = outer1_6.PREMIUM_GROUP_INVITES;
+    closure_1_1(closure_1_2[4]).dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_START" });
+    c3 = 1;
+    const HTTP = closure_1_0(closure_1_2[5]).HTTP;
+    obj1 = { url: null, rejectWithError: true };
+    obj1[0] = closure_1_6.PREMIUM_GROUP_INVITES;
     yield HTTP.get(obj1);
     if (1 === tmp7) {
       c3 = 0;
       let obj3 = callback(709);
       obj3.dispatch({ type: "PREMIUM_GROUP_INVITES_FETCH_FAIL" });
-      let c5 = 3;
+      c5 = 3;
     } else if (arg0 === 1) {
       c5 = 3;
       throw arg1;
@@ -714,7 +714,7 @@ function _fetchPremiumGroupInvites() {
     c3 = 0;
     return arg1;
   });
-  const _fetchPremiumGroupInvites = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -726,23 +726,23 @@ function _fetchPremiumGroupInvites() {
 function _fetchPremiumGroupInvite() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
-      let sendRequest = tmp3;
-      const obj1 = { type: "PREMIUM_GROUP_INVITE_FETCH_START", subscriptionGroupMemberId: null };
+      closure_3 = tmp3;
+      obj1 = { type: "PREMIUM_GROUP_INVITE_FETCH_START", subscriptionGroupMemberId: null };
       obj1[1] = callback;
-      outer1_1(outer1_2[4]).dispatch(obj1);
-      let c5 = 1;
-      const HTTP = callback(outer1_2[5]).HTTP;
+      closure_1_1(closure_1_2[4]).dispatch(obj1);
+      c5 = 1;
+      const HTTP = callback(closure_1_2[5]).HTTP;
       const obj2 = { url: null, rejectWithError: true };
       obj2[0] = c6.PREMIUM_GROUP_INVITE(callback);
       yield HTTP.get(obj2);
       if (1 === tmp7) {
         c5 = 0;
-        let status = createdAt;
+        let status = closure_4;
         const obj3 = body(status[4]);
         const obj4 = { type: "PREMIUM_GROUP_INVITE_FETCH_FAIL", subscriptionGroupMemberId: null, status: null };
         obj4[1] = callback;
@@ -756,7 +756,7 @@ function _fetchPremiumGroupInvite() {
         }
         obj4[2] = body;
         obj3.dispatch(obj4);
-        let c7 = 3;
+        c7 = 3;
       } else if (arg0 === 1) {
         c7 = 3;
         throw body;
@@ -773,7 +773,7 @@ function _fetchPremiumGroupInvite() {
       return body;
     })();
   });
-  const _fetchPremiumGroupInvite = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -782,7 +782,7 @@ function _fetchPremiumGroupInvite() {
   }
   return applyArgumentsResult;
 }
-const result = require("createFromServer").fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupActionCreators.tsx");
 
 export const fetchPremiumGroupMembership = function fetchPremiumGroupMembership() {
   const self = this;

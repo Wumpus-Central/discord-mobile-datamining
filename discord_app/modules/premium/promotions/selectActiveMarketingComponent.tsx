@@ -1,4 +1,6 @@
 // discord_app/modules/premium/promotions/selectActiveMarketingComponent.tsx
+import set from "set" /* 2 */;
+
 function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
   effectiveStartDate = effectiveStartDate.effectiveStartDate;
   let num;
@@ -54,10 +56,10 @@ function comparePriorityDescending(effectiveStartDate, effectiveStartDate2) {
     }
   }
 }
-const result = require("set").fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
+const result = set.fileFinishedImporting("modules/premium/promotions/selectActiveMarketingComponent.tsx");
 
 export default function selectActiveMarketingComponent(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let fn = arg2;
   if (arg2 === undefined) {
     fn = function f() {
@@ -65,8 +67,6 @@ export default function selectActiveMarketingComponent(arr) {
     };
   }
   const found = arr.filter((isTimed) => {
-    let effectiveEndDate;
-    let effectiveStartDate;
     ({ effectiveStartDate, effectiveEndDate } = isTimed);
     let tmp = null != effectiveStartDate;
     if (tmp) {

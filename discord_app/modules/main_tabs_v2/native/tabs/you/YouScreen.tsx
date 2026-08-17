@@ -1,41 +1,29 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouScreen.tsx
-import useUserProfileOverscrollStyles from "useUserProfileOverscrollStyles";
-import closure_4 from "n";
-import get_ActivityIndicator from "PlatformTypes";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import _getSystemLocale from "_getSystemLocale";
-import zustandStore from "zustandStore";
-import updateGuildUnreadSentinel from "updateGuildUnreadSentinel";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import YOU_SCREEN_ID from "YOU_SCREEN_ID";
-import { UserSettingsSections } from "ME";
-import { CollectiblesMobileShopScreen as closure_17 } from "items";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET";
-import jsxProd from "defaultAreStatesEqual";
-import VisualEffectViewThemed from "../../../../visual_effect_view/native/VisualEffectViewThemed.tsx";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import importDefaultResult1 from "module_4115";
-import { n } from "../../../../../../_runtime/00689_n.js";
-import { defaultAreStatesEqual } from "../../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { PlatformTypes } from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { PressableBase } from "../../../../../design/void/Pressables/native/Pressables.tsx";
-import { getRootNavigationRef } from "../../../RootNavigationRef.native.tsx";
-import { IconWithBadge } from "../../shared_components/BackIconWithBadge.tsx";
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import nDefault from "n" /* 689 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import _modDef8986 from "module_8986" /* 8986 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createUserWidgetFromServer" /* 5365 */;
+import closure_8 from "_getSystemLocale" /* 1994 */;
+import closure_9 from "zustandStore" /* 13993 */;
+import closure_10 from "updateGuildUnreadSentinel" /* 5383 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import YOU_SCREEN_ID from "YOU_SCREEN_ID" /* 15630 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import { CollectiblesMobileShopScreen as closure_17 } from "items" /* 678 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { UserProfileThemeTypes } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-let ScrollView;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_20;
-let closure_21;
-let closure_6;
-let map1;
-const require = arg1;
+require = arg1;
 function handleBackButtonPress() {
   const navigation = getRootNavigationRef.getRootNavigationRef();
   if (null != navigation) {
@@ -48,7 +36,7 @@ function handleBackButtonPress() {
 }
 function BackButton(paddingTop) {
   let obj = defaultAreStatesEqual;
-  const items = [updateGuildUnreadSentinel];
+  const items = [closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => totalMentionCount.getTotalMentionCount());
   if (stateFromStores > 0) {
     const intl2 = tmp2(1236).intl;
@@ -59,47 +47,26 @@ function BackButton(paddingTop) {
     const intl = tmp2(1236).intl;
     formatToPlainStringResult = intl.string(tmp2(1236).t["13/7kX"]);
   }
-  obj = { style: items1, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: handleBackButtonPress, children: null };
+  obj = { style: items1, accessibilityRole: "button", accessibilityLabel: formatToPlainStringResult, onPress: handleBackButtonPress, children: callback2(tmp2(15659).CloseIconWithBadgeOnSide, { count: stateFromStores }) };
   items1 = [callback4().backButton, { top: paddingTop.paddingTop }];
-  obj[4] = callback2(IconWithBadge.CloseIconWithBadgeOnSide, { count: stateFromStores });
   return callback2(PressableBase.PressableOpacity, obj);
 }
 function UnconnectedYouScreen(arg0) {
-  let bannerAnimatedStyle;
-  let bannerImageAnimatedStyle;
-  let blurAnimatedProps;
-  let c2;
-  let contentAnimatedStyle;
-  let contentContainerStyle;
-  let dimensionStyle;
-  let initialTab;
-  let navigateToCustomStatus;
-  let navigateToFriends;
-  let navigateToPremium;
-  let navigateToProfileCustomization;
-  let navigateToSettings;
-  let navigateToShop;
-  let primaryColor;
-  let secondaryColor;
-  let showBlur;
-  let theme;
-  let tmp3;
-  let user;
   ({ user, navigateToSettings } = arg0);
   ({ navigateToPremium, navigateToShop } = arg0);
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let rect;
   let sharedValue;
   let bound;
   let first;
-  let _getSystemLocale;
+  closure_8 = undefined;
   let num2;
-  let c10;
-  let c11;
+  closure_10 = undefined;
+  closure_11 = undefined;
   let youSettingsCoachmark;
-  let c13;
-  let closure_14;
+  closure_13 = undefined;
+  closure_14 = undefined;
   let obj = rect;
   ({ navigateToProfileCustomization, navigateToCustomStatus, navigateToFriends, initialTab } = arg0);
   let tmp = callback;
@@ -131,7 +98,7 @@ function UnconnectedYouScreen(arg0) {
   let obj4 = navigateToSettings(4115);
   class F {
     constructor(arg0) {
-      result = USER_YOU_SCREEN.set(arg0.contentOffset.y);
+      result = closure_5.set(arg0.contentOffset.y);
       return;
     }
   }
@@ -156,7 +123,7 @@ function UnconnectedYouScreen(arg0) {
   }
   let tmpResult = tmp(obj.useState(false), 2);
   first = tmpResult[0];
-  _getSystemLocale = tmpResult[1];
+  closure_8 = tmpResult[1];
   const GifAutoPlay = tmp12(4066).GifAutoPlay;
   const setting = GifAutoPlay.getSetting();
   let tmp12Result = tmp12(1501);
@@ -193,7 +160,7 @@ function UnconnectedYouScreen(arg0) {
     }
     const tmp12Result2 = tmp12(1435);
     let intl = tmp12(1236).intl;
-    const obj1 = { username: null };
+    obj1 = { username: null };
     obj1[0] = user.username;
     const formatToPlainStringResult = intl.formatToPlainString(tmp12(1236).t.gVn4uJ, obj1);
     const isAnimatedImageURLResult = tmp12(1435).isAnimatedImageURL(bannerURL);
@@ -209,7 +176,7 @@ function UnconnectedYouScreen(arg0) {
     const tmp12Result3 = tmp12(8412);
     const memo = obj.useMemo(() => {
       obj = { dimensionStyle: obj, contentContainerStyle: null };
-      obj = { width: bound, height: c3 };
+      obj = { width: bound, height: closure_3 };
       obj = { paddingBottom: rect.bottom + navigateToShop(_undefined[18]).space.PX_64 };
       obj[1] = obj;
       return obj;
@@ -277,11 +244,11 @@ function UnconnectedYouScreen(arg0) {
       }, []);
       tmp12Result6 = tmp12(501);
       tmpResult = tmp(tmp12(7366).useSelectedDismissibleContent(memo1), 2);
-      c10 = tmp58;
+      closure_10 = tmp58;
       const items3 = [null != tmpResult[0]];
       const memo2 = obj.useMemo(() => {
         let tmp = null;
-        if (c10) {
+        if (closure_10) {
           const obj = { title: null, description: null, avatarSrc: null, decorationAsset: "", renderImgComponent: null };
           const intl = navigateToSettings(_undefined[22]).intl;
           obj[0] = intl.string(navigateToSettings(_undefined[22]).t.epBu6F);
@@ -297,11 +264,11 @@ function UnconnectedYouScreen(arg0) {
       }, items3);
       const ref4 = obj.useRef(null);
       const ref5 = obj.useRef(null);
-      c11 = tmp57;
+      closure_11 = tmp57;
       const items4 = [tmpResult[1], navigateToShop];
       const callback1 = obj.useCallback(() => {
         navigateToShop();
-        _undefined2(outer1_18.TAKE_ACTION);
+        callback2(closure_1_18.TAKE_ACTION);
       }, items4);
       let tmp63 = null != memo2;
       const tmp12Result7 = tmp12(7366);
@@ -313,7 +280,7 @@ function UnconnectedYouScreen(arg0) {
       if (!tmp63) {
         tmp66 = tmp65;
       }
-      c13 = tmp66;
+      closure_13 = tmp66;
       const tmp12Result8 = tmp12(16005);
       closure_14 = tmp(obj.useState(false), 2)[1];
       let tmp70Result = null;
@@ -346,7 +313,7 @@ function UnconnectedYouScreen(arg0) {
       }
       const items6 = [tmp66];
       const effect = obj.useEffect(() => {
-        if (c13) {
+        if (closure_13) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => callback(true), 500);
           return () => clearTimeout(closure_0);
@@ -385,7 +352,7 @@ function UnconnectedYouScreen(arg0) {
       obj11[2] = fetchStartedAt;
       class F {
         constructor(arg0) {
-          result = USER_YOU_SCREEN.set(arg0.contentOffset.y);
+          result = closure_5.set(arg0.contentOffset.y);
           return;
         }
       }
@@ -456,7 +423,7 @@ function UnconnectedYouScreen(arg0) {
           const obj21 = { animatedProps: null, style: null };
           obj21[0] = blurAnimatedProps;
           obj21[1] = tmp93.absoluteFillObject;
-          tmp78Result1 = tmp78(module_8986, obj21);
+          tmp78Result1 = tmp78(closure_22, obj21);
         }
         items14[2] = tmp78Result1;
         obj18[1] = items14;
@@ -570,16 +537,17 @@ function UnconnectedYouScreen(arg0) {
 ({ StyleSheet: c5, View: closure_6, ScrollView } = get_ActivityIndicator);
 ({ YOU_ACTION_SHEET_TOP_INSET: closure_12, YOU_AVATAR_SIZE: map1, YOU_SCREEN_ID: closure_14, YOU_SCROLL_EVENT_THROTTLE: closure_15 } = YOU_SCREEN_ID);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
+let closure_22 = importDefaultResult.createAnimatedComponent(_modDef8986);
 let closure_23 = createCacheKey.createStyles((marginTop) => {
   let obj = PlatformTypes;
   let xl;
   if (obj.isIOS()) {
-    xl = Themes.radii.xl;
+    xl = ThemesDefault.radii.xl;
   }
   obj = { borderTopLeftRadius: xl, borderTopRightRadius: null };
   let xl1;
   if (tmpResult.isIOS()) {
-    xl1 = Themes.radii.xl;
+    xl1 = ThemesDefault.radii.xl;
   }
   obj[1] = xl1;
   obj = { container: null, background: null, scrollView: null, profileEffectLayer: null, banner: null, gifTag: null, gifTagText: null, content: null };
@@ -592,29 +560,30 @@ let closure_23 = createCacheKey.createStyles((marginTop) => {
   obj[3] = { position: "absolute", top: 0, zIndex: 1 };
   obj[4] = { minHeight: marginTop, position: "absolute", top: 0, maxWidth: "100%" };
   const obj4 = { position: "absolute", left: 16, right: "auto", bottom: "auto", marginTop: 8, backgroundColor: null };
-  const obj1 = { flex: 1, flexGrow: 1, position: "relative" };
+  obj1 = { flex: 1, flexGrow: 1, position: "relative" };
   const obj2 = { overflow: "hidden" };
   const obj3 = { flex: 1 };
   const tmp = require;
   tmpResult = PlatformTypes;
-  const tmp10 = n;
-  const tmp10Result = n(Themes.unsafe_rawColors.WHITE);
-  obj4[5] = n(Themes.unsafe_rawColors.WHITE).alpha(0.9).css();
+  const tmp10 = nDefault;
+  const tmp10Result = nDefault(ThemesDefault.unsafe_rawColors.WHITE);
+  obj4[5] = nDefault(ThemesDefault.unsafe_rawColors.WHITE).alpha(0.9).css();
   obj[5] = obj4;
-  const alphaResult = n(Themes.unsafe_rawColors.WHITE).alpha(0.9);
-  obj[6] = { color: Themes.unsafe_rawColors.PRIMARY_800, fontSize: 14 };
+  const alphaResult = nDefault(ThemesDefault.unsafe_rawColors.WHITE).alpha(0.9);
+  obj[6] = { color: ThemesDefault.unsafe_rawColors.PRIMARY_800, fontSize: 14 };
   obj[7] = { marginTop, flex: 1, flexGrow: 1 };
   return obj;
 });
 let closure_24 = createCacheKey.createStyles(() => {
   let obj = { backButton: null };
-  obj = { position: "absolute", marginTop: Themes.space.PX_4, left: Themes.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
+  obj = { position: "absolute", marginTop: ThemesDefault.space.PX_4, left: ThemesDefault.space.PX_16, zIndex: 99, alignItems: "center", justifyContent: "center" };
   obj[0] = obj;
   return obj;
 });
-let closure_25 = require("module_4115").createAnimatedComponent(ScrollView);
+let closure_25 = importDefaultResult.createAnimatedComponent(ScrollView);
 let closure_28 = { code: "function YouScreenTsx1(e){const{scrollPosition}=this.__closure;scrollPosition.set(e.contentOffset.y);}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreen.tsx");
+const importDefaultResult1 = importDefaultResult;
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreen.tsx");
 
 export default function YouScreen(initialTab) {
   let stateFromStores;
@@ -622,9 +591,9 @@ export default function YouScreen(initialTab) {
   let memo;
   let callback;
   let obj = stateFromStores(memo[21]);
-  let items = [mergeGuildAvatar];
+  let items = [closure_11];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [_getSystemLocale];
+  const items1 = [closure_8];
   id = undefined;
   const stateFromStores1 = stateFromStores(memo[21]).useStateFromStores(items1, () => locale.locale);
   if (stateFromStores != null) {
@@ -634,7 +603,7 @@ export default function YouScreen(initialTab) {
   memo = React.useMemo(() => {
     let avatarURL;
     if (stateFromStores != null) {
-      avatarURL = stateFromStores.getAvatarURL(null, outer1_13);
+      avatarURL = stateFromStores.getAvatarURL(null, closure_1_13);
     }
     return avatarURL;
   }, items2);
@@ -649,11 +618,11 @@ export default function YouScreen(initialTab) {
     }
   }, items3);
   let tmpResult = tmp(tmp2[21]);
-  const items4 = [createUserWidgetFromServer];
+  const items4 = [closure_7];
   const stateFromStores2 = tmpResult.useStateFromStores(items4, () => {
     let firstWishlistId = null;
     if (null != id) {
-      firstWishlistId = outer1_7.getFirstWishlistId(tmp);
+      firstWishlistId = closure_1_7.getFirstWishlistId(tmp);
     }
     return firstWishlistId;
   });

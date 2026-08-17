@@ -1,5 +1,6 @@
 // discord_app/modules/game_profile/GameProfileStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = {};
 let closure_1 = {};
@@ -9,6 +10,7 @@ let closure_4 = {};
 let closure_5 = {};
 let closure_6 = {};
 let c7 = null;
+const Store = initializeDefault.Store;
 class GameProfileStore extends Store {
 }
 const prototype = GameProfileStore.prototype;
@@ -53,7 +55,7 @@ prototype["getPendingReturn"] = function getPendingReturn() {
   return c7;
 };
 GameProfileStore.displayName = "GameProfileStore";
-const gameProfileStore = new GameProfileStore(require("dispatcher"), {
+const gameProfileStore = new GameProfileStore(dispatcherDefault, {
   GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function handleGetSimilarGamesSuccess(gameId) {
     closure_0[gameId.gameId] = gameId.games;
   },
@@ -86,9 +88,6 @@ const gameProfileStore = new GameProfileStore(require("dispatcher"), {
     closure_6[gameId] = false;
   },
   GAME_PROFILE_SET_PENDING_RETURN: function handleSetPendingReturn(arg0) {
-    let channelId;
-    let gameId;
-    let initialScrollOffset;
     ({ gameId, channelId, initialScrollOffset } = arg0);
     gameId = undefined;
     if (_null != null) {

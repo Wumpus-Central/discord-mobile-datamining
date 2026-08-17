@@ -1,22 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx
-import noop from "noop";
-import { View } from "set";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import { createElement } from "noop";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { result } from "../../../../design/migrations/native/LegacyTokens.tsx";
-import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import Text from "Text" /* 4734 */;
+import result4 from "result" /* 6289 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import { createElement } from "noop" /* 19 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function AnimatedContainer(scale) {
-  let children;
-  let shadow;
   scale = scale.scale;
   const translateX = scale.translateX;
   const translateY = scale.translateY;
@@ -55,7 +51,7 @@ function AnimatedContainer(scale) {
     result = scale / 2;
   }
   sharedValue3 = scale(translateY[11]).useSharedValue(result);
-  const items1 = [sharedValue, sharedValue3, sharedValue1, sharedValue2, scale, translateY, translateX];
+  items1 = [sharedValue, sharedValue3, sharedValue1, sharedValue2, scale, translateY, translateX];
   const effect = stateFromStores.useEffect(() => {
     const result = sharedValue.set(1);
     const result1 = sharedValue3.set(scale);
@@ -69,37 +65,37 @@ function AnimatedContainer(scale) {
       tmp = scale;
       tmp2 = translateY;
       obj2 = scale(translateY[12]);
-      obj[0] = obj2.withTiming(c4.get());
-      tmp3 = c3;
-      if (c3) {
-        tmp7 = c6;
-        value = c6.get();
+      obj[0] = obj2.withTiming(closure_4.get());
+      tmp3 = closure_3;
+      if (closure_3) {
+        tmp7 = closure_6;
+        value = closure_6.get();
       } else {
         tmpResult = tmp(tmp2[13]);
-        tmp4 = c6;
-        tmp5 = outer1_11;
-        value = tmpResult.withSpring(c6.get(), outer1_11);
+        tmp4 = closure_6;
+        tmp5 = closure_1_11;
+        value = tmpResult.withSpring(closure_6.get(), closure_1_11);
       }
       items = [, , ];
       items[0] = { translateX: value };
       if (tmp3) {
-        tmp11 = c5;
-        value1 = c5.get();
+        tmp11 = closure_5;
+        value1 = closure_5.get();
       } else {
         tmpResult1 = tmp(tmp2[13]);
-        tmp8 = c5;
-        tmp9 = outer1_11;
-        value1 = tmpResult1.withSpring(c5.get(), outer1_11);
+        tmp8 = closure_5;
+        tmp9 = closure_1_11;
+        value1 = tmpResult1.withSpring(closure_5.get(), closure_1_11);
       }
       items[1] = { translateY: value1 };
       if (tmp3) {
-        tmp15 = c7;
-        value2 = c7.get();
+        tmp15 = closure_7;
+        value2 = closure_7.get();
       } else {
         tmpResult2 = tmp(tmp2[13]);
-        tmp12 = c7;
-        tmp13 = outer1_10;
-        value2 = tmpResult2.withSpring(c7.get(), outer1_10);
+        tmp12 = closure_7;
+        tmp13 = closure_1_10;
+        value2 = tmpResult2.withSpring(closure_7.get(), closure_1_10);
       }
       items[2] = { scale: value2 };
       obj[1] = items;
@@ -123,7 +119,7 @@ function GroupMemberCount(count) {
   count = count.count;
   let obj = apexExperiment;
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("GroupAvatar");
-  const tmp3 = callback2(useIsMobileVisualRefreshExperimentEnabled("GroupAvatar"));
+  const tmp3 = callback2(useIsMobileVisualRefreshExperimentEnabledDefault("GroupAvatar"));
   obj = { style: tmp3.avatarWrapper, children: null };
   obj = { style: tmp3.overflowCount, children: null };
   let str = "text-sm/semibold";
@@ -168,7 +164,7 @@ let closure_10 = { damping: 30, stiffness: 400 };
 let closure_11 = { damping: 30, stiffness: 400 };
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { groupContainer: { position: "relative" }, shadowContainer: null, shadowContainerBackground: null, shadowContainerBackgroundLight: null, shadowContainerBackgroundDark: null, gradientContainer: null, gradientDimOverlay: null, gradientImageBorder: null, avatarContainer: null, shadow: null, avatar: null, avatarWrapper: null, overflowCount: null };
-  obj = { borderRadius: Themes.radii.sm, shadowColor: null, shadowOffset: null, shadowRadius: null, shadowOpacity: null, elevation: null };
+  obj = { borderRadius: ThemesDefault.radii.sm, shadowColor: null, shadowOffset: null, shadowRadius: null, shadowOpacity: null, elevation: null };
   let BLACK;
   if (!arg0) {
     BLACK = tmp(712).colors.BLACK;
@@ -198,7 +194,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
     WHITE1 = tmp(712).colors.WHITE;
   }
   obj[4] = { backgroundColor: WHITE1, opacity: 0.15 };
-  const obj1 = { width: Themes.modules.mobile.GROUP_AVATAR_SIZE, height: Themes.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: Themes.radii.sm, backgroundColor: null };
+  obj1 = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, overflow: "hidden", borderRadius: ThemesDefault.radii.sm, backgroundColor: null };
   let prop1;
   if (!arg0) {
     prop1 = tmp(712).colors.CARD_BACKGROUND_DEFAULT;
@@ -210,8 +206,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
     prop2 = tmp(712).colors.BACKGROUND_MOD_SUBTLE;
   }
   obj[6] = { position: "absolute", left: 0, top: 0, right: 0, bottom: 0, backgroundColor: prop2 };
-  const obj2 = { width: Themes.modules.mobile.GROUP_AVATAR_SIZE, height: Themes.modules.mobile.GROUP_AVATAR_SIZE, borderRadius: Themes.radii.sm, borderWidth: null, borderColor: null, position: "absolute" };
-  obj2[3] = 1;
+  const obj2 = { width: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, height: ThemesDefault.modules.mobile.GROUP_AVATAR_SIZE, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, borderColor: null, position: "absolute" };
   let BORDER_SUBTLE;
   if (!arg0) {
     BORDER_SUBTLE = tmp(712).colors.BORDER_SUBTLE;
@@ -226,7 +221,7 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   const obj4 = { shadowColor: BLACK1, shadowOpacity: null, shadowOffset: null, shadowRadius: null };
   let DARK_03_LIGHT_02;
   if (!arg0) {
-    DARK_03_LIGHT_02 = result.DARK_03_LIGHT_02;
+    DARK_03_LIGHT_02 = result4.DARK_03_LIGHT_02;
   }
   obj4[1] = DARK_03_LIGHT_02;
   let obj5;
@@ -259,23 +254,21 @@ items1[2] = items3;
 const items4 = [{ translateY: -14, translateX: -14, scale: 0.875 }, { translateY: 14, translateX: 14, scale: 0.875 }, { translateY: -18, translateX: 18, scale: 0.625 }, { translateY: 18, translateX: -18, scale: 0.625 }];
 items1[3] = items4;
 let closure_14 = { code: "function GroupAvatarTsx1(){const{withTiming,opacityAnimation,useReducedMotion,translateXAnimation,withSpring,SPRING_OPTIONS_POSITION,translateYAnimation,scaleAnimation,SPRING_OPTIONS_SCALE}=this.__closure;return{opacity:withTiming(opacityAnimation.get()),transform:[{translateX:useReducedMotion?translateXAnimation.get():withSpring(translateXAnimation.get(),SPRING_OPTIONS_POSITION)},{translateY:useReducedMotion?translateYAnimation.get():withSpring(translateYAnimation.get(),SPRING_OPTIONS_POSITION)},{scale:useReducedMotion?scaleAnimation.get():withSpring(scaleAnimation.get(),SPRING_OPTIONS_SCALE)}]};}" };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/GroupAvatar.tsx");
 
 export default function GroupAvatar(users) {
-  let primaryColor;
-  let theme;
   users = users.users;
   const guildId = users.guildId;
   let ref;
   let React;
-  let c4;
+  c4 = undefined;
   let num;
-  let closure_6;
+  closure_6 = undefined;
   let tmp3 = callback2(guildId(ref[7])("GroupAvatar"));
   let obj = users(ref[8]);
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme } = themeContext);
-  let obj1 = users(ref[8]);
+  obj1 = users(ref[8]);
   let shadowContainerBackground = obj1.isThemeLight(theme) ? tmp3.shadowContainerBackgroundLight : tmp3.shadowContainerBackgroundDark;
   ref = React.useRef(false);
   const effect = React.useEffect(() => {
@@ -300,18 +293,18 @@ export default function GroupAvatar(users) {
       obj.key = tmp.id;
       obj.animateOnMount = callback;
       obj.shadow = arr.length >= 2;
-      if (!noop) {
+      if (!closure_3) {
         obj = { guildId: null, user: null };
         obj[0] = guildId;
         obj[1] = tmp;
-        let tmp13 = callback(outer1_17, obj);
+        let tmp13 = callback(closure_1_17, obj);
         tmp3(tmp4, obj, tmp13);
       }
       obj = { count: null };
       obj[0] = c4;
-      tmp13 = callback(outer1_16, obj);
-      tmp3 = outer1_8;
-      tmp4 = outer1_15;
+      tmp13 = callback(closure_1_16, obj);
+      tmp3 = closure_1_8;
+      tmp4 = closure_1_15;
     }
   });
   if (null == primaryColor) {

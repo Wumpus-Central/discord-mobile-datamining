@@ -1,22 +1,22 @@
 // discord_app/modules/scheduled_messages/ScheduledMessageUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import hasFlag from "hasFlag";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageFlags } from "ME";
-import { PremiumTypes } from "GuildFeatures";
-import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS";
-import ApexExperiment from "ApexExperiment";
-import { t } from "../../../_runtime/03975_t.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isPremiumAtLeast } from "../../utils/PremiumTypeUtils.tsx";
-import { regExp } from "../suppress_notifications/parseContentForSuppressNotifications.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import _modDef38 from "module_38" /* 38 */;
+import initialize from "initialize" /* 589 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import isPremiumAtLeast from "isPremiumAtLeast" /* 1945 */;
+import tDefault from "t" /* 3975 */;
+import regExp from "regExp" /* 7437 */;
+import regExpDefault from "regExp" /* 7437 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "hasFlag" /* 4031 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { MessageFlags } from "ME" /* 676 */;
+import { PremiumTypes } from "GuildFeatures" /* 1924 */;
+import MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS from "MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS" /* 11170 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
-({ MAX_SCHEDULED_MESSAGES_PER_USER: metroImportAll, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
+require = arg1;
+({ MAX_SCHEDULED_MESSAGES_PER_USER: closure_8, MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS: c9 } = MIN_SCHEDULE_TIME_INTO_FUTURE_SECONDS);
 class ScheduledMessagesConfig {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -28,7 +28,7 @@ class ScheduledMessagesConfig {
 }
 ApexExperiment = { name: "2026-08-scheduled-messages", kind: "user", defaultConfig: null, variations: null };
 ApexExperiment = Object.create(ScheduledMessagesConfig.prototype);
-require("module_38")(true, "Config is missing scheduled message limit");
+_modDef38(true, "Config is missing scheduled message limit");
 ApexExperiment.enabled = false;
 ApexExperiment.limit = 0;
 ApexExperiment[2] = ApexExperiment;
@@ -40,7 +40,7 @@ const obj1 = {
       HermesBuiltin.throwTypeError();
     }
     const obj = Object.create(ScheduledMessagesConfig.prototype);
-    00038__(null != parsed.limit, "Config is missing scheduled message limit");
+    _modDef38(null != parsed.limit, "Config is missing scheduled message limit");
     obj.enabled = true;
     obj.limit = parsed.limit;
     return obj;
@@ -52,22 +52,20 @@ obj1[2] = (arg0) => {
     HermesBuiltin.throwTypeError();
   }
   const obj = Object.create(ScheduledMessagesConfig.prototype);
-  00038__(null != parsed.limit, "Config is missing scheduled message limit");
+  _modDef38(null != parsed.limit, "Config is missing scheduled message limit");
   obj.enabled = true;
   obj.limit = parsed.limit;
   return obj;
 };
 ApexExperiment[3] = obj1;
-ApexExperiment = ApexExperiment.createApexExperiment(ApexExperiment);
-const tmp3 = new require("ME")("Scheduled Messages");
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
+let closure_11 = ApexExperiment.createApexExperiment(ApexExperiment);
+const tmp3 = new timestampDefault("Scheduled Messages");
+const result = require("set").fileFinishedImporting("modules/scheduled_messages/ScheduledMessageUtils.tsx");
 
 export const scheduledMessageLogger = tmp3;
 export const parseContentAndFlagsForSilentMessage = function parseContentAndFlagsForSilentMessage(arg0) {
-  let content;
-  let flags;
   ({ content, flags } = arg0);
-  const tmp2 = callback(regExp(content), 2);
+  const tmp2 = callback(regExpDefault(content), 2);
   const items = [, ];
   if (tmp2[0]) {
     items[0] = tmp2[1];
@@ -89,8 +87,6 @@ export const parseContentAndFlagsForSilentMessage = function parseContentAndFlag
   return tmp4;
 };
 export const unparseContentAndFlagsForSilentMessage = function unparseContentAndFlagsForSilentMessage(arg0) {
-  let content;
-  let flags;
   ({ content, flags } = arg0);
   if (flags == null) {
     flags = 0;
@@ -103,16 +99,16 @@ export const unparseContentAndFlagsForSilentMessage = function unparseContentAnd
   return combined;
 };
 export const useCanUseScheduledMessages = function useCanUseScheduledMessages() {
-  return ApexExperiment.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
+  return store.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
 };
 export const canUseScheduledMessages = function canUseScheduledMessages(location) {
-  return ApexExperiment.getConfig({ location }).enabled;
+  return store.getConfig({ location }).enabled;
 };
 export const getDefaultScheduledTime = function getDefaultScheduledTime() {
-  const obj = t();
-  const addResult = t().add(closure_9, "seconds");
-  const obj2 = t();
-  const addResult1 = t().startOf("hour").add(1, "hour");
+  const obj = tDefault();
+  const addResult = tDefault().add(closure_9, "seconds");
+  const obj2 = tDefault();
+  const addResult1 = tDefault().startOf("hour").add(1, "hour");
   let addResult2 = addResult1;
   if (addResult1.isBefore(addResult)) {
     addResult2 = addResult1.add(1, "hour");
@@ -122,15 +118,15 @@ export const getDefaultScheduledTime = function getDefaultScheduledTime() {
 export const getScheduledMessagesLimit = function getScheduledMessagesLimit(location) {
   let obj = isPremiumAtLeast;
   obj = { location };
-  const config = ApexExperiment.getConfig(obj);
+  const config = store.getConfig(obj);
   if (!config.enabled) {
     return 0;
   }
 };
 export const useScheduledMessagesLimit = function useScheduledMessagesLimit(location) {
-  const config = ApexExperiment.useConfig({ location });
+  const config = store.useConfig({ location });
   initialize;
-  [][0] = mergeGuildAvatar;
+  [][0] = closure_5;
   if (!config.enabled) {
     return 0;
   }
@@ -144,11 +140,9 @@ export const convertServerScheduledMessageSend = function convertServerScheduled
     attachment_uploads = [];
   }
   obj[5] = attachment_uploads.map((filename) => ({ filename: filename.filename, uploadedFilename: filename.uploaded_filename, description: filename.description, title: filename.title }));
-  obj = { id: body.scheduled_message_id, content: body.scheduled_message.content, author: authStore.getUser(body.user_id), timestamp: null, channel_id: null };
-  obj[3] = t(body.send_at_timestamp).toDate();
-  obj[4] = body.scheduled_message.channel_id;
-  const obj4 = t(body.send_at_timestamp);
-  obj[6] = new hasFlag(obj);
+  obj = { id: body.scheduled_message_id, content: body.scheduled_message.content, author: authStore.getUser(body.user_id), timestamp: tDefault(body.send_at_timestamp).toDate(), channel_id: body.scheduled_message.channel_id };
+  const obj4 = tDefault(body.send_at_timestamp);
+  obj[6] = new closure_4(obj);
   return obj;
 };
 export const convertServerScheduledMessage = function convertServerScheduledMessage(channelId) {

@@ -1,12 +1,14 @@
 // discord_app/modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx
-import expandEventProperties from "expandEventProperties";
-import "getIntervalMs";
-import importDefaultResult1 from "TelemetryChannel";
-import { apexExperiment } from "../ZoomedInAnalyticsExperiment.tsx";
+import apexExperiment from "apexExperiment" /* 13559 */;
+import getIntervalMsDefault from "getIntervalMs" /* 13560 */;
+import TelemetryChannel from "TelemetryChannel" /* 13562 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult1 from "TelemetryChannel" /* 13562 */;
 
-const require = arg1;
+require = arg1;
 let closure_4 = { type: "ROWS", limit: 250 };
 let closure_5 = { type: "ROWS", limit: 10000 };
+getIntervalMsDefault;
 class ZoomedInTelemetryImpl extends tmp3 {
   constructor() {
     tmp2 = require("TelemetryChannel");
@@ -31,8 +33,8 @@ prototype["getExportBatchSize"] = function getExportBatchSize() {
   return 250;
 };
 prototype["exportEntries"] = function exportEntries(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   return callback(function*() {
     if (table === 2) {
       table = 3;
@@ -64,21 +66,21 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
             obj[0] = arg1;
             return obj;
           } else {
-            let c5 = 1;
+            c5 = 1;
             let items = [];
-            let closure_0 = items;
-            let tmp20 = outer1_0;
-            let closure_1 = outer1_0;
-            let tmp21 = outer1_0;
-            closure_1 = outer1_0;
-            closure_0 = outer1_0[Symbol.iterator]();
+            closure_0 = items;
+            let tmp20 = closure_1_0;
+            closure_1 = closure_1_0;
+            let tmp21 = closure_1_0;
+            closure_1 = closure_1_0;
+            closure_0 = closure_1_0[Symbol.iterator]();
             let tmp7 = closure_1;
             let tmp8 = closure_0;
             while (closure_0 !== undefined) {
               c5 = 2;
-              let tmp10 = outer1_0;
+              let tmp10 = closure_1_0;
               let tmp11 = table;
-              let obj1 = outer1_0(table[4]);
+              obj1 = closure_1_0(table[4]);
               let zoomedInAnalyticsEvent = obj1.buildZoomedInAnalyticsEvent(tmp9);
               if (null != zoomedInAnalyticsEvent) {
                 obj1 = { key: null, props: null };
@@ -100,14 +102,12 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
               table = 1;
               let obj2 = { value: null, done: false };
               obj2[0] = Promise.all(items.map((arg0, arg1) => {
-                let key;
-                let props;
                 let flush = closure_1;
                 ({ key, props } = arg0);
                 if (closure_1) {
                   flush = arg1 === length.length - 1;
                 }
-                return outer2_1(table[5]).track(key, props, { flush });
+                return closure_2_1(table[5]).track(key, props, { flush });
               }));
               return obj2;
             }
@@ -148,6 +148,6 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
 let items = [require("TelemetryChannel").TelemetryChannel.ZOOMED];
 // ThrowIfThisInitialized (0x7c)
 let tmp5 = new "exportEntries"(importDefaultResult1, items, tmp, prototype, ZoomedInTelemetryImpl, "exportEntries", importDefaultResult1);
-const result = require("getIntervalMs").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
+const result = require("set").fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 
 export default tmp5;

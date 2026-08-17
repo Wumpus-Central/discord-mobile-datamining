@@ -1,12 +1,12 @@
 // discord_app/modules/game_profile/hooks/useResolveGameForProfile.tsx
-import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
-import { importDefaultResult1 } from "../../games/hooks/useGame.tsx";
-import { useResolveGame } from "../../games/hooks/useResolveGame.tsx";
-let result = require("useResolveGame").fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
+import set from "set" /* 2 */;
+import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7145 */;
+import useResolveGameDefault from "useResolveGame" /* 9523 */;
+
+let result = set.fileFinishedImporting("modules/game_profile/hooks/useResolveGameForProfile.tsx");
 
 export default function useResolveGameForProfile(arg0) {
-  let applicationId;
-  let gameId;
   ({ applicationId, gameId } = arg0);
   let obj = useGetOrFetchApplications;
   let tmp3;
@@ -24,13 +24,13 @@ export default function useResolveGameForProfile(arg0) {
     gameId = tmp(4644).ROBLOX_GAME_ID;
   }
   obj[1] = gameId;
-  let tmp6Result = useResolveGame(obj);
+  let tmp6Result = useResolveGameDefault(obj);
   let isRobloxSubgameGameResult = null != tmp6Result.gameRecord;
   if (isRobloxSubgameGameResult) {
     tmpResult = tmp(4643);
     isRobloxSubgameGameResult = tmpResult.isRobloxSubgameGame(tmp6Result.gameRecord);
   }
-  const tmp6 = useResolveGame;
+  const tmp6 = useResolveGameDefault;
   let ROBLOX_GAME_ID;
   if (isRobloxSubgameGameResult) {
     ROBLOX_GAME_ID = tmp(4644).ROBLOX_GAME_ID;

@@ -1,33 +1,32 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { EMOJI_URL_BASE_SIZE } from "set";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "set";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import Text from "Text" /* 4734 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-const require = arg1;
+require = arg1;
 class ToastEmoji {
   constructor(arg0) {
     emoji = global.emoji;
-    c1 = undefined;
+    closure_1 = undefined;
     obj = require("initialize");
     items = [];
-    items[0] = maybeApplyNoTextColorForLightCustomTheme;
+    items[0] = closure_4;
     stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-    c1 = stateFromStores;
-    tmp2 = jsx();
+    closure_1 = stateFromStores;
+    tmp2 = closure_7();
     items1 = [, ];
     items1[0] = emoji;
     items1[1] = stateFromStores;
-    memo = noop.useMemo(() => {
+    memo = closure_3.useMemo(() => {
       if (null != emoji.id) {
-        let obj = stateFromStores(outer1_2[8]);
+        let obj = stateFromStores(closure_1_2[8]);
         obj = { id: null, animated: null, size: null };
         obj[0] = tmp.id;
         let animated = !stateFromStores;
@@ -35,7 +34,7 @@ class ToastEmoji {
           animated = tmp.animated;
         }
         obj[1] = animated;
-        obj[2] = outer1_5;
+        obj[2] = closure_1_5;
         let url = obj.getEmojiURL(obj);
       } else {
         url = tmp.url;
@@ -55,14 +54,14 @@ class ToastEmoji {
   }
 }
 function ToastText(emoji) {
-  let obj = { variant: "text-sm/normal", style: createCacheKey().toastText, children: null };
+  let obj = { variant: "text-sm/normal", style: callback().toastText, children: null };
   const intl = getSystemLocale.intl;
   obj = { emojiName: emoji.emoji.name };
   obj[2] = intl.format(getSystemLocale.t.nKY0Fl, obj);
   return jsx(Text.Text, { emojiName: emoji.emoji.name });
 }
 createCacheKey = { toastEmoji: null, toastEmojiCustom: null, toastEmojiText: null, toastText: null };
-createCacheKey = { marginLeft: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_8 };
+createCacheKey = { marginLeft: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 24, height: 24 };
 let num = 16;
@@ -75,10 +74,10 @@ if (set.isIOS()) {
   num2 = 32;
 }
 obj1[1] = num2;
-obj1[3] = require("Themes").colors.INTERACTIVE_TEXT_DEFAULT;
+obj1[3] = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 createCacheKey[2] = obj1;
-createCacheKey[3] = { marginRight: require("Themes").space.PX_12, marginVertical: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[3] = { marginRight: ThemesDefault.space.PX_12, marginVertical: ThemesDefault.space.PX_8 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapEmojiUpdatedToast.tsx");
 
 export { ToastEmoji };
@@ -94,12 +93,12 @@ export const showDoubleTapEmojiUpdatedToast = function showDoubleTapEmojiUpdated
   } else {
     obj = { key: "DEFAULT_REACTION_EMOJI_UPDATED", icon: null, content: null, toastDurationMs: 3000 };
     obj[1] = function icon() {
-      return outer1_6(outer1_8, { emoji });
+      return closure_1_6(closure_1_8, { emoji });
     };
     obj[2] = function content() {
-      return outer1_6(outer1_9, { emoji });
+      return closure_1_6(closure_1_9, { emoji });
     };
-    dispatcher.open(obj);
-    const obj2 = dispatcher;
+    dispatcherDefault.open(obj);
+    const obj2 = dispatcherDefault;
   }
 };

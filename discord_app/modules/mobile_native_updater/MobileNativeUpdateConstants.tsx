@@ -1,8 +1,8 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateConstants.tsx
-import importDefaultResult from "t";
-import getConstants from "getConstants";
-import getConstants from "getConstants";
-import durationResult from "module_6";
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import importDefaultResult from "t" /* 3975 */;
+import getConstants from "getConstants" /* 1626 */;
+import durationResult from "module_6" /* 6 */;
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
@@ -11,8 +11,8 @@ if (undefined !== process.env.INTERNAL_UPDATE_URL) {
   if ("" !== process.env.INTERNAL_UPDATE_URL) {
     if (obj2.isIOS()) {
       const _process2 = process;
-      let toURLSafeResult = require("isDiscordProxiedAssetUrl").toURLSafe(process.env.INTERNAL_UPDATE_URL);
-      const importDefaultResult1 = require("isDiscordProxiedAssetUrl");
+      let toURLSafeResult = isDiscordProxiedAssetUrlDefault.toURLSafe(process.env.INTERNAL_UPDATE_URL);
+      const importDefaultResult1 = isDiscordProxiedAssetUrlDefault;
     } else {
       toURLSafeResult = null;
       const obj3 = require("set");
@@ -62,7 +62,7 @@ if (null !== tmp3) {
     }
   }
 }
-const result = require("isDiscordProxiedAssetUrl").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateConstants.tsx");
+const result = require("set").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateConstants.tsx");
 
 export const UPDATE_CHECK_INTERVAL = durationResult;
 export const UPDATE_CONFIG = tmp11;

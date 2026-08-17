@@ -1,18 +1,20 @@
 // discord_app/modules/notifications/HabitualDNDStore.tsx
-import filterPlayingActivities from "filterPlayingActivities";
-import { StatusTypes } from "ME";
-import { PersistedStore } from "initialize";
-import { set } from "../../utils/Durations.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import closure_3 from "filterPlayingActivities" /* 7250 */;
+import { StatusTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 let closure_5 = [];
 let c6 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class HabitualDNDStore extends PersistedStore {
 }
 const prototype = HabitualDNDStore.prototype;
 prototype["initialize"] = function initialize(sessionStartsWithDND) {
-  this.waitFor(filterPlayingActivities);
+  this.waitFor(closure_3);
   let isArray = null != sessionStartsWithDND;
   if (isArray) {
     const _Array = Array;
@@ -36,7 +38,7 @@ prototype["getTemp"] = function getTemp() {
 };
 HabitualDNDStore.displayName = "HabitualDNDStore";
 HabitualDNDStore.persistKey = "habitualDND";
-const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
+const habitualDNDStore = new HabitualDNDStore(dispatcherDefault, {
   POST_CONNECTION_OPEN: function handleConnect() {
     if (status.getStatus() === StatusTypes.DND) {
       const StatusExpiresAtSetting = explicitContentFromProto.StatusExpiresAtSetting;
@@ -59,7 +61,7 @@ const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
           const _setTimeout = setTimeout;
           const timerId = setTimeout(() => {
             callback(709).dispatch({ type: "HABITUAL_DND_CLEAR" });
-          }, 15 * set.Millis.SECOND);
+          }, 15 * setDefault.Millis.SECOND);
         }
       }
     }
@@ -73,7 +75,7 @@ const habitualDNDStore = new HabitualDNDStore(require("dispatcher"), {
         return arg0 < timestamp - 3 * callback(table[2]).Millis.DAY;
       });
     }
-    let c6 = someResult;
+    c6 = someResult;
     arr = [];
   }
 });

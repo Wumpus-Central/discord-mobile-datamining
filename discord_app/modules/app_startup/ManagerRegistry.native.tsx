@@ -1,6 +1,6 @@
 // discord_app/modules/app_startup/ManagerRegistry.native.tsx
-import set from "populateMap";
-import set from "handleMessageCreate";
+import set from "populateMap" /* 17110 */;
+import set from "set" /* 2 */;
 import { prototype } from "../accept_invite/native/AcceptInviteManager.tsx";
 import { handlePostConnectionOpen } from "../age_gate/native/AgeGateManager.tsx";
 import { updateApiRequestConfig } from "../api_request_config/native/ApiRequestConfigManager.tsx";

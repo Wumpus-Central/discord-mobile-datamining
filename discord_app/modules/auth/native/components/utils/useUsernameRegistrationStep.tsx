@@ -1,15 +1,13 @@
 // discord_app/modules/auth/native/components/utils/useUsernameRegistrationStep.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import isRateLimited from "isRateLimited";
-import { useRegistrationUIStore } from "useRegistrationUIStore";
-import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "isRateLimited" /* 14119 */;
+import { useRegistrationUIStore } from "useRegistrationUIStore" /* 15212 */;
+import RegistrationTransitionActionTypes from "RegistrationTransitionActionTypes" /* 15213 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ authStateToRegisterTransitionStep: error, RegistrationTransitionActionTypes: metroImportAll } = RegistrationTransitionActionTypes);
-let result = require("isRateLimited").fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
+({ authStateToRegisterTransitionStep: error, RegistrationTransitionActionTypes: closure_8 } = RegistrationTransitionActionTypes);
+let result = require("set").fileFinishedImporting("modules/auth/native/components/utils/useUsernameRegistrationStep.tsx");
 
 export const useUsernameRegistrationStep = function useUsernameRegistrationStep(REGISTER_ACCOUNT_INFORMATION) {
   const _require = REGISTER_ACCOUNT_INFORMATION;
@@ -17,7 +15,7 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
   navigation = _require(navigation[6]).useNavigation();
   let str = useRegistrationUIStore((registrationOptions) => registrationOptions.registrationOptions).username;
   if (str == null) {
-    str = isRateLimited.registrationUsernameSuggestion();
+    str = closure_5.registrationUsernameSuggestion();
   }
   if (str == null) {
     str = "";
@@ -46,8 +44,8 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
     }
     if (type === REGISTER_ACCOUNT_INFORMATION(navigation[9]).NameValidationState.ERROR) {
       obj = { step: null, actionType: null, details: null };
-      obj[0] = outer1_7(REGISTER_ACCOUNT_INFORMATION);
-      obj[1] = outer1_8.INPUT_ERROR;
+      obj[0] = closure_1_7(REGISTER_ACCOUNT_INFORMATION);
+      obj[1] = closure_1_8.INPUT_ERROR;
       const items = [tmp.message];
       obj[2] = items;
       context(obj);
@@ -57,10 +55,10 @@ export const useUsernameRegistrationStep = function useUsernameRegistrationStep(
       const result = tmp3Result.handleRegistrationSubmit(REGISTER_ACCOUNT_INFORMATION, navigation, context);
     } else {
       obj = { step: null, toStep: null, actionType: null };
-      obj[0] = outer1_7(REGISTER_ACCOUNT_INFORMATION);
+      obj[0] = closure_1_7(REGISTER_ACCOUNT_INFORMATION);
       tmp3Result = tmp3(tmp4[10]);
       obj[1] = tmp3Result.getNextRegistrationTransitionStep(REGISTER_ACCOUNT_INFORMATION);
-      obj[2] = outer1_8.SUCCESS;
+      obj[2] = closure_1_8.SUCCESS;
       context(obj);
       const nextAuthState = tmp3(tmp4[10]).getNextAuthState(REGISTER_ACCOUNT_INFORMATION);
       const StackActions = tmp3(tmp4[11]).StackActions;

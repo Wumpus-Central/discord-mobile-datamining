@@ -1,41 +1,37 @@
 // discord_app/modules/directory_channels/native/components/GuildDirectoryEmpty.tsx
-import "set";
-import get_ActivityIndicator from "showInstantInviteActionSheet";
-import comparator from "comparator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "comparator" /* 1980 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c3;
-let c4;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
+noopAll;
 ({ Image: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ InstantInviteSources: closure_6, Fonts } = ME);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, header: null, title: null, description: null, ctaContainer: null };
-createCacheKey = { flex: 1, justifyContent: "flex-end", padding: 16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, justifyContent: "flex-end", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 16, alignSelf: "center" };
-createCacheKey[2] = { fontFamily: Fonts.PRIMARY_BOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
+createCacheKey[2] = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
 createCacheKey[3] = { textAlign: "center", alignSelf: "center", marginBottom: 24 };
 createCacheKey[4] = { marginBottom: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { fontFamily: Fonts.PRIMARY_BOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
-const result = require("comparator").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEmpty.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { fontFamily: Fonts.PRIMARY_BOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, fontSize: 24, textAlign: "center", marginBottom: 8, alignSelf: "center" };
+const result = require("set").fileFinishedImporting("modules/directory_channels/native/components/GuildDirectoryEmpty.tsx");
 
 export default function GuildDirectoryEmpty(guild) {
   guild = guild.guild;
   const channel = guild.channel;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback2();
   let obj = guild(589);
-  const items = [comparator];
-  dependencyMap = obj.useStateFromStores(items, () => outer1_5.getChannels(guild.id));
-  let obj1 = guild(11474);
+  const items = [closure_5];
+  dependencyMap = obj.useStateFromStores(items, () => closure_1_5.getChannels(guild.id));
+  obj1 = guild(11474);
   obj = { contentContainerStyle: items1, children: null };
   items1 = [tmp.container, ];
   obj = { paddingBottom: channel(1629)().bottom + 16 };
@@ -71,12 +67,11 @@ export default function GuildDirectoryEmpty(guild) {
   const obj6 = {
     style: tmp.ctaContainer,
     onPress() {
-      return guild(8918).handleOpenInviteActionsheet(guild, channel.id, dependencyMap, outer1_6.HUB_EMPTY_STATE);
+      return guild(8918).handleOpenInviteActionsheet(guild, channel.id, dependencyMap, closure_1_6.HUB_EMPTY_STATE);
     },
-    iconSource: null,
+    iconSource: channel(11936),
     title: null
   };
-  obj6[2] = channel(11936);
   const intl4 = tmp4(1236).intl;
   obj6[3] = intl4.string(guild(1236).t.L4bwJ9);
   items2[4] = callback(guild(8083).FormCTA, obj6);

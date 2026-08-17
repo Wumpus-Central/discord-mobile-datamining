@@ -1,27 +1,21 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import loadInviteSuggestions from "loadInviteSuggestions";
-import { View } from "module_10673";
-import setSendState from "setSendState";
-import _computeRows from "_computeRows";
-import { ActivityActionTypes } from "ME";
-import InviteSendStates from "InviteSendStates";
-import { NOOP_NULL } from "sum";
-import jsxProd from "RedesignBottomSheetTitleHeaderBase";
-import createCacheKey from "createCacheKey";
-import { UserPlaceholderRow } from "../../../main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef8928 from "module_8928" /* 8928 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import setSendState from "setSendState" /* 11887 */;
+import closure_8 from "_computeRows" /* 11502 */;
+import { ActivityActionTypes } from "ME" /* 676 */;
+import InviteSendStates from "InviteSendStates" /* 4371 */;
+import { NOOP_NULL } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_14;
-let closure_15;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
 const require = arg1;
 function Loading() {
   let tmp2;
-  const tmp = createCacheKey();
+  const tmp = callback5();
   const items = [];
   let num = 0;
   do {
@@ -30,7 +24,7 @@ function Loading() {
     let tmp4 = dependencyMap;
     let obj = { row: null };
     obj[0] = num;
-    let arr = items.push(callback3(UserPlaceholderRow, obj, num));
+    let arr = items.push(callback3(_modDef8928, obj, num));
     num = num + 1;
   } while (num < 10);
   obj = { children: null };
@@ -43,27 +37,23 @@ function Loading() {
 ({ InviteSendStates: c10, InviteTargetTypes: unpackModuleId } = InviteSendStates);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { placeholderHeader: null, placeholderLabel: null, emptyState: null, searchAndShareContainer: null };
-createCacheKey = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+createCacheKey = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { height: 16, width: "40%", margin: 16, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+createCacheKey[1] = { height: 16, width: "40%", margin: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[2] = { backgroundColor: "transparent" };
-let obj1 = { height: 16, width: "40%", margin: 16, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
-createCacheKey[3] = { borderTopWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, marginTop: require("Themes").space.PX_8, paddingVertical: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12, flexDirection: "column", gap: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderTopWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, marginTop: require("Themes").space.PX_8, paddingVertical: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12, flexDirection: "column", gap: require("Themes").space.PX_12 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheet.tsx");
+let obj1 = { height: 16, width: "40%", margin: 16, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
+createCacheKey[3] = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, flexDirection: "column", gap: ThemesDefault.space.PX_12 };
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderTopWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: ThemesDefault.space.PX_8, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, flexDirection: "column", gap: ThemesDefault.space.PX_12 };
+let result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheet.tsx");
 
 export default function ActivityInviteSheet(activity) {
-  let c2;
-  let c4;
-  let tmp13;
-  let tmp6;
   activity = activity.activity;
   let analyticsLocations;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback5();
   analyticsLocations = analyticsLocations(7139)(analyticsLocations(7159).ACTIVITY_INVITE_SHEET).analyticsLocations;
   const tmp2 = analyticsLocations;
   const tmp4 = analyticsLocations(7139);
@@ -81,7 +71,7 @@ export default function ActivityInviteSheet(activity) {
     let tmp3 = null;
     if (null != id) {
       let tmp6;
-      if (_undefined2[id] != null) {
+      if (table[id] != null) {
         tmp6 = tmp5[tmp2];
       }
       tmp3 = tmp6;
@@ -96,7 +86,7 @@ export default function ActivityInviteSheet(activity) {
     analyticsLocations(_undefined[15])(obj);
   }, items1);
   callback2 = React.useCallback((item) => {
-    let closure_0 = item;
+    closure_0 = item;
     if (null != closure_0) {
       const party = tmp2.party;
       let id;
@@ -106,15 +96,15 @@ export default function ActivityInviteSheet(activity) {
       if (null != id) {
         function markInviteSent() {
           if (null != id) {
-            outer2_6(tmp, item.item.id, outer2_10.SENT);
+            closure_2_6(tmp, item.item.id, closure_2_10.SENT);
           }
         }
-        outer1_6(id, item.item.id, outer1_10.SENDING);
+        closure_1_6(id, item.item.id, closure_1_10.SENDING);
         if (item.type === activity(_undefined[16]).RowTypes.CHANNEL) {
           try {
             let obj = { channelId: null, type: null, activity: null, location: null };
             obj[0] = tmp12;
-            obj[1] = outer1_9.JOIN;
+            obj[1] = closure_1_9.JOIN;
             obj[2] = tmp2;
             obj[3] = analyticsLocations(tmp24[13]).ACTIVITY_INVITE_SHEET;
             const obj3 = analyticsLocations(tmp24[17]);
@@ -132,7 +122,7 @@ export default function ActivityInviteSheet(activity) {
             obj = analyticsLocations(tmp24[17]);
             obj = { userId: null, type: null, activity: null, location: null };
             obj[0] = tmp4;
-            obj[1] = outer1_9.JOIN;
+            obj[1] = closure_1_9.JOIN;
             obj[2] = tmp2;
             obj[3] = analyticsLocations(tmp24[13]).ACTIVITY_INVITE_SHEET;
             const result = obj.sendActivityInviteUser(obj);
@@ -147,19 +137,17 @@ export default function ActivityInviteSheet(activity) {
     }
   }, items2);
   let obj = activity(589);
-  const items3 = [_computeRows];
+  const items3 = [closure_8];
   const stateFromStores = obj.useStateFromStores(items3, () => inviteSuggestionRows.getInviteSuggestionRows());
   const tmp5 = callback(React.useState(null), 2);
   [tmp13, c4] = callback(React.useState(false), 2);
   const effect = React.useEffect(() => {
-    _undefined3(true);
+    _undefined2(true);
     let obj = activity(_undefined[19]);
-    obj = { omitUserIds: null, inviteTargetType: null };
-    obj[0] = new Set();
-    obj[1] = outer1_11.EMBEDDED_APPLICATION;
+    obj = { omitUserIds: new Set(), inviteTargetType: closure_1_11.EMBEDDED_APPLICATION };
     const inviteSuggestions = obj.loadInviteSuggestions(obj);
     const set = new Set();
-    inviteSuggestions.catch(outer1_12).finally(() => {
+    inviteSuggestions.catch(closure_1_12).finally(() => {
       callback(false);
     });
   }, []);
@@ -172,7 +160,7 @@ export default function ActivityInviteSheet(activity) {
     tmp18 = !tmp16;
   }
   obj = { showGradient: tmp18, scrollable: true, startExpanded: true, header: null, children: null };
-  const obj1 = { title: null };
+  obj1 = { title: null };
   const intl = tmp11(1236).intl;
   obj1[0] = intl.string(activity(1236).t["OzOM/q"]);
   obj[3] = closure_13(activity(6949).BottomSheetTitleHeader, obj1);

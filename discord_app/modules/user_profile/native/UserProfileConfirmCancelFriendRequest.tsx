@@ -1,18 +1,15 @@
 // discord_app/modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmCancelFriendRequest.tsx");
 
 export default function UserProfileConfirmCancelFriendRequest(arg0) {
-  let onConfirm;
-  let userDisplayName;
   ({ userDisplayName, onConfirm } = arg0);
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
@@ -25,7 +22,7 @@ export default function UserProfileConfirmCancelFriendRequest(arg0) {
   obj[1] = intl3.string(getSystemLocale.t["bTfA//"]);
   obj[2] = onConfirm;
   const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "cancel-friend-request"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["eN6+rI"]);
   items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "nevermind");

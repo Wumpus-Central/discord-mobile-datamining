@@ -1,28 +1,24 @@
 // discord_app/modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
-import BoostedGuildTiers from "BoostedGuildTiers";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "handleGuildBoostsUpdate" /* 4267 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ BoostPurchaseIntent: closure_6, GuildPowerupType: error } = BoostedGuildTiers);
-let result = require("handleGuildBoostsUpdate").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useGuildPowerupOnActivate.tsx");
 
 export default function useGuildPowerupOnActivate(arg0, arg1) {
-  let error;
-  let isLoading;
   const _require = arg0;
-  const importDefault = arg1;
+  importDefault = arg1;
   const tmp = importDefault(onToggle[4])(arg0, arg1);
   onToggle = tmp.onToggle;
   ({ isLoading, error } = tmp);
   let obj = _require(onToggle[5]);
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = obj.useStateFromStores(items, () => tmp3.getGuild(closure_0));
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => guild.getGuild(closure_0));
   const tmp3 = importDefault(onToggle[6])(arg0, arg1);
-  createGuildRecordFromRust = tmp3;
+  closure_4 = tmp3;
   const analyticsLocations = importDefault(onToggle[7])().analyticsLocations;
   const tmp4 = importDefault(onToggle[8])("guild_powerup_activation");
   const shouldUseMobileWebRedirectCheckout = tmp4.shouldUseMobileWebRedirectCheckout;
@@ -31,7 +27,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
     onActivate: stateFromStores.useCallback(() => {
       if (null != stateFromStores) {
         if (null != PERK) {
-          if (createGuildRecordFromRust >= tmp14.cost) {
+          if (closure_4 >= tmp14.cost) {
             onToggle(true);
           } else {
             const diff = tmp14.cost - tmp15;
@@ -73,7 +69,7 @@ export default function useGuildPowerupOnActivate(arg0, arg1) {
                 if (availableGuildBoostSlots.length >= diff) {
                   obj = { guildBoostSlots: null, guildId: null, intent: null, onResult: null };
                   obj[0] = availableGuildBoostSlots.slice(0, PERK.cost);
-                  obj[1] = outer1_3.id;
+                  obj[1] = closure_1_3.id;
                   obj[2] = PERK;
                   obj[3] = function onResult(arg0) {
                     if (arg0) {

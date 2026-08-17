@@ -1,29 +1,29 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/TextInputField.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { MAX_TEXT_RESPONSE_LENGTH } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import TextInput from "TextInput" /* 8071 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { MAX_TEXT_RESPONSE_LENGTH } from "items" /* 6860 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { marginVertical: 12, flexDirection: "column" }, formHeader: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(require("sum").Fonts.DISPLAY_SEMIBOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));
+const merged = Object.assign(importDefaultResult(require("sum").Fonts.DISPLAY_SEMIBOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 16, { uppercase: false }));
 createCacheKey.paddingBottom = 16;
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("items").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TextInputField.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TextInputField.tsx");
 
 export default function TextInputField(field) {
   field = field.field;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let str = field.response;
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.formHeader, variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: field.label };

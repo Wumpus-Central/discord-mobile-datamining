@@ -1,34 +1,16 @@
 // discord_app/modules/messages/native/hooks/useScrollHandlers.tsx
-import noop from "noop";
-import updateChatInputContainerHeight from "updateChatInputContainerHeight";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "noop" /* 19 */;
+import updateChatInputContainerHeight from "updateChatInputContainerHeight" /* 8682 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ updateIsAtBottom: c4, updateShouldShowJumpToPresentButton: c5 } = updateChatInputContainerHeight);
-let closure_6 = new require("SCREEN_READER_ENABLED_GETTER")("useScrollHandlers");
-let tmp3 = new require("SCREEN_READER_ENABLED_GETTER")("useScrollHandlers");
-let result = require("timestamp").fileFinishedImporting("modules/messages/native/hooks/useScrollHandlers.tsx");
+let closure_6 = new timestampDefault("useScrollHandlers");
+let tmp3 = new timestampDefault("useScrollHandlers");
+let result = require("set").fileFinishedImporting("modules/messages/native/hooks/useScrollHandlers.tsx");
 
 export default function useScrollHandlers(arg0) {
-  let closure_10;
-  let closure_11;
-  let closure_12;
-  let closure_13;
-  let closure_14;
-  let closure_15;
-  let closure_16;
-  let noop;
-  let closure_4;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  let closure_9;
-  let dependencyMap;
-  let importDefault;
-  let require;
-  ({ chatRef: require, chatManager: importDefault, chatUpdatesQueue: dependencyMap, pendingUpdatesQueueRef: noop, animatedRef: closure_4, fetchMoreBefore: closure_5, fetchMoreAfter: closure_6, handleVisibleMessagesChange: closure_7, applyNativeRowsUpdate: closure_8, messages: closure_9, channel: closure_10, channelId: closure_11, screenIndex: closure_12, onScroll: closure_13, useReducedMotion: closure_14, isStaff: closure_15, visibleMessagesWindowHandler: closure_16 } = arg0);
+  ({ chatRef: require, chatManager: importDefault, chatUpdatesQueue: dependencyMap, pendingUpdatesQueueRef: closure_3, animatedRef: closure_4, fetchMoreBefore: closure_5, fetchMoreAfter: closure_6, handleVisibleMessagesChange: closure_7, applyNativeRowsUpdate: closure_8, messages: closure_9, channel: closure_10, channelId: closure_11, screenIndex: closure_12, onScroll: closure_13, useReducedMotion: closure_14, isStaff: closure_15, visibleMessagesWindowHandler: closure_16 } = arg0);
   let ref;
   let ref1;
   let ref2;
@@ -37,9 +19,6 @@ export default function useScrollHandlers(arg0) {
   let ref5;
   let ref6;
   function handleScrollCallbacks(isNearTop) {
-    let eventTimestamp;
-    let isAtBottom;
-    let isNearBottom;
     ({ eventTimestamp, isAtBottom, isNearBottom } = isNearTop);
     if (isNearBottom === undefined) {
       isNearBottom = false;
@@ -61,7 +40,7 @@ export default function useScrollHandlers(arg0) {
       flag4 = false;
     }
     if (null != closure_10) {
-      outer1_0(outer1_2[3]);
+      closure_1_0(closure_1_2[3]);
       const loadingMore = tmp29.loadingMore;
       let tmp6 = !loadingMore;
       if (!loadingMore) {
@@ -106,7 +85,7 @@ export default function useScrollHandlers(arg0) {
         current = ref1.current;
       }
       if (!current) {
-        obj = outer1_1(tmp3[4]);
+        obj = closure_1_1(tmp3[4]);
         const id = tmp.id;
         let num = 0;
         if (isAtBottom) {
@@ -115,7 +94,7 @@ export default function useScrollHandlers(arg0) {
         const result = obj.updateChannelDimensions(id, eventTimestamp, num, 1, 0);
         ref1.current = true;
       }
-      tmp3 = outer1_2;
+      tmp3 = closure_1_2;
     }
     return false;
   }
@@ -151,15 +130,15 @@ export default function useScrollHandlers(arg0) {
       ref4.current = isNearTop;
       ref6.current = dragging;
       ref5.current = decelerating;
-      outer1_0(outer1_2[5]).batchUpdates(() => {
+      closure_1_0(closure_1_2[5]).batchUpdates(() => {
         let hasMoreAfter = shouldShowJumpToPresent;
         if (!shouldShowJumpToPresent) {
-          hasMoreAfter = outer1_9.hasMoreAfter;
+          hasMoreAfter = closure_1_9.hasMoreAfter;
         }
-        outer2_5(outer1_11, outer1_12, hasMoreAfter);
-        outer2_4(outer1_12, isAtBottom);
+        closure_2_5(closure_1_11, closure_1_12, hasMoreAfter);
+        closure_2_4(closure_1_12, isAtBottom);
       });
-      const obj = outer1_0(outer1_2[5]);
+      const obj = closure_1_0(closure_1_2[5]);
     }
   }
   ref = React.useRef(undefined);
@@ -193,7 +172,7 @@ export default function useScrollHandlers(arg0) {
       if (flag) {
         flag = !closure_14;
       }
-      outer1_1(outer1_2[6]).scrollToTop(closure_0.current, flag);
+      closure_1_1(closure_1_2[6]).scrollToTop(closure_0.current, flag);
     },
     scrollToRelativeOffset(arg0) {
       let flag = arg1;
@@ -203,13 +182,13 @@ export default function useScrollHandlers(arg0) {
       if (flag) {
         flag = !closure_14;
       }
-      const result = outer1_1(outer1_2[6]).scrollToRelativeOffset(closure_0.current, arg0, flag);
+      const result = closure_1_1(closure_1_2[6]).scrollToRelativeOffset(closure_0.current, arg0, flag);
     },
     scrollToTopMessage() {
       previousRows = previousRows.getPreviousRows();
       if (previousRows.length > 0) {
-        outer1_1(outer1_2[6]).scrollTo(closure_0.current, previousRows.length - 1);
-        const obj = outer1_1(outer1_2[6]);
+        closure_1_1(closure_1_2[6]).scrollTo(closure_0.current, previousRows.length - 1);
+        const obj = closure_1_1(closure_1_2[6]);
       }
     },
     updateNativeRows(isLoadingAtTop) {
@@ -224,31 +203,17 @@ export default function useScrollHandlers(arg0) {
     handleScrollCallbacks,
     handleScroll,
     handleScrollPosition(arg0) {
-      let changesetUpdateId;
-      let decelerating;
-      let dragging;
-      let firstVisibleMessageIndex;
-      let firstVisibleMessagePercentVisible;
-      let isAtBottom;
-      let isFirstMessageVisible;
-      let isNearBottom;
-      let isNearTop;
-      let lastVisibleMessageIndex;
-      let lastVisibleMessagePercentVisible;
-      let nativeEvent;
-      let shouldShowJumpToPresent;
-      let timeStamp;
       ({ timeStamp, nativeEvent } = arg0);
       ({ firstVisibleMessageIndex, lastVisibleMessageIndex, changesetUpdateId } = nativeEvent);
       ({ isAtBottom, isNearBottom, isNearTop, dragging, decelerating, shouldShowJumpToPresent, isFirstMessageVisible, firstVisibleMessagePercentVisible, lastVisibleMessagePercentVisible } = nativeEvent);
-      let obj = outer1_0(outer1_2[7]);
+      let obj = closure_1_0(closure_1_2[7]);
       const changesetIdForChat = obj.getChangesetIdForChat(closure_0.current);
       if (changesetUpdateId !== changesetIdForChat) {
         if (null == ref.current) {
           ref.current = timeStamp;
         }
         if (closure_15) {
-          outer1_6.log("STAFF-ACK-LOG: Ignoring outdated scroll event.", closure_11, changesetUpdateId, changesetIdForChat, timeStamp);
+          closure_1_6.log("STAFF-ACK-LOG: Ignoring outdated scroll event.", closure_11, changesetUpdateId, changesetIdForChat, timeStamp);
         }
       } else {
         obj = { firstVisibleMessageRowIndex: null, lastVisibleMessageRowIndex: null, firstVisibleMessagePercentVisible: null, lastVisibleMessagePercentVisible: null, source: null };
@@ -273,14 +238,14 @@ export default function useScrollHandlers(arg0) {
         obj[6] = shouldShowJumpToPresent;
         obj[7] = isFirstMessageVisible;
         handleScroll(obj);
-        const obj1 = { rows: null, firstVisibleMessageRowIndex: null, lastVisibleMessageRowIndex: null };
+        obj1 = { rows: null, firstVisibleMessageRowIndex: null, lastVisibleMessageRowIndex: null };
         obj1[0] = previousRows._rows;
         obj1[1] = firstVisibleMessageIndex;
         obj1[2] = lastVisibleMessageIndex;
         closure_16.handleScrollPosition(obj1);
       }
-      tmp = outer1_0;
-      tmp2 = outer1_2;
+      tmp = closure_1_0;
+      tmp2 = closure_1_2;
     }
   };
 };

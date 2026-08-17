@@ -1,5 +1,5 @@
 // discord_app/modules/launchpad/native/shared/useSimpleGuildSize.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/useSimpleGuildSize.tsx");
 
@@ -19,7 +19,7 @@ export default function useSimpleGuildSize(size) {
     containerSize: num,
     containerSizeStyle: memo,
     containerStyles: size.useMemo(() => {
-      let num = 0;
+      num = 0;
       if (null == size) {
         num = 4;
       }

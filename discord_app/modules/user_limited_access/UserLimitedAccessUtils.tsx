@@ -1,7 +1,9 @@
 // discord_app/modules/user_limited_access/UserLimitedAccessUtils.tsx
-import { AbortCodes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
+const AbortCodes = ME.AbortCodes;
+const result = set.fileFinishedImporting("modules/user_limited_access/UserLimitedAccessUtils.tsx");
 
 export const isLimitedAccessErrorCode = function isLimitedAccessErrorCode(arg0, arg1) {
   let tmp = arg0 >= 400;

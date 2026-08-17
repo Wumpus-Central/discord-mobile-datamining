@@ -1,19 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NOOP } from "ME";
-import jsxProd from "jsxProd";
-import { useInitialValue } from "../../../../hooks/useInitialValue.tsx";
+import useInitialValueDefault from "useInitialValue" /* 7127 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let StyleSheet;
-let c5;
-let error;
-let metroImportAll;
 const require = arg1;
 function SidebarCoachmarkOverlayLayer(manager) {
   manager = manager.manager;
-  let closure_1;
+  closure_1 = undefined;
   closure_1 = callback(importAllResult.useState({}), 2)[1];
   const items = [manager];
   const effect = importAllResult.useEffect(() => {
@@ -35,7 +31,7 @@ function SidebarCoachmarkOverlayLayer(manager) {
 }
 let c4 = importAllResult;
 ({ StyleSheet, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 const context = importAllResult.createContext(null);
 let obj = { overlay: null };
 obj = {};
@@ -43,12 +39,12 @@ const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.zIndex = 1;
 obj[0] = obj;
 const styles = StyleSheet.create(obj);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/SidebarCoachmarkOverlay.native.tsx");
 
 export const SidebarCoachmarkOverlayContext = context;
 export const SidebarCoachmarkOverlay = function SidebarCoachmarkOverlay(enabled) {
   enabled = enabled.enabled;
-  const tmp = useInitialValue(() => {
+  const tmp = useInitialValueDefault(() => {
     const layerContextManager = new callback(table[6]).LayerContextManager();
     return layerContextManager;
   });

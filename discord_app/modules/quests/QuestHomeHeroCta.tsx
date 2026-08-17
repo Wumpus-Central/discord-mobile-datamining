@@ -1,5 +1,7 @@
 // discord_app/modules/quests/QuestHomeHeroCta.tsx
-const result = require("set").fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/quests/QuestHomeHeroCta.tsx");
 
 export const questHomeHeroCtaFromServer = function questHomeHeroCtaFromServer(cta) {
   let obj = { url: cta.url, buttonLabel: cta.button_label, android: null, ios: null };

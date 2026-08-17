@@ -1,9 +1,8 @@
 // discord_app/modules/build_overrides/native/BuildOverrideUtils.tsx
-import AlertActionCreators from "../../../actions/native/AlertActionCreators.tsx";
-import getCurrentBuildOverride from "getCurrentBuildOverride";
-import set from "set";
-import set from "set";
-import { BundleUpdaterManager } from "../../../lib/native/BundleUpdater.tsx";
+import BundleUpdaterManagerDefault from "BundleUpdaterManager" /* 10970 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getCurrentBuildOverride" /* 10638 */;
+import set from "set" /* 500 */;
 
 const require = arg1;
 function setBuildOverrideForBranch(id) {
@@ -22,9 +21,9 @@ function setBuildOverride(arg0) {
 function _setBuildOverride() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -52,12 +51,12 @@ function _setBuildOverride() {
               obj[0] = arg1;
               return obj;
             } else {
-              const dependencyMap = tmp2;
+              dependencyMap = tmp2;
               const callback = tmp5;
               let lib;
-              let obj4 = lib(outer1_2[3]);
-              const obj1 = {};
-              obj1[outer1_5] = lib;
+              let obj4 = lib(closure_1_2[3]);
+              obj1 = {};
+              obj1[closure_1_5] = lib;
               c3 = 1;
               c4 = 1;
               let obj2 = { value: null, done: false };
@@ -92,7 +91,7 @@ function _setBuildOverride() {
       }
     })();
   });
-  const _setBuildOverride = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -141,12 +140,12 @@ function _clearBuildOverride() {
             return obj;
           } else {
             const callback = tmp5;
-            let closure_0 = tmp2;
+            closure_0 = tmp2;
             closure_0 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(10969).clearBuildOverride();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0(10969).clearBuildOverride();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -176,7 +175,7 @@ function _clearBuildOverride() {
       }
     }
   });
-  const _clearBuildOverride = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -188,9 +187,9 @@ function _clearBuildOverride() {
 function _toggleOverride() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (currentBuildOverride === 2) {
         currentBuildOverride = 3;
@@ -218,13 +217,13 @@ function _toggleOverride() {
               obj[0] = arg1;
               return obj;
             } else {
-              const dependencyMap = 0;
+              dependencyMap = 0;
               const callback = tmp2;
               let lib;
               const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
               let id;
               if (overrides != null) {
-                if (overrides[outer1_5] != null) {
+                if (overrides[closure_1_5] != null) {
                   id = tmp18.id;
                 }
               }
@@ -234,27 +233,27 @@ function _toggleOverride() {
               if (override != null) {
                 const targetBuildOverride = override.targetBuildOverride;
                 if (targetBuildOverride != null) {
-                  if (targetBuildOverride[outer1_5] != null) {
+                  if (targetBuildOverride[closure_1_5] != null) {
                     id1 = tmp23.id;
                   }
                 }
               }
               if (id === id1) {
-                outer1_9();
+                closure_1_9();
               } else if (null != buildOverride.payload) {
                 if (obj10.isManualBuildOverrideLink(tmp37)) {
                   if (null != id1) {
-                    outer1_6(id1);
+                    closure_1_6(id1);
                     currentBuildOverride = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   }
                 }
-                obj10 = lib(outer1_2[6]);
+                obj10 = lib(closure_1_2[6]);
                 const tmp39 = lib;
                 c3 = 1;
                 currentBuildOverride = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = lib(outer1_2[3]).applyPublicBuildOverride(buildOverride.payload);
+                obj1 = { value: null, done: false };
+                obj1[0] = lib(closure_1_2[3]).applyPublicBuildOverride(buildOverride.payload);
                 return obj1;
               }
               currentBuildOverride = 3;
@@ -286,7 +285,7 @@ function _toggleOverride() {
       }
     })();
   });
-  const _toggleOverride = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -298,9 +297,9 @@ function _toggleOverride() {
 function _setBuildOverrideFromLink() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (currentBuildOverride === 2) {
         currentBuildOverride = 3;
@@ -328,13 +327,13 @@ function _setBuildOverrideFromLink() {
               obj[0] = arg1;
               return obj;
             } else {
-              const dependencyMap = tmp2;
+              dependencyMap = tmp2;
               const callback = tmp5;
               let lib;
               const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
               let id;
               if (overrides != null) {
-                if (overrides[outer1_5] != null) {
+                if (overrides[closure_1_5] != null) {
                   id = tmp18.id;
                 }
               }
@@ -344,7 +343,7 @@ function _setBuildOverrideFromLink() {
               if (override != null) {
                 const targetBuildOverride = override.targetBuildOverride;
                 if (targetBuildOverride != null) {
-                  if (targetBuildOverride[outer1_5] != null) {
+                  if (targetBuildOverride[closure_1_5] != null) {
                     id1 = tmp23.id;
                   }
                 }
@@ -353,8 +352,8 @@ function _setBuildOverrideFromLink() {
                 if (null != buildOverride.payload) {
                   c3 = 1;
                   currentBuildOverride = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = lib(outer1_2[3]).applyPublicBuildOverride(buildOverride.payload);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = lib(closure_1_2[3]).applyPublicBuildOverride(buildOverride.payload);
                   return obj1;
                 }
               }
@@ -388,7 +387,7 @@ function _setBuildOverrideFromLink() {
       }
     })();
   });
-  const _setBuildOverrideFromLink = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -410,7 +409,7 @@ export const setBuildOverrideForId = function setBuildOverrideForId(id) {
 };
 export { setBuildOverride };
 export const refreshBuildOverride = function refreshBuildOverride() {
-  const result = BundleUpdaterManager.checkForUpdateAndReload();
+  const result = BundleUpdaterManagerDefault.checkForUpdateAndReload();
 };
 export { clearBuildOverride };
 export const toggleOverride = function toggleOverride(code) {

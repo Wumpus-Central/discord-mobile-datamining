@@ -1,11 +1,15 @@
 // discord_app/modules/routing/RouteUtils.tsx
-import { PSEUDO_GUILD_IDS } from "INVITE";
-import { isStaticChannelRoute } from "set";
+import set from "set" /* 2 */;
+import INVITE from "INVITE" /* 677 */;
+import set2 from "set" /* 1398 */;
+import RouteParam from "RouteParam" /* 4216 */;
 
+const PSEUDO_GUILD_IDS = INVITE.PSEUDO_GUILD_IDS;
+const isStaticChannelRoute = set2.isStaticChannelRoute;
 const re2 = /^\d+$/;
-const result = require("set").fileFinishedImporting("modules/routing/RouteUtils.tsx");
+const result = set.fileFinishedImporting("modules/routing/RouteUtils.tsx");
 
-export const RouteParam = require("RouteParam").RouteParam;
+export const RouteParam = RouteParam.RouteParam;
 export const isPseudoGuildId = function isPseudoGuildId(stateFromStores) {
   return PSEUDO_GUILD_IDS.includes(stateFromStores);
 };

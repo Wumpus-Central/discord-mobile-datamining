@@ -1,22 +1,20 @@
 // discord_app/modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-let c4;
-let c5;
 const require = arg1;
 let c3 = importAllResult;
 ({ NativeModules: c4, findNodeHandle: c5 } = get_ActivityIndicator);
 const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRef) {
   messagesRef = messagesRef.messagesRef;
   let id;
-  let dependencyMap;
-  let importAllResult;
+  dependencyMap = undefined;
+  importAllResult = undefined;
   let keyboardContextForType;
   let field;
   let field1;
-  let closure_7;
+  closure_7 = undefined;
   id = importAllResult.useId();
   const tmp2 = id(4239)();
   dependencyMap = tmp2;
@@ -25,8 +23,8 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   let tmp3 = id(1895)();
   keyboardContextForType = messagesRef(4239).useKeyboardContextForType(messagesRef(1627).KeyboardTypes.SYSTEM);
   id(4761)(() => () => {
-    const PortalKeyboardUIStore = outer1_0(outer1_2[8]).PortalKeyboardUIStore;
-    const field = PortalKeyboardUIStore.getField("keyboard");
+    const PortalKeyboardUIStore = closure_1_0(closure_1_2[8]).PortalKeyboardUIStore;
+    field = PortalKeyboardUIStore.getField("keyboard");
     let tmp4 = null != field;
     if (tmp4) {
       tmp4 = field.handlerId === closure_1;
@@ -49,7 +47,7 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
     if (null != field) {
       if (null == tmp2.handlerId) {
         if (null != tmp2) {
-          if (field1 === messagesRef(_undefined[10]).PortalKeyboardState.REQUEST_OPEN) {
+          if (field1 === messagesRef(4243).PortalKeyboardState.REQUEST_OPEN) {
             const current4 = messagesRef.current;
             let chatRef;
             if (current4 != null) {
@@ -58,25 +56,25 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
             if (null != chatRef) {
               const tmp38 = field(chatRef.current);
               if (null != tmp38) {
-                const result = messagesRef(_undefined[8]).handlePortalKeyboardOpen(id);
+                const result = messagesRef(4240).handlePortalKeyboardOpen(id);
                 tmp.current = true;
-                const obj2 = messagesRef(_undefined[8]);
+                const obj2 = messagesRef(4240);
                 const DCDChatManager3 = keyboardContextForType.DCDChatManager;
-                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(_undefined[11]).getKeyboardActionSheetHeight().minimum, 0.25, 7);
-                const obj3 = messagesRef(_undefined[11]);
+                const result1 = DCDChatManager3.customKeyboardWillShow(tmp38, messagesRef(11209).getKeyboardActionSheetHeight().minimum, 0.25, 7);
+                const obj3 = messagesRef(11209);
               }
             }
           }
         }
-        if (_undefined === messagesRef(_undefined[6]).KeyboardTypes.SYSTEM) {
+        if (dependencyMap === messagesRef(1627).KeyboardTypes.SYSTEM) {
           if (keyboardContextForType.keyboardWillOpen) {
-            if (field1 !== messagesRef(_undefined[10]).PortalKeyboardState.REQUEST_CLOSE) {
+            if (field1 !== messagesRef(4243).PortalKeyboardState.REQUEST_CLOSE) {
               const _setTimeout = setTimeout;
-              messagesRef = setTimeout(messagesRef(_undefined[8]).closePortalKeyboardRequest, 250);
+              messagesRef = setTimeout(messagesRef(4240).closePortalKeyboardRequest, 250);
               return () => clearTimeout(closure_0);
             }
           }
-          messagesRef(_undefined[8]).closePortalKeyboard();
+          messagesRef(4240).closePortalKeyboard();
           const current3 = messagesRef.current;
           let chatRef1;
           if (current3 != null) {
@@ -90,12 +88,12 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
               const result2 = DCDChatManager.customKeyboardWillHide(tmp21, 0.25, 7);
             }
           }
-          const obj = messagesRef(_undefined[8]);
+          const obj = messagesRef(4240);
         }
       }
     } else {
-      let tmp4 = c3;
-      if (!c3) {
+      let tmp4 = closure_3;
+      if (!closure_3) {
         let tmp3 = !current;
         if (!current) {
           tmp3 = !tmp28;
@@ -121,6 +119,6 @@ const memoResult = importAllResult.memo(function InlinePortalKeyboard(messagesRe
   }, items);
   return null;
 });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx");
+let result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardInlineComponent.ios.tsx");
 
 export default memoResult;

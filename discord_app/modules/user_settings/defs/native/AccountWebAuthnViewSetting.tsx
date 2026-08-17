@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx
-import noop from "noop";
-import hasFetchedCredentials from "hasFetchedCredentials";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _fetchWebAuthnConditionalChallenge from "_fetchWebAuthnConditionalChallenge" /* 5264 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "hasFetchedCredentials" /* 14077 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UserSettingsWebAuthn } from "../../../webauthn/native/UserSettingsWebAuthn.tsx";
-import { _fetchWebAuthnConditionalChallenge } from "../../../webauthn/WebAuthnActionCreators.tsx";
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -38,16 +38,14 @@ createToggle = {
     }, []);
   },
   useTrailing: function useAccountSecurityKeysSettingTrailing() {
-    if (!hasFetchedCredentials.hasFetchedCredentials()) {
+    if (!closure_4.hasFetchedCredentials()) {
       const webAuthnCredentials = _fetchWebAuthnConditionalChallenge.fetchWebAuthnCredentials();
-      let obj = _fetchWebAuthnConditionalChallenge;
+      const obj = _fetchWebAuthnConditionalChallenge;
     }
-    const items = [hasFetchedCredentials];
+    const items = [closure_4];
     return initialize.useStateFromStores(items, () => {
       const intl = callback(1236).intl;
-      const obj = { count: null };
-      obj[0] = credentials.getCredentials().length;
-      return intl.formatToPlainString(callback(1236).t.n8mZ0X, obj);
+      return intl.formatToPlainString(callback(1236).t.n8mZ0X, { count: credentials.getCredentials().length });
     });
   },
   unsearchable: true,
@@ -60,6 +58,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createRoute(createToggle);
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/AccountWebAuthnViewSetting.tsx");
 
 export default createToggle;

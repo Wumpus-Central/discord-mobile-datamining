@@ -1,6 +1,8 @@
 // discord_app/utils/ListUtils.tsx
-import { getSystemLocale } from "../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("utils/ListUtils.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("utils/ListUtils.tsx");
 
 export const getListSummaryLabel = function getListSummaryLabel(names, length) {
   let first = names;
@@ -24,7 +26,7 @@ export const getListSummaryLabel = function getListSummaryLabel(names, length) {
     const intl2 = getSystemLocale.intl;
     [obj2[0], obj2[1], obj2[2]] = first;
     formatToPlainStringResult = intl2.formatToPlainString(getSystemLocale.t["/KSOKY"], { first: null, second: null, third: null });
-    const obj1 = { first: null, second: null, third: null };
+    obj1 = { first: null, second: null, third: null };
   } else {
     const intl = getSystemLocale.intl;
     obj = { first: null, second: null, third: null, count: null };

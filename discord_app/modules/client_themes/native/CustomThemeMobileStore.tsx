@@ -1,21 +1,21 @@
 // discord_app/modules/client_themes/native/CustomThemeMobileStore.tsx
-import initialize from "initialize";
-import handleThemeChange from "handleThemeChange";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { UserSettingsTypes } from "MAX_FAVORITES";
-import { PersistedStore } from "initialize";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { isPerModeThemingActive } from "../../user_settings/isPerModeThemingActive.tsx";
-import { getThemeForColor } from "../ClientThemesUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import create from "create" /* 1306 */;
+import getThemeForColor from "getThemeForColor" /* 1347 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 1366 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_6 from "initialize" /* 1303 */;
+import closure_7 from "handleThemeChange" /* 1302 */;
+import closure_8 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_9 from "handleConnectionClosedOrResumed" /* 1340 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
-const require = arg1;
+require = arg1;
 function reset() {
-  let c3;
-  let c4;
-  let c5;
+  c3 = undefined;
+  c4 = undefined;
+  c5 = undefined;
 }
 function handleSyncedModeChange() {
   return isPerModeThemingActive.isPerModeThemingActive(isSyncedModeThemesEnabled);
@@ -24,8 +24,8 @@ function handleSameAsDeviceThemeToggle() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
 function loadFromProtoSettings() {
-  if (initialize.shouldSync("appearance")) {
-    const appearance = handleConnectionClosedOrResumed.settings.appearance;
+  if (closure_6.shouldSync("appearance")) {
+    const appearance = closure_9.settings.appearance;
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
@@ -38,14 +38,14 @@ function loadFromProtoSettings() {
         prop = clientThemeSettings.customUserThemeSettings;
       }
       const obj = getThemeForColor;
-      dispatcher.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcher;
+      dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
+      const obj2 = dispatcherDefault;
     }
   }
 }
 function handleSelectivelySyncedUserSettingsUpdate() {
-  if (initialize.shouldSync("appearance")) {
-    const appearance = handleConnectionClosedOrResumed.settings.appearance;
+  if (closure_6.shouldSync("appearance")) {
+    const appearance = closure_9.settings.appearance;
     if (null != appearance) {
       let UNSET = appearance.theme;
       if (UNSET == null) {
@@ -58,14 +58,15 @@ function handleSelectivelySyncedUserSettingsUpdate() {
         prop = clientThemeSettings.customUserThemeSettings;
       }
       const obj = getThemeForColor;
-      dispatcher.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-      const obj2 = dispatcher;
+      dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
+      const obj2 = dispatcherDefault;
     }
   }
 }
 function isSyncedModeThemesEnabled() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("CustomThemeMobileStore");
 }
+const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {
 }
 const prototype = CustomThemeMobileStore.prototype;
@@ -74,8 +75,8 @@ prototype["initialize"] = function initialize(arg0) {
   if (null == arg0) {
     const self = this;
     const self2 = this;
-    this.waitFor(initialize, handleThemeChange, CHANNEL_SIDEBAR_WIDTH, handleConnectionClosedOrResumed);
-    const items = [initialize];
+    this.waitFor(closure_6, closure_7, closure_8, closure_9);
+    const items = [closure_6];
     this.syncWith(items, handleSelectivelySyncedUserSettingsUpdate);
   } else {
     if (null == customTheme.theme) {
@@ -250,7 +251,7 @@ prototype["hasCustomTheme"] = function hasCustomTheme() {
 };
 CustomThemeMobileStore.displayName = "CustomThemeMobileStore";
 CustomThemeMobileStore.persistKey = "CustomThemeMobileStore";
-const customThemeMobileStore = new CustomThemeMobileStore(require("dispatcher"), {
+const customThemeMobileStore = new CustomThemeMobileStore(dispatcherDefault, {
   UPDATE_CUSTOM_THEME: function handleUpdateCustomTheme(customTheme) {
     customTheme = customTheme.customTheme;
     const customThemeBaseTheme = getThemeForColor.getCustomThemeBaseTheme(customTheme.theme);
@@ -267,14 +268,14 @@ const customThemeMobileStore = new CustomThemeMobileStore(require("dispatcher"),
     obj.baseTheme = getThemeForColor.getCustomThemeBaseTheme(previewCustomTheme.baseTheme);
   },
   CLEAR_PREVIEW_CUSTOM_THEME: function clearPreviewTheme() {
-    let c5;
+    c5 = undefined;
   },
   RESET_CUSTOM_THEME: reset,
   CACHE_LOADED: loadFromProtoSettings,
   POST_CONNECTION_OPEN: loadFromProtoSettings,
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     settings = settings.settings;
-    if (initialize.shouldSync("appearance")) {
+    if (closure_6.shouldSync("appearance")) {
       let tmp3 = null;
       if (settings.type === UserSettingsTypes.PRELOADED_USER_SETTINGS) {
         const proto = settings.proto;
@@ -296,13 +297,13 @@ const customThemeMobileStore = new CustomThemeMobileStore(require("dispatcher"),
           prop = clientThemeSettings.customUserThemeSettings;
         }
         const obj = getThemeForColor;
-        dispatcher.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
-        const obj2 = dispatcher;
+        dispatcherDefault.wait(() => callback(table[8]).dispatch({ type: "REFRESH_THEME" }));
+        const obj2 = dispatcherDefault;
       }
     }
   },
   LOGOUT: reset
 });
-const result = require("CHANNEL_SIDEBAR_WIDTH").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
+const result = require("set").fileFinishedImporting("modules/client_themes/native/CustomThemeMobileStore.tsx");
 
 export default customThemeMobileStore;

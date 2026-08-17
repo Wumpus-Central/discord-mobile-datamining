@@ -1,20 +1,22 @@
 // discord_app/design/components/Modal/native/ModalScreen.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../modules/safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+noopAll;
 createCacheKey = { container: null };
-createCacheKey = { flex: 1, flexDirection: "column", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, flexDirection: "column", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("design/components/Modal/native/ModalScreen.native.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/components/Modal/native/ModalScreen.native.tsx");
 
 export const ModalScreen = function ModalScreen(children) {
   let backgroundColor = children.backgroundColor;
-  const tmp = createCacheKey();
-  const insets = useSafeAreaInsetsKeyboardAware().insets;
+  const tmp = callback();
+  const insets = useSafeAreaInsetsKeyboardAwareDefault().insets;
   const style = [tmp.container, ];
   if (backgroundColor == null) {
     backgroundColor = tmp.container.backgroundColor;

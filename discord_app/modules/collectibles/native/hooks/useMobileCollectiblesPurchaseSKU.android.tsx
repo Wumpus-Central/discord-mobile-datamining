@@ -1,17 +1,17 @@
 // discord_app/modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useMobilePurchaseSKU } from "../../../billing/native/hooks/useMobilePurchaseSKU.android.tsx";
-import { hasAtLeastOneGPlaySynced } from "../CollectiblesUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import hasAtLeastOneGPlaySynced from "hasAtLeastOneGPlaySynced" /* 9249 */;
+import useMobilePurchaseSKUDefault from "useMobilePurchaseSKU" /* 10357 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("hasAtLeastOneGPlaySynced").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useMobileCollectiblesPurchaseSKU.android.tsx");
 
 export default function useMobileCollectiblesPurchaseSKU(product) {
   product = product.product;
   const merged = Object.assign(product, Object.create(null));
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const collectibleGoogleSkuId = hasAtLeastOneGPlaySynced.getCollectibleGoogleSkuId(product, stateFromStores);
   obj = {};
@@ -20,5 +20,5 @@ export default function useMobileCollectiblesPurchaseSKU(product) {
   obj.skuId = product.skuId;
   obj.platformSkuId = collectibleGoogleSkuId;
   obj.isFreeForStaffSelfPurchase = true;
-  return useMobilePurchaseSKU(obj);
+  return useMobilePurchaseSKUDefault(obj);
 };

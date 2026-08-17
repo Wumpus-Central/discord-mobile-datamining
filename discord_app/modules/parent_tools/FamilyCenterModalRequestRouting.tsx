@@ -1,16 +1,16 @@
 // discord_app/modules/parent_tools/FamilyCenterModalRequestRouting.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
 function getConnectionPrereqTarget(teen_identity) {
   if ("ready" in teen_identity) {
-    let obj = { section: null, params: null };
+    obj = { section: null, params: null };
     obj[0] = frozen.REQUEST;
     obj = { teenIdentity: null };
     obj[0] = teen_identity.teen_identity;
     obj[1] = obj;
     let tmp = obj;
   } else if ("invalid_link_code" in teen_identity) {
-    const obj1 = { section: null };
+    obj1 = { section: null };
     obj1[0] = frozen.INVALID_CODE;
     tmp = obj1;
   } else if ("verified_teen_blocked" in teen_identity) {
@@ -32,11 +32,11 @@ function getConnectionPrereqTarget(teen_identity) {
 function _resolveConnectionPrereqTarget() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -45,7 +45,7 @@ function _resolveConnectionPrereqTarget() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -64,13 +64,13 @@ function _resolveConnectionPrereqTarget() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp3;
-              let c4 = 1;
+              closure_3 = tmp3;
+              c4 = 1;
               const callback2 = c5;
               let obj3 = callback(table[2]);
               c5 = 2;
               c6 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj3.getConnectionPrerequisites(callback, table);
               return obj1;
             }
@@ -107,7 +107,7 @@ function _resolveConnectionPrereqTarget() {
       }
     })();
   });
-  const _resolveConnectionPrereqTarget = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -119,11 +119,11 @@ function _resolveConnectionPrereqTarget() {
 const frozen = Object.freeze({ PREREQ_LOADING: "PREREQ_LOADING", CONFIRM_AGE: "CONFIRM_AGE", VERIFYING: "VERIFYING", REQUEST: "REQUEST", SENT: "SENT", ERROR: "ERROR", INVALID_CODE: "INVALID_CODE", MUST_BE_ADULT: "MUST_BE_ADULT", TEEN_SCAN: "TEEN_SCAN" });
 obj = { section: frozen.ERROR, params: obj };
 obj = { failureCode: require("items").FamilyCenterFailureCode.GENERIC_ERROR };
-const result = require("maybeFetchCollectiblesForInvoices").fileFinishedImporting("modules/parent_tools/FamilyCenterModalRequestRouting.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterModalRequestRouting.tsx");
 
 export const FamilyCenterModalRequestSections = frozen;
 export { getConnectionPrereqTarget };
-export const resolveConnectionPrereqTarget = function resolveConnectionPrereqTarget(outer1_0, outer1_1) {
+export const resolveConnectionPrereqTarget = function resolveConnectionPrereqTarget(closure_1_0, closure_1_1) {
   const self = this;
   const apply = _resolveConnectionPrereqTarget.apply;
   if (typeof apply === "unknown") {

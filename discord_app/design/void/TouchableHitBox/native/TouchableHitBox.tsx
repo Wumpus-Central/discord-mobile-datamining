@@ -1,41 +1,26 @@
 // discord_app/design/void/TouchableHitBox/native/TouchableHitBox.tsx
-import { ActivityIndicator } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PureComponent } from "noop";
-import importAllResult from "noop";
-import { Button } from "../../native.tsx";
-import { PressableBase } from "../../Pressables/native/Pressables.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import { ActivityIndicator } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 createCacheKey = { button: null, buttonText: null, buttonIcon: null, buttonSpinner: null, buttonDisabled: null };
-createCacheKey = { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: require("Themes").radii.sm };
+createCacheKey = { flexGrow: 0, flexShrink: 1, justifyContent: "center", alignItems: "center", backgroundColor: "transparent", alignSelf: "flex-start", borderRadius: ThemesDefault.radii.sm };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { lineHeight: 24, margin: 10, maxWidth: 60, fontSize: 16 };
 createCacheKey[2] = { margin: 10 };
 createCacheKey[3] = { margin: 12 };
 createCacheKey[4] = { opacity: 0.6 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_4 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+const PureComponent = importAllResult.PureComponent;
 class TouchableHitBox extends PureComponent {
 }
 TouchableHitBox.prototype["render"] = function render() {
-  let IconComponent;
-  let accessibilityLabel;
-  let accessibilityRole;
-  let accessibilityState;
-  let activeOpacity;
-  let color;
-  let disableColor;
-  let disabled;
-  let iconSize;
-  let iconStyle;
-  let loading;
-  let onLongPress;
-  let onPress;
-  let source;
-  let style;
-  let text;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback(this.context);
   const props = this.props;
   ({ disabled, source, text, loading, IconComponent, iconStyle, color, disableColor } = props);
   let tmp2 = undefined !== disableColor;
@@ -76,7 +61,7 @@ TouchableHitBox.prototype["render"] = function render() {
     }
     obj = { numberOfLines: 1, style: null, children: null };
     items1[1] = buttonDisabled3;
-    const obj1 = { color: null };
+    obj1 = { color: null };
     obj1[0] = color;
     items1[2] = obj1;
     obj[1] = items1;
@@ -121,6 +106,6 @@ TouchableHitBox.defaultProps = {
 
   }
 };
-const result = require("jsxProd").fileFinishedImporting("design/void/TouchableHitBox/native/TouchableHitBox.tsx");
+const result = require("set").fileFinishedImporting("design/void/TouchableHitBox/native/TouchableHitBox.tsx");
 
 export default TouchableHitBox;

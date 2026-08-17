@@ -1,14 +1,15 @@
 // discord_app/modules/premium/native/NoticeStore.tsx
-import emitChanges from "emitChanges";
-import { PremiumSubscriptionSKUs } from "GuildFeatures";
-import { NoticeTypes } from "ME";
-import { Store } from "initialize";
-import { t } from "../../../../_runtime/03975_t.js";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage4 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import tDefault from "t" /* 3975 */;
+import closure_3 from "emitChanges" /* 7421 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
+import { NoticeTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function clearDismissUntil(arg0) {
-  const Storage = Storage.Storage;
+  const Storage = Storage4.Storage;
   Storage.remove(`${closure_8[arg0]}-untilAtLeast`);
 }
 function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
@@ -16,14 +17,14 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
     return false;
   } else {
     if (null != dependencyMap[PREMIUM_TIER_0_TRIAL_ENDING]) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       const value = Storage.get(`${tmp10[PREMIUM_TIER_0_TRIAL_ENDING]}-untilAtLeast`);
       let tmp4 = null;
       if (null != value) {
-        tmp4 = t(value);
+        tmp4 = tDefault(value);
       }
       if (null != tmp4) {
-        return tmp4.isAfter(t());
+        return tmp4.isAfter(tDefault());
       }
     }
     let tmp6 = null != tmp11;
@@ -31,7 +32,7 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
       tmp6 = "" !== tmp11;
     }
     if (tmp6) {
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage4.Storage;
       let flag = Storage2.get(tmp11);
       if (flag == null) {
         flag = false;
@@ -42,8 +43,7 @@ function isNoticeDismissed(PREMIUM_TIER_0_TRIAL_ENDING) {
   }
 }
 function updateNotice() {
-  let items;
-  let c6 = null;
+  c6 = null;
   const iter = items[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -89,19 +89,20 @@ let c6 = null;
 let items = [, ];
 ({ PREMIUM_TIER_2_TRIAL_ENDING: arr[0], PREMIUM_TIER_0_TRIAL_ENDING: arr[1] } = NoticeTypes);
 let closure_8 = { [NoticeTypes.PREMIUM_TIER_0_TRIAL_ENDING]: "hidePremiumTier0TrialEndingReminder", [NoticeTypes.PREMIUM_TIER_2_TRIAL_ENDING]: "hidePremiumTier2TrialEndingReminder" };
+const Store = initializeDefault.Store;
 class NoticeStore extends Store {
 }
 const prototype = NoticeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [emitChanges];
+  items = [closure_3];
   this.syncWith(items, updateNotice);
-  this.waitFor(emitChanges);
+  this.waitFor(closure_3);
 };
 prototype["getNoticeType"] = function getNoticeType() {
   return c6;
 };
 NoticeStore.displayName = "NoticeStore";
-const noticeStore = new NoticeStore(require("dispatcher"), {
+const noticeStore = new NoticeStore(dispatcherDefault, {
   CONNECTION_OPEN: updateNotice,
   CURRENT_USER_UPDATE: updateNotice,
   PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: updateNotice,
@@ -129,7 +130,7 @@ const noticeStore = new NoticeStore(require("dispatcher"), {
         continue;
       }
     })();
-    let c6 = null;
+    c6 = null;
   },
   NOTICE_DISMISS: function handleNoticeDismiss(untilAtLeast) {
     if (null != c6) {
@@ -139,14 +140,14 @@ const noticeStore = new NoticeStore(require("dispatcher"), {
       if (null != c6) {
         result1 = dependencyMap;
         if (null != dependencyMap[text]) {
-          const Storage = Storage.Storage;
+          const Storage = Storage4.Storage;
           const result = Storage.set(tmp13, true);
         }
         if (null == untilAtLeast) {
-          const Storage2 = Storage.Storage;
+          const Storage2 = Storage4.Storage;
           Storage2.remove(`${tmp10[tmp9]}-untilAtLeast`);
         }
-        const Storage3 = Storage.Storage;
+        const Storage3 = Storage4.Storage;
         text = `${tmp10[tmp9]}-untilAtLeast`;
         result1 = Storage3.set(`${tmp10[tmp9]}-untilAtLeast`, untilAtLeast.format("YYYY-MM-DDTHH:mm:ss.SSSZ"));
       }
@@ -154,6 +155,6 @@ const noticeStore = new NoticeStore(require("dispatcher"), {
     }
   }
 });
-let result = require("ME").fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/NoticeStore.tsx");
 
 export default noticeStore;

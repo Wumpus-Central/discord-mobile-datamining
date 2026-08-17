@@ -1,8 +1,8 @@
 // discord_app/lib/WindowVisibilityUtils.native.tsx
-import getState from "getState";
-import { AppStates } from "ME";
+import closure_2 from "getState" /* 7383 */;
+import { AppStates } from "ME" /* 676 */;
 
-const result = require("NativeEventEmitter").fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
+const result = require("set").fileFinishedImporting("lib/WindowVisibilityUtils.native.tsx");
 
 export default function isDiscordVisible() {
   const tmp = state.getState() === AppStates.BACKGROUND;

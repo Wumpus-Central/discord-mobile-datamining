@@ -1,21 +1,23 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { MessageAccessibilityAction } from "../../MessageAccessibilityActions.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
-const result = require("getSystemLocale").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import MessageAccessibilityAction from "MessageAccessibilityAction" /* 8191 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelPinnedMessageSystemMessage.tsx");
 
 export const createChannelPinnedMessageSystemMessage = function createChannelPinnedMessageSystemMessage(roleStyle) {
   const message = roleStyle.message;
   let obj = getMessageAuthorWithProcessedColor;
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
-  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClick({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
+  obj = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: formatUsernameOnClickDefault({ message, author: messageAuthorWithProcessedColor, roleStyle: roleStyle.roleStyle }), pinsOnClick: obj };
   obj = { action: "bindOpenPins", messageChannelId: message.channel_id, medium: true };
   const messageReference = message.messageReference;
   if (null != messageReference) {
     const intl2 = tmp(1236).intl;
-    const obj1 = {};
+    obj1 = {};
     const merged = Object.assign(obj);
     ({ channel_id: obj5[1], message_id: obj5[2] } = messageReference);
     obj1.messageOnClick = { action: "bindJumpToMessage", targetChannelId: null, targetMessageId: null, medium: true };
@@ -25,7 +27,7 @@ export const createChannelPinnedMessageSystemMessage = function createChannelPin
     const intl = tmp(1236).intl;
     formatToPartsResult = intl.formatToParts(tmp(1236).t["6TrHq2"], obj);
   }
-  const tmp9 = createCommonMessage(roleStyle);
+  const tmp9 = createCommonMessageDefault(roleStyle);
   let accessibilityActions = tmp9.accessibilityActions;
   if (accessibilityActions == null) {
     accessibilityActions = [];

@@ -1,7 +1,8 @@
 // discord_common/js/packages/tokens/colors/generated/native/generated-definitions.tsx
-import set from "set";
+import items from "items" /* 713 */;
+import set from "set" /* 2 */;
 
-const Themes = require("items")._private.Themes;
+const Themes = items._private.Themes;
 let set = { category: "generic" };
 set[Themes.DARK] = { raw: "WHITE", opacity: 1 };
 set[Themes.LIGHT] = { raw: "PRIMARY_860", opacity: 1 };

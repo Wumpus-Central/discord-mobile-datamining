@@ -1,19 +1,19 @@
 // discord_app/modules/auth/native/components/Login.tsx
-import fetchFingerprint from "fetchFingerprint";
-import KeyIcon from "KeyIcon";
-import handleLogout from "handleLogout";
-import { View } from "initialize";
-import handleSetLocationMetadata from "handleSetLocationMetadata";
-import closure_8 from "fetchFingerprint";
-import { AuthStates } from "ME";
-import jsxProd from "useAlertStore";
-import createCacheKey from "createCacheKey";
-import { AlertActionCreators } from "../../../../actions/native/AlertActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "handleSetLocationMetadata" /* 8581 */;
+import closure_8 from "fetchFingerprint" /* 1218 */;
+import { AuthStates } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class LinkButton {
   constructor(arg0) {
     str = global.variant;
@@ -25,15 +25,14 @@ class LinkButton {
     if (str2 === undefined) {
       str2 = "text-link";
     }
-    obj = { style: items, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: null };
+    obj = { style: items, hitSlop: { top: 8, right: 8, bottom: 8 }, accessibilityRole: "button", onPress, children: jsx(require("Text").Text, { style: textStyle, variant: str, color: str2, children: text }) };
     items = [];
     items[0] = containerStyle;
-    obj[4] = jsx(require("Text").Text, { style: textStyle, variant: str, color: str2, children: text });
     return jsx(require("PressableBase").PressableOpacity, obj);
   }
 }
 function handlePressPasswordManagerHint() {
-  let obj = AlertActionCreators;
+  let obj = _modDef4656;
   obj = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.lzsy7t);
@@ -61,17 +60,9 @@ let closure_12 = createCacheKey.createStyles((arg0) => {
   obj[5] = { marginTop: 32, marginBottom: num };
   return obj;
 });
-let result = require("noop").fileFinishedImporting("modules/auth/native/components/Login.tsx");
+let result = require("set").fileFinishedImporting("modules/auth/native/components/Login.tsx");
 
 export default function Login(isMultiAccount) {
-  let c3;
-  let c4;
-  let c5;
-  let c8;
-  let tmp11;
-  let tmp13;
-  let tmp17;
-  let tmp9;
   let flag = isMultiAccount.isMultiAccount;
   if (flag === undefined) {
     flag = false;
@@ -83,19 +74,19 @@ export default function Login(isMultiAccount) {
   let callback2;
   let React;
   let first;
-  let handleSetLocationMetadata;
+  closure_7 = undefined;
   c8 = undefined;
   let first1;
   let callback3;
-  let closure_11;
+  closure_11 = undefined;
   callback = undefined;
-  let closure_13;
+  closure_13 = undefined;
   let callback1;
   const tmp3 = callback(navigation(ref[15])());
   let obj = _require(ref[16]);
   navigation = obj.useNavigation();
-  let obj1 = _require(ref[17]);
-  const items = [handleSetLocationMetadata];
+  obj1 = _require(ref[17]);
+  const items = [closure_7];
   const stateFromStores = obj1.useStateFromStores(items, () => countryCode.getCountryCode());
   ref = React.useRef(null);
   [tmp9, c3] = callback2(React.useState(false), 2);
@@ -106,7 +97,7 @@ export default function Login(isMultiAccount) {
   [tmp13, c5] = callback2(React.useState({}), 2);
   const tmp14 = callback2(React.useState(""), 2);
   first = tmp14[0];
-  handleSetLocationMetadata = tmp14[1];
+  closure_7 = tmp14[1];
   const tmp12 = callback2(React.useState({}), 2);
   [c8, tmp17] = callback2(React.useState(""), 2);
   const tmp18 = callback2(React.useState(false), 2);
@@ -160,31 +151,30 @@ export default function Login(isMultiAccount) {
             obj[0] = arg1;
             return obj;
           } else {
-            let c1 = tmp4;
-            let closure_0 = tmp8;
+            c1 = tmp4;
+            closure_0 = tmp8;
             closure_0 = undefined;
             c1 = undefined;
             v0(true);
             v02({});
-            let c3 = 2;
-            let obj3 = outer1_1(outer1_2[19]);
+            c3 = 2;
+            let obj3 = callback(5256);
             v0 = 3;
             v02 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = obj3.forgotPassword(outer1_6);
+            obj1 = { value: null, done: false };
+            obj1[0] = obj3.forgotPassword(closure_1_6);
             return obj1;
           }
         } else if (1 === tmp8) {
           c3 = 0;
           v0(false);
-          throw closure_2;
+          throw dependencyMap;
         } else {
           if (2 === tmp8) {
             c3 = 1;
-            outer1_2 = closure_2;
-            let obj2 = outer1_0(outer1_2[23]);
-            outer1_1 = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(outer1_2);
-            callback(outer1_1);
+            let obj2 = closure_1_0(8585);
+            callback = obj2.getAuthenticationErrorsFromV6OrEarlierAPIError(dependencyMap);
+            callback2(callback);
             c3 = 0;
             v0(false);
             v02 = 3;
@@ -201,19 +191,19 @@ export default function Login(isMultiAccount) {
           } else {
             closure_0 = arg1;
             if (false !== closure_0) {
-              if (closure_0 === outer1_0(outer1_2[20]).PasswordResetMethods.ONE_TIME_LOGIN) {
-                obj = outer1_0(outer1_2[21]);
-                obj.openAlert("one-time-login-forgot-password-confirm", outer1_10(outer1_1(outer1_2[22]), {}));
+              if (closure_0 === closure_1_0(8583).PasswordResetMethods.ONE_TIME_LOGIN) {
+                obj = closure_1_0(4657);
+                obj.openAlert("one-time-login-forgot-password-confirm", closure_1_10(callback(8584), {}));
               } else {
                 obj3 = { title: null, body: null };
-                const intl = outer1_0(outer1_2[12]).intl;
-                obj3[0] = intl.string(outer1_0(outer1_2[12]).t.f5Pi7A);
-                const intl2 = outer1_0(outer1_2[12]).intl;
+                const intl = closure_1_0(1236).intl;
+                obj3[0] = intl.string(closure_1_0(1236).t.f5Pi7A);
+                const intl2 = closure_1_0(1236).intl;
                 const obj4 = { email: null };
                 obj4[0] = closure_6;
-                obj3[1] = intl2.format(outer1_0(outer1_2[12]).t["6u5hQ9"], obj4);
-                outer1_1(outer1_2[11]).show(obj3);
-                const obj8 = outer1_1(outer1_2[11]);
+                obj3[1] = intl2.format(closure_1_0(1236).t["6u5hQ9"], obj4);
+                callback(4656).show(obj3);
+                const obj8 = callback(4656);
               }
               c3 = 1;
             }
@@ -224,7 +214,7 @@ export default function Login(isMultiAccount) {
           return { value: "HermesInternal", done: "HermesInternal" };
         }
       } catch (tmp47) {
-        closure_2 = tmp47;
+        dependencyMap = tmp47;
         if (tmp5 === c3) {
           v02 = tmp3;
           throw tmp47;
@@ -238,12 +228,12 @@ export default function Login(isMultiAccount) {
   }), items1);
   _require = undefined;
   _require = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -271,7 +261,7 @@ export default function Login(isMultiAccount) {
               obj[0] = arg1;
               return obj;
             } else {
-              let KeyIcon = tmp3;
+              closure_4 = tmp3;
               let authenticationErrorsFromV6OrEarlierAPIError = tmp7;
               let flag;
               if (flag === undefined) {
@@ -288,13 +278,13 @@ export default function Login(isMultiAccount) {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              outer1_4(true);
-              outer1_5({});
-              let c6 = 1;
+              closure_1_4(true);
+              closure_1_5({});
+              c6 = 1;
               const obj2 = { login: null, password: null, undelete: null, isMultiAccount: null };
               obj2[0] = callback;
               obj2[1] = closure_1;
@@ -309,11 +299,11 @@ export default function Login(isMultiAccount) {
           } else {
             if (2 === tmp7) {
               c6 = 0;
-              KeyIcon = handleLogout;
-              outer1_4(false);
+              closure_4 = closure_5;
+              closure_1_4(false);
               obj1 = callback(ref[23]);
-              authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(KeyIcon);
-              outer1_12(authenticationErrorsFromV6OrEarlierAPIError);
+              authenticationErrorsFromV6OrEarlierAPIError = obj1.getAuthenticationErrorsFromV6OrEarlierAPIError(closure_4);
+              closure_1_12(authenticationErrorsFromV6OrEarlierAPIError);
               c8 = 3;
             } else if (arg0 === 1) {
               c8 = 3;
@@ -328,7 +318,7 @@ export default function Login(isMultiAccount) {
             return obj;
           }
         } catch (tmp22) {
-          handleLogout = tmp22;
+          closure_5 = tmp22;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp22;
@@ -381,21 +371,21 @@ export default function Login(isMultiAccount) {
             return obj;
           } else {
             let message = tmp4;
-            let c0 = tmp8;
+            c0 = tmp8;
             c0 = undefined;
-            if (!outer1_9) {
-              if (!outer1_8.getIsPasswordlessActive()) {
-                let obj3 = outer1_1(outer1_2[24]);
+            if (!closure_1_9) {
+              if (!closure_1_8.getIsPasswordlessActive()) {
+                let obj3 = closure_1_1(closure_1_2[24]);
                 const passkeyAuthenticator = obj3.getPasskeyAuthenticator();
                 v0(true);
                 v02({});
-                let c3 = 2;
-                const obj1 = { authenticateFunc: null };
+                c3 = 2;
+                obj1 = { authenticateFunc: null };
                 obj1[0] = passkeyAuthenticator;
                 v0 = 3;
                 v02 = 1;
                 let obj2 = { value: null, done: false };
-                obj2[0] = outer1_1(outer1_2[19]).authenticatePasswordless(obj1);
+                obj2[0] = closure_1_1(closure_1_2[19]).authenticatePasswordless(obj1);
                 return obj2;
               }
             }
@@ -405,11 +395,11 @@ export default function Login(isMultiAccount) {
           if (2 === tmp8) {
             c3 = 1;
             message = closure_2;
-            if (message instanceof outer1_0(outer1_2[25]).APIError) {
-              obj2 = outer1_0(outer1_2[23]);
-              outer1_0 = obj2.getAuthenticationErrorsFromAPIError(outer1_1);
-              callback(outer1_0);
-            } else if (!(outer1_1 instanceof outer1_0(outer1_2[26]).IgnorableWebAuthnError)) {
+            if (message instanceof callback(closure_1_2[25]).APIError) {
+              obj2 = callback(closure_1_2[23]);
+              callback = obj2.getAuthenticationErrorsFromAPIError(closure_1_1);
+              callback2(callback);
+            } else if (!(closure_1_1 instanceof callback(closure_1_2[26]).IgnorableWebAuthnError)) {
               obj3 = { message: null };
               obj3[0] = message.message;
               v02(obj3);
@@ -615,10 +605,9 @@ export default function Login(isMultiAccount) {
     tmp43 = tmp30Result;
   }
   const items5 = [tmp43, , , ];
-  const obj11 = { style: tmp3.separator, children: null };
-  obj11[1] = callback3(_require(ref[41]).OrSeparator, {});
-  items5[1] = callback3(_require(ref[40]).Stack, obj11);
   tmp4Result3 = _require(ref[33]);
+  items5[1] = callback3(_require(ref[40]).Stack, { style: tmp3.separator, children: callback3(_require(ref[41]).OrSeparator, {}) });
+  const obj11 = { style: tmp3.separator, children: callback3(_require(ref[41]).OrSeparator, {}) };
   if (tmp4Result4.isMetaQuest()) {
     tmp30Result = tmp33Result;
   }

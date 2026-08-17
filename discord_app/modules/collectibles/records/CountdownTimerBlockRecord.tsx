@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/records/CountdownTimerBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function CountdownTimerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
@@ -20,6 +22,6 @@ prototype["fromServer"] = function fromServer(end_time) {
   obj.textColor = end_time.text_color;
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/CountdownTimerBlockRecord.tsx");
 
 export const CountdownTimerBlockRecord = prototype;

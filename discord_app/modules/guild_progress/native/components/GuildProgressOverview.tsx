@@ -1,16 +1,20 @@
 // discord_app/modules/guild_progress/native/components/GuildProgressOverview.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import registerAssetDefault from "registerAsset" /* 11640 */;
+import GuildProgressBarDefault from "GuildProgressBar" /* 13436 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 class GuildProgressOverviewView {
   constructor(arg0) {
     ({ titleStyle, onPress, onLongPress, title, subtitle, percentComplete } = global);
-    tmp = jsxs();
+    tmp = closure_7();
     obj = { accessibilityRole: "button", activeOpacity: 0.4, style: tmp.container, onPress, onLongPress, children: null };
     obj = { style: tmp.horizontal, children: null };
     obj1 = { children: null };
@@ -24,8 +28,7 @@ class GuildProgressOverviewView {
     obj1[0] = items1;
     items2 = [, ];
     items2[0] = jsxs(View, obj1);
-    obj3 = { source: null };
-    obj3[0] = require("registerAsset");
+    obj3 = { source: require("registerAsset") };
     items2[1] = jsx(require("Button").Icon, obj3);
     obj[1] = items2;
     items3 = [, ];
@@ -38,16 +41,14 @@ class GuildProgressOverviewView {
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { padding: 16 }, horizontal: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" }, title: null, step: null, progressBar: null };
-createCacheKey = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
+createCacheKey = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, marginBottom: 2 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { lineHeight: 16 };
 createCacheKey[4] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("ME").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/guild_progress/native/components/GuildProgressOverview.tsx");
 
 export default function GuildProgressOverview(guild) {
-  let percentComplete;
-  let subtitle;
   guild = guild.guild;
   let flag = guild.longPressDisabled;
   if (flag === undefined) {
@@ -86,7 +87,7 @@ export default function GuildProgressOverview(guild) {
         const intl = guild(completed[9]).intl;
         obj[0] = intl.string(guild(completed[9]).t.PbNxaW);
         obj[1] = function onPress() {
-          outer1_1(outer1_2[7]).dismissProgress(id.id);
+          closure_1_1(closure_1_2[7]).dismissProgress(id.id);
         };
         const items = [obj];
         obj[1] = items;

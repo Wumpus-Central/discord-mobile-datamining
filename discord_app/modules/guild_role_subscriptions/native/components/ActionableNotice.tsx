@@ -1,25 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ActionableNotice.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { flexDirection: "row", paddingVertical: 12, alignItems: "center" }, message: { marginEnd: 27, flex: 3 }, actionButton: { flexGrow: 0, alignSelf: "center" } });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ActionableNotice.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/ActionableNotice.tsx");
 
 export default function ActionableNotice(arg0) {
-  let ctaMessage;
-  let disabled;
-  let message;
-  let onClick;
-  let style;
-  let submitting;
   ({ submitting, disabled } = arg0);
   ({ style, message, ctaMessage, onClick } = arg0);
   if (disabled === undefined) {
@@ -31,7 +24,7 @@ export default function ActionableNotice(arg0) {
   obj = { style: tmp.message, variant: "text-sm/medium", color: "text-default", children: message };
   const items1 = [callback(Text.Text, obj), ];
   obj = { style: tmp.actionButton, children: null };
-  const obj1 = { size: "sm", onPress: onClick, disabled: null, text: null };
+  obj1 = { size: "sm", onPress: onClick, disabled: null, text: null };
   if (!submitting) {
     submitting = disabled;
   }

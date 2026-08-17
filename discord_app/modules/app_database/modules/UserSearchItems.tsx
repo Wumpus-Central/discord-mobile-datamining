@@ -1,19 +1,21 @@
 // discord_app/modules/app_database/modules/UserSearchItems.tsx
-import ME from "ME";
-import recountRelationshipTypes from "recountRelationshipTypes";
-import recomputeAffinities from "recomputeAffinities";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RelationshipTypes } from "ME";
-import set from "recomputeAffinities";
-import { items } from "../DatabaseDaos.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import itemsDefault from "items" /* 1955 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "recountRelationshipTypes" /* 5406 */;
+import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let c9 = new require("markAllUserIdListsStale")("UserSearchItems");
+let set = arg1;
+let closure_9 = new timestampDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {
   constructor() {
     obj = Object.create(new.target.prototype);
-    UserSearchItems = obj;
+    closure_0 = obj;
     obj.actions = {
       POST_CONNECTION_OPEN: obj.handlePostConnectionOpen,
       WRITE_CACHES(arg0, arg1) {
@@ -53,16 +55,16 @@ prototype["getAll"] = function getAll() {
             return obj;
           } else {
             let length = tmp5;
-            let closure_0 = tmp2;
+            closure_0 = tmp2;
             closure_0 = undefined;
             length = undefined;
             closure_2 = undefined;
             const _performance2 = performance;
             closure_0 = performance.now();
-            const userSearchItemsResult = outer1_1(table[7]).userSearchItems();
+            const userSearchItemsResult = closure_1_1(table[7]).userSearchItems();
             if (null == userSearchItemsResult) {
               c3 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = [];
               return obj1;
             } else {
@@ -72,7 +74,7 @@ prototype["getAll"] = function getAll() {
               obj2[0] = userSearchItemsResult.getMany();
               return obj2;
             }
-            const obj7 = outer1_1(table[7]);
+            const obj7 = closure_1_1(table[7]);
           }
         } else if (arg0 === 1) {
           c3 = 3;
@@ -110,7 +112,7 @@ Object.defineProperty(prototype, "shouldUseCache", {
   set: undefined
 });
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
-  let c10 = true;
+  c10 = true;
 };
 prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   friendIDs = friendIDs.getFriendIDs();
@@ -123,9 +125,9 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     let user = authStore2.getUser(nextResult);
     let tmp6 = user;
     if (null != user) {
-      let tmp14 = obj;
+      let tmp14 = set;
       let tmp15 = dependencyMap;
-      let obj5 = obj(5409);
+      let obj5 = set(5409);
       let tmp16 = user;
       let names = obj5.getNames(tmp6);
       let tmp18 = nextResult;
@@ -158,9 +160,9 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     let user1 = authStore2.getUser(item10033.id);
     let tmp11 = user1;
     if (null != user1) {
-      let tmp22 = obj;
+      let tmp22 = set;
       let tmp23 = dependencyMap;
-      let obj7 = obj(5409);
+      let obj7 = set(5409);
       let tmp24 = user1;
       let names1 = obj7.getNames(tmp11);
       let tmp26 = item10033;
@@ -184,11 +186,11 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
     }
     continue;
   }
-  const result = items.userSearchItemsTransaction(database);
+  const result = itemsDefault.userSearchItemsTransaction(database);
   result.delete();
   result.putAll(Object.values(obj));
 };
-let set = Object.create(UserSearchItems.prototype);
+set = Object.create(UserSearchItems.prototype);
 set.actions = {
   POST_CONNECTION_OPEN: set.handlePostConnectionOpen,
   WRITE_CACHES(arg0, arg1) {

@@ -1,18 +1,16 @@
 // discord_app/modules/game_profile/AnnouncementMessageUtils.tsx
-import { isMessageComponentsV2 } from "hasFlag";
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
-import { formatExpirationLabel } from "../polls/chat/useFormattedExpirationLabel.tsx";
+import set from "set" /* 2 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import hasFlag from "hasFlag" /* 4031 */;
+import formatExpirationLabel from "formatExpirationLabel" /* 8431 */;
 
+const isMessageComponentsV2 = hasFlag.isMessageComponentsV2;
 const re4 = /^#{1,3}\s+(.+)$/;
 const re5 = /^https?:\/\/\S+$/;
-let result = require("messageAttachmentToUnfurledMediaItem").fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
+let result = set.fileFinishedImporting("modules/game_profile/AnnouncementMessageUtils.tsx");
 
 export const toAnnouncementMessages = function toAnnouncementMessages(messages) {
   return messages.map((reactions) => {
-    let body;
-    let color;
-    let title;
-    let url;
     let obj = found4(found6[5]);
     const tmp2Result = found5(found6[4])(obj.createMessageRecord(reactions));
     if (callback(tmp2Result)) {
@@ -77,7 +75,7 @@ export const toAnnouncementMessages = function toAnnouncementMessages(messages) 
         }
         const match = str9.match(closure_4);
         if (null != match) {
-          const obj1 = { title: null, body: null };
+          obj1 = { title: null, body: null };
           obj1[0] = match[1].trim();
           let str11 = "";
           if (!tmp28) {
@@ -251,7 +249,7 @@ export const getPollExpiryLabel = function getPollExpiryLabel(poll) {
   return result;
 };
 export const getPosterUrl = function getPosterUrl(proxyUrl, arg1, c12) {
-  let str = isDiscordProxiedAssetUrl.toURLSafe(proxyUrl);
+  let str = isDiscordProxiedAssetUrlDefault.toURLSafe(proxyUrl);
   str = null;
   if (null != str) {
     const searchParams = str.searchParams;

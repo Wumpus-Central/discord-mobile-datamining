@@ -1,16 +1,14 @@
 // discord_app/modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import initialize from "initialize";
-import { useApplicationsInContext } from "../../../utils/AppLauncherSearchUtils.tsx";
-import { useActivityApplications } from "useActivityApplications.tsx";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "initialize" /* 11218 */;
 
 const require = arg1;
-let result = require("initialize").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/onboarding/hooks/useBannerBots.tsx");
 
 export const useBannerBots = function useBannerBots(context) {
   context = context.context;
-  let _require;
+  let first1;
   let obj = (function useAppsMap(context) {
     let apps;
     apps = apps(11243).useApplicationsInContext({ context: context.context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
@@ -24,9 +22,9 @@ export const useBannerBots = function useBannerBots(context) {
       return map;
     }, items);
   })({ context });
-  let apps = _useApplicationsInContext.useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
-  const obj2 = _useApplicationsInContext;
-  const tmp2 = _require;
+  let apps = first1(11243).useApplicationsInContext({ context, onlyWithCommands: true, includeBuiltIn: false, includeEmbeddedApps: false, includeNonEmbeddedApps: true }).apps;
+  const obj2 = first1(11243);
+  const tmp2 = first1;
   const obj3 = (function useCommandsMap(context) {
     let commands;
     commands = commands(11243).useApplicationCommandsInContext({ context: context.context, includeBuiltIn: false }).commands;
@@ -43,7 +41,7 @@ export const useBannerBots = function useBannerBots(context) {
   const tmp4 = (function useFrecencyCommandIds(context) {
     context = context.context;
     let obj = context(589);
-    const items = [createGuildRecordFromRust];
+    const items = [closure_3];
     obj = {
       channel: context.channel,
       guild: obj.useStateFromStores(items, () => {
@@ -52,7 +50,7 @@ export const useBannerBots = function useBannerBots(context) {
         if (channel != null) {
           guild_id = channel.guild_id;
         }
-        return outer1_3.getGuild(guild_id);
+        return closure_1_3.getGuild(guild_id);
       })
     };
     return context(8457).useTopCommands(obj);
@@ -62,16 +60,16 @@ export const useBannerBots = function useBannerBots(context) {
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const activityApplications = _useActivityApplications.useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-  const obj4 = _useActivityApplications;
-  let items = [initialize];
+  const activityApplications = first1(11211).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+  const obj4 = first1(11211);
+  let items = [closure_4];
   const stateFromStores = tmp2(589).useStateFromStores(items, () => recentApplicationCommandMetadata.getRecentApplicationCommandMetadata());
   let value = null;
   if (null != stateFromStores) {
     value = obj.get(stateFromStores.applicationId);
   }
   let tmp9 = value;
-  _require = value;
+  first1 = value;
   for (const item10049 of tmp4) {
     value = obj3.get(item10049);
     if (null != value) {
@@ -83,7 +81,7 @@ export const useBannerBots = function useBannerBots(context) {
         if (null == tmp9) {
           let tmp20 = value1;
           tmp9 = tmp14;
-          _require = tmp14;
+          first1 = tmp14;
         } else {
           let tmp16 = value1;
           let tmp17 = tmp9;
@@ -102,7 +100,7 @@ export const useBannerBots = function useBannerBots(context) {
             if (apps.length > 0) {
               let first = apps[0];
               tmp9 = first;
-              _require = first;
+              first1 = first;
             }
             let num = 1;
             if (apps.length > 1) {
@@ -113,8 +111,8 @@ export const useBannerBots = function useBannerBots(context) {
             if (null == found) {
               found = apps.find((id) => {
                 id = undefined;
-                if (_undefined != null) {
-                  id = _undefined.id;
+                if (first1 != null) {
+                  id = first1.id;
                 }
                 return id.id !== id;
               });
@@ -122,9 +120,8 @@ export const useBannerBots = function useBannerBots(context) {
           }
           let tmp24 = tmp9;
           if (null == tmp9) {
-            let first1 = activityApplications[0];
+            first1 = activityApplications[0];
             tmp9 = first1;
-            _require = first1;
             found = activityApplications[1];
           } else {
             let tmp25 = found;

@@ -1,27 +1,27 @@
 // discord_app/modules/user_settings/defs/native/DismissiblePremiumNewBadgeRouteProps.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadgeRouteProps.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DismissiblePremiumNewBadgeRouteProps.tsx");
 
 export function createDismissiblePremiumNewBadgeRouteProps(CUSTOM_APP_ICONS_NEW_BADGE) {
-  let closure_0 = CUSTOM_APP_ICONS_NEW_BADGE;
+  closure_0 = CUSTOM_APP_ICONS_NEW_BADGE;
   return {
     useTrailing() {
-      return outer1_6(outer1_1(outer1_2[4]), { dismissibleContent: closure_0, newPremiumStyle: true });
+      return closure_1_6(closure_1_1(closure_1_2[4]), { dismissibleContent: closure_0, newPremiumStyle: true });
     },
     usePreNavigationAction() {
       const items = [first];
-      const tmp = outer1_3(CUSTOM_APP_ICONS_NEW_BADGE(outer1_2[5]).useSelectedDismissibleContent(items), 2);
+      const tmp = closure_1_3(CUSTOM_APP_ICONS_NEW_BADGE(closure_1_2[5]).useSelectedDismissibleContent(items), 2);
       first = tmp[0];
-      let closure_1 = tmp3;
+      closure_1 = tmp3;
       const items1 = [first, tmp[1]];
-      return outer1_4.useCallback(() => {
+      return closure_1_4.useCallback(() => {
         if (first === first) {
-          tmp3 = tmp3(outer2_5.TAKE_ACTION);
+          callback(closure_2_5.TAKE_ACTION);
         }
         return true;
       }, items1);

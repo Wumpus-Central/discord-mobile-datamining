@@ -1,30 +1,21 @@
 // discord_app/modules/threads/ThreadCreationHooks.tsx
-import snowflakeSequence from "snowflakeSequence";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import dispatcher from "dispatcher";
-import maybeRebuildState from "maybeRebuildState";
-import fetchFingerprint from "fetchFingerprint";
-import closure_8 from "ensureGuildLoaded";
-import handleChanged from "handleChanged";
-import { DraftType } from "handleChanged";
-import reinjectEphemerals from "reinjectEphemerals";
-import { SlowmodeType } from "setCooldown";
-import AbortCodes from "AbortCodes";
-import ME from "ME";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { rebuild } from "../messages/MessageParser.tsx";
-import { useCanUnarchiveThread } from "ThreadHooks.tsx";
+import useCanUnarchiveThread from "useCanUnarchiveThread" /* 7234 */;
+import rebuildDefault from "rebuild" /* 7436 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "maybeRebuildState" /* 7270 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "handleChanged" /* 4825 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_11 from "reinjectEphemerals" /* 4994 */;
+import { SlowmodeType } from "setCooldown" /* 7440 */;
+import AbortCodes from "AbortCodes" /* 1235 */;
+import ME from "ME" /* 676 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_19;
-let closure_20;
-let closure_21;
-let map1;
-const require = arg1;
+require = arg1;
 function getIsPrivate(threadSettingsDraft, privateThreadMode) {
   let tmp = privateThreadMode === obj.PrivateOnly;
   if (!tmp) {
@@ -91,9 +82,9 @@ function getDefaultThreadName(stateFromStores, parentMessageId) {
     if (str3 == null) {
       str3 = "";
     }
-    const obj = rebuild;
+    obj = rebuildDefault;
     const tmp17 = importDefault;
-    const str4 = rebuild.unparse(str3, stateFromStores.id, true);
+    const str4 = rebuildDefault.unparse(str3, stateFromStores.id, true);
     const tmp17Result = tmp17(8464);
     let str7 = tmp17(8464)(str4.split("\n")[0], true).replace(/^[ #-]+/, "");
     const items = [];
@@ -145,32 +136,32 @@ function createThread_(channel, arg1, arg2, arg3) {
 function _createThread_() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let snowflakeSequence = arg3;
-    let c10 = 0;
-    let c11 = 0;
-    let c9 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c10 = 0;
+    c11 = 0;
+    c9 = 0;
     return (function*(arg0, body) {
       let id = tmp3;
-      let maybeRebuildState = tmp6;
+      closure_6 = tmp6;
       let throwTypeErrorResult = lib;
       throwTypeErrorResult = callback;
       throwTypeErrorResult = dependencyMap;
       throwTypeErrorResult = lib2;
-      let c4 = lib.isForumLikeChannel();
-      let c9 = 1;
+      c4 = lib.isForumLikeChannel();
+      c9 = 1;
       yield lib2();
       if (1 === tmp9) {
         c9 = 0;
-        body = closure_8.body;
+        body = throwTypeErrorResult.body;
         let code;
         if (body != null) {
           code = body.code;
         }
         if (code === constants.TOO_MANY_THREADS) {
-          throwTypeErrorResult = maybeRebuildState;
+          throwTypeErrorResult = closure_6;
           throwTypeErrorResult = id;
           throwTypeErrorResult = callback;
           throwTypeErrorResult = dependencyMap;
@@ -189,7 +180,7 @@ function _createThread_() {
             throwTypeErrorResult = string2(t2["1KEdvB"]);
           }
           let obj2 = { title: null, body: null };
-          throwTypeErrorResult = maybeRebuildState;
+          throwTypeErrorResult = closure_6;
           obj2[0] = throwTypeErrorResult;
           throwTypeErrorResult = c4;
           throwTypeErrorResult = id;
@@ -210,9 +201,8 @@ function _createThread_() {
           obj2 = callback(4827).show(obj2);
           const obj18 = callback(4827);
         } else {
-          throwTypeErrorResult = maybeRebuildState;
-          throwTypeErrorResult = closure_8;
-          const body7 = closure_8.body;
+          throwTypeErrorResult = closure_6;
+          const body7 = throwTypeErrorResult.body;
           let code1;
           if (body7 != null) {
             code1 = body7.code;
@@ -237,27 +227,25 @@ function _createThread_() {
             obj3[1] = intl8.string(lib(1236).t.jDMxz2);
             throwTypeErrorResult = obj15.show(obj3);
           } else {
-            throwTypeErrorResult = maybeRebuildState;
-            throwTypeErrorResult = closure_8;
-            const body8 = closure_8.body;
+            throwTypeErrorResult = closure_6;
+            const body8 = throwTypeErrorResult.body;
             let code2;
             if (body8 != null) {
               code2 = body8.code;
             }
             if (code2 === constants.SLOWMODE_RATE_LIMITED) {
-              throwTypeErrorResult = maybeRebuildState;
-              throwTypeErrorResult = closure_8;
-              const retry_after = closure_8.body.retry_after;
+              throwTypeErrorResult = closure_6;
+              const retry_after = throwTypeErrorResult.body.retry_after;
               c4 = retry_after;
               if (retry_after == null) {
                 c4 = 0;
               }
-              throwTypeErrorResult = maybeRebuildState;
+              throwTypeErrorResult = closure_6;
               throwTypeErrorResult = c4;
-              let dispatcher = c4;
-              throwTypeErrorResult = dispatcher;
-              if (dispatcher > 0) {
-                throwTypeErrorResult = maybeRebuildState;
+              closure_5 = c4;
+              throwTypeErrorResult = closure_5;
+              if (closure_5 > 0) {
+                throwTypeErrorResult = closure_6;
                 throwTypeErrorResult = id;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
@@ -266,18 +254,17 @@ function _createThread_() {
                 obj4[1] = lib.id;
                 throwTypeErrorResult = closure_12;
                 obj4[2] = closure_12.CreateThread;
-                throwTypeErrorResult = dispatcher;
+                throwTypeErrorResult = closure_5;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
-                obj4[3] = dispatcher * callback(687).Millis.SECOND;
+                obj4[3] = closure_5 * callback(687).Millis.SECOND;
                 throwTypeErrorResult = callback(709).dispatch(obj4);
                 const obj29 = callback(709);
               }
             } else {
-              throwTypeErrorResult = maybeRebuildState;
-              throwTypeErrorResult = closure_8;
-              if (429 === closure_8.status) {
-                throwTypeErrorResult = maybeRebuildState;
+              throwTypeErrorResult = closure_6;
+              if (429 === throwTypeErrorResult.status) {
+                throwTypeErrorResult = closure_6;
                 throwTypeErrorResult = id;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = dependencyMap;
@@ -307,10 +294,9 @@ function _createThread_() {
                 obj5[1] = intl6.string(lib(1236).t.Whhv4w);
                 throwTypeErrorResult = obj13.show(obj5);
               } else {
-                throwTypeErrorResult = maybeRebuildState;
+                throwTypeErrorResult = closure_6;
                 throwTypeErrorResult = id;
-                throwTypeErrorResult = closure_8;
-                const body9 = closure_8.body;
+                const body9 = throwTypeErrorResult.body;
                 let code3;
                 throwTypeErrorResult = set;
                 if (body9 != null) {
@@ -325,7 +311,7 @@ function _createThread_() {
                     code4 = body2.code;
                   }
                   if (code4 === constants.INVALID_FORM_BODY) {
-                    const body3 = closure_8.body;
+                    const body3 = throwTypeErrorResult.body;
                     let name;
                     if (body3 != null) {
                       const errors = body3.errors;
@@ -334,47 +320,45 @@ function _createThread_() {
                       }
                     }
                     if (null != name) {
-                      throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = closure_8;
-                      throw closure_8;
+                      throwTypeErrorResult = closure_6;
+                      throw throwTypeErrorResult;
                     }
                   }
-                  const body4 = closure_8.body;
+                  const body4 = throwTypeErrorResult.body;
                   let code5;
                   if (body4 != null) {
                     code5 = body4.code;
                   }
                   if (set2.has(code5)) {
                     if (null == dependencyMap) {
-                      throwTypeErrorResult = maybeRebuildState;
+                      throwTypeErrorResult = closure_6;
                       throwTypeErrorResult = new.target;
                       throwTypeErrorResult = new.target;
                       throwTypeErrorResult = new Promise((arg0, arg1) => {
-                        let closure_0 = arg0;
-                        let closure_1 = arg1;
+                        closure_0 = arg0;
+                        closure_1 = arg1;
                         if (null == throwTypeErrorResult.body) {
                           arg1();
                         }
-                        const result = maybeRebuildState.addConditionalChangeListener(() => {
-                          const andDeleteMostRecentUserCreatedThreadId = outer1_6.getAndDeleteMostRecentUserCreatedThreadId();
+                        const result = closure_6.addConditionalChangeListener(() => {
+                          const andDeleteMostRecentUserCreatedThreadId = closure_1_6.getAndDeleteMostRecentUserCreatedThreadId();
                           if (null != andDeleteMostRecentUserCreatedThreadId) {
-                            const channel = outer1_8.getChannel(andDeleteMostRecentUserCreatedThreadId);
-                            callback(outer1_2[29]).wait(() => { ... });
+                            const channel = closure_1_8.getChannel(andDeleteMostRecentUserCreatedThreadId);
+                            callback(closure_1_2[29]).wait(() => { ... });
                             return false;
                           }
                         });
                       });
-                      let c11 = 3;
+                      c11 = 3;
                     } else {
-                      throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = closure_8;
-                      const body10 = closure_8.body;
+                      throwTypeErrorResult = closure_6;
+                      const body10 = throwTypeErrorResult.body;
                       let code6;
                       if (body10 != null) {
                         code6 = body10.code;
                       }
                       if (code6 !== constants.EXPLICIT_CONTENT) {
-                        throwTypeErrorResult = maybeRebuildState;
+                        throwTypeErrorResult = closure_6;
                         throwTypeErrorResult = id;
                         throwTypeErrorResult = lib;
                         throwTypeErrorResult = dependencyMap;
@@ -384,18 +368,18 @@ function _createThread_() {
                         throwTypeErrorResult = lib;
                         obj6[1] = lib.getGuildId();
                         throwTypeErrorResult = callback;
-                        dispatcher = callback;
+                        closure_5 = callback;
                         if (callback == null) {
-                          dispatcher = [];
+                          closure_5 = [];
                         }
-                        obj6[2] = dispatcher;
-                        const body5 = closure_8.body;
+                        obj6[2] = closure_5;
+                        const body5 = throwTypeErrorResult.body;
                         let code7;
                         if (body5 != null) {
                           code7 = body5.code;
                         }
                         obj6[3] = code7;
-                        const body6 = closure_8.body;
+                        const body6 = throwTypeErrorResult.body;
                         let reason;
                         if (body6 != null) {
                           reason = body6.reason;
@@ -406,23 +390,23 @@ function _createThread_() {
                       }
                     }
                     let obj10 = lib(7501);
-                    maybeRebuildState = obj10.createNonce();
-                    let tmp89 = null != closure_8.body.attachments;
+                    closure_6 = obj10.createNonce();
+                    let tmp89 = null != throwTypeErrorResult.body.attachments;
                     if (tmp89) {
-                      tmp89 = closure_8.body.attachments.length > 0;
+                      tmp89 = throwTypeErrorResult.body.attachments.length > 0;
                     }
                     if (tmp89) {
                       let obj11 = callback(709);
                       const obj7 = { type: "MESSAGE_EXPLICIT_CONTENT_FP_CREATE", messageId: null, channelId: null, attachments: null };
-                      obj7[1] = maybeRebuildState;
+                      obj7[1] = closure_6;
                       obj7[2] = lib.id;
-                      obj7[3] = closure_8.body.attachments;
+                      obj7[3] = throwTypeErrorResult.body.attachments;
                       obj11.dispatch(obj7);
                       throwTypeErrorResult = callback;
                       throwTypeErrorResult = dependencyMap;
                       throwTypeErrorResult = lib;
-                      throwTypeErrorResult = maybeRebuildState;
-                      throwTypeErrorResult = callback(12737)(lib.id, maybeRebuildState);
+                      throwTypeErrorResult = closure_6;
+                      throwTypeErrorResult = callback(12737)(lib.id, closure_6);
                     }
                   } else {
                     let obj8 = callback(4827);
@@ -437,23 +421,23 @@ function _createThread_() {
               }
             }
           }
-          throwTypeErrorResult = maybeRebuildState;
+          throwTypeErrorResult = closure_6;
           throwTypeErrorResult = new.target;
           throwTypeErrorResult = new.target;
           throwTypeErrorResult = new Promise((arg0, arg1) => {
-            let closure_0 = arg0;
+            closure_0 = arg0;
             if (null == body.body) {
               arg1();
             }
             const result = throwTypeErrorResult.addConditionalChangeListener(() => {
-              const channel = throwTypeErrorResult.getChannel(outer1_3.body.id);
+              const channel = throwTypeErrorResult.getChannel(closure_1_3.body.id);
               if (null != channel) {
                 callback(table[29]).wait(() => { ... });
                 return false;
               }
             });
           });
-          let c10 = 2;
+          c10 = 2;
           c11 = 1;
         }
       } else if (2 === tmp9) {
@@ -483,10 +467,10 @@ function _createThread_() {
           c11 = 3;
           throw body;
         } else if (arg0 !== 2) {
-          throwTypeErrorResult = maybeRebuildState;
+          throwTypeErrorResult = closure_6;
           lib2 = body;
           if (null == body.body) {
-            const obj1 = callback(4827);
+            obj1 = callback(4827);
             const obj12 = { title: null, body: null };
             const intl = lib(1236).intl;
             obj12[0] = intl.string(lib(1236).t.j2d6Km);
@@ -494,7 +478,7 @@ function _createThread_() {
             obj12[1] = intl2.string(lib(1236).t.fEptJP);
             obj1.show(obj12);
           } else {
-            throwTypeErrorResult = maybeRebuildState;
+            throwTypeErrorResult = closure_6;
             throwTypeErrorResult = id;
             throwTypeErrorResult = callback;
             throwTypeErrorResult = dependencyMap;
@@ -544,7 +528,7 @@ function _createThread_() {
         }
         c9 = 0;
         c11 = 3;
-        const obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = body;
         return obj;
       }
@@ -552,7 +536,7 @@ function _createThread_() {
       return body;
     })();
   });
-  const _createThread_ = tmp;
+  closure_27 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -564,11 +548,11 @@ function _createThread_() {
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: map1, FORUM_POST_CREATION_UPLOAD_ERRORS: closure_14 } = AbortCodes);
 ({ AbortCodes: closure_15, AnalyticEvents: closure_16, ChannelTypes: closure_17, Endpoints: closure_18, LoggingInviteTypes: closure_19, MAX_MESSAGES_PER_CHANNEL: closure_20, MessageFlags: closure_21 } = ME);
 let obj = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
-let result = require("noop").fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
+let result = require("set").fileFinishedImporting("modules/threads/ThreadCreationHooks.tsx");
 
 export const PrivateThreadMode = obj;
 export const usePrivateThreadMode = function usePrivateThreadMode(parentChannel) {
-  const obj = useCanUnarchiveThread;
+  obj = useCanUnarchiveThread;
   const canStartPublicThread = obj.useCanStartPublicThread(parentChannel);
   if (!obj2.useCanStartPrivateThread(parentChannel)) {
     return tmp2.Disabled;
@@ -578,7 +562,7 @@ export { getIsPrivate };
 export { getDefaultThreadName };
 export const useCreateThreadCommon = function useCreateThreadCommon(parentChannel) {
   parentChannel = parentChannel.parentChannel;
-  let closure_0 = parentChannel;
+  closure_0 = parentChannel;
   const parentMessageId = parentChannel.parentMessageId;
   const threadSettings = parentChannel.threadSettings;
   const privateThreadMode = parentChannel.privateThreadMode;
@@ -588,11 +572,11 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
   const uploadHandler = parentChannel.uploadHandler;
   closure_0 = undefined;
   closure_0 = _location((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c6 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c7 === 2) {
         c7 = 3;
@@ -601,7 +585,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -621,55 +605,55 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
               return obj;
             } else {
               let autoArchiveDuration = tmp3;
-              let ensureGuildLoaded = tmp2;
-              let c3;
-              ensureGuildLoaded = undefined;
+              closure_4 = tmp2;
+              c3 = undefined;
+              closure_4 = undefined;
               autoArchiveDuration = undefined;
               channel = undefined;
               c7 = undefined;
               let draft;
-              let handleChanged;
-              c3 = outer2_24(name, outer1_3);
+              closure_9 = undefined;
+              c3 = closure_2_24(name, closure_1_3);
               name = name.name;
               c3 = name;
               if (name == null) {
                 c3 = "";
               }
-              ensureGuildLoaded = c3;
+              closure_4 = c3;
               if ("" === c3) {
                 if (channel) {
-                  let stringResult = outer2_25(lib, closure_1);
+                  let stringResult = closure_2_25(lib, closure_1);
                   if ("" === stringResult) {
                     const intl = lib(threadSettings[15]).intl;
                     stringResult = intl.string(lib(threadSettings[15]).t["7Xm5QI"]);
                   }
-                  ensureGuildLoaded = stringResult;
+                  closure_4 = stringResult;
                 }
               }
               autoArchiveDuration = lib(threadSettings[16]).getAutoArchiveDuration(lib);
               let obj4 = lib(threadSettings[16]);
-              channel = outer2_8.getChannel(parentMessageId(threadSettings[17]).castMessageIdAsChannelId(closure_1));
+              channel = closure_2_8.getChannel(parentMessageId(threadSettings[17]).castMessageIdAsChannelId(closure_1));
               channel = 1;
               c7 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer2_26(lib, [], undefined, () => {
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_2_26(lib, [], undefined, () => {
                 if (null != closure_1) {
-                  let result = outer2_18.CHANNEL_MESSAGE_THREADS(lib.id, tmp);
+                  let result = closure_2_18.CHANNEL_MESSAGE_THREADS(lib.id, tmp);
                   let tmp3 = lib;
                 } else {
                   tmp3 = lib;
-                  result = outer2_18.CHANNEL_THREADS(lib.id);
+                  result = closure_2_18.CHANNEL_THREADS(lib.id);
                 }
                 const HTTP = lib(530).HTTP;
-                let obj = { url: result, body: null, rejectWithError: null };
-                obj = { name: ensureGuildLoaded, type: null, auto_archive_duration: null, location: null };
+                obj = { url: result, body: null, rejectWithError: null };
+                obj = { name: closure_4, type: null, auto_archive_duration: null, location: null };
                 if (c3) {
-                  let PRIVATE_THREAD = outer2_17.PRIVATE_THREAD;
+                  let PRIVATE_THREAD = closure_2_17.PRIVATE_THREAD;
                 } else {
-                  PRIVATE_THREAD = tmp3.type === outer2_17.GUILD_ANNOUNCEMENT ? tmp9.ANNOUNCEMENT_THREAD : tmp9.PUBLIC_THREAD;
+                  PRIVATE_THREAD = tmp3.type === closure_2_17.GUILD_ANNOUNCEMENT ? tmp9.ANNOUNCEMENT_THREAD : tmp9.PUBLIC_THREAD;
                 }
                 obj[1] = PRIVATE_THREAD;
-                obj[2] = dispatcher;
+                obj[2] = closure_5;
                 obj[3] = stringResult;
                 obj[1] = obj;
                 obj[2] = lib(530).rejectWithMigratedError();
@@ -688,20 +672,20 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
           } else {
             c7 = arg1;
             if (c7 !== channel) {
-              draft = outer2_9.getDraft(lib.id, outer2_10.FirstThreadMessage);
-              handleChanged = draft.trim();
-              parentMessageId(threadSettings[19]).clearDraft(lib.id, outer2_10.ThreadSettings);
+              draft = closure_2_9.getDraft(lib.id, closure_2_10.FirstThreadMessage);
+              closure_9 = draft.trim();
+              parentMessageId(threadSettings[19]).clearDraft(lib.id, closure_2_10.ThreadSettings);
               const obj9 = parentMessageId(threadSettings[19]);
-              parentMessageId(threadSettings[19]).clearDraft(lib.id, outer2_10.FirstThreadMessage);
-              let tmp10 = "" !== handleChanged;
+              parentMessageId(threadSettings[19]).clearDraft(lib.id, closure_2_10.FirstThreadMessage);
+              let tmp10 = "" !== closure_9;
               if (tmp10) {
-                tmp10 = outer2_9 !== lib.trim();
+                tmp10 = closure_2_9 !== lib.trim();
               }
               if (tmp10) {
                 obj = parentMessageId(threadSettings[19]);
-                obj.saveDraft(uploadHandler.id, outer2_8, outer2_10.ChannelMessage);
+                obj.saveDraft(uploadHandler.id, closure_2_8, closure_2_10.ChannelMessage);
               }
-              if (outer1_5 != null) {
+              if (closure_1_5 != null) {
                 tmp20(c7);
               }
               (function sendMessage(c7, closure_0, closure_1, closure_2, c72) {
@@ -716,7 +700,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
                   if (closure_1.length > 0) {
                     const obj4 = callback(7427);
                     const id = c7.id;
-                    let obj = { location: null };
+                    obj = { location: null };
                     obj[0] = constants.THREAD_CREATION;
                     let sendStickersResult = obj4.sendStickers(id, closure_1, callback(7436).parse(c7, closure_0), obj);
                     const obj5 = callback(7436);
@@ -730,7 +714,7 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
               const obj10 = parentMessageId(threadSettings[19]);
             }
             obj1 = parentMessageId(threadSettings[20]);
-            obj1.clearAll(lib.id, outer2_10.FirstThreadMessage);
+            obj1.clearAll(lib.id, closure_2_10.FirstThreadMessage);
             c7 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -754,22 +738,22 @@ export const useCreateThreadCommon = function useCreateThreadCommon(parentChanne
   }, items);
 };
 export const createThread = function createThread(channel, closure_2, PUBLIC_THREAD, autoArchiveDuration, arg4) {
-  let closure_0 = channel;
-  let closure_1 = closure_2;
+  closure_0 = channel;
+  closure_1 = closure_2;
   closure_2 = PUBLIC_THREAD;
-  let snowflakeSequence = autoArchiveDuration;
-  let ensureGuildLoaded = arg4;
+  closure_3 = autoArchiveDuration;
+  closure_4 = arg4;
   return createThread_(channel, [], undefined, () => {
     const HTTP = channel(PUBLIC_THREAD[18]).HTTP;
-    obj = { url: outer1_18.CHANNEL_THREADS(channel.id), body: obj, rejectWithError: null };
-    obj = { name: closure_1, type: PUBLIC_THREAD, auto_archive_duration: snowflakeSequence, location: ensureGuildLoaded };
+    obj = { url: closure_1_18.CHANNEL_THREADS(channel.id), body: obj, rejectWithError: null };
+    obj = { name: closure_1, type: PUBLIC_THREAD, auto_archive_duration: closure_3, location: closure_4 };
     obj[2] = channel(PUBLIC_THREAD[18]).rejectWithMigratedError();
     return HTTP.post(obj);
   });
 };
 export const useCreateForumPostCommon = function useCreateForumPostCommon(parentChannel) {
   parentChannel = parentChannel.parentChannel;
-  let closure_0 = parentChannel;
+  closure_0 = parentChannel;
   const name = parentChannel.name;
   const appliedTags = parentChannel.appliedTags;
   const analyticsLocations = parentChannel.analyticsLocations;
@@ -780,12 +764,12 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
   const voiceChatEnabled = parentChannel.voiceChatEnabled;
   closure_0 = undefined;
   closure_0 = onThreadCreated((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_8 = 0;
+    closure_9 = 0;
+    let reason = 0;
     return (function*(arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
@@ -794,7 +778,7 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -803,7 +787,7 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
       } else {
         try {
           c9 = 2;
-          if (0 === user) {
+          if (0 === c8) {
             if (arg0 === 1) {
               c9 = 3;
               throw arg1;
@@ -813,18 +797,18 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               obj[0] = arg1;
               return obj;
             } else {
-              let c5 = tmp3;
-              let c4 = tmp5;
+              c5 = tmp3;
+              c4 = tmp5;
               let trackWithMetadataResult = uploaderFile;
               uploaderFile = undefined;
-              let closure_1;
-              let obj1;
-              let snowflakeSequence;
+              closure_1 = undefined;
+              obj1 = undefined;
+              closure_3 = undefined;
               c4 = undefined;
               c5 = undefined;
-              let c6;
-              let reason;
-              user = undefined;
+              c6 = undefined;
+              c7 = undefined;
+              c8 = undefined;
               trackWithMetadataResult = name;
               trackWithMetadataResult = appliedTags;
               trackWithMetadataResult = closure_1;
@@ -834,12 +818,12 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               let tmp41 = uploaderFile;
               if (trackWithMetadataResult[0]) {
                 let obj5 = store(appliedTags[22]);
-                num7 = obj5.addFlag(0, outer2_21.SUPPRESS_NOTIFICATIONS);
+                num7 = obj5.addFlag(0, closure_2_21.SUPPRESS_NOTIFICATIONS);
                 tmp41 = trackWithMetadataResult;
               }
               let obj6 = store(appliedTags[16]);
               const autoArchiveDuration = obj6.getAutoArchiveDuration(store, null);
-              closure_1 = outer2_18.CHANNEL_THREADS(store.id) + "?use_nested_fields=true";
+              closure_1 = closure_2_18.CHANNEL_THREADS(store.id) + "?use_nested_fields=true";
               obj1 = { name: null, auto_archive_duration: null, applied_tags: null, message: null };
               obj1[0] = closure_1;
               obj1[1] = autoArchiveDuration;
@@ -854,7 +838,7 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               obj2[2] = tmp50;
               obj1[3] = obj2;
               let tmp52 = null;
-              if (null != outer1_6) {
+              if (null != code) {
                 tmp52 = (function buildMessageActivity(activity) {
                   let session_id = activity.activity.session_id;
                   if (null == session_id) {
@@ -862,7 +846,7 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
                   }
                   let tmp2 = null;
                   if (null != session_id) {
-                    const obj = { type: null, session_id: null, target_user_id: null, party_id: null };
+                    obj = { type: null, session_id: null, target_user_id: null, party_id: null };
                     obj[0] = activity.type;
                     obj[1] = session_id;
                     obj[2] = activity.targetUserId;
@@ -887,43 +871,42 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               }
               if (null != obj1) {
                 if (arr2.length > 0) {
-                  reason = 1;
-                  user = 3;
+                  c7 = 1;
+                  c8 = 3;
                   c9 = 1;
                   let obj3 = { value: null, done: false };
-                  obj3[0] = outer1_5(arr2);
+                  obj3[0] = file(arr2);
                   return obj3;
                 }
               }
-              outer2_26(store, outer1_3, uploaderFile, () => {
+              closure_2_26(store, closure_1_3, uploaderFile, () => {
                 const HTTP = uploaderFile(obj1[18]).HTTP;
-                const obj = { url: closure_1, body: obj1, rejectWithError: null };
-                obj[2] = uploaderFile(obj1[18]).rejectWithMigratedError();
+                obj = { url: closure_1, body: obj1, rejectWithError: uploaderFile(obj1[18]).rejectWithMigratedError() };
                 return HTTP.post(obj);
               });
-              user = 2;
+              c8 = 2;
               c9 = 1;
             }
           } else if (1 === tmp8) {
-            reason = 0;
-            c9 = c6;
-            const outer1_4 = c9;
-            outer1_5 = outer1_4.file;
-            outer1_6 = outer1_4.code;
-            reason = outer1_4.reason;
+            c7 = 0;
+            closure_9 = c6;
+            closure_4 = closure_9;
+            file = closure_4.file;
+            code = closure_4.code;
+            reason = closure_4.reason;
             obj3 = store(appliedTags[24]);
             const obj4 = { file: null, guildId: null, analyticsLocations: null, code: null, reason: null };
-            obj4[0] = outer1_5;
+            obj4[0] = file;
             obj4[1] = store.getGuildId();
-            snowflakeSequence = outer1_3;
-            if (outer1_3 == null) {
-              snowflakeSequence = [];
+            closure_3 = closure_1_3;
+            if (closure_1_3 == null) {
+              closure_3 = [];
             }
-            obj4[2] = snowflakeSequence;
-            obj4[3] = outer1_6;
+            obj4[2] = closure_3;
+            obj4[3] = code;
             obj4[4] = reason;
             const result = obj3.handleUploadMessageAttachmentsErrors(obj4);
-            throw c9;
+            throw closure_9;
           } else if (2 === tmp8) {
             if (arg0 === 1) {
               c9 = 3;
@@ -934,12 +917,12 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               obj5[0] = arg1;
               return obj5;
             } else {
-              user = arg1;
-              name(appliedTags[19]).clearDraft(store.id, outer2_10.ThreadSettings);
+              const user = arg1;
+              name(appliedTags[19]).clearDraft(store.id, closure_2_10.ThreadSettings);
               const obj13 = name(appliedTags[19]);
-              name(appliedTags[19]).clearDraft(store.id, outer2_10.FirstThreadMessage);
+              name(appliedTags[19]).clearDraft(store.id, closure_2_10.FirstThreadMessage);
               const obj14 = name(appliedTags[19]);
-              name(appliedTags[20]).clearAll(store.id, outer2_10.FirstThreadMessage);
+              name(appliedTags[20]).clearAll(store.id, closure_2_10.FirstThreadMessage);
               const obj15 = name(appliedTags[20]);
               obj6 = { guildId: null, channelId: null, postId: null, applicationId: null, voiceChatEnabled: null };
               obj6[0] = store.guild_id;
@@ -950,10 +933,10 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
               const result1 = store(appliedTags[25]).trackForumPostCreated(obj6);
               if (null != closure_2.message.application_id) {
                 const obj7 = { location: null, invite_type: null, application_id: null, guild_id: null, channel_id: null, message_id: null };
-                trackWithMetadataResult = outer2_22;
-                obj7[0] = outer2_22.THREAD_CREATION;
-                trackWithMetadataResult = outer2_19;
-                obj7[1] = outer2_19.APPLICATION;
+                trackWithMetadataResult = closure_2_22;
+                obj7[0] = closure_2_22.THREAD_CREATION;
+                trackWithMetadataResult = closure_2_19;
+                obj7[1] = closure_2_19.APPLICATION;
                 trackWithMetadataResult = closure_2;
                 obj7[2] = closure_2.message.application_id;
                 trackWithMetadataResult = store;
@@ -962,10 +945,10 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
                 obj7[4] = user.id;
                 trackWithMetadataResult = user;
                 obj7[5] = user.id;
-                trackWithMetadataResult = name(appliedTags[26]).trackWithMetadata(outer2_16.INVITE_SENT, obj7);
+                trackWithMetadataResult = name(appliedTags[26]).trackWithMetadata(closure_2_16.INVITE_SENT, obj7);
                 const obj18 = name(appliedTags[26]);
               }
-              if (outer1_4 != null) {
+              if (closure_4 != null) {
                 tmp14(user);
               }
               c9 = 3;
@@ -977,24 +960,24 @@ export const useCreateForumPostCommon = function useCreateForumPostCommon(parent
             c9 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
-            snowflakeSequence = arg1;
-            uploaderFile = snowflakeSequence.uploaderFile;
-            const files = snowflakeSequence.files;
+            closure_3 = arg1;
+            uploaderFile = closure_3.uploaderFile;
+            const files = closure_3.files;
             obj1.message.attachments = files.map((closure_0, closure_1) => uploaderFile(obj1[23]).getAttachmentPayload(closure_0, closure_1));
-            reason = 0;
+            c7 = 0;
           }
-          reason = 0;
+          c7 = 0;
           c9 = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } catch (tmp62) {
           c6 = tmp62;
-          if (tmp4 === reason) {
+          if (tmp4 === c7) {
             c9 = tmp2;
             throw tmp62;
           } else {
-            user = trackWithMetadataResult;
+            c8 = trackWithMetadataResult;
           }
         }
       }

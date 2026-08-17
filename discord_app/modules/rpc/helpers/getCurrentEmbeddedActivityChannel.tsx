@@ -1,6 +1,6 @@
 // discord_app/modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx
-import participantFromServer from "participantFromServer";
-import ensureGuildLoaded from "ensureGuildLoaded";
+import closure_0 from "participantFromServer" /* 1390 */;
+import closure_1 from "ensureGuildLoaded" /* 1391 */;
 
 const result = require("set").fileFinishedImporting("modules/rpc/helpers/getCurrentEmbeddedActivityChannel.tsx");
 

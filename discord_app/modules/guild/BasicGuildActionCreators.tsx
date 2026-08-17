@@ -1,18 +1,18 @@
 // discord_app/modules/guild/BasicGuildActionCreators.tsx
-import sendRequest from "sendRequest";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getGuild from "getGuild";
-import { Endpoints } from "ME";
-import set from "getGuild";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getGuild" /* 8180 */;
+import { Endpoints } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 function _fetchBasicGuild() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c6 === 2) {
         c6 = 3;
@@ -40,19 +40,19 @@ function _fetchBasicGuild() {
               obj[0] = body;
               return obj;
             } else {
-              const dependencyMap = tmp4;
+              dependencyMap = tmp4;
               body = tmp8;
               body = undefined;
               if (null == guild.getGuild(callback)) {
                 if (null == guildOrStatus.getGuildOrStatus(tmp57)) {
-                  if (!outer1_7.has(tmp57)) {
-                    let obj5 = outer1_1(outer1_2[4]);
-                    const obj1 = { type: "BASIC_GUILD_FETCH", guildId: null };
+                  if (!closure_1_7.has(tmp57)) {
+                    let obj5 = closure_1_1(closure_1_2[4]);
+                    obj1 = { type: "BASIC_GUILD_FETCH", guildId: null };
                     obj1[1] = tmp57;
                     obj5.dispatch(obj1);
-                    outer1_7.add(tmp57);
+                    closure_1_7.add(tmp57);
                     guild = 2;
-                    const HTTP = callback(outer1_2[5]).HTTP;
+                    const HTTP = callback(closure_1_2[5]).HTTP;
                     const obj2 = { url: null, rejectWithError: true };
                     obj2[0] = c6.GUILD_BASIC(tmp57);
                     guildOrStatus = 3;
@@ -96,9 +96,9 @@ function _fetchBasicGuild() {
           }
           guild = 0;
           set.delete(callback);
-          throw sendRequest;
+          throw closure_3;
         } catch (tmp48) {
-          sendRequest = tmp48;
+          closure_3 = tmp48;
           if (tmp5 === guild) {
             c6 = tmp3;
             throw tmp48;
@@ -111,7 +111,7 @@ function _fetchBasicGuild() {
       }
     })();
   });
-  const _fetchBasicGuild = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

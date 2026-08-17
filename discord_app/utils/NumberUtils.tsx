@@ -1,7 +1,9 @@
 // discord_app/utils/NumberUtils.tsx
-import { getSystemLocale } from "../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
 let c2 = 1000000;
-let result = require("set").fileFinishedImporting("utils/NumberUtils.tsx");
+let result = set.fileFinishedImporting("utils/NumberUtils.tsx");
 
 export const shortenAndLocalizeNumber = function shortenAndLocalizeNumber(count) {
   if (count < c2) {

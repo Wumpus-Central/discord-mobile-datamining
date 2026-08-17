@@ -1,13 +1,11 @@
 // discord_app/modules/wishlists/hooks/useAddToWishlistGridItems.tsx
-import noop from "noop";
-import { PremiumSubscriptionSKUs } from "GuildFeatures";
+import closure_2 from "noop" /* 19 */;
+import { PremiumSubscriptionSKUs } from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
-const result = require("useWishlistRecommendationsWithWishlists").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");
 
 export const useAddToWishlistGridItems = function useAddToWishlistGridItems(userId) {
-  let maxWishlistItemsToShow;
-  let numWishlistItemsToRecommend;
   const wishlist = userId.wishlist;
   ({ numWishlistItemsToRecommend, maxWishlistItemsToShow } = userId);
   if (maxWishlistItemsToShow === undefined) {
@@ -15,7 +13,7 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   }
   let recommendations;
   let memo;
-  let c4;
+  closure_4 = undefined;
   let obj = wishlist(maxWishlistItemsToShow[2]);
   const recommendationsForSingleUser = obj.useRecommendationsForSingleUser({ userId: userId.userId, numItems: numWishlistItemsToRecommend, source: userId.source });
   recommendations = recommendationsForSingleUser.recommendations;
@@ -40,12 +38,12 @@ export const useAddToWishlistGridItems = function useAddToWishlistGridItems(user
   if (tmp3) {
     tmp3 = !memo.has(memo.TIER_2);
   }
-  c4 = tmp3;
+  closure_4 = tmp3;
   obj = {
     items: recommendations.useMemo(() => {
       const found = recommendations.filter((id) => !set.has(id.id));
       const mapped = found.map((sku) => ({ sku, itemSource: "recommendation" }));
-      if (c4) {
+      if (closure_4) {
         const obj = { sku: null, itemSource: "takeover" };
         obj[0] = wishlist(maxWishlistItemsToShow[4]).createNitroSuggestedSku();
         mapped.unshift(obj);

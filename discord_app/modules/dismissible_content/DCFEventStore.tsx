@@ -1,8 +1,10 @@
 // discord_app/modules/dismissible_content/DCFEventStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { DC_SHOWN: 0, [0]: "DC_SHOWN", DC_SHOW_REQUEST: 1, [1]: "DC_SHOW_REQUEST", DC_DISMISSED: 2, [2]: "DC_DISMISSED" };
 let closure_1 = [];
+const Store = initializeDefault.Store;
 class DCFEventStore extends Store {
 }
 DCFEventStore.prototype["getDCFEvents"] = function getDCFEvents() {
@@ -11,11 +13,9 @@ DCFEventStore.prototype["getDCFEvents"] = function getDCFEvents() {
 DCFEventStore.displayName = "DCFEventStore";
 obj = {
   LOGOUT: function reset() {
-    let closure_1 = [];
+    closure_1 = [];
   },
   DCF_EVENT_LOGGED: function handleGenericEvent(arg0) {
-    let dismissibleContent;
-    let eventType;
     ({ eventType, dismissibleContent } = arg0);
   },
   DCF_HANDLE_DC_DISMISSED: function handleDCDismissed(arg0) {
@@ -25,7 +25,7 @@ obj = {
 
   }
 };
-const dCFEventStore = new DCFEventStore(require("dispatcher"), obj);
+const dCFEventStore = new DCFEventStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/dismissible_content/DCFEventStore.tsx");
 
 export default dCFEventStore;

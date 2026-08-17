@@ -1,50 +1,49 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsChannel.tsx
-import NotificationSettingsChannelPost from "NotificationSettingsChannelPost";
-import { View } from "NotificationSettingsMessageNotification";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { Form } from "../../../../design/void/Form/native/index.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { computeChannelName } from "../../../channel/useChannelName.tsx";
 import { useChannelPresetSettings } from "../utils/notficationSettingsChannelFlagUtils.tsx";
 import { NotificationSettingsMessageNotification } from "NotificationSettingsMessageNotification.tsx";
 import { NotificationSettingsMessageUnread } from "NotificationSettingsMessageUnread.tsx";
 import { NotificationSettingsPresets } from "NotificationSettingsPresets.tsx";
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { screenContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, padding: 16 };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, padding: 16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsChannel.tsx");
 
 export default function NotificationSettingsChannel(channel) {
   const _require = channel;
   let obj = _useChannelPresetSettings;
   const channelPresetInheritance = obj.useChannelPresetInheritance(channel.channel);
   const intl = _getSystemLocale.intl;
-  const importDefault = intl.string(_getSystemLocale.t.h850Ss);
-  const dependencyMap = computeChannelName(channel.channel);
-  let obj1 = _useNavigation;
+  importDefault = intl.string(_getSystemLocale.t.h850Ss);
+  dependencyMap = computeChannelNameDefault(channel.channel);
+  obj1 = _useNavigation;
   const React = obj1.useNavigation();
   const layoutEffect = React.useLayoutEffect(() => {
     let obj = options;
     obj = {
       title: "" + closure_1 + " (" + dependencyMap + ")",
       headerTitle() {
-        return outer1_6(outer1_0(outer1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
+        return closure_1_6(closure_1_0(closure_1_2[10]).NavigatorHeader, { title: closure_1, subtitle: closure_2 });
       }
     };
     options.setOptions(obj);
     if (channel.inGuildContext) {
       obj = { headerLeft: null };
-      obj[0] = channel(6314).getHeaderBackButton(() => NotificationSettingsChannelPost.popToTop());
+      obj[0] = channel(6314).getHeaderBackButton(() => closure_3.popToTop());
       obj.setOptions(obj);
       const obj4 = channel(6314);
     }
@@ -56,9 +55,9 @@ export default function NotificationSettingsChannel(channel) {
     const result = callback(6798).updateChannelOverrideSettings(channel.channel.guild_id, channel.channel.id, { muted: false }, channel(6795).NotificationLabels.Unmuted);
   }, items1);
   let obj2 = _initialize;
-  const items2 = [updateUserGuildSettingsInternal];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => ({ config: outer1_5.getChannelMuteConfig(channel.channel.guild_id, channel.channel.id), muted: outer1_5.isChannelMuted(channel.channel.guild_id, channel.channel.id) }));
-  obj = { style: createCacheKey().screenContainer, children: null };
+  const items2 = [closure_5];
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => ({ config: closure_1_5.getChannelMuteConfig(channel.channel.guild_id, channel.channel.id), muted: closure_1_5.isChannelMuted(channel.channel.guild_id, channel.channel.id) }));
+  obj = { style: callback2().screenContainer, children: null };
   let muted = stateFromStoresObject.muted;
   if (muted) {
     obj = { style: null, title: null, subtitle: null, onPressUnmute: null };

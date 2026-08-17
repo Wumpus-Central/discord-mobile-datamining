@@ -1,9 +1,10 @@
 // discord_app/modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("explicitContentFromProto").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
+noopAll;
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileLegacyUsernameSwitch.tsx");
 
 export default function UserProfileLegacyUsernameSwitch(username) {
   const pendingLegacyUsernameDisabled = username.pendingLegacyUsernameDisabled;
@@ -21,10 +22,10 @@ export default function UserProfileLegacyUsernameSwitch(username) {
   obj[2] = intl2.formatToPlainString(setting(1236).t.aYhclf, { username: username.legacyUsername });
   obj[3] = function onValueChange(arg0) {
     if (!arg0 === setting) {
-      const result = setting(outer1_1[5]).resetPendingLegacyUsernameDisabled();
-      const obj3 = setting(outer1_1[5]);
+      const result = setting(closure_1_1[5]).resetPendingLegacyUsernameDisabled();
+      const obj3 = setting(closure_1_1[5]);
     } else {
-      let obj = setting(outer1_1[6]);
+      let obj = setting(closure_1_1[6]);
       obj = { legacyUsernameDisabled: null };
       obj[0] = !arg0;
       obj.setPendingChanges(obj);

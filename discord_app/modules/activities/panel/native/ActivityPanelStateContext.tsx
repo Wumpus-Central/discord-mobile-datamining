@@ -1,13 +1,11 @@
 // discord_app/modules/activities/panel/native/ActivityPanelStateContext.tsx
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import createFakeSharedValue from "createFakeSharedValue";
-import importAllResult from "noop";
+import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import importAllResult from "noop" /* 19 */;
 
 const obj = {
   mode: require("ActivityPanelModes").ActivityPanelModes.PANEL,
   setMode() {
-    const error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
+    error = new Error("ActivityPanelStateContextType.Provider.setMode: not called within a context provider");
     throw error;
   },
   wrapperDimensions: { width: 9, height: 16, isLandscape: false, isWindowLandscape: false },
@@ -22,8 +20,8 @@ obj[5] = createFakeSharedValue.createFakeSharedValue({ x: 0, y: 0, gestureActive
 obj[6] = function useActivityWebViewLock() {
   return true;
 };
-const context = require("noop").createContext(obj);
-const result = require("createFakeSharedValue").fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
+const context = importAllResult.createContext(obj);
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityPanelStateContext.tsx");
 
 export default context;
 export const activityPanelStateContextDefault = obj;

@@ -1,8 +1,10 @@
 // discord_app/modules/user_profile/utils/getActivityPlatformDisplayName.tsx
-import { PlatformTypes } from "ME";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
-const result = require("isOnMetaHorizon").fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");
+const PlatformTypes = ME.PlatformTypes;
+const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatformDisplayName.tsx");
 
 export default function getActivityPlatformDisplayName(type) {
   type = type.type;

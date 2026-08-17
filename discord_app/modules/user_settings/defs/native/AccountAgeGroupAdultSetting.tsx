@@ -1,15 +1,17 @@
 // discord_app/modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useAgeVerificationRunner } from "../../../age_assurance/AgeVerificationUtils.tsx";
-import { isFeatureAgeGated } from "../../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isFeatureAgeGated from "isFeatureAgeGated" /* 4072 */;
+import useAgeVerificationRunner from "useAgeVerificationRunner" /* 4992 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 let obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   useTrailing() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XxRj7f);
@@ -28,7 +30,7 @@ const createStaticResult = createToggle.createStatic({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["/52UYy"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   useTrailing() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.XxRj7f);
@@ -42,6 +44,6 @@ const createStaticResult = createToggle.createStatic({
     return isFeatureAgeGated.useHasAgeGatedFeatures() && isAgeVerified && !isVerifiedTeen;
   }
 });
-const result = require("isFeatureAgeGated").fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountAgeGroupAdultSetting.tsx");
 
 export default createStaticResult;

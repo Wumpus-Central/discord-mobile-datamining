@@ -1,16 +1,17 @@
 // discord_app/modules/conversations/components/native/ConversationCoachmark.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function NewBadge() {
-  let obj = { style: createCacheKey().badge, children: null };
+  let obj = { style: callback2().badge, children: null };
   obj = { variant: "text-sm/bold", color: "text-default", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.c2GSIl);
@@ -20,18 +21,16 @@ function NewBadge() {
 const TOPICAL_NAVIGATION_HEADER_COACHMARK = require("DismissibleContent").DismissibleContent.TOPICAL_NAVIGATION_HEADER_COACHMARK;
 let items = [TOPICAL_NAVIGATION_HEADER_COACHMARK];
 createCacheKey = { badge: null, coachmarkWrapper: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: require("Themes").space.PX_8, borderRadius: require("Themes").radii.round };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, paddingVertical: 2, paddingHorizontal: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginRight: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginRight: require("Themes").space.PX_12 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
+createCacheKey[1] = { marginRight: ThemesDefault.space.PX_12 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginRight: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/conversations/components/native/ConversationCoachmark.tsx");
 
 export const ConversationCoachmark = function ConversationCoachmark(arg0) {
-  let children;
-  let isLast;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   ({ children, isLast } = arg0);
   const ref = React.useRef(null);
   let obj = first(7366);
@@ -41,25 +40,25 @@ export const ConversationCoachmark = function ConversationCoachmark(arg0) {
   items = [tmp3[1], first];
   const memo = React.useMemo(() => {
     const obj = { title: null, description: null, position: "bottom", visible: null, onDismiss: null, renderImgComponent: null };
-    const intl = first(_undefined[9]).intl;
-    obj[0] = intl.string(first(_undefined[9]).t.UcQjDe);
-    const intl2 = first(_undefined[9]).intl;
-    obj[1] = intl2.string(first(_undefined[9]).t.QeJIbA);
-    obj[3] = first === outer1_7;
+    const intl = first(1236).intl;
+    obj[0] = intl.string(first(1236).t.UcQjDe);
+    const intl2 = first(1236).intl;
+    obj[1] = intl2.string(first(1236).t.QeJIbA);
+    obj[3] = first === closure_1_7;
     obj[4] = function onDismiss() {
-      callback(outer1_5.USER_DISMISS);
+      callback(closure_1_5.USER_DISMISS);
     };
     obj[5] = function renderImgComponent() {
       return callback2(closure_10, {});
     };
     return obj;
   }, items);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const coachmark = first(9314).useCoachmark(ref, memo);
   const items1 = [tmp3[1]];
   let coachmarkWrapper;
   callback = React.useCallback(() => {
-    _undefined(outer1_5.USER_DISMISS);
+    dependencyMap(closure_1_5.USER_DISMISS);
   }, items1);
   if (!isLast) {
     coachmarkWrapper = tmp.coachmarkWrapper;

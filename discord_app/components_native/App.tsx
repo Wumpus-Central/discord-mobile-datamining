@@ -1,30 +1,29 @@
 // discord_app/components_native/App.tsx
-import closure_3 from "ApexExperiment";
-import { NativeModules } from "handleSetLocationMetadata";
-import checkForNewerBuild from "checkForNewerBuild";
-import fetchFingerprint from "fetchFingerprint";
-import nativeEventEmitter from "nativeEventEmitter";
-import updateState from "updateState";
-import showReviewRequestModal from "showReviewRequestModal";
-import set from "set";
-import createEmptyPromotionsByType from "createEmptyPromotionsByType";
-import bitrate from "bitrate";
-import handleTokenUpdated from "handleTokenUpdated";
-import handleUpdateVADPermission from "handleUpdateVADPermission";
-import getModalState from "getModalState";
-import appDatabaseManager from "appDatabaseManager";
-import reset from "reset";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import initialize from "initialize";
-import handleSetLocationMetadata from "handleSetLocationMetadata";
+import serializeDefault from "serialize" /* 9 */;
+import setLevelsDefault from "setLevels" /* 10725 */;
+import GestureWrapperDefault from "GestureWrapper" /* 13919 */;
+import getAuthComponentDefault from "getAuthComponent" /* 15207 */;
+import closure_3 from "noop" /* 19 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "checkForNewerBuild" /* 13770 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import nativeEventEmitter from "nativeEventEmitter" /* 9651 */;
+import updateState from "updateState" /* 13236 */;
+import showReviewRequestModal from "showReviewRequestModal" /* 13245 */;
+import set from "set" /* 13262 */;
+import createEmptyPromotionsByType from "createEmptyPromotionsByType" /* 7628 */;
+import bitrate from "bitrate" /* 4537 */;
+import handleTokenUpdated from "handleTokenUpdated" /* 13771 */;
+import handleUpdateVADPermission from "handleUpdateVADPermission" /* 13772 */;
+import getModalState from "getModalState" /* 13773 */;
+import appDatabaseManager from "appDatabaseManager" /* 5390 */;
+import reset from "reset" /* 4045 */;
+import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import initialize from "initialize" /* 13774 */;
+import handleSetLocationMetadata from "handleSetLocationMetadata" /* 8581 */;
 import "map";
-import ApexExperiment from "ApexExperiment";
-import { jsx } from "reactNativeCorePlugins";
-import set from "checkForNewerBuild";
-import { setLevels } from "../modules/app_startup/StartupProfiler.tsx";
-import { getAuthComponent } from "../modules/main_tabs_v2/native/MainNavigator.tsx";
-import { serialize } from "../modules/tti_analytics/TTITracker.tsx";
-import { GestureWrapper } from "AppContainer.tsx";
+import ApexExperiment from "ApexExperiment" /* 13776 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 if (global.__DEV__) {
@@ -33,7 +32,7 @@ if (global.__DEV__) {
 let result = set.fileFinishedImporting("components_native/App.tsx");
 
 export default function App() {
-  const renderApp = serialize.renderApp;
+  const renderApp = serializeDefault.renderApp;
   renderApp.record();
   const effect = React.useEffect(() => {
     callback(13810).init();
@@ -74,7 +73,7 @@ export default function App() {
     callback(13903).initialize();
     const obj18 = callback(13903);
     callback(13907).initialize();
-    checkForNewerBuild.ensureInitialized();
+    closure_5.ensureInitialized();
     const obj19 = callback(13907);
     callback(13909).initialize();
     const obj20 = callback(13909);
@@ -131,24 +130,24 @@ export default function App() {
   }, []);
   let shouldUseAltGateway;
   let obj = shouldUseAltGateway(589);
-  const items = [fetchFingerprint];
-  const stateFromStores = obj.useStateFromStores(items, () => fetchFingerprint.isAuthenticated());
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_6.isAuthenticated());
   shouldUseAltGateway = stateFromStores;
   const items1 = [stateFromStores];
   const effect1 = React.useEffect(() => {
     if (shouldUseAltGateway) {
-      const token = outer1_6.getToken();
+      const token = closure_1_6.getToken();
       if (null == token) {
         const _Error = Error;
-        const error = new Error("Authenticated without a token");
+        error = new Error("Authenticated without a token");
         throw error;
       } else {
-        outer1_1(outer1_2[52]).startSession(token);
-        const obj = outer1_1(outer1_2[52]);
-        outer1_1(outer1_2[53]).initialize();
-        const obj2 = outer1_1(outer1_2[53]);
+        closure_1_1(closure_1_2[52]).startSession(token);
+        const obj = closure_1_1(closure_1_2[52]);
+        closure_1_1(closure_1_2[53]).initialize();
+        const obj2 = closure_1_1(closure_1_2[53]);
         if (obj3.isAndroid()) {
-          const NativePermissionManager = outer1_4.NativePermissionManager;
+          const NativePermissionManager = closure_1_4.NativePermissionManager;
           const notificationAuthorization = NativePermissionManager.requestNotificationAuthorization();
         }
         return () => {
@@ -158,7 +157,7 @@ export default function App() {
     }
   }, items1);
   const effect2 = React.useEffect(() => {
-    callback(9).wasAuthenticated = fetchFingerprint.isAuthenticated();
+    callback(9).wasAuthenticated = closure_6.isAuthenticated();
   }, []);
   shouldUseAltGateway = undefined;
   const isChannelMetadataObfuscationEnabled = shouldUseAltGateway(13225).useIsChannelMetadataObfuscationEnabled("App");
@@ -166,10 +165,10 @@ export default function App() {
   const items2 = [isChannelMetadataObfuscationEnabled];
   const effect3 = React.useEffect(() => {
     if (obj.isAndroid()) {
-      const result = outer1_1(outer1_2[56]).setUseChannelObfuscation(shouldUseAltGateway);
-      const obj2 = outer1_1(outer1_2[56]);
+      const result = closure_1_1(closure_1_2[56]).setUseChannelObfuscation(shouldUseAltGateway);
+      const obj2 = closure_1_1(closure_1_2[56]);
     } else {
-      const DCDFastConnectManager = outer1_4.DCDFastConnectManager;
+      const DCDFastConnectManager = closure_1_4.DCDFastConnectManager;
       const result1 = DCDFastConnectManager.setUseChannelObfuscation(shouldUseAltGateway);
     }
   }, items2);
@@ -179,10 +178,10 @@ export default function App() {
   const items3 = [shouldUseAltGateway];
   const effect4 = React.useEffect(() => {
     if (obj.isAndroid()) {
-      outer1_1(outer1_2[56]).setUseAltGateway(shouldUseAltGateway);
-      const obj2 = outer1_1(outer1_2[56]);
+      closure_1_1(closure_1_2[56]).setUseAltGateway(shouldUseAltGateway);
+      const obj2 = closure_1_1(closure_1_2[56]);
     } else {
-      const DCDFastConnectManager = outer1_4.DCDFastConnectManager;
+      const DCDFastConnectManager = closure_1_4.DCDFastConnectManager;
       DCDFastConnectManager.setUseAltGateway(shouldUseAltGateway);
     }
   }, items3);
@@ -194,8 +193,8 @@ export default function App() {
   let obj3 = shouldUseAltGateway(13917);
   obj[0] = shouldUseAltGateway(10725).Profiles.App;
   obj = { appEntryKey: "main", children: null };
-  const tmp11 = setLevels;
-  obj[1] = jsx(getAuthComponent, {});
-  obj[1] = jsx(GestureWrapper, { appEntryKey: "main", children: null });
+  const tmp11 = setLevelsDefault;
+  obj[1] = jsx(getAuthComponentDefault, {});
+  obj[1] = jsx(GestureWrapperDefault, { appEntryKey: "main", children: null });
   return <tmp11 appEntryKey="main">{null}</tmp11>;
 };

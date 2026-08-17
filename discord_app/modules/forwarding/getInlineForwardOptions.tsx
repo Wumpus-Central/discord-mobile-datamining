@@ -1,11 +1,11 @@
 // discord_app/modules/forwarding/getInlineForwardOptions.tsx
-import { MessageReferenceTypes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
+const MessageReferenceTypes = ME.MessageReferenceTypes;
+const result = set.fileFinishedImporting("modules/forwarding/getInlineForwardOptions.tsx");
 
 export const getInlineForwardOptions = function getInlineForwardOptions(message, nativeSyntheticEventData) {
-  let embedIndex;
-  let targetKind;
   ({ targetKind, embedIndex } = nativeSyntheticEventData);
   if ("media" === targetKind) {
     const messageReference = message.messageReference;

@@ -1,13 +1,15 @@
 // discord_app/modules/user_settings/defs/native/AppIconsSetting.tsx
-import createDismissiblePremiumNewBadgeRouteProps from "createDismissiblePremiumNewBadgeRouteProps";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { fetchCurrentAppIcon } from "../../../app_icons/native/AppIconUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import fetchCurrentAppIcon from "fetchCurrentAppIcon" /* 7945 */;
+import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 14832 */;
+import createDismissiblePremiumNewBadgeRouteProps from "createDismissiblePremiumNewBadgeRouteProps" /* 14702 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UserSettingsAppIcons } from "../../app_icon/native/UserSettingsAppIcons.tsx";
 
-let usePreNavigationAction;
-let useTrailing;
-const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(require("DismissibleContent").DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);
+const dismissiblePremiumNewBadgeRouteProps = createDismissiblePremiumNewBadgeRouteProps.createDismissiblePremiumNewBadgeRouteProps(DismissibleContent.DismissibleContent.CUSTOM_APP_ICONS_NEW_BADGE);
 ({ useTrailing, usePreNavigationAction } = dismissiblePremiumNewBadgeRouteProps);
 obj = {
   useTitle() {
@@ -15,7 +17,7 @@ obj = {
     return intl.string(getSystemLocale.t.N4YDao);
   },
   parent: null,
-  IconComponent: require("SettingsItemAppIcon"),
+  IconComponent: SettingsItemAppIconDefault,
   useTrailing,
   usePreNavigationAction,
   usePredicate() {
@@ -24,12 +26,12 @@ obj = {
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.APP_ICONS,
+  route: ME.UserSettingsSections.APP_ICONS,
   getComponent() {
     return UserSettingsAppIcons.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("DismissibleContent").fileFinishedImporting("modules/user_settings/defs/native/AppIconsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AppIconsSetting.tsx");
 
 export default route;

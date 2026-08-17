@@ -1,6 +1,9 @@
 // discord_app/hooks/useCountdown.tsx
-require("noop").useCallback;
-const result = require("useForceUpdate").fileFinishedImporting("hooks/useCountdown.tsx");
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+
+noop.useCallback;
+const result = set.fileFinishedImporting("hooks/useCountdown.tsx");
 
 export default function useCountdown(closure_0) {
   const _require = closure_0;
@@ -8,7 +11,7 @@ export default function useCountdown(closure_0) {
   if (arg1 === undefined) {
     num = 1000;
   }
-  const importDefault = arg2;
+  importDefault = arg2;
   let flag = arg3;
   if (arg3 === undefined) {
     flag = false;

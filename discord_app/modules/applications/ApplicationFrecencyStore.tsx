@@ -1,9 +1,11 @@
 // discord_app/modules/applications/ApplicationFrecencyStore.tsx
-import participantFromServer from "participantFromServer";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { UserSettingsTypes } from "MAX_FAVORITES";
-import { PersistedStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
+import closure_2 from "participantFromServer" /* 1390 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 function handleUserSettingsProtoStoreChange() {
   const applicationFrecency = obj.frecencyWithoutFetchingLatest.applicationFrecency;
@@ -14,7 +16,7 @@ function handleUserSettingsProtoStoreChange() {
   if (applications == null) {
     applications = {};
   }
-  tmp2.overwriteHistory(apply.mapValues(applications, (recentUses) => {
+  closure_7.overwriteHistory(applyDefault.mapValues(applications, (recentUses) => {
     const obj = {};
     const merged = Object.assign(recentUses);
     recentUses = recentUses.recentUses;
@@ -37,16 +39,17 @@ let obj = {
   },
   numFrequentlyItems: require("ApplicationTypes").FREQUENCY_ITEM_LIMIT
 };
-const error = new require("DEFAULT_FRECENCY")(obj);
+let closure_7 = new DEFAULT_FRECENCYDefault(obj);
+const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationFrecencyStore extends PersistedStore {
 }
 const prototype = ApplicationFrecencyStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_6 = arg0;
+    closure_6 = arg0;
   }
-  this.waitFor(participantFromServer, handleConnectionClosedOrResumed);
-  const items = [handleConnectionClosedOrResumed];
+  this.waitFor(closure_2, closure_3);
+  items = [closure_3];
   this.syncWith(items, handleUserSettingsProtoStoreChange);
 };
 prototype["getState"] = function getState() {
@@ -59,14 +62,14 @@ prototype["getApplicationFrecencyWithoutLoadingLatest"] = function getApplicatio
   return closure_7;
 };
 prototype["getScoreWithoutLoadingLatest"] = function getScoreWithoutLoadingLatest(id) {
-  let num = tmp2.getScore(id);
+  let num = closure_7.getScore(id);
   if (num == null) {
     num = 0;
   }
   return num;
 };
 prototype["getTopApplicationsWithoutLoadingLatest"] = function getTopApplicationsWithoutLoadingLatest() {
-  return tmp2.frequently;
+  return closure_7.frequently;
 };
 ApplicationFrecencyStore.displayName = "ApplicationFrecencyStore";
 ApplicationFrecencyStore.persistKey = "ApplicationFrecency";
@@ -88,8 +91,8 @@ obj = {
         const _Date = Date;
         obj[1] = Date.now();
         pendingUsages.push(obj);
-        tmp2.track(applicationId);
-        tmp2.compute();
+        closure_7.track(applicationId);
+        closure_7.compute();
       }
       hasItem = !isLaunching;
       const tmp6 = !isLaunching;
@@ -100,8 +103,8 @@ obj = {
     applicationId = applicationId.applicationId;
     const pendingUsages = closure_6.pendingUsages;
     pendingUsages.push({ key: applicationId, timestamp: Date.now() });
-    tmp2.track(applicationId);
-    tmp2.compute();
+    closure_7.track(applicationId);
+    closure_7.compute();
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
     if (settings.settings.type === UserSettingsTypes.FRECENCY_AND_FAVORITES_SETTINGS) {
@@ -112,8 +115,8 @@ obj = {
     return false;
   }
 };
-const applicationFrecencyStore = new ApplicationFrecencyStore(require("dispatcher"), obj);
-const tmp2 = new require("DEFAULT_FRECENCY")(obj);
-const result = require("ApplicationTypes").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
+const applicationFrecencyStore = new ApplicationFrecencyStore(dispatcherDefault, obj);
+const tmp2 = new DEFAULT_FRECENCYDefault(obj);
+const result = require("set").fileFinishedImporting("modules/applications/ApplicationFrecencyStore.tsx");
 
 export default applicationFrecencyStore;

@@ -1,13 +1,13 @@
 // discord_app/modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { SystemChannelFlags } from "ME";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getSystemMessageUserJoinMobile } from "../../../../../utils/SystemMessageUtils.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import getSystemMessageUserJoinMobileDefault from "getSystemMessageUserJoinMobile" /* 8209 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import { SystemChannelFlags } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/UserJoinSystemMessage.tsx");
 
 export const createUserJoinSystemMessage = function createUserJoinSystemMessage(roleStyle) {
   const message = roleStyle.message;
@@ -15,7 +15,7 @@ export const createUserJoinSystemMessage = function createUserJoinSystemMessage(
   const messageAuthorWithProcessedColor = obj.getMessageAuthorWithProcessedColor(message);
   channel = channel.getChannel(message.getChannelId());
   let guildId;
-  const systemMessageUserJoinMobile = getSystemMessageUserJoinMobile.getSystemMessageUserJoinMobile(message.id);
+  const systemMessageUserJoinMobile = getSystemMessageUserJoinMobileDefault.getSystemMessageUserJoinMobile(message.id);
   if (channel != null) {
     guildId = channel.getGuildId();
   }

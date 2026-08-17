@@ -1,17 +1,17 @@
 // discord_app/modules/noise_cancellation/queryAudioEffects.tsx
-import expandEventProperties from "expandEventProperties";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function _queryAudioEffects() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c8 === 2) {
         c8 = 3;
@@ -40,19 +40,19 @@ function _queryAudioEffects() {
               return obj;
             } else {
               const constants = tmp3;
-              let expandEventProperties = tmp7;
+              closure_3 = tmp7;
               const callback = lib;
               lib = undefined;
               if (obj13.isWindows()) {
-                let c6 = 1;
+                c6 = 1;
                 c7 = 2;
                 c8 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = obj12.getDeviceAudioEffects(tmp47);
                 return obj1;
               } else {
                 const _Error = Error;
-                const error = new Error("Audio effects querying not supported on non-Windows platforms");
+                error = new Error("Audio effects querying not supported on non-Windows platforms");
                 c8 = 3;
                 let obj2 = { value: null, done: true };
                 obj2[0] = Promise.reject(error);
@@ -108,7 +108,7 @@ function _queryAudioEffects() {
       }
     })();
   });
-  const _queryAudioEffects = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -117,8 +117,8 @@ function _queryAudioEffects() {
   }
   return applyArgumentsResult;
 }
-let logger = new require("dispatcher").Logger("AudioEffects");
-const result = require("log").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
+let logger = new require("log").Logger("AudioEffects");
+const result = require("set").fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");
 
 export default function queryAudioEffects() {
   const self = this;

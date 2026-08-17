@@ -1,20 +1,15 @@
 // discord_app/modules/auth/native/components/ExternalLink.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ Linking: c4, ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  const container = { backgroundColor: Themes.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
+  const container = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%", display: "flex", justifyContent: null, paddingLeft: null, paddingRight: null };
   let str = "center";
   if (arg0) {
     str = "space-between";
@@ -26,18 +21,18 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   container[5] = arg0 ? space2.PX_24 : space2.PX_16;
   return { container, description: { textAlign: "center", marginTop: 8 } };
 });
-const result = require("jsxProd").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/ExternalLink.tsx");
 
 export default function ExternalLink(externalURL) {
   externalURL = externalURL.externalURL;
-  let importDefault;
+  importDefault = undefined;
   let callback;
   const tmp = callback3(importDefault(callback[5])());
   let obj = externalURL(callback[6]);
   importDefault = obj.useNavigation();
   const items = [externalURL];
   callback = React.useCallback(() => {
-    outer1_4.openURL(externalURL);
+    closure_1_4.openURL(externalURL);
   }, items);
   const items1 = [callback];
   const effect = React.useEffect(() => {
@@ -45,7 +40,7 @@ export default function ExternalLink(externalURL) {
   }, items1);
   obj = { alwaysBounceVertical: false, keyboardShouldPersistTaps: "handled", contentContainerStyle: tmp.container, children: null };
   obj = { children: null };
-  const obj1 = { children: null };
+  obj1 = { children: null };
   const intl = externalURL(callback[8]).intl;
   obj1[0] = intl.string(externalURL(callback[8]).t["0Niu/F"]);
   const items2 = [callback(importDefault(callback[7]), obj1), ];

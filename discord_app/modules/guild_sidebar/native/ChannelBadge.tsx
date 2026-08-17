@@ -1,28 +1,24 @@
 // discord_app/modules/guild_sidebar/native/ChannelBadge.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import _getSystemLocale from "_getSystemLocale";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { NewBadge } from "../../channel_list_v2/native/components/NewBadge.tsx";
-import { MentionsBadge } from "MentionsBadge.tsx";
+import noopAll from "noop" /* 19 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import NewBadgeDefault from "NewBadge" /* 11463 */;
+import MentionsBadgeDefault from "MentionsBadge" /* 15490 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_6 = createCacheKey.createStyles(() => ({ channelInfoContainer: { paddingStart: 4 } }));
-const result = require("_getSystemLocale").fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ChannelBadge.tsx");
 
 export default function ChannelBadge(arg0) {
-  let isMentionLowImportance;
-  let isNewChannel;
-  let mentionCount;
-  let muted;
-  let postsWithUnreadsCount;
   ({ mentionCount, postsWithUnreadsCount, muted } = arg0);
   ({ isMentionLowImportance, isNewChannel } = arg0);
   const tmp = callback();
   let obj = defaultAreStatesEqual;
-  const items = [_getSystemLocale];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (null != mentionCount) {
     if (mentionCount > 0) {
@@ -31,15 +27,15 @@ export default function ChannelBadge(arg0) {
       obj = { mentionsCount: null, isMentionLowImportance: null };
       obj[0] = mentionCount;
       obj[1] = isMentionLowImportance;
-      obj[1] = jsx(MentionsBadge, { mentionsCount: null, isMentionLowImportance: null });
+      obj[1] = jsx(MentionsBadgeDefault, { mentionsCount: null, isMentionLowImportance: null });
       let tmp5 = <View mentionsCount={null} isMentionLowImportance={null} />;
     }
     return tmp5;
   }
   if (isNewChannel) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.channelInfoContainer;
-    obj1[1] = jsx(NewBadge, {});
+    obj1[1] = jsx(NewBadgeDefault, {});
     tmp5 = <View style={null}>{null}</View>;
   } else {
     tmp5 = null;

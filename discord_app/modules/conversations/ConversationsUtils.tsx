@@ -1,10 +1,9 @@
 // discord_app/modules/conversations/ConversationsUtils.tsx
-const result = require("set").fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/conversations/ConversationsUtils.tsx");
 
 export const mapConversation = function mapConversation(summary_map) {
-  let brief_summary;
-  let flagged_message_details;
-  let keywords;
   summary_map = summary_map.summary_map;
   let found;
   if (summary_map != null) {

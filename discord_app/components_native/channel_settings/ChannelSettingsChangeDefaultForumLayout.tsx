@@ -1,34 +1,34 @@
 // discord_app/components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import { View } from "registerAsset";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import preloadDefault from "preload" /* 5449 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 class ChannelSettingsChangeDefaultForumLayout {
   constructor(arg0) {
     channel = global.channel;
-    defaultForumLayout = undefined;
-    tmp = jsxs();
-    tmp2 = _slicedToArray(initialize.useState(channel.defaultForumLayout), 2);
-    [tmp3, defaultForumLayout] = tmp2;
+    closure_1 = undefined;
+    tmp = closure_9();
+    tmp2 = closure_3(closure_4.useState(channel.defaultForumLayout), 2);
+    [tmp3, closure_1] = tmp2;
     items = [];
     items[0] = channel.id;
     tmp5 = jsxs;
     obj = { style: tmp.container, children: null };
     tmp7 = channel;
     tmp8 = closure_2;
-    callback = initialize.useCallback((defaultForumLayout) => {
+    callback = closure_4.useCallback((defaultForumLayout) => {
       _undefined(defaultForumLayout);
-      let obj = _undefined(outer1_2[7]);
+      let obj = _undefined(closure_1_2[7]);
       obj = { defaultForumLayout };
       obj.updateChannel(obj);
       obj = { defaultForumLayout };
-      _undefined(outer1_2[7]).saveChannel(channel.id, obj);
+      _undefined(closure_1_2[7]).saveChannel(channel.id, obj);
     }, items);
     tmp6 = View;
     obj = { title: null, defaultValue: null, onChange: null, hasIcons: true, children: null };
@@ -41,15 +41,13 @@ class ChannelSettingsChangeDefaultForumLayout {
     obj[1] = LIST;
     obj[2] = callback;
     tmp9 = jsx;
-    obj1 = { icon: null, label: null, value: null };
-    obj1[0] = jsx(require("GridSquareIcon").GridSquareIcon, {});
+    obj1 = { icon: jsx(require("GridSquareIcon").GridSquareIcon, {}), label: null, value: null };
     intl2 = require("getSystemLocale").intl;
     obj1[1] = intl2.string(require("getSystemLocale").t["U+rQfW"]);
     obj1[2] = require("set").ForumLayout.GRID;
     items1 = [, ];
     items1[0] = jsx(require("TableRadioRow").TableRadioRow, obj1);
-    obj2 = { icon: null, label: null, value: null };
-    obj2[0] = jsx(require("ListViewIcon").ListViewIcon, {});
+    obj2 = { icon: jsx(require("ListViewIcon").ListViewIcon, {}), label: null, value: null };
     intl3 = require("getSystemLocale").intl;
     obj2[1] = intl3.string(require("getSystemLocale").t.tuHPRX);
     obj2[2] = require("set").ForumLayout.LIST;
@@ -65,7 +63,7 @@ class ChannelSettingsChangeDefaultForumLayout {
     intl5 = require("getSystemLocale").intl;
     obj4[0] = intl5.string(require("getSystemLocale").t.e4oMl4);
     items2[2] = jsx(require("TableRowGroupTitle").TableRowGroupTitle, obj4);
-    tmp10 = defaultForumLayout;
+    tmp10 = closure_1;
     obj5 = { style: tmp.thumbnailImagePortrait, source: null };
     tmp11 = require("preload");
     if (tmp3 === require("set").ForumLayout.GRID) {
@@ -79,21 +77,21 @@ class ChannelSettingsChangeDefaultForumLayout {
     return tmp5(tmp6, obj);
   }
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, description: null, thumbnailImagePortrait: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, paddingHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_16 };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, paddingHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_16 };
+createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
 createCacheKey[2] = { alignSelf: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_16 };
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("components_native/channel_settings/ChannelSettingsChangeDefaultForumLayout.tsx");
 
 export default function ConnectedChannelSettingsChangeDefaultForumLayout(channelId) {
   channelId = channelId.channelId;
   let obj = channelId(589);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(channelId));
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   let tmp2 = null;
   if (null != stateFromStores) {
     obj = { channel: null };

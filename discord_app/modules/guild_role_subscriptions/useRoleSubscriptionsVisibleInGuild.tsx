@@ -1,19 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx
-import initialize from "initialize";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7217 */;
+import computeHasRoleSubscriptionsInGuild from "computeHasRoleSubscriptionsInGuild" /* 7218 */;
+import computeHasRoleSubscriptionsInGuildDefault from "computeHasRoleSubscriptionsInGuild" /* 7218 */;
+import closure_3 from "initialize" /* 1982 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { useIsCreatorMonetizationEnabledGuild } from "../creator_monetization_eligibility/useIsCreatorMonetizationEnabledGuild.tsx";
 import { useShouldHideGuildPurchaseEntryPoints } from "../creator_monetization_review/CreatorMonetizationRestrictionsHooks.tsx";
-import { computeHasRoleSubscriptionsInGuild } from "useHasRoleSubscriptionInGuild.tsx";
 
-const require = arg1;
+require = arg1;
 function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {
-  let obj;
-  let obj2;
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [createGuildRecordFromRust, initialize];
+    const items = [closure_4, closure_3];
     tmp = items;
   }
   [obj, obj2] = tmp;
@@ -34,24 +33,24 @@ function computeCanEveryoneInGuildSeeRoleSubscriptions(c0) {
     return isViewingServerShopResult;
   }
 }
-let result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useRoleSubscriptionsVisibleInGuild.tsx");
 
-export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(c0, initialize) {
+export const areRoleSubscriptionsVisibleInGuild = function areRoleSubscriptionsVisibleInGuild(c0, closure_3) {
   let hasRoleSubscriptionsInGuild = computeCanEveryoneInGuildSeeRoleSubscriptions(c0);
   if (!hasRoleSubscriptionsInGuild) {
-    hasRoleSubscriptionsInGuild = computeHasRoleSubscriptionsInGuild.computeHasRoleSubscriptionsInGuild(c0, initialize);
+    hasRoleSubscriptionsInGuild = computeHasRoleSubscriptionsInGuild.computeHasRoleSubscriptionsInGuild(c0, closure_3);
     const obj = computeHasRoleSubscriptionsInGuild;
   }
   return hasRoleSubscriptionsInGuild;
 };
 export const useRoleSubscriptionsVisibleInGuild = function useRoleSubscriptionsVisibleInGuild(id1) {
   const _require = id1;
-  const tmp = computeHasRoleSubscriptionsInGuild(id1);
-  const items = [createGuildRecordFromRust, initialize];
+  const tmp = computeHasRoleSubscriptionsInGuildDefault(id1);
+  const items = [closure_4, closure_3];
   const items1 = [id1];
   let stateFromStores = _initialize.useStateFromStores(items, () => {
-    const items = [outer1_4, outer1_3];
-    return outer1_6(closure_0, items);
+    const items = [closure_1_4, closure_1_3];
+    return closure_1_6(closure_0, items);
   }, items1);
   const obj = _initialize;
   const shouldHideGuildPurchaseEntryPoints = _useShouldHideGuildPurchaseEntryPoints.useShouldHideGuildPurchaseEntryPoints(id1).shouldHideGuildPurchaseEntryPoints;
@@ -66,13 +65,13 @@ export const useRoleSubscriptionsVisibleInGuild = function useRoleSubscriptionsV
 };
 export const useShowRoleSubscriptionsInChannelList = function useShowRoleSubscriptionsInChannelList(id) {
   const _require = id;
-  const tmp2 = computeHasRoleSubscriptionsInGuild(id);
+  const tmp2 = computeHasRoleSubscriptionsInGuildDefault(id);
   const tmp3 = _require;
-  let items = [createGuildRecordFromRust, initialize];
+  let items = [closure_4, closure_3];
   const items1 = [id];
   let stateFromStores = _initialize.useStateFromStores(items, () => {
-    const items = [outer1_4, outer1_3];
-    return outer1_6(closure_0, items);
+    const items = [closure_1_4, closure_1_3];
+    return closure_1_6(closure_0, items);
   }, items1);
   const obj = _initialize;
   const shouldHideGuildPurchaseEntryPoints = _useShouldHideGuildPurchaseEntryPoints.useShouldHideGuildPurchaseEntryPoints(id).shouldHideGuildPurchaseEntryPoints;

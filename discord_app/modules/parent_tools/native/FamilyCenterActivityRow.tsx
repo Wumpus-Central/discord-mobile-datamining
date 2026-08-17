@@ -1,28 +1,24 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityRow.tsx
-import importAllResult from "messagesProxy";
-import { View } from "getGuildBadgeSource";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import { ACTION_TO_TEXT } from "items";
-import { GuildFeatures } from "ME";
-import jsxProd from "getGiftRowDisplayInfo";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { 00038__ } from "../../../../_runtime/metro/00038__.js";
-import { getEmptyActivityFormatter } from "../FamilyCenterUtils.tsx";
-import { FamilyCenterActivityGiftRow } from "FamilyCenterActivityGiftRow.tsx";
-import { FamilyCenterActivityPurchaseRow } from "FamilyCenterActivityPurchaseRow.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getEmptyActivityFormatter from "getEmptyActivityFormatter" /* 5363 */;
+import FamilyCenterActivityPurchaseRowDefault from "FamilyCenterActivityPurchaseRow" /* 14258 */;
+import FamilyCenterActivityGiftRowDefault from "FamilyCenterActivityGiftRow" /* 14262 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "freshTeenActivityWithMap" /* 5296 */;
+import { ACTION_TO_TEXT } from "items" /* 5297 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+require = arg1;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { container: null, avatar: null, avatarContainer: null, textContainer: null, text: null };
-obj = { display: "flex", flexDirection: "row", borderBottomColor: require("Themes").colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+obj = { display: "flex", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
 obj[0] = obj;
-createCacheKey = { borderRadius: null, backgroundColor: null };
-createCacheKey[0] = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2;
-createCacheKey[1] = require("Themes").colors.BACKGROUND_SURFACE_HIGH;
+createCacheKey = { borderRadius: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL] / 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[1] = createCacheKey;
 obj[2] = { marginRight: 12, alignItems: "flex-start" };
 obj[3] = { display: "flex", flexDirection: "column", flexShrink: 1 };
@@ -32,10 +28,10 @@ const memoResult = importAllResult.memo((action) => {
   action = action.action;
   const tmp = callback3();
   const value = ACTION_TO_TEXT.get(action.display_type);
-  00038__(null != value, "No text for action type");
+  _modDef38(null != value, "No text for action type");
   let obj = action(647);
-  const items = [mergeGuildAvatar];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getUser(action.entity_id));
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getUser(action.entity_id));
   if (null == stateFromStores) {
     return null;
   } else {
@@ -45,7 +41,7 @@ const memoResult = importAllResult.memo((action) => {
     obj[0] = tmp.container;
     obj = { style: null, children: null };
     obj[0] = tmp.avatarContainer;
-    const obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
+    obj1 = { avatarStyle: null, user: null, guildId: "HermesInternal", disablePlaceholder: null, avatarDecoration: "Heartbeat" };
     obj1[0] = tmp.avatar;
     obj1[1] = stateFromStores;
     obj1[4] = stateFromStores.avatarDecoration;
@@ -71,11 +67,10 @@ const memoResult = importAllResult.memo((action) => {
 });
 const unpackModuleId = memoResult;
 memoResult.displayName = "FamilyCenterActivityRowUser";
-let obj2 = { container: null, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
-obj2[0] = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: require("Themes").colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-let obj3 = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: require("Themes").colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
-obj2[1] = { borderRadius: require("Themes").radii.md, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
-createCacheKey = { color: require("Themes").colors.TEXT_DEFAULT };
+let obj2 = { container: { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 }, avatar: null, avatarText: null, text: null, headerContainer: null, badge: null, header: null, headerAndIconContainer: null };
+let obj3 = { display: "flex", alignItems: "center", flexDirection: "row", borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1, paddingVertical: 12 };
+obj2[1] = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 obj2[2] = createCacheKey;
 obj2[3] = { display: "flex", flexDirection: "column", flexShrink: 1 };
 obj2[4] = { display: "flex", flexDirection: "row" };
@@ -87,10 +82,10 @@ const memoResult1 = importAllResult.memo((action) => {
   action = action.action;
   const tmp = callback4();
   let obj = action(647);
-  const items = [freshTeenActivityWithMap];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getGuild(action.entity_id));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getGuild(action.entity_id));
   const value = ACTION_TO_TEXT.get(action.display_type);
-  00038__(null != value, "No text for action type");
+  _modDef38(null != value, "No text for action type");
   if (undefined === stateFromStores) {
     return null;
   } else {
@@ -108,7 +103,7 @@ const memoResult1 = importAllResult.memo((action) => {
     let tmp6Result = tmp6(7188);
     obj[3] = tmp2(7188).GuildIconSizes.NORMAL;
     const items1 = [callback(tmp6Result, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.text;
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.headerContainer;
@@ -148,17 +143,10 @@ const memoResult1 = importAllResult.memo((action) => {
   }
 });
 memoResult1.displayName = "FamilyCenterActivityRowGuild";
-let obj4 = { borderRadius: require("Themes").radii.md, borderColor: require("Themes").colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityRow.tsx");
+let obj4 = { borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 40, width: 40, margin: 0, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGHEST, marginRight: 12 };
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityRow.tsx");
 
 export default function FamilyCenterActivityRow(action) {
-  let claimed;
-  let claimedAt;
-  let gifterUserId;
-  let offeredAt;
-  let price;
-  let skuId;
-  let subscriptionPlanId;
   action = action.action;
   let obj = getEmptyActivityFormatter;
   if (!obj.isUserAction(action)) {
@@ -179,7 +167,7 @@ export default function FamilyCenterActivityRow(action) {
     if (null != purchaseInfo) {
       obj = { skuId: null, subscriptionPlanId: null, total: null, currency: null };
       ({ sku_id: obj11[0], subscription_plan_id: obj11[1], total: obj11[2], currency: obj11[3] } = purchaseInfo);
-      tmp14 = callback(FamilyCenterActivityPurchaseRow, obj);
+      tmp14 = callback(FamilyCenterActivityPurchaseRowDefault, obj);
     }
     return tmp14;
   } else {
@@ -198,11 +186,11 @@ export default function FamilyCenterActivityRow(action) {
         obj[4] = claimed;
         obj[5] = offeredAt;
         obj[6] = claimedAt;
-        return callback(FamilyCenterActivityGiftRow, obj);
+        return callback(FamilyCenterActivityGiftRowDefault, obj);
       }
     } else {
       if (tmpResult5.isUserAction(action)) {
-        const obj1 = { action: null };
+        obj1 = { action: null };
         obj1[0] = action;
         let tmp4Result = tmp4(closure_11, obj1);
       } else {

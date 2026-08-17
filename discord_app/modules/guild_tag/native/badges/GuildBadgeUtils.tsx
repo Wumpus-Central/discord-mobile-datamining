@@ -1,4 +1,7 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeUtils.tsx
-const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeUtils.tsx");
+import set from "set" /* 2 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13378 */;
 
-export const getTransformedBadgeColors = require("getTransformedBadgeColors").getTransformedBadgeColors;
+const result = set.fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeUtils.tsx");
+
+export const getTransformedBadgeColors = getTransformedBadgeColors.getTransformedBadgeColors;

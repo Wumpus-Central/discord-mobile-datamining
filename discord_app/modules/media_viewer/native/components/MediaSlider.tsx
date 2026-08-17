@@ -1,15 +1,11 @@
 // discord_app/modules/media_viewer/native/components/MediaSlider.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "Themes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "get ActivityIndicator";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { flex: 1, marginHorizontal: 12, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, icon: { marginRight: 16 }, centerText: null, sliderContainer: null, progressSliderContainer: null, timelineBackgroundSlider: null, downloadProgressSlider: null, playbackSlider: null };
@@ -27,27 +23,21 @@ createCacheKey[4] = { position: "relative", flex: 1, marginHorizontal: 0, justif
 createCacheKey[5] = { position: "absolute", width: "100%", backgroundColor: "transparent", zIndex: 0 };
 createCacheKey[6] = { position: "absolute", width: "100%", backgroundColor: "transparent", zIndex: 1 };
 createCacheKey[7] = { position: "absolute", width: "100%", zIndex: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaSlider.tsx");
 
 export default function MediaSlider(controls) {
-  let c5;
-  let c7;
-  let _slicedToArray;
-  let dependencyMap;
-  let tmp3;
-  let tmp6;
   controls = controls.controls;
   const paused = controls.paused;
-  ({ setPaused: dependencyMap, onPlayPress: _slicedToArray } = controls);
+  ({ setPaused: dependencyMap, onPlayPress: closure_3 } = controls);
   let React;
   c5 = undefined;
-  let closure_6;
+  closure_6 = undefined;
   c7 = undefined;
   let ref;
-  let closure_9;
-  let c10;
-  let closure_11;
+  closure_9 = undefined;
+  closure_10 = undefined;
+  closure_11 = undefined;
   const tmp = ref();
   React = React.useRef(false);
   [tmp3, c5] = callback(React.useState(0), 2);
@@ -58,17 +48,17 @@ export default function MediaSlider(controls) {
   ref = React.useRef(0);
   const tmp8 = callback(React.useState(0), 2);
   closure_9 = tmp8[1];
-  const tmp11 = paused(7127)(() => paused(outer1_2[7]).throttle((arg0) => {
+  const tmp11 = paused(7127)(() => paused(closure_1_2[7]).throttle((arg0) => {
     callback(arg0);
   }, 100));
-  c10 = tmp11;
-  closure_11 = paused(7127)(() => paused(outer1_2[7]).throttle((arg0) => {
+  closure_10 = tmp11;
+  closure_11 = paused(7127)(() => paused(closure_1_2[7]).throttle((arg0) => {
     callback(arg0);
     let str = "transparent";
     if (1 === arg0) {
-      const obj = outer1_1(outer1_2[8])("#FFFFFF");
-      str = outer1_1(outer1_2[8])("#FFFFFF").alpha(0.2).hex();
-      const alphaResult = outer1_1(outer1_2[8])("#FFFFFF").alpha(0.2);
+      const obj = closure_1_1(closure_1_2[8])("#FFFFFF");
+      str = closure_1_1(closure_1_2[8])("#FFFFFF").alpha(0.2).hex();
+      const alphaResult = closure_1_1(closure_1_2[8])("#FFFFFF").alpha(0.2);
     }
     closure_7(str);
   }, 100));
@@ -77,19 +67,19 @@ export default function MediaSlider(controls) {
     closure_10.cancel();
   }, items);
   const subscribe = controls.useSubscribe((arg0, current) => {
-    _undefined(arg0);
+    callback4(arg0);
     ref.current = current;
   }, (arg0) => {
     callback(arg0);
   }, (arg0) => {
-    callback4(arg0);
+    callback5(arg0);
   });
   const items1 = [controls, paused];
   const items2 = [controls];
   callback = React.useCallback(() => {
     if (!paused) {
       controls.pause(true);
-      noop.current = true;
+      closure_4.current = true;
     }
   }, items1);
   const callback1 = React.useCallback((arg0) => {
@@ -129,7 +119,7 @@ export default function MediaSlider(controls) {
   const items4 = [closure_6(controls(5433).PressableOpacity, obj), , , ];
   const items5 = [tmp.centerText, { width: tmp8[0] }];
   items4[1] = closure_6(controls(4734).Text, { style: items5, tabularNumbers: true, lineClamp: 1, color: "text-overlay-light", variant: "text-xs/medium", children: timeFormat });
-  const obj1 = { style: tmp.sliderContainer, children: null };
+  obj1 = { style: tmp.sliderContainer, children: null };
   const obj2 = { pointerEvents: "none", style: tmp.progressSliderContainer, children: null };
   const obj3 = { style: tmp.timelineBackgroundSlider, value: 1, minimumValue: 0, maximumValue: 1, thumbTintColor: null, minimumTrackTintColor: null, maximumTrackTintColor: null };
   let tmp9Result = tmp9(8105);

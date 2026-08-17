@@ -1,9 +1,11 @@
 // discord_app/modules/rich_presence/FirstPartyRichPresenceStore.tsx
-import { Store } from "initialize";
-import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
+import initializeDefault from "initialize" /* 589 */;
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import handleUpdateActivityDefault from "handleUpdateActivity" /* 7253 */;
 
 function updateActivities() {
-  const items = [];
+  items = [];
   const iter = items[Symbol.iterator]();
   while (iter !== undefined) {
     let activity = nextResult.getActivity();
@@ -13,15 +15,16 @@ function updateActivities() {
     }
     continue;
   }
-  const tmp6 = isUndefinedOrNull(items, items);
+  const tmp6 = isUndefinedOrNullDefault(items, items);
   let flag = !tmp6;
   if (!tmp6) {
     flag = true;
   }
   return flag;
 }
-let items = [require("handleUpdateActivity")];
+let items = [handleUpdateActivityDefault];
 let closure_3 = [];
+const Store = initializeDefault.Store;
 class FirstPartyRichPresenceStore extends Store {
 }
 const prototype = FirstPartyRichPresenceStore.prototype;
@@ -32,7 +35,7 @@ prototype["getActivities"] = function getActivities() {
   return closure_3;
 };
 FirstPartyRichPresenceStore.displayName = "FirstPartyRichPresenceStore";
-const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(require("dispatcher"));
-const result = require("initialize").fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
+const firstPartyRichPresenceStore = new FirstPartyRichPresenceStore(dispatcherDefault);
+const result = require("set").fileFinishedImporting("modules/rich_presence/FirstPartyRichPresenceStore.tsx");
 
 export default firstPartyRichPresenceStore;

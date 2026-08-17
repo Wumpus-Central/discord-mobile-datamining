@@ -1,56 +1,51 @@
 // discord_app/modules/group_dm/native/ChatGDMCustomize.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "PressableBase";
-import get_ActivityIndicator from "CircleErrorIcon";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import jsxProd from "TextInput";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 let c5 = importAllResult;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
 let obj = { container: null, iconUploader: null, iconClear: null, textInput: null, rateLimitedContainer: null, rateLimitedText: null };
-obj = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[0] = obj;
-createCacheKey = { marginTop: require("Themes").space.PX_24, alignSelf: "center" };
+createCacheKey = { marginTop: ThemesDefault.space.PX_24, alignSelf: "center" };
 obj[1] = createCacheKey;
-obj[2] = { marginTop: require("Themes").space.PX_8, alignSelf: "center" };
-let obj2 = { marginTop: require("Themes").space.PX_8, alignSelf: "center" };
-obj[3] = { marginVertical: require("Themes").space.PX_16 };
-let obj3 = { marginVertical: require("Themes").space.PX_16 };
-obj[4] = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_8, flexDirection: "row", alignItems: "center" };
-let obj4 = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_8, flexDirection: "row", alignItems: "center" };
-obj[5] = { fontSize: 12, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+obj[2] = { marginTop: ThemesDefault.space.PX_8, alignSelf: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_8, alignSelf: "center" };
+obj[3] = { marginVertical: ThemesDefault.space.PX_16 };
+let obj3 = { marginVertical: ThemesDefault.space.PX_16 };
+obj[4] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+let obj4 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
+obj[5] = { fontSize: 12, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 let closure_12 = createCacheKey.createStyles(obj);
-let obj5 = { fontSize: 12, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+let obj5 = { fontSize: 12, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, ref) => {
-  let c12;
-  let tmp27;
   channelId = channelId.channelId;
   const onFinish = channelId.onFinish;
   let stateFromStores;
   let callback;
   ref = undefined;
   let first;
-  let c6;
+  closure_6 = undefined;
   let first1;
-  let c8;
+  closure_8 = undefined;
   callback = undefined;
   let first2;
-  let closure_11;
+  closure_11 = undefined;
   let callback2;
-  let c13;
+  closure_13 = undefined;
   const tmp = callback2();
   let obj = channelId(stateFromStores[9]);
-  const items = [c8];
-  stateFromStores = obj.useStateFromStores(items, () => _undefined.getChannel(channelId));
+  const items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => channel.getChannel(channelId));
   let str = onFinish(stateFromStores[10])(stateFromStores);
   if (str == null) {
     str = "";
@@ -68,10 +63,10 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   if (tmp9) {
     tmp9 = first !== tmp5;
   }
-  c6 = tmp9;
+  closure_6 = tmp9;
   let tmp7Result = tmp7(obj2.useState(undefined), 2);
   first1 = tmp7Result[0];
-  c8 = tmp12;
+  closure_8 = tmp12;
   if (first1 !== closure_11) {
     let tmp15 = first1;
     if (first1 == null) {
@@ -102,7 +97,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   const items1 = [stateFromStores, channelId];
   const memo = obj2.useMemo(() => ({
     makeURL(icon) {
-      let obj = outer1_1(outer1_2[12]);
+      let obj = closure_1_1(closure_1_2[12]);
       obj = { id: closure_0, icon, applicationId: null, size: 64 };
       let applicationId;
       if (closure_2 != null) {
@@ -118,19 +113,19 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
       }
       let tmp3;
       if (null != icon) {
-        tmp3 = outer1_11;
+        tmp3 = closure_1_11;
       }
-      ensureGuildLoaded(tmp3);
+      closure_8(tmp3);
     }
   }), items1);
   const items2 = [tmp9, first1];
-  callback = obj2.useCallback(() => null != first1 || c6, items2);
+  callback = obj2.useCallback(() => null != first1 || closure_6, items2);
   tmp7Result = tmp7(obj2.useState(null), 2);
   first2 = tmp7Result[0];
   closure_11 = tmp7Result[1];
   [tmp27, c12] = ref(obj2.useState(false), 2);
   const tmp28 = onFinish(stateFromStores[13])();
-  c13 = tmp28;
+  closure_13 = tmp28;
   const items3 = [tmp28, channelId, first, first1, onFinish];
   const items4 = [tmp5];
   const callback1 = obj2.useCallback(callback(function*() {
@@ -160,20 +155,20 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
             obj[0] = arg1;
             return obj;
           } else {
-            const callback = tmp4;
-            let closure_0 = tmp8;
-            let c3 = 2;
-            outer1_12(true);
-            if (null != outer1_7) {
-              let obj6 = outer1_1(outer1_2[14]);
+            callback = tmp4;
+            closure_0 = tmp8;
+            c3 = 2;
+            closure_1_12(true);
+            if (null != closure_1_7) {
+              let obj6 = closure_1_1(closure_1_2[14]);
               let tmp54 = null;
-              if (tmp84 !== outer1_11) {
+              if (tmp84 !== closure_1_11) {
                 tmp54 = tmp84;
               }
               c4 = 3;
               length = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = obj6.setIcon(outer1_0, tmp54);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj6.setIcon(closure_1_0, tmp54);
               return obj1;
             }
           }
@@ -200,13 +195,13 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
               const tmp22 = closure_11;
             } else {
               const obj2 = { key: "GCM_ERROR_GENERIC", IconComponent: null, content: null };
-              obj2[1] = outer1_0(outer1_2[17]).CircleErrorIcon;
-              const intl2 = outer1_0(outer1_2[15]).intl;
+              obj2[1] = closure_1_0(closure_1_2[17]).CircleErrorIcon;
+              const intl2 = closure_1_0(closure_1_2[15]).intl;
               const obj3 = { code: null };
               obj3[0] = closure_0.status;
-              obj2[2] = intl2.formatToPlainString(outer1_0(outer1_2[15]).t.r477WB, obj3);
-              outer1_1(outer1_2[16]).open(obj2);
-              const obj11 = outer1_1(outer1_2[16]);
+              obj2[2] = intl2.formatToPlainString(closure_1_0(closure_1_2[15]).t.r477WB, obj3);
+              closure_1_1(closure_1_2[16]).open(obj2);
+              const obj11 = closure_1_1(closure_1_2[16]);
             }
             c3 = 0;
             callback2(false);
@@ -243,11 +238,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
               callback();
               c3 = 1;
             }
-            const intl = outer1_0(outer1_2[15]).intl;
+            const intl = closure_1_0(closure_1_2[15]).intl;
             c4 = 5;
             length = 1;
             obj6 = { value: null, done: false };
-            obj6[0] = callback3(intl.string(outer1_0(outer1_2[15]).t.ZhunuI));
+            obj6[0] = callback3(intl.string(closure_1_0(closure_1_2[15]).t.ZhunuI));
             return obj6;
           }
           c3 = 0;
@@ -262,11 +257,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
           tmp36 = length.length > 0;
         }
         if (tmp36) {
-          obj4 = outer1_1(outer1_2[14]);
+          obj4 = closure_1_1(closure_1_2[14]);
           c4 = 4;
           length = 1;
           const obj7 = { value: null, done: false };
-          obj7[0] = obj4.setName(outer1_0, length);
+          obj7[0] = obj4.setName(closure_1_0, length);
           return obj7;
         }
       } catch (tmp55) {
@@ -285,7 +280,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   const effect = obj2.useEffect(() => {
     if (null != ref.current) {
       const current = ref.current;
-      current.setText(c3);
+      current.setText(closure_3);
     }
   }, items4);
   const items5 = [first2];
@@ -299,11 +294,11 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   if (null == stateFromStores) {
     obj = { style: null };
     obj[0] = tmp.container;
-    let tmp43Result = callback(c6, obj);
+    let tmp43Result = callback(closure_6, obj);
   } else {
     obj = { style: null, contentContainerStyle: null, children: null };
     obj[0] = tmp.container;
-    let obj1 = { paddingHorizontal: null, paddingBottom: null };
+    obj1 = { paddingHorizontal: null, paddingBottom: null };
     obj1[0] = tmp2(tmp3[7]).space.PX_16;
     obj1[1] = onFinish(stateFromStores[8])({ includeKeyboardHeight: true }).insets.bottom;
     obj[1] = obj1;
@@ -373,12 +368,12 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
     }
     items6[4] = tmp43Result;
     obj[2] = items6;
-    tmp43Result = tmp43(c6, obj);
+    tmp43Result = tmp43(closure_6, obj);
     tmp34 = first1;
-    const tmp44 = c6;
+    const tmp44 = closure_6;
   }
   return tmp43Result;
 }));
-const result = require("noop").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
+const result = require("set").fileFinishedImporting("modules/group_dm/native/ChatGDMCustomize.tsx");
 
 export default memoResult;

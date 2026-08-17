@@ -1,6 +1,6 @@
 // discord_app/modules/wishlists/WishlistAnalyticsContext.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let c0 = importAllResult;
 const context = importAllResult.createContext(null);

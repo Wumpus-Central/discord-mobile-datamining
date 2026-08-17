@@ -1,10 +1,10 @@
 // discord_app/modules/guild_themes/useGuildThemeNuxTrigger.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { DismissibleContentGroupName as closure_4 } from "ContentDismissActionType";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { DismissibleContentGroupName as closure_4 } from "ContentDismissActionType" /* 1388 */;
 
 const require = arg1;
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_themes/useGuildThemeNuxTrigger.tsx");
 
 export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
   const _require = guildId;
@@ -12,7 +12,7 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
   const openNux = isNuxOpen.openNux;
   let React;
   let constants;
-  let closure_5;
+  closure_5 = undefined;
   const enabledGuildThemeForGuildId = _require(isNuxOpen[3]).useEnabledGuildThemeForGuildId(guildId, "GuildThemeNuxTrigger");
   const obj = _require(isNuxOpen[3]);
   if (null != enabledGuildThemeForGuildId) {
@@ -32,19 +32,19 @@ export default function useGuildThemeNuxTrigger(guildId, isNuxOpen) {
   }, items2);
   const items3 = [tmp6, isNuxOpen, guildId, tmp4[1], openNux];
   const effect1 = React.useEffect(() => {
-    if (c4) {
+    if (closure_4) {
       if (!isNuxOpen) {
         if (!ref.current) {
           const _setTimeout = setTimeout;
           const timeout = setTimeout(() => {
             closure_5.current = true;
-            let c0 = false;
+            c0 = false;
             const resolved = Promise.resolve(callback({
               guildId: c0,
               markAsDismissed(arg0) {
                 if (!c0) {
                   c0 = true;
-                  outer1_3(arg0, true);
+                  closure_1_3(arg0, true);
                 }
               }
             }));

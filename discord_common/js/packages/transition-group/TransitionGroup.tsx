@@ -1,9 +1,10 @@
 // discord_common/js/packages/transition-group/TransitionGroup.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import importAllResult from "noop";
+import getChildMapping from "getChildMapping" /* 11596 */;
+import closure_2 from "_objectWithoutProperties" /* 109 */;
+import importAllResult from "noop" /* 19 */;
 import { getChildMapping } from "TransitionChildMapping.tsx";
 
-let require = arg1;
+require = arg1;
 function _toPropertyKey(obj) {
   let StringResult = obj;
   if (typeof obj === "object") {
@@ -44,8 +45,8 @@ class TransitionGroup extends Component {
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp2;
     tmp2._keyChildMapping = {};
-    tmp2.addChildRef = function addChildRef(self, arg1) {
-      tmp2._keyChildMapping[self] = arg1;
+    tmp2.addChildRef = function addChildRef(key10011, arg1) {
+      _keyChildMapping._keyChildMapping[key10011] = arg1;
     };
     obj = { children: null, firstRender: true };
     obj2 = require("getChildMapping");
@@ -61,7 +62,6 @@ class TransitionGroup extends Component {
 }
 const prototype = TransitionGroup.prototype;
 TransitionGroup["getDerivedStateFromProps"] = function getDerivedStateFromProps(children) {
-  let firstRender;
   ({ children, firstRender } = arg1);
   const childMapping = getChildMapping.getChildMapping(children.children);
   children = childMapping;
@@ -169,8 +169,8 @@ prototype["_enqueueTransitions"] = function _enqueueTransitions(children, childM
 prototype["_perform"] = function _perform(key10008, componentWillAppear, componentDidAppear, flag) {
   let self = this;
   self = this;
-  let closure_1 = key10008;
-  let _objectWithoutProperties = componentDidAppear;
+  closure_1 = key10008;
+  closure_2 = componentDidAppear;
   if (flag === undefined) {
     flag = false;
   }
@@ -179,20 +179,20 @@ prototype["_perform"] = function _perform(key10008, componentWillAppear, compone
   if (null != self._keyChildMapping[key10008]) {
     if (null != tmp2[componentWillAppear]) {
       tmp2[componentWillAppear](function callback() {
-        return self._handleDonePerform(closure_1, _objectWithoutProperties, flag);
+        return self._handleDonePerform(closure_1, closure_2, flag);
       });
     }
   }
   self._handleDonePerform(key10008, componentDidAppear, flag);
 };
-prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, _objectWithoutProperties, flag) {
+prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, closure_2, flag) {
   const _require = closure_1;
   if (flag === undefined) {
     flag = false;
   }
   const self = this;
   if (tmp2) {
-    tmp[_objectWithoutProperties]();
+    tmp[closure_2]();
   }
   const _currentlyTransitioningKeys = self._currentlyTransitioningKeys;
   _currentlyTransitioningKeys.delete(closure_1);
@@ -205,7 +205,7 @@ prototype["_handleDonePerform"] = function _handleDonePerform(closure_1, _object
     }
     self.setState((children) => {
       const items = [closure_0];
-      return { children: outer1_2(children.children, items.map(outer1_4)) };
+      return { children: closure_1_2(children.children, items.map(closure_1_4)) };
     });
   } else {
     if (!tmp5) {
@@ -224,14 +224,13 @@ prototype["performLeave"] = function performLeave(closure_1) {
   this._perform(closure_1, "componentWillLeave", "componentDidLeave", true);
 };
 prototype["render"] = function render() {
-  let self = this;
+  const key10011 = this;
   const props = this.props;
   const childFactory = props.childFactory;
   const children = this.state.children;
   const items = [];
   for (const key10011 in children) {
     let tmp8 = key10011;
-    self = key10011;
     let tmp9 = children[key10011];
     let isValidElementResult = null != tmp9;
     if (isValidElementResult) {
@@ -248,7 +247,7 @@ prototype["render"] = function render() {
       }
       let obj = { ref: null, key: null };
       obj[0] = function ref(arg0) {
-        return self.addChildRef(self, arg0);
+        return key10011.addChildRef(key10011, arg0);
       };
       obj[1] = key10011;
       let arr = items.push(importAllResult.cloneElement(childFactoryResult, obj));
@@ -266,6 +265,6 @@ prototype["render"] = function render() {
   return <props.component>{items}</props.component>;
 };
 TransitionGroup.defaultProps = { component: "span", transitionAppear: true, transitionLeave: true, transitionEnter: true, childFactory: null };
-const result = require("getChildMapping").fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionGroup.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/transition-group/TransitionGroup.tsx");
 
 export { TransitionGroup };

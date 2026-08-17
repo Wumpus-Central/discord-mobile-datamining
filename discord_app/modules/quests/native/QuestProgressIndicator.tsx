@@ -1,43 +1,36 @@
 // discord_app/modules/quests/native/QuestProgressIndicator.tsx
-import noop from "noop";
-import importDefaultResult from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "module_4115";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import noop from "noop" /* 19 */;
+import importDefaultResult from "noop" /* 19 */;
+import closure_8 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult1 from "module_4115" /* 4115 */;
 
-let c10;
-let c3;
-let c4;
-let c5;
-let c9;
 ({ useMemo: c3, useEffect: c4, useRef: c5 } = noop);
+const View = get_ActivityIndicator.View;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = ["#666777", "#535564"];
-let closure_12 = require("module_4115").createAnimatedComponent(require("inlineStyles").Circle);
+let closure_12 = importDefaultResult1.createAnimatedComponent(inlineStyles.Circle);
 let obj = { "x-sm": 40, sm: 64, md: 70, "md-lg": 100, lg: 128 };
 let closure_14 = createCacheKey.createStyles((arg0) => {
-  let obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { transform: items }, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };
+  obj = { wrapper: { position: "relative" }, container: { position: "relative", display: "flex", justifyContent: "center", alignItems: "center", zIndex: 1 }, completionGlow: { shadowOffset: { width: 0, height: 0 }, shadowRadius: 20, shadowOpacity: 0, elevation: 4, shadowColor: "#30C77399" }, canvas: { transform: items }, imageContainer: null, progressPath: null, confetti: null, opacityMask: null };
   items = [{ rotate: "-90deg" }];
-  obj = { position: "absolute", height: 0.78 * arg0, width: 0.78 * arg0, borderRadius: Themes.radii.round, overflow: "hidden" };
+  obj = { position: "absolute", height: 0.78 * arg0, width: 0.78 * arg0, borderRadius: ThemesDefault.radii.round, overflow: "hidden" };
   obj[4] = obj;
-  obj = { color: Themes.colors.STATUS_POSITIVE };
+  obj = { color: ThemesDefault.colors.STATUS_POSITIVE };
   obj[5] = obj;
   obj[6] = { position: "absolute", pointerEvents: "none" };
-  obj[7] = { backgroundColor: Themes.colors.CARD_BACKGROUND_DEFAULT, position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 2 };
+  obj[7] = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 2 };
   return obj;
 });
 let closure_15 = { code: "function QuestProgressIndicatorTsx1(){const{glowOpacity}=this.__closure;return{shadowOpacity:glowOpacity.get()};}" };
 let closure_16 = { code: "function QuestProgressIndicatorTsx2(){const{circumference,animatedProgress}=this.__closure;return{strokeDashoffset:circumference-circumference*animatedProgress.get()};}" };
 let closure_17 = { code: "function QuestProgressIndicatorTsx3(){const{underlayOpacity,styles}=this.__closure;return{opacity:underlayOpacity.get(),...styles.opacityMask};}" };
 const memoResult = importDefaultResult.memo(function QuestProgressIndicator(loading) {
-  let accessibilityLabel;
-  let onPress;
-  let progress;
-  let quest;
-  let size;
   ({ quest, size, progress } = loading);
   let flag = loading.loading;
   if (flag === undefined) {
@@ -52,13 +45,13 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   let callback;
   let callback2;
   let callback3;
-  let importDefaultResult;
+  importDefaultResult = undefined;
   let sharedValue;
   let sharedValue1;
-  let c9;
+  closure_9 = undefined;
   let sharedValue2;
-  let dependencyMap;
-  let obj = progress(stateFromStores[8]);
+  dependencyMap = undefined;
+  obj = progress(stateFromStores[8]);
   let items = [sharedValue1];
   stateFromStores = obj.useStateFromStores(items, () => sharedValue1.useReducedMotion);
   const tmp4 = { "x-sm": 3, sm: 3, md: 3, "md-lg": 4, lg: 6 }[size];
@@ -70,7 +63,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   callback3 = result;
   const tmp9 = callback4(obj[size]);
   importDefaultResult = tmp9;
-  let obj1 = progress(stateFromStores[4]);
+  obj1 = progress(stateFromStores[4]);
   sharedValue = obj1.useSharedValue(progress);
   let obj2 = progress(stateFromStores[4]);
   let num = 0;
@@ -83,7 +76,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   if (userStatus != null) {
     completedAt = userStatus.completedAt;
   }
-  c9 = tmp13;
+  closure_9 = tmp13;
   let tmpResult = tmp(tmp2[4]);
   let num2 = 0;
   if (null != completedAt) {
@@ -93,7 +86,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   tmpResult = tmp(tmp2[4]);
   class T {
     constructor() {
-      obj = { shadowOpacity: userStatus.get() };
+      obj = { shadowOpacity: closure_10.get() };
       return obj;
     }
   }
@@ -103,7 +96,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   const animatedStyle = tmpResult.useAnimatedStyle(T);
   class D {
     constructor() {
-      obj = { strokeDashoffset: c5 - c5 * c7.get() };
+      obj = { strokeDashoffset: closure_5 - closure_5 * closure_7.get() };
       return obj;
     }
   }
@@ -114,8 +107,8 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   const tmpResult1 = progress(stateFromStores[4]);
   class R {
     constructor() {
-      obj = { opacity: c8.get() };
-      merged = Object.assign(c6.opacityMask);
+      obj = { opacity: closure_8.get() };
+      merged = Object.assign(closure_6.opacityMask);
       return obj;
     }
   }
@@ -131,7 +124,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     }
     const result = sharedValue.set(progress(stateFromStores[9]).withTiming(progress, { duration: num }));
     return () => {
-      outer1_0(outer1_2[4]).cancelAnimation(closure_7);
+      closure_1_0(closure_1_2[4]).cancelAnimation(closure_7);
     };
   }, items1);
   const items2 = [sharedValue1, flag];
@@ -142,7 +135,7 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
     }
     const result = sharedValue1.set(progress(stateFromStores[9]).withTiming(num, { duration: 500 }));
     return () => {
-      outer1_0(outer1_2[4]).cancelAnimation(maybeApplyNoTextColorForLightCustomTheme);
+      closure_1_0(closure_1_2[4]).cancelAnimation(closure_8);
     };
   }, items2);
   const tmp20 = callback3(null);
@@ -152,17 +145,17 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   const tmpResult2 = progress(stateFromStores[4]);
   callback2(() => {
     if (!stateFromStores) {
-      if (c9) {
+      if (closure_9) {
         const result = sharedValue2.set(progress(stateFromStores[9]).withTiming(1, { duration: 500 }));
-        const current = _undefined2.current;
+        const current = ref.current;
         if (current != null) {
           current.play();
         }
-        const obj = progress(stateFromStores[9]);
+        obj = progress(stateFromStores[9]);
       }
     }
     const result1 = sharedValue2.set(0);
-    const current2 = _undefined2.current;
+    const current2 = ref.current;
     if (current2 != null) {
       current2.reset();
     }
@@ -194,15 +187,15 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   }
   obj1[3] = formatToPlainStringResult;
   obj1[4] = { min: 0, max: 100, now: rounded };
-  const items6 = [c9(flag(stateFromStores[4]).View, { style: animatedStyle1 }), ];
+  const items6 = [closure_9(flag(stateFromStores[4]).View, { style: animatedStyle1 }), ];
   const obj3 = { style: tmp9.container, children: null };
   const obj4 = { height: obj[size], width: obj[size], style: tmp9.canvas, children: null };
   const obj5 = { children: null };
   const obj6 = { id: "underlayGradient", x1: "0", y1: "0.5", x2: "1", y2: "0.5", children: null };
-  const items7 = [c9(progress(stateFromStores[5]).Stop, { offset: "0", stopColor: 19 }), c9(progress(stateFromStores[5]).Stop, { offset: "1", stopColor: 17 })];
+  const items7 = [closure_9(progress(stateFromStores[5]).Stop, { offset: "0", stopColor: 19 }), closure_9(progress(stateFromStores[5]).Stop, { offset: "1", stopColor: 17 })];
   obj6[5] = items7;
   obj5[0] = sharedValue2(progress(stateFromStores[5]).LinearGradient, obj6);
-  const items8 = [c9(progress(stateFromStores[5]).Defs, obj5), c9(progress(stateFromStores[5]).Circle, { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: "url(#underlayGradient)", strokeWidth: tmp4 }), c9(closure_12, { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: tmp9.progressPath.color, strokeWidth: tmp4, strokeDasharray: result, strokeLinecap: "round", animatedProps })];
+  const items8 = [closure_9(progress(stateFromStores[5]).Defs, obj5), closure_9(progress(stateFromStores[5]).Circle, { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: "url(#underlayGradient)", strokeWidth: tmp4 }), closure_9(closure_12, { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: tmp9.progressPath.color, strokeWidth: tmp4, strokeDasharray: result, strokeLinecap: "round", animatedProps })];
   obj4[3] = items8;
   const items9 = [sharedValue2(progress(stateFromStores[5]).Svg, obj4), , ];
   let tmp25Result = null;
@@ -220,23 +213,23 @@ const memoResult = importDefaultResult.memo(function QuestProgressIndicator(load
   const obj8 = { offset: "1", stopColor: 17 };
   const obj9 = { cx: obj[size] / 2, cy: obj[size] / 2, r: diff, fill: "none", stroke: "url(#underlayGradient)", strokeWidth: tmp4 };
   tmp21 = callback(() => {
-    let obj = {};
-    const merged = Object.assign(_undefined.confetti);
-    obj.width = c3;
-    obj.height = c3;
-    obj = { scale: c4 };
+    obj = {};
+    const merged = Object.assign(closure_6.confetti);
+    obj.width = closure_3;
+    obj.height = closure_3;
+    obj = { scale: closure_4 };
     const items = [obj];
     obj.transform = items;
     return obj;
   }, items3);
-  items9[2] = c9(sharedValue, { style: tmp9.imageContainer, children: c9(flag(stateFromStores[14]), obj13) });
+  items9[2] = closure_9(sharedValue, { style: tmp9.imageContainer, children: closure_9(flag(stateFromStores[14]), obj13) });
   obj3[1] = items9;
   items6[1] = sharedValue2(sharedValue, obj3);
   obj1[5] = items6;
   obj.children = sharedValue2(flag(stateFromStores[4]).View, obj1);
-  return c9(PressableOpacity, obj);
+  return closure_9(PressableOpacity, obj);
 });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
+let result = set.fileFinishedImporting("modules/quests/native/QuestProgressIndicator.tsx");
 
 export default memoResult;
 export const QUEST_PROGRESS_DIAMETER_BY_SIZE = obj;

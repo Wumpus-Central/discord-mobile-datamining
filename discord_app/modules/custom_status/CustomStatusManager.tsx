@@ -1,18 +1,17 @@
 // discord_app/modules/custom_status/CustomStatusManager.tsx
-import filterPlayingActivities from "filterPlayingActivities";
-import ME from "ME";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "filterPlayingActivities" /* 7250 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
 let require = arg1;
 ({ AnalyticsObjects: c4, StatusTypes: c5 } = ME);
 const timeout = new require("start").Timeout();
 const timeout1 = new require("start").Timeout();
 const timeout2 = new require("start").Timeout();
+initializeDefault;
 let prototype = function CustomStatusManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handlePostConnectionOpen();
@@ -89,7 +88,7 @@ let prototype = function CustomStatusManager() {
             let obj = { nextStatus: null, analyticsContext: null };
             obj[0] = tmp4.ONLINE;
             obj = { location: null };
-            const obj1 = { object: null };
+            obj1 = { object: null };
             obj1[0] = constants.CUSTOM_STATUS_MANAGER;
             obj[0] = obj1;
             obj[1] = obj;
@@ -150,6 +149,6 @@ let prototype = function CustomStatusManager() {
 class prototype extends tmp6 {
 }
 prototype = new prototype();
-let result = require("start").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
+let result = require("set").fileFinishedImporting("modules/custom_status/CustomStatusManager.tsx");
 
 export default prototype;

@@ -1,15 +1,11 @@
 // discord_app/modules/premium/PremiumSubscriptionInvoice.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import ME from "ME";
-import noop from "noop";
-import createFromServer from "createFromServer";
-import { Endpoints } from "ME";
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "asyncGeneratorStep" /* 5 */;
+import noop from "noop" /* 19 */;
+import closure_11 from "createFromServer" /* 4048 */;
+import { Endpoints } from "ME" /* 676 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function createSubscriptionInvoicePreview() {
   const self = this;
@@ -24,20 +20,11 @@ function createSubscriptionInvoicePreview() {
 function _createSubscriptionInvoicePreview() {
   const self = this;
   const tmp = callback3((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let applyEntitlements;
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -64,13 +51,13 @@ function _createSubscriptionInvoicePreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
               dependencyMap = undefined;
               c3 = undefined;
-              let c4;
+              c4 = undefined;
               c5 = undefined;
               c6 = undefined;
               c7 = undefined;
@@ -83,7 +70,7 @@ function _createSubscriptionInvoicePreview() {
               ({ currency: c5, renewal: c6, metadata: c7, loadId: c8 } = callback);
               let obj2;
               let body;
-              let createFromServer;
+              closure_11 = undefined;
               c5 = 1;
               c6 = 1;
               return { value: "ct", done: true };
@@ -94,7 +81,7 @@ function _createSubscriptionInvoicePreview() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -142,8 +129,8 @@ function _createSubscriptionInvoicePreview() {
             return obj5;
           } else {
             body = arg1;
-            createFromServer = createFromServer.createInvoiceFromServer(body.body);
-            const checkoutContext = createFromServer.checkoutContext;
+            closure_11 = closure_11.createInvoiceFromServer(body.body);
+            const checkoutContext = closure_11.checkoutContext;
             let payment_sources;
             if (checkoutContext != null) {
               payment_sources = checkoutContext.payment_sources;
@@ -151,14 +138,14 @@ function _createSubscriptionInvoicePreview() {
             if (null != payment_sources) {
               obj = callback2(709);
               const obj6 = { type: "SUBSCRIPTION_PREVIEW_CHECKOUT_CONTEXT_UPDATE", checkoutContext: null, paymentSourceId: null };
-              obj6[1] = createFromServer.checkoutContext;
+              obj6[1] = closure_11.checkoutContext;
               obj6[2] = callback2;
               obj.dispatch(obj6);
             }
             c4 = 0;
             c6 = 3;
             const obj7 = { value: null, done: true };
-            obj7[0] = createFromServer;
+            obj7[0] = closure_11;
             return obj7;
           }
         } catch (tmp28) {
@@ -175,7 +162,7 @@ function _createSubscriptionInvoicePreview() {
     iter.next();
     return iter;
   });
-  const _createSubscriptionInvoicePreview = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -197,21 +184,11 @@ function updateSubscriptionInvoicePreview() {
 function _updateSubscriptionInvoicePreview() {
   const self = this;
   const tmp = callback3((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let applyEntitlements;
-      let c0;
-      let c2;
-      let c3;
-      let c4;
-      let c6;
-      let c7;
-      let c8;
-      let c9;
-      let closure_1;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -238,7 +215,7 @@ function _updateSubscriptionInvoicePreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
@@ -257,8 +234,8 @@ function _updateSubscriptionInvoicePreview() {
               c5 = applyEntitlements;
               ({ analyticsLocations: c6, analyticsLocation: c7, userDiscountOfferId: c8, loadId: c9 } = callback);
               let obj2;
-              let createFromServer;
-              let closure_12;
+              closure_11 = undefined;
+              closure_12 = undefined;
               c5 = 1;
               c6 = 1;
               return { value: "ct", done: true };
@@ -269,7 +246,7 @@ function _updateSubscriptionInvoicePreview() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -311,7 +288,7 @@ function _updateSubscriptionInvoicePreview() {
             }
           } else if (2 === tmp7) {
             c4 = 0;
-            let closure_13 = c3;
+            closure_13 = c3;
             const billingError = new callback(4273).BillingError(closure_13);
             throw billingError;
           } else if (arg0 === 1) {
@@ -324,8 +301,8 @@ function _updateSubscriptionInvoicePreview() {
             obj6[0] = arg1;
             return obj6;
           } else {
-            createFromServer = arg1;
-            closure_12 = createFromServer.createInvoiceFromServer(createFromServer.body);
+            closure_11 = arg1;
+            closure_12 = closure_11.createInvoiceFromServer(closure_11.body);
             let tmp11 = null != dependencyMap;
             if (tmp11) {
               const checkoutContext = closure_12.checkoutContext;
@@ -362,7 +339,7 @@ function _updateSubscriptionInvoicePreview() {
     iter.next();
     return iter;
   });
-  const _updateSubscriptionInvoicePreview = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -384,17 +361,11 @@ function createOneTimePurchaseInvoicePreview() {
 function _createOneTimePurchaseInvoicePreview() {
   const self = this;
   const tmp = callback3((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -421,7 +392,7 @@ function _createOneTimePurchaseInvoicePreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback2 = tmp7;
               let callback;
               callback2 = undefined;
@@ -442,7 +413,7 @@ function _createOneTimePurchaseInvoicePreview() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -473,7 +444,7 @@ function _createOneTimePurchaseInvoicePreview() {
             }
           } else if (2 === tmp7) {
             c4 = 0;
-            let closure_8 = c3;
+            closure_8 = c3;
             const billingError = new callback(4273).BillingError(closure_8);
             throw billingError;
           } else if (arg0 === 1) {
@@ -490,7 +461,7 @@ function _createOneTimePurchaseInvoicePreview() {
             c4 = 0;
             c6 = 3;
             obj = { value: null, done: true };
-            obj[0] = createFromServer.createInvoiceFromServer(body.body);
+            obj[0] = closure_11.createInvoiceFromServer(body.body);
             return obj;
           }
         } catch (tmp43) {
@@ -507,7 +478,7 @@ function _createOneTimePurchaseInvoicePreview() {
     iter.next();
     return iter;
   });
-  const _createOneTimePurchaseInvoicePreview = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -529,12 +500,10 @@ function getSubscriptionInvoice() {
 function _getSubscriptionInvoice() {
   const self = this;
   const tmp = callback3((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -577,7 +546,7 @@ function _getSubscriptionInvoice() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else if (c1) {
@@ -605,7 +574,7 @@ function _getSubscriptionInvoice() {
             body = arg1;
             c4 = 3;
             obj = { value: null, done: true };
-            obj[0] = createFromServer.createInvoiceFromServer(body.body);
+            obj[0] = closure_11.createInvoiceFromServer(body.body);
             return obj;
           }
         } catch (tmp16) {
@@ -617,7 +586,7 @@ function _getSubscriptionInvoice() {
     iter.next();
     return iter;
   });
-  const _getSubscriptionInvoice = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -627,23 +596,21 @@ function _getSubscriptionInvoice() {
   return applyArgumentsResult;
 }
 let closure_3 = ["subscriptionId"];
-({ useCallback: error, useEffect: metroImportAll, useState: c9, useRef: c10 } = noop);
-let result = require("asyncGeneratorStep").fileFinishedImporting("modules/premium/PremiumSubscriptionInvoice.tsx");
+({ useCallback: error, useEffect: closure_8, useState: c9, useRef: c10 } = noop);
+let result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionInvoice.tsx");
 
 export { createSubscriptionInvoicePreview };
 export { updateSubscriptionInvoicePreview };
 export { createOneTimePurchaseInvoicePreview };
 export { getSubscriptionInvoice };
 export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePreview(preventFetch) {
-  let c2;
-  let tmp2;
   let flag = preventFetch.preventFetch;
   if (flag === undefined) {
     flag = false;
   }
-  let closure_1 = arg1;
+  closure_1 = arg1;
   c2 = undefined;
-  let closure_3;
+  closure_3 = undefined;
   [tmp2, c2] = callback2(callback6(null), 2);
   const tmp3 = callback2(callback6(null), 2);
   closure_3 = tmp3[1];
@@ -651,33 +618,33 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
   callback5(() => {
     function _loadPreview() {
       const self = this;
-      const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
+      const tmp = closure_2_6(function*() {
+        let callback = tmp3;
         let v0 = 1;
         v0(null);
-        yield outer1_1();
+        yield callback();
         if (1 === tmp7) {
           v0 = 0;
-          outer1_1 = closure_2;
+          callback = closure_2;
           if (!closure_0) {
             v0(tmp16);
-            outer1_2(null);
+            closure_1_2(null);
           }
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
           closure_0 = arg1;
           if (!closure_0) {
-            outer1_2(closure_0);
+            closure_1_2(closure_0);
           }
           v0 = 0;
         }
         v0 = 0;
         return arg1;
       });
-      const _loadPreview = tmp;
+      closure_1 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -686,7 +653,7 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
       }
       return applyArgumentsResult;
     }
-    let c0 = false;
+    c0 = false;
     if (!c0) {
       (function loadPreview() {
         const self = this;
@@ -700,43 +667,41 @@ export const useFetchGenericInvoicePreview = function useFetchGenericInvoicePrev
       })();
     }
     return () => {
-      let c0 = true;
+      c0 = true;
     };
   }, items);
   const items1 = [tmp2, tmp3[0]];
   return items1;
 };
 export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscriptionGiftInvoicePreview(preventFetch) {
-  let c2;
-  let tmp5;
   let flag = preventFetch;
-  let c1 = callback7(preventFetch);
+  closure_1 = callback7(preventFetch);
   c2 = callback7(false);
   callback5(() => {
-    c1.current = flag;
+    closure_1.current = flag;
   });
   const items = [JSON.stringify(preventFetch)];
   const tmp3 = callback4(() => {
-    const current = _undefined.current;
+    const current = ref.current;
     let tmp2 = current;
-    if (!_undefined2.current) {
+    if (!_undefined.current) {
       const obj = {};
       const merged = Object.assign(current);
       obj.paymentSourceId = null;
       tmp2 = obj;
     }
-    _undefined2.current = true;
-    return outer1_17(tmp2);
+    _undefined.current = true;
+    return closure_1_17(tmp2);
   }, items);
   flag = undefined;
-  c1 = undefined;
+  closure_1 = undefined;
   flag = preventFetch.preventFetch;
   if (flag === undefined) {
     flag = false;
   }
-  c1 = tmp3;
+  closure_1 = tmp3;
   c2 = undefined;
-  let closure_3;
+  closure_3 = undefined;
   [tmp5, c2] = callback2(callback6(null), 2);
   const tmp6 = callback2(callback6(null), 2);
   closure_3 = tmp6[1];
@@ -744,33 +709,33 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
   callback5(() => {
     function _loadPreview() {
       const self = this;
-      const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
+      const tmp = closure_2_6(function*() {
+        let callback = tmp3;
         let v0 = 1;
         v0(null);
-        yield outer1_1();
+        yield callback();
         if (1 === tmp7) {
           v0 = 0;
-          outer1_1 = closure_2;
+          callback = closure_2;
           if (!closure_0) {
             v0(tmp16);
-            outer1_2(null);
+            closure_1_2(null);
           }
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
           closure_0 = arg1;
           if (!closure_0) {
-            outer1_2(closure_0);
+            closure_1_2(closure_0);
           }
           v0 = 0;
         }
         v0 = 0;
         return arg1;
       });
-      const _loadPreview = tmp;
+      closure_1 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -779,7 +744,7 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
       }
       return applyArgumentsResult;
     }
-    let c0 = false;
+    c0 = false;
     if (!c0) {
       (function loadPreview() {
         const self = this;
@@ -793,15 +758,13 @@ export const useFetchSubscriptionGiftInvoicePreview = function useFetchSubscript
       })();
     }
     return () => {
-      let c0 = true;
+      c0 = true;
     };
   }, items1);
   const items2 = [tmp5, tmp6[0]];
   return items2;
 };
 export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionInvoicePreview(subscriptionId) {
-  let c2;
-  let tmp14;
   let flag = subscriptionId;
   let tmp = subscriptionId;
   if ("subscriptionId" in subscriptionId) {
@@ -813,7 +776,7 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       tmp = tmp5;
     }
   }
-  let c1 = callback7(tmp);
+  closure_1 = callback7(tmp);
   c2 = callback7(false);
   flag = undefined;
   let tmp6 = callback7(null);
@@ -862,7 +825,7 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
   callback = tmp9;
   const callback2 = tmp10;
   callback5(() => {
-    c1.current = flag;
+    closure_1.current = flag;
   });
   const items1 = [JSON.stringify(tmp), tmp6, tmp9, tmp10];
   const tmp12 = callback4(() => {
@@ -874,9 +837,10 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       obj.paymentSourceId = null;
       tmp2 = obj;
     }
+    obj = tmp2;
     if ("subscriptionId" in tmp2) {
       tmp.current = true;
-      return outer1_15(tmp2);
+      return closure_1_15(tmp2);
     } else if ("items" in tmp2) {
       tmp.current = true;
       const _JSON = JSON;
@@ -886,27 +850,27 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       json = JSON.stringify(obj);
       const current2 = ref.current;
       if (null != current2) {
-        if (tmp9(tmp2, json)) {
+        if (callback(tmp2, json)) {
           let resolved = Promise.resolve(current2.record);
         }
         return resolved;
       }
-      resolved = outer1_13(tmp2).then((arg0) => {
-        outer1_5(arg0, json, tmp2.paymentSourceId);
+      resolved = closure_1_13(tmp2).then((arg0) => {
+        closure_1_5(arg0, json, obj.paymentSourceId);
         return arg0;
       });
-      const promise = outer1_13(tmp2);
+      const promise = closure_1_13(tmp2);
     } else {
       return null;
     }
   }, items1);
   flag = undefined;
-  c1 = undefined;
+  closure_1 = undefined;
   flag = tmp.preventFetch;
   if (flag === undefined) {
     flag = false;
   }
-  c1 = tmp12;
+  closure_1 = tmp12;
   c2 = undefined;
   closure_3 = undefined;
   [tmp14, c2] = callback2(callback6(null), 2);
@@ -916,33 +880,33 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
   callback5(() => {
     function _loadPreview() {
       const self = this;
-      const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
+      const tmp = closure_2_6(function*() {
+        let callback = tmp3;
         let v0 = 1;
         v0(null);
-        yield outer1_1();
+        yield callback();
         if (1 === tmp7) {
           v0 = 0;
-          outer1_1 = closure_2;
+          callback = closure_2;
           if (!closure_0) {
             v0(tmp16);
-            outer1_2(null);
+            closure_1_2(null);
           }
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
           closure_0 = arg1;
           if (!closure_0) {
-            outer1_2(closure_0);
+            closure_1_2(closure_0);
           }
           v0 = 0;
         }
         v0 = 0;
         return arg1;
       });
-      const _loadPreview = tmp;
+      closure_1 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -951,7 +915,7 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       }
       return applyArgumentsResult;
     }
-    let c0 = false;
+    c0 = false;
     if (!c0) {
       (function loadPreview() {
         const self = this;
@@ -965,31 +929,29 @@ export const useFetchSubscriptionInvoicePreview = function useFetchSubscriptionI
       })();
     }
     return () => {
-      let c0 = true;
+      c0 = true;
     };
   }, items2);
   const items3 = [tmp14, tmp15[0]];
   return items3;
 };
 export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(preventFetch) {
-  let c2;
-  let tmp5;
   let flag = preventFetch;
-  let c1 = callback7(preventFetch);
+  closure_1 = callback7(preventFetch);
   callback5(() => {
-    c1.current = flag;
+    closure_1.current = flag;
   });
   const items = [JSON.stringify(preventFetch)];
-  const tmp3 = callback4(() => outer1_19(_undefined.current), items);
+  const tmp3 = callback4(() => closure_1_19(ref.current), items);
   flag = undefined;
-  c1 = undefined;
+  closure_1 = undefined;
   flag = preventFetch.preventFetch;
   if (flag === undefined) {
     flag = false;
   }
-  c1 = tmp3;
+  closure_1 = tmp3;
   c2 = undefined;
-  let closure_3;
+  closure_3 = undefined;
   [tmp5, c2] = callback2(callback6(null), 2);
   const tmp6 = callback2(callback6(null), 2);
   closure_3 = tmp6[1];
@@ -997,33 +959,33 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
   callback5(() => {
     function _loadPreview() {
       const self = this;
-      const tmp = outer2_6(function*() {
-        let closure_1 = tmp3;
+      const tmp = closure_2_6(function*() {
+        let callback = tmp3;
         let v0 = 1;
         v0(null);
-        yield outer1_1();
+        yield callback();
         if (1 === tmp7) {
           v0 = 0;
-          outer1_1 = closure_2;
+          callback = closure_2;
           if (!closure_0) {
             v0(tmp16);
-            outer1_2(null);
+            closure_1_2(null);
           }
-          let c5 = 3;
+          c5 = 3;
         } else if (arg0 === 1) {
           c5 = 3;
           throw arg1;
         } else if (arg0 !== 2) {
           closure_0 = arg1;
           if (!closure_0) {
-            outer1_2(closure_0);
+            closure_1_2(closure_0);
           }
           v0 = 0;
         }
         v0 = 0;
         return arg1;
       });
-      const _loadPreview = tmp;
+      closure_1 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1032,7 +994,7 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
       }
       return applyArgumentsResult;
     }
-    let c0 = false;
+    c0 = false;
     if (!c0) {
       (function loadPreview() {
         const self = this;
@@ -1046,16 +1008,14 @@ export const useGetSubscriptionInvoice = function useGetSubscriptionInvoice(prev
       })();
     }
     return () => {
-      let c0 = true;
+      c0 = true;
     };
   }, items1);
   const items2 = [tmp5, tmp6[0]];
   return items2;
 };
 export const getItemUnitPriceWithDiscount = function getItemUnitPriceWithDiscount(arg0) {
-  let discounts;
-  let importDefault;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   ({ subscriptionPlanPrice: importDefault, discounts } = arg0);
   const item = discounts.forEach((amount) => {
     closure_1 = closure_1 - amount.amount / quantity.quantity;

@@ -1,10 +1,12 @@
 // discord_app/modules/storefront/StorefrontPromotionStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function handleReset() {
-  let closure_0 = {};
+  closure_0 = {};
 }
 let closure_0 = {};
+const Store = initializeDefault.Store;
 class StorefrontPromotionStore extends Store {
 }
 const prototype = StorefrontPromotionStore.prototype;
@@ -49,7 +51,7 @@ prototype["getPromotionsForApplication"] = function getPromotionsForApplication(
   return tmp4;
 };
 StorefrontPromotionStore.displayName = "StorefrontPromotionStore";
-const storefrontPromotionStore = new StorefrontPromotionStore(require("dispatcher"), {
+const storefrontPromotionStore = new StorefrontPromotionStore(dispatcherDefault, {
   LOGOUT: handleReset,
   STOREFRONT_PROMOTIONS_FETCH_START: function handleFetchStart(arg0) {
     const iter = arg0.applicationIds[Symbol.iterator]();
@@ -79,8 +81,6 @@ const storefrontPromotionStore = new StorefrontPromotionStore(require("dispatche
     }
   },
   STOREFRONT_PROMOTIONS_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let applicationIds;
-    let promotions;
     ({ applicationIds, promotions } = arg0);
     let obj = {};
     const timestamp = Date.now();

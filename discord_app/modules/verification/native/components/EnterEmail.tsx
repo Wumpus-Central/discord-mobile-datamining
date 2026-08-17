@@ -1,34 +1,28 @@
 // discord_app/modules/verification/native/components/EnterEmail.tsx
-import closure_4 from "ChangeEmailFields";
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import get_ActivityIndicator from "module_8575";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ChangeEmailFields from "ChangeEmailFields";
-import { AnalyticEvents } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ChangeEmailFields from "ChangeEmailFields" /* 8563 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let closure_14;
-let closure_15;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
-({ View: error, ScrollView: metroImportAll } = get_ActivityIndicator);
+({ View: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ useChangeEmailError: c10, useChangeEmailStore: unpackModuleId, ChangeEmailFields: closure_12 } = ChangeEmailFields);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { background: null, container: null, title: null, prompt: null, input: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingVertical: 12, paddingHorizontal: 16 };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { marginTop: 8, lineHeight: 18, textAlign: "center" };
 createCacheKey[4] = { marginTop: 24, marginBottom: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("noop").fileFinishedImporting("modules/verification/native/components/EnterEmail.tsx");
+let closure_16 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/verification/native/components/EnterEmail.tsx");
 
 export default function EnterEmail(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
@@ -39,11 +33,11 @@ export default function EnterEmail(isChangeEmail) {
   let callback;
   let emailToken;
   callback = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = isChangeEmail(stateFromStores[10]);
   navigation = obj.useNavigation();
-  let obj1 = isChangeEmail(stateFromStores[11]);
-  const items = [mergeGuildAvatar];
+  obj1 = isChangeEmail(stateFromStores[11]);
+  const items = [closure_9];
   stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(emailToken.useState(""), 2);
   first = tmp6[0];
@@ -52,17 +46,17 @@ export default function EnterEmail(isChangeEmail) {
   emailToken = callback3().emailToken;
   const items1 = [navigation];
   callback = emailToken.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const routes = navigation.getState().routes;
     return routes.findIndex((name) => name.name === closure_0);
   }, items1);
   const items2 = [navigation, stateFromStores, tmp8[1], first, emailToken, callback, isChangeEmail, changeEmailReason];
   const callback1 = emailToken.useCallback(() => {
     let obj = { onSubmit: null, onSuccess: null, hideUnverifiedBanner: true };
-    let closure_0 = first((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c1 = 0;
+    closure_0 = first((arg0) => {
+      closure_0 = arg0;
+      c2 = 0;
+      c1 = 0;
       return (function*(arg0) {
         if (c1 === 2) {
           c1 = 3;
@@ -91,17 +85,17 @@ export default function EnterEmail(isChangeEmail) {
                 return obj;
               } else {
                 let tmp5 = null;
-                if (null != outer1_3) {
-                  outer1_5(null);
-                  let obj1 = outer2_2(outer2_3[13]);
+                if (null != closure_1_3) {
+                  closure_1_5(null);
+                  obj1 = closure_2_2(closure_2_3[13]);
                   obj1 = { email: null, password: null, emailToken: null };
-                  obj1[0] = outer1_4;
+                  obj1[0] = closure_1_4;
                   obj1[1] = tmp20;
-                  obj1[2] = outer1_6;
+                  obj1[2] = closure_1_6;
                   c2 = 1;
                   c1 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = obj1.saveEmail(obj1, c2, outer1_7);
+                  obj2[0] = obj1.saveEmail(obj1, c2, closure_1_7);
                   return obj2;
                 }
               }
@@ -142,12 +136,12 @@ export default function EnterEmail(isChangeEmail) {
       if (closure_0) {
         let obj = { change_email_reason_enum: null };
         obj[0] = closure_1;
-        outer1_1(outer1_3[14]).track(outer1_13.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, obj);
-        const obj2 = outer1_1(outer1_3[14]);
-        const result = outer1_2(outer1_3[13]).finishChangeEmailFlow(closure_2, closure_4);
-        const obj4 = outer1_2(outer1_3[13]);
+        closure_1_1(closure_1_3[14]).track(closure_1_13.USER_ACCOUNT_EMAIL_CHANGE_SAVE_NEW_EMAIL, obj);
+        const obj2 = closure_1_1(closure_1_3[14]);
+        const result = closure_1_2(closure_1_3[13]).finishChangeEmailFlow(closure_2, closure_4);
+        const obj4 = closure_1_2(closure_1_3[13]);
       } else {
-        obj = outer1_2(outer1_3[13]);
+        obj = closure_1_2(closure_1_3[13]);
         const result1 = obj.finishVerifyEmailFlow(closure_2, closure_7);
       }
     };

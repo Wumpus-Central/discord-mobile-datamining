@@ -1,9 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx
-import { GuildRoleSubscriptionBenefitTypes as closure_2 } from "MAX_SUBSCRIPTION_TIERS";
-import { SubscriptionIntervalTypes } from "GuildFeatures";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
 
-const result = require("getSystemLocale").fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
+let closure_2 = MAX_SUBSCRIPTION_TIERS.GuildRoleSubscriptionBenefitTypes;
+const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionTypeUtils.tsx");
 
 export const getBenefitKey = function getBenefitKey(id) {
   if ("roles" in id) {
@@ -28,7 +31,6 @@ export const formatPlanInterval = function formatPlanInterval(first2) {
   return intl.format(cuSp8Q, { count: first2.interval_count });
 };
 export const formatPlanIntervalDuration = function formatPlanIntervalDuration(interval) {
-  let interval_count;
   ({ interval, interval_count } = interval);
   if (SubscriptionIntervalTypes.DAY === interval) {
     if (interval_count > 0) {
@@ -46,7 +48,7 @@ export const formatPlanIntervalDuration = function formatPlanIntervalDuration(in
     formatToPlainStringResult = intl3.formatToPlainString(getSystemLocale.t.jzH70Z, obj);
   } else if (tmp.MONTH === interval) {
     const intl2 = getSystemLocale.intl;
-    const obj1 = { months: null };
+    obj1 = { months: null };
     obj1[0] = interval_count;
     return intl2.formatToPlainString(getSystemLocale.t.erUSmA, obj1);
   } else if (tmp.YEAR === interval) {

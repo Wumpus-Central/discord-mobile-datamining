@@ -1,5 +1,5 @@
 // discord_common/js/shared/hooks/useMountEffect.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("../discord_common/js/shared/hooks/useMountEffect.tsx");
 
@@ -13,9 +13,9 @@ export const useMountLayoutEffect = function useMountLayoutEffect(stateFromStore
 };
 export const useUnmountEffect = function useUnmountEffect(callback) {
   const React = callback;
-  let closure_1 = React.useRef(callback);
+  closure_1 = React.useRef(callback);
   const effect = React.useEffect(() => {
-    closure_1.current = noop;
+    closure_1.current = closure_0;
   });
   const effect1 = React.useEffect(() => () => {
     ref.current();

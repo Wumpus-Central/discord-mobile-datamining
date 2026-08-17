@@ -1,17 +1,21 @@
 // discord_app/stores/HookErrorStore.tsx
-import { MediaEngineHookTypes } from "ME";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
+const MediaEngineHookTypes = ME.MediaEngineHookTypes;
 let closure_1 = {};
+const Store = initializeDefault.Store;
 class HookErrorStore extends Store {
 }
 HookErrorStore.prototype["getHookError"] = function getHookError(SOUND) {
   return table[SOUND];
 };
 HookErrorStore.displayName = "HookErrorStore";
-const hookErrorStore = new HookErrorStore(require("dispatcher"), {
+const hookErrorStore = new HookErrorStore(dispatcherDefault, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function handleSetGoLiveSource() {
-    let closure_1 = {};
+    closure_1 = {};
   },
   MEDIA_ENGINE_SOUNDSHARE_TRANSMITTING: function handleSoundshareTransmitting() {
     delete tmp2[tmp];
@@ -20,6 +24,6 @@ const hookErrorStore = new HookErrorStore(require("dispatcher"), {
     closure_1[MediaEngineHookTypes.SOUND] = { errorMessage: errorMessage.errorMessage, errorCode: errorMessage.errorCode };
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/HookErrorStore.tsx");
+const result = set.fileFinishedImporting("stores/HookErrorStore.tsx");
 
 export default hookErrorStore;

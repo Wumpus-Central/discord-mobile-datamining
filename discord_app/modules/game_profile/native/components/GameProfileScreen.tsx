@@ -1,18 +1,15 @@
 // discord_app/modules/game_profile/native/components/GameProfileScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import getGameProfileStoreWebsiteData from "getGameProfileStoreWebsiteData";
-import get_ActivityIndicator from "CONFIG_NEVER_ANIMATE_TIMING";
-import getSimilarGames from "getSimilarGames";
-import jsxProd from "GameProfileStoreLinksActionSheet";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "getSimilarGames" /* 9098 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function GetButton(onPress) {
   const obj = { variant: "primary", size: "sm", text: null, onPress: null, accessibilityLabel: null };
   const intl = getSystemLocale.intl;
@@ -23,26 +20,22 @@ function GetButton(onPress) {
   return callback(Button.Button, obj);
 }
 ({ View: c5, ActivityIndicator: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { loadingContainer: null, scrollView: null, stickyHeader: null };
-createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { flex: 1, justifyContent: "center", alignItems: "center", minHeight: 300, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[1] = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = { position: "absolute", top: 0, left: 0, right: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function GameProfileScreenTsx1(){const{heroHeaderHeight,scrollY,STICKY_HEADER_HEIGHT}=this.__closure;return heroHeaderHeight.get()>0&&scrollY.get()>=heroHeaderHeight.get()-STICKY_HEADER_HEIGHT;}" };
 let closure_13 = { code: "function GameProfileScreenTsx2(isVisible,wasVisible){const{stickyHeaderVisible,withTiming}=this.__closure;if(isVisible!==wasVisible){stickyHeaderVisible.set(withTiming(isVisible?1:0,{duration:150}));}}" };
 let closure_14 = { code: "function GameProfileScreenTsx3(){const{interpolate,stickyHeaderVisible,STICKY_HEADER_HEIGHT}=this.__closure;return{transform:[{translateY:interpolate(stickyHeaderVisible.get(),[0,1],[-1*STICKY_HEADER_HEIGHT,0])}]};}" };
 let closure_15 = { code: "function GameProfileScreenTsx4(){const{scrollY,storeLinksSectionBottomY,STICKY_HEADER_HEIGHT}=this.__closure;return scrollY.get()>storeLinksSectionBottomY.get()-STICKY_HEADER_HEIGHT;}" };
 let closure_16 = { code: "function GameProfileScreenTsx5(shouldShow,prevShouldShow){const{runOnJS,setShowGetButton}=this.__closure;if(shouldShow!==prevShouldShow){runOnJS(setShowGetButton)(shouldShow);}}" };
-let obj1 = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/game_profile/native/components/GameProfileScreen.tsx");
+let obj1 = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileScreen.tsx");
 
 export default function GameProfileScreen(gameId) {
-  let bottomSheetClose;
-  let bottomSheetRef;
-  let data;
-  let isLoading;
   gameId = gameId.gameId;
   const source = gameId.source;
   const sourceUserId = gameId.sourceUserId;
@@ -57,16 +50,16 @@ export default function GameProfileScreen(gameId) {
   let first1;
   let name;
   let sharedValue;
-  let closure_11;
+  closure_11 = undefined;
   let sharedValue1;
   let sharedValue2;
   let sharedValue3;
   let first2;
-  let c16;
+  closure_16 = undefined;
   let gameProfileStoreWebsites;
   let memo;
-  let closure_19;
-  let closure_20;
+  closure_19 = undefined;
+  closure_20 = undefined;
   let callback2;
   let callback3;
   let tmp = sharedValue();
@@ -75,7 +68,7 @@ export default function GameProfileScreen(gameId) {
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
   const tmp6Result = source(sourceUserId[10])(source(sourceUserId[11]).openURL);
   React = tmp6Result;
-  let obj1 = React;
+  obj1 = React;
   first = num(React.useState(() => gameId(sourceUserId[12]).generateViewId()), 1)[0];
   ref = React.useRef(null);
   ref1 = React.useRef(0);
@@ -128,11 +121,11 @@ export default function GameProfileScreen(gameId) {
   const tmp2Result1 = gameId(sourceUserId[15]);
   class U {
     constructor() {
-      obj = useRef;
-      tmp = useRef.get() > 0;
+      obj = closure_12;
+      tmp = closure_12.get() > 0;
       if (tmp) {
-        tmp2 = c10;
-        value = c10.get();
+        tmp2 = closure_10;
+        value = closure_10.get();
         num = 56;
         tmp = value >= obj.get() - 56;
       }
@@ -144,7 +137,7 @@ export default function GameProfileScreen(gameId) {
   U.__initData = sharedValue1;
   let fn = function j(arg0, arg1) {
     if (arg0 !== arg1) {
-      let num = 0;
+      num = 0;
       if (arg0) {
         num = 1;
       }
@@ -160,8 +153,7 @@ export default function GameProfileScreen(gameId) {
   const tmp2Result2 = gameId(sourceUserId[15]);
   const fn2 = function q() {
     let obj = { transform: null };
-    obj = { translateY: null };
-    obj[0] = gameId(sourceUserId[15]).interpolate(sharedValue2.get(), [0, 1], [-56, 0]);
+    obj = { translateY: gameId(sourceUserId[15]).interpolate(sharedValue2.get(), [0, 1], [-56, 0]) };
     const items = [obj];
     obj[0] = items;
     return obj;
@@ -175,12 +167,12 @@ export default function GameProfileScreen(gameId) {
   sharedValue3 = gameId(sourceUserId[15]).useSharedValue(Infinity);
   const tmp8Result = tmp8(obj1.useState(false), 2);
   first2 = tmp8Result[0];
-  c16 = tmp30;
+  closure_16 = tmp30;
   const tmp2Result4 = gameId(sourceUserId[15]);
   class X {
     constructor() {
-      value = c10.get();
-      return value > useSharedValue.get() - 56;
+      value = closure_10.get();
+      return value > closure_14.get() - 56;
     }
   }
   X.__closure = { scrollY: sharedValue, storeLinksSectionBottomY: sharedValue3, STICKY_HEADER_HEIGHT: 56 };
@@ -192,8 +184,8 @@ export default function GameProfileScreen(gameId) {
         tmp = gameId;
         tmp2 = sourceUserId;
         obj = gameId(sourceUserId[15]);
-        tmp3 = c16;
-        tmp4 = obj.runOnJS(c16)(gameId);
+        tmp3 = closure_16;
+        tmp4 = obj.runOnJS(closure_16)(gameId);
       }
       return;
     }
@@ -201,7 +193,7 @@ export default function GameProfileScreen(gameId) {
   obj1 = { runOnJS: tmp2(tmp3[15]).runOnJS, setShowGetButton: tmp30 };
   Q.__closure = obj1;
   Q.__workletHash = 15045914286853;
-  Q.__initData = c16;
+  Q.__initData = closure_16;
   const animatedReaction1 = gameId(sourceUserId[15]).useAnimatedReaction(X, Q);
   const tmp2Result5 = gameId(sourceUserId[15]);
   gameProfileStoreWebsites = gameId(sourceUserId[18]).useGameProfileStoreWebsites(data);
@@ -222,8 +214,6 @@ export default function GameProfileScreen(gameId) {
   }, items4);
   const items5 = [gameId, first, source];
   callback2 = obj1.useCallback((action, similarGameId) => {
-    let guildId;
-    let isVerified;
     let obj = gameId(sourceUserId[12]);
     const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref3.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
@@ -237,9 +227,9 @@ export default function GameProfileScreen(gameId) {
   const items6 = [memo, callback2, tmp6Result];
   callback3 = obj1.useCallback(() => {
     if (1 === memo.length) {
-      const first = num(arr, 1)[0];
+      first = num(arr, 1)[0];
       callback2(first.action);
-      _undefined(first.url);
+      callback(first.url);
     } else if (arr.length > 1) {
       let obj = { key: null, content: null, stackingBehavior: "stack" };
       obj[0] = gameId(sourceUserId[21]).ACTION_SHEET_KEY;
@@ -273,12 +263,10 @@ export default function GameProfileScreen(gameId) {
   }, items7);
   const items8 = [gameId, source, sourceUserId, first];
   const effect3 = obj1.useEffect(() => () => {
-    let guildId;
-    let isVerified;
-    let obj = outer1_0(outer1_2[12]);
+    let obj = closure_1_0(closure_1_2[12]);
     const guildIdAndVerifiedFromInvite = obj.getGuildIdAndVerifiedFromInvite(ref2.current);
     ({ guildId, isVerified } = guildIdAndVerifiedFromInvite);
-    const GameProfileSimilarGamesMobileExperiment = outer1_0(outer1_2[22]).GameProfileSimilarGamesMobileExperiment;
+    const GameProfileSimilarGamesMobileExperiment = closure_1_0(closure_1_2[22]).GameProfileSimilarGamesMobileExperiment;
     obj = { viewId: closure_5, gameId: closure_0, gameName: null, playedFriendIds: null, playedFriendsData: null, similarGames: null, guildId: null, isVerified: null };
     let str = ref.current;
     if (str == null) {
@@ -288,7 +276,7 @@ export default function GameProfileScreen(gameId) {
     obj[3] = [];
     obj[4] = [];
     if (GameProfileSimilarGamesMobileExperiment.getConfig({ location: "GameProfileScreenClose" }).enabled) {
-      let similarGames = outer1_7.getSimilarGames(closure_0);
+      let similarGames = closure_1_7.getSimilarGames(closure_0);
       if (similarGames == null) {
         similarGames = [];
       }
@@ -299,7 +287,7 @@ export default function GameProfileScreen(gameId) {
     obj[5] = items;
     obj[6] = guildId;
     obj[7] = isVerified;
-    const result = outer1_0(outer1_2[12]).trackGameProfileClose(obj);
+    const result = closure_1_0(closure_1_2[12]).trackGameProfileClose(obj);
   }, items8);
   const items9 = [sharedValue1];
   const items10 = [sharedValue3];
@@ -314,7 +302,7 @@ export default function GameProfileScreen(gameId) {
     let fn;
     if (memo.length > 0) {
       if (first2) {
-        fn = () => outer1_8(outer1_11, { onPress: closure_22 });
+        fn = () => closure_1_8(closure_1_11, { onPress: closure_22 });
       }
     }
     return fn;

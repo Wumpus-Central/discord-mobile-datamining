@@ -1,10 +1,10 @@
 // discord_app/modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx");
+const result = require("set").fileFinishedImporting("modules/a11y/native/AccessibilityPreferencesContextProvider.native.tsx");
 
 export default function AccessibilityPreferencesContextProvider(children) {
   let stateFromStoresObject;

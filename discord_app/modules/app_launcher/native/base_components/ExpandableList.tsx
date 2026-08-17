@@ -1,37 +1,29 @@
 // discord_app/modules/app_launcher/native/base_components/ExpandableList.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { usePrevious } from "../../../../hooks/usePrevious.tsx";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import _modDef4115 from "module_4115" /* 4115 */;
+import usePreviousDefault from "usePrevious" /* 6701 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ animatedListContainer: { overflow: "hidden" }, expandCTALabelContainer: { alignItems: "center" } });
 let closure_10 = { code: "function ExpandableListTsx1(){const{expanded,collapsedListHeight,remainingListHeight}=this.__closure;if(expanded&&collapsedListHeight.get()!==0&&remainingListHeight.get()!==0){return collapsedListHeight.get()+remainingListHeight.get();}return collapsedListHeight.get();}" };
 let closure_11 = { code: "function ExpandableListTsx2(){const{collapsedListHeight,withTiming,containerHeight,timingStandard}=this.__closure;if(collapsedListHeight.get()!==0){return{height:withTiming(containerHeight.get(),timingStandard)};}else{return{};}}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ExpandableList.tsx");
 
 export default function ExpandableList(items) {
-  let noop;
-  let dependencyMap;
-  let expandedOverride;
-  let showsExpandCTAOverride;
-  let title;
   items = items.items;
   let memo1 = items;
   const onExpand = items.onExpand;
-  let importDefault = onExpand;
+  importDefault = onExpand;
   ({ onExpandCTAPress: dependencyMap, expandedOverride } = items);
-  ({ showsExpandCTAOverride, disableExpanding: noop, title } = items);
+  ({ showsExpandCTAOverride, disableExpanding: closure_4, title } = items);
   let first;
-  let closure_6;
-  let c7;
+  closure_6 = undefined;
+  first = undefined;
   let bound;
   let sharedValue;
   let sharedValue1;
@@ -46,11 +38,11 @@ export default function ExpandableList(items) {
   first = tmp2[0];
   closure_6 = tmp2[1];
   let obj7 = dependencyMap;
-  let tmp5 = usePrevious(first);
+  let tmp5 = usePreviousDefault(first);
   if (tmp5 == null) {
     tmp5 = first;
   }
-  c7 = tmp5;
+  first = tmp5;
   const items1 = [first, onExpand, tmp5];
   const effect = obj.useEffect(() => {
     if (tmp) {
@@ -76,19 +68,19 @@ export default function ExpandableList(items) {
   let obj4 = memo1(4115);
   class C {
     constructor() {
-      if (c5) {
-        obj = onExpand;
+      if (closure_5) {
+        obj = closure_9;
         num = 0;
-        if (0 !== onExpand.get()) {
-          obj2 = c10;
-          if (0 !== c10.get()) {
+        if (0 !== closure_9.get()) {
+          obj2 = closure_10;
+          if (0 !== closure_10.get()) {
             value = obj.get();
             sum = value + obj2.get();
           }
           return sum;
         }
       }
-      sum = onExpand.get();
+      sum = closure_9.get();
       return;
     }
   }
@@ -103,14 +95,14 @@ export default function ExpandableList(items) {
   let obj5 = memo1(4115);
   class A {
     constructor() {
-      if (0 !== onExpand.get()) {
+      if (0 !== closure_9.get()) {
         obj = { height: null };
-        tmp = useMemo;
+        tmp = closure_0;
         tmp2 = onExpandCTAPress;
-        obj3 = useMemo(onExpandCTAPress[7]);
-        tmp3 = useEffect;
-        value = useEffect.get();
-        obj[0] = obj3.withTiming(value, useMemo(onExpandCTAPress[8]).timingStandard);
+        obj3 = closure_0(onExpandCTAPress[7]);
+        tmp3 = closure_11;
+        value = closure_11.get();
+        obj[0] = obj3.withTiming(value, closure_0(onExpandCTAPress[8]).timingStandard);
       } else {
         obj = {};
       }
@@ -124,7 +116,7 @@ export default function ExpandableList(items) {
   const animatedStyle = obj5.useAnimatedStyle(A);
   obj = { style: items5, children: null };
   items5 = [tmp.animatedListContainer, animatedStyle];
-  const obj1 = {
+  obj1 = {
     onLayout(nativeEvent) {
       const result = sharedValue.set(nativeEvent.nativeEvent.layout.height);
     },
@@ -164,7 +156,7 @@ export default function ExpandableList(items) {
   }
   items6[1] = tmp16Result;
   obj[1] = items6;
-  const items7 = [c7(ReanimatedRexport.View, obj), ];
+  const items7 = [first(_modDef4115.View, obj), ];
   if (!showsExpandCTAOverride) {
     obj3 = { children: null };
     items7[1] = showsExpandCTAOverride;
@@ -197,7 +189,7 @@ export default function ExpandableList(items) {
     obj6 = tmp16(tmp17, obj6);
     obj5[1] = obj6;
     obj5[2] = function onPress() {
-      let tmp = true !== noop;
+      let tmp = true !== closure_4;
       if (tmp) {
         tmp = !first;
       }

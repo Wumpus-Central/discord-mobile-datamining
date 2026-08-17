@@ -1,37 +1,31 @@
 // discord_app/modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx
-import useQuests from "useQuests";
-import "emitClickEventWithCreative";
-import { UserSettingsSections } from "ME";
-import jsxProd from "AdCreativeType";
-import { WreathIcon } from "WreathIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import WreathIconDefault from "WreathIcon" /* 14455 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-let result = require("ME").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestDock/QuestDockContextMenuActionSheet.tsx");
 
 export default function QuestDockContextMenuActionSheet(quest) {
-  let c1;
-  let c2;
-  let c3;
-  let c4;
   quest = quest.quest;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let callback;
   c4 = undefined;
   const tmp = quest;
   let obj = quest(7474);
   const isShareableQuestResult = obj.isShareableQuest(quest.config);
-  let obj1 = quest(10684);
+  obj1 = quest(10684);
   const questPreviewActions = obj1.useQuestPreviewActions(quest.id);
   ({ handleComplete: c1, handleProgress: c2, handleResetDismissibilityClick: c3, handleResetStatusClick: c4 } = questPreviewActions);
   let obj2 = quest(10496);
   const externalCtaLabel = obj2.getExternalCtaLabel(quest);
   obj = { icon: null, label: null, onPress: null };
-  obj = { IconComponent: null };
-  obj[0] = quest(12820).LinkExternalMediumIcon;
+  obj = { IconComponent: quest(12820).LinkExternalMediumIcon };
   obj[0] = callback2(quest(7177).ActionSheetRow.Icon, obj);
   obj[1] = callback2(quest(8083).FormLabel, { text: externalCtaLabel });
   obj[2] = function onPress() {
@@ -62,10 +56,7 @@ export default function QuestDockContextMenuActionSheet(quest) {
   items[1] = tmp7Result;
   const children = [closure_6(quest(7177).ActionSheetRow.Group, { hasIcons: true, children: items }), , ];
   const obj4 = { hasIcons: true, children: null };
-  const obj5 = { icon: null, label: null, onPress: null };
-  const obj6 = { IconComponent: null };
-  obj6[0] = WreathIcon;
-  obj5[0] = callback2(tmp(7177).ActionSheetRow.Icon, obj6);
+  const obj5 = { icon: callback2(tmp(7177).ActionSheetRow.Icon, { IconComponent: WreathIconDefault }), label: null, onPress: null };
   const obj7 = { text: null };
   const intl2 = tmp(1236).intl;
   obj7[0] = intl2.string(tmp(1236).t.LLLLPD);
@@ -95,14 +86,13 @@ export default function QuestDockContextMenuActionSheet(quest) {
     }
     const tmpResult1 = quest(_undefined2[23]);
     tmpResult1.openQuestHome({ scrollToQuestId: tmp3.id, fromContent: quest(_undefined2[12]).QuestContent.QUEST_BAR_MOBILE });
-    const obj1 = { scrollToQuestId: tmp3.id, fromContent: quest(_undefined2[12]).QuestContent.QUEST_BAR_MOBILE };
+    obj1 = { scrollToQuestId: tmp3.id, fromContent: quest(_undefined2[12]).QuestContent.QUEST_BAR_MOBILE };
     _undefined(_undefined2[14]).hideActionSheet();
   };
   const items2 = [callback2(tmp(7177).ActionSheetRow, obj5), , ];
   let obj8 = { icon: null, label: null, onPress: null };
-  let obj9 = { IconComponent: null };
-  obj9[0] = tmp(10415).CircleQuestionIcon;
-  obj8[0] = callback2(tmp(7177).ActionSheetRow.Icon, obj9);
+  const obj6 = { IconComponent: WreathIconDefault };
+  obj8[0] = callback2(tmp(7177).ActionSheetRow.Icon, { IconComponent: tmp(10415).CircleQuestionIcon });
   let obj10 = { text: null };
   const intl3 = tmp(1236).intl;
   obj10[0] = intl3.string(tmp(1236).t.GcsZKJ);
@@ -117,9 +107,8 @@ export default function QuestDockContextMenuActionSheet(quest) {
   };
   items2[1] = callback2(tmp(7177).ActionSheetRow, obj8);
   const obj11 = { icon: null, label: null, subLabel: null, onPress: null };
-  const obj12 = { IconComponent: null };
-  obj12[0] = tmp(6368).XSmallIcon;
-  obj11[0] = callback2(tmp(7177).ActionSheetRow.Icon, obj12);
+  let obj9 = { IconComponent: tmp(10415).CircleQuestionIcon };
+  obj11[0] = callback2(tmp(7177).ActionSheetRow.Icon, { IconComponent: tmp(6368).XSmallIcon });
   const obj13 = { text: null };
   const intl4 = tmp(1236).intl;
   obj13[0] = intl4.string(tmp(1236).t.NN79E9);
@@ -153,37 +142,37 @@ export default function QuestDockContextMenuActionSheet(quest) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
-            let tmp25 = outer1_0;
-            outer1_0(10477).dismissQuestContent(outer1_0.id, outer1_0(6719).QuestContent.QUEST_BAR_MOBILE);
-            const obj8 = outer1_0(10477);
+            closure_0 = tmp4;
+            let tmp25 = closure_1_0;
+            closure_1_0(10477).dismissQuestContent(closure_1_0.id, closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE);
+            const obj8 = closure_1_0(10477);
             v0(4342).hideActionSheet();
             const obj9 = v0(4342);
-            let captureAdUserAction = outer1_0;
-            if (obj10.shouldMigrateToAdAnalyticsInterface(outer1_0(9502).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_dock_context_menu")) {
+            let captureAdUserAction = closure_1_0;
+            if (obj10.shouldMigrateToAdAnalyticsInterface(closure_1_0(9502).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_dock_context_menu")) {
               captureAdUserAction = captureAdUserAction(9503).captureAdUserAction;
-              const obj1 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null };
-              obj1[0] = outer1_0(9507).AdUserActionType.CLICK_INTERNAL;
-              obj1[1] = outer1_0(7469).AdCreativeType.QUEST;
+              obj1 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null };
+              obj1[0] = closure_1_0(9507).AdUserActionType.CLICK_INTERNAL;
+              obj1[1] = closure_1_0(7469).AdCreativeType.QUEST;
               obj1[2] = tmp25.id;
-              obj1[3] = outer1_0(7480).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT;
-              obj1[4] = outer1_0(6719).QuestContent.QUEST_BAR_MOBILE;
-              tmp25 = outer1_0;
-              obj1[5] = outer1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+              obj1[3] = closure_1_0(7480).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT;
+              obj1[4] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+              tmp25 = closure_1_0;
+              obj1[5] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
               captureAdUserAction(obj1);
               const captureAdUserActionResult = captureAdUserAction(9503);
             } else {
               const obj2 = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
               obj2[0] = tmp25.id;
-              obj2[1] = outer1_0(6719).QuestContent.QUEST_BAR_MOBILE;
-              obj2[2] = outer1_0(7480).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT;
-              obj2[3] = outer1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+              obj2[1] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
+              obj2[2] = closure_1_0(7480).QuestContentCTA.CONTEXT_MENU_HIDE_CONTENT;
+              obj2[3] = closure_1_0(6719).QuestContent.QUEST_BAR_MOBILE;
               const result = captureAdUserAction(7470).trackQuestContentClicked(obj2);
               const captureAdUserActionResult2 = captureAdUserAction(7470);
             }
             v0 = 1;
             dependencyMap = 1;
-            obj10 = outer1_0(9502);
+            obj10 = closure_1_0(9502);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
@@ -194,7 +183,7 @@ export default function QuestDockContextMenuActionSheet(quest) {
           obj3[0] = arg1;
           return obj3;
         } else {
-          obj = outer1_0(14460);
+          obj = closure_1_0(14460);
           const result1 = obj.displayQuestDismissalToast();
           dependencyMap = 3;
           return { value: "HermesInternal", done: "HermesInternal" };

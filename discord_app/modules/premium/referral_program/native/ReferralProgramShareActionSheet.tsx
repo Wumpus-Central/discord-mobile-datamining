@@ -1,16 +1,15 @@
 // discord_app/modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx
-import emitChanges from "emitChanges";
-import UserFlashListActions from "UserFlashListActions";
-import context from "context";
-import { View } from "AccessibilityAnnouncer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_8 from "emitChanges";
-import { AnalyticEvents } from "ME";
-import jsxProd from "expandEventProperties";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "emitChanges" /* 7423 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 function mapToUser(arg0) {
   const items = [arg0, user.getUser(arg0)];
@@ -18,36 +17,30 @@ function mapToUser(arg0) {
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { searchBarContainer: null, searchBarRowContainer: null, header: null, subtitle: null, centeredContainer: null, errorImage: null, emptyImage: null, footer: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_24 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingTop: require("Themes").space.PX_8 };
-let obj1 = { paddingTop: require("Themes").space.PX_8 };
-createCacheKey[2] = { height: require("Themes").space.PX_64 };
-let obj2 = { height: require("Themes").space.PX_64 };
-createCacheKey[3] = { textAlign: "center", paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8 };
+createCacheKey[1] = { paddingTop: ThemesDefault.space.PX_8 };
+let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { height: ThemesDefault.space.PX_64 };
+let obj2 = { height: ThemesDefault.space.PX_64 };
+createCacheKey[3] = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { alignItems: "center" };
-let obj3 = { textAlign: "center", paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8 };
-createCacheKey[5] = { height: 200, width: 180, marginVertical: require("Themes").space.PX_16 };
-let obj4 = { height: 200, width: 180, marginVertical: require("Themes").space.PX_16 };
-createCacheKey[6] = { height: 200, width: 240, marginTop: require("Themes").space.PX_16 };
-let obj5 = { height: 200, width: 240, marginTop: require("Themes").space.PX_16 };
-createCacheKey[7] = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_48 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj6 = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_48 };
-const result = require("noop").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx");
+let obj3 = { textAlign: "center", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { height: 200, width: 180, marginVertical: ThemesDefault.space.PX_16 };
+let obj4 = { height: 200, width: 180, marginVertical: ThemesDefault.space.PX_16 };
+createCacheKey[6] = { height: 200, width: 240, marginTop: ThemesDefault.space.PX_16 };
+let obj5 = { height: 200, width: 240, marginTop: ThemesDefault.space.PX_16 };
+createCacheKey[7] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_48 };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj6 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_48 };
+const result = require("set").fileFinishedImporting("modules/premium/referral_program/native/ReferralProgramShareActionSheet.tsx");
 
 export default function ReferralProgramShareActionSheet() {
-  let UserFlashListActions;
-  let headerSize;
-  let renderHeader;
-  let str;
-  let tmp11;
-  let tmp7;
   let tmp = memo2();
   let obj = memo;
   const ref = memo.useRef(null);
   let _require = ref;
-  let obj1 = _require(first[10]);
+  obj1 = _require(first[10]);
   let items = [fetchUsers];
   const stateFromStores = obj1.useStateFromStores(items, () => fetchUsers.getReferralsRemaining());
   [str, tmp7] = callback2(memo.useState(""), 2);
@@ -56,7 +49,7 @@ export default function ReferralProgramShareActionSheet() {
   let callback = tmp8[1];
   const arr3 = stateFromStores(first[11])(str, 400);
   const tmp6 = callback2(memo.useState(""), 2);
-  [tmp11, UserFlashListActions] = callback2(memo.useState(false), 2);
+  [tmp11, closure_4] = callback2(memo.useState(false), 2);
   stateFromStores(first[12])(null != stateFromStores, "Referrals remaining should not be null");
   const items1 = [first];
   memo = memo.useMemo(() => {
@@ -101,7 +94,7 @@ export default function ReferralProgramShareActionSheet() {
   let intl = _require(first[16]).intl;
   const tmp10 = callback2(memo.useState(false), 2);
   callback = memo.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     callback((arr) => {
       const index = arr.indexOf(id.id);
       const items = [...arr];
@@ -141,16 +134,16 @@ export default function ReferralProgramShareActionSheet() {
   const analyticsLocations = stateFromStores(first[19])(stateFromStores(first[20]).PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL).analyticsLocations;
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_2 = tmp3;
-      let c3 = 1;
+      closure_2 = tmp3;
+      c3 = 1;
       v0(true);
-      let obj1 = { location_stack: null };
-      obj1[0] = outer1_14;
+      obj1 = { location_stack: null };
+      obj1[0] = closure_1_14;
       stateFromStores(first[21]).track(isFetching.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, obj1);
       const obj8 = stateFromStores(first[21]);
       yield lib(first[22]).createReferralTrials(lib.map((id) => id.id));
@@ -160,12 +153,12 @@ export default function ReferralProgramShareActionSheet() {
         obj1 = lib(first[26]);
         const intl = lib(first[16]).intl;
         obj1.presentError(intl.string(lib(first[16]).t.R0RpRX));
-        let c5 = 3;
+        c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        let closure_1 = arg1;
+        closure_1 = arg1;
         v0(false);
         const obj3 = { selectedUsers: null, trialCreationResult: null };
         obj3[0] = lib;
@@ -179,7 +172,7 @@ export default function ReferralProgramShareActionSheet() {
     })();
   });
   const items9 = [analyticsLocations];
-  let closure_15 = memo.useCallback(function() {
+  closure_15 = memo.useCallback(function() {
     const self = this;
     const apply = closure_0.apply;
     if (typeof apply === "unknown") {

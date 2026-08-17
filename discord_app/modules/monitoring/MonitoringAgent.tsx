@@ -1,23 +1,22 @@
 // discord_app/modules/monitoring/MonitoringAgent.tsx
-import { Endpoints } from "ME";
-import get_ActivityIndicator from "get ActivityIndicator";
-import set from "set";
-import set from "isStable";
+import ME from "ME" /* 676 */;
+import enforcing from "enforcing" /* 5009 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "set" /* 500 */;
 
-let NativeEventEmitter;
-let NativeModules;
 let obj = require;
+const Endpoints = ME.Endpoints;
 let set = new Set(["darwin", "linux", "win32", "ios", "android"]);
 obj = { COUNT: "count", DISTRIBUTION: "distribution" };
 class MonitoringAgent {
   constructor() {
     obj = Object.create(new.target.prototype);
-    MonitoringAgent = obj;
+    closure_0 = obj;
     obj._metrics = [];
     obj._intervalId = setInterval(() => {
       obj._flush();
     }, 120000);
-    tmp2 = MonitoringAgent;
+    tmp2 = closure_0;
     tmp3 = closure_1;
     tmp4 = require("get ActivityIndicator");
     ({ NativeModules, NativeEventEmitter } = tmp4);
@@ -37,8 +36,7 @@ class MonitoringAgent {
 const prototype = MonitoringAgent.prototype;
 prototype["_getMetricWithDefaults"] = function _getMetricWithDefaults(name, COUNT) {
   let tags = name.tags;
-  const obj = { name: name.name, type: COUNT, tags: null };
-  obj[2] = obj(5010).getGlobalTagsArray();
+  obj = { name: name.name, type: COUNT, tags: obj(5010).getGlobalTagsArray() };
   if (null != tags) {
     const item = tags.forEach((arg0) => {
       const tags = obj.tags;
@@ -98,7 +96,7 @@ prototype["distribution"] = function distribution(name, value) {
     flag = false;
   }
   const self = this;
-  const obj = {};
+  obj = {};
   const merged = Object.assign(this._getMetricWithDefaults(name, obj.DISTRIBUTION));
   obj.value = value;
   const _metrics = this._metrics;
@@ -117,7 +115,7 @@ prototype["_flush"] = function _flush() {
     let items = [];
     HermesBuiltin.arraySpread(self._metrics, 0);
     const HTTP = items(self[7]).HTTP;
-    let obj = { url: null, body: null, retries: 1, rejectWithError: true };
+    obj = { url: null, body: null, retries: 1, rejectWithError: true };
     obj[0] = Endpoints.METRICS_V2;
     obj = { metrics: null, client_info: null };
     obj[0] = items;
@@ -141,7 +139,7 @@ obj._intervalId = setInterval(() => {
 }, 120000);
 ({ NativeModules, NativeEventEmitter } = get_ActivityIndicator);
 if (set.isAndroid()) {
-  let MetricMonitor = require("enforcing").default;
+  let MetricMonitor = enforcing.default;
 } else {
   MetricMonitor = NativeModules.MetricMonitor;
 }

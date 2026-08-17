@@ -1,17 +1,19 @@
 // discord_app/modules/quests/experiments/useBountiesExperience.tsx
-import { apexExperiment } from "BountiesStage1Experiment.tsx";
-import { apexExperiment } from "BountiesVerticalScrollExperiment.tsx";
-import { apexExperiment } from "QuestHomeBountiesExperiment.tsx";
-const result = require("apexExperiment").fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
+import set from "set" /* 2 */;
+import apexExperiment from "apexExperiment" /* 10712 */;
+import apexExperiment2 from "apexExperiment" /* 10713 */;
+import apexExperiment3 from "apexExperiment" /* 10714 */;
+
+const result = set.fileFinishedImporting("modules/quests/experiments/useBountiesExperience.tsx");
 
 export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_MOBILE) {
   const BountiesVerticalScrollExperiment = apexExperiment.BountiesVerticalScrollExperiment;
   let obj = { location: VIDEO_MODAL_MOBILE };
   const config = BountiesVerticalScrollExperiment.useConfig(obj);
-  const BountiesStage1Experiment = apexExperiment.BountiesStage1Experiment;
+  const BountiesStage1Experiment = apexExperiment2.BountiesStage1Experiment;
   obj = { location: VIDEO_MODAL_MOBILE };
   const config1 = BountiesStage1Experiment.useConfig(obj);
-  const QuestHomeBountiesExperiment = apexExperiment.QuestHomeBountiesExperiment;
+  const QuestHomeBountiesExperiment = apexExperiment3.QuestHomeBountiesExperiment;
   obj = { location: VIDEO_MODAL_MOBILE };
   let num = 50;
   const config2 = QuestHomeBountiesExperiment.useConfig(obj);
@@ -23,7 +25,7 @@ export const useBountiesExperience = function useBountiesExperience(VIDEO_MODAL_
     num2 = config1.rewardTimerSeconds;
   }
   if (config.enabled) {
-    const obj1 = { showBounties: true, ownedByVerticalScrollExperiment: true, verticalScrollEnabled: null, loopingEnabled: false, ctaTimerMilliSeconds: null, scrollAffordanceVariant: null, stage1Enabled: null, orbAmount: null, rewardTimerSeconds: null };
+    obj1 = { showBounties: true, ownedByVerticalScrollExperiment: true, verticalScrollEnabled: null, loopingEnabled: false, ctaTimerMilliSeconds: null, scrollAffordanceVariant: null, stage1Enabled: null, orbAmount: null, rewardTimerSeconds: null };
     ({ verticalScrollEnabled: obj5[2], ctaTimerMilliSeconds: obj5[4], scrollAffordanceVariant: obj5[5] } = config);
     obj1[6] = config1.enabled;
     obj1[7] = num;

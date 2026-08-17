@@ -1,59 +1,49 @@
 // discord_app/modules/guild_sidebar/native/VoiceUser.tsx
-import "noop";
-import participantFromServer from "participantFromServer";
-import getParticipants from "getParticipants";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import handleUpdate from "handleUpdate";
-import updateVoiceState from "updateVoiceState";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import closure_5 from "reset" /* 4652 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_8 from "handleUpdate" /* 4541 */;
+import closure_9 from "updateVoiceState" /* 4542 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("getParticipants").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/VoiceUser.tsx");
 
 export default function VoiceUserConnected(channel) {
-  let collapsed;
-  let deaf;
-  let isGuest;
-  let localMute;
-  let localVideo;
-  let member;
-  let mute;
-  let selfDeaf;
-  let selfMute;
-  let selfVideo;
-  let suppress;
   channel = channel.channel;
   const user = channel.user;
   const sessionId = channel.sessionId;
   ({ selfVideo, mute } = channel);
-  let c3;
+  closure_3 = undefined;
   let obj = id;
   ({ member, selfMute, selfDeaf, deaf, suppress, collapsed, isGuest } = channel);
   const tmp = id.getId() === user.id;
-  c3 = tmp;
-  const items = [_detectH265HardwareDecode];
+  closure_3 = tmp;
+  const items = [closure_7];
   const stateFromStoresObject = channel(sessionId[9]).useStateFromStoresObject(items, () => {
-    if (c3) {
+    if (closure_3) {
       let obj = { localMute: false, localDeaf: false, localVideo: null };
-      obj[2] = outer1_7.isVideoEnabled();
+      obj[2] = closure_1_7.isVideoEnabled();
     } else {
       obj = { localMute: null, localDeaf: false, localVideo: false };
-      obj[0] = outer1_7.isLocalMute(user.id);
+      obj[0] = closure_1_7.isLocalMute(user.id);
     }
     return obj;
   });
   ({ localMute, localVideo } = stateFromStoresObject);
   const obj2 = channel(sessionId[9]);
-  const items1 = [reset];
-  const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () => outer1_5.getStreamForUser(user.id, channel.getGuildId()));
+  const items1 = [closure_5];
+  const stateFromStores = channel(sessionId[9]).useStateFromStores(items1, () => closure_1_5.getStreamForUser(user.id, channel.getGuildId()));
   const obj3 = channel(sessionId[9]);
-  const items2 = [handleUpdate];
+  const items2 = [closure_8];
   const stateFromStores1 = channel(sessionId[9]).useStateFromStores(items2, () => {
     let tmp2;
     if (null != sessionId) {
-      const sessionById = outer1_8.getSessionById(tmp);
+      const sessionById = closure_1_8.getSessionById(tmp);
       let os;
       if (sessionById != null) {
         os = sessionById.clientInfo.os;
@@ -63,10 +53,10 @@ export default function VoiceUserConnected(channel) {
     return tmp2;
   });
   const obj4 = channel(sessionId[9]);
-  const items3 = [updateVoiceState];
+  const items3 = [closure_9];
   const items4 = [channel.id, user.id];
   let tmp8 = null != sessionId;
-  const stateFromStores2 = channel(sessionId[9]).useStateFromStores(items3, () => outer1_9.getVoicePlatformForChannel(channel.id, user.id), items4);
+  const stateFromStores2 = channel(sessionId[9]).useStateFromStores(items3, () => closure_1_9.getVoicePlatformForChannel(channel.id, user.id), items4);
   if (tmp8) {
     tmp8 = tmp;
   }
@@ -74,19 +64,19 @@ export default function VoiceUserConnected(channel) {
     tmp8 = sessionId !== obj.getSessionId();
   }
   let tmp2Result = tmp2(tmp3[9]);
-  const items5 = [c3];
+  const items5 = [closure_3];
   const items6 = [user.id, channel.id];
   const stateFromStores3 = tmp2Result.useStateFromStores(items5, () => {
-    const embeddedActivitiesForChannel = _undefined.getEmbeddedActivitiesForChannel(channel.id);
+    embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(channel.id);
     return embeddedActivitiesForChannel.find((userIds) => {
       userIds = userIds.userIds;
       return userIds.has(id.id);
     });
   }, items6);
   tmp2Result = tmp2(tmp3[9]);
-  const items7 = [getParticipants];
+  const items7 = [closure_4];
   const stateFromStores4 = tmp2Result.useStateFromStores(items7, () => {
-    const guildRingingUsers = outer1_4.getGuildRingingUsers(channel.id);
+    const guildRingingUsers = closure_1_4.getGuildRingingUsers(channel.id);
     return guildRingingUsers.has(user.id);
   });
   obj = { guildId: channel.guild_id, channelId: channel.id, member, user, collapsed, serverMute: null, serverDeaf: null, mute: null, deaf: null, localMute: null, video: null, stream: null, platform: null, disabled: null, isInEmbeddedActivity: null, isGuest: null, voicePlatform: null, ringing: null };

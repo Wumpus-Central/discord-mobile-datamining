@@ -1,11 +1,10 @@
 // discord_app/modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionSystemMessageUtils.tsx");
 
 export const getApplicationSubscriptionSystemMessageASTContent = function getApplicationSubscriptionSystemMessageASTContent(arg0) {
-  let application;
-  let username;
-  let usernameOnClick;
   ({ application, username, usernameOnClick } = arg0);
   if (null != application) {
     const intl2 = getSystemLocale.intl;

@@ -1,11 +1,14 @@
 // discord_app/modules/collectibles/nameplates/utils.tsx
-import { isNameplateRecord } from "fromServer";
-import { ThemeTypes } from "sum";
-import { decodeImage } from "../../../../_runtime/01952_decodeImage.js";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { NAMEPLATE_PALETTES } from "constants.tsx";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import fromServer from "fromServer" /* 1947 */;
+import NAMEPLATE_PALETTES from "NAMEPLATE_PALETTES" /* 1950 */;
+import decodeImageDefault from "decodeImage" /* 1952 */;
 
-const result = require("NAMEPLATE_PALETTES").fileFinishedImporting("modules/collectibles/nameplates/utils.tsx");
+const isNameplateRecord = fromServer.isNameplateRecord;
+const ThemeTypes = sum.ThemeTypes;
+const result = set.fileFinishedImporting("modules/collectibles/nameplates/utils.tsx");
 
 export const getNameplateData = function getNameplateData(nameplate) {
   let tmp = null;
@@ -23,7 +26,6 @@ export const getNameplateData = function getNameplateData(nameplate) {
   return tmp;
 };
 export const getNameplateDataFromProductRecord = function getNameplateDataFromProductRecord(product) {
-  let palette;
   if (0 === product.items.length) {
     return null;
   } else {
@@ -50,7 +52,7 @@ export const getNameplateDataFromProductRecord = function getNameplateDataFromPr
 export const getBackgroundGradientColors = function getBackgroundGradientColors(palette, arg1) {
   let tmp3 = palette.name !== NAMEPLATE_PALETTES.INVALID_PALETTE_KEY;
   if (tmp3) {
-    let tmp4 = palette.name !== tmp(1950).CUSTOM_PALETTE_KEY;
+    let tmp4 = palette.name !== NAMEPLATE_PALETTES.CUSTOM_PALETTE_KEY;
     if (!tmp4) {
       let obj = /^#([0-9a-fA-F]{6})$/;
       let isMatch = obj.test(palette.darkBackground);
@@ -71,7 +73,7 @@ export const getBackgroundGradientColors = function getBackgroundGradientColors(
     obj[1] = "" + tmp8 + "4D";
     return obj;
   }
-  tmp = require;
+  const tmp = require;
 };
 export const isValidPalette = function isValidPalette(name) {
   let tmp3 = name.name !== NAMEPLATE_PALETTES.INVALID_PALETTE_KEY;
@@ -98,12 +100,12 @@ export const getNameplatePalette = function getNameplatePalette(arg0) {
   return INVALID_NAMEPLATE_PALETTE;
 };
 export const parseFirstFrame = function parseFirstFrame(arg0) {
-  const size = decodeImage.decode(arg0);
-  const obj = decodeImage;
+  const size = decodeImageDefault.decode(arg0);
+  const obj = decodeImageDefault;
   const element = <canvas />;
   ({ width: obj3.width, height: obj3.height } = size);
   const context = element.getContext("2d");
-  const uint8ClampedArray = new Uint8ClampedArray(decodeImage.toRGBA8(size)[0]);
+  const uint8ClampedArray = new Uint8ClampedArray(decodeImageDefault.toRGBA8(size)[0]);
   const imageData = new globalThis.ImageData(uint8ClampedArray, size.width, size.height);
   context.putImageData(imageData, 0, 0);
   return element.toDataURL("image/png");
@@ -118,7 +120,7 @@ export const getNameplateSampleUsers = function getNameplateSampleUsers() {
   const intl2 = getSystemLocale.intl;
   obj[0] = intl2.string(getSystemLocale.t["LMSo+F"]);
   obj[1] = obj;
-  const obj1 = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/a82a9daadc5c7842f183c0f61966b07d3aeeea478b7c8a4b8af48334eb1ce15f.png" };
+  obj1 = { name: null, avatarSrc: "https://cdn.discordapp.com/assets/content/a82a9daadc5c7842f183c0f61966b07d3aeeea478b7c8a4b8af48334eb1ce15f.png" };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.g5Dumi);
   obj[2] = obj1;

@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FastAssetImage.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FastAssetImage.tsx");
 
 export default function FastAssetImage(style) {
   const applicationId = style.applicationId;
@@ -17,7 +17,7 @@ export default function FastAssetImage(style) {
   const items = [tmp[1]];
   const items1 = [applicationId, asset, first];
   const onLayout = React.useCallback((nativeEvent) => {
-    _undefined(nativeEvent.nativeEvent.layout.width);
+    callback(nativeEvent.nativeEvent.layout.width);
   }, items);
   const source = React.useMemo(() => {
     let application_id;

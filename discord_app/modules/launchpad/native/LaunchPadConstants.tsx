@@ -1,12 +1,13 @@
 // discord_app/modules/launchpad/native/LaunchPadConstants.tsx
-import { Dimensions } from "get ActivityIndicator";
-import set from "set";
-import set from "DCDDeviceManager";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import set from "set" /* 500 */;
 
+const Dimensions = get_ActivityIndicator.Dimensions;
 const size = Dimensions.get("screen");
 let num = 24;
 if (!set.isAndroid()) {
-  const _module1 = require("DCDDeviceManager");
+  const _module1 = DCDDeviceManager;
   let num2 = 13;
   if (!_module1.isIpadOS()) {
     const _Math = Math;

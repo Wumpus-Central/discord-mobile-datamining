@@ -1,19 +1,17 @@
 // discord_app/modules/threads/native/components/redesign/ThreadList.tsx
-import noop from "noop";
-import get_ActivityIndicator from "module_15928";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "jsxProd";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { ThreadListTableRow } from "ThreadListTableRow.tsx";
+import Text from "Text" /* 4734 */;
+import ThreadListTableRowDefault from "ThreadListTableRow" /* 15926 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 2 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function ThreadListSection(title) {
-  const obj = { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null };
-  obj[4] = title.title.toUpperCase();
-  return jsx(Text.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: null });
+  const str = title.title;
+  const tmp = callback();
+  return jsx(Text.Text, { style: callback().section, accessibilityRole: "header", variant: "text-xs/bold", color: "text-default", children: title.title.toUpperCase() });
 }
 function renderItem(item) {
   item = item.item;
@@ -25,7 +23,7 @@ function renderItem(item) {
   } else if ("thread" === type) {
     obj = { threadId: null, onPress: null, start: null, end: null };
     ({ threadId: obj[0], onPress: obj[1], start: obj[2], end: obj[3] } = item);
-    return jsx(ThreadListTableRow, { threadId: null, onPress: null, start: null, end: null });
+    return jsx(ThreadListTableRowDefault, { threadId: null, onPress: null, start: null, end: null });
   }
 }
 function keyExtractor(type) {
@@ -37,8 +35,6 @@ function keyExtractor(type) {
   }
 }
 function EnterExitCrossFadeContainer(cleanUp) {
-  let children;
-  let contentContainerStyle;
   cleanUp = cleanUp.cleanUp;
   const state = cleanUp.state;
   let sharedValue;
@@ -55,20 +51,17 @@ function EnterExitCrossFadeContainer(cleanUp) {
     const fn = function t(arg0) {
       let tmp = arg0;
       if (arg0) {
-        tmp = closure_1 === outer1_0(outer1_2[7]).TransitionStates.YEETED;
+        tmp = closure_1 === closure_1_0(closure_1_2[7]).TransitionStates.YEETED;
       }
       if (tmp) {
-        outer1_0(outer1_2[6]).runOnJS(closure_0)();
-        const obj = outer1_0(outer1_2[6]);
+        closure_1_0(closure_1_2[6]).runOnJS(closure_0)();
+        const obj = closure_1_0(closure_1_2[6]);
       }
     };
-    obj = { state, TransitionStates: null, runOnJS: null, cleanUp: null };
-    obj[1] = cleanUp(sharedValue[7]).TransitionStates;
-    obj[2] = cleanUp(sharedValue[6]).runOnJS;
-    obj[3] = cleanUp;
+    obj = { state, TransitionStates: cleanUp(sharedValue[7]).TransitionStates, runOnJS: cleanUp(sharedValue[6]).runOnJS, cleanUp };
     fn.__closure = obj;
     fn.__workletHash = 2519144051135;
-    fn.__initData = outer1_13;
+    fn.__initData = closure_1_13;
     obj[0] = cleanUp(sharedValue[8]).withSpring(value, cleanUp(sharedValue[9]).springStandard, "respect-motion-settings", fn);
     return obj;
   };
@@ -85,10 +78,9 @@ function EnterExitCrossFadeContainer(cleanUp) {
     }
     const result = sharedValue.set(num);
   }, items);
-  obj = { style: items1, children: null };
+  obj = { style: items1, children: <closure_5 style={contentContainerStyle}>{children}</closure_5> };
   items1 = [absoluteFill.absoluteFill, animatedStyle];
-  obj[1] = <closure_5 style={contentContainerStyle}>{children}</closure_5>;
-  return jsx(state(sharedValue[6]).View, { style: items1, children: null });
+  return jsx(state(sharedValue[6]).View, { style: items1, children: <closure_5 style={contentContainerStyle}>{children}</closure_5> });
 }
 function getThreadListStateKey(arg0) {
   return arg0;
@@ -102,8 +94,6 @@ let closure_15 = { LIST: "list", EMPTY: "empty", LOADING: "loading" };
 let result = set.fileFinishedImporting("modules/threads/native/components/redesign/ThreadList.tsx");
 
 export default function ThreadList(onCreateThreadPress) {
-  let channel;
-  let onThreadPress;
   ({ channel, onThreadPress } = onCreateThreadPress);
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const contentContainerStyle = onCreateThreadPress.contentContainerStyle;
@@ -149,23 +139,23 @@ export default function ThreadList(onCreateThreadPress) {
       obj[0] = arr1.length;
       obj[1] = intl2.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.fcXlhe, obj);
       items.push(obj);
-      const item = arr1.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === outer1_4.length - 1, onPress: items }));
+      const item = arr1.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === closure_1_4.length - 1, onPress: items }));
     }
     if (unjoinedThreadIds.length > 0) {
-      const obj1 = { type: "section", title: null };
+      obj1 = { type: "section", title: null };
       const intl3 = onThreadPress(contentContainerStyle[13]).intl;
       const obj2 = { count: null };
       obj2[0] = arr3.length;
       obj1[1] = intl3.formatToPlainString(onThreadPress(contentContainerStyle[13]).t.GHY7yQ, obj2);
       items.push(obj1);
-      const item1 = arr3.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === outer1_5.length - 1, onPress: items }));
+      const item1 = arr3.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === closure_1_5.length - 1, onPress: items }));
     }
     if (threadIds.length > 0) {
       obj = { type: "section", title: null };
       const intl = onThreadPress(contentContainerStyle[13]).intl;
       obj[1] = intl.string(onThreadPress(contentContainerStyle[13]).t.XsgrjS);
       arr1 = items.push(obj);
-      const item2 = threadIds.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === outer1_6.length - 1, onPress: items }));
+      const item2 = threadIds.forEach((threadId) => items.push({ type: "thread", threadId, start: 0 === arg1, end: arg1 === closure_1_6.length - 1, onPress: items }));
     }
     return items;
   }, items1);
@@ -174,16 +164,16 @@ export default function ThreadList(onCreateThreadPress) {
   const memo1 = React.useMemo(() => {
     if (loading) {
       if (0 === memo.length) {
-        const items = [outer1_15.LOADING];
+        const items = [closure_1_15.LOADING];
         let items2 = items;
       }
       return items2;
     }
     if (0 === memo.length) {
-      const items1 = [outer1_15.EMPTY];
+      const items1 = [closure_1_15.EMPTY];
       items2 = items1;
     } else {
-      items2 = [outer1_15.LIST];
+      items2 = [closure_1_15.LIST];
     }
   }, items2);
   memo2 = React.useMemo(() => {
@@ -209,33 +199,33 @@ export default function ThreadList(onCreateThreadPress) {
   items4[8] = loading;
   items4[9] = contentContainerStyle;
   const callback1 = React.useCallback((arg0, arg1, arg2, arg3) => {
-    if (outer1_15.EMPTY === arg1) {
+    if (closure_1_15.EMPTY === arg1) {
       let obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
-      obj[0] = _undefined.container;
+      obj[0] = closure_3.container;
       obj[1] = arg2;
       obj[2] = arg3;
       obj = { onCreateThreadPress: null };
       obj[0] = onCreateThreadPress;
       obj[3] = threadIds(onCreateThreadPress(contentContainerStyle[17]), obj);
-      return threadIds(outer1_14, obj, arg0);
+      return threadIds(closure_1_14, obj, arg0);
     } else if (tmp.LOADING === arg1) {
-      const obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
+      obj1 = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
       const items = [, ];
-      ({ container: arr[0], center: arr[1] } = _undefined);
+      ({ container: arr[0], center: arr[1] } = closure_3);
       obj1[0] = items;
       obj1[1] = arg2;
       obj1[2] = arg3;
       obj1[3] = threadIds(onCreateThreadPress(contentContainerStyle[18]), {});
-      return threadIds(outer1_14, obj1, arg0);
+      return threadIds(closure_1_14, obj1, arg0);
     } else if (tmp.LIST === arg1) {
       obj = { contentContainerStyle: null, state: null, cleanUp: null, children: null };
-      obj[0] = _undefined.container;
+      obj[0] = closure_3.container;
       obj[1] = arg2;
       obj[2] = arg3;
       const obj2 = { data: null, ListHeaderComponent: null, ListHeaderComponentStyle: null, renderItem: null, keyExtractor: null, onEndReached: null, onEndReachedThreshold: 0.4, accessibilityLabel: null, ListFooterComponent: null, ListFooterComponentStyle: null, contentContainerStyle: null };
       obj2[0] = memo;
       obj2[1] = memo2;
-      obj2[2] = _undefined.header;
+      obj2[2] = closure_3.header;
       obj2[3] = callback;
       obj2[4] = memo;
       obj2[5] = callback;
@@ -248,12 +238,12 @@ export default function ThreadList(onCreateThreadPress) {
       obj2[8] = tmp13;
       let footer;
       if (loading) {
-        footer = _undefined.footer;
+        footer = closure_3.footer;
       }
       obj2[9] = footer;
       obj2[10] = contentContainerStyle;
       obj[3] = threadIds(onThreadPress(contentContainerStyle[19]).AnimatedFlashList, obj2);
-      return threadIds(outer1_14, obj, arg0);
+      return threadIds(closure_1_14, obj, arg0);
     }
   }, items4);
   obj = { items: memo1, renderItem: callback1, getItemKey: getThreadListStateKey };

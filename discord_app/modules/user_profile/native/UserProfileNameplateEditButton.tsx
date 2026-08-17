@@ -1,47 +1,40 @@
 // discord_app/modules/user_profile/native/UserProfileNameplateEditButton.tsx
-import set from "set";
-import get_ActivityIndicator from "Button";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET";
-import { NOOP } from "sum";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { NOOP } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ ActivityIndicator: c4, View: c5 } = get_ActivityIndicator);
 createCacheKey = { previewContainer: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: require("Themes").radii.xs, overflow: "hidden" };
+createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/user_profile/native/UserProfileNameplateEditButton.tsx");
+createCacheKey[1] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileNameplateEditButton.tsx");
 
 export default function UserProfileNameplateEditButton(user) {
-  let guildId;
-  let isFetching;
-  let nameplateData;
-  let nameplateProduct;
-  let nameplateRecord;
-  let pendingNameplate;
   user = user.user;
   ({ pendingNameplate, guildId } = user);
-  let dependencyMap;
+  dependencyMap = undefined;
   let nameplate;
-  const tmp = createCacheKey();
+  const tmp = callback();
   dependencyMap = tmp2;
   let obj = user(589);
-  const items = [trackCommunicationDisabled];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let member = null;
-    if (c2) {
-      member = outer1_6.getMember(guildId, user.id);
+    if (closure_2) {
+      member = closure_1_6.getMember(guildId, user.id);
     }
     return member;
   });
-  let obj1 = user(8376);
+  obj1 = user(8376);
   obj = { pendingValue: pendingNameplate, userValue: null, guildValue: null, guildId: null };
   const collectibles = user.collectibles;
   nameplate = undefined;

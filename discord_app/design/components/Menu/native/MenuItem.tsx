@@ -1,18 +1,12 @@
 // discord_app/design/components/Menu/native/MenuItem.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles({ formIcon: { width: 20, height: 20 }, formLabel: { fontSize: 14, fontWeight: "500" } });
 const forwardRefResult = importAllResult.forwardRef((action, ref) => {
-  let IconComponent;
-  let disabled;
-  let iconSource;
-  let label;
-  let showIconFirst;
-  let style;
   ({ label, IconComponent, iconSource, showIconFirst } = action);
   if (showIconFirst === undefined) {
     showIconFirst = false;
@@ -67,6 +61,6 @@ const forwardRefResult = importAllResult.forwardRef((action, ref) => {
   };
   return jsx(menuClose(6937), { ref, style, accessibilityRole: "menuitem", disabled, leading: null, trailing: null, label: null, onPress: null });
 });
-const result = require("createCacheKey").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
+const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuItem.tsx");
 
 export const MenuItem = forwardRefResult;

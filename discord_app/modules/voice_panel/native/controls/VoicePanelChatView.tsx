@@ -1,28 +1,24 @@
 // discord_app/modules/voice_panel/native/controls/VoicePanelChatView.tsx
-import importAllResult from "useSafeAreaInsets";
-import { Platform } from "useGradientBottom";
-import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes";
-import ME from "ME";
-import jsxProd from "module_4770";
-import createCacheKey from "createCacheKey";
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getMixedGradientColor } from "../../../client_themes/native/ThemedGradient.tsx";
-import { set } from "../../../core/native/ReanimatedNativeView.tsx";
-import { dismissPanel } from "../VoicePanelStateContext.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import IconButton from "IconButton" /* 8035 */;
+import setDefault from "set" /* 8125 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
+import dismissPanelDefault from "dismissPanel" /* 11439 */;
+import importAllResult from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { CONTROLS_DRAWER_HEADER_SIZE } from "VoicePanelControlsModes" /* 11438 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ ComponentActions: c4, ME: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1, overflow: "hidden", paddingTop: CONTROLS_DRAWER_HEADER_SIZE }, gradientWrapper: { position: "absolute", top: CONTROLS_DRAWER_HEADER_SIZE, left: 0 }, titleBlur: { opacity: 0 } });
 let closure_9 = { code: "function VoicePanelChatViewTsx1(){const{windowDimensions}=this.__closure;return{width:windowDimensions.get().width,height:windowDimensions.get().height};}" };
 let closure_10 = importAllResult.memo(() => {
-  const windowDimensions = importAllResult.useContext(dismissPanel).windowDimensions;
+  const windowDimensions = importAllResult.useContext(dismissPanelDefault).windowDimensions;
   let obj = windowDimensions(4115);
   const fn = function n() {
     return { width: windowDimensions.get().width, height: windowDimensions.get().height };
@@ -34,8 +30,8 @@ let closure_10 = importAllResult.memo(() => {
   obj = { style: items, children: null };
   items = [callback2().gradientWrapper, animatedStyle];
   const tmp = callback2();
-  obj[1] = callback(getMixedGradientColor, { absolute: true });
-  return callback(set, obj);
+  obj[1] = callback(getMixedGradientColorDefault, { absolute: true });
+  return callback(setDefault, obj);
 });
 const memoResult = importAllResult.memo(function VoicePanelDismissChatButton() {
   const callback = importAllResult.useCallback(() => {
@@ -73,17 +69,17 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
   let obj = shown(guildId[17]);
   const gradientTop = obj.useGradientTop();
   const rect = ref(guildId[19])();
-  let obj1 = shown(guildId[20]);
+  obj1 = shown(guildId[20]);
   const items = [guildId, channelId];
   const controlsDrawerOpenWidth = obj1.getControlsDrawerOpenWidth(ref(guildId[18])().width, rect.left, rect.right);
   const effect = channelId.useEffect(() => {
     let tmp = guildId;
     if (guildId == null) {
-      tmp = outer1_5;
+      tmp = closure_1_5;
     }
     ref(guildId[21]).preload(tmp, channelId);
     return () => {
-      outer1_1(outer1_2[6]).updateChatOpen(closure_3, false);
+      closure_1_1(closure_1_2[6]).updateChatOpen(closure_3, false);
     };
   }, items);
   const items1 = [channelId, shown];
@@ -130,7 +126,7 @@ const memoResult1 = importAllResult.memo(function VoicePanelChatView(shown) {
   obj[1] = callback(shown(guildId[24]).ThemeContextProvider, obj);
   return callback(ref(guildId[23]).Provider, obj);
 });
-let result = require("VoicePanelControlsModes").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelChatView.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/VoicePanelChatView.tsx");
 
 export default memoResult1;
 export const MemoedVoicePanelDismissChatButton = memoResult;

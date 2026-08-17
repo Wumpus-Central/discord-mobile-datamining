@@ -1,26 +1,24 @@
 // discord_app/modules/user_settings/UserSettingsUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { ZERO_STRING_GUILD_ID } from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { 01307__ } from "../../../_runtime/metro/01307__.js";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx";
+import applyDefault from "apply" /* 12 */;
+import create from "create" /* 1306 */;
+import _mod1307 from "module_1307" /* 1307 */;
+import create2 from "create" /* 1335 */;
+import create3 from "create" /* 1341 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { ZERO_STRING_GUILD_ID } from "ME" /* 676 */;
 
-let FRECENCY_AND_FAVORITES_SETTINGS;
-let PRELOADED_USER_SETTINGS;
-const require = arg1;
+require = arg1;
 function b64ToProto(ProtoClass, settings) {
   if (null == settings) {
     return null;
   } else {
-    01307__;
+    _mod1307;
     try {
       return ProtoClass.fromBinary(tmp4, obj);
     } catch (tmp7) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp7);
+      error = new Error("Settings proto failed to deserialize (potentially corrupt): " + tmp7);
       throw error;
     }
   }
@@ -28,13 +26,13 @@ function b64ToProto(ProtoClass, settings) {
 let obj = {
   readerFactory(buf) {
     const textDecoder = new TextDecoder("utf-8");
-    const binaryReader = new 01307__.BinaryReader(buf, textDecoder);
+    const binaryReader = new _mod1307.BinaryReader(buf, textDecoder);
     return binaryReader;
   }
 };
 obj = { [PRELOADED_USER_SETTINGS]: require("create").PreloadedUserSettings, [FRECENCY_AND_FAVORITES_SETTINGS]: require("create").FrecencyUserSettings };
 ({ PRELOADED_USER_SETTINGS, FRECENCY_AND_FAVORITES_SETTINGS } = require("MAX_FAVORITES").UserSettingsTypes);
-const result = require("ME").fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/UserSettingsUtils.tsx");
 
 export const BINARY_READ_OPTIONS = obj;
 export const b64ToProtoWithType = function b64ToProtoWithType(type, proto) {
@@ -53,13 +51,13 @@ export const b64ToPreloadedUserSettingsProto = function b64ToPreloadedUserSettin
   return b64ToProto(create.PreloadedUserSettings, settings);
 };
 export const protoToB64WithType = function protoToB64WithType(arg0, favoriteGifs) {
-  return 01307__.base64encode(obj[arg0].toBinary(favoriteGifs));
+  return _mod1307.base64encode(obj[arg0].toBinary(favoriteGifs));
 };
 export const protoToB64 = function protoToB64(ProtoClass, protoToSave) {
-  return 01307__.base64encode(ProtoClass.toBinary(protoToSave));
+  return _mod1307.base64encode(ProtoClass.toBinary(protoToSave));
 };
 export const mergeTopLevelFields = function mergeTopLevelFields(ProtoClass, proto, proto2) {
-  const obj = {};
+  obj = {};
   const merged = Object.assign(proto);
   for (const key10007 in arg2) {
     let tmp5 = key10007;
@@ -137,7 +135,7 @@ export const mutateUserChannelSettingsInternal = function mutateUserChannelSetti
 };
 export const runMigrations = function runMigrations(closure_1, closure_2) {
   if (null == closure_1.versions) {
-    const Versions = create.Versions;
+    const Versions = create2.Versions;
     closure_1.versions = Versions.create();
   }
   let num = 0;
@@ -161,7 +159,7 @@ export const runMigrations = function runMigrations(closure_1, closure_2) {
   const iter2 = closure_2[Symbol.iterator]();
   const nextResult1 = iter2.next();
   while (iter2 !== undefined) {
-    let obj = nextResult1;
+    obj = nextResult1;
     if (nextResult1.version <= closure_1.versions.clientVersion) {
       if (tmp8) {
         let tmp16 = nextResult1;
@@ -195,13 +193,11 @@ export const runMigrations = function runMigrations(closure_1, closure_2) {
 };
 export const serializeUsageHistory = function serializeUsageHistory(usageHistory, closure_13) {
   let length;
-  let recentUses;
   const entries = Object.entries(usageHistory);
   let tmp = entries;
   if (entries.length > closure_13) {
-    let obj = apply;
+    obj = applyDefault;
     const reversed = obj.sortBy(entries, (arg0) => {
-      let tmp;
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     }).reverse();
@@ -214,7 +210,6 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
       } while (length > closure_13);
     }
     const sortByResult = obj.sortBy(entries, (arg0) => {
-      let tmp;
       [, tmp] = arg0;
       return tmp.recentUses[tmp.recentUses.length - 1];
     });
@@ -226,7 +221,7 @@ export const serializeUsageHistory = function serializeUsageHistory(usageHistory
     let tmp9 = tmp8[1];
     let tmp10 = require;
     let tmp11 = dependencyMap;
-    let FrecencyItem = create.FrecencyItem;
+    let FrecencyItem = create3.FrecencyItem;
     obj = FrecencyItem.create();
     ({ frecency: tmp12.frecency, recentUses } = tmp9);
     let found = recentUses.filter((arg0) => {

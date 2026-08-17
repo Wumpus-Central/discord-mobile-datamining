@@ -1,10 +1,10 @@
 // discord_app/modules/stickers/GuildStickersStore.tsx
-import _slicedToArray from "_slicedToArray";
-import { TypeTag } from "TypeTag";
-import { LibdiscoreStore } from "identity";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { LibdiscoreBatchStoreRefactorExperiment } from "items";
-import { parseRawEmojiObject } from "../emojis/UnicodeEmojis.tsx";
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { TypeTag } from "TypeTag" /* 1432 */;
+import { LibdiscoreStore } from "identity" /* 1911 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import { LibdiscoreBatchStoreRefactorExperiment } from "items" /* 1914 */;
 
 const require = arg1;
 function parseServerGuildSticker(item10023) {
@@ -51,15 +51,15 @@ function deriveStickerMetadata(arg0, tags) {
       }
       const str3 = guild.name;
     }
-    const byName = parseRawEmojiObject.getByName(str);
+    const byName = parseRawEmojiObjectDefault.getByName(str);
     if (null != byName) {
-      const obj1 = { type: null, value: null };
+      obj1 = { type: null, value: null };
       obj1[0] = tmp(4964).StickerMetadataTypes.CORRELATED_EMOJI;
       obj1[1] = byName.surrogates;
       items.push(obj1);
-      byName.forEachDiversity((surrogates) => items.push({ type: items(outer1_2[4]).StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
+      byName.forEachDiversity((surrogates) => items.push({ type: items(closure_1_2[4]).StickerMetadataTypes.CORRELATED_EMOJI, value: surrogates.surrogates }));
     }
-    const obj5 = parseRawEmojiObject;
+    const obj5 = parseRawEmojiObjectDefault;
   }
   return items;
 }
@@ -150,8 +150,6 @@ const guildStickersStore = new GuildStickersStore({
     return clear.clear();
   },
   CONNECTION_OPEN(arg0, getPartitionKeys) {
-    let guilds;
-    let unavailableGuilds;
     ({ guilds, unavailableGuilds } = arg0);
     const set = new Set(guilds.map((id) => id.id));
     for (const item10017 of unavailableGuilds) {
@@ -241,6 +239,6 @@ const guildStickersStore = new GuildStickersStore({
     setPartition.setPartition(guildId.guildId, parseServerGuildStickers(guildId.stickers));
   }
 }, LibdiscoreBatchStoreRefactorExperiment.getCachedBridgedStoreMode());
-let result = require("identity").fileFinishedImporting("modules/stickers/GuildStickersStore.tsx");
+let result = require("set").fileFinishedImporting("modules/stickers/GuildStickersStore.tsx");
 
 export default guildStickersStore;

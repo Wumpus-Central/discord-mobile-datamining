@@ -1,13 +1,15 @@
 // discord_app/modules/quests/UnenrolledActivityQuestStore.tsx
-import { PersistedStore } from "initialize";
-import set from "dispatcher";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 let set = new Set();
 let set1 = set;
 let c3 = false;
 set1 = new Set();
 c3 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class UnenrolledActivityQuestStore extends PersistedStore {
 }
 const prototype = UnenrolledActivityQuestStore.prototype;
@@ -29,11 +31,8 @@ prototype["initialize"] = function initialize(dismissedQuestIds) {
   }
 };
 prototype["getState"] = function getState() {
-  const obj = { dismissedQuestIds: null, autoEnroll: null };
   const items = [...set1];
-  obj[0] = items;
-  obj[1] = c3;
-  return obj;
+  return { dismissedQuestIds: items, autoEnroll: c3 };
 };
 prototype["isDismissed"] = function isDismissed(arg0) {
   let hasItem = null != arg0;
@@ -47,11 +46,11 @@ prototype["getDismissedQuestIds"] = function getDismissedQuestIds() {
 };
 UnenrolledActivityQuestStore.displayName = "UnenrolledActivityQuestStore";
 UnenrolledActivityQuestStore.persistKey = "UnenrolledActivityQuestStore";
-const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(require("dispatcher"), {
+const unenrolledActivityQuestStore = new UnenrolledActivityQuestStore(dispatcherDefault, {
   UNENROLLED_ACTIVITY_QUEST_DISMISS: function handleDismissUnenrolledActivityQuest(questId) {
     if (set.size >= 20) {
       const _Array = Array;
-      const sorted = Array.from(set).sort(DISCORD_EPOCH.compare);
+      const sorted = Array.from(set).sort(DISCORD_EPOCHDefault.compare);
       const _Math = Math;
       const substr = sorted.slice(Math.floor(10));
       const _Set = Set;

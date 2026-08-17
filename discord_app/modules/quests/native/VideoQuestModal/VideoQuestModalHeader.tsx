@@ -1,27 +1,24 @@
 // discord_app/modules/quests/native/VideoQuestModal/VideoQuestModalHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { useVideoQuestUIStore } from "_toPropertyKey";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { useVideoQuestUIStore } from "_toPropertyKey" /* 7455 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { videoContentHeaderWrapper: { flexDirection: "row", justifyContent: "space-between", alignItems: "flex-start" }, videoContentHeading: null, subheader: null, textShadow: null };
-createCacheKey = { flexDirection: "column", flexShrink: 1, gap: require("Themes").space.PX_4 };
+createCacheKey = { flexDirection: "column", flexShrink: 1, gap: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { opacity: 0.6 };
-createCacheKey[3] = { margin: -15, padding: 15, textShadowColor: require("Themes").colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { margin: -15, padding: 15, textShadowColor: require("Themes").colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
-let result = require("_toPropertyKey").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalHeader.tsx");
+createCacheKey[3] = { margin: -15, padding: 15, textShadowColor: ThemesDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { margin: -15, padding: 15, textShadowColor: ThemesDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 15 };
+let result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/VideoQuestModalHeader.tsx");
 
 export default function VideoQuestModalHeader(showCurrentVideoTime) {
-  let closeButtonIconColor;
-  let onClose;
-  let style;
   showCurrentVideoTime = showCurrentVideoTime.showCurrentVideoTime;
   let tmp = undefined !== showCurrentVideoTime;
   ({ closeButtonIconColor, onClose, style } = showCurrentVideoTime);
@@ -30,10 +27,10 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
   }
   const withTextShadow = showCurrentVideoTime.withTextShadow;
   let textShadow = undefined !== withTextShadow && withTextShadow;
-  const tmp2 = createCacheKey();
+  const tmp2 = callback();
   let obj = quest(14478);
   quest = obj.useVideoQuestModalContext().quest;
-  let obj1 = quest(10684);
+  obj1 = quest(10684);
   const questTaskDetails = obj1.useQuestTaskDetails(quest);
   const tmp6 = useVideoQuestUIStore((arg0) => {
     let tmp = arg0.videoProgress[quest.id];
@@ -42,9 +39,9 @@ export default function VideoQuestModalHeader(showCurrentVideoTime) {
       ({ progressSeconds: obj[0], targetSeconds: obj[1], progressSeconds: obj[2] } = questTaskDetails);
       tmp = obj;
     }
-    const result = quest(outer1_2[8]).parseMinutesAndSecondsFromSeconds(tmp.duration - tmp.timestampSec);
-    const obj2 = quest(outer1_2[8]);
-    return quest(outer1_2[8]).formatWatchTaskTime(result.minutes, result.seconds);
+    const result = quest(closure_1_2[8]).parseMinutesAndSecondsFromSeconds(tmp.duration - tmp.timestampSec);
+    const obj2 = quest(closure_1_2[8]);
+    return quest(closure_1_2[8]).formatWatchTaskTime(result.minutes, result.seconds);
   }, quest(4006).shallow);
   const userStatus = quest.userStatus;
   let completedAt;

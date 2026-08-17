@@ -1,9 +1,11 @@
 // discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx
-import { TurboModuleRegistry } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const TurboModuleRegistry = get_ActivityIndicator.TurboModuleRegistry;
 let obj = { SPEAKERPHONE: "SPEAKERPHONE", WIRED_HEADSET: "WIRED_HEADSET", EARPIECE: "EARPIECE", BLUETOOTH_HEADSET: "BLUETOOTH_HEADSET", INVALID: "INVALID" };
 const enforcing = TurboModuleRegistry.getEnforcing("NativeAudioManagerModule");
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx");
 
 export default enforcing;
 export const AudioDeviceType = obj;

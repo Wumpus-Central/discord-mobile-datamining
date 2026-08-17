@@ -1,16 +1,16 @@
 // discord_app/modules/guild_onboarding/doGuildOnboardingHelpers.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import { GuildMemberFlags } from "GuildMemberFlags";
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
 
 const require = arg1;
-let result = require("hasFlag").fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding/doGuildOnboardingHelpers.tsx");
 
 export const waitForOnboardingCompletion = function waitForOnboardingCompletion(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0) => {
-    let closure_0 = arg0;
-    const result = outer1_3.addConditionalChangeListener(() => {
-      const selfMember = outer2_3.getSelfMember(callback);
+    closure_0 = arg0;
+    const result = closure_1_3.addConditionalChangeListener(() => {
+      const selfMember = closure_2_3.getSelfMember(callback);
       let num;
       if (selfMember != null) {
         num = selfMember.flags;
@@ -18,13 +18,13 @@ export const waitForOnboardingCompletion = function waitForOnboardingCompletion(
       if (num == null) {
         num = 0;
       }
-      const hasFlagResult = callback(outer2_2[2]).hasFlag(num, outer2_4.COMPLETED_ONBOARDING);
+      const hasFlagResult = callback(closure_2_2[2]).hasFlag(num, closure_2_4.COMPLETED_ONBOARDING);
       let flag = !hasFlagResult;
       if (hasFlagResult) {
-        outer2_1(outer2_2[3]).finishOnboarding(callback);
+        closure_2_1(closure_2_2[3]).finishOnboarding(callback);
         callback();
         flag = false;
-        const obj2 = outer2_1(outer2_2[3]);
+        const obj2 = closure_2_1(closure_2_2[3]);
       }
       return flag;
     });

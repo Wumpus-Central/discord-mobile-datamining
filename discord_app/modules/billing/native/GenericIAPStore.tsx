@@ -1,12 +1,14 @@
 // discord_app/modules/billing/native/GenericIAPStore.tsx
-import { Store } from "initialize";
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { SubscriptionPlans } from "../../premium/native/ProductIds.android.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import SubscriptionPlans from "SubscriptionPlans" /* 5322 */;
 
-const require = arg1;
+require = arg1;
 let c3 = null;
 let c4 = false;
 let c5 = null;
+const Store = initializeDefault.Store;
 class GenericIAPStore extends Store {
 }
 const prototype = GenericIAPStore.prototype;
@@ -16,11 +18,11 @@ prototype["isGenericIapConnected"] = function isGenericIapConnected() {
 prototype["genericProductsLoaded"] = function genericProductsLoaded() {
   let tmp = null != c3;
   if (tmp) {
-    tmp = apply.filter(c3, (identifier) => {
+    tmp = applyDefault.filter(c3, (identifier) => {
       const GenericProductIds = callback(table[2]).GenericProductIds;
       return GenericProductIds.includes(identifier.identifier);
     }).length === SubscriptionPlans.GenericProductIds.length;
-    const arr = apply;
+    const arr = applyDefault;
   }
   return tmp;
 };
@@ -31,25 +33,23 @@ prototype["getStoreFront"] = function getStoreFront() {
   return c5;
 };
 GenericIAPStore.displayName = "GenericIAPStore";
-const genericIAPStore = new GenericIAPStore(require("dispatcher"), {
+const genericIAPStore = new GenericIAPStore(dispatcherDefault, {
   IAP_LOAD_GENERIC_PRODUCTS: function initGenericProducts(arg0) {
-    let c3;
-    let c5;
     ({ products: c3, storeFront: c5 } = arg0);
   },
   GENERIC_IAP_INIT_CONNECTION: function genericIapInitConnection(connected) {
     connected = connected.connected;
   },
   GENERIC_IAP_INIT_CONNECTION_FAILED: function genericIapInitConnectionFailed() {
-    let c4 = false;
+    c4 = false;
   },
   GENERIC_IAP_END_CONNECTION: function genericIapEndConnection() {
-    let c4 = false;
+    c4 = false;
   },
   GENERIC_IAP_SET_STORE_FRONT: function setStoreFront(storeFront) {
     storeFront = storeFront.storeFront;
   }
 });
-const result = require("SubscriptionPlans").fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/native/GenericIAPStore.tsx");
 
 export default genericIAPStore;

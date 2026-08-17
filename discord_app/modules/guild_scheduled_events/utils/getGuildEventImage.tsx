@@ -1,8 +1,10 @@
 // discord_app/modules/guild_scheduled_events/utils/getGuildEventImage.tsx
-import { Endpoints } from "ME";
-import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import handleImageLoad from "handleImageLoad" /* 1469 */;
 
-let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
+const Endpoints = ME.Endpoints;
+let result = set.fileFinishedImporting("modules/guild_scheduled_events/utils/getGuildEventImage.tsx");
 
 export default function getGuildEventImageURL(image, size) {
   if (null == image.image) {

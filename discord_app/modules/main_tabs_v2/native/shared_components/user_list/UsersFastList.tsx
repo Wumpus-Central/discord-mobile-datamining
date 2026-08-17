@@ -1,20 +1,16 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "UserRowSubLabel";
-import { View } from "useScaledRowHeight";
-import PX_24 from "PX_24";
-import jsxProd from "module_9918";
-import createCacheKey from "createCacheKey";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { styles } from "../../../../fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import styles from "styles" /* 9643 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import PX_24 from "PX_24" /* 9642 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Placeholder(arg0) {
-  let end;
-  let start;
   ({ start, end } = arg0);
   let obj = styles;
   const fastestListTableRowPlaceholderStyles = obj.useFastestListTableRowPlaceholderStyles();
@@ -30,44 +26,33 @@ function PlaceholderSection() {
 }
 let c4 = importAllResult;
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = PX_24.USERS_LIST_PADDING_BETWEEN_SECTIONS;
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 obj = { sectionHeader: obj, stickyHeader: null, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 obj = { flex: 1, overflow: "hidden", top: -1 * PX_24.USERS_LIST_SECTION_BOTTOM_PADDING };
-createCacheKey = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[1] = createCacheKey;
-obj[2] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
+obj[2] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
 obj[3] = { paddingBottom: USERS_LIST_PADDING_BETWEEN_SECTIONS };
 obj[4] = { flex: 1, display: "flex", flexDirection: "row", alignItems: "flex-start", justifyContent: "space-between", paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS, textTransform: "none" };
-let obj2 = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
-obj[5] = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - require("Themes").space.PX_8 };
-let obj3 = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - require("Themes").space.PX_8 };
-obj[6] = { paddingVertical: require("Themes").space.PX_8, paddingRight: require("Themes").space.PX_8 };
-let obj4 = { paddingVertical: require("Themes").space.PX_8, paddingRight: require("Themes").space.PX_8 };
-obj[7] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
+let obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingHorizontal: 16 };
+obj[5] = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - ThemesDefault.space.PX_8 };
+let obj3 = { paddingTop: USERS_LIST_PADDING_BETWEEN_SECTIONS - ThemesDefault.space.PX_8 };
+obj[6] = { paddingVertical: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
+let obj4 = { paddingVertical: ThemesDefault.space.PX_8, paddingRight: ThemesDefault.space.PX_8 };
+obj[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[8] = { height: "100%" };
-let obj6 = { position: "absolute", left: null, top: 5 };
-obj6[1] = require("Themes").space.PX_4 + require("Themes").space.PX_4 / 2;
-obj[9] = obj6;
+let obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
+obj[9] = { position: "absolute", left: ThemesDefault.space.PX_4 + ThemesDefault.space.PX_4 / 2, top: 5 };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_13 = { code: "function UsersFastListTsx1(){const{scrollPosValue,stickyAt}=this.__closure;var _scrollPosValue;const scrollPos=(_scrollPosValue=scrollPosValue)===null||_scrollPosValue===void 0?void 0:_scrollPosValue.get();if(scrollPos==null||stickyAt==null){return false;}return scrollPos>=stickyAt;}" };
 let closure_14 = { code: "function UsersFastListTsx2(){const{isSticky,styles}=this.__closure;return{backgroundColor:isSticky.get()?styles.stickyHeader.backgroundColor:'transparent'};}" };
 let closure_15 = { code: "function UsersFastListTsx3(){const{isSticky}=this.__closure;return{opacity:isSticky.get()?1:0};}" };
 let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
-  let action;
-  let actionTitle;
-  let badge;
-  let colorOverride;
-  let disableStickySections;
-  let disableThemedGradient;
-  let onTitlePress;
-  let scrollPosValue;
-  let title;
-  let titleLeading;
   ({ title, colorOverride } = stickyAt);
   ({ actionTitle, badge, scrollPosValue } = stickyAt);
   stickyAt = stickyAt.stickyAt;
   ({ disableThemedGradient, titleLeading, onTitlePress } = stickyAt);
-  let importAllResult;
+  importAllResult = undefined;
   let clientThemesOverride;
   let derivedValue;
   let animatedStyle;
@@ -92,10 +77,10 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   items1[2] = onTitlePress;
   items1[3] = clientThemesOverride;
   const memo1 = importAllResult.useMemo(() => {
-    const items = [_undefined.section, null != onTitlePress && _undefined.interactiveSection, clientThemesOverride];
+    const items = [closure_4.section, null != onTitlePress && closure_4.interactiveSection, clientThemesOverride];
     return items;
   }, items1);
-  let obj1 = colorOverride(stickyAt[11]);
+  obj1 = colorOverride(stickyAt[11]);
   const fn = function w() {
     let value;
     if (scrollPosValue != null) {
@@ -118,7 +103,7 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   class I {
     constructor() {
       backgroundColor = "transparent";
-      if (c6.get()) {
+      if (closure_6.get()) {
         tmp = closure_4;
         backgroundColor = closure_4.stickyHeader.backgroundColor;
       }
@@ -131,14 +116,14 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   animatedStyle = obj2.useAnimatedStyle(I);
   const items2 = [tmp.sectionHeader, animatedStyle];
   const memo2 = importAllResult.useMemo(() => {
-    const items = [_undefined.sectionHeader, animatedStyle];
+    const items = [closure_4.sectionHeader, animatedStyle];
     return items;
   }, items2);
   let obj3 = colorOverride(stickyAt[11]);
   class C {
     constructor() {
       opacity = 0;
-      if (c6.get()) {
+      if (closure_6.get()) {
         opacity = 1;
       }
       return { opacity };
@@ -226,17 +211,8 @@ let closure_16 = importAllResult.memo(function UserSectionInner(stickyAt) {
   }
   return tmp13Result2;
 });
-let obj5 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
+let obj6 = { position: "absolute", left: ThemesDefault.space.PX_4 + ThemesDefault.space.PX_4 / 2, top: 5 };
 const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(getItemProps, ref) {
-  let getItemSize;
-  let inActionSheet;
-  let insetEnd;
-  let insetStart;
-  let listHeaderSize;
-  let onLayout;
-  let onScroll;
-  let renderListHeader;
-  let sections;
   getItemProps = getItemProps.getItemProps;
   const getSectionProps = getItemProps.getSectionProps;
   ({ getItemSize, insetEnd } = getItemProps);
@@ -255,19 +231,19 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   const disableThemedGradient = getItemProps.disableThemedGradient;
   const disableBackgroundOverlay = getItemProps.disableBackgroundOverlay;
   const listStyleOverride = getItemProps.listStyleOverride;
-  let c6;
-  let c7;
+  closure_6 = undefined;
+  closure_7 = undefined;
   let clientThemesOverride;
   ({ inActionSheet, listHeaderSize, onScroll, onLayout, renderListHeader } = getItemProps);
   let tmp = callback3();
-  c6 = tmp;
+  closure_6 = tmp;
   let num = 0;
   if (!flag) {
     num = getSectionProps(flag2[16])().bottom;
   }
   const sum = insetEnd + num;
   const tmp6 = getSectionProps(flag2[18])();
-  c7 = tmp6;
+  closure_7 = tmp6;
   let obj = getItemProps(tmp3[10]);
   clientThemesOverride = obj.useClientThemesOverride();
   let items = [getSectionProps, flag2, disableThemedGradient];
@@ -279,7 +255,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
       type = element.type;
     }
     if ("placeholder" === type) {
-      return _undefined2(outer1_12, {});
+      return callback(closure_1_12, {});
     } else if ("section" === type) {
       const obj = {};
       const merged = Object.assign(element.props);
@@ -287,7 +263,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
       obj.disableThemedGradient = disableThemedGradient;
       obj.scrollPosValue = scrollPosValue;
       obj.stickyAt = stickyAt;
-      return _undefined2(outer1_16, obj);
+      return callback(closure_1_16, obj);
     } else {
       return null;
     }
@@ -302,23 +278,23 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     if ("user" === type) {
       let obj = {};
       const merged = Object.assign(element.props);
-      return _undefined2(getSectionProps(flag2[19]), obj);
+      return callback(getSectionProps(flag2[19]), obj);
     } else if ("placeholder" === type) {
       obj = {};
       const merged1 = Object.assign(element.props);
-      return _undefined2(outer1_11, obj);
+      return callback(closure_1_11, obj);
     } else if ("gdm" === type) {
-      const obj1 = {};
+      obj1 = {};
       const merged2 = Object.assign(element.props);
-      return _undefined2(getSectionProps(flag2[20]), obj1);
+      return callback(getSectionProps(flag2[20]), obj1);
     } else if ("channel" === type) {
       const obj2 = {};
       const merged3 = Object.assign(element.props);
-      return _undefined2(getSectionProps(flag2[21]), obj2);
+      return callback(getSectionProps(flag2[21]), obj2);
     } else if ("custom" === type) {
       obj = { children: null };
       obj[0] = element.component();
-      return _undefined2(outer1_9, obj);
+      return callback(closure_1_9, obj);
     } else {
       return null;
     }
@@ -331,7 +307,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
       type = element.type;
     }
     if ("placeholder" === type) {
-      return c7;
+      return closure_7;
     } else if ("section" === type) {
       if (element.props.hideTitle) {
         return 0;
@@ -341,7 +317,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
     }
   }, items2);
   const memo = disableBackgroundOverlay.useMemo(() => {
-    const items = [_undefined.list, , ];
+    const items = [list.list, , ];
     let tmp = disableBackgroundOverlay;
     if (disableBackgroundOverlay) {
       tmp = clientThemesOverride;
@@ -353,7 +329,7 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   const tmp5 = getSectionProps(flag2[17])();
   obj = { sections, sectionHeaderIsSticky: !flag2, sectionHeaderSize: callback2, estimatedListSize: "windowSize", ref, style: memo, itemSize: null, renderItem: null, renderListHeader: null, renderSectionHeader: null, insetStart: null, insetEnd: null, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", inActionSheet: null, onScroll: null, onLayout: null, placeholderConfig: null, listId: "users-fast-list", listHeaderSize: null, listHeaderAlwaysMounted: true, scrollReporting: "callbacks", wrapChildren: true };
   const tmp12 = getSectionProps(flag2[7])();
-  const tmp13 = c7;
+  const tmp13 = closure_7;
   if (getItemSize == null) {
     getItemSize = tmp5;
   }
@@ -370,6 +346,6 @@ const forwardRefResult = importAllResult.forwardRef(function UsersFastListInner(
   obj[19] = listHeaderSize;
   return tmp13(getSectionProps(flag2[22]), obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastList.tsx");
 
 export const UsersFastList = forwardRefResult;

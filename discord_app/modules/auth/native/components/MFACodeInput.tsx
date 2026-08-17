@@ -1,31 +1,23 @@
 // discord_app/modules/auth/native/components/MFACodeInput.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import fetchFingerprint from "fetchFingerprint";
-import { AppStates } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import { AppStates } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let unpackModuleId;
 const require = arg1;
 let c4 = importAllResult;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, Fragment: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { inputContainer: { marginTop: 20, flexDirection: "row", justifyContent: "center", alignSelf: "stretch" }, input: { flex: 1, maxWidth: 336, flexDirection: "row", alignSelf: "stretch" }, status: { flex: 1, maxHeight: 20, alignItems: "center", marginTop: 8 }, error: null, minHeightGuard: null };
-obj = { color: require("Themes").unsafe_rawColors.RED_400 };
+obj = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 obj[3] = obj;
 obj[4] = { minHeight: 20 };
 let closure_12 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
-  let error;
-  let resetLoginOnClose;
-  let showActivityIndicator;
-  let style;
   appState = appState.appState;
   const handleSubmit = appState.handleSubmit;
   ({ error, resetLoginOnClose } = appState);
@@ -34,9 +26,9 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
     resetLoginOnClose = true;
   }
   let first;
-  let importAllResult;
+  importAllResult = undefined;
   let first1;
-  let closure_6;
+  closure_6 = undefined;
   let callback;
   let tmp = callback2();
   let obj = appState(resetLoginOnClose[8]);
@@ -77,21 +69,21 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
   handleSubmit(resetLoginOnClose[10])(() => {
     callback();
     return () => {
-      if (outer1_7.isAuthenticated()) {
-        const string = outer1_0(outer1_2[9]).getString();
+      if (closure_1_7.isAuthenticated()) {
+        const string = closure_1_0(closure_1_2[9]).getString();
         string.then((arg0) => {
-          let tmp2 = "" !== _slicedToArray;
+          let tmp2 = "" !== closure_3;
           if (tmp2) {
             tmp2 = tmp === arg0;
           }
           if (tmp2) {
-            outer1_0(outer1_2[9]).copy("");
-            const obj = outer1_0(outer1_2[9]);
+            closure_1_0(closure_1_2[9]).copy("");
+            const obj = closure_1_0(closure_1_2[9]);
           }
         });
-        const obj2 = outer1_0(outer1_2[9]);
+        const obj2 = closure_1_0(closure_1_2[9]);
       } else {
-        let obj = outer1_1(outer1_2[11]);
+        let obj = closure_1_1(closure_1_2[11]);
         if (closure_2) {
           obj.loginReset();
         } else {
@@ -102,7 +94,7 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
   });
   const items1 = [appState, callback];
   const effect = importAllResult.useEffect(() => {
-    if (appState === outer1_8.ACTIVE) {
+    if (appState === closure_1_8.ACTIVE) {
       callback();
     }
   }, items1);
@@ -143,7 +135,7 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
     let unsafe_rawColors = tmp10(tmp3[7]).unsafe_rawColors;
     const isThemeDarkResult = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme);
     unsafe_rawColors = first1;
-    const obj1 = { color: null };
+    obj1 = { color: null };
     obj1[0] = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
     let tmp17Result = tmp17(first1, obj1);
     const tmp23 = tmp2(tmp3[8]).isThemeDark(obj.useThemeContext().theme) ? unsafe_rawColors.WHITE : unsafe_rawColors.PRIMARY_500;
@@ -162,6 +154,6 @@ const forwardRefResult = importAllResult.forwardRef((appState, ref) => {
     return tmp15(tmp16, obj3);
   }
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/MFACodeInput.tsx");
 
 export default forwardRefResult;

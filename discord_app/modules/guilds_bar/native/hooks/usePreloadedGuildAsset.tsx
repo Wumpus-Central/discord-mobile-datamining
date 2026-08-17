@@ -1,13 +1,13 @@
 // discord_app/modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { useRefValue } from "../../../../hooks/useRefValue.tsx";
+import useRefValueDefault from "useRefValue" /* 6804 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
-const result = require("useRefValue").fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/hooks/usePreloadedGuildAsset.tsx");
 
 export default function usePreloadedGuildAsset(guildId, icon, asset) {
-  const importDefault = guildId;
-  const dependencyMap = icon;
+  importDefault = guildId;
+  dependencyMap = icon;
   const callback = asset;
   let obj = React;
   React = callback(React.useState({}), 2)[1];
@@ -16,7 +16,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
   const effect = React.useEffect(() => () => {
     ref.current.guildId = undefined;
   }, []);
-  const tmp3 = useRefValue(ref);
+  const tmp3 = useRefValueDefault(ref);
   if (guildId === tmp3.guildId) {
     asset = tmp3.asset;
   }
@@ -33,7 +33,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
             }
             if (tmp2) {
               tmp.current.icon = closure_1;
-              tmp.current.asset = _slicedToArray;
+              tmp.current.asset = closure_2;
               callback({});
             }
           });
@@ -45,7 +45,7 @@ export default function usePreloadedGuildAsset(guildId, icon, asset) {
     ref.current.guildId = guildId;
     ref.current.icon = icon;
     ref.current.preloading = icon;
-    ref.current.asset = _slicedToArray;
+    ref.current.asset = closure_2;
   });
   return asset;
 };

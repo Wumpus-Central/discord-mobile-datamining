@@ -1,20 +1,22 @@
 // discord_app/modules/app_database/system/AppDatabaseManager.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import set from "timestamp";
+import timestampDefault from "timestamp" /* 3 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import databaseNameDefault from "databaseName" /* 1971 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 2 */;
 import { index } from "../../../../discord_common/js/packages/kv-storage/js/index.tsx";
 import { dispatcher } from "../../../Dispatcher.tsx";
-import { databaseName } from "DatabaseManager.tsx";
 
 const require = arg1;
-let c5 = new require("databaseName")("AppDatabaseManager");
+let closure_5 = new timestampDefault("AppDatabaseManager");
 let set = new Set(["MESSAGE_CREATE"]);
 let AppDatabaseManager;
 class AppDatabaseManager {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
-    tmp2 = _slicedToArray(AppDatabaseManager.computeEntries(global, importDefault), 2);
+    tmp2 = closure_3(AppDatabaseManager.computeEntries(global, importDefault), 2);
     obj.name = global;
     [tmp.actions, tmp.entries] = tmp2;
     obj.lastDatabase = null;
@@ -36,7 +38,7 @@ const prototype = AppDatabaseManager.prototype;
 prototype["handleAction"] = function handleAction(type) {
   this.validateInDev(type.type);
   id = id.getId();
-  const databaseResult = databaseName.database(id);
+  const databaseResult = databaseNameDefault.database(id);
   this.resetModules(type, databaseResult);
   this.executeModules(type, databaseResult);
   return false;
@@ -45,7 +47,7 @@ prototype["resetModules"] = function resetModules(type, databaseResult) {
   const self = this;
   if (databaseResult !== this.lastDatabase) {
     const _HermesInternal = HermesInternal;
-    tmp2.verbose("database has changed (was: " + self.lastDatabase + ", now: " + databaseResult + ", action: " + type.type + "). resetting modules.");
+    closure_5.verbose("database has changed (was: " + self.lastDatabase + ", now: " + databaseResult + ", action: " + type.type + "). resetting modules.");
     const entries = self.entries;
     for (const item10004 of entries) {
       let resetResult = item10004.reset();
@@ -56,11 +58,11 @@ prototype["resetModules"] = function resetModules(type, databaseResult) {
 };
 prototype["executeModules"] = function executeModules(type, databaseResult) {
   const _require = type;
-  let closure_1 = databaseResult;
+  closure_1 = databaseResult;
   type = type.type;
   const actions = this.actions;
   const value = actions.get(type);
-  const dependencyMap = value;
+  dependencyMap = value;
   if (databaseResult != null) {
     const stateResult = databaseResult.state();
   }
@@ -74,7 +76,7 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
             combined = "Dispatch " + type.type;
           }
           databaseResult.transaction((arg0) => {
-            let closure_0 = arg0;
+            closure_0 = arg0;
             return value.forEach((execute) => execute.execute(closure_0, closure_0));
           }, combined);
           if ("WRITE_CACHES" === type.type) {
@@ -84,23 +86,23 @@ prototype["executeModules"] = function executeModules(type, databaseResult) {
         }
       }
       const _HermesInternal = HermesInternal;
-      tmp2.verbose("no usable database; skipping action (type: " + type + ", database: " + databaseResult + ", state: " + stateResult + ")");
+      closure_5.verbose("no usable database; skipping action (type: " + type + ", database: " + databaseResult + ", state: " + stateResult + ")");
     }
   }
 };
 AppDatabaseManager["handleException"] = function handleException(arg0, type, error) {
-  tmp2.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
-  let obj = dispatcher;
+  closure_5.info("disabling database \u00B7 error encountered during dispatch", error, error.stack);
+  let obj = dispatcherDefault;
   obj = { type: "RESET_SOCKET", args: null };
   obj = { error, action: "AppDatabaseManager(" + type.type + ")" };
   obj[1] = obj;
   obj.dispatch(obj);
 };
 AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabaseManager, arr) {
-  let closure_0 = MobileAppDatabaseManager;
+  closure_0 = MobileAppDatabaseManager;
   const map = new Map();
   const mapped = arr.map((arg0) => {
-    const entry = new MobileAppDatabaseManager(outer1_2[6]).Entry(MobileAppDatabaseManager, arg0);
+    const entry = new MobileAppDatabaseManager(closure_1_2[6]).Entry(MobileAppDatabaseManager, arg0);
     return entry;
   });
   const result = map.set("LOGOUT", []);
@@ -128,7 +130,7 @@ AppDatabaseManager["computeEntries"] = function computeEntries(MobileAppDatabase
 };
 AppDatabaseManager["register"] = function register(arg0, arr) {
   const _require = arg3;
-  const obj = dispatcher;
+  const obj = dispatcherDefault;
   const registerResult = obj.register(arg0, Object.fromEntries(arr.map((arg0) => {
     const items = [arg0, closure_0];
     return items;
@@ -139,7 +141,7 @@ AppDatabaseManager["register"] = function register(arg0, arr) {
     const items = [arg0, closure_0];
     return items;
   }));
-  dispatcher.addDependencies(registerResult, arg2);
+  dispatcherDefault.addDependencies(registerResult, arg2);
   return registerResult;
 };
 prototype["validateInDev"] = function validateInDev() {

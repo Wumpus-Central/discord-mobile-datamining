@@ -1,14 +1,12 @@
 // discord_app/modules/applications/ApplicationActionCreators.tsx
-import dispatcher from "dispatcher";
-import set from "set";
-import createExecutable from "createExecutable";
-import importDefaultResult from "addApplication";
-import ME from "ME";
-import initialize from "initialize";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "set" /* 7141 */;
+import closure_5 from "createExecutable" /* 4479 */;
+import importDefaultResult from "addApplication" /* 4478 */;
+import ME from "ME" /* 676 */;
+import initialize from "initialize" /* 589 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
-let error;
-let metroImportAll;
 const require = arg1;
 function fetchApplication() {
   const self = this;
@@ -23,12 +21,12 @@ function fetchApplication() {
 function _fetchApplication() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -56,14 +54,14 @@ function _fetchApplication() {
               obj[0] = arg1;
               return obj;
             } else {
-              let set = tmp3;
-              let dispatcher = tmp7;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
               let flag;
-              let dependencyMap;
+              dependencyMap = undefined;
               if (flag === undefined) {
                 flag = false;
               }
-              dispatcher = undefined;
+              closure_3 = undefined;
               c7 = 1;
               c8 = 1;
               return { value: "ct", done: true };
@@ -74,14 +72,14 @@ function _fetchApplication() {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               const obj2 = { type: "APPLICATION_FETCH", applicationId: null };
               obj2[1] = callback;
               flag(709).dispatch(obj2);
-              let c6 = 1;
+              c6 = 1;
               const HTTP = callback(530).HTTP;
               const obj3 = { url: null, query: null, oldFormErrors: true, signal: null, rejectWithError: null };
               obj3[0] = c7.APPLICATION_PUBLIC(callback);
@@ -99,12 +97,12 @@ function _fetchApplication() {
             }
           } else if (2 === tmp7) {
             c6 = 0;
-            set = createExecutable;
+            closure_4 = closure_5;
             obj4 = flag(709);
             const obj6 = { type: "APPLICATION_FETCH_FAIL", applicationId: null };
             obj6[1] = callback;
             obj4.dispatch(obj6);
-            throw set;
+            throw closure_4;
           } else if (arg0 === 1) {
             c8 = 3;
             throw arg1;
@@ -115,19 +113,19 @@ function _fetchApplication() {
             obj7[0] = arg1;
             return obj7;
           } else {
-            dispatcher = arg1;
+            closure_3 = arg1;
             obj = flag(709);
             const obj8 = { type: "APPLICATION_FETCH_SUCCESS", application: null, isHydrated: true };
-            obj8[1] = dispatcher.body;
+            obj8[1] = closure_3.body;
             obj.dispatch(obj8);
             c6 = 0;
             c8 = 3;
             const obj9 = { value: null, done: true };
-            obj9[0] = dispatcher.body;
+            obj9[0] = closure_3.body;
             return obj9;
           }
         } catch (tmp26) {
-          createExecutable = tmp26;
+          closure_5 = tmp26;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp26;
@@ -140,7 +138,7 @@ function _fetchApplication() {
     iter.next();
     return iter;
   });
-  const _fetchApplication = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -149,27 +147,23 @@ function _fetchApplication() {
   }
   return applyArgumentsResult;
 }
-({ Endpoints: error, NOOP: metroImportAll } = ME);
+({ Endpoints: error, NOOP: closure_8 } = ME);
 let obj = {
   createApplication(arg0) {
-    let dispatcher;
-    let dependencyMap;
-    let importDefault;
-    let require;
-    ({ name: require, guildId: importDefault, type: dependencyMap, teamId: dispatcher } = arg0);
+    ({ name: require, guildId: importDefault, type: dependencyMap, teamId: closure_3 } = arg0);
     return callback(function*() {
-      let closure_1 = tmp2;
+      closure_1 = tmp2;
       let body = tmp5;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = outer1_7.APPLICATIONS;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = closure_1_7.APPLICATIONS;
       const obj2 = { name: null, type: null, guild_id: null, team_id: null };
-      obj2[0] = outer1_0;
+      obj2[0] = closure_1_0;
       obj2[1] = dependencyMap;
-      obj2[2] = outer1_1;
+      obj2[2] = closure_1_1;
       obj2[3] = c3;
       obj1[1] = obj2;
-      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
       yield HTTP.post(obj1);
       body = arg1.body;
       let tmp8 = null != closure_1;
@@ -177,12 +171,12 @@ let obj = {
         tmp8 = null != dependencyMap;
       }
       if (tmp8) {
-        const obj = outer1_1(709);
+        const obj = closure_1_1(709);
         const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
         obj5[1] = body;
         obj.dispatch(obj5);
       }
-      return outer1_0;
+      return closure_1_0;
     })();
   },
   getApplicationsForGuild(closure_0, arg1) {
@@ -191,21 +185,21 @@ let obj = {
       obj = {};
     }
     const includeTeam = obj.includeTeam;
-    let closure_2 = Object.assign(obj, Object.create(null));
+    closure_2 = Object.assign(obj, Object.create(null));
     return callback(function*() {
-      let closure_1 = tmp2;
+      closure_1 = tmp2;
       let body = tmp5;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, query: null, rejectWithError: null };
-      obj1[0] = outer1_7.GUILD_APPLICATIONS(outer1_0);
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, query: null, rejectWithError: null };
+      obj1[0] = closure_1_7.GUILD_APPLICATIONS(closure_1_0);
       const obj2 = {};
       const merged = Object.assign(dependencyMap);
-      obj2.include_team = outer1_1;
+      obj2.include_team = closure_1_1;
       obj1[1] = obj2;
-      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = arg1.body;
-      const obj = outer1_1(709);
+      const obj = closure_1_1(709);
       const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null };
       obj5[1] = body;
       obj.dispatch(obj5);
@@ -213,22 +207,20 @@ let obj = {
     })();
   },
   transferApplication(arg0) {
-    let importDefault;
-    let require;
     ({ applicationId: require, teamId: importDefault } = arg0);
     return callback(function*() {
-      let closure_1 = tmp2;
+      closure_1 = tmp2;
       let body = tmp5;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: null };
-      obj1[0] = outer1_7.APPLICATION_OWNER_TRANSFER(outer1_0);
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: null };
+      obj1[0] = closure_1_7.APPLICATION_OWNER_TRANSFER(closure_1_0);
       const obj2 = { team_id: null };
-      obj2[0] = outer1_1;
+      obj2[0] = closure_1_1;
       obj1[1] = obj2;
-      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
       yield HTTP.post(obj1);
       body = arg1.body;
-      const obj = outer1_1(709);
+      const obj = closure_1_1(709);
       const obj5 = { type: "APPLICATION_FETCH_SUCCESS", application: null };
       obj5[1] = body;
       obj.dispatch(obj5);
@@ -236,14 +228,14 @@ let obj = {
     })();
   },
   fetchApplications(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     let flag = arg1;
     if (arg1 === undefined) {
       flag = true;
     }
     return callback(function*() {
-      if (status === 2) {
-        status = 3;
+      if (c5 === 2) {
+        c5 = 3;
         HermesBuiltin.throwTypeError();
       } else if (tmp7 === 3) {
         if (arg0 === 1) {
@@ -257,26 +249,26 @@ let obj = {
         }
       } else {
         try {
-          status = 2;
+          c5 = 2;
           if (0 === c4) {
             if (arg0 === 1) {
-              status = 3;
+              c5 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              status = 3;
+              c5 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let found = tmp5;
               closure_1 = undefined;
               let body;
-              let c3;
+              c3 = undefined;
               c4 = undefined;
-              found = outer1_0;
-              let arr = outer1_0;
-              if (!outer1_1) {
+              found = closure_1_0;
+              let arr = closure_1_0;
+              if (!closure_1_1) {
                 found = arr2.filter((id) => {
                   const tmp = null != application.getApplication(id) && application.isHydrated(id);
                   let tmp2 = !tmp;
@@ -294,43 +286,43 @@ let obj = {
                 arr = found;
               }
               if (arr.length > 0) {
-                let obj3 = outer1_1(outer1_2[5]);
-                let obj1 = { type: "APPLICATIONS_FETCH", applicationIds: null };
+                let obj3 = closure_1_1(closure_1_2[5]);
+                obj1 = { type: "APPLICATIONS_FETCH", applicationIds: null };
                 obj1[1] = arr;
                 obj3.dispatch(obj1);
                 c3 = 1;
-                const HTTP = outer1_0(outer1_2[6]).HTTP;
+                const HTTP = closure_1_0(closure_1_2[6]).HTTP;
                 const obj2 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-                obj2[0] = outer1_7.APPLICATIONS_PUBLIC;
+                obj2[0] = closure_1_7.APPLICATIONS_PUBLIC;
                 const _URLSearchParams = URLSearchParams;
                 const str = new URLSearchParams(arr.map((arg0) => {
                   const items = ["application_ids", arg0];
                   return items;
                 }));
                 obj2[1] = str.toString();
-                obj2[3] = outer1_0(outer1_2[6]).rejectWithMigratedError();
+                obj2[3] = closure_1_0(closure_1_2[6]).rejectWithMigratedError();
                 c4 = 2;
-                status = 1;
+                c5 = 1;
                 obj3 = { value: null, done: false };
                 obj3[0] = HTTP.get(obj2);
                 return obj3;
               } else {
-                status = 3;
+                c5 = 3;
               }
-              arr2 = outer1_0;
+              arr2 = closure_1_0;
             }
           } else if (1 === tmp8) {
             c3 = 0;
-            status = body;
+            const status = body;
             if (429 !== status.status) {
-              obj1 = outer1_1(outer1_2[5]);
+              obj1 = closure_1_1(closure_1_2[5]);
               const obj4 = { type: "APPLICATIONS_FETCH_FAIL", applicationIds: null };
               obj4[1] = found;
               obj1.dispatch(obj4);
             }
             throw status;
           } else if (arg0 === 1) {
-            status = 3;
+            c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             closure_1 = arg1;
@@ -343,18 +335,18 @@ let obj = {
             const obj5 = { type: "APPLICATIONS_FETCH_SUCCESS", applications: null, unknownApplicationIds: null, isHydrated: true };
             obj5[1] = closure_1.body;
             obj5[2] = c4;
-            outer1_1(outer1_2[5]).dispatch(obj5);
-            const obj11 = outer1_1(outer1_2[5]);
+            closure_1_1(closure_1_2[5]).dispatch(obj5);
+            const obj11 = closure_1_1(closure_1_2[5]);
           }
           c3 = 0;
-          status = 3;
+          c5 = 3;
           obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } catch (tmp32) {
           body = tmp32;
           if (tmp4 === c3) {
-            status = tmp2;
+            c5 = tmp2;
             throw tmp32;
           } else {
             c4 = tmp;
@@ -400,7 +392,7 @@ obj = {
   }
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, obj);
-let result = require("createExecutable").fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/applications/ApplicationActionCreators.tsx");
 
 export default obj;
 export { fetchApplication };
@@ -409,20 +401,21 @@ export const useApplicationWithLoggedOutContext = function useApplicationWithLog
   const _require = arg0;
   const tmp = fetchStore(arg0);
   const data = tmp.data;
-  const error = tmp.error;
-  const obj = { app: null, isLoading: null, error: null };
-  const items = [set];
-  const items1 = [arg0, data];
-  obj[0] = _initialize.useStateFromStores(items, () => {
-    if (null == data) {
-      const application = outer1_4.getApplication(closure_0);
-      if (null != application) {
-        return outer1_5.createFromServer(application);
+  error = tmp.error;
+  const obj = {
+    app: _initialize.useStateFromStores(items, () => {
+      if (null == data) {
+        const application = closure_1_4.getApplication(closure_0);
+        if (null != application) {
+          return closure_1_5.createFromServer(application);
+        }
       }
-    }
-    return data;
-  }, items1);
-  obj[1] = tmp.isLoading;
-  obj[2] = error;
+      return data;
+    }, items1),
+    isLoading: tmp.isLoading,
+    error
+  };
+  items = [closure_4];
+  items1 = [arg0, data];
   return obj;
 };

@@ -1,22 +1,21 @@
 // discord_app/modules/channel_permissions/native/components/ChannelOverwritesItem.tsx
-import "useCheckboxA11yNative";
-import { View } from "registerAsset";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RowType } from "RowType";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08860_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/08861_registerAsset.js";
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { FormCheckbox } from "../../../../design/components/Forms/native/FormCheckbox.native.tsx";
-import { ShieldUserIcon } from "../../../../design/components/Icon/native/redesign/generated/ShieldUserIcon.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 1297 */;
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
+import Text from "Text" /* 4734 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import FormCheckbox from "FormCheckbox" /* 8085 */;
+import getRoleRowDataAll from "getRoleRowData" /* 8850 */;
+import ShieldUserIcon from "ShieldUserIcon" /* 8859 */;
+import registerAssetDefault from "registerAsset" /* 8860 */;
+import registerAssetDefault2 from "registerAsset" /* 8861 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { RowType } from "RowType" /* 8064 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function RemoveIcon(item) {
   item = item.item;
   const channelId = item.channelId;
@@ -28,29 +27,27 @@ function RemoveIcon(item) {
     let intl = item(1236).intl;
     obj[2] = intl.string(item(1236).t.N86XcP);
     obj[3] = function onPress() {
-      let id;
-      let name;
       if (null != closure_2) {
         return tmp(id);
       } else {
         ({ id, name } = id);
         closure_2 = name;
-        let obj = item(outer1_3[6]);
+        let obj = item(closure_1_3[6]);
         obj = { key: null, title: null, content: null, confirmText: null, onConfirm: null };
         const _HermesInternal = HermesInternal;
         obj[0] = "remove-channel-overwrite-" + id;
-        const intl = item(outer1_3[7]).intl;
-        obj[1] = intl.string(item(outer1_3[7]).t.GuPYQB);
-        const intl2 = item(outer1_3[7]).intl;
+        const intl = item(closure_1_3[7]).intl;
+        obj[1] = intl.string(item(closure_1_3[7]).t.GuPYQB);
+        const intl2 = item(closure_1_3[7]).intl;
         obj = { name: null };
         obj[0] = name;
-        obj[2] = intl2.format(item(outer1_3[7]).t.xERCnZ, obj);
-        const intl3 = item(outer1_3[7]).intl;
-        obj[3] = intl3.string(item(outer1_3[7]).t.fKxYb0);
+        obj[2] = intl2.format(item(closure_1_3[7]).t.xERCnZ, obj);
+        const intl3 = item(closure_1_3[7]).intl;
+        obj[3] = intl3.string(item(closure_1_3[7]).t.fKxYb0);
         obj[4] = function onConfirm() {
-          let result = name(outer1_3[8]).clearPermissionOverwrite(closure_2, id);
+          let result = name(closure_1_3[8]).clearPermissionOverwrite(closure_2, id);
           result.then(() => {
-            const result = outer1_0(outer1_3[9]).memberOrRoleRemovedToast(closure_1);
+            const result = closure_1_0(closure_1_3[9]).memberOrRoleRemovedToast(closure_1);
           });
         };
         obj.showConfirmModal(obj);
@@ -68,19 +65,6 @@ function RemoveIcon(item) {
   return tmp3Result;
 }
 function RoleItem(arg0) {
-  let accessibilityRole;
-  let accessibilityState;
-  let accessible;
-  let channelId;
-  let disabled;
-  let end;
-  let item;
-  let onPress;
-  let showRemove;
-  let showType;
-  let start;
-  let subLabel;
-  let trailing;
   ({ item, subLabel, trailing } = arg0);
   ({ disabled, channelId, showType, showRemove, start, end, onPress, accessibilityRole, accessibilityState, accessible } = arg0);
   let obj = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
@@ -88,8 +72,8 @@ function RoleItem(arg0) {
   obj[0] = callback(ShieldUserIcon.ShieldUserIcon, obj);
   obj[1] = item.name;
   if (showType) {
-    subLabel = importAll(8850).getRowTypeLabel(item.rowType);
-    const obj3 = importAll(8850);
+    subLabel = getRoleRowDataAll.getRowTypeLabel(item.rowType);
+    const obj3 = getRoleRowDataAll;
   }
   obj[2] = subLabel;
   obj[3] = start;
@@ -109,19 +93,6 @@ function RoleItem(arg0) {
   return callback(TableRowInner.TableRow, obj);
 }
 function MemberItem(arg0) {
-  let accessibilityRole;
-  let accessibilityState;
-  let accessible;
-  let channelId;
-  let disabled;
-  let end;
-  let guildId;
-  let item;
-  let onPress;
-  let onRemove;
-  let showRemove;
-  let start;
-  let trailing;
   ({ item, trailing } = arg0);
   ({ channelId, showRemove, onRemove, guildId, start, end, onPress, disabled, accessibilityRole, accessibilityState, accessible } = arg0);
   const tmp = callback2();
@@ -134,7 +105,7 @@ function MemberItem(arg0) {
   if (item.rowType === RowType.OWNER) {
     obj = { size: null, source: null, disableColor: true, style: null };
     obj[0] = tmp5(1297).Icon.Sizes.REFRESH_SMALL_16;
-    obj[1] = registerAsset;
+    obj[1] = registerAssetDefault;
     obj[3] = tmp.ownerIcon;
     tmp4Result = tmp4(tmp5(1297).Icon, obj);
   }
@@ -145,7 +116,7 @@ function MemberItem(arg0) {
   if (user != null) {
     avatarSource = user.getAvatarSource(guildId);
   }
-  const obj1 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
+  obj1 = { icon: null, label: null, subLabel: null, start: null, end: null, trailing: null, onPress: null, disabled: null, accessibilityRole: null, accessibilityState: null, accessible: null };
   const tmp2 = closure_8;
   const tmp2Result = closure_8(View, obj);
   const tmp3 = View;
@@ -172,11 +143,7 @@ function MemberItem(arg0) {
 function EmptyRoleItem(item) {
   item = item.item;
   let obj = { icon: null, label: null };
-  obj = { source: null, color: null, size: null, style: null };
-  obj[0] = registerAsset;
-  obj[1] = item.colorString;
-  obj[2] = Button.IconSizes.MEDIUM;
-  obj[3] = callback2().roleIcon;
+  obj = { source: registerAssetDefault2, color: item.colorString, size: Button.IconSizes.MEDIUM, style: callback2().roleIcon };
   obj[0] = callback(Button.Icon, obj);
   obj[1] = item.name;
   return callback(TableRowInner.TableRow, obj);
@@ -220,14 +187,13 @@ class ChannelOverwritesItem {
     return jsx(RoleItem, obj1);
   }
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+noopAll;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_permissions/native/components/ChannelOverwritesItem.tsx");
 
 export default ChannelOverwritesItem;
 export const ChannelOverwritesCheckboxItem = function ChannelOverwritesCheckboxItem(checked) {
-  let accessibilityRole;
-  let accessibilityState;
   checked = checked.checked;
   const merged = Object.assign(checked, Object.create(null));
   let obj = useCheckboxA11yNative;

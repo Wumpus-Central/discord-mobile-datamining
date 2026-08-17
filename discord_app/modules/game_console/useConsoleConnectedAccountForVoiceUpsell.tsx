@@ -1,15 +1,15 @@
 // discord_app/modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx
-import set from "set";
-import filterPlayingActivities from "filterPlayingActivities";
-import closure_5 from "set";
-import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE";
-import { ActivityTypes } from "ME";
+import closure_3 from "set" /* 5221 */;
+import closure_4 from "filterPlayingActivities" /* 7250 */;
+import closure_5 from "set" /* 4540 */;
+import { CONSOLE_VOICE_PLATFORMS } from "XBOX_URL_BASE" /* 9763 */;
+import { ActivityTypes } from "ME" /* 676 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_console/useConsoleConnectedAccountForVoiceUpsell.tsx");
 
 export default function useConsoleConnectedAccountForVoiceUpsell() {
-  const items = [filterPlayingActivities];
+  const items = [closure_4];
   const stateFromStores = found(589).useStateFromStores(items, () => activities.getActivities(true));
   found = stateFromStores.filter((platform) => {
     platform = platform.platform;
@@ -26,7 +26,7 @@ export default function useConsoleConnectedAccountForVoiceUpsell() {
   const items1 = [closure_5];
   const stateFromStores1 = found(589).useStateFromStores(items1, () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo() || null != awaitingRemoteSessionInfo.getRemoteSessionId());
   const obj2 = found(589);
-  const items2 = [set];
+  const items2 = [closure_3];
   const stateFromStores2 = found(589).useStateFromStores(items2, () => {
     const mapped = found.map((platform) => {
       platform = platform.platform;

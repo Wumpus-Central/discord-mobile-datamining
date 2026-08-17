@@ -1,26 +1,26 @@
 // discord_app/modules/icymi/native/ICYMIShareModal.tsx
-import dispatcher from "dispatcher";
-import handleChanged from "handleChanged";
-import useGradientBottom from "useGradientBottom";
-import { View } from "useWindowDimensions";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { DraftType } from "handleChanged";
-import map from "map";
-import { AbortCodes } from "ME";
-import { UserRowModes } from "UserRowModes";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import jsxProd from "getMixedGradientColor";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import SHARE_EVENT_DETAILS_LINK from "SHARE_EVENT_DETAILS_LINK" /* 8803 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_9 from "map" /* 4824 */;
+import { AbortCodes } from "ME" /* 676 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { SHARE_EVENT_DETAILS_LINK } from "../../guild_scheduled_events/utils/ShareEventUtils.tsx";
 
-let closure_14;
-let map1;
-const require = arg1;
+require = arg1;
 function Screenshot(setUri) {
   setUri = setUri.setUri;
   let ref;
-  const tmp = createCacheKey();
+  const tmp = callback5();
   ref = React.useRef(null);
   const items = [setUri];
   const effect = React.useEffect(() => {
@@ -44,7 +44,7 @@ function Screenshot(setUri) {
   obj = { style: items1, children: null };
   items1 = [tmp.preview, { width: ref(1494)().width }];
   const clientThemesOverride = obj.useClientThemesOverride();
-  const obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
+  obj1 = { ref, options: { fileName: "icymi_content", format: "png", quality: 1 }, children: null };
   const obj2 = { style: tmp.base, children: null };
   const tmp4 = ref(4225)();
   const obj3 = { absolute: true, wide: true, tall: true, mix: true, mixAmount: null };
@@ -55,10 +55,9 @@ function Screenshot(setUri) {
   obj3[4] = obj4;
   const items2 = [callback3(ref(9091), obj3), ];
   const obj5 = { gradient: tmp4, children: null };
-  const obj6 = { style: items3, children: null };
-  items3 = [tmp.contentContainer, clientThemesOverride];
-  obj6[1] = setUri.render();
-  obj5[1] = callback3(View, obj6);
+  const tmp7 = ref(9091);
+  const items3 = [tmp.contentContainer, clientThemesOverride];
+  obj5[1] = callback3(View, { style: items3, children: setUri.render() });
   items2[1] = callback3(setUri(4104).ThemeContextProvider, obj5);
   obj2[1] = items2;
   obj1[2] = callback4(View, obj2);
@@ -67,19 +66,11 @@ function Screenshot(setUri) {
   return callback3(View, obj);
 }
 function GravityShareFooter(arg0) {
-  let count;
-  let handleMessageBlur;
-  let handleMessageFocus;
-  let handlePressEmoji;
-  let handleSelectionChange;
-  let isSending;
-  let onSend;
-  let textInputRef;
   ({ count, isSending, onSend } = arg0);
-  let importDefault;
+  importDefault = undefined;
   let first;
   let insets;
-  const tmp = createCacheKey();
+  const tmp = callback5();
   importDefault = tmp;
   const tmp2 = insets(React.useState(""), 2);
   first = tmp2[0];
@@ -105,7 +96,7 @@ function GravityShareFooter(arg0) {
   if (0 !== count) {
     obj = { style: null, children: null };
     obj[0] = tmp11;
-    const obj1 = { inputRef: null, text: null, onChange: null, onSelectionChange: null, onFocus: null, onBlur: null, onPressEmoji: null, onSend: null, disabled: null };
+    obj1 = { inputRef: null, text: null, onChange: null, onSelectionChange: null, onFocus: null, onBlur: null, onPressEmoji: null, onSend: null, disabled: null };
     obj1[0] = textInputRef;
     obj1[1] = first;
     obj1[2] = tmp4;
@@ -139,17 +130,17 @@ class ICYMIShareModal {
     title = global.title;
     ({ linkText, render } = global);
     ({ forwardToChannel, onShare } = global);
-    _handleSendForwards = undefined;
-    useState = undefined;
-    useState = undefined;
-    c9 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
+    closure_9 = undefined;
     height = undefined;
     _handleSendForwards = function _handleSendForwards() {
       let self = this;
-      const tmp = outer1_4((arg0) => {
-        let closure_0 = arg0;
-        let c3 = 0;
-        let c4 = 0;
+      const tmp = closure_1_4((arg0) => {
+        closure_0 = arg0;
+        c3 = 0;
+        c4 = 0;
         return (function*(arg0, arr) {
           if (v0 === 2) {
             v0 = 3;
@@ -177,18 +168,18 @@ class ICYMIShareModal {
                   obj[0] = arr;
                   return obj;
                 } else {
-                  let closure_2 = tmp2;
-                  let closure_1 = tmp3;
-                  outer1_6(true);
-                  let tmp8 = null == outer1_2;
+                  closure_2 = tmp2;
+                  closure_1 = tmp3;
+                  closure_1_6(true);
+                  let tmp8 = null == closure_1_2;
                   if (!tmp8) {
-                    tmp8 = null != outer1_7;
+                    tmp8 = null != closure_1_7;
                   }
                   if (tmp8) {
                     c3 = 1;
                     v0 = 1;
-                    let obj1 = { value: null, done: false };
-                    obj1[0] = Promise.all(outer1_5.map(callback(outer1_2[29]).getOrResolveChannelIdFromDestinationId));
+                    obj1 = { value: null, done: false };
+                    obj1[0] = Promise.all(closure_1_5.map(callback(closure_1_2[29]).getOrResolveChannelIdFromDestinationId));
                     return obj1;
                   } else {
                     v0 = 3;
@@ -199,12 +190,12 @@ class ICYMIShareModal {
                 throw arr;
               } else if (arg0 !== 2) {
                 const mapped = arr.map((arg0) => channel.getChannel(arg0));
-                const found = mapped.filter(callback(outer1_2[30]).isNotNullish);
+                const found = mapped.filter(callback(closure_1_2[30]).isNotNullish);
                 const item = found.forEach((() => {
-                  let closure_0 = v3((arg0) => {
-                    let closure_0 = arg0;
-                    let c2 = 0;
-                    let c1 = 0;
+                  closure_0 = v3((arg0) => {
+                    closure_0 = arg0;
+                    c2 = 0;
+                    c1 = 0;
                     return (/* F120938 */ function*() { ... })();
                   });
                   return function(arg0) {
@@ -218,11 +209,11 @@ class ICYMIShareModal {
                     return applyArgumentsResult;
                   };
                 })());
-                outer1_1(outer1_2[28]).pop();
+                closure_1_1(closure_1_2[28]).pop();
                 if (null != v0) {
                   v0();
                 }
-                const arr3 = outer1_1(outer1_2[28]);
+                const arr3 = closure_1_1(closure_1_2[28]);
               }
               v0 = 3;
               obj = { value: null, done: true };
@@ -235,7 +226,7 @@ class ICYMIShareModal {
           }
         })();
       });
-      const _handleSendForwards = tmp;
+      closure_8 = tmp;
       let apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -244,29 +235,29 @@ class ICYMIShareModal {
       }
       return applyArgumentsResult;
     };
-    tmp = forwardToChannel(_handleSendForwards.useState([]), 2);
+    tmp = forwardToChannel(closure_5.useState([]), 2);
     first = tmp[0];
-    _handleSendForwards = first;
-    tmp2 = forwardToChannel(_handleSendForwards.useState(false), 2);
-    useState = tmp2[1];
-    tmp3 = forwardToChannel(_handleSendForwards.useState(null), 2);
-    [useState, tmp4] = tmp3;
-    callback = _handleSendForwards.useCallback(() => {
+    closure_5 = first;
+    tmp2 = forwardToChannel(closure_5.useState(false), 2);
+    closure_6 = tmp2[1];
+    tmp3 = forwardToChannel(closure_5.useState(null), 2);
+    [closure_7, tmp4] = tmp3;
+    callback = closure_5.useCallback(() => {
       let arr = callback(render[28]);
       arr = arr.pop();
     }, []);
-    tmp6 = jsxs();
+    tmp6 = closure_15();
     tmp7 = linkText;
     tmp8 = render;
     rect = require("useSafeAreaInsets")();
-    c9 = rect;
+    closure_9 = rect;
     height = require("useWindowDimensions")().height;
     items = [, ];
     items[0] = rect.bottom;
     items[1] = height;
     obj = {
-      style: _handleSendForwards.useMemo(() => {
-            let height = "100%";
+      style: closure_5.useMemo(() => {
+            height = "100%";
             if (obj.isAndroid()) {
               height = height + rect.bottom;
             }
@@ -276,12 +267,12 @@ class ICYMIShareModal {
     };
     tmp11 = jsx;
     tmp9 = jsxs;
-    tmp10 = useState;
+    tmp10 = closure_6;
     tmp12 = title;
     obj = {
       title,
       headerTitle() {
-            return outer1_13(title(render[40]).GenericHeaderTitle, { title });
+            return closure_1_13(title(render[40]).GenericHeaderTitle, { title });
           },
       headerTitleAlign: "center",
       headerStatusBarHeight: null,
@@ -335,19 +326,19 @@ class ICYMIShareModal {
 }
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { headerLeftContainer: null, headerRightContainer: null, preview: null, base: null, contentContainer: null, footer: null };
-createCacheKey = { paddingLeft: require("Themes").space.PX_16 };
+createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingRight: require("Themes").space.PX_16 };
-let obj1 = { paddingRight: require("Themes").space.PX_16 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey[1] = { paddingRight: ThemesDefault.space.PX_16 };
+let obj1 = { paddingRight: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[3] = { position: "relative" };
-let obj2 = { borderRadius: require("Themes").radii.md, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_12, gap: require("Themes").space.PX_12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-let result = require("noop").fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
+let obj2 = { borderRadius: ThemesDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[5] = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { display: "flex", flexDirection: "row", alignItems: "flex-end", paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIShareModal.tsx");
 
 export default ICYMIShareModal;
 export const GuildEventShareModal = function GuildEventShareModal(event) {
@@ -360,7 +351,7 @@ export const GuildEventShareModal = function GuildEventShareModal(event) {
   obj[0] = intl.string(getSystemLocale.t["7TVSLK"]);
   let tmp4;
   if (null != event.channel_id) {
-    const obj1 = { type: "channel", id: null };
+    obj1 = { type: "channel", id: null };
     obj1[1] = event.channel_id;
     tmp4 = obj1;
   }
@@ -375,10 +366,10 @@ export const GameShareModal = function GameShareModal(content) {
   obj[0] = intl.string(_getSystemLocale.t["59CWHK"]);
   _require = undefined;
   _require = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -406,15 +397,15 @@ export const GameShareModal = function GameShareModal(content) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp7;
-              let c0;
-              let c4 = 1;
-              let obj3 = callback(outer2_2[15]);
-              let obj1 = { channel: null, content: "", entry: null, whenReady: false, doNotNotifyOnError: true, location: null };
+              closure_2 = tmp3;
+              closure_1 = tmp7;
+              c0 = undefined;
+              c4 = 1;
+              let obj3 = callback(closure_2_2[15]);
+              obj1 = { channel: null, content: "", entry: null, whenReady: false, doNotNotifyOnError: true, location: null };
               obj1[0] = c0;
               obj1[2] = callback;
-              obj1[5] = outer2_12.ICYMI;
+              obj1[5] = closure_2_12.ICYMI;
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -423,16 +414,16 @@ export const GameShareModal = function GameShareModal(content) {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            closure_1 = dispatcher;
+            closure_1 = closure_3;
             let tmp12 = null != closure_1.body;
             if (tmp12) {
-              tmp12 = closure_1.body.code === outer2_10.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
+              tmp12 = closure_1.body.code === closure_2_10.CONTENT_INVENTORY_ENTRY_INVALID_PERMISSION;
             }
             callback = tmp12;
-            obj1 = outer2_1(outer2_2[16]);
-            const intl = callback(outer2_2[14]).intl;
+            obj1 = closure_2_1(closure_2_2[16]);
+            const intl = callback(closure_2_2[14]).intl;
             const string = intl.string;
-            let t = callback(outer2_2[14]).t;
+            let t = callback(closure_2_2[14]).t;
             if (callback) {
               let stringResult = string(t.BC5vfD);
             } else {
@@ -456,7 +447,7 @@ export const GameShareModal = function GameShareModal(content) {
             return obj;
           }
         } catch (tmp33) {
-          dispatcher = tmp33;
+          closure_3 = tmp33;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp33;

@@ -1,14 +1,12 @@
 // discord_app/modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = { NONE: "none", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
-const result = require("resolveAsset").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/VideoQuestModal/hooks/useVideoQuestCaptions.tsx");
 
 export const useVideoQuestCaptions = (quest) => {
-  let dependencyMap;
-  let tmp4;
   const questAsset = url(10486).getQuestAsset(quest, url(10486).QuestAssetType.VIDEO_PLAYER_CAPTION, undefined, true);
   url = undefined;
   if (questAsset != null) {
@@ -21,30 +19,30 @@ export const useVideoQuestCaptions = (quest) => {
   const items = [url];
   const effect = React.useEffect(() => {
     if (null != url) {
-      const HTTP = url(outer1_1[3]).HTTP;
+      const HTTP = url(closure_1_1[3]).HTTP;
       const obj = { url: null, rejectWithError: true };
       obj[0] = tmp;
       const value = HTTP.get(obj);
       value.then((text) => {
         try {
-          callback2(outer1_0(outer1_1[4]).parseVtt(text.text).cues);
-          callback(outer1_4.SUCCESS);
+          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
+          callback(closure_1_4.SUCCESS);
         } catch (err) {
-          callback(outer1_4.ERROR);
+          callback(closure_1_4.ERROR);
         }
       }).catch(() => {
-        callback(outer1_4.ERROR);
+        callback(closure_1_4.ERROR);
       });
       const nextPromise = value.then((text) => {
         try {
-          callback2(outer1_0(outer1_1[4]).parseVtt(text.text).cues);
-          callback(outer1_4.SUCCESS);
+          callback2(closure_1_0(closure_1_1[4]).parseVtt(text.text).cues);
+          callback(closure_1_4.SUCCESS);
         } catch (err) {
-          callback(outer1_4.ERROR);
+          callback(closure_1_4.ERROR);
         }
       });
     } else {
-      callback(outer1_4.NONE);
+      callback(closure_1_4.NONE);
     }
   }, items);
   return { captions: captions[0], status };

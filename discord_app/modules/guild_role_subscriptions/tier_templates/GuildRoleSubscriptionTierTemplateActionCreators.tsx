@@ -1,15 +1,15 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _getTemplates() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c4 === 2) {
         c4 = 3;
@@ -40,10 +40,10 @@ function _getTemplates() {
               const table = tmp2;
               body = tmp5;
               body = undefined;
-              const HTTP = callback(outer1_2[3]).HTTP;
-              const obj1 = { url: null, rejectWithError: null };
+              const HTTP = callback(closure_1_2[3]).HTTP;
+              obj1 = { url: null, rejectWithError: null };
               obj1[0] = c4.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(callback);
-              obj1[1] = callback(outer1_2[3]).rejectWithMigratedError();
+              obj1[1] = callback(closure_1_2[3]).rejectWithMigratedError();
               c3 = 1;
               c4 = 1;
               const obj2 = { value: null, done: false };
@@ -77,7 +77,7 @@ function _getTemplates() {
       }
     })();
   });
-  const _getTemplates = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -86,10 +86,10 @@ function _getTemplates() {
   }
   return applyArgumentsResult;
 }
-const result = require("dispatcher").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplateActionCreators.tsx");
 
 export const stashTemplateChannels = function stashTemplateChannels(selectedTemplate, guildId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS", selectedTemplate, guildId };
   obj.dispatch(obj);
 };

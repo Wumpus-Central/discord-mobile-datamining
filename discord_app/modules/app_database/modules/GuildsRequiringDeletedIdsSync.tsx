@@ -1,11 +1,12 @@
 // discord_app/modules/app_database/modules/GuildsRequiringDeletedIdsSync.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import set from "set";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import set from "set" /* 2 */;
 
+let set = importDefault;
 class GuildsRequiringDeletedIdsSync {
   constructor() {
     obj = Object.create(new.target.prototype);
-    GuildsRequiringDeletedIdsSync = obj;
+    closure_0 = obj;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
             return obj.handleBackgroundSync(arg0, arg1);
@@ -52,14 +53,14 @@ prototype["getAll"] = function getAll() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp2;
+            closure_0 = tmp2;
             closure_0 = undefined;
-            const result = outer1_0(table[1]).guildsRequiringDeletedIdsSync();
+            const result = closure_1_0(table[1]).guildsRequiringDeletedIdsSync();
             if (null == result) {
               const _Set2 = Set;
-              const set = new Set();
+              set = new Set();
               c2 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = set;
               return obj1;
             } else {
@@ -69,7 +70,7 @@ prototype["getAll"] = function getAll() {
               obj2[0] = result.getMany();
               return obj2;
             }
-            const obj7 = outer1_0(table[1]);
+            const obj7 = closure_1_0(table[1]);
           }
         } else if (arg0 === 1) {
           c2 = 3;
@@ -100,9 +101,9 @@ prototype["handleConnectionOpen"] = function handleConnectionOpen(guilds, databa
   const found = guilds.filter((unableToSyncDeletes) => unableToSyncDeletes.unableToSyncDeletes);
   const mapped = found.map((id) => ({ id: id.id }));
   if (mapped.length > 0) {
-    obj = obj(1955);
-    const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
+    const obj = set(1955);
   }
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, database) {
@@ -110,15 +111,15 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(guilds, databa
   const found = guilds.filter((data_mode) => "partial" === data_mode.data_mode && data_mode.unable_to_sync_deletes);
   const mapped = found.map((id) => ({ id: id.id }));
   if (mapped.length > 0) {
-    obj = obj(1955);
-    const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
+    const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
     result.putAll(mapped);
+    const obj = set(1955);
   }
 };
 prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   guild = guild.guild;
   if (guild.unableToSyncDeletes) {
-    obj = obj(1955);
+    let obj = set(1955);
     const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
     obj = { id: null };
     obj[0] = guild.id;
@@ -126,14 +127,13 @@ prototype["handleGuildCreate"] = function handleGuildCreate(guild, database) {
   }
 };
 prototype["handleDeletedEntityIds"] = function handleDeletedEntityIds(guild_id, database) {
-  obj = obj(1955);
-  const result = obj.guildsRequiringDeletedIdsSyncTransaction(database);
+  const result = set(1955).guildsRequiringDeletedIdsSyncTransaction(database);
   result.delete(guild_id.guild_id);
 };
 prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
-let set = Object.create(GuildsRequiringDeletedIdsSync.prototype);
+set = Object.create(GuildsRequiringDeletedIdsSync.prototype);
 set.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);

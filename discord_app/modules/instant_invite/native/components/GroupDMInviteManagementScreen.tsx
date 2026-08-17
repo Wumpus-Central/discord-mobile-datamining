@@ -1,25 +1,20 @@
 // discord_app/modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx
-import closure_3 from "normalizeChannelPropertyForCompare";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "HeaderBackImage";
-import get_ActivityIndicator from "registerAsset";
-import createFromServer from "createFromServer";
-import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare";
-import ME from "ME";
-import { jsx } from "NavigationStack";
-import createCacheKey from "createCacheKey";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "createFromServer" /* 8044 */;
+import normalizeChannelPropertyForCompare from "normalizeChannelPropertyForCompare" /* 8133 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Platform;
-let c10;
-let c9;
-let closure_6;
-let error;
 const require = arg1;
 function GroupDMInviteManagement(channelId) {
   channelId = channelId.channelId;
   let first;
-  let dependencyMap;
-  let closure_3;
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let callback;
   const tmp2 = callback(importAllResult.useState([]), 2);
   first = tmp2[0];
@@ -56,12 +51,12 @@ function GroupDMInviteManagement(channelId) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp2;
+                closure_1 = tmp2;
                 let callback = tmp5;
                 callback = undefined;
-                const HTTP = callback(outer2_2[10]).HTTP;
-                const obj1 = { url: null, retries: 3, oldFormErrors: true, rejectWithError: true };
-                obj1[0] = outer2_10.INSTANT_INVITES(outer1_0);
+                const HTTP = callback(closure_2_2[10]).HTTP;
+                obj1 = { url: null, retries: 3, oldFormErrors: true, rejectWithError: true };
+                obj1[0] = closure_2_10.INSTANT_INVITES(closure_1_0);
                 v0 = 1;
                 v02 = 1;
                 const obj2 = { value: null, done: false };
@@ -82,7 +77,7 @@ function GroupDMInviteManagement(channelId) {
                 const obj = {};
                 const merged = Object.assign(arg0);
                 ({ max_uses: obj.maxUses, max_age: obj.maxAge, created_at: obj.createdAt } = arg0);
-                return new createFromServer(obj);
+                return new closure_8(obj);
               });
               v0(callback);
               v02(false);
@@ -95,7 +90,7 @@ function GroupDMInviteManagement(channelId) {
           }
         }
       });
-      const _fetchInvites = tmp;
+      closure_0 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -171,18 +166,18 @@ const memoResult = importAllResult.memo(function GroupDMInviteManagementScreen(c
   const memo = importAllResult.useMemo(() => {
     let obj = {};
     obj = { title: null, headerLeft: null, render: null, impressionName: null };
-    const intl = channelId(outer1_2[18]).intl;
-    obj[0] = intl.string(channelId(outer1_2[18]).t.OQ9MKu);
-    obj[1] = channelId(outer1_2[19]).getHeaderCloseButton(onClose);
+    const intl = channelId(closure_1_2[18]).intl;
+    obj[0] = intl.string(channelId(closure_1_2[18]).t.OQ9MKu);
+    obj[1] = channelId(closure_1_2[19]).getHeaderCloseButton(onClose);
     obj[2] = function render() {
-      return outer1_11(outer1_13, { channelId: closure_0 });
+      return closure_1_11(closure_1_13, { channelId: closure_0 });
     };
-    obj[3] = channelId(outer1_2[20]).ImpressionNames.GDM_SETTINGS_INVITES;
-    obj[outer1_9.INSTANT_INVITES_MANAGEMENT] = obj;
+    obj[3] = channelId(closure_1_2[20]).ImpressionNames.GDM_SETTINGS_INVITES;
+    obj[closure_1_9.INSTANT_INVITES_MANAGEMENT] = obj;
     return obj;
   }, items);
   return jsx(channelId(6312).Navigator, { screens: memo, initialRouteName: constants.INSTANT_INVITES_MANAGEMENT });
 });
-const result = require("noop").fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/GroupDMInviteManagementScreen.tsx");
 
 export default memoResult;

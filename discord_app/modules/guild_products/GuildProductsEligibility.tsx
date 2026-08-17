@@ -1,30 +1,30 @@
 // discord_app/modules/guild_products/GuildProductsEligibility.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildFeatures } from "ME";
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildFeatures } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");
 
 export const useGuildEligibleForGuildProducts = function useGuildEligibleForGuildProducts(id) {
   const _require = id;
-  const items = [createGuildRecordFromRust];
+  const items = [closure_2];
   const items1 = [id];
   return _initialize.useStateFromStores(items, () => {
     if (null == closure_0) {
       return false;
     } else {
-      const guild = outer1_2.getGuild(tmp);
+      const guild = closure_1_2.getGuild(tmp);
       let tmp4 = null != guild;
       if (tmp4) {
         const features = guild.features;
-        let hasItem = features.has(outer1_3.COMMUNITY);
+        let hasItem = features.has(closure_1_3.COMMUNITY);
         if (!hasItem) {
           const features2 = guild.features;
           hasItem = features2.has(tmp5.GUILD_PRODUCTS);
         }
         tmp4 = hasItem;
-        tmp5 = outer1_3;
+        tmp5 = closure_1_3;
       }
       return tmp4;
     }

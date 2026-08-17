@@ -1,77 +1,70 @@
 // discord_app/components_native/premium/EntitlementGiftGroupCard.tsx
-import importAllResult from "Button";
-import get_ActivityIndicator from "getPrice";
-import importDefaultResult from "addApplication";
-import importDefaultResult1 from "fetchFingerprint";
-import importDefaultResult2 from "updateGiftCode";
-import importDefaultResult4 from "addSku";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "ChevronSmallDownIcon";
-import createCacheKey from "createCacheKey";
-import importDefaultResult3 from "addSubscriptionPlan";
-import importDefaultResult5 from "initialize";
-import { registerAsset } from "../../../_runtime/12744_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12745_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12746_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12747_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12748_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12749_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12750_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12751_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12752_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12755_registerAsset.js";
-import { registerAsset } from "../../../_runtime/12756_registerAsset.js";
-import { metadata } from "../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
-import { Button } from "../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { GameIcon } from "../../modules/game_detection/native/GameIcon.tsx";
-import { SlayerStorefrontItemCard } from "../../modules/slayer_storefront/native/SlayerStorefrontItemCard.tsx";
-import { getPrice } from "../../modules/slayer_storefront/SlayerStorefrontUtils.tsx";
-import { getSubscriptionPlans } from "../../utils/SubscriptionUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import GameIconDefault from "GameIcon" /* 7149 */;
+import getPrice from "getPrice" /* 7200 */;
+import SlayerStorefrontItemCardDefault from "SlayerStorefrontItemCard" /* 9228 */;
+import getSubscriptionPlans from "getSubscriptionPlans" /* 10648 */;
+import metadataDefault from "metadata" /* 11979 */;
+import registerAssetDefault from "registerAsset" /* 12744 */;
+import registerAssetDefault2 from "registerAsset" /* 12745 */;
+import registerAssetDefault3 from "registerAsset" /* 12746 */;
+import registerAssetDefault4 from "registerAsset" /* 12747 */;
+import registerAssetDefault5 from "registerAsset" /* 12748 */;
+import registerAssetDefault6 from "registerAsset" /* 12749 */;
+import registerAssetDefault7 from "registerAsset" /* 12750 */;
+import registerAssetDefault8 from "registerAsset" /* 12751 */;
+import registerAssetDefault9 from "registerAsset" /* 12752 */;
+import registerAssetDefault10 from "registerAsset" /* 12755 */;
+import registerAssetDefault11 from "registerAsset" /* 12756 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import importDefaultResult from "addApplication" /* 4478 */;
+import importDefaultResult1 from "fetchFingerprint" /* 1218 */;
+import importDefaultResult2 from "updateGiftCode" /* 10641 */;
+import importDefaultResult4 from "addSku" /* 4521 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult3 from "addSubscriptionPlan" /* 4044 */;
+import importDefaultResult5 from "initialize" /* 589 */;
 
-let c4;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_6;
-let map1;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 let c3 = importAllResult;
 ({ View: c4, ActivityIndicator: c5, TouchableWithoutFeedback: closure_6 } = get_ActivityIndicator);
 let error = importDefaultResult;
 ({ SubscriptionIntervalTypes: unpackModuleId, PremiumSubscriptionSKUs: closure_12, PremiumGiftStyles: map1 } = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 createCacheKey = { giftGroupCard: { overflow: "hidden", marginTop: 8 }, giftGroupCardRefresh: null, title: null, arrow: null, subtitle: null, titleContainer: null, groupCardHeader: null, groupCardHeaderLegacy: null, rowArrow: null, giftIcon: null, generateGiftRow: null, generateGiftRowLegacy: null, generateGiftRowText: null, generateGiftButton: null, loading: null, generateButtonContainer: null, groupCardHeaderOpen: null, groupCardHeaderOpenRefresh: null, subtitleContainer: null, socialLayerSubtitleContainer: null };
-createCacheKey = { borderWidth: 1, borderColor: require("Themes").colors.CARD_BORDER_DEFAULT, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.TABLEROW_BACKGROUND_DEFAULT };
+createCacheKey = { borderWidth: 1, borderColor: ThemesDefault.colors.CARD_BORDER_DEFAULT, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.TABLEROW_BACKGROUND_DEFAULT };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-let obj1 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
-createCacheKey[3] = { color: require("Themes").colors.ICON_SUBTLE };
+createCacheKey[2] = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+let obj1 = { fontSize: 16, lineHeight: 20, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey[3] = { color: ThemesDefault.colors.ICON_SUBTLE };
 createCacheKey[4] = { fontSize: 14, lineHeight: 18 };
 createCacheKey[5] = { marginLeft: 8, flex: 1 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: 16 };
-let obj2 = { color: require("Themes").colors.ICON_SUBTLE };
-createCacheKey[7] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+let obj2 = { color: ThemesDefault.colors.ICON_SUBTLE };
+createCacheKey[7] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[8] = { height: 8, width: 12, marginRight: 8 };
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[9] = { borderRadius: require("Themes").radii.xs };
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[9] = { borderRadius: ThemesDefault.radii.xs };
 createCacheKey[10] = { padding: 8, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
-const obj4 = { borderRadius: require("Themes").radii.xs };
-createCacheKey[11] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+const obj4 = { borderRadius: ThemesDefault.radii.xs };
+createCacheKey[11] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[12] = { flexShrink: 1 };
 createCacheKey[13] = { marginLeft: 12 };
 createCacheKey[14] = { marginTop: 8 };
 createCacheKey[15] = { flexGrow: 1, flexShrink: 0 };
-let obj5 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[16] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-let obj6 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[17] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[16] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj6 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[17] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 createCacheKey[18] = { flexDirection: "row", alignItems: "center", gap: 4 };
 createCacheKey[19] = { marginTop: 2 };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_16 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const Component = importAllResult.Component;
 class EntitlementGiftGroupCard extends Component {
   constructor() {
@@ -80,8 +73,6 @@ class EntitlementGiftGroupCard extends Component {
     applyArgumentsResult._mountedAt = null;
     applyArgumentsResult.state = { isOpen: false };
     applyArgumentsResult.handleToggleOpen = function handleToggleOpen() {
-      let skuId;
-      let subscriptionPlanId;
       const props = applyArgumentsResult.props;
       let tmp2 = null != props.loadedAt;
       ({ skuId, subscriptionPlanId } = props);
@@ -92,17 +83,14 @@ class EntitlementGiftGroupCard extends Component {
         tmp2 = !tmp;
       }
       if (!tmp2) {
-        const userGiftCodesForSKU = outer1_1(outer1_2[13]).fetchUserGiftCodesForSKU(skuId, subscriptionPlanId);
-        const obj2 = outer1_1(outer1_2[13]);
+        const userGiftCodesForSKU = closure_1_1(closure_1_2[13]).fetchUserGiftCodesForSKU(skuId, subscriptionPlanId);
+        const obj2 = closure_1_1(closure_1_2[13]);
       }
       applyArgumentsResult.setState({ isOpen: !applyArgumentsResult.state.isOpen });
     };
     applyArgumentsResult.handleGenerateGiftCode = function handleGenerateGiftCode() {
-      let giftStyle;
-      let skuId;
-      let subscriptionPlanId;
       ({ skuId, subscriptionPlanId, giftStyle } = applyArgumentsResult.props);
-      const giftCode = outer1_1(outer1_2[13]).createGiftCode(skuId, subscriptionPlanId, giftStyle);
+      const giftCode = closure_1_1(closure_1_2[13]).createGiftCode(skuId, subscriptionPlanId, giftStyle);
     };
     return applyArgumentsResult;
   }
@@ -112,7 +100,7 @@ prototype["componentDidMount"] = function componentDidMount() {
   this._mountedAt = Date.now();
 };
 prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
-  const tmp = createCacheKey(this.context);
+  const tmp = callback2(this.context);
   const items = [tmp.generateGiftRow, ];
   let prop = null;
   if (!this.props.isRefreshEnabled) {
@@ -125,7 +113,7 @@ prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
   obj[3] = intl.string(getSystemLocale.t.lELyPj);
   const items1 = [callback(Text.Text, obj), ];
   obj = { style: tmp.generateButtonContainer, children: null };
-  const obj1 = { style: tmp.generateGiftButton, children: null };
+  obj1 = { style: tmp.generateGiftButton, children: null };
   const obj2 = { text: null, size: "sm", onPress: null };
   const intl2 = getSystemLocale.intl;
   obj2[0] = intl2.string(getSystemLocale.t["w4+/BA"]);
@@ -137,15 +125,11 @@ prototype["renderGenerateGiftCodeRow"] = function renderGenerateGiftCodeRow() {
   return closure_15(closure_4, obj);
 };
 prototype["renderHeader"] = function renderHeader(arg0, children) {
-  let application;
-  let entitlements;
-  let isRefreshEnabled;
-  let sku;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback2(this.context);
   const isOpen = this.state.isOpen;
   ({ entitlements, application, sku, isRefreshEnabled } = this.props);
   let obj = dependencyMap;
-  let obj1 = getPrice;
+  obj1 = getPrice;
   let isGameItemSKUResult = obj1.isGameItemSKU(sku);
   if (isGameItemSKUResult) {
     isGameItemSKUResult = null != application;
@@ -166,7 +150,7 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   if (isGameItemSKUResult) {
     obj1 = { sku: null, size: null, containerStyle: null };
     obj1[0] = sku;
-    const tmp15 = SlayerStorefrontItemCard;
+    const tmp15 = SlayerStorefrontItemCardDefault;
     obj1[1] = tmp2(1297).getIconSize(tmp2(1297).Icon.Sizes.LARGE);
     obj1[2] = tmp.giftIcon;
     let tmp6Result = tmp6(tmp15, obj1);
@@ -194,10 +178,10 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
   if (isGameItemSKUResult) {
     const obj6 = { game: null, size: null, skuId: null };
     obj6[0] = application;
-    obj6[1] = GameIcon.Sizes.SIZE_24;
+    obj6[1] = GameIconDefault.Sizes.SIZE_24;
     obj6[2] = sku.id;
-    tmp6Result = tmp6(GameIcon, obj6);
-    const tmp18 = GameIcon;
+    tmp6Result = tmp6(GameIconDefault, obj6);
+    const tmp18 = GameIconDefault;
   }
   const items4 = [tmp6Result, ];
   const obj7 = { variant: "text-md/normal", color: "text-subtle", style: tmp.subtitle, children: null };
@@ -242,43 +226,39 @@ prototype["renderHeader"] = function renderHeader(arg0, children) {
 };
 prototype["getCardHeaderThumbnail"] = function getCardHeaderThumbnail(id, giftStyle) {
   if (constants2.STANDARD_BOX === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault;
   } else if (tmp.CAKE === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault3;
   } else if (tmp.CHEST === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault4;
   } else if (tmp.COFFEE === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault2;
   } else if (tmp.SEASONAL_STANDARD_BOX === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault5;
   } else if (tmp.SEASONAL_CAKE === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault6;
   } else if (tmp.SEASONAL_CHEST === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault7;
   } else if (tmp.SEASONAL_COFFEE === giftStyle) {
-    return registerAsset;
+    return registerAssetDefault8;
   } else if (tmp.NITROWEEN_STANDARD === giftStyle) {
     const obj = { uri: null };
-    obj[0] = metadata;
+    obj[0] = metadataDefault;
     return obj;
   } else if (TIER_0.TIER_0 === id) {
-    return registerAsset;
+    return registerAssetDefault9;
   } else if (tmp3.TIER_1 === id) {
-    return registerAsset;
+    return registerAssetDefault10;
   } else {
     if (tmp3.TIER_2 !== id) {
       if (tmp3.LEGACY !== id) {
         return null;
       }
     }
-    return registerAsset;
+    return registerAssetDefault11;
   }
 };
 prototype["renderCardHeader"] = function renderCardHeader(sku) {
-  let application;
-  let id;
-  let name;
-  let subscriptionPlan;
   const self = this;
   const props = this.props;
   ({ application, subscriptionPlan } = props);
@@ -313,12 +293,8 @@ prototype["renderCardHeader"] = function renderCardHeader(sku) {
   }
 };
 prototype["render"] = function render() {
-  let entitlements;
-  let giftCodes;
-  let isFetching;
-  let sku;
   const self = this;
-  let loading = createCacheKey(this.context);
+  let loading = callback2(this.context);
   const props = this.props;
   ({ giftCodes, sku } = props);
   const isRefreshEnabled = props.isRefreshEnabled;
@@ -347,27 +323,24 @@ prototype["render"] = function render() {
         result = self.renderGenerateGiftCodeRow();
       }
       obj = { children: null };
-      const items2 = [result, giftCodes.map((code) => outer1_14(isRefreshEnabled(outer1_2[37]), { giftCode: code, sku, isFirst: 0 === arg1, isRefreshEnabled }, code.code))];
+      const items2 = [result, giftCodes.map((code) => closure_1_14(isRefreshEnabled(closure_1_2[37]), { giftCode: code, sku, isFirst: 0 === arg1, isRefreshEnabled }, code.code))];
       obj[0] = items2;
       tmpResult = tmp(importAllResult.Fragment, obj);
     }
-    const obj1 = { children: null };
+    obj1 = { children: null };
     obj1[0] = tmpResult;
     closure_14(tmp2, obj1);
   }
 };
 EntitlementGiftGroupCard.contextType = require("ManaContext").ThemeContext;
-let obj7 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED };
+let obj7 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
 let items = [importDefaultResult1, importDefaultResult4, importDefaultResult, importDefaultResult2, importDefaultResult3];
-let tmp11 = require("initialize").connectStores(items, (arg0) => {
-  let require;
-  let skuId;
-  let subscriptionPlanId;
+let tmp11 = importDefaultResult5.connectStores(items, (arg0) => {
   ({ skuId, subscriptionPlanId, giftStyle: require } = arg0);
   const value = importDefaultResult4.get(skuId);
   if (null == value) {
     const _Error = Error;
-    const error = new Error("SKU was unavailable while rendering gift.");
+    error = new Error("SKU was unavailable while rendering gift.");
     throw error;
   } else {
     let obj = { sku: null, isFetching: null, loadedAt: null, application: null, subscriptionPlan: null, giftCodes: null };
@@ -387,6 +360,6 @@ let tmp11 = require("initialize").connectStores(items, (arg0) => {
     return obj;
   }
 })(EntitlementGiftGroupCard);
-let result = require("addApplication").fileFinishedImporting("components_native/premium/EntitlementGiftGroupCard.tsx");
+let result = require("set").fileFinishedImporting("components_native/premium/EntitlementGiftGroupCard.tsx");
 
 export default tmp11;

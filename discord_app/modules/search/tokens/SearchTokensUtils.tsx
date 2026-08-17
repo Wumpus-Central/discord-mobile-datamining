@@ -1,5 +1,7 @@
 // discord_app/modules/search/tokens/SearchTokensUtils.tsx
-const result = require("set").fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/search/tokens/SearchTokensUtils.tsx");
 
 export const ANSWER_IN_REGEX = /(?:\s*#?((?:"(\\\\|\\"|[^\\"])*")|(?:[^\s]+)))/i;
 export const GENERIC_REGEX = /(?:\s*([^\s]+))/;

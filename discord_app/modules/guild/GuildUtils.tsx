@@ -1,14 +1,16 @@
 // discord_app/modules/guild/GuildUtils.tsx
-import { showTooManyUserGuildsAlert } from "../../actions/GuildActionCreators.tsx";
-let result = require("set").fileFinishedImporting("modules/guild/GuildUtils.tsx");
+import set from "set" /* 2 */;
+import showTooManyUserGuildsAlertDefault from "showTooManyUserGuildsAlert" /* 6778 */;
+
+let result = set.fileFinishedImporting("modules/guild/GuildUtils.tsx");
 
 export const handleJoinGuild = function handleJoinGuild(closure_0) {
-  const importDefault = closure_0;
+  importDefault = closure_0;
   if (null != closure_0) {
-    const obj = showTooManyUserGuildsAlert;
-    showTooManyUserGuildsAlert.joinGuild(closure_0).then(() => {
-      const result = callback(outer1_1[0]).transitionToGuildSync(callback);
+    const obj = showTooManyUserGuildsAlertDefault;
+    showTooManyUserGuildsAlertDefault.joinGuild(closure_0).then(() => {
+      const result = callback(closure_1_1[0]).transitionToGuildSync(callback);
     });
-    const joinGuildResult = showTooManyUserGuildsAlert.joinGuild(closure_0);
+    const joinGuildResult = showTooManyUserGuildsAlertDefault.joinGuild(closure_0);
   }
 };

@@ -1,13 +1,15 @@
 // discord_app/modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildBoostingProgressBarPersistedStore extends PersistedStore {
 }
 const prototype = GuildBoostingProgressBarPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
   }
 };
 prototype["getState"] = function getState() {
@@ -18,17 +20,15 @@ prototype["getCountForGuild"] = function getCountForGuild(guildId) {
 };
 GuildBoostingProgressBarPersistedStore.displayName = "GuildBoostingProgressBarPersistedStore";
 GuildBoostingProgressBarPersistedStore.persistKey = "PremiumGuildProgressBarPersistedStore";
-const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersistedStore(require("dispatcher"), {
+const guildBoostingProgressBarPersistedStore = new GuildBoostingProgressBarPersistedStore(dispatcherDefault, {
   APPLIED_GUILD_BOOST_COUNT_UPDATE: function handlePremiumCountUpdate(arg0) {
-    let guildId;
-    let premiumCount;
     const obj = {};
     ({ guildId, premiumCount } = arg0);
     const merged = Object.assign(obj);
     obj[guildId] = premiumCount;
   },
   APPLIED_GUILD_BOOST_COUNT_RESET: function handlePremiumCountReset() {
-    let closure_0 = {};
+    closure_0 = {};
   }
 });
 const result = require("set").fileFinishedImporting("modules/guild_boosting/GuildBoostingProgressBarPersistedStore.tsx");

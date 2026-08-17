@@ -1,21 +1,19 @@
 // discord_app/modules/media_viewer/native/components/MediaModalWebVideoFile.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c4 = importAllResult;
 let closure_6 = "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT;
 const memoResult = importAllResult.memo((style) => {
-  let controls;
-  let source;
   const visible = style.visible;
   ({ source, controls } = style);
   const merged = Object.assign(style, Object.create(null));
   let first;
   let callback;
-  let importAllResult;
-  let jsx;
+  importAllResult = undefined;
+  jsx = undefined;
   let ref;
   let mediaPlayerMutedStore;
   let obj = importAllResult;
@@ -73,7 +71,7 @@ const memoResult = importAllResult.memo((style) => {
       current.injectJavaScript("window.player.muted = " + JSON.stringify(mediaPlayerMutedStore) + "; true;");
       let tmp11 = visible;
       if (visible) {
-        tmp11 = c4 === visible(first[3]).PlayerState.UNREADY;
+        tmp11 = closure_4 === visible(first[3]).PlayerState.UNREADY;
       }
       if (tmp11) {
         tmp11 = first === visible(first[3]).PlayerState.READY;
@@ -84,7 +82,7 @@ const memoResult = importAllResult.memo((style) => {
       }
       let tmp19 = tmp10;
       if (visible) {
-        tmp19 = !c5;
+        tmp19 = !closure_5;
       }
       if (tmp19) {
         const current3 = tmp.current;
@@ -92,7 +90,7 @@ const memoResult = importAllResult.memo((style) => {
       }
       let tmp22 = !tmp10;
       if (!visible) {
-        tmp22 = c5;
+        tmp22 = closure_5;
       }
       if (tmp22) {
         const current4 = tmp.current;
@@ -109,13 +107,13 @@ const memoResult = importAllResult.memo((style) => {
   const merged1 = Object.assign(merged);
   return jsx(controls(first[3]), { html: combined, baseUrl: ref }, source.uri);
 });
-let result = require("jsxProd").fileFinishedImporting("modules/media_viewer/native/components/MediaModalWebVideoFile.tsx");
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalWebVideoFile.tsx");
 
 export default memoResult;
 export const createWebFileVideoControls = function createWebFileVideoControls() {
   const ref = importAllResult.createRef();
-  let c5 = 0;
-  let c6 = 0;
+  c5 = 0;
+  c6 = 0;
   obj = {
     seek(arg0) {
       const current = ref.current;
@@ -137,9 +135,9 @@ export const createWebFileVideoControls = function createWebFileVideoControls() 
       }
     },
     useSubscribe(arg0, arg1, arg2) {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let closure_2 = arg2;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      closure_2 = arg2;
       const layoutEffect = React.useLayoutEffect(() => {
         if (closure_0 != null) {
           tmp(closure_4, closure_5);
@@ -152,20 +150,20 @@ export const createWebFileVideoControls = function createWebFileVideoControls() 
     ref,
     onPlayerStateChange(arg0) {
       if (closure_1 != null) {
-        tmp(arg0 === outer1_0(outer1_2[3]).PlayerState.PAUSED || arg0 === outer1_0(outer1_2[3]).PlayerState.ENDED);
-        const tmp3 = outer1_0;
-        const tmp4 = outer1_2;
-        const tmp5 = arg0 === outer1_0(outer1_2[3]).PlayerState.PAUSED || arg0 === outer1_0(outer1_2[3]).PlayerState.ENDED;
+        tmp(arg0 === closure_1_0(closure_1_2[3]).PlayerState.PAUSED || arg0 === closure_1_0(closure_1_2[3]).PlayerState.ENDED);
+        const tmp3 = closure_1_0;
+        const tmp4 = closure_1_2;
+        const tmp5 = arg0 === closure_1_0(closure_1_2[3]).PlayerState.PAUSED || arg0 === closure_1_0(closure_1_2[3]).PlayerState.ENDED;
       }
     },
     onCurrentSecond(arg0) {
-      let closure_4 = arg0;
+      closure_4 = arg0;
       if (closure_0 != null) {
         tmp(closure_4, c5);
       }
     },
     onDuration(arg0) {
-      let closure_5 = arg0;
+      closure_5 = arg0;
       if (closure_0 != null) {
         tmp(c4, closure_5);
       }
@@ -176,7 +174,7 @@ export const createWebFileVideoControls = function createWebFileVideoControls() 
       }
     },
     onDownloadProgress(arg0) {
-      let closure_6 = arg0;
+      closure_6 = arg0;
       if (c5 > 0) {
         if (closure_2 != null) {
           tmp4(tmp3);

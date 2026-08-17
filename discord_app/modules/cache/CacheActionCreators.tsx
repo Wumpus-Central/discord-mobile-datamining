@@ -1,15 +1,15 @@
 // discord_app/modules/cache/CacheActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { ChannelLoader } from "ensureGuildLoaded";
-import handleClearCaches from "handleClearCaches";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { ChannelLoader } from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleClearCaches" /* 5067 */;
 
 function _writeCaches() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (c4 === 2) {
         c4 = 3;
@@ -37,7 +37,7 @@ function _writeCaches() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp5;
+              closure_2 = tmp5;
               let table = tmp2;
               let flag;
               if (flag === undefined) {
@@ -55,7 +55,7 @@ function _writeCaches() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c4 = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else if (c4.canWriteCaches(flag)) {
@@ -107,7 +107,7 @@ function _writeCaches() {
     iter.next();
     return iter;
   });
-  const _writeCaches = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -116,7 +116,7 @@ function _writeCaches() {
   }
   return applyArgumentsResult;
 }
-const result = require("handleClearCaches").fileFinishedImporting("modules/cache/CacheActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/cache/CacheActionCreators.tsx");
 
 export const writeCaches = function writeCaches(arg0) {
   const self = this;
@@ -129,5 +129,5 @@ export const writeCaches = function writeCaches(arg0) {
   return applyArgumentsResult;
 };
 export const clearCaches = function clearCaches() {
-  dispatcher.dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
+  dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "Requested by user", preventWritingCachesAgainThisSession: true, resetSocket: true });
 };

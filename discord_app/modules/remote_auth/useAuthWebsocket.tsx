@@ -1,35 +1,34 @@
 // discord_app/modules/remote_auth/useAuthWebsocket.tsx
-import RemoteAuthStep from "RemoteAuthStep";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ME from "ME";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ ComponentActions: closure_6, Endpoints: error } = ME);
-const metroImportAll = new require("ME")("useAuthWebsocket");
-const tmp3 = new require("ME")("useAuthWebsocket");
-const result = require("noop").fileFinishedImporting("modules/remote_auth/useAuthWebsocket.tsx");
+let closure_8 = new timestampDefault("useAuthWebsocket");
+const tmp3 = new timestampDefault("useAuthWebsocket");
+const result = require("set").fileFinishedImporting("modules/remote_auth/useAuthWebsocket.tsx");
 
 export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
   const _require = callback;
-  const importDefault = arg1;
+  importDefault = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
-  let RemoteAuthStep;
+  closure_3 = undefined;
   let first;
   let React;
   let state;
-  let closure_7;
-  let closure_8;
+  closure_7 = undefined;
+  closure_8 = undefined;
   let memo;
   let cancel;
   callback = undefined;
   let tmp = first(React.useState(0), 2);
-  RemoteAuthStep = tmp[1];
+  closure_3 = tmp[1];
   const tmp2 = first(React.useState(false), 2);
   first = tmp2[0];
   React = tmp4;
@@ -39,18 +38,18 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
   closure_8 = React.useRef(null);
   memo = React.useMemo(() => new callback2(flag[6])(1500, 30000), []);
   cancel = importDefault(flag[7])(() => {
-    callback4({ step: callback(flag[5]).RemoteAuthStep.INITIALIZING });
+    callback5({ step: callback(flag[5]).RemoteAuthStep.INITIALIZING });
     if (closure_1) {
       callback3((arg0) => arg0 + 1);
     } else {
       logger.info("document is not visible, will defer reconnection when document becomes visible.");
-      _undefined(true);
+      callback4(true);
     }
   });
   const items = [cancel, memo];
   callback = React.useCallback(() => {
     logger.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session.");
-    callback4({ step: callback(flag[5]).RemoteAuthStep.INITIALIZING });
+    callback5({ step: callback(flag[5]).RemoteAuthStep.INITIALIZING });
     if (!memo.pending) {
       memo.fail(cancel);
     }
@@ -66,7 +65,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
     }
     if (tmp) {
       logger.info("reconnecting, now that document is visible");
-      _undefined(false);
+      callback4(false);
       callback3((arg0) => arg0 + 1);
     }
   }, items1);
@@ -80,7 +79,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
         return c3;
       } else {
         const _Error = Error;
-        const error = new Error("No key pair set");
+        error = new Error("No key pair set");
         throw error;
       }
     }
@@ -110,9 +109,9 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
     function _onmessage() {
       let self = this;
       const tmp = _null((arg0) => {
-        let closure_0 = arg0;
-        let c3 = 0;
-        let c4 = 0;
+        closure_0 = arg0;
+        c3 = 0;
+        c4 = 0;
         const iter = (function*(arg0) {
           if (catchPromise === 2) {
             catchPromise = 3;
@@ -130,7 +129,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
           } else {
             try {
               catchPromise = 2;
-              if (0 === RemoteAuthStep) {
+              if (0 === closure_3) {
                 if (arg0 === 1) {
                   catchPromise = 3;
                   throw arg1;
@@ -140,19 +139,19 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let c2 = tmp5;
-                  let c1 = tmp2;
+                  c2 = tmp5;
+                  c1 = tmp2;
                   let data;
                   data = data.data;
                   c1 = undefined;
                   c2 = undefined;
-                  RemoteAuthStep = undefined;
+                  closure_3 = undefined;
                   catchPromise = undefined;
-                  let c5;
-                  let c6;
-                  let closure_7;
-                  let c8;
-                  RemoteAuthStep = 1;
+                  closure_5 = undefined;
+                  c6 = undefined;
+                  let _true;
+                  c8 = undefined;
+                  closure_3 = 1;
                   catchPromise = 1;
                   return { value: "ct", done: true };
                 }
@@ -162,59 +161,59 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   throw arg1;
                 } else if (arg0 === 2) {
                   catchPromise = 3;
-                  let obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
                   catchPromise = c1;
                   catchPromise = globalThis;
                   const _JSON2 = JSON;
-                  catchPromise = outer2_0;
-                  const outer2_1 = JSON.parse(outer2_0);
-                  catchPromise = outer2_1;
-                  const op = outer2_1.op;
+                  catchPromise = closure_2_0;
+                  const lib = JSON.parse(closure_2_0);
+                  catchPromise = lib;
+                  const op = lib.op;
                   if ("nonce_proof" === op) {
-                    const outer1_2 = outer1_1.encrypted_nonce;
-                    let obj15 = outer2_1(outer2_2[9]);
-                    RemoteAuthStep = 2;
+                    encrypted_nonce = closure_1_1.encrypted_nonce;
+                    let obj15 = lib(closure_2_2[9]);
+                    closure_3 = 2;
                     catchPromise = 1;
-                    let obj2 = { value: null, done: false };
-                    obj2[0] = obj15.decryptNonce(outer2_8(), outer1_2);
+                    obj2 = { value: null, done: false };
+                    obj2[0] = obj15.decryptNonce(closure_2_8(), encrypted_nonce);
                     return obj2;
                   } else if ("pending_remote_init" === op) {
-                    outer1_9.succeed();
-                    const ComponentDispatch2 = outer2_0(outer2_2[10]).ComponentDispatch;
-                    ComponentDispatch2.dispatch(outer2_6.WAVE_EMPHASIZE);
-                    let obj13 = outer2_1(outer2_2[9]);
-                    RemoteAuthStep = 3;
+                    closure_1_9.succeed();
+                    const ComponentDispatch2 = closure_2_0(closure_2_2[10]).ComponentDispatch;
+                    ComponentDispatch2.dispatch(closure_2_6.WAVE_EMPHASIZE);
+                    let obj13 = lib(closure_2_2[9]);
+                    closure_3 = 3;
                     catchPromise = 1;
                     let obj3 = { value: null, done: false };
-                    obj3[0] = obj13.publicKeyFingerprint(outer1_8());
+                    obj3[0] = obj13.publicKeyFingerprint(heartbeat_interval());
                     return obj3;
                   } else if ("pending_login" === op) {
-                    const outer1_5 = outer1_1.ticket;
-                    if (null == outer1_5) {
-                      outer1_11();
+                    ticket = closure_1_1.ticket;
+                    if (null == ticket) {
+                      closure_1_11();
                     } else {
                       catchPromise = c1;
                       catchPromise = c2;
-                      catchPromise = outer1_7;
+                      catchPromise = _true;
                       let obj4 = { step: null, ticket: null };
-                      catchPromise = outer2_0;
-                      catchPromise = outer2_2;
-                      obj4[0] = outer2_0(outer2_2[5]).RemoteAuthStep.PENDING_LOGIN;
-                      catchPromise = outer1_5;
-                      obj4[1] = outer1_5;
-                      catchPromise = outer1_7(obj4);
-                      catchPromise = outer2_0;
-                      catchPromise = outer2_2;
-                      const HTTP = outer2_0(outer2_2[11]).HTTP;
+                      catchPromise = closure_2_0;
+                      catchPromise = closure_2_2;
+                      obj4[0] = closure_2_0(closure_2_2[5]).RemoteAuthStep.PENDING_LOGIN;
+                      catchPromise = ticket;
+                      obj4[1] = ticket;
+                      catchPromise = _true(obj4);
+                      catchPromise = closure_2_0;
+                      catchPromise = closure_2_2;
+                      const HTTP = closure_2_0(closure_2_2[11]).HTTP;
                       let obj5 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-                      catchPromise = outer2_7;
-                      obj5[0] = outer2_7.REMOTE_AUTH_LOGIN;
+                      catchPromise = closure_2_7;
+                      obj5[0] = closure_2_7.REMOTE_AUTH_LOGIN;
                       let obj6 = { ticket: null };
-                      catchPromise = outer1_5;
-                      obj6[0] = outer1_5;
+                      catchPromise = ticket;
+                      obj6[0] = ticket;
                       obj5[1] = obj6;
                       const postResult = HTTP.post(obj5);
                       catchPromise = HTTP.post(obj5).then((() => { ... })()).catch(() => { ... });
@@ -222,37 +221,37 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                     }
                     catchPromise = 3;
                   } else if ("pending_ticket" === op) {
-                    const ComponentDispatch = outer2_0(outer2_2[10]).ComponentDispatch;
-                    ComponentDispatch.dispatch(outer2_6.WAVE_EMPHASIZE);
-                    outer1_1("remote auth handshake started, awaiting ticket/cancel.");
-                    let outer1_6 = outer1_1.encrypted_user_payload;
-                    let obj11 = outer2_0(outer2_2[13]);
-                    RemoteAuthStep = 4;
+                    const ComponentDispatch = closure_2_0(closure_2_2[10]).ComponentDispatch;
+                    ComponentDispatch.dispatch(closure_2_6.WAVE_EMPHASIZE);
+                    closure_1_1("remote auth handshake started, awaiting ticket/cancel.");
+                    let timeout = closure_1_1.encrypted_user_payload;
+                    let obj11 = closure_2_0(closure_2_2[13]);
+                    closure_3 = 4;
                     catchPromise = 1;
                     let obj7 = { value: null, done: false };
-                    obj7[0] = obj11.decodeEncodedUserRecord(outer1_8(), outer1_6);
+                    obj7[0] = obj11.decodeEncodedUserRecord(heartbeat_interval(), timeout);
                     return obj7;
                   } else if ("cancel" === op) {
-                    outer1_1("remote auth handshake cancelled.");
-                    outer1_10();
+                    closure_1_1("remote auth handshake cancelled.");
+                    closure_1_10();
                     catchPromise = 3;
                     const obj8 = { value: null, done: true };
                     obj8[0] = undefined;
                     return obj8;
                   } else if ("hello" === op) {
                     const _HermesInternal2 = HermesInternal;
-                    outer1_1("got hello, auth timeout=" + outer1_1.timeout_ms + "ms");
-                    outer1_8 = outer1_1.heartbeat_interval;
+                    closure_1_1("got hello, auth timeout=" + closure_1_1.timeout_ms + "ms");
+                    heartbeat_interval = closure_1_1.heartbeat_interval;
                     const _setTimeout = setTimeout;
                     const _Math = Math;
                     const _Math2 = Math;
-                    outer1_6 = setTimeout(() => { ... }, Math.floor(outer1_8 * Math.random()));
+                    timeout = setTimeout(() => { ... }, Math.floor(heartbeat_interval * Math.random()));
                     catchPromise = 3;
                     const obj9 = { value: null, done: true };
                     obj9[0] = undefined;
                     return obj9;
                   } else if ("heartbeat_ack" === op) {
-                    outer1_7 = true;
+                    _true = true;
                     catchPromise = 3;
                     return { value: "HermesInternal", done: "HermesInternal" };
                   } else {
@@ -271,12 +270,12 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   obj10[0] = arg1;
                   return obj10;
                 } else {
-                  RemoteAuthStep = arg1;
-                  outer2_1("computed nonce proof");
+                  closure_3 = arg1;
+                  lib("computed nonce proof");
                   let _JSON = JSON;
                   obj11 = { op: "nonce_proof", nonce: null };
-                  obj11[1] = RemoteAuthStep;
-                  outer2_2.send(JSON.stringify(obj11));
+                  obj11[1] = closure_3;
+                  closure_2_2.send(JSON.stringify(obj11));
                   catchPromise = 3;
                   const obj12 = { value: null, done: true };
                   obj12[0] = undefined;
@@ -292,18 +291,18 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                   obj13[0] = arg1;
                   return obj13;
                 } else {
-                  const outer2_4 = arg1;
-                  if (outer2_4 !== outer2_1.fingerprint) {
+                  closure_4 = arg1;
+                  if (closure_4 !== lib.fingerprint) {
                     const _Error = Error;
                     let _HermesInternal = HermesInternal;
-                    const error = new Error("bad fingerprint " + c4 + " !== " + outer1_1.fingerprint);
+                    error = new Error("bad fingerprint " + c4 + " !== " + closure_1_1.fingerprint);
                     throw error;
                   } else {
-                    outer2_1("handshake complete awaiting remote auth.");
+                    lib("handshake complete awaiting remote auth.");
                     const obj14 = { step: null, fingerprint: null };
-                    obj14[0] = outer2_0(outer2_2[5]).RemoteAuthStep.PENDING_REMOTE_INIT;
+                    obj14[0] = closure_2_0(closure_2_2[5]).RemoteAuthStep.PENDING_REMOTE_INIT;
                     obj14[1] = catchPromise;
-                    outer1_7(obj14);
+                    _true(obj14);
                     catchPromise = 3;
                     obj15 = { value: null, done: true };
                     obj15[0] = undefined;
@@ -319,11 +318,11 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                 obj16[0] = arg1;
                 return obj16;
               } else {
-                closure_7 = arg1;
+                _true = arg1;
                 obj = { step: null, user: null };
-                obj[0] = outer2_0(outer2_2[5]).RemoteAuthStep.PENDING_TICKET;
-                obj[1] = closure_7;
-                outer1_7(obj);
+                obj[0] = closure_2_0(closure_2_2[5]).RemoteAuthStep.PENDING_TICKET;
+                obj[1] = _true;
+                _true(obj);
                 catchPromise = 3;
                 const obj17 = { value: null, done: true };
                 obj17[0] = undefined;
@@ -337,7 +336,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
         iter.next();
         return iter;
       });
-      const _onmessage = tmp;
+      closure_11 = tmp;
       let apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -385,11 +384,11 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp4;
+                closure_1 = tmp4;
                 c2 = 1;
                 c3 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = outer2_1(outer2_2[9]).generateRsaKeyPair();
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_2_1(closure_2_2[9]).generateRsaKeyPair();
                 return obj1;
               }
             } else if (1 === tmp4) {
@@ -398,12 +397,12 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                 throw arg1;
               } else if (arg0 === 2) {
                 c3 = 3;
-                const obj2 = { value: null, done: true };
+                obj2 = { value: null, done: true };
                 obj2[0] = arg1;
                 return obj2;
               } else {
                 c3 = arg1;
-                let obj4 = outer2_1(outer2_2[9]);
+                let obj4 = closure_2_1(closure_2_2[9]);
                 c2 = 2;
                 c3 = 1;
                 const obj3 = { value: null, done: false };
@@ -420,9 +419,9 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
                 obj4[0] = arg1;
                 return obj4;
               } else {
-                let _slicedToArray = arg1;
-                const callback = closure_1;
-                obj1 = outer2_1(outer2_2[9]);
+                closure_4 = arg1;
+                callback = closure_1;
+                obj1 = closure_2_1(closure_2_2[9]);
                 c2 = 3;
                 c3 = 1;
                 const obj5 = { value: null, done: false };
@@ -442,9 +441,9 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
               callback("connected, handshaking with fingerprint: " + arg1);
               const _JSON = JSON;
               const obj6 = { op: "init", encoded_public_key: null };
-              obj6[1] = _slicedToArray;
+              obj6[1] = closure_4;
               c2.send(JSON.stringify(obj6));
-              outer1_8.current = c3;
+              closure_1_8.current = c3;
               c3 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             }
@@ -454,7 +453,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
           }
         }
       });
-      const _onopen = tmp;
+      closure_13 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -473,7 +472,7 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
       getKeyPair.info("[" + `${Date.now() - closure_0}ms` + "] " + combined);
       _onmessage();
     }
-    let closure_0 = Date.now();
+    closure_0 = Date.now();
     let combined = "" + window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT + "/?v=2";
     let combined1 = combined;
     if (combined.startsWith("//")) {
@@ -482,11 +481,11 @@ export const useAuthWebsocket = function useAuthWebsocket(callback, arg1) {
     }
     let obj2 = callback2(flag[8])(combined1);
     logger.info("[0ms] connecting to " + combined1);
-    let c3 = null;
-    let c4 = null;
-    let c5 = null;
-    let c6 = null;
-    let c7 = true;
+    c3 = null;
+    c4 = null;
+    c5 = null;
+    c6 = null;
+    c7 = true;
     const listener = obj2.addEventListener("open", onopen);
     const listener1 = obj2.addEventListener("message", onmessage);
     const listener2 = obj2.addEventListener("close", onclose);

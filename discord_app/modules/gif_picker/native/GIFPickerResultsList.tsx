@@ -1,14 +1,14 @@
 // discord_app/modules/gif_picker/native/GIFPickerResultsList.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { list: null };
 createCacheKey = { marginHorizontal: -require("transformFavoriteGifUrl").GIF_PICKER_GUTTER_SPACING / 2 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_6 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { length: 20 };
 let arr = Array.from(obj1);
 let closure_7 = arr.map(() => {
@@ -16,19 +16,9 @@ let closure_7 = arr.map(() => {
 });
 arr = Array.from(obj1);
 let closure_8 = arr.map(() => ({ width: 100, height: Math.floor(91 * Math.random()) + 90 }));
-const result = require("jsxProd").fileFinishedImporting("modules/gif_picker/native/GIFPickerResultsList.tsx");
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerResultsList.tsx");
 
 export default function GIFPickerResultsList(columnWidth) {
-  let ListFooterComponent;
-  let c0;
-  let columns;
-  let inActionSheet;
-  let keyboardDismissMode;
-  let loading;
-  let onPressGIF;
-  let resultItems;
-  let selectedGifSrc;
-  let tmp6;
   columnWidth = columnWidth.columnWidth;
   let _require = columnWidth;
   ({ resultItems, onPressGIF } = columnWidth);
@@ -52,7 +42,7 @@ export default function GIFPickerResultsList(columnWidth) {
     }
     return src;
   }, []);
-  const tmp = createCacheKey();
+  const tmp = callback();
   [tmp6, c0] = callback(React.useState(() => new Set()), 2);
   React = tmp6;
   const items1 = [tmp6, selectedGifSrc];
@@ -72,15 +62,12 @@ export default function GIFPickerResultsList(columnWidth) {
   const items2 = [onPressGIF, callback];
   const memo = React.useMemo(() => ({ viewedItemIndexes: c4, selectedGifSrc }), items1);
   const callback3 = React.useCallback((arg0) => {
-    let extraData;
-    let index;
-    let item;
     ({ item, index, extraData } = arg0);
     if (null == item) {
-      const size = outer1_8[index];
+      const size = closure_1_8[index];
       let obj = { height: null };
       obj[0] = callback(size.width, size.height).height;
-      return outer1_5(_undefined(selectedGifSrc[6]).GIFPickerItemPlaceholder, obj);
+      return closure_1_5(_undefined(selectedGifSrc[6]).GIFPickerItemPlaceholder, obj);
     } else {
       const height = callback(item.width, item.height).height;
       const viewedItemIndexes = extraData.viewedItemIndexes;

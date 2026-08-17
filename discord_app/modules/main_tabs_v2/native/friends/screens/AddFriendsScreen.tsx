@@ -1,27 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx
-import ActivityIndicator from "ActivityIndicator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import set from "set";
-import get_ActivityIndicator from "getInviteURL";
-import recountRelationshipTypes from "recountRelationshipTypes";
-import closure_9 from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Sections } from "SuggestedFriendSource";
-import ME from "ME";
-import { ContactPermissions } from "ContactSyncLandingPage";
-import jsxProd from "QUICK_SWITCHER";
-import createCacheKey from "createCacheKey";
-import { handleNameInputScreenOrSuggestions } from "../../../../contact_sync/native/ContactSyncModalActionCreators.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import handleNameInputScreenOrSuggestions from "handleNameInputScreenOrSuggestions" /* 11849 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "recountRelationshipTypes" /* 5406 */;
+import closure_9 from "markAllUserIdListsStale" /* 4030 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import { Sections } from "SuggestedFriendSource" /* 11872 */;
+import ME from "ME" /* 676 */;
+import { ContactPermissions } from "ContactSyncLandingPage" /* 11851 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_17;
-let closure_18;
-let closure_6;
-let error;
-let map1;
-const require = arg1;
+require = arg1;
 function handleFindFriends() {
   handleNameInputScreenOrSuggestions.openContactSyncModal({}, constants.FRIENDS_ADD_FRIENDS_MODAL);
 }
@@ -38,10 +31,10 @@ function handleShare() {
 function _handleShare() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, code) {
       if (c6 === 2) {
         c6 = 3;
@@ -69,15 +62,15 @@ function _handleShare() {
               obj[0] = code;
               return obj;
             } else {
-              const dependencyMap = tmp3;
+              dependencyMap = tmp3;
               code = tmp7;
               code = undefined;
-              let c4 = 1;
-              let obj3 = outer1_1(outer1_2[14]);
+              c4 = 1;
+              let obj3 = closure_1_1(closure_1_2[14]);
               c5 = 2;
               c6 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = obj3.createFriendInvite(null, outer1_14.ADD_FRIENDS_MODAL);
+              obj1 = { value: null, done: false };
+              obj1[0] = obj3.createFriendInvite(null, closure_1_14.ADD_FRIENDS_MODAL);
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -113,7 +106,7 @@ function _handleShare() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp21) {
-          let ActivityIndicator = tmp21;
+          closure_3 = tmp21;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp21;
@@ -124,7 +117,7 @@ function _handleShare() {
       }
     })();
   });
-  const _handleShare = tmp;
+  closure_23 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -134,7 +127,7 @@ function _handleShare() {
   return applyArgumentsResult;
 }
 function areHydratedGameFriendRequestRowStatesEqual(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let tmp = arr === arg1;
   if (!tmp) {
     tmp = arr.length === arg1.length && arr.every((user) => user.user === table[arg1].user && user.applicationId === table[arg1].applicationId);
@@ -147,71 +140,62 @@ function areHydratedGameFriendRequestRowStatesEqual(arr) {
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { FIND_FRIENDS: 0, [0]: "FIND_FRIENDS", INCOMING_FRIEND_REQUESTS: 1, [1]: "INCOMING_FRIEND_REQUESTS", INCOMING_GAME_FRIEND_REQUESTS: 2, [2]: "INCOMING_GAME_FRIEND_REQUESTS", CONTACT_SUGGESTIONS: 3, [3]: "CONTACT_SUGGESTIONS" };
 createCacheKey = { container: { flex: 1 }, inviteAppsContainerNonSticky: null, inviteAppsContentContainer: null, emptyContainer: null, emptyActionContainer: null, loading: null };
-createCacheKey = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: require("Themes").space.PX_16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, paddingVertical: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { paddingTop: 0, paddingBottom: 0, minWidth: "100%" };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-let obj1 = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey[4] = { marginHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8 };
-let obj2 = { marginHorizontal: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_8 };
-createCacheKey[5] = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
-let result = require("noop").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx");
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let obj1 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[4] = { marginHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+let obj2 = { marginHorizontal: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
+let closure_20 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, justifyContent: "center", flex: 1 };
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendsScreen.tsx");
 
 export default function AddFriendsScreen(navigation) {
-  let c0;
-  let c17;
-  let c18;
-  let c3;
-  let c4;
-  let c5;
-  let c6;
-  let friendSuggestions;
-  let tmp24;
   navigation = navigation.navigation;
   let _require = navigation;
-  let importDefault = navigation.route.params.sourcePage;
+  importDefault = navigation.route.params.sourcePage;
   let analyticsLocations;
   let callback;
   c4 = undefined;
   let React;
   c6 = undefined;
   let first;
-  let recountRelationshipTypes;
+  closure_8 = undefined;
   let first1;
-  let mergeGuildAvatar;
-  let closure_11;
-  let closure_12;
+  closure_10 = undefined;
+  closure_11 = undefined;
+  closure_12 = undefined;
   callback = undefined;
-  let closure_14;
+  closure_14 = undefined;
   let stateFromStoresArray;
   let stateFromStores;
   let callback3;
   c18 = undefined;
   friendSuggestions = undefined;
-  let createCacheKey;
-  let c21;
-  let c22;
+  let callback4;
+  closure_21 = undefined;
+  c22 = undefined;
   let memo1;
-  let tmp = createCacheKey();
+  let tmp = callback4();
   let tmp2 = importDefault;
   let obj = analyticsLocations;
   analyticsLocations = importDefault(analyticsLocations[20])(importDefault(analyticsLocations[21]).ADD_FRIENDS).analyticsLocations;
-  let obj1 = React;
+  obj1 = React;
   let tmp3 = importDefault(analyticsLocations[20]);
   [c3, c4] = callback(React.useState([]), 2);
   let tmp5 = callback(React.useState([]), 2);
   [c5, c6] = callback(React.useState([]), 2);
   const tmp7 = callback(React.useState([]), 2);
   first = tmp7[0];
-  recountRelationshipTypes = tmp7[1];
+  closure_8 = tmp7[1];
   const tmp9 = callback(React.useState([]), 2);
   first1 = tmp9[0];
-  mergeGuildAvatar = tmp9[1];
+  closure_10 = tmp9[1];
   closure_11 = React.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     if (null != arg1) {
       user((arg0) => {
         const items = [];
@@ -227,8 +211,8 @@ export default function AddFriendsScreen(navigation) {
     }
   }, []);
   closure_12 = React.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     if (null != arg1) {
       gameRelationshipsByType((arg0) => {
         const items = [];
@@ -257,7 +241,7 @@ export default function AddFriendsScreen(navigation) {
     callback(analyticsLocations[24])({ userId: id.id, localUser: id, sourceAnalyticsLocations: analyticsLocations, location: "Add Friends Modal User Profile" });
   }, items1);
   let obj2 = _require(analyticsLocations[25]);
-  const items2 = [first1, mergeGuildAvatar];
+  const items2 = [first1, closure_10];
   stateFromStoresArray = obj2.useStateFromStoresArray(items2, () => {
     const items = [];
     const mutableRelationships = first1.getMutableRelationships();
@@ -287,7 +271,7 @@ export default function AddFriendsScreen(navigation) {
     }
     const items1 = [];
     const item = _undefined4.forEach((arg0) => {
-      const user = outer1_10.getUser(arg0);
+      const user = closure_1_10.getUser(arg0);
       if (null != user) {
         items1.push(user);
       }
@@ -300,7 +284,7 @@ export default function AddFriendsScreen(navigation) {
     });
   });
   let obj3 = _require(analyticsLocations[25]);
-  const items3 = [recountRelationshipTypes, first1, mergeGuildAvatar];
+  const items3 = [closure_8, first1, closure_10];
   const items4 = [first1, first];
   stateFromStores = obj3.useStateFromStores(items3, () => {
     gameRelationshipsByType = gameRelationshipsByType.getGameRelationshipsByType(stateFromStoresArray.PENDING_INCOMING);
@@ -315,7 +299,7 @@ export default function AddFriendsScreen(navigation) {
         someResult = null == user;
       }
       if (!someResult) {
-        someResult = outer1_7.some((userId) => userId.userId === id && userId.applicationId === tmp);
+        someResult = closure_1_7.some((userId) => userId.userId === id && userId.applicationId === tmp);
       }
       if (!someResult) {
         obj = { user: null, applicationId: null };
@@ -347,15 +331,15 @@ export default function AddFriendsScreen(navigation) {
   if (tmp15) {
     tmp15 = stateFromStoresArray.length > 3;
   }
-  createCacheKey = tmp15;
+  callback4 = tmp15;
   let tmp16 = friendSuggestions.length > 0;
   if (tmp16) {
     tmp16 = stateFromStores.length > 3;
   }
-  c21 = tmp16;
+  closure_21 = tmp16;
   const items5 = [stateFromStores, tmp16];
   const memo = obj1.useMemo(() => {
-    if (c21) {
+    if (closure_21) {
       const _Math = Math;
       let length = Math.min(stateFromStores.length, 3);
     } else {
@@ -392,9 +376,9 @@ export default function AddFriendsScreen(navigation) {
     if (obj.isContactSyncAvailable()) {
       const result = _undefined(analyticsLocations[18]).checkContactPermissions();
       result.then((arg0) => {
-        const obj = outer1_0(outer1_2[19]);
-        const tmp = outer1_16;
-        let tmp3 = arg0 === outer1_16.NOT_DETERMINED;
+        const obj = closure_1_0(closure_1_2[19]);
+        const tmp = closure_1_16;
+        let tmp3 = arg0 === closure_1_16.NOT_DETERMINED;
         if (!tmp3) {
           tmp3 = tmp2;
         }
@@ -422,11 +406,11 @@ export default function AddFriendsScreen(navigation) {
     const items = [num, , , ];
     let num2 = 4;
     let num3 = 4;
-    if (!c20) {
+    if (!closure_20) {
       num3 = stateFromStoresArray.length;
     }
     items[1] = num3;
-    if (!c21) {
+    if (!closure_21) {
       num2 = stateFromStores.length;
     }
     items[2] = num2;
@@ -443,7 +427,7 @@ export default function AddFriendsScreen(navigation) {
         obj[1] = obj;
         return obj;
       } else if (tmp.INCOMING_GAME_FRIEND_REQUESTS === arg0) {
-        const obj1 = { type: "section", props: null };
+        obj1 = { type: "section", props: null };
         const obj2 = { title: null };
         const intl2 = _undefined(analyticsLocations[16]).intl;
         obj2[0] = intl2.string(_undefined(analyticsLocations[16]).t["0uVuaU"]);
@@ -505,22 +489,21 @@ export default function AddFriendsScreen(navigation) {
     const obj8 = { sections: null, getItemProps: null, getSectionProps: null, insetEnd: 12, disableStickySections: true };
     obj8[0] = memo1;
     obj8[1] = function getItemProps(arg0, arg1) {
-      let c0 = tmp;
-      let closure_1 = tmp2;
+      closure_0 = tmp;
+      closure_1 = tmp2;
       if (friendSuggestions.FIND_FRIENDS === arg0) {
         if (tmp) {
           if (c22) {
             let obj = { type: "custom", itemType: "showContactSyncCTA", key: "showContactSyncCTA", component: null };
             obj[3] = function component() {
               let obj = { start: true, height: "100%", label: null, labelLineClamp: 1, icon: null, trailing: null, onPress: null };
-              const intl = tmp(tmp15[16]).intl;
-              obj[2] = intl.string(tmp(tmp15[16]).t.j2POVo);
-              obj = { IconComponent: null };
-              obj[0] = tmp(tmp15[35]).FriendsIcon;
-              obj[4] = callback(tmp(tmp15[34]).TableRow.Icon, obj);
-              obj[5] = callback(tmp(tmp15[34]).TableRow.Arrow, {});
+              const intl = callback(id[16]).intl;
+              obj[2] = intl.string(callback(id[16]).t.j2POVo);
+              obj = { IconComponent: callback(id[35]).FriendsIcon };
+              obj[4] = callback3(callback(id[34]).TableRow.Icon, obj);
+              obj[5] = callback3(callback(id[34]).TableRow.Arrow, {});
               obj[6] = closure_21;
-              return callback(tmp(tmp15[34]).TableRow, obj);
+              return callback3(callback(id[34]).TableRow, obj);
             };
           }
           return obj;
@@ -528,54 +511,43 @@ export default function AddFriendsScreen(navigation) {
         obj = { type: "custom", itemType: "addByUsername", key: "addByUsername", component: null };
         obj[3] = function component() {
           let obj = { start: !closure_22, end: true, height: "100%", label: null, labelLineClamp: 1, icon: null, arrow: true, onPress: null };
-          const intl = tmp(tmp15[16]).intl;
-          obj[3] = intl.string(tmp(tmp15[16]).t.QzVsOs);
-          obj = { IconComponent: null };
-          obj[0] = tmp(tmp15[36]).AtIcon;
-          obj[5] = outer1_17(tmp(tmp15[34]).TableRow.Icon, obj);
+          const intl = callback(id[16]).intl;
+          obj[3] = intl.string(callback(id[16]).t.QzVsOs);
+          obj = { IconComponent: callback(id[36]).AtIcon };
+          obj[5] = closure_1_17(callback(id[34]).TableRow.Icon, obj);
           obj[7] = closure_13;
-          return outer1_17(tmp(tmp15[34]).TableRow, obj);
+          return closure_1_17(callback(id[34]).TableRow, obj);
         };
       } else if (tmp3.INCOMING_FRIEND_REQUESTS === arg0) {
         if (tmp2) {
-          if (c20) {
-            const obj1 = { type: "custom", itemType: "viewAll", key: "friendRequestsViewAll", component: null };
+          if (closure_20) {
+            obj1 = { type: "custom", itemType: "viewAll", key: "friendRequestsViewAll", component: null };
             obj1[3] = function component() {
               let obj = {
                 onPress() {
-                  let obj = outer1_1(outer1_2[23]);
-                  obj = { section_id: outer1_11.PENDING, truncated_count: 3, expanded_count: length.length, location: "AddFriends" };
-                  obj.track(outer1_12.FRIEND_FINDER_SECTION_EXPANDED, obj);
+                  let obj = closure_1_1(closure_1_2[23]);
+                  obj = { section_id: closure_1_11.PENDING, truncated_count: 3, expanded_count: length.length, location: "AddFriends" };
+                  obj.track(closure_1_12.FRIEND_FINDER_SECTION_EXPANDED, obj);
                   navigation.navigate("requests");
                 },
-                users: null,
-                count: null
+                users: arr.slice(3),
+                count: arr.length
               };
-              obj[1] = arr.slice(3);
-              obj[2] = arr.length;
-              return outer1_17(tmp2(tmp15[37]), obj);
+              return closure_1_17(callback2(id[37]), obj);
             };
             return obj1;
           }
         }
-        const analyticsLocations = tmp15;
+        closure_2 = tmp15;
         const obj2 = { type: "custom", itemType: "incomingRequest", key: null, component: null };
         obj2[2] = stateFromStoresArray[arg1].id;
         obj2[3] = function component() {
-          const obj = { accepted: null, user: null, start: null, end: null, onPress: null, onDeclineIncomingRequest: null, onAcceptIncomingRequest: null };
-          obj[0] = tmp5.includes(tmp15.id);
-          obj[1] = tmp15;
-          obj[2] = closure_0;
-          obj[3] = closure_1;
-          obj[4] = outer1_14;
-          obj[5] = outer1_12;
-          obj[6] = outer1_11;
-          return callback(tmp(analyticsLocations[38]).IncomingFriendRequestRow, obj);
+          return callback3(callback(analyticsLocations[38]).IncomingFriendRequestRow, { accepted: closure_5.includes(id.id), user: id, start: closure_0, end: closure_1, onPress: closure_1_14, onDeclineIncomingRequest: closure_1_12, onAcceptIncomingRequest: closure_1_11 });
         };
         return obj2;
       } else if (tmp3.INCOMING_GAME_FRIEND_REQUESTS === arg0) {
         if (tmp2) {
-          if (c21) {
+          if (closure_21) {
             const obj3 = { type: "custom", itemType: "viewAll", key: "gameFriendRequestsViewAll", component: null };
             obj3[3] = function component() {
               const obj = {
@@ -588,7 +560,7 @@ export default function AddFriendsScreen(navigation) {
               const substr = arr2.slice(3);
               obj[1] = substr.map((user) => user.user);
               obj[2] = arr2.length;
-              return outer1_17(tmp2(tmp15[37]), obj);
+              return closure_1_17(callback2(id[37]), obj);
             };
             return obj3;
           }
@@ -599,20 +571,11 @@ export default function AddFriendsScreen(navigation) {
         const _HermesInternal = HermesInternal;
         obj4[2] = "" + user.id + "-" + applicationId;
         obj4[3] = function component() {
-          const obj = { accepted: null, applicationId: null, user: null, start: null, end: null, onPress: null, onDeclineIncomingRequest: null, onAcceptIncomingRequest: null };
-          obj[0] = null != outer1_9.find((userId) => userId.userId === id.id && userId.applicationId === tmp);
-          obj[1] = applicationId;
-          obj[2] = user;
-          obj[3] = closure_0;
-          obj[4] = closure_1;
-          obj[5] = outer1_14;
-          obj[6] = outer1_12;
-          obj[7] = outer1_11;
-          return callback(tmp(analyticsLocations[38]).ConnectedIncomingGameFriendRequestRow, obj);
+          return callback3(callback(analyticsLocations[38]).ConnectedIncomingGameFriendRequestRow, { accepted: null != closure_1_9.find((userId) => userId.userId === id.id && userId.applicationId === tmp), applicationId, user, start: closure_0, end: closure_1, onPress: closure_1_14, onDeclineIncomingRequest: closure_1_12, onAcceptIncomingRequest: closure_1_11 });
         };
         return obj4;
       } else if (tmp3.CONTACT_SUGGESTIONS === arg0) {
-        let c5 = tmp5;
+        closure_5 = tmp5;
         let mutualFriendsCount;
         if (friendSuggestions[arg1] != null) {
           mutualFriendsCount = tmp5.mutualFriendsCount;
@@ -632,21 +595,21 @@ export default function AddFriendsScreen(navigation) {
         obj[1] = str2;
         obj[2] = friendSuggestions[arg1].user.id;
         obj[3] = function component() {
-          const obj = { added: null, suggestedFriend: null, start: null, end: null, onPress: null, location: null, onAddSuggestion: null };
-          obj[0] = outer1_17.includes(set);
-          obj[1] = set;
-          obj[2] = closure_0;
-          obj[3] = closure_1;
-          obj[4] = outer1_14;
-          obj[5] = constants.ADD_FRIENDS_MODAL;
-          obj[6] = function onAddSuggestion() {
-            return outer1_18((arg0) => {
-              const items = [];
-              items[HermesBuiltin.arraySpread(arg0, 0)] = set;
-              return items;
-            });
-          };
-          return callback(tmp(analyticsLocations[39]).ContactSuggestionRow, obj);
+          return callback3(callback(analyticsLocations[39]).ContactSuggestionRow, {
+            added: closure_1_17.includes(closure_5),
+            suggestedFriend: closure_5,
+            start: closure_0,
+            end: closure_1,
+            onPress: closure_1_14,
+            location: constants.ADD_FRIENDS_MODAL,
+            onAddSuggestion() {
+              return closure_1_18((arg0) => {
+                const items = [];
+                items[HermesBuiltin.arraySpread(arg0, 0)] = closure_5;
+                return items;
+              });
+            }
+          });
         };
         return obj;
       }

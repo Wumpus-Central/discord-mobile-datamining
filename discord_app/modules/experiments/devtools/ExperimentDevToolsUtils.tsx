@@ -1,7 +1,10 @@
 // discord_app/modules/experiments/devtools/ExperimentDevToolsUtils.tsx
-import { trackExposureToExperiment } from "../ExperimentManager.tsx";
-const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: require("create").Variation_Type.OVERRIDE };
-const result = require("set").fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
+import set from "set" /* 2 */;
+import trackExposureToExperiment from "trackExposureToExperiment" /* 4296 */;
+import create from "create" /* 4367 */;
+
+const obj = { id: -1, label: "Not Eligible", shortLabel: "Not Eligible", type: create.Variation_Type.OVERRIDE };
+const result = set.fileFinishedImporting("modules/experiments/devtools/ExperimentDevToolsUtils.tsx");
 
 export const getExperimentVariantsForDevTools = function getExperimentVariantsForDevTools(experiment) {
   if (experiment.system !== trackExposureToExperiment.ExperimentSystem.APEX) {

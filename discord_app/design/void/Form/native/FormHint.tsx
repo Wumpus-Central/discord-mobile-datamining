@@ -1,28 +1,27 @@
 // discord_app/design/void/Form/native/FormHint.tsx
-import noop from "noop";
-import { Platform } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import context from "context" /* 6939 */;
+import closure_2 from "noop" /* 19 */;
+import { Platform } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 createCacheKey = { formHintText: null, redesignHorizontalPadding: null, horizonatalPadding: null };
-createCacheKey = { fontSize: 14, marginBottom: 0, color: require("Themes").colors.TEXT_MUTED };
+createCacheKey = { fontSize: 14, marginBottom: 0, color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: 12 };
 createCacheKey[2] = { paddingHorizontal: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("design/void/Form/native/FormHint.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormHint.tsx");
 
 export default function FormHint(inset) {
-  let children;
-  let style;
   let flag = inset.inset;
   if (flag === undefined) {
     flag = false;
   }
   ({ style, children } = inset);
-  const tmp = createCacheKey();
+  const tmp = callback();
   if (React.useContext(context.RedesignCompatContext)) {
     let redesignHorizontalPadding = !flag;
     if (!flag) {

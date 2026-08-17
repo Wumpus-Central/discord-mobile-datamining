@@ -1,17 +1,14 @@
 // discord_app/modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx
-import { Endpoints } from "ME";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { handleImageLoad } from "../../image_upload/ImageLoaderUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import handleImageLoad from "handleImageLoad" /* 1469 */;
 
-let c3;
-let c4;
+const Endpoints = ME.Endpoints;
 ({ API_ENDPOINT: c3, CDN_HOST: c4 } = window.GLOBAL_ENV);
-const result = require("getAvatarURL").fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
+const result = set.fileFinishedImporting("modules/global_discovery_apps/utils/getCollectionItemAssetUrl.tsx");
 
 export const getCollectionItemAssetUrl = function getCollectionItemAssetUrl(arg0) {
-  let containerWidth;
-  let hash;
-  let itemId;
   ({ itemId, hash, containerWidth } = arg0);
   if (containerWidth === undefined) {
     containerWidth = 1024;

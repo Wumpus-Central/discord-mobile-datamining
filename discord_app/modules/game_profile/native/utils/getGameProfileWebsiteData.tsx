@@ -1,8 +1,10 @@
 // discord_app/modules/game_profile/native/utils/getGameProfileWebsiteData.tsx
-import { jsx } from "jsxProd";
-import { ThirdPartyGameApplicationWebsiteCategory } from "../../../../../discord_common/js/shared/shared-constants/ThirdPartyGameApplicationWebsiteCategory.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9104 */;
 
-const result = require("GlobeEarthIcon").fileFinishedImporting("modules/game_profile/native/utils/getGameProfileWebsiteData.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/game_profile/native/utils/getGameProfileWebsiteData.tsx");
 
 export default function getGameProfileWebsiteData(category) {
   category = category.category;
@@ -17,7 +19,7 @@ export default function getGameProfileWebsiteData(category) {
     obj[3] = category.url;
     return obj;
   } else if (tmp(9104).ThirdPartyGameApplicationWebsiteCategory.TWITTER === category) {
-    const obj1 = { icon: null, action: null, title: null, url: null };
+    obj1 = { icon: null, action: null, title: null, url: null };
     const obj2 = { size: "md", color: null };
     obj2[1] = arg1;
     obj1[0] = jsx(tmp(8309).XNeutralIcon, { size: "md", color: null });

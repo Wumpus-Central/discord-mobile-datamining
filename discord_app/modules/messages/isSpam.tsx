@@ -1,13 +1,11 @@
 // discord_app/modules/messages/isSpam.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getDecisionOutcomeFromMessage } from "../guild_automod/AutomodMessageUtils.tsx";
+import getDecisionOutcomeFromMessage from "getDecisionOutcomeFromMessage" /* 5232 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ UserFlags: c3, ChannelTypes: c4 } = ME);
-const result = require("getDecisionOutcomeFromMessage").fileFinishedImporting("modules/messages/isSpam.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/isSpam.tsx");
 
 export const isSpamSupported = function isSpamSupported(type) {
   let tmp = undefined !== type;

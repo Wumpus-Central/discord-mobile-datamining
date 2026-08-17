@@ -1,33 +1,33 @@
 // discord_app/modules/auth/native/useOrientationLock.tsx
-import noop from "noop";
-import { useWideAuthView } from "useWideAuthView.tsx";
+import useWideAuthViewDefault from "useWideAuthView" /* 8582 */;
+import closure_3 from "noop" /* 19 */;
 
-let require = arg1;
-const result = require("isMetaQuest").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/auth/native/useOrientationLock.tsx");
 
 export default function usePortraitOrientationOnly() {
-  let tmp = useWideAuthView();
-  const require = tmp;
+  const tmp = useWideAuthViewDefault();
+  closure_0 = tmp;
   const items = [tmp];
   const effect = React.useEffect(() => {
-    const isIpadOSResult = tmp(outer1_2[1]).isIpadOS();
+    const isIpadOSResult = callback(closure_1_2[1]).isIpadOS();
     let tmp4 = !isIpadOSResult;
     if (!isIpadOSResult) {
       let tmpResult = tmp(tmp2[2]);
       tmp4 = !tmpResult.isMetaQuest();
     }
     if (tmp4) {
-      tmp4 = !tmp;
+      tmp4 = !callback;
     }
-    tmp = tmp4;
+    callback = tmp4;
     if (tmp4) {
       tmpResult = tmp(tmp2[4]);
       tmpResult.lockOrientation("PORTRAIT", false);
     }
     return () => {
-      if (tmp4) {
-        tmp4(outer1_2[4]).unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
-        const obj = tmp4(outer1_2[4]);
+      if (callback) {
+        callback(closure_1_2[4]).unlockOrientation({ unlockAfterRotatingToPreviousLock: false });
+        const obj = callback(closure_1_2[4]);
       }
     };
   }, items);

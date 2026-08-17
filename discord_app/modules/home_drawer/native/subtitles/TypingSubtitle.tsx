@@ -1,21 +1,16 @@
 // discord_app/modules/home_drawer/native/subtitles/TypingSubtitle.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { styles } from "useSubtitleStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import styles from "styles" /* 15589 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/subtitles/TypingSubtitle.tsx");
 
 export default function TypingSubtitle(arg0) {
-  let channel;
-  let channelName;
-  let guild;
-  let text;
   ({ channel, channelName } = arg0);
   ({ guild, text } = arg0);
   let obj = styles;
@@ -36,7 +31,7 @@ export default function TypingSubtitle(arg0) {
     tmp7 = callback(channelIconComponentWithGuild, obj);
   }
   const items = [tmp7, ];
-  const obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
+  obj1 = { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children: null };
   let tmp5Result = null;
   if (null != channelName) {
     const obj2 = { variant: "text-xs/medium", children: null };

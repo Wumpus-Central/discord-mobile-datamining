@@ -1,4 +1,7 @@
 // discord_common/js/packages/libdiscore/mobile/js/timers.tsx
+import set from "set" /* 2 */;
+import typedGlobal from "typedGlobal" /* 1919 */;
+
 function setTimeout(arg0, arg1) {
   let num = arg1;
   if (arg1 == null) {
@@ -26,7 +29,7 @@ function clearTimeout(arg0) {
     closure_3.clear(arg0);
   }
 }
-const LIBDISCORE_JSI = require("typedGlobal").typedGlobal.LIBDISCORE_JSI;
+const LIBDISCORE_JSI = typedGlobal.typedGlobal.LIBDISCORE_JSI;
 let c1 = null;
 const map = new Map();
 let closure_3 = LIBDISCORE_JSI.makeTimerManager(function expirationCallback(arg0, arg1) {
@@ -46,10 +49,10 @@ let closure_3 = LIBDISCORE_JSI.makeTimerManager(function expirationCallback(arg0
     }
   }
 });
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/mobile/js/timers.tsx");
 
 export function setTimersMonitorCallback(onTimersDelayCallback) {
-  let closure_1 = onTimersDelayCallback;
+  closure_1 = onTimersDelayCallback;
 }
 export { setTimeout };
 export { setInterval };

@@ -1,11 +1,11 @@
 // discord_app/modules/rpc/transports/BaseSocket.tsx
-import ME from "ME";
-import { prototype } from "../RPCError.tsx";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ RPC_VERSION: obj1, RPCCloseCodes: c3 } = ME);
-const result = require("prototype").fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");
+const result = set.fileFinishedImporting("modules/rpc/transports/BaseSocket.tsx");
 class BaseSocket {
   constructor(arg0, arg1, arg2) {
     obj = Object.create(new.target.prototype);
@@ -27,7 +27,7 @@ class BaseSocket {
 }
 const prototype = BaseSocket.prototype;
 prototype["checkRpcVersion"] = function checkRpcVersion(version) {
-  let tmp2 = prototype;
+  let tmp2 = prototypeDefault;
   tmp2 = new tmp2({ closeCode: constants.INVALID_VERSION }, "Invalid Version: " + version);
   throw tmp2;
 };

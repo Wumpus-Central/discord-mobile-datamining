@@ -1,17 +1,13 @@
 // discord_app/modules/create_guild/native/components/ListSelectionItem.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import noopAll from "noop" /* 19 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("TableRowInner").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/create_guild/native/components/ListSelectionItem.tsx");
 
 export default function ListSelectionItem(arg0) {
-  let Icon;
-  let message;
-  let onPress;
   ({ Icon, message, onPress } = arg0);
-  const obj = { onPress, label: message, icon: null };
-  obj[2] = <Icon size={24} />;
-  return jsx(TableRowInner.TableRow, { onPress, label: message, icon: null });
+  return jsx(TableRowInner.TableRow, { onPress, label: message, icon: <Icon size={24} /> });
 };

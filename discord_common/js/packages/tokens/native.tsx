@@ -1,18 +1,28 @@
 // discord_common/js/packages/tokens/native.tsx
-import { n } from "../../../../_runtime/00689_n.js";
-import { mapValues } from "../../../../_runtime/00719_mapValues.js";
-import { interpolate } from "transforms.tsx";
-const Themes = require("items")._private.Themes;
-const SemanticColors = require("_private")._private.SemanticColors;
-const SemanticColorExperiments = require("_private")._private.SemanticColorExperiments;
-const RawColors = require("_private")._private.RawColors;
-const Shadows = require("_private")._private.Shadows;
+import set from "set" /* 2 */;
+import nDefault from "n" /* 689 */;
+import items from "items" /* 713 */;
+import _private from "_private" /* 714 */;
+import _private2 from "_private" /* 715 */;
+import _private3 from "_private" /* 716 */;
+import _private4 from "_private" /* 717 */;
+import _private5 from "_private" /* 718 */;
+import mapValuesDefault from "mapValues" /* 719 */;
+import Radius from "Radius" /* 806 */;
+import Layout from "Layout" /* 807 */;
+import interpolate from "interpolate" /* 808 */;
+
+const Themes = items._private.Themes;
+const SemanticColors = _private._private.SemanticColors;
+const SemanticColorExperiments = _private2._private.SemanticColorExperiments;
+const RawColors = _private3._private.RawColors;
+const Shadows = _private5._private.Shadows;
 let closure_7 = Symbol("semanticColor");
 obj = {
   themes: Themes,
-  colors: require("mapValues")(SemanticColors, (arg0, arg1) => ({ [closure_7]: arg1 })),
+  colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_7]: arg1 })),
   unsafe_rawColors: RawColors,
-  shadows: require("mapValues")(Shadows, (arg0) => {
+  shadows: mapValuesDefault(Shadows, (arg0) => {
     let f68132 = arg0;
     f68132 = (shadowOffset) => {
       shadowOffset = undefined;
@@ -55,13 +65,11 @@ obj = {
       }
     };
   }),
-  radii: require("Radius").Radius,
-  modules: require("mapValues")(require("_private")._private.Modules, (arg0) => mapValues(arg0, (arg0) => {
-    let closure_0 = arg0;
+  radii: Radius.Radius,
+  modules: mapValuesDefault(_private4._private.Modules, (arg0) => mapValuesDefault(arg0, (arg0) => {
+    closure_0 = arg0;
     return {
       resolve(arg0) {
-        let density;
-        let enabledExperiments;
         ({ enabledExperiments, density } = arg0);
         if (enabledExperiments == null) {
           enabledExperiments = [];
@@ -75,7 +83,7 @@ obj = {
       }
     };
   })),
-  space: require("Layout").SpacePx,
+  space: Layout.SpacePx,
   internal: obj
 };
 obj = {
@@ -102,7 +110,7 @@ obj = {
         } else {
           const _Error = Error;
           const _HermesInternal = HermesInternal;
-          const error = new Error("Invalid theme: " + theme);
+          error = new Error("Invalid theme: " + theme);
           throw error;
         }
       }
@@ -190,9 +198,9 @@ obj = {
       if (1 === opacity) {
         let hexResult = result;
       } else {
-        const obj8 = n(result);
-        hexResult = n(result).alpha(opacity).hex();
-        const alphaResult = n(result).alpha(opacity);
+        const obj8 = nDefault(result);
+        hexResult = nDefault(result).alpha(opacity).hex();
+        const alphaResult = nDefault(result).alpha(opacity);
       }
       return hexResult;
     }
@@ -249,7 +257,7 @@ obj = {
         } else if (semanticColorContextFromThemeContext != null) {
           tmp38 = semanticColorContextFromThemeContext.gradient.colors[tmp36.color];
         }
-        const tmp61Result = n(tmp38);
+        const tmp61Result = nDefault(tmp38);
         let result1 = tmp61Result;
         if ("saturation" in tmp36) {
           result1 = tmp61Result.set("hsl.s", tmp36.saturation);
@@ -264,7 +272,7 @@ obj = {
           num = tmp36.opacity;
         }
         opacity = num;
-        const tmp61 = n;
+        const tmp61 = nDefault;
       }
     }
   },
@@ -275,7 +283,7 @@ obj = {
     return interpolate.transformColorContrast(result, category, theme, contrast);
   }
 };
-let result = require("_private").fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/tokens/native.tsx");
 
 export default obj;
 export const Theme = Themes;

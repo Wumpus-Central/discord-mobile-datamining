@@ -1,18 +1,19 @@
 // discord_common/js/packages/flux/connectStores.tsx
-import "_objectWithoutProperties";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import _objectWithoutPropertiesDefault from "_objectWithoutProperties" /* 109 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("jsxProd").fileFinishedImporting("../discord_common/js/packages/flux/connectStores.tsx");
+_objectWithoutPropertiesDefault;
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/connectStores.tsx");
 
 export default function connectStores(items, arg1) {
   if (null != arg2) {
     if (arg2.forwardRef) {
-      let closure_0 = items;
-      let closure_1 = arg1;
+      closure_0 = items;
+      closure_1 = arg1;
       let fn = (displayName) => {
-        let closure_0 = displayName;
+        closure_0 = displayName;
         let str = displayName.displayName;
         if (str == null) {
           str = displayName.name;
@@ -21,22 +22,22 @@ export default function connectStores(items, arg1) {
           str = "<Unknown>";
         }
         const combined = "FluxContainer(" + str + ")";
-        const Component = outer1_3.Component;
+        const Component = closure_1_3.Component;
         class FluxContainer extends Component {
           constructor() {
             applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
             closure_0 = applyArgumentsResult;
-            closure_0 = concat;
+            closure_0 = closure_1;
             memoizedFunction = function memoizedFunction(arg0) {
               if (null != closure_1) {
-                if (null != _null2) {
+                if (null != closure_2) {
                   if (_null(_null2[4])(closure_1, arg0)) {
-                    let tmp5 = _null2;
+                    let tmp5 = closure_2;
                   }
                   if (null == tmp5) {
                     closure_1 = arg0;
                     const tmp11 = lib(arg0);
-                    _null2 = tmp11;
+                    closure_2 = tmp11;
                     tmp5 = tmp11;
                   }
                   return tmp5;
@@ -45,11 +46,11 @@ export default function connectStores(items, arg1) {
               tmp5 = null;
               if (null != closure_1) {
                 tmp5 = null;
-                if (null != _null2) {
+                if (null != closure_2) {
                   tmp5 = null;
                   if (_null(_null2[4])(closure_1, arg0)) {
                     closure_1 = arg0;
-                    tmp5 = _null2;
+                    tmp5 = closure_2;
                   }
                 }
               }
@@ -78,11 +79,11 @@ export default function connectStores(items, arg1) {
               }
             };
             memoizedFunction.clear = () => {
-              let c1 = null;
-              let c2 = null;
+              c1 = null;
+              c2 = null;
             };
             applyArgumentsResult.memoizedGetStateFromStores = memoizedFunction;
-            batchedStoreListener = new closure_0(outer2_2[3]).BatchedStoreListener(closure_0, () => {
+            batchedStoreListener = new closure_0(closure_2_2[3]).BatchedStoreListener(closure_0, () => {
               const memoizedGetStateFromStores = closure_0.memoizedGetStateFromStores;
               const cachedResult = memoizedGetStateFromStores.getCachedResult(closure_0.props.childProps);
               let tmp6Result = null != cachedResult;
@@ -112,16 +113,14 @@ export default function connectStores(items, arg1) {
           memoizedGetStateFromStores.clear();
         };
         prototype["render"] = function render() {
-          let childProps;
-          let forwardedConnectStoresRef;
           ({ childProps, forwardedConnectStoresRef } = this.props);
           const result = this.memoizedGetStateFromStores(childProps);
           const merged = Object.assign(childProps);
           const merged1 = Object.assign(result);
-          return outer2_4(closure_0, { ref: forwardedConnectStoresRef });
+          return closure_2_4(closure_0, { ref: forwardedConnectStoresRef });
         };
         FluxContainer.displayName = combined;
-        const forwardRefResult = outer1_3.forwardRef((childProps, forwardedConnectStoresRef) => outer2_4(FluxContainer, { childProps, forwardedConnectStoresRef }));
+        const forwardRefResult = closure_1_3.forwardRef((childProps, forwardedConnectStoresRef) => closure_2_4(FluxContainer, { childProps, forwardedConnectStoresRef }));
         forwardRefResult.displayName = "ForwardRef(" + combined + ")";
         return forwardRefResult;
       };
@@ -131,7 +130,7 @@ export default function connectStores(items, arg1) {
   closure_0 = items;
   closure_1 = arg1;
   fn = (displayName) => {
-    let closure_0 = displayName;
+    closure_0 = displayName;
     let str = displayName.displayName;
     if (str == null) {
       str = displayName.name;
@@ -140,22 +139,22 @@ export default function connectStores(items, arg1) {
       str = "<Unknown>";
     }
     const combined = "FluxContainer(" + str + ")";
-    const Component = outer1_3.Component;
+    const Component = closure_1_3.Component;
     class FluxContainer extends Component {
       constructor() {
         applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
         closure_0 = applyArgumentsResult;
-        closure_0 = c1;
+        closure_0 = closure_1;
         memoizedFunction = function memoizedFunction(arg0) {
           if (null != closure_1) {
-            if (null != _null2) {
+            if (null != closure_2) {
               if (_null(_null2[4])(closure_1, arg0)) {
-                let tmp5 = _null2;
+                let tmp5 = closure_2;
               }
               if (null == tmp5) {
                 closure_1 = arg0;
                 const tmp11 = lib(arg0);
-                _null2 = tmp11;
+                closure_2 = tmp11;
                 tmp5 = tmp11;
               }
               return tmp5;
@@ -164,11 +163,11 @@ export default function connectStores(items, arg1) {
           tmp5 = null;
           if (null != closure_1) {
             tmp5 = null;
-            if (null != _null2) {
+            if (null != closure_2) {
               tmp5 = null;
               if (_null(_null2[4])(closure_1, arg0)) {
                 closure_1 = arg0;
-                tmp5 = _null2;
+                tmp5 = closure_2;
               }
             }
           }
@@ -197,11 +196,11 @@ export default function connectStores(items, arg1) {
           }
         };
         memoizedFunction.clear = () => {
-          let c1 = null;
-          let c2 = null;
+          c1 = null;
+          c2 = null;
         };
         applyArgumentsResult.memoizedGetStateFromStores = memoizedFunction;
-        batchedStoreListener = new closure_0(outer2_2[3]).BatchedStoreListener(closure_0, () => {
+        batchedStoreListener = new closure_0(closure_2_2[3]).BatchedStoreListener(closure_0, () => {
           const memoizedGetStateFromStores = lib.memoizedGetStateFromStores;
           const cachedResult = memoizedGetStateFromStores.getCachedResult(lib.props);
           let tmp6Result = null != cachedResult;
@@ -234,7 +233,7 @@ export default function connectStores(items, arg1) {
       const result = this.memoizedGetStateFromStores(this.props);
       const merged = Object.assign(this.props);
       const merged1 = Object.assign(result);
-      return outer2_4(closure_0, {});
+      return closure_2_4(closure_0, {});
     };
     FluxContainer.displayName = combined;
     return FluxContainer;

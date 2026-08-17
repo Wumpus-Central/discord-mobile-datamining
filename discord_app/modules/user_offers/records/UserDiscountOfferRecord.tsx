@@ -1,7 +1,8 @@
 // discord_app/modules/user_offers/records/UserDiscountOfferRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_0 from "createFromServer" /* 7422 */;
 
+toJSDefault;
 let UserDiscountOfferRecord;
 class UserDiscountOfferRecord extends tmp2 {
   constructor(arg0) {
@@ -27,10 +28,8 @@ class UserDiscountOfferRecord extends tmp2 {
 }
 const prototype = UserDiscountOfferRecord.prototype;
 UserDiscountOfferRecord["createFromServer"] = function createFromServer(discount) {
-  let discount_id;
-  let id;
   ({ id, discount_id } = discount);
-  const fromServer = createFromServer.createFromServer(discount.discount);
+  const fromServer = closure_0.createFromServer(discount.discount);
   const user_id = discount.user_id;
   let date = null;
   if (null != discount.applied_at) {

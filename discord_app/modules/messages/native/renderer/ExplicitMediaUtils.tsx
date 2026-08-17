@@ -1,15 +1,14 @@
 // discord_app/modules/messages/native/renderer/ExplicitMediaUtils.tsx
-import { MessageAttachmentFlags } from "ME";
-import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { ContentHarmTypeChannel } from "../../../explicit_media_redaction/ExplicitMediaRedactionModels.tsx";
-import { getEligibleHarmTypesConfigsForContext } from "../../../explicit_media_redaction/ObscuredMediaUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
+import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 5022 */;
 
-const result = require("getEligibleHarmTypesConfigsForContext").fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
+const MessageAttachmentFlags = ME.MessageAttachmentFlags;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/ExplicitMediaUtils.tsx");
 
 export const getAttachmentObscurityProps = function getAttachmentObscurityProps(shouldAgeVerify) {
-  let attachment;
-  let enabledContentHarmTypeFlags;
-  let shouldObscureSpoiler;
   ({ attachment, shouldObscureSpoiler, enabledContentHarmTypeFlags } = shouldAgeVerify);
   let obj = hasFlag;
   let num = attachment.flags;
@@ -36,7 +35,7 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   const mediaObscuredReasonFromBitmask = tmpResult.getMediaObscuredReasonFromBitmask(obj, enabledContentHarmTypeFlags);
   tmpResult = tmp(5019);
   let isVerifiedTeenResult = tmp5;
-  const obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
+  obj1 = { type: ContentHarmTypeChannel.ObscuredMediaTypes.Attachment, media: obj };
   if (mediaObscuredReasonFromBitmask.length > 0) {
     isVerifiedTeenResult = tmp(4992).isVerifiedTeen();
     const tmpResult1 = tmp(4992);
@@ -74,13 +73,6 @@ export const getAttachmentObscurityProps = function getAttachmentObscurityProps(
   return obj2;
 };
 export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemObscurityProps(arg0) {
-  let enabledContentHarmTypeFlags;
-  let isAuthorBot;
-  let isSpoilered;
-  let mediaItem;
-  let shouldAgeVerify;
-  let shouldObscureSpoiler;
-  let type;
   ({ type, mediaItem, isSpoilered, isAuthorBot, enabledContentHarmTypeFlags } = arg0);
   ({ shouldObscureSpoiler, shouldAgeVerify } = arg0);
   let obj = getEligibleHarmTypesConfigsForContext;
@@ -102,7 +94,7 @@ export const getUnfurledMediaItemObscurityProps = function getUnfurledMediaItemO
     tmpResult = tmp(4992);
     isVerifiedTeenResult = tmpResult.isVerifiedTeen();
   }
-  const obj1 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
+  obj1 = { isSpoiler: isSpoilered, spoilerDescription: null, isObscured: null, obscureDescription: null, obscureAwaitingScan: null, verifyAge: null, obscureHideControls: null, obscureIsOpaque: null };
   if (!isSpoilered) {
     obj1[1] = null;
     obj1[2] = tmp4;

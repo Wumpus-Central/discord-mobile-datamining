@@ -1,10 +1,10 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ThemeTypes } from "sum";
+import useThemeDefault from "useTheme" /* 4310 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ThemeTypes } from "sum" /* 505 */;
 import { registerAsset } from "../../../../../../_runtime/08143_registerAsset.js";
 import { getChannelSetupSource } from "../../../../../design/components/Illustration/native/redesign/generated/ChannelSetup.tsx";
-import { useTheme } from "../../../../../hooks/useTheme.tsx";
 
 const require = arg1;
 class EnableCommunityModalIcons {
@@ -50,16 +50,16 @@ Object.defineProperty(prototype, "close", {
   },
   set: undefined
 });
-const result = require("sum").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx");
+const result = require("set").fileFinishedImporting("modules/public_guilds/native/components/EnableCommunityModal/useEnableCommunityModalIcons.tsx");
 
 export default function useEnableCommunityModalIcons() {
-  let closure_0 = useTheme();
+  closure_0 = useThemeDefault();
   return callback(React.useState(() => {
-    if (typeof outer1_6 !== "function") {
+    if (typeof closure_1_6 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(outer1_6.prototype);
-    obj[0] = outer1_5.LIGHT;
+    const obj = Object.create(closure_1_6.prototype);
+    obj[0] = closure_1_5.LIGHT;
     obj.theme = closure_0;
     return obj;
   }), 1)[0];

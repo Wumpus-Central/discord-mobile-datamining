@@ -1,10 +1,11 @@
 // discord_common/js/packages/i18n/updateRules.web.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { t } from "../../../../_runtime/04092_t.js";
+import noopAll from "noop" /* 19 */;
+import t from "t" /* 4092 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("t").fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/updateRules.web.tsx");
 
 export default function updateRules(paragraph) {
   paragraph.heading = t.defaultRules.heading;

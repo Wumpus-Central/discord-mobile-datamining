@@ -1,13 +1,10 @@
 // discord_app/modules/messages/ApplicationCommands.tsx
-import _slicedToArray from "_slicedToArray";
+import closure_0 from "_slicedToArray" /* 32 */;
 
 const re1 = /<\/([^\s]+):(\d+)>(?:\s?(.*))?/;
 const result = require("set").fileFinishedImporting("modules/messages/ApplicationCommands.tsx");
 
 export const getApplicationCommand = function getApplicationCommand(content) {
-  let tmp7;
-  let tmp8;
-  let tmp9;
   const match = regex.exec(content);
   if (null == match) {
     return null;

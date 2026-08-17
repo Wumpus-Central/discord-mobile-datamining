@@ -1,19 +1,18 @@
 // discord_app/modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { border: null };
-createCacheKey = { borderBottomColor: require("Themes").colors.BORDER_SUBTLE, borderBottomWidth: 1 };
+createCacheKey = { borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, borderBottomWidth: 1 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_5 = createCacheKey.createStyles(createCacheKey);
 let closure_6 = { code: "function SearchBarBottomBorderTsx1(){const{withSpring,scrollPosition,triggerScrollHeight,springStandard}=this.__closure;return{opacity:withSpring(scrollPosition.get()>triggerScrollHeight?1:0,springStandard)};}" };
-let result = require("createCacheKey").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchBarBottomBorder.tsx");
 
 export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomBorder(arg0) {
-  let key;
-  let triggerScrollHeight;
   ({ key, triggerScrollHeight } = arg0);
   if (triggerScrollHeight === undefined) {
     triggerScrollHeight = 1;
@@ -29,14 +28,14 @@ export const usePinnedSearchBarBottomBorder = function usePinnedSearchBarBottomB
   const callback = React.useCallback((offset) => {
     const result = sharedValue.set(offset.offset);
   }, items1);
-  const tmp = createCacheKey();
+  const tmp = callback();
   const fn = function u() {
-    let obj = triggerScrollHeight(outer1_2[5]);
+    let obj = triggerScrollHeight(closure_1_2[5]);
     let num = 0;
     if (sharedValue.get() > triggerScrollHeight) {
       num = 1;
     }
-    obj = { opacity: obj.withSpring(num, triggerScrollHeight(outer1_2[6]).springStandard) };
+    obj = { opacity: obj.withSpring(num, triggerScrollHeight(closure_1_2[6]).springStandard) };
     return obj;
   };
   obj = { withSpring: triggerScrollHeight(4744).withSpring, scrollPosition: sharedValue, triggerScrollHeight, springStandard: triggerScrollHeight(4748).springStandard };

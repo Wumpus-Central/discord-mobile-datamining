@@ -1,32 +1,28 @@
 // discord_app/design/void/RoleDot/native/RoleDot.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useHasEnhancedRoleColors } from "../../../../modules/premium/powerups/hooks/useHasEnhancedRoleColors.tsx";
-import { getFontScale } from "../../../../modules/screen/native/useFontScale.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getFontScale from "getFontScale" /* 4751 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import useHasEnhancedRoleColorsDefault from "useHasEnhancedRoleColors" /* 6814 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flexShrink: 0 }, background: { position: "relative" }, backgroundColor: null, borderBase: null, borderColor: null, dot: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, borderRadius: require("Themes").radii.xs };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: require("Themes").colors.TEXT_DEFAULT, borderRadius: require("Themes").radii.md };
-let obj1 = { backgroundColor: require("Themes").colors.TEXT_DEFAULT, borderRadius: require("Themes").radii.md };
-createCacheKey[4] = { borderRadius: require("Themes").radii.md, opacity: 0.4 };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, borderRadius: ThemesDefault.radii.md };
+let obj1 = { backgroundColor: ThemesDefault.colors.TEXT_DEFAULT, borderRadius: ThemesDefault.radii.md };
+createCacheKey[4] = { borderRadius: ThemesDefault.radii.md, opacity: 0.4 };
 createCacheKey[5] = { borderRadius: 10, position: "absolute" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderRadius: require("Themes").radii.md, opacity: 0.4 };
-let result = require("jsxProd").fileFinishedImporting("design/void/RoleDot/native/RoleDot.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderRadius: ThemesDefault.radii.md, opacity: 0.4 };
+let result = require("set").fileFinishedImporting("design/void/RoleDot/native/RoleDot.tsx");
 
 export const RoleDot = function RoleDot(background) {
-  let color;
-  let colors;
-  let containerStyles;
-  let guildId;
-  let size;
   ({ color, colors, size } = background);
   if (size === undefined) {
     size = "normal";
@@ -36,7 +32,7 @@ export const RoleDot = function RoleDot(background) {
     flag = true;
   }
   ({ containerStyles, guildId } = background);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = getFontScale;
   const fontScale = obj.useFontScale();
   if (null == color) {
@@ -51,7 +47,7 @@ export const RoleDot = function RoleDot(background) {
   const result = num * fontScale;
   obj = { paddingRight: 2 * fontScale, paddingTop: null, height: null };
   const tmp5 = importDefault;
-  const tmp6 = useHasEnhancedRoleColors(guildId, null);
+  const tmp6 = useHasEnhancedRoleColorsDefault(guildId, null);
   if (tmp2Result.isAndroid()) {
     let result1 = 3 * fontScale;
   } else {
@@ -62,7 +58,7 @@ export const RoleDot = function RoleDot(background) {
   obj[1] = result1;
   obj[2] = result;
   obj = { height: result, width: result, padding: (result - sum) / 2 };
-  const obj1 = { height: diff, width: diff, top: result2, left: result2 };
+  obj1 = { height: diff, width: diff, top: result2, left: result2 };
   result2 = diff / 2;
   const obj2 = { style: items, children: null };
   items = [tmp.container, obj, containerStyles];
@@ -74,10 +70,9 @@ export const RoleDot = function RoleDot(background) {
   const obj3 = { style: items1, children: null };
   items1[1] = backgroundColor;
   items1[2] = obj;
-  const obj4 = { style: items2, children: null };
+  const obj4 = { style: items2, children: closure_4(View, { style: items3 }) };
   items2 = [tmp.borderBase];
-  const items3 = [tmp.borderColor, { height: sum, width: sum }, { backgroundColor: color }];
-  obj4[1] = closure_4(View, { style: items3 });
+  items3 = [tmp.borderColor, { height: sum, width: sum }, { backgroundColor: color }];
   const items4 = [closure_4(View, obj4), ];
   if (tmp6) {
     if (null != colors) {
@@ -90,8 +85,8 @@ export const RoleDot = function RoleDot(background) {
         obj5[2] = { x: 1, y: 0 };
         const items6 = [tmp.dot, obj1];
         obj5[3] = items6;
-        let tmp12Result = tmp12(tmp5(4756), obj5);
-        const tmp5Result = tmp5(4756);
+        let tmp12Result = tmp12(LinearGradientDefault, obj5);
+        const tmp5Result = LinearGradientDefault;
       }
       items4[1] = tmp12Result;
       obj3[1] = items4;

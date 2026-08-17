@@ -1,28 +1,25 @@
 // discord_app/modules/forums/native/posts/ForumPostMessageCount.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "jsxProd";
-import { ChatIcon } from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
-import { AnimatedCount } from "AnimatedCounter.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ChatIcon from "ChatIcon" /* 6867 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
+import AnimatedCountDefault from "AnimatedCount" /* 10519 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-createCacheKey = { tintColor: require("Themes").colors.ICON_MUTED, marginEnd: 4, marginTop: null };
+createCacheKey = { tintColor: ThemesDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
 let num = 0;
 if (set.isAndroid()) {
   num = 2;
 }
-createCacheKey = { iconRead: createCacheKey, iconUnread: null, messageUnreadCount: null, container: null };
-createCacheKey[2] = num;
-let obj1 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
+createCacheKey = { iconRead: createCacheKey, iconUnread: null, messageUnreadCount: num, container: null };
+let obj1 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
 let num2 = 0;
 if (set.isAndroid()) {
   num2 = 2;
@@ -31,19 +28,13 @@ obj1[2] = num2;
 createCacheKey[1] = obj1;
 createCacheKey[2] = { marginStart: 4 };
 createCacheKey[3] = { flexDirection: "row", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_6 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/forums/native/posts/ForumPostMessageCount.tsx");
 
 export default function ForumPostMessageCount(hasUnreads) {
-  let containerStyle;
-  let isMaxMessageCount;
-  let messageCount;
-  let messageCountText;
-  let thread;
-  let unreadCount;
   hasUnreads = hasUnreads.hasUnreads;
   ({ thread, containerStyle } = hasUnreads);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = useLoadForumUnreadCounts;
   messageCount = obj.useMessageCount(thread);
   ({ messageCountText, unreadCount } = messageCount);
@@ -64,7 +55,7 @@ export default function ForumPostMessageCount(hasUnreads) {
   obj[2] = str2;
   const items1 = [closure_4(ChatIcon.ChatIcon, obj), , ];
   if (isMaxMessageCount) {
-    const obj1 = { variant: "text-sm/semibold", color: null, children: null };
+    obj1 = { variant: "text-sm/semibold", color: null, children: null };
     obj1[1] = str;
     obj1[2] = messageCountText;
     let tmp7Result = tmp7(tmp2(4734).Text, obj1);
@@ -72,7 +63,7 @@ export default function ForumPostMessageCount(hasUnreads) {
     const obj2 = { count: null, textVariant: "text-sm/semibold", textColor: null, animate: false };
     obj2[0] = messageCount;
     obj2[2] = str;
-    tmp7Result = tmp7(AnimatedCount, obj2);
+    tmp7Result = tmp7(AnimatedCountDefault, obj2);
   }
   items1[1] = tmp7Result;
   let tmp5Result = null != unreadCount;

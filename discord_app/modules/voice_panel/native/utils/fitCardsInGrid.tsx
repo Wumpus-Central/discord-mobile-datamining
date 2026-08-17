@@ -1,4 +1,6 @@
 // discord_app/modules/voice_panel/native/utils/fitCardsInGrid.tsx
+import set from "set" /* 2 */;
+
 function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   if (0 !== unusedSpace2.unusedSpace) {
     if (unusedSpace.unusedSpace !== unusedSpace2.unusedSpace) {
@@ -41,13 +43,9 @@ function isNewLayoutBetter(unusedSpace, unusedSpace2) {
   }
   return false;
 }
-let result = require("set").fileFinishedImporting("modules/voice_panel/native/utils/fitCardsInGrid.tsx");
+let result = set.fileFinishedImporting("modules/voice_panel/native/utils/fitCardsInGrid.tsx");
 
 export default function fitCardsInGrid(arg0) {
-  let availableHeight;
-  let availableWidth;
-  let cardCount;
-  let gutterSize;
   ({ cardCount, gutterSize, availableWidth, availableHeight } = arg0);
   let obj = { columns: 1, rows: 0, cardSize: 0, overscroll: 0, unusedSpace: Infinity };
   let num = 1;

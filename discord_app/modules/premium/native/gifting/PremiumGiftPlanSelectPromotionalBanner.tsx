@@ -1,22 +1,20 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/premium_marketing/v1/gift_plan_selection_card_banner.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useThemeAndReducedMotionAwareAssetUrl } from "../../promotions/MarketingComponentHooks.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import create from "create" /* 7644 */;
+import useThemeAndReducedMotionAwareAssetUrl from "useThemeAndReducedMotionAwareAssetUrl" /* 10304 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles(() => {
   let obj = { gradient: { minHeight: 60 }, bannerImage: { position: "absolute", top: 0, left: 0, right: 0, width: "100%", aspectRatio: 5 }, content: null, heading: null, subheading: null, logoContainer: null, logoContainerLargeTilted: null, logo: null, logoLargeTilted: null };
-  obj = { minHeight: 60, justifyContent: "center", gap: 2, paddingTop: Themes.space.PX_12, paddingBottom: Themes.space.PX_12, paddingStart: Themes.space.PX_24, paddingEnd: 120 };
+  obj = { minHeight: 60, justifyContent: "center", gap: 2, paddingTop: ThemesDefault.space.PX_12, paddingBottom: ThemesDefault.space.PX_12, paddingStart: ThemesDefault.space.PX_24, paddingEnd: 120 };
   obj[2] = obj;
   obj[3] = {};
   obj[4] = {};
@@ -27,17 +25,14 @@ let closure_6 = createCacheKey.createStyles(() => {
   obj[8] = { width: 120, height: 120 };
   return obj;
 });
-const memoResult = require("noop").memo(function PremiumGiftPlanSelectPromotionalBanner(giftPlanSelectionCardBannerComponent) {
-  let claimableRewards;
-  let isSelected;
-  let onLayout;
+const memoResult = importAllResult.memo(function PremiumGiftPlanSelectPromotionalBanner(giftPlanSelectionCardBannerComponent) {
   giftPlanSelectionCardBannerComponent = giftPlanSelectionCardBannerComponent.giftPlanSelectionCardBannerComponent;
   ({ claimableRewards, isSelected, onLayout } = giftPlanSelectionCardBannerComponent);
   const tmp = callback2();
   const gradient = giftPlanSelectionCardBannerComponent.gradient;
   let obj = useThemeAndReducedMotionAwareAssetUrl;
   const themeAndReducedMotionAwareAssetUrl = obj.useThemeAndReducedMotionAwareAssetUrl(giftPlanSelectionCardBannerComponent.mobileBannerAsset);
-  let obj1 = useThemeAndReducedMotionAwareAssetUrl;
+  obj1 = useThemeAndReducedMotionAwareAssetUrl;
   const themeAndReducedMotionAwareAssetUrl1 = obj1.useThemeAndReducedMotionAwareAssetUrl(giftPlanSelectionCardBannerComponent.avatarAsset, true);
   obj = { style: tmp.gradient, useAngle: true, angle: null, angleCenter: null, colors: null, onLayout: null, children: null };
   let num;
@@ -105,8 +100,8 @@ const memoResult = require("noop").memo(function PremiumGiftPlanSelectPromotiona
   }
   items[2] = tmp12Result;
   obj[6] = items;
-  return closure_5(LinearGradient, obj);
+  return closure_5(LinearGradientDefault, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftPlanSelectPromotionalBanner.tsx");
 
 export default memoResult;

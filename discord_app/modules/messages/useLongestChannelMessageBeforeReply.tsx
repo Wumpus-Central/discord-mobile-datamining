@@ -1,5 +1,5 @@
 // discord_app/modules/messages/useLongestChannelMessageBeforeReply.tsx
-import reinjectEphemerals from "reinjectEphemerals";
+import closure_2 from "reinjectEphemerals" /* 4994 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -7,12 +7,12 @@ const result = require("set").fileFinishedImporting("modules/messages/useLongest
 
 export const useLongestChannelMessageBeforeReply = function useLongestChannelMessageBeforeReply(id, recipientId) {
   const _require = id;
-  const dependencyMap = recipientId;
-  const items = [reinjectEphemerals];
+  dependencyMap = recipientId;
+  const items = [closure_2];
   const items1 = [id, recipientId];
   return _initialize.useStateFromStores(items, () => {
     if (null != closure_1) {
-      const messages = outer1_2.getMessages(closure_0);
+      const messages = closure_1_2.getMessages(closure_0);
       const findOldestResult = messages.findOldest((author) => author.author.id === closure_1);
       let tmp4 = findOldestResult;
       if (null != findOldestResult) {

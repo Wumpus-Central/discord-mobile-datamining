@@ -1,9 +1,11 @@
 // discord_app/modules/action_sheet/native/useActionSheetStartHeight.tsx
-import { ACTION_SHEET_START_HEIGHT_RATIO as closure_2 } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
+import set from "set" /* 2 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
 
-const result = require("set").fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
+let closure_2 = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_START_HEIGHT_RATIO;
+const result = set.fileFinishedImporting("modules/action_sheet/native/useActionSheetStartHeight.tsx");
 
 export default function useActionSheetHeight() {
-  return useWindowDimensions().height * closure_2;
+  return useWindowDimensionsDefault().height * closure_2;
 };

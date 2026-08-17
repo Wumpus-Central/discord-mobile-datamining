@@ -1,18 +1,12 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("_fetchGuildJoinRequests").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertCancelPending.tsx");
 
 export default function MemberVerificationAlertCancelPending(guildId) {
-  let confirmText;
-  let onClose;
-  let subtitleText;
   guildId = guildId.guildId;
   ({ confirmText, subtitleText, onClose } = guildId);
   const merged = Object.assign(guildId, Object.create(null));
@@ -21,7 +15,7 @@ export default function MemberVerificationAlertCancelPending(guildId) {
     if (onClose != null) {
       tmp();
     }
-    const result = onClose(outer1_2[2]).removeGuildJoinRequest(guildId);
+    const result = onClose(closure_1_2[2]).removeGuildJoinRequest(guildId);
   }, items);
   let obj = {};
   const merged1 = Object.assign(merged);

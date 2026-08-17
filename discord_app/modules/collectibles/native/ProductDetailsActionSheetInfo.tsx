@@ -1,16 +1,16 @@
 // discord_app/modules/collectibles/native/ProductDetailsActionSheetInfo.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getItemRecordsFromPurchases } from "../CollectiblesUtils.tsx";
-import { getBundleDescription } from "../hooks/useProductDescription.tsx";
-import { getProductPurchaseState } from "../hooks/useProductPurchaseState.tsx";
-import { PriceTag } from "InlinePriceTag.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import Text from "Text" /* 4734 */;
+import getItemRecordsFromPurchases from "getItemRecordsFromPurchases" /* 5313 */;
+import getProductPurchaseState from "getProductPurchaseState" /* 9243 */;
+import getBundleDescription from "getBundleDescription" /* 9579 */;
+import PriceTagDefault from "PriceTag" /* 9580 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 function ProductNameAndDescription(product) {
   product = product.product;
   const tmp = callback3();
@@ -26,7 +26,7 @@ function ProductPurchaseStatus(product) {
   product = product.product;
   let obj = getItemRecordsFromPurchases;
   const result = obj.isPremiumCollectiblesProduct(product);
-  let obj1 = getProductPurchaseState;
+  obj1 = getProductPurchaseState;
   const productPurchaseState = obj1.useProductPurchaseState(product);
   if (productPurchaseState.isPurchased) {
     obj = { variant: "text-md/semibold", color: "interactive-text-active", children: null };
@@ -44,32 +44,29 @@ function ProductPurchaseStatus(product) {
       obj1 = { product: null, onTrackPress: null };
       obj1[0] = product;
       obj1[1] = product.onTrackPress;
-      children = tmp6(PriceTag, obj1);
+      children = tmp6(PriceTagDefault, obj1);
     }
   }
   return closure_4(View, { children });
 }
 function BundleProductDetailsActionSheetInfo(arg0) {
-  let onTrackPress;
-  let product;
   ({ product, onTrackPress } = arg0);
   const tmp = callback3();
   const items = [, ];
   ({ body: arr[0], bundleBody: arr[1] } = tmp);
   return callback(View, { style: items, children: callback(ProductPurchaseStatus, { product, onTrackPress }) });
 }
+const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { title: { marginBottom: 2 }, body: null, bundleBody: null, description: null };
-obj = { marginTop: require("Themes").space.PX_24, marginHorizontal: require("Themes").space.PX_16, flexDirection: "column", gap: 20 };
+obj = { marginTop: ThemesDefault.space.PX_24, marginHorizontal: ThemesDefault.space.PX_16, flexDirection: "column", gap: 20 };
 obj[1] = obj;
 obj[2] = { marginTop: 0 };
 obj[3] = { flexDirection: "column", gap: 6 };
 let closure_6 = createCacheKey.createStyles(obj);
-let result = require("createCacheKey").fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
+let result = set.fileFinishedImporting("modules/collectibles/native/ProductDetailsActionSheetInfo.tsx");
 
 export default function ProductDetailsActionSheetInfo(arg0) {
-  let onTrackPress;
-  let product;
   ({ product, onTrackPress } = arg0);
   if (product.type === CollectiblesItemType.CollectiblesItemType.BUNDLE) {
     let obj = { product: null, onTrackPress: null };
@@ -82,7 +79,7 @@ export default function ProductDetailsActionSheetInfo(arg0) {
     obj = { product: null };
     obj[0] = product;
     const items = [callback(ProductNameAndDescription, obj), ];
-    const obj1 = { product: null, onTrackPress: null };
+    obj1 = { product: null, onTrackPress: null };
     obj1[0] = product;
     obj1[1] = onTrackPress;
     items[1] = callback(ProductPurchaseStatus, obj1);

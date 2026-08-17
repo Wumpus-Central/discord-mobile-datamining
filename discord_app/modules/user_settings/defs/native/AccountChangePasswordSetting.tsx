@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/AccountChangePasswordSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { AccountEditPassword } from "../../account/native/AccountEditPassword.tsx";
 
 obj = {
@@ -8,16 +11,16 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["CIGa+7"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
+  route: ME.UserSettingsSections.ACCOUNT_CHANGE_PASSWORD,
   getComponent() {
     return AccountEditPassword.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountChangePasswordSetting.tsx");
 
 export default route;

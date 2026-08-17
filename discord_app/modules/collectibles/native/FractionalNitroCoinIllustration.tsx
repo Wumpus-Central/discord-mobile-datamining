@@ -1,17 +1,15 @@
 // discord_app/modules/collectibles/native/FractionalNitroCoinIllustration.tsx
-import "noop";
-import { EXTERNAL_PRODUCT_SKU_IDS } from "items";
-import { jsx } from "jsxProd";
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
+import noopAll from "noop" /* 19 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import { EXTERNAL_PRODUCT_SKU_IDS } from "items" /* 678 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/collectibles/native/FractionalNitroCoinIllustration.tsx");
 
 export const FRACTIONAL_NITRO_COIN_SIZE = { CARD: 80, CHECKOUT: 45, COLLECTED_SHEET: 68 };
 export const FractionalNitroCoinIllustration = function FractionalNitroCoinIllustration(resizeMode) {
-  let height;
-  let skuId;
-  let width;
   resizeMode = resizeMode.resizeMode;
   ({ skuId, width, height } = resizeMode);
   if (resizeMode === undefined) {

@@ -1,5 +1,5 @@
 // discord_common/js/packages/tokens/modules/generated/generated-definitions.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 let set = {
   resolve(enabledExperiments) {
@@ -1691,8 +1691,6 @@ export const _private = {
     guildbar: {
       AVATAR_SIZE: {
         resolve(arg0) {
-          let density;
-          let enabledExperiments;
           ({ enabledExperiments, density } = arg0);
           if (0 === enabledExperiments.length) {
             return 40;
@@ -1723,8 +1721,6 @@ export const _private = {
       },
       FOLDER_SIZE: {
         resolve(arg0) {
-          let density;
-          let enabledExperiments;
           ({ enabledExperiments, density } = arg0);
           if (0 === enabledExperiments.length) {
             return 48;

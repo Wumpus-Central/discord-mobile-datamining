@@ -1,14 +1,17 @@
 // discord_app/modules/display_name_styles/DisplayNameStylesConstants.tsx
-import { DisplayNameEffect } from "../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-let items = [require("DisplayNameEffect").DisplayNameEffect.SOLID, require("DisplayNameEffect").DisplayNameEffect.GRADIENT, require("DisplayNameEffect").DisplayNameEffect.NEON, require("DisplayNameEffect").DisplayNameEffect.TOON, require("DisplayNameEffect").DisplayNameEffect.POP];
-const items1 = [require("DisplayNameFont").DisplayNameFont.PLAYPEN_SANS, require("DisplayNameFont").DisplayNameFont.ORBITRON, require("DisplayNameFont").DisplayNameFont.NEW_ROCKER, require("DisplayNameFont").DisplayNameFont.KALAM];
-const items2 = [require("DisplayNameEffect").DisplayNameEffect.GUMMY, require("DisplayNameEffect").DisplayNameEffect.PRISM];
+import set from "set" /* 2 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1935 */;
+import DisplayNameFont from "DisplayNameFont" /* 1936 */;
+
+let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];
+const items1 = [DisplayNameFont.DisplayNameFont.PLAYPEN_SANS, DisplayNameFont.DisplayNameFont.ORBITRON, DisplayNameFont.DisplayNameFont.NEW_ROCKER, DisplayNameFont.DisplayNameFont.KALAM];
+const items2 = [DisplayNameEffect.DisplayNameEffect.GUMMY, DisplayNameEffect.DisplayNameEffect.PRISM];
 const items3 = [1628845, 2417517, 1874155, 12790527, 16521573, 13018645, 695675, 1027403, 747943, 11080677, 14287177, 16332578];
 const items4 = [[2797222, 16762000], [2535780, 9497343], [14966527, 2522592], [9452762, 2939534], [15709354, 14970082], [14631474, 12423167], [16095292, 15031015], [14963742, 6674404]];
 const mapped = items4.map((colors) => ({ colors, name: "" }));
 const items5 = [[15313365, 11132400, 12167150, 12184267], [16740290, 16076712, 16751574, 14248631], [16758138, 16749423, 16743544, 15756170], [12905829, 10018400, 7130467, 4570214], [8173823, 9363664, 10327285, 6737904], [14121983, 11889663, 14965989, 9137407]];
 const items6 = [[16683586, 3534206, 16769095, 16731346, 5793266], [16727357, 16747050, 16766023, 16732067, 8086015], [7997702, 13114898, 16013848, 16749824, 16766023], [8316888, 8178687, 8359167, 11890175, 15960792], [3528287, 1497266, 2147829, 2850047, 7032319], [11004065, 14282892, 16769162, 16762024, 15972057]];
-const result = require("set").fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
+const result = set.fileFinishedImporting("modules/display_name_styles/DisplayNameStylesConstants.tsx");
 
 export const EFFECT_ORDER = items;
 export const FLYWHEEL_FONTS = items1;

@@ -1,23 +1,23 @@
 // discord_app/modules/premium/powerups/hooks/useDeactivateWarningText.tsx
-import noop from "noop";
-import handleInviteData from "handleInviteData";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleInviteData" /* 4295 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
 
 const require = arg1;
-const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useDeactivateWarningText.tsx");
 
 export default function useDeactivateWarningText(arg0, skuId) {
   const _require = arg0;
-  const importDefault = skuId;
+  importDefault = skuId;
   let items = [stateFromStores1];
   stateFromStores = _require(stateFromStores[4]).useStateFromStores(items, () => stateFromStores1.getMemberCount(closure_0));
   const tmp2 = importDefault(stateFromStores[5])(arg0);
   const React = tmp2;
   let obj = _require(stateFromStores[4]);
-  const items1 = [createGuildRecordFromRust];
+  const items1 = [closure_6];
   stateFromStores1 = _require(stateFromStores[4]).useStateFromStores(items1, () => {
-    const guild = outer1_6.getGuild(closure_0);
+    const guild = closure_1_6.getGuild(closure_0);
     let vanityURLCode;
     if (guild != null) {
       vanityURLCode = guild.vanityURLCode;
@@ -31,7 +31,7 @@ export default function useDeactivateWarningText(arg0, skuId) {
     let num = 0;
     if (skuId.skuId === callback(stateFromStores[6]).GUILD_POWERUP_ROLE_COLOR_SKU_ID) {
       num = 0;
-      if (null != noop) {
+      if (null != closure_3) {
         const sortedRoles = stateFromStores2.getSortedRoles(callback);
         num = sortedRoles.reduce((arg0, colorStrings) => {
           colorStrings = colorStrings.colorStrings;
@@ -109,7 +109,7 @@ export default function useDeactivateWarningText(arg0, skuId) {
         formatToPlainStringResult1 = intl2.string(skuId(tmp3[8]).Vf2ZcR);
         tmp7 = skuId;
       }
-      const obj1 = { text: null, critical: null };
+      obj1 = { text: null, critical: null };
       obj1[0] = formatToPlainStringResult1;
       obj1[1] = tmp.skuId === tmp2(tmp3[6]).VANITY_URL_POWERUP_SKU_ID;
       const items = [obj1];

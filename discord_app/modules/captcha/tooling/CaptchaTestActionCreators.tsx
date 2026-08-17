@@ -1,15 +1,15 @@
 // discord_app/modules/captcha/tooling/CaptchaTestActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _testCaptcha() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c2 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c2 = 0;
     return (function*(arg0, arg1) {
       if (c2 === 2) {
         c2 = 3;
@@ -38,7 +38,7 @@ function _testCaptcha() {
               return obj;
             } else {
               const HTTP = callback(table[2]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: false };
+              obj1 = { url: null, body: null, rejectWithError: false };
               obj1[0] = constants.CAPTCHA_TEST;
               const obj2 = { decider: null, options: null };
               obj2[0] = callback;
@@ -69,7 +69,7 @@ function _testCaptcha() {
       }
     })();
   });
-  const _testCaptcha = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -78,7 +78,7 @@ function _testCaptcha() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 
 export const CaptchaDeciderType = { HCAPTCHA_RQDATA: "hCaptchaRqdata", SMITE_RQDATA: "SmiteRqdata", RECAPTCHA: "Recaptcha", RECAPTCHA_ENTERPRISE: "RecaptchaEnterprise" };
 export const HCaptchaDifficulty = { EASY: 1, [1]: "EASY", MODERATE: 2, [2]: "MODERATE", DIFFICULT: 3, [3]: "DIFFICULT", VERY_DIFFICULT: 4, [4]: "VERY_DIFFICULT" };

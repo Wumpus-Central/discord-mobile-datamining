@@ -1,21 +1,24 @@
 // discord_app/modules/user_settings/defs/native/DesignSystemsTextInputSetting.tsx
-import createToggle from "createToggle";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { Sample } from "../../design_system/native/UserSettingsDesignSystemTextInput.tsx";
 
 obj = {
   useTitle() {
     return "Text Input";
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DESIGN_SYSTEMS,
+  parent: MobileUserSettings.MobileUserSettings.DESIGN_SYSTEMS,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.DESIGN_SYSTEM_TEXT_INPUT,
+  route: ME.UserSettingsSections.DESIGN_SYSTEM_TEXT_INPUT,
   getComponent() {
     return Sample.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsTextInputSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DesignSystemsTextInputSetting.tsx");
 
 export default route;

@@ -1,30 +1,23 @@
 // discord_app/modules/forums/native/posts/ForumPostMessageContent.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { useNativeForumPostContent } from "hooks/useNativeForumPostContent.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import useNativeForumPostContentDefault from "useNativeForumPostContent" /* 11201 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ text: { alignSelf: "flex-start" } });
-const result = require("createCacheKey").fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostMessageContent.tsx");
 
 export default function ForumPostMessageContent(senderModifier) {
-  let content;
-  let hasUnreads;
-  let isMessageDeleted;
-  let message;
-  let messageContent;
-  let messageLoaded;
-  let style;
-  let variant;
   let num = senderModifier.lineClamp;
   ({ messageContent, message, isMessageDeleted, hasUnreads, messageLoaded } = senderModifier);
   if (num === undefined) {
     num = 2;
   }
   const tmp = callback();
-  ({ content, style, variant } = useNativeForumPostContent({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier: senderModifier.senderModifier }));
+  ({ content, style, variant } = useNativeForumPostContentDefault({ message, messageLoaded, messageContent, isMessageDeleted, senderModifier: senderModifier.senderModifier }));
   const obj = { variant, color: null, lineClamp: null, ellipsizeMode: "tail", includeFontPadding: true, style: null, children: null };
   let str = "text-muted";
   if (hasUnreads) {

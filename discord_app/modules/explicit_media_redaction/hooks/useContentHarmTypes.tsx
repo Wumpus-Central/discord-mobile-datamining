@@ -1,20 +1,21 @@
 // discord_app/modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx
-import noop from "noop";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import getEligibleHarmTypesConfigsForContext from "getEligibleHarmTypesConfigsForContext" /* 5019 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { getEligibleHarmTypesConfigsForContext } from "../ObscuredMediaUtils.tsx";
 import { getShouldObscureForSetting } from "../SensitiveMediaRedactionSettingUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   const _require = channelId;
-  const dependencyMap = authorId;
+  dependencyMap = authorId;
   const eligibleHarmTypesConfigsForContext = _getEligibleHarmTypesConfigsForContext.getEligibleHarmTypesConfigsForContext();
   let obj = _getEligibleHarmTypesConfigsForContext;
-  let items = [mergeGuildAvatar];
+  let items = [closure_6];
   const stateFromStores = _initialize.useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = _initialize;
   const items1 = [stateFromStores1, stateFromStores2];
@@ -42,7 +43,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
         if (null != tmp2) {
           const mapped = eligibleHarmTypesConfigsForContext.map((harmType) => {
             let tmp3 = null;
-            if (null != ensureGuildLoaded) {
+            if (null != closure_4) {
               tmp3 = harmType.getUserSettingsWithDefaults(tmp)[tmp2];
             }
             harmType = null;
@@ -66,7 +67,7 @@ function useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, authorId) {
   }
   return NONE;
 }
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/hooks/useContentHarmTypes.tsx");
 
 export { useEnabledHarmTypesBitmaskForChannelAndAuthorId };
 export const useEnabledHarmTypesBitmaskForMessage = function useEnabledHarmTypesBitmaskForMessage(stateFromStores) {

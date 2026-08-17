@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import closure_2 from "handleConnectionOpen" /* 4197 */;
+import closure_3 from "insertUnsortedGuilds" /* 5078 */;
 
-const require = arg1;
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/useTabSelectedGuildId.tsx");
 
 export default function useTabSelectedGuildId() {
-  const items = [handleConnectionOpen, insertUnsortedGuilds];
+  const items = [closure_2, closure_3];
   return defaultAreStatesEqual.useStateFromStores(items, () => {
     let guildId = store.getGuildId();
     const lastSelectedGuildId = store.getLastSelectedGuildId();

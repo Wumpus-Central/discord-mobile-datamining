@@ -1,39 +1,31 @@
 // discord_app/modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx
-import Button from "Button";
-import trackRTCPanelViewed from "trackRTCPanelViewed";
-import get_ActivityIndicator from "getNickname";
-import createRTCConnection from "createRTCConnection";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import { AnalyticsLocations } from "ME";
-import jsxProd from "XLargeBoldIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createRTCConnection" /* 4539 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import { AnalyticsLocations } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_14;
-let closure_6;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ ActivityIndicator: c5, View: closure_6 } = get_ActivityIndicator);
 ({ AnalyticsSecureFramesUserVerification: c9, SECURE_FRAMES_PUBLIC_KEY_VERSION: c10, USER_VERIFIED_TOAST_KEY: unpackModuleId } = SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { iconContainer: null, icon: null, content: null, subtitle: null, buttons: null, helpMessage: null };
-createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
+createCacheKey = { height: 80, width: 80, borderRadius: 40, alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, marginBottom: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 48, width: 48 };
 createCacheKey[2] = { padding: 16, justifyContent: "center", alignItems: "center" };
 createCacheKey[3] = { textAlign: "center", marginTop: 8, marginBottom: 40 };
 createCacheKey[4] = { marginTop: 40 };
 createCacheKey[5] = { marginTop: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/rtc/native/SecureFramesUserVerificationBottomSheet.tsx");
 
 export default function SecureFramesUserVerificationBottomSheet(userId) {
-  let tmp17;
-  let tmp18;
   userId = userId.userId;
   const channelId = userId.channelId;
   const fingerprint = userId.fingerprint;
@@ -48,13 +40,13 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
   let isSecureFramesKeyInconsistent;
   let memo;
   let name;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   callback = tmp;
   let obj = userId(fingerprint[10]);
   const secureFramesPairwiseFingerprint = obj.useSecureFramesPairwiseFingerprint({ userId });
   userKey = secureFramesPairwiseFingerprint.userKey;
   fingerprint2 = secureFramesPairwiseFingerprint.fingerprint;
-  let obj1 = userId(fingerprint[11]);
+  obj1 = userId(fingerprint[11]);
   isSecureFramesUIEnabled = obj1.useIsSecureFramesUIEnabled({ channelId });
   let obj2 = userId(fingerprint[12]);
   isUserSecureFramesVerified = obj2.useIsUserSecureFramesVerified({ userId, channelId });
@@ -123,13 +115,12 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     if (stateFromStores.OTHER_USER_ALREADY_VERIFIED !== memo) {
       if (stateFromStores.MATCH !== tmp) {
         let obj = { style: null, color: null };
-        obj[0] = _undefined.icon;
+        obj[0] = closure_3.icon;
         obj[1] = channelId(fingerprint[9]).colors.TEXT_FEEDBACK_CRITICAL;
         return name(userId(fingerprint[21]).XLargeBoldIcon, obj);
       }
     }
-    obj = { style: _undefined.icon, color: null };
-    obj[1] = channelId(fingerprint[9]).colors.TEXT_FEEDBACK_POSITIVE;
+    obj = { style: closure_3.icon, color: channelId(fingerprint[9]).colors.TEXT_FEEDBACK_POSITIVE };
     return name(userId(fingerprint[20]).CheckmarkLargeBoldIcon, obj);
   }, items7);
   callback = userKey.useCallback(() => {
@@ -158,8 +149,7 @@ export default function SecureFramesUserVerificationBottomSheet(userId) {
     }
   }, items8);
   obj = { startExpanded: true, header: null, children: null };
-  obj = { title: null, leading: null };
-  obj[1] = name(userId(fingerprint[28]).ActionSheetCloseButton, { onPress: callback });
+  obj = { title: null, leading: name(userId(fingerprint[28]).ActionSheetCloseButton, { onPress: callback }) };
   obj[1] = name(userId(fingerprint[27]).BottomSheetTitleHeader, obj);
   obj1 = { style: tmp.content, children: null };
   obj2 = { style: tmp.iconContainer, children: null };

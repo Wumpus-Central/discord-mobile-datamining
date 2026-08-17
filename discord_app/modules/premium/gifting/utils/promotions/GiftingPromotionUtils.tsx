@@ -1,13 +1,13 @@
 // discord_app/modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import createEmptyPromotionsByType from "createEmptyPromotionsByType";
-import { SubscriptionPlans } from "GuildFeatures";
-import { apexExperiment } from "../../experiments/GiftPromotionReminderExperiment.tsx";
-import { apexExperiment } from "../../experiments/PremiumGiftingGogoPromotionExperiment.tsx";
+import apexExperiment from "apexExperiment" /* 9629 */;
+import apexExperiment2 from "apexExperiment" /* 9630 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createEmptyPromotionsByType" /* 7628 */;
+import { SubscriptionPlans } from "GuildFeatures" /* 1924 */;
 
-const require = arg1;
-let result = require("createEmptyPromotionsByType").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/premium/gifting/utils/promotions/GiftingPromotionUtils.tsx");
 
 export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchClaimableGiftingPromotionRewardSkuIds() {
   const tmp = purchases(hasPreviouslyFetched.useState(), 2);
@@ -19,14 +19,14 @@ export const useFetchClaimableGiftingPromotionRewardSkuIds = function useFetchCl
   purchases = fetchPurchases.purchases;
   hasPreviouslyFetched = fetchPurchases.hasPreviouslyFetched;
   fetchPurchasesError = fetchPurchases.fetchPurchasesError;
-  let closure_5 = hasPreviouslyFetched.useRef(false);
+  closure_5 = hasPreviouslyFetched.useRef(false);
   const items1 = [stateFromStoresArray, purchases, hasPreviouslyFetched, fetchPurchasesError];
   const effect = hasPreviouslyFetched.useEffect(() => {
     if (hasPreviouslyFetched) {
       if (!ref.current) {
         if (stateFromStoresArray.length > 0) {
           if (null == fetchPurchasesError) {
-            let found = arr.filter((arg0) => null == _slicedToArray.get(arg0));
+            let found = arr.filter((arg0) => null == closure_2.get(arg0));
           } else {
             found = [];
           }
@@ -174,7 +174,7 @@ export const combinePromotionStyles = function combinePromotionStyles(background
   return tmp;
 };
 export const shouldShowGiftPromotionReminderNotice = function shouldShowGiftPromotionReminderNotice() {
-  const GiftPromotionReminderExperiment = apexExperiment.GiftPromotionReminderExperiment;
+  const GiftPromotionReminderExperiment = apexExperiment2.GiftPromotionReminderExperiment;
   if (GiftPromotionReminderExperiment.getConfig({ location: "shouldShowGiftPromotionReminderNotice" }).enabled) {
     if (null == marketingComponentByType.getMarketingComponentByType(tmp(7931).MarketingComponentType.GIFT_REMINDER_NAGBAR)) {
       return false;

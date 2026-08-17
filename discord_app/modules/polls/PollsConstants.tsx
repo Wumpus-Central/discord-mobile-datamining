@@ -1,8 +1,9 @@
 // discord_app/modules/polls/PollsConstants.tsx
-import set from "set";
+import ExpressionPickerViewType from "ExpressionPickerViewType" /* 1338 */;
+import set from "set" /* 2 */;
 
 const items = [, ];
-({ GIF: arr[0], EMOJI: arr[1] } = require("ExpressionPickerViewType").ExpressionPickerViewType);
+({ GIF: arr[0], EMOJI: arr[1] } = ExpressionPickerViewType.ExpressionPickerViewType);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/polls/PollsConstants.tsx");
 

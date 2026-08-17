@@ -1,30 +1,28 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx
-import "noop";
-import { CommandListSortOrder } from "CommandListSortOrder";
-import { jsx } from "jsxProd";
-import { Themes } from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ArrowsUpDownIcon } from "../../../../../../../design/components/Icon/native/redesign/generated/ArrowsUpDownIcon.tsx";
-import { Background } from "../../../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { context } from "../../../../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { getSystemLocale } from "../../../../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import context from "context" /* 8101 */;
+import ArrowsUpDownIcon from "ArrowsUpDownIcon" /* 11329 */;
+import { CommandListSortOrder } from "CommandListSortOrder" /* 11313 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/application_view/app/sort/CommandListSortActionSheet.tsx");
 
 export default function CommandListSortActionSheet(sortOrder) {
-  let importDefault;
-  let require;
   ({ onClose: require, onSortOptionPress: importDefault } = sortOrder);
   let obj = { startExpanded: true, header: null, children: null };
   obj = { leading: null, title: null };
-  obj = { size: "sm", color: null };
-  obj[1] = Themes.colors.TEXT_DEFAULT;
-  obj[0] = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: null });
+  obj = { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT };
+  obj[0] = jsx(ArrowsUpDownIcon.ArrowsUpDownIcon, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.yeYaHf);
-  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { size: "sm", color: null });
-  const obj1 = {
+  obj[1] = jsx(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
+  obj1 = {
     hasIcons: false,
     value: sortOrder.sortOrder,
     onChange(arg0) {
@@ -56,5 +54,5 @@ export default function CommandListSortActionSheet(sortOrder) {
     },
     children: null
   });
-  return jsx(Background.BottomSheet, { size: "sm", color: null });
+  return jsx(Background.BottomSheet, { size: "sm", color: ThemesDefault.colors.TEXT_DEFAULT });
 };

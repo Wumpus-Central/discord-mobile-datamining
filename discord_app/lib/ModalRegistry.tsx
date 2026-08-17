@@ -1,4 +1,6 @@
 // discord_app/lib/ModalRegistry.tsx
+import set2 from "set" /* 2 */;
+
 class ModalRegistry {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -50,6 +52,6 @@ prototype["getOpenModal"] = function getOpenModal() {
     return obj;
   }
 };
-const result = require("set").fileFinishedImporting("lib/ModalRegistry.tsx");
+const result = set2.fileFinishedImporting("lib/ModalRegistry.tsx");
 
 export default ModalRegistry;

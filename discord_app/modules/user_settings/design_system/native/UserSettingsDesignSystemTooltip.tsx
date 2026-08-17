@@ -1,24 +1,20 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Layer } from "../../../../design/components/Layers/native/LayerScope.native.tsx";
+import Text from "Text" /* 4734 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import Layer from "Layer" /* 7126 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function Content() {
-  let tmp10;
-  let tmp9;
   let obj = React;
   const tmp2 = first2(React.useState(false), 2);
   const first = tmp2[0];
   let first1 = first;
-  const dependencyMap = tmp2[1];
+  dependencyMap = tmp2[1];
   first1 = undefined;
   const tmp4 = first2(React.useState(false), 2);
   first1 = tmp4[0];
@@ -56,7 +52,7 @@ function Content() {
       }
     };
   }, items1);
-  let obj1 = first1(9270);
+  obj1 = first1(9270);
   const tooltip = obj1.useTooltip(ref, memo);
   obj = { children: null };
   obj = { style: tmp.container, children: callback2(first1(4745).Button, obj1) };
@@ -85,12 +81,11 @@ class TooltipNote {
 }
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { padding: 16, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1 } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTooltip.tsx");
 
 export default function UserSettingsDesignSystemTooltip() {
   let obj = { style: callback4().flex, bottom: true, children: null };
-  obj = { children: null };
-  obj[0] = callback2(Content, {});
+  obj = { children: callback2(Content, {}) };
   obj[2] = callback2(Layer.LayerScope, obj);
   return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 };

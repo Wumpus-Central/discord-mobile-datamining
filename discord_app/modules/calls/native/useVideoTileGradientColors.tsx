@@ -1,14 +1,11 @@
 // discord_app/modules/calls/native/useVideoTileGradientColors.tsx
-import noop from "noop";
-import { ThemeTypes } from "ME";
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { getProfileTheme } from "../../user_profile/UserProfileGradientUtils.tsx";
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import getProfileTheme from "getProfileTheme" /* 8422 */;
+import closure_2 from "noop" /* 19 */;
+import { ThemeTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function rgbToHex(arg0) {
-  let tmp;
-  let tmp2;
-  let tmp3;
   [tmp, tmp2, tmp3] = arg0;
   let str = Math.max(0, Math.min(255, tmp));
   str = str.toString(16);
@@ -51,12 +48,12 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const result = require("getProfileTheme").fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");
 
 export { computeVideoTileGradientStops };
 export const useVideoTileGradientColors = function useVideoTileGradientColors(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   const items = [arg0, arg1];
-  return React.useMemo(() => outer1_5(closure_0, closure_1), items);
+  return React.useMemo(() => closure_1_5(closure_0, closure_1), items);
 };

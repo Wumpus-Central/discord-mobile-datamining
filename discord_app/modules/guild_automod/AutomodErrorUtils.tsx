@@ -1,13 +1,11 @@
 // discord_app/modules/guild_automod/AutomodErrorUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { AbortCodes } from "ME";
-import set from "getSystemLocale";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import { AbortCodes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function getAutomodErrorMessageFromErrorResponse(errorResponseBody, id) {
-  let code;
-  let message;
   if (null == errorResponseBody) {
     return null;
   } else {

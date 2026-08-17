@@ -1,11 +1,14 @@
 // discord_app/modules/system_date_format/SystemDateFormatter.native.tsx
-import { set } from "../../utils/PlatformUtils.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import enforcingDefault from "enforcing" /* 4081 */;
+
 if (null != global.__DiscordCreateDateFormatter) {
   let __DiscordCreateDateFormatter = global.__DiscordCreateDateFormatter;
 } else {
-  const _module = require("set");
+  const _module = set2;
   if (_module.isAndroid()) {
-    let DateFormatUtils = require("enforcing");
+    let DateFormatUtils = enforcingDefault;
   } else {
     DateFormatUtils = tmp2.DateFormatUtils;
   }
@@ -22,9 +25,9 @@ if (null != global.__DiscordCreateDateFormatter) {
     }
   }
 }
-const result = require("enforcing").fileFinishedImporting("modules/system_date_format/SystemDateFormatter.native.tsx");
+const result = set.fileFinishedImporting("modules/system_date_format/SystemDateFormatter.native.tsx");
 
 export const makeFormatter = __DiscordCreateDateFormatter;
 export const supportsSystemDateFormatter = function supportsSystemDateFormatter() {
-  return set.isIOS();
+  return set2.isIOS();
 };

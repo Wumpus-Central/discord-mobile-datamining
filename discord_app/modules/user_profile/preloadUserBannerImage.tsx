@@ -1,7 +1,9 @@
 // discord_app/modules/user_profile/preloadUserBannerImage.tsx
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-const result = require("set").fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
+import set from "set" /* 2 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+
+const result = set.fileFinishedImporting("modules/user_profile/preloadUserBannerImage.tsx");
 
 export default function preloadUserBannerImage(user) {
   if (typeof globalThis.Image !== "undefined") {

@@ -1,17 +1,12 @@
 // discord_app/modules/launchpad/native/LaunchPadContainer.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import LAUNCH_PAD_SPRING_CONFIG from "LAUNCH_PAD_SPRING_CONFIG" /* 10665 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 ({ LAUNCH_PAD_SPRING_CONFIG: c4, LaunchPadTypes: c5 } = LAUNCH_PAD_SPRING_CONFIG);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -24,23 +19,17 @@ let obj1 = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 obj1.overflow = "hidden";
 createCacheKey[1] = obj1;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let closure_9 = { code: "function LaunchPadContainerTsx1(){const{windowDimensions}=this.__closure;return windowDimensions.get().height;}" };
 let closure_10 = { code: "function LaunchPadContainerTsx2(height,lastHeight){const{updaters}=this.__closure;if(lastHeight==null)return;if(lastHeight<=height)return;updaters.onWindowHeightChange();}" };
 let closure_11 = { code: "function LaunchPadContainerTsx3(){const{interpolate,launchPadSharedState,withSpring,windowDimensions,LAUNCH_PAD_SPRING_CONFIG}=this.__closure;return{borderRadius:interpolate(launchPadSharedState.get(),[0,1],[0,16]),transform:[{scale:withSpring(interpolate(launchPadSharedState.get(),[0,1],[1,(windowDimensions.get().width-16*3)/windowDimensions.get().width]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')},{translateY:withSpring(interpolate(launchPadSharedState.get(),[0,1],[0,-4]),LAUNCH_PAD_SPRING_CONFIG,'animate-always')}]};}" };
-const result = require("LAUNCH_PAD_SPRING_CONFIG").fileFinishedImporting("modules/launchpad/native/LaunchPadContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadContainer.tsx");
 
 export default function LaunchPadContainer(children) {
-  let gesture;
-  let gestureRef;
-  let gestureState;
-  let launchPadPullTabState;
-  let launchPadShown;
-  let updaters;
   let launchPadSharedState;
   updaters = undefined;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback2();
   const tmp4 = updaters(10666)();
   const tmp5 = updaters(16179)();
   launchPadSharedState = tmp5.launchPadSharedState;
@@ -50,7 +39,7 @@ export default function LaunchPadContainer(children) {
   dependencyMap = tmp7;
   let obj = launchPadSharedState(4115);
   const fn = function o() {
-    return _undefined.get().height;
+    return store.get().height;
   };
   fn.__closure = { windowDimensions: tmp7 };
   fn.__workletHash = 9985296176902;
@@ -66,22 +55,21 @@ export default function LaunchPadContainer(children) {
   fn2.__workletHash = 418963589215;
   fn2.__initData = closure_10;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
-  let obj1 = launchPadSharedState(4115);
+  obj1 = launchPadSharedState(4115);
   const fn3 = function v() {
-    let obj = { borderRadius: null, transform: null };
-    obj[0] = launchPadSharedState(_undefined[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, 16]);
+    let obj = { borderRadius: launchPadSharedState(store[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, 16]), transform: null };
     obj = { scale: null };
-    const obj2 = launchPadSharedState(_undefined[9]);
-    const obj4 = launchPadSharedState(_undefined[10]);
+    const obj2 = launchPadSharedState(store[9]);
+    const obj4 = launchPadSharedState(store[10]);
     const value = launchPadSharedState.get();
-    const diff = _undefined.get().width - 48;
-    const items = [1, diff / _undefined.get().width];
-    obj[0] = obj4.withSpring(launchPadSharedState(_undefined[9]).interpolate(value, [0, 1], items), outer1_4, "animate-always");
+    const diff = store.get().width - 48;
+    const items = [1, diff / store.get().width];
+    obj[0] = obj4.withSpring(launchPadSharedState(store[9]).interpolate(value, [0, 1], items), closure_1_4, "animate-always");
     const items1 = [obj, ];
     obj = { translateY: null };
-    const obj5 = launchPadSharedState(_undefined[9]);
-    const obj7 = launchPadSharedState(_undefined[10]);
-    obj[0] = obj7.withSpring(launchPadSharedState(_undefined[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, -4]), outer1_4, "animate-always");
+    const obj5 = launchPadSharedState(store[9]);
+    const obj7 = launchPadSharedState(store[10]);
+    obj[0] = obj7.withSpring(launchPadSharedState(store[9]).interpolate(launchPadSharedState.get(), [0, 1], [0, -4]), closure_1_4, "animate-always");
     items1[1] = obj;
     obj[1] = items1;
     return obj;

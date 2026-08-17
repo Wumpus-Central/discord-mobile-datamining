@@ -1,16 +1,18 @@
 // discord_app/modules/guild_profile/GuildPopoutStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import { Store } from "initialize";
-import { _startLurking } from "../../utils/GuildDiscoveryUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _startLurking from "_startLurking" /* 7301 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = { UNSET: "unset", FETCHING: "fetching", FAILED: "failed", SUCCEEDED: "succeeded" };
 let closure_4 = { guilds: {} };
+const Store = initializeDefault.Store;
 class GuildPopoutStore extends Store {
 }
 const prototype = GuildPopoutStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint);
+  this.waitFor(closure_2);
 };
 prototype["isFetchingGuild"] = function isFetchingGuild(arg0) {
   let tmp2 = null != tmp;
@@ -34,7 +36,7 @@ prototype["hasFetchFailed"] = function hasFetchFailed(arg0) {
   return tmp2;
 };
 GuildPopoutStore.displayName = "GuildPopoutStore";
-const guildPopoutStore = new GuildPopoutStore(require("dispatcher"), {
+const guildPopoutStore = new GuildPopoutStore(dispatcherDefault, {
   GUILD_POPOUT_FETCH_START: function handleFetchStart(guildId) {
     guildId = guildId.guildId;
     const obj = {};
@@ -60,6 +62,6 @@ const guildPopoutStore = new GuildPopoutStore(require("dispatcher"), {
     closure_4.guilds[guildId] = obj;
   }
 });
-const result = require("initialize").fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_profile/GuildPopoutStore.tsx");
 
 export default guildPopoutStore;

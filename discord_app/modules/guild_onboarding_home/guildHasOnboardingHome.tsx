@@ -1,11 +1,10 @@
 // discord_app/modules/guild_onboarding_home/guildHasOnboardingHome.tsx
-import ME from "ME";
-import { getFavoritesAwareGuildName } from "../favorites/FavoritesUtils.tsx";
+import set from "set" /* 2 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ GuildFeatures: obj1, ME: c3 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
+const result = set.fileFinishedImporting("modules/guild_onboarding_home/guildHasOnboardingHome.tsx");
 
 export default function guildHasOnboardingHome(id) {
   let isFavoritesGuildIdResult = null == id;

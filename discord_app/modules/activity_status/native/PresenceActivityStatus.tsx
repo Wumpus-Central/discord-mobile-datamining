@@ -1,27 +1,20 @@
 // discord_app/modules/activity_status/native/PresenceActivityStatus.tsx
-import "noop";
-import { ActivityTypes } from "ME";
-import jsxProd from "jsxProd";
-import { AppsIcon } from "../../../design/components/Icon/native/redesign/generated/AppsIcon.tsx";
-import { GameControllerIcon } from "../../../design/components/Icon/native/redesign/generated/GameControllerIcon.tsx";
-import { MusicIcon } from "../../../design/components/Icon/native/redesign/generated/MusicIcon.tsx";
-import { TvIcon } from "../../../design/components/Icon/native/redesign/generated/TvIcon.tsx";
-import { isEmbeddedActivity } from "../../activities/utils/isEmbeddedActivity.tsx";
-import { getActivityStatusText } from "../getActivityStatusText.tsx";
+import noopAll from "noop" /* 19 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
+import AppsIcon2 from "AppsIcon" /* 7974 */;
+import GameControllerIcon from "GameControllerIcon" /* 9430 */;
+import TvIcon from "TvIcon" /* 9899 */;
+import MusicIcon from "MusicIcon" /* 9904 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 9906 */;
+import { ActivityTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/PresenceActivityStatus.tsx");
 
 export default function PresenceActivityStatus(hideText) {
-  let activity;
-  let hideIcon;
-  let iconStyle;
-  let maxFontSizeMultiplier;
-  let textStyle;
   ({ activity, hideIcon } = hideText);
   ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
   if (hideIcon === undefined) {
@@ -36,8 +29,8 @@ export default function PresenceActivityStatus(hideText) {
       return null;
     }
   }
-  if (isEmbeddedActivity(activity)) {
-    let AppsIcon = AppsIcon.AppsIcon;
+  if (isEmbeddedActivityDefault(activity)) {
+    let AppsIcon = AppsIcon2.AppsIcon;
   } else if (activity.type === ActivityTypes.PLAYING) {
     AppsIcon = GameControllerIcon.GameControllerIcon;
   } else if (activity.type === tmp3.LISTENING) {
@@ -69,7 +62,7 @@ export default function PresenceActivityStatus(hideText) {
     obj = { style: null, maxFontSizeMultiplier: null, children: null };
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
-    obj[2] = getActivityStatusText(activity, true).text;
+    obj[2] = getActivityStatusTextDefault(activity, true).text;
     tmp15 = callback(tmp(9901), obj);
   }
   children[1] = tmp15;

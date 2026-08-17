@@ -1,6 +1,7 @@
 // discord_app/modules/collectibles/records/BaseCollectiblesItemRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let prototype;
 prototype = function BaseCollectiblesItemRecord(skuId) {
   const tmp = new prototype(new.target);

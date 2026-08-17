@@ -1,57 +1,53 @@
 // discord_app/modules/share/native/SearchableDestinationListHeader.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Background } from "../../../../_runtime/06319_Background.js";
-import { HeaderBackImage } from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import HeaderBackImage from "HeaderBackImage" /* 6314 */;
+import Background from "Background" /* 6319 */;
+import useIsWindowLarge from "useIsWindowLarge" /* 7925 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { headerLeftContainer: null, headerRightContainer: null, header: null };
-createCacheKey = { paddingLeft: require("Themes").space.PX_16 };
+createCacheKey = { paddingLeft: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingRight: require("Themes").space.PX_16 };
-const obj1 = { paddingRight: require("Themes").space.PX_16 };
-createCacheKey[2] = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("createCacheKey").fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
+createCacheKey[1] = { paddingRight: ThemesDefault.space.PX_16 };
+const obj1 = { paddingRight: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { borderBottomWidth: 0, shadowColor: "transparent", backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/share/native/SearchableDestinationListHeader.tsx");
 
 export default function SearchableDestinationListHeader(arg0) {
-  let headerRight;
-  let importDefault;
-  let onClose;
-  let require;
-  let title;
   ({ subtitle: require, subtitleColor: importDefault } = arg0);
   ({ title, headerRight, onClose } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback();
   const obj = {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {
-      return outer1_3(outer1_0(outer1_2[6]).GenericHeaderTitle, { title: children.children, subtitle: closure_0, subtitleColor: closure_1, variant: "redesign/heading-18/bold" });
+      return closure_1_3(closure_1_0(closure_1_2[6]).GenericHeaderTitle, { title: children.children, subtitle: closure_0, subtitleColor: closure_1, variant: "redesign/heading-18/bold" });
     },
     headerTitleAlign: "center",
-    headerLeft: null,
-    headerRight: null,
+    headerLeft: HeaderBackImage.getHeaderCloseButton(onClose),
+    headerRight,
     headerLeftContainerStyle: null,
     headerRightContainerStyle: null,
     headerStatusBarHeight: null
   };
-  obj[4] = HeaderBackImage.getHeaderCloseButton(onClose);
-  obj[5] = headerRight;
   ({ headerLeftContainer: obj[6], headerRightContainer: obj[7] } = tmp);
   const obj2 = HeaderBackImage;
   const tmp2 = importDefault;
   const tmp4 = jsx;
   const tmp5 = require;
   if (!obj3.isIOS()) {
-    let num = useSafeAreaInsets().top;
+    let num = useSafeAreaInsetsDefault().top;
   } else {
     num = 0;
-    const tmp5Result = tmp5(7925);
+    const tmp5Result = useIsWindowLarge;
   }
-  obj[8] = num + tmp2(712).space.PX_8;
+  obj[8] = num + ThemesDefault.space.PX_8;
   return tmp4(Background.Header, obj);
 };

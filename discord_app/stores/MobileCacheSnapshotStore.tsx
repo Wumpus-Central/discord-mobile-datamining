@@ -1,12 +1,15 @@
 // discord_app/stores/MobileCacheSnapshotStore.tsx
-import { Store } from "initialize";
-import { Storage } from "../../discord_common/js/packages/storage/Storage.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
-const require = arg1;
+require = arg1;
 let MobileCacheSnapshotStore;
+const Store = initializeDefault.Store;
 class MobileCacheSnapshotStore extends Store {
   constructor(arg0, arg1) {
-    WRITE_CACHES = undefined;
+    closure_0 = undefined;
     tmp3 = require("dispatcher");
     obj = {};
     merged = Object.assign(global);
@@ -20,7 +23,7 @@ class MobileCacheSnapshotStore extends Store {
     };
     tmp2 = new tmp2(tmp3, obj, arg1, new.target, tmp2, tmp3, obj, new.target, undefined, tmp, global, closure_1);
     // ThrowIfThisInitialized (0x7c)
-    WRITE_CACHES = tmp2;
+    closure_0 = tmp2;
     tmp5 = require("module_38");
     tmp5Result = tmp5(null != tmp2.getClass().displayName, "Snapshot stores need a display name");
     tmp7 = require("module_38")(!("CLEAR_CACHES" in global), "MobileCacheSnapshotStores cannot use the 'CLEAR_CACHES' action");
@@ -42,15 +45,15 @@ Object.defineProperty(prototype, "persistKey", {
   set: undefined
 });
 prototype["clear"] = function clear() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   Storage.remove(this.persistKey);
 };
 prototype["save"] = function save() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const result = Storage.set(this.persistKey, this.takeSnapshot());
 };
 prototype["readSnapshot"] = function readSnapshot(LATEST_SNAPSHOT_VERSION) {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const value = Storage.get(this.persistKey);
   let data = null;
   if (null != value) {
@@ -65,6 +68,6 @@ prototype["getClass"] = function getClass() {
   return this.constructor;
 };
 MobileCacheSnapshotStore.allStores = [];
-let result = require("module_38").fileFinishedImporting("stores/MobileCacheSnapshotStore.tsx");
+let result = require("set").fileFinishedImporting("stores/MobileCacheSnapshotStore.tsx");
 
 export default MobileCacheSnapshotStore;

@@ -1,6 +1,8 @@
 // discord_app/modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx
-import { v1 } from "../../../../_runtime/00514_v1.js";
-import { trackSettingSearchInputFocused } from "Tracking.tsx";
+import set from "set" /* 2 */;
+import v1 from "v1" /* 514 */;
+import trackSettingSearchInputFocused from "trackSettingSearchInputFocused" /* 7359 */;
+
 class SettingSearchSessionAnalyticsManager {
 }
 const prototype = SettingSearchSessionAnalyticsManager.prototype;
@@ -35,6 +37,6 @@ prototype["terminate"] = function terminate() {
     self.isQueryEnteredTracked = false;
   }
 };
-let result = require("set").fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
+let result = set.fileFinishedImporting("modules/settings/tracking/SettingSearchSessionAnalyticsManager.tsx");
 
 export default Object.create(SettingSearchSessionAnalyticsManager.prototype);

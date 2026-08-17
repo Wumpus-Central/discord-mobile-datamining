@@ -1,41 +1,29 @@
 // discord_app/modules/launchpad/native/shared/TextChannel.tsx
-import importAllResult from "usePressUnderlayColor";
-import { View } from "isChannelSpoilerGated";
-import rebuild from "rebuild";
-import _getSystemLocale from "_getSystemLocale";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { getThemedRippleConfig } from "semanticColor";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "useEmbeddedApps";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { getLayoutStyle } from "getLayoutStyles.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "rebuild" /* 5251 */;
+import closure_6 from "_getSystemLocale" /* 1994 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles(() => {
   let obj = { pressable: null, selectedBorder: null, rowSelected: null };
-  obj = { flex: 1, borderRadius: getLayoutStyle().container.borderRadius, marginBottom: 1 };
+  obj = { flex: 1, borderRadius: getLayoutStyleDefault().container.borderRadius, marginBottom: 1 };
   obj[0] = obj;
-  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: Themes.colors.BORDER_MUTED, borderRadius: Themes.radii.md };
+  obj = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED, borderRadius: ThemesDefault.radii.md };
   obj[1] = obj;
-  obj[2] = { borderRadius: Themes.radii.md, backgroundColor: Themes.colors.BACKGROUND_MOD_MUTED };
+  obj[2] = { borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED };
   return obj;
 });
 const memoResult = importAllResult.memo(function TextChannel(subtitle) {
-  let isMentionLowImportance;
-  let isSubscriptionGated;
-  let mentionCount;
-  let needSubscriptionToAccess;
-  let newChannel;
-  let optInEnabled;
-  let resolvedUnreadSetting;
-  let selected;
-  let showGuildBadgeIcon;
-  let unread;
   const channel = subtitle.channel;
   let flag = subtitle.muted;
   if (flag === undefined) {
@@ -50,20 +38,20 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
     selected = false;
   }
   let arr4;
-  let dependencyMap;
+  dependencyMap = undefined;
   const isForumLikeChannelResult = channel.isForumLikeChannel();
   let obj = channel(15606);
   const channelUnreadBadgeState = obj.useChannelUnreadBadgeState(channel, flag);
   ({ newChannel, unread, resolvedUnreadSetting, mentionCount } = channelUnreadBadgeState);
   ({ optInEnabled, isMentionLowImportance } = channelUnreadBadgeState);
   const tmp5 = callback2(flag, unread);
-  let obj1 = channel(7234);
+  obj1 = channel(7234);
   let obj2 = channel(589);
-  const items = [rebuild];
-  const stateFromStores = obj2.useStateFromStores(items, () => outer1_5.getNewThreadCount(channel.guild_id, channel.id));
+  const items = [closure_5];
+  const stateFromStores = obj2.useStateFromStores(items, () => closure_1_5.getNewThreadCount(channel.guild_id, channel.id));
   let obj3 = channel(589);
-  const items1 = [ensureGuildLoaded];
-  const stateFromStores1 = obj3.useStateFromStores(items1, () => outer1_7.getChannel(channel.parent_id));
+  const items1 = [closure_7];
+  const stateFromStores1 = obj3.useStateFromStores(items1, () => closure_1_7.getChannel(channel.parent_id));
   const tmp9 = arr4(4984)(stateFromStores1);
   let tmp2Result = tmp2(8513);
   const unreadThreadsCountForParent = tmp2Result.useUnreadThreadsCountForParent(channel.guild_id, channel.id);
@@ -77,7 +65,7 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
   const isChannelSpoilerGated = tmp2Result.useIsChannelSpoilerGated(channel);
   const fontScale = channel(4751).useFontScale();
   const tmp2Result1 = channel(4751);
-  const items2 = [_getSystemLocale];
+  const items2 = [closure_6];
   const stateFromStores2 = channel(589).useStateFromStores(items2, () => locale.locale);
   const tmp17 = arr4(16205)();
   const tmp2Result2 = channel(589);
@@ -97,10 +85,10 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
     const isActivitiesInTextEnabled = tmp2(8446).useIsActivitiesInTextEnabled(channel.id);
     const memo = importAllResult.useMemo(() => {
       let tmp = null;
-      if (_undefined) {
+      if (table) {
         const obj = { embeddedApps: null };
         obj[0] = arr4;
-        tmp = outer1_10(arr4(_undefined[26]), obj);
+        tmp = closure_1_10(arr4(table[26]), obj);
       }
       return tmp;
     }, items3);
@@ -194,6 +182,6 @@ const memoResult = importAllResult.memo(function TextChannel(subtitle) {
   const tmp18 = arr4(6817)(channel.id);
   result = channel(16207).renderChannelSubtitle({ subtitle: subtitle.subtitle, muted: flag, channelId: channel.id, guildId: channel.guild_id });
 });
-let result = require("rebuild").fileFinishedImporting("modules/launchpad/native/shared/TextChannel.tsx");
+let result = require("set").fileFinishedImporting("modules/launchpad/native/shared/TextChannel.tsx");
 
 export default memoResult;

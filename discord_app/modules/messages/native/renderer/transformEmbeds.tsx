@@ -1,60 +1,36 @@
 // discord_app/modules/messages/native/renderer/transformEmbeds.tsx
-import { processColor } from "get ActivityIndicator";
-import { MessageEmbedTypes } from "ME";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
 
-let result = require("sanitizeMediaDimension").fileFinishedImporting("modules/messages/native/renderer/transformEmbeds.tsx");
+const processColor = get_ActivityIndicator.processColor;
+const MessageEmbedTypes = ME.MessageEmbedTypes;
+let result = set.fileFinishedImporting("modules/messages/native/renderer/transformEmbeds.tsx");
 
 export default function transformEmbeds(arg0) {
-  let MessageEmbedTypes;
-  let closure_10;
-  let closure_11;
-  let closure_12;
-  let closure_13;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  let closure_9;
-  let dependencyMap;
-  let embeds;
-  let importDefault;
-  let processColor;
-  let require;
   ({ embeds, channelId: require, gifAutoPlay: importDefault, hasSpoilerEmbeds: dependencyMap, ignoreEmbedDescriptionCache: processColor, shouldInlineEmbedMedia: MessageEmbedTypes, colors: closure_5, showListsAndHeaders: closure_6, showMaskedLinks: closure_7, themedBackgroundColor: closure_8, enabledContentHarmTypeFlags: closure_9, authorIsBot: closure_10, showContentInventoryEntryFallbackEmbed: closure_11, shouldAgeVerify: closure_12, transformComponents: closure_13 } = arg0);
   function renderEmbedMedia(image) {
-    let height;
-    let proxyURL;
-    let width;
     ({ proxyURL, width, height } = image);
     const obj = {};
     const merged = Object.assign(image);
-    obj.width = outer1_0(outer1_2[2]).sanitizeMediaDimension(width);
-    const obj2 = outer1_0(outer1_2[2]);
-    obj.height = outer1_0(outer1_2[2]).sanitizeMediaDimension(height);
+    obj.width = closure_1_0(closure_1_2[2]).sanitizeMediaDimension(width);
+    const obj2 = closure_1_0(closure_1_2[2]);
+    obj.height = closure_1_0(closure_1_2[2]).sanitizeMediaDimension(height);
     let imageSrc = proxyURL;
     if (null != proxyURL) {
-      const obj4 = outer1_1(tmp2[3]);
+      const obj4 = closure_1_1(tmp2[3]);
       imageSrc = obj4.getImageSrc(proxyURL, width, height, !closure_1);
     }
     obj.proxyURL = imageSrc;
-    const obj3 = outer1_0(outer1_2[2]);
+    const obj3 = closure_1_0(closure_1_2[2]);
     if (proxyURL == null) {
       proxyURL = image.url;
     }
-    obj.url = outer1_1(outer1_2[3]).getImageSrc(proxyURL, width, height, !closure_1);
+    obj.url = closure_1_1(closure_1_2[3]).getImageSrc(proxyURL, width, height, !closure_1);
     return obj;
   }
   return embeds.flatMap((type) => {
-    let height;
-    let proxyURL;
-    let proxyURL2;
-    let proxyURL3;
-    let proxyURL4;
-    let url;
-    let url2;
-    let url3;
-    let width;
-    if (type.type !== outer1_4.POST_PREVIEW) {
+    if (type.type !== closure_1_4.POST_PREVIEW) {
       if (type.type !== tmp.GIFT) {
         if (type.type !== tmp.SAFETY_POLICY_NOTICE) {
           if (type.type !== tmp.SAFETY_SYSTEM_NOTIFICATION) {
@@ -62,7 +38,7 @@ export default function transformEmbeds(arg0) {
               if (type.type === tmp.COMPONENTS) {
                 return [];
               }
-              let obj = outer1_0(outer1_2[4]);
+              let obj = closure_1_0(closure_1_2[4]);
               if (obj.isServerShopArticleEmbed(type)) {
                 return [];
               } else if (type.type === tmp.VOICE_CHANNEL) {
@@ -94,11 +70,11 @@ export default function transformEmbeds(arg0) {
                     obj.height = tmp3(tmp4[2]).sanitizeMediaDimension(height);
                     let imageSrc = proxyURL;
                     if (null != proxyURL) {
-                      let obj6 = outer1_1(tmp4[3]);
+                      let obj6 = closure_1_1(tmp4[3]);
                       imageSrc = obj6.getImageSrc(proxyURL, width, height, !closure_1);
                     }
                     obj.proxyURL = imageSrc;
-                    let obj7 = outer1_1(tmp4[3]);
+                    let obj7 = closure_1_1(tmp4[3]);
                     if (proxyURL == null) {
                       proxyURL = thumbnail.url;
                     }
@@ -150,7 +126,7 @@ export default function transformEmbeds(arg0) {
                           }
                           tmp31 = tmp45;
                           if (tmp3Result4.isWebPlayerVideoUrl(tmp50)) {
-                            const obj1 = {};
+                            obj1 = {};
                             const merged2 = Object.assign(tmp45);
                             obj1.inlinePlaybackDisabled = true;
                             tmp31 = obj1;
@@ -201,7 +177,7 @@ export default function transformEmbeds(arg0) {
                     tmp55 = "" !== type.color;
                   }
                   if (tmp55) {
-                    embedBorderLeftColor = outer1_3(type.color);
+                    embedBorderLeftColor = closure_1_3(type.color);
                   }
                   if (null != type.url) {
                     if ("" !== type.url) {
@@ -239,7 +215,7 @@ export default function transformEmbeds(arg0) {
                       const mapped1 = fields.map((rawName) => {
                         let result = null;
                         if (null != rawName.rawName) {
-                          let obj = outer1_0(outer1_2[10]);
+                          let obj = closure_1_0(closure_1_2[10]);
                           result = obj.parseEmbedTitleMarkup(rawName.rawName, closure_0);
                         }
                         let result1 = null;
@@ -251,8 +227,8 @@ export default function transformEmbeds(arg0) {
                           obj[4] = { "\t": "" };
                           obj[5] = closure_6;
                           obj[6] = closure_7;
-                          result1 = outer1_0(outer1_2[10]).parseEmbedDescriptionMarkup(obj);
-                          const obj2 = outer1_0(outer1_2[10]);
+                          result1 = closure_1_0(closure_1_2[10]).parseEmbedDescriptionMarkup(obj);
+                          const obj2 = closure_1_0(closure_1_2[10]);
                         }
                         obj = {};
                         const merged = Object.assign(rawName);
@@ -281,7 +257,7 @@ export default function transformEmbeds(arg0) {
                           }
                           let tmp64 = obj5;
                           if (null != iconURL) {
-                            const obj21 = outer1_1(tmp4[3]);
+                            const obj21 = closure_1_1(tmp4[3]);
                             obj5.iconURL = obj21.getImageSrc(iconURL, 16, 16, !closure_1);
                             tmp64 = obj5;
                           }
@@ -390,7 +366,7 @@ export default function transformEmbeds(arg0) {
                           if (null != iconURL2) {
                             const obj10 = {};
                             const merged6 = Object.assign(type.author);
-                            const obj23 = outer1_1(tmp4[3]);
+                            const obj23 = closure_1_1(tmp4[3]);
                             obj10.iconURL = obj23.getImageSrc(iconURL2, 16, 16, !closure_1);
                             let author = obj10;
                           } else {

@@ -1,19 +1,18 @@
 // discord_app/modules/user_settings/account/native/AccountEditPassword.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { componentWillUnmount } from "UserSettingsAccountEditPassword.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import componentWillUnmountDefault from "componentWillUnmount" /* 14134 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let obj1;
 ({ View: obj1, StyleSheet } = get_ActivityIndicator);
 let obj = { container: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 const merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = obj;
 let closure_4 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(() => <closure_2 style={callback().container}>{jsx(componentWillUnmount, {})}</closure_2>);
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
+const memoResult = importAllResult.memo(() => <closure_2 style={callback().container}>{jsx(componentWillUnmountDefault, {})}</closure_2>);
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/AccountEditPassword.tsx");
 
 export default memoResult;

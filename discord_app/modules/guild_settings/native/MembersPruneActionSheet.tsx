@@ -1,17 +1,12 @@
 // discord_app/modules/guild_settings/native/MembersPruneActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import CACHE_TTL_MS from "CACHE_TTL_MS";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import CACHE_TTL_MS from "CACHE_TTL_MS" /* 15831 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 function MembersPruneActionSheetContent(guild) {
   guild = guild.guild;
@@ -31,7 +26,7 @@ function MembersPruneActionSheetContent(guild) {
       if (guildId.guildId === handlePruneUpdate.id) {
         if (guildId.prune.isPreview) {
           const _Number = Number;
-          outer1_6(guildId.guildId, guildId.prune.days, guildId.prune.includeRoles, Number(guildId.prune.pruneCount), guildId.prune.isFinished);
+          closure_1_6(guildId.guildId, guildId.prune.days, guildId.prune.includeRoles, Number(guildId.prune.pruneCount), guildId.prune.isFinished);
         }
       }
     }
@@ -65,7 +60,7 @@ function MembersPruneActionSheetContent(guild) {
       callback(arg0);
     }
   };
-  const obj1 = { value: 7, label: null };
+  obj1 = { value: 7, label: null };
   const intl3 = guild(first[11]).intl;
   obj1[1] = intl3.formatToPlainString(guild(first[11]).t.FM1dHS, { days: 7 });
   const items2 = [callback3(guild(first[13]).TableRadioRow, obj1), ];
@@ -92,7 +87,7 @@ function MembersPruneActionSheetContent(guild) {
         id(first[8]).prune(id, first);
         const obj = id(first[8]);
         id(first[16]).hideActionSheet();
-        outer1_7();
+        closure_1_7();
         const obj2 = id(first[16]);
       }
     },
@@ -106,23 +101,23 @@ function MembersPruneActionSheetContent(guild) {
 }
 ({ usePrunePreview: c5, setPrunePreview: closure_6, clearAllPrunePreviews: error } = CACHE_TTL_MS);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const result = require("CACHE_TTL_MS").fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/MembersPruneActionSheet.tsx");
 
 export default function MembersPruneActionSheet(guild) {
   guild = guild.guild;
   let stateFromStores;
   let obj = guild(589);
-  const items = [createGuildRecordFromRust, getUncachedChannelPermissions, mergeGuildAvatar];
+  const items = [closure_8, closure_9, closure_10];
   const items1 = [guild];
   stateFromStores = obj.useStateFromStores(items, () => {
-    guild = outer1_8.getGuild(guild.id);
-    return guild(outer1_2[18]).canPruneGuildMembers(guild, outer1_10.getCurrentUser(), outer1_9);
+    guild = closure_1_8.getGuild(guild.id);
+    return guild(closure_1_2[18]).canPruneGuildMembers(guild, closure_1_10.getCurrentUser(), closure_1_9);
   }, items1);
   const items2 = [stateFromStores];
   const effect = React.useEffect(() => {
     if (!stateFromStores) {
-      stateFromStores(outer1_2[16]).hideActionSheet();
-      const obj = stateFromStores(outer1_2[16]);
+      stateFromStores(closure_1_2[16]).hideActionSheet();
+      const obj = stateFromStores(closure_1_2[16]);
     }
   }, items2);
   let tmp3 = null;

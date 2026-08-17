@@ -1,37 +1,35 @@
 // discord_app/modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT";
-import { ThemeTypes } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import MIN_HEADER_HEIGHT from "MIN_HEADER_HEIGHT" /* 8493 */;
+import { ThemeTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let HEADER_CORNER_RADIUS;
-let MIDNIGHT_BORDER_WIDTH;
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ HEADER_CORNER_RADIUS, MIDNIGHT_BORDER_WIDTH } = MIN_HEADER_HEIGHT);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, midnightContainer: null, splitDivider: null, additionalHeight: null };
-createCacheKey = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { position: "absolute", zIndex: 1, top: 0, width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderLeftColor: require("Themes").colors.APP_FRAME_BORDER, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
-let obj1 = { borderLeftColor: require("Themes").colors.APP_FRAME_BORDER, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
-createCacheKey[2] = { borderLeftColor: require("Themes").colors.APP_FRAME_BORDER, borderLeftWidth: require("Themes").modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
+createCacheKey[1] = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
+let obj1 = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: MIDNIGHT_BORDER_WIDTH };
+createCacheKey[2] = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
 createCacheKey[3] = { height: HEADER_CORNER_RADIUS };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function ChannelScreenAnimatedFrameTsx1(){const{translateX,maxWidth,isChatLockedOpen,withTiming,STANDARD_EASING,SIDE_PANEL_CLOSE_DURATION_MS,SIDE_PANEL_OPEN_DURATION_MS}=this.__closure;const hide=translateX.get()===maxWidth||isChatLockedOpen;return{opacity:withTiming(hide?0:1,{easing:STANDARD_EASING,duration:hide?SIDE_PANEL_CLOSE_DURATION_MS:SIDE_PANEL_OPEN_DURATION_MS})};}" };
-const obj2 = { borderLeftColor: require("Themes").colors.APP_FRAME_BORDER, borderLeftWidth: require("Themes").modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
-const result = require("MIN_HEADER_HEIGHT").fileFinishedImporting("modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx");
+const obj2 = { borderLeftColor: ThemesDefault.colors.APP_FRAME_BORDER, borderLeftWidth: ThemesDefault.modules.mobile.CHANNEL_DRAWER_DIVIDER_WIDTH };
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/panels/ChannelScreenAnimatedFrame.tsx");
 
 export default function ChannelScreenAnimatedFrame(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
   const isChatLockedOpen = translateX.isChatLockedOpen;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = translateX(isChatLockedOpen[8]);
-  let obj1 = translateX(isChatLockedOpen[9]);
+  obj1 = translateX(isChatLockedOpen[9]);
   class E {
     constructor() {
       tmp = translateX.get() === maxWidth || isChatLockedOpen;

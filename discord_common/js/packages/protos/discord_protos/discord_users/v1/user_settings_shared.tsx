@@ -1,9 +1,9 @@
 // discord_common/js/packages/protos/discord_protos/discord_users/v1/user_settings_shared.tsx
-import _slicedToArray from "_slicedToArray";
-import { MessageType } from "module_1307";
-import { 01307__ } from "../../../../../../../_runtime/metro/01307__.js";
+import _mod1307 from "module_1307" /* 1307 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import { MessageType } from "module_1307" /* 1307 */;
 
-const require = arg1;
+require = arg1;
 class Versions$Type extends MessageType {
   constructor() {
     items = [, , ];
@@ -20,16 +20,14 @@ prototype["create"] = function create(arr) {
   let obj = { clientVersion: 0, serverVersion: 0, dataVersion: 0 };
   const _Object = Object;
   obj = { enumerable: false, value: this };
-  _Object.defineProperty(obj, 01307__.MESSAGE_TYPE, obj);
+  _Object.defineProperty(obj, _mod1307.MESSAGE_TYPE, obj);
   if (undefined !== arr) {
-    const result = 01307__.reflectionMergePartial(this, obj, arr);
-    const tmpResult = 01307__;
+    const result = _mod1307.reflectionMergePartial(this, obj, arr);
+    const tmpResult = _mod1307;
   }
   return obj;
 };
 prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnknownField) {
-  let tmp5;
-  let tmp6;
   const self = this;
   let obj = arg3;
   if (arg3 == null) {
@@ -60,7 +58,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let tmp17 = tmp6;
           let tmp18 = new.target;
           let tmp19 = new.target;
-          let error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
+          error = new Error("Unknown field " + tmp5 + " (wire type " + tmp6 + ") for " + self.typeName);
           let tmp21 = error;
           throw error;
         } else {
@@ -69,7 +67,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
             if (true === onRead) {
               let tmp8 = require;
               let tmp9 = dependencyMap;
-              onRead = 01307__.UnknownFieldHandler.onRead;
+              onRead = _mod1307.UnknownFieldHandler.onRead;
             }
             let tmp10 = obj;
             let tmp11 = tmp5;
@@ -85,21 +83,21 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(clientVersion, tag, writeUnknownFields) {
   if (0 !== clientVersion.clientVersion) {
-    tag.tag(1, 01307__.WireType.Varint).uint32(clientVersion.clientVersion);
-    const tagResult = tag.tag(1, 01307__.WireType.Varint);
+    tag.tag(1, _mod1307.WireType.Varint).uint32(clientVersion.clientVersion);
+    const tagResult = tag.tag(1, _mod1307.WireType.Varint);
   }
   if (0 !== clientVersion.serverVersion) {
-    tag.tag(2, 01307__.WireType.Varint).uint32(clientVersion.serverVersion);
-    const tagResult1 = tag.tag(2, 01307__.WireType.Varint);
+    tag.tag(2, _mod1307.WireType.Varint).uint32(clientVersion.serverVersion);
+    const tagResult1 = tag.tag(2, _mod1307.WireType.Varint);
   }
   if (0 !== clientVersion.dataVersion) {
-    tag.tag(3, 01307__.WireType.Varint).uint32(clientVersion.dataVersion);
-    const tagResult2 = tag.tag(3, 01307__.WireType.Varint);
+    tag.tag(3, _mod1307.WireType.Varint).uint32(clientVersion.dataVersion);
+    const tagResult2 = tag.tag(3, _mod1307.WireType.Varint);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = 01307__.UnknownFieldHandler.onWrite;
+      onWrite = _mod1307.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, clientVersion, tag);

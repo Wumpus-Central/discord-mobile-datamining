@@ -1,10 +1,16 @@
 // discord_app/stores/native/AppStateStore.tsx
-import { AppStates } from "ME";
-import { Store } from "initialize";
-import promise from "expandEventProperties";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import promise from "expandEventProperties" /* 698 */;
 
-const currentState = require("get ActivityIndicator").AppState.currentState;
+const AppStates = ME.AppStates;
+const currentState = get_ActivityIndicator.AppState.currentState;
 let c2 = null;
+const Store = initializeDefault.Store;
 class AppStateStore extends Store {
 }
 const prototype = AppStateStore.prototype;
@@ -20,7 +26,7 @@ require("expandEventProperties").then((addExtraAnalyticsDecorator) => {
     arg0.client_app_state = closure_1;
   });
 });
-const appStateStore = new AppStateStore(require("dispatcher"), {
+const appStateStore = new AppStateStore(dispatcherDefault, {
   APP_STATE_UPDATE: function handleAppStateUpdate(state) {
     if (state === state.state) {
       return false;
@@ -28,7 +34,7 @@ const appStateStore = new AppStateStore(require("dispatcher"), {
       state = state.state;
       if (state === AppStates.ACTIVE) {
         const _Date = Date;
-        let closure_2 = Date.now();
+        closure_2 = Date.now();
       }
     }
   }
@@ -41,11 +47,11 @@ const obj = {
       state = state.state;
       if (state === AppStates.ACTIVE) {
         const _Date = Date;
-        let closure_2 = Date.now();
+        closure_2 = Date.now();
       }
     }
   }
 };
-let result = require("initialize").fileFinishedImporting("stores/native/AppStateStore.tsx");
+let result = set.fileFinishedImporting("stores/native/AppStateStore.tsx");
 
 export default appStateStore;

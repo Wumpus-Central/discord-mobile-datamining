@@ -1,30 +1,24 @@
 // discord_app/modules/contact_sync/native/components/ContactSyncNameInput.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { flex: { flex: 1 }, content: { flex: 1, padding: 16, paddingBottom: 0 }, title: { marginBottom: 8, textAlign: "center" }, subtitle: { lineHeight: 18, textAlign: "center", marginBottom: 16 }, input: null, formSubtitle: null, button: null, error: null };
-createCacheKey = { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.lg };
+createCacheKey = { width: "100%", marginTop: 8, marginBottom: 12, padding: 12, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.lg };
 createCacheKey[4] = createCacheKey;
 createCacheKey[5] = { lineHeight: 16 };
-createCacheKey[6] = { flexGrow: 0, paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_12 };
+createCacheKey[6] = { flexGrow: 0, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_12 };
 createCacheKey[7] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { flexGrow: 0, paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_12 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameInput.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { flexGrow: 0, paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/contact_sync/native/components/ContactSyncNameInput.tsx");
 
 export default function ContactSyncNameInput(prefilledFromContactBook) {
-  let error;
-  let initialName;
-  let loading;
-  let onRemoveName;
-  let require;
   let flag = prefilledFromContactBook.prefilledFromContactBook;
   ({ loading, error, initialName } = prefilledFromContactBook);
   if (flag === undefined) {
@@ -32,7 +26,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   }
   ({ onNext: require, onRemoveName } = prefilledFromContactBook);
   let first;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   const tmp2 = callback(React.useState(initialName), 2);
   first = tmp2[0];
   const intl = require(first[7]).intl;
@@ -59,7 +53,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   }
   obj[4] = string2Result;
   const items1 = [closure_6(tmp9(first[8]).Text, obj), , , , ];
-  const obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
+  obj1 = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: null };
   const intl3 = tmp9(tmp5[7]).intl;
   const string3 = intl3.string;
   const t3 = tmp9(tmp5[7]).t;
@@ -74,9 +68,7 @@ export default function ContactSyncNameInput(prefilledFromContactBook) {
   const intl4 = tmp9(tmp5[7]).intl;
   obj2[2] = intl4.string(tmp9(first[7]).t["42/D2U"]);
   items1[2] = closure_6(tmp9(first[8]).Text, obj2);
-  const obj3 = { value: first, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: null, autoCorrect: true, autoComplete: "name", textContentType: "name" };
-  obj3[6] = tmp9(first[9]).ClearButtonVisibility.WITH_CONTENT;
-  items1[3] = closure_6(tmp9(first[9]).InputView, obj3);
+  items1[3] = closure_6(tmp9(first[9]).InputView, { value: first, onChangeText: tmp2[1], style: tmp.input, autoFocus: true, showBorder: false, showTopContainer: false, clearButtonVisibility: tmp9(first[9]).ClearButtonVisibility.WITH_CONTENT, autoCorrect: true, autoComplete: "name", textContentType: "name" });
   let tmp12Result = null;
   if (flag) {
     const obj4 = { style: null, variant: "text-xs/medium", color: "text-default", children: null };

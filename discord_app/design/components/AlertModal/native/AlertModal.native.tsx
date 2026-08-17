@@ -1,23 +1,20 @@
 // discord_app/design/components/AlertModal/native/AlertModal.native.tsx
-import sum from "sum";
-import _slicedToArray from "_slicedToArray";
-import _toArray from "_toArray";
-import importAllResult from "useSafeAreaInsets";
-import get_ActivityIndicator from "getSystemLocale";
-import jsxProd from "useWindowDimensions";
-import createCacheKey from "createCacheKey";
-import context3 from "asyncGeneratorStep";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { CONFIG_NEVER_ANIMATE } from "../../../animation/reanimated/spring/spring.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useAlertStore2 from "useAlertStore" /* 4657 */;
+import Stack from "Stack" /* 4733 */;
+import CONFIG_NEVER_ANIMATE from "CONFIG_NEVER_ANIMATE" /* 4744 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_toArray" /* 853 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import context3 from "module_0" /* 0 */;
 import { useAlertStore } from "useAlertStore.native.tsx";
 
-let c10;
-let c9;
-let closure_12;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getAlertModalItemKey(key) {
   return key.key;
 }
@@ -39,7 +36,7 @@ function dismissTopAlert() {
     tmpResult.dismissAlert(key);
     tmpResult = tmp(705);
     tmpResult.batchUpdates(() => {
-      const useAlertStore = callback(outer1_2[10]).useAlertStore;
+      const useAlertStore = callback(closure_1_2[10]).useAlertStore;
       return useAlertStore.setState({ alerts: callback });
     });
   }
@@ -48,10 +45,10 @@ function AlertModalBackdrop() {
   const context = importAllResult.useContext(closure_16);
   const tmp2 = callback2(useSharedAnimationState(), 2);
   let first = tmp2[0];
-  const dependencyMap = tmp4;
+  dependencyMap = tmp4;
   let obj = context(4657);
   const alertStore = obj.useAlertStore((arg0) => {
-    const first = arg0.alerts[0];
+    first = arg0.alerts[0];
     let dismissable;
     if (first != null) {
       dismissable = first.dismissable;
@@ -59,26 +56,25 @@ function AlertModalBackdrop() {
     return false !== dismissable;
   });
   let fn = function t() {
-    let value = tmp4.get();
-    if (typeof outer1_26 !== "function") {
+    let value = closure_2.get();
+    if (typeof closure_1_26 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = { opacity: null };
-    const fn = (arg0) => {
+    let obj = { opacity: context(closure_2[25]).withSpring(value, closure_1_14, "animate-always", fn) };
+    fn = (arg0) => {
       let tmp = true === arg0;
       if (tmp) {
         tmp = 0 === closure_2.get();
       }
       if (tmp) {
         const value = closure_1.get();
-        tmp = value === outer1_0(outer1_2[9]).TransitionStates.YEETED;
+        tmp = value === closure_1_0(closure_1_2[9]).TransitionStates.YEETED;
       }
       if (tmp) {
-        outer1_0(outer1_2[11]).runOnJS(closure_0)();
-        const obj = outer1_0(outer1_2[11]);
+        closure_1_0(closure_1_2[11]).runOnJS(closure_0)();
+        const obj = closure_1_0(closure_1_2[11]);
       }
     };
-    obj[0] = context(tmp4[25]).withSpring(value, outer1_14, "animate-always", fn);
     return obj;
   };
   obj = { withAlertModalSpring, sharedVisible: tmp4, sharedTransitionState: first, TransitionStates: context(4668).TransitionStates, runOnJS: context(4115).runOnJS, cleanUp: context };
@@ -99,44 +95,44 @@ function AlertModalBackdrop() {
 class AlertModal {
   constructor(arg0) {
     ({ content, actions } = global);
-    c0 = undefined;
-    c1 = undefined;
-    c2 = undefined;
+    closure_0 = undefined;
+    closure_1 = undefined;
+    closure_2 = undefined;
     enabled = undefined;
-    c4 = undefined;
-    useSharedValue = undefined;
-    c6 = undefined;
-    c7 = undefined;
+    closure_4 = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
+    closure_7 = undefined;
     top = undefined;
     bottom = undefined;
     height = undefined;
     ({ header, title, extraContent } = global);
-    context = c6.useContext(createContext);
-    c0 = context;
-    context1 = c6.useContext(createContext);
-    c1 = context1;
-    tmp3 = Fragment();
-    context2 = c6.useContext(createContext);
-    c2 = context2;
-    tmp5 = c0;
-    tmp6 = c2;
-    enabled = c6.useContext(require("context").AccessibilityPreferencesContext).reducedMotion.enabled;
-    ref = c6.useRef(null);
-    c4 = ref;
+    context = closure_6.useContext(closure_16);
+    closure_0 = context;
+    context1 = closure_6.useContext(closure_17);
+    closure_1 = context1;
+    tmp3 = closure_13();
+    context2 = closure_6.useContext(closure_19);
+    closure_2 = context2;
+    tmp5 = closure_0;
+    tmp6 = closure_2;
+    enabled = closure_6.useContext(require("context").AccessibilityPreferencesContext).reducedMotion.enabled;
+    ref = closure_6.useRef(null);
+    closure_4 = ref;
     obj = require("module_4115");
     sharedValue = obj.useSharedValue(context1);
-    useSharedValue = sharedValue;
-    tmp9 = c4(useSharedAnimationState(), 2);
+    closure_5 = sharedValue;
+    tmp9 = closure_4(useSharedAnimationState(), 2);
     first = tmp9[0];
-    c6 = first;
+    closure_6 = first;
     tmp11 = tmp9[1];
-    c7 = tmp11;
+    closure_7 = tmp11;
     rect = require("useSafeAreaInsets")();
     top = rect.top;
     bottom = rect.bottom;
     items = [];
     items[0] = context1;
-    effect = c6.useEffect(() => {
+    effect = closure_6.useEffect(() => {
       if (0 === context1) {
         let obj = context(context2[20]);
         obj = { ref: null, delay: 300 };
@@ -149,17 +145,17 @@ class AlertModal {
     class B {
       constructor() {
         diff = height - 32;
-        tmp3 = outer1_26;
-        obj = c7;
+        tmp3 = closure_1_26;
+        obj = closure_7;
         result = 2 * Math.max(top, bottom);
-        value = c7.get();
-        if (typeof outer1_26 !== "function") {
+        value = closure_7.get();
+        if (typeof closure_1_26 !== "function") {
           str4 = "Trying to call a non-function";
           throwTypeErrorResult = HermesBuiltin.throwTypeError();
         }
         obj = { position: "absolute", opacity: null, zIndex: null, height: null, maxHeight: null, transform: null };
-        tmp5 = c0;
-        tmp6 = c2;
+        tmp5 = closure_0;
+        tmp6 = closure_2;
         fn = (arg0) => {
           let tmp = true === arg0;
           if (tmp) {
@@ -167,22 +163,22 @@ class AlertModal {
           }
           if (tmp) {
             const value = closure_6.get();
-            tmp = value === outer1_0(outer1_2[9]).TransitionStates.YEETED;
+            tmp = value === closure_1_0(closure_1_2[9]).TransitionStates.YEETED;
           }
           if (tmp) {
-            outer1_0(outer1_2[11]).runOnJS(closure_0)();
-            const obj = outer1_0(outer1_2[11]);
+            closure_1_0(closure_1_2[11]).runOnJS(closure_0)();
+            const obj = closure_1_0(closure_1_2[11]);
           }
         };
         obj3 = require("CONFIG_NEVER_ANIMATE");
-        tmp7 = outer1_14;
-        obj[1] = obj3.withSpring(value, outer1_14, "animate-always", fn);
-        obj4 = useSharedValue;
-        obj[2] = 10 - useSharedValue.get();
+        tmp7 = closure_1_14;
+        obj[1] = obj3.withSpring(value, closure_1_14, "animate-always", fn);
+        obj4 = closure_5;
+        obj[2] = 10 - closure_5.get();
         str = "auto";
-        if (useSharedValue.get() > 0) {
-          tmp8 = c2;
-          str = c2.get();
+        if (closure_5.get() > 0) {
+          tmp8 = closure_2;
+          str = closure_2.get();
         }
         obj[3] = str;
         obj[4] = diff - result;
@@ -240,18 +236,18 @@ class AlertModal {
     obj = { sharedVisible: tmp11, sharedTransitionState: first, TransitionStates: require("wrapChildrenDefault").TransitionStates, runOnJS: require("module_4115").runOnJS, cleanUp: context, windowHeight: height, ALERT_MODAL_MARGIN: 16, safeAreaTop: top, safeAreaBottom: bottom, withAlertModalSpring, sharedIndex: sharedValue, sharedTopHeight: context2, useReducedMotion: enabled };
     B.__closure = obj;
     B.__workletHash = 655123755546;
-    B.__initData = memo;
+    B.__initData = closure_24;
     items1 = [, ];
     items1[0] = context1;
     items1[1] = sharedValue;
     animatedStyle = obj2.useAnimatedStyle(B);
-    layoutEffect = c6.useLayoutEffect(() => {
+    layoutEffect = closure_6.useLayoutEffect(() => {
       const result = sharedValue.set(context1);
     }, items1);
     tmp15 = require("useBackPressHandler")(() => {
       let useAlertStore = context(context2[10]).useAlertStore;
       const arr = sharedValue(useAlertStore.getState().alerts);
-      const first = arr[0];
+      first = arr[0];
       context = arr.slice(1);
       let tmp4 = null != first;
       if (tmp4) {
@@ -266,7 +262,7 @@ class AlertModal {
         tmpResult.dismissAlert(key);
         tmpResult = tmp(tmp2[15]);
         tmpResult.batchUpdates(() => {
-          const useAlertStore = callback(outer1_2[10]).useAlertStore;
+          const useAlertStore = callback(closure_1_2[10]).useAlertStore;
           return useAlertStore.setState({ alerts: callback });
         });
       }
@@ -292,7 +288,7 @@ class AlertModal {
     obj2 = { style: tmp3.overflow, children: null };
     tmp19 = jsxs;
     tmp17 = bottom;
-    tmp18 = c7;
+    tmp18 = closure_7;
     items3 = [, , , ];
     items3[0] = header;
     obj3 = { spacing: 8, style: items4, children: null };
@@ -380,13 +376,13 @@ class AlertActions {
 }
 class AlertActionButton {
   constructor(arg0) {
-    ({ onPress: f105623, loading } = global);
+    ({ onPress: closure_0, loading } = global);
     merged = Object.assign(global, Object.create(null));
-    useState = undefined;
-    useState = undefined;
-    tmp2 = _slicedToArray(defineProperty.useState(false), 2);
-    useState = tmp2[1];
-    useState = defineProperty.useContext(c18);
+    closure_1 = undefined;
+    closure_2 = undefined;
+    tmp2 = closure_4(closure_6.useState(false), 2);
+    closure_1 = tmp2[1];
+    closure_2 = closure_6.useContext(closure_18);
     tmp3 = jsx;
     obj = {};
     merged1 = Object.assign(merged);
@@ -395,12 +391,12 @@ class AlertActionButton {
       loading = tmp2[0];
     }
     obj.loading = loading;
-    f105623 = undefined;
-    f105623 = sum((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c4 = 0;
-      let c3 = 0;
+    closure_0 = undefined;
+    closure_0 = closure_3((arg0) => {
+      closure_0 = arg0;
+      c2 = 0;
+      c4 = 0;
+      c3 = 0;
       return (function*(arg0) {
         if (c4 === 2) {
           c4 = 3;
@@ -428,18 +424,18 @@ class AlertActionButton {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp3;
+                closure_1 = tmp3;
                 let tmp11;
                 if (callback != null) {
                   tmp11 = callback(callback);
                 }
                 if (null != tmp11) {
                   if (tmp11 instanceof Promise) {
-                    outer1_1(true);
-                    let c3 = 1;
+                    closure_1_1(true);
+                    c3 = 1;
                     c2 = 2;
                     c4 = 1;
-                    const obj1 = { value: null, done: false };
+                    obj1 = { value: null, done: false };
                     obj1[0] = tmp11;
                     return obj1;
                   }
@@ -450,7 +446,7 @@ class AlertActionButton {
               }
             } else if (1 === tmp7) {
               c3 = 0;
-              outer1_1(false);
+              closure_1_1(false);
               c4 = 3;
               obj2 = { value: null, done: true };
               obj2[0] = undefined;
@@ -490,11 +486,11 @@ class AlertActionButton {
     return tmp3(require("Button").Button, obj);
   }
 }
-({ View: error, StyleSheet: metroImportAll, ScrollView: c9 } = get_ActivityIndicator);
+({ View: error, StyleSheet: closure_8, ScrollView: c9 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 let obj = { root: { flex: 1, position: "relative", justifyContent: "center", alignItems: "center", paddingHorizontal: 16 }, content: null, overflow: null, body: null, contentText: null };
-obj = { backgroundColor: require("Themes").colors.MOBILE_ALERT_BACKGROUND_DEFAULT, margin: 16, width: "100%", maxWidth: 400, height: "100%", borderRadius: require("Themes").radii.xl, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE };
-let merged = Object.assign(require("Themes").shadows.SHADOW_TOP_HIGH);
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_ALERT_BACKGROUND_DEFAULT, margin: 16, width: "100%", maxWidth: 400, height: "100%", borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let merged = Object.assign(ThemesDefault.shadows.SHADOW_TOP_HIGH);
 obj[1] = obj;
 obj[2] = { width: "100%", height: "100%", overflow: "hidden", padding: 24, position: "relative" };
 obj[3] = { alignItems: "center" };
@@ -510,9 +506,7 @@ let closure_24 = { code: "function AlertModalNativeTsx2(){const{sharedVisible,sh
 function withAlertModalSpring(value, fn2) {
   return CONFIG_NEVER_ANIMATE.withSpring(value, createCacheKey, "animate-always", fn2);
 }
-let obj2 = { withSpring: null, MODAL_SPRING: null };
-obj2[0] = require("CONFIG_NEVER_ANIMATE").withSpring;
-obj2[1] = createCacheKey;
+let obj2 = { withSpring: require("CONFIG_NEVER_ANIMATE").withSpring, MODAL_SPRING: createCacheKey };
 withAlertModalSpring.__closure = obj2;
 withAlertModalSpring.__workletHash = 15556562210180;
 withAlertModalSpring.__initData = { code: "function withAlertModalSpring_AlertModalNativeTsx3(value,callback){const{withSpring,MODAL_SPRING}=this.__closure;return withSpring(value,MODAL_SPRING,'animate-always',callback);}" };
@@ -544,18 +538,17 @@ const memoResult = importAllResult.memo(() => {
   const items2 = [tmp];
   const items3 = [sharedValue];
   const callback = importAllResult.useCallback((children) => {
-    let obj = { style: outer1_8.absoluteFillObject, children: null };
-    obj = { onDismiss: outer1_21, children: null };
+    let obj = { style: closure_1_8.absoluteFillObject, children: null };
+    obj = { onDismiss: closure_1_21, children: closure_1_10(closure_1_7, obj) };
     obj = { style: items.root, pointerEvents: "box-none", children };
-    obj[1] = outer1_10(outer1_7, obj);
-    obj[1] = outer1_10(items(items[14]).Dialog, obj);
-    return outer1_10(sharedValue(items[13]), obj);
+    obj[1] = closure_1_10(items(items[14]).Dialog, obj);
+    return closure_1_10(sharedValue(items[13]), obj);
   }, items2);
   const callback1 = importAllResult.useCallback((value, type, value2, value3) => {
     if ("alert" === type.type) {
       let node = type.alert.node;
     } else {
-      node = outer1_10(outer1_23, {});
+      node = closure_1_10(closure_1_23, {});
     }
     let num = -1;
     if ("alert" === type.type) {
@@ -564,41 +557,29 @@ const memoResult = importAllResult.memo(() => {
     let obj = { value: sharedValue, children: null };
     obj = { value: value3, children: null };
     obj = { value: value2, children: null };
-    const obj1 = { value: num, children: null };
-    obj1[1] = outer1_10(outer1_18.Provider, { value, children: outer1_10(outer1_6.Suspense, { fallback: null, children: node }) });
-    obj[1] = outer1_10(outer1_17.Provider, obj1);
-    obj[1] = outer1_10(outer1_15.Provider, obj);
-    obj[1] = outer1_10(outer1_16.Provider, obj);
-    return outer1_10(outer1_19.Provider, obj, value);
+    obj1 = { value: num, children: closure_1_10(closure_1_18.Provider, { value, children: closure_1_10(closure_1_6.Suspense, { fallback: null, children: node }) }) };
+    obj[1] = closure_1_10(closure_1_17.Provider, obj1);
+    obj[1] = closure_1_10(closure_1_15.Provider, obj);
+    obj[1] = closure_1_10(closure_1_16.Provider, obj);
+    return closure_1_10(closure_1_19.Provider, obj, value);
   }, items3);
   obj = { wrapChildren: callback, items, renderItem: callback1, getItemKey: getAlertModalItemKey };
   return callback4(items(items[9]).TransitionGroup, obj);
 });
-let result = require("_toArray").fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/AlertModal/native/AlertModal.native.tsx");
 
 export const AlertModalContainer = memoResult;
 export const useDismissModalCallback = function useDismissModalCallback() {
   const context = importAllResult.useContext(closure_18);
   const items = [context];
   return importAllResult.useCallback(() => {
-    context(outer1_2[10]).dismissAlert(context);
+    context(closure_1_2[10]).dismissAlert(context);
   }, items);
 };
 export { AlertModal };
 export { AlertActions };
 export { AlertActionButton };
 export const showConfirmModal = function showConfirmModal(arg0) {
-  let cancelText;
-  let confirmText;
-  let content;
-  let dismissable;
-  let extraContent;
-  let key;
-  let onCancel;
-  let onCloseCallback;
-  let onConfirm;
-  let title;
-  let variant;
   ({ key, cancelText } = arg0);
   ({ title, content, confirmText } = arg0);
   if (cancelText === undefined) {
@@ -610,7 +591,7 @@ export const showConfirmModal = function showConfirmModal(arg0) {
     variant = "destructive";
   }
   ({ onConfirm, onCancel, onCloseCallback, dismissable } = arg0);
-  let obj = useAlertStore;
+  let obj = useAlertStore2;
   obj = { title, content, extraContent, actions: null };
   obj = { children: null };
   const items = [callback4(AlertActionButton, { variant, text: confirmText, onPress: onConfirm }), callback4(AlertActionButton, { variant: "secondary", text: cancelText, onPress: onCancel })];

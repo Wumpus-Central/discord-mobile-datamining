@@ -1,11 +1,11 @@
 // discord_app/modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx
-import _slicedToArray from "_slicedToArray";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { useEquippedCollectibleSkuIds } from "../hooks/useMaybeFetchEquippedCollectibleProducts.tsx";
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7366 */;
+import useEquippedCollectibleSkuIds from "useEquippedCollectibleSkuIds" /* 8960 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
-const result = require("useSelectedDismissibleContent").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/shop_this_look/useShopThisLookMarketing.tsx");
 
 export const useShopThisLookMarketing = function useShopThisLookMarketing(id, guildId, isShopThisLookMobileEnabled) {
   let obj = useEquippedCollectibleSkuIds;

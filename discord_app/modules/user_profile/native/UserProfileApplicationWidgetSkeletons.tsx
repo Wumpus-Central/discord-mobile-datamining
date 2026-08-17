@@ -1,20 +1,22 @@
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { skeleton: null };
-createCacheKey = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL };
+createCacheKey = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetSkeletons.tsx");
 
 export const ImageSkeleton = function ImageSkeleton(style) {
   const obj = { style: null };
-  const items = [createCacheKey().skeleton, style.style];
+  const items = [callback().skeleton, style.style];
   obj[0] = items;
   return <View style={null} />;
 };
@@ -25,6 +27,6 @@ export const TextSkeleton = function TextSkeleton(widthChars) {
     num = 15;
   }
   const tmp2 = Text.TextStyleSheet[widthChars.variant];
-  const style = [createCacheKey().skeleton, { width: 0.46 * tmp2.fontSize * num, height: 0.8 * tmp2.lineHeight }];
+  const style = [callback().skeleton, { width: 0.46 * tmp2.fontSize * num, height: 0.8 * tmp2.lineHeight }];
   return <View style={style} />;
 };

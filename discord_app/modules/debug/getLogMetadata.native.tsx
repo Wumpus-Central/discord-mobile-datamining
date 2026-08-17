@@ -1,28 +1,19 @@
 // discord_app/modules/debug/getLogMetadata.native.tsx
-import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
+import set from "set" /* 2 */;
+import getConstantsAll from "getConstants" /* 1626 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+
+const result = set.fileFinishedImporting("modules/debug/getLogMetadata.native.tsx");
 
 export default function getLogMetadata() {
-  let Build;
-  let DeviceVendorID;
-  let Identifier;
-  let Manifest;
-  let ReleaseChannel;
-  let Version;
-  let obj = importAll(1626);
+  let obj = getConstantsAll;
   const constants = obj.getConstants();
-  obj = { logsUploaded: null, Identifier: null, Version: null, Manifest: null, ReleaseChannel: null, Build: null, JSBuildNumber: null, DeviceVendorID: null, DeviceInfo: null, systemVersion: null };
+  obj = { logsUploaded: new Date().toISOString(), Identifier, Version, Manifest, ReleaseChannel, Build, JSBuildNumber: null, DeviceVendorID: null, DeviceInfo: null, systemVersion: null };
   ({ Identifier, Version, Manifest, ReleaseChannel, Build, DeviceVendorID } = constants);
-  obj[0] = new Date().toISOString();
-  obj[1] = Identifier;
-  obj[2] = Version;
-  obj[3] = Manifest;
-  obj[4] = ReleaseChannel;
-  obj[5] = Build;
   const date = new Date();
-  obj[6] = importAll(1626).getBuildNumberLabel();
+  obj[6] = getConstantsAll.getBuildNumberLabel();
   obj[7] = DeviceVendorID;
-  const obj4 = importAll(1626);
+  const obj4 = getConstantsAll;
   obj[8] = DCDDeviceManager.getDeviceInfo();
   const obj5 = DCDDeviceManager;
   obj[9] = DCDDeviceManager.getSystemVersion();

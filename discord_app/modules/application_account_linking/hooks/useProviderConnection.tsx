@@ -1,7 +1,7 @@
 // discord_app/modules/application_account_linking/hooks/useProviderConnection.tsx
-import set from "set";
-import noop from "noop";
-import closure_5 from "set";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "set" /* 5221 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -14,7 +14,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   const stateFromStores = obj.useStateFromStores(items, () => {
     let account = null;
     if (null != closure_0) {
-      account = outer1_5.getAccount(null, tmp);
+      account = closure_1_5.getAccount(null, tmp);
     }
     return account;
   });
@@ -26,10 +26,10 @@ export const useProviderConnection = function useProviderConnection(provider_id)
   }
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c6 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c6 = 0;
+    c5 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -57,17 +57,17 @@ export const useProviderConnection = function useProviderConnection(provider_id)
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_0;
+              closure_2 = tmp4;
+              closure_0 = undefined;
               if (null == closure_0) {
                 c6 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = { success: false };
                 return obj1;
               } else {
-                let c5 = 1;
-                let obj4 = outer2_1(outer2_2[4]);
-                let c1 = tmp27;
+                c5 = 1;
+                let obj4 = closure_2_1(closure_2_2[4]);
+                c1 = tmp27;
                 if (tmp27 == null) {
                   c1 = "Account Linking";
                 }
@@ -112,7 +112,7 @@ export const useProviderConnection = function useProviderConnection(provider_id)
             c6 = 3;
           }
         } catch (tmp18) {
-          let noop = tmp18;
+          closure_4 = tmp18;
           if (tmp3 === c5) {
             c6 = tmp2;
             throw tmp18;

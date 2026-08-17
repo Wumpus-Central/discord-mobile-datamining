@@ -1,40 +1,30 @@
 // discord_app/modules/contact_sync/native/ContactSyncUtils.tsx
-import closure_3 from "ME";
-import { NativeModules } from "module_5260";
-import set from "set";
-import setStoredContacts from "setStoredContacts";
-import ContactSyncLandingPage from "ContactSyncLandingPage";
-import ME from "ME";
-import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { Linking } from "../../../lib/native/Linking.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
-import { SentryUtils.native } from "../../../utils/SentryUtils.native.tsx";
-import { TrackedHTTPUtils } from "../../../utils/TrackedHTTPUtils.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-import { _requestAndSyncContacts } from "ContactSyncManager.tsx";
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import encodeProperties from "encodeProperties" /* 503 */;
+import initialize from "initialize" /* 589 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import combinedDefault from "combined" /* 1993 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import _modDef4090 from "module_4090" /* 4090 */;
+import _modDef5227 from "module_5227" /* 5227 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import _requestAndSyncContacts from "_requestAndSyncContacts" /* 11854 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "set" /* 5221 */;
+import setStoredContacts from "setStoredContacts" /* 11852 */;
+import ContactSyncLandingPage from "ContactSyncLandingPage" /* 11851 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function _uploadContacts() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0, body) {
       if (c5 === 2) {
         c5 = 3;
@@ -63,7 +53,7 @@ function _uploadContacts() {
               return obj;
             } else {
               body = tmp5;
-              let dependencyMap = tmp2;
+              dependencyMap = tmp2;
               let flag;
               if (flag === undefined) {
                 flag = false;
@@ -80,7 +70,7 @@ function _uploadContacts() {
               throw body;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
@@ -133,7 +123,7 @@ function _uploadContacts() {
     iter.next();
     return iter;
   });
-  const _uploadContacts = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -142,7 +132,7 @@ function _uploadContacts() {
   }
   return applyArgumentsResult;
 }
-({ useContactSyncStore: closure_6, clearDismissState: error, deleteStoredContacts: metroImportAll } = setStoredContacts);
+({ useContactSyncStore: closure_6, clearDismissState: error, deleteStoredContacts: closure_8 } = setStoredContacts);
 ({ CONTACT_SYNC_MODAL_KEY: c9, ContactPermissions: c10, ContactSyncSuggestionsSetting: unpackModuleId } = ContactSyncLandingPage);
 ({ Endpoints: closure_12, PlatformTypes: map1, FriendDiscoveryFlags: closure_14, HelpdeskArticles: closure_15 } = ME);
 error = new Error("No contact permissions");
@@ -200,11 +190,11 @@ export const uploadContacts = function uploadContacts(c3, arg1) {
   return applyArgumentsResult;
 };
 export const bulkAddFriends = function bulkAddFriends(user_ids, bulkAddToken) {
-  let obj = TrackedHTTPUtils;
+  let obj = _modDef5227;
   obj = { url: closure_12.USER_BULK_RELATIONSHIPS, body: obj, trackedActionData: null, rejectWithError: false };
   obj = { user_ids, token: bulkAddToken };
   obj[2] = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
-  const obj1 = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
+  obj1 = { event: encodeProperties.NetworkActionNames.USER_BULK_RELATIONSHIPS_UPDATE };
   return obj.post(obj).then((body) => body.body);
 };
 export const adminDeleteContactSync = function adminDeleteContactSync() {
@@ -217,17 +207,17 @@ export const adminDeleteContactSync = function adminDeleteContactSync() {
   obj = { url: closure_12.CONNECTION(constants2.CONTACTS, "@me"), oldFormErrors: true, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_CONNECTIONS_UPDATE };
   obj[2] = obj;
-  return TrackedHTTPUtils.delete(obj);
+  return _modDef5227.delete(obj);
 };
 export const getImageForContactId = function getImageForContactId(closure_0, arg1) {
   let DCDContactSyncManager = NativeModules.DCDContactSyncManager;
   return new Promise((closure_0) => {
-    const DCDContactSyncManager = arg1;
+    DCDContactSyncManager = arg1;
     const imageForContactId = DCDContactSyncManager.getImageForContactId(closure_0, (arg0, str) => {
       if (null == arg0) {
         callback(str.replace(/(\r\n|\n|\r)/gm, ""));
       } else {
-        callback2(outer1_17);
+        callback2(closure_1_17);
       }
     });
   });
@@ -266,7 +256,7 @@ export const getContacts = function getContacts(closure_0, storedContacts) {
           parsed = {};
         }
       } else {
-        callback(outer2_16);
+        callback(closure_2_16);
       }
     });
   });
@@ -276,16 +266,16 @@ export const getStoredContacts = function getStoredContacts() {
     const _JSON = JSON;
     return JSON.parse(tmp2);
   } catch (tmp4) {
-    SentryUtils.native.captureException(tmp4);
-    const obj = SentryUtils.native;
+    _modDef1208.captureException(tmp4);
+    const obj = _modDef1208;
   }
 };
 export const useContactSyncAccount = function useContactSyncAccount() {
-  const items = [set];
+  const items = [closure_5];
   return initialize.useStateFromStores(items, () => localAccount.getLocalAccount(constants.CONTACTS));
 };
 export const useContactSyncEnabled = function useContactSyncEnabled() {
-  const items = [set];
+  const items = [closure_5];
   return initialize.useStateFromStores(items, () => {
     localAccount = localAccount.getLocalAccount(constants.CONTACTS);
     return null != localAccount && localAccount.friendSync && localAccount.type === constants.CONTACTS;
@@ -312,12 +302,12 @@ export const isContactSyncEnabled = function isContactSyncEnabled(contactSyncAcc
   return tmp;
 };
 export const getOpenLearnMoreUrl = function getOpenLearnMoreUrl() {
-  return combined.getArticleURL(constants4.CONTACT_SYNC);
+  return combinedDefault.getArticleURL(constants4.CONTACT_SYNC);
 };
 export const handleOpenLearnMoreLink = function handleOpenLearnMoreLink() {
-  const obj = Linking;
-  obj.openURL(combined.getArticleURL(constants4.CONTACT_SYNC));
+  const obj = _modDef4090;
+  obj.openURL(combinedDefault.getArticleURL(constants4.CONTACT_SYNC));
 };
 export const transitionToAddFriendsLandingPage = function transitionToAddFriendsLandingPage() {
-  ModalActionCreators.popWithKey(closure_9);
+  _modDef5260.popWithKey(closure_9);
 };

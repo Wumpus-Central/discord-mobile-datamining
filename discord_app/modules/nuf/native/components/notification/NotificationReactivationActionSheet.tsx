@@ -1,54 +1,50 @@
 // discord_app/modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { EventActionType } from "EventActionType";
-import { AnalyticEvents } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/16670_registerAsset.js";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 16670 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { EventActionType } from "EventActionType" /* 11582 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let metroImportAll;
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, image: null, title: null, subtitle: null, buttons: null };
-createCacheKey = { marginHorizontal: require("Themes").space.PX_24, alignItems: "center" };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginVertical: require("Themes").space.PX_24, height: 120 };
+createCacheKey[1] = { marginVertical: ThemesDefault.space.PX_24, height: 120 };
 createCacheKey[2] = { textAlign: "center" };
-let obj1 = { marginVertical: require("Themes").space.PX_24, height: 120 };
-createCacheKey[3] = { textAlign: "center", marginTop: require("Themes").space.PX_8 };
-let obj2 = { textAlign: "center", marginTop: require("Themes").space.PX_8 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginTop: require("Themes").space.PX_8 };
-const result = require("EventActionType").fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
+let obj1 = { marginVertical: ThemesDefault.space.PX_24, height: 120 };
+createCacheKey[3] = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
+let obj2 = { textAlign: "center", marginTop: ThemesDefault.space.PX_8 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8 };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { marginTop: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/notification/NotificationReactivationActionSheet.tsx");
 
 export default function NotificationReactivationActionSheet(location) {
   const _location = location.location;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const items = [_location];
   const items1 = [_location];
   const callback = React.useCallback(() => {
-    const pushNotificationPermission = _location(outer1_2[8]).requestPushNotificationPermission(outer1_6.ALLOW_TO_REQUEST, _location, () => {
+    const pushNotificationPermission = _location(closure_1_2[8]).requestPushNotificationPermission(closure_1_6.ALLOW_TO_REQUEST, _location, () => {
       callback(table[9]).hideActionSheet();
     });
   }, items);
   const callback1 = React.useCallback(() => {
-    let obj = outer1_1(outer1_2[7]);
-    obj = { action_type: outer1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
-    obj.track(outer1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
-    outer1_1(outer1_2[9]).hideActionSheet();
+    let obj = closure_1_1(closure_1_2[7]);
+    obj = { action_type: closure_1_6.SKIP_STEP, action_location: _location, permission_granted: "Array" };
+    obj.track(closure_1_7.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj);
+    closure_1_1(closure_1_2[9]).hideActionSheet();
   }, items1);
   let obj = { children: null };
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.image, source: null, resizeMode: "contain" };
-  obj[1] = registerAsset;
+  obj = { style: tmp.image, source: registerAssetDefault, resizeMode: "contain" };
   const items2 = [callback(closure_5, obj), , , ];
-  const obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
+  obj1 = { style: tmp.title, variant: "heading-xl/bold", accessibilityRole: "header", children: null };
   const intl = _location(1236).intl;
   obj1[3] = intl.string(_location(1236).t.a4bgO0);
   items2[1] = callback(_location(4734).Text, obj1);

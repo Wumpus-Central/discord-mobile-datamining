@@ -1,8 +1,8 @@
 // discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx
-import _slicedToArray from "_slicedToArray";
-import { Storage } from "../storage/Storage.tsx";
+import Storage2 from "Storage" /* 595 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function hasExceededThreshold(name) {
   let tmp = "anonymous" !== name.name;
   if (tmp) {
@@ -44,8 +44,6 @@ function flushViolators() {
     map[Symbol.iterator]();
   }
   (function printViolators() {
-    let obj;
-    let tmp14;
     let num;
     num = 34;
     let num2;
@@ -107,7 +105,7 @@ let c7 = "";
 let c8 = false;
 let c9;
 const map = new Map();
-let result = require("Storage").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/flux/useStateFromStoresPerformanceDebugging.tsx");
 
 export function getUseStateFromStoresExecutionWindowThresholdMs() {
   let num = arg0;
@@ -117,8 +115,8 @@ export function getUseStateFromStoresExecutionWindowThresholdMs() {
   return num;
 }
 export const setUseStateFromStoresExecutionWindowThresholdMs = function setUseStateFromStoresExecutionWindowThresholdMs(arg0) {
-  let closure_4 = arg0;
-  const Storage = Storage.Storage;
+  closure_4 = arg0;
+  const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionWindowThresholdMs", arg0);
   clearInterval(interval);
   if (c8) {
@@ -134,8 +132,8 @@ export function getUseStateFromStoresExecutionTimeWarningThresholdMs() {
   return num;
 }
 export const setUseStateFromStoresExecutionTimeWarningThresholdMs = function setUseStateFromStoresExecutionTimeWarningThresholdMs(arg0) {
-  let closure_5 = arg0;
-  const Storage = Storage.Storage;
+  closure_5 = arg0;
+  const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionTimeWarningThresholdMs", arg0);
 };
 export function getUseStateFromStoresExecutionCountWarningThreshold() {
@@ -146,13 +144,13 @@ export function getUseStateFromStoresExecutionCountWarningThreshold() {
   return num;
 }
 export const setUseStateFromStoresExecutionCountWarningThreshold = function setUseStateFromStoresExecutionCountWarningThreshold(arg0) {
-  let closure_6 = arg0;
-  const Storage = Storage.Storage;
+  closure_6 = arg0;
+  const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresExecutionCountWarningThreshold", arg0);
 };
 export const setUseStateFromStoresSpecificHookFilter = function setUseStateFromStoresSpecificHookFilter(first1) {
-  let closure_7 = first1;
-  const Storage = Storage.Storage;
+  closure_7 = first1;
+  const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresSpecificHookFilter", first1);
 };
 export function getUseStateFromStoresSpecificHookFilter() {
@@ -170,8 +168,8 @@ export function getUseStateFromStoresDebuggingEnabled() {
   return flag;
 }
 export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromStoresDebuggingEnabled(first) {
-  let closure_8 = first;
-  const Storage = Storage.Storage;
+  closure_8 = first;
+  const Storage = Storage2.Storage;
   const result = Storage.set("useStateFromStoresDebuggingEnabled", first);
   if (closure_8) {
     const _setInterval = setInterval;
@@ -185,7 +183,7 @@ export const setUseStateFromStoresDebuggingEnabled = function setUseStateFromSto
 export const getUseStateFromStoresHookInfo = function getUseStateFromStoresHookInfo() {
   if (c8) {
     const _Error = Error;
-    const error = new Error();
+    error = new Error();
     let parts;
     if (error.stack != null) {
       parts = str.split("\n");

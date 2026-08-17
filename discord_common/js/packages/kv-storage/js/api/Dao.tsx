@@ -1,6 +1,8 @@
 // discord_common/js/packages/kv-storage/js/api/Dao.tsx
-import { TableId } from "../types/index.tsx";
-import { fromDatabaseTransaction } from "Table.tsx";
+import set from "set" /* 2 */;
+import fromDatabaseTransaction from "fromDatabaseTransaction" /* 1960 */;
+import TableId from "TableId" /* 1962 */;
+
 let Dao;
 class Dao {
   constructor(arg0, arg1, arg2) {
@@ -90,13 +92,13 @@ prototype["delete"] = function delete(arg0) {
   return deleteResult;
 };
 prototype["transaction"] = function transaction(arg0, arg1) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const table = this.table;
   return table.transaction((transaction) => {
-    if (typeof outer1_2 !== "function") {
+    if (typeof closure_1_2 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj = Object.create(outer1_2.prototype);
+    const obj = Object.create(closure_1_2.prototype);
     obj.transaction = transaction;
     return closure_0(obj);
   }, arg1);
@@ -157,7 +159,7 @@ prototype2["delete"] = function delete(arg0) {
   }
   return deleteResult;
 };
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Dao.tsx");
 
 export { Dao };
 export { DaoTransaction };

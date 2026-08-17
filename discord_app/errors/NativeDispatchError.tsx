@@ -1,9 +1,11 @@
 // discord_app/errors/NativeDispatchError.tsx
-import { DispatchErrorCodes } from "RPC_SCOPE_CONFIG";
+import set from "set" /* 2 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
 import { getSystemLocale } from "../intl/index.native.tsx";
 import { formatSize } from "../utils/FileSizeUtils.tsx";
 
-const result = require("formatSize").fileFinishedImporting("errors/NativeDispatchError.tsx");
+const DispatchErrorCodes = RPC_SCOPE_CONFIG.DispatchErrorCodes;
+const result = set.fileFinishedImporting("errors/NativeDispatchError.tsx");
 class NativeDispatchError {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -30,8 +32,6 @@ class NativeDispatchError {
 }
 Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
   get: function displayMessage() {
-    let available;
-    let required;
     const self = this;
     if (null == this.code) {
       const intl14 = getSystemLocale.intl;
@@ -74,7 +74,7 @@ Object.defineProperty(NativeDispatchError.prototype, "displayMessage", {
           if (tmp32.DISK_PERMISSION_DENIED !== code) {
             if (tmp32.INVALID_DRIVE === code) {
               const intl5 = getSystemLocale.intl;
-              const obj1 = { path: null };
+              obj1 = { path: null };
               obj1[0] = path;
               return intl5.formatToPlainString(getSystemLocale.t["08L2TG"], obj1);
             } else if (tmp32.APPLICATION_LOCK_FAILED === code) {

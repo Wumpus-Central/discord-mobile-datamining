@@ -1,18 +1,21 @@
 // discord_app/utils/NetworkUtils.tsx
+import set from "set" /* 2 */;
+import notifyListeners from "notifyListeners" /* 1475 */;
+
 let closure_2 = [];
 let c3 = false;
 const obj = {};
-const merged = Object.assign(require("notifyListeners").default);
+const merged = Object.assign(notifyListeners.default);
 obj.awaitOnline = function awaitOnline() {
   return new Promise((arg0) => {
     if (_default.isOnline()) {
       return arg0();
     } else {
       function whenOnline(arg0) {
-        const item = outer1_2.forEach((arg0) => arg0());
-        outer1_2.length = 0;
-        let c3 = false;
-        whenOnline(outer1_1[0]).default.removeOnlineCallback(whenOnline);
+        const item = closure_1_2.forEach((arg0) => arg0());
+        closure_1_2.length = 0;
+        c3 = false;
+        whenOnline(closure_1_1[0]).default.removeOnlineCallback(whenOnline);
       }
       arr = arr.push(arg0);
       if (!c3) {
@@ -25,6 +28,6 @@ obj.awaitOnline = function awaitOnline() {
     tmp2 = table;
   });
 };
-const result = require("set").fileFinishedImporting("utils/NetworkUtils.tsx");
+const result = set.fileFinishedImporting("utils/NetworkUtils.tsx");
 
 export default obj;

@@ -1,15 +1,13 @@
 // discord_app/modules/slayer_storefront/navigateToSocialLayerStorefront.tsx
-import getPrice from "getPrice";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleUserSettingsStoreUpdate from "handleUserSettingsStoreUpdate";
-import ME from "ME";
-import { transitionTo } from "../routing/router_utils.tsx";
-import { getPrice } from "SlayerStorefrontUtils.tsx";
-import { _fetchSocialLayerStorefront } from "SocialLayerStorefrontActionCreators.tsx";
+import transitionTo from "transitionTo" /* 1222 */;
+import getPrice from "getPrice" /* 7200 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "handleUserSettingsStoreUpdate" /* 7202 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function navigateToSocialLayerStorefrontWithGuildPreview(arg0) {
   const self = this;
   const apply = _navigateToSocialLayerStorefrontWithGuildPreview.apply;
@@ -23,15 +21,10 @@ function navigateToSocialLayerStorefrontWithGuildPreview(arg0) {
 function _navigateToSocialLayerStorefrontWithGuildPreview() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let id;
       if (guild === 2) {
         guild = 3;
         HermesBuiltin.throwTypeError();
@@ -58,7 +51,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp5;
+              dependencyMap = tmp5;
               let lib = tmp2;
               id = undefined;
               lib = undefined;
@@ -79,7 +72,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
                 throw arg1;
               } else if (arg0 === 2) {
                 guild = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -164,7 +157,7 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
     iter.next();
     return iter;
   });
-  const _navigateToSocialLayerStorefrontWithGuildPreview = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -174,15 +167,9 @@ function _navigateToSocialLayerStorefrontWithGuildPreview() {
   return applyArgumentsResult;
 }
 ({ GuildFeatures: closure_6, Routes: error } = ME);
-const result = require("handleUserSettingsStoreUpdate").fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");
+const result = require("set").fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");
 
 export default function navigateToSocialLayerStorefront(arg0) {
-  let applicationId;
-  let guildId;
-  let invite;
-  let pageIndex;
-  let skuId;
-  let slug;
   ({ applicationId, guildId, pageIndex, invite, skuId, slug } = arg0);
   let applicationIdFromGuildId = applicationId;
   if (applicationId == null) {
@@ -215,8 +202,6 @@ export default function navigateToSocialLayerStorefront(arg0) {
   }
 };
 export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSocialLayerStorefront(forceFetch) {
-  let guildId;
-  let invite;
   ({ guildId, invite } = forceFetch);
   if (null != invite) {
     const guild = invite.guild;
@@ -234,8 +219,6 @@ export const eagerNavigateToSocialLayerStorefront = function eagerNavigateToSoci
   }
 };
 export const eagerNavigateToSocialLayerStorefrontForApplication = function eagerNavigateToSocialLayerStorefrontForApplication(arg0) {
-  let applicationId;
-  let forceFetch;
   ({ applicationId, forceFetch } = arg0);
   const socialLayerStorefrontForApplication = _fetchSocialLayerStorefront.fetchSocialLayerStorefrontForApplication(applicationId, { eager: true, forceFetch });
 };

@@ -1,32 +1,27 @@
 // discord_app/modules/calls/ChannelRTCParticipants.tsx
-import participantFromServer from "participantFromServer";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import callConnect from "callConnect";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import anyoneHasFlagInContext from "anyoneHasFlagInContext";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import makeTimeoutKey from "makeTimeoutKey";
-import updateVoiceState from "updateVoiceState";
-import ParticipantTypes from "ParticipantTypes";
-import ME from "ME";
-import DesktopSources from "DesktopSources";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { useIsSpeaking } from "../../hooks/useIsSpeaking.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
-import { apexExperiment } from "../activities/ContentClassificationEmbeddedActivityFilterExperiment.tsx";
-import { useAvatarDecoration } from "../collectibles/avatar_decorations/useAvatarDecoration.tsx";
-import { isStreamKey } from "../go_live/utils/StreamKeyUtils.tsx";
-import { getParticipantUserKey } from "getParticipantUserKey.tsx";
+import apply from "apply" /* 12 */;
+import version from "version" /* 4017 */;
+import isStreamKey from "isStreamKey" /* 4531 */;
+import getParticipantUserKeyDefault from "getParticipantUserKey" /* 4778 */;
+import useIsSpeaking from "useIsSpeaking" /* 4779 */;
+import apexExperiment from "apexExperiment" /* 4784 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 4797 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "reset" /* 4652 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "callConnect" /* 4496 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_9 from "anyoneHasFlagInContext" /* 4774 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import closure_11 from "makeTimeoutKey" /* 4776 */;
+import closure_12 from "updateVoiceState" /* 4542 */;
+import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import ME from "ME" /* 676 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let map1;
-const require = arg1;
+require = arg1;
 function sortKey(type) {
   type = type.type;
   if (constants.ACTIVITY === type) {
@@ -54,7 +49,7 @@ function sortKey(type) {
             }
           }
           const _HermesInternal = HermesInternal;
-          return "" + str + getParticipantUserKey(type.userNick, type.user);
+          return "" + str + getParticipantUserKeyDefault(type.userNick, type.user);
         }
       }
     }
@@ -63,7 +58,7 @@ function sortKey(type) {
       str4 = "\u0002";
     }
     const _HermesInternal2 = HermesInternal;
-    return "" + str4 + getParticipantUserKey(type.userNick, type.user) + "\u0003";
+    return "" + str4 + getParticipantUserKeyDefault(type.userNick, type.user) + "\u0003";
   }
 }
 ({ isStreamParticipant: map1, ParticipantTypes: closure_14 } = ParticipantTypes);
@@ -71,7 +66,7 @@ function sortKey(type) {
 ({ MediaEngineContextTypes: closure_17, Features: closure_18 } = DesktopSources);
 const __EMBEDDED_ACTIVITIES__ = "__EMBEDDED_ACTIVITIES__";
 let obj = { VIDEO: "VIDEO", STREAM: "STREAM", FILTERED: "FILTERED", SPEAKING: "SPEAKING", ACTIVITY: "ACTIVITY", NOT_POPPED_OUT: "NOT_POPPED_OUT" };
-let result = require("fetchFingerprint").fileFinishedImporting("modules/calls/ChannelRTCParticipants.tsx");
+let result = require("set").fileFinishedImporting("modules/calls/ChannelRTCParticipants.tsx");
 class ChannelRTCParticipants {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -226,17 +221,17 @@ prototype["updateParticipant"] = function updateParticipant(arg0) {
 };
 prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f76080) {
   const self = this;
-  let closure_0 = f76080;
+  closure_0 = f76080;
   let flag;
   if (this.participants[f76080] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
-      if (type.type === outer1_14.USER) {
-        let obj = callback(outer1_2[15]);
+      if (type.type === closure_1_14.USER) {
+        obj = callback(closure_1_2[15]);
         obj = { userId: null, checkIsMuted: true };
         obj[0] = callback;
         const isSpeaking = obj.getIsSpeaking(obj);
-        const isSoundSharingResult = outer1_9.isSoundSharing(callback);
+        const isSoundSharingResult = closure_1_9.isSoundSharing(callback);
         const participantByIndex = self.participantByIndex;
         const value = participantByIndex.get(type.id);
         type = undefined;
@@ -270,14 +265,14 @@ prototype["updateParticipantSpeaking"] = function updateParticipantSpeaking(f760
 };
 prototype["updateParticipantQuality"] = function updateParticipantQuality(f76087, closure_1, closure_2) {
   const self = this;
-  let closure_0 = closure_2;
+  closure_0 = closure_2;
   let flag;
   if (this.participants[f76087] != null) {
     flag = arr.reduce((arg0, type) => {
       let flag = arg0;
-      if (type.type === outer1_14.STREAM) {
+      if (type.type === closure_1_14.STREAM) {
         const participantByIndex = self.participantByIndex;
-        const obj = {};
+        obj = {};
         const merged = Object.assign(type);
         obj.maxResolution = closure_1;
         obj.maxFrameRate = closure_0;
@@ -316,7 +311,7 @@ prototype["_getEmbeddedActivities"] = function _getEmbeddedActivities() {
     const items = [];
     items[HermesBuiltin.arraySpread(embeddedActivitiesForChannelIncludingHidden, 0)] = selfEmbeddedActivityForChannel;
     uniqByResult = apply.uniqBy(items, (compositeInstanceId) => compositeInstanceId.compositeInstanceId);
-    const obj = apply;
+    obj = apply;
   }
   const ContentClassificationEmbeddedActivityFilterExperiment = apexExperiment.ContentClassificationEmbeddedActivityFilterExperiment;
   const currentUser = authStore2.getCurrentUser();
@@ -337,9 +332,7 @@ prototype["_getParticipantsForEmbeddedActivities"] = function _getParticipantsFo
   const self = this;
   const result = this._getEmbeddedActivities();
   return result.map((applicationId) => {
-    let compositeInstanceId;
-    let participants;
-    const obj = { type: outer1_14.ACTIVITY, id: null, applicationId: null, activityType: null, activityUrl: null, participants: null, guildId: null, sortKey: null };
+    obj = { type: closure_1_14.ACTIVITY, id: null, applicationId: null, activityType: null, activityUrl: null, participants: null, guildId: null, sortKey: null };
     ({ applicationId, compositeInstanceId } = applicationId);
     if (null != compositeInstanceId) {
       const _HermesInternal2 = HermesInternal;
@@ -350,14 +343,14 @@ prototype["_getParticipantsForEmbeddedActivities"] = function _getParticipantsFo
     }
     obj[1] = combined;
     obj[2] = applicationId.applicationId;
-    obj[3] = outer1_15.PLAYING;
+    obj[3] = closure_1_15.PLAYING;
     ({ url: obj[4], participants } = applicationId);
     if (participants == null) {
       participants = [];
     }
     const items = [...participants];
     obj[5] = items;
-    const channel = outer1_7.getChannel(self.channelId);
+    const channel = closure_1_7.getChannel(self.channelId);
     let guildId;
     if (channel != null) {
       guildId = channel.getGuildId();
@@ -400,14 +393,14 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       flag = false;
     }
     if (tmp3) {
-      let obj = { type: null };
+      obj = { type: null };
       obj[0] = constants.USER;
       const merged = Object.assign(authStore3.getUserStreamData(userId, guildId));
       obj.user = user;
       obj.id = user.id;
       obj.voiceState = voiceStateForChannel;
       obj.voicePlatform = voicePlatformForChannel;
-      let obj1 = useIsSpeaking;
+      obj1 = useIsSpeaking;
       obj = { userId: null, checkIsMuted: true };
       obj[0] = userId;
       obj.speaking = obj1.getIsSpeaking(obj);
@@ -418,11 +411,11 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
       obj.lastSpoke = num;
       obj.soundsharing = soundSharing.isSoundSharing(userId);
       obj.ringing = flag;
-      obj.userNick = getNickname.getName(guildId, self.channelId, user);
-      const obj4 = getNickname;
+      obj.userNick = getNicknameDefault.getName(guildId, self.channelId, user);
+      const obj4 = getNicknameDefault;
       const tmp8 = require;
       obj.userAvatarDecoration = useAvatarDecoration.getAvatarDecoration(user, guildId);
-      obj.localVideoDisabled = _detectH265HardwareDecode.isLocalVideoDisabled(user.id);
+      obj.localVideoDisabled = closure_8.isLocalVideoDisabled(user.id);
       const poppedOutParticipants = self.poppedOutParticipants;
       obj.isPoppedOut = poppedOutParticipants.has(user.id);
       items.push(obj);
@@ -432,7 +425,7 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
     if (streamForUser == null) {
       streamForUser = obj6.getActiveStreamForUser(userId, guildId);
     }
-    if (_detectH265HardwareDecode.supports(constants4.VIDEO)) {
+    if (closure_8.supports(constants4.VIDEO)) {
       if (null != streamForUser) {
         if (streamForUser.channelId === self.channelId) {
           const encodeStreamKeyResult = isStreamKey.encodeStreamKey(streamForUser);
@@ -470,12 +463,12 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
           obj2.userVideo = flag2;
           obj2.user = user;
           const tmp17 = streamForUser.ownerId === store2.getId() && obj6.isSelfStreamHidden(self.channelId);
-          obj2.userNick = getNickname.getName(guildId, self.channelId, user);
+          obj2.userNick = getNicknameDefault.getName(guildId, self.channelId, user);
           obj2.stream = streamForUser;
           const poppedOutParticipants2 = self.poppedOutParticipants;
           obj2.isPoppedOut = poppedOutParticipants2.has(encodeStreamKeyResult);
           items.push(obj2);
-          const obj10 = getNickname;
+          const obj10 = getNicknameDefault;
         }
       }
     }
@@ -485,8 +478,6 @@ prototype["_getParticipantsForUser"] = function _getParticipantsForUser(userId) 
 
 export default ChannelRTCParticipants;
 export const getEmbeddedActivityParticipantId = function getEmbeddedActivityParticipantId(arg0) {
-  let applicationId;
-  let instanceId;
   ({ applicationId, instanceId } = arg0);
   if (null != instanceId) {
     const _HermesInternal2 = HermesInternal;
@@ -506,8 +497,6 @@ export const activityParticipantIdToApplicationId = function activityParticipant
 };
 export { sortKey };
 export const areParticipantsEqual = function areParticipantsEqual(arg0, arg1) {
-  let tmp;
-  let tmp2;
   [, tmp] = arg0;
   [, tmp2] = arg1;
   return tmp === tmp2;

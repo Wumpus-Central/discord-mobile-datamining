@@ -1,14 +1,13 @@
 // discord_app/modules/game_update/native/GameUpdatePlatformIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { PlatformType } from "../../../../discord_common/js/shared/shared-constants/PlatformType.tsx";
+import noopAll from "noop" /* 19 */;
+import PlatformType from "PlatformType" /* 9049 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("PlatformType").fileFinishedImporting("modules/game_update/native/GameUpdatePlatformIcon.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/game_update/native/GameUpdatePlatformIcon.tsx");
 
 export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
-  let platform;
-  let size;
   ({ platform, size } = color);
   if (size === undefined) {
     size = "xs";
@@ -25,7 +24,7 @@ export const GameUpdatePlatformIcon = function GameUpdatePlatformIcon(color) {
     obj[1] = color;
     return jsx(tmp(9123).XboxNeutralIcon, { size: null, color: null });
   } else if (tmp(9049).PlatformType.PLAYSTATION === platform) {
-    const obj1 = { size: null, color: null };
+    obj1 = { size: null, color: null };
     obj1[0] = size;
     obj1[1] = color;
     return jsx(tmp(12017).PlaystationNeutralIcon, { size: null, color: null });

@@ -1,14 +1,16 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx
-import importAllResult from "noop";
-import getParticipants from "getParticipants";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "module_4115";
-import { set } from "../../../core/native/NativeView.tsx";
-import { useVoicePanelCardUserStateIcons } from "../hooks/useVoicePanelCardUserStateIcons.tsx";
-import { areStableParticipantsEqual } from "../utils/useStableParticipant.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import setDefault from "set" /* 7190 */;
+import areStableParticipantsEqual from "areStableParticipantsEqual" /* 16322 */;
+import useVoicePanelCardUserStateIcons from "useVoicePanelCardUserStateIcons" /* 16324 */;
+import useVoicePanelCardUserStateIconsDefault from "useVoicePanelCardUserStateIcons" /* 16324 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
+require = arg1;
 function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   const tmp = callback();
   let type;
@@ -20,9 +22,9 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
   if (obj.isStableParticipantWithUser(participant)) {
     id = participant.user.id;
   }
-  const tmp4 = useVoicePanelCardUserStateIcons;
+  const tmp4 = useVoicePanelCardUserStateIconsDefault;
   const items = [];
-  const iter = useVoicePanelCardUserStateIcons(type, id, guildId)[Symbol.iterator]();
+  const iter = useVoicePanelCardUserStateIconsDefault(type, id, guildId)[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp9 = nextResult;
@@ -58,7 +60,7 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
       if (tmp9.withLeftMargin) {
         leftMargin = tmp.leftMargin;
       }
-      let obj1 = { blurTheme: "dark", style: null, children: null };
+      obj1 = { blurTheme: "dark", style: null, children: null };
       items1[1] = leftMargin;
       obj1[1] = items1;
       let tmp18 = tmp35;
@@ -78,24 +80,24 @@ function useVoicePanelHeaderUserStateIcons(participant, guildId, userIcons) {
     const items2 = [tmp.iconContainer, userIcons];
     obj3[0] = items2;
     obj3[1] = items;
-    return jsx(set, { style: null, children: null });
+    return jsx(setDefault, { style: null, children: null });
   }
-  const tmp4Result = useVoicePanelCardUserStateIcons(type, id, guildId);
+  const tmp4Result = useVoicePanelCardUserStateIconsDefault(type, id, guildId);
 }
 let c3 = importAllResult;
-let closure_6 = require("module_4115").createAnimatedComponent(require("TwinButtons").BackgroundBlurView);
+let closure_6 = importDefaultResult.createAnimatedComponent(require("TwinButtons").BackgroundBlurView);
 let closure_7 = { duration: 100 };
 let obj = { container: null, iconContainer: null, floatingIconWrapper: null, floatingIcon: null, leftMargin: null };
-obj = { position: "absolute", top: 0, left: 0, borderRadius: require("Themes").radii.round, padding: 6 };
+obj = { position: "absolute", top: 0, left: 0, borderRadius: ThemesDefault.radii.round, padding: 6 };
 obj[0] = obj;
 obj[1] = { flexDirection: "row" };
-obj[2] = { width: 20, height: 20, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center" };
-createCacheKey = { width: 12, height: 12, tintColor: require("Themes").colors.WHITE };
+obj[2] = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
+createCacheKey = { width: 12, height: 12, tintColor: ThemesDefault.colors.WHITE };
 obj[3] = createCacheKey;
 obj[4] = { marginLeft: 4 };
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_10 = { code: "function VoicePanelHeaderUserStateTsx1(){const{withTiming,isHeaderHidden,OPACITY_TIMING}=this.__closure;return{opacity:withTiming(isHeaderHidden.get()?1:0,OPACITY_TIMING)};}" };
-let obj1 = { width: 20, height: 20, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center" };
+let obj1 = { width: 20, height: 20, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center" };
 const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHeaderHidden) {
   isHeaderHidden = isHeaderHidden.isHeaderHidden;
   let channelId;
@@ -103,9 +105,9 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
   channelId = context.channelId;
   const guildId = context.guildId;
   let obj = isHeaderHidden(589);
-  const items = [getParticipants];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const selectedParticipant = outer1_4.getSelectedParticipant(channelId);
+    const selectedParticipant = closure_1_4.getSelectedParticipant(channelId);
     let id;
     if (selectedParticipant != null) {
       id = selectedParticipant.id;
@@ -115,12 +117,12 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
   const tmp4 = useVoicePanelHeaderUserStateIcons(channelId(16322)(stateFromStores, channelId, guildId), guildId);
   isHeaderHidden(4115);
   const fn = function h() {
-    let obj = isHeaderHidden(outer1_2[13]);
+    let obj = isHeaderHidden(closure_1_2[13]);
     let num = 0;
     if (isHeaderHidden.get()) {
       num = 1;
     }
-    obj = { opacity: obj.withTiming(num, outer1_7) };
+    obj = { opacity: obj.withTiming(num, closure_1_7) };
     return obj;
   };
   obj = { withTiming: isHeaderHidden(4664).withTiming, isHeaderHidden, OPACITY_TIMING: closure_7 };
@@ -137,7 +139,7 @@ const memoResult = importAllResult.memo(function VoicePanelHeaderUserState(isHea
   }
   return tmp7;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelHeaderUserState.tsx");
 
 export default memoResult;
 export { useVoicePanelHeaderUserStateIcons };

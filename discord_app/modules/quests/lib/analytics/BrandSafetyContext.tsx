@@ -1,23 +1,23 @@
 // discord_app/modules/quests/lib/analytics/BrandSafetyContext.tsx
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN as closure_10 } from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
+import set from "set" /* 2 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN from "MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN" /* 9506 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9505 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "handleConnectionOpen" /* 4197 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
 import { getQuestDeliveryDataForPlacement } from "../../utils/QuestDataUtils.tsx";
 
-let c3;
-let c4;
 ({ getVisibleChannelIdsMethod: c3, getVisibleGuildIdsMethod: c4 } = SidebarVisibilityMethodStore);
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
+let closure_10 = MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
+let result = set.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
 export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
   let obj = _getQuestDeliveryDataForPlacement;
   const result = obj.isBillableQuestContent(questContent);
-  let obj1 = _getQuestDeliveryDataForPlacement;
+  obj1 = _getQuestDeliveryDataForPlacement;
   const adContext = obj1.getAdContext(questContent);
   const tmp4 = callback2();
   const tmp5 = callback();
@@ -49,7 +49,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                 }
                 let tmp2 = null;
                 if (null !== tmp.icon) {
-                  obj = outer1_1(outer1_2[8]);
+                  obj = closure_1_1(closure_1_2[8]);
                   obj = { id: null, icon: null, size: 44, canAnimate: true };
                   ({ id: obj2[0], icon: obj2[1] } = tmp);
                   let guildIconURL = obj.getGuildIconURL(obj);
@@ -78,7 +78,7 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
                 } else {
                   const obj = { id: null, name: null };
                   obj[0] = channel.id;
-                  obj[1] = dependencyMap(table[9]).computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+                  obj[1] = dependencyMap(table[9]).computeChannelName(channel, closure_9, closure_7);
                   if (channel.topic.length > 0) {
                     obj.channel_topic = channel.topic;
                   }
@@ -100,12 +100,12 @@ export const getBrandSafetyContext = function getBrandSafetyContext(questContent
             if (null != banner) {
               obj = { id: null, banner: null };
               ({ id: obj5[0], banner: obj5[1] } = guild);
-              let guildBannerURL = getAvatarURL.getGuildBannerURL(obj, true);
+              let guildBannerURL = getAvatarURLDefault.getGuildBannerURL(obj, true);
               if (guildBannerURL == null) {
                 guildBannerURL = null;
               }
               tmp15 = guildBannerURL;
-              const obj4 = getAvatarURL;
+              const obj4 = getAvatarURLDefault;
             }
             if (null !== tmp15) {
               obj.selected_guild_banner_url = tmp15;

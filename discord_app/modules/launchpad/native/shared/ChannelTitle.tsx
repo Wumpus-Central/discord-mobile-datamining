@@ -1,32 +1,31 @@
 // discord_app/modules/launchpad/native/shared/ChannelTitle.tsx
-import importAllResult from "noop";
-import { UnreadSetting } from "ReadStateTypes";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
-let closure_6 = createCacheKey.createStyleProperties({ muted: require("Themes").colors.TEXT_MUTED, normal: require("Themes").colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: require("Themes").colors.REDESIGN_CHANNEL_NAME_TEXT });
-let obj = { muted: require("Themes").colors.TEXT_MUTED, normal: require("Themes").colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: require("Themes").colors.REDESIGN_CHANNEL_NAME_TEXT };
+let closure_6 = createCacheKey.createStyleProperties({ muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT });
+let obj = { muted: ThemesDefault.colors.TEXT_MUTED, normal: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, unreadOrConnected: ThemesDefault.colors.REDESIGN_CHANNEL_NAME_TEXT };
 const memoResult = importAllResult.memo(function ChannelTitle(unread) {
-  let muted;
-  let title;
   ({ title, muted } = unread);
   unread = unread.unread;
   const resolvedUnreadSetting = unread.resolvedUnreadSetting;
   const connected = unread.connected;
-  let c4;
+  closure_4 = undefined;
   let tmp2 = callback();
-  c4 = tmp2;
+  closure_4 = tmp2;
   const items = [unread, tmp2, connected, muted, resolvedUnreadSetting];
   const memo = connected.useMemo(() => {
-    let color = _undefined.normal;
+    let color = closure_4.normal;
     if (muted) {
       color = tmp.muted;
     } else {
       let tmp2 = unread;
       if (unread) {
-        tmp2 = resolvedUnreadSetting === _undefined.ALL_MESSAGES;
+        tmp2 = resolvedUnreadSetting === closure_4.ALL_MESSAGES;
       }
       if (!tmp2) {
         tmp2 = connected;
@@ -44,6 +43,6 @@ const memoResult = importAllResult.memo(function ChannelTitle(unread) {
   obj[4] = title;
   return jsx(muted(resolvedUnreadSetting[6]).Text, { variant: unread(resolvedUnreadSetting[5])().channelName.text.variant, lineClamp: 1, maxFontSizeMultiplier: 1.75, style: memo, children: null });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/launchpad/native/shared/ChannelTitle.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/shared/ChannelTitle.tsx");
 
 export default memoResult;

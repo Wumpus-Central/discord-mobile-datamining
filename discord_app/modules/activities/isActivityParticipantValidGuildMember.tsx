@@ -1,5 +1,7 @@
 // discord_app/modules/activities/isActivityParticipantValidGuildMember.tsx
-const result = require("set").fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/activities/isActivityParticipantValidGuildMember.tsx");
 
 export default function isActivityParticipantValidGuildMember(member) {
   let tmp = null != member.member && null != member.member.joined_at;

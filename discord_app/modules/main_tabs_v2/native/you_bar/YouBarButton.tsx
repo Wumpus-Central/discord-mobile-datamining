@@ -1,16 +1,13 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/YouBarButton.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import IconButton from "IconButton" /* 8035 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import CONNECTION_BANNER_HEIGHT from "CONNECTION_BANNER_HEIGHT" /* 14450 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 class YouBarButtonIcon {
   constructor(arg0) {
     hasBadge = global.hasBadge;
@@ -115,25 +112,18 @@ class YouBarButtonIcon {
 }
 class YouBarButtonContainer {
   constructor(arg0) {
-    obj = { style: jsxs().buttonContainer, children: global.children };
+    obj = { style: closure_9().buttonContainer, children: global.children };
     return jsx(View, obj);
   }
 }
 let c3 = importAllResult;
 ({ YOU_BAR_BUTTON_HIT_SLOP: c5, YOU_BAR_BUTTON_ICON_SIZE: closure_6 } = CONNECTION_BANNER_HEIGHT);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { buttonContainer: null };
-obj = { position: "relative", borderRadius: require("Themes").modules.button.BORDER_RADIUS, overflow: "hidden" };
+obj = { position: "relative", borderRadius: ThemesDefault.modules.button.BORDER_RADIUS, overflow: "hidden" };
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function YouBarButton(arg0) {
-  let accessibilityLabel;
-  let badgeStyle;
-  let hasBadge;
-  let hasNameplate;
-  let icon;
-  let onLongPress;
-  let onPress;
   ({ hasNameplate, icon, hasBadge, badgeStyle, onPress, onLongPress, accessibilityLabel } = arg0);
   let obj = { accessibilityLabel, variant: null, size: "sm", icon: null, onPress: null, onLongPress: null, hitSlop: null };
   let str = "tertiary";
@@ -149,7 +139,7 @@ const memoResult = importAllResult.memo(function YouBarButton(arg0) {
   obj[0] = closure_7(IconButton.IconButton, obj);
   return closure_7(YouBarButtonContainer, obj);
 });
-let result = require("CONNECTION_BANNER_HEIGHT").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/you_bar/YouBarButton.tsx");
 
 export default memoResult;
 export { YouBarButtonIcon };

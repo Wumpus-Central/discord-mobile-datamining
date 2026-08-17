@@ -1,17 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { getLayoutStyles } from "layouts/ChannelListLayout.tsx";
+import noopAll from "noop" /* 19 */;
+import getLayoutStyles from "getLayoutStyles" /* 10056 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-let result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
+require = arg1;
+noopAll;
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/guild_channels/ChannelWrapper.tsx");
 
 export const renderChannelWrapper = function renderChannelWrapper(children, fontScale) {
-  let channel;
-  let launchpad;
-  let layout;
-  let panelVariant;
   ({ channel, layout, launchpad, panelVariant } = fontScale);
   if (panelVariant === undefined) {
     panelVariant = false;

@@ -1,12 +1,12 @@
 // discord_app/modules/messages/native/renderer/transformReactions.tsx
-import { apexExperiment } from "../../../a11y/native/AccessibilityLabelOptimizationExperiment.tsx";
-const result = require("getAvatarURL").fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
+import set from "set" /* 2 */;
+import apexExperiment from "apexExperiment" /* 8177 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/renderer/transformReactions.tsx");
 
 export default function transformReactions(arg0) {
-  let reactions;
-  let require;
   ({ reactions, animateEmoji: require } = arg0);
-  let closure_1;
+  closure_1 = undefined;
   closure_1 = apexExperiment.shouldSkipAccessibilityLabels();
   let obj = apexExperiment;
   return reactions.flatMap((emoji) => {
@@ -25,10 +25,10 @@ export default function transformReactions(arg0) {
         animated = emoji.animated;
       }
       if (null == emoji.id) {
-        let obj2 = callback(outer1_2[1]);
+        let obj2 = callback(closure_1_2[1]);
         let uRL = obj2.getURL(emoji.name);
       } else {
-        let obj = callback(outer1_2[2]);
+        let obj = callback(closure_1_2[2]);
         obj = { id: null, animated: null, size: 48 };
         obj[0] = emoji.id;
         obj[1] = animated;
@@ -41,7 +41,7 @@ export default function transformReactions(arg0) {
         }
         let accessibleEmojiDisplayName = str;
       } else {
-        const obj4 = outer1_0(outer1_2[3]);
+        const obj4 = closure_1_0(closure_1_2[3]);
         accessibleEmojiDisplayName = obj4.getAccessibleEmojiDisplayName(merged.me, merged.count, emoji, merged.burst_count > 0);
       }
       let combined = null;
@@ -51,7 +51,7 @@ export default function transformReactions(arg0) {
       }
       obj = {};
       const merged1 = Object.assign(merged);
-      const obj1 = {};
+      obj1 = {};
       const merged2 = Object.assign(emoji);
       obj1.id = combined;
       obj1.src = uRL;
@@ -63,9 +63,9 @@ export default function transformReactions(arg0) {
         if (obj.burst_colors.length > 0) {
           obj2 = { colors: null, shouldProcessMobileColors: null };
           obj2[0] = obj.burst_colors;
-          obj2[1] = outer1_0(outer1_2[5]).isIOS();
-          obj.themedBurstColors = outer1_0(outer1_2[4]).buildPlatformedThemedEmojiColorPalette(obj2);
-          const obj8 = outer1_0(outer1_2[5]);
+          obj2[1] = closure_1_0(closure_1_2[5]).isIOS();
+          obj.themedBurstColors = closure_1_0(closure_1_2[4]).buildPlatformedThemedEmojiColorPalette(obj2);
+          const obj8 = closure_1_0(closure_1_2[5]);
         }
       }
       return obj;

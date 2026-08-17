@@ -1,9 +1,11 @@
 // discord_app/modules/activity_status/getActivityStatusText.tsx
-import { ActivityTypes } from "ME";
-import { StatusDisplayTypes } from "../../../discord_common/js/shared/shared-constants/StatusDisplayTypes.tsx";
-import { isEmbeddedActivity } from "../activities/utils/isEmbeddedActivity.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7259 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 9907 */;
 
-const result = require("isEmbeddedActivity").fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
+const ActivityTypes = ME.ActivityTypes;
+const result = set.fileFinishedImporting("modules/activity_status/getActivityStatusText.tsx");
 
 export default function getActivityStatusText(name) {
   let flag = arg1;
@@ -83,7 +85,7 @@ export default function getActivityStatusText(name) {
   } else {
     tmp17 = tmp2;
   }
-  if (isEmbeddedActivity(name)) {
+  if (isEmbeddedActivityDefault(name)) {
     const tmp28 = tmp21(9908)(tmp2);
     let obj = { text: null, tooltip: null };
     obj[0] = tmp28;
@@ -99,7 +101,7 @@ export default function getActivityStatusText(name) {
         obj = { text: null, tooltip: null };
         obj[0] = tmp17;
         const intl8 = tmp15(1236).intl;
-        const obj1 = { game: null };
+        obj1 = { game: null };
         obj1[0] = tmp17;
         obj[1] = intl8.formatToPlainString(tmp15(1236).t.lFApmz, obj1);
         return obj;

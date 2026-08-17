@@ -1,29 +1,20 @@
 // discord_app/modules/user_settings/voice/native/KrispLogo.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import handleThemeChange from "handleThemeChange";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Linking } from "../../../../lib/native/Linking.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import combinedDefault from "combined" /* 1993 */;
+import _modDef4090 from "module_4090" /* 4090 */;
+import Text from "Text" /* 4734 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c3;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function handleKrispLinkPressed() {
-  let obj = combined;
+  let obj = combinedDefault;
   const articleURL = obj.getArticleURL(constants4.NOISE_SUPPRESSION);
   obj = { text: null, href: null, location: null };
   const intl = getSystemLocale.intl;
@@ -31,21 +22,22 @@ function handleKrispLinkPressed() {
   obj[1] = articleURL;
   obj = { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_VOICE_AND_VIDEO };
   obj[2] = obj;
-  expandEventProperties.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
-  const obj2 = expandEventProperties;
-  Linking.openURL(articleURL);
+  expandEventPropertiesDefault.track(constants.NOISE_CANCELLATION_LINK_CLICKED, obj);
+  const obj2 = expandEventPropertiesDefault;
+  _modDef4090.openURL(articleURL);
 }
+noopAll;
 ({ Image: c3, View: c4, Pressable: c5 } = get_ActivityIndicator);
-({ AnalyticEvents: error, AnalyticsPages: metroImportAll, AnalyticsSections: c9, HelpdeskArticles: c10 } = ME);
+({ AnalyticEvents: error, AnalyticsPages: closure_8, AnalyticsSections: c9, HelpdeskArticles: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = { logo: { marginLeft: 20, height: 30, width: 67 }, detailsView: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingBottom: 12, gap: 12 } };
-const result = require("handleThemeChange").fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/voice/native/KrispLogo.tsx");
 
 export default function KrispLogo() {
   let obj = initialize;
-  const items = [handleThemeChange];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => theme.theme);
-  let obj1 = AccessibilityAnnouncer;
+  obj1 = AccessibilityAnnouncer;
   if (obj1.isThemeLight(stateFromStores)) {
     let tmp4Result = tmp4(12562);
   } else {

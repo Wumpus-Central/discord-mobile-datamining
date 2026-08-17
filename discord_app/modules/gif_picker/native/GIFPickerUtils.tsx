@@ -1,12 +1,12 @@
 // discord_app/modules/gif_picker/native/GIFPickerUtils.tsx
-import noop from "noop";
-import { isDiscordProxiedAssetUrl } from "../../../utils/URLUtils.tsx";
-import { shouldRefreshAttachmentUrl } from "../../messages/SignedAttachmentLinkUtils.tsx";
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+import shouldRefreshAttachmentUrl from "shouldRefreshAttachmentUrl" /* 9085 */;
+import closure_3 from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 function transformFavoriteGifUrl(url) {
   let combined = url;
-  const str = isDiscordProxiedAssetUrl.toURLSafe(url);
+  const str = isDiscordProxiedAssetUrlDefault.toURLSafe(url);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
@@ -48,13 +48,13 @@ function transformFavoriteGifUrl(url) {
     }
     return combined;
   }
-  const obj = isDiscordProxiedAssetUrl;
+  const obj = isDiscordProxiedAssetUrlDefault;
 }
 require("ME").GIFPickerResultTypes;
 const re5 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re6 = /(tenor\.com)/;
 const re7 = /-(?:.(?!-))+$/;
-let result = require("isDiscordProxiedAssetUrl").fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPickerUtils.tsx");
 
 export const GIF_HEADER_HEIGHT = 56;
 export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
@@ -67,9 +67,9 @@ export const useFavoriteGIFsMobile = function useFavoriteGIFsMobile() {
       let tmp2;
       if (sortedFavoriteGIFs.length > 0) {
         const obj = { type: null, name: null, src: null, format: null };
-        obj[0] = outer1_4.FAVORITES;
-        const intl = sortedFavoriteGIFs(outer1_2[5]).intl;
-        obj[1] = intl.string(sortedFavoriteGIFs(outer1_2[5]).t.k8fFjp);
+        obj[0] = closure_1_4.FAVORITES;
+        const intl = sortedFavoriteGIFs(closure_1_2[5]).intl;
+        obj[1] = intl.string(sortedFavoriteGIFs(closure_1_2[5]).t.k8fFjp);
         obj[2] = tmp[0].src;
         obj[3] = tmp[0].format;
         tmp2 = obj;

@@ -1,33 +1,23 @@
 // discord_app/modules/app_launcher/native/AppLauncherNativeUtils.tsx
-import postMessageToWebView from "postMessageToWebView";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { AnalyticEvents } from "ME";
-import { BuiltInSectionId } from "TRUE_OPTION_NAME";
-import { registerAsset } from "../../../../_runtime/01902_registerAsset.js";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
-import { getShelfBadgeTypeIfActive } from "../utils/AppLauncherUtils.tsx";
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import registerAssetDefault from "registerAsset" /* 1902 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import setActiveCommandAll from "setActiveCommand" /* 7525 */;
+import getShelfBadgeTypeIfActive from "getShelfBadgeTypeIfActive" /* 8447 */;
+import Placeholder from "Placeholder" /* 11225 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { BuiltInSectionId } from "TRUE_OPTION_NAME" /* 5246 */;
 import { context } from "AppLauncherContext.tsx";
-import { Placeholder } from "screens/home/FrecencySection.tsx";
 
-let error;
-let metroImportAll;
-const require = arg1;
-({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: error, AppLauncherRouteName: metroImportAll } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
+require = arg1;
+({ APP_LAUNCHER_BUILT_IN_SECTION_ICON: error, AppLauncherRouteName: closure_8 } = APP_LAUNCHER_BUILT_IN_SECTION_ICON);
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/AppLauncherNativeUtils.tsx");
 
 export const handleApplicationSelected = function handleApplicationSelected(entrypoint) {
-  let _location;
-  let application;
-  let context;
-  let installOnDemand;
-  let navigates;
-  let navigation;
-  let query;
-  let searchResultsPosition;
-  let sectionName;
   ({ application, navigation, sectionName, navigates } = entrypoint);
   ({ location: _location, context, installOnDemand, query, searchResultsPosition } = entrypoint);
   if (navigates === undefined) {
@@ -63,17 +53,6 @@ export const handleApplicationSelected = function handleApplicationSelected(entr
   }
 };
 export const handleViewAllSelected = function handleViewAllSelected(arg0) {
-  let _location;
-  let applications;
-  let commands;
-  let context;
-  let navigation;
-  let promotedApplicationIds;
-  let sectionDescriptors;
-  let sectionItemType;
-  let sectionName;
-  let sectionOverallPosition;
-  let title;
   ({ navigation, sectionName, applications, sectionItemType, commands } = arg0);
   ({ location: _location, context, sectionOverallPosition, sectionDescriptors, title, promotedApplicationIds } = arg0);
   let obj = collectGuildAnalyticsMetadata;
@@ -82,29 +61,11 @@ export const handleViewAllSelected = function handleViewAllSelected(arg0) {
   navigation.navigate(constants.APP_LIST_VIEW, { analyticsLocation: _location, context, sectionName, sectionOverallPosition, applications, sectionItemType, commands, sectionDescriptors, title, promotedApplicationIds });
 };
 export const handleApplicationCommandSelected = function handleApplicationCommandSelected(arg0) {
-  let _location;
-  let command;
-  let context;
-  let entrypoint;
-  let installOnDemand;
-  let navigation;
-  let onCommandExecuted;
-  let query;
-  let searchResultsPosition;
-  let section;
-  let sectionDescriptors;
-  let sectionName;
   ({ location: _location, context, command } = arg0);
   ({ section, sectionDescriptors, query, navigation, installOnDemand, sectionName, entrypoint } = arg0);
   ({ searchResultsPosition, onCommandExecuted } = arg0);
   let obj = command(5245);
-  obj = { command, location: _location, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null, source: null };
-  obj[2] = command(5245).getCommandTriggerSection(section);
-  obj[3] = query.length;
-  obj[4] = sectionName;
-  obj[5] = query;
-  obj[6] = searchResultsPosition;
-  obj[7] = entrypoint;
+  obj = { command, location: _location, triggerSection: command(5245).getCommandTriggerSection(section), queryLength: query.length, sectionName, query, searchResultsPosition, source: entrypoint };
   obj.trackCommandSelected(obj);
   if (command.type === command(1954).ApplicationCommandType.PRIMARY_ENTRY_POINT) {
     obj = { application: null, context: null, installOnDemand: null, sectionName: null, entrypoint: null };
@@ -124,8 +85,8 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       }
     }
     if ("channel" === context.type) {
-      const result = importAll(7525).setAppLauncherActiveCommand(context.channel.id, command);
-      const obj1 = { command: null, section: null, context: null, installOnDemand: null, sectionName: null, analyticsLocation: null, onCommandExecuted: null };
+      const result = setActiveCommandAll.setAppLauncherActiveCommand(context.channel.id, command);
+      obj1 = { command: null, section: null, context: null, installOnDemand: null, sectionName: null, analyticsLocation: null, onCommandExecuted: null };
       obj1[0] = command;
       obj1[1] = tmp5;
       obj1[2] = context;
@@ -134,13 +95,11 @@ export const handleApplicationCommandSelected = function handleApplicationComman
       obj1[5] = _location;
       obj1[6] = onCommandExecuted;
       navigation.navigate(constants.COMMAND_VIEW, obj1);
-      const obj4 = importAll(7525);
+      const obj4 = setActiveCommandAll;
     }
   }
 };
 export const getInitialOptionValues = function getInitialOptionValues(option) {
-  let prefilledValues;
-  let roles;
   option = option.option;
   ({ prefilledValues, roles } = option);
   let found;
@@ -182,7 +141,7 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
             if (null != found) {
               const _String3 = String;
               if (null != authStore.getUser(String(found.value))) {
-                const obj1 = { type: "userMention", userId: null };
+                obj1 = { type: "userMention", userId: null };
                 const _String4 = String;
                 obj1[1] = String(found.value);
                 const items4 = [obj1];
@@ -261,10 +220,10 @@ export const getInitialOptionValues = function getInitialOptionValues(option) {
 };
 export const getAppLauncherIconSource = function getAppLauncherIconSource(application) {
   if (null == application) {
-    let applicationIconSource = registerAsset;
+    let applicationIconSource = registerAssetDefault;
   } else {
     let obj = getShelfBadgeTypeIfActive;
-    const obj2 = getAvatarURL;
+    const obj2 = getAvatarURLDefault;
     if (isRealApplicationResult) {
       obj = { id: null, icon: null, bot: null, botIconFirst: false };
       ({ id: obj3[0], icon: obj3[1], bot: obj3[2] } = application);
@@ -282,32 +241,26 @@ export const useLogAppLauncherEmptyStateView = function useLogAppLauncherEmptySt
   const items = [COMMAND_NOT_FOUND, query, entrypoint];
   const effect = React.useEffect(() => {
     if (null != COMMAND_NOT_FOUND) {
-      let obj = COMMAND_NOT_FOUND(outer1_3[6]);
+      let obj = COMMAND_NOT_FOUND(closure_1_3[6]);
       obj = { type: null, source: null };
       obj[0] = tmp;
       obj[1] = entrypoint;
-      obj.trackWithMetadata(outer1_9.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj);
+      obj.trackWithMetadata(closure_1_9.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, obj);
     }
   }, items);
 };
 export const useHandleActivityItemSelected = function useHandleActivityItemSelected(fetchesApplication) {
-  let applicationId;
-  let context;
-  let entrypoint;
-  let importAll;
-  let importDefault;
-  let sectionName;
   ({ applicationId, context, sectionName } = fetchesApplication);
   ({ onActivityItemSelected: importDefault, location: importAll, entrypoint } = fetchesApplication);
   let flag = fetchesApplication.fetchesApplication;
   if (flag === undefined) {
     flag = true;
   }
-  let postMessageToWebView;
-  let ensureGuildLoaded;
+  closure_4 = undefined;
+  closure_5 = undefined;
   let obj = sectionName(entrypoint[16]);
   const analyticsContext = obj.useAnalyticsContext();
-  postMessageToWebView = sectionName(entrypoint[17]).useActivityAction({ context, applicationId, fetchesApplication: flag });
+  closure_4 = sectionName(entrypoint[17]).useActivityAction({ context, applicationId, fetchesApplication: flag });
   const obj2 = sectionName(entrypoint[17]);
   const getOrFetchApplication = sectionName(entrypoint[18]).useGetOrFetchApplication(applicationId, flag);
   const obj3 = sectionName(entrypoint[18]);
@@ -325,8 +278,8 @@ export const useHandleActivityItemSelected = function useHandleActivityItemSelec
         obj[0] = applicationId;
         tmp(obj);
       }
-      obj = { location: closure_2, application_id: applicationId, section_name: sectionName, action: postMessageToWebView, source: entrypoint };
-      sectionName(entrypoint[6]).trackWithMetadata(outer1_9.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj);
+      obj = { location: closure_2, application_id: applicationId, section_name: sectionName, action: closure_4, source: entrypoint };
+      sectionName(entrypoint[6]).trackWithMetadata(closure_1_9.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, obj);
     },
     launchingComponentId: fetchesApplication.launchingComponentId,
     commandOrigin: sectionName(entrypoint[7]).CommandOrigin.APPLICATION_LAUNCHER,
@@ -346,7 +299,7 @@ export const useHandleActivityItemSelected = function useHandleActivityItemSelec
     referrerId = entrypointParams.referrerId;
   }
   obj[11] = referrerId;
-  ensureGuildLoaded = sectionName(entrypoint[17]).useOnActivityItemSelected(obj);
+  closure_5 = sectionName(entrypoint[17]).useOnActivityItemSelected(obj);
   obj = {
     handleActivityItemSelected() {
       const result = sectionName(entrypoint[20]).triggerHapticFeedback(sectionName(entrypoint[20]).HapticFeedbackTypes.IMPACT_MEDIUM);

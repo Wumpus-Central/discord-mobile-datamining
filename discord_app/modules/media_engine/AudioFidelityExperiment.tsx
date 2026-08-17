@@ -1,11 +1,12 @@
 // discord_app/modules/media_engine/AudioFidelityExperiment.tsx
-import ApexExperiment from "ApexExperiment";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
+import set from "set" /* 2 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null, 2: { capSampleRate: true, capChannelCount: false, condition: "krisp" }, 3: { capSampleRate: true, capChannelCount: false, condition: "noiseSuppression" }, 4: { capSampleRate: true, capChannelCount: false, condition: "echoCancellation" }, 5: { capSampleRate: true, capChannelCount: false, condition: "any" }, 6: { capSampleRate: true, capChannelCount: true, condition: "krisp" }, 7: { capSampleRate: true, capChannelCount: true, condition: "noiseSuppression" }, 8: { capSampleRate: true, capChannelCount: true, condition: "echoCancellation" } };
 obj[8] = { capSampleRate: true, capChannelCount: true, condition: "any" };
 let closure_2 = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-audio-fidelity", defaultConfig: { capSampleRate: false, capChannelCount: false, condition: "none" }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/media_engine/AudioFidelityExperiment.tsx");
+const result = set.fileFinishedImporting("modules/media_engine/AudioFidelityExperiment.tsx");
 
 export const getAudioFidelityExperimentConfig = function getAudioFidelityExperimentConfig(location) {
   return store.getConfig({ location: location.location });

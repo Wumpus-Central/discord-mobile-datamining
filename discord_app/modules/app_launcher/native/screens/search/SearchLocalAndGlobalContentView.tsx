@@ -1,19 +1,17 @@
 // discord_app/modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx
-import EmptyState from "EmptyState";
-import importAllResult from "isActivityInTextSupportedForChannel";
-import { View } from "useSafeAreaInsets";
-import { getSection } from "getIndexKey";
-import { FetchState } from "getSearchResults";
-import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import jsxProd from "ApplicationCommandSectionType";
-import createCacheKey from "createCacheKey";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { usePlaceholderWidth } from "../../hooks/usePlaceholderSize.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import usePlaceholderWidth from "usePlaceholderWidth" /* 11227 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { getSection } from "getIndexKey" /* 8448 */;
+import { FetchState } from "getSearchResults" /* 11244 */;
+import APP_LAUNCHER_BUILT_IN_SECTION_ICON from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function getApplicationIdFromApplicationItem(type) {
   let id;
   if (type.type !== obj.PLACERHOLDER) {
@@ -33,19 +31,11 @@ function getImpressionPropsFromApplicationItem(type) {
   return { applicationId };
 }
 function CommandRow(arg0) {
-  let application;
-  let beforeExecuteCommand;
-  let command;
-  let context;
-  let isFirstRow;
-  let isLastRow;
-  let onExecuteCommand;
-  let onPress;
   ({ command, application } = arg0);
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  let obj = hasOptions(11224);
+  obj = hasOptions(11224);
   const appLauncherIconSource = obj.getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
@@ -63,9 +53,9 @@ function CommandRow(arg0) {
   const memo = importAllResult.useMemo(() => {
     let tmp;
     if (!hasOptions) {
-      const obj = { name: "send", label: null };
-      const intl = hasOptions(outer1_2[13]).intl;
-      obj[1] = intl.string(hasOptions(outer1_2[13]).t.TXNS7S);
+      obj = { name: "send", label: null };
+      const intl = hasOptions(closure_1_2[13]).intl;
+      obj[1] = intl.string(hasOptions(closure_1_2[13]).t.TXNS7S);
       const items = [obj];
       tmp = items;
     }
@@ -76,7 +66,7 @@ function CommandRow(arg0) {
       onPressSend();
     }
   }, items1);
-  const obj1 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
+  obj1 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
   tmpResult = tmp(8447);
   obj1[2] = tmpResult.getSectionName(application);
   obj1[4] = isFirstRow;
@@ -97,13 +87,12 @@ function PlaceholderCommandRow(isFirstRow) {
     flag2 = false;
   }
   const tmp = callback3();
-  let obj = usePlaceholderWidth;
+  obj = usePlaceholderWidth;
   const placeholderWidth = obj.usePlaceholderWidth(10, 50);
-  let obj1 = usePlaceholderWidth;
+  obj1 = usePlaceholderWidth;
   const placeholderWidth1 = obj1.usePlaceholderWidth(30, 90);
-  obj = { icon: null, label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
+  obj = { icon: callback2(View, obj), label: null, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null };
   obj = { style: tmp.loadingCommandAppIcon };
-  obj[0] = callback2(View, obj);
   obj1 = { style: null };
   const items = [tmp.loadingTextPlaceholder, { width: "" + placeholderWidth + "%" }];
   obj1[0] = items;
@@ -137,26 +126,24 @@ function CommandsExpandableList(expandedOverride) {
   const onExecuteCommand = expandedOverride.onExecuteCommand;
   let items = [beforeExecuteCommand, context, commandData, onExecuteCommand, onPressCommand];
   items = onExecuteCommand.useMemo(() => commandData.map((arg0, arg1) => {
-    let closure_1;
-    let closure_2;
-    let closure_0 = arg1;
-    if (arg0 === outer1_16) {
-      return (isLastRow) => outer2_10(outer2_21, { isFirstRow: 0 === closure_0, isLastRow: isLastRow.isLastRow });
+    closure_0 = arg1;
+    if (arg0 === closure_1_16) {
+      return (isLastRow) => closure_2_10(closure_2_21, { isFirstRow: 0 === closure_0, isLastRow: isLastRow.isLastRow });
     } else {
       ({ command: closure_1, application: closure_2 } = arg0);
-      return (isLastRow) => outer2_10(outer2_20, {
-        context: outer1_1,
+      return (isLastRow) => closure_2_10(closure_2_20, {
+        context: closure_1_1,
         command: closure_1,
         application: closure_2,
         onPress() {
-          return outer1_3(closure_1, closure_0);
+          return closure_1_3(closure_1, closure_0);
         },
         isFirstRow: 0 === closure_0,
         isLastRow: isLastRow.isLastRow,
         beforeExecuteCommand() {
-          return outer1_2({ command: closure_1, searchResultsPosition: closure_0 });
+          return closure_1_2({ command: closure_1, searchResultsPosition: closure_0 });
         },
-        onExecuteCommand: outer1_4
+        onExecuteCommand: closure_1_4
       });
     }
   }), items);
@@ -173,35 +160,32 @@ let closure_17 = array.fill("placeholder");
 array = new Array(3);
 obj = { type: obj.PLACERHOLDER };
 let closure_18 = array.fill(obj);
-let obj1 = { sectionHeader: { marginBottom: 8 }, list: null, loadingCommandAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, divider: null, commandsHeaderContainer: null, commandsCTA: null, commandsCTAUnderlayColor: null };
-obj1[1] = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-let obj2 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: require("Themes").colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
-obj1[2] = { width: 32, height: 32, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-let obj3 = { width: 32, height: 32, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-obj1[3] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
+let obj1 = { sectionHeader: { marginBottom: 8 }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, loadingCommandAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, divider: null, commandsHeaderContainer: null, commandsCTA: null, commandsCTAUnderlayColor: null };
+let obj2 = { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: ThemesDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND };
+obj1[2] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj3 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj1[3] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
 obj1[4] = createCacheKey;
-let obj4 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: require("Themes").radii.lg, alignSelf: "flex-start" };
-obj1[5] = { marginTop: require("Themes").space.PX_16 };
+let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, height: 16, marginBottom: 4, borderRadius: ThemesDefault.radii.lg, alignSelf: "flex-start" };
+obj1[5] = { marginTop: ThemesDefault.space.PX_16 };
 obj1[6] = { justifyContent: "space-between", flexDirection: "row" };
-let obj6 = { marginTop: require("Themes").space.PX_16 };
-obj1[7] = { borderRadius: require("Themes").radii.sm, paddingHorizontal: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_4, justifyContent: "center" };
-let obj7 = { borderRadius: require("Themes").radii.sm, paddingHorizontal: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_4, justifyContent: "center" };
-obj1[8] = { color: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+let obj6 = { marginTop: ThemesDefault.space.PX_16 };
+obj1[7] = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_4, justifyContent: "center" };
+let obj7 = { borderRadius: ThemesDefault.radii.sm, paddingHorizontal: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_4, justifyContent: "center" };
+obj1[8] = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 let closure_19 = createCacheKey.createStyles(obj1);
-let obj8 = { color: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+let obj8 = { color: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 const forwardRefResult = importAllResult.forwardRef((context, ref) => {
-  let c0;
-  let tmp17;
   context = context.context;
   let _require = context;
   const onScroll = context.onScroll;
   const entrypoint = context.entrypoint;
   let callback;
-  let importAllResult;
-  let c5;
+  importAllResult = undefined;
+  closure_5 = undefined;
   let first;
-  let closure_7;
+  closure_7 = undefined;
   let loading;
   let commandResults;
   let applicationResults;
@@ -210,29 +194,26 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   let fetchNextPage;
   let callback3;
   let memo1;
-  let c16;
+  c16 = undefined;
   let tmp = callback3();
   callback = tmp;
   const tmp4 = onScroll(entrypoint[18])();
   importAllResult = tmp4;
   const tmp5 = commandResults();
-  c5 = tmp5;
-  let obj = importAllResult;
+  closure_5 = tmp5;
+  obj = importAllResult;
   const tmp7 = callback(importAllResult.useState(""), 2);
   first = tmp7[0];
   closure_7 = tmp7[1];
   const imperativeHandle = importAllResult.useImperativeHandle(ref, () => ({ setQuery: closure_7 }));
-  let obj1 = _require(entrypoint[19]);
+  obj1 = _require(entrypoint[19]);
   let id;
   if ("channel" === context.type) {
     id = context.channel.id;
   }
   const isActivitiesInTextEnabled = obj1.useIsActivitiesInTextEnabled(id);
   let tmp10Result = tmp10(tmp3[20]);
-  obj = { context, query: first, commandLimit: 20, applicationLimit: 10, searchesActivities: null, searchesCommands: null, searchesBots: null };
-  obj[4] = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled;
-  obj[5] = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT;
-  obj[6] = entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT;
+  obj = { context, query: first, commandLimit: 20, applicationLimit: 10, searchesActivities: entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.VOICE || isActivitiesInTextEnabled, searchesCommands: entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT, searchesBots: entrypoint === _require(entrypoint[12]).AppLauncherEntrypoint.TEXT };
   const localSearchResults = tmp10Result.useLocalSearchResults(obj);
   loading = localSearchResults.loading;
   commandResults = localSearchResults.commandResults;
@@ -257,34 +238,26 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   let items2 = [context, first];
   const callback1 = obj.useCallback((applicationId, searchResultsPosition) => {
     const descriptor = first(_undefined, applicationId.applicationId).descriptor;
-    let obj = _undefined(entrypoint[9]);
-    obj = { location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, context: _undefined, command: applicationId, section: descriptor, sectionDescriptors: items, query: first, navigation: c5, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, searchResultsPosition, entrypoint };
+    obj = _undefined(entrypoint[9]);
+    obj = { location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, context: _undefined, command: applicationId, section: descriptor, sectionDescriptors: items, query: first, navigation: closure_5, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, searchResultsPosition, entrypoint };
     items = [descriptor];
     const result = obj.handleApplicationCommandSelected(obj);
   }, items1);
   const items3 = [tmp5, context, first, entrypoint];
   const callback2 = obj.useCallback((command) => {
     command = command.command;
-    let obj = _undefined(entrypoint[22]);
-    obj = { command, location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, triggerSection: null, queryLength: null, sectionName: null, query: null, searchResultsPosition: null };
-    obj[2] = _undefined(entrypoint[22]).getCommandTriggerSection(first(_undefined, command.applicationId).descriptor);
-    obj[3] = first.length;
-    obj[4] = _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH;
-    obj[5] = first;
-    obj[6] = command.searchResultsPosition;
+    obj = _undefined(entrypoint[22]);
+    obj = { command, location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, triggerSection: _undefined(entrypoint[22]).getCommandTriggerSection(first(_undefined, command.applicationId).descriptor), queryLength: first.length, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, query: first, searchResultsPosition: command.searchResultsPosition };
     obj.trackCommandSelected(obj);
   }, items2);
   callback3 = obj.useCallback((arg0) => {
-    let installOnDemand;
-    let searchResultsPosition;
-    let section;
     ({ section, installOnDemand, searchResultsPosition } = arg0);
-    let obj = _undefined(entrypoint[9]);
-    obj = { location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application: section, navigation: c5, context: _undefined, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, installOnDemand, query: first, searchResultsPosition, entrypoint };
+    obj = _undefined(entrypoint[9]);
+    obj = { location: _undefined(entrypoint[21]).ApplicationCommandTriggerLocations.APP_LAUNCHER_HOME_SEARCH, application: section, navigation: closure_5, context: _undefined, sectionName: _undefined(entrypoint[12]).AppLauncherSectionName.SEARCH, installOnDemand, query: first, searchResultsPosition, entrypoint };
     const result = obj.handleApplicationSelected(obj);
   }, items3);
   const items4 = [loading, commandResults];
-  const memo = obj.useMemo(() => loading ? outer1_17 : commandResults, items4);
+  const memo = obj.useMemo(() => loading ? closure_1_17 : commandResults, items4);
   const tmp6Result = callback(obj.useState(false), 2);
   const items5 = [applicationResults, applicationResults2, loading, fetchState];
   memo1 = obj.useMemo(() => {
@@ -295,7 +268,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       items = [];
     }
     const found = items.filter((type) => {
-      let tmp = type.type !== set(outer1_2[24]).ApplicationDirectorySearchResultType.CONNECTION;
+      let tmp = type.type !== set(closure_1_2[24]).ApplicationDirectorySearchResultType.CONNECTION;
       if (tmp) {
         tmp = !set.has(type.data.id);
       }
@@ -303,7 +276,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     });
     const mapped1 = found.map((application) => ({ type: constants.GLOBAL_APPLICATION, application: application.data }));
     if (loading) {
-      let items1 = outer1_18;
+      let items1 = closure_1_18;
     } else {
       if (null != fetchState) {
         if (tmp4 !== constants.FETCHING) {
@@ -312,7 +285,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
         }
       }
       const items2 = [];
-      HermesBuiltin.arraySpread(outer1_18, HermesBuiltin.arraySpread(mapped1, HermesBuiltin.arraySpread(mapped, 0)));
+      HermesBuiltin.arraySpread(closure_1_18, HermesBuiltin.arraySpread(mapped1, HermesBuiltin.arraySpread(mapped, 0)));
       items1 = items2;
     }
     return items1;
@@ -325,7 +298,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
           const sum = commandResults.length + memo1.length;
           if (sum > 0) {
             const intl = _undefined(entrypoint[13]).intl;
-            const obj = { count: null };
+            obj = { count: null };
             obj[0] = sum;
             const AccessibilityAnnouncer = _undefined(entrypoint[25]).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(intl.formatToPlainString(_undefined(entrypoint[13]).t.ZGVL3g, obj), "polite");
@@ -339,17 +312,15 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   let sum = onScroll(entrypoint[17])().bottom + loading;
   c16 = sum;
   const callback4 = obj.useCallback((arg0) => {
-    let index;
-    let item;
     ({ item, index } = arg0);
     let application;
     const type = item.type;
     if (fetchNextPage.PLACERHOLDER === type) {
-      let obj = { isFirstRow: null, isLastRow: null, style: null };
+      obj = { isFirstRow: null, isLastRow: null, style: null };
       obj[0] = 0 === index;
       obj[1] = index === memo1.length - 1;
       obj = { height: null };
-      obj[0] = c4;
+      obj[0] = closure_4;
       obj[2] = obj;
       return applicationResults(onScroll(entrypoint[26]), obj);
     } else {
@@ -361,11 +332,11 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       application = item.application;
       obj = _undefined(entrypoint[9]);
       const appLauncherIconSource = obj.getAppLauncherIconSource(application);
-      const obj1 = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
+      obj1 = { application: null, iconSource: null, onPress: null, isFirstRow: null, isLastRow: null };
       obj1[0] = application;
       obj1[1] = appLauncherIconSource;
       obj1[2] = function onPress() {
-        return outer1_14({ section: application, installOnDemand: true, searchResultsPosition: index });
+        return closure_1_14({ section: application, installOnDemand: true, searchResultsPosition: index });
       };
       obj1[3] = 0 === index;
       obj1[4] = index === memo1.length - 1;
@@ -379,7 +350,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   const items9 = [tmp.list, sum];
   const callback5 = obj.useCallback((nativeEvent) => {
     nativeEvent = nativeEvent.nativeEvent;
-    if (nativeEvent.layoutMeasurement.height + nativeEvent.contentOffset.y >= nativeEvent.contentSize.height - 3 * c4) {
+    if (nativeEvent.layoutMeasurement.height + nativeEvent.contentOffset.y >= nativeEvent.contentSize.height - 3 * closure_4) {
       fetchNextPage();
     }
     if (onScroll != null) {
@@ -388,8 +359,8 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   }, items8);
   const items10 = [sum];
   const memo2 = obj.useMemo(() => {
-    const obj = {};
-    const merged = Object.assign(_undefined2.list);
+    obj = {};
+    const merged = Object.assign(list.list);
     obj.paddingBottom = c16;
     return obj;
   }, items9);
@@ -447,7 +418,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
       obj4[4] = t2;
       let tmp31Result = tmp31(tmp10(tmp3[31]).AnimatedPressableHighlight, obj4);
     }
-    tmp45 = c5;
+    tmp45 = closure_5;
   }
   const items13 = [tmp33Result, , , ];
   tmp31Result = null;
@@ -456,7 +427,7 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
     if (memo1.length > 0) {
       const obj6 = { style: null };
       obj6[0] = tmp.divider;
-      tmp31Result = tmp31(c5, obj6);
+      tmp31Result = tmp31(closure_5, obj6);
     }
   }
   items13[1] = tmp31Result;
@@ -481,6 +452,6 @@ const forwardRefResult = importAllResult.forwardRef((context, ref) => {
   items13[3] = tmp31Result2;
   return applicationResults(tmp2Result, { ListHeaderComponent: fetchState(applicationResults2, { children: items13 }), contentContainerStyle: memo2, scrollIndicatorInsets: memo3, renderItem: callback4, keyExtractor, data: memo1, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "always", automaticallyAdjustsScrollIndicatorInsets: false, showsVerticalScrollIndicator: false, onViewableItemsChanged: tmp10Result1.useTrackSearchItems(callback3, memo1, first).handleViewableItemsChanged, preserveScrollMomentum: true, onScroll: callback5, animatedOnScroll: appLauncherFlashListProps.onScroll, ref: appLauncherFlashListProps.scrollerRef, simultaneousHandlers: appLauncherFlashListProps.gestureRef, animatedProps: appLauncherFlashListProps.animatedProps }, first);
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/search/SearchLocalAndGlobalContentView.tsx");
 
 export const SearchLocalAndGlobalContentView = forwardRefResult;

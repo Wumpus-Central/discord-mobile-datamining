@@ -1,13 +1,11 @@
 // discord_app/modules/video_calls/native/components/SingleVideoCall.tsx
-import noop from "noop";
-import VoiceChatDrawerState from "VoiceChatDrawerState";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ resetFocus: c4, toggleFocus: c5 } = VoiceChatDrawerState);
-const result = require("jsxProd").fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/SingleVideoCall.tsx");
 
 export default function SingleVideoCall(channel) {
   channel = channel.channel;
@@ -20,17 +18,34 @@ export default function SingleVideoCall(channel) {
   analyticsLocations = bottom(right[4])().analyticsLocations;
   const items = [right, bottom];
   const memo = analyticsLocations.useMemo(() => ({ marginRight: right, marginBottom: bottom }), items);
-  const obj = { gestureEnabled: true, participant: channel.participant, avatarSize: null, resizeMode: null, statusStyle: null, onSingleTap: null, onDoubleTap: null, onLongPress: null };
-  obj[2] = channel(right[6]).AvatarSizes.PROFILE;
-  obj[3] = channel(right[7]).ResizeMode.AUTO;
-  obj[4] = memo;
-  obj[5] = closure_5;
-  obj[6] = function onDoubleTap() {
-    outer1_4();
-    const participant = bottom(right[8]).selectParticipant(channel.id, null);
+  const obj = {
+    gestureEnabled: true,
+    participant: channel.participant,
+    avatarSize: channel(right[6]).AvatarSizes.PROFILE,
+    resizeMode: channel(right[7]).ResizeMode.AUTO,
+    statusStyle: memo,
+    onSingleTap: closure_5,
+    onDoubleTap() {
+      closure_1_4();
+      const participant = bottom(right[8]).selectParticipant(channel.id, null);
+    },
+    onLongPress(user) {
+      bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+    }
   };
-  obj[7] = function onLongPress(user) {
-    bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
-  };
-  return jsx(bottom(right[5]), { gestureEnabled: true, participant: channel.participant, avatarSize: null, resizeMode: null, statusStyle: null, onSingleTap: null, onDoubleTap: null, onLongPress: null });
+  return jsx(bottom(right[5]), {
+    gestureEnabled: true,
+    participant: channel.participant,
+    avatarSize: channel(right[6]).AvatarSizes.PROFILE,
+    resizeMode: channel(right[7]).ResizeMode.AUTO,
+    statusStyle: memo,
+    onSingleTap: closure_5,
+    onDoubleTap() {
+      closure_1_4();
+      const participant = bottom(right[8]).selectParticipant(channel.id, null);
+    },
+    onLongPress(user) {
+      bottom(right[9])({ userId: user.user.id, channelId: channel.id, isVoiceContext: true, sourceAnalyticsLocations: analyticsLocations });
+    }
+  });
 };

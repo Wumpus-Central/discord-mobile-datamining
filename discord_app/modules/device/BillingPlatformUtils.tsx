@@ -1,13 +1,15 @@
 // discord_app/modules/device/BillingPlatformUtils.tsx
-import { set } from "../../utils/PlatformUtils.tsx";
-import { isMetaQuest } from "MetaQuestUtils.android.tsx";
-const result = require("set").fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+
+const result = set.fileFinishedImporting("modules/device/BillingPlatformUtils.tsx");
 
 export const isPremiumGiftingSupported = function isPremiumGiftingSupported() {
   return !isMetaQuest.isMetaQuest();
 };
 export const isGooglePlayBillingSupported = function isGooglePlayBillingSupported() {
-  let isAndroidResult = set.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;

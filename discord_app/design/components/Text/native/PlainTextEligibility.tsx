@@ -1,7 +1,8 @@
 // discord_app/design/components/Text/native/PlainTextEligibility.tsx
-import { StyleSheet } from "get ActivityIndicator";
-import set from "set";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "set" /* 2 */;
 
+const StyleSheet = get_ActivityIndicator.StyleSheet;
 let set = new Set(["accessibilityActions", "accessibilityElementsHidden", "accessibilityHint", "accessibilityIgnoresInvertColors", "accessibilityLabel", "accessibilityLabelledBy", "accessibilityLanguage", "accessibilityLargeContentTitle", "accessibilityLiveRegion", "accessibilityRespondsToUserInteraction", "accessibilityRole", "accessibilityShowsLargeContentViewer", "accessibilityState", "accessibilityValue", "accessibilityViewIsModal", "accessible", "allowFontScaling", "aria-busy", "aria-checked", "aria-disabled", "aria-expanded", "aria-hidden", "aria-label", "aria-labelledby", "aria-live", "aria-modal", "aria-selected", "aria-valuemax", "aria-valuemin", "aria-valuenow", "aria-valuetext", "id", "importantForAccessibility", "maxFontSizeMultiplier", "nativeID", "onAccessibilityAction", "onAccessibilityEscape", "onAccessibilityTap", "onMagicTap", "role", "screenReaderFocusable", "testID"]);
 const set1 = new Set(["fontVariant", "textDecorationColor", "textDecorationStyle", "textShadowColor", "textShadowOffset", "textShadowRadius", "userSelect", "writingDirection"]);
 let closure_3 = { eligible: false, reason: "animated" };

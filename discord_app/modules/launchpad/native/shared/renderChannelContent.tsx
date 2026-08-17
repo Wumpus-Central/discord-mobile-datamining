@@ -1,40 +1,22 @@
 // discord_app/modules/launchpad/native/shared/renderChannelContent.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "set";
-import set from "hairlineWidth";
-import { LockIcon } from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import { WarningIcon } from "../../../../design/components/Icon/native/redesign/generated/WarningIcon.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { ChannelTitle } from "ChannelTitle.tsx";
-import { getLayoutStyle } from "getLayoutStyles.tsx";
+import Text from "Text" /* 4734 */;
+import LockIcon from "LockIcon" /* 6890 */;
+import WarningIcon from "WarningIcon" /* 8078 */;
+import getLayoutStyleDefault from "getLayoutStyle" /* 16196 */;
+import _modDef16202 from "module_16202" /* 16202 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { SUBTITLE_OPACITY_NORMAL } from "hairlineWidth" /* 10055 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ChannelContent(arg0) {
-  let channel;
-  let channelCategoryName;
-  let connected;
-  let isSubscriptionGated;
-  let lastMessageTimestampString;
-  let locked;
-  let mentionBadge;
-  let mentionCount;
-  let muted;
-  let name;
-  let needSubscriptionToAccess;
-  let resolvedUnreadSetting;
-  let subtitle;
-  let unread;
   ({ subtitle, resolvedUnreadSetting, locked, muted, lastMessageTimestampString, channel, channelCategoryName, mentionCount, mentionBadge, isSubscriptionGated } = arg0);
   ({ name, unread, connected, needSubscriptionToAccess } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let tmp9Result = null != channel;
   if (tmp9Result) {
     if (!locked) {
@@ -58,7 +40,7 @@ function ChannelContent(arg0) {
   if (isValidElementResult) {
     str = "space-between";
   }
-  const obj1 = { style: items, children: null };
+  obj1 = { style: items, children: null };
   items[1] = { justifyContent: str };
   let num = 0;
   if (tmp9Result3) {
@@ -66,13 +48,13 @@ function ChannelContent(arg0) {
   }
   const obj2 = { style: { flexDirection: "row", paddingRight: num, alignItems: "center" }, children: null };
   const obj3 = { title: name, muted, unread, resolvedUnreadSetting: null, connected: null };
-  const tmp4 = getLayoutStyle();
+  const tmp4 = getLayoutStyleDefault();
   if (resolvedUnreadSetting == null) {
     resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
   }
   obj3[3] = resolvedUnreadSetting;
   obj3[4] = connected;
-  const items1 = [closure_7(ChannelTitle, obj3), , ];
+  const items1 = [closure_7(_modDef16202, obj3), , ];
   tmp9Result = null;
   if (null != channelCategoryName) {
     const obj4 = { variant: "text-xs/bold", color: "text-muted", style: null, children: null };
@@ -179,7 +161,7 @@ function ChannelContent(arg0) {
   obj[1] = closure_8(View, obj);
   return closure_7(View, obj);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let num = -1;
 if (set.isIOS()) {
   num = 2;
@@ -192,7 +174,7 @@ if (set.isAndroid()) {
 }
 createCacheKey[2] = num2;
 createCacheKey[6] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/launchpad/native/shared/renderChannelContent.tsx");
 
 export default function renderChannelContent(arg0) {

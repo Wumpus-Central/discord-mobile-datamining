@@ -1,27 +1,27 @@
 // discord_app/modules/game_profile/hooks/useSteamWebsiteUrl.tsx
-import handleLoadMessages from "handleLoadMessages";
-import { Distributors } from "ME";
+import closure_2 from "handleLoadMessages" /* 4505 */;
+import { Distributors } from "ME" /* 676 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSteamWebsiteUrl.tsx");
 
 export const buildSteamStoreUrl = function buildSteamStoreUrl(arg0) {
   return "https://store.steampowered.com/app/" + encodeURIComponent(arg0);
 };
 export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
   const _require = id;
-  const items = [handleLoadMessages];
+  const items = [closure_2];
   const items1 = [id];
   return _initialize.useStateFromStores(items, () => {
     if (null == id) {
       return null;
     } else {
-      const game = outer1_2.getGame(tmp);
+      const game = closure_1_2.getGame(tmp);
       if (null == game) {
         return null;
       } else {
-        if (game.steamReleaseStatus === id(outer1_1[3]).SteamReleaseStatus.RETIRED_ABANDONED) {
+        if (game.steamReleaseStatus === id(closure_1_1[3]).SteamReleaseStatus.RETIRED_ABANDONED) {
           return null;
         } else {
           const websites = game.websites;
@@ -64,7 +64,7 @@ export const useSteamWebsiteUrl = function useSteamWebsiteUrl(id) {
           return tmp7;
         }
         const tmp11 = id;
-        const tmp12 = outer1_1;
+        const tmp12 = closure_1_1;
       }
     }
   }, items1);

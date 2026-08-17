@@ -1,21 +1,22 @@
 // discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx
-import getGlobalObject from "getGlobalObject";
+import set from "set" /* 2 */;
+import getGlobalObject from "getGlobalObject" /* 697 */;
 
-getGlobalObject = getGlobalObject.getGlobalObject();
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");
+const globalObject = getGlobalObject.getGlobalObject();
+const result = set.fileFinishedImporting("../discord_common/js/packages/design/utils/requestSafeIdleCallback.tsx");
 
 export function setOriginWindow(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
 }
 export const requestSafeIdleCallback = function requestSafeIdleCallback(arg0, timeout) {
-  let closure_0 = arg0;
-  let closure_1 = closure_0;
+  closure_0 = arg0;
+  closure_1 = closure_0;
   if (undefined !== closure_0) {
     if (null != obj.requestIdleCallback) {
       if (null != obj.cancelIdleCallback) {
-        let c2 = false;
+        c2 = false;
         timeout = null;
-        let closure_4 = obj.requestIdleCallback(function runOnce(arg0) {
+        closure_4 = obj.requestIdleCallback(function runOnce(arg0) {
           if (!c2) {
             c2 = true;
             if (null != c3) {

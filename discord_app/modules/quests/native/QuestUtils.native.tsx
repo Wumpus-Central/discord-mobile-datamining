@@ -1,45 +1,29 @@
 // discord_app/modules/quests/native/QuestUtils.native.tsx
-import closure_3 from "jsxProd";
-import "module_8561";
-import zustandStore from "zustandStore";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { UserSettingsSections } from "ME";
-import jsxProd from "isSponsoredPlayQuest";
-import { createStandardNavigationFactories } from "../../../../_runtime/01501_createStandardNavigationFactories.js";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { Linking } from "../../../lib/native/Linking.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { _manuallyStartConsoleQuest } from "../QuestActionCreators.tsx";
-import { _getDefaultRewardName } from "../utils/QuestRewardUtils.tsx";
-import { isSponsoredPlayQuest } from "../utils/QuestUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef4090 from "module_4090" /* 4090 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import useAlertStore from "useAlertStore" /* 4657 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import isSponsoredPlayQuest from "isSponsoredPlayQuest" /* 7474 */;
+import _manuallyStartConsoleQuest from "_manuallyStartConsoleQuest" /* 10477 */;
+import _getDefaultRewardName from "_getDefaultRewardName" /* 10491 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "zustandStore" /* 10948 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function openRewardClaimBottomSheet(arg0) {
-  let questContent;
-  let questContentPosition;
-  let questId;
-  let sourceQuestContent;
   ({ questId, questContent, questContentPosition, sourceQuestContent } = arg0);
-  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(10951, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
+  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10951, dependencyMap.paths), closure_6, { questId, questContent, questContentPosition, sourceQuestContent });
 }
 function viewReward(quest) {
-  let onSuccess;
-  let product;
-  let questContent;
-  let questContentPosition;
-  let sourceQuestContent;
   quest = quest.quest;
   ({ product, questContent, questContentPosition, onSuccess, sourceQuestContent } = quest);
   let obj = _getDefaultRewardName;
@@ -49,8 +33,8 @@ function viewReward(quest) {
     obj[1] = questContent;
     obj[2] = questContentPosition;
     obj[3] = sourceQuestContent;
-    ACTION_SHEET_HEIGHT_HALF.openLazy(tmp(2007)(10951, dependencyMap.paths), closure_6, obj);
-    const obj7 = ACTION_SHEET_HEIGHT_HALF;
+    ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp(2007)(10951, dependencyMap.paths), closure_6, obj);
+    const obj7 = ACTION_SHEET_HEIGHT_HALFDefault;
   } else {
     let tmpResult = tmp(10491);
     if (tmpResult.hasVirtualCurrencyReward(quest.config)) {
@@ -59,7 +43,7 @@ function viewReward(quest) {
       obj[0] = quest;
       const result = tmpResult.openQuestOrbsRewardModal(obj);
     } else {
-      const obj1 = { quest: null, product: null, onSuccess: null };
+      obj1 = { quest: null, product: null, onSuccess: null };
       obj1[0] = quest;
       obj1[1] = product;
       obj1[2] = onSuccess;
@@ -71,10 +55,10 @@ function viewReward(quest) {
 function _handleRewardClaim() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -102,20 +86,20 @@ function _handleRewardClaim() {
               obj[0] = arg1;
               return obj;
             } else {
-              const dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let callback = tmp5;
               let logger;
-              let obj1 = { location: null };
+              obj1 = { location: null };
               obj1[0] = constants.QUEST_HOME_MOBILE;
-              logger = logger(outer1_2[13]).getQuestLogger(obj1);
-              const obj7 = logger(outer1_2[13]);
-              let c4 = 1;
-              const defaultPlatform = logger(outer1_2[10]).getDefaultPlatform(logger.config);
-              const obj9 = logger(outer1_2[10]);
+              logger = logger(closure_1_2[13]).getQuestLogger(obj1);
+              const obj7 = logger(closure_1_2[13]);
+              c4 = 1;
+              const defaultPlatform = logger(closure_1_2[10]).getDefaultPlatform(logger.config);
+              const obj9 = logger(closure_1_2[10]);
               constants = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = logger(outer1_2[14]).claimQuestReward(logger.id, defaultPlatform, logger(outer1_2[15]).QuestContent.QUEST_HOME_MOBILE);
+              obj2[0] = logger(closure_1_2[14]).claimQuestReward(logger.id, defaultPlatform, logger(closure_1_2[15]).QuestContent.QUEST_HOME_MOBILE);
               return obj2;
             }
           } else if (1 === tmp8) {
@@ -156,7 +140,7 @@ function _handleRewardClaim() {
       }
     })();
   });
-  const _handleRewardClaim = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -168,19 +152,10 @@ function _handleRewardClaim() {
 function _handleRewardClaimThenView() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -207,7 +182,7 @@ function _handleRewardClaimThenView() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp4;
+              dependencyMap = tmp4;
               let callback = 0;
               let lib;
               callback = undefined;
@@ -219,7 +194,7 @@ function _handleRewardClaimThenView() {
               c7 = undefined;
               c8 = undefined;
               ({ quest: c0, questContent: c1, questContentPosition: c2, product: c3, hideActionSheet: c4, currentUserHasVerifiedEmailOrPhone: c5, currentUserHasVerifiedEmail: c6, onSuccess: c7, sourceQuestContent: c8 } = lib);
-              let closure_9;
+              closure_9 = undefined;
               c3 = 1;
               c4 = 1;
               return { value: "ct", done: true };
@@ -230,7 +205,7 @@ function _handleRewardClaimThenView() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -316,7 +291,7 @@ function _handleRewardClaimThenView() {
     iter.next();
     return iter;
   });
-  const _handleRewardClaimThenView = tmp;
+  closure_16 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -325,12 +300,13 @@ function _handleRewardClaimThenView() {
   }
   return applyArgumentsResult;
 }
-({ QuestsExperimentLocations: c5, QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6, QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: error, QuestVariants: metroImportAll } = QuestsExperimentLocations);
+noopAll;
+({ QuestsExperimentLocations: c5, QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_6, QUEST_REWARD_DETAILS_BOTTOM_SHEET_KEY: error, QuestVariants: closure_8 } = QuestsExperimentLocations);
 ({ jsx: c10, Fragment: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let result = require("zustandStore").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestUtils.native.tsx");
 
 export const openRewardDetailsBottomSheet = function openRewardDetailsBottomSheet(questId) {
-  return ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(10949, dependencyMap.paths), closure_7, { questId: questId.questId });
+  return ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(10949, dependencyMap.paths), closure_7, { questId: questId.questId });
 };
 export { viewReward };
 export const handleRewardClaimThenView = function handleRewardClaimThenView(arg0) {
@@ -378,11 +354,11 @@ export const openQuestHome = function openQuestHome(scrollToQuestId) {
             str = "";
           }
           obj[2] = str;
-          outer1_4.setState(obj);
+          closure_1_4.setState(obj);
           obj = { screen: null };
-          obj[0] = outer1_9.QUESTS;
+          obj[0] = closure_1_9.QUESTS;
           if (flag) {
-            const obj1 = {};
+            obj1 = {};
             const merged = Object.assign(obj);
             obj1.pop = true;
             rootNavigationRef.navigate("settings", obj1);
@@ -408,7 +384,7 @@ export const isHeroVideoSupported = function isHeroVideoSupported(memo) {
   return tmp2;
 };
 export const openDiscordQuestsFAQ = function openDiscordQuestsFAQ() {
-  Linking.openURL("https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ#h_01HVPBZR5FBM7QBFR9KDBASXP5");
+  _modDef4090.openURL("https://support.discord.com/hc/en-us/articles/22225719947543-Discord-Quests-FAQ#h_01HVPBZR5FBM7QBFR9KDBASXP5");
 };
 export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
   let flag = arg1;
@@ -421,7 +397,7 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
     if (features.includes(constants.MOBILE_ACTIVITY_QUEST)) {
       let num = 0;
       if (flag) {
-        num = Themes.space.PX_4;
+        num = ThemesDefault.space.PX_4;
       }
       obj = { marginRight: null };
       obj[0] = num;
@@ -429,12 +405,12 @@ export const getPrimaryCtaIcon = function getPrimaryCtaIcon(quest, arg1) {
       if (features2.includes(tmp3.CLOUD_GAMING_ACTIVITY)) {
         obj = { size: "sm", style: null, color: null };
         obj[1] = obj;
-        obj[2] = Themes.colors.WHITE;
+        obj[2] = ThemesDefault.colors.WHITE;
         let tmp5Result = tmp5(tmp(10966).CloudIcon, obj);
       } else {
-        const obj1 = { size: "sm", style: null, color: null };
+        obj1 = { size: "sm", style: null, color: null };
         obj1[1] = obj;
-        obj1[2] = Themes.colors.WHITE;
+        obj1[2] = ThemesDefault.colors.WHITE;
         tmp5Result = tmp5(tmp(9430).GameControllerIcon, obj1);
       }
       return tmp5Result;
@@ -450,7 +426,7 @@ export const showQuestUnavailableAlert = function showQuestUnavailableAlert() {
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t.iyF4WB);
   obj = { children: null };
-  const obj1 = { text: null, onPress: null };
+  obj1 = { text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.H0vjGc);
   obj1[1] = _manuallyStartConsoleQuest.fetchCurrentQuests;

@@ -1,16 +1,16 @@
 // discord_common/js/packages/kv-storage/js/raw/Host.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { set } from "../implementation/index.tsx";
+import set from "set" /* 1957 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 import { logger } from "Runtime.tsx";
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Host.tsx");
 const prototype = function Host() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["open"] = function open(arg0, arg1) {
   const _require = arg0;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   const Runtime = _logger.Runtime;
   return Runtime.executeAsync("database_open", (arg0) => {
     const KV_RAW = callback(obj[2]).KV_RAW;
@@ -43,14 +43,14 @@ prototype["delete"] = function delete(arg0) {
   const _require = arg0;
   const Runtime = _logger.Runtime;
   return Runtime.executeAsync("database_delete", (arg0) => {
-    const KV_RAW = callback(outer1_1[2]).KV_RAW;
+    const KV_RAW = callback(closure_1_1[2]).KV_RAW;
     return KV_RAW.databaseDelete(arg0, { database: callback });
   });
 };
 prototype["list"] = function list() {
   return callback(function*() {
-    let closure_0 = tmp4;
-    const Runtime = outer1_0(table[1]).Runtime;
+    closure_0 = tmp4;
+    const Runtime = closure_1_0(table[1]).Runtime;
     yield Runtime.executeAsync("database_list", (arg0) => {
       const KV_RAW = tmp4(table[2]).KV_RAW;
       return KV_RAW.databaseList(arg0);
@@ -62,7 +62,7 @@ prototype["optimize"] = function optimize(arg0) {
   const _require = arg0;
   const Runtime = _logger.Runtime;
   return Runtime.executeAsync("database_optimize", (arg0) => {
-    const KV_RAW = callback(outer1_1[2]).KV_RAW;
+    const KV_RAW = callback(closure_1_1[2]).KV_RAW;
     return KV_RAW.databaseOptimize(arg0, { aggressive: callback });
   });
 };

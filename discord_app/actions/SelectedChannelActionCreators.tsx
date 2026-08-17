@@ -1,33 +1,26 @@
 // discord_app/actions/SelectedChannelActionCreators.tsx
-import set from "set";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import ME from "ME";
-import { dispatcher } from "../Dispatcher.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
-import { selectVoiceChannelAdditional } from "SelectedChannelActionCreatorsAdditional.native.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import selectVoiceChannelAdditional from "selectVoiceChannelAdditional" /* 4976 */;
+import disconnectRemoteAll from "disconnectRemote" /* 9845 */;
+import closure_4 from "set" /* 4540 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "_detectH265HardwareDecode" /* 4497 */;
+import ME from "ME" /* 676 */;
 
-let PopoutWindowKeys;
-let error;
-let metroImportAll;
-const require = arg1;
-({ ME: error, PopoutWindowKeys, Routes: metroImportAll } = ME);
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
+require = arg1;
+({ ME: error, PopoutWindowKeys, Routes: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("actions/SelectedChannelActionCreators.tsx");
 
 export default {
   selectChannel(guildId) {
-    let channelId;
-    let jumpType;
-    let messageId;
-    let skipMessageFetch;
-    let source;
     guildId = guildId.guildId;
     ({ channelId, messageId, jumpType, source, skipMessageFetch } = guildId);
     let tmp = null;
     if (guildId !== closure_7) {
       tmp = guildId;
     }
-    dispatcher.dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
+    dispatcherDefault.dispatch({ type: "CHANNEL_SELECT", guildId: tmp, channelId, messageId, jumpType, source, skipMessageFetch });
   },
   selectPrivateChannel(id) {
     transitionTo.transitionTo(closure_8.CHANNEL(closure_7, id));
@@ -60,8 +53,8 @@ export default {
   disconnect() {
     remoteSessionId = remoteSessionId.getRemoteSessionId();
     if (null != remoteSessionId) {
-      importAll(9845).remoteDisconnect(remoteSessionId);
-      const obj = importAll(9845);
+      disconnectRemoteAll.remoteDisconnect(remoteSessionId);
+      const obj = disconnectRemoteAll;
     }
     const voiceChannel = this.selectVoiceChannel(null);
   }

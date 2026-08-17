@@ -1,11 +1,12 @@
 // discord_app/modules/app_icons/native/AppIconRow/AppIconRow.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 const items = [
   () => {
     const intl = getSystemLocale.intl;
@@ -29,20 +30,12 @@ const items = [
   }
 ];
 createCacheKey = { icon: null };
-createCacheKey = { borderRadius: require("Themes").radii.md };
+createCacheKey = { borderRadius: ThemesDefault.radii.md };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIconRow/AppIconRow.tsx");
 
 export default function AppIconRow(arg0) {
-  let accessibilityRole;
-  let accessibilityState;
-  let currentAppIcon;
-  let hasNitro;
-  let icon;
-  let importDefault;
-  let require;
-  let showEasterEgg;
   ({ icon, onSelect: require, onLongPress: importDefault } = arg0);
   let id;
   ({ hasNitro, currentAppIcon, showEasterEgg } = arg0);
@@ -53,7 +46,7 @@ export default function AppIconRow(arg0) {
   } else {
     name = icon.name;
   }
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const radioA11yNative = require(id[8]).useRadioA11yNative({ selected: tmp7 });
   ({ accessibilityRole, accessibilityState } = radioA11yNative);
   if (id === require(id[6]).PremiumAppIconIds.BRAND_INVERTED) {
@@ -85,7 +78,7 @@ export default function AppIconRow(arg0) {
       obj[6] = tmp10Result;
       tmp10Result = tmp10(tmp3(tmp4[9]).TableRow, obj, id);
     }
-    const obj1 = { selected: null };
+    obj1 = { selected: null };
     obj1[0] = tmp7;
     tmp10Result = tmp10(tmp3(tmp4[11]).FormRadio, obj1);
   }

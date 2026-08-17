@@ -1,25 +1,22 @@
 // discord_app/modules/search/native/hooks/useSearchScreenError.tsx
-import noop from "noop";
-import handleReaction from "handleReaction";
-import prototype from "prototype";
-import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "MessageEmbedTypes";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "handleReaction" /* 4971 */;
+import closure_5 from "prototype" /* 11510 */;
+import { SEARCH_MESSAGE_TAB_SENTINEL as closure_6 } from "MessageEmbedTypes" /* 8507 */;
 
 const require = arg1;
-const result = require("prototype").fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
+const result = require("set").fileFinishedImporting("modules/search/native/hooks/useSearchScreenError.tsx");
 
 export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(arg0) {
-  let hasListItems;
-  let importDefault;
-  let require;
   ({ searchContext: require, tab: importDefault, hasListItems } = arg0);
   let stateFromStores;
   let anyErrorMessage;
-  let handleReaction;
+  closure_4 = undefined;
   let obj = require(stateFromStores[4]);
-  const items = [prototype, handleReaction];
+  const items = [closure_5, closure_4];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const searchResultsQuery = outer1_5.getSearchResultsQuery(closure_0);
-    return ref.getError(outer1_0(stateFromStores[5]).getSearchTabFetchId(closure_0, closure_1, searchResultsQuery));
+    const searchResultsQuery = closure_1_5.getSearchResultsQuery(closure_0);
+    return ref.getError(closure_1_0(stateFromStores[5]).getSearchTabFetchId(closure_0, closure_1, searchResultsQuery));
   });
   anyErrorMessage = undefined;
   if (stateFromStores != null) {
@@ -29,15 +26,15 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
     const intl = tmp(tmp2[6]).intl;
     anyErrorMessage = intl.string(tmp(tmp2[6]).t.uvDZBZ);
   }
-  handleReaction = anyErrorMessage.useRef(null);
+  closure_4 = anyErrorMessage.useRef(null);
   const items1 = [stateFromStores, anyErrorMessage];
   obj = { hasError: null != stateFromStores, errorText: anyErrorMessage, isErrorFullscreen: null, isErrorToast: null, showErrorToast: null };
   let tmp5 = null != stateFromStores;
   const callback = anyErrorMessage.useCallback(() => {
     if (stateFromStores !== ref.current) {
-      let obj = outer1_1(stateFromStores[7]);
+      let obj = closure_1_1(stateFromStores[7]);
       obj = { key: "SEARCH_ERROR_TOAST", icon: null, content: null };
-      obj[1] = outer1_1(stateFromStores[8]);
+      obj[1] = closure_1_1(stateFromStores[8]);
       obj[2] = anyErrorMessage;
       obj.open(obj);
       tmp2.current = tmp;
@@ -53,15 +50,15 @@ export const useMessageSearchErrorScreen = function useMessageSearchErrorScreen(
 };
 export const useMessageTabCountsErrorText = function useMessageTabCountsErrorText(searchContext) {
   searchContext = searchContext.searchContext;
-  const items = [prototype, handleReaction];
+  const items = [closure_5, closure_4];
   return searchContext(589).useStateFromStores(items, () => {
-    const searchResultsQuery = outer1_5.getSearchResultsQuery(searchContext);
-    const searchTabFetchId = searchContext(outer1_2[5]).getSearchTabFetchId(searchContext, outer1_6, searchResultsQuery);
-    if (outer1_4.getIsInitialFetchComplete(searchTabFetchId)) {
+    const searchResultsQuery = closure_1_5.getSearchResultsQuery(searchContext);
+    const searchTabFetchId = searchContext(closure_1_2[5]).getSearchTabFetchId(searchContext, closure_1_6, searchResultsQuery);
+    if (closure_1_4.getIsInitialFetchComplete(searchTabFetchId)) {
       if (null != obj2.getTotalCount(searchTabFetchId)) {
         return null;
       } else {
-        const error = obj2.getError(searchTabFetchId);
+        error = obj2.getError(searchTabFetchId);
         let tmp5 = null;
         if (null != error) {
           let anyErrorMessage = error.getAnyErrorMessage();
@@ -76,6 +73,6 @@ export const useMessageTabCountsErrorText = function useMessageTabCountsErrorTex
     } else {
       return null;
     }
-    const obj = searchContext(outer1_2[5]);
+    const obj = searchContext(closure_1_2[5]);
   });
 };

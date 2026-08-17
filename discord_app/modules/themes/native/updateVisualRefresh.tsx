@@ -1,13 +1,15 @@
 // discord_app/modules/themes/native/updateVisualRefresh.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeThemeModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 13815 */;
 
-let result = require("enforcing").fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+let result = set.fileFinishedImporting("modules/themes/native/updateVisualRefresh.tsx");
 
 export const updateVisualRefresh = function updateVisualRefresh(closure_0) {
   if (obj.isAndroid()) {
-    let result = enforcing.setVisualRefreshEnabled(closure_0);
-    const obj2 = enforcing;
+    let result = enforcingDefault.setVisualRefreshEnabled(closure_0);
+    const obj2 = enforcingDefault;
   } else {
     const DCDTheme = NativeModules.DCDTheme;
     result = DCDTheme.setVisualRefreshEnabled(closure_0);

@@ -1,24 +1,20 @@
 // discord_common/js/packages/media-engine/native/Devices.tsx
-import AudioSubsystems from "AudioSubsystems";
-import { format } from "../../../../../_runtime/00669_format.js";
+import set from "set" /* 2 */;
+import formatDefault from "format" /* 669 */;
+import AudioSubsystems from "AudioSubsystems" /* 4571 */;
 
-let c3;
-let c4;
 ({ DEFAULT_DEVICE_ID: c3, DeviceTypes: c4 } = AudioSubsystems);
-const result = require("inject").fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/media-engine/native/Devices.tsx");
 
 export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
-  let closure_0 = AUDIO_INPUT;
-  const importDefault = false;
+  closure_0 = AUDIO_INPUT;
+  importDefault = false;
   const mapped = items.map((arg0, arg1) => {
-    let guid;
-    let index;
-    let name;
     ({ guid, name, index } = arg0);
-    if (VIDEO_INPUT === outer1_4.VIDEO_INPUT) {
+    if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
       let obj = /^front/i;
       if (obj.test(name)) {
-        let tmp12 = outer1_3;
+        let tmp12 = closure_1_3;
         let str2 = "Default";
       }
       let tmp13 = arg1;
@@ -42,8 +38,8 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
       return obj;
     }
     if (obj2.test(name)) {
-      let c1 = true;
-      tmp12 = outer1_3;
+      c1 = true;
+      tmp12 = closure_1_3;
       str2 = name.replace("default", "Default");
     } else {
       tmp12 = name;
@@ -61,7 +57,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
     isMatch = !importDefault;
   }
   if (isMatch) {
-    const tmp5 = format;
+    const tmp5 = formatDefault;
     let family;
     if (tmp5 != null) {
       const os = tmp5.os;
@@ -73,7 +69,7 @@ export const sanitizeDevices = function sanitizeDevices(AUDIO_INPUT, items) {
   }
   if (isMatch) {
     let obj = /^win/i;
-    isMatch = obj.test(format.os.family);
+    isMatch = obj.test(formatDefault.os.family);
   }
   if (isMatch) {
     obj = { id: null, type: null, index: -1, name: "Default" };
@@ -88,17 +84,14 @@ export const getAudioInputDevices = function getAudioInputDevices() {
     const callback = arg0;
     const voiceEngine = callback(table[2]).getVoiceEngine();
     const inputDevices = voiceEngine.getInputDevices((arr) => {
-      const AUDIO_INPUT = outer1_4.AUDIO_INPUT;
-      let c1 = false;
+      const AUDIO_INPUT = closure_1_4.AUDIO_INPUT;
+      c1 = false;
       const mapped = arr.map((arg0, arg1) => {
-        let guid;
-        let index;
-        let name;
         ({ guid, name, index } = arg0);
-        if (VIDEO_INPUT === outer1_4.VIDEO_INPUT) {
+        if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
           let obj = /^front/i;
           if (obj.test(name)) {
-            let tmp12 = outer1_3;
+            let tmp12 = closure_1_3;
             let str2 = "Default";
           }
           let tmp13 = arg1;
@@ -122,8 +115,8 @@ export const getAudioInputDevices = function getAudioInputDevices() {
           return obj;
         }
         if (obj2.test(name)) {
-          let c1 = true;
-          tmp12 = outer1_3;
+          c1 = true;
+          tmp12 = closure_1_3;
           str2 = name.replace("default", "Default");
         } else {
           tmp12 = name;
@@ -136,12 +129,12 @@ export const getAudioInputDevices = function getAudioInputDevices() {
           str2 = name;
         }
       });
-      let isMatch = AUDIO_INPUT !== outer1_4.VIDEO_INPUT;
+      let isMatch = AUDIO_INPUT !== closure_1_4.VIDEO_INPUT;
       if (isMatch) {
         isMatch = !c1;
       }
       if (isMatch) {
-        const tmp6 = outer1_1(outer1_2[1]);
+        const tmp6 = closure_1_1(closure_1_2[1]);
         let family;
         if (tmp6 != null) {
           const os = tmp6.os;
@@ -153,11 +146,11 @@ export const getAudioInputDevices = function getAudioInputDevices() {
       }
       if (isMatch) {
         let obj = /^win/i;
-        isMatch = obj.test(outer1_1(outer1_2[1]).os.family);
+        isMatch = obj.test(closure_1_1(closure_1_2[1]).os.family);
       }
       if (isMatch) {
         obj = { id: null, type: null, index: -1, name: "Default" };
-        obj[0] = outer1_3;
+        obj[0] = closure_1_3;
         obj[1] = AUDIO_INPUT;
         mapped.unshift(obj);
       }
@@ -170,17 +163,14 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
     const callback = arg0;
     const voiceEngine = callback(table[2]).getVoiceEngine();
     const outputDevices = voiceEngine.getOutputDevices((arr) => {
-      const AUDIO_OUTPUT = outer1_4.AUDIO_OUTPUT;
-      let c1 = false;
+      const AUDIO_OUTPUT = closure_1_4.AUDIO_OUTPUT;
+      c1 = false;
       const mapped = arr.map((arg0, arg1) => {
-        let guid;
-        let index;
-        let name;
         ({ guid, name, index } = arg0);
-        if (VIDEO_INPUT === outer1_4.VIDEO_INPUT) {
+        if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
           let obj = /^front/i;
           if (obj.test(name)) {
-            let tmp12 = outer1_3;
+            let tmp12 = closure_1_3;
             let str2 = "Default";
           }
           let tmp13 = arg1;
@@ -204,8 +194,8 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
           return obj;
         }
         if (obj2.test(name)) {
-          let c1 = true;
-          tmp12 = outer1_3;
+          c1 = true;
+          tmp12 = closure_1_3;
           str2 = name.replace("default", "Default");
         } else {
           tmp12 = name;
@@ -218,12 +208,12 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
           str2 = name;
         }
       });
-      let isMatch = AUDIO_OUTPUT !== outer1_4.VIDEO_INPUT;
+      let isMatch = AUDIO_OUTPUT !== closure_1_4.VIDEO_INPUT;
       if (isMatch) {
         isMatch = !c1;
       }
       if (isMatch) {
-        const tmp6 = outer1_1(outer1_2[1]);
+        const tmp6 = closure_1_1(closure_1_2[1]);
         let family;
         if (tmp6 != null) {
           const os = tmp6.os;
@@ -235,11 +225,11 @@ export const getAudioOutputDevices = function getAudioOutputDevices() {
       }
       if (isMatch) {
         let obj = /^win/i;
-        isMatch = obj.test(outer1_1(outer1_2[1]).os.family);
+        isMatch = obj.test(closure_1_1(closure_1_2[1]).os.family);
       }
       if (isMatch) {
         obj = { id: null, type: null, index: -1, name: "Default" };
-        obj[0] = outer1_3;
+        obj[0] = closure_1_3;
         obj[1] = AUDIO_OUTPUT;
         mapped.unshift(obj);
       }
@@ -252,17 +242,14 @@ export const getVideoInputDevices = function getVideoInputDevices() {
     const callback = arg0;
     const voiceEngine = callback(table[2]).getVoiceEngine();
     const videoInputDevices = voiceEngine.getVideoInputDevices((arr) => {
-      const VIDEO_INPUT = outer1_4.VIDEO_INPUT;
-      let c1 = false;
+      const VIDEO_INPUT = closure_1_4.VIDEO_INPUT;
+      c1 = false;
       const mapped = arr.map((arg0, arg1) => {
-        let guid;
-        let index;
-        let name;
         ({ guid, name, index } = arg0);
-        if (VIDEO_INPUT === outer1_4.VIDEO_INPUT) {
+        if (VIDEO_INPUT === closure_1_4.VIDEO_INPUT) {
           let obj = /^front/i;
           if (obj.test(name)) {
-            let tmp12 = outer1_3;
+            let tmp12 = closure_1_3;
             let str2 = "Default";
           }
           let tmp13 = arg1;
@@ -286,8 +273,8 @@ export const getVideoInputDevices = function getVideoInputDevices() {
           return obj;
         }
         if (obj2.test(name)) {
-          let c1 = true;
-          tmp12 = outer1_3;
+          c1 = true;
+          tmp12 = closure_1_3;
           str2 = name.replace("default", "Default");
         } else {
           tmp12 = name;
@@ -300,12 +287,12 @@ export const getVideoInputDevices = function getVideoInputDevices() {
           str2 = name;
         }
       });
-      let isMatch = VIDEO_INPUT !== outer1_4.VIDEO_INPUT;
+      let isMatch = VIDEO_INPUT !== closure_1_4.VIDEO_INPUT;
       if (isMatch) {
         isMatch = !c1;
       }
       if (isMatch) {
-        const tmp6 = outer1_1(outer1_2[1]);
+        const tmp6 = closure_1_1(closure_1_2[1]);
         let family;
         if (tmp6 != null) {
           const os = tmp6.os;
@@ -317,11 +304,11 @@ export const getVideoInputDevices = function getVideoInputDevices() {
       }
       if (isMatch) {
         let obj = /^win/i;
-        isMatch = obj.test(outer1_1(outer1_2[1]).os.family);
+        isMatch = obj.test(closure_1_1(closure_1_2[1]).os.family);
       }
       if (isMatch) {
         obj = { id: null, type: null, index: -1, name: "Default" };
-        obj[0] = outer1_3;
+        obj[0] = closure_1_3;
         obj[1] = VIDEO_INPUT;
         mapped.unshift(obj);
       }

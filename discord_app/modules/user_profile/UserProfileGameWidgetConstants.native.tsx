@@ -1,13 +1,18 @@
 // discord_app/modules/user_profile/UserProfileGameWidgetConstants.native.tsx
-import WidgetGameTagIconRole from "WidgetGameTagIconRole";
+import set from "set" /* 2 */;
+import FriendsIcon from "FriendsIcon" /* 4095 */;
+import RibbonIcon from "RibbonIcon" /* 12177 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 12179 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 12181 */;
+import WidgetGameTagIconRole from "WidgetGameTagIconRole" /* 12176 */;
 
 const obj = {};
-obj[require("WidgetGameTagIconRole").WidgetGameTagIconRole.RIBBON] = require("RibbonIcon").RibbonIcon;
-obj[require("WidgetGameTagIconRole").WidgetGameTagIconRole.THUMBS_UP] = require("ThumbsUpIcon").ThumbsUpIcon;
-obj[require("WidgetGameTagIconRole").WidgetGameTagIconRole.THUMBS_DOWN] = require("ThumbsDownIcon").ThumbsDownIcon;
-obj[require("WidgetGameTagIconRole").WidgetGameTagIconRole.FRIENDS] = require("FriendsIcon").FriendsIcon;
+obj[WidgetGameTagIconRole.WidgetGameTagIconRole.RIBBON] = RibbonIcon.RibbonIcon;
+obj[WidgetGameTagIconRole.WidgetGameTagIconRole.THUMBS_UP] = ThumbsUpIcon.ThumbsUpIcon;
+obj[WidgetGameTagIconRole.WidgetGameTagIconRole.THUMBS_DOWN] = ThumbsDownIcon.ThumbsDownIcon;
+obj[WidgetGameTagIconRole.WidgetGameTagIconRole.FRIENDS] = FriendsIcon.FriendsIcon;
 const widgetGameTagMetadata = WidgetGameTagIconRole.buildWidgetGameTagMetadata(obj);
-const result = require("ThumbsUpIcon").fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
+const result = set.fileFinishedImporting("modules/user_profile/UserProfileGameWidgetConstants.native.tsx");
 
 export const WIDGET_GAME_TAG_METADATA = widgetGameTagMetadata;
 export const getWidgetGameTagMetadata = function getWidgetGameTagMetadata(arg0) {

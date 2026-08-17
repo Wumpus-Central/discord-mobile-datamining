@@ -1,9 +1,9 @@
 // discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx
-import _slicedToArray from "_slicedToArray";
-import { ProfileDataDynamicType } from "../../../shared/shared-constants/ProfileDataDynamicType.tsx";
-import { resolveFieldValue } from "resolvedValues.tsx";
+import resolveFieldValue from "resolveFieldValue" /* 12193 */;
+import ProfileDataDynamicType from "ProfileDataDynamicType" /* 12276 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function isVisualUnfurledMedia(value) {
   let tmp = null != value.width;
   if (tmp) {
@@ -18,8 +18,6 @@ function isVisualUnfurledMedia(value) {
   return tmp;
 }
 function resolvedValuesFromPrimary(data) {
-  let tmp7;
-  let tmp8;
   data = data.data;
   let primary;
   if (data != null) {
@@ -70,7 +68,7 @@ function resolvedValuesFromPrimary(data) {
                   let tmp13 = tmp8;
                   if (isVisualUnfurledMedia(tmp9)) {
                     let tmp14 = tmp7;
-                    let obj1 = { type: null, media: null };
+                    obj1 = { type: null, media: null };
                     let tmp15 = require;
                     let tmp16 = dependencyMap;
                     obj1[0] = resolveFieldValue.ResolvedValueType.MEDIA;
@@ -129,7 +127,7 @@ function resolvedValuesFromDynamic(data) {
             let tmp14 = nextResult;
             if (isVisualUnfurledMedia(iter.value)) {
               let tmp7 = nextResult;
-              let obj1 = { type: null, media: null };
+              obj1 = { type: null, media: null };
               obj1[0] = tmp5(12193).ResolvedValueType.MEDIA;
               let obj2 = { url: null, width: null, height: null };
               obj2[0] = iter.value.proxy_url;
@@ -147,7 +145,7 @@ function resolvedValuesFromDynamic(data) {
     return obj;
   }
 }
-const result = require("ProfileDataDynamicType").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
+const result = require("set").fileFinishedImporting("../discord_common/js/packages/application-widget-renderer/src/resolvedValuesFromUserApplicationIdentityProfile.tsx");
 
 export default function resolvedValuesFromUserApplicationIdentityProfile(profile) {
   if (null == profile) {

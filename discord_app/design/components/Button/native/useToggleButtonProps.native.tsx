@@ -1,5 +1,7 @@
 // discord_app/design/components/Button/native/useToggleButtonProps.native.tsx
-const result = require("set").fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("design/components/Button/native/useToggleButtonProps.native.tsx");
 
 export const useToggleButtonProps = function useToggleButtonProps(on, first) {
   const obj = {};

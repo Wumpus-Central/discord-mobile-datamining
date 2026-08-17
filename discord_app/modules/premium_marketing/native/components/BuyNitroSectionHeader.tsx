@@ -1,19 +1,13 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx
-import jsxProd from "jsxProd";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import set from "set" /* 2 */;
+import Text from "Text" /* 4734 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let obj1;
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
 const Nitro = "Nitro";
-const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx");
+const result = set.fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroSectionHeader.tsx");
 
 export default function BuyNitroSectionHeader(arg0) {
-  let onPress;
-  let style;
-  let title;
-  let titleRequiresNitroHack;
   ({ title, titleRequiresNitroHack } = arg0);
   ({ style, onPress } = arg0);
   if (titleRequiresNitroHack === undefined) {

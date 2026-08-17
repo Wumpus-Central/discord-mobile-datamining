@@ -1,22 +1,23 @@
 // discord_app/components_native/common/Notifications.tsx
-import "noop";
-import handleAlertMessage from "handleAlertMessage";
-import { jsx } from "jsxProd";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { NotificationWrapper } from "../../modules/in_app_notifications/native/InAppNotificationContainer.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import NotificationWrapperDefault from "NotificationWrapper" /* 10045 */;
+import closure_3 from "handleAlertMessage" /* 10013 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("components_native/common/Notifications.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("components_native/common/Notifications.tsx");
 
 export default function Notifications() {
   let obj = initialize;
-  const items = [handleAlertMessage];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => currentNotification.getCurrentNotification());
   let tmp3 = null;
   if (null != stateFromStores) {
     obj = { notification: null };
     obj[0] = stateFromStores;
-    tmp3 = jsx(NotificationWrapper, { notification: null }, stateFromStores.key);
+    tmp3 = jsx(NotificationWrapperDefault, { notification: null }, stateFromStores.key);
   }
   return tmp3;
 };

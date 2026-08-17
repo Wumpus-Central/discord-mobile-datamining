@@ -1,26 +1,21 @@
 // discord_app/modules/auth/register.tsx
-import closure_4 from "t";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import ME from "ME";
-import result from "result";
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
+import encodeProperties from "encodeProperties" /* 503 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef5227 from "module_5227" /* 5227 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import initialize from "initialize" /* 15224 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import ME from "ME" /* 676 */;
+import result from "result" /* 1221 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _scorePassword() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       if (c6 === 2) {
         c6 = 3;
@@ -48,17 +43,17 @@ function _scorePassword() {
               obj[0] = body;
               return obj;
             } else {
-              let closure_2 = tmp3;
+              closure_2 = tmp3;
               const callback2 = tmp7;
-              let c4 = 1;
-              let obj5 = outer1_1(outer1_3[7]);
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj1[0] = outer1_8.SCORE_PASSWORD;
+              c4 = 1;
+              let obj5 = closure_1_1(closure_1_3[7]);
+              obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+              obj1[0] = closure_1_8.SCORE_PASSWORD;
               const obj2 = { password: null };
               obj2[0] = callback;
               obj1[1] = obj2;
               const obj3 = { event: null };
-              obj3[0] = callback(outer1_3[8]).NetworkActionNames.PASSWORD_VALIDATE;
+              obj3[0] = callback(closure_1_3[8]).NetworkActionNames.PASSWORD_VALIDATE;
               obj1[2] = obj3;
               c5 = 2;
               c6 = 1;
@@ -99,7 +94,7 @@ function _scorePassword() {
       }
     })();
   });
-  const _scorePassword = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -111,10 +106,10 @@ function _scorePassword() {
 function _registerPhone() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -142,7 +137,7 @@ function _registerPhone() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
+              closure_2 = tmp3;
               let callback = tmp5;
               let phone;
               phone = phone.phone;
@@ -156,11 +151,11 @@ function _registerPhone() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              let c4 = 1;
+              c4 = 1;
               let obj6 = callback(5227);
               const obj2 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
               obj2[0] = constants.REGISTER_PHONE;
@@ -215,7 +210,7 @@ function _registerPhone() {
     iter.next();
     return iter;
   });
-  const _registerPhone = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -225,15 +220,6 @@ function _registerPhone() {
   return applyArgumentsResult;
 }
 function registerFull(giftCodeSKUId) {
-  let birthday;
-  let consent;
-  let email;
-  let globalName;
-  let guildTemplateCode;
-  let invite;
-  let password;
-  let phoneToken;
-  let username;
   ({ birthday, invite } = giftCodeSKUId);
   ({ email, phoneToken, username, globalName, consent, password, guildTemplateCode } = giftCodeSKUId);
   if (invite === undefined) {
@@ -251,7 +237,7 @@ function registerFull(giftCodeSKUId) {
   if (prop === undefined) {
     prop = null;
   }
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj.dispatch({ type: "REGISTER" });
   if (null != birthday) {
     tmp4(15225)(birthday, constants2.REGISTER);
@@ -282,7 +268,7 @@ function registerFull(giftCodeSKUId) {
     const obj11 = tmp4(3975)();
     tmp14 = constants;
   }
-  const obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
+  obj1 = { url: constants3.REGISTER, body: null, trackedActionData: null, rejectWithError: false };
   let obj2 = { fingerprint: fingerprint.getFingerprint(), email, username, global_name: globalName, password, invite, consent, phone_token: phoneToken, date_of_birth: null, gift_code_sku_id: null, guild_template_code: null, promotional_email_opt_in: null };
   let formatResult;
   if (birthday != null) {
@@ -311,8 +297,8 @@ function registerFull(giftCodeSKUId) {
   obj4[3] = preChecked;
   obj3[1] = obj4;
   obj1[2] = obj3;
-  const tmp4Result1 = TrackedHTTPUtils;
-  return TrackedHTTPUtils.post(obj1).then((body) => {
+  const tmp4Result1 = _modDef5227;
+  return _modDef5227.post(obj1).then((body) => {
     let obj = callback2(709);
     obj = { type: "REGISTER_SUCCESS", token: body.body.token };
     obj.dispatch(obj);
@@ -348,9 +334,9 @@ function registerFull(giftCodeSKUId) {
     }
   });
 }
-({ AnalyticEvents: closure_6, AnalyticsSections: error, Endpoints: metroImportAll } = ME);
+({ AnalyticEvents: closure_6, AnalyticsSections: error, Endpoints: closure_8 } = ME);
 ({ AgeGateAnalyticAction: c9, AgeGateSource: c10 } = result);
-result = require("fetchFingerprint").fileFinishedImporting("modules/auth/register.tsx");
+result = require("set").fileFinishedImporting("modules/auth/register.tsx");
 
 export default function register(invite) {
   invite = invite.invite;

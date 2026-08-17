@@ -1,19 +1,18 @@
 // discord_app/modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx
-import "noop";
-import { isGuildNSFW } from "GuildNSFWContentLevel";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { isGuildNSFW } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/alerts/VoicePanelNsfwAlert.tsx");
 
 export default function VoicePanelNsfwAlert(guildId) {
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = guildId(4660);
   dependencyMap = obj.useDismissModalCallback();
   const tmp3 = isGuildNSFW(guild.getGuild(guildId));
@@ -36,7 +35,7 @@ export default function VoicePanelNsfwAlert(guildId) {
   }
   obj[1] = string2Result;
   obj = { children: null };
-  const obj1 = {
+  obj1 = {
     variant: "primary",
     onPress() {
       channelId(6778).nsfwAgree(guildId);

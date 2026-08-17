@@ -1,15 +1,17 @@
 // discord_app/modules/application_account_linking/AccountLinkStore.tsx
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { Store } from "initialize";
-import set from "dispatcher";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "recomputeFromAppTokens" /* 5289 */;
+import set from "set" /* 2 */;
 
 const map = new Map();
 let set = new Set();
+const Store = initializeDefault.Store;
 class AccountLinkStore extends Store {
 }
 const prototype = AccountLinkStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(recomputeFromAppTokens);
+  this.waitFor(closure_0);
 };
 prototype["getPendingAuthorizations"] = function getPendingAuthorizations() {
   return map;
@@ -21,7 +23,7 @@ prototype["getGloballyDisabledAuthorizationFlows"] = function getGloballyDisable
   return set;
 };
 AccountLinkStore.displayName = "AccountLinkStore";
-const accountLinkStore = new AccountLinkStore(require("dispatcher"), {
+const accountLinkStore = new AccountLinkStore(dispatcherDefault, {
   ACCOUNT_LINK_AUTHORIZATION_STARTED: function handleAuthorizationStarted(applicationId) {
     if (tmp) {
       const obj = { applicationId: null, startedAt: null, accountLinkCallbacks: null };
@@ -33,7 +35,7 @@ const accountLinkStore = new AccountLinkStore(require("dispatcher"), {
     }
   },
   ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS: function handleSetGloballyDisabledFlows(flows) {
-    const set = new Set(flows.flows);
+    set = new Set(flows.flows);
   }
 });
 let result = set.fileFinishedImporting("modules/application_account_linking/AccountLinkStore.tsx");

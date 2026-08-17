@@ -1,10 +1,13 @@
 // discord_app/modules/replies/trackRepliedMessageClicked.tsx
-import { ReferencedMessageState } from "processMessage";
-import { AnalyticEvents } from "ME";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { maybeCreateMessageRecordFromSnapshot } from "../forwarding/maybeCreateMessageRecordFromSnapshot.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import processMessage from "processMessage" /* 5013 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import maybeCreateMessageRecordFromSnapshotDefault from "maybeCreateMessageRecordFromSnapshot" /* 9164 */;
 
-const result = require("maybeCreateMessageRecordFromSnapshot").fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
+const ReferencedMessageState = processMessage.ReferencedMessageState;
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/replies/trackRepliedMessageClicked.tsx");
 
 export default function trackRepliedMessageClicked(messageReference, state, channel_id) {
   messageReference = messageReference.messageReference;
@@ -15,7 +18,7 @@ export default function trackRepliedMessageClicked(messageReference, state, chan
   let tmp3 = null;
   let tmp4 = null;
   if (state.state === ReferencedMessageState.LOADED) {
-    const tmp9 = maybeCreateMessageRecordFromSnapshot(state.message);
+    const tmp9 = maybeCreateMessageRecordFromSnapshotDefault(state.message);
     const content = tmp9.content;
     let num;
     if (content != null) {

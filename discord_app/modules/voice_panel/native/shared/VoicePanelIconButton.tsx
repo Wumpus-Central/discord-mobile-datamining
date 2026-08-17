@@ -1,13 +1,11 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelIconButton.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import { IconButton } from "../../../../design/components/Button/native/IconButton.native.tsx";
-import { set } from "../../../core/native/ReanimatedNativeView.tsx";
+import IconButton from "IconButton" /* 8035 */;
+import setDefault from "set" /* 8125 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVariant, ref) => {
-  let layout;
-  let style;
   let str = overrideVariant.overrideVariant;
   ({ style, layout } = overrideVariant);
   const merged = Object.assign(overrideVariant, Object.create(null));
@@ -21,7 +19,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((overrideVari
   obj.variant = str;
   obj.maxFontSizeMultiplier = 2;
   obj[3] = jsx(IconButton.IconButton, {});
-  return jsx(set, {});
+  return jsx(setDefault, {});
 }));
 const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelIconButton.tsx");
 

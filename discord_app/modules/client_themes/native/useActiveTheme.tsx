@@ -1,23 +1,21 @@
 // discord_app/modules/client_themes/native/useActiveTheme.tsx
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import isSyncedModeThemesEnabled from "isSyncedModeThemesEnabled";
-import reset from "reset";
-import SystemThemeState from "SystemThemeState";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getGuildIdFromNavigationState } from "../../guild_themes/native/useRoutedActiveGuildTheme.tsx";
+import initialize from "initialize" /* 589 */;
+import getGuildIdFromNavigationStateDefault from "getGuildIdFromNavigationState" /* 4228 */;
+import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_4 from "isSyncedModeThemesEnabled" /* 4195 */;
+import closure_5 from "reset" /* 1346 */;
+import SystemThemeState from "SystemThemeState" /* 1305 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function useActiveThemeType() {
-  const items = [reset];
-  const stateFromStores = initialize.useStateFromStores(items, () => reset.hasCustomTheme());
+  const items = [closure_5];
+  const stateFromStores = initialize.useStateFromStores(items, () => closure_5.hasCustomTheme());
   const obj = initialize;
-  const items1 = [isSyncedModeThemesEnabled];
+  const items1 = [closure_4];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => null != gradientPreset.gradientPreset);
-  const tmp3 = getGuildIdFromNavigationState();
+  const tmp3 = getGuildIdFromNavigationStateDefault();
   const obj2 = initialize;
-  const items2 = [CHANNEL_SIDEBAR_WIDTH];
+  const items2 = [closure_3];
   let type;
   const stateFromStores2 = initialize.useStateFromStores(items2, () => useSystemTheme.useSystemTheme);
   if (tmp3 != null) {
@@ -45,7 +43,7 @@ function useActiveThemeType() {
   return DEFAULT;
 }
 ({ SystemThemeState: closure_6, ActiveThemeType: error } = SystemThemeState);
-const result = require("reset").fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");
+const result = require("set").fileFinishedImporting("modules/client_themes/native/useActiveTheme.tsx");
 
 export const useIsCustomThemeActive = function useIsCustomThemeActive() {
   return useActiveThemeType() === constants2.CUSTOM;

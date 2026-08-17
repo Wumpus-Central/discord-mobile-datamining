@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import BoostGemIcon from "BoostGemIcon" /* 7979 */;
+import createToggle from "createToggle" /* 10669 */;
 import { componentDidMount } from "../../premium/native/UserSettingsPremiumGuildSubscriptions.tsx";
 
 obj = {
@@ -9,16 +12,16 @@ obj = {
     return intl.string(getSystemLocale.t["+CbP2v"]);
   },
   parent: null,
-  IconComponent: require("BoostGemIcon").BoostGemIcon,
+  IconComponent: BoostGemIcon.BoostGemIcon,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.GUILD_BOOSTING,
+  route: ME.UserSettingsSections.GUILD_BOOSTING,
   getComponent() {
     return componentDidMount.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/PremiumGuildBoostingSetting.tsx");
 
 export default route;

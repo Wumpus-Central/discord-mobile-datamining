@@ -1,16 +1,16 @@
 // discord_app/modules/activities/handleUsePrimaryEntryPointAppCommand.tsx
-import getEmbeddedActivitiesManager from "getEmbeddedActivitiesManager";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
 function _handleUsePrimaryEntryPointAppCommand() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (c5 === 2) {
         c5 = 3;
@@ -38,8 +38,8 @@ function _handleUsePrimaryEntryPointAppCommand() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp3;
-              let closure_1 = tmp20;
+              closure_2 = tmp3;
+              closure_1 = tmp20;
               closure_1 = undefined;
               closure_2 = undefined;
               if (null == lib.targetApplicationId) {
@@ -47,11 +47,11 @@ function _handleUsePrimaryEntryPointAppCommand() {
                 return { value: false, done: true };
               } else {
                 closure_2 = false;
-                let dependencyMap = 1;
+                dependencyMap = 1;
                 c4 = 2;
                 c5 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = outer1_1(8735)(tmp27.targetApplicationId, tmp27.channelId);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_1(8735)(tmp27.targetApplicationId, tmp27.channelId);
                 return obj1;
               }
             }
@@ -105,7 +105,7 @@ function _handleUsePrimaryEntryPointAppCommand() {
       }
     })();
   });
-  const _handleUsePrimaryEntryPointAppCommand = tmp;
+  closure_7 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -117,23 +117,10 @@ function _handleUsePrimaryEntryPointAppCommand() {
 function _handleUsePrimaryEntryPointAppCommandInternal() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c10;
-      let c11;
-      let c12;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let c6;
-      let c7;
-      let c8;
-      let c9;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -176,7 +163,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
               c11 = undefined;
               c12 = undefined;
               ({ targetApplication: c0, locationObject: c1, channelId: c2, analyticsLocations: c3, componentId: c4, commandOrigin: c5, sectionName: c6, source: c7, onExecutedCallback: c8, referrerId: c9, customId: c10, inviterUserId: c11, onConfirmActivityLaunchChecksAlertOpen: c12 } = lib);
-              let closure_13;
+              closure_13 = undefined;
               let currentUser2;
               dependencyMap = 1;
               c4 = 1;
@@ -189,7 +176,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c4 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -260,7 +247,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
     iter.next();
     return iter;
   });
-  const _handleUsePrimaryEntryPointAppCommandInternal = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -269,7 +256,7 @@ function _handleUsePrimaryEntryPointAppCommandInternal() {
   }
   return applyArgumentsResult;
 }
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/handleUsePrimaryEntryPointAppCommand.tsx");
 
 export default function handleUsePrimaryEntryPointAppCommand() {
   const self = this;

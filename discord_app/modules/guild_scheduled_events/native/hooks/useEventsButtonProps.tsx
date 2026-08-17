@@ -1,26 +1,24 @@
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
-import noop from "noop";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { ReadStateTypes } from "ReadStateTypes";
+import useGuildEventsDefault from "useGuildEvents" /* 8891 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import closure_5 from "updateUserGuildSettingsInternal" /* 5043 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildEvents } from "../../useGuildScheduledEvents.tsx";
 
 const require = arg1;
-let result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
 export default function useEventsButtonProps(id) {
-  let hasUnread;
-  let mentionCount;
   const _require = id;
   let obj = _initialize;
-  const items = [generateOldThreadCutoff];
+  const items = [closure_4];
   const items1 = [id.id];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: outer1_4.hasUnread(id.id, outer1_6.GUILD_EVENT), mentionCount: outer1_4.getMentionCount(id.id, outer1_6.GUILD_EVENT) }), items1);
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ hasUnread: closure_1_4.hasUnread(id.id, closure_1_6.GUILD_EVENT), mentionCount: closure_1_4.getMentionCount(id.id, closure_1_6.GUILD_EVENT) }), items1);
   ({ hasUnread, mentionCount } = stateFromStoresObject);
-  const items2 = [updateUserGuildSettingsInternal];
-  const eventsMuted = _initialize.useStateFromStores(items2, () => outer1_5.isMuteScheduledEventsEnabled(id.id));
-  const arr4 = useGuildEvents(id.id);
+  const items2 = [closure_5];
+  const eventsMuted = _initialize.useStateFromStores(items2, () => closure_1_5.isMuteScheduledEventsEnabled(id.id));
+  const arr4 = useGuildEventsDefault(id.id);
   const items3 = [id];
   const items4 = [id.id];
   const handlePress = React.useCallback(() => {
@@ -34,9 +32,9 @@ export default function useEventsButtonProps(id) {
     return result;
   }, items3);
   const handleLongPress = React.useCallback(() => {
-    let obj = outer1_1(outer1_2[9]);
+    let obj = closure_1_1(closure_1_2[9]);
     obj = { guildId: id.id };
-    obj.openLazy(id(outer1_2[11])(outer1_2[10], outer1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
+    obj.openLazy(id(closure_1_2[11])(closure_1_2[10], closure_1_2.paths), "UpcomingEventsLongPress-" + id.id, obj);
   }, items4);
   if (arr4.length > 0) {
     const intl2 = tmp(1236).intl;

@@ -1,7 +1,9 @@
 // discord_app/modules/activities/utils/isOnMetaQuest.tsx
-import { ActivityGamePlatforms } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/isOnMetaQuest.tsx");
+const ActivityGamePlatforms = ME.ActivityGamePlatforms;
+const result = set.fileFinishedImporting("modules/activities/utils/isOnMetaQuest.tsx");
 
 export default function isOnMetaQuest(platform) {
   platform = undefined;

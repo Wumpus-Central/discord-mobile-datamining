@@ -1,11 +1,11 @@
 // discord_app/modules/guild_action_sheet/native/components/LeaveServerAlert.tsx
-import { GuildFeatures } from "ME";
-import jsxProd from "jsxProd";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
+const GuildFeatures = ME.GuildFeatures;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/guild_action_sheet/native/components/LeaveServerAlert.tsx");
+const result = set.fileFinishedImporting("modules/guild_action_sheet/native/components/LeaveServerAlert.tsx");
 
 export default function LeaveServerAlert(guild) {
   guild = guild.guild;
@@ -24,10 +24,10 @@ export default function LeaveServerAlert(guild) {
   obj = { name: guild.name };
   obj[1] = intl2.formatToPlainString(guild(1236).t.TB1og8, obj);
   obj = { children: null };
-  const obj1 = {
+  obj1 = {
     variant: "destructive",
     onPress() {
-      return outer1_1(outer1_2[5]).leaveGuild(guild.id);
+      return closure_1_1(closure_1_2[5]).leaveGuild(guild.id);
     },
     text: null
   };

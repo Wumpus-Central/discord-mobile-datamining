@@ -1,15 +1,15 @@
 // discord_app/modules/safe_area/useSafeAreaAvoidingInputs.native.tsx
-import getKeyboardDuration from "getKeyboardDuration";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
 function _calculateScrollOffset() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1) {
       if (c6 === 2) {
         c6 = 3;
@@ -37,19 +37,19 @@ function _calculateScrollOffset() {
               obj[0] = arg1;
               return obj;
             } else {
-              let c4 = 0;
-              let getKeyboardDuration = tmp2;
+              c4 = 0;
+              closure_3 = tmp2;
               let styles;
-              getKeyboardDuration = undefined;
+              closure_3 = undefined;
               if (null == lib) {
                 c6 = 3;
-                const obj1 = { value: null, done: true };
-                obj1[0] = lib2(outer1_2[3]).space.PX_16;
+                obj1 = { value: null, done: true };
+                obj1[0] = lib2(closure_1_2[3]).space.PX_16;
                 return obj1;
               } else {
                 const type = iter.type;
                 if ("toRef" === type) {
-                  let obj3 = lib(outer1_2[4]);
+                  let obj3 = lib(closure_1_2[4]);
                   c5 = 1;
                   c6 = 1;
                   const obj2 = { value: null, done: false };
@@ -87,11 +87,11 @@ function _calculateScrollOffset() {
             if (extraOffset == null) {
               styles = 0;
             }
-            getKeyboardDuration = styles;
+            closure_3 = styles;
             if (null == styles) {
-              const sum = lib2(styles[3]).space.PX_16 + getKeyboardDuration;
+              const sum = lib2(styles[3]).space.PX_16 + closure_3;
             } else {
-              const sum1 = styles.y - (lib2.y + lib2.height) + styles.height + getKeyboardDuration;
+              const sum1 = styles.y - (lib2.y + lib2.height) + styles.height + closure_3;
             }
             c6 = 3;
           }
@@ -102,7 +102,7 @@ function _calculateScrollOffset() {
       }
     })();
   });
-  const _calculateScrollOffset = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -111,7 +111,7 @@ function _calculateScrollOffset() {
   }
   return applyArgumentsResult;
 }
-const result = require("useWindowDimensions").fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
+const result = require("set").fileFinishedImporting("modules/safe_area/useSafeAreaAvoidingInputs.native.tsx");
 
 export default function useSafeAreaAvoidingInputs(insets) {
   insets = insets.insets;
@@ -122,12 +122,12 @@ export default function useSafeAreaAvoidingInputs(insets) {
   callback = onFocus.useRef(inputs);
   const items = [inputs];
   const effect = onFocus.useEffect(() => {
-    getKeyboardDuration.current = inputs;
+    closure_3.current = inputs;
   }, items);
   const items1 = [insets, scrollViewRef];
   onFocus = onFocus.useCallback(callback(function*() {
-    if (ref2 === 2) {
-      ref2 = 3;
+    if (c3 === 2) {
+      c3 = 3;
       HermesBuiltin.throwTypeError();
     } else if (tmp4 === 3) {
       if (arg0 === 1) {
@@ -141,13 +141,13 @@ export default function useSafeAreaAvoidingInputs(insets) {
       }
     } else {
       try {
-        ref2 = 2;
+        c3 = 2;
         if (0 === ref) {
           if (arg0 === 1) {
-            ref2 = 3;
+            c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            ref2 = 3;
+            c3 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
@@ -157,10 +157,10 @@ export default function useSafeAreaAvoidingInputs(insets) {
             current2 = undefined;
             found = undefined;
             ref = undefined;
-            ref2 = undefined;
-            let noop;
-            let closure_5;
-            let closure_6;
+            c3 = undefined;
+            closure_4 = undefined;
+            closure_5 = undefined;
+            closure_6 = undefined;
             current2 = ref.current;
             let current = ref2.current;
             found = current.find((ref) => {
@@ -174,66 +174,63 @@ export default function useSafeAreaAvoidingInputs(insets) {
             if (null != found) {
               if (null != current2) {
                 ref = 1;
-                ref2 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0(ref[4]).measureViewRefInWindow(found.ref);
+                c3 = 1;
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0(ref[4]).measureViewRefInWindow(found.ref);
                 return obj1;
               }
             }
           }
         } else if (1 === tmp5) {
           if (arg0 === 1) {
-            ref2 = 3;
+            c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            ref2 = 3;
+            c3 = 3;
             const obj2 = { value: null, done: true };
             obj2[0] = arg1;
             return obj2;
           } else {
             ref = arg1;
-            let obj6 = outer1_0(ref[4]);
+            let obj6 = closure_1_0(ref[4]);
             ref = 2;
-            ref2 = 1;
+            c3 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = obj6.measureViewRefInView(outer1_1.ref, outer1_0);
+            obj3[0] = obj6.measureViewRefInView(closure_1_1.ref, closure_1_0);
             return obj3;
           }
         } else {
           if (2 === tmp5) {
             if (arg0 === 1) {
-              ref2 = 3;
+              c3 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              ref2 = 3;
+              c3 = 3;
               const obj4 = { value: null, done: true };
               obj4[0] = arg1;
               return obj4;
-            } else {
-              ref2 = arg1;
-              if (null != ref) {
-                if (null != ref2) {
-                  ref = 3;
-                  ref2 = 1;
-                  const obj5 = { value: null, done: false };
-                  obj5[0] = outer1_0(ref[4]).measureViewInWindow(outer1_0);
-                  return obj5;
-                }
+            } else if (null != ref) {
+              if (null != ref2) {
+                ref = 3;
+                c3 = 1;
+                const obj5 = { value: null, done: false };
+                obj5[0] = closure_1_0(ref[4]).measureViewInWindow(closure_1_0);
+                return obj5;
               }
             }
           } else if (3 === tmp5) {
             if (arg0 === 1) {
-              ref2 = 3;
+              c3 = 3;
               throw arg1;
             } else if (arg0 === 2) {
-              ref2 = 3;
+              c3 = 3;
               obj6 = { value: null, done: true };
               obj6[0] = arg1;
               return obj6;
             } else {
-              noop = arg1;
+              closure_4 = arg1;
               ref = 4;
-              ref2 = 1;
+              c3 = 1;
               const obj7 = { value: null, done: false };
               obj7[0] = (function calculateScrollOffset(offset, c2) {
                 const self = this;
@@ -248,10 +245,10 @@ export default function useSafeAreaAvoidingInputs(insets) {
               return obj7;
             }
           } else if (arg0 === 1) {
-            ref2 = 3;
+            c3 = 3;
             throw arg1;
           } else if (arg0 === 2) {
-            ref2 = 3;
+            c3 = 3;
             const obj8 = { value: null, done: true };
             obj8[0] = arg1;
             return obj8;
@@ -267,10 +264,10 @@ export default function useSafeAreaAvoidingInputs(insets) {
           }
           obj = { insets: null, inputInScrollView: null, inputInWindow: null, scrollOffset: null, scrollView: null };
           obj[0] = current2;
-          obj[1] = ref2;
+          obj[1] = c3;
           obj[2] = ref;
           obj[3] = closure_5;
-          obj[4] = noop;
+          obj[4] = closure_4;
           closure_6 = (function calculateTargetScrollY(scrollView) {
             const sum = scrollView.scrollView.y + scrollView.scrollView.height;
             const diff = current2(table[2]).getWindowDimensions({ ignoreKeyboard: true }).height - scrollView.insets.bottom;
@@ -284,8 +281,8 @@ export default function useSafeAreaAvoidingInputs(insets) {
             }
           })(obj);
           if (null != closure_6) {
-            (function scrollToTargetY(c2, closure_6) {
-              const current = c2.current;
+            (function scrollToTargetY(closure_2, closure_6) {
+              const current = closure_2.current;
               let scrollToResult;
               if (current != null) {
                 const scrollTo = current.scrollTo;
@@ -296,7 +293,7 @@ export default function useSafeAreaAvoidingInputs(insets) {
                 }
               }
               if (scrollToResult == null) {
-                const current2 = c2.current;
+                current2 = closure_2.current;
                 if (current2 != null) {
                   const scrollToOffset = current2.scrollToOffset;
                   if (scrollToOffset != null) {
@@ -309,9 +306,9 @@ export default function useSafeAreaAvoidingInputs(insets) {
             })(ref, closure_6);
           }
         }
-        ref2 = 3;
+        c3 = 3;
       } catch (tmp32) {
-        ref2 = tmp;
+        c3 = tmp;
         throw tmp32;
       }
     }

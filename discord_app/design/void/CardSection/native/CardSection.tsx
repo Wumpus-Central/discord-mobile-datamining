@@ -1,33 +1,24 @@
 // discord_app/design/void/CardSection/native/CardSection.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import { LegacyText } from "../../LegacyText/native/LegacyText.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef8115 from "module_8115" /* 8115 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let c3;
-let c4;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createCacheKey = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: null, card: null };
-createCacheKey[1] = require("createTextStyle")(require("ME").Fonts.DISPLAY_EXTRABOLD, require("Themes").colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 });
-createCacheKey = { borderRadius: require("Themes").radii.xs, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { container: { paddingTop: 16, paddingHorizontal: 16 }, title: importDefaultResult(require("ME").Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.TEXT_SUBTLE, 12, { uppercase: true, marginBottom: 6 }), card: null };
+createCacheKey = { borderRadius: ThemesDefault.radii.xs, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[2] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ME").fileFinishedImporting("design/void/CardSection/native/CardSection.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("design/void/CardSection/native/CardSection.tsx");
 
 export default function CardSection(arg0) {
-  let accessibilityLabel;
-  let accessibilityRole;
-  let cardStyle;
-  let children;
-  let headerComponent;
-  let style;
-  let title;
-  let titleStyle;
   ({ title, children, headerComponent } = arg0);
   ({ titleStyle, cardStyle, style, accessibilityRole, accessibilityLabel } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: items, accessibilityRole, accessibilityLabel, children: null };
   items = [tmp.container, style];
   let tmp4 = null;
@@ -36,7 +27,7 @@ export default function CardSection(arg0) {
     const items1 = [tmp.title, titleStyle];
     obj[0] = items1;
     obj[2] = title;
-    tmp4 = callback(LegacyText, obj);
+    tmp4 = callback(_modDef8115, obj);
   }
   const items2 = [tmp4, , ];
   let tmp8 = null;

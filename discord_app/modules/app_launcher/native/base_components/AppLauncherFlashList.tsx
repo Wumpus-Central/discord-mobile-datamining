@@ -1,28 +1,28 @@
 // discord_app/modules/app_launcher/native/base_components/AppLauncherFlashList.tsx
-import importAllResult from "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { context } from "../../../voice_panel/native/controls/utils/createUseAnimatedScrollLock.tsx";
+import context from "context" /* 11280 */;
+import importAllResult from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 let forwardRefResult = importAllResult.forwardRef((simultaneousHandlers) => {
   let obj = simultaneousHandlers(9565);
   simultaneousHandlers = simultaneousHandlers.simultaneousHandlers;
   const items = [simultaneousHandlers];
   let memo = importAllResult.useMemo(() => {
     if (null == simultaneousHandlers) {
-      let forwardRefResult = outer1_3;
+      let forwardRefResult = closure_1_3;
     } else {
-      forwardRefResult = outer1_2.forwardRef((arg0, ref) => {
-        const memo = outer1_2.useMemo(() => {
-          const Gesture = outer1_0(outer1_1[3]).Gesture;
+      forwardRefResult = closure_1_2.forwardRef((arg0, ref) => {
+        const memo = closure_1_2.useMemo(() => {
+          const Gesture = closure_1_0(closure_1_1[3]).Gesture;
           return Gesture.Native().simultaneousWithExternalGesture(closure_0);
         }, []);
         let obj = { gesture: memo, children: null };
         obj = { ref };
         const merged = Object.assign(arg0);
-        obj[1] = outer1_4(outer1_3, obj);
-        return outer1_4(outer1_0(outer1_1[3]).GestureDetector, obj);
+        obj[1] = closure_1_4(closure_1_3, obj);
+        return closure_1_4(closure_1_0(closure_1_1[3]).GestureDetector, obj);
       });
     }
     return forwardRefResult;
@@ -42,7 +42,7 @@ let forwardRefResult = importAllResult.forwardRef((simultaneousHandlers) => {
   return tmp5;
 });
 forwardRefResult.displayName = "AppLauncherFlashList";
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherFlashList.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherFlashList.tsx");
 
 export default forwardRefResult;
 export const useAppLauncherFlashListProps = function useAppLauncherFlashListProps(arg0) {

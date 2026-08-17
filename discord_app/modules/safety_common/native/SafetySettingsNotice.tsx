@@ -1,52 +1,49 @@
 // discord_app/modules/safety_common/native/SafetySettingsNotice.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { SafetySettingsNoticeAction as closure_4 } from "SafetyToastType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { SafetySettingsNoticeAction as closure_4 } from "SafetyToastType" /* 5430 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { blockedIgnoredRedirect: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.xs, borderColor: require("Themes").colors.TEXT_LINK, borderWidth: 1, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_INFO };
+createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.TEXT_LINK, borderWidth: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_INFO };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("SafetyToastType").fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/safety_common/native/SafetySettingsNotice.tsx");
 
 export default function SafetySettingsNotice(noticeType) {
-  let label;
-  let labelHook;
   ({ label, labelHook } = noticeType);
   noticeType = noticeType.noticeType;
   const count = noticeType.count;
   let React;
   const items = [noticeType];
   const effect = React.useEffect(() => {
-    const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, outer1_4.VIEWED);
+    const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, closure_1_4.VIEWED);
   }, items);
   const items1 = [noticeType, labelHook];
   React = React.useCallback(() => {
     labelHook();
-    const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, outer1_4.LEARN_MORE);
+    const result = labelHook(noticeType[6]).trackSafetySettingsNoticeAnalytics(noticeType, closure_1_4.LEARN_MORE);
   }, items1);
-  let obj = { style: createCacheKey().blockedIgnoredRedirect, children: null };
+  let obj = { style: callback2().blockedIgnoredRedirect, children: null };
   const items2 = [callback(labelHook(noticeType[7]).CircleInformationIcon, { color: "text-link" }), ];
   obj = { style: { flexShrink: 1 }, variant: "heading-sm/medium", children: null };
   if (null != count) {
     const intl2 = tmp6(tmp7[9]).intl;
     obj = { hook: null, count: null };
     obj[0] = function hook(children) {
-      return outer1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: noop, children });
+      return closure_1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: closure_2, children });
     };
     obj[1] = count;
     let formatResult = intl2.format(label, obj);
   } else {
     const intl = tmp6(tmp7[9]).intl;
-    const obj1 = { hook: null };
+    obj1 = { hook: null };
     obj1[0] = function hook(children) {
-      return outer1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: noop, children });
+      return closure_1_5(labelHook(noticeType[8]).Text, { role: "link", variant: "heading-sm/medium", color: "text-link", onPress: closure_2, children });
     };
     formatResult = intl.format(label, obj1);
   }

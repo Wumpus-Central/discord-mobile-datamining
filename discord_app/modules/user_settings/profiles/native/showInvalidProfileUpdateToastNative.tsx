@@ -1,16 +1,18 @@
 // discord_app/modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx
-import { registerAsset } from "../../../../../_runtime/08143_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
-const result = require("Themes").fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import registerAssetDefault from "registerAsset" /* 8143 */;
+
+const result = set.fileFinishedImporting("modules/user_settings/profiles/native/showInvalidProfileUpdateToastNative.tsx");
 
 export const showGenericProfileUpdateFailureToast = function showGenericProfileUpdateFailureToast(avatar) {
-  let obj = dispatcher;
-  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: registerAsset, iconColor: Themes.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true };
+  let obj = dispatcherDefault;
+  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: registerAssetDefault, iconColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true };
   obj.open(obj);
 };
 export const showGenericGuildProfileUpdateFailureToast = function showGenericGuildProfileUpdateFailureToast(avatar) {
-  let obj = dispatcher;
-  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: registerAsset, iconColor: Themes.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true };
+  let obj = dispatcherDefault;
+  obj = { key: "USER_SETTINGS_UPDATE_FAILURE", content: avatar, icon: registerAssetDefault, iconColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL, recolorLegacyIcon: true };
   obj.open(obj);
 };

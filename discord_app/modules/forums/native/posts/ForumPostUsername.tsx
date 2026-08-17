@@ -1,28 +1,16 @@
 // discord_app/modules/forums/native/posts/ForumPostUsername.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { useForumChannelStore } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { set } from "../../../../../discord_common/js/shared/shared-constants/ForumLayout.tsx";
-import { useChatWidth } from "../../../chat/native/useChatWidth.tsx";
-import { useLoadForumUnreadCounts } from "../../ForumHooks.tsx";
+import noopAll from "noop" /* 19 */;
+import set from "set" /* 1401 */;
+import useLoadForumUnreadCounts from "useLoadForumUnreadCounts" /* 8513 */;
+import useChatWidthDefault from "useChatWidth" /* 10718 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { useForumChannelStore } from "set" /* 11177 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function ForumPostUsername(arg0) {
-  let authorColor;
-  let authorColors;
-  let authorId;
-  let authorName;
-  let containerStyle;
-  let hasUnreads;
-  let roleDotStyle;
-  let suffix;
-  let textStyle;
-  let thread;
   ({ thread, authorId, authorName, authorColor, authorColors } = arg0);
   ({ containerStyle, roleDotStyle, textStyle, suffix, hasUnreads } = arg0);
   const tmp = callback2();
@@ -30,9 +18,9 @@ function ForumPostUsername(arg0) {
   if (useForumChannelStore(thread.parent_id).layoutType === set.ForumLayout.GRID) {
     num = 72;
   }
-  const diff = useChatWidth() - tmp2(11182).GRID_HORIZONTAL_PADDING - num;
+  const diff = useChatWidthDefault() - tmp2(11182).GRID_HORIZONTAL_PADDING - num;
   let tmp2Result = tmp2(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => roleStyle.roleStyle);
   if ("username" === stateFromStores) {
     if (null != authorColor) {
@@ -47,7 +35,7 @@ function ForumPostUsername(arg0) {
     let tmp19Result = null;
     if (null != authorName) {
       obj = { style: null, accessibilityRole: "button", children: null };
-      const obj1 = { maxWidth: null };
+      obj1 = { maxWidth: null };
       obj1[0] = diff;
       const merged = Object.assign(tmp.authorContainer);
       const items1 = [obj1, tmp9, containerStyle];
@@ -81,18 +69,12 @@ function ForumPostUsername(arg0) {
     return tmp19Result;
   }
 }
+noopAll;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 }, roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 }, authorName: { overflow: "hidden", flexWrap: "nowrap" } });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/native/posts/ForumPostUsername.tsx");
 
 export const ForumPostAuthor = function ForumPostAuthor(thread) {
-  let author;
-  let containerStyle;
-  let hasUnreads;
-  let roleDotStyle;
-  let suffix;
-  let textStyle;
-  let user;
   thread = thread.thread;
   ({ hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
   let obj = useLoadForumUnreadCounts;
@@ -139,15 +121,6 @@ export const ForumPostAuthor = function ForumPostAuthor(thread) {
   return tmp5Result;
 };
 export const ForumPostMessageAuthor = function ForumPostMessageAuthor(thread) {
-  let authorColor;
-  let authorColors;
-  let authorName;
-  let containerStyle;
-  let hasUnreads;
-  let message;
-  let roleDotStyle;
-  let suffix;
-  let textStyle;
   thread = thread.thread;
   ({ message, hasUnreads, suffix, containerStyle, roleDotStyle, textStyle } = thread);
   let obj = useLoadForumUnreadCounts;

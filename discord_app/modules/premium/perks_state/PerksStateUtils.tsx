@@ -1,9 +1,10 @@
 // discord_app/modules/premium/perks_state/PerksStateUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { create } from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { PerkConfigType } from "types.tsx";
+import fromStringAll from "fromString" /* 506 */;
+import PerkConfigType from "PerkConfigType" /* 1939 */;
+import create from "create" /* 1940 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function parseServerPerkConfigKind(kind) {
   if (null != kind.kind) {
     const type = kind.kind.type;
@@ -38,11 +39,11 @@ function getPerkSource(perks, MONTHLY_ORBS) {
         const rounded = Math.floor(MONTHLY_ORBS / 64);
         let hasItem = rounded < activePerksBitmask.length;
         if (hasItem) {
-          const obj = importAll(506);
-          const obj2 = importAll(506);
-          const deserializeResult = importAll(506).deserialize(activePerksBitmask[rounded]);
-          hasItem = obj.has(deserializeResult, importAll(506).getFlag(MONTHLY_ORBS % 64));
-          const obj3 = importAll(506);
+          const obj = fromStringAll;
+          const obj2 = fromStringAll;
+          const deserializeResult = fromStringAll.deserialize(activePerksBitmask[rounded]);
+          hasItem = obj.has(deserializeResult, fromStringAll.getFlag(MONTHLY_ORBS % 64));
+          const obj3 = fromStringAll;
         }
         flag = hasItem;
       }
@@ -54,7 +55,7 @@ function getPerkSource(perks, MONTHLY_ORBS) {
     return source;
   }
 }
-const result = require("fromString").fileFinishedImporting("modules/premium/perks_state/PerksStateUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/perks_state/PerksStateUtils.tsx");
 
 export const parseServerPerks = function parseServerPerks(perks) {
   if (null == perks) {
@@ -91,11 +92,11 @@ export const hasPerk = function hasPerk(perks, MONTHLY_ORBS) {
     const rounded = Math.floor(MONTHLY_ORBS / 64);
     let hasItem = rounded < activePerksBitmask.length;
     if (hasItem) {
-      const obj = importAll(506);
-      const obj2 = importAll(506);
-      const deserializeResult = importAll(506).deserialize(activePerksBitmask[rounded]);
-      hasItem = obj.has(deserializeResult, importAll(506).getFlag(MONTHLY_ORBS % 64));
-      const obj3 = importAll(506);
+      const obj = fromStringAll;
+      const obj2 = fromStringAll;
+      const deserializeResult = fromStringAll.deserialize(activePerksBitmask[rounded]);
+      hasItem = obj.has(deserializeResult, fromStringAll.getFlag(MONTHLY_ORBS % 64));
+      const obj3 = fromStringAll;
     }
     return hasItem;
   }

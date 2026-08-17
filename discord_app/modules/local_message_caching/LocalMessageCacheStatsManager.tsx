@@ -1,11 +1,10 @@
 // discord_app/modules/local_message_caching/LocalMessageCacheStatsManager.tsx
-import ME from "ME";
-import "initialize";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { recordChannelFetchStart } from "MessageCacheStats.tsx";
+import set from "set" /* 2 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import initializeDefault from "initialize" /* 5038 */;
+import recordChannelFetchStartDefault from "recordChannelFetchStart" /* 5082 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 function makeLogLine(channelId) {
   const items = [channelId.channelId, , , ];
   let str = "-1";
@@ -38,13 +37,13 @@ function makeLogLine(channelId) {
 function handleAppStateUpdate(state) {
   if (state.state === constants2.BACKGROUND) {
     const _Array = Array;
-    const fetchLogs = recordChannelFetchStart.fetchLogs;
+    const fetchLogs = recordChannelFetchStartDefault.fetchLogs;
     const mapped = Array.from(fetchLogs.values()).map(makeLogLine);
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { num_channels_fetch_started: null, num_channels_local_cached: null, num_channels_fetched_network: null, num_times_backgrounded: null, fetch_entries: null };
-    obj[0] = recordChannelFetchStart.channelsFetchStarted.size;
-    obj[1] = recordChannelFetchStart.channelsFetchedWithLocalMessages.size;
-    obj[2] = recordChannelFetchStart.channelsFetchedNetwork.size;
+    obj[0] = recordChannelFetchStartDefault.channelsFetchStarted.size;
+    obj[1] = recordChannelFetchStartDefault.channelsFetchedWithLocalMessages.size;
+    obj[2] = recordChannelFetchStartDefault.channelsFetchedNetwork.size;
     const sum = c4 + 1;
     c4 = sum;
     obj[3] = sum;
@@ -55,6 +54,7 @@ function handleAppStateUpdate(state) {
 }
 ({ AnalyticEvents: obj1, AppStates: c3 } = ME);
 let c4 = 0;
+initializeDefault;
 let prototype = function LocalMessageCacheStatsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { APP_STATE_UPDATE: handleAppStateUpdate };
@@ -63,6 +63,6 @@ let prototype = function LocalMessageCacheStatsManager() {
 class prototype extends tmp3 {
 }
 prototype = new prototype();
-const result = require("expandEventProperties").fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
+const result = set.fileFinishedImporting("modules/local_message_caching/LocalMessageCacheStatsManager.tsx");
 
 export default prototype;

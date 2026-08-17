@@ -1,18 +1,20 @@
 // discord_app/modules/report_to_mod/ReportToModUtils.tsx
-import handleLoadThreadsSuccess from "handleLoadThreadsSuccess";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import reinjectEphemerals from "reinjectEphemerals";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ReportToModPermissions } from "ReportToModPermissions";
-import { canReportUser } from "../../utils/ReportUtils.tsx";
-import { getContextForPermission } from "../guild_mod_dash_member_safety/MemberSafetyPermissionsUtils.tsx";
-import { isCurrentUserTeen } from "../self_mod/SelfModUtils.tsx";
-import { getGuildModeratorReportChannelId } from "getGuildModeratorReportChannelId.tsx";
-import { getGuildModeratorReportingEnabled } from "getGuildModeratorReportingEnabled.tsx";
+import fromStringAll from "fromString" /* 506 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import isCurrentUserTeen from "isCurrentUserTeen" /* 5005 */;
+import getGuildModeratorReportChannelIdDefault from "getGuildModeratorReportChannelId" /* 5291 */;
+import getGuildModeratorReportingEnabledDefault from "getGuildModeratorReportingEnabled" /* 5292 */;
+import getContextForPermission from "getContextForPermission" /* 7231 */;
+import canReportUser from "canReportUser" /* 7267 */;
+import closure_4 from "handleLoadThreadsSuccess" /* 7239 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "reinjectEphemerals" /* 4994 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { ReportToModPermissions } from "ReportToModPermissions" /* 7266 */;
 
-const require = arg1;
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/report_to_mod/ReportToModUtils.tsx");
 
 export const canReportMessageToMods = function canReportMessageToMods(message) {
   if (obj.canReportUser(message.author)) {
@@ -24,7 +26,7 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
       if (null == guild) {
         return false;
       } else {
-        return getGuildModeratorReportingEnabled(guild) && null != getGuildModeratorReportChannelId(guild);
+        return getGuildModeratorReportingEnabledDefault(guild) && null != getGuildModeratorReportChannelIdDefault(guild);
       }
     }
   } else {
@@ -35,7 +37,7 @@ export const canReportMessageToMods = function canReportMessageToMods(message) {
 export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [createGuildRecordFromRust, mergeGuildAvatar];
+    const items = [closure_6, closure_8];
     tmp = items;
   }
   let obj = getContextForPermission;
@@ -46,19 +48,19 @@ export const canAccessReportsChannel = function canAccessReportsChannel(arg0) {
     const guild = contextForPermission.guild;
     let tmp7 = null == guild;
     if (!tmp7) {
-      tmp7 = !getGuildModeratorReportingEnabled(guild);
+      tmp7 = !getGuildModeratorReportingEnabledDefault(guild);
     }
     if (!tmp7) {
-      tmp7 = null == getGuildModeratorReportChannelId(guild);
+      tmp7 = null == getGuildModeratorReportChannelIdDefault(guild);
     }
     let hasAnyResult = !tmp7;
     if (!tmp7) {
-      const obj2 = importAll(506);
+      const obj2 = fromStringAll;
       obj = { user: null, context: null, checkElevated: false };
       obj[0] = contextForPermission.user;
       obj[1] = guild;
-      hasAnyResult = obj2.hasAny(importAll(4026).computePermissions(obj), ReportToModPermissions);
-      const obj3 = importAll(4026);
+      hasAnyResult = obj2.hasAny(applyOverwritesAll.computePermissions(obj), ReportToModPermissions);
+      const obj3 = applyOverwritesAll;
     }
     return hasAnyResult;
   }
@@ -67,7 +69,7 @@ export const getReportToModChannelId = function getReportToModChannelId(arg0) {
   const guild = store2.getGuild(arg0);
   let tmp2 = null;
   if (null != guild) {
-    tmp2 = getGuildModeratorReportChannelId(guild);
+    tmp2 = getGuildModeratorReportChannelIdDefault(guild);
   }
   return tmp2;
 };
@@ -147,8 +149,6 @@ export const isModeratorReportOrPostChannel = function isModeratorReportOrPostCh
   return tmp;
 };
 export const isSafeToTransitionToReportForCurrentUser = function isSafeToTransitionToReportForCurrentUser(arg0) {
-  let firstMessage;
-  let loaded;
   if (null == arg0) {
     return true;
   } else {

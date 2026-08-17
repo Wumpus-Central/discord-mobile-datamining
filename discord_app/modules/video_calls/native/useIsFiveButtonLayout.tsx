@@ -1,16 +1,16 @@
 // discord_app/modules/video_calls/native/useIsFiveButtonLayout.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useIsConnectedToVoiceChannel } from "../../voice_chat/VoiceChatHooks.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/useIsFiveButtonLayout.tsx");
 
 export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   const _require = id;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_3.getChannel(closure_0));
+  const items = [closure_3];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_3.getChannel(closure_0));
   const obj = _initialize;
   const tmp = _require;
   let isConnectedToVoiceChannel = _useIsConnectedToVoiceChannel.useIsConnectedToVoiceChannel(stateFromStores);
@@ -35,9 +35,9 @@ export const useIsFiveButtonLayout = function useIsFiveButtonLayout(id) {
   }
   const tmp6 = guild_id(8698);
   const tmp6Result = guild_id(8698)(guild_id1, id);
-  const items1 = [createGuildRecordFromRust];
+  const items1 = [closure_4];
   const items2 = [guild_id];
-  const stateFromStores1 = tmp(589).useStateFromStores(items1, () => outer1_4.getGuild(guild_id), items2);
+  const stateFromStores1 = tmp(589).useStateFromStores(items1, () => closure_1_4.getGuild(guild_id), items2);
   if (stateFromStores1 != null) {
     const afkChannelId = stateFromStores1.afkChannelId;
   }

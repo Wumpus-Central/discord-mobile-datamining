@@ -1,23 +1,22 @@
 // discord_app/modules/stage_channels/native/create_channel/AddModerators.tsx
-import _slicedToArray from "_slicedToArray";
-import Permissions from "Permissions";
-import { View } from "Button";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { RowType } from "RowType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import { RowType } from "RowType" /* 8064 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { addMembersContainer: null, moderatorDescriptionContainer: null, errorMessage: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { margin: 16 };
 createCacheKey[2] = { margin: 16, marginBottom: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/stage_channels/native/create_channel/AddModerators.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/create_channel/AddModerators.tsx");
 
 export default function AddModerators(guildId) {
   guildId = guildId.guildId;
@@ -28,7 +27,7 @@ export default function AddModerators(guildId) {
   let React;
   let first1;
   let callback;
-  const tmp3 = createCacheKey();
+  const tmp3 = callback2();
   let obj = guildId(navigation[8]);
   navigation = obj.useNavigation();
   const guild = callback.getGuild(guildId);
@@ -63,7 +62,7 @@ export default function AddModerators(guildId) {
     }
     HermesBuiltin.arraySpread(overwrites, tmp4);
     obj.overwrites = items;
-    return c4(obj);
+    return closure_4(obj);
   }, items);
   const items1 = [callback, navigation, first1, first];
   const layoutEffect = React.useLayoutEffect(() => {
@@ -75,11 +74,11 @@ export default function AddModerators(guildId) {
       stringResult = intl.string(guildId(navigation[13]).t["5Wxrcd"]);
     }
     guildId = stringResult;
-    navigation.setOptions({ headerRight: first ? (() => callback(stringResult(table[14]).HeaderSubmittingIndicator, {})) : (() => outer2_8(guildId(navigation[15]).HeaderActionButton, { text: closure_0, onPress: outer1_6 })) });
+    navigation.setOptions({ headerRight: first ? (() => callback(stringResult(table[14]).HeaderSubmittingIndicator, {})) : (() => closure_2_8(guildId(navigation[15]).HeaderActionButton, { text: closure_0, onPress: closure_1_6 })) });
   }, items1);
   obj = { style: tmp3.addMembersContainer, children: null };
   obj = { style: tmp3.moderatorDescriptionContainer, children: null };
-  const obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
+  obj1 = { variant: "text-sm/medium", color: "text-default", children: null };
   let intl = guildId(navigation[13]).intl;
   obj1[2] = intl.string(guildId(navigation[13]).t.f7VbhF);
   obj[1] = callback(guildId(navigation[16]).Text, obj1);
@@ -94,8 +93,7 @@ export default function AddModerators(guildId) {
     tmp = tmp20(tmp19, obj2);
   }
   items2[1] = tmp;
-  const obj4 = { channel: null, guild, permission: null, inputDesc: null, pendingAdditions: null, setPendingAdditions: null };
-  obj4[2] = guildId(navigation[19]).MODERATE_STAGE_CHANNEL_PERMISSIONS;
+  const obj4 = { channel: null, guild, permission: guildId(navigation[19]).MODERATE_STAGE_CHANNEL_PERMISSIONS, inputDesc: null, pendingAdditions: null, setPendingAdditions: null };
   let intl2 = tmp4(tmp5[13]).intl;
   obj4[3] = intl2.string(guildId(navigation[13]).t["Ch6+n4"]);
   obj4[4] = first1;

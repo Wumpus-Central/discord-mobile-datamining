@@ -1,28 +1,26 @@
 // discord_app/modules/visual_effect_view/native/overrides/VEVOO.tsx
-import { ScrollView } from "toggle";
-import getUserAgnosticState from "getUserAgnosticState";
-import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "getUserAgnosticState" /* 4737 */;
+import { DEV_WIDGET_SIZE } from "STORAGE_KEY_LOG_DISPATCHES" /* 710 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function VisualEffectViewOverrideOverlay_(arg0) {
   const x = arg0.x;
   const _require = x;
   const y = arg0.y;
-  const importDefault = y;
+  importDefault = y;
   let PX_8;
   const tmp = callback3();
   PX_8 = importDefault(PX_8[6]).space.PX_8;
   let obj = _require(PX_8[7]);
   const fn = function _() {
     const obj = { top: null, left: null };
-    const sum = closure_1.get() - PX_8 + outer1_5;
+    const sum = closure_1.get() - PX_8 + closure_1_5;
     obj[0] = x(PX_8[8]).withSpring(sum, x(PX_8[9]).springUnclamped);
     const obj2 = x(PX_8[8]);
     const diff = x.get() - PX_8;
@@ -36,15 +34,13 @@ function VisualEffectViewOverrideOverlay_(arg0) {
   const animatedStyle = obj.useAnimatedStyle(fn);
   obj = { style: items, children: null };
   items = [tmp.wrapper, animatedStyle];
-  const obj1 = { style: tmp.scrollView, children: null };
+  obj1 = { style: tmp.scrollView, children: null };
   let obj2 = { title: "Blur View Global Overrides", sectionBodyStyle: tmp.scrollViewContent, children: null };
   const items1 = [callback(importDefault(PX_8[11]), {}), callback(importDefault(PX_8[12]), {}), callback(importDefault(PX_8[13]), {})];
   obj2[2] = items1;
   obj1[1] = callback2(_require(PX_8[10]).FormSection, obj2);
   const items2 = [callback(ScrollView, obj1), ];
-  const obj3 = { styles: tmp.close, type: "neutral", IconComponent: null, onPress: null, accessibilityLabel: "Close" };
-  obj3[2] = _require(PX_8[15]).XSmallIcon;
-  obj3[3] = arg0.onClose;
+  const obj3 = { styles: tmp.close, type: "neutral", IconComponent: _require(PX_8[15]).XSmallIcon, onPress: arg0.onClose, accessibilityLabel: "Close" };
   items2[1] = callback(importDefault(PX_8[14]), obj3);
   obj[1] = items2;
   return callback2(importDefault(PX_8[7]).View, obj);
@@ -52,23 +48,23 @@ function VisualEffectViewOverrideOverlay_(arg0) {
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const styles = createCacheKey.createStyles({ zeroPadding: { paddingVertical: 0, paddingHorizontal: 0 }, zeroPaddingVertical: { paddingVertical: 0 }, zeroPaddingHorizontal: { paddingHorizontal: 0 }, zeroHeight: { height: 0 }, enabledSwitchStyle: { alignSelf: "flex-start" } });
 let obj = { wrapper: null, scrollView: null, scrollViewContent: null, close: null };
-obj = { borderColor: require("Themes").colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_660, borderRadius: require("Themes").radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
-let merged = Object.assign(require("Themes").shadows.SHADOW_MOBILE_NAVIGATOR_X);
+obj = { borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderWidth: 1, backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_660, borderRadius: ThemesDefault.radii.lg, position: "absolute", top: 0, left: 0, width: 300, height: 400 };
+let merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 obj[0] = obj;
-createCacheKey = { borderRadius: require("Themes").radii.lg, paddingTop: require("Themes").space.PX_24, overflow: "hidden" };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg, paddingTop: ThemesDefault.space.PX_24, overflow: "hidden" };
 obj[1] = createCacheKey;
-createCacheKey = { paddingBottom: require("Themes").space.PX_24 };
+createCacheKey = { paddingBottom: ThemesDefault.space.PX_24 };
 obj[2] = createCacheKey;
-const merged1 = Object.assign(require("Themes").shadows.SHADOW_LOW_HOVER);
-obj[3] = { position: "absolute", right: require("Themes").space.PX_8, top: require("Themes").space.PX_8 };
+const merged1 = Object.assign(ThemesDefault.shadows.SHADOW_LOW_HOVER);
+obj[3] = { position: "absolute", right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8 };
 let closure_8 = createCacheKey.createStyles(obj);
 let closure_9 = { code: "function VEVOOTsx1(){const{withSpring,y,px8,DEV_WIDGET_SIZE,springUnclamped,x}=this.__closure;return{top:withSpring(y.get()-px8+DEV_WIDGET_SIZE,springUnclamped),left:withSpring(x.get()-px8,springUnclamped)};}" };
-let obj3 = { position: "absolute", right: require("Themes").space.PX_8, top: require("Themes").space.PX_8 };
+let obj3 = { position: "absolute", right: ThemesDefault.space.PX_8, top: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo(function VisualEffectViewOverrideOverlay(arg0) {
   let obj = initialize;
-  const items = [getUserAgnosticState];
+  const items = [closure_4];
   let tmp = null;
-  if (obj.useStateFromStores(items, () => getUserAgnosticState.get("visual_effect_view_overrides"))) {
+  if (obj.useStateFromStores(items, () => closure_4.get("visual_effect_view_overrides"))) {
     obj = { onClose: null };
     obj[0] = function onClose() {
       callback(table[17]).toggle("visual_effect_view_overrides", false);
@@ -78,7 +74,7 @@ const memoResult = importAllResult.memo(function VisualEffectViewOverrideOverlay
   }
   return tmp;
 });
-const result = require("getUserAgnosticState").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
+const result = require("set").fileFinishedImporting("modules/visual_effect_view/native/overrides/VEVOO.tsx");
 
 export default memoResult;
 export const useVisualEffectViewOverrideSharedStyles = styles;

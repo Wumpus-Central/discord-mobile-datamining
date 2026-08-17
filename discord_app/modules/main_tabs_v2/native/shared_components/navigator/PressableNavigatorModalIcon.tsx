@@ -1,9 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx
-import { jsx } from "jsxProd";
-import { GenericHeaderTitle } from "../HeaderShared.tsx";
-import { PressableNavigatorButtonWrapper } from "PressableNavigatorButtonWrapper.tsx";
+import set from "set" /* 2 */;
+import jsxProd from "jsxProd" /* 21 */;
+import GenericHeaderTitle from "GenericHeaderTitle" /* 8492 */;
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8495 */;
 
-const result = require("GenericHeaderTitle").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/navigator/PressableNavigatorModalIcon.tsx");
 
 export default function PressableNavigatorModalIcon(onPress) {
   let goBack = onPress.onPress;
@@ -14,9 +16,7 @@ export default function PressableNavigatorModalIcon(onPress) {
   if (str === undefined) {
     str = "back";
   }
-  let obj = { source: null, onPress: null, accessibilityLabel: null };
-  obj[0] = importDefault("back" === str ? 8496 : 8500);
-  obj[1] = goBack;
+  let obj = { source: importDefault(tmp6 ? 8496 : 8500), onPress: goBack, accessibilityLabel: null };
   const intl = tmp5(1236).intl;
   const string = intl.string;
   const t = tmp5(1236).t;
@@ -27,5 +27,5 @@ export default function PressableNavigatorModalIcon(onPress) {
   }
   obj = { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) };
   obj[2] = stringResult;
-  return jsx(PressableNavigatorButtonWrapper, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
+  return jsx(PressableNavigatorButtonWrapperDefault, { isModal: true, children: tmp(GenericHeaderTitle.HeaderIconButton, obj) });
 };

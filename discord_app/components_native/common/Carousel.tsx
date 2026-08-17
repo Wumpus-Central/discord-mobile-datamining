@@ -1,29 +1,24 @@
 // discord_app/components_native/common/Carousel.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../design/void/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-let require = arg1;
+require = arg1;
 ({ View: obj1, ScrollView: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { alignItems: "center" }, carouselContentWrapper: { flexDirection: "row" }, pageIndicator: { flexDirection: "row", justifyContent: "space-around", alignItems: "center" }, activeIndicator: null, inactiveIndicator: null };
-createCacheKey = { color: require("Themes").colors.ICON_STRONG };
+createCacheKey = { color: ThemesDefault.colors.ICON_STRONG };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { color: require("Themes").colors.ICON_SUBTLE };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+createCacheKey[4] = { color: ThemesDefault.colors.ICON_SUBTLE };
+let closure_6 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const Component = importAllResult.Component;
 class PageIndicator extends Component {
 }
 PageIndicator.prototype["render"] = function render() {
-  let indicatorSpace;
-  let pageIndicatorStyle;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   const props = this.props;
   const count = props.count;
   const children = [];
@@ -70,7 +65,7 @@ class Carousel extends Component2 {
 }
 Carousel.prototype["render"] = function render() {
   const self = this;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback3(this.context);
   let tmp2 = true === this.props.pageIndictor;
   if (tmp2) {
     tmp2 = length > 1;
@@ -104,7 +99,7 @@ Carousel.prototype["render"] = function render() {
 };
 Carousel.contextType = require("ManaContext").ThemeContext;
 Carousel.defaultProps = { pageIndictor: true, width: 375 };
-obj1 = { color: require("Themes").colors.ICON_SUBTLE };
-const result = require("jsxProd").fileFinishedImporting("components_native/common/Carousel.tsx");
+obj1 = { color: ThemesDefault.colors.ICON_SUBTLE };
+const result = require("set").fileFinishedImporting("components_native/common/Carousel.tsx");
 
 export default Carousel;

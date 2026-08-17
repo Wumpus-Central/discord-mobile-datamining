@@ -1,6 +1,6 @@
 // discord_app/modules/payments/native/hooks/useOrderContext.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/payments/native/hooks/useOrderContext.tsx");
 
@@ -9,13 +9,13 @@ export const useOrderContext = function useOrderContext(initialOrder, NativeGift
   first = tmp[0];
   React = tmp3;
   const callback = React.useCallback((arg0) => {
-    let _slicedToArray = arg0;
-    tmp3((arg0) => {
+    closure_0 = arg0;
+    callback((arg0) => {
       let tmp = arg0;
       if (null != arg0) {
         const obj = {};
         const merged = Object.assign(arg0);
-        obj.revision = _slicedToArray;
+        obj.revision = closure_0;
         tmp = obj;
       }
       return tmp;
@@ -23,7 +23,7 @@ export const useOrderContext = function useOrderContext(initialOrder, NativeGift
   }, []);
   const items = [first, tmp[1], callback];
   return React.useMemo(() => {
-    const obj = { order: first, setOrder: noop, setRevision: callback, orderId: null, orderLineItemId: null, revision: null };
+    const obj = { order: first, setOrder: closure_1, setRevision: callback, orderId: null, orderLineItemId: null, revision: null };
     let id;
     if (first != null) {
       id = tmp.id;

@@ -1,27 +1,26 @@
 // discord_app/modules/core/native/handleAppStateChanged.tsx
-import fetchFingerprint from "fetchFingerprint";
-import getState from "getState";
-import ME from "ME";
-import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { createRTCConnection } from "../../../stores/RTCConnectionStore.tsx";
-import { getDeviceMetadata } from "../../tti_analytics/native/TTIAnalyticsUtils.tsx";
-import { setSystemTheme } from "../../user_settings/ThemeActionCreators.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import isTracingDefault from "isTracing" /* 10 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import setSystemTheme from "setSystemTheme" /* 4222 */;
+import createRTCConnection from "createRTCConnection" /* 4539 */;
+import getDeviceMetadata from "getDeviceMetadata" /* 5066 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "getState" /* 7383 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ AnalyticEvents: c5, AppStates: closure_6 } = ME);
-const error = new require("timestamp")("index.native.tsx");
-const tmp3 = new require("timestamp")("index.native.tsx");
-let result = require("ME").fileFinishedImporting("modules/core/native/handleAppStateChanged.tsx");
+let closure_7 = new timestampDefault("index.native.tsx");
+const tmp3 = new timestampDefault("index.native.tsx");
+let result = require("set").fileFinishedImporting("modules/core/native/handleAppStateChanged.tsx");
 
 export default function handleAppStateChanged(state) {
   state = state.getState();
-  let obj = isTracing;
+  let obj = isTracingDefault;
   obj.markAndLog(closure_7, "\u{1F3C3}", "AppState changing from " + state + " to " + state);
   obj = { type: "APP_STATE_UPDATE", state };
-  dispatcher.dispatch(obj);
+  dispatcherDefault.dispatch(obj);
   let isAuthenticatedResult = state === constants2.BACKGROUND && state === tmp6.ACTIVE;
   if (isAuthenticatedResult) {
     isAuthenticatedResult = authenticated.isAuthenticated();

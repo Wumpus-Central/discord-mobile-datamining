@@ -1,34 +1,27 @@
 // discord_app/modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import preloadDefault from "preload" /* 5449 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { image: { width: "100%" }, content: null, description: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { marginBottom: require("Themes").space.PX_16, flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginBottom: require("Themes").space.PX_16, flex: 1 };
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
+createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginBottom: ThemesDefault.space.PX_16, flex: 1 };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/feature_education/GenericUpsellActionSheet.tsx");
 
 export default function GenericUpsellActionSheet(markAsDismissed) {
-  let body;
-  let bottomSheetClose;
-  let bottomSheetRef;
-  let cta;
-  let header;
-  let imageSource;
-  let onCTAPress;
   markAsDismissed = markAsDismissed.markAsDismissed;
   ({ imageSource, header, body, onCTAPress, cta } = markAsDismissed);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = markAsDismissed(7688);
   bottomSheetRef = obj.useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
@@ -36,14 +29,14 @@ export default function GenericUpsellActionSheet(markAsDismissed) {
     ref: bottomSheetRef,
     startExpanded: true,
     onDismiss() {
-      return markAsDismissed(outer1_4.UNKNOWN);
+      return markAsDismissed(closure_1_4.UNKNOWN);
     },
     handleDisabled: true,
     header: null,
     children: null
   };
   obj = { children: null };
-  const items = [callback(preload, { source: imageSource, style: tmp.image }), callback(markAsDismissed(7124).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
+  const items = [callback(preloadDefault, { source: imageSource, style: tmp.image }), callback(markAsDismissed(7124).ActionSheetHeaderBar, { variant: "floating", onPress: bottomSheetClose })];
   obj[0] = items;
   obj[4] = callback2(View, obj);
   const obj2 = { style: tmp.content, children: null };

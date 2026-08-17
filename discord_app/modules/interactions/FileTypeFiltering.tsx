@@ -1,11 +1,11 @@
 // discord_app/modules/interactions/FileTypeFiltering.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import _getSystemLocale from "_getSystemLocale";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "_getSystemLocale" /* 1994 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
 
-const require = arg1;
+require = arg1;
 function fileTypesFormattedStringHelper(arr, locale) {
   if (null != arr) {
     if (0 !== arr.length) {
@@ -43,14 +43,14 @@ let closure_7 = ["mp4", "mov", "qt", "webm"];
 let closure_8 = ["mp3", "m4a", "wav", "ogg", "opus", "flac"];
 let closure_9 = { jpg: ["jpeg", "jfif", "heic", "heif"], mov: ["mp4", "qt"] };
 let closure_10 = { jpg: ["jpeg", "jfif"], mp4: ["mov", "qt"] };
-const result = require("_getSystemLocale").fileFinishedImporting("modules/interactions/FileTypeFiltering.tsx");
+const result = require("set").fileFinishedImporting("modules/interactions/FileTypeFiltering.tsx");
 
 export const useFileTypesFormattedString = function useFileTypesFormattedString(fileTypes) {
   const _require = fileTypes;
-  const items = [_getSystemLocale];
+  const items = [closure_5];
   const stateFromStores = _initialize.useStateFromStores(items, () => locale.locale);
   const items1 = [fileTypes, stateFromStores];
-  return React.useMemo(() => outer1_11(closure_0, stateFromStores), items1);
+  return React.useMemo(() => closure_1_11(closure_0, stateFromStores), items1);
 };
 export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
   if (null != fileTypes) {
@@ -83,7 +83,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
       })(mapped);
     }
     const tmp24 = fileTypesFormattedStringHelper(fileTypes, locale.locale);
-    const importDefault = tmp24;
+    closure_1 = tmp24;
     let obj = { allowedExtensions: null, typesFormattedString: null, validateFilenames: null, showInvalidFileTypeAlert: null, mediaFilesAllowed: null };
     obj[0] = items3;
     obj[1] = tmp24;
@@ -91,7 +91,7 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
       let everyResult = 0 === items3.length;
       if (!everyResult) {
         everyResult = arr.every((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           return closure_0.some((arg0) => {
             const formatted = closure_0.toLowerCase();
             return formatted.endsWith("." + arg0);
@@ -101,13 +101,13 @@ export const getFileTypeFiltering = function getFileTypeFiltering(fileTypes) {
       return everyResult;
     };
     obj[3] = function showInvalidFileTypeAlert() {
-      let obj = tmp24(outer1_2[6]);
+      let obj = callback(closure_1_2[6]);
       obj = { title: null, body: null };
-      const intl = items3(outer1_2[4]).intl;
-      obj[0] = intl.string(items3(outer1_2[4]).t.azO1Pe);
-      const intl2 = items3(outer1_2[4]).intl;
-      obj = { types: tmp24 };
-      obj[1] = intl2.formatToPlainString(items3(outer1_2[4]).t["5U9LSo"], obj);
+      const intl = items3(closure_1_2[4]).intl;
+      obj[0] = intl.string(items3(closure_1_2[4]).t.azO1Pe);
+      const intl2 = items3(closure_1_2[4]).intl;
+      obj = { types: callback };
+      obj[1] = intl2.formatToPlainString(items3(closure_1_2[4]).t["5U9LSo"], obj);
       obj.show(obj);
     };
     obj[4] = 0 === items3.length || items3.some((arg0) => {
@@ -132,19 +132,19 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
         if (arr.includes("image")) {
           const push = mapped.push;
           const items = [];
-          HermesBuiltin.arraySpread(outer1_6, 0);
+          HermesBuiltin.arraySpread(closure_1_6, 0);
           HermesBuiltin.apply(items, mapped);
         }
         if (arr.includes("video")) {
           const push2 = mapped.push;
           const items1 = [];
-          HermesBuiltin.arraySpread(outer1_7, 0);
+          HermesBuiltin.arraySpread(closure_1_7, 0);
           HermesBuiltin.apply(items1, mapped);
         }
         if (arr.includes("audio")) {
           const push3 = mapped.push;
           const items2 = [];
-          HermesBuiltin.arraySpread(outer1_8, 0);
+          HermesBuiltin.arraySpread(closure_1_8, 0);
           HermesBuiltin.apply(items2, mapped);
         }
         (function getExtensionsForOutputs(mapped) {
@@ -161,18 +161,18 @@ export const useFileTypeFiltering = function useFileTypeFiltering(fileTypes) {
   _require = fileTypes;
   stateFromStores = undefined;
   let obj = _require(memo1[5]);
-  let items1 = [_getSystemLocale];
+  let items1 = [closure_5];
   stateFromStores = obj.useStateFromStores(items1, () => locale.locale);
   let items2 = [fileTypes, stateFromStores];
-  memo1 = React.useMemo(() => outer1_11(closure_0, stateFromStores), items2);
+  memo1 = React.useMemo(() => closure_1_11(closure_0, stateFromStores), items2);
   const items3 = [memo];
   const items4 = [memo1];
   const callback = React.useCallback((arr) => {
-    let closure_0 = stateFromStores;
+    closure_0 = stateFromStores;
     let everyResult = 0 === stateFromStores.length;
     if (!everyResult) {
       everyResult = arr.every((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         return closure_0.some((arg0) => {
           const formatted = closure_0.toLowerCase();
           return formatted.endsWith("." + arg0);

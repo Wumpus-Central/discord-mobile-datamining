@@ -1,17 +1,13 @@
 // discord_app/modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx
-import set from "set";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/guild_settings/useCreatorMonetizationOnboardingMarketing.tsx");
 
 export default function useCreatorMonetizationOnboardingMarketing(arg0) {
-  let dependencyMap;
-  let importAll;
-  let tmp2;
-  let tmp4;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   [tmp2, importAll] = callback(React.useState(true), 2);
   const tmp = callback(React.useState(true), 2);
   [tmp4, dependencyMap] = callback(React.useState(), 2);
@@ -19,10 +15,10 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
   callback = creatorMonetizationOnboardingMarketing[1];
   closure_0 = undefined;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -50,13 +46,13 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
-              let callback;
-              outer1_1(true);
-              outer1_2(undefined);
-              let c4 = 2;
-              let obj1 = outer2_1(outer2_2[3]);
+              closure_2 = tmp4;
+              let callback2 = tmp8;
+              callback = undefined;
+              callback2(true);
+              closure_1_2(undefined);
+              c4 = 2;
+              obj1 = closure_2_1(closure_2_2[3]);
               c5 = 3;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -65,34 +61,34 @@ export default function useCreatorMonetizationOnboardingMarketing(arg0) {
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            outer1_1(false);
-            throw set;
+            callback2(false);
+            throw closure_3;
           } else {
             if (2 === tmp8) {
               c4 = 1;
-              outer1_1 = set;
-              const aPIError = new callback(outer2_2[4]).APIError(outer1_1);
-              outer1_2(aPIError);
+              callback2 = closure_3;
+              const aPIError = new callback(closure_2_2[4]).APIError(callback2);
+              closure_1_2(aPIError);
               c4 = 0;
-              outer1_1(false);
+              callback2(false);
               c6 = 3;
             } else if (arg0 === 1) {
               c6 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
               callback = arg1;
-              outer1_3(callback);
+              closure_1_3(callback);
               c4 = 1;
             }
             c4 = 0;
-            outer1_1(false);
+            callback2(false);
             c6 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           }
         } catch (tmp45) {
-          set = tmp45;
+          closure_3 = tmp45;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp45;

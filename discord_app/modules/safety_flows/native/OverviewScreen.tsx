@@ -1,24 +1,22 @@
 // discord_app/modules/safety_flows/native/OverviewScreen.tsx
-import set from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ content: { margin: "auto", overflow: "visible", justifyContent: "center", textAlign: "center", alignItems: "center" }, title: { textAlign: "center", textTransform: "uppercase", lineHeight: 50 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/OverviewScreen.tsx");
 
 export default function OverviewScreen() {
   let tmp = callback2();
   let obj = task(17089);
   task = obj.useSafetyFlowTask().task;
-  let obj1 = task(1500);
+  obj1 = task(1500);
   const navigation = obj1.useNavigation();
   const items = [task, navigation];
   const callback = React.useCallback(() => {
-    const screensForTaskType = task(outer1_2[5]).getScreensForTaskType(task.task_type);
+    const screensForTaskType = task(closure_1_2[5]).getScreensForTaskType(task.task_type);
     let tmp = null != screensForTaskType;
     if (tmp) {
       tmp = screensForTaskType.length > 0;
@@ -30,9 +28,7 @@ export default function OverviewScreen() {
       navigation.push(screensForTaskType[0]);
     }
   }, items);
-  obj = { spacing: null, style: null, children: null };
-  obj[0] = navigation(712).space.PX_16;
-  obj[1] = tmp.content;
+  obj = { spacing: navigation(712).space.PX_16, style: tmp.content, children: null };
   obj = { variant: "display-lg", style: tmp.title, children: null };
   const intl = task(1236).intl;
   obj[2] = intl.string(navigation(2597).RRamMH);
@@ -41,17 +37,14 @@ export default function OverviewScreen() {
   const intl2 = task(1236).intl;
   obj1[2] = intl2.string(navigation(2597).I2Ctk1);
   items1[1] = callback(task(4734).Text, obj1);
-  const obj2 = { spacing: null, children: null };
-  obj2[0] = navigation(712).space.PX_8;
+  const obj2 = { spacing: navigation(712).space.PX_8, children: null };
   const flow_context = task.flow_context;
   let mapped;
   if (flow_context != null) {
     const tasks = flow_context.tasks;
     if (tasks != null) {
       mapped = tasks.map((task_type) => {
-        const obj = { tip: null, index: null };
-        obj[0] = task(17084).TASK_TYPE_TO_TITLE[task_type.task_type];
-        obj[1] = arg1 + 1;
+        const obj = { tip: task(17084).TASK_TYPE_TO_TITLE[task_type.task_type], index: arg1 + 1 };
         return callback(navigation(6692), obj, task_type.task_type);
       });
     }

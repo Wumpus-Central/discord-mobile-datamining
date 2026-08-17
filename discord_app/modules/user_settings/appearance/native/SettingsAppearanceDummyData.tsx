@@ -1,21 +1,23 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx
-import { StatusTypes } from "ME";
-import { registerAsset } from "../../../../../_runtime/10102_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/13419_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14624_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14625_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14626_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14627_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14628_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14629_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14630_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14631_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14632_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14633_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/14634_registerAsset.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import registerAssetDefault from "registerAsset" /* 10102 */;
+import registerAssetDefault2 from "registerAsset" /* 13419 */;
+import registerAssetDefault3 from "registerAsset" /* 14624 */;
+import registerAssetDefault4 from "registerAsset" /* 14625 */;
+import registerAssetDefault5 from "registerAsset" /* 14626 */;
+import registerAssetDefault6 from "registerAsset" /* 14627 */;
+import registerAssetDefault7 from "registerAsset" /* 14628 */;
+import registerAssetDefault8 from "registerAsset" /* 14629 */;
+import registerAssetDefault9 from "registerAsset" /* 14630 */;
+import registerAssetDefault10 from "registerAsset" /* 14631 */;
+import registerAssetDefault11 from "registerAsset" /* 14632 */;
+import registerAssetDefault12 from "registerAsset" /* 14633 */;
+import registerAssetDefault13 from "registerAsset" /* 14634 */;
 
-const result = require("registerAsset").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
+const StatusTypes = ME.StatusTypes;
+const result = set.fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDummyData.tsx");
 
 export default function _default() {
   const items = [{ id: "1", kind: "messages-header" }, , , , , , , , , , ];
@@ -25,8 +27,8 @@ export default function _default() {
   obj[0] = intl.string(getSystemLocale.t.B6GPzA);
   const intl2 = getSystemLocale.intl;
   obj[1] = intl2.string(getSystemLocale.t["Tnrh/k"]);
-  obj[3] = registerAsset;
-  const items1 = [registerAsset, registerAsset, registerAsset, registerAsset, registerAsset];
+  obj[3] = registerAssetDefault3;
+  const items1 = [registerAssetDefault4, registerAssetDefault5, registerAssetDefault6, registerAssetDefault7, registerAssetDefault8];
   obj[4] = items1;
   const items2 = [obj, ];
   obj = { title: null, subtitle: null, kind: "voice-chat", image: null };
@@ -34,18 +36,18 @@ export default function _default() {
   obj[0] = intl3.string(getSystemLocale.t.YAgqmE);
   const intl4 = getSystemLocale.intl;
   obj[1] = intl4.string(getSystemLocale.t["9YJgal"]);
-  obj[3] = registerAsset;
+  obj[3] = registerAssetDefault9;
   items2[1] = obj;
   obj[2] = items2;
   items[1] = obj;
-  const obj1 = { id: "3", kind: "channel-row", timestamp: null, title: null, preview: null, isUnread: true, avatar1: null };
+  obj1 = { id: "3", kind: "channel-row", timestamp: null, title: null, preview: null, isUnread: true, avatar1: null };
   const intl5 = getSystemLocale.intl;
   obj1[2] = intl5.formatToPlainString(getSystemLocale.t["XIGt+W"], { minutes: 24 });
   const intl6 = getSystemLocale.intl;
   obj1[3] = intl6.string(getSystemLocale.t["mK5Zd+"]);
   const intl7 = getSystemLocale.intl;
   obj1[4] = intl7.string(getSystemLocale.t.cvvVUV);
-  obj1[6] = registerAsset;
+  obj1[6] = registerAssetDefault10;
   items[2] = obj1;
   const obj2 = { id: "4", kind: "channel-row", timestamp: null, title: null, preview: null, isUnread: true, avatar1: null, avatar2: null };
   const intl8 = getSystemLocale.intl;
@@ -54,8 +56,8 @@ export default function _default() {
   obj2[3] = intl9.string(getSystemLocale.t.FpJH9k);
   const intl10 = getSystemLocale.intl;
   obj2[4] = intl10.string(getSystemLocale.t.F1WIrQ);
-  obj2[6] = registerAsset;
-  obj2[7] = registerAsset;
+  obj2[6] = registerAssetDefault11;
+  obj2[7] = registerAssetDefault12;
   items[3] = obj2;
   const obj3 = { id: "5", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl11 = getSystemLocale.intl;
@@ -64,7 +66,7 @@ export default function _default() {
   obj3[3] = intl12.string(getSystemLocale.t.PHbyD7);
   const intl13 = getSystemLocale.intl;
   obj3[4] = intl13.string(getSystemLocale.t.GSuP1s);
-  obj3[5] = registerAsset;
+  obj3[5] = registerAssetDefault2;
   obj3[6] = StatusTypes.IDLE;
   items[4] = obj3;
   const obj4 = { id: "7", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
@@ -74,8 +76,8 @@ export default function _default() {
   obj4[3] = intl15.string(getSystemLocale.t["0HGnUV"]);
   const intl16 = getSystemLocale.intl;
   obj4[4] = intl16.string(getSystemLocale.t["VYL+vm"]);
-  obj4[5] = registerAsset;
-  obj4[6] = registerAsset;
+  obj4[5] = registerAssetDefault;
+  obj4[6] = registerAssetDefault6;
   items[5] = obj4;
   const obj5 = { id: "10", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
   const intl17 = getSystemLocale.intl;
@@ -84,7 +86,7 @@ export default function _default() {
   obj5[3] = intl18.string(getSystemLocale.t["z+f+zN"]);
   const intl19 = getSystemLocale.intl;
   obj5[4] = intl19.string(getSystemLocale.t.Wy2xnv);
-  obj5[5] = registerAsset;
+  obj5[5] = registerAssetDefault12;
   items[6] = obj5;
   const obj6 = { id: "11", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, avatar2: null };
   const intl20 = getSystemLocale.intl;
@@ -93,8 +95,8 @@ export default function _default() {
   obj6[3] = intl21.string(getSystemLocale.t["AYOqO/"]);
   const intl22 = getSystemLocale.intl;
   obj6[4] = intl22.string(getSystemLocale.t.OrbvPP);
-  obj6[5] = registerAsset;
-  obj6[6] = registerAsset;
+  obj6[5] = registerAssetDefault7;
+  obj6[6] = registerAssetDefault;
   items[7] = obj6;
   const obj7 = { id: "12", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl23 = getSystemLocale.intl;
@@ -103,7 +105,7 @@ export default function _default() {
   obj7[3] = intl24.string(getSystemLocale.t["86rWJp"]);
   const intl25 = getSystemLocale.intl;
   obj7[4] = intl25.string(getSystemLocale.t.dFT4dX);
-  obj7[5] = registerAsset;
+  obj7[5] = registerAssetDefault13;
   obj7[6] = StatusTypes.DND;
   items[8] = obj7;
   const obj8 = { id: "13", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null };
@@ -113,7 +115,7 @@ export default function _default() {
   obj8[3] = intl27.string(getSystemLocale.t["z3+vGV"]);
   const intl28 = getSystemLocale.intl;
   obj8[4] = intl28.string(getSystemLocale.t.Zj8Sl1);
-  obj8[5] = registerAsset;
+  obj8[5] = registerAssetDefault7;
   items[9] = obj8;
   const obj9 = { id: "15", kind: "channel-row", timestamp: null, title: null, preview: null, avatar1: null, status: null };
   const intl29 = getSystemLocale.intl;
@@ -122,7 +124,7 @@ export default function _default() {
   obj9[3] = intl30.string(getSystemLocale.t["8SENG2"]);
   const intl31 = getSystemLocale.intl;
   obj9[4] = intl31.string(getSystemLocale.t["2ziAWp"]);
-  obj9[5] = registerAsset;
+  obj9[5] = registerAssetDefault5;
   obj9[6] = StatusTypes.DND;
   items[10] = obj9;
   return items;

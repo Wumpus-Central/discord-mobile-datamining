@@ -1,7 +1,7 @@
 // discord_app/modules/message_request/MessageRequestStore.tsx
-import prototype from "ensureGuildLoaded";
-import "clearAll";
-import set from "set";
+import clearAllDefault from "clearAll" /* 1220 */;
+import prototype from "ensureGuildLoaded" /* 1391 */;
+import set from "set" /* 2 */;
 
 function processChannel(isMessageRequest) {
   let tmp = isMessageRequest.isMessageRequest && !isMessageRequest.isSpam;
@@ -38,7 +38,7 @@ function handleConnectionOpen() {
   const item = values.forEach((arg0) => {
     callback(arg0);
   });
-  let c3 = true;
+  c3 = true;
 }
 function handleMessageRequestAcceptOptimistic(channelId) {
   set1.add(channelId.channelId);
@@ -66,13 +66,14 @@ function handleOverlayInitialize(messageRequestChannelIds) {
   const prop = messageRequestChannelIds.messageRequestChannelIds;
   const item = prop.forEach((arg0) => set.add(arg0));
 }
+clearAllDefault;
 let set = new Set();
 const set1 = new Set();
 let c3 = false;
 let MessageRequestStore;
 class MessageRequestStore extends tmp4 {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {
       CONNECTION_OPEN: handleConnectionOpen,
       CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
@@ -87,7 +88,7 @@ class MessageRequestStore extends tmp4 {
     };
     tmp = new tmp(obj, handleChannelDelete, new.target, tmp);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp;
+    closure_0 = tmp;
     return tmp;
   }
 }
@@ -99,7 +100,7 @@ prototype["loadCache"] = function loadCache() {
   const snapshot = this.readSnapshot(MessageRequestStore.LATEST_SNAPSHOT_VERSION);
   if (null != snapshot) {
     const _Set = Set;
-    const set = new Set(snapshot);
+    set = new Set(snapshot);
   }
 };
 prototype["takeSnapshot"] = function takeSnapshot() {

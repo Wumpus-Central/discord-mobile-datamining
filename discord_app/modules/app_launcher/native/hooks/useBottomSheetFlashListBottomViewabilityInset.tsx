@@ -1,10 +1,10 @@
 // discord_app/modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_4 = { code: "function useBottomSheetFlashListBottomViewabilityInsetTsx1(){const{bottomSheetPosition}=this.__closure;var _bottomSheetPosition$,_bottomSheetPosition;return(_bottomSheetPosition$=(_bottomSheetPosition=bottomSheetPosition)===null||_bottomSheetPosition===void 0?void 0:_bottomSheetPosition.get())!==null&&_bottomSheetPosition$!==void 0?_bottomSheetPosition$:0;}" };
 let closure_5 = { code: "function useBottomSheetFlashListBottomViewabilityInsetTsx2(sheetPosition){const{distanceBetweenExpandedScreenTopAndSheetTop,runOnJS,handleBottomViewabilityInsetDebounced}=this.__closure;const bottomViewabilityInset=sheetPosition-distanceBetweenExpandedScreenTopAndSheetTop;runOnJS(handleBottomViewabilityInsetDebounced)(bottomViewabilityInset);}" };
-const result = require("context").fileFinishedImporting("modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useBottomSheetFlashListBottomViewabilityInset.tsx");
 
 export const useBottomSheetFlashListBottomViewabilityInset = function useBottomSheetFlashListBottomViewabilityInset() {
   let obj = bottomVisibilityInsetRef;
@@ -15,10 +15,10 @@ export const useBottomSheetFlashListBottomViewabilityInset = function useBottomS
   }
   const flashListRef = obj.useRef(null);
   const diff = flashListRef(1494)().height - flashListRef(11209)().maximum;
-  const dependencyMap = diff;
+  dependencyMap = diff;
   bottomVisibilityInsetRef = obj.useRef(9999);
   const memo = obj.useMemo(() => flashListRef(diff[4]).debounce((current) => {
-    noop.current = current;
+    closure_3.current = current;
     current = ref.current;
     if (current != null) {
       current.updateViewableItems();

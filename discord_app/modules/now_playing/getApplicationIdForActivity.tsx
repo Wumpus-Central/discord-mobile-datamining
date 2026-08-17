@@ -1,16 +1,21 @@
 // discord_app/modules/now_playing/getApplicationIdForActivity.tsx
-import { SpotifyApplication } from "getIconURL";
-import { TWITCH_APPLICATION_ID_PREFIX as closure_3 } from "getIconURL";
-import { XBOX_APPLICATION_ID_PREFIX as closure_4 } from "getIconURL";
-import { XBOX_ACTIVITY_APPLICATION_ID as closure_5 } from "items3";
-import { isListeningOnSpotify } from "../activities/utils/isListeningOnSpotify.tsx";
-import { isOnXbox } from "../activities/utils/isOnXbox.tsx";
-import { _isStreaming } from "../activities/utils/isStreaming.tsx";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 7261 */;
+import _isStreamingDefault from "_isStreaming" /* 8411 */;
+import isOnXboxDefault from "isOnXbox" /* 12099 */;
+import getIconURL from "getIconURL" /* 12779 */;
+import getIconURL2 from "getIconURL" /* 13298 */;
+import getIconURL3 from "getIconURL" /* 13299 */;
 
-const result = require("getIconURL").fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
+const SpotifyApplication = getIconURL.SpotifyApplication;
+let closure_3 = getIconURL2.TWITCH_APPLICATION_ID_PREFIX;
+let closure_4 = getIconURL3.XBOX_APPLICATION_ID_PREFIX;
+let closure_5 = items3.XBOX_ACTIVITY_APPLICATION_ID;
+const result = set.fileFinishedImporting("modules/now_playing/getApplicationIdForActivity.tsx");
 
 export default function getApplicationIdForActivity(party) {
-  if (isListeningOnSpotify(party)) {
+  if (isListeningOnSpotifyDefault(party)) {
     if (null != party.party) {
       if (null != party.party.id) {
         let id = SpotifyApplication.id;
@@ -18,7 +23,7 @@ export default function getApplicationIdForActivity(party) {
       return id;
     }
   }
-  if (_isStreaming(party)) {
+  if (_isStreamingDefault(party)) {
     if (null != party.url) {
       id = closure_3 + party.url;
     }
@@ -29,7 +34,7 @@ export default function getApplicationIdForActivity(party) {
     }
   }
   id = null;
-  if (isOnXbox(party)) {
+  if (isOnXboxDefault(party)) {
     id = closure_4 + party.name;
   }
 };

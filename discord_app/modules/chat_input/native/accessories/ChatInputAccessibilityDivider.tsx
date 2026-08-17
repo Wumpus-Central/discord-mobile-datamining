@@ -1,14 +1,12 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
 ({ StyleSheet: obj1, View: c3 } = get_ActivityIndicator);
-const memoResult = require("noop").memo(() => {
+const memoResult = importAllResult.memo(() => {
   let obj = SCREEN_READER_ENABLED_GETTER;
   let tmp3 = null;
   if (obj.useIsScreenReaderEnabled()) {
@@ -25,6 +23,6 @@ const memoResult = require("noop").memo(() => {
   }
   return tmp3;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputAccessibilityDivider.tsx");
 
 export const ChatInputAccessibilityDivider = memoResult;

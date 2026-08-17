@@ -1,13 +1,13 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { canReviewGuildMemberApplications } from "../../guild_member_verification/canReviewGuildMemberApplications.tsx";
+import canReviewGuildMemberApplications from "canReviewGuildMemberApplications" /* 7230 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo((guildId) => {
+require = arg1;
+const memoResult = importAllResult.memo((guildId) => {
   guildId = guildId.guildId;
   return jsx(importDefault(canReviewGuildMemberApplications.useCanReviewGuildMemberApplications(guildId) ? 15825 : 15827), { guildId });
 });
-const result = require("canReviewGuildMemberApplications").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalMembersWrapper.tsx");
 
 export default memoResult;

@@ -1,12 +1,11 @@
 // discord_app/modules/guild_action_sheet/native/openGuildActionSheet.tsx
-import ME from "ME";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getFavoritesAwareGuildName } from "../../favorites/FavoritesUtils.tsx";
+import set from "set" /* 2 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ AnalyticEvents: c3, GuildFeatures: c4 } = ME);
-const result = require("expandEventProperties").fileFinishedImporting("modules/guild_action_sheet/native/openGuildActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/guild_action_sheet/native/openGuildActionSheet.tsx");
 
 export default function openGuildActionSheet(id) {
   let flag = arg1;
@@ -15,7 +14,7 @@ export default function openGuildActionSheet(id) {
   }
   let obj = getFavoritesAwareGuildName;
   if (!obj.isFavoritesGuildId(id.id)) {
-    let obj1 = expandEventProperties;
+    obj1 = expandEventPropertiesDefault;
     obj = { type: "Guild Profile", guild_id: null };
     obj[1] = id.id;
     obj1.track(constants.OPEN_POPOUT, obj);

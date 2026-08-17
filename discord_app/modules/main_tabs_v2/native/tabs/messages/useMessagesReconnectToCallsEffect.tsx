@@ -1,28 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import makeSortedChannel from "makeSortedChannel";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "_handleConnectionOpen" /* 4495 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "makeSortedChannel" /* 5388 */;
 
-const result = require("_handleConnectionOpen").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesReconnectToCallsEffect.tsx");
 
 export default function useMessagesReconnectToCallsEffect() {
   const effect = React.useEffect(() => {
     function isGatewayConnectedListener() {
-      let arr;
-      const isConnectedResult = outer1_4.isConnected();
+      const isConnectedResult = closure_1_4.isConnected();
       if (callback !== isConnectedResult) {
         callback = isConnectedResult;
         if (isConnectedResult) {
-          [r10011, arr] = outer1_2(outer1_6.getSortedChannels(), 2);
+          [r10011, arr] = closure_1_2(closure_1_6.getSortedChannels(), 2);
           const items = [];
           const _Math = Math;
           let num3 = 0;
           if (0 < Math.min(20, arr.length)) {
             do {
-              let tmp7 = outer1_5;
-              let channel = outer1_5.getChannel(arr[num3].channelId);
+              let tmp7 = closure_1_5;
+              let channel = closure_1_5.getChannel(arr[num3].channelId);
               let isGroupDMResult = null != channel;
               let tmp9 = num3;
               if (isGroupDMResult) {
@@ -35,7 +34,7 @@ export default function useMessagesReconnectToCallsEffect() {
               let _Math2 = Math;
             } while (num3 < Math.min(20, arr.length));
           }
-          const tmp4 = outer1_2(outer1_6.getSortedChannels(), 2);
+          const tmp4 = closure_1_2(closure_1_6.getSortedChannels(), 2);
           const obj = { type: "CALL_CONNECT_MULTIPLE", channelIds: null };
           obj[1] = items;
           callback(isGatewayConnectedListener[5]).dispatch(obj);
@@ -43,10 +42,10 @@ export default function useMessagesReconnectToCallsEffect() {
         }
       }
     }
-    let closure_0 = _handleConnectionOpen.isConnected();
-    _handleConnectionOpen.addChangeListener(isGatewayConnectedListener);
+    closure_0 = closure_4.isConnected();
+    closure_4.addChangeListener(isGatewayConnectedListener);
     return () => {
-      outer1_4.removeChangeListener(isGatewayConnectedListener);
+      closure_1_4.removeChangeListener(isGatewayConnectedListener);
     };
   }, []);
 };

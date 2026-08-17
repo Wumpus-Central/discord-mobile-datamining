@@ -1,11 +1,11 @@
 // discord_app/modules/app_launcher/hooks/useAppsInThisServer.tsx
-import noop from "noop";
-import { useGuildIndexState } from "getIndexKey";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME";
+import closure_4 from "noop" /* 19 */;
+import { useGuildIndexState } from "getIndexKey" /* 8448 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { DISCOVERY_COMMANDS_QUERY_LIMIT as closure_7 } from "TRUE_OPTION_NAME" /* 5246 */;
 
 const require = arg1;
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
+let result = require("set").fileFinishedImporting("modules/app_launcher/hooks/useAppsInThisServer.tsx");
 
 export default function useAppsInThisServer(context) {
   context = context.context;
@@ -25,7 +25,7 @@ export default function useAppsInThisServer(context) {
   const tmp2Result = useGuildIndexState(guild_id, true);
   _require = tmp2Result;
   let obj = _require(memo[4]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let nsfwAllowed;
@@ -34,7 +34,7 @@ export default function useAppsInThisServer(context) {
     }
     return nsfwAllowed;
   });
-  let obj1 = commandsByActiveSection(memo[5]);
+  obj1 = commandsByActiveSection(memo[5]);
   obj = { context, filters: null, options: null, allowFetch: true };
   obj = { commandTypes: null };
   const items1 = [_require(memo[6]).ApplicationCommandType.CHAT, _require(memo[6]).ApplicationCommandType.PRIMARY_ENTRY_POINT];
@@ -58,7 +58,7 @@ export default function useAppsInThisServer(context) {
   }
   const items3 = [sections, memo];
   const memo1 = sortApplicationsViaFrecency.useMemo(() => {
-    const result = _undefined.result;
+    result = result.result;
     let sections;
     if (result != null) {
       sections = result.sections;
@@ -69,7 +69,7 @@ export default function useAppsInThisServer(context) {
     const values = Object.values(sections);
     const mapped = values.map((descriptor) => descriptor.descriptor);
     return mapped.filter((id) => {
-      let hasItem = !(id.id in outer1_0(outer1_3[7]).BUILT_IN_SECTIONS);
+      let hasItem = !(id.id in closure_1_0(closure_1_3[7]).BUILT_IN_SECTIONS);
       if (hasItem) {
         hasItem = set.has(id.id);
       }
@@ -89,7 +89,7 @@ export default function useAppsInThisServer(context) {
       const found = stateFromStores(memo[9]).compact(sortApplicationsViaFrecency.map((application) => application.application)).filter((id) => {
         let tmp = false === closure_1;
         if (tmp) {
-          tmp = outer1_1(outer1_3[10])(id.id);
+          tmp = closure_1_1(closure_1_3[10])(id.id);
         }
         return !tmp;
       });

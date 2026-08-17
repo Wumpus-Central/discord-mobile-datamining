@@ -1,8 +1,8 @@
 // discord_app/modules/lurker_mode/LurkerActionCreators.tsx
-import sendRequest from "sendRequest";
-import createRTCConnection from "createRTCConnection";
-import initialize from "initialize";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createRTCConnection" /* 4539 */;
+import closure_5 from "initialize" /* 4022 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function stopLurkingAll(items) {
@@ -18,9 +18,9 @@ function stopLurkingAll(items) {
 function _stopLurkingAll() {
   let self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -48,7 +48,7 @@ function _stopLurkingAll() {
               obj[0] = arg1;
               return obj;
             } else {
-              const found = outer1_5.lurkingGuildIds().filter((arg0) => !closure_0.includes(arg0));
+              const found = closure_1_5.lurkingGuildIds().filter((arg0) => !closure_0.includes(arg0));
               if (0 !== found.length) {
                 const _Map = Map;
                 const map = new Map(found.map((closure_0) => {
@@ -56,7 +56,7 @@ function _stopLurkingAll() {
                   return items;
                 }));
                 v0 = map;
-                let obj1 = v0(table[4]);
+                obj1 = v0(table[4]);
                 obj1 = { type: "GUILD_STOP_LURKING", ignoredGuildIds: null };
                 obj1[1] = tmp19;
                 obj1.dispatch(obj1);
@@ -64,11 +64,11 @@ function _stopLurkingAll() {
                 v0 = 1;
                 const obj2 = { value: null, done: false };
                 obj2[0] = Promise.all(found.map((() => {
-                  let closure_0 = outer1_3((arg0) => {
-                    let closure_0 = arg0;
-                    let c6 = 0;
-                    let c7 = 0;
-                    let c5 = 0;
+                  closure_0 = closure_1_3((arg0) => {
+                    closure_0 = arg0;
+                    c6 = 0;
+                    c7 = 0;
+                    c5 = 0;
                     return (/* F120622 */ function*() { ... })();
                   });
                   return function() {
@@ -84,7 +84,7 @@ function _stopLurkingAll() {
                 })()));
                 return obj2;
               }
-              const lurkingGuildIdsResult = outer1_5.lurkingGuildIds();
+              const lurkingGuildIdsResult = closure_1_5.lurkingGuildIds();
               tmp19 = closure_0;
             }
           } else if (arg0 === 1) {
@@ -105,7 +105,7 @@ function _stopLurkingAll() {
       }
     })();
   });
-  const _stopLurkingAll = tmp;
+  closure_8 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -117,9 +117,9 @@ function _stopLurkingAll() {
 function _stopLurking() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (guildId === 2) {
         guildId = 3;
@@ -148,7 +148,7 @@ function _stopLurking() {
               return obj;
             } else {
               let table = tmp4;
-              let closure_1 = 0;
+              closure_1 = 0;
               let callback;
               let tmp19 = callback;
               if (callback === undefined) {
@@ -168,11 +168,11 @@ function _stopLurking() {
                 throw arg1;
               } else if (arg0 === 2) {
                 guildId = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
-                closure_1 = initialize.lurkingGuildIds();
+                closure_1 = closure_5.lurkingGuildIds();
                 if (0 !== closure_1.length) {
                   const items = [callback, guildId.getGuildId()];
                   table = items.filter(callback(table[6]).isNotNullish);
@@ -204,7 +204,7 @@ function _stopLurking() {
     iter.next();
     return iter;
   });
-  const _stopLurking = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -213,7 +213,7 @@ function _stopLurking() {
   }
   return applyArgumentsResult;
 }
-const result = require("initialize").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 
 export { stopLurkingAll };
 export const stopLurking = function stopLurking(guildId) {

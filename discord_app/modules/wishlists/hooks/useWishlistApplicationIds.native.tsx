@@ -1,6 +1,6 @@
 // discord_app/modules/wishlists/hooks/useWishlistApplicationIds.native.tsx
-import noop from "noop";
-import { COLLECTIBLES_APPLICATION_ID as closure_1 } from "ME";
+import closure_0 from "noop" /* 19 */;
+import { COLLECTIBLES_APPLICATION_ID as closure_1 } from "ME" /* 676 */;
 
 const result = require("set").fileFinishedImporting("modules/wishlists/hooks/useWishlistApplicationIds.native.tsx");
 

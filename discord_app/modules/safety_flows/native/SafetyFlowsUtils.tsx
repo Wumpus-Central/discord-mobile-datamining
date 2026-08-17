@@ -1,16 +1,16 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
-import ModalActionCreators from "../../../actions/ModalActionCreators.tsx";
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { registerAsset } from "../../../../_runtime/08764_registerAsset.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
-import { SAFETY_FLOWS_MODAL_KEY } from "../constants.tsx";
-import { messagesProxy } from "../SafetyFlows.messages.js";
-import { TaskType } from "../types.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2597 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import registerAssetDefault from "registerAsset" /* 8764 */;
+import TaskType from "TaskType" /* 17084 */;
+import SAFETY_FLOWS_MODAL_KEY from "SAFETY_FLOWS_MODAL_KEY" /* 17085 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 function fetchAndUpdateTask() {
   const self = this;
   const apply = _fetchAndUpdateTask.apply;
@@ -24,11 +24,11 @@ function fetchAndUpdateTask() {
 function _fetchAndUpdateTask() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_1 = tmp2;
+      closure_1 = tmp2;
       const obj2 = callback(table[4]);
       closure_1 = yield obj2.getCurrentTask();
       if (null != closure_1) {
@@ -37,7 +37,7 @@ function _fetchAndUpdateTask() {
       return closure_1;
     })();
   });
-  const _fetchAndUpdateTask = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -48,13 +48,13 @@ function _fetchAndUpdateTask() {
 }
 function navigateToScreenForTask(closure_1, closure_0) {
   if (null == closure_0) {
-    let obj = ModalActionCreators;
+    let obj = _modDef5260;
     obj.popWithKey(SAFETY_FLOWS_MODAL_KEY.SAFETY_FLOWS_MODAL_KEY);
     obj = { key: "SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", icon: null, content: null };
-    obj[1] = registerAsset;
+    obj[1] = registerAssetDefault;
     const intl = getSystemLocale.intl;
-    obj[2] = intl.string(messagesProxy["/fHz9S"]);
-    dispatcher.open(obj);
+    obj[2] = intl.string(messagesProxyDefault["/fHz9S"]);
+    dispatcherDefault.open(obj);
   } else {
     const task_type = closure_0.task_type;
     const tmp16 = TaskType.TASK_TYPE_TO_SCREENS[task_type];
@@ -82,7 +82,7 @@ function navigateToScreenForTask(closure_1, closure_0) {
     }
   }
 }
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/native/SafetyFlowsUtils.tsx");
 
 export const getScreensForTaskType = function getScreensForTaskType(task_type) {
   const tmp3 = TaskType.TASK_TYPE_TO_SCREENS[task_type];
@@ -116,9 +116,9 @@ export const useOnTaskComplete = function useOnTaskComplete() {
   setTask = safetyFlowTask.setTask;
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -146,12 +146,12 @@ export const useOnTaskComplete = function useOnTaskComplete() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp2;
-              let closure_1 = tmp5;
+              closure_2 = tmp2;
+              closure_1 = tmp5;
               let callback;
-              const obj1 = { task_id: null, flow_id: null, data: null };
-              obj1[0] = outer1_1.task_id;
-              obj1[1] = outer1_1.flow_context.flow_id;
+              obj1 = { task_id: null, flow_id: null, data: null };
+              obj1[0] = closure_1_1.task_id;
+              obj1[1] = closure_1_1.flow_context.flow_id;
               obj1[2] = callback;
               c3 = 1;
               c4 = 1;
@@ -172,7 +172,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
               c3 = 2;
               c4 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = outer2_6(outer1_2);
+              obj4[0] = closure_2_6(closure_1_2);
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -185,7 +185,7 @@ export const useOnTaskComplete = function useOnTaskComplete() {
             return obj;
           } else {
             callback = arg1;
-            outer2_8(callback, callback);
+            closure_2_8(callback, callback);
             c4 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }

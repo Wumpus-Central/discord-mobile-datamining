@@ -1,15 +1,13 @@
 // discord_app/modules/saved_messages/native/ForLaterMessageRow.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("useTheme").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageRow.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/native/ForLaterMessageRow.tsx");
 
 export const ForLaterMessageRow = function ForLaterMessageRow(lineClamp) {
-  let maxHeight;
-  let message;
   lineClamp = lineClamp.lineClamp;
-  let importDefault;
+  importDefault = undefined;
   let setting;
   let setting1;
   let setting2;

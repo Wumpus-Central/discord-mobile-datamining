@@ -1,5 +1,7 @@
 // discord_app/modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx
-const result = require("set").fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/isGuildsBarGuildLabelEqual.tsx");
 
 export default function isGuildsBarGuildLabelEqual(count, count2) {
   let tmp = count.count === count2.count;

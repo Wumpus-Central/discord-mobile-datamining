@@ -1,23 +1,24 @@
 // discord_app/modules/explicit_media_redaction/HarmTypeConfiguration.tsx
-import ME from "ME";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { ContentHarmTypeChannel } from "ExplicitMediaRedactionModels.tsx";
-import { resolveExplicitContentSettingWithDefaults } from "SensitiveMediaExplicitRedactionSettingsUtils.tsx";
-import { resolveGoreSettingWithDefaults } from "SensitiveMediaGoreRedactionSettingsUtils.tsx";
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import messageAttachmentToUnfurledMediaItem from "messageAttachmentToUnfurledMediaItem" /* 4810 */;
+import ObscureReason from "ObscureReason" /* 5021 */;
+import ContentHarmTypeChannel from "ContentHarmTypeChannel" /* 5022 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
+import resolveGoreSettingWithDefaults from "resolveGoreSettingWithDefaults" /* 5025 */;
+import ME from "ME" /* 676 */;
 
-let MessageAttachmentFlags;
-let MessageEmbedFlags;
 ({ MessageAttachmentFlags, MessageEmbedFlags } = ME);
 let obj = { EXPLICIT: "explicit", GORE: "gore", SELF_HARM: "self_harm" };
 obj = { NONE: 0, [0]: "NONE", EXPLICIT: 1, [1]: "EXPLICIT", GORE: 2, [2]: "GORE", SELF_HARM: 4, [4]: "SELF_HARM", ALL: 7, [7]: "ALL" };
 obj = {};
 obj[obj.EXPLICIT] = {
   harmType: obj.EXPLICIT,
-  obscureReason: require("ObscureReason").ObscureReason.EXPLICIT_CONTENT,
+  obscureReason: ObscureReason.ObscureReason.EXPLICIT_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA,
   embedFlag: MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA,
-  genericMediaFlag: require("messageAttachmentToUnfurledMediaItem").ContentScanFlags.EXPLICIT,
+  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.EXPLICIT,
   bitmask: obj.EXPLICIT,
   devSettingKey: "obscure_blur_effect_explicit_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -95,10 +96,10 @@ obj[obj.EXPLICIT] = {
 };
 const obj1 = {
   harmType: obj.EXPLICIT,
-  obscureReason: require("ObscureReason").ObscureReason.EXPLICIT_CONTENT,
+  obscureReason: ObscureReason.ObscureReason.EXPLICIT_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_EXPLICIT_MEDIA,
   embedFlag: MessageEmbedFlags.CONTAINS_EXPLICIT_MEDIA,
-  genericMediaFlag: require("messageAttachmentToUnfurledMediaItem").ContentScanFlags.EXPLICIT,
+  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.EXPLICIT,
   bitmask: obj.EXPLICIT,
   devSettingKey: "obscure_blur_effect_explicit_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -176,10 +177,10 @@ const obj1 = {
 };
 obj[obj.GORE] = {
   harmType: obj.GORE,
-  obscureReason: require("ObscureReason").ObscureReason.GORE_CONTENT,
+  obscureReason: ObscureReason.ObscureReason.GORE_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_GORE_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_GORE_CONTENT,
-  genericMediaFlag: require("messageAttachmentToUnfurledMediaItem").ContentScanFlags.GORE,
+  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.GORE,
   bitmask: obj.GORE,
   devSettingKey: "obscure_blur_effect_gore_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -257,10 +258,10 @@ obj[obj.GORE] = {
 };
 const obj2 = {
   harmType: obj.GORE,
-  obscureReason: require("ObscureReason").ObscureReason.GORE_CONTENT,
+  obscureReason: ObscureReason.ObscureReason.GORE_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_GORE_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_GORE_CONTENT,
-  genericMediaFlag: require("messageAttachmentToUnfurledMediaItem").ContentScanFlags.GORE,
+  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.GORE,
   bitmask: obj.GORE,
   devSettingKey: "obscure_blur_effect_gore_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -338,10 +339,10 @@ const obj2 = {
 };
 obj[obj.SELF_HARM] = {
   harmType: obj.SELF_HARM,
-  obscureReason: require("ObscureReason").ObscureReason.SELF_HARM_CONTENT,
+  obscureReason: ObscureReason.ObscureReason.SELF_HARM_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_SELF_HARM_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_SELF_HARM_CONTENT,
-  genericMediaFlag: require("messageAttachmentToUnfurledMediaItem").ContentScanFlags.SELF_HARM,
+  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.SELF_HARM,
   bitmask: obj.SELF_HARM,
   devSettingKey: "obscure_blur_effect_self_harm_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -380,10 +381,10 @@ obj[obj.SELF_HARM] = {
 };
 const obj3 = {
   harmType: obj.SELF_HARM,
-  obscureReason: require("ObscureReason").ObscureReason.SELF_HARM_CONTENT,
+  obscureReason: ObscureReason.ObscureReason.SELF_HARM_CONTENT,
   attachmentFlag: MessageAttachmentFlags.CONTAINS_SELF_HARM_CONTENT,
   embedFlag: MessageEmbedFlags.CONTAINS_SELF_HARM_CONTENT,
-  genericMediaFlag: require("messageAttachmentToUnfurledMediaItem").ContentScanFlags.SELF_HARM,
+  genericMediaFlag: messageAttachmentToUnfurledMediaItem.ContentScanFlags.SELF_HARM,
   bitmask: obj.SELF_HARM,
   devSettingKey: "obscure_blur_effect_self_harm_content_enabled",
   getProtoUserSettings(textAndImages) {
@@ -420,7 +421,7 @@ const obj3 = {
     return obj;
   }
 };
-const result = require("messageAttachmentToUnfurledMediaItem").fileFinishedImporting("modules/explicit_media_redaction/HarmTypeConfiguration.tsx");
+const result = set.fileFinishedImporting("modules/explicit_media_redaction/HarmTypeConfiguration.tsx");
 
 export const ContentHarmType = obj;
 export const ContentHarmTypeBitMask = obj;

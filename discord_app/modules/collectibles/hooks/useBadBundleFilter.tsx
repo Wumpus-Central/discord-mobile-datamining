@@ -1,17 +1,19 @@
 // discord_app/modules/collectibles/hooks/useBadBundleFilter.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import map from "map";
-import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "map" /* 5324 */;
 
-require("noop").useCallback;
-let result = require("map").fileFinishedImporting("modules/collectibles/hooks/useBadBundleFilter.tsx");
+noop.useCallback;
+let result = set.fileFinishedImporting("modules/collectibles/hooks/useBadBundleFilter.tsx");
 
 export const useBadBundleFilter = function useBadBundleFilter() {
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   const stateFromStores = defaultAreStatesEqual.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj = defaultAreStatesEqual;
-  const canUseShopDiscountsResult = getPremiumPlanItem.canUseShopDiscounts(stateFromStores);
+  const canUseShopDiscountsResult = getPremiumPlanItemDefault.canUseShopDiscounts(stateFromStores);
   require = canUseShopDiscountsResult;
   const items1 = [canUseShopDiscountsResult];
   return useCallback((arr) => {
@@ -20,11 +22,11 @@ export const useBadBundleFilter = function useBadBundleFilter() {
       found = arr;
       if (0 !== arr.length) {
         found = arr.filter((bundledProducts) => {
-          let obj = outer1_0(outer1_2[5]);
+          let obj = closure_1_0(closure_1_2[5]);
           if (obj2.isBundleProduct(bundledProducts)) {
             let tmpResult = tmp(tmp2[6]);
             if (!tmpResult.isFreeCollectiblesProduct(bundledProducts)) {
-              if (!obj.getProductPurchaseState(outer1_5, bundledProducts).isPurchased) {
+              if (!obj.getProductPurchaseState(closure_1_5, bundledProducts).isPurchased) {
                 tmpResult = tmp(tmp2[7]);
                 if (tmpResult.isOrbsExclusiveProduct(bundledProducts)) {
                   obj = { product: null, hasShopDiscount: null };
@@ -41,7 +43,7 @@ export const useBadBundleFilter = function useBadBundleFilter() {
                       if (null != bundledProducts.bundledProducts) {
                         bundledProducts = bundledProducts.bundledProducts;
                         num2 = bundledProducts.reduce((arg0, arg1) => {
-                          const result = defaultPriceSetAssignmentPurchaseType(outer1_2[6]).extractPriceByPurchaseTypes(arg1, defaultPriceSetAssignmentPurchaseType);
+                          const result = defaultPriceSetAssignmentPurchaseType(closure_1_2[6]).extractPriceByPurchaseTypes(arg1, defaultPriceSetAssignmentPurchaseType);
                           let num;
                           if (result != null) {
                             num = result.amount;

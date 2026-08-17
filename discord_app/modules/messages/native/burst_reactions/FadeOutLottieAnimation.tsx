@@ -1,21 +1,21 @@
 // discord_app/modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let closure_7 = createCacheKey.createStyles({ content: { width: "100%" } });
 let closure_8 = { code: "function FadeOutLottieAnimationTsx1(){const{isAnimationComplete,isFadeOut,withTiming,runOnJS,setIsFadeOut}=this.__closure;if(!isAnimationComplete){return{opacity:1};}if(isFadeOut){return{opacity:withTiming(0,{duration:300},'respect-motion-settings',function(finished){if(finished)runOnJS(setIsFadeOut)(false);})};}return{opacity:0};}" };
 let closure_9 = { code: "function FadeOutLottieAnimationTsx2(finished){const{runOnJS,setIsFadeOut}=this.__closure;if(finished)runOnJS(setIsFadeOut)(false);}" };
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/FadeOutLottieAnimation.tsx");
 
 export default function FadeOutLottieAnimation(onComplete) {
   onComplete = onComplete.onComplete;
   const merged = Object.assign(onComplete, Object.create(null));
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let React;
   const tmp3 = first1(React.useState(false), 2);
@@ -25,7 +25,7 @@ export default function FadeOutLottieAnimation(onComplete) {
   first1 = tmp5[0];
   React = tmp7;
   let obj = onComplete(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   const effect = React.useEffect(() => {
     dependencyMap(false);
@@ -33,28 +33,28 @@ export default function FadeOutLottieAnimation(onComplete) {
   onComplete(4115);
   class T {
     constructor() {
-      if (c1) {
-        tmp = useState;
-        if (useState) {
+      if (closure_1) {
+        tmp = closure_3;
+        if (closure_3) {
           obj = { opacity: null };
           tmp2 = onComplete;
-          tmp3 = useState;
-          obj3 = onComplete(useState[7]);
+          tmp3 = closure_2;
+          obj3 = onComplete(closure_2[7]);
           fn = function t(arg0) {
             if (arg0) {
-              outer1_0(outer1_2[6]).runOnJS(noop)(false);
-              const obj = outer1_0(outer1_2[6]);
+              closure_1_0(closure_1_2[6]).runOnJS(closure_4)(false);
+              const obj = closure_1_0(closure_1_2[6]);
             }
           };
           obj1 = { runOnJS: null, setIsFadeOut: null };
-          obj1[0] = onComplete(useState[6]).runOnJS;
-          tmp4 = c4;
-          obj1[1] = c4;
+          obj1[0] = onComplete(closure_2[6]).runOnJS;
+          tmp4 = closure_4;
+          obj1[1] = closure_4;
           fn.__closure = obj1;
           num = 14133863353798;
           fn.__workletHash = 14133863353798;
-          tmp5 = outer1_9;
-          fn.__initData = outer1_9;
+          tmp5 = closure_1_9;
+          fn.__initData = closure_1_9;
           str = "respect-motion-settings";
           num2 = 0;
           tmp6 = obj3;
@@ -77,7 +77,7 @@ export default function FadeOutLottieAnimation(onComplete) {
   if (!first) {
     obj = { style: null, children: null };
     obj[0] = tmp12;
-    const obj1 = { style: null, speed: null, onAnimationFinish: null };
+    obj1 = { style: null, speed: null, onAnimationFinish: null };
     obj1[0] = tmp2.content;
     let num = 1;
     if (stateFromStores) {

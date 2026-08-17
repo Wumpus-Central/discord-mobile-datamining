@@ -1,15 +1,13 @@
 // discord_app/modules/collectibles/native/CollectiblesShopGiftModal.tsx
-import noop from "noop";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "updateCategoriesAndProducts" /* 5301 */;
+import { COLLECTIBLES_APPLICATION_ID as closure_5 } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopGiftModal.tsx");
 
 export default function CollectiblesShopGiftModal(skuId) {
-  let analyticsLocations;
-  let onGiftModalDismiss;
   skuId = skuId.skuId;
   ({ analyticsLocations, onGiftModalDismiss } = skuId);
   const giftingOrigin = skuId.giftingOrigin;
@@ -64,18 +62,13 @@ export default function CollectiblesShopGiftModal(skuId) {
       obj[5] = giftingOrigin;
       obj[6] = renderProductDetails;
       renderProductDetails = function renderProductDetails(arg0) {
-        let isValidRecipient;
-        let recipientUser;
         ({ recipientUser, isValidRecipient } = arg0);
-        return outer1_6(onGiftModalDismiss(giftingOrigin[16]), { product: skuId2, recipientUser, isValidRecipient, isGift: true });
+        return closure_1_6(onGiftModalDismiss(giftingOrigin[16]), { product: skuId2, recipientUser, isValidRecipient, isGift: true });
       };
       obj[7] = renderProductDetails;
       obj[8] = function renderPurchaseSection(arg0) {
-        let baseAnalyticsFields;
-        let giftOptions;
-        let isPurchaseDisabled;
         ({ isPurchaseDisabled, giftOptions, baseAnalyticsFields } = arg0);
-        return outer1_6(onGiftModalDismiss(giftingOrigin[17]), { product: skuId2, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin, onGiftModalDismiss });
+        return closure_1_6(onGiftModalDismiss(giftingOrigin[17]), { product: skuId2, isPurchaseDisabled, giftOptions, baseAnalyticsFields, giftingOrigin, onGiftModalDismiss });
       };
       let tmp7Result = tmp7(tmp3, obj);
     } else {

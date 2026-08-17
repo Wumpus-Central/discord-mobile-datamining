@@ -1,27 +1,23 @@
 // discord_app/modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx
-import apply from "apply";
-import { View } from "useIsHomeDrawerChannelInChannelList";
-import comparator from "comparator";
-import { GUILD_VOCAL_CHANNELS_KEY } from "comparator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import { ChannelTypes } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { AvatarPile } from "../../../design/components/Pile/native/AvatarPile.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useFetchStreamPreview } from "../../go_live/useFetchStreamPreview.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import AvatarPile from "AvatarPile" /* 12124 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 12138 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "comparator" /* 1980 */;
+import { GUILD_VOCAL_CHANNELS_KEY } from "comparator" /* 1980 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_9 from "getVoiceStatesForGuild" /* 4545 */;
+import { ChannelTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function VoiceUsers(arg0) {
-  let require;
-  let voiceUsers;
   ({ voiceUsers, guildId: require } = arg0);
   let substr = voiceUsers;
   if (voiceUsers.length > 3) {
@@ -35,20 +31,14 @@ function VoiceUsers(arg0) {
     obj[0] = Button.AvatarSizes.XSMALL;
     obj[1] = substr.map((username) => username.username);
     obj[2] = substr.length;
-    obj[3] = substr.map((id) => {
-      const obj = { size: null, user: null, guildId: null, animate: false };
-      obj[0] = outer1_0(outer1_2[11]).AvatarSizes.XSMALL;
-      obj[1] = id;
-      obj[2] = closure_0;
-      return outer1_11(outer1_0(outer1_2[11]).Avatar, obj, id.id);
-    });
+    obj[3] = substr.map((id) => closure_1_11(closure_1_0(closure_1_2[11]).Avatar, { size: closure_1_0(closure_1_2[11]).AvatarSizes.XSMALL, user: id, guildId: closure_0, animate: false }, id.id));
     obj[1] = callback(AvatarPile.AvatarPile, obj);
     tmp = callback(View, obj);
   }
   return tmp;
 }
 function LiveTag() {
-  const tmp = callback3();
+  const tmp = callback4();
   let obj = { style: tmp.tag, children: null };
   obj = { variant: "text-xxs/bold", style: tmp.tagText, lineClamp: 1, children: null };
   const intl = getSystemLocale.intl;
@@ -58,36 +48,32 @@ function LiveTag() {
 }
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
-createCacheKey = { borderRadius: require("Themes").radii.sm };
-const merged = Object.assign(require("Themes").shadows.SHADOW_MEDIUM);
+createCacheKey = { borderRadius: ThemesDefault.radii.sm };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_MEDIUM);
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { width: 72, height: 44, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+createCacheKey[2] = { width: 72, height: 44, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[3] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.8 };
 createCacheKey[4] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, opacity: 0.2 };
-let obj1 = { width: 72, height: 44, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-createCacheKey[5] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.sm };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj1 = { width: 72, height: 44, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[5] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
 let obj3 = { tag: null, tagText: null };
-let obj2 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.sm };
-obj3[0] = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: require("Themes").radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
-createCacheKey = { textAlign: "center", color: require("Themes").unsafe_rawColors.WHITE, includeFontPadding: false };
+let obj2 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm };
+obj3[0] = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: ThemesDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
+createCacheKey = { textAlign: "center", color: ThemesDefault.unsafe_rawColors.WHITE, includeFontPadding: false };
 obj3[1] = createCacheKey;
 let closure_15 = createCacheKey.createStyles(obj3);
-let obj4 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: require("Themes").radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
-const result = require("comparator").fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
+let obj4 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: ThemesDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
+const result = require("set").fileFinishedImporting("modules/home_drawer/native/HomeDrawerGuildVoiceState.tsx");
 
 export const GuildVoiceState = function GuildVoiceState(arg0) {
-  let guildId;
-  let streamingChannelId;
-  let streamingUser;
-  let voiceUsers;
   ({ voiceUsers, streamingChannelId, streamingUser, guildId } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let id;
   if (streamingUser != null) {
     id = streamingUser.id;
   }
-  const previewUrl = useFetchStreamPreview(guildId, streamingChannelId, id).previewUrl;
+  const previewUrl = useFetchStreamPreviewDefault(guildId, streamingChannelId, id).previewUrl;
   if (!tmp2) {
     return null;
   } else {
@@ -107,7 +93,7 @@ export const GuildVoiceState = function GuildVoiceState(arg0) {
       obj[1] = guildId;
       let tmp7Result = tmp7(VoiceUsers, obj);
     } else {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp.streamPreviewShadow;
       const obj2 = { style: null, children: null };
       obj2[0] = tmp.streamPreview;
@@ -146,14 +132,14 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
   const id = guild.id;
   let obj = _require(isHomeDrawerChannelInChannelList[17]);
   isHomeDrawerChannelInChannelList = obj.useIsHomeDrawerChannelInChannelList();
-  let items = [stateFromStores1, updateUserGuildSettingsInternal];
+  let items = [stateFromStores1, closure_8];
   const items1 = [id, isHomeDrawerChannelInChannelList];
   const stateFromStoresArray = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStoresArray(items, () => {
-    const found = stateFromStores1.getChannels(id)[outer1_6].filter((channel) => {
+    const found = stateFromStores1.getChannels(id)[closure_1_6].filter((channel) => {
       channel = channel.channel;
-      let tmp = channel.type === outer1_10.GUILD_VOICE;
+      let tmp = channel.type === closure_1_10.GUILD_VOICE;
       if (tmp) {
-        tmp = !outer1_8.isGuildOrCategoryOrChannelMuted(closure_1, channel.id);
+        tmp = !closure_1_8.isGuildOrCategoryOrChannelMuted(closure_1, channel.id);
       }
       if (tmp) {
         tmp = callback(channel);
@@ -163,11 +149,11 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
     return found.map((channel) => channel.channel.id);
   }, items1);
   const obj2 = _require(isHomeDrawerChannelInChannelList[18]);
-  const items2 = [getVoiceStatesForGuild];
+  const items2 = [closure_9];
   const items3 = [id];
-  const stateFromStores = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items2, () => outer1_9.getVoiceStates(id), items3);
+  const stateFromStores = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items2, () => closure_1_9.getVoiceStates(id), items3);
   const obj3 = _require(isHomeDrawerChannelInChannelList[18]);
-  const items4 = [markAllUserIdListsStale];
+  const items4 = [closure_7];
   stateFromStores1 = _require(isHomeDrawerChannelInChannelList[18]).useStateFromStores(items4, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs());
   const items5 = [stateFromStoresArray, stateFromStores, guild.afkChannelId, stateFromStores1];
   const items6 = [stateFromStores, guild.afkChannelId, stateFromStoresArray];
@@ -180,17 +166,17 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
         items = [];
       }
       const mapped = items.map((user) => user.user);
-      return outer1_0(outer1_2[20]).filterOutBlockedOrIgnoredUsers(mapped, comparator);
+      return closure_1_0(closure_1_2[20]).filterOutBlockedOrIgnoredUsers(mapped, closure_5);
     }
   }), items5);
   const memo1 = stateFromStoresArray.useMemo(() => {
-    let c0 = null;
-    let c1 = null;
+    c0 = null;
+    c1 = null;
     const keys = Object.keys(stateFromStores);
     const item = keys.forEach((arg0) => {
       if (arg0 !== _null.afkChannelId) {
-        if (outer1_3.includes(arg0)) {
-          let items = outer1_4[arg0];
+        if (closure_1_3.includes(arg0)) {
+          let items = closure_1_4[arg0];
           if (items == null) {
             items = [];
           }
@@ -201,7 +187,7 @@ export const useVoiceUsers = function useVoiceUsers(guild) {
           }
           if (tmp5) {
             user = found.user;
-            let closure_1 = arg0;
+            closure_1 = arg0;
           }
         }
       }

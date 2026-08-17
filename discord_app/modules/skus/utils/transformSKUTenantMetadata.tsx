@@ -1,7 +1,8 @@
 // discord_app/modules/skus/utils/transformSKUTenantMetadata.tsx
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
+import set from "set" /* 2 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+
 function transformProfileEffectKeyFrameFromServer(src) {
-  let randomizedSources;
   const obj = { src: src.src, loop: src.loop, height: src.height, width: src.width, duration: null, start: null, loopDelay: null, position: null, zIndex: null, randomizedSources: null };
   let num = src.duration;
   if (num == null) {
@@ -21,13 +22,9 @@ function transformProfileEffectKeyFrameFromServer(src) {
   obj[9] = mapped;
   return obj;
 }
-const result = require("set").fileFinishedImporting("modules/skus/utils/transformSKUTenantMetadata.tsx");
+const result = set.fileFinishedImporting("modules/skus/utils/transformSKUTenantMetadata.tsx");
 
 export default function transformSKUTenantMetadata(social_layer) {
-  let assets;
-  let assets2;
-  let effects;
-  let item;
   if (null != social_layer) {
     social_layer = social_layer.social_layer;
     let tmp;
@@ -62,7 +59,7 @@ export default function transformSKUTenantMetadata(social_layer) {
       if (null != item) {
         const type = item.type;
         if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-          const obj1 = { id: null, type: null, asset: null, assets: null, label: null };
+          obj1 = { id: null, type: null, asset: null, assets: null, label: null };
           ({ id: obj7[0], type: obj7[1], asset: obj7[2], assets: assets2 } = item);
           let tmp13;
           if (null != assets2) {

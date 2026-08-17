@@ -1,24 +1,24 @@
 // discord_app/modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { result } from "../../activities/utils/isInviteActive.tsx";
-import { messagesProxy } from "../RequestToStream.messages.js";
-import { canFulfillStreamRequest } from "../useCanFulfillStreamRequest.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2789 */;
+import result2 from "result" /* 10917 */;
+import canFulfillStreamRequest from "canFulfillStreamRequest" /* 10929 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
 
-const require = arg1;
-const result = require("canFulfillStreamRequest").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/request_to_stream/native/getRequestToStreamCTAAndIsDisabled.tsx");
 
 export default function getRequestToStreamCTAAndIsDisabled(id) {
   const tmp3 = callback(canFulfillStreamRequest.canFulfillStreamRequest(id, true), 2);
   id = id.getId();
   const obj = canFulfillStreamRequest;
-  const obj2 = DISCORD_EPOCH;
-  const sum = DISCORD_EPOCH.extractTimestamp(id.id) + result.EMBED_LIFETIME;
-  const extractTimestampResult = DISCORD_EPOCH.extractTimestamp(id.id);
+  const obj2 = DISCORD_EPOCHDefault;
+  const sum = DISCORD_EPOCHDefault.extractTimestamp(id.id) + result2.EMBED_LIFETIME;
+  const extractTimestampResult = DISCORD_EPOCHDefault.extractTimestamp(id.id);
   const intl = getSystemLocale.intl;
-  const stringResult = intl.string(messagesProxy["5+172e"]);
+  const stringResult = intl.string(messagesProxyDefault["5+172e"]);
   if (tmp9) {
     const intl6 = tmp(1236).intl;
     let text = intl6.string(tmp6(2789).u4QmWl);

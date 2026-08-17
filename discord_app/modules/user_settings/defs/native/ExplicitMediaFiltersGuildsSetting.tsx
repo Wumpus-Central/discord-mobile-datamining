@@ -1,14 +1,16 @@
 // discord_app/modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx
-import { MobileUserSettings } from "MobileUserSettings";
-import createToggle from "createToggle";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { redactionSettingToRenderedString } from "../../../explicit_media_redaction/ExplicitMediaRedactionUtils.tsx";
-import { useExplicitContentSettingOrDefault } from "../../../explicit_media_redaction/hooks/useExplicitContentSettingsOrDefault.tsx";
-import { handleSensitiveMediaFilterPress } from "../../../explicit_media_redaction/native/ExplicitMediaRedactionNativeUtils.tsx";
-import { resolveExplicitContentSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaExplicitRedactionSettingsUtils.tsx";
-import { useUserIsTeen } from "../../../self_mod/hooks/useUserIsTeen.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import redactionSettingToRenderedString from "redactionSettingToRenderedString" /* 5001 */;
+import resolveExplicitContentSettingWithDefaults from "resolveExplicitContentSettingWithDefaults" /* 5023 */;
+import useUserIsTeen from "useUserIsTeen" /* 8152 */;
+import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
+import useExplicitContentSettingOrDefault from "useExplicitContentSettingOrDefault" /* 14177 */;
+import handleSensitiveMediaFilterPress from "handleSensitiveMediaFilterPress" /* 14178 */;
+import createToggle from "createToggle" /* 10669 */;
 
+const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 const pressable = createToggle.createPressable({
   useTitle: function getTitle() {
     const intl = getSystemLocale.intl;
@@ -56,6 +58,6 @@ const pressable = createToggle.createPressable({
     return userIsTeen;
   }
 });
-let result = require("useParentalControlledExplicitContentSettings").fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/ExplicitMediaFiltersGuildsSetting.tsx");
 
 export default pressable;

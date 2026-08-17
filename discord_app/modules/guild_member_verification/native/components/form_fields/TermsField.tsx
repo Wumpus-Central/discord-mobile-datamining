@@ -1,27 +1,24 @@
 // discord_app/modules/guild_member_verification/native/components/form_fields/TermsField.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { TableCheckboxRow } from "../../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { TermsFieldListItem } from "TermsFieldList.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import TermsFieldListItemDefault from "TermsFieldListItem" /* 6806 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 8558 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { marginVertical: 12, flexDirection: "column" } });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/form_fields/TermsField.tsx");
 
 export default function TermsField(field) {
-  let onChange;
-  let rulesChannelId;
   field = field.field;
   ({ onChange, rulesChannelId } = field);
   let flag = field.response;
   let obj = { style: callback2().container, children: null };
-  const items = [callback(TermsFieldListItem, { rules: field.values, rulesChannelId }), ];
+  const items = [callback(TermsFieldListItemDefault, { rules: field.values, rulesChannelId }), ];
   if (flag == null) {
     flag = false;
   }

@@ -1,5 +1,5 @@
 // discord_app/modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/rtc/hooks/useReadableSecureFramesFingerprint.tsx");
@@ -39,7 +39,7 @@ export const useReadableSecureFramesFingerprint = function useReadableSecureFram
     if ("" !== fingerprintBase64) {
       if (null == memo) {
         const _Error = Error;
-        const error = new Error("[useReadableSecureFramesCode] Failed to parse base 64 code.");
+        error = new Error("[useReadableSecureFramesCode] Failed to parse base 64 code.");
         throw error;
       }
     }

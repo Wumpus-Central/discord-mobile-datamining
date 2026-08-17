@@ -1,47 +1,44 @@
 // discord_app/modules/verification/native/components/ChangeEmailComplete.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { resetChangeEmailStore } from "ChangeEmailFields";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08572_registerAsset.js";
-import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import _modDef8561 from "module_8561" /* 8561 */;
+import registerAssetDefault from "registerAsset" /* 8572 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { resetChangeEmailStore } from "ChangeEmailFields" /* 8563 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function handlePress() {
   resetChangeEmailStore();
-  EmailVerificationModalActionCreators.close();
+  _modDef8561.close();
 }
+noopAll;
 ({ View: c3, Image: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { contentContainer: null, image: null, title: null, body: null, bodyInner: null, tooltip: null };
-createCacheKey = { flexGrow: 2, paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16, gap: 20, alignItems: "center" };
+createCacheKey = { flexGrow: 2, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16, gap: 20, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 190, width: 220, resizeMode: "contain" };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { gap: 2 };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
-createCacheKey[5] = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: require("Themes").radii.sm, borderColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: require("Themes").radii.sm, borderColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("ChangeEmailFields").fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
+createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, width: "100%", padding: 12, borderWidth: 1, borderStyle: "solid", borderRadius: ThemesDefault.radii.sm, borderColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ChangeEmailComplete.tsx");
 
 export default function ChangeEmailComplete(email) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, contentContainerStyle: tmp.contentContainer, children: null };
-  obj = { style: tmp.image, source: registerAsset };
+  obj = { style: tmp.image, source: registerAssetDefault };
   const items = [callback(closure_4, obj), , , ];
   obj = { style: tmp.bodyInner, children: null };
-  const obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
+  obj1 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj1[4] = intl.string(getSystemLocale.t["8O+nF7"]);
   const items1 = [callback(Text.Text, obj1), ];

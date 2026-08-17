@@ -1,10 +1,10 @@
 // discord_app/design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx
-import noop from "noop";
-import { ThemeTypes } from "sum";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/ThemeContextProvider/native/RootThemeContextProvider.native.tsx");
 
 export const RootThemeContextProvider = function RootThemeContextProvider(children) {
   let DARK = children.theme;
@@ -61,7 +61,7 @@ export const DisableCustomTheme = function DisableCustomTheme(children) {
   themeContext = obj.useThemeContext();
   const items = [themeContext];
   const memo = React.useMemo(() => {
-    let obj = themeContext(outer1_1[3]);
+    let obj = themeContext(closure_1_1[3]);
     obj = {};
     const merged = Object.assign(themeContext);
     obj.primaryColor = null;

@@ -1,6 +1,6 @@
 // discord_common/js/shared/utils/BigFlagUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import tmp6Result from "_slicedToArray";
+import closure_2 from "_slicedToArray" /* 32 */;
+import tmp6Result from "module_0" /* 0 */;
 
 let HighLow;
 class HighLow {
@@ -285,7 +285,7 @@ let tmp6 = tmp2 ? ((arg0) => BigInt(arg0)) : ((num) => {
   }
   return tmp;
 });
-let c5 = tmp6Result;
+let closure_5 = tmp6Result;
 const tmp8 = tmp2 ? (() => {
   let tmp = arg0;
   if (arg0 === undefined) {
@@ -359,9 +359,9 @@ let tmp10 = tmp2 ? ((arg0, arg1) => arg0 === arg1) : ((equals) => {
   }
   equalsResult = equals == arg1;
 });
-let c9 = tmp10;
+let closure_9 = tmp10;
 const tmp11 = tmp2 ? ((arg0) => BigInt(1) << BigInt(arg0)) : ((arg0) => HighLow.fromBit(arg0));
-let c10 = tmp11;
+let closure_10 = tmp11;
 let result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/BigFlagUtils.tsx");
 
 export const isBigFlag = tmp2 ? ((arg0) => typeof arg0 === "bigint") : ((arg0) => arg0 instanceof HighLow);
@@ -390,8 +390,8 @@ export const combine = function combine() {
   let tmp2 = first;
   if (1 < items.length) {
     do {
-      let tmp3 = callback2;
-      first = callback2(first, items[num]);
+      let tmp3 = callback3;
+      first = callback3(first, items[num]);
       num = num + 1;
       tmp2 = first;
       length = items.length;
@@ -400,29 +400,29 @@ export const combine = function combine() {
   return tmp2;
 };
 export const has = function has(arg0, arg1) {
-  return tmp10(tmp8(arg0, arg1), arg1);
+  return callback5(callback2(arg0, arg1), arg1);
 };
 export const hasAny = function hasAny(arg0, arg1) {
-  return !tmp10(tmp8(arg0, arg1), closure_5);
+  return !callback5(callback2(arg0, arg1), closure_5);
 };
 export const add = function add(arg0, arg1) {
   let tmp = arg0;
   if (arg1 !== closure_5) {
-    tmp = callback2(arg0, arg1);
+    tmp = callback3(arg0, arg1);
   }
   return tmp;
 };
 export const remove = function remove(arg0, arg1) {
   let tmp = arg0;
   if (arg1 !== closure_5) {
-    tmp = callback3(arg0, tmp8(arg0, arg1));
+    tmp = callback4(arg0, callback2(arg0, arg1));
   }
   return tmp;
 };
 export const getFlag = tmp11;
 export const asUintN = tmp2 ? ((arg0, flags) => Number(BigInt.asUintN(arg0, flags))) : ((arg0, flags) => HighLow.asUintN(arg0, flags));
 export const getBrandedFlag = function getBrandedFlag(arg0) {
-  return tmp11(arg0);
+  return callback6(arg0);
 };
 export const flagNameOf = function flagNameOf(arg0, arg1) {
   const entries = Object.entries(arg1);
@@ -430,8 +430,8 @@ export const flagNameOf = function flagNameOf(arg0, arg1) {
   while (obj !== undefined) {
     let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
-    let tmp5 = tmp10;
-    if (tmp10(arg0, tmp4[1])) {
+    let tmp5 = callback5;
+    if (callback5(arg0, tmp4[1])) {
       let tmp6 = obj;
       obj.return();
       return tmp4[0];

@@ -1,28 +1,28 @@
 // discord_app/modules/safety_hub/native/AppealIngestionPolicySummary.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { hexToRgba } from "../../../utils/ColorUtils.tsx";
-import { parseMessageEmbedForProps } from "../SafetyHubUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
+import Text from "Text" /* 4734 */;
+import parseMessageEmbedForProps from "parseMessageEmbedForProps" /* 5437 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { sectionTitle: { marginBottom: 8 }, policy: { marginBottom: 16 }, borderColor: null, userContainer: null };
-createCacheKey = { color: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { color: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: require("Themes").radii.sm, borderWidth: 1, padding: 18 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: require("Themes").radii.sm, borderWidth: 1, padding: 18 };
-const result = require("jsxProd").fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
+createCacheKey[3] = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 18 };
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginTop: 8, justifyContent: "flex-start", minHeight: 40, borderRadius: ThemesDefault.radii.sm, borderWidth: 1, padding: 18 };
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionPolicySummary.tsx");
 
 export default function AppealIngestionPolicySummary(classification) {
   classification = classification.classification;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = parseMessageEmbedForProps;
   let description;
   if (classification != null) {

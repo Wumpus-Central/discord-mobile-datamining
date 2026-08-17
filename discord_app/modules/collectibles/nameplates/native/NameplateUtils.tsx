@@ -1,6 +1,8 @@
 // discord_app/modules/collectibles/nameplates/native/NameplateUtils.tsx
-import { parseSkuIdFromServerData } from "../../utils/CollectiblesAssetUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
+import set from "set" /* 2 */;
+import parseSkuIdFromServerData from "parseSkuIdFromServerData" /* 1901 */;
+
+const result = set.fileFinishedImporting("modules/collectibles/nameplates/native/NameplateUtils.tsx");
 
 export const getNameplateAssets = function getNameplateAssets(nameplate) {
   const skuId = nameplate.skuId;

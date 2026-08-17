@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx
-import noop from "noop";
-import { MobileUserSettings } from "MobileUserSettings";
-import { jsx } from "jsxProd";
-import { SettingLayout } from "../../../settings/native/renderer/SettingLayout.tsx";
+import _modDef13991 from "module_13991" /* 13991 */;
+import closure_3 from "noop" /* 19 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx");
 
 export default function UserSettingsSensitiveContentFilters() {
   const node = React.useMemo(() => {
@@ -20,7 +20,7 @@ export default function UserSettingsSensitiveContentFilters() {
     const intl2 = callback(1236).intl;
     obj[2] = intl2.string(callback(1236).t.Wnojv1);
     const items1 = [obj, ];
-    const obj1 = { label: null, settings: null, subLabel: null };
+    obj1 = { label: null, settings: null, subLabel: null };
     const intl3 = callback(1236).intl;
     obj1[0] = intl3.string(callback(1236).t["16/3Bi"]);
     const items2 = [, ];
@@ -32,5 +32,5 @@ export default function UserSettingsSensitiveContentFilters() {
     obj[0] = items1;
     return obj.createList(obj);
   }, []);
-  return jsx(SettingLayout, { node });
+  return jsx(_modDef13991, { node });
 };

@@ -1,53 +1,45 @@
 // discord_app/modules/verification/native/components/AddPhone.tsx
-import handleRequiredAction from "handleRequiredAction";
-import _slicedToArray from "_slicedToArray";
-import PhoneOrEmailSelectorForceMode from "PhoneOrEmailSelectorForceMode";
-import get_ActivityIndicator from "getSystemLocale";
-import handleSetLocationMetadata from "handleSetLocationMetadata";
-import closure_9 from "handleRequiredAction";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserFlags } from "ME";
-import { NOOP_NULL } from "sum";
-import jsxProd from "CountrySelectModal";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "handleSetLocationMetadata" /* 8581 */;
+import closure_9 from "handleRequiredAction" /* 1385 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import { UserFlags } from "ME" /* 676 */;
+import { NOOP_NULL } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_6;
-let error;
-let map1;
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { background: null, container: null, title: null, input: null, redesignInput: null, button: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 16, flex: 1 };
 createCacheKey[2] = { textAlign: "center" };
 createCacheKey[3] = { marginTop: 24 };
-createCacheKey[4] = { borderRadius: require("Themes").radii.lg };
+createCacheKey[4] = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[5] = { marginTop: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderRadius: require("Themes").radii.lg };
-let result = require("noop").fileFinishedImporting("modules/verification/native/components/AddPhone.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderRadius: ThemesDefault.radii.lg };
+let result = require("set").fileFinishedImporting("modules/verification/native/components/AddPhone.tsx");
 
 export default function AddPhone(reason) {
-  let header;
-  let onDeletePhone;
-  let require;
-  let tmp13;
-  let tmp14;
   ({ header, onComplete: require, onDeletePhone } = reason);
   reason = reason.reason;
   let stateFromStores;
   let callback;
   let React;
   let first;
-  let closure_7;
+  closure_7 = undefined;
   let first1;
-  let closure_9;
-  let mergeGuildAvatar;
-  let closure_11;
-  let closure_12;
+  closure_9 = undefined;
+  closure_10 = undefined;
+  closure_11 = undefined;
+  closure_12 = undefined;
   function _handleSubmit() {
     const self = this;
     const tmp = stateFromStores(function*() {
@@ -82,21 +74,21 @@ export default function AddPhone(reason) {
               combined = undefined;
               aPIError = undefined;
               const _HermesInternal = HermesInternal;
-              combined = "" + outer1_6 + outer1_8;
-              outer1_12(true);
-              let c3 = 2;
-              const obj7 = outer1_1(outer1_2[14]);
+              combined = "" + closure_1_6 + closure_1_8;
+              closure_1_12(true);
+              c3 = 2;
+              const obj7 = closure_1_1(closure_1_2[14]);
               if (c4) {
                 c4 = 4;
                 c5 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = obj7.beginReverifyPhone(combined, outer1_2);
+                obj1 = { value: null, done: false };
+                obj1[0] = obj7.beginReverifyPhone(combined, closure_1_2);
                 return obj1;
               } else {
                 c4 = 3;
                 c5 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = obj7.beginAddPhone(combined, outer1_2);
+                obj2[0] = obj7.beginAddPhone(combined, closure_1_2);
                 return obj2;
               }
             }
@@ -107,7 +99,7 @@ export default function AddPhone(reason) {
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              aPIError = new outer1_0(outer1_2[15]).APIError(closure_2);
+              aPIError = new closure_1_0(closure_1_2[15]).APIError(closure_2);
               callback(aPIError.getAnyErrorMessage());
               c3 = 0;
               callback2(false);
@@ -152,7 +144,7 @@ export default function AddPhone(reason) {
         }
       }
     });
-    const _handleSubmit = tmp;
+    closure_13 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -161,11 +153,11 @@ export default function AddPhone(reason) {
     }
     return applyArgumentsResult;
   }
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = require(reason[12]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_10];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = require(reason[12]);
+  obj1 = require(reason[12]);
   const items1 = [closure_9];
   let phone;
   const stateFromStores1 = obj1.useStateFromStores(items1, () => action.getAction());
@@ -212,7 +204,7 @@ export default function AddPhone(reason) {
   first1 = tmp11Result[0];
   closure_9 = tmp11Result[1];
   const tmp11Result1 = callback(obj4.useState(null), 2);
-  mergeGuildAvatar = tmp11Result1[1];
+  closure_10 = tmp11Result1[1];
   closure_11 = obj4.useRef(true);
   const tmp11Result2 = callback(obj4.useState(false), 2);
   closure_12 = tmp11Result2[1];
@@ -293,17 +285,17 @@ export default function AddPhone(reason) {
             if (obj.hasFlag(ref.MFA_SMS)) {
               obj = { importer: null };
               obj[0] = function importer() {
-                return outer1_0(outer1_2[22])(outer1_2[25], outer1_2.paths).then((arg0) => {
-                  let closure_0 = arg0.default;
+                return closure_1_0(closure_1_2[22])(closure_1_2[25], closure_1_2.paths).then((arg0) => {
+                  closure_0 = arg0.default;
                   return (arg0) => {
                     const obj = {};
                     const merged = Object.assign(arg0);
-                    let tmp4 = outer1_1;
-                    if (outer1_1 == null) {
-                      tmp4 = outer2_12;
+                    let tmp4 = closure_1_1;
+                    if (closure_1_1 == null) {
+                      tmp4 = closure_2_12;
                     }
                     obj.onConfirm = tmp4;
-                    return outer2_13(closure_0, obj);
+                    return closure_2_13(closure_0, obj);
                   };
                 });
               };

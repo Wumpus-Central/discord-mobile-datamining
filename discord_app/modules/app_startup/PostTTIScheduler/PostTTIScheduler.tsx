@@ -1,4 +1,6 @@
 // discord_app/modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx
+import set from "set" /* 2 */;
+
 const obj = {
   resolve() {
 
@@ -7,10 +9,10 @@ const obj = {
 const promise = new Promise((resolve) => {
   obj.resolve = resolve;
 });
-const result = require("set").fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
+const result = set.fileFinishedImporting("modules/app_startup/PostTTIScheduler/PostTTIScheduler.tsx");
 
 export const schedulePostTTIEvent = function schedulePostTTIEvent(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   promise.then(() => {
     callback();
   });

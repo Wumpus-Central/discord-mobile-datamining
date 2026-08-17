@@ -1,18 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx
-import noop from "noop";
-import { UserSettingsSections } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useCreatorMonetizationEligibilityItems } from "../../../../creator_monetization_eligibility/guild_settings/useCreatorMonetizationEligibilityItems.tsx";
-import { EligibilityChecklistRow } from "../../components/EligibilityChecklist.tsx";
+import useCreatorMonetizationEligibilityItemsDefault from "useCreatorMonetizationEligibilityItems" /* 16908 */;
+import EligibilityChecklistRowDefault from "EligibilityChecklistRow" /* 16912 */;
+import closure_3 from "noop" /* 19 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
 let closure_8 = createCacheKey.createStyles({ container: { flex: 1, paddingHorizontal: 0 }, title: { marginHorizontal: 24, marginTop: 16 } });
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/EligibilityActionSheet.tsx");
 
 export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   onRequireModeratorMFAClick = onRequireModeratorMFAClick.onRequireModeratorMFAClick;
@@ -29,7 +27,7 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
         callback(7360).openUserSettings(obj);
       },
       onRequireModeratorMFAClick() {
-        outer1_1(outer1_2[4]).hideActionSheet(outer1_7);
+        closure_1_1(closure_1_2[4]).hideActionSheet(closure_1_7);
         callback();
       }
     };
@@ -40,8 +38,8 @@ export default function EligibilityActionSheet(onRequireModeratorMFAClick) {
   const intl = onRequireModeratorMFAClick(1236).intl;
   obj[3] = intl.string(onRequireModeratorMFAClick(1236).t["3s47iN"]);
   const items1 = [callback(onRequireModeratorMFAClick(4734).Heading, obj), ];
-  obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItems(onRequireModeratorMFAClick.eligibility, memo) };
-  items1[1] = callback(EligibilityChecklistRow, obj);
+  obj = { style: tmp.container, items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo) };
+  items1[1] = callback(EligibilityChecklistRowDefault, obj);
   obj[1] = items1;
   return callback2(onRequireModeratorMFAClick(6950).BottomSheet, obj);
 };

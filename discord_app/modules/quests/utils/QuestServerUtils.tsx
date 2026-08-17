@@ -1,12 +1,11 @@
 // discord_app/modules/quests/utils/QuestServerUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { t } from "../../../../_runtime/04486_t.js";
-import { QuestRewardTypes } from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import { questFromServerV2 } from "../types/v2/Quest.tsx";
+import t from "t" /* 4486 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
+import questFromServerV2 from "questFromServerV2" /* 7461 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function progressFromServer(progress) {
-  let heartbeat;
   let obj = {};
   const entries = Object.entries(progress);
   while (tmp2 !== undefined) {
@@ -39,7 +38,6 @@ function getSimpleRewardFromServer(type) {
   return obj;
 }
 function _questsEntitlementFromServer(skuId) {
-  let tier;
   let obj = { skuId: skuId.sku_id, tenantMetadata: null, consumed: null };
   const tenant_metadata = skuId.tenant_metadata;
   let quest_rewards;
@@ -53,7 +51,7 @@ function _questsEntitlementFromServer(skuId) {
     if (QuestRewardTypes.QuestRewardTypes.IN_GAME === tag) {
       obj = { questRewards: null };
       obj = { reward: null };
-      const obj1 = { tag: null };
+      obj1 = { tag: null };
       obj1[0] = quest_rewards.reward.tag;
       obj[0] = obj1;
       obj[0] = obj;
@@ -80,7 +78,7 @@ function _questsEntitlementFromServer(skuId) {
   obj[2] = skuId.consumed;
   return obj;
 }
-const result = require("questFromServerV2").fileFinishedImporting("modules/quests/utils/QuestServerUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/utils/QuestServerUtils.tsx");
 
 export const isQuestWithKnownConfigVersion = function isQuestWithKnownConfigVersion(config) {
   try {
@@ -113,7 +111,6 @@ export const questUserStatusFromServer = function questUserStatusFromServer(body
   return obj;
 };
 export const questWithUserStatusFromServer = function questWithUserStatusFromServer(body) {
-  let claimed_tier;
   let obj = { id: body.id, preview: body.preview, config: null, userStatus: null, targetedContent: null, trafficMetadataSealed: null };
   const match = t.match(body.config);
   const str = t;
@@ -144,7 +141,6 @@ export const excludedQuestFromServer = function excludedQuestFromServer(id) {
   return { id: id.id, replacementId: id.replacement_id };
 };
 export const getClaimedQuestWithUserStatusFromServer = function getClaimedQuestWithUserStatusFromServer(id) {
-  let claimed_tier;
   let obj = { id: id.id, config: null, userStatus: null };
   const config = id.config;
   obj = { id: config.id, startsAt: config.starts_at, expiresAt: config.expires_at, features: config.features, messages: obj, assets: obj1, colors: obj2, rewards: rewards.map(getSimpleRewardFromServer), cosponsorMetadata: null };

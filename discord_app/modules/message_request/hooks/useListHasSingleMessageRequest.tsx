@@ -1,16 +1,16 @@
 // discord_app/modules/message_request/hooks/useListHasSingleMessageRequest.tsx
-import noop from "noop";
-import processChannel from "processChannel";
-import closure_5 from "processChannel";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "processChannel" /* 4799 */;
+import closure_5 from "processChannel" /* 4800 */;
 
 const require = arg1;
-const result = require("processChannel").fileFinishedImporting("modules/message_request/hooks/useListHasSingleMessageRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/hooks/useListHasSingleMessageRequest.tsx");
 
 export const useListHasSingleMessageRequest = function useListHasSingleMessageRequest() {
   messageRequestsCount = messageRequestsCount(stateFromStores[3]).useMessageRequestsCount();
   const ref = React.useRef(messageRequestsCount);
   const obj = messageRequestsCount(stateFromStores[3]);
-  const items = [processChannel];
+  const items = [closure_4];
   stateFromStores = messageRequestsCount(stateFromStores[4]).useStateFromStores(items, () => ready.isReady());
   React = React.useRef(stateFromStores);
   const items1 = [stateFromStores, messageRequestsCount];

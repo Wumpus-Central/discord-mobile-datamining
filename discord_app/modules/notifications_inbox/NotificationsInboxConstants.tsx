@@ -1,20 +1,23 @@
 // discord_app/modules/notifications_inbox/NotificationsInboxConstants.tsx
-import { NOTIFICATIONS_INBOX } from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
+const NOTIFICATIONS_INBOX = ME.NOTIFICATIONS_INBOX;
 let obj = { UNREAD: "UNREAD", TODAY: "TODAY", YESTERDAY: "YESTERDAY", OLDER: "OLDER" };
 obj = { ALL: "all", MENTIONS: "mentions", BOOKMARKS: "bookmarks" };
 obj = {};
-obj[obj.UNREAD] = require("getSystemLocale").t.sRUdB8;
-obj[obj.TODAY] = require("getSystemLocale").t.F4jZQs;
-obj[obj.YESTERDAY] = require("getSystemLocale").t.gnv4pE;
-obj[obj.OLDER] = require("getSystemLocale").t.exrPZv;
-const result = require("getSystemLocale").fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
+obj[obj.UNREAD] = getSystemLocale.t.sRUdB8;
+obj[obj.TODAY] = getSystemLocale.t.F4jZQs;
+obj[obj.YESTERDAY] = getSystemLocale.t.gnv4pE;
+obj[obj.OLDER] = getSystemLocale.t.exrPZv;
+const result = set.fileFinishedImporting("modules/notifications_inbox/NotificationsInboxConstants.tsx");
 
 export const ANALYTICS_NAME = "Notifications Inbox";
 export const NOTIFICATIONS_INBOX_RAW_GUILD_ID = "notifications_inbox_guild_id";
 export const GUILD_HEADER_HEIGHT = 88;
-export const INBOX_MESSAGE_AGE_THRESHOLD = require("set").Millis.WEEK;
+export const INBOX_MESSAGE_AGE_THRESHOLD = setDefault.Millis.WEEK;
 export const MAX_MESSAGES_PER_CHANNEL = 50;
 export const MAX_UNREAD_MESSAGES_PER_CHANNEL = 10;
 export const NOTIFICATIONS_INBOX_FEATURE = "notifications-inbox";
@@ -42,7 +45,7 @@ export const InboxReadState = { READ: "READ", UNREAD: "UNREAD" };
 export const InboxMessageType = { ALL_MESSAGES_CHANNEL: "ALL_MESSAGES_CHANNEL", MENTION: "MENTION", BOOKMARK: "BOOKMARK" };
 export const MESSAGE_CATEGORY_DISPLAY_MAP = obj;
 export const getFilterMap = function getFilterMap() {
-  const obj = {};
+  obj = {};
   const intl = getSystemLocale.intl;
   obj[obj.ALL] = intl.string(getSystemLocale.t.iWyjNt);
   const intl2 = getSystemLocale.intl;

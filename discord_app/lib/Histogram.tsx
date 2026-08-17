@@ -1,6 +1,8 @@
 // discord_app/lib/Histogram.tsx
-import { TDigest } from "../../_runtime/07491_TDigest.js";
-const result = require("set").fileFinishedImporting("lib/Histogram.tsx");
+import set from "set" /* 2 */;
+import TDigest from "TDigest" /* 7491 */;
+
+const result = set.fileFinishedImporting("lib/Histogram.tsx");
 class Histogram {
   constructor() {
     obj = Object.create(new.target.prototype);

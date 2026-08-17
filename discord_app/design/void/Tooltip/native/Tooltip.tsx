@@ -1,35 +1,25 @@
 // discord_app/design/void/Tooltip/native/Tooltip.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { UP: "UP", DOWN: "DOWN" };
 obj = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-obj = { container: null, label: null, title: null, arrow: null };
-obj[0] = { padding: 10, borderRadius: require("Themes").radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 12, color: require("Themes").colors.WHITE };
+obj = { container: { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
+createCacheKey = { fontFamily: require("ME").Fonts.PRIMARY_MEDIUM, fontSize: 12, color: ThemesDefault.colors.WHITE };
 obj[1] = createCacheKey;
 obj[2] = { marginBottom: 4 };
-let obj1 = { padding: 10, borderRadius: require("Themes").radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-obj[3] = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: require("Themes").colors.BACKGROUND_BRAND, borderBottomColor: require("Themes").colors.BACKGROUND_BRAND };
+let obj1 = { padding: 10, borderRadius: ThemesDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+obj[3] = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj3 = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: require("Themes").colors.BACKGROUND_BRAND, borderBottomColor: require("Themes").colors.BACKGROUND_BRAND };
-const result = require("ME").fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
+let obj3 = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: ThemesDefault.colors.BACKGROUND_BRAND, borderBottomColor: ThemesDefault.colors.BACKGROUND_BRAND };
+const result = require("set").fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 
 export default function Tooltip(arrowHeight) {
-  let arrowStyle;
-  let arrowWidth;
-  let children;
-  let containerStyle;
-  let label;
-  let labelStyle;
-  let style;
-  let title;
   ({ arrowStyle, label, title, arrowWidth } = arrowHeight);
   ({ style, containerStyle, labelStyle, children } = arrowHeight);
   if (arrowWidth === undefined) {
@@ -54,8 +44,8 @@ export default function Tooltip(arrowHeight) {
   const tmp3 = callback2();
   const items = [LEFT, num2];
   const memo = React.useMemo(() => {
-    if (outer1_7.LEFT === LEFT) {
-      let obj = { alignSelf: "flex-start", left: null };
+    if (closure_1_7.LEFT === LEFT) {
+      obj = { alignSelf: "flex-start", left: null };
       obj[1] = num2;
       return obj;
     } else if (tmp2.CENTER === tmp) {
@@ -85,7 +75,7 @@ export default function Tooltip(arrowHeight) {
     tmp8 = callback(tmp6, obj);
   }
   const items2 = [tmp8, , ];
-  const obj1 = { onLayout: arrowHeight.onLayout, style: items3, children: null };
+  obj1 = { onLayout: arrowHeight.onLayout, style: items3, children: null };
   items3 = [tmp3.container, containerStyle];
   let tmp10 = null;
   if (null != title) {

@@ -1,19 +1,16 @@
 // discord_app/modules/guild_rooms/GuildRoomAnalytics.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createRTCConnection from "createRTCConnection";
-import updateVoiceState from "updateVoiceState";
-import resolveCreatingNotes from "resolveCreatingNotes";
-import { AnalyticEvents } from "ME";
-import { GuildRoomBackgrounds } from "../../../discord_common/js/shared/shared-constants/GuildRoomBackgrounds.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import GuildRoomBackgrounds from "GuildRoomBackgrounds" /* 9868 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createRTCConnection" /* 4539 */;
+import closure_6 from "updateVoiceState" /* 4542 */;
+import closure_7 from "resolveCreatingNotes" /* 9864 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function getBaseProperties(merged) {
-  let channelId;
-  let guildId;
-  let userId;
   ({ userId, guildId, channelId } = merged);
   if (userId == null) {
     userId = id.getId();
@@ -43,7 +40,7 @@ function getBaseProperties(merged) {
   obj[5] = background;
   return obj;
 }
-const result = require("createRTCConnection").fileFinishedImporting("modules/guild_rooms/GuildRoomAnalytics.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomAnalytics.tsx");
 
 export const trackGuildRoomObjectInteracted = function trackGuildRoomObjectInteracted(interactionType) {
   interactionType = interactionType.interactionType;
@@ -54,22 +51,22 @@ export const trackGuildRoomObjectInteracted = function trackGuildRoomObjectInter
   f84270 = (arg0) => {
     let obj = f84270(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f84270));
+    const merged = Object.assign(closure_1_9(f84270));
     obj.interaction_type = channelId;
     const merged1 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_OBJECT_INTERACTED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_OBJECT_INTERACTED, obj);
   };
-  let dependencyMap;
+  dependencyMap = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -79,9 +76,9 @@ export const trackGuildRoomObjectInteracted = function trackGuildRoomObjectInter
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     dependencyMap = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -106,22 +103,22 @@ export const trackGuildRoomInteracted = function trackGuildRoomInteracted(intera
   f84271 = (arg0) => {
     let obj = f84271(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f84271));
+    const merged = Object.assign(closure_1_9(f84271));
     obj.interaction_type = channelId;
     const merged1 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_INTERACTED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_INTERACTED, obj);
   };
-  let dependencyMap;
+  dependencyMap = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -131,9 +128,9 @@ export const trackGuildRoomInteracted = function trackGuildRoomInteracted(intera
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     dependencyMap = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -155,28 +152,28 @@ export const trackGuildRoomLayoutToggled = function trackGuildRoomLayoutToggled(
   const guildRoomOpen = location.guildRoomOpen;
   let f84272 = guildRoomOpen;
   let merged = Object.assign(location, Object.create(null));
-  let dependencyMap = merged;
+  dependencyMap = merged;
   channelId = merged.channelId;
   f84272 = (arg0) => {
     let obj = f84272(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(table));
+    const merged = Object.assign(closure_1_9(table));
     obj.location = channelId;
     obj.guild_room_open = f84272;
     const merged1 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_LAYOUT_TOGGLED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_LAYOUT_TOGGLED, obj);
   };
   dependencyMap = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -186,9 +183,9 @@ export const trackGuildRoomLayoutToggled = function trackGuildRoomLayoutToggled(
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     dependencyMap = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -214,22 +211,22 @@ export const trackGuildRoomOpened = function trackGuildRoomOpened(location) {
   f84273 = (arg0) => {
     let obj = f84273(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f84273));
+    const merged = Object.assign(closure_1_9(f84273));
     obj.location = channelId;
     const merged1 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_OPENED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_OPENED, obj);
   };
-  let dependencyMap;
+  dependencyMap = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -239,9 +236,9 @@ export const trackGuildRoomOpened = function trackGuildRoomOpened(location) {
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     dependencyMap = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -258,8 +255,6 @@ export const trackGuildRoomOpened = function trackGuildRoomOpened(location) {
   }
 };
 export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(arg0) {
-  let channelId;
-  let fn;
   ({ actualSeatPosition: channelId, targetSeatPosition: fn } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   let timeout = merged;
@@ -267,7 +262,7 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
   fn = (arg0) => {
     let obj = fn(5042);
     obj = {};
-    const merged = Object.assign(outer1_9(items3));
+    const merged = Object.assign(closure_1_9(items3));
     const point = items1;
     let findSeatResult = channelId(9866).findSeat(items1);
     let str;
@@ -300,7 +295,7 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
     items2 = [];
     items3 = [];
     const items4 = [];
-    const roomUsers = outer1_7.getRoomUsers(items3.channelId);
+    const roomUsers = closure_1_7.getRoomUsers(items3.channelId);
     const item = roomUsers.forEach((position) => {
       items1.push(arg1);
       const findSeatResult = items1(items3[6]).findSeat(position.position);
@@ -318,19 +313,19 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
     obj = { seated_user_ids: items1, seated_user_seat_names: items2, seated_user_x_positions: items3, seated_user_y_positions: items4 };
     const merged1 = Object.assign(obj);
     const merged2 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_SEAT_SELECTED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_SEAT_SELECTED, obj);
   };
   timeout = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -340,9 +335,9 @@ export const trackGuildRoomSeatSelected = function trackGuildRoomSeatSelected(ar
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     timeout = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -362,22 +357,22 @@ export const trackGuildRoomUserInteracted = function trackGuildRoomUserInteracte
   f84275 = (arg0) => {
     let obj = f84275(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(f84275));
+    const merged = Object.assign(closure_1_9(f84275));
     obj.interaction_type = channelId;
     const merged1 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_USER_INTERACTED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_USER_INTERACTED, obj);
   };
-  let dependencyMap;
+  dependencyMap = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -387,9 +382,9 @@ export const trackGuildRoomUserInteracted = function trackGuildRoomUserInteracte
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     dependencyMap = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -410,21 +405,21 @@ export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(
   const f84276 = (arg0) => {
     let obj = f84276(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(channelId));
+    const merged = Object.assign(closure_1_9(channelId));
     const merged1 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_USER_CONNECTED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_USER_CONNECTED, obj);
   };
-  let dependencyMap;
+  dependencyMap = undefined;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -434,9 +429,9 @@ export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     dependencyMap = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {
@@ -452,7 +447,7 @@ export const trackGuildRoomUserConnected = function trackGuildRoomUserConnected(
   }
 };
 export const trackGuildRoomUserDisconnected = function trackGuildRoomUserDisconnected(channelId) {
-  let obj = collectGuildAnalyticsMetadata;
+  let obj = collectGuildAnalyticsMetadataDefault;
   obj = {};
   const merged = Object.assign(getBaseProperties(channelId));
   obj.voice_state_count = Object.keys(store2.getVoiceStatesForChannel(channelId.channelId)).length;
@@ -460,7 +455,7 @@ export const trackGuildRoomUserDisconnected = function trackGuildRoomUserDisconn
   obj.trackWithMetadata(AnalyticEvents.GUILD_ROOM_USER_DISCONNECTED, obj);
 };
 export const trackGuildRoomSettingsUpdate = function trackGuildRoomSettingsUpdate(remember_video_overlay_visibility) {
-  expandEventProperties.track(AnalyticEvents.GUILD_ROOM_SETTINGS_UPDATE, { remember_video_overlay_visibility: remember_video_overlay_visibility.rememberVideoOverlayVisibility });
+  expandEventPropertiesDefault.track(AnalyticEvents.GUILD_ROOM_SETTINGS_UPDATE, { remember_video_overlay_visibility: remember_video_overlay_visibility.rememberVideoOverlayVisibility });
 };
 export const trackGuildRoomUserUpdated = function trackGuildRoomUserUpdated(update) {
   let channelId = update.update;
@@ -470,11 +465,11 @@ export const trackGuildRoomUserUpdated = function trackGuildRoomUserUpdated(upda
   fn = (arg0) => {
     let obj = fn(table[8]);
     obj = {};
-    const merged = Object.assign(outer1_9(fn));
+    const merged = Object.assign(closure_1_9(fn));
     obj = { update_type: channelId.updateType, update_reason: channelId.updateReason };
     const updateType = channelId.updateType;
     if ("position" === updateType) {
-      const obj1 = {};
+      obj1 = {};
       const merged1 = Object.assign(obj);
       const items = [tmp2.position.x, tmp2.position.y];
       obj1.position_v2 = items;
@@ -492,19 +487,19 @@ export const trackGuildRoomUserUpdated = function trackGuildRoomUserUpdated(upda
     }
     const merged4 = Object.assign(tmp3);
     const merged5 = Object.assign(arg0);
-    obj.trackWithMetadata(outer1_8.GUILD_ROOM_USER_UPDATED, obj);
+    obj.trackWithMetadata(closure_1_8.GUILD_ROOM_USER_UPDATED, obj);
   };
   let timeout;
   function onChange() {
-    let obj = outer1_5;
-    const mediaSessionId = outer1_5.getMediaSessionId();
+    let obj = closure_1_5;
+    const mediaSessionId = closure_1_5.getMediaSessionId();
     if (null != mediaSessionId) {
       obj.removeChangeListener(onChange);
       const _clearTimeout = clearTimeout;
       clearTimeout(closure_2);
       obj = { voice_state_count: null, voice_media_session_id: null };
       const _Object = Object;
-      obj[0] = Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length;
+      obj[0] = Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length;
       obj[1] = mediaSessionId;
       fn(obj);
     }
@@ -514,9 +509,9 @@ export const trackGuildRoomUserUpdated = function trackGuildRoomUserUpdated(upda
   if (null == mediaSessionId) {
     const _setTimeout = setTimeout;
     timeout = setTimeout(() => {
-      outer1_5.removeChangeListener(onChange);
+      closure_1_5.removeChangeListener(onChange);
       clearTimeout(closure_2);
-      fn({ voice_state_count: Object.keys(outer1_6.getVoiceStatesForChannel(channelId)).length });
+      fn({ voice_state_count: Object.keys(closure_1_6.getVoiceStatesForChannel(channelId)).length });
     }, 2500);
     obj.addChangeListener(onChange);
   } else {

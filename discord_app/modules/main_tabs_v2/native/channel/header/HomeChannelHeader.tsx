@@ -1,26 +1,23 @@
 // discord_app/modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { registerAsset } from "../../../../../../_runtime/11952_registerAsset.js";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 11952 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null };
-obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8 };
+obj = { flex: 1, flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(function HomeChannelHeader() {
+const memoResult = importAllResult.memo(function HomeChannelHeader() {
   let obj = { style: callback3().container, children: null };
-  obj = { source: null, size: null, disableColor: true };
-  obj[0] = registerAsset;
-  obj[1] = Button.Icon.Sizes.MEDIUM;
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM, disableColor: true };
   const items = [callback(Button.Icon, obj), ];
   obj = { variant: "heading-lg/extrabold", color: "interactive-text-active", children: null };
   const intl = getSystemLocale.intl;
@@ -29,6 +26,6 @@ const memoResult = require("noop").memo(function HomeChannelHeader() {
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/channel/header/HomeChannelHeader.tsx");
 
 export default memoResult;

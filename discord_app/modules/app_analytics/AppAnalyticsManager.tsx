@@ -1,21 +1,21 @@
 // discord_app/modules/app_analytics/AppAnalyticsManager.tsx
-import initialize from "initialize";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import filterPlayingActivities from "filterPlayingActivities";
-import anyoneHasFlagInContext from "anyoneHasFlagInContext";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import ME from "ME";
-import "initialize";
-import { getGamePlatform } from "../activities/utils/getGamePlatform.tsx";
-import { _openRobloxURLWithRootPlaceId } from "../roblox_subgame_detection/RobloxSubgameUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "AppAnalyticsUtils.tsx";
+import setDefault from "set" /* 687 */;
+import _openRobloxURLWithRootPlaceId from "_openRobloxURLWithRootPlaceId" /* 4643 */;
+import initializeDefault from "initialize" /* 5038 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import getGamePlatformDefault from "getGamePlatform" /* 15961 */;
+import closure_3 from "initialize" /* 4504 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_5 from "createRTCConnection" /* 4539 */;
+import closure_6 from "filterPlayingActivities" /* 7250 */;
+import closure_7 from "anyoneHasFlagInContext" /* 4774 */;
+import closure_8 from "getVoiceStatesForGuild" /* 4545 */;
+import ME from "ME" /* 676 */;
 
-let c10;
-let c9;
-let require = arg1;
+require = arg1;
 ({ AnalyticEvents: c9, ActivityTypes: c10 } = ME);
-const MINUTE = require("set").Millis.MINUTE;
+const MINUTE = setDefault.Millis.MINUTE;
+initializeDefault;
 class AppAnalyticsManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -23,15 +23,15 @@ class AppAnalyticsManager extends tmp3 {
     applyArgumentsResult._currentUserSpeaking = false;
     applyArgumentsResult._anyoneElseSpeaking = false;
     applyArgumentsResult._handleRTCConnectionStoreChanged = function _handleRTCConnectionStoreChanged() {
-      const channelId = outer1_5.getChannelId();
+      const channelId = closure_1_5.getChannelId();
       if (applyArgumentsResult._voiceChannelId !== channelId) {
         obj._voiceChannelId = channelId;
         if (null != channelId) {
           if (null == obj._reportInterval) {
-            const interval = new applyArgumentsResult(outer1_2[9]).Interval();
+            const interval = new applyArgumentsResult(closure_1_2[9]).Interval();
             obj._reportInterval = interval;
             const _reportInterval = obj._reportInterval;
-            _reportInterval.start(outer1_11, () => {
+            _reportInterval.start(closure_1_11, () => {
               closure_0._trackStartSpeaking();
               closure_0._trackStartListening();
             });
@@ -42,12 +42,12 @@ class AppAnalyticsManager extends tmp3 {
       }
     };
     applyArgumentsResult._handleSpeakingStoreChanged = function _handleSpeakingStoreChanged() {
-      const result = outer1_7.isCurrentUserSpeaking();
+      const result = closure_1_7.isCurrentUserSpeaking();
       if (applyArgumentsResult._currentUserSpeaking !== result) {
         obj2._currentUserSpeaking = result;
         obj2._trackStartSpeaking();
       }
-      const isAnyoneElseSpeakingResult = outer1_7.isAnyoneElseSpeaking();
+      const isAnyoneElseSpeakingResult = closure_1_7.isAnyoneElseSpeaking();
       if (applyArgumentsResult._anyoneElseSpeaking !== isAnyoneElseSpeakingResult) {
         obj2._anyoneElseSpeaking = isAnyoneElseSpeakingResult;
         obj2._trackStartListening();
@@ -59,8 +59,8 @@ class AppAnalyticsManager extends tmp3 {
 const prototype = AppAnalyticsManager.prototype;
 prototype["_initialize"] = function _initialize() {
   const self = this;
-  const result = new Map().set(anyoneHasFlagInContext, () => self._handleSpeakingStoreChanged());
-  this.stores = result.set(createRTCConnection, () => self._handleRTCConnectionStoreChanged());
+  const result = new Map().set(closure_7, () => self._handleSpeakingStoreChanged());
+  this.stores = result.set(closure_5, () => self._handleRTCConnectionStoreChanged());
   this._reset();
 };
 prototype["_reset"] = function _reset() {
@@ -80,37 +80,37 @@ prototype["_trackStartSpeaking"] = function _trackStartSpeaking() {
     const guildId = store.getGuildId();
     let obj = collectGuildAnalyticsMetadata;
     obj = { mode: null, priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
-    obj[0] = _detectH265HardwareDecode.getMode();
-    obj[1] = anyoneHasFlagInContext.isCurrentUserPrioritySpeaking();
+    obj[0] = closure_4.getMode();
+    obj[1] = closure_7.isCurrentUserPrioritySpeaking();
     obj[2] = channelId;
     obj[3] = guildId;
     obj[4] = channelId;
     obj[5] = guildId;
     obj[6] = store.getRTCConnectionId();
     obj[7] = store.getMediaSessionId();
-    obj[8] = getVoiceStatesForGuild.countVoiceStatesForChannel(self._voiceChannelId);
+    obj[8] = closure_8.countVoiceStatesForChannel(self._voiceChannelId);
     const merged = Object.assign(self.getGameMetadata());
     const merged1 = Object.assign(store.getPacketStats());
     obj.trackWithMetadata(constants.START_SPEAKING, obj);
   }
 };
 prototype["_trackStartListening"] = function _trackStartListening() {
-  let obj = _detectH265HardwareDecode;
-  if (!_detectH265HardwareDecode.isDeaf()) {
+  let obj = closure_4;
+  if (!closure_4.isDeaf()) {
     const self = this;
     if (this._anyoneElseSpeaking) {
       const channelId = store.getChannelId();
       const guildId = store.getGuildId();
       obj = { mute: null, anyone_priority: null, channel: null, server: null, channel_id: null, guild_id: null, rtc_connection_id: null, media_session_id: null, voice_state_count: null };
       obj[0] = obj.isMute();
-      obj[1] = anyoneHasFlagInContext.isAnyonePrioritySpeaking();
+      obj[1] = closure_7.isAnyonePrioritySpeaking();
       obj[2] = channelId;
       obj[3] = guildId;
       obj[4] = channelId;
       obj[5] = guildId;
       obj[6] = store.getRTCConnectionId();
       obj[7] = store.getMediaSessionId();
-      obj[8] = getVoiceStatesForGuild.countVoiceStatesForChannel(self._voiceChannelId);
+      obj[8] = closure_8.countVoiceStatesForChannel(self._voiceChannelId);
       const merged = Object.assign(self.getGameMetadata());
       collectGuildAnalyticsMetadata.trackWithMetadata(constants.START_LISTENING, obj);
       const obj2 = collectGuildAnalyticsMetadata;
@@ -119,13 +119,13 @@ prototype["_trackStartListening"] = function _trackStartListening() {
 };
 prototype["_terminate"] = function _terminate() {
   this._reset();
-  anyoneHasFlagInContext.removeChangeListener(this._handleSpeakingStoreChanged);
+  closure_7.removeChangeListener(this._handleSpeakingStoreChanged);
   store.removeChangeListener(this._handleRTCConnectionStoreChanged);
 };
 prototype["getGameMetadata"] = function getGameMetadata() {
-  const findActivityResult = filterPlayingActivities.findActivity((type) => type.type === constants.PLAYING);
+  const findActivityResult = closure_6.findActivity((type) => type.type === constants.PLAYING);
   currentGameForAnalytics = currentGameForAnalytics.getCurrentGameForAnalytics();
-  const obj = { game_platform: getGamePlatform(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
+  const obj = { game_platform: getGamePlatformDefault(findActivityResult), game_name: null, game_exe_name: null, game_id: null, game_distributor: null, game_distributor_game_id: null, game_metadata: null };
   let name = null;
   if (null != findActivityResult) {
     name = findActivityResult.name;
@@ -160,6 +160,6 @@ prototype["getGameMetadata"] = function getGameMetadata() {
   return obj;
 };
 const appAnalyticsManager = new AppAnalyticsManager();
-let result = require("createRTCConnection").fileFinishedImporting("modules/app_analytics/AppAnalyticsManager.tsx");
+let result = require("set").fileFinishedImporting("modules/app_analytics/AppAnalyticsManager.tsx");
 
 export default appAnalyticsManager;

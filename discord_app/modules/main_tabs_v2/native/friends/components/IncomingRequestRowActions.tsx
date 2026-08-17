@@ -1,11 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row" } });
@@ -14,11 +12,9 @@ let closure_9 = { code: "function IncomingRequestRowActionsTsx2(){const{buttonWi
 let closure_10 = { code: "function IncomingRequestRowActionsTsx3(){const{waveWidth,waveHeight}=this.__closure;return{transform:[{translateX:waveWidth.get()/2},{translateY:waveHeight.get()/2}]};}" };
 let closure_11 = { code: "function IncomingRequestRowActionsTsx4(){const{withDelay,withRepeat,withTiming,pressed,Easing,waveWidth,waveHeight}=this.__closure;return{transform:[{rotateZ:withDelay(450,withRepeat(withTiming(pressed.get()?'8deg':'-2deg',{duration:150,easing:Easing.inOut(Easing.quad)}),4,true))},{translateX:-waveWidth.get()/2},{translateY:-waveHeight.get()/2}]};}" };
 let closure_12 = { code: "function IncomingRequestRowActionsTsx5(){const{pressed}=this.__closure;return{pointerEvents:!pressed.get()?'none':'none'};}" };
-let result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/components/IncomingRequestRowActions.tsx");
 
 export const IncomingRequestRowActions = function IncomingRequestRowActions(user) {
-  let acceptRequestAccessibilityLabel;
-  let ignoreRequestAccessibilityLabel;
   user = user.user;
   const applicationId = user.applicationId;
   const pressed = user.pressed;
@@ -32,7 +28,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   ({ acceptRequestAccessibilityLabel, ignoreRequestAccessibilityLabel } = user);
   let obj = user(pressed[4]);
   sharedValue = obj.useSharedValue(0);
-  let obj1 = user(pressed[4]);
+  obj1 = user(pressed[4]);
   sharedValue1 = obj1.useSharedValue(-1);
   let obj2 = user(pressed[4]);
   sharedValue2 = obj2.useSharedValue(-1);
@@ -159,9 +155,9 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
       obj1[0] = obj.withDelay(450, obj2.withRepeat(obj3.withTiming(str, obj2), 4, true));
       items = [, , ];
       items[0] = obj1;
-      obj3 = { translateX: -c8.get() / 2 };
+      obj3 = { translateX: -closure_8.get() / 2 };
       items[1] = obj3;
-      obj4 = { translateY: -c9.get() / 2 };
+      obj4 = { translateY: -closure_9.get() / 2 };
       items[2] = obj4;
       obj[0] = items;
       return obj;
@@ -212,15 +208,12 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
     children: null
   };
   obj4 = { direction: "horizontal", spacing: 8, children: null };
-  let obj5 = { size: "sm", variant: "tertiary", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj5[2] = applicationId(pressed[9]);
-  obj5[3] = callback1;
-  obj5[4] = ignoreRequestAccessibilityLabel;
-  const items3 = [animate(user(pressed[8]).IconButton, obj5), ];
-  obj6 = { size: "sm", variant: "active", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj6[2] = applicationId(pressed[10]);
-  obj6[3] = callback;
-  obj6[4] = acceptRequestAccessibilityLabel;
+  const obj12 = user(pressed[4]);
+  const tmp16 = sharedValue;
+  const tmp17 = onDeclineIncomingRequest;
+  const tmp19 = applicationId;
+  const items3 = [animate(user(pressed[8]).IconButton, { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 }), ];
+  obj6 = { size: "sm", variant: "active", icon: applicationId(pressed[10]), onPress: callback, accessibilityLabel: acceptRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
   items3[1] = animate(user(pressed[8]).IconButton, obj6);
   obj4[2] = items3;
   obj3[2] = sharedValue(user(pressed[7]).Stack, obj4);
@@ -244,10 +237,7 @@ export const IncomingRequestRowActions = function IncomingRequestRowActions(user
   if (animate) {
     tmp22 = animatedStyle3;
   }
-  const obj12 = user(pressed[4]);
-  const tmp16 = sharedValue;
-  const tmp17 = onDeclineIncomingRequest;
-  const tmp19 = applicationId;
+  let obj5 = { size: "sm", variant: "tertiary", icon: applicationId(pressed[9]), onPress: callback1, accessibilityLabel: ignoreRequestAccessibilityLabel, maxFontSizeMultiplier: 2 };
   obj9[3] = animate(tmp19(pressed[4]).View, {
     style: tmp22,
     onLayout(nativeEvent) {

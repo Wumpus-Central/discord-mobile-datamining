@@ -1,19 +1,17 @@
 // discord_app/modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx
-import addApplication from "addApplication";
-import { HelpdeskArticles } from "ME";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { result } from "../resolveMessageContentColors.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import resultDefault from "result" /* 8178 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import closure_3 from "addApplication" /* 4478 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("result").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
 
 export const createChannelLinkedToLobbySystemMessage = function createChannelLinkedToLobbySystemMessage(message) {
-  let roleStyle;
-  let theme;
   message = message.message;
   ({ roleStyle, theme } = message);
-  const tmp3 = result(theme);
+  const tmp3 = resultDefault(theme);
   let str = message.applicationId;
   if (str == null) {
     str = "";
@@ -32,7 +30,7 @@ export const createChannelLinkedToLobbySystemMessage = function createChannelLin
     obj[2] = roleStyle;
     obj[1] = tmp(8187)(obj);
     obj[2] = application.name;
-    const obj1 = { linkColor: null, medium: true };
+    obj1 = { linkColor: null, medium: true };
     obj1[0] = tmp3.defaultUsernameColor;
     obj[3] = obj1;
     const obj2 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };

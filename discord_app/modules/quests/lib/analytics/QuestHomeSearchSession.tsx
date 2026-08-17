@@ -1,8 +1,10 @@
 // discord_app/modules/quests/lib/analytics/QuestHomeSearchSession.tsx
-import { v1 } from "../../../../../_runtime/00514_v1.js";
-import { result } from "../../../analytics_sessions/SessionUtils.tsx";
+import set from "set" /* 2 */;
+import v1 from "v1" /* 514 */;
+import result2 from "result" /* 5063 */;
+
 let c2 = null;
-const result = require("set").fileFinishedImporting("modules/quests/lib/analytics/QuestHomeSearchSession.tsx");
+const result = set.fileFinishedImporting("modules/quests/lib/analytics/QuestHomeSearchSession.tsx");
 
 export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSearchSession() {
   const timestamp = Date.now();
@@ -12,7 +14,7 @@ export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSe
     obj[0] = v1.v4();
     obj[1] = timestamp;
     obj[2] = timestamp;
-    obj[3] = result.CLIENT_SESSION_STORAGE_VERSION;
+    obj[3] = result2.CLIENT_SESSION_STORAGE_VERSION;
     obj[0] = obj;
     const obj4 = v1;
   } else {
@@ -23,7 +25,7 @@ export const getOrCreateQuestHomeSearchSession = function getOrCreateQuestHomeSe
   return obj;
 };
 export function clearQuestHomeSearchSession() {
-  let c2 = null;
+  c2 = null;
 }
 export function getCurrentQuestHomeSearchSession() {
   return c2;

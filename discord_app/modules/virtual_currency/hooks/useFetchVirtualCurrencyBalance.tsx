@@ -1,15 +1,17 @@
 // discord_app/modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx
-import { useEffect } from "noop";
-import redeemError from "redeemError";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_3 from "redeemError" /* 9254 */;
 
-const result = require("initialize").fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
+const useEffect = noop.useEffect;
+const result = set.fileFinishedImporting("modules/virtual_currency/hooks/useFetchVirtualCurrencyBalance.tsx");
 
 export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBalance(disableFetch) {
   const _require = disableFetch;
-  const items = [redeemError];
-  const isFetching = _require(balance[2]).useStateFromStoresObject(items, () => ({ balance: redeemError.balance, isFetching: redeemError.isFetchingBalance, error: redeemError.fetchBalanceError }));
+  const items = [closure_3];
+  const isFetching = _require(balance[2]).useStateFromStoresObject(items, () => ({ balance: closure_3.balance, isFetching: closure_3.isFetchingBalance, error: closure_3.fetchBalanceError }));
   balance = isFetching.balance;
-  const error = isFetching.error;
+  error = isFetching.error;
   const items1 = [balance, error, ];
   disableFetch = undefined;
   if (disableFetch != null) {
@@ -17,7 +19,7 @@ export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBa
   }
   items1[2] = disableFetch;
   error(() => {
-    let disableFetch;
+    disableFetch = undefined;
     if (disableFetch != null) {
       disableFetch = disableFetch.disableFetch;
     }
@@ -28,7 +30,7 @@ export const useFetchVirtualCurrencyBalance = function useFetchVirtualCurrencyBa
       disableFetch = null !== error;
     }
     if (!disableFetch) {
-      disableFetch = outer1_3.isFetchingBalance;
+      disableFetch = closure_1_3.isFetchingBalance;
     }
     if (!disableFetch) {
       const virtualCurrencyBalance = disableFetch(balance[3]).fetchVirtualCurrencyBalance();

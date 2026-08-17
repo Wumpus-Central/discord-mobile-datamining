@@ -1,13 +1,14 @@
 // discord_app/stores/AnalyticsTrackingStore.tsx
-import importDefaultResult from "fetchFingerprint";
-import encodeProperties from "encodeProperties";
-import { encodeProperties } from "../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { trackHeartbeat } from "../modules/analytics_sessions/SessionHeartbeatScheduler.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import encodeProperties2 from "encodeProperties" /* 503 */;
+import expandEventProperties from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import trackHeartbeat from "trackHeartbeat" /* 5054 */;
+import importDefaultResult from "fetchFingerprint" /* 1218 */;
+import encodeProperties from "encodeProperties" /* 503 */;
 
-const require = arg1;
+require = arg1;
 encodeProperties = {
-  dispatcher: require("dispatcher"),
+  dispatcher: dispatcherDefault,
   actionHandler: encodeProperties,
   TRACKING_URL: require("ME").Endpoints.TRACK,
   waitFor: items,
@@ -30,29 +31,29 @@ encodeProperties = {
 };
 encodeProperties = {
   CONNECTION_OPEN(arg0) {
-    return encodeProperties.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties2.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   OVERLAY_INITIALIZE(arg0) {
-    return encodeProperties.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties2.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CURRENT_USER_UPDATE(arg0) {
-    return encodeProperties.AnalyticsActionHandlers.handleConnectionOpen(arg0);
+    return encodeProperties2.AnalyticsActionHandlers.handleConnectionOpen(arg0);
   },
   CONNECTION_CLOSED() {
-    return encodeProperties.AnalyticsActionHandlers.handleConnectionClosed();
+    return encodeProperties2.AnalyticsActionHandlers.handleConnectionClosed();
   },
   FINGERPRINT() {
-    return encodeProperties.AnalyticsActionHandlers.handleFingerprint();
+    return encodeProperties2.AnalyticsActionHandlers.handleFingerprint();
   },
   TRACK(arg0) {
-    return encodeProperties.AnalyticsActionHandlers.handleTrack(arg0);
+    return encodeProperties2.AnalyticsActionHandlers.handleTrack(arg0);
   },
   SET_ANALYTICS_TOKEN(arg0) {
-    return encodeProperties.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
+    return encodeProperties2.AnalyticsActionHandlers.handleSetAnalyticsToken(arg0);
   }
 };
 items = [importDefaultResult];
 encodeProperties = encodeProperties.analyticsTrackingStoreMaker(encodeProperties);
-const result1 = require("encodeProperties").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
+const result1 = require("set").fileFinishedImporting("stores/AnalyticsTrackingStore.tsx");
 
 export default encodeProperties;

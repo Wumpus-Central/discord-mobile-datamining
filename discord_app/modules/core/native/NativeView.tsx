@@ -1,4 +1,7 @@
 // discord_app/modules/core/native/NativeView.tsx
-const result = require("set").fileFinishedImporting("modules/core/native/NativeView.tsx");
+import set from "set" /* 2 */;
+import CommandsDefault from "Commands" /* 112 */;
 
-export { default } from "Commands";
+const result = set.fileFinishedImporting("modules/core/native/NativeView.tsx");
+
+export default CommandsDefault;

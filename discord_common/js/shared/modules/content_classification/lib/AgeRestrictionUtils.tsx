@@ -1,6 +1,8 @@
 // discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx
-import { AgeRestrictionStatus } from "../../../shared-constants/AgeRestrictionStatus.tsx";
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
+import set from "set" /* 2 */;
+import AgeRestrictionStatus from "AgeRestrictionStatus" /* 4789 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/modules/content_classification/lib/AgeRestrictionUtils.tsx");
 
 export const compare = function compare(arg0, arg1) {
   const prop = AgeRestrictionStatus.AGE_RESTRICTION_STATUS_RESTRICTIVENESS_ORDERING;

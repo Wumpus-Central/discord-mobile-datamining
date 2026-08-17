@@ -1,20 +1,19 @@
 // discord_app/modules/stage_channels/StageLurkingManager.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 4720 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 4197 */;
 
 let require = arg1;
+initializeDefault;
 class StageLurkingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleVoiceChannelSelect = function handleVoiceChannelSelect(arg0) {
-      let channelId;
-      let guildId;
       ({ channelId, guildId } = arg0);
       if (null != channelId) {
-        const channel = outer1_3.getChannel(channelId);
+        const channel = closure_1_3.getChannel(channelId);
       }
       applyArgumentsResult.terminate();
       let tmp3 = null;
@@ -40,16 +39,16 @@ class StageLurkingManager extends tmp2 {
 }
 const prototype = StageLurkingManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcher.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const obj = dispatcher;
-  const subscription1 = dispatcher.subscribe("LOGOUT", this.handleLogout);
+  const subscription = dispatcherDefault.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj = dispatcherDefault;
+  const subscription1 = dispatcherDefault.subscribe("LOGOUT", this.handleLogout);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcher.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
-  const obj = dispatcher;
-  dispatcher.unsubscribe("LOGOUT", this.handleLogout);
+  dispatcherDefault.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect);
+  const obj = dispatcherDefault;
+  dispatcherDefault.unsubscribe("LOGOUT", this.handleLogout);
 };
 const stageLurkingManager = new StageLurkingManager();
-let result = require("initialize").fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");
+let result = require("set").fileFinishedImporting("modules/stage_channels/StageLurkingManager.tsx");
 
 export default stageLurkingManager;

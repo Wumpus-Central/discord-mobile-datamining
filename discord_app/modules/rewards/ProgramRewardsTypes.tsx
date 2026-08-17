@@ -1,5 +1,9 @@
 // discord_app/modules/rewards/ProgramRewardsTypes.tsx
-const result = require("ProgramCurrentState").fileFinishedImporting("modules/rewards/ProgramRewardsTypes.tsx");
+import set from "set" /* 2 */;
+import RewardProgram from "RewardProgram" /* 13276 */;
+import ProgramCurrentState from "ProgramCurrentState" /* 13277 */;
 
-export const RewardProgram = require("RewardProgram").RewardProgram;
-export const ProgramCurrentState = require("ProgramCurrentState").ProgramCurrentState;
+const result = set.fileFinishedImporting("modules/rewards/ProgramRewardsTypes.tsx");
+
+export const RewardProgram = RewardProgram.RewardProgram;
+export const ProgramCurrentState = ProgramCurrentState.ProgramCurrentState;

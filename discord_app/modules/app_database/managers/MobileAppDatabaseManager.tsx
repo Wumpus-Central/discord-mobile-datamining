@@ -1,4 +1,6 @@
 // discord_app/modules/app_database/managers/MobileAppDatabaseManager.tsx
+import set from "set" /* 2 */;
+import set2 from "set" /* 5391 */;
 import { handleBackgroundSync } from "../modules/Channels.tsx";
 import { hasBasicChannelChanged } from "../modules/GuildBasicChannels.tsx";
 import { getAsync } from "../modules/GuildEmojis.tsx";
@@ -15,6 +17,7 @@ import { getAll } from "../modules/ReadStates.tsx";
 import { getAll } from "../modules/UserGuildSettings.tsx";
 import { getAll } from "../modules/UserSearchItems.tsx";
 import { getAll } from "../modules/UserSettingsProto.tsx";
+
 const items = [
   {
     name: "Channels",
@@ -129,7 +132,7 @@ const items = [
     }
   }
 ];
-const appDatabaseManager = new require("set").AppDatabaseManager("MobileAppDatabaseManager", [], items);
-const result = require("hasBasicChannelChanged").fileFinishedImporting("modules/app_database/managers/MobileAppDatabaseManager.tsx");
+const appDatabaseManager = new set2.AppDatabaseManager("MobileAppDatabaseManager", [], items);
+const result = set.fileFinishedImporting("modules/app_database/managers/MobileAppDatabaseManager.tsx");
 
 export default appDatabaseManager;

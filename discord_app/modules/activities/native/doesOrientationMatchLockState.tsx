@@ -1,7 +1,9 @@
 // discord_app/modules/activities/native/doesOrientationMatchLockState.tsx
-import { OrientationLockState } from "items3";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
+const OrientationLockState = items3.OrientationLockState;
+const result = set.fileFinishedImporting("modules/activities/native/doesOrientationMatchLockState.tsx");
 
 export default function doesOrientationMatchLockState(arg0, arg1) {
   let tmp = null == arg1;

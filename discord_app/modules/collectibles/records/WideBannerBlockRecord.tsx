@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/records/WideBannerBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function WideBannerBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);
@@ -16,6 +18,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ title: tmp2.title, body: tmp2.body, category_store_listing_id: tmp2.categoryStoreListingId, banner_text_color: tmp2.bannerTextColor, banner_body_text_color: tmp2.bannerBodyTextColor, disable_cta: tmp2.disableCta, wide_banner_url: tmp2.bannerURL, wide_banner_animated_url: tmp2.bannerAnimatedURL, logo_url: tmp2.logoURL, cta_text: tmp2.ctaText, cta_route: tmp2.ctaRoute, is_dismissible: tmp2.isDismissible, dismissible_content_version: tmp2.dismissibleContentVersion } = arg0);
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/WideBannerBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/WideBannerBlockRecord.tsx");
 
 export const WideBannerBlockRecord = prototype;

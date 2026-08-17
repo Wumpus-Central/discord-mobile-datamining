@@ -1,5 +1,7 @@
 // discord_app/modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx
-const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_onboarding_home/useFirstMessageOrEmbedContent.tsx");
 
 export default function useFirstMessageOrEmbedContent(content) {
   if (null == content) {

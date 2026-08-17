@@ -1,16 +1,13 @@
 // discord_app/utils/SKUUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import ME from "ME";
-import { t } from "../../_runtime/03975_t.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { matchPath } from "../modules/routing/matchPathCompat.tsx";
-import { set } from "PlatformUtils.tsx";
-import { _httpGetWithCountryCodeQuery } from "StoreUtils.tsx";
+import set from "set" /* 500 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import matchPath from "matchPath" /* 4202 */;
+import _httpGetWithCountryCodeQuery from "_httpGetWithCountryCodeQuery" /* 4384 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 const GameGenres = ME.GameGenres;
 ({ SKUTypes: c5, Routes: closure_6, SKUProductLines: error } = ME);
 let closure_8 = {};
@@ -24,7 +21,7 @@ const item = keys.forEach((str) => {
   closure_9[frozen[str]] = replaced;
 });
 const items = [["YYYY-MM-DD", "MMMM DD, Y"], ["YYYY-MM", "MMMM Y"], ["MM-DD", "MMMM DD"], ["MM", "MMMM"], ["YYYY", "Y"]];
-let result = require("matchPath").fileFinishedImporting("utils/SKUUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/SKUUtils.tsx");
 
 export const getSKUIdFromURL = function getSKUIdFromURL(pathname) {
   let obj = matchPath;
@@ -312,10 +309,6 @@ export const canUserInstall = function canUserInstall(type) {
   return hasItem;
 };
 export const getReadablePreorderReleaseDate = function getReadablePreorderReleaseDate(arg0) {
-  let preorderApproximateReleaseDate;
-  let preorderReleaseAt;
-  let tmp3;
-  let tmp4;
   ({ preorderReleaseAt, preorderApproximateReleaseDate } = arg0);
   if (null != preorderReleaseAt) {
     return preorderReleaseAt.format("MMMM DD");
@@ -325,7 +318,7 @@ export const getReadablePreorderReleaseDate = function getReadablePreorderReleas
     let num = 0;
     if (0 < items.length) {
       [tmp3, tmp4] = callback(items[num], 2);
-      const obj = t(preorderApproximateReleaseDate, tmp3, true);
+      const obj = tDefault(preorderApproximateReleaseDate, tmp3, true);
       while (!obj.isValid()) {
         num = num + 1;
       }

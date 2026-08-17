@@ -1,9 +1,11 @@
 // discord_app/modules/billing/stores/WalletBalanceStore.tsx
-import { Store } from "initialize";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
 let closure_0 = {};
 let set = new Set();
+const Store = initializeDefault.Store;
 class WalletBalanceStore extends Store {
 }
 const prototype = WalletBalanceStore.prototype;
@@ -18,7 +20,7 @@ prototype["getIsFetching"] = function getIsFetching(arg0) {
   return set.has(arg0);
 };
 WalletBalanceStore.displayName = "WalletBalanceStore";
-const walletBalanceStore = new WalletBalanceStore(require("dispatcher"), {
+const walletBalanceStore = new WalletBalanceStore(dispatcherDefault, {
   BILLING_WALLET_BALANCE_FETCH_START: function handleFetchStart(paymentSourceId) {
     set = new Set(set);
     set.add(paymentSourceId.paymentSourceId);
@@ -40,8 +42,8 @@ const walletBalanceStore = new WalletBalanceStore(require("dispatcher"), {
     obj[currency.paymentSourceId] = { currency: currency.currency, amount: currency.balance };
   },
   LOGOUT: function reset() {
-    let closure_0 = {};
-    const set = new Set();
+    closure_0 = {};
+    set = new Set();
   }
 });
 const result = set.fileFinishedImporting("modules/billing/stores/WalletBalanceStore.tsx");

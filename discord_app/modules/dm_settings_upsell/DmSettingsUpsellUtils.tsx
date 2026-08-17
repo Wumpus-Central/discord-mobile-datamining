@@ -1,11 +1,13 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellUtils.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
-const result = require("set").fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellUtils.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellUtils.tsx");
 
 export const trackEvent = function trackEvent(MODAL_DISABLED_DMS, guildId) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { action: MODAL_DISABLED_DMS, guild_id: guildId };
   obj.track(AnalyticEvents.DM_SETTINGS_UPSELL_ACTION, obj);
 };

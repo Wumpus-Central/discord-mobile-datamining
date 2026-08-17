@@ -1,20 +1,22 @@
 // discord_app/modules/client_themes/ClientThemesBackgroundActionCreators.tsx
-import { dispatcher } from "../../Dispatcher.tsx";
-const result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+
+const result = set.fileFinishedImporting("modules/client_themes/ClientThemesBackgroundActionCreators.tsx");
 
 export const updateBackgroundGradientPreset = function updateBackgroundGradientPreset(id) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: id };
   obj.dispatch(obj);
 };
 export const updateMobilePendingThemeIndex = function updateMobilePendingThemeIndex(mobileThemesIndex) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "UPDATE_MOBILE_PENDING_THEME_INDEX", mobileThemesIndex };
   obj.dispatch(obj);
 };
 export const resetBackgroundGradientPreset = function resetBackgroundGradientPreset() {
-  dispatcher.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
+  dispatcherDefault.dispatch({ type: "UPDATE_BACKGROUND_GRADIENT_PRESET", presetId: null });
 };
 export const resetPreviewClientTheme = function resetPreviewClientTheme() {
-  dispatcher.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
+  dispatcherDefault.dispatch({ type: "RESET_PREVIEW_CLIENT_THEME" });
 };

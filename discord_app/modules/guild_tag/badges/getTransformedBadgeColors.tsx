@@ -1,13 +1,9 @@
 // discord_app/modules/guild_tag/badges/getTransformedBadgeColors.tsx
-const result = require("set").fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_tag/badges/getTransformedBadgeColors.tsx");
 
 export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0) {
-  let primaryTintColor;
-  let primaryTintLuminances;
-  let secondaryBaseColors;
-  let secondaryLuminanceWeights;
-  let secondaryTintColor;
-  let secondaryTintLuminances;
   ({ primaryTintColor, primaryTintLuminances, secondaryBaseColors, secondaryTintColor, secondaryTintLuminances, secondaryLuminanceWeights } = arg0);
   if (null == primaryTintColor) {
     let items = [];
@@ -19,7 +15,7 @@ export const getTransformedBadgeColors = function getTransformedBadgeColors(arg0
         if (obj2.valid(secondaryTintColor)) {
           secondaryTintColor = tmp7(map2[0])(secondaryTintColor);
           primaryTintColor = secondaryTintColor;
-          let closure_2 = secondaryTintColor.luminance();
+          closure_2 = secondaryTintColor.luminance();
           map2 = secondaryTintLuminances.map;
           let map2Result = map2((arg0, arg1) => primaryTintColor.luminance((arg0 * secondaryLuminanceWeights[arg1].base + closure_2 * secondaryLuminanceWeights[arg1].tint) / (secondaryLuminanceWeights[arg1].base + secondaryLuminanceWeights[arg1].tint)).hex());
         } else {

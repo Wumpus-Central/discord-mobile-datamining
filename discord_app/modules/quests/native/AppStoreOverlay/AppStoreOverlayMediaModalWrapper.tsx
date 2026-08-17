@@ -1,15 +1,15 @@
 // discord_app/modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { MediaModalSheetWrapper } from "../../../media_viewer/native/components/MediaModalSheetWrapper.tsx";
+import MediaModalSheetWrapperDefault from "MediaModalSheetWrapper" /* 9008 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("useMediaModalFooterActionStore").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/AppStoreOverlay/AppStoreOverlayMediaModalWrapper.tsx");
 
 export default function AppStoreOverlayMediaModalWrapper(arg0) {
   const effect = React.useEffect(() => () => {
     const result = callback(table[2]).clearMediaModalFooterAction();
   }, []);
   const merged = Object.assign(arg0);
-  return jsx(MediaModalSheetWrapper, {});
+  return jsx(MediaModalSheetWrapperDefault, {});
 };

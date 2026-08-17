@@ -1,44 +1,35 @@
 // discord_app/modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx
-import "getSystemLocale";
-import getState from "getState";
-import { isMessageComponentsV2 } from "hasFlag";
-import initialize from "initialize";
-import closure_6 from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getOptions from "getOptions";
-import ME from "ME";
-import { isStaticChannelRoute } from "set";
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_19 } from "USER_SETTING_ACTION_SHEET_KEY";
-import { jsx } from "LongPressMessageChatItemPreview";
-import { trackInvite } from "../../../../actions/MessageActionCreators.tsx";
-import { expandEventProperties } from "../../../../utils/AnalyticsUtils.tsx";
-import { allowChannelAccess } from "../../../../utils/ChannelUtils.tsx";
-import { _copy } from "../../../../utils/ClipboardUtils.native.tsx";
-import { DISCORD_EPOCH } from "../../../../utils/SnowflakeUtils.tsx";
-import { openCreateForumPostModal } from "../../../forums/native/composer/ForumComposerModalActionCreators.tsx";
-import { coerceMainRoute } from "../../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
-import { createPendingReply } from "../../../replies/PendingReplyActionCreators.tsx";
-import { transitionTo } from "../../../routing/router_utils.tsx";
-import { patchThread } from "../../../threads/ThreadActionCreators.tsx";
-import { presentAddedFriendToast } from "../../../toast/native/ToastUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import noopAll from "noop" /* 19 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import presentAddedFriendToast from "presentAddedFriendToast" /* 4093 */;
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import allowChannelAccess from "allowChannelAccess" /* 4979 */;
+import _copy from "_copy" /* 7167 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import patchThreadDefault from "patchThread" /* 7512 */;
+import openCreateForumPostModal from "openCreateForumPostModal" /* 10165 */;
+import createPendingReply from "createPendingReply" /* 10859 */;
+import closure_3 from "getState" /* 7434 */;
+import { isMessageComponentsV2 } from "hasFlag" /* 4031 */;
+import closure_5 from "initialize" /* 7435 */;
+import closure_6 from "initialize" /* 7582 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "getOptions" /* 10858 */;
+import ME from "ME" /* 676 */;
+import { isStaticChannelRoute } from "set" /* 1398 */;
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_19 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function handleEdit(id, isForumPost, current, source) {
   let flag = arg4;
   if (arg4 === undefined) {
     flag = false;
   }
   if (isForumPost.isForumPost()) {
-    let obj = DISCORD_EPOCH;
+    let obj = DISCORD_EPOCHDefault;
     if (isForumPost.id === obj.castMessageIdAsChannelId(id.id)) {
       if (null != isForumPost.parent_id) {
         createPendingReply.deletePendingReply(isForumPost.id);
@@ -62,7 +53,7 @@ function handleEdit(id, isForumPost, current, source) {
     if ("message_swipe" === source) {
       if (editing.isEditing(isForumPost.id, id.id)) {
         const currentUser = authStore.getCurrentUser();
-        let obj1 = { message_id: null, channel_id: null, guild_id: null, context_action: "edit", reason: "swipe_edit_undo", is_own_message: null };
+        obj1 = { message_id: null, channel_id: null, guild_id: null, context_action: "edit", reason: "swipe_edit_undo", is_own_message: null };
         obj1[0] = id.id;
         ({ id: obj5[1], guild_id: obj5[2] } = isForumPost);
         let tmp15 = null != currentUser;
@@ -70,17 +61,17 @@ function handleEdit(id, isForumPost, current, source) {
           tmp15 = currentUser.id === id.author.id;
         }
         obj1[5] = tmp15;
-        expandEventProperties.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
-        const obj4 = expandEventProperties;
+        expandEventPropertiesDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj1);
+        const obj4 = expandEventPropertiesDefault;
         const tmp11 = importDefault;
-        trackInvite.endEditMessage(isForumPost.id);
+        trackInviteDefault.endEditMessage(isForumPost.id);
         if (current != null) {
           const current2 = current.current;
           if (current2 != null) {
             current2.dismissKeyboard();
           }
         }
-        const tmp11Result = trackInvite;
+        const tmp11Result = trackInviteDefault;
       }
     }
   }
@@ -99,12 +90,12 @@ function handleEdit(id, isForumPost, current, source) {
     }
     obj2[4] = str3;
     obj2[5] = null != currentUser1 && currentUser1.id === pendingReply.message.author.id;
-    expandEventProperties.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
-    const obj11 = expandEventProperties;
+    expandEventPropertiesDefault.track(constants.CHAT_CONTEXT_BAR_ACTION_CANCELED, obj2);
+    const obj11 = expandEventPropertiesDefault;
   }
   obj1 = createPendingReply;
   obj1.deletePendingReply(isForumPost.id);
-  obj2 = trackInvite;
+  obj2 = trackInviteDefault;
   const result1 = obj2.startEditMessageRecord(isForumPost.id, id, source);
   if (current != null) {
     current = current.current;
@@ -113,8 +104,9 @@ function handleEdit(id, isForumPost, current, source) {
     }
   }
 }
+noopAll;
 ({ AnalyticEvents: c9, AnalyticsObjects: c10, AnalyticsPages: unpackModuleId, AnalyticsSections: closure_12, ComponentActions: map1, GIF_RE_IOS: closure_14, MediaType: closure_15, MessageStates: closure_16, MessageTypes: closure_17 } = ME);
-let result = require("hasFlag").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/long_press/LongPressMessageActionSheetUtils.tsx");
 
 export function getContextBarCancelReason(edit, cancel) {
   if ("message_swipe" === cancel) {
@@ -143,7 +135,7 @@ export const handleCreateThread = function handleCreateThread(guild_id, id, Mess
   if (id != null) {
     id = id.id;
   }
-  const result = patchThread.openThreadCreationForMobile(guild_id, id, str);
+  const result = patchThreadDefault.openThreadCreationForMobile(guild_id, id, str);
   let result1 = null == id;
   if (!result1) {
     let tmpResult = tmp(11);
@@ -157,7 +149,7 @@ export const handleCreateThread = function handleCreateThread(guild_id, id, Mess
   }
 };
 export const handleCopyMessageLink = function handleCopyMessageLink(channel, message_id) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { message_id, channel: channel.id };
   obj.track(constants.MESSAGE_LINK_COPIED, obj);
   const channelPermalink = allowChannelAccess.getChannelPermalink(channel.guild_id, channel.id, message_id);
@@ -174,17 +166,6 @@ export const handleCopyId = function handleCopyId(arg0) {
   const result = presentAddedFriendToast.presentMessageIdCopied();
 };
 export const longPressMessageOptionHandler = function longPressMessageOptionHandler(analyticsLocations) {
-  let actionSheetSource;
-  let channel;
-  let chatInputRef;
-  let disabled;
-  let guild_id;
-  let id;
-  let label;
-  let message;
-  let onActionExecuted;
-  let onBack;
-  let selectedMedia;
   ({ label, message, channel } = analyticsLocations);
   id = channel;
   ({ chatInputRef, selectedMedia, actionSheetSource, onActionExecuted, onBack, disabled } = analyticsLocations);
@@ -303,7 +284,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                         const intl23 = result(tmp2[19]).intl;
                         obj[0] = intl23.string(result(tmp2[19]).t.aIz1oV);
                         result = jsx;
-                        const obj1 = { channelId: null };
+                        obj1 = { channelId: null };
                         obj1[0] = id;
                         obj[1] = jsx(result(tmp2[20]), { channelId: null });
                         const intl24 = result(tmp2[19]).intl;
@@ -536,14 +517,14 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           const resultResult35 = result(tmp2[37]);
                                                         }
                                                         resultResult34 = result(tmp2[37]);
-                                                        result6.then((mediaUrl) => id(selectedMedia[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? outer1_15.GIF : outer1_15.IMAGE, id.contentType)).then(() => {
+                                                        result6.then((mediaUrl) => id(selectedMedia[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_15.GIF : closure_1_15.IMAGE, id.contentType)).then(() => {
                                                           let obj = id(selectedMedia[31]);
                                                           if (selectedMedia) {
                                                             obj.presentGifSaved();
                                                           } else {
                                                             obj.presentImageSaved();
                                                           }
-                                                          const tmp4 = outer1_18(id2);
+                                                          const tmp4 = closure_1_18(id2);
                                                           let tmp5;
                                                           if (!tmp4) {
                                                             tmp5 = tmp3;
@@ -556,7 +537,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           obj = {};
                                                           obj[1] = tmp6;
                                                           const merged = Object.assign(obj);
-                                                          id2(selectedMedia[16]).track(outer1_9.CONTEXT_MENU_IMAGE_SAVED, obj);
+                                                          id2(selectedMedia[16]).track(closure_1_9.CONTEXT_MENU_IMAGE_SAVED, obj);
                                                         }, () => {
                                                           let obj = id2(selectedMedia[18]);
                                                           obj = { title: null, body: null, isDismissable: true };
@@ -565,7 +546,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           const intl2 = id(selectedMedia[19]).intl;
                                                           obj[1] = intl2.string(id(selectedMedia[19]).t.r4Zjzv);
                                                           obj.show(obj);
-                                                          const tmp3 = outer1_18(id2);
+                                                          const tmp3 = closure_1_18(id2);
                                                           let tmp4;
                                                           if (!tmp3) {
                                                             tmp4 = tmp2;
@@ -577,9 +558,9 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                           }
                                                           obj[1] = tmp5;
                                                           const merged = Object.assign(obj);
-                                                          id2(selectedMedia[16]).track(outer1_9.CONTEXT_MENU_IMAGE_SAVE_FAILED, {});
+                                                          id2(selectedMedia[16]).track(closure_1_9.CONTEXT_MENU_IMAGE_SAVE_FAILED, {});
                                                         });
-                                                        const nextPromise = result6.then((mediaUrl) => id(selectedMedia[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? outer1_15.GIF : outer1_15.IMAGE, id.contentType));
+                                                        const nextPromise = result6.then((mediaUrl) => id(selectedMedia[38]).downloadMediaAssetWithContentType(mediaUrl, selectedMedia ? closure_1_15.GIF : closure_1_15.IMAGE, id.contentType));
                                                       }
                                                       result6 = Promise.resolve(selectedMedia.mediaUrl);
                                                       const resultResult33 = result(tmp2[36]);
@@ -638,7 +619,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                 const _setTimeout = setTimeout;
                                                                 result = setTimeout(() => {
                                                                   const ComponentDispatch = id(selectedMedia[54]).ComponentDispatch;
-                                                                  return ComponentDispatch.dispatch(outer1_13.TEXTAREA_FOCUS, { channelId: id.id });
+                                                                  return ComponentDispatch.dispatch(closure_1_13.TEXTAREA_FOCUS, { channelId: id.id });
                                                                 }, 500);
                                                                 const resultResult38 = result(tmp2[49]);
                                                               }
@@ -806,7 +787,7 @@ export const longPressMessageOptionHandler = function longPressMessageOptionHand
                                                                                             const intl6 = result(tmp2[19]).intl;
                                                                                             obj25[3] = intl6.string(result(tmp2[19]).t.kFwAsa);
                                                                                             obj25[4] = function onConfirm() {
-                                                                                              const id = selectedMedia.source.id;
+                                                                                              id = selectedMedia.source.id;
                                                                                               const attachments = id2.attachments;
                                                                                               const found = attachments.filter((id) => id.id !== id);
                                                                                               const result = id2(selectedMedia[17]).patchMessageAttachments(id, id2.id, found);

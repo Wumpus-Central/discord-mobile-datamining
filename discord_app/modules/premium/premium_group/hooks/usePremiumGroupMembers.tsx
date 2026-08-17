@@ -1,12 +1,12 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx
-import { useEffect } from "noop";
-import handleMutationStart from "handleMutationStart";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "handleMutationStart" /* 12920 */;
 
-const result = require("initialize").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
+const useEffect = noop.useEffect;
+const result = set.fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupMembers.tsx");
 
 export default function usePremiumGroupMembers(arg0) {
-  let isUpdatingMembers;
-  let premiumGroupMembers;
   const _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -20,8 +20,8 @@ export default function usePremiumGroupMembers(arg0) {
   if (flag2 === undefined) {
     flag2 = true;
   }
-  const items = [handleMutationStart];
-  const stateFromStoresObject = _require(flag2[2]).useStateFromStoresObject(items, () => ({ premiumGroupMembers: handleMutationStart.getMembers(), isFetchingMembers: handleMutationStart.isFetchingMembers(), isUpdatingMembers: handleMutationStart.isUpdatingMembers() }));
+  const items = [closure_4];
+  const stateFromStoresObject = _require(flag2[2]).useStateFromStoresObject(items, () => ({ premiumGroupMembers: closure_4.getMembers(), isFetchingMembers: closure_4.isFetchingMembers(), isUpdatingMembers: closure_4.isUpdatingMembers() }));
   let isFetchingMembers = stateFromStoresObject.isFetchingMembers;
   const items1 = [flag2, arg0, flag];
   ({ premiumGroupMembers, isUpdatingMembers } = stateFromStoresObject);
@@ -29,7 +29,7 @@ export default function usePremiumGroupMembers(arg0) {
     if (flag2) {
       let hasFetchedMembersResult = flag;
       if (flag) {
-        hasFetchedMembersResult = outer1_4.hasFetchedMembers();
+        hasFetchedMembersResult = closure_1_4.hasFetchedMembers();
       }
       if (!hasFetchedMembersResult) {
         if (null != closure_0) {

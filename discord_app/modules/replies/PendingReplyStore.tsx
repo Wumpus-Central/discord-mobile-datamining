@@ -1,22 +1,22 @@
 // discord_app/modules/replies/PendingReplyStore.tsx
-import _slicedToArray from "_slicedToArray";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import { PersistedStore } from "initialize";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
 
 let closure_5 = {};
 let closure_6 = {};
 let closure_7 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class PendingReplyStore extends PersistedStore {
 }
 const prototype = PendingReplyStore.prototype;
 prototype["getState"] = function getState() {
-  let tmp6;
-  let tmp7;
   let obj = {};
-  const entries = DISCORD_EPOCH.entries(closure_5);
-  const obj2 = DISCORD_EPOCH;
+  const entries = DISCORD_EPOCHDefault.entries(closure_5);
+  const obj2 = DISCORD_EPOCHDefault;
   while (tmp2 !== undefined) {
     let tmp4 = callback;
     let tmp5 = callback(tmp3, 2);
@@ -35,7 +35,7 @@ prototype["getState"] = function getState() {
 };
 prototype["initialize"] = function initialize(arg0) {
   let obj = arg0;
-  this.waitFor(reinjectEphemerals, ensureGuildLoaded);
+  this.waitFor(closure_4, closure_3);
   if (arg0 == null) {
     obj = {};
   }
@@ -58,10 +58,8 @@ const items = [
   }
 ];
 PendingReplyStore.migrations = items;
-const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
+const pendingReplyStore = new PendingReplyStore(dispatcherDefault, {
   CREATE_PENDING_REPLY: function handleCreatePendingReply(message) {
-    let channel;
-    let shouldMention;
     ({ channel, shouldMention } = message);
     if (shouldMention === undefined) {
       shouldMention = true;
@@ -74,8 +72,6 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     closure_7[channel.id] = message.source;
   },
   CREATE_SHALLOW_PENDING_REPLY: function handleCreateShallowPendingReply(messageId) {
-    let channel;
-    let shouldMention;
     ({ channel, shouldMention } = messageId);
     if (shouldMention === undefined) {
       shouldMention = true;
@@ -87,8 +83,6 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     closure_6[channel.id] = { channelId: channel.id, messageId: messageId.messageId, shouldMention, showMentionToggle: flag };
   },
   SET_PENDING_REPLY_SHOULD_MENTION: function handleSetPendingReplyShouldMention(arg0) {
-    let channelId;
-    let shouldMention;
     ({ channelId, shouldMention } = arg0);
     if (channelId in dependencyMap) {
       let obj = {};
@@ -108,7 +102,7 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     delete tmp[tmp2];
   },
   CONNECTION_OPEN: function handleConnectionOpen() {
-    const keys = DISCORD_EPOCH.keys(closure_6);
+    const keys = DISCORD_EPOCHDefault.keys(closure_6);
     const item = keys.forEach((arg0) => {
       if (null == channel.getChannel(arg0)) {
         delete tmp[tmp2];
@@ -116,13 +110,11 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     });
   },
   LOGOUT: function handleLogout() {
-    let closure_5 = {};
-    let closure_6 = {};
-    let closure_7 = {};
+    closure_5 = {};
+    closure_6 = {};
+    closure_7 = {};
   },
   MESSAGE_DELETE: function handleMessageDelete(arg0) {
-    let channelId;
-    let id;
     ({ id, channelId } = arg0);
     id = undefined;
     if (dependencyMap[channelId] != null) {
@@ -186,6 +178,6 @@ const pendingReplyStore = new PendingReplyStore(require("dispatcher"), {
     }
   }
 });
-const result = require("reinjectEphemerals").fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
+const result = require("set").fileFinishedImporting("modules/replies/PendingReplyStore.tsx");
 
 export default pendingReplyStore;

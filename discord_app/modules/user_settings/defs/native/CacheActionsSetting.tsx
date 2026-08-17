@@ -1,24 +1,22 @@
 // discord_app/modules/user_settings/defs/native/CacheActionsSetting.tsx
-import CircleInformationIcon from "CircleInformationIcon";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import jsxProd from "jsxProd";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { FileUpIcon } from "../../../../design/components/Icon/native/redesign/generated/FileUpIcon.tsx";
-import { FileWarningIcon } from "../../../../design/components/Icon/native/redesign/generated/FileWarningIcon.tsx";
-import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import ActionSheet from "ActionSheet" /* 7175 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
+import FileUpIcon from "FileUpIcon" /* 13987 */;
+import FileWarningIcon from "FileWarningIcon" /* 14879 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_handleConnectionOpen" /* 4495 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function handleCacheActionPress(key) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = {
     key,
     icon() {
@@ -27,7 +25,7 @@ function handleCacheActionPress(key) {
     content: key
   };
   obj.open(obj);
-  ACTION_SHEET_HEIGHT_HALF.hideActionSheet(CacheActionsActionSheet);
+  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(CacheActionsActionSheet);
 }
 function CacheActionsActionSheet() {
   let obj = { header: null, children: null };
@@ -36,8 +34,7 @@ function CacheActionsActionSheet() {
   obj[0] = intl.string(getSystemLocale.t.ZVZVwR);
   obj[0] = callback2(RedesignBottomSheetTitleHeaderBase.BottomSheetTitleHeader, obj);
   obj = { hasIcons: true, children: null };
-  let obj1 = { icon: null, label: null, onPress: null };
-  obj1[0] = callback2(FileUpIcon.FileUpIcon, {});
+  obj1 = { icon: callback2(FileUpIcon.FileUpIcon, {}), label: null, onPress: null };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(getSystemLocale.t["/GUaXh"]);
   obj1[2] = callback(function*() {
@@ -68,7 +65,7 @@ function CacheActionsActionSheet() {
             return obj;
           } else {
             const callback = tmp2;
-            let obj1 = outer1_0(14878);
+            obj1 = closure_1_0(14878);
             c1 = 1;
             dependencyMap = 1;
             obj1 = { value: null, done: false };
@@ -96,8 +93,7 @@ function CacheActionsActionSheet() {
     }
   });
   const items = [callback2(ActionSheetRowIcon.ActionSheetRow, obj1), ];
-  let obj2 = { variant: "danger", icon: null, label: null, onPress: null };
-  obj2[1] = callback2(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" });
+  let obj2 = { variant: "danger", icon: callback2(FileWarningIcon.FileWarningIcon, { color: "text-feedback-critical" }), label: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj2[2] = intl3.string(getSystemLocale.t.tgwiMO);
   obj2[3] = function onPress() {
@@ -131,12 +127,12 @@ createToggle = {
   parent: null,
   IconComponent: require("FileWarningIcon").FileWarningIcon,
   onPress: function handleCacheActionsPress() {
-    let obj = ACTION_SHEET_HEIGHT_HALF;
+    let obj = ACTION_SHEET_HEIGHT_HALFDefault;
     obj = { default: CacheActionsActionSheet };
     obj.openLazy(Promise.resolve(obj), CacheActionsActionSheet);
   },
   usePredicate: function useCacheActionsPredicate() {
-    const items = [_handleConnectionOpen];
+    const items = [closure_4];
     const stateFromStores = initialize.useStateFromStores(items, () => connected.isConnected());
     const DeveloperMode = explicitContentFromProto.DeveloperMode;
     const obj = initialize;
@@ -145,6 +141,6 @@ createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/CacheActionsSetting.tsx");
 
 export default createToggle;

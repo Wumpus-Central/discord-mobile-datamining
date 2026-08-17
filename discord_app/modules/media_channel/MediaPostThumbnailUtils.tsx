@@ -1,11 +1,11 @@
 // discord_app/modules/media_channel/MediaPostThumbnailUtils.tsx
-import { urlMatchesFileExtension } from "../messages/MediaFormatTesters.tsx";
-const result = require("set").fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
+import set from "set" /* 2 */;
+import urlMatchesFileExtension from "urlMatchesFileExtension" /* 4811 */;
+
+const result = set.fileFinishedImporting("modules/media_channel/MediaPostThumbnailUtils.tsx");
 
 export const MAX_THUMBNAIL_COUNT = 4;
 export const getEmbedPreviewImageUrl = function getEmbedPreviewImageUrl(arg0) {
-  let image;
-  let thumbnail;
   if (null != arg0) {
     ({ thumbnail, image } = arg0);
     if (null != thumbnail) {
@@ -35,8 +35,6 @@ export const getBackgroundImageUrl = function getBackgroundImageUrl(coverImage) 
   return combined;
 };
 export const getThumbnailImage = function getThumbnailImage(thumbnail) {
-  let proxy_url;
-  let url;
   if (null != thumbnail) {
     ({ url, proxy_url } = thumbnail);
     let tmp = url;

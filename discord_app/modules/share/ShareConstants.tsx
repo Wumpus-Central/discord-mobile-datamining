@@ -1,7 +1,10 @@
 // discord_app/modules/share/ShareConstants.tsx
-const items = [require("sortByMatchScore").AutocompleterResultTypes.USER, require("sortByMatchScore").AutocompleterResultTypes.TEXT_CHANNEL, require("sortByMatchScore").AutocompleterResultTypes.VOICE_CHANNEL, require("sortByMatchScore").AutocompleterResultTypes.GROUP_DM];
+import set from "set" /* 2 */;
+import sortByMatchScore from "sortByMatchScore" /* 7593 */;
+
+const items = [sortByMatchScore.AutocompleterResultTypes.USER, sortByMatchScore.AutocompleterResultTypes.TEXT_CHANNEL, sortByMatchScore.AutocompleterResultTypes.VOICE_CHANNEL, sortByMatchScore.AutocompleterResultTypes.GROUP_DM];
 const arr = Array.from(items);
-const result = require("set").fileFinishedImporting("modules/share/ShareConstants.tsx");
+const result = set.fileFinishedImporting("modules/share/ShareConstants.tsx");
 
 export const ALLOWED_TYPES = arr;
 export const isAllowedType = function isAllowedType(type) {

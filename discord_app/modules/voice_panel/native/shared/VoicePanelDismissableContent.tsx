@@ -1,13 +1,13 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import getParticipants from "getParticipants";
-import { VoicePanelModes } from "VoicePanelModes";
-import { isActivityParticipant } from "ParticipantTypes";
-import { jsx } from "jsxProd";
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import { VoicePanelModes } from "VoicePanelModes" /* 11440 */;
+import { isActivityParticipant } from "ParticipantTypes" /* 4544 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
 function VoiceControlsNuxActionSheetImporter() {
   return asyncRequireImpl(16318, dependencyMap.paths);
 }
@@ -25,14 +25,14 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
   callback = callback.useCallback((arg0) => {
     let tmp = null != arg0;
     if (tmp) {
-      tmp = outer1_7(outer1_5.getParticipant(channelId, arg0));
+      tmp = closure_1_7(closure_1_5.getParticipant(channelId, arg0));
     }
     callback(tmp);
   }, items);
   let obj = channelId(mode[9]);
   const fn = function h() {
     let tmp;
-    if (mode.get() === outer1_6.PANEL) {
+    if (mode.get() === closure_1_6.PANEL) {
       const value = focused.get();
       let id;
       if (value != null) {
@@ -66,8 +66,6 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
   return jsx(focused(mode[11]), {
     contentTypes: items2,
     children(arg0) {
-      let markAsDismissed;
-      let visibleContent;
       ({ visibleContent, markAsDismissed } = arg0);
       let tmp3 = null;
       if (visibleContent === channelId(mode[10]).DismissibleContent.ACTIVITIES_MOBILE_PIP_FAB_NUX) {
@@ -80,6 +78,6 @@ const memoResult = importAllResult.memo(function VoicePanelDismissibleContent() 
     }
   });
 });
-const result = require("getParticipants").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelDismissableContent.tsx");
 
 export default memoResult;

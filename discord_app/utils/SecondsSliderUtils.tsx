@@ -1,7 +1,9 @@
 // discord_app/utils/SecondsSliderUtils.tsx
-import { t } from "../../_runtime/03975_t.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("utils/SecondsSliderUtils.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+
+const result = set.fileFinishedImporting("utils/SecondsSliderUtils.tsx");
 
 export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPerUser, arg1, intl) {
   let flag = arg1;
@@ -13,7 +15,7 @@ export const getSecondsSliderLabel = function getSecondsSliderLabel(rateLimitPer
     intl = getSystemLocale.intl;
     stringResult = intl.string(getSystemLocale.t.Yl1D84);
   }
-  const durationResult = t.duration(rateLimitPerUser, "seconds");
+  const durationResult = tDefault.duration(rateLimitPerUser, "seconds");
   if (durationResult.days() > 0) {
     const intl6 = getSystemLocale.intl;
     let t = getSystemLocale.t;

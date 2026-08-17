@@ -1,16 +1,14 @@
 // discord_app/modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx
-import set from "set";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
 
-const result = require("noop").fileFinishedImporting("modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreateCreatorMonetizationEnableRequest.tsx");
 
 export default function useCreateCreatorMonetizationEnableRequest(arg0) {
-  let dependencyMap;
-  let tmp3;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const tmp = callback2(React.useState(), 2);
-  let closure_1 = tmp[1];
+  closure_1 = tmp[1];
   [tmp3, dependencyMap] = callback2(React.useState(false), 2);
   const tmp4 = callback2(React.useState(false), 2);
   let callback = tmp4[1];
@@ -47,13 +45,13 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
               return obj;
             } else {
               const callback = tmp4;
-              let closure_0 = tmp8;
-              if (null != outer1_0) {
-                outer1_2(true);
-                outer1_1(undefined);
+              closure_0 = tmp8;
+              if (null != closure_1_0) {
+                closure_1_2(true);
+                closure_1_1(undefined);
                 v0(false);
                 v0 = 2;
-                let obj1 = outer1_1(outer1_2[3]);
+                obj1 = closure_1_1(closure_1_2[3]);
                 c4 = 3;
                 c5 = 1;
                 obj1 = { value: null, done: false };
@@ -67,7 +65,7 @@ export default function useCreateCreatorMonetizationEnableRequest(arg0) {
             if (2 === tmp8) {
               v0 = 1;
               closure_0 = callback2;
-              const tmp25 = new outer1_0(outer1_2[4])(closure_0);
+              const tmp25 = new closure_1_0(closure_1_2[4])(closure_0);
               callback(tmp25);
             } else if (arg0 === 1) {
               c5 = 3;

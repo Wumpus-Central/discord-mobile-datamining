@@ -1,17 +1,13 @@
 // discord_app/modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useGetGuildPowerupBannerImage } from "../../premium/powerups/hooks/useGetGuildPowerupBannerImage.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 11689 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
@@ -21,7 +17,7 @@ let closure_10 = ["rgba(88, 101, 242, 0.3)", "rgba(22, 26, 138, 0.3)"];
 let closure_11 = ["rgba(151, 151, 159, 0.04)", "rgba(151, 151, 159, 0.04)"];
 let c12 = "#29292D";
 createCacheKey = { card: null, imageContainer: null, textBlock: null, centerText: null, body: null, backgroundLayer: null, powerupImage: null };
-createCacheKey = { borderRadius: require("Themes").radii.xl, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: "#29292D", overflow: "hidden", paddingHorizontal: require("Themes").space.PX_24, paddingTop: require("Themes").space.PX_20, paddingBottom: require("Themes").space.PX_24 };
+createCacheKey = { borderRadius: ThemesDefault.radii.xl, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: "#29292D", overflow: "hidden", paddingHorizontal: ThemesDefault.space.PX_24, paddingTop: ThemesDefault.space.PX_20, paddingBottom: ThemesDefault.space.PX_24 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 104, justifyContent: "center" };
 createCacheKey[2] = { alignItems: "center" };
@@ -29,37 +25,36 @@ createCacheKey[3] = { textAlign: "center" };
 createCacheKey[4] = { maxWidth: 320 };
 createCacheKey[5] = StyleSheet.absoluteFillObject;
 createCacheKey[6] = { width: "92%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsServerTagUpsellCard.tsx");
 
 export default function GuildSettingsServerTagUpsellCard(guildId) {
   guildId = guildId.guildId;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = guildId(589);
-  const items = [calculateAppliedBoosts];
+  const items = [closure_5];
   const items1 = [guildId];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const stateForGuild = outer1_5.getStateForGuild(guildId);
+    const stateForGuild = closure_1_5.getStateForGuild(guildId);
     let tmp2;
     if (stateForGuild != null) {
-      tmp2 = stateForGuild.allPowerups[guildId(undefined, outer1_2[7]).GUILD_POWERUP_TAG_SKU_ID];
+      tmp2 = stateForGuild.allPowerups[guildId(undefined, closure_1_2[7]).GUILD_POWERUP_TAG_SKU_ID];
     }
     return tmp2;
   }, items1);
-  const tmp6 = useGetGuildPowerupBannerImage(stateFromStores, true);
+  const tmp6 = useGetGuildPowerupBannerImageDefault(stateFromStores, true);
   const items2 = [guildId];
   const effect = React.useEffect(() => {
-    if (outer1_5.shouldFetchCatalogForGuild(guildId)) {
-      const powerupCatalogForGuild = guildId(outer1_2[9]).fetchPowerupCatalogForGuild(guildId);
-      const obj = guildId(outer1_2[9]);
+    if (closure_1_5.shouldFetchCatalogForGuild(guildId)) {
+      const powerupCatalogForGuild = guildId(closure_1_2[9]).fetchPowerupCatalogForGuild(guildId);
+      const obj = guildId(closure_1_2[9]);
     }
   }, items2);
   obj = { style: tmp.card, children: null };
   obj = { style: tmp.backgroundLayer, colors: items3, locations: [0, 0.7], start: { x: 0.5, y: 0 }, end: { x: 0.5, y: 1 }, pointerEvents: "none" };
   items3 = ["rgba(41, 41, 45, 0)", c12];
-  const items4 = [callback(LinearGradient, obj), callback(LinearGradient, { style: tmp.backgroundLayer, colors: closure_10, start: closure_8, end: closure_9, pointerEvents: "none" }), callback(LinearGradient, { style: tmp.backgroundLayer, colors: closure_11, start: closure_8, end: closure_9, pointerEvents: "none" }), ];
-  const obj3 = { spacing: null, children: null };
-  obj3[0] = Themes.space.PX_16;
+  const items4 = [callback(LinearGradientDefault, obj), callback(LinearGradientDefault, { style: tmp.backgroundLayer, colors: closure_10, start: closure_8, end: closure_9, pointerEvents: "none" }), callback(LinearGradientDefault, { style: tmp.backgroundLayer, colors: closure_11, start: closure_8, end: closure_9, pointerEvents: "none" }), ];
+  const obj3 = { spacing: ThemesDefault.space.PX_16, children: null };
   const obj4 = { style: tmp.imageContainer, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   let tmp10Result = null != tmp6;
   if (tmp10Result) {
@@ -70,9 +65,7 @@ export default function GuildSettingsServerTagUpsellCard(guildId) {
   }
   obj4[3] = tmp10Result;
   const items5 = [callback(closure_4, obj4), , ];
-  const obj6 = { spacing: null, style: null, children: null };
-  obj6[0] = Themes.space.PX_8;
-  obj6[1] = tmp.textBlock;
+  const obj6 = { spacing: ThemesDefault.space.PX_8, style: tmp.textBlock, children: null };
   const obj7 = { variant: "heading-xl/semibold", color: "text-strong", style: tmp.centerText, children: null };
   const intl = tmp2(1236).intl;
   obj7[3] = intl.string(guildId(1236).t["2QmKZ2"]);

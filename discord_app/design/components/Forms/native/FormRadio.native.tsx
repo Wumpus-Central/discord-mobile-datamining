@@ -1,28 +1,28 @@
 // discord_app/design/components/Forms/native/FormRadio.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let closure_5 = createCacheKey.createStyles(() => {
-  const CONTROL_RADIO_ICON_SIZE_DEFAULT = Themes.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
-  const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = Themes.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
+  const CONTROL_RADIO_ICON_SIZE_DEFAULT = ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_SIZE_DEFAULT;
+  const CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT = ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT;
   let obj = { radio: null, unselected: null, selected: null, dot: null };
-  obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: Themes.radii.round, borderWidth: Themes.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: Themes.colors.RADIO_BORDER_DEFAULT };
+  obj = { width: CONTROL_RADIO_ICON_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, borderWidth: ThemesDefault.modules.mobile.CONTROL_RADIO_ICON_BORDER_WIDTH, borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
   obj[0] = obj;
-  obj = { backgroundColor: "transparent", borderColor: Themes.colors.RADIO_BORDER_DEFAULT };
+  obj = { backgroundColor: "transparent", borderColor: ThemesDefault.colors.RADIO_BORDER_DEFAULT };
   obj[1] = obj;
-  obj[2] = { borderColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  const obj1 = { borderColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: Themes.colors.REDESIGN_INPUT_CONTROL_SELECTED };
-  obj[3] = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: Themes.colors.WHITE, borderRadius: Themes.radii.round };
+  obj[2] = { borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+  obj1 = { borderColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED, backgroundColor: ThemesDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
+  obj[3] = { width: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, height: CONTROL_RADIO_ICON_DOT_SIZE_DEFAULT, backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
   return obj;
 });
 let closure_6 = { code: "function FormRadioNativeTsx1(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.borderColor:unselectedStyles.borderColor,SUBTLE_SPRING,'animate-always');}" };
 let closure_7 = { code: "function FormRadioNativeTsx2(){const{withSpring,selectedShared,selectedStyles,unselectedStyles,SUBTLE_SPRING}=this.__closure;return withSpring(selectedShared.get()?selectedStyles.backgroundColor:unselectedStyles.backgroundColor,SUBTLE_SPRING,'animate-always');}" };
 let closure_8 = { code: "function FormRadioNativeTsx3(){const{borderColor,backgroundColor}=this.__closure;return{borderColor:borderColor.get(),backgroundColor:backgroundColor.get()};}" };
 let closure_9 = { code: "function FormRadioNativeTsx4(){const{useReducedMotion,withSpring,selected,SUBTLE_SPRING}=this.__closure;const unselectedScale=useReducedMotion?1:0.5;return{opacity:withSpring(selected?1:0,SUBTLE_SPRING,'animate-always'),transform:[{scale:withSpring(selected?1:unselectedScale,SUBTLE_SPRING)}]};}" };
-let result = require("createCacheKey").fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Forms/native/FormRadio.native.tsx");
 
 export const FormRadio = function FormRadio(selected) {
   selected = selected.selected;
@@ -44,13 +44,13 @@ export const FormRadio = function FormRadio(selected) {
   const effect = sharedValue.useEffect(() => {
     const result = sharedValue.set(enabled);
   }, items);
-  let obj1 = enabled(unselected[5]);
+  obj1 = enabled(unselected[5]);
   class T {
     constructor() {
       tmp = enabled;
       tmp2 = unselected;
       obj = enabled(unselected[6]);
-      if (c3.get()) {
+      if (closure_3.get()) {
         tmp4 = selected;
         borderColor = selected.borderColor;
       } else {
@@ -70,7 +70,7 @@ export const FormRadio = function FormRadio(selected) {
       tmp = enabled;
       tmp2 = unselected;
       obj = enabled(unselected[6]);
-      if (c3.get()) {
+      if (closure_3.get()) {
         tmp4 = selected;
         backgroundColor = selected.backgroundColor;
       } else {
@@ -119,9 +119,8 @@ export const FormRadio = function FormRadio(selected) {
   fn2.__workletHash = 15209729079449;
   fn2.__initData = closure_9;
   const animatedStyle1 = enabled(unselected[5]).useAnimatedStyle(fn2);
-  const obj2 = { style: items1, children: null };
-  items1 = [tmp.radio, animatedStyle];
+  const obj7 = enabled(unselected[5]);
+  const items1 = [tmp.radio, animatedStyle];
   const items2 = [tmp.dot, animatedStyle1];
-  obj2[1] = derivedValue(selected(unselected[5]).View, { style: items2 });
-  return derivedValue(selected(unselected[5]).View, obj2);
+  return derivedValue(selected(unselected[5]).View, { style: items1, children: derivedValue(selected(unselected[5]).View, { style: items2 }) });
 };

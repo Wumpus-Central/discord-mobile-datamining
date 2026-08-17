@@ -1,13 +1,13 @@
 // discord_app/modules/billing/native/subscription/useCancelSubscriptionParams.tsx
-import noop from "noop";
-import { useToggleOnIAPSuccess } from "useToggleOnIAPSuccess.tsx";
+import useToggleOnIAPSuccessDefault from "useToggleOnIAPSuccess" /* 7701 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("v1").fileFinishedImporting("modules/billing/native/subscription/useCancelSubscriptionParams.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/native/subscription/useCancelSubscriptionParams.tsx");
 
 export default function useCancelSubscriptionParams(arg0) {
-  let closure_0 = arg0;
-  const tmp = useToggleOnIAPSuccess();
+  closure_0 = arg0;
+  const tmp = useToggleOnIAPSuccessDefault();
   importDefault = tmp;
   const items = [arg0, tmp];
   return React.useMemo(() => {
@@ -16,10 +16,10 @@ export default function useCancelSubscriptionParams(arg0) {
       tmp2 = null;
       if (null != closure_1) {
         const obj = { requestIdentifier: null, subscriptionId: null };
-        obj[0] = callback(outer1_2[2]).v4();
+        obj[0] = callback(closure_1_2[2]).v4();
         obj[1] = tmp;
         tmp2 = obj;
-        const obj2 = callback(outer1_2[2]);
+        const obj2 = callback(closure_1_2[2]);
       }
     }
     return tmp2;

@@ -1,13 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/NavigationHistoryStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
 
 const require = arg1;
 function getIdFromHistoryItem(str) {
   return str.replace(regExp, "");
 }
 function removeHistoryItem(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let flag = map.delete(arg0);
   if (flag) {
     arr = arr.filter((arg0) => arg0 !== combined);
@@ -29,11 +30,12 @@ let c4 = "guild-";
 const regExp = new RegExp("^(?:" + "channel-" + "|" + "guild-" + ")");
 let closure_6 = [];
 const map = new Map();
+const PersistedStore = initializeDefault.PersistedStore;
 class NavigationHistoryStore extends PersistedStore {
 }
 const prototype = NavigationHistoryStore.prototype;
 prototype["initialize"] = function initialize(history) {
-  this.waitFor(ensureGuildLoaded);
+  this.waitFor(closure_2);
   map.clear();
   history = undefined;
   if (history != null) {
@@ -47,7 +49,7 @@ prototype["initialize"] = function initialize(history) {
     let result = map.set(item10015, undefined);
     continue;
   }
-  let closure_6 = Array.from(map.keys());
+  closure_6 = Array.from(map.keys());
 };
 prototype["getState"] = function getState() {
   return { history: closure_6 };
@@ -64,9 +66,9 @@ prototype["getLastFocusedTimestampForHistoryItem"] = function getLastFocusedTime
 };
 NavigationHistoryStore.displayName = "NavigationHistoryStore";
 NavigationHistoryStore.persistKey = "NavigationHistoryStore";
-const navigationHistoryStore = new NavigationHistoryStore(require("dispatcher"), {
+const navigationHistoryStore = new NavigationHistoryStore(dispatcherDefault, {
   LOGOUT() {
-    let closure_6 = [];
+    closure_6 = [];
     map.clear();
   },
   CHANNEL_DELETE: handleChannelDelete,
@@ -109,7 +111,7 @@ const navigationHistoryStore = new NavigationHistoryStore(require("dispatcher"),
     }
   }
 });
-let result = require("dispatcher").fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/NavigationHistoryStore.tsx");
 
 export default navigationHistoryStore;
 export const CHANNEL_PREFIX = "channel-";

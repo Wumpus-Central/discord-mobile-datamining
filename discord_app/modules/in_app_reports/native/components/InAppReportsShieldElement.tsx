@@ -1,13 +1,14 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsShieldElement.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AccountAgeTier10LargeBadge } from "../../../../design/assets/native.tsx";
+import noopAll from "noop" /* 19 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ container: { flex: 0, alignSelf: "center", marginBottom: 16 } });
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsShieldElement.tsx");
 
 export default function ShieldElement(element) {
   element = element.element;

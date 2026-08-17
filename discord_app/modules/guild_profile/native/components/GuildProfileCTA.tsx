@@ -1,15 +1,13 @@
 // discord_app/modules/guild_profile/native/components/GuildProfileCTA.tsx
-import noop from "noop";
-import { AnalyticsObjects } from "ME";
-import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { AnalyticsObjects } from "ME" /* 676 */;
+import { ProfileCustomizationScrollPositions as closure_5 } from "MAX_FAVORITES" /* 685 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("MAX_FAVORITES").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GuildProfileCTA.tsx");
 
 export default function GuildProfileCTA(profile) {
-  let context;
-  let inviteKey;
   profile = profile.profile;
   let guildId;
   let validInviteKey;
@@ -23,7 +21,7 @@ export default function GuildProfileCTA(profile) {
   const ctaType = tmp2.ctaType;
   let obj = { scrollPosition: constants.GUILD_TAG };
   React = guildId(validInviteKey[5])(obj);
-  let obj1 = React;
+  obj1 = React;
   const items = [guildId];
   const items1 = [guildId, validInviteKey];
   const callback = React.useCallback(() => {
@@ -54,8 +52,8 @@ export default function GuildProfileCTA(profile) {
   const items3 = [guildId, callback1, profile.visibility, validInviteKey];
   const callback2 = React.useCallback(() => {
     let applicationStatus;
-    if (_undefined != null) {
-      applicationStatus = _undefined.applicationStatus;
+    if (applicationStatus != null) {
+      applicationStatus = applicationStatus.applicationStatus;
     }
     if (profile(validInviteKey[10]).GuildJoinRequestApplicationStatuses.SUBMITTED === applicationStatus) {
       let tmp2Result = tmp2(tmp3[11]);

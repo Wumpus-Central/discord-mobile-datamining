@@ -1,41 +1,34 @@
 // discord_app/modules/parent_tools/native/ConnectGuardianCard.tsx
-import Button from "Button";
-import { View } from "Text";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_6 } from "items";
-import jsxProd from "ButtonGroup";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { FAMILY_CENTER_REQUEST_QR_CODE_URL as closure_6 } from "items" /* 5297 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, compactContainer: null, card: null, countdown: null, divider: null, compactDividerFlush: null, dividerLine: null, dividerText: null, buttonGroup: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "center", gap: require("Themes").space.PX_16 };
-let obj1 = { alignSelf: "center", gap: require("Themes").space.PX_16 };
-createCacheKey[2] = { alignSelf: "center", padding: require("Themes").space.PX_12, borderWidth: 1, borderRadius: require("Themes").radii.lg, borderColor: require("Themes").colors.BORDER_NORMAL };
+createCacheKey[1] = { alignSelf: "center", gap: ThemesDefault.space.PX_16 };
+let obj1 = { alignSelf: "center", gap: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { alignSelf: "center", padding: ThemesDefault.space.PX_12, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_NORMAL };
 createCacheKey[3] = { textAlign: "center" };
-let obj2 = { alignSelf: "center", padding: require("Themes").space.PX_12, borderWidth: 1, borderRadius: require("Themes").radii.lg, borderColor: require("Themes").colors.BORDER_NORMAL };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", paddingHorizontal: require("Themes").space.PX_8 };
+let obj2 = { alignSelf: "center", padding: ThemesDefault.space.PX_12, borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_NORMAL };
+createCacheKey[4] = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[5] = { paddingHorizontal: 0 };
-let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: require("Themes").space.PX_8 };
-createCacheKey[6] = { flex: 1, height: 1, backgroundColor: require("Themes").colors.BORDER_NORMAL };
-let obj4 = { flex: 1, height: 1, backgroundColor: require("Themes").colors.BORDER_NORMAL };
-createCacheKey[7] = { marginHorizontal: require("Themes").space.PX_8 };
+let obj3 = { flexDirection: "row", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_NORMAL };
+let obj4 = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_NORMAL };
+createCacheKey[7] = { marginHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[8] = { paddingTop: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { marginHorizontal: require("Themes").space.PX_8 };
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianCard.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { marginHorizontal: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/parent_tools/native/ConnectGuardianCard.tsx");
 
 export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
-  let days;
-  let expiresAt;
-  let hours;
-  let minutes;
-  let seconds;
-  let shareActions;
   linkCode = linkCode.linkCode;
   ({ expiresAt, shareActions } = linkCode);
   if (shareActions === undefined) {
@@ -43,9 +36,9 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
   }
   let stateFromStores;
   let id;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = linkCode(id[7]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   id = undefined;
   if (stateFromStores != null) {
@@ -74,7 +67,7 @@ export const ConnectGuardianCard = function ConnectGuardianCard(linkCode) {
     const tmp16 = callback(id, linkCode);
     obj = { align: "center", spacing: null, children: null };
     obj[1] = tmp6(tmp3[6]).space.PX_8;
-    const obj1 = { size: 160, text: null };
+    obj1 = { size: 160, text: null };
     obj1[1] = tmp16;
     const items3 = [callback2(tmp2(tmp3[16]).QRCodeWithOverlay, obj1), ];
     const obj2 = { style: null, variant: "text-xs/normal", children: null };

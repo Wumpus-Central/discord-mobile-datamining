@@ -1,14 +1,17 @@
 // discord_app/modules/explicit_media_redaction/ExplicitMediaStore.tsx
-import { Store } from "initialize";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 import { apexExperiment } from "SensitiveContentSelfHarmExperiment.tsx";
 
 const require = arg1;
-let closure_3 = 14 * require("set").Millis.DAY;
+let closure_3 = 14 * setDefault.Millis.DAY;
 let closure_4 = Object.freeze([]);
 let c5;
 let closure_6 = {};
 let closure_7 = {};
+const Store = initializeDefault.Store;
 class ExplicitMediaStore extends Store {
 }
 const prototype = ExplicitMediaStore.prototype;
@@ -28,8 +31,8 @@ prototype["canSubmitFpReport"] = function canSubmitFpReport(closure_1) {
     const reportSubmit = tmp.reportSubmit;
     let tmp3 = !reportSubmit;
     if (!reportSubmit) {
-      tmp3 = DISCORD_EPOCH.age(tmp.messageId) < closure_3;
-      const obj = DISCORD_EPOCH;
+      tmp3 = DISCORD_EPOCHDefault.age(tmp.messageId) < closure_3;
+      const obj = DISCORD_EPOCHDefault;
     }
     tmp2 = tmp3;
   }
@@ -56,19 +59,17 @@ Object.defineProperty(prototype, "validContentScanVersion", {
   set: undefined
 });
 ExplicitMediaStore.displayName = "FalsePositiveStore";
-const explicitMediaStore = new ExplicitMediaStore(require("dispatcher"), {
+const explicitMediaStore = new ExplicitMediaStore(dispatcherDefault, {
   LOGOUT: function handleLogout() {
-    let closure_6 = {};
-    let closure_7 = {};
+    closure_6 = {};
+    closure_7 = {};
   },
   CONNECTION_OPEN: function handleConnectionOpen(explicitContentScanVersion) {
-    let closure_5 = explicitContentScanVersion.explicitContentScanVersion;
-    let closure_6 = {};
-    let closure_7 = {};
+    closure_5 = explicitContentScanVersion.explicitContentScanVersion;
+    closure_6 = {};
+    closure_7 = {};
   },
   MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function handleFalsePositiveCreate(attachments) {
-    let channelId;
-    let messageId;
     ({ messageId, channelId } = attachments);
     const obj = { messageId, channelId, attachments: attachments.attachments, reportSubmit: false };
     let tmp = dependencyMap2[channelId];
@@ -101,6 +102,6 @@ const explicitMediaStore = new ExplicitMediaStore(require("dispatcher"), {
     }
   }
 });
-const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/ExplicitMediaStore.tsx");
 
 export default explicitMediaStore;

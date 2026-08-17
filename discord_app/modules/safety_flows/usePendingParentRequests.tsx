@@ -1,21 +1,21 @@
 // discord_app/modules/safety_flows/usePendingParentRequests.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserLinkStatus } from "items";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "freshTeenActivityWithMap" /* 5296 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { UserLinkStatus } from "items" /* 5297 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("freshTeenActivityWithMap").fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
+let result = require("set").fileFinishedImporting("modules/safety_flows/usePendingParentRequests.tsx");
 
 export const useDerivedPendingRequests = function useDerivedPendingRequests(arr, stateFromStores1) {
   const _require = arr;
-  const dependencyMap = stateFromStores1;
-  let items = [freshTeenActivityWithMap];
+  dependencyMap = stateFromStores1;
+  let items = [closure_4];
   const stateFromStores = _initialize.useStateFromStores(items, () => linkedUsers.getLinkedUsers());
   let obj = _initialize;
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_5];
   stateFromStores1 = _initialize.useStateFromStores(items1, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
@@ -26,7 +26,6 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   });
   const items2 = [stateFromStores1, stateFromStores, stateFromStores1, arr];
   return stateFromStores1.useMemo(() => {
-    let arr;
     if (closure_1) {
       const _Map = Map;
       const map = new Map(arr.map((parent_id) => {
@@ -42,14 +41,14 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
         let tmp14 = nextResult;
         if (null != nextResult) {
           let tmp25 = nextResult;
-          let tmp26 = outer1_6;
-          if (tmp14.link_status === outer1_6.PENDING) {
+          let tmp26 = closure_1_6;
+          if (tmp14.link_status === closure_1_6.PENDING) {
             let tmp27 = nextResult;
             let tmp28 = stateFromStores1;
             if (tmp14.requestor_id !== stateFromStores1) {
-              let tmp29 = outer1_5;
+              let tmp29 = closure_1_5;
               let tmp30 = nextResult;
-              let user = outer1_5.getUser(tmp14.user_id);
+              let user = closure_1_5.getUser(tmp14.user_id);
               let tmp32 = user;
               let value = map.get(tmp14.user_id);
               let obj = { parent_id: null, parent_username: null, parent_avatar: null, created_at: null };
@@ -103,24 +102,12 @@ export const useDerivedPendingRequests = function useDerivedPendingRequests(arr,
   }, items2);
 };
 export const usePendingRequestListController = function usePendingRequestListController(pendingRequests) {
-  let c2;
-  let c6;
-  let c7;
-  let dependencyMap;
-  let isAcceptLoading;
-  let isDeclineLoading;
-  let linkedUsersProcessed;
-  let tmp12;
-  let tmp13;
-  let tmp15;
-  let tmp16;
-  let tmp4;
   pendingRequests = pendingRequests.pendingRequests;
   ({ linkedUsersProcessed, onActionError: dependencyMap } = pendingRequests);
   let callback;
   let acceptLinkRequest;
   let declineLinkRequest;
-  let c5;
+  isDeclineLoading = undefined;
   c6 = undefined;
   c7 = undefined;
   callback = undefined;
@@ -145,11 +132,11 @@ export const usePendingRequestListController = function usePendingRequestListCon
   if (!isAcceptLoading) {
     tmp6 = isDeclineLoading;
   }
-  c5 = tmp6;
+  isDeclineLoading = tmp6;
   let tmp2Result = tmp2(obj2.useState(() => new Set()), 2);
   [c6, c7] = tmp2Result;
   callback = obj2.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     _undefined3((has) => {
       if (has.has(closure_0)) {
         return has;
@@ -165,14 +152,14 @@ export const usePendingRequestListController = function usePendingRequestListCon
   let items = [tmp6, callback, acceptLinkRequest];
   const items1 = [tmp6, callback, declineLinkRequest];
   const callback1 = obj2.useCallback((arg0) => {
-    if (!c5) {
+    if (!isDeclineLoading) {
       callback(arg0);
       _undefined(arg0);
       acceptLinkRequest(arg0);
     }
   }, items);
   const callback2 = obj2.useCallback((arg0) => {
-    if (!c5) {
+    if (!isDeclineLoading) {
       callback(arg0);
       _undefined(arg0);
       declineLinkRequest(arg0);
@@ -234,13 +221,11 @@ export const usePendingRequestListController = function usePendingRequestListCon
   }
 };
 export const usePendingRequestResolution = function usePendingRequestResolution(parent_id) {
-  let tmp3;
-  let tmp4;
   const _require = parent_id;
   let obj = _require(stateFromStores[5]);
-  const items = [freshTeenActivityWithMap];
+  const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => {
-    const tmp = outer1_4.getLinkedUsers()[closure_0];
+    const tmp = closure_1_4.getLinkedUsers()[closure_0];
     let link_status;
     if (tmp != null) {
       link_status = tmp.link_status;
@@ -249,7 +234,7 @@ export const usePendingRequestResolution = function usePendingRequestResolution(
   });
   [tmp3, tmp4] = callback(React.useState(() => {
     let str = "connected";
-    if (stateFromStores !== outer1_6.ACTIVE) {
+    if (stateFromStores !== closure_1_6.ACTIVE) {
       if (null == tmp) {
         let str2 = null;
       } else {

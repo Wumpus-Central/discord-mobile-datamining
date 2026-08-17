@@ -1,14 +1,16 @@
 // discord_app/modules/app_database/modules/ReadStates.tsx
-import apply from "apply";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import set from "generateOldThreadCutoff";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
+import set from "set" /* 2 */;
 
-let c5 = new require("timestamp")("ReadStates");
+let set = importDefault;
+let closure_5 = new timestampDefault("ReadStates");
 class ReadStates {
   constructor() {
     obj = Object.create(new.target.prototype);
-    ReadStates = obj;
+    closure_0 = obj;
     obj.readStateVersion = null;
     obj.actions = {
       CONNECTION_OPEN(arg0) {
@@ -34,17 +36,17 @@ class ReadStates {
 }
 const prototype = ReadStates.prototype;
 prototype["getAll"] = function getAll(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return callback(function*() {
     let length = tmp5;
-    let closure_0 = tmp2;
+    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
-    const states = outer1_0(outer1_1[4]).readStates(outer1_0);
+    const states = closure_1_0(closure_1_1[4]).readStates(closure_1_0);
     length = yield states.getMany();
     const _performance = performance;
     const _HermesInternal = HermesInternal;
-    outer1_5.log("asynchronously loaded in " + apply - closure_0 + "ms (readStates: " + length.length + ")");
+    closure_1_5.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (readStates: " + length.length + ")");
     return length;
   })();
 };
@@ -59,7 +61,7 @@ prototype["handleReadStateAction"] = function handleReadStateAction(version) {
     if (null != version.version) {
       tmp.readStateVersion = version.version;
     } else {
-      tmp2.log("Received null read states version", version);
+      logger.log("Received null read states version", version);
     }
   }
 };
@@ -71,7 +73,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
       const _Object = Object;
       const keys = Object.keys(mutablePrivateChannels.getMutablePrivateChannels());
       const _Set = Set;
-      const set = new Set(keys);
+      set = new Set(keys);
       const sorted = statesTransaction(12)(keys).sort(statesTransaction(11).compare);
       const obj10 = statesTransaction(12)(keys);
       let str = sorted.reverse().value()[0];
@@ -112,7 +114,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
         }
         continue;
       }
-      let obj1 = statesTransaction(1955);
+      obj1 = statesTransaction(1955);
       const result = obj1.nonGuildVersionsTransaction(database);
       let obj = { id: "highest_last_message_id", versionString: null };
       obj[1] = str2;
@@ -131,7 +133,7 @@ prototype["handleWriteCaches"] = function handleWriteCaches(database) {
   statesTransaction.delete();
   const item = allReadStates.forEach((type) => statesTransaction.put("" + type.type + "-" + type.channelId, type));
 };
-let set = Object.create(ReadStates.prototype);
+set = Object.create(ReadStates.prototype);
 set.readStateVersion = null;
 set.actions = {
   CONNECTION_OPEN(arg0) {

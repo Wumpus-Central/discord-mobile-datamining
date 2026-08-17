@@ -1,19 +1,15 @@
 // discord_app/modules/native_permissions/mobile/PermissionsAlertModal.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
+const result = require("set").fileFinishedImporting("modules/native_permissions/mobile/PermissionsAlertModal.tsx");
 
 export default function PermissionsAlertModal(arg0) {
-  let body;
-  let onConfirm;
-  let title;
   ({ title, body, onConfirm } = arg0);
   let obj = { title, content: body, actions: null };
   obj = { children: null };
@@ -21,7 +17,7 @@ export default function PermissionsAlertModal(arg0) {
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.jVcuVY);
   const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj1 = { variant: "secondary", text: null };
   const intl2 = getSystemLocale.intl;
   obj1[1] = intl2.string(getSystemLocale.t.cpT0Cq);
   items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "close");

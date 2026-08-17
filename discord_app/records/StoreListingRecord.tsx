@@ -1,9 +1,10 @@
 // discord_app/records/StoreListingRecord.tsx
-import "toJS";
-import createdAt from "createdAt";
-import { transformStoreAssetFromServer } from "../modules/game_store/GameStoreAsset.tsx";
+import toJSDefault from "toJS" /* 1931 */;
+import transformStoreAssetFromServer from "transformStoreAssetFromServer" /* 13868 */;
+import closure_2 from "createdAt" /* 1930 */;
 
-const require = arg1;
+require = arg1;
+toJSDefault;
 let StoreListingRecord;
 class StoreListingRecord extends tmp2 {
   constructor(arg0) {
@@ -112,7 +113,7 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
     obj[0] = staff_notes.content;
     let tmp9 = null;
     if (null != staff_notes.user) {
-      tmp9 = new createdAt(staff_notes.user);
+      tmp9 = new closure_2(staff_notes.user);
     }
     obj[1] = tmp9;
     tmp8 = obj;
@@ -183,6 +184,6 @@ StoreListingRecord["createFromServer"] = function createFromServer(id) {
 StoreListingRecord.prototype["isSlimDirectoryVersion"] = function isSlimDirectoryVersion() {
   return null == this.description;
 };
-let result = require("transformStoreAssetFromServer").fileFinishedImporting("records/StoreListingRecord.tsx");
+let result = require("set").fileFinishedImporting("records/StoreListingRecord.tsx");
 
 export default StoreListingRecord;

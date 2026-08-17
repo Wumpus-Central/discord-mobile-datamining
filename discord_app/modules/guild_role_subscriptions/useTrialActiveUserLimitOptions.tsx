@@ -1,5 +1,5 @@
 // discord_app/modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrialActiveUserLimitOptions.tsx");

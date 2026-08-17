@@ -1,16 +1,13 @@
 // discord_app/lib/ChannelMessages.tsx
-import ME from "ME";
-import { apply } from "../../_runtime/00012_apply.js";
-import { GuildThemeSourcePreference } from "../flow/Client.tsx";
-import { createMinimalMessageRecord } from "../modules/messages/MessageRecordUtils.tsx";
-import { isIOSPushNotificationRawPayloadFixExperimentEnabled } from "../modules/notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import set2 from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import GuildThemeSourcePreference from "GuildThemeSourcePreference" /* 4306 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import isIOSPushNotificationRawPayloadFixExperimentEnabled from "isIOSPushNotificationRawPayloadFixExperimentEnabled" /* 4999 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 function mergeMessage(self, id) {
   let messageRecord = self.get(id.id);
   if (null != messageRecord) {
@@ -43,8 +40,8 @@ function mergeMessage(self, id) {
   }
   messageRecord = createMinimalMessageRecord.createMessageRecord(id);
 }
-({ MAX_MESSAGES_PER_CHANNEL: c4, MAX_LOADED_MESSAGES: c5, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: error, MessageStates: metroImportAll } = ME);
-let c9 = new require("apply")("ChannelMessages");
+({ MAX_MESSAGES_PER_CHANNEL: c4, MAX_LOADED_MESSAGES: c5, MAX_MESSAGE_CACHE_SIZE: closure_6, TRUNCATED_MESSAGE_VIEW_SIZE: error, MessageStates: closure_8 } = ME);
+let closure_9 = new timestampDefault("ChannelMessages");
 let MessageCache;
 class MessageCache {
   constructor(arg0) {
@@ -99,13 +96,13 @@ prototype["clear"] = function clear() {
   this._wasAtEdge = false;
 };
 prototype["remove"] = function remove(arg0) {
-  let closure_0 = arg0;
-  this._messages = apply.filter(this._messages, (id) => id.id !== closure_0);
+  closure_0 = arg0;
+  this._messages = applyDefault.filter(this._messages, (id) => id.id !== closure_0);
   delete tmp[tmp2];
 };
 prototype["removeMany"] = function removeMany(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   self(12).each(arg0, (arg0) => {
     delete tmp2[tmp];
   });
@@ -113,8 +110,6 @@ prototype["removeMany"] = function removeMany(arg0) {
   this._messages = _messages.filter((id) => -1 === closure_0.indexOf(id.id));
 };
 prototype["replace"] = function replace(arg0, id) {
-  let _messages;
-  let _messages2;
   const self = this;
   if (null != this._map[arg0]) {
     const _map = self._map;
@@ -125,8 +120,6 @@ prototype["replace"] = function replace(arg0, id) {
   }
 };
 prototype["update"] = function update(arg0, arg1) {
-  let _messages;
-  let _messages2;
   const self = this;
   if (null != this._map[arg0]) {
     const tmp3 = arg1(tmp);
@@ -259,7 +252,7 @@ class ChannelMessages {
 }
 const prototype2 = ChannelMessages.prototype;
 ChannelMessages["forEach"] = function forEach(arg0) {
-  const item = apply.forEach(ChannelMessages._channelMessages, arg0);
+  const item = applyDefault.forEach(ChannelMessages._channelMessages, arg0);
 };
 ChannelMessages["get"] = function get(arg0) {
   return ChannelMessages._channelMessages[arg0];
@@ -289,7 +282,7 @@ ChannelMessages["getOrCreate"] = function getOrCreate(channelId) {
     if (typeof MessageCache !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj1 = Object.create(MessageCache.prototype);
+    obj1 = Object.create(MessageCache.prototype);
     obj1._messages = [];
     obj1._map = {};
     obj1._wasAtEdge = false;
@@ -341,7 +334,7 @@ prototype2["mutate"] = function mutate(obj, flag) {
   if (typeof MessageCache !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj1 = Object.create(MessageCache.prototype);
+  obj1 = Object.create(MessageCache.prototype);
   obj1._messages = [];
   obj1._map = {};
   obj1._wasAtEdge = false;
@@ -497,7 +490,7 @@ prototype2["forAll"] = function forAll(arg0) {
 };
 prototype2["findOldest"] = function findOldest(isTermsFormField) {
   const self = this;
-  let found = apply.find(this._before._messages, isTermsFormField);
+  let found = applyDefault.find(this._before._messages, isTermsFormField);
   if (found == null) {
     let tmpResult = tmp(12);
     found = tmpResult.find(self._array, isTermsFormField);
@@ -510,7 +503,7 @@ prototype2["findOldest"] = function findOldest(isTermsFormField) {
 };
 prototype2["findNewest"] = function findNewest(arg0) {
   const self = this;
-  let findLastResult = apply.findLast(this._after._messages, arg0);
+  let findLastResult = applyDefault.findLast(this._after._messages, arg0);
   if (findLastResult == null) {
     let tmpResult = tmp(12);
     findLastResult = tmpResult.findLast(self._array, arg0);
@@ -733,13 +726,13 @@ prototype2["has"] = function has(arg0) {
   return tmp;
 };
 prototype2["indexOf"] = function indexOf(arg0) {
-  let closure_0 = arg0;
-  let c1 = -1;
+  closure_0 = arg0;
+  c1 = -1;
   const _array = this._array;
   const found = _array.find((id) => {
     let flag = id.id === closure_0;
     if (flag) {
-      let closure_1 = arg1;
+      closure_1 = arg1;
       flag = true;
     }
     return flag;
@@ -780,9 +773,9 @@ prototype2["hasAfterCached"] = function hasAfterCached(after) {
 };
 prototype2["update"] = function update(arg0, arg1) {
   const self = this;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  const importAll = tmp;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = tmp;
   if (null == this._map[arg0]) {
     let _before = self._before;
     if (_before.has(arg0)) {
@@ -802,21 +795,19 @@ prototype2["update"] = function update(arg0, arg1) {
     }
     return mutation;
   } else {
-    let closure_3 = arg1(tmp);
+    closure_3 = arg1(tmp);
     return self.mutate((_map) => {
-      let _array;
-      let _array2;
-      _map._map[tmp.id] = closure_3;
+      _map._map[id.id] = closure_3;
       ({ _array: _array2, _array } = _map);
-      _array[_array2.indexOf(tmp)] = closure_3;
+      _array[_array2.indexOf(id)] = closure_3;
     }, true);
   }
 };
 prototype2["replace"] = function replace(arg0, arg1) {
   const self = this;
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  const importAll = tmp;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = tmp;
   if (null == this._map[arg0]) {
     const _before = self._before;
     if (_before.has(arg0)) {
@@ -838,7 +829,7 @@ prototype2["replace"] = function replace(arg0, arg1) {
   }
 };
 prototype2["remove"] = function remove(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return this.mutate((_array) => {
     delete tmp2[tmp];
     _array = _array._array;
@@ -852,12 +843,12 @@ prototype2["remove"] = function remove(arg0) {
 prototype2["removeMany"] = function removeMany(arr) {
   let self = this;
   self = this;
-  let closure_0 = arr;
+  closure_0 = arr;
   let self2 = this;
   if (arr.some((arg0) => self.has(arg0))) {
     self2 = self.mutate((_array) => {
-      let closure_0 = _array;
-      self(outer1_3[3]).each(closure_0, (arg0) => {
+      closure_0 = _array;
+      self(closure_1_3[3]).each(closure_0, (arg0) => {
         delete tmp2[tmp];
       });
       _array = _array._array;
@@ -871,7 +862,7 @@ prototype2["removeMany"] = function removeMany(arr) {
   return self2;
 };
 prototype2["merge"] = function merge(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -894,8 +885,6 @@ prototype2["_merge"] = function _merge(arr, flag, flag2) {
     flag2 = false;
   }
   const found = arr.filter((id) => {
-    let _array;
-    let _array2;
     self._map[id.id] = id;
     let flag = null == tmp2;
     if (!flag) {
@@ -953,9 +942,9 @@ prototype2["_clearMessages"] = function _clearMessages() {
   this._map = {};
 };
 prototype2["reset"] = function reset(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return this.mutate((_before) => {
-    let closure_0 = _before;
+    closure_0 = _before;
     _before._array = closure_0;
     _before._map = {};
     const item = closure_0.forEach((id) => {
@@ -973,14 +962,12 @@ prototype2["truncateTop"] = function truncateTop(closure_4, flag) {
     flag = true;
   }
   const self = this;
-  let c0;
+  c0 = undefined;
   const diff = this._array.length - closure_4;
   c0 = diff;
   let self2 = this;
   if (diff > 0) {
     self2 = self.mutate((_map) => {
-      let _array;
-      let _before;
       let tmp3 = c0;
       let num = 0;
       if (0 < c0) {
@@ -1005,7 +992,7 @@ prototype2["truncateBottom"] = function truncateBottom(closure_4, arg1) {
   return this;
 };
 prototype2["jumpToPresent"] = function jumpToPresent(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return this.mutate((_after) => {
     _after = _after._after;
     const extractAllResult = _after.extractAll();
@@ -1033,12 +1020,6 @@ prototype2["jumpToPresent"] = function jumpToPresent(arg0) {
   }, true);
 };
 prototype2["jumpToMessage"] = function jumpToMessage(arg0) {
-  let closure_4;
-  let closure_5;
-  let flash;
-  let importAll;
-  let require;
-  let returnTargetId;
   ({ messageId: require, flash } = arg0);
   if (flash === undefined) {
     flash = true;
@@ -1053,7 +1034,7 @@ prototype2["jumpToMessage"] = function jumpToMessage(arg0) {
     jumpSequenceId.jumpedToPresent = false;
     let ANIMATED = closure_4;
     if (closure_4 == null) {
-      ANIMATED = outer1_0(returnTargetId[4]).JumpType.ANIMATED;
+      ANIMATED = closure_1_0(returnTargetId[4]).JumpType.ANIMATED;
     }
     jumpSequenceId.jumpType = ANIMATED;
     jumpSequenceId.jumpTargetId = closure_0;
@@ -1078,7 +1059,7 @@ prototype2["jumpToMessage"] = function jumpToMessage(arg0) {
   }, false);
 };
 prototype2["focusOnMessage"] = function focusOnMessage(messageId) {
-  let closure_0 = messageId;
+  closure_0 = messageId;
   return this.mutate((focusSequenceId) => {
     focusSequenceId.focusTargetId = closure_0;
     focusSequenceId.focusSequenceId = focusSequenceId.focusSequenceId + 1;
@@ -1087,8 +1068,8 @@ prototype2["focusOnMessage"] = function focusOnMessage(messageId) {
   }, false);
 };
 prototype2["loadFromCache"] = function loadFromCache(arg0, limit) {
-  let closure_0 = arg0;
-  let closure_1 = limit;
+  closure_0 = arg0;
+  closure_1 = limit;
   return this.mutate((_before) => {
     const arr = closure_0 ? _before._before : _before._after;
     _before._merge(arr.extract(closure_1), closure_0);
@@ -1160,15 +1141,13 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
       if (obj2.compare(nonce.id, lastResult.id) < 0) {
         if (tmp8Result.getConfig({ location: "receiveMessage" }).enabled) {
           let mutation = self.mutate((_map) => {
-            let _array;
-            let _array2;
             _map._map[messageRecord1.id] = messageRecord1;
             if (null != _map._map[messageRecord1.id]) {
               ({ _array: _array2, _array } = _map);
               _array[_array2.indexOf(tmp2)] = tmp;
             } else {
-              outer1_2(outer1_3[7]).insert(_map._array, tmp, (id, id2) => callback(table[5]).compare(id.id, id2.id));
-              const obj = outer1_2(outer1_3[7]);
+              closure_1_2(closure_1_3[7]).insert(_map._array, tmp, (id, id2) => callback(table[5]).compare(id.id, id2.id));
+              const obj = closure_1_2(closure_1_3[7]);
             }
           }, true);
         }
@@ -1182,7 +1161,7 @@ prototype2["receiveMessage"] = function receiveMessage(nonce) {
         }
         return truncateTopResult;
       }
-      obj2 = DISCORD_EPOCH;
+      obj2 = DISCORD_EPOCHDefault;
       const tmp8 = importDefault;
     }
     const items = [messageRecord1];
@@ -1305,7 +1284,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
     flag6 = false;
   }
   const self = this;
-  let obj = apply(items);
+  let obj = applyDefault(items);
   const reversed = obj.reverse();
   const valueResult = reversed.map((message) => callback(table[2]).createMessageRecord(message)).value();
   if (flag) {
@@ -1444,13 +1423,13 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
             let mergeResult1 = resetResult;
             if (found1.length > 0) {
               const _HermesInternal = HermesInternal;
-              tmp3.info("loadComplete: merging with SEND_FAILED messages for channelId=" + self.channelId);
+              logger.info("loadComplete: merging with SEND_FAILED messages for channelId=" + self.channelId);
               mergeResult1 = resetResult.merge(found1);
             }
             mergeResult = mergeResult1;
             if (found.length > 0) {
               const _HermesInternal2 = HermesInternal;
-              tmp3.info("loadComplete: merging with SENDING messages for channelId=" + self.channelId);
+              logger.info("loadComplete: merging with SENDING messages for channelId=" + self.channelId);
               mergeResult = mergeResult1.merge(found);
             }
           }
@@ -1458,7 +1437,7 @@ prototype2["loadComplete"] = function loadComplete(newMessages) {
       }
     }
   }
-  tmp3.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
+  logger.info("loadComplete: resetting state for channelId=" + self.channelId + ", sending.length=" + found.length);
   mergeResult = resetResult;
 };
 prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
@@ -1466,14 +1445,14 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   self = this;
   let obj = reversed(5000);
   const result = obj.requireSortedDescending(messages);
-  const mapped = messages.map((arg0) => outer1_10(self, arg0));
+  const mapped = messages.map((arg0) => closure_1_10(self, arg0));
   reversed = mapped.reverse();
   const _array = this._array;
   const found = _array.filter((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return !closure_0.some((id) => id.id === id.id);
   });
-  const item = found.forEach((arg0) => outer1_2(outer1_3[7]).insert(reversed, arg0, (id, id2) => callback(table[5]).compare(id.id, id2.id)));
+  const item = found.forEach((arg0) => closure_1_2(closure_1_3[7]).insert(reversed, arg0, (id, id2) => callback(table[5]).compare(id.id, id2.id)));
   let cached = !stale;
   if (!stale) {
     cached = self.cached;
@@ -1489,8 +1468,8 @@ prototype2["addCachedMessages"] = function addCachedMessages(messages, stale) {
   return self.reset(reversed).mutate(obj);
 };
 ChannelMessages._channelMessages = {};
-let tmp3 = new require("apply")("ChannelMessages");
-let result = require("createMinimalMessageRecord").fileFinishedImporting("lib/ChannelMessages.tsx");
+let tmp3 = new timestampDefault("ChannelMessages");
+let result = set2.fileFinishedImporting("lib/ChannelMessages.tsx");
 
 export default ChannelMessages;
 export const flatMapChannelMessages = function flatMapChannelMessages(arr) {

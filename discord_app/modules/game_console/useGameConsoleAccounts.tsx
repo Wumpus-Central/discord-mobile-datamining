@@ -1,13 +1,13 @@
 // discord_app/modules/game_console/useGameConsoleAccounts.tsx
-import set from "set";
-import { PlatformTypes } from "ME";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "set" /* 5221 */;
+import { PlatformTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");
 
 export default function useGameConsoleAccounts() {
-  let items = [set];
+  let items = [closure_2];
   return initialize.useStateFromStoresArray(items, () => {
     const items = [store.getAccount(null, constants.XBOX), store.getAccount(null, constants.PLAYSTATION), store.getAccount(null, constants.PLAYSTATION_STAGING)];
     return items.filter(callback(table[3]).isNotNullish);

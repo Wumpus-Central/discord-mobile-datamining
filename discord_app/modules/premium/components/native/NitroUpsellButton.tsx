@@ -1,17 +1,14 @@
 // discord_app/modules/premium/components/native/NitroUpsellButton.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { NitroWheelIcon } from "../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 4745 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 7988 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-const memoResult = require("noop").memo(function NitroUpsellButton(shiny) {
-  let loading;
-  let onPress;
-  let text;
+require = arg1;
+const memoResult = importAllResult.memo(function NitroUpsellButton(shiny) {
   let flag = shiny.shiny;
   ({ loading, onPress, text } = shiny);
   if (flag === undefined) {
@@ -22,18 +19,17 @@ const memoResult = require("noop").memo(function NitroUpsellButton(shiny) {
     str = "lg";
   }
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { text, size: str, loading, onPress, icon: null, variant: "experimental_premium-primary", shiny: null };
-  obj = { color: null, size: "sm" };
-  obj[0] = Themes.colors.WHITE;
-  obj[4] = jsx(NitroWheelIcon.NitroWheelIcon, { color: null, size: "sm" });
+  obj = { color: ThemesDefault.colors.WHITE, size: "sm" };
+  obj[4] = jsx(NitroWheelIcon.NitroWheelIcon, { color: ThemesDefault.colors.WHITE, size: "sm" });
   if (flag) {
     flag = !stateFromStores;
   }
   obj[6] = flag;
-  return jsx(Button.Button, { color: null, size: "sm" });
+  return jsx(Button.Button, { color: ThemesDefault.colors.WHITE, size: "sm" });
 });
-const result = require("jsxProd").fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/components/native/NitroUpsellButton.tsx");
 
 export default memoResult;

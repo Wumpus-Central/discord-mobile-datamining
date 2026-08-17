@@ -1,27 +1,19 @@
 // discord_app/modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx
-import { Image } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { QUICK_SWITCHER } from "../../../app_analytics/AnalyticsLocation.tsx";
-import { PremiumTypes } from "../hooks/useBuyNitroPlanSelection.tsx";
-import { BuyNitroPurchaseButton } from "purchase_button/BuyNitroPurchaseButton.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import PremiumTypes from "PremiumTypes" /* 7933 */;
+import BuyNitroPurchaseButtonDefault from "BuyNitroPurchaseButton" /* 8021 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 const BuyNitroPerkDetailsActionSheet = "BuyNitroPerkDetailsActionSheet";
 let closure_7 = createCacheKey.createStyles({ illustration: { width: "100%", height: 180 } });
-let closure_8 = require("noop").memo((perk) => {
-  let analyticsLocations;
-  let applicationId;
-  let onPaymentDismiss;
-  let onPaymentSuccess;
-  let selectedProductId;
-  let selectedTier;
+let closure_8 = importAllResult.memo((perk) => {
   perk = perk.perk;
   ({ selectedTier, selectedProductId, analyticsLocations, applicationId, onPaymentSuccess, onPaymentDismiss } = perk);
   let obj = PremiumTypes;
@@ -37,8 +29,8 @@ let closure_8 = require("noop").memo((perk) => {
     obj[0] = detail.image;
     obj[1] = tmp.illustration;
     obj[2] = callback(Image, obj);
-    const obj1 = { spacing: null, children: null };
-    obj1[0] = Themes.space.PX_12;
+    obj1 = { spacing: null, children: null };
+    obj1[0] = ThemesDefault.space.PX_12;
     tmp6Result = null != buyNitroPlanSelection.selection.item;
     if (tmp6Result) {
       const obj2 = { planSelection: null, item: null, centered: true };
@@ -49,7 +41,7 @@ let closure_8 = require("noop").memo((perk) => {
     const items = [tmp6Result, ];
     const obj3 = { planSelection: null, location: null, sourceAnalyticsLocations: null, applicationId: null, onHostSheetClose: null, onPaymentSuccess: null, onPaymentDismiss: null };
     obj3[0] = buyNitroPlanSelection;
-    obj3[1] = QUICK_SWITCHER.PREMIUM_MARKETING_PERK_CARD;
+    obj3[1] = QUICK_SWITCHERDefault.PREMIUM_MARKETING_PERK_CARD;
     obj3[2] = analyticsLocations;
     obj3[3] = applicationId;
     obj3[4] = function onHostSheetClose() {
@@ -57,16 +49,16 @@ let closure_8 = require("noop").memo((perk) => {
     };
     obj3[5] = onPaymentSuccess;
     obj3[6] = onPaymentDismiss;
-    items[1] = callback(BuyNitroPurchaseButton, obj3);
+    items[1] = callback(BuyNitroPurchaseButtonDefault, obj3);
     obj1[1] = items;
     obj[3] = closure_5(tmp2(4733).Stack, obj1);
     tmp6Result = tmp6(tmp2(8017).PromoSheet, obj);
     const tmp8 = closure_5;
-    const tmp9Result = BuyNitroPurchaseButton;
+    const tmp9Result = BuyNitroPurchaseButtonDefault;
   }
   return tmp6Result;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
+const result = require("set").fileFinishedImporting("modules/premium_marketing/native/components/BuyNitroPerkDetails.tsx");
 
 export const openBuyNitroPerkDetails = function openBuyNitroPerkDetails(perk, arg1) {
   let obj = ACTION_SHEET_HEIGHT_HALF;

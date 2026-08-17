@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/DataSavingModeSetting.tsx
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UserSettingsText } from "../../chat/native/UserSettingsText.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import UserSettingsText from "UserSettingsText" /* 14771 */;
+import closure_2 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -14,20 +14,20 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.CHAT,
   useValue: function useDataSavingModeSettingValue() {
-    const items = [CHANNEL_SIDEBAR_WIDTH];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   },
   onValueChange: function onDataSavingModeSettingValueChange(arg0) {
     let obj = UserSettingsText;
-    obj = { videoUploadQuality: CHANNEL_SIDEBAR_WIDTH.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
+    obj = { videoUploadQuality: closure_2.videoUploadQuality, viewImageDescriptions: null, lowQualityImageMode: null, dataSavingMode: null };
     const ViewImageDescriptions = explicitContentFromProto.ViewImageDescriptions;
     obj[1] = ViewImageDescriptions.getSetting();
-    obj[2] = CHANNEL_SIDEBAR_WIDTH.lowQualityImageMode;
+    obj[2] = closure_2.lowQualityImageMode;
     obj[3] = arg0;
     obj.setDataSavingMode(obj);
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DataSavingModeSetting.tsx");
 
 export default createToggle;

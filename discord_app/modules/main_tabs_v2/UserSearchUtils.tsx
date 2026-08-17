@@ -1,13 +1,13 @@
 // discord_app/modules/main_tabs_v2/UserSearchUtils.tsx
-import initialize from "initialize";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
-import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
+import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import closure_3 from "initialize" /* 5410 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/UserSearchUtils.tsx");
 
 export const cleanString = function cleanString(toLocaleLowerCase) {
   const obj = isNullOrEmpty;
@@ -33,7 +33,7 @@ export const getNames = function getNames(user) {
     names[nick] = names(1903).stripDiacritics(nick.toLocaleLowerCase()).trim().split(" ");
     let str2 = names(1903).stripDiacritics(nick.toLocaleLowerCase()).trim();
   }
-  const globalName = nameFromUser.getGlobalName(user);
+  const globalName = nameFromUserDefault.getGlobalName(user);
   if (tmp4) {
     const obj6 = names(1903);
     const str4 = names(1903).stripDiacritics(globalName.toLocaleLowerCase());
@@ -41,7 +41,7 @@ export const getNames = function getNames(user) {
     const str5 = names(1903).stripDiacritics(globalName.toLocaleLowerCase()).trim();
   }
   const username = user.username;
-  const obj4 = nameFromUser;
+  const obj4 = nameFromUserDefault;
   tmp4 = null != globalName && null == names[globalName];
   const obj7 = names(1903);
   const str7 = names(1903).stripDiacritics(username.toLocaleLowerCase());
@@ -49,10 +49,10 @@ export const getNames = function getNames(user) {
   nicknames = nicknames.getNicknames(user.id);
   const item = nicknames.forEach((toLocaleLowerCase) => {
     if (null == names[toLocaleLowerCase]) {
-      const obj = names(outer1_2[4]);
-      const str = names(outer1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase());
-      tmp[toLocaleLowerCase] = names(outer1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim().split(" ");
-      const str2 = names(outer1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
+      const obj = names(closure_1_2[4]);
+      const str = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase());
+      tmp[toLocaleLowerCase] = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim().split(" ");
+      const str2 = names(closure_1_2[4]).stripDiacritics(toLocaleLowerCase.toLocaleLowerCase()).trim();
     }
   });
   return { names, nick };

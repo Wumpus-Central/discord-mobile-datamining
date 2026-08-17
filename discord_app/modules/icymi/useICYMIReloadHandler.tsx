@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/useICYMIReloadHandler.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import noop from "noop";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("DEFAULT_UX_VARIATION").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/useICYMIReloadHandler.tsx");
 
 export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
-  let closure_0 = showDot;
+  closure_0 = showDot;
   const items = [showDot];
   return React.useCallback(callback(function*() {
     if (dependencyMap === 2) {
@@ -35,13 +35,13 @@ export const useICYMIReloadHandler = function useICYMIReloadHandler(showDot) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp2;
-            const ICYMIAnalytics = outer1_0(9065).ICYMIAnalytics;
+            closure_0 = tmp2;
+            const ICYMIAnalytics = closure_1_0(9065).ICYMIAnalytics;
             let str = "NoDotShown";
-            if (outer1_0) {
+            if (closure_1_0) {
               str = "DotShown";
             }
-            const obj1 = { variant: null, homeSessionId: "gravity_refresh" };
+            obj1 = { variant: null, homeSessionId: "gravity_refresh" };
             obj1[0] = str;
             ICYMIAnalytics.trackFeedShown(obj1);
             v0 = 1;

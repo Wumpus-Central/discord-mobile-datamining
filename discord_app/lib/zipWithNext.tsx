@@ -1,5 +1,7 @@
 // discord_app/lib/zipWithNext.tsx
-const result = require("set").fileFinishedImporting("lib/zipWithNext.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("lib/zipWithNext.tsx");
 
 export default function zipWithNext(arg0, arg1) {
   let length;

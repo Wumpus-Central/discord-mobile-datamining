@@ -1,8 +1,11 @@
 // discord_app/modules/user_settings/defs/native/DeviceInfoSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { DCDDeviceManager } from "../../../../utils/native/DeviceUtils.tsx";
-import { getClientInfo } from "CopyClientInfoSetting.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import getClientInfo from "getClientInfo" /* 14865 */;
+import MobilePhoneSettingsIcon from "MobilePhoneSettingsIcon" /* 14867 */;
+import createToggle from "createToggle" /* 10669 */;
 
 let obj = {
   useTitle() {
@@ -10,7 +13,7 @@ let obj = {
     return intl.string(getSystemLocale.t["+ynK0W"]);
   },
   parent: null,
-  IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
+  IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
     const obj = getClientInfo;
     const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
@@ -18,7 +21,7 @@ let obj = {
     const obj3 = getClientInfo;
     return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
   },
-  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
+  usePredicate: explicitContentFromProto.DeveloperMode.useSetting
 };
 const createStaticResult = createToggle.createStatic({
   useTitle() {
@@ -26,7 +29,7 @@ const createStaticResult = createToggle.createStatic({
     return intl.string(getSystemLocale.t["+ynK0W"]);
   },
   parent: null,
-  IconComponent: require("MobilePhoneSettingsIcon").MobilePhoneSettingsIcon,
+  IconComponent: MobilePhoneSettingsIcon.MobilePhoneSettingsIcon,
   useTrailing: function useDeviceInfo() {
     const obj = getClientInfo;
     const clientInfoString = obj.getClientInfoString(DCDDeviceManager.getDeviceInfo());
@@ -34,8 +37,8 @@ const createStaticResult = createToggle.createStatic({
     const obj3 = getClientInfo;
     return "" + clientInfoString + " (" + obj3.getClientInfoString(DCDDeviceManager.getSystemVersion()) + ")";
   },
-  usePredicate: require("explicitContentFromProto").DeveloperMode.useSetting
+  usePredicate: explicitContentFromProto.DeveloperMode.useSetting
 });
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DeviceInfoSetting.tsx");
 
 export default createStaticResult;

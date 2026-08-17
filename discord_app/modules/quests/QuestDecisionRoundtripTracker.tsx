@@ -1,16 +1,16 @@
 // discord_app/modules/quests/QuestDecisionRoundtripTracker.tsx
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import initializeState from "initializeState";
-import { AnalyticEvents } from "ME";
-import set from "ME";
-import { AdCreativeType } from "../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { result } from "../ads/utils/AdDecisionUtils.tsx";
-import { isForegrounded } from "../analytics_sessions/SessionForegroundUtils.native.tsx";
-import { getDeviceMetadata } from "../device/getDeviceMetadata.native.tsx";
-import { receiveNetworkInfoformation } from "../network/NetStats.android.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import receiveNetworkInfoformation from "receiveNetworkInfoformation" /* 5052 */;
+import isForegrounded from "isForegrounded" /* 5055 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7431 */;
+import result2 from "result" /* 7468 */;
+import AdCreativeType from "AdCreativeType" /* 7469 */;
+import closure_3 from "handleConnectionInfoChange" /* 4564 */;
+import closure_4 from "initializeState" /* 7453 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
   if (Math.random() <= 0.1) {
     let diff = null;
@@ -20,7 +20,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     let obj = receiveNetworkInfoformation;
     const signalStrength = obj.getSignalStrength();
     obj = {};
-    const merged = Object.assign(getDeviceMetadata());
+    const merged = Object.assign(getDeviceMetadataDefault());
     ({ endpoint: obj3.endpoint, wasSuccessful: obj3.was_successful } = apiResponseTimestamp);
     obj.api_latency_ms = diff;
     obj.mobile_network_type = type.getType();
@@ -55,7 +55,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     }
     obj.previous_fetched_at = fetchedAt;
     obj.transition_case = transition_case;
-    const obj2 = expandEventProperties;
+    const obj2 = expandEventPropertiesDefault;
     const tmp2 = require;
     obj.is_foregrounded = isForegrounded.isForegrounded();
     obj2.track(AnalyticEvents.QUEST_DECISION_ROUNDTRIP, obj);
@@ -94,7 +94,7 @@ prototype["recordQuestRequestAttempt"] = function recordQuestRequestAttempt(endp
     const pendingRequests = self.pendingRequests;
     const value = pendingRequests.get(closure_0);
     if (null != value) {
-      outer1_6(value, "timeout", null);
+      closure_1_6(value, "timeout", null);
       const pendingRequests2 = self.pendingRequests;
       pendingRequests2.delete(closure_0);
     }
@@ -173,8 +173,8 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
       if (previousAdDecision != tmp5) {
         creative = previousAdDecision.creative;
       }
-      const deliveredAdCreativeId = result.getDeliveredAdCreativeId(creative);
-      const obj3 = result;
+      const deliveredAdCreativeId = result2.getDeliveredAdCreativeId(creative);
+      const obj3 = result2;
       const tmp14 = require;
       let creative1;
       if (tmp7 != tmp5) {
@@ -187,7 +187,7 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         const _HermesInternal2 = HermesInternal;
         combined = "different_" + str2;
       }
-      tmp14Result = result;
+      tmp14Result = result2;
     }
     const _HermesInternal = HermesInternal;
     obj = {};

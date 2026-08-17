@@ -1,6 +1,8 @@
 // discord_app/modules/notification_center/getTimestampString.tsx
-import { t } from "../../../_runtime/03975_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+
 function getDurationString(seconds) {
   seconds = seconds.seconds;
   const formatter = seconds.getFormatter();
@@ -21,7 +23,7 @@ function getDurationString(seconds) {
     formatToPlainStringResult = intl4.formatToPlainString(formatter.hours, obj);
   } else if (seconds < c3) {
     const intl3 = getSystemLocale.intl;
-    const obj1 = { days: null };
+    obj1 = { days: null };
     const _Math3 = Math;
     obj1[0] = Math.floor(seconds / 86400);
     formatToPlainStringResult = intl3.formatToPlainString(formatter.days, obj1);
@@ -42,15 +44,11 @@ function getDurationString(seconds) {
 }
 let c3 = 2592000;
 let c4 = 31104000;
-const result = require("set").fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
+const result = set.fileFinishedImporting("modules/notification_center/getTimestampString.tsx");
 
 export default function getTimestampString(arg0) {
-  let getFormatter;
-  let since;
-  const obj = { seconds: null, getFormatter: null };
+  const obj = { seconds: tDefault().diff(tDefault(since), "s"), getFormatter };
   ({ since, getFormatter } = arg0);
-  obj[0] = t().diff(t(since), "s");
-  obj[1] = getFormatter;
   return getDurationString(obj);
 };
 export const getAbbreviatedFormatter = function getAbbreviatedFormatter() {

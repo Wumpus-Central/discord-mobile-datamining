@@ -1,19 +1,15 @@
 // discord_app/design/components/Modal/native/ModalFloatingAction.native.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ floating: { position: "absolute", bottom: 0, width: "100%", paddingHorizontal: 16 }, spacer: { height: 96 } });
 let closure_9 = { code: "function ModalFloatingActionNativeTsx1(){const{interpolate,sharedValue,floatingBackgroundColor,useReducedMotion}=this.__closure;return{opacity:interpolate(sharedValue.get(),[0,1],[0,1]),borderBottomColor:floatingBackgroundColor,borderBottomWidth:16,transform:[{translateY:interpolate(sharedValue.get(),[useReducedMotion?0.999999:0,1],[32,0])}]};}" };
-let result = require("jsxProd").fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Modal/native/ModalFloatingAction.native.tsx");
 
 export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   isVisible = isVisible.isVisible;
@@ -39,9 +35,7 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
   }, items);
   const tmp7 = floatingBackgroundColor(sharedValue[6])();
   const fn = function y() {
-    let obj = { opacity: null, borderBottomColor: null, borderBottomWidth: 16, transform: null };
-    obj[0] = isVisible(sharedValue[4]).interpolate(sharedValue.get(), [0, 1], [0, 1]);
-    obj[1] = floatingBackgroundColor;
+    let obj = { opacity: isVisible(sharedValue[4]).interpolate(sharedValue.get(), [0, 1], [0, 1]), borderBottomColor: floatingBackgroundColor, borderBottomWidth: 16, transform: null };
     const obj2 = isVisible(sharedValue[4]);
     let num = 0;
     const value = sharedValue.get();
@@ -66,7 +60,7 @@ export const ModalFloatingAction = function ModalFloatingAction(isVisible) {
     str = "auto";
   }
   obj[1] = str;
-  const obj1 = { colors: null, locations: null, style: null };
+  obj1 = { colors: null, locations: null, style: null };
   const tmp10 = closure_7;
   const tmp3Result = isVisible(sharedValue[4]);
   const tmp6Result = floatingBackgroundColor(sharedValue[9]);

@@ -1,21 +1,21 @@
 // discord_app/modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import { maybeFetchCollectiblesForInvoices } from "FamilyCenterActionCreators.tsx";
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
+import closure_2 from "freshTeenActivityWithMap" /* 5296 */;
 
 const result = require("set").fileFinishedImporting("modules/parent_tools/FamilyCenterAgeGroupPrefetch.tsx");
 
 export const prefetchFamilyCenterAgeGroupWhen = function prefetchFamilyCenterAgeGroupWhen(isFamilyCenterV3Enabled) {
   let tmp = isFamilyCenterV3Enabled;
   if (isFamilyCenterV3Enabled) {
-    tmp = null == freshTeenActivityWithMap.getAgeGroup();
+    tmp = null == closure_2.getAgeGroup();
   }
   if (tmp) {
-    if (!freshTeenActivityWithMap.isLoading()) {
+    if (!closure_2.isLoading()) {
       if (obj.canRefetch()) {
-        maybeFetchCollectiblesForInvoices.initialPageLoad();
-        const obj2 = maybeFetchCollectiblesForInvoices;
+        maybeFetchCollectiblesForInvoicesDefault.initialPageLoad();
+        const obj2 = maybeFetchCollectiblesForInvoicesDefault;
       }
     }
-    obj = freshTeenActivityWithMap;
+    obj = closure_2;
   }
 };

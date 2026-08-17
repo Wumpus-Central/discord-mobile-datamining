@@ -1,11 +1,13 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx
-import { MessageEmbedTypes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
+const MessageEmbedTypes = ME.MessageEmbedTypes;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/PostPreviewEmbeds.tsx");
 
 export const createPostPreviewEmbeds = function createPostPreviewEmbeds(message, roleStyle, useReducedMotion) {
-  let closure_0 = message;
-  let closure_1 = roleStyle;
+  closure_0 = message;
+  closure_1 = roleStyle;
   let flag = useReducedMotion;
   if (useReducedMotion === undefined) {
     flag = false;

@@ -1,23 +1,21 @@
 // discord_app/modules/themes/RootThemeContextProvider.native.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import handleThemeChange from "handleThemeChange";
-import { ThemeTypes } from "sum";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "handleThemeChange" /* 1302 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("handleThemeChange").fileFinishedImporting("modules/themes/RootThemeContextProvider.native.tsx");
+const result = require("set").fileFinishedImporting("modules/themes/RootThemeContextProvider.native.tsx");
 
 export const RootThemeContextProvider = function RootThemeContextProvider(children) {
-  let contrast;
-  let saturation;
   let enabled;
   let chatInputFloating;
   let chatInputLegacySendButton;
   let manaTypeConsolidationExperiment;
   let obj = enabled(chatInputLegacySendButton[5]);
-  let items = [maybeApplyNoTextColorForLightCustomTheme, handleThemeChange];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ saturation: maybeApplyNoTextColorForLightCustomTheme.saturation, contrast: maybeApplyNoTextColorForLightCustomTheme.contrast, theme: theme.theme }));
+  let items = [closure_4, closure_5];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ saturation: closure_4.saturation, contrast: closure_4.contrast, theme: theme.theme }));
   ({ saturation, contrast } = stateFromStoresObject);
   const tmp4 = chatInputFloating(chatInputLegacySendButton[6])();
   const mobileVisualRefreshConfig = enabled(chatInputLegacySendButton[7]).useMobileVisualRefreshConfig({ location: "RootThemeContextProvider" });

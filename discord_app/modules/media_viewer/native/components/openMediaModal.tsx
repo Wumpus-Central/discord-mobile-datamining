@@ -1,24 +1,17 @@
 // discord_app/modules/media_viewer/native/components/openMediaModal.tsx
-import _slicedToArray from "_slicedToArray";
-import zustandStore from "zustandStore";
-import setContent from "setContent";
-import { MEDIA_MODAL_KEY } from "ME";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "setContent" /* 4086 */;
+import { MEDIA_MODAL_KEY } from "ME" /* 676 */;
 
 const require = arg1;
 function _openMediaModal() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c2;
-      let c3;
-      let c4;
-      let c5;
-      let initialIndex;
-      let openAs;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -54,7 +47,7 @@ function _openMediaModal() {
               c4 = undefined;
               c5 = undefined;
               openAs = undefined;
-              let closure_7;
+              closure_7 = undefined;
               ({ originViewOrOriginLayout: c0, initialIndex } = callback);
               if (initialIndex === undefined) {
                 initialIndex = 0;
@@ -64,8 +57,8 @@ function _openMediaModal() {
                 openAs = "modal";
               }
               closure_7 = Object.assign(tmp27, Object.create(null));
-              let closure_8;
-              let dependencyMap;
+              closure_8 = undefined;
+              dependencyMap = undefined;
               let setMediaViewerSources;
               let MediaViewerAnalytics;
               let initVideoStateStore;
@@ -105,7 +98,7 @@ function _openMediaModal() {
             MediaViewerAnalytics = 5.MediaViewerAnalytics;
             initVideoStateStore = 4086.initVideoStateStore;
             !(function getMeasureInWindowFunction(c0) {
-              let closure_0 = c0;
+              closure_0 = c0;
               if (null != c0) {
                 if ("measureInWindow" in c0) {
                   const measureInWindow = c0.measureInWindow;
@@ -117,11 +110,11 @@ function _openMediaModal() {
                 let size = c0;
                 if (c0 == null) {
                   const obj = { x: 0, y: 0, width: null, height: null };
-                  obj[2] = c0(outer1_2[4]).getWindowDimensions().width;
-                  const obj2 = c0(outer1_2[4]);
-                  obj[3] = c0(outer1_2[4]).getWindowDimensions().height;
+                  obj[2] = c0(closure_1_2[4]).getWindowDimensions().width;
+                  const obj2 = c0(closure_1_2[4]);
+                  obj[3] = c0(closure_1_2[4]).getWindowDimensions().height;
                   size = obj;
-                  const obj3 = c0(outer1_2[4]);
+                  const obj3 = c0(closure_1_2[4]);
                 }
                 arg0(size.x, size.y, size.width, size.height, size.resizeMode);
               };
@@ -148,7 +141,7 @@ function _openMediaModal() {
               } else {
                 const obj6 = initialIndex(_undefined2[12]);
                 const tmp34 = _undefined(_undefined2[6])(_undefined2[13], _undefined2.paths);
-                const obj1 = {};
+                obj1 = {};
                 const merged1 = Object.assign(closure_7);
                 tmp24 = initialIndex;
                 obj1.initialIndex = initialIndex;
@@ -178,7 +171,7 @@ function _openMediaModal() {
     iter.next();
     return iter;
   });
-  const _openMediaModal = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -187,7 +180,7 @@ function _openMediaModal() {
   }
   return applyArgumentsResult;
 }
-const result = require("setContent").fileFinishedImporting("modules/media_viewer/native/components/openMediaModal.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/openMediaModal.tsx");
 
 export const openMediaModal = function openMediaModal(arg0) {
   const self = this;

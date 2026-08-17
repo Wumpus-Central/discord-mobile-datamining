@@ -1,28 +1,27 @@
 // discord_app/modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import ACTION_SHEET_HEIGHT_HALF from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { MAX_FAVORITE_CATEGORY_NAME_LENGTH as closure_5 } from "date" /* 1429 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function FavoritesGuildAddCategoryActionSheet() {
-  const tmp = createCacheKey();
+  const tmp = callback4();
   const tmp2 = callback(React.useState(""), 2);
   const first = tmp2[0];
   let obj = first(1913);
   const result = obj.isFavoritesGuildCategoryNameValid(first);
-  const importDefault = result;
+  importDefault = result;
   const items = [result, first];
   callback = React.useCallback(() => {
     if (closure_1) {
-      first(outer1_2[7]).addFavoriteCategory(first);
-      const obj = first(outer1_2[7]);
-      result(outer1_2[8]).hideActionSheet(outer1_8);
-      const obj2 = result(outer1_2[8]);
+      first(closure_1_2[7]).addFavoriteCategory(first);
+      const obj = first(closure_1_2[7]);
+      result(closure_1_2[8]).hideActionSheet(closure_1_8);
+      const obj2 = result(closure_1_2[8]);
     }
   }, items);
   obj = { contentStyles: tmp.content, bodyStyles: tmp.body, keyboardShouldPersistTaps: "always", header: null, children: null };
@@ -30,7 +29,7 @@ function FavoritesGuildAddCategoryActionSheet() {
   const intl = first(1236).intl;
   obj[0] = intl.string(first(1236).t["ISN+NM"]);
   obj[3] = callback2(first(6949).BottomSheetTitleHeader, obj);
-  const obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
+  obj1 = { label: null, placeholder: null, value: null, onChange: null, maxLength: null, autoFocus: true, isClearable: true, returnKeyType: "done", onSubmitEditing: null };
   const intl2 = first(1236).intl;
   obj1[0] = intl2.string(first(1236).t.OCAkGP);
   const intl3 = first(1236).intl;
@@ -52,12 +51,12 @@ function FavoritesGuildAddCategoryActionSheet() {
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 FavoritesGuildAddCategoryActionSheet = "FavoritesGuildAddCategoryActionSheet";
 createCacheKey = { content: null, body: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { gap: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { gap: require("Themes").space.PX_16 };
-let result = require("date").fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
+createCacheKey[1] = { gap: ThemesDefault.space.PX_16 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { gap: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildAddCategoryActionSheet.tsx");
 
 export const openFavoritesGuildAddCategoryActionSheet = function openFavoritesGuildAddCategoryActionSheet() {
   let obj = ACTION_SHEET_HEIGHT_HALF;

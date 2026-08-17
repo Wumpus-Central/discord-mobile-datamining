@@ -1,24 +1,23 @@
 // discord_app/modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { NativePermissionStatus } from "NativePermissionStatus";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/10293_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/10294_registerAsset.js";
-import { CameraIcon } from "../../../../design/components/Icon/native/redesign/generated/CameraIcon.tsx";
-import { SettingsIcon } from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import SettingsIcon from "SettingsIcon" /* 7355 */;
+import CameraIcon from "CameraIcon" /* 10287 */;
+import registerAssetDefault from "registerAsset" /* 10293 */;
+import registerAssetDefault2 from "registerAsset" /* 10294 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { NativePermissionStatus } from "NativePermissionStatus" /* 4839 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 class MediaKeyboardEmptyState {
   constructor(arg0) {
     ({ actionIcon, actionLabel, actionPress, imageSource, label } = global);
-    tmp = jsxs();
+    tmp = closure_8();
     obj = { style: tmp.container, children: null };
     items = [, , ];
     items[0] = jsx(Image, { source: imageSource });
@@ -29,20 +28,19 @@ class MediaKeyboardEmptyState {
     return jsxs(View, obj);
   }
 }
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, label: null };
-createCacheKey = { marginHorizontal: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_32, justifyContent: "center", alignItems: "center" };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { textAlign: "center", marginVertical: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { textAlign: "center", marginVertical: require("Themes").space.PX_16 };
-const result = require("NativePermissionStatus").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx");
+createCacheKey[1] = { textAlign: "center", marginVertical: ThemesDefault.space.PX_16 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { textAlign: "center", marginVertical: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/media_keyboard/native/components/MediaKeyboardEmptyState.tsx");
 
 export default MediaKeyboardEmptyState;
 export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComponentOrNull(photosEmpty) {
-  let photoPermissionStatus;
-  let showCameraButton;
   ({ photoPermissionStatus, showCameraButton } = photosEmpty);
   if (showCameraButton === undefined) {
     showCameraButton = true;
@@ -56,7 +54,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl3 = getSystemLocale.intl;
           obj[1] = intl3.string(getSystemLocale.t.JuXTi6);
           obj[2] = tmp2;
-          obj[3] = registerAsset;
+          obj[3] = registerAssetDefault;
           const intl4 = getSystemLocale.intl;
           obj[4] = intl4.string(getSystemLocale.t["5g7NcN"]);
           return callback(MediaKeyboardEmptyState, obj);
@@ -66,7 +64,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl = getSystemLocale.intl;
           obj[1] = intl.string(getSystemLocale.t.tpoWUd);
           obj[2] = tmp;
-          obj[3] = registerAsset;
+          obj[3] = registerAssetDefault2;
           const intl2 = getSystemLocale.intl;
           obj[4] = intl2.string(getSystemLocale.t.YOvRBZ);
           return callback(MediaKeyboardEmptyState, obj);
@@ -78,7 +76,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
   const intl5 = getSystemLocale.intl;
   obj[1] = intl5.string(getSystemLocale.t["457oeG"]);
   obj[2] = photosEmpty.onPressPrivacySettings;
-  obj[3] = registerAsset;
+  obj[3] = registerAssetDefault;
   const intl6 = getSystemLocale.intl;
   obj[4] = intl6.string(getSystemLocale.t["8p9jGu"]);
   return callback(MediaKeyboardEmptyState, obj);

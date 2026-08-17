@@ -1,28 +1,23 @@
 // discord_app/modules/quests/native/QuestProgressBottomSheet.tsx
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import useEmbeddedActivityBackground from "useEmbeddedActivityBackground";
-import get_ActivityIndicator from "useGetOrFetchApplications";
-import map from "map";
-import initializeState from "initializeState";
-import { QuestsExperimentLocations } from "QuestsExperimentLocations";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import jsxProd from "_getQuestsInstructionsToWinReward";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/09416_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import IconButton from "IconButton" /* 8035 */;
+import registerAssetDefault from "registerAsset" /* 9416 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "map" /* 8708 */;
+import closure_8 from "initializeState" /* 7453 */;
+import { QuestsExperimentLocations } from "QuestsExperimentLocations" /* 6716 */;
+import { ActivityPanelModes } from "ActivityPanelModes" /* 8703 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_12;
-let closure_6;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function contextMenuButton(arg0) {
   const obj = {};
   const merged = Object.assign(arg0);
-  obj.icon = registerAsset;
+  obj.icon = registerAssetDefault;
   obj.variant = "secondary-overlay";
   const intl = getSystemLocale.intl;
   obj.accessibilityLabel = intl.string(getSystemLocale.t["UKOtz+"]);
@@ -30,14 +25,12 @@ function contextMenuButton(arg0) {
   return callback2(IconButton.IconButton, obj);
 }
 function QuestProgressBottomSheet(quest) {
-  let claim;
-  let isClaiming;
   quest = quest.quest;
   claim = undefined;
   let obj = quest(8944);
   const isScreenLandscape = obj.useIsScreenLandscape();
   const tmp4 = callback3(isScreenLandscape);
-  let obj1 = quest(7145);
+  obj1 = quest(7145);
   let obj2 = quest(7476);
   const getOrFetchApplication = obj1.useGetOrFetchApplication(obj2.getActivityApplicationId(quest));
   let id;
@@ -103,13 +96,13 @@ function QuestProgressBottomSheet(quest) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
+            closure_1 = tmp5;
             let mainFrame = tmp2;
             mainFrame = undefined;
             table = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_1();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_1();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -122,10 +115,10 @@ function QuestProgressBottomSheet(quest) {
           return obj2;
         } else {
           if (arg1) {
-            mainFrame = outer1_7.getMainFrame();
+            mainFrame = closure_1_7.getMainFrame();
             if (null != mainFrame) {
-              obj = outer1_1(table[23]);
-              obj.updateFramePanelMode(outer1_0.id, outer1_10.PIP);
+              obj = closure_1_1(table[23]);
+              obj.updateFramePanelMode(closure_1_0.id, closure_1_10.PIP);
             }
           }
           c3 = 3;
@@ -138,23 +131,23 @@ function QuestProgressBottomSheet(quest) {
     }
   }), items);
   let callback1 = React.useCallback(() => {
-    let obj = claim(outer1_2[24]);
+    let obj = claim(closure_1_2[24]);
     obj.hideActionSheet();
-    const mainFrame = outer1_7.getMainFrame();
+    const mainFrame = closure_1_7.getMainFrame();
     if (null != mainFrame) {
-      claim(tmp2[23]).updateFramePanelMode(mainFrame.id, outer1_10.PIP);
+      claim(tmp2[23]).updateFramePanelMode(mainFrame.id, closure_1_10.PIP);
       const tmpResult = claim(tmp2[23]);
     }
     obj = { scrollToQuestId: quest.id, fromContent: quest(tmp2[12]).QuestContent.QUEST_BOTTOM_SHEET };
-    quest(outer1_2[25]).openQuestHome(obj);
+    quest(closure_1_2[25]).openQuestHome(obj);
   }, items1);
   const items2 = [quest.id];
   const callback2 = React.useCallback(() => {
-    let obj = claim(outer1_2[24]);
+    let obj = claim(closure_1_2[24]);
     obj.hideActionSheet();
     obj = { message: null };
-    const obj2 = quest(outer1_2[26]);
-    obj[0] = quest(outer1_2[27]).getQuestUrl(quest.id);
+    const obj2 = quest(closure_1_2[26]);
+    obj[0] = quest(closure_1_2[27]).getQuestUrl(quest.id);
     obj2.showShareActionSheet(obj);
   }, items2);
   callback3 = React.useCallback(() => {
@@ -194,9 +187,7 @@ function QuestProgressBottomSheet(quest) {
   obj6[1] = callback2(tmp6Result, obj7);
   items3[2] = callback2(closure_5, obj6);
   const obj8 = { style: tmp4.contextMenuContainer, children: null };
-  const obj9 = { icon: null, onPress: null, variant: "secondary-overlay", size: "sm", accessibilityLabel: null };
-  obj9[0] = claim(12048);
-  obj9[1] = callback2;
+  const obj9 = { icon: claim(12048), onPress: callback2, variant: "secondary-overlay", size: "sm", accessibilityLabel: null };
   const intl2 = tmp(1236).intl;
   obj9[4] = intl2.string(quest(1236).t.RDE0Sc);
   const items5 = [callback2(quest(8035).IconButton, obj9), ];
@@ -210,9 +201,7 @@ function QuestProgressBottomSheet(quest) {
   obj2[1] = items3;
   const items6 = [closure_12(closure_5, obj2), ];
   const obj11 = { style: tmp4.contentContainer, children: null };
-  const obj12 = { direction: "vertical", spacing: null, style: null, children: null };
-  obj12[1] = claim(712).space.PX_8;
-  obj12[2] = tmp4.textContainer;
+  const obj12 = { direction: "vertical", spacing: claim(712).space.PX_8, style: tmp4.textContainer, children: null };
   let str = "heading-lg/bold";
   if (isScreenLandscape) {
     str = "heading-md/bold";
@@ -228,9 +217,7 @@ function QuestProgressBottomSheet(quest) {
   items7[1] = callback2(quest(4734).Text, obj13);
   obj12[3] = items7;
   const items8 = [closure_12(quest(4733).Stack, obj12), ];
-  const obj14 = { direction: "vertical", spacing: null, style: null, children: null };
-  obj14[1] = claim(712).space.PX_12;
-  obj14[2] = tmp4.buttonsContainer;
+  const obj14 = { direction: "vertical", spacing: claim(712).space.PX_12, style: tmp4.buttonsContainer, children: null };
   const intl3 = tmp(1236).intl;
   const t = tmp(1236).t;
   const obj15 = { size: "lg", text: intl3.string(tmp14 ? t.cfY4PE : t.LLLLPD), onPress: null, loading: null, grow: true, disabled: null, onPressDisabled: null };
@@ -272,7 +259,7 @@ function QuestProgressBottomSheet(quest) {
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles((arg0) => {
   let obj = { contentContainer: null, heroContainer: null, heroImg: null, heroGradient: null, gameTileContainer: null, contextMenuContainer: null, textContainer: null, questDescription: null, buttonsContainer: null };
-  obj = { display: "flex", paddingHorizontal: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 };
+  obj = { display: "flex", paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   let num = 140;
   if (arg0) {
@@ -285,28 +272,28 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   }
   obj[2] = num2;
   obj[1] = obj;
-  const obj1 = { resizeMode: "cover" };
+  obj1 = { resizeMode: "cover" };
   const merged = Object.assign(closure_6.absoluteFillObject);
-  obj1.borderTopLeftRadius = Themes.radii.lg;
-  obj1.borderTopRightRadius = Themes.radii.lg;
+  obj1.borderTopLeftRadius = ThemesDefault.radii.lg;
+  obj1.borderTopRightRadius = ThemesDefault.radii.lg;
   obj[2] = obj1;
   const obj2 = {};
   const merged1 = Object.assign(closure_6.absoluteFillObject);
-  obj2.borderTopLeftRadius = Themes.radii.lg;
-  obj2.borderTopRightRadius = Themes.radii.lg;
+  obj2.borderTopLeftRadius = ThemesDefault.radii.lg;
+  obj2.borderTopRightRadius = ThemesDefault.radii.lg;
   obj[3] = obj2;
   let num4 = -52;
   if (arg0) {
     num4 = tmp(712).space.PX_12;
   }
   obj[4] = { position: "absolute", bottom: num4, left: 0, right: 0, alignItems: "center" };
-  obj[5] = { position: "absolute", top: Themes.space.PX_16, right: Themes.space.PX_16, display: "flex", flexDirection: "row", gap: Themes.space.PX_16, alignItems: "center" };
+  obj[5] = { position: "absolute", top: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_16, alignItems: "center" };
   let PX_16;
   if (!arg0) {
     PX_16 = tmp(712).space.PX_16;
   }
-  const obj3 = { position: "absolute", top: Themes.space.PX_16, right: Themes.space.PX_16, display: "flex", flexDirection: "row", gap: Themes.space.PX_16, alignItems: "center" };
-  obj[6] = { alignItems: "center", paddingTop: PX_16, gap: Themes.space.PX_8, marginBottom: Themes.space.PX_16, textAlign: "center" };
+  const obj3 = { position: "absolute", top: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_16, alignItems: "center" };
+  obj[6] = { alignItems: "center", paddingTop: PX_16, gap: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_16, textAlign: "center" };
   obj[7] = { textAlign: "center" };
   let PX_161;
   if (!arg0) {
@@ -315,15 +302,15 @@ let closure_13 = createCacheKey.createStyles((arg0) => {
   obj[8] = { paddingTop: PX_161 };
   return obj;
 });
-let closure_14 = createCacheKey.createStyleProperties(() => ({ gradientEnd: Themes.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT }));
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/QuestProgressBottomSheet.tsx");
+let closure_14 = createCacheKey.createStyleProperties(() => ({ gradientEnd: ThemesDefault.colors.MOBILE_ACTIONSHEET_GRADIENT_BACKGROUND_DEFAULT }));
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestProgressBottomSheet.tsx");
 
 export default function QuestProgressBottomSheetConnected(questId) {
   questId = questId.questId;
   let stateFromStores;
   let obj = questId(589);
-  const items = [initializeState];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_8.getQuest(questId));
+  const items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getQuest(questId));
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = { overrideVisibility: true, questOrQuests: null, questContent: null, sourceQuestContent: null, children: null };
@@ -331,7 +318,7 @@ export default function QuestProgressBottomSheetConnected(questId) {
     obj[2] = tmp(6719).QuestContent.RUNNING_ACTIVITY;
     obj[3] = tmp(6719).QuestContent.RUNNING_ACTIVITY;
     obj[4] = function children() {
-      return outer1_11(outer1_16, { quest: stateFromStores });
+      return closure_1_11(closure_1_16, { quest: stateFromStores });
     };
     tmp4 = callback2(tmp(10957).QuestContentImpressionTrackerNative, obj);
   }

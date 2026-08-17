@@ -1,17 +1,17 @@
 // discord_app/stores/FrecencyStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import closure_6 from "handleConnectionOpen";
-import { ID_REGEX } from "ME";
-import { UserSettingsTypes } from "MAX_FAVORITES";
-import { PersistedStore } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "handleConnectionOpen" /* 4197 */;
+import { ID_REGEX } from "ME" /* 676 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 function handleChannelSelect(arg0) {
-  let channelId;
-  let guildId;
   ({ guildId, channelId } = arg0);
   let flag = false;
   if (channelId !== c10) {
@@ -26,7 +26,7 @@ function handleChannelSelect(arg0) {
     }
     let flag2 = false;
     if (isMatch) {
-      tmp2.track(channelId);
+      closure_9.track(channelId);
       const pendingUsages = closure_13.pendingUsages;
       let obj = { key: null, timestamp: null };
       obj[0] = channelId;
@@ -49,7 +49,7 @@ function handleChannelSelect(arg0) {
       isMatch1 = ID_REGEX.test(guildId);
     }
     if (isMatch1) {
-      tmp2.track(guildId);
+      closure_9.track(guildId);
       const pendingUsages1 = closure_13.pendingUsages;
       obj = { key: null, timestamp: null };
       obj[0] = guildId;
@@ -71,8 +71,8 @@ function initFrecency() {
   if (null == guildAndChannels) {
     return false;
   } else {
-    obj = apply;
-    tmp2.overwriteHistory(obj.mapValues(guildAndChannels, (recentUses) => {
+    obj = applyDefault;
+    closure_9.overwriteHistory(obj.mapValues(guildAndChannels, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
@@ -124,16 +124,17 @@ let obj = {
   numFrequentlyItems: 100,
   maxSamples: 10
 };
-let c9 = new require("DEFAULT_FRECENCY")(obj);
+let closure_9 = new DEFAULT_FRECENCYDefault(obj);
 let c10 = null;
 let c11 = null;
 let closure_13 = { pendingUsages: [] };
+const PersistedStore = initializeDefault.PersistedStore;
 class FrecencyStore extends PersistedStore {
 }
 const prototype = FrecencyStore.prototype;
 prototype["initialize"] = function initialize(pendingUsages) {
   const self = this;
-  this.waitFor(ensureGuildLoaded, createGuildRecordFromRust, handleConnectionOpen, closure_6, handleConnectionClosedOrResumed);
+  this.waitFor(closure_3, closure_4, closure_5, closure_6, closure_2);
   if (null != pendingUsages) {
     pendingUsages = pendingUsages.pendingUsages;
     pendingUsages.pendingUsages = pendingUsages.filter((key) => {
@@ -143,9 +144,9 @@ prototype["initialize"] = function initialize(pendingUsages) {
       }
       return isMatch;
     });
-    let closure_13 = pendingUsages;
+    closure_13 = pendingUsages;
   }
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_2];
   self.syncWith(items, initFrecency);
 };
 prototype["getState"] = function getState() {
@@ -161,10 +162,10 @@ Object.defineProperty(prototype, "frecencyWithoutFetchingLatest", {
   set: undefined
 });
 prototype["getFrequentlyWithoutFetchingLatest"] = function getFrequentlyWithoutFetchingLatest() {
-  return tmp2.frequently;
+  return closure_9.frequently;
 };
 prototype["getScoreWithoutFetchingLatest"] = function getScoreWithoutFetchingLatest(id) {
-  let num = tmp2.getFrecency(id);
+  let num = closure_9.getFrecency(id);
   if (num == null) {
     num = 0;
   }
@@ -186,7 +187,7 @@ prototype["getBonusScore"] = function getBonusScore() {
   return 100;
 };
 prototype["getVersion"] = function getVersion() {
-  return tmp2.version;
+  return closure_9.version;
 };
 FrecencyStore.displayName = "FrecencyStore";
 FrecencyStore.persistKey = "FrecencyStore";
@@ -202,9 +203,9 @@ obj = {
     return flag;
   }
 };
-const frecencyStore = new FrecencyStore(require("dispatcher"), obj);
-let tmp2 = new require("DEFAULT_FRECENCY")(obj);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("stores/FrecencyStore.tsx");
+const frecencyStore = new FrecencyStore(dispatcherDefault, obj);
+let tmp2 = new DEFAULT_FRECENCYDefault(obj);
+const result = require("set").fileFinishedImporting("stores/FrecencyStore.tsx");
 
 export default frecencyStore;
 export const MAX_NUM_SELECTED_ITEMS = 100;

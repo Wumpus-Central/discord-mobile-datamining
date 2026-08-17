@@ -1,44 +1,35 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsPerkCard.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../../design/shared.tsx";
-import { useTheme } from "../../../../hooks/useTheme.tsx";
-import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
-import { GuildPowerupCardFooterActive } from "GuildPowerupsCardFooter.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import GuildPowerupCardFooterActive from "GuildPowerupCardFooterActive" /* 11693 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, card: null, contentContainer: null, imageContainer: null, gradient: null, headerContainer: null, badge: null };
-createCacheKey = { marginHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { padding: 0, overflow: "hidden" };
-createCacheKey[2] = { gap: require("Themes").space.PX_16, padding: require("Themes").space.PX_16 };
+createCacheKey[2] = { gap: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { width: "100%", height: 160 };
 createCacheKey[4] = { position: "absolute", left: 0, right: 0, top: 0, height: "100%" };
-let obj1 = { gap: require("Themes").space.PX_16, padding: require("Themes").space.PX_16 };
-createCacheKey[5] = { gap: require("Themes").space.PX_4 };
-const obj2 = { gap: require("Themes").space.PX_4 };
-createCacheKey[6] = { position: "absolute", top: require("Themes").space.PX_12, right: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { position: "absolute", top: require("Themes").space.PX_12, right: require("Themes").space.PX_12 };
-const result = require("jsxProd").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerkCard.tsx");
+let obj1 = { gap: ThemesDefault.space.PX_16, padding: ThemesDefault.space.PX_16 };
+createCacheKey[5] = { gap: ThemesDefault.space.PX_4 };
+const obj2 = { gap: ThemesDefault.space.PX_4 };
+createCacheKey[6] = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsPerkCard.tsx");
 
 export default function GuildPowerupsPerkCard(arg0) {
-  let badge;
-  let description;
-  let imageUrl;
-  let isImageAnimated;
-  let onPress;
-  let riveComponent;
-  let status;
-  let style;
-  let title;
   ({ imageUrl, isImageAnimated } = arg0);
   ({ title, description } = arg0);
   if (isImageAnimated === undefined) {
@@ -47,12 +38,12 @@ export default function GuildPowerupsPerkCard(arg0) {
   ({ riveComponent, status, badge } = arg0);
   ({ style, onPress } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
-  const tmp2 = createCacheKey();
+  const tmp2 = callback2();
   let obj = AccessibilityAnnouncer;
-  const tmp5 = useTheme();
-  let obj1 = apexExperiment;
+  const tmp5 = useThemeDefault();
+  obj1 = apexExperiment;
   const manaTypeConsolidationExperiment = obj1.useManaTypeConsolidationExperiment("GuildPowerupsPerkCard");
-  const isThemeDarkResult = obj.isThemeDark(useTheme());
+  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   obj = { containerStyle: items, style: tmp2.card, status, onPress, children: null };
   items = [tmp2.container, style];
   obj = { style: tmp2.imageContainer, children: null };
@@ -69,8 +60,8 @@ export default function GuildPowerupsPerkCard(arg0) {
     const tmp13 = callback;
   }
   const items1 = [riveComponent, ];
-  const tmp9 = obj.isThemeDark(useTheme()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
-  items1[1] = callback(LinearGradient, { colors: obj.isThemeDark(useTheme()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"], style: tmp2.gradient });
+  const tmp9 = obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"];
+  items1[1] = callback(LinearGradientDefault, { colors: obj.isThemeDark(useThemeDefault()) ? ["#0f101100", "#0f101166"] : ["#0f101100", "#0f10111a"], style: tmp2.gradient });
   obj[1] = items1;
   const items2 = [closure_5(View, obj), , , ];
   const obj3 = { style: tmp2.contentContainer, children: null };

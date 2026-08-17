@@ -1,17 +1,14 @@
 // discord_app/modules/launchpad/native/LaunchPadUnreadServers.tsx
-import importAllResult from "renderCategoryItem";
-import get_ActivityIndicator from "transitionToChannel";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelTypes } from "ME";
-import jsxProd from "useWindowDimensions";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "generateOldThreadCutoff" /* 4772 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let unpackModuleId;
 const require = arg1;
 function HistorySeparator() {
   const tmp = callback2();
@@ -26,14 +23,14 @@ let c3 = importAllResult;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let obj = { listWrapper: { marginTop: 8 }, list: { marginBottom: 4, flexShrink: 0 }, maskStrokeStyle: null, privateChannelWrapper: null, privateChannelIcon: null, badgeWrapper: null, guildWrapper: null, guildHistorySeparatorWrapper: null, guildHistorySeparator: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 obj[2] = obj;
 obj[3] = { position: "relative", paddingVertical: 2, justifyContent: "center", alignItems: "center" };
 obj[4] = { width: 48, height: 48, borderRadius: 24, overflow: "hidden" };
 obj[5] = { position: "absolute", top: "50%", left: "50%", marginLeft: 6, marginTop: 6 };
 obj[6] = { paddingVertical: 2, justifyContent: "center", alignItems: "center" };
 obj[7] = { flex: 1, justifyContent: "center", alignItems: "center" };
-createCacheKey = { width: 2, height: 32, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG };
+createCacheKey = { width: 2, height: 32, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG };
 obj[8] = createCacheKey;
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
@@ -47,7 +44,7 @@ let closure_13 = importAllResult.memo(function GuildItemInner(guildId) {
   }, items);
   let obj = { style: tmp.guildWrapper, children: null };
   const callback1 = importAllResult.useCallback(() => {
-    guildId(outer1_2[9]).transitionToGuild(guildId);
+    guildId(closure_1_2[9]).transitionToGuild(guildId);
   }, items1);
   obj = { size: 48, borderRadius: 16, guildId, selected: guildId.selected, onPress: callback, onLongPress: callback1, backgroundColor: tmp.maskStrokeStyle.backgroundColor };
   obj[1] = callback(onGuildSelect(16189), obj);
@@ -59,10 +56,10 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
   let stateFromStores1;
   const tmp = callback2();
   let obj = channelId(stateFromStores1[11]);
-  let items = [ensureGuildLoaded];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_6.getChannel(channelId));
+  let items = [closure_6];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   let obj2 = channelId(stateFromStores1[11]);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_8];
   stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let isPrivateResult;
     if (stateFromStores != null) {
@@ -70,16 +67,16 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
     }
     let user;
     if (isPrivateResult) {
-      user = outer1_8.getUser(obj.getRecipientId());
+      user = closure_1_8.getUser(obj.getRecipientId());
     }
     return user;
   });
   let obj3 = channelId(stateFromStores1[11]);
-  const items2 = [generateOldThreadCutoff];
+  const items2 = [closure_7];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => {
     let num = 0;
     if (null != stateFromStores) {
-      num = outer1_7.getMentionCount(tmp.id);
+      num = closure_1_7.getMentionCount(tmp.id);
     }
     return num;
   });
@@ -104,7 +101,7 @@ let closure_14 = importAllResult.memo(function PrivateChannelItemInner(channelId
       const items4 = [tmp8, ];
       let tmp21 = stateFromStores2 > 0;
       if (tmp21) {
-        const obj1 = { style: null, children: null };
+        obj1 = { style: null, children: null };
         obj1[0] = tmp.badgeWrapper;
         obj2 = { value: null, unread: true, backgroundColor: null };
         obj2[0] = stateFromStores2;
@@ -147,7 +144,7 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
   let unreadGuilds = selectedGuildId.unreadGuilds;
   let guildHistory = selectedGuildId.guildHistory;
   const visible = selectedGuildId.visible;
-  let ensureGuildLoaded;
+  closure_6 = undefined;
   let callback;
   let ref;
   let list = callback2();
@@ -155,7 +152,7 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
   let tmp = prop;
   let obj = selectedGuildId(prop[19]);
   const categoryStyles = obj.useCategoryStyles();
-  ensureGuildLoaded = unreadGuilds.useRef(-1);
+  closure_6 = unreadGuilds.useRef(-1);
   const items = [setSelectedGuild, selectedGuildId];
   callback = unreadGuilds.useCallback((arg0) => {
     if (ref.current < 0) {
@@ -195,7 +192,7 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
       if (tmp14) {
         let obj = { channelId: null };
         obj[0] = tmp12;
-        tmp14 = outer1_10(outer1_14, obj);
+        tmp14 = closure_1_10(closure_1_14, obj);
       }
       return tmp14;
     } else if (arg0 >= 1) {
@@ -210,7 +207,7 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
         obj[0] = tmp3;
         obj[1] = selectedGuildId === tmp3;
         obj[2] = callback;
-        tmp6 = outer1_10(outer1_13, obj);
+        tmp6 = closure_1_10(closure_1_13, obj);
       }
       return tmp6;
     } else {
@@ -265,6 +262,6 @@ const memoResult = importAllResult.memo(function LaunchPadUnreadServers(selected
   obj[1] = t;
   tmp11(tmp12, obj);
 });
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/launchpad/native/LaunchPadUnreadServers.tsx");
+const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadUnreadServers.tsx");
 
 export default memoResult;

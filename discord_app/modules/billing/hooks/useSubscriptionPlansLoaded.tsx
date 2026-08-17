@@ -1,17 +1,12 @@
 // discord_app/modules/billing/hooks/useSubscriptionPlansLoaded.tsx
-import handlePaymentSourceUpdate from "handlePaymentSourceUpdate";
-import addSubscriptionPlan from "addSubscriptionPlan";
-import reset from "reset";
-import { ACTIVE_PREMIUM_SKUS } from "GuildFeatures";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "handlePaymentSourceUpdate" /* 4042 */;
+import closure_3 from "addSubscriptionPlan" /* 4044 */;
+import closure_4 from "reset" /* 4045 */;
+import { ACTIVE_PREMIUM_SKUS } from "GuildFeatures" /* 1924 */;
 
-let require = arg1;
+const require = arg1;
 function getSubscriptionPlansLoaded(items) {
-  let defaultPaymentSourceId;
-  let obj;
-  let obj2;
-  let paymentSourceIds;
-  let tmp9;
   let tmp = items;
   if (items === undefined) {
     items = [];
@@ -20,7 +15,7 @@ function getSubscriptionPlansLoaded(items) {
   }
   let tmp5 = arg1;
   if (arg1 === undefined) {
-    const items1 = [handlePaymentSourceUpdate, addSubscriptionPlan, reset];
+    const items1 = [closure_2, closure_3, closure_4];
     tmp5 = items1;
   }
   [tmp9, obj, obj2] = tmp5;
@@ -52,8 +47,8 @@ function getSubscriptionPlansLoaded(items) {
   }
   return obj.isLoadedForSKUs(tmp);
 }
-new require("GuildFeatures")("useSubscriptionPlansLoaded");
-const result = require("reset").fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
+new timestampDefault("useSubscriptionPlansLoaded");
+const result = require("set").fileFinishedImporting("modules/billing/hooks/useSubscriptionPlansLoaded.tsx");
 
 export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() {
   let tmp = arg0;
@@ -62,12 +57,12 @@ export const useSubscriptionPlansLoaded = function useSubscriptionPlansLoaded() 
     HermesBuiltin.arraySpread(ACTIVE_PREMIUM_SKUS, 0);
     tmp = items;
   }
-  const require = tmp;
-  const items1 = [handlePaymentSourceUpdate, addSubscriptionPlan, reset];
+  items = tmp;
+  const items1 = [closure_2, closure_3, closure_4];
   const items2 = [tmp];
-  return initialize.useStateFromStores(items1, () => {
-    const items = [outer1_2, outer1_3, outer1_4];
-    return outer1_6(closure_0, items);
+  return items(589).useStateFromStores(items1, () => {
+    items = [closure_1_2, closure_1_3, closure_1_4];
+    return closure_1_6(items, items);
   }, items2);
 };
 export { getSubscriptionPlansLoaded };

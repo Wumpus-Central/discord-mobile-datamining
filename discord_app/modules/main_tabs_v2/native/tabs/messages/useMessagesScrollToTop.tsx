@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
 const require = arg1;
-const result = require("coerceMainRoute").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/useMessagesScrollToTop.tsx");
 
 export default function useMessagesScrollToTop(listRef) {
   listRef = listRef.listRef;
@@ -12,7 +12,7 @@ export default function useMessagesScrollToTop(listRef) {
   const ref = React.useRef(React.useMemo(() => ({
     scrollToTopTimeout: -1,
     scrollToTop() {
-      if (null != obj.coerceGuildsRoute(outer1_1(outer1_2[3])())) {
+      if (null != obj.coerceGuildsRoute(closure_1_1(closure_1_2[3])())) {
         const self = this;
         if (-1 === this.scrollToTopTimeout) {
           const _setTimeout = setTimeout;
@@ -20,13 +20,13 @@ export default function useMessagesScrollToTop(listRef) {
             if (ref != null) {
               const current = ref.current;
               if (current != null) {
-                current.scrollToTop(!outer1_4.useReducedMotion);
+                current.scrollToTop(!closure_1_4.useReducedMotion);
               }
             }
             const current2 = ref2.current;
             if (current2 != null) {
               const obj = { offset: 0, animated: null };
-              obj[1] = !outer1_4.useReducedMotion;
+              obj[1] = !closure_1_4.useReducedMotion;
               current2.scrollToOffset(obj);
             }
           }, 300);

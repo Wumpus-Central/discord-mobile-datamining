@@ -1,5 +1,7 @@
 // discord_app/modules/gateway/createWebSocket.android.tsx
-const result = require("set").fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/gateway/createWebSocket.android.tsx");
 
 export default function createWebSocket(url) {
   obj = { headers: obj };

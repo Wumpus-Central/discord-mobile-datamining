@@ -1,14 +1,15 @@
 // discord_app/modules/directory_channels/GuildDirectoryConstants.tsx
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import fromStringAll from "fromString" /* 506 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
 ({ ChannelTypes: c3, Permissions: c4 } = ME);
 let obj = { CREATE: "CREATE", HUB_SCHOOL_CLUB: "HUB_SCHOOL_CLUB", HUB_STUDY: "HUB_STUDY", HUB_CLASS: "HUB_CLASS", HUB_SOCIAL: "HUB_SOCIAL", HUB_MAJOR: "HUB_MAJOR", HUB_DORM: "HUB_DORM" };
 obj = { ALL: -1, [-1]: "ALL", UNCATEGORIZED: 0, [0]: "UNCATEGORIZED", SCHOOL_CLUB: 1, [1]: "SCHOOL_CLUB", CLASS: 2, [2]: "CLASS", STUDY_SOCIAL: 3, [3]: "STUDY_SOCIAL", MISC: 5, [5]: "MISC" };
 let c7 = "883060064561299456";
-const result = require("applyOverwrites").fileFinishedImporting("modules/directory_channels/GuildDirectoryConstants.tsx");
+const result = set.fileFinishedImporting("modules/directory_channels/GuildDirectoryConstants.tsx");
 
 export const DirectoryEntryTypes = { GUILD: 0, [0]: "GUILD", GUILD_SCHEDULED_EVENT: 1, [1]: "GUILD_SCHEDULED_EVENT" };
 export const CreateOrAddGuildSlideTypes = { GUILD_TEMPLATES: "guild-templates", CUSTOMIZE_NEW_GUILD: "customize-new-guild", CHOOSE_GUILD: "choose-guild", CUSTOMIZE_EXISTING_GUILD: "customize-existing-guild", CONFIRMATION: "confirmation" };
@@ -17,7 +18,7 @@ export const DirectoryEntryCategories = obj;
 export const HQ_CHANNEL_ID = "883060064561299456";
 export const getHubCategories = function getHubCategories(arg0) {
   if (arg0 === c7) {
-    let obj = { id: "club", value: null, label: null };
+    obj = { id: "club", value: null, label: null };
     obj[1] = obj.SCHOOL_CLUB;
     const intl = getSystemLocale.intl;
     obj[2] = intl.string(getSystemLocale.t["Z+MPN/"]);
@@ -32,7 +33,7 @@ export const getHubCategories = function getHubCategories(arg0) {
     const intl3 = getSystemLocale.intl;
     obj[2] = intl3.string(getSystemLocale.t.xoHQcn);
     items[2] = obj;
-    const obj1 = { id: "misc", value: null, label: null };
+    obj1 = { id: "misc", value: null, label: null };
     obj1[1] = obj.MISC;
     const intl4 = getSystemLocale.intl;
     obj1[2] = intl4.string(getSystemLocale.t.Ao41ri);
@@ -63,7 +64,7 @@ export const getHubCategories = function getHubCategories(arg0) {
   return items1;
 };
 export const getHubGuildTemplatesMap = function getHubGuildTemplatesMap() {
-  let obj = {};
+  obj = {};
   obj = { id: obj.CREATE, code: "2TffvPucqHkN", label: null, channels: null, system_channel_id: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["H3+6BK"]);
@@ -72,7 +73,7 @@ export const getHubGuildTemplatesMap = function getHubGuildTemplatesMap() {
   obj = { id: obj.HUB_SCHOOL_CLUB, code: "UMUbvRpRZhS6", label: null, channels: null, roles: null, system_channel_id: "12" };
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t.mmFA51);
-  const obj1 = { id: "00", parent_id: null, name: null, type: null };
+  obj1 = { id: "00", parent_id: null, name: null, type: null };
   const intl3 = getSystemLocale.intl;
   obj1[2] = intl3.string(getSystemLocale.t["VCAA/X"]);
   obj1[3] = constants.GUILD_CATEGORY;
@@ -133,10 +134,10 @@ export const getHubGuildTemplatesMap = function getHubGuildTemplatesMap() {
   obj12[3] = constants.GUILD_VOICE;
   items[11] = obj12;
   obj[3] = items;
-  const items1 = [{ id: "00", name: "@everyone", permissions: importAll(4026).DEFAULT }, ];
+  const items1 = [{ id: "00", name: "@everyone", permissions: applyOverwritesAll.DEFAULT }, ];
   const obj14 = { id: "01", name: "officers (example)", mentionable: true, hoist: true, permissions: null, color: 3066993 };
-  let obj17 = importAll(506);
-  obj14[4] = obj17.combine(importAll(4026).DEFAULT, constants2.MANAGE_ROLES, constants2.MANAGE_CHANNELS, constants2.KICK_MEMBERS, constants2.BAN_MEMBERS, constants2.MANAGE_NICKNAMES, constants2.MANAGE_GUILD_EXPRESSIONS, constants2.MANAGE_MESSAGES, constants2.SEND_TTS_MESSAGES);
+  let obj17 = fromStringAll;
+  obj14[4] = obj17.combine(applyOverwritesAll.DEFAULT, constants2.MANAGE_ROLES, constants2.MANAGE_CHANNELS, constants2.KICK_MEMBERS, constants2.BAN_MEMBERS, constants2.MANAGE_NICKNAMES, constants2.MANAGE_GUILD_EXPRESSIONS, constants2.MANAGE_MESSAGES, constants2.SEND_TTS_MESSAGES);
   items1[1] = obj14;
   obj[4] = items1;
   obj[obj.HUB_SCHOOL_CLUB] = obj;

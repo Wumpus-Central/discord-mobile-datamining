@@ -1,9 +1,11 @@
 // discord_app/modules/oauth2/Utils.tsx
-import { MarketingURLs } from "ME";
-import { useIsSocialLayerParentApplication } from "../applications/useIsSocialLayerParentApplication.tsx";
-import { isAgeRestrictedContentClassification } from "../content_classification/utils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
+import useIsSocialLayerParentApplication from "useIsSocialLayerParentApplication" /* 9771 */;
 
-let result = require("getSystemLocale").fileFinishedImporting("modules/oauth2/Utils.tsx");
+const MarketingURLs = ME.MarketingURLs;
+let result = set.fileFinishedImporting("modules/oauth2/Utils.tsx");
 
 export const getApplicationDetailsText = function getApplicationDetailsText(application) {
   let obj = useIsSocialLayerParentApplication;
@@ -28,7 +30,7 @@ export const getApplicationDetailsText = function getApplicationDetailsText(appl
   } else if (null != application.terms_of_service_url) {
     const t2 = tmp(1236).t;
     const intl2 = tmp(1236).intl;
-    const obj1 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
+    obj1 = { application: null, termsOfServiceURL: null, discordPrivacyPolicyURL: null };
     ({ name: obj3[0], terms_of_service_url: obj3[1] } = application);
     obj1[2] = MarketingURLs.PRIVACY;
     return intl2.format(isSocialLayerParentApplication ? t2.nBLOp5 : t2["q0T/Q1"], obj1);

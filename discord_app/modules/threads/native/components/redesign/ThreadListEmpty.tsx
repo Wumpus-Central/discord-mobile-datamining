@@ -1,34 +1,31 @@
 // discord_app/modules/threads/native/components/redesign/ThreadListEmpty.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { registerAsset } from "../../../../../../_runtime/11399_registerAsset.js";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 11399 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: { flex: 1, justifyContent: "center", alignItems: "center" }, iconWrapper: null, title: null, subtext: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.round, padding: 12 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, padding: 12 };
 obj[1] = obj;
 obj[2] = { textAlign: "center", marginTop: 16, marginHorizontal: 16 };
 obj[3] = { textAlign: "center", marginTop: 4, marginHorizontal: 16, marginBottom: 16 };
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((onCreateThreadPress) => {
+const memoResult = importAllResult.memo((onCreateThreadPress) => {
   onCreateThreadPress = onCreateThreadPress.onCreateThreadPress;
   const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.iconWrapper, children: null };
-  obj = { source: null, size: null };
-  obj[0] = registerAsset;
-  obj[1] = Button.Icon.Sizes.MEDIUM;
+  obj = { source: registerAssetDefault, size: Button.Icon.Sizes.MEDIUM };
   obj[1] = callback(Button.Icon, obj);
   const items = [callback(View, obj), , , ];
-  const obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
+  obj1 = { style: tmp.title, accessibilityRole: "header", maxFontSizeMultiplier: 2, variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj1[5] = intl.string(getSystemLocale.t.HgTQ8p);
   items[1] = callback(Text.Text, obj1);
@@ -48,6 +45,6 @@ const memoResult = require("noop").memo((onCreateThreadPress) => {
   obj[1] = items;
   return closure_5(View, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListEmpty.tsx");
+const result = require("set").fileFinishedImporting("modules/threads/native/components/redesign/ThreadListEmpty.tsx");
 
 export default memoResult;

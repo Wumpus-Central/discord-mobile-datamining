@@ -1,71 +1,62 @@
 // discord_app/modules/guild_settings/GuildSettingsStore.tsx
-import { set } from "isValueEqual";
-import handleUpdateStart from "handleUpdateStart";
-import { createChannelRecordFromInvite as closure_15 } from "createChannelRecord";
-import { getGuildEveryoneRoleId } from "GuildNSFWContentLevel";
-import createFromServer from "createFromServer";
-import createdAt from "createdAt";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { DEFAULT_DISCOVERY_CATEGORY_ID } from "DEFAULT_DISCOVERY_CATEGORY_ID";
-import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY";
-import { Store } from "initialize";
-import set from "createChannelRecord";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { t } from "../../../_runtime/03975_t.js";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { _fetchGuildIntegrationsApplications } from "GuildSettingsFetchActionCreators.tsx";
-import { canUseMobileServerTagSettings } from "GuildSettingsServerTagUtils.tsx";
-import { fetchVanityUrl } from "server_monetization/boost_perks/GuildSettingsVanityURLActionCreators.tsx";
-import { getDefaultGuildSettingsSection } from "utils/getDefaultGuildSettingsSection.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import sendRequest from "sendRequest" /* 530 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import isValueEqual from "isValueEqual" /* 1431 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import tDefault from "t" /* 3975 */;
+import DEFAULT_DISCOVERY_CATEGORY_ID2 from "DEFAULT_DISCOVERY_CATEGORY_ID" /* 8876 */;
+import canUseMobileServerTagSettings from "canUseMobileServerTagSettings" /* 8877 */;
+import fetchVanityUrl from "fetchVanityUrl" /* 8879 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 8880 */;
+import _fetchGuildIntegrationsApplications from "_fetchGuildIntegrationsApplications" /* 8881 */;
+import closure_14 from "handleUpdateStart" /* 8854 */;
+import closure_17 from "createFromServer" /* 8044 */;
+import closure_18 from "createdAt" /* 1930 */;
+import closure_19 from "createGuildRecordFromRust" /* 1910 */;
+import closure_20 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import PUBLIC_SUCCESS_MODAL_SEEN_KEY from "PUBLIC_SUCCESS_MODAL_SEEN_KEY" /* 8254 */;
+import set from "set" /* 2 */;
 
-let closure_23;
-let closure_24;
-let closure_25;
-let closure_26;
-let closure_28;
-let closure_29;
 function handleFormInit(location) {
-  let guildId;
-  let section;
-  let subsection;
   ({ guildId, section, subsection } = location);
   let guild = store2.getGuild(guildId);
   if (null == guild) {
-    let c35 = false;
+    c35 = false;
     let OPEN = FormStates.CLOSED;
     guild = null;
     guild = null;
-    let c39 = false;
-    let closure_41 = false;
-    let closure_43 = null;
-    let c45 = null;
-    let c46 = 0;
-    let c53 = null;
-    let c56 = null;
-    let c57 = null;
-    let c3 = null;
-    let c4 = null;
-    let c5 = null;
+    c39 = false;
+    closure_41 = false;
+    closure_43 = null;
+    c45 = null;
+    c46 = 0;
+    c53 = null;
+    c56 = null;
+    c57 = null;
+    c3 = null;
+    c4 = null;
+    c5 = null;
     let mfaLevel = MFALevels.NONE;
-    let closure_44 = {};
+    closure_44 = {};
     let obj2;
   } else {
     const profile = store.getProfile(guildId);
     closure_41 = c40;
     closure_43 = c42;
     OPEN = FormStates.OPEN;
-    let closure_37 = {};
-    let c38 = null;
-    let closure_10 = DISCORD_EPOCH.castGuildIdAsEveryoneGuildRoleId(guildId);
+    closure_37 = {};
+    c38 = null;
+    closure_10 = DISCORD_EPOCHDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
     mfaLevel = guild.mfaLevel;
-    let closure_52 = obj;
-    let c12 = null;
+    closure_52 = obj;
+    c12 = null;
     closure_44 = {};
     location = location.location;
     if (section === constants.TAG) {
@@ -83,22 +74,22 @@ function handleFormInit(location) {
         ({ TAG: obj2[0], TAG: obj2[1] } = tmp16);
         items.push(obj);
       }
-      const obj1 = { key: null, name: null };
+      obj1 = { key: null, name: null };
       obj1[0] = section;
       obj1[1] = section;
       items.push(obj1);
       obj2 = { type: "stack", routes: null };
       obj2[1] = items;
     }
-    const obj5 = DISCORD_EPOCH;
+    const obj5 = DISCORD_EPOCHDefault;
   }
 }
 function _createInvite(code) {
-  const obj = { code: code.code, temporary: code.temporary, revoked: code.revoked, inviter: null, channel: null, guild: null, uses: null, maxUses: null, maxAge: null, createdAt: null, flags: null, roles: null };
+  obj = { code: code.code, temporary: code.temporary, revoked: code.revoked, inviter: null, channel: null, guild: null, uses: null, maxUses: null, maxAge: null, createdAt: null, flags: null, roles: null };
   let tmp2 = null;
-  let tmp = createFromServer;
+  let tmp = closure_17;
   if (null != code.inviter) {
-    tmp2 = new createdAt(code.inviter);
+    tmp2 = new closure_18(code.inviter);
   }
   obj[3] = tmp2;
   obj[4] = callback(code.channel);
@@ -110,7 +101,7 @@ function _createInvite(code) {
   obj[5] = fromInviteGuildResult;
   ({ uses: obj[6], max_uses: obj[7], max_age: obj[8] } = code);
   const created_at = code.created_at;
-  obj[9] = t(created_at);
+  obj[9] = tDefault(created_at);
   ({ flags: obj[10], roles: obj[11] } = code);
   tmp = new tmp(obj);
   return tmp;
@@ -127,7 +118,7 @@ function handleIntegrationsUpdate(type) {
     }
     if (tmp5) {
       const guildIntegrationsApplications = _fetchGuildIntegrationsApplications.fetchGuildIntegrationsApplications(user.id);
-      const obj = _fetchGuildIntegrationsApplications;
+      obj = _fetchGuildIntegrationsApplications;
     }
     tmp = tmp5;
   }
@@ -136,7 +127,7 @@ function handleIntegrationsUpdate(type) {
 function handleProfileUpdateStart(arg0) {
   if (null != user) {
     if (user.id === tmp) {
-      let c38 = null;
+      c38 = null;
     }
   }
   return false;
@@ -144,14 +135,18 @@ function handleProfileUpdateStart(arg0) {
 function handleProfileApiUpdateFailure(arg0) {
   if (null != user) {
     if (user.id === tmp) {
-      let c38 = tmp2;
+      c38 = tmp2;
     }
   }
   return false;
 }
+let set = isValueEqual.set;
+let closure_15 = createChannelRecord.createChannelRecordFromInvite;
+const getGuildEveryoneRoleId = GuildNSFWContentLevel.getGuildEveryoneRoleId;
 const FormStates = ME.FormStates;
 const MFALevels = ME.MFALevels;
 ({ GuildSettingsSections: closure_23, GuildSettingsSubsections: closure_24, Endpoints: closure_25, GuildFeatures: closure_26 } = ME);
+const DEFAULT_DISCOVERY_CATEGORY_ID = DEFAULT_DISCOVERY_CATEGORY_ID2.DEFAULT_DISCOVERY_CATEGORY_ID;
 ({ PUBLIC_SUCCESS_MODAL_SEEN_KEY: closure_28, CREATE_NEW_CHANNEL_VALUE: closure_29 } = PUBLIC_SUCCESS_MODAL_SEEN_KEY);
 let c30 = true;
 let closure_31 = ["name", "description", "icon", "splash", "banner", "homeHeader", "afkChannelId", "afkTimeout", "systemChannelId", "verificationLevel", "defaultMessageNotifications", "explicitContentFilter", "features", "systemChannelFlags", "preferredLocale", "rulesChannelId", "safetyAlertsChannelId", "ownerConfiguredContentLevel", "discoverySplash", "publicUpdatesChannelId", "premiumProgressBarEnabled", "officialMessageColor", "verificationRoleId"];
@@ -179,11 +174,12 @@ let c54 = 0;
 let c55 = null;
 let c56 = null;
 let c57 = null;
+const Store = initializeDefault.Store;
 class GuildSettingsStore extends Store {
 }
 const prototype = GuildSettingsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(createGuildRecordFromRust, handleUpdateStart, mergeGuildAvatar);
+  this.waitFor(closure_19, closure_14, closure_20);
 };
 prototype["getMetadata"] = function getMetadata() {
   return obj;
@@ -200,7 +196,7 @@ prototype["widgetHasChanges"] = function widgetHasChanges() {
   return tmp;
 };
 prototype["hasChanges"] = function hasChanges() {
-  const obj = apply;
+  obj = applyDefault;
   const isEqualResult = obj.isEqual(closure_7, closure_6);
   let widgetHasChangesResult = !isEqualResult;
   if (isEqualResult) {
@@ -237,7 +233,7 @@ prototype["getGuildId"] = function getGuildId() {
   return id;
 };
 prototype["showPublicSuccessModal"] = function showPublicSuccessModal() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   return !Storage.get(closure_28);
 };
 prototype["getGuild"] = function getGuild() {
@@ -289,36 +285,36 @@ GuildSettingsStore.displayName = "GuildSettingsStore";
 obj = {
   GUILD_SETTINGS_INIT: handleFormInit,
   GUILD_SETTINGS_OPEN: function handleFormOpen(arg0) {
-    let c35 = true;
+    c35 = true;
     handleFormInit(arg0);
   },
   GUILD_SETTINGS_CLOSE: function handleFormClose() {
-    let c35 = false;
-    const CLOSED = FormStates.CLOSED;
-    let c7 = null;
-    let c6 = null;
-    let c39 = false;
-    let c41 = false;
-    let c43 = null;
-    let c45 = null;
-    let c46 = 0;
-    let c53 = null;
-    let c56 = null;
-    let c57 = null;
-    let c3 = null;
-    let c4 = null;
-    let c5 = null;
-    const NONE = MFALevels.NONE;
-    let closure_44 = {};
-    let c11;
+    c35 = false;
+    CLOSED = FormStates.CLOSED;
+    c7 = null;
+    c6 = null;
+    c39 = false;
+    c41 = false;
+    c43 = null;
+    c45 = null;
+    c46 = 0;
+    c53 = null;
+    c56 = null;
+    c57 = null;
+    c3 = null;
+    c4 = null;
+    c5 = null;
+    NONE = MFALevels.NONE;
+    closure_44 = {};
+    c11 = undefined;
   },
   GUILD_SETTINGS_UPDATE: function handleUpdate(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     if (null == closure_7) {
       return false;
     } else {
       const item = closure_31.forEach((key10009) => {
-        let hasOwnPropertyResult = null != outer1_7;
+        let hasOwnPropertyResult = null != closure_7;
         if (hasOwnPropertyResult) {
           hasOwnPropertyResult = closure_0.hasOwnProperty(key10009);
         }
@@ -327,9 +323,9 @@ obj = {
           if (tmp6 == null) {
             tmp6 = null;
           }
-          outer1_7 = outer1_13(outer1_7, key10009, tmp6);
-          const tmp3 = outer1_13;
-          const tmp4 = outer1_7;
+          closure_7 = closure_1_13(closure_7, key10009, tmp6);
+          const tmp3 = closure_1_13;
+          const tmp4 = closure_7;
         }
       });
       const _Object = Object;
@@ -354,28 +350,27 @@ obj = {
         continue;
       }
       (function validateUpdate() {
-        let closure_0 = closure_7;
+        closure_0 = closure_7;
         if (null == closure_7) {
           return false;
-        } else if (!closure_31.some((arg0) => table[arg0] !== outer1_6[arg0])) {
+        } else if (!closure_31.some((arg0) => table[arg0] !== closure_1_6[arg0])) {
           closure_7 = closure_6;
         }
       })();
     }
   },
   GUILD_SETTINGS_PROFILE_UPDATE: function handleSettingsProfileUpdate(arg0) {
-    let closure_0 = arg0;
-    if (null != closure_9) {
+    closure_0 = arg0;
+    if (null != obj) {
       if (null != user) {
         if (user.id === tmp) {
           const item = closure_32.forEach((key10009) => {
-            if (null != outer1_9) {
+            if (null != obj) {
               if (closure_0.hasOwnProperty(key10009)) {
                 if (undefined !== tmp2[key10009]) {
-                  const obj = {};
-                  const merged = Object.assign(outer1_9);
+                  obj = {};
+                  const merged = Object.assign(obj);
                   obj[key10009] = tmp3;
-                  outer1_9 = obj;
                 }
               }
               tmp2 = closure_0;
@@ -387,8 +382,8 @@ obj = {
     return false;
   },
   GUILD_SETTINGS_CANCEL_CHANGES: function handleCancelChanges(guildId) {
-    let closure_37 = {};
-    let closure_44 = {};
+    closure_37 = {};
+    closure_44 = {};
     const guild = store2.getGuild(guildId.guildId);
   },
   GUILD_SETTINGS_SAVE_ROUTE_STACK: function handleSaveRouteStack(state) {
@@ -397,11 +392,11 @@ obj = {
   },
   GUILD_SETTINGS_SUBMIT: function handleFormSubmit() {
     const SUBMITTING = FormStates.SUBMITTING;
-    let closure_37 = {};
+    closure_37 = {};
   },
   GUILD_SETTINGS_SUBMIT_SUCCESS: function handleSubmitSuccess(guild) {
     const OPEN = FormStates.OPEN;
-    let closure_44 = {};
+    closure_44 = {};
     let tmp = null != guild.guild;
     if (tmp) {
       tmp = null != user;
@@ -412,24 +407,22 @@ obj = {
     if (tmp) {
       fromGuildResult = fromGuildPropertiesWithAdditionalFields.fromGuild(guild.guild, fromGuildResult);
       user = fromGuildResult;
-      const obj = fromGuildPropertiesWithAdditionalFields;
+      obj = fromGuildPropertiesWithAdditionalFields;
     }
   },
   GUILD_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(errors) {
     const OPEN = FormStates.OPEN;
     if (defaultGuildSettingsSection == null) {
       defaultGuildSettingsSection = getDefaultGuildSettingsSection.getDefaultGuildSettingsSection();
-      const obj = getDefaultGuildSettingsSection;
+      obj = getDefaultGuildSettingsSection;
     }
-    let c4 = null;
+    c4 = null;
     errors = errors.errors;
     if (errors == null) {
       errors = {};
     }
   },
   GUILD_SETTINGS_SET_SECTION: function handleSetSection(section) {
-    let closure_3;
-    let closure_4;
     if (null == user) {
       return false;
     } else {
@@ -439,7 +432,7 @@ obj = {
           if (closure_3 !== tmp27.INTEGRATIONS) {
             if (closure_3 !== tmp27.ROLES) {
               if (closure_3 === tmp27.MEMBERS) {
-                let c10 = getGuildEveryoneRoleId(user);
+                c10 = getGuildEveryoneRoleId(user);
               } else if (closure_3 === tmp27.VANITY_URL) {
                 const vanityUrl = fetchVanityUrl.fetchVanityUrl(user.id);
                 const obj2 = fetchVanityUrl;
@@ -449,10 +442,10 @@ obj = {
                 } else {
                   SAFETY_OVERVIEW = closure_4;
                 }
-                let obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: null };
+                obj = { type: "GUILD_SETTINGS_SAFETY_SET_SUBSECTION", subsection: null };
                 obj[1] = SAFETY_OVERVIEW;
-                dispatcher.dispatch(obj);
-                const obj5 = dispatcher;
+                dispatcherDefault.dispatch(obj);
+                const obj5 = dispatcherDefault;
               }
             }
           }
@@ -482,7 +475,7 @@ obj = {
       obj[0] = closure_25.GUILD_INSTANT_INVITES(user.id);
       const value = HTTP.get(obj);
       value.then((body) => {
-        let obj = callback(table[14]);
+        obj = callback(table[14]);
         obj = { type: "GUILD_SETTINGS_LOADED_INVITES", invites: body.body };
         obj.dispatch(obj);
       });
@@ -493,7 +486,7 @@ obj = {
   },
   GUILD_SETTINGS_LOADED_BANS: function handleLoadedBans(bans) {
     bans = bans.bans;
-    let closure_53 = bans.reduce((set, user) => {
+    closure_53 = bans.reduce((set, user) => {
       if (tmp) {
         const result = set.set(user.user.id, user);
       }
@@ -502,8 +495,6 @@ obj = {
     closure_54 = closure_54 + 1;
   },
   GUILD_SETTINGS_LOADED_BANS_BATCH: function handleLoadedBansBatch(arg0) {
-    let bans;
-    let guildId;
     ({ bans, guildId } = arg0);
     let tmp = guildId === guildId;
     if (tmp) {
@@ -524,13 +515,13 @@ obj = {
   },
   GUILD_SETTINGS_LOADED_INVITES: function handleLoadedInvites(invites) {
     invites = invites.invites;
-    let closure_56 = invites.reduce((arg0, code) => {
+    closure_56 = invites.reduce((arg0, code) => {
       arg0[code.code] = callback(code);
       return arg0;
     }, {});
   },
   GUILD_SETTINGS_SET_WIDGET: function handleSetEmbed(enabled) {
-    let c39 = true;
+    c39 = true;
     enabled = enabled.enabled;
     const channelId = enabled.channelId;
   },
@@ -559,7 +550,7 @@ obj = {
         const _Set = Set;
         const items = [];
         items[HermesBuiltin.arraySpread(user.features, 0)] = constants3.PIN_PERMISSION_MIGRATION_COMPLETE;
-        const set = new Set(items);
+        set = new Set(items);
         user = set(user, "features", set);
       }
     }
@@ -571,7 +562,7 @@ obj = {
         const _Set = Set;
         const items = [];
         items[HermesBuiltin.arraySpread(user.features, 0)] = constants3.BYPASS_SLOWMODE_PERMISSION_MIGRATION_COMPLETE;
-        const set = new Set(items);
+        set = new Set(items);
         user = set(user, "features", set);
       }
     }
@@ -586,7 +577,7 @@ obj = {
         tmp4 = user.id === tmp;
       }
       if (tmp4) {
-        const obj = { user: null, reason: null };
+        obj = { user: null, reason: null };
         obj[0] = user;
         const result = _null.set(user.id, obj);
         closure_54 = +closure_54 + 1;
@@ -704,13 +695,13 @@ obj = {
             obj = {};
             const merged = Object.assign(user);
             const item = closure_31.forEach((arg0) => {
-              if (!outer1_33.has(arg0)) {
+              if (!closure_1_33.has(arg0)) {
                 let tmp = "rulesChannelId" !== arg0;
                 if (tmp) {
                   tmp = "publicUpdatesChannelId" !== arg0;
                 }
                 if (!tmp) {
-                  tmp = obj[arg0] !== outer1_29;
+                  tmp = obj[arg0] !== closure_1_29;
                 }
                 if (tmp) {
                   tmp = "features" !== arg0;
@@ -721,8 +712,8 @@ obj = {
                   } else {
                     tmp7 = guild[arg0];
                   }
-                  closure_1 = outer1_13(closure_1, arg0, tmp7);
-                  const tmp4 = outer1_13;
+                  closure_1 = closure_1_13(closure_1, arg0, tmp7);
+                  const tmp4 = closure_1_13;
                   const tmp5 = closure_1;
                 }
               }
@@ -737,24 +728,24 @@ obj = {
   GUILD_DELETE: function handleGuildDelete(guild) {
     if (null != user) {
       if (user.id === guild.guild.id) {
-        let c35 = false;
-        const CLOSED = FormStates.CLOSED;
+        c35 = false;
+        CLOSED = FormStates.CLOSED;
         user = null;
-        let c6 = null;
-        let c39 = false;
-        let c41 = false;
-        let c43 = null;
-        let c45 = null;
-        let c46 = 0;
-        let c53 = null;
-        let c56 = null;
-        let c57 = null;
-        let c3 = null;
-        let c4 = null;
-        let c5 = null;
-        const NONE = MFALevels.NONE;
-        let closure_44 = {};
-        let c11;
+        c6 = null;
+        c39 = false;
+        c41 = false;
+        c43 = null;
+        c45 = null;
+        c46 = 0;
+        c53 = null;
+        c56 = null;
+        c57 = null;
+        c3 = null;
+        c4 = null;
+        c5 = null;
+        NONE = MFALevels.NONE;
+        closure_44 = {};
+        c11 = undefined;
       }
     }
     return false;
@@ -769,7 +760,7 @@ obj = {
     if (tmp2) {
       const result = canUseMobileServerTagSettings.isServerTagDraftDirty(profile, profile);
       tmp2 = !result;
-      const obj = canUseMobileServerTagSettings;
+      obj = canUseMobileServerTagSettings;
       const tmp8 = !result;
     }
     return tmp2;
@@ -807,7 +798,7 @@ obj = {
           id1 = guild.id;
         }
         if (profile.id === id1) {
-          let c38 = null;
+          c38 = null;
         }
       }
       tmp2 = tmp12;
@@ -849,7 +840,7 @@ obj = {
         }
         if (guildId === id1) {
           profile = store.getProfile(guildId);
-          let c38 = null;
+          c38 = null;
         }
       }
       tmp2 = tmp12;
@@ -860,12 +851,12 @@ obj = {
   USER_CONNECTIONS_UPDATE: handleIntegrationsUpdate,
   GUILD_INTEGRATIONS_UPDATE: handleIntegrationsUpdate,
   INSTANT_INVITE_REVOKE_SUCCESS: function handleInviteRevoke(arg0) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     delete tmp2[tmp];
   },
   INSTANT_INVITE_CREATE_SUCCESS: function handleInviteCreateSuccess(invite) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj[invite.invite.code] = _createInvite(invite.invite);
   },
@@ -883,7 +874,7 @@ obj = {
       if (primaryCategoryId == null) {
         primaryCategoryId = DEFAULT_DISCOVERY_CATEGORY_ID;
       }
-      const obj = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
+      obj = { primaryCategoryId: null, secondaryCategoryIds: null, keywords: null, emojiDiscoverabilityEnabled: null, partnerActionedTimestamp: null, partnerApplicationTimestamp: null, isPublished: null, reasonsToJoin: null, socialLinks: null, about: null };
       obj[0] = primaryCategoryId;
       let secondaryCategoryIds = metadata.secondaryCategoryIds;
       if (secondaryCategoryIds == null) {
@@ -930,12 +921,12 @@ obj = {
         str = "";
       }
       obj[9] = str;
-      let closure_37 = {};
+      closure_37 = {};
     }
   },
   GUILD_DISCOVERY_METADATA_FETCH_FAIL: function handleGuildMetadataFetchFail() {
-    let closure_52 = obj;
-    let closure_51 = obj;
+    closure_52 = obj;
+    closure_51 = obj;
   },
   GUILD_DISCOVERY_CATEGORY_ADD: function handleGuildCategoryAdd(categoryId) {
     categoryId = categoryId.categoryId;
@@ -944,7 +935,7 @@ obj = {
       tmp2 = tmp === user.id;
     }
     if (tmp2) {
-      let obj = {};
+      obj = {};
       const merged = Object.assign(obj);
       const items = [];
       items[HermesBuiltin.arraySpread(obj.secondaryCategoryIds, 0)] = categoryId;
@@ -996,20 +987,13 @@ obj = {
     }
   },
   GUILD_UPDATE_DISCOVERY_METADATA: function handleGuildUpdateMetadata(arg0) {
-    let about;
-    let emojiDiscoverabilityEnabled;
-    let isPublished;
-    let keywords;
-    let primaryCategoryId;
-    let reasonsToJoin;
-    let socialLinks;
     ({ primaryCategoryId, keywords, emojiDiscoverabilityEnabled, isPublished, reasonsToJoin, socialLinks, about } = arg0);
     let tmp2 = null != user;
     if (tmp2) {
       tmp2 = tmp === user.id;
     }
     if (tmp2) {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(obj);
       if (null == primaryCategoryId) {
         primaryCategoryId = obj.primaryCategoryId;
@@ -1060,20 +1044,20 @@ obj = {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c12 = null;
+      c12 = null;
     }
   },
   GUILD_SETTINGS_WIDGET_UPDATE: function handleWidgetUpdate(arg0) {
     if (null != user) {
       if (user.id === tmp) {
-        let c41 = tmp2;
-        let c43 = tmp3;
+        c41 = tmp2;
+        c43 = tmp3;
       }
     }
     return false;
   }
 };
-const guildSettingsStore = new GuildSettingsStore(require("dispatcher"), obj);
+const guildSettingsStore = new GuildSettingsStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsStore.tsx");
 
 export default guildSettingsStore;

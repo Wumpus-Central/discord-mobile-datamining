@@ -1,18 +1,31 @@
 // discord_app/modules/voice_panel/VoicePanelStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import identity from "identity";
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import identity from "identity" /* 700 */;
 
 const require = arg1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let obj = { channels: null, isActivityFocused: false, isVoicePanelFullscreen: null, isAnyVoicePanelOpen: null, voicePanelsFullscreen: null, voicePanelsOpened: null, voicePanelsPIP: null, openChannel: null, closeChannel: null, isMounted: null, setIsActivityFocused: null, setChannelPanelFullscreen: null, setChannelPanelOpen: null, isChannelOpen: null, setChannelPanelPIP: null };
-  obj[0] = new Set();
-  obj[2] = function isVoicePanelFullscreen() {
-    return dependencyMap().voicePanelsFullscreen.size > 0;
-  };
-  obj[3] = function isAnyVoicePanelOpen() {
-    return dependencyMap().voicePanelsOpened.size > 0;
+  closure_0 = arg0;
+  closure_1 = arg1;
+  let obj = {
+    channels: new Set(),
+    isActivityFocused: false,
+    isVoicePanelFullscreen() {
+      return dependencyMap().voicePanelsFullscreen.size > 0;
+    },
+    isAnyVoicePanelOpen() {
+      return dependencyMap().voicePanelsOpened.size > 0;
+    },
+    voicePanelsFullscreen: null,
+    voicePanelsOpened: null,
+    voicePanelsPIP: null,
+    openChannel: null,
+    closeChannel: null,
+    isMounted: null,
+    setIsActivityFocused: null,
+    setChannelPanelFullscreen: null,
+    setChannelPanelOpen: null,
+    isChannelOpen: null,
+    setChannelPanelPIP: null
   };
   let set = new Set();
   obj[4] = new Set();
@@ -24,7 +37,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     const callback = arg0;
     let result = callback(8665).isStageVoicePanelEnabled("voice_panel_store");
     if (!result) {
-      const channel = outer1_2.getChannel(arg0);
+      const channel = closure_1_2.getChannel(arg0);
       let isGuildStageVoiceResult;
       if (channel != null) {
         isGuildStageVoiceResult = channel.isGuildStageVoice();
@@ -54,9 +67,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     const callback = channelId;
     callback(705).batchUpdates(() => {
       channelId((arg0) => {
-        let channels;
-        let voicePanelsFullscreen;
-        let voicePanelsOpened;
         ({ channels, voicePanelsFullscreen, voicePanelsOpened } = arg0);
         if (!channels.has(closure_0)) {
           if (!voicePanelsFullscreen.has(tmp)) {
@@ -115,7 +125,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj[11] = function setChannelPanelFullscreen(closure_0, closure_02) {
     const callback = closure_0;
-    const dependencyMap = closure_02;
+    dependencyMap = closure_02;
     callback(705).batchUpdates(() => {
       callback((voicePanelsFullscreen) => {
         const set = new Set(voicePanelsFullscreen.voicePanelsFullscreen);
@@ -140,7 +150,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj[12] = function setChannelPanelOpen(scrollPosition, arg1) {
     const callback = scrollPosition;
-    const dependencyMap = arg1;
+    dependencyMap = arg1;
     callback(705).batchUpdates(() => {
       scrollPosition((channels) => {
         channels = channels.channels;
@@ -175,7 +185,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   obj[14] = function setChannelPanelPIP(scrollPosition, arg1) {
     const callback = scrollPosition;
-    const dependencyMap = arg1;
+    dependencyMap = arg1;
     callback(705).batchUpdates(() => {
       scrollPosition((voicePanelsPIP) => {
         const set = new Set(voicePanelsPIP.voicePanelsPIP);
@@ -200,6 +210,6 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   };
   return obj;
 });
-let result = require("useIsStageVoicePanelEnabled").fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/VoicePanelStore.tsx");
 
 export default withEqualityFn;

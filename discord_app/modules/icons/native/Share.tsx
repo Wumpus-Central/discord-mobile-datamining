@@ -1,11 +1,12 @@
 // discord_app/modules/icons/native/Share.tsx
-import set from "set";
-import set from "registerAsset";
+import registerAssetDefault from "registerAsset" /* 10844 */;
+import registerAssetDefault2 from "registerAsset" /* 10845 */;
+import set from "set" /* 500 */;
 
 if (set.isIOS()) {
-  let importDefaultResult = require("registerAsset");
+  let importDefaultResult = registerAssetDefault;
 } else {
-  importDefaultResult = require("registerAsset");
+  importDefaultResult = registerAssetDefault2;
 }
 const result = set.fileFinishedImporting("modules/icons/native/Share.tsx");
 

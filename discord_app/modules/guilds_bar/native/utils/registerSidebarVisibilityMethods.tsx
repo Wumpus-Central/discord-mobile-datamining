@@ -1,13 +1,13 @@
 // discord_app/modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { GuildsNodeType } from "insertUnsortedGuilds";
+import set2 from "set" /* 2 */;
+import insertUnsortedGuilds from "insertUnsortedGuilds" /* 5078 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9505 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "insertUnsortedGuilds" /* 5078 */;
 
-let c0;
-let closure_1;
 ({ setGetVisibleChannelIds: c0, setGetVisibleGuildIds: closure_1 } = SidebarVisibilityMethodStore);
-const result = require("insertUnsortedGuilds").fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
+const GuildsNodeType = insertUnsortedGuilds.GuildsNodeType;
+const result = set2.fileFinishedImporting("modules/guilds_bar/native/utils/registerSidebarVisibilityMethods.tsx");
 
 export const registerGuildVisibilityMethod = function registerGuildVisibilityMethod(listProps) {
   const current = listProps.current;
@@ -19,8 +19,8 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
         const items = obj.getItems();
         scrollPosition = obj.getScrollPosition();
         const containerSize = obj.containerSize;
-        const guilds = outer1_2.getGuilds();
-        const guildsTree = outer1_3.getGuildsTree();
+        const guilds = closure_1_2.getGuilds();
+        const guildsTree = closure_1_3.getGuildsTree();
         const _Set = Set;
         const set = new Set();
         let item = items.forEach((recyclerKey) => {
@@ -39,9 +39,9 @@ export const registerGuildVisibilityMethod = function registerGuildVisibilityMet
               }
               forEach = children.forEach;
               const item = forEach((type) => {
-                let tmp = type.type === outer1_4.GUILD;
+                let tmp = type.type === closure_1_4.GUILD;
                 if (tmp) {
-                  tmp = type.id in createGuildRecordFromRust;
+                  tmp = type.id in closure_2;
                 }
                 if (tmp) {
                   set.add(type.id);

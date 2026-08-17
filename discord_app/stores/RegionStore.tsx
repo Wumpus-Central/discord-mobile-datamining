@@ -1,15 +1,17 @@
 // discord_app/stores/RegionStore.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { Store } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
 
 let c3 = null;
 let closure_4 = {};
+const Store = initializeDefault.Store;
 class RegionStore extends Store {
 }
 const prototype = RegionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(createGuildRecordFromRust);
+  this.waitFor(closure_2);
 };
 prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   let tmp = guildId;
@@ -21,8 +23,8 @@ prototype["getOptimalRegion"] = function getOptimalRegion(guildId) {
   if (null != regions) {
     let found = regions.find((optimal) => optimal.optimal);
     if (found == null) {
-      found = apply.sample(regions);
-      const obj = apply;
+      found = applyDefault.sample(regions);
+      const obj = applyDefault;
     }
     tmp2 = found;
   }
@@ -48,8 +50,8 @@ prototype["getRandomRegion"] = function getRandomRegion(guildId) {
   const regions = this.getRegions(tmp);
   let sampleResult = null;
   if (null != regions) {
-    sampleResult = apply.sample(regions);
-    const obj = apply;
+    sampleResult = applyDefault.sample(regions);
+    const obj = applyDefault;
   }
   return sampleResult;
 };
@@ -74,19 +76,19 @@ prototype["getRegions"] = function getRegions(guildId) {
   return tmp;
 };
 RegionStore.displayName = "RegionStore";
-const regionStore = new RegionStore(require("dispatcher"), {
+const regionStore = new RegionStore(dispatcherDefault, {
   LOAD_REGIONS: function handleLoadRegions(regions) {
-    const sortByResult = apply.sortBy(regions.regions, (name) => name.name);
+    const sortByResult = applyDefault.sortBy(regions.regions, (name) => name.name);
     if (null != regions.guildId) {
       closure_4[regions.guildId] = sortByResult;
     } else {
-      let c3 = sortByResult;
+      c3 = sortByResult;
     }
   },
   GUILD_DELETE: function handleDeleteGuild(arg0) {
     delete tmp2[tmp];
   }
 });
-const result = require("initialize").fileFinishedImporting("stores/RegionStore.tsx");
+const result = require("set").fileFinishedImporting("stores/RegionStore.tsx");
 
 export default regionStore;

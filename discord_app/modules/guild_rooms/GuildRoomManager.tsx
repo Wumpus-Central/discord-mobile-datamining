@@ -1,13 +1,14 @@
 // discord_app/modules/guild_rooms/GuildRoomManager.tsx
-import fetchFingerprint from "fetchFingerprint";
-import resolveCreatingNotes from "resolveCreatingNotes";
-import "initialize";
-import { _guildRoomConnect } from "GuildRoomActionCreators.native.tsx";
-import { experiment } from "GuildRoomsExperiment.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import _guildRoomConnect from "_guildRoomConnect" /* 9862 */;
+import experimentDefault from "experiment" /* 9882 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "resolveCreatingNotes" /* 9864 */;
 
-let require = arg1;
+require = arg1;
 let c5 = null;
 let c6 = null;
+initializeDefault;
 class GuildRoomManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -25,16 +26,11 @@ class GuildRoomManager extends tmp2 {
 }
 const prototype = GuildRoomManager.prototype;
 prototype["isExperimentEnabled"] = function isExperimentEnabled(guildId, VOICE_STATE_UPDATE) {
-  let obj = experiment;
+  let obj = experimentDefault;
   obj = { guildId, location: VOICE_STATE_UPDATE };
   return obj.getCurrentConfig(obj).enabled;
 };
 prototype["handleVoiceStateUpdates"] = function handleVoiceStateUpdates(arg0) {
-  let channelId;
-  let guildId;
-  let oldChannelId;
-  let sessionId;
-  let userId;
   const self = this;
   const iter = arg0.voiceStates[Symbol.iterator]();
   while (iter !== undefined) {
@@ -120,6 +116,6 @@ prototype["handleConnectionResumed"] = function handleConnectionResumed() {
   }
 };
 const guildRoomManager = new GuildRoomManager();
-let result = require("initialize").fileFinishedImporting("modules/guild_rooms/GuildRoomManager.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomManager.tsx");
 
 export default guildRoomManager;

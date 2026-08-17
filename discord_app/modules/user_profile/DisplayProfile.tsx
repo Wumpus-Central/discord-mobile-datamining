@@ -1,11 +1,13 @@
 // discord_app/modules/user_profile/DisplayProfile.tsx
-import { PremiumTypes } from "GuildFeatures";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import set from "set" /* 2 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import useAvatarsWithGuilds from "useAvatarsWithGuilds" /* 8376 */;
 import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { useAvatarsWithGuilds } from "../profile_customization/ProfileCustomizationUtils.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
 
-const result = require("getPremiumPlanItem").fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
+const PremiumTypes = GuildFeatures.PremiumTypes;
+const result = set.fileFinishedImporting("modules/user_profile/DisplayProfile.tsx");
 class DisplayProfile {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -242,8 +244,6 @@ prototype["isUsingGuildMemberPronouns"] = function isUsingGuildMemberPronouns() 
   return tmp2;
 };
 prototype["getBannerURL"] = function getBannerURL(arg0) {
-  let canAnimate;
-  let size;
   const self = this;
   ({ canAnimate, size } = arg0);
   if (null != this.guildId) {
@@ -323,8 +323,6 @@ prototype["getPreviewPronouns"] = function getPreviewPronouns(pendingValue) {
   return obj.getProfilePreviewValue(obj);
 };
 prototype["getPreviewThemeColors"] = function getPreviewThemeColors(pendingThemeColors) {
-  let _userProfile;
-  let themeColors;
   let first;
   if (pendingThemeColors != null) {
     first = pendingThemeColors[0];

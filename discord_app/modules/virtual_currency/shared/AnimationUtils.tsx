@@ -1,6 +1,8 @@
 // discord_app/modules/virtual_currency/shared/AnimationUtils.tsx
+import set from "set" /* 2 */;
+
 let obj = { EARN: 0.25, SPEND: 0.3 };
-let result = require("set").fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
+let result = set.fileFinishedImporting("modules/virtual_currency/shared/AnimationUtils.tsx");
 
 export const EXPECTED_ORB_LOTTIE_ANIMATION_DURATION_MS = 3000;
 export const ORB_LOTTIE_COUNTER_ANIMATION_FACTORS = obj;

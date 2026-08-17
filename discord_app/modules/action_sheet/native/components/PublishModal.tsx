@@ -1,26 +1,25 @@
 // discord_app/modules/action_sheet/native/components/PublishModal.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/void/native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useChannelFollowerStats } from "../../../channel_following/useChannelFollowerStats.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import useChannelFollowerStatsDefault from "useChannelFollowerStats" /* 10861 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c4, ActivityIndicator: c5 } = get_ActivityIndicator);
 createCacheKey = { alertContainer: { paddingTop: 16 }, alertLoading: { paddingTop: 62, paddingBottom: 46 }, alertBodyText: null };
 createCacheKey = { marginBottom: 16, fontSize: 16, lineHeight: 24, color: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_400 };
 createCacheKey[2] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/action_sheet/native/components/PublishModal.tsx");
 
 export default function PublishModal(channelId) {
-  const tmp = createCacheKey();
-  const tmp3 = callback(useChannelFollowerStats(channelId.channelId), 2);
+  const tmp = callback2();
+  const tmp3 = callback(useChannelFollowerStatsDefault(channelId.channelId), 2);
   const first = tmp3[0];
   if (tmp3[1]) {
     let obj = { style: null, children: null };
@@ -53,7 +52,7 @@ export default function PublishModal(channelId) {
       if (num2 == null) {
         num2 = 0;
       }
-      const obj1 = { numGuildsFollowing: null };
+      obj1 = { numGuildsFollowing: null };
       obj1[0] = num2;
       obj[1] = intl.format(tmp11(1236).t.GCGrNP, obj1);
       let tmp12 = obj;

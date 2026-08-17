@@ -1,18 +1,14 @@
 // discord_app/modules/quests/utils/QuestCopyUtils.tsx
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { _copy } from "../../../utils/ClipboardUtils.native.tsx";
-import { apexExperiment } from "../experiments/AdAnalyticsInterfaceExperiment.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _copy from "_copy" /* 7167 */;
+import apexExperiment from "apexExperiment" /* 9502 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
 
-let c3;
-let c4;
-let obj1;
 ({ QuestHomeSortMethods: obj1, RewardFilterTypes: c3, TaskFilterTypes: c4 } = QuestsExperimentLocations);
-let result = require("apexExperiment").fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
+let result = set.fileFinishedImporting("modules/quests/utils/QuestCopyUtils.tsx");
 
 export const getContextualEntrypointHeading = function getContextualEntrypointHeading(taskDetails) {
-  let quest;
-  let thirdPartyTaskDetails;
   ({ quest, thirdPartyTaskDetails } = taskDetails);
   const userStatus = quest.userStatus;
   let completedAt;
@@ -61,8 +57,6 @@ export const getContextualEntrypointHeading = function getContextualEntrypointHe
   }
 };
 export const getDisclosureText = function getDisclosureText(isTargetedDisclosure) {
-  let cosponsorName;
-  let gamePublisher;
   ({ gamePublisher, cosponsorName } = isTargetedDisclosure);
   if (isTargetedDisclosure.isTargetedDisclosure) {
     if (isTargetedDisclosure.isContextualDisclosure) {
@@ -92,7 +86,7 @@ export const getDisclosureText = function getDisclosureText(isTargetedDisclosure
     const formatToPlainString = intl.formatToPlainString;
     const t = getSystemLocale.t;
     if (tmp) {
-      const obj1 = { gamePublisher: null };
+      obj1 = { gamePublisher: null };
       obj1[0] = gamePublisher;
       let formatToPlainStringResult1 = formatToPlainString(t.rctMRl, obj1);
     } else {
@@ -182,7 +176,7 @@ export const getDefaultReward = function getDefaultReward(config) {
   if (0 === config.rewardsConfig.rewards.length) {
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Quest " + config.id + " has no rewards configured");
+    error = new Error("Quest " + config.id + " has no rewards configured");
     throw error;
   } else {
     return config.rewardsConfig.rewards[0];

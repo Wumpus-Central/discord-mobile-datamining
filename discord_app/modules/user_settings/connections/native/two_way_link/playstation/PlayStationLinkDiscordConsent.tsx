@@ -1,16 +1,14 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx
-import noop from "noop";
-import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkModalScenes";
-import { PlatformTypes } from "ME";
-import { PLAYSTATION_CLIENT_SCOPES } from "XBOX_URL_BASE";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { PlayStationLinkModalScenes as closure_3 } from "PlayStationLinkModalScenes" /* 9782 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import { PLAYSTATION_CLIENT_SCOPES } from "XBOX_URL_BASE" /* 9763 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/playstation/PlayStationLinkDiscordConsent.tsx");
 
 export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordConsent(platformType) {
-  let callbackCode;
-  let callbackState;
   platformType = platformType.platformType;
   let navigation;
   ({ callbackCode, callbackState } = platformType);
@@ -19,10 +17,10 @@ export const PlayStationLinkDiscordConsent = function PlayStationLinkDiscordCons
   const items = [navigation];
   const items1 = [navigation];
   const callback = React.useCallback(() => {
-    navigation.push(outer1_3.SUCCESS);
+    navigation.push(closure_1_3.SUCCESS);
   }, items);
   const callback1 = React.useCallback((errorCode) => {
-    navigation.push(outer1_3.ERROR, { errorCode });
+    navigation.push(closure_1_3.ERROR, { errorCode });
   }, items1);
   if (platformType === PlatformTypes.PLAYSTATION_STAGING) {
     let PLAYSTATION_APPLICATION_ID = tmp(9788).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID;

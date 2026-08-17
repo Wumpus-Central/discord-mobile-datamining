@@ -1,45 +1,45 @@
 // discord_app/modules/user_settings/account/native/SettingsAccountHeader.tsx
-import importAllResult from "noop";
-import { View } from "set";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticsSections } from "ME";
-import { SafetySettingsNoticeType } from "SafetyToastType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
-import { handleOpenEmailVerification } from "UserSettingsAccountUnverifiedHeader.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import handleOpenEmailVerification from "handleOpenEmailVerification" /* 8624 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14104 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import { SafetySettingsNoticeType } from "SafetyToastType" /* 5430 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-const require = arg1;
+require = arg1;
 function RestrictedAccountRedirect() {
-  let obj = { label: null, labelHook: null, noticeType: null };
-  obj[0] = getSystemLocale.t.zqv4nV;
-  obj[1] = function labelHook() {
-    let obj = callback(table[11]);
-    obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
-    obj.openUserSettings(obj);
+  let obj = {
+    label: getSystemLocale.t.zqv4nV,
+    labelHook() {
+      let obj = callback(table[11]);
+      obj = { screen: constants.SETTINGS_CONTENT_AND_SOCIAL };
+      obj.openUserSettings(obj);
+    },
+    noticeType: SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE
   };
-  obj[2] = SafetySettingsNoticeType.RESTRICTED_ACCOUNTS_SETTING_NOTICE;
-  return callback(SafetySettingsNotice, obj);
+  return callback(SafetySettingsNoticeDefault, obj);
 }
 let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { header: null };
-obj = { paddingTop: require("Themes").space.PX_24, gap: require("Themes").space.PX_24 };
+obj = { paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_24 };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(() => {
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = handleOpenEmailVerification;
+  obj1 = handleOpenEmailVerification;
   const bannerText = obj1.getBannerText(stateFromStores);
   const tmp = callback2();
-  const items1 = [markAllUserIdListsStale];
+  const items1 = [closure_5];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => blockedOrIgnoredIDs.getBlockedOrIgnoredIDs().size > 0);
   const callback = importAllResult.useCallback(() => {
     callback(table[14]).open();
@@ -73,6 +73,6 @@ const memoResult = importAllResult.memo(() => {
   }
   return tmp9Result;
 });
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/SettingsAccountHeader.tsx");
 
 export default memoResult;

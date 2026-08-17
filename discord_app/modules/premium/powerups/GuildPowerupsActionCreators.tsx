@@ -1,23 +1,24 @@
 // discord_app/modules/premium/powerups/GuildPowerupsActionCreators.tsx
-import BoostedGuildTiers from "BoostedGuildTiers";
-import { Endpoints } from "ME";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
 import { sendRequest } from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
 import { _httpGetWithCountryCodeQuery } from "../../../utils/StoreUtils.tsx";
 import { items } from "mocks/GuildPowerupMocks.tsx";
 
-let c3;
-let c4;
 ({ GUILD_POWERUP_APPLICATION_ID: c3, GuildPowerupType: c4 } = BoostedGuildTiers);
-let result = require("dispatcher").fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+let result = set.fileFinishedImporting("modules/premium/powerups/GuildPowerupsActionCreators.tsx");
 
 export const guildPowerupsAckNotification = function guildPowerupsAckNotification(closure_0) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "GUILD_POWERUPS_ACK_NOTIFICATION", guildId: closure_0 };
   obj.dispatch(obj);
 };
 export const guildPowerupsResetNotifications = function guildPowerupsResetNotifications() {
-  dispatcher.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
+  dispatcherDefault.dispatch({ type: "GUILD_POWERUPS_RESET_NOTIFICATIONS" });
 };
 export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(closure_0) {
   const _require = closure_0;
@@ -27,7 +28,7 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     let obj = {};
     obj[constants.LEVEL] = _items.MOCK_LEVELS;
     obj[constants.PERK] = _items.MOCK_PERKS;
-    let obj2 = dispatcher;
+    let obj2 = dispatcherDefault;
     obj = { type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: null, allPowerups: null, powerupCatalog: null };
     obj[1] = closure_0;
     let sorted = combined.sort((skuId, skuId2) => {
@@ -44,7 +45,7 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     obj[3] = obj;
     obj2.dispatch(obj);
   } else {
-    const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+    obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
     obj1[0] = Endpoints.STORE_PUBLISHED_LISTINGS_SKUS;
     obj2 = { application_id: null, guild_id: null };
     obj2[0] = closure_3;
@@ -54,12 +55,10 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
     obj1[3] = _sendRequest.rejectWithMigratedError();
     const result = obj5.httpGetWithCountryCodeQuery(obj1);
     return result.then((body) => {
-      let allPowerups;
-      let powerupCatalog;
       const callback = body;
       body = body.body;
-      const mapped = body.map((arg0) => outer1_1(outer1_2[6])(body.body, arg0));
-      const found = mapped.filter(callback(outer1_2[7]).isNotNullish);
+      const mapped = body.map((arg0) => closure_1_1(closure_1_2[6])(body.body, arg0));
+      const found = mapped.filter(callback(closure_1_2[7]).isNotNullish);
       const sorted = found.sort((skuId, skuId2) => {
         let num = -1;
         if (skuId.skuId >= skuId2.skuId) {
@@ -83,7 +82,7 @@ export const fetchPowerupCatalogForGuild = function fetchPowerupCatalogForGuild(
         return powerupCatalog;
       }, { allPowerups: {}, powerupCatalog: {} });
       ({ allPowerups, powerupCatalog } = reduced);
-      outer1_1(outer1_2[2]).dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: callback, allPowerups, powerupCatalog });
+      closure_1_1(closure_1_2[2]).dispatch({ type: "GUILD_POWERUP_CATALOG_FETCH_SUCCESS", guildId: callback, allPowerups, powerupCatalog });
       return body.body;
     });
   }
@@ -95,8 +94,7 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
     flag = true;
   }
   let obj = __httpGetWithCountryCodeQuery;
-  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: null };
-  obj[3] = _sendRequest.rejectWithMigratedError();
+  obj = { url: Endpoints.GUILD_POWERUPS(closure_0), query: { include_ends_at: flag }, oldFormErrors: true, rejectWithError: _sendRequest.rejectWithMigratedError() };
   const result = obj.httpGetWithCountryCodeQuery(obj);
   return result.then((body) => {
     let obj = {};
@@ -142,7 +140,7 @@ export const fetchGuildBoostEntitlements = function fetchGuildBoostEntitlements(
       obj[sku.sku_id] = sku;
     });
     obj = { type: "GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS", guildId: obj, unlockedPowerups: obj, unlockedGameServers: obj };
-    outer1_1(outer1_2[2]).dispatch(obj);
+    closure_1_1(closure_1_2[2]).dispatch(obj);
   });
 };
 export const enablePowerupForGuild = function enablePowerupForGuild(arg0, arg1) {

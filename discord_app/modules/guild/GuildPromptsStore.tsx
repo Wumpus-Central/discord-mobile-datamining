@@ -1,7 +1,9 @@
 // discord_app/modules/guild/GuildPromptsStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let closure_0 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildPromptsStore extends PersistedStore {
 }
 const prototype = GuildPromptsStore.prototype;
@@ -30,10 +32,8 @@ prototype["getState"] = function getState() {
 };
 GuildPromptsStore.displayName = "GuildPromptsStore";
 GuildPromptsStore.persistKey = "GuildPromptsStore";
-const guildPromptsStore = new GuildPromptsStore(require("dispatcher"), {
+const guildPromptsStore = new GuildPromptsStore(dispatcherDefault, {
   GUILD_PROMPT_VIEWED: function handleGuildPromptViewed(arg0) {
-    let _prompt;
-    let guildId;
     ({ prompt: _prompt, guildId } = arg0);
     if (null == dependencyMap[guildId]) {
       const _Set = Set;

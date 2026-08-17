@@ -1,30 +1,26 @@
 // discord_app/modules/opt_in_channels/OptInChannelsUtils.tsx
-import DismissibleContent from "DismissibleContent";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import setIndex from "setIndex";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import set from "set";
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
-import { ReadStateTypes } from "ReadStateTypes";
-import set from "setIndex";
-import { t } from "../../../_runtime/03975_t.js";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import computeSubtitle from "computeSubtitle" /* 5272 */;
+import ack from "ack" /* 5277 */;
+import _bulkClearRecents from "_bulkClearRecents" /* 10752 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "setIndex" /* 5278 */;
+import closure_6 from "generateOldThreadCutoff" /* 4772 */;
+import closure_7 from "markAllUserIdListsStale" /* 4030 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 1398 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 5281 */;
+import { ReadStateTypes } from "ReadStateTypes" /* 5044 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { ack } from "../../actions/ReadStateActionCreators.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { computeSubtitle } from "../guild_sidebar/ChannelListState.tsx";
-import { _bulkClearRecents } from "../recent_channels/RecentChannelsActionCreators.tsx";
 
-let c10;
-let c9;
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function setIndex(arg0, index) {
   arg0.index = index;
 }
@@ -34,7 +30,7 @@ let result = set.fileFinishedImporting("modules/opt_in_channels/OptInChannelsUti
 
 export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(guildId, stateFromStores1, stateFromStores2, str) {
   const _require = stateFromStores1;
-  let closure_1 = stateFromStores2;
+  closure_1 = stateFromStores2;
   let formatted = str;
   formatted = str.toLowerCase();
   const canSeeOnboardingHome = _require(formatted[10]).useCanSeeOnboardingHome(guildId);
@@ -43,23 +39,23 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(gu
     let tmp = !canSeeOnboardingHome;
     if (canSeeOnboardingHome) {
       channel = channel.channel;
-      tmp = !channel.hasFlag(outer1_11.IS_GUILD_RESOURCE_CHANNEL);
+      tmp = !channel.hasFlag(closure_1_11.IS_GUILD_RESOURCE_CHANNEL);
     }
     if (tmp) {
-      let tmp4 = channel.channel.type !== outer1_10.GUILD_DIRECTORY;
+      let tmp4 = channel.channel.type !== closure_1_10.GUILD_DIRECTORY;
       if (tmp4) {
         let tmp6 = 0 === arg1.length;
         if (!tmp6) {
           const tmp9 = stateFromStores2(formatted[11]);
           const obj = stateFromStores1(formatted[12]);
-          let hasItem = tmp9(arg1, stateFromStores1(formatted[12]).computeChannelName(channel.channel, outer1_8, outer1_7).toLowerCase());
+          let hasItem = tmp9(arg1, stateFromStores1(formatted[12]).computeChannelName(channel.channel, closure_1_8, closure_1_7).toLowerCase());
           if (!hasItem) {
             formatted = channel.channel.topic.toLowerCase();
             hasItem = formatted.includes(arg1);
             const str2 = channel.channel.topic;
           }
           tmp6 = hasItem;
-          const str = stateFromStores1(formatted[12]).computeChannelName(channel.channel, outer1_8, outer1_7);
+          const str = stateFromStores1(formatted[12]).computeChannelName(channel.channel, closure_1_8, closure_1_7);
         }
         tmp4 = tmp6;
       }
@@ -70,7 +66,7 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(gu
   const items1 = [stateFromStores1, stateFromStores2, callback, formatted];
   return canSeeOnboardingHome.useMemo(() => {
     const obj = { null: [], _categories: [] };
-    const item = stateFromStores2[outer1_10.GUILD_CATEGORY].forEach((channel) => {
+    const item = stateFromStores2[closure_1_10.GUILD_CATEGORY].forEach((channel) => {
       channel = channel.channel;
       if ("null" === channel.id) {
         const _null = obj.null;
@@ -82,21 +78,21 @@ export const useFilterCategoriesByQuery = function useFilterCategoriesByQuery(gu
     obj._categories = _categories.filter((channel) => {
       let tmp = "null" === channel.channel.id;
       if (!tmp) {
-        tmp = 0 === outer1_2.length;
+        tmp = 0 === closure_1_2.length;
       }
       if (!tmp) {
         tmp = obj[channel.channel.id].length > 0;
       }
       return tmp;
     });
-    const item1 = stateFromStores2(formatted[13])(obj._categories, obj).forEach(outer1_15);
+    const item1 = stateFromStores2(formatted[13])(obj._categories, obj).forEach(closure_1_15);
     return obj;
   }, items1);
 };
 export const getFirstRouteFor = function getFirstRouteFor(getSections) {
   let channel;
   const sections = getSections.getSections(false);
-  if (sections[require(undefined, 5272) /* computeSubtitle */.SECTION_INDEX_GUILD_ACTIONS] > 0) {
+  if (sections[computeSubtitle.SECTION_INDEX_GUILD_ACTIONS] > 0) {
     const guildActionSection = getSections.getGuildActionSection();
     const row = guildActionSection.getRow(0);
     if (ChannelListGuildActionRow.GUILD_HOME === row) {
@@ -135,23 +131,23 @@ export const clearRecentChannels = function clearRecentChannels(closure_0, closu
   _bulkClearRecents.bulkClearRecents(closure_0, closure_1);
   const obj = _bulkClearRecents;
   const tmp2 = require;
-  ack.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: generateOldThreadCutoff.lastMessageId(channelId) })));
+  ack.bulkAck(closure_1.map((channelId) => ({ channelId, readStateType: constants.CHANNEL, messageId: closure_6.lastMessageId(channelId) })));
   if (null != tmp) {
-    tmp2(1222).transitionTo(closure_9.CHANNEL(closure_0, tmp));
-    const tmp2Result = tmp2(1222);
+    transitionTo.transitionTo(closure_9.CHANNEL(closure_0, tmp));
+    const tmp2Result = transitionTo;
   }
 };
 export const useChannelBrowserSections = function useChannelBrowserSections(guildId, filterCategoriesByQuery, arg2) {
   const _require = guildId;
-  let closure_1 = filterCategoriesByQuery;
-  const dependencyMap = arg2;
+  closure_1 = filterCategoriesByQuery;
+  dependencyMap = arg2;
   let obj = _UNSAFE_isDismissibleContentDismissed;
   let result = obj.useIsDismissibleContentDismissed_UNSAFE(_DismissibleContent.DismissibleContent.CHANNEL_BROWSER_NUX);
-  const items = [ensureGuildLoaded];
+  const items = [closure_4];
   const items1 = [guildId];
-  let DismissibleContent = _initialize.useStateFromStoresObject(items, () => {
+  closure_3 = _initialize.useStateFromStoresObject(items, () => {
     const obj = {};
-    const mutableGuildChannelsForGuild = outer1_4.getMutableGuildChannelsForGuild(closure_0);
+    const mutableGuildChannelsForGuild = closure_1_4.getMutableGuildChannelsForGuild(closure_0);
     for (const key10009 in mutableGuildChannelsForGuild) {
       let tmp2 = key10009;
       let parent_id = mutableGuildChannelsForGuild[key10009].parent_id;
@@ -196,8 +192,8 @@ export const useChannelBrowserSections = function useChannelBrowserSections(guil
 };
 export const useChannelBrowserChannelCount = function useChannelBrowserChannelCount(arg0) {
   const _require = arg0;
-  const items = [setIndex];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getCategories(closure_0));
+  const items = [closure_5];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getCategories(closure_0));
   let sum = stateFromStores._categories[stateFromStores._categories.length - 1];
   if (null == sum) {
     return 0;
@@ -222,13 +218,13 @@ export const useChannelBrowserChannelCount = function useChannelBrowserChannelCo
 };
 export const getActiveAgoTimestamp = function getActiveAgoTimestamp(id) {
   const intl = getSystemLocale.intl;
-  let obj = DISCORD_EPOCH;
-  let lastMessageIdResult = generateOldThreadCutoff.lastMessageId(id);
+  let obj = DISCORD_EPOCHDefault;
+  let lastMessageIdResult = closure_6.lastMessageId(id);
   if (lastMessageIdResult == null) {
     lastMessageIdResult = id;
   }
   obj = { timeAgo: null };
-  const tmp = t;
-  obj[0] = t(obj.extractTimestamp(lastMessageIdResult)).fromNow();
+  const tmp = tDefault;
+  obj[0] = tDefault(obj.extractTimestamp(lastMessageIdResult)).fromNow();
   return intl.formatToPlainString(getSystemLocale.t["8N0BHR"], obj);
 };

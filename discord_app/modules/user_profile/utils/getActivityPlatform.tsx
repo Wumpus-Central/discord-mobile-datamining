@@ -1,16 +1,17 @@
 // discord_app/modules/user_profile/utils/getActivityPlatform.tsx
-import { PlatformTypes } from "ME";
-import set from "isListeningOnSpotify";
-import { parseProviderRouteHeadlessSessionId } from "parseProviderRouteHeadlessSessionId.tsx";
+import ME from "ME" /* 676 */;
+import parseProviderRouteHeadlessSessionIdDefault from "parseProviderRouteHeadlessSessionId" /* 12112 */;
+import set from "set" /* 2 */;
 
+const PlatformTypes = ME.PlatformTypes;
 const items = [, , , ];
 ({ LEAGUE_OF_LEGENDS: arr[0], ROBLOX: arr[1], TWITCH: arr[2], YOUTUBE: arr[3] } = PlatformTypes);
 let set = new Set(items);
 const result = set.fileFinishedImporting("modules/user_profile/utils/getActivityPlatform.tsx");
 
 export default function getActivityPlatform(session_id) {
-  const importDefault = session_id;
-  const tmp3 = parseProviderRouteHeadlessSessionId(session_id.session_id);
+  importDefault = session_id;
+  const tmp3 = parseProviderRouteHeadlessSessionIdDefault(session_id.session_id);
   if (null != tmp3) {
     return tmp3;
   } else if (tmp(7261)(session_id)) {

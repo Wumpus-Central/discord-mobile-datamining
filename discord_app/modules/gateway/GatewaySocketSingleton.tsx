@@ -1,36 +1,41 @@
 // discord_app/modules/gateway/GatewaySocketSingleton.tsx
-import fetchFingerprint from "fetchFingerprint";
-import set from "set";
-import importDefaultResult from "awaitOnline";
-import set from "noop";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { DiscordAppState.native } from "../app_state/DiscordAppState.native.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import setRequestedByAll from "setRequestedBy" /* 675 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import setDefault from "set" /* 4004 */;
+import _modDef10501 from "module_10501" /* 10501 */;
+import noopDefault from "noop" /* 13188 */;
+import getInitialStateDefault from "getInitialState" /* 13227 */;
+import guildIdDefault from "guildId" /* 13230 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import set from "set" /* 500 */;
+import importDefaultResult from "awaitOnline" /* 1474 */;
 
-let c4 = new require("getInitialState")("ConnectionStore");
-let obj = new require("noop")();
-const tmp3 = new require("getInitialState")(obj);
+let closure_4 = new timestampDefault("ConnectionStore");
+let obj = new noopDefault();
+const tmp3 = new getInitialStateDefault(obj);
 let closure_6 = tmp3;
-const tmp2 = new require("getInitialState")("ConnectionStore");
+const tmp2 = new timestampDefault("ConnectionStore");
 obj.handleIdentify = () => {
-  let obj = token;
+  obj = token;
   token = token.getToken();
   obj = { hasToken: null != token };
-  tmp2.verbose("handleIdentify called", obj);
+  closure_4.verbose("handleIdentify called", obj);
   if (null == token) {
     return null;
   } else {
-    const state = DiscordAppState.native.getState();
+    const state = _modDef10501.getState();
     const installationForTracking = obj.getInstallationForTracking();
     obj = { token: null, properties: null, presence: null };
     obj[0] = token;
-    const obj1 = {};
-    const obj5 = DiscordAppState.native;
-    const merged = Object.assign(expandEventProperties.getSuperProperties());
+    obj1 = {};
+    const obj5 = _modDef10501;
+    const merged = Object.assign(expandEventPropertiesDefault.getSuperProperties());
     obj1.client_app_state = state;
     obj1.is_fast_connect = false;
-    const obj8 = expandEventProperties;
-    obj1.gateway_connect_reasons = importAll(675).describeConnectionReasons();
+    const obj8 = expandEventPropertiesDefault;
+    obj1.gateway_connect_reasons = setRequestedByAll.describeConnectionReasons();
     if (null != installationForTracking) {
       const obj2 = { installation_id: null };
       obj2[0] = installationForTracking;
@@ -40,34 +45,30 @@ obj.handleIdentify = () => {
     }
     const merged1 = Object.assign(obj3);
     obj[1] = obj1;
-    obj[2] = obj1.getInitialState();
+    obj[2] = initialState.getInitialState();
     return obj;
   }
 };
 if (set.isDesktop()) {
-  const powerMonitor = require("set").powerMonitor;
+  const powerMonitor = setDefault.powerMonitor;
   powerMonitor.on("resume", () => {
     obj.expeditedHeartbeat(5000, "power monitor resumed");
   });
 }
-const tmp4 = new require("guildId")(obj);
-require("awaitOnline").addOfflineCallback(() => {
+const tmp4 = new guildIdDefault(obj);
+importDefaultResult.addOfflineCallback(() => {
   obj.networkStateChange(15000, "network detected offline.", false);
 });
-require("awaitOnline").addOnlineCallback(() => {
+importDefaultResult.addOnlineCallback(() => {
   obj.networkStateChange(5000, "network detected online.");
 });
 obj.on("disconnect", (arg0) => {
-  let code;
-  let reason;
   ({ code, reason } = arg0);
-  dispatcher.dispatch({ type: "CONNECTION_CLOSED", code, reason });
+  dispatcherDefault.dispatch({ type: "CONNECTION_CLOSED", code, reason });
 });
 obj.on("close", (arg0) => {
-  let code;
-  let reason;
   ({ code, reason } = arg0);
-  dispatcher.dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
+  dispatcherDefault.dispatch({ type: "CONNECTION_INTERRUPTED", code, reason });
 });
 const result = set.fileFinishedImporting("modules/gateway/GatewaySocketSingleton.tsx");
 

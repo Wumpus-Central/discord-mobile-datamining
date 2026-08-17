@@ -1,30 +1,30 @@
 // discord_app/modules/app_icons/native/AppIcon.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { getIconById } from "items";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { getIconById } from "items" /* 7946 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 createCacheKey = { container: null, image: null };
-createCacheKey = { overflow: "hidden", borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { overflow: "hidden", borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { resizeMode: "contain", height: "100%", width: "100%" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("items").fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/app_icons/native/AppIcon.tsx");
 
 export default function AppIcon(size) {
   let num = size.size;
   if (num === undefined) {
     num = 56;
   }
-  const tmp = createCacheKey();
-  const tmp2 = useTheme();
+  const tmp = callback();
+  const tmp2 = useThemeDefault();
   let obj = AccessibilityAnnouncer;
   let num2 = 1;
   if (obj.isThemeDark(tmp2)) {

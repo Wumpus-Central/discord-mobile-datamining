@@ -1,6 +1,8 @@
 // discord_common/js/packages/http-utils/stringifyErrors.tsx
+import set from "set" /* 2 */;
+
 function stringifyErrors(str) {
-  let closure_0 = str;
+  closure_0 = str;
   str = "";
   let str2 = "";
   if (null != str) {
@@ -86,7 +88,7 @@ function stringifyErrors(str) {
                                         const keys = Object.keys(str);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "function") {
+                                          if (typeof closure_1_0 !== "function") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
@@ -133,7 +135,7 @@ function stringifyErrors(str) {
                               const keys = Object.keys(str);
                               const reduced1 = keys.reduce((arr) => {
                                 arr = arr[arg1];
-                                if (typeof outer1_0 !== "function") {
+                                if (typeof closure_1_0 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let str = "";
@@ -180,7 +182,7 @@ function stringifyErrors(str) {
                                           let keys = Object.keys(arr);
                                           let reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "function") {
+                                            if (typeof closure_1_0 !== "function") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
@@ -241,7 +243,7 @@ function stringifyErrors(str) {
                     const keys = Object.keys(str);
                     const reduced1 = keys.reduce((arr) => {
                       arr = arr[arg1];
-                      if (typeof outer1_0 !== "function") {
+                      if (typeof closure_1_0 !== "function") {
                         HermesBuiltin.throwTypeError();
                       }
                       let str = "";
@@ -300,7 +302,7 @@ function stringifyErrors(str) {
                                         const keys = Object.keys(str);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "function") {
+                                          if (typeof closure_1_0 !== "function") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
@@ -349,7 +351,7 @@ function stringifyErrors(str) {
                                 let keys = Object.keys(arr);
                                 let reduced1 = keys.reduce((arr) => {
                                   arr = arr[arg1];
-                                  if (typeof outer1_0 !== "function") {
+                                  if (typeof closure_1_0 !== "function") {
                                     HermesBuiltin.throwTypeError();
                                   }
                                   let str = "";
@@ -396,7 +398,7 @@ function stringifyErrors(str) {
                                             let keys = Object.keys(arr);
                                             let reduced1 = keys.reduce((arr) => {
                                               arr = arr[arg1];
-                                              if (typeof outer1_0 !== "function") {
+                                              if (typeof closure_1_0 !== "function") {
                                                 HermesBuiltin.throwTypeError();
                                               }
                                               let str = "";
@@ -471,7 +473,7 @@ function stringifyErrors(str) {
           const keys = Object.keys(str);
           const reduced1 = keys.reduce((arr) => {
             arr = arr[arg1];
-            if (typeof outer1_0 !== "function") {
+            if (typeof closure_1_0 !== "function") {
               HermesBuiltin.throwTypeError();
             }
             let str = "";
@@ -544,7 +546,7 @@ function stringifyErrors(str) {
                                         const keys = Object.keys(str);
                                         const reduced1 = keys.reduce((arr) => {
                                           arr = arr[arg1];
-                                          if (typeof outer1_0 !== "function") {
+                                          if (typeof closure_1_0 !== "function") {
                                             HermesBuiltin.throwTypeError();
                                           }
                                           let str = "";
@@ -591,7 +593,7 @@ function stringifyErrors(str) {
                               const keys = Object.keys(str);
                               const reduced1 = keys.reduce((arr) => {
                                 arr = arr[arg1];
-                                if (typeof outer1_0 !== "function") {
+                                if (typeof closure_1_0 !== "function") {
                                   HermesBuiltin.throwTypeError();
                                 }
                                 let str = "";
@@ -638,7 +640,7 @@ function stringifyErrors(str) {
                                           let keys = Object.keys(arr);
                                           let reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "function") {
+                                            if (typeof closure_1_0 !== "function") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
@@ -701,7 +703,7 @@ function stringifyErrors(str) {
                       let keys = Object.keys(arr);
                       let reduced1 = keys.reduce((arr) => {
                         arr = arr[arg1];
-                        if (typeof outer1_0 !== "function") {
+                        if (typeof closure_1_0 !== "function") {
                           HermesBuiltin.throwTypeError();
                         }
                         let str = "";
@@ -760,7 +762,7 @@ function stringifyErrors(str) {
                                           const keys = Object.keys(str);
                                           const reduced1 = keys.reduce((arr) => {
                                             arr = arr[arg1];
-                                            if (typeof outer1_0 !== "function") {
+                                            if (typeof closure_1_0 !== "function") {
                                               HermesBuiltin.throwTypeError();
                                             }
                                             let str = "";
@@ -809,7 +811,7 @@ function stringifyErrors(str) {
                                   let keys = Object.keys(arr);
                                   let reduced1 = keys.reduce((arr) => {
                                     arr = arr[arg1];
-                                    if (typeof outer1_0 !== "function") {
+                                    if (typeof closure_1_0 !== "function") {
                                       HermesBuiltin.throwTypeError();
                                     }
                                     let str = "";
@@ -856,7 +858,7 @@ function stringifyErrors(str) {
                                               let keys = Object.keys(arr);
                                               let reduced1 = keys.reduce((arr) => {
                                                 arr = arr[arg1];
-                                                if (typeof outer1_0 !== "function") {
+                                                if (typeof closure_1_0 !== "function") {
                                                   HermesBuiltin.throwTypeError();
                                                 }
                                                 let str = "";
@@ -939,6 +941,6 @@ function stringifyErrors(str) {
   }
   return str2;
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/http-utils/stringifyErrors.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/http-utils/stringifyErrors.tsx");
 
 export { stringifyErrors };

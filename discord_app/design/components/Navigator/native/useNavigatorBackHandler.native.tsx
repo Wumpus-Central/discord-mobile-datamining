@@ -1,5 +1,5 @@
 // discord_app/design/components/Navigator/native/useNavigatorBackHandler.native.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_3 = {};
@@ -22,15 +22,15 @@ export default function useNavigatorBackHandler() {
     if (arg0 === undefined) {
       flag = false;
     }
-    noop.current = flag;
+    closure_2.current = flag;
     navigation.goBack();
   }, items);
   const effect = React.useEffect(() => navigation.addListener("beforeRemove", (data) => {
-    let closure_0 = data;
+    closure_0 = data;
     if (ref.current) {
       let isIOSResult = "POP" === data.data.action.type;
       if (isIOSResult) {
-        let obj = outer1_0(outer1_1[2]);
+        let obj = closure_1_0(closure_1_1[2]);
         isIOSResult = obj.isIOS();
       }
       if (closure_0 != null) {

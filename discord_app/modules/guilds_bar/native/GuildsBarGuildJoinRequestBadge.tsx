@@ -1,37 +1,39 @@
 // discord_app/modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/11456_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15563_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15564_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/15565_registerAsset.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { MAX_RESULTS_PER_PAGE } from "../../guild_member_verification/MemberVerificationTypes.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import preloadDefault from "preload" /* 5449 */;
+import registerAssetDefault from "registerAsset" /* 11456 */;
+import registerAssetDefault2 from "registerAsset" /* 15563 */;
+import registerAssetDefault3 from "registerAsset" /* 15564 */;
+import registerAssetDefault4 from "registerAsset" /* 15565 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { badgeImageContainer: null, badgeImage: null };
-createCacheKey = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+createCacheKey = { position: "absolute", bottom: -3, right: -3, height: 22, width: 22, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 3, borderRadius: 11, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 16, width: 16, opacity: require("result").DARK_1_LIGHT_08 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_5 = createCacheKey.createStyles(createCacheKey);
 const obj1 = { height: 16, width: 16, opacity: require("result").DARK_1_LIGHT_08 };
-const result = require("jsxProd").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx");
+const result = require("set").fileFinishedImporting("modules/guilds_bar/native/GuildsBarGuildJoinRequestBadge.tsx");
 
 export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
   joinRequestState = joinRequestState.joinRequestState;
-  const tmp = createCacheKey();
+  const tmp = callback();
   if (MAX_RESULTS_PER_PAGE.GuildJoinRequestApplicationStatuses.REJECTED === joinRequestState) {
-    let tmp4 = registerAsset;
+    let tmp4 = registerAssetDefault2;
   } else if (tmp2(4200).GuildJoinRequestApplicationStatuses.SUBMITTED === joinRequestState) {
-    tmp4 = registerAsset;
+    tmp4 = registerAssetDefault3;
   } else if (tmp2(4200).GuildJoinRequestApplicationStatuses.STARTED === joinRequestState) {
-    tmp4 = registerAsset;
+    tmp4 = registerAssetDefault4;
   } else {
     tmp4 = null;
     if (tmp2(4200).GuildJoinRequestApplicationStatuses.APPROVED === joinRequestState) {
-      tmp4 = registerAsset;
+      tmp4 = registerAssetDefault;
     }
   }
   let tmp9 = null;
@@ -42,7 +44,7 @@ export default function GuildsBarGuildJoinRequestBadge(joinRequestState) {
     obj = { source: null, style: null };
     obj[0] = tmp4;
     obj[1] = tmp.badgeImage;
-    obj[2] = jsx(preload, { source: null, style: null });
+    obj[2] = jsx(preloadDefault, { source: null, style: null });
     tmp9 = <View source={null} style={null} />;
   }
   return tmp9;

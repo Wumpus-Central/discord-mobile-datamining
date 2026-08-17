@@ -1,11 +1,12 @@
 // discord_app/modules/user_profile/native/UserProfileActivityCardBadges.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { ActivityTypes } from "ME";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ActivityTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileActivityCardBadges.tsx");
 
 export default function UserProfileActivityCardBadges(activity) {
   activity = activity.activity;
@@ -25,7 +26,7 @@ export default function UserProfileActivityCardBadges(activity) {
   if (0 !== items3.length) {
     const obj = { style: null, children: null };
     obj[0] = activity.style;
-    obj[1] = items3.map((arg0, arg1) => outer1_4(arg0, { activity }, arg1));
+    obj[1] = items3.map((arg0, arg1) => closure_1_4(arg0, { activity }, arg1));
     tmp8 = <View style={null}>{null}</View>;
   }
   return tmp8;

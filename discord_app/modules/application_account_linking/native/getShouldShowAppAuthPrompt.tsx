@@ -1,11 +1,11 @@
 // discord_app/modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { FetchState } from "recomputeFromAppTokens";
-import { tokensToAppTokensMap } from "../../oauth2/AuthorizedAppsActionCreators.tsx";
-import { getAuthorizationApp } from "../hooks/useAuthorizationApp.tsx";
+import getAuthorizationApp from "getAuthorizationApp" /* 7144 */;
+import tokensToAppTokensMapDefault from "tokensToAppTokensMap" /* 7147 */;
+import closure_3 from "recomputeFromAppTokens" /* 5289 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
 
-const require = arg1;
-const result = require("tokensToAppTokensMap").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/getShouldShowAppAuthPrompt.tsx");
 
 export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(application) {
   if (null == application) {
@@ -36,9 +36,9 @@ export const getShouldShowAppAuthPrompt = function getShouldShowAppAuthPrompt(ap
           return tmp4;
         } else if (fetchStateForApplication.getFetchStateForApplication(parentId) === FetchState.NOT_FETCHED) {
           const items = [parentId];
-          response = tokensToAppTokensMap.fetch(items);
+          response = tokensToAppTokensMapDefault.fetch(items);
           let flag2 = false;
-          const obj2 = tokensToAppTokensMap;
+          const obj2 = tokensToAppTokensMapDefault;
         } else {
           flag2 = !(obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId));
           const tmp6 = obj.getFetchStateForApplication(parentId) === tmp5.FETCHED && null != obj.getNewestTokenForApplication(parentId);

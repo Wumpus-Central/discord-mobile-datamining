@@ -1,7 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx
-import { useCoachmark } from "../../../../../design/components/Coachmark/native/useCoachmark.native.tsx";
-import { ReferralProgramCoachmarkImg } from "../../../../premium/referral_program/hooks/native/useReferralProgramCoachmark.tsx";
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");
+import set from "set" /* 2 */;
+import useCoachmark from "useCoachmark" /* 9314 */;
+import ReferralProgramCoachmarkImg from "ReferralProgramCoachmarkImg" /* 16006 */;
+
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouSettingsCoachmark.tsx");
 
 export default function YouSettingsCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));

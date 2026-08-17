@@ -1,32 +1,27 @@
 // discord_app/modules/guild_invite/native/InviteSettingsModal.tsx
-import _slicedToArray from "_slicedToArray";
-import dispatcher from "dispatcher";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import updateWithLatestInvite from "updateWithLatestInvite";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { jsx } from "Form";
-import createCacheKey from "createCacheKey";
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import NavigationStack from "NavigationStack" /* 6312 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "updateWithLatestInvite" /* 8919 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-const require = arg1;
+require = arg1;
 function AdvancedInstantInviteScreen() {
-  let channel;
-  let guild;
-  let inviteSettings;
-  let settings;
-  let tmp = createCacheKey();
+  let tmp = callback();
   let obj = navigation(1500);
   navigation = obj.useNavigation();
-  const items = [ensureGuildLoaded, updateWithLatestInvite, createGuildRecordFromRust];
+  const items = [closure_5, closure_6, closure_7];
   const stateFromStoresObject = navigation(589).useStateFromStoresObject(items, () => {
     const pendingSettings = store.getPendingSettings();
-    channel(tmp10[12])(null != pendingSettings, "Received null pending invite settings");
+    channel(38)(null != pendingSettings, "Received null pending invite settings");
     const inviteSettings = store.getInviteSettings();
-    channel(tmp10[12])(null != inviteSettings, "Received null invite settings");
+    channel(38)(null != inviteSettings, "Received null invite settings");
     channel = channel.getChannel(pendingSettings.channelId);
     let guildId;
     if (channel != null) {
@@ -47,54 +42,54 @@ function AdvancedInstantInviteScreen() {
   }
   let tmp2Result = tmp2(12);
   const tmp10 = !tmp2Result.isEqual(settings, inviteSettings);
-  const dependencyMap = tmp10;
+  dependencyMap = tmp10;
   const items1 = [channel];
   const effect = obj3.useEffect(() => {
     if (null == channel) {
-      const guildId = outer1_6.getGuildId();
+      const guildId = closure_1_6.getGuildId();
       let invitableChannelForGuild = null;
       if (null != guildId) {
-        let obj = navigation(tmp10[14]);
+        let obj = navigation(17015);
         invitableChannelForGuild = obj.getInvitableChannelForGuild(guildId);
       }
       if (null != invitableChannelForGuild) {
         obj = { channelId: null };
         obj[0] = invitableChannelForGuild.channel.id;
-        channel(tmp10[15]).updateSettings(obj);
-        const obj2 = channel(tmp10[15]);
+        channel(8925).updateSettings(obj);
+        const obj2 = channel(8925);
       } else {
         obj = { title: null, body: null, onConfirm: null };
-        const intl = navigation(tmp10[17]).intl;
-        obj[0] = intl.string(navigation(tmp10[17]).t.VINpSK);
-        const intl2 = navigation(tmp10[17]).intl;
-        obj[1] = intl2.string(navigation(tmp10[17]).t.kQ6fit);
-        obj[2] = channel(tmp10[15]).close;
-        channel(tmp10[16]).show(obj);
-        const obj4 = channel(tmp10[16]);
+        const intl = navigation(1236).intl;
+        obj[0] = intl.string(navigation(1236).t.VINpSK);
+        const intl2 = navigation(1236).intl;
+        obj[1] = intl2.string(navigation(1236).t.kQ6fit);
+        obj[2] = channel(8925).close;
+        channel(4827).show(obj);
+        const obj4 = channel(4827);
       }
     }
   }, items1);
   tmp2Result = tmp2(4761);
   const unmountEffect = tmp2Result.useUnmountEffect(() => {
-    channel(tmp10[19]).wait(channel(tmp10[15]).resetSettings);
+    channel(709).wait(channel(8925).resetSettings);
   });
   const items2 = [channel];
   callback = obj3.useCallback(() => {
     if (null != channel) {
-      if (outer1_8.can(outer1_10.CREATE_INSTANT_INVITE, tmp)) {
-        const invite = channel(tmp10[15]).createInvite("IOS Regenerate");
-        const obj3 = channel(tmp10[15]);
-        channel(tmp10[15]).close();
-        const obj4 = channel(tmp10[15]);
+      if (closure_1_8.can(closure_1_10.CREATE_INSTANT_INVITE, tmp)) {
+        const invite = channel(8925).createInvite("IOS Regenerate");
+        const obj3 = channel(8925);
+        channel(8925).close();
+        const obj4 = channel(8925);
       }
     }
-    let obj = channel(tmp10[16]);
+    let obj = channel(4827);
     obj = { title: null, body: null, onConfirm: null };
-    const intl = navigation(tmp10[17]).intl;
-    obj[0] = intl.string(navigation(tmp10[17]).t.VINpSK);
-    const intl2 = navigation(tmp10[17]).intl;
-    obj[1] = intl2.string(navigation(tmp10[17]).t.RiiKV0);
-    obj[2] = channel(tmp10[15]).close;
+    const intl = navigation(1236).intl;
+    obj[0] = intl.string(navigation(1236).t.VINpSK);
+    const intl2 = navigation(1236).intl;
+    obj[1] = intl2.string(navigation(1236).t.RiiKV0);
+    obj[2] = channel(8925).close;
     obj.show(obj);
   }, items2);
   const items3 = [navigation, tmp10, callback];
@@ -104,37 +99,37 @@ function AdvancedInstantInviteScreen() {
         let tmp;
         if (closure_2) {
           const obj = { onPress: null, text: null };
-          obj[0] = _slicedToArray;
-          const intl = outer1_0(outer1_2[17]).intl;
-          obj[1] = intl.string(outer1_0(outer1_2[17]).t["R3BPH+"]);
-          tmp = outer1_11(outer1_0(outer1_2[20]).HeaderActionButton, obj);
+          obj[0] = closure_3;
+          const intl = closure_1_0(closure_1_2[17]).intl;
+          obj[1] = intl.string(closure_1_0(closure_1_2[17]).t["R3BPH+"]);
+          tmp = closure_1_11(closure_1_0(closure_1_2[20]).HeaderActionButton, obj);
         }
         return tmp;
       }
     });
   }, items3);
   const callback1 = obj3.useCallback((maxUses) => {
-    let obj = channel(tmp10[15]);
+    let obj = channel(8925);
     obj = { maxUses };
     obj.updateSettings(obj);
   }, []);
   const callback2 = obj3.useCallback((maxAge) => {
-    let obj = channel(tmp10[15]);
+    let obj = channel(8925);
     obj = { maxAge };
     obj.updateSettings(obj);
   }, []);
   const callback3 = obj3.useCallback((temporary) => {
-    let obj = channel(tmp10[15]);
+    let obj = channel(8925);
     obj = { temporary };
     obj.updateSettings(obj);
   }, []);
   const callback4 = obj3.useCallback((flags) => {
-    let obj = channel(tmp10[15]);
+    let obj = channel(8925);
     obj = { flags };
     obj.updateSettings(obj);
   }, []);
   const callback5 = obj3.useCallback((roleIds) => {
-    let obj = channel(tmp10[15]);
+    let obj = channel(8925);
     obj = { roleIds };
     obj.updateSettings(obj);
   }, []);
@@ -153,12 +148,12 @@ function AdvancedInstantInviteScreen() {
 }
 ({ InviteModalScenes: c9, Permissions: c10 } = ME);
 createCacheKey = { formContainer: null, formContent: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_32 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_invite/native/InviteSettingsModal.tsx");
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
+const result = require("set").fileFinishedImporting("modules/guild_invite/native/InviteSettingsModal.tsx");
 
 export default function InviteSettingsModal() {
   const memo = React.useMemo(() => {

@@ -1,19 +1,20 @@
 // discord_app/modules/guild_settings/GuildSettingsUtils.tsx
-import { hasPermission } from "GuildRoleRecordTypeTag";
-import ME from "ME";
-import { getPermissionOptions } from "../../utils/PermissionSpecUtils.tsx";
+import set from "set" /* 2 */;
+import fromStringAll from "fromString" /* 506 */;
+import GuildRoleRecordTypeTag from "GuildRoleRecordTypeTag" /* 1984 */;
+import getPermissionOptionsDefault from "getPermissionOptions" /* 16046 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
+const hasPermission = GuildRoleRecordTypeTag.hasPermission;
 ({ ElevatedPermissions: c4, ElevatedPermissionsList: c5 } = ME);
-const result = require("fromString").fileFinishedImporting("modules/guild_settings/GuildSettingsUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsUtils.tsx");
 
 export const isRolePowerful = function isRolePowerful(role) {
-  return importAll(506).hasAny(role.permissions, closure_4);
+  return fromStringAll.hasAny(role.permissions, closure_4);
 };
 export const getPowerfulPermissionTitles = function getPowerfulPermissionTitles(arg0, arg1) {
   const items = [];
-  getPermissionOptions;
+  getPermissionOptionsDefault;
   for (const item10015 of closure_5) {
     let str = item10015;
     let tmp3 = hasPermission;

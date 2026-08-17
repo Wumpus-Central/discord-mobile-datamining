@@ -1,24 +1,19 @@
 // discord_app/modules/game_profile/hooks/useSimilarGames.tsx
-import handleLoadMessages from "handleLoadMessages";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { _getShopCollection } from "../GameProfileHttpUtils.tsx";
+import closure_2 from "handleLoadMessages" /* 4505 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { SIMILAR_GAMES_BLOCKED_GAME_IDS as closure_4 } from "set" /* 9169 */;
 
-let require = arg1;
+const require = arg1;
 let closure_5 = [];
 let closure_6 = [];
 const result = require("set").fileFinishedImporting("modules/game_profile/hooks/useSimilarGames.tsx");
 
 export default function useSimilarGames(arg0, arg1) {
-  let data;
-  let error;
-  let isLoading;
   let tmp = arg1;
   if (arg1) {
     tmp = !set.has(arg0);
   }
-  let obj = _getShopCollection;
+  let obj = data(9168);
   const similarGameIds = obj.useSimilarGameIds(arg0, tmp);
   ({ data, isLoading, error } = similarGameIds);
   if (!tmp) {
@@ -26,15 +21,15 @@ export default function useSimilarGames(arg0, arg1) {
   } else {
     tmp7 = data;
   }
-  require = tmp7;
+  data = tmp7;
   let tmp3Result = tmp3(5378);
   const games = tmp3Result.useGames(tmp7);
   tmp3Result = tmp3(589);
-  const items = [handleLoadMessages];
+  const items = [closure_2];
   const items1 = [tmp7];
-  const stateFromStores = tmp3Result.useStateFromStores(items, () => tmp7.some((closure_0) => null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0)), items1);
-  initialize;
-  const items2 = [handleLoadMessages, mergeGuildAvatar];
+  const stateFromStores = tmp3Result.useStateFromStores(items, () => data.some((closure_0) => null == game.getGame(closure_0) && !game.hasNoData(closure_0) && !game.didFetchingFail(closure_0)), items1);
+  data(589);
+  const items2 = [closure_2, closure_3];
   [][0] = tmp7;
   if (tmp) {
     obj = { isFetching: null, similarGames: null };

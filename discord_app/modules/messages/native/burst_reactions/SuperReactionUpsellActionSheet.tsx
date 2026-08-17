@@ -1,13 +1,12 @@
 // discord_app/modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx
-import PremiumFeaturesCards from "PremiumFeaturesCards";
-import get_ActivityIndicator from "getPremiumPlanItem";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticsPages } from "ME";
-import { jsx } from "SuperReactionLocalImageAnimation";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticsPages } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
 const require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
 let closure_8 = require("DismissibleContent").DismissibleContent.SUPER_REACTIONS_COACHMARK_MOBILE;
@@ -20,21 +19,21 @@ createCacheKey.alignItems = "center";
 createCacheKey.justifyContent = "center";
 createCacheKey.top = -150;
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { tintColor: require("Themes").colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
+createCacheKey[1] = { tintColor: ThemesDefault.colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
 createCacheKey[2] = { paddingHorizontal: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { tintColor: require("Themes").colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { tintColor: ThemesDefault.colors.WHITE, width: 32, height: 32, marginVertical: -8, marginRight: -4 };
+const result = require("set").fileFinishedImporting("modules/messages/native/burst_reactions/SuperReactionUpsellActionSheet.tsx");
 
 export default function SuperReactionCoachmarkActionSheet(onDismiss) {
   let _require;
   let analyticsLocations;
   let obj;
-  const tmp = createCacheKey();
+  const tmp = callback();
   _require = tmp;
   analyticsLocations = analyticsLocations(obj[15])().analyticsLocations;
   obj = { page: AnalyticsPages.PREMIUM_UPSELL_BURST_REACTIONS };
-  const items = [mergeGuildAvatar];
+  items = [closure_5];
   const stateFromStores = _require(obj[16]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj2 = _require(obj[16]);
   const tmp2 = analyticsLocations;
@@ -56,14 +55,13 @@ export default function SuperReactionCoachmarkActionSheet(onDismiss) {
     const intl3 = tmp4(tmp3[24]).intl;
     obj[5] = intl3.string(tmp4(tmp3[24]).t.sEAnVH);
     obj[6] = function primaryButtonIcon() {
-      const obj = { style: _undefined.nitroIcon };
-      return outer1_7(_undefined(obj[26]).NitroWheel, obj);
+      obj = { style: lib.nitroIcon };
+      return closure_1_7(lib(obj[26]).NitroWheel, obj);
     };
     obj[7] = function onPrimaryButtonPress() {
       obj = analyticsLocations(obj[27]);
       obj.hideActionSheet();
-      obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: null };
-      obj[2] = _undefined(obj[19]).PremiumFeatureCardOrder.TIER_2_LEADING;
+      obj = { analyticsLocation: obj, analyticsLocations, premiumFeatureCardOrder: lib(obj[19]).PremiumFeatureCardOrder.TIER_2_LEADING };
       analyticsLocations(obj[18])(obj);
     };
     const intl4 = tmp4(tmp3[24]).intl;

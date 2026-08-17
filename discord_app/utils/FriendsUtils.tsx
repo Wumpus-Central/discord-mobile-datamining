@@ -1,20 +1,18 @@
 // discord_app/utils/FriendsUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import ME from "ME";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { expandEventProperties } from "AnalyticsUtils.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function validateDiscordTag(arr) {
   let stringResult = null;
   if (!regex3.test(arr)) {
     if (!arr.includes("#")) {
       const tmp4 = callback(arr.split("#"), 2);
       let str2 = tmp4[1];
-      let obj = expandEventProperties;
+      let obj = expandEventPropertiesDefault;
       obj = { reason: "Invalid Username", query: null, discrim_len: null, username_len: null, is_email_like: null, is_invite_like: null, is_num_only: null };
       obj[1] = arr;
       if (str2 == null) {
@@ -78,7 +76,7 @@ function humanizeAbortCode(arg0, substr) {
 const re6 = /^\d+$/;
 const re7 = /^(.+?@.+?\..+?|.+?#\d{4})$/;
 const re8 = /^[a-zA-Z0-9_\\.]+$/;
-const result = require("getSystemLocale").fileFinishedImporting("utils/FriendsUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/FriendsUtils.tsx");
 
 export { validateDiscordTag };
 export const isValidDiscordTag = function isValidDiscordTag(arr) {
@@ -93,6 +91,6 @@ export const humanizeAbortCodeForA11y = function humanizeAbortCodeForA11y(arg0, 
     obj[0] = substr;
     formatToPlainStringResult = intl.formatToPlainString(getSystemLocale.t["ihb+UW"], obj);
   }
-  00038__(typeof formatToPlainStringResult === "string", "abortCode should be a string for a11y");
+  _modDef38(typeof formatToPlainStringResult === "string", "abortCode should be a string for a11y");
   return formatToPlainStringResult;
 };

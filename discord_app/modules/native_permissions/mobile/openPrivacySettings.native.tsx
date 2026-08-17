@@ -1,13 +1,15 @@
 // discord_app/modules/native_permissions/mobile/openPrivacySettings.native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceSettingsModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 4849 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/native_permissions/mobile/openPrivacySettings.native.tsx");
 
 export default function openPrivacySettings() {
   if (obj.isAndroid()) {
-    enforcing.openPrivacySettings();
-    const obj2 = enforcing;
+    enforcingDefault.openPrivacySettings();
+    const obj2 = enforcingDefault;
   } else {
     const DeviceSettingsManager = NativeModules.DeviceSettingsManager;
     DeviceSettingsManager.openPrivacySettings();

@@ -1,34 +1,28 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteAgeText.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import updateWithLatestInvite from "updateWithLatestInvite";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { apexExperiment } from "../../../design/ManaTypeConsolidationExperiment.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_3 from "updateWithLatestInvite" /* 8919 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsxs: c4, jsx: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ inviteAgeContainer: { flexDirection: "row", alignItems: "center", flexWrap: "wrap" } });
-const result = require("updateWithLatestInvite").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteAgeText.tsx");
 
 export default function InstantInviteAgeText(style) {
-  let View;
-  let canEditInvite;
-  let updateWithLatestInvite;
-  let dependencyMap;
-  let require;
   ({ channel: require, callbackActionSheet: dependencyMap, canEditInvite } = style);
   if (canEditInvite === undefined) {
     canEditInvite = true;
   }
-  ({ onEdit: View, source: updateWithLatestInvite } = style);
+  ({ onEdit: View, source: closure_3 } = style);
   let obj = apexExperiment;
   const manaTypeConsolidationExperiment = obj.useManaTypeConsolidationExperiment("InstantInviteAgeText");
-  let obj1 = initialize;
-  const items = [updateWithLatestInvite];
+  obj1 = initialize;
+  const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   let tmp7Result = null;
   if (null != stateFromStores) {
@@ -48,7 +42,7 @@ export default function InstantInviteAgeText(style) {
     if (canEditInvite) {
       obj1 = { onPress: null, accessibilityRole: "link", accessibilityLabel: null, hitSlop: null, children: null };
       obj1[0] = function onPress() {
-        outer1_0(outer1_1[10]).handlePressSettings(closure_0, closure_1, updateWithLatestInvite);
+        closure_1_0(closure_1_1[10]).handlePressSettings(closure_0, closure_1, closure_3);
         if (callback != null) {
           callback();
         }

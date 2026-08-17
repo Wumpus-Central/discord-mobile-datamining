@@ -1,20 +1,18 @@
 // discord_app/modules/voice_calls/native/components/Timer.tsx
-import { jsxs } from "jsxProd";
-import { PureComponent } from "noop";
-import importAllResult from "noop";
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { Button } from "../../../../design/void/native.tsx";
+import applyDefault from "apply" /* 12 */;
+import Button from "Button" /* 1297 */;
+import { jsxs } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let require = arg1;
+require = arg1;
+const PureComponent = importAllResult.PureComponent;
 class Timer extends PureComponent {
   constructor(arg0) {
     tmp6 = new Timer(global, tmp5, tmp4, tmp3, tmp2, tmp);
     // ThrowIfThisInitialized (0x7c)
     closure_0 = tmp6;
     tmp6._incrementSecond = function _incrementSecond() {
-      let hours;
-      let minutes;
-      const state = tmp6.state;
+      const state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds + 1;
       let tmp = hours;
@@ -30,13 +28,11 @@ class Timer extends PureComponent {
         tmp = sum;
         tmp2 = num2;
       }
-      tmp6.setState({ seconds: num, minutes: tmp2, hours: tmp });
+      closure_0.setState({ seconds: num, minutes: tmp2, hours: tmp });
     };
     tmp6._decrementSecond = function _decrementSecond() {
-      let hours;
-      let minutes;
-      let obj = tmp6;
-      const state = tmp6.state;
+      let obj = closure_0;
+      const state = closure_0.state;
       ({ minutes, hours } = state);
       let num = state.seconds - 1;
       if (num >= 1) {
@@ -86,7 +82,7 @@ class Timer extends PureComponent {
         num5 = 1000;
         _Math2 = Math;
         num6 = 86400;
-        result = require("noop") / 1000 % 86400;
+        result = require("module_0") / 1000 % 86400;
         num7 = 3600;
         num = Math.floor(result / 3600);
         _Math3 = Math;
@@ -128,36 +124,29 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
   this._timerId = null;
 };
 prototype["render"] = function render() {
-  let hideMinutes;
-  let hours;
-  let minutes;
-  let props;
-  let seconds;
-  let state;
-  let style;
   ({ props, state } = this);
   ({ seconds, minutes, hours } = state);
   ({ style, hideMinutes } = props);
   if (!props.hideHours) {
     const _String = String;
     const _HermesInternal = HermesInternal;
-    let str = "" + apply.padStart(String(hours), 2, "0") + ":";
-    const obj = apply;
+    let str = "" + applyDefault.padStart(String(hours), 2, "0") + ":";
+    const obj = applyDefault;
   } else {
     str = "";
   }
   if (!hideMinutes) {
     const _String2 = String;
     const _HermesInternal2 = HermesInternal;
-    let str5 = "" + apply.padStart(String(minutes), 2, "0") + ":";
-    const obj2 = apply;
+    let str5 = "" + applyDefault.padStart(String(minutes), 2, "0") + ":";
+    const obj2 = applyDefault;
   } else {
     str5 = "";
   }
   if (str.length > 0) {
     const _String3 = String;
-    let padStartResult = apply.padStart(String(seconds), 2, "0");
-    const obj3 = apply;
+    let padStartResult = applyDefault.padStart(String(seconds), 2, "0");
+    const obj3 = applyDefault;
   } else {
     padStartResult = seconds;
   }
@@ -165,6 +154,6 @@ prototype["render"] = function render() {
   return jsxs(Button.LegacyText, { style, accessibilityRole: "timer", children });
 };
 Timer.defaultProps = { hideMinutes: false, hideHours: false };
-let result = require("apply").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_calls/native/components/Timer.tsx");
 
 export default Timer;

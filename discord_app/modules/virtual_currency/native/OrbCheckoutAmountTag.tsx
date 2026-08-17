@@ -1,19 +1,20 @@
 // discord_app/modules/virtual_currency/native/OrbCheckoutAmountTag.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { OrbsIcon } from "../../../design/components/Icon/native/redesign/generated/OrbsIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import OrbsIcon from "OrbsIcon" /* 9238 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
+const View = get_ActivityIndicator.View;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let obj = { orbAmountTag: null, orbsIcon: null };
-obj = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
+obj = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 obj[0] = obj;
 obj[1] = { width: 14, height: 14 };
 let closure_5 = createCacheKey.createStyles(obj);
-const result = require("createCacheKey").fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
+const result = set.fileFinishedImporting("modules/virtual_currency/native/OrbCheckoutAmountTag.tsx");
 
 export default function OrbCheckoutAmountTag(orbAmount) {
   orbAmount = orbAmount.orbAmount;
@@ -30,7 +31,7 @@ export default function OrbCheckoutAmountTag(orbAmount) {
     obj[0] = orbAmount;
     stringResult = intl.formatToPlainString(tmp5(1236).t.W4DfeF, obj);
   }
-  const obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
+  obj1 = { variant: "text-md/semibold", accessibilityLabel: stringResult, children: null };
   let str = "--";
   if (null != orbAmount) {
     str = orbAmount;

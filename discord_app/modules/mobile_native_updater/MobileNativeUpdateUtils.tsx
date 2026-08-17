@@ -1,10 +1,11 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateUtils.tsx
-import set from "set";
-import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL";
-import { keys } from "../../ConstantsIOS.tsx";
-import { Linking } from "../../lib/native/Linking.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import keys from "keys" /* 691 */;
+import _mod4090 from "module_4090" /* 4090 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { UPDATE_CONFIG } from "UPDATE_CHECK_INTERVAL" /* 4356 */;
 
-const require = arg1;
+require = arg1;
 function _checkForNewerBuild() {
   const self = this;
   const tmp = callback(function*() {
@@ -35,7 +36,7 @@ function _checkForNewerBuild() {
             return obj;
           } else {
             let obj3 = tmp2;
-            let closure_0 = tmp5;
+            closure_0 = tmp5;
             closure_0 = undefined;
             obj3 = undefined;
             if (null === c3) {
@@ -43,9 +44,9 @@ function _checkForNewerBuild() {
               return { value: null, done: true };
             } else {
               const _HermesInternal2 = HermesInternal;
-              outer1_4.info("Checking " + c3.url + " for updates");
-              const HTTP = outer1_0(outer1_1[3]).HTTP;
-              const obj1 = { url: null, headers: null, rejectWithError: false };
+              closure_1_4.info("Checking " + c3.url + " for updates");
+              const HTTP = closure_1_0(closure_1_1[3]).HTTP;
+              obj1 = { url: null, headers: null, rejectWithError: false };
               obj1[0] = c3.url.toString();
               obj1[1] = { Accept: "application/json" };
               c2 = 1;
@@ -86,7 +87,7 @@ function _checkForNewerBuild() {
       }
     }
   });
-  const _checkForNewerBuild = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -105,9 +106,9 @@ function openBuildInstallerUrl(install) {
     }
     if (uRL.origin !== origin) {
       const _HermesInternal = HermesInternal;
-      tmp2.error("Attempted to follow invalid install URL " + str);
+      logger.error("Attempted to follow invalid install URL " + str);
     } else {
-      const openURLExternally = Linking.default.openURLExternally;
+      const openURLExternally = _mod4090.default.openURLExternally;
       if (obj.isIOS()) {
         openURLExternally(str.toString(), keys.WebBrowserType.SAFARI);
       } else {
@@ -117,9 +118,9 @@ function openBuildInstallerUrl(install) {
   } catch (err) {
   }
 }
-let c4 = new require("sendRequest")("MobileNativeUpdateUtils");
-const tmp2 = new require("sendRequest")("MobileNativeUpdateUtils");
-const result = require("timestamp").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
+let closure_4 = new timestampDefault("MobileNativeUpdateUtils");
+const tmp2 = new timestampDefault("MobileNativeUpdateUtils");
+const result = require("set").fileFinishedImporting("modules/mobile_native_updater/MobileNativeUpdateUtils.tsx");
 
 export const checkForNewerBuild = function checkForNewerBuild() {
   const self = this;

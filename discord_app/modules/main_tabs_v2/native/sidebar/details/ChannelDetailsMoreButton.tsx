@@ -1,11 +1,11 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../_runtime/08904_registerAsset.js";
-import { PressableNavigatorButtonWrapper } from "../../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
+import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper" /* 8495 */;
+import registerAssetDefault from "registerAsset" /* 8904 */;
+import closure_3 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("openChannelLongPressActionSheet").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsMoreButton.tsx");
 
 export default function MoreButton(channel) {
   channel = channel.channel;
@@ -17,11 +17,11 @@ export default function MoreButton(channel) {
       obj = { accessibilityLabel: null, source: null, onPress: null };
       const intl = channel(1236).intl;
       obj[0] = intl.string(channel(1236).t["UKOtz+"]);
-      obj[1] = registerAsset;
+      obj[1] = registerAssetDefault;
       obj[2] = tmp;
       obj[0] = jsx(channel(8492).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
-      tmp2 = jsx(PressableNavigatorButtonWrapper, { accessibilityLabel: null, source: null, onPress: null });
-      const tmp6 = PressableNavigatorButtonWrapper;
+      tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { accessibilityLabel: null, source: null, onPress: null });
+      const tmp6 = PressableNavigatorButtonWrapperDefault;
     } else {
       tmp2 = null;
     }

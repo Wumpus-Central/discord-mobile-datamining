@@ -1,27 +1,26 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { useGetGuildPowerupBannerImage } from "../hooks/useGetGuildPowerupBannerImage.tsx";
-import { useGuildPowerupRollbackEnabled } from "../hooks/useGuildPowerupRollbackEnabled.tsx";
-import { usePowerupActiveStatus } from "../hooks/usePowerupActiveStatus.tsx";
-import { useCalculatePowerupCardStatus } from "../utils/useCalculatePowerupCardStatus.tsx";
-import { GuildPowerupsPerkCard } from "GuildPowerupsPerkCard.tsx";
-import { useGuildPowerupOnShowMore } from "hooks/useGuildPowerupOnShowMore.tsx";
+import noopAll from "noop" /* 19 */;
+import useGuildPowerupRollbackEnabledDefault from "useGuildPowerupRollbackEnabled" /* 11665 */;
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
+import useCalculatePowerupCardStatus from "useCalculatePowerupCardStatus" /* 11688 */;
+import useGetGuildPowerupBannerImageDefault from "useGetGuildPowerupBannerImage" /* 11689 */;
+import useGuildPowerupOnShowMoreDefault from "useGuildPowerupOnShowMore" /* 11736 */;
+import GuildPowerupsPerkCardDefault from "GuildPowerupsPerkCard" /* 11740 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useGetGuildPowerupBannerImage").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsSinglePerkCard.tsx");
 
 export default function GuildPowerupsSinglePerkCard(badge) {
-  let guildId;
-  let powerup;
   ({ guildId, powerup } = badge);
-  let str = useGetGuildPowerupBannerImage(powerup, true);
-  const tmp = usePowerupActiveStatus(guildId, powerup);
+  let str = useGetGuildPowerupBannerImageDefault(powerup, true);
+  const tmp = usePowerupActiveStatusDefault(guildId, powerup);
   let obj = useCalculatePowerupCardStatus;
-  const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp, useGuildPowerupRollbackEnabled(guildId, powerup, "GuildPowerupsSinglePerkCard"));
-  const tmp2 = useGuildPowerupRollbackEnabled(guildId, powerup, "GuildPowerupsSinglePerkCard");
+  const calculatePowerupCardStatus = obj.useCalculatePowerupCardStatus(powerup, tmp, useGuildPowerupRollbackEnabledDefault(guildId, powerup, "GuildPowerupsSinglePerkCard"));
+  const tmp2 = useGuildPowerupRollbackEnabledDefault(guildId, powerup, "GuildPowerupsSinglePerkCard");
   obj = { title: powerup.title, description: powerup.description, cost: powerup.cost, imageUrl: null, status: null, onPress: null, badge: null };
-  const tmp4 = useGuildPowerupOnShowMore(guildId, powerup);
+  const tmp4 = useGuildPowerupOnShowMoreDefault(guildId, powerup);
   const tmp5 = jsx;
   if (str == null) {
     str = "";
@@ -30,5 +29,5 @@ export default function GuildPowerupsSinglePerkCard(badge) {
   obj[4] = calculatePowerupCardStatus;
   obj[5] = tmp4;
   obj[6] = badge.badge;
-  return tmp5(GuildPowerupsPerkCard, obj);
+  return tmp5(GuildPowerupsPerkCardDefault, obj);
 };

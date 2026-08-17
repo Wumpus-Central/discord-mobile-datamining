@@ -1,16 +1,10 @@
 // discord_app/modules/search/tokens/SearchTokenStreamerModeUtils.tsx
-import initialize from "initialize";
-import ME from "ME";
-import { SearchTokenTypes } from "../SearchUtils.tsx";
+import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
+import closure_2 from "initialize" /* 4220 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 function getValidOrderedFilterTokens(closure_0, items) {
-  let tmp;
-  let tmp13;
-  let tmp2;
-  let tmp5;
   [tmp] = items;
   items = [tmp];
   [tmp2] = items;
@@ -41,33 +35,30 @@ function getValidOrderedFilterTokens(closure_0, items) {
   return items1;
 }
 ({ SearchTokenTypes: c3, SearchTypes: c4 } = ME);
-let result = require("SearchTokenTypes").fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/search/tokens/SearchTokenStreamerModeUtils.tsx");
 
 export const isFromUserFilterSupported = function isFromUserFilterSupported() {
-  let tmp3;
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [initialize];
+    const items = [closure_2];
     tmp = items;
   }
   [tmp3] = tmp;
   return !tmp3.hidePersonalInformation;
 };
 export const isMentionsUserFilterSupported = function isMentionsUserFilterSupported() {
-  let tmp3;
   let tmp = arg0;
   if (arg0 === undefined) {
-    const items = [initialize];
+    const items = [closure_2];
     tmp = items;
   }
   [tmp3] = tmp;
   return !tmp3.hidePersonalInformation;
 };
 export const isInChannelFilterSupported = function isInChannelFilterSupported(selectedSearchContext) {
-  let tmp3;
   let tmp = arg1;
   if (arg1 === undefined) {
-    const items = [initialize];
+    const items = [closure_2];
     tmp = items;
   }
   [tmp3] = tmp;

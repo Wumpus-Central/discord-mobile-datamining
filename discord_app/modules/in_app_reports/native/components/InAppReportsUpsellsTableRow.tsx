@@ -1,17 +1,13 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
+import noopAll from "noop" /* 19 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("TableRowInner").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsUpsellsTableRow.tsx");
 
 export default function InAppReportsUpsellsTableRow(disabled) {
-  let disabledTitle;
-  let icon;
-  let onPress;
-  let title;
-  let variant;
   ({ title, disabledTitle, variant } = disabled);
   if (variant === undefined) {
     variant = "default";

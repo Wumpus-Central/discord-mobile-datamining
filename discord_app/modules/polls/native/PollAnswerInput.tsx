@@ -1,30 +1,16 @@
 // discord_app/modules/polls/native/PollAnswerInput.tsx
-import registerAsset from "registerAsset";
-import get_ActivityIndicator from "ImageInputAnswerActionSheet";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { DraftType } from "handleChanged";
-import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER";
-import { EmojiIntention } from "set";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import POLL_ATTACHMENT_FOLDER from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let closure_14;
-let closure_6;
-let map1;
 const require = arg1;
 function ImageInput(openImageInputActionSheet) {
-  let answerIndex;
-  let channelId;
-  let emojiSize;
-  let image;
-  let imageSize;
-  let localCreationAnswerId;
-  let openExpressionPicker;
   ({ channelId, localCreationAnswerId, image } = openImageInputActionSheet);
   ({ openExpressionPicker, emojiSize } = openImageInputActionSheet);
   if (emojiSize === undefined) {
@@ -91,7 +77,7 @@ function ImageInput(openImageInputActionSheet) {
     tmp11 = callback;
   }
   obj[4] = tmp11;
-  const items2 = [openImageInputActionSheet.containerStyle, null != upload && createCacheKey().uploadContainer];
+  const items2 = [openImageInputActionSheet.containerStyle, null != upload && callback2().uploadContainer];
   obj[5] = items2;
   if (tmp6) {
     obj = { children: null };
@@ -109,44 +95,36 @@ function ImageInput(openImageInputActionSheet) {
 ({ MAX_POLL_ANSWER_LENGTH: c9, POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY: c10 } = POLL_ATTACHMENT_FOLDER);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 createCacheKey = { defaultContainer: { flexDirection: "row", alignItems: "center" }, defaultImageAndTextContainer: null, cannotRemove: null, defaultImageContainer: null, pollAnswerTextInput: null, defaultRemoveButtonContainer: null, uploadContainer: null, errorInput: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.lg, flex: 1, overflow: "hidden" };
+createCacheKey = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.lg, flex: 1, overflow: "hidden" };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginRight: 30 };
 createCacheKey[3] = { width: 60, height: 48, justifyContent: "center", alignItems: "center" };
 createCacheKey[4] = { flex: 1, paddingStart: 0 };
-createCacheKey[5] = { paddingLeft: 6, height: 48, justifyContent: "center", color: require("Themes").colors.TEXT_MUTED };
+createCacheKey[5] = { paddingLeft: 6, height: 48, justifyContent: "center", color: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[6] = { alignItems: "flex-start" };
-let obj1 = { paddingLeft: 6, height: 48, justifyContent: "center", color: require("Themes").colors.TEXT_MUTED };
-createCacheKey[7] = { borderColor: require("Themes").colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj2 = { borderColor: require("Themes").colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/polls/native/PollAnswerInput.tsx");
+let obj1 = { paddingLeft: 6, height: 48, justifyContent: "center", color: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[7] = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+const obj2 = { borderColor: ThemesDefault.colors.BORDER_FEEDBACK_CRITICAL, borderWidth: 2 };
+let result = require("set").fileFinishedImporting("modules/polls/native/PollAnswerInput.tsx");
 
 export default function PollAnswerInput(answer) {
-  let canRemoveAnswer;
-  let registerAsset;
-  let closure_4;
-  let closure_5;
-  let closure_6;
-  let error;
-  let inputRef;
-  let onSubmitEditing;
   answer = answer.answer;
   const index = answer.index;
   const channelId = answer.channelId;
-  ({ onAnswerTextChange: registerAsset, onAnswerEmojiSelect: closure_4, canRemoveAnswer, onRemoveAnswer: closure_5, onRemoveAnswerImage: closure_6, error } = answer);
+  ({ onAnswerTextChange: closure_3, onAnswerEmojiSelect: closure_4, canRemoveAnswer, onRemoveAnswer: closure_5, onRemoveAnswerImage: closure_6, error } = answer);
   let localCreationAnswerId;
   function openExpressionPicker() {
     const channel = localCreationAnswerId.getChannel(channelId);
     if (null != channel) {
-      outer1_4.dismiss();
+      closure_1_4.dismiss();
       let obj = answer(channelId[14]);
       obj = { channel: null, onPressEmoji: null, pickerIntention: null, startExpanded: false, autoFocus: false };
       obj[0] = channel;
       obj[1] = function onPressEmoji(arg0) {
         callback(arg0, closure_1);
       };
-      obj[2] = outer1_11.POLLS;
+      obj[2] = closure_1_11.POLLS;
       const result = obj.openEmojiPickerActionSheet(obj);
     }
   }
@@ -156,7 +134,7 @@ export default function PollAnswerInput(answer) {
     obj.update(channelId, answer.localCreationAnswerId, openExpressionPicker.Poll, obj);
   }
   ({ inputRef, onSubmitEditing } = answer);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   localCreationAnswerId = answer.localCreationAnswerId;
   let tmp6Result = null != error;
   if (tmp6Result) {
@@ -184,7 +162,7 @@ export default function PollAnswerInput(answer) {
     openImageInputActionSheet() {
       let obj = index(channelId[16]);
       obj = { channelId, index, answer, onSaveAltText: handleSaveAltText, onRemoveAnswerImage: closure_6, openExpressionPicker };
-      obj.openLazy(answer(channelId[18])(channelId[17], channelId.paths), outer1_10, obj);
+      obj.openLazy(answer(channelId[18])(channelId[17], channelId.paths), closure_1_10, obj);
     },
     iconSrc: index(channelId[19]),
     containerStyle: tmp.defaultImageContainer,
@@ -192,7 +170,7 @@ export default function PollAnswerInput(answer) {
     answerIndex: index
   };
   const items2 = [callback(ImageInput, obj), ];
-  const obj1 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, blurOnSubmit: false, style: null, textContentType: "none", accessibilityLabel: null, accessibilityHint: null, maxLength: null, returnKeyType: "next", required: true, autoCorrect: true, "aria-invalid": null };
+  obj1 = { ref: inputRef, textAlignVertical: "center", showTopContainer: false, showBorder: false, placeholder: null, onChange: null, onSubmitEditing: null, blurOnSubmit: false, style: null, textContentType: "none", accessibilityLabel: null, accessibilityHint: null, maxLength: null, returnKeyType: "next", required: true, autoCorrect: true, "aria-invalid": null };
   const intl = answer(channelId[10]).intl;
   obj1[4] = intl.string(answer(channelId[10]).t.NNHVlv);
   obj1[5] = function onChange(text) {

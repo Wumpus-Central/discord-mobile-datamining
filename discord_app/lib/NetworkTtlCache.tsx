@@ -1,7 +1,9 @@
 // discord_app/lib/NetworkTtlCache.tsx
+import set from "set" /* 2 */;
+
 let closure_0 = { IDLE: "idle", LOADING: "loading", SUCCESS: "success", ERROR: "error" };
 let obj = { IDLE: "idle", LOADING: "loading", VALID: "valid", STALE: "stale", ERROR: "error" };
-const result = require("set").fileFinishedImporting("lib/NetworkTtlCache.tsx");
+const result = set.fileFinishedImporting("lib/NetworkTtlCache.tsx");
 class NetworkTtlCache {
   constructor() {
     obj = global;
@@ -104,7 +106,7 @@ prototype["serialize"] = function serialize() {
   if (null != this.value) {
     tmp = null;
     if (null != self.fetchedAt) {
-      const obj = { value: null, fetchedAt: null };
+      obj = { value: null, fetchedAt: null };
       ({ value: obj[0], fetchedAt: obj[1] } = self);
       tmp = obj;
     }

@@ -1,21 +1,19 @@
 // discord_app/modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ContentDismissActionType } from "ContentDismissActionType";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
 const require = arg1;
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/useShowGuildPowerupRollbackSheet.tsx");
 
 export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
-  let modalConfig;
-  let shouldShow;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
   modalConfig = undefined;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let callback;
   ({ shouldShow, modalConfig } = first(11681)(arg0, arg1));
   if (shouldShow) {
@@ -35,7 +33,6 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
   callback = React.useRef(false);
   const items1 = [first, modalConfig, tmp5[1]];
   const effect = React.useEffect(() => {
-    let bodies;
     let current = ref.current;
     if (!current) {
       current = null == modalConfig;
@@ -53,14 +50,14 @@ export default function useShowGuildPowerupRollbackSheet(arg0, arg1) {
       obj[1] = bodies.join("\n\n");
       obj[2] = modalConfig.primaryButtonText;
       obj[3] = function onCtaPress() {
-        callback(outer1_5.TAKE_ACTION);
-        outer1_1(outer1_2[6]).hideActionSheet(outer1_0(outer1_2[5]).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
+        callback(closure_1_5.TAKE_ACTION);
+        closure_1_1(closure_1_2[6]).hideActionSheet(closure_1_0(closure_1_2[5]).GUILD_POWERUP_ROLLBACK_SHEET_KEY);
       };
       obj[4] = function onDismiss() {
-        callback(outer1_5.USER_DISMISS);
+        callback(closure_1_5.USER_DISMISS);
       };
-      first(_undefined[5])(obj);
-      const tmp10 = first(_undefined[5]);
+      first(table[5])(obj);
+      const tmp10 = first(table[5]);
     }
   }, items1);
 };

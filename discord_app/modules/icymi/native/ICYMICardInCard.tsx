@@ -1,21 +1,20 @@
 // discord_app/modules/icymi/native/ICYMICardInCard.tsx
-import getIconForChannel from "getIconForChannel";
-import { View } from "Text";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { DEFAULT_ROLE_COLOR_HEX } from "ME";
-import jsxProd from "TextIcon";
-import createICYMIStyles from "createICYMIStyles";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { SolidCutout } from "../../../design/components/Icon/native/ClipView.tsx";
-import { Button } from "../../../design/void/native.tsx";
-import { GuildIconSizes } from "../../guild/native/GuildIcon.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import SolidCutout from "SolidCutout" /* 8402 */;
+import SolidCutoutDefault from "SolidCutout" /* 8402 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-let c10;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function CutoutGuildIconWithUserCustom(guild) {
   guild = guild.guild;
   let obj = { style: { width: 40, height: 40 }, children: null };
@@ -25,14 +24,13 @@ function CutoutGuildIconWithUserCustom(guild) {
   obj[0] = SolidCutout.CutoutShape.Circle;
   const items = [obj];
   obj[0] = items;
-  const obj1 = { guild, size: null };
-  const tmp2 = SolidCutout;
+  obj1 = { guild, size: null };
+  const tmp2 = SolidCutoutDefault;
   obj1[1] = GuildIconSizes.GuildIconSizes.SMALL_32;
-  obj[1] = callback(GuildIconSizes, obj1);
+  obj[1] = callback(GuildIconSizesDefault, obj1);
   const items1 = [callback(tmp2, obj), ];
-  const obj2 = { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: null };
-  obj2[4] = Button.AvatarSizes.XSMALL_20;
-  items1[1] = callback(Button.Avatar, obj2);
+  const tmp3 = GuildIconSizesDefault;
+  items1[1] = callback(Button.Avatar, { animate: true, style: tmp.authorAvatar, guildId: guild.id, user: guild.author, size: Button.AvatarSizes.XSMALL_20 });
   obj[1] = items1;
   return callback2(View, obj);
 }
@@ -40,34 +38,30 @@ function CutoutGuildIconWithUserCustom(guild) {
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   obj = { container: obj, content: { flex: 1, overflow: "hidden" }, channelNameAndAccessory: null, channelNameAndAccessoryLarge: null, header: null, headerInfo: null, title: null, titleLeft: null, subTitleContainer: null, subtitle: null, genContentSubtitle: null, genContentSubtitleChannel: null, subtitleTrailing: null, separator: null, normalContent: null, authorAvatar: null };
   obj = { marginTop: marginHorizontal.margin };
-  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: Themes.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj = { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[2] = obj;
-  obj[3] = { flexDirection: "column", paddingBottom: Themes.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj[3] = { flexDirection: "column", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
   obj[4] = { flexDirection: "row", flexGrow: 1 };
-  const obj1 = { flexDirection: "column", paddingBottom: Themes.space.PX_4, marginHorizontal: marginHorizontal.margin };
-  obj[5] = { flexGrow: 1, flexShrink: 1, marginLeft: Themes.space.PX_12 };
+  obj1 = { flexDirection: "column", paddingBottom: ThemesDefault.space.PX_4, marginHorizontal: marginHorizontal.margin };
+  obj[5] = { flexGrow: 1, flexShrink: 1, marginLeft: ThemesDefault.space.PX_12 };
   obj[6] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginBottom: 2 };
   obj[7] = { flexShrink: 1, flexGrow: 0, flexDirection: "row", alignItems: "center", gap: 6 };
-  const obj2 = { flexGrow: 1, flexShrink: 1, marginLeft: Themes.space.PX_12 };
-  obj[8] = { flexDirection: "row", justifyContent: "space-between", borderRadius: Themes.radii.sm };
+  const obj2 = { flexGrow: 1, flexShrink: 1, marginLeft: ThemesDefault.space.PX_12 };
+  obj[8] = { flexDirection: "row", justifyContent: "space-between", borderRadius: ThemesDefault.radii.sm };
   obj[9] = { flexShrink: 1, flexGrow: 0, width: "100%" };
   obj[10] = { flexDirection: "row", alignItems: "center", gap: 2 };
   obj[11] = { flexDirection: "row", alignItems: "center", gap: 2, flex: 1 };
   obj[12] = { paddingVertical: 1 };
-  const obj3 = { flexDirection: "row", justifyContent: "space-between", borderRadius: Themes.radii.sm };
-  obj[13] = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
-  const obj4 = { height: 1, width: "100%", backgroundColor: Themes.colors.BORDER_SUBTLE };
-  obj[14] = { borderBottomWidth: 1, borderBottomColor: Themes.colors.BORDER_STRONG, flexShrink: 0 };
+  const obj3 = { flexDirection: "row", justifyContent: "space-between", borderRadius: ThemesDefault.radii.sm };
+  obj[13] = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  const obj4 = { height: 1, width: "100%", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj[14] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_STRONG, flexShrink: 0 };
   obj[15] = { position: "absolute", right: 0, bottom: 0 };
   return obj;
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMICardInCard.tsx");
 
 export default function ICYMICardInCard(message) {
-  let children;
-  let guildId;
-  let onHeaderLongPress;
-  let timestamp;
   message = message.message;
   const actionLabel = message.actionLabel;
   let id = message.id;
@@ -83,20 +77,20 @@ export default function ICYMICardInCard(message) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let c7;
+  closure_7 = undefined;
   let fontScale;
   let stateFromStores;
   let guild_id;
   let stateFromStores1;
   let stateFromStores2;
   let displayNameStylesFont;
-  let c14;
-  let c15;
+  c14 = undefined;
+  closure_15 = undefined;
   const tmp = stateFromStores2();
-  c7 = tmp;
+  closure_7 = tmp;
   let obj = message(id[12]);
   fontScale = obj.useFontScale();
-  let obj1 = message(id[13]);
+  obj1 = message(id[13]);
   let items = [channelId];
   let items1 = [channelId];
   stateFromStores = obj1.useStateFromStores(items, () => channelId.getChannel(channelId), items1);
@@ -108,12 +102,12 @@ export default function ICYMICardInCard(message) {
     guild_id = guildId;
   }
   let tmp2Result = tmp2(tmp3[13]);
-  let items2 = [c7];
+  let items2 = [closure_7];
   let items3 = [guild_id];
   stateFromStores1 = tmp2Result.useStateFromStores(items2, () => {
     let guild = null;
     if (null != guild_id) {
-      guild = _undefined.getGuild(tmp);
+      guild = guild.getGuild(tmp);
     }
     return guild;
   }, items3);
@@ -125,7 +119,7 @@ export default function ICYMICardInCard(message) {
     if (flag2) {
       member = null;
       if (null != guild_id) {
-        let id;
+        id = undefined;
         if (message != null) {
           id = tmp3.author.id;
         }
@@ -215,7 +209,7 @@ export default function ICYMICardInCard(message) {
     return tmp2;
   }, items7);
   const tmp21 = actionLabel(id[18])(stateFromStores);
-  c15 = tmp21;
+  closure_15 = tmp21;
   const items8 = [flag2, , , , , , , , , , , ];
   author2 = undefined;
   if (message != null) {
@@ -251,14 +245,14 @@ export default function ICYMICardInCard(message) {
               }
               let obj7 = message(id[19]);
               let obj = { style: null, children: null };
-              obj[0] = _undefined.genContentSubtitle;
+              obj[0] = guild.genContentSubtitle;
               const iconForChannel = obj7.getIconForChannel(tmp4);
               obj = { color: null };
               obj[0] = colorString;
               const items = [obj, ];
               let tmp42;
               if (null != displayNameStylesFont) {
-                const obj1 = { fontFamily: null };
+                obj1 = { fontFamily: null };
                 obj1[0] = tmp41;
                 tmp42 = obj1;
               }
@@ -277,12 +271,12 @@ export default function ICYMICardInCard(message) {
               obj3[2] = intl2.string(message(id[20]).t.CHUAYk);
               items1[1] = stateFromStores(message(id[17]).Text, obj3);
               const obj4 = { style: null, children: null };
-              obj4[0] = _undefined.genContentSubtitleChannel;
+              obj4[0] = guild.genContentSubtitleChannel;
               const items2 = [stateFromStores(iconForChannel, { size: "xs", color: "text-default" }), ];
               const obj5 = { variant: "text-sm/medium", color: "text-default", onPress: null, style: null, lineClamp: 1, ellipsizeMode: "tail", children: null };
               obj5[2] = onHeaderPress;
               obj5[3] = { flex: 1 };
-              obj5[6] = c15;
+              obj5[6] = closure_15;
               items2[1] = stateFromStores(message(id[17]).Text, obj5);
               obj4[1] = items2;
               items1[2] = guild_id(onHeaderPress, obj4);
@@ -299,7 +293,7 @@ export default function ICYMICardInCard(message) {
     } else {
       TextIcon = message(id[21]).TextIcon;
     }
-    const obj6 = { style: _undefined.genContentSubtitle, children: null };
+    const obj6 = { style: guild.genContentSubtitle, children: null };
     obj7 = { variant: "text-sm/medium", color: "text-default", children: actionLabel };
     const items3 = [stateFromStores(message(id[17]).Text, obj7), ];
     let tmp13 = null;
@@ -310,12 +304,12 @@ export default function ICYMICardInCard(message) {
       obj9[2] = intl.string(message(id[20]).t.CHUAYk);
       const items4 = [stateFromStores(message(id[17]).Text, obj9), ];
       const obj10 = { style: null, children: null };
-      obj10[0] = _undefined.genContentSubtitleChannel;
+      obj10[0] = guild.genContentSubtitleChannel;
       const items5 = [stateFromStores(TextIcon, { size: "xs", color: "text-default" }), ];
       const obj11 = { variant: "text-sm/medium", color: "text-default", onPress: null, style: null, lineClamp: 1, ellipsizeMode: "tail", children: null };
       obj11[2] = onHeaderPress;
       obj11[3] = { flex: 1 };
-      obj11[6] = c15;
+      obj11[6] = closure_15;
       items5[1] = stateFromStores(message(id[17]).Text, obj11);
       obj10[1] = items5;
       items4[1] = guild_id(onHeaderPress, obj10);
@@ -346,9 +340,9 @@ export default function ICYMICardInCard(message) {
   obj = { style: tmp.container, children: null };
   const memo3 = obj5.useMemo(() => {
     if (fontScale > 1.8) {
-      let channelNameAndAccessory = _undefined.channelNameAndAccessoryLarge;
+      let channelNameAndAccessory = guild.channelNameAndAccessoryLarge;
     } else {
-      channelNameAndAccessory = _undefined.channelNameAndAccessory;
+      channelNameAndAccessory = guild.channelNameAndAccessory;
     }
     return channelNameAndAccessory;
   }, items10);
@@ -371,13 +365,12 @@ export default function ICYMICardInCard(message) {
   obj5[1] = items12;
   const items13 = [guild_id(onHeaderPress, obj5), ];
   let obj7 = { onPress: callback, style: tmp.subtitleTrailing, hitSlop: 8, children: null };
-  let obj8 = { color: null, size: "sm" };
-  obj8[0] = actionLabel(id[8]).colors.ICON_MUTED;
-  obj7[3] = stateFromStores(message(id[25]).MoreHorizontalIcon, obj8);
+  const tmp2Result1 = message(id[15]);
+  obj7[3] = stateFromStores(message(id[25]).MoreHorizontalIcon, { color: actionLabel(id[8]).colors.ICON_MUTED, size: "sm" });
   items13[1] = stateFromStores(message(id[23]).PressableOpacity, obj7);
   obj4[1] = items13;
   const items14 = [guild_id(onHeaderPress, obj4), ];
-  const tmp2Result1 = message(id[15]);
+  let obj8 = { color: actionLabel(id[8]).colors.ICON_MUTED, size: "sm" };
   items14[1] = stateFromStores(onHeaderPress, { style: tmp.subTitleContainer, children: stateFromStores(onHeaderPress, obj10) });
   obj3[1] = items14;
   items11[1] = guild_id(onHeaderPress, obj3);

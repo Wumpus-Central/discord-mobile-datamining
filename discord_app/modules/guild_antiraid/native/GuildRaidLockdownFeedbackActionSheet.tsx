@@ -1,21 +1,19 @@
 // discord_app/modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { AnalyticEvents } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles({ container: { display: "flex", gap: 24 } });
-const result = require("ME").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_antiraid/native/GuildRaidLockdownFeedbackActionSheet.tsx");
 
 export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   guildId = guildId.guildId;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   let first1;
   let React;
   const tmp2 = first1(React.useState([]), 2);
@@ -34,7 +32,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj[0] = intl2.string(guildId(1236).t.SdVsip);
   obj[1] = guildId(5242).RaidLockdownFeedbackType.MENTION_SPAM;
   items[1] = obj;
-  const obj1 = { text: null, value: null };
+  obj1 = { text: null, value: null };
   const intl3 = guildId(1236).intl;
   obj1[0] = intl3.string(guildId(1236).t.uTiSVL);
   obj1[1] = guildId(5242).RaidLockdownFeedbackType.CHANNEL_SPAM;
@@ -62,26 +60,29 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   const obj7 = { style: callback2().container, children: null };
   const tmp = callback2();
   const tmp8 = closure_7;
-  const obj8 = { hasIcons: false, children: null };
-  obj8[1] = items.map((value) => {
-    value = value.value;
-    const guildId = value;
-    const obj = {
-      onPress() {
-        outer1_2(outer1_1.includes(closure_0) ? ((arr) => arr.filter((arg0) => arg0 !== closure_0)) : ((arg0) => {
-          const items = [];
-          items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
-          return items;
-        }));
-      },
-      checked: null,
-      label: null
-    };
-    obj[1] = first.includes(value);
-    obj[2] = value.text;
-    return outer1_6(guildId(8558).TableCheckboxRow, obj, value);
-  });
-  const items1 = [callback(guildId(6286).TableRowGroup, obj8), , ];
+  const tmp9 = first(6551);
+  const items1 = [
+    callback(guildId(6286).TableRowGroup, {
+      hasIcons: false,
+      children: items.map((label) => {
+        const value = label.value;
+        guildId = value;
+        return closure_1_6(guildId(8558).TableCheckboxRow, {
+          onPress() {
+            closure_1_2(closure_1_1.includes(closure_0) ? ((arr) => arr.filter((arg0) => arg0 !== closure_0)) : ((arg0) => {
+              const items = [];
+              items[HermesBuiltin.arraySpread(arg0, 0)] = closure_0;
+              return items;
+            }));
+          },
+          checked: first.includes(value),
+          label: label.text
+        }, value);
+      })
+    }),
+  ,
+
+  ];
   let hasItem = first.includes(guildId(5242).RaidLockdownFeedbackType.OTHER);
   if (hasItem) {
     const obj9 = { autoComplete: "off", value: null, placeholder: null, onChange: null };
@@ -98,7 +99,7 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
     onPress() {
       let obj = guildId(5042);
       obj = { raid_lockdown_feedback_type: first, raid_lockdown_feedback_other_reason: first1, guild_id: guildId };
-      obj.trackWithMetadata(outer1_5.GUILD_RAID_LOCKDOWN_FEEDBACK, obj);
+      obj.trackWithMetadata(closure_1_5.GUILD_RAID_LOCKDOWN_FEEDBACK, obj);
       first(4342).hideActionSheet("GuildRaidLockdownFeedbackActionSheet");
     },
     text: null
@@ -107,6 +108,6 @@ export default function GuildRaidLockdownFeedbackActionSheet(guildId) {
   obj10[1] = intl9.string(guildId(1236).t.nAt0rE);
   items1[2] = callback(guildId(4745).Button, obj10);
   obj7[1] = items1;
-  obj5[2] = tmp8(first(6551), obj7);
+  obj5[2] = tmp8(tmp9, obj7);
   return callback(guildId(7175).ActionSheet, obj5);
 };

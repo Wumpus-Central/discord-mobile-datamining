@@ -1,23 +1,16 @@
 // discord_app/modules/user_profile/native/UserProfileFixedBackground.tsx
-import _slicedToArray from "_slicedToArray";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { useUserProfileColors } from "../hooks/native/useUserProfileColors.tsx";
-import { useUserProfileGradientColors } from "../hooks/native/useUserProfileGradientColors.tsx";
+import ManaContext from "ManaContext" /* 4104 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import useUserProfileColors from "useUserProfileColors" /* 8979 */;
+import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8980 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-const memoResult = require("noop").memo((style) => {
-  let bannerHeight;
-  let gradientHeight;
-  let primaryColor;
-  let secondaryColor;
-  let theme;
+const memoResult = importAllResult.memo((style) => {
   style = style.style;
   ({ gradientHeight, bannerHeight } = style);
   let obj = ManaContext;
@@ -39,13 +32,13 @@ const memoResult = require("noop").memo((style) => {
       obj[1] = items1;
       const items2 = [closure_4.absoluteFill, style];
       obj[2] = items2;
-      return jsx(LinearGradient, { colors: null, locations: null, style: null, pointerEvents: "none" });
+      return jsx(LinearGradientDefault, { colors: null, locations: null, style: null, pointerEvents: "none" });
     }
   }
   style = [closure_4.absoluteFill, { backgroundColor: gradientFallbackBackground }, ];
   style[2] = style;
   return <closure_5 style={style} pointerEvents="none" />;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileFixedBackground.tsx");
 
 export default memoResult;

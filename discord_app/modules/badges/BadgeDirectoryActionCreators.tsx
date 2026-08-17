@@ -1,11 +1,9 @@
 // discord_app/modules/badges/BadgeDirectoryActionCreators.tsx
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 function urlUserId(arg0) {
   currentUser = currentUser.getCurrentUser();
@@ -22,11 +20,11 @@ function urlUserId(arg0) {
 function _fetchBadgeDirectory() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, body) {
       if (c8 === 2) {
         c8 = 3;
@@ -56,15 +54,15 @@ function _fetchBadgeDirectory() {
             } else {
               let authStore = tmp3;
               let id1 = tmp7;
-              let obj1;
+              obj1 = undefined;
               if (obj1 === undefined) {
                 obj1 = {};
               }
-              let dependencyMap;
+              dependencyMap = undefined;
               id1 = undefined;
               authStore = undefined;
-              let closure_5;
-              let c6;
+              closure_5 = undefined;
+              c6 = undefined;
               body = undefined;
               c8 = undefined;
               body = 1;
@@ -130,7 +128,7 @@ function _fetchBadgeDirectory() {
             } else {
               if (2 === tmp7) {
                 c6 = 0;
-                let closure_9 = closure_5;
+                closure_9 = closure_5;
                 obj5 = obj1(5006);
                 const obj6 = { name: null, tags: null };
                 obj6[0] = callback(5011).MetricEvents.BADGE_DIRECTORY_CATALOG_FETCH;
@@ -192,7 +190,7 @@ function _fetchBadgeDirectory() {
     iter.next();
     return iter;
   });
-  const _fetchBadgeDirectory = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -204,11 +202,11 @@ function _fetchBadgeDirectory() {
 function _fetchBadge() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -236,13 +234,13 @@ function _fetchBadge() {
               obj[0] = arg1;
               return obj;
             } else {
-              let mergeGuildAvatar = tmp3;
-              let set = tmp7;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
               let callback;
               let lib;
-              let dependencyMap = lib;
+              dependencyMap = lib;
               if (lib == null) {
-                const currentUser = outer1_4.getCurrentUser();
+                const currentUser = closure_1_4.getCurrentUser();
                 let id;
                 if (currentUser != null) {
                   id = currentUser.id;
@@ -251,10 +249,10 @@ function _fetchBadge() {
               }
               callback = dependencyMap;
               if (null != dependencyMap) {
-                let c6 = 1;
-                const HTTP = callback(outer1_2[4]).HTTP;
-                const obj1 = { url: null, rejectWithError: true };
-                obj1[0] = outer1_5.USER_BADGE(v0(tmp26), tmp40);
+                c6 = 1;
+                const HTTP = callback(closure_1_2[4]).HTTP;
+                obj1 = { url: null, rejectWithError: true };
+                obj1[0] = closure_1_5.USER_BADGE(v0(tmp26), tmp40);
                 v0 = 2;
                 c8 = 1;
                 const obj2 = { value: null, done: false };
@@ -300,7 +298,7 @@ function _fetchBadge() {
       }
     })();
   });
-  const _fetchBadge = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -310,7 +308,7 @@ function _fetchBadge() {
   return applyArgumentsResult;
 }
 ({ Endpoints: c5, ME: closure_6 } = ME);
-const result = require("ME").fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/badges/BadgeDirectoryActionCreators.tsx");
 
 export const fetchBadgeDirectory = function fetchBadgeDirectory(id) {
   const self = this;
@@ -333,7 +331,7 @@ export const fetchBadge = function fetchBadge(GIFTING) {
   return applyArgumentsResult;
 };
 export const markBadgeDirectoryBadgeIndicatorSeen = function markBadgeDirectoryBadgeIndicatorSeen(badgeId) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "BADGE_DIRECTORY_MARK_BADGE_INDICATOR_SEEN", badgeId };
   obj.dispatch(obj);
 };

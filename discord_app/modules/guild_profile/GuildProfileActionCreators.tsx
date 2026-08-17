@@ -1,37 +1,35 @@
 // discord_app/modules/guild_profile/GuildProfileActionCreators.tsx
-import dispatcher from "dispatcher";
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import handleUpdateStart from "handleUpdateStart";
-import { GuildProfileFetchStatus } from "handleUpdateStart";
-import ME from "ME";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "handleUpdateStart" /* 8854 */;
+import { GuildProfileFetchStatus } from "handleUpdateStart" /* 8854 */;
+import ME from "ME" /* 676 */;
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
 import { getEmoji } from "GuildProfileBuilders.tsx";
 
-let c9;
-let metroImportAll;
 const require = arg1;
 function _fetchGuildTopGames() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
-      let closure_1 = tmp5;
-      const HTTP = lib(outer1_2[6]).HTTP;
-      const obj1 = { url: null, rejectWithError: null };
-      obj1[0] = outer1_9.GUILD_TOP_GAMES(lib);
-      obj1[1] = lib(outer1_2[6]).rejectWithMigratedError();
+      closure_1 = tmp5;
+      const HTTP = lib(closure_1_2[6]).HTTP;
+      obj1 = { url: null, rejectWithError: null };
+      obj1[0] = closure_1_9.GUILD_TOP_GAMES(lib);
+      obj1[1] = lib(closure_1_2[6]).rejectWithMigratedError();
       lib = yield HTTP.get(obj1);
       const obj = lib(table[7]);
       return obj.buildTopGamesFromServer(lib.body.top_games);
     })();
   });
-  const _fetchGuildTopGames = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -40,11 +38,11 @@ function _fetchGuildTopGames() {
   }
   return applyArgumentsResult;
 }
-({ AnalyticEvents: metroImportAll, Endpoints: c9 } = ME);
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/guild_profile/GuildProfileActionCreators.tsx");
+({ AnalyticEvents: closure_8, Endpoints: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/guild_profile/GuildProfileActionCreators.tsx");
 
-export const getGuildProfile = function getGuildProfile(outer1_0) {
-  const _require = outer1_0;
+export const getGuildProfile = function getGuildProfile(closure_1_0) {
+  const _require = closure_1_0;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = {};
@@ -53,19 +51,19 @@ export const getGuildProfile = function getGuildProfile(outer1_0) {
   if (flag === undefined) {
     flag = false;
   }
-  if (null == outer1_0) {
+  if (null == closure_1_0) {
     return Promise.resolve(null);
   } else {
-    const fetchStatus = store.getFetchStatus(outer1_0);
-    let num = store.getLastSyncTimestamp(outer1_0);
-    const profile = store.getProfile(outer1_0);
+    const fetchStatus = store.getFetchStatus(closure_1_0);
+    let num = store.getLastSyncTimestamp(closure_1_0);
+    const profile = store.getProfile(closure_1_0);
     const _Date2 = Date;
     const timestamp = Date.now();
     if (num == null) {
       num = 0;
     }
     const diff = timestamp - num;
-    const nextFetchAllowedAt = store.getNextFetchAllowedAt(outer1_0);
+    const nextFetchAllowedAt = store.getNextFetchAllowedAt(closure_1_0);
     if (flag) {
       if (null != nextFetchAllowedAt) {
         const _Date = Date;
@@ -88,93 +86,93 @@ export const getGuildProfile = function getGuildProfile(outer1_0) {
       }
     }
     obj = { type: "GUILD_PROFILE_FETCH", guildId: null };
-    obj[1] = outer1_0;
-    dispatcher.dispatch(obj);
+    obj[1] = closure_1_0;
+    dispatcherDefault.dispatch(obj);
     const HTTP = _sendRequest.HTTP;
     obj = { url: null, rejectWithError: null };
-    obj[0] = closure_9.GUILD_PROFILE(outer1_0);
-    const obj2 = dispatcher;
+    obj[0] = closure_9.GUILD_PROFILE(closure_1_0);
+    const obj2 = dispatcherDefault;
     const obj6 = store;
     obj[1] = _sendRequest.rejectWithMigratedError();
     const value = HTTP.get(obj);
     const obj5 = _sendRequest;
     resolved1 = value.then((body) => {
-      let obj = outer1_0(outer1_2[7]);
+      let obj = callback(closure_1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
-      obj = { type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: outer1_0, profile: guildProfileFromServer };
-      outer1_1(outer1_2[5]).dispatch(obj);
+      obj = { type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: callback, profile: guildProfileFromServer };
+      closure_1_1(closure_1_2[5]).dispatch(obj);
       return guildProfileFromServer;
     }).catch((arg0) => {
-      const aPIError = new outer1_0(outer1_2[8]).APIError(arg0);
-      let obj = outer1_1(outer1_2[5]);
-      obj = { type: "GUILD_PROFILE_FETCH_FAILURE", guildId: outer1_0, error: aPIError };
+      const aPIError = new callback(closure_1_2[8]).APIError(arg0);
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { type: "GUILD_PROFILE_FETCH_FAILURE", guildId: callback, error: aPIError };
       obj.dispatch(obj);
       return null;
     });
     const nextPromise = value.then((body) => {
-      let obj = outer1_0(outer1_2[7]);
+      let obj = callback(closure_1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
-      obj = { type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: outer1_0, profile: guildProfileFromServer };
-      outer1_1(outer1_2[5]).dispatch(obj);
+      obj = { type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: callback, profile: guildProfileFromServer };
+      closure_1_1(closure_1_2[5]).dispatch(obj);
       return guildProfileFromServer;
     });
   }
 };
-export const saveGuildProfile = function saveGuildProfile(outer1_0, name) {
-  const _require = outer1_0;
-  if (store.getIsUpdating(outer1_0)) {
+export const saveGuildProfile = function saveGuildProfile(closure_1_0, name) {
+  const _require = closure_1_0;
+  if (store.getIsUpdating(closure_1_0)) {
     let resolved = Promise.resolve(null);
   } else {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "GUILD_PROFILE_UPDATE", guildId: null, updates: null };
-    obj[1] = outer1_0;
+    obj[1] = closure_1_0;
     obj[2] = name;
     obj.dispatch(obj);
     const HTTP = _sendRequest.HTTP;
     obj = { url: null, body: null, rejectWithError: null };
-    obj[0] = closure_9.GUILD_PROFILE(outer1_0);
+    obj[0] = closure_9.GUILD_PROFILE(closure_1_0);
     obj[1] = _getEmoji.buildGuildProfileUpdateForServer(name);
     const obj4 = _getEmoji;
     obj[2] = _sendRequest.rejectWithMigratedError();
     const obj5 = _sendRequest;
     const patchResult = HTTP.patch(obj);
     resolved = HTTP.patch(obj).then((body) => {
-      let obj = outer1_0(outer1_2[7]);
+      let obj = callback(closure_1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
-      obj = { type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: outer1_0, profile: guildProfileFromServer };
-      outer1_1(outer1_2[5]).dispatch(obj);
+      obj = { type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: callback, profile: guildProfileFromServer };
+      closure_1_1(closure_1_2[5]).dispatch(obj);
       return guildProfileFromServer;
     }).catch((arg0) => {
-      const aPIError = new outer1_0(outer1_2[8]).APIError(arg0);
-      let obj = outer1_1(outer1_2[5]);
-      obj = { type: "GUILD_PROFILE_UPDATE_FAILURE", guildId: outer1_0, error: aPIError };
+      const aPIError = new callback(closure_1_2[8]).APIError(arg0);
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { type: "GUILD_PROFILE_UPDATE_FAILURE", guildId: callback, error: aPIError };
       obj.dispatch(obj);
       return null;
     });
     const nextPromise = HTTP.patch(obj).then((body) => {
-      let obj = outer1_0(outer1_2[7]);
+      let obj = callback(closure_1_2[7]);
       const guildProfileFromServer = obj.buildGuildProfileFromServer(body.body);
-      obj = { type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: outer1_0, profile: guildProfileFromServer };
-      outer1_1(outer1_2[5]).dispatch(obj);
+      obj = { type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: callback, profile: guildProfileFromServer };
+      closure_1_1(closure_1_2[5]).dispatch(obj);
       return guildProfileFromServer;
     });
   }
   return resolved;
 };
-export const setGuildProfileVisibility = function setGuildProfileVisibility(outer1_0) {
-  const _require = outer1_0;
-  if (store.getIsUpdating(outer1_0)) {
+export const setGuildProfileVisibility = function setGuildProfileVisibility(closure_1_0) {
+  const _require = closure_1_0;
+  if (store.getIsUpdating(closure_1_0)) {
     let resolved = Promise.resolve(null);
   } else {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY", guildId: null, visibility: null };
-    obj[1] = outer1_0;
+    obj[1] = closure_1_0;
     obj[2] = arg1;
     obj.dispatch(obj);
     const HTTP = _sendRequest.HTTP;
     obj = { url: null, body: null, rejectWithError: null };
-    obj[0] = closure_9.GUILD_PROFILE_VISIBILITY(outer1_0);
-    const obj1 = { visibility: null };
+    obj[0] = closure_9.GUILD_PROFILE_VISIBILITY(closure_1_0);
+    obj1 = { visibility: null };
     obj1[0] = arg1;
     obj[1] = obj1;
     obj[2] = _sendRequest.rejectWithMigratedError();
@@ -182,20 +180,20 @@ export const setGuildProfileVisibility = function setGuildProfileVisibility(oute
     const putResult = HTTP.put(obj);
     resolved = HTTP.put(obj).then((body) => {
       const visibility = body.body.visibility;
-      let obj = outer1_1(outer1_2[5]);
+      let obj = closure_1_1(closure_1_2[5]);
       obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS", guildId: closure_0, visibility };
       obj.dispatch(obj);
       return visibility;
     }).catch((arg0) => {
-      const aPIError = new outer1_0(outer1_2[8]).APIError(arg0);
-      let obj = outer1_1(outer1_2[5]);
-      obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE", guildId: outer1_0, error: aPIError };
+      const aPIError = new callback(closure_1_2[8]).APIError(arg0);
+      let obj = closure_1_1(closure_1_2[5]);
+      obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE", guildId: callback, error: aPIError };
       obj.dispatch(obj);
       throw aPIError;
     });
     const nextPromise = HTTP.put(obj).then((body) => {
       const visibility = body.body.visibility;
-      let obj = outer1_1(outer1_2[5]);
+      let obj = closure_1_1(closure_1_2[5]);
       obj = { type: "GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS", guildId: closure_0, visibility };
       obj.dispatch(obj);
       return visibility;
@@ -215,7 +213,7 @@ export const fetchGuildTopGames = function fetchGuildTopGames() {
 };
 export const trackGuildProfileViewed = function trackGuildProfileViewed(guildId, analyticsLocations) {
   const tmp = null != selfMember.getSelfMember(guildId);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { guild_id: guildId, location_stack: analyticsLocations, is_member: tmp, has_join_request: null != request.getRequest(guildId) };
   obj.track(constants.GUILD_PROFILE_VIEWED, obj);
 };

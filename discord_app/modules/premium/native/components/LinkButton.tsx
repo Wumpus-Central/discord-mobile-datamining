@@ -1,24 +1,17 @@
 // discord_app/modules/premium/native/components/LinkButton.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = createCacheKey.createStyles({ defaultContainerStyle: { display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "center" }, disabledContainerStyle: { opacity: 0.5 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/components/LinkButton.tsx");
 
 export const LinkButton = function LinkButton(textColor) {
-  let containerStyle;
-  let disabled;
-  let onPress;
-  let text;
-  let textStyle;
-  let variant;
   ({ disabled, variant } = textColor);
   ({ onPress, text, containerStyle, textStyle } = textColor);
   if (variant === undefined) {

@@ -1,7 +1,9 @@
 // discord_app/modules/activities/utils/isCrunchyrollActivity.tsx
-import { CRUNCHYROLL_CLIENT_ID } from "CRUNCHYROLL_LINK_DEST_ORIGIN";
+import set from "set" /* 2 */;
+import CRUNCHYROLL_LINK_DEST_ORIGIN from "CRUNCHYROLL_LINK_DEST_ORIGIN" /* 9047 */;
 
-const result = require("set").fileFinishedImporting("modules/activities/utils/isCrunchyrollActivity.tsx");
+const CRUNCHYROLL_CLIENT_ID = CRUNCHYROLL_LINK_DEST_ORIGIN.CRUNCHYROLL_CLIENT_ID;
+const result = set.fileFinishedImporting("modules/activities/utils/isCrunchyrollActivity.tsx");
 
 export default function isCrunchyrollActivity(application_id) {
   application_id = undefined;

@@ -1,22 +1,30 @@
 // discord_app/modules/interaction_components/native/InteractionModal.tsx
-import "noop";
-import get_ActivityIndicator from "Button";
-import { InteractionModalState } from "getModalState";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import Text from "Text" /* 4734 */;
+import Button2 from "Button" /* 4745 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import XSmallIcon from "XSmallIcon" /* 6368 */;
+import isInteractionComponent from "isInteractionComponent" /* 8326 */;
+import getData from "getData" /* 16602 */;
+import renderComponents from "renderComponents" /* 16603 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { InteractionModalState } from "getModalState" /* 13773 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function onClose() {
-  return ModalActionCreators.popWithKey(interaction_modal);
+  return _modDef5260.popWithKey(interaction_modal);
 }
 class InteractionModal {
   constructor(arg0) {
-    tmp = interaction_modal();
+    tmp = closure_9();
     tmp2 = closure_0;
     tmp3 = closure_2;
     obj = require("getData");
@@ -70,8 +78,7 @@ class InteractionModal {
     obj9 = { children: null };
     items3 = [, ];
     items3[0] = tmp7Result;
-    obj10 = { messageType: null, children: null };
-    obj10[0] = require("Button").HelpMessageTypes.WARNING;
+    obj10 = { messageType: require("Button").HelpMessageTypes.WARNING, children: null };
     intl2 = require("getSystemLocale").intl;
     obj10[1] = intl2.format(require("getSystemLocale").t["dSTy/w"], { applicationName });
     items3[1] = tmp7(require("Button").HelpMessage, obj10);
@@ -96,32 +103,33 @@ class InteractionModal {
     return tmp5(tmp6, obj);
   }
 }
+noopAll;
 ({ View: c3, ScrollView: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const interaction_modal = "interaction_modal";
 createCacheKey = { modal: null, scroll: null, modalContent: null, header: null, titleView: null, icon: null, footer: null, closeButton: null, closeIcon: null, error: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, flex: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
-createCacheKey[2] = { flexGrow: 1, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-let obj1 = { flexGrow: 1, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
-createCacheKey[3] = { flexDirection: "row", marginBottom: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey[2] = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+let obj1 = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[4] = { flex: 1 };
-let obj2 = { flexDirection: "row", marginBottom: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[5] = { marginRight: require("Themes").space.PX_8 };
-let obj3 = { marginRight: require("Themes").space.PX_8 };
-createCacheKey[6] = { marginTop: "auto", marginBottom: require("Themes").space.PX_16 };
+let obj2 = { flexDirection: "row", marginBottom: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[5] = { marginRight: ThemesDefault.space.PX_8 };
+let obj3 = { marginRight: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { marginTop: "auto", marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { marginLeft: "auto" };
-let obj4 = { marginTop: "auto", marginBottom: require("Themes").space.PX_16 };
-createCacheKey[8] = { color: require("Themes").colors.TEXT_MUTED };
-let obj5 = { color: require("Themes").colors.TEXT_MUTED };
-createCacheKey[9] = { marginBottom: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj6 = { marginBottom: require("Themes").space.PX_16 };
-const result = require("getModalState").fileFinishedImporting("modules/interaction_components/native/InteractionModal.tsx");
+let obj4 = { marginTop: "auto", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[8] = { color: ThemesDefault.colors.TEXT_MUTED };
+let obj5 = { color: ThemesDefault.colors.TEXT_MUTED };
+createCacheKey[9] = { marginBottom: ThemesDefault.space.PX_16 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj6 = { marginBottom: ThemesDefault.space.PX_16 };
+const result = require("set").fileFinishedImporting("modules/interaction_components/native/InteractionModal.tsx");
 
 export default InteractionModal;
 export const openInteractionModal = function openInteractionModal(closure_0) {
-  let arr = ModalActionCreators;
+  let arr = _modDef5260;
   arr = arr.push(InteractionModal, closure_0, interaction_modal);
 };

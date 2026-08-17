@@ -1,9 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx
-import importAllResult from "noop";
-import prototype from "prototype";
-import { setIsChannelDetailsSearchActive as closure_5 } from "useChannelDetailsStore";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "prototype" /* 11510 */;
+import { setIsChannelDetailsSearchActive as closure_5 } from "useChannelDetailsStore" /* 8505 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
@@ -12,10 +12,6 @@ obj = { justifyContent: "center", height: require("SEARCH_BAR_HEIGHT").SEARCH_BA
 obj[0] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, ref) => {
-  let guildId;
-  let onSuggestionsLayoutMesure;
-  let setSuggestionsDismissed;
-  let suggestionsDismissed;
   channelId = channelId.channelId;
   const onBackPress = channelId.onBackPress;
   let flag = channelId.showBackButton;
@@ -30,7 +26,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   channelDetailsSearchContext = obj.useChannelDetailsSearchContext(channelId, guildId);
   const items = [channelId, channelDetailsSearchContext];
   const effect = callback.useEffect(() => () => {
-    let obj = outer1_1(outer1_2[8]);
+    let obj = closure_1_1(closure_1_2[8]);
     obj = { searchContext: closure_2 };
     obj.trackSearchClosed(obj);
   }, items);
@@ -44,7 +40,7 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   const items2 = [channelId, callback];
   callback1 = callback.useCallback(() => {
     callback();
-    outer1_5(channelId, false, "action");
+    closure_1_5(channelId, false, "action");
   }, items2);
   const items3 = [onBackPress, callback1, callback];
   const callback2 = callback.useCallback(() => {
@@ -70,6 +66,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef((channelId, r
   obj[5] = tmp9Result;
   return jsx(onBackPress(channelDetailsSearchContext[10]), { ref, searchContext: channelDetailsSearchContext, onSuggestionsLayoutMesure, suggestionsDismissed, setSuggestionsDismissed, backButton: null });
 }));
-const result = require("useChannelDetailsStore").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsSearchBar.tsx");
 
 export default memoResult;

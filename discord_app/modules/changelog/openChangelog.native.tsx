@@ -1,10 +1,12 @@
 // discord_app/modules/changelog/openChangelog.native.tsx
-import { CHANGELOG_MODAL_KEY } from "CHANGELOG_MODAL_KEY";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
-import { coerceMainRoute } from "../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import set from "set" /* 2 */;
+import CHANGELOG_MODAL_KEY2 from "CHANGELOG_MODAL_KEY" /* 1978 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import _modDef5260 from "module_5260" /* 5260 */;
 
-const result = require("module_5260").fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
+const CHANGELOG_MODAL_KEY = CHANGELOG_MODAL_KEY2.CHANGELOG_MODAL_KEY;
+const result = set.fileFinishedImporting("modules/changelog/openChangelog.native.tsx");
 
 export const openChangelog = function openChangelog() {
   let flag = arg0;
@@ -17,7 +19,7 @@ export const openChangelog = function openChangelog() {
     const obj = coerceMainRoute;
   }
   if (!isModalOpenResult) {
-    ModalActionCreators.pushLazy(asyncRequireImpl(14850, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
-    const obj2 = ModalActionCreators;
+    _modDef5260.pushLazy(asyncRequireImpl(14850, dependencyMap.paths), {}, CHANGELOG_MODAL_KEY);
+    const obj2 = _modDef5260;
   }
 };

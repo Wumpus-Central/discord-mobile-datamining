@@ -1,22 +1,22 @@
 // discord_app/modules/video_calls/useChannelVideoLimit.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import { ChannelTypes } from "ME";
+import closure_2 from "createGuildRecordFromRust" /* 1910 */;
+import closure_3 from "getVoiceStatesForGuild" /* 4545 */;
+import { ChannelTypes } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/video_calls/useChannelVideoLimit.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/useChannelVideoLimit.tsx");
 
 export default function useChannelVideoLimit(arg0) {
   const _require = arg0;
-  const items = [getVoiceStatesForGuild, createGuildRecordFromRust];
+  const items = [closure_3, closure_2];
   const items1 = [arg0];
   return _initialize.useStateFromStoresObject(items, () => {
-    const result = outer1_3.countVoiceStatesForChannel(guildId.id);
-    const guild = outer1_2.getGuild(guildId.getGuildId());
+    const result = closure_1_3.countVoiceStatesForChannel(guildId.id);
+    const guild = closure_1_2.getGuild(guildId.getGuildId());
     if (null == guild) {
       let obj = { reachedLimit: false, limit: -1 };
-    } else if (guildId.type === outer1_4.GUILD_STAGE_VOICE) {
+    } else if (guildId.type === closure_1_4.GUILD_STAGE_VOICE) {
       obj = { reachedLimit: null, limit: null };
       obj[0] = result > guild.maxStageVideoChannelUsers;
       obj[1] = guild.maxStageVideoChannelUsers;
@@ -30,7 +30,7 @@ export default function useChannelVideoLimit(arg0) {
   }, items1);
 };
 export const getChannelVideoLimit = function getChannelVideoLimit(channel) {
-  const result = getVoiceStatesForGuild.countVoiceStatesForChannel(channel.id);
+  const result = closure_3.countVoiceStatesForChannel(channel.id);
   guild = guild.getGuild(channel.getGuildId());
   if (null == guild) {
     let obj = { reachedLimit: false, limit: -1 };

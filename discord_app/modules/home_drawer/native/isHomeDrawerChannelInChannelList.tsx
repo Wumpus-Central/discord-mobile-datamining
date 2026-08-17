@@ -1,12 +1,12 @@
 // discord_app/modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
 
-const require = arg1;
-let result = require("useOptInEnabledForGuild").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/home_drawer/native/isHomeDrawerChannelInChannelList.tsx");
 
 export const useIsHomeDrawerChannelInChannelList = function useIsHomeDrawerChannelInChannelList() {
-  const items = [updateUserGuildSettingsInternal];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => (guild_id) => {
     const result = callback(table[2]).isOptInEnabledForGuild(guild_id.guild_id);
     let result1 = !result;

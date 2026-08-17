@@ -1,34 +1,29 @@
 // discord_app/stores/GuildReadStateStore.tsx
-import findOrCreateMessageRecord from "findOrCreateMessageRecord";
-import _validate from "_validate";
-import rebuild from "rebuild";
-import storeThread from "storeThread";
-import createChannelRecord from "createChannelRecord";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import "clearAll";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import handleConnectionOpen from "handleConnectionOpen";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ChannelFlags } from "set";
-import ReadStateTypes from "ReadStateTypes";
-import { NULL_STRING_GUILD_ID } from "ME";
-import set from "rebuild";
-import { apply } from "../../_runtime/00012_apply.js";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
-import { useOptInEnabledForGuild } from "../modules/opt_in_channels/isOptInEnabled.tsx";
-import { doesThreadMembersActionAffectMe } from "../modules/threads/ThreadActionUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import clearAllDefault from "clearAll" /* 1220 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import doesThreadMembersActionAffectMe from "doesThreadMembersActionAffectMe" /* 4028 */;
+import useOptInEnabledForGuild from "useOptInEnabledForGuild" /* 5282 */;
+import closure_3 from "findOrCreateMessageRecord" /* 5384 */;
+import closure_4 from "_validate" /* 4801 */;
+import closure_5 from "rebuild" /* 5251 */;
+import closure_6 from "storeThread" /* 4023 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import closure_10 from "fetchFingerprint" /* 1218 */;
+import closure_11 from "ensureGuildLoaded" /* 1391 */;
+import closure_12 from "createGuildRecordFromRust" /* 1910 */;
+import closure_13 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_14 from "generateOldThreadCutoff" /* 4772 */;
+import closure_15 from "handleConnectionOpen" /* 1979 */;
+import closure_16 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_17 from "mergeGuildAvatar" /* 1922 */;
+import { ChannelFlags } from "set" /* 1398 */;
+import ReadStateTypes from "ReadStateTypes" /* 5044 */;
+import { NULL_STRING_GUILD_ID } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let c9;
-let closure_19;
-let closure_20;
-let error;
-let metroImportAll;
-let require = arg1;
+require = arg1;
 function updateGuildUnreadSentinel(arg0) {
   let tmp = arg0;
   let tmp3 = arg0;
@@ -84,13 +79,13 @@ function isCountableChannel(channel, mentionCount, arg2) {
     } else {
       if (0 === num) {
         if (channel.isThread()) {
-          let isMutedResult = storeThread.isMuted(channel.id);
+          let isMutedResult = closure_6.isMuted(channel.id);
           if (!isMutedResult) {
-            isMutedResult = updateUserGuildSettingsInternal.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.parent_id);
+            isMutedResult = closure_16.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.parent_id);
           }
           let result = isMutedResult;
         } else {
-          result = updateUserGuildSettingsInternal.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
+          result = closure_16.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
         }
         if (result) {
           return false;
@@ -103,7 +98,7 @@ function isCountableChannel(channel, mentionCount, arg2) {
           if (result1) {
             let result2 = callback3(channel.type);
             if (!result2) {
-              result2 = updateUserGuildSettingsInternal.isChannelRecordOrParentOptedIn(channel);
+              result2 = closure_16.isChannelRecordOrParentOptedIn(channel);
             }
             result1 = !result2;
           }
@@ -114,14 +109,14 @@ function isCountableChannel(channel, mentionCount, arg2) {
         }
         if (tmp11) {
           return false;
-        } else if (!getUncachedChannelPermissions.can(channel.accessPermissions, channel)) {
+        } else if (!closure_13.can(channel.accessPermissions, channel)) {
           return false;
         }
         const obj = useOptInEnabledForGuild;
       }
       let tmp16 = num > 0;
       if (!tmp16) {
-        tmp16 = updateUserGuildSettingsInternal.resolveUnreadSetting(channel) === constants2.ALL_MESSAGES;
+        tmp16 = closure_16.resolveUnreadSetting(channel) === constants2.ALL_MESSAGES;
       }
       return tmp16;
     }
@@ -129,8 +124,8 @@ function isCountableChannel(channel, mentionCount, arg2) {
 }
 function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
   if (!tabFocused.tabFocused) {
-    let closure_0 = mentionCounts;
-    let importDefault = 0;
+    closure_0 = mentionCounts;
+    importDefault = 0;
     currentUser = currentUser.getCurrentUser();
     let notifCenterReadState;
     if (null != currentUser) {
@@ -140,7 +135,7 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
     if (null != notifCenterReadState) {
       const keys = importDefault(notifCenterReadState1[18]).keys(mentionCounts.mentionCounts);
       const item = keys.forEach((arg0) => {
-        const lastMessageIdResult = outer1_14.lastMessageId(arg0);
+        const lastMessageIdResult = closure_1_14.lastMessageId(arg0);
         if (obj.compare(lastMessageIdResult, notifCenterReadState1._ackMessageId) > 0) {
           closure_1 = closure_1 + mentionCounts2.mentionCounts[arg0].count;
         }
@@ -157,7 +152,7 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
     if (!tmp14) {
       const keys1 = importDefault(notifCenterReadState1[18]).keys(mentionCounts2.mentionCounts);
       const item1 = keys1.forEach((arg0) => {
-        const lastMessageIdResult = outer1_14.lastMessageId(arg0);
+        const lastMessageIdResult = closure_1_14.lastMessageId(arg0);
         if (obj.compare(lastMessageIdResult, notifCenterReadState1._ackMessageId) > 0) {
           closure_1 = closure_1 + mentionCounts2.mentionCounts[arg0].count;
         }
@@ -179,17 +174,15 @@ function updateNotificationCenterMentions(mentionCounts, mentionCounts2) {
   }
 }
 function aggregateGuildState(guild_id, unreadByType, unread) {
-  let closure_0 = unreadByType;
+  closure_0 = unreadByType;
   const entries = Object.entries(unreadByType.unreadByType);
   unreadByType.unread = entries.some((arg0) => {
-    let tmp;
-    let tmp2;
     [tmp, tmp2] = arg0;
     return Number(tmp) !== constants.GUILD_EVENT && tmp2;
   });
   unreadByType.lowImportanceMentionCount = 0;
   unreadByType.highImportanceMentionCount = 0;
-  const item = DISCORD_EPOCH.forEach(unreadByType.mentionCounts, (count) => {
+  const item = DISCORD_EPOCHDefault.forEach(unreadByType.mentionCounts, (count) => {
     count = count.count;
     if (count.isMentionLowImportance) {
       tmp.lowImportanceMentionCount = tmp.lowImportanceMentionCount + count;
@@ -227,7 +220,7 @@ function aggregateGuildState(guild_id, unreadByType, unread) {
 function recountChannels(guildId, items) {
   let tmp = guildId;
   if (NULL_STRING_GUILD_ID !== guildId) {
-    const require = tmp;
+    closure_0 = tmp;
     let tmp6 = tmp;
     if (tmp == null) {
       tmp6 = tmp2;
@@ -275,15 +268,15 @@ function recountChannels(guildId, items) {
     obj = {};
     const merged = Object.assign(tmp9.mentionCounts);
     obj.mentionCounts = obj;
-    const obj1 = {};
+    obj1 = {};
     const merged1 = Object.assign(tmp9.unreadByType);
     obj.unreadByType = obj1;
-    let c2 = false;
+    c2 = false;
     const item = items.forEach((arg0) => {
-      const channel = outer1_11.getChannel(arg0);
+      const channel = closure_1_11.getChannel(arg0);
       if (null != channel) {
         if (channel.getGuildId() === closure_0) {
-          const mentionCount = outer1_14.getMentionCount(arg0);
+          const mentionCount = closure_1_14.getMentionCount(arg0);
           let hasUnreadResult = null !== tmp6;
           if (hasUnreadResult) {
             hasUnreadResult = !c2;
@@ -292,14 +285,14 @@ function recountChannels(guildId, items) {
             hasUnreadResult = obj3.hasUnread(channel.id);
           }
           if (hasUnreadResult) {
-            hasUnreadResult = outer1_26(channel, mentionCount, true);
+            hasUnreadResult = closure_1_26(channel, mentionCount, true);
           }
           if (hasUnreadResult) {
             c2 = true;
             obj.unreadChannelId = channel.id;
           }
           if (mentionCount > 0) {
-            if (outer1_26(channel, mentionCount)) {
+            if (closure_1_26(channel, mentionCount)) {
               obj = { count: null, isMentionLowImportance: null };
               obj[0] = mentionCount;
               obj[1] = obj3.getIsMentionLowImportance(arg0);
@@ -387,13 +380,13 @@ function updateNonChannel(guild_id, GUILD_EVENT) {
     obj = {};
     const merged = Object.assign(tmp5.mentionCounts);
     obj.mentionCounts = obj;
-    const obj1 = {};
+    obj1 = {};
     const merged1 = Object.assign(tmp5.unreadByType);
     obj.unreadByType = obj1;
     const hasUnreadResult = store3.hasUnread(guild_id, GUILD_EVENT);
     let tmp20 = hasUnreadResult;
     if (GUILD_EVENT === constants.GUILD_EVENT) {
-      const isMutedResult = updateUserGuildSettingsInternal.isMuted(guild_id);
+      const isMutedResult = closure_16.isMuted(guild_id);
       let tmp22 = !isMutedResult;
       if (!isMutedResult) {
         const result = obj5.isMuteScheduledEventsEnabled(guild_id);
@@ -404,15 +397,13 @@ function updateNonChannel(guild_id, GUILD_EVENT) {
         tmp22 = tmp24;
       }
       tmp20 = tmp22;
-      obj5 = updateUserGuildSettingsInternal;
+      obj5 = closure_16;
     }
     obj.unreadByType[constants.GUILD_EVENT] = tmp20;
     return aggregateGuildState(guild_id, obj, tmp5);
   }
 }
 function recountGuild(guildId) {
-  let isMentionLowImportance;
-  let mentionCount;
   let tmp2 = guildId;
   if (NULL_STRING_GUILD_ID !== guildId) {
     let tmp7 = tmp2;
@@ -454,7 +445,7 @@ function recountGuild(guildId) {
         continue;
       }
     } else {
-      const isMutedResult = updateUserGuildSettingsInternal.isMuted(tmp2);
+      const isMutedResult = closure_16.isMuted(tmp2);
       if (isMutedResult) {
         if (false === arg1) {
           return false;
@@ -512,9 +503,9 @@ function recountGuild(guildId) {
               tmp36 = 0 !== mentionCount;
             }
             if (tmp36) {
-              let tmp37 = getUncachedChannelPermissions;
+              let tmp37 = closure_13;
               let tmp38 = callback;
-              let canBasicChannelResult = getUncachedChannelPermissions.canBasicChannel(callback(obj12.type), obj12);
+              let canBasicChannelResult = closure_13.canBasicChannel(callback(obj12.type), obj12);
               if (canBasicChannelResult) {
                 let tmp40 = null != obj12.guild_id;
                 if (tmp40) {
@@ -523,8 +514,8 @@ function recountGuild(guildId) {
                     let tmp42 = callback3;
                     let result1 = callback3(obj12.type);
                     if (!result1) {
-                      let tmp44 = updateUserGuildSettingsInternal;
-                      result1 = updateUserGuildSettingsInternal.isChannelRecordOrParentOptedIn(obj12);
+                      let tmp44 = closure_16;
+                      result1 = closure_16.isChannelRecordOrParentOptedIn(obj12);
                     }
                     tmp41 = !result1;
                   }
@@ -544,9 +535,9 @@ function recountGuild(guildId) {
                   if (tmp47) {
                     let tmp49 = mentionCount > 0;
                     if (!tmp49) {
-                      let tmp50 = updateUserGuildSettingsInternal;
+                      let tmp50 = closure_16;
                       let tmp51 = constants2;
-                      tmp49 = updateUserGuildSettingsInternal.resolveUnreadSetting(obj12) === constants2.ALL_MESSAGES;
+                      tmp49 = closure_16.resolveUnreadSetting(obj12) === constants2.ALL_MESSAGES;
                     }
                     tmp47 = tmp49;
                   }
@@ -602,8 +593,8 @@ function recountGuild(guildId) {
               isMutedResult1 = !store3.hasUnread(tmp55);
             }
             if (!isMutedResult1) {
-              let tmp58 = storeThread;
-              isMutedResult1 = storeThread.isMuted(tmp55);
+              let tmp58 = closure_6;
+              isMutedResult1 = closure_6.isMuted(tmp55);
             }
             if (!isMutedResult1) {
               isMutedResult1 = isMutedResult;
@@ -623,7 +614,7 @@ function recountGuild(guildId) {
               } else {
                 obj.highImportanceMentionCount = obj.highImportanceMentionCount + mentionCount1;
               }
-              let obj1 = { count: null, isMentionLowImportance: null };
+              obj1 = { count: null, isMentionLowImportance: null };
               obj1[0] = mentionCount1;
               obj1[1] = isMentionLowImportance;
               obj.mentionCounts[tmp55] = obj1;
@@ -640,7 +631,7 @@ function recountGuild(guildId) {
         const hasUnreadResult = store3.hasUnread(tmp2, GUILD_EVENT);
         let tmp67 = hasUnreadResult;
         if (GUILD_EVENT === tmp62.GUILD_EVENT) {
-          const isMutedResult2 = updateUserGuildSettingsInternal.isMuted(tmp2);
+          const isMutedResult2 = closure_16.isMuted(tmp2);
           let tmp69 = !isMutedResult2;
           if (!isMutedResult2) {
             const result2 = obj6.isMuteScheduledEventsEnabled(tmp2);
@@ -651,7 +642,7 @@ function recountGuild(guildId) {
             tmp69 = tmp71;
           }
           tmp67 = tmp69;
-          obj6 = updateUserGuildSettingsInternal;
+          obj6 = closure_16;
         }
         tmp64 = tmp67;
       }
@@ -662,8 +653,6 @@ function recountGuild(guildId) {
     const _Object = Object;
     const entries = Object.entries(obj.unreadByType);
     obj.unread = entries.some((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       return Number(tmp) !== constants.GUILD_EVENT && tmp2;
     });
@@ -726,9 +715,9 @@ function recountGuild(guildId) {
 }
 function handleOverlayInitialize(guilds) {
   guilds = guilds.guilds;
-  let closure_22 = {};
-  let c24 = 0;
-  const set = new Set();
+  closure_22 = {};
+  c24 = 0;
+  set = new Set();
   recountGuild(null);
   for (let num = 0; num < length; num = num + 1) {
     let tmp3 = guilds[num];
@@ -740,13 +729,11 @@ function handleOverlayInitialize(guilds) {
   }
 }
 function handleConnectionOpen(arg0) {
-  let guilds;
-  let readState;
   ({ guilds, readState } = arg0);
   let set1;
-  let closure_22 = {};
-  let c24 = 0;
-  const set = new Set();
+  closure_22 = {};
+  c24 = 0;
+  set = new Set();
   set1 = new Set();
   if (readState.entries.length < 500) {
     const entries = readState.entries;
@@ -757,11 +744,11 @@ function handleConnectionOpen(arg0) {
       }
       if (tmp) {
         if (null != mention_count.read_state_type) {
-          if (mention_count.read_state_type !== outer1_19.CHANNEL) {
+          if (mention_count.read_state_type !== closure_1_19.CHANNEL) {
             set1.add(mention_count.id);
           }
         }
-        const channel = outer1_11.getChannel(mention_count.id);
+        const channel = closure_1_11.getChannel(mention_count.id);
         let guild_id;
         if (channel != null) {
           guild_id = channel.guild_id;
@@ -783,8 +770,8 @@ function handleConnectionOpen(arg0) {
   }
 }
 function recomputeAllGuilds() {
-  let closure_22 = {};
-  const set = new Set();
+  closure_22 = {};
+  set = new Set();
   recountGuild(null);
   const values = Object.values(guildIds.getGuildIds());
   for (const item10021 of values) {
@@ -875,15 +862,15 @@ function handleMessageCreate(channelId) {
       }
       closure_22[tmp] = tmp4;
       if (channel.isThread()) {
-        const hasJoinedResult = storeThread.hasJoined(channel.id);
+        const hasJoinedResult = closure_6.hasJoined(channel.id);
         let isMutedResult = !hasJoinedResult;
         if (hasJoinedResult) {
           isMutedResult = obj3.isMuted(channel.id);
         }
         let result = isMutedResult;
-        obj3 = storeThread;
+        obj3 = closure_6;
       } else {
-        result = updateUserGuildSettingsInternal.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
+        result = closure_16.isGuildOrCategoryOrChannelMuted(channel.guild_id, channel.id);
       }
       if (result) {
         if (0 === store3.getMentionCount(channelId)) {
@@ -898,8 +885,6 @@ function handleMessageCreate(channelId) {
   }
 }
 function handleChannelSelect(arg0) {
-  let channelId;
-  let guildId;
   ({ channelId, guildId } = arg0);
   const isFavoritesGuildIdResult = getFavoritesAwareGuildName.isFavoritesGuildId(guildId);
   let tmp2 = !isFavoritesGuildIdResult;
@@ -919,13 +904,13 @@ function handleChannelUpdate(channel) {
   return recountChannels(channel.getGuildId(), items);
 }
 function handleChannelUpdates(channels) {
-  const obj = apply(channels.channels);
-  return apply(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
+  const obj = applyDefault(channels.channels);
+  return applyDefault(channels.channels).groupBy((getGuildId) => getGuildId.getGuildId()).reduce((arg0, arr) => callback(arg2, arr.map((id) => id.id)) || arg0, false);
 }
 function handleBulkAck(channels) {
-  const mapped = apply(channels.channels).map((channelId) => channelId.channelId);
+  const mapped = applyDefault(channels.channels).map((channelId) => channelId.channelId);
   const found = mapped.filter((arg0) => null != store.getChannel(arg0));
-  const arr = apply(channels.channels);
+  const arr = applyDefault(channels.channels);
   return found.groupBy((arg0) => {
     const channel = store.getChannel(arg0);
     let guildId;
@@ -964,7 +949,7 @@ function handleThreadMembersUpdate(id) {
 }
 function handleThreadListSync(threads) {
   threads = threads.threads;
-  const found = threads.filter((id) => storeThread.hasJoined(id.id));
+  const found = threads.filter((id) => closure_6.hasJoined(id.id));
   return recountChannels(threads.guildId, found.map((id) => id.id));
 }
 function handlePassiveUpdateV2(channels) {
@@ -983,7 +968,7 @@ function handleGuildUpdate(guildId) {
 }
 function handleUserGuildSettingsFullUpdate(userGuildSettings) {
   userGuildSettings = userGuildSettings.userGuildSettings;
-  let set;
+  set = undefined;
   set = new Set(userGuildSettings.map((guild_id) => {
     guild_id = guild_id.guild_id;
     if (guild_id == null) {
@@ -991,11 +976,11 @@ function handleUserGuildSettingsFullUpdate(userGuildSettings) {
     }
     return guild_id;
   }));
-  const keys = DISCORD_EPOCH.keys(closure_22);
+  const keys = DISCORD_EPOCHDefault.keys(closure_22);
   return keys.reduce((arg0, arg1) => {
     let hasItem = set.has(arg1);
     if (hasItem) {
-      hasItem = outer1_31(arg1);
+      hasItem = closure_1_31(arg1);
     }
     if (!hasItem) {
       hasItem = arg0;
@@ -1024,7 +1009,8 @@ function handleRecentMentionsSuccess(messages) {
     }
   });
 }
-({ getBasicAccessPermissions: error, isGuildVocalChannelType: metroImportAll, isThread: c9 } = createChannelRecord);
+({ getBasicAccessPermissions: error, isGuildVocalChannelType: closure_8, isThread: c9 } = createChannelRecord);
+clearAllDefault;
 ({ ReadStateTypes: closure_19, UnreadSetting: closure_20 } = ReadStateTypes);
 let closure_22 = {};
 let set = new Set();
@@ -1032,7 +1018,7 @@ let c24 = 0;
 let GuildReadStateStore;
 class GuildReadStateStore extends tmp3 {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {
       CONNECTION_OPEN: handleConnectionOpen,
       OVERLAY_INITIALIZE: handleOverlayInitialize,
@@ -1086,20 +1072,20 @@ class GuildReadStateStore extends tmp3 {
     };
     tmp = new tmp(obj, handleClearNotifCenterGuildMentions, handleGenericUpdate, new.target);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp;
+    closure_0 = tmp;
     return tmp;
   }
 }
 const prototype = GuildReadStateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, handleConnectionOpen, generateOldThreadCutoff, getUncachedChannelPermissions, fetchFingerprint, mergeGuildAvatar, updateUserGuildSettingsInternal, rebuild, storeThread, findOrCreateMessageRecord);
+  this.waitFor(closure_11, closure_15, closure_14, closure_13, closure_10, closure_17, closure_16, closure_5, closure_6, closure_3);
 };
 prototype["loadCache"] = function loadCache() {
   const snapshot = this.readSnapshot(GuildReadStateStore.LATEST_SNAPSHOT_VERSION);
   if (null != snapshot) {
     const guilds = snapshot.guilds;
     const _Set = Set;
-    const set = new Set(snapshot.unreadGuilds);
+    set = new Set(snapshot.unreadGuilds);
   }
 };
 prototype["takeSnapshot"] = function takeSnapshot() {
@@ -1203,8 +1189,8 @@ prototype["getGuildHasUnreadIgnoreMuted"] = function getGuildHasUnreadIgnoreMute
       continue;
     } else {
       if (!obj.isGuildVocal()) {
-        let tmp4 = getUncachedChannelPermissions;
-        if (!getUncachedChannelPermissions.can(obj.accessPermissions, obj)) {
+        let tmp4 = closure_13;
+        if (!closure_13.can(obj.accessPermissions, obj)) {
           continue;
         } else {
           let tmp5 = store3;

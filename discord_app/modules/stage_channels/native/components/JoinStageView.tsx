@@ -1,15 +1,16 @@
 // discord_app/modules/stage_channels/native/components/JoinStageView.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { sortKey } from "../../StageChannelParticipants.tsx";
-import { useStageParticipants } from "../../StageChannelParticipantStoreHooks.tsx";
-import { fillChunk } from "../../StageChannelUtils.tsx";
-import { AgeVerificationSpeakerActionSheet } from "StageActionBarButtons.tsx";
-import { styles } from "StageViewWithPrompts.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import sortKey from "sortKey" /* 6703 */;
+import useStageParticipants from "useStageParticipants" /* 6708 */;
+import fillChunk from "fillChunk" /* 8063 */;
+import stylesDefault from "styles" /* 12491 */;
+import AgeVerificationSpeakerActionSheet from "AgeVerificationSpeakerActionSheet" /* 12505 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useStageParticipants").fileFinishedImporting("modules/stage_channels/native/components/JoinStageView.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/JoinStageView.tsx");
 
 export default function JoinStageView(channel) {
   channel = channel.channel;
@@ -19,7 +20,7 @@ export default function JoinStageView(channel) {
   obj = { title: null, body: null, children: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.WZOeQv);
-  const tmp2 = styles;
+  const tmp2 = stylesDefault;
   obj[1] = fillChunk.getParticipantNamesText(channel, found);
   obj[2] = jsx(AgeVerificationSpeakerActionSheet.JoinStagePrompt, { channel });
   return <tmp2 title={null} body={null}>{null}</tmp2>;

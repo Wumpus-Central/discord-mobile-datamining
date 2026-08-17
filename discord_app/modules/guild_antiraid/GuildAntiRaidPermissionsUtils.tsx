@@ -1,20 +1,18 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import computeAlertSettings from "computeAlertSettings";
-import ME from "ME";
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "computeAlertSettings" /* 10014 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { isInMentionRaidExperiment } from "../guild_automod/ExperimentUtils.tsx";
 
-let c4;
-let c5;
 const require = arg1;
 ({ EMPTY_STRING_SNOWFLAKE_ID: c4, Permissions: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidPermissionsUtils.tsx");
 
-export const canReportRaid = function canReportRaid(guild, outer1_6) {
-  let obj = outer1_6;
-  if (outer1_6 === undefined) {
-    obj = getUncachedChannelPermissions;
+export const canReportRaid = function canReportRaid(guild, closure_1_6) {
+  let obj = closure_1_6;
+  if (closure_1_6 === undefined) {
+    obj = closure_2;
   }
   let canResult = obj.can(constants.BAN_MEMBERS, guild);
   if (!canResult) {
@@ -30,21 +28,21 @@ export const canReportRaid = function canReportRaid(guild, outer1_6) {
 };
 export const useCanReportRaid = function useCanReportRaid(guild) {
   const _require = guild;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_2];
   const items1 = [guild];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
-    if (outer1_2 !== undefined) {
-      return obj.can(outer1_5.BAN_MEMBERS, tmp) || obj.can(outer1_5.KICK_MEMBERS, tmp) || obj.can(outer1_5.MODERATE_MEMBERS, tmp) || obj.can(outer1_5.MANAGE_GUILD, tmp);
+    if (closure_1_2 !== undefined) {
+      return obj.can(closure_1_5.BAN_MEMBERS, tmp) || obj.can(closure_1_5.KICK_MEMBERS, tmp) || obj.can(closure_1_5.MODERATE_MEMBERS, tmp) || obj.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
   const obj = _initialize;
   const tmp = _require;
-  const items2 = [computeAlertSettings];
+  const items2 = [closure_3];
   const items3 = [guild];
   const stateFromStores1 = _initialize.useStateFromStores(items2, () => {
     let guildIncident = null;
     if (null != closure_0) {
-      guildIncident = outer1_3.getGuildIncident(tmp.id);
+      guildIncident = closure_1_3.getGuildIncident(tmp.id);
     }
     return guildIncident;
   }, items3);
@@ -62,27 +60,27 @@ export const useCanReportRaid = function useCanReportRaid(guild) {
 export const canEnableRaidAlerts = function canEnableRaidAlerts(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
-    obj = getUncachedChannelPermissions;
+    obj = closure_2;
   }
   return obj.can(constants.MANAGE_GUILD, arg0);
 };
 export const useCanEnableRaidAlerts = function useCanEnableRaidAlerts(arg0) {
   const _require = arg0;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_2];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
-    if (outer1_2 !== undefined) {
-      return outer1_2.can(outer1_5.MANAGE_GUILD, tmp);
+    if (closure_1_2 !== undefined) {
+      return closure_1_2.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
 };
 export const useShowMentionRaidLimitUpsell = function useShowMentionRaidLimitUpsell(id) {
   const _require = id;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_2];
   const items1 = [id];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
-    if (outer1_2 !== undefined) {
-      return outer1_2.can(outer1_5.MANAGE_GUILD, tmp);
+    if (closure_1_2 !== undefined) {
+      return closure_1_2.can(closure_1_5.MANAGE_GUILD, tmp);
     }
   }, items1);
   const obj = _initialize;

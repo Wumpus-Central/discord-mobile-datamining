@@ -1,50 +1,46 @@
 // discord_app/modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx
-import preload from "preload";
-import { View } from "getAvatarURL";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleSettingsLoadSuccess from "handleSettingsLoadSuccess";
-import set from "set";
-import { Permissions } from "ME";
-import { EMOJI_URL_BASE_SIZE } from "set";
-import { GuildMemberFlags } from "GuildMemberFlags";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "getEmojiToGroupId" /* 6727 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "trackCommunicationDisabled" /* 1990 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_10 from "handleSettingsLoadSuccess" /* 5048 */;
+import closure_11 from "set" /* 5049 */;
+import { Permissions } from "ME" /* 676 */;
+import { EMOJI_URL_BASE_SIZE } from "set" /* 1925 */;
+import { GuildMemberFlags } from "GuildMemberFlags" /* 4009 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_15;
-let closure_16;
 const require = arg1;
 function MemberActionRow(channelId) {
-  let completed;
-  let icon;
-  let title;
   channelId = channelId.channelId;
   let emoji = channelId.emoji;
   let id;
   let stateFromStores;
   ({ title, icon, completed } = channelId);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (emoji == null) {
     emoji = {};
   }
   id = emoji.id;
   const name = emoji.name;
-  let obj1 = channelId(stateFromStores[15]);
-  const items = [ensureGuildLoaded];
-  stateFromStores = obj1.useStateFromStores(items, () => outer1_6.getChannel(channelId));
+  obj1 = channelId(stateFromStores[15]);
+  const items = [closure_6];
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_6.getChannel(channelId));
   let obj2 = channelId(stateFromStores[15]);
-  const items1 = [getUncachedChannelPermissions];
-  const stateFromStores1 = obj2.useStateFromStores(items1, () => outer1_9.can(outer1_12.VIEW_CHANNEL, stateFromStores));
+  const items1 = [closure_9];
+  const stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_9.can(closure_1_12.VIEW_CHANNEL, stateFromStores));
   let obj3 = channelId(stateFromStores[15]);
-  const items2 = [getEmojiToGroupId];
+  const items2 = [closure_5];
   const items3 = [id];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => {
     let customEmojiById = null;
     if (null != id) {
-      customEmojiById = outer1_5.getCustomEmojiById(tmp);
+      customEmojiById = closure_1_5.getCustomEmojiById(tmp);
     }
     return customEmojiById;
   }, items3);
@@ -128,37 +124,37 @@ function MemberActionRow(channelId) {
 }
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 createCacheKey = { actionsContainer: { paddingHorizontal: 12 }, actionsHeader: { display: "flex", marginBottom: 16 }, actionContainer: null, channelNameContainer: null, icon: null, emoji: null, textEmoji: null, emojiPlaceholder: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: require("Themes").radii.sm, display: "flex", flexDirection: "row", alignItems: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8, padding: 12, borderRadius: ThemesDefault.radii.sm, display: "flex", flexDirection: "row", alignItems: "center" };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { flex: 1, marginHorizontal: 8 };
-createCacheKey[4] = { width: 40, height: 40, borderRadius: require("Themes").radii.xs };
+createCacheKey[4] = { width: 40, height: 40, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[5] = { width: 40, height: 40 };
 createCacheKey[6] = { width: 40, textAlign: "center" };
-let obj1 = { width: 40, height: 40, borderRadius: require("Themes").radii.xs };
-createCacheKey[7] = { width: 40, height: 40, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, display: "flex", alignItems: "center", justifyContent: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { width: 40, height: 40, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, display: "flex", alignItems: "center", justifyContent: "center" };
-const result = require("getEmojiToGroupId").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx");
+let obj1 = { width: 40, height: 40, borderRadius: ThemesDefault.radii.xs };
+createCacheKey[7] = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, display: "flex", alignItems: "center", justifyContent: "center" };
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { width: 40, height: 40, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 20, display: "flex", alignItems: "center", justifyContent: "center" };
+const result = require("set").fileFinishedImporting("modules/guild_onboarding_home/native/GuildOnboardingNewMemberActions.tsx");
 
 export default function GuildOnboardingNewMemberActions(guildId) {
   guildId = guildId.guildId;
   let stateFromStores1;
   let stateFromStores2;
   let stateFromStores3;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = guildId(stateFromStores2[15]);
-  const items = [handleSettingsLoadSuccess];
+  const items = [closure_10];
   const items1 = [guildId];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_10.getNewMemberActions(guildId), items1);
-  let obj1 = guildId(stateFromStores2[15]);
-  const items2 = [set];
-  stateFromStores1 = obj1.useStateFromStores(items2, () => outer1_11.getCompletedActions(guildId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_10.getNewMemberActions(guildId), items1);
+  obj1 = guildId(stateFromStores2[15]);
+  const items2 = [closure_11];
+  stateFromStores1 = obj1.useStateFromStores(items2, () => closure_1_11.getCompletedActions(guildId));
   let obj2 = guildId(stateFromStores2[15]);
-  const items3 = [trackCommunicationDisabled];
-  stateFromStores2 = obj2.useStateFromStores(items3, () => outer1_7.getSelfMember(guildId));
+  const items3 = [closure_7];
+  stateFromStores2 = obj2.useStateFromStores(items3, () => closure_1_7.getSelfMember(guildId));
   let obj3 = guildId(stateFromStores2[15]);
-  const items4 = [createGuildRecordFromRust];
-  stateFromStores3 = obj3.useStateFromStores(items4, () => outer1_8.getGuild(guildId));
+  const items4 = [closure_8];
+  stateFromStores3 = obj3.useStateFromStores(items4, () => closure_1_8.getGuild(guildId));
   const items5 = [stateFromStores1, guildId, ];
   let flags;
   if (stateFromStores2 != null) {
@@ -179,7 +175,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
       if (num == null) {
         num = 0;
       }
-      hasFlagResult = guildId(stateFromStores2[28]).hasFlag(num, outer1_14.STARTED_HOME_ACTIONS);
+      hasFlagResult = guildId(stateFromStores2[28]).hasFlag(num, closure_1_14.STARTED_HOME_ACTIONS);
       const obj = guildId(stateFromStores2[28]);
     }
     if (hasFlagResult) {
@@ -214,7 +210,7 @@ export default function GuildOnboardingNewMemberActions(guildId) {
                     flag = false;
                   }
                   obj[4] = flag;
-                  return outer1_15(outer1_18, obj, "member-action-" + channelId.channelId);
+                  return closure_1_15(closure_1_18, obj, "member-action-" + channelId.channelId);
                 }),
 
         ];

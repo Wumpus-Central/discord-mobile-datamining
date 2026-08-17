@@ -1,33 +1,32 @@
 // discord_app/modules/premium/native/PremiumTabBadge.tsx
-import _slicedToArray from "_slicedToArray";
-import "getPremiumPlanItem";
-import { View } from "usePremiumTrialOffer";
-import reset from "reset";
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures";
-import { Gradients } from "items";
-import jsxProd from "DismissibleContent";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { registerAsset } from "../../../../_runtime/14339_registerAsset.js";
-import { encodeProperties } from "../../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { MarketingComponentType } from "../../../../discord_common/js/shared/shared-constants/MarketingComponentType.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { trackImpression } from "../../app_analytics/useTrackImpression.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { usePremiumDiscountOffer } from "../hooks/usePremiumDiscountOffer.android.tsx";
-import { usePremiumTrialOffer } from "../hooks/usePremiumTrialOffer.android.tsx";
+import noopAll from "noop" /* 19 */;
+import encodeProperties from "encodeProperties" /* 503 */;
+import ThemesDefault from "Themes" /* 712 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
+import usePremiumDiscountOffer from "usePremiumDiscountOffer" /* 7625 */;
+import MarketingComponentType from "MarketingComponentType" /* 7931 */;
+import trackImpressionDefault from "trackImpression" /* 9177 */;
+import registerAssetDefault from "registerAsset" /* 14339 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "reset" /* 4045 */;
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_6 } from "GuildFeatures" /* 1924 */;
+import { Gradients } from "items" /* 7403 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ThemedTabBadge(children) {
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = AccessibilityAnnouncer;
-  const isThemeDarkResult = obj.isThemeDark(useTheme());
+  const isThemeDarkResult = obj.isThemeDark(useThemeDefault());
   const items = [tmp.badge, ];
   obj = { style: items, children: null };
   items[1] = isThemeDarkResult ? tmp.badgeBackgroundDarkTheme : tmp.badgeBackgroundLightTheme;
@@ -41,25 +40,19 @@ function ThemedTabBadge(children) {
   return closure_8(View, obj);
 }
 function OfferBadge(componentId) {
-  let acked;
-  let ackedBadgeCopy;
-  let badgeCopy;
-  let promotionId;
   componentId = componentId.componentId;
   ({ acked, badgeCopy, ackedBadgeCopy, promotionId } = componentId);
-  const tmp = createCacheKey();
-  let obj = { type: null, name: null, properties: null };
-  obj[0] = encodeProperties.ImpressionTypes.VIEW;
-  obj[1] = encodeProperties.ImpressionNames.PREMIUM_MARKETING_COMPONENT;
+  const tmp = callback4();
+  let obj = { type: encodeProperties.ImpressionTypes.VIEW, name: encodeProperties.ImpressionNames.PREMIUM_MARKETING_COMPONENT, properties: null };
   obj = { component_type: MarketingComponentType.MarketingComponentType.PREMIUM_TAB, component_id: componentId, promotion_id: promotionId };
   obj[2] = obj;
   obj = { disableTrack: null == componentId };
-  trackImpression(obj, obj);
+  trackImpressionDefault(obj, obj);
   if (acked) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.acked;
     const obj2 = { source: null, size: null, color: null, style: null };
-    obj2[0] = registerAsset;
+    obj2[0] = registerAssetDefault;
     obj2[1] = tmp5(1297).Icon.Sizes.EXTRA_SMALL;
     obj2[2] = tmp.icon.color;
     obj2[3] = tmp.icon;
@@ -79,36 +72,35 @@ function OfferBadge(componentId) {
   }
   return tmp9;
 }
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+noopAll;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { tag: null, badge: null, badgeBackgroundLightTheme: null, badgeBackgroundDarkTheme: null, acked: null, ackedBadge: null, icon: null, uppercase: null, text: null, premiumDiscountBadge: null };
-createCacheKey = { paddingVertical: 4, paddingHorizontal: 8, borderRadius: require("Themes").radii.round };
+createCacheKey = { paddingVertical: 4, paddingHorizontal: 8, borderRadius: ThemesDefault.radii.round };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { display: "flex", minWidth: 16, minHeight: 16, paddingHorizontal: 8, justifyContent: "center", alignItems: "center", gap: 4, borderRadius: require("Themes").radii.round };
-let obj1 = { display: "flex", minWidth: 16, minHeight: 16, paddingHorizontal: 8, justifyContent: "center", alignItems: "center", gap: 4, borderRadius: require("Themes").radii.round };
-createCacheKey[2] = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.WHITE };
-let obj3 = { backgroundColor: require("Themes").colors.WHITE };
-createCacheKey[4] = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
-let obj4 = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: require("Themes").radii.round, backgroundColor: require("Themes").colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
-createCacheKey[5] = { backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-let obj5 = { backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[6] = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
+createCacheKey[1] = { display: "flex", minWidth: 16, minHeight: 16, paddingHorizontal: 8, justifyContent: "center", alignItems: "center", gap: 4, borderRadius: ThemesDefault.radii.round };
+let obj1 = { display: "flex", minWidth: 16, minHeight: 16, paddingHorizontal: 8, justifyContent: "center", alignItems: "center", gap: 4, borderRadius: ThemesDefault.radii.round };
+createCacheKey[2] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.WHITE };
+let obj3 = { backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey[4] = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
+let obj4 = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
+createCacheKey[5] = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj5 = { backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[6] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
 createCacheKey[7] = { textTransform: "uppercase" };
 createCacheKey[8] = { paddingBottom: 2 };
-let obj6 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
-createCacheKey[9] = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: require("Themes").radii.round, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: require("Themes").radii.round, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/premium/native/PremiumTabBadge.tsx");
+let obj6 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginRight: 2 };
+createCacheKey[9] = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { paddingVertical: 2, paddingHorizontal: 12, borderRadius: ThemesDefault.radii.round, display: "flex", flexDirection: "row", alignItems: "center", textAlignVertical: "center" };
+let result = require("set").fileFinishedImporting("modules/premium/native/PremiumTabBadge.tsx");
 
 export default function PremiumTabBadge() {
-  let tmp14;
-  let tmp18;
-  let tmp = createCacheKey();
+  let tmp = callback4();
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
-  let obj1 = usePremiumDiscountOffer;
+  obj1 = usePremiumDiscountOffer;
   const premiumDiscountOffer = obj1.usePremiumDiscountOffer();
   let obj3 = getPremiumPlanItem;
   const hasTier2Premium = obj3.useHasTier2Premium();
@@ -119,7 +111,7 @@ export default function PremiumTabBadge() {
     tmp7 = hasTier2Premium;
   }
   let tmp2Result = tmp2(589);
-  const items = [reset];
+  const items = [closure_5];
   const stateFromStores = tmp2Result.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let trialId;
   if (stateFromStores != null) {
@@ -194,7 +186,7 @@ export default function PremiumTabBadge() {
         obj1[2] = tmp2(691).HorizontalGradient.START;
         obj1[3] = tmp2(691).HorizontalGradient.END;
         const items3 = [tmp.uppercase, ];
-        const tmp52 = LinearGradient;
+        const tmp52 = LinearGradientDefault;
         let text;
         if (tmp2Result6.isAndroid()) {
           text = tmp.text;
@@ -229,7 +221,7 @@ export default function PremiumTabBadge() {
           ({ premiumDiscountBadge: arr6[0], ackedBadge: arr6[1] } = tmp);
           obj4[0] = items4;
           const obj5 = { source: null, size: null, color: null, style: null };
-          obj5[0] = registerAsset;
+          obj5[0] = registerAssetDefault;
           obj5[1] = tmp2(1297).Icon.Sizes.EXTRA_SMALL;
           obj5[2] = tmp.icon.color;
           obj5[3] = tmp.icon;
@@ -256,8 +248,8 @@ export default function PremiumTabBadge() {
           const intl4 = tmp2(1236).intl;
           obj8[3] = intl4.string(tmp2(1236).t["/DTtr6"]);
           obj7[4] = callback2(tmp2(4734).Text, obj8);
-          tmp41 = callback2(LinearGradient, obj7);
-          const tmp40 = LinearGradient;
+          tmp41 = callback2(LinearGradientDefault, obj7);
+          const tmp40 = LinearGradientDefault;
         }
       } else {
         tmp47Result = null;
@@ -268,7 +260,7 @@ export default function PremiumTabBadge() {
           obj9[2] = tmp2(691).HorizontalGradient.START;
           obj9[3] = tmp2(691).HorizontalGradient.END;
           const items8 = [tmp.uppercase, ];
-          const tmp34 = LinearGradient;
+          const tmp34 = LinearGradientDefault;
           let text1;
           if (tmp2Result7.isAndroid()) {
             text1 = tmp.text;

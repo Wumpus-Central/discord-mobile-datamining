@@ -1,10 +1,13 @@
 // discord_app/design/components/ActivityIndicator/native/ActivityIndicator.native.tsx
-import { ActivityIndicator } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../tokens/native/useToken.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
 
-const result = require("map").fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
+const ActivityIndicator = get_ActivityIndicator.ActivityIndicator;
+const jsx = jsxProd.jsx;
+const result = set.fileFinishedImporting("design/components/ActivityIndicator/native/ActivityIndicator.native.tsx");
 
 export const ActivityIndicator = function ActivityIndicator(size) {
   let str = size.size;
@@ -19,7 +22,7 @@ export const ActivityIndicator = function ActivityIndicator(size) {
   let obj = map;
   let color = merged.color;
   if (color == null) {
-    color = obj.useToken(Themes.colors.BACKGROUND_BRAND);
+    color = obj.useToken(ThemesDefault.colors.BACKGROUND_BRAND);
   }
   obj = {};
   const merged1 = Object.assign(merged);

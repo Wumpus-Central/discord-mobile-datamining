@@ -1,30 +1,28 @@
 // discord_app/modules/favorites/native/FavoritesEmptyState.tsx
-import noop from "noop";
-import { View } from "PlusMediumIcon";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccountAgeTier10LargeBadge } from "../../../design/assets/native.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { Stack } from "../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useFavoritesAccess } from "../FavoritesHooks.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 3079 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import AccountAgeTier10LargeBadge from "AccountAgeTier10LargeBadge" /* 5447 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: null, text: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: require("Themes").space.PX_16, paddingHorizontal: require("Themes").space.PX_48 };
+createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_16, paddingHorizontal: ThemesDefault.space.PX_48 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/favorites/native/FavoritesEmptyState.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesEmptyState.tsx");
 
 export default function FavoritesEmptyState() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = useFavoritesAccess;
   const callback = React.useCallback(() => {
     callback2(paths[6])({ source: "favorites_empty_state" });
@@ -35,15 +33,14 @@ export default function FavoritesEmptyState() {
     obj.openLazy(callback(paths[9])(paths[8], paths.paths), callback(paths[10]).FAVORITES_UPSELL_SHEET_KEY, { source: "favorites_empty_sidebar" });
   }, []);
   const items = [callback(AccountAgeTier10LargeBadge.FavoritesSpotIllustration, { width: 192, height: 108 }), , ];
-  obj = { spacing: null, align: "center", children: null };
-  obj[0] = Themes.space.PX_8;
-  const obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
+  obj = { spacing: ThemesDefault.space.PX_8, align: "center", children: null };
+  obj1 = { variant: "heading-md/bold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = getSystemLocale.intl;
-  obj1[3] = intl.string(messagesProxy["wh+Rz1"]);
+  obj1[3] = intl.string(messagesProxyDefault["wh+Rz1"]);
   const items1 = [callback(Text.Heading, obj1), ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.text, children: null };
   const intl2 = getSystemLocale.intl;
-  obj2[3] = intl2.string(messagesProxy["+SuGKb"]);
+  obj2[3] = intl2.string(messagesProxyDefault["+SuGKb"]);
   items1[1] = callback(Text.Text, obj2);
   obj[2] = items1;
   items[1] = callback2(Stack.Stack, obj);

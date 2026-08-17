@@ -1,14 +1,14 @@
 // discord_app/modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { setFontSize } from "../../../a11y/AccessibilityActionCreators.tsx";
-import { messagesProxy } from "../../../display_name_styles/intl/DisplayNameStyles.messages.js";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2693 */;
+import setFontSize from "setFontSize" /* 13813 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 function useValue() {
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   return initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
 }
 function onValueChange(enabled) {
@@ -17,14 +17,14 @@ function onValueChange(enabled) {
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy["2gFUEw"]);
+    return intl.string(messagesProxyDefault["2gFUEw"]);
   },
   parent: require("MobileUserSettings").MobileUserSettings.ACCESSIBILITY,
   useValue,
   onValueChange
 };
 createToggle = createToggle.createToggle(createToggle);
-let result = require("initialize").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/DisplayNameStylesAccessibilitySetting.tsx");
 
 export default createToggle;
 export { useValue };

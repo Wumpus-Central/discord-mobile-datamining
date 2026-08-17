@@ -1,15 +1,15 @@
 // discord_app/modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx
-import noop from "noop";
-import handleGameServerInstanceCreated from "handleGameServerInstanceCreated";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleGameServerInstanceCreated" /* 4282 */;
+import closure_4 from "calculateAppliedBoosts" /* 4261 */;
 
 const require = arg1;
-const result = require("calculateAppliedBoosts").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useFeaturedExpiringPowerup.tsx");
 
 export default function useFeaturedExpiringPowerup(arg0) {
   const _require = arg0;
-  let items = [calculateAppliedBoosts];
-  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => outer1_4.getStateForGuild(closure_0));
+  let items = [closure_4];
+  stateFromStores = _require(stateFromStores[3]).useStateFromStores(items, () => closure_1_4.getStateForGuild(closure_0));
   let obj = _require(stateFromStores[3]);
   const items1 = [expiringPowerupCoachmarkEnabled];
   const stateFromStores1 = _require(stateFromStores[3]).useStateFromStores(items1, () => expiringPowerupCoachmarkEnabled.getStateForGuild(closure_0));

@@ -1,14 +1,11 @@
 // discord_app/modules/guild_scheduled_events/native/components/ThrottledButton.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("Button").fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/ThrottledButton.tsx");
 
 export default function ThrottledButton(throttleMs) {
-  let onPress;
-  let onPressIn;
-  let onPressOut;
   let num = throttleMs.throttleMs;
   ({ onPress, onPressIn, onPressOut } = throttleMs);
   if (num === undefined) {
@@ -20,7 +17,7 @@ export default function ThrottledButton(throttleMs) {
     num = 500;
   }
   onPressOut = num;
-  let dependencyMap;
+  dependencyMap = undefined;
   dependencyMap = React.useRef(null);
   const effect = React.useEffect(() => () => clearTimeout(ref.current), []);
   const obj = {};
@@ -29,12 +26,12 @@ export default function ThrottledButton(throttleMs) {
   obj.onPress = (arg0) => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = null === outer1_1.current;
+      tmp2 = null === closure_1_1.current;
     }
     if (tmp2) {
       closure_0(arg0);
       const _setTimeout = setTimeout;
-      outer1_1.current = setTimeout(() => {
+      closure_1_1.current = setTimeout(() => {
         closure_1.current = null;
       }, closure_0);
     }
@@ -43,12 +40,12 @@ export default function ThrottledButton(throttleMs) {
   obj.onPressIn = (arg0) => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = null === outer1_1.current;
+      tmp2 = null === closure_1_1.current;
     }
     if (tmp2) {
       closure_0(arg0);
       const _setTimeout = setTimeout;
-      outer1_1.current = setTimeout(() => {
+      closure_1_1.current = setTimeout(() => {
         closure_1.current = null;
       }, closure_0);
     }
@@ -56,12 +53,12 @@ export default function ThrottledButton(throttleMs) {
   obj.onPressOut = (arg0) => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = null === outer1_1.current;
+      tmp2 = null === closure_1_1.current;
     }
     if (tmp2) {
       closure_0(arg0);
       const _setTimeout = setTimeout;
-      outer1_1.current = setTimeout(() => {
+      closure_1_1.current = setTimeout(() => {
         closure_1.current = null;
       }, closure_0);
     }
@@ -73,20 +70,20 @@ export const useThrottledActionHandler = function useThrottledActionHandler() {
   if (arg0 === undefined) {
     num = 500;
   }
-  let closure_1;
+  closure_1 = undefined;
   closure_1 = React.useRef(null);
   const effect = React.useEffect(() => () => clearTimeout(ref.current), []);
   return (arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return (arg0) => {
       let tmp2 = null != closure_0;
       if (tmp2) {
-        tmp2 = null === outer1_1.current;
+        tmp2 = null === closure_1_1.current;
       }
       if (tmp2) {
         closure_0(arg0);
         const _setTimeout = setTimeout;
-        outer1_1.current = setTimeout(() => {
+        closure_1_1.current = setTimeout(() => {
           closure_1.current = null;
         }, closure_0);
       }

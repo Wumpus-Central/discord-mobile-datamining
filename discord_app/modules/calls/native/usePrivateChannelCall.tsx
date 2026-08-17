@@ -1,21 +1,21 @@
 // discord_app/modules/calls/native/usePrivateChannelCall.tsx
-import getPrivateChannelCall from "getPrivateChannelCall";
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
+const result = require("set").fileFinishedImporting("modules/calls/native/usePrivateChannelCall.tsx");
 
 export default function usePrivateChannelCall(arg0, arg1, arg2) {
   const _require = arg0;
-  let closure_1 = arg1;
-  let dependencyMap = arg2;
+  closure_1 = arg1;
+  dependencyMap = arg2;
   let obj = _initialize;
-  const items = [ensureGuildLoaded];
+  const items = [closure_5];
   const items1 = [arg1, arg0];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => {
-    const channel = outer1_5.getChannel(outer1_5.getDMFromUserId(callback));
+    const channel = closure_1_5.getChannel(closure_1_5.getDMFromUserId(callback));
     if (null != channel) {
       if (channel.isPrivate()) {
         let obj = { text: null, accessibilityHint: null, inCall: null };
@@ -76,19 +76,19 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let channel = tmp2;
               channel = undefined;
               closure_1 = undefined;
-              channel = outer1_5.getChannel(outer1_5.getDMFromUserId(outer1_0));
+              channel = closure_1_5.getChannel(closure_1_5.getDMFromUserId(closure_1_0));
               if (null == channel) {
                 dependencyMap = 1;
                 c3 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = outer1_1(4770).ensurePrivateChannel(tmp33);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_1(4770).ensurePrivateChannel(tmp33);
                 return obj1;
               }
-              tmp33 = outer1_0;
+              tmp33 = closure_1_0;
             }
           } else if (arg0 === 1) {
             c3 = 3;
@@ -100,7 +100,7 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             return obj;
           } else {
             closure_1 = arg1;
-            channel = outer1_5.getChannel(closure_1);
+            channel = closure_1_5.getChannel(closure_1);
           }
           obj1 = channel;
           let isPrivateResult;
@@ -108,8 +108,8 @@ export default function usePrivateChannelCall(arg0, arg1, arg2) {
             isPrivateResult = obj1.isPrivate();
           }
           if (isPrivateResult) {
-            outer1_1(9646)(channel, closure_1).onPress();
-            const obj3 = outer1_1(9646)(channel, closure_1);
+            closure_1_1(9646)(channel, closure_1).onPress();
+            const obj3 = closure_1_1(9646)(channel, closure_1);
           }
           if (dependencyMap != null) {
             dependencyMap();

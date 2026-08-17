@@ -1,21 +1,23 @@
 // discord_app/modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../../../../utils/AnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/tracking/Tracking.tsx");
 
 export const trackYouTabAvatarPress = function trackYouTabAvatarPress() {
-  expandEventProperties.track(AnalyticEvents.YOU_TAB_AVATAR_PRESS);
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_AVATAR_PRESS);
 };
 export const trackYouTabCustomStatusPress = function trackYouTabCustomStatusPress() {
-  expandEventProperties.track(AnalyticEvents.YOU_TAB_CUSTOM_STATUS_PRESS);
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_CUSTOM_STATUS_PRESS);
 };
 export const trackYouTabEditProfilePress = function trackYouTabEditProfilePress() {
-  expandEventProperties.track(AnalyticEvents.YOU_TAB_EDIT_PROFILE_PRESS);
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_EDIT_PROFILE_PRESS);
 };
 export const trackYouTabNitroIconPress = function trackYouTabNitroIconPress() {
-  expandEventProperties.track(AnalyticEvents.YOU_TAB_NITRO_ICON_PRESS);
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_NITRO_ICON_PRESS);
 };
 export const trackYouTabSettingsIconPress = function trackYouTabSettingsIconPress(has_badge) {
-  expandEventProperties.track(AnalyticEvents.YOU_TAB_SETTINGS_ICON_PRESS, { has_badge: has_badge.isBadged });
+  expandEventPropertiesDefault.track(AnalyticEvents.YOU_TAB_SETTINGS_ICON_PRESS, { has_badge: has_badge.isBadged });
 };

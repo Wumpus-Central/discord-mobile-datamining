@@ -1,13 +1,13 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputExpressionButton.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let closure_5 = createCacheKey.createStyles((arg0, arg1, height) => {
-  const radii = Themes.radii;
+  const radii = ThemesDefault.radii;
   if (arg0) {
     let round = radii.sm;
     let tmp4 = tmp;
@@ -27,13 +27,11 @@ let closure_5 = createCacheKey.createStyles((arg0, arg1, height) => {
   const merged = Object.assign(obj);
   obj[0] = obj;
   obj[1] = { position: "absolute", left: tmp4(712).modules.mobile.CHAT_INPUT_EXPRESSION_OFFSET_LEFT, top: tmp4(712).modules.mobile.CHAT_INPUT_EXPRESSION_OFFSET_TOP };
-  const obj1 = { position: "absolute", left: tmp4(712).modules.mobile.CHAT_INPUT_EXPRESSION_OFFSET_LEFT, top: tmp4(712).modules.mobile.CHAT_INPUT_EXPRESSION_OFFSET_TOP };
+  obj1 = { position: "absolute", left: tmp4(712).modules.mobile.CHAT_INPUT_EXPRESSION_OFFSET_LEFT, top: tmp4(712).modules.mobile.CHAT_INPUT_EXPRESSION_OFFSET_TOP };
   obj[2] = { tintColor: tmp4(712).colors.CHAT_INPUT_ICON_DEFAULT_TINT };
   return obj;
 });
 const memoResult = importAllResult.memo((active) => {
-  let chatInputFloating;
-  let enabled;
   let flag = active.active;
   if (flag === undefined) {
     flag = false;
@@ -46,17 +44,17 @@ const memoResult = importAllResult.memo((active) => {
   let obj = onPress(1367);
   const mobileVisualRefreshConfig = obj.useMobileVisualRefreshConfig({ location: "ChatInputExpressionButton" });
   ({ enabled, chatInputFloating } = mobileVisualRefreshConfig);
-  const token = onPress(4097).useToken(Themes.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const token = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
   const obj2 = onPress(4097);
   const tmp4 = importDefault;
-  const token1 = onPress(4097).useToken(Themes.modules.mobile.CHAT_INPUT_PILL_PADDING);
+  const token1 = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_PADDING);
   const obj3 = onPress(4097);
-  const token2 = onPress(4097).useToken(Themes.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
+  const token2 = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_PILL_BORDER_WIDTH);
   const obj4 = onPress(4097);
-  const token3 = onPress(4097).useToken(Themes.modules.mobile.CHAT_INPUT_ICON_SIZE);
+  const token3 = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_ICON_SIZE);
   const obj5 = onPress(4097);
   let diff = token;
-  const token4 = onPress(4097).useToken(Themes.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
+  const token4 = onPress(4097).useToken(ThemesDefault.modules.mobile.CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE);
   if (!enabled) {
     diff = token - 2 * (token1 + token2);
   }
@@ -89,6 +87,6 @@ const memoResult = importAllResult.memo((active) => {
   obj[7] = jsx(onPress(1297).Icon, { size: token3, style: null, source: null });
   return jsx(onPress(5433).PressableOpacity, { size: token3, style: null, source: null });
 });
-const result = require("createCacheKey").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputExpressionButton.tsx");
 
 export default memoResult;

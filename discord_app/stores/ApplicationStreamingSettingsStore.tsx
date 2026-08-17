@@ -1,25 +1,24 @@
 // discord_app/stores/ApplicationStreamingSettingsStore.tsx
-import RESOLUTION_720 from "RESOLUTION_720";
-import { MediaEngineContextTypes } from "DesktopSources";
-import { PersistedStore } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
 
-let ApplicationStreamFPS;
-let ApplicationStreamResolutions;
 const ApplicationStreamPresets = RESOLUTION_720.ApplicationStreamPresets;
 ({ ApplicationStreamResolutions, ApplicationStreamFPS } = RESOLUTION_720);
+const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
 let PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
 RESOLUTION_720 = ApplicationStreamResolutions.RESOLUTION_720;
 const FPS_30 = ApplicationStreamFPS.FPS_30;
 let c5 = true;
+const PersistedStore = initializeDefault.PersistedStore;
 class ApplicationStreamingSettingsStore extends PersistedStore {
 }
 const prototype = ApplicationStreamingSettingsStore.prototype;
 prototype["initialize"] = function initialize(preset) {
-  let FPS_30;
-  let RESOLUTION_720;
-  let soundshareEnabled;
   if (null != preset) {
-    let PRESET_VIDEO = preset.preset;
+    PRESET_VIDEO = preset.preset;
     if (PRESET_VIDEO == null) {
       PRESET_VIDEO = ApplicationStreamPresets.PRESET_VIDEO;
     }
@@ -34,7 +33,7 @@ prototype["getState"] = function getState() {
 };
 ApplicationStreamingSettingsStore.displayName = "ApplicationStreamingSettingsStore";
 ApplicationStreamingSettingsStore.persistKey = "ApplicationStreamingSettingStore";
-const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(require("dispatcher"), {
+const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(dispatcherDefault, {
   MEDIA_ENGINE_SET_GO_LIVE_SOURCE: function handleSetGoLiveSource(settings) {
     settings = settings.settings;
     let context;
@@ -66,10 +65,6 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return false;
   },
   STREAM_UPDATE_SETTINGS: function handleUpdateSettings(arg0) {
-    let frameRate;
-    let preset;
-    let resolution;
-    let soundshareEnabled;
     ({ preset, resolution, frameRate, soundshareEnabled } = arg0);
     let tmp = null != preset;
     if (tmp) {
@@ -103,6 +98,6 @@ const applicationStreamingSettingsStore = new ApplicationStreamingSettingsStore(
     return flag;
   }
 });
-const result = require("initialize").fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
+const result = set.fileFinishedImporting("stores/ApplicationStreamingSettingsStore.tsx");
 
 export default applicationStreamingSettingsStore;

@@ -1,20 +1,22 @@
 // discord_app/modules/coded_links/web/CodedLinkActionCreators.tsx
-import { CONFERENCE_MODE_ENABLED } from "CONFERENCE_MODE_ENABLED";
-import { dispatcher } from "../../../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import CONFERENCE_MODE_ENABLED2 from "CONFERENCE_MODE_ENABLED" /* 683 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = require("set").fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
+const CONFERENCE_MODE_ENABLED = CONFERENCE_MODE_ENABLED2.CONFERENCE_MODE_ENABLED;
+const result = set.fileFinishedImporting("modules/coded_links/web/CodedLinkActionCreators.tsx");
 
 export default {
   openNativeAppModal(arg0, arg1) {
 
   },
   nativeModalOpened(code) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "NATIVE_APP_MODAL_OPENED", code };
     obj.dispatch(obj);
   },
   nativeModalOpenFailed(code) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "NATIVE_APP_MODAL_OPEN_FAILED", code };
     obj.dispatch(obj);
   }

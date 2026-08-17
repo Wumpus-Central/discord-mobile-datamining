@@ -1,49 +1,33 @@
 // discord_app/utils/PermissionUtils.tsx
-import initialize from "initialize";
-import closure_5 from "initialize";
-import storeThread from "storeThread";
-import createChannelRecord from "createChannelRecord";
-import GuildNSFWContentLevel from "GuildNSFWContentLevel";
-import { hasPermission } from "GuildRoleRecordTypeTag";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import deserializeResult from "initialize";
-import importAllResult from "fromString";
-import importAllResult1 from "fromString";
-import importDefaultResult from "ME";
-import importAllResult2 from "fromString";
-import importAllResult3 from "fromString";
-import importAllResult4 from "fromString";
-import importAllResult5 from "fromString";
-import importAllResult6 from "fromString";
-import importAllResult7 from "fromString";
-import { apply } from "../../_runtime/00012_apply.js";
-import { PermissionOverwriteType } from "../flow/Server.tsx";
-import { GuildMemberFlags } from "../modules/guild_automod/AutomodPermissionUtils.tsx";
-import { compareGuildRoles } from "GuildRoleUtils.tsx";
-import { DISCORD_EPOCH } from "SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import compareGuildRoles from "compareGuildRoles" /* 1987 */;
+import GuildMemberFlags from "GuildMemberFlags" /* 4027 */;
+import closure_4 from "initialize" /* 1982 */;
+import closure_5 from "initialize" /* 4022 */;
+import closure_6 from "storeThread" /* 4023 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import GuildNSFWContentLevel from "GuildNSFWContentLevel" /* 1434 */;
+import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_12 from "fetchFingerprint" /* 1218 */;
+import closure_13 from "ensureGuildLoaded" /* 1391 */;
+import closure_14 from "trackCommunicationDisabled" /* 1990 */;
+import closure_15 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_16 from "createGuildRecordFromRust" /* 1910 */;
+import closure_17 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import deserializeResult from "module_0" /* 0 */;
+import importAllResult from "fromString" /* 506 */;
+import importDefaultResult from "apply" /* 12 */;
 
-let c10;
-let c9;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function applyOverwrites(id, member, closure_23, overwrites) {
   let addResult = closure_23;
   if (null != overwrites[id]) {
-    const obj = importAll(506);
-    const removeResult = importAll(506).remove(closure_23, tmp.deny);
-    addResult = importAll(506).add(removeResult, tmp.allow);
-    const obj2 = importAll(506);
+    const obj = importAllResult;
+    const removeResult = importAllResult.remove(closure_23, tmp.deny);
+    addResult = importAllResult.add(removeResult, tmp.allow);
+    const obj2 = importAllResult;
   }
   let found1 = addResult;
   if (null != member) {
@@ -63,9 +47,9 @@ function applyOverwrites(id, member, closure_23, overwrites) {
         if (null != tmp7) {
           let tmp13 = importAll;
           let tmp14 = dependencyMap;
-          let obj3 = importAll(506);
+          let obj3 = importAllResult;
           addResult1 = obj3.add(tmp16, tmp7.allow);
-          let obj4 = importAll(506);
+          let obj4 = importAllResult;
           addResult2 = obj4.add(tmp15, tmp7.deny);
         }
         num = num + 1;
@@ -75,9 +59,9 @@ function applyOverwrites(id, member, closure_23, overwrites) {
         tmp18 = addResult1;
       } while (num < member.roles.length);
     }
-    const obj5 = importAll(506);
-    const removeResult1 = importAll(506).remove(addResult, tmp17);
-    const addResult3 = importAll(506).add(removeResult1, tmp18);
+    const obj5 = importAllResult;
+    const removeResult1 = importAllResult.remove(addResult, tmp17);
+    const addResult3 = importAllResult.add(removeResult1, tmp18);
     let addResult4 = addResult3;
     if (null != overwrites[member.userId]) {
       let tmp19Result = tmp19(506);
@@ -85,9 +69,9 @@ function applyOverwrites(id, member, closure_23, overwrites) {
       addResult4 = tmp19Result.add(tmp19Result.remove(addResult3, tmp23.deny), tmp23.allow);
       const removeResult2 = tmp19Result.remove(addResult3, tmp23.deny);
     }
-    const obj6 = importAll(506);
-    const hasItem = importAll(506).has(addResult4, Permissions.ADMINISTRATOR);
-    const tmp19Result1 = importAll(506);
+    const obj6 = importAllResult;
+    const hasItem = importAllResult.has(addResult4, Permissions.ADMINISTRATOR);
+    const tmp19Result1 = importAllResult;
     const tmp28 = require;
     const result = GuildMemberFlags.hasAutomodQuarantinedProfile(member);
     let tmp31 = result;
@@ -111,11 +95,6 @@ function applyOverwrites(id, member, closure_23, overwrites) {
   return found1;
 }
 function computePermissionsForMember(excludeGuildPermissions) {
-  let checkElevated;
-  let guild;
-  let member;
-  let overwrites;
-  let roles;
   ({ member, guild, overwrites, roles, checkElevated } = excludeGuildPermissions);
   if (checkElevated === undefined) {
     checkElevated = true;
@@ -155,7 +134,7 @@ function computePermissionsForMember(excludeGuildPermissions) {
           if (undefined !== tmp15) {
             let tmp19 = importAll;
             let tmp20 = dependencyMap;
-            let obj2 = importAll(506);
+            let obj2 = importAllResult;
             addResult = obj2.add(tmp14, tmp15.permissions);
           }
           num = num + 1;
@@ -214,11 +193,6 @@ function computePermissionsForMember(excludeGuildPermissions) {
   }
 }
 function computePermissions(excludeGuildPermissions) {
-  let checkElevated;
-  let context;
-  let overwrites;
-  let roles;
-  let user;
   ({ user, context, overwrites, roles, checkElevated } = excludeGuildPermissions);
   if (checkElevated === undefined) {
     checkElevated = true;
@@ -248,7 +222,7 @@ function computePermissions(excludeGuildPermissions) {
             }
             let hasJoinedResult = id === id;
             if (hasJoinedResult) {
-              hasJoinedResult = storeThread.hasJoined(context.id);
+              hasJoinedResult = closure_6.hasJoined(context.id);
             }
             let obj = { user: null, context: null, overwrites: null, roles: null, checkElevated: null, excludeGuildPermissions: null };
             obj[0] = user;
@@ -320,14 +294,14 @@ function computePermissions(excludeGuildPermissions) {
             }
             let removeResult = tmp18;
             if (!mfaEnabled) {
-              removeResult = importAll(506).remove(tmp18, closure_19);
-              const obj3 = importAll(506);
+              removeResult = importAllResult.remove(tmp18, closure_19);
+              const obj3 = importAllResult;
             }
             tmp21 = removeResult;
           }
         }
       }
-      const obj1 = { userId: null, member: null, guild: null, overwrites: null, roles: null, checkElevated: null, excludeGuildPermissions: null, lurkerPermissionsMask: null };
+      obj1 = { userId: null, member: null, guild: null, overwrites: null, roles: null, checkElevated: null, excludeGuildPermissions: null, lurkerPermissionsMask: null };
       obj1[0] = id;
       obj1[1] = authStore.getMember(tmp4.id, id);
       obj1[2] = tmp4;
@@ -342,18 +316,18 @@ function computePermissions(excludeGuildPermissions) {
     return tmp21;
   }
 }
-function applyThreadPermissions(context, permissionsForRoles, hasJoinedResult, trackCommunicationDisabled) {
+function applyThreadPermissions(context, permissionsForRoles, hasJoinedResult, closure_14) {
   if (context.type === constants2.MEDIA_THREAD) {
-    let combineResult = importAll(506).combine(Permissions.READ_MESSAGE_HISTORY, Permissions.VIEW_CHANNEL);
-    const obj6 = importAll(506);
+    combineResult = importAllResult.combine(Permissions.READ_MESSAGE_HISTORY, Permissions.VIEW_CHANNEL);
+    const obj6 = importAllResult;
   } else {
     if (context.type === tmp.PRIVATE_THREAD) {
       if (!hasJoinedResult) {
-        if (!trackCommunicationDisabled) {
+        if (!closure_14) {
           if (!obj.has(permissionsForRoles, Permissions.MANAGE_THREADS)) {
             combineResult = closure_23;
           }
-          obj = importAll(506);
+          obj = importAllResult;
         }
       }
     }
@@ -375,29 +349,31 @@ function applyThreadPermissions(context, permissionsForRoles, hasJoinedResult, t
     combine = tmp8.combine;
     SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
     removeResult1 = combine(permissionsForRoles, SEND_MESSAGES);
-    obj2 = importAll(506);
+    obj2 = importAllResult;
   }
   return combineResult;
 }
-({ THREAD_CHANNEL_TYPES: error, ChannelRecordBase: metroImportAll } = createChannelRecord);
+({ THREAD_CHANNEL_TYPES: error, ChannelRecordBase: closure_8 } = createChannelRecord);
 ({ getGuildEveryoneRoleId: c9, isGuildOwner: c10 } = GuildNSFWContentLevel);
 const Permissions = ME.Permissions;
 ({ ElevatedPermissions: closure_19, MFALevels: closure_20, ChannelTypes: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22 } = ME);
-const items = [...require("ME").values(Permissions)];
+const importAllResult1 = importAllResult;
+const items = [...importDefaultResult.values(Permissions)];
 const applyResult = importAllResult1.combine.apply(items);
-let combineResult = require("fromString").combine(Permissions.CREATE_INSTANT_INVITE, Permissions.CHANGE_NICKNAME, Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES, Permissions.EMBED_LINKS, Permissions.ATTACH_FILES, Permissions.READ_MESSAGE_HISTORY, Permissions.MENTION_EVERYONE, Permissions.USE_EXTERNAL_EMOJIS, Permissions.USE_EXTERNAL_STICKERS, Permissions.ADD_REACTIONS, Permissions.CREATE_PUBLIC_THREADS, Permissions.CREATE_PRIVATE_THREADS, Permissions.SEND_MESSAGES_IN_THREADS, Permissions.SEND_POLLS, Permissions.CONNECT, Permissions.SPEAK, Permissions.USE_VAD, Permissions.STREAM, Permissions.USE_EMBEDDED_ACTIVITIES, Permissions.USE_SOUNDBOARD, Permissions.REQUEST_TO_SPEAK, Permissions.USE_APPLICATION_COMMANDS, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.CREATE_EVENTS, Permissions.USE_EXTERNAL_APPS);
-let closure_26 = require("fromString").combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
-let closure_27 = require("fromString").combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES, Permissions.CONNECT, Permissions.SPEAK, Permissions.STREAM, Permissions.USE_EMBEDDED_ACTIVITIES, Permissions.USE_EXTERNAL_APPS, Permissions.USE_EXTERNAL_EMOJIS, Permissions.USE_EXTERNAL_SOUNDS, Permissions.USE_EXTERNAL_STICKERS, Permissions.USE_SOUNDBOARD, Permissions.USE_VAD, Permissions.SEND_MESSAGES_IN_THREADS, Permissions.EMBED_LINKS, Permissions.ATTACH_FILES, Permissions.ADD_REACTIONS);
-let closure_28 = require("fromString").combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
-let closure_29 = require("fromString").combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY, Permissions.CHANGE_NICKNAME);
-const combineResult1 = require("fromString").combine(Permissions.MANAGE_GUILD, Permissions.MANAGE_ROLES, Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.MANAGE_NICKNAMES, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_WEBHOOKS, Permissions.VIEW_AUDIT_LOG, Permissions.VIEW_GUILD_ANALYTICS);
-let result = require("storeThread").fileFinishedImporting("utils/PermissionUtils.tsx");
+let combineResult = importAllResult.combine(Permissions.CREATE_INSTANT_INVITE, Permissions.CHANGE_NICKNAME, Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES, Permissions.EMBED_LINKS, Permissions.ATTACH_FILES, Permissions.READ_MESSAGE_HISTORY, Permissions.MENTION_EVERYONE, Permissions.USE_EXTERNAL_EMOJIS, Permissions.USE_EXTERNAL_STICKERS, Permissions.ADD_REACTIONS, Permissions.CREATE_PUBLIC_THREADS, Permissions.CREATE_PRIVATE_THREADS, Permissions.SEND_MESSAGES_IN_THREADS, Permissions.SEND_POLLS, Permissions.CONNECT, Permissions.SPEAK, Permissions.USE_VAD, Permissions.STREAM, Permissions.USE_EMBEDDED_ACTIVITIES, Permissions.USE_SOUNDBOARD, Permissions.REQUEST_TO_SPEAK, Permissions.USE_APPLICATION_COMMANDS, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.CREATE_EVENTS, Permissions.USE_EXTERNAL_APPS);
+const importAllResult2 = importAllResult;
+let closure_26 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
+const importAllResult3 = importAllResult;
+let closure_27 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.SEND_MESSAGES, Permissions.CONNECT, Permissions.SPEAK, Permissions.STREAM, Permissions.USE_EMBEDDED_ACTIVITIES, Permissions.USE_EXTERNAL_APPS, Permissions.USE_EXTERNAL_EMOJIS, Permissions.USE_EXTERNAL_SOUNDS, Permissions.USE_EXTERNAL_STICKERS, Permissions.USE_SOUNDBOARD, Permissions.USE_VAD, Permissions.SEND_MESSAGES_IN_THREADS, Permissions.EMBED_LINKS, Permissions.ATTACH_FILES, Permissions.ADD_REACTIONS);
+const importAllResult4 = importAllResult;
+let closure_28 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY);
+const importAllResult5 = importAllResult;
+let closure_29 = importAllResult.combine(Permissions.VIEW_CHANNEL, Permissions.READ_MESSAGE_HISTORY, Permissions.CHANGE_NICKNAME);
+const importAllResult6 = importAllResult;
+const importAllResult7 = importAllResult;
+const combineResult1 = importAllResult.combine(Permissions.MANAGE_GUILD, Permissions.MANAGE_ROLES, Permissions.ADMINISTRATOR, Permissions.BAN_MEMBERS, Permissions.MANAGE_NICKNAMES, Permissions.CREATE_GUILD_EXPRESSIONS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MANAGE_WEBHOOKS, Permissions.VIEW_AUDIT_LOG, Permissions.VIEW_GUILD_ANALYTICS);
+let result = require("set").fileFinishedImporting("utils/PermissionUtils.tsx");
 function computePermissionsForRoles(excludeGuildPermissions) {
-  let checkElevated;
-  let context;
-  let forceRoles;
-  let overwrites;
-  let roles;
   ({ forceRoles, context, overwrites, roles, checkElevated } = excludeGuildPermissions);
   if (checkElevated === undefined) {
     checkElevated = true;
@@ -454,10 +430,10 @@ function computePermissionsForRoles(excludeGuildPermissions) {
   if (null == tmp4) {
     return closure_23;
   } else {
-    const obj1 = { userId: null, nick: "", guildId: null, guildMemberAvatar: null, roles: null, colorString: null, colorStrings: null, hoistRoleId: null, premiumSince: null, isPending: false, joinedAt: null, communicationDisabledUntil: null };
+    obj1 = { userId: null, nick: "", guildId: null, guildMemberAvatar: null, roles: null, colorString: null, colorStrings: null, hoistRoleId: null, premiumSince: null, isPending: false, joinedAt: null, communicationDisabledUntil: null };
     obj1[0] = closure_22;
     obj1[2] = tmp4.id;
-    obj1[4] = DISCORD_EPOCH.keys(forceRoles);
+    obj1[4] = DISCORD_EPOCHDefault.keys(forceRoles);
     const _Date = Date;
     const date = new Date();
     obj1[10] = date.toISOString();
@@ -502,7 +478,7 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
             obj[guild_id] = obj;
           }
           if (null == obj[guild_id]) {
-            const obj1 = { id: null, type: null, allow: null, deny: null };
+            obj1 = { id: null, type: null, allow: null, deny: null };
             obj1[0] = guild_id;
             obj1[1] = obj(1954).PermissionOverwriteType.ROLE;
             obj1[2] = closure_23;
@@ -518,12 +494,12 @@ export const areChannelsLocked = function areChannelsLocked(channel, channel2) {
             tmp10 = !keys.some((arg0) => {
               let tmp3 = null == tmp2;
               if (!tmp3) {
-                const obj = outer1_2(outer1_3[13]);
+                obj = closure_1_2(closure_1_3[13]);
                 tmp3 = !obj.equals(tmp2.deny, tmp.deny);
               }
               if (!tmp3) {
-                tmp3 = !outer1_2(outer1_3[13]).equals(tmp2.allow, tmp.allow);
-                const obj2 = outer1_2(outer1_3[13]);
+                tmp3 = !closure_1_2(closure_1_3[13]).equals(tmp2.allow, tmp.allow);
+                const obj2 = closure_1_2(closure_1_3[13]);
               }
               return tmp3;
             });
@@ -590,28 +566,16 @@ export const makeEveryoneOverwrite = function makeEveryoneOverwrite(guild_id) {
   return { id: guild_id, type: PermissionOverwriteType.PermissionOverwriteType.ROLE, allow: closure_23, deny: closure_23 };
 };
 export const canManageACategory = function canManageACategory(currentUser, guild, _categories) {
-  let context;
-  let excludeGuildPermissions;
-  let overwrites;
-  let permission;
-  let roles;
-  let user;
-  let closure_0 = currentUser;
+  closure_0 = currentUser;
   ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = { permission: Permissions.MANAGE_CHANNELS, user: currentUser, context: guild });
-  let someResult = importAll(506).has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
+  let someResult = importAllResult.has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
   if (!someResult) {
     someResult = _categories.some((channel) => {
-      let context;
-      let excludeGuildPermissions;
-      let overwrites;
-      let permission;
-      let roles;
-      let user;
       channel = channel.channel;
       let hasItem = "null" !== channel.id;
       if (hasItem) {
         let obj = { permission: null, user: null, context: null };
-        obj[0] = outer1_18.MANAGE_CHANNELS;
+        obj[0] = closure_1_18.MANAGE_CHANNELS;
         obj[1] = closure_0;
         obj[2] = channel;
         ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = obj);
@@ -621,8 +585,8 @@ export const canManageACategory = function canManageACategory(currentUser, guild
         obj[2] = overwrites;
         obj[3] = roles;
         obj[5] = excludeGuildPermissions;
-        hasItem = outer1_2(outer1_3[13]).has(outer1_32(obj), permission);
-        const obj2 = outer1_2(outer1_3[13]);
+        hasItem = closure_1_2(closure_1_3[13]).has(closure_1_32(obj), permission);
+        const obj2 = closure_1_2(closure_1_3[13]);
       }
       return hasItem;
     });
@@ -630,14 +594,8 @@ export const canManageACategory = function canManageACategory(currentUser, guild
   return someResult;
 };
 export const can = function can(arg0) {
-  let context;
-  let excludeGuildPermissions;
-  let overwrites;
-  let permission;
-  let roles;
-  let user;
   ({ permission, user, context, overwrites, roles, excludeGuildPermissions } = arg0);
-  return importAll(506).has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
+  return importAllResult.has(computePermissions({ user, context, overwrites, roles, checkElevated: true, excludeGuildPermissions }), permission);
 };
 export const ALLOW = "ALLOW";
 export const DENY = "DENY";
@@ -670,16 +628,16 @@ export const canEveryoneRole = function canEveryoneRole(VIEW_CHANNEL, channel) {
     const tmp17 = {}[tmp.id];
     let addResult = permissions;
     if (null != tmp17) {
-      const obj2 = importAll(506);
-      const removeResult = importAll(506).remove(permissions, tmp17.deny);
-      addResult = importAll(506).add(removeResult, tmp17.allow);
-      const obj3 = importAll(506);
+      const obj2 = importAllResult;
+      const removeResult = importAllResult.remove(permissions, tmp17.deny);
+      addResult = importAllResult.add(removeResult, tmp17.allow);
+      const obj3 = importAllResult;
     }
-    return importAll(506).has(addResult, VIEW_CHANNEL);
+    return importAllResult.has(addResult, VIEW_CHANNEL);
   }
 };
 export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
-  let closure_0 = VIEW_CHANNEL;
+  closure_0 = VIEW_CHANNEL;
   let tmp = channel;
   if (channel instanceof closure_8) {
     if (channel.type === constants2.PRIVATE_THREAD) {
@@ -705,8 +663,8 @@ export const canEveryone = function canEveryone(VIEW_CHANNEL, channel) {
   } else {
     let tmp10 = hasPermission(store3.getEveryoneRole(tmp), VIEW_CHANNEL);
     if (tmp10) {
-      tmp10 = !apply.some({}, (deny) => outer1_2(outer1_3[13]).has(deny.deny, closure_0));
-      const obj2 = apply;
+      tmp10 = !importDefaultResult.some({}, (deny) => closure_1_2(closure_1_3[13]).has(deny.deny, closure_0));
+      const obj2 = importDefaultResult;
     }
     return tmp10;
   }

@@ -1,10 +1,10 @@
 // discord_app/modules/unique_usernames/useUsernameStatus.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
 import { useUsernameLiveCheck } from "useUsernameLiveCheck.tsx";
 
 const require = arg1;
-const result = require("useUsernameLiveCheck").fileFinishedImporting("modules/unique_usernames/useUsernameStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/unique_usernames/useUsernameStatus.tsx");
 
 export const useUsernameStatus = (arg0, flag, flag2) => {
   const _require = arg0;
@@ -14,7 +14,7 @@ export const useUsernameStatus = (arg0, flag, flag2) => {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const dependencyMap = tmp;
+  dependencyMap = tmp;
   let usernameLiveCheck;
   let React;
   usernameLiveCheck = _useUsernameLiveCheck.useUsernameLiveCheck(arg0, flag, flag2);

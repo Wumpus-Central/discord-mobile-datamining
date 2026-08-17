@@ -1,21 +1,23 @@
 // discord_app/modules/devtools/AnalyticsLogStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import init from "init";
-import { Store } from "initialize";
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { extractId } from "../../../discord_common/js/packages/fingerprint-utils/FingerprintUtils.tsx";
+import extractId from "extractId" /* 513 */;
+import v1 from "v1" /* 514 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "init" /* 7472 */;
 
-const require = arg1;
+require = arg1;
 let c4 = 0;
 let closure_5 = [];
 let c6 = 0;
 let closure_7 = [];
 let c8 = false;
+const Store = initializeDefault.Store;
 class AnalyticsLogStore extends Store {
 }
 const prototype = AnalyticsLogStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, init);
+  this.waitFor(closure_2, closure_3);
 };
 Object.defineProperty(prototype, "loggedEvents", {
   get: function loggedEvents() {
@@ -42,12 +44,12 @@ Object.defineProperty(prototype, "trackTriggers", {
   set: undefined
 });
 AnalyticsLogStore.displayName = "AnalyticsLogStore";
-const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
+const analyticsLogStore = new AnalyticsLogStore(dispatcherDefault, {
   TRACK: function handleTrack(fingerprint) {
     fingerprint = fingerprint.fingerprint;
-    if (init.isDeveloper) {
+    if (closure_3.isDeveloper) {
       const obj = { key: null, event: null, properties: null, fingerprint: null, timestamp: null };
-      let closure_4 = str + 1;
+      closure_4 = str + 1;
       obj[0] = +closure_4.toString();
       obj[1] = tmp;
       obj[2] = tmp2;
@@ -70,13 +72,7 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
     }
   },
   TRACK_TRIGGER: function handleTrackTrigger(arg0) {
-    let _location;
-    let descriptor;
-    let excluded;
-    let experimentId;
-    let exposureType;
-    let previouslyTracked;
-    let isDeveloper = init.isDeveloper;
+    let isDeveloper = closure_3.isDeveloper;
     ({ experimentId, descriptor, exposureType, excluded, location: _location, previouslyTracked } = arg0);
     if (isDeveloper) {
       isDeveloper = c8;
@@ -107,11 +103,11 @@ const analyticsLogStore = new AnalyticsLogStore(require("dispatcher"), {
     enabled = enabled.enabled;
   },
   ANALYTICS_LOG_CLEAR: function handleAnalyticsLogClear() {
-    let closure_5 = [];
+    closure_5 = [];
     closure_6 = closure_6 + 1;
-    let closure_7 = [];
+    closure_7 = [];
   }
 });
-const result = require("extractId").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/AnalyticsLogStore.tsx");
 
 export default analyticsLogStore;

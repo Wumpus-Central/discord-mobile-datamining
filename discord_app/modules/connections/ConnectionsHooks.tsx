@@ -1,20 +1,19 @@
 // discord_app/modules/connections/ConnectionsHooks.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { KeyboardKeysUpdated } from "items";
+import setDefault from "set" /* 687 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "set" /* 5221 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { KeyboardKeysUpdated } from "items" /* 5228 */;
 
-let PlatformTypes;
-let error;
 const require = arg1;
 ({ ACTIVITY_PLATFORM_TYPES: error, PlatformTypes } = ME);
 let closure_10 = { [PlatformTypes.INSTAGRAM]: ["1036753656588017764"] };
 let items = [PlatformTypes.INSTAGRAM, new Date(2023, 1, 18).getTime()];
 let items1 = [items];
 const map = new Map(items1);
-let closure_12 = 30 * require("set").Millis.DAY;
+let closure_12 = 30 * setDefault.Millis.DAY;
 let items2 = [PlatformTypes.PLAYSTATION, 2];
 let items3 = [items2, , , , ];
 const items4 = [PlatformTypes.XBOX, 2];
@@ -31,20 +30,20 @@ const result = require("set").fileFinishedImporting("modules/connections/Connect
 
 export const usePlatformAllowed = function usePlatformAllowed(forUserProfile) {
   forUserProfile = forUserProfile.forUserProfile;
-  let closure_1;
+  closure_1 = undefined;
   let allowPlayStationStaging;
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   closure_1 = forUserProfile(allowPlayStationStaging[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = forUserProfile(allowPlayStationStaging[8]).PlayStationVoiceExperiment;
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   return (type) => {
-    if (type.type === outer1_8.PLAYSTATION_STAGING) {
+    if (type.type === closure_1_8.PLAYSTATION_STAGING) {
       let tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
-        if (outer1_10[type.type] != null) {
+        if (closure_1_10[type.type] != null) {
           hasItem = obj.includes(tmp10.id);
         }
         tmp4 = !hasItem;
@@ -71,25 +70,25 @@ export const usePlatformAllowed = function usePlatformAllowed(forUserProfile) {
   };
 };
 export const usePlatforms = function usePlatforms() {
-  let items = [set];
+  let items = [closure_5];
   const stateFromStores = _require(memo[7]).useStateFromStores(items, () => accounts.getAccounts());
   _require = stateFromStores;
   _require = false;
   let fn;
   memo = undefined;
   let obj = _require(memo[7]);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_6];
   fn = _require(memo[7]).useStateFromStores(items1, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = _require(memo[8]).PlayStationVoiceExperiment;
   memo = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (type) => {
-    if (type.type === outer1_8.PLAYSTATION_STAGING) {
+    if (type.type === closure_1_8.PLAYSTATION_STAGING) {
       let tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
-        if (outer1_10[type.type] != null) {
+        if (closure_1_10[type.type] != null) {
           hasItem = obj.includes(tmp10.id);
         }
         tmp4 = !hasItem;
@@ -147,18 +146,18 @@ export const usePlatforms = function usePlatforms() {
 };
 export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
   let fn = false;
-  let items = [mergeGuildAvatar];
-  let closure_1 = fn(allowPlayStationStaging[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
+  let items = [closure_6];
+  closure_1 = fn(allowPlayStationStaging[7]).useStateFromStores(items, () => currentUser.getCurrentUser());
   const PlayStationVoiceExperiment = fn(allowPlayStationStaging[8]).PlayStationVoiceExperiment;
   allowPlayStationStaging = PlayStationVoiceExperiment.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
   fn = (type) => {
-    if (type.type === outer1_8.PLAYSTATION_STAGING) {
+    if (type.type === closure_1_8.PLAYSTATION_STAGING) {
       let tmp5 = allowPlayStationStaging;
     } else {
       let tmp4 = undefined === closure_1;
       if (!tmp4) {
         let hasItem;
-        if (outer1_10[type.type] != null) {
+        if (closure_1_10[type.type] != null) {
           hasItem = obj.includes(tmp10.id);
         }
         tmp4 = !hasItem;
@@ -200,15 +199,13 @@ export const useEmptyStatePlatforms = function useEmptyStatePlatforms() {
   }, items1);
 };
 export const useLegacyPlatformType = function useLegacyPlatformType(arg0) {
-  let require;
-  let tmp2;
   function handleKeyDown(key) {
-    if (key.key === outer1_9.SHIFT) {
+    if (key.key === closure_1_9.SHIFT) {
       callback(true);
     }
   }
   function handleKeyUp(key) {
-    if (key.key === outer1_9.SHIFT) {
+    if (key.key === closure_1_9.SHIFT) {
       callback(false);
     }
   }

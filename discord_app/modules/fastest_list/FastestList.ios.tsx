@@ -1,7 +1,7 @@
 // discord_app/modules/fastest_list/FastestList.ios.tsx
-import importAllResult from "noop";
-import { RefreshControl } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { RefreshControl } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function noop() {
@@ -9,37 +9,6 @@ function noop() {
 }
 let c3 = importAllResult;
 const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
-  let accessibilityLabel;
-  let enabled;
-  let estimatedListSize;
-  let horizontal;
-  let insetEnd;
-  let insetStart;
-  let itemSize;
-  let keyboardDismissMode;
-  let keyboardShouldPersistTaps;
-  let listFooterAlwaysMounted;
-  let listFooterSize;
-  let listHeaderAlwaysMounted;
-  let listHeaderSize;
-  let onLayout;
-  let onScroll;
-  let onScrollBeginDrag;
-  let onScrollEndDrag;
-  let renderAhead;
-  let renderItem;
-  let renderListFooter;
-  let renderListHeader;
-  let renderSectionFooter;
-  let renderSectionHeader;
-  let scrollEventThrottle;
-  let sectionFooterSize;
-  let sectionHeaderIsSticky;
-  let sectionHeaderSize;
-  let sections;
-  let showsHorizontalScrollIndicator;
-  let showsVerticalScrollIndicator;
-  let style;
   ({ enabled, horizontal } = inActionSheet);
   ({ accessibilityLabel, estimatedListSize } = inActionSheet);
   if (horizontal === undefined) {
@@ -115,7 +84,7 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
     if (true === preventNativeModalDismiss) {
       if (true === inActionSheet) {
         const obj = { refreshing: false, onRefresh: null, tintColor: "transparent" };
-        obj[1] = outer1_6;
+        obj[1] = closure_1_6;
         tmp = scrollIndicatorInsetStart(scrollIndicatorInsetEnd, obj);
       }
     }
@@ -185,6 +154,6 @@ const forwardRefResult = importAllResult.forwardRef((inActionSheet) => {
   obj[36] = style;
   return scrollIndicatorInsetStart(AnimatedFastList, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
+const result = require("set").fileFinishedImporting("modules/fastest_list/FastestList.ios.tsx");
 
 export default forwardRefResult;

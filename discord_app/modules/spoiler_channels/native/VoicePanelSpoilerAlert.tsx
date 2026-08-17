@@ -1,16 +1,15 @@
 // discord_app/modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx
-import "noop";
-import jsxProd from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/spoiler_channels/native/VoicePanelSpoilerAlert.tsx");
 
 export default function VoicePanelSpoilerAlert(channelId) {
   channelId = channelId.channelId;
-  let closure_1;
+  closure_1 = undefined;
   let obj = channelId(4660);
   closure_1 = obj.useDismissModalCallback();
   obj = { title: null, content: null, actions: null };
@@ -19,12 +18,12 @@ export default function VoicePanelSpoilerAlert(channelId) {
   const intl2 = channelId(1236).intl;
   obj[1] = intl2.string(channelId(1236).t["2fDWXK"]);
   obj = { children: null };
-  const obj1 = {
+  obj1 = {
     variant: "primary",
     onPress() {
-      callback(outer1_2[5]).spoilerAgree(channelId);
-      const obj = callback(outer1_2[5]);
-      const voiceChannel = callback(outer1_2[6]).selectVoiceChannel(channelId);
+      callback(closure_1_2[5]).spoilerAgree(channelId);
+      const obj = callback(closure_1_2[5]);
+      const voiceChannel = callback(closure_1_2[6]).selectVoiceChannel(channelId);
       callback();
     },
     text: null

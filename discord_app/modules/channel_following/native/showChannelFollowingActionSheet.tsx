@@ -1,46 +1,47 @@
 // discord_app/modules/channel_following/native/showChannelFollowingActionSheet.tsx
-import "noop";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 
 const require = arg1;
-const result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/channel_following/native/showChannelFollowingActionSheet.tsx");
 
 export const showChannelFollowingActionSheet = function showChannelFollowingActionSheet(id, guildId) {
   const _require = id;
-  const importDefault = guildId;
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  importDefault = guildId;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = {
     sourceChannelId: id,
     sourceGuildId: guildId,
     targetChannelId: arg2,
     targetGuildId: arg3,
     reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-      let obj = outer1_1(outer1_2[2]);
+      let obj = closure_1_1(closure_1_2[2]);
       obj = {
         sourceChannelId: closure_0,
         sourceGuildId: closure_1,
         targetChannelId,
         targetGuildId,
         reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-          let obj = outer1_1(outer1_2[2]);
+          let obj = closure_1_1(closure_1_2[2]);
           obj = {
             sourceChannelId: closure_0,
             sourceGuildId: closure_1,
             targetChannelId,
             targetGuildId,
             reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-              let obj = outer1_1(outer1_2[2]);
+              let obj = closure_1_1(closure_1_2[2]);
               obj = {
                 sourceChannelId: closure_0,
                 sourceGuildId: closure_1,
                 targetChannelId,
                 targetGuildId,
                 reopenActionSheetWithTarget(targetGuildId, targetChannelId) {
-                  let obj = outer1_1(outer1_2[2]);
+                  let obj = closure_1_1(closure_1_2[2]);
                   obj = { sourceChannelId: closure_0, sourceGuildId: closure_1, targetChannelId, targetGuildId, reopenActionSheetWithTarget() { ... }, onSuccess() { ... }, onCancel() { ... } };
-                  obj.openLazy(outer1_0(outer1_2[4])(outer1_2[3], outer1_2.paths), "NewChannelFollower." + closure_0, obj);
+                  obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
                 },
                 onSuccess() {
                   let obj = callback(dependencyMap[5]);
@@ -51,7 +52,7 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
                   return callback(dependencyMap[2]).hideActionSheet();
                 }
               };
-              obj.openLazy(outer1_0(outer1_2[4])(outer1_2[3], outer1_2.paths), "NewChannelFollower." + closure_0, obj);
+              obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
             },
             onSuccess() {
               let obj = callback(dependencyMap[5]);
@@ -67,14 +68,14 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
               return callback(dependencyMap[2]).hideActionSheet();
             }
           };
-          obj.openLazy(outer1_0(outer1_2[4])(outer1_2[3], outer1_2.paths), "NewChannelFollower." + closure_0, obj);
+          obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
         },
         onSuccess() {
           let obj = callback(dependencyMap[5]);
           obj = {
             importer() {
               return callback(paths[4])(paths[6], paths.paths).then((arg0) => {
-                let closure_0 = arg0.default;
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             },
@@ -86,17 +87,17 @@ export const showChannelFollowingActionSheet = function showChannelFollowingActi
           return callback(dependencyMap[2]).hideActionSheet();
         }
       };
-      obj.openLazy(outer1_0(outer1_2[4])(outer1_2[3], outer1_2.paths), "NewChannelFollower." + closure_0, obj);
+      obj.openLazy(closure_1_0(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "NewChannelFollower." + closure_0, obj);
     },
     onSuccess() {
       let obj = callback(dependencyMap[5]);
       obj = {
         importer() {
           return callback(paths[4])(paths[6], paths.paths).then((arg0) => {
-            let closure_0 = arg0.default;
+            closure_0 = arg0.default;
             return (arg0) => {
               const merged = Object.assign(arg0);
-              return outer1_3(closure_0, {});
+              return closure_1_3(closure_0, {});
             };
           });
         },

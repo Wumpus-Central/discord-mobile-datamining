@@ -1,22 +1,17 @@
 // discord_app/modules/multi_account/setUserStatus.tsx
-import getSystemLocale from "getSystemLocale";
-import initialize from "initialize";
-import filterPlayingActivities from "filterPlayingActivities";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "initialize" /* 6796 */;
+import closure_5 from "filterPlayingActivities" /* 7250 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function _setUserStatus() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
-      let disableTracking;
       if (globalStats === 2) {
         globalStats = 3;
         HermesBuiltin.throwTypeError();
@@ -43,7 +38,7 @@ function _setUserStatus() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp5;
+              dependencyMap = tmp5;
               let callback2 = tmp2;
               let callback;
               callback2 = undefined;
@@ -68,12 +63,12 @@ function _setUserStatus() {
               throw arg1;
             } else if (arg0 === 2) {
               globalStats = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               if (null == callback2) {
-                const outer1_1 = str.getStatus();
+                const status = str.getStatus();
               }
               str = "0";
               if (null != c3) {
@@ -130,7 +125,7 @@ function _setUserStatus() {
                   let formatToPlainStringResult = intl2.formatToPlainString(tmp(tmp2[5]).t["r50t/S"], obj);
                 } else {
                   const intl = tmp(tmp2[5]).intl;
-                  const obj1 = { statusLabel: null, dateString: null, timeString: null };
+                  obj1 = { statusLabel: null, dateString: null, timeString: null };
                   obj1[0] = humanizeStatusResult;
                   obj1[1] = tmp6;
                   obj1[2] = timeString;
@@ -177,7 +172,7 @@ function _setUserStatus() {
     iter.next();
     return iter;
   });
-  const _setUserStatus = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -186,7 +181,7 @@ function _setUserStatus() {
   }
   return applyArgumentsResult;
 }
-let result = require("filterPlayingActivities").fileFinishedImporting("modules/multi_account/setUserStatus.tsx");
+let result = require("set").fileFinishedImporting("modules/multi_account/setUserStatus.tsx");
 
 export default function setUserStatus() {
   const self = this;

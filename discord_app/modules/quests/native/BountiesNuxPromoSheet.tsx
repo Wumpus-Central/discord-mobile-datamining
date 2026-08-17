@@ -1,19 +1,20 @@
 // discord_app/modules/quests/native/BountiesNuxPromoSheet.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { BountiesPosterSpotIllustration } from "../../../design/components/mana-assets/native/generated/BountiesPosterSpotIllustration.native.tsx";
-import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import BountiesPosterSpotIllustration from "BountiesPosterSpotIllustration" /* 5554 */;
+import PromoSheet from "PromoSheet" /* 8017 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 createCacheKey = { illustrationContainer: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_12 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/quests/native/BountiesNuxPromoSheet.tsx");
 
 export default function BountiesNuxPromoSheet() {
   const callback = React.useCallback(() => {
@@ -24,8 +25,8 @@ export default function BountiesNuxPromoSheet() {
   obj[1] = intl.string(getSystemLocale.t.DDpHZG);
   const intl2 = getSystemLocale.intl;
   obj[2] = intl2.string(getSystemLocale.t["LY+igv"]);
-  obj = { style: createCacheKey().illustrationContainer, children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }) };
-  obj[3] = <View style={createCacheKey().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
+  obj = { style: callback().illustrationContainer, children: jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 }) };
+  obj[3] = <View style={callback().illustrationContainer}>{jsx(BountiesPosterSpotIllustration.BountiesPosterSpotIllustration, { width: 273, height: 205 })}</View>;
   obj = { grow: true, size: "lg", variant: "primary", text: null, onPress: null };
   const intl3 = getSystemLocale.intl;
   obj[3] = intl3.string(getSystemLocale.t.cpT0Cq);

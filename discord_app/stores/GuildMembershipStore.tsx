@@ -1,12 +1,13 @@
 // discord_app/stores/GuildMembershipStore.tsx
-import { Store } from "initialize";
-import importDefaultResult from "dispatcher";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import importDefaultResult from "dispatcher" /* 709 */;
+import set from "set" /* 2 */;
 
-let c0 = arg1;
+let closure_0 = arg1;
+const Store = initializeDefault.Store;
 class GuildMembershipStore extends Store {
   constructor() {
-    DispatchBand = undefined;
+    closure_0 = undefined;
     tmp2 = require("dispatcher");
     obj = {
       CACHE_LOADED(arg0) {
@@ -31,7 +32,7 @@ class GuildMembershipStore extends Store {
     obj[4] = GUILD_DELETE;
     tmp = new tmp(tmp2, obj, require("dispatcher").DispatchBand.Early, GUILD_DELETE, new.target, tmp, tmp2);
     // ThrowIfThisInitialized (0x7c)
-    DispatchBand = tmp;
+    closure_0 = tmp;
     set = new Set();
     tmp.guildIds = set;
     return tmp;
@@ -72,7 +73,7 @@ function handleGuildDelete(guild) {
   }
 }
 prototype["handleGuildDelete"] = handleGuildDelete;
-c0 = undefined;
+closure_0 = undefined;
 let obj = {
   CACHE_LOADED(arg0) {
     return obj.handleCacheLoaded(arg0);
@@ -92,7 +93,7 @@ let obj = {
 };
 tmp = new tmp(importDefaultResult, obj, require("dispatcher").DispatchBand.Early, GuildMembershipStore, tmp, importDefaultResult, obj, new.target, undefined, handleGuildDelete, globalThis);
 // ThrowIfThisInitialized (0x7c)
-c0 = tmp;
+closure_0 = tmp;
 let set = new Set();
 tmp.guildIds = set;
 const result = set.fileFinishedImporting("stores/GuildMembershipStore.tsx");

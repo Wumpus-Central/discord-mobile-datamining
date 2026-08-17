@@ -1,16 +1,16 @@
 // discord_app/modules/application_account_linking/native/startAuthorizationNoHook.tsx
-import set from "set";
-import { AnalyticEvents } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function _startAuthorizationNoHook() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -38,23 +38,23 @@ function _startAuthorizationNoHook() {
               obj[0] = arg1;
               return obj;
             } else {
-              let set = tmp3;
+              closure_3 = tmp3;
               const table = tmp5;
               const callback = authorizationApp;
               authorizationApp = undefined;
               if (null != callback) {
-                let obj3 = callback(outer1_2[2]);
+                let obj3 = callback(closure_1_2[2]);
                 authorizationApp = obj3.getAuthorizationApp(tmp33);
                 let prop;
                 if (authorizationApp != null) {
                   prop = authorizationApp.connectionEntrypointUrl;
                 }
                 if (null != prop) {
-                  let c5 = 1;
+                  c5 = 1;
                   c6 = 2;
                   c7 = 1;
-                  const obj1 = { value: null, done: false };
-                  obj1[0] = callback2(outer1_2[3]).openURL(authorizationApp.connectionEntrypointUrl);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = callback2(closure_1_2[3]).openURL(authorizationApp.connectionEntrypointUrl);
                   return obj1;
                 }
               }
@@ -92,7 +92,7 @@ function _startAuthorizationNoHook() {
       }
     })();
   });
-  const _startAuthorizationNoHook = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -101,7 +101,7 @@ function _startAuthorizationNoHook() {
   }
   return applyArgumentsResult;
 }
-const result = require("getAuthorizationApp").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/startAuthorizationNoHook.tsx");
 
 export const startAuthorizationNoHook = function startAuthorizationNoHook(application, items) {
   const self = this;

@@ -1,15 +1,18 @@
 // discord_app/modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx
-import { NotificationSettingsUpdateType as closure_3 } from "AccountNotificationFlags";
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import AccountNotificationFlags from "AccountNotificationFlags" /* 4033 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx");
+let closure_3 = AccountNotificationFlags.NotificationSettingsUpdateType;
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/notifications/friend_gaming_activity/FriendGamingActivityNotificationUtils.tsx");
 
 export const onFriendGamingActivityNotificationSettingsChanged = function onFriendGamingActivityNotificationSettingsChanged(friend_gaming_activity_notifications) {
   const EnableFriendGamingActivityNotifications = explicitContentFromProto.EnableFriendGamingActivityNotifications;
   EnableFriendGamingActivityNotifications.updateSetting(friend_gaming_activity_notifications);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { update_type: constants.ACCOUNT, friend_gaming_activity_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

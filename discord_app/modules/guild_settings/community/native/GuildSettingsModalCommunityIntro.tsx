@@ -1,31 +1,19 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx
-import combined from "combined";
-import get_ActivityIndicator from "module_8874";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import handleFormInit from "handleFormInit";
-import ME from "ME";
-import jsxProd from "module_16882";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_9 from "handleFormInit" /* 8875 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_6;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function FeatureCard(arg0) {
-  let body;
-  let header;
-  let icon;
   ({ icon, header, body } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.featureCard, children: null };
   obj = { style: tmp.featureIcon, children: icon() };
   const items = [callback(closure_4, obj), ];
@@ -40,39 +28,37 @@ function FeatureCard(arg0) {
 ({ HelpdeskArticles: c10, GuildFeatures: unpackModuleId, GuildSettingsSections: closure_12, Permissions: map1 } = ME);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 createCacheKey = { container: { height: "100%" }, contentPadding: { padding: 16 }, header: { textAlign: "center", marginBottom: 8 }, body: { textAlign: "center", marginBottom: 24 }, details: { textAlign: "center", marginTop: 24 }, headerImage: { width: "100%" }, features: { marginTop: 32, marginBottom: 32 }, featureCard: null, featureIcon: null, featureDescription: null };
-createCacheKey = { backgroundColor: require("Themes").colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: require("Themes").radii.sm, marginTop: 8, alignItems: "flex-start" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.CARD_BACKGROUND_DEFAULT, flex: 1, flexDirection: "row", padding: 16, borderRadius: ThemesDefault.radii.sm, marginTop: 8, alignItems: "flex-start" };
 createCacheKey[7] = createCacheKey;
-createCacheKey[8] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
+createCacheKey[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
 createCacheKey[9] = { overflow: "hidden", flex: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx");
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: 40, marginRight: 16, padding: 8 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/community/native/GuildSettingsModalCommunityIntro.tsx");
 
 export default function GuildSettingsModalCommunityIntro(contentContainerStyle) {
-  let onClose;
-  let require;
   ({ guildId: require, onClose } = contentContainerStyle);
   let navigation;
   let stateFromStores;
   let stateFromStores1;
   let stateFromStores2;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = require(navigation[14]);
   navigation = obj.useNavigation();
-  let obj1 = require(navigation[15]);
-  const items = [createGuildRecordFromRust];
-  stateFromStores = obj1.useStateFromStores(items, () => outer1_7.getGuild(closure_0));
+  obj1 = require(navigation[15]);
+  const items = [closure_7];
+  stateFromStores = obj1.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
   let obj2 = require(navigation[15]);
-  const items1 = [getUncachedChannelPermissions];
+  const items1 = [closure_8];
   stateFromStores1 = obj2.useStateFromStores(items1, () => {
     let canResult = null != stateFromStores;
     if (canResult) {
-      canResult = outer1_8.can(outer1_13.ADMINISTRATOR, tmp);
+      canResult = closure_1_8.can(closure_1_13.ADMINISTRATOR, tmp);
     }
     return canResult;
   });
   let obj3 = require(navigation[15]);
-  const items2 = [handleFormInit];
+  const items2 = [closure_9];
   stateFromStores2 = obj3.useStateFromStores(items2, () => submitting.isSubmitting());
   const items3 = [stateFromStores, stateFromStores2, navigation, onClose];
   const effect = stateFromStores.useEffect(() => {
@@ -81,7 +67,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
       let hasItem;
       if (stateFromStores != null) {
         const features = stateFromStores.features;
-        hasItem = features.has(outer1_11.COMMUNITY);
+        hasItem = features.has(closure_1_11.COMMUNITY);
       }
       tmp = hasItem;
     }
@@ -90,7 +76,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
       obj.wait(() => callback(table[17]).setSection(constants.COMMUNITY));
       obj = { onClose: null };
       obj[0] = onClose;
-      const replaced = navigation.replace(outer1_12.COMMUNITY, obj);
+      const replaced = navigation.replace(closure_1_12.COMMUNITY, obj);
     }
   }, items3);
   let obj4 = require(navigation[18]);
@@ -118,8 +104,8 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
       onClose(navigation[21]).open();
       const obj2 = onClose(navigation[21]);
     } else {
-      outer1_0(navigation[22]).communityAdminOnly();
-      const obj = outer1_0(navigation[22]);
+      closure_1_0(navigation[22]).communityAdminOnly();
+      const obj = closure_1_0(navigation[22]);
     }
   };
   obj5[2] = !stateFromStores1;
@@ -131,9 +117,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const obj7 = { style: tmp.features, children: null };
   const obj8 = {
     icon() {
-      const obj = { color: null };
-      obj[0] = onClose(navigation[8]).unsafe_rawColors.GREEN_360;
-      return callback2(callback(navigation[9]).AnalyticsIcon, obj);
+      return callback2(callback(navigation[9]).AnalyticsIcon, { color: onClose(navigation[8]).unsafe_rawColors.GREEN_360 });
     },
     header: null,
     body: null
@@ -149,9 +133,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   const items6 = [obj8, , ];
   const obj10 = {
     icon() {
-      const obj = { color: null };
-      obj[0] = onClose(navigation[8]).unsafe_rawColors.YELLOW_300;
-      return callback2(callback(navigation[12]).LightbulbIcon, obj);
+      return callback2(callback(navigation[12]).LightbulbIcon, { color: onClose(navigation[8]).unsafe_rawColors.YELLOW_300 });
     },
     header: null,
     body: null
@@ -171,9 +153,7 @@ export default function GuildSettingsModalCommunityIntro(contentContainerStyle) 
   items6[1] = obj10;
   const obj12 = {
     icon() {
-      const obj = { color: null };
-      obj[0] = onClose(navigation[8]).unsafe_rawColors.PLATFORM_PARTNER;
-      return callback2(callback(navigation[13]).CircleInformationIcon, obj);
+      return callback2(callback(navigation[13]).CircleInformationIcon, { color: onClose(navigation[8]).unsafe_rawColors.PLATFORM_PARTNER });
     },
     header: null,
     body: null

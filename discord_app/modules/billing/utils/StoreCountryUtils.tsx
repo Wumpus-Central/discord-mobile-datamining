@@ -1,8 +1,9 @@
 // discord_app/modules/billing/utils/StoreCountryUtils.tsx
-const result = require("set").fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/billing/utils/StoreCountryUtils.tsx");
 
 export const parseStoreCountry = function parseStoreCountry(storeCountry) {
-  let set_at;
   let tmp = storeCountry;
   if (null != storeCountry) {
     const obj = { country: null, setAt: null, isLocked: null };

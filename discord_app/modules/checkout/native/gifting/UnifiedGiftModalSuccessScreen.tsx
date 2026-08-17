@@ -1,30 +1,29 @@
 // discord_app/modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx
-import noop from "noop";
-import { Image } from "get ActivityIndicator";
-import { UserSettingsSections } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { alertContainer: null, image: null, title: null, description: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_24, paddingBottom: require("Themes").space.PX_24, alignItems: "center" };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_24, paddingBottom: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { position: "relative", top: -50 };
-createCacheKey[2] = { marginTop: -require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_8 };
-let obj1 = { marginTop: -require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_8 };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginBottom: require("Themes").space.PX_24 };
-const result = require("ME").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
+createCacheKey[2] = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
+let obj1 = { marginTop: -ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24 };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { marginBottom: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalSuccessScreen.tsx");
 
 export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   giftBadgeProgress = giftBadgeProgress.giftBadgeProgress;
   const onClose = giftBadgeProgress.onClose;
   let enabled;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const GiftingBadgeExperiment = giftBadgeProgress(enabled[7]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "UnifiedGiftModalSuccessScreen" }).enabled;
   const items = [enabled, giftBadgeProgress, onClose];
@@ -45,7 +44,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const callback1 = React.useCallback(() => {
     onClose();
     let obj = giftBadgeProgress(enabled[11]);
-    obj = { screen: outer1_5.PREMIUM_GIFTING, params: {} };
+    obj = { screen: closure_1_5.PREMIUM_GIFTING, params: {} };
     obj.openUserSettings(obj);
   }, items1);
   let obj = { onClose: callback, noDefaultButtons: true, style: tmp.alertContainer, children: null };
@@ -55,7 +54,7 @@ export default function UnifiedGiftModalSuccessScreen(giftBadgeProgress) {
   const intl = giftBadgeProgress(enabled[14]).intl;
   obj[2] = intl.string(giftBadgeProgress(enabled[14]).t.MqZXbv);
   items2[1] = callback(giftBadgeProgress(enabled[13]).Text, obj);
-  const obj1 = { variant: "text-md/medium", style: tmp.description, children: null };
+  obj1 = { variant: "text-md/medium", style: tmp.description, children: null };
   const intl2 = giftBadgeProgress(enabled[14]).intl;
   obj1[2] = intl2.format(giftBadgeProgress(enabled[14]).t.YS2J4S, { onClick: callback1 });
   items2[2] = callback(giftBadgeProgress(enabled[13]).Text, obj1);

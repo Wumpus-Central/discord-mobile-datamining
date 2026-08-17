@@ -1,31 +1,30 @@
 // discord_app/modules/reactions/native/ReactionUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { EmojiIntention } from "set";
-import { jsx } from "registerAsset";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { set } from "../../../actions/AlertActionCreators.tsx";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import setDefault from "set" /* 4827 */;
+import collectGuildAnalyticsMetadataDefault from "collectGuildAnalyticsMetadata" /* 5042 */;
+import registerAssetDefault from "registerAsset" /* 10470 */;
+import registerAssetDefault2 from "registerAsset" /* 10471 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
+import closure_5 from "handleConnectionOpen" /* 4197 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { collectGuildAnalyticsMetadata } from "../../app_analytics/AppAnalyticsUtils.tsx";
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ AnalyticEvents: error, AnalyticsPages: metroImportAll, AnalyticsSections: c9 } = ME);
+require = arg1;
+({ AnalyticEvents: error, AnalyticsPages: closure_8, AnalyticsSections: c9 } = ME);
 let obj = {};
-obj[require("ReactionTypes").ReactionTypes.NORMAL] = require("registerAsset");
-obj[require("ReactionTypes").ReactionTypes.BURST] = require("registerAsset");
+obj[require("ReactionTypes").ReactionTypes.NORMAL] = registerAssetDefault;
+obj[require("ReactionTypes").ReactionTypes.BURST] = registerAssetDefault2;
 obj = {};
 obj[require("ReactionTypes").ReactionTypes.NORMAL] = require("ReactionIcon").ReactionIcon;
 obj[require("ReactionTypes").ReactionTypes.BURST] = require("SuperReactionIcon").SuperReactionIcon;
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/reactions/native/ReactionUtils.tsx");
 
 export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0) {
   const currentUser = authStore.getCurrentUser();
@@ -35,15 +34,15 @@ export const handleOutOfSuperReactions = function handleOutOfSuperReactions(arg0
     if (!obj.isPremium(currentUser)) {
       obj = { onDismiss: null };
       obj[0] = arg0;
-      openLazyResult = ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(9317, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
-      const obj2 = ACTION_SHEET_HEIGHT_HALF;
+      openLazyResult = ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(9317, dependencyMap.paths), "SuperReactionUpsellActionSheet", obj);
+      const obj2 = ACTION_SHEET_HEIGHT_HALFDefault;
     }
     return openLazyResult;
   }
 };
 export const handleAddNewReactions = function handleAddNewReactions(channel, id, MESSAGE, burst) {
   const _require = channel;
-  const importDefault = id;
+  importDefault = id;
   if (MESSAGE === undefined) {
     MESSAGE = _require(MESSAGE[10]).ReactionLocations.MESSAGE;
   }
@@ -77,7 +76,7 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
     _require(ReactionTypes[16]);
     tmp10Result = { onPressEmoji: null, channel: null, pickerIntention: null, reactionType: null, analyticsObject: null, messageId: null };
     tmp10Result[0] = function onPressEmoji(byName, burst) {
-      const id = channel.id;
+      id = channel.id;
       const obj = { burst };
       if (null != byName) {
         const toReactionEmojiResult = channel(MESSAGE[7]).toReactionEmoji(byName);
@@ -104,9 +103,6 @@ export const handleAddNewReactions = function handleAddNewReactions(channel, id,
   }
 };
 export const handleViewReactions = function handleViewReactions(isPoll) {
-  let _location;
-  let channelId;
-  let messageId;
   ({ messageId, channelId, location: _location } = isPoll);
   if (_location === undefined) {
     _location = {};
@@ -148,20 +144,20 @@ export const handleViewReactions = function handleViewReactions(isPoll) {
     obj[1] = FORUM_CHANNEL_POST;
     const merged1 = Object.assign(_location);
     obj[4] = obj;
-    collectGuildAnalyticsMetadata.trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
-    const obj3 = collectGuildAnalyticsMetadata;
-    const obj1 = { messageId: null, channelId: null, emoji: null };
+    collectGuildAnalyticsMetadataDefault.trackWithMetadata(constants.REACTION_ACTION_SHEET_OPENED, obj);
+    const obj3 = collectGuildAnalyticsMetadataDefault;
+    obj1 = { messageId: null, channelId: null, emoji: null };
     obj1[0] = messageId;
     obj1[1] = channelId;
     obj1[2] = isPoll.emoji;
-    const obj6 = ACTION_SHEET_HEIGHT_HALF;
+    const obj6 = ACTION_SHEET_HEIGHT_HALFDefault;
     const merged2 = Object.assign(merged);
     obj6.openLazy(asyncRequireImpl(10457, dependencyMap.paths), "MessageReactions", obj1);
   }
   FORUM_CHANNEL_POST = constants2.FORUM_CHANNEL_POST;
 };
 export const handleViewPreviewReactions = function handleViewPreviewReactions(id2, id, emoji) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { messageId: id2, channelId: id, emoji };
   obj.openLazy(asyncRequireImpl(10469, dependencyMap.paths), "MessagePreviewReactions", obj);
 };
@@ -169,8 +165,8 @@ export const ADD_REACTION_ICONS = obj;
 export const ADD_REACTION_ICON_COMPONENTS = obj;
 export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, arg1) {
   const _require = arg0;
-  const importDefault = arg1;
-  let obj = set;
+  importDefault = arg1;
+  let obj = setDefault;
   obj = { title: null, children: null, cancelText: null, confirmText: null, onConfirm: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.ZbtGBm);
@@ -183,7 +179,7 @@ export const handleRemoveAllReactions = function handleRemoveAllReactions(arg0, 
   const intl4 = _getSystemLocale.intl;
   obj[3] = intl4.string(_getSystemLocale.t.oyYWHE);
   obj[4] = function onConfirm() {
-    return callback(outer1_2[10]).removeAllReactions(callback, closure_1);
+    return callback(closure_1_2[10]).removeAllReactions(callback, closure_1);
   };
   obj.show(obj);
 };

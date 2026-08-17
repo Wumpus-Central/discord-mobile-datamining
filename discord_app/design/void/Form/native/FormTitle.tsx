@@ -1,18 +1,14 @@
 // discord_app/design/void/Form/native/FormTitle.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import set from "set";
-import set from "set";
-import createCacheKey from "createCacheKey";
-import set from "ME";
-import { Button } from "../../native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Platform;
-let c3;
-let c4;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: obj1, Platform } = get_ActivityIndicator);
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let num = 58;
@@ -24,20 +20,14 @@ if (set.isAndroid()) {
   num2 = 56;
 }
 set = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: null, error: null };
-set = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: require("Themes").colors.TEXT_SUBTLE };
+set = { fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: ThemesDefault.colors.TEXT_SUBTLE };
 set[3] = set;
-set = { color: require("Themes").unsafe_rawColors.RED_400 };
+set = { color: ThemesDefault.unsafe_rawColors.RED_400 };
 set[4] = set;
-set = createCacheKey.createStyles(set);
+let closure_5 = createCacheKey.createStyles(set);
 const result = set.fileFinishedImporting("design/void/Form/native/FormTitle.tsx");
 
 export default function FormTitle(thinTitle) {
-  let icon;
-  let numberOfLines;
-  let textStyle;
-  let title;
-  let uppercaseTitle;
-  let viewStyle;
   ({ title, uppercaseTitle } = thinTitle);
   ({ icon, numberOfLines } = thinTitle);
   if (uppercaseTitle === undefined) {
@@ -56,7 +46,7 @@ export default function FormTitle(thinTitle) {
     flag3 = false;
   }
   ({ viewStyle, textStyle } = thinTitle);
-  const tmp = set();
+  const tmp = callback();
   const items = [tmp.titleWrapper, , , ];
   if (flag) {
     flag = tmp.thinTitle;

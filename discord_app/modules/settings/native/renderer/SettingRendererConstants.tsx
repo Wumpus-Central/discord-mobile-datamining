@@ -1,5 +1,5 @@
 // discord_app/modules/settings/native/renderer/SettingRendererConstants.tsx
-import set from "set";
+import set from "set" /* 2 */;
 
 const obj = { ROUTE: "route", PRESSABLE: "pressable", TOGGLE: "toggle", STATIC: "static", RADIO: "radio", VOLUME_SLIDER: "volume_slider", SLIDER: "slider", GUILD_SELECTOR: "guild_selector", LIST: "list", SEGMENTED_CONTROL: "segmented_control" };
 const items = [, , ];

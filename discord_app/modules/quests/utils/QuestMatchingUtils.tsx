@@ -1,16 +1,13 @@
 // discord_app/modules/quests/utils/QuestMatchingUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import addApplication from "addApplication";
-import QuestsExperimentLocations from "QuestsExperimentLocations";
-import { ActivityGamePlatforms } from "ME";
-import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "items3";
-import { getQuestDeliveryDataForPlacement } from "QuestDataUtils.tsx";
+import getQuestDeliveryDataForPlacement from "getQuestDeliveryDataForPlacement" /* 7451 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "addApplication" /* 4478 */;
+import QuestsExperimentLocations from "QuestsExperimentLocations" /* 6716 */;
+import { ActivityGamePlatforms } from "ME" /* 676 */;
+import { XBOX_ACTIVITY_APPLICATION_ID as closure_8 } from "items3" /* 4481 */;
 import { getApplicationIdsByTaskTypes } from "QuestTaskUtils.tsx";
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function questMatchesActivity(arg0, id) {
   let formatted = arg0;
   let tmp2 = null;
@@ -62,7 +59,6 @@ function questMatchesActivity(arg0, id) {
   }
 }
 function getQuestByActivity(result, arg1) {
-  let tmp4;
   const obj = result[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp2 = callback;
@@ -92,12 +88,11 @@ function questMatchesApplicationId(arg0, quest) {
   return null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
 }
 ({ DISCORD_APPLICATION_ID: c4, PLAY_ACTIVITY_CLOUD_GAMING_QUEST_ID: c5, PLAY_ACTIVITY_SOCIAL_ENTRY_APPLICATION_ID: closure_6 } = QuestsExperimentLocations);
-const result = require("QuestsExperimentLocations").fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/utils/QuestMatchingUtils.tsx");
 
 export { questMatchesActivity };
 export { getQuestByActivity };
 export const getQuestByApplicationId = function getQuestByApplicationId(arg0, arg1) {
-  let tmp5;
   const obj = arg0[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp3 = callback;
@@ -122,9 +117,9 @@ export const getQuestByApplicationId = function getQuestByApplicationId(arg0, ar
   }
 };
 export const allPlayOnDesktopQuestsByApplicationId = function allPlayOnDesktopQuestsByApplicationId(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   return Array.from(arr.values()).filter((quest) => {
-    let obj = callback(outer1_1[5]);
+    let obj = callback(closure_1_1[5]);
     const allApplicationIds = obj.getAllApplicationIds(quest);
     let hasPlayOnDesktopTaskResult = null != allApplicationIds && allApplicationIds.some((arg0) => arg0 === closure_0);
     if (hasPlayOnDesktopTaskResult) {
@@ -160,7 +155,7 @@ export const getQuestsFromActivities = function getQuestsFromActivities(result, 
   return null;
 };
 export const getEligibleQuestsForApplicationId = function getEligibleQuestsForApplicationId(quests, applicationId, arg2) {
-  let closure_0 = applicationId;
+  closure_0 = applicationId;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -184,7 +179,7 @@ export const getEligibleQuestsForApplicationId = function getEligibleQuestsForAp
         canLaunchActivityResult = activityApplicationId === applicationId;
       }
       if (canLaunchActivityResult) {
-        canLaunchActivityResult = activityApplicationId !== outer1_4;
+        canLaunchActivityResult = activityApplicationId !== closure_1_4;
       }
       if (canLaunchActivityResult) {
         userStatus = userStatus.userStatus;

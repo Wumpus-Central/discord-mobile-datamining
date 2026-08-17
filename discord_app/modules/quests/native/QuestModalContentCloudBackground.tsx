@@ -1,18 +1,15 @@
 // discord_app/modules/quests/native/QuestModalContentCloudBackground.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { preload } from "../../../components_native/common/FastImage.tsx";
-import { isThemeLight } from "../../../design/utils/shared/themes.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
+import noopAll from "noop" /* 19 */;
+import isThemeLight from "isThemeLight" /* 1364 */;
+import useTheme from "useTheme" /* 4310 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import preloadDefault from "preload" /* 5449 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles((arg0) => {
@@ -27,10 +24,10 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
   const merged2 = Object.assign(tmp.absoluteFillObject);
   const merged3 = Object.assign(arg0 ? { top: "r" } : { bottom: "r" });
   if (arg0) {
-    let obj1 = {};
+    obj1 = {};
   } else {
     obj1 = { transform: null };
-    const items = [{ rotate: "180deg" }];
+    items = [{ rotate: "180deg" }];
     obj1[0] = items;
   }
   const merged4 = Object.assign(obj1);
@@ -52,11 +49,9 @@ let closure_7 = createCacheKey.createStyles((arg0) => {
 let items = ["#292252FF", "#1E1F2200"];
 const substr = items.slice();
 let closure_9 = substr.reverse();
-const result = require("jsxProd").fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestModalContentCloudBackground.tsx");
 
 export default function QuestModalContentCloudBackground(align) {
-  let imgStyle;
-  let style;
   align = align.align;
   let str = "bottom";
   if (undefined !== align) {
@@ -70,7 +65,7 @@ export default function QuestModalContentCloudBackground(align) {
   }
   const tmp = callback("bottom" === str);
   let obj = isThemeLight;
-  let obj1 = useTheme;
+  obj1 = useTheme;
   const isThemeDarkResult = obj.isThemeDark(obj1.useTheme());
   obj = { style: items, children: null };
   items = [tmp.wrapper, style];
@@ -78,7 +73,7 @@ export default function QuestModalContentCloudBackground(align) {
     obj = { colors: null, style: null };
     obj[0] = "top" === str ? items : closure_9;
     obj[1] = tmp.gradient;
-    tmp6(LinearGradient, obj);
+    tmp6(LinearGradientDefault, obj);
   } else {
     obj1 = { style: null };
     obj1[0] = tmp.solidBackground;
@@ -88,7 +83,7 @@ export default function QuestModalContentCloudBackground(align) {
     obj2[0] = items2;
     obj2[1] = importDefault(isThemeDarkResult ? 14480 : 14481);
     obj2[2] = str2;
-    items1[1] = tmp6(preload, obj2);
+    items1[1] = tmp6(preloadDefault, obj2);
     obj[1] = items1;
     return tmp4(tmp5, obj);
   }

@@ -1,5 +1,7 @@
 // discord_app/utils/SortedArrayUtils.tsx
-const result = require("set").fileFinishedImporting("utils/SortedArrayUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/SortedArrayUtils.tsx");
 
 export const insertionIndex = function insertionIndex(arg0, arg1, arg2) {
   let sum;

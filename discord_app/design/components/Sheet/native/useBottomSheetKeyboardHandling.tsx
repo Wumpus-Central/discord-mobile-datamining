@@ -1,5 +1,5 @@
 // discord_app/design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("design/components/Sheet/native/useBottomSheetKeyboardHandling.tsx");
@@ -18,14 +18,14 @@ export default function useBottomSheetKeyboardHandling(onFocus) {
     } else {
       obj = { onFocus: null, onBlur: null };
       obj[0] = function onFocus(arg0) {
-        const shouldHandleKeyboardEvents = noop.shouldHandleKeyboardEvents;
+        const shouldHandleKeyboardEvents = closure_2.shouldHandleKeyboardEvents;
         const result = shouldHandleKeyboardEvents.set(true);
         if (closure_0 != null) {
           tmp2(arg0);
         }
       };
       obj[1] = function onBlur(arg0) {
-        const shouldHandleKeyboardEvents = noop.shouldHandleKeyboardEvents;
+        const shouldHandleKeyboardEvents = closure_2.shouldHandleKeyboardEvents;
         const result = shouldHandleKeyboardEvents.set(false);
         if (closure_1 != null) {
           tmp2(arg0);

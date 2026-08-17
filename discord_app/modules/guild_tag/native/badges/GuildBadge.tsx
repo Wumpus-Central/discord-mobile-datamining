@@ -1,56 +1,54 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadge.tsx
-import "items";
-import { GuildTagBadgeKind } from "items";
-import { jsx } from "items";
-import { items } from "GuildBadgeBee.tsx";
-import { items } from "GuildBadgeBlossom.tsx";
-import { items } from "GuildBadgeBunny.tsx";
-import { items } from "GuildBadgeButterfly.tsx";
-import { items } from "GuildBadgeCat.tsx";
-import { items } from "GuildBadgeCaterpillar.tsx";
-import { items } from "GuildBadgeClover.tsx";
-import { items } from "GuildBadgeCompass.tsx";
-import { items } from "GuildBadgeCrosshairs.tsx";
-import { items } from "GuildBadgeCrown.tsx";
-import { items } from "GuildBadgeDiamond.tsx";
-import { items } from "GuildBadgeDog.tsx";
-import { items } from "GuildBadgeDollarSign.tsx";
-import { items } from "GuildBadgeFire.tsx";
-import { items } from "GuildBadgeFlower.tsx";
-import { items } from "GuildBadgeForce.tsx";
-import { items } from "GuildBadgeFrog.tsx";
-import { items } from "GuildBadgeGem.tsx";
-import { items } from "GuildBadgeGoat.tsx";
-import { items } from "GuildBadgeHeart.tsx";
-import { items } from "GuildBadgeLava.tsx";
-import { items } from "GuildBadgeLeaf.tsx";
-import { items } from "GuildBadgeLightning.tsx";
-import { items } from "GuildBadgeMaple.tsx";
-import { items } from "GuildBadgeMoneyBag.tsx";
-import { items } from "GuildBadgeMoon.tsx";
-import { items } from "GuildBadgePottedPlant.tsx";
-import { items } from "GuildBadgePsychic.tsx";
-import { items } from "GuildBadgeSkull.tsx";
-import { items } from "GuildBadgeSmoke.tsx";
-import { items } from "GuildBadgeSnail.tsx";
-import { items } from "GuildBadgeSnow.tsx";
-import { items } from "GuildBadgeSound.tsx";
-import { items } from "GuildBadgeSpider.tsx";
-import { items } from "GuildBadgeSun.tsx";
-import { items } from "GuildBadgeSword.tsx";
-import { items } from "GuildBadgeToadstool.tsx";
-import { items } from "GuildBadgeTrophy.tsx";
-import { items } from "GuildBadgeWaterDrop.tsx";
-import { items } from "GuildBadgeWiltedFlower.tsx";
-import { items } from "GuildBadgeWind.tsx";
+import noopAll from "noop" /* 19 */;
+import items from "items" /* 13376 */;
+import items2 from "items" /* 13379 */;
+import items3 from "items" /* 13380 */;
+import items4 from "items" /* 13381 */;
+import items5 from "items" /* 13382 */;
+import items6 from "items" /* 13383 */;
+import items7 from "items" /* 13384 */;
+import items8 from "items" /* 13385 */;
+import items9 from "items" /* 13386 */;
+import items10 from "items" /* 13387 */;
+import items11 from "items" /* 13388 */;
+import items12 from "items" /* 13389 */;
+import items13 from "items" /* 13390 */;
+import items14 from "items" /* 13391 */;
+import items15 from "items" /* 13392 */;
+import items16 from "items" /* 13393 */;
+import items17 from "items" /* 13394 */;
+import items18 from "items" /* 13395 */;
+import items19 from "items" /* 13396 */;
+import items20 from "items" /* 13397 */;
+import items21 from "items" /* 13398 */;
+import items22 from "items" /* 13399 */;
+import items23 from "items" /* 13400 */;
+import items24 from "items" /* 13401 */;
+import items25 from "items" /* 13402 */;
+import items26 from "items" /* 13403 */;
+import items27 from "items" /* 13404 */;
+import items28 from "items" /* 13405 */;
+import items29 from "items" /* 13406 */;
+import items30 from "items" /* 13407 */;
+import items31 from "items" /* 13408 */;
+import items32 from "items" /* 13409 */;
+import items33 from "items" /* 13410 */;
+import items34 from "items" /* 13411 */;
+import items35 from "items" /* 13412 */;
+import items36 from "items" /* 13413 */;
+import items37 from "items" /* 13414 */;
+import items38 from "items" /* 13415 */;
+import items39 from "items" /* 13416 */;
+import items40 from "items" /* 13417 */;
+import items41 from "items" /* 13418 */;
+import { GuildTagBadgeKind } from "items" /* 8168 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadge.tsx");
 
 export const GuildBadge = function GuildBadge(arg0) {
-  let badge;
-  let primaryTintColor;
-  let secondaryTintColor;
   ({ badge, primaryTintColor, secondaryTintColor } = arg0);
   let merged = Object.assign(arg0, Object.create(null));
   if (GuildTagBadgeKind.SWORD === badge) {
@@ -71,16 +69,16 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj[0] = primaryTintColor;
     merged = obj;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeWaterDrop, { primaryTintColor: null });
+    return jsx(items2.GuildBadgeWaterDrop, { primaryTintColor: null });
   } else if (tmp2.SKULL === badge) {
     merged = jsx;
     merged = require;
     merged = dependencyMap;
-    const obj1 = { primaryTintColor: null };
+    obj1 = { primaryTintColor: null };
     obj1[0] = primaryTintColor;
     merged = obj1;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeSkull, { primaryTintColor: null });
+    return jsx(items3.GuildBadgeSkull, { primaryTintColor: null });
   } else if (tmp2.TOADSTOOL === badge) {
     merged = jsx;
     merged = require;
@@ -90,7 +88,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj2[1] = secondaryTintColor;
     merged = obj2;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeToadstool, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items4.GuildBadgeToadstool, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.MOON === badge) {
     merged = jsx;
     merged = require;
@@ -99,7 +97,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj3[0] = primaryTintColor;
     merged = obj3;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeMoon, { primaryTintColor: null });
+    return jsx(items5.GuildBadgeMoon, { primaryTintColor: null });
   } else if (tmp2.LIGHTNING === badge) {
     merged = jsx;
     merged = require;
@@ -108,7 +106,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj4[0] = primaryTintColor;
     merged = obj4;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeLightning, { primaryTintColor: null });
+    return jsx(items6.GuildBadgeLightning, { primaryTintColor: null });
   } else if (tmp2.LEAF === badge) {
     merged = jsx;
     merged = require;
@@ -117,7 +115,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj5[0] = primaryTintColor;
     merged = obj5;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeLeaf, { primaryTintColor: null });
+    return jsx(items7.GuildBadgeLeaf, { primaryTintColor: null });
   } else if (tmp2.HEART === badge) {
     merged = jsx;
     merged = require;
@@ -126,7 +124,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj6[0] = primaryTintColor;
     merged = obj6;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeHeart, { primaryTintColor: null });
+    return jsx(items8.GuildBadgeHeart, { primaryTintColor: null });
   } else if (tmp2.FIRE === badge) {
     merged = jsx;
     merged = require;
@@ -135,7 +133,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj7[0] = primaryTintColor;
     merged = obj7;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeFire, { primaryTintColor: null });
+    return jsx(items9.GuildBadgeFire, { primaryTintColor: null });
   } else if (tmp2.COMPASS === badge) {
     merged = jsx;
     merged = require;
@@ -145,7 +143,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj8[1] = secondaryTintColor;
     merged = obj8;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeCompass, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items10.GuildBadgeCompass, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.CROSSHAIRS === badge) {
     merged = jsx;
     merged = require;
@@ -155,7 +153,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj9[1] = secondaryTintColor;
     merged = obj9;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeCrosshairs, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items11.GuildBadgeCrosshairs, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.FLOWER === badge) {
     merged = jsx;
     merged = require;
@@ -165,7 +163,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj10[1] = secondaryTintColor;
     merged = obj10;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeFlower, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items12.GuildBadgeFlower, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.FORCE === badge) {
     merged = jsx;
     merged = require;
@@ -175,7 +173,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj11[1] = secondaryTintColor;
     merged = obj11;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeForce, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items13.GuildBadgeForce, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.GEM === badge) {
     merged = jsx;
     merged = require;
@@ -185,7 +183,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj12[1] = secondaryTintColor;
     merged = obj12;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeGem, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items14.GuildBadgeGem, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.LAVA === badge) {
     merged = jsx;
     merged = require;
@@ -195,7 +193,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj13[1] = secondaryTintColor;
     merged = obj13;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeLava, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items15.GuildBadgeLava, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.PSYCHIC === badge) {
     merged = jsx;
     merged = require;
@@ -205,7 +203,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj14[1] = secondaryTintColor;
     merged = obj14;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgePsychic, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items16.GuildBadgePsychic, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.SMOKE === badge) {
     merged = jsx;
     merged = require;
@@ -215,7 +213,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj15[1] = secondaryTintColor;
     merged = obj15;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeSmoke, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items17.GuildBadgeSmoke, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.SNOW === badge) {
     merged = jsx;
     merged = require;
@@ -225,7 +223,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj16[1] = secondaryTintColor;
     merged = obj16;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeSnow, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items18.GuildBadgeSnow, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.SOUND === badge) {
     merged = jsx;
     merged = require;
@@ -235,7 +233,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj17[1] = secondaryTintColor;
     merged = obj17;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeSound, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items19.GuildBadgeSound, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.SUN === badge) {
     merged = jsx;
     merged = require;
@@ -245,7 +243,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj18[1] = secondaryTintColor;
     merged = obj18;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeSun, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items20.GuildBadgeSun, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.WIND === badge) {
     merged = jsx;
     merged = require;
@@ -255,7 +253,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj19[1] = secondaryTintColor;
     merged = obj19;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeWind, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items21.GuildBadgeWind, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.BUNNY === badge) {
     merged = jsx;
     merged = require;
@@ -264,7 +262,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj20[0] = primaryTintColor;
     merged = obj20;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeBunny, { primaryTintColor: null });
+    return jsx(items22.GuildBadgeBunny, { primaryTintColor: null });
   } else if (tmp2.DOG === badge) {
     merged = jsx;
     merged = require;
@@ -274,7 +272,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj21[1] = secondaryTintColor;
     merged = obj21;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeDog, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items23.GuildBadgeDog, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.FROG === badge) {
     merged = jsx;
     merged = require;
@@ -284,7 +282,7 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj22[1] = secondaryTintColor;
     merged = obj22;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeFrog, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items24.GuildBadgeFrog, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.GOAT === badge) {
     merged = require;
     merged = dependencyMap;
@@ -292,94 +290,94 @@ export const GuildBadge = function GuildBadge(arg0) {
     obj23[0] = primaryTintColor;
     merged = obj23;
     merged = Object.assign(merged);
-    return jsx(items.GuildBadgeGoat, { primaryTintColor: null });
+    return jsx(items25.GuildBadgeGoat, { primaryTintColor: null });
   } else if (tmp2.CAT === badge) {
     const obj24 = { primaryTintColor: null };
     obj24[0] = primaryTintColor;
     const merged1 = Object.assign(merged);
-    return jsx(items.GuildBadgeCat, { primaryTintColor: null });
+    return jsx(items26.GuildBadgeCat, { primaryTintColor: null });
   } else if (tmp2.DIAMOND === badge) {
     const obj25 = { primaryTintColor: null };
     obj25[0] = primaryTintColor;
     const merged2 = Object.assign(merged);
-    return jsx(items.GuildBadgeDiamond, { primaryTintColor: null });
+    return jsx(items27.GuildBadgeDiamond, { primaryTintColor: null });
   } else if (tmp2.CROWN === badge) {
     const obj26 = { primaryTintColor: null, secondaryTintColor: null };
     obj26[0] = primaryTintColor;
     obj26[1] = secondaryTintColor;
     const merged3 = Object.assign(merged);
-    return jsx(items.GuildBadgeCrown, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items28.GuildBadgeCrown, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.TROPHY === badge) {
     const obj27 = { primaryTintColor: null };
     obj27[0] = primaryTintColor;
     const merged4 = Object.assign(merged);
-    return jsx(items.GuildBadgeTrophy, { primaryTintColor: null });
+    return jsx(items29.GuildBadgeTrophy, { primaryTintColor: null });
   } else if (tmp2.MONEY_BAG === badge) {
     const obj28 = { primaryTintColor: null };
     obj28[0] = primaryTintColor;
     const merged5 = Object.assign(merged);
-    return jsx(items.GuildBadgeMoneyBag, { primaryTintColor: null });
+    return jsx(items30.GuildBadgeMoneyBag, { primaryTintColor: null });
   } else if (tmp2.DOLLAR_SIGN === badge) {
     const obj29 = { primaryTintColor: null };
     obj29[0] = primaryTintColor;
     const merged6 = Object.assign(merged);
-    return jsx(items.GuildBadgeDollarSign, { primaryTintColor: null });
+    return jsx(items31.GuildBadgeDollarSign, { primaryTintColor: null });
   } else if (tmp2.CLOVER === badge) {
     const obj30 = { primaryTintColor: null };
     obj30[0] = primaryTintColor;
     const merged7 = Object.assign(merged);
-    return jsx(items.GuildBadgeClover, { primaryTintColor: null });
+    return jsx(items32.GuildBadgeClover, { primaryTintColor: null });
   } else if (tmp2.BLOSSOM === badge) {
     const obj31 = { primaryTintColor: null };
     obj31[0] = primaryTintColor;
     const merged8 = Object.assign(merged);
-    return jsx(items.GuildBadgeBlossom, { primaryTintColor: null });
+    return jsx(items33.GuildBadgeBlossom, { primaryTintColor: null });
   } else if (tmp2.POTTED_PLANT === badge) {
     const obj32 = { primaryTintColor: null, secondaryTintColor: null };
     obj32[0] = primaryTintColor;
     obj32[1] = secondaryTintColor;
     const merged9 = Object.assign(merged);
-    return jsx(items.GuildBadgePottedPlant, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items34.GuildBadgePottedPlant, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.MAPLE === badge) {
     const obj33 = { primaryTintColor: null };
     obj33[0] = primaryTintColor;
     const merged10 = Object.assign(merged);
-    return jsx(items.GuildBadgeMaple, { primaryTintColor: null });
+    return jsx(items35.GuildBadgeMaple, { primaryTintColor: null });
   } else if (tmp2.WILTED_FLOWER === badge) {
     const obj34 = { primaryTintColor: null, secondaryTintColor: null };
     obj34[0] = primaryTintColor;
     obj34[1] = secondaryTintColor;
     const merged11 = Object.assign(merged);
-    return jsx(items.GuildBadgeWiltedFlower, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items36.GuildBadgeWiltedFlower, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.BUTTERFLY === badge) {
     const obj35 = { primaryTintColor: null, secondaryTintColor: null };
     obj35[0] = primaryTintColor;
     obj35[1] = secondaryTintColor;
     const merged12 = Object.assign(merged);
-    return jsx(items.GuildBadgeButterfly, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items37.GuildBadgeButterfly, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.SNAIL === badge) {
     const obj36 = { primaryTintColor: null, secondaryTintColor: null };
     obj36[0] = primaryTintColor;
     obj36[1] = secondaryTintColor;
     const merged13 = Object.assign(merged);
-    return jsx(items.GuildBadgeSnail, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items38.GuildBadgeSnail, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.CATERPILLAR === badge) {
     const obj37 = { primaryTintColor: null, secondaryTintColor: null };
     obj37[0] = primaryTintColor;
     obj37[1] = secondaryTintColor;
     const merged14 = Object.assign(merged);
-    return jsx(items.GuildBadgeCaterpillar, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items39.GuildBadgeCaterpillar, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.SPIDER === badge) {
     const obj38 = { primaryTintColor: null, secondaryTintColor: null };
     obj38[0] = primaryTintColor;
     obj38[1] = secondaryTintColor;
     const merged15 = Object.assign(merged);
-    return jsx(items.GuildBadgeSpider, { primaryTintColor: null, secondaryTintColor: null });
+    return jsx(items40.GuildBadgeSpider, { primaryTintColor: null, secondaryTintColor: null });
   } else if (tmp2.BEE === badge) {
     obj = { primaryTintColor: null };
     obj[0] = primaryTintColor;
     const merged16 = Object.assign(merged);
-    return jsx(items.GuildBadgeBee, { primaryTintColor: null });
+    return jsx(items41.GuildBadgeBee, { primaryTintColor: null });
   } else {
     return null;
   }

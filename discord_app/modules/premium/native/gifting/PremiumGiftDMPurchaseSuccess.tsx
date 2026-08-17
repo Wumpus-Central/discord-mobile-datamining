@@ -1,34 +1,31 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { NativeGiftContextProvider } from "../../../payments/native/NativeGiftContext.tsx";
-import { PremiumGiftBackgroundAnimation } from "PremiumGiftBackgroundAnimation.android.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import PremiumGiftBackgroundAnimationDefault from "PremiumGiftBackgroundAnimation" /* 9599 */;
+import NativeGiftContextProvider from "NativeGiftContextProvider" /* 9625 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { title: null, description: null };
-createCacheKey = { marginTop: require("Themes").space.PX_24, textAlign: "center" };
+createCacheKey = { marginTop: ThemesDefault.space.PX_24, textAlign: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: require("Themes").space.PX_8, textAlign: "center" };
-const result = require("jsxProd").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { marginTop: ThemesDefault.space.PX_8, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftDMPurchaseSuccess.tsx");
 
 export default function PremiumGiftDMSuccessBody() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = NativeGiftContextProvider;
   obj = { children: null };
-  obj = { children: null };
-  obj[0] = callback(PremiumGiftBackgroundAnimation, { giftStyle: obj.useNativeGiftContext().giftStyle });
+  obj = { children: callback(PremiumGiftBackgroundAnimationDefault, { giftStyle: obj.useNativeGiftContext().giftStyle }) };
   const items = [callback(View, obj), , ];
-  const obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
+  obj1 = { style: tmp.title, variant: "heading-lg/bold", children: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.MqZXbv);
   items[1] = callback(Text.Text, obj1);

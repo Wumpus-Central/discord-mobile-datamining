@@ -1,9 +1,12 @@
 // discord_app/modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx
-import { PowerupActiveStatusType } from "BoostedGuildTiers";
-import { messagesProxy } from "../GuildPowerups.messages.js";
-import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2367 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import usePowerupActiveStatus from "usePowerupActiveStatus" /* 11668 */;
 
-const result = require("getSystemLocale").fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
+const PowerupActiveStatusType = BoostedGuildTiers.PowerupActiveStatusType;
+const result = set.fileFinishedImporting("modules/premium/powerups/hooks/useMultiPerkStatusValues.tsx");
 
 export default function useMultiPerkStatusValues(powerups) {
   powerups = powerups.powerups;
@@ -36,8 +39,8 @@ export default function useMultiPerkStatusValues(powerups) {
       let tmp4 = obj;
     } else if (someResult) {
       obj = { type: "active", statusText: null };
-      const intl = tmp(1236).intl;
-      obj[1] = intl.string(messagesProxy.FFLkmx);
+      const intl = getSystemLocale.intl;
+      obj[1] = intl.string(messagesProxyDefault.FFLkmx);
       tmp4 = obj;
     }
     const reduced1 = powerupsActiveStatuses.reduce((arg0, type) => {
@@ -95,7 +98,7 @@ export default function useMultiPerkStatusValues(powerups) {
     if (someResult) {
       tmp10 = reduced1;
     }
-    const obj1 = { isActive: null, status: null, cost: null, costDecorator: null, expiringAt: null, activeCost: null, minCost: null, totalCost: null };
+    obj1 = { isActive: null, status: null, cost: null, costDecorator: null, expiringAt: null, activeCost: null, minCost: null, totalCost: null };
     obj1[0] = someResult;
     obj1[1] = tmp4;
     obj1[2] = tmp10;
@@ -112,5 +115,5 @@ export default function useMultiPerkStatusValues(powerups) {
     obj1[7] = reduced3;
     return obj1;
   }
-  tmp = require;
+  let tmp = require;
 };

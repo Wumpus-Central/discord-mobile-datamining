@@ -1,10 +1,12 @@
 // discord_app/modules/video_calls/native/VoiceActionUtils.tsx
-import { _handleToggleVideo } from "../../voice_calls/native/CallsUtils.tsx";
+import set from "set" /* 2 */;
+import _handleToggleVideo from "_handleToggleVideo" /* 9647 */;
+
 function NOOP() {
 
 }
 const obj = { SERVER_MUTE: 0, [0]: "SERVER_MUTE", SUPPRESS: 1, [1]: "SUPPRESS", SELF_MUTE: 2, [2]: "SELF_MUTE", NONE: 3, [3]: "NONE" };
-const result = require("set").fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
+const result = set.fileFinishedImporting("modules/video_calls/native/VoiceActionUtils.tsx");
 
 export const DominantMuteState = obj;
 export const createMuteHandler = function createMuteHandler(muteStates, stateFromStores) {

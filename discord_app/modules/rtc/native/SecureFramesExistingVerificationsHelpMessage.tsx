@@ -1,16 +1,16 @@
 // discord_app/modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useSecureFramesUserVerifiedKeysCount } from "../hooks/useSecureFramesUserVerifiedKeysCount.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import useSecureFramesUserVerifiedKeysCount from "useSecureFramesUserVerifiedKeysCount" /* 9720 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
+const View = get_ActivityIndicator.View;
+const jsx = jsxProd.jsx;
 let closure_4 = createCacheKey.createStyles({ container: { width: "100%" } });
-const result = require("createCacheKey").fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
+const result = set.fileFinishedImporting("modules/rtc/native/SecureFramesExistingVerificationsHelpMessage.tsx");
 
 export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
-  let style;
-  let userId;
-  let userKey;
   ({ style, userId, userKey } = arg0);
   let obj = useSecureFramesUserVerifiedKeysCount;
   const secureFramesUserVerifiedKeysCount = obj.useSecureFramesUserVerifiedKeysCount({ userId, keyToOmit: userKey });
@@ -22,7 +22,7 @@ export default function SecureFramesExistingVerificationsHelpMessage(arg0) {
     obj = { messageType: null, children: null };
     obj[0] = tmp2(1297).HelpMessageTypes.INFO;
     const intl = tmp2(1236).intl;
-    const obj1 = { count: null };
+    obj1 = { count: null };
     obj1[0] = secureFramesUserVerifiedKeysCount;
     obj[1] = intl.format(tmp2(1236).t.uZDkz0, obj1);
     obj[1] = jsx(tmp2(1297).HelpMessage, { messageType: null, children: null });

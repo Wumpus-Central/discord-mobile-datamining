@@ -1,16 +1,14 @@
 // discord_app/modules/guild_member_verification/MemberVerificationUtils.tsx
-import items from "items";
-import { GuildFeatures } from "ME";
-import { MAX_RESULTS_PER_PAGE } from "MemberVerificationTypes.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import MAX_RESULTS_PER_PAGE from "MAX_RESULTS_PER_PAGE" /* 4200 */;
+import items from "items" /* 6860 */;
 
-let c3;
-let obj1;
 ({ AUTOMATIC_APPROVAL_FORM_FIELDS: obj1, MANUAL_APPROVAL_FORM_FIELDS: c3 } = items);
-const result = require("MAX_RESULTS_PER_PAGE").fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
+const GuildFeatures = ME.GuildFeatures;
+const result = set.fileFinishedImporting("modules/guild_member_verification/MemberVerificationUtils.tsx");
 
 export const isValidFormResponse = function isValidFormResponse(required) {
-  let field_type;
-  let response;
   ({ response, field_type } = required);
   if (required.required) {
     if (null == response) {

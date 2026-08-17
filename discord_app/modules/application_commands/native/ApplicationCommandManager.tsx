@@ -1,24 +1,21 @@
 // discord_app/modules/application_commands/native/ApplicationCommandManager.tsx
-import _slicedToArray from "_slicedToArray";
-import { DraftType } from "handleChanged";
-import handleInit from "handleInit";
-import ME from "ME";
-import regExp from "regExp";
-import { MediaKeyboardTarget } from "DRAG_HANDLE";
-import { dispatcher } from "../../../actions/UploadAttachmentActionCreators.tsx";
-import { findGameMentionTokens } from "../../chat_input/native/ChatInputCommandOptionParser.tsx";
-import { addRule } from "../../chat_input/native/ChatInputParser.tsx";
+import setActiveCommandAll from "setActiveCommand" /* 7525 */;
+import dispatcherDefault from "dispatcher" /* 8466 */;
+import findGameMentionTokens from "findGameMentionTokens" /* 11163 */;
+import addRule from "addRule" /* 11164 */;
+import addRuleDefault from "addRule" /* 11164 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_6 from "handleInit" /* 7527 */;
+import ME from "ME" /* 676 */;
+import regExp from "regExp" /* 6810 */;
+import { MediaKeyboardTarget } from "DRAG_HANDLE" /* 1624 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
-({ AnalyticEvents: error, AutoCompleteResultTypes: metroImportAll, WHITESPACE_RE: c9 } = ME);
+require = arg1;
+({ AnalyticEvents: error, AutoCompleteResultTypes: closure_8, WHITESPACE_RE: c9 } = ME);
 ({ COMMAND_SENTINEL: c10, formatGameMentionRaw: unpackModuleId } = regExp);
 let closure_13 = { FULL_COMMAND: 0, [0]: "FULL_COMMAND", PARTIAL_COMMAND: 1, [1]: "PARTIAL_COMMAND" };
-let result = require("handleInit").fileFinishedImporting("modules/application_commands/native/ApplicationCommandManager.tsx");
+let result = require("set").fileFinishedImporting("modules/application_commands/native/ApplicationCommandManager.tsx");
 class ApplicationCommandManager {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -38,11 +35,11 @@ class ApplicationCommandManager {
     obj.preferredOptionValues = {};
     obj.setAutoCompleteResult = function setAutoCompleteResult(id, autocompleteResultText, arg2, type) {
       let insertOrJumpCommandOption = type;
-      const activeOption = outer1_6.getActiveOption(id);
+      const activeOption = closure_1_6.getActiveOption(id);
       if (arg2) {
         if (null != obj.props.activeCommand) {
           if (null != activeOption) {
-            if (insertOrJumpCommandOption.type === outer1_8.GAME_MENTION) {
+            if (insertOrJumpCommandOption.type === closure_1_8.GAME_MENTION) {
               return false;
             } else {
               type = insertOrJumpCommandOption.type;
@@ -57,7 +54,7 @@ class ApplicationCommandManager {
                 const result = insertOrJumpCommandOption(activeOption, undefined, false, obj);
               } else if (tmp4.ROLE !== type) {
                 if (tmp4.CHANNEL === type) {
-                  const obj1 = { type: "channelMention", channelId: null };
+                  obj1 = { type: "channelMention", channelId: null };
                   obj1[1] = insertOrJumpCommandOption.channel.id;
                   tmp5 = obj1;
                 }
@@ -69,7 +66,7 @@ class ApplicationCommandManager {
           }
         }
       }
-      if (insertOrJumpCommandOption.type !== outer1_8.SLASH) {
+      if (insertOrJumpCommandOption.type !== closure_1_8.SLASH) {
         return false;
       } else {
         const obj3 = { channelId: null, command: null, section: null, location: null, visualSection: null, query: null, addSpace: true };
@@ -80,29 +77,21 @@ class ApplicationCommandManager {
       }
     };
     obj.setCommand = function setCommand(arg0) {
-      let _location;
-      let channelId;
-      let command;
-      let commandText;
-      let query;
-      let section;
-      let visualSection;
       ({ command, query, commandText } = arg0);
       const current = obj.ref.current;
       ({ channelId, section, location: _location, visualSection } = arg0);
       if (commandText == null) {
         const _HermesInternal = HermesInternal;
         let str = "";
-        const combined = "" + outer1_10 + command.displayName;
+        const combined = "" + closure_1_10 + command.displayName;
         if (tmp) {
           str = " ";
         }
         commandText = combined + str;
       }
       current.setText(commandText);
-      let obj1 = obj(outer1_3[8]);
-      obj = { channelId, command, section, location: _location, triggerSection: null, queryLength: null };
-      obj[4] = obj(outer1_3[9]).getCommandTriggerSection(visualSection);
+      obj1 = obj(closure_1_3[8]);
+      obj = { channelId, command, section, location: _location, triggerSection: obj(closure_1_3[9]).getCommandTriggerSection(visualSection), queryLength: null };
       let length;
       if (query != null) {
         length = query.length;
@@ -118,14 +107,14 @@ class ApplicationCommandManager {
         obj = { preferredCommand: null };
         obj1 = {};
         const merged = Object.assign(command);
-        obj1.preferredCommandType = outer1_13.FULL_COMMAND;
+        obj1.preferredCommandType = closure_1_13.FULL_COMMAND;
         obj[0] = obj1;
         const result = obj.updateApplicationCommandManagerState(obj);
       }
     };
     obj.setPartialCommand = function setPartialCommand(commandId, commandName, MENTION) {
       const current = obj.ref.current;
-      current.setText("" + outer1_10 + commandName);
+      current.setText("" + closure_1_10 + commandName);
       const preferredCommand = obj.preferredCommand;
       let id;
       if (preferredCommand != null) {
@@ -137,23 +126,18 @@ class ApplicationCommandManager {
         obj[0] = commandId;
         obj[1] = commandName;
         obj[2] = commandName;
-        obj[3] = outer1_13.PARTIAL_COMMAND;
+        obj[3] = closure_1_13.PARTIAL_COMMAND;
         obj[0] = obj;
         obj[1] = MENTION;
         const result = obj.updateApplicationCommandManagerState(obj);
       }
     };
     obj.setPastedCommand = function setPastedCommand(arg0, channel) {
-      let application;
-      let bot;
-      let command;
-      let id;
-      let name;
       const parsed = JSON.parse(arg0);
-      obj = obj(outer1_3[9]);
+      obj = obj(closure_1_3[9]);
       const result = obj.extractInteractionDataProps(parsed);
       let interactionOptions = result.interactionOptions;
-      let obj1 = outer1_2(outer1_3[10]);
+      obj1 = closure_1_2(closure_1_3[10]);
       obj = { type: "channel", channel };
       const cachedCommand = obj1.getCachedCommand(obj, result.commandKey);
       ({ application, command } = cachedCommand);
@@ -219,7 +203,7 @@ class ApplicationCommandManager {
         obj1[3] = tmp2(tmp3[11]).ApplicationCommandTriggerLocations.PASTE;
         let _HermesInternal = HermesInternal;
         let str2 = "";
-        const combined = "" + outer1_10 + command.displayName;
+        const combined = "" + closure_1_10 + command.displayName;
         if (0 !== joined.length) {
           const _HermesInternal2 = HermesInternal;
           str2 = " " + joined;
@@ -233,8 +217,6 @@ class ApplicationCommandManager {
       }
     };
     obj.updateApplicationCommandManagerState = function updateApplicationCommandManagerState(newState) {
-      let _location;
-      let preferredCommand;
       let props = newState.newState;
       ({ preferredCommand, location: _location } = newState);
       if (props == null) {
@@ -254,10 +236,10 @@ class ApplicationCommandManager {
           return style;
         } else {
           const type = style.type;
-          if (outer1_0(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION !== type) {
+          if (closure_1_0(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION !== type) {
             if (tmp30(tmp31[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE !== type) {
               if (tmp30(tmp31[6]).ChatInputNodeType.GAME_HIGHLIGHT === type) {
-                let obj = {};
+                obj = {};
                 const merged = Object.assign(style);
                 const styles4 = closure_0.styles;
                 obj.style = styles4.gameMention();
@@ -274,7 +256,7 @@ class ApplicationCommandManager {
                 if (data != null) {
                   color = data.color;
                 }
-                const obj1 = {};
+                obj1 = {};
                 const merged2 = Object.assign(style);
                 const styles2 = closure_0.styles;
                 obj1.style = styles2.autocomplete(color);
@@ -339,7 +321,7 @@ class ApplicationCommandManager {
       const parser = obj.parser;
       obj = {
         ruleId: "commandOptionParserRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION,
+        type: obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION,
         matchFunction(arg0, arg1) {
           return lib(11163).getMatchedOptions(arg0, arg1);
         },
@@ -354,7 +336,7 @@ class ApplicationCommandManager {
       const parser2 = obj.parser;
       obj = {
         ruleId: "commandOptionValueParserRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE,
+        type: obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE,
         matchFunction(arg0, arg1) {
           return lib(11163).getMatchedOptionsWithValue(arg0, arg1);
         },
@@ -375,9 +357,9 @@ class ApplicationCommandManager {
       const parser3 = obj.parser;
       obj = {
         ruleId: "emojiHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.EMOJI_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.EMOJI_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getEmojiHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getEmojiHighlightNodes(lib.props.channel, arg0);
         },
         style() {
           const styles = lib.styles;
@@ -391,9 +373,9 @@ class ApplicationCommandManager {
       const parser4 = obj.parser;
       parser4.addRule({
         ruleId: "roleHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.ROLE_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.ROLE_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getRoleHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getRoleHighlightNodes(lib.props.channel, arg0);
         },
         style(data) {
           data = data.data;
@@ -409,11 +391,11 @@ class ApplicationCommandManager {
         }
       });
       const parser5 = obj.parser;
-      const obj1 = {
+      obj1 = {
         ruleId: "roleHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.ROLE_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.ROLE_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getRoleHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getRoleHighlightNodes(lib.props.channel, arg0);
         },
         style(data) {
           data = data.data;
@@ -430,9 +412,9 @@ class ApplicationCommandManager {
       };
       parser5.addRule({
         ruleId: "userHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.USER_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.USER_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getUsernameHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getUsernameHighlightNodes(lib.props.channel, arg0);
         },
         style() {
           const styles = lib.styles;
@@ -445,9 +427,9 @@ class ApplicationCommandManager {
       const parser6 = obj.parser;
       const obj2 = {
         ruleId: "userHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.USER_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.USER_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getUsernameHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getUsernameHighlightNodes(lib.props.channel, arg0);
         },
         style() {
           const styles = lib.styles;
@@ -459,9 +441,9 @@ class ApplicationCommandManager {
       };
       parser6.addRule({
         ruleId: "channelHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.CHANNEL_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.CHANNEL_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getChannelHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getChannelHighlightNodes(lib.props.channel, arg0);
         },
         style() {
           const styles = lib.styles;
@@ -474,9 +456,9 @@ class ApplicationCommandManager {
       const parser7 = obj.parser;
       const obj3 = {
         ruleId: "channelHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.CHANNEL_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.CHANNEL_HIGHLIGHT,
         matchFunction(arg0) {
-          return outer1_0(outer1_3[7]).getChannelHighlightNodes(lib.props.channel, arg0);
+          return closure_1_0(closure_1_3[7]).getChannelHighlightNodes(lib.props.channel, arg0);
         },
         style() {
           const styles = lib.styles;
@@ -488,7 +470,7 @@ class ApplicationCommandManager {
       };
       parser7.addRule({
         ruleId: "silentHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
         matchFunction(arg0) {
           return lib(11163).getSilentHighlightNodes(arg0);
         },
@@ -503,7 +485,7 @@ class ApplicationCommandManager {
       const parser8 = obj.parser;
       const obj4 = {
         ruleId: "silentHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.SILENT_HIGHLIGHT,
         matchFunction(arg0) {
           return lib(11163).getSilentHighlightNodes(arg0);
         },
@@ -517,9 +499,9 @@ class ApplicationCommandManager {
       };
       parser8.addRule({
         ruleId: "gameHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.GAME_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.GAME_HIGHLIGHT,
         matchFunction(text) {
-          return outer1_0(outer1_3[7]).getGameHighlightNodes(lib.mentionGames, text);
+          return closure_1_0(closure_1_3[7]).getGameHighlightNodes(lib.mentionGames, text);
         },
         style() {
           const styles = lib.styles;
@@ -533,9 +515,9 @@ class ApplicationCommandManager {
       const parser9 = obj.parser;
       const obj5 = {
         ruleId: "gameHighlightRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.GAME_HIGHLIGHT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.GAME_HIGHLIGHT,
         matchFunction(text) {
-          return outer1_0(outer1_3[7]).getGameHighlightNodes(lib.mentionGames, text);
+          return closure_1_0(closure_1_3[7]).getGameHighlightNodes(lib.mentionGames, text);
         },
         style() {
           const styles = lib.styles;
@@ -548,7 +530,7 @@ class ApplicationCommandManager {
       };
       parser9.addRule({
         ruleId: "gameMentionInputRuleId",
-        type: obj(outer1_3[6]).ChatInputNodeType.GAME_MENTION_INPUT,
+        type: obj(closure_1_3[6]).ChatInputNodeType.GAME_MENTION_INPUT,
         matchFunction(arr) {
           return lib(11163).getGameMentionInputNodes(arr);
         },
@@ -563,14 +545,13 @@ class ApplicationCommandManager {
       });
     };
     obj.getCurrentCommand = function getCurrentCommand(text, channel, preferredCommand, preferredCommandSection) {
-      let closure_3;
-      let obj = channel;
-      let closure_1 = preferredCommand;
-      let closure_2 = obj;
+      obj = channel;
+      closure_1 = preferredCommand;
+      closure_2 = obj;
       if (null != text) {
         if (!obj.props.commandsDisabled) {
-          if (text.startsWith(outer1_10)) {
-            obj = obj(outer1_3[7]);
+          if (text.startsWith(closure_1_10)) {
+            obj = obj(closure_1_3[7]);
             const textBeforeFirstOption = obj.getTextBeforeFirstOption(text);
             ({ match: closure_3, text } = textBeforeFirstOption);
             let flag = false;
@@ -578,7 +559,7 @@ class ApplicationCommandManager {
               const _HermesInternal = HermesInternal;
               if (text.startsWith("" + tmp2 + preferredCommand.displayName)) {
                 flag = true;
-                if (preferredCommand.preferredCommandType === outer1_13.FULL_COMMAND) {
+                if (preferredCommand.preferredCommandType === closure_1_13.FULL_COMMAND) {
                   obj = { command: null, section: null };
                   obj[0] = preferredCommand;
                   obj[1] = preferredCommandSection;
@@ -599,12 +580,12 @@ class ApplicationCommandManager {
               if (preferredCommand != null) {
                 preferredCommandType = preferredCommand.preferredCommandType;
               }
-              if (preferredCommandType === outer1_13.PARTIAL_COMMAND) {
+              if (preferredCommandType === closure_1_13.PARTIAL_COMMAND) {
                 const contextCommands = tmp.contextCommands;
                 let found = contextCommands.find((id) => id.id === preferredCommand.id);
                 if (null != found) {
-                  let obj2 = outer1_2(tmp4[10]);
-                  let obj1 = { channel: null, type: "channel" };
+                  let obj2 = closure_1_2(tmp4[10]);
+                  obj1 = { channel: null, type: "channel" };
                   obj1[0] = channel;
                   let cachedApplicationSection = obj2.getCachedApplicationSection(obj1, tmp3(tmp4[13]).ApplicationCommandType.CHAT, found.applicationId);
                   let tmp18 = null;
@@ -621,17 +602,17 @@ class ApplicationCommandManager {
                 }
               } else {
                 const parts = text.slice(1).split(" ", 3);
-                let c6 = 0;
+                c6 = 0;
                 if (0 < parts.length) {
                   function _loop() {
                     const substr = parts.slice(0, parts.length - c6);
                     const joined = substr.join(" ");
-                    let obj1 = channel(outer1_3[9]);
-                    let obj2 = preferredCommand(outer1_3[20]);
+                    obj1 = channel(closure_1_3[9]);
+                    let obj2 = preferredCommand(closure_1_3[20]);
                     const regExp = new RegExp("^" + obj2.escape(joined), "i");
-                    const matchingGroupCommands = obj1.getMatchingGroupCommands(lib.contextCommands, regExp, _slicedToArray, 2);
+                    const matchingGroupCommands = obj1.getMatchingGroupCommands(lib.contextCommands, regExp, closure_4, 2);
                     const found = matchingGroupCommands.filter((inputType) => {
-                      let tmp = inputType.inputType !== joined(outer1_3[11]).ApplicationCommandInputType.PLACEHOLDER;
+                      let tmp = inputType.inputType !== joined(closure_1_3[11]).ApplicationCommandInputType.PLACEHOLDER;
                       if (tmp) {
                         tmp = inputType.displayName === joined || inputType.untranslatedName === tmp2;
                         const tmp3 = inputType.displayName === joined || inputType.untranslatedName === tmp2;
@@ -644,7 +625,7 @@ class ApplicationCommandManager {
                       if (!tmp7) {
                         tmp7 = null != closure_3;
                       }
-                      let obj = { channel: null, type: "channel" };
+                      obj = { channel: null, type: "channel" };
                       obj[0] = joined;
                       const cachedApplicationSection = lib(tmp4[10]).getCachedApplicationSection(obj, channel(tmp4[13]).ApplicationCommandType.CHAT, first.applicationId);
                       if (null == cachedApplicationSection) {
@@ -654,7 +635,7 @@ class ApplicationCommandManager {
                         obj1 = { command: null, section: null };
                         obj2 = {};
                         const merged = Object.assign(first);
-                        obj2.preferredCommandType = outer1_13.FULL_COMMAND;
+                        obj2.preferredCommandType = closure_1_13.FULL_COMMAND;
                         obj1[0] = obj2;
                         obj1[1] = cachedApplicationSection;
                         obj[0] = obj1;
@@ -696,9 +677,9 @@ class ApplicationCommandManager {
       return null;
     };
     obj.getCurrentOption = function getCurrentOption(focused2, selectionStart) {
-      let obj = selectionStart;
+      obj = selectionStart;
       if (focused2) {
-        obj = outer1_1(outer1_3[18]);
+        obj = closure_1_1(closure_1_3[18]);
         const _Array = Array;
         const optionValueNodes = obj.optionValueNodes;
         const findLastResult = obj.findLast(Array.from(optionValueNodes.values()), (location) => location.location <= closure_0);
@@ -723,17 +704,15 @@ class ApplicationCommandManager {
       }
     };
     obj.getAllCommandOptionValues = function getAllCommandOptionValues(activeCommand, text) {
-      let tmp6;
-      let tmp7;
       if (null == activeCommand.options) {
         return {};
       } else {
-        const obj = {};
+        obj = {};
         const optionValueNodes = obj.optionValueNodes;
         const tmp23 = optionValueNodes[Symbol.iterator]();
         while (tmp23 !== undefined) {
-          let tmp4 = outer1_4;
-          let tmp5 = outer1_4(tmp2, 2);
+          let tmp4 = closure_1_4;
+          let tmp5 = closure_1_4(tmp2, 2);
           [tmp6, tmp7] = tmp5;
           let arr = tmp7;
           let data = tmp7.data;
@@ -742,8 +721,8 @@ class ApplicationCommandManager {
             type = data.type;
           }
           let tmp9 = obj;
-          let tmp10 = outer1_3;
-          if (type === obj(outer1_3[6]).ChatInputParseResultDataType.COMMAND_OPTION) {
+          let tmp10 = closure_1_3;
+          if (type === obj(closure_1_3[6]).ChatInputParseResultDataType.COMMAND_OPTION) {
             let tmp26 = obj.preferredOptionValues[obj.props.channel.id];
             let optionValue;
             let tmp24 = obj;
@@ -776,13 +755,13 @@ class ApplicationCommandManager {
       }
     };
     obj.insertFirstOptionIfValid = function insertFirstOptionIfValid(text, activeCommand, displayName, preferredCommandType, preferredCommandType2) {
-      if (text.startsWith("" + outer1_10 + displayName)) {
+      if (text.startsWith("" + closure_1_10 + displayName)) {
         if (text.length > displayName.length + 1) {
-          if (outer1_9.test(text[displayName.length + 1])) {
+          if (closure_1_9.test(text[displayName.length + 1])) {
             const _Set = Set;
             const optionValueNodes = set.optionValueNodes;
             set = new Set(optionValueNodes.keys());
-            let c1 = true;
+            c1 = true;
             const options = activeCommand.options;
             let found;
             if (options != null) {
@@ -811,8 +790,6 @@ class ApplicationCommandManager {
       return false;
     };
     obj.insertOrJumpCommandOption = function insertOrJumpCommandOption(activeOption, length, arg2, displayText, activeCommand) {
-      let selectionStart;
-      let text;
       let flag = arg2;
       if (arg2 === undefined) {
         flag = false;
@@ -839,10 +816,10 @@ class ApplicationCommandManager {
             let tmp27 = null != text && tmp4 <= text.length;
             if (tmp27) {
               const _Math3 = Math;
-              tmp27 = !outer1_9.test(text[Math.min(Math, tmp4 - 1, text.length - 1)]);
+              tmp27 = !closure_1_9.test(text[Math.min(Math, tmp4 - 1, text.length - 1)]);
             }
             const current3 = obj7.ref.current;
-            let obj = { location: null, length: 0, text: null, nodes: null, keepCursorPosition: null, editId: null };
+            obj = { location: null, length: 0, text: null, nodes: null, keepCursorPosition: null, editId: null };
             obj[0] = tmp4;
             let str8 = "";
             if (tmp27) {
@@ -851,7 +828,7 @@ class ApplicationCommandManager {
             const _HermesInternal6 = HermesInternal;
             obj[2] = "" + str8 + activeOption.displayName + ":";
             obj = { type: null, style: null, location: null, length: null };
-            obj[0] = obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION;
+            obj[0] = obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION;
             const styles3 = obj7.styles;
             obj[1] = styles3.commandOption();
             let num9 = 0;
@@ -885,13 +862,13 @@ class ApplicationCommandManager {
           let tmp5 = null != text && _location <= text.length;
           if (tmp5) {
             const _Math = Math;
-            tmp5 = !outer1_9.test(text[Math.min(Math, _location - 1, text.length - 1)]);
+            tmp5 = !closure_1_9.test(text[Math.min(Math, _location - 1, text.length - 1)]);
           }
           const _Set = Set;
           const optionValueNodes = obj7.optionValueNodes;
           set = new Set(optionValueNodes.keys());
           set.add(activeOption.name);
-          let c1;
+          c1 = undefined;
           const options = activeCommand.options;
           let found;
           if (options != null) {
@@ -915,7 +892,7 @@ class ApplicationCommandManager {
             let tmp16 = _location + num2 !== text.length;
             if (tmp16) {
               const _Math2 = Math;
-              tmp16 = !outer1_9.test(text[Math.min(Math, _location + num2, text.length - 1)]);
+              tmp16 = !closure_1_9.test(text[Math.min(Math, _location + num2, text.length - 1)]);
             }
             if (!tmp16) {
               tmp16 = null != first;
@@ -947,9 +924,9 @@ class ApplicationCommandManager {
             const _HermesInternal4 = HermesInternal;
             const combined2 = "" + first.displayName + ":";
             const _HermesInternal5 = HermesInternal;
-            const obj1 = { type: null, style: null, location: null, length: null };
+            obj1 = { type: null, style: null, location: null, length: null };
             const combined3 = "" + combined1 + combined2;
-            obj1[0] = obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
+            obj1[0] = obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
             const styles = obj7.styles;
             obj1[1] = styles.commandOption();
             let num6 = 0;
@@ -960,7 +937,7 @@ class ApplicationCommandManager {
             obj1[3] = combined.length;
             const items1 = [obj1, ];
             const obj2 = { type: null, style: null, location: null, length: null };
-            obj2[0] = obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION;
+            obj2[0] = obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION;
             const styles2 = obj7.styles;
             obj2[1] = styles2.commandOption();
             obj2[2] = combined1.length;
@@ -981,7 +958,7 @@ class ApplicationCommandManager {
             obj4[1] = num2;
             obj4[2] = combined1;
             const obj5 = { type: null, style: null, location: null, length: null };
-            obj5[0] = obj(outer1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
+            obj5[0] = obj(closure_1_3[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
             const styles4 = obj7.styles;
             obj5[1] = styles4.commandOption();
             let num5 = 0;
@@ -1007,34 +984,30 @@ class ApplicationCommandManager {
       }
     };
     obj.sendCommand = function sendCommand(text, channel, arg2) {
-      let commands;
-      let sections;
       const activeCommand = obj.props.activeCommand;
       if (null != activeCommand) {
         let prop = obj.optionValidationResults;
         if (prop == null) {
           prop = {};
         }
-        const firstInvalidOption = obj(outer1_3[21]).getFirstInvalidOption(activeCommand, prop);
+        const firstInvalidOption = obj(closure_1_3[21]).getFirstInvalidOption(activeCommand, prop);
         obj = {};
         const _Object = Object;
-        const entries = Object.entries(outer1_6.getOptionStates(channel.id));
+        const entries = Object.entries(closure_1_6.getOptionStates(channel.id));
         const item = entries.forEach((arg0) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg0;
           if (null != tmp2.optionValue) {
             obj[tmp] = tmp2.optionValue;
           }
         });
         if (null == firstInvalidOption) {
-          arg2(activeCommand, obj(outer1_3[22]).parseOptionValuesForSend(channel, activeCommand, obj));
-          const obj8 = obj(outer1_3[22]);
+          arg2(activeCommand, obj(closure_1_3[22]).parseOptionValuesForSend(channel, activeCommand, obj));
+          const obj8 = obj(closure_1_3[22]);
         } else {
           const result = obj.insertOrJumpCommandOption(firstInvalidOption);
           const result1 = obj.updateValidationResults();
-          const result2 = obj(outer1_3[23]).triggerHapticFeedback(obj(outer1_3[23]).HapticFeedbackTypes.NOTIFICATION_ERROR);
-          const obj12 = obj(outer1_3[23]);
+          const result2 = obj(closure_1_3[23]).triggerHapticFeedback(obj(closure_1_3[23]).HapticFeedbackTypes.NOTIFICATION_ERROR);
+          const obj12 = obj(closure_1_3[23]);
           let applicationId;
           if (activeCommand != null) {
             applicationId = activeCommand.applicationId;
@@ -1053,30 +1026,30 @@ class ApplicationCommandManager {
           if (num2 == null) {
             num2 = 3;
           }
-          obj[2] = obj(outer1_3[13]).ApplicationCommandOptionType[num2];
+          obj[2] = obj(closure_1_3[13]).ApplicationCommandOptionType[num2];
           let required;
           if (firstInvalidOption != null) {
             required = firstInvalidOption.required;
           }
           obj[3] = required;
-          obj(outer1_3[24]).trackWithMetadata(outer1_7.APPLICATION_COMMAND_VALIDATION_FAILED, obj);
-          const obj13 = obj(outer1_3[24]);
+          obj(closure_1_3[24]).trackWithMetadata(closure_1_7.APPLICATION_COMMAND_VALIDATION_FAILED, obj);
+          const obj13 = obj(closure_1_3[24]);
         }
         return true;
       } else {
         let query = null;
-        if (obj9.getPrefix(text) === outer1_10) {
-          let obj1 = obj(outer1_3[25]);
+        if (obj9.getPrefix(text) === closure_1_10) {
+          obj1 = obj(closure_1_3[25]);
           query = obj1.getQuery(text);
         }
         if (null != query) {
           obj1 = { channel: null, type: "channel" };
           obj1[0] = channel;
-          const obj10 = outer1_2(outer1_3[10]);
-          ({ commands, sections } = outer1_2(outer1_3[10]).getCachedResults(obj1, obj(outer1_3[13]).ApplicationCommandType.CHAT, query));
+          const obj10 = closure_1_2(closure_1_3[10]);
+          ({ commands, sections } = closure_1_2(closure_1_3[10]).getCachedResults(obj1, obj(closure_1_3[13]).ApplicationCommandType.CHAT, query));
           if (null != commands) {
             if (commands.length > 0) {
-              if (commands[0].inputType !== obj(outer1_3[11]).ApplicationCommandInputType.PLACEHOLDER) {
+              if (commands[0].inputType !== obj(closure_1_3[11]).ApplicationCommandInputType.PLACEHOLDER) {
                 const first = commands[0];
                 let found = sections.find((application) => {
                   application = application.application;
@@ -1093,14 +1066,14 @@ class ApplicationCommandManager {
                   found = null;
                 }
                 obj2[2] = found;
-                obj2[3] = obj(outer1_3[11]).ApplicationCommandTriggerLocations.DISCOVERY;
+                obj2[3] = obj(closure_1_3[11]).ApplicationCommandTriggerLocations.DISCOVERY;
                 obj2[4] = query;
                 obj.setCommand(obj2);
                 return true;
               }
             }
           }
-          const cachedResults = outer1_2(outer1_3[10]).getCachedResults(obj1, obj(outer1_3[13]).ApplicationCommandType.CHAT, query);
+          const cachedResults = closure_1_2(closure_1_3[10]).getCachedResults(obj1, obj(closure_1_3[13]).ApplicationCommandType.CHAT, query);
         }
         return false;
       }
@@ -1132,19 +1105,9 @@ prototype["setPreferredOptionValue"] = function setPreferredOptionValue(id, name
   self.preferredOptionValues[id][name] = displayText;
 };
 prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
-  let activeCommand;
-  let channel;
-  let command;
-  let focused;
-  let lastCommandAutocompleteResponseNonce;
-  let queryCommands;
-  let section;
-  let selectionEnd;
-  let selectionStart;
-  let text;
   let self = this;
   self = this;
-  const importDefault = editId;
+  importDefault = editId;
   const props = this.props;
   ({ text, editId, channel } = props);
   let tmp3 = editId !== editId.editId;
@@ -1155,7 +1118,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
   if (tmp3) {
     self.editId = editId.editId;
   }
-  const importAll = tmp5;
+  importAll = tmp5;
   ({ activeCommand, activeCommandSection: section } = self);
   if (text === editId.text) {
     if (queryCommands === editId.queryCommands) {
@@ -1172,7 +1135,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       id1 = activeCommand3.id;
     }
     let tmp83 = id !== id1;
-    const dependencyMap = tmp83;
+    dependencyMap = tmp83;
     let activeOption = self.activeOption;
     let currentOption = activeOption;
     let tmp84 = tmp5;
@@ -1200,8 +1163,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       tmp91 = null != self.activeCommand;
     }
     if (tmp91) {
-      dispatcher.clearAll(channel.id, DraftType.SlashCommand);
-      const obj7 = dispatcher;
+      dispatcherDefault.clearAll(channel.id, DraftType.SlashCommand);
+      const obj7 = dispatcherDefault;
     }
     let name;
     if (activeOption != null) {
@@ -1240,10 +1203,10 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
       self.optionValidationResults = obj8.getValidationResults(activeCommand, self.optionValues, editId.channel.guild_id, editId.channel.id, false);
       const chatInputNodes = self.chatInputNodes;
       self.chatInputNodes = chatInputNodes.map((type) => {
-        if (type.type === obj1(tmp83[6]).ChatInputNodeType.COMMAND_OPTION) {
+        if (type.type === obj1(11164).ChatInputNodeType.COMMAND_OPTION) {
           if (null != type.data) {
             const option = type.data.option;
-            if (type.type === tmp(tmp2[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE) {
+            if (type.type === tmp(11164).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE) {
               let name;
               if (currentOption != null) {
                 name = currentOption.name;
@@ -1274,7 +1237,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
                   success = tmp15.success;
                 }
                 if (success) {
-                  success = option.type === tmp(tmp2[13]).ApplicationCommandOptionType.ATTACHMENT;
+                  success = option.type === tmp(1954).ApplicationCommandOptionType.ATTACHMENT;
                 }
                 if (success) {
                   obj = { action: "tapAttachment", channelId: null, optionName: null };
@@ -1531,8 +1494,8 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           obj3[3] = preferredCommandType;
           obj3[4] = self.location;
           obj3[5] = obj1;
-          preferredCommandType = importAll(7525).updateChannelState(obj3);
-          const obj16 = importAll(7525);
+          preferredCommandType = setActiveCommandAll.updateChannelState(obj3);
+          const obj16 = setActiveCommandAll;
         }
       }
     }
@@ -1673,25 +1636,25 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
     optionValueNodes.clear();
     const chatInputNodes1 = self.chatInputNodes;
     const item = chatInputNodes1.forEach((type) => {
-      if (type.type === obj1(tmp83[6]).ChatInputNodeType.COMMAND_OPTION) {
+      if (type.type === obj1(11164).ChatInputNodeType.COMMAND_OPTION) {
         const data = type.data;
         type = undefined;
         if (data != null) {
           type = data.type;
         }
-        if (type === tmp(tmp2[6]).ChatInputParseResultDataType.COMMAND_OPTION) {
+        if (type === tmp(11164).ChatInputParseResultDataType.COMMAND_OPTION) {
           const optionsToNodes = self.optionsToNodes;
           const result = optionsToNodes.set(type.data.option.name, type);
         }
       }
-      let tmp5 = type.type === tmp(tmp2[6]).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
+      let tmp5 = type.type === tmp(11164).ChatInputNodeType.COMMAND_OPTION_WITH_VALUE;
       if (tmp5) {
         const data2 = type.data;
         let type1;
         if (data2 != null) {
           type1 = data2.type;
         }
-        tmp5 = type1 === tmp(tmp2[6]).ChatInputParseResultDataType.COMMAND_OPTION;
+        tmp5 = type1 === tmp(11164).ChatInputParseResultDataType.COMMAND_OPTION;
       }
       if (tmp5) {
         const optionValueNodes = self.optionValueNodes;
@@ -1757,7 +1720,7 @@ prototype["mergePropsAndUpdate"] = function mergePropsAndUpdate(editId) {
           continue;
         }
         if (items3.length > 0) {
-          obj4 = dispatcher;
+          obj4 = dispatcherDefault;
           obj4.removeFiles(channel.id, items3, DraftType.SlashCommand);
         }
       }
@@ -1794,13 +1757,13 @@ prototype["updateValidationResults"] = function updateValidationResults() {
       if (options != null) {
         const item = options.forEach((name) => {
           name = name.name;
-          const obj = { lastValidationResult: self.optionValidationResults[name] };
+          obj = { lastValidationResult: self.optionValidationResults[name] };
           obj[name] = obj;
         });
       }
     }
   }
-  importAll(7525).updateOptionStates(self.props.channel.id, obj);
+  setActiveCommandAll.updateOptionStates(self.props.channel.id, obj);
 };
 
 export default ApplicationCommandManager;

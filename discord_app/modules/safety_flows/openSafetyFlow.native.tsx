@@ -1,16 +1,16 @@
 // discord_app/modules/safety_flows/openSafetyFlow.native.tsx
-import SAFETY_FLOWS_MODAL_KEY from "SAFETY_FLOWS_MODAL_KEY";
-import handleRequiredAction from "handleRequiredAction";
-import { UserRequiredActions } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "handleRequiredAction" /* 1385 */;
+import { UserRequiredActions } from "ME" /* 676 */;
 
 const require = arg1;
 function _openSafetyFlow() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     const iter = (function*() {
       if (c7 === 2) {
         c7 = 3;
@@ -38,10 +38,10 @@ function _openSafetyFlow() {
               obj[0] = arg1;
               return obj;
             } else {
-              let SAFETY_FLOWS_MODAL_KEY = tmp3;
-              let closure_2 = tmp7;
+              closure_3 = tmp3;
+              closure_2 = tmp7;
               let requiredAction;
-              let obj1 = requiredAction;
+              obj1 = requiredAction;
               if (requiredAction === undefined) {
                 obj1 = {};
               }
@@ -141,7 +141,7 @@ function _openSafetyFlow() {
     iter.next();
     return iter;
   });
-  const _openSafetyFlow = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -150,7 +150,7 @@ function _openSafetyFlow() {
   }
   return applyArgumentsResult;
 }
-const result = require("ME").fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
+const result = require("set").fileFinishedImporting("modules/safety_flows/openSafetyFlow.native.tsx");
 
 export const openSafetyFlow = function openSafetyFlow(arg0) {
   const self = this;

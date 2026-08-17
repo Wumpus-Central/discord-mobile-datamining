@@ -1,5 +1,7 @@
 // discord_app/utils/PathUtils.tsx
-const result = require("set").fileFinishedImporting("utils/PathUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/PathUtils.tsx");
 
 export const pathJoin = function pathJoin(closure_1, closure_15) {
   const items = [...arguments];

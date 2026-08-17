@@ -1,15 +1,15 @@
 // discord_app/modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx
-import hasConsented from "hasConsented";
-import { Consents } from "ME";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { set } from "../../../../actions/AlertActionCreators.tsx";
-import { handleRequestSuccess } from "../../../../actions/ConsentActionCreators.tsx";
-import { componentDidMount } from "../../../../components_native/common/Alert.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import setDefault from "set" /* 4827 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import handleRequestSuccess from "handleRequestSuccess" /* 14212 */;
+import closure_3 from "hasConsented" /* 5258 */;
+import { Consents } from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -17,8 +17,8 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
   useValue: function useDataToCustomizeDiscordSettingValue() {
-    const items = [hasConsented];
-    return initialize.useStateFromStores(items, () => hasConsented.hasConsented(constants.PERSONALIZATION));
+    const items = [closure_3];
+    return initialize.useStateFromStores(items, () => closure_3.hasConsented(constants.PERSONALIZATION));
   },
   onValueChange: function handlePersonalizationChange(arg0) {
     if (arg0) {
@@ -27,7 +27,7 @@ createToggle = {
       handleRequestSuccess.setConsents(items, []).catch((message) => callback(14213).showDataPrivacyRateLimitAlert(message.message));
       const setConsentsResult = handleRequestSuccess.setConsents(items, []);
     } else {
-      let obj = set;
+      let obj = setDefault;
       obj = { title: null, body: null, confirmText: null, cancelText: null, confirmColor: null, onConfirm: null };
       const intl = getSystemLocale.intl;
       obj[0] = intl.string(getSystemLocale.t["9SNpzv"]);
@@ -37,7 +37,7 @@ createToggle = {
       obj[2] = intl3.string(getSystemLocale.t["9g5UGw"]);
       const intl4 = getSystemLocale.intl;
       obj[3] = intl4.string(getSystemLocale.t["+ZLPw9"]);
-      obj[4] = componentDidMount.Colors.RED;
+      obj[4] = componentDidMountDefault.Colors.RED;
       obj[5] = function onConfirm() {
         const items = [constants.PERSONALIZATION];
         return callback(14212).setConsents([], items);
@@ -50,6 +50,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/UseDataToCustomizeDiscordSetting.tsx");
 
 export default createToggle;

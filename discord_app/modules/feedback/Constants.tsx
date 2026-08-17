@@ -1,6 +1,9 @@
 // discord_app/modules/feedback/Constants.tsx
+import set from "set" /* 2 */;
+import create from "create" /* 1306 */;
+
 let obj = { BAD: "bad", NEUTRAL: "neutral", GOOD: "good" };
-const items = [require("create").InAppFeedbackType.VIDEO_BACKGROUND, require("create").InAppFeedbackType.STREAM, require("create").InAppFeedbackType.ACTIVITY, require("create").InAppFeedbackType.VOICE, require("create").InAppFeedbackType.IN_APP_REPORTS, require("create").InAppFeedbackType.SEARCH_RESULTS, require("create").InAppFeedbackType.VIBEGRATIONS];
+const items = [create.InAppFeedbackType.VIDEO_BACKGROUND, create.InAppFeedbackType.STREAM, create.InAppFeedbackType.ACTIVITY, create.InAppFeedbackType.VOICE, create.InAppFeedbackType.IN_APP_REPORTS, create.InAppFeedbackType.SEARCH_RESULTS, create.InAppFeedbackType.VIBEGRATIONS];
 const items1 = [, , ];
 ({ BAD: arr2[0], NEUTRAL: arr2[1], GOOD: arr2[2] } = obj);
 const reduced = items.reduce((arg0, arg1, arg2) => {
@@ -9,11 +12,11 @@ const reduced = items.reduce((arg0, arg1, arg2) => {
   obj[arg1] = arg2;
   return obj;
 }, {});
-const result = require("set").fileFinishedImporting("modules/feedback/Constants.tsx");
+const result = set.fileFinishedImporting("modules/feedback/Constants.tsx");
 
 export const FeedbackRating = obj;
 export const FEEDBACK_FREEFORM_LENGTH = 1024;
-export const FeedbackType = require("create").InAppFeedbackType;
+export const FeedbackType = create.InAppFeedbackType;
 export const FeedbackGroup = { AV: "AV", SOCIAL: "SOCIAL", SEARCH: "SEARCH", SAFETY: "SAFETY", BUILDER: "BUILDER" };
 export const FeedbackTypePrecedence = reduced;
 export const DEFAULT_RATINGS = items1;

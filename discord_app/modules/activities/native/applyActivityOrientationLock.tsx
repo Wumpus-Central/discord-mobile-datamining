@@ -1,8 +1,10 @@
 // discord_app/modules/activities/native/applyActivityOrientationLock.tsx
-import { OrientationLockState } from "items3";
-import { applyOrientationLock } from "../../device/native/applyOrientationLock.tsx";
+import set from "set" /* 2 */;
+import items3 from "items3" /* 4481 */;
+import applyOrientationLock from "applyOrientationLock" /* 10964 */;
 
-let result = require("set").fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");
+const OrientationLockState = items3.OrientationLockState;
+let result = set.fileFinishedImporting("modules/activities/native/applyActivityOrientationLock.tsx");
 
 export default function applyActivityOrientationLock(arg0) {
   if (OrientationLockState.UNLOCKED === arg0) {

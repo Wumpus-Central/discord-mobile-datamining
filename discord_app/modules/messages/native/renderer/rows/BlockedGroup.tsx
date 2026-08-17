@@ -1,48 +1,43 @@
 // discord_app/modules/messages/native/renderer/rows/BlockedGroup.tsx
-import { SeparatorAction } from "Changeset";
-import { UNSAFE_Colors } from "sum";
-import apply from "apply";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { AccessibilityAnnouncer } from "../../../../../design/shared.tsx";
-import { processColorOrThrow } from "../RowGeneratorStyleSheet.tsx";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import ThemesDefault from "Themes" /* 712 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import Changeset from "Changeset" /* 8158 */;
+import processColorOrThrow from "processColorOrThrow" /* 8161 */;
+import apply from "apply" /* 12 */;
 
+const SeparatorAction = Changeset.SeparatorAction;
+const UNSAFE_Colors = sum.UNSAFE_Colors;
 let closure_5 = apply.memoize((arg0) => {
   let obj = AccessibilityAnnouncer;
   let str = "#DBE0E4";
   if (obj.isThemeDark(arg0)) {
-    str = Themes.unsafe_rawColors.PRIMARY_700;
+    str = ThemesDefault.unsafe_rawColors.PRIMARY_700;
   }
   let tmpResult = tmp(1363);
   let str2 = "#FAFAFA";
   if (tmpResult.isThemeDark(arg0)) {
-    str2 = Themes.unsafe_rawColors.PRIMARY_630;
+    str2 = ThemesDefault.unsafe_rawColors.PRIMARY_630;
   }
   tmpResult = tmp(1363);
   if (tmpResult.isThemeDark(arg0)) {
-    let GREY1 = tmp(4223).hexWithOpacity(Themes.unsafe_rawColors.PRIMARY_300, 0.6);
+    let GREY1 = tmp(4223).hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_300, 0.6);
     const tmpResult1 = tmp(4223);
   } else {
     GREY1 = UNSAFE_Colors.GREY1;
   }
-  obj = { borderColor: null, backgroundColor: null, color: null };
-  obj[0] = processColorOrThrow.processColorOrThrow(str);
+  obj = { borderColor: processColorOrThrow.processColorOrThrow(str), backgroundColor: null, color: null };
   const tmpResult2 = processColorOrThrow;
   obj[1] = processColorOrThrow.processColorOrThrow(str2);
   const tmpResult3 = processColorOrThrow;
   obj[2] = processColorOrThrow.processColorOrThrow(GREY1);
   return obj;
 });
-const result = require("apply").fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/BlockedGroup.tsx");
 
 export const generateBlockedGroupRowData = function generateBlockedGroupRowData(canUncollapse, theme, self) {
-  let changeType;
-  let content;
-  let context;
-  let message;
-  let revealed;
-  let rowType;
-  let text;
-  let closure_0 = self;
+  closure_0 = self;
   ({ content, context } = canUncollapse);
   canUncollapse = !("canUncollapse" in canUncollapse);
   ({ changeType, message, text, revealed, rowType } = canUncollapse);

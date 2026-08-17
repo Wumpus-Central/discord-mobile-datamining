@@ -1,17 +1,19 @@
 // discord_app/modules/friend_groups/FriendGroupsStore.tsx
-import recomputeAffinities from "recomputeAffinities";
-import hasConsented from "hasConsented";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "recomputeAffinities" /* 5407 */;
+import closure_1 from "hasConsented" /* 5258 */;
+import closure_2 from "markAllUserIdListsStale" /* 4030 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 let closure_4 = [];
 let c5 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class FriendGroupsStore extends PersistedStore {
 }
 const prototype = FriendGroupsStore.prototype;
 prototype["initialize"] = function initialize(groups) {
-  this.waitFor(hasConsented, markAllUserIdListsStale, recomputeAffinities, mergeGuildAvatar);
+  this.waitFor(closure_1, closure_2, closure_0, closure_3);
   if (null != groups) {
     groups = groups.groups;
     if (groups == null) {
@@ -27,8 +29,8 @@ prototype["getGroups"] = function getGroups() {
   return closure_4;
 };
 prototype["getGroup"] = function getGroup(arg0) {
-  let recomputeAffinities = arg0;
-  let found = arr.find((id) => id.id === recomputeAffinities);
+  closure_0 = arg0;
+  let found = arr.find((id) => id.id === closure_0);
   if (found == null) {
     found = null;
   }
@@ -38,10 +40,10 @@ prototype["getGroupIds"] = function getGroupIds() {
   return arr.map((id) => id.id);
 };
 prototype["getUserGroups"] = function getUserGroups(arg0) {
-  let recomputeAffinities = arg0;
+  closure_0 = arg0;
   return arr.filter((userIds) => {
     userIds = userIds.userIds;
-    return userIds.includes(recomputeAffinities);
+    return userIds.includes(closure_0);
   });
 };
 prototype["isGroupEmpty"] = function isGroupEmpty(arg0) {
@@ -60,7 +62,7 @@ prototype["getState"] = function getState() {
 };
 FriendGroupsStore.displayName = "FriendGroupsStore";
 FriendGroupsStore.persistKey = "FriendGroupsStoreV2";
-const friendGroupsStore = new FriendGroupsStore(require("dispatcher"), {
+const friendGroupsStore = new FriendGroupsStore(dispatcherDefault, {
   POST_CONNECTION_OPEN: function handleInitializeFriendGroups() {
     if (!c5) {
       if (arr.length <= 0) {
@@ -105,7 +107,7 @@ const friendGroupsStore = new FriendGroupsStore(require("dispatcher"), {
   REORDER_FRIEND_GROUPS: function handleReorderFriendGroups(arg0) {
     let items = [];
     const map = new Map(items.map((id) => {
-      const items = [id.id, id];
+      items = [id.id, id];
       return items;
     }));
     while (tmp !== undefined) {
@@ -123,11 +125,9 @@ const friendGroupsStore = new FriendGroupsStore(require("dispatcher"), {
     return flag;
   },
   ADD_USERS_TO_GROUP: function handleAddUsersToGroup(arg0) {
-    let recomputeAffinities;
-    let userIds;
-    ({ groupId: recomputeAffinities, userIds } = arg0);
+    ({ groupId: closure_0, userIds } = arg0);
     let set;
-    const findIndexResult = arr.findIndex((id) => id.id === recomputeAffinities);
+    const findIndexResult = arr.findIndex((id) => id.id === closure_0);
     if (-1 === findIndexResult) {
       return false;
     } else {
@@ -148,11 +148,9 @@ const friendGroupsStore = new FriendGroupsStore(require("dispatcher"), {
     }
   },
   REMOVE_USERS_FROM_GROUP: function handleRemoveUsersFromGroup(arg0) {
-    let recomputeAffinities;
-    let userIds;
-    ({ groupId: recomputeAffinities, userIds } = arg0);
+    ({ groupId: closure_0, userIds } = arg0);
     let set;
-    const findIndexResult = arr.findIndex((id) => id.id === recomputeAffinities);
+    const findIndexResult = arr.findIndex((id) => id.id === closure_0);
     if (-1 === findIndexResult) {
       return false;
     } else {
@@ -172,6 +170,6 @@ const friendGroupsStore = new FriendGroupsStore(require("dispatcher"), {
     }
   }
 });
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/friend_groups/FriendGroupsStore.tsx");
 
 export default friendGroupsStore;

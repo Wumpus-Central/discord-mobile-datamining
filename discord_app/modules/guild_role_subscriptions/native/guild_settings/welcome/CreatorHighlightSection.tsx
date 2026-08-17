@@ -1,38 +1,30 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorHighlightSection.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/09355_registerAsset.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 9355 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { CollapsingText } from "../../../../../design/components/Button/native/BaseTextButton.native.tsx";
 import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
 import { getSystemLocale } from "../../../../../intl/index.native.tsx";
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function GuildServerSubscriberCount(arg0) {
-  let style;
-  let subscriberCount;
   ({ subscriberCount, style } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: items, children: null };
   items = [, , ];
   ({ horizontalContainer: arr[0], subscriberCountContainer: arr[1] } = tmp);
   items[2] = style;
   obj = { style: tmp.subscriberCount, variant: "text-sm/medium", color: "text-overlay-light", children: subscriberCount };
   const items1 = [callback(Text.Text, obj), , ];
-  obj = { size: null, color: null, style: null, source: null };
-  obj[0] = Button.Icon.Sizes.SMALL;
-  obj[1] = Themes.unsafe_rawColors.WHITE;
-  obj[2] = tmp.subscriberCountIcon;
-  obj[3] = registerAsset;
+  obj = { size: Button.Icon.Sizes.SMALL, color: ThemesDefault.unsafe_rawColors.WHITE, style: tmp.subscriberCountIcon, source: registerAssetDefault };
   items1[1] = callback(Button.Icon, obj);
-  const obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
+  obj1 = { variant: "text-sm/normal", color: "text-overlay-light", children: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t["3NNXPW"]);
   items1[2] = callback(Text.Text, obj1);
@@ -40,19 +32,12 @@ function GuildServerSubscriberCount(arg0) {
   return callback2(closure_4, obj);
 }
 function CreatorGuildCard(highlightedCreatorGuild) {
-  let emojisToShow;
-  let guildAvatarUrl;
-  let guildName;
-  let notShownEmojiCount;
-  let quote;
-  let quote_attribution;
-  let subscriberCount;
   highlightedCreatorGuild = highlightedCreatorGuild.highlightedCreatorGuild;
   let _require;
   let guild_id;
-  let dependencyMap;
+  dependencyMap = undefined;
   let hasAllImperativeDetails;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   _require = tmp;
   guild_id = highlightedCreatorGuild.guild_id;
   let quote_attribution_title = highlightedCreatorGuild.quote_attribution_title;
@@ -74,7 +59,7 @@ function CreatorGuildCard(highlightedCreatorGuild) {
     obj = { style: null, children: null };
     obj[0] = tmp.horizontalContainer;
     ({ guildName, guildAvatarUrl } = details);
-    const obj1 = { style: null, source: null };
+    obj1 = { style: null, source: null };
     obj1[0] = tmp.guildIcon;
     const obj2 = { uri: null };
     obj2[0] = guildAvatarUrl;
@@ -132,8 +117,8 @@ function CreatorGuildCard(highlightedCreatorGuild) {
       const items6 = [
         emojisToShow.map((id) => {
               const items = [, ];
-              ({ emoji: arr[0], emojiListItem: arr[1] } = c0);
-              return outer1_6(guild_id(_undefined[13]), { style: items, size: 24, id: id.id, guildId: guild_id }, id.id);
+              ({ emoji: arr[0], emojiListItem: arr[1] } = closure_0);
+              return closure_1_6(guild_id(details[13]), { style: items, size: 24, id: id.id, guildId: guild_id }, id.id);
             }),
 
       ];
@@ -170,31 +155,31 @@ function CreatorGuildCard(highlightedCreatorGuild) {
 ({ View: c4, FlatList: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { horizontalContainer: { flexDirection: "row" }, serverSubscriberCount: { marginTop: 8 }, subscriberCountContainer: null, subscriberCount: null, subscriberCountIcon: null, cardContainer: null, cardHeaderContainer: null, guildIcon: null, ownerQuote: null, ownerUsername: null, premiumEmojisTitle: null, viewServerButtonContainer: null, viewServerButton: null, emojiSectionContainer: null, emojiContainer: null, emojiListItem: null, emoji: null };
-createCacheKey = { alignItems: "center", backgroundColor: require("Themes").unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: require("Themes").radii.xs, overflow: "hidden" };
+createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_530, paddingEnd: 8, borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: require("Themes").unsafe_rawColors.BRAND_630, paddingHorizontal: 8, paddingVertical: 4 };
+createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_630, paddingHorizontal: 8, paddingVertical: 4 };
 createCacheKey[4] = { marginStart: 8, marginEnd: 6, marginVertical: 4, alignSelf: "center" };
-let obj1 = { backgroundColor: require("Themes").unsafe_rawColors.BRAND_630, paddingHorizontal: 8, paddingVertical: 4 };
-createCacheKey[5] = { width: 276, marginEnd: 12, paddingHorizontal: 24, paddingVertical: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+let obj1 = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_630, paddingHorizontal: 8, paddingVertical: 4 };
+createCacheKey[5] = { width: 276, marginEnd: 12, paddingHorizontal: 24, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[6] = { flex: 1, justifyContent: "flex-start", alignItems: "flex-start" };
 createCacheKey[7] = { width: 60, height: 60, borderRadius: 6, marginEnd: 16 };
 createCacheKey[8] = { marginTop: 24 };
 createCacheKey[9] = { marginTop: 8 };
 createCacheKey[10] = { marginTop: 32, textTransform: "uppercase" };
 createCacheKey[11] = { flex: 1, justifyContent: "flex-end" };
-let obj2 = { width: 276, marginEnd: 12, paddingHorizontal: 24, paddingVertical: 16, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-createCacheKey[12] = { width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, marginTop: 16 };
+let obj2 = { width: 276, marginEnd: 12, paddingHorizontal: 24, paddingVertical: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[12] = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, marginTop: 16 };
 createCacheKey[13] = { flex: 1, justifyContent: "flex-start", alignItems: "flex-start" };
-let obj3 = { width: "100%", backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, marginTop: 16 };
-createCacheKey[14] = { width: "100%", marginTop: 8, paddingHorizontal: 8, justifyContent: "space-around", backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, alignItems: "center", borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+let obj3 = { width: "100%", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, marginTop: 16 };
+createCacheKey[14] = { width: "100%", marginTop: 8, paddingHorizontal: 8, justifyContent: "space-around", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, alignItems: "center", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[15] = { marginHorizontal: 8 };
 createCacheKey[16] = { height: 24, width: 24, marginVertical: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 function renderItem(highlightedCreatorGuild) {
   return callback(CreatorGuildCard, { highlightedCreatorGuild: highlightedCreatorGuild.item });
 }
-let obj4 = { width: "100%", marginTop: 8, paddingHorizontal: 8, justifyContent: "space-around", backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL, alignItems: "center", borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorHighlightSection.tsx");
+let obj4 = { width: "100%", marginTop: 8, paddingHorizontal: 8, justifyContent: "space-around", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL, alignItems: "center", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/welcome/CreatorHighlightSection.tsx");
 
 export default function CreatorHighlightSection(data) {
   return callback(closure_5, {

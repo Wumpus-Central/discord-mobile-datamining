@@ -1,26 +1,25 @@
 // discord_app/modules/stage_channels/native/components/ModeratorStartStageView.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "jsxProd";
-import { useCurrentUserStageRoles } from "../../useCurrentUserStageRoles.tsx";
+import noopAll from "noop" /* 19 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 12489 */;
+import stylesDefault from "styles" /* 12491 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageView.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/ModeratorStartStageView.tsx");
 
 export default function ModeratorStartStageView(channel) {
   channel = channel.channel;
   let guild_id;
   guild_id = channel.guild_id;
   let obj = guild_id(589);
-  const items = [createGuildRecordFromRust];
+  const items = [closure_4];
   const items1 = [guild_id];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getGuild(guild_id), items1);
-  let obj1 = guild_id(8891);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getGuild(guild_id), items1);
+  obj1 = guild_id(8891);
   const first = callback(obj1.useGuildChannelScheduledEvents(channel.id), 1)[0];
   let obj2 = guild_id(8839);
   const canManageGuildEventResult = obj2.useManageResourcePermissions(channel).canManageGuildEvent(first);
@@ -51,7 +50,7 @@ export default function ModeratorStartStageView(channel) {
     }
     const items2 = [tmp10Result, , , ];
     tmp10Result = null;
-    if (useCurrentUserStageRoles(channel.id, true).moderator) {
+    if (useCurrentUserStageRolesDefault(channel.id, true).moderator) {
       obj1 = { channel: null, isLive: null };
       obj1[0] = channel;
       obj1[1] = isLive;
@@ -73,10 +72,10 @@ export default function ModeratorStartStageView(channel) {
     items2[3] = closure_5(tmp(12505).ContinueToStagePrompt, obj4);
     obj3[0] = items2;
     obj[2] = closure_7(closure_6, obj3);
-    tmp10Result2 = tmp10(tmp5(12491), obj);
+    tmp10Result2 = tmp10(stylesDefault, obj);
     const tmp12 = closure_7;
     const tmp13 = closure_6;
-    const tmp5Result = tmp5(12491);
+    const tmp5Result = stylesDefault;
   }
   return tmp10Result2;
 };

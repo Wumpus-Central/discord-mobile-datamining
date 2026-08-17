@@ -1,19 +1,19 @@
 // discord_app/modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx
-import noop from "noop";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { FetchState } from "recomputeFromAppTokens";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "recomputeFromAppTokens" /* 5289 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
 
 const require = arg1;
-function useAuthorizedAppsTokens(noop, arg1) {
-  const _require = noop;
+function useAuthorizedAppsTokens(closure_3, arg1) {
+  const _require = closure_3;
   let obj = arg1;
   if (arg1 == null) {
     obj = {};
   }
   const disableFetch = obj.disableFetch;
-  const importDefault = tmp;
-  const items = [recomputeFromAppTokens];
-  const items1 = [noop];
+  closure_1 = tmp;
+  const items = [closure_4];
+  const items1 = [closure_3];
   const tokens = _require(stateFromStoresArray1[2]).useStateFromStoresArray(items, () => {
     let found;
     if (callback != null) {
@@ -26,8 +26,8 @@ function useAuthorizedAppsTokens(noop, arg1) {
     return found;
   }, items1);
   const obj2 = _require(stateFromStoresArray1[2]);
-  const items2 = [recomputeFromAppTokens];
-  const items3 = [noop];
+  const items2 = [closure_4];
+  const items3 = [closure_3];
   const fetched = _require(stateFromStoresArray1[2]).useStateFromStores(items2, () => {
     let flag;
     if (closure_0 != null) {
@@ -39,8 +39,8 @@ function useAuthorizedAppsTokens(noop, arg1) {
     return flag;
   }, items3);
   const obj3 = _require(stateFromStoresArray1[2]);
-  const items4 = [recomputeFromAppTokens];
-  const items5 = [noop];
+  const items4 = [closure_4];
+  const items5 = [closure_3];
   stateFromStoresArray1 = _require(stateFromStoresArray1[2]).useStateFromStoresArray(items4, () => {
     let found;
     if (closure_0 != null) {
@@ -53,21 +53,22 @@ function useAuthorizedAppsTokens(noop, arg1) {
   }, items5);
   const items6 = [undefined !== disableFetch && disableFetch, stateFromStoresArray1];
   const effect = React.useEffect(() => {
-    if (!tmp) {
+    let tmp = callback2;
+    if (!callback2) {
       tmp = 0 === stateFromStoresArray1.length;
     }
     if (!tmp) {
-      const response = tmp(stateFromStoresArray1[4]).fetch(stateFromStoresArray1);
-      const obj = tmp(stateFromStoresArray1[4]);
+      const response = callback2(stateFromStoresArray1[4]).fetch(stateFromStoresArray1);
+      const obj = callback2(stateFromStoresArray1[4]);
     }
   }, items6);
   return { tokens, fetched };
 }
-const result = require("initialize").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/hooks/useAuthorizedAppsToken.tsx");
 
 export { useAuthorizedAppsTokens };
 export const useAuthorizedAppsToken = function useAuthorizedAppsToken(parentId) {
-  let closure_0 = parentId;
+  closure_0 = parentId;
   let items = [parentId];
   const fetched = useAuthorizedAppsTokens(React.useMemo(() => {
     let tmp2 = null;

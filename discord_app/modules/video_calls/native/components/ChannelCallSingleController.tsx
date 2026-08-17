@@ -1,26 +1,26 @@
 // discord_app/modules/video_calls/native/components/ChannelCallSingleController.tsx
-import noop from "noop";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import { AnalyticEvents } from "ME";
-import { ParticipantTypes } from "ParticipantTypes";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "reset" /* 4652 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("fetchFingerprint").fileFinishedImporting("modules/video_calls/native/components/ChannelCallSingleController.tsx");
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallSingleController.tsx");
 
 export const ChannelCallSingleController = function ChannelCallSingleController(selectedParticipant) {
   selectedParticipant = selectedParticipant.selectedParticipant;
   const channel = selectedParticipant.channel;
   const items = [channel.id];
   const effect = React.useEffect(() => {
-    let obj = channel(outer1_2[6]);
+    let obj = channel(closure_1_2[6]);
     obj = { video_layout: "focus" };
-    const merged = Object.assign(selectedParticipant(outer1_2[7]).collectVoiceAnalyticsMetadata(channel.id));
-    obj.track(outer1_6.VIDEO_LAYOUT_TOGGLED, obj);
+    const merged = Object.assign(selectedParticipant(closure_1_2[7]).collectVoiceAnalyticsMetadata(channel.id));
+    obj.track(closure_1_6.VIDEO_LAYOUT_TOGGLED, obj);
   }, items);
   selectedParticipant(589);
-  [][0] = reset;
+  [][0] = closure_4;
   const type = selectedParticipant.type;
   if (ParticipantTypes.STREAM === type) {
     if (null == tmp4) {
@@ -43,7 +43,7 @@ export const ChannelCallSingleController = function ChannelCallSingleController(
     return null;
   } else if (tmp5.ACTIVITY === type) {
     const _Error = Error;
-    const error = new Error("Activities are not supported on old voice UI");
+    error = new Error("Activities are not supported on old voice UI");
     throw error;
   }
 };

@@ -1,86 +1,65 @@
 // discord_app/modules/devtools/native/components/screens/DevToolsShopScreen.tsx
-import "noop";
-import { ScrollView } from "get ActivityIndicator";
-import getUserAgnosticState from "getUserAgnosticState";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { FormSwitch } from "../../../../../design/components/Forms/native/FormSwitch.native.tsx";
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { TableRowInner } from "../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { useToggleDismissibleContentDismissState } from "../../../../dismissible_content/utils/toggleDismissibleContentDismissState.tsx";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import Stack from "Stack" /* 4733 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import FormSwitch from "FormSwitch" /* 7179 */;
+import useToggleDismissibleContentDismissStateDefault from "useToggleDismissibleContentDismissState" /* 15070 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "getUserAgnosticState" /* 4737 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { wrap: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("getUserAgnosticState").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsShopScreen.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/DevToolsShopScreen.tsx");
 
 export default function DevToolsShopScreen() {
-  let handleToggleDismissState;
-  let isDismissed;
   let obj = initialize;
-  const items = [getUserAgnosticState];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => store.get("shop_disable_cache"));
-  let obj1 = initialize;
-  const items1 = [getUserAgnosticState];
+  obj1 = initialize;
+  const items1 = [closure_4];
   const stateFromStores1 = obj1.useStateFromStores(items1, () => store.get("shop_include_unpublished"));
   let obj2 = initialize;
-  const items2 = [getUserAgnosticState];
+  const items2 = [closure_4];
   const stateFromStores2 = obj2.useStateFromStores(items2, () => store.get("shop_show_debug_overlay"));
   let obj3 = initialize;
-  const items3 = [getUserAgnosticState];
+  const items3 = [closure_4];
   const stateFromStores3 = obj3.useStateFromStores(items3, () => store.get("bypass_google_sku_sync"));
-  const tmp = createCacheKey();
-  const tmp6 = useToggleDismissibleContentDismissState;
+  const tmp = callback3();
+  const tmp6 = useToggleDismissibleContentDismissStateDefault;
   obj = { style: tmp.wrap, contentContainerStyle: null, children: null };
-  obj = { paddingVertical: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 + useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom };
-  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissState(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING));
+  obj = { paddingVertical: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 + useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom };
+  ({ isDismissed, handleToggleDismissState } = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING));
   obj[1] = obj;
   obj1 = { spacing: 16, children: null };
   obj2 = { title: "Shop Toggles", hasIcons: false, children: null };
-  obj3 = { label: "Disable collectibles shop cache", subLabel: "shop_disable_cache", subLabelLineClamp: 1, trailing: null };
-  obj3[3] = callback(FormSwitch.FormSwitch, {
+  obj3 = { label: "Disable collectibles shop cache", subLabel: "shop_disable_cache", subLabelLineClamp: 1, trailing: callback(FormSwitch.FormSwitch, obj4) };
+  const items4 = [callback(TableRowInner.TableRow, obj3), , , , ];
+  obj4 = {
     value: stateFromStores,
     onValueChange(arg0) {
       return callback(15144).toggle("shop_disable_cache", arg0);
     }
-  });
-  const items4 = [callback(TableRowInner.TableRow, obj3), , , , ];
-  const obj5 = { label: "Show unpublished items in collectibles shop", subLabel: "shop_include_unpublished", subLabelLineClamp: 1, trailing: null };
-  obj5[3] = callback(FormSwitch.FormSwitch, {
-    value: stateFromStores1,
-    onValueChange(arg0) {
-      return callback(15144).toggle("shop_include_unpublished", arg0);
-    }
-  });
-  items4[1] = callback(TableRowInner.TableRow, obj5);
+  };
+  const tmp6Result = useToggleDismissibleContentDismissStateDefault(DismissibleContent.DismissibleContent.COLLECTIBLES_SHOP_ENTRY_MARKETING);
+  items4[1] = callback(TableRowInner.TableRow, { label: "Show unpublished items in collectibles shop", subLabel: "shop_include_unpublished", subLabelLineClamp: 1, trailing: callback(FormSwitch.FormSwitch, obj6) });
   items4[2] = callback(TableSwitchRow.TableSwitchRow, { label: "Collectibles Marketing", subLabel: "COLLECTIBLES_SHOP_ENTRY_MARKETING", subLabelLineClamp: 1, value: isDismissed, onValueChange: handleToggleDismissState });
-  const obj7 = { label: "Show debug log overlay in collectibles shop", subLabel: "shop_show_debug_overlay", subLabelLineClamp: 1, trailing: null };
-  obj7[3] = callback(FormSwitch.FormSwitch, {
-    value: stateFromStores2,
-    onValueChange(arg0) {
-      return callback(15144).toggle("shop_show_debug_overlay", arg0);
-    }
-  });
-  items4[3] = callback(TableRowInner.TableRow, obj7);
-  const obj9 = { label: "[Android] Bypass Google SKU sync in collectibles shop", subLabel: "bypass_google_sku_sync", subLabelLineClamp: 1, trailing: null };
-  obj9[3] = callback(FormSwitch.FormSwitch, {
-    value: stateFromStores3,
-    onValueChange(arg0) {
-      return callback(15144).toggle("bypass_google_sku_sync", arg0);
-    }
-  });
-  items4[4] = callback(TableRowInner.TableRow, obj9);
+  const obj5 = { label: "Show unpublished items in collectibles shop", subLabel: "shop_include_unpublished", subLabelLineClamp: 1, trailing: callback(FormSwitch.FormSwitch, obj6) };
+  items4[3] = callback(TableRowInner.TableRow, { label: "Show debug log overlay in collectibles shop", subLabel: "shop_show_debug_overlay", subLabelLineClamp: 1, trailing: callback(FormSwitch.FormSwitch, obj8) });
+  const obj7 = { label: "Show debug log overlay in collectibles shop", subLabel: "shop_show_debug_overlay", subLabelLineClamp: 1, trailing: callback(FormSwitch.FormSwitch, obj8) };
+  items4[4] = callback(TableRowInner.TableRow, { label: "[Android] Bypass Google SKU sync in collectibles shop", subLabel: "bypass_google_sku_sync", subLabelLineClamp: 1, trailing: callback(FormSwitch.FormSwitch, obj10) });
   obj2[2] = items4;
   obj1[1] = callback2(TableRowGroupTitle.TableRowGroup, obj2);
   obj[2] = callback(Stack.Stack, obj1);

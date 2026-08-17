@@ -1,18 +1,15 @@
 // discord_app/design/components/Icon/native/BaseIconImage.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { map } from "../../../tokens/native/useToken.tsx";
+import noopAll from "noop" /* 19 */;
+import map from "map" /* 4097 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = { xxs: { width: 12, height: 12 }, xs: { width: 16, height: 16 }, sm: { width: 18, height: 18 }, md: { width: 24, height: 24 }, lg: { width: 32, height: 32 }, custom: { width: "r", height: "accessibilityRole" }, refresh_sm: { width: 18, height: 18 } };
-const result = require("jsxProd").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/BaseIconImage.tsx");
 
 export const BaseIconImage = function BaseIconImage(source) {
-  let accessibilityLabel;
-  let accessible;
-  let resizeMode;
-  let style;
   let str = source.size;
   if (str === undefined) {
     str = "md";

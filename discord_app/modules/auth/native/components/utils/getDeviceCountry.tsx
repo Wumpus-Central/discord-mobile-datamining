@@ -1,12 +1,15 @@
 // discord_app/modules/auth/native/components/utils/getDeviceCountry.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { set } from "../../../../../utils/PlatformUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set2 from "set" /* 500 */;
+import enforcing from "enforcing" /* 666 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");
 
 export const getDeviceCountry = function getDeviceCountry() {
   if (obj.isAndroid()) {
-    let LocalizationManager = tmp(666).default;
+    let LocalizationManager = enforcing.default;
   } else {
     LocalizationManager = NativeModules.LocalizationManager;
   }
@@ -25,6 +28,6 @@ export const getDeviceCountry = function getDeviceCountry() {
     }
     return formatted;
   }
-  obj = set;
-  tmp = require;
+  obj = set2;
+  const tmp = require;
 };

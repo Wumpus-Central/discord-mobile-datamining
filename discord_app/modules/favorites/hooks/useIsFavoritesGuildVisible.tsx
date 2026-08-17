@@ -1,33 +1,29 @@
 // discord_app/modules/favorites/hooks/useIsFavoritesGuildVisible.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import { useFavoritesAccess } from "../FavoritesHooks.tsx";
-import { getFavoritesAwareGuildName } from "../FavoritesUtils.tsx";
-import { hasOfferedFavoritesGuildOnboarding } from "../onboarding/FavoritesGuildIntroPopover.tsx";
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import useFavoritesAccess from "useFavoritesAccess" /* 9979 */;
+import hasOfferedFavoritesGuildOnboarding from "hasOfferedFavoritesGuildOnboarding" /* 9988 */;
+import closure_2 from "handleConnectionOpen" /* 4197 */;
+import closure_3 from "initializeFromUserSettings" /* 1394 */;
 
-const require = arg1;
-function computeIsFavoritesGuildVisible(initializeFromUserSettings, handleConnectionOpen, isExperimentEnabled) {
-  let hasAccess;
-  let isFreemium;
-  let isIntroPopoverShown;
-  let keepWhileViewing;
+require = arg1;
+function computeIsFavoritesGuildVisible(closure_3, closure_2, isExperimentEnabled) {
   ({ isFreemium, hasAccess, isIntroPopoverShown, keepWhileViewing } = isExperimentEnabled);
   isExperimentEnabled = isExperimentEnabled.isExperimentEnabled;
   if (isExperimentEnabled) {
     let tmp2 = !keepWhileViewing;
     if (keepWhileViewing) {
-      tmp2 = !getFavoritesAwareGuildName.isFavoritesGuildId(handleConnectionOpen.getGuildId());
+      tmp2 = !getFavoritesAwareGuildName.isFavoritesGuildId(closure_2.getGuildId());
       const obj = getFavoritesAwareGuildName;
     }
     let tmp6 = !tmp2;
     if (tmp2) {
       let tmp8 = !hasAccess;
       if (hasAccess) {
-        tmp8 = false === initializeFromUserSettings.favoriteGuildVisibleSetting;
+        tmp8 = false === closure_3.favoriteGuildVisibleSetting;
       }
       let tmp9 = !tmp8;
       if (!tmp8) {
-        let favoriteGuildEnabled = initializeFromUserSettings.favoriteGuildEnabled;
+        let favoriteGuildEnabled = closure_3.favoriteGuildEnabled;
         if (!favoriteGuildEnabled) {
           if (isFreemium) {
             if (!isIntroPopoverShown) {
@@ -46,7 +42,7 @@ function computeIsFavoritesGuildVisible(initializeFromUserSettings, handleConnec
   }
   return isExperimentEnabled;
 }
-const result = require("getFavoritesAwareGuildName").fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/hooks/useIsFavoritesGuildVisible.tsx");
 
 export default function useIsFavoritesGuildVisible() {
   let flag = arg0;
@@ -71,7 +67,6 @@ export default function useIsFavoritesGuildVisible() {
 export const isFavoritesGuildVisible = function isFavoritesGuildVisible() {
   let obj = useFavoritesAccess;
   const favoritesAccess = obj.getFavoritesAccess();
-  obj = { isExperimentEnabled: favoritesAccess.isExperimentEnabled, isFreemium: favoritesAccess.isFreemium, hasAccess: favoritesAccess.hasAccess, isIntroPopoverShown: null, keepWhileViewing: true };
-  obj[3] = hasOfferedFavoritesGuildOnboarding.isFavoritesIntroPopoverShown();
-  return computeIsFavoritesGuildVisible(initializeFromUserSettings, handleConnectionOpen, obj);
+  obj = { isExperimentEnabled: favoritesAccess.isExperimentEnabled, isFreemium: favoritesAccess.isFreemium, hasAccess: favoritesAccess.hasAccess, isIntroPopoverShown: hasOfferedFavoritesGuildOnboarding.isFavoritesIntroPopoverShown(), keepWhileViewing: true };
+  return computeIsFavoritesGuildVisible(closure_3, closure_2, obj);
 };

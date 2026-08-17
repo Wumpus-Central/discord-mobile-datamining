@@ -1,23 +1,18 @@
 // discord_app/modules/guild_settings/native/GuildSettingsModalEmoji.tsx
-import _slicedToArray from "_slicedToArray";
-import getEmptyServerSettingsEmojiSource from "getEmptyServerSettingsEmojiSource";
-import get_ActivityIndicator from "HeaderRow";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import initialize from "initialize";
-import jsxProd from "NavScrim";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "getGuildTierFromGuild";
-import importDefaultResult1 from "getGuildTierFromGuild";
-import { apply } from "../../../../_runtime/00012_apply.js";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "initialize" /* 16783 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "apply" /* 12 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { getGuildTierFromGuild } from "../../../utils/GuildBoostingUtils.tsx";
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function computeEmojiItem(id) {
   return { type: "EMOJI", key: id.id, emoji: id };
 }
@@ -35,15 +30,15 @@ class ManageEmojisModal {
     emojis = undefined;
     revision = undefined;
     canManageGuildExpression = undefined;
-    computeEmojiItems = undefined;
-    useStateFromStoresObject = undefined;
-    useRef = undefined;
+    closure_7 = undefined;
+    closure_8 = undefined;
+    closure_9 = undefined;
     tmp = c0;
     tmp2 = headerDescription;
     obj = require("initialize");
     items = [];
-    items[0] = useStateFromStoresObject;
-    stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ emojis: _undefined.getEmojis(guild.id), revision: _undefined.getEmojiRevision(guild.id) }));
+    items[0] = closure_8;
+    stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ emojis: store.getEmojis(guild.id), revision: store.getEmojiRevision(guild.id) }));
     emojis = stateFromStoresObject.emojis;
     revision = stateFromStoresObject.revision;
     obj2 = require("canManageResource");
@@ -53,22 +48,22 @@ class ManageEmojisModal {
       items1 = [];
     }
     emojiItems = computeEmojiItems(items1, guild);
-    computeEmojiItems = emojiItems;
-    tmp5 = fetchEmoji();
-    useStateFromStoresObject = tmp5;
+    closure_7 = emojiItems;
+    tmp5 = closure_13();
+    closure_8 = tmp5;
     obj3 = emojis;
-    useRef = emojis.useRef(revision);
+    closure_9 = emojis.useRef(revision);
     items2 = [];
     items2[0] = guild.id;
     effect = emojis.useEffect(() => {
-      outer1_12(guild.id);
+      closure_1_12(guild.id);
     }, items2);
     items3 = [, ];
     items3[0] = guild.id;
     items3[1] = revision;
     effect1 = emojis.useEffect(() => {
       if (ref.current < revision) {
-        outer1_12(guild.id);
+        closure_1_12(guild.id);
       }
       ref.current = revision;
     }, items3);
@@ -83,13 +78,11 @@ class ManageEmojisModal {
     items5[0] = guild;
     length = undefined;
     callback = emojis.useCallback((arg0) => {
-      let index;
-      let item;
       ({ item, index } = arg0);
       let type = item.type;
       if ("SECTION" === type) {
         let obj = { style: null, variant: "text-xs/bold", color: "text-default", children: null };
-        obj[0] = _undefined.section;
+        obj[0] = store.section;
         obj[3] = item.section;
         return ref(flag(headerDescription[15]).Text, obj);
       } else if ("EMOJI" === type) {
@@ -145,9 +138,7 @@ class ManageEmojisModal {
       return closure_9(flag(headerDescription[17]).ConnectedHeaderRow, obj);
     }, items5);
     callback2 = obj3.useCallback(() => {
-      const obj = { Illustration: null, style: null, title: null, body: null };
-      obj[0] = flag(headerDescription[19]).EmptyServerSettingsEmoji;
-      obj[1] = _undefined.emptyState;
+      const obj = { Illustration: flag(headerDescription[19]).EmptyServerSettingsEmoji, style: store.emptyState, title: null, body: null };
       const intl = flag(headerDescription[10]).intl;
       obj[2] = intl.string(flag(headerDescription[10]).t.lxsmBd);
       const intl2 = flag(headerDescription[10]).intl;
@@ -159,14 +150,14 @@ class ManageEmojisModal {
       tmp17 = revision;
       obj = { style: null, children: null };
       obj[0] = tmp5.loadingContainer;
-      tmp18 = useRef;
+      tmp18 = closure_9;
       items7 = [, ];
-      items7[0] = useRef(require("ActivityIndicator").ActivityIndicator, {});
-      items7[1] = useRef(require("NavScrim").NavScrim, {});
+      items7[0] = closure_9(require("ActivityIndicator").ActivityIndicator, {});
+      items7[1] = closure_9(require("NavScrim").NavScrim, {});
       obj[1] = items7;
       tmp15 = jsxs(revision, obj);
     } else {
-      tmp13 = useRef;
+      tmp13 = closure_9;
       tmp14 = canManageGuildExpression;
       obj1 = { initialNumToRender: 12, ListHeaderComponent: null, ListEmptyComponent: null, windowSize: 4, data: null, keyExtractor: null, renderItem: null, contentContainerStyle: null };
       obj1[1] = callback1;
@@ -178,34 +169,32 @@ class ManageEmojisModal {
       items8[0] = contentContainerStyle;
       items8[1] = tmp5.list;
       obj1[7] = items8;
-      tmp15 = useRef(canManageGuildExpression, obj1);
+      tmp15 = closure_9(canManageGuildExpression, obj1);
     }
     return tmp15;
   }
 }
 ({ View: c5, FlatList: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
-let closure_12 = require("getGuildTierFromGuild").throttle(require("_updateEmoji").fetchEmoji, 1000);
+let closure_12 = importDefaultResult.throttle(require("_updateEmoji").fetchEmoji, 1000);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: null, section: null, titleContainer: null };
-obj = { paddingHorizontal: require("Themes").space.PX_12 };
+obj = { paddingHorizontal: ThemesDefault.space.PX_12 };
 obj[2] = obj;
-createCacheKey = { paddingVertical: require("Themes").space.PX_16 };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_16 };
 obj[3] = createCacheKey;
 obj[4] = { paddingLeft: 16, paddingRight: 16 };
 let closure_13 = createCacheKey.createStyles(obj);
-let closure_15 = require("getGuildTierFromGuild").memoize((arr, stateFromStores) => {
-  let arr2;
-  let arr3;
+let closure_15 = importDefaultResult.memoize((arr, stateFromStores) => {
   const _require = stateFromStores;
-  const found = arr.filter((roles) => !stateFromStores(outer1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
+  const found = arr.filter((roles) => !stateFromStores(closure_1_2[11]).isRoleSubscriptionEmoji(roles, stateFromStores.id));
   const mapped = found.map(computeEmojiItem);
   const reversed = mapped.reverse();
   const maxEmojiSlots = _getGuildTierFromGuild.getMaxEmojiSlots(stateFromStores);
   const obj2 = _getGuildTierFromGuild;
-  const obj3 = apply;
-  [arr2, arr3] = callback(apply.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const obj3 = importDefaultResult;
+  [arr2, arr3] = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const intl = _getSystemLocale.intl;
-  const tmp3 = callback(apply.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
+  const tmp3 = callback(importDefaultResult.partition(reversed, (emoji) => !emoji.emoji.animated), 2);
   const bound = Math.max(maxEmojiSlots - arr2.length, 0);
   const intl2 = _getSystemLocale.intl;
   const stringResult = intl.string(_getSystemLocale.t.sMOuuS);
@@ -234,19 +223,18 @@ let closure_15 = require("getGuildTierFromGuild").memoize((arr, stateFromStores)
   HermesBuiltin.arraySpread(items4, tmp13);
   return items2;
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji.tsx");
+const importDefaultResult1 = importDefaultResult;
+const result = require("set").fileFinishedImporting("modules/guild_settings/native/GuildSettingsModalEmoji.tsx");
 
 export default function GuildSettingsModalEmoji(contentContainerStyle) {
-  let isLandingScreen;
-  let require;
   ({ guildId: require, isLandingScreen } = contentContainerStyle);
   let stateFromStores;
   let navigation;
   let React;
   let obj = require(stateFromStores[13]);
-  const items = [createGuildRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuild(closure_0));
-  let obj1 = require(stateFromStores[22]);
+  const items = [closure_7];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
+  obj1 = require(stateFromStores[22]);
   navigation = obj1.useNavigation();
   const tmp5 = callback4();
   React = tmp5;
@@ -259,9 +247,9 @@ export default function GuildSettingsModalEmoji(contentContainerStyle) {
     if (tmp) {
       let obj = { headerTitle: null };
       obj[0] = function headerTitle() {
-        obj = { style: titleContainer.titleContainer, children: outer1_9(outer1_0(outer1_2[23]).NavigatorHeader, obj) };
+        obj = { style: titleContainer.titleContainer, children: closure_1_9(closure_1_0(closure_1_2[23]).NavigatorHeader, obj) };
         obj = { title: name.name };
-        return outer1_9(outer1_5, obj);
+        return closure_1_9(closure_1_5, obj);
       };
       navigation.setOptions(obj);
     }

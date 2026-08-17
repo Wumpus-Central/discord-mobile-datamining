@@ -1,36 +1,28 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import emitChanges from "emitChanges";
-import updateProduct from "updateProduct";
-import { HelpdeskArticles } from "ME";
-import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "GuildFeatures";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "reset" /* 4045 */;
+import closure_6 from "emitChanges" /* 7421 */;
+import closure_7 from "updateProduct" /* 5319 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { PREMIUM_TIER_2_REFERRAL_TRIAL_ID as closure_9 } from "GuildFeatures" /* 1924 */;
 import { createCacheKey } from "../../../../../../design/components/Styles/native/createStyles.tsx";
 
 const require = arg1;
-let result = require("reset").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/ReferralTrialEmbedRedesign.tsx");
 
 export const createReferralTrialEmbedRedesign = function createReferralTrialEmbedRedesign(message, theme, id, relevantUserTrialOffer) {
-  let acceptLabelColor;
-  let backgroundColor;
-  let bodyTextColor;
-  let footerTextColor;
-  let headerTextColor;
-  let linkTextColor;
-  let subTextColor;
-  let titleColor;
   if (null != message.author) {
     let obj = { titleColor: null, headerTextColor: null, bodyTextColor: null, footerTextColor: null, subTextColor: null, backgroundColor: null, acceptLabelColor: null, linkTextColor: null };
-    obj[0] = Themes.colors.TEXT_DEFAULT;
-    obj[1] = Themes.colors.MOBILE_TEXT_HEADING_PRIMARY;
-    obj[2] = Themes.colors.TEXT_SUBTLE;
-    obj[3] = Themes.colors.TEXT_MUTED;
-    obj[4] = Themes.colors.TEXT_SUBTLE;
-    obj[5] = Themes.colors.BACKGROUND_MOD_NORMAL;
-    obj[6] = Themes.colors.WHITE;
-    obj[7] = Themes.colors.TEXT_LINK;
+    obj[0] = ThemesDefault.colors.TEXT_DEFAULT;
+    obj[1] = ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY;
+    obj[2] = ThemesDefault.colors.TEXT_SUBTLE;
+    obj[3] = ThemesDefault.colors.TEXT_MUTED;
+    obj[4] = ThemesDefault.colors.TEXT_SUBTLE;
+    obj[5] = ThemesDefault.colors.BACKGROUND_MOD_NORMAL;
+    obj[6] = ThemesDefault.colors.WHITE;
+    obj[7] = ThemesDefault.colors.TEXT_LINK;
     const tmp42 = _createCacheKey.createNativeStyleProperties(obj)(theme);
     ({ titleColor, headerTextColor, bodyTextColor, backgroundColor } = tmp42);
     ({ footerTextColor, subTextColor, acceptLabelColor, linkTextColor } = tmp42);
@@ -58,7 +50,7 @@ export const createReferralTrialEmbedRedesign = function createReferralTrialEmbe
             tmp41Result = tmp41(1993);
             obj[1] = tmp41Result.getArticleURL(HelpdeskArticles.REFERRAL_PROGRAM);
             const intl11 = tmp39(1236).intl;
-            const obj1 = { sender: null, helpdeskArticle: null };
+            obj1 = { sender: null, helpdeskArticle: null };
             obj1[0] = name;
             const obj2 = { action: "bindOpenUrl", url: null, linkColor: null };
             const formatToPlainStringResult = intl10.formatToPlainString(tmp39(1236).t.yisueA, obj);

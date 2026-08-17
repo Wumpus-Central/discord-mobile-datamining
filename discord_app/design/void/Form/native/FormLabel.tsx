@@ -1,15 +1,13 @@
 // discord_app/design/void/Form/native/FormLabel.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Text } from "../../../components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Text").fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormLabel.tsx");
 
 export default function FormLabel(children) {
-  let accessible;
-  let color;
-  let style;
   let lineClamp = children.numberOfLines;
   if (lineClamp === undefined) {
     lineClamp = 0;

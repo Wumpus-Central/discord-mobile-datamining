@@ -1,12 +1,13 @@
 // discord_app/modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx
-import reset from "reset";
-import { Store } from "initialize";
-import set from "set";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "reset" /* 4045 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 function onInitializeSync() {
   let priceChange = null;
-  let c4 = false;
+  c4 = false;
   if (obj.isAndroid()) {
     premiumSubscription = premiumSubscription.getPremiumSubscription();
     if (premiumSubscription != null) {
@@ -35,13 +36,14 @@ let items = [, , ];
 let set = new Set(items);
 let c4 = false;
 let c5 = null;
+const Store = initializeDefault.Store;
 class GooglePlayPriceChangeStore extends Store {
 }
 const prototype = GooglePlayPriceChangeStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [reset];
+  const items = [closure_2];
   this.syncWith(items, onInitializeSync);
-  this.waitFor(reset);
+  this.waitFor(closure_2);
 };
 Object.defineProperty(prototype, "shouldShowGooglePlayPriceChange", {
   get: function shouldShowGooglePlayPriceChange() {
@@ -56,7 +58,7 @@ Object.defineProperty(prototype, "priceChangeRecord", {
   set: undefined
 });
 GooglePlayPriceChangeStore.displayName = "GooglePlayPriceChangeStore";
-const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(require("dispatcher"), {});
+const googlePlayPriceChangeStore = new GooglePlayPriceChangeStore(dispatcherDefault, {});
 const result = set.fileFinishedImporting("modules/premium/native/google_play_price_changes/GooglePlayPriceChangeStore.tsx");
 
 export default googlePlayPriceChangeStore;

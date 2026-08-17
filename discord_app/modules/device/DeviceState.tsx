@@ -1,10 +1,13 @@
 // discord_app/modules/device/DeviceState.tsx
-import { _getDeviceState } from "native/DeviceState.tsx";
-const result = require("ThermalState").fileFinishedImporting("modules/device/DeviceState.tsx");
+import set from "set" /* 2 */;
+import _getDeviceState from "_getDeviceState" /* 7498 */;
+import ThermalState from "ThermalState" /* 7499 */;
 
-export const DeviceState = require("ThermalState").DeviceState;
-export const ThermalState = require("ThermalState").ThermalState;
-export const getDeviceState = require("_getDeviceState").getDeviceState;
+const result = set.fileFinishedImporting("modules/device/DeviceState.tsx");
+
+export const DeviceState = ThermalState.DeviceState;
+export const ThermalState = ThermalState.ThermalState;
+export const getDeviceState = _getDeviceState.getDeviceState;
 export const logDeviceState = function logDeviceState(thermalState) {
   if (null !== thermalState) {
     const logger2 = _getDeviceState.logger;

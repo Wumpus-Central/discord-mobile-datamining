@@ -1,11 +1,12 @@
 // discord_app/modules/saved_messages/SavedMessagesTypes.tsx
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
+import set from "set" /* 2 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+
+const result = set.fileFinishedImporting("modules/saved_messages/SavedMessagesTypes.tsx");
 
 export const SavedMessageSortTypes = { ALL: "ALL", REMINDER: "REMINDER", BOOKMARK: "BOOKMARK" };
 export const savedMessageDataToClient = function savedMessageDataToClient(save_data) {
-  const obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: null, authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
-  obj[2] = new Date(save_data.saved_at);
+  const obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
   ({ author_summary: obj[3], channel_summary: obj[4], message_summary: obj[5] } = save_data);
   let guild_id;
   if (0 !== save_data.guild_id) {
@@ -34,8 +35,7 @@ export const savedMessageCreateObjectToClient = function savedMessageCreateObjec
   }
   obj = { message: messageRecord, saveData: null };
   const save_data = body.save_data;
-  obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: null, authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
-  obj[2] = new Date(save_data.saved_at);
+  obj = { channelId: save_data.channel_id, messageId: save_data.message_id, savedAt: new Date(save_data.saved_at), authorSummary: null, channelSummary: null, messageSummary: null, guildId: null, authorId: null, notes: null, dueAt: null };
   ({ author_summary: obj3[3], channel_summary: obj3[4], message_summary: obj3[5] } = save_data);
   let guild_id;
   if (0 !== save_data.guild_id) {

@@ -1,25 +1,25 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import createNativeStackNavigator from "createNativeStackNavigator";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 
-let c3;
-let c4;
 const require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
-createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();
+let closure_5 = createNativeStackNavigator.createNativeStackNavigator();
 createNativeStackNavigator = { header: null };
-createNativeStackNavigator = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createNativeStackNavigator = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createNativeStackNavigator[0] = createNativeStackNavigator;
-createNativeStackNavigator = createCacheKey.createStyles(createNativeStackNavigator);
-const result = require("createNativeStackNavigator").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
+let closure_6 = createCacheKey.createStyles(createNativeStackNavigator);
+const result = require("set").fileFinishedImporting("modules/icymi/native/custom_scores/ICYMICustomScoresModal.tsx");
 
 export default function ICYMICustomScoresModal() {
-  const _require = createNativeStackNavigator();
+  const _require = callback3();
   let obj = _NavigationStack;
-  let closure_1 = obj.useAccessibilityNativeStackOptions();
+  closure_1 = obj.useAccessibilityNativeStackOptions();
   obj = {
     screenOptions() {
       let merged = Object.assign(closure_1);
@@ -51,12 +51,11 @@ export default function ICYMICustomScoresModal() {
     }
   };
   const items = [
-    callback(createNativeStackNavigator.Screen, obj),
-    callback(createNativeStackNavigator.Screen, {
+    callback(closure_5.Screen, obj),
+    callback(closure_5.Screen, {
       name: "guild",
       options(navigation) {
-        const obj = { headerLeft: null };
-        obj[0] = lib(8492).getRenderModalBackImage(navigation.navigation);
+        const obj = { headerLeft: lib(8492).getRenderModalBackImage(navigation.navigation) };
         return obj;
       },
       getComponent() {
@@ -65,5 +64,5 @@ export default function ICYMICustomScoresModal() {
     })
   ];
   obj[2] = items;
-  return callback2(createNativeStackNavigator.Navigator, obj);
+  return callback2(closure_5.Navigator, obj);
 };

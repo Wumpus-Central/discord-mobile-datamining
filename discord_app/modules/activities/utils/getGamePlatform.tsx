@@ -1,11 +1,10 @@
 // discord_app/modules/activities/utils/getGamePlatform.tsx
-import ME from "ME";
-import { isOnXbox } from "isOnXbox.tsx";
+import set from "set" /* 2 */;
+import isOnXboxDefault from "isOnXbox" /* 12099 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ ActivityTypes: obj1, ActivityGamePlatforms: c3 } = ME);
-const result = require("set").fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getGamePlatform.tsx");
 
 export default function getGamePlatform(type) {
   let tmp = null;
@@ -14,7 +13,7 @@ export default function getGamePlatform(type) {
     if (null != type.type) {
       tmp = null;
       if (type.type === constants.PLAYING) {
-        if (isOnXbox(type)) {
+        if (isOnXboxDefault(type)) {
           let DESKTOP = constants2.XBOX;
         } else if (null != type.platform) {
           DESKTOP = type.platform;

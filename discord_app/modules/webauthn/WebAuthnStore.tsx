@@ -1,10 +1,12 @@
 // discord_app/modules/webauthn/WebAuthnStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 const require = arg1;
 let c2 = false;
 let closure_3 = [];
 let c4 = false;
+const Store = initializeDefault.Store;
 class WebAuthnStore extends Store {
 }
 const prototype = WebAuthnStore.prototype;
@@ -24,11 +26,11 @@ prototype["hasPendingRegisterTrigger"] = function hasPendingRegisterTrigger() {
   return c4;
 };
 WebAuthnStore.displayName = "WebAuthnStore";
-const webAuthnStore = new WebAuthnStore(require("dispatcher"), {
+const webAuthnStore = new WebAuthnStore(dispatcherDefault, {
   LOGOUT: function handleReset() {
-    let closure_3 = [];
-    let c2 = false;
-    let c4 = false;
+    closure_3 = [];
+    c2 = false;
+    c4 = false;
   },
   MFA_WEBAUTHN_CREDENTIALS_LOADED: function handleWebAuthnCredentialsLoaded(credentials) {
     credentials = credentials.credentials;
@@ -96,6 +98,6 @@ const webAuthnStore = new WebAuthnStore(require("dispatcher"), {
     }
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
+const result = require("set").fileFinishedImporting("modules/webauthn/WebAuthnStore.tsx");
 
 export default webAuthnStore;

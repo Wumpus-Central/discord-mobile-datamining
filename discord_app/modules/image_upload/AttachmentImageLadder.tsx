@@ -1,6 +1,8 @@
 // discord_app/modules/image_upload/AttachmentImageLadder.tsx
+import set from "set" /* 2 */;
+
 const items = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
-let result = require("set").fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
+let result = set.fileFinishedImporting("modules/image_upload/AttachmentImageLadder.tsx");
 
 export const ATTACHMENT_LADDER = items;
 export const ATTACHMENT_LADDER_MAX_UPSCALE = 1.1;
@@ -12,11 +14,6 @@ export const getSnapDownMaxUpscale = function getSnapDownMaxUpscale(minSnapDownD
   return maxUpscale;
 };
 export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) {
-  let maxUpscale;
-  let sourceHeight;
-  let sourceWidth;
-  let targetHeight;
-  let targetWidth;
   ({ targetWidth, targetHeight, sourceWidth, sourceHeight, maxUpscale } = arg0);
   let bound;
   bound = Math.max(targetWidth, targetHeight);
@@ -88,7 +85,7 @@ export const snapAttachmentDimensions = function snapAttachmentDimensions(arg0) 
       const _Math7 = Math;
       bound3 = Math.min(bound1, sourceWidth);
     }
-    const obj1 = { width: null, height: null };
+    obj1 = { width: null, height: null };
     obj1[0] = bound3;
     let bound4 = bound2;
     if (null != sourceHeight) {

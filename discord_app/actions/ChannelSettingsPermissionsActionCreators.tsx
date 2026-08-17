@@ -1,17 +1,17 @@
 // discord_app/actions/ChannelSettingsPermissionsActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { dispatcher } from "../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
 const require = arg1;
 function _updatePermission() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let asyncGeneratorStep = arg3;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c6 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
@@ -39,17 +39,17 @@ function _updatePermission() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_5 = tmp5;
-              let closure_4 = tmp2;
+              closure_5 = tmp5;
+              closure_4 = tmp2;
               let guildId = callback;
               callback = dependencyMap;
-              dependencyMap = asyncGeneratorStep;
+              dependencyMap = closure_3;
               guildId = guildId.getGuildId();
               if (null != guildId) {
                 if (tmp23 === guildId) {
                   c6 = 1;
                   c7 = 1;
-                  let obj1 = { value: null, done: false };
+                  obj1 = { value: null, done: false };
                   obj1[0] = guildId(8852).checkChattableChannelThresholdMetAfterChannelPermissionDeny(tmp22, tmp25, tmp24);
                   return obj1;
                 }
@@ -57,7 +57,7 @@ function _updatePermission() {
               tmp22 = guildId;
               tmp23 = callback;
               tmp24 = dependencyMap;
-              tmp25 = asyncGeneratorStep;
+              tmp25 = closure_3;
             }
           } else if (arg0 === 1) {
             c7 = 3;
@@ -86,7 +86,7 @@ function _updatePermission() {
       }
     })();
   });
-  const _updatePermission = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -95,9 +95,9 @@ function _updatePermission() {
   }
   return applyArgumentsResult;
 }
-let result = require("dispatcher").fileFinishedImporting("actions/ChannelSettingsPermissionsActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/ChannelSettingsPermissionsActionCreators.tsx");
 
-export const updatePermission = function updatePermission(outer1_0, id, addResult, deny) {
+export const updatePermission = function updatePermission(closure_1_0, id, addResult, deny) {
   const self = this;
   const apply = _updatePermission.apply;
   if (typeof apply === "unknown") {
@@ -108,31 +108,31 @@ export const updatePermission = function updatePermission(outer1_0, id, addResul
   return applyArgumentsResult;
 };
 export const selectPermission = function selectPermission(id) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SELECT_PERMISSION", id };
   obj.dispatch(obj);
 };
 export const setAdvancedMode = function setAdvancedMode(advancedMode) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SET_ADVANCED_MODE", advancedMode };
   obj.dispatch(obj);
 };
 export const init = function init() {
-  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
+  dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_INIT" });
 };
 export const savePermissionUpdates = function savePermissionUpdates(id, items, arg2) {
-  let closure_0 = id;
-  const importDefault = items;
-  const dependencyMap = [];
-  let asyncGeneratorStep = arg2;
-  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  let obj = dispatcher;
+  closure_0 = id;
+  importDefault = items;
+  dependencyMap = [];
+  closure_3 = arg2;
+  dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
+  let obj = dispatcherDefault;
   return new Promise((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     function chain() {
       let arr = chain;
       if (0 === chain.length) {
-        if (0 === outer1_2.length) {
+        if (0 === closure_1_2.length) {
           return callback();
         }
       }
@@ -146,7 +146,7 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, a
           const obj2 = chain(4770);
         }
       } else {
-        arr = outer1_2.pop();
+        arr = closure_1_2.pop();
         if (null == arr) {
           return chain();
         } else {
@@ -159,23 +159,23 @@ export const savePermissionUpdates = function savePermissionUpdates(id, items, a
     !chain();
   }).then(() => {
     let obj = items(table[2]);
-    obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: asyncGeneratorStep };
+    obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: closure_3 };
     obj.dispatch(obj);
   });
 };
 export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpdates(arg0, arg1, arg2, arg3) {
-  let closure_0 = arg0;
-  const importDefault = arg1;
-  const dependencyMap = arg2;
-  let asyncGeneratorStep = arg3;
-  dispatcher.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
-  const obj = dispatcher;
+  closure_0 = arg0;
+  importDefault = arg1;
+  dependencyMap = arg2;
+  closure_3 = arg3;
+  dispatcherDefault.dispatch({ type: "CHANNEL_SETTINGS_PERMISSIONS_SUBMITTING" });
+  const obj = dispatcherDefault;
   return new Promise((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     function chain() {
       let arr = chain;
       if (0 === chain.length) {
-        if (0 === outer1_2.length) {
+        if (0 === closure_1_2.length) {
           return callback();
         }
       }
@@ -189,7 +189,7 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
           const obj2 = chain(4770);
         }
       } else {
-        arr = outer1_2.pop();
+        arr = closure_1_2.pop();
         if (null == arr) {
           return chain();
         } else {
@@ -202,7 +202,7 @@ export const saveAndClearPermissionUpdates = function saveAndClearPermissionUpda
     !chain();
   }).then(() => {
     let obj = items(table[2]);
-    obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: asyncGeneratorStep };
+    obj = { type: "CHANNEL_SETTINGS_PERMISSIONS_SAVE_SUCCESS", silent: closure_3 };
     obj.dispatch(obj);
   });
 };

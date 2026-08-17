@@ -1,18 +1,16 @@
 // discord_app/modules/billing/actions/HandleConfirmPaymentRegistry.tsx
-import sendRequest from "sendRequest";
-import ME from "ME";
-import { PaymentSourceTypes } from "sum";
-import { _validatePaymentSourceBillingAddress } from "BillingSharedActionCreators.tsx";
+import _validatePaymentSourceBillingAddress from "_validatePaymentSourceBillingAddress" /* 4467 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ME from "ME" /* 676 */;
+import { PaymentSourceTypes } from "sum" /* 505 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ Endpoints: c4, REDIRECTED_PAYMENT_SOURCES: c5 } = ME);
 obj = { [PaymentSourceTypes.GIROPAY]: obj, [PaymentSourceTypes.SOFORT]: obj, [PaymentSourceTypes.PRZELEWY24]: obj1, [PaymentSourceTypes.BANCONTACT]: obj2, [PaymentSourceTypes.EPS]: obj3, [PaymentSourceTypes.IDEAL]: obj4 };
 obj = {
   confirmationType: "stripe_redirect_confirmation",
   constructStripeConfirmPaymentHandler(name) {
-    let obj = { name: name.paymentSource.billingAddress.name };
+    obj = { name: name.paymentSource.billingAddress.name };
     obj = { stripeConfirmPayment: name.stripe.confirmGiropayPayment, paymentMethod: { billing_details: obj } };
     return obj;
   }
@@ -21,7 +19,7 @@ obj = {
   confirmationType: "stripe_redirect_confirmation",
   constructStripeConfirmPaymentHandler(paymentSource) {
     paymentSource = paymentSource.paymentSource;
-    let obj = { country: paymentSource.billingAddress.country };
+    obj = { country: paymentSource.billingAddress.country };
     obj = { name: paymentSource.billingAddress.name, email: paymentSource.email };
     obj = { stripeConfirmPayment: paymentSource.stripe.confirmSofortPayment, paymentMethod: { sofort: obj, billing_details: obj } };
     return obj;
@@ -41,7 +39,7 @@ class PaymentConfirmationHandler {
 PaymentConfirmationHandler.prototype["performRedirect"] = function performRedirect(arg0) {
   window.open(arg0);
 };
-const result = require("sum").fileFinishedImporting("modules/billing/actions/HandleConfirmPaymentRegistry.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/actions/HandleConfirmPaymentRegistry.tsx");
 class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
   constructor(arg0, arg1) {
     if (null == global) {
@@ -65,13 +63,13 @@ class StripePaymentConfirmationHandler extends PaymentConfirmationHandler {
       tmp17 = closure_5;
       hasItem = closure_5.has(paymentSourceType);
       if (hasItem) {
-        tmp = defineProperty;
-        hasItem = paymentSourceType in defineProperty;
+        tmp = closure_6;
+        hasItem = paymentSourceType in closure_6;
       }
       if (hasItem) {
-        tmp6 = defineProperty;
-        tmp15.handlerRegistry = defineProperty[tmp15.paymentSourceType];
-      } else if (tmp15.paymentSourceType in Endpoints) {
+        tmp6 = closure_6;
+        tmp15.handlerRegistry = closure_6[tmp15.paymentSourceType];
+      } else if (tmp15.paymentSourceType in closure_7) {
         tmp15.handlerRegistry = tmp3[tmp15.paymentSourceType];
       } else {
         tmp4 = closure_0;
@@ -95,7 +93,7 @@ prototype["getStripe"] = function getStripe() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -114,13 +112,13 @@ prototype["getStripe"] = function getStripe() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp4;
-            if (null == outer1_0.stripe) {
-              let closure_0 = outer1_0;
+            closure_1 = tmp4;
+            if (null == closure_1_0.stripe) {
+              closure_0 = closure_1_0;
               dependencyMap = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_1(4472).getStripe();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_1(4472).getStripe();
               return obj1;
             }
           }
@@ -136,7 +134,7 @@ prototype["getStripe"] = function getStripe() {
           closure_0.stripe = arg1;
         }
         if (null == closure_0.stripe) {
-          let obj2 = outer1_0(4467);
+          let obj2 = closure_1_0(4467);
           throw obj2.dispatchConfirmationError("Stripe cannot be null on a redirect.");
         } else {
           c3 = 3;
@@ -155,69 +153,69 @@ prototype["getPaymentIntentInfo"] = function getPaymentIntentInfo() {
   const self = this;
   return callback(function*() {
     let body = tmp4;
-    const HTTP = outer1_0(table[5]).HTTP;
-    const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
-    obj1[0] = outer1_4.BILLING_STRIPE_PAYMENT_INTENTS(outer1_0.paymentId);
+    const HTTP = closure_1_0(table[5]).HTTP;
+    obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+    obj1[0] = closure_1_4.BILLING_STRIPE_PAYMENT_INTENTS(closure_1_0.paymentId);
     yield HTTP.get(obj1);
     body = arg1.body;
-    const obj = { clientSecret: null, paymentMethodId: null };
+    obj = { clientSecret: null, paymentMethodId: null };
     obj[0] = body.stripe_payment_intent_client_secret;
     obj[1] = body.stripe_payment_intent_payment_method_id;
     return obj;
   })();
 };
 prototype["getStripeRedirect"] = function getStripeRedirect(arg0) {
-  let dependencyMap;
-  let importAll;
-  let require;
   ({ clientSecret: require, state: importAll, paymentMethodId: dependencyMap } = arg0);
   const self = this;
-  return self(function*() {
-    let c1 = tmp2;
-    const outer1_0 = yield stripe.getStripe();
-    const handlerRegistry = stripe.handlerRegistry;
-    let obj3 = { stripe: null, paymentSource: null, paymentMethodId: null };
-    obj3[0] = outer1_0;
-    obj3[1] = stripe.paymentSource;
-    obj3[2] = outer1_2;
-    const outer1_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
-    outer1_2 = outer1_1.stripeConfirmPayment;
-    const obj4 = { payment_method: null, return_url: null };
-    obj4[0] = stripe;
-    let c0 = outer1_1;
-    const aPIBaseURL = outer1_0(outer1_2[5]).getAPIBaseURL();
-    if (outer1_1 == null) {
-      c0 = "";
-    }
-    obj4[1] = aPIBaseURL + c4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(stripe.paymentSourceType, c0, "success");
-    c4 = yield outer1_2(outer1_0, obj4, { handleActions: false });
-    const paymentIntent = c4.paymentIntent;
-    const error = c4.error;
-    if (null != error) {
-      obj3 = outer1_0(outer1_2[3]);
-      throw obj3.dispatchConfirmationError(outer1_6);
-    }
-    if (null == paymentIntent) {
-      const obj2 = outer1_0(outer1_2[3]);
-      throw obj2.dispatchConfirmationError("paymentIntent not available with successful api call");
-    }
-    const next_action = paymentIntent.next_action;
-    if (next_action != null) {
-      const redirect_to_url = next_action.redirect_to_url;
-      if (redirect_to_url != null) {
-        const url = redirect_to_url.url;
+  return self(() => {
+    let paymentMethod = 0;
+    c4 = 0;
+    return (function*() {
+      c1 = tmp2;
+      const callback = yield paymentMethod.getStripe();
+      const handlerRegistry = paymentMethod.handlerRegistry;
+      let obj3 = { stripe: null, paymentSource: null, paymentMethodId: null };
+      obj3[0] = callback;
+      obj3[1] = paymentMethod.paymentSource;
+      obj3[2] = stripeConfirmPayment;
+      closure_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
+      stripeConfirmPayment = closure_1.stripeConfirmPayment;
+      paymentMethod = closure_1.paymentMethod;
+      const obj4 = { payment_method: null, return_url: null };
+      obj4[0] = paymentMethod;
+      c0 = closure_1;
+      const aPIBaseURL = callback(stripeConfirmPayment[5]).getAPIBaseURL();
+      if (closure_1 == null) {
+        c0 = "";
       }
-    }
-    if (null == url) {
-      const obj1 = outer1_0(outer1_2[3]);
-      throw obj1.dispatchConfirmationError("confirm payment did not return a redirect url");
-    }
-    return paymentIntent.next_action.redirect_to_url.url;
+      obj4[1] = aPIBaseURL + c4.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(paymentMethod.paymentSourceType, c0, "success");
+      c4 = yield stripeConfirmPayment(callback, obj4, { handleActions: false });
+      const paymentIntent = c4.paymentIntent;
+      error = c4.error;
+      if (null != error) {
+        obj3 = callback(stripeConfirmPayment[3]);
+        throw obj3.dispatchConfirmationError(closure_1_6);
+      }
+      if (null == paymentIntent) {
+        const obj2 = callback(stripeConfirmPayment[3]);
+        throw obj2.dispatchConfirmationError("paymentIntent not available with successful api call");
+      }
+      const next_action = paymentIntent.next_action;
+      if (next_action != null) {
+        const redirect_to_url = next_action.redirect_to_url;
+        if (redirect_to_url != null) {
+          const url = redirect_to_url.url;
+        }
+      }
+      if (null == url) {
+        obj1 = callback(stripeConfirmPayment[3]);
+        throw obj1.dispatchConfirmationError("confirm payment did not return a redirect url");
+      }
+      return paymentIntent.next_action.redirect_to_url.url;
+    })();
   })();
 };
 prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentSource(arg0) {
-  let importAll;
-  let require;
   ({ clientSecret: require, paymentMethodId: importAll } = arg0);
   const self = this;
   return callback(function*() {
@@ -228,7 +226,7 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -247,14 +245,14 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
+            closure_1 = tmp5;
+            closure_0 = tmp2;
             closure_0 = undefined;
             closure_1 = undefined;
-            let obj4 = outer1_0(c2[3]);
+            let obj4 = closure_1_0(c2[3]);
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = obj4.popupBridgeState(c2.paymentSourceType);
             return obj1;
           }
@@ -301,37 +299,41 @@ prototype["confirmRedirectedPaymentSource"] = function confirmRedirectedPaymentS
   })();
 };
 prototype["confirmDirectPaymentSource"] = function confirmDirectPaymentSource(arg0) {
-  let importAll;
-  let require;
   ({ clientSecret: require, paymentMethodId: importAll } = arg0);
   const self = this;
-  return callback(function*() {
-    let c0 = tmp2;
-    const outer1_0 = yield stripe.getStripe();
-    const handlerRegistry = stripe.handlerRegistry;
-    let obj3 = { stripe: null, paymentSource: null, paymentMethodId: null };
-    obj3[0] = outer1_0;
-    obj3[1] = stripe.paymentSource;
-    obj3[2] = outer1_1;
-    outer1_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
-    const outer1_4 = outer1_1.pendingCustomerAction;
-    const obj4 = { payment_method: null };
-    obj4[0] = paymentMethod;
-    let closure_5 = yield stripe(outer1_0, obj4);
-    const paymentIntent = closure_5.paymentIntent;
-    const error = closure_5.error;
-    if (null != error) {
-      obj3 = outer1_0(stripe[3]);
-      throw obj3.dispatchConfirmationError(outer1_7);
-    }
-    if (null == paymentIntent) {
-      const obj2 = outer1_0(stripe[3]);
-      throw obj2.dispatchConfirmationError("paymentIntent not available with successful stripe call");
-    }
-    const obj = { pendingCustomerAction: null, customerActionCancelled: null };
-    obj[0] = c4;
-    obj[1] = "requires_action" === paymentIntent.status;
-    return obj;
+  return callback(() => {
+    let stripeConfirmPayment = 0;
+    let paymentMethod = 0;
+    return (function*() {
+      c0 = tmp2;
+      const callback = yield stripeConfirmPayment.getStripe();
+      const handlerRegistry = stripeConfirmPayment.handlerRegistry;
+      let obj3 = { stripe: null, paymentSource: null, paymentMethodId: null };
+      obj3[0] = callback;
+      obj3[1] = stripeConfirmPayment.paymentSource;
+      obj3[2] = closure_1;
+      closure_1 = handlerRegistry.constructStripeConfirmPaymentHandler(obj3);
+      stripeConfirmPayment = closure_1.stripeConfirmPayment;
+      paymentMethod = closure_1.paymentMethod;
+      pendingCustomerAction = closure_1.pendingCustomerAction;
+      const obj4 = { payment_method: null };
+      obj4[0] = paymentMethod;
+      closure_5 = yield stripeConfirmPayment(callback, obj4);
+      const paymentIntent = closure_5.paymentIntent;
+      error = closure_5.error;
+      if (null != error) {
+        obj3 = callback(stripeConfirmPayment[3]);
+        throw obj3.dispatchConfirmationError(closure_1_7);
+      }
+      if (null == paymentIntent) {
+        const obj2 = callback(stripeConfirmPayment[3]);
+        throw obj2.dispatchConfirmationError("paymentIntent not available with successful stripe call");
+      }
+      obj = { pendingCustomerAction: null, customerActionCancelled: null };
+      obj[0] = c4;
+      obj[1] = "requires_action" === paymentIntent.status;
+      return obj;
+    })();
   })();
 };
 prototype["confirmPayment"] = function confirmPayment() {
@@ -344,7 +346,7 @@ prototype["confirmPayment"] = function confirmPayment() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -364,15 +366,15 @@ prototype["confirmPayment"] = function confirmPayment() {
             return obj;
           } else {
             let clientSecret = tmp5;
-            let closure_0 = tmp2;
+            closure_0 = tmp2;
             closure_0 = undefined;
             clientSecret = undefined;
             paymentMethodId = undefined;
             c3 = undefined;
             paymentMethodId = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0.getPaymentIntentInfo();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0.getPaymentIntentInfo();
             return obj1;
           }
         } else if (1 === tmp5) {
@@ -398,7 +400,7 @@ prototype["confirmPayment"] = function confirmPayment() {
               obj4[0] = closure_0.confirmRedirectedPaymentSource(obj3);
               return obj4;
             } else {
-              const obj5 = { clientSecret: null, paymentMethodId: null };
+              obj5 = { clientSecret: null, paymentMethodId: null };
               obj5[0] = clientSecret;
               obj5[1] = paymentMethodId;
               paymentMethodId = 3;
@@ -479,7 +481,7 @@ prototype2["handleAdyenConfirmation"] = function handleAdyenConfirmation() {
   } else {
     if (set.has(self.paymentSource.type)) {
       self.performRedirect(adyen_redirect_url);
-      let obj = { redirectConfirmation: true, redirectURL: null };
+      obj = { redirectConfirmation: true, redirectURL: null };
       obj[1] = adyen_redirect_url;
     } else {
       obj = { redirectConfirmation: false, redirectURL: null };

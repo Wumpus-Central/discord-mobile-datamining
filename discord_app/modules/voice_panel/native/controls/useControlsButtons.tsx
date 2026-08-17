@@ -1,21 +1,19 @@
 // discord_app/modules/voice_panel/native/controls/useControlsButtons.tsx
-import VOICE_PANEL_DRAWER_MAX_WIDTH from "VOICE_PANEL_DRAWER_MAX_WIDTH";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import VoicePanelControlsModes from "VoicePanelControlsModes";
-import { InputModes } from "ME";
-import { jsx } from "set";
-import { ChatButton } from "buttons/VoicePanelChatButton.tsx";
-import { ConnectButton } from "buttons/VoicePanelConnectButton.tsx";
-import { DisconnectCancelButton } from "buttons/VoicePanelDisconnectCancelButton.tsx";
-import { VoicePanelDrawerToggleButton } from "buttons/VoicePanelDrawerToggleButton.tsx";
-import { PTTButton } from "buttons/VoicePanelMicButton.tsx";
-import { MobilePhoneShareIcon } from "buttons/VoicePanelScreenshareButton.tsx";
-import { SoundboardButton } from "buttons/VoicePanelSoundboardButton.tsx";
-import { VideoButtonRive } from "buttons/VoicePanelVideoButton.tsx";
+import PTTButton from "PTTButton" /* 16396 */;
+import ConnectButtonDefault from "ConnectButton" /* 16399 */;
+import ChatButtonDefault from "ChatButton" /* 16405 */;
+import DisconnectCancelButtonDefault from "DisconnectCancelButton" /* 16408 */;
+import VideoButtonRiveDefault from "VideoButtonRive" /* 16410 */;
+import SoundboardButtonDefault from "SoundboardButton" /* 16412 */;
+import MobilePhoneShareIconDefault from "MobilePhoneShareIcon" /* 16414 */;
+import VoicePanelDrawerToggleButtonDefault from "VoicePanelDrawerToggleButton" /* 16417 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "_detectH265HardwareDecode" /* 4497 */;
+import VoicePanelControlsModes from "VoicePanelControlsModes" /* 11438 */;
+import { InputModes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ CONTROLS_BUTTON_SIZE_LARGE: c5, CONTROLS_BUTTON_SIZE_NORMAL: closure_6 } = VoicePanelControlsModes);
 let closure_9 = {
   mic(arg0, arg1) {
@@ -32,49 +30,49 @@ let closure_9 = {
   },
   connect(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(ConnectButton, {}, arg0);
+    return jsx(ConnectButtonDefault, {}, arg0);
   },
   chat(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(ChatButton, {}, arg0);
+    return jsx(ChatButtonDefault, {}, arg0);
   },
   disconnectCancel(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(DisconnectCancelButton, {}, arg0);
+    return jsx(DisconnectCancelButtonDefault, {}, arg0);
   },
   video(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VideoButtonRive, {}, arg0);
+    return jsx(VideoButtonRiveDefault, {}, arg0);
   },
   soundboard(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(SoundboardButton, {}, arg0);
+    return jsx(SoundboardButtonDefault, {}, arg0);
   },
   screenshare(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(MobilePhoneShareIcon, {}, arg0);
+    return jsx(MobilePhoneShareIconDefault, {}, arg0);
   },
   drawerToggle(arg0, arg1) {
     const merged = Object.assign(arg1);
-    return jsx(VoicePanelDrawerToggleButton, {}, arg0);
+    return jsx(VoicePanelDrawerToggleButtonDefault, {}, arg0);
   }
 };
 let closure_10 = { code: "function useControlsButtonsTsx1(){const{getControlsDefaultWidth,windowDimensions,safeArea}=this.__closure;return getControlsDefaultWidth(windowDimensions.get().width,safeArea.get().left,safeArea.get().right);}" };
-const result = require("VoicePanelControlsModes").fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
   const context = treatment.useContext(safeArea(11439));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
   const tmp2 = safeArea(16256)(context.channelId);
-  const dependencyMap = tmp2;
+  dependencyMap = tmp2;
   let obj = safeArea(16418);
   treatment = obj.useConfig({ location: "VoicePanelControlButtons" }).treatment;
   let items = [stateFromStores];
   stateFromStores = windowDimensions(589).useStateFromStores(items, () => stateFromStores.getMode() === constants.PUSH_TO_TALK);
   let obj2 = windowDimensions(589);
   const fn = function o() {
-    return windowDimensions(tmp2[19]).getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
+    return windowDimensions(table[19]).getControlsDefaultWidth(windowDimensions.get().width, safeArea.get().left, safeArea.get().right);
   };
   obj = { getControlsDefaultWidth: windowDimensions(11447).getControlsDefaultWidth, windowDimensions, safeArea };
   fn.__closure = obj;
@@ -82,11 +80,11 @@ export default function useControlsButtons() {
   fn.__initData = closure_10;
   const derivedValue = windowDimensions(4115).useDerivedValue(fn);
   const tmp5 = safeArea(8995)(derivedValue);
-  let closure_5 = tmp5;
+  closure_5 = tmp5;
   const items1 = [tmp2, stateFromStores, tmp5, treatment];
   return treatment.useMemo(() => {
-    let c0 = false;
-    let c1 = 0;
+    c0 = false;
+    c1 = 0;
     const mapped = (function getButtons(closure_2, stateFromStores, treatment) {
       const items = [];
       const push = items.push;
@@ -100,7 +98,7 @@ export default function useControlsButtons() {
           items.push(obj);
         }
         if (treatment === callback(16418).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
-          const obj1 = { type: "icon-normal", key: "connected-screenshare", render: null };
+          obj1 = { type: "icon-normal", key: "connected-screenshare", render: null };
           obj1[2] = tmp6.screenshare;
           items.push(obj1);
         } else {
@@ -145,12 +143,12 @@ export default function useControlsButtons() {
       }
     })(closure_2, stateFromStores, treatment).map((type) => {
       if ("label" === type.type) {
-        let c0 = true;
+        c0 = true;
       }
-      let tmp = outer1_6;
+      let tmp = closure_1_6;
       if ("icon-large" === type.type) {
         closure_1 = closure_1 + 1;
-        tmp = outer1_5;
+        tmp = closure_1_5;
       }
       const obj = {};
       const merged = Object.assign(type);
@@ -166,7 +164,7 @@ export default function useControlsButtons() {
     });
     let num = 16;
     if (!c0) {
-      num = (closure_5 - c1 * closure_5 - (mapped.length - c1) * outer1_6 - 32) / (mapped.length - 1);
+      num = (closure_5 - c1 * closure_5 - (mapped.length - c1) * closure_1_6 - 32) / (mapped.length - 1);
     }
     let num4 = 16;
     const iter = mapped[Symbol.iterator]();
@@ -176,9 +174,9 @@ export default function useControlsButtons() {
       let width = nextResult.width;
       let tmp8 = width;
       if (-1 === width) {
-        let tmp9 = outer1_6;
+        let tmp9 = closure_1_6;
         let tmp10 = closure_5;
-        let diff = closure_5 - (32 + (mapped.length - 1) * outer1_6 + (mapped.length - 1) * num);
+        let diff = closure_5 - (32 + (mapped.length - 1) * closure_1_6 + (mapped.length - 1) * num);
         tmp8 = diff;
         let tmp12 = nextResult;
         tmp7.width = diff;

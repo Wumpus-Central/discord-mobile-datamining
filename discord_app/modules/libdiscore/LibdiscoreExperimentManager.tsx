@@ -1,11 +1,11 @@
 // discord_app/modules/libdiscore/LibdiscoreExperimentManager.tsx
-import initialize from "initialize";
-import "initialize";
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
-import { shallowEqual } from "../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { items } from "libdiscoreExperiments.tsx";
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+import items2 from "items" /* 1914 */;
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "initialize" /* 1212 */;
 
-const require = arg1;
+require = arg1;
 function experimentStoreUpdateHandler() {
   let obj = isBlockedDomain;
   if (obj.isLibdiscoreInitialized()) {
@@ -18,7 +18,7 @@ function experimentStoreUpdateHandler() {
       }
       let tmp7 = null != obj;
       if (tmp7) {
-        tmp7 = shallowEqual(obj, obj);
+        tmp7 = shallowEqualDefault(obj, obj);
       }
       if (!tmp7) {
         const experimentCacher = isBlockedDomain.getExperimentCacher();
@@ -31,18 +31,19 @@ function experimentStoreUpdateHandler() {
   }
 }
 let c4 = null;
+initializeDefault;
 class LibdiscoreExperimentManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     applyArgumentsResult.actions = {};
     map = new Map();
-    applyArgumentsResult.stores = map.set(experimentStoreUpdateHandler, experimentStoreUpdateHandler);
+    applyArgumentsResult.stores = map.set(closure_3, experimentStoreUpdateHandler);
     return applyArgumentsResult;
   }
 }
 const prototype = LibdiscoreExperimentManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const prop = items.ALL_LIBDISCORE_EXPERIMENTS;
+  const prop = items2.ALL_LIBDISCORE_EXPERIMENTS;
   const item = prop.forEach((id) => {
     let obj = callback(table[4]);
     obj = { kind: "user", name: id.id, defaultConfig: { treatmentId: -1 }, variations: null };
@@ -59,6 +60,6 @@ prototype["_terminate"] = function _terminate() {
 
 };
 const libdiscoreExperimentManager = new LibdiscoreExperimentManager();
-const result = require("items").fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
+const result = require("set").fileFinishedImporting("modules/libdiscore/LibdiscoreExperimentManager.tsx");
 
 export default libdiscoreExperimentManager;

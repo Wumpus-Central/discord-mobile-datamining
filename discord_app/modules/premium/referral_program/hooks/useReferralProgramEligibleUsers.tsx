@@ -1,32 +1,28 @@
 // discord_app/modules/premium/referral_program/hooks/useReferralProgramEligibleUsers.tsx
-import 00038__ from "../../../../../_runtime/metro/00038__.js";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import emitChanges from "emitChanges";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "emitChanges" /* 7423 */;
 
 const require = arg1;
-let result = require("noop").fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramEligibleUsers.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useReferralProgramEligibleUsers.tsx");
 
 export const useReferralProgramEligibleUsers = function useReferralProgramEligibleUsers(searchQuery) {
-  let c5;
-  let c6;
-  let importDefault;
-  let limit;
   searchQuery = searchQuery.searchQuery;
   ({ selectedUsers: importDefault, limit } = searchQuery);
-  let module_38;
+  closure_3 = undefined;
   let stateFromStores;
   let React;
   c6 = undefined;
-  let closure_7;
+  closure_7 = undefined;
   let first;
-  let closure_9;
+  closure_9 = undefined;
   let first1;
-  let closure_11;
+  closure_11 = undefined;
   let first2;
-  let closure_13;
+  closure_13 = undefined;
   let obj;
-  let closure_18;
+  closure_18 = undefined;
   function _getLocalReferrals() {
     const self = this;
     const tmp = callback(function*() {
@@ -37,7 +33,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -59,12 +55,12 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
               obj[0] = arg1;
               return obj;
             } else {
-              let module_38 = tmp;
-              let dependencyMap = tmp2;
-              let closure_0;
-              let closure_1;
+              closure_3 = tmp;
+              dependencyMap = tmp2;
+              closure_0 = undefined;
+              closure_1 = undefined;
               dependencyMap = undefined;
-              module_38 = undefined;
+              closure_3 = undefined;
               let id;
               let _Map = Map;
               let tmp40 = new.target;
@@ -72,56 +68,56 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
               let map = new Map();
               let tmp43 = map;
               closure_0 = map;
-              let tmp44 = outer1_3;
-              closure_1 = outer1_3;
-              let tmp45 = outer1_3;
-              closure_1 = outer1_3;
-              closure_0 = outer1_3[Symbol.iterator]();
+              let tmp44 = closure_1_3;
+              closure_1 = closure_1_3;
+              let tmp45 = closure_1_3;
+              closure_1 = closure_1_3;
+              closure_0 = closure_1_3[Symbol.iterator]();
               let tmp15 = closure_1;
               let tmp16 = closure_0;
               if (closure_0 === undefined) {
                 let tmp27 = dependencyMap;
-                let tmp28 = module_38;
-                let tmp29 = outer1_13;
-                let tmp30 = outer1_0;
-                let tmp31 = outer1_13(outer1_0);
+                let tmp28 = closure_3;
+                let tmp29 = closure_1_13;
+                let tmp30 = closure_1_0;
+                let tmp31 = closure_1_13(closure_1_0);
                 let tmp32 = v0;
                 let _Array = Array;
-                let tmp33 = outer1_0;
-                let tmp34 = v0(Array.from(outer1_0.values()));
+                let tmp33 = closure_1_0;
+                let tmp34 = v0(Array.from(closure_1_0.values()));
                 let num5 = 3;
                 v0 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 let tmp46 = dependencyMap;
-                let tmp47 = module_38;
-                let c5 = 1;
+                let tmp47 = closure_3;
+                c5 = 1;
                 closure_1 = tmp17;
-                let tmp48 = outer1_4;
+                let tmp48 = closure_1_4;
                 let tmp49 = closure_1;
-                dependencyMap = outer1_4(closure_1, 2);
+                dependencyMap = closure_1_4(closure_1, 2);
                 let tmp50 = dependencyMap;
-                module_38 = 5;
+                closure_3 = 5;
                 let tmp51 = dependencyMap;
-                let tmp52 = outer1_0;
-                let tmp53 = outer1_2;
-                if (32 === outer1_0(outer1_2[6]).ReferralOfferStatus.PENDING) {
+                let tmp52 = closure_1_0;
+                let tmp53 = closure_1_2;
+                if (32 === closure_1_0(closure_1_2[6]).ReferralOfferStatus.PENDING) {
                   let tmp18 = dependencyMap;
-                  let tmp19 = module_38;
+                  let tmp19 = closure_3;
                   let tmp20 = set;
-                  let tmp21 = outer1_3;
-                  if (!set.has(outer1_3)) {
+                  let tmp21 = closure_1_3;
+                  if (!set.has(closure_1_3)) {
                     let tmp22 = dependencyMap;
-                    let tmp23 = module_38;
-                    let tmp24 = outer1_0;
-                    let tmp25 = outer1_2;
-                    let obj1 = outer1_0(outer1_2[7]);
-                    let tmp26 = outer1_3;
+                    let tmp23 = closure_3;
+                    let tmp24 = closure_1_0;
+                    let tmp25 = closure_1_2;
+                    obj1 = closure_1_0(closure_1_2[7]);
+                    let tmp26 = closure_1_3;
                     c6 = 2;
                     let num4 = 1;
                     v0 = 1;
                     obj1 = { value: null, done: false };
-                    obj1[0] = obj1.getUser(outer1_3);
+                    obj1[0] = obj1.getUser(closure_1_3);
                     return obj1;
                   }
                 }
@@ -159,7 +155,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         }
       }
     });
-    const _getLocalReferrals = tmp;
+    closure_14 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -181,11 +177,11 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
   function _getNextRows() {
     const self = this;
     const tmp = callback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c9 = 0;
-      let c10 = 0;
-      let c8 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c9 = 0;
+      c10 = 0;
+      c8 = 0;
       return (function*(arg0, arg1) {
         if (c10 === 2) {
           c10 = 3;
@@ -194,7 +190,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
           if (arg0 === 1) {
             throw arg1;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
+            obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           } else {
@@ -218,12 +214,12 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                 return obj;
               } else {
                 let callback2 = tmp;
-                let noop = tmp2;
+                closure_5 = tmp2;
                 let tmp67 = closure_1;
                 let items;
-                let module_38;
-                let dependencyMap;
-                noop = undefined;
+                closure_3 = undefined;
+                dependencyMap = undefined;
+                closure_5 = undefined;
                 callback2 = undefined;
                 let lib;
                 let tmp68 = c8;
@@ -231,69 +227,69 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                   let tmp41 = c10;
                   if (!c10) {
                     if (null != tmp66) {
-                      let tmp69 = outer1_4;
-                      if (0 !== outer1_4) {
+                      let tmp69 = closure_1_4;
+                      if (0 !== closure_1_4) {
                         c8 = 2;
                         let tmp70 = v0;
                         let tmp71 = v0(true);
                         items = 0;
-                        let tmp72 = outer1_12;
+                        let tmp72 = closure_1_12;
                         items = [];
                         let tmp73 = items;
                         let tmp74 = items;
-                        items = HermesBuiltin.arraySpread(outer1_12.values(), items);
-                        let tmp75 = outer1_3;
-                        dependencyMap = outer1_3;
-                        let tmp76 = outer1_3;
-                        dependencyMap = outer1_3;
-                        module_38 = outer1_3[Symbol.iterator]();
+                        items = HermesBuiltin.arraySpread(closure_1_12.values(), items);
+                        let tmp75 = closure_1_3;
+                        dependencyMap = closure_1_3;
+                        let tmp76 = closure_1_3;
+                        dependencyMap = closure_1_3;
+                        closure_3 = closure_1_3[Symbol.iterator]();
                         let tmp42 = dependencyMap;
-                        let tmp43 = module_38;
-                        if (module_38 === undefined) {
-                          let tmp54 = noop;
+                        let tmp43 = closure_3;
+                        if (closure_3 === undefined) {
+                          let tmp54 = closure_5;
                           let tmp55 = callback2;
                           let tmp56 = callback;
-                          let tmp57 = outer1_2;
-                          let obj5 = callback(outer1_2[6]);
+                          let tmp57 = closure_1_2;
+                          let obj5 = callback(closure_1_2[6]);
                           let tmp58 = callback;
                           let tmp59 = callback;
                           let tmp60 = closure_1;
                           v0 = 4;
                           let num7 = 1;
                           c10 = 1;
-                          let obj1 = { value: null, done: false };
+                          obj1 = { value: null, done: false };
                           obj1[0] = obj5.fetchReferralEligibleUsers(callback, callback, closure_1);
                           return obj1;
                         } else {
-                          let tmp77 = noop;
+                          let tmp77 = closure_5;
                           let tmp78 = callback2;
                           c8 = 3;
-                          module_38 = tmp44;
-                          let tmp79 = outer1_4;
-                          let tmp80 = module_38;
-                          dependencyMap = outer1_4(module_38, 2);
+                          closure_3 = tmp44;
+                          let tmp79 = closure_1_4;
+                          let tmp80 = closure_3;
+                          dependencyMap = closure_1_4(closure_3, 2);
                           let tmp81 = dependencyMap;
-                          noop = 5;
+                          closure_5 = 5;
                           let tmp82 = dependencyMap;
                           let tmp83 = callback;
-                          let tmp84 = outer1_2;
-                          if (32 === callback(outer1_2[6]).ReferralOfferStatus.PENDING) {
-                            let tmp45 = noop;
+                          let tmp84 = closure_1_2;
+                          if (32 === callback(closure_1_2[6]).ReferralOfferStatus.PENDING) {
+                            let tmp45 = closure_5;
                             let tmp46 = callback2;
                             let tmp47 = set;
-                            let tmp48 = outer1_5;
-                            if (!set.has(outer1_5)) {
-                              let tmp49 = noop;
+                            let tmp48 = closure_1_5;
+                            if (!set.has(closure_1_5)) {
+                              let tmp49 = closure_5;
                               let tmp50 = callback2;
                               let tmp51 = callback;
-                              let tmp52 = outer1_2;
-                              let obj2 = callback(outer1_2[7]);
-                              let tmp53 = outer1_5;
+                              let tmp52 = closure_1_2;
+                              let obj2 = callback(closure_1_2[7]);
+                              let tmp53 = closure_1_5;
                               v0 = 5;
                               let num6 = 1;
                               c10 = 1;
                               obj2 = { value: null, done: false };
-                              obj2[0] = obj2.getUser(outer1_5);
+                              obj2[0] = obj2.getUser(closure_1_5);
                               return obj2;
                             }
                           }
@@ -317,8 +313,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                 let tmp26 = lib;
                 let tmp27 = lib;
                 c8 = 2;
-                let tmp28 = module_38;
-                module_38.return();
+                let tmp28 = closure_3;
+                closure_3.return();
                 throw lib;
               } else if (4 === tmp5) {
                 if (arg0 === 1) {
@@ -336,7 +332,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                   obj3[0] = arg1;
                   return obj3;
                 } else {
-                  let tmp14 = noop;
+                  let tmp14 = closure_5;
                   let tmp15 = callback2;
                   lib = arg1;
                   let tmp16 = lib;
@@ -376,8 +372,8 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                 throw arg1;
               } else if (arg0 === 2) {
                 c8 = 2;
-                let tmp10 = module_38;
-                module_38.return();
+                let tmp10 = closure_3;
+                closure_3.return();
                 c8 = 0;
                 let tmp11 = callback2;
                 let tmp12 = v0;
@@ -388,7 +384,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                 obj[0] = arg1;
                 return obj;
               } else {
-                let tmp6 = noop;
+                let tmp6 = closure_5;
                 callback2 = arg1;
                 let tmp7 = items;
                 let tmp8 = callback2;
@@ -410,7 +406,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
         }
       })();
     });
-    const _getNextRows = tmp;
+    closure_16 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -421,7 +417,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
   }
   obj = searchQuery(limit[4]);
   let items = [c6];
-  module_38 = obj.useStateFromStores(items, () => _undefined.getRecipientStatus());
+  closure_3 = obj.useStateFromStores(items, () => _undefined.getRecipientStatus());
   let items1 = [c6];
   stateFromStores = searchQuery(limit[4]).useStateFromStores(items1, () => _undefined.getReferralsRemaining());
   let obj2 = searchQuery(limit[4]);

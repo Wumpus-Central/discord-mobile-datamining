@@ -1,18 +1,19 @@
 // discord_app/modules/markup/MarkupListRule.tsx
-import closure_10 from "t";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import _modDef38 from "module_38" /* 38 */;
+import tDefault from "t" /* 4092 */;
+import closure_10 from "module_0" /* 0 */;
 
 const re2 = /\n{2,}$/;
 const re3 = /(?:^|\n)( *)$/;
 let regExp = new RegExp("^" + "(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +".replace("%INDENT_CAPTURE_PATTERN%", " *"));
 const re5 = / *\n$/;
 let regExp1 = new RegExp("^( *)((?:[*-]|\\d+\\.)) [\\s\\S]+?(?:\\n(?! )(?!\\1(?:[*-]|\\d+\\.) )|$)");
-const regExp2 = new RegExp("^\\n" + require("module_38"));
+const regExp2 = new RegExp("^\\n" + require("module_1"));
 const re8 = /^\n/;
 const re9 = /\n *$/;
 const re11 = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/;
 let obj = {};
-let merged = Object.assign(require("t").defaultRules.list);
+let merged = Object.assign(tDefault.defaultRules.list);
 obj.requiredFirstCharacters = "\n *-0123456789".split("");
 obj.match = function match(str, allowList) {
   if (allowList.allowList) {
@@ -51,8 +52,8 @@ obj.match = function match(str, allowList) {
   }
 };
 obj.parse = function parse(arg0, arg1, arg2) {
-  const importDefault = arg1;
-  const dependencyMap = arg2;
+  importDefault = arg1;
+  dependencyMap = arg2;
   let bound;
   if (arg0[2].length > 1) {
     const _Math = Math;
@@ -70,10 +71,10 @@ obj.parse = function parse(arg0, arg1, arg2) {
   if (null != match) {
     num3 = match[1].length;
   }
-  const regExp = new RegExp("(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%(?:[*-]|\\d+\\.) )[^\\n]*)*(\n|$)".replaceAll("%INDENT_CAPTURE_PATTERN%", " {" + num3 + "," + num3 + 1 + "}"), "gm");
+  regExp = new RegExp("(%INDENT_CAPTURE_PATTERN%)((?:[*-]|\\d+\\.)) +[^\\n]*(?:\\n(?!%INDENT_CAPTURE_PATTERN%(?:[*-]|\\d+\\.) )[^\\n]*)*(\n|$)".replaceAll("%INDENT_CAPTURE_PATTERN%", " {" + num3 + "," + num3 + 1 + "}"), "gm");
   regExp1 = new RegExp("^ {1," + num2 + "}", "gm");
   const match1 = str3.match(regExp);
-  00038__(null != match1, "markup list items can not be parsed.");
+  _modDef38(null != match1, "markup list items can not be parsed.");
   regex2 = false;
   let str = arg0[0];
   const str2 = arg0[0].replace(regex3, "");
@@ -81,16 +82,14 @@ obj.parse = function parse(arg0, arg1, arg2) {
     ordered: arg0[2].length > 1,
     start: bound,
     items: match1.map((str) => {
-      let _list;
-      let inline;
       const replaced = str.replace(c4, "").replace(regExp1, "");
       const diff = match1.length - 1;
       let tmp2 = -1 !== replaced.indexOf("\n\n");
       if (!tmp2) {
-        tmp2 = arg1 === diff && c4;
-        const tmp4 = arg1 === diff && c4;
+        tmp2 = arg1 === diff && closure_4;
+        const tmp4 = arg1 === diff && closure_4;
       }
-      c4 = tmp2;
+      closure_4 = tmp2;
       _listLevel = _listLevel._listLevel;
       _listLevel._list = true;
       let num = _listLevel;
@@ -101,10 +100,10 @@ obj.parse = function parse(arg0, arg1, arg2) {
       _listLevel._listLevel = num + 1;
       if (tmp2) {
         tmp5.inline = false;
-        let replaced1 = replaced.replace(outer1_5, "\n\n");
+        let replaced1 = replaced.replace(closure_1_5, "\n\n");
       } else {
         tmp5.inline = true;
-        replaced1 = replaced.replace(outer1_5, "");
+        replaced1 = replaced.replace(closure_1_5, "");
       }
       const obj = {};
       const merged = Object.assign(tmp5);

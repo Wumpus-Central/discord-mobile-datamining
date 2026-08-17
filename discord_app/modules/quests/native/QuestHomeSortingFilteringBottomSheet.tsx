@@ -1,28 +1,24 @@
 // discord_app/modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import context from "context";
-import { View } from "BottomSheetModal";
-import { QuestHomeSortMethods } from "QuestsExperimentLocations";
-import jsxProd from "TableRowGroupTitle";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../components_native/common/SafeAreaView.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { ButtonGroup } from "../../../design/components/ButtonGroup/native/ButtonGroup.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import ButtonGroup from "ButtonGroup" /* 6687 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { QuestHomeSortMethods } from "QuestsExperimentLocations" /* 6716 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function FilterFooter(inline) {
-  let onConfirm;
-  let onLayout;
-  let onReset;
   let flag = inline.inline;
   ({ onConfirm, onReset, onLayout } = inline);
   if (flag === undefined) {
     flag = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   if (flag) {
     let footerInline = tmp.footerInline;
   } else {
@@ -32,7 +28,7 @@ function FilterFooter(inline) {
   let obj = { style: footerInline, onLayout, children: null };
   obj = { bottom: true, children: null };
   obj = { direction: "vertical", style: tmp.footerButtonGroup, children: null };
-  const obj1 = { size: "lg", grow: true, text: null, onPress: null };
+  obj1 = { size: "lg", grow: true, text: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj1[2] = intl.string(getSystemLocale.t.i4jeWR);
   obj1[3] = onConfirm;
@@ -47,23 +43,21 @@ function FilterFooter(inline) {
   obj[2] = closure_7(SafeAreaPaddingView.SafeAreaPaddingView, obj);
   return closure_7(View, obj);
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { content: null, bodyContainer: null, footerInline: null, footer: null, footerButtonGroup: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, minHeight: 0 };
-createCacheKey[2] = { paddingTop: require("Themes").space.PX_16 };
-let obj1 = { paddingTop: require("Themes").space.PX_16 };
-createCacheKey[3] = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_16 };
+let obj1 = { paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[4] = { paddingBottom: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = [];
-let obj2 = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
+let obj2 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/quests/native/QuestHomeSortingFilteringBottomSheet.tsx");
 
 export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange) {
-  let initialFilters;
-  let initialSortMethod;
   onSortMethodChange = onSortMethodChange.onSortMethodChange;
   const onFiltersChange = onSortMethodChange.onFiltersChange;
   ({ initialSortMethod, initialFilters } = onSortMethodChange);
@@ -74,17 +68,17 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
   callback = tmp7;
   const tmp8 = callback(first1.useState(initialFilters), 2);
   first1 = tmp8[0];
-  let closure_5 = tmp8[1];
+  closure_5 = tmp8[1];
   const tmp10 = callback(first1.useState(0), 2);
-  let closure_6 = tmp10[1];
+  closure_6 = tmp10[1];
   const ref = first1.useRef(null);
   callback = first1.useCallback((nativeEvent) => {
     lib(nativeEvent.nativeEvent.layout.height);
   }, []);
-  let closure_8 = first1.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    callback((arr) => {
+  closure_8 = first1.useCallback((arg0, arg1) => {
+    closure_0 = arg0;
+    closure_1 = arg1;
+    callback2((arr) => {
       if (closure_1) {
         const items = [];
         items[HermesBuiltin.arraySpread(arr, 0)] = closure_0;
@@ -96,8 +90,8 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
     });
   }, []);
   const callback1 = first1.useCallback(() => {
-    tmp7(lib.SUGGESTED);
-    callback(outer1_10);
+    callback(lib.SUGGESTED);
+    callback2(closure_1_10);
     const current = ref.current;
     if (current != null) {
       current.setValue(lib.SUGGESTED);
@@ -112,7 +106,7 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
     onFiltersChange(first1);
     onFiltersChange(first[13]).hideActionSheet("QuestHomeSortingFilteringBottomSheet");
   }, items);
-  let obj1 = onSortMethodChange(first[14]);
+  obj1 = onSortMethodChange(first[14]);
   const questHomeSortOptions = obj1.useQuestHomeSortOptions();
   let obj2 = onSortMethodChange(first[14]);
   const questHomeFilterOptions = obj2.useQuestHomeFilterOptions();
@@ -138,9 +132,8 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
   }
   const obj3 = { contentContainerStyle: tmp19, style: items1, children: null };
   items1 = [, ];
-  ({ content: arr4[0], bodyContainer: arr4[1] } = createCacheKey());
-  const obj4 = { spacing: null, children: null };
-  obj4[0] = onFiltersChange(first[6]).space.PX_32;
+  ({ content: arr4[0], bodyContainer: arr4[1] } = callback3());
+  const obj4 = { spacing: onFiltersChange(first[6]).space.PX_32, children: null };
   const obj5 = { groupRef: ref, hasIcons: false, defaultValue: first, onChange: tmp5[1], title: null, children: null };
   const intl2 = tmp2(tmp3[10]).intl;
   obj5[4] = intl2.string(onSortMethodChange(first[10]).t.tZXJIS);
@@ -148,19 +141,22 @@ export default function QuestHomeSortingFilteringBottomSheet(onSortMethodChange)
   const items2 = [
     ref(onSortMethodChange(first[19]).TableRadioGroup, obj5),
     questHomeFilterOptions.map((heading) => {
-      let obj = { title: heading.heading, hasIcons: false, children: null };
       const options = heading.options;
-      obj[2] = options.map((arg0, arg1) => {
-        let closure_0 = arg0;
-        const obj = { label: null, onPress: null, checked: null };
-        obj[0] = outer1_0(outer1_2[23]).getFilterTypeText(arg0.filter);
-        obj[1] = function onPress(arg0) {
-          return outer1_8(closure_0, arg0);
-        };
-        obj[2] = context.some((group) => group.group === group.group && group.filter === arr.filter);
-        return outer1_7(outer1_0(outer1_2[22]).TableCheckboxRow, obj, arg1);
-      });
-      return ref(onSortMethodChange(first[21]).TableRowGroup, obj, arg1);
+      return ref(onSortMethodChange(first[21]).TableRowGroup, {
+        title: heading.heading,
+        hasIcons: false,
+        children: options.map((arg0, arg1) => {
+          closure_0 = arg0;
+          const obj = {
+            label: closure_1_0(closure_1_2[23]).getFilterTypeText(arg0.filter),
+            onPress(arg0) {
+              return closure_1_8(closure_0, arg0);
+            },
+            checked: closure_4.some((group) => group.group === group.group && group.filter === arr.filter)
+          };
+          return closure_1_7(closure_1_0(closure_1_2[22]).TableCheckboxRow, obj, arg1);
+        })
+      }, arg1);
     })
   ];
   obj4[1] = items2;

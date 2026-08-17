@@ -1,44 +1,23 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardWrapper.tsx
-import "useIsSpamMessageRequest";
-import initialize from "initialize";
-import { isThread } from "createChannelRecord";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import recomputeGuild from "recomputeGuild";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { TextAreaCta } from "TextAreaCta";
-import ME from "ME";
-import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY";
-import { jsx } from "useChangelogRenderedAnalytics";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "initialize" /* 4022 */;
+import { isThread } from "createChannelRecord" /* 1395 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "recomputeGuild" /* 4977 */;
+import closure_8 from "markAllUserIdListsStale" /* 4030 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { TextAreaCta } from "TextAreaCta" /* 11149 */;
+import ME from "ME" /* 676 */;
+import { PHONE_VERIFICATION_MODAL_KEY as closure_14 } from "PHONE_VERIFICATION_MODAL_KEY" /* 8627 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let closure_12;
-let map1;
-let unpackModuleId;
 const require = arg1;
+noopAll;
 ({ AnalyticEvents: unpackModuleId, ChannelTypes: closure_12, VerificationCriteria: map1 } = ME);
-let result = require("createChannelRecord").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardWrapper.tsx");
 
 export default function ChatInputGuardWrapper(channel) {
-  let accountDeadline;
-  let automodUserProfileQuarantined;
-  let canCreateThreads;
-  let canSendMessages;
-  let children;
-  let isReadonly;
-  let memberDeadline;
-  let missingVerificationRole;
-  let newAccount;
-  let newMember;
-  let notEmailVerified;
-  let notPhoneVerified;
-  let onJumpToPresent;
-  let requiredLinkedLobbyApplication;
-  let screenIndex;
-  let shouldRelaunchLinkedLobbyApplication;
-  let showLinkedLobbyApplicationLoadingIndicator;
-  let showMemberVerificationModal;
-  let user;
   channel = channel.channel;
   let guildId;
   let stateFromStores;
@@ -48,24 +27,24 @@ export default function ChatInputGuardWrapper(channel) {
   guildId = channel.getGuildId();
   const tmp3 = stateFromStores;
   let obj = channel(stateFromStores[12]);
-  const items = [createGuildRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items, () => channel(stateFromStores[13]).guildHasVerificationGate(outer1_6.getGuild(guildId)));
-  let obj1 = channel(stateFromStores[12]);
-  const items1 = [recomputeGuild];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_7.getCheck(guildId));
+  const items = [closure_6];
+  stateFromStores = obj.useStateFromStores(items, () => channel(stateFromStores[13]).guildHasVerificationGate(closure_1_6.getGuild(guildId)));
+  obj1 = channel(stateFromStores[12]);
+  const items1 = [closure_7];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_7.getCheck(guildId));
   notClaimed = stateFromStores1.notClaimed;
   verificationRole = stateFromStores1.verificationRole;
   ({ notPhoneVerified, notEmailVerified, newMember, newAccount, memberDeadline, accountDeadline, missingVerificationRole } = stateFromStores1);
   let obj2 = channel(stateFromStores[12]);
-  const items2 = [mergeGuildAvatar, trackCommunicationDisabled];
+  const items2 = [closure_9, closure_5];
   const items3 = [guildId, stateFromStores, notClaimed];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items2, () => {
-    const currentUser = outer1_9.getCurrentUser();
+    const currentUser = closure_1_9.getCurrentUser();
     let member = null;
     if (null != currentUser) {
       member = null;
       if (null != guildId) {
-        member = outer1_5.getMember(tmp3, currentUser.id);
+        member = closure_1_5.getMember(tmp3, currentUser.id);
       }
     }
     const obj = { user: currentUser, showMemberVerificationModal: null, communicationDisabledGuildMember: null, automodUserProfileQuarantined: null };
@@ -99,12 +78,12 @@ export default function ChatInputGuardWrapper(channel) {
   const tmp11 = tmp2Result.useIsMessageRequest(channel.id) && channel.isPrivate();
   const tmp12 = tmp2Result.useIsSpamMessageRequest(channel.id) && channel.isPrivate();
   const isForumPostResult = channel.isForumPost();
-  const items4 = [markAllUserIdListsStale];
+  const items4 = [closure_8];
   const items5 = [channel];
   const stateFromStores2 = channel(tmp3[12]).useStateFromStores(items4, () => {
     let isDMResult = channel.isDM();
     if (isDMResult) {
-      isDMResult = outer1_8.isBlocked(channel.getRecipientId());
+      isDMResult = closure_1_8.isBlocked(channel.getRecipientId());
     }
     return isDMResult;
   }, items5);
@@ -166,8 +145,8 @@ export default function ChatInputGuardWrapper(channel) {
             let obj = channel;
             if (channel.isDM()) {
               obj = { cta_type: null };
-              obj[0] = outer1_10.UNBLOCK;
-              guildId(stateFromStores[22]).trackWithMetadata(outer1_11.TEXT_AREA_CTA_CLICKED, obj);
+              obj[0] = closure_1_10.UNBLOCK;
+              guildId(stateFromStores[22]).trackWithMetadata(closure_1_11.TEXT_AREA_CTA_CLICKED, obj);
               const obj2 = guildId(stateFromStores[22]);
               guildId(stateFromStores[23]).unblockUser(obj.getRecipientId());
               const obj4 = guildId(stateFromStores[23]);

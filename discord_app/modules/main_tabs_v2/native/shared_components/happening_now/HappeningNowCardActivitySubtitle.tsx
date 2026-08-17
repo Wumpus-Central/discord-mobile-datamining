@@ -1,24 +1,26 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { ActivityTypes } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { _isStreaming } from "../../../../activities/utils/isStreaming.tsx";
-import { computeChannelName } from "../../../../channel/useChannelName.tsx";
-import { HAPPENING_NOW_CARD_MARGIN_RIGHT } from "HappeningNowCard.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import computeChannelNameDefault from "computeChannelName" /* 4984 */;
+import _isStreamingDefault from "_isStreaming" /* 8411 */;
+import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 8886 */;
+import HAPPENING_NOW_CARD_MARGIN_RIGHT from "HAPPENING_NOW_CARD_MARGIN_RIGHT" /* 14641 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { ActivityTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_7 = createCacheKey.createStyles({ cardDetails: { marginTop: 2, flexDirection: "row", alignItems: "center" } });
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardActivitySubtitle.tsx");
 
 export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubtitle(voiceState) {
   voiceState = voiceState.voiceState;
   let obj = voiceState(589);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(voiceState.channelId));
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(voiceState.channelId));
   obj = { style: callback().cardDetails, children: null };
   const tmp = callback();
   const tmp4 = importDefault;
@@ -26,9 +28,9 @@ export const HappeningNowVoiceCardSubtitle = function HappeningNowVoiceCardSubti
   if (null != stateFromStores) {
     obj = { channel: null };
     obj[0] = stateFromStores;
-    tmp8 = tmp4(8886)(obj);
+    tmp8 = getChannelA11yLabelDefault(obj);
   }
-  obj[1] = jsx(voiceState(14641).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelName(stateFromStores) });
+  obj[1] = jsx(voiceState(14641).HappeningNowCardSubtitle, { lineClamp: 1, accessibilityLabel: tmp8, children: computeChannelNameDefault(stateFromStores) });
   return <View style={callback().cardDetails}>{null}</View>;
 };
 export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCardSubtitle(activity) {
@@ -61,7 +63,7 @@ export const HappeningNowActivityCardSubtitle = function HappeningNowActivityCar
     }
     tmp3 = null;
     if (null != name) {
-      if (!_isStreaming(activity)) {
+      if (!_isStreamingDefault(activity)) {
         if (tmp4(7261)(activity)) {
           if (null != activity.details) {
             if (null != activity.state) {

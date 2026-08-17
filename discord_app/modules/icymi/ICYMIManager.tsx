@@ -1,26 +1,27 @@
 // discord_app/modules/icymi/ICYMIManager.tsx
-import "initialize";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { ICYMIActionCreators } from "ICYMIActionCreators.tsx";
-import { apexExperiment } from "ICYMIExperiment.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import initializeDefault from "initialize" /* 4720 */;
+import _modDef9057 from "module_9057" /* 9057 */;
+import apexExperiment from "apexExperiment" /* 9058 */;
 
-const require = arg1;
+require = arg1;
 let c3 = null;
+initializeDefault;
 class ICYMIManager extends tmp2 {
 }
 const prototype = ICYMIManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const subscription = dispatcher.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  const subscription = dispatcherDefault.subscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["_terminate"] = function _terminate() {
-  dispatcher.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
+  dispatcherDefault.unsubscribe("POST_CONNECTION_OPEN", this.handlePostConnectionOpen);
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   let obj = apexExperiment;
   if (obj.getICYMIEnabled("ICYMIManager")) {
     obj = { isInitialLoad: null };
     obj[0] = true;
-    const dehydrated = ICYMIActionCreators.fetchDehydrated(obj);
+    const dehydrated = _modDef9057.fetchDehydrated(obj);
     if (null != timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -59,10 +60,10 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
     const guildChannelScores = tmp2Result.getGuildChannelScores();
     tmp2Result = tmp2(9057);
     const recommendedGuilds = tmp2Result.getRecommendedGuilds();
-    const obj2 = ICYMIActionCreators;
+    const obj2 = _modDef9057;
   }
 };
 const iCYMIManager = new ICYMIManager();
-const result = require("initialize").fileFinishedImporting("modules/icymi/ICYMIManager.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/ICYMIManager.tsx");
 
 export default iCYMIManager;

@@ -1,16 +1,13 @@
 // discord_app/modules/guild_onboarding/native/ApplicationConnectionCard.tsx
-import noop from "noop";
-import addApplication from "addApplication";
-import { AnalyticEvents } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "addApplication" /* 4478 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("ME").fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_onboarding/native/ApplicationConnectionCard.tsx");
 
 export default function ApplicationConnectionCard(connection) {
-  let canStartAuthorization;
-  let fetched;
-  let hasAlreadyLinked;
   connection = connection.connection;
   const guildId = connection.guildId;
   const _location = connection.location;
@@ -59,8 +56,7 @@ export default function ApplicationConnectionCard(connection) {
   const tmp7 = guildId(_location[8])(stateFromStores);
   startAuthorization = tmp7.startAuthorization;
   ({ hasAlreadyLinked, canStartAuthorization, fetched } = tmp7);
-  obj = { game: stateFromStores, size: null };
-  obj[1] = connection(_location[9]).GameIconSizes.SMALL;
+  obj = { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL };
   const items3 = [startAuthorization, guildId, connection.application_id, _location, analyticsLocations];
   const obj2 = stateFromStores;
   const tmp4Result = guildId(_location[9]);
@@ -76,6 +72,6 @@ export default function ApplicationConnectionCard(connection) {
     obj = { analyticsLocations };
     startAuthorization(obj);
   }, items3);
-  obj = { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: null }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback };
-  return jsx(guildId(_location[12]), { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: null }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback });
+  obj = { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback };
+  return jsx(guildId(_location[12]), { displayName: name, description: connection.description, icon: jsx(guildId(_location[9]), { game: stateFromStores, size: connection(_location[9]).GameIconSizes.SMALL }), isLoading: !fetched, isConnected: hasAlreadyLinked, canConnect: canStartAuthorization, onConnect: callback });
 };

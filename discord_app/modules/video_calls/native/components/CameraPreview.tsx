@@ -1,71 +1,52 @@
 // discord_app/modules/video_calls/native/components/CameraPreview.tsx
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert";
-import useRevealProviderValue from "useRevealProviderValue";
-import get_ActivityIndicator from "initialize";
-import participantFromServer from "participantFromServer";
-import getParticipants from "getParticipants";
-import { useBestActiveChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight";
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import initialize from "initialize";
-import { useChannelCallStore } from "VoiceChatDrawerState";
-import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH";
-import { ApplicationStreamStates } from "ME";
-import ParticipantTypes from "ParticipantTypes";
-import jsxProd from "useIsActivityFocused";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "participantFromServer" /* 1390 */;
+import closure_8 from "getParticipants" /* 4773 */;
+import { useBestActiveChatInputContainerHeight as closure_9 } from "updateChatInputContainerHeight" /* 8682 */;
+import closure_10 from "reset" /* 4652 */;
+import closure_11 from "fetchFingerprint" /* 1218 */;
+import closure_12 from "initialize" /* 8683 */;
+import { useChannelCallStore } from "VoiceChatDrawerState" /* 8669 */;
+import BOX_MODE_ACTIONSHEET_WIDTH from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
+import { ApplicationStreamStates } from "ME" /* 676 */;
+import ParticipantTypes from "ParticipantTypes" /* 4544 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_19;
-let closure_20;
-let closure_21;
-let closure_22;
-let closure_23;
-let closure_6;
 const require = arg1;
 function CameraPreview(arg0) {
-  let c15;
-  let channel;
-  let left;
-  let nonSelfPipParticipant;
-  let participantScreenIsFocused;
-  let right;
-  let selfParticipant;
-  let tmp27;
   ({ channel, participantScreenIsFocused } = arg0);
   let ref = participantScreenIsFocused;
   let stateFromStores;
-  let dependencyMap;
+  dependencyMap = undefined;
   let reveal;
   let React;
-  let c5;
-  let c6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   let bottom;
   let top;
   let callback;
-  let c10;
+  let screenOrientation;
   let first;
-  let initialize;
+  closure_12 = undefined;
   let first1;
-  let closure_14;
+  closure_14 = undefined;
   c15 = undefined;
   ({ nonSelfPipParticipant, selfParticipant } = arg0);
-  let obj = ref(589);
-  const items = [initialize];
+  obj = ref(589);
+  const items = [closure_12];
   stateFromStores = obj.useStateFromStores(items, () => lib.isReactingToThermalState());
   const tmp6 = reveal(stateFromStores(8684)(), 2);
   dependencyMap = tmp7;
-  let obj1 = React;
+  obj1 = React;
   reveal = React.useContext(ref(8678).RevealContext).reveal;
   let tmp8 = stateFromStores(8693)();
   React = tmp8;
   let tmp9 = callback();
-  c5 = tmp9;
+  closure_5 = tmp9;
   const tmp10 = stateFromStores(8679)(channel.id);
-  c6 = tmp10;
+  closure_6 = tmp10;
   let obj2 = ref(8944);
   const isScreenLandscape = obj2.useIsScreenLandscape();
   const rect = stateFromStores(1629)();
@@ -76,7 +57,7 @@ function CameraPreview(arg0) {
   obj = { channelId: channel.id };
   let isViewingActivity = obj3.useIsViewingActivity(obj);
   let obj5 = ref(589);
-  const items1 = [initialize];
+  const items1 = [closure_12];
   const tmp13 = obj5.useStateFromStores(items1, () => lib.getVoiceCallOverlayLayoutStates())[constants.CAMERA_PREVIEW_PICTURE_IN_PICTURE];
   const OrientationType = ref(8671).OrientationType;
   const tmp14 = isScreenLandscape ? OrientationType.LANDSCAPE : OrientationType.PORTRAIT;
@@ -84,58 +65,57 @@ function CameraPreview(arg0) {
   const tmp15 = stateFromStores(6701)(tmp14);
   let tmp16 = tmp15;
   if (tmp15 == null) {
-    let screenOrientation;
+    screenOrientation = undefined;
     if (tmp13 != null) {
       screenOrientation = tmp13.screenOrientation;
     }
     tmp16 = screenOrientation;
   }
-  c10 = tmp16;
+  screenOrientation = tmp16;
   const items2 = [tmp14, tmp16, tmp10, tmp6[1]];
   const effect = obj1.useEffect(() => {
-    let tmp2 = null != c10;
+    let tmp2 = null != screenOrientation;
     if (tmp2) {
-      tmp2 = tmp !== c9;
+      tmp2 = tmp !== closure_9;
     }
     if (tmp2) {
-      tmp2 = c6;
+      tmp2 = closure_6;
     }
     if (tmp2) {
-      _undefined(ref(_undefined[27]).DEFAULT_PIP_POSITION);
+      dependencyMap(ref(8685).DEFAULT_PIP_POSITION);
     }
   }, items2);
   let tmp5Result = tmp5(obj1.useState(top + closure_16), 2);
   first = tmp5Result[0];
-  initialize = tmp5Result[1];
+  closure_12 = tmp5Result[1];
   tmp5Result = tmp5(obj1.useState(bottom + closure_16), 2);
   first1 = tmp5Result[0];
   closure_14 = tmp5Result[1];
   const items3 = [reveal, tmp9, participantScreenIsFocused, tmp8, top, bottom];
   const effect1 = obj1.useEffect(() => {
-    let sum = top + outer1_16;
-    let sum1 = bottom + outer1_16;
+    let sum = top + closure_1_16;
+    let sum1 = bottom + closure_1_16;
     if (ref) {
       if (reveal) {
-        sum = ref(_undefined[28]).NAV_BAR_HEIGHT + tmp + tmp2;
+        sum = ref(6370).NAV_BAR_HEIGHT + tmp + tmp2;
       }
       if (tmp9) {
-        sum1 = c4 + tmp4 + tmp2;
+        sum1 = closure_4 + tmp4 + tmp2;
       }
       let sum2 = sum1;
       let tmp8 = sum;
       tmp9 = reveal;
     } else {
-      sum2 = c5 + tmp4 + tmp2;
+      sum2 = closure_5 + tmp4 + tmp2;
       tmp8 = sum;
     }
     lib(tmp8);
     callback(sum2);
   }, items3);
   function ee() {
-    const obj = { marginTop: null, marginBottom: null };
-    obj[0] = ref(_undefined[29]).withTiming(first, outer1_25);
-    const obj2 = ref(_undefined[29]);
-    obj[1] = ref(_undefined[29]).withTiming(first1, outer1_25);
+    obj = { marginTop: ref(4664).withTiming(first, closure_1_25), marginBottom: null };
+    const obj2 = ref(4664);
+    obj[1] = ref(4664).withTiming(first1, closure_1_25);
     return obj;
   }
   obj = { withTiming: tmp(4664).withTiming, marginTopState: first, TIMING_CONFIG: obj, marginBottomState: first1 };
@@ -149,7 +129,7 @@ function CameraPreview(arg0) {
   if (constants2.HIDE_PIP === tmp27) {
     obj1 = { text: null, onClick: null };
     function handleHidePip() {
-      const result = ref(_undefined[30]).setPipEnabledWhileFocusedOnActivityOrStream(false);
+      const result = ref(12429).setPipEnabledWhileFocusedOnActivityOrStream(false);
     }
     const intl2 = tmp(1236).intl;
     obj1[0] = intl2.string(tmp(1236).t.L3I0Jr);
@@ -172,12 +152,12 @@ function CameraPreview(arg0) {
     obj3 = { gesture: null, children: null };
     obj3[0] = tmp29;
     const obj4 = { style: null };
-    obj4[0] = c5.absoluteFill;
-    obj3[1] = callback2(c6, obj4);
+    obj4[0] = closure_5.absoluteFill;
+    obj3[1] = callback2(closure_6, obj4);
     tmp32 = callback2(tmp(6377).GestureDetector, obj3);
   }
   const items7 = [tmp32, ];
-  obj5 = { style: c5.absoluteFill, pointerEvents: "box-none", children: null };
+  obj5 = { style: closure_5.absoluteFill, pointerEvents: "box-none", children: null };
   const obj6 = { style: items8, pointerEvents: "box-none", children: null };
   items8 = [{ flex: 1, marginLeft: left + c15, marginRight: right + c15 }, animatedStyle];
   const obj8 = { channel, preferredPosition: tmp6[0], onMove: tmp6[1], isInCallScreen: true, marginTop: first, marginBottom: first1, children: null };
@@ -191,10 +171,10 @@ function CameraPreview(arg0) {
   obj9[2] = callback2(stateFromStores(12433), { channel, selfParticipant, pipParticipant: nonSelfPipParticipant });
   obj9[3] = items6;
   obj9[4] = function onOpen() {
-    _undefined2(stateFromStores ? outer1_26.HANDLE_THERMAL_EVENT : outer1_26.HIDE_PIP);
+    _undefined(stateFromStores ? closure_1_26.HANDLE_THERMAL_EVENT : closure_1_26.HIDE_PIP);
   };
   obj9[5] = function onClose() {
-    _undefined2(null);
+    _undefined(null);
   };
   obj8[6] = callback2(tmp4Result, obj9);
   obj6[2] = callback2(tmp4Result, obj8);
@@ -204,7 +184,7 @@ function CameraPreview(arg0) {
   }
   const obj10 = { children: null };
   obj5[2] = callback2(stateFromStores(4115).View, obj6, str);
-  items7[1] = callback2(c6, obj5);
+  items7[1] = callback2(closure_6, obj5);
   obj10[0] = items7;
   return closure_23(closure_22, obj10);
 }
@@ -216,7 +196,7 @@ let closure_24 = { code: "function CameraPreviewTsx1(){const{closeFunc,runOnJS}=
 let obj = { duration: 250, easing: require("Button").STANDARD_EASING };
 let closure_26 = { HIDE_PIP: "HIDE_PIP", HANDLE_THERMAL_EVENT: "HANDLE_THERMAL_EVENT" };
 let closure_27 = { code: "function CameraPreviewTsx2(){const{withTiming,marginTopState,TIMING_CONFIG,marginBottomState}=this.__closure;return{marginTop:withTiming(marginTopState,TIMING_CONFIG),marginBottom:withTiming(marginBottomState,TIMING_CONFIG)};}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/video_calls/native/components/CameraPreview.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/CameraPreview.tsx");
 
 export default function CameraPreviewContainer(channel) {
   channel = channel.channel;
@@ -228,25 +208,26 @@ export default function CameraPreviewContainer(channel) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  let dependencyMap;
-  let c3;
+  dependencyMap = undefined;
+  closure_3 = undefined;
   let id;
   const tmp3 = flag(8674)(channel);
   dependencyMap = tmp3;
-  let obj = channel(589);
-  const items = [getParticipants, fetchFingerprint, reset];
+  obj = channel(589);
+  const items = [closure_8, closure_11, closure_10];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const id = outer1_11.getId();
-    const currentUserActiveStream = outer1_10.getCurrentUserActiveStream();
+    id = closure_1_11.getId();
+    const currentUserActiveStream = closure_1_10.getCurrentUserActiveStream();
     let tmp2 = null != currentUserActiveStream;
     if (tmp2) {
-      tmp2 = currentUserActiveStream.state === outer1_18.ACTIVE;
+      tmp2 = currentUserActiveStream.state === closure_1_18.ACTIVE;
     }
-    const streamParticipants = outer1_8.getStreamParticipants(id.id);
+    closure_1 = tmp2;
+    const streamParticipants = closure_1_8.getStreamParticipants(id.id);
     const found = streamParticipants.find((user) => user.user.id === closure_0 && closure_1);
-    if (null != _undefined) {
+    if (null != id2) {
       if (null != found) {
-        if (_undefined.id === found.id) {
+        if (id2.id === found.id) {
           let tmp6 = null;
         }
         return tmp6;
@@ -258,14 +239,14 @@ export default function CameraPreviewContainer(channel) {
     voiceChatDrawerState = voiceChatDrawerState.voiceChatDrawerState;
     return voiceChatDrawerState === constants.OPEN || voiceChatDrawerState === constants.OPENING;
   });
-  const items1 = [getParticipants, participantFromServer];
+  const items1 = [closure_8, closure_7];
   const stateFromStores1 = channel(589).useStateFromStores(items1, () => {
-    const currentEmbeddedActivity = outer1_7.getCurrentEmbeddedActivity();
+    const currentEmbeddedActivity = closure_1_7.getCurrentEmbeddedActivity();
     let found = null;
     if (null != currentEmbeddedActivity) {
-      const participants = outer1_8.getParticipants(currentEmbeddedActivity.id);
+      const participants = closure_1_8.getParticipants(currentEmbeddedActivity.id);
       found = participants.find((id) => {
-        let obj = currentEmbeddedActivity(outer1_2[37]);
+        obj = currentEmbeddedActivity(closure_1_2[37]);
         obj = { applicationId: currentEmbeddedActivity.applicationId, instanceId: currentEmbeddedActivity.compositeInstanceId };
         return id.id === obj.getEmbeddedActivityParticipantId(obj);
       });
@@ -287,7 +268,7 @@ export default function CameraPreviewContainer(channel) {
   if (tmp9) {
     tmp9 = !tmp7;
   }
-  c3 = tmp9;
+  closure_3 = tmp9;
   let tmp12 = null;
   if (!tmp9) {
     tmp12 = stateFromStores1;
@@ -298,21 +279,21 @@ export default function CameraPreviewContainer(channel) {
   obj = { channelId: channel.id };
   const isViewingActivity = tmp4Result.useIsViewingActivity(obj);
   const obj3 = channel(589);
-  const items2 = [getParticipants, fetchFingerprint];
+  const items2 = [closure_8, closure_11];
   const stateFromStores2 = channel(589).useStateFromStores(items2, () => {
-    const id = outer1_11.getId();
-    const participant = outer1_8.getParticipant(id.id, id);
+    id = closure_1_11.getId();
+    const participant = closure_1_8.getParticipant(id.id, id);
     let streamId;
     if (participant != null) {
       streamId = participant.streamId;
     }
     if (null == streamId) {
-      if (!c3) {
+      if (!closure_3) {
         return null;
       }
     }
     if (flag) {
-      let tmp6 = null != c2;
+      let tmp6 = null != closure_2;
       if (tmp6) {
         let id1;
         if (tmp5 != null) {
@@ -320,13 +301,13 @@ export default function CameraPreviewContainer(channel) {
         }
         tmp6 = id1 !== id;
       }
-      if (null == c2) {
+      if (null == closure_2) {
         if (!obj2.isGuildStageVoice()) {
-          const participants = outer1_8.getParticipants(obj2.id);
+          const participants = closure_1_8.getParticipants(obj2.id);
           let found = participants;
           if (participants.length <= 4) {
             found = participants.filter((user) => {
-              let tmp = outer1_20(user);
+              let tmp = closure_1_20(user);
               if (tmp) {
                 tmp = user.user.id === id;
               }
@@ -347,12 +328,12 @@ export default function CameraPreviewContainer(channel) {
     }
   });
   const tmp4Result1 = channel(589);
-  const items3 = [fetchFingerprint, getParticipants];
+  const items3 = [closure_11, closure_8];
   id = channel.id;
   const stateFromStores3 = channel(589).useStateFromStores(items3, () => {
-    const tmp2 = outer1_20(c2);
+    const tmp2 = closure_1_20(closure_2);
     let type;
-    if (c2 != null) {
+    if (closure_2 != null) {
       type = tmp.type;
     }
     if (tmp2) {
@@ -374,12 +355,12 @@ export default function CameraPreviewContainer(channel) {
       return tmp17;
     }
     if (tmp2) {
-      let id;
+      id = undefined;
       if (tmp != null) {
         id = tmp.user.id;
       }
-      if (id !== outer1_11.getId()) {
-        const participant = outer1_8.getParticipant(channel.id, tmp.user.id);
+      if (id !== closure_1_11.getId()) {
+        const participant = closure_1_8.getParticipant(channel.id, tmp.user.id);
         let localVideoDisabled;
         if (participant != null) {
           localVideoDisabled = participant.localVideoDisabled;
@@ -390,23 +371,23 @@ export default function CameraPreviewContainer(channel) {
         }
       }
     }
-    if (type === outer1_19.USER) {
-      const streamParticipants = outer1_8.getStreamParticipants(channel.id);
+    if (type === closure_1_19.USER) {
+      const streamParticipants = closure_1_8.getStreamParticipants(channel.id);
       found = streamParticipants.find((user) => user.user.id === user.user.id);
     }
   });
   const tmp4Result2 = channel(589);
-  const items4 = [getParticipants];
+  const items4 = [closure_8];
   const stateFromStores4 = channel(589).useStateFromStores(items4, () => {
     let tmp2 = null != id;
     if (tmp2) {
-      tmp2 = null != outer1_8.getSelectedParticipant(tmp);
+      tmp2 = null != closure_1_8.getSelectedParticipant(tmp);
     }
     return tmp2;
   });
   const tmp4Result3 = channel(589);
-  const items5 = [getParticipants];
-  const stateFromStores5 = channel(589).useStateFromStores(items5, () => outer1_8.getSelectedParticipant(channel.id));
+  const items5 = [closure_8];
+  const stateFromStores5 = channel(589).useStateFromStores(items5, () => closure_1_8.getSelectedParticipant(channel.id));
   const tmp19 = flag(8687)(channel.id);
   let tmp20 = null;
   if (null != tmp19) {
@@ -440,7 +421,7 @@ export default function CameraPreviewContainer(channel) {
     tmp22 = stateFromStores2;
   }
   const tmp4Result4 = channel(589);
-  const items6 = [initialize];
+  const items6 = [closure_12];
   const stateFromStores6 = channel(589).useStateFromStores(items6, () => pipEnabledWhileFocusedOnActivityOrStream.isPipEnabledWhileFocusedOnActivityOrStream());
   if (flag2) {
     flag2 = channel.isGuildStageVoice();

@@ -1,25 +1,24 @@
 // discord_app/modules/user_profile/native/UserProfileWidgetReportButton.tsx
-import "noop";
-import { Pressable } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { ContextMenu } from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
-import { FlagIcon } from "../../../design/components/Icon/native/redesign/generated/FlagIcon.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import FlagIcon from "FlagIcon" /* 9435 */;
+import ContextMenu from "ContextMenu" /* 9958 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_5 = { top: 8, bottom: 8, left: 8, right: 8 };
-const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileWidgetReportButton.tsx");
 
 export default function UserProfileWidgetReportButton(arg0) {
-  let importDefault;
-  let require;
   ({ userId: require, widget: importDefault } = arg0);
   let obj = { label: null, variant: "destructive", IconComponent: null, action: null };
   let intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.D4GvHE);
   obj[2] = FlagIcon.FlagIcon;
   obj[3] = function action() {
-    return outer1_0(outer1_2[5]).showReportModalForWidget(closure_0, closure_1);
+    return closure_1_0(closure_1_2[5]).showReportModalForWidget(closure_0, closure_1);
   };
   const items = [obj];
   obj = {
@@ -31,8 +30,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       obj.accessibilityRole = "button";
       const intl = callback(1236).intl;
       obj.accessibilityLabel = intl.string(callback(1236).t.xpSHSk);
-      obj = { size: "sm", color: null };
-      obj[1] = callback2(712).colors.TEXT_MUTED;
+      obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
       obj.children = callback3(callback(9415).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }
@@ -46,8 +44,7 @@ export default function UserProfileWidgetReportButton(arg0) {
       obj.accessibilityRole = "button";
       const intl = callback(1236).intl;
       obj.accessibilityLabel = intl.string(callback(1236).t.xpSHSk);
-      obj = { size: "sm", color: null };
-      obj[1] = callback2(712).colors.TEXT_MUTED;
+      obj = { size: "sm", color: callback2(712).colors.TEXT_MUTED };
       obj.children = callback3(callback(9415).MoreHorizontalIcon, obj);
       return callback3(closure_3, obj);
     }

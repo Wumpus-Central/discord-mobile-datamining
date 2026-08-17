@@ -1,16 +1,16 @@
 // discord_app/modules/app_database/modules/messages/KvMessage.tsx
-import _slicedToArray from "_slicedToArray";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "trackCommunicationDisabled" /* 1990 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
 
 let prototype;
 prototype = function KvMessage() {
   return Object.create(new.target.prototype);
 }.prototype;
-prototype["fromMessage"] = function fromMessage(c0, trackCommunicationDisabled, nextResult, result) {
+prototype["fromMessage"] = function fromMessage(c0, closure_1, nextResult, result) {
   const tmp = callback(prototype.deriveMemberUsers(c0, nextResult), 2);
-  return { id: nextResult.id, channelId: trackCommunicationDisabled, message: nextResult, members: tmp[0], users: tmp[1], connectionId: result };
+  return { id: nextResult.id, channelId: closure_1, message: nextResult, members: tmp[0], users: tmp[1], connectionId: result };
 };
 prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   author = author.author;
@@ -65,6 +65,6 @@ prototype["deriveMemberUsers"] = function deriveMemberUsers(c0, author) {
   const items3 = [items1, items2];
   return items3;
 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/app_database/modules/messages/KvMessage.tsx");
 
 export const KvMessage = prototype;

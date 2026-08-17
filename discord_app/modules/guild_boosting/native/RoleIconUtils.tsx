@@ -1,12 +1,12 @@
 // discord_app/modules/guild_boosting/native/RoleIconUtils.tsx
-import noop from "noop";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { jsx } from "jsxProd";
-import { getRoleIconData } from "../RoleIconUtils.tsx";
+import getRoleIconData from "getRoleIconData" /* 7164 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/guild_boosting/native/RoleIconUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/RoleIconUtils.tsx");
 
 export const useRoleIcon = function useRoleIcon(guildId) {
   guildId = guildId.guildId;
@@ -17,11 +17,11 @@ export const useRoleIcon = function useRoleIcon(guildId) {
   }
   let guild;
   let role;
-  const items = [createGuildRecordFromRust, role];
+  const items = [closure_5, role];
   const items1 = [guildId, roleId];
   const stateFromStoresObject = guildId(num[4]).useStateFromStoresObject(items, () => {
-    const obj = { guild: outer1_5.getGuild(guildId), role: null };
-    let role;
+    const obj = { guild: closure_1_5.getGuild(guildId), role: null };
+    role = undefined;
     if (null != guildId) {
       if (null != roleId) {
         role = role.getRole(guildId, tmp3);
@@ -34,8 +34,6 @@ export const useRoleIcon = function useRoleIcon(guildId) {
   role = stateFromStoresObject.role;
   const items2 = [guild, role, roleId, num];
   return guild.useMemo(() => {
-    let customIconSrc;
-    let unicodeEmoji;
     if (null != guild) {
       if (null != roleId) {
         let obj = guildId(num[5]);
@@ -56,7 +54,7 @@ export const useRoleIcon = function useRoleIcon(guildId) {
           obj[1] = unicodeEmoji;
           let str;
           const tmp2Result = tmp2(tmp3[5]);
-          const tmp6 = outer1_6;
+          const tmp6 = closure_1_6;
           if (tmp4 != null) {
             str = tmp4.name;
           }
@@ -73,8 +71,6 @@ export const useRoleIcon = function useRoleIcon(guildId) {
   }, items2);
 };
 export const getRoleIcon = function getRoleIcon(roleId) {
-  let customIconSrc;
-  let unicodeEmoji;
   roleId = roleId.roleId;
   guild = guild.getGuild(roleId.guildId);
   if (null != guild) {

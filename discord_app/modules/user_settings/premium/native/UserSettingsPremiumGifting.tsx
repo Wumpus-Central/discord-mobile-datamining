@@ -1,31 +1,20 @@
 // discord_app/modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx
-import getSystemLocale from "getSystemLocale";
-import importAllResult from "useBlockedPaymentsConfig";
-import get_ActivityIndicator from "apply";
-import initialize from "initialize";
-import addEntitlement from "addEntitlement";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "apexExperiment";
-import createCacheKey from "createCacheKey";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "initialize" /* 8936 */;
+import closure_9 from "addEntitlement" /* 5357 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;
-let c10;
-let c5;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_6;
-let error;
-let map1;
-let unpackModuleId;
 const require = arg1;
 function GiftingSectionTitle(title) {
   title = title.title;
-  if (useIsMobileVisualRefreshExperimentEnabled("UserSettingsPremiumGifting")) {
+  if (useIsMobileVisualRefreshExperimentEnabledDefault("UserSettingsPremiumGifting")) {
     let obj = { title: null };
     obj[0] = title;
     let tmp3Result = tmp3(tmp4(6286).TableRowGroupTitle, obj);
@@ -43,24 +32,24 @@ let c4 = importAllResult;
 ({ PremiumTypes: closure_12, SubscriptionPlans: map1 } = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 let obj = { scrollView: null, giftingSettingsContainer: null, inventorySectionWrapper: null, inventorySectionWrapperLegacy: null, giftPurchaseSectionWrapper: null, giftPurchaseSectionWrapperLegacy: null, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, title: null, titleWrapper: null, titleWrapperLegacy: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
-obj = { paddingHorizontal: require("Themes").modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
+obj = { paddingHorizontal: ThemesDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
 obj[0] = obj;
 obj[1] = { flex: 1 };
 obj[2] = { flex: 1 };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[3] = createCacheKey;
 obj[4] = { flex: 1, paddingTop: 36, paddingBottom: 16 };
-obj[5] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
-obj[6] = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderColor: require("Themes").colors.BACKGROUND_MOD_NORMAL };
+obj[5] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
+obj[6] = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
 obj[7] = { marginRight: 18 };
 obj[8] = { lineHeight: 20 };
 obj[9] = { flex: 1 };
 obj[10] = { marginTop: 8 };
 obj[11] = { lineHeight: 16, textTransform: "uppercase", marginHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING };
 obj[12] = { paddingTop: 28, paddingBottom: 8 };
-let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderColor: require("Themes").colors.BACKGROUND_MOD_NORMAL };
-obj[13] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+obj[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[14] = { lineHeight: 18 };
 obj[15] = { marginTop: 16 };
 obj[16] = { marginTop: 8, height: 40 };
@@ -68,16 +57,8 @@ obj[17] = { marginTop: 16 };
 obj[18] = { marginTop: 32 };
 obj[19] = { marginHorizontal: 16 };
 let closure_17 = createCacheKey.createStyles(obj);
-let obj4 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+let obj4 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremiumGifting(arg0, arg1) {
-  let activeOutboundPromotions;
-  let analyticsLocation;
-  let c4;
-  let c6;
-  let claimedEndedOutboundPromotions;
-  let promotionsLoaded;
-  let recipientUserId;
-  let tmp14;
   ({ recipientUserId, analyticsLocation } = arg0);
   if (analyticsLocation === undefined) {
     let obj = { page: null };
@@ -85,7 +66,7 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
     analyticsLocation = obj;
   }
   let _require;
-  let importDefault;
+  importDefault = undefined;
   let stateFromStoresArray;
   let memo;
   let enabled;
@@ -94,10 +75,10 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   const tmp5 = importDefault(stateFromStoresArray[10])("UserSettingsPremiumGifting");
   _require = tmp5;
   importDefault(stateFromStoresArray[13])();
-  let obj1 = _require(stateFromStoresArray[14]);
+  obj1 = _require(stateFromStoresArray[14]);
   importDefault = obj1.useNavigation();
   let obj2 = _require(stateFromStoresArray[16]);
-  const items = [addEntitlement];
+  const items = [closure_9];
   stateFromStoresArray = obj2.useStateFromStoresArray(items, () => giftable.getGiftable());
   const items1 = [stateFromStoresArray];
   memo = importAllResult.useMemo(() => arr(stateFromStoresArray[17]).groupBy(stateFromStoresArray, (skuId) => callback(table[18]).makeComboId(skuId.skuId, skuId.subscriptionPlanId, skuId.giftStyle)), items1);
@@ -109,24 +90,24 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   const GiftingBadgeExperiment = _require(stateFromStoresArray[21]).GiftingBadgeExperiment;
   enabled = GiftingBadgeExperiment.useConfig({ location: "gift_inventory" }).enabled;
   let obj5 = _require(stateFromStoresArray[16]);
-  const items2 = [initialize];
-  const stateFromStores = obj5.useStateFromStores(items2, () => badgeById.getBadgeById(_undefined(stateFromStoresArray[22]).BadgeId.GIFTING));
+  const items2 = [closure_8];
+  const stateFromStores = obj5.useStateFromStores(items2, () => badgeById.getBadgeById(callback(stateFromStoresArray[22]).BadgeId.GIFTING));
   [tmp14, c6] = memo(undefined.useState(false), 2);
   let obj6 = _require(stateFromStoresArray[23]);
   const subscriptionPlansLoaded = obj6.useSubscriptionPlansLoaded();
   const effect = importAllResult.useEffect(() => {
     arr(stateFromStoresArray[24]).wait(() => {
-      const giftableEntitlements = outer1_0(outer1_2[25]).fetchGiftableEntitlements();
+      const giftableEntitlements = closure_1_0(closure_1_2[25]).fetchGiftableEntitlements();
       giftableEntitlements.then(() => callback(true));
-      const obj = outer1_0(outer1_2[25]);
-      outer1_1(outer1_2[26]).init();
+      const obj = closure_1_0(closure_1_2[25]);
+      closure_1_1(closure_1_2[26]).init();
     });
   }, []);
   const items3 = [enabled];
   const effect1 = importAllResult.useEffect(() => {
     if (enabled) {
-      const badge = _undefined(stateFromStoresArray[27]).fetchBadge(_undefined(stateFromStoresArray[22]).BadgeId.GIFTING);
-      const obj = _undefined(stateFromStoresArray[27]);
+      const badge = callback(stateFromStoresArray[27]).fetchBadge(callback(stateFromStoresArray[22]).BadgeId.GIFTING);
+      const obj = callback(stateFromStoresArray[27]);
     }
   }, items3);
   obj = { paddingBottom: importDefault(stateFromStoresArray[15])().bottom + importDefault(stateFromStoresArray[9]).space.PX_16 };
@@ -231,9 +212,9 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
               tmp20(tmp19, obj15),
               claimedEndedOutboundPromotions.map((code) => {
                           const outboundPromotion = code.promotion;
-                          return callback(arr(stateFromStoresArray[33]), { outboundPromotion, code: code.code }, outboundPromotion.id);
+                          return callback2(arr(stateFromStoresArray[33]), { outboundPromotion, code: code.code }, outboundPromotion.id);
                         }),
-              activeOutboundPromotions.map((id) => outer1_14(arr(stateFromStoresArray[33]), { outboundPromotion: id, code: _undefined2[id.id] }, id.id))
+              activeOutboundPromotions.map((id) => closure_1_14(arr(stateFromStoresArray[33]), { outboundPromotion: id, code: _undefined[id.id] }, id.id))
             ];
             obj14[0] = items12;
             tmp18Result = tmp18(closure_16, obj14);
@@ -258,13 +239,10 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
             const items15 = [
               tmp20(tmp19, obj18),
               keys.map((arg0) => {
-                          let giftStyle;
-                          let skuId;
-                          let subscriptionPlanId;
-                          let obj = _undefined(stateFromStoresArray[18]);
+                          let obj = callback(stateFromStoresArray[18]);
                           ({ skuId, subscriptionPlanId, giftStyle } = obj.parseComboId(arg0));
-                          obj = { skuId, subscriptionPlanId, entitlements: memo[arg0], giftStyle, isRefreshEnabled: _undefined };
-                          return outer1_14(arr(stateFromStoresArray[34]), obj, arg0);
+                          obj = { skuId, subscriptionPlanId, entitlements: memo[arg0], giftStyle, isRefreshEnabled: callback };
+                          return closure_1_14(arr(stateFromStoresArray[34]), obj, arg0);
                         })
             ];
             obj17[0] = items15;
@@ -295,18 +273,18 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
       const obj23 = { title: null };
       function handleLearnMorePremiumClick() {
         let obj = arr(stateFromStoresArray[28]);
-        obj.setSection(outer1_10.PREMIUM_GIFTING);
-        obj = { destinationPane: outer1_10.PREMIUM_GIFTING };
-        const result = _undefined(stateFromStoresArray[29]).trackUserSettingsPaneViewed(obj);
-        arr = arr.push(outer1_10.PREMIUM);
+        obj.setSection(closure_1_10.PREMIUM_GIFTING);
+        obj = { destinationPane: closure_1_10.PREMIUM_GIFTING };
+        const result = callback(stateFromStoresArray[29]).trackUserSettingsPaneViewed(obj);
+        arr = arr.push(closure_1_10.PREMIUM);
       }
       function handleLearnMoreNitroBasicClick() {
         let obj = arr(stateFromStoresArray[28]);
-        obj.setSection(outer1_10.PREMIUM_GIFTING);
-        obj = { destinationPane: outer1_10.PREMIUM_GIFTING };
-        const result = _undefined(stateFromStoresArray[29]).trackUserSettingsPaneViewed(obj);
-        obj = { premiumFeatureCardOrder: _undefined(stateFromStoresArray[30]).PremiumFeatureCardOrder.TIER_0_LEADING };
-        arr = arr.push(outer1_10.PREMIUM, obj);
+        obj.setSection(closure_1_10.PREMIUM_GIFTING);
+        obj = { destinationPane: closure_1_10.PREMIUM_GIFTING };
+        const result = callback(stateFromStoresArray[29]).trackUserSettingsPaneViewed(obj);
+        obj = { premiumFeatureCardOrder: callback(stateFromStoresArray[30]).PremiumFeatureCardOrder.TIER_0_LEADING };
+        arr = arr.push(closure_1_10.PREMIUM, obj);
       }
       const intl6 = tmp7(tmp4[32]).intl;
       obj23[0] = intl6.string(tmp7(tmp4[32]).t["55Ccy0"]);
@@ -390,6 +368,6 @@ const forwardRefResult = importAllResult.forwardRef(function UserSettingsPremium
   }
   return tmp18Result3;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremiumGifting.tsx");
 
 export default forwardRefResult;

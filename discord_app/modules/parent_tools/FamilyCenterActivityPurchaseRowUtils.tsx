@@ -1,35 +1,36 @@
 // discord_app/modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx
-import { isAvatarDecorationRecord } from "fromServer";
-import { isProfileEffectRecord } from "fromServer";
-import GuildFeatures from "GuildFeatures";
-import { CollectiblesItemType } from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
+import set from "set" /* 2 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import fromServer from "fromServer" /* 5306 */;
+import fromServer2 from "fromServer" /* 5307 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c5;
-let closure_6;
 function getCollectibleTypeName(type) {
   if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
     const intl5 = tmp(1236).intl;
-    return intl5.string(messagesProxy.obi47v);
+    return intl5.string(messagesProxyDefault.obi47v);
   } else if (tmp(1949).CollectiblesItemType.PROFILE_EFFECT === type) {
     const intl4 = tmp(1236).intl;
-    return intl4.string(messagesProxy.RX8BMR);
+    return intl4.string(messagesProxyDefault.RX8BMR);
   } else if (tmp(1949).CollectiblesItemType.NAMEPLATE === type) {
     const intl3 = tmp(1236).intl;
-    return intl3.string(messagesProxy.nNGEHk);
+    return intl3.string(messagesProxyDefault.nNGEHk);
   } else if (tmp(1949).CollectiblesItemType.BUNDLE === type) {
     const intl2 = tmp(1236).intl;
-    return intl2.string(messagesProxy.VS1fKo);
+    return intl2.string(messagesProxyDefault.VS1fKo);
   } else if (tmp(1949).CollectiblesItemType.PROFILE_FRAME === type) {
     const intl = tmp(1236).intl;
-    return intl.string(messagesProxy.JiIY1l);
+    return intl.string(messagesProxyDefault.JiIY1l);
   } else {
     return "";
   }
 }
+const isAvatarDecorationRecord = fromServer.isAvatarDecorationRecord;
+const isProfileEffectRecord = fromServer2.isProfileEffectRecord;
 ({ PremiumSubscriptionSKUs: c5, SubscriptionPlanInfo: closure_6 } = GuildFeatures);
-const result = require("GuildFeatures").fileFinishedImporting("modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx");
+const result = set.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityPurchaseRowUtils.tsx");
 
 export const PREVIEW_SIZE = 40;
 export const NAMEPLATE_ASPECT_RATIO = 5.333333333333333;

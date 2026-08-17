@@ -1,11 +1,12 @@
 // discord_app/modules/clips/ClipsV3RuntimeExperiment.tsx
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 let obj = { 1: null, 2: { enableClipsV3: true, enableClipsV3ML: false } };
 obj[2] = { enableClipsV3: true, enableClipsV3ML: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-04-clips-v3-runtime", defaultConfig: { enableClipsV3: false, enableClipsV3ML: false }, variations: obj });
 let c1 = null;
-const result = require("set").fileFinishedImporting("modules/clips/ClipsV3RuntimeExperiment.tsx");
+const result = set.fileFinishedImporting("modules/clips/ClipsV3RuntimeExperiment.tsx");
 
 export const ClipsV3RuntimeExperiment = apexExperiment;
 export const isClipsV3Enabled = function isClipsV3Enabled(location) {
@@ -15,7 +16,7 @@ export const useIsClipsV3Enabled = function useIsClipsV3Enabled(location) {
   return apexExperiment.useConfig({ location }).enableClipsV3;
 };
 export function setActiveClipsRuntime(arg0) {
-  let closure_1 = arg0;
+  closure_1 = arg0;
 }
 export const getClipsRuntime = function getClipsRuntime(classifyHardwareAndTrack) {
   if (null != c1) {

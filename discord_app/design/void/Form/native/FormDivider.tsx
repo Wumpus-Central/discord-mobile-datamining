@@ -1,37 +1,28 @@
 // discord_app/design/void/Form/native/FormDivider.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ManaContext } from "../../../../../discord_common/js/packages/design/native.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../../modules/themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { useProfileThemeValues } from "../../../../modules/user_profile/useProfileThemeValues.native.tsx";
-import { context } from "../../../components/RedesignCompat/native/RedesignCompat.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import context from "context" /* 6939 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7161 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let DARK;
-let DARKER;
-let LIGHT;
-let MIDNIGHT;
-let Platform;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ View: c4, StyleSheet: c5, Platform } = get_ActivityIndicator);
 let closure_7 = createCacheKey.createStyles((arg0) => {
   let obj = { divider: {}, dividerOuter: null, dividerHasIcon: null };
-  obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: Themes.colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
+  obj = { marginLeft: 0, height: closure_5.hairlineWidth, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginTop: -1 * closure_5.hairlineWidth };
   obj[1] = obj;
   obj[2] = { marginLeft: 56 };
   return obj;
 });
-createCacheKey = { [LIGHT]: require("Themes").unsafe_rawColors.BLACK, [DARK]: require("Themes").unsafe_rawColors.WHITE, [DARKER]: require("Themes").unsafe_rawColors.WHITE, [MIDNIGHT]: require("Themes").unsafe_rawColors.WHITE };
+createCacheKey = { [LIGHT]: ThemesDefault.unsafe_rawColors.BLACK, [DARK]: ThemesDefault.unsafe_rawColors.WHITE, [DARKER]: ThemesDefault.unsafe_rawColors.WHITE, [MIDNIGHT]: ThemesDefault.unsafe_rawColors.WHITE };
 ({ LIGHT, DARK, DARKER, MIDNIGHT } = require("ME").ThemeTypes);
-const result = require("ME").fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
+const result = require("set").fileFinishedImporting("design/void/Form/native/FormDivider.tsx");
 
 export default function Divider(outer) {
-  let primaryColor;
-  let theme;
   let flag = outer.outer;
   if (flag === undefined) {
     flag = false;
@@ -40,7 +31,7 @@ export default function Divider(outer) {
   if (flag2 === undefined) {
     flag2 = false;
   }
-  const tmp2 = callback(useIsMobileVisualRefreshExperimentEnabled("FormDivider"));
+  const tmp2 = callback(useIsMobileVisualRefreshExperimentEnabledDefault("FormDivider"));
   let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ theme, primaryColor } = themeContext);

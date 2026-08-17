@@ -1,12 +1,14 @@
 // discord_app/modules/app_database/modules/GuildStickers.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import set from "items";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import set from "set" /* 2 */;
 
-let c3 = new require("set")("GuildStickers");
+let set = importDefault;
+let closure_3 = new timestampDefault("GuildStickers");
 class GuildStickers {
   constructor() {
     obj = Object.create(new.target.prototype);
-    GuildStickers = obj;
+    closure_0 = obj;
     obj.actions = {
       BACKGROUND_SYNC(arg0, arg1) {
             return obj.handleBackgroundSync(arg0, arg1);
@@ -32,25 +34,25 @@ class GuildStickers {
 }
 const prototype = GuildStickers.prototype;
 prototype["getAsync"] = function getAsync(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return callback(function*() {
     let length = tmp5;
-    let closure_0 = tmp2;
+    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
-    const obj6 = outer1_0(outer1_1[2]);
-    length = yield outer1_0(outer1_1[2]).stickers(outer1_0).getMapEntries();
+    const obj6 = closure_1_0(closure_1_1[2]);
+    length = yield closure_1_0(closure_1_1[2]).stickers(closure_1_0).getMapEntries();
     const _performance = performance;
     const _HermesInternal = HermesInternal;
-    logger.log("asynchronously loaded in " + asyncGeneratorStep - closure_0 + "ms (guilds: " + length.length + ")");
+    logger.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (guilds: " + length.length + ")");
     return length;
   })();
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(unavailableGuilds, database) {
   const self = this;
   const items = [...unavailableGuilds.unavailableGuilds];
-  obj = obj(1955);
-  obj.stickersTransaction(database).deleteAllExcept(items);
+  const obj = set(1955);
+  set(1955).stickersTransaction(database).deleteAllExcept(items);
   for (const item10027 of tmp2) {
     let handleOneGuildCreateResult = self.handleOneGuildCreate(item10027, arg1);
     continue;
@@ -70,7 +72,7 @@ prototype["handleGuildStickersUpdate"] = function handleGuildStickersUpdate(guil
 };
 prototype["handleBackgroundSync"] = function handleBackgroundSync(promisesForBackgroundSyncToWaitOn) {
   const self = this;
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const prop = promisesForBackgroundSyncToWaitOn.promisesForBackgroundSyncToWaitOn;
   const stickers = promisesForBackgroundSyncToWaitOn.stickers;
   prop.push(Promise.all(stickers.map((dataMode) => {
@@ -78,12 +80,12 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(promisesForBac
       return Promise.resolve();
     } else if ("full" === dataMode.dataMode) {
       const _HermesInternal2 = HermesInternal;
-      outer1_3.verbose("Replacing " + dataMode.entities.length + " stickers for " + dataMode.guildId);
+      closure_1_3.verbose("Replacing " + dataMode.entities.length + " stickers for " + dataMode.guildId);
       const replaced = self.replace(dataMode.guildId, dataMode.entities, closure_0);
     } else {
       if (tmp) {
         const _HermesInternal = HermesInternal;
-        outer1_3.verbose("Updating " + dataMode.updatedEntities.length + " and deleting " + dataMode.deletedEntityIds.length + " stickers for " + dataMode.guildId);
+        closure_1_3.verbose("Updating " + dataMode.updatedEntities.length + " and deleting " + dataMode.deletedEntityIds.length + " stickers for " + dataMode.guildId);
         self.update(dataMode.guildId, dataMode.updatedEntities, dataMode.deletedEntityIds, closure_0);
       }
       tmp = dataMode.updatedEntities.length > 0 || dataMode.deletedEntityIds.length > 0;
@@ -91,8 +93,6 @@ prototype["handleBackgroundSync"] = function handleBackgroundSync(promisesForBac
   })));
 };
 prototype["handleOneGuildCreate"] = function handleOneGuildCreate(arg0, arg1) {
-  let id;
-  let stickers;
   ({ id, stickers } = arg0);
   const op = stickers.op;
   const self = this;
@@ -106,23 +106,23 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 
 };
 prototype["replace"] = function replace(arg0, arg1, database) {
-  obj = obj(1955);
-  const replaced = obj.stickersTransaction(database).replaceAll(arg0, arg1);
+  const obj = set(1955);
+  const replaced = set(1955).stickersTransaction(database).replaceAll(arg0, arg1);
 };
 prototype["delete"] = function delete(arg0, database) {
-  obj = obj(1955);
-  obj.stickersTransaction(database).delete(arg0);
+  const obj = set(1955);
+  set(1955).stickersTransaction(database).delete(arg0);
 };
 prototype["update"] = function update(arg0, arg1, arg2, database) {
-  obj = obj(1955);
-  const stickersTransactionResult = obj.stickersTransaction(database);
+  const stickersTransactionResult = set(1955).stickersTransaction(database);
   stickersTransactionResult.putAll(arg0, arg1);
+  const obj = set(1955);
   while (tmp2 !== undefined) {
     let deleteResult = stickersTransactionResult.delete(arg0, tmp3);
     continue;
   }
 };
-let set = Object.create(GuildStickers.prototype);
+set = Object.create(GuildStickers.prototype);
 set.actions = {
   BACKGROUND_SYNC(arg0, arg1) {
     return obj.handleBackgroundSync(arg0, arg1);

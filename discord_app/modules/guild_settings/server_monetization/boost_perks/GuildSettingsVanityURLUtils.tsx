@@ -1,11 +1,10 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx
-import ME from "ME";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let obj1;
 ({ AbortCodes: obj1, GuildFeatures: c3 } = ME);
-const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/GuildSettingsVanityURLUtils.tsx");
 
 export const getErrorMessageFromErrorCode = function getErrorMessageFromErrorCode(code) {
   if (constants.UNKNOWN_CHANNEL === code) {

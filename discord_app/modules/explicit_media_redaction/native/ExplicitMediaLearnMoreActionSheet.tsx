@@ -1,34 +1,31 @@
 // discord_app/modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx
-import Background from "Background";
-import { View } from "ExplicitMediaObscuredFalsePositiveActionSheet";
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY";
-import ME from "ME";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_5 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ HelpdeskArticles: closure_6, UserSettingsSections: error } = ME);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, art: null, infoHeader: null, info: null, infoDesc: null, buttonsContainer: null, linkSubtext: null };
-createCacheKey = { paddingVertical: require("Themes").space.PX_24, paddingHorizontal: require("Themes").space.PX_24, justifyContent: "center" };
+createCacheKey = { paddingVertical: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_24, justifyContent: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { alignSelf: "center", marginBottom: require("Themes").space.PX_16 };
-let obj1 = { alignSelf: "center", marginBottom: require("Themes").space.PX_16 };
-createCacheKey[2] = { marginBottom: require("Themes").space.PX_8, alignItems: "center" };
-let obj2 = { marginBottom: require("Themes").space.PX_8, alignItems: "center" };
-createCacheKey[3] = { marginBottom: require("Themes").space.PX_24, alignItems: "center" };
+createCacheKey[1] = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
+let obj1 = { alignSelf: "center", marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_8, alignItems: "center" };
+let obj2 = { marginBottom: ThemesDefault.space.PX_8, alignItems: "center" };
+createCacheKey[3] = { marginBottom: ThemesDefault.space.PX_24, alignItems: "center" };
 createCacheKey[4] = { textAlign: "center" };
-let obj3 = { marginBottom: require("Themes").space.PX_24, alignItems: "center" };
-createCacheKey[5] = { gap: require("Themes").space.PX_8 };
-let obj4 = { gap: require("Themes").space.PX_8 };
-createCacheKey[6] = { textAlign: "center", marginBottom: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { textAlign: "center", marginBottom: require("Themes").space.PX_8 };
-let result = require("USER_SETTING_ACTION_SHEET_KEY").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx");
+let obj3 = { marginBottom: ThemesDefault.space.PX_24, alignItems: "center" };
+createCacheKey[5] = { gap: ThemesDefault.space.PX_8 };
+let obj4 = { gap: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { textAlign: "center", marginBottom: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/ExplicitMediaLearnMoreActionSheet.tsx");
 
 export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   channelId = channelId.channelId;
@@ -39,11 +36,11 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
   let shouldAgeVerifyForExplicitMedia;
   let memo;
   let callback;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   const tmp3 = messageId(attachmentId[7])();
   let obj = channelId(attachmentId[8]);
   isVerifiedTeen = obj.useIsVerifiedTeen();
-  let obj1 = channelId(attachmentId[9]);
+  obj1 = channelId(attachmentId[9]);
   shouldAgeVerifyForExplicitMedia = obj1.useShouldAgeVerifyForExplicitMedia();
   let intl = channelId(attachmentId[10]).intl;
   let intl2 = channelId(attachmentId[10]).intl;
@@ -74,9 +71,9 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
       const intl2 = channelId(attachmentId[10]).intl;
       let obj = { handleOnHelpUrlHook: null };
       obj[0] = function handleOnHelpUrlHook() {
-        const obj = outer1_1(outer1_2[15]);
-        obj.openUrl(outer1_1(outer1_2[14]).getArticleURL(outer1_6.TIGGER_PAWTECT_LEARN_MORE));
-        callback(outer1_0(outer1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+        const obj = closure_1_1(closure_1_2[15]);
+        obj.openUrl(closure_1_1(closure_1_2[14]).getArticleURL(closure_1_6.TIGGER_PAWTECT_LEARN_MORE));
+        callback(closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
       };
       let formatResult = intl2.format(channelId(attachmentId[10]).t["TGqx+i"], obj);
     } else {
@@ -85,11 +82,11 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
         const intl = channelId(attachmentId[10]).intl;
         obj = { handleFalsePositiveHook: null };
         obj[0] = function handleFalsePositiveHook() {
-          let obj = outer1_1(outer1_2[12]);
+          let obj = closure_1_1(closure_1_2[12]);
           obj.hideActionSheet();
-          callback(outer1_0(outer1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
-          obj = { channelId: closure_0, messageId: closure_1, attachmentId: closure_2, embedId: Background };
-          outer1_1(outer1_2[12]).openLazy(outer1_0(outer1_2[18])(outer1_2[17], outer1_2.paths), outer1_5, obj);
+          callback(closure_1_0(closure_1_2[9]).TrackMediaRedactionActionType.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE);
+          obj = { channelId: closure_0, messageId: closure_1, attachmentId: closure_2, embedId: closure_3 };
+          closure_1_1(closure_1_2[12]).openLazy(closure_1_0(closure_1_2[18])(closure_1_2[17], closure_1_2.paths), closure_1_5, obj);
         };
         formatResult = intl.format(channelId(attachmentId[10]).t.Ge0HUi, obj);
       }
@@ -97,8 +94,7 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     return formatResult;
   }, items3);
   obj = { style: tmp.container, children: null };
-  obj = { style: tmp.art, children: null };
-  obj[1] = callback(channelId(attachmentId[20]).ShieldSpotIllustration, { height: 120, width: 120 });
+  obj = { style: tmp.art, children: callback(channelId(attachmentId[20]).ShieldSpotIllustration, { height: 120, width: 120 }) };
   const items4 = [callback(isVerifiedTeen, obj), , ];
   obj1 = { style: tmp.info, children: null };
   const obj2 = { style: tmp.infoHeader, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
@@ -167,9 +163,8 @@ export default function ExplicitMediaLearnMoreActionSheet(channelId) {
     messageId(attachmentId[12]).hideActionSheet();
   };
   items6[1] = callback(channelId(attachmentId[22]).Button, obj7);
-  const obj8 = { style: tmp.linkSubtext, variant: "text-sm/medium", color: "text-muted", children: null };
-  obj8[3] = callback1();
-  items6[2] = callback(channelId(attachmentId[21]).Text, obj8);
+  stringResult = intl.string(channelId(attachmentId[10]).t["9KiIz6"]);
+  items6[2] = callback(channelId(attachmentId[21]).Text, { style: tmp.linkSubtext, variant: "text-sm/medium", color: "text-muted", children: callback1() });
   obj4[1] = items6;
   items4[2] = closure_9(isVerifiedTeen, obj4);
   obj[1] = items4;

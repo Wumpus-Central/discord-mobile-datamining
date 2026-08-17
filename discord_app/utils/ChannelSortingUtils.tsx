@@ -1,17 +1,16 @@
 // discord_app/utils/ChannelSortingUtils.tsx
-import createChannelRecord from "createChannelRecord";
-import { ChannelTypes } from "ME";
-import { getFlattenedChannelList } from "../modules/channel/getFlattedChannelList.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getFlattenedChannelListDefault from "getFlattenedChannelList" /* 5279 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
 
-let c3;
-let obj1;
 function getFirstChannelOfType(arg0, arg1, arg2, arr) {
-  let closure_0 = arg1;
-  let c1 = -1;
+  closure_0 = arg1;
+  c1 = -1;
   const found = arr.find((channel) => {
     let flag = channel.channel.id === closure_0;
     if (flag) {
-      let closure_1 = arg1;
+      closure_1 = arg1;
       flag = true;
     }
     return flag;
@@ -59,7 +58,8 @@ function getFirstChannelOfType(arg0, arg1, arg2, arr) {
   }
 }
 ({ isGuildSelectableChannelType: obj1, isGuildVocalChannelType: c3 } = createChannelRecord);
-const result = require("calculatePositionDeltas").fileFinishedImporting("utils/ChannelSortingUtils.tsx");
+let ChannelTypes = ME.ChannelTypes;
+const result = set.fileFinishedImporting("utils/ChannelSortingUtils.tsx");
 
 export const areTypesInSameSection = function areTypesInSameSection(arg0, arg1) {
   let tmp = null != arg0 && null != arg1;
@@ -80,7 +80,6 @@ export const areTypesInSameSection = function areTypesInSameSection(arg0, arg1) 
   return tmp;
 };
 export const getDropData = function getDropData(localChannel, arg1, localChannel2, index, channelList) {
-  let parent_id3;
   if (null != localChannel) {
     parent_id3 = localChannel2;
     if (null != localChannel2) {
@@ -90,7 +89,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
           if (index >= arg1) {
             let tmp47 = null;
             if (index > arg1) {
-              let c1 = true;
+              c1 = true;
               let callback;
               let num17 = 0;
               if (null != parent_id3) {
@@ -126,7 +125,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
                 const found1 = found.find((arg0, arg1) => {
                   let flag = null != localChannel2 && tmp === localChannel2.id;
                   if (flag) {
-                    let closure_2 = arg1;
+                    closure_2 = arg1;
                     flag = true;
                   }
                   return flag;
@@ -180,7 +179,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
         if (tmp) {
           ({ id: obj11[0], parent_id: obj11[1] } = parent_id3);
           let tmp12 = { referenceId: null, parentId: null };
-          const obj1 = { referenceId: null, parentId: null };
+          obj1 = { referenceId: null, parentId: null };
         } else if (index < arg1) {
           if (parent_id3.type !== GUILD_CATEGORY) {
             c1 = true;
@@ -218,7 +217,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
               const found3 = found2.find((arg0, arg1) => {
                 let flag = null != localChannel2 && tmp === localChannel2.id;
                 if (flag) {
-                  let closure_2 = arg1;
+                  closure_2 = arg1;
                   flag = true;
                 }
                 return flag;
@@ -292,7 +291,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             const found5 = found4.find((arg0, arg1) => {
               let flag = null != localChannel2 && tmp === localChannel2.id;
               if (flag) {
-                let closure_2 = arg1;
+                closure_2 = arg1;
                 flag = true;
               }
               return flag;
@@ -382,7 +381,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             const found7 = found6.find((arg0, arg1) => {
               let flag = null != localChannel2 && tmp === localChannel2.id;
               if (flag) {
-                let closure_2 = arg1;
+                closure_2 = arg1;
                 flag = true;
               }
               return flag;
@@ -477,7 +476,7 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
             const found9 = found8.find((arg0, arg1) => {
               let flag = null != localChannel2 && tmp === localChannel2.id;
               if (flag) {
-                let closure_2 = arg1;
+                closure_2 = arg1;
                 flag = true;
               }
               return flag;
@@ -530,8 +529,8 @@ export const getDropData = function getDropData(localChannel, arg1, localChannel
   return null;
 };
 export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2, parentId, channels) {
-  let importDefault = localChannel;
-  let dependencyMap = parentId;
+  importDefault = localChannel;
+  dependencyMap = parentId;
   function generateUpdates(substr) {
     if (null != c2) {
       if (null != num11) {
@@ -567,7 +566,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
     }
     moveItemFromToResult = [...substr];
   }
-  const ChannelTypes = [];
+  ChannelTypes = [];
   let items = [];
   let _categories = channels._categories;
   if (localChannel.isCategory()) {
@@ -611,7 +610,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       const found1 = found.find((arg0, arg1) => {
         let flag = null != localChannel2 && tmp === localChannel2.id;
         if (flag) {
-          let closure_2 = arg1;
+          closure_2 = arg1;
           flag = true;
         }
         return flag;
@@ -656,7 +655,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       const found3 = found2.find((arg0, arg1) => {
         let flag = null != localChannel2 && tmp === localChannel2.id;
         if (flag) {
-          let closure_2 = arg1;
+          closure_2 = arg1;
           flag = true;
         }
         return flag;
@@ -673,7 +672,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
     if (items.length > 0) {
       tmp11 = items;
     }
-    const tmp10Result = getFlattenedChannelList(tmp11, channels, (channel) => _null(channel.channel.type));
+    const tmp10Result = getFlattenedChannelListDefault(tmp11, channels, (channel) => _null(channel.channel.type));
     importDefault = localChannel;
     dependencyMap = false;
     callback = undefined;
@@ -711,7 +710,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       const found5 = found4.find((arg0, arg1) => {
         let flag = null != localChannel2 && tmp === localChannel2.id;
         if (flag) {
-          let closure_2 = arg1;
+          closure_2 = arg1;
           flag = true;
         }
         return flag;
@@ -756,7 +755,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       const found7 = found6.find((arg0, arg1) => {
         let flag = null != localChannel2 && tmp === localChannel2.id;
         if (flag) {
-          let closure_2 = arg1;
+          closure_2 = arg1;
           flag = true;
         }
         return flag;
@@ -765,13 +764,13 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
     }
     num11 = num8;
     const updates1 = generateUpdates(tmp10Result);
-    const tmp10 = getFlattenedChannelList;
+    const tmp10 = getFlattenedChannelListDefault;
   }
   if (localChannel.isGuildVocal()) {
     if (items.length > 0) {
       _categories = items;
     }
-    const tmp18Result = getFlattenedChannelList(_categories, channels, (channel) => {
+    const tmp18Result = getFlattenedChannelListDefault(_categories, channels, (channel) => {
       channel = channel.channel;
       return channel.isGuildVocal();
     });
@@ -812,7 +811,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       const found9 = found8.find((arg0, arg1) => {
         let flag = null != localChannel2 && tmp === localChannel2.id;
         if (flag) {
-          let closure_2 = arg1;
+          closure_2 = arg1;
           flag = true;
         }
         return flag;
@@ -857,7 +856,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       const found11 = found10.find((arg0, arg1) => {
         let flag = null != localChannel2 && tmp === localChannel2.id;
         if (flag) {
-          let closure_2 = arg1;
+          closure_2 = arg1;
           flag = true;
         }
         return flag;
@@ -865,7 +864,7 @@ export const getDnDUpdates = function getDnDUpdates(localChannel, localChannel2,
       num11 = callback;
     }
     const updates2 = generateUpdates(tmp18Result);
-    const tmp18 = getFlattenedChannelList;
+    const tmp18 = getFlattenedChannelListDefault;
   }
   let tmp23 = localChannel.parent_id !== parentId;
   if (tmp23) {

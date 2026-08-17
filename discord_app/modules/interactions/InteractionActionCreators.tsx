@@ -1,23 +1,23 @@
 // discord_app/modules/interactions/InteractionActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchMessageInteractionData() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
-      let asyncGeneratorStep = tmp2;
+      closure_3 = tmp2;
       body = tmp5;
-      const HTTP = callback(outer1_2[3]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
+      const HTTP = callback(closure_1_2[3]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
       obj1[0] = c4.MESSAGE_INTERACTION_DATA(callback, callback2);
-      obj1[2] = callback(outer1_2[3]).rejectWithMigratedError();
+      obj1[2] = callback(closure_1_2[3]).rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = body.body;
       const obj = callback2(body[2]);
@@ -29,7 +29,7 @@ function _fetchMessageInteractionData() {
       return body;
     })();
   });
-  const _fetchMessageInteractionData = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -38,27 +38,21 @@ function _fetchMessageInteractionData() {
   }
   return applyArgumentsResult;
 }
-const result = require("dispatcher").fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/interactions/InteractionActionCreators.tsx");
 
 export const queueInteractionComponentState = function queueInteractionComponentState(c1, closure_9, c8, c4) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "QUEUE_INTERACTION_COMPONENT_STATE", messageId: c1, nonce: closure_9, state: c8, componentId: c4 };
   obj.dispatch(obj);
 };
 export const addQueued = function addQueued(closure_9, arg1) {
-  let data;
-  let messageId;
-  let onCreate;
-  let onFailure;
-  let onSuccess;
-  let preflight;
   ({ data, messageId, preflight, onCreate, onSuccess, onFailure } = arg1);
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "INTERACTION_QUEUE", data, nonce: closure_9, messageId, preflight, onCreate, onSuccess, onFailure };
   obj.dispatch(obj);
 };
 export const setFailed = function setFailed(closure_1, code, message, status) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "INTERACTION_FAILURE", nonce: closure_1, errorMessage: message, errorCode: code, status };
   obj.dispatch(obj);
 };

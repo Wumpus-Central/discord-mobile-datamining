@@ -1,25 +1,21 @@
 // discord_app/modules/application_account_linking/AccountLinkManager.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import map from "map";
-import ME from "ME";
-import "initialize";
+import setDefault from "set" /* 687 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "recomputeFromAppTokens" /* 5289 */;
+import closure_5 from "map" /* 16159 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
 let require = arg1;
 function _claimIncentivizedAccountLinkingReward() {
   const self = this;
   const tmp = callback2((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
       if (c6 === 2) {
         c6 = 3;
         HermesBuiltin.throwTypeError();
@@ -47,7 +43,7 @@ function _claimIncentivizedAccountLinkingReward() {
               return obj;
             } else {
               c2 = tmp3;
-              let dependencyMap = tmp5;
+              dependencyMap = tmp5;
               let callback;
               dependencyMap = undefined;
               c2 = undefined;
@@ -62,11 +58,11 @@ function _claimIncentivizedAccountLinkingReward() {
               throw arg1;
             } else if (arg0 === 2) {
               c6 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              let c4 = 1;
+              c4 = 1;
               const HTTP = callback(530).HTTP;
               const obj2 = { url: null, body: null, rejectWithError: true };
               obj2[0] = obj.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT;
@@ -83,7 +79,7 @@ function _claimIncentivizedAccountLinkingReward() {
             if (2 === tmp8) {
               c4 = 0;
               if (c2 != null) {
-                tmp14(set);
+                tmp14(closure_3);
               }
               c6 = 3;
             } else if (arg0 === 1) {
@@ -102,7 +98,7 @@ function _claimIncentivizedAccountLinkingReward() {
             return obj;
           }
         } catch (tmp25) {
-          set = tmp25;
+          closure_3 = tmp25;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp25;
@@ -115,7 +111,7 @@ function _claimIncentivizedAccountLinkingReward() {
     iter.next();
     return iter;
   });
-  const _claimIncentivizedAccountLinkingReward = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -125,7 +121,8 @@ function _claimIncentivizedAccountLinkingReward() {
   return applyArgumentsResult;
 }
 ({ AppStates: closure_6, Endpoints: error } = ME);
-let closure_8 = 20 * require("set").Millis.MINUTE;
+let closure_8 = 20 * setDefault.Millis.MINUTE;
+initializeDefault;
 class AccountLinkManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -149,8 +146,6 @@ class AccountLinkManager extends tmp3 {
 }
 const prototype = AccountLinkManager.prototype;
 prototype["evaluatePending"] = function evaluatePending() {
-  let tmp7;
-  let tmp8;
   const pendingAuthorizations = authStore.getPendingAuthorizations();
   if (0 !== pendingAuthorizations.size) {
     const _Date = Date;
@@ -220,7 +215,7 @@ prototype["handleAppStateUpdate"] = function handleAppStateUpdate(state) {
 };
 AccountLinkManager.displayName = "AccountLinkManager";
 const accountLinkManager = new AccountLinkManager();
-let result = require("recomputeFromAppTokens").fileFinishedImporting("modules/application_account_linking/AccountLinkManager.tsx");
+let result = require("set").fileFinishedImporting("modules/application_account_linking/AccountLinkManager.tsx");
 
 export default accountLinkManager;
 export const claimIncentivizedAccountLinkingReward = function claimIncentivizedAccountLinkingReward(arg0) {

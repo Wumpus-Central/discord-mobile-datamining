@@ -1,12 +1,9 @@
 // discord_app/modules/verification/VerificationUtils.tsx
-import ME from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ME from "ME" /* 676 */;
 
-let EMAIL;
-let PHONE;
-let REVERIFY_EMAIL;
-let REVERIFY_PHONE;
 const UserRequiredActions = ME.UserRequiredActions;
 const VerificationTypes = ME.VerificationTypes;
 ({ EMAIL, PHONE, REVERIFY_EMAIL, REVERIFY_PHONE } = VerificationTypes);
@@ -20,7 +17,7 @@ const items6 = [EMAIL, REVERIFY_PHONE];
 const items7 = [REVERIFY_EMAIL, REVERIFY_PHONE];
 const items8 = [VerificationTypes.CAPTCHA];
 let closure_5 = { [UserRequiredActions.REQUIRE_VERIFIED_EMAIL]: items, [UserRequiredActions.REQUIRE_VERIFIED_PHONE]: items1, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL]: items2, [UserRequiredActions.REQUIRE_REVERIFIED_PHONE]: items3, [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_VERIFIED_PHONE]: items4, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_VERIFIED_PHONE]: items5, [UserRequiredActions.REQUIRE_VERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items6, [UserRequiredActions.REQUIRE_REVERIFIED_EMAIL_OR_REVERIFIED_PHONE]: items7, [UserRequiredActions.REQUIRE_CAPTCHA]: items8, [UserRequiredActions.AGREEMENTS]: [], [UserRequiredActions.REQUIRE_SAFETY_FLOWS]: [] };
-let result = require("apply").fileFinishedImporting("modules/verification/VerificationUtils.tsx");
+let result = set.fileFinishedImporting("modules/verification/VerificationUtils.tsx");
 
 export default {
   isPhoneReverification(currentUser, action) {
@@ -66,6 +63,6 @@ export default {
     }
   },
   areVerificationTypesEqual(arg0, arg1) {
-    return apply.isEqual(arg0, arg1);
+    return applyDefault.isEqual(arg0, arg1);
   }
 };

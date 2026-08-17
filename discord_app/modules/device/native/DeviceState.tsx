@@ -1,15 +1,16 @@
 // discord_app/modules/device/native/DeviceState.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { NativeModules } from "get ActivityIndicator";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
 const require = arg1;
 function _getDeviceState() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*() {
       if (c6 === 2) {
         c6 = 3;
@@ -37,10 +38,10 @@ function _getDeviceState() {
               obj[0] = arg1;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp3;
+              closure_2 = tmp3;
               let table = tmp5;
               let fallback;
-              let obj1 = fallback;
+              obj1 = fallback;
               if (fallback === undefined) {
                 obj1 = { fallback: true };
               }
@@ -105,7 +106,7 @@ function _getDeviceState() {
     iter.next();
     return iter;
   });
-  const _getDeviceState = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -114,9 +115,9 @@ function _getDeviceState() {
   }
   return applyArgumentsResult;
 }
-const tmp2 = new require("ThermalState")("native/DeviceState.tsx");
-let c4 = tmp2;
-const result = require("timestamp").fileFinishedImporting("modules/device/native/DeviceState.tsx");
+const tmp2 = new timestampDefault("native/DeviceState.tsx");
+let closure_4 = tmp2;
+const result = require("set").fileFinishedImporting("modules/device/native/DeviceState.tsx");
 
 export const logger = tmp2;
 export const getDeviceState = function getDeviceState(arg0) {

@@ -1,19 +1,15 @@
 // discord_app/modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { isSocialLayerApplication } from "../../../applications/isSocialLayerApplication.tsx";
-import { isAuthorizedAppTwoWay } from "../shouldWarnAuthorizedAppTwoWay.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 10724 */;
+import isAuthorizedAppTwoWayDefault from "isAuthorizedAppTwoWay" /* 11767 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-let result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/authorized_apps/native/UserSettingsAuthedAppDeleteWarningModal.tsx");
 
 export default function UserSettingsAuthedAppDeleteWarningModal(application) {
-  let onDelete;
-  let scopes;
   application = application.application;
   ({ scopes, onDelete } = application);
   let obj = isSocialLayerApplication;
@@ -34,11 +30,11 @@ export default function UserSettingsAuthedAppDeleteWarningModal(application) {
     obj[0] = application.name;
     let formatToPlainStringResult1 = formatToPlainString(t.inM1Yt, obj);
   } else {
-    const obj1 = { applicationName: null };
+    obj1 = { applicationName: null };
     obj1[0] = application.name;
     formatToPlainStringResult1 = formatToPlainString(t.QWGvxA, obj1);
   }
-  let tmp9 = isAuthorizedAppTwoWay(application.id);
+  let tmp9 = isAuthorizedAppTwoWayDefault(application.id);
   if (tmp9) {
     const obj2 = { children: null };
     let tmp8Result = tmp8(9856);

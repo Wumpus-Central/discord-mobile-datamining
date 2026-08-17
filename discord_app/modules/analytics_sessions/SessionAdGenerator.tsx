@@ -1,12 +1,14 @@
 // discord_app/modules/analytics_sessions/SessionAdGenerator.tsx
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { dispatcher } from "../../Dispatcher.tsx";
-import { SentryUtils.native } from "../../utils/SentryUtils.native.tsx";
-import { result } from "SessionUtils.tsx";
-const require = arg1;
-let closure_3 = 12 * require("set").Millis.HOUR;
+import v1 from "v1" /* 514 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import result2 from "result" /* 5063 */;
+
+require = arg1;
+let closure_3 = 12 * setDefault.Millis.HOUR;
 let c4 = null;
-const result = require("result").fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
+const result = require("set").fileFinishedImporting("modules/analytics_sessions/SessionAdGenerator.tsx");
 
 export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtendSession) {
   let flag = shouldExtendSession;
@@ -18,7 +20,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     const _Date = Date;
     const timestamp1 = Date.now();
     if (timestamp1 < obj.createdAtTimestamp) {
-      obj = SentryUtils.native;
+      obj = _modDef1208;
       obj = { category: "ad", message: null };
       const _HermesInternal = HermesInternal;
       obj[1] = "future facing timestamp Date.now(): " + timestamp1 + ", initialized timestamp: " + tmp11.createdAtTimestamp;
@@ -26,7 +28,7 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
       let flag2 = true;
     } else {
       const diff = timestamp1 - tmp11.lastUsedTimestamp;
-      flag2 = diff > result.SESSION_IDLE_TIMEOUT_MILLIS || timestamp1 - tmp11.createdAtTimestamp > closure_3;
+      flag2 = diff > result2.SESSION_IDLE_TIMEOUT_MILLIS || timestamp1 - tmp11.createdAtTimestamp > closure_3;
     }
     if (!flag2) {
       if (flag) {
@@ -36,17 +38,13 @@ export const getOrRefreshAdSession = function getOrRefreshAdSession(shouldExtend
     }
     return tmp9;
   }
-  obj = { uuid: null, createdAtTimestamp: null, lastUsedTimestamp: null, version: null };
-  obj[0] = v1.v4();
-  obj[1] = timestamp;
-  obj[2] = timestamp;
-  obj[3] = result.CLIENT_SESSION_STORAGE_VERSION;
+  obj = { uuid: v1.v4(), createdAtTimestamp: timestamp, lastUsedTimestamp: timestamp, version: result2.CLIENT_SESSION_STORAGE_VERSION };
   const obj4 = v1;
-  dispatcher.dispatch({ type: "AD_SESSION_RESET" });
+  dispatcherDefault.dispatch({ type: "AD_SESSION_RESET" });
   tmp9 = obj;
 };
 export function clearAdSession() {
-  let c4 = null;
+  c4 = null;
 }
 export function getCurrentAdSession() {
   return c4;
@@ -54,7 +52,7 @@ export function getCurrentAdSession() {
 export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp) {
   const timestamp = Date.now();
   if (timestamp < createdAtTimestamp.createdAtTimestamp) {
-    let obj = SentryUtils.native;
+    let obj = _modDef1208;
     obj = { category: "ad", message: null };
     const _HermesInternal = HermesInternal;
     obj[1] = "future facing timestamp Date.now(): " + timestamp + ", initialized timestamp: " + createdAtTimestamp.createdAtTimestamp;
@@ -62,6 +60,6 @@ export const isAdSessionExpired = function isAdSessionExpired(createdAtTimestamp
     return true;
   } else {
     const diff = timestamp - createdAtTimestamp.lastUsedTimestamp;
-    return diff > result.SESSION_IDLE_TIMEOUT_MILLIS || timestamp - createdAtTimestamp.createdAtTimestamp > closure_3;
+    return diff > result2.SESSION_IDLE_TIMEOUT_MILLIS || timestamp - createdAtTimestamp.createdAtTimestamp > closure_3;
   }
 };

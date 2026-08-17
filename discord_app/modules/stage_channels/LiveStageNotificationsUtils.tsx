@@ -1,20 +1,20 @@
 // discord_app/modules/stage_channels/LiveStageNotificationsUtils.tsx
-import handleInviteData from "handleInviteData";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
+import closure_2 from "handleInviteData" /* 4295 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "sum" /* 505 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("sum").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/LiveStageNotificationsUtils.tsx");
 
 export const useCanSendStageStartNotification = function useCanSendStageStartNotification(first) {
   const _require = first;
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_3];
   const items1 = [first];
   return _initialize.useStateFromStores(items, () => {
     let canResult = null != closure_0;
     if (canResult) {
-      canResult = outer1_3.can(outer1_4.MENTION_EVERYONE, tmp);
+      canResult = closure_1_3.can(closure_1_4.MENTION_EVERYONE, tmp);
     }
     return canResult;
   }, items1);
@@ -24,9 +24,9 @@ export const useDefaultSendStartStageNotificationToggle = function useDefaultSen
   if (first != null) {
     guild_id = first.guild_id;
   }
-  const items = [handleInviteData];
+  const items = [closure_2];
   const items1 = [guild_id];
-  const stateFromStores = guild_id(589).useStateFromStores(items, () => outer1_2.getMemberCount(guild_id), items1);
+  const stateFromStores = guild_id(589).useStateFromStores(items, () => closure_1_2.getMemberCount(guild_id), items1);
   let tmp3 = null == first;
   if (!tmp3) {
     let tmp4 = null == stateFromStores;

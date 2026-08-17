@@ -1,28 +1,25 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx
-import useSecureFramesVerifiedUserIds from "useSecureFramesVerifiedUserIds";
-import { View } from "map";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserSettingsSections } from "ME";
-import jsxProd from "noop";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getCurrentUserSigningKey } from "../../../rtc/SecureFramesUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import getCurrentUserSigningKey from "getCurrentUserSigningKey" /* 9708 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function UserListItem(userId) {
-  let end;
-  let start;
   userId = userId.userId;
   const onPress = userId.onPress;
   let analyticsLocations;
   ({ start, end } = userId);
   let obj = userId(analyticsLocations[7]);
-  const items = [mergeGuildAvatar];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getUser(userId));
-  let obj1 = userId(analyticsLocations[8]);
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getUser(userId));
+  obj1 = userId(analyticsLocations[8]);
   const secureFramesUserVerifiedKeys = obj1.useSecureFramesUserVerifiedKeys(userId);
   const items1 = [userId];
   const formattedName = onPress(analyticsLocations[9]).getFormattedName(stateFromStores);
@@ -74,11 +71,11 @@ function keyExtractor(type) {
 function SettingsSecureFramesFooter() {
   let obj = navigation(secureFramesVerifiedUserIds[17]);
   const token = obj.useToken(callback(secureFramesVerifiedUserIds[6]).modules.mobile.TABLE_ROW_HEIGHT);
-  let obj1 = navigation(secureFramesVerifiedUserIds[18]);
+  obj1 = navigation(secureFramesVerifiedUserIds[18]);
   navigation = obj1.useNavigation();
   const items = [navigation];
   callback = React.useCallback((userId) => {
-    navigation.navigate(outer1_6.SECURE_FRAMES_VERIFIED_DEVICES, { userId });
+    navigation.navigate(closure_1_6.SECURE_FRAMES_VERIFIED_DEVICES, { userId });
   }, items);
   let obj2 = navigation(secureFramesVerifiedUserIds[19]);
   secureFramesVerifiedUserIds = obj2.useSecureFramesVerifiedUserIds();
@@ -114,30 +111,29 @@ function SettingsSecureFramesFooter() {
   }
   return tmp8;
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, header: null, list: null };
-createCacheKey = { flexGrow: 1, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_16 };
+createCacheKey = { flexGrow: 1, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_24, gap: require("Themes").space.PX_8 };
-let obj1 = { marginTop: require("Themes").space.PX_24, gap: require("Themes").space.PX_8 };
-createCacheKey[2] = { flexGrow: 1, gap: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_8 };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { flexGrow: 1, gap: ThemesDefault.space.PX_8 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { USER: "USER" };
-let obj2 = { flexGrow: 1, gap: require("Themes").space.PX_8 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx");
+let obj2 = { flexGrow: 1, gap: ThemesDefault.space.PX_8 };
+const result = require("set").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/SettingsSecureFramesScreen.tsx");
 
 export default function SettingsSecureFramesScreen() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   obj = { variant: "heading-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["9Q/PQv"]);
   const items = [callback(Text.Text, obj), ];
-  const obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
+  obj1 = { variant: "text-sm/normal", color: "text-default", children: null };
   const intl2 = getSystemLocale.intl;
-  const obj2 = { helpArticle: null };
-  obj2[0] = getCurrentUserSigningKey.getSecureFramesHelpdeskArticle();
+  const obj2 = { helpArticle: getCurrentUserSigningKey.getSecureFramesHelpdeskArticle() };
   obj1[2] = intl2.format(getSystemLocale.t["8IwQfG"], obj2);
   items[1] = callback(Text.Text, obj1);
   obj[1] = items;

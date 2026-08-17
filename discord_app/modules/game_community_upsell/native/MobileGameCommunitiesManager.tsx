@@ -1,13 +1,15 @@
 // discord_app/modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx
-import initialize from "initialize";
-import set from "set";
-import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS";
-import "initialize";
-import { DetectableAppNames } from "../../local_app_detection/LocalAppDetectionTypes.tsx";
-import { DETECTABLE_GAME_TO_APPLICATION_ID_MAP } from "GameCommunityConfig.tsx";
-import { GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT } from "GameCommunityUpsellExperiment.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import DetectableAppNames from "DetectableAppNames" /* 13259 */;
+import GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT from "GAME_COMMUNITY_ADD_SERVER_ENTRY_EXPERIMENT" /* 13261 */;
+import DETECTABLE_GAME_TO_APPLICATION_ID_MAP from "DETECTABLE_GAME_TO_APPLICATION_ID_MAP" /* 15075 */;
+import fetchMobileGameCommunitiesAll from "fetchMobileGameCommunities" /* 15529 */;
+import closure_3 from "initialize" /* 13258 */;
+import closure_4 from "set" /* 15074 */;
+import { MAX_DISPLAYED_UPSELL_GUILDS as closure_5 } from "MAX_DISPLAYED_UPSELL_GUILDS" /* 15528 */;
 
-let require = arg1;
+require = arg1;
+initializeDefault;
 class MobileGameCommunitiesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -31,8 +33,8 @@ prototype["_fetchGameCommunities"] = function _fetchGameCommunities(result) {
   if (diff >= 86400000) {
     const dismissedGuildIds = store.getDismissedGuildIds();
     const _Array = Array;
-    const mobileGameCommunities = importAll(15529).fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), closure_5);
-    const obj3 = importAll(15529);
+    const mobileGameCommunities = fetchMobileGameCommunitiesAll.fetchMobileGameCommunities(gameIdsForDetectedGames, Array.from(dismissedGuildIds), closure_5);
+    const obj3 = fetchMobileGameCommunitiesAll;
   }
 };
 prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
@@ -40,7 +42,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
   if (GameCommunityAddServerEntryExperiment.getConfig({ location: "MobileGameCommunitiesManager" }).enabled) {
     if (0 === store.getLastFetchedAt()) {
       const _Object = Object;
-      const values = Object.values(initialize.getUserAgnosticState().apps);
+      const values = Object.values(closure_3.getUserAgnosticState().apps);
       if (values.some((lastScannedAt) => {
         lastScannedAt = undefined;
         if (lastScannedAt != null) {
@@ -51,8 +53,8 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
         const obj = {};
         const ALL_DETECTABLE_APP_NAMES = DetectableAppNames.ALL_DETECTABLE_APP_NAMES;
         for (const item10021 of ALL_DETECTABLE_APP_NAMES) {
-          let tmp6 = initialize;
-          obj[item10021] = initialize.isAppInstalled(item10021);
+          let tmp6 = closure_3;
+          obj[item10021] = closure_3.isAppInstalled(item10021);
           continue;
         }
         const self = this;
@@ -69,6 +71,6 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
   }
 };
 const mobileGameCommunitiesManager = new MobileGameCommunitiesManager();
-let result = require("MAX_DISPLAYED_UPSELL_GUILDS").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
+let result = require("set").fileFinishedImporting("modules/game_community_upsell/native/MobileGameCommunitiesManager.tsx");
 
 export default mobileGameCommunitiesManager;

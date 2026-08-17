@@ -1,13 +1,15 @@
 // discord_app/modules/interactions/InteractionStore.tsx
-import _slicedToArray from "_slicedToArray";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { Store } from "initialize";
-import { trackInvite } from "../../actions/MessageActionCreators.tsx";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { InteractionState } from "InteractionTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import InteractionState from "InteractionState" /* 4809 */;
+import trackInviteDefault from "trackInvite" /* 7427 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
 
-const require = arg1;
+require = arg1;
 function deleteNonce(first) {
   if (null == dependencyMap4[first]) {
     delete tmp[tmp2];
@@ -26,19 +28,20 @@ function deleteNonce(first) {
     delete tmp[tmp2];
   }
 }
-const result = 5 * require("set").Millis.MINUTE;
-const result1 = 10 * require("set").Millis.SECOND;
+const result = 5 * setDefault.Millis.MINUTE;
+const result1 = 10 * setDefault.Millis.SECOND;
 let closure_8 = {};
 let closure_9 = {};
 let closure_10 = {};
 let c11;
 let c12;
 let closure_13 = {};
+const Store = initializeDefault.Store;
 class InteractionStore extends Store {
 }
 const prototype = InteractionStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, ensureGuildLoaded);
+  this.waitFor(closure_4, closure_5);
 };
 prototype["getInteraction"] = function getInteraction(closure_0) {
   let tmp2 = null;
@@ -107,12 +110,12 @@ prototype["getInteractionDebugContext"] = function getInteractionDebugContext(no
   }
 };
 InteractionStore.displayName = "InteractionStore";
-const interactionStore = new InteractionStore(require("dispatcher"), {
+const interactionStore = new InteractionStore(dispatcherDefault, {
   LOGOUT: function handleInit() {
-    let closure_8 = {};
-    let closure_9 = {};
-    let closure_10 = {};
-    let closure_13 = {};
+    closure_8 = {};
+    closure_9 = {};
+    closure_10 = {};
+    closure_13 = {};
     const timerId = setInterval(() => {
       const timestamp = Date.now();
       const entries = Object.entries(closure_13);
@@ -130,13 +133,6 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
     }, closure_6);
   },
   INTERACTION_QUEUE: function handleInteractionQueue(arg0) {
-    let data;
-    let messageId;
-    let nonce;
-    let onCancel;
-    let onCreate;
-    let onFailure;
-    let onSuccess;
     ({ nonce, messageId } = arg0);
     ({ data, onCreate, onCancel, onSuccess, onFailure } = arg0);
     if (null != messageId) {
@@ -191,11 +187,6 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
     }
   },
   INTERACTION_FAILURE: function handleInteractionFailure(arg0) {
-    let errorCode;
-    let errorMessage;
-    let nonce;
-    let reasonCode;
-    let status;
     ({ nonce, errorCode, errorMessage, status, reasonCode } = arg0);
     if (null == nonce) {
       return false;
@@ -315,8 +306,8 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
     }
   },
   INTERACTION_IFRAME_MODAL_CLOSE: function handleIFrameModalClose() {
-    let c11;
-    let c12;
+    c11 = undefined;
+    c12 = undefined;
   },
   INTERACTION_IFRAME_MODAL_KEY_CREATE: function handleIFrameModalKeyCreate(modalKey) {
     modalKey = modalKey.modalKey;
@@ -349,10 +340,8 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
     }
   },
   EMBEDDED_ACTIVITY_UPDATE_V2: function handleEmbeddedActivityUpdateV2(instance) {
-    let interaction;
-    let messageId;
     let sessionId;
-    let importDefault;
+    importDefault = undefined;
     const participants = instance.instance.participants;
     sessionId = store.getSessionId();
     importDefault = store.getId();
@@ -394,8 +383,8 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
             tmp18 = "channelId" in interaction.data;
           }
           if (tmp18) {
-            trackInvite.deleteMessage(interaction.data.channelId, messageId, true);
-            const obj2 = trackInvite;
+            trackInviteDefault.deleteMessage(interaction.data.channelId, messageId, true);
+            const obj2 = trackInviteDefault;
           }
         }
         tmp7 = null != interaction && null != messageId;
@@ -403,7 +392,7 @@ const interactionStore = new InteractionStore(require("dispatcher"), {
     }
   }
 });
-const result2 = require("ensureGuildLoaded").fileFinishedImporting("modules/interactions/InteractionStore.tsx");
+const result2 = require("set").fileFinishedImporting("modules/interactions/InteractionStore.tsx");
 
 export default interactionStore;
 export const STALE_INTERACTION_INTERVAL = result;

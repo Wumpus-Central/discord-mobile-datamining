@@ -1,10 +1,11 @@
 // discord_app/modules/instant_invite/native/InstantInviteManager.native.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
 let require = arg1;
+initializeDefault;
 let prototype = function InstantInviteManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     NATIVE_APP_INSTANT_INVITE_GDM_SHARE_FAILED() {
       return applyArgumentsResult.shareInviteFailed();
@@ -22,6 +23,6 @@ let prototype = function InstantInviteManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-const result = require("getSystemLocale").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/InstantInviteManager.native.tsx");
 
 export default prototype;

@@ -1,31 +1,26 @@
 // discord_app/modules/message_request/native/RestrictedBlockedMessageGroup.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { PressableBase } from "../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { toggle: null };
-createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, marginVertical: require("Themes").space.PX_8 };
+createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, marginVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedBlockedMessageGroup.tsx");
 
 export default function RestrictedBlockedMessageGroup(arg0) {
-  let c1;
-  let messages;
-  let require;
-  let tmp3;
   ({ messages, renderMessage: require } = arg0);
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback3();
   [tmp3, c1] = callback(React.useState(false), 2);
   callback = React.useCallback(() => {
     _undefined((arg0) => !arg0);
@@ -38,7 +33,7 @@ export default function RestrictedBlockedMessageGroup(arg0) {
   obj[4] = callback2(Text.Text, obj);
   const children = [callback2(PressableBase.PressableOpacity, obj), ];
   if (mapped) {
-    mapped = messages.map((id) => outer1_5(outer1_4, { children: callback(id) }, id.id));
+    mapped = messages.map((id) => closure_1_5(closure_1_4, { children: callback(id) }, id.id));
   }
   children[1] = mapped;
   return closure_6(View, { children });

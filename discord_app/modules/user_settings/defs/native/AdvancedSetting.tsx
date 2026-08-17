@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/AdvancedSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import SettingsIcon from "SettingsIcon" /* 7355 */;
+import createToggle from "createToggle" /* 10669 */;
 import { SettingsAdvancedScreen } from "../../advanced/native/SettingsAdvancedScreen.tsx";
 
 obj = {
@@ -9,16 +12,16 @@ obj = {
     return intl.string(getSystemLocale.t["8/udY0"]);
   },
   parent: null,
-  IconComponent: require("SettingsIcon").SettingsIcon,
+  IconComponent: SettingsIcon.SettingsIcon,
   screen: obj
 };
 obj = {
-  route: require("ME").UserSettingsSections.ADVANCED,
+  route: ME.UserSettingsSections.ADVANCED,
   getComponent() {
     return SettingsAdvancedScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/AdvancedSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AdvancedSetting.tsx");
 
 export default route;

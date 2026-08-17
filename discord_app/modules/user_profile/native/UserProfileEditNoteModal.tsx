@@ -1,20 +1,18 @@
 // discord_app/modules/user_profile/native/UserProfileEditNoteModal.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { PlatformTypes } from "../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
-import { NavigationStack } from "../../../design/components/Navigator/native/Navigator.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import NavigationStack from "NavigationStack" /* 6312 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("module_5260").fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditNoteModal.tsx");
 
 export default function UserProfileEditNoteModal(arg0) {
-  let dependencyMap;
-  let importDefault;
-  let require;
   ({ userId: require, onSave: importDefault, onBack: dependencyMap } = arg0);
   function handleClose() {
-    let arr = outer1_1(outer1_2[2]);
+    let arr = closure_1_1(closure_1_2[2]);
     arr = arr.pop();
     if (dependencyMap != null) {
       dependencyMap();
@@ -28,7 +26,7 @@ export default function UserProfileEditNoteModal(arg0) {
     obj = { height: 56 };
   }
   obj[2] = obj;
-  const obj1 = { root: null };
+  obj1 = { root: null };
   const obj2 = { title: null, headerTitle: null, headerLeft: null, render: null };
   let intl = tmp2(1236).intl;
   obj2[0] = intl.string(getSystemLocale.t.sHHsOM);
@@ -41,7 +39,7 @@ export default function UserProfileEditNoteModal(arg0) {
   tmp2Result = tmp2(6314);
   obj2[2] = tmp2Result.getHeaderCloseButton(handleClose);
   obj2[3] = function render() {
-    return handleClose(outer1_0(outer1_2[8]).default, { userId: closure_0, onSave: closure_1, onClose: handleClose });
+    return handleClose(closure_1_0(closure_1_2[8]).default, { userId: closure_0, onSave: closure_1, onClose: handleClose });
   };
   obj1[0] = obj2;
   obj[3] = obj1;

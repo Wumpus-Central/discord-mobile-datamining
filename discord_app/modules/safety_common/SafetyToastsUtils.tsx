@@ -1,17 +1,17 @@
 // discord_app/modules/safety_common/SafetyToastsUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { SafetyToastType } from "SafetyToastType";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getNickname } from "../../utils/NicknameUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getNicknameDefault from "getNickname" /* 4796 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { SafetyToastType } from "SafetyToastType" /* 5430 */;
 
-const require = arg1;
-const result = require("SafetyToastType").fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 
 export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOCK_SUCCESS, closure_0, c1) {
   user = user.getUser(closure_0);
   channel = channel.getChannel(c1);
-  let obj = getNickname;
+  let obj = getNicknameDefault;
   let guild_id;
   if (channel != null) {
     guild_id = channel.guild_id;
@@ -37,7 +37,7 @@ export const getSafetyToastTypeContent = function getSafetyToastTypeContent(BLOC
     return intl17.formatToPlainString(getSystemLocale.t.THExKa, obj);
   } else if (tmp8.BLOCK_SUCCESS === BLOCK_SUCCESS) {
     const intl16 = getSystemLocale.intl;
-    const obj1 = { username: null };
+    obj1 = { username: null };
     obj1[0] = name;
     return intl16.formatToPlainString(getSystemLocale.t.XXPrIs, obj1);
   } else if (tmp8.UNBLOCK_SUCCESS === BLOCK_SUCCESS) {

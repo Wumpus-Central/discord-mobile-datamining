@@ -1,16 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx
-import addApplication from "addApplication";
-import { HelpdeskArticles } from "ME";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { result } from "../resolveMessageContentColors.tsx";
-import { getMessageAuthorWithProcessedColor } from "useAuthorWithProcessedColor.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import resultDefault from "result" /* 8178 */;
+import getMessageAuthorWithProcessedColor from "getMessageAuthorWithProcessedColor" /* 8185 */;
+import closure_3 from "addApplication" /* 4478 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("result").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/InGameMessageNuxSystemMessage.tsx");
 
 export const createInGameMessageNuxSystemMessage = function createInGameMessageNuxSystemMessage(message) {
-  let roleStyle;
-  let theme;
   message = message.message;
   ({ theme, roleStyle } = message);
   let str = message.applicationId;
@@ -31,7 +29,7 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     obj[2] = roleStyle;
     obj[1] = tmp(8187)(obj);
     obj[2] = application.name;
-    const obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
+    obj1 = { action: "bindOpenUrl", url: null, linkColor: null, medium: true };
     obj1[1] = tmp(1993).getArticleURL(HelpdeskArticles.SOCIAL_LAYER_CONNECTIONS);
     obj1[2] = tmp3.linkColor;
     obj[3] = obj1;
@@ -41,5 +39,5 @@ export const createInGameMessageNuxSystemMessage = function createInGameMessageN
     const merged = Object.assign(tmp(8188)(message));
     return obj2;
   }
-  tmp3 = result(theme);
+  tmp3 = resultDefault(theme);
 };

@@ -1,15 +1,15 @@
 // discord_app/modules/saved_messages/SavedMessageHelpers.native.tsx
-import EntitlementFeatureNames from "EntitlementFeatureNames";
-import getTimeSafe from "getTimeSafe";
-import { AbortCodes } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "getTimeSafe" /* 10850 */;
+import { AbortCodes } from "ME" /* 676 */;
 
 const require = arg1;
 function _addOrUpdateSavedMessage() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
       if (savedMessage === 2) {
         savedMessage = 3;
@@ -37,7 +37,7 @@ function _addOrUpdateSavedMessage() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp5;
+              dependencyMap = tmp5;
               let lib = tmp2;
               let displayToast;
               lib = undefined;
@@ -81,8 +81,8 @@ function _addOrUpdateSavedMessage() {
                       code = body.code;
                     }
                   }
-                  if (code === outer1_5.TOO_MANY_SAVED_MESSAGES) {
-                    const displayToast = tmp5;
+                  if (code === closure_1_5.TOO_MANY_SAVED_MESSAGES) {
+                    closure_0 = tmp5;
                     let obj = displayToast(_undefined[3]);
                     if (obj.isForLaterLimitUpgradable("addOrUpdateSavedMessage")) {
                       let tmp8Result = tmp8(tmp7[8]);
@@ -103,8 +103,8 @@ function _addOrUpdateSavedMessage() {
                       const intl5 = tmp6(tmp7[10]).intl;
                       obj[3] = intl5.string(tmp6(tmp7[10]).t.ZGbTcy);
                       obj[4] = function onCancel() {
-                        const SavedMessageSortTypes = tmp5(outer1_2[12]).SavedMessageSortTypes;
-                        return tmp5(outer1_2[11]).showForLaterModal(tmp5 ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
+                        const SavedMessageSortTypes = callback(closure_1_2[12]).SavedMessageSortTypes;
+                        return callback(closure_1_2[11]).showForLaterModal(callback ? SavedMessageSortTypes.REMINDER : SavedMessageSortTypes.BOOKMARK);
                       };
                       tmp8Result.show(obj);
                       const tmp6Result = tmp6(tmp7[3]);
@@ -112,7 +112,7 @@ function _addOrUpdateSavedMessage() {
                     }
                     return null;
                   } else {
-                    const obj1 = { key: "SAVED_MESSAGE_CREATE_ERROR", IconComponent: null, content: null };
+                    obj1 = { key: "SAVED_MESSAGE_CREATE_ERROR", IconComponent: null, content: null };
                     obj1[1] = displayToast(_undefined[14]).CircleErrorIcon;
                     let message;
                     if (body != null) {
@@ -173,7 +173,7 @@ function _addOrUpdateSavedMessage() {
     iter.next();
     return iter;
   });
-  const _addOrUpdateSavedMessage = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -185,12 +185,10 @@ function _addOrUpdateSavedMessage() {
 function _removeSavedMessage() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -217,7 +215,7 @@ function _removeSavedMessage() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
+              closure_2 = tmp5;
               let callback2 = tmp2;
               let callback;
               callback2 = undefined;
@@ -310,7 +308,7 @@ function _removeSavedMessage() {
     iter.next();
     return iter;
   });
-  const _removeSavedMessage = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -319,7 +317,7 @@ function _removeSavedMessage() {
   }
   return applyArgumentsResult;
 }
-const result = require("ME").fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");
+const result = require("set").fileFinishedImporting("modules/saved_messages/SavedMessageHelpers.native.tsx");
 
 export const addOrUpdateSavedMessage = function addOrUpdateSavedMessage(arg0) {
   const self = this;

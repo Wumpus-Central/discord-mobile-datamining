@@ -1,13 +1,13 @@
 // discord_app/modules/user/UserStoreUtils.tsx
-import { Environments } from "Environments";
-import ME from "ME";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import set from "set" /* 2 */;
+import _modDef38 from "module_38" /* 38 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import Environments2 from "Environments" /* 1929 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
+const Environments = Environments2.Environments;
 ({ PREMIUM_TYPE_NONE: c4, UserFlags: c5 } = ME);
-const result = require("module_38").fileFinishedImporting("modules/user/UserStoreUtils.tsx");
+const result = set.fileFinishedImporting("modules/user/UserStoreUtils.tsx");
 
 export const validatePremiumType = function validatePremiumType(arg0, arg1, premiumType) {
   let tmp = arg0;
@@ -15,7 +15,7 @@ export const validatePremiumType = function validatePremiumType(arg0, arg1, prem
     tmp = undefined === arg1;
   }
   if (!tmp) {
-    00038__(premiumType === arg1, "Premium type should not change for non-staff users");
+    _modDef38(premiumType === arg1, "Premium type should not change for non-staff users");
   }
 };
 export const getEnv = function getEnv(arg0) {

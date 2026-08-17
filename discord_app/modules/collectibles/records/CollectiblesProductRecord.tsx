@@ -1,20 +1,17 @@
 // discord_app/modules/collectibles/records/CollectiblesProductRecord.tsx
-import _slicedToArray from "_slicedToArray";
-import fromServer from "fromServer";
-import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse";
-import "fromServer";
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items";
-import ME from "ME";
+import getPricesFromServerDefault from "getPricesFromServer" /* 4517 */;
+import fromServerDefault from "fromServer" /* 5310 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "fromServer" /* 5304 */;
+import createCollectiblesItemsFromServerResponse from "createCollectiblesItemsFromServerResponse" /* 5305 */;
+import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_7 } from "items" /* 678 */;
+import ME from "ME" /* 676 */;
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getPricesFromServer } from "../../skus/utils/getPricesFromServer.tsx";
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 ({ createCollectiblesItemsFromServerResponse: c5, transformSKUToCollectiblesItem: closure_6 } = createCollectiblesItemsFromServerResponse);
-({ PREMIUM_TYPE_NONE: metroImportAll, PriceSetAssignmentPurchaseTypes: c9 } = ME);
+fromServerDefault;
+({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: c9 } = ME);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
   constructor(arg0) {
@@ -25,16 +22,6 @@ class CollectiblesProductRecord extends tmp3 {
   }
 }
 CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
-  let badge_override;
-  let bundled_products;
-  let category_sku_id;
-  let hide_badge;
-  let is_first_party;
-  let premium_type;
-  let preview_assets;
-  let prices;
-  let type;
-  let variants;
   ({ premium_type, bundled_products, preview_assets, variants } = arg0);
   ({ type, category_sku_id, prices, badge_override, hide_badge, is_first_party } = arg0);
   let obj = Object.create(null);
@@ -51,7 +38,7 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   obj.premiumType = tmp8;
   obj.categorySkuId = category_sku_id;
   obj.isCategoryReward = closure_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === merged.sku_id);
-  obj.prices = getPricesFromServer(prices);
+  obj.prices = getPricesFromServerDefault(prices);
   obj.items = callback(merged.items);
   let mapped;
   if (bundled_products != null) {
@@ -83,7 +70,6 @@ CollectiblesProductRecord["fromServer"] = function fromServer(arg0) {
   return tmp4;
 };
 CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefrontProductRecord(skus) {
-  let previewAssetPaths;
   const _require = skus;
   let first = skus.skus[0];
   if (null != first) {
@@ -135,11 +121,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
       if (type === str2) {
         skus = skus.skus;
         str2 = skus.map((tenantMetadata) => {
-          let item;
-          let items;
-          let premiumType;
-          let previewAssetPaths;
-          const skus = tenantMetadata;
+          skus = tenantMetadata;
           tenantMetadata = tenantMetadata.tenantMetadata;
           let collectibles;
           if (tenantMetadata != null) {
@@ -148,12 +130,12 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
           if (null == collectibles) {
             return null;
           } else {
-            let obj = outer1_6(tenantMetadata);
+            let obj = closure_1_6(tenantMetadata);
             if (obj == null) {
               obj = {};
             }
             ({ items, item } = obj);
-            const first = outer1_3(tenantMetadata.selectedOptions, 1)[0];
+            first = closure_1_3(tenantMetadata.selectedOptions, 1)[0];
             obj = { baseVariantName: null, baseVariantSkuId: null, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "e", type: "Array", premiumType: "accessibilityRole", items: "apply", categorySkuId: false, isCategoryReward: false, prices: false, previewAssets: false, googleSkuIds: false, eligibleOffers: false, variants: false, bundledProducts: false, isFirstParty: false };
             obj[0] = skus.name;
             obj[1] = first.id;
@@ -172,9 +154,9 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             obj[3] = str2;
             ({ id: obj2[4], id: obj2[5], name: obj2[6], summary: obj2[7] } = tenantMetadata);
             ({ type: obj2[9], premiumType } = collectibles);
-            items = outer1_8;
+            items = closure_1_8;
             premiumType = null;
-            if (premiumType !== outer1_8) {
+            if (premiumType !== closure_1_8) {
               premiumType = collectibles.premiumType;
             }
             obj[10] = premiumType;
@@ -192,22 +174,22 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               str3 = "";
             }
             obj[12] = str3;
-            obj[13] = outer1_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
+            obj[13] = closure_1_7.some((rewardSkuId) => rewardSkuId.rewardSkuId === tenantMetadata.id);
             ({ prices: obj2[14], previewAssetPaths } = tenantMetadata);
             obj[15] = previewAssetPaths;
             let googleSkuIds = tenantMetadata.googleSkuIds;
             if (googleSkuIds == null) {
               obj = {};
-              obj[outer1_9.MOBILE] = "";
-              obj[outer1_9.MOBILE_PREMIUM_TIER_2] = "";
+              obj[closure_1_9.MOBILE] = "";
+              obj[closure_1_9.MOBILE_PREMIUM_TIER_2] = "";
               googleSkuIds = obj;
             }
             obj[16] = googleSkuIds;
             obj[20] = collectibles.isFirstParty;
-            if (typeof outer1_10 !== "function") {
+            if (typeof closure_1_10 !== "function") {
               HermesBuiltin.throwTypeError();
             }
-            const tmp16 = new outer1_14(obj, tmp, premiumType, items, premiumType, item);
+            const tmp16 = new closure_1_14(obj, tmp, premiumType, items, premiumType, item);
             // ThrowIfThisInitialized (0x7c)
             ({ baseVariantName: tmp16.baseVariantName, baseVariantSkuId: tmp16.baseVariantSkuId, variantLabel: tmp16.variantLabel, variantValue: tmp16.variantValue } = obj);
             return tmp16;
@@ -240,7 +222,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
             const obj = { type: null, premiumType: null, name: null, skuId: null, summary: null, prices: null };
             obj[0] = collectibles.type;
             let premiumType = null;
-            tmp3 = fromServer;
+            tmp3 = closure_4;
             if (collectibles.premiumType !== closure_8) {
               premiumType = collectibles.premiumType;
             }
@@ -273,10 +255,6 @@ prototype = function CollectiblesVariantProductRecord(arg0) {
 class prototype extends CollectiblesProductRecord {
 }
 prototype["fromServer"] = function fromServer(arg0) {
-  let base_variant_name;
-  let base_variant_sku_id;
-  let variant_label;
-  let variant_value;
   ({ base_variant_name, base_variant_sku_id, variant_label, variant_value } = arg0);
   let obj = Object.create(null);
   obj = {};
@@ -295,7 +273,7 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ baseVariantName: tmp5.baseVariantName, baseVariantSkuId: tmp5.baseVariantSkuId, variantLabel: tmp5.variantLabel, variantValue: tmp5.variantValue } = obj);
   return tmp2;
 };
-const result = require("createCollectiblesItemsFromServerResponse").fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesProductRecord.tsx");
 
 export default CollectiblesProductRecord;
 export const CollectiblesVariantProductRecord = prototype;

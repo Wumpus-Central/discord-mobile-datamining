@@ -1,15 +1,13 @@
 // discord_app/modules/soundboard/SoundboardTypes.tsx
-const result = require("set").fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/soundboard/SoundboardTypes.tsx");
 
 export const SoundButtonOverlay = { NONE: 0, [0]: "NONE", PLAY: 1, [1]: "PLAY", ADD: 2, [2]: "ADD", SOUNDMOJI: 3, [3]: "SOUNDMOJI" };
 export const AnalyticsSoundType = { ENTRY: "entry_sound", EXIT: "exit_sound", DEFAULT: "default" };
 export const AnalyticsChangeType = { ADDED: "added", UPDATED: "updated", REMOVED: "removed" };
 export const AnalyticsSoundSource = { DEFAULT: "default", CUSTOM: "custom" };
 export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, c0) {
-  let emoji_id;
-  let emoji_name;
-  let sound_id;
-  let user_id;
   let flag = body.available;
   ({ sound_id, emoji_id, emoji_name, user_id } = body);
   const obj = {};
@@ -26,11 +24,6 @@ export const soundboardSoundFromAPI = function soundboardSoundFromAPI(body, c0) 
   return obj;
 };
 export const soundboardSoundToAPI = function soundboardSoundToAPI(arg0) {
-  let emojiId;
-  let emojiName;
-  let guildId;
-  let soundId;
-  let userId;
   ({ soundId, guildId, emojiId, emojiName, userId } = arg0);
   const obj = {};
   const merged = Object.assign(Object.assign(arg0, Object.create(null)));

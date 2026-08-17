@@ -1,43 +1,35 @@
 // discord_app/components_native/premium/PremiumUpsellAlert.tsx
-import usePremiumUpsellConfig from "usePremiumUpsellConfig";
-import importAllResult from "AccessibilityAnnouncer";
-import get_ActivityIndicator from "registerAsset";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getIcons } from "items";
-import GuildFeatures from "GuildFeatures";
-import jsxProd from "registerAsset";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/08472_registerAsset.js";
-import { registerAsset } from "../../../_runtime/08473_registerAsset.js";
-import { registerAsset } from "../../../_runtime/09359_registerAsset.js";
-import { registerAsset } from "../../../_runtime/09360_registerAsset.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { createCacheKey } from "../../design/components/Styles/native/createStyles.tsx";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { useMessageMaxLength } from "../../modules/messages/useMessageMaxLength.tsx";
-import { usePremiumTrialOffer } from "../../modules/premium/hooks/usePremiumTrialOffer.android.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import createCacheKey2 from "createCacheKey" /* 4661 */;
+import Text from "Text" /* 4734 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
+import useMessageMaxLengthDefault from "useMessageMaxLength" /* 8462 */;
+import registerAssetDefault from "registerAsset" /* 8472 */;
+import registerAssetDefault2 from "registerAsset" /* 8473 */;
+import registerAssetDefault3 from "registerAsset" /* 9359 */;
+import registerAssetDefault4 from "registerAsset" /* 9360 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { getIcons } from "items" /* 7946 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_6;
-let map1;
-const require = arg1;
+require = arg1;
 class PremiumUpsellItem {
   constructor(arg0) {
     upsellItem = global.upsellItem;
     ({ alertWidth, imageStyle, style } = global);
     obj = require("createCacheKey");
-    legacyClassComponentStyles = obj.useLegacyClassComponentStyles(Fragment);
+    legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
     obj = { style: items, children: null };
     items = [, , ];
     items[0] = legacyClassComponentStyles.premiumUpsellContainer;
@@ -59,8 +51,6 @@ class PremiumUpsellItem {
   }
 }
 function GlobalEmojiUpsell(arg0) {
-  let alertWidth;
-  let useTier0Description;
   ({ alertWidth, useTier0Description } = arg0);
   let obj = usePremiumTrialOffer;
   const premiumTrialOffer = obj.usePremiumTrialOffer();
@@ -94,14 +84,14 @@ function GlobalEmojiUpsell(arg0) {
     formatResult1 = formatResult;
     if (useTier0Description) {
       const intl2 = tmp(1236).intl;
-      const obj1 = { planName: null };
+      obj1 = { planName: null };
       obj1[0] = tmp(4039).getPremiumTypeDisplayName(closure_13.TIER_0);
       formatResult1 = intl2.format(tmp(1236).t.kWBwlJ, obj1);
       const tmpResult1 = tmp(4039);
     }
   }
   const obj2 = { alertWidth, upsellItem: null };
-  const obj3 = { image: registerAsset, title: null, description: null };
+  const obj3 = { image: registerAssetDefault, title: null, description: null };
   const intl4 = tmp(1236).intl;
   obj3[1] = intl4.string(getSystemLocale.t.UNtcBV);
   obj3[2] = formatResult1;
@@ -110,7 +100,7 @@ function GlobalEmojiUpsell(arg0) {
 }
 function AnimatedEmojiUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: registerAsset, title: null, description: null };
+  obj = { image: registerAssetDefault2, title: null, description: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.F6rmyq);
   const intl2 = getSystemLocale.intl;
@@ -129,10 +119,10 @@ function AnimatedEmojiUpsell(alertWidth) {
   return closure_14(PremiumUpsellItem, obj);
 }
 function PremiumGuildIdentityUpsell(alertWidth) {
-  let obj = createCacheKey;
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createCacheKey);
+  let obj = createCacheKey2;
+  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
-  const tmp5 = useTheme();
+  const tmp5 = useThemeDefault();
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
@@ -149,9 +139,9 @@ function PremiumGuildIdentityUpsell(alertWidth) {
   return tmp6(tmp7, obj);
 }
 function CustomProfilesUpsell(alertWidth) {
-  let obj = createCacheKey;
-  obj = { alertWidth: alertWidth.alertWidth, imageStyle: obj.useLegacyClassComponentStyles(createCacheKey).customProfileUpsellImage, upsellItem: null };
-  obj = { image: registerAsset, title: null, description: null };
+  let obj = createCacheKey2;
+  obj = { alertWidth: alertWidth.alertWidth, imageStyle: obj.useLegacyClassComponentStyles(closure_17).customProfileUpsellImage, upsellItem: null };
+  obj = { image: registerAssetDefault3, title: null, description: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.rTY76D);
   const intl2 = getSystemLocale.intl;
@@ -161,10 +151,10 @@ function CustomProfilesUpsell(alertWidth) {
 }
 function CustomAppIconsUpsell(alertWidth) {
   let iconSource = alertWidth.imageSource;
-  let obj = createCacheKey;
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createCacheKey);
+  let obj = createCacheKey2;
+  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
   const arr = getIcons();
-  const tmp4 = useTheme();
+  const tmp4 = useThemeDefault();
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: null, upsellItem: null };
   const items = [legacyClassComponentStyles.customAppIconsUpsellImage, ];
   let prop;
@@ -186,7 +176,7 @@ function CustomAppIconsUpsell(alertWidth) {
 }
 function GlobalStickerUpsell(alertWidth) {
   let obj = { alertWidth: alertWidth.alertWidth, upsellItem: null };
-  obj = { image: registerAsset, title: null, description: null };
+  obj = { image: registerAssetDefault4, title: null, description: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.jn2mBl);
   const intl2 = getSystemLocale.intl;
@@ -205,11 +195,11 @@ function GlobalStickerUpsell(alertWidth) {
   return closure_14(PremiumUpsellItem, obj);
 }
 function LongerMessageUpsell(alertWidth) {
-  let obj = createCacheKey;
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createCacheKey);
+  let obj = createCacheKey2;
+  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
-  const tmp5 = useTheme();
-  const tmp6 = useMessageMaxLength();
+  const tmp5 = useThemeDefault();
+  const tmp6 = useMessageMaxLengthDefault();
   const tmp7 = closure_14;
   const tmp8 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
@@ -226,10 +216,10 @@ function LongerMessageUpsell(alertWidth) {
   return tmp7(tmp8, obj);
 }
 function GuildCapUpsell(alertWidth) {
-  let obj = createCacheKey;
-  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(createCacheKey);
+  let obj = createCacheKey2;
+  const legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
   obj = { alertWidth: alertWidth.alertWidth, imageStyle: legacyClassComponentStyles.largerUpsellImage, upsellItem: null };
-  const tmp5 = useTheme();
+  const tmp5 = useThemeDefault();
   const tmp6 = closure_14;
   const tmp7 = PremiumUpsellItem;
   if (obj3.isThemeDark(tmp5)) {
@@ -246,11 +236,9 @@ function GuildCapUpsell(alertWidth) {
   return tmp6(tmp7, obj);
 }
 function UploadUpsell(arg0) {
-  let alertWidth;
-  let item;
   ({ item, alertWidth } = arg0);
   let obj = initialize;
-  const items = [CHANNEL_SIDEBAR_WIDTH];
+  const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => dataSavingMode.dataSavingMode);
   const children = [callback2(UpsellItem, { isInitial: true, upsellItem: item, alertWidth }, constants.UPLOAD), ];
   let tmp6Result = null;
@@ -275,24 +263,24 @@ class PremiumUpsellAlert {
   constructor(arg0) {
     initialUpsellKey = global.initialUpsellKey;
     analyticsLocation = global.analyticsLocation;
-    c2 = undefined;
-    c3 = undefined;
+    closure_2 = undefined;
+    closure_3 = undefined;
     analyticsLocations = undefined;
-    usePremiumUpsellConfig = undefined;
-    useRef = undefined;
+    closure_5 = undefined;
+    closure_6 = undefined;
     tmp = initialUpsellKey;
-    tmp2 = c2;
+    tmp2 = closure_2;
     ({ analyticsLocations, analyticsProperties, onClose, imageSource } = global);
     obj = require("createCacheKey");
-    legacyClassComponentStyles = obj.useLegacyClassComponentStyles(Fragment);
-    c2 = legacyClassComponentStyles;
+    legacyClassComponentStyles = obj.useLegacyClassComponentStyles(closure_17);
+    closure_2 = legacyClassComponentStyles;
     tmp4 = analyticsLocation;
     size = require("useWindowDimensions")();
     diff = Math.min(0.9 * Math.min(size.width, size.height), c29) - c30;
-    c3 = diff;
+    closure_3 = diff;
     obj2 = require("initialize");
     items = [];
-    items[0] = Image;
+    items[0] = closure_8;
     stateFromStores = obj2.useStateFromStores(items, () => currentUser.getCurrentUser());
     obj3 = require("usePremiumUpsellConfig");
     upsellItems = obj3.getUpsellItems();
@@ -307,34 +295,31 @@ class PremiumUpsellAlert {
     analyticsLocations2 = tmp7(analyticsLocations, require("QUICK_SWITCHER").PREMIUM_UPSELL_ALERT).analyticsLocations;
     analyticsLocations = analyticsLocations2;
     tmp8 = require("useMountLayoutEffect")(() => {
-      let obj = analyticsLocation(legacyClassComponentStyles[37]);
+      obj = analyticsLocation(legacyClassComponentStyles[37]);
       obj = { type: "Nitro Upsell", location: analyticsLocation };
-      obj.track(outer1_9.OPEN_MODAL, obj);
+      obj.track(closure_1_9.OPEN_MODAL, obj);
     });
     obj5 = require("usePremiumUpsellConfig");
     premiumUpsellConfig = obj5.usePremiumUpsellConfig(initialUpsellKey, analyticsLocations2, analyticsLocation);
     useTier0UpsellContent = premiumUpsellConfig.useTier0UpsellContent;
     obj = { analyticsLocation, analyticsProperties, useTier0UpsellContent };
-    usePremiumUpsellConfig = obj;
+    closure_5 = obj;
     ({ getNitroText, onViewAllPerks } = premiumUpsellConfig);
-    useRef = analyticsLocations.useRef(obj);
+    closure_6 = analyticsLocations.useRef(obj);
     effect = analyticsLocations.useEffect(() => {
       closure_6.current = obj;
     });
     items1 = [];
     items1[0] = analyticsLocations2;
     effect1 = analyticsLocations.useEffect(() => {
-      let analyticsLocation;
-      let analyticsProperties;
-      let useTier0UpsellContent;
       ({ analyticsLocation, analyticsProperties, useTier0UpsellContent } = ref.current);
-      let obj = analyticsLocation(legacyClassComponentStyles[37]);
+      obj = analyticsLocation(legacyClassComponentStyles[37]);
       obj = {};
       const merged = Object.assign(analyticsProperties);
       obj.location = analyticsLocation;
       obj.location_stack = analyticsLocations2;
-      obj.sku_id = useTier0UpsellContent ? outer1_12.TIER_0 : outer1_12.TIER_2;
-      obj.track(outer1_9.PREMIUM_UPSELL_VIEWED, obj);
+      obj.sku_id = useTier0UpsellContent ? closure_1_12.TIER_0 : closure_1_12.TIER_2;
+      obj.track(closure_1_9.PREMIUM_UPSELL_VIEWED, obj);
     }, items1);
     tmp12 = jsx;
     obj1 = { confirmColor: null, confirmText: null, renderConfirmIcon: null, cancelText: null, onClose: null, onConfirm: null, children: null };
@@ -342,11 +327,9 @@ class PremiumUpsellAlert {
     obj1[0] = require("Button").ButtonColors.GREEN;
     obj1[1] = getNitroText;
     obj1[2] = function renderConfirmIcon() {
-      const obj = { source: null, style: null, resizeMode: "contain" };
-      obj[0] = analyticsLocation(legacyClassComponentStyles[43]);
-      obj[1] = legacyClassComponentStyles.nitroWheel;
+      obj = { source: analyticsLocation(legacyClassComponentStyles[43]), style: legacyClassComponentStyles.nitroWheel, resizeMode: "contain" };
       const tmp = analyticsLocation(legacyClassComponentStyles[42]);
-      if (outer1_10.GLOBAL_EMOJI !== initialUpsellKey) {
+      if (closure_1_10.GLOBAL_EMOJI !== initialUpsellKey) {
         if (tmp4.ANIMATED_EMOJI !== tmp3) {
           if (tmp4.CUSTOM_PROFILES !== tmp3) {
             if (tmp4.PREMIUM_GUILD_PROFILE !== tmp3) {
@@ -357,7 +340,7 @@ class PremiumUpsellAlert {
           }
         }
       }
-      return outer1_14(analyticsLocation(legacyClassComponentStyles[42]), obj);
+      return closure_1_14(analyticsLocation(legacyClassComponentStyles[42]), obj);
     };
     intl = require("getSystemLocale").intl;
     obj1[3] = intl.string(require("getSystemLocale").t.cpT0Cq);
@@ -365,7 +348,7 @@ class PremiumUpsellAlert {
     obj1[5] = onViewAllPerks;
     obj2 = { style: legacyClassComponentStyles.carousel, width: diff, pageIndicatorStyle: legacyClassComponentStyles.pageIndicatorStyle, children: null };
     tmp14 = require("render");
-    obj2[3] = sorted.map((key) => outer1_14(outer1_18, { isInitial: initialUpsellKey === key.key, upsellItem: key, alertWidth: c3 }, key.key));
+    obj2[3] = sorted.map((key) => closure_1_14(closure_1_18, { isInitial: initialUpsellKey === key.key, upsellItem: key, alertWidth: c3 }, key.key));
     tmp12Result = jsx(tmp14, obj2);
     tmp16 = UpsellTypes;
     if (UpsellTypes.GLOBAL_EMOJI === initialUpsellKey) {
@@ -459,7 +442,7 @@ let c4 = importAllResult;
 ({ PremiumSubscriptionSKUs: closure_12, PremiumTypes: map1 } = GuildFeatures);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 createCacheKey = { carousel: { alignItems: "center" }, upsellContainer: { alignItems: "center" }, premiumUpsellContainer: { alignItems: "center", paddingHorizontal: 8 }, nitroWheel: { width: 32, height: 32, marginVertical: -8 }, upsellImage: { height: 80, width: 120 }, upsellTitle: { marginBottom: 8, textAlign: "center" }, premiumUpsellTitle: null, upsellDescription: null, premiumUpsellDescription: null, pageIndicatorStyle: null, largerUpsellImage: null, customProfileUpsellImage: null, loadingIndicator: null, customAppIconUpsellLightImage: null, customAppIconsUpsellImage: null };
-createCacheKey = { marginVertical: require("Themes").space.PX_8, textAlign: "center" };
+createCacheKey = { marginVertical: ThemesDefault.space.PX_8, textAlign: "center" };
 createCacheKey[6] = createCacheKey;
 createCacheKey[7] = { textAlign: "center" };
 createCacheKey[8] = { textAlign: "center" };
@@ -467,17 +450,15 @@ createCacheKey[9] = { marginTop: 16 };
 createCacheKey[10] = { height: 154, width: 226 };
 createCacheKey[11] = { width: 240, height: 194 };
 createCacheKey[12] = { height: 170 };
-createCacheKey[13] = { borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderWidth: 2 };
-let obj1 = { borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderWidth: 2 };
-createCacheKey[14] = { height: 80, width: 80, borderRadius: require("Themes").radii.lg };
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+createCacheKey[13] = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2 };
+let obj1 = { borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2 };
+createCacheKey[14] = { height: 80, width: 80, borderRadius: ThemesDefault.radii.lg };
+let closure_17 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class UpsellItem extends PureComponent {
 }
 UpsellItem.prototype["render"] = function render() {
-  let activeTitle;
-  let description;
-  const tmp = createCacheKey(this.context);
+  const tmp = callback4(this.context);
   const props = this.props;
   const upsellItem = props.upsellItem;
   let passiveTitle = upsellItem.passiveTitle;
@@ -500,8 +481,8 @@ UpsellItem.contextType = require("ManaContext").ThemeContext;
 UpsellItem.defaultProps = { isInitial: false };
 let c29 = 500;
 let c30 = 32;
-let obj2 = { height: 80, width: 80, borderRadius: require("Themes").radii.lg };
-let result = require("get ActivityIndicator").fileFinishedImporting("components_native/premium/PremiumUpsellAlert.tsx");
+let obj2 = { height: 80, width: 80, borderRadius: ThemesDefault.radii.lg };
+let result = require("set").fileFinishedImporting("components_native/premium/PremiumUpsellAlert.tsx");
 
 export default PremiumUpsellAlert;
 export { PremiumUpsellItem };

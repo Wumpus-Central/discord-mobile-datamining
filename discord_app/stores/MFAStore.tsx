@@ -1,12 +1,15 @@
 // discord_app/stores/MFAStore.tsx
-import { Store } from "initialize";
-import { apply } from "../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import setSecondaryTokenAll from "setSecondaryToken" /* 707 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c3 = false;
 let closure_4 = [];
 let c5 = "";
 let c6 = false;
 let closure_7 = { viewNonce: "", regenerateNonce: "" };
+const Store = initializeDefault.Store;
 class MFAStore extends Store {
 }
 const prototype = MFAStore.prototype;
@@ -32,43 +35,41 @@ Object.defineProperty(prototype, "hasSeenBackupPrompt", {
   set: undefined
 });
 MFAStore.displayName = "MFAStore";
-const mFAStore = new MFAStore(require("dispatcher"), {
+const mFAStore = new MFAStore(dispatcherDefault, {
   MFA_ENABLE_SUCCESS: function handleEnableSuccess(token) {
     token = token.token;
     if (undefined !== token) {
-      importAll(707).setToken(token);
-      const obj = importAll(707);
+      setSecondaryTokenAll.setToken(token);
+      const obj = setSecondaryTokenAll;
     }
     const codes = token.codes;
   },
   MFA_DISABLE_SUCCESS: function handleDisableSuccess(token) {
-    importAll(707).setToken(token.token);
+    setSecondaryTokenAll.setToken(token.token);
   },
   MFA_SMS_TOGGLE: function handleSMSToggle() {
-    let c3 = true;
+    c3 = true;
   },
   MFA_SMS_TOGGLE_COMPLETE: function handleSMSToggleComplete() {
-    let c3 = false;
+    c3 = false;
   },
   MFA_CLEAR_BACKUP_CODES: function handleClearBackupCodes() {
-    let closure_4 = [];
+    closure_4 = [];
   },
   MFA_VIEW_BACKUP_CODES: function handleGetBackupCodes(arg0) {
-    let codes;
-    let key;
     ({ codes, key } = arg0);
-    let closure_4 = apply.sortBy(codes, "code");
+    closure_4 = applyDefault.sortBy(codes, "code");
   },
   MFA_SEND_VERIFICATION_KEY: function handleSendVerificationEmail(nonces) {
     nonces = nonces.nonces;
   },
   MFA_SEEN_BACKUP_CODE_PROMPT: function handleSeenBackupPrompt() {
-    let c6 = true;
+    c6 = true;
   },
   CONNECTION_OPEN() {
 
   }
 });
-const result = require("initialize").fileFinishedImporting("stores/MFAStore.tsx");
+const result = require("set").fileFinishedImporting("stores/MFAStore.tsx");
 
 export default mFAStore;

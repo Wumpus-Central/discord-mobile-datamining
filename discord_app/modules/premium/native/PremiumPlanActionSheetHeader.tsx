@@ -1,29 +1,24 @@
 // discord_app/modules/premium/native/PremiumPlanActionSheetHeader.tsx
-import "set";
-import { View } from "registerAsset";
-import GuildFeatures from "GuildFeatures";
-import { getPremiumGradientColor } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import keys from "keys" /* 691 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { getPremiumGradientColor } from "items" /* 7403 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ PremiumTypes: c4, SubscriptionIntervalTypes: c5 } = GuildFeatures);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let items = [{ scaleX: -1 }];
 let closure_9 = createCacheKey.createStyles({ header: { height: 112, justifyContent: "center", alignItems: "center" }, logoContainer: { position: "absolute", top: 16, left: 16 }, imgWumpus: { position: "absolute", height: 90 }, imgWumpusRight: { transform: items }, imgWumpusBottom: { bottom: 0 }, discountPill: { marginTop: 10 } });
-const result = require("GuildFeatures").fileFinishedImporting("modules/premium/native/PremiumPlanActionSheetHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanActionSheetHeader.tsx");
 
 export default function PremiumPlanActionSheetHeader(arg0) {
-  let discountOffer;
-  let premiumType;
-  let trialOffer;
   ({ premiumType, trialOffer, discountOffer } = arg0);
   const tmp = callback();
   let tmp2 = null != trialOffer;
@@ -33,7 +28,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     if (subscriptionTrial != null) {
       skuId = subscriptionTrial.skuId;
     }
-    let obj = getPremiumPlanItem;
+    let obj = getPremiumPlanItemDefault;
     tmp2 = skuId === obj.getSkuIdForPremiumType(premiumType);
   }
   getPremiumPlanItem;
@@ -47,11 +42,8 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     }
     tmp10 = hasItem;
   }
-  obj = { style: tmp.header, colors: null, start: null, end: null, accessible: true, accessibilityRole: "header", accessibilityLabel: null, children: null };
-  obj[1] = getPremiumGradientColor(premiumType);
-  obj[2] = keys.HorizontalGradient.START;
-  obj[3] = keys.HorizontalGradient.END;
-  const tmp14 = LinearGradient;
+  obj = { style: tmp.header, colors: getPremiumGradientColor(premiumType), start: keys.HorizontalGradient.START, end: keys.HorizontalGradient.END, accessible: true, accessibilityRole: "header", accessibilityLabel: null, children: null };
+  const tmp14 = LinearGradientDefault;
   obj[6] = getPremiumPlanItem.getPremiumTypeDisplayName(premiumType);
   if (TIER_0.TIER_0 === premiumType) {
     let tmp13Result = tmp13(7404);
@@ -75,7 +67,7 @@ export default function PremiumPlanActionSheetHeader(arg0) {
     } else if (tmp15.TIER_2 === premiumType) {
       tmp13Result1 = tmp13(7408);
     }
-    const obj1 = { source: null, resizeMode: "contain" };
+    obj1 = { source: null, resizeMode: "contain" };
     obj1[0] = tmp13Result1;
     const items1 = [closure_7(tmp13Result, obj1), , ];
     let tmp22Result = null;

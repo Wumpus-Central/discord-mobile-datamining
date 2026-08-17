@@ -1,40 +1,32 @@
 // discord_app/design/components/Input/native/Input.native.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ErrorText } from "../../ErrorText/native/ErrorText.native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import ErrorText from "ErrorText" /* 8073 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { inputRow: null, labelWrapper: null, label: null, description: null, error: null };
-createCacheKey = { flexDirection: "row", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_4 };
+createCacheKey = { flexDirection: "row", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginBottom: require("Themes").space.PX_4, flexDirection: "row", alignItems: "center" };
-let obj1 = { marginBottom: require("Themes").space.PX_4, flexDirection: "row", alignItems: "center" };
-createCacheKey[2] = { marginBottom: require("Themes").space.PX_4 };
-let obj2 = { marginBottom: require("Themes").space.PX_4 };
-createCacheKey[3] = { marginTop: require("Themes").space.PX_4 };
-let obj3 = { marginTop: require("Themes").space.PX_4 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_4, width: "auto" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj4 = { marginTop: require("Themes").space.PX_4, width: "auto" };
-const result = require("jsxProd").fileFinishedImporting("design/components/Input/native/Input.native.tsx");
+createCacheKey[1] = { marginBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+let obj1 = { marginBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
+createCacheKey[2] = { marginBottom: ThemesDefault.space.PX_4 };
+let obj2 = { marginBottom: ThemesDefault.space.PX_4 };
+createCacheKey[3] = { marginTop: ThemesDefault.space.PX_4 };
+let obj3 = { marginTop: ThemesDefault.space.PX_4 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_4, width: "auto" };
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let obj4 = { marginTop: ThemesDefault.space.PX_4, width: "auto" };
+const result = require("set").fileFinishedImporting("design/components/Input/native/Input.native.tsx");
 
 export const Input = function Input(arg0) {
-  let children;
-  let containerStyle;
-  let description;
-  let errorMessage;
-  let label;
-  let labelId;
-  let labelTrailing;
-  let required;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   ({ label, labelTrailing, labelId, description, errorMessage, required } = arg0);
   ({ children, containerStyle } = arg0);
   if (typeof label === "string") {
@@ -61,7 +53,7 @@ export const Input = function Input(arg0) {
     items[2] = tmp15Result;
     tmp15Result = null;
     if (null != errorMessage) {
-      const obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp.error;
       obj1[1] = errorMessage;
       tmp15Result = tmp15(ErrorText.ErrorText, obj1);

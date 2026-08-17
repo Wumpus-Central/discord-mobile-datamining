@@ -1,6 +1,8 @@
 // discord_app/modules/checkout/CheckoutError.tsx
-import { RevenueError } from "prototype";
+import set from "set" /* 2 */;
+import prototype2 from "prototype" /* 10650 */;
 
+const RevenueError = prototype2.RevenueError;
 const prototype = function CheckoutError(arg0) {
   tmp = new tmp(arg0, new.target);
   // ThrowIfThisInitialized (0x7c)
@@ -9,6 +11,6 @@ const prototype = function CheckoutError(arg0) {
 }.prototype;
 class prototype extends RevenueError {
 }
-const result = require("set").fileFinishedImporting("modules/checkout/CheckoutError.tsx");
+const result = set.fileFinishedImporting("modules/checkout/CheckoutError.tsx");
 
 export const CheckoutError = prototype;

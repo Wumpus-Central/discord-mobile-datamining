@@ -1,16 +1,14 @@
 // discord_app/modules/favorites/native/FavoritesGuildUpsellSheet.tsx
-import noop from "noop";
-import { MAX_FAVORITE_CHANNELS } from "date";
-import { FAVORITES } from "ME";
-import jsxProd from "jsxProd";
-import { useTrackFavoritesGuildUpsellModalOpened } from "../analytics/useTrackFavoritesGuildUpsellModalOpened.tsx";
-import { messagesProxy } from "../intl/FavoritesGuild.messages.js";
+import messagesProxyDefault from "messagesProxy" /* 3079 */;
+import useTrackFavoritesGuildUpsellModalOpenedDefault from "useTrackFavoritesGuildUpsellModalOpened" /* 9984 */;
+import closure_3 from "noop" /* 19 */;
+import { MAX_FAVORITE_CHANNELS } from "date" /* 1429 */;
+import { FAVORITES } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let result = require("ME").fileFinishedImporting("modules/favorites/native/FavoritesGuildUpsellSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildUpsellSheet.tsx");
 
 export default function FavoritesGuildUpsellSheet(limit) {
   let FREE_FAVORITE_LIMIT = limit.limit;
@@ -26,13 +24,13 @@ export default function FavoritesGuildUpsellSheet(limit) {
     str2 = "no_access";
   }
   analyticsLocations = undefined;
-  let importDefault;
-  analyticsLocations = useTrackFavoritesGuildUpsellModalOpened(str).analyticsLocations;
+  importDefault = undefined;
+  analyticsLocations = useTrackFavoritesGuildUpsellModalOpenedDefault(str).analyticsLocations;
   importDefault = React.useCallback(() => {
     callback(4342).hideActionSheet(analyticsLocations(9982).FAVORITES_UPSELL_SHEET_KEY);
   }, []);
   const intl = analyticsLocations(1236).intl;
-  const tmp8 = messagesProxy;
+  const tmp8 = messagesProxyDefault;
   let obj = { title: intl.string(tmp5 ? tmp8.hINqUs : tmp8.aA0vO8), description: null, illustration: null, actions: null };
   const intl2 = tmp7(1236).intl;
   if ("limit_reached" === str2) {
@@ -50,23 +48,22 @@ export default function FavoritesGuildUpsellSheet(limit) {
   obj[2] = intl3.string(analyticsLocations(1236).t.pj0XBN);
   obj[3] = function onPress() {
     callback();
-    const obj = { analyticsLocations, premiumFeatureCardOrder: null };
-    obj[1] = analyticsLocations(outer1_2[15]).PremiumFeatureCardOrder.TIER_2_LEADING;
-    callback(outer1_2[14])(obj);
+    const obj = { analyticsLocations, premiumFeatureCardOrder: analyticsLocations(closure_1_2[15]).PremiumFeatureCardOrder.TIER_2_LEADING };
+    callback(closure_1_2[14])(obj);
   };
   const items = [closure_6(analyticsLocations(4745).Button, obj), ];
   const intl4 = tmp7(1236).intl;
-  const tmp3Result = messagesProxy;
-  const obj1 = { children: null };
+  const tmp3Result = messagesProxyDefault;
+  obj1 = { children: null };
   items[1] = closure_6(analyticsLocations(4745).Button, {
     size: "lg",
     variant: "secondary",
     text: intl4.string("limit_reached" === str2 ? tmp3Result.PprSsy : tmp3Result["+dSwhE"]),
     onPress() {
       callback();
-      const result = analyticsLocations(outer1_2[16]).setNextFavoritesGuildViewSource("upsell_modal");
-      const obj = analyticsLocations(outer1_2[16]);
-      analyticsLocations(outer1_2[17]).transitionToGuild(outer1_5);
+      const result = analyticsLocations(closure_1_2[16]).setNextFavoritesGuildViewSource("upsell_modal");
+      const obj = analyticsLocations(closure_1_2[16]);
+      analyticsLocations(closure_1_2[17]).transitionToGuild(closure_1_5);
     }
   });
   obj1[0] = items;

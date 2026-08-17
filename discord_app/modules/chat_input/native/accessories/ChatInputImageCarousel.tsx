@@ -1,29 +1,29 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputImageCarousel.tsx
-import handleInit from "handleInit";
-import { DraftType } from "handleChanged";
-import map from "map";
-import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
+import closure_3 from "handleInit" /* 7527 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_5 from "map" /* 4824 */;
+import { useChatShowingAutoComplete as closure_6 } from "updateChatInputContainerHeight" /* 8682 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
-const memoResult = require("noop").memo(function ChatInputImageCarousel(canUpload) {
+const memoResult = importAllResult.memo(function ChatInputImageCarousel(canUpload) {
   canUpload = canUpload.canUpload;
   const channelId = canUpload.channelId;
-  let dependencyMap;
+  dependencyMap = undefined;
   let tmp = callback(canUpload.screenIndex);
   dependencyMap = tmp;
   let obj = canUpload(589);
-  const items = [map, handleInit];
+  const items = [closure_5, closure_3];
   const items1 = [channelId, canUpload, tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let tmp = null;
-    if (!c2) {
+    if (!closure_2) {
       let uploads = null;
       if (canUpload) {
         uploads = null;
-        if (null == outer1_3.getActiveCommand(channelId)) {
-          uploads = outer1_5.getUploads(tmp5, outer1_4.ChannelMessage);
+        if (null == closure_1_3.getActiveCommand(channelId)) {
+          uploads = closure_1_5.getUploads(tmp5, closure_1_4.ChannelMessage);
         }
         tmp5 = channelId;
       }
@@ -40,6 +40,6 @@ const memoResult = require("noop").memo(function ChatInputImageCarousel(canUploa
   }
   return tmp4;
 });
-const result = require("handleChanged").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputImageCarousel.tsx");
 
 export default memoResult;

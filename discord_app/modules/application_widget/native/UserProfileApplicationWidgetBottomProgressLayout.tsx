@@ -1,40 +1,36 @@
 // discord_app/modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { resolvedValuesFromUserApplicationIdentityProfile } from "../../../../discord_common/js/packages/application-widget-renderer/src/index.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 12190 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { root: null, image: null, content: null, progressContainer: null, progress: null, textContent: null, textLeft: null, progressText: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 48, height: 48, borderRadius: require("Themes").radii.sm, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-obj1 = { width: 48, height: 48, borderRadius: require("Themes").radii.sm, overflow: "hidden", borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[2] = { flex: 1, gap: require("Themes").space.PX_4, minWidth: 0 };
-let obj2 = { flex: 1, gap: require("Themes").space.PX_4, minWidth: 0 };
-createCacheKey[3] = { width: "100%", height: 6, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-let obj3 = { width: "100%", height: 6, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-createCacheKey[4] = { height: 6, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.ICON_STRONG };
-let obj4 = { height: 6, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.ICON_STRONG };
-createCacheKey[5] = { flexDirection: "row", justifyContent: "space-between", gap: require("Themes").space.PX_4 };
+createCacheKey[1] = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+obj1 = { width: 48, height: 48, borderRadius: ThemesDefault.radii.sm, overflow: "hidden", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey[2] = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
+let obj2 = { flex: 1, gap: ThemesDefault.space.PX_4, minWidth: 0 };
+createCacheKey[3] = { width: "100%", height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+let obj3 = { width: "100%", height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+createCacheKey[4] = { height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.ICON_STRONG };
+let obj4 = { height: 6, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.ICON_STRONG };
+createCacheKey[5] = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
 createCacheKey[6] = { flex: 1, minWidth: 0 };
 createCacheKey[7] = { flexShrink: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { flexDirection: "row", justifyContent: "space-between", gap: require("Themes").space.PX_4 };
-const result = require("jsxProd").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { flexDirection: "row", justifyContent: "space-between", gap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/application_widget/native/UserProfileApplicationWidgetBottomProgressLayout.tsx");
 
 export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
-  let bottomConfig;
-  let resolveFieldValue;
   ({ bottomConfig, resolveFieldValue } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const objective = bottomConfig.components.objective;
   let image;
   if (objective != null) {
@@ -44,7 +40,7 @@ export default function UserProfileApplicationWidgetBottomProgressLayout(arg0) {
   const fieldValue = resolveFieldValue(image, items);
   let obj = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton = obj.resolveSingleStringOrSkeleton(objective, "name", resolveFieldValue);
-  let obj1 = resolvedValuesFromUserApplicationIdentityProfile;
+  obj1 = resolvedValuesFromUserApplicationIdentityProfile;
   const singleStringOrSkeleton1 = obj1.resolveSingleStringOrSkeleton(objective, "description", resolveFieldValue);
   const progress = bottomConfig.components.progress;
   let current;

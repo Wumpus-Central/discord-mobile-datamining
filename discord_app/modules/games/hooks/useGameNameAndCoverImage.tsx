@@ -1,6 +1,8 @@
 // discord_app/modules/games/hooks/useGameNameAndCoverImage.tsx
-import { importDefaultResult1 } from "useGame.tsx";
-const result = require("set").fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
+import set from "set" /* 2 */;
+import importDefaultResult1 from "importDefaultResult1" /* 5378 */;
+
+const result = set.fileFinishedImporting("modules/games/hooks/useGameNameAndCoverImage.tsx");
 
 export default function useGameNameAndCoverImage(arg0, arg1, size) {
   let obj = importDefaultResult1;

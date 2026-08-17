@@ -1,5 +1,5 @@
 // discord_app/modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/hooks/useShowNitroUpsellCallback.tsx");

@@ -1,6 +1,8 @@
 // discord_app/lib/guild/GuildThreadSubscriptions.tsx
-import { priv } from "../../../_runtime/01405_priv.js";
-let result = require("set").fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
+import set2 from "set" /* 2 */;
+import privDefault from "priv" /* 1405 */;
+
+let result = set2.fileFinishedImporting("lib/guild/GuildThreadSubscriptions.tsx");
 class GuildThreadSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -34,7 +36,7 @@ prototype["getSubscribedThreadIds"] = function getSubscribedThreadIds() {
 prototype["_get"] = function _get(arg0) {
   let tmp = this._subscriptions[arg0];
   if (tmp == null) {
-    tmp = new priv({ max: 3, updateAgeOnGet: true });
+    tmp = new privDefault({ max: 3, updateAgeOnGet: true });
   }
   return tmp;
 };

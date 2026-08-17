@@ -1,18 +1,13 @@
 // discord_app/modules/oauth2/native/AuthorizeScopes.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function Scope(arg0) {
-  let error;
-  let isFake;
-  let text;
   ({ text, error, isFake } = arg0);
   const tmp = callback2();
   const intl = getSystemLocale.intl;
@@ -36,11 +31,11 @@ function Scope(arg0) {
   if (isFake) {
     obj = { style: null, color: null, size: "refresh_sm" };
     obj[0] = tmp.fakeScopeIcon;
-    obj[1] = Themes.colors.TEXT_MUTED;
+    obj[1] = ThemesDefault.colors.TEXT_MUTED;
     let tmp10Result = tmp10(tmp6(7341).CircleXIcon, obj);
   } else {
-    const obj1 = { color: null, size: "refresh_sm" };
-    obj1[0] = Themes.colors.TEXT_MUTED;
+    obj1 = { color: null, size: "refresh_sm" };
+    obj1[0] = ThemesDefault.colors.TEXT_MUTED;
     tmp10Result = tmp10(tmp6(4335).CircleCheckIcon, obj1);
   }
   obj[3] = tmp10Result;
@@ -63,16 +58,12 @@ function Scope(arg0) {
   obj[3] = items;
   return closure_5(View, obj);
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ scopesContainer: { flexDirection: "column", gap: 16 }, scopes: { flexDirection: "column", gap: 16 }, scopeContainer: { flexDirection: "row" }, scope: { flex: 1, flexDirection: "column", justifyContent: "center" }, iconWrapper: { marginRight: 12, width: 20, height: 20 }, fakeScopeIcon: { opacity: 0.6 } });
-const result = require("jsxProd").fileFinishedImporting("modules/oauth2/native/AuthorizeScopes.tsx");
+const result = require("set").fileFinishedImporting("modules/oauth2/native/AuthorizeScopes.tsx");
 
 export default function AuthorizeScopes(accountScopes) {
-  let application;
-  let importDefault;
-  let integrationType;
-  let isTrustedName;
-  let requestedScopes;
   accountScopes = accountScopes.accountScopes;
   ({ requestedScopes, errors: importDefault, isTrustedName } = accountScopes);
   ({ application, integrationType } = accountScopes);
@@ -101,17 +92,17 @@ export default function AuthorizeScopes(accountScopes) {
     obj[0] = application.name;
     obj[2] = intl.format(_1Hz_Sl, obj);
     const items = [callback(tmp4(4734).Text, obj), ];
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.scopes;
     const mapped = accountScopes.map((nextResult) => {
-      let closure_0 = nextResult;
-      const scopeNames = accountScopes(outer1_2[10]).getScopeNames(nextResult, closure_0);
+      closure_0 = nextResult;
+      const scopeNames = accountScopes(closure_1_2[10]).getScopeNames(nextResult, closure_0);
       return scopeNames.map((text) => {
         const obj = { text, error: null };
         let tmp3;
         if (0 === arg1) {
           let first;
-          if (outer1_1 != null) {
+          if (closure_1_1 != null) {
             if (tmp4[closure_0] != null) {
               first = tmp8[0];
             }
@@ -119,7 +110,7 @@ export default function AuthorizeScopes(accountScopes) {
           tmp3 = first;
         }
         obj[1] = tmp3;
-        return outer2_4(outer2_7, obj, "" + closure_0 + "-" + arg1);
+        return closure_2_4(closure_2_7, obj, "" + closure_0 + "-" + arg1);
       });
     });
     const items1 = [mapped.flat(), , ];

@@ -1,8 +1,8 @@
 // discord_app/modules/forums/ForumPlatformHooks.native.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-let result = require("coerceMainRoute").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
+let result = require("set").fileFinishedImporting("modules/forums/ForumPlatformHooks.native.tsx");
 
 export default {
   useForumChannelSeenManager(guildId) {
@@ -36,7 +36,7 @@ export default {
         if (rootNavigationRef.isReady()) {
           rootNavigationRef.addListener("state", callback);
           return () => {
-            rootNavigationRef.removeListener("state", outer1_3);
+            rootNavigationRef.removeListener("state", closure_1_3);
           };
         }
       }

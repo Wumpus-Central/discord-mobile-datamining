@@ -1,12 +1,13 @@
 // discord_app/design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx
-import "noop";
-import { Image } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { AccessibilityAnnouncer } from "../../../../../shared.tsx";
-import { getIllustrationSource } from "../../index.tsx";
+import noopAll from "noop" /* 19 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import getIllustrationSource from "getIllustrationSource" /* 7907 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/components/Illustration/native/redesign/generated/GuildSubscriptionRemoval.tsx");
 
 export const getGuildSubscriptionRemovalSource = function getGuildSubscriptionRemovalSource(theme) {
   let obj = getIllustrationSource;

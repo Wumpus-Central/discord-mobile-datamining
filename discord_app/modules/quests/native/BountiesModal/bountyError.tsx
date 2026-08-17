@@ -1,15 +1,16 @@
 // discord_app/modules/quests/native/BountiesModal/bountyError.tsx
-import { BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS as closure_3 } from "BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS";
-import set from "dispatcher";
-import { registerAsset } from "../../../../../_runtime/08555_registerAsset.js";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { dispatcher } from "../../../toast/native/ToastActionCreators.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import registerAssetDefault from "registerAsset" /* 8555 */;
+import BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS from "BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS" /* 14374 */;
+import set from "set" /* 2 */;
 
+let closure_3 = BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS.BOUNTY_REWARD_CLAIM_FAILED_TOAST_DURATION_MS;
 let set = new Set([260021]);
 const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/bountyError.tsx");
 
 export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErrorToast(closure_0) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   let code;
   if (closure_0 != null) {
     code = closure_0.code;
@@ -25,7 +26,7 @@ export const openBountyRewardClaimErrorToast = function openBountyRewardClaimErr
       }
       obj = { key: "QUESTS_BOUNTIES_REWARD_CLAIM_FAILED", content: null, icon: null, toastDurationMs: null };
       obj[1] = message;
-      obj[2] = registerAsset;
+      obj[2] = registerAssetDefault;
       obj[3] = closure_3;
       obj.open(obj);
     }

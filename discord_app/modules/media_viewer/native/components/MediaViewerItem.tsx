@@ -1,29 +1,16 @@
 // discord_app/modules/media_viewer/native/components/MediaViewerItem.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { ScrollView } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import set from "set";
-import set from "get ActivityIndicator";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
 
 const require = arg1;
 let c4 = importAllResult;
-set = set.isAndroid();
+let closure_7 = set.isAndroid();
 let result = set.fileFinishedImporting("modules/media_viewer/native/components/MediaViewerItem.tsx");
 
 export const MediaViewerItem = importAllResult.memo((index) => {
-  let c10;
-  let c13;
-  let c9;
-  let entranceAnimationDriver;
-  let originLayout;
-  let renderMedia;
-  let source;
-  let tmp12;
-  let tmp2;
-  let tmp4;
-  let useItemVisible;
-  let zoomed;
   index = index.index;
   const onLongPress = index.onLongPress;
   const panGestureConfig = index.panGestureConfig;
@@ -31,8 +18,8 @@ export const MediaViewerItem = importAllResult.memo((index) => {
   ({ source, zoomed } = index);
   const windowWidth = index.windowWidth;
   const windowHeight = index.windowHeight;
-  let closure_7;
-  let closure_8;
+  closure_7 = undefined;
+  closure_8 = undefined;
   c9 = undefined;
   c10 = undefined;
   let ref;
@@ -43,12 +30,12 @@ export const MediaViewerItem = importAllResult.memo((index) => {
   let obscure;
   let field;
   let memo;
-  let c19;
+  closure_19 = undefined;
   let callback3;
   let callback4;
   let callback5;
   let callback6;
-  let closure_24;
+  closure_24 = undefined;
   let obj = zoomed;
   ({ entranceAnimationDriver, originLayout, renderMedia, useItemVisible } = index);
   closure_7 = zoomed.useRef(windowWidth);
@@ -135,7 +122,7 @@ export const MediaViewerItem = importAllResult.memo((index) => {
       }, 500);
     }
   }, items1);
-  let obj1 = index(panGestureConfig[8]);
+  obj1 = index(panGestureConfig[8]);
   let flattenSourceResult = obj1.flattenSource(source);
   if (flattenSourceResult == null) {
     flattenSourceResult = {};
@@ -146,13 +133,13 @@ export const MediaViewerItem = importAllResult.memo((index) => {
   const items2 = [index, field];
   memo = obj.useMemo(() => field.has(index), items2);
   const tmp19 = onLongPress(panGestureConfig[10])(flattenSourceResult.channelId);
-  c19 = tmp19;
+  closure_19 = tmp19;
   const items3 = [memo, index, onLongPress, tmp19];
   callback3 = obj.useCallback(() => {
     if (memo) {
       index(panGestureConfig[9]).removeSpoiler(index);
       const obj = index(panGestureConfig[9]);
-    } else if (!c19) {
+    } else if (!closure_19) {
       if (onLongPress != null) {
         tmp2();
       }
@@ -160,8 +147,6 @@ export const MediaViewerItem = importAllResult.memo((index) => {
   }, items3);
   const items4 = [zoomed, panGestureConfig];
   callback4 = obj.useCallback(() => {
-    let overlayEnabled;
-    let overlayEnabled2;
     if (!zoomed.get()) {
       ({ overlayEnabled, overlayEnabled: overlayEnabled2 } = panGestureConfig);
       const result = overlayEnabled.set(!overlayEnabled2.get());
@@ -169,8 +154,6 @@ export const MediaViewerItem = importAllResult.memo((index) => {
   }, items4);
   const items5 = [callback1, callback, zoomed];
   callback5 = obj.useCallback((arg0) => {
-    let absoluteX;
-    let absoluteY;
     ({ absoluteX, absoluteY } = arg0);
     if (zoomed.get()) {
       callback1();
@@ -242,8 +225,7 @@ export const MediaViewerItem = importAllResult.memo((index) => {
       tmp.current = true;
     }
   }, items8);
-  obj = { gesture: memo1, children: null };
-  obj[1] = windowHeight(onLongPress(panGestureConfig[12]), { entranceAnimationDriver, index, originLayout, panGestureConfig, renderMedia, source, windowWidth: tmp2, windowHeight: tmp4, useItemVisible });
+  obj = { gesture: memo1, children: windowHeight(tmp7(tmp8[12]), { entranceAnimationDriver, index, originLayout, panGestureConfig, renderMedia, source, windowWidth: tmp2, windowHeight: tmp4, useItemVisible }) };
   const tmp27 = windowHeight(index(panGestureConfig[11]).GestureDetector, obj);
   if (closure_7) {
     obj = { ref: null, style: null, minimumZoomScale: 1, maximumZoomScale: null, onZoomChanged: null, children: null };

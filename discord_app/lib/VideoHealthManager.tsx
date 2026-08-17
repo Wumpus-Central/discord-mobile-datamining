@@ -1,8 +1,13 @@
 // discord_app/lib/VideoHealthManager.tsx
-import { VideoToggleState } from "ME";
+import set2 from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import ME from "ME" /* 676 */;
+import isTablet from "isTablet" /* 4383 */;
+import sleep from "sleep" /* 4548 */;
+import dispatchAutoDisableVideoDefault from "dispatchAutoDisableVideo" /* 13097 */;
 import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { dispatchAutoDisableVideo } from "../modules/media_engine/dispatchAutoDisableVideo.tsx";
 
+const VideoToggleState = ME.VideoToggleState;
 class VideoHealthManager {
   constructor(arg0, arg1, arg2, arg3) {
     obj = Object.create(new.target.prototype);
@@ -75,14 +80,14 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
               const streamDisabledUsers2 = self.streamDisabledUsers;
               streamDisabledUsers2.add(arg0);
               self.currentVideoAutoToggleState[arg0] = VideoToggleState.DISABLED;
-              dispatchAutoDisableVideo(arg0, VideoToggleState.DISABLED);
+              dispatchAutoDisableVideoDefault(arg0, VideoToggleState.DISABLED);
               const result = self.startReenableBackoffTimer(arg0);
             } else if (self.currentVideoAutoToggleState[arg0] === VideoToggleState.AUTO_PROBING) {
               self.currentVideoAutoToggleState[arg0] = tmp7.AUTO_ENABLED;
               const logger2 = self.logger;
               const _HermesInternal2 = HermesInternal;
               logger2.info("acceptable conditions reached, will reset and send a AUTO_ENABLED for user " + arg0);
-              dispatchAutoDisableVideo(arg0, tmp7.AUTO_ENABLED);
+              dispatchAutoDisableVideoDefault(arg0, tmp7.AUTO_ENABLED);
             }
             if (self.probingUserId === arg0) {
               self.probingUserId = undefined;
@@ -96,8 +101,6 @@ prototype["updateFps"] = function updateFps(arg0, arg1, arg2) {
   }
 };
 prototype["startReenableBackoffTimer"] = function startReenableBackoffTimer(arg0) {
-  let expBackoffFactor;
-  let lastBackoffTime;
   let self = this;
   self = this;
   const _require = arg0;
@@ -168,7 +171,7 @@ prototype["reenableVideo"] = function reenableVideo(arr) {
     const result = self.stateCleanupBeforeEnable(arr);
     self.currentVideoAutoToggleState[arr] = VideoToggleState.AUTO_PROBING;
     self.probingUserId = arr;
-    dispatchAutoDisableVideo(arr, VideoToggleState.AUTO_PROBING);
+    dispatchAutoDisableVideoDefault(arr, VideoToggleState.AUTO_PROBING);
     flag = true;
     const obj = sleep;
   }
@@ -225,8 +228,8 @@ prototype["disable"] = function disable() {
     continue;
   }
 };
-VideoHealthManager.defaultConfig = { featureEnabled: require("isTablet").isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
-let obj = { featureEnabled: require("isTablet").isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
-let result = require("isTablet").fileFinishedImporting("lib/VideoHealthManager.tsx");
+VideoHealthManager.defaultConfig = { featureEnabled: isTablet.isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
+let obj = { featureEnabled: isTablet.isMobile, windowLength: 5, allowedPoorFpsRatio: 1, fpsThreshold: 5, backoffTimeSec: 15 };
+let result = set2.fileFinishedImporting("lib/VideoHealthManager.tsx");
 
 export { VideoHealthManager };

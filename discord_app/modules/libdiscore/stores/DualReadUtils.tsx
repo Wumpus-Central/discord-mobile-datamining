@@ -1,7 +1,9 @@
 // discord_app/modules/libdiscore/stores/DualReadUtils.tsx
-import { AnalyticEvents } from "ME";
-import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import set3 from "set" /* 2 */;
+import addAll from "add" /* 594 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import areSetsEqual from "areSetsEqual" /* 1433 */;
 
 function deepEqualImpl(set, set1, map, arg3) {
   if (set === set1) {
@@ -185,7 +187,7 @@ function validateRecord(arg0, obj, arg2) {
         let _Map = Map;
         let tmp7 = new.target;
         let tmp8 = new.target;
-        let map = new Map();
+        map = new Map();
         let tmp10 = map;
         let num = 0;
         let tmp11 = tmp2;
@@ -242,7 +244,7 @@ function isPlainObject(obj) {
 }
 function logErrorsToAnalytics(arg0, items) {
   if (0 !== items.length) {
-    const lastResult = importAll(594).last();
+    const lastResult = addAll.last();
     if (null != lastResult) {
       let value = map.get(arg0);
       if (value == null) {
@@ -267,7 +269,7 @@ function logErrorsToAnalytics(arg0, items) {
         }
         if (num2 < 3) {
           let tmp21 = (function generateErrorReport(value, items) {
-            let closure_0 = value;
+            closure_0 = value;
             function appendMismatch(arg0) {
               const items = [...arguments];
               const iter = items[Symbol.iterator]();
@@ -355,15 +357,15 @@ function logErrorsToAnalytics(arg0, items) {
                       }
                     }
                     let tmp18 = appendMismatch;
-                    let obj = { fieldName: null, primaryType: null, shadowType: null };
+                    obj = { fieldName: null, primaryType: null, shadowType: null };
                     let tmp19 = combined;
                     obj[0] = combined;
-                    let tmp20 = outer1_12;
+                    let tmp20 = closure_1_12;
                     let tmp21 = tmp8;
-                    obj[1] = outer1_12(tmp8);
-                    let tmp22 = outer1_12;
+                    obj[1] = closure_1_12(tmp8);
+                    let tmp22 = closure_1_12;
                     let tmp23 = tmp15;
-                    obj[2] = outer1_12(tmp16);
+                    obj[2] = closure_1_12(tmp16);
                     let tmp24 = appendMismatch(obj);
                   }
                 } else {
@@ -371,16 +373,16 @@ function logErrorsToAnalytics(arg0, items) {
                   obj = { fieldName: null, primaryType: null, shadowType: "missing" };
                   let tmp10 = combined;
                   obj[0] = combined;
-                  let tmp11 = outer1_12;
+                  let tmp11 = closure_1_12;
                   let tmp12 = tmp8;
-                  obj[1] = outer1_12(tmp8);
+                  obj[1] = closure_1_12(tmp8);
                   let tmp13 = appendMismatch(obj);
                 }
                 continue;
               }
             }
             function appendArrayMismatches(combined, primaryValue, shadowValue) {
-              let obj = value(appendDeepMismatches[4]);
+              obj = value(appendDeepMismatches[4]);
               if (!obj.areArraysShallowEqual(primaryValue, shadowValue)) {
                 obj = { fieldName: null, primaryType: "array", shadowType: "array", primaryArrayLength: null, secondaryArrayLength: null };
                 obj[0] = combined;
@@ -487,14 +489,14 @@ function logErrorsToAnalytics(arg0, items) {
             ({ numMissingKeys: obj5[2], numExtraKeys: obj5[3] } = tmp21);
             const _JSON = JSON;
             obj[4] = JSON.stringify(tmp21.mismatchedFields);
-            expandEventProperties.track(AnalyticEvents.LIBDISCORE_KV_DUAL_READ_ERROR, obj);
-            const obj4 = expandEventProperties;
+            expandEventPropertiesDefault.track(AnalyticEvents.LIBDISCORE_KV_DUAL_READ_ERROR, obj);
+            const obj4 = expandEventPropertiesDefault;
           }
         }
       }
       const obj3 = map;
     }
-    const obj2 = importAll(594);
+    const obj2 = addAll;
   }
 }
 function getType(obj) {
@@ -511,18 +513,19 @@ function getType(obj) {
     tmp2 = typeof obj;
   }
 }
+const AnalyticEvents = ME.AnalyticEvents;
 let map = new Map();
-let result = require("add").fileFinishedImporting("modules/libdiscore/stores/DualReadUtils.tsx");
+let result = set3.fileFinishedImporting("modules/libdiscore/stores/DualReadUtils.tsx");
 
 export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, arg2) {
   let items = [];
   let items1 = items;
   arg2((arg0, arg1) => {
-    outer1_7(items1, arg0, arg1);
+    closure_1_7(items1, arg0, arg1);
   });
   items1 = undefined;
   let items2;
-  let c2;
+  c2 = undefined;
   if (0 !== items.length) {
     items1 = [];
     items2 = [];
@@ -539,13 +542,11 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
           } else if ("record-mismatch" === type) {
             const mismatches = type.mismatches;
             const item = mismatches.forEach((type) => {
-              let primaryValue;
-              let shadowValue;
               if ("field-missing" !== type.type) {
-                let map;
+                map = undefined;
                 function impl(primaryValue, shadowValue) {
-                  const impl = shadowValue;
-                  if (!outer1_6(primaryValue, shadowValue)) {
+                  impl = shadowValue;
+                  if (!closure_1_6(primaryValue, shadowValue)) {
                     if (typeof primaryValue === "object") {
                       if (null !== primaryValue) {
                         if (typeof shadowValue === "object") {
@@ -567,7 +568,7 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
                         if (shadowValue instanceof Set) {
                           const items = [];
                           HermesBuiltin.arraySpread(primaryValue, 0);
-                          const items1 = [];
+                          items1 = [];
                           const found = items.filter((arg0) => !shadowValue.has(arg0));
                           HermesBuiltin.arraySpread(shadowValue, 0);
                           items1.filter((arg0) => !primaryValue.has(arg0)).length;
@@ -580,16 +581,16 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
                           const _Math = Math;
                           const bound = Math.min(primaryValue.length, shadowValue.length);
                           for (let num3 = 0; num3 < bound; num3 = num3 + 1) {
-                            let tmp32 = outer1_6;
+                            let tmp32 = closure_1_6;
                             let tmp33 = num3;
-                            if (!outer1_6(primaryValue[num3], shadowValue[num3])) {
+                            if (!closure_1_6(primaryValue[num3], shadowValue[num3])) {
                               let tmp34 = impl;
                               let tmp35 = impl(primaryValue[num3], shadowValue[num3]);
                             }
                           }
                         }
                       }
-                      if (outer1_9(primaryValue)) {
+                      if (closure_1_9(primaryValue)) {
                         if (tmp3(shadowValue)) {
                           const _Set3 = Set;
                           const _Object = Object;
@@ -598,7 +599,7 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
                           const _Object2 = Object;
                           const set1 = new Set(Object.keys(shadowValue));
                           const _Set5 = Set;
-                          const items2 = [];
+                          items2 = [];
                           HermesBuiltin.arraySpread(set1, HermesBuiltin.arraySpread(set, 0));
                           const set2 = new Set(items2);
                           const _Array3 = Array;
@@ -611,9 +612,9 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
                               hasItem = set1.has(tmp23);
                             }
                             if (hasItem) {
-                              let tmp26 = outer1_6;
+                              let tmp26 = closure_1_6;
                               let tmp27 = item10068;
-                              if (!outer1_6(arg0[tmp23], arg1[tmp23])) {
+                              if (!closure_1_6(arg0[tmp23], arg1[tmp23])) {
                                 let tmp28 = impl;
                                 let tmp29 = item10068;
                                 let tmp30 = impl(arg0[tmp23], arg1[tmp23]);
@@ -624,7 +625,7 @@ export const runDualReadValidation = function runDualReadValidation(arg0, Kkv, a
                           const arr = Array.from(set2);
                         }
                       }
-                      tmp3 = outer1_9;
+                      tmp3 = closure_1_9;
                     } else {
                       const _Date2 = Date;
                     }

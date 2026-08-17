@@ -1,13 +1,10 @@
 // discord_app/modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c4, Fragment: c5, jsxs: closure_6 } = jsxProd);
-let result = require("openMemberVerificationSuccessAlert").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/alerts/MemberVerificationAlertPending.tsx");
 
 export default function MemberVerificationAlertPending(guildId) {
   guildId = guildId.guildId;
@@ -18,7 +15,7 @@ export default function MemberVerificationAlertPending(guildId) {
     if (onClose != null) {
       tmp();
     }
-    let obj = guildId(outer1_2[2]);
+    let obj = guildId(closure_1_2[2]);
     obj = { guildId };
     const result = obj.openMemberVerificationCancelPendingAlert(obj);
   }, items);
@@ -35,7 +32,7 @@ export default function MemberVerificationAlertPending(guildId) {
   obj[1] = intl3.string(guildId(1236).t.f293OM);
   obj[2] = onClose;
   const items1 = [callback(guildId(4745).Button, obj), ];
-  const obj1 = { text: null, variant: "destructive", onPress: null };
+  obj1 = { text: null, variant: "destructive", onPress: null };
   const intl4 = guildId(1236).intl;
   obj1[0] = intl4.string(guildId(1236).t.mqtdmQ);
   obj1[2] = callback;

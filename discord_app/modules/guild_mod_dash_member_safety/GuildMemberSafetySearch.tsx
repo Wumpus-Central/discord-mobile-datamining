@@ -1,8 +1,8 @@
 // discord_app/modules/guild_mod_dash_member_safety/GuildMemberSafetySearch.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "isEqual";
-import { isEqual } from "../../../_runtime/04632_isEqual.js";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import isEqualDefault from "isEqual" /* 4632 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import set from "set" /* 2 */;
 import { GuildMemberFlags } from "../guild_automod/AutomodPermissionUtils.tsx";
 import { isCommunicationDisabled } from "../guild_communication_disabled/CommunicationDisabledUtils.tsx";
 
@@ -44,10 +44,7 @@ Object.defineProperty(prototype, "requiresUsernameMatch", {
   set: undefined
 });
 prototype["reset"] = function reset() {
-  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessible", selectedSourceInviteCode: "location", selectedSort: "View" };
-  obj[5] = new Set();
-  obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
-  obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
+  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "accessible", selectedSourceInviteCode: "location", selectedSort: "View" };
   this._searchState = obj;
   this.hasDefaultQuery = true;
 };
@@ -55,7 +52,7 @@ prototype["updateSearchState"] = function updateSearchState(arg0) {
   const merged = Object.assign(this._searchState);
   const merged1 = Object.assign(arg0);
   this._searchState = {};
-  this.hasDefaultQuery = isEqual(this._searchState, closure_4);
+  this.hasDefaultQuery = isEqualDefault(this._searchState, closure_4);
   return true;
 };
 prototype["resetSearchState"] = function resetSearchState() {
@@ -79,20 +76,8 @@ prototype["getSearchState"] = function getSearchState() {
   return this._searchState;
 };
 prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearchResults(joinedAtTimestamp) {
-  let query;
-  let requireCommunicationDisabled;
-  let requireUnusualAccountActivity;
-  let requireUnusualDmActivity;
-  let requireUsernameQuarantined;
-  let selectedAccountAgeOption;
-  let selectedJoinDateOption;
-  let selectedJoinSourceType;
-  let selectedRoleIds;
-  let selectedSourceInviteCode;
   ({ query, requireUnusualDmActivity, requireCommunicationDisabled, requireUnusualAccountActivity, requireUsernameQuarantined, selectedRoleIds, selectedJoinDateOption, selectedAccountAgeOption, selectedSourceInviteCode, selectedJoinSourceType } = this._searchState);
   const tmp = query.length > 0 && !(function hasMatchingNickname(userId, query) {
-    let tmp21;
-    let tmp22;
     if ("" === query.trim()) {
       return false;
     } else {
@@ -166,15 +151,15 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
         if (!(null != selectedJoinDateOption.beforeDate && joinedAtTimestamp.joinedAtTimestamp > selectedJoinDateOption.beforeDate)) {
           let tmp12 = null != selectedAccountAgeOption.afterDate;
           if (tmp12) {
-            tmp12 = DISCORD_EPOCH.extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
-            const obj2 = DISCORD_EPOCH;
+            tmp12 = DISCORD_EPOCHDefault.extractTimestamp(joinedAtTimestamp.userId) < selectedAccountAgeOption.afterDate;
+            const obj2 = DISCORD_EPOCHDefault;
           }
           let tmp15 = !tmp12;
           if (!tmp12) {
             let tmp16 = null != selectedAccountAgeOption.beforeDate;
             if (tmp16) {
-              tmp16 = DISCORD_EPOCH.extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
-              let obj3 = DISCORD_EPOCH;
+              tmp16 = DISCORD_EPOCHDefault.extractTimestamp(joinedAtTimestamp.userId) > selectedAccountAgeOption.beforeDate;
+              let obj3 = DISCORD_EPOCHDefault;
             }
             let tmp19 = !tmp16;
             if (!tmp16) {
@@ -246,10 +231,7 @@ prototype["isMemberIncludedInSearchResults"] = function isMemberIncludedInSearch
 };
 
 export const getDefaultSearchState = function getDefaultSearchState() {
-  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: null, selectedJoinDateOption: null, selectedAccountAgeOption: null, selectedJoinSourceType: "accessible", selectedSourceInviteCode: "location", selectedSort: "View" };
-  obj[5] = new Set();
-  obj[6] = { optionId: 0, afterDate: null, beforeDate: null };
-  obj[7] = { optionId: 0, afterDate: null, beforeDate: null };
+  const obj = { query: "", requireUnusualDmActivity: false, requireCommunicationDisabled: false, requireUnusualAccountActivity: false, requireUsernameQuarantined: false, selectedRoleIds: new Set(), selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null }, selectedJoinSourceType: "accessible", selectedSourceInviteCode: "location", selectedSort: "View" };
   return obj;
 };
 export { GuildMemberSafetySearch };

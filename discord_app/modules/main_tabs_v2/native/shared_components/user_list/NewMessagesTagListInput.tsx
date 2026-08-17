@@ -1,40 +1,32 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx
-import importAllResult from "noop";
-import { View } from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "mergeGuildAvatar";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let obj = { searchBarContainer: null, header: null, showSearchButton: null, searchBar: null };
-obj = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 obj[0] = obj;
-createCacheKey = { marginLeft: require("Themes").space.PX_12, marginBottom: null };
+createCacheKey = { marginLeft: ThemesDefault.space.PX_12, marginBottom: null };
 let num = 0;
 if (set.isAndroid()) {
   num = 2;
 }
 createCacheKey[1] = num;
 obj[1] = createCacheKey;
-obj[2] = { marginHorizontal: require("Themes").space.PX_12 };
-let obj2 = { marginHorizontal: require("Themes").space.PX_12 };
-obj[3] = { borderRadius: require("Themes").radii.md };
+obj[2] = { marginHorizontal: ThemesDefault.space.PX_12 };
+let obj2 = { marginHorizontal: ThemesDefault.space.PX_12 };
+obj[3] = { borderRadius: ThemesDefault.radii.md };
 let closure_7 = createCacheKey.createStyles(obj);
-const obj3 = { borderRadius: require("Themes").radii.md };
+const obj3 = { borderRadius: ThemesDefault.radii.md };
 const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/NewMessagesTagListInput.tsx");
 
 export default importAllResult.memo(function NewMessagesTagListInput(forceSearchResults) {
-  let autoFocus;
-  let hasQuery;
-  let onChangeText;
-  let onFocus;
-  let onForceSearchResults;
-  let require;
-  let selectedUserIds;
-  let tagListInputRef;
   ({ onSelectUser: require, selectedUserIds } = forceSearchResults);
   let memo;
   ({ autoFocus, onChangeText, onFocus, hasQuery, onForceSearchResults, tagListInputRef } = forceSearchResults);
@@ -46,8 +38,8 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
     if (selectedUserIds == null) {
       items = [];
     }
-    const mapped = items.map(outer1_5.getUser);
-    const found = mapped.filter(outer1_0(memo[8]).isNotNullish);
+    const mapped = items.map(closure_1_5.getUser);
+    const found = mapped.filter(closure_1_0(memo[8]).isNotNullish);
     return found.map(selectedUserIds(memo[9]));
   }, items);
   obj = { style: tmp.searchBarContainer, children: null };
@@ -68,7 +60,7 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
       } else {
         stringResult = string(t.fTcQm2);
       }
-      const obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
+      obj1 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, style: null, children: null };
       obj1[1] = stringResult;
       obj1[2] = onForceSearchResults;
       obj1[3] = tmp.showSearchButton;
@@ -89,14 +81,14 @@ export default importAllResult.memo(function NewMessagesTagListInput(forceSearch
   obj[5] = onChangeText;
   obj[6] = onFocus;
   obj[7] = function onRemove(arg0) {
-    const user = outer1_5.getUser(tmp.id);
+    const user = closure_1_5.getUser(tmp.id);
     if (null != user) {
       callback(user);
-      const AccessibilityAnnouncer = outer1_0(memo[16]).AccessibilityAnnouncer;
-      const intl = outer1_0(memo[12]).intl;
+      const AccessibilityAnnouncer = closure_1_0(memo[16]).AccessibilityAnnouncer;
+      const intl = closure_1_0(memo[12]).intl;
       const obj = { text: null };
       obj[0] = tmp.text;
-      AccessibilityAnnouncer.announce(intl.formatToPlainString(outer1_0(memo[12]).t.srlxB8, obj));
+      AccessibilityAnnouncer.announce(intl.formatToPlainString(closure_1_0(memo[12]).t.srlxB8, obj));
     }
   };
   const intl3 = tmp2(tmp3[12]).intl;

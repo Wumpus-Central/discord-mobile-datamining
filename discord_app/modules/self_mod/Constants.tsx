@@ -1,6 +1,8 @@
 // discord_app/modules/self_mod/Constants.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/self_mod/Constants.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/self_mod/Constants.tsx");
 
 export const LOCATION_CONTEXT_MOBILE = "SAFETY_WARNING_BANNER_MOBILE";
 export const LOCATION_CONTEXT_WEB = "SAFETY_WARNING_BANNER_WEB";

@@ -1,10 +1,10 @@
 // discord_app/modules/message_request/hooks/useMessageRequestPreview.tsx
-import initialize from "initialize";
-import reinjectEphemerals from "reinjectEphemerals";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import isMessagePreviewEnabledForChannel from "isMessagePreviewEnabledForChannel";
-import { Endpoints } from "ME";
-import set from "generateOldThreadCutoff";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
+import closure_5 from "generateOldThreadCutoff" /* 4772 */;
+import closure_6 from "isMessagePreviewEnabledForChannel" /* 11764 */;
+import { Endpoints } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
 const require = arg1;
 function loadMessageRequestData() {
@@ -46,11 +46,11 @@ function _loadMessageRequestData() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
-            let c3 = 1;
-            if (obj3.isEmpty(outer1_8)) {
+            closure_0 = tmp3;
+            c3 = 1;
+            if (obj3.isEmpty(closure_1_8)) {
               c3 = 0;
-              let c9 = null;
+              c9 = null;
               c4 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             } else {
@@ -58,7 +58,7 @@ function _loadMessageRequestData() {
               v0 = 2;
               c4 = 1;
             }
-            obj3 = v0(outer1_2[6]);
+            obj3 = v0(closure_1_2[6]);
           }
         } else if (1 === tmp7) {
           c3 = 0;
@@ -73,7 +73,7 @@ function _loadMessageRequestData() {
         c3 = 0;
         c9 = null;
         c4 = 3;
-        const obj1 = { value: null, done: true };
+        obj1 = { value: null, done: true };
         obj1[0] = arg1;
         return obj1;
       } catch (tmp23) {
@@ -87,7 +87,7 @@ function _loadMessageRequestData() {
       }
     }
   });
-  const _loadMessageRequestData = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -139,23 +139,23 @@ function _loadMessageRequestDataHelper() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_7 = tmp;
-            let isMessagePreviewEnabledForChannel = tmp4;
+            closure_7 = tmp;
+            closure_6 = tmp4;
             let lib;
             let lib2;
-            let closure_2;
+            closure_2 = undefined;
             let _Array = Array;
-            let tmp60 = outer1_8;
-            let arr = Array.from(outer1_8);
+            let tmp60 = closure_1_8;
+            let arr = Array.from(closure_1_8);
             let substr = arr.slice(0, 25);
             lib = substr;
-            let c9 = 2;
-            let tmp62 = outer1_0;
-            let tmp63 = outer1_2;
-            let HTTP = outer1_0(outer1_2[7]).HTTP;
-            let obj1 = { url: null, query: null, rejectWithError: true };
-            let tmp64 = outer1_7;
-            obj1[0] = outer1_7.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA;
+            c9 = 2;
+            let tmp62 = closure_1_0;
+            let tmp63 = closure_1_2;
+            let HTTP = closure_1_0(closure_1_2[7]).HTTP;
+            obj1 = { url: null, query: null, rejectWithError: true };
+            let tmp64 = closure_1_7;
+            obj1[0] = closure_1_7.MESSAGE_REQUESTS_SUPPLEMENTAL_DATA;
             let obj2 = { channel_ids: null };
             obj2[0] = substr;
             obj1[1] = obj2;
@@ -167,7 +167,7 @@ function _loadMessageRequestDataHelper() {
             return obj3;
           }
         } else if (1 === tmp4) {
-          let tmp42 = isMessagePreviewEnabledForChannel;
+          let tmp42 = closure_6;
           let tmp44 = set;
           c9 = 0;
           let tmp45 = lib;
@@ -179,7 +179,7 @@ function _loadMessageRequestDataHelper() {
           let tmp47 = lib2;
           let tmp48 = lib;
           while (lib !== undefined) {
-            let tmp50 = isMessagePreviewEnabledForChannel;
+            let tmp50 = closure_6;
             let tmp51 = closure_7;
             c9 = 5;
             closure_2 = tmp49;
@@ -192,7 +192,7 @@ function _loadMessageRequestDataHelper() {
           throw tmp43;
         } else {
           if (2 === tmp4) {
-            let tmp32 = isMessagePreviewEnabledForChannel;
+            let tmp32 = closure_6;
             let tmp33 = closure_7;
             let tmp34 = set;
             c9 = 1;
@@ -204,19 +204,19 @@ function _loadMessageRequestDataHelper() {
             obj4[1] = lib;
             let dispatchResult = obj3.dispatch(obj4);
             c9 = 0;
-            let tmp39 = isMessagePreviewEnabledForChannel;
+            let tmp39 = closure_6;
             let tmp40 = lib;
-            let generateOldThreadCutoff = lib;
+            closure_5 = lib;
             let tmp41 = lib;
-            generateOldThreadCutoff = lib;
-            let reinjectEphemerals = lib[Symbol.iterator]();
+            closure_5 = lib;
+            closure_4 = lib[Symbol.iterator]();
           } else if (3 === tmp4) {
             if (arg0 === 1) {
               let num3 = 3;
               c11 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              let tmp14 = isMessagePreviewEnabledForChannel;
+              let tmp14 = closure_6;
               let tmp15 = closure_7;
               lib2 = arg1;
               let tmp16 = lib2;
@@ -241,8 +241,8 @@ function _loadMessageRequestDataHelper() {
             let tmp8 = set;
             let tmp9 = set;
             c9 = 0;
-            let tmp10 = reinjectEphemerals;
-            reinjectEphemerals.return();
+            let tmp10 = closure_4;
+            closure_4.return();
             throw set;
           } else {
             let tmp5 = set;
@@ -253,16 +253,16 @@ function _loadMessageRequestDataHelper() {
             throw set;
           }
           c9 = 0;
-          let tmp21 = isMessagePreviewEnabledForChannel;
+          let tmp21 = closure_6;
           let tmp22 = lib;
-          let initialize = lib;
+          closure_3 = lib;
           let tmp23 = lib;
-          initialize = lib;
+          closure_3 = lib;
           closure_2 = lib[Symbol.iterator]();
-          let tmp24 = initialize;
+          let tmp24 = closure_3;
           let tmp25 = closure_2;
           while (closure_2 !== undefined) {
-            let tmp27 = isMessagePreviewEnabledForChannel;
+            let tmp27 = closure_6;
             let tmp28 = closure_7;
             c9 = 3;
             closure_2 = tmp26;
@@ -281,7 +281,7 @@ function _loadMessageRequestDataHelper() {
       }
     }
   });
-  const _loadMessageRequestDataHelper = tmp;
+  closure_13 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -295,9 +295,6 @@ let c9 = null;
 const result = set.fileFinishedImporting("modules/message_request/hooks/useMessageRequestPreview.tsx");
 
 export const useMessageRequestPreview = function useMessageRequestPreview(channel, arg1) {
-  let error;
-  let loaded;
-  let message;
   const id = channel.id;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -307,14 +304,14 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
   if (flag === undefined) {
     flag = true;
   }
-  const items = [isMessagePreviewEnabledForChannel, reinjectEphemerals, generateOldThreadCutoff];
+  const items = [closure_6, closure_4, closure_5];
   const items1 = [id];
   const stateFromStoresObject = id(589).useStateFromStoresObject(items, () => {
-    const lastMessageIdResult = outer1_5.lastMessageId(id);
-    const messageRequestPreview = outer1_6.getMessageRequestPreview(id);
+    const lastMessageIdResult = closure_1_5.lastMessageId(id);
+    const messageRequestPreview = closure_1_6.getMessageRequestPreview(id);
     if (null == messageRequestPreview.message) {
       if (null != lastMessageIdResult) {
-        const message = outer1_4.getMessage(id, lastMessageIdResult);
+        const message = closure_1_4.getMessage(id, lastMessageIdResult);
         if (null != message) {
           const obj = { loaded: true, error: false, message: null };
           obj[2] = message;
@@ -326,9 +323,9 @@ export const useMessageRequestPreview = function useMessageRequestPreview(channe
   }, items1);
   ({ loaded, message, error } = stateFromStoresObject);
   const obj2 = id(589);
-  const items2 = [isMessagePreviewEnabledForChannel];
+  const items2 = [closure_6];
   const items3 = [id];
-  const stateFromStores = id(589).useStateFromStores(items2, () => outer1_6.shouldLoadMessageRequestPreview(id), items3);
+  const stateFromStores = id(589).useStateFromStores(items2, () => closure_1_6.shouldLoadMessageRequestPreview(id), items3);
   if (flag) {
     flag = !loaded;
   }

@@ -1,62 +1,58 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx
-import openQuestAccessSuspendedBottomSheet from "openQuestAccessSuspendedBottomSheet";
-import get_ActivityIndicator from "useWatchTaskPressHandler";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "VideoComponent";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../_runtime/04756_LinearGradient.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { useQuests } from "../../hooks/QuestHooks.tsx";
-import { openQuestAccessSuspendedBottomSheet } from "../openQuestAccessSuspendedBottomSheet.tsx";
-import { QuestDockBlurredContentBackground } from "../QuestDock/QuestDockBlurredContentBackground.tsx";
-import { QUEST_PROGRESS_DIAMETER_BY_SIZE } from "../QuestProgressIndicator.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import preloadDefault from "preload" /* 5449 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import useQuests from "useQuests" /* 10684 */;
+import openQuestAccessSuspendedBottomSheetDefault from "openQuestAccessSuspendedBottomSheet" /* 14470 */;
+import QUEST_PROGRESS_DIAMETER_BY_SIZEDefault from "QUEST_PROGRESS_DIAMETER_BY_SIZE" /* 14483 */;
+import _modDef14512 from "module_14512" /* 14512 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c4;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { card: { padding: 0 }, cardWatchTask: { justifyContent: "flex-end", height: 210 }, content: null, contentWatchTask: null, footer: null, instructionsText: null, videoPreviewWrapper: null, videoPreview: null, playVideoIconWrapper: null };
-createCacheKey = { padding: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignItems: "flex-end" };
-createCacheKey[4] = { padding: 12, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderBottomLeftRadius: require("Themes").modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: require("Themes").modules.mobile.CARD_DEFAULT_RADIUS, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED };
-let obj1 = { padding: 12, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, borderBottomLeftRadius: require("Themes").modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: require("Themes").modules.mobile.CARD_DEFAULT_RADIUS, borderWidth: 1, borderColor: require("Themes").colors.BORDER_MUTED };
-createCacheKey[5] = { marginTop: require("Themes").space.PX_12, textAlign: "center" };
+createCacheKey[4] = { padding: 12, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+let obj1 = { padding: 12, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, borderBottomLeftRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderBottomRightRadius: ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_MUTED };
+createCacheKey[5] = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj3.borderRadius = require("Themes").modules.mobile.CARD_DEFAULT_RADIUS;
+obj3.borderRadius = ThemesDefault.modules.mobile.CARD_DEFAULT_RADIUS;
 obj3.overflow = "hidden";
 createCacheKey[6] = obj3;
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[7] = {};
-let obj2 = { marginTop: require("Themes").space.PX_12, textAlign: "center" };
+let obj2 = { marginTop: ThemesDefault.space.PX_12, textAlign: "center" };
 let obj4 = {};
 let items = [{ translateX: -30 }, { translateY: -30 }];
-createCacheKey[8] = { alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round, position: "absolute", left: "50%", overflow: "hidden", top: "50%", width: 60, height: 60, transform: items };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.round, position: "absolute", left: "50%", overflow: "hidden", top: "50%", width: 60, height: 60, transform: items };
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx");
+createCacheKey[8] = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, position: "absolute", left: "50%", overflow: "hidden", top: "50%", width: 60, height: 60, transform: items };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.round, position: "absolute", left: "50%", overflow: "hidden", top: "50%", width: 60, height: 60, transform: items };
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetProgressCard.tsx");
 
 export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSheetProgressCardPlayStreamTask(quest) {
   quest = quest.quest;
   let questTaskDetails;
   let isQuestProgressing;
-  let dependencyMap;
+  dependencyMap = undefined;
   let React;
-  let c4;
+  c4 = undefined;
   let questFormattedDate;
   let gameTitle;
   let defaultRewardName;
-  let c8;
-  const tmp = createCacheKey();
+  c8 = undefined;
+  const tmp = callback();
   let obj = questTaskDetails(10684);
   questTaskDetails = obj.useQuestTaskDetails(quest);
-  let obj1 = questTaskDetails(10684);
+  obj1 = questTaskDetails(10684);
   isQuestProgressing = obj1.useIsQuestProgressing(quest);
   const userStatus = quest.userStatus;
   let completedAt;
@@ -86,54 +82,54 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
   c8 = isSponsoredPlayQuestResult;
   const items1 = [questTaskDetails, tmp7, null != claimedAt, gameTitle, defaultRewardName, isQuestProgressing, result, questFormattedDate, isSponsoredPlayQuestResult];
   const memo = React.useMemo(() => {
-    if (_undefined) {
-      if (!c3) {
-        const intl = questTaskDetails(_undefined[11]).intl;
+    if (dependencyMap) {
+      if (!closure_3) {
+        const intl = questTaskDetails(1236).intl;
         let obj = { rewardHook: null, date: null };
         obj[0] = function rewardHook() {
-          return outer1_7(outer1_0(outer1_2[12]).Text, { variant: "text-sm/semibold", color: "text-strong", children: closure_7 });
+          return closure_1_7(closure_1_0(closure_1_2[12]).Text, { variant: "text-sm/semibold", color: "text-strong", children: closure_7 });
         };
         obj[1] = questFormattedDate;
-        return intl.format(questTaskDetails(_undefined[11]).t.e3OlfB, obj);
+        return intl.format(questTaskDetails(1236).t.e3OlfB, obj);
       }
     }
     if (isQuestProgressing) {
       const _Math = Math;
       const rounded = Math.ceil((questTaskDetails.targetSeconds - questTaskDetails.progressSeconds) / 60);
-      const intl7 = questTaskDetails(_undefined[11]).intl;
+      const intl7 = questTaskDetails(1236).intl;
       obj = { minutesLeft: null, minutesHook: null };
       obj[0] = rounded;
       obj[1] = function minutesHook(children) {
         return callback2(callback(table[12]).Text, { variant: "text-sm/semibold", color: "text-strong", children });
       };
-      return intl7.format(questTaskDetails(_undefined[11]).t.aFaRso, obj);
+      return intl7.format(questTaskDetails(1236).t.aFaRso, obj);
     } else {
       if (c8) {
-        const intl6 = questTaskDetails(_undefined[11]).intl;
-        let stringResult = intl6.string(questTaskDetails(_undefined[11]).t["04ateG"]);
-      } else if (_undefined2.length > 1) {
-        const intl5 = questTaskDetails(_undefined[11]).intl;
+        const intl6 = questTaskDetails(1236).intl;
+        let stringResult = intl6.string(questTaskDetails(1236).t["04ateG"]);
+      } else if (_undefined.length > 1) {
+        const intl5 = questTaskDetails(1236).intl;
         obj = { gameName: null };
         obj[0] = gameTitle;
-        stringResult = intl5.formatToPlainString(questTaskDetails(_undefined[11]).t.E2R8VX, obj);
-      } else if (questTaskDetails.taskType === questTaskDetails(_undefined[13]).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP) {
-        const intl4 = questTaskDetails(_undefined[11]).intl;
-        const obj1 = { gameName: null };
+        stringResult = intl5.formatToPlainString(questTaskDetails(1236).t.E2R8VX, obj);
+      } else if (questTaskDetails.taskType === questTaskDetails(6723).FirstPartyQuestTaskTypes.STREAM_ON_DESKTOP) {
+        const intl4 = questTaskDetails(1236).intl;
+        obj1 = { gameName: null };
         obj1[0] = gameTitle;
-        stringResult = intl4.formatToPlainString(questTaskDetails(_undefined[11]).t.boMftC, obj1);
-      } else if (tmp41.taskType === questTaskDetails(_undefined[13]).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP) {
-        const intl3 = questTaskDetails(_undefined[11]).intl;
+        stringResult = intl4.formatToPlainString(questTaskDetails(1236).t.boMftC, obj1);
+      } else if (tmp41.taskType === questTaskDetails(6723).FirstPartyQuestTaskTypes.PLAY_ON_DESKTOP) {
+        const intl3 = questTaskDetails(1236).intl;
         const obj2 = { gameName: null };
         obj2[0] = gameTitle;
-        stringResult = intl3.formatToPlainString(questTaskDetails(_undefined[11]).t["9Peldf"], obj2);
+        stringResult = intl3.formatToPlainString(questTaskDetails(1236).t["9Peldf"], obj2);
       } else {
-        const CONSOLE = questTaskDetails(_undefined[13]).FirstPartyQuestTaskTypesSets.CONSOLE;
+        const CONSOLE = questTaskDetails(6723).FirstPartyQuestTaskTypesSets.CONSOLE;
         stringResult = null;
         if (CONSOLE.has(tmp41.taskType)) {
-          const intl2 = questTaskDetails(_undefined[11]).intl;
+          const intl2 = questTaskDetails(1236).intl;
           const obj3 = { gameTitle: null };
           obj3[0] = gameTitle;
-          stringResult = intl2.formatToPlainString(questTaskDetails(_undefined[11]).t["+8JB6Y"], obj3);
+          stringResult = intl2.formatToPlainString(questTaskDetails(1236).t["+8JB6Y"], obj3);
         }
       }
       return stringResult;
@@ -175,16 +171,16 @@ export const QuestBottomSheetProgressCardPlayStreamTask = function QuestBottomSh
 };
 export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetProgressCardWatchTask(quest) {
   quest = quest.quest;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = quest(10684);
   const items = [quest];
   const questTaskDetails = obj.useQuestTaskDetails(quest);
-  const memo = React.useMemo(() => quest(outer1_2[16]).getQuestAsset(quest, quest(outer1_2[16]).QuestAssetType.QUEST_BAR_HERO_VIDEO), items);
+  const memo = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_VIDEO), items);
   const items1 = [quest];
-  const memo1 = React.useMemo(() => quest(outer1_2[16]).getQuestAsset(quest, quest(outer1_2[16]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items1);
+  const memo1 = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.VIDEO_PLAYER_THUMBNAIL, undefined, true), items1);
   const items2 = [quest];
-  const memo2 = React.useMemo(() => quest(outer1_2[16]).getQuestAsset(quest, quest(outer1_2[16]).QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
-  let obj1 = quest(14475);
+  const memo2 = React.useMemo(() => quest(closure_1_2[16]).getQuestAsset(quest, quest(closure_1_2[16]).QuestAssetType.QUEST_BAR_HERO_IMAGE), items2);
+  obj1 = quest(14475);
   obj = { questId: quest.id, sourceQuestContent: quest.sourceQuestContent };
   let isHeroVideoSupportedResult = null != memo;
   if (isHeroVideoSupportedResult) {
@@ -202,7 +198,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
   tmp2Result = tmp2(10684);
   let tmp11 = obj1.useWatchTaskPressHandler(obj);
   if (tmp2Result.useIsQuestAccessSuspended()) {
-    tmp11 = openQuestAccessSuspendedBottomSheet;
+    tmp11 = openQuestAccessSuspendedBottomSheetDefault;
   }
   obj = { onPress: tmp11, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = tmp2(1236).intl;
@@ -230,7 +226,7 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     obj5[1] = { x: 1, y: 1 };
     obj5[2] = StyleSheet.absoluteFill;
     obj5[3] = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-    items4[1] = tmp13(LinearGradient, obj5);
+    items4[1] = tmp13(LinearGradientDefault, obj5);
     obj2[1] = items4;
     tmp14Result = tmp14(closure_4, obj2);
     const tmp16 = closure_4;
@@ -248,40 +244,39 @@ export const QuestBottomSheetProgressCardWatchTask = function QuestBottomSheetPr
     const obj8 = { uri: null };
     obj8[0] = memo2.url;
     obj7[1] = obj8;
-    const items6 = [tmp13(preload, obj7), ];
+    const items6 = [tmp13(preloadDefault, obj7), ];
     const obj9 = { start: null, end: null, style: null, colors: null };
     obj9[0] = { x: 0.5, y: 0.5 };
     obj9[1] = { x: 1, y: 1 };
     obj9[2] = StyleSheet.absoluteFill;
     obj9[3] = ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 1)"];
-    items6[1] = tmp13(LinearGradient, obj9);
+    items6[1] = tmp13(LinearGradientDefault, obj9);
     obj6[1] = items6;
     tmp14Result = tmp14(closure_4, obj6);
   }
   items5[1] = tmp14Result;
   const obj10 = { style: tmp.playVideoIconWrapper, children: null };
-  const items7 = [closure_7(QuestDockBlurredContentBackground, { blurTheme: "light" }), ];
-  const obj11 = { color: null };
-  obj11[0] = Themes.colors.WHITE;
-  items7[1] = closure_7(quest(9003).PlayIcon, obj11);
+  const items7 = [closure_7(_modDef14512, { blurTheme: "light" }), ];
+  const watchTaskPressHandler = obj1.useWatchTaskPressHandler(obj);
+  items7[1] = closure_7(quest(9003).PlayIcon, { color: ThemesDefault.colors.WHITE });
   obj10[1] = items7;
   items5[2] = closure_8(closure_4, obj10);
-  const watchTaskPressHandler = obj1.useWatchTaskPressHandler(obj);
+  const obj11 = { color: ThemesDefault.colors.WHITE };
   const items8 = [, ];
   ({ content: arr9[0], contentWatchTask: arr9[1] } = tmp);
-  items5[3] = closure_7(closure_4, { style: items8, children: closure_7(QUEST_PROGRESS_DIAMETER_BY_SIZE, obj13) });
+  items5[3] = closure_7(closure_4, { style: items8, children: closure_7(QUEST_PROGRESS_DIAMETER_BY_SIZEDefault, obj13) });
   obj1[2] = items5;
   obj[3] = closure_8(quest(6292).Card, obj1);
   return closure_7(quest(5433).PressableOpacity, obj);
 };
 export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetProgressCardInGameTask(quest) {
   quest = quest.quest;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = useQuests;
   const thirdPartyTaskDetails = obj.useThirdPartyTaskDetails(quest);
   obj = { style: tmp.card, border: "subtle", children: null };
   obj = { style: tmp.content, children: null };
-  const obj1 = { quest, size: "lg", progress: null, hasConfetti: true };
+  obj1 = { quest, size: "lg", progress: null, hasConfetti: true };
   let num;
   if (thirdPartyTaskDetails != null) {
     num = thirdPartyTaskDetails.percentComplete;
@@ -290,7 +285,7 @@ export const QuestBottomSheetProgressCardInGameTask = function QuestBottomSheetP
     num = 0;
   }
   obj1[2] = num;
-  obj[1] = closure_7(QUEST_PROGRESS_DIAMETER_BY_SIZE, obj1);
+  obj[1] = closure_7(QUEST_PROGRESS_DIAMETER_BY_SIZEDefault, obj1);
   obj[2] = closure_7(closure_4, obj);
   return closure_7(PressableCard.Card, obj);
 };

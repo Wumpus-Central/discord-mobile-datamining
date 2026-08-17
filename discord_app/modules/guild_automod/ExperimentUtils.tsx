@@ -1,6 +1,8 @@
 // discord_app/modules/guild_automod/ExperimentUtils.tsx
-import { experiment } from "AutomodExperiment.tsx";
-const result = require("set").fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
+import set from "set" /* 2 */;
+import experiment from "experiment" /* 10036 */;
+
+const result = set.fileFinishedImporting("modules/guild_automod/ExperimentUtils.tsx");
 
 export const isInMentionRaidExperiment = function isInMentionRaidExperiment(guildId) {
   const AutomodMentionRaidLimit = experiment.AutomodMentionRaidLimit;

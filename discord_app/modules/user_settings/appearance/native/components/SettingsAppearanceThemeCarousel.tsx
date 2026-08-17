@@ -1,52 +1,42 @@
 // discord_app/modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx
-import getSystemLocale from "getSystemLocale";
-import get_ActivityIndicator from "Pagination";
-import importDefaultResult from "THEME_ITEM_WIDTH";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import importDefaultResult1 from "module_4115";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import importDefaultResult from "THEME_ITEM_WIDTH" /* 14618 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult1 from "module_4115" /* 4115 */;
 
-let c4;
-let c5;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
-let closure_10 = require("module_4115").createAnimatedComponent(require("Button").Icon);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
+let closure_10 = importDefaultResult1.createAnimatedComponent(require("Button").Icon);
 let obj = { container: null, textCentered: null, labelGroup: null, titleContainer: null, floatingNuxContainer: null, floatingNux: null, arrowLeft: null, uppercase: null, selectionBorder: null, a11yThemeList: null, a11yThemeListScroll: null };
-obj = { gap: require("Themes").space.PX_24, alignItems: "center" };
+obj = { gap: ThemesDefault.space.PX_24, alignItems: "center" };
 obj[0] = obj;
 obj[1] = { textAlign: "center" };
-createCacheKey = { gap: require("Themes").space.PX_4, alignItems: "center" };
+createCacheKey = { gap: ThemesDefault.space.PX_4, alignItems: "center" };
 obj[2] = createCacheKey;
-obj[3] = { minHeight: 20, marginTop: require("Themes").space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
-let obj2 = { minHeight: 20, marginTop: require("Themes").space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
-obj[4] = { position: "absolute", left: require("Themes").space.PX_24 };
-let obj4 = { borderRadius: require("Themes").radii.lg, flexDirection: "row", alignItems: "center", padding: require("Themes").space.PX_4, paddingRight: require("Themes").space.PX_8 };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+obj[3] = { minHeight: 20, marginTop: ThemesDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+let obj2 = { minHeight: 20, marginTop: ThemesDefault.space.PX_4, flexDirection: "row", justifyContent: "center", alignItems: "center" };
+obj[4] = { position: "absolute", left: ThemesDefault.space.PX_24 };
+let obj4 = { borderRadius: ThemesDefault.radii.lg, flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_4, paddingRight: ThemesDefault.space.PX_8 };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 obj4.shadowColor = "#000000";
 obj[5] = obj4;
 let items = [{ rotate: "90deg" }];
 obj[6] = { transform: items };
 obj[7] = { textTransform: "uppercase" };
-let obj3 = { position: "absolute", left: require("Themes").space.PX_24 };
-obj[8] = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: require("Themes").radii.md, borderColor: require("Themes").colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
+let obj3 = { position: "absolute", left: ThemesDefault.space.PX_24 };
+obj[8] = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
 obj[9] = { flexDirection: "row" };
 obj[10] = { flexGrow: 0 };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = { code: "function SettingsAppearanceThemeCarouselTsx1(){const{withTiming,isMidnightNuxVisible,timingStandard}=this.__closure;return{opacity:withTiming(isMidnightNuxVisible.get()?1:0,timingStandard),pointerEvents:isMidnightNuxVisible.get()?'auto':'none'};}" };
-let obj5 = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: require("Themes").radii.md, borderColor: require("Themes").colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
-let result = require("THEME_ITEM_WIDTH").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
+let obj5 = { position: "absolute", alignSelf: "center", width: importDefaultResult.THEME_ITEM_WIDTH, height: importDefaultResult.THEME_ITEM_HEIGHT, borderRadius: ThemesDefault.radii.md, borderColor: ThemesDefault.colors.MOBILE_LEGACY_BUTTON_SECONDARY_BORDER_DEFAULT, borderWidth: 2 };
+let result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/components/SettingsAppearanceThemeCarousel.tsx");
 
 export default function SettingsAppearanceThemeCarousel(themes) {
-  let animatedStyles;
-  let closure_4;
-  let defaultIndex;
-  let deviceWidth;
-  let isRefreshEnabled;
-  let onThemeSelected;
   themes = themes.themes;
   const currentThemeIndex = themes.currentThemeIndex;
   const isPreview = themes.isPreview;
@@ -54,7 +44,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
   ({ animatedStyles, hasMidnightNux: closure_4, isRefreshEnabled, onThemeSelected } = themes);
   let ref;
   let callback;
-  let closure_8;
+  closure_8 = undefined;
   let sharedValue;
   let sharedValue1;
   let callback2;
@@ -72,7 +62,7 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     }
     return num;
   }, items);
-  let obj1 = themes(isPreview[4]);
+  obj1 = themes(isPreview[4]);
   sharedValue = obj1.useSharedValue(false);
   let obj2 = themes(isPreview[4]);
   sharedValue1 = obj2.useSharedValue(false);
@@ -94,11 +84,11 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       isPreview,
       isSelected: index === currentThemeIndex,
       onPress() {
-        if (null != outer1_6.current) {
+        if (null != closure_1_6.current) {
           const current = tmp.current;
           const currentIndex = current.getCurrentIndex();
           if (currentIndex === index) {
-            return outer1_5(tmp3);
+            return closure_1_5(tmp3);
           } else {
             if (currentIndex !== tmp3) {
               if (0 === currentIndex) {
@@ -130,9 +120,9 @@ export default function SettingsAppearanceThemeCarousel(themes) {
       tmp = themes;
       tmp2 = isPreview;
       obj = themes(isPreview[11]);
-      obj2 = c9;
+      obj2 = closure_9;
       num = 0;
-      if (c9.get()) {
+      if (closure_9.get()) {
         num = 1;
       }
       obj = { opacity: obj.withTiming(num, tmp(tmp2[12]).timingStandard), pointerEvents: null };
@@ -159,9 +149,8 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     tmp13 = callback(sharedValue1, obj1);
   }
   const items4 = [tmp13, ];
-  obj2 = { animated: true, style: isRefreshEnabled ? animatedStyles.headerPrimary : animatedStyles.headerSecondary, variant: "heading-sm/semibold", children: null };
-  let obj8 = themes[currentThemeIndex];
-  obj2[3] = obj8.getName();
+  obj2 = { animated: true, style: isRefreshEnabled ? animatedStyles.headerPrimary : animatedStyles.headerSecondary, variant: "heading-sm/semibold", children: obj8.getName() };
+  obj8 = themes[currentThemeIndex];
   items4[1] = callback(themes(isPreview[15]).Text, obj2);
   obj[1] = items4;
   let tmp11Result = tmp11(tmp12, obj);
@@ -278,16 +267,16 @@ export default function SettingsAppearanceThemeCarousel(themes) {
     contentContainerStyle: tmp.a11yThemeList,
     children: themes.map((themePreset) => {
       obj = { children: ref(currentThemeIndex(isPreview[10]), obj) };
-      let closure_0 = arg1;
+      closure_0 = arg1;
       obj = {
         themePreset,
         isPreview,
         isSelected: arg1 === currentThemeIndex,
         onPress() {
-          return outer1_5(closure_0);
+          return closure_1_5(closure_0);
         }
       };
-      return ref(outer1_4, obj, "theme-" + arg1);
+      return ref(closure_1_4, obj, "theme-" + arg1);
     })
   });
 };

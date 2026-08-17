@@ -1,12 +1,13 @@
 // discord_app/records/EntitlementRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
-import createdAt from "createdAt";
-import { EntitlementTypes } from "ME";
-import { set } from "../../discord_common/js/shared/shared-constants/EntitlementTenantFulfillmentStatus.tsx";
-import { getPremiumPlanItem } from "../utils/PremiumUtils.tsx";
+import toJSDefault from "toJS" /* 1931 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import set from "set" /* 4519 */;
+import closure_3 from "createFromServer" /* 4515 */;
+import closure_4 from "createdAt" /* 1930 */;
+import { EntitlementTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
+toJSDefault;
 let EntitlementRecord;
 class EntitlementRecord extends tmp2 {
   constructor(arg0) {
@@ -18,20 +19,10 @@ class EntitlementRecord extends tmp2 {
 }
 const prototype = EntitlementRecord.prototype;
 EntitlementRecord["createFromServer"] = function createFromServer(user) {
-  let application_id;
-  let branches;
-  let deleted;
-  let gift_style;
-  let gifter_user_id;
-  let guild_id;
-  let id;
-  let sku_id;
-  let type;
-  let user_id;
   ({ id, sku_id, application_id } = user);
   let tmp2 = null;
   if (null != user.user) {
-    tmp2 = new createdAt(user.user);
+    tmp2 = new closure_4(user.user);
   }
   ({ user_id, gifter_user_id, type, branches } = user);
   if (branches == null) {
@@ -66,8 +57,8 @@ EntitlementRecord["createFromServer"] = function createFromServer(user) {
   }
   ({ gift_style, guild_id, deleted } = user);
   if (null != user.sku) {
-    const fromServer = createFromServer.createFromServer(user.sku);
-    const tmp18 = createFromServer;
+    const fromServer = closure_3.createFromServer(user.sku);
+    const tmp18 = closure_3;
   }
   let source_type = user.source_type;
   if (source_type == null) {
@@ -132,7 +123,7 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
         if (!obj.canInstallPremiumApplications(isPremiumWithFractionalPremiumOnly)) {
           return false;
         }
-        obj = getPremiumPlanItem;
+        obj = getPremiumPlanItemDefault;
       }
       const _Date = Date;
       const date = new Date();
@@ -166,6 +157,6 @@ prototype["isValid"] = function isValid(isPremiumWithFractionalPremiumOnly, get)
 prototype["isFulfilled"] = function isFulfilled() {
   return this.fulfillmentStatus === set.EntitlementTenantFulfillmentStatus.FULFILLED;
 };
-const result = require("createdAt").fileFinishedImporting("records/EntitlementRecord.tsx");
+const result = require("set").fileFinishedImporting("records/EntitlementRecord.tsx");
 
 export default EntitlementRecord;

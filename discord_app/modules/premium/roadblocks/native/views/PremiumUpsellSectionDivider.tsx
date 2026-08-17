@@ -1,19 +1,17 @@
 // discord_app/modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { Gradients } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../../../_runtime/04756_LinearGradient.js";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { keys } from "../../../../../ConstantsIOS.tsx";
-import { PremiumUpsellGradientBackground } from "PremiumUpsellGradientBackground.tsx";
+import noopAll from "noop" /* 19 */;
+import keys from "keys" /* 691 */;
+import ThemesDefault from "Themes" /* 712 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import LockIcon2 from "LockIcon" /* 6890 */;
+import PremiumUpsellGradientBackground from "PremiumUpsellGradientBackground" /* 9373 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { Gradients } from "items" /* 7403 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ StyleSheet: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((arg0) => {
@@ -26,12 +24,11 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   if (arg0 === createCacheKey.END) {
     num2 = 6;
   }
-  obj = { container: obj, lockContainer: null, lockGradient: null, lock: null, divider: null, gradient: null };
-  obj[4] = num2;
+  obj = { container: obj, lockContainer: null, lockGradient: null, lock: null, divider: num2, gradient: null };
   obj = { justifyContent: "center", alignItems: "center" };
   const merged = Object.assign(absoluteFillObject.absoluteFillObject);
   obj[1] = obj;
-  obj[2] = { width: 28, height: 28, justifyContent: "center", borderRadius: Themes.radii.round };
+  obj[2] = { width: 28, height: 28, justifyContent: "center", borderRadius: ThemesDefault.radii.round };
   obj[3] = { width: 16, height: 16, alignSelf: "center" };
   obj[4] = { height: 1 };
   let num3;
@@ -48,11 +45,9 @@ let closure_8 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 createCacheKey = { START: 0, [0]: "START", END: 1, [1]: "END" };
-const result = require("items").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/roadblocks/native/views/PremiumUpsellSectionDivider.tsx");
 
 export default function PremiumUpsellSectionDivider(arg0) {
-  let position;
-  let useTier0UpsellContent;
   ({ useTier0UpsellContent, position } = arg0);
   let lock = callback2(position);
   let obj = { style: lock.container, children: null };
@@ -60,9 +55,7 @@ export default function PremiumUpsellSectionDivider(arg0) {
   let LockIcon = require;
   let WHITE = dependencyMap;
   const items = [callback(closure_4, obj), , ];
-  obj = { style: lock.divider, start: null, end: null, colors: null };
-  obj[1] = keys.HorizontalGradient.START;
-  obj[2] = keys.HorizontalGradient.END;
+  obj = { style: lock.divider, start: keys.HorizontalGradient.START, end: keys.HorizontalGradient.END, colors: null };
   if (true === useTier0UpsellContent) {
     let PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_0;
     let tmp6 = Gradients;
@@ -71,20 +64,20 @@ export default function PremiumUpsellSectionDivider(arg0) {
     PREMIUM_TIER_2_TRI_COLOR = Gradients.PREMIUM_TIER_2_TRI_COLOR;
   }
   obj[3] = PREMIUM_TIER_2_TRI_COLOR;
-  items[1] = callback(LinearGradient, obj);
+  items[1] = callback(LinearGradientDefault, obj);
   if (position !== createCacheKey.START) {
     items[2] = tmp8;
     obj[1] = items;
     return closure_7(tmp2, obj);
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = lock.lockContainer;
     let obj2 = { style: null, start: null, end: null, colors: null, children: null };
     obj2[0] = lock.lockGradient;
-    obj2[1] = LockIcon(691).HorizontalGradient.START;
-    obj2[2] = LockIcon(691).HorizontalGradient.END;
+    obj2[1] = keys.HorizontalGradient.START;
+    obj2[2] = keys.HorizontalGradient.END;
     obj2[3] = useTier0UpsellContent ? tmp6.PREMIUM_TIER_0 : tmp6.PREMIUM_TIER_2_TRI_COLOR;
-    LockIcon = LockIcon(6890).LockIcon;
+    LockIcon = LockIcon2.LockIcon;
     const obj3 = { color: null, style: null };
     WHITE = tmp4(712).colors.WHITE;
     obj3[0] = WHITE;

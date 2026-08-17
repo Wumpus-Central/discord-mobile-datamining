@@ -1,37 +1,36 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { set } from "../../../../../discord_common/js/shared/shared-constants/ReportMenuType.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 
-let c4;
-let c5;
 const require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flex: 0, alignSelf: "stretch", marginBottom: 16, paddingHorizontal: 16 }, title: { lineHeight: 16, marginBottom: 8 }, breadCrumbItemContainer: { flexDirection: "row", justifyContent: "flex-start", marginBottom: 8, marginEnd: 32, overflow: "visible" }, breadCrumbDot: null, breadCrumbBar: null, breadCrumbText: null };
-createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { marginStart: 2, marginTop: 8, width: 4, height: 4, borderRadius: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[4] = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[5] = { marginStart: 8, lineHeight: 20 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { position: "absolute", width: 2, top: 10, bottom: -12, left: 3, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsBreadCrumbs.tsx");
 
 export default function Breadcrumbs(element) {
   element = element.element;
   let _require;
   let found;
   const merged = Object.assign(element, Object.create(null));
-  const tmp2 = createCacheKey();
+  const tmp2 = callback();
   _require = tmp2;
   if (null != element) {
     if ("breadcrumbs" === element.type) {
       let obj = found(12);
       found = obj.flatMap(merged.history, (destination) => {
-        let tmp;
         [tmp] = destination.destination;
         const multiSelect = destination.multiSelect;
         let state;
@@ -73,19 +72,19 @@ export default function Breadcrumbs(element) {
         obj[0] = closure_4(map, obj);
         map = found.map;
         obj[1] = map((children) => {
-          let obj = { style: _undefined.breadCrumbItemContainer, children: null };
+          let obj = { style: lib.breadCrumbItemContainer, children: null };
           let tmp4 = null;
           if (arg1 !== found.length - 1) {
             obj = { style: null };
             obj[0] = tmp3.breadCrumbBar;
-            tmp4 = outer1_4(tmp2, obj);
+            tmp4 = closure_1_4(tmp2, obj);
           }
           const items = [tmp4, , ];
           obj = { style: tmp3.breadCrumbDot };
-          items[1] = outer1_4(outer1_3, obj);
-          items[2] = outer1_4(_undefined(outer1_2[6]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: _undefined.breadCrumbText, variant: "text-md/medium", children });
+          items[1] = closure_1_4(closure_1_3, obj);
+          items[2] = closure_1_4(lib(closure_1_2[6]).Text, { lineClamp: 2, ellipsizeMode: "tail", style: lib.breadCrumbText, variant: "text-md/medium", children });
           obj[1] = items;
-          return outer1_5(outer1_3, obj, "" + children + "+" + arg1);
+          return closure_1_5(closure_1_3, obj, "" + children + "+" + arg1);
         });
         obj[1] = obj;
         closure_5(View, obj);
@@ -96,7 +95,6 @@ export default function Breadcrumbs(element) {
         const tmp9 = View;
       }
       const flatMapResult = obj.flatMap(merged.history, (destination) => {
-        let tmp;
         [tmp] = destination.destination;
         const multiSelect = destination.multiSelect;
         let state;

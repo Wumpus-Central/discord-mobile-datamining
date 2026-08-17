@@ -1,12 +1,12 @@
 // discord_app/modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx
-import noop from "noop";
-import addSubscriptionPlan from "addSubscriptionPlan";
-import reset from "reset";
-import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
-import { SubscriptionTypes } from "ME";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "addSubscriptionPlan" /* 4044 */;
+import closure_4 from "reset" /* 4045 */;
+import closure_5 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import { SubscriptionTypes } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("reset").fileFinishedImporting("modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useActiveSubscriptionListingForGroup.tsx");
 
 export default function useActiveSubscriptionListingForGroup(arg0) {
   const _require = arg0;
@@ -57,7 +57,7 @@ export default function useActiveSubscriptionListingForGroup(arg0) {
       let tmp6 = activeSubscriptionPlanFromStore;
       let subscriptionListing = activeSubscriptionPlanFromStore.getSubscriptionListing(item10017);
       let tmp8 = subscriptionListing;
-      let id;
+      id = undefined;
       if (subscriptionListing != null) {
         id = subscriptionListing.subscription_plans[0].id;
       }

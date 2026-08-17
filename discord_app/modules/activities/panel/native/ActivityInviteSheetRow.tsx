@@ -1,25 +1,20 @@
 // discord_app/modules/activities/panel/native/ActivityInviteSheetRow.tsx
-import { View } from "getAvatarURL";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { InviteSendStates } from "InviteSendStates";
-import { jsx } from "module_11890";
-import createCacheKey from "createCacheKey";
-import importAllResult from "Text";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { InviteSendStates } from "InviteSendStates" /* 4371 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let obj = { acronym: null };
-obj = { width: 32, height: 32, borderRadius: require("Themes").radii.lg, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: require("Themes").colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
+obj = { width: 32, height: 32, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, alignItems: "center", justifyContent: "center", overflow: "hidden", marginTop: 0, marginRight: 10, borderColor: ThemesDefault.colors.BORDER_MUTED, borderStyle: "solid", borderWidth: 2 };
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
-const memoResult = require("Text").memo(function ActivityInviteSheetRow(row) {
-  let end;
-  let error;
-  let isSubmitting;
-  let onPressAvatar;
-  let require;
-  let start;
+const memoResult = importAllResult.memo(function ActivityInviteSheetRow(row) {
   ({ onInviteSent: require, onPressAvatar } = row);
   row = row.row;
   const sendState = row.sendState;
@@ -27,8 +22,8 @@ const memoResult = require("Text").memo(function ActivityInviteSheetRow(row) {
   ({ end, error, isSubmitting, start } = row);
   id = row.item.id;
   let obj = require(row[9]);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(id));
+  const items = [closure_4];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(id));
   let str = onPressAvatar(row[10])(stateFromStores);
   const type = row.type;
   if (require(row[11]).RowTypes.DM !== type) {
@@ -63,7 +58,7 @@ const memoResult = require("Text").memo(function ActivityInviteSheetRow(row) {
           return null;
         } else {
           if (null != guild.icon) {
-            const obj1 = { source: null, size: null };
+            obj1 = { source: null, size: null };
             const tmp5Result1 = tmp5(tmp3[17]);
             ({ id: obj8[0], icon: obj8[1] } = guild);
             obj1[0] = tmp5Result1.makeSource(tmp5(tmp3[17]).getGuildIconURL({ id: null, icon: null, size: 32 }));
@@ -170,6 +165,6 @@ const memoResult = require("Text").memo(function ActivityInviteSheetRow(row) {
   str2 = tmp21Result;
   tmp14 = tmp21Result;
 });
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetRow.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/panel/native/ActivityInviteSheetRow.tsx");
 
 export default memoResult;

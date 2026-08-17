@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/SidechainCompressionSetting.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import { Features } from "DesktopSources";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import { Features } from "DesktopSources" /* 4529 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -14,14 +14,14 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   usePredicate() {
-    return _detectH265HardwareDecode.supports(Features.SIDECHAIN_COMPRESSION);
+    return closure_3.supports(Features.SIDECHAIN_COMPRESSION);
   },
   useValue: function useSidechainCompressionSettingValue() {
-    const items = [_detectH265HardwareDecode];
+    const items = [closure_3];
     return initialize.useStateFromStores(items, () => sidechainCompression.getSidechainCompression());
   },
   onValueChange(arg0) {
-    return trackDeviceChanged.setSidechainCompression(arg0);
+    return trackDeviceChangedDefault.setSidechainCompression(arg0);
   },
   useDescription() {
     const intl = getSystemLocale.intl;
@@ -29,6 +29,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("DesktopSources").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SidechainCompressionSetting.tsx");
 
 export default createToggle;

@@ -1,6 +1,8 @@
 // discord_common/js/packages/kv-storage/js/api/Kv.tsx
-import { open } from "../raw/Host.tsx";
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Kv.tsx");
+import set from "set" /* 2 */;
+import open from "open" /* 1964 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/api/Kv.tsx");
 const prototype = function Kv() {
   return Object.create(new.target.prototype);
 }.prototype;

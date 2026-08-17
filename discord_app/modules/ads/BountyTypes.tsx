@@ -1,6 +1,8 @@
 // discord_app/modules/ads/BountyTypes.tsx
-import { resolveAsset } from "../quests/lib/AssetUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/ads/BountyTypes.tsx");
+import set from "set" /* 2 */;
+import resolveAsset from "resolveAsset" /* 10486 */;
+
+const result = set.fileFinishedImporting("modules/ads/BountyTypes.tsx");
 
 export const bountyCtaFromServer = function bountyCtaFromServer(url) {
   let obj = { url: url.url, buttonLabel: url.button_label, android: null, ios: null };
@@ -22,7 +24,7 @@ export const bountyCtaFromServer = function bountyCtaFromServer(url) {
 };
 export const bountyFromServer = function bountyFromServer(creative_content) {
   let obj = { id: creative_content.id, advertiserName: creative_content.advertiser_name, productName: creative_content.product_name, productIcon: null, videoPreview: null, imagePreview: null, videoHls: null, cta: null, rewardTimerSeconds: null };
-  let obj1 = resolveAsset;
+  obj1 = resolveAsset;
   obj[3] = obj1.resolveOptionalAdCreativeCdnUrl(creative_content.product_icon);
   obj[4] = resolveAsset.resolveOptionalAdCreativeCdnUrl(creative_content.video_preview);
   const obj3 = resolveAsset;

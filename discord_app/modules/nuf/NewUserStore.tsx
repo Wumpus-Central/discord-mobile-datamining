@@ -1,7 +1,9 @@
 // discord_app/modules/nuf/NewUserStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let c0 = null;
+const PersistedStore = initializeDefault.PersistedStore;
 class NewUserStore extends PersistedStore {
 }
 const prototype = NewUserStore.prototype;
@@ -22,13 +24,13 @@ prototype["getState"] = function getState() {
 };
 NewUserStore.displayName = "NewUserStore";
 NewUserStore.persistKey = "nuf";
-const newUserStore = new NewUserStore(require("dispatcher"), {
+const newUserStore = new NewUserStore(dispatcherDefault, {
   NUF_NEW_USER: function handleNewUser(newUserType) {
     newUserType = newUserType.newUserType;
     newUserStore.persist();
   },
   NUF_COMPLETE: function handleNUFCompleted() {
-    let c0 = null;
+    c0 = null;
     newUserStore.persist();
   }
 });

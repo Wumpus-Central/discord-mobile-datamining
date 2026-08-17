@@ -1,31 +1,28 @@
 // discord_app/modules/favorites/native/FavoritesGuildCategoryActionSheet.tsx
-import noop from "noop";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "initializeFromUserSettings" /* 1394 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 function FavoritesGuildCategoryActionSheetConnected(category) {
   category = category.category;
   const onClose = category.onClose;
-  let dependencyMap;
+  dependencyMap = undefined;
   const tmp3 = onClose(11958)(category);
   dependencyMap = tmp3;
   const DeveloperMode = category(4066).DeveloperMode;
   const setting = DeveloperMode.useSetting();
-  let obj = { header: null, children: null };
-  obj[0] = callback(category(6949).BottomSheetTitleHeader, { title: onClose(4984)(category, true) });
+  let obj = { header: callback(category(6949).BottomSheetTitleHeader, { title: onClose(4984)(category, true) }), children: null };
   let tmp7Result = null;
   if (null != tmp3) {
     obj = { hasIcons: true, children: null };
     obj = { label: null, icon: null, onPress: null };
     obj[0] = tmp3.label;
-    const obj1 = { IconComponent: null };
+    obj1 = { IconComponent: null };
     obj1[0] = tmp4(9975).PlusLargeIcon;
     obj[1] = tmp7(tmp4(7177).ActionSheetRow.Icon, obj1);
     obj[2] = function onPress() {
-      _undefined.perform();
+      closure_2.perform();
       onClose();
     };
     obj[1] = tmp7(tmp4(7177).ActionSheetRow, obj);
@@ -36,11 +33,11 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   const obj3 = { label: null, icon: null, onPress: null };
   const intl = tmp4(1236).intl;
   obj3[0] = intl.string(category(1236).t.zdPFs9);
-  const obj4 = { IconComponent: null };
-  obj4[0] = category(7355).SettingsIcon;
-  obj3[1] = callback(category(7177).ActionSheetRow.Icon, obj4);
+  const tmp2 = onClose(4984)(category, true);
+  const tmp6 = closure_6;
+  obj3[1] = callback(category(7177).ActionSheetRow.Icon, { IconComponent: category(7355).SettingsIcon });
   obj3[2] = function onPress() {
-    onClose(_undefined[12])(category.id);
+    onClose(closure_2[12])(category.id);
     onClose();
   };
   obj2[1] = callback(category(7177).ActionSheetRow, obj3);
@@ -55,9 +52,9 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
     obj7[0] = tmp4(9563).IdIcon;
     obj6[1] = tmp7(tmp4(7177).ActionSheetRow.Icon, obj7);
     obj6[2] = function onPress() {
-      category(_undefined[14]).copy(category.id);
-      const obj = category(_undefined[14]);
-      category(_undefined[15]).presentIdCopied();
+      category(closure_2[14]).copy(category.id);
+      const obj = category(closure_2[14]);
+      category(closure_2[15]).presentIdCopied();
       onClose();
     };
     obj5[1] = tmp7(tmp4(7177).ActionSheetRow, obj6);
@@ -65,10 +62,10 @@ function FavoritesGuildCategoryActionSheetConnected(category) {
   }
   items[2] = tmp7Result;
   obj[1] = items;
-  return closure_6(category(7175).ActionSheet, obj);
+  return tmp6(category(7175).ActionSheet, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/favorites/native/FavoritesGuildCategoryActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/native/FavoritesGuildCategoryActionSheet.tsx");
 
 export default function FavoritesGuildCategoryActionSheet(categoryId) {
   categoryId = categoryId.categoryId;
@@ -76,13 +73,13 @@ export default function FavoritesGuildCategoryActionSheet(categoryId) {
   let stateFromStores;
   let memo;
   let obj = categoryId(stateFromStores[16]);
-  const items = [initializeFromUserSettings];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_4.getFavorite(categoryId));
+  const items = [closure_4];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getFavorite(categoryId));
   const items1 = [categoryId, stateFromStores];
   memo = memo.useMemo(() => {
     let categoryRecord = null;
     if (null != stateFromStores) {
-      categoryRecord = outer1_4.getCategoryRecord(categoryId);
+      categoryRecord = closure_1_4.getCategoryRecord(categoryId);
     }
     return categoryRecord;
   }, items1);

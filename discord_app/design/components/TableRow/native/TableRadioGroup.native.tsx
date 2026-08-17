@@ -1,33 +1,21 @@
 // discord_app/design/components/TableRow/native/TableRadioGroup.native.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const context = importAllResult.createContext({ selectedValue: null, onSelect: require("ME").NOOP });
-const result = require("ME").fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRadioGroup.native.tsx");
 
 export const TableRadioGroupContext = context;
 export const TableRadioGroup = function TableRadioGroup(arg0) {
-  let accessibilityLabel;
-  let c2;
-  let children;
-  let defaultValue;
-  let description;
-  let groupRef;
-  let hasIcons;
-  let helperText;
-  let onChange;
-  let title;
-  let tmp4;
-  let value;
   ({ value, defaultValue, onChange } = arg0);
   let callback;
-  let importAllResult;
-  let jsx;
+  importAllResult = undefined;
+  jsx = undefined;
   callback = undefined;
-  const dependencyMap = tmp;
+  dependencyMap = tmp;
   let obj = importAllResult;
   let tmp2 = null;
   ({ children, title, description, helperText, hasIcons, groupRef, accessibilityLabel } = arg0);
@@ -71,15 +59,42 @@ export const TableRadioGroup = function TableRadioGroup(arg0) {
   }, items1);
   const items2 = [tmp4, callback];
   obj = { value: obj.useMemo(() => ({ selectedValue: c3, onSelect: callback }), items2), children: null };
-  obj = { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null };
-  const Children = obj.Children;
-  obj[6] = Children.map(children, (type) => {
-    if (!_undefined2.isValidElement(type)) {
+  obj = {
+    accessibilityRole: "radiogroup",
+    accessibilityLabel,
+    title,
+    description,
+    helperText,
+    hasIcons,
+    children: Children.map(children, (type) => {
+      if (!_null.isValidElement(type)) {
+        let tmp4 = null;
+        return tmp4;
+      }
+      tmp4 = type;
+    })
+  };
+  Children = obj.Children;
+  obj[1] = jsx(onChange(6286).TableRowGroup, {
+    accessibilityRole: "radiogroup",
+    accessibilityLabel,
+    title,
+    description,
+    helperText,
+    hasIcons,
+    children: Children.map(children, (type) => {
+      if (!_null.isValidElement(type)) {
+        let tmp4 = null;
+        return tmp4;
+      }
+      tmp4 = type;
+    })
+  });
+  return <callback.Provider accessibilityRole="radiogroup" accessibilityLabel={accessibilityLabel} title={title} description={description} helperText={helperText} hasIcons={hasIcons}>{Children.map(children, (type) => {
+    if (!_null.isValidElement(type)) {
       let tmp4 = null;
       return tmp4;
     }
     tmp4 = type;
-  });
-  obj[1] = jsx(onChange(6286).TableRowGroup, { accessibilityRole: "radiogroup", accessibilityLabel, title, description, helperText, hasIcons, children: null });
-  return <callback.Provider accessibilityRole="radiogroup" accessibilityLabel={accessibilityLabel} title={title} description={description} helperText={helperText} hasIcons={hasIcons}>{null}</callback.Provider>;
+  })}</callback.Provider>;
 };

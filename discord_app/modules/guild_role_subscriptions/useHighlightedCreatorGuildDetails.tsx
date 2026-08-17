@@ -1,13 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx
-import noop from "noop";
-import { MarketingURLs } from "ME";
+import closure_2 from "noop" /* 19 */;
+import { MarketingURLs } from "ME" /* 676 */;
 
-let result = require("useFetchHighlightedCreatorGuildDetails").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");
 
 export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
-  let highlightedCreatorDetails;
-  let isLoading;
-  const importDefault = arg1;
+  importDefault = arg1;
   const tmp3 = importDefault(store_page[2])(id);
   ({ isLoading, highlightedCreatorDetails } = tmp3);
   store_page = undefined;
@@ -112,7 +110,7 @@ export default function useHighlightedCreatorGuildDetails(id, arg1, size) {
     obj = { hasAllImperativeDetails: null, isLoading: null, details: null };
     obj[0] = tmp13;
     obj[1] = isLoading;
-    const obj1 = { guildName: null, guildIcon: null, guildAvatarUrl: null, storePageUrl: null, subscriberCount: null, emojisToShow: null, notShownEmojiCount: null };
+    obj1 = { guildName: null, guildIcon: null, guildAvatarUrl: null, storePageUrl: null, subscriberCount: null, emojisToShow: null, notShownEmojiCount: null };
     obj1[0] = name;
     obj1[1] = icon_hash;
     obj1[2] = guildIconURL;

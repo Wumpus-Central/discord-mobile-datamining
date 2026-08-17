@@ -1,8 +1,10 @@
 // discord_app/modules/app_database/util/ExtendedMemoryLru.tsx
-import _slicedToArray from "_slicedToArray";
+import length from "length" /* 5072 */;
+import nextAll from "next" /* 5073 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
-const result = require("next").fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_database/util/ExtendedMemoryLru.tsx");
 class ExtendedMemoryLru {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -121,19 +123,19 @@ prototype["allEntries"] = function allEntries() {
   const extended = this.extended;
   const primary = this.primary;
   const entries = extended.entries();
-  return importAll(5073).chain(entries, primary.entries());
+  return nextAll.chain(entries, primary.entries());
 };
 prototype["allKeys"] = function allKeys() {
   const extended = this.extended;
   const primary = this.primary;
   const keys = extended.keys();
-  return importAll(5073).chain(keys, primary.keys());
+  return nextAll.chain(keys, primary.keys());
 };
 prototype["allValues"] = function allValues() {
   const extended = this.extended;
   const primary = this.primary;
   const values = extended.values();
-  return importAll(5073).chain(values, primary.values());
+  return nextAll.chain(values, primary.values());
 };
 
 export { ExtendedMemoryLru };

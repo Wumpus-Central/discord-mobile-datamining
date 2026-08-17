@@ -1,17 +1,12 @@
 // discord_app/modules/game_profile/native/components/GameProfileSimilarGames.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useWindowDimensions } from "../../../screen/useWindowDimensions.native.tsx";
-import { useSimilarGames } from "../../hooks/useSimilarGames.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 12012 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function Spacer() {
   const style = { width: PX_12 };
@@ -19,7 +14,7 @@ function Spacer() {
 }
 function ListPadding() {
   let obj = { style: null };
-  obj = { width: Themes.space.PX_16 };
+  obj = { width: ThemesDefault.space.PX_16 };
   obj[0] = obj;
   return callback(closure_6, obj);
 }
@@ -29,12 +24,11 @@ function SimilarGameCard(game) {
   const cardWidth = game.cardWidth;
   let shouldOpenGameProfile;
   let gameId;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const result = 1.34 * cardWidth;
   const coverURL = game.getCoverURL(Math.ceil(result));
   let obj = { width: cardWidth, height: result };
-  obj = { gameId: game.id, source: null };
-  obj[1] = game(shouldOpenGameProfile[6]).GameProfileSources.SimilarGames;
+  obj = { gameId: game.id, source: game(shouldOpenGameProfile[6]).GameProfileSources.SimilarGames };
   const tmp5Result = trackAction(shouldOpenGameProfile[5])(obj);
   shouldOpenGameProfile = tmp5Result.shouldOpenGameProfile;
   gameId = tmp5Result.gameId;
@@ -89,7 +83,7 @@ function LoadingCard(cardWidth) {
   cardWidth = cardWidth.cardWidth;
   let obj = { style: { width: cardWidth }, children: null };
   obj = { style: null };
-  const items = [createCacheKey().loadingArt, ];
+  const items = [callback3().loadingArt, ];
   obj = { width: cardWidth, height: 1.34 * cardWidth };
   items[1] = obj;
   obj[0] = items;
@@ -97,42 +91,40 @@ function LoadingCard(cardWidth) {
   return callback(closure_6, obj);
 }
 ({ Image: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-let PX_12 = require("Themes").space.PX_12;
-const PX_16 = require("Themes").space.PX_16;
-PX_12 = require("Themes").space.PX_12;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
+let PX_12 = ThemesDefault.space.PX_12;
+const PX_16 = ThemesDefault.space.PX_16;
+PX_12 = ThemesDefault.space.PX_12;
 createCacheKey = { container: null, header: null, card: null, coverArt: null, coverArtFallback: null, loadingArt: null };
-createCacheKey = { gap: require("Themes").space.PX_8, marginHorizontal: -1 * require("Themes").space.PX_16 };
+createCacheKey = { gap: ThemesDefault.space.PX_8, marginHorizontal: -1 * ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_16 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[2] = { gap: require("Themes").space.PX_4 };
-let obj2 = { gap: require("Themes").space.PX_4 };
-createCacheKey[3] = { borderRadius: require("Themes").radii.sm };
-let obj3 = { borderRadius: require("Themes").radii.sm };
-createCacheKey[4] = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: require("Themes").space.PX_8 };
-let obj4 = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: require("Themes").space.PX_8 };
-createCacheKey[5] = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj5 = { borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-let result = require("jsxProd").fileFinishedImporting("modules/game_profile/native/components/GameProfileSimilarGames.tsx");
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { gap: ThemesDefault.space.PX_4 };
+let obj2 = { gap: ThemesDefault.space.PX_4 };
+createCacheKey[3] = { borderRadius: ThemesDefault.radii.sm };
+let obj3 = { borderRadius: ThemesDefault.radii.sm };
+createCacheKey[4] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_8 };
+let obj4 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, justifyContent: "center", alignItems: "center", padding: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj5 = { borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileSimilarGames.tsx");
 
 export default function GameProfileSimilarGames(trackAction) {
-  let dense;
-  let enabled;
   trackAction = trackAction.trackAction;
-  let importDefault;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  const tmp = callback3();
   const GameProfileSimilarGamesMobileExperiment = trackAction(9126).GameProfileSimilarGamesMobileExperiment;
   const config = GameProfileSimilarGamesMobileExperiment.useConfig({ location: "GameProfileSimilarGames" });
   ({ enabled, dense } = config);
-  const tmp6 = useSimilarGames(trackAction.gameId, enabled);
+  const tmp6 = useSimilarGamesDefault(trackAction.gameId, enabled);
   const similarGames = tmp6.similarGames;
   let num = 3;
   if (dense) {
     num = 4;
   }
-  const result = (useWindowDimensions().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
+  const result = (useWindowDimensionsDefault().width - 2 * PX_16 - (num - 1) * PX_12 - PX_12) / num;
   importDefault = result;
   if (tmp6.isFetching) {
     let obj = { style: null, children: null };
@@ -144,10 +136,10 @@ export default function GameProfileSimilarGames(trackAction) {
     obj[2] = intl.string(tmp2(1236).t["6rLyQB"]);
     obj[1] = callback(tmp2(4734).Text, obj);
     const items = [callback(closure_6, obj), ];
-    const obj1 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
+    obj1 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null };
     obj1[1] = tmp9;
     obj1[2] = function renderItem() {
-      return outer1_7(outer1_16, { cardWidth: c1 });
+      return closure_1_7(closure_1_16, { cardWidth: c1 });
     };
     obj1[4] = Spacer;
     obj1[5] = ListPadding;
@@ -170,7 +162,7 @@ export default function GameProfileSimilarGames(trackAction) {
       const obj5 = { horizontal: true, data: null, renderItem: null, showsHorizontalScrollIndicator: false, ItemSeparatorComponent: null, ListHeaderComponent: null, ListFooterComponent: null, decelerationRate: "fast", snapToInterval: null };
       obj5[1] = similarGames;
       obj5[2] = function renderItem(game) {
-        return outer1_7(outer1_15, { game: game.item, trackAction, cardWidth: c1 });
+        return closure_1_7(closure_1_15, { game: game.item, trackAction, cardWidth: c1 });
       };
       obj5[4] = Spacer;
       obj5[5] = ListPadding;

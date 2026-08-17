@@ -1,16 +1,17 @@
 // discord_app/modules/settings/native/renderer/SettingListRenderer.tsx
-import importAllResult from "set";
-import { View } from "SettingSearchBar";
-import zustandStore from "zustandStore";
-import closure_6 from "zustandStore";
-import { ListItemType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { GuildSelectDefaultIcon } from "SettingRenderer.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import GuildSelectDefaultIcon from "GuildSelectDefaultIcon" /* 13995 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "zustandStore" /* 13993 */;
+import closure_6 from "zustandStore" /* 13994 */;
+import { ListItemType } from "GUILD_SELECT_ALL_SERVERS_OPTION_ID" /* 10670 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 function SearchListSectionLabel(label) {
   label = label.label;
   let obj = { style: callback().spacer, children: null };
@@ -96,7 +97,7 @@ function keyExtractor(type) {
 }
 let c3 = importAllResult;
 let obj = { container: null, contentContainer: null, searchResultsHeader: null, spacer: null, subLabel: null };
-obj = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
+obj = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 };
 obj[0] = obj;
 obj[1] = { paddingHorizontal: 16 };
 obj[2] = { paddingBottom: 24 };
@@ -109,13 +110,13 @@ const memoResult = importAllResult.memo((node) => {
   const tmp = callback();
   field = closure_6.useField("blocklist");
   const items = [field, node];
-  const memo = importAllResult.useMemo(() => node(outer1_2[12]).toSettingListItems(node, field), items);
+  const memo = importAllResult.useMemo(() => node(closure_1_2[12]).toSettingListItems(node, field), items);
   const ref = importAllResult.useRef(null);
   let obj = node(15062);
   obj.useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   obj = { style: tmp.container, children: null };
   obj = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
-  const obj1 = {};
+  obj1 = {};
   const merged = Object.assign(tmp.contentContainer);
   obj1.paddingBottom = field(1629)().bottom + field(712).space.PX_16;
   obj[2] = obj1;
@@ -129,7 +130,7 @@ const memoResult = importAllResult.memo((node) => {
 });
 const memoResult1 = importAllResult.memo((node) => {
   node = node.node;
-  let importDefault;
+  importDefault = undefined;
   let settings;
   let isLoading;
   let placeholderCount;
@@ -159,7 +160,7 @@ const memoResult1 = importAllResult.memo((node) => {
     if (state) {
       let searchResultsHeader = {};
     } else {
-      searchResultsHeader = _undefined.searchResultsHeader;
+      searchResultsHeader = lib.searchResultsHeader;
     }
     return searchResultsHeader;
   }, items3);
@@ -170,7 +171,7 @@ const memoResult1 = importAllResult.memo((node) => {
       if (!isLoading) {
         tmp = null;
         if (0 === memo2.length) {
-          tmp = memo1(_undefined(settings[16]), {});
+          tmp = memo1(lib(settings[16]), {});
         }
       }
     }
@@ -192,7 +193,7 @@ const memoResult1 = importAllResult.memo((node) => {
   obj[10] = getItemType;
   return memo1(node(settings[14]).FlashList, obj);
 });
-const result = require("zustandStore").fileFinishedImporting("modules/settings/native/renderer/SettingListRenderer.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/renderer/SettingListRenderer.tsx");
 
 export const SettingsList = memoResult;
 export const SearchableSettingsList = memoResult1;

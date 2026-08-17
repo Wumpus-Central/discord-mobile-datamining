@@ -1,34 +1,32 @@
 // discord_app/modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { messagesProxy } from "../messages/GiftCard.messages.js";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import messagesProxyDefault from "messagesProxy" /* 2107 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { sheet: null, container: null, illustration: null, body: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_16 };
-const obj1 = { paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[2] = { alignSelf: "stretch", alignItems: "center", paddingTop: require("Themes").space.PX_12 };
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_16 };
+const obj1 = { paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { alignSelf: "stretch", alignItems: "center", paddingTop: ThemesDefault.space.PX_12 };
 createCacheKey[3] = { textAlign: "center", fontFamily: "gg sans", fontSize: 16, fontWeight: 600, lineHeight: 20, alignSelf: "center", width: 280 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { alignSelf: "stretch", alignItems: "center", paddingTop: require("Themes").space.PX_12 };
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { alignSelf: "stretch", alignItems: "center", paddingTop: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/checkout/native/GiftCardMobileConsumptionActionSheet.tsx");
 
 export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   importDefault = React.useRef(false);
   dependencyMap = React.useRef(markAsDismissed);
   const items = [markAsDismissed];
@@ -37,7 +35,7 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
   }, items);
   const effect1 = React.useEffect(() => () => {
     if (!ref.current) {
-      ref2.current(outer1_5.AUTO_DISMISS);
+      ref2.current(closure_1_5.AUTO_DISMISS);
     }
   }, []);
   const items1 = [markAsDismissed];
@@ -53,24 +51,23 @@ export default function GiftCardMobileConsumptionActionSheet(markAsDismissed) {
     startExpanded: true,
     backgroundStyles: tmp.sheet,
     onDismiss() {
-      return callback(outer1_5.USER_DISMISS);
+      return callback(closure_1_5.USER_DISMISS);
     },
     children: null
   };
   obj = { style: items2, children: null };
-  items2 = [tmp.container, { paddingBottom: useSafeAreaInsets().bottom }];
-  obj = { spacing: null, children: null };
-  obj[0] = Themes.space.PX_16;
+  items2 = [tmp.container, { paddingBottom: useSafeAreaInsetsDefault().bottom }];
+  obj = { spacing: ThemesDefault.space.PX_16, children: null };
   const items3 = [callback(View, { style: tmp.illustration, children: callback(markAsDismissed(5447).LaptopSpotIllustration, { scale: 1, width: 150, height: 123 }) }), , ];
   const obj2 = { variant: "text-md/medium", color: "text-default", style: tmp.body, children: null };
   const intl = markAsDismissed(1236).intl;
-  obj2[3] = intl.string(messagesProxy.V3DI1E);
+  obj2[3] = intl.string(messagesProxyDefault.V3DI1E);
   items3[1] = callback(markAsDismissed(4734).Text, obj2);
   const obj3 = { size: "lg", variant: "secondary", grow: true, text: null, onPress: null };
   const intl2 = markAsDismissed(1236).intl;
-  obj3[3] = intl2.string(messagesProxy.YZePWx);
+  obj3[3] = intl2.string(messagesProxyDefault.YZePWx);
   obj3[4] = function onPress() {
-    return callback(outer1_5.USER_DISMISS);
+    return callback(closure_1_5.USER_DISMISS);
   };
   items3[2] = callback(markAsDismissed(4745).Button, obj3);
   obj[1] = items3;

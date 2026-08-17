@@ -1,6 +1,7 @@
 // discord_app/stores/billing/PaymentSourceStore.tsx
-import createFromServer from "createFromServer";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "createFromServer" /* 4043 */;
 
 function handlePaymentSourceUpdate(paymentSource) {
   paymentSource = paymentSource.paymentSource;
@@ -19,6 +20,7 @@ function handlePaymentSourceUpdate(paymentSource) {
 let closure_1 = {};
 let c2 = null;
 let c3 = false;
+const Store = initializeDefault.Store;
 class PaymentSourceStore extends Store {
 }
 const prototype = PaymentSourceStore.prototype;
@@ -68,19 +70,19 @@ prototype["getPaymentSource"] = function getPaymentSource(paymentSourceId) {
   return dependencyMap[paymentSourceId];
 };
 PaymentSourceStore.displayName = "PaymentSourceStore";
-const paymentSourceStore = new PaymentSourceStore(require("dispatcher"), {
+const paymentSourceStore = new PaymentSourceStore(dispatcherDefault, {
   BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCE_FETCH_SUCCESS: handlePaymentSourceUpdate,
   BILLING_PAYMENT_SOURCES_FETCH_SUCCESS: function handlePaymentSourceFetch(paymentSources) {
     paymentSources = paymentSources.paymentSources;
-    let closure_1 = {};
+    closure_1 = {};
     let id = null;
     for (const item10009 of paymentSources) {
       let tmp2 = closure_1;
-      let tmp3 = createFromServer;
+      let tmp3 = closure_0;
       let tmp = item10009;
-      closure_1[item10009.id] = createFromServer.createFromServer(item10009);
+      closure_1[item10009.id] = closure_0.createFromServer(item10009);
       if (item10009.default) {
         let tmp4 = item10009;
         id = tmp.id;
@@ -94,7 +96,7 @@ const paymentSourceStore = new PaymentSourceStore(require("dispatcher"), {
     if (tmp5) {
       id = paymentSources[0].id;
     }
-    let c3 = true;
+    c3 = true;
   },
   BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: function handlePaymentSourceRemove(id) {
     const obj = {};
@@ -110,11 +112,11 @@ const paymentSourceStore = new PaymentSourceStore(require("dispatcher"), {
     }
   },
   LOGOUT: function handleLogout() {
-    let closure_1 = {};
-    let c2 = null;
-    let c3 = false;
+    closure_1 = {};
+    c2 = null;
+    c3 = false;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
+const result = require("set").fileFinishedImporting("stores/billing/PaymentSourceStore.tsx");
 
 export default paymentSourceStore;

@@ -1,16 +1,17 @@
 // discord_app/utils/AttachmentFile.native.tsx
-import items from "items";
-import { openImagePickerUnhandled } from "native/UploadUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import openImagePickerUnhandled from "openImagePickerUnhandled" /* 4838 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
+require = arg1;
 function _getAttachmentFile() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1) {
       if (c8 === 2) {
         c8 = 3;
@@ -39,17 +40,17 @@ function _getAttachmentFile() {
               return obj;
             } else {
               let logger = tmp3;
-              let items = tmp7;
-              let dependencyMap;
-              items = undefined;
+              closure_3 = tmp7;
+              dependencyMap = undefined;
+              closure_3 = undefined;
               logger = undefined;
-              callback(outer1_2[2])(lib.item.platform === lib(outer1_2[3]).UploadPlatform.REACT_NATIVE, "Upload must be in the React Native format");
-              let c6 = 1;
-              const tmp49 = callback(outer1_2[2]);
+              callback(closure_1_2[2])(lib.item.platform === lib(closure_1_2[3]).UploadPlatform.REACT_NATIVE, "Upload must be in the React Native format");
+              c6 = 1;
+              const tmp49 = callback(closure_1_2[2]);
               c7 = 2;
               c8 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = lib(outer1_2[4]).getFileInfo(lib, callback);
+              obj1 = { value: null, done: false };
+              obj1[0] = lib(closure_1_2[4]).getFileInfo(lib, callback);
               return obj1;
             }
           } else if (1 === tmp7) {
@@ -70,14 +71,14 @@ function _getAttachmentFile() {
               obj3[0] = arg1;
               return obj3;
             } else {
-              items = arg1;
-              logger = lib(4830).getAttachmentPayload(lib, callback, items.name);
+              closure_3 = arg1;
+              logger = lib(4830).getAttachmentPayload(lib, callback, closure_3.name);
               c6 = 2;
               const obj10 = lib(4830);
               c7 = 4;
               c8 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = lib(4838).getFileSize(items.uri);
+              obj4[0] = lib(4838).getFileSize(closure_3.uri);
               return obj4;
             }
           } else {
@@ -97,8 +98,8 @@ function _getAttachmentFile() {
               c6 = 1;
             }
             const obj5 = { file: null, uri: null, name: null, fileSize: null };
-            obj5[0] = items;
-            obj5[1] = items.uri;
+            obj5[0] = closure_3;
+            obj5[1] = closure_3.uri;
             const filename = logger.filename;
             dependencyMap = filename;
             if (filename == null) {
@@ -126,7 +127,7 @@ function _getAttachmentFile() {
       }
     })();
   });
-  const _getAttachmentFile = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -138,9 +139,9 @@ function _getAttachmentFile() {
 function _cancelGetAttachmentFile() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -168,7 +169,7 @@ function _cancelGetAttachmentFile() {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = callback(table[4]);
+              obj1 = callback(table[4]);
               table = 1;
               c1 = 1;
               obj1 = { value: null, done: false };
@@ -194,7 +195,7 @@ function _cancelGetAttachmentFile() {
       }
     })();
   });
-  const _cancelGetAttachmentFile = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -203,9 +204,9 @@ function _cancelGetAttachmentFile() {
   }
   return applyArgumentsResult;
 }
-let c4 = new require("cancel")("AttachmentFile");
-const tmp2 = new require("cancel")("AttachmentFile");
-const result = require("module_38").fileFinishedImporting("utils/AttachmentFile.native.tsx");
+let closure_4 = new timestampDefault("AttachmentFile");
+const tmp2 = new timestampDefault("AttachmentFile");
+const result = require("set").fileFinishedImporting("utils/AttachmentFile.native.tsx");
 
 export const getAttachmentFile = function getAttachmentFile(arg0, c0) {
   const self = this;
@@ -237,7 +238,7 @@ export const fileIsInAppDir = function fileIsInAppDir(uri) {
     }
     return startsWithResult;
   } catch (tmp4) {
-    tmp2.error("Failed to get app dir", tmp4);
+    logger.error("Failed to get app dir", tmp4);
     return false;
   }
 };

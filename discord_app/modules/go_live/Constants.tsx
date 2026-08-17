@@ -1,5 +1,6 @@
 // discord_app/modules/go_live/Constants.tsx
-import set from "set";
+import Notifications from "Notifications" /* 4533 */;
+import set from "set" /* 2 */;
 
 let set = new Set(["chrome.exe", "opera.exe", "firefox.exe", "brave.exe", "msedge.exe"]);
 const result = set.fileFinishedImporting("modules/go_live/Constants.tsx");
@@ -17,6 +18,6 @@ export const WINDOWS_GRAPHICS_CAPTURE_NEW_APIS_BUILD = 26100;
 export const WINDOWS_GRAPHICS_CAPTURE_SEMVER = ">=10.0.22000";
 export const WINDOWS_GRAPHICS_CAPTURE_BUILD = 22000;
 export const StreamTypes = { GUILD: "guild", CALL: "call" };
-export const STREAM_NOTIFY_GUILD_MAX_SIZE = require("Notifications").Notifications.StreamNotificationsGuildMaxSize;
+export const STREAM_NOTIFY_GUILD_MAX_SIZE = Notifications.Notifications.StreamNotificationsGuildMaxSize;
 export const GO_LIVE_NOTIFY_FRIENDS_MIN_MEMBER_COUNT = 30;
 export const BROWSER_EXECUTABLES = set;

@@ -1,12 +1,15 @@
 // discord_app/modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx
-import { NativeModules } from "get ActivityIndicator";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import "initialize";
-import { set } from "../../../../utils/PlatformUtils.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set2 from "set" /* 500 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
+initializeDefault;
 let prototype = function UserSettingsNativeBridgeManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  applyArgumentsResult.saveExplicitContentSettingsToDisk = set.isIOS() ? (() => {
+  applyArgumentsResult.saveExplicitContentSettingsToDisk = set2.isIOS() ? (() => {
     settings = settings.settings;
     if (settings != null) {
       const textAndImages = settings.textAndImages;
@@ -28,6 +31,6 @@ let prototype = function UserSettingsNativeBridgeManager() {
 class prototype extends tmp2 {
 }
 prototype = new prototype();
-let result = require("initialize").fileFinishedImporting("modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/privacy_and_safety/native/UserSettingsNativeBridgeManager.tsx");
 
 export default prototype;

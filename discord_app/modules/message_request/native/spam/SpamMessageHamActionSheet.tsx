@@ -1,53 +1,46 @@
 // discord_app/modules/message_request/native/spam/SpamMessageHamActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "Button";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { ActionSheetCloseButton } from "../../../../design/components/Sheet/native/ActionSheetCloseButton.native.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useMessageRequestActions } from "../../hooks/useMessageRequestActions.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import ActionSheetCloseButton from "ActionSheetCloseButton" /* 7176 */;
+import Form from "Form" /* 8083 */;
+import useMessageRequestActions from "useMessageRequestActions" /* 11610 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+require = arg1;
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { header: null, container: null, buttonContainer: null, switch: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_24, paddingHorizontal: require("Themes").space.PX_16 };
-let obj1 = { marginTop: require("Themes").space.PX_24, paddingHorizontal: require("Themes").space.PX_16 };
-createCacheKey[2] = { marginTop: require("Themes").space.PX_24 };
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, paddingHorizontal: ThemesDefault.space.PX_16 };
+createCacheKey[2] = { marginTop: ThemesDefault.space.PX_24 };
 createCacheKey[3] = { paddingHorizontal: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj2 = { marginTop: require("Themes").space.PX_24 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const obj2 = { marginTop: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/message_request/native/spam/SpamMessageHamActionSheet.tsx");
 
 export default function SpamMessageRequestHamActionSheet(arg0) {
-  let c5;
-  let dependencyMap;
-  let importDefault;
-  let isAcceptLoading;
-  let isOptimisticAccepted;
-  let require;
   ({ channel: require, onConfirm: importDefault, onCancel: dependencyMap } = arg0);
   let first;
   let React;
   c5 = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp2 = first(React.useState(false), 2);
   first = tmp2[0];
   React = tmp2[1];
   let obj = initialize;
-  const items = [mergeGuildAvatar];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getUser(recipientId.getRecipientId()));
-  let obj1 = useMessageRequestActions;
+  const items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(recipientId.getRecipientId()));
+  obj1 = useMessageRequestActions;
   obj = {
     user: stateFromStores,
     onError() {
@@ -75,7 +68,7 @@ export default function SpamMessageRequestHamActionSheet(arg0) {
   obj1[0] = intl.string(getSystemLocale.t["9ty6yc"]);
   obj1[1] = callback(ActionSheetCloseButton.ActionSheetCloseButton, {
     onPress() {
-      outer1_1(outer1_2[12]).hideActionSheet();
+      closure_1_1(closure_1_2[12]).hideActionSheet();
       dependencyMap();
     }
   });

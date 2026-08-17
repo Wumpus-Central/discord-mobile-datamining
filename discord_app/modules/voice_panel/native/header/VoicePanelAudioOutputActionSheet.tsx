@@ -1,26 +1,24 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelAudioOutputActionSheet.tsx
-import importAllResult from "useGameConsoleAccounts";
-import { ScrollView } from "TableRowIcon";
-import set from "set";
-import nativeEventEmitter from "nativeEventEmitter";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleUpdate from "handleUpdate";
-import { VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY as closure_9 } from "VOICE_PANEL_SETTINGS_KEY";
-import { PlatformTypes } from "ME";
-import jsxProd from "onConnectToConsole";
-import createCacheKey from "createCacheKey";
-import { defaultAreStatesEqual } from "../../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
+import defaultAreStatesEqual from "defaultAreStatesEqual" /* 647 */;
+import setDefault from "set" /* 7190 */;
+import importAllResult from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "set" /* 4540 */;
+import closure_6 from "nativeEventEmitter" /* 9651 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "handleUpdate" /* 4541 */;
+import { VOICE_PANEL_AUDIO_OUTPUT_ACTION_SHEET_KEY as closure_9 } from "VOICE_PANEL_SETTINGS_KEY" /* 9673 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function VoicePanelAudioPhoneOutputSection() {
   let obj = availableDevices(647);
-  const items = [nativeEventEmitter];
+  const items = [closure_6];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ activeDevice: store.getActiveAudioDevice(), availableDevices: store.getAudioDevices() }));
   availableDevices = stateFromStoresObject.availableDevices;
-  let closure_1 = importAllResult.useCallback((arg0) => {
+  closure_1 = importAllResult.useCallback((arg0) => {
     availableDevices(9675).setAudioOutputDevice(arg0);
     const obj = availableDevices(9675);
     callback(4342).hideActionSheet(closure_9);
@@ -34,7 +32,7 @@ function VoicePanelAudioPhoneOutputSection() {
     obj = { value: null, onChange: null, hasIcons: true, children: null };
     obj[0] = stateFromStoresObject.activeDevice.deviceId;
     obj[1] = function onChange(arg0) {
-      const availableDevices = arg0;
+      availableDevices = arg0;
       const found = availableDevices.find((deviceId) => deviceId.deviceId === closure_0);
       if (null != found) {
         callback(found);
@@ -42,8 +40,7 @@ function VoicePanelAudioPhoneOutputSection() {
     };
     obj[3] = availableDevices.map((deviceId) => {
       let obj = { value: deviceId.deviceId, icon: null, label: null, subLabel: null };
-      obj = { source: null };
-      obj[0] = availableDevices(9647).audioDeviceToIconMap[deviceId.simpleDeviceType];
+      obj = { source: availableDevices(9647).audioDeviceToIconMap[deviceId.simpleDeviceType] };
       obj[1] = callback2(availableDevices(6296).TableRowIcon, obj);
       obj[2] = availableDevices(9647).getAudioDeviceToDisplayText(deviceId);
       const deviceName = deviceId.deviceName;
@@ -66,17 +63,17 @@ function VoicePanelAudioPhoneOutputSection() {
 function VoicePanelAudioConsoleSection(channel) {
   channel = channel.channel;
   let arr;
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
   let stateFromStores1;
-  let c5;
+  closure_5 = undefined;
   arr = arr(9747)();
   dependencyMap = arr(9748)();
   let obj = channel(647);
-  const items = [c5];
-  stateFromStores = obj.useStateFromStores(items, () => _undefined.getAwaitingRemoteSessionInfo());
+  const items = [closure_5];
+  stateFromStores = obj.useStateFromStores(items, () => awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo());
   let tmp = callback2();
-  const items1 = [handleUpdate];
+  const items1 = [closure_8];
   stateFromStores1 = channel(647).useStateFromStores(items1, () => {
     let str;
     if (sessionId != null) {
@@ -85,7 +82,7 @@ function VoicePanelAudioConsoleSection(channel) {
     if (str == null) {
       str = "";
     }
-    return outer1_8.getSessionById(str);
+    return closure_1_8.getSessionById(str);
   });
   const items2 = [stateFromStores, stateFromStores1];
   const items3 = [arr, channel];
@@ -110,25 +107,25 @@ function VoicePanelAudioConsoleSection(channel) {
     return str;
   }, items2);
   const callback = stateFromStores.useCallback((channel) => {
-    let closure_0 = channel;
+    closure_0 = channel;
     const found = arr.find((type) => type.type === closure_0);
     if (null != found) {
       channel(sessionId[21]).onConnectToConsole(closure_0, found);
       const obj2 = channel(sessionId[21]);
-      arr(sessionId[10]).hideActionSheet(outer1_9);
+      arr(sessionId[10]).hideActionSheet(closure_1_9);
       const obj3 = arr(sessionId[10]);
     } else {
-      arr(sessionId[10]).hideActionSheet(outer1_9);
+      arr(sessionId[10]).hideActionSheet(closure_1_9);
       const obj = arr(sessionId[10]);
     }
   }, items3);
   let obj2 = channel(647);
   const tmp8 = !channel(4196).useIsDismissibleContentDismissed_UNSAFE(channel(1377).DismissibleContent.DONUT_MOBILE_NUX);
-  c5 = tmp8;
+  closure_5 = tmp8;
   const items4 = [arr, tmp8];
   const effect = stateFromStores.useEffect(() => {
-    let tmp = c5;
-    if (c5) {
+    let tmp = closure_5;
+    if (closure_5) {
       tmp = arr.length > 0;
     }
     if (tmp) {
@@ -164,7 +161,7 @@ function VoicePanelAudioConsoleSection(channel) {
       let tmp5 = null != tmp2;
       if (tmp5) {
         obj = { icon: null, label: null, value: null };
-        const obj1 = { source: null, variant: null };
+        obj1 = { source: null, variant: null };
         obj1[0] = arr(sessionId[24])(type.type);
         obj1[1] = tmp2.variant;
         obj[0] = callback(channel(sessionId[17]).TableRowIcon, obj1);
@@ -184,12 +181,10 @@ let c3 = importAllResult;
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 let closure_13 = createCacheKey.createStyles({ sectionContainer: { marginTop: 0, marginBottom: 24 } });
 const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionSheet(arg0) {
-  let isConnectedToVoiceChannel;
-  let require;
   ({ channelId: require, isConnectedToVoiceChannel } = arg0);
   let obj = defaultAreStatesEqual;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getChannel(closure_0));
+  const items = [closure_7];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getChannel(closure_0));
   let tmp5Result = null;
   if (null != stateFromStores) {
     obj = { header: null, children: null };
@@ -200,19 +195,19 @@ const memoResult = importAllResult.memo(function VoicePanelAudioOutputActionShee
     if (isConnectedToVoiceChannel) {
       isConnectedToVoiceChannel = tmp5(VoicePanelAudioPhoneOutputSection, {});
     }
-    const obj1 = { children: null };
+    obj1 = { children: null };
     const obj2 = { children: null };
     const items1 = [isConnectedToVoiceChannel, ];
     const obj3 = { channel: null };
     obj3[0] = stateFromStores;
     items1[1] = callback(VoicePanelAudioConsoleSection, obj3);
     obj2[0] = items1;
-    obj1[0] = closure_12(set, obj2);
+    obj1[0] = closure_12(setDefault, obj2);
     obj[1] = callback(ScrollView, obj1);
     tmp5Result = tmp5(tmp(6950).BottomSheet, obj);
     const tmp6 = ScrollView;
     const tmp7 = closure_12;
-    const tmp9 = set;
+    const tmp9 = setDefault;
   }
   return tmp5Result;
 });

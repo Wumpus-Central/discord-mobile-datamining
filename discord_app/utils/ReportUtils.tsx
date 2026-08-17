@@ -1,14 +1,12 @@
 // discord_app/utils/ReportUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleInviteData from "handleInviteData";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_1 from "handleInviteData" /* 4295 */;
+import closure_2 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
 ({ ChannelTypes: c4, Permissions: c5 } = ME);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("utils/ReportUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/ReportUtils.tsx");
 
 export const canReportUser = function canReportUser(user) {
   if (null == user) {
@@ -56,7 +54,7 @@ export const canReportAndDeleteInChannel = function canReportAndDeleteInChannel(
       if (channel.type !== tmp6.GROUP_DM) {
         const obj = { channelId: null };
         obj[0] = arg0;
-        if (getUncachedChannelPermissions.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
+        if (closure_2.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
           const memberCount = store2.getMemberCount(channel.getGuildId());
           let tmp5 = null != memberCount;
           if (tmp5) {
@@ -106,7 +104,7 @@ export const canDeleteAndReportMessage = function canDeleteAndReportMessage(auth
           const obj = { channelId: null };
           obj[0] = channelId;
           flag3 = false;
-          if (getUncachedChannelPermissions.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
+          if (closure_2.canWithPartialContext(constants2.MANAGE_MESSAGES, obj)) {
             const memberCount = store2.getMemberCount(channel.getGuildId());
             let tmp14 = null != memberCount;
             if (tmp14) {

@@ -1,23 +1,23 @@
 // discord_app/modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx
-import isSubscriptionGated from "isSubscriptionGated";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
+import closure_2 from "isSubscriptionGated" /* 1981 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-function getChannelRoleSubscriptionStatus(id, getUncachedChannelPermissions, ensureGuildLoaded, closure_6) {
-  let obj = getUncachedChannelPermissions;
-  if (getUncachedChannelPermissions === undefined) {
-    obj = ensureGuildLoaded;
+function getChannelRoleSubscriptionStatus(id, closure_1_7, closure_1_6, closure_1_8) {
+  let obj = closure_1_7;
+  if (closure_1_7 === undefined) {
+    obj = closure_3;
   }
-  let obj2 = ensureGuildLoaded;
-  if (ensureGuildLoaded === undefined) {
-    obj2 = isSubscriptionGated;
+  let obj2 = closure_1_6;
+  if (closure_1_6 === undefined) {
+    obj2 = closure_2;
   }
-  let tmp = closure_6;
-  if (closure_6 === undefined) {
-    tmp = getUncachedChannelPermissions;
+  let tmp = closure_1_8;
+  if (closure_1_8 === undefined) {
+    tmp = closure_4;
   }
   const channel = obj.getChannel(id);
   let result;
@@ -45,12 +45,12 @@ function getChannelRoleSubscriptionStatus(id, getUncachedChannelPermissions, ens
   return obj;
 }
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
-let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useChannelRoleSubscriptionStatus.tsx");
 
 export default function useChannelRoleSubscriptionStatus(arg0) {
   const _require = arg0;
-  const items = [ensureGuildLoaded, isSubscriptionGated, getUncachedChannelPermissions];
+  const items = [closure_3, closure_2, closure_4];
   const items1 = [arg0];
-  return _initialize.useStateFromStoresObject(items, () => outer1_7(closure_0, outer1_3, outer1_2, outer1_4), items1);
+  return _initialize.useStateFromStoresObject(items, () => closure_1_7(closure_0, closure_1_3, closure_1_2, closure_1_4), items1);
 };
 export { getChannelRoleSubscriptionStatus };

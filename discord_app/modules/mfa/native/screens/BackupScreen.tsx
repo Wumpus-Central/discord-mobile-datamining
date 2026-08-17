@@ -1,14 +1,11 @@
 // discord_app/modules/mfa/native/screens/BackupScreen.tsx
-import Text from "Text";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
-import { finishMFACheck } from "../../../../../discord_common/js/shared/MFA.tsx";
+import finishMFACheck from "finishMFACheck" /* 15129 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function isValidClipboardCode(arg0) {
   let tmp3 = arg0.length >= finishMFACheck.BACKUP_CODE_MIN_LENGTH;
   if (tmp3) {
@@ -16,26 +13,20 @@ function isValidClipboardCode(arg0) {
   }
   return tmp3;
 }
-({ jsxs: closure_6, jsx: error, Fragment: metroImportAll } = jsxProd);
-const result = require("noop").fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
+({ jsxs: closure_6, jsx: error, Fragment: closure_8 } = jsxProd);
+const result = require("set").fileFinishedImporting("modules/mfa/native/screens/BackupScreen.tsx");
 
 export default function BackupScreen(finish) {
-  let c1;
-  let c4;
-  let c5;
-  let tmp10;
-  let tmp5;
-  let tmp8;
   finish = finish.finish;
   let _require = finish;
-  let importDefault;
+  importDefault = undefined;
   let first;
   let callback;
   let callback2;
   let React;
   let first1;
-  let closure_7;
-  let closure_8;
+  closure_7 = undefined;
+  closure_8 = undefined;
   const tmp3 = importDefault(first[7])();
   [tmp5, c1] = callback2(React.useState(false), 2);
   const tmp6 = callback2(React.useState(""), 2);
@@ -60,21 +51,21 @@ export default function BackupScreen(finish) {
   }, items);
   _require = undefined;
   _require = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0) {
-      let Text = tmp3;
-      outer1_4(undefined);
-      outer1_1(true);
+      closure_3 = tmp3;
+      closure_1_4(undefined);
+      closure_1_1(true);
       let v0 = 1;
-      const obj1 = { mfaType: "backup", data: null };
+      obj1 = { mfaType: "backup", data: null };
       obj1[1] = lib.replace(/-/g, "");
       yield lib(obj1);
       if (1 === tmp7) {
         v0 = 0;
-        lib = _slicedToArray;
+        lib = closure_4;
         let message;
         if (lib != null) {
           const body = lib.body;
@@ -85,10 +76,10 @@ export default function BackupScreen(finish) {
         if (message == null) {
           message = lib.message;
         }
-        outer1_4(message);
-        outer1_1(false);
-        let c7 = 3;
-        const tmp15 = outer1_4;
+        closure_1_4(message);
+        closure_1_1(false);
+        c7 = 3;
+        const tmp15 = closure_1_4;
       } else if (arg0 === 1) {
         c7 = 3;
         throw arg1;
@@ -126,7 +117,7 @@ export default function BackupScreen(finish) {
     obj[0] = first1;
     items2[1] = intl4.format(tmp16(tmp2[6]).t.tsWkAE, obj);
     obj[1] = items2;
-    let obj1 = obj;
+    obj1 = obj;
   } else {
     obj1 = { variant: "text-md/normal", children: null };
     const intl8 = tmp16(tmp2[6]).intl;

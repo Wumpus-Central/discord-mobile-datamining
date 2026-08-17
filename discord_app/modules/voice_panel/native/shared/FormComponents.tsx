@@ -1,21 +1,18 @@
 // discord_app/modules/voice_panel/native/shared/FormComponents.tsx
-import usePlayingGameActivities from "usePlayingGameActivities";
-import sortActivity from "sortActivity";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { set } from "../../../core/native/NativeView.tsx";
-import { VideoDisabledSvgIcon } from "VoiceStateIcons.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import setDefault from "set" /* 7190 */;
+import VideoDisabledSvgIcon from "VideoDisabledSvgIcon" /* 9677 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "sortActivity" /* 4559 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function VoiceBadges(arg0) {
-  let muteDeafenIconState;
-  let videoIconState;
   ({ muteDeafenIconState, videoIconState } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.voiceBadgesContainer, children: null };
   let tmp6 = null;
   if (null != muteDeafenIconState) {
@@ -32,7 +29,7 @@ function VoiceBadges(arg0) {
   const items = [tmp6, ];
   let tmp10 = null;
   if (null != videoIconState) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.iconWrapper;
     tmp3Result = tmp3(7190);
     const obj2 = { state: null, size: null, style: null };
@@ -44,36 +41,31 @@ function VoiceBadges(arg0) {
   }
   items[1] = tmp10;
   obj[1] = items;
-  return closure_6(set, obj);
+  return closure_6(setDefault, obj);
 }
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { marginHorizontal: 16 }, voiceBadgesContainer: { flexDirection: "row" }, iconWrapper: null, icon: null, notConnectedAvatar: null, memberRow: null, trailingContainer: null };
-createCacheKey = { marginLeft: 8, padding: 6, backgroundColor: require("Themes").colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: require("Themes").radii.round };
+createCacheKey = { marginLeft: 8, padding: 6, backgroundColor: ThemesDefault.colors.MOBILE_VOICE_PANEL_BADGE_BACKGROUND, borderRadius: ThemesDefault.radii.round };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { width: 16, height: 16, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[3] = { width: 16, height: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 createCacheKey[4] = { opacity: 0.5 };
 createCacheKey[5] = { flexDirection: "row", alignItems: "center", gap: 4 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { width: 16, height: 16, tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/shared/FormComponents.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { width: 16, height: 16, tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/FormComponents.tsx");
 
 export const VoicePanelFormSection = function VoicePanelFormSection(style) {
   const merged = Object.assign(style, Object.create(null));
   let obj = { style: items, children: null };
-  items = [createCacheKey().container, style.style];
-  const tmp2 = createCacheKey();
+  items = [callback2().container, style.style];
+  const tmp2 = callback2();
   obj = {};
   const merged1 = Object.assign(merged);
   obj[1] = callback(TableRowGroupTitle.TableRowGroup, obj);
-  return callback(set, obj);
+  return callback(setDefault, obj);
 };
 export const MemberRowItem = function MemberRowItem(user) {
-  let guildId;
-  let nick;
-  let notConnected;
-  let showRing;
-  let showSecureFramesUI;
   user = user.user;
   const channelId = user.channelId;
   let flag = user.selfStream;
@@ -95,11 +87,11 @@ export const MemberRowItem = function MemberRowItem(user) {
   let analyticsLocations;
   let id;
   let stateFromStores;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   analyticsLocations = channelId(flag[9])().analyticsLocations;
   let obj = user(flag[10]);
   const muteDeafenIconState = obj.useMuteDeafenIconState(user.id, guildId);
-  let obj1 = user(flag[10]);
+  obj1 = user(flag[10]);
   const videoIconState = obj1.useVideoIconState(user.id, guildId);
   id = user.id;
   let obj2 = user(flag[11]);
@@ -155,8 +147,7 @@ export const MemberRowItem = function MemberRowItem(user) {
     tmp18 = canRing;
   }
   obj = { onPress: callback, icon: null, subLabel: null, trailing: null, label: null };
-  obj1 = { user, guildId, size: null, style: null };
-  obj1[2] = user(flag[8]).AvatarSizes.REFRESH_MEDIUM_32;
+  obj1 = { user, guildId, size: tmp4(tmp3[8]).AvatarSizes.REFRESH_MEDIUM_32, style: null };
   let notConnectedAvatar;
   if (notConnected) {
     notConnectedAvatar = tmp.notConnectedAvatar;

@@ -1,45 +1,39 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import usePriceTiers from "usePriceTiers";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { styles } from "FormStyles.tsx";
-import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import stylesDefault from "styles" /* 13358 */;
+import HeaderDefault from "Header" /* 16954 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "usePriceTiers" /* 16950 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
-createCacheKey = { height: 114, width: "100%", borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+createCacheKey = { height: 114, width: "100%", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[2] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("noop").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierConfirmationModal.tsx");
 
 export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
-  let editStateId;
-  let guildId;
-  let tmp10;
-  let tmp9;
   onDone = onDone.onDone;
   let flag = onDone.isForGroupSetupModal;
   if (flag === undefined) {
     flag = false;
   }
   const merged = Object.assign(onDone, Object.create(null));
-  let importDefault;
-  const tmp2 = createCacheKey();
-  const tmp5 = styles();
+  importDefault = undefined;
+  const tmp2 = callback4();
+  const tmp5 = stylesDefault();
   let obj = onDone(16962);
   const editStateContext = obj.useEditStateContext();
   ({ guildId, editStateId } = editStateContext);
   [tmp9, tmp10] = callback2(React.useState(false), 2);
   importDefault = tmp10;
-  const first = callback2(usePriceTiers.useGroupCoverState(), 1)[0];
+  const first = callback2(closure_7.useGroupCoverState(), 1)[0];
   const items = [tmp10, onDone];
   callback = React.useCallback(callback(function*() {
     if (c4 === 2) {
@@ -68,13 +62,13 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp3;
-            let c3 = 1;
+            closure_0 = tmp3;
+            c3 = 1;
             v0(true);
             v0 = 2;
             c4 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0();
             return obj1;
           }
         } else if (1 === tmp7) {
@@ -122,7 +116,7 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     let tmp13Result = null != first;
     if (tmp13Result) {
       obj = { children: null };
-      let obj1 = { style: null, children: null };
+      obj1 = { style: null, children: null };
       obj1[0] = tmp5.header;
       let tmp3Result = tmp3(8913);
       const intl3 = tmp6(1236).intl;
@@ -148,12 +142,12 @@ export default function GuildRoleSubscriptionTierConfirmationModal(onDone) {
     items2[1] = callback3(tmp3Result, obj5);
     const obj6 = { style: null, variant: "text-md/medium", color: "interactive-text-active", children: null };
     obj6[0] = tmp2.description;
-    obj6[3] = callback2(usePriceTiers.useGroupDescriptionState(), 1)[0];
+    obj6[3] = callback2(closure_7.useGroupDescriptionState(), 1)[0];
     items2[2] = callback3(tmp6(4734).Text, obj6);
     obj4[0] = items2;
     flag = tmp13(tmp16, obj4);
   }
   const items3 = [flag, callback3(onDone(16986).GuildRoleSubscriptionListingPreview, { guildId, listingId: editStateId })];
   obj.children = items3;
-  return closure_10(Header, obj);
+  return closure_10(HeaderDefault, obj);
 };

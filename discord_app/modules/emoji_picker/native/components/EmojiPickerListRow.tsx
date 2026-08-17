@@ -1,24 +1,21 @@
 // discord_app/modules/emoji_picker/native/components/EmojiPickerListRow.tsx
-import importAllResult from "set";
-import get_ActivityIndicator from "Button";
-import handleThemeChange from "handleThemeChange";
-import IMAGE_SIZE from "IMAGE_SIZE";
-import { PADDING_VERTICAL } from "ExpressionPickerViewType";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "handleThemeChange";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { LockIcon } from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { View } from "EmojiPickerListRowView.tsx";
+import set2 from "set" /* 500 */;
+import nDefault from "n" /* 689 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import preloadDefault from "preload" /* 5449 */;
+import LockIcon from "LockIcon" /* 6890 */;
+import ViewDefault from "View" /* 9377 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_4 from "handleThemeChange" /* 1302 */;
+import IMAGE_SIZE from "IMAGE_SIZE" /* 9301 */;
+import { PADDING_VERTICAL } from "ExpressionPickerViewType" /* 1338 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let StyleSheet;
-let c3;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function EmojiItemLockedOverlay() {
   const tmp = callback2();
   obj = { style: tmp.lockContainer, children: callback(LockIcon.LockIcon, obj) };
@@ -26,11 +23,6 @@ function EmojiItemLockedOverlay() {
   return callback(closure_3, obj);
 }
 function EmojiItem(emoji) {
-  let animateEmoji;
-  let closure_3;
-  let dependencyMap;
-  let disabled;
-  let importDefault;
   emoji = emoji.emoji;
   ({ category: importDefault, disabled, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3, animateEmoji } = emoji);
   const tmp = callback2();
@@ -41,7 +33,7 @@ function EmojiItem(emoji) {
     }
     let emojiURL = str;
   } else {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, animated: null, size: null };
     obj[0] = emoji.id;
     if (animateEmoji) {
@@ -70,9 +62,9 @@ function EmojiItem(emoji) {
     return callback2(emoji);
   };
   if (null != emoji.id) {
-    const obj1 = { resizeMode: "contain", style: null, placeholder: null, source: null, usesSmallCache: true };
+    obj1 = { resizeMode: "contain", style: null, placeholder: null, source: null, usesSmallCache: true };
     obj1[1] = tmp.image;
-    const tmp15 = preload;
+    const tmp15 = preloadDefault;
     if (tmp7Result.isThemeDark(theme.theme)) {
       tmp8 = 6931;
       let tmp14Result = tmp14(tmp8);
@@ -101,34 +93,25 @@ function EmojiItem(emoji) {
 }
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
 IMAGE_SIZE = IMAGE_SIZE.IMAGE_SIZE;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: null, surrogates: null, row: null, lockContainer: null, lock: null };
-obj = { borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+obj = { borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[2] = obj;
 let num = 28;
 if (set.isAndroid()) {
   num = 26;
 }
-createCacheKey = { fontSize: num, color: require("Themes").colors.TEXT_DEFAULT };
+createCacheKey = { fontSize: num, color: ThemesDefault.colors.TEXT_DEFAULT };
 obj[3] = createCacheKey;
 obj[4] = { height: IMAGE_SIZE.ROW_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between" };
 let obj2 = { backgroundColor: null, alignItems: "center", justifyContent: "center" };
-const obj8 = require("n")("#000000");
-obj2[0] = require("n")("#000000").alpha(0.2).hex();
+const obj8 = nDefault("#000000");
+obj2[0] = nDefault("#000000").alpha(0.2).hex();
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[5] = obj2;
 obj[6] = { width: 16, height: 16, tintColor: "white" };
 let closure_9 = createCacheKey.createStyles(obj);
 let closure_12 = importAllResult.memo((emojis) => {
-  let animateEmoji;
-  let closure_3;
-  let containerWidth;
-  let dependencyMap;
-  let emojisDisabled;
-  let importDefault;
-  let isSectionNitroLocked;
-  let row;
-  let rowSize;
   emojis = emojis.emojis;
   ({ emojisDisabled, category: importDefault, rowSize, onPressEmoji: dependencyMap, onLongPressEmoji: closure_3, animateEmoji } = emojis);
   ({ containerWidth, row, isSectionNitroLocked } = emojis);
@@ -162,7 +145,7 @@ let closure_12 = importAllResult.memo((emojis) => {
         } else {
           let tmp7 = importDefault;
           let tmp8 = dependencyMap;
-          let obj1 = getAvatarURL;
+          obj1 = getAvatarURLDefault;
           obj = { id: null, animated: null, size: null };
           obj[0] = tmp4.id;
           let animated = animateEmoji;
@@ -187,14 +170,14 @@ let closure_12 = importAllResult.memo((emojis) => {
     style: callback2().row,
     rowData: obj1,
     onPressEmoji(arg0) {
-      const emojis = arg0;
+      emojis = arg0;
       const found = emojis.find((name) => name.name === nativeEvent.nativeEvent.emojiName);
       if (null != found) {
         callback(found, closure_1);
       }
     },
     onLongPressEmoji(PremiumSearchUpsell, arg1) {
-      const emojis = PremiumSearchUpsell;
+      emojis = PremiumSearchUpsell;
       const found = emojis.find((name) => name.name === PremiumSearchUpsell.nativeEvent.emojiName);
       if (null != found) {
         callback2(found);
@@ -202,18 +185,9 @@ let closure_12 = importAllResult.memo((emojis) => {
     }
   };
   obj1 = { rowContentWidth: containerWidth, rowContentPaddingVertical: PADDING_VERTICAL, itemSize: IMAGE_SIZE, items, isSectionNitroLocked };
-  return callback(View, obj);
+  return callback(ViewDefault, obj);
 });
 let closure_13 = importAllResult.memo((arg0) => {
-  let animateEmoji;
-  let category;
-  let emojis;
-  let emojisDisabled;
-  let isSectionNitroLocked;
-  let onLongPressEmoji;
-  let onPressEmoji;
-  let row;
-  let rowSize;
   ({ emojisDisabled, rowSize } = arg0);
   ({ emojis, category, row, onPressEmoji, onLongPressEmoji, animateEmoji, isSectionNitroLocked } = arg0);
   const tmp = callback2();
@@ -253,13 +227,13 @@ let closure_13 = importAllResult.memo((arg0) => {
   obj = { style: tmp.row, children: items };
   return callback(closure_3, obj);
 });
-const alphaResult = require("n")("#000000").alpha(0.2);
+const alphaResult = nDefault("#000000").alpha(0.2);
 let result = set.fileFinishedImporting("modules/emoji_picker/native/components/EmojiPickerListRow.tsx");
 
 export const EmojiPickerListRow = importAllResult.memo((nativeRow) => {
   nativeRow = nativeRow.nativeRow;
   if (nativeRow === undefined) {
-    let obj = set;
+    let obj = set2;
     nativeRow = obj.isAndroid();
   }
   const merged = Object.assign(nativeRow, Object.create(null));

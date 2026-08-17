@@ -1,13 +1,13 @@
 // discord_app/components_native/common/MessageLoadingSpinner.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import set from "set";
-import set from "jsxProd";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { ActivityIndicator } from "../../design/components/ActivityIndicator/native/ActivityIndicator.native.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import ActivityIndicator from "ActivityIndicator" /* 5446 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let result = null;
 if (!set.isAndroid()) {
   result = require("get ActivityIndicator").requireNativeComponent("DCDMessageLoadingSpinner");
@@ -19,7 +19,7 @@ export default function MessageLoadingSpinner(color) {
   let obj = map;
   color = color.color;
   if (color == null) {
-    color = obj.useToken(Themes.colors.BACKGROUND_BRAND);
+    color = obj.useToken(ThemesDefault.colors.BACKGROUND_BRAND);
   }
   if (null != closure_4) {
     obj = {};

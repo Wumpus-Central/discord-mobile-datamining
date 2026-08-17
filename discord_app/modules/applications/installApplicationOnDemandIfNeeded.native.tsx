@@ -1,21 +1,17 @@
 // discord_app/modules/applications/installApplicationOnDemandIfNeeded.native.tsx
-import fetchApplication from "fetchApplication";
-import createExecutable from "createExecutable";
-import addApplication from "addApplication";
-import { AnalyticEvents } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import closure_3 from "createExecutable" /* 4479 */;
+import closure_4 from "addApplication" /* 4478 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
 function _installApplicationOnDemandIfNeeded() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
       if (application === 2) {
         application = 3;
         HermesBuiltin.throwTypeError();
@@ -43,7 +39,7 @@ function _installApplicationOnDemandIfNeeded() {
               return obj;
             } else {
               c2 = tmp5;
-              let dependencyMap = tmp2;
+              dependencyMap = tmp2;
               let callback;
               dependencyMap = undefined;
               c2 = undefined;
@@ -64,7 +60,7 @@ function _installApplicationOnDemandIfNeeded() {
                 throw arg1;
               } else if (arg0 === 2) {
                 application = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -125,7 +121,7 @@ function _installApplicationOnDemandIfNeeded() {
               obj2.trackWithMetadata(obj.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, obj5);
             }
             const promise = new Promise((arg0) => {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               let obj = _undefined(_undefined2[8]);
               obj.dismissKeyboard();
               obj = {
@@ -134,7 +130,7 @@ function _installApplicationOnDemandIfNeeded() {
                 scopes,
                 callback(location) {
                   if (null != location.location) {
-                    if (null != outer1_3) {
+                    if (null != closure_1_3) {
                       let obj = callback(table[7]);
                       obj = { application_id: null, location: null, section_name: null, source: null };
                       obj[0] = callback;
@@ -142,7 +138,7 @@ function _installApplicationOnDemandIfNeeded() {
                       obj.trackWithMetadata(obj.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, obj);
                     }
                     callback({ isAuthorized: true });
-                    tmp3 = outer1_3;
+                    tmp3 = closure_1_3;
                   } else {
                     callback({ isAuthorized: false });
                   }
@@ -164,7 +160,7 @@ function _installApplicationOnDemandIfNeeded() {
     iter.next();
     return iter;
   });
-  const _installApplicationOnDemandIfNeeded = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -173,7 +169,7 @@ function _installApplicationOnDemandIfNeeded() {
   }
   return applyArgumentsResult;
 }
-const result = require("addApplication").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 
 export const installApplicationOnDemandIfNeeded = function installApplicationOnDemandIfNeeded(arg0) {
   const self = this;

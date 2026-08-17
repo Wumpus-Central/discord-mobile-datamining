@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx
-import noop from "noop";
-import participantFromServer from "participantFromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { isDiscordFrontendDevelopment } from "../../../../../../../utils/GlobalUtils.tsx";
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "participantFromServer" /* 1390 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/useEmbeddedActivityParticipantAvatarUris.tsx");
 
 export default function useEmbeddedActivityParticipantAvatarUris(activity) {
   activity = activity.activity;
@@ -23,7 +23,7 @@ export default function useEmbeddedActivityParticipantAvatarUris(activity) {
     }
     return Array.from(userIds);
   }, items);
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_4];
   const items2 = [memo];
   stateFromStoresArray = activity(guildId[4]).useStateFromStoresArray(items1, () => memo.map((arg0) => user.getUser(arg0)), items2);
   const items3 = [guildId, stateFromStoresArray];
@@ -33,9 +33,6 @@ export default function useEmbeddedActivityParticipantAvatarUris(activity) {
   }, items3);
 };
 export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActivityParticipantAvatarUris(arg0) {
-  let activity;
-  let dependencyMap;
-  let require;
   ({ guildId: require, applicationId: dependencyMap, activity } = arg0);
   if (null == activity) {
     embeddedActivitiesForChannel = embeddedActivitiesForChannel.getEmbeddedActivitiesForChannel(tmp);
@@ -49,7 +46,7 @@ export const getEmbeddedActivityParticipantAvatarUris = function getEmbeddedActi
     userIds = [];
   }
   const mapped = Array.from(userIds).map((arg0) => {
-    const user = outer1_4.getUser(arg0);
+    const user = closure_1_4.getUser(arg0);
     let avatarURL;
     if (user != null) {
       avatarURL = user.getAvatarURL(closure_0, 64);

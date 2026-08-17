@@ -1,12 +1,10 @@
 // discord_app/modules/games/hooks/useResolveGame.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("importDefaultResult1").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
+const result = require("set").fileFinishedImporting("modules/games/hooks/useResolveGame.tsx");
 
 export default function useResolveGame(arg0) {
-  let applicationId;
-  let gameId;
   ({ applicationId, gameId } = arg0);
   let getOrFetchApplication;
   let obj = gameId(getOrFetchApplication[1]);

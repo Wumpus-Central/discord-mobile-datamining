@@ -1,20 +1,21 @@
 // discord_app/modules/rtc/hooks/useIsEmptyRTCConnection.tsx
-import fetchFingerprint from "fetchFingerprint";
-import createRTCConnection from "createRTCConnection";
-import initialize from "initialize";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "createRTCConnection" /* 4539 */;
+import closure_4 from "initialize" /* 4558 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useIsEmptyRTCConnection.tsx");
 
 export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEmpty(stateFromStores4) {
   const _require = stateFromStores4;
-  const items = [initialize, fetchFingerprint];
+  const items = [closure_4, closure_2];
   return _initialize.useStateFromStores(items, () => {
     if (null == closure_0) {
       return true;
     } else {
-      const userIds = outer1_4.getUserIds(tmp);
+      const userIds = closure_1_4.getUserIds(tmp);
       let tmp3 = null == userIds;
       if (!tmp3) {
         let tmp6 = 0 === userIds.size;
@@ -29,7 +30,7 @@ export const useIsStreamRTCConnectionEmpty = function useIsStreamRTCConnectionEm
   });
 };
 export const useIsCallRTCConnectionEmpty = function useIsCallRTCConnectionEmpty() {
-  const items = [createRTCConnection, fetchFingerprint];
+  const items = [closure_3, closure_2];
   return initialize.useStateFromStores(items, () => {
     userIds = userIds.getUserIds();
     let tmp = null == userIds;

@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/account/native/handleDisableAccount.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { set } from "../../../../actions/AlertActionCreators.tsx";
-import { showUserSettingsInputAlert } from "showUserSettingsInputAlert.tsx";
+import setDefault from "set" /* 4827 */;
+import showUserSettingsInputAlertDefault from "showUserSettingsInputAlert" /* 14153 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/handleDisableAccount.tsx");
 
 export default function handleDisableAccount() {
   let flag = arg0;
@@ -28,8 +28,8 @@ export default function handleDisableAccount() {
     let obj = { title: null, body: null };
     obj[0] = stringResult;
     obj[1] = stringResult1;
-    set.show(obj);
-    const obj3 = set;
+    setDefault.show(obj);
+    const obj3 = setDefault;
   } else {
     const formatted = string(t["CIGa+7"]).toUpperCase();
     obj = { onSubmit: null, title: null, placeholder: null, closeOnSuccess: true };
@@ -52,7 +52,7 @@ export default function handleDisableAccount() {
       tmp8 = obj;
       const str2 = intl2.string(tmp4(1236).t.jf5GGb);
     }
-    showUserSettingsInputAlert(tmp8);
+    showUserSettingsInputAlertDefault(tmp8);
     const str = string(t["CIGa+7"]);
   }
 };

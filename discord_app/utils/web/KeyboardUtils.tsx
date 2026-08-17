@@ -1,20 +1,14 @@
 // discord_app/utils/web/KeyboardUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import items from "items";
-import set from "set";
-import importDefaultResult from "apply";
-import importDefaultResult1 from "apply";
-import importDefaultResult2 from "apply";
-import set from "set";
-import set from "set";
-import { keyCode } from "../../../_runtime/13173_keyCode.js";
-import { isDiscordFrontendDevelopment } from "../GlobalUtils.tsx";
-import { set } from "../PlatformUtils.tsx";
-import { normalizeKey } from "KeyboardLayoutMapUtils.tsx";
+import set2 from "set" /* 500 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import keyCodeDefault from "keyCode" /* 13173 */;
+import normalizeKey from "normalizeKey" /* 13174 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import items from "items" /* 5228 */;
+import set from "set" /* 500 */;
+import importDefaultResult from "apply" /* 12 */;
 
-let LinuxKeyToCode;
-let c5;
-const require = arg1;
+require = arg1;
 function getCodeToKeyLanguageCorrection(keyCode, key, arg2) {
   if (null != arg2) {
     if (arg2 !== KeyboardEnvs.WINDOWS) {
@@ -103,7 +97,7 @@ function keyToCode(toLocaleLowerCase) {
                 tmp27 = arg1 === KeyboardEnvs.BROWSER;
               }
               if (tmp27 === true) {
-                const tmp39 = keyCode;
+                const tmp39 = keyCodeDefault;
                 const replaced = toLocaleLowerCase.replace(/^(right|left) (shift|meta|ctrl|alt)$/, "$2").replace("meta", "command");
                 let str13 = "pause/break";
                 if ("pause" !== replaced) {
@@ -125,7 +119,7 @@ function keyToCode(toLocaleLowerCase) {
               } else {
                 const _Error = Error;
                 const _HermesInternal = HermesInternal;
-                const error = new Error("Unrecognized DeviceType " + KEYBOARD_KEY + ".");
+                error = new Error("Unrecognized DeviceType " + KEYBOARD_KEY + ".");
                 throw error;
               }
             }
@@ -158,7 +152,7 @@ function keyToCode(toLocaleLowerCase) {
           MACOS2 = tmp8Result.isWindows() ? tmp10.WINDOWS : tmp10.BROWSER;
         }
       }
-      obj4 = set;
+      obj4 = set2;
     }
   } else {
     if (obj.isLinux()) {
@@ -172,7 +166,7 @@ function keyToCode(toLocaleLowerCase) {
         MACOS = tmpResult.isWindows() ? tmp3.WINDOWS : tmp3.BROWSER;
       }
     }
-    obj = set;
+    obj = set2;
   }
 }
 function getKeyConversionForBrowser(str) {
@@ -187,8 +181,6 @@ function getKeyConversionForBrowser(str) {
   return str2;
 }
 function toPrettyKey(str) {
-  let tmp5;
-  let tmp6;
   const obj = items[Symbol.iterator]();
   while (obj !== undefined) {
     let tmp3 = callback;
@@ -220,18 +212,20 @@ if (!set.isLinux()) {
   set = tmp3;
   obj3 = require("set");
 }
-const invertResult = require("apply").invert(LinuxKeyToCode);
+const invertResult = importDefaultResult.invert(LinuxKeyToCode);
 const unpackModuleId = invertResult;
 invertResult[223] = "`";
 const frozen = Object.freeze(invertResult);
-let closure_12 = Object.freeze(require("apply").invert(MacosKeyToCode));
-const invertResult1 = require("apply").invert(WindowsKeyToCode);
+let closure_12 = Object.freeze(importDefaultResult.invert(MacosKeyToCode));
+const importDefaultResult1 = importDefaultResult;
+const invertResult1 = importDefaultResult.invert(WindowsKeyToCode);
 invertResult1[223] = "`";
 const frozen1 = Object.freeze(invertResult1);
+const importDefaultResult2 = importDefaultResult;
 if (set == null) {
   set = {};
 }
-set = require("apply").invert(set);
+set = importDefaultResult.invert(set);
 if (!set.isMac()) {
   set[223] = "`";
 }
@@ -252,8 +246,6 @@ function getEnv() {
 function codeToKey(items1) {
   const tmp = callback(items1, 3);
   const tmp4 = (function _codeToKey(items1) {
-    let tmp;
-    let tmp2;
     [, tmp, tmp2] = items1;
     if (constants.LINUX === tmp2) {
       let tmp5 = table2["" + tmp];
@@ -296,7 +288,7 @@ const result = set.fileFinishedImporting("utils/web/KeyboardUtils.tsx");
 export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
   if (arg1 !== undefined) {
     if (arg1 === KeyboardEnvs.BROWSER) {
-      let tmp10 = keyCode(arg0);
+      let tmp10 = keyCodeDefault(arg0);
     } else {
       tmp10 = set[arg0];
     }
@@ -313,7 +305,7 @@ export const getRawCodeFromKey = function getRawCodeFromKey(arg0) {
         MACOS = tmpResult.isWindows() ? tmp3.WINDOWS : tmp3.BROWSER;
       }
     }
-    obj = set;
+    obj = set2;
   }
 };
 export { getCodeToKeyLanguageCorrection };
@@ -322,15 +314,13 @@ export { codeToKey };
 export { keyToCode };
 export { getKeyConversionForBrowser };
 export const toBrowserEvents = function toBrowserEvents(arr) {
-  let closure_0 = { keyCode: 0, key: "", code: "", metaKey: false, shiftKey: false, altKey: false, ctrlKey: false };
+  closure_0 = { keyCode: 0, key: "", code: "", metaKey: false, shiftKey: false, altKey: false, ctrlKey: false };
   if (null == arr) {
-    let items = [];
+    items = [];
   } else {
     items = arr.reduce((arr, combo) => {
-      const tmp = outer1_4(combo, 3);
+      const tmp = closure_1_4(combo, 3);
       const tmp4 = (function _codeToKey(items1) {
-        let tmp;
-        let tmp2;
         [, tmp, tmp2] = items1;
         if (constants.LINUX === tmp2) {
           let tmp5 = table2["" + tmp];
@@ -355,16 +345,16 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
         return tmp14;
       })(combo);
       if (null != tmp4) {
-        let tmp8 = outer1_15(tmp2, tmp4, tmp3);
+        let tmp8 = closure_1_15(tmp2, tmp4, tmp3);
       } else {
-        let obj = outer1_1(outer1_3[5]);
+        let obj = closure_1_1(closure_1_3[5]);
         const keyboardEventShapeFromKeycode = obj.getKeyboardEventShapeFromKeycode(tmp2);
         tmp8 = null;
         if (null != keyboardEventShapeFromKeycode) {
-          tmp8 = outer1_15(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp3);
+          tmp8 = closure_1_15(keyboardEventShapeFromKeycode.keyCode, keyboardEventShapeFromKeycode.key, tmp3);
         }
       }
-      let closure_0 = tmp8;
+      closure_0 = tmp8;
       obj = {};
       const merged = Object.assign(closure_0);
       if (null == tmp8) {
@@ -374,7 +364,7 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
         arr.push(obj);
         return arr;
       } else {
-        if (outer1_20.test(tmp8)) {
+        if (closure_1_20.test(tmp8)) {
           let tmp13 = "meta" === tmp8;
           if (!tmp13) {
             tmp13 = "shift" === tmp8;
@@ -393,7 +383,7 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
             });
           }
         }
-        const tmp16 = outer1_16(tmp8, outer1_9.BROWSER);
+        const tmp16 = closure_1_16(tmp8, closure_1_9.BROWSER);
         if (null != tmp16) {
           obj.keyCode = tmp16;
         }
@@ -407,7 +397,7 @@ export const toBrowserEvents = function toBrowserEvents(arr) {
 };
 export const toCombo = function toCombo(shortcut) {
   if (arg1 !== undefined) {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     let KEYBOARD_KEY = arg2;
     if (arg2 === undefined) {
       KEYBOARD_KEY = constants.KEYBOARD_KEY;
@@ -417,8 +407,7 @@ export const toCombo = function toCombo(shortcut) {
     const parts = shortcut.replace(/numpad plus/i, "").replace(/NUMPAD \+/i, "numpad plus").replace(/mod/i, KEYBOARD_KEY(13175).modKey).split("+");
     const mapped = parts.map((str) => str.trim().replace("plus", "+"));
     return mapped.reduce((arr) => {
-      let tmp3 = outer1_16((function toUglyKey(str) {
-        let tmp5;
+      let tmp3 = closure_1_16((function toUglyKey(str) {
         const obj = dependencyMap[Symbol.iterator]();
         while (obj !== undefined) {
           let tmp3 = callback;
@@ -435,7 +424,7 @@ export const toCombo = function toCombo(shortcut) {
         return str;
       })(arg1), closure_0, KEYBOARD_KEY);
       if (null != tmp3) {
-        const items = [KEYBOARD_KEY, tmp3, closure_0];
+        items = [KEYBOARD_KEY, tmp3, closure_0];
         arr.push(items);
       }
       return arr;
@@ -461,9 +450,6 @@ export const toString = function toString(arr) {
     flag = false;
   }
   const mapped = arr.map((arg0) => {
-    let tmp;
-    let tmp2;
-    let tmp3;
     [tmp, tmp2, tmp3] = arg0;
     if (typeof tmp3 === "number") {
       if (constants.KEYBOARD_KEY !== tmp) {
@@ -481,15 +467,13 @@ export const toString = function toString(arr) {
         }
       }
       if (null != tmp3) {
-        const items = [tmp, tmp2, tmp3];
+        items = [tmp, tmp2, tmp3];
         let items1 = items;
       } else {
         items1 = [tmp, tmp2];
       }
       let tmp14 = callback2(items1, 3);
       const tmp17 = (function _codeToKey(items1) {
-        let tmp;
-        let tmp2;
         [, tmp, tmp2] = items1;
         if (constants.LINUX === tmp2) {
           let tmp5 = table2["" + tmp];
@@ -558,17 +542,14 @@ export const toString = function toString(arr) {
   return formatted;
 };
 export const areKeyCombosEqual = function areKeyCombosEqual(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
   }
   return arr.length === arg1.length && arr.every((arg0, arg1) => {
-    let tmp;
-    let tmp2;
-    let tmp3;
     [tmp, tmp2, tmp3] = arg0;
-    const tmp4 = outer1_4(table[arg1], 3);
+    const tmp4 = closure_1_4(table[arg1], 3);
     let tmp5 = tmp === tmp4[0];
     if (tmp5) {
       tmp5 = tmp2 === tmp4[1];

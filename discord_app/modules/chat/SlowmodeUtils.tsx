@@ -1,29 +1,29 @@
 // discord_app/modules/chat/SlowmodeUtils.tsx
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/chat/SlowmodeUtils.tsx");
 
 export const canBypassSlowmodeHelper = function canBypassSlowmodeHelper(rateLimitPerUser, can) {
   return can.can(Permissions.BYPASS_SLOWMODE, rateLimitPerUser);
 };
 export const canBypassSlowmode = function canBypassSlowmode(channel) {
-  return getUncachedChannelPermissions.can(Permissions.BYPASS_SLOWMODE, channel);
+  return closure_3.can(Permissions.BYPASS_SLOWMODE, channel);
 };
 export const useCanBypassSlowmode = function useCanBypassSlowmode(channel) {
   const _require = channel;
-  const items = [getUncachedChannelPermissions];
-  return _initialize.useStateFromStores(items, () => outer1_3.can(outer1_4.BYPASS_SLOWMODE, closure_0));
+  const items = [closure_3];
+  return _initialize.useStateFromStores(items, () => closure_1_3.can(closure_1_4.BYPASS_SLOWMODE, closure_0));
 };
 export const getSlowmodeIndicatorText = function getSlowmodeIndicatorText(stateFromStores, canBypassSlowmode) {
   if (canBypassSlowmode) {
     const intl2 = getSystemLocale.intl;
     return intl2.string(getSystemLocale.t["8+NidX"]);
-  } else if (stateFromStores >= set.Millis.HOUR) {
+  } else if (stateFromStores >= setDefault.Millis.HOUR) {
     let tmp2Result = tmp2(3975);
     const durationResult = tmp2Result.duration(stateFromStores);
     const _HermesInternal3 = HermesInternal;
@@ -50,7 +50,7 @@ export const getSlowmodeDescription = function getSlowmodeDescription(rateLimitP
   if (arg1 === undefined) {
     flag = false;
   }
-  if (rateLimitPerUser >= set.Seconds.HOUR) {
+  if (rateLimitPerUser >= setDefault.Seconds.HOUR) {
     const _Math2 = Math;
     const rounded = Math.floor(rateLimitPerUser / tmp(687).Seconds.HOUR);
     const _Math3 = Math;

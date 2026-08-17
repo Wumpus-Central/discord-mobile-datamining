@@ -1,48 +1,35 @@
 // discord_app/modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx
-import _slicedToArray from "_slicedToArray";
-import ApplicationHook from "ApplicationHook";
-import get_ActivityIndicator from "showSimpleActionSheet";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import AuditLogActions from "AuditLogActions";
-import ME from "ME";
-import jsxProd from "makeRequest";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import closure_10 from "handleConnectionOpen" /* 1979 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "AuditLogActions" /* 16757 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_6;
-let error;
-let map1;
 const require = arg1;
 ({ View: closure_6, FlatList: error } = get_ActivityIndicator);
 ({ GuildSettingsSections: map1, AuditLogFilterTypes: closure_14 } = ME);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 createCacheKey = { listView: { marginVertical: 12 }, spinner: { marginTop: 40 }, filterTextWrapper: null, filtersWrapper: null, firstAuditRow: null, lastAuditRow: null, filterTrailing: null };
-createCacheKey = { borderRadius: require("Themes").radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: require("Themes").colors.INPUT_BACKGROUND_DEFAULT };
+createCacheKey = { borderRadius: ThemesDefault.radii.md, paddingVertical: 6, paddingHorizontal: 8, backgroundColor: ThemesDefault.colors.INPUT_BACKGROUND_DEFAULT };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { paddingTop: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_8 };
+createCacheKey[3] = { paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_8 };
 createCacheKey[4] = { marginTop: 0 };
 createCacheKey[5] = { marginBottom: 0 };
 createCacheKey[6] = { flexDirection: "row", alignItems: "center", flexWrap: "wrap", gap: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_8 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx");
+let closure_18 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingTop: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/guild_settings/audit_log/native/GuildSettingsModalAuditLog.tsx");
 
 export default function ConnectedGuildSettingsModalAuditLog(guildId) {
-  let actionFilter;
-  let actionFilterLabel;
-  let hasError;
-  let isInitialLoading;
-  let isLoading;
-  let isLoadingNextPage;
-  let userIdFilterLabel;
   guildId = guildId.guildId;
-  let c1;
+  closure_1 = undefined;
   let navigation;
   let stateFromStores;
   actionFilter = undefined;
@@ -51,20 +38,20 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   let stateFromStores1;
   let memo;
   let first;
-  let handleConnectionOpen;
+  closure_10 = undefined;
   let callback;
-  const tmp = createCacheKey();
-  c1 = tmp;
+  const tmp = callback2();
+  closure_1 = tmp;
   let obj = guildId(stateFromStores[12]);
   navigation = obj.useNavigation();
-  let obj1 = guildId(stateFromStores[13]);
-  let items = [memo, handleConnectionOpen];
+  obj1 = guildId(stateFromStores[13]);
+  let items = [memo, closure_10];
   stateFromStores = obj1.useStateFromStores(items, () => memo.getChannel(channelId.getChannelId()));
   let obj2 = guildId(stateFromStores[13]);
-  const items1 = [AuditLogActions, callback];
+  const items1 = [closure_12, callback];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => {
     let obj = navigation(stateFromStores[14]);
-    const first = obj.ACTION_FILTER_ITEMS().filter((value) => value.value === actionFilter.actionFilter)[0];
+    first = obj.ACTION_FILTER_ITEMS().filter((value) => value.value === actionFilter.actionFilter)[0];
     let user = null;
     if (null != userIdFilter.userIdFilter) {
       user = callback.getUser(tmp3.userIdFilter);
@@ -77,8 +64,8 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     obj[7] = str;
     obj[8] = userIdFilter.userIdFilter;
     if (null != user) {
-      let userTag = _undefined(tmp[15]).getUserTag(user);
-      const obj3 = _undefined(tmp[15]);
+      let userTag = lib(tmp[15]).getUserTag(user);
+      const obj3 = lib(tmp[15]);
     } else {
       const intl = guildId(tmp[16]).intl;
       userTag = intl.string(guildId(tmp[16]).t.ZRFdsL);
@@ -106,7 +93,7 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   }, items3);
   const tmp8 = actionFilter(userIdFilter.useState({ current: null, prev: null }), 2);
   first = tmp8[0];
-  handleConnectionOpen = tmp8[1];
+  closure_10 = tmp8[1];
   const items4 = [actionFilter, userIdFilter, navigation];
   callback = userIdFilter.useCallback(() => {
     let obj = guildId(stateFromStores[17]);
@@ -115,18 +102,16 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
     const intl = guildId(stateFromStores[16]).intl;
     obj[0] = intl.string(guildId(stateFromStores[16]).t["hxnY/q"]);
     obj[1] = function onPress() {
-      const obj = { filterType: outer1_14.USER, data: null };
-      obj[1] = outer1_0(outer1_3[18]).createAuditLogFilterUserData(ApplicationHook);
-      arr = arr.push(outer1_13.AUDIT_LOG_FILTER, obj);
+      const obj = { filterType: closure_1_14.USER, data: closure_1_0(closure_1_3[18]).createAuditLogFilterUserData(closure_5) };
+      arr = arr.push(closure_1_13.AUDIT_LOG_FILTER, obj);
     };
     const items = [obj, ];
-    const obj1 = { label: null, onPress: null };
+    obj1 = { label: null, onPress: null };
     const intl2 = guildId(stateFromStores[16]).intl;
     obj1[0] = intl2.string(guildId(stateFromStores[16]).t.rautds);
     obj1[1] = function onPress() {
-      const obj = { filterType: outer1_14.ACTION, data: null };
-      obj[1] = outer1_0(outer1_3[18]).createAuditLogFilterActionData(_slicedToArray);
-      const obj2 = outer1_0(outer1_3[18]);
+      const obj = { filterType: closure_1_14.ACTION, data: closure_1_0(closure_1_3[18]).createAuditLogFilterActionData(closure_4) };
+      const obj2 = closure_1_0(closure_1_3[18]);
     };
     items[1] = obj1;
     obj[1] = items;
@@ -135,21 +120,19 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   const items5 = [tmp, first, stateFromStores, guildId, memo.length];
   const items6 = [callback, navigation];
   const callback1 = userIdFilter.useCallback((arg0) => {
-    let index;
-    let item;
     ({ item, index } = arg0);
     const diff = memo.length - 1;
     let firstAuditRow = 0 === index;
     if (firstAuditRow) {
-      firstAuditRow = _undefined.firstAuditRow;
+      firstAuditRow = lib.firstAuditRow;
     }
     let lastAuditRow = index === diff;
     const items = [firstAuditRow, ];
     if (lastAuditRow) {
-      lastAuditRow = _undefined.lastAuditRow;
+      lastAuditRow = lib.lastAuditRow;
     }
     items[1] = lastAuditRow;
-    return outer1_15(_undefined(stateFromStores[19]), {
+    return closure_1_15(lib(stateFromStores[19]), {
       containerStyle: items,
       onHeaderClick(id) {
         if (ref.current !== id.id) {
@@ -171,10 +154,10 @@ export default function ConnectedGuildSettingsModalAuditLog(guildId) {
   const layoutEffect = userIdFilter.useLayoutEffect(() => {
     navigation.setOptions({
       headerRight() {
-        const obj = { onPress: mergeGuildAvatar, text: null };
-        const intl = outer1_0(outer1_3[16]).intl;
-        obj[1] = intl.string(outer1_0(outer1_3[16]).t.pEasFX);
-        return outer1_15(outer1_0(outer1_3[20]).HeaderActionButton, obj);
+        const obj = { onPress: closure_11, text: null };
+        const intl = closure_1_0(closure_1_3[16]).intl;
+        obj[1] = intl.string(closure_1_0(closure_1_3[16]).t.pEasFX);
+        return closure_1_15(closure_1_0(closure_1_3[20]).HeaderActionButton, obj);
       }
     });
   }, items6);

@@ -1,11 +1,15 @@
 // discord_app/stores/native/MobileVoiceOverlayStore.tsx
-import { AnalyticEvents } from "ME";
-import { DeviceSettingsStore } from "initialize";
-import { isMetaQuest } from "../../modules/device/MetaQuestUtils.android.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { set } from "../../utils/PlatformUtils.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
 
+const AnalyticEvents = ME.AnalyticEvents;
 let c4 = false;
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class MobileVoiceOverlayStore extends DeviceSettingsStore {
 }
 const prototype = MobileVoiceOverlayStore.prototype;
@@ -22,7 +26,7 @@ prototype["initialize"] = function initialize(enabled) {
   }
 };
 prototype["getEnabled"] = function getEnabled() {
-  let isAndroidResult = set.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;
@@ -34,19 +38,19 @@ prototype["getEnabled"] = function getEnabled() {
 };
 MobileVoiceOverlayStore.displayName = "MobileVoiceOverlayStore";
 MobileVoiceOverlayStore.persistKey = "MobileVoiceOverlayStore";
-const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(require("dispatcher"), {
+const mobileVoiceOverlayStore = new MobileVoiceOverlayStore(dispatcherDefault, {
   MOBILE_VOICE_OVERLAY_STATE_CHANGED: function handleMobileVoiceOverlayStateChanged(enabled) {
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = { enabled: enabled.enabled };
     obj.track(AnalyticEvents.MOBILE_OVERLAY_TOGGLED, obj);
     enabled = enabled.enabled;
   }
 });
-const result = require("set").fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
+const result = set.fileFinishedImporting("stores/native/MobileVoiceOverlayStore.tsx");
 
 export default mobileVoiceOverlayStore;
 export const isMobileOverlaySupported = function isMobileOverlaySupported() {
-  let isAndroidResult = set.isAndroid();
+  let isAndroidResult = set2.isAndroid();
   if (isAndroidResult) {
     isAndroidResult = !isMetaQuest.isMetaQuest();
     const tmpResult = isMetaQuest;

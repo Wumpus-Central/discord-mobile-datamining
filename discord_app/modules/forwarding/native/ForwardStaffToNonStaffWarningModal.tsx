@@ -1,17 +1,13 @@
 // discord_app/modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let obj1;
 ({ jsx: obj1, Fragment: c3, jsxs: c4 } = jsxProd);
-const result = require("getSystemLocale").fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
+const result = set.fileFinishedImporting("modules/forwarding/native/ForwardStaffToNonStaffWarningModal.tsx");
 
 export default function ForwardStaffToNonStaffWarningModal(arg0) {
-  let onBack;
-  let onConfirm;
   ({ onConfirm, onBack } = arg0);
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
@@ -24,7 +20,7 @@ export default function ForwardStaffToNonStaffWarningModal(arg0) {
   obj[0] = intl3.string(getSystemLocale.t.X7eUJq);
   obj[1] = onConfirm;
   const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  const obj1 = { variant: "secondary", text: null, onPress: null };
+  obj1 = { variant: "secondary", text: null, onPress: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["13/7kX"]);
   obj1[2] = onBack;

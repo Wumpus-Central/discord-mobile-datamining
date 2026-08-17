@@ -1,26 +1,22 @@
 // discord_app/modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx
-import PremiumGuildSubscribeModalScenes from "PremiumGuildSubscribeModalScenes";
-import LockIcon from "LockIcon";
-import { View } from "Button";
-import handleGuildBoostsUpdate from "handleGuildBoostsUpdate";
-import ME from "ME";
-import { PremiumGuildSubscribeModalScenes as closure_11 } from "PremiumGuildSubscribeModalScenes";
-import { FractionalPremiumStates } from "GuildFeatures";
-import { jsx } from "jsxProd";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "handleGuildBoostsUpdate" /* 4267 */;
+import ME from "ME" /* 676 */;
+import { PremiumGuildSubscribeModalScenes as closure_11 } from "PremiumGuildSubscribeModalScenes" /* 6712 */;
+import { FractionalPremiumStates } from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function _handleBoostPress() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c5 === 2) {
         c5 = 3;
@@ -48,13 +44,13 @@ function _handleBoostPress() {
               obj[0] = arg1;
               return obj;
             } else {
-              let PremiumGuildSubscribeModalScenes = tmp2;
-              const obj1 = { source: null, analyticsLocations: null, guildId: null, onBack: null };
+              closure_3 = tmp2;
+              obj1 = { source: null, analyticsLocations: null, guildId: null, onBack: null };
               const obj2 = { page: null, section: null, object: null, objectType: null };
-              obj2[0] = outer1_9.PREMIUM_GUILD_USER_MODAL;
+              obj2[0] = closure_1_9.PREMIUM_GUILD_USER_MODAL;
               obj2[1] = dependencyMap;
-              obj2[2] = outer1_7.BUTTON_CTA;
-              obj2[3] = outer1_8.BUY;
+              obj2[2] = closure_1_7.BUTTON_CTA;
+              obj2[3] = closure_1_8.BUY;
               obj1[0] = obj2;
               obj1[1] = callback;
               obj1[2] = closure_1;
@@ -88,7 +84,7 @@ function _handleBoostPress() {
       }
     })();
   });
-  const _handleBoostPress = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -97,29 +93,25 @@ function _handleBoostPress() {
   }
   return applyArgumentsResult;
 }
-({ AnalyticsObjects: error, AnalyticsObjectTypes: metroImportAll, AnalyticsPages: c9, NOOP: c10 } = ME);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
+({ AnalyticsObjects: error, AnalyticsObjectTypes: closure_8, AnalyticsPages: c9, NOOP: c10 } = ME);
+const result = require("set").fileFinishedImporting("modules/guild_boosting/native/GuildBoostingSubscribeButton.tsx");
 
 export default function GuildBoostingSubscribeButton(guild) {
-  let fractionalPremiumState;
-  let premiumGroupRole;
-  let styles;
-  let useShortenedCTA;
   guild = guild.guild;
   const previousGuildSubscriptionSlot = guild.previousGuildSubscriptionSlot;
   const analyticsSection = guild.analyticsSection;
   const onAvailableSlotPress = guild.onAvailableSlotPress;
   const intent = guild.intent;
-  const View = onResult;
+  View = onResult;
   ({ useShortenedCTA, styles, fractionalPremiumState, premiumGroupRole } = guild);
   const tmp3 = previousGuildSubscriptionSlot(analyticsSection[11])();
-  let handleGuildBoostsUpdate = tmp3;
+  closure_6 = tmp3;
   let obj = guild(analyticsSection[12]);
   const navigation = obj.useNavigation();
   const analyticsLocations = previousGuildSubscriptionSlot(analyticsSection[13])().analyticsLocations;
-  let items = [handleGuildBoostsUpdate];
+  let items = [closure_6];
   const stateFromStores = guild(analyticsSection[14]).useStateFromStores(items, () => {
-    const keys = Object.keys(tmp3.boostSlots);
+    const keys = Object.keys(boostSlots.boostSlots);
     return keys.some((arg0) => null == boostSlots.boostSlots[arg0].premiumGuildSubscription && !boostSlots.boostSlots[arg0].isOnCooldown());
   });
   const items1 = [navigation, analyticsSection, onAvailableSlotPress, intent, guild.onResult];
@@ -155,8 +147,8 @@ export default function GuildBoostingSubscribeButton(guild) {
   const shouldUseMobileWebRedirectCheckout = tmp11.shouldUseMobileWebRedirectCheckout;
   handleMobileWebRedirectCheckout = tmp11.handleMobileWebRedirectCheckout;
   const items2 = [tmp3, shouldUseMobileWebRedirectCheckout, handleMobileWebRedirectCheckout, guild.id, analyticsSection, stateFromStores, previousGuildSubscriptionSlot, analyticsLocations, callback];
-  let closure_13 = intent.useCallback(() => {
-    if (handleGuildBoostsUpdate) {
+  closure_13 = intent.useCallback(() => {
+    if (closure_6) {
       let tmp8 = callback;
     } else if (stateFromStores) {
       tmp8 = callback(guild.id, previousGuildSubscriptionSlot);

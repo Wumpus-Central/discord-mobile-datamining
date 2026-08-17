@@ -1,23 +1,14 @@
 // discord_app/modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { IS_IOS } from "VoicePanelModes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SCREEN_READER_ENABLED_GETTER } from "../../../a11y/native/useIsScreenReaderEnabled.native.tsx";
+import SCREEN_READER_ENABLED_GETTER from "SCREEN_READER_ENABLED_GETTER" /* 4721 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { IS_IOS } from "VoicePanelModes" /* 11440 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function FocusedActivityAccessibilityLayer(activityName) {
-  let c0;
-  let channelId;
-  let children;
-  let tmp3;
   activityName = activityName.activityName;
   let _require;
   let ref;
@@ -48,9 +39,7 @@ function FocusedActivityAccessibilityLayer(activityName) {
     tmp10 = _require;
   }
   obj = { style: tmp.fill, children: null };
-  obj = { nativeID: null, accessibilityViewIsModal: null, onAccessibilityEscape: null, accessibilityElementsHidden: null, importantForAccessibility: null, style: null, children: null };
-  obj[0] = "voice-panel-activity-" + channelId;
-  obj[1] = tmp3;
+  obj = { nativeID: "voice-panel-activity-" + channelId, accessibilityViewIsModal: tmp3, onAccessibilityEscape: null, accessibilityElementsHidden: null, importantForAccessibility: null, style: null, children: null };
   let tmp16;
   if (tmp3) {
     tmp16 = callback1;
@@ -65,7 +54,7 @@ function FocusedActivityAccessibilityLayer(activityName) {
   obj[5] = tmp.fill;
   obj[6] = children;
   const items = [closure_8(tmp10(tmp8[8]).AccessibilityView, obj), ];
-  const obj1 = { ref, style: absoluteFill.absoluteFill, pointerEvents: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityElementsHidden: null, importantForAccessibility: null, onPress: null };
+  obj1 = { ref, style: absoluteFill.absoluteFill, pointerEvents: null, accessible: true, accessibilityRole: "button", accessibilityLabel: null, accessibilityHint: null, accessibilityElementsHidden: null, importantForAccessibility: null, onPress: null };
   let str2 = "auto";
   let str3 = "auto";
   if (tmp3) {
@@ -86,9 +75,9 @@ function FocusedActivityAccessibilityLayer(activityName) {
   return closure_9(closure_6, obj);
 }
 ({ Pressable: c4, StyleSheet: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let closure_10 = createCacheKey.createStyles({ fill: { flex: 1 } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_panel/native/card/ActivityAccessibilityLayer.tsx");
 
 export default function ActivityAccessibilityLayer(isActivityFocused) {
   const merged = Object.assign(isActivityFocused, Object.create(null));

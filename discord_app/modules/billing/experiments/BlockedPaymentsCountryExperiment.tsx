@@ -1,14 +1,15 @@
 // discord_app/modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx
-import createExperiment from "createExperiment";
-import ApexExperiment from "ApexExperiment";
-import { useGeoForUser } from "../../premium/hooks/useGeoForUser.native.tsx";
+import set from "set" /* 2 */;
+import useGeoForUserDefault from "useGeoForUser" /* 7389 */;
+import createExperiment from "createExperiment" /* 4286 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const items = [{ id: 1, label: "Payments Blocked", config: { paymentsBlocked: true } }];
 let closure_2 = createExperiment.createExperiment({ kind: "user", id: "2022-03_block_russian_purchases", label: "Block purchases based on country", defaultConfig: { paymentsBlocked: false }, treatments: items });
 const obj = { 1: null };
 obj[1] = { enabled: true };
 let closure_3 = ApexExperiment.createApexExperiment({ name: "2026-03-block-purchases", kind: "user", defaultConfig: { enabled: false }, variations: obj });
-const result = require("useGeoForUser").fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
+const result = set.fileFinishedImporting("modules/billing/experiments/BlockedPaymentsCountryExperiment.tsx");
 
 export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
   let enabled = closure_2.useExperiment({ location: "c519a9_1" }, { autoTrackExposure: false }).paymentsBlocked;
@@ -16,7 +17,7 @@ export const useBlockedPaymentsConfig = function useBlockedPaymentsConfig() {
     enabled = closure_3.useConfig({ location: "c519a9_1" }).enabled;
   }
   if (!enabled) {
-    enabled = "RU" === useGeoForUser().defaultBillingCountryCode;
+    enabled = "RU" === useGeoForUserDefault().defaultBillingCountryCode;
   }
   return enabled;
 };

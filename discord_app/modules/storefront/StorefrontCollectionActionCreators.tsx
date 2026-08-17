@@ -1,21 +1,20 @@
 // discord_app/modules/storefront/StorefrontCollectionActionCreators.tsx
-import set from "set";
-import _getSystemLocale from "_getSystemLocale";
-import getFetchState from "getFetchState";
-import fromServer from "fromServer";
-import { Endpoints } from "ME";
+import setDefault from "set" /* 687 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "getFetchState" /* 11999 */;
+import closure_6 from "fromServer" /* 5327 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _maybeFetchCollectionsWithProducts() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let includeUnpublishedProducts;
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -60,7 +59,7 @@ function _maybeFetchCollectionsWithProducts() {
               if (flag2 === undefined) {
                 flag2 = false;
               }
-              let c4;
+              c4 = undefined;
               body = undefined;
               body = 1;
               fromServer = 1;
@@ -73,7 +72,7 @@ function _maybeFetchCollectionsWithProducts() {
                 throw arg1;
               } else if (arg0 === 2) {
                 fromServer = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -164,7 +163,7 @@ function _maybeFetchCollectionsWithProducts() {
     iter.next();
     return iter;
   });
-  const _maybeFetchCollectionsWithProducts = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -176,15 +175,11 @@ function _maybeFetchCollectionsWithProducts() {
 function _maybeFetchCollectionsForApplication() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c4;
-      let includePricing;
-      let includeUnpublishedProducts;
       if (fromServer === 2) {
         fromServer = 3;
         HermesBuiltin.throwTypeError();
@@ -238,7 +233,7 @@ function _maybeFetchCollectionsForApplication() {
               store = includePricing;
               fromServer = undefined;
               let constants;
-              let c8;
+              closure_8 = undefined;
               let fetchParamsForApplication;
               let body;
               store = 1;
@@ -252,7 +247,7 @@ function _maybeFetchCollectionsForApplication() {
                 throw arg1;
               } else if (arg0 === 2) {
                 fromServer = 3;
-                let obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -265,11 +260,11 @@ function _maybeFetchCollectionsForApplication() {
                       if ("error" === fromServer) {
                         let tmp34 = fetchParamsForApplication;
                       } else {
-                        tmp34 = c8;
+                        tmp34 = closure_8;
                       }
-                      c8 = tmp34;
+                      closure_8 = tmp34;
                       const _Date = Date;
-                      if (Date.now() - constants <= c8) {
+                      if (Date.now() - constants <= closure_8) {
                         fetchParamsForApplication = store.getFetchParamsForApplication(callback);
                         if ("error" !== fromServer) {
                           if (null != fetchParamsForApplication) {
@@ -321,7 +316,7 @@ function _maybeFetchCollectionsForApplication() {
             } else {
               if (2 === tmp7) {
                 locale = 0;
-                let closure_11 = flag2;
+                closure_11 = flag2;
                 obj1 = includeUnpublishedProducts(flag[6]);
                 const obj9 = { type: "STOREFRONT_COLLECTIONS_FOR_APPLICATION_FETCH_FAILURE", applicationId: null, apiError: null };
                 obj9[1] = callback;
@@ -365,7 +360,7 @@ function _maybeFetchCollectionsForApplication() {
     iter.next();
     return iter;
   });
-  const _maybeFetchCollectionsForApplication = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -374,9 +369,9 @@ function _maybeFetchCollectionsForApplication() {
   }
   return applyArgumentsResult;
 }
-let closure_8 = 12 * require("set").Millis.HOUR;
-let closure_9 = 10 * require("set").Millis.MINUTE;
-const result = require("getFetchState").fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
+let closure_8 = 12 * setDefault.Millis.HOUR;
+let closure_9 = 10 * setDefault.Millis.MINUTE;
+const result = require("set").fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 
 export const maybeFetchCollectionsWithProducts = function maybeFetchCollectionsWithProducts(arg0) {
   const self = this;

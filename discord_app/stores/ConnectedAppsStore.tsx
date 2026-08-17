@@ -1,8 +1,10 @@
 // discord_app/stores/ConnectedAppsStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 import { apply } from "../../_runtime/00012_apply.js";
 
 let closure_2 = {};
+const Store = initializeDefault.Store;
 class ConnectedAppsStore extends Store {
 }
 const prototype = ConnectedAppsStore.prototype;
@@ -10,7 +12,7 @@ prototype["isConnected"] = function isConnected(arg0) {
   return null != dependencyMap[arg0];
 };
 prototype["isChildConnected"] = function isChildConnected(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   let someResult = null != arg0;
   if (someResult) {
     const _Object = Object;
@@ -32,7 +34,7 @@ prototype["getAllConnections"] = function getAllConnections() {
   return closure_2;
 };
 ConnectedAppsStore.displayName = "ConnectedAppsStore";
-const connectedAppsStore = new ConnectedAppsStore(require("dispatcher"), {
+const connectedAppsStore = new ConnectedAppsStore(dispatcherDefault, {
   OVERLAY_INITIALIZE: function handleOverlayInitialize(connectedApps) {
     const obj = {};
     const merged = Object.assign(connectedApps.connectedApps);
@@ -76,6 +78,6 @@ const connectedAppsStore = new ConnectedAppsStore(require("dispatcher"), {
     }
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/ConnectedAppsStore.tsx");
+const result = require("set").fileFinishedImporting("stores/ConnectedAppsStore.tsx");
 
 export default connectedAppsStore;

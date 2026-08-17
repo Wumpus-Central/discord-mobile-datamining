@@ -1,9 +1,13 @@
 // discord_app/polyfillsNative.tsx
-import timestamp from "_typeof";
-import 13670__ from "../_runtime/metro/13670__.js";
-import get_ActivityIndicator from "get ActivityIndicator";
-import _typeof from "_typeof";
-import GetOption from "GetOption";
+import set from "set" /* 2 */;
+import Buffer from "Buffer" /* 511 */;
+import q from "q" /* 1214 */;
+import _isNativeReflectConstruct from "_isNativeReflectConstruct" /* 13764 */;
+import timestamp from "timestamp" /* 3 */;
+import 13670__ from "../_runtime/metro/13670__.js" /* 13670 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 13740 */;
+import _typeof from "_typeof" /* 13758 */;
+import GetOption from "GetOption" /* 13761 */;
 
 if (typeof process === "undefined") {
   const _window3 = window;
@@ -17,12 +21,12 @@ if (!global.self) {
   global.self = global;
 }
 if (null == window.crypto) {
-  const _module5 = require("_isNativeReflectConstruct");
+  const _module5 = _isNativeReflectConstruct;
   const _window = window;
   window.crypto = global.crypto;
 }
 if (null == global.Buffer) {
-  global.Buffer = require("Buffer").Buffer;
+  global.Buffer = Buffer.Buffer;
 }
 if (null == global.__reanimatedWorkletInit) {
   global.__reanimatedWorkletInit = () => {
@@ -40,6 +44,6 @@ if (tmp7) {
   tmp7 = null != window.TextDecoder;
 }
 if (!tmp7) {
-  const _module6 = require("q");
+  const _module6 = q;
 }
-const result = require("get ActivityIndicator").fileFinishedImporting("polyfillsNative.tsx");
+const result = set.fileFinishedImporting("polyfillsNative.tsx");

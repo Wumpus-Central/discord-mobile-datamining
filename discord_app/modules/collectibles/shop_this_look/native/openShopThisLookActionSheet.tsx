@@ -1,10 +1,12 @@
 // discord_app/modules/collectibles/shop_this_look/native/openShopThisLookActionSheet.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+
 let c3 = "Shop This Look";
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/collectibles/shop_this_look/native/openShopThisLookActionSheet.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/shop_this_look/native/openShopThisLookActionSheet.tsx");
 
 export const SHOP_THIS_LOOK_ACTION_SHEET_KEY = "Shop This Look";
 export const openShopThisLookActionSheet = function openShopThisLookActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALF.openLazy(asyncRequireImpl(12340, dependencyMap.paths), c3, arg0, "stack");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(asyncRequireImpl(12340, dependencyMap.paths), c3, arg0, "stack");
 };

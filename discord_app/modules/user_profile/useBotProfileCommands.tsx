@@ -1,11 +1,12 @@
 // discord_app/modules/user_profile/useBotProfileCommands.tsx
-import noop from "noop";
+import findCommandInSectionAll from "findCommandInSection" /* 9555 */;
+import closure_3 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("PermissionOverwriteType").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/useBotProfileCommands.tsx");
 
 export default function useBotProfileCommands(channel) {
-  let obj = importAll(9555);
+  let obj = findCommandInSectionAll;
   const accessibleCommandsForApplication = obj.useAccessibleCommandsForApplication(channel, arg1, arg2);
   const commands = accessibleCommandsForApplication.commands;
   obj = {

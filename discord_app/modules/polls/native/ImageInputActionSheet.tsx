@@ -1,31 +1,25 @@
 // discord_app/modules/polls/native/ImageInputActionSheet.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY as closure_5 } from "POLL_ATTACHMENT_FOLDER";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { POLL_CREATION_IMAGE_INPUT_ACTION_SHEET_KEY as closure_5 } from "POLL_ATTACHMENT_FOLDER" /* 7576 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { emojiContainer: { flexDirection: "row", alignItems: "center", marginHorizontal: 24 }, emojiIcon: null };
-createCacheKey = { marginRight: 12, borderRadius: require("Themes").radii.sm };
+createCacheKey = { marginRight: 12, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("POLL_ATTACHMENT_FOLDER").fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/polls/native/ImageInputActionSheet.tsx");
 
 export default function ImageInputAnswerActionSheet(channelId) {
-  let View;
-  let answer;
-  let noop;
-  let closure_5;
-  let importDefault;
   channelId = channelId.channelId;
   ({ index: importDefault, answer } = channelId);
-  ({ onSaveAltText: noop, onRemoveAnswerImage: View, openExpressionPicker: closure_5 } = channelId);
+  ({ onSaveAltText: closure_3, onRemoveAnswerImage: View, openExpressionPicker: closure_5 } = channelId);
   let callback;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp3 = importDefault(answer[6])(channelId, answer.localCreationAnswerId, answer.image, 40, 40);
   const upload = tmp3.upload;
   let tmp4 = null != upload;
@@ -95,7 +89,7 @@ export default function ImageInputAnswerActionSheet(channelId) {
     obj2[1] = function onPress() {
       callback4();
       let obj = channelId(answer[14]);
-      obj = { channelId, answer, index: closure_1, onSave: noop, imageSize: 40 };
+      obj = { channelId, answer, index: closure_1, onSave: closure_3, imageSize: 40 };
       const result = obj.openEditPollCreationImageAltTextModal(obj);
     };
     tmp13Result = tmp13(tmp7(tmp2[12]).ActionSheetRow, obj2);

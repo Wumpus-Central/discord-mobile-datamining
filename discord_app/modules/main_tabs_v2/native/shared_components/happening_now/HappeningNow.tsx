@@ -1,23 +1,18 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx
-import HappeningNowCardCreateChannel from "HappeningNowCardCreateChannel";
-import importAllResult from "useHappeningNowScrollBehavior";
-import get_ActivityIndicator from "QUICK_SWITCHER";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import { AnalyticEvents } from "ME";
-import { jsx } from "u";
-import createFakeSharedValue from "createFakeSharedValue";
-import createCacheKey from "createCacheKey";
-import { Gesture } from "LegacyBaseButton";
-import { LegacyBaseButton } from "../../../../../../_runtime/06377_LegacyBaseButton.js";
-import { HappeningNowCardPlaceholder } from "HappeningNowCardPlaceholder.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 6377 */;
+import HappeningNowCardPlaceholder from "HappeningNowCardPlaceholder" /* 15332 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createFakeSharedValue from "createFakeSharedValue" /* 8126 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import { Gesture } from "LegacyBaseButton" /* 6377 */;
 
-let HAPPENING_NOW_PANELS_CONTAINER_PADDING;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function renderCard(kind, fullWidth) {
   if ("placeholder" !== kind.kind) {
     if (!fullWidth.loading) {
@@ -27,8 +22,6 @@ function renderCard(kind, fullWidth) {
   return jsx(HappeningNowCardPlaceholder.HappeningNowCardPlaceholder, { fullWidth: fullWidth.fullwidth, panelVariant: fullWidth.panelVariant });
 }
 function keyExtractor(voiceState) {
-  let kind;
-  let kind2;
   ({ kind, kind: kind2 } = voiceState);
   let userId = voiceState.voiceState.channelId;
   if (userId == null) {
@@ -41,10 +34,10 @@ function getItemType(kind) {
 }
 let c4 = importAllResult;
 ({ ScrollView: c5, View: closure_6 } = get_ActivityIndicator);
-({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: error, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: metroImportAll, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: c9 } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
+({ HAPPENING_NOW_CARD_WIDTH_NORMAL_WITH_MARGIN: error, HAPPENING_NOW_CARD_WIDTH_XSMALL_WITH_MARGIN: closure_8, HAPPENING_NOW_PANELS_CONTAINER_PADDING, HappeningNowKindIds: c9 } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 const context = importAllResult.createContext(createFakeSharedValue.createFakeSharedValue([]));
 let obj = { containerInner: { paddingLeft: HAPPENING_NOW_PANELS_CONTAINER_PADDING, paddingRight: HAPPENING_NOW_PANELS_CONTAINER_PADDING }, loading: null };
-obj = { paddingHorizontal: require("Themes").space.PX_8, flex: 1 };
+obj = { paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
 obj[1] = obj;
 let closure_13 = createCacheKey.createStyles(obj);
 let closure_14 = Gesture.Native().disallowInterruption(true);
@@ -63,8 +56,8 @@ const memoResult = importAllResult.memo((listRef) => {
   let ref;
   let isFocused;
   let callback;
-  let importAllResult;
-  let c5;
+  importAllResult = undefined;
+  c5 = undefined;
   let num;
   let sharedValue;
   let callback2;
@@ -76,7 +69,7 @@ const memoResult = importAllResult.memo((listRef) => {
   let first = tmp7[0];
   isFocused = first;
   callback = tmp8;
-  let obj1 = importAllResult;
+  obj1 = importAllResult;
   ref = importAllResult.useRef(0);
   importAllResult = ref;
   obj = { data: first, isFocused, loading: tmp8 };
@@ -86,20 +79,20 @@ const memoResult = importAllResult.memo((listRef) => {
   isFocused = obj.isFocused;
   callback = importAllResult.useRef(obj);
   const tmp11 = ref(isFocused[10])(() => {
-    const obj = { context: "messages", num_cards: HappeningNowCardCreateChannel.current.data.length, max_viewed_card_index: Math.min(ref.current, HappeningNowCardCreateChannel.current.data.length), card_types: data.map((arg0) => table[arg0.kind]) };
-    data = HappeningNowCardCreateChannel.current.data;
-    const merged = Object.assign(obj(isFocused[11]).getAffinityProperties(HappeningNowCardCreateChannel.current.data));
+    obj = { context: "messages", num_cards: closure_3.current.data.length, max_viewed_card_index: Math.min(ref.current, closure_3.current.data.length), card_types: data.map((arg0) => table[arg0.kind]) };
+    data = closure_3.current.data;
+    const merged = Object.assign(obj(isFocused[11]).getAffinityProperties(closure_3.current.data));
     return obj;
   });
   importAllResult = tmp11;
   const effect = importAllResult.useEffect(() => {
-    HappeningNowCardCreateChannel.current = obj;
+    closure_3.current = obj;
   });
   const items = [isFocused, tmp11];
   const effect1 = importAllResult.useEffect(() => {
     let tmp = !isFocused;
     if (!isFocused) {
-      const current = HappeningNowCardCreateChannel.current;
+      const current = closure_3.current;
       const loading = current.loading;
       let tmp3 = !loading;
       if (!loading) {
@@ -108,8 +101,8 @@ const memoResult = importAllResult.memo((listRef) => {
       tmp = tmp3;
     }
     if (tmp) {
-      ref(isFocused[12]).track(outer1_10.ACTIVITY_CARDS_VIEWED, _undefined());
-      const obj = ref(isFocused[12]);
+      ref(isFocused[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, ref());
+      obj = ref(isFocused[12]);
     }
   }, items);
   ref(isFocused[13])(() => () => {
@@ -120,8 +113,8 @@ const memoResult = importAllResult.memo((listRef) => {
       tmp = current.data.length > 0;
     }
     if (tmp) {
-      outer1_1(outer1_2[12]).track(outer1_10.ACTIVITY_CARDS_VIEWED, callback());
-      const obj = outer1_1(outer1_2[12]);
+      closure_1_1(closure_1_2[12]).track(closure_1_10.ACTIVITY_CARDS_VIEWED, callback());
+      obj = closure_1_1(closure_1_2[12]);
     }
   });
   const items1 = [isFocused, listRef];
@@ -131,7 +124,7 @@ const memoResult = importAllResult.memo((listRef) => {
       if (current != null) {
         current.scrollToOffset({ offset: 0, animated: false });
       }
-      c4.current = 0;
+      closure_4.current = 0;
     }
   }, items1);
   const findIndexResult = first.findIndex((arg0) => {
@@ -151,8 +144,8 @@ const memoResult = importAllResult.memo((listRef) => {
     } else {
       sum1 = c5 + ((sum - tmp2) / callback2 | 0);
     }
-    if (sum1 > _undefined.current) {
-      _undefined.current = sum1;
+    if (sum1 > ref.current) {
+      ref.current = sum1;
     }
   }, items2);
   const tmp6Result = callback(ref(isFocused[19])(num, callback), 2);
@@ -168,7 +161,7 @@ const memoResult = importAllResult.memo((listRef) => {
   let tmp2Result = tmp2(tmp3[19]);
   const items4 = [tmp7[1]];
   const happeningNowScrollSnapping = tmp2Result.useHappeningNowScrollSnapping(listRef);
-  const callback1 = obj1.useCallback((index) => outer1_16(index.item, { index: index.index, loading: HappeningNowCardCreateChannel, panelVariant: true }), items4);
+  const callback1 = obj1.useCallback((index) => closure_1_16(index.item, { index: index.index, loading: closure_3, panelVariant: true }), items4);
   tmp2Result = tmp2(tmp3[20]);
   sharedValue = tmp2Result.useSharedValue([]);
   const items5 = [sharedValue];
@@ -215,7 +208,7 @@ const memoResult = importAllResult.memo((listRef) => {
   obj3[1] = first;
   <num style={tmp.loading}>{null}</num>;
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNow.tsx");
 
 export default memoResult;
 export const ViewableHappeningNowCardKeysContext = context;

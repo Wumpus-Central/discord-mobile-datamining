@@ -1,19 +1,20 @@
 // discord_app/modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx
-import "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import { initialize } from "../../../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import Button from "Button" /* 1297 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/premium/gifting/native/views/GiftingRewardPreviewAvatar.tsx");
 
 export default function GiftingRewardPreviewAvatar(asset) {
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  const items1 = [maybeApplyNoTextColorForLightCustomTheme];
+  const items1 = [closure_2];
   let tmp5;
   const stateFromStores1 = initialize.useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   if (null != asset.asset) {

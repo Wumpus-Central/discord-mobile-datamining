@@ -1,11 +1,11 @@
 // discord_app/modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx
-import recountRelationshipTypes from "recountRelationshipTypes";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "recountRelationshipTypes" /* 5406 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/game_relationships/settings/useIsAllowGameFriendDMsSettingVisible.tsx");
 
 export const useIsAllowGameFriendDMsSettingVisible = function useIsAllowGameFriendDMsSettingVisible() {
-  const items = [recountRelationshipTypes];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => gameRelationshipCount.getGameRelationshipCount() > 0);
 };

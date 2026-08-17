@@ -1,14 +1,12 @@
 // discord_app/modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx
-import noop from "noop";
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_4 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/explicit_media_redaction/native/false_positive_reporting/ExplicitMediaObscuredFalsePositiveActionSheet.tsx");
 
 export default function ExplicitMediaObscuredFalsePositiveActionSheet(channelId) {
-  let attachmentId;
-  let embedId;
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   let redactableMediaAttachmentsForMessage;

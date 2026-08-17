@@ -1,33 +1,24 @@
 // discord_app/components_native/common/IconUploader.tsx
-import closure_3 from "createCacheKey";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { UPLOAD_MEDIUM_SIZE } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../_runtime/09945_registerAsset.js";
-import { PressableBase } from "../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { GuildIconSizes } from "../../modules/guild/native/GuildIcon.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import GuildIconSizes from "GuildIconSizes" /* 7188 */;
+import GuildIconSizesDefault from "GuildIconSizes" /* 7188 */;
+import registerAssetDefault from "registerAsset" /* 9945 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { UPLOAD_MEDIUM_SIZE } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ uploadIcon: { position: "absolute", right: -7, top: -7 }, avatar: { height: 64, width: 64, borderRadius: 32 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/common/IconUploader.tsx");
+const result = require("set").fileFinishedImporting("components_native/common/IconUploader.tsx");
 
 export default function IconUploader(disabled) {
-  let icon;
-  let iconStyle;
-  let importDefault;
-  let name;
-  let require;
   let flag = disabled.disabled;
   if (flag === undefined) {
     flag = false;
@@ -43,7 +34,7 @@ export default function IconUploader(disabled) {
     str = "avatar";
   }
   ({ name, icon, onUpload: require, iconStyle, onChangeIconPress: importDefault } = disabled);
-  let dependencyMap;
+  dependencyMap = undefined;
   function _handleChangeIcon(arg0) {
     const self = this;
     const tmp = _handleChangeIcon(function*() {
@@ -73,19 +64,19 @@ export default function IconUploader(disabled) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp5;
+              closure_1 = tmp5;
               let base64 = tmp2;
               base64 = undefined;
-              if (outer1_1 != null) {
-                outer1_1();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               if (ref.current) {
                 c3 = 3;
               } else {
                 ref.current = true;
-                let obj1 = outer1_1(ref[6]);
+                obj1 = closure_1_1(ref[6]);
                 obj1 = { size: null };
-                obj1[0] = outer1_7;
+                obj1[0] = closure_1_7;
                 c3 = 1;
                 const obj2 = { value: null, done: false };
                 obj2[0] = obj1.openImagePicker(obj1);
@@ -114,7 +105,7 @@ export default function IconUploader(disabled) {
         }
       }
     });
-    _handleChangeIcon = tmp;
+    closure_3 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -138,12 +129,12 @@ export default function IconUploader(disabled) {
       obj[1] = fnResult;
       obj[2] = name;
       obj[3] = GuildIconSizes.GuildIconSizes.XLARGE;
-      let tmp7 = callback(GuildIconSizes, obj);
-      const tmp12 = GuildIconSizes;
+      let tmp7 = callback(GuildIconSizesDefault, obj);
+      const tmp12 = GuildIconSizesDefault;
     }
     tmp8 = null == icon && null == name;
   } else {
-    let obj1 = getAvatarURL;
+    obj1 = getAvatarURL;
     obj = { style: null, source: null };
     const items = [tmp.avatar, iconStyle];
     obj[0] = items;
@@ -155,7 +146,7 @@ export default function IconUploader(disabled) {
   if (!flag) {
     obj1 = { style: null, source: null };
     obj1[0] = tmp.uploadIcon;
-    obj1[1] = registerAsset;
+    obj1[1] = registerAssetDefault;
     tmp16 = callback(closure_6, obj1);
   }
   items1[1] = tmp16;

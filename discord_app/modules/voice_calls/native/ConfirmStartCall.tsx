@@ -1,13 +1,11 @@
 // discord_app/modules/voice_calls/native/ConfirmStartCall.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useAlertStore from "useAlertStore" /* 4657 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
 function ConfirmStartCall(onConfirm) {
   let obj = { title: null, content: null, actions: null };
   const intl = getSystemLocale.intl;
@@ -20,7 +18,7 @@ function ConfirmStartCall(onConfirm) {
   obj[1] = intl3.string(getSystemLocale.t.rimG2R);
   obj[2] = onConfirm.onConfirm;
   const items = [callback(getAlertModalItemKey.AlertActionButton, obj, "confirm"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj1 = { variant: "secondary", text: null };
   const intl4 = getSystemLocale.intl;
   obj1[1] = intl4.string(getSystemLocale.t["ETE/oC"]);
   items[1] = callback(getAlertModalItemKey.AlertActionButton, obj1, "cancel");
@@ -28,8 +26,9 @@ function ConfirmStartCall(onConfirm) {
   obj[2] = callback2(getAlertModalItemKey.AlertActions, obj);
   return callback(getAlertModalItemKey.AlertModal, obj);
 }
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_calls/native/ConfirmStartCall.tsx");
 
 export const confirmStartCall = function confirmStartCall(fn) {
   let obj = useAlertStore;

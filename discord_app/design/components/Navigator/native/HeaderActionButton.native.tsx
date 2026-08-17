@@ -1,40 +1,23 @@
 // discord_app/design/components/Navigator/native/HeaderActionButton.native.tsx
-import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
-import { PressableBase } from "../../../void/Pressables/native/Pressables.tsx";
-import { MINIMUM_HIT_AREA } from "../../Button/native/ButtonConstants.native.tsx";
-import { Text } from "../../Text/native/Text.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import IconSizesDefault from "IconSizes" /* 4747 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import { ANDROID_FOREGROUND_RIPPLE } from "semanticColor" /* 1301 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { button: { alignSelf: "stretch", alignItems: "center", justifyContent: "center", flexDirection: "row" }, text: null, buttonFont: null, buttonDisabled: null };
-obj = { color: require("Themes").colors.TEXT_BRAND, textTransform: "capitalize" };
+obj = { color: ThemesDefault.colors.TEXT_BRAND, textTransform: "capitalize" };
 obj[1] = obj;
 obj[2] = { fontSize: 16, maxWidth: 80 };
 obj[3] = { opacity: 0.6 };
 let closure_6 = createCacheKey.createStyles(obj);
-const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
-  let IconComponent;
-  let IconComponentSize;
-  let accessibilityActions;
-  let accessibilityHint;
-  let accessibilityLabel;
-  let disabled;
-  let foregroundRipple;
-  let icon;
-  let iconSize;
-  let imageStyle;
-  let onAccessibilityAction;
-  let onPress;
-  let source;
-  let style;
-  let text;
-  let textStyle;
+const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   ({ text, source, accessibilityLabel, IconComponent, disabled } = arg0);
   ({ style, textStyle, imageStyle, accessibilityHint, accessibilityActions, onAccessibilityAction, icon, IconComponentSize, onPress, foregroundRipple, iconSize } = arg0);
   const tmp = callback2();
@@ -56,9 +39,9 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
     obj[0] = source;
     obj[1] = imageStyle;
     obj[2] = iconSize;
-    tmp2 = callback(IconSizes, obj);
+    tmp2 = callback(IconSizesDefault, obj);
   }
-  const obj1 = { ref, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, accessibilityRole: "button", onPress: null, activeOpacity: 0.6, androidRippleConfig: null, style: null, disabled: null, children: null };
+  obj1 = { ref, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, onAccessibilityAction: null, accessibilityRole: "button", onPress: null, activeOpacity: 0.6, androidRippleConfig: null, style: null, disabled: null, children: null };
   if (accessibilityLabel == null) {
     accessibilityLabel = text;
   }
@@ -84,6 +67,6 @@ const forwardRefResult = require("noop").forwardRef((arg0, ref) => {
   obj1[11] = items2;
   return closure_5(PressableBase.PressableOpacity, obj1);
 });
-const result = require("jsxProd").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
+const result = require("set").fileFinishedImporting("design/components/Navigator/native/HeaderActionButton.native.tsx");
 
 export const HeaderActionButton = forwardRefResult;

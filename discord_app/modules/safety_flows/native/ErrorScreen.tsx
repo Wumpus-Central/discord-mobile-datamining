@@ -1,27 +1,26 @@
 // discord_app/modules/safety_flows/native/ErrorScreen.tsx
-import closure_3 from "createCacheKey";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, buttonContainer: null };
-createCacheKey = { flexDirection: "column", justifyContent: "center", gap: require("Themes").space.PX_8, padding: require("Themes").space.PX_16, alignItems: "center" };
+createCacheKey = { flexDirection: "column", justifyContent: "center", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_16, alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginTop: require("Themes").space.PX_8 };
-let result = require("noop").fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_8 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { marginTop: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/safety_flows/native/ErrorScreen.tsx");
 
 export default function ErrorScreen() {
   function _handleRetry() {
     const self = this;
-    const tmp = outer1_3(function*() {
+    const tmp = closure_1_3(function*() {
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -48,15 +47,15 @@ export default function ErrorScreen() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let callback = tmp7;
               callback = undefined;
-              let c3 = 1;
-              outer1_0(true);
-              let obj2 = outer1_0(outer1_2[8]);
+              c3 = 1;
+              closure_1_0(true);
+              let obj2 = closure_1_0(closure_1_2[8]);
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj2.getCurrentTask();
               return obj1;
             }
@@ -77,7 +76,7 @@ export default function ErrorScreen() {
           } else {
             callback = arg1;
             if (null != callback) {
-              obj = outer1_0(outer1_2[9]);
+              obj = closure_1_0(closure_1_2[9]);
               const result = obj.navigateToScreenForTask(closure_1, callback);
             }
             c3 = 0;
@@ -96,7 +95,7 @@ export default function ErrorScreen() {
         }
       }
     });
-    const _handleRetry = tmp;
+    closure_2 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -108,14 +107,14 @@ export default function ErrorScreen() {
   let tmp = callback(React.useState(false), 2);
   const _require = tmp[1];
   let obj = _require(_handleRetry[7]);
-  let closure_1 = obj.useNavigation();
-  const tmp2 = createCacheKey();
+  closure_1 = obj.useNavigation();
+  const tmp2 = callback4();
   obj = { style: tmp2.container, children: null };
   obj = { variant: "heading-lg/semibold", children: null };
   const intl = _require(_handleRetry[11]).intl;
   obj[1] = intl.string(_require(_handleRetry[11]).t.c6kn6F);
   const items = [callback2(_require(_handleRetry[10]).Text, obj), , ];
-  let obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
+  obj1 = { variant: "text-md/normal", color: "text-muted", children: null };
   const intl2 = _require(_handleRetry[11]).intl;
   obj1[2] = intl2.string(_require(_handleRetry[11]).t.ZUEGFn);
   items[1] = callback2(_require(_handleRetry[10]).Text, obj1);

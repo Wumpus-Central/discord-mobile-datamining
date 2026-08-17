@@ -1,7 +1,10 @@
 // discord_app/modules/chat_input/native/ChatInputNativeCommands.tsx
+import set2 from "set" /* 2 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 11161 */;
 import { __INTERNAL_VIEW_CONFIG } from "../../../../discord_common/js/packages/rtn-codegen/js/ChatInputNativeComponent.tsx";
 import { snowflakeSequence } from "../../messages/createNonce.tsx";
-let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
+
+let result = set2.fileFinishedImporting("modules/chat_input/native/ChatInputNativeCommands.tsx");
 
 export default {
   backspace(arg0) {
@@ -30,7 +33,7 @@ export default {
   },
   getText(arg0, set) {
     const _require = set;
-    const dependencyMap = arg2;
+    dependencyMap = arg2;
     if (null == arg0) {
       return null;
     } else {
@@ -83,10 +86,6 @@ export default {
     }
   },
   replaceRange(arg0, keepCursorPosition) {
-    let _location;
-    let length;
-    let nodes;
-    let text;
     ({ location: _location, length, text, nodes } = keepCursorPosition);
     if (nodes === undefined) {
       nodes = [];

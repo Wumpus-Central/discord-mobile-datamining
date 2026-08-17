@@ -1,17 +1,17 @@
 // discord_app/modules/emojis/hooks/useEmojiColorPalette.tsx
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import handleThemeChange from "handleThemeChange";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { buildPlatformedThemedEmojiColorPalette } from "../utils/EmojiColorUtils.tsx";
+import initialize from "initialize" /* 589 */;
+import buildPlatformedThemedEmojiColorPalette from "buildPlatformedThemedEmojiColorPalette" /* 8182 */;
+import closure_2 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
 
-const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/emojis/hooks/useEmojiColorPalette.tsx");
 
 export const useEmojiColorPalette = function useEmojiColorPalette(burst_colors) {
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_2];
   const stateFromStores = initialize.useStateFromStores(items, () => saturation.saturation);
   const obj = initialize;
-  const items1 = [handleThemeChange];
+  const items1 = [closure_3];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => callback(table[3]).isThemeDark(theme.theme));
   const obj2 = initialize;
   return buildPlatformedThemedEmojiColorPalette.buildEmojiColorPalette(burst_colors, stateFromStores, stateFromStores1);

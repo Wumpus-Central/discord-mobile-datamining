@@ -1,16 +1,18 @@
 // discord_app/modules/safety_hub/SafetyHubStore.tsx
-import SafetyHubView from "SafetyHubView";
-import { Store } from "initialize";
-import { createAggregator } from "../../../_runtime/11062_createAggregator.js";
-import { ContentIdType } from "SafetyHubModels.tsx";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ContentIdType from "ContentIdType" /* 5439 */;
+import createAggregatorDefault from "createAggregator" /* 11062 */;
+import SafetyHubView from "SafetyHubView" /* 5438 */;
 
 function handleSafetyHubRequestAgeVerificationResetModalAction(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
   } else {
-    let c21 = "";
-    let c23 = null;
-    let c24 = false;
+    c21 = "";
+    c23 = null;
+    c24 = false;
   }
 }
 const AgeCheckStatus = SafetyHubView.AgeCheckStatus;
@@ -18,7 +20,7 @@ const AppealIngestionSignal = SafetyHubView.AppealIngestionSignal;
 let closure_5 = SafetyHubView.AGE_CHECK_MAX_POLL_ATTEMPTS;
 let closure_6 = {};
 let closure_7 = {};
-let obj = { state: require("ContentIdType").AccountStandingState.ALL_GOOD };
+let obj = { state: ContentIdType.AccountStandingState.ALL_GOOD };
 let c9 = false;
 let c10 = false;
 let c11 = null;
@@ -37,6 +39,7 @@ let c23 = null;
 let c24 = false;
 const NONE = AgeCheckStatus.NONE;
 let c26 = null;
+const Store = initializeDefault.Store;
 class SafetyHubStore extends Store {
 }
 const prototype = SafetyHubStore.prototype;
@@ -109,56 +112,46 @@ prototype["getAgeCheckAttempts"] = function getAgeCheckAttempts() {
 SafetyHubStore.displayName = "SafetyHubStore";
 obj = {
   SAFETY_HUB_FETCH_START: function handleFetchStart() {
-    let c9 = true;
+    c9 = true;
   },
   SAFETY_HUB_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let accountStanding;
-    let appealEligibility;
-    let classifications;
-    let isAppealEligible;
-    let isDsaEligible;
-    let username;
     ({ classifications, accountStanding, isDsaEligible, isAppealEligible, username, appealEligibility } = arg0);
-    let closure_6 = createAggregator(classifications, "id");
-    let c9 = false;
-    let c10 = true;
-    let c11 = null;
+    closure_6 = createAggregatorDefault(classifications, "id");
+    c9 = false;
+    c10 = true;
+    c11 = null;
   },
   SAFETY_HUB_FETCH_FAILURE: function handleFetchFailure(error) {
-    let c9 = false;
-    let c10 = false;
+    c9 = false;
+    c10 = false;
     error = error.error;
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_START: function handleFetchClassificationStart(classificationId) {
     closure_7[classificationId.classificationId] = ContentIdType.ClassificationRequestState.PENDING;
-    let c9 = true;
+    c9 = true;
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function handleFetchClassificationSuccess(classification) {
-    let accountStanding;
-    let isAppealEligible;
-    let isDsaEligible;
-    let username;
     classification = classification.classification;
     closure_6[classification.id] = classification;
     ({ accountStanding, isDsaEligible, username, isAppealEligible } = classification);
     closure_7[classification.id] = ContentIdType.ClassificationRequestState.SUCCESS;
-    let c9 = false;
-    let c11 = null;
-    let c10 = true;
+    c9 = false;
+    c11 = null;
+    c10 = true;
   },
   SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function handleFetchClassificationFailure(error) {
-    let c9 = false;
+    c9 = false;
     error = error.error;
     closure_7[error.classificationId] = ContentIdType.ClassificationRequestState.FAILED;
-    let c10 = false;
+    c10 = false;
   },
   SAFETY_HUB_APPEAL_OPEN: function handleAppealOpen(classificationId) {
     classificationId = classificationId.classificationId;
   },
   SAFETY_HUB_APPEAL_CLOSE: function handleAppealClose() {
-    let c12 = null;
-    const DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
-    let c19 = "";
+    c12 = null;
+    DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
+    c19 = "";
   },
   SAFETY_HUB_APPEAL_SIGNAL_SELECT: function handleAppealSignalSelect(signal) {
     signal = signal.signal;
@@ -170,37 +163,37 @@ obj = {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c16 = true;
-      let c17 = null;
+      c16 = true;
+      c17 = null;
     }
   },
   SAFETY_HUB_REQUEST_REVIEW_SUCCESS: function handleSafetyHubRequestReviewSuccess(arg0) {
-    let c16 = false;
-    let c17 = null;
+    c16 = false;
+    c17 = null;
     dependencyMap[arg0.classificationId].appeal_status = { status: ContentIdType.AppealStatusType.REVIEW_PENDING };
   },
   SAFETY_HUB_REQUEST_REVIEW_FAILURE: function handleSafetyHubRequestReviewFailure(error) {
-    let c16 = false;
+    c16 = false;
     error = error.error;
   },
   SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START: function handleSafetyHubRequestAgeVerificationStart(arg0) {
     if (arg0 == null) {
       HermesBuiltin.throwTypeError();
     } else {
-      let c21 = "";
-      let c23 = null;
-      let c24 = true;
+      c21 = "";
+      c23 = null;
+      c24 = true;
     }
   },
   SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_SUCCESS: function handleSafetyHubRequestAgeVerificationSuccess(verificationWebviewUrl) {
     verificationWebviewUrl = verificationWebviewUrl.verificationWebviewUrl;
-    let c23 = null;
-    let c24 = false;
+    c23 = null;
+    c24 = false;
   },
   SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function handleSafetyHubRequestAgeVerificationFailure(error) {
-    let c21 = "";
+    c21 = "";
     error = error.error;
-    let c24 = false;
+    c24 = false;
   },
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_OPEN: handleSafetyHubRequestAgeVerificationResetModalAction,
   SAFETY_HUB_AUTOMATED_UNDERAGE_APPEAL_MODAL_CLOSE: handleSafetyHubRequestAgeVerificationResetModalAction,
@@ -216,7 +209,7 @@ obj = {
           continue;
         } else {
           let tmp = dependencyMap;
-          let obj = { status: null };
+          obj = { status: null };
           let tmp2 = require;
           let tmp3 = dependencyMap;
           obj[0] = ContentIdType.AppealStatusType.REVIEW_PENDING;
@@ -232,7 +225,7 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      let c26 = null;
+      c26 = null;
     }
   },
   SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START: function handleSafetyHubCheckAgeVerificationStart(arg0) {
@@ -240,7 +233,7 @@ obj = {
       HermesBuiltin.throwTypeError();
     } else {
       const LOADING = AgeCheckStatus.LOADING;
-      let c26 = null;
+      c26 = null;
       closure_22 = closure_22 + 1;
     }
   },
@@ -252,23 +245,23 @@ obj = {
     } else {
       FAILURE = AgeCheckStatus.FAILURE;
     }
-    let c26 = null;
+    c26 = null;
   },
   SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_FAILURE: function handleSafetyHubCheckAgeVerificationFailure(error) {
     const ERROR = AgeCheckStatus.ERROR;
     error = error.error;
   },
   LOGOUT: function reset() {
-    let c9 = false;
-    let closure_6 = {};
-    const obj = { state: ContentIdType.AccountStandingState.ALL_GOOD };
-    let c12 = null;
-    const DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
-    let c19 = "";
-    let closure_15 = [];
+    c9 = false;
+    closure_6 = {};
+    obj = { state: ContentIdType.AccountStandingState.ALL_GOOD };
+    c12 = null;
+    DIDNT_VIOLATE_POLICY = AppealIngestionSignal.DIDNT_VIOLATE_POLICY;
+    c19 = "";
+    closure_15 = [];
   }
 };
-const safetyHubStore = new SafetyHubStore(require("dispatcher"), obj);
-const result = require("createAggregator").fileFinishedImporting("modules/safety_hub/SafetyHubStore.tsx");
+const safetyHubStore = new SafetyHubStore(dispatcherDefault, obj);
+const result = set.fileFinishedImporting("modules/safety_hub/SafetyHubStore.tsx");
 
 export default safetyHubStore;

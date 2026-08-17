@@ -1,44 +1,35 @@
 // discord_app/modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx
-import CustomCheckoutFlow from "CustomCheckoutFlow";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import context from "context";
-import { ItemPurchaseType } from "CustomCheckoutFlow";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import context from "context" /* 7395 */;
+import { ItemPurchaseType } from "CustomCheckoutFlow" /* 4357 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function NativeCheckoutStoreProvider(children) {
-  let CustomCheckoutFlow;
-  let _slicedToArray;
-  let noop;
-  let dependencyMap;
-  let order;
-  let require;
   ({ checkoutInitParameters: require, order } = children);
-  ({ paymentGateway: dependencyMap, orderRequired: CustomCheckoutFlow, onOrderRetryCancellation: _slicedToArray, initialSubscriptionFacet: noop } = children);
-  let closure_6;
+  ({ paymentGateway: dependencyMap, orderRequired: closure_3, onOrderRetryCancellation: closure_4, initialSubscriptionFacet: closure_5 } = children);
+  closure_6 = undefined;
   let first;
-  let closure_8;
+  closure_8 = undefined;
   closure_6 = order(7127)(() => {
     let id;
     if (order != null) {
       id = order.id;
     }
     if (id == null) {
-      let obj = outer1_0(outer1_2[13]);
+      let obj = closure_1_0(closure_1_2[13]);
       id = obj.v4();
     }
     obj = { message: "Checkout session ID: " + id };
-    order(outer1_2[14]).addBreadcrumb(obj);
+    order(closure_1_2[14]).addBreadcrumb(obj);
     obj = { loadId: id, startTime: Date.now() };
     return obj;
   });
-  first = callback(React.useState(() => first({ order, checkoutInitParameters: closure_0, contextMetadata: closure_6, paymentGateway: closure_2, orderRequired: CustomCheckoutFlow, onOrderRetryCancellation: _slicedToArray, initialSubscriptionFacet: noop })), 1)[0];
+  first = callback(React.useState(() => first({ order, checkoutInitParameters: closure_0, contextMetadata: closure_6, paymentGateway: closure_2, orderRequired: closure_3, onOrderRetryCancellation: closure_4, initialSubscriptionFacet: closure_5 })), 1)[0];
   closure_8 = React.useRef(null != order);
   const items = [order, first];
   const effect = React.useEffect(() => {
@@ -57,7 +48,7 @@ function NativeCheckoutStoreProvider(children) {
     state = state.getState();
     const orderRecord = state.orderRecord;
     if (null != orderRecord) {
-      let obj = outer1_0(outer1_2[15]);
+      let obj = closure_1_0(closure_1_2[15]);
       obj = { checkoutSucceeded: null, order: null };
       obj[0] = tmp2;
       obj = { id: null, status: null };
@@ -68,15 +59,11 @@ function NativeCheckoutStoreProvider(children) {
   }, items1);
   return <closure_8 value={first}><redux.Provider value={first}>{arg0.children}</redux.Provider></closure_8>;
 }
-({ createNativeStore: error, NativeCheckoutStoreContext: metroImportAll, NativeCheckoutStoreContextOrNull: c9 } = context);
+({ createNativeStore: error, NativeCheckoutStoreContext: closure_8, NativeCheckoutStoreContextOrNull: c9 } = context);
 let closure_12 = createCacheKey.createStyles({ loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
-let result = require("noop").fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");
+let result = require("set").fileFinishedImporting("modules/checkout/native/stores/NativeCheckoutStoreProvider.tsx");
 
 export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
-  let c9;
-  let paymentGateway;
-  let skuIds;
-  let tmp3;
   orderRequired = orderRequired.orderRequired;
   let _require = orderRequired;
   ({ skuIds, paymentGateway } = orderRequired);
@@ -88,8 +75,8 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   const initialSubscriptionFacet = orderRequired.initialSubscriptionFacet;
   const initialExternalGatewayFacet = orderRequired.initialExternalGatewayFacet;
   c9 = undefined;
-  let closure_10;
-  let closure_11;
+  closure_10 = undefined;
+  closure_11 = undefined;
   let callback2;
   let storeFront;
   let callback;
@@ -115,16 +102,14 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
       }
     }
   }
-  let obj1 = _require(tmp5[9]);
+  obj1 = _require(tmp5[9]);
   storeFront = obj1.useNativeIAPPayments().storeFront;
   _require = undefined;
   _require = onOrderCreated((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -151,7 +136,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
+              closure_2 = tmp5;
               c1 = tmp2;
               c0 = undefined;
               c1 = undefined;
@@ -167,19 +152,19 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
               let country;
               const obj2 = { orderLineItems: null, paymentGateway: null, isGift: null, subscriptionFacet: null, externalGatewayFacet: null, countryCode: null };
               obj2[0] = c0;
-              obj2[1] = outer1_1;
-              obj2[2] = outer1_2;
+              obj2[1] = closure_1_1;
+              obj2[2] = closure_1_2;
               obj2[3] = c1;
-              obj2[4] = outer1_8;
-              if (outer1_13 != null) {
-                country = outer1_13.country;
+              obj2[4] = closure_1_8;
+              if (closure_1_13 != null) {
+                country = closure_1_13.country;
               }
               obj2[5] = country;
               v0 = 2;
@@ -198,11 +183,11 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
             return obj;
           } else {
             closure_2 = arg1;
-            outer1_9(closure_2);
+            closure_1_9(closure_2);
             if (null != v0) {
-              v0(outer1_2);
+              v0(closure_1_2);
             }
-            outer1_10(false);
+            closure_1_10(false);
             c4 = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
           }
@@ -228,22 +213,22 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   }, items);
   _require = undefined;
   _require = onOrderCreated((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0) {
-      let closure_2 = tmp3;
-      let c3 = 1;
-      yield outer1_14(callback);
+      closure_2 = tmp3;
+      c3 = 1;
+      yield closure_1_14(callback);
       if (1 === tmp7) {
         c3 = 0;
-        const obj1 = callback(isGift[11]);
-        const result = obj1.showCheckoutOrderErrorModal(() => outer1_14(closure_0), () => {
+        obj1 = callback(isGift[11]);
+        const result = obj1.showCheckoutOrderErrorModal(() => closure_1_14(closure_0), () => {
           callback2(false);
           callback();
         });
-        let c5 = 3;
+        c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw arg1;
@@ -267,7 +252,6 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
   }, items1);
   const items2 = [tmp6Result, orderRequired, callback1, defaultPlans, storeFront, activeSubscription, initialSubscriptionFacet];
   const effect = obj.useEffect(() => {
-    let country;
     let tmp = ref;
     if (!ref.current) {
       country = storeFront;
@@ -304,7 +288,7 @@ export default function NativeCheckoutStoreProviderWrapper(orderRequired) {
           }
           tmp.current = true;
           tmp = callback1;
-          const obj1 = { orderLineItems: null, subscriptionFacet: null };
+          obj1 = { orderLineItems: null, subscriptionFacet: null };
           obj1[0] = items;
           obj1[1] = tmp5;
           callback1(obj1);

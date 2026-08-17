@@ -1,6 +1,8 @@
 // discord_app/modules/user_profile/utils/parseUserProfileCollectibles.tsx
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-const result = require("set").fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
+import set from "set" /* 2 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+
+const result = set.fileFinishedImporting("modules/user_profile/utils/parseUserProfileCollectibles.tsx");
 
 export default function parseUserProfileCollectibles(collectibles) {
   let tmp;
@@ -71,7 +73,7 @@ export default function parseUserProfileCollectibles(collectibles) {
       }
       continue;
     }
-    const obj1 = { collectibles: null, profileEffect: null, profileFrame: null };
+    obj1 = { collectibles: null, profileEffect: null, profileFrame: null };
     obj1[0] = items;
     obj1[1] = tmp;
     obj1[2] = tmp2;

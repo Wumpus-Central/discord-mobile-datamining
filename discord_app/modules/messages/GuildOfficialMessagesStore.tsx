@@ -1,14 +1,15 @@
 // discord_app/modules/messages/GuildOfficialMessagesStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageFlags } from "ME";
-import { Store } from "initialize";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { MessageFlags } from "ME" /* 676 */;
 
-let require = arg1;
+require = arg1;
 function updateGuildState(guildId, arg1) {
   if (null != obj[guildId]) {
     obj = {};
@@ -77,13 +78,13 @@ function handleRelationshipUpdate() {
     for (const item10031 of ids) {
       let tmp11 = tmp5;
       let tmp12 = tmp6.messages[item10031];
-      let obj1 = tmp12;
+      obj1 = tmp12;
       if (null != tmp12) {
-        let tmp33 = markAllUserIdListsStale;
+        let tmp33 = closure_5;
         let tmp34 = tmp12;
-        let isBlockedForMessageResult = markAllUserIdListsStale.isBlockedForMessage(obj1);
+        let isBlockedForMessageResult = closure_5.isBlockedForMessage(obj1);
         let tmp36 = isBlockedForMessageResult;
-        let isIgnoredForMessageResult = markAllUserIdListsStale.isIgnoredForMessage(obj1);
+        let isIgnoredForMessageResult = closure_5.isIgnoredForMessage(obj1);
         let tmp15 = obj1.blocked === isBlockedForMessageResult;
         if (tmp15) {
           let tmp13 = tmp12;
@@ -135,11 +136,12 @@ function handleRelationshipUpdate() {
   }
 }
 let closure_8 = {};
+const Store = initializeDefault.Store;
 class GuildOfficialMessagesStore extends Store {
 }
 const prototype = GuildOfficialMessagesStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRecordFromRust, markAllUserIdListsStale, mergeGuildAvatar);
+  this.waitFor(closure_2, closure_3, closure_4, closure_5, closure_6);
 };
 prototype["getState"] = function getState(arg0) {
   return dependencyMap[arg0];
@@ -152,12 +154,12 @@ prototype["getMessage"] = function getMessage(arg0, arg1) {
   return tmp2;
 };
 prototype["getMessages"] = function getMessages(arg0) {
-  const require = tmp;
+  closure_0 = tmp;
   if (null == dependencyMap[arg0]) {
     let items = [];
   } else {
     const ids = tmp.ids;
-    const mapped = ids.map((arg0) => tmp.messages[arg0]);
+    const mapped = ids.map((arg0) => messages.messages[arg0]);
     items = mapped.filter((arg0) => null != arg0);
   }
   return items;
@@ -193,9 +195,9 @@ prototype["hasMore"] = function hasMore(arg0) {
   return flag;
 };
 GuildOfficialMessagesStore.displayName = "GuildOfficialMessagesStore";
-const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispatcher"), {
+const guildOfficialMessagesStore = new GuildOfficialMessagesStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_8 = {};
+    closure_8 = {};
   },
   LOAD_OFFICIAL_MESSAGES: function handleLoadOfficialMessages(guildId) {
     guildId = guildId.guildId;
@@ -219,32 +221,28 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
     } else {
       obj = {};
       const merged2 = Object.assign(obj);
-      const obj1 = { ids: null, messages: null, hasMore: false, loading: true, loaded: false, error: false };
+      obj1 = { ids: null, messages: null, hasMore: false, loading: true, loaded: false, error: false };
       obj1[0] = [];
       obj1[1] = {};
       obj[guildId] = obj1;
     }
   },
   LOAD_OFFICIAL_MESSAGES_SUCCESS: function handleLoadOfficialMessagesSuccess(arg0) {
-    let ensureGuildLoaded;
-    let dependencyMap;
-    let guildId;
-    let require;
-    ({ guildId, messages: require, hasMore: dependencyMap, before: ensureGuildLoaded } = arg0);
+    ({ guildId, messages: require, hasMore: dependencyMap, before: closure_2 } = arg0);
     if (null == obj[guildId]) {
       return false;
     } else if (null != obj[guildId]) {
       obj = {};
       const fn = (arg0) => {
         let tmp = arg0;
-        if (null != ensureGuildLoaded) {
+        if (null != closure_2) {
           const items = [];
           HermesBuiltin.arraySpread(tmp.ids, 0);
         } else {
           const items1 = [];
         }
-        if (null != ensureGuildLoaded) {
-          let obj = {};
+        if (null != closure_2) {
+          obj = {};
           const merged = Object.assign(tmp.messages);
         } else {
           obj = {};
@@ -292,8 +290,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
   CHANNEL_DELETE: handleChannelDelete,
   THREAD_DELETE: handleChannelDelete,
   MESSAGE_CREATE: function handleMessageCreate(optimistic) {
-    let guildId;
-    let message;
     ({ message, guildId } = optimistic);
     if (!optimistic.optimistic) {
       if (!optimistic.isPushNotification) {
@@ -312,7 +308,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
                   const merged = Object.assign(obj);
                   obj = {};
                   const merged1 = Object.assign(tmp9);
-                  const obj1 = { ids: null, messages: null };
+                  obj1 = { ids: null, messages: null };
                   const items = [messageRecord.id];
                   HermesBuiltin.arraySpread(tmp9.ids, 1);
                   obj1[0] = items;
@@ -361,7 +357,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
             const merged = Object.assign(obj11);
             obj = {};
             const merged1 = Object.assign(tmp27);
-            const obj1 = { messages: null };
+            obj1 = { messages: null };
             const obj2 = {};
             const merged2 = Object.assign(tmp27.messages);
             obj2[updateMessageRecordResult.id] = updateMessageRecordResult;
@@ -447,13 +443,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
     }
   },
   MESSAGE_REACTION_ADD: function handleMessageReactionAdd(arg0) {
-    let channelId;
-    let colors;
-    let emoji;
-    let messageId;
-    let optimistic;
-    let reactionType;
-    let userId;
     ({ channelId, messageId, userId, emoji, optimistic, reactionType, colors } = arg0);
     const currentUser = authStore.getCurrentUser();
     let id;
@@ -509,12 +498,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
     }
   },
   MESSAGE_REACTION_REMOVE: function handleMessageReactionRemove(arg0) {
-    let channelId;
-    let emoji;
-    let messageId;
-    let optimistic;
-    let reactionType;
-    let userId;
     ({ channelId, messageId, userId, emoji, optimistic, reactionType } = arg0);
     const currentUser = authStore.getCurrentUser();
     let id;
@@ -554,7 +537,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
       if (null != obj[guildId]) {
         obj = {};
         const merged = Object.assign(obj);
-        const obj1 = {};
+        obj1 = {};
         const merged1 = Object.assign(tmp12);
         const obj2 = { messages: null };
         const obj3 = {};
@@ -595,7 +578,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
       if (null != obj[guildId]) {
         obj = {};
         const merged = Object.assign(obj);
-        const obj1 = {};
+        obj1 = {};
         const merged1 = Object.assign(tmp20);
         const obj2 = { messages: null };
         const obj3 = {};
@@ -608,8 +591,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
     }
   },
   MESSAGE_REACTION_REMOVE_EMOJI: function handleMessageReactionRemoveEmoji(channelId) {
-    let emoji;
-    let messageId;
     ({ messageId, emoji } = channelId);
     const channel = store.getChannel(channelId.channelId);
     let guildId;
@@ -639,7 +620,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
       if (null != obj[guildId]) {
         obj = {};
         const merged = Object.assign(obj);
-        const obj1 = {};
+        obj1 = {};
         const merged1 = Object.assign(tmp9);
         const obj2 = { messages: null };
         const obj3 = {};
@@ -669,7 +650,7 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
           obj = {};
           const merged2 = Object.assign(tmp9.messages);
           delete tmp2[tmp];
-          const obj1 = { ids: null, messages: null };
+          obj1 = { ids: null, messages: null };
           const ids = tmp9.ids;
           obj1[0] = ids.filter((arg0) => arg0 !== id);
           obj1[1] = obj;
@@ -682,8 +663,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
     return tmp3;
   },
   MESSAGE_DELETE_BULK: function handleMessageDeleteBulk(arg0) {
-    let guildId;
-    let ids;
     ({ ids, guildId } = arg0);
     let set;
     let found;
@@ -722,6 +701,6 @@ const guildOfficialMessagesStore = new GuildOfficialMessagesStore(require("dispa
   RELATIONSHIP_REMOVE: handleRelationshipUpdate,
   RELATIONSHIP_UPDATE: handleRelationshipUpdate
 });
-let result = require("createGuildRecordFromRust").fileFinishedImporting("modules/messages/GuildOfficialMessagesStore.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/GuildOfficialMessagesStore.tsx");
 
 export default guildOfficialMessagesStore;

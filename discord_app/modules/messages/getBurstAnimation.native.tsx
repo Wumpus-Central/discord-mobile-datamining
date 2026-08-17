@@ -1,4 +1,6 @@
 // discord_app/modules/messages/getBurstAnimation.native.tsx
+import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
+
 let closure_0 = arg1;
 let obj = {
   load() {
@@ -186,13 +188,13 @@ const items1 = [
     }
   }
 ];
-closure_0 = require("module_7537")((arg0, arg1, arg2) => {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
-  let closure_2 = arg2;
-  let closure_3 = arg3;
-  let c6 = 0;
-  let c7 = 0;
+closure_0 = asyncGeneratorStepDefault((arg0, arg1, arg2) => {
+  closure_0 = arg0;
+  closure_1 = arg1;
+  closure_2 = arg2;
+  closure_3 = arg3;
+  c6 = 0;
+  c7 = 0;
   const iter = (function*(arg0, arg1, arg2) {
     if (c7 === 2) {
       c7 = 3;
@@ -220,7 +222,7 @@ closure_0 = require("module_7537")((arg0, arg1, arg2) => {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_5 = tmp5;
+            closure_5 = tmp5;
             let burstAnimationHash = tmp2;
             let flag;
             if (flag === undefined) {
@@ -236,7 +238,7 @@ closure_0 = require("module_7537")((arg0, arg1, arg2) => {
           throw arg1;
         } else if (arg0 === 2) {
           c7 = 3;
-          const obj1 = { value: null, done: true };
+          obj1 = { value: null, done: true };
           obj1[0] = arg1;
           return obj1;
         } else {
@@ -263,7 +265,7 @@ closure_0 = require("module_7537")((arg0, arg1, arg2) => {
   iter.next();
   return iter;
 });
-const result = require("module_7534").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
+const result = require("set").fileFinishedImporting("modules/messages/getBurstAnimation.native.tsx");
 
 export const getBurstAnimation = function() {
   const self = this;

@@ -1,5 +1,7 @@
 // discord_app/modules/bidi/IsolateString.tsx
-const result = require("set").fileFinishedImporting("modules/bidi/IsolateString.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/bidi/IsolateString.tsx");
 
 export const FSI = "\u2068";
 export const PDI = "\u2069";

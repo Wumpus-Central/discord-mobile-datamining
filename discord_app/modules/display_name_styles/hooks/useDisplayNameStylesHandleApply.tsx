@@ -1,9 +1,9 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx
-import noop from "noop";
-import { AnalyticEvents } from "ME";
+import closure_3 from "noop" /* 19 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
-let result = require("DisplayNameEffect").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
+let result = require("set").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
 
 export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHandleApply(hasChanges) {
   hasChanges = hasChanges.hasChanges;

@@ -1,7 +1,9 @@
 // discord_app/modules/rpc/Constants.tsx
+import set from "set" /* 2 */;
+
 let obj = { USER_SETTINGS: "USER_SETTINGS", CHANGELOG: "CHANGELOG", LIBRARY: "LIBRARY", STORE_HOME: "STORE_HOME", STORE_LISTING: "STORE_LISTING", CHANNEL: "CHANNEL", GAME_SHOP: "GAME_SHOP", PICK_GUILD_SETTINGS: "PICK_GUILD_SETTINGS", QUEST_HOME: "QUEST_HOME", DISCOVERY_GAME_RESULTS: "DISCOVERY_GAME_RESULTS", OAUTH2: "OAUTH2", FEATURES: "FEATURES", SHOP: "SHOP", ACTIVITIES: "ACTIVITIES", QUEST_PREVIEW_TOOL: "QUEST_PREVIEW_TOOL", ONE_TIME_LOGIN: "ONE_TIME_LOGIN", PLAYGROUND: "PLAYGROUND" };
 obj = { SETTINGS: "settings", CHANGELOG: "changelog", LIBRARY: "library", STORE: "store", INVITE: "invite", CHANNEL: "channel", GUILD_SETTINGS: "guild_settings", QUEST_HOME: "quest_home", DISCOVERY_GAME: "discovery_game", SHOP: "shop", ACTIVITIES: "activities", QUEST_PREVIEW_TOOL: "quest_preview_tool", PLAYGROUND: "playground" };
-const result = require("set").fileFinishedImporting("modules/rpc/Constants.tsx");
+const result = set.fileFinishedImporting("modules/rpc/Constants.tsx");
 
 export const RPC_SCOPE_CONFIG = { ANY: "$any", ALL: "$all" };
 export const RPC_PRIVATE_SCOPE = "RPC_PRIVATE_SCOPE";

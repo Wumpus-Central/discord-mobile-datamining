@@ -1,32 +1,20 @@
 // discord_app/modules/profile_customization/native/HeaderAvatar.tsx
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import sortActivity from "sortActivity";
-import { ActivityTypes } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_5 from "trackCommunicationDisabled" /* 1990 */;
+import closure_6 from "sortActivity" /* 4559 */;
+import { ActivityTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let obj = { avatarStatusStyle: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj[0] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
-const forwardRefResult = require("noop").forwardRef((animate) => {
-  let activities;
-  let disableStatus;
-  let guildId;
-  let isMobileOnline;
-  let isVROnline;
-  let onPress;
-  let pendingAvatarDecoration;
-  let pendingAvatarSrc;
-  let size;
-  let status;
-  let statusStyle;
-  let style;
-  let user;
+const forwardRefResult = importAllResult.forwardRef((animate) => {
   ({ user, guildId } = animate);
   ({ pendingAvatarSrc, style, onPress, size } = animate);
   ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
@@ -42,20 +30,20 @@ const forwardRefResult = require("noop").forwardRef((animate) => {
   id = user.id;
   let obj = guildId;
   let avatarSource = dependencyMap;
-  let obj1 = guildId(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  obj1 = guildId(589);
+  const items = [closure_4];
   const stateFromStores = obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   let obj2 = guildId(589);
-  const items1 = [sortActivity];
+  const items1 = [closure_6];
   const items2 = [id];
-  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({ isMobileOnline: outer1_6.isMobileOnline(id), isVROnline: outer1_6.isVROnline(id), status: outer1_6.getStatus(id), activities: outer1_6.getActivities(id), customStatusActivity: outer1_6.findActivity(id, (type) => type.type === constants.CUSTOM_STATUS) }), items2);
+  const stateFromStoresObject = obj2.useStateFromStoresObject(items1, () => ({ isMobileOnline: closure_1_6.isMobileOnline(id), isVROnline: closure_1_6.isVROnline(id), status: closure_1_6.getStatus(id), activities: closure_1_6.getActivities(id), customStatusActivity: closure_1_6.findActivity(id, (type) => type.type === constants.CUSTOM_STATUS) }), items2);
   ({ isMobileOnline, isVROnline, status, activities } = stateFromStoresObject);
   let obj3 = guildId(589);
-  const items3 = [trackCommunicationDisabled];
+  const items3 = [closure_5];
   const stateFromStores1 = obj3.useStateFromStores(items3, () => {
     let member = null;
     if (null != guildId) {
-      member = outer1_5.getMember(tmp, id);
+      member = closure_1_5.getMember(tmp, id);
     }
     return member;
   });
@@ -132,6 +120,6 @@ const forwardRefResult = require("noop").forwardRef((animate) => {
     return <View ref={null} style={null} accessibilityRole="image" accessible />;
   }
 });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/profile_customization/native/HeaderAvatar.tsx");
+const result = require("set").fileFinishedImporting("modules/profile_customization/native/HeaderAvatar.tsx");
 
 export default forwardRefResult;

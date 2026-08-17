@@ -1,6 +1,8 @@
 // discord_app/modules/activities/utils/pendingFrameLaunch.tsx
+import set from "set" /* 2 */;
+
 let closure_0 = {};
-const result = require("set").fileFinishedImporting("modules/activities/utils/pendingFrameLaunch.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/pendingFrameLaunch.tsx");
 
 export const stashPendingFrameLaunch = function stashPendingFrameLaunch(applicationId, arg1) {
   closure_0[applicationId] = arg1;

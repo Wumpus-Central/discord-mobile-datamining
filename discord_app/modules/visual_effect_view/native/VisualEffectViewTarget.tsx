@@ -1,10 +1,11 @@
 // discord_app/modules/visual_effect_view/native/VisualEffectViewTarget.tsx
-import { View } from "get ActivityIndicator";
-import set from "set";
-import set from "__INTERNAL_VIEW_CONFIG";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import __INTERNAL_VIEW_CONFIGDefault from "__INTERNAL_VIEW_CONFIG" /* 16018 */;
+import set from "set" /* 500 */;
 
+let View = get_ActivityIndicator.View;
 if (set.isAndroid()) {
-  View = require("__INTERNAL_VIEW_CONFIG");
+  View = __INTERNAL_VIEW_CONFIGDefault;
 }
 const result = set.fileFinishedImporting("modules/visual_effect_view/native/VisualEffectViewTarget.tsx");
 

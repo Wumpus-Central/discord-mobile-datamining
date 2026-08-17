@@ -1,34 +1,33 @@
 // discord_app/modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { BoostedGuildTiers } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { BoostedGuildTiers } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { progressBarContainer: null, progressBar: null, progressBarScrubber: null, progressBarTrack: null, progressBarFill: null, progressBarGradientFill: null };
 createCacheKey = { display: "flex", alignItems: "center", width: "100%", marginTop: 40, paddingHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 34 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: 54, maxWidth: 660, width: "100%" };
 createCacheKey[2] = { height: 8, top: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 - 4, marginHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 2 };
 let obj1 = { height: 8, top: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 - 4, marginHorizontal: require("ProgressBarMarkerInnerContent").MARKER_DIMENSIONS / 2 + 2 };
-createCacheKey[3] = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: require("Themes").colors.SPINE_DEFAULT };
+createCacheKey[3] = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: ThemesDefault.colors.SPINE_DEFAULT };
 createCacheKey[4] = { borderRadius: 8, position: "absolute", height: "100%", left: 0, zIndex: 1 };
 createCacheKey[5] = { height: "100%", width: "100%", borderRadius: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_10 = createCacheKey.createStyles(createCacheKey);
 let items = [, , , ];
 ({ NONE: arr[0], TIER_1: arr[1], TIER_2: arr[2], TIER_3: arr[3] } = BoostedGuildTiers);
 let closure_12 = { stiffness: 27, damping: 10 };
 let closure_13 = { code: "function GuildBoostingMarketingProgressBarTsx1(){const{width}=this.__closure;return{width:width.get()+\"%\"};}" };
 let closure_14 = { code: "function GuildBoostingMarketingProgressBarTsx2(){const{width}=this.__closure;return width.get();}" };
 let closure_15 = { code: "function GuildBoostingMarketingProgressBarTsx3(width){const{BoostedGuildTiers,TIER_REACHED_OFFSET,revealedTier,runOnJS,setRevealedTier}=this.__closure;let tier=BoostedGuildTiers.NONE;if(width>=33.33-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_1;if(width>=66.67-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_2;if(width>=100-TIER_REACHED_OFFSET)tier=BoostedGuildTiers.TIER_3;if(tier!==revealedTier)runOnJS(setRevealedTier)(tier);}" };
-let obj2 = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: require("Themes").colors.SPINE_DEFAULT };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx");
+let obj2 = { borderRadius: 8, height: "100%", width: "100%", position: "absolute", zIndex: 0, backgroundColor: ThemesDefault.colors.SPINE_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/guild_boosting/native/marketing_redesign/GuildBoostingMarketingProgressBar.tsx");
 
 export default function ProgressBar(guild) {
   guild = guild.guild;
@@ -37,11 +36,11 @@ export default function ProgressBar(guild) {
   let first;
   let React;
   let fillFactor;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = guild(sharedValue[10]);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = guild(sharedValue[11]);
+  obj1 = guild(sharedValue[11]);
   sharedValue = obj1.useSharedValue(0);
   const tmp7 = first(React.useState(BoostedGuildTiers.NONE), 2);
   first = tmp7[0];
@@ -49,7 +48,7 @@ export default function ProgressBar(guild) {
   let obj2 = guild(sharedValue[11]);
   class I {
     constructor() {
-      obj = { width: "" + c2.get() + "%" };
+      obj = { width: "" + closure_2.get() + "%" };
       return obj;
     }
   }
@@ -65,7 +64,7 @@ export default function ProgressBar(guild) {
   fn.__workletHash = 5482324713221;
   fn.__initData = closure_14;
   const fn2 = function w(arg0) {
-    let TIER_3 = outer1_7.NONE;
+    let TIER_3 = closure_1_7.NONE;
     if (arg0 >= 28.33) {
       TIER_3 = tmp.TIER_1;
     }
@@ -76,7 +75,7 @@ export default function ProgressBar(guild) {
       TIER_3 = tmp.TIER_3;
     }
     if (TIER_3 !== first) {
-      guild(sharedValue[11]).runOnJS(c4)(TIER_3);
+      guild(sharedValue[11]).runOnJS(closure_4)(TIER_3);
       const obj = guild(sharedValue[11]);
     }
   };
@@ -90,14 +89,14 @@ export default function ProgressBar(guild) {
   const items2 = [fillFactor, sharedValue, stateFromStores];
   const effect = React.useEffect(() => {
     let result = 100 * fillFactor;
-    const guild = result;
+    guild = result;
     let timeout = -1;
     if (timeout) {
       const result1 = sharedValue.set(result);
     } else {
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        const result = outer1_2.set(guild(sharedValue[13]).withSpring(closure_0, outer2_12));
+        result = closure_1_2.set(guild(sharedValue[13]).withSpring(closure_0, closure_2_12));
       }, 750);
     }
     return () => {
@@ -130,7 +129,7 @@ export default function ProgressBar(guild) {
         tmp4 = fillFactor > guild(sharedValue[7]).TierMarkerPositions[tier];
       }
       obj[4] = tmp4;
-      return outer1_8(stateFromStores(sharedValue[7]), obj, tier);
+      return closure_1_8(stateFromStores(sharedValue[7]), obj, tier);
     })
   ];
   obj1[1] = items6;

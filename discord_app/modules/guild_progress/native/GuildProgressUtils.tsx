@@ -1,32 +1,30 @@
 // discord_app/modules/guild_progress/native/GuildProgressUtils.tsx
-import comparator from "comparator";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import completeStep from "completeStep";
-import { Steps } from "Steps";
-import ME from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import dispatcherDefault from "dispatcher" /* 11646 */;
+import closure_3 from "comparator" /* 1980 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_6 from "completeStep" /* 11644 */;
+import { Steps } from "Steps" /* 11637 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { dispatcher } from "../GuildProgressActionCreators.tsx";
 import { usePermissions } from "../GuildProgressHooks.tsx";
 
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function useIOSCompletionStates(guild) {
   const _require = guild;
   let obj = _initialize;
-  const items = [getUncachedChannelPermissions];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.can(outer1_9.ADMINISTRATOR, closure_0));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.can(closure_1_9.ADMINISTRATOR, closure_0));
   const guildPersonalized = _usePermissions.useGuildPersonalized(guild);
   const obj2 = _usePermissions;
   const guildPopulated = _usePermissions.useGuildPopulated(guild);
   const obj3 = _usePermissions;
-  const items1 = [comparator];
-  const stateFromStores1 = _initialize.useStateFromStores(items1, () => outer1_3.getDefaultChannel(guild.id));
+  const items1 = [closure_3];
+  const stateFromStores1 = _initialize.useStateFromStores(items1, () => closure_1_3.getDefaultChannel(guild.id));
   const obj4 = _initialize;
   if (null != stateFromStores1) {
     const items2 = [stateFromStores1];
@@ -36,14 +34,14 @@ function useIOSCompletionStates(guild) {
   }
   const channelsMessaged = _usePermissions.useChannelsMessaged(items3);
   let tmpResult = tmp(589);
-  const items4 = [completeStep];
+  const items4 = [closure_6];
   let stateFromStores2 = channelsMessaged;
   if (!channelsMessaged) {
     stateFromStores2 = tmpResult.useStateFromStores(items4, () => {
-      const progress = outer1_6.getProgress(guild.id);
+      const progress = closure_1_6.getProgress(guild.id);
       let flag;
       if (progress != null) {
-        flag = progress.has(outer1_7.MESSAGE);
+        flag = progress.has(closure_1_7.MESSAGE);
       }
       if (flag == null) {
         flag = false;
@@ -52,9 +50,9 @@ function useIOSCompletionStates(guild) {
     });
   }
   tmpResult = tmp(589);
-  const items5 = [createGuildRecordFromRust];
+  const items5 = [closure_4];
   const stateFromStores3 = tmpResult.useStateFromStores(items5, () => {
-    guild = outer1_4.getGuild(guild.id);
+    guild = closure_1_4.getGuild(guild.id);
     let num;
     if (guild != null) {
       num = guild.premiumSubscriberCount;
@@ -65,9 +63,9 @@ function useIOSCompletionStates(guild) {
     return num > 0;
   });
   const obj5 = _usePermissions;
-  const tmp8 = completeStep;
+  const tmp8 = closure_6;
   const items6 = [tmp8];
-  const stateFromStores4 = _initialize.useStateFromStores(items6, () => outer1_6.getProgress(guild.id));
+  const stateFromStores4 = _initialize.useStateFromStores(items6, () => closure_1_6.getProgress(guild.id));
   if (stateFromStores) {
     const ServerSetupBoostCtaExperiment = tmp(11757).ServerSetupBoostCtaExperiment;
     const enabled = ServerSetupBoostCtaExperiment.getConfig({ location: "GuildProgress" }).enabled;
@@ -106,32 +104,27 @@ function useIOSCompletionStates(guild) {
   }
   const tmpResult1 = _initialize;
 }
-({ WELCOME_OLD_GUILD_AGE_THRESHOLD: metroImportAll, Permissions: c9 } = ME);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/guild_progress/native/GuildProgressUtils.tsx");
+({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: c9 } = ME);
+const result = require("set").fileFinishedImporting("modules/guild_progress/native/GuildProgressUtils.tsx");
 
 export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
-  let obj = ACTION_SHEET_HEIGHT_HALF;
+  let obj = ACTION_SHEET_HEIGHT_HALFDefault;
   obj = { guild };
   obj.openLazy(asyncRequireImpl(11645, dependencyMap.paths), "guild-progress-" + guild.id, obj);
 };
 export const hideActionSheet = function hideActionSheet(arg0) {
-  ACTION_SHEET_HEIGHT_HALF.hideActionSheet("guild-progress-" + arg0);
+  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet("guild-progress-" + arg0);
 };
 export const createGuildProgress = function createGuildProgress(closure_0) {
   if (null != guild.getGuild(closure_0)) {
-    const progress = dispatcher.createProgress(closure_0);
-    const obj = dispatcher;
+    const progress = dispatcherDefault.createProgress(closure_0);
+    const obj = dispatcherDefault;
   }
 };
 export { useIOSCompletionStates };
 export const useGuildProgressStep = function useGuildProgressStep(guild) {
-  let completed;
-  let guildBoosted;
-  let guildMessaged;
-  let guildPersonalized;
-  let showBoostStep;
   const tmp = useIOSCompletionStates(guild);
   const totalSteps = tmp.totalSteps;
   let stringResult = null;
@@ -185,10 +178,10 @@ export const useGuildProgressStep = function useGuildProgressStep(guild) {
 };
 export const useIsEligibleForGuildProgress = function useIsEligibleForGuildProgress(guild) {
   const _require = guild;
-  const items = [getUncachedChannelPermissions];
-  let stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.can(outer1_9.ADMINISTRATOR, closure_0));
+  const items = [closure_5];
+  let stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.can(closure_1_9.ADMINISTRATOR, closure_0));
   const obj = _initialize;
-  const obj2 = DISCORD_EPOCH;
+  const obj2 = DISCORD_EPOCHDefault;
   if (stateFromStores) {
     stateFromStores = extractTimestampResult >= Date.now() - closure_8;
   }

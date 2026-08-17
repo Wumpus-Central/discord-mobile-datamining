@@ -1,22 +1,19 @@
 // discord_app/modules/guild_settings/native/showMembersManagementActionSheet.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
 const require = arg1;
-let result = require("ACTION_SHEET_HEIGHT_HALF").fileFinishedImporting("modules/guild_settings/native/showMembersManagementActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_settings/native/showMembersManagementActionSheet.tsx");
 
 export default function showMembersManagementActionSheet(guild) {
-  let canPrune;
-  let dependencyMap;
-  let importDefault;
   guild = guild.guild;
   ({ canPrune, selectedRoleId: importDefault, onFilterRoleId: dependencyMap } = guild);
   let obj = { label: null, onPress: null };
   const intl = guild(1236).intl;
   obj[0] = intl.string(guild(1236).t.pEasFX);
   obj[1] = function onPress() {
-    let obj = outer1_1(outer1_2[2]);
+    let obj = closure_1_1(closure_1_2[2]);
     obj = { guild, selectedRoleId: closure_1, onFilterRoleId: closure_2 };
-    obj.openLazy(guild(outer1_2[4])(outer1_2[3], outer1_2.paths), "MembersFilter", obj);
+    obj.openLazy(guild(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "MembersFilter", obj);
   };
   const items = [obj];
   if (canPrune == null) {
@@ -28,9 +25,9 @@ export default function showMembersManagementActionSheet(guild) {
     const intl2 = tmp(1236).intl;
     obj[0] = intl2.string(tmp(1236).t["2mIlKQ"]);
     obj[1] = function onPress() {
-      let obj = outer1_1(outer1_2[2]);
+      let obj = closure_1_1(closure_1_2[2]);
       obj = { guild };
-      obj.openLazy(guild(outer1_2[4])(outer1_2[6], outer1_2.paths), "MembersPrune", obj);
+      obj.openLazy(guild(closure_1_2[4])(closure_1_2[6], closure_1_2.paths), "MembersPrune", obj);
     };
     items.push(obj);
   }
@@ -38,18 +35,15 @@ export default function showMembersManagementActionSheet(guild) {
   const result = tmpResult.showSimpleActionSheet({ key: "GuildSettingsMembersMore", options: items, hasIcons: false });
 };
 export const getMembersManagementActions = function getMembersManagementActions(guild) {
-  let canPrune;
-  let dependencyMap;
-  let importDefault;
   guild = guild.guild;
   ({ canPrune, selectedRoleId: importDefault, onFilterRoleId: dependencyMap } = guild);
   let obj = { label: null, action: null };
   const intl = guild(1236).intl;
   obj[0] = intl.string(guild(1236).t.pEasFX);
   obj[1] = function action() {
-    let obj = outer1_1(outer1_2[2]);
+    let obj = closure_1_1(closure_1_2[2]);
     obj = { guild, selectedRoleId: closure_1, onFilterRoleId: closure_2 };
-    obj.openLazy(guild(outer1_2[4])(outer1_2[3], outer1_2.paths), "MembersFilter", obj);
+    obj.openLazy(guild(closure_1_2[4])(closure_1_2[3], closure_1_2.paths), "MembersFilter", obj);
   };
   const items = [obj];
   if (canPrune == null) {
@@ -61,9 +55,9 @@ export const getMembersManagementActions = function getMembersManagementActions(
     const intl2 = tmp(1236).intl;
     obj[0] = intl2.string(tmp(1236).t["2mIlKQ"]);
     obj[1] = function action() {
-      let obj = outer1_1(outer1_2[2]);
+      let obj = closure_1_1(closure_1_2[2]);
       obj = { guild };
-      obj.openLazy(guild(outer1_2[4])(outer1_2[6], outer1_2.paths), "MembersPrune", obj);
+      obj.openLazy(guild(closure_1_2[4])(closure_1_2[6], closure_1_2.paths), "MembersPrune", obj);
     };
     items.push(obj);
   }

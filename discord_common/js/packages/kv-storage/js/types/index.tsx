@@ -1,5 +1,7 @@
 // discord_common/js/packages/kv-storage/js/types/index.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/types/index.tsx");
 
 export const TableId = { Kv: "kv", KvCache: "kv_cache", Messages: "messages" };
 export const MAXIMUM_KEY_BITS = 5;

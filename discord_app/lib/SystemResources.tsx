@@ -1,9 +1,10 @@
 // discord_app/lib/SystemResources.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { getHermesInstrumentedStatsSummary } from "../utils/ProcessUtils.native.tsx";
+import getHermesInstrumentedStatsSummaryDefault from "getHermesInstrumentedStatsSummary" /* 5422 */;
+import getSamples from "getSamples" /* 7490 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
 
-const require = arg1;
-let result = require("getHermesInstrumentedStatsSummary").fileFinishedImporting("lib/SystemResources.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("lib/SystemResources.tsx");
 class SystemResources {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -25,7 +26,7 @@ prototype["getStats"] = function getStats() {
   const report = cpuHistogram.getReport();
   const memoryHistogram = this.memoryHistogram;
   const report1 = memoryHistogram.getReport();
-  let obj = getHermesInstrumentedStatsSummary;
+  let obj = getHermesInstrumentedStatsSummaryDefault;
   const cumulativeCPUUsage = obj.getCumulativeCPUUsage();
   let result;
   if (null != this.startCPU) {
@@ -48,10 +49,10 @@ prototype["getStats"] = function getStats() {
 };
 prototype["takeSample"] = function takeSample() {
   const self = this;
-  const cumulativeCPUUsage = getHermesInstrumentedStatsSummary.getCumulativeCPUUsage();
-  const obj = getHermesInstrumentedStatsSummary;
+  const cumulativeCPUUsage = getHermesInstrumentedStatsSummaryDefault.getCumulativeCPUUsage();
+  const obj = getHermesInstrumentedStatsSummaryDefault;
   const tmp = importDefault;
-  const currentMemoryUsageKB = getHermesInstrumentedStatsSummary.getCurrentMemoryUsageKB();
+  const currentMemoryUsageKB = getHermesInstrumentedStatsSummaryDefault.getCurrentMemoryUsageKB();
   if (null != cumulativeCPUUsage) {
     let flag = true;
     if (null != self.lastCPU) {
@@ -67,12 +68,12 @@ prototype["takeSample"] = function takeSample() {
       self.lastCPU = cumulativeCPUUsage;
     }
   } else {
-    const currentCPUUsagePercent = tmp(5422).getCurrentCPUUsagePercent();
+    const currentCPUUsagePercent = getHermesInstrumentedStatsSummaryDefault.getCurrentCPUUsagePercent();
     if (null != currentCPUUsagePercent) {
       const cpuHistogram2 = self.cpuHistogram;
       cpuHistogram2.addSample(currentCPUUsagePercent);
     }
-    const tmpResult = tmp(5422);
+    const tmpResult = getHermesInstrumentedStatsSummaryDefault;
   }
   if (null != currentMemoryUsageKB) {
     const memoryHistogram = self.memoryHistogram;
@@ -107,11 +108,11 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
             obj[0] = arg1;
             return obj;
           } else {
-            let c3 = 1;
-            let obj2 = v0(outer1_2[3]);
+            c3 = 1;
+            let obj2 = v0(closure_1_2[3]);
             c1 = 2;
             v0 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = obj2.getDeviceState({ fallback: false });
             return obj1;
           }
@@ -136,7 +137,7 @@ prototype["getCurrentBattery"] = function getCurrentBattery() {
           return obj;
         }
       } catch (tmp10) {
-        let closure_2 = tmp10;
+        closure_2 = tmp10;
         if (tmp3 === c3) {
           v0 = tmp2;
           throw tmp10;
@@ -176,11 +177,11 @@ prototype["setLastBattery"] = function setLastBattery() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = outer1_0;
+            closure_0 = closure_1_0;
             c1 = 1;
             c2 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0.getCurrentBattery();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0.getCurrentBattery();
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -232,13 +233,13 @@ prototype["getBatteryLevelStats"] = function getBatteryLevelStats() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
-            let closure_0 = tmp2;
+            closure_1 = tmp5;
+            closure_0 = tmp2;
             closure_0 = undefined;
             c2 = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0.getCurrentBattery();
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0.getCurrentBattery();
             return obj1;
           }
         } else if (arg0 === 1) {

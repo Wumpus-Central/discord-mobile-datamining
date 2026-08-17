@@ -1,11 +1,11 @@
 // discord_app/modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx
-import reinjectEphemerals from "reinjectEphemerals";
-import { UserFlags } from "ME";
+import closure_2 from "reinjectEphemerals" /* 4994 */;
+import { UserFlags } from "ME" /* 676 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 import { MAX_MESSAGES_ALLOWED_FOR_GREETING } from "../messages/useShowConvoStarterInDM.tsx";
 
 const require = arg1;
-const result = require("MAX_MESSAGES_ALLOWED_FOR_GREETING").fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
+const result = require("set").fileFinishedImporting("modules/quarantine/useShouldBlockDMInputForQuarantinedUser.tsx");
 
 export default function useShouldBlockDMInputForQuarantinedUser(hasFlag, channel) {
   const _require = channel;

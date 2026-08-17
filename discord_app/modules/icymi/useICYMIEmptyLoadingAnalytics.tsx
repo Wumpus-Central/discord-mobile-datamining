@@ -1,12 +1,12 @@
 // discord_app/modules/icymi/useICYMIEmptyLoadingAnalytics.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let result = require("set").fileFinishedImporting("modules/icymi/useICYMIEmptyLoadingAnalytics.tsx");
 
 export const useICYMIEmptyLoadingAnalytics = function useICYMIEmptyLoadingAnalytics(loading, isFocused) {
-  let closure_0 = loading;
-  let closure_1 = isFocused;
+  closure_0 = loading;
+  closure_1 = isFocused;
   React = React.useRef(null);
   const items = [loading, isFocused];
   const effect = React.useEffect(() => {

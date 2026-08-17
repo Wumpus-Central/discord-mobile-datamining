@@ -1,19 +1,19 @@
 // discord_app/modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx
-import reinjectEphemerals from "reinjectEphemerals";
-import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME";
+import closure_2 from "reinjectEphemerals" /* 4994 */;
+import { DEFAULT_SOUND_GUILD_ID } from "MAX_LENGTH_SOUND_NAME" /* 4781 */;
 import { MessageReferenceTypes } from "../../../../../../discord_common/js/shared/shared-constants/MessageReferenceTypes.tsx";
 import { SoundButtonOverlay } from "../../../../soundboard/SoundboardTypes.tsx";
 
 const require = arg1;
 function getSoundFromSounds(arr) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   let found;
   if (arr != null) {
     found = arr.find((sound_id) => String(sound_id.sound_id) === String(closure_0));
   }
   return found;
 }
-const result = require("SoundButtonOverlay").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/sounds/soundmoji/utils/getSoundFromMessage.tsx");
 
 export default function getSoundFromMessage(arg0, arg1, arg2, arr) {
   let _require = arg2;

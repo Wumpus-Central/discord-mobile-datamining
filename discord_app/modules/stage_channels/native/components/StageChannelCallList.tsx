@@ -1,18 +1,14 @@
 // discord_app/modules/stage_channels/native/components/StageChannelCallList.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "getIsScreenLandscape";
-import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH";
-import jsxProd from "jsxProd";
-import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { MAX_AUDIENCE_ROW_LIMIT } from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import jsxProd from "jsxProd" /* 21 */;
+import useActiveSpeakerPillScrollHandler from "useActiveSpeakerPillScrollHandler" /* 12603 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 let c4 = importAllResult;
 ({ useActiveSpeakerPillScrollHandler: c5, useActiveSpeakerPillState: closure_6 } = require("useActiveSpeakerPillScrollHandler"));
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 let obj = { direction: require("Button").CutoutDirection.RIGHT, radius: 13, inset: -6 };
 let closure_11 = { STREAM: 0, [0]: "STREAM", SPEAKER: 1, [1]: "SPEAKER", AUDIENCE: 2, [2]: "AUDIENCE" };
 let closure_12 = importAllResult.memo((channel) => {
@@ -20,7 +16,7 @@ let closure_12 = importAllResult.memo((channel) => {
   const listSections = channel.listSections;
   const rowsBySection = channel.rowsBySection;
   let first;
-  let importAllResult;
+  importAllResult = undefined;
   let first1;
   let callback2;
   let first2;
@@ -62,7 +58,7 @@ let closure_12 = importAllResult.memo((channel) => {
     return items;
   }, items);
   actualStageSpeakerCount = channel(rowsBySection[9]).useActualStageSpeakerCount(channel.id);
-  let obj = channel(rowsBySection[9]);
+  obj = channel(rowsBySection[9]);
   stageParticipantsCount = channel(rowsBySection[9]).useStageParticipantsCount(channel.id, channel(rowsBySection[7]).StageChannelParticipantNamedIndex.AUDIENCE);
   let items1 = [actualStageSpeakerCount, stageParticipantsCount];
   callback = importAllResult.useCallback((arg0) => {
@@ -142,15 +138,15 @@ let closure_12 = importAllResult.memo((channel) => {
     } else if (tmp.AUDIENCE === arg0) {
       let tmp13 = null;
       if (0 !== stageParticipantsCount) {
-        let obj = { label: null, count: null, onToggleCollapse: null, collapsed: null };
+        obj = { label: null, count: null, onToggleCollapse: null, collapsed: null };
         const intl = channel(rowsBySection[12]).intl;
         obj[0] = intl.string(channel(rowsBySection[12]).t["3foUu5"]);
         obj[1] = tmp12;
         obj[2] = function onToggleCollapse() {
-          return callback(!_slicedToArray);
+          return callback(!closure_3);
         };
         obj[3] = first;
-        tmp13 = _undefined2(listSections(rowsBySection[11]), obj);
+        tmp13 = callback(listSections(rowsBySection[11]), obj);
         const tmp17 = listSections(rowsBySection[11]);
       }
       return tmp13;
@@ -215,29 +211,29 @@ let closure_12 = importAllResult.memo((channel) => {
     if (null == rowsBySection[arg0][arg1]) {
       return tmp;
     } else if (stageParticipantsCount.STREAM === arg0) {
-      let obj = { children: null };
+      obj = { children: null };
       obj = { channel: null, participants: null, row: null };
       obj[0] = channel;
       obj[1] = tmp3[arg0][arg1];
       obj[2] = arg1;
-      obj[0] = _undefined2(listSections(rowsBySection[14]), obj);
+      obj[0] = callback(listSections(rowsBySection[14]), obj);
       const _HermesInternal3 = HermesInternal;
-      return _undefined2(_undefined.Fragment, obj, "stream-" + arg0 + "-" + arg1);
+      return callback(React.Fragment, obj, "stream-" + arg0 + "-" + arg1);
     } else if (tmp31.SPEAKER === arg0) {
       const items = [tmp, ];
       let tmp19 = !first1;
       if (!first1) {
-        const obj1 = { channel: null, participants: null, row: null };
+        obj1 = { channel: null, participants: null, row: null };
         obj1[0] = channel;
         obj1[1] = tmp3[arg0][arg1];
         obj1[2] = arg1;
-        tmp19 = _undefined2(listSections(rowsBySection[14]), obj1);
+        tmp19 = callback(listSections(rowsBySection[14]), obj1);
       }
       const obj2 = { children: null };
       items[1] = tmp19;
       obj2[0] = items;
       const _HermesInternal2 = HermesInternal;
-      return sections(_undefined.Fragment, obj2, "speaker-" + arg0 + "-" + arg1);
+      return sections(React.Fragment, obj2, "speaker-" + arg0 + "-" + arg1);
     } else if (tmp31.AUDIENCE === arg0) {
       const items1 = [tmp, ];
       let tmp10 = !first;
@@ -245,13 +241,13 @@ let closure_12 = importAllResult.memo((channel) => {
         obj = { channel: null, participants: null };
         obj[0] = channel;
         obj[1] = tmp3[arg0][arg1];
-        tmp10 = _undefined2(listSections(rowsBySection[15]), obj);
+        tmp10 = callback(listSections(rowsBySection[15]), obj);
       }
       const obj3 = { children: null };
       items1[1] = tmp10;
       obj3[0] = items1;
       const _HermesInternal = HermesInternal;
-      return sections(_undefined.Fragment, obj3, "audience-" + arg0 + "-" + arg1);
+      return sections(React.Fragment, obj3, "audience-" + arg0 + "-" + arg1);
     } else {
       listSections(rowsBySection[10])(null != arg0, "Section Not Found");
       return null;
@@ -290,25 +286,25 @@ let closure_12 = importAllResult.memo((channel) => {
     let tmp2 = first2;
     if (!first2) {
       if (y > diff) {
-        _undefined2(true);
+        callback(true);
       }
     }
     if (tmp2) {
       tmp2 = y < diff;
     }
     if (tmp2) {
-      _undefined2(false);
+      callback(false);
     }
   }, items7);
   return callback3(listSections(rowsBySection[16]), { ref: first(first1(), 1)[0], sections, renderItem, itemSize, renderSectionFooter, sectionFooterSize, onScroll });
 });
-const result = require("useActiveSpeakerPillScrollHandler").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageChannelCallList.tsx");
 
 export default function StageChannelCallList(channel) {
   channel = channel.channel;
   let width;
   let isScreenLandscape;
-  let obj = width(12627);
+  obj = width(12627);
   const throttleDurationForChannel = obj.useThrottleDurationForChannel(channel.id);
   width = isScreenLandscape(1494)().width;
   isScreenLandscape = width(8944).useIsScreenLandscape();
@@ -320,9 +316,9 @@ export default function StageChannelCallList(channel) {
       const _Math2 = Math;
       num = Math.max(3, Math.floor(width / tmp2(tmp3[6]).LANDSCAPE_MAX_TILE_WIDTH));
     }
-    const obj = {};
-    obj[width(outer1_2[7]).StageChannelParticipantNamedIndex.SPEAKER] = num;
-    obj[width(outer1_2[7]).StageChannelParticipantNamedIndex.AUDIENCE] = outer1_7;
+    obj = {};
+    obj[width(closure_1_2[7]).StageChannelParticipantNamedIndex.SPEAKER] = num;
+    obj[width(closure_1_2[7]).StageChannelParticipantNamedIndex.AUDIENCE] = closure_1_7;
     return obj;
   }, items);
   const obj2 = width(8944);

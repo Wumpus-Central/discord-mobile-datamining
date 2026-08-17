@@ -1,5 +1,7 @@
 // discord_app/lib/AutomaticLifecycleManager.tsx
-const result = require("set").fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("lib/AutomaticLifecycleManager.tsx");
 class AutomaticLifecycleManager {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -18,8 +20,6 @@ prototype["initialize"] = function initialize() {
     const _Object = Object;
     const entries = Object.entries(self.actions);
     const item = entries.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       let callback = tmp2;
       if (typeof tmp2 !== "function") {
@@ -47,8 +47,6 @@ prototype["terminate"] = function terminate(arg0) {
       const _Object = Object;
       const entries = Object.entries(self.actions);
       const item = entries.forEach((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
         let callback = tmp2;
         if (typeof tmp2 !== "function") {

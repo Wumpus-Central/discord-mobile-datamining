@@ -1,17 +1,16 @@
 // discord_app/modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx
-import "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef8561 from "module_8561" /* 8561 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function handleOpenEmailVerification() {
-  EmailVerificationModalActionCreators.open();
+  _modDef8561.open();
 }
 function getBannerText(currentUser) {
   if (null == currentUser) {
@@ -35,20 +34,21 @@ function getBannerText(currentUser) {
     }
   }
 }
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { accountWarning: null, accountWarningText: null, accountWarningButton: null };
-createCacheKey = { backgroundColor: require("Themes").unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
+createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_400, height: 36, alignItems: "center", alignSelf: "stretch", flexDirection: "row", paddingHorizontal: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1, lineHeight: 16 };
-createCacheKey[2] = { borderWidth: 1, borderColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderWidth: 1, borderColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx");
+createCacheKey[2] = { borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.xs, paddingHorizontal: 8, paddingVertical: 4 };
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/UserSettingsAccountUnverifiedHeader.tsx");
 
 export default function UserSettingsAccountUnverifiedHeader() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = initialize;
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const tmp4 = getBannerText(obj.useStateFromStores(items, () => currentUser.getCurrentUser()));
   let tmp5 = null;
   if (null != tmp4) {
@@ -59,7 +59,7 @@ export default function UserSettingsAccountUnverifiedHeader() {
     obj[0] = tmp.accountWarningText;
     obj[3] = tmp4.title;
     const items1 = [callback(tmp2(4734).Text, obj), ];
-    const obj1 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
+    obj1 = { style: null, variant: "text-xs/medium", color: "text-overlay-light", children: null };
     obj1[0] = tmp.accountWarningButton;
     obj1[3] = tmp4.button;
     items1[1] = callback(tmp2(4734).Text, obj1);

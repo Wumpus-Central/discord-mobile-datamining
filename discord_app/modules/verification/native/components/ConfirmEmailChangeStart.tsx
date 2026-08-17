@@ -1,35 +1,30 @@
 // discord_app/modules/verification/native/components/ConfirmEmailChangeStart.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useNavigation } from "../../../../design/components/Navigator/native/useNavigation.native.tsx";
 
-let c10;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-let require = arg1;
-({ View: closure_6, Image: error, ScrollView: metroImportAll } = get_ActivityIndicator);
+const require = arg1;
+({ View: closure_6, Image: error, ScrollView: closure_8 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ container: { flex: 1, padding: 16, alignItems: "center", justifyContent: "center" }, image: { height: 190, width: 220, resizeMode: "contain" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, button: { marginTop: 16, width: "100%" } });
-const result = require("noop").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/ConfirmEmailChangeStart.tsx");
 
 export default function ConfirmEmailChangeStart() {
   const tmp = callback4();
-  const require = tmp;
-  let obj = useNavigation;
+  const _require = tmp;
+  let obj = _useNavigation;
   const navigation = obj.useNavigation();
-  let obj1 = initialize;
-  const items = [mergeGuildAvatar];
+  obj1 = _initialize;
+  const items = [closure_9];
   const stateFromStores = obj1.useStateFromStores(items, () => currentUser.getCurrentUser());
   const tmp6 = callback(React.useState(false), 2);
-  const dependencyMap = tmp6[1];
+  dependencyMap = tmp6[1];
   [][0] = navigation;
   if (null == stateFromStores) {
     return null;
@@ -49,7 +44,7 @@ export default function ConfirmEmailChangeStart() {
     const intl2 = tmp2(1236).intl;
     obj3[4] = intl2.string(tmp2(1236).t.dQ71Wa);
     items1[1] = callback2(tmp2(4734).Text, obj3);
-    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => outer1_10(tmp(table[15]).Text, { style: tmp.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
+    items1[2] = intl.format(tmp2(1236).t.oMFSgi, obj).map((children) => closure_1_10(lib(table[15]).Text, { style: lib.body, variant: "text-sm/medium", color: "text-default", children }, arg1));
     const obj4 = { style: null, children: null };
     obj4[0] = tmp.button;
     const obj5 = { text: null, onPress: null, loading: null, grow: true };

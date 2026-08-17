@@ -1,12 +1,11 @@
 // discord_app/modules/go_live/utils/canStreamWithSettings.tsx
-import RESOLUTION_720 from "RESOLUTION_720";
-import { getGoLiveAutoQualityExperimentConfig } from "../GoLiveAutoQualityExperiment.tsx";
-import { canUseStreamSetting } from "canUseStreamSetting.tsx";
+import set from "set" /* 2 */;
+import getGoLiveAutoQualityExperimentConfig from "getGoLiveAutoQualityExperimentConfig" /* 10936 */;
+import canUseStreamSettingDefault from "canUseStreamSetting" /* 10937 */;
+import RESOLUTION_720 from "RESOLUTION_720" /* 4524 */;
 
-let c3;
-let c4;
 ({ ApplicationStreamSettingRequirements: c3, ApplicationStreamPresets: c4 } = RESOLUTION_720);
-const result = require("canUseStreamSetting").fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
+const result = set.fileFinishedImporting("modules/go_live/utils/canStreamWithSettings.tsx");
 
 export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5) {
   if (arg0 === constants.PRESET_AUTO) {
@@ -27,7 +26,7 @@ export default function canStreamWithSettings(arg0, arg1, arg2, arg3, arg4, arg5
             let tmp11 = arg3;
             let tmp12 = arg4;
             let tmp13 = arg5;
-            if (canUseStreamSetting(tmp4, arg3, arg4, arg5)) {
+            if (canUseStreamSettingDefault(tmp4, arg3, arg4, arg5)) {
               let tmp14 = iter;
               iter.return();
               let flag = true;

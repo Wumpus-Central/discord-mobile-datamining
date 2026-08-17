@@ -1,54 +1,40 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetails.tsx
-import importAllResult from "DCDDeviceManager";
-import get_ActivityIndicator from "useSafeAreaInsets";
-import prototype from "prototype";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import useChannelDetailsStore from "useChannelDetailsStore";
-import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens";
-import jsxProd from "module_11534";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "prototype" /* 11510 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import useChannelDetailsStore from "useChannelDetailsStore" /* 8505 */;
+import ChannelDetailsNavigatorScreens from "ChannelDetailsNavigatorScreens" /* 9922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let CHANNEL_DETAILS_TOP_MARGIN;
-let StyleSheet;
-let c10;
-let c4;
-let c9;
-let closure_12;
-let error;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, StyleSheet } = get_ActivityIndicator);
-({ deleteChannelDetailsSearchState: error, useChannelDetailsSearchActiveSource: metroImportAll, useIsChannelDetailsSearchActive: c9 } = useChannelDetailsStore);
+({ deleteChannelDetailsSearchState: error, useChannelDetailsSearchActiveSource: closure_8, useIsChannelDetailsSearchActive: c9 } = useChannelDetailsStore);
 ({ SPRING_CHANNEL_HEADER: c10, CHANNEL_DETAILS_TOP_MARGIN } = ChannelDetailsNavigatorScreens);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-const PX_8 = require("Themes").space.PX_8;
+const PX_8 = ThemesDefault.space.PX_8;
 let obj = { detailsContainer: null, information: null, linkedLobby: null, search: null, searchLocked: null, autocompleteSuggestions: null, newHeader: null };
 obj = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
-obj.backgroundColor = require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND;
+obj.backgroundColor = ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND;
 obj.flex = 1;
 obj[0] = obj;
-createCacheKey = { marginHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_12, paddingTop: PX_8 };
+createCacheKey = { marginHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_12, paddingTop: PX_8 };
 obj[1] = createCacheKey;
-obj[2] = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_4 };
+obj[2] = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4 };
 obj[3] = { flex: 1, flexGrow: 1 };
-let obj2 = { marginTop: require("Themes").space.PX_12, marginBottom: require("Themes").space.PX_4 };
-obj[4] = { marginTop: CHANNEL_DETAILS_TOP_MARGIN, marginBottom: require("Themes").space.PX_16 };
+let obj2 = { marginTop: ThemesDefault.space.PX_12, marginBottom: ThemesDefault.space.PX_4 };
+obj[4] = { marginTop: CHANNEL_DETAILS_TOP_MARGIN, marginBottom: ThemesDefault.space.PX_16 };
 obj[5] = { zIndex: 10 };
-let obj3 = { marginTop: CHANNEL_DETAILS_TOP_MARGIN, marginBottom: require("Themes").space.PX_16 };
-obj[6] = { paddingBottom: require("Themes").space.PX_12, zIndex: 10 };
+let obj3 = { marginTop: CHANNEL_DETAILS_TOP_MARGIN, marginBottom: ThemesDefault.space.PX_16 };
+obj[6] = { paddingBottom: ThemesDefault.space.PX_12, zIndex: 10 };
 let closure_14 = createCacheKey.createStyles(obj);
 let closure_15 = { code: "function ChannelDetailsTsx1(){const{headerHeight,isSearchActive,withTiming,timingFast,withSpring,SPRING_CHANNEL_HEADER}=this.__closure;const height=headerHeight.get();return{position:'relative',pointerEvents:isSearchActive?'none':'auto',opacity:withTiming(isSearchActive?0:1,timingFast,'animate-always'),height:height!=null&&height>=0?withSpring(isSearchActive?0:height,{...SPRING_CHANNEL_HEADER,clamp:{min:0,max:height}}):undefined};}" };
-let obj4 = { paddingBottom: require("Themes").space.PX_12, zIndex: 10 };
+let obj4 = { paddingBottom: ThemesDefault.space.PX_12, zIndex: 10 };
 const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
-  let componentWidth;
-  let dismissed;
-  let isShowing;
-  let onBackPress;
-  let onLayoutMeasure;
-  let setDismissed;
   channelId = channelId.channelId;
   const isSearchLocked = channelId.isSearchLocked;
   ({ onBackPress, componentWidth, isShowing } = channelId);
@@ -62,8 +48,8 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   }
   let stateFromStores;
   let channelDetailsSearchContext;
-  let c6;
-  let c7;
+  closure_6 = undefined;
+  closure_7 = undefined;
   let ref;
   let context;
   let top;
@@ -71,9 +57,9 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   let tmp = callback();
   let obj = channelId;
   let tmp2 = isShowing;
-  let obj1 = channelId(isShowing[9]);
-  const items = [c6];
-  stateFromStores = obj1.useStateFromStores(items, () => _undefined.getChannel(channelId));
+  obj1 = channelId(isShowing[9]);
+  const items = [closure_6];
+  stateFromStores = obj1.useStateFromStores(items, () => channel.getChannel(channelId));
   let guild_id;
   if (stateFromStores != null) {
     guild_id = stateFromStores.guild_id;
@@ -93,9 +79,9 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   ({ dismissed, setDismissed, onLayoutMeasure } = searchSuggestionsGesture);
   let tmp7 = isSearchLocked;
   const tmp9 = context(channelId);
-  c6 = tmp9;
+  closure_6 = tmp9;
   const tmp10 = ref(channelId);
-  c7 = tmp10;
+  closure_7 = tmp10;
   ref = onChannelDeleted.useRef(null);
   context = onChannelDeleted.useContext(obj(tmp2[14]).SwipeForMemberListContext);
   const tmp8 = isSearchLocked(tmp2[12]);
@@ -118,9 +104,9 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   const items3 = [tmp9, isSearchLocked, tmp10, channelDetailsSearchContext];
   const effect1 = onChannelDeleted.useEffect(() => {
     if (!isSearchLocked) {
-      if ("initial" !== c7) {
+      if ("initial" !== closure_7) {
         const current = ref.current;
-        if (c6) {
+        if (closure_6) {
           if (current != null) {
             current.focus();
           }
@@ -143,7 +129,7 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   const items4 = [sharedValue];
   callback = onChannelDeleted.useCallback((nativeEvent) => {
     const height = nativeEvent.nativeEvent.layout.height;
-    if (height > outer1_13) {
+    if (height > closure_1_13) {
       const value = sharedValue.get();
       let tmp3 = null != value;
       if (tmp3) {
@@ -159,10 +145,10 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   const objResult2 = obj(tmp2[23]);
   class Q {
     constructor() {
-      value = c11.get();
-      tmp2 = c6;
+      value = closure_11.get();
+      tmp2 = closure_6;
       str = "auto";
-      if (c6) {
+      if (closure_6) {
         str = "none";
       }
       obj = { position: "relative", pointerEvents: str, opacity: null, height: null };
@@ -219,10 +205,10 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
   }, items6);
   const items7 = [channelId, channelDetailsSearchContext];
   const effect4 = onChannelDeleted.useEffect(() => () => {
-    const result = outer1_1(outer1_2[27]).clearAllSearchMesssages();
-    outer1_7(closure_0);
-    const obj = outer1_1(outer1_2[27]);
-    outer1_1(outer1_2[21]).deleteSearchQuery(prototype);
+    const result = closure_1_1(closure_1_2[27]).clearAllSearchMesssages();
+    closure_1_7(closure_0);
+    const obj = closure_1_1(closure_1_2[27]);
+    closure_1_1(closure_1_2[21]).deleteSearchQuery(closure_5);
   }, items7);
   const items8 = [channelId];
   const effect5 = onChannelDeleted.useEffect(() => {
@@ -333,6 +319,6 @@ const memoResult = importAllResult.memo(function ChannelDetails(channelId) {
     sharedValue(obj(tmp2[12]).AnalyticsLocationProvider, obj);
   }
 });
-let result = require("prototype").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetails.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetails.tsx");
 
 export default memoResult;

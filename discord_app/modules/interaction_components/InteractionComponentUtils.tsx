@@ -1,10 +1,13 @@
 // discord_app/modules/interaction_components/InteractionComponentUtils.tsx
-import { CheckpointVersions } from "CheckpointPersonas";
-import { v1 } from "../../../_runtime/00514_v1.js";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import v1 from "v1" /* 514 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import CheckpointPersonas from "CheckpointPersonas" /* 4806 */;
 import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
 
 function flattenComponents(components) {
   const map = new Map();
@@ -24,22 +27,22 @@ function flattenComponent(map, accessory) {
     const item = components.forEach((id) => {
       const result = obj.set(id.id, id);
       const type = id.type;
-      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
         const components = id.components;
         const item = components.forEach((id) => {
           const result = obj.set(id.id, id);
           const type = id.type;
-          if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             const components = id.components;
             const item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -54,7 +57,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -69,7 +72,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -84,7 +87,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -102,7 +105,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -117,7 +120,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -132,7 +135,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -147,7 +150,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -157,13 +160,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -178,7 +181,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -194,7 +197,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -209,7 +212,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -226,12 +229,12 @@ function flattenComponent(map, accessory) {
             const item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -246,7 +249,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -261,7 +264,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -276,7 +279,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -294,7 +297,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -309,7 +312,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -324,7 +327,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -339,7 +342,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -349,13 +352,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -370,7 +373,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -386,7 +389,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -401,7 +404,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -421,12 +424,12 @@ function flattenComponent(map, accessory) {
               const item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -441,7 +444,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -456,7 +459,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -471,7 +474,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -489,7 +492,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -504,7 +507,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -519,7 +522,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -534,7 +537,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -544,13 +547,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -565,7 +568,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -581,7 +584,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -596,7 +599,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -613,12 +616,12 @@ function flattenComponent(map, accessory) {
               const item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -633,7 +636,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -648,7 +651,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -663,7 +666,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -681,7 +684,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -696,7 +699,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -711,7 +714,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -726,7 +729,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -736,13 +739,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -757,7 +760,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -773,7 +776,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -788,7 +791,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -800,18 +803,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               const components4 = accessory.components;
               const item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -826,7 +829,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -841,7 +844,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -856,7 +859,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -874,7 +877,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -889,7 +892,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -904,7 +907,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -919,7 +922,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -929,13 +932,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -950,7 +953,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -966,7 +969,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -981,7 +984,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -999,12 +1002,12 @@ function flattenComponent(map, accessory) {
             const item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1019,7 +1022,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -1034,7 +1037,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1049,7 +1052,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -1067,7 +1070,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1082,7 +1085,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1097,7 +1100,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1112,7 +1115,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1122,13 +1125,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1143,7 +1146,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -1159,7 +1162,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1174,7 +1177,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -1193,17 +1196,17 @@ function flattenComponent(map, accessory) {
         const item1 = components1.forEach((id) => {
           const result = obj.set(id.id, id);
           const type = id.type;
-          if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             const components = id.components;
             const item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1218,7 +1221,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -1233,7 +1236,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1248,7 +1251,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -1266,7 +1269,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1281,7 +1284,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1296,7 +1299,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1311,7 +1314,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1321,13 +1324,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1342,7 +1345,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -1358,7 +1361,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1373,7 +1376,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -1390,12 +1393,12 @@ function flattenComponent(map, accessory) {
             const item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1410,7 +1413,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -1425,7 +1428,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1440,7 +1443,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -1458,7 +1461,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1473,7 +1476,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1488,7 +1491,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1503,7 +1506,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1513,13 +1516,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1534,7 +1537,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -1550,7 +1553,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1565,7 +1568,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -1585,12 +1588,12 @@ function flattenComponent(map, accessory) {
               const item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1605,7 +1608,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1620,7 +1623,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1635,7 +1638,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1653,7 +1656,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1668,7 +1671,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -1683,7 +1686,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1698,7 +1701,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -1708,13 +1711,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1729,7 +1732,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -1745,7 +1748,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1760,7 +1763,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -1777,12 +1780,12 @@ function flattenComponent(map, accessory) {
               const item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1797,7 +1800,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1812,7 +1815,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1827,7 +1830,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -1845,7 +1848,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1860,7 +1863,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -1875,7 +1878,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1890,7 +1893,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -1900,13 +1903,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1921,7 +1924,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -1937,7 +1940,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1952,7 +1955,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -1964,18 +1967,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               const components4 = accessory.components;
               const item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -1990,7 +1993,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2005,7 +2008,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2020,7 +2023,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2038,7 +2041,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2053,7 +2056,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2068,7 +2071,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2083,7 +2086,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2093,13 +2096,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2114,7 +2117,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -2130,7 +2133,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2145,7 +2148,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -2163,12 +2166,12 @@ function flattenComponent(map, accessory) {
             const item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2183,7 +2186,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -2198,7 +2201,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2213,7 +2216,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -2231,7 +2234,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2246,7 +2249,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2261,7 +2264,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2276,7 +2279,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2286,13 +2289,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2307,7 +2310,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -2323,7 +2326,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2338,7 +2341,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -2360,17 +2363,17 @@ function flattenComponent(map, accessory) {
           const item2 = components2.forEach((id) => {
             const result = obj.set(id.id, id);
             const type = id.type;
-            if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               const components = id.components;
               const item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2385,7 +2388,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2400,7 +2403,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2415,7 +2418,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2433,7 +2436,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2448,7 +2451,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2463,7 +2466,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2478,7 +2481,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2488,13 +2491,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2509,7 +2512,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -2525,7 +2528,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2540,7 +2543,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -2557,12 +2560,12 @@ function flattenComponent(map, accessory) {
               const item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2577,7 +2580,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2592,7 +2595,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2607,7 +2610,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -2625,7 +2628,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2640,7 +2643,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2655,7 +2658,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2670,7 +2673,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2680,13 +2683,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2701,7 +2704,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -2717,7 +2720,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2732,7 +2735,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -2752,12 +2755,12 @@ function flattenComponent(map, accessory) {
                 const item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2772,7 +2775,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2787,7 +2790,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2802,7 +2805,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2820,7 +2823,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2835,7 +2838,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -2850,7 +2853,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2865,7 +2868,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -2875,13 +2878,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2896,7 +2899,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -2912,7 +2915,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2927,7 +2930,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -2944,12 +2947,12 @@ function flattenComponent(map, accessory) {
                 const item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2964,7 +2967,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -2979,7 +2982,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -2994,7 +2997,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3012,7 +3015,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3027,7 +3030,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -3042,7 +3045,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3057,7 +3060,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -3067,13 +3070,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3088,7 +3091,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -3104,7 +3107,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3119,7 +3122,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -3131,18 +3134,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 const components4 = accessory.components;
                 const item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3157,7 +3160,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3172,7 +3175,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3187,7 +3190,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3205,7 +3208,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3220,7 +3223,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -3235,7 +3238,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3250,7 +3253,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -3260,13 +3263,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3281,7 +3284,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -3297,7 +3300,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3312,7 +3315,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -3330,12 +3333,12 @@ function flattenComponent(map, accessory) {
               const item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3350,7 +3353,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -3365,7 +3368,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3380,7 +3383,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -3398,7 +3401,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3413,7 +3416,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3428,7 +3431,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3443,7 +3446,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3453,13 +3456,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3474,7 +3477,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -3490,7 +3493,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3505,7 +3508,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -3524,17 +3527,17 @@ function flattenComponent(map, accessory) {
           const item3 = components3.forEach((id) => {
             const result = obj.set(id.id, id);
             const type = id.type;
-            if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               const components = id.components;
               const item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3549,7 +3552,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -3564,7 +3567,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3579,7 +3582,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -3597,7 +3600,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3612,7 +3615,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3627,7 +3630,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3642,7 +3645,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3652,13 +3655,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3673,7 +3676,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -3689,7 +3692,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3704,7 +3707,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -3721,12 +3724,12 @@ function flattenComponent(map, accessory) {
               const item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3741,7 +3744,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -3756,7 +3759,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3771,7 +3774,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -3789,7 +3792,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3804,7 +3807,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3819,7 +3822,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3834,7 +3837,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3844,13 +3847,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3865,7 +3868,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -3881,7 +3884,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3896,7 +3899,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -3916,12 +3919,12 @@ function flattenComponent(map, accessory) {
                 const item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3936,7 +3939,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3951,7 +3954,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3966,7 +3969,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -3984,7 +3987,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -3999,7 +4002,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -4014,7 +4017,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4029,7 +4032,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -4039,13 +4042,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4060,7 +4063,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -4076,7 +4079,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4091,7 +4094,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -4108,12 +4111,12 @@ function flattenComponent(map, accessory) {
                 const item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4128,7 +4131,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4143,7 +4146,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4158,7 +4161,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4176,7 +4179,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4191,7 +4194,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -4206,7 +4209,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4221,7 +4224,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -4231,13 +4234,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4252,7 +4255,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -4268,7 +4271,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4283,7 +4286,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -4295,18 +4298,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 const components4 = accessory.components;
                 const item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4321,7 +4324,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4336,7 +4339,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4351,7 +4354,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4369,7 +4372,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4384,7 +4387,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -4399,7 +4402,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4414,7 +4417,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -4424,13 +4427,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4445,7 +4448,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -4461,7 +4464,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4476,7 +4479,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -4494,12 +4497,12 @@ function flattenComponent(map, accessory) {
               const item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4514,7 +4517,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -4529,7 +4532,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4544,7 +4547,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -4562,7 +4565,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4577,7 +4580,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4592,7 +4595,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4607,7 +4610,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4617,13 +4620,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4638,7 +4641,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -4654,7 +4657,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4669,7 +4672,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -4683,23 +4686,23 @@ function flattenComponent(map, accessory) {
               });
             }
           });
-          outer1_7(obj, accessory.accessory);
+          closure_1_7(obj, accessory.accessory);
         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
           const components4 = accessory.components;
           const item4 = components4.forEach((id) => {
             let result = obj.set(id.id, id);
             let type = id.type;
-            if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               let components = id.components;
               let item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4714,7 +4717,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -4729,7 +4732,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4744,7 +4747,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -4762,7 +4765,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4777,7 +4780,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4792,7 +4795,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4807,7 +4810,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4817,13 +4820,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4838,7 +4841,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -4854,7 +4857,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4869,7 +4872,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -4886,12 +4889,12 @@ function flattenComponent(map, accessory) {
               let item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4906,7 +4909,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -4921,7 +4924,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4936,7 +4939,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -4954,7 +4957,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4969,7 +4972,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -4984,7 +4987,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -4999,7 +5002,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5009,13 +5012,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5030,7 +5033,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -5046,7 +5049,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5061,7 +5064,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -5081,12 +5084,12 @@ function flattenComponent(map, accessory) {
                 let item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5101,7 +5104,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5116,7 +5119,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5131,7 +5134,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5149,7 +5152,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5164,7 +5167,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -5179,7 +5182,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5194,7 +5197,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -5204,13 +5207,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5225,7 +5228,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -5241,7 +5244,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5256,7 +5259,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -5273,12 +5276,12 @@ function flattenComponent(map, accessory) {
                 let item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5293,7 +5296,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5308,7 +5311,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5323,7 +5326,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5341,7 +5344,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5356,7 +5359,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -5371,7 +5374,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5386,7 +5389,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -5396,13 +5399,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5417,7 +5420,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -5433,7 +5436,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5448,7 +5451,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -5460,18 +5463,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 let components4 = accessory.components;
                 let item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5486,7 +5489,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5501,7 +5504,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5516,7 +5519,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5534,7 +5537,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5549,7 +5552,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -5564,7 +5567,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5579,7 +5582,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -5589,13 +5592,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5610,7 +5613,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -5626,7 +5629,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5641,7 +5644,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -5659,12 +5662,12 @@ function flattenComponent(map, accessory) {
               let item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5679,7 +5682,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -5694,7 +5697,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5709,7 +5712,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -5727,7 +5730,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5742,7 +5745,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5757,7 +5760,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5772,7 +5775,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -5782,13 +5785,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5803,7 +5806,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -5819,7 +5822,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5834,7 +5837,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -5854,17 +5857,17 @@ function flattenComponent(map, accessory) {
         const item5 = components5.forEach((id) => {
           let result = obj.set(id.id, id);
           let type = id.type;
-          if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             let components = id.components;
             let item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5879,7 +5882,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -5894,7 +5897,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5909,7 +5912,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -5927,7 +5930,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5942,7 +5945,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -5957,7 +5960,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -5972,7 +5975,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -5982,13 +5985,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6003,7 +6006,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -6019,7 +6022,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6034,7 +6037,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -6051,12 +6054,12 @@ function flattenComponent(map, accessory) {
             let item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6071,7 +6074,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -6086,7 +6089,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6101,7 +6104,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -6119,7 +6122,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6134,7 +6137,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6149,7 +6152,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6164,7 +6167,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6174,13 +6177,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6195,7 +6198,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -6211,7 +6214,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6226,7 +6229,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -6246,12 +6249,12 @@ function flattenComponent(map, accessory) {
               let item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6266,7 +6269,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6281,7 +6284,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6296,7 +6299,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6314,7 +6317,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6329,7 +6332,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -6344,7 +6347,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6359,7 +6362,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -6369,13 +6372,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6390,7 +6393,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -6406,7 +6409,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6421,7 +6424,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -6438,12 +6441,12 @@ function flattenComponent(map, accessory) {
               let item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6458,7 +6461,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6473,7 +6476,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6488,7 +6491,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6506,7 +6509,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6521,7 +6524,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -6536,7 +6539,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6551,7 +6554,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -6561,13 +6564,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6582,7 +6585,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -6598,7 +6601,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6613,7 +6616,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -6625,18 +6628,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               let components4 = accessory.components;
               let item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6651,7 +6654,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6666,7 +6669,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6681,7 +6684,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6699,7 +6702,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6714,7 +6717,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -6729,7 +6732,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6744,7 +6747,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -6754,13 +6757,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6775,7 +6778,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -6791,7 +6794,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6806,7 +6809,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -6824,12 +6827,12 @@ function flattenComponent(map, accessory) {
             let item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6844,7 +6847,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -6859,7 +6862,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6874,7 +6877,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -6892,7 +6895,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6907,7 +6910,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6922,7 +6925,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6937,7 +6940,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -6947,13 +6950,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6968,7 +6971,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -6984,7 +6987,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -6999,7 +7002,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -7020,22 +7023,22 @@ function flattenComponent(map, accessory) {
     const item1 = components1.forEach((id) => {
       const result = obj.set(id.id, id);
       const type = id.type;
-      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
         const components = id.components;
         const item = components.forEach((id) => {
           const result = obj.set(id.id, id);
           const type = id.type;
-          if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             const components = id.components;
             const item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7050,7 +7053,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -7065,7 +7068,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7080,7 +7083,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -7098,7 +7101,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7113,7 +7116,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7128,7 +7131,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7143,7 +7146,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7153,13 +7156,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7174,7 +7177,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -7190,7 +7193,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7205,7 +7208,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -7222,12 +7225,12 @@ function flattenComponent(map, accessory) {
             const item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7242,7 +7245,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -7257,7 +7260,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7272,7 +7275,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -7290,7 +7293,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7305,7 +7308,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7320,7 +7323,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7335,7 +7338,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7345,13 +7348,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7366,7 +7369,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -7382,7 +7385,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7397,7 +7400,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -7417,12 +7420,12 @@ function flattenComponent(map, accessory) {
               const item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7437,7 +7440,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7452,7 +7455,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7467,7 +7470,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7485,7 +7488,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7500,7 +7503,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -7515,7 +7518,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7530,7 +7533,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -7540,13 +7543,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7561,7 +7564,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -7577,7 +7580,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7592,7 +7595,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -7609,12 +7612,12 @@ function flattenComponent(map, accessory) {
               const item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7629,7 +7632,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7644,7 +7647,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7659,7 +7662,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7677,7 +7680,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7692,7 +7695,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -7707,7 +7710,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7722,7 +7725,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -7732,13 +7735,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7753,7 +7756,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -7769,7 +7772,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7784,7 +7787,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -7796,18 +7799,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               const components4 = accessory.components;
               const item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7822,7 +7825,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7837,7 +7840,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7852,7 +7855,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -7870,7 +7873,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7885,7 +7888,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -7900,7 +7903,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7915,7 +7918,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -7925,13 +7928,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7946,7 +7949,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -7962,7 +7965,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -7977,7 +7980,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -7995,12 +7998,12 @@ function flattenComponent(map, accessory) {
             const item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8015,7 +8018,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -8030,7 +8033,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8045,7 +8048,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -8063,7 +8066,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8078,7 +8081,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8093,7 +8096,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8108,7 +8111,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8118,13 +8121,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8139,7 +8142,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -8155,7 +8158,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8170,7 +8173,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -8189,17 +8192,17 @@ function flattenComponent(map, accessory) {
         const item1 = components1.forEach((id) => {
           const result = obj.set(id.id, id);
           const type = id.type;
-          if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             const components = id.components;
             const item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8214,7 +8217,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -8229,7 +8232,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8244,7 +8247,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -8262,7 +8265,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8277,7 +8280,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8292,7 +8295,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8307,7 +8310,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8317,13 +8320,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8338,7 +8341,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -8354,7 +8357,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8369,7 +8372,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -8386,12 +8389,12 @@ function flattenComponent(map, accessory) {
             const item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8406,7 +8409,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -8421,7 +8424,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8436,7 +8439,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -8454,7 +8457,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8469,7 +8472,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8484,7 +8487,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8499,7 +8502,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8509,13 +8512,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8530,7 +8533,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -8546,7 +8549,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8561,7 +8564,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -8581,12 +8584,12 @@ function flattenComponent(map, accessory) {
               const item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8601,7 +8604,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8616,7 +8619,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8631,7 +8634,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8649,7 +8652,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8664,7 +8667,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -8679,7 +8682,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8694,7 +8697,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -8704,13 +8707,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8725,7 +8728,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -8741,7 +8744,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8756,7 +8759,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -8773,12 +8776,12 @@ function flattenComponent(map, accessory) {
               const item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8793,7 +8796,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8808,7 +8811,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8823,7 +8826,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -8841,7 +8844,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8856,7 +8859,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -8871,7 +8874,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8886,7 +8889,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -8896,13 +8899,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8917,7 +8920,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -8933,7 +8936,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8948,7 +8951,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -8960,18 +8963,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               const components4 = accessory.components;
               const item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -8986,7 +8989,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9001,7 +9004,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9016,7 +9019,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9034,7 +9037,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9049,7 +9052,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9064,7 +9067,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9079,7 +9082,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9089,13 +9092,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9110,7 +9113,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -9126,7 +9129,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9141,7 +9144,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -9159,12 +9162,12 @@ function flattenComponent(map, accessory) {
             const item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9179,7 +9182,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -9194,7 +9197,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9209,7 +9212,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -9227,7 +9230,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9242,7 +9245,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9257,7 +9260,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9272,7 +9275,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9282,13 +9285,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9303,7 +9306,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -9319,7 +9322,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9334,7 +9337,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -9356,17 +9359,17 @@ function flattenComponent(map, accessory) {
           const item2 = components2.forEach((id) => {
             const result = obj.set(id.id, id);
             const type = id.type;
-            if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               const components = id.components;
               const item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9381,7 +9384,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9396,7 +9399,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9411,7 +9414,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9429,7 +9432,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9444,7 +9447,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9459,7 +9462,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9474,7 +9477,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9484,13 +9487,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9505,7 +9508,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -9521,7 +9524,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9536,7 +9539,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -9553,12 +9556,12 @@ function flattenComponent(map, accessory) {
               const item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9573,7 +9576,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9588,7 +9591,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9603,7 +9606,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -9621,7 +9624,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9636,7 +9639,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9651,7 +9654,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9666,7 +9669,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9676,13 +9679,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9697,7 +9700,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -9713,7 +9716,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9728,7 +9731,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -9748,12 +9751,12 @@ function flattenComponent(map, accessory) {
                 const item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9768,7 +9771,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9783,7 +9786,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9798,7 +9801,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9816,7 +9819,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9831,7 +9834,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -9846,7 +9849,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9861,7 +9864,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -9871,13 +9874,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9892,7 +9895,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -9908,7 +9911,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9923,7 +9926,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -9940,12 +9943,12 @@ function flattenComponent(map, accessory) {
                 const item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9960,7 +9963,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -9975,7 +9978,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -9990,7 +9993,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10008,7 +10011,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10023,7 +10026,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -10038,7 +10041,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10053,7 +10056,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -10063,13 +10066,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10084,7 +10087,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -10100,7 +10103,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10115,7 +10118,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -10127,18 +10130,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 const components4 = accessory.components;
                 const item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10153,7 +10156,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10168,7 +10171,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10183,7 +10186,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10201,7 +10204,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10216,7 +10219,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -10231,7 +10234,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10246,7 +10249,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -10256,13 +10259,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10277,7 +10280,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -10293,7 +10296,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10308,7 +10311,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -10326,12 +10329,12 @@ function flattenComponent(map, accessory) {
               const item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10346,7 +10349,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -10361,7 +10364,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10376,7 +10379,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -10394,7 +10397,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10409,7 +10412,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10424,7 +10427,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10439,7 +10442,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10449,13 +10452,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10470,7 +10473,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -10486,7 +10489,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10501,7 +10504,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -10520,17 +10523,17 @@ function flattenComponent(map, accessory) {
           const item3 = components3.forEach((id) => {
             const result = obj.set(id.id, id);
             const type = id.type;
-            if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               const components = id.components;
               const item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10545,7 +10548,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -10560,7 +10563,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10575,7 +10578,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -10593,7 +10596,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10608,7 +10611,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10623,7 +10626,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10638,7 +10641,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10648,13 +10651,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10669,7 +10672,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -10685,7 +10688,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10700,7 +10703,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -10717,12 +10720,12 @@ function flattenComponent(map, accessory) {
               const item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10737,7 +10740,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -10752,7 +10755,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10767,7 +10770,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -10785,7 +10788,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10800,7 +10803,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10815,7 +10818,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10830,7 +10833,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10840,13 +10843,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10861,7 +10864,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -10877,7 +10880,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10892,7 +10895,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -10912,12 +10915,12 @@ function flattenComponent(map, accessory) {
                 const item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10932,7 +10935,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10947,7 +10950,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10962,7 +10965,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -10980,7 +10983,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -10995,7 +10998,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -11010,7 +11013,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11025,7 +11028,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -11035,13 +11038,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11056,7 +11059,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -11072,7 +11075,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11087,7 +11090,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -11104,12 +11107,12 @@ function flattenComponent(map, accessory) {
                 const item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11124,7 +11127,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11139,7 +11142,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11154,7 +11157,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11172,7 +11175,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11187,7 +11190,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -11202,7 +11205,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11217,7 +11220,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -11227,13 +11230,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11248,7 +11251,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -11264,7 +11267,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11279,7 +11282,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -11291,18 +11294,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 const components4 = accessory.components;
                 const item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11317,7 +11320,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11332,7 +11335,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11347,7 +11350,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11365,7 +11368,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11380,7 +11383,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -11395,7 +11398,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11410,7 +11413,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -11420,13 +11423,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11441,7 +11444,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -11457,7 +11460,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11472,7 +11475,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -11490,12 +11493,12 @@ function flattenComponent(map, accessory) {
               const item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11510,7 +11513,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -11525,7 +11528,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11540,7 +11543,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -11558,7 +11561,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11573,7 +11576,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11588,7 +11591,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11603,7 +11606,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11613,13 +11616,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11634,7 +11637,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -11650,7 +11653,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11665,7 +11668,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -11679,23 +11682,23 @@ function flattenComponent(map, accessory) {
               });
             }
           });
-          outer1_7(obj, accessory.accessory);
+          closure_1_7(obj, accessory.accessory);
         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
           const components4 = accessory.components;
           const item4 = components4.forEach((id) => {
             let result = obj.set(id.id, id);
             let type = id.type;
-            if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               let components = id.components;
               let item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11710,7 +11713,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -11725,7 +11728,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11740,7 +11743,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -11758,7 +11761,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11773,7 +11776,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11788,7 +11791,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11803,7 +11806,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11813,13 +11816,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11834,7 +11837,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -11850,7 +11853,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11865,7 +11868,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -11882,12 +11885,12 @@ function flattenComponent(map, accessory) {
               let item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11902,7 +11905,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -11917,7 +11920,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11932,7 +11935,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -11950,7 +11953,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11965,7 +11968,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -11980,7 +11983,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -11995,7 +11998,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12005,13 +12008,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12026,7 +12029,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -12042,7 +12045,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12057,7 +12060,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -12077,12 +12080,12 @@ function flattenComponent(map, accessory) {
                 let item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12097,7 +12100,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12112,7 +12115,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12127,7 +12130,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12145,7 +12148,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12160,7 +12163,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -12175,7 +12178,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12190,7 +12193,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -12200,13 +12203,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12221,7 +12224,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -12237,7 +12240,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12252,7 +12255,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -12269,12 +12272,12 @@ function flattenComponent(map, accessory) {
                 let item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12289,7 +12292,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12304,7 +12307,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12319,7 +12322,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12337,7 +12340,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12352,7 +12355,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -12367,7 +12370,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12382,7 +12385,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -12392,13 +12395,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12413,7 +12416,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -12429,7 +12432,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12444,7 +12447,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -12456,18 +12459,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 let components4 = accessory.components;
                 let item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12482,7 +12485,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12497,7 +12500,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12512,7 +12515,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12530,7 +12533,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12545,7 +12548,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -12560,7 +12563,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12575,7 +12578,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -12585,13 +12588,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12606,7 +12609,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -12622,7 +12625,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12637,7 +12640,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -12655,12 +12658,12 @@ function flattenComponent(map, accessory) {
               let item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12675,7 +12678,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -12690,7 +12693,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12705,7 +12708,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -12723,7 +12726,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12738,7 +12741,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12753,7 +12756,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12768,7 +12771,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -12778,13 +12781,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12799,7 +12802,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -12815,7 +12818,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12830,7 +12833,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -12850,17 +12853,17 @@ function flattenComponent(map, accessory) {
         const item5 = components5.forEach((id) => {
           let result = obj.set(id.id, id);
           let type = id.type;
-          if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             let components = id.components;
             let item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12875,7 +12878,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -12890,7 +12893,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12905,7 +12908,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -12923,7 +12926,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12938,7 +12941,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -12953,7 +12956,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12968,7 +12971,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -12978,13 +12981,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -12999,7 +13002,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -13015,7 +13018,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13030,7 +13033,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -13047,12 +13050,12 @@ function flattenComponent(map, accessory) {
             let item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13067,7 +13070,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -13082,7 +13085,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13097,7 +13100,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -13115,7 +13118,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13130,7 +13133,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13145,7 +13148,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13160,7 +13163,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13170,13 +13173,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13191,7 +13194,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -13207,7 +13210,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13222,7 +13225,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -13242,12 +13245,12 @@ function flattenComponent(map, accessory) {
               let item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13262,7 +13265,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13277,7 +13280,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13292,7 +13295,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13310,7 +13313,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13325,7 +13328,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -13340,7 +13343,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13355,7 +13358,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -13365,13 +13368,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13386,7 +13389,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -13402,7 +13405,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13417,7 +13420,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -13434,12 +13437,12 @@ function flattenComponent(map, accessory) {
               let item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13454,7 +13457,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13469,7 +13472,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13484,7 +13487,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13502,7 +13505,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13517,7 +13520,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -13532,7 +13535,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13547,7 +13550,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -13557,13 +13560,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13578,7 +13581,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -13594,7 +13597,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13609,7 +13612,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -13621,18 +13624,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               let components4 = accessory.components;
               let item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13647,7 +13650,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13662,7 +13665,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13677,7 +13680,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13695,7 +13698,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13710,7 +13713,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -13725,7 +13728,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13740,7 +13743,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -13750,13 +13753,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13771,7 +13774,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -13787,7 +13790,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13802,7 +13805,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -13820,12 +13823,12 @@ function flattenComponent(map, accessory) {
             let item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13840,7 +13843,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -13855,7 +13858,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13870,7 +13873,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -13888,7 +13891,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13903,7 +13906,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13918,7 +13921,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13933,7 +13936,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -13943,13 +13946,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13964,7 +13967,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -13980,7 +13983,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -13995,7 +13998,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -14017,22 +14020,22 @@ function flattenComponent(map, accessory) {
     const item2 = components2.forEach((id) => {
       let result = obj.set(id.id, id);
       let type = id.type;
-      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
         let components = id.components;
         let item = components.forEach((id) => {
           const result = obj.set(id.id, id);
           const type = id.type;
-          if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             const components = id.components;
             const item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14047,7 +14050,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -14062,7 +14065,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14077,7 +14080,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -14095,7 +14098,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14110,7 +14113,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14125,7 +14128,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14140,7 +14143,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14150,13 +14153,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14171,7 +14174,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -14187,7 +14190,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14202,7 +14205,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -14219,12 +14222,12 @@ function flattenComponent(map, accessory) {
             const item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14239,7 +14242,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -14254,7 +14257,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14269,7 +14272,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -14287,7 +14290,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14302,7 +14305,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14317,7 +14320,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14332,7 +14335,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14342,13 +14345,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14363,7 +14366,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -14379,7 +14382,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14394,7 +14397,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -14414,12 +14417,12 @@ function flattenComponent(map, accessory) {
               const item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14434,7 +14437,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14449,7 +14452,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14464,7 +14467,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14482,7 +14485,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14497,7 +14500,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -14512,7 +14515,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14527,7 +14530,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -14537,13 +14540,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14558,7 +14561,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -14574,7 +14577,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14589,7 +14592,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -14606,12 +14609,12 @@ function flattenComponent(map, accessory) {
               const item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14626,7 +14629,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14641,7 +14644,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14656,7 +14659,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14674,7 +14677,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14689,7 +14692,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -14704,7 +14707,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14719,7 +14722,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -14729,13 +14732,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14750,7 +14753,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -14766,7 +14769,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14781,7 +14784,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -14793,18 +14796,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               const components4 = accessory.components;
               const item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14819,7 +14822,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14834,7 +14837,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14849,7 +14852,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -14867,7 +14870,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14882,7 +14885,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -14897,7 +14900,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14912,7 +14915,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -14922,13 +14925,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14943,7 +14946,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -14959,7 +14962,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -14974,7 +14977,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -14992,12 +14995,12 @@ function flattenComponent(map, accessory) {
             const item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15012,7 +15015,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -15027,7 +15030,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15042,7 +15045,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -15060,7 +15063,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15075,7 +15078,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15090,7 +15093,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15105,7 +15108,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15115,13 +15118,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15136,7 +15139,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -15152,7 +15155,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15167,7 +15170,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -15186,17 +15189,17 @@ function flattenComponent(map, accessory) {
         let item1 = components1.forEach((id) => {
           const result = obj.set(id.id, id);
           const type = id.type;
-          if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             const components = id.components;
             const item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15211,7 +15214,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -15226,7 +15229,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15241,7 +15244,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -15259,7 +15262,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15274,7 +15277,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15289,7 +15292,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15304,7 +15307,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15314,13 +15317,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15335,7 +15338,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -15351,7 +15354,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15366,7 +15369,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -15383,12 +15386,12 @@ function flattenComponent(map, accessory) {
             const item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15403,7 +15406,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -15418,7 +15421,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15433,7 +15436,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -15451,7 +15454,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15466,7 +15469,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15481,7 +15484,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15496,7 +15499,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15506,13 +15509,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15527,7 +15530,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -15543,7 +15546,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15558,7 +15561,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -15578,12 +15581,12 @@ function flattenComponent(map, accessory) {
               const item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15598,7 +15601,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15613,7 +15616,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15628,7 +15631,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15646,7 +15649,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15661,7 +15664,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -15676,7 +15679,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15691,7 +15694,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -15701,13 +15704,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15722,7 +15725,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -15738,7 +15741,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15753,7 +15756,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -15770,12 +15773,12 @@ function flattenComponent(map, accessory) {
               const item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15790,7 +15793,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15805,7 +15808,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15820,7 +15823,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15838,7 +15841,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15853,7 +15856,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -15868,7 +15871,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15883,7 +15886,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -15893,13 +15896,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15914,7 +15917,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -15930,7 +15933,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15945,7 +15948,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -15957,18 +15960,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               const components4 = accessory.components;
               const item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -15983,7 +15986,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -15998,7 +16001,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16013,7 +16016,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16031,7 +16034,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16046,7 +16049,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16061,7 +16064,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16076,7 +16079,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16086,13 +16089,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16107,7 +16110,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -16123,7 +16126,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16138,7 +16141,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -16156,12 +16159,12 @@ function flattenComponent(map, accessory) {
             const item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16176,7 +16179,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -16191,7 +16194,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16206,7 +16209,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -16224,7 +16227,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16239,7 +16242,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16254,7 +16257,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16269,7 +16272,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16279,13 +16282,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16300,7 +16303,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -16316,7 +16319,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16331,7 +16334,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -16353,17 +16356,17 @@ function flattenComponent(map, accessory) {
           let item2 = components2.forEach((id) => {
             const result = obj.set(id.id, id);
             const type = id.type;
-            if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               const components = id.components;
               const item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16378,7 +16381,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16393,7 +16396,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16408,7 +16411,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16426,7 +16429,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16441,7 +16444,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16456,7 +16459,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16471,7 +16474,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16481,13 +16484,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16502,7 +16505,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -16518,7 +16521,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16533,7 +16536,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -16550,12 +16553,12 @@ function flattenComponent(map, accessory) {
               const item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16570,7 +16573,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16585,7 +16588,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16600,7 +16603,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -16618,7 +16621,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16633,7 +16636,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16648,7 +16651,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16663,7 +16666,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16673,13 +16676,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16694,7 +16697,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -16710,7 +16713,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16725,7 +16728,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -16745,12 +16748,12 @@ function flattenComponent(map, accessory) {
                 const item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16765,7 +16768,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16780,7 +16783,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16795,7 +16798,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16813,7 +16816,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16828,7 +16831,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -16843,7 +16846,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16858,7 +16861,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -16868,13 +16871,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16889,7 +16892,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -16905,7 +16908,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16920,7 +16923,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -16937,12 +16940,12 @@ function flattenComponent(map, accessory) {
                 const item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16957,7 +16960,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -16972,7 +16975,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -16987,7 +16990,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17005,7 +17008,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17020,7 +17023,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -17035,7 +17038,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17050,7 +17053,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -17060,13 +17063,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17081,7 +17084,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -17097,7 +17100,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17112,7 +17115,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -17124,18 +17127,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 const components4 = accessory.components;
                 const item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17150,7 +17153,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17165,7 +17168,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17180,7 +17183,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17198,7 +17201,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17213,7 +17216,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -17228,7 +17231,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17243,7 +17246,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -17253,13 +17256,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17274,7 +17277,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -17290,7 +17293,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17305,7 +17308,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -17323,12 +17326,12 @@ function flattenComponent(map, accessory) {
               const item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17343,7 +17346,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -17358,7 +17361,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17373,7 +17376,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -17391,7 +17394,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17406,7 +17409,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17421,7 +17424,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17436,7 +17439,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17446,13 +17449,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17467,7 +17470,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -17483,7 +17486,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17498,7 +17501,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -17517,17 +17520,17 @@ function flattenComponent(map, accessory) {
           let item3 = components3.forEach((id) => {
             const result = obj.set(id.id, id);
             const type = id.type;
-            if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               const components = id.components;
               const item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17542,7 +17545,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -17557,7 +17560,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17572,7 +17575,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -17590,7 +17593,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17605,7 +17608,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17620,7 +17623,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17635,7 +17638,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17645,13 +17648,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17666,7 +17669,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -17682,7 +17685,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17697,7 +17700,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -17714,12 +17717,12 @@ function flattenComponent(map, accessory) {
               const item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17734,7 +17737,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -17749,7 +17752,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17764,7 +17767,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -17782,7 +17785,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17797,7 +17800,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17812,7 +17815,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17827,7 +17830,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17837,13 +17840,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17858,7 +17861,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -17874,7 +17877,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17889,7 +17892,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -17909,12 +17912,12 @@ function flattenComponent(map, accessory) {
                 const item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17929,7 +17932,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17944,7 +17947,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17959,7 +17962,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -17977,7 +17980,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -17992,7 +17995,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -18007,7 +18010,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18022,7 +18025,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -18032,13 +18035,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18053,7 +18056,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -18069,7 +18072,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18084,7 +18087,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -18101,12 +18104,12 @@ function flattenComponent(map, accessory) {
                 const item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18121,7 +18124,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18136,7 +18139,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18151,7 +18154,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18169,7 +18172,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18184,7 +18187,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -18199,7 +18202,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18214,7 +18217,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -18224,13 +18227,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18245,7 +18248,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -18261,7 +18264,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18276,7 +18279,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -18288,18 +18291,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 const components4 = accessory.components;
                 const item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18314,7 +18317,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18329,7 +18332,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18344,7 +18347,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18362,7 +18365,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18377,7 +18380,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -18392,7 +18395,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18407,7 +18410,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -18417,13 +18420,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18438,7 +18441,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -18454,7 +18457,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18469,7 +18472,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -18487,12 +18490,12 @@ function flattenComponent(map, accessory) {
               const item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18507,7 +18510,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -18522,7 +18525,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18537,7 +18540,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -18555,7 +18558,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18570,7 +18573,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18585,7 +18588,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18600,7 +18603,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18610,13 +18613,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18631,7 +18634,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -18647,7 +18650,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18662,7 +18665,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -18676,23 +18679,23 @@ function flattenComponent(map, accessory) {
               });
             }
           });
-          outer1_7(obj, accessory.accessory);
+          closure_1_7(obj, accessory.accessory);
         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
           let components4 = accessory.components;
           let item4 = components4.forEach((id) => {
             let result = obj.set(id.id, id);
             let type = id.type;
-            if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+            if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
               let components = id.components;
               let item = components.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18707,7 +18710,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -18722,7 +18725,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18737,7 +18740,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -18755,7 +18758,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18770,7 +18773,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18785,7 +18788,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18800,7 +18803,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18810,13 +18813,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18831,7 +18834,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -18847,7 +18850,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18862,7 +18865,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -18879,12 +18882,12 @@ function flattenComponent(map, accessory) {
               let item1 = components1.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18899,7 +18902,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -18914,7 +18917,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18929,7 +18932,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -18947,7 +18950,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18962,7 +18965,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -18977,7 +18980,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -18992,7 +18995,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19002,13 +19005,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19023,7 +19026,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -19039,7 +19042,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19054,7 +19057,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -19074,12 +19077,12 @@ function flattenComponent(map, accessory) {
                 let item2 = components2.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19094,7 +19097,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19109,7 +19112,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19124,7 +19127,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19142,7 +19145,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19157,7 +19160,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -19172,7 +19175,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19187,7 +19190,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -19197,13 +19200,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19218,7 +19221,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -19234,7 +19237,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19249,7 +19252,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -19266,12 +19269,12 @@ function flattenComponent(map, accessory) {
                 let item3 = components3.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19286,7 +19289,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19301,7 +19304,7 @@ function flattenComponent(map, accessory) {
                     const item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19316,7 +19319,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19334,7 +19337,7 @@ function flattenComponent(map, accessory) {
                       const item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19349,7 +19352,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -19364,7 +19367,7 @@ function flattenComponent(map, accessory) {
                       const item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19379,7 +19382,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -19389,13 +19392,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19410,7 +19413,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -19426,7 +19429,7 @@ function flattenComponent(map, accessory) {
                     const item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19441,7 +19444,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -19453,18 +19456,18 @@ function flattenComponent(map, accessory) {
                     });
                   }
                 });
-                outer1_7(obj, accessory.accessory);
+                closure_1_7(obj, accessory.accessory);
               } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                 let components4 = accessory.components;
                 let item4 = components4.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19479,7 +19482,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19494,7 +19497,7 @@ function flattenComponent(map, accessory) {
                     let item1 = components1.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19509,7 +19512,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19527,7 +19530,7 @@ function flattenComponent(map, accessory) {
                       let item2 = components2.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19542,7 +19545,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -19557,7 +19560,7 @@ function flattenComponent(map, accessory) {
                       let item3 = components3.forEach((id) => {
                         const result = obj.set(id.id, id);
                         const type = id.type;
-                        if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           const components = id.components;
                           const item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19572,7 +19575,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             const components3 = accessory.components;
                             const item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             const components4 = accessory.components;
                             const item4 = components4.forEach(() => { ... });
@@ -19582,13 +19585,13 @@ function flattenComponent(map, accessory) {
                           const item5 = components5.forEach(() => { ... });
                         }
                       });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach((id) => {
                         let result = obj.set(id.id, id);
                         let type = id.type;
-                        if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                        if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                           let components = id.components;
                           let item = components.forEach(() => { ... });
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19603,7 +19606,7 @@ function flattenComponent(map, accessory) {
                           } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                             let components3 = accessory.components;
                             let item3 = components3.forEach(() => { ... });
-                            outer1_7(obj, accessory.accessory);
+                            closure_1_7(obj, accessory.accessory);
                           } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                             let components4 = accessory.components;
                             let item4 = components4.forEach(() => { ... });
@@ -19619,7 +19622,7 @@ function flattenComponent(map, accessory) {
                     let item5 = components5.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19634,7 +19637,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -19652,12 +19655,12 @@ function flattenComponent(map, accessory) {
               let item5 = components5.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19672,7 +19675,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -19687,7 +19690,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19702,7 +19705,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -19720,7 +19723,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19735,7 +19738,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19750,7 +19753,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19765,7 +19768,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -19775,13 +19778,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19796,7 +19799,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -19812,7 +19815,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19827,7 +19830,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -19847,17 +19850,17 @@ function flattenComponent(map, accessory) {
         let item5 = components5.forEach((id) => {
           let result = obj.set(id.id, id);
           let type = id.type;
-          if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+          if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
             let components = id.components;
             let item = components.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19872,7 +19875,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -19887,7 +19890,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19902,7 +19905,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -19920,7 +19923,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19935,7 +19938,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -19950,7 +19953,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19965,7 +19968,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -19975,13 +19978,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -19996,7 +19999,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -20012,7 +20015,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20027,7 +20030,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -20044,12 +20047,12 @@ function flattenComponent(map, accessory) {
             let item1 = components1.forEach((id) => {
               const result = obj.set(id.id, id);
               const type = id.type;
-              if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 const components = id.components;
                 const item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20064,7 +20067,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -20079,7 +20082,7 @@ function flattenComponent(map, accessory) {
                 const item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20094,7 +20097,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -20112,7 +20115,7 @@ function flattenComponent(map, accessory) {
                   const item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20127,7 +20130,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20142,7 +20145,7 @@ function flattenComponent(map, accessory) {
                   const item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20157,7 +20160,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20167,13 +20170,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   const components4 = accessory.components;
                   const item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20188,7 +20191,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -20204,7 +20207,7 @@ function flattenComponent(map, accessory) {
                 const item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20219,7 +20222,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -20239,12 +20242,12 @@ function flattenComponent(map, accessory) {
               let item2 = components2.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20259,7 +20262,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20274,7 +20277,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20289,7 +20292,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20307,7 +20310,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20322,7 +20325,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -20337,7 +20340,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20352,7 +20355,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -20362,13 +20365,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20383,7 +20386,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -20399,7 +20402,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20414,7 +20417,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -20431,12 +20434,12 @@ function flattenComponent(map, accessory) {
               let item3 = components3.forEach((id) => {
                 const result = obj.set(id.id, id);
                 const type = id.type;
-                if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   const components = id.components;
                   const item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20451,7 +20454,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20466,7 +20469,7 @@ function flattenComponent(map, accessory) {
                   const item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20481,7 +20484,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20499,7 +20502,7 @@ function flattenComponent(map, accessory) {
                     const item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20514,7 +20517,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -20529,7 +20532,7 @@ function flattenComponent(map, accessory) {
                     const item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20544,7 +20547,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -20554,13 +20557,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     const components4 = accessory.components;
                     const item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20575,7 +20578,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -20591,7 +20594,7 @@ function flattenComponent(map, accessory) {
                   const item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20606,7 +20609,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -20618,18 +20621,18 @@ function flattenComponent(map, accessory) {
                   });
                 }
               });
-              outer1_7(obj, accessory.accessory);
+              closure_1_7(obj, accessory.accessory);
             } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
               let components4 = accessory.components;
               let item4 = components4.forEach((id) => {
                 let result = obj.set(id.id, id);
                 let type = id.type;
-                if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                   let components = id.components;
                   let item = components.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20644,7 +20647,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20659,7 +20662,7 @@ function flattenComponent(map, accessory) {
                   let item1 = components1.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20674,7 +20677,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20692,7 +20695,7 @@ function flattenComponent(map, accessory) {
                     let item2 = components2.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20707,7 +20710,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -20722,7 +20725,7 @@ function flattenComponent(map, accessory) {
                     let item3 = components3.forEach((id) => {
                       const result = obj.set(id.id, id);
                       const type = id.type;
-                      if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         const components = id.components;
                         const item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20737,7 +20740,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           const components3 = accessory.components;
                           const item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           const components4 = accessory.components;
                           const item4 = components4.forEach(() => { ... });
@@ -20747,13 +20750,13 @@ function flattenComponent(map, accessory) {
                         const item5 = components5.forEach(() => { ... });
                       }
                     });
-                    outer1_7(obj, accessory.accessory);
+                    closure_1_7(obj, accessory.accessory);
                   } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                     let components4 = accessory.components;
                     let item4 = components4.forEach((id) => {
                       let result = obj.set(id.id, id);
                       let type = id.type;
-                      if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                         let components = id.components;
                         let item = components.forEach(() => { ... });
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20768,7 +20771,7 @@ function flattenComponent(map, accessory) {
                         } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                           let components3 = accessory.components;
                           let item3 = components3.forEach(() => { ... });
-                          outer1_7(obj, accessory.accessory);
+                          closure_1_7(obj, accessory.accessory);
                         } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                           let components4 = accessory.components;
                           let item4 = components4.forEach(() => { ... });
@@ -20784,7 +20787,7 @@ function flattenComponent(map, accessory) {
                   let item5 = components5.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20799,7 +20802,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -20817,12 +20820,12 @@ function flattenComponent(map, accessory) {
             let item5 = components5.forEach((id) => {
               let result = obj.set(id.id, id);
               let type = id.type;
-              if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+              if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                 let components = id.components;
                 let item = components.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20837,7 +20840,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -20852,7 +20855,7 @@ function flattenComponent(map, accessory) {
                 let item1 = components1.forEach((id) => {
                   const result = obj.set(id.id, id);
                   const type = id.type;
-                  if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     const components = id.components;
                     const item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20867,7 +20870,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       const components3 = accessory.components;
                       const item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       const components4 = accessory.components;
                       const item4 = components4.forEach(() => { ... });
@@ -20885,7 +20888,7 @@ function flattenComponent(map, accessory) {
                   let item2 = components2.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20900,7 +20903,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20915,7 +20918,7 @@ function flattenComponent(map, accessory) {
                   let item3 = components3.forEach((id) => {
                     const result = obj.set(id.id, id);
                     const type = id.type;
-                    if (obj(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (obj(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       const components = id.components;
                       const item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20930,7 +20933,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         const components3 = accessory.components;
                         const item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         const components4 = accessory.components;
                         const item4 = components4.forEach(() => { ... });
@@ -20940,13 +20943,13 @@ function flattenComponent(map, accessory) {
                       const item5 = components5.forEach(() => { ... });
                     }
                   });
-                  outer1_7(obj, accessory.accessory);
+                  closure_1_7(obj, accessory.accessory);
                 } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                   let components4 = accessory.components;
                   let item4 = components4.forEach((id) => {
                     let result = obj.set(id.id, id);
                     let type = id.type;
-                    if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                    if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                       let components = id.components;
                       let item = components.forEach(() => { ... });
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20961,7 +20964,7 @@ function flattenComponent(map, accessory) {
                       } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                         let components3 = accessory.components;
                         let item3 = components3.forEach(() => { ... });
-                        outer1_7(obj, accessory.accessory);
+                        closure_1_7(obj, accessory.accessory);
                       } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                         let components4 = accessory.components;
                         let item4 = components4.forEach(() => { ... });
@@ -20977,7 +20980,7 @@ function flattenComponent(map, accessory) {
                 let item5 = components5.forEach((id) => {
                   let result = obj.set(id.id, id);
                   let type = id.type;
-                  if (outer1_0(outer1_2[5]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[5]).ComponentType.ACTION_ROW === type) {
                     let components = id.components;
                     let item = components.forEach(() => { ... });
                   } else if (tmp2(tmp3[5]).ComponentType.SECTION === type) {
@@ -20992,7 +20995,7 @@ function flattenComponent(map, accessory) {
                     } else if (tmp2(tmp3[5]).ComponentType.SECTION === type2) {
                       let components3 = accessory.components;
                       let item3 = components3.forEach(() => { ... });
-                      outer1_7(obj, accessory.accessory);
+                      closure_1_7(obj, accessory.accessory);
                     } else if (tmp2(tmp3[5]).ComponentType.CONTAINER === type2) {
                       let components4 = accessory.components;
                       let item4 = components4.forEach(() => { ... });
@@ -21072,7 +21075,7 @@ function getComponentChildren(type) {
                                   if (tmp(1954).ComponentType.RADIO_GROUP !== type) {
                                     if (tmp(1954).ComponentType.CHECKBOX_GROUP !== type) {
                                       if (tmp(1954).ComponentType.CHECKBOX !== type) {
-                                        tmp2.warn("getComponentChildren: Unknown component type", type.type);
+                                        logger.warn("getComponentChildren: Unknown component type", type.type);
                                         return [];
                                       }
                                     }
@@ -21096,16 +21099,6 @@ function getComponentChildren(type) {
   }
 }
 function transformComponent(accessory, items) {
-  let animated;
-  let required;
-  let required2;
-  let required3;
-  let required4;
-  let required5;
-  let required6;
-  let required7;
-  let required8;
-  let required9;
   const _require = items;
   const type = accessory.type;
   let tmp = _require;
@@ -21178,14 +21171,14 @@ function transformComponent(accessory, items) {
     }
   }
   if (flag) {
-    const importDefault = true;
+    importDefault = true;
     const type2 = accessory.type;
     if (tmp(1954).ComponentType.ACTION_ROW === type2) {
       const components = accessory.components;
       const mapped = components.map((arg0, arg1) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(closure_0, 0)] = arg1;
-        const tmp = outer1_10(arg0, items);
+        const tmp = closure_1_10(arg0, items);
         let tmp2 = null;
         if (null != tmp) {
           tmp2 = tmp;
@@ -21210,14 +21203,14 @@ function transformComponent(accessory, items) {
         ({ id: obj46[0], name: obj46[1], animated: obj46[2] } = emoji);
         let emojiURL;
         if (null != emoji.id) {
-          const obj1 = { id: null, animated: null, size: 48 };
+          obj1 = { id: null, animated: null, size: 48 };
           ({ id: obj48[0], animated } = emoji);
           if (!animated) {
             animated = false;
           }
           obj1[1] = animated;
-          emojiURL = getAvatarURL.getEmojiURL(obj1);
-          const obj47 = getAvatarURL;
+          emojiURL = getAvatarURLDefault.getEmojiURL(obj1);
+          const obj47 = getAvatarURLDefault;
         }
         obj[3] = emojiURL;
         tmp45 = obj;
@@ -21241,12 +21234,11 @@ function transformComponent(accessory, items) {
       obj3[4] = required9;
       const options = accessory.options;
       obj3[5] = options.map((label) => {
-        let animated;
-        let obj = { type: items(outer1_2[10]).SelectOptionType.STRING, label: label.label, value: label.value, default: label.default, description: label.description, emoji: null };
+        let obj = { type: items(closure_1_2[10]).SelectOptionType.STRING, label: label.label, value: label.value, default: label.default, description: label.description, emoji: null };
         let tmp2;
         if (null != label.emoji) {
           const emoji = label.emoji;
-          if (typeof outer1_5 !== "function") {
+          if (typeof closure_1_5 !== "function") {
             HermesBuiltin.throwTypeError();
           }
           obj = { id: null, name: null, animated: null, src: null };
@@ -21260,8 +21252,8 @@ function transformComponent(accessory, items) {
                 animated = false;
               }
               obj[1] = animated;
-              emojiURL = _true(outer1_2[2]).getEmojiURL(obj);
-              const obj3 = _true(outer1_2[2]);
+              emojiURL = _true(closure_1_2[2]).getEmojiURL(obj);
+              const obj3 = _true(closure_1_2[2]);
             }
           }
           obj[3] = emojiURL;
@@ -21331,9 +21323,9 @@ function transformComponent(accessory, items) {
     } else if (tmp(1954).ComponentType.SECTION === type2) {
       const components1 = accessory.components;
       const mapped1 = components1.map((arg0, arg1) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(closure_0, 0)] = arg1;
-        const tmp = outer1_10(arg0, items);
+        const tmp = closure_1_10(arg0, items);
         let tmp2 = null;
         if (null != tmp) {
           tmp2 = tmp;
@@ -21382,8 +21374,7 @@ function transformComponent(accessory, items) {
       obj12[1] = tmp(4813).asComponentId(items.join(","));
       const items1 = accessory.items;
       obj12[2] = items1.map((media) => {
-        const obj = { media: null, description: null, spoiler: null };
-        obj[0] = items(table[7]).toUnfurledMediaItem(media.media);
+        const obj = { media: items(table[7]).toUnfurledMediaItem(media.media), description: null, spoiler: null };
         ({ description: obj[1], spoiler: obj[2] } = media);
         return obj;
       });
@@ -21425,9 +21416,9 @@ function transformComponent(accessory, items) {
     } else if (tmp(1954).ComponentType.CONTAINER === type2) {
       const components2 = accessory.components;
       const mapped2 = components2.map((arg0, arg1) => {
-        const items = [];
+        items = [];
         items[HermesBuiltin.arraySpread(closure_0, 0)] = arg1;
-        const tmp = outer1_10(arg0, items);
+        const tmp = closure_1_10(arg0, items);
         let tmp2 = null;
         if (null != tmp) {
           tmp2 = tmp;
@@ -21497,7 +21488,7 @@ function transformComponent(accessory, items) {
         obj20[7] = tmp12;
         let tmp13;
         if (null != checkpoint_data.top_emoji) {
-          obj7 = DISCORD_EPOCH;
+          obj7 = DISCORD_EPOCHDefault;
           let emoji_id;
           if (obj7.isProbablyAValidSnowflake(checkpoint_data.top_emoji.emoji_id)) {
             emoji_id = checkpoint_data.top_emoji.emoji_id;
@@ -21554,19 +21545,20 @@ function transformComponent(accessory, items) {
       ({ custom_id: obj[2], default: obj[3] } = accessory);
       return obj;
     } else {
-      tmp2.warn("transformComponent: Unknown component type", accessory.type);
+      logger.warn("transformComponent: Unknown component type", accessory.type);
       return null;
     }
   } else {
     return null;
   }
 }
-let c4 = new require("getSystemLocale")("InteractionComponentUtils");
+const CheckpointVersions = CheckpointPersonas.CheckpointVersions;
+let closure_4 = new timestampDefault("InteractionComponentUtils");
 function getEmoji(arg0, arg1) {
 
 }
-let tmp2 = new require("getSystemLocale")("InteractionComponentUtils");
-let result = require("getAvatarURL").fileFinishedImporting("modules/interaction_components/InteractionComponentUtils.tsx");
+let tmp2 = new timestampDefault("InteractionComponentUtils");
+let result = set.fileFinishedImporting("modules/interaction_components/InteractionComponentUtils.tsx");
 
 export const getLayoutComponentErrorText = function getLayoutComponentErrorText(interaction, message, accessory) {
   let interactionType;
@@ -21707,7 +21699,7 @@ export const getFirstInteractionComponentMedia = function getFirstInteractionCom
   return null;
 };
 export const getParents = function getParents(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   function search(arg0) {
     let items = arg1;
     if (arg1 === undefined) {
@@ -21717,8 +21709,8 @@ export const getParents = function getParents(arg0, arg1) {
     const nextResult = iter.next();
     while (iter !== undefined) {
       let tmp2 = nextResult;
-      let tmp3 = outer1_9;
-      let obj = outer1_9(nextResult);
+      let tmp3 = closure_1_9;
+      let obj = closure_1_9(nextResult);
       let tmp4 = obj;
       if (obj.some((id) => id.id === id.id)) {
         let tmp14 = nextResult;
@@ -21807,7 +21799,7 @@ export const getFileUploadComponentSubtitle = function getFileUploadComponentSub
       let formatResult1 = intl6.format(getSystemLocale.t.Xp4xMV, obj);
     } else {
       const intl5 = getSystemLocale.intl;
-      const obj1 = { minValues: null, maxValues: null, types: null, maxSize: null };
+      obj1 = { minValues: null, maxValues: null, types: null, maxSize: null };
       obj1[0] = minValues;
       obj1[1] = maxValues;
       obj1[2] = types;

@@ -1,28 +1,24 @@
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 createCacheKey = { container: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.lg, alignItems: "center", padding: 12 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.lg, alignItems: "center", padding: 12 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
 
 export default function AppLauncherChoicesOption(option) {
-  let autoFocus;
-  let hasError;
-  let importDefault;
-  let onSelect;
-  let style;
   option = option.option;
   ({ initialValue: importDefault, onSelect } = option);
   const onOpenChoicesSheet = option.onOpenChoicesSheet;
   const onDismissChoicesSheet = option.onDismissChoicesSheet;
   let first;
-  let createCacheKey;
+  let callback;
   ({ style, autoFocus, hasError } = option);
   const tmp3 = onOpenChoicesSheet(onDismissChoicesSheet.useState(() => {
     if (null != type) {
@@ -44,20 +40,20 @@ export default function AppLauncherChoicesOption(option) {
     }
   }), 2);
   first = tmp3[0];
-  createCacheKey = tmp3[1];
+  callback = tmp3[1];
   const items = [onDismissChoicesSheet, onOpenChoicesSheet, onSelect, option, ];
   let index;
   if (first != null) {
     index = first.index;
   }
   items[4] = index;
-  const callback = onDismissChoicesSheet.useCallback(() => {
+  callback = onDismissChoicesSheet.useCallback(() => {
     onOpenChoicesSheet();
     let obj = option(onSelect[5]);
     const result = obj.dismissGlobalKeyboard();
     obj = { option, initChoiceIndex: null, onChoiceSelect: null, onDismiss: null };
     let index;
-    const obj2 = outer1_1(onSelect[6]);
+    const obj2 = closure_1_1(onSelect[6]);
     if (first != null) {
       index = first.index;
     }
@@ -72,7 +68,7 @@ export default function AppLauncherChoicesOption(option) {
   let obj = option(onSelect[9]);
   const animationDelayedAutoFocus = obj.useAnimationDelayedAutoFocus(autoFocus, callback);
   obj = { start: true, end: true, style: items1, hasError, label: null, subLabel: null, trailing: null, onPress: null };
-  items1 = [createCacheKey().container, style];
+  items1 = [callback().container, style];
   let str = "text-sm/medium";
   if (null == first) {
     str = "text-md/medium";
@@ -87,7 +83,7 @@ export default function AppLauncherChoicesOption(option) {
   obj[4] = first(option(onSelect[11]).Text, obj);
   let tmp10Result = null;
   if (null != first) {
-    const obj1 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
+    obj1 = { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: null };
     obj1[3] = first.choice.displayName;
     tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj1);
   }

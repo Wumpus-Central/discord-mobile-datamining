@@ -1,14 +1,16 @@
 // discord_app/modules/app_launcher/native/screens/home/FrecencySectionStore.tsx
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 let obj = { APPS: "apps", COMMANDS: "commands" };
 let closure_1 = { selection: null };
+const PersistedStore = initializeDefault.PersistedStore;
 class FrecencySectionStore extends PersistedStore {
 }
 const prototype = FrecencySectionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_1 = arg0;
+    closure_1 = arg0;
   }
 };
 prototype["getState"] = function getState() {
@@ -26,12 +28,12 @@ FrecencySectionStore.displayName = "FrecencySectionStore";
 FrecencySectionStore.persistKey = "FrecencySectionStore";
 obj = {
   FRECENCY_SECTION_SET_SELECTION: function handleSetSelection(selection) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.selection = selection.selection;
   }
 };
-const frecencySectionStore = new FrecencySectionStore(require("dispatcher"), obj);
+const frecencySectionStore = new FrecencySectionStore(dispatcherDefault, obj);
 const result = require("set").fileFinishedImporting("modules/app_launcher/native/screens/home/FrecencySectionStore.tsx");
 
 export default frecencySectionStore;

@@ -1,6 +1,7 @@
 // discord_app/modules/messages/BurstReactionEffectUtils.tsx
-import apply from "apply";
-import { hexToRgba } from "../../utils/ColorUtils.tsx";
+import set from "set" /* 2 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
+import apply from "apply" /* 12 */;
 
 const memoizeResult = apply.memoize((str) => {
   let length;
@@ -17,7 +18,7 @@ const memoizeResult = apply.memoize((str) => {
   }
   return Math.abs(num3);
 });
-const result = require("set").fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");
+const result = set.fileFinishedImporting("modules/messages/BurstReactionEffectUtils.tsx");
 
 export const replaceAnimationColors = function replaceAnimationColors(c5, arg1) {
   const items = [, , ];

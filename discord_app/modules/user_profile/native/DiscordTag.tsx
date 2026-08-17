@@ -1,34 +1,28 @@
 // discord_app/modules/user_profile/native/DiscordTag.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getBotLabel } from "../../applications/native/BotTag.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import getBotLabelDefault from "getBotLabel" /* 9462 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: null };
-createCacheKey = { marginLeft: require("Themes").space.PX_4 };
+createCacheKey = { marginLeft: ThemesDefault.space.PX_4 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/DiscordTag.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_profile/native/DiscordTag.tsx");
 
 export default function DiscordTag(arg0) {
-  let discriminatorStyle;
-  let hideBotTag;
-  let nick;
-  let nicknameStyle;
-  let user;
-  let usernameStyle;
   ({ user, nick, hideBotTag } = arg0);
   ({ usernameStyle, nicknameStyle, discriminatorStyle } = arg0);
   if (hideBotTag === undefined) {
     hideBotTag = false;
   }
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   if (null != nick) {
     obj = { variant: "text-md/semibold", maxFontSizeMultiplier: 2, style: null, lineClamp: 1, children: null };
@@ -44,7 +38,7 @@ export default function DiscordTag(arg0) {
       const hasUniqueUsernameResult = user.hasUniqueUsername();
       tmp2Result = !hasUniqueUsernameResult;
       if (!hasUniqueUsernameResult) {
-        const obj1 = { variant: "text-md/semibold", color: "text-muted", style: null, children: null };
+        obj1 = { variant: "text-md/semibold", color: "text-muted", style: null, children: null };
         obj1[2] = discriminatorStyle;
         const items1 = ["#", user.discriminator];
         obj1[3] = items1;
@@ -68,8 +62,8 @@ export default function DiscordTag(arg0) {
       const obj2 = { style: null, verified: null };
       obj2[0] = tmp.botTag;
       obj2[1] = user.isVerifiedBot();
-      tmp13 = callback(getBotLabel, obj2);
-      const tmp17 = getBotLabel;
+      tmp13 = callback(getBotLabelDefault, obj2);
+      const tmp17 = getBotLabelDefault;
     }
   }
   items2[1] = tmp13;

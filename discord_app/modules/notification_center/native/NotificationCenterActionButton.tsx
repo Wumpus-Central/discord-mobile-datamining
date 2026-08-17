@@ -1,20 +1,35 @@
 // discord_app/modules/notification_center/native/NotificationCenterActionButton.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../_runtime/09416_registerAsset.js";
-import { IconButton } from "../../../design/components/Button/native/IconButton.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import IconButton from "IconButton" /* 8035 */;
+import registerAssetDefault from "registerAsset" /* 9416 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("IconButton").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/notification_center/native/NotificationCenterActionButton.tsx");
 
 export default function NotificationCenterActionButton() {
-  const obj = { variant: "tertiary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 2 };
-  obj[2] = registerAsset;
-  obj[3] = function onPress() {
-    return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
+  const obj = {
+    variant: "tertiary",
+    size: "sm",
+    icon: registerAssetDefault,
+    onPress() {
+      return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
+    },
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 2
   };
   const intl = getSystemLocale.intl;
   obj[4] = intl.string(getSystemLocale.t["UKOtz+"]);
-  return jsx(IconButton.IconButton, { variant: "tertiary", size: "sm", icon: null, onPress: null, accessibilityLabel: null, maxFontSizeMultiplier: 2 });
+  return jsx(IconButton.IconButton, {
+    variant: "tertiary",
+    size: "sm",
+    icon: registerAssetDefault,
+    onPress() {
+      return callback2(paths[4]).openLazy(callback(paths[6])(paths[5], paths.paths), "NotificationCenterActionSheet");
+    },
+    accessibilityLabel: null,
+    maxFontSizeMultiplier: 2
+  });
 };

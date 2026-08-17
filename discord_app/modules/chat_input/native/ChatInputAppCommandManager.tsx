@@ -1,17 +1,15 @@
 // discord_app/modules/chat_input/native/ChatInputAppCommandManager.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "addGameMention";
-import handleInit from "handleInit";
-import closure_7 from "handleInit";
-import handleLoadMessages from "handleLoadMessages";
-import set from "set";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import regExp from "regExp";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_6 from "handleInit" /* 7526 */;
+import closure_7 from "handleInit" /* 7527 */;
+import closure_8 from "handleLoadMessages" /* 4505 */;
+import closure_9 from "set" /* 6899 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
+import regExp from "regExp" /* 6810 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let map1;
-let unpackModuleId;
 const require = arg1;
 function areResolvedGamesEqual(size, size2) {
   if (size === size2) {
@@ -41,19 +39,19 @@ function areResolvedGamesEqual(size, size2) {
 let c5 = importAllResult;
 ({ extractGameMentionIds: unpackModuleId, GAME_MENTION_RAW_RE_GLOBAL: closure_12, GAME_MENTION_SENTINEL: map1 } = regExp);
 let obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
-obj = { backgroundColor: require("Themes").colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: require("Themes").colors.TEXT_DEFAULT, borderRadius: require("Themes").radii.xs, fontSize: 14 };
+obj = { backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: ThemesDefault.colors.TEXT_DEFAULT, borderRadius: ThemesDefault.radii.xs, fontSize: 14 };
 obj[0] = obj;
-createCacheKey = { backgroundColor: require("Themes").colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL, borderRadius: require("Themes").radii.xs, fontSize: 14 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.KEYWORD_HIGHLIGHT_BACKGROUND, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL, borderRadius: ThemesDefault.radii.xs, fontSize: 14 };
 obj[1] = createCacheKey;
-obj[2] = { backgroundColor: require("Themes").colors.MENTION_BACKGROUND, color: require("Themes").colors.MENTION_FOREGROUND, borderRadius: require("Themes").radii.xs, fontSize: 14, fontWeight: "bold" };
-let obj2 = { backgroundColor: require("Themes").colors.MENTION_BACKGROUND, color: require("Themes").colors.MENTION_FOREGROUND, borderRadius: require("Themes").radii.xs, fontSize: 14, fontWeight: "bold" };
-obj[3] = { color: require("Themes").colors.TEXT_BRAND, fontWeight: "bold" };
+obj[2] = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+let obj2 = { backgroundColor: ThemesDefault.colors.MENTION_BACKGROUND, color: ThemesDefault.colors.MENTION_FOREGROUND, borderRadius: ThemesDefault.radii.xs, fontSize: 14, fontWeight: "bold" };
+obj[3] = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 let closure_14 = createCacheKey.createStyles(obj);
 const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   chatInputRef = chatInputRef.chatInputRef;
   let first = chatInputRef;
   const chatInputStateRef = chatInputRef.chatInputStateRef;
-  let closure_1 = chatInputStateRef;
+  closure_1 = chatInputStateRef;
   const channel = chatInputRef.channel;
   const commandsDisabled = chatInputRef.commandsDisabled;
   let callback;
@@ -61,9 +59,9 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   let stateFromStores;
   let stateFromStores1;
   ref = undefined;
-  let set;
+  closure_9 = undefined;
   let commands;
-  let closure_11;
+  closure_11 = undefined;
   callback = undefined;
   first = undefined;
   let stateFromStores2;
@@ -82,7 +80,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   let substr = text.slice(1);
   ref = applicationCommandOptionValueParser.useRef(substr.trimEnd());
   const tmp6 = callback(applicationCommandOptionValueParser.useState(ref.current), 2);
-  set = tmp6[1];
+  closure_9 = tmp6[1];
   const obj4 = first(commandsDisabled[16]);
   commands = channel(commandsDisabled[17]).useCachedResults({ type: "channel", channel }, first(commandsDisabled[18]).ApplicationCommandType.CHAT, tmp6[0]).commands;
   closure_11 = applicationCommandOptionValueParser.useRef(undefined);
@@ -92,7 +90,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   first = tmp7[0];
   closure_1 = tmp7[1];
   callback = applicationCommandOptionValueParser.useCallback((arg0) => {
-    let closure_0 = ref(arg0);
+    closure_0 = ref(arg0);
     lib((arg0) => {
       let tmp = closure_0;
       if (obj.isEqual(arg0, closure_0)) {
@@ -106,10 +104,9 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   const obj6 = channel(commandsDisabled[17]);
   const games = first(commandsDisabled[12]).useGames(memo);
   const obj7 = first(commandsDisabled[12]);
-  const items3 = [ref, commands, set];
+  const items3 = [ref, commands, closure_9];
   const items4 = [first];
   stateFromStores2 = first(commandsDisabled[13]).useStateFromStores(items3, () => {
-    let media;
     if (0 === first.length) {
       return null;
     } else {
@@ -166,10 +163,6 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   }, items4, callback1);
   const items5 = [stateFromStores, channel, chatInputRef, chatInputStateRef, commandsDisabled, stateFromStores1, applicationCommandOptionValueParser, commands, tmp, callback];
   callback1 = applicationCommandOptionValueParser.useCallback(() => {
-    let editId;
-    let focused;
-    let selectionEnd;
-    let selectionStart;
     const current = lib.current;
     let text = current.text;
     ({ editId, focused, selectionStart, selectionEnd } = current);
@@ -180,16 +173,16 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
       obj[0] = obj;
       obj[1] = closure_0;
       obj[2] = applicationCommandOptionValueParser;
-      closure_0 = c4;
+      closure_0 = closure_4;
       obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
       obj[0] = function commandOption() {
-        return lib(outer1_3[10]).convertToNativeStyle(lib.commandOption);
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
       };
       obj[1] = function commandErrorOption() {
-        return lib(outer1_3[10]).convertToNativeStyle(lib.commandErrorOption);
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandErrorOption);
       };
       obj[2] = function gameMention() {
-        return lib(outer1_3[10]).convertToNativeStyle(lib.gameMention);
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
       };
       obj[3] = function autocomplete(color) {
         if (null == color) {
@@ -199,14 +192,14 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
           const merged = Object.assign(lib.autocomplete);
           autocomplete.color = color;
         }
-        return lib(outer1_3[10]).convertToNativeStyle(autocomplete);
+        return lib(closure_1_3[10]).convertToNativeStyle(autocomplete);
       };
       obj[3] = obj;
       const tmp12 = new lib(commandsDisabled[19])(obj);
       tmp2.current = tmp12;
     } else {
       const current2 = tmp2.current;
-      const obj1 = { newState: null };
+      obj1 = { newState: null };
       obj1[0] = obj;
       const result = current2.updateApplicationCommandManagerState(obj1);
     }
@@ -226,16 +219,16 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   const effect1 = applicationCommandOptionValueParser.useEffect(() => {
     const current = ref.current;
     if (current != null) {
-      let closure_0 = c4;
+      closure_0 = closure_4;
       const obj = { commandOption: null, commandErrorOption: null, gameMention: null, autocomplete: null };
       obj[0] = function commandOption() {
-        return lib(outer1_3[10]).convertToNativeStyle(lib.commandOption);
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandOption);
       };
       obj[1] = function commandErrorOption() {
-        return lib(outer1_3[10]).convertToNativeStyle(lib.commandErrorOption);
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.commandErrorOption);
       };
       obj[2] = function gameMention() {
-        return lib(outer1_3[10]).convertToNativeStyle(lib.gameMention);
+        return lib(closure_1_3[10]).convertToNativeStyle(lib.gameMention);
       };
       obj[3] = function autocomplete(color) {
         if (null == color) {
@@ -245,7 +238,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
           const merged = Object.assign(lib.autocomplete);
           autocomplete.color = color;
         }
-        return lib(outer1_3[10]).convertToNativeStyle(autocomplete);
+        return lib(closure_1_3[10]).convertToNativeStyle(autocomplete);
       };
       current.updateStyles(obj);
     }
@@ -264,7 +257,7 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
               const value = store.get(arg1);
               if (null != value) {
                 const _HermesInternal = HermesInternal;
-                combined = "" + outer1_13 + value.name;
+                combined = "" + closure_1_13 + value.name;
               }
               return combined;
             });
@@ -294,8 +287,8 @@ const forwardRefResult = importAllResult.forwardRef((chatInputRef, ref) => {
   return null;
 });
 forwardRefResult.displayName = "ChatInputAppCommandManager";
-let obj3 = { color: require("Themes").colors.TEXT_BRAND, fontWeight: "bold" };
+let obj3 = { color: ThemesDefault.colors.TEXT_BRAND, fontWeight: "bold" };
 const memoResult = importAllResult.memo(forwardRefResult);
-let result = require("handleInit").fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
+let result = require("set").fileFinishedImporting("modules/chat_input/native/ChatInputAppCommandManager.tsx");
 
 export default memoResult;

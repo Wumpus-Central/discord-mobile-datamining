@@ -1,11 +1,10 @@
 // discord_app/modules/debug/serializePushNotifcationLogs.tsx
-import ME from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
 
-let c3;
-let obj1;
 ({ DEVICE_TOKEN: obj1, DEVICE_VOIP_TOKEN: c3 } = ME);
-const result = require("set").fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
+const result = set.fileFinishedImporting("modules/debug/serializePushNotifcationLogs.tsx");
 
 export default function serializePushNotificationLogs(arr) {
   const _require = arg1;

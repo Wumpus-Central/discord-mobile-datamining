@@ -1,28 +1,27 @@
 // discord_app/modules/user_profile/WidgetUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import initialize from "initialize";
-import items from "items";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH as closure_11 } from "USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH";
-import { GAME_WIDGET_LIMITS_BY_TYPE } from "../../../discord_common/js/shared/shared-constants/GameWidgetLimits.tsx";
+import isAgeRestrictedContentClassification from "isAgeRestrictedContentClassification" /* 4786 */;
+import items3 from "items" /* 5367 */;
+import GAME_WIDGET_LIMITS_BY_TYPE from "GAME_WIDGET_LIMITS_BY_TYPE" /* 5368 */;
+import _modDef5373 from "module_5373" /* 5373 */;
+import convertClip from "convertClip" /* 5374 */;
+import isFieldEmpty from "isFieldEmpty" /* 5375 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "createUserWidgetFromServer" /* 5365 */;
+import closure_6 from "initialize" /* 5370 */;
+import items from "items" /* 5371 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH as closure_11 } from "USER_WIDGET_CLIPS_GALLERY_MAX_LENGTH" /* 5372 */;
 import { WidgetGameTag } from "../../../discord_common/js/shared/shared-constants/WidgetGameTag.tsx";
 import { WidgetType } from "../../../discord_common/js/shared/shared-constants/WidgetType.tsx";
-import { isAgeRestrictedContentClassification } from "../content_classification/utils.tsx";
 import { convertClip } from "UserProfileClipsGalleryWidgetTypes.tsx";
 import { items } from "UserProfileGameWidgetTypes.tsx";
-import { isFieldEmpty } from "UserProfilePersonalWidget.tsx";
-import { WidgetActionCreators } from "WidgetActionCreators.tsx";
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function findGameWidget(widgetType) {
   const _require = widgetType;
-  if (initialize.hasPendingChanges()) {
-    let pendingWidgets = initialize.getPendingWidgets();
+  if (closure_6.hasPendingChanges()) {
+    let pendingWidgets = closure_6.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
     }
@@ -49,8 +48,8 @@ function findGameWidget(widgetType) {
   return found1;
 }
 function replaceWidgetInList(baseGameWidget) {
-  let closure_0 = baseGameWidget;
-  if (initialize.hasPendingChanges()) {
+  closure_0 = baseGameWidget;
+  if (closure_6.hasPendingChanges()) {
     let pendingWidgets = obj.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
@@ -84,10 +83,10 @@ function replaceWidgetInList(baseGameWidget) {
     items1[findIndexResult] = baseGameWidget;
     return items1;
   }
-  obj = initialize;
+  obj = closure_6;
 }
-({ WIDGET_TITLES_BY_TYPE: error, WIDGETS_SUPPORTING_COMMENT: metroImportAll, WIDGETS_SUPPORTING_TAGS: c9 } = items);
-let result = require("createUserWidgetFromServer").fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
+({ WIDGET_TITLES_BY_TYPE: error, WIDGETS_SUPPORTING_COMMENT: closure_8, WIDGETS_SUPPORTING_TAGS: c9 } = items);
+let result = require("set").fileFinishedImporting("modules/user_profile/WidgetUtils.tsx");
 
 export const getWidgetTitle = function getWidgetTitle(widget) {
   return dependencyMap[widget.type](widget);
@@ -147,8 +146,8 @@ export const getSavedWidgets = function getSavedWidgets() {
 export { replaceWidgetInList };
 export const addWidgetToPending = function addWidgetToPending(type) {
   const _require = type;
-  let obj = initialize;
-  if (initialize.hasPendingChanges()) {
+  let obj = closure_6;
+  if (closure_6.hasPendingChanges()) {
     let pendingWidgets = obj.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
@@ -180,14 +179,14 @@ export const addWidgetToPending = function addWidgetToPending(type) {
     }
     const items = [type];
     HermesBuiltin.arraySpread(tmp7, 1);
-    WidgetActionCreators.setPendingWidgets(items);
-    const obj4 = WidgetActionCreators;
+    _modDef5373.setPendingWidgets(items);
+    const obj4 = _modDef5373;
   }
 };
 export const removeWidgetFromPending = function removeWidgetFromPending(arg0) {
-  let closure_0 = arg0;
-  if (initialize.hasPendingChanges()) {
-    let pendingWidgets = initialize.getPendingWidgets();
+  closure_0 = arg0;
+  if (closure_6.hasPendingChanges()) {
+    let pendingWidgets = closure_6.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
     }
@@ -210,11 +209,11 @@ export const removeWidgetFromPending = function removeWidgetFromPending(arg0) {
     const uniqueKey = getUniqueKey.getUniqueKey();
     return uniqueKey !== uniqueKey.getUniqueKey();
   });
-  WidgetActionCreators.setPendingWidgets(found);
+  _modDef5373.setPendingWidgets(found);
 };
 export const addPendingClipToClipsGalleryWidget = function addPendingClipToClipsGalleryWidget(arg0) {
-  let obj = initialize;
-  if (initialize.hasPendingChanges()) {
+  let obj = closure_6;
+  if (closure_6.hasPendingChanges()) {
     let pendingWidgets = obj.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
@@ -256,15 +255,14 @@ export const addPendingClipToClipsGalleryWidget = function addPendingClipToClips
     items[HermesBuiltin.arraySpread(clips, 0)] = arg0;
     obj[1] = items;
     const clipsGalleryWidget = new convertClip.ClipsGalleryWidget(obj);
-    WidgetActionCreators.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-    const obj3 = WidgetActionCreators;
+    _modDef5373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = _modDef5373;
   }
 };
 export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInClipsGalleryWidget(arg0, str) {
-  let clips;
   const _require = arg0;
-  let obj = initialize;
-  if (initialize.hasPendingChanges()) {
+  let obj = closure_6;
+  if (closure_6.hasPendingChanges()) {
     let pendingWidgets = obj.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
@@ -289,7 +287,7 @@ export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInCli
     found = null;
   }
   if (null != found) {
-    const importDefault = str.trim();
+    importDefault = str.trim();
     obj = { id: null, clips: null };
     ({ id: obj2[0], clips } = found);
     obj[1] = clips.map((id) => {
@@ -307,15 +305,14 @@ export const updateClipTitleInClipsGalleryWidget = function updateClipTitleInCli
       return tmp;
     });
     const clipsGalleryWidget = new _convertClip.ClipsGalleryWidget(obj);
-    WidgetActionCreators.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-    const obj3 = WidgetActionCreators;
+    _modDef5373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = _modDef5373;
   }
 };
 export const removeClipFromClipsGalleryWidget = function removeClipFromClipsGalleryWidget(arg0) {
-  let clips;
   const _require = arg0;
-  let obj = initialize;
-  if (initialize.hasPendingChanges()) {
+  let obj = closure_6;
+  if (closure_6.hasPendingChanges()) {
     let pendingWidgets = obj.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
@@ -344,12 +341,12 @@ export const removeClipFromClipsGalleryWidget = function removeClipFromClipsGall
     ({ id: obj2[0], clips } = found);
     obj[1] = clips.filter((id) => id.id !== closure_0);
     const clipsGalleryWidget = new _convertClip.ClipsGalleryWidget(obj);
-    WidgetActionCreators.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
-    const obj3 = WidgetActionCreators;
+    _modDef5373.setPendingWidgets(replaceWidgetInList(clipsGalleryWidget));
+    const obj3 = _modDef5373;
   }
 };
 export const updatePersonalWidget = function updatePersonalWidget(arg0) {
-  if (initialize.hasPendingChanges()) {
+  if (closure_6.hasPendingChanges()) {
     let pendingWidgets = obj.getPendingWidgets();
     if (pendingWidgets == null) {
       pendingWidgets = [];
@@ -377,10 +374,10 @@ export const updatePersonalWidget = function updatePersonalWidget(arg0) {
     found = isFieldEmpty.createDefaultPersonalWidget();
     const obj2 = isFieldEmpty;
   }
-  obj = initialize;
+  obj = closure_6;
   const tmp = replaceWidgetInList;
   const tmpResult = replaceWidgetInList(arg0(found));
-  WidgetActionCreators.setPendingWidgets(tmpResult);
+  _modDef5373.setPendingWidgets(tmpResult);
 };
 export const updatePendingGameTags = function updatePendingGameTags(widgetType, arg1, tags) {
   const _require = arg1;
@@ -493,8 +490,6 @@ export const updatePendingGameComment = function updatePendingGameComment(widget
   }
 };
 export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxGames) {
-  let game;
-  let widgetType;
   ({ widgetType, game } = ignoreMaxGames);
   let flag = ignoreMaxGames.ignoreMaxGames;
   if (flag === undefined) {
@@ -543,14 +538,14 @@ export const addPendingGameToWidget = function addPendingGameToWidget(ignoreMaxG
   const baseGameWidget = new tmp2(5367).BaseGameWidget(obj);
   const tmp7 = replaceWidgetInList;
   const tmp7Result = replaceWidgetInList(baseGameWidget);
-  WidgetActionCreators.setPendingWidgets(tmp7Result);
+  _modDef5373.setPendingWidgets(tmp7Result);
   const useGame = tmp2(5378).useGame;
   const items2 = [game.gameId];
   const many = useGame.fetchMany(items2);
 };
 export const reorderWidgets = function reorderWidgets(arg0, arg1) {
   if (arg0 !== arg1) {
-    if (initialize.hasPendingChanges()) {
+    if (closure_6.hasPendingChanges()) {
       let pendingWidgets = obj2.getPendingWidgets();
       if (pendingWidgets == null) {
         pendingWidgets = [];
@@ -577,13 +572,13 @@ export const reorderWidgets = function reorderWidgets(arg0, arg1) {
             const items = [];
             HermesBuiltin.arraySpread(widgets, 0);
             items.splice(arg1, 0, callback(items.splice(arg0, 1), 1)[0]);
-            WidgetActionCreators.setPendingWidgets(items);
-            const obj = WidgetActionCreators;
+            _modDef5373.setPendingWidgets(items);
+            const obj = _modDef5373;
           }
         }
       }
     }
-    obj2 = initialize;
+    obj2 = closure_6;
   }
 };
 export const reorderGamesInWidget = function reorderGamesInWidget(widgetType) {
@@ -601,10 +596,10 @@ export const reorderGamesInWidget = function reorderGamesInWidget(widgetType) {
                 const obj = {};
                 const merged = Object.assign(tmp);
                 obj.games = items;
-                const baseGameWidget = new items.BaseGameWidget(obj);
+                const baseGameWidget = new items3.BaseGameWidget(obj);
                 const tmp19 = replaceWidgetInList(baseGameWidget);
-                WidgetActionCreators.setPendingWidgets(tmp19);
-                const obj2 = WidgetActionCreators;
+                _modDef5373.setPendingWidgets(tmp19);
+                const obj2 = _modDef5373;
               }
             }
           }
@@ -624,8 +619,8 @@ export const removePendingGameFromWidget = function removePendingGameFromWidget(
     const baseGameWidget = new _items.BaseGameWidget(obj);
     const arr = null != merged.games ? merged.games : [];
     const tmp13 = replaceWidgetInList(baseGameWidget);
-    WidgetActionCreators.setPendingWidgets(tmp13);
-    const obj2 = WidgetActionCreators;
+    _modDef5373.setPendingWidgets(tmp13);
+    const obj2 = _modDef5373;
   }
 };
 export const isGameLimitReached = function isGameLimitReached(type) {
@@ -637,15 +632,15 @@ export const isGameLimitReached = function isGameLimitReached(type) {
   return type.games.length >= num;
 };
 export const areWidgetGamesEqual = function areWidgetGamesEqual(games, games2, type) {
-  let closure_0 = games2;
-  let closure_1 = type;
+  closure_0 = games2;
+  closure_1 = type;
   return games.length === games2.length && games.every((gameId) => {
-    let games2;
+    games2 = undefined;
     let flag = false;
     if (gameId.gameId === games2[arg1].gameId) {
-      if (!outer1_8.includes(tmp2)) {
+      if (!closure_1_8.includes(tmp2)) {
         flag = true;
-        if (outer1_9.includes(tmp2)) {
+        if (closure_1_9.includes(tmp2)) {
           const tags = gameId.tags;
           let tmp10 = null;
           if (null != tags) {
@@ -682,7 +677,7 @@ export const areWidgetGamesEqual = function areWidgetGamesEqual(games, games2, t
                 flag = false;
                 if (tmp10.length === tmp12.length) {
                   flag = true;
-                  if (!tmp10.every((arg0, arg1) => arg0 === _undefined[arg1])) {
+                  if (!tmp10.every((arg0, arg1) => arg0 === _null[arg1])) {
                     flag = false;
                   }
                 }

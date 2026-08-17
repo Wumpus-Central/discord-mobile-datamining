@@ -1,48 +1,40 @@
 // discord_app/modules/parent_tools/hooks/useFamilyCenterActions.tsx
-import maybeFetchCollectiblesForInvoices from "maybeFetchCollectiblesForInvoices";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import { UserLinkStatus } from "items";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "freshTeenActivityWithMap" /* 5296 */;
+import { UserLinkStatus } from "items" /* 5297 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActions.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useFamilyCenterActions.tsx");
 
 export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
-  let maybeFetchCollectiblesForInvoices;
-  let _slicedToArray;
-  let noop;
-  let dependencyMap;
-  let tmp2;
-  let tmp4;
-  let tmp6;
-  let tmp8;
   let obj = arg0;
   if (arg0 == null) {
     obj = {};
   }
   const onError = obj.onError;
-  let closure_0 = onError;
+  closure_0 = onError;
   const onSuccess = obj.onSuccess;
   [tmp2, dependencyMap] = callback2(React.useState(false), 2);
   const tmp = callback2(React.useState(false), 2);
-  [tmp4, maybeFetchCollectiblesForInvoices] = callback2(React.useState(false), 2);
+  [tmp4, closure_3] = callback2(React.useState(false), 2);
   const tmp3 = callback2(React.useState(false), 2);
-  [tmp6, _slicedToArray] = callback2(React.useState(false), 2);
+  [tmp6, closure_4] = callback2(React.useState(false), 2);
   const tmp5 = callback2(React.useState(false), 2);
-  [tmp8, noop] = callback2(React.useState(false), 2);
+  [tmp8, closure_5] = callback2(React.useState(false), 2);
   const tmp9 = callback2(React.useState(false), 2);
   const first = tmp9[0];
-  let closure_7 = tmp9[1];
+  closure_7 = tmp9[1];
   const tmp11 = callback2(React.useState(false), 2);
   const first1 = tmp11[0];
-  let closure_9 = tmp11[1];
+  closure_9 = tmp11[1];
   const tmp13 = callback2(React.useState(false), 2);
   const first2 = tmp13[0];
-  let closure_11 = tmp13[1];
+  closure_11 = tmp13[1];
   const tmp15 = callback2(React.useState(false), 2);
-  const first3 = tmp15[0];
-  let closure_13 = tmp15[1];
+  let first3 = tmp15[0];
+  closure_13 = tmp15[1];
   let tmp17 = tmp2;
   if (!tmp2) {
     tmp17 = tmp4;
@@ -59,13 +51,13 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
   if (!tmp17) {
     tmp17 = first3;
   }
-  let closure_14 = tmp17;
+  first3 = tmp17;
   closure_0 = undefined;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -93,15 +85,15 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_14) {
+              if (closure_1_14) {
                 c6 = 3;
               } else {
-                outer1_2(true);
-                let c4 = 2;
-                let obj1 = callback(outer2_2[5]);
+                closure_1_2(true);
+                c4 = 2;
+                obj1 = callback(closure_2_2[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -112,8 +104,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c4 = 1;
-              closure_1 = maybeFetchCollectiblesForInvoices;
-              aPIError = new callback(outer2_2[6]).APIError(closure_1);
+              closure_1 = closure_3;
+              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -122,25 +114,25 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 0;
-              outer1_2(false);
+              closure_1_2(false);
               c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              if (outer1_1 != null) {
-                outer1_1();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               c4 = 1;
             }
             c4 = 0;
-            outer1_2(false);
+            closure_1_2(false);
           }
           c4 = 0;
-          outer1_2(false);
-          throw maybeFetchCollectiblesForInvoices;
+          closure_1_2(false);
+          throw closure_3;
         } catch (tmp42) {
-          maybeFetchCollectiblesForInvoices = tmp42;
+          closure_3 = tmp42;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp42;
@@ -166,10 +158,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items);
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -197,15 +189,15 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_14) {
+              if (closure_1_14) {
                 c6 = 3;
               } else {
-                outer1_3(true);
-                let c4 = 2;
-                let obj1 = callback(outer2_2[5]);
+                closure_1_3(true);
+                c4 = 2;
+                obj1 = callback(closure_2_2[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -216,8 +208,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c4 = 1;
-              closure_1 = maybeFetchCollectiblesForInvoices;
-              aPIError = new callback(outer2_2[6]).APIError(closure_1);
+              closure_1 = closure_3;
+              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -226,25 +218,25 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 0;
-              outer1_3(false);
+              closure_1_3(false);
               c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              if (outer1_1 != null) {
-                outer1_1();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               c4 = 1;
             }
             c4 = 0;
-            outer1_3(false);
+            closure_1_3(false);
           }
           c4 = 0;
-          outer1_3(false);
-          throw maybeFetchCollectiblesForInvoices;
+          closure_1_3(false);
+          throw closure_3;
         } catch (tmp42) {
-          maybeFetchCollectiblesForInvoices = tmp42;
+          closure_3 = tmp42;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp42;
@@ -270,10 +262,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items1);
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -301,15 +293,15 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_14) {
+              if (closure_1_14) {
                 c6 = 3;
               } else {
                 v0(true);
                 v0 = 2;
-                let obj1 = callback(outer2_2[5]);
+                obj1 = callback(closure_2_2[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -320,8 +312,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               v0 = 1;
-              closure_1 = maybeFetchCollectiblesForInvoices;
-              aPIError = new callback(outer2_2[6]).APIError(closure_1);
+              closure_1 = closure_3;
+              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -336,8 +328,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              if (outer1_1 != null) {
-                outer1_1();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               v0 = 1;
             }
@@ -346,9 +338,9 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           }
           v0 = 0;
           v0(false);
-          throw maybeFetchCollectiblesForInvoices;
+          throw closure_3;
         } catch (tmp42) {
-          maybeFetchCollectiblesForInvoices = tmp42;
+          closure_3 = tmp42;
           if (tmp5 === v0) {
             c6 = tmp3;
             throw tmp42;
@@ -374,10 +366,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items2);
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -405,15 +397,15 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_14) {
+              if (closure_1_14) {
                 c6 = 3;
               } else {
                 v0(true);
-                let c4 = 2;
-                let obj1 = callback(outer2_2[5]);
+                c4 = 2;
+                obj1 = callback(closure_2_2[5]);
                 v0 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -424,8 +416,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c4 = 1;
-              closure_1 = maybeFetchCollectiblesForInvoices;
-              aPIError = new callback(outer2_2[6]).APIError(closure_1);
+              closure_1 = closure_3;
+              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -440,8 +432,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              if (outer1_1 != null) {
-                outer1_1();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               c4 = 1;
             }
@@ -450,9 +442,9 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           }
           c4 = 0;
           v0(false);
-          throw maybeFetchCollectiblesForInvoices;
+          throw closure_3;
         } catch (tmp43) {
-          maybeFetchCollectiblesForInvoices = tmp43;
+          closure_3 = tmp43;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp43;
@@ -508,12 +500,12 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
             let callback = tmp4;
             let aPIError = tmp8;
             aPIError = undefined;
-            if (outer1_6) {
+            if (closure_1_6) {
               c5 = 3;
             } else {
-              outer1_7(true);
-              let c3 = 2;
-              let obj1 = outer1_0(outer1_2[5]);
+              closure_1_7(true);
+              c3 = 2;
+              obj1 = closure_1_0(closure_1_2[5]);
               c4 = 3;
               c5 = 1;
               obj1 = { value: null, done: false };
@@ -525,7 +517,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           if (2 === tmp8) {
             c3 = 1;
             callback = closure_2;
-            aPIError = new outer1_0(outer1_2[6]).APIError(callback);
+            aPIError = new closure_1_0(closure_1_2[6]).APIError(callback);
             if (aPIError != null) {
               tmp25(aPIError);
             }
@@ -549,7 +541,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           callback2(false);
         }
         c3 = 0;
-        outer1_7(false);
+        closure_1_7(false);
         throw closure_2;
       } catch (tmp42) {
         closure_2 = tmp42;
@@ -565,10 +557,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     }
   }), items4);
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -596,15 +588,15 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
-              if (outer1_10) {
+              if (closure_1_10) {
                 c6 = 3;
               } else {
-                outer1_11(true);
-                let c4 = 2;
-                let obj1 = onSuccess(outer2_2[5]);
+                closure_1_11(true);
+                c4 = 2;
+                obj1 = onSuccess(closure_2_2[5]);
                 c5 = 3;
                 c6 = 1;
                 obj1 = { value: null, done: false };
@@ -615,8 +607,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c4 = 1;
-              closure_1 = maybeFetchCollectiblesForInvoices;
-              aPIError = new callback(outer2_2[6]).APIError(closure_1);
+              closure_1 = closure_3;
+              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -625,25 +617,25 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 0;
-              outer1_11(false);
+              closure_1_11(false);
               c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
             } else {
-              if (outer1_1 != null) {
-                outer1_1();
+              if (closure_1_1 != null) {
+                closure_1_1();
               }
               c4 = 1;
             }
             c4 = 0;
-            outer1_11(false);
+            closure_1_11(false);
           }
           c4 = 0;
-          outer1_11(false);
-          throw maybeFetchCollectiblesForInvoices;
+          closure_1_11(false);
+          throw closure_3;
         } catch (tmp43) {
-          maybeFetchCollectiblesForInvoices = tmp43;
+          closure_3 = tmp43;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp43;
@@ -669,11 +661,11 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items5);
   closure_0 = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -701,15 +693,15 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let maybeFetchCollectiblesForInvoices = tmp4;
-              let closure_2 = tmp8;
+              closure_3 = tmp4;
+              closure_2 = tmp8;
               let aPIError;
-              if (outer1_8) {
+              if (closure_1_8) {
                 c7 = 3;
               } else {
-                outer1_9(true);
-                let c5 = 2;
-                let obj1 = onSuccess(outer2_2[5]);
+                closure_1_9(true);
+                c5 = 2;
+                obj1 = onSuccess(closure_2_2[5]);
                 c6 = 3;
                 c7 = 1;
                 obj1 = { value: null, done: false };
@@ -720,8 +712,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c5 = 1;
-              const callback2 = _slicedToArray;
-              aPIError = new callback(outer2_2[6]).APIError(callback2);
+              const callback2 = closure_4;
+              aPIError = new callback(closure_2_2[6]).APIError(callback2);
               if (callback != null) {
                 tmp25(callback);
               }
@@ -730,7 +722,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               throw arg1;
             } else if (arg0 === 2) {
               c5 = 0;
-              outer1_9(false);
+              closure_1_9(false);
               c7 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
@@ -742,13 +734,13 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               c5 = 1;
             }
             c5 = 0;
-            outer1_9(false);
+            closure_1_9(false);
           }
           c5 = 0;
-          outer1_9(false);
-          throw _slicedToArray;
+          closure_1_9(false);
+          throw closure_4;
         } catch (tmp41) {
-          _slicedToArray = tmp41;
+          closure_4 = tmp41;
           if (tmp5 === c5) {
             c7 = tmp3;
             throw tmp41;
@@ -774,10 +766,10 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
     return applyArgumentsResult;
   }, items6);
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -805,18 +797,18 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              closure_1 = tmp8;
               let aPIError;
               const actionsForDisplayType = first.getActionsForDisplayType(aPIError);
               const startId = first.getStartId();
               const selectedTeenId = first.getSelectedTeenId();
-              if (!outer1_12) {
+              if (!closure_1_12) {
                 if (null != startId) {
                   if (null != selectedTeenId) {
-                    outer1_13(true);
-                    let c4 = 2;
-                    let obj1 = onSuccess(outer2_2[5]);
+                    closure_1_13(true);
+                    c4 = 2;
+                    obj1 = onSuccess(closure_2_2[5]);
                     c5 = 3;
                     c6 = 1;
                     obj1 = { value: null, done: false };
@@ -830,8 +822,8 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
           } else if (1 !== tmp8) {
             if (2 === tmp8) {
               c4 = 1;
-              closure_1 = maybeFetchCollectiblesForInvoices;
-              aPIError = new callback(outer2_2[6]).APIError(closure_1);
+              closure_1 = closure_3;
+              aPIError = new callback(closure_2_2[6]).APIError(closure_1);
               if (callback != null) {
                 tmp23(callback);
               }
@@ -840,7 +832,7 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 0;
-              outer1_13(false);
+              closure_1_13(false);
               c6 = 3;
               obj = { value: null, done: true };
               obj[0] = arg1;
@@ -849,13 +841,13 @@ export const useFamilyCenterActions = function useFamilyCenterActions(arg0) {
               c4 = 1;
             }
             c4 = 0;
-            outer1_13(false);
+            closure_1_13(false);
           }
           c4 = 0;
-          outer1_13(false);
-          throw maybeFetchCollectiblesForInvoices;
+          closure_1_13(false);
+          throw closure_3;
         } catch (tmp43) {
-          maybeFetchCollectiblesForInvoices = tmp43;
+          closure_3 = tmp43;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp43;

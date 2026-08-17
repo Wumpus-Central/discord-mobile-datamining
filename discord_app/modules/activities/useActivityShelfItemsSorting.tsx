@@ -1,9 +1,9 @@
 // discord_app/modules/activities/useActivityShelfItemsSorting.tsx
-import noop from "noop";
+import closure_3 from "noop" /* 19 */;
 import { updateUserGuildSettings } from "../user_settings/UserSettingsProtoActionCreators.tsx";
 
 const require = arg1;
-const result = require("getPlatform").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useActivityShelfItemsSorting.tsx");
 
 export default function useActivityShelfItemsSorting(arg0) {
   const _require = arg0;
@@ -16,8 +16,8 @@ export default function useActivityShelfItemsSorting(arg0) {
     const item = items2.forEach((application) => items2.push(application.application.id));
     const items1 = [...items];
     const sorted = items1.sort((arg0, arg1) => {
-      const items2 = arg0;
-      let closure_1 = arg1;
+      items2 = arg0;
+      closure_1 = arg1;
       let num = 1;
       if (findIndexResult < items2.findIndex((arg0) => arg0 === closure_1)) {
         num = -1;
@@ -25,7 +25,7 @@ export default function useActivityShelfItemsSorting(arg0) {
       return num;
     });
     items2 = undefined;
-    let c1;
+    c1 = undefined;
     items2 = [...items2];
     c1 = 0;
     const item1 = items1.forEach((arg0) => {
@@ -45,7 +45,6 @@ export default function useActivityShelfItemsSorting(arg0) {
       return items;
     });
     const found = mapped.filter((arg0) => {
-      let tmp;
       [tmp] = arg0;
       const embeddedActivityConfig = tmp.application.embeddedActivityConfig;
       let label_type;
@@ -66,8 +65,6 @@ export default function useActivityShelfItemsSorting(arg0) {
       return tmp8;
     });
     const item2 = found.forEach((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       let diff = tmp2;
       if (null != tmp.application.embeddedActivityConfig) {

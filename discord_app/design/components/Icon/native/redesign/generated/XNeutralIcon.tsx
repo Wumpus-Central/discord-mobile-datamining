@@ -1,11 +1,12 @@
 // discord_app/design/components/Icon/native/redesign/generated/XNeutralIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/08310_registerAsset.js";
-import { BaseIconImage } from "../../BaseIconImage.tsx";
+import noopAll from "noop" /* 19 */;
+import BaseIconImage from "BaseIconImage" /* 4096 */;
+import registerAsset from "registerAsset" /* 8310 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("BaseIconImage").fileFinishedImporting("design/components/Icon/native/redesign/generated/XNeutralIcon.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/XNeutralIcon.tsx");
 
 export const XNeutralIcon = function XNeutralIcon(color) {
   let str = color.color;
@@ -13,10 +14,6 @@ export const XNeutralIcon = function XNeutralIcon(color) {
     str = "#4E5058";
   }
   const merged = Object.assign(color, Object.create(null));
-  const obj = { source: null, color: null, style: null };
-  obj[0] = registerAsset;
-  obj[1] = str;
-  obj[2] = color.style;
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: null, color: null, style: null });
+  return jsx(BaseIconImage.BaseIconImage, { source: registerAsset, color: str, style: color.style });
 };

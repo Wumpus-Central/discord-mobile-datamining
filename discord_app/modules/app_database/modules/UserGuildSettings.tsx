@@ -1,16 +1,16 @@
 // discord_app/modules/app_database/modules/UserGuildSettings.tsx
-import closure_2 from "set";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import set from "timestamp";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal" /* 5043 */;
+import set from "set" /* 2 */;
 
-let c3;
-let c4;
+let set = importDefault;
 ({ convertChannelOverridesToMap: c3, getGuildDefaults: c4 } = updateUserGuildSettingsInternal);
-let c5 = new require("items")("ReadStates");
+let closure_5 = new timestampDefault("ReadStates");
 class UserGuildSettings {
   constructor() {
     obj = Object.create(new.target.prototype);
-    UserGuildSettings = obj;
+    closure_0 = obj;
     obj.actions = {
       CONNECTION_OPEN(arg0, arg1) {
             return obj.handleConnectionOpen(arg0, arg1);
@@ -24,17 +24,17 @@ class UserGuildSettings {
 }
 const prototype = UserGuildSettings.prototype;
 prototype["getAll"] = function getAll(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return callback(function*() {
     let length = tmp5;
-    let closure_0 = tmp2;
+    closure_0 = tmp2;
     const _performance2 = performance;
     closure_0 = performance.now();
-    const obj6 = outer1_0(outer1_1[3]);
-    length = yield outer1_0(outer1_1[3]).userGuildSettings(outer1_0).getMany();
+    const obj6 = closure_1_0(closure_1_1[3]);
+    length = yield closure_1_0(closure_1_1[3]).userGuildSettings(closure_1_0).getMany();
     const _performance = performance;
     const _HermesInternal = HermesInternal;
-    outer1_5.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (userGuildSettings: " + length.length + ")");
+    closure_1_5.log("asynchronously loaded in " + closure_2 - closure_0 + "ms (userGuildSettings: " + length.length + ")");
     return length;
   })();
 };
@@ -43,16 +43,15 @@ prototype["resetInMemoryState"] = function resetInMemoryState() {
 };
 prototype["handleConnectionOpen"] = function handleConnectionOpen(userGuildSettings, database) {
   if (!userGuildSettings.userGuildSettings.partial) {
-    obj = obj(1955);
-    const result = obj.userGuildSettingsTransaction(database);
+    const result = set(1955).userGuildSettingsTransaction(database);
     result.delete();
+    const obj = set(1955);
   }
   this.write(userGuildSettings.userGuildSettings.entries, userGuildSettings.userGuildSettings.version, database);
 };
 prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpdate(userGuildSettings) {
-  obj = obj(12);
   userGuildSettings = userGuildSettings.userGuildSettings;
-  const maxResult = obj.max(userGuildSettings.map((version) => {
+  const maxResult = set(12).max(userGuildSettings.map((version) => {
     let num = version.version;
     if (num == null) {
       num = -1;
@@ -65,7 +64,7 @@ prototype["handleUserGuildSettingsUpdate"] = function handleUserGuildSettingsUpd
   }
 };
 prototype["write"] = function write(arg0, version, database) {
-  obj = obj(1955);
+  let obj = set(1955);
   const result = obj.userGuildSettingsTransaction(database);
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
@@ -88,11 +87,11 @@ prototype["write"] = function write(arg0, version, database) {
     let putResult = result.put(str, tmp9);
     continue;
   }
-  const result1 = obj(1955).nonGuildVersionsTransaction(database);
+  const result1 = set(1955).nonGuildVersionsTransaction(database);
   obj = { id: "user_guild_settings_version", version };
   result1.put(obj);
 };
-let set = Object.create(UserGuildSettings.prototype);
+set = Object.create(UserGuildSettings.prototype);
 set.actions = {
   CONNECTION_OPEN(arg0, arg1) {
     return obj.handleConnectionOpen(arg0, arg1);

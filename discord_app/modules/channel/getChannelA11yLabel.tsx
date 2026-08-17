@@ -1,27 +1,19 @@
 // discord_app/modules/channel/getChannelA11yLabel.tsx
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-import { isRoleRequired } from "isRoleRequired.tsx";
-import { computeChannelName } from "useChannelName.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createChannelRecord from "createChannelRecord" /* 1395 */;
+import nameFromUser from "nameFromUser" /* 4219 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
+import closure_4 from "markAllUserIdListsStale" /* 4030 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
+const THREAD_CHANNEL_TYPES = createChannelRecord.THREAD_CHANNEL_TYPES;
 ({ ChannelTypes: closure_6, StatusTypes: error } = ME);
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");
+const result = set.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");
 
 export default function getChannelA11yLabel(mentionCount) {
-  let activityNames;
-  let channel;
-  let embeddedActivitiesCount;
-  let isIncomingCall;
-  let isSubscriptionGated;
-  let needSubscriptionToAccess;
-  let unread;
-  let voiceStates;
   ({ channel, unread } = mentionCount);
   if (unread === undefined) {
     unread = false;
@@ -40,8 +32,8 @@ export default function getChannelA11yLabel(mentionCount) {
   }
   const voiceChannelStartTime = mentionCount.voiceChannelStartTime;
   let obj = computeChannelName;
-  const channelName = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
-  if (isRoleRequired(channel)) {
+  const channelName = obj.computeChannelName(channel, closure_5, closure_4);
+  if (isRoleRequiredDefault(channel)) {
     const intl = tmp(1236).intl;
     const stringResult = intl.string(tmp(1236).t["4qvAtn"]);
   }
@@ -85,7 +77,7 @@ export default function getChannelA11yLabel(mentionCount) {
       g8ONM0 = sDKIpm;
     } else if (tmp5.GUILD_VOICE === type) {
       const intl2 = tmp(1236).intl;
-      const obj1 = { channelName: null };
+      obj1 = { channelName: null };
       obj1[0] = channelName;
       const items1 = [intl2.formatToPlainString(tmp(1236).t.bkpadO, obj1)];
       if (num > 0) {
@@ -226,8 +218,6 @@ export const getStatusLabel = function getStatusLabel(status) {
   }
 };
 export const getChannelA11yHint = function getChannelA11yHint(userStatus) {
-  let channel;
-  let muted;
   userStatus = userStatus.userStatus;
   const items = [];
   ({ channel, muted } = userStatus);

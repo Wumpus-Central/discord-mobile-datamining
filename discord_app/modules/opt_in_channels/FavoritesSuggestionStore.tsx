@@ -1,8 +1,9 @@
 // discord_app/modules/opt_in_channels/FavoritesSuggestionStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_1 from "handleConnectionOpen" /* 1979 */;
+import closure_2 from "updateUserGuildSettingsInternal" /* 5043 */;
 
 function handleChange() {
   channelId = channelId.getChannelId();
@@ -48,15 +49,13 @@ function handleChange() {
 let closure_3 = {};
 let closure_4 = {};
 let closure_5 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class FavoritesSuggestionStore extends PersistedStore {
 }
 const prototype = FavoritesSuggestionStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  let channelOpensByChannelId;
-  let dismissedSuggestions;
-  let suggestedChannels;
-  this.waitFor(ensureGuildLoaded, handleConnectionOpen, updateUserGuildSettingsInternal);
-  const items = [handleConnectionOpen];
+  this.waitFor(closure_0, closure_1, closure_2);
+  const items = [closure_1];
   this.syncWith(items, handleChange);
   if (null != arg0) {
     ({ suggestedChannels, dismissedSuggestions, channelOpensByChannelId } = arg0);
@@ -99,10 +98,8 @@ prototype["getState"] = function getState() {
 };
 FavoritesSuggestionStore.displayName = "FavoritesSuggestionStore";
 FavoritesSuggestionStore.persistKey = "FavoritesSuggestionStore";
-const favoritesSuggestionStore = new FavoritesSuggestionStore(require("dispatcher"), {
+const favoritesSuggestionStore = new FavoritesSuggestionStore(dispatcherDefault, {
   DISMISS_FAVORITE_SUGGESTION: function handleFavoriteSuggestionDimissed(arg0) {
-    let channelId;
-    let guildId;
     ({ guildId, channelId } = arg0);
     if (null == dependencyMap2[guildId]) {
       const _Set = Set;
@@ -114,6 +111,6 @@ const favoritesSuggestionStore = new FavoritesSuggestionStore(require("dispatche
     return true;
   }
 });
-const result = require("updateUserGuildSettingsInternal").fileFinishedImporting("modules/opt_in_channels/FavoritesSuggestionStore.tsx");
+const result = require("set").fileFinishedImporting("modules/opt_in_channels/FavoritesSuggestionStore.tsx");
 
 export default favoritesSuggestionStore;

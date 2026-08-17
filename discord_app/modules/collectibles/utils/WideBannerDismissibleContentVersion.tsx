@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx
-import map from "map";
-import { CollectibleShopTab } from "items";
+import closure_2 from "map" /* 5352 */;
+import { CollectibleShopTab } from "items" /* 678 */;
 
 const require = arg1;
-const result = require("ShopBlockType").fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/utils/WideBannerDismissibleContentVersion.tsx");
 
 export const getWideBannerDismissibleContentVersion = function getWideBannerDismissibleContentVersion() {
   const items = [, , ];

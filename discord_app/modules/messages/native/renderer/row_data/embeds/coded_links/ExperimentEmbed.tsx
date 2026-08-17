@@ -1,11 +1,11 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx
-import Background from "Background";
-import { Image } from "ACTION_SHEET_HEIGHT_HALF";
-import fetchFingerprint from "fetchFingerprint";
-import { ExperimentEmbedType } from "ExperimentBuckets";
-import { InviteTypes } from "InviteSendStates";
-import { jsx } from "UserExperimentDebugView";
-import { getEmbedThemeColors } from "../getEmbedThemeColors.tsx";
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import closure_3 from "noop" /* 19 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import { ExperimentEmbedType } from "ExperimentBuckets" /* 4289 */;
+import { InviteTypes } from "InviteSendStates" /* 4371 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function ExperimentOverrideActionSheet(override) {
@@ -34,21 +34,21 @@ function ExperimentOverrideActionSheet(override) {
       });
       items = [];
       const item1 = map.forEach((label) => {
-        let closure_0 = label;
+        closure_0 = label;
         items.push({
           label: label.label,
           onPress() {
-            items(outer2_2[17]).hideActionSheet("ExperimentOverrideSheet");
-            const obj = items(outer2_2[17]);
-            map(outer2_2[18]).overrideBucket(outer1_1.system, label, label.id);
+            items(closure_2_2[17]).hideActionSheet("ExperimentOverrideSheet");
+            const obj = items(closure_2_2[17]);
+            map(closure_2_2[18]).overrideBucket(closure_1_1.system, label, label.id);
           }
         });
       });
       let obj = { label: "Clear Override", isDestructive: true, onPress: null };
       obj[2] = function onPress() {
-        items(outer1_2[17]).hideActionSheet("ExperimentOverrideSheet");
-        const obj = items(outer1_2[17]);
-        map(outer1_2[18]).overrideBucket(items.system, map, null);
+        items(closure_1_2[17]).hideActionSheet("ExperimentOverrideSheet");
+        const obj = items(closure_1_2[17]);
+        map(closure_1_2[18]).overrideBucket(items.system, map, null);
       };
       items.push(obj);
       return items;
@@ -63,7 +63,7 @@ function ExperimentOverrideActionSheet(override) {
   obj[1] = jsx(id(memo[21]).ExperimentDetails, { experiment, override: override.override, id, options: memo1, onCopyLink: callback });
   return jsx(id(memo[19]).BottomSheet, { title: experiment.title, subtitle: id });
 }
-let result = require("fetchFingerprint").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx");
+let result = require("set").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/coded_links/ExperimentEmbed.tsx");
 
 export default function ConnectedExperimentOverrideActionSheet(id) {
   id = id.id;
@@ -115,16 +115,12 @@ export default function ConnectedExperimentOverrideActionSheet(id) {
   return tmp7;
 };
 export const createExperimentEmbed = function createExperimentEmbed(url, closure_2) {
-  let baseColors;
-  let colors;
-  let experiments;
-  let overridesInfo;
-  ({ colors, baseColors } = getEmbedThemeColors(closure_2));
+  ({ colors, baseColors } = getEmbedThemeColorsDefault(closure_2));
   let obj = experimentTreatmentFromEmbedURL(4364);
   const experimentFromEmbedURL = obj.getExperimentFromEmbedURL(url);
-  let obj1 = experimentTreatmentFromEmbedURL(4364);
+  obj1 = experimentTreatmentFromEmbedURL(4364);
   experimentTreatmentFromEmbedURL = obj1.getExperimentTreatmentFromEmbedURL(url);
-  const tmp3 = getEmbedThemeColors(closure_2);
+  const tmp3 = getEmbedThemeColorsDefault(closure_2);
   const legacyExperiments = experimentTreatmentFromEmbedURL(10681).getLegacyExperiments();
   ({ experiments, overridesInfo } = legacyExperiments);
   const obj3 = experimentTreatmentFromEmbedURL(10681);

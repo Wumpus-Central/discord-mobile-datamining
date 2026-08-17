@@ -1,28 +1,26 @@
 // discord_app/modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx
-import frozen from "frozen";
-import { View } from "Text";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AnalyticEvents } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ badgeNameContainer: { flexDirection: "row" }, tenureRequirements: { marginStart: 4 }, image: { width: "100%", height: "100%" }, imageContainer: { height: 238, paddingVertical: 32 }, upcomingBadge: { opacity: 0.4 }, title: { marginTop: 0 } });
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/tiered_tenure_badging/native/TieredTenureBadgePerkCard.tsx");
 
 export const TieredTenureBadgePerkCard = function TieredTenureBadgePerkCard() {
   let obj = tieredTenureBadgeData(9496);
   tieredTenureBadgeData = obj.useTieredTenureBadgeData();
-  let obj1 = tieredTenureBadgeData(9496);
+  obj1 = tieredTenureBadgeData(9496);
   const premiumSince = obj1.usePremiumSince();
   let obj2 = tieredTenureBadgeData(12876);
   const timeUntilNextBadge = obj2.useTimeUntilNextBadge();
   const tmp6 = callback3();
   let obj3 = tieredTenureBadgeData(589);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = obj3.useStateFromStores(items, () => currentUser.getCurrentUser());
   let obj4 = tieredTenureBadgeData(9470);
   let id;

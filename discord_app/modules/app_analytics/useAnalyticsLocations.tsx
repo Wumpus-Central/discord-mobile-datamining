@@ -1,17 +1,17 @@
 // discord_app/modules/app_analytics/useAnalyticsLocations.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 let c3 = importAllResult;
 let context = importAllResult.createContext([]);
-const result = require("jsxProd").fileFinishedImporting("modules/app_analytics/useAnalyticsLocations.tsx");
+const result = require("set").fileFinishedImporting("modules/app_analytics/useAnalyticsLocations.tsx");
 
 export default function useAnalyticsLocations() {
   let items = [...arguments];
   let first;
   let callback;
-  let context;
+  context = undefined;
   const tmp = callback(context.useState(items), 2);
   first = tmp[0];
   callback = tmp[1];

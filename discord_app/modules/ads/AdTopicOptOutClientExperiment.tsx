@@ -1,10 +1,11 @@
 // discord_app/modules/ads/AdTopicOptOutClientExperiment.tsx
-import ApexExperiment from "ApexExperiment";
+import set from "set" /* 2 */;
+import ApexExperiment from "ApexExperiment" /* 1472 */;
 
 const obj = { 1: null, 2: { enabled: false }, 3: { enabled: true }, 4: { enabled: true }, 5: { enabled: true } };
 obj[5] = { enabled: true };
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-ad-topic-opt-out-client", defaultConfig: { enabled: false }, variations: obj });
-const result = require("set").fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
+const result = set.fileFinishedImporting("modules/ads/AdTopicOptOutClientExperiment.tsx");
 
 export const AdTopicOptOutClientExperiment = apexExperiment;
 export const useIsAdTopicOptOutClientEnabled = function useIsAdTopicOptOutClientEnabled() {

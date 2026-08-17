@@ -1,24 +1,19 @@
 // discord_app/utils/native/ChangeLogUtils.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult1 from "createRules";
-import { t } from "../../../_runtime/04092_t.js";
-import { Text } from "../../design/components/Text/native/Text.tsx";
-import { apexExperiment } from "../../modules/design/ManaTypeConsolidationExperiment.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import tDefault from "t" /* 4092 */;
+import Text from "Text" /* 4734 */;
+import apexExperiment from "apexExperiment" /* 8307 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult1 from "createRules" /* 4764 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 function ChangeLogLink(arg0) {
-  let node;
-  let output;
-  let state;
-  let styling;
   ({ node, state } = arg0);
   ({ output, styling } = arg0);
-  let obj = { className: createCacheKey().link, target: node.target, children: null };
+  let obj = { className: callback().link, target: node.target, children: null };
   obj = {};
   const merged = Object.assign(state);
   obj.inLink = true;
@@ -26,22 +21,20 @@ function ChangeLogLink(arg0) {
   return jsx(styling.components.Link, {}, state.key);
 }
 function ChangeLogList(styling) {
-  let require;
-  let state;
   ({ output: require, state } = styling);
   styling = styling.styling;
   let List = styling.components.List;
   if (!List) {
     List = closure_3;
   }
-  const tmp = createCacheKey();
+  const tmp = callback();
   let items = styling.node.items;
-  return <List key={state.key} style={createCacheKey().list}>{items.map((arg0, arg1) => {
-    let closure_0 = arg0;
-    return outer1_5(styling.components.ListItem, {
+  return <List key={state.key} style={callback().list}>{items.map((arg0, arg1) => {
+    closure_0 = arg0;
+    return closure_1_5(styling.components.ListItem, {
       children(arg0) {
-        let closure_1 = outer1_1;
-        let closure_2 = arg0;
+        closure_1 = closure_1_1;
+        closure_2 = arg0;
         const items = [];
         let length = [];
         const item = closure_0.forEach((type) => {
@@ -50,12 +43,12 @@ function ChangeLogList(styling) {
               let obj = { variant: "text-sm/normal" };
               const merged = Object.assign(table);
               obj.children = callback(arr, closure_1);
-              arr = items.push(outer1_5(callback(table[7]).Text, obj, -1));
+              arr = items.push(closure_1_5(callback(table[7]).Text, obj, -1));
               arr = [];
             }
             obj = { children: null };
             obj[0] = callback(type, closure_1);
-            arr = items.push(outer1_5(items, obj, arg1));
+            arr = items.push(closure_1_5(items, obj, arg1));
           } else {
             arr.push(type);
           }
@@ -63,8 +56,8 @@ function ChangeLogList(styling) {
         if (length.length > 0) {
           let obj = { variant: "text-sm/normal" };
           let merged = Object.assign(arg0);
-          obj.children = closure_0(length, outer1_1);
-          items.push(outer2_5(outer2_0(styling[7]).Text, obj, -1));
+          obj.children = closure_0(length, closure_1_1);
+          items.push(closure_2_5(closure_2_0(styling[7]).Text, obj, -1));
           length = [];
         }
         return items;
@@ -73,9 +66,6 @@ function ChangeLogList(styling) {
   })}</List>;
 }
 function ChangeLogParagraph(state) {
-  let node;
-  let output;
-  let styling;
   state = state.state;
   ({ node, output, styling } = state);
   const components = styling.components;
@@ -86,13 +76,10 @@ function ChangeLogParagraph(state) {
   if (Paragraph == null) {
     Paragraph = Text.Text;
   }
-  const tmp = createCacheKey();
-  return <Paragraph key={state.key} variant="text-sm/normal" style={createCacheKey().text}>{output(node.content, state)}</Paragraph>;
+  const tmp = callback();
+  return <Paragraph key={state.key} variant="text-sm/normal" style={callback().text}>{output(node.content, state)}</Paragraph>;
 }
 function ChangeLogStrong(arg0) {
-  let node;
-  let output;
-  let state;
   ({ node, output, state } = arg0);
   let obj = apexExperiment;
   if (obj.useManaTypeConsolidationExperiment("ChangeLogStrong")) {
@@ -116,69 +103,64 @@ function ChangeLogStrong(arg0) {
   return reactResult;
 }
 function ChangeLogImage(arg0) {
-  let node;
-  let state;
   ({ node, state } = arg0);
-  let obj = { style: createCacheKey().image, source: null };
-  obj = { uri: null };
-  obj[0] = t.sanitizeUrl(node.target);
+  let obj = { style: callback().image, source: null };
+  obj = { uri: tDefault.sanitizeUrl(node.target) };
   obj[1] = obj;
-  return <closure_4 key={state.key} uri={null} />;
+  return <closure_4 key={state.key} uri={tDefault.sanitizeUrl(node.target)} />;
 }
 function ChangeLogBlockQuote(state) {
-  let node;
-  let output;
   state = state.state;
   ({ node, output } = state);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = { style: tmp.container, children: null };
-  obj = { variant: "text-sm/normal", style: tmp.text, children: null };
-  obj[2] = output(node.content, state);
-  obj[1] = jsx(Text.Text, { variant: "text-sm/normal", style: tmp.text, children: null });
-  return <closure_3 key={state.key} variant="text-sm/normal" style={tmp.text}>{null}</closure_3>;
+  obj = { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) };
+  obj[1] = jsx(Text.Text, { variant: "text-sm/normal", style: tmp.text, children: output(node.content, state) });
+  return <closure_3 key={state.key} variant="text-sm/normal" style={tmp.text}>{output(node.content, state)}</closure_3>;
 }
+noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 createCacheKey = { link: null, list: null, image: null, container: null, text: null };
-createCacheKey = { color: require("Themes").colors.TEXT_LINK };
+createCacheKey = { color: ThemesDefault.colors.TEXT_LINK };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { marginBottom: 10 };
 createCacheKey[2] = { alignSelf: "center", flex: 1 };
 createCacheKey[3] = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
 const obj1 = { borderLeftWidth: 2, paddingLeft: 8, marginBottom: 10, borderLeftColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_300 };
-createCacheKey[4] = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: require("Themes").colors.TEXT_MUTED };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj2 = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: require("Themes").colors.TEXT_MUTED };
-const rules = require("createRules").createRules({});
+createCacheKey[4] = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: ThemesDefault.colors.TEXT_MUTED };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const obj2 = { fontSize: 14, lineHeight: 18, marginBottom: 8, color: ThemesDefault.colors.TEXT_MUTED };
+const rules = importAllResult1.createRules({});
 const obj3 = {
   link(uri) {
-    let closure_0 = uri;
+    closure_0 = uri;
     return {
       react(node, output, state) {
-        return outer1_5(outer1_8, { accessibilityRole: "link", node, output, state, styling: closure_0 });
+        return closure_1_5(closure_1_8, { accessibilityRole: "link", node, output, state, styling: closure_0 });
       }
     };
   },
   lheading(uri) {
-    let closure_0 = uri;
+    closure_0 = uri;
     return {
       react(className, arg1, key) {
-        return outer1_5(uri.components.LHeading, { className: className.className, children: arg1(className.content, key) }, key.key);
+        return closure_1_5(uri.components.LHeading, { className: className.className, children: arg1(className.content, key) }, key.key);
       }
     };
   },
   heading(uri) {
-    let closure_0 = uri;
+    closure_0 = uri;
     return {
       react(className, arg1, key) {
-        return outer1_5(uri.components.Heading, { className: className.className, level: className.level, children: arg1(className.content, key) }, key.key);
+        return closure_1_5(uri.components.Heading, { className: className.className, level: className.level, children: arg1(className.content, key) }, key.key);
       }
     };
   },
   list(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return {
       react(node, output, state) {
-        return outer1_5(outer1_9, { node, output, state, styling: closure_0 });
+        return closure_1_5(closure_1_9, { node, output, state, styling: closure_0 });
       }
     };
   },
@@ -186,10 +168,10 @@ const obj3 = {
   blockQuote: obj5,
   strong: obj6,
   paragraph(uri) {
-    let closure_0 = uri;
+    closure_0 = uri;
     return {
       react(node, output, state) {
-        return outer1_5(outer1_10, { node, output, state, styling: closure_0 });
+        return closure_1_5(closure_1_10, { node, output, state, styling: closure_0 });
       }
     };
   }
@@ -209,7 +191,7 @@ obj6 = {
     return <ChangeLogStrong key={arg2.key} node={arg0} output={arg1} state={arg2} />;
   }
 };
-const result = require("jsxProd").fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/native/ChangeLogUtils.tsx");
 
 export const baseRules = rules;
 export const customRules = obj3;

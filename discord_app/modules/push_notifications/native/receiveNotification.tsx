@@ -1,35 +1,32 @@
 // discord_app/modules/push_notifications/native/receiveNotification.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import scheduledEventSort from "scheduledEventSort";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_9 from "mergeGuildAvatar";
-import { NotificationTypes } from "str2";
-import ME from "ME";
-import { StreamTypes } from "StreamIssueReportReasons";
-import { GuildScheduledEventEntityTypes as closure_16 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { MultiAccountSwitchLocation as closure_17 } from "MAX_ACCOUNTS";
-import { registerAsset } from "../../../../_runtime/10455_registerAsset.js";
-import { isTracing } from "../../../../discord_common/js/packages/app-start-performance/AppStartPerformance.tsx";
-import { dispatcher } from "../../../Dispatcher.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { parseQuery } from "../../../utils/native/parseURL.tsx";
-import { fetchMessages } from "../../messages/MessageManager.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import isTracingDefault from "isTracing" /* 10 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import dispatcherDefault2 from "dispatcher" /* 4094 */;
+import parseQueryDefault from "parseQuery" /* 4355 */;
+import fetchMessagesDefault from "fetchMessages" /* 9084 */;
+import registerAssetDefault from "registerAsset" /* 10455 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_6 from "scheduledEventSort" /* 4370 */;
+import closure_7 from "fetchFingerprint" /* 1218 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { NotificationTypes } from "str2" /* 5259 */;
+import ME from "ME" /* 676 */;
+import { StreamTypes } from "StreamIssueReportReasons" /* 4532 */;
+import { GuildScheduledEventEntityTypes as closure_16 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { MultiAccountSwitchLocation as closure_17 } from "MAX_ACCOUNTS" /* 11586 */;
 import { voiceRouteRewriter } from "../../routing/native/RouteManagerUtils.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
-let closure_12;
-let closure_14;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function onStageConnectionError() {
-  let obj = dispatcher;
+  let obj = dispatcherDefault2;
   obj = { key: "STAGE_DISCOVERY_CONNECTION_ERROR_GENERIC", content: null, icon: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.ah3RLk);
-  obj[2] = registerAsset;
+  obj[2] = registerAssetDefault;
   obj.open(obj);
 }
 function waitForConnection() {
@@ -50,10 +47,10 @@ function waitForDataOrConnection() {
 function _waitForDataOrConnection() {
   const self = this;
   let tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, arg1) {
       if (c4 === 2) {
         c4 = 3;
@@ -81,18 +78,18 @@ function _waitForDataOrConnection() {
               obj[0] = arg1;
               return obj;
             } else {
-              let c2 = tmp2;
+              c2 = tmp2;
               c2 = undefined;
               if (callback()) {
                 c4 = 3;
               } else {
                 c2 = false;
                 const promise = new Promise((arg0) => {
-                  let closure_0 = arg0;
+                  closure_0 = arg0;
                   const result = closure_0.addConditionalChangeListener(() => {
-                    let tmp = !outer1_2;
-                    if (!outer1_2) {
-                      const tmp3 = outer1_1();
+                    let tmp = !closure_1_2;
+                    if (!closure_1_2) {
+                      const tmp3 = closure_1_1();
                       let flag = !tmp3;
                       if (tmp3) {
                         callback();
@@ -103,10 +100,10 @@ function _waitForDataOrConnection() {
                     return tmp;
                   });
                 });
-                const items = [promise, outer1_20()];
+                const items = [promise, closure_1_20()];
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = Promise.race(items);
                 return obj1;
               }
@@ -128,7 +125,7 @@ function _waitForDataOrConnection() {
       }
     })();
   });
-  const _waitForDataOrConnection = tmp;
+  closure_22 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -176,7 +173,7 @@ function _waitForNavigationReady() {
             obj[0] = arg1;
             return obj;
           } else {
-            const rootNavigationRef = v0(outer1_3[15]).getRootNavigationRef();
+            const rootNavigationRef = v0(closure_1_3[15]).getRootNavigationRef();
             let isReadyResult = null != rootNavigationRef;
             if (isReadyResult) {
               isReadyResult = rootNavigationRef.isReady();
@@ -191,11 +188,11 @@ function _waitForNavigationReady() {
               });
               c1 = 1;
               v0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = promise;
               return obj1;
             }
-            const obj5 = v0(outer1_3[15]);
+            const obj5 = v0(closure_1_3[15]);
           }
         } else if (arg0 === 1) {
           v0 = 3;
@@ -214,7 +211,7 @@ function _waitForNavigationReady() {
       }
     }
   });
-  const _waitForNavigationReady = tmp;
+  closure_24 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -236,26 +233,26 @@ function _connectToStage() {
 function _connectToStage2() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      const dependencyMap = tmp3;
-      yield outer1_20();
-      let c5 = 1;
+      dependencyMap = tmp3;
+      yield closure_1_20();
+      c5 = 1;
       const obj2 = callback(8057);
       yield obj2.connectOrLurkStage(callback, closure_1, true);
       if (2 === tmp7) {
         c5 = 0;
         callback2();
-        let c7 = 3;
+        c7 = 3;
       } else if (arg0 === 1) {
         c7 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
-        let closure_2 = arg1;
+        closure_2 = arg1;
         const obj = callback(8057);
         obj.navigateToStage(closure_2, null);
         c5 = 0;
@@ -264,7 +261,7 @@ function _connectToStage2() {
       return arg1;
     })();
   });
-  const _connectToStage2 = tmp;
+  closure_26 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -276,9 +273,9 @@ function _connectToStage2() {
 function _handleStageNotification() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -308,8 +305,8 @@ function _handleStageNotification() {
             } else {
               c2 = 1;
               c1 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_25(closure_0.guild_id, closure_0.channel_id);
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_25(closure_0.guild_id, closure_0.channel_id);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -331,7 +328,7 @@ function _handleStageNotification() {
       }
     })();
   });
-  const _handleStageNotification = tmp;
+  closure_27 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -343,9 +340,9 @@ function _handleStageNotification() {
 function _handleGuildEventNotification() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -380,20 +377,20 @@ function _handleGuildEventNotification() {
               id = undefined;
               const _Number = Number;
               const NumberResult = Number(channel_id.guild_scheduled_event_entity_type);
-              if (outer1_16.STAGE_INSTANCE === NumberResult) {
+              if (closure_1_16.STAGE_INSTANCE === NumberResult) {
                 const channel_id2 = tmp43.channel_id;
                 if (null == channel_id2) {
-                  outer1_19();
+                  closure_1_19();
                   c4 = 3;
                   c4 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = arg1;
                   return obj1;
                 } else {
                   dependencyMap = 2;
                   c4 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = outer1_25(tmp43.guild_id, channel_id2);
+                  obj2[0] = closure_1_25(tmp43.guild_id, channel_id2);
                   return obj2;
                 }
               } else if (tmp46.VOICE === NumberResult) {
@@ -416,7 +413,7 @@ function _handleGuildEventNotification() {
                   dependencyMap = 3;
                   c4 = 1;
                   const obj4 = { value: null, done: false };
-                  obj4[0] = outer1_20();
+                  obj4[0] = closure_1_20();
                   return obj4;
                 }
               } else if (tmp46.EXTERNAL === NumberResult) {
@@ -426,7 +423,7 @@ function _handleGuildEventNotification() {
                 dependencyMap = 1;
                 c4 = 1;
                 const obj5 = { value: null, done: false };
-                obj5[0] = outer1_20();
+                obj5[0] = closure_1_20();
                 return obj5;
               } else {
                 c4 = 3;
@@ -472,7 +469,7 @@ function _handleGuildEventNotification() {
       }
     })();
   });
-  const _handleGuildEventNotification = tmp;
+  closure_28 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -484,9 +481,9 @@ function _handleGuildEventNotification() {
 function _handleRelationshipAddNotification() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -520,8 +517,8 @@ function _handleRelationshipAddNotification() {
               user_id = undefined;
               dependencyMap = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_23();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_23();
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -544,7 +541,7 @@ function _handleRelationshipAddNotification() {
                 dependencyMap = 2;
                 c4 = 1;
                 let obj3 = { value: null, done: false };
-                obj3[0] = callback2(closure_9, () => null != outer1_9.getUser(user_id));
+                obj3[0] = callback2(closure_9, () => null != closure_1_9.getUser(user_id));
                 return obj3;
               } else {
                 if (callback !== constants2.FRIEND) {
@@ -590,7 +587,7 @@ function _handleRelationshipAddNotification() {
       }
     })();
   });
-  const _handleRelationshipAddNotification = tmp;
+  closure_29 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -602,9 +599,9 @@ function _handleRelationshipAddNotification() {
 function _handleCallRingNotification() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -632,12 +629,12 @@ function _handleCallRingNotification() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp2;
-              let closure_1 = tmp5;
+              closure_2 = tmp2;
+              closure_1 = tmp5;
               table = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_21(outer1_8, () => null != outer1_8.getChannel(channel_id.channel_id));
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_21(closure_1_8, () => null != closure_1_8.getChannel(channel_id.channel_id));
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -661,7 +658,7 @@ function _handleCallRingNotification() {
       }
     })();
   });
-  const _handleCallRingNotification = tmp;
+  closure_30 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -673,9 +670,9 @@ function _handleCallRingNotification() {
 function _handleCallConnectNotification() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -703,12 +700,12 @@ function _handleCallConnectNotification() {
               obj[0] = arg1;
               return obj;
             } else {
-              let c2 = 0;
+              c2 = 0;
               const callback = tmp4;
               dependencyMap = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_21(outer1_8, () => null != outer1_8.getChannel(channel_id.channel_id));
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_21(closure_1_8, () => null != closure_1_8.getChannel(channel_id.channel_id));
               return obj1;
             }
           } else if (1 === tmp4) {
@@ -774,7 +771,7 @@ function _handleCallConnectNotification() {
       }
     })();
   });
-  const _handleCallConnectNotification = tmp;
+  closure_31 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -786,9 +783,9 @@ function _handleCallConnectNotification() {
 function _handleFriendSuggestionCreateNotification() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -822,8 +819,8 @@ function _handleFriendSuggestionCreateNotification() {
               user_id = undefined;
               dependencyMap = 1;
               c4 = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_23();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_23();
               return obj1;
             }
           } else if (1 === tmp5) {
@@ -846,7 +843,7 @@ function _handleFriendSuggestionCreateNotification() {
               dependencyMap = 2;
               c4 = 1;
               const obj4 = { value: null, done: false };
-              obj4[0] = callback(closure_9, () => null != outer1_9.getUser(user_id));
+              obj4[0] = callback(closure_9, () => null != closure_1_9.getUser(user_id));
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -873,7 +870,7 @@ function _handleFriendSuggestionCreateNotification() {
       }
     })();
   });
-  const _handleFriendSuggestionCreateNotification = tmp;
+  closure_32 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -885,9 +882,9 @@ function _handleFriendSuggestionCreateNotification() {
 function _maybeAckNotificationCenter() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -915,7 +912,7 @@ function _maybeAckNotificationCenter() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp5;
+              closure_2 = tmp5;
               let prop = tmp2;
               prop = undefined;
               closure_2 = undefined;
@@ -929,12 +926,12 @@ function _maybeAckNotificationCenter() {
               }
               if ("RELATIONSHIP_ADD" === lib.type) {
                 const _Number = Number;
-                if (Number(tmp38.rel_type) === outer1_13.PENDING_INCOMING) {
+                if (Number(tmp38.rel_type) === closure_1_13.PENDING_INCOMING) {
                   if (null != since) {
                     dependencyMap = 1;
                     c4 = 1;
-                    const obj1 = { value: null, done: false };
-                    obj1[0] = outer1_20();
+                    obj1 = { value: null, done: false };
+                    obj1[0] = closure_1_20();
                     return obj1;
                   }
                 }
@@ -943,7 +940,7 @@ function _maybeAckNotificationCenter() {
                 dependencyMap = 2;
                 c4 = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_20();
+                obj2[0] = closure_1_20();
                 return obj2;
               } else {
                 c4 = 3;
@@ -987,7 +984,7 @@ function _maybeAckNotificationCenter() {
       }
     })();
   });
-  const _maybeAckNotificationCenter = tmp;
+  closure_33 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1002,13 +999,13 @@ function receiveNotification_(notif_type) {
   const result = obj.initializeRouteManagerIfNeeded();
   if ("MESSAGE_CREATE" === notif_type.type) {
     const _HermesInternal2 = HermesInternal;
-    tmp3.log("Notification clicked of type " + notif_type.type + " with guild:" + notif_type.guild_id + " channel:" + notif_type.channel_id + " message:" + notif_type.message_id);
+    logger.log("Notification clicked of type " + notif_type.type + " with guild:" + notif_type.guild_id + " channel:" + notif_type.channel_id + " message:" + notif_type.message_id);
     obj = { guildId: null, channelId: null, messageId: null, isPreload: true };
     ({ guild_id: obj10[0], channel_id: obj10[1], message_id: obj10[2] } = notif_type);
-    const messages = fetchMessages.fetchMessages(obj);
+    const messages = fetchMessagesDefault.fetchMessages(obj);
     let flag = true;
     let flag2 = true;
-    const obj9 = fetchMessages;
+    const obj9 = fetchMessagesDefault;
   } else {
     flag = false;
     flag2 = false;
@@ -1019,7 +1016,7 @@ function receiveNotification_(notif_type) {
         flag = false;
         flag2 = false;
         if ("" !== notif_type.deeplink) {
-          const payload = parseQuery(notif_type.deeplink).payload;
+          const payload = parseQueryDefault(notif_type.deeplink).payload;
           if (payload.type === tmp(691).LinkingTypes.MESSAGE) {
             let tracking_type;
             if (notif_type != null) {
@@ -1066,7 +1063,7 @@ function receiveNotification_(notif_type) {
                       status_emoji_id = notif_type.status_emoji_id;
                     }
                   }
-                  const obj1 = { id: null, type: null, score: 1000, data: null };
+                  obj1 = { id: null, type: null, score: 1000, data: null };
                   obj1[0] = notif_type.notification_center_id;
                   obj1[1] = tmp(7589).ICYMIItemTypes.CUSTOM_STATUS;
                   const obj2 = { user_id: null, text: null, emoji_id: null, emoji_name: null, emoji_animated: null };
@@ -1087,10 +1084,10 @@ function receiveNotification_(notif_type) {
       }
     }
     const _HermesInternal = HermesInternal;
-    tmp3.log("Notification clicked of type " + notif_type.type);
+    logger.log("Notification clicked of type " + notif_type.type);
   }
-  dispatcher.dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
-  const obj11 = dispatcher;
+  dispatcherDefault.dispatch({ type: "PUSH_NOTIFICATION_CLICK" });
+  const obj11 = dispatcherDefault;
   const obj3 = { notif_type: "tracking_type" in notif_type ? notif_type.tracking_type : notif_type.type, notif_user_id: null, message_id: null, message_type: null, has_message: null, guild_id: null, channel_id: null, channel_type: null, rel_type: null, notification_id: null, has_image_thumbnail: null, join_id: null, notif_instance_id: null, notif_type_id: null, mention_type: null };
   let user_id = null;
   if ("user_id" in notif_type) {
@@ -1155,7 +1152,7 @@ function receiveNotification_(notif_type) {
     mention_type = notif_type.mention_type;
   }
   obj3[14] = mention_type;
-  expandEventProperties.track(constants.NOTIFICATION_CLICKED, obj3);
+  expandEventPropertiesDefault.track(constants.NOTIFICATION_CLICKED, obj3);
   (function maybeAckNotificationCenter(notif_type) {
     const self = this;
     const apply = closure_33.apply;
@@ -1582,7 +1579,7 @@ function receiveNotification_(notif_type) {
         callback(arg0);
       });
       promise.then(() => {
-        outer1_0(outer1_3[50]).transitionTo(outer1_14.CHANNEL(closure_0.guild_id, closure_0.channel_id), { navigationReplace: true, openChannel: true });
+        notif_type(closure_1_3[50]).transitionTo(closure_1_14.CHANNEL(notif_type.guild_id, notif_type.channel_id), { navigationReplace: true, openChannel: true });
       });
     break;
     case "jsx":
@@ -2548,9 +2545,9 @@ function receiveNotification_(notif_type) {
 }
 require("processCallbacks").addPostConnectionCallback;
 ({ AnalyticEvents: unpackModuleId, ComponentActions: closure_12, RelationshipTypes: map1, Routes: closure_14 } = ME);
-let closure_18 = new require("fetchFingerprint")("receiveNotification");
-let tmp3 = new require("fetchFingerprint")("receiveNotification");
-let result = require("scheduledEventSort").fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
+let closure_18 = new timestampDefault("receiveNotification");
+let tmp3 = new timestampDefault("receiveNotification");
+let result = require("set").fileFinishedImporting("modules/push_notifications/native/receiveNotification.tsx");
 
 export default function receiveNotification(getData) {
   if (null == getData.getData) {
@@ -2561,7 +2558,7 @@ export default function receiveNotification(getData) {
     const obj3 = data(5066);
     const tmp11 = importDefault;
     const _HermesInternal = HermesInternal;
-    isTracing.mark("\u2757", "Receive notification " + data.type);
+    isTracingDefault.mark("\u2757", "Receive notification " + data.type);
     if (null != data.receiving_user_id) {
       if (null != id.getId()) {
         if (data.receiving_user_id !== obj.getId()) {
@@ -2571,8 +2568,8 @@ export default function receiveNotification(getData) {
           let receiving_user_id = data.receiving_user_id;
           receiving_user_id = tmp7(11589).switchAccount(receiving_user_id, false, arg1 ? tmp5.PUSH_NOTIFICATION_INITIAL : tmp5.PUSH_NOTIFICATION);
           receiving_user_id.then(() => {
-            const Emitter = outer1_1(outer1_3[40]).Emitter;
-            Emitter.batched(() => outer1_34(closure_0));
+            const Emitter = closure_1_1(closure_1_3[40]).Emitter;
+            Emitter.batched(() => closure_1_34(closure_0));
           });
           const tmp7Result2 = tmp7(11589);
         }
@@ -2580,6 +2577,6 @@ export default function receiveNotification(getData) {
       obj = id;
     }
     let Emitter = tmp11(589).Emitter;
-    return Emitter.batched(() => outer1_34(data));
+    return Emitter.batched(() => closure_1_34(data));
   }
 };

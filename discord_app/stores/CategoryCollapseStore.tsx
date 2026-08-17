@@ -1,19 +1,20 @@
 // discord_app/stores/CategoryCollapseStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionOpen from "handleConnectionOpen";
-import comparator from "comparator";
-import { ChannelTypes } from "ME";
-import { PersistedStore } from "initialize";
-import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getFavoritesAwareGuildName } from "../modules/favorites/FavoritesUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import create from "create" /* 1306 */;
+import getFavoritesAwareGuildName from "getFavoritesAwareGuildName" /* 1913 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "handleConnectionOpen" /* 4826 */;
+import closure_5 from "comparator" /* 1980 */;
+import { ChannelTypes } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function incrementVersion() {
   closure_8 = closure_8 + 1;
 }
 function syncFavoriteCategoryCollapse() {
-  const favorites = handleConnectionClosedOrResumed.settings.favorites;
+  const favorites = closure_2.settings.favorites;
   let favoriteChannels;
   if (favorites != null) {
     favoriteChannels = favorites.favoriteChannels;
@@ -64,19 +65,20 @@ function syncFavoriteCategoryCollapse() {
 }
 let closure_7 = {};
 let c8 = 0;
+const PersistedStore = initializeDefault.PersistedStore;
 class CategoryCollapseStore extends PersistedStore {
 }
 const prototype = CategoryCollapseStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
   let obj = arg0;
-  this.waitFor(ensureGuildLoaded, handleConnectionOpen, comparator, handleConnectionClosedOrResumed);
+  this.waitFor(closure_3, closure_4, closure_5, closure_2);
   this.removeChangeListener(incrementVersion);
   this.addChangeListener(incrementVersion);
   if (arg0 == null) {
     obj = {};
   }
-  const items = [handleConnectionClosedOrResumed];
+  const items = [closure_2];
   self.syncWith(items, syncFavoriteCategoryCollapse);
 };
 prototype["getState"] = function getState() {
@@ -107,10 +109,10 @@ Object.defineProperty(prototype, "version", {
 });
 CategoryCollapseStore.displayName = "CategoryCollapseStore";
 CategoryCollapseStore.persistKey = "collapsedCategories";
-const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
+const categoryCollapseStore = new CategoryCollapseStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(userGuildSettings) {
     if (!userGuildSettings.userGuildSettings.partial) {
-      let closure_7 = {};
+      closure_7 = {};
     }
     const iter = userGuildSettings.userGuildSettings.entries[Symbol.iterator]();
     const nextResult = iter.next();
@@ -177,7 +179,7 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
   },
   CATEGORY_COLLAPSE: function handleCategoryCollapse(id) {
     id = id.id;
-    const favorites = handleConnectionClosedOrResumed.settings.favorites;
+    const favorites = closure_2.settings.favorites;
     let favoriteChannels;
     if (favorites != null) {
       favoriteChannels = favorites.favoriteChannels;
@@ -201,7 +203,7 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
   },
   CATEGORY_EXPAND: function handleCategoryExpand(id) {
     id = id.id;
-    const favorites = handleConnectionClosedOrResumed.settings.favorites;
+    const favorites = closure_2.settings.favorites;
     let favoriteChannels;
     if (favorites != null) {
       favoriteChannels = favorites.favoriteChannels;
@@ -254,6 +256,6 @@ const categoryCollapseStore = new CategoryCollapseStore(require("dispatcher"), {
     return false;
   }
 });
-const result = require("handleConnectionOpen").fileFinishedImporting("stores/CategoryCollapseStore.tsx");
+const result = require("set").fileFinishedImporting("stores/CategoryCollapseStore.tsx");
 
 export default categoryCollapseStore;

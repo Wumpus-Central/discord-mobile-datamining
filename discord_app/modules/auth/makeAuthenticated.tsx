@@ -1,15 +1,16 @@
 // discord_app/modules/auth/makeAuthenticated.tsx
-import "noop";
-import fetchFingerprint from "fetchFingerprint";
-import { LoginStates } from "ME";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import { LoginStates } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/auth/makeAuthenticated.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/auth/makeAuthenticated.tsx");
 
 export const makeAuthenticated = function makeAuthenticated(displayName) {
-  let closure_0 = displayName;
-  let closure_1 = arg1;
+  closure_0 = displayName;
+  closure_1 = arg1;
   let obj = arg2;
   if (arg2 === undefined) {
     obj = { passProps: true };
@@ -26,28 +27,28 @@ export const makeAuthenticated = function makeAuthenticated(displayName) {
       tmp = closure_2;
       obj = closure_0(closure_2[4]);
       if (!obj.isAuthenticated()) {
-        obj2 = outer1_3;
-        tmp2 = outer1_4;
-        if (outer1_3.getLoginStatus() !== outer1_4.LOGGING_IN) {
+        obj2 = closure_1_3;
+        tmp2 = closure_1_4;
+        if (closure_1_3.getLoginStatus() !== closure_1_4.LOGGING_IN) {
           if (obj2.allowLogoutRedirect()) {
             tmp4 = null;
             if (null != closure_1) {
-              tmp8 = outer1_5;
+              tmp8 = closure_1_5;
               obj = { renderRedirect: null };
               tmp9 = closure_1;
-              obj[0] = outer1_5(closure_1(tmp[5]), {});
-              tmp10Result = outer1_5(tmp3, obj);
+              obj[0] = closure_1_5(closure_1(tmp[5]), {});
+              tmp10Result = closure_1_5(tmp3, obj);
             } else {
-              tmp5 = outer1_5;
+              tmp5 = closure_1_5;
               tmp6 = closure_1;
-              tmp10Result = outer1_5(closure_1(tmp[5]), {});
+              tmp10Result = closure_1_5(closure_1(tmp[5]), {});
             }
           }
           return tmp10Result;
         }
       }
       tmp12 = null;
-      tmp10 = outer1_5;
+      tmp10 = closure_1_5;
       tmp11 = closure_0;
       if (closure_2.passProps) {
         tmp12 = displayName;

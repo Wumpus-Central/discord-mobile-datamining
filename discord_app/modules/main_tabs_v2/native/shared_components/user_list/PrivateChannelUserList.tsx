@@ -1,25 +1,15 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 let c3 = importAllResult;
-({ RelationshipTypes: error, MAX_GROUP_DM_PARTICIPANTS: metroImportAll } = ME);
+({ RelationshipTypes: error, MAX_GROUP_DM_PARTICIPANTS: closure_8 } = ME);
 const memoResult = importAllResult.memo(function PrivateChannelUserList(channelId) {
-  let disableBottomSafeZone;
-  let disableStickySections;
-  let inActionSheet;
-  let insetEnd;
-  let listActionHeight;
-  let listActionRenderer;
-  let listStyleOverride;
-  let opensUserProfileOnUserPress;
   channelId = channelId.channelId;
   let flag = channelId.headerShown;
   ({ disableStickySections, listStyleOverride, disableBottomSafeZone, insetEnd } = channelId);
@@ -36,7 +26,7 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   let stateFromStores;
   let stateFromStoresArray;
   let flag2;
-  let c8;
+  let ownerId;
   let num;
   analyticsLocations = hideTitle(onUserPress[6])().analyticsLocations;
   let obj = channelId(onUserPress[7]);
@@ -71,13 +61,13 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   }
   let tmp5;
   if (flag2) {
-    let ownerId;
+    ownerId = undefined;
     if (stateFromStores != null) {
       ownerId = stateFromStores.ownerId;
     }
     tmp5 = ownerId;
   }
-  c8 = tmp5;
+  ownerId = tmp5;
   num = undefined;
   if (stateFromStores != null) {
     num = stateFromStores.userLimit;
@@ -99,7 +89,7 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
     if (flag2) {
       let tmp3 = num;
       if (0 <= 0) {
-        tmp3 = c8;
+        tmp3 = ownerId;
       }
       const _HermesInternal = HermesInternal;
       sum = combined + "/" + tmp3;
@@ -108,11 +98,11 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
     return { type: "section", props };
   }, items4);
   const getItemProps = opensUserProfileOnUserPress.useCallback((arg0, arg1) => {
-    let closure_0 = arg1;
+    closure_0 = arg1;
     if (null != stateFromStoresArray[arg1]) {
       let tmp4 = flag2;
       if (flag2) {
-        tmp4 = tmp3.id === c8;
+        tmp4 = tmp3.id === ownerId;
       }
       let obj = { type: "user", props: null };
       obj = { type: null, user: null, nickname: null, isNameplatedRow: true, onPress: null, isOwner: null, start: null, end: null, canShowDisplayNameStyles: true };
@@ -120,16 +110,16 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
       obj[1] = tmp3;
       obj[2] = stateFromStores.getNickname(tmp3.id);
       obj[4] = function onPress(id) {
-        if (outer1_2 != null) {
+        if (closure_1_2 != null) {
           let obj = { user: null, index: null };
           obj[0] = id;
           obj[1] = closure_0;
           tmp(obj);
         }
-        if (outer1_3) {
+        if (closure_1_3) {
           obj = { userId: null, sourceAnalyticsLocations: null, channelId: null };
           obj[0] = id.id;
-          obj[1] = outer1_4;
+          obj[1] = closure_1_4;
           obj[2] = closure_0;
           hideTitle(onUserPress[12])(obj);
         }
@@ -141,7 +131,7 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
       return obj;
     } else {
       obj = { type: "placeholder", props: null };
-      const obj1 = { start: null, end: null };
+      obj1 = { start: null, end: null };
       obj1[0] = tmp;
       obj1[1] = tmp2;
       obj[1] = obj1;
@@ -150,6 +140,6 @@ const memoResult = importAllResult.memo(function PrivateChannelUserList(channelI
   }, items5);
   return num(tmp2(tmp[13]).UsersFastList, { sections, getItemProps, getSectionProps, listHeaderSize, renderListHeader, disableStickySections, disableBackgroundOverlay: true, listStyleOverride, disableBottomSafeZone, insetEnd, inActionSheet });
 });
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/PrivateChannelUserList.tsx");
 
 export default memoResult;

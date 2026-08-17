@@ -1,27 +1,21 @@
 // discord_app/modules/wishlists/native/WishlistItemCardBase.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ManaContext } from "../../../../discord_common/js/packages/design/native.tsx";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useUserProfileColors } from "../../user_profile/hooks/native/useUserProfileColors.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import map from "map" /* 4097 */;
+import ManaContext from "ManaContext" /* 4104 */;
+import useUserProfileColors from "useUserProfileColors" /* 8979 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function SourceIcon(toastText) {
   toastText = toastText.toastText;
   let obj = {
     style: callback2().sourceIcon,
     onPress() {
-      let obj = outer1_1(outer1_2[5]);
+      let obj = closure_1_1(closure_1_2[5]);
       obj = { key: "WISHLIST_SOURCE_ICON", content: toastText };
       obj.open(obj);
     },
@@ -30,16 +24,16 @@ function SourceIcon(toastText) {
     importantForAccessibility: "no-hide-descendants",
     children: null
   };
-  obj = { color: null, size: "md" };
-  obj[0] = Themes.colors.INTERACTIVE_ICON_DEFAULT;
+  obj = { color: ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT, size: "md" };
   obj[5] = callback(toastText(9183).HeartIcon, obj);
   return callback(closure_3, obj);
 }
+noopAll;
 ({ Pressable: c3, View: c4, StyleSheet } = get_ActivityIndicator);
 ({ jsx: c5, Fragment: closure_6, jsxs: error } = jsxProd);
-let obj = { position: "absolute", top: require("Themes").space.PX_8, right: require("Themes").space.PX_8 };
+let obj = { position: "absolute", top: ThemesDefault.space.PX_8, right: ThemesDefault.space.PX_8 };
 obj = { card: null, overlayContainer: null, previewWrap: null, dimmedPreview: null, sourceIcon: null, lockBadge: null };
-obj = { borderWidth: 1, borderRadius: require("Themes").radii.lg, borderColor: require("Themes").colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
+obj = { borderWidth: 1, borderRadius: ThemesDefault.radii.lg, borderColor: ThemesDefault.colors.BORDER_MUTED, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj[0] = obj;
 createCacheKey = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -61,26 +55,16 @@ const merged2 = Object.assign(obj);
 obj3.zIndex = 2;
 obj3.width = 32;
 obj3.height = 32;
-obj3.borderRadius = require("Themes").radii.round;
-obj3.backgroundColor = require("Themes").colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
+obj3.borderRadius = ThemesDefault.radii.round;
+obj3.backgroundColor = ThemesDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT;
 obj3.alignItems = "center";
 obj3.justifyContent = "center";
 obj[5] = obj3;
 let closure_8 = createCacheKey.createStyles(obj);
 let obj4 = { OWNED: "owned", LOCKED: "locked" };
-const result = require("jsxProd").fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
+const result = require("set").fileFinishedImporting("modules/wishlists/native/WishlistItemCardBase.tsx");
 
 export default function WishlistItemCardBase(username) {
-  let accessibilityHidden;
-  let accessibilityLabel;
-  let onPress;
-  let overlay;
-  let primaryColor;
-  let renderPreview;
-  let secondaryColor;
-  let size;
-  let source;
-  let theme;
   ({ onPress, size } = username);
   ({ accessibilityLabel, renderPreview, source } = username);
   if (size === undefined) {
@@ -91,9 +75,9 @@ export default function WishlistItemCardBase(username) {
   let obj = ManaContext;
   const themeContext = obj.useThemeContext();
   ({ primaryColor, theme, secondaryColor } = themeContext);
-  let obj1 = useUserProfileColors;
+  obj1 = useUserProfileColors;
   let obj2 = map;
-  let containerBackground = obj2.useToken(Themes.colors.BG_SURFACE_RAISED);
+  let containerBackground = obj2.useToken(ThemesDefault.colors.BG_SURFACE_RAISED);
   if (null != primaryColor) {
     containerBackground = obj1.useUserProfileColors({ theme, primaryColor, secondaryColor }).containerBackground;
   }

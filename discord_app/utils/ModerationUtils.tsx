@@ -1,13 +1,11 @@
 // discord_app/utils/ModerationUtils.tsx
-import ME from "ME";
-import { ExplicitContentFilterTypes as closure_5 } from "items";
-import { create } from "../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { unsafe_getRawColor } from "../../discord_common/js/packages/tokens/shims.native.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import unsafe_getRawColor from "unsafe_getRawColor" /* 711 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import items2 from "items" /* 4068 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let obj1;
 function mapColorToHighlightColor(arg0) {
   if (obj.unsafe_getRawColor("PRIMARY_400") === arg0) {
     return tmp(14195).HighlightColors.ACCENT;
@@ -37,7 +35,8 @@ function mapColorToHighlightColor(arg0) {
   obj = unsafe_getRawColor;
 }
 ({ VerificationLevels: obj1, VerificationCriteria: c3, GuildExplicitContentFilterTypes: c4 } = ME);
-const result = require("unsafe_getRawColor").fileFinishedImporting("utils/ModerationUtils.tsx");
+let closure_5 = items2.ExplicitContentFilterTypes;
+const result = set.fileFinishedImporting("utils/ModerationUtils.tsx");
 
 export { mapColorToHighlightColor };
 export const mapOptionToHighlightedRowOptions = function mapOptionToHighlightedRowOptions(arr) {

@@ -1,10 +1,10 @@
 // discord_app/utils/FileUtils.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import { apply } from "../../_runtime/00012_apply.js";
-import { noConflict } from "../../_runtime/04835_noConflict.js";
+import applyDefault from "apply" /* 12 */;
+import noConflictDefault from "noConflict" /* 4835 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
 function getUploadFileSizeSum(arg0) {
@@ -26,7 +26,7 @@ const items3 = [GuildFeatures.MAX_FILE_SIZE_100_MB, GuildFeatures.MAX_GUILD_FILE
 items2[1] = items3;
 const items4 = [GuildFeatures.MAX_FILE_SIZE_50_MB, GuildFeatures.MAX_GUILD_FILE_SIZE_50_MB];
 items2[2] = items4;
-const result = require("ME").fileFinishedImporting("utils/FileUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/FileUtils.tsx");
 
 export const transformNativeFile = function transformNativeFile(filename) {
   let file = filename;
@@ -37,7 +37,7 @@ export const transformNativeFile = function transformNativeFile(filename) {
       str = "text/plain";
     }
     const _File = File;
-    const items = [filename.data.buffer];
+    items = [filename.data.buffer];
     const obj = { type: null };
     obj[0] = str;
     file = new File(items, filename, obj);
@@ -45,7 +45,7 @@ export const transformNativeFile = function transformNativeFile(filename) {
   return file;
 };
 export const makeFile = function makeFile(arg0, arg1, type) {
-  const items = [arg0];
+  items = [arg0];
   const file = new File(items, arg1, { type });
   return file;
 };
@@ -83,7 +83,7 @@ export const classifyFile = function classifyFile(file) {
   return str3;
 };
 export const classifyFileName = function classifyFileName(str) {
-  const importDefault = arg1;
+  importDefault = arg1;
   str = undefined;
   if (str != null) {
     str = str.toLowerCase();
@@ -91,7 +91,7 @@ export const classifyFileName = function classifyFileName(str) {
   if (str == null) {
     str = "";
   }
-  const found = apply.find(items, (reType) => {
+  const found = applyDefault.find(items, (reType) => {
     if (null != reType.reType) {
       if (null != type) {
         reType = reType.reType;
@@ -114,8 +114,8 @@ export const classifyFileName = function classifyFileName(str) {
   }
   return str2;
 };
-export const sizeString = function sizeString(createGuildRecordFromRust) {
-  return noConflict.filesize(createGuildRecordFromRust);
+export const sizeString = function sizeString(closure_3) {
+  return noConflictDefault.filesize(closure_3);
 };
 export const maxFileSize = function maxFileSize(guildId) {
   const currentUser = authStore.getCurrentUser();
@@ -128,8 +128,6 @@ export const maxFileSize = function maxFileSize(guildId) {
       const FileUploadPowerupHoldoutExperiment = guild(4301).FileUploadPowerupHoldoutExperiment;
       enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
       let reduced = items2.reduce((arg0, arg1) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg1;
         if (!enabled) {
           const features = _Math.features;
@@ -170,8 +168,6 @@ export const anyFileTooLarge = function anyFileTooLarge(arg0, arg1) {
       guild = items2;
       reduce = items2.reduce;
       let reduced = reduce((arg0, arg1) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg1;
         if (!enabled) {
           const features = _Math.features;
@@ -211,10 +207,6 @@ export const getMaxRequestSize = function getMaxRequestSize() {
   return 524288000;
 };
 export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadblockDescription(arg0) {
-  let guildId;
-  let hideLearnMore;
-  let maxSize;
-  let onClick;
   ({ guildId, maxSize } = arg0);
   ({ onClick, hideLearnMore } = arg0);
   let obj = _Math(4269);
@@ -229,8 +221,6 @@ export const fileUploadLimitRoadblockDescription = function fileUploadLimitRoadb
         const FileUploadPowerupHoldoutExperiment = tmp(4301).FileUploadPowerupHoldoutExperiment;
         enabled = FileUploadPowerupHoldoutExperiment.getConfig({ location: "getGuildMaxFileSize" }).enabled;
         let reduced = items2.reduce((arg0, arg1) => {
-          let tmp;
-          let tmp2;
           [tmp, tmp2] = arg1;
           if (!enabled) {
             const features = _Math.features;

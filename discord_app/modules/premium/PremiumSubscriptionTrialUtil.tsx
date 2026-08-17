@@ -1,21 +1,16 @@
 // discord_app/modules/premium/PremiumSubscriptionTrialUtil.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import emitChanges from "emitChanges";
-import GuildFeatures from "GuildFeatures";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import closure_3 from "reset" /* 4045 */;
+import closure_4 from "emitChanges" /* 7421 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
-({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c5, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6, PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: error, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: metroImportAll, PREMIUM_TRIAL_IDS_ALL: c9 } = GuildFeatures);
-const result = require("emitChanges").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
+require = arg1;
+({ PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID: c5, PREMIUM_TIER_2_REACTIVATION_TRIAL_ID: closure_6, PREMIUM_TIER_2_3P_ONE_MONTH_TRIAL_ID: error, PREMIUM_TIER_2_REFERRAL_TRIAL_ID: closure_8, PREMIUM_TRIAL_IDS_ALL: c9 } = GuildFeatures);
+const result = require("set").fileFinishedImporting("modules/premium/PremiumSubscriptionTrialUtil.tsx");
 
 export const useHasActiveTrial = function useHasActiveTrial() {
-  const items = [reset];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   let hasActiveTrial;
   if (stateFromStores != null) {
@@ -53,10 +48,10 @@ export const isEligibleTrialSub = function isEligibleTrialSub(trialId) {
   return tmp2;
 };
 export const useCurrentPremiumTrialTier = function useCurrentPremiumTrialTier() {
-  const items = [reset];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => premiumTypeSubscription.getPremiumTypeSubscription());
   const obj = initialize;
-  const items1 = [mergeGuildAvatar];
+  const items1 = [closure_2];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => currentUser.getCurrentUser());
   let hasActiveTrial;
   if (stateFromStores != null) {

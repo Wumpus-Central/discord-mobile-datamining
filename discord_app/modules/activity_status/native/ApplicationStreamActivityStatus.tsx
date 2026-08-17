@@ -1,23 +1,16 @@
 // discord_app/modules/activity_status/native/ApplicationStreamActivityStatus.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ActivityStatusIcon } from "ActivityStatusIcon.tsx";
-import { ActivityStatusText } from "ActivityStatusText.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 9898 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 9901 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("getSystemLocale").fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_status/native/ApplicationStreamActivityStatus.tsx");
 
 export default function ApplicationStreamActivityStatus(hideText) {
-  let game;
-  let hideIcon;
-  let iconStyle;
-  let maxFontSizeMultiplier;
-  let textStyle;
   ({ game, hideIcon } = hideText);
   ({ iconStyle, textStyle, maxFontSizeMultiplier } = hideText);
   if (hideIcon === undefined) {
@@ -60,8 +53,8 @@ export default function ApplicationStreamActivityStatus(hideText) {
     obj = { icon: null, style: null };
     obj[0] = tmp7(9899).TvIcon;
     obj[1] = iconStyle;
-    tmp12 = callback(ActivityStatusIcon, obj);
-    const tmp15 = ActivityStatusIcon;
+    tmp12 = callback(ActivityStatusIconDefault, obj);
+    const tmp15 = ActivityStatusIconDefault;
   }
   const children = [tmp12, ];
   let tmp16 = !flag;
@@ -70,7 +63,7 @@ export default function ApplicationStreamActivityStatus(hideText) {
     obj[0] = textStyle;
     obj[1] = maxFontSizeMultiplier;
     obj[2] = formatResult;
-    tmp16 = callback(ActivityStatusText, obj);
+    tmp16 = callback(ActivityStatusTextDefault, obj);
   }
   children[1] = tmp16;
   return closure_5(closure_4, { children });

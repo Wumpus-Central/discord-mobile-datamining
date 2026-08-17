@@ -1,16 +1,16 @@
 // discord_app/modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/hooks/usePowerupGroupConfig.tsx");
 
 export default function usePowerupGroupConfig(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
-  const items = [createGuildRecordFromRust];
+  closure_1 = arg1;
+  const items = [closure_4];
   stateFromStores = _require(stateFromStores[2]).useStateFromStores(items, () => {
-    const guild = outer1_4.getGuild(callback);
+    const guild = closure_1_4.getGuild(callback);
     let guildSupportsTagsResult = null != guild;
     if (guildSupportsTagsResult) {
       guildSupportsTagsResult = callback(stateFromStores[3]).guildSupportsTags(guild);

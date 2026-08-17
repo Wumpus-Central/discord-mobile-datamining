@@ -1,10 +1,10 @@
 // discord_app/modules/game_claim/UnclaimedGamesActionCreators.tsx
-import closure_3 from "initialize";
-import importDefaultResult from "getMap";
-import { Endpoints } from "ME";
-import initialize from "initialize";
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { set } from "../../utils/Durations.tsx";
+import failsDefault from "fails" /* 584 */;
+import setDefault from "set" /* 687 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult from "getMap" /* 15454 */;
+import { Endpoints } from "ME" /* 676 */;
+import initialize from "initialize" /* 589 */;
 
 const require = arg1;
 function fetchUnclaimedGames() {
@@ -49,9 +49,9 @@ function _fetchUnclaimedGames() {
             const callback = tmp2;
             let body = tmp5;
             body = undefined;
-            const HTTP = outer1_0(530).HTTP;
-            const obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
-            obj1[0] = outer1_5.UNCLAIMED_GAMES;
+            const HTTP = closure_1_0(530).HTTP;
+            obj1 = { url: null, oldFormErrors: true, rejectWithError: false };
+            obj1[0] = closure_1_5.UNCLAIMED_GAMES;
             dependencyMap = 1;
             c3 = 1;
             const obj2 = { value: null, done: false };
@@ -81,7 +81,7 @@ function _fetchUnclaimedGames() {
       }
     }
   });
-  const _fetchUnclaimedGames = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -106,19 +106,19 @@ initialize = {
   load() {
     return fetchUnclaimedGames();
   },
-  staleAfter: require("set").Seconds.DAY,
+  staleAfter: setDefault.Seconds.DAY,
   retryConfig: initialize
 };
 initialize = {
   backoff() {
-    let tmp = fails;
-    tmp = new tmp(5 * set.Millis.MINUTE);
+    let tmp = failsDefault;
+    tmp = new tmp(5 * setDefault.Millis.MINUTE);
     return tmp;
   },
   maxRetries: 10
 };
 const fetchStore = initialize.createFetchStore(importDefaultResult, initialize);
-const result = require("ME").fileFinishedImporting("modules/game_claim/UnclaimedGamesActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/game_claim/UnclaimedGamesActionCreators.tsx");
 
 export default { fetch: fetchUnclaimedGames };
 export { fetchUnclaimedGames };

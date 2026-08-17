@@ -1,22 +1,21 @@
 // discord_app/modules/polls/native/PollCreationInputError.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { flexDirection: "row", alignItems: "center", marginTop: -10 }, icon: null };
-createCacheKey = { alignSelf: "center", marginRight: 5, color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
+createCacheKey = { alignSelf: "center", marginRight: 5, color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/polls/native/PollCreationInputError.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/polls/native/PollCreationInputError.tsx");
 
 export default function PollCreationInputError(message) {
   message = message.message;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const items = [message];
   const effect = React.useEffect(() => {
     let tmp2 = null != message;
@@ -24,7 +23,7 @@ export default function PollCreationInputError(message) {
       tmp2 = "" !== tmp;
     }
     if (tmp2) {
-      const AccessibilityAnnouncer = message(outer1_1[5]).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = message(closure_1_1[5]).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(tmp);
     }
   }, items);

@@ -1,7 +1,10 @@
 // discord_common/js/packages/kv-storage/js/raw/Runtime.tsx
+import set from "set" /* 2 */;
+import log from "log" /* 4 */;
+
 let c2 = 1000000;
 let closure_3 = "1" === process.env.KV_STORAGE_LOGGING;
-const logger = new require("log").Logger("Runtime");
+const logger = new log.Logger("Runtime");
 const prototype = function Runtime() {
   return Object.create(new.target.prototype);
 }.prototype;
@@ -12,8 +15,8 @@ prototype["nextId"] = function nextId() {
 };
 prototype["executeAsync"] = function executeAsync(type, arg1) {
   const self = this;
-  let closure_1 = type;
-  let closure_0 = arg1;
+  closure_1 = type;
+  closure_0 = arg1;
   this.initialize();
   return new Promise((resolve, reject) => {
     const nextIdResult = self.nextId();
@@ -31,11 +34,11 @@ prototype["addDatabaseStateCallback"] = function addDatabaseStateCallback(arg0) 
   return arg0;
 };
 prototype["removeCompletionCallback"] = function removeCompletionCallback(databaseStateCallback) {
-  let closure_0 = databaseStateCallback;
+  closure_0 = databaseStateCallback;
   this.completionCallbacks = this.completionCallbacks.filter((arg0) => arg0 !== closure_0);
 };
 prototype["removeDatabaseStateCallback"] = function removeDatabaseStateCallback(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   this.dbStateCallbacks = this.dbStateCallbacks.filter((arg0) => arg0 !== closure_0);
 };
 prototype["onResponse"] = function onResponse(id) {
@@ -133,6 +136,6 @@ prototype.initialized = false;
 prototype.dbStateCallbacks = [];
 prototype.completionCallbacks = [];
 const map = new Map();
-let result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Runtime.tsx");
+let result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/raw/Runtime.tsx");
 
 export const Runtime = prototype;

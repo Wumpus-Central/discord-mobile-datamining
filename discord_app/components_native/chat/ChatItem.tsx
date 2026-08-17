@@ -1,21 +1,17 @@
 // discord_app/components_native/chat/ChatItem.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import { View } from "n";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { MessageTypes } from "ME";
-import Changeset from "Changeset";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { __INTERNAL_VIEW_CONFIG } from "../../../discord_common/js/packages/rtn-codegen/js/AutoModerationSystemMessageViewNativeComponent.tsx";
-import { set } from "../../../discord_common/js/shared/shared-constants/MessageTypes.tsx";
-import { isSystemMessage } from "../../modules/messages/isSystemMessage.tsx";
+import set from "set" /* 686 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
+import __INTERNAL_VIEW_CONFIG from "__INTERNAL_VIEW_CONFIG" /* 10067 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { MessageTypes } from "ME" /* 676 */;
+import Changeset from "Changeset" /* 8158 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function DCDChatItem(message) {
   message = message.message;
   const merged = Object.assign(message, Object.create(null));
@@ -29,8 +25,8 @@ function DCDChatItem(message) {
       obj = {};
       const merged2 = Object.assign(merged);
       tmp3Result = callback(tmp21(10068).default, obj);
-    } else if (isSystemMessage(message)) {
-      const obj1 = {};
+    } else if (isSystemMessageDefault(message)) {
+      obj1 = {};
       const merged3 = Object.assign(merged);
       tmp3Result = tmp3(tmp21(10069).default, obj1);
     } else {
@@ -41,21 +37,15 @@ function DCDChatItem(message) {
   }
   return tmp3Result;
 }
-({ RowType: metroImportAll, Changeset: c9 } = Changeset);
+({ RowType: closure_8, Changeset: c9 } = Changeset);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_13 = createCacheKey.createStyles((marginLeft, marginTop) => {
   const offset = { marginTop: -marginTop, marginLeft: -marginLeft };
   return { container: { position: "relative", overflow: "hidden" }, offset, gradient: { position: "absolute", bottom: 0, height: 24, width: "100%" }, itemRow: { backgroundColor: "transparent" } };
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/chat/ChatItem.tsx");
+const result = require("set").fileFinishedImporting("components_native/chat/ChatItem.tsx");
 
 export default function _default(rowGenerator) {
-  let backgroundColor;
-  let c6;
-  let maxHeight;
-  let modifyRow;
-  let pointerEvents;
-  let tmp4;
   rowGenerator = rowGenerator.rowGenerator;
   const message = rowGenerator.message;
   let num = rowGenerator.horizontalOffset;
@@ -72,7 +62,7 @@ export default function _default(rowGenerator) {
   const gradientColors = rowGenerator.gradientColors;
   let roleStyle;
   let first;
-  let closure_8;
+  closure_8 = undefined;
   roleStyle = undefined;
   let rawRow;
   let token;
@@ -152,7 +142,7 @@ export default function _default(rowGenerator) {
   const tmp17 = modifyRow;
   token = rowGenerator(modifyRow[16]).useToken(backgroundColor);
   const items4 = [gradientColors, token];
-  const obj1 = { style: items5, onLayout: callback, pointerEvents, children: null };
+  obj1 = { style: items5, onLayout: callback, pointerEvents, children: null };
   items5 = [tmp9.container, rowGenerator.style, { height: tmp13 }];
   let tmp21 = null != first;
   const memo2 = obj.useMemo(() => {

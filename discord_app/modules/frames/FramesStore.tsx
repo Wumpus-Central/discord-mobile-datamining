@@ -1,18 +1,18 @@
 // discord_app/modules/frames/FramesStore.tsx
-import FrameLayoutModes from "FrameLayoutModes";
-import { ActivityPanelModes } from "ActivityPanelModes";
-import { NOOP_TRUE } from "sum";
-import { Store } from "initialize";
-import { getURLForApplication } from "../activities/getURLForApplication.tsx";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ActivityPanelModes2 from "ActivityPanelModes" /* 8703 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 8710 */;
+import FrameLayoutModes from "FrameLayoutModes" /* 8709 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let obj1;
 ({ FrameIntent: obj1, FrameLayoutModes: c3, getFrameIntentForSurface: c4, isLaunched: c5, makeFrameId: closure_6 } = FrameLayoutModes);
+const ActivityPanelModes = ActivityPanelModes2.ActivityPanelModes;
+const NOOP_TRUE = sum.NOOP_TRUE;
 const map = new Map();
 let c10 = null;
+const Store = initializeDefault.Store;
 class FramesStoreClass extends Store {
 }
 const prototype = FramesStoreClass.prototype;
@@ -55,10 +55,8 @@ prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
   return map.get(callback3(arg0, arg1));
 };
 FramesStoreClass.displayName = "FramesStore";
-const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
+const framesStoreClass = new FramesStoreClass(dispatcherDefault, {
   FRAME_LAUNCH_START: function handleFrameLaunchStart(applicationId) {
-    let frameId;
-    let surface;
     ({ frameId, surface } = applicationId);
     const tmp = callback(surface);
     const result = map.set(frameId, { id: frameId, applicationId: applicationId.applicationId, intent: tmp, surface, state: "loading", data: null });
@@ -68,7 +66,7 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
     let obj = map;
     const value = map.get(frameId);
     if (null != value) {
-      const tmp14 = getURLForApplication(value.applicationId);
+      const tmp14 = getURLForApplicationDefault(value.applicationId);
       if (null == tmp14) {
         obj.delete(frameId);
         if (c10 === frameId) {
@@ -168,9 +166,6 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
     return flag;
   },
   FRAME_SET_ORIENTATION_LOCK_STATE: function handleOrientationLockState(arg0) {
-    let frameId;
-    let lockState;
-    let pictureInPictureLockState;
     ({ frameId, lockState, pictureInPictureLockState } = arg0);
     let flag = false;
     if (null != frameId) {
@@ -328,6 +323,6 @@ const framesStoreClass = new FramesStoreClass(require("dispatcher"), {
     return flag;
   }
 });
-let result = require("sum").fileFinishedImporting("modules/frames/FramesStore.tsx");
+let result = set.fileFinishedImporting("modules/frames/FramesStore.tsx");
 
 export default framesStoreClass;

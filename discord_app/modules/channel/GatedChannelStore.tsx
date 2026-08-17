@@ -1,24 +1,21 @@
 // discord_app/modules/channel/GatedChannelStore.tsx
-import initialize from "initialize";
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import { hasPermission } from "GuildRoleRecordTypeTag";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { Store } from "initialize";
-import set from "GuildRoleRecordTypeTag";
-import { isSubscriptionRole } from "../guild_role_subscriptions/PremiumRoleUtils.tsx";
-import { hasViewChannelPermission } from "../guild_role_subscriptions/RolePermissionUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isSubscriptionRole from "isSubscriptionRole" /* 4012 */;
+import hasViewChannelPermission from "hasViewChannelPermission" /* 4013 */;
+import closure_2 from "initialize" /* 1982 */;
+import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
+import { hasPermission } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_8 from "createGuildRecordFromRust" /* 1910 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let c10;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function isSubscriptionGated(role) {
-  let guildId;
-  let isPreviewingRoles;
   role = role.role;
   ({ guildId, isPreviewingRoles } = role);
   let isSubscriptionRoleResult = isSubscriptionRole.isSubscriptionRole(role);
@@ -148,7 +145,7 @@ function computeForChannel(guild_id, id) {
   }
 }
 function handleInitialize() {
-  let closure_12 = {};
+  closure_12 = {};
   set.clear();
 }
 function handleGuildUpdate(arg0) {
@@ -191,11 +188,12 @@ function handleChannelUpdate(channel) {
 ({ Permissions: c10, GuildFeatures: unpackModuleId } = ME);
 let closure_12 = {};
 let set = new Set();
+const Store = initializeDefault.Store;
 class GatedChannelStore extends Store {
 }
 const prototype = GatedChannelStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, trackCommunicationDisabled, createGuildRoleRecordFromRust, createGuildRecordFromRust, initialize, mergeGuildAvatar);
+  this.waitFor(closure_5, closure_6, closure_7, closure_8, closure_2, closure_9);
 };
 prototype["isChannelGated"] = function isChannelGated(guildId, channelId) {
   if (null == guildId) {
@@ -206,7 +204,7 @@ prototype["isChannelGated"] = function isChannelGated(guildId, channelId) {
       const guild = store3.getGuild(guildId);
       if (null != guild) {
         const _Set = Set;
-        const set = new Set();
+        set = new Set();
         dependencyMap[guildId] = set;
         const features = guild.features;
         if (features.has(constants2.ROLE_SUBSCRIPTIONS_ENABLED)) {
@@ -272,7 +270,7 @@ prototype["isChannelOrThreadParentGated"] = function isChannelOrThreadParentGate
   }
 };
 GatedChannelStore.displayName = "GatedChannelStore";
-const gatedChannelStore = new GatedChannelStore(require("dispatcher"), {
+const gatedChannelStore = new GatedChannelStore(dispatcherDefault, {
   CONNECTION_OPEN: handleInitialize,
   OVERLAY_INITIALIZE: handleInitialize,
   CACHE_LOADED_LAZY: handleInitialize,

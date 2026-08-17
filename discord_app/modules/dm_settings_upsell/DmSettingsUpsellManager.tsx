@@ -1,9 +1,12 @@
 // discord_app/modules/dm_settings_upsell/DmSettingsUpsellManager.tsx
-import { Endpoints } from "ME";
-import "initialize";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { DmSettingsUpsellActionCreators.native } from "DmSettingsUpsellActionCreators.native.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import initializeDefault from "initialize" /* 5038 */;
+import _modDef16554 from "module_16554" /* 16554 */;
 
+const Endpoints = ME.Endpoints;
+initializeDefault;
 class DmSettingsUpsellManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -12,10 +15,10 @@ class DmSettingsUpsellManager extends tmp2 {
   }
 }
 DmSettingsUpsellManager.prototype["handleDmSettingsUpsellShow"] = function handleDmSettingsUpsellShow(guildId) {
-  const result = DmSettingsUpsellActionCreators.native.openDmSettingsUpsellModal(guildId.guildId);
+  const result = _modDef16554.openDmSettingsUpsellModal(guildId.guildId);
 };
 const dmSettingsUpsellManager = new DmSettingsUpsellManager();
-let result = require("module_16554").fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
+let result = set.fileFinishedImporting("modules/dm_settings_upsell/DmSettingsUpsellManager.tsx");
 
 export default dmSettingsUpsellManager;
 export const acknowledgeDmSettingsUpsell = function acknowledgeDmSettingsUpsell(guildId) {

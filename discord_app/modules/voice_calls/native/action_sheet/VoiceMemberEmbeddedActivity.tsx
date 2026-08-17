@@ -1,19 +1,17 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberEmbeddedActivity.tsx
-import _slicedToArray from "_slicedToArray";
-import "handlePressJoinActivity";
-import get_ActivityIndicator from "useWindowDimensions";
-import participantFromServer from "participantFromServer";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "participantFromServer" /* 1390 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let unpackModuleId;
 const require = arg1;
+noopAll;
 ({ Image: c4, View: c5 } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const XSMALL = require("Button").AvatarSizes.XSMALL;
@@ -23,7 +21,7 @@ let c14 = 1.7777777777777777;
 obj = { voiceMemberItemRow: { paddingTop: 12, paddingBottom: 16, flexDirection: "column", display: "flex", justifyContent: "flex-start" }, innerRow: { paddingHorizontal: 16, alignItems: "center" }, activityDetails: { marginBottom: 8, flexDirection: "row", display: "flex" }, appIcon: obj, appIconPlaceholder: null, centerGroup: null, applicationName: null, joinButton: null, joinButtonPill: null, joinButtonContainer: null, overflow: null, overflowBackgroundColor: null, overflowBackgroundColorActionSheet: null };
 obj = {};
 const merged = Object.assign(obj);
-obj.tintColor = require("Themes").colors.INTERACTIVE_TEXT_DEFAULT;
+obj.tintColor = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
 obj[4] = obj;
 obj[5] = { flex: 1, paddingRight: 4 };
 obj[6] = { lineHeight: 20 };
@@ -32,16 +30,14 @@ obj[8] = { borderRadius: 100, paddingHorizontal: 24 };
 obj[9] = { alignItems: "center", justifyContent: "center", display: "flex", width: "100%", paddingHorizontal: 16 };
 createCacheKey = { height: require("Button").AVATAR_SIZE_MAP[XSMALL] };
 obj[10] = createCacheKey;
-obj[11] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL };
-let obj2 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_NORMAL };
-obj[12] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+obj[11] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+let obj2 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_NORMAL };
+obj[12] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 let closure_15 = createCacheKey.createStyles(obj);
-let obj3 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberEmbeddedActivity.tsx");
+let obj3 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberEmbeddedActivity.tsx");
 
 export default function VoiceMemberEmbeddedActivity(onItemPress) {
-  let channelId;
-  let embeddedActivity;
   ({ embeddedActivity, channelId } = onItemPress);
   onItemPress = onItemPress.onItemPress;
   let first;
@@ -50,21 +46,21 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
   let embeddedActivityLocationGuildId;
   let embeddedActivityJoinability;
   function handleCanJoin() {
-    onItemPress(_slicedToArray, first, stateFromStores);
+    onItemPress(closure_3, first, stateFromStores);
   }
   const tmp = callback2();
   const items = [embeddedActivity.applicationId];
   first = callback(onItemPress(first[12])(items), 1)[0];
   const mapped = Array.from(embeddedActivity.userIds).map((arg0) => user.getUser(arg0));
   let found = mapped.filter(channelId(first[13]).isNotNullish);
-  let obj1 = channelId(first[14]);
+  obj1 = channelId(first[14]);
   const items1 = [handleCanJoin];
   callback = obj1.useStateFromStores(items1, () => handleCanJoin.getChannel(channelId));
   let obj2 = channelId(first[14]);
   const items2 = [embeddedActivityJoinability];
   stateFromStores = obj2.useStateFromStores(items2, () => {
     let found = null;
-    if (null != _slicedToArray) {
+    if (null != closure_3) {
       const embeddedActivitiesForChannel = embeddedActivityJoinability.getEmbeddedActivitiesForChannel(tmp.id);
       found = embeddedActivitiesForChannel.find((applicationId) => {
         let id;
@@ -133,7 +129,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
       obj7[2] = tmp4(tmp3[9]).OverflowText;
       obj7[3] = found;
       obj7[5] = function renderItem(user) {
-        let obj = { user, guildId: closure_5, size: outer1_12, cutout: null };
+        let obj = { user, guildId: closure_5, size: closure_1_12, cutout: null };
         let tmp5;
         if (!arg1) {
           obj = { radius: null, direction: null, inset: -6 };
@@ -142,7 +138,7 @@ export default function VoiceMemberEmbeddedActivity(onItemPress) {
           tmp5 = obj;
         }
         obj[3] = tmp5;
-        return outer1_10(channelId(first[9]).CutoutableAvatarImage, obj);
+        return closure_1_10(channelId(first[9]).CutoutableAvatarImage, obj);
       };
       items5[2] = closure_10(tmp4(tmp3[9]).SummarizedIconRow, obj7);
       obj3[1] = items5;

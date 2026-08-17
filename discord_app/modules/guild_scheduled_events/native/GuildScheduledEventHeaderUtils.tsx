@@ -1,25 +1,16 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx
-import scheduledEventSort from "scheduledEventSort";
-import { GuildScheduledEventEntityTypes as closure_5 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { registerAsset } from "../../../../_runtime/08896_registerAsset.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { getRRule } from "../utils/ScheduleUtils.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import getRRule from "getRRule" /* 8785 */;
+import registerAssetDefault from "registerAsset" /* 8896 */;
+import scheduledEventSort from "scheduledEventSort" /* 4370 */;
 
-let c3;
-let c4;
 ({ isGuildEventEnded: c3, isGuildScheduledEventActive: c4 } = scheduledEventSort);
-const result = require("getRRule").fileFinishedImporting("modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx");
+let closure_5 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventEntityTypes;
+const result = set.fileFinishedImporting("modules/guild_scheduled_events/native/GuildScheduledEventHeaderUtils.tsx");
 
 export const getGuildScheduledEventHeaderProps = function getGuildScheduledEventHeaderProps(eventTimeData) {
-  let currentOrPastEvent;
-  let diffMinutes;
-  let event;
-  let isCanceled;
-  let isStage;
-  let recurrenceId;
-  let startDateTimeString;
-  let theme;
-  let upcomingEvent;
   ({ startDateTimeString, diffMinutes, currentOrPastEvent, upcomingEvent } = eventTimeData.eventTimeData);
   ({ event, recurrenceId } = eventTimeData);
   ({ isStage, theme, isCanceled } = eventTimeData);
@@ -34,8 +25,8 @@ export const getGuildScheduledEventHeaderProps = function getGuildScheduledEvent
     tmp4 = callback2(event);
   }
   const tmp7 = callback(event);
-  const ICON_SUBTLE = Themes.colors.ICON_SUBTLE;
-  let tmp8Result = registerAsset;
+  const ICON_SUBTLE = ThemesDefault.colors.ICON_SUBTLE;
+  let tmp8Result = registerAssetDefault;
   if (tmp4) {
     const intl4 = tmp(1236).intl;
     let stringResult = intl4.string(tmp(1236).t["X2K3/4"]);

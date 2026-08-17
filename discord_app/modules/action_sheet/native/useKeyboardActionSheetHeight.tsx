@@ -1,14 +1,19 @@
 // discord_app/modules/action_sheet/native/useKeyboardActionSheetHeight.tsx
-import { NAV_BAR_HEIGHT } from "../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
-import { useCustomKeyboardHeight } from "../../keyboard/native/useCustomKeyboardHeight.tsx";
-import { useSafeAreaInsets } from "../../safe_area/useSafeAreaInsets.native.tsx";
-import { useWindowDimensions } from "../../screen/useWindowDimensions.native.tsx";
-const result = require("useWindowDimensions").fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
+import set from "set" /* 2 */;
+import useWindowDimensions from "useWindowDimensions" /* 1494 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1494 */;
+import useSafeAreaInsets from "useSafeAreaInsets" /* 1629 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5444 */;
+import useCustomKeyboardHeightDefault from "useCustomKeyboardHeight" /* 5444 */;
+import NAV_BAR_HEIGHT from "NAV_BAR_HEIGHT" /* 6370 */;
+
+const result = set.fileFinishedImporting("modules/action_sheet/native/useKeyboardActionSheetHeight.tsx");
 
 export default function useKeyboardActionSheetHeight() {
-  const tmp = useSafeAreaInsets();
-  const minimum = useCustomKeyboardHeight();
-  let maximum = useWindowDimensions({ ignoreKeyboard: true }).height - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE - tmp.top;
+  const tmp = useSafeAreaInsetsDefault();
+  const minimum = useCustomKeyboardHeightDefault();
+  let maximum = useWindowDimensionsDefault({ ignoreKeyboard: true }).height - NAV_BAR_HEIGHT.NAV_BAR_HEIGHT_MULTILINE - tmp.top;
   if (minimum >= maximum) {
     maximum = minimum;
   }

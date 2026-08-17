@@ -1,13 +1,15 @@
 // discord_app/modules/gateway/GatewayZstdUtils.native.tsx
-import { NativeModules } from "get ActivityIndicator";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeCompressionModule.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import enforcingDefault from "enforcing" /* 13206 */;
 
-const result = require("enforcing").fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
+const NativeModules = get_ActivityIndicator.NativeModules;
+const result = set.fileFinishedImporting("modules/gateway/GatewayZstdUtils.native.tsx");
 
 export const supportsZstd = function supportsZstd() {
   if (obj.isAndroid()) {
-    let flag = enforcing.getConstants().supportsZstd;
-    const obj2 = enforcing;
+    let flag = enforcingDefault.getConstants().supportsZstd;
+    const obj2 = enforcingDefault;
   } else {
     const DCDCompressionManager = NativeModules.DCDCompressionManager;
     flag = undefined;
@@ -21,6 +23,6 @@ export const supportsZstd = function supportsZstd() {
   return flag;
 };
 export const createZstdContextWeb = function createZstdContextWeb() {
-  const error = new Error("Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.");
+  error = new Error("Attempting to use createZstdContextWeb in a native context. Use MobileGatewayCompressionHandler instead.");
   throw error;
 };

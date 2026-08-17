@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import createToggle from "createToggle";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import initialize from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import closure_3 from "initialize" /* 1212 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 const name = require("useIsMobileVisualRefreshExperimentEnabled").MobileVisualRefreshExperiment.definition.name;
 createToggle = {
   useTitle() {
@@ -20,7 +20,7 @@ createToggle = {
   },
   parent: require("MobileUserSettings").MobileUserSettings.APPEARANCE,
   usePredicate: function useIsInDTesterExperimentVariant() {
-    const items = [initialize, fetchFingerprint];
+    const items = [closure_3, closure_4];
     return initialize.useStateFromStores(items, () => {
       serverAssignment = serverAssignment.getServerAssignment("user", id.getId(), closure_5);
       let tmp2 = null != serverAssignment;
@@ -35,7 +35,7 @@ createToggle = {
     return MobileVisualRefreshExperiment.useConfig({ location: "SettingsAppearance" }).enabled;
   },
   onValueChange: function onToggleRefresh(arg0) {
-    const dispatch = dispatcher.dispatch;
+    const dispatch = dispatcherDefault.dispatch;
     if (arg0) {
       let obj = { type: "APEX_EXPERIMENT_OVERRIDE_DELETE", experimentName: null };
       obj[1] = name;
@@ -48,6 +48,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/MobileVisualRefreshSetting.tsx");
 
 export default createToggle;

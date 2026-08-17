@@ -1,10 +1,12 @@
 // discord_app/modules/premium/gifting/GiftingBadgesUtils.tsx
-import { getSingleRequirementThreshold as closure_2 } from "initialize";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { apexExperiment } from "experiments/GiftingBadgeDesktopExperiment.tsx";
-import { apexExperiment } from "experiments/GiftingBadgeExperiment.tsx";
+import set from "set" /* 2 */;
+import initialize from "initialize" /* 8936 */;
+import apexExperiment from "apexExperiment" /* 9592 */;
+import apexExperiment2 from "apexExperiment" /* 13005 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-let result = require("apexExperiment").fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
+let closure_2 = initialize.getSingleRequirementThreshold;
+let result = set.fileFinishedImporting("modules/premium/gifting/GiftingBadgesUtils.tsx");
 
 export const getGiftingBadgeProgressPercent = function getGiftingBadgeProgressPercent(badgeProgress, currentTier, nextTier) {
   const tmp = callback(currentTier);
@@ -28,7 +30,7 @@ export const useIsGiftingBadgesDesktopEnabled = function useIsGiftingBadgesDeskt
   const GiftingBadgeExperiment = apexExperiment.GiftingBadgeExperiment;
   let obj = { location };
   const enabled = GiftingBadgeExperiment.useConfig(obj).enabled;
-  const GiftingBadgeDesktopExperiment = apexExperiment.GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = apexExperiment2.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if (enabled) {
     str = "";
@@ -41,7 +43,7 @@ export const getIsGiftingBadgesDesktopEnabled = function getIsGiftingBadgesDeskt
   let obj = { location };
   let enabled = GiftingBadgeExperiment.getConfig(obj).enabled;
   if (enabled) {
-    const GiftingBadgeDesktopExperiment = apexExperiment.GiftingBadgeDesktopExperiment;
+    const GiftingBadgeDesktopExperiment = apexExperiment2.GiftingBadgeDesktopExperiment;
     obj = { location: null };
     obj[0] = location;
     enabled = GiftingBadgeDesktopExperiment.getConfig(obj).enabled;
@@ -52,7 +54,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
   const _location = location.location;
   const GiftingBadgeExperiment = apexExperiment.GiftingBadgeExperiment;
   const enabled = GiftingBadgeExperiment.useConfig({ location: _location }).enabled;
-  const GiftingBadgeDesktopExperiment = apexExperiment.GiftingBadgeDesktopExperiment;
+  const GiftingBadgeDesktopExperiment = apexExperiment2.GiftingBadgeDesktopExperiment;
   let str = "-DISABLED";
   if ("web" === location.platform) {
     str = "";
@@ -66,7 +68,7 @@ export const useIsEligibleToShowGiftingBadgeCoachmark = function useIsEligibleTo
     tmp4 = enabled2;
   }
   let tmpResult = tmp(589);
-  const items = [mergeGuildAvatar];
+  const items = [closure_3];
   const stateFromStores = tmpResult.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;

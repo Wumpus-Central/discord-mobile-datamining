@@ -1,9 +1,10 @@
 // discord_app/modules/premium/promotions/PromotionsStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import createFromServer from "createFromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_6 from "createFromServer";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_4 from "createFromServer" /* 7629 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "createFromServer" /* 7630 */;
 
 const require = arg1;
 function createEmptyPromotionsByType() {
@@ -47,7 +48,7 @@ function initializeFromUserSettings() {
   if (value == null) {
     value = null;
   }
-  let c16 = value;
+  c16 = value;
 }
 let closure_7 = { hasFetchedConsumedInboundPromotionId: false, consumedInboundPromotionId: null, lastSeenOutboundPromotionStartDate: null };
 let c9 = null;
@@ -62,15 +63,16 @@ let map = new Map();
 let c18 = null;
 let closure_19 = [];
 let c20 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class PromotionsStore extends PersistedStore {
 }
 const prototype = PromotionsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   if (null != arg0) {
-    let closure_7 = arg0;
+    closure_7 = arg0;
   }
-  this.waitFor(handleConnectionClosedOrResumed, mergeGuildAvatar);
-  const items = [handleConnectionClosedOrResumed];
+  this.waitFor(closure_3, closure_5);
+  const items = [closure_3];
   this.syncWith(items, initializeFromUserSettings);
 };
 Object.defineProperty(prototype, "outboundPromotions", {
@@ -159,7 +161,7 @@ prototype["getPromotionByTypeAndId"] = function getPromotionByTypeAndId(MARKETIN
   return tmp2;
 };
 prototype["getPromotionByTypeAndKey"] = function getPromotionByTypeAndKey(arg0, arg1) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   const values = Object.values(dependencyMap[arg0]);
   return values.find((promotionKey) => promotionKey.promotionKey === closure_0);
 };
@@ -291,67 +293,65 @@ let items = [
   }
 ];
 PromotionsStore.migrations = items;
-const promotionsStore = new PromotionsStore(require("dispatcher"), {
+const promotionsStore = new PromotionsStore(dispatcherDefault, {
   ACTIVE_PROMOTIONS_FETCH_SUCCESS: function handleActivePromotionsFetchSuccess(promotions) {
     promotions = promotions.promotions;
-    let closure_15 = createEmptyPromotionsByType();
-    const map = new Map();
-    let c18 = null;
+    closure_15 = createEmptyPromotionsByType();
+    map = new Map();
+    c18 = null;
     let item = promotions.forEach((id) => {
-      const fromServer = createFromServer.createFromServer(id);
+      const fromServer = closure_4.createFromServer(id);
       table[id.promotion_type][id.id] = fromServer;
       const marketing_components = id.marketing_components;
       if (marketing_components != null) {
         const item = marketing_components.forEach((component_type) => {
-          let items = outer1_17.get(component_type.component_type);
+          let items = closure_1_17.get(component_type.component_type);
           if (items == null) {
             items = [];
           }
-          items.push(outer1_6.createFromServer(component_type, fromServer));
-          const result = outer1_17.set(component_type.component_type, items);
+          items.push(closure_1_6.createFromServer(component_type, fromServer));
+          const result = closure_1_17.set(component_type.component_type, items);
         });
       }
     });
-    let closure_13 = Date.now();
-    let c12 = false;
+    closure_13 = Date.now();
+    c12 = false;
     if (!closure_7.hasFetchedConsumedInboundPromotionId) {
       closure_7.hasFetchedConsumedInboundPromotionId = true;
       closure_7.consumedInboundPromotionId = promotions.consumedInboundPromotionId;
     }
   },
   ACTIVE_PROMOTIONS_FETCH: function handleActivePromotionsFetchStart(locale) {
-    let c12 = true;
+    c12 = true;
     locale = locale.locale;
   },
   ACTIVE_PROMOTIONS_FETCH_FAIL: function handleActivePromotionsFetchFail() {
-    let closure_15 = createEmptyPromotionsByType();
-    const map = new Map();
-    let c18 = null;
-    let c12 = false;
+    closure_15 = createEmptyPromotionsByType();
+    map = new Map();
+    c18 = null;
+    c12 = false;
   },
   ACTIVE_PROMOTIONS_CLEAR: function handleActivePromotionsClear() {
-    let closure_15 = createEmptyPromotionsByType();
-    const map = new Map();
-    let c18 = null;
-    let c9 = null;
-    let c12 = false;
-    let closure_13 = Date.now();
+    closure_15 = createEmptyPromotionsByType();
+    map = new Map();
+    c18 = null;
+    c9 = null;
+    c12 = false;
+    closure_13 = Date.now();
   },
   ACTIVE_BOGO_PROMOTION_FETCH_SUCCESS: function handleActiveBogoPromotionFetchSuccess(activePromotion) {
-    let endDate;
-    let startDate;
     activePromotion = activePromotion.activePromotion;
     const obj = { id: activePromotion.id, startDate: startDate.toISOString(), endDate: endDate.toISOString() };
     ({ startDate, endDate } = activePromotion);
-    let closure_11 = Date.now();
-    let c10 = false;
+    closure_11 = Date.now();
+    c10 = false;
   },
   ACTIVE_BOGO_PROMOTION_FETCH: function handleActiveBogoPromotionFetchStart() {
-    let c10 = true;
+    c10 = true;
   },
   ACTIVE_BOGO_PROMOTION_FETCH_FAIL: function handleActiveBogoPromotionFetchFail() {
-    let c9 = null;
-    let c10 = false;
+    c9 = null;
+    c10 = false;
   },
   OUTBOUND_PROMOTION_NOTICE_DISMISS: function handleDismissOutboundPromotionNotice() {
     if (0 === Object.values(dependencyMap[require(undefined, 7656) /* CountryListMode */.PromotionTypes.THIRD_PARTY_OUTBOUND]).length) {
@@ -359,7 +359,7 @@ const promotionsStore = new PromotionsStore(require("dispatcher"), {
     } else {
       const tmp2 = getLatestActiveOutboundPromotionStartDate();
       if (null != tmp2) {
-        let c16 = tmp2;
+        closure_16 = tmp2;
       }
     }
   },
@@ -369,18 +369,18 @@ const promotionsStore = new PromotionsStore(require("dispatcher"), {
     } else {
       const tmp2 = getLatestActiveOutboundPromotionStartDate();
       if (null != tmp2) {
-        let c16 = tmp2;
+        closure_16 = tmp2;
         closure_7.lastSeenOutboundPromotionStartDate = tmp2;
       }
     }
   },
   CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS: function handleClaimedOutboundPromotionCodesFetchSuccess(claimedOutboundPromotionCodes) {
-    let closure_19 = claimedOutboundPromotionCodes.claimedOutboundPromotionCodes;
-    let c20 = true;
+    closure_19 = claimedOutboundPromotionCodes.claimedOutboundPromotionCodes;
+    c20 = true;
   },
   CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL: function handleClaimedOutboundPromotionCodesFetchFail() {
-    let closure_19 = [];
-    let c20 = true;
+    closure_19 = [];
+    c20 = true;
   },
   CLAIMED_OUTBOUND_PROMOTION_CODE_ADD: function handleClaimedOutboundPromotionCodeAdd(claimedOutboundPromotionCode) {
     claimedOutboundPromotionCode = claimedOutboundPromotionCode.claimedOutboundPromotionCode;
@@ -392,30 +392,30 @@ const promotionsStore = new PromotionsStore(require("dispatcher"), {
     }
   },
   LOGOUT: function handleLogout() {
-    let closure_7 = { hasFetchedConsumedInboundPromotionId: false, consumedInboundPromotionId: null, lastSeenOutboundPromotionStartDate: null };
-    let c12 = false;
-    let c13 = null;
-    let c10 = false;
-    let c11 = null;
-    let closure_15 = createEmptyPromotionsByType();
-    let c9 = null;
+    closure_7 = { hasFetchedConsumedInboundPromotionId: false, consumedInboundPromotionId: null, lastSeenOutboundPromotionStartDate: null };
+    c12 = false;
+    c13 = null;
+    c10 = false;
+    c11 = null;
+    closure_15 = createEmptyPromotionsByType();
+    c9 = null;
     map.clear();
-    let c18 = null;
-    let closure_19 = [];
-    let c20 = false;
+    c18 = null;
+    closure_19 = [];
+    c20 = false;
   },
   PREMIUM_MARKETING_PREVIEW: function handlePremiumMarketingPreview(data) {
     data = data.data;
     let fromServer = null;
     if (null != data.promotion) {
-      fromServer = createFromServer.createFromServer(data.promotion);
+      fromServer = closure_4.createFromServer(data.promotion);
     }
-    let closure_18 = closure_6.createFromServer(data, fromServer);
+    closure_18 = closure_6.createFromServer(data, fromServer);
     if (null != fromServer) {
       dependencyMap[fromServer.promotionType][fromServer.id] = fromServer;
     }
   }
 });
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/premium/promotions/PromotionsStore.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/promotions/PromotionsStore.tsx");
 
 export default promotionsStore;

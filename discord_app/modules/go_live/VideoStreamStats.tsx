@@ -1,10 +1,10 @@
 // discord_app/modules/go_live/VideoStreamStats.tsx
-import ApplicationStreamPresets from "ApplicationStreamPresets";
-import { StreamLayouts } from "ME";
-import { sleep } from "../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
+import sleep from "sleep" /* 4548 */;
+import closure_2 from "ApplicationStreamPresets" /* 4562 */;
+import { StreamLayouts } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("start").fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
 class VideoStreamStats {
   constructor(arg0, arg1) {
     obj = Object.create(new.target.prototype);
@@ -23,7 +23,7 @@ class VideoStreamStats {
       _layoutBuckets[_lastLayout] = _layoutBuckets[_lastLayout] + arg1;
     };
     obj._sampleStats = function _sampleStats() {
-      const state = outer1_2.getState();
+      const state = closure_1_2.getState();
       obj._streamSettingsChanged = state.resolution !== obj._targetResolution || tmp2 !== obj._targetFPS;
     };
     obj._isSender = arg1;

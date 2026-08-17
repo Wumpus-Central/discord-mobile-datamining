@@ -1,18 +1,19 @@
 // discord_app/modules/app_database/managers/native/KvBackgroundManager.tsx
-import _slicedToArray from "_slicedToArray";
-import set from "set";
-import initialize from "initialize";
-import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged";
-import closure_8 from "handleSelectedChannelStoreChanged";
-import result from "result";
-import "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import setDefault from "set" /* 687 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "initialize" /* 11585 */;
+import handleSelectedChannelStoreChanged from "handleSelectedChannelStoreChanged" /* 5069 */;
+import closure_8 from "handleSelectedChannelStoreChanged" /* 5069 */;
+import closure_9 from "result" /* 5070 */;
 
-let closure_6;
-let error;
 let require = arg1;
 ({ MAXIMUM_MESSAGES_PER_CHANNEL_DEFAULT: closure_6, MAXIMUM_MESSAGES_PER_CHANNEL_EVER: error } = handleSelectedChannelStoreChanged);
-let closure_10 = 5 * require("set").Millis.MINUTE;
-const unpackModuleId = new require("handleSelectedChannelStoreChanged")("KvBackgroundManager");
+let closure_10 = 5 * setDefault.Millis.MINUTE;
+let closure_11 = new timestampDefault("KvBackgroundManager");
+initializeDefault;
 class KvBackgroundManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -33,8 +34,8 @@ class KvBackgroundManager extends tmp4 {
           }
     };
     applyArgumentsResult.steps = {
-      trimOrphanedChannels(outer1_0) {
-            let closure_0 = outer1_0;
+      trimOrphanedChannels(closure_1_0) {
+            closure_0 = closure_1_0;
             return callback(function*() {
               if (c0 === 2) {
                 c0 = 3;
@@ -62,20 +63,20 @@ class KvBackgroundManager extends tmp4 {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      c0 = v0(outer1_2[10]).channels(c0);
-                      const obj5 = v0(outer1_2[10]);
+                      c0 = v0(closure_1_2[10]).channels(c0);
+                      const obj5 = v0(closure_1_2[10]);
                       const obj6 = c0;
-                      v0 = v0(outer1_2[10]).messages(c0);
-                      const obj7 = v0(outer1_2[10]);
-                      let closure_2 = v0(outer1_2[10]).channelsTemp(c0);
-                      if (outer1_8.canEvictOrphans()) {
+                      v0 = v0(closure_1_2[10]).messages(c0);
+                      const obj7 = v0(closure_1_2[10]);
+                      closure_2 = v0(closure_1_2[10]).channelsTemp(c0);
+                      if (closure_1_8.canEvictOrphans()) {
                         v0 = 1;
                         c0 = 1;
-                        const obj1 = { value: null, done: false };
+                        obj1 = { value: null, done: false };
                         obj1[0] = obj6.transaction((arg0) => {
                           const upgradeTransactionResult = c1.upgradeTransaction(arg0);
                           const upgradeTransactionResult1 = closure_2.upgradeTransaction(arg0);
-                          const saveableChannels = outer1_8.getSaveableChannels();
+                          const saveableChannels = closure_1_8.getSaveableChannels();
                           const iter = saveableChannels[Symbol.iterator]();
                           const nextResult = iter.next();
                           while (iter !== undefined) {
@@ -83,13 +84,13 @@ class KvBackgroundManager extends tmp4 {
                             continue;
                           }
                           upgradeTransactionResult.trimOrphans(prefix.prefix);
-                          upgradeTransactionResult.trimChannelsIn(closure_2.prefix, outer1_7);
-                          upgradeTransactionResult.trimChannelsNotIn(closure_2.prefix, outer1_6);
+                          upgradeTransactionResult.trimChannelsIn(closure_2.prefix, closure_1_7);
+                          upgradeTransactionResult.trimChannelsNotIn(closure_2.prefix, closure_1_6);
                           upgradeTransactionResult1.delete();
                         }, "trimOrphanedChannels");
                         return obj1;
                       }
-                      const obj8 = v0(outer1_2[10]);
+                      const obj8 = v0(closure_1_2[10]);
                     }
                   } else if (arg0 === 1) {
                     c0 = 3;
@@ -139,15 +140,13 @@ class KvBackgroundManager extends tmp4 {
                     } else {
                       c1 = 1;
                       c0 = 1;
-                      const obj1 = { value: null, done: false };
+                      obj1 = { value: null, done: false };
                       obj1[0] = c0.transaction((arg0) => {
-                        let tmp5;
-                        let tmp6;
                         while (tmp !== undefined) {
-                          let tmp3 = outer1_3;
-                          let tmp4 = outer1_3(tmp2, 2);
+                          let tmp3 = closure_1_3;
+                          let tmp4 = closure_1_3(tmp2, 2);
                           let tmp7 = v3;
-                          let tmp8 = outer1_2;
+                          let tmp8 = closure_1_2;
                           [tmp5, tmp6] = tmp4;
                           let items = [tmp6];
                           let tmp9 = v3;
@@ -155,7 +154,7 @@ class KvBackgroundManager extends tmp4 {
                           let tmp11 = new.target;
                           let tmp12 = items;
                           let flag = true;
-                          let table = new v3(outer1_2[11]).Table(items, tmp5, v3, true);
+                          let table = new v3(closure_1_2[11]).Table(items, tmp5, v3, true);
                           let tmp13 = table;
                           let upgradeTransactionResult = table.upgradeTransaction(arg0);
                           let deleteResult = upgradeTransactionResult.delete();
@@ -210,10 +209,10 @@ class KvBackgroundManager extends tmp4 {
                       obj = { value: null, done: true };
                       obj[0] = arg1;
                       return obj;
-                    } else if (outer1_9.isLowDisk) {
+                    } else if (closure_1_9.isLowDisk) {
                       c1 = 1;
                       c0 = 1;
-                      const obj1 = { value: null, done: false };
+                      obj1 = { value: null, done: false };
                       obj1[0] = c0.incrementalVacuum().catch((arg0) => logger.warn(arg0));
                       return obj1;
                     }
@@ -236,7 +235,7 @@ class KvBackgroundManager extends tmp4 {
             })();
           },
       deleteExtraDatabases() {
-            return outer1_4(function*() {
+            return closure_1_4(function*() {
               if (c7 === 2) {
                 c7 = 3;
                 HermesBuiltin.throwTypeError();
@@ -266,10 +265,10 @@ class KvBackgroundManager extends tmp4 {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      let _slicedToArray = tmp;
-                      let closure_2 = tmp2;
+                      closure_3 = tmp;
+                      closure_2 = tmp2;
                       let set;
-                      let closure_1;
+                      closure_1 = undefined;
                       let tmp30 = users;
                       users = users.getUsers();
                       let _Set = Set;
@@ -277,13 +276,13 @@ class KvBackgroundManager extends tmp4 {
                       let tmp32 = new.target;
                       set = new Set(users.map((id) => callback(tmp2[12]).databaseName(id.id)));
                       let tmp34 = set;
-                      let tmp35 = outer1_0;
-                      let tmp36 = outer1_2;
-                      let Kv = outer1_0(outer1_2[11]).Kv;
+                      let tmp35 = closure_1_0;
+                      let tmp36 = closure_1_2;
+                      let Kv = closure_1_0(closure_1_2[11]).Kv;
                       c6 = 1;
                       let num12 = 1;
                       c7 = 1;
-                      let obj1 = { value: null, done: false };
+                      obj1 = { value: null, done: false };
                       obj1[0] = Kv.databases();
                       return obj1;
                     }
@@ -313,14 +312,14 @@ class KvBackgroundManager extends tmp4 {
                         let tmp29 = closure_1;
                         if (!set.has(closure_1)) {
                           let tmp12 = closure_2;
-                          let tmp13 = _slicedToArray;
-                          let tmp14 = outer1_11;
+                          let tmp13 = closure_3;
+                          let tmp14 = closure_1_11;
                           let tmp15 = closure_1;
                           let _HermesInternal = HermesInternal;
-                          let logResult = outer1_11.log("deleting orphaned database: " + closure_1);
-                          let tmp17 = outer1_0;
-                          let tmp18 = outer1_2;
-                          let Database = outer1_0(outer1_2[11]).Database;
+                          let logResult = closure_1_11.log("deleting orphaned database: " + closure_1);
+                          let tmp17 = closure_1_0;
+                          let tmp18 = closure_1_2;
+                          let Database = closure_1_0(closure_1_2[11]).Database;
                           let tmp19 = closure_1;
                           let deleteResult = Database.delete(closure_1);
                           let catchPromise = deleteResult.catch(() => null);
@@ -333,19 +332,19 @@ class KvBackgroundManager extends tmp4 {
                       return { value: "HermesInternal", done: "HermesInternal" };
                     }
                   } else {
-                    let tmp6 = set;
-                    let tmp7 = set;
+                    let tmp6 = closure_4;
+                    let tmp7 = closure_4;
                     users = 0;
                     let tmp8 = set;
                     set.return();
-                    throw set;
+                    throw closure_4;
                   }
                 }
               }
             })();
           },
       optimize() {
-            return outer1_4(function*() {
+            return closure_1_4(function*() {
               if (v0 === 2) {
                 v0 = 3;
                 HermesBuiltin.throwTypeError();
@@ -372,10 +371,10 @@ class KvBackgroundManager extends tmp4 {
                       obj[0] = arg1;
                       return obj;
                     } else {
-                      const Kv = v0(outer1_2[11]).Kv;
+                      const Kv = v0(closure_1_2[11]).Kv;
                       c1 = 1;
                       v0 = 1;
-                      const obj1 = { value: null, done: false };
+                      obj1 = { value: null, done: false };
                       obj1[0] = Kv.optimize(true);
                       return obj1;
                     }
@@ -453,19 +452,19 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             let timestamp = tmp5;
             timestamp = undefined;
             isLowDisk = undefined;
-            let c2;
-            if (outer1_0.hasConnected) {
-              if (!outer1_0.isCleaning) {
+            c2 = undefined;
+            if (closure_1_0.hasConnected) {
+              if (!closure_1_0.isCleaning) {
                 const _Date = Date;
                 timestamp = Date.now();
-                isLowDisk = outer1_9.isLowDisk;
+                isLowDisk = closure_1_9.isLowDisk;
                 if (!isLowDisk) {
-                  isLowDisk = timestamp - outer1_0.lastDeepClean >= outer1_10;
+                  isLowDisk = timestamp - closure_1_0.lastDeepClean >= closure_1_10;
                 }
                 c4 = 1;
                 c5 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = outer1_1(outer1_2[8]).startBackgroundTask();
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_1(7503).startBackgroundTask();
                 return obj1;
               }
             }
@@ -481,32 +480,32 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             obj2[0] = arg1;
             return obj2;
           } else {
-            outer1_2 = arg1;
+            dependencyMap = arg1;
             if (obj10.isIOS()) {
-              if (outer1_2 === outer1_1(outer1_2[8]).backgroundTaskIdentifierInvalid) {
+              if (dependencyMap === closure_1_1(7503).backgroundTaskIdentifierInvalid) {
                 c5 = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               }
             }
-            let c3 = 1;
-            outer1_0.isCleaning = true;
+            c3 = 1;
+            closure_1_0.isCleaning = true;
             c4 = 3;
             c5 = 1;
             const obj3 = { value: null, done: false };
-            obj3[0] = outer1_0.cleanupAsync(outer1_1);
+            obj3[0] = closure_1_0.cleanupAsync(closure_1_1);
             return obj3;
           }
         } else if (2 === tmp8) {
           c3 = 0;
           timestamp.isCleaning = false;
-          if (outer1_1) {
-            let lastDeepClean3 = outer1_0;
+          if (closure_1_1) {
+            let lastDeepClean3 = closure_1_0;
           } else {
-            lastDeepClean3 = outer1_0.lastDeepClean;
+            lastDeepClean3 = closure_1_0.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean3;
-          obj2 = outer1_1(outer1_2[8]);
-          obj2.endBackgroundTask(outer1_2);
+          obj2 = closure_1_1(7503);
+          obj2.endBackgroundTask(dependencyMap);
           throw c2;
         } else if (arg0 === 1) {
           c5 = 3;
@@ -520,22 +519,22 @@ prototype["maybeCleanup"] = function maybeCleanup() {
             lastDeepClean = timestamp.lastDeepClean;
           }
           timestamp.lastDeepClean = lastDeepClean;
-          obj = outer1_1(outer1_2[8]);
+          obj = closure_1_1(7503);
           obj.endBackgroundTask(c2);
           const tmp12 = timestamp;
         }
         c3 = 0;
-        outer1_0.isCleaning = false;
+        closure_1_0.isCleaning = false;
         if (isLowDisk) {
           let lastDeepClean2 = timestamp;
         } else {
           lastDeepClean2 = timestamp.lastDeepClean;
         }
-        outer1_0.lastDeepClean = lastDeepClean2;
-        obj1 = outer1_1(outer1_2[8]);
+        closure_1_0.lastDeepClean = lastDeepClean2;
+        obj1 = closure_1_1(7503);
         obj1.endBackgroundTask(c2);
         c5 = 3;
-        const tmp26 = outer1_0;
+        const tmp26 = closure_1_0;
       } catch (tmp70) {
         c2 = tmp70;
         if (tmp4 === c3) {
@@ -548,8 +547,8 @@ prototype["maybeCleanup"] = function maybeCleanup() {
     }
   })();
 };
-prototype["cleanupAsync"] = function cleanupAsync(outer1_1) {
-  let closure_0 = outer1_1;
+prototype["cleanupAsync"] = function cleanupAsync(closure_1_1) {
+  closure_0 = closure_1_1;
   const self = this;
   return callback(function*() {
     if (table === 2) {
@@ -578,19 +577,19 @@ prototype["cleanupAsync"] = function cleanupAsync(outer1_1) {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_0 = tmp4;
+            closure_0 = tmp4;
             const _HermesInternal = HermesInternal;
-            outer1_11.verbose("performing cleanup (deep: " + outer1_0 + ")");
+            closure_1_11.verbose("performing cleanup (deep: " + closure_1_0 + ")");
             const databaseResult = v0(table[10]).database();
             if (null != databaseResult) {
               v0 = 1;
               table = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = v0.cleanDatabaseAsync(databaseResult, tmp17);
               return obj1;
             }
             const obj9 = v0(table[10]);
-            tmp17 = outer1_0;
+            tmp17 = closure_1_0;
           }
         } else if (1 === tmp4) {
           if (arg0 === 1) {
@@ -645,8 +644,8 @@ prototype["cleanupAsync"] = function cleanupAsync(outer1_1) {
   })();
 };
 prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, arg1) {
-  let closure_0 = databaseResult;
-  let closure_1 = arg1;
+  closure_0 = databaseResult;
+  closure_1 = arg1;
   const self = this;
   return callback(function*() {
     if (c5 === 2) {
@@ -675,21 +674,21 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
-            let closure_0 = tmp7;
-            let c3 = 1;
-            const steps3 = outer1_2.steps;
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            c3 = 1;
+            const steps3 = closure_1_2.steps;
             c4 = 2;
             c5 = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = steps3.trimOrphanedChannels(outer1_0);
+            obj1 = { value: null, done: false };
+            obj1[0] = steps3.trimOrphanedChannels(closure_1_0);
             return obj1;
           }
         } else {
           if (1 === tmp7) {
             c3 = 0;
             closure_0 = closure_2;
-            outer1_11.warn("couldn't clean database:", closure_0);
+            closure_1_11.warn("couldn't clean database:", closure_0);
             c5 = 3;
           } else {
             if (2 === tmp7) {
@@ -753,7 +752,7 @@ prototype["cleanDatabaseAsync"] = function cleanDatabaseAsync(databaseResult, ar
   })();
 };
 const kvBackgroundManager = new KvBackgroundManager();
-let tmp3 = new require("handleSelectedChannelStoreChanged")("KvBackgroundManager");
-const result = require("initialize").fileFinishedImporting("modules/app_database/managers/native/KvBackgroundManager.tsx");
+let tmp3 = new timestampDefault("KvBackgroundManager");
+const result = require("set").fileFinishedImporting("modules/app_database/managers/native/KvBackgroundManager.tsx");
 
 export default kvBackgroundManager;

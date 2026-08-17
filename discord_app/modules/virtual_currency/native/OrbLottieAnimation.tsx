@@ -1,16 +1,13 @@
 // discord_app/modules/virtual_currency/native/OrbLottieAnimation.tsx
-import closure_2 from "noop";
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import noop from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let forwardRef;
 const require = arg1;
 ({ useRef: c3, useEffect: c4, forwardRef } = noop);
 const forwardRefResult = forwardRef((animationType, ref) => {
   animationType = animationType.animationType;
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = animationType(4310);
   const theme = obj.useTheme();
   const obj2 = animationType(1363);
@@ -19,7 +16,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   const items = [animationType];
   callback2(() => {
     if (null !== animationType) {
-      const current = _undefined.current;
+      const current = ref.current;
       if (current != null) {
         current.play();
       }
@@ -49,7 +46,7 @@ const forwardRefResult = forwardRef((animationType, ref) => {
   return <SpendEarnOrbsLottie ref={tmp5} size="custom" width={60} height={60} opacity={0.8} animation={null} useLottieDefaultColors />;
 });
 forwardRefResult.displayName = "OrbsLottieAnimation";
-const result = require("useTheme").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
+const result = require("set").fileFinishedImporting("modules/virtual_currency/native/OrbLottieAnimation.tsx");
 
 export default forwardRefResult;
 export const OrbLottieAnimation = forwardRefResult;

@@ -1,19 +1,19 @@
 // discord_app/modules/user_profile/native/showUserProfileActionSheet.tsx
-import explicitContentFromProto from "explicitContentFromProto";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
 
-const require = arg1;
+require = arg1;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   const timestamp = Date.now();
   const IgnoreProfileSpeedbumpDisabled = explicitContentFromProto.IgnoreProfileSpeedbumpDisabled;
   if (!ignoreBlockedSpeedBump.ignoreBlockedSpeedBump) {
-    const isBlockedResult = markAllUserIdListsStale.isBlocked(ignoreBlockedSpeedBump.userId);
-    const isIgnoredResult = markAllUserIdListsStale.isIgnored(ignoreBlockedSpeedBump.userId);
+    const isBlockedResult = closure_5.isBlocked(ignoreBlockedSpeedBump.userId);
+    const isIgnoredResult = closure_5.isIgnored(ignoreBlockedSpeedBump.userId);
     if (isIgnoredResult) {
-      let obj = ACTION_SHEET_HEIGHT_HALF;
+      let obj = ACTION_SHEET_HEIGHT_HALFDefault;
       const _HermesInternal = HermesInternal;
       obj = {};
       const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
@@ -32,10 +32,10 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
   obj = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
   obj.openedAt = timestamp;
-  ACTION_SHEET_HEIGHT_HALF.openLazy(tmp15, combined1, obj, "replaceAll");
+  ACTION_SHEET_HEIGHT_HALFDefault.openLazy(tmp15, combined1, obj, "replaceAll");
 }
 require("processCallbacks").addPostConnectionCallback;
-const result = require("markAllUserIdListsStale").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
 export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(id) {
@@ -48,7 +48,7 @@ export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProf
   return "UserProfileIgnoredSpeedBump" + arg0;
 };
 export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   addPostConnectionCallback(callback(function*() {
     if (paths === 2) {
       paths = 3;
@@ -79,8 +79,8 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
             const userId = tmp4;
             c1 = 1;
             paths = 1;
-            const obj1 = { value: null, done: false };
-            obj1[0] = outer1_0(paths[4])(paths[3], paths.paths);
+            obj1 = { value: null, done: false };
+            obj1[0] = closure_1_0(paths[4])(paths[3], paths.paths);
             return obj1;
           }
         } else if (arg0 === 1) {
@@ -93,7 +93,7 @@ export const showUserProfileActionSheetPostConnection = function showUserProfile
           return obj;
         } else {
           if (null != _default.getUser(userId.userId)) {
-            outer1_6(userId);
+            closure_1_6(userId);
           }
           paths = 3;
           return { value: "HermesInternal", done: "HermesInternal" };

@@ -1,16 +1,16 @@
 // discord_app/modules/games/autocomplete/GameAutocompleteActionCreators.tsx
-import sendRequest from "sendRequest";
-import set from "set";
-import { Endpoints } from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "set" /* 6899 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchGameAutocomplete() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, body) {
       if (c7 === 2) {
         c7 = 3;
@@ -38,17 +38,17 @@ function _fetchGameAutocomplete() {
               obj[0] = body;
               return obj;
             } else {
-              let sendRequest = tmp3;
-              let dependencyMap = tmp7;
-              let c0;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
+              c0 = undefined;
               let lib;
-              const result = callback(outer1_2[3]).normalizeGameAutocompleteQuery(c0);
+              const result = callback(closure_1_2[3]).normalizeGameAutocompleteQuery(c0);
               c0 = result;
               if (null != result) {
-                const shouldSuppressFetchResult = outer1_4.shouldSuppressFetch(result);
-                const dispatch = outer1_1(outer1_2[4]).dispatch;
+                const shouldSuppressFetchResult = closure_1_4.shouldSuppressFetch(result);
+                const dispatch = closure_1_1(closure_1_2[4]).dispatch;
                 if (shouldSuppressFetchResult) {
-                  const obj1 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: null, results: null };
+                  obj1 = { type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: null, results: null };
                   obj1[1] = result;
                   obj1[2] = [];
                   dispatch(obj1);
@@ -57,7 +57,7 @@ function _fetchGameAutocomplete() {
                   obj2[1] = result;
                   dispatch(obj2);
                   let constants = 1;
-                  const HTTP = tmp39(outer1_2[5]).HTTP;
+                  const HTTP = tmp39(closure_1_2[5]).HTTP;
                   let obj3 = { url: null, query: null, rejectWithError: false };
                   obj3[0] = constants.GAMES_AUTOCOMPLETE;
                   const obj4 = { q: null };
@@ -69,15 +69,15 @@ function _fetchGameAutocomplete() {
                   obj5[0] = HTTP.get(obj3);
                   return obj5;
                 }
-                const tmp46 = outer1_1(outer1_2[4]);
+                const tmp46 = closure_1_1(closure_1_2[4]);
               }
               c7 = 3;
-              const obj13 = callback(outer1_2[3]);
+              const obj13 = callback(closure_1_2[3]);
               tmp39 = callback;
             }
           } else if (1 === tmp7) {
             constants = 0;
-            dependencyMap = set;
+            dependencyMap = closure_4;
             obj3 = lib(709);
             const obj6 = { type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: null };
             obj6[1] = c0;
@@ -106,7 +106,7 @@ function _fetchGameAutocomplete() {
           obj8[0] = body;
           return obj8;
         } catch (tmp29) {
-          set = tmp29;
+          closure_4 = tmp29;
           if (tmp4 === constants) {
             c7 = tmp2;
             throw tmp29;
@@ -117,7 +117,7 @@ function _fetchGameAutocomplete() {
       }
     })();
   });
-  const _fetchGameAutocomplete = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -126,7 +126,7 @@ function _fetchGameAutocomplete() {
   }
   return applyArgumentsResult;
 }
-let result = require("ME").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
+let result = require("set").fileFinishedImporting("modules/games/autocomplete/GameAutocompleteActionCreators.tsx");
 
 export const fetchGameAutocomplete = function fetchGameAutocomplete(arg0) {
   const self = this;

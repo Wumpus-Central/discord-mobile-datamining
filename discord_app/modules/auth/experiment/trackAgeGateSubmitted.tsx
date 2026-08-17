@@ -1,11 +1,13 @@
 // discord_app/modules/auth/experiment/trackAgeGateSubmitted.tsx
-import { AnalyticEvents } from "ME";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
 
-const result = require("t").fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/auth/experiment/trackAgeGateSubmitted.tsx");
 
 export default function trackAgeGateSubmitted(format, section) {
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   let formatResult = null;
   if (obj2.diff(format, "years") < 18) {
     formatResult = format.format("YYYY-MM-DD");

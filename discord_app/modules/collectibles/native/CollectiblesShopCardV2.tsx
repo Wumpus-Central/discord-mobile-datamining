@@ -1,36 +1,18 @@
 // discord_app/modules/collectibles/native/CollectiblesShopCardV2.tsx
-import importAllResult from "useCanPurchaseFrames";
-import get_ActivityIndicator from "useTrackShopCardClick";
-import handleThemeChange from "handleThemeChange";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import items from "items";
-import jsxProd from "AccessibilityAnnouncer";
-import createCacheKey from "createCacheKey";
-import { context } from "../CollectiblesAnalyticsContext.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import context from "context" /* 9175 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleThemeChange" /* 1302 */;
+import closure_6 from "updateCategoriesAndProducts" /* 5301 */;
+import items from "items" /* 678 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let PixelRatio;
-let c10;
-let c4;
-let c9;
-let error;
-let metroImportAll;
-let require = arg1;
+require = arg1;
 function CollectiblesShopCardInternalV2(product) {
-  let cardStyle;
-  let cardWidth;
-  let collectibleProductState;
-  let disableBundleStaticBackground;
-  let handleToggle;
-  let hideWishlistButton;
-  let importDefault;
-  let isBusy;
-  let isDisabled;
-  let muteBundleStaticBackground;
-  let preferVCPrice;
-  let solidBackground;
-  let unpublishedAt;
   product = product.product;
-  const require = product;
+  require = product;
   ({ onPress: importDefault, unpublishedAt, collectibleProductState, isDisabled } = product);
   ({ solidBackground, preferVCPrice } = product);
   if (isDisabled === undefined) {
@@ -51,7 +33,7 @@ function CollectiblesShopCardInternalV2(product) {
   let selectedProduct;
   let shouldShowWishlistNUXActionSheet;
   let showWishlistNUXActionSheet;
-  let c5;
+  c5 = undefined;
   let trackShopCardClick;
   let isWishlisted;
   handleToggle = undefined;
@@ -60,7 +42,7 @@ function CollectiblesShopCardInternalV2(product) {
   const tmp = callback2();
   let obj = require(selectedProduct[8]);
   const defaultVariantIndex = obj.useDefaultVariantIndex(product);
-  let obj1 = require(selectedProduct[9]);
+  obj1 = require(selectedProduct[9]);
   selectedProduct = obj1.getSelectedProduct(product, defaultVariantIndex);
   let obj2 = require(selectedProduct[10]);
   const trackShopCardImpression = obj2.useTrackShopCardImpression(product, selectedProduct, flag2);
@@ -89,7 +71,7 @@ function CollectiblesShopCardInternalV2(product) {
   c5 = stringResult;
   const items1 = [stringResult];
   const callback1 = shouldShowWishlistNUXActionSheet.useCallback(() => {
-    let obj = outer1_1(selectedProduct[15]);
+    let obj = closure_1_1(selectedProduct[15]);
     obj = { key: "WISHLIST_ERROR", content: c5 };
     obj.open(obj);
   }, items1);
@@ -116,7 +98,7 @@ function CollectiblesShopCardInternalV2(product) {
   const items2 = [tmp20, isWishlisted];
   const items3 = [handleToggle];
   const memo = obj7.useMemo(() => {
-    if (c9) {
+    if (closure_9) {
       const intl = product(selectedProduct[14]).intl;
       const string = intl.string;
       let t = product(selectedProduct[14]).t;
@@ -285,24 +267,15 @@ function CollectiblesShopCardInternalV2(product) {
   }
 }
 function CollectiblesShopCardV2Inner(product) {
-  let cardStyle;
-  let cardWidth;
-  let disableBundleStaticBackground;
-  let hidePrice;
-  let hideWishlistButton;
-  let muteBundleStaticBackground;
-  let preferVCPrice;
-  let solidBackground;
-  let unpublishedAt;
   product = product.product;
-  const require = product;
+  require = product;
   let onPress = product.onPress;
   let defaultVariantIndex;
   let analyticsLocations;
   let collectiblesAnalyticsContext;
   let isPurchased;
   let isPartiallyOwnedBundle;
-  let c6;
+  closure_6 = undefined;
   let result1;
   ({ unpublishedAt, solidBackground, preferVCPrice, cardWidth, cardStyle, hideWishlistButton, hidePrice, disableBundleStaticBackground, muteBundleStaticBackground } = product);
   let obj = require(analyticsLocations[8]);
@@ -317,8 +290,7 @@ function CollectiblesShopCardV2Inner(product) {
   const callback = collectiblesAnalyticsContext.useCallback(() => {
     let obj = defaultVariantIndex(analyticsLocations[35]);
     obj.hideActionSheet();
-    obj = { product: closure_0, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: null };
-    obj[3] = collectiblesAnalyticsContext;
+    obj = { product: closure_0, initialVariantIndex: defaultVariantIndex, analyticsLocations, shopAnalyticsContext: collectiblesAnalyticsContext };
     const result = product(analyticsLocations[36]).openProductDetailsActionSheet(obj);
   }, items);
   const obj3 = require(analyticsLocations[34]);
@@ -347,7 +319,7 @@ function CollectiblesShopCardV2Inner(product) {
   if (tmp14) {
     tmp14 = !result1;
   }
-  c6 = tmp14;
+  closure_6 = tmp14;
   if (!result1) {
     if (result) {
       result = canUseCollectiblesResult;
@@ -360,7 +332,7 @@ function CollectiblesShopCardV2Inner(product) {
       return "purchased";
     } else if (isPartiallyOwnedBundle === true) {
       return "partiallyOwnedBundle";
-    } else if (c6 === true) {
+    } else if (closure_6 === true) {
       return "nitroUpsell";
     } else if (result1 === true) {
       return "nitroClaim";
@@ -402,26 +374,26 @@ function CollectiblesShopCardV2Inner(product) {
 }
 let c3 = importAllResult;
 ({ PixelRatio, View: c4 } = get_ActivityIndicator);
-({ EXTERNAL_PRODUCT_SKU_IDS: error, ShopCtaEnum: metroImportAll } = items);
+({ EXTERNAL_PRODUCT_SKU_IDS: error, ShopCtaEnum: closure_8 } = items);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let num = 170;
 if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
-obj = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+obj = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 obj[0] = obj;
 obj[1] = { position: "absolute", top: 6, left: 6, right: 6, zIndex: 2, display: "flex", flexDirection: "row", gap: 4, justifyContent: "space-between", alignItems: "flex-start" };
 obj[2] = { flexShrink: 1 };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_4, paddingVertical: 1.5, borderRadius: require("Themes").radii.round, flexShrink: 1 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_4, paddingVertical: 1.5, borderRadius: ThemesDefault.radii.round, flexShrink: 1 };
 obj[3] = createCacheKey;
 obj[4] = { textTransform: "uppercase" };
-obj[5] = { backgroundColor: require("Themes").colors.WHITE };
-let obj2 = { backgroundColor: require("Themes").colors.WHITE };
-obj[6] = { backgroundColor: require("Themes").colors.BADGE_BACKGROUND_BRAND };
+obj[5] = { backgroundColor: ThemesDefault.colors.WHITE };
+let obj2 = { backgroundColor: ThemesDefault.colors.WHITE };
+obj[6] = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 obj[7] = { marginLeft: "auto", flexShrink: 0 };
 let closure_11 = createCacheKey.createStyles(obj);
-let obj3 = { backgroundColor: require("Themes").colors.BADGE_BACKGROUND_BRAND };
+let obj3 = { backgroundColor: ThemesDefault.colors.BADGE_BACKGROUND_BRAND };
 const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
   if (arg0 == null) {
     HermesBuiltin.throwTypeError();
@@ -429,8 +401,7 @@ const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
     const merged = Object.assign(arg0, undefined);
     const items = [merged.product.skuId];
     const memo = importAllResult.useMemo(() => {
-      const obj = { cardId: null };
-      obj[0] = callback(table[44]).v4();
+      const obj = { cardId: callback(table[44]).v4() };
       return obj;
     }, items);
     let obj = { newValue: null, children: null };
@@ -441,7 +412,7 @@ const memoResult = importAllResult.memo(function CollectiblesShopCardV2(arg0) {
     return callback(context.CollectiblesAnalyticsProvider, obj);
   }
 });
-let result = require("handleThemeChange").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardV2.tsx");
 
 export default memoResult;
 export const COLLECTIBLES_SHOP_CARD_HEIGHT = num;

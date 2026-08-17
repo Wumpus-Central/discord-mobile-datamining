@@ -1,13 +1,11 @@
 // discord_app/modules/premium/premium_group/PremiumGroupUtils.native.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import SubscriptionStatusTypes from "SubscriptionStatusTypes";
-import { messagesProxy } from "PremiumGroup.messages.js";
+import messagesProxyDefault from "messagesProxy" /* 2917 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
+import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);
-const result = require("nameFromUser").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/PremiumGroupUtils.native.tsx");
 for (const key10025 in require("getPriceString")) {
   let tmp4 = key10025;
   arg5[key10025] = require("getPriceString")[key10025];
@@ -15,8 +13,6 @@ for (const key10025 in require("getPriceString")) {
 }
 
 export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbedText(isSender) {
-  let channel;
-  let sender;
   ({ sender, channel } = isSender);
   const tmp = callback();
   if (isSender.isSender) {
@@ -42,15 +38,15 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
       obj = { receiverName: null, premiumGroupProductName: null };
       obj[0] = tmp8;
       obj[1] = tmp;
-      obj[0] = intl4.format(messagesProxy.MkcFjx, obj);
+      obj[0] = intl4.format(messagesProxyDefault.MkcFjx, obj);
       const intl5 = sender(1236).intl;
-      const obj1 = { premiumGroupProductName: null };
+      obj1 = { premiumGroupProductName: null };
       obj1[0] = tmp;
-      obj[1] = intl5.formatToPlainString(messagesProxy["5uwv8J"], obj1);
+      obj[1] = intl5.formatToPlainString(messagesProxyDefault["5uwv8J"], obj1);
       const intl6 = sender(1236).intl;
       const obj2 = { receiverName: null };
       obj2[0] = tmp8;
-      obj[2] = intl6.formatToPlainString(messagesProxy["AmE0B/"], obj2);
+      obj[2] = intl6.formatToPlainString(messagesProxyDefault["AmE0B/"], obj2);
       tmp15 = obj;
     }
     return tmp15;
@@ -63,14 +59,14 @@ export const getPremiumGroupInviteEmbedText = function getPremiumGroupInviteEmbe
     obj4[0] = nameFromUserResult1;
     obj4[1] = tmp;
     obj4[2] = closure_5;
-    obj3[0] = intl.format(messagesProxy["51Kv/4"], obj4);
+    obj3[0] = intl.format(messagesProxyDefault["51Kv/4"], obj4);
     const intl2 = sender(1236).intl;
-    obj3[1] = intl2.string(messagesProxy.ssge1y);
+    obj3[1] = intl2.string(messagesProxyDefault.ssge1y);
     const intl3 = sender(1236).intl;
     const obj5 = { senderName: null, premiumGroupProductName: null };
     obj5[0] = nameFromUserResult1;
     obj5[1] = tmp;
-    obj3[2] = intl3.formatToPlainString(messagesProxy.tej76V, obj5);
+    obj3[2] = intl3.formatToPlainString(messagesProxyDefault.tej76V, obj5);
     return obj3;
   }
 };

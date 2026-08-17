@@ -1,6 +1,7 @@
 // discord_app/modules/calls/mobile/CallKitManager.android.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 4720 */;
 
+initializeDefault;
 class CallKitLifecycleManager extends tmp2 {
 }
 const prototype = CallKitLifecycleManager.prototype;

@@ -1,18 +1,18 @@
 // discord_app/components_native/add_friend/AddFriendModalActionCreators.tsx
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { asyncRequireImpl } from "../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../actions/ModalActionCreators.tsx";
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import closure_3 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
-const result = require("AddFriendModalScene").fileFinishedImporting("components_native/add_friend/AddFriendModalActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("components_native/add_friend/AddFriendModalActionCreators.tsx");
 
 export default {
   openAddFriendModalDeeplink() {
-    ModalActionCreators.pushLazy(asyncRequireImpl(13313, dependencyMap.paths));
+    _modDef5260.pushLazy(asyncRequireImpl(13313, dependencyMap.paths));
   },
   openAddFriendModal(arg0) {
     if (null != currentUser.getCurrentUser()) {
-      let obj = ModalActionCreators;
+      let obj = _modDef5260;
       obj = { sourceMetadata: null };
       obj[0] = arg0;
       obj.pushLazy(asyncRequireImpl(13313, dependencyMap.paths), obj);

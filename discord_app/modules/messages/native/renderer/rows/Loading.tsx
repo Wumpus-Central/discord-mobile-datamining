@@ -1,19 +1,15 @@
 // discord_app/modules/messages/native/renderer/rows/Loading.tsx
-import Changeset from "Changeset";
-import createCacheKey from "createCacheKey";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Changeset from "Changeset" /* 8158 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c0;
-let closure_1;
-let obj1;
 ({ LoadingType: c0, RowType: closure_1, SeparatorAction: obj1 } = Changeset);
-let closure_3 = createCacheKey.createNativeStyleProperties({ loadButtonBackgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, loadButtonColor: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT, loadingColor: require("Themes").colors.ICON_SUBTLE });
-let obj = { loadButtonBackgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, loadButtonColor: require("Themes").colors.CONTROL_SECONDARY_TEXT_DEFAULT, loadingColor: require("Themes").colors.ICON_SUBTLE };
-const result = require("Themes").fileFinishedImporting("modules/messages/native/renderer/rows/Loading.tsx");
+let closure_3 = createCacheKey.createNativeStyleProperties({ loadButtonBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, loadButtonColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, loadingColor: ThemesDefault.colors.ICON_SUBTLE });
+let obj = { loadButtonBackgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, loadButtonColor: ThemesDefault.colors.CONTROL_SECONDARY_TEXT_DEFAULT, loadingColor: ThemesDefault.colors.ICON_SUBTLE };
+const result = set.fileFinishedImporting("modules/messages/native/renderer/rows/Loading.tsx");
 
 export const generateLoadingRowData = function generateLoadingRowData(rowType, theme) {
-  let changeType;
-  let isLoading;
-  let text;
   ({ rowType, isLoading } = rowType);
   ({ changeType, text } = rowType);
   const tmp = callback(theme);

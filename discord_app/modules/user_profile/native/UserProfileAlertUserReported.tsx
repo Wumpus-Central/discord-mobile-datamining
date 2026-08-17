@@ -1,11 +1,12 @@
 // discord_app/modules/user_profile/native/UserProfileAlertUserReported.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { getAlertModalItemKey } from "../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("getAlertModalItemKey").fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileAlertUserReported.tsx");
 
 export default function UserProfileAlertUserReported() {
   let obj = { title: null, content: null, actions: null };

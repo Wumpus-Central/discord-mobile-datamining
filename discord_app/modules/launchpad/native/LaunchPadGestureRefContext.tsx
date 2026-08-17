@@ -1,7 +1,7 @@
 // discord_app/modules/launchpad/native/LaunchPadGestureRefContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
-const context = require("noop").createContext({ current: "r" });
+const context = importAllResult.createContext({ current: "r" });
 const result = require("set").fileFinishedImporting("modules/launchpad/native/LaunchPadGestureRefContext.tsx");
 
 export default context;

@@ -1,17 +1,12 @@
 // discord_app/utils/ImageUtils.tsx
-import set from "set";
-import importDefaultResult from "apply";
-import { PQueue } from "../../_runtime/01492_PQueue.js";
-import { 00038__ } from "../../_runtime/metro/00038__.js";
-import { getSrcWithWidthAndHeight } from "native/ImageUtils.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import PQueueDefault from "PQueue" /* 1492 */;
+import getSrcWithWidthAndHeight from "getSrcWithWidthAndHeight" /* 1493 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import importDefaultResult from "apply" /* 12 */;
 
-const require = arg1;
+require = arg1;
 function fit(minHeight) {
-  let height;
-  let maxHeight;
-  let maxWidth;
-  let minWidth;
-  let width;
   ({ width, height, maxWidth, maxHeight, minWidth } = minHeight);
   if (minWidth === undefined) {
     minWidth = 0;
@@ -87,7 +82,7 @@ function getPalette(width) {
         num12 = num12 + arg2;
       } while (num12 < result);
     }
-    const obj3 = PQueue(items, arg1);
+    const obj3 = PQueueDefault(items, arg1);
     if (typeof obj3 === "boolean") {
       let paletteResult = items;
     } else {
@@ -99,26 +94,26 @@ function getPalette(width) {
 function _dataUrlToFile() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c5 = 0;
     return (function*(arg0, arg1, arg2) {
-      let set = tmp4;
-      let closure_0 = closure_1;
+      closure_3 = tmp4;
+      closure_0 = closure_1;
       closure_1 = closure_2;
-      const obj3 = outer1_10(closure_0);
+      const obj3 = closure_1_10(closure_0);
       closure_2 = yield obj3.arrayBuffer();
       const _File = File;
-      const items = [closure_2];
+      items = [closure_2];
       const obj = { type: null };
       obj[0] = closure_1;
       const file = new File(items, closure_0, obj);
       return file;
     })();
   });
-  const _dataUrlToFile = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -147,7 +142,7 @@ function dataUrlToBlob(arg0) {
       length = atobResult.length;
     } while (num < length);
   }
-  const items = [uint8Array];
+  items = [uint8Array];
   const str2 = arg0.split(",")[0].split(":")[1];
   const blob = new Blob(items, { type: arg0.split(",")[0].split(":")[1].split(";")[0] });
   return blob;
@@ -155,9 +150,9 @@ function dataUrlToBlob(arg0) {
 function _isPNGAnimated() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c3 = 0;
     return (function*(arg0) {
       if (c3 === 2) {
         c3 = 3;
@@ -185,21 +180,21 @@ function _isPNGAnimated() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp2;
+              closure_1 = tmp2;
               let first;
-              let closure_0;
+              closure_0 = undefined;
               closure_1 = undefined;
               if (closure_0.type != null) {
                 first = str7.split(";")[0];
               }
               if ("image/png" !== first) {
                 const _Error = Error;
-                const error = new Error("File is not a PNG");
+                error = new Error("File is not a PNG");
                 throw error;
               } else {
                 c2 = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = obj6.text();
                 return obj1;
               }
@@ -233,7 +228,7 @@ function _isPNGAnimated() {
       }
     })();
   });
-  const _isPNGAnimated = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -245,11 +240,11 @@ function _isPNGAnimated() {
 let c5 = 2000;
 let c6 = 1.6;
 let items = [[0, 0, 0]];
-require("apply").memoize((arg0) => {
-  let closure_0 = arg0;
+importDefaultResult.memoize((arg0) => {
+  closure_0 = arg0;
   return new Promise((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     const image = new globalThis.Image();
     image.crossOrigin = "Anonymous";
     image.onerror = (arg0) => {
@@ -259,7 +254,7 @@ require("apply").memoize((arg0) => {
       c2 = null;
     };
     image.onload = () => {
-      callback(outer1_8(c2, 5, 10));
+      callback(closure_1_8(c2, 5, 10));
       c2.onload = null;
       c2.onerror = null;
       c2 = null;
@@ -267,7 +262,7 @@ require("apply").memoize((arg0) => {
     image.src = closure_0;
   });
 });
-let result = require("getSrcWithWidthAndHeight").fileFinishedImporting("utils/ImageUtils.tsx");
+let result = require("set").fileFinishedImporting("utils/ImageUtils.tsx");
 
 export { fit };
 export const IMAGE_MAX_ZOOM = 2000;
@@ -321,9 +316,6 @@ export const zoomScale = function zoomScale(arg0, arg1, arg2, arg3) {
   return parseFloat(bound1.toFixed(2));
 };
 export const getRatio = function getRatio(height) {
-  let maxHeight;
-  let maxWidth;
-  let width;
   ({ width, maxWidth, maxHeight } = height);
   let num = 1;
   if (width > maxWidth) {
@@ -338,8 +330,6 @@ export const getRatio = function getRatio(height) {
   return Math.min(num * num2, 1);
 };
 export const getCoverRatio = function getCoverRatio(arg0) {
-  let height;
-  let width;
   ({ width, height } = arg0);
   if (width === height) {
     return 1;
@@ -350,8 +340,6 @@ export const getCoverRatio = function getCoverRatio(arg0) {
   }
 };
 export const hasDimensions = function hasDimensions(arg0) {
-  let height;
-  let width;
   ({ width, height } = arg0);
   let tmp = null != width;
   if (tmp) {
@@ -381,9 +369,9 @@ export const getPaletteForAvatar = function getPaletteForAvatar(closure_0) {
   return getSrcWithWidthAndHeight.default.getPaletteForAvatarMobile(closure_0);
 };
 export const readFileAsBase64 = function readFileAsBase64(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((closure_0) => {
-    let closure_1 = arg1;
+    closure_1 = arg1;
     const fileReader = new FileReader();
     const asDataURL = fileReader.readAsDataURL(closure_0);
     fileReader.onload = () => {
@@ -395,7 +383,7 @@ export const readFileAsBase64 = function readFileAsBase64(arg0) {
 };
 export const dataUriFileSize = function dataUriFileSize(str) {
   const parts = str.split(";base64,");
-  00038__(2 === parts.length, "Input data is not a valid image.");
+  _modDef38(2 === parts.length, "Input data is not a valid image.");
   return atob(parts[1]).length;
 };
 export const dataUrlToFile = function dataUrlToFile() {
@@ -420,7 +408,7 @@ export const isPNGAnimated = function isPNGAnimated() {
   return applyArgumentsResult;
 };
 export const preloadImage = function preloadImage(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0, arg1) => {
     const image = new globalThis.Image();
     const listener = image.addEventListener("load", arg0);

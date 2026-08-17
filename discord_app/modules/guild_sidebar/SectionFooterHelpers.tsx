@@ -1,12 +1,12 @@
 // discord_app/modules/guild_sidebar/SectionFooterHelpers.tsx
-import incrementVersion from "incrementVersion";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { ChannelListGuildActionRow } from "ChannelListGuildActionRow";
-import { Permissions } from "ME";
-import { computeSubtitle } from "ChannelListState.tsx";
+import computeSubtitle from "computeSubtitle" /* 5272 */;
+import closure_2 from "incrementVersion" /* 5270 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { ChannelListGuildActionRow } from "ChannelListGuildActionRow" /* 5281 */;
+import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("ChannelListGuildActionRow").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/SectionFooterHelpers.tsx");
 
 export const getSectionFooterConfig = function getSectionFooterConfig(guildChannels, optInChannelsEnabled, section) {
   if (section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS) {
@@ -54,27 +54,22 @@ export const getSectionFooterConfig = function getSectionFooterConfig(guildChann
       tmpResult = tmp(1913);
     }
   }
-  const obj = { hasDivider: tmp6, canHaveVoiceSummary: null };
-  obj[1] = !(section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS || section === computeSubtitle.SECTION_INDEX_FAVORITES || section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber);
+  const obj = { hasDivider: tmp6, canHaveVoiceSummary: !(section === computeSubtitle.SECTION_INDEX_GUILD_ACTIONS || section === computeSubtitle.SECTION_INDEX_FAVORITES || section === computeSubtitle.SECTION_INDEX_UNCATEGORIZED_CHANNELS || section === guildChannels.recentsSectionNumber || section === guildChannels.voiceChannelsSectionNumber) };
   return obj;
 };
 export const getSectionFooterActiveVoiceChannels = function getSectionFooterActiveVoiceChannels(arg0) {
-  let category;
-  let incrementVersion;
-  let dependencyMap;
-  let require;
-  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: incrementVersion } = arg0);
-  if (true !== incrementVersion.isCollapsed(category.record.id)) {
+  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: closure_2 } = arg0);
+  if (true !== closure_2.isCollapsed(category.record.id)) {
     let items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
-      if (outer1_3.can(outer1_5.VIEW_CHANNEL, id)) {
+      if (closure_1_3.can(closure_1_5.VIEW_CHANNEL, id)) {
         let items = table[id.id];
         if (items == null) {
           items = [];
         }
-        let tmp4 = id.id !== incrementVersion;
+        let tmp4 = id.id !== closure_2;
         if (tmp4) {
           tmp4 = id.id !== closure_1;
         }
@@ -90,22 +85,18 @@ export const getSectionFooterActiveVoiceChannels = function getSectionFooterActi
   return items;
 };
 export const isSectionFooterWithActiveVoiceChannels = function isSectionFooterWithActiveVoiceChannels(arg0) {
-  let category;
-  let incrementVersion;
-  let dependencyMap;
-  let require;
-  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: incrementVersion } = arg0);
-  if (true !== incrementVersion.isCollapsed(category.record.id)) {
+  ({ category, voiceStates: require, selectedChannelId: dependencyMap, selectedVoiceChannelId: closure_2 } = arg0);
+  if (true !== closure_2.isCollapsed(category.record.id)) {
     let items = [];
   } else {
     const channelRecords = category.getChannelRecords();
     items = channelRecords.filter((id) => {
-      if (outer1_3.can(outer1_5.VIEW_CHANNEL, id)) {
+      if (closure_1_3.can(closure_1_5.VIEW_CHANNEL, id)) {
         let items = table[id.id];
         if (items == null) {
           items = [];
         }
-        let tmp4 = id.id !== incrementVersion;
+        let tmp4 = id.id !== closure_2;
         if (tmp4) {
           tmp4 = id.id !== closure_1;
         }

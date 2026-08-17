@@ -1,44 +1,42 @@
 // discord_app/modules/icymi/native/ICYMIForumThreadRow.tsx
-import getDefaultRules from "get defaultRules";
-import { View } from "PressableBase";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import jsxProd from "AddEmojiButton";
-import createICYMIStyles from "createICYMIStyles";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
 class ICYMIForumThreadRow {
   constructor(arg0) {
     channel = global.channel;
     message = global.message;
-    c2 = undefined;
+    closure_2 = undefined;
     author = undefined;
-    tmp = f62725();
+    tmp = closure_9();
     tmp2 = channel;
-    tmp3 = c2;
+    tmp3 = closure_2;
     obj = require("initialize");
     items = [];
-    items[0] = View;
+    items[0] = closure_6;
     stateFromStores = obj.useStateFromStores(items, () => {
       let guildId;
       if (channel != null) {
         guildId = channel.getGuildId();
       }
-      return outer1_6.getGuild(guildId);
+      return closure_1_6.getGuild(guildId);
     });
-    c2 = stateFromStores;
+    closure_2 = stateFromStores;
     author = message.author;
     obj2 = require("initialize");
     items1 = [];
-    items1[0] = View;
+    items1[0] = closure_5;
     obj3 = author;
     items2 = [, ];
     items2[0] = author.id;
     id = undefined;
-    stateFromStores1 = obj2.useStateFromStores(items1, () => outer1_5.getChannel(channel.parent_id));
+    stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_5.getChannel(channel.parent_id));
     if (stateFromStores != null) {
       id = stateFromStores.id;
     }
@@ -165,18 +163,18 @@ class ICYMIForumThreadRow {
     return tmp13;
   }
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   obj = { pressable: obj, container: obj, subtitle: null, footer: null, threadAsComments: null, ICYMICardInteractionRow: null };
   obj = { flex: 1, paddingLeft: marginHorizontal.inset };
   obj = { marginHorizontal: marginHorizontal.margin };
-  obj[2] = { marginTop: Themes.space.PX_8, marginBottom: marginHorizontal.margin };
+  obj[2] = { marginTop: ThemesDefault.space.PX_8, marginBottom: marginHorizontal.margin };
   obj[3] = { justifyContent: "flex-end", paddingLeft: marginHorizontal.inset, marginTop: marginHorizontal.margin, gap: marginHorizontal.margin };
   obj[4] = { marginHorizontal: marginHorizontal.margin };
   obj[5] = { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin };
   return obj;
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
+let result = require("set").fileFinishedImporting("modules/icymi/native/ICYMIForumThreadRow.tsx");
 
 export default function ForumThreadRowWrapper(message) {
   return callback(ICYMIForumThreadRow, { message: message.message, channel: message.threadChannel, visible: message.visible });

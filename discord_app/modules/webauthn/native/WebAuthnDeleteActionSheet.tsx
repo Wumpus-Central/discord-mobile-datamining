@@ -1,36 +1,32 @@
 // discord_app/modules/webauthn/native/WebAuthnDeleteActionSheet.tsx
-import "set";
-import get_ActivityIndicator from "registerAsset";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/14091_registerAsset.js";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 14091 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { content: { alignItems: "center" }, subtitle: null, sheetContent: null, sheetBody: null };
-createCacheKey = { textAlign: "center", marginTop: require("Themes").space.PX_16 };
+createCacheKey = { textAlign: "center", marginTop: ThemesDefault.space.PX_16 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
-createCacheKey[3] = { gap: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { gap: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_16 };
-let result = require("jsxProd").fileFinishedImporting("modules/webauthn/native/WebAuthnDeleteActionSheet.tsx");
+createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+createCacheKey[3] = { gap: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { gap: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 };
+let result = require("set").fileFinishedImporting("modules/webauthn/native/WebAuthnDeleteActionSheet.tsx");
 
 export default function WebAuthnDeleteActionSheet(credential) {
-  let deleting;
-  let importDefault;
   credential = credential.credential;
   ({ deleting, setDeleting: importDefault } = credential);
   function handleClose() {
     callback(table[5]).hideActionSheet();
   }
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { contentStyles: tmp.sheetContent, bodyStyles: tmp.sheetBody, children: null };
   obj = { title: null, trailing: null };
   let intl = credential(1236).intl;
@@ -38,8 +34,8 @@ export default function WebAuthnDeleteActionSheet(credential) {
   obj[0] = intl.formatToPlainString(credential(1236).t.mI3CoL, obj);
   obj[1] = callback(credential(7176).ActionSheetCloseButton, { onPress: handleClose });
   const items = [callback(credential(6949).BottomSheetTitleHeader, obj), , , ];
-  const obj1 = { style: tmp.content, children: null };
-  const items1 = [callback(closure_3, { source: registerAsset }), ];
+  obj1 = { style: tmp.content, children: null };
+  const items1 = [callback(closure_3, { source: registerAssetDefault }), ];
   const obj3 = { variant: "heading-md/normal", style: tmp.subtitle, children: null };
   const intl2 = credential(1236).intl;
   obj3[2] = intl2.string(credential(1236).t.IfTbc1);
@@ -59,10 +55,10 @@ export default function WebAuthnDeleteActionSheet(credential) {
   obj7[0] = intl4.string(credential(1236).t.zYOk0f);
   obj7[1] = function onPress() {
     callback(true);
-    outer1_1(outer1_2[5]).hideActionSheet();
-    let obj = outer1_1(outer1_2[5]);
-    const result = credential(outer1_2[13]).deleteWebAuthnCredential(credential);
-    const obj2 = credential(outer1_2[13]);
+    closure_1_1(closure_1_2[5]).hideActionSheet();
+    let obj = closure_1_1(closure_1_2[5]);
+    const result = credential(closure_1_2[13]).deleteWebAuthnCredential(credential);
+    const obj2 = credential(closure_1_2[13]);
     const nextPromise = result.then(() => {
       let obj = callback2(4094);
       obj = { key: "WEBAUTHN_CREDENTIAL_DELETE_SUCCESS_TOAST_KEY", content: null, icon: null, IconComponent: null, iconColor: "status-positive" };

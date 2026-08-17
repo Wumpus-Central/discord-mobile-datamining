@@ -1,6 +1,8 @@
 // discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx
-import { NativeModules } from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
+const NativeModules = get_ActivityIndicator.NativeModules;
 if (null != global.__KvStorage) {
   let __KvStorage = global.__KvStorage;
 } else if (null == NativeModules.KvStorage) {
@@ -30,6 +32,6 @@ if (null != global.__KvStorage) {
     throw error3;
   }
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/packages/kv-storage/js/implementation/Classic.native.tsx");
 
 export const KV_RAW = __KvStorage;

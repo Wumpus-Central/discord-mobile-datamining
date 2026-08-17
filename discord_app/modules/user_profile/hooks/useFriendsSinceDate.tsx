@@ -1,24 +1,24 @@
 // discord_app/modules/user_profile/hooks/useFriendsSinceDate.tsx
-import _getSystemLocale from "_getSystemLocale";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
+import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
 import { officialApplicationIds } from "../../connections/ConnectionsUtils.tsx";
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useFriendsSinceDate.tsx");
 
 export const useFriendsSinceDate = function useFriendsSinceDate(userId) {
   const _require = userId;
-  const items = [_getSystemLocale];
+  const items = [closure_2];
   const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => locale.locale);
   const obj = _defaultAreStatesEqual;
-  const items1 = [markAllUserIdListsStale];
+  const items1 = [closure_3];
   const items2 = [userId];
   const stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => {
     let since = null;
-    if (outer1_3.getRelationshipType(closure_0) === outer1_4.FRIEND) {
-      since = outer1_3.getSince(closure_0);
+    if (closure_1_3.getRelationshipType(closure_0) === closure_1_4.FRIEND) {
+      since = closure_1_3.getSince(closure_0);
     }
     return since;
   }, items2);

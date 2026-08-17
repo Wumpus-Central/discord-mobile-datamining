@@ -1,40 +1,38 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
+import useGuildAppliedBoostCount from "useGuildAppliedBoostCount" /* 4281 */;
+import useGuildAppliedBoostCountDefault from "useGuildAppliedBoostCount" /* 4281 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { useGuildAppliedBoostCount } from "useGuildPowerupsBoostCount.tsx";
 
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c4, BoostedGuildTiers: c5, GuildFeatures: closure_6 } = ME);
-const result = require("useGuildAppliedBoostCount").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsBoostLevelProgress.tsx");
 
 export default function useGuildPowerupBoostLevelProgress(arg0) {
   const _require = arg0;
-  const tmp = useGuildAppliedBoostCount(arg0);
-  const items = [createGuildRecordFromRust];
+  const tmp = useGuildAppliedBoostCountDefault(arg0);
+  const items = [closure_3];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
-    const guild = outer1_3.getGuild(closure_0);
+    const guild = closure_1_3.getGuild(closure_0);
     let premiumTier;
     if (guild != null) {
       premiumTier = guild.premiumTier;
     }
     if (premiumTier == null) {
-      premiumTier = outer1_5.NONE;
+      premiumTier = closure_1_5.NONE;
     }
     return premiumTier;
   });
   const obj = _initialize;
-  const items1 = [createGuildRecordFromRust];
+  const items1 = [closure_3];
   let num = 0;
   if (!obj2.useStateFromStores(items1, () => {
-    const guild = outer1_3.getGuild(closure_0);
+    const guild = closure_1_3.getGuild(closure_0);
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(outer1_6.PREMIUM_TIER_3_OVERRIDE);
+      hasItem = features.has(closure_1_6.PREMIUM_TIER_3_OVERRIDE);
     }
     return true === hasItem;
   })) {

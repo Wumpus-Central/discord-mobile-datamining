@@ -1,15 +1,15 @@
 // discord_app/modules/multi_account/useMultiAccount.tsx
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initialize from "initialize";
-import { MultiAccountTokenStatus } from "initialize";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "initialize" /* 11585 */;
+import { MultiAccountTokenStatus } from "initialize" /* 11585 */;
 
-const require = arg1;
-let result = require("initialize").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/multi_account/useMultiAccount.tsx");
 
 export const useMultiAccountUsers = function useMultiAccountUsers() {
-  let items = [initialize, mergeGuildAvatar];
+  let items = [closure_6, closure_5];
   const stateFromStoresObject = initialize.useStateFromStoresObject(items, () => {
     let obj = users;
     users = users.getUsers();

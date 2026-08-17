@@ -1,5 +1,5 @@
 // discord_app/modules/quests/native/BountiesModal/useBountiesRecapScroll.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 function getRevealProgress(scrollY, lastBountyScrollOffset, height3) {
   let num = 0;
@@ -38,8 +38,6 @@ export const useBountiesRecapScroll = function useBountiesRecapScroll(listRef) {
     callback(offsets.lastBounty);
   }, items1);
   callback2 = listRef.useCallback((arg0) => {
-    let lastBounty;
-    let revealHeight;
     if (enabled) {
       if (arg0 > offsets.lastBounty) {
         ({ revealHeight, lastBounty } = tmp2);

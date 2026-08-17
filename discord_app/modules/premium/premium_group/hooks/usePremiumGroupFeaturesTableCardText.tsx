@@ -1,21 +1,19 @@
 // discord_app/modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx
-import reset from "reset";
-import SubscriptionStatusTypes from "SubscriptionStatusTypes";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { create } from "../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import { usePremiumGroupPrimaryName } from "usePremiumGroupPrimaryName.tsx";
+import initialize from "initialize" /* 589 */;
+import create from "create" /* 1940 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 12918 */;
+import closure_3 from "reset" /* 4045 */;
+import SubscriptionStatusTypes from "SubscriptionStatusTypes" /* 4053 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ getPremiumGroupProductName: c4, HELP_CENTER_LINK: c5 } = SubscriptionStatusTypes);
-const result = require("getSystemLocale").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/premium_group/hooks/usePremiumGroupFeaturesTableCardText.tsx");
 
 export default function usePremiumGroupFeaturesTableCardText(arg0, arg1) {
   let obj = { useCachedData: true, fetch: arg0 === create.PremiumSubscriptionGroupRole.MEMBER };
-  const tmp4 = usePremiumGroupPrimaryName(obj);
-  let obj1 = initialize;
-  const items = [reset];
+  const tmp4 = usePremiumGroupPrimaryNameDefault(obj);
+  obj1 = initialize;
+  const items = [closure_3];
   const stateFromStores = obj1.useStateFromStores(items, () => premiumGroupSubscription.getPremiumGroupSubscription());
   if (arg0 === create.PremiumSubscriptionGroupRole.UNSPECIFIED) {
     return null;

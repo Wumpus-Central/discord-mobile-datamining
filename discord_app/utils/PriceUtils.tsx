@@ -1,14 +1,14 @@
 // discord_app/utils/PriceUtils.tsx
-import _getSystemLocale from "_getSystemLocale";
-import handlePaymentSourceCreateEnd from "handlePaymentSourceCreateEnd";
-import { SubscriptionIntervalTypes } from "GuildFeatures";
-import { CurrencyCodes } from "sum";
-import { CurrencyCodes } from "../../discord_common/js/shared/utils/PriceUtils.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { set } from "PlatformUtils.tsx";
-import { getPremiumPlanItem } from "PremiumUtils.tsx";
+import set from "set" /* 500 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import CurrencyCodes2 from "CurrencyCodes" /* 5317 */;
+import closure_2 from "_getSystemLocale" /* 1994 */;
+import closure_3 from "handlePaymentSourceCreateEnd" /* 4041 */;
+import { SubscriptionIntervalTypes } from "GuildFeatures" /* 1924 */;
+import { CurrencyCodes } from "sum" /* 505 */;
 
-const require = arg1;
+require = arg1;
 function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   let obj = localeOverride;
   if (localeOverride == null) {
@@ -21,12 +21,12 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
     localeOverride = localeOverride.localeOverride;
   }
   if (localeOverride == null) {
-    localeOverride = _getSystemLocale.locale;
+    localeOverride = closure_2.locale;
   }
   let isWindowsResult = "en-US" === localeOverride;
   let hasItem = isWindowsResult;
   if (isWindowsResult) {
-    hasItem = closure_6.includes(_getSystemLocale.systemLocale);
+    hasItem = closure_6.includes(closure_2.systemLocale);
   }
   if (hasItem) {
     obj.currencyDisplay = "code";
@@ -36,7 +36,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
     const obj3 = set;
   }
   if (isWindowsResult) {
-    isWindowsResult = "en-GB" === _getSystemLocale.systemLocale;
+    isWindowsResult = "en-GB" === closure_2.systemLocale;
   }
   if (isWindowsResult) {
     obj.currencyDisplay = "code";
@@ -44,7 +44,7 @@ function formatSingleCurrencyPrice(result, BGN, localeOverride) {
   if (tmp11) {
     obj.minimumFractionDigits = 0;
   }
-  return CurrencyCodes.formatPrice(result, BGN, localeOverride, obj);
+  return CurrencyCodes2.formatPrice(result, BGN, localeOverride, obj);
 }
 function formatPrice(amount, currency, localeOverride, localeOverride) {
   const timestamp = Date.now();
@@ -111,12 +111,12 @@ function formatRate(priceString, interval, intervalCount) {
     }
     const _Error = Error;
     const _HermesInternal = HermesInternal;
-    const error = new Error("Unsupported interval type: " + interval + ", and interval count: " + intervalCount);
+    error = new Error("Unsupported interval type: " + interval + ", and interval count: " + intervalCount);
     throw error;
   }
 }
 let closure_6 = Object.freeze(["en-CA", "en-AU", "en-NZ"]);
-const result = require("GuildFeatures").fileFinishedImporting("utils/PriceUtils.tsx");
+const result = require("set").fileFinishedImporting("utils/PriceUtils.tsx");
 
 export { formatSingleCurrencyPrice };
 export const formatDualPriceForBG = function formatDualPriceForBG(result, localeOverride) {

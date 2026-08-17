@@ -1,12 +1,11 @@
 // discord_app/modules/guild_tag/native/badges/GuildBadgeDog.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { getTransformedBadgeColors } from "GuildBadgeUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import getTransformedBadgeColors from "getTransformedBadgeColors" /* 13377 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
 let closure_4 = ["#705224", "#F6A830"];
 let closure_5 = ["#FFE880"];
@@ -14,11 +13,9 @@ let closure_6 = [0.05, 0.4];
 let items = [{ base: 5, tint: 1 }, { base: 3, tint: 1 }];
 let closure_8 = [0.8];
 const items1 = [{ base: 6, tint: 1 }];
-const result = require("getTransformedBadgeColors").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeDog.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_tag/native/badges/GuildBadgeDog.tsx");
 
 export const GuildBadgeDog = function GuildBadgeDog(width) {
-  let primaryTintColor;
-  let secondaryTintColor;
   let num = width.width;
   if (num === undefined) {
     num = 24;

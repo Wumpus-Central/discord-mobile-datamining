@@ -1,15 +1,15 @@
 // discord_app/modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx
-import createRTCConnection from "createRTCConnection";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import closure_8 from "createRTCConnection";
-import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY";
-import { Features } from "DesktopSources";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
+import { SECURE_FRAMES_GENERATE_FINGERPRINT_VERSION as closure_9 } from "SECURE_FRAMES_LINKING_BOTTOM_SHEET_KEY" /* 9710 */;
+import { Features } from "DesktopSources" /* 4529 */;
 
 const require = arg1;
-const result = require("noop").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
+const result = require("set").fileFinishedImporting("modules/rtc/hooks/useSecureFramesPairwiseFingerprint.tsx");
 
 export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwiseFingerprint(userId) {
   userId = userId.userId;
@@ -23,7 +23,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   let stateFromStores2;
   callback = undefined;
   let callback1;
-  let closure_10;
+  closure_10 = undefined;
   const items = [stateFromStores1];
   stateFromStores = _require(first[8]).useStateFromStores(items, () => stateFromStores1.getId());
   stateFromStores(first[9])(stateFromStores !== userId, "[useSecureFramesPairwiseFingerprint] Should not pass current user id.");
@@ -45,12 +45,12 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
   }, []);
   _require = undefined;
   _require = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let createRTCConnection = arg3;
-    let c6 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c6 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       if (c7 === 2) {
         c7 = 3;
@@ -78,9 +78,9 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
               obj[0] = arg1;
               return obj;
             } else {
-              let noop = tmp5;
-              let _slicedToArray = tmp2;
-              let callback;
+              closure_5 = tmp5;
+              closure_4 = tmp2;
+              callback = undefined;
               if (stateFromStores2.supports(constants.MLS_PAIRWISE_FINGERPRINTS)) {
                 const rTCConnection = callback.getRTCConnection();
                 if (rTCConnection != null) {
@@ -91,7 +91,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
                 }
                 c7 = 3;
               } else {
-                let obj1 = callback(first[11]);
+                obj1 = callback(first[11]);
                 const _Uint8Array = Uint8Array;
                 let uint8Array = new Uint8Array(tmp40);
                 const _Uint8Array2 = Uint8Array;
@@ -108,7 +108,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
             throw arg1;
           } else if (arg0 !== 2) {
             callback = arg1;
-            outer1_8(callback);
+            closure_1_8(callback);
           }
           c7 = 3;
           obj = { value: null, done: true };
@@ -145,7 +145,7 @@ export const useSecureFramesPairwiseFingerprint = function useSecureFramesPairwi
     if (tmp) {
       callback2(true);
       const _setTimeout = setTimeout;
-      ref.current = setTimeout(() => callback(closure_1, _detectH265HardwareDecode, current, fetchFingerprint), 0);
+      ref.current = setTimeout(() => callback(closure_1, closure_7, current, closure_6), 0);
     }
     const current = ref.current;
     return () => {

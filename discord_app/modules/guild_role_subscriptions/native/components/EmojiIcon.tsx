@@ -1,19 +1,16 @@
 // discord_app/modules/guild_role_subscriptions/native/components/EmojiIcon.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { registerAsset } from "../../../../../_runtime/09355_registerAsset.js";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { Emoji } from "../../../emojis/native/Emoji.tsx";
-import { useEmojiByIdOrName } from "../../useEmojiByIdOrName.tsx";
+import noopAll from "noop" /* 19 */;
+import preloadDefault from "preload" /* 5449 */;
+import EmojiDefault from "Emoji" /* 6930 */;
+import registerAssetDefault from "registerAsset" /* 9355 */;
+import useEmojiByIdOrName from "useEmojiByIdOrName" /* 14587 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("useEmojiByIdOrName").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/EmojiIcon.tsx");
 
 export default function EmojiIcon(size) {
-  let fontSize;
-  let guildId;
-  let id;
-  let lineHeight;
   let num = size.size;
   ({ guildId, id } = size);
   if (num === undefined) {
@@ -37,13 +34,13 @@ export default function EmojiIcon(size) {
       obj[0] = num;
       obj[1] = num;
       obj[1] = obj;
-      obj[2] = registerAsset;
-      tmp4 = jsx(preload, { width: null, height: null });
-      const tmp7 = preload;
+      obj[2] = registerAssetDefault;
+      tmp4 = jsx(preloadDefault, { width: null, height: null });
+      const tmp7 = preloadDefault;
     }
     let tmp8Result = tmp4;
   } else {
-    const obj1 = { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
+    obj1 = { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null };
     obj1[0] = size.style;
     const obj2 = { width: null, height: null };
     obj2[0] = num;
@@ -78,8 +75,8 @@ export default function EmojiIcon(size) {
       url = emojiByIdOrName.url;
     }
     obj1[4] = url;
-    tmp8Result = jsx(Emoji, { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
-    const tmp10 = Emoji;
+    tmp8Result = jsx(EmojiDefault, { style: null, fastImageStyle: null, textEmojiStyle: null, name: null, src: null });
+    const tmp10 = EmojiDefault;
     const tmp8 = jsx;
     tmp9 = importDefault;
   }

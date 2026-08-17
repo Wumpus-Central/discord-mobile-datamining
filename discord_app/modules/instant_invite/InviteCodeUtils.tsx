@@ -1,25 +1,21 @@
 // discord_app/modules/instant_invite/InviteCodeUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import { parse } from "../../../_runtime/01484_parse.js";
-import { getFirstQueryStringValue } from "../../utils/QueryStringUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import parseDefault from "parse" /* 1484 */;
+import getFirstQueryStringValue from "getFirstQueryStringValue" /* 4361 */;
+import closure_3 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
+require = arg1;
 function readSnowflake(firstQueryStringValue) {
   let tmp;
   if (typeof firstQueryStringValue === "string") {
     if (obj.isProbablyAValidSnowflake(firstQueryStringValue)) {
       tmp = firstQueryStringValue;
     }
-    obj = DISCORD_EPOCH;
+    obj = DISCORD_EPOCHDefault;
   }
   return tmp;
 }
 function generateInviteKeyFromExtraData(closure_1) {
-  let baseCode;
-  let guildScheduledEventId;
-  let targetChannelId;
-  let targetMessageId;
   ({ baseCode, guildScheduledEventId, targetChannelId, targetMessageId } = closure_1);
   const obj = {};
   if (null != guildScheduledEventId) {
@@ -31,7 +27,7 @@ function generateInviteKeyFromExtraData(closure_1) {
       obj[message] = targetMessageId;
     }
   }
-  const json = parse.stringify(obj);
+  const json = parseDefault.stringify(obj);
   let combined = baseCode;
   if ("" !== json) {
     const _HermesInternal = HermesInternal;
@@ -42,7 +38,7 @@ function generateInviteKeyFromExtraData(closure_1) {
 const event = "event";
 const channel = "channel";
 const message = "message";
-const result = require("parse").fileFinishedImporting("modules/instant_invite/InviteCodeUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/InviteCodeUtils.tsx");
 
 export { readSnowflake };
 export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlParams(inviteHostRemainingPath, search) {
@@ -54,7 +50,7 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
       substr = search.substring(1);
     }
     try {
-      let obj = parse;
+      let obj = parseDefault;
       const parsed = obj.parse(substr);
       const firstQueryStringValue = getFirstQueryStringValue.getFirstQueryStringValue(parsed[event]);
       const obj2 = getFirstQueryStringValue;
@@ -79,16 +75,14 @@ export const generateInviteKeyFromUrlParams = function generateInviteKeyFromUrlP
 };
 export { generateInviteKeyFromExtraData };
 export const parseExtraDataFromInviteKey = function parseExtraDataFromInviteKey(inviteKey) {
-  let tmp2;
-  let tmp3;
   [tmp2, tmp3] = callback(inviteKey.split("?"), 2);
   if (null == tmp3) {
     let obj = { baseCode: null };
     obj[0] = tmp2;
     return obj;
   } else {
-    const parsed = parse.parse(tmp3);
-    const obj4 = parse;
+    const parsed = parseDefault.parse(tmp3);
+    const obj4 = parseDefault;
     const tmp12 = require;
     const firstQueryStringValue = getFirstQueryStringValue.getFirstQueryStringValue(parsed[event]);
     const obj5 = getFirstQueryStringValue;

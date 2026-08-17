@@ -1,8 +1,8 @@
 // discord_app/modules/safety_flows/SafetyFlowsManager.tsx
-import "initialize";
-import { _openSafetyFlow } from "openSafetyFlow.native.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import _openSafetyFlow from "_openSafetyFlow" /* 17083 */;
 
-const require = arg1;
+require = arg1;
 function handleConnectionOpenSupplemental() {
   _openSafetyFlow.openSafetyFlow();
 }
@@ -12,6 +12,7 @@ function handleSafetyFlowsModalOpen() {
 function handleUserRequiredActionUpdate(requiredAction) {
   _openSafetyFlow.openSafetyFlow({ requiredAction: requiredAction.requiredAction });
 }
+initializeDefault;
 let prototype = function SafetyFlowsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpenSupplemental, SAFETY_FLOWS_MODAL_OPEN: handleSafetyFlowsModalOpen, USER_REQUIRED_ACTION_UPDATE: handleUserRequiredActionUpdate };

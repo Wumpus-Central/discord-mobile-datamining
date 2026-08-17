@@ -1,33 +1,23 @@
 // discord_app/modules/billing/hooks/useFractionalPremiumInfo.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import reset from "reset";
-import addEntitlement from "addEntitlement";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import { t } from "../../../../_runtime/03975_t.js";
-import { _createGatewayCheckoutContext } from "../../../utils/BillingUtils.tsx";
-import { getPremiumPlanItem } from "../../../utils/PremiumUtils.tsx";
+import tDefault from "t" /* 3975 */;
+import getPremiumPlanItem from "getPremiumPlanItem" /* 4039 */;
+import _createGatewayCheckoutContext from "_createGatewayCheckoutContext" /* 4054 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import closure_6 from "reset" /* 4045 */;
+import closure_7 from "addEntitlement" /* 5357 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function calculateFractionalPremiumInfo(isFetching) {
-  let entitlements;
-  let excludeReverseTrialFromCountdown;
-  let fetchedAllEntitlements;
-  let premiumSubscription;
-  let unactivatedFractionalPremiumUnits;
   let flag = isFetching.isFetching;
   if (flag === undefined) {
     flag = false;
   }
   ({ entitlements, unactivatedFractionalPremiumUnits, premiumSubscription, fetchedAllEntitlements, excludeReverseTrialFromCountdown } = isFetching);
-  let obj = { isFractionalPremiumActive: false, fractionalState: constants3.NONE, startsAt: t(0), endsAt: t(0), currentEntitlementId: "", currentEntitlementEndsAt: t(0), unactivatedUnits: [], fetched: fetchedAllEntitlements };
+  let obj = { isFractionalPremiumActive: false, fractionalState: constants3.NONE, startsAt: tDefault(0), endsAt: tDefault(0), currentEntitlementId: "", currentEntitlementEndsAt: tDefault(0), unactivatedUnits: [], fetched: fetchedAllEntitlements };
   if (flag) {
     obj = {};
     const merged = Object.assign(obj);
@@ -58,12 +48,12 @@ function calculateFractionalPremiumInfo(isFetching) {
         const mapped = Array.from(entitlements.values()).map((id) => id.id);
         const arr = Array.from(entitlements.values());
         obj = { extra: null };
-        const obj1 = { entitlementIds: null };
+        obj1 = { entitlementIds: null };
         obj1[0] = mapped;
         obj[0] = obj1;
         const result = _createGatewayCheckoutContext.captureBillingMessage("fractional redemption entitlements should have startsAt/endsAt", obj);
         const _Error = Error;
-        const error = new Error("fractional redemption entitlements should have startsAt/endsAt");
+        error = new Error("fractional redemption entitlements should have startsAt/endsAt");
         throw error;
       }
       let first = sorted[0];
@@ -119,13 +109,11 @@ function calculateFractionalPremiumInfo(isFetching) {
     return obj;
   }
 }
-({ EntitlementSourceTypes: metroImportAll, EntitlementTypes: c9, SubscriptionStatusTypes: c10 } = ME);
+({ EntitlementSourceTypes: closure_8, EntitlementTypes: c9, SubscriptionStatusTypes: c10 } = ME);
 ({ FractionalPremiumStates: unpackModuleId, PREMIUM_SUBSCRIPTION_APPLICATION: closure_12 } = GuildFeatures);
-let result = require("mergeGuildAvatar").fileFinishedImporting("modules/billing/hooks/useFractionalPremiumInfo.tsx");
+let result = require("set").fileFinishedImporting("modules/billing/hooks/useFractionalPremiumInfo.tsx");
 
 export default function useFractionalPremiumInfo() {
-  let excludeReverseTrialFromCountdown;
-  let importDefault;
   let obj = arg0;
   if (arg0 === undefined) {
     obj = { forceFetch: false, excludeReverseTrial: false, excludeReverseTrialFromCountdown: false };
@@ -137,7 +125,7 @@ export default function useFractionalPremiumInfo() {
   let stateFromStores1;
   let stateFromStoresArray1;
   let stateFromStores2;
-  let closure_8;
+  closure_8 = undefined;
   const items = [stateFromStores1];
   stateFromStores = forceFetch(excludeReverseTrialFromCountdown[11]).useStateFromStores(items, () => stateFromStores1.getCurrentUser());
   const obj2 = forceFetch(excludeReverseTrialFromCountdown[11]);
@@ -202,26 +190,26 @@ export default function useFractionalPremiumInfo() {
     if (tmp3) {
       let obj = forceFetch(excludeReverseTrialFromCountdown[13]);
       obj = { entitlementType: null };
-      obj[0] = outer1_9.FRACTIONAL_REDEMPTION;
+      obj[0] = closure_1_9.FRACTIONAL_REDEMPTION;
       const userEntitlements = obj.fetchUserEntitlements(obj);
     }
     let tmp11 = null != stateFromStores;
     if (tmp11) {
       const applicationIdsFetching = stateFromStores2.applicationIdsFetching;
-      tmp11 = !applicationIdsFetching.has(outer1_12);
+      tmp11 = !applicationIdsFetching.has(closure_1_12);
     }
     if (tmp11) {
       const applicationIdsFetched = stateFromStores2.applicationIdsFetched;
-      tmp11 = !applicationIdsFetched.has(outer1_12);
+      tmp11 = !applicationIdsFetched.has(closure_1_12);
     }
     if (tmp11) {
-      const userEntitlementsForApplication = forceFetch(excludeReverseTrialFromCountdown[13]).fetchUserEntitlementsForApplication(outer1_12);
+      const userEntitlementsForApplication = forceFetch(excludeReverseTrialFromCountdown[13]).fetchUserEntitlementsForApplication(closure_1_12);
       const obj3 = forceFetch(excludeReverseTrialFromCountdown[13]);
     }
   });
   const items5 = [stateFromStores, stateFromStoresArray, stateFromStores2, stateFromStoresArray1, stateFromStores1, excludeReverseTrialFromCountdown];
   const effect = stateFromStoresArray.useEffect(() => {
-    let closure_0 = outer1_13({ entitlements: stateFromStoresArray, unactivatedFractionalPremiumUnits: stateFromStoresArray1, currentUser: stateFromStores, premiumSubscription: stateFromStores2, fetchedAllEntitlements: stateFromStores1, excludeReverseTrialFromCountdown });
+    closure_0 = closure_1_13({ entitlements: stateFromStoresArray, unactivatedFractionalPremiumUnits: stateFromStoresArray1, currentUser: stateFromStores, premiumSubscription: stateFromStores2, fetchedAllEntitlements: stateFromStores1, excludeReverseTrialFromCountdown });
     callback((arg0) => {
       let tmp = callback;
       if (obj.isEqual(arg0, callback)) {

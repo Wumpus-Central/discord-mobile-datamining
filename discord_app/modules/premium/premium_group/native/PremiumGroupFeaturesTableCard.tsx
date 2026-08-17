@@ -1,18 +1,19 @@
 // discord_app/modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx
-import { View } from "get ActivityIndicator";
-import { Gradients } from "items";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../design/void/native.tsx";
-import { hexToRgba } from "../../../../utils/ColorUtils.tsx";
-import { usePremiumGroupFeaturesTableCardText } from "../hooks/usePremiumGroupFeaturesTableCardText.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
+import Text from "Text" /* 4734 */;
+import items3 from "items" /* 7403 */;
+import usePremiumGroupFeaturesTableCardTextDefault from "usePremiumGroupFeaturesTableCardText" /* 12917 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 class BetaPill {
   constructor() {
-    tmp = jsxs();
+    tmp = closure_7();
     obj = { style: tmp.betaPill, children: null };
     obj = { variant: "text-xs/bold", style: tmp.betaText, children: null };
     intl = require("getSystemLocale").intl;
@@ -21,30 +22,28 @@ class BetaPill {
     return jsx(View, obj);
   }
 }
+const View = get_ActivityIndicator.View;
+const Gradients = items3.Gradients;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { premiumGroupCard: null, headerContainer: null, betaPill: null, betaText: null, title: null, description: null };
-obj = { padding: 16, borderRadius: require("Themes").radii.sm - 2, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
+obj = { padding: 16, borderRadius: ThemesDefault.radii.sm - 2, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "flex-start" };
 obj[0] = obj;
 obj[1] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 8, marginBottom: 4 };
-obj[2] = { backgroundColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
-let obj1 = { backgroundColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
-obj[3] = { color: require("Themes").colors.BLACK, textAlign: "center", textTransform: "uppercase" };
-let obj2 = { color: require("Themes").colors.BLACK, textAlign: "center", textTransform: "uppercase" };
-obj[4] = { color: require("Themes").colors.TEXT_DEFAULT, marginBottom: 16 };
-const obj3 = { color: require("Themes").colors.TEXT_DEFAULT, marginBottom: 16 };
-obj[5] = { color: require("Themes").colors.TEXT_DEFAULT };
+obj[2] = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+let obj1 = { backgroundColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", paddingHorizontal: 8, paddingBottom: 2 };
+obj[3] = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+let obj2 = { color: ThemesDefault.colors.BLACK, textAlign: "center", textTransform: "uppercase" };
+obj[4] = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+const obj3 = { color: ThemesDefault.colors.TEXT_DEFAULT, marginBottom: 16 };
+obj[5] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 let closure_7 = createCacheKey.createStyles(obj);
-let obj4 = { color: require("Themes").colors.TEXT_DEFAULT };
-const result = require("jsxProd").fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
+let obj4 = { color: ThemesDefault.colors.TEXT_DEFAULT };
+const result = set.fileFinishedImporting("modules/premium/premium_group/native/PremiumGroupFeaturesTableCard.tsx");
 
 export default function PremiumGroupFeaturesTableCard(arg0) {
-  let bodyString;
-  let premiumGroupRole;
-  let style;
-  let subheaderString;
   ({ style, premiumGroupRole } = arg0);
   const tmp = callback3();
-  const tmp4 = usePremiumGroupFeaturesTableCardText(premiumGroupRole, false);
+  const tmp4 = usePremiumGroupFeaturesTableCardTextDefault(premiumGroupRole, false);
   if (null == tmp4) {
     return null;
   } else {
@@ -71,7 +70,7 @@ export default function PremiumGroupFeaturesTableCard(arg0) {
     const items1 = [callback(tmp2(9329), { width: 181, height: 16 }), callback(BetaPill, {})];
     obj[1] = items1;
     const items2 = [callback2(View, obj), , ];
-    const obj1 = { variant: "text-sm/normal", style: null, children: null };
+    obj1 = { variant: "text-sm/normal", style: null, children: null };
     obj1[1] = tmp.title;
     obj1[2] = subheaderString;
     items2[1] = callback(Text.Text, obj1);

@@ -1,5 +1,5 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/guild_channels/useFlashListAnimationDisabler.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
 let closure_3 = { code: "function useFlashListAnimationDisablerTsx1(){const{lastId}=this.__closure;return lastId.get();}" };

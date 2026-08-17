@@ -1,11 +1,12 @@
 // discord_app/modules/media_uploads/ImageEncodingLadder.tsx
-import { CompressionQuality } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-function getAdaptiveImageCompressionQuality(outer1_13, ADAPTIVE_COMPRESSION_CONFIG) {
+function getAdaptiveImageCompressionQuality(width, ADAPTIVE_COMPRESSION_CONFIG) {
   if (ADAPTIVE_COMPRESSION_CONFIG.useAdaptiveCompression) {
-    if (null != outer1_13.width) {
-      if (null != outer1_13.height) {
-        const result = outer1_13.width * outer1_13.height;
+    if (null != width.width) {
+      if (null != width.height) {
+        const result = width.width * width.height;
         if (result <= obj.SMALL) {
           let HIGH5 = ADAPTIVE_COMPRESSION_CONFIG.veryHighQuality;
           if (HIGH5 == null) {
@@ -44,6 +45,7 @@ function getAdaptiveImageCompressionQuality(outer1_13, ADAPTIVE_COMPRESSION_CONF
     return CompressionQuality.HIGH;
   }
 }
+const CompressionQuality = ME.CompressionQuality;
 let obj = { SMALL: 921600, MEDIUM: 2073600, LARGE: 3686400, VERY_LARGE: 8294400 };
 obj = { useAdaptiveCompression: true, veryHighQuality: 0.8, highQuality: 0.7, mediumQuality: 0.6, lowQuality: 0.5, veryLowQuality: 0.4, useOriginalIfSmaller: true };
 let prototype;
@@ -51,12 +53,10 @@ prototype = function ImageEncodingLadder() {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["selectEncodingConfig"] = function selectEncodingConfig(width) {
-  let targetHeight;
-  let targetWidth;
   ({ targetWidth, targetHeight } = prototype.clampDimensions(width.width, width.height, 3840, 2160));
   if (width.width === targetWidth) {
     if (width.height === targetHeight) {
-      let obj = { compressionQuality: null, targetWidth: null, targetHeight: null };
+      obj = { compressionQuality: null, targetWidth: null, targetHeight: null };
       obj = { width: null, height: null };
       obj[0] = targetWidth;
       obj[1] = targetHeight;
@@ -79,7 +79,7 @@ prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg
   const bound3 = Math.min(arg2, arg3);
   if (bound <= bound2) {
     if (bound1 <= bound3) {
-      let obj = { targetWidth: null, targetHeight: null };
+      obj = { targetWidth: null, targetHeight: null };
       obj[0] = width;
       obj[1] = height;
       return obj;
@@ -89,7 +89,7 @@ prototype["clampDimensions"] = function clampDimensions(width, height, arg2, arg
   obj = { targetWidth: Math.max(1, Math.round(width * bound4)), targetHeight: Math.max(1, Math.round(height * bound4)) };
   return obj;
 };
-let result = require("set").fileFinishedImporting("modules/media_uploads/ImageEncodingLadder.tsx");
+let result = set.fileFinishedImporting("modules/media_uploads/ImageEncodingLadder.tsx");
 
 export const IMAGE_COMPRESSION_THRESHOLDS = obj;
 export const ADAPTIVE_COMPRESSION_CONFIG = obj;

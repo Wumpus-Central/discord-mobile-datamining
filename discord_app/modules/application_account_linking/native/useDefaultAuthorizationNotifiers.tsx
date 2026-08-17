@@ -1,14 +1,14 @@
 // discord_app/modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx
-import noop from "noop";
-import getState from "getState";
-import { AppStates } from "ME";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "getState" /* 7383 */;
+import { AppStates } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/useDefaultAuthorizationNotifiers.tsx");
 
 export const useDefaultAuthorizationNotifiers = function useDefaultAuthorizationNotifiers(startAuthorization, hasAlreadyLinked, value) {
   const _require = startAuthorization;
-  let closure_1 = hasAlreadyLinked;
+  closure_1 = hasAlreadyLinked;
   let obj = value;
   if (value === undefined) {
     obj = {};
@@ -30,7 +30,7 @@ export const useDefaultAuthorizationNotifiers = function useDefaultAuthorization
   const items1 = [startAuthorization];
   const isInAppBrowserOpen = _require(flag[4]).useIsInAppBrowserOpen();
   const callback = React.useCallback((arg0) => {
-    noop.current = true;
+    closure_3.current = true;
     return startAuthorization(arg0);
   }, items1);
   if (stateFromStores) {

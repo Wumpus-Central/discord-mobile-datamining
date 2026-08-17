@@ -1,22 +1,14 @@
 // discord_app/modules/experiments/GuildFilters.tsx
-import _slicedToArray from "_slicedToArray";
-import getGuild from "getGuild";
-import handleInviteData from "handleInviteData";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import importDefaultResult from "MurmurHashV3";
-import importDefaultResult1 from "MurmurHashV3";
-import importDefaultResult2 from "MurmurHashV3";
-import importDefaultResult3 from "MurmurHashV3";
-import importDefaultResult4 from "MurmurHashV3";
-import importDefaultResult5 from "MurmurHashV3";
-import importDefaultResult6 from "MurmurHashV3";
-import importDefaultResult7 from "MurmurHashV3";
-import { Integer } from "../../../_runtime/00014_Integer.js";
-import { MurmurHashV3 } from "../../../_runtime/01217_MurmurHashV3.js";
+import IntegerDefault from "Integer" /* 14 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "getGuild" /* 4294 */;
+import closure_4 from "handleInviteData" /* 4295 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import importDefaultResult from "MurmurHashV3" /* 1217 */;
 
 function isInRange(arg0, arg1, arg2) {
   try {
-    const obj = Integer(arg0);
+    const obj = IntegerDefault(arg0);
     let tmp6 = null;
     if (null != arg1) {
       tmp6 = tmp3(14)(arg1);
@@ -42,8 +34,6 @@ function isInRange(arg0, arg1, arg2) {
   }
 }
 function getRangeData(arg0) {
-  let tmp7;
-  let tmp8;
   let min;
   let max;
   while (tmp3 !== undefined) {
@@ -52,7 +42,7 @@ function getRangeData(arg0) {
     [tmp7, tmp8] = tmp6;
     let tmp9 = importDefault;
     let tmp10 = dependencyMap;
-    let obj = MurmurHashV3;
+    let obj = importDefaultResult;
     if (obj.v3("min_id") === tmp7) {
       min = tmp8;
     } else {
@@ -66,57 +56,54 @@ function getRangeData(arg0) {
   return { min, max };
 }
 let obj = {};
-obj[require("MurmurHashV3").v3("guild_ids")] = (arg0) => {
-  let importDefault = [];
+obj[importDefaultResult.v3("guild_ids")] = (arg0) => {
+  importDefault = [];
   while (tmp !== undefined) {
     let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
     let tmp5 = tmp4[1];
     let tmp6 = importDefault;
     let tmp7 = dependencyMap;
-    let obj = MurmurHashV3;
+    let obj = importDefaultResult;
     if (tmp4[0] === obj.v3("guild_ids")) {
       let tmp8 = tmp5;
       importDefault = tmp5;
     }
     continue;
   }
-  return (arg0) => tmp5.includes(arg0);
+  return (arg0) => closure_0.includes(arg0);
 };
-obj[require("MurmurHashV3").v3("guild_id_range")] = (arg0) => {
-  let dependencyMap;
-  let importDefault;
+obj[importDefaultResult.v3("guild_id_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
-  return (arg0) => outer1_6(arg0, closure_0, closure_1);
+  return (arg0) => closure_1_6(arg0, closure_0, closure_1);
 };
-obj[require("MurmurHashV3").v3("guild_age_range_days")] = (arg0) => {
-  let dependencyMap;
-  let importDefault;
+const importDefaultResult1 = importDefaultResult;
+obj[importDefaultResult.v3("guild_age_range_days")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (arg0) => {
-    const obj = outer1_0(outer1_1[6]);
-    return outer1_6(Math.floor(outer1_0(outer1_1[6]).age(arg0) / outer1_0(outer1_1[7]).Millis.DAY), closure_0, closure_1);
+    const obj = closure_1_0(closure_1_1[6]);
+    return closure_1_6(Math.floor(closure_1_0(closure_1_1[6]).age(arg0) / closure_1_0(closure_1_1[7]).Millis.DAY), closure_0, closure_1);
   };
 };
-obj[require("MurmurHashV3").v3("guild_member_count_range")] = (arg0) => {
-  let dependencyMap;
-  let importDefault;
+const importDefaultResult2 = importDefaultResult;
+obj[importDefaultResult.v3("guild_member_count_range")] = (arg0) => {
   ({ min: importDefault, max: dependencyMap } = getRangeData(arg0));
   return (arg0) => {
-    const memberCount = outer1_4.getMemberCount(arg0);
+    const memberCount = closure_1_4.getMemberCount(arg0);
     let tmp2 = null != memberCount;
     if (tmp2) {
-      tmp2 = outer1_6(memberCount, closure_0, closure_1);
+      tmp2 = closure_1_6(memberCount, closure_0, closure_1);
     }
     return tmp2;
   };
 };
-obj[require("MurmurHashV3").v3("guild_has_feature")] = (arg0) => {
-  let closure_0 = callback(callback(arg0, 1)[0], 2)[1];
+const importDefaultResult3 = importDefaultResult;
+obj[importDefaultResult.v3("guild_has_feature")] = (arg0) => {
+  closure_0 = callback(callback(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = outer1_5.getGuild(arg0);
+    let guild = closure_1_5.getGuild(arg0);
     if (guild == null) {
-      guild = outer1_3.getGuild(arg0);
+      guild = closure_1_3.getGuild(arg0);
     }
     let someResult = null != guild;
     if (someResult) {
@@ -128,12 +115,13 @@ obj[require("MurmurHashV3").v3("guild_has_feature")] = (arg0) => {
     return someResult;
   };
 };
-obj[require("MurmurHashV3").v3("guild_hub_types")] = (arg0) => {
-  let closure_0 = callback(callback(arg0, 1)[0], 2)[1];
+const importDefaultResult4 = importDefaultResult;
+obj[importDefaultResult.v3("guild_hub_types")] = (arg0) => {
+  closure_0 = callback(callback(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = outer1_5.getGuild(arg0);
+    let guild = closure_1_5.getGuild(arg0);
     if (guild == null) {
-      guild = outer1_3.getGuild(arg0);
+      guild = closure_1_3.getGuild(arg0);
     }
     let someResult = null != guild && typeof guild.hubType === "number";
     if (someResult) {
@@ -142,12 +130,13 @@ obj[require("MurmurHashV3").v3("guild_hub_types")] = (arg0) => {
     return someResult;
   };
 };
-obj[require("MurmurHashV3").v3("guild_has_vanity_url")] = (arg0) => {
-  let closure_0 = callback(callback(arg0, 1)[0], 2)[1];
+const importDefaultResult5 = importDefaultResult;
+obj[importDefaultResult.v3("guild_has_vanity_url")] = (arg0) => {
+  closure_0 = callback(callback(arg0, 1)[0], 2)[1];
   return (arg0) => {
-    let guild = outer1_5.getGuild(arg0);
+    let guild = closure_1_5.getGuild(arg0);
     if (guild == null) {
-      guild = outer1_3.getGuild(arg0);
+      guild = closure_1_3.getGuild(arg0);
     }
     if (null == guild) {
       return false;
@@ -156,9 +145,8 @@ obj[require("MurmurHashV3").v3("guild_has_vanity_url")] = (arg0) => {
     }
   };
 };
-obj[require("MurmurHashV3").v3("guild_in_range_by_hash")] = (arg0) => {
-  let tmp5;
-  let tmp6;
+const importDefaultResult6 = importDefaultResult;
+obj[importDefaultResult.v3("guild_in_range_by_hash")] = (arg0) => {
   while (tmp !== undefined) {
     let tmp3 = callback;
     let tmp4 = callback(tmp2, 2);
@@ -187,6 +175,7 @@ obj[require("MurmurHashV3").v3("guild_in_range_by_hash")] = (arg0) => {
     return (v3Result > 0 ? v3Result + v3Result : v3Result >>> 0) % 10000 < num;
   };
 };
-const result = require("handleInviteData").fileFinishedImporting("modules/experiments/GuildFilters.tsx");
+const importDefaultResult7 = importDefaultResult;
+const result = require("set").fileFinishedImporting("modules/experiments/GuildFilters.tsx");
 
 export const GUILD_FILTERS = obj;

@@ -1,23 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "Button";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextField } from "../../../../../design/components/TextField/native/TextField.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../../people/FriendRequestMessageExperiment.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import TextField from "TextField" /* 7338 */;
+import apexExperimentDefault from "apexExperiment" /* 13316 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function ErrorMessage(children) {
   const style = [, ];
   ({ inputAccessoryText: arr[0], errorStateText: arr[1] } = callback2());
@@ -25,41 +19,32 @@ function ErrorMessage(children) {
 }
 let c4 = importAllResult;
 ({ View: c5, Keyboard: closure_6 } = get_ActivityIndicator);
-({ PLACEHOLDER_TAG: error, AnalyticEvents: metroImportAll } = ME);
+({ PLACEHOLDER_TAG: error, AnalyticEvents: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let obj = { container: null, textInputContainer: null, placeholderText: null, inputAccessoryText: null, redesignInputAccessoryText: null, inputHeaderText: null, redesignGrow: null, errorStateText: null, friendMessageContainer: null, messageLabel: null, messageFooterText: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16 };
 obj[0] = obj;
 obj[1] = { alignSelf: "stretch" };
-createCacheKey = { color: require("Themes").colors.TEXT_MUTED };
+createCacheKey = { color: ThemesDefault.colors.TEXT_MUTED };
 obj[2] = createCacheKey;
-obj[3] = { fontSize: 12, lineHeight: 16, marginVertical: 8, color: require("Themes").colors.TEXT_SUBTLE };
-let obj2 = { fontSize: 12, lineHeight: 16, marginVertical: 8, color: require("Themes").colors.TEXT_SUBTLE };
-obj[4] = { marginBottom: require("Themes").space.PX_8 };
+obj[3] = { fontSize: 12, lineHeight: 16, marginVertical: 8, color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj2 = { fontSize: 12, lineHeight: 16, marginVertical: 8, color: ThemesDefault.colors.TEXT_SUBTLE };
+obj[4] = { marginBottom: ThemesDefault.space.PX_8 };
 obj[5] = { marginTop: 0 };
-let obj3 = { marginBottom: require("Themes").space.PX_8 };
-obj[6] = { flexGrow: 2, minHeight: require("Themes").space.PX_24 };
-let obj4 = { flexGrow: 2, minHeight: require("Themes").space.PX_24 };
-obj[7] = { color: require("Themes").unsafe_rawColors.RED_400, marginVertical: 4 };
-let obj5 = { color: require("Themes").unsafe_rawColors.RED_400, marginVertical: 4 };
-obj[8] = { alignSelf: "stretch", marginTop: require("Themes").space.PX_16 };
-let obj6 = { alignSelf: "stretch", marginTop: require("Themes").space.PX_16 };
-obj[9] = { marginBottom: require("Themes").space.PX_4 };
-let obj7 = { marginBottom: require("Themes").space.PX_4 };
-obj[10] = { marginTop: require("Themes").space.PX_4 };
+let obj3 = { marginBottom: ThemesDefault.space.PX_8 };
+obj[6] = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
+let obj4 = { flexGrow: 2, minHeight: ThemesDefault.space.PX_24 };
+obj[7] = { color: ThemesDefault.unsafe_rawColors.RED_400, marginVertical: 4 };
+let obj5 = { color: ThemesDefault.unsafe_rawColors.RED_400, marginVertical: 4 };
+obj[8] = { alignSelf: "stretch", marginTop: ThemesDefault.space.PX_16 };
+let obj6 = { alignSelf: "stretch", marginTop: ThemesDefault.space.PX_16 };
+obj[9] = { marginBottom: ThemesDefault.space.PX_4 };
+let obj7 = { marginBottom: ThemesDefault.space.PX_4 };
+obj[10] = { marginTop: ThemesDefault.space.PX_4 };
 let closure_12 = createCacheKey.createStyles(obj);
 let closure_13 = { SUCCESS: 0, [0]: "SUCCESS", ERROR: 1, [1]: "ERROR", LOADING: 2, [2]: "LOADING", NONE: 3, [3]: "NONE" };
 let closure_14 = { DISCORD_TAG: "DISCORD_TAG", MESSAGE: "MESSAGE" };
 let closure_16 = importAllResult.forwardRef((headerTextStyle, ref) => {
-  let autoFocus;
-  let headerText;
-  let onChangeText;
-  let onFocus;
-  let onKeyPress;
-  let onSelectionChange;
-  let onSubmitEditing;
-  let textState;
-  let validationState;
   ({ validationState, headerText } = headerTextStyle);
   ({ textState, onChangeText, onSelectionChange, onKeyPress, onSubmitEditing, onFocus, autoFocus } = headerTextStyle);
   if (headerText === undefined) {
@@ -112,31 +97,25 @@ let closure_16 = importAllResult.forwardRef((headerTextStyle, ref) => {
   obj[1] = items1;
   return closure_10(closure_5, obj);
 });
-let obj8 = { marginTop: require("Themes").space.PX_4 };
+let obj8 = { marginTop: ThemesDefault.space.PX_4 };
 const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
-  let autoFocusInput;
-  let headerText;
-  let headerTextStyle;
-  let onFocus;
-  let sourcePage;
-  let style;
   ({ headerTextStyle, sourcePage } = arg0);
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let first;
-  let importAllResult;
+  importAllResult = undefined;
   let first1;
-  let closure_6;
+  closure_6 = undefined;
   let first2;
-  let closure_8;
+  closure_8 = undefined;
   function handleSubmitEditing() {
     const trimmed = first.validatedText.trim();
     let substr = trimmed;
     const trimmed1 = first2.trim();
     if (trimmed.length <= 0) {
       let obj = { status: null, field: null, message: null };
-      obj[0] = outer1_13.ERROR;
-      obj[1] = outer1_14.DISCORD_TAG;
+      obj[0] = closure_1_13.ERROR;
+      obj[1] = closure_1_14.DISCORD_TAG;
       let intl = sourcePage(1236).intl;
       obj[2] = intl.string(sourcePage(1236).t.mxnceg);
       callback(obj);
@@ -155,13 +134,13 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       const validateDiscordTagResult = obj.validateDiscordTag(tmp2);
       if (null != validateDiscordTagResult) {
         obj = { status: null, field: null, message: null };
-        obj[0] = outer1_13.ERROR;
-        obj[1] = outer1_14.DISCORD_TAG;
+        obj[0] = closure_1_13.ERROR;
+        obj[1] = closure_1_14.DISCORD_TAG;
         obj[2] = validateDiscordTagResult;
         callback(obj);
       } else {
-        const obj1 = { status: null };
-        obj1[0] = outer1_13.LOADING;
+        obj1 = { status: null };
+        obj1[0] = closure_1_13.LOADING;
         callback(obj1);
         const obj2 = { discordTag: null, context: null, errorUxConfig: null, note: null };
         obj2[0] = tmp2;
@@ -177,13 +156,13 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
           let obj = { validatedText: "", hint: null };
           const intl = sourcePage(1236).intl;
           obj[1] = intl.string(sourcePage(1236).t["6p7Mhh"]);
-          outer1_4(obj);
-          outer1_8("");
-          obj = { status: outer2_13.SUCCESS, message: null };
+          closure_1_4(obj);
+          closure_1_8("");
+          obj = { status: closure_2_13.SUCCESS, message: null };
           const intl2 = sourcePage(1236).intl;
           obj = { discordTag: substr };
           obj[1] = intl2.format(sourcePage(1236).t.Rtl1Ep, obj);
-          outer1_6(obj);
+          closure_1_6(obj);
           const result = sourcePage(4093).presentAddedFriendToast();
           closure_6.dismiss();
         }, (body) => {
@@ -196,16 +175,16 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
           }
           if (null != note) {
             let obj = { status: null, field: null, message: null, a11yMessage: null };
-            obj[0] = outer2_13.ERROR;
-            obj[1] = outer2_14.MESSAGE;
+            obj[0] = closure_2_13.ERROR;
+            obj[1] = closure_2_14.MESSAGE;
             const intl = sourcePage(1236).intl;
             obj[2] = intl.string(sourcePage(1236).t.ckHwck);
             const intl2 = sourcePage(1236).intl;
             obj[3] = intl2.string(sourcePage(1236).t.ckHwck);
           } else {
             obj = { status: null, field: null, message: null, a11yMessage: null };
-            obj[0] = outer2_13.ERROR;
-            obj[1] = outer2_14.DISCORD_TAG;
+            obj[0] = closure_2_13.ERROR;
+            obj[1] = closure_2_14.DISCORD_TAG;
             let num;
             if (body != null) {
               const body2 = body.body;
@@ -232,7 +211,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
             const obj4 = sourcePage(9740);
             const tmp3 = substr;
           }
-          outer1_6(obj);
+          closure_1_6(obj);
         });
         const sendRequestResult = ref(9736).sendRequest(obj2);
       }
@@ -257,7 +236,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   const tmp7 = first(importAllResult.useState(""), 2);
   first2 = tmp7[0];
   closure_8 = tmp7[1];
-  let obj1 = apexExperiment;
+  obj1 = apexExperimentDefault;
   const enabled = obj1.useConfig({ location: "AddFriendbyId" }).enabled;
   const items = [first1];
   const items1 = [first1];
@@ -281,26 +260,26 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
       obj[1] = str2;
     }
     closure_4(obj);
-    let tmp9 = first1.status === outer1_13.ERROR;
+    let tmp9 = first1.status === closure_1_13.ERROR;
     if (tmp9) {
-      tmp9 = first1.field === outer1_14.DISCORD_TAG;
+      tmp9 = first1.field === closure_1_14.DISCORD_TAG;
     }
     if (tmp9) {
       obj = { status: null };
-      obj[0] = outer1_13.NONE;
+      obj[0] = closure_1_13.NONE;
       callback(obj);
     }
   }, items);
   const items2 = [sourcePage];
   const callback1 = importAllResult.useCallback((str) => {
     lib(str.replace(/\n/g, ""));
-    let tmp3 = first1.status === outer1_13.ERROR;
+    let tmp3 = first1.status === closure_1_13.ERROR;
     if (tmp3) {
-      tmp3 = first1.field === outer1_14.MESSAGE;
+      tmp3 = first1.field === closure_1_14.MESSAGE;
     }
     if (tmp3) {
       const obj = { status: null };
-      obj[0] = outer1_13.NONE;
+      obj[0] = closure_1_13.NONE;
       callback(obj);
     }
   }, items1);
@@ -311,7 +290,7 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
   }, items2);
   const items3 = [first1];
   const effect1 = importAllResult.useEffect(() => {
-    let tmp2 = first1.status === outer1_13.ERROR;
+    let tmp2 = first1.status === closure_1_13.ERROR;
     if (tmp2) {
       tmp2 = null != tmp.a11yMessage;
     }
@@ -399,6 +378,6 @@ const forwardRefResult = importAllResult.forwardRef((arg0, ref) => {
     const tmp19 = constants2;
   }
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/friends/screens/AddFriendById.tsx");
 
 export default forwardRefResult;

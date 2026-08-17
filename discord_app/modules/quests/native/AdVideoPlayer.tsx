@@ -1,28 +1,22 @@
 // discord_app/modules/quests/native/AdVideoPlayer.tsx
-import set from "set";
-import importAllResult from "module_1208";
-import get_ActivityIndicator from "initialize";
-import getState from "getState";
-import ME from "ME";
-import jsxProd from "getSystemLocale";
-import _isNativeReflectConstruct from "_isNativeReflectConstruct";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "n";
+import ThemesDefault from "Themes" /* 712 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 9019 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "getState" /* 7383 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "n" /* 689 */;
 
-let StyleSheet;
-let c10;
-let c5;
-let c9;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 let c4 = importAllResult;
 ({ View: c5, StyleSheet, Pressable: closure_6, ActivityIndicator: error } = get_ActivityIndicator);
 ({ AppStates: c9, ComponentActions: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
-let obj = { left: require("Themes").space.PX_16, right: require("Themes").space.PX_16, top: require("Themes").space.PX_16, bottom: require("Themes").space.PX_16 };
+let obj = { left: ThemesDefault.space.PX_16, right: ThemesDefault.space.PX_16, top: ThemesDefault.space.PX_16, bottom: ThemesDefault.space.PX_16 };
+let closure_14 = importAllResult.memo(_isNativeReflectConstructDefault);
 function hasVideoEnded(arg0, arg1) {
   return arg0 >= arg1 - 1;
 }
@@ -51,7 +45,7 @@ let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj[0] = {};
 createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
-createCacheKey.backgroundColor = require("Themes").colors.BACKGROUND_BASE_LOWEST;
+createCacheKey.backgroundColor = ThemesDefault.colors.BACKGROUND_BASE_LOWEST;
 createCacheKey.justifyContent = "center";
 createCacheKey.alignItems = "center";
 obj[1] = createCacheKey;
@@ -66,65 +60,34 @@ obj[5] = { position: "relative", height: "100%", width: "100%" };
 let obj4 = {};
 const merged3 = Object.assign(StyleSheet.absoluteFillObject);
 let obj1 = {};
-const importDefaultResultResult = require("n")(require("Themes").unsafe_rawColors.BLACK);
-obj4.backgroundColor = require("n")(require("Themes").unsafe_rawColors.BLACK).alpha(0.5).hex();
+const importDefaultResultResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK);
+obj4.backgroundColor = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5).hex();
 obj4.justifyContent = "center";
 obj4.alignItems = "center";
 obj4.flexDirection = "column";
 obj[6] = obj4;
-const alphaResult = require("n")(require("Themes").unsafe_rawColors.BLACK).alpha(0.5);
-obj[7] = { flexDirection: "row", justifyContent: "flex-end", padding: require("Themes").space.PX_8, position: "absolute", left: 0, right: 0 };
-let obj5 = { flexDirection: "row", justifyContent: "flex-end", padding: require("Themes").space.PX_8, position: "absolute", left: 0, right: 0 };
-obj[8] = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: require("Themes").space.PX_24, pointerEvents: "box-none" };
+const alphaResult = importDefaultResult(ThemesDefault.unsafe_rawColors.BLACK).alpha(0.5);
+obj[7] = { flexDirection: "row", justifyContent: "flex-end", padding: ThemesDefault.space.PX_8, position: "absolute", left: 0, right: 0 };
+let obj5 = { flexDirection: "row", justifyContent: "flex-end", padding: ThemesDefault.space.PX_8, position: "absolute", left: 0, right: 0 };
+obj[8] = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: ThemesDefault.space.PX_24, pointerEvents: "box-none" };
 obj[9] = { top: 0 };
 obj[10] = { bottom: 0 };
-let obj6 = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: require("Themes").space.PX_24, pointerEvents: "box-none" };
-obj[11] = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: require("Themes").space.PX_16, overflow: "hidden" };
-let obj7 = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: require("Themes").space.PX_16, overflow: "hidden" };
-obj[12] = { height: 1, backgroundColor: require("Themes").colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: require("Themes").colors.WHITE };
-let obj8 = { height: 1, backgroundColor: require("Themes").colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: require("Themes").colors.WHITE };
-obj[13] = { color: require("Themes").colors.TEXT_DEFAULT };
-let obj9 = { color: require("Themes").colors.TEXT_DEFAULT };
-obj[14] = { color: require("Themes").colors.TEXT_SUBTLE };
-let obj10 = { color: require("Themes").colors.TEXT_SUBTLE };
-obj[15] = { padding: require("Themes").space.PX_8 };
+let obj6 = { justifyContent: "center", alignItems: "center", flexGrow: 1, flexDirection: "row", gap: ThemesDefault.space.PX_24, pointerEvents: "box-none" };
+obj[11] = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: ThemesDefault.space.PX_16, overflow: "hidden" };
+let obj7 = { position: "absolute", bottom: 0, right: 0, left: 0, justifyContent: "flex-end", height: ThemesDefault.space.PX_16, overflow: "hidden" };
+obj[12] = { height: 1, backgroundColor: ThemesDefault.colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: ThemesDefault.colors.WHITE };
+let obj8 = { height: 1, backgroundColor: ThemesDefault.colors.WHITE, shadowOffset: { width: 0, height: 0 }, shadowRadius: 6, shadowOpacity: 1, elevation: 5, shadowColor: ThemesDefault.colors.WHITE };
+obj[13] = { color: ThemesDefault.colors.TEXT_DEFAULT };
+let obj9 = { color: ThemesDefault.colors.TEXT_DEFAULT };
+obj[14] = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let obj10 = { color: ThemesDefault.colors.TEXT_SUBTLE };
+obj[15] = { padding: ThemesDefault.space.PX_8 };
 let closure_17 = createCacheKey.createStyles(obj);
 let closure_18 = { code: "function shouldShowControls_AdVideoPlayerTsx3(){const{hasLoaded,hideControls,showControls,playerState,PlayerState,isVideoEnded}=this.__closure;return hasLoaded&&!hideControls&&(showControls.get()||playerState===PlayerState.PAUSED||playerState===PlayerState.ENDED||playerState===PlayerState.ERRORED||isVideoEnded);}" };
 let closure_19 = { code: "function AdVideoPlayerTsx4(){const{shouldShowControls,withSpring,SUBTLE_SPRING}=this.__closure;const show=shouldShowControls();return{opacity:withSpring(show?1:0,SUBTLE_SPRING),pointerEvents:show?'auto':'none'};}" };
 let closure_20 = { code: "function AdVideoPlayerTsx5(){const{withTiming,progressSharedValue,timingFast}=this.__closure;return{width:withTiming(progressSharedValue.get()*100+\"%\",timingFast,'animate-always')};}" };
-let obj11 = { padding: require("Themes").space.PX_8 };
+let obj11 = { padding: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo((initialProgress) => {
-  let automaticallyWaitsToMinimizeStalling;
-  let bufferConfig;
-  let bufferingSpinnerPlacement;
-  let c34;
-  let captionsEnabled;
-  let contentInsets;
-  let duration;
-  let duration2;
-  let externallyPaused;
-  let flag2;
-  let httpEngine;
-  let isFullscreen;
-  let maxBitRate;
-  let maxTimestampSec;
-  let onBuffer;
-  let onError;
-  let onLoadStart;
-  let onOpenTranscript;
-  let onToggleCaptions;
-  let onToggleFullscreen;
-  let onVideoLayout;
-  let onVideoTracks;
-  let preferredForwardBufferDuration;
-  let renderCaptions;
-  let repeat;
-  let style;
-  let timestampSec;
-  let timestampSec2;
-  let tmp25;
-  let tmp53;
-  let videoRef;
   initialProgress = initialProgress.initialProgress;
   onBuffer = initialProgress;
   let num = initialProgress.contentDuration;
@@ -135,7 +98,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
   if (flag === undefined) {
     flag = false;
   }
-  let importDefault = flag;
+  importDefault = flag;
   flag2 = initialProgress.disableResumeOnLoad;
   if (flag2 === undefined) {
     flag2 = false;
@@ -190,31 +153,31 @@ const memoResult = importAllResult.memo((initialProgress) => {
   let first;
   let callback;
   let first1;
-  let closure_19;
+  closure_19 = undefined;
   let first2;
-  let closure_21;
+  closure_21 = undefined;
   let first3;
-  let closure_23;
-  let closure_24;
-  let closure_25;
-  let closure_26;
+  closure_23 = undefined;
+  closure_24 = undefined;
+  closure_25 = undefined;
+  closure_26 = undefined;
   callback = undefined;
-  let c28;
+  closure_28 = undefined;
   let sharedValue;
   let shouldShowControls;
   let sharedValue1;
-  let closure_32;
+  closure_32 = undefined;
   let callback2;
   c34 = undefined;
   let callback4;
   let callback6;
-  let closure_37;
+  closure_37 = undefined;
   let callback8;
   let callback9;
-  let c40;
+  closure_40 = undefined;
   let callback17;
   let tmp = callback();
-  let obj = onLoad;
+  obj = onLoad;
   if (videoRef == null) {
     videoRef = onLoad.useRef(null);
   }
@@ -254,7 +217,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
     }
     tmp15 = timestampSec >= duration - 1;
   }
-  c28 = tmp15;
+  closure_28 = tmp15;
   let tmp8Result = tmp8(tmp9[11]);
   sharedValue = tmp8Result.useSharedValue(false);
   shouldShowControls = function shouldShowControls() {
@@ -274,7 +237,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
         value = first2 === onBuffer(flag2[10]).PlayerState.ERRORED;
       }
       if (!value) {
-        value = c28;
+        value = closure_28;
       }
       tmp = value;
     }
@@ -289,8 +252,8 @@ const memoResult = importAllResult.memo((initialProgress) => {
     constructor() {
       tmp = shouldShowControls();
       tmp2 = onBuffer;
-      tmp3 = useState;
-      obj = onBuffer(useState[12]);
+      tmp3 = closure_2;
+      obj = onBuffer(closure_2[12]);
       num = 0;
       if (tmp) {
         num = 1;
@@ -308,16 +271,16 @@ const memoResult = importAllResult.memo((initialProgress) => {
   Se.__workletHash = 311315682972;
   Se.__initData = closure_19;
   const animatedStyle = tmp8Result.useAnimatedStyle(Se);
-  const obj1 = { shouldShowControls, withSpring: onBuffer(tmp9[12]).withSpring, SUBTLE_SPRING: onBuffer(tmp9[13]).SUBTLE_SPRING };
+  obj1 = { shouldShowControls, withSpring: onBuffer(tmp9[12]).withSpring, SUBTLE_SPRING: onBuffer(tmp9[13]).SUBTLE_SPRING };
   const shouldShowControlsResult = shouldShowControls();
   sharedValue1 = onBuffer(tmp9[11]).useSharedValue(0);
   const tmp8Result1 = onBuffer(tmp9[11]);
   class Pe {
     constructor() {
       obj = { width: null };
-      obj2 = onBuffer(useState[14]);
-      result = 100 * c31.get();
-      obj[0] = obj2.withTiming(`${tmp}%`, onBuffer(useState[15]).timingFast, "animate-always");
+      obj2 = onBuffer(closure_2[14]);
+      result = 100 * closure_31.get();
+      obj[0] = obj2.withTiming(`${tmp}%`, onBuffer(closure_2[15]).timingFast, "animate-always");
       return obj;
     }
   }
@@ -329,12 +292,12 @@ const memoResult = importAllResult.memo((initialProgress) => {
   closure_32 = obj.useRef(-1);
   let items1 = [sharedValue];
   const callback1 = obj.useCallback((arg0) => {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return () => {
       const items = [...arguments];
-      clearTimeout(outer1_32.current);
-      let result = outer1_29.set(true);
-      outer1_32.current = setTimeout(() => {
+      clearTimeout(closure_1_32.current);
+      let result = closure_1_29.set(true);
+      closure_1_32.current = setTimeout(() => {
         const result = closure_29.set(false);
       }, 2000);
       if (null != closure_0) {
@@ -346,8 +309,8 @@ const memoResult = importAllResult.memo((initialProgress) => {
     };
   }, items1);
   callback2 = obj.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     callback2((maxTimestampSec) => ({ timestampSec: closure_0, maxTimestampSec: Math.max(maxTimestampSec.maxTimestampSec, Math.floor(closure_0)), duration: closure_1 }));
   }, []);
   let tmp2Result = tmp2(obj.useState(false), 2);
@@ -379,7 +342,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
   const items4 = [callback4, first2, callback, onResumePlayback, onPausePlayback];
   const imperativeHandle = obj.useImperativeHandle(initialProgress.ref, () => ({
     seekToStart() {
-      if (closure_20 !== outer1_0(outer1_2[10]).PlayerState.ERRORED) {
+      if (closure_20 !== closure_1_0(closure_1_2[10]).PlayerState.ERRORED) {
         callback2(0);
         if (closure_20 === tmp2(tmp3[10]).PlayerState.ENDED) {
           callback(tmp2(tmp3[10]).PlayerState.PLAYING);
@@ -390,7 +353,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
       }
     },
     play() {
-      if (closure_20 === outer1_0(outer1_2[10]).PlayerState.PAUSED) {
+      if (closure_20 === closure_1_0(closure_1_2[10]).PlayerState.PAUSED) {
         callback(tmp(tmp2[10]).PlayerState.PLAYING);
         if (closure_12 != null) {
           tmp5(tmp(tmp2[10]).PlaybackTriggerSource.IMPERATIVE_API);
@@ -398,7 +361,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
       }
     },
     pause() {
-      if (closure_20 === outer1_0(outer1_2[10]).PlayerState.PLAYING) {
+      if (closure_20 === closure_1_0(closure_1_2[10]).PlayerState.PLAYING) {
         callback(tmp(tmp2[10]).PlayerState.PAUSED);
         if (closure_11 != null) {
           tmp5(tmp(tmp2[10]).PlaybackTriggerSource.IMPERATIVE_API);
@@ -431,7 +394,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
     }
   }, items5);
   callback6 = obj.useCallback(() => {
-    let obj = arg0;
+    obj = arg0;
     if (arg0 === undefined) {
       obj = {};
     }
@@ -494,10 +457,10 @@ const memoResult = importAllResult.memo((initialProgress) => {
     let ComponentDispatch2 = onBuffer(flag2[16]).ComponentDispatch;
     const subscription1 = ComponentDispatch2.subscribe(onPlayerStateChange.QUEST_APP_STORE_OVERLAY_FINISHED, callback9);
     return () => {
-      const ComponentDispatch = outer1_0(outer1_2[16]).ComponentDispatch;
-      ComponentDispatch.unsubscribe(outer1_10.QUEST_GAME_LINK_OPENED, closure_38);
-      const ComponentDispatch2 = outer1_0(outer1_2[16]).ComponentDispatch;
-      ComponentDispatch2.unsubscribe(outer1_10.QUEST_APP_STORE_OVERLAY_FINISHED, closure_39);
+      const ComponentDispatch = closure_1_0(closure_1_2[16]).ComponentDispatch;
+      ComponentDispatch.unsubscribe(closure_1_10.QUEST_GAME_LINK_OPENED, closure_38);
+      const ComponentDispatch2 = closure_1_0(closure_1_2[16]).ComponentDispatch;
+      ComponentDispatch2.unsubscribe(closure_1_10.QUEST_APP_STORE_OVERLAY_FINISHED, closure_39);
     };
   }, items10);
   const items11 = [sharedValue, callback6];
@@ -521,7 +484,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
         callback2(currentTime.currentTime, tmp4);
       }
       if (onSeek != null) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(currentTime);
         obj.fromTimeSec = arr;
         tmp9(obj);
@@ -546,11 +509,11 @@ const memoResult = importAllResult.memo((initialProgress) => {
     }
     tmp37 = !tmp41;
   }
-  c40 = tmp37;
+  closure_40 = tmp37;
   const items13 = [callback4, first, sharedValue1, tmp37];
   const items14 = [callback4, first, sharedValue1, first2, callback];
   const callback12 = obj.useCallback(() => {
-    if (!c40) {
+    if (!closure_40) {
       let current = ref2.current;
       if (current == null) {
         current = sharedValue1.get() * first;
@@ -583,7 +546,7 @@ const memoResult = importAllResult.memo((initialProgress) => {
     callback2(seekableDuration.currentTime, seekableDuration.seekableDuration);
     const result = sharedValue1.set(num);
     if (onProgress != null) {
-      const obj = { currentTime: null, seekableDuration: null, progress: null };
+      obj = { currentTime: null, seekableDuration: null, progress: null };
       ({ currentTime: obj[0], seekableDuration: obj[1] } = seekableDuration);
       obj[2] = num;
       tmp3(obj);
@@ -623,14 +586,14 @@ const memoResult = importAllResult.memo((initialProgress) => {
           if (current != null) {
             const setNativeProps = current.setNativeProps;
             if (setNativeProps != null) {
-              const obj = { paused: true, repeat: false, src: null };
+              obj = { paused: true, repeat: false, src: null };
               obj[2] = { uri: null };
               setNativeProps(obj);
             }
           }
         } catch (tmp4) {
-          outer1_1(outer1_2[19]).captureException(tmp4);
-          const obj2 = outer1_1(outer1_2[19]);
+          closure_1_1(closure_1_2[19]).captureException(tmp4);
+          const obj2 = closure_1_1(closure_1_2[19]);
         }
       };
     }
@@ -912,6 +875,6 @@ const memoResult = importAllResult.memo((initialProgress) => {
     obj24 = tmp.bufferingSpinnerCentered;
   }
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/AdVideoPlayer.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/AdVideoPlayer.tsx");
 
 export const AdVideoPlayer = memoResult;

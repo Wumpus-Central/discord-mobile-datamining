@@ -1,6 +1,8 @@
 // discord_app/modules/user_profile/hooks/useShouldConvertBioEmoji.tsx
-import { explicitContentFromProto } from "../../user_settings/UserSettings.tsx";
-const result = require("set").fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
+import set from "set" /* 2 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+
+const result = set.fileFinishedImporting("modules/user_profile/hooks/useShouldConvertBioEmoji.tsx");
 
 export default function useShouldConvertBioEmoji() {
   const UseLegacyChatInput = explicitContentFromProto.UseLegacyChatInput;

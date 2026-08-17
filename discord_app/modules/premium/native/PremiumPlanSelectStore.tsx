@@ -1,9 +1,10 @@
 // discord_app/modules/premium/native/PremiumPlanSelectStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 import { batchUpdates } from "../../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 
 const obj = keys.create(() => ({ isPurchasing: false, purchasingProductId: null }));
-const result = require("set").fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
+const result = set.fileFinishedImporting("modules/premium/native/PremiumPlanSelectStore.tsx");
 
 export const usePremiumPlanSelectStore = obj;
 export const setIsPurchasing = function setIsPurchasing(arg0) {
@@ -12,6 +13,6 @@ export const setIsPurchasing = function setIsPurchasing(arg0) {
   if (arg1 === undefined) {
     tmp = null;
   }
-  const dependencyMap = tmp;
-  _batchUpdates.batchUpdates(() => outer1_2.setState({ isPurchasing: closure_0, purchasingProductId: closure_1 }));
+  dependencyMap = tmp;
+  _batchUpdates.batchUpdates(() => closure_1_2.setState({ isPurchasing: closure_0, purchasingProductId: c1 }));
 };

@@ -1,24 +1,21 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/14144_registerAsset.js";
-import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { TwoFAModalSetupSections } from "TwoFASetupModal.tsx";
-import { styles } from "TwoFASetupStyles.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import TwoFAModalSetupSections from "TwoFAModalSetupSections" /* 14139 */;
+import styles from "styles" /* 14143 */;
+import registerAssetDefault from "registerAsset" /* 14144 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flex: 1, alignItems: "center", justifyContent: "center" }, authIcon: { width: 120, height: 120, marginBottom: 32 } });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupLanding.tsx");
 
 export default function TwoFASetupLanding() {
   const tmp = callback3();
@@ -26,11 +23,8 @@ export default function TwoFASetupLanding() {
   const twoFASetupStyles = obj.useTwoFASetupStyles();
   obj = { children: null };
   obj = { style: tmp.container, children: null };
-  const obj1 = { bottom: true, style: tmp.container, children: null };
-  const obj2 = { source: null, style: null };
-  obj2[0] = registerAsset;
-  obj2[1] = tmp.authIcon;
-  const items = [callback(closure_3, obj2), , ];
+  obj1 = { bottom: true, style: tmp.container, children: null };
+  const items = [callback(closure_3, { source: registerAssetDefault, style: tmp.authIcon }), , ];
   const obj3 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = getSystemLocale.intl;
   obj3[2] = intl.string(getSystemLocale.t["9E74Dx"]);

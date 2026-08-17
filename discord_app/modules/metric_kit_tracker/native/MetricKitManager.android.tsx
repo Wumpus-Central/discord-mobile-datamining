@@ -1,6 +1,7 @@
 // discord_app/modules/metric_kit_tracker/native/MetricKitManager.android.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
+initializeDefault;
 class MetricKitManager extends tmp2 {
 }
 const prototype = MetricKitManager.prototype;

@@ -1,12 +1,15 @@
 // discord_app/modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx
-import { Image } from "get ActivityIndicator";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import updateVoiceState from "updateVoiceState";
-import { Permissions } from "ME";
-import { experiment } from "../../../../channel/VoiceChannelBadgeExperiment.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import experiment from "experiment" /* 8439 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_5 from "updateVoiceState" /* 4542 */;
 
-let result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
+const Image = get_ActivityIndicator.Image;
+const Permissions = ME.Permissions;
+let result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/VoiceChannelBadge.tsx");
 
 export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guildId) {
   let obj = experiment;
@@ -35,10 +38,10 @@ export const createVoiceChannelBadge = function createVoiceChannelBadge(id, guil
             }
             let isPrivateResult = channel.isPrivate();
             if (!isPrivateResult) {
-              isPrivateResult = getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel) && getUncachedChannelPermissions.can(Permissions.CONNECT, channel);
-              const obj4 = getUncachedChannelPermissions;
+              isPrivateResult = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
+              const obj4 = closure_4;
               const tmp8 = Permissions;
-              const tmp9 = getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel) && getUncachedChannelPermissions.can(Permissions.CONNECT, channel);
+              const tmp9 = closure_4.can(Permissions.VIEW_CHANNEL, channel) && closure_4.can(Permissions.CONNECT, channel);
             }
             if (!result) {
               if (isPrivateResult) {

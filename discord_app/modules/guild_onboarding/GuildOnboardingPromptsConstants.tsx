@@ -1,19 +1,19 @@
 // discord_app/modules/guild_onboarding/GuildOnboardingPromptsConstants.tsx
-import _slicedToArray from "_slicedToArray";
-import _objectWithoutProperties from "_objectWithoutProperties";
-import { PlatformTypes } from "ME";
-import set from "ME";
-import { isUndefinedOrNull } from "../../../_runtime/00659_isUndefinedOrNull.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { isNullOrEmpty } from "../../utils/StringUtils.tsx";
+import isUndefinedOrNullDefault from "isUndefinedOrNull" /* 659 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isNullOrEmpty from "isNullOrEmpty" /* 1903 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "_objectWithoutProperties" /* 109 */;
+import { PlatformTypes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 function serverPromptToClientPrompt(id) {
   const options = id.options;
   return {
     id: id.id,
     options: options.map((id) => {
-      const obj = { id: id.id, channelIds: id.channel_ids, roleIds: id.role_ids, emoji: id.emoji, title: id.title, description: null };
+      obj = { id: id.id, channelIds: id.channel_ids, roleIds: id.role_ids, emoji: id.emoji, title: id.title, description: null };
       let str = id.description;
       if (str == null) {
         str = "";
@@ -99,7 +99,7 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
   if (options.options.length > 0) {
     return false;
   } else {
-    const obj = { id: null, title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
+    obj = { id: null, title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
     const _String = String;
     const _Date = Date;
     obj[0] = String(Date.now());
@@ -110,11 +110,11 @@ export const isDefaultPrompt = function isDefaultPrompt(options) {
     const id = obj.id;
     const id2 = options.id;
     const tmp7 = callback2(obj, closure_3);
-    return isUndefinedOrNull(tmp7, callback2(options, closure_4));
+    return isUndefinedOrNullDefault(tmp7, callback2(options, closure_4));
   }
 };
 export const getDefaultPrompt = function getDefaultPrompt() {
-  const obj = { id: String(Date.now()), title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
+  obj = { id: String(Date.now()), title: null, options: null, singleSelect: false, required: false, inOnboarding: true, type: null };
   const intl = getSystemLocale.intl;
   obj[1] = intl.string(getSystemLocale.t.vY91C9);
   obj[2] = [];
@@ -130,7 +130,7 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
   return {
     id: id.id,
     options: options.map((id) => {
-      const obj = { id: id.id, channel_ids: id.channelIds, role_ids: id.roleIds, emoji: id.emoji, emoji_id: null, emoji_name: null, emoji_animated: null, title: null, description: null };
+      obj = { id: id.id, channel_ids: id.channelIds, role_ids: id.roleIds, emoji: id.emoji, emoji_id: null, emoji_name: null, emoji_animated: null, title: null, description: null };
       const emoji = id.emoji;
       id = undefined;
       if (emoji != null) {
@@ -162,9 +162,7 @@ export const clientPromptToServerPrompt = function clientPromptToServerPrompt(id
 };
 export { serverPromptToClientPrompt };
 export const serverApiResponseToClientState = function serverApiResponseToClientState(defaultChannelIds) {
-  let connections;
-  let onboarding_prompts_seen;
-  const obj = { prompts: prompts.map(serverPromptToClientPrompt), defaultChannelIds: defaultChannelIds.default_channel_ids, responses: null, mode: null, enabled: null, onboardingPromptsSeen: null, onboardingResponsesSeen: null, belowRequirements: null, connections: null, additionalConnections: null };
+  obj = { prompts: prompts.map(serverPromptToClientPrompt), defaultChannelIds: defaultChannelIds.default_channel_ids, responses: null, mode: null, enabled: null, onboardingPromptsSeen: null, onboardingResponsesSeen: null, belowRequirements: null, connections: null, additionalConnections: null };
   prompts = defaultChannelIds.prompts;
   let responses = defaultChannelIds.responses;
   if (responses == null) {
@@ -213,13 +211,11 @@ export const getConnectionIdentifier = function getConnectionIdentifier(connecti
   return combined;
 };
 export const parseConnectionIdentifier = function parseConnectionIdentifier(str) {
-  let tmp2;
-  let tmp3;
   [tmp2, tmp3] = callback(str.split(":"), 2);
   if ("app" === tmp2) {
     if (undefined !== tmp3) {
       if ("" !== tmp3) {
-        let obj = { type: null, applicationId: null };
+        obj = { type: null, applicationId: null };
         obj[0] = obj.APPLICATION;
         obj[1] = tmp3;
         let tmp4 = obj;
@@ -244,13 +240,13 @@ export const parseConnectionIdentifier = function parseConnectionIdentifier(str)
 export { validateOnboardingConnection };
 export const validateOnboardingConnections = function validateOnboardingConnections(arr) {
   let items = [];
-  const set = new Set();
+  set = new Set();
   function _loop(arg0) {
-    let items = arg0;
-    let arr = outer1_12(connection_type);
+    items = arg0;
+    let arr = closure_1_12(connection_type);
     items = [...arr.map((arg0) => "Connection " + closure_0 + 1 + ": " + arg0)];
     items.push.apply(items);
-    if (connection_type.connection_type === outer1_8.APPLICATION) {
+    if (connection_type.connection_type === closure_1_8.APPLICATION) {
       const _HermesInternal2 = HermesInternal;
       let combined = "app:" + tmp.application_id;
     } else {
@@ -266,7 +262,7 @@ export const validateOnboardingConnections = function validateOnboardingConnecti
   while (tmp3 !== undefined) {
     let tmp5 = callback;
     let tmp6 = callback(tmp4, 2);
-    let closure_2 = tmp6[1];
+    closure_2 = tmp6[1];
     let _loopResult = _loop(tmp6[0]);
     continue;
   }

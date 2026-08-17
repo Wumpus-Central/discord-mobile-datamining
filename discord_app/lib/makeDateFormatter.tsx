@@ -1,5 +1,7 @@
 // discord_app/lib/makeDateFormatter.tsx
+import set from "set" /* 2 */;
 import { __DiscordCreateDateFormatter } from "../modules/system_date_format/SystemDateFormatter.native.tsx";
+
 function defaultMeridiem(arg0, arg1, arg2) {
   if (arg0 < 12) {
     let str2 = "AM";
@@ -16,15 +18,6 @@ function defaultMeridiem(arg0, arg1, arg2) {
   return str;
 }
 function getLocaleData() {
-  let longDateFormat;
-  let meridiem;
-  let months;
-  let monthsShort;
-  let ordinal;
-  let week;
-  let weekdays;
-  let weekdaysMin;
-  let weekdaysShort;
   let obj = format5(3975);
   const _config = obj.localeData()._config;
   ({ months, monthsShort, weekdays, weekdaysShort, weekdaysMin, meridiem } = _config);
@@ -39,9 +32,9 @@ function getLocaleData() {
   format5 = months;
   if (typeof months === "function") {
     let tmpResult = tmp(3975);
-    let dependencyMap = months.bind(tmpResult.localeData());
+    dependencyMap = months.bind(tmpResult.localeData());
     let fn = (arg0, arg1) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return callback({ [closure_0]: () => closure_0 }, arg1);
     };
   } else {
@@ -60,7 +53,7 @@ function getLocaleData() {
     tmpResult = tmp(3975);
     dependencyMap = monthsShort.bind(tmpResult.localeData());
     let fn2 = (arg0, arg1) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return callback({ [closure_0]: () => closure_0 }, arg1);
     };
   } else {
@@ -78,7 +71,7 @@ function getLocaleData() {
   if (typeof weekdays === "function") {
     dependencyMap = weekdays.bind(tmp(3975).localeData());
     let fn3 = (arg0, arg1) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return callback({ [closure_0]: () => closure_0 }, arg1);
     };
     const tmpResult1 = tmp(3975);
@@ -97,7 +90,7 @@ function getLocaleData() {
   if (typeof weekdaysShort === "function") {
     dependencyMap = weekdaysShort.bind(tmp(3975).localeData());
     let fn4 = (arg0, arg1) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return callback({ [closure_0]: () => closure_0 }, arg1);
     };
     const tmpResult2 = tmp(3975);
@@ -116,7 +109,7 @@ function getLocaleData() {
   if (typeof weekdaysMin === "function") {
     dependencyMap = weekdaysMin.bind(tmp(3975).localeData());
     let fn5 = (arg0, arg1) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       return callback({ [closure_0]: () => closure_0 }, arg1);
     };
     const tmpResult3 = tmp(3975);
@@ -139,7 +132,7 @@ function getLocaleData() {
   obj[9] = week;
   return obj;
 }
-let result = require("__DiscordCreateDateFormatter").fileFinishedImporting("lib/makeDateFormatter.tsx");
+let result = set.fileFinishedImporting("lib/makeDateFormatter.tsx");
 
 export default function makeFormatter(str) {
   let flag = arg2;

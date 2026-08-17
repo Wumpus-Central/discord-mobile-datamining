@@ -1,8 +1,10 @@
 // discord_app/modules/stage_channels/StageChannelParticipantUtils.tsx
-import { nameFromUser } from "../../utils/UserUtils.tsx";
-const require = arg1;
-const DAY = require("set").Millis.DAY;
-const result = require("getSystemLocale").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
+import setDefault from "set" /* 687 */;
+import nameFromUser from "nameFromUser" /* 4219 */;
+
+require = arg1;
+const DAY = setDefault.Millis.DAY;
+const result = require("set").fileFinishedImporting("modules/stage_channels/StageChannelParticipantUtils.tsx");
 
 export const participantMemberInfo = function participantMemberInfo(participant) {
   if (obj.isNewUser(participant.user)) {

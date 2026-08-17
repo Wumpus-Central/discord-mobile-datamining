@@ -1,17 +1,13 @@
 // discord_app/modules/nuf/native/components/ChannelPrompt.tsx
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import _slicedToArray from "_slicedToArray";
-import FreeFormInputGroup from "../../../../design/void/Form/native/FreeFormInputGroup.tsx";
-import get_ActivityIndicator from "getAvatarURL";
-import comparator from "comparator";
-import closure_9 from "createGuildRecordFromRust";
-import jsxProd from "Label";
-import createCacheKey from "createCacheKey";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "comparator" /* 1980 */;
+import closure_9 from "createGuildRecordFromRust" /* 1910 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
@@ -26,14 +22,10 @@ createCacheKey[6] = { marginTop: 8, textAlign: "center" };
 createCacheKey[7] = { marginTop: 24 };
 createCacheKey[8] = { marginTop: 8 };
 createCacheKey[9] = { marginTop: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("noop").fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/nuf/native/components/ChannelPrompt.tsx");
 
 export default function ChannelPrompt(guildId) {
-  let c6;
-  let c7;
-  let obj2;
-  let tmp8;
   guildId = guildId.guildId;
   const hasBack = guildId.hasBack;
   const hasSkip = guildId.hasSkip;
@@ -43,10 +35,10 @@ export default function ChannelPrompt(guildId) {
   c6 = undefined;
   c7 = undefined;
   let navigation;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = guildId(hasSkip[9]);
   const items = [closure_9];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_9.getGuild(guildId));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_9.getGuild(guildId));
   const tmp5 = onSuccess(first.useState(""), 2);
   first = tmp5[0];
   [tmp8, c6] = onSuccess(first.useState(false), 2);
@@ -74,25 +66,25 @@ export default function ChannelPrompt(guildId) {
     navigation.setOptions(obj);
   }, items1);
   const items2 = [guildId, onSuccess, first];
-  const callback = first.useCallback(onCancel(function*() {
-    let closure_1 = tmp3;
-    outer1_7(null);
-    outer1_6(true);
-    const defaultChannel = outer1_8.getDefaultChannel(outer1_0);
-    let c3 = 1;
-    const intl = outer1_0(outer1_2[12]).intl;
-    const obj1 = { topic: null };
+  callback = first.useCallback(onCancel(function*() {
+    closure_1 = tmp3;
+    closure_1_7(null);
+    closure_1_6(true);
+    const defaultChannel = closure_1_8.getDefaultChannel(closure_1_0);
+    c3 = 1;
+    const intl = closure_1_0(closure_1_2[12]).intl;
+    obj1 = { topic: null };
     obj1[0] = c5;
-    const formatToPlainStringResult = intl.formatToPlainString(outer1_0(outer1_2[12]).t.V4lepJ, obj1);
-    const obj6 = outer1_1(outer1_2[13]);
+    const formatToPlainStringResult = intl.formatToPlainString(closure_1_0(closure_1_2[12]).t.V4lepJ, obj1);
+    const obj6 = closure_1_1(closure_1_2[13]);
     if (defaultChannel != null) {
       const parent_id = defaultChannel.parent_id;
     }
-    yield obj6.createTextChannel(outer1_0, c5, parent_id, formatToPlainStringResult);
+    yield obj6.createTextChannel(closure_1_0, c5, parent_id, formatToPlainStringResult);
     if (1 === tmp7) {
       c3 = 0;
-      let closure_0 = closure_2;
-      const aPIError = new outer1_0(outer1_2[14]).APIError(closure_0);
+      closure_0 = closure_2;
+      const aPIError = new closure_1_0(closure_1_2[14]).APIError(closure_0);
       callback2(aPIError);
       callback(false);
       c5 = 3;
@@ -114,7 +106,7 @@ export default function ChannelPrompt(guildId) {
     obj[0] = tmp.flex;
     obj[1] = { top: 0 };
     obj[5] = tmp.contentContainer;
-    let obj1 = { style: null, value: null, icon: null, selected: true };
+    obj1 = { style: null, value: null, icon: null, selected: true };
     obj1[0] = tmp.guildIcon;
     obj1[1] = stateFromStores.name;
     let guildIconURL = null;

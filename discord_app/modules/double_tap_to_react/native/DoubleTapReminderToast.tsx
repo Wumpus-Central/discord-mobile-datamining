@@ -1,17 +1,18 @@
 // discord_app/modules/double_tap_to_react/native/DoubleTapReminderToast.tsx
-import "noop";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import Text from "Text" /* 4734 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
 
-const require = arg1;
+require = arg1;
 function DoubleTapReminderContent(emoji) {
-  let obj = { variant: "text-sm/normal", style: createCacheKey().toastText, children: null };
+  let obj = { variant: "text-sm/normal", style: callback().toastText, children: null };
   const intl = getSystemLocale.intl;
   obj = {
     protipHook(children) {
@@ -27,11 +28,12 @@ function DoubleTapReminderContent(emoji) {
     emojiName: emoji.emoji.name
   });
 }
+noopAll;
 createCacheKey = { toastText: null };
-createCacheKey = { marginRight: require("Themes").space.PX_12, marginVertical: require("Themes").space.PX_8 };
+createCacheKey = { marginRight: ThemesDefault.space.PX_12, marginVertical: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("jsxProd").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapReminderToast.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/double_tap_to_react/native/DoubleTapReminderToast.tsx");
 
 export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapReminderToast(emoji) {
   const _require = emoji;
@@ -56,13 +58,13 @@ export const maybeShowDoubleTapReminderToast = function maybeShowDoubleTapRemind
     if (areEmojisEqualResult) {
       obj = { key: "DOUBLE_TAP_TO_REACT_REMINDER", icon: null, content: null, toastDurationMs: 4000 };
       obj[1] = function icon() {
-        return outer1_4(emoji(outer1_2[12]).ToastEmoji, { emoji });
+        return closure_1_4(emoji(closure_1_2[12]).ToastEmoji, { emoji });
       };
       obj[2] = function content() {
-        return outer1_4(outer1_6, { emoji: closure_0 });
+        return closure_1_4(closure_1_6, { emoji: closure_0 });
       };
-      dispatcher.open(obj);
-      const obj4 = dispatcher;
+      dispatcherDefault.open(obj);
+      const obj4 = dispatcherDefault;
       obj = { dismissAction: null, forceTrack: true };
       obj[0] = ContentDismissActionType.AUTO_DISMISS;
       const result1 = tmp(4196).UNSAFE_markDismissibleContentAsDismissed(tmp(1377).DismissibleContent.DOUBLE_TAP_TO_REACT_REMINDER, obj);

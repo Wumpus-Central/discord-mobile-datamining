@@ -1,11 +1,9 @@
 // discord_app/modules/activities/getShelfItemData.tsx
-import addApplication from "addApplication";
+import closure_0 from "addApplication" /* 4478 */;
 
 const result = require("set").fileFinishedImporting("modules/activities/getShelfItemData.tsx");
 
 export default function getShelfItemData(applicationId) {
-  let activityConfigs;
-  let applications;
   applicationId = applicationId.applicationId;
   ({ activityConfigs, applications } = applicationId);
   let found;

@@ -1,5 +1,7 @@
 // discord_app/modules/forums/tracking/ForumSessionAnalyticsManager.tsx
-import { v1 } from "../../../../_runtime/00514_v1.js";
+import set from "set" /* 2 */;
+import v1 from "v1" /* 514 */;
+
 class ForumSessionAnalyticsManager {
 }
 ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function getForumChannelSessionId(arg0) {
@@ -20,6 +22,6 @@ ForumSessionAnalyticsManager.prototype["getForumChannelSessionId"] = function ge
   }
   return self.session.sessionId;
 };
-const result = require("set").fileFinishedImporting("modules/forums/tracking/ForumSessionAnalyticsManager.tsx");
+const result = set.fileFinishedImporting("modules/forums/tracking/ForumSessionAnalyticsManager.tsx");
 
 export default Object.create(ForumSessionAnalyticsManager.prototype);

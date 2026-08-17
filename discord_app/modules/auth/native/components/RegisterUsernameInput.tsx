@@ -1,27 +1,17 @@
 // discord_app/modules/auth/native/components/RegisterUsernameInput.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import useRegistrationUIStore from "useRegistrationUIStore";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { FadeIn } from "module_4115";
-import { FadeOut } from "module_4115";
-import { LinearTransition } from "module_4115";
-import { Easing } from "module_4115";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { useFocusRefOnNavigation } from "../../../../design/components/Navigator/native/useFocusRefOnNavigation.tsx";
-import { NameValidationState } from "../../../unique_usernames/UniqueUsernamesTypes.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import NameValidationState from "NameValidationState" /* 14116 */;
+import useFocusRefOnNavigationDefault from "useFocusRefOnNavigation" /* 15230 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import useRegistrationUIStore from "useRegistrationUIStore" /* 15212 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import { FadeIn, FadeOut, LinearTransition, Easing } from "module_4115" /* 4115 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function UsernameStatusMessage(arg0) {
-  let isUsernameFocused;
-  let usernameStatus;
   ({ usernameStatus, isUsernameFocused } = arg0);
   const tmp = callback5();
   let type;
@@ -31,9 +21,9 @@ function UsernameStatusMessage(arg0) {
   if (type === NameValidationState.NameValidationState.ERROR) {
     let obj = { direction: "horizontal", spacing: 4, align: "flex-start", children: null };
     obj = { size: "xs", color: null };
-    obj[1] = Themes.colors.TEXT_FEEDBACK_CRITICAL;
+    obj[1] = ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL;
     const items = [callback3(tmp3(8074).CircleErrorIcon, obj), ];
-    const obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
+    obj1 = { variant: "text-xs/medium", color: "text-feedback-critical", style: null };
     obj1[2] = tmp.status;
     const merged = Object.assign(createCacheKey);
     const merged1 = Object.assign(createCacheKey);
@@ -78,7 +68,7 @@ function UsernameStatusMessage(arg0) {
   return tmp6;
 }
 let closure_3 = ["username"];
-({ setRegistrationErrors: error, useRegistrationUIStore: metroImportAll } = useRegistrationUIStore);
+({ setRegistrationErrors: error, useRegistrationUIStore: closure_8 } = useRegistrationUIStore);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ status: { width: "90%" }, inputHint: { width: "100%" } });
 createCacheKey = { entering: null, exiting: null };
@@ -87,18 +77,13 @@ createCacheKey[1] = require("module_300");
 createCacheKey = { layout: null };
 createCacheKey[0] = require("module_300");
 const easingResult = LinearTransition.easing(Easing.inOut(require("module_4115").Easing.quad));
-const result = require("noop").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/native/components/RegisterUsernameInput.tsx");
 
 export const RegisterUsernameInput = function RegisterUsernameInput(setUsername) {
-  let autoFocus;
-  let onSubmitEditing;
-  let submitBehavior;
-  let username;
-  let usernameStatus;
   setUsername = setUsername.setUsername;
   ({ usernameStatus, autoFocus } = setUsername);
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   let obj = React;
   ({ username, onSubmitEditing, submitBehavior } = setUsername);
   const ref = React.useRef(null);
@@ -107,7 +92,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
     autoFocus = false;
   }
   obj[1] = autoFocus;
-  useFocusRefOnNavigation(obj);
+  useFocusRefOnNavigationDefault(obj);
   const tmp5 = callback(obj.useState(true), 2);
   importDefault = tmp6;
   const tmp7 = callback2((errors) => errors.errors);
@@ -115,18 +100,18 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const items = [tmp7, setUsername];
   const items1 = [tmp5[1]];
   callback = obj.useCallback((str) => {
-    if (null != _undefined2.username) {
+    if (null != user.username) {
       const username = tmp.username;
-      outer1_7(outer1_4(tmp, outer1_3));
+      closure_1_7(closure_1_4(tmp, closure_1_3));
     }
     setUsername(str.toLowerCase());
   }, items);
   const items2 = [tmp5[1]];
   const callback1 = obj.useCallback(() => {
-    _undefined(true);
+    callback(true);
   }, items1);
   callback2 = obj.useCallback(() => {
-    _undefined(false);
+    callback(false);
   }, items2);
   obj = { ref, label: null, accessibilityHint: null, onChange: null, autoCorrect: false, secureTextEntry: null, keyboardType: null, value: null, onSubmitEditing: null, returnKeyType: "next", autoComplete: "username", textContentType: "username", autoCapitalize: "none", onFocus: null, onBlur: null, isClearable: true, status: null, submitBehavior: null };
   const intl = setUsername(1236).intl;
@@ -137,7 +122,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   const tmp11 = closure_10;
   const tmp12 = closure_11;
   const tmp14 = setUsername;
-  const tmp3 = useFocusRefOnNavigation;
+  const tmp3 = useFocusRefOnNavigationDefault;
   obj[5] = setUsername(500).isAndroid();
   const obj4 = setUsername(500);
   let str = "default";
@@ -157,7 +142,7 @@ export const RegisterUsernameInput = function RegisterUsernameInput(setUsername)
   if (type === tmp14(14116).NameValidationState.ERROR) {
     str2 = "error";
   }
-  const obj1 = { children: null };
+  obj1 = { children: null };
   obj[16] = str2;
   obj[17] = submitBehavior;
   const items3 = [closure_9(setUsername(8071).TextInput, obj), closure_9(UsernameStatusMessage, { usernameStatus, isUsernameFocused: tmp5[0] })];

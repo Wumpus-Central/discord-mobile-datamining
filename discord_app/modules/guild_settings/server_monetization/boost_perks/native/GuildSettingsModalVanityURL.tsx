@@ -1,37 +1,33 @@
 // discord_app/modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx
-import get_ActivityIndicator from "registerAsset";
-import FormStates from "FormStates";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleFormInit from "handleFormInit";
-import { GuildFeatures } from "ME";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import importAllResult from "initialize";
-import { registerAsset } from "../../../../../../_runtime/16866_registerAsset.js";
-import { ChangeVanityURLActionCreators } from "../../../../../actions/ChangeVanityURLActionCreators.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { TextInput } from "../../../../../design/components/TextInput/native/TextInput.native.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { getInviteURL } from "../../../../instant_invite/getInviteURL.tsx";
-import { getErrorMessageFromErrorCode } from "../GuildSettingsVanityURLUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import getInviteURLDefault from "getInviteURL" /* 7506 */;
+import TextInput from "TextInput" /* 8071 */;
+import getErrorMessageFromErrorCode from "getErrorMessageFromErrorCode" /* 16744 */;
+import _modDef16865 from "module_16865" /* 16865 */;
+import registerAssetDefault from "registerAsset" /* 16866 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "FormStates" /* 16864 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "handleFormInit" /* 8875 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c10;
-let c3;
-let c4;
-let c9;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 createCacheKey = { wrapper: null, section: null, hints: null, center: null, image: null };
-createCacheKey = { flex: 1, justifyContent: "space-between", paddingTop: require("Themes").space.PX_32 };
+createCacheKey = { flex: 1, justifyContent: "space-between", paddingTop: ThemesDefault.space.PX_32 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_12 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_12 };
-createCacheKey[2] = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_4 };
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_12 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_12 };
+createCacheKey[2] = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
 createCacheKey[3] = { alignItems: "center", flexDirection: "column" };
 createCacheKey[4] = { width: 135, height: 183, marginBottom: 27 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_12 = createCacheKey.createStyles(createCacheKey);
 const PureComponent = importAllResult.PureComponent;
 class GuildSettingsModalVanityURL extends PureComponent {
   constructor() {
@@ -43,7 +39,7 @@ class GuildSettingsModalVanityURL extends PureComponent {
     }
     applyArgumentsResult.state = { isEditing: false, vanityURLCode: str };
     applyArgumentsResult.handleStartEditing = function handleStartEditing() {
-      outer1_1(outer1_2[12]).openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      closure_1_1(closure_1_2[12]).openModal(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
       applyArgumentsResult.setState({ isEditing: true });
     };
     applyArgumentsResult.handleChange = function handleChange(vanityURLCode) {
@@ -51,14 +47,14 @@ class GuildSettingsModalVanityURL extends PureComponent {
     };
     applyArgumentsResult.handleCancel = function handleCancel() {
       return new Promise((arg0) => {
-        outer1_1(outer1_2[12]).closeModal();
+        closure_1_1(closure_1_2[12]).closeModal();
         state.setState({ isEditing: false });
         arg0(true);
       });
     };
     applyArgumentsResult.handleSave = function handleSave() {
       applyArgumentsResult.setState({ isEditing: false });
-      outer1_1(outer1_2[12]).changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
+      closure_1_1(closure_1_2[12]).changeVanityURL(applyArgumentsResult.props.guild.id, applyArgumentsResult.state.vanityURLCode);
     };
     return applyArgumentsResult;
   }
@@ -81,7 +77,6 @@ prototype["componentDidUpdate"] = function componentDidUpdate(vanityURLCode) {
   self.updateNavigator(vanityURLCode, arg1);
 };
 prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
-  let navigation;
   const self = this;
   ({ submitting, navigation } = this.props);
   isEditing = this.state.isEditing;
@@ -106,14 +101,14 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     } else {
       fn2 = isEditing ? (() => {
         const obj = { onPress: self.handleSave, text: null };
-        const intl = self(outer1_2[11]).intl;
-        obj[1] = intl.string(self(outer1_2[11]).t["R3BPH+"]);
-        return outer1_9(self(outer1_2[10]).HeaderActionButton, obj);
+        const intl = self(closure_1_2[11]).intl;
+        obj[1] = intl.string(self(closure_1_2[11]).t["R3BPH+"]);
+        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
       }) : (() => {
         const obj = { onPress: self.handleStartEditing, text: null };
-        const intl = self(outer1_2[11]).intl;
-        obj[1] = intl.string(self(outer1_2[11]).t.bt75uw);
-        return outer1_9(self(outer1_2[10]).HeaderActionButton, obj);
+        const intl = self(closure_1_2[11]).intl;
+        obj[1] = intl.string(self(closure_1_2[11]).t.bt75uw);
+        return closure_1_9(self(closure_1_2[10]).HeaderActionButton, obj);
       });
     }
     setOptionsResult[1] = fn2;
@@ -121,14 +116,9 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
   }
 };
 prototype["componentWillUnmount"] = function componentWillUnmount() {
-  ChangeVanityURLActionCreators.closeModal();
+  _modDef16865.closeModal();
 };
 prototype["render"] = function render() {
-  let errorDetails;
-  let guild;
-  let isEditing;
-  let styles;
-  let vanityURLCode;
   const self = this;
   ({ errorDetails, guild, styles } = this.props);
   ({ isEditing, vanityURLCode } = this.state);
@@ -137,9 +127,9 @@ prototype["render"] = function render() {
       let obj = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl6 = getSystemLocale.intl;
       obj = { url: null };
-      obj[0] = getInviteURL(vanityURLCode);
+      obj[0] = getInviteURLDefault(vanityURLCode);
       obj[2] = intl6.format(getSystemLocale.t.FcGpNU, obj);
-      const tmp24 = getInviteURL(vanityURLCode);
+      const tmp24 = getInviteURLDefault(vanityURLCode);
       const tmp = callback(Text.Text, obj);
     }
   }
@@ -163,7 +153,7 @@ prototype["render"] = function render() {
       }
       tmp17Result = true !== hasItem1;
     }
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     const items = [styles.wrapper, self.props.contentContainerStyle];
     obj1[0] = items;
     const obj2 = { style: null, children: null };
@@ -204,7 +194,7 @@ prototype["render"] = function render() {
     const obj9 = { style: null, children: null };
     obj9[0] = styles.center;
     const obj10 = { source: null, style: null, resizeMode: "contain" };
-    obj10[0] = registerAsset;
+    obj10[0] = registerAssetDefault;
     obj10[1] = styles.image;
     obj9[1] = callback(closure_4, obj10);
     items3[1] = callback(closure_3, obj9);
@@ -218,22 +208,22 @@ prototype["render"] = function render() {
     combined = intl.string(getSystemLocale.t["FaXGO/"]);
   }
 };
-let obj2 = { marginTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_4 };
-const result = require("FormStates").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
+let obj2 = { marginTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/server_monetization/boost_perks/native/GuildSettingsModalVanityURL.tsx");
 
 export default function ConnectedGuildSettingsModalVanityURL(guildId) {
   guildId = guildId.guildId;
   let obj = guildId(1500);
   const navigation = obj.useNavigation();
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const tmp2 = guildId;
-  const items = [createGuildRecordFromRust];
-  const stateFromStores = guildId(589).useStateFromStores(items, () => outer1_6.getGuild(guildId));
+  const items = [closure_6];
+  const stateFromStores = guildId(589).useStateFromStores(items, () => closure_1_6.getGuild(guildId));
   const obj2 = guildId(589);
-  const items1 = [handleFormInit];
+  const items1 = [closure_7];
   const stateFromStores1 = guildId(589).useStateFromStores(items1, () => props2.getProps().vanityURLCode);
   const obj3 = guildId(589);
-  const items2 = [FormStates];
+  const items2 = [closure_5];
   const stateFromStoresObject = guildId(589).useStateFromStoresObject(items2, () => {
     props = props.getProps();
     return { submitting: props.submitting, errorDetails: props.errorDetails };

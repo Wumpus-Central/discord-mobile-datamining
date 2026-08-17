@@ -1,17 +1,13 @@
 // discord_app/design/components/Menu/native/MenuPopout.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 ({ jsx: c5, Fragment: closure_6 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("design/components/Menu/native/MenuPopout.tsx");
+const result = require("set").fileFinishedImporting("design/components/Menu/native/MenuPopout.tsx");
 
 export const MenuPopout = function MenuPopout(onRequestOpen) {
-  let key;
-  let menuItems;
   ({ key, menuItems } = onRequestOpen);
   if (menuItems === undefined) {
     menuItems = [];
@@ -25,7 +21,7 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
   key = undefined;
   let animatedRef;
   let first;
-  let closure_10;
+  closure_10 = undefined;
   let callback;
   let memo;
   let callback1;
@@ -47,17 +43,21 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
     onRequestOpen(onRequestClose[5]).hideNativeMenu(key);
   }, items);
   const items1 = [animatedRef, callback, menuItems, position, align, offset, offsetAnimated];
-  memo = align.useMemo(() => {
-    let obj = { toggleButtonRef: animatedRef, onClose: callback, position, align, offset, offsetAnimated, children: null };
-    obj[6] = menuItems.map((arg0, arg1) => {
+  memo = align.useMemo(() => offset(menuItems(onRequestClose[6]).Menu, {
+    toggleButtonRef: animatedRef,
+    onClose: callback,
+    position,
+    align,
+    offset,
+    offsetAnimated,
+    children: menuItems.map((arg0, arg1) => {
       let obj = { children: null };
       obj = { showIconFirst: true };
       const merged = Object.assign(arg0);
       obj[0] = callback2(callback(13496).MenuItem, obj);
       return callback2(callback(13495).MenuGroup, obj, "chat-context-menu-group-" + arg1);
-    });
-    return offset(menuItems(onRequestClose[6]).Menu, obj);
-  }, items1);
+    })
+  }), items1);
   const items2 = [memo, key, onRequestOpen];
   callback1 = align.useCallback(() => {
     callback(true);
@@ -80,7 +80,7 @@ export const MenuPopout = function MenuPopout(onRequestOpen) {
     accessibilityState: { expanded: first },
     accessibilityActions: mapped,
     onAccessibilityAction(arg0) {
-      const menuItems = arg0;
+      menuItems = arg0;
       const found = menuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
       if (found != null) {
         const action = found.action;

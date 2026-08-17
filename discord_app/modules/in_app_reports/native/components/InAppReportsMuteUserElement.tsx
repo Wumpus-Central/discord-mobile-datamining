@@ -1,13 +1,13 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { AnalyticEvents } from "ME";
-import { MuteUntilSeconds } from "MAX_FAVORITES";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { MuteUntilSeconds } from "MAX_FAVORITES" /* 685 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMuteUserElement.tsx");
 
 export default function MuteUserElement(user) {
   user = user.user;
@@ -49,7 +49,7 @@ export default function MuteUserElement(user) {
     obj[0] = memo;
     obj[0] = intl.formatToPlainString(tmp2(tmp3[12]).t.TRp5wR, obj);
     const intl2 = tmp2(tmp3[12]).intl;
-    const obj1 = { username: null };
+    obj1 = { username: null };
     obj1[0] = memo;
     obj[1] = intl2.formatToPlainString(tmp2(tmp3[12]).t.raALhx, obj1);
     const intl3 = tmp2(tmp3[12]).intl;

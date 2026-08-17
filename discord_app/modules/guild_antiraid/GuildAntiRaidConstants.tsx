@@ -1,10 +1,12 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidConstants.tsx
-import { Permissions } from "sum";
-import importAllResult from "fromString";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import sum from "sum" /* 505 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import importAllResult from "fromString" /* 506 */;
 
-const combineResult = require("fromString").combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
-const result = require("fromString").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
+const Permissions = sum.Permissions;
+const combineResult = importAllResult.combine(Permissions.ADMINISTRATOR, Permissions.MANAGE_GUILD, Permissions.BAN_MEMBERS, Permissions.KICK_MEMBERS, Permissions.MODERATE_MEMBERS);
+const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidConstants.tsx");
 
 export const GUILD_REPORT_RAID_MOBILE_KEY = "guild_report_raid_mobile";
 export const NAGBAR_DISPLAY_MAX_HOURS = 2;
@@ -22,7 +24,7 @@ export const getTimeframes = () => {
   const intl3 = getSystemLocale.intl;
   obj[2] = intl3.string(getSystemLocale.t["5CNt/M"]);
   items[2] = obj;
-  const obj1 = { id: "6", value: 6, label: null };
+  obj1 = { id: "6", value: 6, label: null };
   const intl4 = getSystemLocale.intl;
   obj1[2] = intl4.string(getSystemLocale.t.oQ4PNE);
   items[3] = obj1;

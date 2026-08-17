@@ -1,10 +1,13 @@
 // discord_common/js/packages/analytics-utils/getSuperProperties.tsx
-import { getSystemLocale } from "getSystemLocale";
-import { usesClientMods } from "../../shared/utils/ClientModDetectionUtils.tsx";
-import { enforcing } from "../rtn-codegen/js/NativeDeviceModule.tsx";
-import { enforcing } from "../rtn-codegen/js/NativeMetaQuestModule.tsx";
-import { clientLaunchId } from "clientLaunchId.tsx";
-import { encodeProperties } from "encodeProperties.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import encodeProperties from "encodeProperties" /* 662 */;
+import getSystemLocale2 from "getSystemLocale" /* 665 */;
+import usesClientMods from "usesClientMods" /* 667 */;
+import clientLaunchId from "clientLaunchId" /* 668 */;
+import formatDefault from "format" /* 669 */;
+import enforcing from "enforcing" /* 670 */;
+import enforcing2 from "enforcing" /* 671 */;
 
 function getOS() {
   const _default = enforcing.default;
@@ -19,25 +22,20 @@ function getOS() {
   return str;
 }
 function getDevice() {
-  const tmp3 = require("../../../../_runtime/00017_get_ActivityIndicator.js") /* get ActivityIndicator */ /* get ActivityIndicator */;
+  const tmp3 = get_ActivityIndicator;
   if ("android" === tmp3.Platform.OS) {
-    let device = enforcing.default.getConstants().device;
-    const _default = enforcing.default;
+    let device = enforcing2.default.getConstants().device;
+    const _default = enforcing2.default;
   } else {
     device = tmp3.NativeModules.DCDDeviceManager.device;
   }
   return device;
 }
 function getDeviceProperties() {
-  let DeviceVendorID;
-  let ReleaseChannel;
-  let Version;
   const obj = {};
   const tmp = getOS();
   obj.os = tmp;
   obj.browser = (function getBrowser() {
-    let userAgent;
-    let vendor;
     ({ userAgent, vendor } = window.navigator);
     const _default = callback(table[4]).default;
     let isMetaQuestResult;
@@ -75,6 +73,7 @@ function getDeviceProperties() {
   } catch (err) {
   }
 }
+const getSystemLocale = getSystemLocale2.getSystemLocale;
 const deviceProperties = "deviceProperties";
 const referralProperties = "referralProperties";
 if (null != DiscordNative) {
@@ -103,22 +102,22 @@ if (null != DiscordNative) {
   obj[5] = DiscordNative.os.arch;
   obj[6] = DiscordNative.os.appArch;
   obj[7] = systemLocale;
-  const _module = require("usesClientMods");
+  const _module = usesClientMods;
   obj[8] = _module.usesClientMods();
-  obj[9] = require("clientLaunchId").clientLaunchId;
+  obj[9] = clientLaunchId.clientLaunchId;
   let closure_3 = obj;
-  const name = require("format").name;
+  const name = formatDefault.name;
   let toLocaleLowerCaseResult;
   if (name != null) {
     toLocaleLowerCaseResult = name.toLocaleLowerCase();
   }
   if ("electron" === toLocaleLowerCaseResult) {
-    closure_3.browser_user_agent = require("format").ua || "";
+    closure_3.browser_user_agent = formatDefault.ua || "";
     let tmp3 = closure_3;
-    const tmp4 = require("format").ua || "";
+    const tmp4 = formatDefault.ua || "";
     const tmp5 = closure_3;
-    tmp5.browser_version = require("format").version || "";
-    let tmp6 = require("format").version || "";
+    tmp5.browser_version = formatDefault.version || "";
+    let tmp6 = formatDefault.version || "";
   }
   if ("linux" === platform) {
     const crashReporter = DiscordNative.crashReporter;
@@ -179,8 +178,7 @@ if (null == closure_3) {
         value1 = obj;
       }
       const merged = Object.assign(value);
-      const obj2 = { browser_user_agent: window.navigator.userAgent || "", browser_version: null };
-      obj2[1] = obj(669).version || "";
+      const obj2 = { browser_user_agent: window.navigator.userAgent || "", browser_version: obj(669).version || "" };
       const tmpResult = obj(17);
       const obj3 = {};
       const merged1 = Object.assign(obj2);
@@ -207,7 +205,7 @@ function extendSuperProperties(arg0) {
   const obj = {};
   const merged = Object.assign(obj);
   const merged1 = Object.assign(arg0);
-  let closure_4 = encodeProperties.encodeProperties(obj);
+  closure_4 = encodeProperties.encodeProperties(obj);
 }
 let result = extendSuperProperties((function getContextualSuperProperties() {
   const obj = { client_build_number: parseInt("6244", 10) };
@@ -229,12 +227,12 @@ let result = extendSuperProperties((function getContextualSuperProperties() {
   obj.client_launch_id = clientLaunchId.clientLaunchId;
   return obj;
 })());
-let result1 = require("clientLaunchId").fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
+let result1 = set.fileFinishedImporting("../discord_common/js/packages/analytics-utils/getSuperProperties.tsx");
 
 export { getOS };
 export { getDevice };
 export const getCampaignParams = function getCampaignParams(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const obj = {};
   const item = closure_12.forEach((str) => {
     str = "";

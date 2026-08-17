@@ -1,20 +1,18 @@
 // discord_app/modules/oauth2/native/ApplicationEducation.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { MAX_FRIENDS } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { set } from "../../../../discord_common/js/shared/shared-constants/OAuth2Scopes.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useIsSocialLayerParentApplication } from "../../applications/useIsSocialLayerParentApplication.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import set from "set" /* 4375 */;
+import Text from "Text" /* 4734 */;
+import useIsSocialLayerParentApplicationDefault from "useIsSocialLayerParentApplication" /* 9771 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { MAX_FRIENDS } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function ApplicationEducationEntry(children) {
   const iconComponent = children.iconComponent;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.entry, children: null };
   let iconComponentResult = null;
   if (null != iconComponent) {
@@ -28,19 +26,18 @@ function ApplicationEducationEntry(children) {
   obj[1] = items;
   return closure_6(View, obj);
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6, Fragment: error } = jsxProd);
 createCacheKey = { applicationEducation: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 12 }, entryText: { flex: 1 }, entryIcon: null };
-createCacheKey = { width: 20, height: 20, tintColor: require("Themes").colors.TEXT_MUTED };
+createCacheKey = { width: 20, height: 20, tintColor: ThemesDefault.colors.TEXT_MUTED };
 createCacheKey[3] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ME").fileFinishedImporting("modules/oauth2/native/ApplicationEducation.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/oauth2/native/ApplicationEducation.tsx");
 
 export default function ApplicationEducation(arg0) {
-  let accountScopes;
-  let application;
   ({ application, accountScopes } = arg0);
   const items = [];
-  const tmp3 = useIsSocialLayerParentApplication(application);
+  const tmp3 = useIsSocialLayerParentApplicationDefault(application);
   if (accountScopes.includes(set.OAuth2Scopes.SDK_SOCIAL_LAYER)) {
     const intl5 = tmp4(1236).intl;
     if (tmp3) {
@@ -56,7 +53,7 @@ export default function ApplicationEducation(arg0) {
     const formatToPlainString2 = intl6.formatToPlainString;
     const t4 = tmp4(1236).t;
     if (tmp3) {
-      const obj1 = { maxFriends: null };
+      obj1 = { maxFriends: null };
       obj1[0] = MAX_FRIENDS;
       let formatToPlainString2Result = formatToPlainString2(t4.z9peav, obj1);
     } else {

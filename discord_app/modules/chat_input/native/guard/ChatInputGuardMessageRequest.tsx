@@ -1,29 +1,22 @@
 // discord_app/modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx
-import useIsMessageRequestRestrictedViewer from "useIsMessageRequestRestrictedViewer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { jsx } from "jsxProd";
-import importAllResult from "noop";
-import { ChatInputGuard } from "ChatInputGuard.tsx";
+import ChatInputGuardDefault from "ChatInputGuard" /* 11616 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import { jsx } from "jsxProd" /* 21 */;
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
-const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(channel) {
-  let c2;
-  let c3;
-  let isAcceptLoading;
-  let isOptimisticAccepted;
-  let isOptimisticRejected;
-  let isRejectLoading;
-  let isUserProfileLoading;
+const memoResult = importAllResult.memo(function ChatInputGuardMessageRequest(channel) {
   channel = channel.channel;
-  let importDefault;
-  let dependencyMap;
+  importDefault = undefined;
+  dependencyMap = undefined;
   c3 = undefined;
   function _onAcceptClick() {
     const self = this;
     const tmp = _undefined2((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c3 = 0;
+      closure_0 = arg0;
+      c2 = 0;
+      c3 = 0;
       return (function*(arg0) {
         if (c3 === 2) {
           c3 = 3;
@@ -51,11 +44,11 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_1 = tmp4;
+                closure_1 = tmp4;
                 lib.stopPropagation();
                 dependencyMap = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = dependencyMap(lib.id);
                 return obj1;
               }
@@ -80,7 +73,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
         }
       })();
     });
-    const _onAcceptClick = tmp;
+    closure_4 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -92,9 +85,9 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
   function _onRejectClick() {
     const self = this;
     const tmp = _undefined2((arg0) => {
-      let closure_0 = arg0;
-      let c2 = 0;
-      let c1 = 0;
+      closure_0 = arg0;
+      c2 = 0;
+      c1 = 0;
       return (function*(arg0) {
         if (c1 === 2) {
           c1 = 3;
@@ -125,8 +118,8 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
                 closure_0.stopPropagation();
                 c2 = 1;
                 c1 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_3(closure_0.id);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_3(closure_0.id);
                 return obj1;
               }
             } else if (arg0 === 1) {
@@ -148,7 +141,7 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
         }
       })();
     });
-    const _onRejectClick = tmp;
+    closure_5 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -239,8 +232,8 @@ const memoResult = require("noop").memo(function ChatInputGuardMessageRequest(ch
     isRejectLoading = isOptimisticRejected;
   }
   obj[10] = isRejectLoading;
-  return tmp7(ChatInputGuard, obj);
+  return tmp7(ChatInputGuardDefault, obj);
 });
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/guard/ChatInputGuardMessageRequest.tsx");
 
 export default memoResult;

@@ -1,33 +1,21 @@
 // discord_app/modules/activities/utils/getActivityJoinability.tsx
-import ME from "ME";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { useIsActivitiesEnabledForCurrentPlatform } from "../useIsActivitiesEnabledForCurrentPlatform.tsx";
-import { getCurrentUserPresenceActivity } from "getCurrentUserPresenceActivity.tsx";
-import { getEmbeddedActivityJoinability } from "getEmbeddedActivityJoinability.tsx";
-import { getIsInParty } from "getIsInParty.tsx";
-import { getPartySize } from "getPartySize.tsx";
-import { hasFlag } from "hasFlag.tsx";
-import { isActivityJoinableOnCurrentPlatform } from "isActivityJoinableOnCurrentPlatform.tsx";
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import hasFlagDefault from "hasFlag" /* 7260 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 8699 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 8729 */;
+import getEmbeddedActivityJoinabilityDefault from "getEmbeddedActivityJoinability" /* 8729 */;
+import getPartySize from "getPartySize" /* 10918 */;
+import getIsInParty from "getIsInParty" /* 10921 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 10924 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 12132 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
 ({ ActivityFlags: c3, ChannelTypes: c4, GuildFeatures: c5 } = ME);
 let obj = { CAN_JOIN: "can_join", CANNOT_JOIN: "cannot_join", JOINED: "joined" };
-const result = require("getIsInParty").fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
+const result = set.fileFinishedImporting("modules/activities/utils/getActivityJoinability.tsx");
 
 export default function getActivityJoinability(arg0) {
-  let ChannelStore;
-  let EmbeddedActivitiesStore;
-  let GuildMemberCountStore;
-  let GuildStore;
-  let RelationshipStore;
-  let SelectedChannelStore;
-  let VoiceStateStore;
-  let activity;
-  let channelId;
-  let isEmbedded;
-  let user;
   ({ user, activity, channelId, isEmbedded, ChannelStore, GuildStore, GuildMemberCountStore, RelationshipStore, SelectedChannelStore, VoiceStateStore, EmbeddedActivitiesStore } = arg0);
   if (isEmbedded) {
     if (isEmbedded) {
@@ -52,7 +40,7 @@ export default function getActivityJoinability(arg0) {
           obj[2] = channelId;
           obj[3] = tmp2;
           obj[4] = tmp;
-          const tmp45 = getEmbeddedActivityJoinability;
+          const tmp45 = getEmbeddedActivityJoinabilityDefault;
           obj[5] = useIsActivitiesEnabledForCurrentPlatform.getIsActivitiesEnabledForCurrentPlatform();
           obj[6] = ChannelStore;
           obj[7] = VoiceStateStore;
@@ -69,14 +57,14 @@ export default function getActivityJoinability(arg0) {
       }
       if (isEmbedded) {
         if (null == channelId) {
-          if (!hasFlag(activity, constants.CONTEXTLESS)) {
+          if (!hasFlagDefault(activity, constants.CONTEXTLESS)) {
             return obj.CANNOT_JOIN;
           }
         }
       }
       if (!isEmbedded) {
-        if (isActivityJoinableOnCurrentPlatform(activity)) {
-          const obj2 = set;
+        if (isActivityJoinableOnCurrentPlatformDefault(activity)) {
+          const obj2 = set2;
         }
         return obj.CANNOT_JOIN;
       }
@@ -85,7 +73,7 @@ export default function getActivityJoinability(arg0) {
       const tmp27 = require;
       if (obj4.hasPartySize(partySize)) {
         if (!tmp27Result.isPartyFull(partySize)) {
-          if (hasFlag(activity, constants.PARTY_PRIVACY_FRIENDS)) {
+          if (hasFlagDefault(activity, constants.PARTY_PRIVACY_FRIENDS)) {
             if (RelationshipStore.isFriend(user.id)) {
               return obj.CAN_JOIN;
             }
@@ -133,13 +121,13 @@ export default function getActivityJoinability(arg0) {
     if (activity != null) {
       application_id1 = activity.application_id;
     }
-    const tmp8Result = getCurrentUserPresenceActivity(tmp4, tmp5, application_id1);
+    const tmp8Result = getCurrentUserPresenceActivityDefault(tmp4, tmp5, application_id1);
     let isInParty = null != tmp8Result;
     if (isInParty) {
       obj = getIsInParty;
       isInParty = obj.getIsInParty(tmp8Result, activity);
     }
-    const tmp8 = getCurrentUserPresenceActivity;
+    const tmp8 = getCurrentUserPresenceActivityDefault;
   }
   return obj.JOINED;
 };

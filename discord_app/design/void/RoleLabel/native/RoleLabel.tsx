@@ -1,27 +1,24 @@
 // discord_app/design/void/RoleLabel/native/RoleLabel.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Form } from "../../Form/native/index.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import Form from "Form" /* 8083 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { display: "flex", flexDirection: "row" }, roleDot: { marginRight: 4 } });
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
+const result = require("set").fileFinishedImporting("design/void/RoleLabel/native/RoleLabel.tsx");
 
 export const RoleLabel = function RoleLabel(color) {
-  let colors;
-  let name;
   color = color.color;
   ({ name, colors } = color);
   const tmp = callback2();
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => roleStyle.roleStyle);
   let tmp5 = "username" === stateFromStores;
   if (tmp5) {
@@ -37,7 +34,7 @@ export const RoleLabel = function RoleLabel(color) {
     tmp10 = null != color;
   }
   if (tmp10) {
-    const obj1 = { color: null, colors: null, containerStyles: null };
+    obj1 = { color: null, colors: null, containerStyles: null };
     obj1[0] = color;
     obj1[1] = colors;
     obj1[2] = tmp.roleDot;

@@ -1,8 +1,8 @@
 // discord_app/utils/ReleaseChannelUtils.native.tsx
-import set from "set";
-import set from "set";
+import getConstantsAll from "getConstants" /* 1626 */;
+import set from "set" /* 500 */;
 
-const ReleaseChannel = require("getConstants").getConstants().ReleaseChannel;
+const ReleaseChannel = getConstantsAll.getConstants().ReleaseChannel;
 set = set.isAndroid();
 if (set) {
   set = -1 === ReleaseChannel.indexOf("canary");

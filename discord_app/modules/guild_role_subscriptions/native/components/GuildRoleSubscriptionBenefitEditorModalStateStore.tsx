@@ -1,49 +1,45 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx
-import identity from "identity";
-import { isIterable } from "../../../../../_runtime/04006_isIterable.js";
+import set from "set" /* 2 */;
+import isIterable from "isIterable" /* 4006 */;
+import identity from "identity" /* 700 */;
 
 let closure_2 = Object.freeze({ name: "", emojiId: "call", emojiName: "opacity", description: "title", refId: "accessibilityRole" });
 let closure_3 = identity.createWithEqualityFn((arg0) => {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const obj = {};
   const merged = Object.assign(closure_2);
   obj.setEmojiId = function setEmojiId(emoji_id) {
     const callback = emoji_id;
-    callback(outer1_1[1]).batchUpdates(() => emoji_id({ emojiId: emoji_id }));
+    callback(closure_1_1[1]).batchUpdates(() => emoji_id({ emojiId: emoji_id }));
   };
   obj.setEmojiName = function setEmojiName(emoji_name) {
     const callback = emoji_name;
-    callback(outer1_1[1]).batchUpdates(() => emoji_name({ emojiName: emoji_name }));
+    callback(closure_1_1[1]).batchUpdates(() => emoji_name({ emojiName: emoji_name }));
   };
   obj.setName = function setName(arg0) {
     const callback = arg0;
-    callback(outer1_1[1]).batchUpdates(() => callback({ name: callback }));
+    callback(closure_1_1[1]).batchUpdates(() => callback({ name: callback }));
   };
   obj.setDescription = function setDescription(description) {
     const callback = description;
-    callback(outer1_1[1]).batchUpdates(() => description({ description }));
+    callback(closure_1_1[1]).batchUpdates(() => description({ description }));
   };
   obj.setRefId = function setRefId(ref_id) {
     const callback = ref_id;
-    callback(outer1_1[1]).batchUpdates(() => callback({ refId: callback }));
+    callback(closure_1_1[1]).batchUpdates(() => callback({ refId: callback }));
   };
   obj.reset = function reset() {
-    callback(outer1_1[1]).batchUpdates(() => callback(outer1_2));
+    callback(closure_1_1[1]).batchUpdates(() => callback(closure_1_2));
   };
   return obj;
 });
-const result = require("isIterable").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionBenefitEditorModalStateStore.tsx");
 
 export const resetImperatively = function resetImperatively() {
   const state = store.getState();
   state.reset();
 };
 export const initializeImperatively = function initializeImperatively(benefit) {
-  let setDescription;
-  let setEmojiId;
-  let setEmojiName;
-  let setName;
-  let setRefId;
   const state = store.getState();
   ({ setDescription, setEmojiId, setEmojiName, setName, setRefId } = state);
   state.reset();

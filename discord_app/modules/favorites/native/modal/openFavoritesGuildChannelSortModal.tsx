@@ -1,12 +1,14 @@
 // discord_app/modules/favorites/native/modal/openFavoritesGuildChannelSortModal.tsx
-import { asyncRequireImpl } from "../../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../../actions/ModalActionCreators.tsx";
+import set from "set" /* 2 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+
 const FavoritesGuildChannelSortModal = "FavoritesGuildChannelSortModal";
-const result = require("asyncRequireImpl").fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildChannelSortModal.tsx");
+const result = set.fileFinishedImporting("modules/favorites/native/modal/openFavoritesGuildChannelSortModal.tsx");
 
 export default function openFavoritesGuildChannelSortModal() {
-  ModalActionCreators.pushLazy(asyncRequireImpl(15403, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
+  _modDef5260.pushLazy(asyncRequireImpl(15403, dependencyMap.paths), undefined, FavoritesGuildChannelSortModal);
 };
 export const closeFavoritesGuildChannelSortModal = function closeFavoritesGuildChannelSortModal() {
-  ModalActionCreators.popWithKey(FavoritesGuildChannelSortModal);
+  _modDef5260.popWithKey(FavoritesGuildChannelSortModal);
 };

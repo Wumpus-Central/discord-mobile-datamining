@@ -1,26 +1,21 @@
 // discord_app/modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { parseRawEmojiObject } from "../../../../emojis/UnicodeEmojis.tsx";
-import { EmojiIcon } from "../EmojiIcon.tsx";
+import noopAll from "noop" /* 19 */;
+import Button from "Button" /* 1297 */;
+import parseRawEmojiObjectDefault from "parseRawEmojiObject" /* 4034 */;
+import Text from "Text" /* 4734 */;
+import EmojiIconDefault from "EmojiIcon" /* 14586 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 function BenefitRow(description) {
-  let emojiId;
-  let guildId;
-  let title;
   description = description.description;
   ({ emojiId, guildId, title } = description);
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
-  const items = [callback(EmojiIcon, { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(Button.Spacer, { size: 16 }), ];
+  const items = [callback(EmojiIconDefault, { guildId, id: emojiId, size: 22, fontSize: 18 }), callback(Button.Spacer, { size: 16 }), ];
   obj = { style: tmp.textContainer, children: null };
   const items1 = [title, ];
   let tmp4Result = null;
@@ -36,17 +31,18 @@ function BenefitRow(description) {
   obj[1] = items;
   return closure_6(View, obj);
 }
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, textContainer: { flex: 1, justifyContent: "center" }, description: { marginTop: 2 }, channelTitle: { flexDirection: "row", alignItems: "center" }, channelIcon: { width: 16, height: 16, marginEnd: 8 } });
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/listing_elements/GuildRoleSubscriptionBenefitRow.tsx");
 
 export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   benefit = benefit.benefit;
   const tmp = callback3();
   let obj = benefit(589);
-  const items = [ensureGuildLoaded];
+  const items = [closure_4];
   const items1 = [benefit.ref_id];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_4.getChannel(benefit.ref_id), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_4.getChannel(benefit.ref_id), items1);
   obj = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
   const intl = benefit(1236).intl;
   obj[2] = "[" + intl.string(benefit(1236).t.bz1PZX) + "]";
@@ -54,7 +50,7 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   if (null != stateFromStores) {
     obj = { style: null, children: null };
     obj[0] = tmp.channelTitle;
-    const obj1 = { style: null, size: null, source: null };
+    obj1 = { style: null, size: null, source: null };
     obj1[0] = tmp.channelIcon;
     obj1[1] = tmp2(1297).Icon.Sizes.CUSTOM;
     obj1[2] = tmp2(6832).getChannelIcon(stateFromStores);
@@ -71,8 +67,8 @@ export const ChannelBenefitRow = function ChannelBenefitRow(benefit) {
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      str = parseRawEmojiObject.convertSurrogateToName(benefit.emoji_name, false);
-      const tmp5Result = parseRawEmojiObject;
+      str = parseRawEmojiObjectDefault.convertSurrogateToName(benefit.emoji_name, false);
+      const tmp5Result = parseRawEmojiObjectDefault;
     }
   }
   return callback(BenefitRow, { emojiId: str, guildId: benefit.guildId, title: tmp8, description: benefit.description });
@@ -84,7 +80,7 @@ export const IntangibleBenefitRow = function IntangibleBenefitRow(benefit) {
   } else {
     str = "";
     if (null != benefit.emoji_name) {
-      let obj = parseRawEmojiObject;
+      let obj = parseRawEmojiObjectDefault;
       str = obj.convertSurrogateToName(benefit.emoji_name, false);
     }
   }

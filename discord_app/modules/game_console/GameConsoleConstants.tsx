@@ -1,14 +1,16 @@
 // discord_app/modules/game_console/GameConsoleConstants.tsx
-import set from "set";
+import ME from "ME" /* 676 */;
+import set2 from "set" /* 4375 */;
+import set from "set" /* 2 */;
 
-const items = [require("set").OAuth2Scopes.VOICE, require("set").OAuth2Scopes.DM_CHANNELS_READ, require("set").OAuth2Scopes.GUILDS, require("set").OAuth2Scopes.GUILDS_MEMBERS_READ, require("set").OAuth2Scopes.IDENTIFY, require("set").OAuth2Scopes.CONNECTIONS, require("set").OAuth2Scopes.ACTIVITIES_READ];
-const items1 = [require("set").OAuth2Scopes.VOICE, require("set").OAuth2Scopes.DM_CHANNELS_READ, require("set").OAuth2Scopes.GUILDS, require("set").OAuth2Scopes.GUILDS_MEMBERS_READ, require("set").OAuth2Scopes.IDENTIFY, require("set").OAuth2Scopes.CONNECTIONS];
+const items = [set2.OAuth2Scopes.VOICE, set2.OAuth2Scopes.DM_CHANNELS_READ, set2.OAuth2Scopes.GUILDS, set2.OAuth2Scopes.GUILDS_MEMBERS_READ, set2.OAuth2Scopes.IDENTIFY, set2.OAuth2Scopes.CONNECTIONS, set2.OAuth2Scopes.ACTIVITIES_READ];
+const items1 = [set2.OAuth2Scopes.VOICE, set2.OAuth2Scopes.DM_CHANNELS_READ, set2.OAuth2Scopes.GUILDS, set2.OAuth2Scopes.GUILDS_MEMBERS_READ, set2.OAuth2Scopes.IDENTIFY, set2.OAuth2Scopes.CONNECTIONS];
 let obj = { PLAYSTATION: "playstation", XBOX: "xbox" };
 const items2 = [, ];
 ({ XBOX: arr3[0], PLAYSTATION: arr3[1] } = obj);
 let set = new Set(items2);
 const items3 = [, ];
-({ XBOX: arr4[0], PS5: arr4[1] } = require("ME").ActivityGamePlatforms);
+({ XBOX: arr4[0], PS5: arr4[1] } = ME.ActivityGamePlatforms);
 obj = { CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED: 270000, [270000]: "CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED", CONSOLE_DEVICE_UNAVAILABLE: 270001, [270001]: "CONSOLE_DEVICE_UNAVAILABLE", CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS: 270002, [270002]: "CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS", CONSOLE_DEVICE_COMMUNICATION_RESTRICTED: 270003, [270003]: "CONSOLE_DEVICE_COMMUNICATION_RESTRICTED", CONSOLE_DEVICE_INVALID_POWER_MODE: 270004, [270004]: "CONSOLE_DEVICE_INVALID_POWER_MODE", CONSOLE_DEVICE_ACCOUNT_LINK_ERROR: 270005, [270005]: "CONSOLE_DEVICE_ACCOUNT_LINK_ERROR", CONSOLE_DEVICE_MAX_MEMBERS_REACHED: 270006, [270006]: "CONSOLE_DEVICE_MAX_MEMBERS_REACHED", CONSOLE_DEVICE_BAD_COMMAND: 270007, [270007]: "CONSOLE_DEVICE_BAD_COMMAND" };
 const items4 = [obj.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED];
 const set1 = new Set(items3);

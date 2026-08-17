@@ -1,36 +1,36 @@
 // discord_app/modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import UnreadSettingNoticeImpressionTrackingDefault from "UnreadSettingNoticeImpressionTracking" /* 10631 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { ChannelNotificationSettingsFlags as closure_4 } from "MAX_FAVORITES" /* 685 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { UnreadSettingNoticeImpressionTracking } from "../UnreadSettingNoticeImpressionTracking.tsx";
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
-createCacheKey = { display: "flex", flexDirection: "row", paddingVertical: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_16, borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
+createCacheKey = { display: "flex", flexDirection: "row", paddingVertical: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flex: 1 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", marginLeft: 16 };
 createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("MAX_FAVORITES").fileFinishedImporting("modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/notifications/settings_unread_notice/native/UnreadSettingNotice.tsx");
 
 export default function UnreadSettingNoticeConnected(channel) {
   const _require = channel;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.content, children: null };
   obj = { id: channel.channel.id };
-  const items = [callback(UnreadSettingNoticeImpressionTracking, obj), , ];
+  const items = [callback(UnreadSettingNoticeImpressionTrackingDefault, obj), , ];
   obj = { style: tmp.informations, children: null };
-  const obj1 = { variant: "text-md/semibold", children: null };
+  obj1 = { variant: "text-md/semibold", children: null };
   const intl = _getSystemLocale.intl;
   obj1[1] = intl.string(_getSystemLocale.t.i4xQ5o);
   obj[1] = callback(_Text.Text, obj1);
@@ -40,7 +40,7 @@ export default function UnreadSettingNoticeConnected(channel) {
     accessibilityRole: "button",
     style: tmp.inlineTextWithIcon,
     onPress() {
-      outer1_1(outer1_2[10])(channel.channel.guild_id, channel.channel.id, outer1_4.UNREADS_ONLY_MENTIONS);
+      closure_1_1(closure_1_2[10])(channel.channel.guild_id, channel.channel.id, closure_1_4.UNREADS_ONLY_MENTIONS);
       channel.clearUnreadsNotice();
     },
     children: null

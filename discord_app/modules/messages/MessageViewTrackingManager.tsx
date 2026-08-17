@@ -1,13 +1,14 @@
 // discord_app/modules/messages/MessageViewTrackingManager.tsx
-import { AnalyticEvents } from "ME";
-import "initialize";
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { QUICK_SWITCHER } from "../app_analytics/AnalyticsLocation.tsx";
+import set2 from "set" /* 2 */;
+import encodeProperties from "encodeProperties" /* 503 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import privDefault from "priv" /* 1405 */;
+import initializeDefault from "initialize" /* 5038 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
 
 function getAnalyticsConfig(type) {
-  let treatmentRendered;
   type = type.type;
   if (obj.ANNOUNCEMENT === type) {
     obj = { event: null, properties: null };
@@ -17,7 +18,7 @@ function getAnalyticsConfig(type) {
     obj[1] = obj;
     return obj;
   } else if (tmp.APP_EMBED === type) {
-    const obj1 = { event: null, properties: null };
+    obj1 = { event: null, properties: null };
     obj1[0] = AnalyticEvents.APP_EMBED_VIEWED;
     ({ applicationId: obj7[0], linkType: obj7[1], messageId: obj7[2], channelId: obj7[3], guildId: obj7[4] } = type);
     obj1[1] = { application_id: null, link_type: null, message_id: null, channel_id: null, guild_id: null };
@@ -34,9 +35,9 @@ function getAnalyticsConfig(type) {
     const obj6 = { impression_type: null, invite_code: null, invite_guild_id: null, invite_channel_id: null, invite_instance_id: null, has_active_stream: null, location_stack: null };
     obj6[0] = encodeProperties.ImpressionTypes.VIEW;
     ({ inviteCode: obj3[1], inviteGuildId: obj3[2], inviteChannelId: obj3[3], inviteInstanceId: obj3[4], hasActiveStream: obj3[5], treatmentRendered } = type);
-    const INVITE_EMBED = QUICK_SWITCHER.INVITE_EMBED;
+    const INVITE_EMBED = QUICK_SWITCHERDefault.INVITE_EMBED;
     if (treatmentRendered) {
-      const items = [INVITE_EMBED, QUICK_SWITCHER.VOICE_CHANNEL_LIST_INVITE_EMBED];
+      const items = [INVITE_EMBED, QUICK_SWITCHERDefault.VOICE_CHANNEL_LIST_INVITE_EMBED];
       let items1 = items;
     } else {
       items1 = [INVITE_EMBED];
@@ -59,7 +60,9 @@ function getMessageViewKey(type) {
   }
   return combined;
 }
+const AnalyticEvents = ME.AnalyticEvents;
 let obj = { ANNOUNCEMENT: "announcement", APP_EMBED: "app_embed", OFFICIAL_MESSAGE: "official_message", VOICE_INVITE_EMBED: "voice_invite_embed" };
+initializeDefault;
 class MessageViewTrackingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -83,7 +86,7 @@ const prototype = MessageViewTrackingManager.prototype;
 prototype["handleMessageBecameVisible"] = function handleMessageBecameVisible(type) {
   let self = this;
   self = this;
-  let closure_1 = type;
+  closure_1 = type;
   if (type.type === obj.VOICE_INVITE_EMBED) {
     const _HermesInternal2 = HermesInternal;
     let combined = "" + type.messageId + "-" + type.inviteCode + "-" + type.type;
@@ -183,7 +186,7 @@ prototype["drainBuffer"] = function drainBuffer() {
     let tmp4 = getAnalyticsConfig(tmp2);
     let tmp5 = importDefault;
     let tmp6 = dependencyMap;
-    let obj = expandEventProperties;
+    obj = expandEventPropertiesDefault;
     let trackResult = obj.track(tmp4.event, tmp4.properties);
     continue;
   }
@@ -208,7 +211,7 @@ prototype["bufferViewTrack"] = function bufferViewTrack(closure_1) {
   }
 };
 const messageViewTrackingManager = new MessageViewTrackingManager();
-let result = require("QUICK_SWITCHER").fileFinishedImporting("modules/messages/MessageViewTrackingManager.tsx");
+let result = set2.fileFinishedImporting("modules/messages/MessageViewTrackingManager.tsx");
 
 export default messageViewTrackingManager;
 export const MessageViewTrackingType = obj;

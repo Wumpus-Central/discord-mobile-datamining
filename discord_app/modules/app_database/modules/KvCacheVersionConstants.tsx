@@ -1,5 +1,7 @@
 // discord_app/modules/app_database/modules/KvCacheVersionConstants.tsx
-const result = require("set").fileFinishedImporting("modules/app_database/modules/KvCacheVersionConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/app_database/modules/KvCacheVersionConstants.tsx");
 
 export const HELLO_KEY = "hello";
 export const VERSION_TO_SKIP_READING_THE_DATABASE_KEY = "version";

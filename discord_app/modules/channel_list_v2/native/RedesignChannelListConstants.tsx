@@ -1,6 +1,8 @@
 // discord_app/modules/channel_list_v2/native/RedesignChannelListConstants.tsx
-import PlatformTypes from "PlatformTypes";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import map from "map" /* 9288 */;
+import PlatformTypes from "PlatformTypes" /* 501 */;
 
 let c2 = "text-xs/medium";
 let num = 20;
@@ -9,9 +11,9 @@ if (PlatformTypes.isIOS()) {
 }
 let c4 = "text-sm/semibold";
 let c5 = "text-sm/semibold";
-const hairlineWidth = require("get ActivityIndicator").StyleSheet.hairlineWidth;
+const hairlineWidth = get_ActivityIndicator.StyleSheet.hairlineWidth;
 const frozen = Object.freeze({ waitForInteraction: false, viewAreaCoveragePercentThreshold: 100, minimumViewTime: 25 });
-const result = require("map").fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/RedesignChannelListConstants.tsx");
 
 export const CHANNEL_SUBTITLE_TEXT_VARIANT = "text-xs/medium";
 export const CHANNEL_PADDING_VERTICAL = 8;

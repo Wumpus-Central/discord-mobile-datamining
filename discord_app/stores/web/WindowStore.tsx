@@ -1,13 +1,15 @@
 // discord_app/stores/web/WindowStore.tsx
-import { Store } from "initialize";
-import set from "getWindowId";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { getWindowId } from "../../utils/web/WindowIdUtils.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getWindowId from "getWindowId" /* 6913 */;
+import set from "set" /* 2 */;
 
-const require = arg1;
+require = arg1;
 let c3 = null;
 const map = new Map();
 let set = new Set();
+const Store = initializeDefault.Store;
 class WindowStore extends Store {
 }
 const prototype = WindowStore.prototype;
@@ -45,10 +47,10 @@ prototype["isVisible"] = function isVisible() {
   return value.visible;
 };
 prototype["getFocusedWindowId"] = function getFocusedWindowId() {
-  let c0 = null;
+  c0 = null;
   const item = map.forEach((focused) => {
     if (focused.focused) {
-      let closure_0 = arg1;
+      closure_0 = arg1;
     }
   });
   return c0;
@@ -87,9 +89,9 @@ prototype["windowSize"] = function windowSize() {
   return value.windowSize;
 };
 WindowStore.displayName = "WindowStore";
-const windowStore = new WindowStore(require("dispatcher"), {
+const windowStore = new WindowStore(dispatcherDefault, {
   WINDOW_INIT: function handleWindowInit(isElementFullscreen) {
-    00038__(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
+    _modDef38(!map.has(isElementFullscreen.windowId), "Window initialized multiple times");
     const focused = isElementFullscreen.focused;
     obj = { windowSize: obj, isElementFullscreen: isElementFullscreen.isElementFullscreen, focused, visible: isElementFullscreen.visible };
     obj = { width: isElementFullscreen.width, height: isElementFullscreen.height };
@@ -160,7 +162,7 @@ const windowStore = new WindowStore(require("dispatcher"), {
       obj.windowSize = { width: null, height: null };
       const result = obj.set(windowId.windowId, obj);
       flag = true;
-      const obj1 = { width: null, height: null };
+      obj1 = { width: null, height: null };
     }
     return flag;
   },

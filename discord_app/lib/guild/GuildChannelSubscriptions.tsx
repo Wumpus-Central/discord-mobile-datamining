@@ -1,6 +1,8 @@
 // discord_app/lib/guild/GuildChannelSubscriptions.tsx
-import { priv } from "../../../_runtime/01405_priv.js";
-let result = require("set").fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
+import set from "set" /* 2 */;
+import privDefault from "priv" /* 1405 */;
+
+let result = set.fileFinishedImporting("lib/guild/GuildChannelSubscriptions.tsx");
 class GuildChannelSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -23,7 +25,7 @@ prototype["get"] = function get(arg0) {
 prototype["_get"] = function _get(arg0) {
   let tmp = this._subscriptions[arg0];
   if (tmp == null) {
-    tmp = new priv({ max: 5 });
+    tmp = new privDefault({ max: 5 });
   }
   return tmp;
 };

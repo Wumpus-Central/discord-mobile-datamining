@@ -1,14 +1,19 @@
 // discord_app/modules/autocompleter/index.tsx
-import HeaderRecord from "HeaderRecord";
+import set from "set" /* 2 */;
+import sortByMatchScoreDefault from "sortByMatchScore" /* 6776 */;
+import getAutocompleterBoosterMapDefault from "getAutocompleterBoosterMap" /* 7594 */;
+import HeaderRecord2 from "HeaderRecord" /* 7602 */;
+import _modDef7603 from "module_7603" /* 7603 */;
+import HeaderRecord from "HeaderRecord" /* 6773 */;
 
-const result = require("HeaderRecord").fileFinishedImporting("modules/autocompleter/index.tsx");
+const result = set.fileFinishedImporting("modules/autocompleter/index.tsx");
 for (const key10022 in _module1) {
   let tmp4 = key10022;
   arg5[key10022] = HeaderRecord[key10022];
   continue;
 }
 
-export { default } from "getAutocompleterBoosterMap";
-export const createHeaderResult = require("HeaderRecord").createHeaderResult;
-export const findNextSelectedResult = require("module_7603");
-export const sortByMatchScore = require("sortByMatchScore");
+export default getAutocompleterBoosterMapDefault;
+export const createHeaderResult = HeaderRecord2.createHeaderResult;
+export const findNextSelectedResult = _modDef7603;
+export const sortByMatchScore = sortByMatchScoreDefault;

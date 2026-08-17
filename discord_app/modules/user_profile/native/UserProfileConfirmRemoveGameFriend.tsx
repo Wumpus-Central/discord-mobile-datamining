@@ -1,24 +1,20 @@
 // discord_app/modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx
-import noop from "noop";
-import jsxProd from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-let result = require("getProfileProperties").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileConfirmRemoveGameFriend.tsx");
 
 export default function UserProfileConfirmRemoveGameFriend(gameName) {
-  let userDisplayName;
-  let userId;
   ({ userDisplayName, userId } = gameName);
   const applicationId = gameName.applicationId;
   const items = [applicationId, userId];
   const callback = React.useCallback(() => {
-    let obj = userId(outer1_2[2]);
+    let obj = userId(closure_1_2[2]);
     const result = obj.trackUserProfileAction({ action: "REMOVE_GAME_FRIEND" });
     obj = { userId, applicationId, location: "UserProfileConfirmRemoveGameFriend" };
-    applicationId(outer1_2[3]).removeFriend(obj);
+    applicationId(closure_1_2[3]).removeFriend(obj);
   }, items);
   let obj = { title: null, content: null, actions: null };
   const intl = userId(1236).intl;
@@ -31,7 +27,7 @@ export default function UserProfileConfirmRemoveGameFriend(gameName) {
   obj[1] = intl3.string(userId(1236).t.RLcE6x);
   obj[2] = callback;
   const items1 = [callback(userId(4660).AlertActionButton, obj, "confirm-remove"), ];
-  const obj1 = { variant: "secondary", text: null };
+  obj1 = { variant: "secondary", text: null };
   const intl4 = userId(1236).intl;
   obj1[1] = intl4.string(userId(1236).t["eN6+rI"]);
   items1[1] = callback(userId(4660).AlertActionButton, obj1, "nevermind");

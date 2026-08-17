@@ -1,5 +1,7 @@
 // discord_app/modules/guild_settings/GuildSettingsConstants.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
 const obj = {
   afk_channel_id() {
     const intl = getSystemLocale.intl;
@@ -18,7 +20,7 @@ const obj = {
     return intl.string(getSystemLocale.t.NASFnq);
   }
 };
-const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
+const result = set.fileFinishedImporting("modules/guild_settings/GuildSettingsConstants.tsx");
 
 export const MAX_SUBCATEGORIES = 5;
 export const MAX_KEYWORDS = 10;

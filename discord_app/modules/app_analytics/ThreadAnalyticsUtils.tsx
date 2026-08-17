@@ -1,14 +1,14 @@
 // discord_app/modules/app_analytics/ThreadAnalyticsUtils.tsx
-import updateFromGuild from "updateFromGuild";
-import updateState from "updateState";
-import { THREAD_CHANNEL_TYPES } from "createChannelRecord";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "ME";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { transitionTo } from "../routing/router_utils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import closure_3 from "updateFromGuild" /* 7517 */;
+import closure_4 from "updateState" /* 7271 */;
+import { THREAD_CHANNEL_TYPES } from "createChannelRecord" /* 1395 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("createChannelRecord").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/app_analytics/ThreadAnalyticsUtils.tsx");
 
 export const collectThreadMetadata = function collectThreadMetadata(channel, arg1) {
   let flag = arg1;
@@ -52,11 +52,11 @@ export const collectThreadMetadata = function collectThreadMetadata(channel, arg
         num = 0;
       }
       obj[5] = num;
-      obj[6] = DISCORD_EPOCH.extractTimestamp(channel.id);
-      obj[7] = getUncachedChannelPermissions.can(Permissions.SEND_MESSAGES, channel);
+      obj[6] = DISCORD_EPOCHDefault.extractTimestamp(channel.id);
+      obj[7] = closure_6.can(Permissions.SEND_MESSAGES, channel);
       obj[8] = channel.parentChannelThreadType;
       tmp = obj;
-      const obj3 = DISCORD_EPOCH;
+      const obj3 = DISCORD_EPOCHDefault;
     }
   }
   return tmp;

@@ -1,10 +1,11 @@
 // discord_app/modules/media_engine/native/VoiceProcessingErrorManager.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
 let require = arg1;
+initializeDefault;
 let prototype = function VoiceProcessingErrorManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     MEDIA_ENGINE_NOISE_CANCELLATION_ERROR() {
       return applyArgumentsResult.handleNoiseCancellationError();

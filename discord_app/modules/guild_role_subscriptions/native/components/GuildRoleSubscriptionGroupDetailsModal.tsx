@@ -1,25 +1,27 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx
-import _slicedToArray from "_slicedToArray";
-import "noop";
-import { View } from "set";
-import usePriceTiers from "usePriceTiers";
-import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS";
-import { UPLOAD_BANNER_SIZE } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Form from "Form" /* 8083 */;
+import FormHeaderDefault from "FormHeader" /* 8913 */;
+import stylesDefault from "styles" /* 13358 */;
+import FormSeparatorDefault from "FormSeparator" /* 14563 */;
+import useRoleSubscriptionSettingsDisabled from "useRoleSubscriptionSettingsDisabled" /* 16945 */;
+import pickImage from "pickImage" /* 16951 */;
+import HeaderDefault from "Header" /* 16954 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "usePriceTiers" /* 16950 */;
+import MAX_SUBSCRIPTION_TIERS from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import { UPLOAD_BANNER_SIZE } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_6;
-let error;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class Content {
   constructor(arg0) {
     ({ cover, setCover, description, setDescription } = global);
-    tmp = Fragment();
+    tmp = closure_12();
     tmp2 = require("styles")();
     obj = require("useRoleSubscriptionSettingsDisabled");
     roleSubscriptionSettingsDisabled = obj.useRoleSubscriptionSettingsDisabled();
@@ -31,10 +33,7 @@ class Content {
     items = [, , , , ];
     items[0] = jsx(tmp4, obj1);
     obj2 = { style: tmp.paddedContainer, children: null };
-    obj3 = { style: tmp.coverPhoto, image: cover, imageUploadSize: UPLOAD_BANNER_SIZE.width, previewShape: null, setImage: null, disabled: null, standalone: true, size: 114 };
-    obj3[3] = require("pickImage").PreviewShape.SQUIRCLE;
-    obj3[4] = setCover;
-    obj3[5] = roleSubscriptionSettingsDisabled;
+    obj3 = { style: tmp.coverPhoto, image: cover, imageUploadSize: UPLOAD_BANNER_SIZE.width, previewShape: require("pickImage").PreviewShape.SQUIRCLE, setImage: setCover, disabled: roleSubscriptionSettingsDisabled, standalone: true, size: 114 };
     items1 = [, ];
     items1[0] = jsx(require("pickImage").ImagePickerIcon, obj3);
     obj4 = { style: tmp.coverDescription, variant: "text-sm/medium", color: "text-default", children: null };
@@ -50,7 +49,7 @@ class Content {
     intl3 = require("getSystemLocale").intl;
     obj6[1] = intl3.string(require("getSystemLocale").t["74JctW"]);
     items[3] = jsx(tmp5, obj6);
-    obj7 = { style: tmp2.textInput, showTopContainer: false, multiline: true, maxLength: View, numberOfLines: 3, value: description, placeholder: null, onChange: null, disabled: null };
+    obj7 = { style: tmp2.textInput, showTopContainer: false, multiline: true, maxLength: closure_7, numberOfLines: 3, value: description, placeholder: null, onChange: null, disabled: null };
     intl4 = require("getSystemLocale").intl;
     obj7[6] = intl4.string(require("getSystemLocale").t["3YHwoG"]);
     obj7[7] = setDescription;
@@ -60,23 +59,22 @@ class Content {
     return jsxs(Fragment, obj);
   }
 }
+noopAll;
 ({ GuildRoleSubscriptionsTierScenes: closure_6, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: error } = MAX_SUBSCRIPTION_TIERS);
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles({ coverPhoto: { height: 114, width: "100%" }, coverDescription: { marginTop: 16 }, paddedContainer: { paddingHorizontal: 16 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionGroupDetailsModal.tsx");
 
 export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
-  let tmp2;
-  let tmp3;
-  [tmp2, tmp3] = callback(usePriceTiers.useGroupCoverState(), 2);
-  const tmp4 = callback(usePriceTiers.useGroupDescriptionState(), 2);
+  [tmp2, tmp3] = callback(closure_5.useGroupCoverState(), 2);
+  const tmp4 = callback(closure_5.useGroupDescriptionState(), 2);
   const first = tmp4[0];
   let tmp5 = first.length > 0;
   if (tmp5) {
     tmp5 = null != tmp2;
   }
   let obj = { title: null, description: null, canProceedToNextStep: null, nextStep: null };
-  const tmp = callback(usePriceTiers.useGroupCoverState(), 2);
+  const tmp = callback(closure_5.useGroupCoverState(), 2);
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.EPOLQD);
   const intl2 = getSystemLocale.intl;
@@ -91,6 +89,6 @@ export default function GuildRoleSubscriptionTierDetailsModal(arg0) {
   obj.description = first;
   obj.setDescription = tmp4[1];
   obj.children = callback2(Content, obj);
-  return callback2(Header, obj);
+  return callback2(HeaderDefault, obj);
 };
 export { Content };

@@ -1,8 +1,8 @@
 // discord_app/modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx
-import noop from "noop";
-import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "noop" /* 19 */;
+import { DEFAULT_CONTENT_PADDING } from "APP_LAUNCHER_BUILT_IN_SECTION_ICON" /* 1499 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 function EmptyStateWithSnowflakeQuery(onPressRow) {
@@ -13,7 +13,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
     contentContainerStyle: callback().emptyState,
     data: items,
     renderItem(item) {
-      return outer1_4(onPressRow(outer1_2[13]).TableRow, { label: item.item, start: true, end: true, onPress: onPressRow });
+      return closure_1_4(onPressRow(closure_1_2[13]).TableRow, { label: item.item, start: true, end: true, onPress: onPressRow });
     },
     keyboardShouldPersistTaps: "always",
     keyboardDismissMode: "on-drag"
@@ -21,7 +21,7 @@ function EmptyStateWithSnowflakeQuery(onPressRow) {
 }
 const AppLauncherUserListActionSheet = "AppLauncherUserListActionSheet";
 let closure_6 = createCacheKey.createStyles({ emptyState: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 } });
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/user/AppLauncherUserListActionSheet.tsx");
 
 export default function AppLauncherUserListActionSheet(onUserPress) {
   onUserPress = onUserPress.onUserPress;
@@ -32,7 +32,7 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
   const id = channel.id;
   const items = [onActionSheetDismiss];
   callback = callback1.useCallback(() => {
-    onActionSheetDismiss(callback[4]).hideActionSheet(outer1_5);
+    onActionSheetDismiss(callback[4]).hideActionSheet(closure_1_5);
     onActionSheetDismiss();
   }, items);
   const items1 = [callback, onUserPress];
@@ -42,15 +42,15 @@ export default function AppLauncherUserListActionSheet(onUserPress) {
   }, items1);
   const items2 = [callback1];
   const callback2 = callback1.useCallback((text) => {
-    let closure_0 = text;
+    closure_0 = text;
     let obj = onUserPress(callback[5]);
     if (obj.isSnowflake(text)) {
       obj = { query: null, onPressRow: null };
       obj[0] = text;
       obj[1] = function onPressRow(arg0) {
-        return outer1_3({ user: closure_0 });
+        return closure_1_3({ user: closure_0 });
       };
-      let tmp3Result = tmp3(outer1_7, obj);
+      let tmp3Result = tmp3(closure_1_7, obj);
     } else {
       obj = { style: null, lightSource: null, darkSource: null, title: null, body: null };
       obj[0] = { paddingTop: 80 };

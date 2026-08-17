@@ -1,25 +1,21 @@
 // discord_app/design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { CHANNEL_SPRING_CONFIG } from "n";
-import jsxProd from "jsxProd";
-import { v1 } from "../../../../../_runtime/00514_v1.js";
-import { shallowEqual } from "../../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { getChannelIconURL } from "../../../../modules/channel/getChannelIcon.tsx";
-import { getReactNativeSVGImageSource } from "../../../../modules/svg/native/getReactNativeSVGImageSource.tsx";
-import { getAvatarURL } from "../../../../utils/AvatarUtils.tsx";
-import { SolidCutout } from "../../../components/Icon/native/ClipView.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import v1 from "v1" /* 514 */;
+import shallowEqualDefault from "shallowEqual" /* 643 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import preloadDefault from "preload" /* 5449 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import SolidCutoutDefault from "SolidCutout" /* 8402 */;
+import getChannelIconURL from "getChannelIconURL" /* 12127 */;
+import getReactNativeSVGImageSourceDefault from "getReactNativeSVGImageSource" /* 12128 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { CHANNEL_SPRING_CONFIG } from "n" /* 12126 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function StaticNativeCutoutAvatarImage(cutout) {
-  let imageStyle;
-  let source;
-  let style;
   cutout = cutout.cutout;
   let items = [cutout];
   ({ source, style, imageStyle } = cutout);
@@ -27,42 +23,39 @@ function StaticNativeCutoutAvatarImage(cutout) {
     const items = [cutout];
     return items;
   }, items);
-  const obj = { style, cutouts: memo, children: null };
-  const tmp2 = getReactNativeSVGImageSource(source);
+  obj = { style, cutouts: memo, children: null };
+  const tmp2 = getReactNativeSVGImageSourceDefault(source);
   const items1 = [obj.image, imageStyle];
-  obj[2] = callback(preload, { style: items1, source: tmp2, usesSmallCache: true });
-  return callback(SolidCutout, obj);
+  obj[2] = callback(preloadDefault, { style: items1, source: tmp2, usesSmallCache: true });
+  return callback(SolidCutoutDefault, obj);
 }
 function AnimatedNativeCutoutAvatarImage(cutout) {
-  let imageStyle;
-  let source;
-  let style;
   cutout = cutout.cutout;
   ({ source, style, imageStyle } = cutout);
-  let obj = cutout(4115);
+  obj = cutout(4115);
   const fn = function h() {
     const size = cutout;
-    if (cutout.shape === cutout(outer1_2[8]).CutoutShape.RoundedRect) {
-      let obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
+    if (cutout.shape === cutout(closure_1_2[8]).CutoutShape.RoundedRect) {
+      obj = { shape: null, x: null, y: null, width: null, height: null, cornerRadius: null };
       obj[0] = tmp(tmp2[8]).CutoutShape.RoundedRect;
       let tmpResult = tmp(tmp2[11]);
-      obj[1] = tmpResult.withSpring(size.x, outer1_6);
+      obj[1] = tmpResult.withSpring(size.x, closure_1_6);
       tmpResult = tmp(tmp2[11]);
-      obj[2] = tmpResult.withSpring(size.y, outer1_6);
-      obj[3] = tmp(tmp2[11]).withSpring(size.width, outer1_6);
+      obj[2] = tmpResult.withSpring(size.y, closure_1_6);
+      obj[3] = tmp(tmp2[11]).withSpring(size.width, closure_1_6);
       const tmpResult1 = tmp(tmp2[11]);
-      obj[4] = tmp(tmp2[11]).withSpring(size.height, outer1_6);
+      obj[4] = tmp(tmp2[11]).withSpring(size.height, closure_1_6);
       const tmpResult2 = tmp(tmp2[11]);
-      obj[5] = tmp(tmp2[11]).withSpring(size.cornerRadius, outer1_6);
+      obj[5] = tmp(tmp2[11]).withSpring(size.cornerRadius, closure_1_6);
       const tmpResult3 = tmp(tmp2[11]);
     } else {
       obj = { shape: null, x: null, y: null, size: null };
       obj[0] = tmp(tmp2[8]).CutoutShape.Circle;
-      obj[1] = tmp(tmp2[11]).withSpring(size.x, outer1_6);
+      obj[1] = tmp(tmp2[11]).withSpring(size.x, closure_1_6);
       const tmpResult4 = tmp(tmp2[11]);
-      obj[2] = tmp(tmp2[11]).withSpring(size.y, outer1_6);
+      obj[2] = tmp(tmp2[11]).withSpring(size.y, closure_1_6);
       const tmpResult5 = tmp(tmp2[11]);
-      obj[3] = tmp(tmp2[11]).withSpring(size.size, outer1_6);
+      obj[3] = tmp(tmp2[11]).withSpring(size.size, closure_1_6);
       const tmpResult6 = tmp(tmp2[11]);
     }
     const cutouts = [obj];
@@ -73,14 +66,13 @@ function AnimatedNativeCutoutAvatarImage(cutout) {
   fn.__workletHash = 12529564164821;
   fn.__initData = closure_15;
   const animatedProps = obj.useAnimatedProps(fn);
-  obj = { style, animatedProps, children: null };
-  const items = [obj.image, imageStyle];
-  obj[2] = callback(preload, { style: items, source: getReactNativeSVGImageSource(source), usesSmallCache: true });
+  obj = { style, animatedProps, children: callback(preloadDefault, { style: items, source: getReactNativeSVGImageSourceDefault(source), usesSmallCache: true }) };
+  items = [obj.image, imageStyle];
   return callback(cutout(8402).ClipViewAnimated, obj);
 }
 function NativeCutoutAvatarImage(animate) {
   if (true === animate.animate) {
-    let obj = {};
+    obj = {};
     const merged = Object.assign(animate);
     let tmp6 = callback(AnimatedNativeCutoutAvatarImage, obj);
   } else {
@@ -91,10 +83,6 @@ function NativeCutoutAvatarImage(animate) {
   return tmp6;
 }
 function CutoutAvatarImage(arg0) {
-  let cutout;
-  let size;
-  let source;
-  let style;
   ({ cutout, size, source, style } = arg0);
   const result = size / 2;
   let radius = cutout.radius;
@@ -123,8 +111,8 @@ function CutoutAvatarImage(arg0) {
     diff1 = size - radius - num;
   }
   let Circle = require;
-  let obj = dependencyMap;
-  let obj1 = v1;
+  obj = dependencyMap;
+  obj1 = v1;
   const v4Result = obj1.v4();
   const tintColor = closure_4.flatten(style).tintColor;
   if (null != source) {
@@ -136,12 +124,12 @@ function CutoutAvatarImage(arg0) {
       obj1 = { tintColor: null };
       obj1[0] = tintColor;
       obj[0] = obj1;
-      obj[1] = getReactNativeSVGImageSource(source);
-      obj[5] = callback(preload, obj);
-      let tmp8 = callback(Circle(6571).ForeignObject, obj);
+      obj[1] = getReactNativeSVGImageSourceDefault(source);
+      obj[5] = callback(preloadDefault, obj);
+      let tmp8 = callback(inlineStyles.ForeignObject, obj);
       let tmp9 = importDefault;
       let tmp10 = callback;
-      const tmp14 = preload;
+      const tmp14 = preloadDefault;
     }
     const obj2 = { style: null, children: null };
     obj2[0] = style;
@@ -154,12 +142,12 @@ function CutoutAvatarImage(arg0) {
       obj4[0] = result;
       obj4[1] = result;
       obj4[2] = result;
-      let tmp10Result = tmp10(Circle(6571).Circle, obj4);
+      let tmp10Result = tmp10(inlineStyles.Circle, obj4);
     } else {
       const obj5 = { x: 0, y: 0, height: null, width: null, fill: "white" };
       obj5[2] = size;
       obj5[3] = size;
-      tmp10Result = tmp10(Circle(6571).Rect, obj5);
+      tmp10Result = tmp10(inlineStyles.Rect, obj5);
     }
     const obj6 = { children: null };
     const items = [tmp10Result, ];
@@ -167,10 +155,10 @@ function CutoutAvatarImage(arg0) {
     obj7[0] = diff;
     obj7[1] = diff1;
     obj7[2] = radius;
-    items[1] = tmp10(Circle(6571).Circle, obj7);
+    items[1] = tmp10(inlineStyles.Circle, obj7);
     obj3[3] = items;
-    obj6[0] = closure_8(Circle(6571).Mask, obj3);
-    const items1 = [tmp10(Circle(6571).Defs, obj6), tmp8, ];
+    obj6[0] = closure_8(inlineStyles.Mask, obj3);
+    const items1 = [tmp10(inlineStyles.Defs, obj6), tmp8, ];
     if (null == cutout.border) {
       const obj8 = { height: "100%", width: "100%", children: null };
       items1[2] = null;
@@ -178,7 +166,7 @@ function CutoutAvatarImage(arg0) {
       obj2[1] = tmp16(tmp9Result, obj8);
       return tmp10(tmp15, obj2);
     } else if (CIRCULAR === tmp4.CIRCULAR) {
-      Circle = Circle(6571).Circle;
+      Circle = inlineStyles.Circle;
       obj = { cx: null, cy: null, r: null, fill: "none", mask: null, stroke: null, strokeWidth: null };
       obj[0] = result;
       obj[1] = result;
@@ -197,22 +185,19 @@ function CutoutAvatarImage(arg0) {
       obj9[5] = "url(#" + v4Result + ")";
       obj9[6] = cutout.border.color;
       obj9[7] = cutout.border.width;
-      tmp10Result = tmp10(Circle(6571).Rect, obj9);
+      tmp10Result = tmp10(inlineStyles.Rect, obj9);
     }
     tmp15 = closure_5;
-    tmp9Result = tmp9(6571);
+    tmp9Result = inlineStylesDefault;
   }
-  const obj10 = { x: "0", y: "0", height: "100%", width: "100%", href: null, mask: null };
-  obj10[4] = getReactNativeSVGImageSource(source);
-  obj10[5] = "url(#" + v4Result + ")";
-  tmp8 = callback(Circle(6571).Image, obj10);
+  tmp8 = callback(inlineStyles.Image, { x: "0", y: "0", height: "100%", width: "100%", href: getReactNativeSVGImageSourceDefault(source), mask: "url(#" + v4Result + ")" });
   tmp9 = importDefault;
   tmp10 = callback;
 }
 let c3 = importAllResult;
 ({ StyleSheet: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
-let c9 = new require("jsxProd")("UIKit - AvatarImage");
+({ jsx: error, jsxs: closure_8 } = jsxProd);
+let closure_9 = new timestampDefault("UIKit - AvatarImage");
 let obj = { XXSMALL: "xxsmall", XSMALL: "xsmall", SMALL: "small", NORMAL: "normal", LARGE: "large", XLARGE: "xlarge", XLARGE_72: "xlarge72", XXLARGE: "xxlarge", PROFILE: "profile", REFRESH_MEDIUM_32: "refreshMedium32", XXSMALL_10: "xsmall10", XSMALL_20: "xsmall20", SIZE_16: "size16", LARGE_48: "large48", EDIT_AVATAR_DECORATION: "editAvatarDecoration", GIFT_START: "giftStart", GIFT_SUCCESS: "giftSuccess", YOUBAR_60: "youBar60", TABS_22: "tabs22" };
 const frozen = Object.freeze({ [obj.XXSMALL_10]: 10, [obj.SIZE_16]: 16, [obj.XXSMALL]: 18, [obj.XSMALL_20]: 20, [obj.XSMALL]: 24, [obj.SMALL]: 30, [obj.NORMAL]: 40, [obj.LARGE_48]: 48, [obj.LARGE]: 50, [obj.XLARGE]: 64, [obj.XLARGE_72]: 72, [obj.XXLARGE]: 80, [obj.PROFILE]: 128, [obj.EDIT_AVATAR_DECORATION]: 144, [obj.GIFT_START]: 184, [obj.GIFT_SUCCESS]: 236, [obj.REFRESH_MEDIUM_32]: 32, [obj.YOUBAR_60]: 60, [obj.TABS_22]: 22 });
 obj = { image: { width: "100%", height: "100%" }, xxsmall: obj1, xsmall10: obj2, xsmall20: obj3, xsmall: obj4, small: obj5, normal: obj6, large: obj7, xlarge: obj8, xlarge72: obj9, xxlarge: obj10, refreshMedium32: obj11, profile: obj12, size16: obj13, large48: obj14, editAvatarDecoration: obj15, giftStart: obj16, giftSuccess: obj17, youBar60: obj18, tabs22: obj19, borderRadii: { xxsmall: obj20, xsmall10: obj21, xsmall20: obj22, xsmall: obj23, small: obj24, normal: obj25, large: obj26, xlarge: obj27, xlarge72: obj28, xxlarge: obj29, refreshMedium32: obj30, profile: obj31, size16: obj32, large48: obj33, editAvatarDecoration: obj34, giftStart: obj35, giftSuccess: obj36, youBar60: obj37, tabs22: obj38 } };
@@ -257,16 +242,8 @@ obj6 = { width: frozen[obj.NORMAL], height: frozen[obj.NORMAL] };
 obj7 = { width: frozen[obj.LARGE], height: frozen[obj.LARGE] };
 obj8 = { width: frozen[obj.XLARGE], height: frozen[obj.XLARGE] };
 obj9 = { width: frozen[obj.XLARGE_72], height: frozen[obj.XLARGE_72] };
-let tmp4 = new require("jsxProd")("UIKit - AvatarImage");
+let tmp4 = new timestampDefault("UIKit - AvatarImage");
 const memoResult = importAllResult.memo((style) => {
-  let animate;
-  let animate2;
-  let channel;
-  let cutout;
-  let size;
-  let size2;
-  let source;
-  let user;
   ({ animate, cutout, size } = style);
   const items = [obj[size], style.style];
   obj = {};
@@ -287,7 +264,7 @@ const memoResult = importAllResult.memo((style) => {
   } else if (null != user) {
     avatarSource = user.getAvatarSource(tmp6, animate2, size2);
   } else if (null != channel) {
-    let obj1 = getChannelIconURL;
+    obj1 = getChannelIconURL;
     const channelIconURL = obj1.getChannelIconURL(channel, size2);
     let tmp13 = channelIconURL;
     if (typeof channelIconURL !== "number") {
@@ -300,7 +277,7 @@ const memoResult = importAllResult.memo((style) => {
     }
     avatarSource = tmp13;
   } else {
-    tmp4.warn("No image found from provided data");
+    logger.warn("No image found from provided data");
   }
   if (null == avatarSource) {
     return null;
@@ -308,9 +285,9 @@ const memoResult = importAllResult.memo((style) => {
     const user2 = obj.user;
     if (null != user2) {
       if (!tmp30) {
-        const obj4 = getAvatarURL;
-        source = obj4.makeSource(getAvatarURL.getDefaultAvatarURL(user2.id, user2.discriminator));
-        const obj5 = getAvatarURL;
+        const obj4 = getAvatarURLDefault;
+        source = obj4.makeSource(getAvatarURLDefault.getDefaultAvatarURL(user2.id, user2.discriminator));
+        const obj5 = getAvatarURLDefault;
       }
     }
     if (null != cutout) {
@@ -347,11 +324,11 @@ const memoResult = importAllResult.memo((style) => {
         tmp22 = source;
       }
       obj2[2] = tmp22;
-      return callback(preload, obj2, "image");
+      return callback(preloadDefault, obj2, "image");
     }
   }
 }, function customShallowEqual(source, source2) {
-  if (shallowEqual(source, source2, ["source"])) {
+  if (shallowEqualDefault(source, source2, ["source"])) {
     source = source.source;
     const source1 = source2.source;
     if (source === source1) {
@@ -368,7 +345,7 @@ const memoResult = importAllResult.memo((style) => {
               } else {
                 let num = 0;
                 if (0 < source.length) {
-                  while (shallowEqual(source[num], source1[num])) {
+                  while (shallowEqualDefault(source[num], source1[num])) {
                     num = num + 1;
                   }
                   return false;
@@ -382,7 +359,7 @@ const memoResult = importAllResult.memo((style) => {
             tmp3 = typeof source !== "object";
           }
           if (!tmp3) {
-            tmp3 = tmp(643)(source1, source);
+            tmp3 = shallowEqualDefault(source1, source);
           }
           return tmp3;
         }
@@ -392,9 +369,9 @@ const memoResult = importAllResult.memo((style) => {
   } else {
     return false;
   }
-  tmp = importDefault;
+  const tmp = importDefault;
 });
-let result = require("n").fileFinishedImporting("design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx");
+let result = require("set").fileFinishedImporting("design/void/CutoutableAvatarImage/native/CutoutableAvatarImage.tsx");
 
 export default memoResult;
 export const AvatarSizes = obj;

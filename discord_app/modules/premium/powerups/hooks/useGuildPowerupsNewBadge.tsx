@@ -1,16 +1,16 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers";
-import { ContentDismissActionType } from "ContentDismissActionType";
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 11672 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "calculateAppliedBoosts" /* 4261 */;
+import { GuildPowerupNewPerkMarketingVersion as closure_6 } from "BoostedGuildTiers" /* 4262 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { useSelectedDismissibleContent } from "../../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
-import { useGuildPowerupNewPerkMarketingVersion } from "useGuildPowerupNewPerkMarketingVersion.tsx";
 
 const require = arg1;
 let closure_8 = require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
-let result = require("calculateAppliedBoosts").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupsNewBadge.tsx");
 
 export default function useGuildPowerupsNewBadge(arg0) {
   let flag = arg1;
@@ -18,18 +18,18 @@ export default function useGuildPowerupsNewBadge(arg0) {
     flag = false;
   }
   let _require;
-  let importDefault;
+  importDefault = undefined;
   _require = arg0;
   let obj = _initialize;
-  const items = [calculateAppliedBoosts];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getStateForGuild(closure_0));
-  const tmp4Result = useGuildPowerupNewPerkMarketingVersion(arg0, stateFromStores);
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
+  const tmp4Result = useGuildPowerupNewPerkMarketingVersionDefault(arg0, stateFromStores);
   let num = 0;
   if (tmp4Result >= constants.GUILD_THEME) {
     num = tmp4Result;
   }
   const tmp = _require;
-  const tmp4 = useGuildPowerupNewPerkMarketingVersion;
+  const tmp4 = useGuildPowerupNewPerkMarketingVersionDefault;
   let tmp6 = null;
   if (num > 0) {
     tmp6 = null;
@@ -46,9 +46,9 @@ export default function useGuildPowerupsNewBadge(arg0) {
     dismissNewBadgeIfShown: React.useCallback(() => {
       let TAKE_ACTION = arg0;
       if (arg0 === undefined) {
-        TAKE_ACTION = outer1_7.TAKE_ACTION;
+        TAKE_ACTION = closure_1_7.TAKE_ACTION;
       }
-      if (c1) {
+      if (closure_1) {
         callback(TAKE_ACTION);
       }
     }, items1)
@@ -57,8 +57,8 @@ export default function useGuildPowerupsNewBadge(arg0) {
 };
 export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildPowerupsNewBadge(guildId) {
   const _require = guildId;
-  const items = [calculateAppliedBoosts];
-  const stateFromStores = _initialize.useStateFromStores(items, () => outer1_5.getStateForGuild(closure_0));
+  const items = [closure_5];
+  const stateFromStores = _initialize.useStateFromStores(items, () => closure_1_5.getStateForGuild(closure_0));
   let obj = _initialize;
   const tmp2Result = num(11672)(guildId, stateFromStores);
   num = 0;
@@ -68,11 +68,11 @@ export const useAutoDismissGuildPowerupsNewBadge = function useAutoDismissGuildP
   const items1 = [num, guildId];
   const effect = React.useEffect(() => {
     if (num > 0) {
-      let obj = guildId(outer1_2[9]);
+      let obj = guildId(closure_1_2[9]);
       obj = { dismissAction: null, guildId: null };
-      obj[0] = outer1_7.AUTO_DISMISS;
+      obj[0] = closure_1_7.AUTO_DISMISS;
       obj[1] = guildId;
-      const result = obj.markVersionedDismissibleContentAsDismissed(outer1_8, tmp, obj);
+      const result = obj.markVersionedDismissibleContentAsDismissed(closure_1_8, tmp, obj);
     }
   }, items1);
 };

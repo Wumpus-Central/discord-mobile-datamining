@@ -1,5 +1,7 @@
 // discord_app/modules/app_launcher/AppLauncherTypes.tsx
-const result = require("set").fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/app_launcher/AppLauncherTypes.tsx");
 
 export const AppLauncherEntrypoint = { NONE: "NONE", TEXT: "TEXT", VOICE: "VOICE" };
 export const AppLauncherSectionName = { SEARCH: "search", RECENT: "recent", INSTALLED: "installed", ACTIVITIES: "activities", RECENT_APPS: "recent_apps", RECENT_COMMANDS: "recent_commands", NEW_TO_APPS: "new_to_apps", APPS_IN_THIS_SERVER: "apps_in_this_server" };

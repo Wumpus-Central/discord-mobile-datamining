@@ -1,22 +1,19 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidActionCreators.tsx
-import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { DEFAULT_LOCKDOWN_DURATION } from "GUILD_REPORT_RAID_MOBILE_KEY";
-import ME from "ME";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import { DEFAULT_LOCKDOWN_DURATION } from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 */;
+import ME from "ME" /* 676 */;
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _setGuildRaidAlerts() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c2 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c2 = 0;
     return (function*(arg0, arg1) {
       if (table === 2) {
         table = 3;
@@ -44,12 +41,12 @@ function _setGuildRaidAlerts() {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = features;
+              obj1 = features;
               const _Set = Set;
               const set = new Set(features.features);
               let saveGuildResult = set;
-              let saveGuild = outer1_8;
-              if (set.has(outer1_8.COMMUNITY)) {
+              let saveGuild = closure_1_8;
+              if (set.has(closure_1_8.COMMUNITY)) {
                 if (tmp18) {
                   saveGuildResult.delete(saveGuild.RAID_ALERTS_DISABLED);
                 } else {
@@ -86,7 +83,7 @@ function _setGuildRaidAlerts() {
       }
     })();
   });
-  const _setGuildRaidAlerts = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -98,20 +95,20 @@ function _setGuildRaidAlerts() {
 function _setGuildIncidentActions() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2, arg3) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let collectGuildAnalyticsMetadata = arg3;
-    let c6 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    closure_3 = arg3;
+    c6 = 0;
+    c5 = 0;
     return (function*(arg0, arg1, arg2, arg3) {
       let tmp5 = callback2;
       if (!callback2) {
         tmp5 = tmp26;
       }
-      let createGuildRecordFromRust = tmp27;
-      if (collectGuildAnalyticsMetadata == null) {
-        createGuildRecordFromRust = c5;
+      closure_4 = tmp27;
+      if (closure_3 == null) {
+        closure_4 = c5;
       }
       let toISOStringResult = null;
       if (tmp5) {
@@ -123,7 +120,7 @@ function _setGuildIncidentActions() {
       if (callback2) {
         tmp12 = toISOStringResult;
       }
-      const obj1 = { invites_disabled_until: null, dms_disabled_until: null, lockdown_duration_hours: null };
+      obj1 = { invites_disabled_until: null, dms_disabled_until: null, lockdown_duration_hours: null };
       obj1[0] = tmp12;
       let tmp13 = null;
       if (dependencyMap) {
@@ -137,14 +134,14 @@ function _setGuildIncidentActions() {
       obj1[2] = tmp14;
       const HTTP = callback(530).HTTP;
       obj2 = { url: null, body: null, rejectWithError: null };
-      obj2[0] = outer1_7.GUILD_INCIDENT_ACTIONS(callback);
+      obj2[0] = closure_1_7.GUILD_INCIDENT_ACTIONS(callback);
       obj2[1] = obj1;
       obj2[2] = callback(530).rejectWithMigratedError();
       yield HTTP.put(obj2);
       return arg1;
     })();
   });
-  const _setGuildIncidentActions = tmp;
+  closure_10 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -156,11 +153,11 @@ function _setGuildIncidentActions() {
 function _handleResolveRaid() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c3 === 2) {
         c3 = 3;
@@ -196,8 +193,8 @@ function _handleResolveRaid() {
               let tmp5 = null;
               if (null != tmp8) {
                 const HTTP = callback(530).HTTP;
-                const obj1 = { url: null, body: null, rejectWithError: null };
-                obj1[0] = outer1_7.GUILD_INCIDENT_REPORT_FALSE_ALARM(tmp18);
+                obj1 = { url: null, body: null, rejectWithError: null };
+                obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_FALSE_ALARM(tmp18);
                 const obj2 = { alert_message_id: null, reason: null };
                 obj2[0] = tmp19;
                 obj2[1] = tmp20;
@@ -237,7 +234,7 @@ function _handleResolveRaid() {
       }
     })();
   });
-  const _handleResolveRaid = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -249,9 +246,9 @@ function _handleResolveRaid() {
 function _handleReportRaid() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (v0 === 2) {
         v0 = 3;
@@ -279,7 +276,7 @@ function _handleReportRaid() {
               obj[0] = arg1;
               return obj;
             } else {
-              const guild = outer1_4.getGuild(callback);
+              const guild = closure_1_4.getGuild(callback);
               let tmp8 = null;
               if (null != guild) {
                 tmp8 = v0(10037)(guild);
@@ -287,8 +284,8 @@ function _handleReportRaid() {
               let tmp5 = null;
               if (null != tmp8) {
                 const HTTP = callback(530).HTTP;
-                const obj1 = { url: null, rejectWithError: null };
-                obj1[0] = outer1_7.GUILD_INCIDENT_REPORT_RAID(tmp18);
+                obj1 = { url: null, rejectWithError: null };
+                obj1[0] = closure_1_7.GUILD_INCIDENT_REPORT_RAID(tmp18);
                 let obj2 = callback(530);
                 obj1[1] = obj2.rejectWithMigratedError();
                 dependencyMap = 1;
@@ -322,7 +319,7 @@ function _handleReportRaid() {
       }
     })();
   });
-  const _handleReportRaid = tmp;
+  closure_12 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -331,8 +328,8 @@ function _handleReportRaid() {
   }
   return applyArgumentsResult;
 }
-({ AnalyticEvents: closure_6, Endpoints: error, GuildFeatures: metroImportAll } = ME);
-const result = require("GUILD_REPORT_RAID_MOBILE_KEY").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
+({ AnalyticEvents: closure_6, Endpoints: error, GuildFeatures: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");
 
 export const trackReportRaidViewed = function trackReportRaidViewed(onChange, onSubmit) {
   let items = onSubmit;
@@ -340,7 +337,7 @@ export const trackReportRaidViewed = function trackReportRaidViewed(onChange, on
     items = [];
   }
   if (0 !== items.length) {
-    let obj = expandEventProperties;
+    let obj = expandEventPropertiesDefault;
     obj = {};
     const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(onChange));
     obj.guild_id = onChange;

@@ -1,19 +1,18 @@
 // discord_app/modules/presence_subscriptions/PresenceSubscriptionsStore.tsx
-import _slicedToArray from "_slicedToArray";
-import sortActivity from "sortActivity";
-import { INVITE_EXPIRATION_MS } from "items3";
-import { Store } from "initialize";
-import { ActivitiesActionCreators } from "../../actions/ActivitiesActionCreators.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef10673 from "module_10673" /* 10673 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "sortActivity" /* 4559 */;
+import { INVITE_EXPIRATION_MS } from "items3" /* 4481 */;
 
 function handleConnectionOpenOrResumed() {
-  let closure_5 = {};
-  let closure_6 = {};
+  closure_5 = {};
+  closure_6 = {};
 }
 let closure_5 = {};
 let closure_6 = {};
 const delayedCall = new require("start").DelayedCall(3000, function flush() {
-  let tmp8;
-  let tmp9;
   const items = [];
   const entries = Object.entries(closure_6);
   while (tmp4 !== undefined) {
@@ -28,15 +27,16 @@ const delayedCall = new require("start").DelayedCall(3000, function flush() {
     continue;
   }
   if (0 !== items.length) {
-    ActivitiesActionCreators.subscribeActivities(items);
-    const obj = ActivitiesActionCreators;
+    _modDef10673.subscribeActivities(items);
+    const obj = _modDef10673;
   }
 });
+const Store = initializeDefault.Store;
 class PresenceSubscriptionsStore extends Store {
 }
 const prototype = PresenceSubscriptionsStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(sortActivity);
+  this.waitFor(closure_3);
 };
 prototype["isSubscribed"] = function isSubscribed(applicationId) {
   const combined = "" + applicationId.applicationId + ":" + applicationId.partyId;
@@ -47,14 +47,8 @@ prototype["isSubscribed"] = function isSubscribed(applicationId) {
   return tmp2;
 };
 PresenceSubscriptionsStore.displayName = "PresenceSubscriptionsStore";
-const presenceSubscriptionsStore = new PresenceSubscriptionsStore(require("dispatcher"), {
+const presenceSubscriptionsStore = new PresenceSubscriptionsStore(dispatcherDefault, {
   PRESENCE_SUBSCRIPTIONS_ADD: function handleSubscriptionAdd(subscription) {
-    let applicationId;
-    let channelId;
-    let inviteTime;
-    let messageId;
-    let partyId;
-    let userId;
     subscription = subscription.subscription;
     const tmp = (function prune() {
       let flag = false;
@@ -120,10 +114,10 @@ const presenceSubscriptionsStore = new PresenceSubscriptionsStore(require("dispa
   CONNECTION_OPEN: handleConnectionOpenOrResumed,
   CONNECTION_RESUMED: handleConnectionOpenOrResumed,
   LOGOUT: function handleLogout() {
-    let closure_5 = {};
-    let closure_6 = {};
+    closure_5 = {};
+    closure_6 = {};
   }
 });
-const result = require("items3").fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/presence_subscriptions/PresenceSubscriptionsStore.tsx");
 
 export default presenceSubscriptionsStore;

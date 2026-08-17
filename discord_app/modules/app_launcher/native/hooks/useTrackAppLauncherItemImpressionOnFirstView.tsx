@@ -1,13 +1,13 @@
 // discord_app/modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("createStandardNavigationFactories").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/hooks/useTrackAppLauncherItemImpressionOnFirstView.tsx");
 
 export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackAppLauncherItemImpressionOnFirstView() {
   let obj = entrypoint(9565);
   entrypoint = obj.useAppLauncherContext().entrypoint;
-  const dependencyMap = React.useRef(new Set());
+  dependencyMap = React.useRef(new Set());
   const set = new Set();
   const focusEffect = entrypoint(1501).useFocusEffect(React.useCallback(() => {
     const current = ref.current;
@@ -15,12 +15,6 @@ export const useTrackAppLauncherItemImpressionOnFirstView = function useTrackApp
   }, []));
   obj = {
     trackAppLauncherItemImpressionOnFirstView: React.useCallback((itemKey) => {
-      let applicationFlags;
-      let applicationId;
-      let commandId;
-      let sectionName;
-      let sectionOverallPosition;
-      let sectionPosition;
       itemKey = itemKey.itemKey;
       const current = ref.current;
       ({ sectionName, sectionPosition, sectionOverallPosition, applicationId, commandId, applicationFlags } = itemKey);

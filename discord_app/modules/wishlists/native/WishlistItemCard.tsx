@@ -1,20 +1,17 @@
 // discord_app/modules/wishlists/native/WishlistItemCard.tsx
-import "noop";
-import { SKUProductLines } from "ME";
-import { jsx } from "jsxProd";
-import { apexExperiment } from "../../slayer_storefront/experiments/SocialLayerStorefrontMobilePurchasingExperiment.tsx";
-import { CollectiblesWishlistItemCard } from "CollectiblesWishlistItemCard.tsx";
-import { PremiumWishlistItemCard } from "PremiumWishlistItemCard.tsx";
-import { SocialLayerStorefrontWishlistItemCard } from "SocialLayerStorefrontWishlistItemCard.tsx";
+import noopAll from "noop" /* 19 */;
+import apexExperiment from "apexExperiment" /* 8323 */;
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 10368 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 10370 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 10371 */;
+import { SKUProductLines } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/wishlists/native/WishlistItemCard.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/wishlists/native/WishlistItemCard.tsx");
 
 export default function WishlistItemCard(arg0) {
-  let isOwned;
-  let sku;
-  let source;
-  let wishlistOwnerId;
   ({ sku, isOwned, source, wishlistOwnerId } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   apexExperiment;
@@ -26,13 +23,13 @@ export default function WishlistItemCard(arg0) {
     obj[2] = source;
     obj[3] = wishlistOwnerId;
     const merged1 = Object.assign(merged);
-    return jsx(CollectiblesWishlistItemCard, { sku: null, isOwned: null, source: null, wishlistOwnerId: null });
+    return jsx(CollectiblesWishlistItemCardDefault, { sku: null, isOwned: null, source: null, wishlistOwnerId: null });
   } else if (tmp5.PREMIUM === productLine) {
     obj = { sku: null, source: null };
     obj[0] = sku;
     obj[1] = source;
     const merged2 = Object.assign(merged);
-    return jsx(PremiumWishlistItemCard, { sku: null, source: null });
+    return jsx(PremiumWishlistItemCardDefault, { sku: null, source: null });
   } else if (tmp5.SOCIAL_LAYER_GAME_ITEM === productLine) {
     let tmp6 = null;
     if (tmp4) {
@@ -42,8 +39,8 @@ export default function WishlistItemCard(arg0) {
       obj[2] = source;
       obj[3] = wishlistOwnerId;
       const merged3 = Object.assign(merged);
-      tmp6 = jsx(SocialLayerStorefrontWishlistItemCard, { sku: null, isOwned: null, source: null, wishlistOwnerId: null });
-      const tmp9 = SocialLayerStorefrontWishlistItemCard;
+      tmp6 = jsx(SocialLayerStorefrontWishlistItemCardDefault, { sku: null, isOwned: null, source: null, wishlistOwnerId: null });
+      const tmp9 = SocialLayerStorefrontWishlistItemCardDefault;
     }
     return tmp6;
   } else {

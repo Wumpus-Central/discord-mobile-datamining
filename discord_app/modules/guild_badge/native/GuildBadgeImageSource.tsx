@@ -1,33 +1,32 @@
 // discord_app/modules/guild_badge/native/GuildBadgeImageSource.tsx
-import { AccessibilityAnnouncer } from "../../../design/shared.tsx";
-import { BadgeCategory } from "../BadgeCategory.tsx";
-import { GuildVisibility } from "../GuildTraits.tsx";
-const require = arg1;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
+import registerAssetDefault from "registerAsset" /* 8549 */;
+import registerAssetDefault2 from "registerAsset" /* 8550 */;
+import BadgeCategory from "BadgeCategory" /* 9154 */;
+import GuildVisibility from "GuildVisibility" /* 9155 */;
+import registerAssetDefault3 from "registerAsset" /* 9156 */;
+import registerAssetDefault4 from "registerAsset" /* 9157 */;
+import registerAssetDefault5 from "registerAsset" /* 9158 */;
+import registerAssetDefault6 from "registerAsset" /* 9159 */;
+import registerAssetDefault7 from "registerAsset" /* 9160 */;
+import registerAssetDefault8 from "registerAsset" /* 9161 */;
+
+require = arg1;
 let obj = {};
-obj = { imageSource: null };
-obj[0] = require("registerAsset");
+obj = { imageSource: registerAssetDefault };
 obj[require("BadgeCategory").BadgeCategory.STAFF] = obj;
-obj = { imageSource: null };
-obj[0] = require("registerAsset");
+obj = { imageSource: registerAssetDefault2 };
 obj[require("BadgeCategory").BadgeCategory.PARTNERED] = obj;
-const obj1 = { imageSource: null };
-obj1[0] = require("registerAsset");
-obj[require("BadgeCategory").BadgeCategory.VERIFIED] = obj1;
-let obj2 = { imageSource: null, imageSourceLight: null, premiumImageSource: null };
-obj2[0] = require("registerAsset");
-obj2[1] = require("registerAsset");
-obj2[2] = require("registerAsset");
-obj[require("BadgeCategory").BadgeCategory.COMMUNITY] = obj2;
-const obj3 = { imageSource: null, imageSourceLight: null, premiumImageSource: null };
-obj3[0] = require("registerAsset");
-obj3[1] = require("registerAsset");
-obj3[2] = require("registerAsset");
-obj[require("BadgeCategory").BadgeCategory.DISCOVERABLE] = obj3;
-const obj4 = { imageSource: null };
-obj4[0] = require("registerAsset");
-obj[require("BadgeCategory").BadgeCategory.VERIFIED_AND_PARTNERED] = obj4;
+obj[require("BadgeCategory").BadgeCategory.VERIFIED] = { imageSource: registerAssetDefault };
+const obj1 = { imageSource: registerAssetDefault };
+obj[require("BadgeCategory").BadgeCategory.COMMUNITY] = { imageSource: registerAssetDefault3, imageSourceLight: registerAssetDefault4, premiumImageSource: registerAssetDefault5 };
+let obj2 = { imageSource: registerAssetDefault3, imageSourceLight: registerAssetDefault4, premiumImageSource: registerAssetDefault5 };
+obj[require("BadgeCategory").BadgeCategory.DISCOVERABLE] = { imageSource: registerAssetDefault6, imageSourceLight: registerAssetDefault7, premiumImageSource: registerAssetDefault8 };
+const obj3 = { imageSource: registerAssetDefault6, imageSourceLight: registerAssetDefault7, premiumImageSource: registerAssetDefault8 };
+obj[require("BadgeCategory").BadgeCategory.VERIFIED_AND_PARTNERED] = { imageSource: registerAssetDefault };
 obj[require("BadgeCategory").BadgeCategory.NONE] = {};
-const result = require("registerAsset").fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");
+const obj4 = { imageSource: registerAssetDefault };
+const result = require("set").fileFinishedImporting("modules/guild_badge/native/GuildBadgeImageSource.tsx");
 
 export const badgeVariants = obj;
 export const resolveImageSource = function resolveImageSource(premiumImageSource, guildTraits, arg2) {
@@ -45,7 +44,7 @@ export const resolveImageSource = function resolveImageSource(premiumImageSource
   imageSource = premiumImageSource.imageSource;
 };
 export const getGuildBadgeImageSource = function getGuildBadgeImageSource(guild, closure_2) {
-  const obj = GuildVisibility;
+  obj = GuildVisibility;
   const guildTraits = obj.getGuildTraits(guild);
   const obj2 = BadgeCategory;
   const tmp4 = obj[obj2.getBadgeCategory(obj2, guildTraits)];

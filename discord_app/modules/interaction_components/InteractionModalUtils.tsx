@@ -1,52 +1,52 @@
 // discord_app/modules/interaction_components/InteractionModalUtils.tsx
-import handleChanged from "handleChanged";
-import _slicedToArray from "_slicedToArray";
-import DISCORD_EPOCH from "DISCORD_EPOCH";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { DraftType } from "handleChanged";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import handleConnectionOpen from "handleConnectionOpen";
-import map from "map";
-import getModalState from "getModalState";
-import { InteractionModalState } from "getModalState";
-import getInteractionComponentStates from "getInteractionComponentStates";
-import { Endpoints } from "ME";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { isInteractionComponent } from "ComponentStateContext.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import isInteractionComponent from "isInteractionComponent" /* 8326 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import closure_9 from "trackCommunicationDisabled" /* 1990 */;
+import closure_10 from "handleConnectionOpen" /* 4197 */;
+import closure_11 from "map" /* 4824 */;
+import closure_12 from "getModalState" /* 13773 */;
+import { InteractionModalState } from "getModalState" /* 13773 */;
+import closure_14 from "getInteractionComponentStates" /* 8327 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function getData(arg0, arr) {
-  let closure_0 = arg0;
-  let closure_1 = arg2;
+  closure_0 = arg0;
+  closure_1 = arg2;
   return arr.map((type) => {
     type = type.type;
-    if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+    if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
       let obj = { type: null, components: null };
       obj[0] = type.type;
       let components = type.components;
       obj[1] = components.map((type) => {
         type = type.type;
-        if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+        if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
           let obj = { type: null, components: null };
           obj[0] = type.type;
           let components = type.components;
           obj[1] = components.map((type) => {
             type = type.type;
-            if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+            if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
               let obj = { type: null, components: null };
               obj[0] = type.type;
               let components = type.components;
               obj[1] = components.map((type) => {
                 type = type.type;
-                if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                   let obj = { type: null, components: null };
                   obj[0] = type.type;
                   let components = type.components;
                   obj[1] = components.map(() => { ... });
                   return obj;
                 } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                  let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                  let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   obj = { type: null, custom_id: null, value: null };
                   ({ type: obj9[0], customId: obj9[1] } = type);
                   type = undefined;
@@ -60,7 +60,7 @@ function getData(arg0, arr) {
                   obj[2] = value;
                   return obj;
                 } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                  let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                  let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   let type1;
                   if (interactionComponentState != null) {
                     type1 = interactionComponentState.type;
@@ -81,7 +81,7 @@ function getData(arg0, arr) {
                   obj1[2] = mapped;
                   return obj1;
                 } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                  let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                  let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   let obj2 = { type: null, custom_id: null, values: null };
                   ({ type: obj7[0], customId: obj7[1] } = type);
                   let type2;
@@ -110,7 +110,7 @@ function getData(arg0, arr) {
                             obj4[1] = items.map(() => { ... })[0];
                             return obj4;
                           } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                            let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj5 = { type: null, custom_id: null, value: null };
                             ({ type: obj3[0], customId: obj3[1] } = type);
                             let type3;
@@ -124,7 +124,7 @@ function getData(arg0, arr) {
                             obj5[2] = value;
                             return obj5;
                           } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                            let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj6 = { type: null, custom_id: null, values: null };
                             ({ type: obj2[0], customId: obj2[1] } = type);
                             let type4;
@@ -138,7 +138,7 @@ function getData(arg0, arr) {
                             obj6[2] = values;
                             return obj6;
                           } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                            let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
                             ({ type: obj[0], customId: obj[1] } = type);
                             let type5;
@@ -148,13 +148,13 @@ function getData(arg0, arr) {
                             obj[2] = type5 === type.type && iter.value;
                             return obj;
                           } else {
-                            outer1_1(tmp2[23])(false, "unreachable");
+                            closure_1_1(tmp2[23])(false, "unreachable");
                           }
                         }
                       }
                     }
                   }
-                  let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                  let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                   let obj7 = { type: null, custom_id: null, values: null };
                   ({ type: obj6[0], customId: obj6[1] } = type);
                   let type6;
@@ -172,7 +172,7 @@ function getData(arg0, arr) {
               });
               return obj;
             } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-              let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+              let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
               obj = { type: null, custom_id: null, value: null };
               ({ type: obj9[0], customId: obj9[1] } = type);
               type = undefined;
@@ -186,7 +186,7 @@ function getData(arg0, arr) {
               obj[2] = value;
               return obj;
             } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-              let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+              let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
               let type1;
               if (interactionComponentState != null) {
                 type1 = interactionComponentState.type;
@@ -200,7 +200,7 @@ function getData(arg0, arr) {
               let mapped;
               if (uploadIds != null) {
                 mapped = uploadIds.map((arg0) => {
-                  let closure_0 = arg0;
+                  closure_0 = arg0;
                   uploads = uploads.uploads;
                   return uploads.findIndex(() => { ... });
                 });
@@ -211,7 +211,7 @@ function getData(arg0, arr) {
               obj1[2] = mapped;
               return obj1;
             } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-              let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+              let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
               let obj2 = { type: null, custom_id: null, values: null };
               ({ type: obj7[0], customId: obj7[1] } = type);
               let type2;
@@ -239,14 +239,14 @@ function getData(arg0, arr) {
                         let items = [type.component];
                         obj4[1] = items.map((type) => {
                           type = type.type;
-                          if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                          if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                             let obj = { type: null, components: null };
                             obj[0] = type.type;
                             let components = type.components;
                             obj[1] = components.map(() => { ... });
                             return obj;
                           } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                            let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
                             ({ type: obj9[0], customId: obj9[1] } = type);
                             type = undefined;
@@ -260,7 +260,7 @@ function getData(arg0, arr) {
                             obj[2] = value;
                             return obj;
                           } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                            let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let type1;
                             if (interactionComponentState != null) {
                               type1 = interactionComponentState.type;
@@ -281,7 +281,7 @@ function getData(arg0, arr) {
                             obj1[2] = mapped;
                             return obj1;
                           } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                            let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj2 = { type: null, custom_id: null, values: null };
                             ({ type: obj7[0], customId: obj7[1] } = type);
                             let type2;
@@ -310,7 +310,7 @@ function getData(arg0, arr) {
                                       obj4[1] = items.map(() => { ... })[0];
                                       return obj4;
                                     } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                      let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj5 = { type: null, custom_id: null, value: null };
                                       ({ type: obj3[0], customId: obj3[1] } = type);
                                       let type3;
@@ -324,7 +324,7 @@ function getData(arg0, arr) {
                                       obj5[2] = value;
                                       return obj5;
                                     } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                      let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj6 = { type: null, custom_id: null, values: null };
                                       ({ type: obj2[0], customId: obj2[1] } = type);
                                       let type4;
@@ -338,7 +338,7 @@ function getData(arg0, arr) {
                                       obj6[2] = values;
                                       return obj6;
                                     } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                      let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
                                       ({ type: obj[0], customId: obj[1] } = type);
                                       let type5;
@@ -348,13 +348,13 @@ function getData(arg0, arr) {
                                       obj[2] = type5 === type.type && iter.value;
                                       return obj;
                                     } else {
-                                      outer1_1(tmp2[23])(false, "unreachable");
+                                      closure_1_1(tmp2[23])(false, "unreachable");
                                     }
                                   }
                                 }
                               }
                             }
-                            let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj7 = { type: null, custom_id: null, values: null };
                             ({ type: obj6[0], customId: obj6[1] } = type);
                             let type6;
@@ -372,7 +372,7 @@ function getData(arg0, arr) {
                         })[0];
                         return obj4;
                       } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                        let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj5 = { type: null, custom_id: null, value: null };
                         ({ type: obj3[0], customId: obj3[1] } = type);
                         let type3;
@@ -386,7 +386,7 @@ function getData(arg0, arr) {
                         obj5[2] = value;
                         return obj5;
                       } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                        let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj6 = { type: null, custom_id: null, values: null };
                         ({ type: obj2[0], customId: obj2[1] } = type);
                         let type4;
@@ -400,7 +400,7 @@ function getData(arg0, arr) {
                         obj6[2] = values;
                         return obj6;
                       } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                        let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         obj = { type: null, custom_id: null, value: null };
                         ({ type: obj[0], customId: obj[1] } = type);
                         let type5;
@@ -410,13 +410,13 @@ function getData(arg0, arr) {
                         obj[2] = type5 === type.type && iter.value;
                         return obj;
                       } else {
-                        outer1_1(tmp2[23])(false, "unreachable");
+                        closure_1_1(tmp2[23])(false, "unreachable");
                       }
                     }
                   }
                 }
               }
-              let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+              let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
               let obj7 = { type: null, custom_id: null, values: null };
               ({ type: obj6[0], customId: obj6[1] } = type);
               let type6;
@@ -434,7 +434,7 @@ function getData(arg0, arr) {
           });
           return obj;
         } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-          let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+          let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
           obj = { type: null, custom_id: null, value: null };
           ({ type: obj9[0], customId: obj9[1] } = type);
           type = undefined;
@@ -448,7 +448,7 @@ function getData(arg0, arr) {
           obj[2] = value;
           return obj;
         } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-          let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+          let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
           let type1;
           if (interactionComponentState != null) {
             type1 = interactionComponentState.type;
@@ -462,7 +462,7 @@ function getData(arg0, arr) {
           let mapped;
           if (uploadIds != null) {
             mapped = uploadIds.map((arg0) => {
-              let closure_0 = arg0;
+              closure_0 = arg0;
               uploads = uploads.uploads;
               return uploads.findIndex((id) => id.id === closure_0);
             });
@@ -473,7 +473,7 @@ function getData(arg0, arr) {
           obj1[2] = mapped;
           return obj1;
         } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-          let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+          let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
           let obj2 = { type: null, custom_id: null, values: null };
           ({ type: obj7[0], customId: obj7[1] } = type);
           let type2;
@@ -501,20 +501,20 @@ function getData(arg0, arr) {
                     let items = [type.component];
                     obj4[1] = items.map((type) => {
                       type = type.type;
-                      if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                         let obj = { type: null, components: null };
                         obj[0] = type.type;
                         let components = type.components;
                         obj[1] = components.map((type) => {
                           type = type.type;
-                          if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                          if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                             let obj = { type: null, components: null };
                             obj[0] = type.type;
                             let components = type.components;
                             obj[1] = components.map(() => { ... });
                             return obj;
                           } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                            let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
                             ({ type: obj9[0], customId: obj9[1] } = type);
                             type = undefined;
@@ -528,7 +528,7 @@ function getData(arg0, arr) {
                             obj[2] = value;
                             return obj;
                           } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                            let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let type1;
                             if (interactionComponentState != null) {
                               type1 = interactionComponentState.type;
@@ -549,7 +549,7 @@ function getData(arg0, arr) {
                             obj1[2] = mapped;
                             return obj1;
                           } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                            let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj2 = { type: null, custom_id: null, values: null };
                             ({ type: obj7[0], customId: obj7[1] } = type);
                             let type2;
@@ -578,7 +578,7 @@ function getData(arg0, arr) {
                                       obj4[1] = items.map(() => { ... })[0];
                                       return obj4;
                                     } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                      let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj5 = { type: null, custom_id: null, value: null };
                                       ({ type: obj3[0], customId: obj3[1] } = type);
                                       let type3;
@@ -592,7 +592,7 @@ function getData(arg0, arr) {
                                       obj5[2] = value;
                                       return obj5;
                                     } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                      let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj6 = { type: null, custom_id: null, values: null };
                                       ({ type: obj2[0], customId: obj2[1] } = type);
                                       let type4;
@@ -606,7 +606,7 @@ function getData(arg0, arr) {
                                       obj6[2] = values;
                                       return obj6;
                                     } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                      let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
                                       ({ type: obj[0], customId: obj[1] } = type);
                                       let type5;
@@ -616,13 +616,13 @@ function getData(arg0, arr) {
                                       obj[2] = type5 === type.type && iter.value;
                                       return obj;
                                     } else {
-                                      outer1_1(tmp2[23])(false, "unreachable");
+                                      closure_1_1(tmp2[23])(false, "unreachable");
                                     }
                                   }
                                 }
                               }
                             }
-                            let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj7 = { type: null, custom_id: null, values: null };
                             ({ type: obj6[0], customId: obj6[1] } = type);
                             let type6;
@@ -640,7 +640,7 @@ function getData(arg0, arr) {
                         });
                         return obj;
                       } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                        let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         obj = { type: null, custom_id: null, value: null };
                         ({ type: obj9[0], customId: obj9[1] } = type);
                         type = undefined;
@@ -654,7 +654,7 @@ function getData(arg0, arr) {
                         obj[2] = value;
                         return obj;
                       } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                        let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let type1;
                         if (interactionComponentState != null) {
                           type1 = interactionComponentState.type;
@@ -668,7 +668,7 @@ function getData(arg0, arr) {
                         let mapped;
                         if (uploadIds != null) {
                           mapped = uploadIds.map((arg0) => {
-                            let closure_0 = arg0;
+                            closure_0 = arg0;
                             uploads = uploads.uploads;
                             return uploads.findIndex(() => { ... });
                           });
@@ -679,7 +679,7 @@ function getData(arg0, arr) {
                         obj1[2] = mapped;
                         return obj1;
                       } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                        let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj2 = { type: null, custom_id: null, values: null };
                         ({ type: obj7[0], customId: obj7[1] } = type);
                         let type2;
@@ -707,14 +707,14 @@ function getData(arg0, arr) {
                                   let items = [type.component];
                                   obj4[1] = items.map((type) => {
                                     type = type.type;
-                                    if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                                    if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                       let obj = { type: null, components: null };
                                       obj[0] = type.type;
                                       let components = type.components;
                                       obj[1] = components.map(() => { ... });
                                       return obj;
                                     } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                                      let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
                                       ({ type: obj9[0], customId: obj9[1] } = type);
                                       type = undefined;
@@ -728,7 +728,7 @@ function getData(arg0, arr) {
                                       obj[2] = value;
                                       return obj;
                                     } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                                      let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let type1;
                                       if (interactionComponentState != null) {
                                         type1 = interactionComponentState.type;
@@ -749,7 +749,7 @@ function getData(arg0, arr) {
                                       obj1[2] = mapped;
                                       return obj1;
                                     } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                                      let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj2 = { type: null, custom_id: null, values: null };
                                       ({ type: obj7[0], customId: obj7[1] } = type);
                                       let type2;
@@ -778,7 +778,7 @@ function getData(arg0, arr) {
                                                 obj4[1] = items.map(() => { ... })[0];
                                                 return obj4;
                                               } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                                let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj5 = { type: null, custom_id: null, value: null };
                                                 ({ type: obj3[0], customId: obj3[1] } = type);
                                                 let type3;
@@ -792,7 +792,7 @@ function getData(arg0, arr) {
                                                 obj5[2] = value;
                                                 return obj5;
                                               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj6 = { type: null, custom_id: null, values: null };
                                                 ({ type: obj2[0], customId: obj2[1] } = type);
                                                 let type4;
@@ -806,7 +806,7 @@ function getData(arg0, arr) {
                                                 obj6[2] = values;
                                                 return obj6;
                                               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                                let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
                                                 ({ type: obj[0], customId: obj[1] } = type);
                                                 let type5;
@@ -816,13 +816,13 @@ function getData(arg0, arr) {
                                                 obj[2] = type5 === type.type && iter.value;
                                                 return obj;
                                               } else {
-                                                outer1_1(tmp2[23])(false, "unreachable");
+                                                closure_1_1(tmp2[23])(false, "unreachable");
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj7 = { type: null, custom_id: null, values: null };
                                       ({ type: obj6[0], customId: obj6[1] } = type);
                                       let type6;
@@ -840,7 +840,7 @@ function getData(arg0, arr) {
                                   })[0];
                                   return obj4;
                                 } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                  let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj5 = { type: null, custom_id: null, value: null };
                                   ({ type: obj3[0], customId: obj3[1] } = type);
                                   let type3;
@@ -854,7 +854,7 @@ function getData(arg0, arr) {
                                   obj5[2] = value;
                                   return obj5;
                                 } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                  let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj6 = { type: null, custom_id: null, values: null };
                                   ({ type: obj2[0], customId: obj2[1] } = type);
                                   let type4;
@@ -868,7 +868,7 @@ function getData(arg0, arr) {
                                   obj6[2] = values;
                                   return obj6;
                                 } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                  let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   obj = { type: null, custom_id: null, value: null };
                                   ({ type: obj[0], customId: obj[1] } = type);
                                   let type5;
@@ -878,13 +878,13 @@ function getData(arg0, arr) {
                                   obj[2] = type5 === type.type && iter.value;
                                   return obj;
                                 } else {
-                                  outer1_1(tmp2[23])(false, "unreachable");
+                                  closure_1_1(tmp2[23])(false, "unreachable");
                                 }
                               }
                             }
                           }
                         }
-                        let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj7 = { type: null, custom_id: null, values: null };
                         ({ type: obj6[0], customId: obj6[1] } = type);
                         let type6;
@@ -902,7 +902,7 @@ function getData(arg0, arr) {
                     })[0];
                     return obj4;
                   } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                    let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj5 = { type: null, custom_id: null, value: null };
                     ({ type: obj3[0], customId: obj3[1] } = type);
                     let type3;
@@ -916,7 +916,7 @@ function getData(arg0, arr) {
                     obj5[2] = value;
                     return obj5;
                   } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                    let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj6 = { type: null, custom_id: null, values: null };
                     ({ type: obj2[0], customId: obj2[1] } = type);
                     let type4;
@@ -930,7 +930,7 @@ function getData(arg0, arr) {
                     obj6[2] = values;
                     return obj6;
                   } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                    let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     obj = { type: null, custom_id: null, value: null };
                     ({ type: obj[0], customId: obj[1] } = type);
                     let type5;
@@ -940,13 +940,13 @@ function getData(arg0, arr) {
                     obj[2] = type5 === type.type && iter.value;
                     return obj;
                   } else {
-                    outer1_1(tmp2[23])(false, "unreachable");
+                    closure_1_1(tmp2[23])(false, "unreachable");
                   }
                 }
               }
             }
           }
-          let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+          let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
           let obj7 = { type: null, custom_id: null, values: null };
           ({ type: obj6[0], customId: obj6[1] } = type);
           let type6;
@@ -964,7 +964,7 @@ function getData(arg0, arr) {
       });
       return obj;
     } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-      let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
       obj = { type: null, custom_id: null, value: null };
       ({ type: obj9[0], customId: obj9[1] } = type);
       type = undefined;
@@ -978,7 +978,7 @@ function getData(arg0, arr) {
       obj[2] = value;
       return obj;
     } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-      let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
       let type1;
       if (interactionComponentState != null) {
         type1 = interactionComponentState.type;
@@ -992,7 +992,7 @@ function getData(arg0, arr) {
       let mapped;
       if (uploadIds != null) {
         mapped = uploadIds.map((arg0) => {
-          let closure_0 = arg0;
+          closure_0 = arg0;
           uploads = uploads.uploads;
           return uploads.findIndex((id) => id.id === closure_0);
         });
@@ -1003,7 +1003,7 @@ function getData(arg0, arr) {
       obj1[2] = mapped;
       return obj1;
     } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-      let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
       let obj2 = { type: null, custom_id: null, values: null };
       ({ type: obj7[0], customId: obj7[1] } = type);
       let type2;
@@ -1031,26 +1031,26 @@ function getData(arg0, arr) {
                 let items = [type.component];
                 obj4[1] = items.map((type) => {
                   type = type.type;
-                  if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                  if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                     let obj = { type: null, components: null };
                     obj[0] = type.type;
                     let components = type.components;
                     obj[1] = components.map((type) => {
                       type = type.type;
-                      if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                      if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                         let obj = { type: null, components: null };
                         obj[0] = type.type;
                         let components = type.components;
                         obj[1] = components.map((type) => {
                           type = type.type;
-                          if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                          if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                             let obj = { type: null, components: null };
                             obj[0] = type.type;
                             let components = type.components;
                             obj[1] = components.map(() => { ... });
                             return obj;
                           } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                            let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             obj = { type: null, custom_id: null, value: null };
                             ({ type: obj9[0], customId: obj9[1] } = type);
                             type = undefined;
@@ -1064,7 +1064,7 @@ function getData(arg0, arr) {
                             obj[2] = value;
                             return obj;
                           } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                            let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let type1;
                             if (interactionComponentState != null) {
                               type1 = interactionComponentState.type;
@@ -1085,7 +1085,7 @@ function getData(arg0, arr) {
                             obj1[2] = mapped;
                             return obj1;
                           } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                            let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj2 = { type: null, custom_id: null, values: null };
                             ({ type: obj7[0], customId: obj7[1] } = type);
                             let type2;
@@ -1114,7 +1114,7 @@ function getData(arg0, arr) {
                                       obj4[1] = items.map(() => { ... })[0];
                                       return obj4;
                                     } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                      let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj5 = { type: null, custom_id: null, value: null };
                                       ({ type: obj3[0], customId: obj3[1] } = type);
                                       let type3;
@@ -1128,7 +1128,7 @@ function getData(arg0, arr) {
                                       obj5[2] = value;
                                       return obj5;
                                     } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                      let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj6 = { type: null, custom_id: null, values: null };
                                       ({ type: obj2[0], customId: obj2[1] } = type);
                                       let type4;
@@ -1142,7 +1142,7 @@ function getData(arg0, arr) {
                                       obj6[2] = values;
                                       return obj6;
                                     } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                      let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
                                       ({ type: obj[0], customId: obj[1] } = type);
                                       let type5;
@@ -1152,13 +1152,13 @@ function getData(arg0, arr) {
                                       obj[2] = type5 === type.type && iter.value;
                                       return obj;
                                     } else {
-                                      outer1_1(tmp2[23])(false, "unreachable");
+                                      closure_1_1(tmp2[23])(false, "unreachable");
                                     }
                                   }
                                 }
                               }
                             }
-                            let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                            let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                             let obj7 = { type: null, custom_id: null, values: null };
                             ({ type: obj6[0], customId: obj6[1] } = type);
                             let type6;
@@ -1176,7 +1176,7 @@ function getData(arg0, arr) {
                         });
                         return obj;
                       } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                        let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         obj = { type: null, custom_id: null, value: null };
                         ({ type: obj9[0], customId: obj9[1] } = type);
                         type = undefined;
@@ -1190,7 +1190,7 @@ function getData(arg0, arr) {
                         obj[2] = value;
                         return obj;
                       } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                        let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let type1;
                         if (interactionComponentState != null) {
                           type1 = interactionComponentState.type;
@@ -1204,7 +1204,7 @@ function getData(arg0, arr) {
                         let mapped;
                         if (uploadIds != null) {
                           mapped = uploadIds.map((arg0) => {
-                            let closure_0 = arg0;
+                            closure_0 = arg0;
                             uploads = uploads.uploads;
                             return uploads.findIndex(() => { ... });
                           });
@@ -1215,7 +1215,7 @@ function getData(arg0, arr) {
                         obj1[2] = mapped;
                         return obj1;
                       } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                        let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj2 = { type: null, custom_id: null, values: null };
                         ({ type: obj7[0], customId: obj7[1] } = type);
                         let type2;
@@ -1243,14 +1243,14 @@ function getData(arg0, arr) {
                                   let items = [type.component];
                                   obj4[1] = items.map((type) => {
                                     type = type.type;
-                                    if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                                    if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                       let obj = { type: null, components: null };
                                       obj[0] = type.type;
                                       let components = type.components;
                                       obj[1] = components.map(() => { ... });
                                       return obj;
                                     } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                                      let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
                                       ({ type: obj9[0], customId: obj9[1] } = type);
                                       type = undefined;
@@ -1264,7 +1264,7 @@ function getData(arg0, arr) {
                                       obj[2] = value;
                                       return obj;
                                     } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                                      let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let type1;
                                       if (interactionComponentState != null) {
                                         type1 = interactionComponentState.type;
@@ -1285,7 +1285,7 @@ function getData(arg0, arr) {
                                       obj1[2] = mapped;
                                       return obj1;
                                     } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                                      let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj2 = { type: null, custom_id: null, values: null };
                                       ({ type: obj7[0], customId: obj7[1] } = type);
                                       let type2;
@@ -1314,7 +1314,7 @@ function getData(arg0, arr) {
                                                 obj4[1] = items.map(() => { ... })[0];
                                                 return obj4;
                                               } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                                let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj5 = { type: null, custom_id: null, value: null };
                                                 ({ type: obj3[0], customId: obj3[1] } = type);
                                                 let type3;
@@ -1328,7 +1328,7 @@ function getData(arg0, arr) {
                                                 obj5[2] = value;
                                                 return obj5;
                                               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj6 = { type: null, custom_id: null, values: null };
                                                 ({ type: obj2[0], customId: obj2[1] } = type);
                                                 let type4;
@@ -1342,7 +1342,7 @@ function getData(arg0, arr) {
                                                 obj6[2] = values;
                                                 return obj6;
                                               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                                let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
                                                 ({ type: obj[0], customId: obj[1] } = type);
                                                 let type5;
@@ -1352,13 +1352,13 @@ function getData(arg0, arr) {
                                                 obj[2] = type5 === type.type && iter.value;
                                                 return obj;
                                               } else {
-                                                outer1_1(tmp2[23])(false, "unreachable");
+                                                closure_1_1(tmp2[23])(false, "unreachable");
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj7 = { type: null, custom_id: null, values: null };
                                       ({ type: obj6[0], customId: obj6[1] } = type);
                                       let type6;
@@ -1376,7 +1376,7 @@ function getData(arg0, arr) {
                                   })[0];
                                   return obj4;
                                 } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                  let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj5 = { type: null, custom_id: null, value: null };
                                   ({ type: obj3[0], customId: obj3[1] } = type);
                                   let type3;
@@ -1390,7 +1390,7 @@ function getData(arg0, arr) {
                                   obj5[2] = value;
                                   return obj5;
                                 } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                  let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj6 = { type: null, custom_id: null, values: null };
                                   ({ type: obj2[0], customId: obj2[1] } = type);
                                   let type4;
@@ -1404,7 +1404,7 @@ function getData(arg0, arr) {
                                   obj6[2] = values;
                                   return obj6;
                                 } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                  let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   obj = { type: null, custom_id: null, value: null };
                                   ({ type: obj[0], customId: obj[1] } = type);
                                   let type5;
@@ -1414,13 +1414,13 @@ function getData(arg0, arr) {
                                   obj[2] = type5 === type.type && iter.value;
                                   return obj;
                                 } else {
-                                  outer1_1(tmp2[23])(false, "unreachable");
+                                  closure_1_1(tmp2[23])(false, "unreachable");
                                 }
                               }
                             }
                           }
                         }
-                        let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                        let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                         let obj7 = { type: null, custom_id: null, values: null };
                         ({ type: obj6[0], customId: obj6[1] } = type);
                         let type6;
@@ -1438,7 +1438,7 @@ function getData(arg0, arr) {
                     });
                     return obj;
                   } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                    let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     obj = { type: null, custom_id: null, value: null };
                     ({ type: obj9[0], customId: obj9[1] } = type);
                     type = undefined;
@@ -1452,7 +1452,7 @@ function getData(arg0, arr) {
                     obj[2] = value;
                     return obj;
                   } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                    let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let type1;
                     if (interactionComponentState != null) {
                       type1 = interactionComponentState.type;
@@ -1466,7 +1466,7 @@ function getData(arg0, arr) {
                     let mapped;
                     if (uploadIds != null) {
                       mapped = uploadIds.map((arg0) => {
-                        let closure_0 = arg0;
+                        closure_0 = arg0;
                         uploads = uploads.uploads;
                         return uploads.findIndex((id) => id.id === closure_0);
                       });
@@ -1477,7 +1477,7 @@ function getData(arg0, arr) {
                     obj1[2] = mapped;
                     return obj1;
                   } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                    let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj2 = { type: null, custom_id: null, values: null };
                     ({ type: obj7[0], customId: obj7[1] } = type);
                     let type2;
@@ -1505,20 +1505,20 @@ function getData(arg0, arr) {
                               let items = [type.component];
                               obj4[1] = items.map((type) => {
                                 type = type.type;
-                                if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                                if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                   let obj = { type: null, components: null };
                                   obj[0] = type.type;
                                   let components = type.components;
                                   obj[1] = components.map((type) => {
                                     type = type.type;
-                                    if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                                    if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                       let obj = { type: null, components: null };
                                       obj[0] = type.type;
                                       let components = type.components;
                                       obj[1] = components.map(() => { ... });
                                       return obj;
                                     } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                                      let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       obj = { type: null, custom_id: null, value: null };
                                       ({ type: obj9[0], customId: obj9[1] } = type);
                                       type = undefined;
@@ -1532,7 +1532,7 @@ function getData(arg0, arr) {
                                       obj[2] = value;
                                       return obj;
                                     } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                                      let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let type1;
                                       if (interactionComponentState != null) {
                                         type1 = interactionComponentState.type;
@@ -1553,7 +1553,7 @@ function getData(arg0, arr) {
                                       obj1[2] = mapped;
                                       return obj1;
                                     } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                                      let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj2 = { type: null, custom_id: null, values: null };
                                       ({ type: obj7[0], customId: obj7[1] } = type);
                                       let type2;
@@ -1582,7 +1582,7 @@ function getData(arg0, arr) {
                                                 obj4[1] = items.map(() => { ... })[0];
                                                 return obj4;
                                               } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                                let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj5 = { type: null, custom_id: null, value: null };
                                                 ({ type: obj3[0], customId: obj3[1] } = type);
                                                 let type3;
@@ -1596,7 +1596,7 @@ function getData(arg0, arr) {
                                                 obj5[2] = value;
                                                 return obj5;
                                               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj6 = { type: null, custom_id: null, values: null };
                                                 ({ type: obj2[0], customId: obj2[1] } = type);
                                                 let type4;
@@ -1610,7 +1610,7 @@ function getData(arg0, arr) {
                                                 obj6[2] = values;
                                                 return obj6;
                                               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                                let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
                                                 ({ type: obj[0], customId: obj[1] } = type);
                                                 let type5;
@@ -1620,13 +1620,13 @@ function getData(arg0, arr) {
                                                 obj[2] = type5 === type.type && iter.value;
                                                 return obj;
                                               } else {
-                                                outer1_1(tmp2[23])(false, "unreachable");
+                                                closure_1_1(tmp2[23])(false, "unreachable");
                                               }
                                             }
                                           }
                                         }
                                       }
-                                      let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                       let obj7 = { type: null, custom_id: null, values: null };
                                       ({ type: obj6[0], customId: obj6[1] } = type);
                                       let type6;
@@ -1644,7 +1644,7 @@ function getData(arg0, arr) {
                                   });
                                   return obj;
                                 } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                                  let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   obj = { type: null, custom_id: null, value: null };
                                   ({ type: obj9[0], customId: obj9[1] } = type);
                                   type = undefined;
@@ -1658,7 +1658,7 @@ function getData(arg0, arr) {
                                   obj[2] = value;
                                   return obj;
                                 } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                                  let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let type1;
                                   if (interactionComponentState != null) {
                                     type1 = interactionComponentState.type;
@@ -1672,7 +1672,7 @@ function getData(arg0, arr) {
                                   let mapped;
                                   if (uploadIds != null) {
                                     mapped = uploadIds.map((arg0) => {
-                                      let closure_0 = arg0;
+                                      closure_0 = arg0;
                                       uploads = uploads.uploads;
                                       return uploads.findIndex(() => { ... });
                                     });
@@ -1683,7 +1683,7 @@ function getData(arg0, arr) {
                                   obj1[2] = mapped;
                                   return obj1;
                                 } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                                  let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj2 = { type: null, custom_id: null, values: null };
                                   ({ type: obj7[0], customId: obj7[1] } = type);
                                   let type2;
@@ -1711,14 +1711,14 @@ function getData(arg0, arr) {
                                             let items = [type.component];
                                             obj4[1] = items.map((type) => {
                                               type = type.type;
-                                              if (outer1_0(outer1_2[13]).ComponentType.ACTION_ROW === type) {
+                                              if (closure_1_0(closure_1_2[13]).ComponentType.ACTION_ROW === type) {
                                                 let obj = { type: null, components: null };
                                                 obj[0] = type.type;
                                                 let components = type.components;
                                                 obj[1] = components.map(() => { ... });
                                                 return obj;
                                               } else if (tmp(tmp2[13]).ComponentType.TEXT_INPUT === type) {
-                                                let iter3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let iter3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 obj = { type: null, custom_id: null, value: null };
                                                 ({ type: obj9[0], customId: obj9[1] } = type);
                                                 type = undefined;
@@ -1732,7 +1732,7 @@ function getData(arg0, arr) {
                                                 obj[2] = value;
                                                 return obj;
                                               } else if (tmp(tmp2[13]).ComponentType.FILE_UPLOAD === type) {
-                                                let interactionComponentState = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let interactionComponentState = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let type1;
                                                 if (interactionComponentState != null) {
                                                   type1 = interactionComponentState.type;
@@ -1753,7 +1753,7 @@ function getData(arg0, arr) {
                                                 obj1[2] = mapped;
                                                 return obj1;
                                               } else if (tmp(tmp2[13]).ComponentType.STRING_SELECT === type) {
-                                                let interactionComponentState1 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let interactionComponentState1 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj2 = { type: null, custom_id: null, values: null };
                                                 ({ type: obj7[0], customId: obj7[1] } = type);
                                                 let type2;
@@ -1782,7 +1782,7 @@ function getData(arg0, arr) {
                                                           obj4[1] = items.map(() => { ... })[0];
                                                           return obj4;
                                                         } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                                          let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                          let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                           let obj5 = { type: null, custom_id: null, value: null };
                                                           ({ type: obj3[0], customId: obj3[1] } = type);
                                                           let type3;
@@ -1796,7 +1796,7 @@ function getData(arg0, arr) {
                                                           obj5[2] = value;
                                                           return obj5;
                                                         } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                                          let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                          let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                           let obj6 = { type: null, custom_id: null, values: null };
                                                           ({ type: obj2[0], customId: obj2[1] } = type);
                                                           let type4;
@@ -1810,7 +1810,7 @@ function getData(arg0, arr) {
                                                           obj6[2] = values;
                                                           return obj6;
                                                         } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                                          let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                          let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                           obj = { type: null, custom_id: null, value: null };
                                                           ({ type: obj[0], customId: obj[1] } = type);
                                                           let type5;
@@ -1820,13 +1820,13 @@ function getData(arg0, arr) {
                                                           obj[2] = type5 === type.type && iter.value;
                                                           return obj;
                                                         } else {
-                                                          outer1_1(tmp2[23])(false, "unreachable");
+                                                          closure_1_1(tmp2[23])(false, "unreachable");
                                                         }
                                                       }
                                                     }
                                                   }
                                                 }
-                                                let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                                let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                                 let obj7 = { type: null, custom_id: null, values: null };
                                                 ({ type: obj6[0], customId: obj6[1] } = type);
                                                 let type6;
@@ -1844,7 +1844,7 @@ function getData(arg0, arr) {
                                             })[0];
                                             return obj4;
                                           } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                                            let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                            let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                             let obj5 = { type: null, custom_id: null, value: null };
                                             ({ type: obj3[0], customId: obj3[1] } = type);
                                             let type3;
@@ -1858,7 +1858,7 @@ function getData(arg0, arr) {
                                             obj5[2] = value;
                                             return obj5;
                                           } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                                            let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                            let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                             let obj6 = { type: null, custom_id: null, values: null };
                                             ({ type: obj2[0], customId: obj2[1] } = type);
                                             let type4;
@@ -1872,7 +1872,7 @@ function getData(arg0, arr) {
                                             obj6[2] = values;
                                             return obj6;
                                           } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                                            let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                            let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                             obj = { type: null, custom_id: null, value: null };
                                             ({ type: obj[0], customId: obj[1] } = type);
                                             let type5;
@@ -1882,13 +1882,13 @@ function getData(arg0, arr) {
                                             obj[2] = type5 === type.type && iter.value;
                                             return obj;
                                           } else {
-                                            outer1_1(tmp2[23])(false, "unreachable");
+                                            closure_1_1(tmp2[23])(false, "unreachable");
                                           }
                                         }
                                       }
                                     }
                                   }
-                                  let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                                  let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                                   let obj7 = { type: null, custom_id: null, values: null };
                                   ({ type: obj6[0], customId: obj6[1] } = type);
                                   let type6;
@@ -1906,7 +1906,7 @@ function getData(arg0, arr) {
                               })[0];
                               return obj4;
                             } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                              let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                              let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                               let obj5 = { type: null, custom_id: null, value: null };
                               ({ type: obj3[0], customId: obj3[1] } = type);
                               let type3;
@@ -1920,7 +1920,7 @@ function getData(arg0, arr) {
                               obj5[2] = value;
                               return obj5;
                             } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                              let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                              let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                               let obj6 = { type: null, custom_id: null, values: null };
                               ({ type: obj2[0], customId: obj2[1] } = type);
                               let type4;
@@ -1934,7 +1934,7 @@ function getData(arg0, arr) {
                               obj6[2] = values;
                               return obj6;
                             } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                              let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                              let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                               obj = { type: null, custom_id: null, value: null };
                               ({ type: obj[0], customId: obj[1] } = type);
                               let type5;
@@ -1944,13 +1944,13 @@ function getData(arg0, arr) {
                               obj[2] = type5 === type.type && iter.value;
                               return obj;
                             } else {
-                              outer1_1(tmp2[23])(false, "unreachable");
+                              closure_1_1(tmp2[23])(false, "unreachable");
                             }
                           }
                         }
                       }
                     }
-                    let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                    let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                     let obj7 = { type: null, custom_id: null, values: null };
                     ({ type: obj6[0], customId: obj6[1] } = type);
                     let type6;
@@ -1968,7 +1968,7 @@ function getData(arg0, arr) {
                 })[0];
                 return obj4;
               } else if (tmp(tmp2[13]).ComponentType.RADIO_GROUP === type) {
-                let iter2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                let iter2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                 let obj5 = { type: null, custom_id: null, value: null };
                 ({ type: obj3[0], customId: obj3[1] } = type);
                 let type3;
@@ -1982,7 +1982,7 @@ function getData(arg0, arr) {
                 obj5[2] = value;
                 return obj5;
               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX_GROUP === type) {
-                let interactionComponentState2 = outer1_14.getInteractionComponentState(closure_0, type.id);
+                let interactionComponentState2 = closure_1_14.getInteractionComponentState(closure_0, type.id);
                 let obj6 = { type: null, custom_id: null, values: null };
                 ({ type: obj2[0], customId: obj2[1] } = type);
                 let type4;
@@ -1996,7 +1996,7 @@ function getData(arg0, arr) {
                 obj6[2] = values;
                 return obj6;
               } else if (tmp(tmp2[13]).ComponentType.CHECKBOX === type) {
-                let iter = outer1_14.getInteractionComponentState(closure_0, type.id);
+                let iter = closure_1_14.getInteractionComponentState(closure_0, type.id);
                 obj = { type: null, custom_id: null, value: null };
                 ({ type: obj[0], customId: obj[1] } = type);
                 let type5;
@@ -2006,13 +2006,13 @@ function getData(arg0, arr) {
                 obj[2] = type5 === type.type && iter.value;
                 return obj;
               } else {
-                outer1_1(tmp2[23])(false, "unreachable");
+                closure_1_1(tmp2[23])(false, "unreachable");
               }
             }
           }
         }
       }
-      let interactionComponentState3 = outer1_14.getInteractionComponentState(closure_0, type.id);
+      let interactionComponentState3 = closure_1_14.getInteractionComponentState(closure_0, type.id);
       let obj7 = { type: null, custom_id: null, values: null };
       ({ type: obj6[0], customId: obj6[1] } = type);
       let type6;
@@ -2030,10 +2030,10 @@ function getData(arg0, arr) {
   });
 }
 function getUploadsForModal(id) {
-  let closure_0 = arg1;
+  closure_0 = arg1;
   uploads = uploads.getUploads(id, DraftType.InteractionModal);
   return uploads.filter((id) => {
-    const result = callback(outer1_2[24]).deserializeComponentUploadId(id.id);
+    const result = callback(closure_1_2[24]).deserializeComponentUploadId(id.id);
     let containerId;
     if (result != null) {
       containerId = result.containerId;
@@ -2054,11 +2054,11 @@ function submitModal() {
 function _submitModal() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c5 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c5 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c6 === 2) {
         c6 = 3;
@@ -2076,7 +2076,7 @@ function _submitModal() {
       } else {
         try {
           c6 = 2;
-          if (0 === DISCORD_EPOCH) {
+          if (0 === closure_5) {
             if (arg0 === 1) {
               c6 = 3;
               throw arg1;
@@ -2090,17 +2090,17 @@ function _submitModal() {
               let channel = tmp2;
               channel = undefined;
               arr = undefined;
-              DISCORD_EPOCH = undefined;
+              closure_5 = undefined;
               c6 = undefined;
               const channelId = lib.channelId;
-              channel = outer1_7.getChannel(channelId);
+              channel = closure_1_7.getChannel(channelId);
               callback(table[23])(null != channel, "expected channel");
-              arr = outer1_17(channelId, lib.customId);
+              arr = closure_1_17(channelId, lib.customId);
               let tmp7;
               if (arr.length > 0) {
                 tmp7 = callback(tmp30[25])(arr);
               }
-              let obj1 = lib(tmp30[26]);
+              obj1 = lib(tmp30[26]);
               obj1 = { data: null, preflight: null };
               const obj2 = { interactionType: null, applicationId: null };
               obj2[0] = lib(table[13]).InteractionTypes.MODAL_SUBMIT;
@@ -2108,7 +2108,7 @@ function _submitModal() {
               obj1[0] = obj2;
               obj1[1] = tmp7;
               obj1.addQueued(table, obj1);
-              DISCORD_EPOCH = 1;
+              closure_5 = 1;
               c6 = 1;
               const obj3 = { value: null, done: false };
               obj3[0] = tmp7;
@@ -2123,7 +2123,7 @@ function _submitModal() {
             obj[0] = arg1;
             return obj;
           } else {
-            DISCORD_EPOCH = arr.map((closure_0, closure_1) => lib(4830).getAttachmentPayload(closure_0, closure_1));
+            closure_5 = arr.map((closure_0, closure_1) => lib(4830).getAttachmentPayload(closure_0, closure_1));
             const obj4 = { uploads: null };
             obj4[0] = arr;
             c6 = callback2(lib.customId, lib.components, obj4);
@@ -2136,7 +2136,7 @@ function _submitModal() {
                 if (!aborted) {
                   const HTTP = lib(530).HTTP;
                   let obj = { url: null, body: null, signal: null, rejectWithError: false };
-                  obj[0] = outer1_15.INTERACTIONS;
+                  obj[0] = closure_1_15.INTERACTIONS;
                   obj = { type: null, application_id: null, channel_id: null, guild_id: null, data: null, session_id: null, nonce: null };
                   obj[0] = lib(1954).InteractionTypes.MODAL_SUBMIT;
                   obj[1] = lib.application.id;
@@ -2157,10 +2157,10 @@ function _submitModal() {
                   HTTP.post(obj).catch((status) => {
                     if (429 === status.status) {
                       const _setTimeout = setTimeout;
-                      const timerId = setTimeout(ensureGuildLoaded, status.body.retry_after * outer1_1(outer1_2[29]).Millis.SECOND);
+                      const timerId = setTimeout(closure_7, status.body.retry_after * closure_1_1(closure_1_2[29]).Millis.SECOND);
                     } else {
-                      outer1_0(outer1_2[26]).setFailed(closure_2);
-                      const obj = outer1_0(outer1_2[26]);
+                      closure_1_0(closure_1_2[26]).setFailed(closure_2);
+                      const obj = closure_1_0(closure_1_2[26]);
                     }
                   });
                   const postResult = HTTP.post(obj);
@@ -2178,7 +2178,7 @@ function _submitModal() {
       }
     })();
   });
-  const _submitModal = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2187,7 +2187,7 @@ function _submitModal() {
   }
   return applyArgumentsResult;
 }
-let result = require("noop").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/interaction_components/InteractionModalUtils.tsx");
 
 export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id) {
   const componentStateContext = isInteractionComponent.useComponentStateContext();
@@ -2214,29 +2214,23 @@ export const useIsFirstTextInputInModal = function useIsFirstTextInputInModal(id
   return tmp6;
 };
 export const useModalState = function useModalState(channelId) {
-  let application;
-  let _slicedToArray;
-  let customId;
-  let tmp3;
-  let tmp7;
-  let tmp8;
   application = channelId;
-  const importDefault = arg1;
+  importDefault = arg1;
   ({ application, customId } = channelId);
   const tmp = importDefault(customId[16])();
   let callback = tmp;
-  [tmp3, _slicedToArray] = callback2(first.useState(null), 2);
+  [tmp3, closure_4] = callback2(first.useState(null), 2);
   const tmp4 = callback2(first.useState(null), 2);
   first = tmp4[0];
-  let fetchFingerprint = tmp4[1];
+  closure_6 = tmp4[1];
   const tmp2 = callback2(first.useState(null), 2);
   [tmp7, tmp8] = callback2(first.useState({}), 2);
   let obj = application(customId[17]);
-  const items = [getModalState];
+  const items = [closure_12];
   const items1 = [first];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_12.getModalState(first), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_12.getModalState(first), items1);
   const tmp10 = importDefault(customId[18])(() => new Set());
-  const DraftType = tmp10;
+  closure_8 = tmp10;
   const items2 = [tmp, channelId, tmp10];
   const items3 = [first, stateFromStores, arg1, customId, channelId.channelId];
   callback = first.useCallback(callback(function*() {
@@ -2266,28 +2260,28 @@ export const useModalState = function useModalState(channelId) {
             obj[0] = arg1;
             return obj;
           } else {
-            outer1_4(null);
-            outer1_6(null);
-            if ((function validate(outer1_8) {
-              let c0 = true;
-              const item = outer1_8.forEach((arg0) => {
+            closure_1_4(null);
+            closure_1_6(null);
+            if ((function validate(closure_1_8) {
+              c0 = true;
+              const item = closure_1_8.forEach((arg0) => {
                 if (!arg0()) {
-                  let c0 = false;
+                  c0 = false;
                 }
               });
               return c0;
-            })(outer1_8)) {
-              let obj1 = v0(outer1_2[19]);
+            })(closure_1_8)) {
+              obj1 = v0(closure_1_2[19]);
               const _Date = Date;
               const fromTimestampResult = obj1.fromTimestamp(Date.now());
               tmp22(fromTimestampResult);
               v0 = 1;
               c0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = outer1_18(c0, outer1_3, fromTimestampResult);
+              obj1[0] = closure_1_18(c0, closure_1_3, fromTimestampResult);
               return obj1;
             }
-            tmp22 = outer1_6;
+            tmp22 = closure_1_6;
           }
         } else if (arg0 === 1) {
           c0 = 3;
@@ -2307,26 +2301,26 @@ export const useModalState = function useModalState(channelId) {
     }
   }), items2);
   const effect = first.useEffect(() => {
-    if (stateFromStores === outer1_13.SUCCEEDED) {
+    if (stateFromStores === closure_1_13.SUCCEEDED) {
       let obj = callback(customId[20]);
       obj = { type: "CLEAR_INTERACTION_MODAL_STATE", customId: null };
       obj[1] = customId;
       obj.dispatch(obj);
-      const application = customId;
-      const uploads = outer1_11.getUploads(application.channelId, tmp10.InteractionModal);
+      application = customId;
+      const uploads = closure_1_11.getUploads(application.channelId, closure_8.InteractionModal);
       const found = uploads.filter((id) => {
-        const result = callback(outer1_2[24]).deserializeComponentUploadId(id.id);
+        const result = callback(closure_1_2[24]).deserializeComponentUploadId(id.id);
         let containerId;
         if (result != null) {
           containerId = result.containerId;
         }
         return containerId === callback;
       });
-      callback(customId[21]).removeFiles(application.channelId, found.map((id) => id.id), tmp10.InteractionModal);
+      callback(customId[21]).removeFiles(application.channelId, found.map((id) => id.id), closure_8.InteractionModal);
       callback();
       const obj3 = callback(customId[21]);
     }
-    if (stateFromStores === outer1_13.ERRORED) {
+    if (stateFromStores === closure_1_13.ERRORED) {
       const intl = application(customId[22]).intl;
       callback2(intl.string(application(customId[22]).t.uJgdEu));
     }
@@ -2334,14 +2328,14 @@ export const useModalState = function useModalState(channelId) {
   const items4 = [, , , ];
   ({ id: arr5[0], icon: arr5[1], name: arr5[2], bot: arr5[3] } = application);
   const memo = first.useMemo(() => {
-    const guildId = outer1_10.getGuildId();
+    const guildId = closure_1_10.getGuildId();
     let member;
     if (null != guildId) {
       if (null != application.bot) {
-        member = outer1_9.getMember(guildId, tmp3.bot.id);
+        member = closure_1_9.getMember(guildId, tmp3.bot.id);
       }
     }
-    let obj = outer1_1(outer1_2[14]);
+    let obj = closure_1_1(closure_1_2[14]);
     obj = { id: application.id, icon: application.icon, botIconFirst: true, bot: null, guildMember: null };
     let bot;
     if (null != member) {
@@ -2362,29 +2356,25 @@ export const useModalState = function useModalState(channelId) {
       name = tmp7.name;
     }
     obj[1] = name;
-    obj[2] = outer1_1(outer1_2[15])(application.id);
+    obj[2] = closure_1_1(closure_1_2[15])(application.id);
     return obj;
   }, items4);
   obj = { components: channelId.components, applicationIconURL: memo.applicationIconURL, applicationName: memo.applicationName, submissionState: stateFromStores, error: tmp3, validators: tmp10, validationErrors: tmp7, setValidationErrors: tmp8, onSubmit: callback };
   return obj;
 };
 export const useIframeModalState = function useIframeModalState(channelId) {
-  let application;
-  let applicationIconURL;
-  let applicationName;
-  let customId;
   ({ application, customId } = channelId);
   const items = [, , , ];
   ({ id: arr[0], icon: arr[1], name: arr[2], bot: arr[3] } = application);
   const memo = React.useMemo(() => {
-    const guildId = outer1_10.getGuildId();
+    const guildId = closure_1_10.getGuildId();
     let member;
     if (null != guildId) {
       if (null != application.bot) {
-        member = outer1_9.getMember(guildId, tmp3.bot.id);
+        member = closure_1_9.getMember(guildId, tmp3.bot.id);
       }
     }
-    let obj = outer1_1(outer1_2[14]);
+    let obj = closure_1_1(closure_1_2[14]);
     obj = { id: application.id, icon: application.icon, botIconFirst: true, bot: null, guildMember: null };
     let bot;
     if (null != member) {
@@ -2405,13 +2395,13 @@ export const useIframeModalState = function useIframeModalState(channelId) {
       name = tmp7.name;
     }
     obj[1] = name;
-    obj[2] = outer1_1(outer1_2[15])(application.id);
+    obj[2] = closure_1_1(closure_1_2[15])(application.id);
     return obj;
   }, items);
   const applicationBaseUrl = memo.applicationBaseUrl;
   ({ applicationIconURL, applicationName } = memo);
   channel = channel.getChannel(channelId.channelId);
-  00038__(null != channel, "channel should not be null");
+  _modDef38(null != channel, "channel should not be null");
   let obj = { instance_id: "" + channelId.channelId + ":" + application.id + ":" + customId, custom_id: customId, channel_id: channelId.channelId };
   if (tmp4) {
     obj.guild_id = channel.guild_id;

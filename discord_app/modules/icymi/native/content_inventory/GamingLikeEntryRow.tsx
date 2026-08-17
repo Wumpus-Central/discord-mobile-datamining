@@ -1,22 +1,20 @@
 // discord_app/modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx
-import ICYMIActionCreators from "../../ICYMIActionCreators.tsx";
-import { View } from "Screenshot";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "useReplyActions";
-import createICYMIStyles from "createICYMIStyles";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TrendingType } from "../../../../../discord_common/js/shared/shared-constants/TrendingType.tsx";
-import { calculateTimestampDurations } from "../../../content_inventory/utils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import calculateTimestampDurations from "calculateTimestampDurations" /* 8348 */;
+import ActiveTimestampAll from "ActiveTimestamp" /* 12105 */;
+import TrendingType from "TrendingType" /* 12110 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
-let obj = { Badge: require("ActiveTimestamp").NewGameBadge, predicate: require("calculateTimestampDurations").isEntryNew };
+require = arg1;
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
+let obj = { Badge: ActiveTimestampAll.NewGameBadge, predicate: require("calculateTimestampDurations").isEntryNew };
 let items = [obj, , , , ];
 obj = {
-  Badge: require("ActiveTimestamp").StreakBadge,
+  Badge: ActiveTimestampAll.StreakBadge,
   predicate(entry) {
     let num = calculateTimestampDurations.getStreakCount(entry);
     if (num == null) {
@@ -27,7 +25,7 @@ obj = {
 };
 items[1] = obj;
 obj = {
-  Badge: require("ActiveTimestamp").TrendingBadge,
+  Badge: ActiveTimestampAll.TrendingBadge,
   predicate(entry) {
     const trendingType = calculateTimestampDurations.getTrendingType(entry);
     const obj = calculateTimestampDurations;
@@ -37,57 +35,57 @@ obj = {
 };
 items[2] = obj;
 items[3] = {
-  Badge: require("ActiveTimestamp").ResurrectedBadge,
+  Badge: ActiveTimestampAll.ResurrectedBadge,
   predicate() {
     return true;
   }
 };
 let obj1 = {
-  Badge: require("ActiveTimestamp").ResurrectedBadge,
+  Badge: ActiveTimestampAll.ResurrectedBadge,
   predicate() {
     return true;
   }
 };
 items[4] = {
-  Badge: require("ActiveTimestamp").MarathonBadge,
+  Badge: ActiveTimestampAll.MarathonBadge,
   predicate(entry) {
     return true === calculateTimestampDurations.isEntryMarathon(entry);
   }
 };
 let closure_11 = createICYMIStyles.createICYMIStyles((gap) => {
   let obj = { card: null, cardInnerContainer: null, image: null, gameName: null, badges: null };
-  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: Themes.radii.lg, backgroundColor: Themes.colors.BACKGROUND_SURFACE_HIGH };
-  const merged = Object.assign(Themes.shadows.SHADOW_HIGH);
+  obj = { flexDirection: "row", gap: gap.margin, alignItems: "center", padding: gap.margin, marginLeft: gap.inset, borderRadius: ThemesDefault.radii.lg, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+  const merged = Object.assign(ThemesDefault.shadows.SHADOW_HIGH);
   obj[0] = obj;
   obj[1] = { overflow: "hidden", flex: 1 };
-  obj = { width: 72, height: 72, borderRadius: Themes.radii.sm };
+  obj = { width: 72, height: 72, borderRadius: ThemesDefault.radii.sm };
   obj[2] = obj;
-  obj[3] = { maxWidth: 275, color: Themes.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  const obj1 = { maxWidth: 275, color: Themes.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
-  obj[4] = { display: "flex", flexDirection: "row", gap: Themes.space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
+  obj[3] = { maxWidth: 275, color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  obj1 = { maxWidth: 275, color: ThemesDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_PRIMARY };
+  obj[4] = { display: "flex", flexDirection: "row", gap: ThemesDefault.space.PX_8, flexWrap: "wrap", alignItems: "center", marginTop: 6 };
   return obj;
 });
 let obj2 = {
-  Badge: require("ActiveTimestamp").MarathonBadge,
+  Badge: ActiveTimestampAll.MarathonBadge,
   predicate(entry) {
     return true === calculateTimestampDurations.isEntryMarathon(entry);
   }
 };
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/GamingLikeEntryRow.tsx");
 
 export default function GamingLikeEntryRow(content) {
   content = content.content;
   const renderForScreenshot = content.renderForScreenshot;
   let author_id;
-  let c2;
+  closure_2 = undefined;
   let openReplyActionSheet;
   const tmp = callback();
   const application_id = content.extra.application_id;
   author_id = content.author_id;
   let obj = content(openReplyActionSheet[9]);
-  let items = [mergeGuildAvatar];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_6.getUser(author_id));
-  let obj1 = content(openReplyActionSheet[11]);
+  items = [closure_6];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_6.getUser(author_id));
+  obj1 = content(openReplyActionSheet[11]);
   const displayNameStylesFont = obj1.useDisplayNameStylesFont({ displayNameStyles: author_id(openReplyActionSheet[10])({ userId: author_id }) });
   let obj2 = content(openReplyActionSheet[12]);
   const getOrFetchApplication = obj2.useGetOrFetchApplication(application_id);
@@ -104,10 +102,10 @@ export default function GamingLikeEntryRow(content) {
   obj[2] = content(openReplyActionSheet[15]).GameProfileSources.ActivityCard;
   obj[4] = author_id;
   const tmp5ResultResult = tmp5Result(obj);
-  c2 = tmp5ResultResult;
+  closure_2 = tmp5ResultResult;
   const items1 = [tmp5ResultResult];
   callback = React.useCallback(() => {
-    if (null != c2) {
+    if (null != closure_2) {
       tmp();
     }
   }, items1);
@@ -116,16 +114,16 @@ export default function GamingLikeEntryRow(content) {
     if (content.content_type === content(openReplyActionSheet[16]).ContentInventoryEntryType.TOP_GAME) {
       let obj = { entry: null };
       obj[0] = content;
-      const items = [outer1_7(_undefined(openReplyActionSheet[4]).TopGameBadge, obj, "topgame")];
+      items = [closure_1_7(callback(openReplyActionSheet[4]).TopGameBadge, obj, "topgame")];
       let found = items;
     } else {
-      const mapped = outer1_10.map((Badge) => {
+      const mapped = closure_1_10.map((Badge) => {
         Badge = Badge.Badge;
         let tmp2 = null;
         if (Badge.predicate(closure_0)) {
           const obj = { entry: null };
           obj[0] = closure_0;
-          tmp2 = outer1_7(Badge, obj, Badge.name);
+          tmp2 = closure_1_7(Badge, obj, Badge.name);
         }
         return tmp2;
       });
@@ -139,17 +137,17 @@ export default function GamingLikeEntryRow(content) {
     content(openReplyActionSheet[18])(openReplyActionSheet[17], openReplyActionSheet.paths).then((GameShareModal) => {
       GameShareModal = GameShareModal.GameShareModal;
       if (null != GameShareModal) {
-        let obj = outer1_1(outer1_3[19]);
+        let obj = closure_1_1(closure_1_3[19]);
         obj.itemInteracted(GameShareModal.id, "hotwheels_gaming_activity", "press_forward");
         obj = { itemId: null, itemType: "hotwheels_gaming_activity", actionParameters: null };
         obj[0] = GameShareModal.id;
         obj[2] = { actionGestureType: "press", actionTargetElement: "forward_button", actionIntentType: "share", actionDestinationType: null };
-        outer1_1(outer1_3[19]).feedItemActioned(obj);
-        const obj4 = outer1_1(outer1_3[20]);
+        closure_1_1(closure_1_3[19]).feedItemActioned(obj);
+        const obj4 = closure_1_1(closure_1_3[20]);
         obj = { content: null };
         obj[0] = GameShareModal;
         obj4.pushLazy(() => Promise.resolve(GameShareModal), obj, "GameShareModal", { presentation: "modal" });
-        const obj2 = outer1_1(outer1_3[19]);
+        const obj2 = closure_1_1(closure_1_3[19]);
       }
     });
   }, items3);

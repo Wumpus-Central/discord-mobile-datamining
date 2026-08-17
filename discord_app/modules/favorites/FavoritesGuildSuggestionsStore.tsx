@@ -1,17 +1,17 @@
 // discord_app/modules/favorites/FavoritesGuildSuggestionsStore.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import withContent from "withContent";
-import { NOOP } from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import keys from "keys";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "withContent" /* 1383 */;
+import { NOOP } from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import keys from "keys" /* 644 */;
 import { useSelectedDismissibleContent } from "../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import { useFavoritesAccess } from "FavoritesHooks.tsx";
 
-let require = arg1;
+const require = arg1;
 let items = [];
 let closure_8 = keys.create(() => ({ suggestions: items, dismiss: NOOP }));
-const result = require("withContent").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/FavoritesGuildSuggestionsStore.tsx");
 
 export const NO_SUGGESTIONS = items;
 export const useFavoritesGuildSuggestions = function useFavoritesGuildSuggestions() {
@@ -27,7 +27,7 @@ export const setFavoritesGuildSuggestions = function setFavoritesGuildSuggestion
   state.setState({ suggestions });
 };
 export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuildSuggestionsVisibility() {
-  let obj = useFavoritesAccess;
+  let obj = _useFavoritesAccess;
   const favoritesAccess = obj.useFavoritesAccess();
   let isFreemium = favoritesAccess.hasAccess;
   if (isFreemium) {
@@ -38,19 +38,19 @@ export const useFavoritesGuildSuggestionsVisibility = function useFavoritesGuild
   }
   tmp4 = callback2((postConnectionOpen) => postConnectionOpen.postConnectionOpen);
   if (isFreemium) {
-    const items = [tmp(1377).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
+    items = [tmp(1377).DismissibleContent.FAVORITES_GUILD_SUGGESTIONS];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const tmp5 = callback(useSelectedDismissibleContent.useSelectedDismissibleContent(items1), 2);
-  require = tmp6;
+  const tmp5 = callback(_useSelectedDismissibleContent.useSelectedDismissibleContent(items1), 2);
+  _require = tmp6;
   const items2 = [tmp5[1]];
   const layoutEffect = React.useLayoutEffect(() => {
-    outer1_8.setState({
+    closure_1_8.setState({
       dismiss() {
-        callback(outer1_6.USER_DISMISS);
-        outer1_8.setState({ suggestions: outer1_7 });
+        callback(closure_1_6.USER_DISMISS);
+        closure_1_8.setState({ suggestions: closure_1_7 });
       }
     });
   }, items2);

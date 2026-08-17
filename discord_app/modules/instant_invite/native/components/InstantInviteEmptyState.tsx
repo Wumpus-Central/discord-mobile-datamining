@@ -1,42 +1,38 @@
 // discord_app/modules/instant_invite/native/components/InstantInviteEmptyState.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import updateWithLatestInvite from "updateWithLatestInvite";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/12367_registerAsset.js";
-import { ClearButton } from "../../../../design/void/Form/native/FreeFormTextInput.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import ClearButtonDefault from "ClearButton" /* 8577 */;
+import registerAssetDefault from "registerAsset" /* 12367 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "updateWithLatestInvite" /* 8919 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { container: { padding: 16 }, emptyStateContainer: { padding: 0, marginBottom: 16 }, emptyStateArt: { marginBottom: 16 }, emptyStateTitle: { marginBottom: 4 }, linkContainer: { maxWidth: "100%", flexDirection: "row", marginBottom: 8, gap: 8 }, inviteInput: { flexShrink: 1 }, expireCaption: { marginBottom: 16 }, settingsButton: null };
-createCacheKey = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderRadius: require("Themes").radii.xs };
+createCacheKey = { width: 48, height: 48, justifyContent: "center", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[7] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("updateWithLatestInvite").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/instant_invite/native/components/InstantInviteEmptyState.tsx");
 
 export default function _default(link) {
-  let onCopy;
-  let onPressSettings;
-  let onShare;
   let str = link.link;
   let stateFromStores;
   ({ onCopy, onShare, onPressSettings } = link);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = stateFromStores(589);
-  const items = [updateWithLatestInvite];
+  const items = [closure_4];
   stateFromStores = obj.useStateFromStores(items, () => inviteSettings.getInviteSettings());
   obj = { style: tmp.container, children: null };
-  obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: null, title: null, body: null };
-  obj[3] = registerAsset;
+  obj = { containerStyle: tmp.emptyStateContainer, imageStyle: tmp.emptyStateArt, titleStyle: tmp.emptyStateTitle, source: registerAssetDefault, title: null, body: null };
   const intl = stateFromStores(1236).intl;
   obj[4] = intl.string(stateFromStores(1236).t.tQc0l8);
   const intl2 = stateFromStores(1236).intl;
   obj[5] = intl2.string(stateFromStores(1236).t.DXgdcD);
   const items1 = [callback(stateFromStores(1297).RefreshEmptyState, obj), , , ];
-  const obj1 = { style: tmp.linkContainer, children: null };
+  obj1 = { style: tmp.linkContainer, children: null };
   const obj2 = { accessibilityRole: "button", onPress: onCopy, editable: false, value: null, style: null, forceAccessibleContainer: true, clearButtonVisibility: null };
   if (str == null) {
     str = "";
@@ -44,7 +40,7 @@ export default function _default(link) {
   obj2[3] = str;
   obj2[4] = tmp.inviteInput;
   obj2[6] = stateFromStores(1297).ClearButtonVisibility.NEVER;
-  const items2 = [callback(ClearButton, obj2), ];
+  const items2 = [callback(ClearButtonDefault, obj2), ];
   const obj3 = { accessibilityLabel: null, accessibilityRole: "button", onPress: null, style: null, children: null };
   const intl3 = tmp2(1236).intl;
   obj3[0] = intl3.string(stateFromStores(1236).t["3D5yo/"]);

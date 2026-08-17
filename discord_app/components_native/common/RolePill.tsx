@@ -1,33 +1,29 @@
 // discord_app/components_native/common/RolePill.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
+noopAll;
 ({ EMPTY_STRING_SNOWFLAKE_ID: c4, MAX_VISUAL_ROLE_LENGTH: c5 } = ME);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, pill: null, bubble: null, verifiedContainer: null, roleIcon: null };
-createCacheKey = { marginRight: 4, marginBottom: 4, borderRadius: require("Themes").radii.xs };
+createCacheKey = { marginRight: 4, marginBottom: 4, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
-createCacheKey[2] = { marginRight: 8, borderRadius: require("Themes").radii.sm, height: 12, width: 12, backgroundColor: require("Themes").colors.ICON_MUTED };
-let obj2 = { marginRight: 8, borderRadius: require("Themes").radii.sm, height: 12, width: 12, backgroundColor: require("Themes").colors.ICON_MUTED };
-createCacheKey[3] = { marginRight: 8, borderRadius: require("Themes").radii.sm, height: 12, width: 12 };
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+let obj1 = { flexDirection: "row", alignItems: "center", paddingHorizontal: 8, paddingVertical: 6, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
+createCacheKey[2] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12, backgroundColor: ThemesDefault.colors.ICON_MUTED };
+let obj2 = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12, backgroundColor: ThemesDefault.colors.ICON_MUTED };
+createCacheKey[3] = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
 createCacheKey[4] = { paddingRight: 4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginRight: 8, borderRadius: require("Themes").radii.sm, height: 12, width: 12 };
-const result = require("ME").fileFinishedImporting("components_native/common/RolePill.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { marginRight: 8, borderRadius: ThemesDefault.radii.sm, height: 12, width: 12 };
+const result = require("set").fileFinishedImporting("components_native/common/RolePill.tsx");
 
 export default function RolePill(role) {
-  let color;
-  let guildId;
   role = role.role;
   ({ guildId, color } = role);
   let combined;
@@ -52,7 +48,7 @@ export default function RolePill(role) {
   if (tags != null) {
     guild_connections = tags.guild_connections;
   }
-  const tmp9 = createCacheKey();
+  const tmp9 = callback();
   let disableInteraction = !setting;
   if (setting) {
     disableInteraction = role.disableInteraction;
@@ -61,14 +57,14 @@ export default function RolePill(role) {
     disabled: disableInteraction,
     style: tmp9.container,
     onPress: function handlePress() {
-      role(outer1_2[8]).copy(role.id);
-      const obj = role(outer1_2[8]);
-      role(outer1_2[9]).roleIdCopied(combined);
+      role(closure_1_2[8]).copy(role.id);
+      const obj = role(closure_1_2[8]);
+      role(closure_1_2[9]).roleIdCopied(combined);
     },
     accessible: false,
     children: null
   };
-  const obj1 = { style: tmp9.pill, children: null };
+  obj1 = { style: tmp9.pill, children: null };
   if (undefined !== guild_connections) {
     const obj2 = { style: null, roleId: null, guildId: null, roleColor: null, size: 14, displayRoleIcon: false };
     obj2[0] = tmp9.verifiedContainer;

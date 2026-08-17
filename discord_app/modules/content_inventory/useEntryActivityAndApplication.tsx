@@ -1,17 +1,17 @@
 // discord_app/modules/content_inventory/useEntryActivityAndApplication.tsx
-import _slicedToArray from "_slicedToArray";
-import participantFromServer from "participantFromServer";
-import entryToKey from "entryToKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "participantFromServer" /* 1390 */;
+import closure_5 from "entryToKey" /* 12098 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("entryToKey").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
+const result = require("set").fileFinishedImporting("modules/content_inventory/useEntryActivityAndApplication.tsx");
 
 export default function useEntryActivityAndApplication(extra) {
   const _require = extra;
   let obj = _initialize;
-  const items = [entryToKey];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getMatchingActivity(closure_0));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getMatchingActivity(closure_0));
   let application_id;
   if (stateFromStores != null) {
     application_id = stateFromStores.application_id;
@@ -27,13 +27,13 @@ export default function useEntryActivityAndApplication(extra) {
   obj = { activity: stateFromStores, embeddedActivity: null, anyMatchingApplication: null, activityApplication: null, fallbackApplication: null };
   const tmp = _require;
   const tmp4 = first(7145);
-  const items2 = [participantFromServer];
+  const items2 = [closure_4];
   obj[1] = _initialize.useStateFromStores(items2, () => {
     let id;
     if (first != null) {
       id = first.id;
     }
-    return outer1_4.getEmbeddedActivityForUserId(extra.author_id, id);
+    return closure_1_4.getEmbeddedActivityForUserId(extra.author_id, id);
   });
   let tmp10 = first;
   if (first == null) {

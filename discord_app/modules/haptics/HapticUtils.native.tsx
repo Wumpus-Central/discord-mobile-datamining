@@ -1,12 +1,14 @@
 // discord_app/modules/haptics/HapticUtils.native.tsx
-import { useHaptics } from "../../../_runtime/04345_useHaptics.js";
-import { set } from "../../utils/PlatformUtils.tsx";
-import { IMPACT_LIGHT } from "HapticFeedbackTypes.tsx";
-const result = require("set").fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
+import set from "set" /* 2 */;
+import set2 from "set" /* 500 */;
+import IMPACT_LIGHTDefault from "IMPACT_LIGHT" /* 4344 */;
+import useHaptics from "useHaptics" /* 4345 */;
 
-export const HapticFeedbackTypes = require("IMPACT_LIGHT");
+const result = set.fileFinishedImporting("modules/haptics/HapticUtils.native.tsx");
+
+export const HapticFeedbackTypes = IMPACT_LIGHTDefault;
 export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT) {
-  if (IMPACT_LIGHT.IMPACT_LIGHT === IMPACT_LIGHT) {
+  if (IMPACT_LIGHTDefault.IMPACT_LIGHT === IMPACT_LIGHT) {
     const obj41 = useHaptics;
     const tmp69 = require;
     let str36 = "selection";
@@ -20,7 +22,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
       tmp69Result = tmp69(4354);
     }
     obj41.trigger(str36);
-    obj42 = set;
+    obj42 = set2;
   } else if (tmp(4344).IMPACT_MEDIUM === IMPACT_LIGHT) {
     const obj38 = useHaptics;
     const tmp66 = require;
@@ -35,7 +37,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
       tmp66Result = tmp66(4354);
     }
     obj38.trigger(str34);
-    obj39 = set;
+    obj39 = set2;
   } else if (tmp(4344).IMPACT_HEAVY === IMPACT_LIGHT) {
     useHaptics.trigger("impactHeavy");
     const obj37 = useHaptics;
@@ -49,7 +51,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
       str31 = "impactMedium";
     }
     obj34.trigger(str31);
-    obj35 = set;
+    obj35 = set2;
   } else if (tmp(4344).DRAG_AND_DROP_END === IMPACT_LIGHT) {
     const obj31 = useHaptics;
     const tmp57 = require;
@@ -64,7 +66,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
       tmp57Result = tmp57(4354);
     }
     obj31.trigger(str29);
-    obj32 = set;
+    obj32 = set2;
   } else if (tmp(4344).DRAG_AND_DROP_MOVE === IMPACT_LIGHT) {
     const obj28 = useHaptics;
     const tmp54 = require;
@@ -79,7 +81,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
       tmp54Result = tmp54(4354);
     }
     obj28.trigger(str27);
-    obj29 = set;
+    obj29 = set2;
   } else if (tmp(4344).SOFT === IMPACT_LIGHT) {
     useHaptics.trigger("soft");
     const obj27 = useHaptics;
@@ -97,7 +99,7 @@ export const triggerHapticFeedback = function triggerHapticFeedback(IMPACT_LIGHT
       tmp49Result = tmp49(4354);
     }
     obj24.trigger(str24);
-    obj25 = set;
+    obj25 = set2;
   } else if (tmp(4344).RIGID === IMPACT_LIGHT) {
     useHaptics.trigger("rigid");
     const obj23 = useHaptics;

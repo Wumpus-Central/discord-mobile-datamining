@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/records/FeedBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function FeedBlockRecord(arg0) {
   const obj = Object.create(new.target.prototype);
@@ -16,6 +18,6 @@ prototype["fromServer"] = function fromServer(arg0) {
   ({ ranked_sku_ids: tmp2.rankedSkuIds, sorted_sku_ids: tmp2.sortedSkuIds } = arg0);
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/FeedBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/FeedBlockRecord.tsx");
 
 export const FeedBlockRecord = prototype;

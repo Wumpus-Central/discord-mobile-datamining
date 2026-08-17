@@ -1,21 +1,18 @@
 // discord_app/modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { ShopIcon } from "../../../design/components/Icon/native/redesign/generated/ShopIcon.tsx";
-import { getNameplateAssets } from "../../collectibles/nameplates/native/NameplateUtils.tsx";
-import { useMaybeFetchProfileFrame } from "../../collectibles/profile_frames/hooks/useMaybeFetchProfileFrame.tsx";
-import { getCollectibleTypeName } from "../FamilyCenterActivityPurchaseRowUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1949 */;
+import useMaybeFetchProfileFrameDefault from "useMaybeFetchProfileFrame" /* 8945 */;
+import getNameplateAssets from "getNameplateAssets" /* 9222 */;
+import ShopIcon from "ShopIcon" /* 11316 */;
+import getCollectibleTypeName from "getCollectibleTypeName" /* 14259 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { PROFILE_FRAME_ASPECT_RATIO as closure_5 } from "PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO" /* 8965 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 function AvatarDecorationPreviewImage(arg0) {
-  let product;
-  let styles;
   ({ product, styles } = arg0);
   let obj = getCollectibleTypeName;
   const avatarDecorationPreviewUrl = obj.getAvatarDecorationPreviewUrl(product);
@@ -39,7 +36,7 @@ function NameplatePreviewImage(styles) {
     obj = { style: null, children: null };
     obj[0] = styles.nameplateContainer;
     obj = { source: null, style: null, resizeMode: "cover", fadeDuration: 0 };
-    const obj1 = { uri: null };
+    obj1 = { uri: null };
     obj1[0] = staticImageUrl;
     obj[0] = obj1;
     obj[1] = styles.nameplatePreview;
@@ -49,8 +46,6 @@ function NameplatePreviewImage(styles) {
   return tmp;
 }
 function ProfileEffectPreviewImage(arg0) {
-  let product;
-  let styles;
   ({ product, styles } = arg0);
   let obj = getCollectibleTypeName;
   const profileEffectPreviewUrl = obj.getProfileEffectPreviewUrl(product);
@@ -66,10 +61,8 @@ function ProfileEffectPreviewImage(arg0) {
   return tmp2;
 }
 function ProfileFramePreviewImage(arg0) {
-  let product;
-  let styles;
   ({ product, styles } = arg0);
-  const tmp3 = useMaybeFetchProfileFrame(product.skuId, "FamilyCenterActivityItemPreview");
+  const tmp3 = useMaybeFetchProfileFrameDefault(product.skuId, "FamilyCenterActivityItemPreview");
   let tmp4 = null;
   if (null != tmp3) {
     let obj = { style: null, children: null };
@@ -86,8 +79,6 @@ function ProfileFramePreviewImage(arg0) {
   return tmp4;
 }
 function SubscriptionPreview(arg0) {
-  let styles;
-  let subscriptionPlanId;
   ({ subscriptionPlanId, styles } = arg0);
   if (null == subscriptionPlanId) {
     let obj = { style: null, children: null };
@@ -97,7 +88,7 @@ function SubscriptionPreview(arg0) {
     obj[1] = jsx(ShopIcon.ShopIcon, { size: "custom", style: null });
     return <closure_3 size="custom" style={null} />;
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = styles.purchasePlaceholder;
     if (obj4.isGuildBoostSubscription(subscriptionPlanId)) {
       let NitroWheelIcon = tmp5(7979).BoostGemIcon;
@@ -111,8 +102,6 @@ function SubscriptionPreview(arg0) {
   }
 }
 function CollectiblePreview(arg0) {
-  let product;
-  let styles;
   ({ product, styles } = arg0);
   if (null == product) {
     let obj = { style: null, children: null };
@@ -124,7 +113,7 @@ function CollectiblePreview(arg0) {
   } else {
     const type = product.type;
     if (CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION === type) {
-      const obj1 = { product: null, styles: null };
+      obj1 = { product: null, styles: null };
       obj1[0] = product;
       obj1[1] = styles;
       return <AvatarDecorationPreviewImage product={null} styles={null} />;
@@ -158,30 +147,25 @@ function CollectiblePreview(arg0) {
     }
   }
 }
+noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 createCacheKey = { purchasePlaceholder: null, avatarDecorationPreview: null, nameplateContainer: null, nameplatePreview: null, profileFrameContainer: null };
-createCacheKey = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
+createCacheKey = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, display: "flex", alignItems: "center", justifyContent: "center", marginRight: 12 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
 let obj1 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12 };
-createCacheKey[2] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: require("Themes").radii.xs, overflow: "hidden", position: "relative" };
-let obj3 = { position: "absolute", right: 0, width: null, height: null };
-obj3[2] = require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO;
-obj3[3] = require("getCollectibleTypeName").PREVIEW_SIZE;
-createCacheKey[3] = obj3;
-let obj2 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: require("Themes").radii.xs, overflow: "hidden", position: "relative" };
+createCacheKey[2] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
+let obj2 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, borderRadius: ThemesDefault.radii.xs, overflow: "hidden", position: "relative" };
+createCacheKey[3] = { position: "absolute", right: 0, width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO, height: require("getCollectibleTypeName").PREVIEW_SIZE };
+let obj3 = { position: "absolute", right: 0, width: require("getCollectibleTypeName").PREVIEW_SIZE * require("getCollectibleTypeName").NAMEPLATE_ASPECT_RATIO, height: require("getCollectibleTypeName").PREVIEW_SIZE };
 createCacheKey[4] = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 let obj4 = { width: require("getCollectibleTypeName").PREVIEW_SIZE, height: require("getCollectibleTypeName").PREVIEW_SIZE, marginRight: 12, alignItems: "center", justifyContent: "center" };
-const result = require("PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterActivityItemPreview.tsx");
 
 export default function FamilyCenterActivityItemPreview(arg0) {
-  let displayName;
-  let isSubscription;
-  let product;
-  let subscriptionPlanId;
   ({ displayName, product, isSubscription, subscriptionPlanId } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = { accessible: true, accessibilityLabel: displayName, children: null };
   if (isSubscription) {
     obj = { subscriptionPlanId: null, styles: null };

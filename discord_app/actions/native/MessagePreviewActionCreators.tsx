@@ -1,28 +1,27 @@
 // discord_app/actions/native/MessagePreviewActionCreators.tsx
-import ME from "ME";
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ME from "ME" /* 676 */;
 import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../../Dispatcher.tsx";
 
-let c3;
-let c4;
 ({ Endpoints: c3, MAX_MESSAGES_PER_CHANNEL: c4 } = ME);
-const result = require("dispatcher").fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
+const result = set.fileFinishedImporting("actions/native/MessagePreviewActionCreators.tsx");
 
 export default {
   fetchMessages(channelId, around) {
     const _require = channelId;
-    let closure_1 = around;
+    closure_1 = around;
     const HTTP = _sendRequest.HTTP;
     obj = { url: closure_3.MESSAGES(channelId), query: obj, retries: 2, oldFormErrors: true, rejectWithError: true };
     obj = { limit: closure_4, around };
     const value = HTTP.get(obj);
     value.then((body) => {
-      let obj = around(outer1_2[2]);
+      let obj = around(closure_1_2[2]);
       obj = { type: "LOAD_MESSAGES_AROUND_SUCCESS", channelId: closure_0, messages: body.body, around };
       obj.dispatch(obj);
     });
   },
   clearMessages() {
-    dispatcher.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
+    dispatcherDefault.dispatch({ type: "CLEAR_MESSAGES_AROUND_SUCCESS" });
   }
 };

@@ -1,40 +1,34 @@
 // discord_app/modules/autocompleter/native/AutocompleteUtils.tsx
-import "noop";
-import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord";
-import comparator from "comparator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT";
-import regExp from "regExp";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Divider } from "../../../design/void/Form/native/FormDivider.tsx";
-import { nameFromUser } from "../../../utils/UserUtils.tsx";
-import { computeChannelName } from "../../channel/useChannelName.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import nameFromUserDefault from "nameFromUser" /* 4219 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import DividerDefault from "Divider" /* 7693 */;
+import { isGuildSelectableChannelType as closure_3 } from "createChannelRecord" /* 1395 */;
+import closure_4 from "comparator" /* 1980 */;
+import closure_5 from "markAllUserIdListsStale" /* 4030 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import AUTOCOMPLETE_ROW_HEIGHT from "AUTOCOMPLETE_ROW_HEIGHT" /* 10177 */;
+import regExp from "regExp" /* 6810 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function AutocompleteFormDivider() {
-  const tmp = createCacheKey();
-  return jsx(Divider, { style: createCacheKey().itemDivider });
+  const tmp = callback2();
+  return jsx(DividerDefault, { style: callback2().itemDivider });
 }
-({ AutoCompleteResultTypes: error, WHITESPACE_RE: metroImportAll } = ME);
+noopAll;
+({ AutoCompleteResultTypes: error, WHITESPACE_RE: closure_8 } = ME);
 ({ AUTOCOMPLETE_EMOJI_ROW_HEIGHT: c9, AUTOCOMPLETE_ROW_HEIGHT: c10 } = AUTOCOMPLETE_ROW_HEIGHT);
 ({ CHANNEL_SENTINEL: unpackModuleId, EMOJI_SENTINEL: closure_12, GAME_MENTION_SENTINEL: map1, MENTION_SENTINEL: closure_14 } = regExp);
 const hairlineWidth = require("get ActivityIndicator").StyleSheet.hairlineWidth;
 createCacheKey = { itemDivider: null };
-createCacheKey = { marginLeft: 16, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+createCacheKey = { marginLeft: 16, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("createChannelRecord").fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/autocompleter/native/AutocompleteUtils.tsx");
 
 export const getItemLayout = function getItemLayout(arg0, index) {
   let type;
@@ -61,8 +55,8 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
       let combined = "" + tmp34 + user.tag;
     } else {
       const _HermesInternal8 = HermesInternal;
-      combined = "" + tmp34 + nameFromUser.getUserTag(user);
-      const tmp32Result = nameFromUser;
+      combined = "" + tmp34 + nameFromUserDefault.getUserTag(user);
+      const tmp32Result = nameFromUserDefault;
     }
     return combined;
   } else if (tmp.GLOBAL === type) {
@@ -75,7 +69,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
     if (channel.isThread()) {
       const obj3 = computeChannelName;
       const _HermesInternal6 = HermesInternal;
-      return "#\"" + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, markAllUserIdListsStale)) + "\"";
+      return "#\"" + obj3.escapeChannelName(computeChannelName.computeChannelName(type.channel, closure_6, closure_5)) + "\"";
     } else {
       channel2 = type.channel;
       const guildId = channel2.getGuildId();
@@ -87,7 +81,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
             name = tmp16.name;
           }
           if (name == null) {
-            name = computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, markAllUserIdListsStale);
+            name = computeChannelName.computeChannelName(type.channel, closure_6, closure_5);
             const obj2 = computeChannelName;
           }
           const _HermesInternal5 = HermesInternal;
@@ -95,7 +89,7 @@ export const getAutocompleteResultText = function getAutocompleteResultText(type
         }
       }
       const _HermesInternal4 = HermesInternal;
-      return "" + closure_11 + computeChannelName.computeChannelName(type.channel, mergeGuildAvatar, markAllUserIdListsStale);
+      return "" + closure_11 + computeChannelName.computeChannelName(type.channel, closure_6, closure_5);
     }
   } else if (tmp.GAME_MENTION === type) {
     const _HermesInternal3 = HermesInternal;
@@ -123,8 +117,8 @@ export const getMentionTextWithUser = function getMentionTextWithUser(messageCha
     let combined = "" + tmp3 + user.tag;
   } else {
     const _HermesInternal = HermesInternal;
-    combined = "" + tmp3 + nameFromUser.getUserTag(user);
-    const tmpResult = nameFromUser;
+    combined = "" + tmp3 + nameFromUserDefault.getUserTag(user);
+    const tmpResult = nameFromUserDefault;
   }
   return combined;
 };

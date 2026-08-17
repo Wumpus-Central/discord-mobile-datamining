@@ -1,26 +1,22 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx
-import noop from "noop";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import BoostedGuildTiers from "BoostedGuildTiers";
-import ME from "ME";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import ME from "ME" /* 676 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
 import { experiment } from "../../../game_server/GameServerExperiment.tsx";
 import { experiment } from "../experiments/ServerThemeExperiment.tsx";
 import { apexExperiment } from "../experiments/ServerThemeUserExperiment.tsx";
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ GuildPowerupNewPerkMarketingVersion: c5, NEW_PERK_MARKETING_VERSION_TO_POWERUP_SKU_ID_SET: closure_6 } = BoostedGuildTiers);
-({ GuildFeatures: error, Permissions: metroImportAll } = ME);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
+({ GuildFeatures: error, Permissions: closure_8 } = ME);
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupNewPerkMarketingVersion.tsx");
 
 export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   const _require = guildId;
-  const dependencyMap = arg1;
+  dependencyMap = arg1;
   const gameServerEnabled = _experiment.useGameServerEnabled(guildId, "useGuildPowerupNewPerkMarketingVersion");
   let obj = _experiment;
   let tmp = _require;
@@ -30,7 +26,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
     let hasItem;
     if (guild != null) {
       const features = guild.features;
-      hasItem = features.has(outer1_7.GAME_SERVERS);
+      hasItem = features.has(closure_1_7.GAME_SERVERS);
     }
     return hasItem;
   });
@@ -43,7 +39,7 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
   }
   obj4 = _apexExperiment;
   const items1 = [serverThemeEnabled, tmp4];
-  const stateFromStores1 = tmp(589).useStateFromStores(items1, () => serverThemeEnabled.can(outer1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)));
+  const stateFromStores1 = tmp(589).useStateFromStores(items1, () => serverThemeEnabled.can(closure_1_8.MANAGE_GUILD, stateFromStores.getGuild(closure_0)));
   const items2 = [arg1, gameServerEnabled, stateFromStores, serverThemeEnabled, guildId, stateFromStores1];
   return gameServerEnabled.useMemo(() => {
     let tmp2;
@@ -126,12 +122,12 @@ export default function useGuildPowerupNewPerkMarketingVersion(guildId) {
       }
     }
     const _Array = someResult.Array;
-    arr = Array.from(outer1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
+    arr = Array.from(closure_1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_TWO]);
     tmp17 = null != tmp14;
     tmp25 = null != tmp22;
-    const tmp31 = outer1_6;
+    const tmp31 = closure_1_6;
     tmp5 = null != tmp2;
-    someResult = _Array.from(outer1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_ONE]).some((arg0) => {
+    someResult = _Array.from(closure_1_6[stateFromStores1.GUILD_TAG_BADGE_PACKS_WAVE_ONE]).some((arg0) => {
       let tmp;
       if (closure_1 != null) {
         const unlockedPowerups = closure_1.unlockedPowerups;

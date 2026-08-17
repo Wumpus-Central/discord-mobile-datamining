@@ -1,44 +1,37 @@
 // discord_app/modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx
-import _slicedToArray from "_slicedToArray";
-import QuestBarPreview from "QuestBarPreview";
-import get_ActivityIndicator from "SegmentedControl";
-import initializeState from "initializeState";
-import handleThemeChange from "handleThemeChange";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "initializeState" /* 7453 */;
+import closure_9 from "handleThemeChange" /* 1302 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ View: c5, ActivityIndicator: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
-const PX_16 = require("Themes").space.PX_16;
+const PX_16 = ThemesDefault.space.PX_16;
 createCacheKey = { container: null, controlBarContainer: null, segmentedControlContainer: null, pagesContainer: null, activityIndicator: null, allSectionsContainer: null };
-createCacheKey = { flex: 1, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
 createCacheKey[2] = { paddingHorizontal: PX_16 };
 createCacheKey[3] = { flex: 1, width: "100%" };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_32 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_32 };
 let obj1 = { paddingHorizontal: PX_16, paddingTop: PX_16 / 2, paddingBottom: PX_16 };
-let obj2 = { marginTop: require("Themes").space.PX_32 };
-createCacheKey[5] = { marginBottom: require("Themes").space.PX_80 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { marginBottom: require("Themes").space.PX_80 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx");
+let obj2 = { marginTop: ThemesDefault.space.PX_32 };
+createCacheKey[5] = { marginBottom: ThemesDefault.space.PX_80 };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { marginBottom: ThemesDefault.space.PX_80 };
+let result = require("set").fileFinishedImporting("modules/user_settings/quests/native/SettingsQuestPreviewScreen.tsx");
 
 export default function SettingsQuestPreviewScreen() {
-  let closure_10;
-  let tmp18;
   let obj = params(first[8]);
   params = obj.useRoute().params;
-  let tmp3 = createCacheKey();
-  const importDefault = tmp3;
-  let obj1 = stateFromStores;
+  let tmp3 = callback3();
+  closure_1 = tmp3;
+  obj1 = stateFromStores;
   let questId;
   if (params != null) {
     questId = params.questId;
@@ -65,7 +58,7 @@ export default function SettingsQuestPreviewScreen() {
     if (null != stateFromStores) {
       const obj = { quest: null };
       obj[0] = tmp;
-      tmp2 = outer1_10(params(first[10]).QuestCardPreview, obj);
+      tmp2 = closure_1_10(params(first[10]).QuestCardPreview, obj);
     }
     return tmp2;
   }, items3);
@@ -97,7 +90,7 @@ export default function SettingsQuestPreviewScreen() {
       const combined = "" + tmp + "-" + tmp13 + "-" + completedAt + "-" + progress;
       const obj = { questId: null };
       obj[0] = tmp;
-      return outer1_10(params(first[11]).QuestEmbedPreview, obj, combined);
+      return closure_1_10(params(first[11]).QuestEmbedPreview, obj, combined);
     }
   }, items4);
   callback2 = obj1.useCallback(() => null, []);
@@ -111,7 +104,7 @@ export default function SettingsQuestPreviewScreen() {
       tmp3 = null;
       if (null != first) {
         obj = { style: null, children: null };
-        obj[0] = tmp3.allSectionsContainer;
+        obj[0] = lib.allSectionsContainer;
         const items = [callback(), callback1()];
         obj[1] = items;
         tmp3 = first1(stateFromStores1, obj);
@@ -124,7 +117,7 @@ export default function SettingsQuestPreviewScreen() {
     obj[1] = intl2.string(params(first[12]).t.uL4oBf);
     obj[2] = callback2();
     items1[1] = obj;
-    const obj1 = { id: "card", label: null, page: null };
+    obj1 = { id: "card", label: null, page: null };
     const intl3 = tmp(tmp2[12]).intl;
     obj1[1] = intl3.string(params(first[12]).t.MAvIf1);
     obj1[2] = callback();
@@ -140,8 +133,8 @@ export default function SettingsQuestPreviewScreen() {
   [tmp18, closure_10] = tmp5Result;
   tmp5Result = tmp5(obj1.useState(0), 2);
   const first1 = tmp5Result[0];
-  const callback3 = obj1.useCallback((nativeEvent) => {
-    callback(nativeEvent.nativeEvent.layout.width);
+  callback3 = obj1.useCallback((nativeEvent) => {
+    callback2(nativeEvent.nativeEvent.layout.width);
   }, []);
   const segmentedControlState = params(first[13]).useSegmentedControlState({ items: memo, pageWidth: tmp18, defaultIndex: 0, onPageChange: tmp5Result[1] });
   const items6 = [first1, memo];
@@ -167,7 +160,7 @@ export default function SettingsQuestPreviewScreen() {
       questId = tmp.questId;
     }
     if (null != questId) {
-      tmp8(tmp.questId);
+      callback(tmp.questId);
     }
   }, items7);
   const items8 = [first];
@@ -181,11 +174,11 @@ export default function SettingsQuestPreviewScreen() {
   const effect2 = obj1.useEffect(() => {
     function listener(quest_id) {
       if (tmp2) {
-        const questPreview = listener(outer1_2[14]).fetchQuestPreview(tmp);
-        const obj = listener(outer1_2[14]);
+        const questPreview = listener(closure_1_2[14]).fetchQuestPreview(tmp);
+        const obj = listener(closure_1_2[14]);
       }
     }
-    const subscription = tmp3(first[15]).subscribe("QUEST_PREVIEW_UPDATE", listener);
+    const subscription = lib(first[15]).subscribe("QUEST_PREVIEW_UPDATE", listener);
     return () => {
       callback(first[15]).unsubscribe("QUEST_PREVIEW_UPDATE", listener);
     };

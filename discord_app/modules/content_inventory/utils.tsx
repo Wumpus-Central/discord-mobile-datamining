@@ -1,25 +1,25 @@
 // discord_app/modules/content_inventory/utils.tsx
-import { t } from "../../../_runtime/03975_t.js";
-import { 03618__ } from "../../../_runtime/metro/03618__.js";
-import { ContentInventoryEntryType } from "../../../discord_common/js/shared/shared-constants/ContentInventoryEntryType.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { set } from "../../utils/Durations.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _mod3618 from "module_3618" /* 3618 */;
+import tDefault from "t" /* 3975 */;
+import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8344 */;
+
 function calculateTimestampDurations(end, now) {
   const bound = Math.max(end - now, 0);
-  const result = bound / set.Millis.SECOND;
+  const result = bound / setDefault.Millis.SECOND;
   const obj = { seconds: null, minutes: null, hours: null, days: null };
   const rounded = Math.floor(result);
-  obj[0] = rounded % set.Seconds.MINUTE;
-  const rounded1 = Math.floor(result / set.Seconds.MINUTE);
-  obj[1] = rounded1 % set.Seconds.MINUTE;
-  obj[2] = Math.floor(result / set.Seconds.HOUR);
-  obj[3] = Math.floor(result / set.Seconds.DAY);
+  obj[0] = rounded % setDefault.Seconds.MINUTE;
+  const rounded1 = Math.floor(result / setDefault.Seconds.MINUTE);
+  obj[1] = rounded1 % setDefault.Seconds.MINUTE;
+  obj[2] = Math.floor(result / setDefault.Seconds.HOUR);
+  obj[3] = Math.floor(result / setDefault.Seconds.DAY);
   return obj;
 }
 function formatActiveTimestamp(entry, now) {
-  let hours;
-  let minutes;
   let end;
   if ("end" in entry) {
     end = entry.end;
@@ -56,8 +56,8 @@ function formatActiveTimestamp(entry, now) {
     }
   }
   if ("id" in entry) {
-    let start = DISCORD_EPOCH.extractTimestamp(entry.id);
-    const obj = DISCORD_EPOCH;
+    let start = DISCORD_EPOCHDefault.extractTimestamp(entry.id);
+    const obj = DISCORD_EPOCHDefault;
   } else {
     start = entry.start;
   }
@@ -72,8 +72,6 @@ function formatActiveTimestamp(entry, now) {
   tmp6Result = calculateTimestampDurations(bound, start);
 }
 function formatTimestampToA11yLabel(hours) {
-  let minutes;
-  let seconds;
   hours = hours.hours;
   const items = [];
   ({ minutes, seconds } = hours);
@@ -98,11 +96,11 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
   if (formatSet === undefined) {
     formatSet = closure_6;
   }
-  const obj2 = t(timestamp);
-  const tmp3 = t;
-  const diffResult = obj2.diff(tmp3(DISCORD_EPOCH.extractTimestamp(entry.id)), "s");
+  const obj2 = tDefault(timestamp);
+  const tmp3 = tDefault;
+  const diffResult = obj2.diff(tmp3(DISCORD_EPOCHDefault.extractTimestamp(entry.id)), "s");
   const absolute = Math.abs(diffResult);
-  if (absolute < set.Seconds.MINUTE) {
+  if (absolute < setDefault.Seconds.MINUTE) {
     return formatSet.secondsAgo(diffResult);
   } else if (absolute < tmp(687).Seconds.HOUR) {
     const _Math5 = Math;
@@ -120,7 +118,7 @@ function formatEndedTimestamp(entry, arg1, timestamp, arg3) {
     const _Math = Math;
     return formatSet.monthsAgo(Math.round(diffResult / tmp(687).Seconds.DAYS_30));
   }
-  const obj3 = DISCORD_EPOCH;
+  const obj3 = DISCORD_EPOCHDefault;
 }
 let closure_6 = {
   secondsAgo(count) {
@@ -148,7 +146,7 @@ let closure_6 = {
     return intl.formatToPlainString(getSystemLocale.t.ITymou, { count });
   }
 };
-let result = require("getSystemLocale").fileFinishedImporting("modules/content_inventory/utils.tsx");
+let result = set.fileFinishedImporting("modules/content_inventory/utils.tsx");
 
 export { calculateTimestampDurations };
 export const calculateActiveTimestampDurations = function calculateActiveTimestampDurations(end, now) {
@@ -171,8 +169,8 @@ export const calculateActiveTimestampDurations = function calculateActiveTimesta
     }
   }
   if ("id" in end) {
-    let start = DISCORD_EPOCH.extractTimestamp(end.id);
-    const obj = DISCORD_EPOCH;
+    let start = DISCORD_EPOCHDefault.extractTimestamp(end.id);
+    const obj = DISCORD_EPOCHDefault;
   } else {
     start = end.start;
   }
@@ -211,7 +209,7 @@ export const formatActiveA11yTimestamp = function formatActiveA11yTimestamp(end,
     }
   }
   if ("id" in end) {
-    obj = DISCORD_EPOCH;
+    obj = DISCORD_EPOCHDefault;
     let start = obj.extractTimestamp(end.id);
   } else {
     start = end.start;
@@ -281,7 +279,7 @@ export const formatEntryTimestamp = function formatEntryTimestamp(contentInvento
   return tmp8;
 };
 export const getTrait = function getTrait(contentInventoryEntry, AGGREGATE_COUNT) {
-  let closure_0 = AGGREGATE_COUNT;
+  closure_0 = AGGREGATE_COUNT;
   const traits = contentInventoryEntry.traits;
   return traits.find((type) => type.type === TRENDING_CONTENT);
 };
@@ -312,8 +310,8 @@ export const isEntryNew = function isEntryNew(entry) {
   return flag;
 };
 export const isEntryRecent = function isEntryRecent(id) {
-  const obj = DISCORD_EPOCH;
-  return DISCORD_EPOCH.age(id.id) / set.Millis.HOUR < 48;
+  const obj = DISCORD_EPOCHDefault;
+  return DISCORD_EPOCHDefault.age(id.id) / setDefault.Millis.HOUR < 48;
 };
 export const isEntryExpired = function isEntryExpired(content) {
   let tmp = null != content.expires_at;
@@ -396,9 +394,8 @@ export const getResurrectedEntryLastPlayTime = function getResurrectedEntryLastP
   return date;
 };
 export const getFullResurrectedBadgeText = function getFullResurrectedBadgeText(start) {
-  let obj = 03618__;
-  obj = { start, end: null };
-  obj[1] = new Date();
+  let obj = _mod3618;
+  obj = { start, end: new Date() };
   const intervalToDurationResult = obj.intervalToDuration(obj);
   const months = intervalToDurationResult.months;
   let num = 0;
@@ -526,9 +523,9 @@ export const isValidStreak = function isValidStreak(traits) {
     return false;
   } else {
     const _Date = Date;
-    const obj = DISCORD_EPOCH;
-    const diff = Date.now() - DISCORD_EPOCH.extractTimestamp(traits.id);
-    return diff <= 48 * set.Millis.HOUR;
+    const obj = DISCORD_EPOCHDefault;
+    const diff = Date.now() - DISCORD_EPOCHDefault.extractTimestamp(traits.id);
+    return diff <= 48 * setDefault.Millis.HOUR;
   }
 };
 export const getMarathonDescription = function getMarathonDescription(entry) {
@@ -543,7 +540,7 @@ export const getMarathonDescription = function getMarathonDescription(entry) {
     return { text: null, tooltipText: null };
   } else {
     const _Math = Math;
-    const rounded = Math.round(duration_seconds / set.Seconds.HOUR);
+    const rounded = Math.round(duration_seconds / setDefault.Seconds.HOUR);
     if (rounded <= 0) {
       let obj = { text: null, tooltipText: null };
     } else {

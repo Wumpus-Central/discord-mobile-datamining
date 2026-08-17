@@ -1,12 +1,14 @@
 // discord_app/modules/search/SearchRecentMessageStore.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 const require = arg1;
 function handleReset() {
-  const map = new Map();
+  map = new Map();
 }
 let map = new Map();
 let closure_3 = [];
+const Store = initializeDefault.Store;
 class SearchRecentMessageStore extends Store {
 }
 SearchRecentMessageStore.prototype["getRecentMessageAuthorIds"] = function getRecentMessageAuthorIds(guildId) {
@@ -17,12 +19,10 @@ SearchRecentMessageStore.prototype["getRecentMessageAuthorIds"] = function getRe
   return value;
 };
 SearchRecentMessageStore.displayName = "SearchRecentMessageStore";
-const searchRecentMessageStore = new SearchRecentMessageStore(require("dispatcher"), {
+const searchRecentMessageStore = new SearchRecentMessageStore(dispatcherDefault, {
   SEARCH_MESSAGES_SUCCESS: function handleSearchMessagesSuccess(arg0) {
-    let data;
-    let guildId;
     ({ guildId, data } = arg0);
-    let c0;
+    c0 = undefined;
     let items;
     let set;
     if (null == guildId) {
@@ -40,9 +40,8 @@ const searchRecentMessageStore = new SearchRecentMessageStore(require("dispatche
       let item = data.forEach((messages) => {
         messages = messages.messages;
         const item = messages.forEach((arg0) => {
-          let tmp;
           [tmp] = arg0;
-          const messageRecord = outer1_0(outer1_1[0]).createMessageRecord(tmp);
+          const messageRecord = closure_1_0(closure_1_1[0]).createMessageRecord(tmp);
           const hasItem = set.has(messageRecord.author.id);
           let tmp4 = !hasItem;
           if (!hasItem) {
@@ -51,7 +50,7 @@ const searchRecentMessageStore = new SearchRecentMessageStore(require("dispatche
           if (tmp4) {
             obj2.add(messageRecord.author.id);
             arr = arr.push(messageRecord.author.id);
-            let c0 = true;
+            c0 = true;
           }
         });
       });
@@ -64,6 +63,6 @@ const searchRecentMessageStore = new SearchRecentMessageStore(require("dispatche
   SEARCH_RECENT_MESSAGES_CLEAR: handleReset,
   CONNECTION_OPEN: handleReset
 });
-let result = require("dispatcher").fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
+let result = require("set").fileFinishedImporting("modules/search/SearchRecentMessageStore.tsx");
 
 export default searchRecentMessageStore;

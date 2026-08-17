@@ -1,34 +1,38 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../../notifications/profile_updates/sender/NotifyFriendsOnProfileUpdate.messages.js";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2501 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import onNotifyFriendsOnProfileUpdateSettingsChanged from "onNotifyFriendsOnProfileUpdateSettingsChanged" /* 15054 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.F3llsQ);
+    return intl.string(messagesProxyDefault.F3llsQ);
   },
   useDescription() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy["6goWcz"]);
+    return intl.string(messagesProxyDefault["6goWcz"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: require("explicitContentFromProto").NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: require("onNotifyFriendsOnProfileUpdateSettingsChanged").onNotifyFriendsOnProfileUpdateSettingsChanged
+  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
+  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged
 });
 const obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy.F3llsQ);
+    return intl.string(messagesProxyDefault.F3llsQ);
   },
   useDescription() {
     const intl = getSystemLocale.intl;
-    return intl.string(messagesProxy["6goWcz"]);
+    return intl.string(messagesProxyDefault["6goWcz"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.DATA_AND_PRIVACY,
-  useValue: require("explicitContentFromProto").NotifyFriendsOnProfileUpdate.useSetting,
-  onValueChange: require("onNotifyFriendsOnProfileUpdateSettingsChanged").onNotifyFriendsOnProfileUpdateSettingsChanged
+  parent: MobileUserSettings.MobileUserSettings.DATA_AND_PRIVACY,
+  useValue: explicitContentFromProto.NotifyFriendsOnProfileUpdate.useSetting,
+  onValueChange: onNotifyFriendsOnProfileUpdateSettingsChanged.onNotifyFriendsOnProfileUpdateSettingsChanged
 };
-const result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/NotifyFriendsOnProfileUpdateSetting.tsx");
 
 export default toggle;

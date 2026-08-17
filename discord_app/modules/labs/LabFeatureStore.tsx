@@ -1,8 +1,10 @@
 // discord_app/modules/labs/LabFeatureStore.tsx
-import { DeviceSettingsStore } from "initialize";
-import { hide_icymi_tab } from "LabFeatures.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import hide_icymi_tabDefault from "hide_icymi_tab" /* 9060 */;
 
 let closure_2 = {};
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LabFeatureStore extends DeviceSettingsStore {
 }
 const prototype = LabFeatureStore.prototype;
@@ -10,7 +12,7 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return { toggleStates: closure_2 };
 };
 prototype["initialize"] = function initialize(toggleStates) {
-  for (const key10008 in hide_icymi_tab) {
+  for (const key10008 in hide_icymi_tabDefault) {
     let tmp = key10008;
     let flag;
     let tmp2 = closure_2;
@@ -40,11 +42,11 @@ prototype["set"] = function set(arg0, arg1) {
 };
 LabFeatureStore.displayName = "LabFeatureStore";
 LabFeatureStore.persistKey = "LabFeatureStore";
-const labFeatureStore = new LabFeatureStore(require("dispatcher"), {
+const labFeatureStore = new LabFeatureStore(dispatcherDefault, {
   LAB_FEATURE_TOGGLE: function handleLabFeatureToggleSet(labFeature) {
     closure_2[labFeature.labFeature] = labFeature.enabled;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
+const result = require("set").fileFinishedImporting("modules/labs/LabFeatureStore.tsx");
 
 export default labFeatureStore;

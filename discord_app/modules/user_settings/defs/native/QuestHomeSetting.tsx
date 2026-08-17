@@ -1,7 +1,10 @@
 // discord_app/modules/user_settings/defs/native/QuestHomeSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { getIsEligibleForQuests } from "../../../quests/lib/QuestsEligibility.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import getIsEligibleForQuests from "getIsEligibleForQuests" /* 10685 */;
+import QuestsIcon from "QuestsIcon" /* 14351 */;
+import createToggle from "createToggle" /* 10669 */;
 import { QuestHomeSetting } from "../../../quests/native/QuestHomeSetting.tsx";
 
 obj = {
@@ -13,7 +16,7 @@ obj = {
     return getIsEligibleForQuests.getIsEligibleForQuests();
   },
   parent: null,
-  IconComponent: require("QuestsIcon").QuestsIcon,
+  IconComponent: QuestsIcon.QuestsIcon,
   screen: obj,
   usePreNavigationAction() {
     return () => {
@@ -25,12 +28,12 @@ obj = {
   }
 };
 obj = {
-  route: require("ME").UserSettingsSections.QUESTS,
+  route: ME.UserSettingsSections.QUESTS,
   getComponent() {
     return QuestHomeSetting.default;
   }
 };
 const route = createToggle.createRoute(obj);
-let result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/QuestHomeSetting.tsx");
 
 export default route;

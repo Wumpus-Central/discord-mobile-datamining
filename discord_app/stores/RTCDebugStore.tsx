@@ -1,16 +1,15 @@
 // discord_app/stores/RTCDebugStore.tsx
-import _slicedToArray from "_slicedToArray";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import DesktopSources from "DesktopSources";
-import { Store } from "initialize";
-import { dispatcher } from "../Dispatcher.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import openAll from "open" /* 12597 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
 function updateStats(arr, arg1, timestamp) {
-  let obj = arg1;
+  obj = arg1;
   if (arg1 === undefined) {
     obj = {};
   }
@@ -90,7 +89,7 @@ function updateStats(arr, arg1, timestamp) {
           let arr1 = Array.isArray(tmp11) ? tmp11 : [];
           obj[tmp9] = arr1;
           let arr3 = arr1;
-          let obj1 = { value: null, time: null };
+          obj1 = { value: null, time: null };
           let tmp20 = tmp10;
           obj1[0] = arr;
           obj1[1] = timestamp;
@@ -110,7 +109,7 @@ function updateStats(arr, arg1, timestamp) {
   return obj;
 }
 const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
-({ Features: metroImportAll, SimulcastOverrideQuality: c9 } = DesktopSources);
+({ Features: closure_8, SimulcastOverrideQuality: c9 } = DesktopSources);
 let combined = "" + MediaEngineContextTypes.DEFAULT + ":" + require("ME").RTCDebugSections.TRANSPORT + ":" + 0;
 let closure_12 = {};
 const map = new Map();
@@ -128,17 +127,17 @@ RTCDebugVideoOutputMap["empty"] = function empty() {
   if (typeof RTCDebugVideoOutputMap !== "function") {
     HermesBuiltin.throwTypeError();
   }
-  const obj = Object.create(RTCDebugVideoOutputMap.prototype);
+  obj = Object.create(RTCDebugVideoOutputMap.prototype);
   obj.state = {};
   return obj;
 };
 prototype["put"] = function put(arg0, arg1, arg2, arg3) {
   const self = this;
   if ("" === arg3) {
-    let obj = {};
+    obj = {};
     const merged = Object.assign(self.state);
     const _HermesInternal2 = HermesInternal;
-    const combined = "" + arg0 + ":" + arg1 + ":" + arg2;
+    combined = "" + arg0 + ":" + arg1 + ":" + arg2;
     delete tmp[tmp2];
     if (typeof RTCDebugVideoOutputMap !== "function") {
       HermesBuiltin.throwTypeError();
@@ -154,7 +153,7 @@ prototype["put"] = function put(arg0, arg1, arg2, arg3) {
     if (typeof RTCDebugVideoOutputMap !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    const obj1 = Object.create(RTCDebugVideoOutputMap.prototype);
+    obj1 = Object.create(RTCDebugVideoOutputMap.prototype);
     obj1.state = obj;
     return obj1;
   }
@@ -175,11 +174,12 @@ let values = Object.values(MediaEngineContextTypes);
 let item = values.forEach((arg0) => {
   closure_12[arg0] = {};
 });
+const Store = initializeDefault.Store;
 class RTCDebugStore extends Store {
 }
 const prototype2 = RTCDebugStore.prototype;
 prototype2["initialize"] = function initialize() {
-  this.waitFor(_detectH265HardwareDecode, mergeGuildAvatar);
+  this.waitFor(closure_5, closure_6);
 };
 prototype2["getSection"] = function getSection() {
   return combined;
@@ -201,7 +201,7 @@ prototype2["getInboundStats"] = function getInboundStats(arg0, context) {
   if (found != null) {
     name = found.codec.name;
   }
-  const obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
+  obj = { codec: name, resolution: null, bitrateEstimate: "Array", fps: true };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -246,7 +246,7 @@ prototype2["getOutboundStats"] = function getOutboundStats(context) {
   if (found != null) {
     name = found.codec.name;
   }
-  const obj = { codec: name, resolution: null, bitrateEstimate: null, fps: null };
+  obj = { codec: name, resolution: null, bitrateEstimate: null, fps: null };
   let resolution;
   if (found != null) {
     resolution = found.resolution;
@@ -296,7 +296,7 @@ prototype2["shouldRecordNextConnection"] = function shouldRecordNextConnection()
   return c16;
 };
 prototype2["getSimulcastDebugOverride"] = function getSimulcastDebugOverride(arg0, arg1) {
-  const combined = "" + arg0 + ":" + arg1;
+  combined = "" + arg0 + ":" + arg1;
   if (map.has(combined)) {
     let NO_OVERRIDE = map.get(combined);
   } else {
@@ -322,7 +322,7 @@ obj = {
     section = section.section;
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY: function handleOpenReplay() {
-    importAll(12597).chooseReplayPath();
+    openAll.chooseReplayPath();
   },
   RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: function handleOpenReplayAtPath(path) {
     path = path.path;
@@ -338,7 +338,7 @@ obj = {
         if (null != replayConnection) {
           replayConnection.on(replayConnection(4569).BaseConnectionEvent.Video, (userId) => {
             let num = arg3;
-            let obj = outer1_1(outer1_3[7]);
+            obj = closure_1_1(closure_1_3[7]);
             obj = { type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT", mediaEngineConnectionId: replayConnection.mediaEngineConnectionId, userId, videoSsrc: null, streamId: null };
             if (arg3 == null) {
               num = 0;
@@ -351,8 +351,8 @@ obj = {
             obj[4] = str;
             obj.dispatch(obj);
           });
-          dispatcher.wait(() => callback(table[5]).open());
-          const obj3 = dispatcher;
+          dispatcherDefault.wait(() => callback(table[5]).open());
+          const obj3 = dispatcherDefault;
         }
       }
     }
@@ -387,20 +387,20 @@ obj = {
     connectionStats = connectionStats.connectionStats;
     const values = Object.values(MediaEngineContextTypes);
     let item = values.forEach((arg0) => {
-      const connectionStats = arg0;
+      connectionStats = arg0;
       const found = connectionStats.filter((context) => context.context === closure_0);
       const item = found.forEach((stats) => {
         stats = stats.stats;
         if (null != stats) {
-          const tmp7 = outer1_4(outer1_11.split(":"), 3);
+          const tmp7 = closure_1_4(closure_11.split(":"), 3);
           if (tmp7[0] === tmp3) {
             const _parseInt = parseInt;
             if (parseInt(tmp9) === arg1) {
-              if (null != outer1_6.getUser(tmp8)) {
+              if (null != closure_1_6.getUser(tmp8)) {
                 const _Object = Object;
                 const keys = Object.keys(stats.rtp.inbound);
                 if (!keys.includes(tmp8)) {
-                  outer1_11 = outer1_10;
+                  closure_11 = closure_1_10;
                 }
               }
             }
@@ -410,12 +410,12 @@ obj = {
           let tmp15 = stats;
           if (null != stats.screenshare) {
             const _HermesInternal = HermesInternal;
-            const combined = "" + tmp3 + ":" + arg1;
-            const value = outer1_18.get(combined);
+            combined = "" + tmp3 + ":" + arg1;
+            const value = closure_1_18.get(combined);
             if (tmp4[arg1] != null) {
               const screenshare = tmp43.screenshare;
             }
-            const result = outer1_18.set(combined, timestamp);
+            const result = closure_1_18.set(combined, timestamp);
             tmp15 = stats;
             if (null != value) {
               tmp15 = stats;
@@ -423,7 +423,7 @@ obj = {
                 const result1 = (timestamp - value) / 1000;
                 tmp15 = stats;
                 if (0 < result1) {
-                  let obj = {};
+                  obj = {};
                   const merged = Object.assign(stats);
                   obj = {};
                   const merged1 = Object.assign(stats.screenshare);
@@ -543,7 +543,7 @@ obj = {
                   if (num25 == null) {
                     num25 = 0;
                   }
-                  const obj1 = { screenshareCapturedFps: null, screenshareCapturedFpsUnique: null };
+                  obj1 = { screenshareCapturedFps: null, screenshareCapturedFpsUnique: null };
                   const _Math = Math;
                   const sum19 = sum18 + num25;
                   obj1[0] = Math.max(0, (sum5 - sum11) / result1);
@@ -555,9 +555,9 @@ obj = {
                 }
               }
             }
-            const obj3 = outer1_18;
+            const obj3 = closure_1_18;
           }
-          tmp4[arg1] = outer1_19(tmp15, tmp4[arg1], timestamp);
+          tmp4[arg1] = closure_1_19(tmp15, tmp4[arg1], timestamp);
         } else {
           delete tmp[tmp2];
         }
@@ -565,8 +565,8 @@ obj = {
     });
   }
 };
-const rTCDebugStore = new RTCDebugStore(require("dispatcher"), obj);
-let result = require("mergeGuildAvatar").fileFinishedImporting("stores/RTCDebugStore.tsx");
+const rTCDebugStore = new RTCDebugStore(dispatcherDefault, obj);
+let result = require("set").fileFinishedImporting("stores/RTCDebugStore.tsx");
 
 export default rTCDebugStore;
 export const DEFAULT_SECTION = combined;

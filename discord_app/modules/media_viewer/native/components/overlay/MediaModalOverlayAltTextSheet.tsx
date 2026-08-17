@@ -1,24 +1,26 @@
 // discord_app/modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Background } from "../../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { RedesignBottomSheetTitleHeaderBase } from "../../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { useMessagePreviewHeightStore } from "../../useMessagePreviewHeight.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import RedesignBottomSheetTitleHeaderBase from "RedesignBottomSheetTitleHeaderBase" /* 6949 */;
+import Background from "Background" /* 6950 */;
+import useMessagePreviewHeightStore from "useMessagePreviewHeightStore" /* 10729 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null };
-createCacheKey = { padding: require("Themes").space.PX_16 };
+createCacheKey = { padding: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
+let closure_3 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/overlay/MediaModalOverlayAltTextSheet.tsx");
 
 export default function MediaViewerAltTextSheet(children) {
   let obj = useMessagePreviewHeightStore;
   const messagePreviewCollapsedheight = obj.useMessagePreviewCollapsedheight();
-  const tmp = createCacheKey();
+  const tmp = callback();
   let num = 70;
   if (!obj2.useIsScreenLandscape()) {
     num = messagePreviewCollapsedheight + 20 + 50;

@@ -1,16 +1,11 @@
 // discord_app/design/components/TableRow/native/TableCheckboxRow.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-let result = require("module_4115").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/TableRow/native/TableCheckboxRow.native.tsx");
 
 export const TableCheckboxRow = function TableCheckboxRow(checked) {
-  let accessibilityRole;
-  let accessibilityState;
-  let disabled;
-  let label;
-  let subLabel;
   checked = checked.checked;
   ({ label, subLabel, disabled } = checked);
   if (disabled === undefined) {

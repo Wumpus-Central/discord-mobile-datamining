@@ -1,26 +1,24 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx
-import Button from "Button";
-import { View } from "Button";
-import { isAvatarDecorationRecord } from "fromServer";
-import { isNameplateRecord } from "fromServer";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { isAvatarDecorationRecord, isNameplateRecord } from "fromServer" /* 5306 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, nameplateContainer: null, nameplateWrapper: null, singleAvatarContainer: null };
-createCacheKey = { flexDirection: "column", alignItems: "center", gap: require("Themes").space.PX_16 };
+createCacheKey = { flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-let obj1 = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-createCacheKey[2] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
+createCacheKey[1] = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+let obj1 = { width: 234, height: 40, flexDirection: "row", alignItems: "center", position: "relative", borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+createCacheKey[2] = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
 createCacheKey[3] = { flexDirection: "row", paddingRight: 15, justifyContent: "center", alignItems: "center", marginLeft: 5 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: require("Themes").radii.sm, overflow: "hidden" };
-const result = require("fromServer").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { position: "absolute", left: 0, right: 0, top: 0, bottom: 0, borderRadius: ThemesDefault.radii.sm, overflow: "hidden" };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftingPromotionSuccessActions.tsx");
 
 export default function PremiumGiftingPromotionSuccessActions(purchase) {
   purchase = purchase.purchase;
@@ -28,13 +26,13 @@ export default function PremiumGiftingPromotionSuccessActions(purchase) {
   let prePurchaseGiftingBadgeProgress;
   let navigation;
   let enabled;
-  let c4;
+  c4 = undefined;
   let callback;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = onClose(navigation[8]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_7];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
-  let obj1 = onClose(navigation[9]);
+  obj1 = onClose(navigation[9]);
   const nativeGiftContext = obj1.useNativeGiftContext();
   onClose = nativeGiftContext.onClose;
   prePurchaseGiftingBadgeProgress = nativeGiftContext.prePurchaseGiftingBadgeProgress;

@@ -1,15 +1,14 @@
 // discord_app/modules/forums/ForumPostRecentMessageStore.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Store } from "initialize";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { createMinimalMessageRecord } from "../messages/MessageRecordUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 function handleLoadThreadsSuccess(arg0) {
-  let mostRecentMessages;
-  let threads;
   ({ threads, mostRecentMessages } = arg0);
   const item = threads.forEach((id) => {
     closure_5[id.id] = { loaded: true, message: null };
@@ -28,11 +27,12 @@ function handleLoadThreadsSuccess(arg0) {
   }
 }
 let closure_5 = {};
+const Store = initializeDefault.Store;
 class ForumPostRecentMessageStore extends Store {
 }
 const prototype = ForumPostRecentMessageStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, mergeGuildAvatar);
+  this.waitFor(closure_3, closure_4);
 };
 prototype["getMessageState"] = function getMessageState(id) {
   if (!(id in dependencyMap)) {
@@ -41,9 +41,9 @@ prototype["getMessageState"] = function getMessageState(id) {
   return dependencyMap[id];
 };
 ForumPostRecentMessageStore.displayName = "ForumPostRecentMessageStore";
-const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dispatcher"), {
+const forumPostRecentMessageStore = new ForumPostRecentMessageStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_5 = {};
+    closure_5 = {};
   },
   MESSAGE_CREATE: function handleMessageCreate(isPushNotification) {
     let tmp = isPushNotification;
@@ -72,8 +72,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
               id1 = message2.id;
             }
           }
-          flag = DISCORD_EPOCH.compare(id, id1) > -1;
-          const obj2 = DISCORD_EPOCH;
+          flag = DISCORD_EPOCHDefault.compare(id, id1) > -1;
+          const obj2 = DISCORD_EPOCHDefault;
         }
       }
       if (flag) {
@@ -88,7 +88,7 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
           obj[1] = messageRecord;
           dependencyMap[tmp.message.channel_id] = obj;
         }
-        obj3 = DISCORD_EPOCH;
+        obj3 = DISCORD_EPOCHDefault;
       }
       tmp = dependencyMap;
       obj = { loaded: true, message: null };
@@ -118,8 +118,8 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
             id1 = message2.id;
           }
         }
-        flag = DISCORD_EPOCH.compare(id, id1) > -1;
-        const obj2 = DISCORD_EPOCH;
+        flag = DISCORD_EPOCHDefault.compare(id, id1) > -1;
+        const obj2 = DISCORD_EPOCHDefault;
       }
     }
     let tmp9 = flag;
@@ -181,6 +181,6 @@ const forumPostRecentMessageStore = new ForumPostRecentMessageStore(require("dis
   LOAD_ARCHIVED_THREADS_SUCCESS: handleLoadThreadsSuccess,
   LOAD_THREADS_SUCCESS: handleLoadThreadsSuccess
 });
-const result = require("DISCORD_EPOCH").fileFinishedImporting("modules/forums/ForumPostRecentMessageStore.tsx");
+const result = require("set").fileFinishedImporting("modules/forums/ForumPostRecentMessageStore.tsx");
 
 export default forumPostRecentMessageStore;

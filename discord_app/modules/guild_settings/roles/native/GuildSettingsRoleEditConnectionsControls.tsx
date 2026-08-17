@@ -1,41 +1,33 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx
-import Header from "Header";
-import { View } from "context";
-import getRoleMemberCount from "getRoleMemberCount";
-import handleSetSection from "handleSetSection";
-import { HelpdeskArticles } from "ME";
-import OperatorTypes from "OperatorTypes";
-import jsxProd from "CirclePlusIcon";
-import createCacheKey from "createCacheKey";
-import { apply } from "../../../../../_runtime/00012_apply.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { CircleErrorIcon } from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
-import { CirclePlusIcon } from "../../../../design/components/Icon/native/redesign/generated/CirclePlusIcon.tsx";
+import applyDefault from "apply" /* 12 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 8074 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 9545 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "getRoleMemberCount" /* 6928 */;
+import closure_6 from "handleSetSection" /* 16831 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import OperatorTypes from "OperatorTypes" /* 5225 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { combined } from "../../../../utils/HelpdeskUtils.tsx";
 
-let c10;
-let c9;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function HeaderSection(arg0) {
-  let clearConnections;
-  let hasConnections;
-  let hasMembers;
-  let locked;
   ({ clearConnections, locked, hasConnections, hasMembers } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let tmp2Result = null;
   if (hasMembers) {
     let obj = { style: null, children: null };
     obj[0] = tmp.warningContainer;
     obj = { color: null, size: "sm" };
-    obj[0] = Themes.colors.STATUS_WARNING;
+    obj[0] = ThemesDefault.colors.STATUS_WARNING;
     const items = [callback(CircleErrorIcon.CircleErrorIcon, obj), ];
     obj = { variant: "text-xs/medium", style: null, children: null };
     obj[1] = tmp.warningText;
@@ -46,7 +38,7 @@ function HeaderSection(arg0) {
     tmp2Result = tmp2(View, obj);
   }
   const items1 = [tmp2Result, ];
-  const obj1 = { style: tmp.headerTitleContainer, children: null };
+  obj1 = { style: tmp.headerTitleContainer, children: null };
   const obj2 = { variant: "text-md/semibold", children: null };
   const intl2 = getSystemLocale.intl;
   obj2[1] = intl2.string(getSystemLocale.t.nMir27);
@@ -69,8 +61,7 @@ function HeaderSection(arg0) {
   const items3 = [closure_11(View, obj1), ];
   const obj7 = { variant: "text-sm/medium", children: null };
   const intl4 = tmp10(1236).intl;
-  const obj8 = { helpdeskArticleUrl: null };
-  obj8[0] = combined.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN);
+  const obj8 = { helpdeskArticleUrl: combinedDefault.getArticleURL(HelpdeskArticles.CONNECTION_DETAILS_ADMIN) };
   obj7[1] = intl4.format(getSystemLocale.t.q5f7tK, obj8);
   items3[1] = callback(Text.Text, obj7);
   obj6[0] = items3;
@@ -79,10 +70,8 @@ function HeaderSection(arg0) {
   return closure_11(closure_12, obj5);
 }
 function AndOrRadios(setPendingRoleConfigurations) {
-  let locked;
-  let roleConnectionConfigurations;
   ({ locked, roleConnectionConfigurations } = setPendingRoleConfigurations);
-  const importDefault = setPendingRoleConfigurations.setPendingRoleConfigurations;
+  importDefault = setPendingRoleConfigurations.setPendingRoleConfigurations;
   if (roleConnectionConfigurations(5224).ConnectionConfigurationRuleOperator.OR === roleConnectionConfigurations(5224).ConnectionConfigurationRuleOperator.AND) {
     if (0 === roleConnectionConfigurations.length) {
       let items = [];
@@ -93,7 +82,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
     }
   } else {
     const _Object = Object;
-    let obj = apply;
+    let obj = applyDefault;
     const values = Object.values(obj.groupBy(roleConnectionConfigurations, (connectionType) => "" + connectionType.connectionType + ":" + connectionType.applicationId));
     obj = { title: null, value: null, onChange: null, hasIcons: false, children: null };
     const intl = tmp(1236).intl;
@@ -112,7 +101,7 @@ function AndOrRadios(setPendingRoleConfigurations) {
     }
     obj[2] = tmp11;
     const items2 = [closure_10(tmp(8100).TableRadioRow, obj), ];
-    const obj1 = { value: null, label: null, disabled: null };
+    obj1 = { value: null, label: null, disabled: null };
     obj1[0] = tmp(5224).ConnectionConfigurationRuleOperator.AND;
     const intl3 = tmp(1236).intl;
     obj1[1] = intl3.string(tmp(1236).t.gHXS9A);
@@ -124,9 +113,9 @@ function AndOrRadios(setPendingRoleConfigurations) {
 }
 function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integrations) {
   const _require = memo;
-  const importDefault = arg1;
-  const dependencyMap = locked;
-  let Header = integrations;
+  importDefault = arg1;
+  dependencyMap = locked;
+  closure_3 = integrations;
   function handleConfigurationChange(arg0, arg1) {
     const items = [];
     for (const item10006 of iter) {
@@ -209,27 +198,20 @@ function renderRoleConnectionConfigurations(memo, arg1, locked, arg3, integratio
     }
     continue;
   }
-  const obj1 = { spacing: null, children: null };
-  obj1[0] = Themes.space.PX_24;
+  obj1 = { spacing: ThemesDefault.space.PX_24, children: null };
   arr = Array.from(map.values());
-  obj1[1] = arr.map((configurationItems) => outer1_10(callback(locked[19]), { configurationItems, onConfigurationChange: handleConfigurationChange, locked, integrations: Header }, configurationItems[0].configuration.connectionType + ":" + configurationItems[0].index));
+  obj1[1] = arr.map((configurationItems) => closure_1_10(callback(locked[19]), { configurationItems, onConfigurationChange: handleConfigurationChange, locked, integrations: closure_3 }, configurationItems[0].configuration.connectionType + ":" + configurationItems[0].index));
   return callback(_Stack.Stack, obj1);
 }
 function AddConnectionButton(locked) {
-  let View;
-  let Header;
-  let getRoleMemberCount;
-  let dependencyMap;
-  let importDefault;
-  let require;
-  ({ handleConnectionTapped: require, excludedConnections: importDefault, excludedApplications: dependencyMap, roleId: Header, integrations: View, gameApplicationIds: getRoleMemberCount } = locked);
+  ({ handleConnectionTapped: require, excludedConnections: importDefault, excludedApplications: dependencyMap, roleId: closure_3, integrations: View, gameApplicationIds: closure_5 } = locked);
   let obj = { text: null, variant: "secondary", icon: null, disabled: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t["OSvW5+"]);
   obj[2] = callback(CirclePlusIcon.CirclePlusIcon, { size: "sm" });
   obj[3] = locked.locked;
   obj[4] = function onPress() {
-    let obj = outer1_1(outer1_2[22]);
+    let obj = closure_1_1(closure_1_2[22]);
     obj = {
       addConnection(arg0) {
         return callback(arg0, undefined);
@@ -238,37 +220,35 @@ function AddConnectionButton(locked) {
       excludedApplications: closure_2,
       integrations: closure_4,
       onCompleteApplication(arg0) {
-        return callback(outer1_8, arg0);
+        return callback(closure_1_8, arg0);
       },
       gameApplicationIds: null,
       onCompleteIdentityApplication: null
     };
-    let tmp3 = getRoleMemberCount;
-    const combined = "SelectConnectionActionSheet-" + Header;
-    if (getRoleMemberCount == null) {
+    let tmp3 = closure_5;
+    const combined = "SelectConnectionActionSheet-" + closure_3;
+    if (closure_5 == null) {
       tmp3 = null;
     }
     obj[5] = tmp3;
     obj[6] = function onCompleteIdentityApplication(arg0) {
-      return callback(outer1_9, arg0);
+      return callback(closure_1_9, arg0);
     };
-    obj.openLazy(outer1_0(outer1_2[24])(outer1_2[23], outer1_2.paths), combined, obj);
+    obj.openLazy(closure_1_0(closure_1_2[24])(closure_1_2[23], closure_1_2.paths), combined, obj);
   };
   return callback(Button.Button, obj);
 }
-({ GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: metroImportAll, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: c9 } = OperatorTypes);
+({ GUILD_ROLE_CONNECTION_APPLICATION_CONNECTION_TYPE: closure_8, GUILD_ROLE_CONNECTION_APPLICATION_IDENTITY_CONNECTION_TYPE: c9 } = OperatorTypes);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { formContent: { paddingTop: 16, paddingBottom: 0 }, warningContainer: null, warningText: null, headerTitleContainer: null };
-createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", padding: 8, backgroundColor: require("Themes").colors.BACKGROUND_FEEDBACK_WARNING, borderColor: require("Themes").colors.STATUS_WARNING, borderWidth: 1, borderRadius: require("Themes").radii.xs };
+createCacheKey = { display: "flex", flexDirection: "row", alignItems: "center", padding: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_FEEDBACK_WARNING, borderColor: ThemesDefault.colors.STATUS_WARNING, borderWidth: 1, borderRadius: ThemesDefault.radii.xs };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, marginLeft: 10 };
 createCacheKey[3] = { display: "flex", flexDirection: "row", justifyContent: "space-between" };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("getRoleMemberCount").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditConnectionsControls.tsx");
 
 export default function GuildSettingsRolesEditConnectionsControls(guild) {
-  let integrations;
-  let locked;
   guild = guild.guild;
   const role = guild.role;
   ({ locked, integrations } = guild);
@@ -277,13 +257,13 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
   let memo;
   let obj = guild(stateFromStoresArray[25]);
   const applicationIdentityLinkedRolesEnabled = obj.useApplicationIdentityLinkedRolesEnabled(guild.id);
-  let obj1 = guild(stateFromStoresArray[26]);
+  obj1 = guild(stateFromStoresArray[26]);
   const applicationIdentityLinkedRolesEnabled1 = obj1.useApplicationIdentityLinkedRolesEnabled(guild.id, "guild_settings_roles_edit_connections");
   let obj2 = guild(stateFromStoresArray[27]);
-  let items = [getRoleMemberCount];
+  let items = [closure_5];
   let items1 = [role.id, guild.id];
   let num = obj2.useStateFromStores(items, () => {
-    const roleMemberCount = outer1_5.getRoleMemberCount(guild.id);
+    const roleMemberCount = closure_1_5.getRoleMemberCount(guild.id);
     let tmp2;
     if (roleMemberCount != null) {
       tmp2 = roleMemberCount[role.id];
@@ -291,9 +271,9 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
     return tmp2;
   }, items1);
   let obj3 = guild(stateFromStoresArray[27]);
-  let items2 = [handleSetSection];
+  let items2 = [closure_6];
   stateFromStoresArray = obj3.useStateFromStoresArray(items2, () => {
-    const editedRoleConnectionConfigurationsMap = outer1_6.getEditedRoleConnectionConfigurationsMap();
+    const editedRoleConnectionConfigurationsMap = closure_1_6.getEditedRoleConnectionConfigurationsMap();
     let items = editedRoleConnectionConfigurationsMap.get(role.id);
     if (items == null) {
       items = [];
@@ -332,9 +312,8 @@ export default function GuildSettingsRolesEditConnectionsControls(guild) {
     });
     return new Set(mapped.filter((arg0) => "" !== arg0));
   }, items5);
-  obj = { contentContainerStyle: createCacheKey().formContent, keyboardShouldPersistTaps: "handled", children: null };
-  obj = { spacing: null, children: null };
-  obj[0] = role(stateFromStoresArray[8]).space.PX_24;
+  obj = { contentContainerStyle: callback2().formContent, keyboardShouldPersistTaps: "handled", children: null };
+  obj = { spacing: role(tmp3[8]).space.PX_24, children: null };
   obj1 = {
     clearConnections() {
       const result = guild(stateFromStoresArray[29]).updateRoleConnectionConfigurations(role.id, []);

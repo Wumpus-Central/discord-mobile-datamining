@@ -1,19 +1,20 @@
 // discord_app/modules/feedback/native/RequestReviewStore.tsx
-import getHash from "getHash";
-import initialize from "initialize";
-import handleConnectionOpen from "handleConnectionOpen";
-import { AnalyticEvents } from "ME";
-import { Store } from "initialize";
-import { Storage } from "../../../../discord_common/js/packages/storage/Storage.tsx";
-import { sleep } from "../../../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { getFirstInstallTimeMillis } from "../../install/native/InstallTime.tsx";
-import { getRootNavigationRef } from "../../main_tabs_v2/RootNavigationRef.native.tsx";
-import { _showAndroidRatingRequest } from "requestReviewModal.tsx";
-import { apexExperiment } from "RequestReviewNoTTIExperiment.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import Storage2 from "Storage" /* 595 */;
+import keys from "keys" /* 691 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import sleep from "sleep" /* 4548 */;
+import apexExperiment from "apexExperiment" /* 13246 */;
+import _showAndroidRatingRequestDefault from "_showAndroidRatingRequest" /* 13247 */;
+import getFirstInstallTimeMillis from "getFirstInstallTimeMillis" /* 13249 */;
+import closure_4 from "getHash" /* 4288 */;
+import closure_5 from "initialize" /* 1212 */;
+import closure_6 from "handleConnectionOpen" /* 1979 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function showReviewRequestModal() {
   const rootNavigationRef = getRootNavigationRef.getRootNavigationRef();
   let tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
@@ -27,18 +28,18 @@ function showReviewRequestModal() {
   if (tmp3) {
     if (!keyboardIsOpen) {
       if (!tmp5) {
-        expandEventProperties.track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
+        expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_SHOW_ATTEMPTED);
         closure_9.revision = 1;
         const Storage = tmp(595).Storage;
         const result = Storage.set(RequestReviewStore, closure_9);
-        _showAndroidRatingRequest();
-        let c10 = false;
-        const obj5 = expandEventProperties;
+        _showAndroidRatingRequestDefault();
+        c10 = false;
+        const obj5 = expandEventPropertiesDefault;
       }
     }
   }
   const obj = getRootNavigationRef;
-  expandEventProperties.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
+  expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_DEFERRED, { is_keyboard_open: keyboardIsOpen, is_in_voice: tmp5, is_viewing_chat: tmp3 });
   if (-1 !== timeout) {
     const _clearTimeout = clearTimeout;
     clearTimeout(timeout);
@@ -73,18 +74,19 @@ const RequestReviewStore = "RequestReviewStore";
 let closure_9 = { revision: 0 };
 let c10 = false;
 let c11 = -1;
+const Store = initializeDefault.Store;
 class RequestReviewStore extends Store {
 }
 RequestReviewStore.prototype["initialize"] = function initialize() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   let obj = Storage.get(RequestReviewStore);
   if (obj == null) {
     obj = { revision: 0 };
   }
-  this.waitFor(initialize, getHash, handleConnectionOpen);
+  this.waitFor(closure_5, closure_4, closure_6);
 };
 RequestReviewStore.displayName = "RequestReviewStore";
-const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
+const requestReviewStore = new RequestReviewStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     let obj = getFirstInstallTimeMillis;
@@ -96,8 +98,8 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
       obj[1] = tmp3;
       obj[2] = someResult;
       obj[3] = tmp5;
-      expandEventProperties.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
-      const obj3 = expandEventProperties;
+      expandEventPropertiesDefault.track(AnalyticEvents.REVIEW_REQUEST_ELIGIBILITY_CHECKED, obj);
+      const obj3 = expandEventPropertiesDefault;
     }
     if (tmp3) {
       tmp3 = tmp5;
@@ -108,7 +110,7 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     if (tmp3) {
       tmp3 = tmp6;
     }
-    let c10 = tmp3;
+    closure_10 = tmp3;
     if (-1 !== timeout) {
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
@@ -116,8 +118,8 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
     const RequestReviewNoTTIExperiment = tmp(13246).RequestReviewNoTTIExperiment;
     let skipTTICheck = RequestReviewNoTTIExperiment.getConfig({ location: "RequestReviewStore" }).skipTTICheck;
-    let tmp13 = c10;
-    if (c10) {
+    let tmp13 = closure_10;
+    if (closure_10) {
       if (!skipTTICheck) {
         let tmp15 = undefined !== closure_3;
         if (tmp15) {
@@ -214,6 +216,6 @@ const requestReviewStore = new RequestReviewStore(require("dispatcher"), {
     }
   }
 });
-let result = require("handleConnectionOpen").fileFinishedImporting("modules/feedback/native/RequestReviewStore.tsx");
+let result = require("set").fileFinishedImporting("modules/feedback/native/RequestReviewStore.tsx");
 
 export default requestReviewStore;

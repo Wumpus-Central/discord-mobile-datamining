@@ -1,10 +1,11 @@
 // discord_app/modules/applications/ApplicationAssetsStore.tsx
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
 function handleFetchEmbeddedActivityShelfSuccess(assets) {
   assets = assets.assets;
-  let obj = {};
+  obj = {};
   const merged = Object.assign(obj);
   for (const key10012 in assets) {
     let tmp2 = key10012;
@@ -13,7 +14,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
     let tmp5 = importDefault;
     let tmp6 = dependencyMap;
     let tmp4 = closure_4;
-    let obj4 = apply;
+    let obj4 = applyDefault;
     let keyByResult = obj4.keyBy(assets[key10012], "name");
     if (keyByResult == null) {
       keyByResult = {};
@@ -29,6 +30,7 @@ function handleFetchEmbeddedActivityShelfSuccess(assets) {
 let obj = { NOT_FETCHED: 0, [0]: "NOT_FETCHED", FETCHING: 1, [1]: "FETCHING", FETCH_SUCCESS: 2, [2]: "FETCH_SUCCESS" };
 let closure_3 = {};
 let closure_4 = {};
+const Store = initializeDefault.Store;
 class ApplicationAssetsStore extends Store {
 }
 const prototype = ApplicationAssetsStore.prototype;
@@ -42,13 +44,11 @@ prototype["getApplicationAssetFetchState"] = function getApplicationAssetFetchSt
 prototype["getFetchingIds"] = function getFetchingIds() {
   const entries = Object.entries(closure_3);
   const found = entries.filter((arg0) => {
-    let tmp;
     [, tmp] = arg0;
     return tmp === constants.FETCHING;
   });
   const items = [
     ...found.map((arg0) => {
-      let tmp;
       [tmp] = arg0;
       return tmp;
     })
@@ -61,19 +61,19 @@ prototype["getApplicationAssets"] = function getApplicationAssets(closure_0) {
 ApplicationAssetsStore.displayName = "ApplicationAssetsStore";
 obj = {
   APPLICATION_ASSETS_FETCH: function handleFetchApplicationAssets(applicationId) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj[applicationId.applicationId] = obj.FETCHING;
   },
   APPLICATION_ASSETS_FETCH_SUCCESS: function handleFetchApplicationAssetsSuccess(applicationId) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj[applicationId.applicationId] = obj.FETCH_SUCCESS;
   },
   APPLICATION_ASSETS_UPDATE: function handleUpdateApplicationAssets(assets) {
     assets = assets.assets;
     if (null != assets) {
-      let obj = apply;
+      obj = applyDefault;
       let keyByResult = obj.keyBy(assets, "name");
       if (keyByResult == null) {
         keyByResult = {};
@@ -91,8 +91,8 @@ obj = {
   EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: handleFetchEmbeddedActivityShelfSuccess,
   DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: handleFetchEmbeddedActivityShelfSuccess
 };
-const applicationAssetsStore = new ApplicationAssetsStore(require("dispatcher"), obj);
-const result = require("dispatcher").fileFinishedImporting("modules/applications/ApplicationAssetsStore.tsx");
+const applicationAssetsStore = new ApplicationAssetsStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("modules/applications/ApplicationAssetsStore.tsx");
 
 export default applicationAssetsStore;
 export const FetchState = obj;

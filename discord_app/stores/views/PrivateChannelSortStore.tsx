@@ -1,22 +1,23 @@
 // discord_app/stores/views/PrivateChannelSortStore.tsx
-import processChannel from "processChannel";
-import closure_4 from "processChannel";
-import { isPrivate } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Store } from "initialize";
-import { t } from "../../../_runtime/03975_t.js";
-import { FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID } from "../../modules/channel/FakePlaceholderPrivateChannel.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import tDefault from "t" /* 3975 */;
+import FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID from "FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID" /* 5389 */;
+import closure_3 from "processChannel" /* 4799 */;
+import closure_4 from "processChannel" /* 4800 */;
+import { isPrivate } from "createChannelRecord" /* 1395 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "generateOldThreadCutoff" /* 4772 */;
+import closure_9 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_10 from "mergeGuildAvatar" /* 1922 */;
 
-const require = arg1;
+require = arg1;
 function makeSortedChannel(channel, id) {
   let tmp = id;
   if (id === undefined) {
-    id = generateOldThreadCutoff.lastMessageId(channel.id);
+    id = closure_8.lastMessageId(channel.id);
     if (id == null) {
       id = channel.lastMessageId;
     }
@@ -26,15 +27,15 @@ function makeSortedChannel(channel, id) {
     const isMessageRequestTimestamp = channel.isMessageRequestTimestamp;
     let tmp2 = id;
     if (null != isMessageRequestTimestamp) {
-      let obj = t(isMessageRequestTimestamp);
+      let obj = tDefault(isMessageRequestTimestamp);
       const valueOfResult = obj.valueOf();
-      let fromTimestampResult = DISCORD_EPOCH.fromTimestamp(valueOfResult);
-      const obj2 = DISCORD_EPOCH;
+      let fromTimestampResult = DISCORD_EPOCHDefault.fromTimestamp(valueOfResult);
+      const obj2 = DISCORD_EPOCHDefault;
       if (obj3.compare(id, fromTimestampResult) > 0) {
         fromTimestampResult = id;
       }
       tmp2 = fromTimestampResult;
-      obj3 = DISCORD_EPOCH;
+      obj3 = DISCORD_EPOCHDefault;
     }
     tmp = tmp2;
   }
@@ -72,7 +73,7 @@ const secondaryIndexMap = new require("version").SecondaryIndexMap(function inde
   }
   return items;
 }, function sortBy(arr, items, arg2) {
-  return -DISCORD_EPOCH.extractTimestamp(arr.lastMessageId);
+  return -DISCORD_EPOCHDefault.extractTimestamp(arr.lastMessageId);
 });
 let closure_15 = [];
 let closure_16 = [];
@@ -80,12 +81,13 @@ let closure_17 = [];
 const f36560 = () => {
 
 };
+const Store = initializeDefault.Store;
 class PrivateChannelSortStore extends Store {
 }
 const prototype = PrivateChannelSortStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(ensureGuildLoaded, createGuildRecordFromRust, processChannel, generateOldThreadCutoff, closure_4, updateUserGuildSettingsInternal, mergeGuildAvatar);
-  const items = [updateUserGuildSettingsInternal, processChannel];
+  this.waitFor(closure_6, closure_7, closure_3, closure_8, closure_4, closure_9, closure_10);
+  const items = [closure_9, closure_3];
   this.syncWith(items, handleConnectionOpen);
 };
 prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
@@ -99,7 +101,7 @@ prototype["getPrivateChannelIds"] = function getPrivateChannelIds() {
     tmp = values === values;
   }
   if (!tmp) {
-    let closure_17 = [];
+    closure_17 = [];
     const item = values.forEach((channelId) => arr.push(channelId.channelId));
     const item1 = values.forEach((channelId) => arr.push(channelId.channelId));
   }
@@ -118,7 +120,7 @@ prototype["serializeForOverlay"] = function serializeForOverlay() {
   return obj;
 };
 PrivateChannelSortStore.displayName = "PrivateChannelSortStore";
-const privateChannelSortStore = new PrivateChannelSortStore(require("dispatcher"), {
+const privateChannelSortStore = new PrivateChannelSortStore(dispatcherDefault, {
   CONNECTION_OPEN: handleConnectionOpen,
   CONNECTION_OPEN_SUPPLEMENTAL: handleConnectionOpen,
   OVERLAY_INITIALIZE: handleConnectionOpen,
@@ -172,6 +174,6 @@ const privateChannelSortStore = new PrivateChannelSortStore(require("dispatcher"
     secondaryIndexMap.clear();
   }
 });
-let result = require("createChannelRecord").fileFinishedImporting("stores/views/PrivateChannelSortStore.tsx");
+let result = require("set").fileFinishedImporting("stores/views/PrivateChannelSortStore.tsx");
 
 export default privateChannelSortStore;

@@ -1,17 +1,13 @@
 // discord_app/modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx
-import prototype from "prototype";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { CreatorMonetizationApplicationState as closure_6 } from "CreatorMonetizationApplicationState";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { CreatorMonetizationApplicationState as closure_6 } from "CreatorMonetizationApplicationState" /* 16903 */;
 
-const result = require("noop").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
+const result = require("set").fileFinishedImporting("modules/creator_monetization_eligibility/useCreatorMonetizationEligibility.tsx");
 
 export default function useCreatorMonetizationEligibility(arg0) {
-  let dependencyMap;
-  let importAll;
-  let tmp2;
-  let tmp4;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   [tmp2, importAll] = callback(React.useState(null != arg0), 2);
   const tmp = callback(React.useState(null != arg0), 2);
   [tmp4, dependencyMap] = callback(React.useState(), 2);
@@ -19,10 +15,10 @@ export default function useCreatorMonetizationEligibility(arg0) {
   callback = tmp5[1];
   closure_0 = undefined;
   closure_0 = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -50,13 +46,13 @@ export default function useCreatorMonetizationEligibility(arg0) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_2 = tmp4;
-              let closure_1 = tmp8;
+              closure_2 = tmp4;
+              callback = tmp8;
               let lib;
-              outer1_1(true);
-              outer1_2(undefined);
-              let c4 = 2;
-              let obj1 = outer2_1(outer2_2[4]);
+              callback(true);
+              closure_1_2(undefined);
+              c4 = 2;
+              obj1 = closure_2_1(closure_2_2[4]);
               c5 = 3;
               c6 = 1;
               obj1 = { value: null, done: false };
@@ -65,16 +61,16 @@ export default function useCreatorMonetizationEligibility(arg0) {
             }
           } else if (1 === tmp8) {
             c4 = 0;
-            outer1_1(false);
-            throw prototype;
+            callback(false);
+            throw closure_3;
           } else {
             if (2 === tmp8) {
               c4 = 1;
-              outer1_1 = prototype;
-              const tmp45 = new lib(outer2_2[5])(outer1_1);
-              outer1_2(tmp45);
+              callback = closure_3;
+              const tmp45 = new lib(closure_2_2[5])(callback);
+              closure_1_2(tmp45);
               c4 = 0;
-              outer1_1(false);
+              callback(false);
               c6 = 3;
             } else if (arg0 === 1) {
               c6 = 3;
@@ -98,13 +94,13 @@ export default function useCreatorMonetizationEligibility(arg0) {
               if (latest_request2 != null) {
                 state = latest_request2.state;
               }
-              obj2[10] = state === outer2_6.OPEN;
+              obj2[10] = state === closure_2_6.OPEN;
               const latest_request = lib.latest_request;
               let state1;
               if (latest_request != null) {
                 state1 = latest_request.state;
               }
-              obj2[11] = state1 === outer2_6.ACTION_REQUIRED;
+              obj2[11] = state1 === closure_2_6.ACTION_REQUIRED;
               obj2[12] = lib.minimum_age_in_days;
               obj2[13] = lib.minimum_owner_age_in_years;
               obj2[14] = lib.minimum_size;
@@ -128,19 +124,19 @@ export default function useCreatorMonetizationEligibility(arg0) {
                 perc_ret_w1 = health_score3.perc_ret_w1;
               }
               obj2[19] = perc_ret_w1;
-              outer1_3(obj2);
+              closure_1_3(obj2);
               c4 = 1;
-              const tmp75 = outer1_3;
+              const tmp75 = closure_1_3;
             }
             c4 = 0;
-            outer1_1(false);
+            callback(false);
             c6 = 3;
             obj = { value: null, done: true };
             obj[0] = arg1;
             return obj;
           }
         } catch (tmp63) {
-          prototype = tmp63;
+          closure_3 = tmp63;
           if (tmp5 === c4) {
             c6 = tmp3;
             throw tmp63;

@@ -1,19 +1,20 @@
 // discord_app/modules/guild_sidebar/SidebarVisibilityMethodStore.tsx
-import keys from "keys";
+import set from "set" /* 2 */;
+import keys from "keys" /* 644 */;
 
 let obj = keys.create(() => ({}));
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
+const result = set.fileFinishedImporting("modules/guild_sidebar/SidebarVisibilityMethodStore.tsx");
 
 export const SidebarVisibilityMethodStore = obj;
 export const setGetVisibleGuildIds = function setGetVisibleGuildIds(getVisibleGuildIds) {
-  const obj = { getVisibleGuildIds };
+  obj = { getVisibleGuildIds };
   obj.setState(obj);
 };
 export const getVisibleGuildIdsMethod = function getVisibleGuildIdsMethod() {
   return obj.getState().getVisibleGuildIds;
 };
 export const setGetVisibleChannelIds = function setGetVisibleChannelIds(getVisibleChannelIds) {
-  const obj = { getVisibleChannelIds };
+  obj = { getVisibleChannelIds };
   obj.setState(obj);
 };
 export const getVisibleChannelIdsMethod = function getVisibleChannelIdsMethod() {

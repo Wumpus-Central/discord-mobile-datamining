@@ -1,25 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { ImageSkeleton } from "UserProfileApplicationWidgetSkeletons.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import ImageSkeleton from "ImageSkeleton" /* 12278 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { fieldTextRow: null, fieldIcon: null };
-createCacheKey = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_4 };
+createCacheKey = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 16, height: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileApplicationWidgetFieldUtils.tsx");
 
 export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   let num = 0;
@@ -57,13 +55,9 @@ export const formatDurationNarrow = function formatDurationNarrow(arg0) {
   return items.join(" ");
 };
 export const FieldText = function FieldText(arg0) {
-  let color;
-  let field;
-  let skeletonWidthChars;
-  let variant;
   ({ field, variant } = arg0);
   ({ color, skeletonWidthChars } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   if ("hidden" === field.status) {
     return null;
   } else if ("skeleton" === field.status) {
@@ -74,7 +68,7 @@ export const FieldText = function FieldText(arg0) {
   } else {
     obj = { style: null, children: null };
     obj[0] = tmp.fieldTextRow;
-    const obj1 = { variant: null, color: null, lineClamp: 2, children: null };
+    obj1 = { variant: null, color: null, lineClamp: 2, children: null };
     obj1[0] = variant;
     obj1[1] = color;
     obj1[3] = field.text;

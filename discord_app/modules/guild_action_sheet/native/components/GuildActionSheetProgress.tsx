@@ -1,25 +1,25 @@
 // discord_app/modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PressableCard } from "../../../../design/components/Card/native/Card.native.tsx";
-import { GuildProgressOverviewView } from "../../../guild_progress/native/components/GuildProgressOverview.tsx";
-import { useIOSCompletionStates } from "../../../guild_progress/native/GuildProgressUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import PressableCard from "PressableCard" /* 6292 */;
+import useIOSCompletionStates from "useIOSCompletionStates" /* 11643 */;
+import GuildProgressOverviewViewDefault from "GuildProgressOverviewView" /* 13435 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { title: null, cardStyle: null };
-createCacheKey = { color: require("Themes").colors.TEXT_DEFAULT };
+createCacheKey = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginHorizontal: require("Themes").space.PX_16, padding: 0, marginBottom: require("Themes").space.PX_24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { marginHorizontal: require("Themes").space.PX_16, padding: 0, marginBottom: require("Themes").space.PX_24 };
-const result = require("createCacheKey").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
+createCacheKey[1] = { marginHorizontal: ThemesDefault.space.PX_16, padding: 0, marginBottom: ThemesDefault.space.PX_24 };
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { marginHorizontal: ThemesDefault.space.PX_16, padding: 0, marginBottom: ThemesDefault.space.PX_24 };
+const result = require("set").fileFinishedImporting("modules/guild_action_sheet/native/components/GuildActionSheetProgress.tsx");
 
 export default function GuildActionSheetProgress(guild) {
-  let completed;
-  let dismissed;
   guild = guild.guild;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = useIOSCompletionStates;
   const iOSCompletionStates = obj.useIOSCompletionStates(guild);
   ({ completed, dismissed } = iOSCompletionStates);
@@ -34,7 +34,7 @@ export default function GuildActionSheetProgress(guild) {
         obj = { guild: null, titleStyle: null, longPressDisabled: true, resume: true };
         obj[0] = guild;
         obj[1] = tmp.title;
-        obj[1] = jsx(GuildProgressOverviewView, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
+        obj[1] = jsx(GuildProgressOverviewViewDefault, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
         tmp5 = jsx(PressableCard.Card, { guild: null, titleStyle: null, longPressDisabled: true, resume: true });
       }
     }

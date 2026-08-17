@@ -1,16 +1,16 @@
 // discord_app/actions/CommunicationDisabledActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
 
-const result = require("showTooManyUserGuildsAlert").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
+const result = require("set").fileFinishedImporting("actions/CommunicationDisabledActionCreators.tsx");
 
 export default {
-  setCommunicationDisabledDuration(outer1_0, c1, value, current) {
-    let closure_0 = outer1_0;
-    let closure_1 = c1;
+  setCommunicationDisabledDuration(closure_1_0, c1, value, current) {
+    closure_0 = closure_1_0;
+    closure_1 = c1;
     const callback = value;
-    let closure_3 = current;
-    let closure_4 = arg4;
-    let closure_5 = arg5;
+    closure_3 = current;
+    closure_4 = arg4;
+    closure_5 = arg5;
     return callback(function*() {
       if (v0 === 2) {
         v0 = 3;
@@ -39,8 +39,8 @@ export default {
               return obj;
             } else {
               let toISOStringResult = null;
-              if (null != outer1_2) {
-                let obj1 = v0(3975)();
+              if (null != closure_1_2) {
+                obj1 = v0(3975)();
                 toISOStringResult = obj1.add(tmp21, "s").toISOString();
                 const addResult = obj1.add(tmp21, "s");
               }
@@ -48,10 +48,10 @@ export default {
               obj1[0] = v0;
               obj1[1] = dependencyMap;
               obj1[2] = toISOStringResult;
-              obj1[3] = outer1_2;
-              obj1[4] = outer1_3;
-              obj1[5] = outer1_4;
-              obj1[6] = outer1_5;
+              obj1[3] = closure_1_2;
+              obj1[4] = closure_1_3;
+              obj1[5] = closure_1_4;
+              obj1[6] = closure_1_5;
               dependencyMap = 1;
               v0 = 1;
               const obj2 = { value: null, done: false };

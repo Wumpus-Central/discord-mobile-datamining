@@ -1,6 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/channel/useSafeAreaBottomKeyboardInfoController.tsx
-import noop from "noop";
-import isMetaQuest from "isMetaQuest";
+import closure_3 from "noop" /* 19 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
 
 const require = arg1;
 isMetaQuest = isMetaQuest.isMetaQuest();
@@ -36,8 +36,8 @@ export default function useSafeAreaBottomKeyboardInfoController() {
         let someResult = APP_ENTRY_KEYS.some((arg0) => {
           let tmp = arg0 !== closure_0;
           if (tmp) {
-            tmp = outer1_1(outer1_2[3]).getImeInsets(false, arg0) > 0;
-            const obj = outer1_1(outer1_2[3]);
+            tmp = closure_1_1(closure_1_2[3]).getImeInsets(false, arg0) > 0;
+            const obj = closure_1_1(closure_1_2[3]);
           }
           return tmp;
         });
@@ -74,8 +74,8 @@ export default function useSafeAreaBottomKeyboardInfoController() {
             const someResult = APP_ENTRY_KEYS.some((arg0) => {
               let tmp = arg0 !== closure_0;
               if (tmp) {
-                tmp = outer1_1(outer1_2[3]).getImeInsets(false, arg0) > 0;
-                const obj = outer1_1(outer1_2[3]);
+                tmp = closure_1_1(closure_1_2[3]).getImeInsets(false, arg0) > 0;
+                const obj = closure_1_1(closure_1_2[3]);
               }
               return tmp;
             });
@@ -104,22 +104,22 @@ export default function useSafeAreaBottomKeyboardInfoController() {
         tmp16 = callback;
       }
     }
-    if (!outer1_4) {
-      let c0 = false;
+    if (!closure_1_4) {
+      c0 = false;
       const KeyboardEvents = appEntryKey(keyboardOpenOrOpening[6]).KeyboardEvents;
-      let closure_1 = KeyboardEvents.addListener("keyboardWillShow", (height) => {
+      closure_1 = KeyboardEvents.addListener("keyboardWillShow", (height) => {
         const result = keyboardOpenedHeight(keyboardOpenOrOpening[8]).keyboardControllerKeyboardWillShow(height.height);
-        let c0 = true;
+        c0 = true;
         handleKeyboardShow(height.height);
       });
       const KeyboardEvents2 = appEntryKey(keyboardOpenOrOpening[6]).KeyboardEvents;
-      let closure_2 = KeyboardEvents2.addListener("keyboardDidShow", (height) => {
+      closure_2 = KeyboardEvents2.addListener("keyboardDidShow", (height) => {
         const result = keyboardOpenedHeight(keyboardOpenOrOpening[8]).keyboardControllerKeyboardDidShow(height.height);
-        let c0 = false;
+        c0 = false;
         handleKeyboardShow(height.height);
       });
       const KeyboardEvents3 = appEntryKey(keyboardOpenOrOpening[6]).KeyboardEvents;
-      let noop = KeyboardEvents3.addListener("keyboardWillHide", () => {
+      closure_3 = KeyboardEvents3.addListener("keyboardWillHide", () => {
         const result = keyboardOpenedHeight(keyboardOpenOrOpening[8]).keyboardControllerKeyboardWillHide();
         if (store2.get()) {
           if (!c0) {
@@ -128,10 +128,10 @@ export default function useSafeAreaBottomKeyboardInfoController() {
         }
       });
       const KeyboardEvents4 = appEntryKey(keyboardOpenOrOpening[6]).KeyboardEvents;
-      let closure_4 = KeyboardEvents4.addListener("keyboardDidHide", () => {
+      closure_4 = KeyboardEvents4.addListener("keyboardDidHide", () => {
         const result = keyboardOpenedHeight(keyboardOpenOrOpening[8]).keyboardControllerKeyboardDidHide();
         if (store2.get()) {
-          let c0 = false;
+          c0 = false;
           const result1 = store.set(false);
         }
       });
@@ -147,7 +147,7 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   obj = { onStart: null, onEnd: null };
   const fn = function s(height) {
     appEntryKey(keyboardOpenOrOpening[7]).runOnJS(keyboardOpenedHeight(keyboardOpenOrOpening[8]).keyboardControllerWorkletEvent)("onStart", height.height);
-    if (!outer1_4) {
+    if (!closure_1_4) {
       let value = height.height > 0;
       if (value) {
         value = keyboardOverlapsCurrentAppEntry.get();
@@ -164,7 +164,7 @@ export default function useSafeAreaBottomKeyboardInfoController() {
   obj[0] = fn;
   const fn2 = function l(height) {
     appEntryKey(keyboardOpenOrOpening[7]).runOnJS(keyboardOpenedHeight(keyboardOpenOrOpening[8]).keyboardControllerWorkletEvent)("onEnd", height.height);
-    if (!outer1_4) {
+    if (!closure_1_4) {
       let value = height.height > 0;
       if (value) {
         value = keyboardOverlapsCurrentAppEntry.get();

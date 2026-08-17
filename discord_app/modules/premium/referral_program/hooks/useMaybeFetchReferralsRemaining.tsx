@@ -1,21 +1,19 @@
 // discord_app/modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx
-import noop from "noop";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import emitChanges from "emitChanges";
-import GuildFeatures from "GuildFeatures";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "emitChanges" /* 7423 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ PremiumTypes: closure_6, FractionalPremiumStates: error } = GuildFeatures);
-let result = require("emitChanges").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/referral_program/hooks/useMaybeFetchReferralsRemaining.tsx");
 
 export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRemaining(flag) {
   if (flag === undefined) {
     flag = false;
   }
   let fetched;
-  const items = [mergeGuildAvatar];
+  const items = [closure_4];
   const stateFromStores = flag(589).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = flag(589);
   let tmp = flag;
@@ -51,7 +49,7 @@ export const useMaybeFetchReferralsRemaining = function useMaybeFetchReferralsRe
       tmp = !flag;
     }
     if (tmp) {
-      const result = outer1_5.checkAndFetchReferralsRemaining();
+      const result = closure_1_5.checkAndFetchReferralsRemaining();
     }
   }, items1);
 };

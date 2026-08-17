@@ -1,6 +1,8 @@
 // discord_app/design/void/BadgeConstants/native/BadgeConstants.tsx
-const PX_16 = require("Themes").space.PX_16;
-const PX_12 = require("Themes").space.PX_12;
+import ThemesDefault from "Themes" /* 712 */;
+
+const PX_16 = ThemesDefault.space.PX_16;
+const PX_12 = ThemesDefault.space.PX_12;
 const sum = PX_16 + 6;
 const sum1 = PX_12 + 6;
 const result = require("set").fileFinishedImporting("design/void/BadgeConstants/native/BadgeConstants.tsx");

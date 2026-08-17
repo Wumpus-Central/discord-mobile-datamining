@@ -1,10 +1,12 @@
 // discord_app/modules/user_settings/core/native/openUserSettings.tsx
-import handleFormClose from "handleFormClose";
-import { UserSettingsSections } from "ME";
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { getRootNavigationRef } from "../../../main_tabs_v2/RootNavigationRef.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import handleFormClose from "handleFormClose" /* 7361 */;
 
-const result = require("getRootNavigationRef").fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
+const UserSettingsSections = ME.UserSettingsSections;
+const result = set.fileFinishedImporting("modules/user_settings/core/native/openUserSettings.tsx");
 
 export const openUserSettings = (screen) => {
   let obj = getRootNavigationRef;
@@ -19,11 +21,11 @@ export const openUserSettings = (screen) => {
     }
     obj = { type: "USER_SETTINGS_MODAL_INIT", section: null };
     obj[1] = screen;
-    dispatcher.dispatch(obj);
+    dispatcherDefault.dispatch(obj);
     rootNavigationRef.navigate("settings", screen);
     if (arg1 != null) {
       arg1();
     }
-    const obj3 = dispatcher;
+    const obj3 = dispatcherDefault;
   }
 };

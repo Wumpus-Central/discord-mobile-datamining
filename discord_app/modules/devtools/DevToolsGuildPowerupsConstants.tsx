@@ -1,10 +1,12 @@
 // discord_app/modules/devtools/DevToolsGuildPowerupsConstants.tsx
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-const items = [require("DismissibleContent").DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK, require("DismissibleContent").DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NOTIFICATION, require("DismissibleContent").DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK, require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK, require("DismissibleContent").DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE];
-const items1 = [require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, require("DismissibleContent").DismissibleGuildContent.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK];
-const items2 = [require("DismissibleContent").DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE];
-const items3 = [require("DismissibleContent").DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, require("DismissibleContent").DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_MODAL, require("DismissibleContent").DismissibleContent.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER];
-const result = require("set").fileFinishedImporting("modules/devtools/DevToolsGuildPowerupsConstants.tsx");
+import set from "set" /* 2 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+
+const items = [DismissibleContent.DismissibleContent.GUILD_POWERUP_PERKS_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUP_NOTIFICATION, DismissibleContent.DismissibleContent.GUILD_TAG_AVAILABLE_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK, DismissibleContent.DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE];
+const items1 = [DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_1_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_2_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_LEVEL_3_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_SINGLE_SKU_PURCHASE_COACHMARK, DismissibleContent.DismissibleGuildContent.GUILD_POWERUP_CHOICE_SKU_PURCHASE_COACHMARK];
+const items2 = [DismissibleContent.DismissibleGuildContent.ADOPT_CLAN_IDENTITY_NOTICE];
+const items3 = [DismissibleContent.DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION, DismissibleContent.DismissibleContent.VANITY_URL_POWERUP_ROLLBACK_MODAL, DismissibleContent.DismissibleContent.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER];
+const result = set.fileFinishedImporting("modules/devtools/DevToolsGuildPowerupsConstants.tsx");
 
 export const USER_DCS = items;
 export const GUILD_DCS = items1;

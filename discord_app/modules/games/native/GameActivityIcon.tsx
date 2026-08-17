@@ -1,19 +1,17 @@
 // discord_app/modules/games/native/GameActivityIcon.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let c3 = importAllResult;
 let obj = { icon: null };
-obj = { borderRadius: require("Themes").radii.xs };
+obj = { borderRadius: ThemesDefault.radii.xs };
 obj[0] = obj;
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function GameActivityIcon(style) {
-  let game;
-  let onShown;
-  let size;
   ({ game, size, onShown } = style);
   style = style.style;
   let iconURL;
@@ -43,7 +41,7 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
       const isThemeDarkResult = tmp2Result.isThemeDark(obj.useThemeContext().theme);
     }
   } else {
-    const obj1 = { source: null, style: null };
+    obj1 = { source: null, style: null };
     tmp2Result = tmp2(1435);
     obj1[0] = tmp2Result.makeSource(iconURL);
     const items2 = [tmp.icon, obj];
@@ -59,6 +57,6 @@ const memoResult = importAllResult.memo(function GameActivityIcon(style) {
     return tmp6Result;
   }
 });
-const result = require("jsxProd").fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
+const result = require("set").fileFinishedImporting("modules/games/native/GameActivityIcon.tsx");
 
 export default memoResult;

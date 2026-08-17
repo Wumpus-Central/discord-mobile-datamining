@@ -1,28 +1,27 @@
 // discord_app/modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "set";
-import handleSafetyHubRequestAgeVerificationResetModalAction from "handleSafetyHubRequestAgeVerificationResetModalAction";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "handleSafetyHubRequestAgeVerificationResetModalAction" /* 11061 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { footerText: { textAlign: "center" }, textArea: { marginTop: -16, marginBottom: 36 }, separator: null, closeIcon: null };
-createCacheKey = { height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE, marginHorizontal: -16 };
+createCacheKey = { height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE, marginHorizontal: -16 };
 createCacheKey[2] = createCacheKey;
 createCacheKey[3] = { alignSelf: "flex-end", flexDirection: "row", marginBottom: -26 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/safety_hub/native/AppealIngestionFreeTextAppealReasonActionSheet.tsx");
 
 export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) {
   const onSave = onPress.onSave;
   let first;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = onSave(first[7]);
-  const items = [handleSafetyHubRequestAgeVerificationResetModalAction];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => freeTextAppealReason.getFreeTextAppealReason());
   const tmp5 = callback(React.useState(stateFromStores), 2);
   first = tmp5[0];
@@ -36,9 +35,8 @@ export default function AppealIngestionFreeTextAppealReasonActionSheet(onPress) 
   const intl3 = tmp2(tmp3[8]).intl;
   obj = { startExpanded: true, children: null };
   obj = { spacing: 16, children: null };
-  const obj1 = { onPress: onPress.onClose, style: tmp.closeIcon, children: null };
-  obj1[2] = callback2(onSave(first[12]).XSmallIcon, { size: "md" });
-  const items1 = [callback2(onSave(first[11]).PressableOpacity, obj1), callback2(onSave(first[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: intl3.string(onSave(first[8]).t["Rk+uJx"]) }), , , , ];
+  const stringResult1 = intl3.string(onSave(first[8]).t["Rk+uJx"]);
+  const items1 = [callback2(onSave(first[11]).PressableOpacity, { onPress: onPress.onClose, style: tmp.closeIcon, children: callback2(onSave(first[12]).XSmallIcon, { size: "md" }) }), callback2(onSave(first[13]).AppealIngestionModalHeader, { headerText: stringResult, subHeaderText: stringResult1 }), , , , ];
   const obj2 = { maxLength: 1024, placeholder: null, containerStyle: null, value: null, onChange: null };
   const intl4 = tmp2(tmp3[8]).intl;
   obj2[1] = intl4.string(onSave(first[8]).t.bQrZIN);

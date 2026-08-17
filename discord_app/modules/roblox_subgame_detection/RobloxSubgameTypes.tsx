@@ -1,4 +1,6 @@
 // discord_app/modules/roblox_subgame_detection/RobloxSubgameTypes.tsx
+import set from "set" /* 2 */;
+
 class ROBLOX_PROTOCOL_URL {
   constructor(arg0) {
     return "roblox://placeId=" + global;
@@ -9,7 +11,7 @@ class ROBLOX_WEB_URL {
     return "https://www.roblox.com/games/start?placeId=" + global;
   }
 }
-const result = require("set").fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");
+const result = set.fileFinishedImporting("modules/roblox_subgame_detection/RobloxSubgameTypes.tsx");
 
 export const ROBLOX_APPLICATION_ID = "363445589247131668";
 export const ROBLOX_GAME_ID = "363445589247131668";

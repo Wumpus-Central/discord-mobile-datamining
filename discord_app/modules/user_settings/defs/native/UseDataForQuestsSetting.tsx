@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/defs/native/UseDataForQuestsSetting.tsx
-import { MobileUserSettings } from "MobileUserSettings";
-import createToggle from "createToggle";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../ads/AdTopicOptOutClientExperiment.tsx";
-import { useAdPersonalizationTogglesDisabled } from "../../../ads/hooks/useAdPersonalizationTogglesDisabled.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
+import useAdPersonalizationTogglesDisabled from "useAdPersonalizationTogglesDisabled" /* 14998 */;
+import apexExperiment from "apexExperiment" /* 14999 */;
+import createToggle from "createToggle" /* 10669 */;
 
 function useIsDisabled() {
   let adPersonalizationTogglesDisabled = useAdPersonalizationTogglesDisabled.useAdPersonalizationTogglesDisabled();
@@ -23,6 +23,7 @@ function onDataToSupportQuestsSettingValueChange(arg0) {
   const DropsOptedOut = explicitContentFromProto.DropsOptedOut;
   DropsOptedOut.updateSetting(!arg0);
 }
+const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 let obj = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -43,13 +44,13 @@ obj = {
     return intl.string(getSystemLocale.t.sJYh5t);
   },
   parent: MobileUserSettings.SPONSORED_CONTENT_PREFERENCES,
-  usePredicate: require("apexExperiment").useIsAdTopicOptOutClientEnabled,
+  usePredicate: apexExperiment.useIsAdTopicOptOutClientEnabled,
   useValue: useDataToSupportQuestsSettingValue,
   onValueChange: onDataToSupportQuestsSettingValueChange,
   useIsDisabled
 };
 const toggle1 = createToggle.createToggle(obj);
-const result = require("useParentalControlledExplicitContentSettings").fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/UseDataForQuestsSetting.tsx");
 
 export default toggle;
 export const UseDataForQuestsSponsoredContentSetting = toggle1;

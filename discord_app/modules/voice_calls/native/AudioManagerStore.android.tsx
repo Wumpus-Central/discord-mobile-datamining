@@ -1,70 +1,75 @@
 // discord_app/modules/voice_calls/native/AudioManagerStore.android.tsx
-import { RTCConnectionStates } from "ME";
-import { MediaEngineContextTypes } from "DesktopSources";
-import enforcing from "enforcing";
-import enforcing from "enforcing";
-import { Store } from "initialize";
-import { apply } from "../../../../_runtime/00012_apply.js";
-import { enforcing } from "../../../../discord_common/js/packages/rtn-codegen/js/NativeAudioManagerModule.tsx";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DesktopSources from "DesktopSources" /* 4529 */;
+import enforcingDefault from "enforcing" /* 9652 */;
+import enforcing from "enforcing" /* 9652 */;
 
-const nativeEventEmitter = new require("get ActivityIndicator").NativeEventEmitter(require("enforcing"));
+const RTCConnectionStates = ME.RTCConnectionStates;
+const MediaEngineContextTypes = DesktopSources.MediaEngineContextTypes;
+const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(enforcingDefault);
 let closure_6 = [];
-enforcing = enforcing.getInvalidAndroidDevice();
-enforcing = enforcing.getInvalidAndroidDevice();
+const invalidAndroidDevice = enforcing.getInvalidAndroidDevice();
+const invalidAndroidDevice2 = enforcing.getInvalidAndroidDevice();
 let c9 = false;
+const Store = initializeDefault.Store;
 class AudioManagerStore extends Store {
 }
 const prototype = AudioManagerStore.prototype;
 prototype["initialize"] = function initialize() {
   const self = this;
-  const audioDevices = enforcing.getAudioDevices();
+  const audioDevices = enforcingDefault.getAudioDevices();
   audioDevices.then((arg0) => {
-    let outer1_6 = arg0;
+    closure_6 = arg0;
     self.emitChange();
-    outer1_5.addListener("android-audio-devices-updated", (devices) => {
-      const outer1_6 = devices.devices;
+    closure_1_5.addListener("android-audio-devices-updated", (devices) => {
+      devices = devices.devices;
       closure_0.emitChange();
     });
   });
-  const obj = enforcing;
-  const activeAudioDevice = enforcing.getActiveAudioDevice();
+  const obj = enforcingDefault;
+  const activeAudioDevice = enforcingDefault.getActiveAudioDevice();
   activeAudioDevice.then((arg0) => {
-    let outer1_7 = arg0;
+    closure_7 = arg0;
     self.emitChange();
-    outer1_5.addListener("android-active-audio-device-changed", (device) => {
-      const outer1_7 = device.device;
+    closure_1_5.addListener("android-active-audio-device-changed", (device) => {
+      device = device.device;
       closure_0.emitChange();
     });
   });
-  const obj2 = enforcing;
-  enforcing.setSCORetryCount(4);
+  const obj2 = enforcingDefault;
+  enforcingDefault.setSCORetryCount(4);
 };
 prototype["getAudioDevices"] = function getAudioDevices() {
   return closure_6;
 };
 prototype["getActiveAudioDevice"] = function getActiveAudioDevice() {
-  return enforcing;
+  return closure_7;
 };
 prototype["getRequestedActiveAudioDevice"] = function getRequestedActiveAudioDevice() {
-  return enforcing;
+  return closure_8;
 };
 AudioManagerStore.displayName = "AudioManagerStore";
-const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
+const audioManagerStore = new AudioManagerStore(dispatcherDefault, {
   RTC_CONNECTION_STATE: function handleRTCConnectionStateUpdate(context) {
     if (context.context !== MediaEngineContextTypes.DEFAULT) {
       return false;
     } else {
       const state = context.state;
       if (RTCConnectionStates.CONNECTING === state) {
-        let c9 = true;
-        const result = enforcing.setCommunicationModeOn(true);
-        let tmp8 = enforcing !== enforcing;
+        c9 = true;
+        const result = enforcingDefault.setCommunicationModeOn(true);
+        let tmp8 = closure_7 !== simpleDeviceType;
         if (tmp8) {
-          tmp8 = enforcing.simpleDeviceType !== enforcing.AudioDeviceType.INVALID;
+          tmp8 = simpleDeviceType.simpleDeviceType !== enforcing.AudioDeviceType.INVALID;
         }
         if (tmp8) {
           let tmp4Result = tmp4(12);
-          if (tmp4Result.isString(enforcing)) {
+          if (tmp4Result.isString(simpleDeviceType)) {
             tmp4Result = tmp4(1208);
             let obj = { extra: null };
             obj = { deviceString: null };
@@ -76,11 +81,11 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
             const tmp4Result1 = tmp4(9652);
           }
         }
-        const obj2 = enforcing;
+        const obj2 = enforcingDefault;
       } else if (tmp13.DISCONNECTED === state) {
         if (!context.willReconnect) {
           c9 = false;
-          obj = enforcing;
+          obj = enforcingDefault;
           const result1 = obj.setCommunicationModeOn(false);
         }
       }
@@ -89,7 +94,7 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
   NATIVE_AUDIO_SET_OUTPUT_DEVICE: function handleSetActiveAudioDevice(device) {
     device = device.device;
     if (c9) {
-      let obj = apply;
+      let obj = applyDefault;
       if (obj.isString(device)) {
         let tmpResult = tmp(1208);
         obj = { extra: null };
@@ -104,6 +109,6 @@ const audioManagerStore = new AudioManagerStore(require("dispatcher"), {
     }
   }
 });
-let result = require("DesktopSources").fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
+let result = set.fileFinishedImporting("modules/voice_calls/native/AudioManagerStore.android.tsx");
 
 export default audioManagerStore;

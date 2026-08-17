@@ -1,17 +1,17 @@
 // discord_app/modules/voice_panel/native/shared/VoiceStateIcons.tsx
-import importAllResult from "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { inlineStyles } from "../../../../../_runtime/06571_inlineStyles.js";
-import { registerAsset } from "../../../../../_runtime/09687_registerAsset.js";
-import { registerAsset } from "../../../../../_runtime/09688_registerAsset.js";
-import { Button } from "../../../../design/void/native.tsx";
-import { isStableVoiceStateEqual } from "../utils/VoiceStateIconUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import inlineStyles from "inlineStyles" /* 6571 */;
+import inlineStylesDefault from "inlineStyles" /* 6571 */;
+import isStableVoiceStateEqual from "isStableVoiceStateEqual" /* 9678 */;
+import registerAssetDefault from "registerAsset" /* 9687 */;
+import registerAssetDefault2 from "registerAsset" /* 9688 */;
+import importAllResult from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function VideoDisabledSvgIcon(size) {
   let MEDIUM = size.size;
   if (MEDIUM === undefined) {
@@ -38,20 +38,17 @@ function VideoDisabledSvgIcon(size) {
   obj = { d: "M21.2785 2.70712C20.888 2.31659 20.2549 2.31659 19.8643 2.70711L2.70711 19.8643C2.31658 20.2549 2.31658 20.888 2.70711 21.2785L2.72146 21.2929C3.11199 21.6834 3.74515 21.6834 4.13567 21.2929L21.2929 4.13568C21.6834 3.74515 21.6834 3.11199 21.2929 2.72147L21.2785 2.70712Z", fill: tmp4.redTint.tintColor };
   items1[2] = callback(inlineStyles.Path, obj);
   obj.children = items1;
-  return callback2(inlineStyles, obj);
+  return callback2(inlineStylesDefault, obj);
 }
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { redTint: null, defaultTint: null, noTint: null };
-obj = { tintColor: require("Themes").colors.ICON_FEEDBACK_CRITICAL };
+obj = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj[0] = obj;
-createCacheKey = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
 obj[1] = createCacheKey;
 obj[2] = { tintColor: "r" };
 let closure_6 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((arg0) => {
-  let alwaysWhite;
-  let state;
-  let style;
   ({ style, state, alwaysWhite } = arg0);
   if (alwaysWhite === undefined) {
     alwaysWhite = false;
@@ -78,7 +75,7 @@ const memoResult = importAllResult.memo((arg0) => {
     if (!alwaysWhite) {
       redTint1 = tmp.redTint;
     }
-    const obj1 = { style: null, size: "xs" };
+    obj1 = { style: null, size: "xs" };
     items2[1] = redTint1;
     obj1[0] = items2;
     return callback(tmp2(9683).MicrophoneDenyIcon, obj1);
@@ -102,7 +99,7 @@ const memoResult1 = importAllResult.memo((state) => {
   if (isStableVoiceStateEqual.VideoIconState.VIDEO_DISABLED_LOCAL_AUTO === state) {
     let obj = {};
     const merged1 = Object.assign(merged);
-    obj.source = registerAsset;
+    obj.source = registerAssetDefault;
     const items = [merged.style, tmp2.noTint];
     obj.style = items;
     return callback(tmp3(1297).Icon, obj);
@@ -111,16 +108,16 @@ const memoResult1 = importAllResult.memo((state) => {
     const merged2 = Object.assign(merged);
     return callback(VideoDisabledSvgIcon, obj);
   } else if (tmp3(9678).VideoIconState.VIDEO_ACTIVE === state) {
-    const obj1 = {};
+    obj1 = {};
     const merged3 = Object.assign(merged);
-    obj1.source = registerAsset;
+    obj1.source = registerAssetDefault2;
     return callback(tmp3(1297).Icon, obj1);
   } else {
     tmp3(1370).assertNever(state);
   }
   tmp2 = callback3();
 });
-const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/shared/VoiceStateIcons.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoiceStateIcons.tsx");
 
 export const MuteDeafenIcon = memoResult;
 export const VideoIcon = memoResult1;

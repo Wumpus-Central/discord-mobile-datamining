@@ -1,14 +1,12 @@
 // discord_app/modules/emojis/records/ExpressionSourceRecord.tsx
-import areSetsEqual from "areSetsEqual";
-import "toJS";
-import ME from "ME";
-import { areSetsEqual } from "../../../../discord_common/js/shared/utils/SetUtils.tsx";
-import { getAvatarURL } from "../../../utils/AvatarUtils.tsx";
-import { fromGuildPropertiesWithAdditionalFields } from "../../../utils/GuildRecordUtils.tsx";
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
+import areSetsEqual from "areSetsEqual" /* 1433 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import toJSDefault from "toJS" /* 1931 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ME from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function getEmojiSourceData() {
   const self = this;
   const apply = _getEmojiSourceData.apply;
@@ -22,21 +20,21 @@ function getEmojiSourceData() {
 function _getEmojiSourceData() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
+    c3 = 0;
     return (function*(arg0, body) {
-      let closure_2 = tmp3;
+      closure_2 = tmp3;
       let obj3 = null;
-      let c3 = 1;
-      const HTTP = callback(outer1_2[3]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, timeout: 5000, rejectWithError: true };
+      c3 = 1;
+      const HTTP = callback(closure_1_2[3]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, timeout: 5000, rejectWithError: true };
       obj1[0] = c4.EMOJI_SOURCE_DATA(obj3);
       yield HTTP.get(obj1);
       if (1 === tmp7) {
         c3 = 0;
-        let c5 = 3;
+        c5 = 3;
       } else if (arg0 === 1) {
         c5 = 3;
         throw body;
@@ -47,7 +45,7 @@ function _getEmojiSourceData() {
           type = body.type;
         }
         if (type === constants.GUILD) {
-          const obj = { guild: null, type: null };
+          obj = { guild: null, type: null };
           obj[0] = closure_9.createFromServer(body.guild);
           obj[1] = body.type;
           obj3 = obj;
@@ -68,7 +66,7 @@ function _getEmojiSourceData() {
       return body;
     })();
   });
-  const _getEmojiSourceData = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -77,6 +75,7 @@ function _getEmojiSourceData() {
   }
   return applyArgumentsResult;
 }
+toJSDefault;
 ({ Endpoints: c4, GuildFeatures: c5 } = ME);
 let obj = { GUILD: "GUILD", APPLICATION: "APPLICATION" };
 let ExpressionSourceGuildRecord;
@@ -94,18 +93,18 @@ prototype["getIconURL"] = function getIconURL(size) {
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = getAvatarURL;
+  obj = getAvatarURLDefault;
   obj = { id: this.id, size, icon: this.icon, canAnimate: flag };
   return obj.getGuildIconURL(obj);
 };
 prototype["getIconSource"] = function getIconSource(arg0, flag) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   if (flag === undefined) {
     flag = false;
   }
   return self(1435).getAnimatableSourceWithFallback(flag, (canAnimate) => {
-    let obj = self(outer1_2[4]);
+    obj = self(closure_1_2[4]);
     obj = { id: self.id, size: closure_0, icon: self.icon, canAnimate };
     return obj.getGuildIconSource(obj);
   });
@@ -118,11 +117,11 @@ prototype["isDiscoverable"] = function isDiscoverable() {
   return this.hasFeature(constants.DISCOVERABLE);
 };
 ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiId(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return callback(function*() {
-    let closure_1 = tmp5;
+    closure_1 = tmp5;
     let type = tmp2;
-    type = yield outer1_7(outer1_0);
+    type = yield closure_1_7(closure_1_0);
     let guild = null;
     if (null != type) {
       type = undefined;
@@ -130,20 +129,19 @@ ExpressionSourceGuildRecord["getGuildFromEmojiId"] = function getGuildFromEmojiI
         type = type.type;
       }
       guild = null;
-      if (type === outer1_6.GUILD) {
-        guild = outer1_0.guild;
+      if (type === closure_1_6.GUILD) {
+        guild = closure_1_0.guild;
       }
     }
     return guild;
   })();
 };
 ExpressionSourceGuildRecord["_mapCommon"] = function _mapCommon(id) {
-  const obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: null };
-  obj[4] = areSetsEqual.toSetInplace(id.features);
+  obj = { id: id.id, name: id.name, icon: id.icon, description: id.description, features: areSetsEqual.toSetInplace(id.features) };
   return obj;
 };
 ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildRecord(joinedEmojiSourceGuildRecord) {
-  const obj = {};
+  obj = {};
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(joinedEmojiSourceGuildRecord);
   let str = obj;
   const merged = Object.assign(_mapCommonResult);
@@ -163,8 +161,7 @@ ExpressionSourceGuildRecord["createFromGuildRecord"] = function createFromGuildR
   return tmp3;
 };
 ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFromDiscoverableGuild(emojis) {
-  let memberCount;
-  const obj = {};
+  obj = {};
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(emojis);
   let str = obj;
   const merged = Object.assign(_mapCommonResult);
@@ -182,7 +179,7 @@ ExpressionSourceGuildRecord["createFromDiscoverableGuild"] = function createFrom
   return tmp3;
 };
 ExpressionSourceGuildRecord["createFromServer"] = function createFromServer(id) {
-  const obj = {};
+  obj = {};
   const _mapCommonResult = ExpressionSourceGuildRecord._mapCommon(id);
   let str = obj;
   const merged = Object.assign(_mapCommonResult);
@@ -218,8 +215,6 @@ prototype2 = function ExpressionSourceApplicationRecord(arg0) {
 class prototype2 extends tmp2 {
 }
 prototype2["createFromServer"] = function createFromServer(arg0) {
-  let id;
-  let name;
   ({ id, name } = arg0);
   if (typeof prototype2 !== "function") {
     HermesBuiltin.throwTypeError();
@@ -230,7 +225,7 @@ prototype2["createFromServer"] = function createFromServer(arg0) {
   tmp2.name = name;
   return tmp2;
 };
-const result = require("ME").fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/emojis/records/ExpressionSourceRecord.tsx");
 
 export const EmojiSourceDataTypes = obj;
 export { getEmojiSourceData };

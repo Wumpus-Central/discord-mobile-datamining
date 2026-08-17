@@ -1,31 +1,28 @@
 // discord_app/modules/expression_picker/native/categories/ExpressionPickerCategories.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Portal } from "../../../../../_runtime/04244_Portal.js";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { ExpressionPickerCategoriesBackdrop } from "ExpressionPickerCategoriesBackdrop.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import Portal from "Portal" /* 4244 */;
+import _modDef9439 from "module_9439" /* 9439 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: null, containerRefresh: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: require("Themes").space.PX_8, flexDirection: "row", alignItems: "center" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, paddingHorizontal: ThemesDefault.space.PX_8, flexDirection: "row", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj1 = { borderTopWidth: 1, borderTopColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("jsxProd").fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
+createCacheKey[1] = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const obj1 = { borderTopWidth: 1, borderTopColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/expression_picker/native/categories/ExpressionPickerCategories.tsx");
 
 export default function ExpressionPickerCategories(arg0) {
-  let children;
-  let portalHostName;
-  let style;
   ({ children, portalHostName, style } = arg0);
-  const tmp = createCacheKey();
-  const tmp4 = useIsMobileVisualRefreshExperimentEnabled("ExpressionPickerCategories");
+  const tmp = callback();
+  const tmp4 = useIsMobileVisualRefreshExperimentEnabledDefault("ExpressionPickerCategories");
   let obj = { hostName: portalHostName, children: null };
   const items = [tmp.container, , ];
   let containerRefresh = null;
@@ -37,7 +34,7 @@ export default function ExpressionPickerCategories(arg0) {
   items[2] = style;
   let tmp5Result = null;
   if (!tmp4) {
-    tmp5Result = tmp5(ExpressionPickerCategoriesBackdrop, {});
+    tmp5Result = tmp5(_modDef9439, {});
   }
   const items1 = [tmp5Result, children];
   obj[1] = items1;

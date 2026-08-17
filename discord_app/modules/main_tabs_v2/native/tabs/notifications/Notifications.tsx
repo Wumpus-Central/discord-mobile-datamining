@@ -1,19 +1,29 @@
 // discord_app/modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx
-import importAllResult from "context";
-import { View } from "SavedMessageSortTypes";
-import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "getDeviceMetadata";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import getGuildThemeNameDefault from "getGuildThemeName" /* 4225 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import useNavigatorBackPressHandler from "useNavigatorBackPressHandler" /* 6318 */;
+import Layer from "Layer" /* 7126 */;
+import context from "context" /* 7139 */;
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7925 */;
+import getMixedGradientColorDefault from "getMixedGradientColor" /* 9091 */;
+import TTIFirstContentfulPaint from "TTIFirstContentfulPaint" /* 11075 */;
+import CoachmarkImgDefault from "CoachmarkImg" /* 15658 */;
+import NotificationCenterBannerImplDefault from "NotificationCenterBannerImpl" /* 15666 */;
+import YouBarNavigatorScreens2 from "YouBarNavigatorScreens" /* 15667 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { YouBarNavigatorScreens } from "MODE_CHANGE_PHYSICS" /* 9588 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { SafeAreaPaddingView } from "../../../../../components_native/common/SafeAreaView.tsx";
 import { ForLaterFreemiumConfig } from "../../../../saved_messages/ForLaterExperiment.tsx";
-import { CoachmarkImg } from "../../../../saved_messages/native/useForLaterCoachmark.tsx";
-import { getRootNavigationRef } from "../../../RootNavigationRef.native.tsx";
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function goBack() {
   const navigation = getRootNavigationRef.getRootNavigationRef();
   if (null != navigation) {
@@ -34,10 +44,10 @@ class Notifications {
     if (flag2 === undefined) {
       flag2 = false;
     }
-    tmp = jsxs();
+    tmp = closure_10();
     tmp2 = require("context");
-    layoutEffect = defineProperty.useLayoutEffect(() => callback(5066).trackAppUIViewed(), []);
-    callback = defineProperty.useCallback(() => {
+    layoutEffect = closure_3.useLayoutEffect(() => callback(5066).trackAppUIViewed(), []);
+    callback = closure_3.useCallback(() => {
       const navigation = callback(4230).getRootNavigationRef();
       if (null != navigation) {
         if (navigation.canGoBack()) {
@@ -57,7 +67,7 @@ class Notifications {
     items[0] = tmp.container;
     items[1] = global.style;
     items1 = [, , , ];
-    items1[0] = jsx(HeaderInner, { nestedInLaunchPad: flag, inNestedNavigator: flag2 });
+    items1[0] = jsx(closure_12, { nestedInLaunchPad: flag, inNestedNavigator: flag2 });
     items1[1] = jsx(require("NotificationCenterBannerImpl"), {});
     items1[2] = jsx(require("YouBarNavigatorScreens").NotificationCenterForYou, { nestedInLaunchPad: flag });
     items1[3] = jsx(require("TTIFirstContentfulPaint").TTIFirstContentfulPaint, { label: "notifications" });
@@ -73,13 +83,13 @@ class ThemedNotifications {
     top = require("useSafeAreaInsets")().top;
     tmp2 = require("useIsWindowLarge")();
     closure_1 = tmp2;
-    tmp3 = jsxs();
+    tmp3 = closure_10();
     closure_2 = tmp3;
     items = [, , ];
     items[0] = tmp3;
     items[1] = tmp2;
     items[2] = top;
-    memo = defineProperty.useMemo(() => {
+    memo = closure_3.useMemo(() => {
       if (closure_1) {
         const items = [tmp.containerOuterTablet, ];
         const obj = { paddingTop: null };
@@ -119,18 +129,18 @@ class ThemedNotifications {
   }
 }
 let c3 = importAllResult;
-({ jsx: error, Fragment: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: error, Fragment: closure_8, jsxs: c9 } = jsxProd);
 let obj = { containerOuter: { flex: 1 }, containerOuterTablet: null, container: null, headerTitle: null, actionButtons: null, headerClose: null, headerText: null, headerBorder: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: require("Themes").space.PX_8, flex: 1 };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, paddingHorizontal: ThemesDefault.space.PX_8, flex: 1 };
 obj[1] = obj;
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, borderTopLeftRadius: require("Themes").radii.sm, borderTopRightRadius: require("Themes").radii.sm, flexGrow: 1 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, borderTopLeftRadius: ThemesDefault.radii.sm, borderTopRightRadius: ThemesDefault.radii.sm, flexGrow: 1 };
 obj[2] = createCacheKey;
 obj[3] = { height: 56, marginHorizontal: 16, flexDirection: "row", alignItems: "center" };
 obj[4] = { flexDirection: "row", gap: 12 };
-obj[5] = { marginRight: require("Themes").space.PX_16, height: require("Themes").space.PX_32, width: require("Themes").space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.lg };
+obj[5] = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
 obj[6] = { flex: 1, marginTop: 2 };
-let obj2 = { marginRight: require("Themes").space.PX_16, height: require("Themes").space.PX_32, width: require("Themes").space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.lg };
-obj[7] = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: require("Themes").colors.BORDER_SUBTLE };
+let obj2 = { marginRight: ThemesDefault.space.PX_16, height: ThemesDefault.space.PX_32, width: ThemesDefault.space.PX_32, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg };
+obj[7] = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
 let closure_10 = createCacheKey.createStyles(obj);
 let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   nestedInLaunchPad = nestedInLaunchPad.nestedInLaunchPad;
@@ -139,10 +149,10 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   let obj = _ForLaterFreemiumConfig;
   const isForLaterExperimentOn = obj.useIsForLaterExperimentOn("NativeNotifications");
   const ref = importAllResult.useRef(null);
-  const tmp8 = CoachmarkImg(ref);
+  const tmp8 = CoachmarkImgDefault(ref);
   _require = tmp8;
   const items = [tmp8];
-  const callback = importAllResult.useCallback(() => _undefined(outer1_6.TAKE_ACTION), items);
+  const callback = importAllResult.useCallback(() => callback(closure_1_6.TAKE_ACTION), items);
   let tmp13 = !nestedInLaunchPad;
   if (!nestedInLaunchPad) {
     tmp13 = !tmp4;
@@ -152,7 +162,7 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   if (!nestedInLaunchPad) {
     obj = { style: null, children: null };
     obj[0] = tmp.headerTitle;
-    const obj1 = { style: null, accessibilityLabel: null, onPress: null, children: null };
+    obj1 = { style: null, accessibilityLabel: null, onPress: null, children: null };
     obj1[0] = tmp.headerClose;
     const intl = tmp5(1236).intl;
     obj1[1] = intl.string(tmp5(1236).t["13/7kX"]);
@@ -197,8 +207,8 @@ let closure_12 = importAllResult.memo(function HeaderInner(nestedInLaunchPad) {
   obj7[0] = items4;
   return closure_9(View, obj7);
 });
-let obj3 = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-const result = require("MODE_CHANGE_PHYSICS").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx");
+let obj3 = { left: 0, bottom: 0, height: 1, width: "100%", position: "absolute", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/notifications/Notifications.tsx");
 
 export default Notifications;
 export { goBack };

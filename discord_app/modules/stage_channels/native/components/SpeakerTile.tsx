@@ -1,42 +1,39 @@
 // discord_app/modules/stage_channels/native/components/SpeakerTile.tsx
-import importAllResult from "registerAsset";
-import { View } from "Button";
-import getParticipants from "getParticipants";
-import { ParticipantTypes } from "ParticipantTypes";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import { StageTileSize } from "../../StageTileTypes.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import StageTileSize2 from "StageTileSize" /* 12605 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 let c3 = importAllResult;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let obj = { FULL: 212, [212]: "FULL", HALF: 112, [112]: "HALF", THIRD: 112, [112]: "THIRD" };
 const result = obj.FULL * 1.7777777777777777;
 let c9 = result;
 const result1 = obj.HALF * 1.7777777777777777;
 obj = { container: { marginHorizontal: 4, marginVertical: 4, alignItems: "center", flex: 1 }, full: obj1, half: createCacheKey, third: obj3, avatarContainer: null, imageBackground: null, nameplateContainer: null, nameplateText: null, restricted: null, blocked: null };
 createCacheKey = { height: obj.HALF };
-obj[4] = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: require("Themes").radii.sm };
+obj[4] = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
 obj[5] = { flex: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch" };
 let obj5 = { position: "absolute", flexDirection: "row", alignItems: "center", justifyContent: "center", bottom: 4, marginHorizontal: 4, paddingVertical: 4, paddingHorizontal: 8, backgroundColor: null, borderRadius: 6 };
-obj5[8] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BLACK, 0.3);
+obj5[8] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BLACK, 0.3);
 obj[6] = obj5;
 obj1 = { height: obj.FULL };
 obj3 = { height: obj.THIRD };
-let obj4 = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: require("Themes").radii.sm };
-obj[7] = { color: require("Themes").colors.WHITE };
-let obj6 = { color: require("Themes").colors.WHITE };
-obj[8] = { borderRadius: require("Themes").radii.sm, width: 16, height: 16, justifyContent: "center", alignItems: "center", marginEnd: 4 };
-let obj7 = { borderRadius: require("Themes").radii.sm, width: 16, height: 16, justifyContent: "center", alignItems: "center", marginEnd: 4 };
-obj[9] = { backgroundColor: require("Themes").colors.WHITE };
+let obj4 = { flex: 1, width: "100%", alignItems: "center", justifyContent: "center", overflow: "hidden", borderRadius: ThemesDefault.radii.sm };
+obj[7] = { color: ThemesDefault.colors.WHITE };
+let obj6 = { color: ThemesDefault.colors.WHITE };
+obj[8] = { borderRadius: ThemesDefault.radii.sm, width: 16, height: 16, justifyContent: "center", alignItems: "center", marginEnd: 4 };
+let obj7 = { borderRadius: ThemesDefault.radii.sm, width: 16, height: 16, justifyContent: "center", alignItems: "center", marginEnd: 4 };
+obj[9] = { backgroundColor: ThemesDefault.colors.WHITE };
 const styles = createCacheKey.createStyles(obj);
-let obj8 = { backgroundColor: require("Themes").colors.WHITE };
+let obj8 = { backgroundColor: ThemesDefault.colors.WHITE };
 const memoResult = importAllResult.memo((channel) => {
-  let blocked;
-  let ignored;
   channel = channel.channel;
   const participant = channel.participant;
   const size = channel.size;
@@ -46,10 +43,10 @@ const memoResult = importAllResult.memo((channel) => {
   user = participant.user;
   ({ blocked, ignored } = participant);
   const isScreenLandscape = obj.useIsScreenLandscape();
-  let obj1 = channel(user[11]);
-  const items = [getParticipants];
+  obj1 = channel(user[11]);
+  const items = [closure_5];
   const items1 = [channel.id, participant.id];
-  const stateFromStores = obj1.useStateFromStores(items, () => outer1_5.getParticipant(channel.id, participant.id), items1);
+  const stateFromStores = obj1.useStateFromStores(items, () => closure_1_5.getParticipant(channel.id, participant.id), items1);
   const items2 = [channel.id, user.id];
   if (null != stateFromStores) {
     if (stateFromStores.type === ParticipantTypes.USER) {
@@ -157,7 +154,7 @@ const memoResult = importAllResult.memo((channel) => {
   }
   return null;
 });
-const result2 = require("getParticipants").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTile.tsx");
+const result2 = require("set").fileFinishedImporting("modules/stage_channels/native/components/SpeakerTile.tsx");
 
 export default memoResult;
 export const SPEAKER_TILE_HEIGHTS = obj;
@@ -165,17 +162,17 @@ export const LANDSCAPE_MAX_TILE_WIDTH_FULL = result;
 export const LANDSCAPE_MAX_TILE_WIDTH = result1;
 export const useSpeakerTileStyles = styles;
 export const getSizeStyle = function getSizeStyle(size, speakerTileStyles) {
-  if (StageTileSize.StageTileSize.FULL === size) {
+  if (StageTileSize2.StageTileSize.FULL === size) {
     return speakerTileStyles.full;
-  } else if (tmp(12605).StageTileSize.HALF === size) {
+  } else if (StageTileSize2.StageTileSize.HALF === size) {
     return speakerTileStyles.half;
   } else {
     return speakerTileStyles.third;
   }
-  tmp = require;
+  const tmp = require;
 };
 export const getTileWidthStyle = function getTileWidthStyle(arg0, arg1, arg2) {
-  const StageTileSize = StageTileSize.StageTileSize;
+  const StageTileSize = StageTileSize2.StageTileSize;
   if (arg2) {
     let obj = { maxWidth: null };
     obj[0] = arg0 === StageTileSize.FULL ? closure_9 : result1;

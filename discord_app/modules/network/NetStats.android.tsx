@@ -1,23 +1,19 @@
 // discord_app/modules/network/NetStats.android.tsx
-import ME from "ME";
-import get_ActivityIndicator from "set";
-import _handleConnectionOpen from "_handleConnectionOpen";
-import result from "result";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { AnalyticEvents } from "ME";
-import importDefaultResult from "notifyListeners";
-import importDefaultResult1 from "notifyListeners";
-import importDefaultResult2 from "dispatcher";
-import importDefaultResult3 from "dispatcher";
-import importDefaultResult4 from "dispatcher";
-import { configure } from "../../../_runtime/01476_configure.js";
-import { set } from "../../utils/Durations.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import setDefault from "set" /* 687 */;
+import configure from "configure" /* 1476 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "_handleConnectionOpen" /* 4495 */;
+import closure_6 from "result" /* 5053 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import importDefaultResult from "notifyListeners" /* 1475 */;
+import importDefaultResult2 from "dispatcher" /* 709 */;
 
-let AppState;
-let c4;
-const require = arg1;
+require = arg1;
 function receiveNetworkInfoformation(arg0) {
-  let closure_12 = arg0;
+  closure_12 = arg0;
   if (null == closure_13) {
     closure_13 = arg0;
   }
@@ -25,12 +21,11 @@ function receiveNetworkInfoformation(arg0) {
   const getNetworkUsage = SystemResourceManager.getNetworkUsage;
   if (getNetworkUsage != null) {
     const networkUsage = getNetworkUsage((arg0) => {
-      let closure_10 = arg0;
+      closure_10 = arg0;
       if (null == closure_11) {
         closure_11 = arg0;
       }
-      const obj = { state: closure_12, nativeStats: closure_10, rtc: null };
-      obj[2] = callback(table[9]).getRTCTotalBytes();
+      obj = { state: closure_12, nativeStats: closure_10, rtc: callback(table[9]).getRTCTotalBytes() };
       closure_9.fileOnly("Updating Network Info", obj);
     });
   }
@@ -40,18 +35,17 @@ function updateNetworkUsage() {
   const getNetworkUsage = SystemResourceManager.getNetworkUsage;
   if (getNetworkUsage != null) {
     const networkUsage = getNetworkUsage((arg0) => {
-      let closure_10 = arg0;
+      closure_10 = arg0;
       if (null == closure_11) {
         closure_11 = arg0;
       }
-      const obj = { state: closure_12, nativeStats: closure_10, rtc: null };
-      obj[2] = callback(table[9]).getRTCTotalBytes();
+      obj = { state: closure_12, nativeStats: closure_10, rtc: callback(table[9]).getRTCTotalBytes() };
       closure_9.fileOnly("Updating Network Info", obj);
     });
   }
 }
 ({ NativeModules: c4, AppState } = get_ActivityIndicator);
-let c9 = new require("result")("NetStats");
+let closure_9 = new timestampDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
 let obj = { type: require("configure").NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
@@ -61,16 +55,16 @@ let c15 = 0;
 let c16 = 0;
 let c17 = 0;
 let c18 = 0;
-const tmp3 = new require("result")("NetStats");
-require("notifyListeners").addChangeCallback(receiveNetworkInfoformation);
-const networkInformation = require("notifyListeners").getNetworkInformation();
+const tmp3 = new timestampDefault("NetStats");
+importDefaultResult.addChangeCallback(receiveNetworkInfoformation);
+const networkInformation = importDefaultResult.getNetworkInformation();
 networkInformation.then(receiveNetworkInfoformation);
 class EventTracker {
   constructor() {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     num = 0;
-    if (c14) {
+    if (closure_14) {
       tmp = globalThis;
       _setTimeout = setTimeout;
       tmp2 = closure_1;
@@ -80,7 +74,7 @@ class EventTracker {
     }
     obj.trackTimeout = num;
     num3 = 0;
-    if (c14) {
+    if (closure_14) {
       tmp4 = globalThis;
       _setInterval = setInterval;
       tmp5 = closure_1;
@@ -99,24 +93,24 @@ class EventTracker {
     obj.existingEvents = value;
     obj.trackExistingEvents = function trackExistingEvents() {
       if (obj.existingEvents.length > 0) {
-        let result = outer1_6.submitEventsImmediately(tmp.existingEvents);
+        let result = closure_1_6.submitEventsImmediately(tmp.existingEvents);
         result.then(() => {
-          outer1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
+          closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
           closure_0.existingEvents = [];
           const result = closure_0.writeExistingEventStorage();
         }).catch((status) => {
           if (tmp) {
-            outer1_9.error("Failed to log log existing network usage events", closure_0.existingEvents, status);
+            closure_1_9.error("Failed to log log existing network usage events", closure_0.existingEvents, status);
           }
         });
         const nextPromise = result.then(() => {
-          outer1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
+          closure_1_9.fileOnly("Successfully logged existing network usage events", closure_0.existingEvents);
           closure_0.existingEvents = [];
           const result = closure_0.writeExistingEventStorage();
         });
       }
     };
-    if (NativeModules.isConnected()) {
+    if (closure_5.isConnected()) {
       trackExistingEventsResult = obj.trackExistingEvents();
     } else {
       tmp8 = closure_1;
@@ -134,9 +128,9 @@ prototype["handleAppStateChange"] = function handleAppStateChange(arg0) {
   if (!this.didEverTrack) {
     if (arg0) {
       if (!tmp2) {
-        let c14 = true;
+        c14 = true;
         const _setTimeout = setTimeout;
-        self.trackTimeout = setTimeout(() => closure_20.track(), set.Millis.MINUTE);
+        self.trackTimeout = setTimeout(() => closure_20.track(), setDefault.Millis.MINUTE);
         const _setInterval = setInterval;
         self.flushStorageInterval = setInterval(() => self.writeExistingEventStorage(), 5000);
       }
@@ -155,7 +149,7 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -178,12 +172,12 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
             let items = tmp3;
             items = undefined;
             length = undefined;
-            if (!outer1_0.didEverTrack) {
-              if (outer1_14) {
+            if (!closure_1_0.didEverTrack) {
+              if (closure_1_14) {
                 dependencyMap = 1;
                 c3 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_0.getQueuedEvent();
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_0.getQueuedEvent();
                 return obj1;
               }
             }
@@ -200,13 +194,13 @@ prototype["writeExistingEventStorage"] = function writeExistingEventStorage() {
         } else {
           items = [arg1];
         }
-        const existingEvents = outer1_0.existingEvents;
+        const existingEvents = closure_1_0.existingEvents;
         length = existingEvents.concat(items);
         if (0 === length.length) {
-          const Storage2 = outer1_0(595).Storage;
+          const Storage2 = closure_1_0(595).Storage;
           Storage2.remove("previousNetStatsEvents");
         } else {
-          const Storage = outer1_0(595).Storage;
+          const Storage = closure_1_0(595).Storage;
           const result = Storage.set("previousNetStatsEvents", length);
         }
         c3 = 3;
@@ -227,7 +221,7 @@ prototype["track"] = function track() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -246,10 +240,10 @@ prototype["track"] = function track() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp5;
+            closure_1 = tmp5;
             let items = tmp2;
             items = undefined;
-            if (outer1_0.didEverTrack) {
+            if (closure_1_0.didEverTrack) {
               c3 = 3;
             } else {
               obj5.didEverTrack = true;
@@ -259,7 +253,7 @@ prototype["track"] = function track() {
               clearInterval(obj5.flushStorageInterval);
               c2 = 1;
               c3 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = obj5.getQueuedEvent();
               return obj1;
             }
@@ -269,20 +263,20 @@ prototype["track"] = function track() {
           throw arg1;
         } else if (arg0 !== 2) {
           items = [arg1];
-          let result = outer1_6.submitEventsImmediately(items);
+          let result = closure_1_6.submitEventsImmediately(items);
           result.then(() => {
-            outer2_9.fileOnly("Successfully tracked latest network usage", items);
+            closure_2_9.fileOnly("Successfully tracked latest network usage", items);
             const result = items.writeExistingEventStorage();
           }).catch((status) => {
             if (!tmp) {
-              outer2_9.error("Failed to track latest network usage", items, status);
+              closure_2_9.error("Failed to track latest network usage", items, status);
             }
             const existingEvents = items.existingEvents;
             existingEvents.push(items[0]);
             const result = items.writeExistingEventStorage();
           });
           const nextPromise = result.then(() => {
-            outer2_9.fileOnly("Successfully tracked latest network usage", items);
+            closure_2_9.fileOnly("Successfully tracked latest network usage", items);
             const result = items.writeExistingEventStorage();
           });
         }
@@ -299,9 +293,9 @@ prototype["track"] = function track() {
 };
 prototype["getQueuedEvent"] = function getQueuedEvent() {
   return callback(function*() {
-    let closure_4 = tmp2;
-    outer1_19();
-    const obj7 = outer1_1(outer1_2[13]);
+    closure_4 = tmp2;
+    closure_1_19();
+    const obj7 = closure_1_1(closure_1_2[13]);
     let callback = yield obj7.getAppFirstVisibleTimestamp();
     const obj4 = callback(5054);
     let lib = yield obj4.getSession();
@@ -315,7 +309,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
       const uuid = lib.uuid;
     }
     obj6.client_heartbeat_session_id = uuid;
-    const obj = callback(5066);
+    obj = callback(5066);
     obj6.load_id = obj.currentLoadId();
     obj6.num_guilds = guildCount.getGuildCount();
     obj6.was_authenticated = lib(9).wasAuthenticated;
@@ -340,7 +334,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     if (closure_13 != null) {
       const type = closure_13.type;
     }
-    let dependencyMap = type;
+    dependencyMap = type;
     if (type == null) {
       dependencyMap = undefined;
     }
@@ -349,7 +343,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     if (closure_13 != null) {
       const effectiveSpeed = closure_13.effectiveSpeed;
     }
-    let c3 = effectiveSpeed;
+    c3 = effectiveSpeed;
     if (effectiveSpeed == null) {
       c3 = undefined;
     }
@@ -372,7 +366,7 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
     obj6.download_bytes_received = closure_10.downloadBytesReceived;
     obj6.download_num_requests = closure_10.downloadNumRequests;
     obj6.media_player_bytes_received = closure_10.mediaPlayerBytesReceived;
-    const obj1 = callback(5065);
+    obj1 = callback(5065);
     obj6.rtc_bytes = obj1.getRTCTotalBytes();
     obj6.num_message_sends = closure_15;
     if (0 !== closure_15) {
@@ -392,10 +386,11 @@ prototype["getQueuedEvent"] = function getQueuedEvent() {
   })();
 };
 let closure_20 = new EventTracker();
-let subscription = require("dispatcher").subscribe("APP_STATE_UPDATE", (state) => {
+const importDefaultResult1 = importDefaultResult;
+let subscription = importDefaultResult2.subscribe("APP_STATE_UPDATE", (state) => {
   closure_20.handleAppStateChange("active" === state.state);
 });
-const subscription1 = require("dispatcher").subscribe("MESSAGE_CREATE", (sendMessageOptions) => {
+const subscription1 = importDefaultResult2.subscribe("MESSAGE_CREATE", (sendMessageOptions) => {
   sendMessageOptions = sendMessageOptions.sendMessageOptions;
   let sendAnalytics;
   if (sendMessageOptions != null) {
@@ -409,10 +404,12 @@ const subscription1 = require("dispatcher").subscribe("MESSAGE_CREATE", (sendMes
     closure_17 = Math.max(closure_17, sendMessageOptions.sendMessageOptions.sendAnalytics.queueSize);
   }
 });
-const subscription2 = require("dispatcher").subscribe("MESSAGE_SEND_FAILED", (arg0) => {
+const importDefaultResult3 = importDefaultResult2;
+const subscription2 = importDefaultResult2.subscribe("MESSAGE_SEND_FAILED", (arg0) => {
   closure_18 = closure_18 + 1;
 });
-let result = require("_handleConnectionOpen").fileFinishedImporting("modules/network/NetStats.android.tsx");
+const importDefaultResult4 = importDefaultResult2;
+let result = require("set").fileFinishedImporting("modules/network/NetStats.android.tsx");
 
 export const isSlowNetwork = function isSlowNetwork() {
   let tmp = obj.type === configure.NetInfoStateType.cellular;

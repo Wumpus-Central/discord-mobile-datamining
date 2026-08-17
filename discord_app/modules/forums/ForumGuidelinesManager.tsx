@@ -1,9 +1,10 @@
 // discord_app/modules/forums/ForumGuidelinesManager.tsx
-import "initialize";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
+import Storage2 from "Storage" /* 595 */;
+import initializeDefault from "initialize" /* 5038 */;
 
-const require = arg1;
+require = arg1;
 const formGuidelinesStorageKey = "formGuidelinesStorageKey";
+initializeDefault;
 class ForumGuidelinesManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -14,7 +15,7 @@ class ForumGuidelinesManager extends tmp2 {
 }
 const prototype = ForumGuidelinesManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const value = Storage.get(formGuidelinesStorageKey);
   if (null != value) {
     const self = this;
@@ -24,13 +25,13 @@ prototype["_initialize"] = function _initialize() {
   }
 };
 prototype["_terminate"] = function _terminate() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const result = Storage.set(formGuidelinesStorageKey, this.seenForumGuidelines);
 };
 prototype["markAsSeen"] = function markAsSeen(arg0) {
   const seenForumGuidelines = this.seenForumGuidelines;
   seenForumGuidelines.add(arg0);
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const result = Storage.set(formGuidelinesStorageKey, this.seenForumGuidelines);
 };
 prototype["hasSeen"] = function hasSeen(arg0) {

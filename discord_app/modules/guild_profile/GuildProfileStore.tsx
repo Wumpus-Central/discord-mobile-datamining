@@ -1,12 +1,14 @@
 // discord_app/modules/guild_profile/GuildProfileStore.tsx
-import { ChannelTypes } from "ME";
-import { Store } from "initialize";
-import { fails } from "../../../discord_common/js/packages/backoff/Backoff.tsx";
-import { getEmoji } from "GuildProfileBuilders.tsx";
+import set from "set" /* 2 */;
+import failsDefault from "fails" /* 584 */;
+import initializeDefault from "initialize" /* 589 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getEmoji from "getEmoji" /* 6907 */;
 
 function handleUpdateStart(guildId) {
   guildId = guildId.guildId;
-  let obj = map;
+  obj = map;
   const value = map.get(guildId);
   if (null == value) {
     obj = {};
@@ -21,10 +23,8 @@ function handleUpdateStart(guildId) {
   }
 }
 function handleUpdateFailure(arg0) {
-  let error;
-  let guildId;
   ({ guildId, error } = arg0);
-  let obj = map;
+  obj = map;
   const value = map.get(guildId);
   if (null == value) {
     obj = {};
@@ -45,7 +45,7 @@ function handleInviteResolveOrCreate(invite) {
     const value = map.get(profile.id);
     const guildProfileFromServer = getEmoji.buildGuildProfileFromServer(profile);
     if (null == value) {
-      let obj = {};
+      obj = {};
       const merged = Object.assign(closure_7);
       obj.profile = guildProfileFromServer;
       const _Date2 = Date;
@@ -64,10 +64,12 @@ function handleInviteResolveOrCreate(invite) {
     const obj4 = getEmoji;
   }
 }
+const ChannelTypes = ME.ChannelTypes;
 let obj = { NOT_FETCHED: "NOT_FETCHED", FETCHING: "FETCHING", FETCHED: "FETCHED" };
 const map = new Map();
 const map1 = new Map();
 let closure_7 = { profile: null, lastSyncTimestamp: null, fetchStatus: obj.NOT_FETCHED, isUpdating: false, error: null, nextFetchAllowedAt: null };
+const Store = initializeDefault.Store;
 class GuildProfileStore extends Store {
 }
 const prototype = GuildProfileStore.prototype;
@@ -101,10 +103,10 @@ prototype["getFetchStatus"] = function getFetchStatus(closure_0) {
   }
   return NOT_FETCHED;
 };
-prototype["getLastSyncTimestamp"] = function getLastSyncTimestamp(outer1_0) {
+prototype["getLastSyncTimestamp"] = function getLastSyncTimestamp(closure_1_0) {
   let tmp = null;
-  if (null != outer1_0) {
-    const value = map.get(outer1_0);
+  if (null != closure_1_0) {
+    const value = map.get(closure_1_0);
     let lastSyncTimestamp;
     if (value != null) {
       lastSyncTimestamp = value.lastSyncTimestamp;
@@ -116,10 +118,10 @@ prototype["getLastSyncTimestamp"] = function getLastSyncTimestamp(outer1_0) {
   }
   return tmp;
 };
-prototype["getNextFetchAllowedAt"] = function getNextFetchAllowedAt(outer1_0) {
+prototype["getNextFetchAllowedAt"] = function getNextFetchAllowedAt(closure_1_0) {
   let tmp = null;
-  if (null != outer1_0) {
-    const value = map.get(outer1_0);
+  if (null != closure_1_0) {
+    const value = map.get(closure_1_0);
     let nextFetchAllowedAt;
     if (value != null) {
       nextFetchAllowedAt = value.nextFetchAllowedAt;
@@ -131,10 +133,10 @@ prototype["getNextFetchAllowedAt"] = function getNextFetchAllowedAt(outer1_0) {
   }
   return tmp;
 };
-prototype["getIsUpdating"] = function getIsUpdating(outer1_0) {
-  let tmp = null != outer1_0;
+prototype["getIsUpdating"] = function getIsUpdating(closure_1_0) {
+  let tmp = null != closure_1_0;
   if (tmp) {
-    const value = map.get(outer1_0);
+    const value = map.get(closure_1_0);
     let flag;
     if (value != null) {
       flag = value.isUpdating;
@@ -152,7 +154,7 @@ prototype["getErrorCode"] = function getErrorCode(guildId) {
     const value = map.get(guildId);
     let code;
     if (value != null) {
-      const error = value.error;
+      error = value.error;
       if (error != null) {
         code = error.code;
       }
@@ -168,7 +170,7 @@ GuildProfileStore.displayName = "GuildProfileStore";
 obj = {
   GUILD_PROFILE_FETCH: function handleFetchStart(guildId) {
     guildId = guildId.guildId;
-    let obj = map;
+    obj = map;
     const value = map.get(guildId);
     if (null == value) {
       obj = {};
@@ -183,10 +185,8 @@ obj = {
     }
   },
   GUILD_PROFILE_FETCH_SUCCESS: function handleFetchSuccess(arg0) {
-    let guildId;
-    let profile;
     ({ guildId, profile } = arg0);
-    let obj = map1;
+    obj = map1;
     let value = map1.get(guildId);
     if (value != null) {
       value.succeed();
@@ -214,13 +214,11 @@ obj = {
     }
   },
   GUILD_PROFILE_FETCH_FAILURE: function handleFetchFailure(arg0) {
-    let error;
-    let guildId;
     ({ guildId, error } = arg0);
-    let obj = map1;
+    obj = map1;
     let value = map1.get(guildId);
     if (null == value) {
-      const tmp5 = new fails(5000, 300000);
+      const tmp5 = new failsDefault(5000, 300000);
       const result = obj.set(guildId, tmp5);
       value = tmp5;
     }
@@ -244,10 +242,8 @@ obj = {
   },
   GUILD_PROFILE_UPDATE: handleUpdateStart,
   GUILD_PROFILE_UPDATE_SUCCESS: function handleUpdateSuccess(arg0) {
-    let guildId;
-    let profile;
     ({ guildId, profile } = arg0);
-    let obj = map;
+    obj = map;
     const value = map.get(guildId);
     if (null == value) {
       obj = {};
@@ -264,8 +260,6 @@ obj = {
   },
   GUILD_PROFILE_UPDATE_FAILURE: handleUpdateFailure,
   MEMBER_VERIFICATION_FORM_UPDATE: function handleMemberVerificationFormFetch(arg0) {
-    let form;
-    let guildId;
     ({ form, guildId } = arg0);
     let profile;
     if (form != null) {
@@ -274,7 +268,7 @@ obj = {
     if (null != profile) {
       const value = map.get(guildId);
       if (null == value) {
-        let obj = {};
+        obj = {};
         const merged = Object.assign(closure_7);
         obj.profile = profile;
         const _Date2 = Date;
@@ -313,9 +307,8 @@ obj = {
     }
   },
   GUILD_UPDATE: function handleGuildUpdate(guild) {
-    let icon;
     guild = guild.guild;
-    let obj = map;
+    obj = map;
     const value = map.get(guild.id);
     if (null != value) {
       if (null != value.profile) {
@@ -347,7 +340,7 @@ obj = {
   GUILD_PROFILE_UPDATE_VISIBILITY: handleUpdateStart,
   GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: function handleUpdateVisibilitySuccess(guildId) {
     guildId = guildId.guildId;
-    let obj = map;
+    obj = map;
     const value = map.get(guildId);
     let profile;
     if (value != null) {
@@ -366,8 +359,8 @@ obj = {
   },
   GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: handleUpdateFailure
 };
-const guildProfileStore = new GuildProfileStore(require("dispatcher"), obj);
-let result = require("getEmoji").fileFinishedImporting("modules/guild_profile/GuildProfileStore.tsx");
+const guildProfileStore = new GuildProfileStore(dispatcherDefault, obj);
+let result = set.fileFinishedImporting("modules/guild_profile/GuildProfileStore.tsx");
 
 export default guildProfileStore;
 export const GuildProfileFetchStatus = obj;

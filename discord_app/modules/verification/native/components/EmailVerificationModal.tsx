@@ -1,26 +1,26 @@
 // discord_app/modules/verification/native/components/EmailVerificationModal.tsx
-import _slicedToArray from "_slicedToArray";
-import NavigationStack from "NavigationStack";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { resetChangeEmailStore } from "ChangeEmailFields";
-import { VerificationModalScenes } from "ME";
-import { jsx } from "set";
-import { EmailVerificationModalActionCreators } from "../../../../actions/native/EmailVerificationModalActionCreators.tsx";
+import _modDef8561 from "module_8561" /* 8561 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { resetChangeEmailStore } from "ChangeEmailFields" /* 8563 */;
+import { VerificationModalScenes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 function closeModal() {
   resetChangeEmailStore();
-  EmailVerificationModalActionCreators.close();
+  _modDef8561.close();
 }
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/native/components/EmailVerificationModal.tsx");
 
 export default function EmailVerificationModal(isChangeEmail) {
   isChangeEmail = isChangeEmail.isChangeEmail;
-  let importDefault;
+  importDefault = undefined;
   let first;
   let callback;
   let obj = isChangeEmail(first[17]);
-  const items = [mergeGuildAvatar];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   let flag;
   if (stateFromStores != null) {

@@ -1,53 +1,52 @@
 // discord_app/modules/forums/native/ForumPostActionBar.tsx
-import _slicedToArray from "_slicedToArray";
-import Text from "Text";
-import { View } from "getSystemLocale";
-import initialize from "initialize";
-import storeThread from "storeThread";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { AnalyticsSections } from "ME";
-import jsxProd from "LinkIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "initialize" /* 4022 */;
+import closure_7 from "storeThread" /* 4023 */;
+import closure_8 from "ensureGuildLoaded" /* 1391 */;
+import { AnalyticsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 createCacheKey = { actionBarContainer: null, actionRow: null, reactionRow: null, actionButton: null, actionButtonsContainer: null, lastActionButton: null, buttonText: null };
-createCacheKey = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
+createCacheKey = { overflow: "hidden", paddingHorizontal: 12, paddingVertical: 8, display: "flex", flexDirection: "row", justifyContent: "space-between", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, marginBottom: -1 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
 createCacheKey[2] = { display: "flex", flexDirection: "row", alignItems: "center", flex: 1 };
-createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: require("Themes").radii.xs, borderWidth: 1, backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+createCacheKey[3] = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 createCacheKey[4] = { justifyContent: "flex-end" };
 createCacheKey[5] = { marginRight: 0 };
 createCacheKey[6] = { marginLeft: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: require("Themes").radii.xs, borderWidth: 1, backgroundColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: require("Themes").colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { display: "flex", flexDirection: "row", alignItems: "center", paddingHorizontal: 8, height: 28, marginRight: 4, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, backgroundColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT, borderColor: ThemesDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/forums/native/ForumPostActionBar.tsx");
 
 export default function ForumPostActionBar(channel) {
   channel = channel.channel;
   let stateFromStores1;
-  let dependencyMap;
+  dependencyMap = undefined;
   let width;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = channel(589);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_8.getChannel(channel.parent_id));
-  let obj1 = channel(7269);
+  const items = [closure_8];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getChannel(channel.parent_id));
+  obj1 = channel(7269);
   const firstMessage = obj1.useFirstForumPostMessage(channel).firstMessage;
   let obj2 = channel(589);
-  const items1 = [storeThread];
-  stateFromStores1 = obj2.useStateFromStores(items1, () => outer1_7.hasJoined(channel.id));
+  const items1 = [closure_7];
+  stateFromStores1 = obj2.useStateFromStores(items1, () => closure_1_7.hasJoined(channel.id));
   dependencyMap = channel.getGuildId();
   let obj3 = channel(589);
-  const items2 = [initialize];
+  const items2 = [closure_6];
   const stateFromStores2 = obj3.useStateFromStores(items2, () => {
     let isLurkingResult = null != closure_2;
     if (isLurkingResult) {
-      isLurkingResult = outer1_6.isLurking(tmp);
+      isLurkingResult = closure_1_6.isLurking(tmp);
     }
     return isLurkingResult;
   });
@@ -89,7 +88,7 @@ export default function ForumPostActionBar(channel) {
       if (null != guildId) {
         let obj = channel(10454);
         obj = { section: null };
-        obj[0] = outer1_9.CHANNEL_HEADER;
+        obj[0] = closure_1_9.CHANNEL_HEADER;
         const result = obj.handleCopyLinkForumPost(guildId, channel.id, obj);
       }
     };
@@ -103,9 +102,7 @@ export default function ForumPostActionBar(channel) {
     obj4[2] = items8;
     obj4[3] = function onPress() {
       let obj = stateFromStores1(7427);
-      obj = { channelId: channel.id, messageId: null, flash: true, jumpType: null };
-      obj[1] = stateFromStores1(11).castChannelIdAsMessageId(channel.id);
-      obj[3] = channel(4306).JumpType.ANIMATED;
+      obj = { channelId: channel.id, messageId: stateFromStores1(11).castChannelIdAsMessageId(channel.id), flash: true, jumpType: channel(4306).JumpType.ANIMATED };
       obj.jumpToMessage(obj);
     };
     obj4[4] = callback(tmp2(10628).ArrowLargeUpIcon, { size: "xs" });

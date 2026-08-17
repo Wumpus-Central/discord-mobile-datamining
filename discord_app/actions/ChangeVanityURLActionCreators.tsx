@@ -1,18 +1,20 @@
 // discord_app/actions/ChangeVanityURLActionCreators.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
-const result = require("sendRequest").fileFinishedImporting("actions/ChangeVanityURLActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("actions/ChangeVanityURLActionCreators.tsx");
 
 export default {
   openModal(id, vanityURLCode) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "CHANGE_VANITY_URL_MODAL_OPEN", guildId: id, code: vanityURLCode };
     obj.dispatch(obj);
   },
   closeModal() {
-    dispatcher.dispatch({ type: "CHANGE_VANITY_URL_MODAL_CLOSE" });
+    dispatcherDefault.dispatch({ type: "CHANGE_VANITY_URL_MODAL_CLOSE" });
   },
   removeVanityURL(id) {
     const HTTP = sendRequest.HTTP;
@@ -23,16 +25,14 @@ export default {
   },
   changeVanityURL(id, vanityURLCode) {
     const self = this;
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj.dispatch({ type: "CHANGE_VANITY_URL_MODAL_SUBMIT" });
     const HTTP = self(530).HTTP;
     obj = { url: Endpoints.GUILD_VANITY_URL(id), body: obj, oldFormErrors: true, rejectWithError: true };
     obj = { code: vanityURLCode };
     return HTTP.patch(obj).then((body) => {
-      let code;
-      let uses;
       ({ code, uses } = body.body);
-      outer1_1(outer1_2[1]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
+      closure_1_1(closure_1_2[1]).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
       self.closeModal();
     }, (body) => {
       let obj = callback(table[1]);
@@ -48,8 +48,6 @@ export default {
     obj[3] = sendRequest.rejectWithMigratedError();
     const obj3 = sendRequest;
     return HTTP.patch(obj).then((body) => {
-      let code;
-      let uses;
       ({ code, uses } = body.body);
       callback(709).dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code, uses });
     }, (body) => {

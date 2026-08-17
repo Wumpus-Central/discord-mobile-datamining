@@ -1,21 +1,21 @@
 // discord_app/modules/premium/referral_program/ReferralProgramUtils.tsx
-import emitChanges from "emitChanges";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { set } from "../../../utils/Durations.tsx";
-import { DISCORD_EPOCH } from "../../../utils/SnowflakeUtils.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { addVersionedDismissedContent } from "../../dismissible_content/DismissibleContentUtils.tsx";
-import { useIsEligibleSenderForReferralProgram } from "hooks/useIsEligibleSenderForReferralProgram.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initialize from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import addVersionedDismissedContent from "addVersionedDismissedContent" /* 1379 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import useIsEligibleSenderForReferralProgram from "useIsEligibleSenderForReferralProgram" /* 8274 */;
+import closure_3 from "emitChanges" /* 7423 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 
-const require = arg1;
+require = arg1;
 let result = require("set").fileFinishedImporting("modules/premium/referral_program/ReferralProgramUtils.tsx");
 
 export const getReferralTrialOfferExpirationCopy = function getReferralTrialOfferExpirationCopy(time) {
   const diff = time - Date.now();
-  const result = diff / set.Millis.HOUR;
+  const result = diff / setDefault.Millis.HOUR;
   if (result > 24) {
     const intl3 = getSystemLocale.intl;
     let obj = { numDays: null };
@@ -57,7 +57,7 @@ export const useIsReferralProgramBadgeShowable = function useIsReferralProgramBa
     let tmp = null != trialOffer.referrerId;
     const _Date = Date;
     const tmp2 = !trialOffer.isRedeemed();
-    const date = new Date(DISCORD_EPOCH.extractTimestamp(trialOffer.id));
+    const date = new Date(DISCORD_EPOCHDefault.extractTimestamp(trialOffer.id));
     const _Date2 = Date;
     const date1 = new Date();
     if (tmp) {
@@ -86,10 +86,10 @@ export const isReferralProgramPopoverSeen = function isReferralProgramPopoverSee
 export const useIsReferralProgramPopoverShowable = function useIsReferralProgramPopoverShowable() {
   let isEligibleSenderForReferralProgram = useIsEligibleSenderForReferralProgram.useIsEligibleSenderForReferralProgram(false);
   const obj = useIsEligibleSenderForReferralProgram;
-  const items = [emitChanges];
+  const items = [closure_3];
   const stateFromStores = initialize.useStateFromStores(items, () => store.getReferralsRemaining());
   const obj2 = initialize;
-  const items1 = [emitChanges];
+  const items1 = [closure_3];
   const stateFromStores1 = initialize.useStateFromStores(items1, () => store.getReminderStateId());
   const obj3 = initialize;
   if (obj4.useIsReferralReminderDCExperimentEnabled({ location: "ReferralProgramUtils" })) {

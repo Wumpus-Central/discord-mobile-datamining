@@ -1,25 +1,25 @@
 // discord_app/modules/guild_settings/GuildSettingsFetchActionCreators.tsx
-import dispatcher from "dispatcher";
-import { BasicApplicationRecord } from "createExecutable";
-import createdAt from "createdAt";
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { BasicApplicationRecord } from "createExecutable" /* 4479 */;
+import closure_5 from "createdAt" /* 1930 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function _fetchGuildIntegrationsApplications() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, body) {
       const table = tmp2;
       let callback2 = tmp5;
-      const HTTP = callback(outer1_2[4]).HTTP;
-      const obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
-      obj1[0] = outer1_6.GUILD_INTEGRATIONS(callback);
+      const HTTP = callback(closure_1_2[4]).HTTP;
+      obj1 = { url: null, query: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = closure_1_6.GUILD_INTEGRATIONS(callback);
       obj1[1] = { include_applications: true, include_role_connections_metadata: true };
-      obj1[3] = callback(outer1_2[4]).rejectWithMigratedError();
+      obj1[3] = callback(closure_1_2[4]).rejectWithMigratedError();
       yield HTTP.get(obj1);
       body = body.body;
       callback2 = body.map((application) => {
@@ -35,7 +35,7 @@ function _fetchGuildIntegrationsApplications() {
         let tmp5;
         if ("user" in application) {
           if (null != application.user) {
-            tmp5 = new createdAt(application.user);
+            tmp5 = new closure_5(application.user);
           }
         }
         obj.user = tmp5;
@@ -49,7 +49,7 @@ function _fetchGuildIntegrationsApplications() {
       return callback2;
     })();
   });
-  const _fetchGuildIntegrationsApplications = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -58,7 +58,7 @@ function _fetchGuildIntegrationsApplications() {
   }
   return applyArgumentsResult;
 }
-const result = require("createdAt").fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/GuildSettingsFetchActionCreators.tsx");
 
 export const fetchGuildIntegrationsApplications = function fetchGuildIntegrationsApplications(id) {
   const self = this;

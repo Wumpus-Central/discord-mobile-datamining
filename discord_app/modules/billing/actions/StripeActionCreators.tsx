@@ -1,14 +1,14 @@
 // discord_app/modules/billing/actions/StripeActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
+import closure_2 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _createStripeSetupIntent() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
       if (c4 === 2) {
         c4 = 3;
@@ -36,9 +36,9 @@ function _createStripeSetupIntent() {
               obj[0] = body;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp5;
+              closure_2 = tmp5;
               const table = tmp2;
-              let obj1;
+              obj1 = undefined;
               if (obj1 === undefined) {
                 obj1 = {};
               }
@@ -89,7 +89,7 @@ function _createStripeSetupIntent() {
     iter.next();
     return iter;
   });
-  const _createStripeSetupIntent = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -101,9 +101,9 @@ function _createStripeSetupIntent() {
 function _createSetupIntentForPaymentElements() {
   const self = this;
   const tmp = callback(() => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0, body) {
       if (c4 === 2) {
         c4 = 3;
@@ -131,9 +131,9 @@ function _createSetupIntentForPaymentElements() {
               obj[0] = body;
               return obj;
             } else {
-              let asyncGeneratorStep = tmp5;
+              closure_2 = tmp5;
               const table = tmp2;
-              let obj1;
+              obj1 = undefined;
               if (obj1 === undefined) {
                 obj1 = {};
               }
@@ -184,7 +184,7 @@ function _createSetupIntentForPaymentElements() {
     iter.next();
     return iter;
   });
-  const _createSetupIntentForPaymentElements = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -193,7 +193,7 @@ function _createSetupIntentForPaymentElements() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/billing/actions/StripeActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/billing/actions/StripeActionCreators.tsx");
 
 export const createStripeSetupIntent = function createStripeSetupIntent() {
   const self = this;

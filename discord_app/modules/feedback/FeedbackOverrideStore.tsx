@@ -1,9 +1,11 @@
 // discord_app/modules/feedback/FeedbackOverrideStore.tsx
-import { Store } from "initialize";
-import { optOutEligibilityCheck } from "FeedbackManager.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import optOutEligibilityCheck from "optOutEligibilityCheck" /* 16562 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = {};
+const Store = initializeDefault.Store;
 class HotspotStore extends Store {
 }
 const prototype = HotspotStore.prototype;
@@ -15,10 +17,8 @@ prototype["getFeedbackConfig"] = function getFeedbackConfig(ACTIVITY) {
 };
 HotspotStore.displayName = "FeedbackOverrideStore";
 HotspotStore.persistKey = "feedbackOverrides";
-const hotspotStore = new HotspotStore(require("dispatcher"), {
+const hotspotStore = new HotspotStore(dispatcherDefault, {
   FEEDBACK_OVERRIDE_SET: function handleSetFeedbackOverride(feedbackType) {
-    let chance;
-    let cooldown;
     feedbackType = feedbackType.feedbackType;
     const obj = {};
     ({ cooldown, chance } = feedbackType);
@@ -31,6 +31,6 @@ const hotspotStore = new HotspotStore(require("dispatcher"), {
     delete tmp[tmp2];
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
+const result = require("set").fileFinishedImporting("modules/feedback/FeedbackOverrideStore.tsx");
 
 export default hotspotStore;

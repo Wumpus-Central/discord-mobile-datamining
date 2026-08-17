@@ -1,14 +1,15 @@
 // discord_app/modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { ActionSheetHeaderPressableText } from "../../../../design/components/Sheet/native/ActionSheetHeaderPressableText.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ActionSheetHeaderPressableText from "ActionSheetHeaderPressableText" /* 8829 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ headerContainer: { paddingVertical: 12, paddingHorizontal: 16, alignItems: "flex-start" } });
-const result = require("jsxProd").fileFinishedImporting("modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/action_sheet/native/components/ContextMenuSubmenuActionSheetHeader.tsx");
 
 export default function ContextMenuSubmenuActionSheetHeader(onBack) {
   let fn = onBack.onBack;

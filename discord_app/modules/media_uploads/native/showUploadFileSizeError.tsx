@@ -1,28 +1,17 @@
 // discord_app/modules/media_uploads/native/showUploadFileSizeError.tsx
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING";
-import GuildFeatures from "GuildFeatures";
+import closure_3 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import { FileUploadErrorTypes } from "MESSAGE_GROUP_SPACING" /* 4663 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 ({ AnalyticEvents: c5, AnalyticsSections: closure_6 } = ME);
-({ PremiumTypes: metroImportAll, PremiumUserLimits: c9, PremiumUpsellTypes: c10 } = GuildFeatures);
+({ PremiumTypes: closure_8, PremiumUserLimits: c9, PremiumUpsellTypes: c10 } = GuildFeatures);
 let closure_11 = { NITRO_UPSELL: "Nitro Upsell", OVER_MAX_SIZE: "Over Max Size" };
-let result = require("ME").fileFinishedImporting("modules/media_uploads/native/showUploadFileSizeError.tsx");
+let result = require("set").fileFinishedImporting("modules/media_uploads/native/showUploadFileSizeError.tsx");
 
 export default function showUploadFileSizeError(arg0) {
-  let analyticsLocations;
-  let baseMaxSize;
-  let errorReason;
-  let file;
-  let guildId;
-  let maxSize;
   ({ file, maxSize, analyticsLocations, errorReason } = arg0);
   let items;
   let items1;
@@ -124,7 +113,7 @@ export default function showUploadFileSizeError(arg0) {
         const formatToPlainString = intl3.formatToPlainString;
         const t = tmp2(1236).t;
         if (tmp21) {
-          const obj1 = { maxSize: null };
+          obj1 = { maxSize: null };
           obj1[0] = tmp2(4269).formatSize(tmp2(4830).MAX_TOTAL_ATTACHMENT_SIZE / tmp2(4269).BYTE_IN_KB, { useKibibytes: true });
           stringResult1 = formatToPlainString(t.tUOJdH, obj1);
           const tmp2Result7 = tmp2(4269);

@@ -1,13 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { SearchTypes } from "ME";
-import { OpenThreadAnalyticsLocations as closure_7 } from "AbortCodes";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { useSafeAreaInsetsKeyboardAware } from "../../../../../safe_area/useSafeAreaInsetsKeyboardAware.native.tsx";
-import { ThreadListSection } from "../../../../../threads/native/components/redesign/ThreadList.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5441 */;
+import ThreadListSectionDefault from "ThreadListSection" /* 15925 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import { SearchTypes } from "ME" /* 676 */;
+import { OpenThreadAnalyticsLocations as closure_7 } from "AbortCodes" /* 1235 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 function ThreadsScreen(channel) {
@@ -16,7 +17,7 @@ function ThreadsScreen(channel) {
   const canStartThread = obj.useCanStartThread(channel);
   const items = [channel];
   const callback = importAllResult.useCallback(() => {
-    const result = channel(outer1_2[10]).navigateToThreadCreation(channel, "Thread Browser Empty State");
+    const result = channel(closure_1_2[10]).navigateToThreadCreation(channel, "Thread Browser Empty State");
   }, items);
   obj = { style: items1, children: null };
   items1 = [callback().container, channel.style];
@@ -39,14 +40,14 @@ function ThreadsScreen(channel) {
   }
   obj[1] = tmp10;
   obj[2] = callback1;
-  const tmp9 = ThreadListSection;
-  obj[3] = { paddingBottom: useSafeAreaInsetsKeyboardAware({ includeKeyboardHeight: true }).insets.bottom + tmp4(712).space.PX_16, paddingHorizontal: 16 };
+  const tmp9 = ThreadListSectionDefault;
+  obj[3] = { paddingBottom: useSafeAreaInsetsKeyboardAwareDefault({ includeKeyboardHeight: true }).insets.bottom + ThemesDefault.space.PX_16, paddingHorizontal: 16 };
   obj[1] = <tmp9 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
   return <tmp8 channel={channel} onCreateThreadPress={null} onThreadPress={null} contentContainerStyle={null} />;
 }
 let c3 = importAllResult;
 let obj = { container: { flex: 1 }, screen: null };
-obj = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+obj = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 obj[1] = obj;
 let closure_9 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo((searchContext) => {
@@ -58,8 +59,8 @@ const memoResult = importAllResult.memo((searchContext) => {
     channelId = null;
   }
   let obj = channelId(647);
-  const items = [ensureGuildLoaded];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_5.getChannel(channelId));
+  const items = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_5.getChannel(channelId));
   let tmp4 = null;
   if (null != stateFromStores) {
     obj = { channel: null };
@@ -71,8 +72,8 @@ const memoResult = importAllResult.memo((searchContext) => {
 const memoResult1 = importAllResult.memo(() => {
   let obj = channelId(1501);
   channelId = obj.useRoute().params.channelId;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = channelId(647).useStateFromStores(items, () => outer1_5.getChannel(channelId));
+  const items = [closure_5];
+  const stateFromStores = channelId(647).useStateFromStores(items, () => closure_1_5.getChannel(channelId));
   let tmp3 = null;
   if (null != stateFromStores) {
     obj = { style: null, channel: null };
@@ -82,7 +83,7 @@ const memoResult1 = importAllResult.memo(() => {
   }
   return tmp3;
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/screens/ThreadsScreen.tsx");
 
 export default memoResult1;
 export const SearchTabsThreadScreen = memoResult;

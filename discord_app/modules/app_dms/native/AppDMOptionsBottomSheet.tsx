@@ -1,36 +1,35 @@
 // discord_app/modules/app_dms/native/AppDMOptionsBottomSheet.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { UserSettingsSections } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "recomputeFromAppTokens" /* 5289 */;
+import { UserSettingsSections } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { sheet: null, content: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("recomputeFromAppTokens").fileFinishedImporting("modules/app_dms/native/AppDMOptionsBottomSheet.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/app_dms/native/AppDMOptionsBottomSheet.tsx");
 
 export default function AppDMOptionsBottomSheet(userId) {
   userId = userId.userId;
   const channel = userId.channel;
   const application = userId.application;
   let stateFromStores;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   let obj = userId(application[7]);
-  const items = [recomputeFromAppTokens];
+  const items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => {
     let id;
     if (application != null) {
       id = application.id;
     }
-    return outer1_5.getNewestTokenForApplication(id);
+    return closure_1_5.getNewestTokenForApplication(id);
   });
   const items1 = [channel.id, userId];
   const items2 = [application, stateFromStores];
@@ -46,7 +45,7 @@ export default function AppDMOptionsBottomSheet(userId) {
     if (tmp) {
       let obj = userId(application[10]);
       obj = { screen: null, params: null };
-      obj[0] = outer1_6.AUTHORIZED_APP;
+      obj[0] = closure_1_6.AUTHORIZED_APP;
       obj = { oauth2Token: null };
       obj[0] = stateFromStores;
       obj[1] = obj;
@@ -60,7 +59,7 @@ export default function AppDMOptionsBottomSheet(userId) {
   }, []);
   obj = { startExpanded: true, backgroundStyles: tmp.sheet, children: null };
   obj = { style: tmp.content, children: null };
-  const obj1 = { hasIcons: false, children: null };
+  obj1 = { hasIcons: false, children: null };
   const obj2 = { label: null, onPress: null };
   const intl = userId(application[15]).intl;
   obj2[0] = intl.string(userId(application[15]).t.iXAna6);

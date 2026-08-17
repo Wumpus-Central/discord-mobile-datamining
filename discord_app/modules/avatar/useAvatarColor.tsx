@@ -1,9 +1,9 @@
 // discord_app/modules/avatar/useAvatarColor.tsx
-import _slicedToArray from "_slicedToArray";
-import batchUpdates from "batchUpdates";
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import keys from "keys";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import keys from "keys" /* 644 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
@@ -13,9 +13,9 @@ function hasFetchedColors(game_name) {
 function _maybeFetchColors() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -43,11 +43,11 @@ function _maybeFetchColors() {
               obj[0] = arg1;
               return obj;
             } else {
-              if (!outer1_8(closure_0)) {
+              if (!closure_1_8(closure_0)) {
                 c2 = 1;
                 c1 = 1;
-                const obj1 = { value: null, done: false };
-                obj1[0] = outer1_10(tmp5);
+                obj1 = { value: null, done: false };
+                obj1[0] = closure_1_10(tmp5);
                 return obj1;
               }
               tmp5 = closure_0;
@@ -70,7 +70,7 @@ function _maybeFetchColors() {
       }
     })();
   });
-  const _maybeFetchColors = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -92,10 +92,10 @@ function fetchColors() {
 function _fetchColors() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -123,12 +123,12 @@ function _fetchColors() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let table = tmp7;
               table = undefined;
               dependencyMap = undefined;
-              if (!outer1_7.getState().fetching[callback]) {
-                callback(outer1_2[5]).batchUpdates(() => outer1_7.setState((fetching) => {
+              if (!closure_1_7.getState().fetching[callback]) {
+                callback(closure_1_2[5]).batchUpdates(() => closure_1_7.setState((fetching) => {
                   let obj = { fetching: null };
                   obj = {};
                   const merged = Object.assign(fetching.fetching);
@@ -136,12 +136,12 @@ function _fetchColors() {
                   obj[0] = obj;
                   return obj;
                 }));
-                let c4 = 1;
-                const obj5 = callback(outer1_2[5]);
+                c4 = 1;
+                const obj5 = callback(closure_1_2[5]);
                 c5 = 2;
                 c6 = 1;
-                let obj1 = { value: null, done: false };
-                obj1[0] = callback(outer1_2[6]).getPaletteForAvatar(tmp35);
+                obj1 = { value: null, done: false };
+                obj1[0] = callback(closure_1_2[6]).getPaletteForAvatar(tmp35);
                 return obj1;
               }
               tmp35 = callback;
@@ -149,7 +149,7 @@ function _fetchColors() {
           } else {
             if (1 === tmp7) {
               c4 = 0;
-              callback(705).batchUpdates(() => outer1_7.setState((fetching) => {
+              callback(705).batchUpdates(() => closure_1_7.setState((fetching) => {
                 let obj = { fetching: null };
                 obj = {};
                 const merged = Object.assign(fetching.fetching);
@@ -167,7 +167,7 @@ function _fetchColors() {
               dependencyMap = obj.getComplimentaryPaletteForColor(table[0]);
               obj1 = callback(705);
               obj1.batchUpdates(() => {
-                outer1_7.setState((fetching) => {
+                closure_1_7.setState((fetching) => {
                   let obj = { fetching: null, palette: null };
                   obj = {};
                   const merged = Object.assign(fetching.fetching);
@@ -191,7 +191,7 @@ function _fetchColors() {
           }
           c6 = 3;
         } catch (tmp27) {
-          let _slicedToArray = tmp27;
+          closure_3 = tmp27;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp27;
@@ -202,7 +202,7 @@ function _fetchColors() {
       }
     })();
   });
-  const _fetchColors = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -212,7 +212,7 @@ function _fetchColors() {
   return applyArgumentsResult;
 }
 keys = keys.create(() => ({ palette: {}, fetching: {} }));
-const result = require("noop").fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
+const result = require("set").fileFinishedImporting("modules/avatar/useAvatarColor.tsx");
 
 export default function useAvatarColor(arg0, arg1) {
   let flag = arg2;
@@ -223,7 +223,7 @@ export default function useAvatarColor(arg0, arg1) {
   if (flag === undefined) {
     flag = true;
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
   const tmp = keys((arg0) => {
     let tmp2;
@@ -233,13 +233,13 @@ export default function useAvatarColor(arg0, arg1) {
     return tmp2;
   });
   dependencyMap = tmp;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_6];
   stateFromStores = _initialize.useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
-      if (outer1_6.desaturateUserColors) {
-        num = outer1_6.saturation;
+      if (closure_1_6.desaturateUserColors) {
+        num = closure_1_6.saturation;
       }
     }
     return num;
@@ -248,29 +248,23 @@ export default function useAvatarColor(arg0, arg1) {
   const effect = React.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = null == c2;
+      tmp2 = null == closure_2;
     }
     if (tmp2) {
-      outer1_10(closure_0);
+      closure_1_10(closure_0);
     }
   }, items1);
   const items2 = [tmp, stateFromStores];
   let memo = React.useMemo(() => {
     let mapped;
-    if (c2 != null) {
-      mapped = c2.map((arg0) => {
-        let h;
-        let l;
-        let s;
-        let tmp;
-        let tmp2;
-        let tmp3;
+    if (closure_2 != null) {
+      mapped = closure_2.map((arg0) => {
         [tmp, tmp2, tmp3] = arg0;
-        let obj = outer1_1(outer1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
+        let obj = closure_1_1(closure_1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
         ({ h, s, l } = obj.toHsl());
-        obj = { h, s: s * _slicedToArray, l };
+        obj = { h, s: s * closure_3, l };
         const toHslResult = obj.toHsl();
-        return outer1_1(outer1_2[9])(obj).toHexString();
+        return closure_1_1(closure_1_2[9])(obj).toHexString();
       });
     }
     return mapped;
@@ -294,7 +288,7 @@ export const maybeFetchColors = function maybeFetchColors(closure_0) {
   return applyArgumentsResult;
 };
 export const useHasFetchedColors = function useHasFetchedColors(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return !keys((arg0) => {
     let tmp2 = null != closure_0;
     if (tmp2) {
@@ -309,7 +303,7 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   if (arg2 === undefined) {
     flag = true;
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   let stateFromStores;
   const tmp = keys((arg0) => {
     let tmp2;
@@ -319,13 +313,13 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
     return tmp2;
   });
   dependencyMap = tmp;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_6];
   stateFromStores = _initialize.useStateFromStores(items, () => {
     let num = 1;
     if (flag) {
       num = 1;
-      if (outer1_6.desaturateUserColors) {
-        num = outer1_6.saturation;
+      if (closure_1_6.desaturateUserColors) {
+        num = closure_1_6.saturation;
       }
     }
     return num;
@@ -334,29 +328,23 @@ export const useAvatarColors = function useAvatarColors(pendingAvatarSrc, PRIMAR
   const effect = React.useEffect(() => {
     let tmp2 = null != closure_0;
     if (tmp2) {
-      tmp2 = null == c2;
+      tmp2 = null == closure_2;
     }
     if (tmp2) {
-      outer1_10(closure_0);
+      closure_1_10(closure_0);
     }
   }, items1);
   const items2 = [tmp, stateFromStores];
   let memo = React.useMemo(() => {
     let mapped;
-    if (c2 != null) {
-      mapped = c2.map((arg0) => {
-        let h;
-        let l;
-        let s;
-        let tmp;
-        let tmp2;
-        let tmp3;
+    if (closure_2 != null) {
+      mapped = closure_2.map((arg0) => {
         [tmp, tmp2, tmp3] = arg0;
-        let obj = outer1_1(outer1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
+        let obj = closure_1_1(closure_1_2[9])({ r: tmp, g: tmp2, b: tmp3 });
         ({ h, s, l } = obj.toHsl());
-        obj = { h, s: s * _slicedToArray, l };
+        obj = { h, s: s * closure_3, l };
         const toHslResult = obj.toHsl();
-        return outer1_1(outer1_2[9])(obj).toHexString();
+        return closure_1_1(closure_1_2[9])(obj).toHexString();
       });
     }
     return mapped;

@@ -1,6 +1,10 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 6877 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 import { UserSettingsSensitiveContentFilters } from "../../family_center/native/ParentalControlsSensitiveContentFiltersScreen.tsx";
 
 obj = {
@@ -8,18 +12,18 @@ obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["Hj/But"]);
   },
-  IconComponent: require("ImageWarningIcon").ImageWarningIcon,
-  parent: require("MobileUserSettings").MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  IconComponent: ImageWarningIcon.ImageWarningIcon,
+  parent: MobileUserSettings.MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   screen: obj,
   unsearchable: true
 };
 obj = {
-  route: require("ME").UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  route: ME.UserSettingsSections.FAMILY_CENTER_PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   getComponent() {
     return UserSettingsSensitiveContentFilters.default;
   }
 };
 const route = createToggle.createRoute(obj);
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsSensitiveContentFilterSetting.tsx");
 
 export default route;

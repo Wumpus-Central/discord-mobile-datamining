@@ -1,14 +1,12 @@
 // discord_app/modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx
-import _slicedToArray from "_slicedToArray";
-import { canShowTimeRecurringContent } from "../useGetDismissibleContent.tsx";
-import { useSelectedDismissibleContentShared } from "../useSelectedDismissibleContentShared.tsx";
+import canShowTimeRecurringContent from "canShowTimeRecurringContent" /* 7367 */;
+import useSelectedDismissibleContentShared from "useSelectedDismissibleContentShared" /* 7369 */;
+import closure_2 from "_slicedToArray" /* 32 */;
 
-const require = arg1;
-const result = require("useSelectedDismissibleContentShared").fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/dismissible_content/hooks/useSelectedDismissibleContent.tsx");
 
 export const useSelectedDismissibleContent = function useSelectedDismissibleContent(items, APP_LAUNCHER_ONBOARDING, bypassAutoDismiss) {
-  let tmp2;
-  let tmp3;
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -21,8 +19,6 @@ export const useSelectedDismissibleContent = function useSelectedDismissibleCont
   return items;
 };
 export const useSelectedSingleUseGuildDismissibleContent = function useSelectedSingleUseGuildDismissibleContent(items4, id, CHANNEL_NOTICES, flag) {
-  let tmp2;
-  let tmp3;
   if (flag === undefined) {
     flag = false;
   }
@@ -34,8 +30,6 @@ export const useSelectedSingleUseGuildDismissibleContent = function useSelectedS
   return items;
 };
 export const useSelectedVersionedDismissibleContent = function useSelectedVersionedDismissibleContent(COLLECTIBLES_SHOP_ENTRY_MARKETING, latestVersion, groupName, bypassAutoDismiss) {
-  let tmp2;
-  let tmp3;
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -48,8 +42,6 @@ export const useSelectedVersionedDismissibleContent = function useSelectedVersio
   return items;
 };
 export const useSelectedTimeRecurringDismissibleContent = function useSelectedTimeRecurringDismissibleContent(prop, closure_12, groupName, bypassAutoDismiss) {
-  let tmp2;
-  let tmp3;
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -62,8 +54,6 @@ export const useSelectedTimeRecurringDismissibleContent = function useSelectedTi
   return items;
 };
 export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedSnowflakeBoundDismissibleContent(prop, newSnowflakeId, groupName, bypassAutoDismiss) {
-  let tmp2;
-  let tmp3;
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -76,8 +66,6 @@ export const useSelectedSnowflakeBoundDismissibleContent = function useSelectedS
   return items;
 };
 export const useSelectedSnowflakeBoundGuildDismissibleContent = function useSelectedSnowflakeBoundGuildDismissibleContent(prop, id, arg2, arg3, flag) {
-  let tmp2;
-  let tmp3;
   if (flag === undefined) {
     flag = false;
   }
@@ -89,8 +77,6 @@ export const useSelectedSnowflakeBoundGuildDismissibleContent = function useSele
   return items;
 };
 export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent = function useSelectedTimeRecurringSnowflakeBoundDismissibleContent(contentType, newSnowflakeId, timeRecurringConfig, groupName, bypassAutoDismiss) {
-  let tmp2;
-  let tmp3;
   let flag = bypassAutoDismiss;
   if (bypassAutoDismiss === undefined) {
     flag = false;
@@ -103,8 +89,6 @@ export const useSelectedTimeRecurringSnowflakeBoundDismissibleContent = function
   return items;
 };
 export const useSelectedTimeRecurringGuildDismissibleContent = function useSelectedTimeRecurringGuildDismissibleContent(prop, id, closure_17, GUILD_HEADER_TOOLTIPS) {
-  let tmp2;
-  let tmp3;
   const obj = canShowTimeRecurringContent;
   [tmp2, tmp3] = callback(canShowTimeRecurringContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, closure_17, GUILD_HEADER_TOOLTIPS), 2);
   const tmp = callback(canShowTimeRecurringContent.useGetTimeRecurringGuildDismissibleContent_UNSAFE(prop, id, closure_17, GUILD_HEADER_TOOLTIPS), 2);

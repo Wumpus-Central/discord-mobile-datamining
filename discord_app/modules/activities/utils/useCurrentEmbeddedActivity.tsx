@@ -1,11 +1,11 @@
 // discord_app/modules/activities/utils/useCurrentEmbeddedActivity.tsx
-import participantFromServer from "participantFromServer";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
+import initialize from "initialize" /* 589 */;
+import closure_2 from "participantFromServer" /* 1390 */;
 
-const require = arg1;
+require = arg1;
 const result = require("set").fileFinishedImporting("modules/activities/utils/useCurrentEmbeddedActivity.tsx");
 
 export default function useCurrentEmbeddedActivity() {
-  const items = [participantFromServer];
+  const items = [closure_2];
   return initialize.useStateFromStores(items, () => currentEmbeddedActivity.getCurrentEmbeddedActivity());
 };

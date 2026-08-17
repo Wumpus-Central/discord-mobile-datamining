@@ -1,5 +1,8 @@
 // discord_common/js/shared/utils/TypedEventEmitter.tsx
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
+import set from "set" /* 2 */;
+import EventEmitter from "EventEmitter" /* 652 */;
+
+const result = set.fileFinishedImporting("../discord_common/js/shared/utils/TypedEventEmitter.tsx");
 class TypedEventEmitter {
   constructor() {
     obj = Object.create(new.target.prototype);

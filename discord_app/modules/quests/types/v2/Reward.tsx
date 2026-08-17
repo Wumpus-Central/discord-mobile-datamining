@@ -1,6 +1,8 @@
 // discord_app/modules/quests/types/v2/Reward.tsx
-import { QuestRewardTypes } from "../../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import { QuestsVisibleMessagesChangedSource } from "../../QuestTypes.tsx";
+import set from "set" /* 2 */;
+import QuestsVisibleMessagesChangedSource from "QuestsVisibleMessagesChangedSource" /* 6719 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7458 */;
+
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {
   const obj = {};
   const keys = Object.keys(redemption_instructions_by_platform);
@@ -35,7 +37,7 @@ function _questRewardV2FromServer(type) {
     ({ approximate_count: obj9[5], redemption_link: obj9[6] } = type);
     return obj;
   } else if (tmp(7458).QuestRewardTypes.COLLECTIBLE === type) {
-    const obj1 = { type: null, skuId: null, asset: null, assetVideo: null, messages: null, expiresAt: null, expirationMode: null, expiresAtPremium: null };
+    obj1 = { type: null, skuId: null, asset: null, assetVideo: null, messages: null, expiresAt: null, expirationMode: null, expiresAtPremium: null };
     obj1[0] = tmp(7458).QuestRewardTypes.COLLECTIBLE;
     ({ sku_id: obj7[1], asset: obj7[2], asset_video: obj7[3] } = type);
     const obj2 = { redemptionInstructionsByPlatform: null, name: null, nameWithArticle: null };
@@ -78,7 +80,7 @@ function _questRewardV2FromServer(type) {
     return obj;
   }
 }
-const result = require("set").fileFinishedImporting("modules/quests/types/v2/Reward.tsx");
+const result = set.fileFinishedImporting("modules/quests/types/v2/Reward.tsx");
 
 export const questRewardsConfigV2FromServer = function questRewardsConfigV2FromServer(rewards_config) {
   const rewards = rewards_config.rewards;

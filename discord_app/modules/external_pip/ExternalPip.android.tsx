@@ -1,5 +1,6 @@
 // discord_app/modules/external_pip/ExternalPip.android.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
 
 const NativeEventEmitter = get_ActivityIndicator.NativeEventEmitter;
 const NativeModules = get_ActivityIndicator.NativeModules;
@@ -15,7 +16,7 @@ class ExternalPip {
 const prototype = ExternalPip.prototype;
 prototype["addOnPipModeChangedListener"] = function addOnPipModeChangedListener(callback2) {
   const self = this;
-  let closure_0 = callback2;
+  closure_0 = callback2;
   const eventEmitter = this.eventEmitter;
   return eventEmitter.addListener("onPipModeChanged", (isInPipMode) => {
     isInPipMode = isInPipMode.isInPipMode;
@@ -64,6 +65,6 @@ prototype["isInPipMode"] = function isInPipMode() {
 let obj = Object.create(ExternalPip.prototype);
 const nativeEventEmitter = new NativeEventEmitter(NativeModules.PipAndroid);
 obj.eventEmitter = nativeEventEmitter;
-const result = require("set").fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
+const result = set.fileFinishedImporting("modules/external_pip/ExternalPip.android.tsx");
 
 export default obj;

@@ -1,10 +1,10 @@
 // discord_app/modules/forwarding/isStaffToNonStaffForward.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { GuildFeatures } from "ME";
+import closure_0 from "ensureGuildLoaded" /* 1391 */;
+import closure_1 from "createGuildRecordFromRust" /* 1910 */;
+import closure_2 from "mergeGuildAvatar" /* 1922 */;
+import { GuildFeatures } from "ME" /* 676 */;
 
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
+const result = require("set").fileFinishedImporting("modules/forwarding/isStaffToNonStaffForward.tsx");
 
 export default function isStaffToNonStaffForward(channel_id, arr) {
   currentUser = currentUser.getCurrentUser();

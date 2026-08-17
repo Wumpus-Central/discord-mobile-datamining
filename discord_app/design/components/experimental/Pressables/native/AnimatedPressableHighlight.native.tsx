@@ -1,14 +1,13 @@
 // discord_app/design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx
-import noop from "noop";
-import { Pressable } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import set from "set";
-import importDefaultResult from "module_4115";
-import set from "jsxProd";
-import { SPRING_CONFIG } from "../../../../../modules/main_tabs_v2/native/shared_components/util/useIOSPressEffects.tsx";
+import SPRING_CONFIG from "SPRING_CONFIG" /* 6295 */;
+import closure_3 from "noop" /* 19 */;
+import { Pressable } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-const require = arg1;
-let closure_6 = require("module_4115").createAnimatedComponent(require("PressableBase").PressableHighlight);
+require = arg1;
+let closure_6 = importDefaultResult.createAnimatedComponent(require("PressableBase").PressableHighlight);
 const result = set.fileFinishedImporting("design/components/experimental/Pressables/native/AnimatedPressableHighlight.native.tsx");
 
 export const AnimatedPressableHighlight = set.isAndroid() ? (function AnimatedPressableHighlightAndroid(children) {

@@ -1,38 +1,34 @@
 // discord_app/components_native/ErrorBoundary.tsx
-import closure_3 from "jsxProd";
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import get_ActivityIndicator from "set";
-import getCurrentBuildOverride from "getCurrentBuildOverride";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import _modDef1208 from "module_1208" /* 1208 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import Button2 from "Button" /* 4745 */;
+import getAppCrashSource from "getAppCrashSource" /* 12362 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "getCurrentBuildOverride" /* 10638 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { initialize } from "../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../design/components/Button/native/Button.native.tsx";
-import { getAppCrashSource } from "../design/components/Illustration/native/redesign/generated/AppCrash.tsx";
-import { Text } from "../design/components/Text/native/Text.tsx";
-import { Button } from "../design/void/native.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { SentryUtils.native } from "../utils/SentryUtils.native.tsx";
 
-let c10;
-let c9;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function MaybeClearBuildOverride() {
   function _clearOverride() {
     const self = this;
-    const tmp = outer1_3(function*() {
+    const tmp = closure_1_3(function*() {
       const callback = tmp3;
-      let c3 = 1;
-      outer1_0(true);
-      const obj1 = outer1_0(outer1_2[8]);
+      c3 = 1;
+      closure_1_0(true);
+      obj1 = closure_1_0(closure_1_2[8]);
       yield obj1.clearBuildOverride();
       if (1 === tmp7) {
         c3 = 0;
         callback(false);
-        let c4 = 3;
+        c4 = 3;
       } else if (arg0 === 1) {
         c4 = 3;
         throw arg1;
@@ -42,7 +38,7 @@ function MaybeClearBuildOverride() {
       c3 = 0;
       return arg1;
     });
-    const _clearOverride = tmp;
+    closure_1 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -54,7 +50,7 @@ function MaybeClearBuildOverride() {
   let tmp = callback(importAllResult.useState(false), 2);
   const _require = tmp[1];
   let obj = _initialize;
-  const items = [getCurrentBuildOverride];
+  const items = [closure_8];
   if (null == obj.useStateFromStores(items, () => {
     const overrides = currentBuildOverride.getCurrentBuildOverride().overrides;
     let id;
@@ -106,9 +102,9 @@ prototype["triggerSoftCrash"] = function triggerSoftCrash(error, extra) {
   let obj = { error, info: extra };
   this.setState(obj);
   obj = { extra };
-  SentryUtils.native.captureCrash(error, obj);
-  const obj2 = SentryUtils.native;
-  dispatcher.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
+  _modDef1208.captureCrash(error, obj);
+  const obj2 = _modDef1208;
+  dispatcherDefault.dispatch({ type: "CLEAR_CACHES", reason: "App Crashed" });
 };
 prototype["handleReload"] = function handleReload() {
   BundleUpdaterManager = BundleUpdaterManager.BundleUpdaterManager;
@@ -136,7 +132,7 @@ prototype["componentWillUnmount"] = function componentWillUnmount() {
 prototype["render"] = function render() {
   const self = this;
   const tmp = callback3(this.context);
-  const error = this.state.error;
+  error = this.state.error;
   if (null !== error) {
     let obj = { Illustration: null, title: null, body: null, titleStyle: null, bodyStyle: null, children: null };
     obj[0] = getAppCrashSource.AppCrash;
@@ -166,11 +162,11 @@ prototype["render"] = function render() {
     obj = { style: null, children: null };
     obj[0] = tmp.buttons;
     const items1 = [closure_9(MaybeClearBuildOverride, {}), ];
-    const obj1 = { text: null, onPress: null };
+    obj1 = { text: null, onPress: null };
     const intl3 = tmp3(1236).intl;
     obj1[0] = intl3.string(getSystemLocale.t["4n8OJn"]);
     obj1[1] = self.handleReload;
-    items1[1] = closure_9(Button.Button, obj1);
+    items1[1] = closure_9(Button2.Button, obj1);
     obj[1] = items1;
     items[1] = closure_10(closure_7, obj);
     items[2] = null;
@@ -182,6 +178,6 @@ prototype["render"] = function render() {
   return children;
 };
 ErrorBoundary.contextType = require("ManaContext").ThemeContext;
-const result = require("noop").fileFinishedImporting("components_native/ErrorBoundary.tsx");
+const result = require("set").fileFinishedImporting("components_native/ErrorBoundary.tsx");
 
 export default ErrorBoundary;

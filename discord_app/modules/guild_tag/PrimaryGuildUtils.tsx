@@ -1,5 +1,7 @@
 // discord_app/modules/guild_tag/PrimaryGuildUtils.tsx
-const result = require("set").fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_tag/PrimaryGuildUtils.tsx");
 
 export const isUserPrimaryGuildEqual = function isUserPrimaryGuildEqual(primaryGuild, primary_guild) {
   if (null != primaryGuild) {

@@ -1,16 +1,15 @@
 // discord_app/modules/chat/native/SlowModeIndicator.tsx
-import importAllResult from "noop";
-import setCooldown from "setCooldown";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "setCooldown" /* 7440 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let obj = { container: { alignItems: "center", flexDirection: "row" }, icon: null };
-obj = { marginLeft: require("Themes").space.PX_4 };
+obj = { marginLeft: ThemesDefault.space.PX_4 };
 obj[1] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
 const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
@@ -37,8 +36,7 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
   }, items1);
   const callback = stateFromStores.useCallback(() => {
     let obj = hasTypingText(slowmodeType[7]);
-    obj = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: channel(slowmodeType[8]).TimerIcon, content: null };
-    obj[2] = channel(slowmodeType[6]).getSlowmodeDescription(channel.rateLimitPerUser);
+    obj = { key: "CHANNEL_SLOWMODE_INFO", IconComponent: channel(slowmodeType[8]).TimerIcon, content: channel(slowmodeType[6]).getSlowmodeDescription(channel.rateLimitPerUser) };
     obj.open(obj);
   }, items2);
   obj = { onPress: callback, style: tmp.container, children: null };
@@ -48,6 +46,6 @@ const memoResult = importAllResult.memo(function SlowModeIndicator(channel) {
   obj[2] = items3;
   return callback2(channel(slowmodeType[9]).PressableOpacity, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
+const result = require("set").fileFinishedImporting("modules/chat/native/SlowModeIndicator.tsx");
 
 export default memoResult;

@@ -1,16 +1,14 @@
 // discord_app/modules/parent_tools/hooks/useTimeValue.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
-const result = require("setsEqual").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
+const result = require("set").fileFinishedImporting("modules/parent_tools/hooks/useTimeValue.tsx");
 
 export default function useTimeValue(arg0) {
-  let noop;
-  let closure_1;
-  ({ initial: noop, defaultValue: closure_1 } = arg0);
+  ({ initial: closure_0, defaultValue: closure_1 } = arg0);
   return React.useState(() => {
-    if (null != noop) {
+    if (null != closure_0) {
       const obj = { hours: null, minutes: null };
-      ({ hours: obj[0], minutes: obj[1] } = noop);
+      ({ hours: obj[0], minutes: obj[1] } = closure_0);
       let tmp2 = obj;
     } else {
       tmp2 = closure_1;

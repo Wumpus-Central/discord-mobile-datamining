@@ -1,29 +1,28 @@
 // discord_app/modules/age_assurance/native/AgeVerificationMethodsContainer.tsx
-import openIncodeAgeVerificationModal from "openIncodeAgeVerificationModal";
-import { VerificationMethod } from "set";
-import { SafetyHubLinks } from "SafetyHubView";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { VerificationMethod } from "set" /* 5427 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 5438 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { content: null, errorContainer: null, noMethodsText: null, buttonGroup: null };
-createCacheKey = { marginTop: require("Themes").space.PX_8 };
+createCacheKey = { marginTop: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_24 };
-let obj1 = { marginTop: require("Themes").space.PX_24, marginBottom: require("Themes").space.PX_24 };
-createCacheKey[2] = { paddingHorizontal: require("Themes").space.PX_40, textAlign: "center" };
+createCacheKey[1] = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
+let obj1 = { marginTop: ThemesDefault.space.PX_24, marginBottom: ThemesDefault.space.PX_24 };
+createCacheKey[2] = { paddingHorizontal: ThemesDefault.space.PX_40, textAlign: "center" };
 createCacheKey[3] = { paddingVertical: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingHorizontal: require("Themes").space.PX_40, textAlign: "center" };
-const result = require("SafetyHubView").fileFinishedImporting("modules/age_assurance/native/AgeVerificationMethodsContainer.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingHorizontal: ThemesDefault.space.PX_40, textAlign: "center" };
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationMethodsContainer.tsx");
 
 export const AgeVerificationMethodsContainer = function AgeVerificationMethodsContainer(ageVerificationMethods) {
   const prop = ageVerificationMethods.ageVerificationMethods;
   const modalSessionId = ageVerificationMethods.modalSessionId;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = prop(5437);
   const isSuspendedUser = obj.useIsSuspendedUser();
   const items = [prop];
@@ -35,32 +34,31 @@ export const AgeVerificationMethodsContainer = function AgeVerificationMethodsCo
     }
     if (someResult) {
       obj = { name: null };
-      obj[0] = prop(outer1_2[8]).MetricEvents.GOOGLE_WALLET_METHOD_IMPRESSION;
-      modalSessionId(outer1_2[7]).increment(obj);
-      const obj2 = modalSessionId(outer1_2[7]);
+      obj[0] = prop(closure_1_2[8]).MetricEvents.GOOGLE_WALLET_METHOD_IMPRESSION;
+      modalSessionId(closure_1_2[7]).increment(obj);
+      const obj2 = modalSessionId(closure_1_2[7]);
     }
   }, items);
   obj = { spacing: 16, style: tmp.content, children: null };
-  obj = { messageType: null, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
-  obj[0] = prop(1297).HelpMessageTypes.INFO;
+  obj = { messageType: prop(1297).HelpMessageTypes.INFO, textColor: "text-feedback-info", textVariant: "text-sm/medium", children: null };
   const intl = prop(1236).intl;
   obj[3] = intl.string(prop(1236).t.El4aXl);
   const items1 = [callback(prop(1297).HelpMessage, obj), ];
   if (null != prop) {
     if (0 !== prop.length) {
       let mapped = prop.map((label) => {
-        let closure_0 = label;
-        return outer1_6(prop(outer1_2[18]).TableRow, {
+        closure_0 = label;
+        return closure_1_6(prop(closure_1_2[18]).TableRow, {
           label: label.title,
           subLabel: label.description,
           onPress() {
-            return label.onClick(outer1_1);
+            return label.onClick(closure_1_1);
           },
           arrow: true
         }, label.id);
       });
     }
-    const obj1 = { hasIcons: false, children: null };
+    obj1 = { hasIcons: false, children: null };
     obj1[1] = mapped;
     items1[1] = tmp7(tmp8, obj1);
     obj[2] = items1;

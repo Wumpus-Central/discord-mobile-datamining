@@ -1,73 +1,66 @@
 // discord_app/modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx
-import usePrimaryActionButtonType from "usePrimaryActionButtonType";
-import { View } from "getGuildEventsForCurrentUser";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import createRTCConnection from "createRTCConnection";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_10 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_11 } from "CREATE_GUILD_EVENT_MODAL_KEY";
-import { Fonts } from "sum";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import importDefaultResult1 from "createTextStyle";
-import { ACTION_SHEET_HEIGHT_HALF } from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import { useGuildScheduledEventUserCount } from "../../../useGuildScheduledEventUserCount.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import ACTION_SHEET_HEIGHT_HALFDefault from "ACTION_SHEET_HEIGHT_HALF" /* 4342 */;
+import useGuildScheduledEventUserCountDefault from "useGuildScheduledEventUserCount" /* 8795 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import closure_8 from "createRTCConnection" /* 4539 */;
+import closure_9 from "mergeGuildAvatar" /* 1922 */;
+import { AGE_VERIFICATION_STAGE_CHANNEL_TYPES as closure_10 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import { GUILD_EVENT_INFO_ACTION_SHEET_KEY as closure_11 } from "CREATE_GUILD_EVENT_MODAL_KEY" /* 8793 */;
+import { Fonts } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let closure_12;
-let closure_14;
-let map1;
 const require = arg1;
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 createCacheKey = { eventContainer: null, eventHeader: null, eventTitle: null, controlsContainer: null, eventTitleContainer: null, eventDescriptionContainer: null, guildTextStyle: null, interestedContainer: null, interestedIcon: null, ageVerificationContainer: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { paddingTop: 19 };
-const merged = Object.assign(require("createTextStyle")(Fonts.DISPLAY_EXTRABOLD, require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY, 20));
+const merged = Object.assign(importDefaultResult(Fonts.DISPLAY_EXTRABOLD, ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 20));
 createCacheKey[2] = {};
 let obj1 = {};
-createCacheKey[3] = { paddingTop: require("Themes").space.PX_16 };
-let obj2 = { paddingTop: require("Themes").space.PX_16 };
-createCacheKey[4] = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8 };
-let obj3 = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8 };
-createCacheKey[5] = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_4 };
-let obj4 = { paddingTop: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_4 };
+createCacheKey[3] = { paddingTop: ThemesDefault.space.PX_16 };
+let obj2 = { paddingTop: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+let obj3 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8 };
+createCacheKey[5] = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_4 };
+let obj4 = { paddingTop: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_4 };
 const obj5 = {};
-const merged1 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_SUBTLE, 14));
+const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_SUBTLE, 14));
 createCacheKey[6] = obj5;
-createCacheKey[7] = { paddingTop: require("Themes").space.PX_8, flexDirection: "row" };
-let obj6 = { paddingTop: require("Themes").space.PX_8, flexDirection: "row" };
-createCacheKey[8] = { marginRight: require("Themes").space.PX_8 };
+const importDefaultResult1 = importDefaultResult;
+createCacheKey[7] = { paddingTop: ThemesDefault.space.PX_8, flexDirection: "row" };
+let obj6 = { paddingTop: ThemesDefault.space.PX_8, flexDirection: "row" };
+createCacheKey[8] = { marginRight: ThemesDefault.space.PX_8 };
 createCacheKey[9] = { marginTop: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { marginRight: require("Themes").space.PX_8 };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx");
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { marginRight: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/native/components/event_detail/EventDetailInfoSheet.tsx");
 
 export default function EventDetailInfoSheet(guildEvent) {
-  let dependencyMap;
-  let importDefault;
-  let onLayout;
-  let recurrenceId;
-  let safeBottomPadding;
   guildEvent = guildEvent.guildEvent;
   ({ onCloseActionSheet: importDefault, recurrenceId, onRecurrencePress: dependencyMap } = guildEvent);
   let React;
   let creator;
   let creatorMember;
   ({ safeBottomPadding, onLayout } = guildEvent);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = guildEvent(589);
   let items = [creatorMember];
   React = obj.useStateFromStores(items, () => creatorMember.roleStyle);
-  let obj1 = guildEvent(589);
-  const items1 = [createRTCConnection];
+  obj1 = guildEvent(589);
+  const items1 = [closure_8];
   const items2 = [guildEvent.channel_id];
   const stateFromStores = obj1.useStateFromStores(items1, () => {
-    let isConnectedResult = outer1_8.isConnected();
+    let isConnectedResult = closure_1_8.isConnected();
     if (isConnectedResult) {
-      isConnectedResult = outer1_8.getChannelId() === guildEvent.channel_id;
+      isConnectedResult = closure_1_8.getChannelId() === guildEvent.channel_id;
     }
     return isConnectedResult;
   }, items2);
@@ -76,21 +69,21 @@ export default function EventDetailInfoSheet(guildEvent) {
   const items3 = [, ];
   ({ guild_id: arr4[0], id: arr4[1] } = guildEvent);
   const effect = React.useEffect(() => {
-    const guildEventUserCounts = outer1_1(outer1_2[17]).getGuildEventUserCounts(guildEvent.guild_id, guildEvent.id, []);
-    const obj = outer1_1(outer1_2[17]);
-    const guildEventsForCurrentUser = outer1_1(outer1_2[17]).getGuildEventsForCurrentUser(guildEvent.guild_id);
+    const guildEventUserCounts = closure_1_1(closure_1_2[17]).getGuildEventUserCounts(guildEvent.guild_id, guildEvent.id, []);
+    const obj = closure_1_1(closure_1_2[17]);
+    const guildEventsForCurrentUser = closure_1_1(closure_1_2[17]).getGuildEventsForCurrentUser(guildEvent.guild_id);
   }, items3);
   let obj3 = guildEvent(589);
-  const items4 = [createGuildRecordFromRust];
-  const stateFromStores1 = obj3.useStateFromStores(items4, () => null != outer1_7.getGuild(guildEvent.guild_id));
+  const items4 = [closure_7];
+  const stateFromStores1 = obj3.useStateFromStores(items4, () => null != closure_1_7.getGuild(guildEvent.guild_id));
   let obj4 = guildEvent(589);
-  const items5 = [mergeGuildAvatar, trackCommunicationDisabled];
+  const items5 = [closure_9, closure_6];
   const items6 = [guildEvent];
   const stateFromStoresObject = obj4.useStateFromStoresObject(items5, () => {
     if (null != guildEvent.creator_id) {
       let obj = { creator: null, creatorMember: null };
-      obj[0] = outer1_9.getUser(tmp.creator_id);
-      obj[1] = outer1_6.getMember(tmp.guild_id, tmp.creator_id);
+      obj[0] = closure_1_9.getUser(tmp.creator_id);
+      obj[1] = closure_1_6.getMember(tmp.guild_id, tmp.creator_id);
     } else {
       obj = { creator: null, creatorMember: null };
     }
@@ -113,7 +106,7 @@ export default function EventDetailInfoSheet(guildEvent) {
   const items9 = [callback(guildEvent(10003).BellIcon, { size: "sm", style: tmp.interestedIcon }), ];
   const obj6 = { variant: "text-sm/medium", color: "text-default", children: null };
   const intl = guildEvent(1236).intl;
-  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: useGuildScheduledEventUserCount(guildEvent.guild_id, guildEvent.id, recurrenceId) });
+  obj6[2] = intl.format(guildEvent(1236).t["+DLsD8"], { count: useGuildScheduledEventUserCountDefault(guildEvent.guild_id, guildEvent.id, recurrenceId) });
   items9[1] = callback(guildEvent(4734).Text, obj6);
   obj4[1] = items9;
   items8[4] = callback2(creator, obj4);
@@ -131,7 +124,7 @@ export default function EventDetailInfoSheet(guildEvent) {
     const intl2 = tmp2(1236).intl;
     const obj10 = { usernameHook: null };
     obj10[0] = function usernameHook() {
-      let tmp4 = "dot" === usePrimaryActionButtonType;
+      let tmp4 = "dot" === closure_3;
       if (tmp4) {
         let colorString;
         if (creatorMember != null) {
@@ -142,12 +135,12 @@ export default function EventDetailInfoSheet(guildEvent) {
       if (tmp4) {
         let obj = { size: "small", color: null, colors: null };
         ({ colorString: obj[1], colorStrings: obj[2] } = creatorMember);
-        tmp4 = outer1_12(guildEvent(outer1_2[23]).RoleDot, obj);
+        tmp4 = closure_1_12(guildEvent(closure_1_2[23]).RoleDot, obj);
       }
       const items = [tmp4, ];
       let tmp14;
       if (null != creatorMember) {
-        if ("username" === usePrimaryActionButtonType) {
+        if ("username" === closure_3) {
           if (null != tmp13.colorString) {
             obj = { color: null };
             obj[0] = tmp13.colorString;
@@ -161,14 +154,14 @@ export default function EventDetailInfoSheet(guildEvent) {
         nick = tmp13.nick;
       }
       if (nick == null) {
-        nick = outer1_1(outer1_2[24]).getName(creator);
-        const obj4 = outer1_1(outer1_2[24]);
+        nick = closure_1_1(closure_1_2[24]).getName(creator);
+        const obj4 = closure_1_1(closure_1_2[24]);
       }
-      const obj1 = { children: null };
+      obj1 = { children: null };
       obj[1] = nick;
-      items[1] = outer1_12(guildEvent(outer1_2[23]).LegacyText, obj);
+      items[1] = closure_1_12(guildEvent(closure_1_2[23]).LegacyText, obj);
       obj1[0] = items;
-      return outer1_13(outer1_14, obj1);
+      return closure_1_13(closure_1_14, obj1);
     };
     obj9[2] = intl2.format(tmp2(1236).t["66DLFs"], obj10);
     items10[1] = tmp13(tmp2(4734).Text, obj9);
@@ -196,7 +189,7 @@ export default function EventDetailInfoSheet(guildEvent) {
     callback(guildEvent(8800).GuildEventCardPrimaryAction, {
       event: guildEvent,
       onCloseAction() {
-        outer1_1(outer1_2[14]).hideActionSheet(outer1_11);
+        closure_1_1(closure_1_2[14]).hideActionSheet(closure_1_11);
         if (callback != null) {
           callback();
         }
@@ -234,5 +227,5 @@ export default function EventDetailInfoSheet(guildEvent) {
   return callback2(creator, obj);
 };
 export const closeGuildEventInfoActionSheet = function closeGuildEventInfoActionSheet() {
-  ACTION_SHEET_HEIGHT_HALF.hideActionSheet(closure_11);
+  ACTION_SHEET_HEIGHT_HALFDefault.hideActionSheet(closure_11);
 };

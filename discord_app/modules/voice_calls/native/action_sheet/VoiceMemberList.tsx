@@ -1,34 +1,26 @@
 // discord_app/modules/voice_calls/native/action_sheet/VoiceMemberList.tsx
-import XSMALL from "XSMALL";
-import createdAt from "createdAt";
-import importAllResult from "Form";
-import get_ActivityIndicator from "useIsVoiceChannelFull";
-import participantFromServer from "participantFromServer";
-import closure_10 from "createdAt";
-import reset from "reset";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import ME from "ME";
-import { FORM_ROW_VERTICAL_PADDING } from "semanticColor";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { ThemeTypes } from "sum";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/09992_registerAsset.js";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { Form } from "../../../../design/void/Form/native/index.tsx";
-import { GuildEventVoiceBanner } from "../../../guild_scheduled_events/native/components/GuildEventVoiceBanner.tsx";
+import Text from "Text" /* 4734 */;
+import Form from "Form" /* 8083 */;
+import registerAssetDefault from "registerAsset" /* 9992 */;
+import _modDef12659 from "module_12659" /* 12659 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "asyncGeneratorStep" /* 5 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_9 from "participantFromServer" /* 1390 */;
+import closure_10 from "createdAt" /* 1930 */;
+import closure_11 from "reset" /* 4652 */;
+import closure_12 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_13 from "mergeGuildAvatar" /* 1922 */;
+import closure_14 from "getVoiceStatesForGuild" /* 4545 */;
+import ME from "ME" /* 676 */;
+import { FORM_ROW_VERTICAL_PADDING } from "semanticColor" /* 1301 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { ThemeTypes } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_21;
-let closure_22;
-let closure_23;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function ItemSeparator() {
   const tmp = callback4();
   return callback2(Form.FormDivider, { style: callback4().rowFormDivider });
@@ -36,8 +28,7 @@ function ItemSeparator() {
 function VoiceMemberListSectionHeader(title) {
   const tmp = callback4();
   let obj = { style: tmp.sectionContainer, children: null };
-  obj = { style: tmp.sectionTitle, variant: "text-xs/bold", color: "text-default", children: null };
-  obj[3] = title.title.toUpperCase();
+  obj = { style: tmp.sectionTitle, variant: "text-xs/bold", color: "text-default", children: title.title.toUpperCase() };
   obj[1] = callback2(Text.Text, obj);
   return callback2(closure_8, obj);
 }
@@ -65,12 +56,8 @@ function extractKey(id) {
   return id;
 }
 function VoiceSectionRow(arg0) {
-  let channelId;
-  let isActionSheet;
-  let item;
-  let onPressUser;
   ({ item, isActionSheet } = arg0);
-  let importDefault;
+  importDefault = undefined;
   let analyticsLocations;
   ({ channelId, onPressUser } = arg0);
   let obj = isActionSheet(_onItemPress[26]);
@@ -79,12 +66,12 @@ function VoiceSectionRow(arg0) {
   if (tmp3) {
     _onItemPress = function _onItemPress() {
       const self = this;
-      const tmp = outer1_5((arg0, arg1, arg2) => {
-        let closure_0 = arg0;
-        let closure_1 = arg1;
-        let closure_2 = arg2;
-        let c5 = 0;
-        let c6 = 0;
+      const tmp = closure_1_5((arg0, arg1, arg2) => {
+        closure_0 = arg0;
+        closure_1 = arg1;
+        closure_2 = arg2;
+        c5 = 0;
+        c6 = 0;
         return (function*(arg0, arg1, arg2) {
           if (c6 === 2) {
             c6 = 3;
@@ -112,8 +99,8 @@ function VoiceSectionRow(arg0) {
                   obj[0] = arg1;
                   return obj;
                 } else {
-                  let XSMALL = tmp2;
-                  let closure_3 = tmp5;
+                  closure_4 = tmp2;
+                  closure_3 = tmp5;
                   let tmp13 = null != callback;
                   if (tmp13) {
                     tmp13 = null != lib;
@@ -122,11 +109,11 @@ function VoiceSectionRow(arg0) {
                     tmp13 = null != tmp30;
                   }
                   if (tmp13) {
-                    let obj2 = callback2(outer1_3[28]);
+                    let obj2 = callback2(closure_1_3[28]);
                     const result = obj2.dismissGlobalKeyboard();
-                    let obj3 = lib(outer1_3[29]);
+                    let obj3 = lib(closure_1_3[29]);
                     const voiceChannel = obj3.selectVoiceChannel(tmp29.id);
-                    const obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null };
+                    obj1 = { applicationId: null, activityChannelId: null, locationObject: null, analyticsLocations: null };
                     obj1[0] = tmp30.applicationId;
                     obj1[1] = tmp29.id;
                     obj1[2] = lib.location;
@@ -134,7 +121,7 @@ function VoiceSectionRow(arg0) {
                     c5 = 1;
                     c6 = 1;
                     obj2 = { value: null, done: false };
-                    obj2[0] = lib(outer1_3[30])(obj1);
+                    obj2[0] = lib(closure_1_3[30])(obj1);
                     return obj2;
                   } else {
                     c6 = 3;
@@ -145,7 +132,7 @@ function VoiceSectionRow(arg0) {
                 throw arg1;
               } else if (arg0 !== 2) {
                 if (callback) {
-                  obj = callback(outer1_3[31]);
+                  obj = callback(closure_1_3[31]);
                   const result1 = obj.hideVoiceChannelActionSheet(callback);
                 }
               }
@@ -160,7 +147,7 @@ function VoiceSectionRow(arg0) {
           }
         })();
       });
-      const _onItemPress = tmp;
+      closure_3 = tmp;
       const apply = tmp.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -193,11 +180,11 @@ function VoiceSectionRow(arg0) {
   }
   tmp3 = undefined !== item.url && undefined !== item.applicationId;
 }
-({ SectionList: error, View: metroImportAll } = get_ActivityIndicator);
+({ SectionList: error, View: closure_8 } = get_ActivityIndicator);
 ({ AnalyticsPages: closure_15, InstantInviteSources: closure_16, Permissions: closure_17 } = ME);
 ({ jsx: closure_21, jsxs: closure_22, Fragment: closure_23 } = jsxProd);
 let closure_24 = createCacheKey.createStyles({ container: { flex: 1, flexShrink: 1 }, sectionContainer: { paddingTop: 16, paddingHorizontal: 16 }, sectionTitle: { lineHeight: 16 }, voiceChannelContainer: { overflow: "hidden", flexGrow: 1, flexShrink: 1, minHeight: 1 }, headerFormDivider: { marginLeft: 0 }, rowFormDivider: { marginHorizontal: 16 } });
-let closure_25 = importAllResult.memo((channel) => callback2(GuildEventVoiceBanner, { channel: channel.channel }));
+let closure_25 = importAllResult.memo((channel) => callback2(_modDef12659, { channel: channel.channel }));
 let closure_26 = importAllResult.memo((channel) => {
   channel = channel.channel;
   channel(589);
@@ -212,7 +199,7 @@ let closure_26 = importAllResult.memo((channel) => {
       obj = { accessibilityLabel: null, accessibilityHidden: true, source: null, size: null };
       const intl = tmp4(1236).intl;
       obj[0] = intl.string(tmp4(1236).t["6Qgrev"]);
-      obj[2] = registerAsset;
+      obj[2] = registerAssetDefault;
       obj[3] = tmp4(12664).CircularIconButton.Sizes.MEDIUM_32;
       obj[0] = callback2(tmp4(12664).CircularIconButton, obj);
       const intl2 = tmp4(1236).intl;
@@ -220,11 +207,11 @@ let closure_26 = importAllResult.memo((channel) => {
       obj[2] = function onPress() {
         if (channel.isPrivate()) {
           let tmp2Result = tmp2(tmp3[23]);
-          tmp2Result.navigateToNewGroupDM(tmp.id, outer1_15.CHANNEL_CALL);
+          tmp2Result.navigateToNewGroupDM(tmp.id, closure_1_15.CHANNEL_CALL);
         } else {
           tmp2Result = tmp2(tmp3[24]);
           const obj = { source: null };
-          obj[0] = outer1_16.VOICE_CHANNEL;
+          obj[0] = closure_1_16.VOICE_CHANNEL;
           const result = tmp2Result.showInstantInviteActionSheet(tmp, obj);
         }
       };
@@ -237,8 +224,6 @@ let closure_26 = importAllResult.memo((channel) => {
 });
 let closure_30 = { VOICE: 0, [0]: "VOICE", SPECTATING: 1, [1]: "SPECTATING", DISCONNECTED: 2, [2]: "DISCONNECTED" };
 const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(channel) {
-  let arr10;
-  let arr11;
   channel = channel.channel;
   let flag = channel.isActionSheet;
   if (flag === undefined) {
@@ -249,30 +234,30 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
     flag2 = false;
   }
   let merged = Object.assign(channel, Object.create(null));
-  let c2;
+  closure_2 = undefined;
   let analyticsLocations;
   let callback;
-  let c5;
+  closure_5 = undefined;
   let stateFromStoresArray;
   let set;
   let items5;
   callback = undefined;
   let callback1;
   const tmp2 = callback4();
-  c2 = tmp2;
+  closure_2 = tmp2;
   analyticsLocations = flag(analyticsLocations[27])().analyticsLocations;
   callback = Math.min(flag(analyticsLocations[34])().width, ACTION_SHEET_MAX_WIDTH);
   let obj = channel(analyticsLocations[18]);
-  let items = [getVoiceStatesForGuild];
+  let items = [closure_14];
   const items1 = [channel];
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_14.getVoiceStatesForChannel(channel), items1);
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_14.getVoiceStatesForChannel(channel), items1);
   const tmp6 = flag(analyticsLocations[35])(channel);
-  c5 = tmp6;
-  let obj1 = channel(analyticsLocations[18]);
-  const items2 = [reset];
+  closure_5 = tmp6;
+  obj1 = channel(analyticsLocations[18]);
+  const items2 = [closure_11];
   stateFromStoresArray = obj1.useStateFromStoresArray(items2, () => {
-    if (null != c5) {
-      let viewerIds = outer1_11.getViewerIds(tmp);
+    if (null != closure_5) {
+      let viewerIds = closure_1_11.getViewerIds(tmp);
     } else {
       viewerIds = [];
     }
@@ -289,7 +274,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
   if (channel.isPrivate()) {
     const recipients = channel.recipients;
     let reduced = recipients.reduce((arr) => {
-      const user = outer1_13.getUser(arg1);
+      const user = closure_1_13.getUser(arg1);
       let hasItem = null == user;
       if (!hasItem) {
         hasItem = set.has(user.id);
@@ -306,7 +291,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
   if (null != tmp6) {
     if (null != stateFromStoresArray) {
       if (isModalOpen) {
-        const found = stateFromStores.find((user) => user.user.id === _undefined2.ownerId);
+        const found = stateFromStores.find((user) => user.user.id === ownerId.ownerId);
         let str;
         if (found != null) {
           str = found.nick;
@@ -355,7 +340,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
       callback1 = stateFromStoresArray.useCallback((item) => {
         item = item.item;
         const type = item.section.type;
-        if (outer1_30.VOICE === type) {
+        if (closure_1_30.VOICE === type) {
           let tmp18 = null;
           if (!(item instanceof callback1)) {
             let obj = { item: null, channelId: null, onPressUser: null, isActionSheet: null };
@@ -363,7 +348,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
             obj[1] = channel.id;
             obj[2] = callback;
             obj[3] = flag;
-            tmp18 = outer1_21(outer1_32, obj);
+            tmp18 = closure_1_21(closure_1_32, obj);
           }
           return tmp18;
         } else if (tmp.SPECTATING === type) {
@@ -372,14 +357,14 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
           obj.onPress = callback;
           obj.isSpectating = true;
           obj.isActionSheet = true;
-          return outer1_21(true(analyticsLocations[33]), obj);
+          return closure_1_21(true(analyticsLocations[33]), obj);
         } else if (tmp.DISCONNECTED === type) {
           obj = { user: null, channel: null, isActionSheet: null, onPress: null };
           obj[0] = item;
           obj[1] = channel;
           obj[2] = flag;
           obj[3] = callback;
-          return outer1_21(channel(analyticsLocations[33]).DisconnectedUserRow, obj);
+          return closure_1_21(channel(analyticsLocations[33]).DisconnectedUserRow, obj);
         }
       }, items7);
       if (flag) {
@@ -407,10 +392,10 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
             obj = { children: null };
             const items = [callback1(obj), ];
             obj = { style: null };
-            obj[0] = _undefined.rowFormDivider;
-            items[1] = outer1_21(channel(analyticsLocations[19]).FormDivider, obj);
+            obj[0] = rowFormDivider.rowFormDivider;
+            items[1] = closure_1_21(channel(analyticsLocations[19]).FormDivider, obj);
             obj[0] = items;
-            return outer1_22(outer1_23, obj);
+            return closure_1_22(closure_1_23, obj);
           }
         };
         obj7.itemSize = function getRowHeight(arg0, arg1) {
@@ -421,8 +406,8 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
           } else {
             let tmp4 = channel;
             let calculateActivityRowHeight = analyticsLocations;
-            const diff = XSMALL - 2 * channel(analyticsLocations[33]).STREAM_PREVIEW_MARGIN;
-            const sum = outer1_18 + 32;
+            const diff = closure_4 - 2 * channel(analyticsLocations[33]).STREAM_PREVIEW_MARGIN;
+            const sum = closure_1_18 + 32;
             if (tmp8 instanceof callback1) {
               return sum;
             } else {
@@ -443,7 +428,7 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
               }
               tmp = undefined !== tmp8.url && undefined !== tmp8.applicationId;
             }
-            tmp9 = XSMALL;
+            tmp9 = closure_4;
           }
         };
         obj7.sections = items5.map((data) => data.data.length);
@@ -484,6 +469,6 @@ const forwardRefResult = importAllResult.forwardRef(function VoiceMemberList(cha
     items5.push(obj12);
   }
 });
-let result = require("noop").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberList.tsx");
+let result = require("set").fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberList.tsx");
 
 export default forwardRefResult;

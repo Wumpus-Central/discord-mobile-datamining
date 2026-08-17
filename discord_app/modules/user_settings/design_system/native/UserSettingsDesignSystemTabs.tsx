@@ -1,31 +1,26 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemTabs.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, ScrollView: closure_6 } = get_ActivityIndicator);
-({ jsxs: error, jsx: metroImportAll } = jsxProd);
+({ jsxs: error, jsx: closure_8 } = jsxProd);
 createCacheKey = { container: { margin: 16, flex: 1, alignItems: "center" }, item: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: require("Themes").colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: ThemesDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 };
 createCacheKey[1] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTabs.tsx");
+let closure_9 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemTabs.tsx");
 
 export default function UserSettingsDesignSystemTabs() {
-  let tmp7;
-  let tmp8;
   const tmp = callback(React.useState(0), 2);
   let first = tmp[1];
   let tmp2 = callback(React.useState(3), 2);
   first = tmp2[0];
-  let dependencyMap = tmp2[1];
+  dependencyMap = tmp2[1];
   let tmp4 = callback(React.useState(true), 2);
   const first1 = tmp4[0];
   [tmp7, tmp8] = callback(React.useState(false), 2);
@@ -34,7 +29,7 @@ export default function UserSettingsDesignSystemTabs() {
   first = tmp7;
   dependencyMap = undefined;
   let tmp6 = callback(React.useState(false), 2);
-  const tmp12 = createCacheKey();
+  const tmp12 = callback3();
   dependencyMap = tmp12;
   let items = [first, tmp12.item, tmp7];
   const memo = React.useMemo(() => {
@@ -57,19 +52,19 @@ export default function UserSettingsDesignSystemTabs() {
         obj[1] = rounded;
         let _HermesInternal2 = HermesInternal;
         obj[2] = "item-" + sum;
-        let tmp4 = outer1_8;
-        let tmp5 = outer1_5;
+        let tmp4 = closure_1_8;
+        let tmp5 = closure_1_5;
         obj = { style: null, children: null };
-        let tmp6 = _undefined;
-        obj[0] = _undefined.item;
-        let tmp7 = outer1_7;
+        let tmp6 = lib;
+        obj[0] = lib.item;
+        let tmp7 = closure_1_7;
         let tmp8 = first;
-        let tmp9 = _undefined;
+        let tmp9 = lib;
         obj = { variant: "heading-xxl/bold", children: null };
         let items1 = ["Item ", sum];
         obj[1] = items1;
-        obj[1] = outer1_7(first(_undefined[6]).Text, obj);
-        obj[3] = outer1_8(outer1_5, obj);
+        obj[1] = closure_1_7(first(lib[6]).Text, obj);
+        obj[3] = closure_1_8(closure_1_5, obj);
         let arr = items.push(obj);
         let tmp11 = first;
         num = sum;
@@ -82,12 +77,12 @@ export default function UserSettingsDesignSystemTabs() {
   callback = React.useCallback((nativeEvent) => {
     first(nativeEvent.nativeEvent.layout.width);
   }, []);
-  let obj1 = first(4097);
+  obj1 = first(4097);
   const token = obj1.useToken(first(712).colors.BACKGROUND_BASE_LOW);
   let items1 = [token, ];
   let obj2 = first(4223);
   items1[1] = obj2.hexWithOpacity(token, 0);
-  obj = { style: createCacheKey().container, onLayout: callback, children: null };
+  obj = { style: callback3().container, onLayout: callback, children: null };
   const items2 = [callback2(first(11783).Tabs, { state: segmentedControlState, grow: first1 }), ];
   let tmp20Result = first2;
   if (first2) {
@@ -108,7 +103,7 @@ export default function UserSettingsDesignSystemTabs() {
       size: "sm",
       disabled: first >= 10,
       onPress() {
-        return _undefined(first + 1);
+        return lib(first + 1);
       }
     }),
     callback2(first(4745).Button, {
@@ -117,7 +112,7 @@ export default function UserSettingsDesignSystemTabs() {
       size: "sm",
       disabled: 2 === first,
       onPress() {
-        return _undefined(first - 1);
+        return lib(first - 1);
       }
     })
   ];

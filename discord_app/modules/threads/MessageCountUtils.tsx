@@ -1,16 +1,15 @@
 // discord_app/modules/threads/MessageCountUtils.tsx
-import AbortCodes from "AbortCodes";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import set from "set" /* 2 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import AbortCodes from "AbortCodes" /* 1235 */;
 
-let c3;
-let c4;
 function _formatMessageCountLabel(count, iTS3Xe, id) {
   let str = "0";
   if (null != count) {
     str = "0";
     if (count >= 0) {
-      DISCORD_EPOCH;
+      DISCORD_EPOCHDefault;
       if (null == id) {
         let str3 = "50+";
         str = str3;
@@ -35,15 +34,15 @@ function _formatMessageCountLabel(count, iTS3Xe, id) {
   return stringResult;
 }
 ({ MAX_THREAD_MESSAGE_COUNT: c3, MAX_THREAD_MESSAGE_COUNT_OLD: c4 } = AbortCodes);
-const result = require("getSystemLocale").fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
+const result = set.fileFinishedImporting("modules/threads/MessageCountUtils.tsx");
 
 export const shouldUseOldMaxMessageCount = function shouldUseOldMaxMessageCount(arg0) {
-  return DISCORD_EPOCH.compare("992549565104128000", arg0) > -1;
+  return DISCORD_EPOCHDefault.compare("992549565104128000", arg0) > -1;
 };
 export const getMessageCountText = function getMessageCountText(stateFromStores, id) {
   if (null != stateFromStores) {
     if (stateFromStores >= 0) {
-      DISCORD_EPOCH;
+      DISCORD_EPOCHDefault;
       if (null == id) {
         let str = "50+";
         return str;

@@ -1,20 +1,18 @@
 // discord_app/modules/gateway/LocalVoiceStateManager.tsx
-import initialize from "initialize";
-import reset from "reset";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import closure_6 from "initialize";
-import ME from "ME";
-import "shouldCommit";
-import { hasFlag } from "../../../discord_common/js/shared/utils/FlagUtils.tsx";
-import { isClipsEnabled } from "../clips/isClipsEnabled.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import hasFlag from "hasFlag" /* 1403 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import isClipsEnabled from "isClipsEnabled" /* 4526 */;
+import shouldCommitDefault from "shouldCommit" /* 13228 */;
+import closure_2 from "initialize" /* 4504 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_6 from "initialize" /* 4565 */;
+import ME from "ME" /* 676 */;
 
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
-({ ApplicationStreamStates: error, ChannelTypes: metroImportAll, VoiceFlags: c9 } = ME);
+require = arg1;
+({ ApplicationStreamStates: error, ChannelTypes: closure_8, VoiceFlags: c9 } = ME);
+shouldCommitDefault;
 class LocalVoiceStateManager extends tmp3 {
   constructor(arg0) {
     tmp = new LocalVoiceStateManager(new.target);
@@ -78,24 +76,16 @@ prototype["computeVoiceFlags"] = function computeVoiceFlags() {
   return tmpResult.setFlag(setFlagResult, tmp4.CLIPS_ENABLED, isClipsEnabledResult);
 };
 prototype["getInitialState"] = function getInitialState() {
-  return { guildId: null, channelId: null, selfMute: _detectH265HardwareDecode.isSelfMute(), selfDeaf: _detectH265HardwareDecode.isSelfDeaf(), selfVideo: _detectH265HardwareDecode.isVideoEnabled(), preferredRegion: null, preferredRegions: null, videoStreamParameters: null, flags: 0 };
+  return { guildId: null, channelId: null, selfMute: closure_5.isSelfMute(), selfDeaf: closure_5.isSelfDeaf(), selfVideo: closure_5.isVideoEnabled(), preferredRegion: null, preferredRegions: null, videoStreamParameters: null, flags: 0 };
 };
 prototype["getNextState"] = function getNextState(guildId) {
-  return { guildId: guildId.guildId, channelId: guildId.channelId, selfMute: _detectH265HardwareDecode.isSelfMute(), selfDeaf: _detectH265HardwareDecode.isSelfDeaf(), selfVideo: _detectH265HardwareDecode.isVideoEnabled(), preferredRegion: store.getPreferredRegion(), preferredRegions: store.getPreferredRegions(), videoStreamParameters: _detectH265HardwareDecode.getVideoStreamParameters(), flags: this.computeVoiceFlags() };
+  return { guildId: guildId.guildId, channelId: guildId.channelId, selfMute: closure_5.isSelfMute(), selfDeaf: closure_5.isSelfDeaf(), selfVideo: closure_5.isVideoEnabled(), preferredRegion: store.getPreferredRegion(), preferredRegions: store.getPreferredRegions(), videoStreamParameters: closure_5.getVideoStreamParameters(), flags: this.computeVoiceFlags() };
 };
 prototype["shouldCommit"] = function shouldCommit() {
   const socket = this.socket;
   return socket.isSessionEstablished();
 };
 prototype["didCommit"] = function didCommit(state) {
-  let channelId;
-  let flags;
-  let guildId;
-  let preferredRegion;
-  let preferredRegions;
-  let selfDeaf;
-  let selfMute;
-  let selfVideo;
   ({ guildId, channelId, selfMute, selfDeaf, selfVideo, preferredRegion, preferredRegions, flags } = state);
   if (flags === undefined) {
     flags = 0;
@@ -125,6 +115,6 @@ prototype["didCommit"] = function didCommit(state) {
   const socket = self.socket;
   socket.voiceStateUpdate({ guildId, channelId, selfMute, selfDeaf, selfVideo, preferredRegion, preferredRegions, flags });
 };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/gateway/LocalVoiceStateManager.tsx");
+let result = require("set").fileFinishedImporting("modules/gateway/LocalVoiceStateManager.tsx");
 
 export default LocalVoiceStateManager;

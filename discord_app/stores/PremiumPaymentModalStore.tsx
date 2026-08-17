@@ -1,17 +1,19 @@
 // discord_app/stores/PremiumPaymentModalStore.tsx
-import { Store } from "initialize";
-import { V6OrEarlierAPIError } from "../errors/index.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 4273 */;
 
-const require = arg1;
+require = arg1;
 function handleSubscribeFailure(error) {
   error = error.error;
 }
 function handleClearError() {
-  let c2 = null;
+  c2 = null;
 }
 let c2 = null;
 let c3 = null;
 let c4 = null;
+const Store = initializeDefault.Store;
 class PremiumPaymentModalStore extends Store {
 }
 const prototype = PremiumPaymentModalStore.prototype;
@@ -29,11 +31,11 @@ prototype["getGiftCode"] = function getGiftCode(arg0) {
   return tmp;
 };
 PremiumPaymentModalStore.displayName = "PremiumPaymentModalStore";
-const premiumPaymentModalStore = new PremiumPaymentModalStore(require("dispatcher"), {
+const premiumPaymentModalStore = new PremiumPaymentModalStore(dispatcherDefault, {
   PREMIUM_PAYMENT_SUBSCRIBE_FAIL: handleSubscribeFailure,
   PREMIUM_PAYMENT_UPDATE_FAIL: handleSubscribeFailure,
   PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: function handleSubscribeSuccess() {
-    let c2 = null;
+    c2 = null;
   },
   PREMIUM_PAYMENT_UPDATE_SUCCESS: handleClearError,
   PREMIUM_PAYMENT_ERROR_CLEAR: handleClearError,
@@ -44,8 +46,6 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(require("dispatche
     const billingError = new V6OrEarlierAPIError.BillingError(message.message);
   },
   SKU_PURCHASE_SUCCESS: function handleSKUPurchaseSuccess(arg0) {
-    let c3;
-    let c4;
     ({ giftCode: c3, skuId: c4 } = arg0);
   },
   SKU_PURCHASE_FAIL: function handleSKUPurchaseFail(error) {
@@ -66,6 +66,6 @@ const premiumPaymentModalStore = new PremiumPaymentModalStore(require("dispatche
     return false;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
+const result = require("set").fileFinishedImporting("stores/PremiumPaymentModalStore.tsx");
 
 export default premiumPaymentModalStore;

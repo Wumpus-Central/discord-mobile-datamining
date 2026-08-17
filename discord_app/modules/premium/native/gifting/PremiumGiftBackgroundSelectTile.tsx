@@ -1,42 +1,44 @@
 // discord_app/modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx
-import "set";
-import get_ActivityIndicator from "messagesProxy";
-import { PremiumGiftStyles } from "GuildFeatures";
-import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { preload } from "../../../../components_native/common/FastImage.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { messagesProxy } from "../../gifting/PremiumGifting.messages.js";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import messagesProxyDefault from "messagesProxy" /* 2399 */;
+import preloadDefault from "preload" /* 5449 */;
+import registerAssetDefault from "registerAsset" /* 11975 */;
+import registerAssetDefault2 from "registerAsset" /* 11976 */;
+import registerAssetDefault3 from "registerAsset" /* 11977 */;
+import registerAssetDefault4 from "registerAsset" /* 11978 */;
+import metadataDefault from "metadata" /* 11979 */;
+import metadataDefault2 from "metadata" /* 11980 */;
+import metadataDefault3 from "metadata" /* 11981 */;
+import metadataDefault4 from "metadata" /* 11982 */;
+import metadataDefault5 from "metadata" /* 11983 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { PremiumGiftStyles } from "GuildFeatures" /* 1924 */;
+import { GIFT_STYLE_DESCRIPTIONS } from "GIFT_STYLE_DESCRIPTIONS" /* 11974 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let CAKE;
-let CHEST;
-let COFFEE;
-let STANDARD_BOX;
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, Pressable: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
-let obj = { [STANDARD_BOX]: require("registerAsset"), [CAKE]: require("registerAsset"), [CHEST]: require("registerAsset"), [COFFEE]: require("registerAsset") };
+let obj = { [STANDARD_BOX]: registerAssetDefault, [CAKE]: registerAssetDefault2, [CHEST]: registerAssetDefault3, [COFFEE]: registerAssetDefault4 };
 ({ STANDARD_BOX, CAKE, CHEST, COFFEE } = PremiumGiftStyles);
-obj = { uri: require("metadata") };
+obj = { uri: metadataDefault };
 obj[PremiumGiftStyles.NITROWEEN_STANDARD] = obj;
 obj[PremiumGiftStyles.SNOWGLOBE] = null;
 obj[PremiumGiftStyles.BOX] = null;
 obj[PremiumGiftStyles.CUP] = null;
-obj = { uri: require("metadata") };
+obj = { uri: metadataDefault2 };
 obj[PremiumGiftStyles.SEASONAL_CAKE] = obj;
-obj[PremiumGiftStyles.SEASONAL_CHEST] = { uri: require("metadata") };
-let obj1 = { uri: require("metadata") };
-obj[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: require("metadata") };
-const obj2 = { uri: require("metadata") };
-obj[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: require("metadata") };
+obj[PremiumGiftStyles.SEASONAL_CHEST] = { uri: metadataDefault3 };
+let obj1 = { uri: metadataDefault3 };
+obj[PremiumGiftStyles.SEASONAL_COFFEE] = { uri: metadataDefault4 };
+const obj2 = { uri: metadataDefault4 };
+obj[PremiumGiftStyles.SEASONAL_STANDARD_BOX] = { uri: metadataDefault5 };
 let closure_9 = createCacheKey.createStyles((arg0) => {
-  let obj = { width: 78, height: 44, justifyContent: "center", marginEnd: Themes.space.PX_8, marginStart: null };
+  obj = { width: 78, height: 44, justifyContent: "center", marginEnd: ThemesDefault.space.PX_8, marginStart: null };
   let num = 0;
   if (0 === arg0) {
     num = 20;
@@ -48,12 +50,10 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   obj[2] = { width: 72, height: 38, alignSelf: "center" };
   return obj;
 });
-const obj3 = { uri: require("metadata") };
-const result = require("GuildFeatures").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
+const obj3 = { uri: metadataDefault5 };
+const result = require("set").fileFinishedImporting("modules/premium/native/gifting/PremiumGiftBackgroundSelectTile.tsx");
 
 export default function GiftBackgroundSelectTile(index) {
-  let giftStyle;
-  let selected;
   ({ selected, giftStyle } = index);
   const tmp = callback2(index.index);
   let tmp4Result = null;
@@ -63,7 +63,7 @@ export default function GiftBackgroundSelectTile(index) {
     obj = { giftStyle: null };
     const intl2 = getSystemLocale.intl;
     obj[0] = intl2.string(GIFT_STYLE_DESCRIPTIONS[giftStyle]);
-    obj[0] = intl.formatToPlainString(messagesProxy["+utqaz"], obj);
+    obj[0] = intl.formatToPlainString(messagesProxyDefault["+utqaz"], obj);
     obj[1] = selected;
     obj[2] = tmp.container;
     obj[3] = index.onPress;
@@ -73,10 +73,10 @@ export default function GiftBackgroundSelectTile(index) {
       selected = callback(closure_3, obj);
     }
     const items = [selected, ];
-    const obj1 = { resizeMode: "contain", style: null, source: null };
+    obj1 = { resizeMode: "contain", style: null, source: null };
     obj1[1] = tmp.image;
     obj1[2] = tmp2;
-    items[1] = callback(preload, obj1);
+    items[1] = callback(preloadDefault, obj1);
     obj[4] = items;
     tmp4Result = closure_7(closure_4, obj);
     const tmp4 = closure_7;

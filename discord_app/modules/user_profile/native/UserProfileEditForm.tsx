@@ -1,29 +1,17 @@
 // discord_app/modules/user_profile/native/UserProfileEditForm.tsx
-import setPendingChanges from "setPendingChanges";
-import get_ActivityIndicator from "asyncRequireImpl";
-import initialize from "initialize";
-import zustandStore from "zustandStore";
-import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET";
-import ME from "ME";
-import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES";
-import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement";
-import jsxProd from "getSystemLocale";
+import registerAssetDefault from "registerAsset" /* 14004 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "initialize" /* 8936 */;
+import closure_7 from "zustandStore" /* 9537 */;
+import { FLOATING_UPSELL_HEIGHT } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import ME from "ME" /* 676 */;
+import { ProfileCustomizationScrollPositions as closure_11 } from "MAX_FAVORITES" /* 685 */;
+import { UserProfileEditAutoFocusElement as closure_12 } from "UserProfileEditAutoFocusElement" /* 14003 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_14;
-let map1;
 const require = arg1;
 function EditUserProfileBanner(user) {
-  let disabled;
-  let isTryItOut;
-  let pendingAccentColor;
-  let pendingAvatarSrc;
-  let pendingBanner;
-  let pendingThemeColors;
-  let tryItOutBanner;
   user = user.user;
   const displayProfile = user.displayProfile;
   ({ pendingBanner, tryItOutBanner, isTryItOut } = user);
@@ -49,13 +37,13 @@ function EditUserProfileBanner(user) {
   obj[6] = 12;
   obj[7] = canUseCollectiblesResult;
   obj[8] = function onPressEdit() {
-    let obj = displayProfile(isTryItOut[15]);
+    obj = displayProfile(isTryItOut[15]);
     obj = { user, analyticsLocations, onBannerChange: null, showRemoveBanner: null, isTryItOut: null };
     if (isTryItOut) {
       let fn = tmp2(tmp[18]).setTryItOutBanner;
     } else {
       fn = (banner) => {
-        let obj = callback(table[19]);
+        obj = callback(table[19]);
         obj = { banner };
         return obj.setPendingChanges(obj);
       };
@@ -80,40 +68,10 @@ function EditUserProfileBanner(user) {
 ({ ScrollView: c4, View: c5 } = get_ActivityIndicator);
 ({ DISPLAY_NAME_MAX_LENGTH: c9, PRONOUNS_MAX_LENGTH: c10 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: require("registerAsset"), staticImageUri: require("registerAsset"), description: "", originalAsset: "accessibilityRole" };
-let result = require("initialize").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
+let obj = { assetOrigin: require("AssetOriginTypes").AssetOriginTypes.NEW_ASSET, imageUri: registerAssetDefault, staticImageUri: registerAssetDefault, description: "", originalAsset: "accessibilityRole" };
+let result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEditForm.tsx");
 
 export default function UserProfileEditForm(currentUser) {
-  let autoFocusElement;
-  let containerBackground;
-  let errors;
-  let gradientFallbackBackground;
-  let gradientSecondaryBackground;
-  let isSubmitting;
-  let isTryItOut;
-  let pendingAccentColor;
-  let pendingAvatar;
-  let pendingAvatarDecoration;
-  let pendingBadgeDisplayOrder;
-  let pendingBanner;
-  let pendingBio;
-  let pendingDisplayNameStyles;
-  let pendingGlobalName;
-  let pendingLegacyUsernameDisabled;
-  let pendingNameplate;
-  let pendingPrimaryGuildId;
-  let pendingProfileEffect;
-  let pendingProfileFrame;
-  let pendingPronouns;
-  let pendingThemeColors;
-  let primaryColor;
-  let secondaryColor;
-  let theme;
-  let tryItOutAvatarDecoration;
-  let tryItOutBanner;
-  let tryItOutDisplayNameStyles;
-  let tryItOutProfileEffect;
-  let tryItOutThemeColors;
   const str = currentUser.currentUser;
   ({ autoFocusElement, isTryItOut } = currentUser);
   if (isTryItOut === undefined) {
@@ -125,13 +83,13 @@ export default function UserProfileEditForm(currentUser) {
   let isBadgeManagementEnabled;
   let stateFromStores;
   let stateFromStoresArray;
-  let zustandStore;
+  closure_7 = undefined;
   const tmp3 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[22])();
   const tmp4 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[23])();
-  let obj = str(pendingBadgeHiddenBadges[24]);
+  obj = str(pendingBadgeHiddenBadges[24]);
   const bioMaxLength = obj.useBioMaxLength({ location: "user_profile_edit_form" });
   const tmp7 = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[25])();
-  let obj1 = arr2;
+  obj1 = arr2;
   const ref = arr2.useRef(null);
   const ref1 = arr2.useRef(null);
   const ref2 = arr2.useRef(null);
@@ -141,8 +99,7 @@ export default function UserProfileEditForm(currentUser) {
   obj = { insets, inputs: null, scrollViewRef: null };
   const items = [{ ref: ref1, offset: { type: "toRef", ref: ref2, extraOffset: PX_16 } }, { ref: ref2, offset: { type: "toRef", ref: ref3, extraOffset: PX_16 } }, ];
   obj = { ref: ref3, offset: null };
-  obj1 = { type: "toValue", value: null };
-  obj1[1] = pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[27]).space.PX_64;
+  obj1 = { type: "toValue", value: pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[27]).space.PX_64 };
   obj[1] = obj1;
   items[2] = obj;
   obj[1] = items;
@@ -169,7 +126,7 @@ export default function UserProfileEditForm(currentUser) {
   arr2 = tmp(tmp2[36])(tmp16Result, pendingLegacyUsernameDisabled);
   const items1 = [arr2, pendingBadgeDisplayOrder, pendingBadgeHiddenBadges];
   const memo = obj1.useMemo(() => {
-    let obj = str(pendingBadgeHiddenBadges[37]);
+    obj = str(pendingBadgeHiddenBadges[37]);
     obj = { pendingBadgeDisplayOrder, pendingBadgeHiddenBadges };
     return obj.applyPendingBadgeSettingsToProfileBadges(arr2, obj);
   }, items1);
@@ -189,7 +146,7 @@ export default function UserProfileEditForm(currentUser) {
         const badgeDirectory = str(pendingBadgeHiddenBadges[40]).fetchBadgeDirectory(tmp.id);
         const obj2 = str(pendingBadgeHiddenBadges[40]);
       }
-      const obj = stateFromStoresArray;
+      obj = stateFromStoresArray;
       tmp2 = stateFromStoresArray.hasCatalogFor(str.id) && !stateFromStoresArray.isCatalogStaleFor(str.id);
     }
   }, items4);
@@ -197,7 +154,7 @@ export default function UserProfileEditForm(currentUser) {
   const memo1 = obj1.useMemo(() => {
     let found = null;
     if (stateFromStores) {
-      let obj = str(pendingBadgeHiddenBadges[37]);
+      obj = str(pendingBadgeHiddenBadges[37]);
       obj = { pendingBadgeDisplayOrder: null, pendingBadgeHiddenBadges: null };
       obj[0] = pendingBadgeDisplayOrder;
       obj[1] = pendingBadgeHiddenBadges;
@@ -296,8 +253,8 @@ export default function UserProfileEditForm(currentUser) {
       stringResult = intl.string(tmp5(tmp2[21]).t["84MExs"]);
     }
   }
-  const field = zustandStore.useField("scrollPosition");
-  zustandStore = tmp(tmp2[43])(ref, field);
+  const field = closure_7.useField("scrollPosition");
+  closure_7 = tmp(tmp2[43])(ref, field);
   obj5 = { theme, primaryColor, secondaryColor, children: null };
   const obj6 = { style: items6, children: null };
   items6 = [tmp4.container, { backgroundColor: gradientSecondaryBackground }];
@@ -361,7 +318,7 @@ export default function UserProfileEditForm(currentUser) {
   obj18[3] = pendingGlobalName;
   obj18[4] = onFocus;
   obj18[5] = function onChange(globalName) {
-    let obj = str(pendingBadgeHiddenBadges[19]);
+    obj = str(pendingBadgeHiddenBadges[19]);
     obj = { globalName };
     return obj.setPendingChanges(obj);
   };
@@ -391,7 +348,7 @@ export default function UserProfileEditForm(currentUser) {
   obj20[3] = pendingPronouns;
   obj20[4] = onFocus;
   obj20[5] = function onChange(pronouns) {
-    let obj = str(pendingBadgeHiddenBadges[19]);
+    obj = str(pendingBadgeHiddenBadges[19]);
     obj = { pronouns };
     return obj.setPendingChanges(obj);
   };
@@ -409,7 +366,7 @@ export default function UserProfileEditForm(currentUser) {
   obj21[3] = pendingBio;
   obj21[4] = onFocus;
   obj21[5] = function onChange(bio) {
-    let obj = str(pendingBadgeHiddenBadges[19]);
+    obj = str(pendingBadgeHiddenBadges[19]);
     obj = { bio };
     return obj.setPendingChanges(obj);
   };
@@ -423,7 +380,7 @@ export default function UserProfileEditForm(currentUser) {
     let fn = tmp5(tmp2[18]).setTryItOutThemeColors;
   } else {
     fn = (themeColors) => {
-      let obj = str(pendingBadgeHiddenBadges[19]);
+      obj = str(pendingBadgeHiddenBadges[19]);
       obj = { themeColors };
       return obj.setPendingChanges(obj);
     };
@@ -482,7 +439,7 @@ export default function UserProfileEditForm(currentUser) {
   items14[12] = callback(stateFromStores, {
     ref(arg0) {
       if (null != arg0) {
-        ref.current[outer1_11.GUILD_TAG] = arg0;
+        ref.current[closure_1_11.GUILD_TAG] = arg0;
       }
     },
     children: callback(pendingBadgeDisplayOrder(pendingBadgeHiddenBadges[59]), { user: str, disabled: isSubmitting, tagStyle: { backgroundColor: containerBackground }, pendingPrimaryGuildId })

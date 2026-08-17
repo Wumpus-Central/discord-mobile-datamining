@@ -1,40 +1,33 @@
 // discord_app/modules/age_assurance/native/AgeVerificationRetryScreen.tsx
-import closure_3 from "jsxProd";
-import set from "set";
-import get_ActivityIndicator from "TableRowInner";
-import { HelpdeskArticles } from "ME";
-import { SafetyHubLinks } from "SafetyHubView";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { SafetyHubLinks } from "SafetyHubView" /* 5438 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let closure_12;
-let closure_6;
-let error;
-let unpackModuleId;
 const require = arg1;
 ({ ActivityIndicator: c5, ScrollView: closure_6, View: error } = get_ActivityIndicator);
 ({ jsx: c10, jsxs: unpackModuleId, Fragment: closure_12 } = jsxProd);
 createCacheKey = { loadingIndicator: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, zIndex: 1 }, container: null, headerContainer: null, centerText: null, helpLink: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, flex: 1 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, flex: 1 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { paddingVertical: require("Themes").space.PX_16, alignItems: "center", gap: require("Themes").space.PX_8 };
+createCacheKey[2] = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_8 };
 createCacheKey[3] = { textAlign: "center" };
-let obj1 = { paddingVertical: require("Themes").space.PX_16, alignItems: "center", gap: require("Themes").space.PX_8 };
-createCacheKey[4] = { marginTop: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { marginTop: require("Themes").space.PX_8 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/age_assurance/native/AgeVerificationRetryScreen.tsx");
+let obj1 = { paddingVertical: ThemesDefault.space.PX_16, alignItems: "center", gap: ThemesDefault.space.PX_8 };
+createCacheKey[4] = { marginTop: ThemesDefault.space.PX_8 };
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { marginTop: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationRetryScreen.tsx");
 
 export default function GetStartedScreen(modalSessionId) {
-  let initiateAgeVerification;
-  let loading;
   modalSessionId = modalSessionId.modalSessionId;
   initiateAgeVerification = undefined;
   let isManualAgeVerificationHidden;
   let stringResult2;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = modalSessionId(isManualAgeVerificationHidden[8]);
   obj = { onComplete: modalSessionId.onClose, entryPoint: modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalEntryPoint.RETRY_MODAL };
   initiateAgeVerification = obj.useInitiateAgeVerification(obj);
@@ -51,7 +44,7 @@ export default function GetStartedScreen(modalSessionId) {
     let obj = { title: stringResult2, description: null, onPress: null };
     const intl = modalSessionId(isManualAgeVerificationHidden[11]).intl;
     obj[1] = intl.string(modalSessionId(isManualAgeVerificationHidden[11]).t.ecdUKD);
-    let closure_0 = stringResult2(function*() {
+    closure_0 = stringResult2(function*() {
       if (c0 === 2) {
         c0 = 3;
         HermesBuiltin.throwTypeError();
@@ -78,10 +71,10 @@ export default function GetStartedScreen(modalSessionId) {
               obj[0] = arg1;
               return obj;
             } else {
-              const result = v0(outer2_2[9]).trackAgeVerificationModalClicked(c0, v0(outer2_2[9]).AgeVerificationModalVersion.RETRY, v0(outer2_2[9]).AgeVerificationModalCta.GET_STARTED);
+              const result = v0(closure_2_2[9]).trackAgeVerificationModalClicked(c0, v0(closure_2_2[9]).AgeVerificationModalVersion.RETRY, v0(closure_2_2[9]).AgeVerificationModalCta.GET_STARTED);
               v02 = 1;
               c0 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = v02();
               return obj1;
             }
@@ -121,9 +114,9 @@ export default function GetStartedScreen(modalSessionId) {
       const intl3 = tmp(tmp2[11]).intl;
       obj[1] = intl3.string(tmp(tmp2[11]).t["ty+iWP"]);
       obj[2] = function onPress() {
-        outer1_1(outer1_2[12]).openUrl(outer1_9.APPEALS_LINK);
-        const obj = outer1_1(outer1_2[12]);
-        const result = callback(outer1_2[9]).trackAgeVerificationModalClicked(callback, callback(outer1_2[9]).AgeVerificationModalVersion.RETRY, callback(outer1_2[9]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
+        closure_1_1(closure_1_2[12]).openUrl(closure_1_9.APPEALS_LINK);
+        const obj = closure_1_1(closure_1_2[12]);
+        const result = callback(closure_1_2[9]).trackAgeVerificationModalClicked(callback, callback(closure_1_2[9]).AgeVerificationModalVersion.RETRY, callback(closure_1_2[9]).AgeVerificationModalCta.MANUAL_REVIEW_REQUEST);
       };
       items.push(obj);
     }
@@ -142,7 +135,7 @@ export default function GetStartedScreen(modalSessionId) {
     const tmp12 = closure_5;
     tmp2Result = tmp2(tmp3[13]);
   }
-  let obj1 = { children: null };
+  obj1 = { children: null };
   const items1 = [loading, ];
   obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.headerContainer, children: null };
@@ -153,15 +146,14 @@ export default function GetStartedScreen(modalSessionId) {
   items2[2] = callback(modalSessionId(isManualAgeVerificationHidden[15]).Text, { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) });
   obj3[1] = items2;
   const items3 = [closure_11(closure_7, obj3), , ];
-  const obj6 = { hasIcons: false, children: null };
-  obj6[1] = memo.map((arg0, arg1) => {
-    let description;
-    let onPress;
-    let title;
-    ({ title, description, onPress } = arg0);
-    return callback(modalSessionId(isManualAgeVerificationHidden[17]).TableRow, { arrow: true, label, subLabel, onPress }, arg1);
+  const obj5 = { variant: "heading-md/medium", color: "text-strong", style: tmp.centerText, children: intl2.string(modalSessionId(isManualAgeVerificationHidden[11]).t.JNK1ue) };
+  items3[1] = callback(modalSessionId(isManualAgeVerificationHidden[16]).TableRowGroup, {
+    hasIcons: false,
+    children: memo.map((arg0, arg1) => {
+      ({ title, description, onPress } = arg0);
+      return callback(modalSessionId(isManualAgeVerificationHidden[17]).TableRow, { arrow: true, label, subLabel, onPress }, arg1);
+    })
   });
-  items3[1] = callback(modalSessionId(isManualAgeVerificationHidden[16]).TableRowGroup, obj6);
   const obj7 = { variant: "text-xs/medium", color: "text-muted", style: items4, children: null };
   items4 = [, ];
   ({ centerText: arr6[0], helpLink: arr6[1] } = tmp);
@@ -169,7 +161,7 @@ export default function GetStartedScreen(modalSessionId) {
   obj7[3] = intl4.format(modalSessionId(isManualAgeVerificationHidden[11]).t["L+FgkZ"], {
     handleOnHelpUrlHook() {
       const obj = initiateAgeVerification(isManualAgeVerificationHidden[12]);
-      obj.openUrl(initiateAgeVerification(isManualAgeVerificationHidden[18]).getArticleURL(outer1_8.TIGGER_PAWTECT_LEARN_MORE));
+      obj.openUrl(initiateAgeVerification(isManualAgeVerificationHidden[18]).getArticleURL(closure_1_8.TIGGER_PAWTECT_LEARN_MORE));
       const obj2 = initiateAgeVerification(isManualAgeVerificationHidden[18]);
       const result = modalSessionId(isManualAgeVerificationHidden[9]).trackAgeVerificationModalClicked(modalSessionId, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalVersion.RETRY, modalSessionId(isManualAgeVerificationHidden[9]).AgeVerificationModalCta.LEARN_MORE);
     }

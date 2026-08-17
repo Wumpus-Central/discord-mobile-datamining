@@ -1,13 +1,14 @@
 // discord_app/modules/collectibles/CollectiblesShopVariantsUIStore.tsx
-import identity from "identity";
+import set from "set" /* 2 */;
+import isIterable from "isIterable" /* 4006 */;
+import identity from "identity" /* 700 */;
 import { useDefaultVariantIndex } from "hooks/useDefaultVariantIndex.tsx";
 
 let closure_2 = identity.createWithEqualityFn(() => {
-  const obj = { selectionStates: null };
-  obj[0] = new Map();
+  const obj = { selectionStates: new Map() };
   return obj;
-}, require("isIterable").shallow);
-const result = require("useDefaultVariantIndex").fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
+}, isIterable.shallow);
+const result = set.fileFinishedImporting("modules/collectibles/CollectiblesShopVariantsUIStore.tsx");
 
 export const useSelectedVariantIndex = function useSelectedVariantIndex(product) {
   const _require = product;
@@ -25,7 +26,7 @@ export const useSelectedVariantIndex = function useSelectedVariantIndex(product)
         }
         tmp2 = selectedVariantIndex;
       }
-      obj = product(outer1_1[3]);
+      obj = product(closure_1_1[3]);
     }
     return tmp2;
   });
@@ -36,8 +37,8 @@ export const useSelectedVariantIndex = function useSelectedVariantIndex(product)
   return defaultVariantIndex;
 };
 export const setSelectedVariantIndex = function setSelectedVariantIndex(arg0, arg1) {
-  let closure_0 = arg0;
-  let closure_1 = arg1;
+  closure_0 = arg0;
+  closure_1 = arg1;
   state.setState((selectionStates) => {
     selectionStates = selectionStates.selectionStates;
     const value = selectionStates.get(storeListingId.storeListingId);

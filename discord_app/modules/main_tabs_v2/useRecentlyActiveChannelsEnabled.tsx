@@ -1,12 +1,12 @@
 // discord_app/modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx
-import getUserAgnosticState from "getUserAgnosticState";
-import { useDesignToggle } from "../devtools/design_toggles/useDesignToggle.tsx";
+import useDesignToggleDefault from "useDesignToggle" /* 5295 */;
+import closure_2 from "getUserAgnosticState" /* 5294 */;
 
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/useRecentlyActiveChannelsEnabled.tsx");
 
 export const isRecentlyActiveChannelsEnabled = function isRecentlyActiveChannelsEnabled() {
-  return getUserAgnosticState.get("enable_recently_active");
+  return closure_2.get("enable_recently_active");
 };
 export const useRecentlyActiveChannelsEnabled = function useRecentlyActiveChannelsEnabled() {
-  return useDesignToggle("enable_recently_active");
+  return useDesignToggleDefault("enable_recently_active");
 };

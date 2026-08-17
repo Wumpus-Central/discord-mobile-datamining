@@ -1,8 +1,8 @@
 // discord_app/modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx
-import importDefaultResult from "combined";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import importDefaultResult from "combined" /* 1993 */;
 
-const require = arg1;
+require = arg1;
 function getFriendlyDurationString(arg0) {
   if (obj.DURATION_60_SEC === arg0) {
     const intl6 = getSystemLocale.intl;
@@ -25,8 +25,8 @@ function getFriendlyDurationString(arg0) {
   }
 }
 let obj = { DURATION_60_SEC: 60, [60]: "DURATION_60_SEC", DURATION_5_MIN: 300, [300]: "DURATION_5_MIN", DURATION_10_MIN: 600, [600]: "DURATION_10_MIN", DURATION_1_HOUR: 3600, [3600]: "DURATION_1_HOUR", DURATION_1_DAY: 86400, [86400]: "DURATION_1_DAY", DURATION_1_WEEK: 604800, [604800]: "DURATION_1_WEEK" };
-const articleURL = require("combined").getArticleURL(require("ME").HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
-const result = require("combined").fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx");
+const articleURL = importDefaultResult.getArticleURL(require("ME").HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
+const result = require("set").fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx");
 
 export const DisableCommunicationDuration = obj;
 export { getFriendlyDurationString };
@@ -34,7 +34,7 @@ export const getDisableCommunicationDurationOptions = () => {
   const keys = Object.keys(obj);
   const found = keys.filter((arg0) => isNaN(Number(arg0)));
   return found.map((id) => {
-    const obj = { id, label: null, value: null };
+    obj = { id, label: null, value: null };
     let str = callback(table[id]);
     if (str == null) {
       str = "";

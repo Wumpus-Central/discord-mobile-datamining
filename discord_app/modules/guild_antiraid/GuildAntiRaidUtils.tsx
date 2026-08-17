@@ -1,30 +1,28 @@
 // discord_app/modules/guild_antiraid/GuildAntiRaidUtils.tsx
-import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY";
-import { t } from "../../../_runtime/03975_t.js";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { GuildIncidentActionSources } from "GuildAntiRaidTypes.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import tDefault from "t" /* 3975 */;
+import GuildIncidentActionSources from "GuildIncidentActionSources" /* 8236 */;
+import GUILD_REPORT_RAID_MOBILE_KEY from "GUILD_REPORT_RAID_MOBILE_KEY" /* 8235 */;
 
-let c3;
-let c4;
-let c5;
 ({ NAGBAR_DISPLAY_MAX_HOURS: c3, DEFAULT_LOCKDOWN_DURATION: c4, getTimeframes: c5 } = GUILD_REPORT_RAID_MOBILE_KEY);
 let obj = { month: "numeric", day: "numeric", hour: "numeric", minute: "2-digit" };
-const result = require("GuildIncidentActionSources").fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
+const result = set.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidUtils.tsx");
 
 export const DATE_CONFIG = obj;
 export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
   let tmp = null != incidentsData.dmSpamDetectedAt;
   if (tmp) {
-    const obj = t(incidentsData.dmSpamDetectedAt);
-    tmp = t(incidentsData.dmSpamDetectedAt).add(closure_3, "hours") > t();
-    const addResult = t(incidentsData.dmSpamDetectedAt).add(closure_3, "hours");
+    obj = tDefault(incidentsData.dmSpamDetectedAt);
+    tmp = tDefault(incidentsData.dmSpamDetectedAt).add(closure_3, "hours") > tDefault();
+    const addResult = tDefault(incidentsData.dmSpamDetectedAt).add(closure_3, "hours");
   }
   if (!tmp) {
     let tmp6 = null != incidentsData.raidDetectedAt;
     if (tmp6) {
-      const obj2 = t(incidentsData.raidDetectedAt);
-      tmp6 = t(incidentsData.raidDetectedAt).add(closure_3, "hours") > t();
-      const addResult1 = t(incidentsData.raidDetectedAt).add(closure_3, "hours");
+      const obj2 = tDefault(incidentsData.raidDetectedAt);
+      tmp6 = tDefault(incidentsData.raidDetectedAt).add(closure_3, "hours") > tDefault();
+      const addResult1 = tDefault(incidentsData.raidDetectedAt).add(closure_3, "hours");
     }
     tmp = tmp6;
   }
@@ -33,18 +31,18 @@ export const hasDetectedActivity = function hasDetectedActivity(incidentsData) {
 export const hasDetectedRaid = function hasDetectedRaid(raidDetectedAt) {
   let tmp = null != raidDetectedAt.raidDetectedAt;
   if (tmp) {
-    const obj = t(raidDetectedAt.raidDetectedAt);
-    tmp = t(raidDetectedAt.raidDetectedAt).add(closure_3, "hours") > t();
-    const addResult = t(raidDetectedAt.raidDetectedAt).add(closure_3, "hours");
+    obj = tDefault(raidDetectedAt.raidDetectedAt);
+    tmp = tDefault(raidDetectedAt.raidDetectedAt).add(closure_3, "hours") > tDefault();
+    const addResult = tDefault(raidDetectedAt.raidDetectedAt).add(closure_3, "hours");
   }
   return tmp;
 };
 export const hasDetectedDMRaid = function hasDetectedDMRaid(dmSpamDetectedAt) {
   let tmp = null != dmSpamDetectedAt.dmSpamDetectedAt;
   if (tmp) {
-    const obj = t(dmSpamDetectedAt.dmSpamDetectedAt);
-    tmp = t(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours") > t();
-    const addResult = t(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours");
+    obj = tDefault(dmSpamDetectedAt.dmSpamDetectedAt);
+    tmp = tDefault(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours") > tDefault();
+    const addResult = tDefault(dmSpamDetectedAt.dmSpamDetectedAt).add(closure_3, "hours");
   }
   return tmp;
 };
@@ -52,9 +50,9 @@ export const getIncidentAlertType = function getIncidentAlertType(guildIncident)
   if (null != guildIncident) {
     let tmp = null != guildIncident.raidDetectedAt;
     if (tmp) {
-      const obj = t(guildIncident.raidDetectedAt);
-      tmp = t(guildIncident.raidDetectedAt).add(closure_3, "hours") > t();
-      const addResult = t(guildIncident.raidDetectedAt).add(closure_3, "hours");
+      obj = tDefault(guildIncident.raidDetectedAt);
+      tmp = tDefault(guildIncident.raidDetectedAt).add(closure_3, "hours") > tDefault();
+      const addResult = tDefault(guildIncident.raidDetectedAt).add(closure_3, "hours");
     }
     const GuildIncidentAlertTypes = GuildIncidentActionSources.GuildIncidentAlertTypes;
   }
@@ -139,7 +137,7 @@ export const initialLockdownDurationHours = function initialLockdownDurationHour
   if (null == prop) {
     prop = closure_4;
   } else {
-    const obj = callback();
+    obj = callback();
   }
   return prop;
 };
@@ -157,7 +155,7 @@ export const getSecurityActionDetailsString = function getSecurityActionDetailsS
     }
     if (tmp === true) {
       const intl3 = getSystemLocale.intl;
-      let obj = { guildName: null, time: null };
+      obj = { guildName: null, time: null };
       obj[0] = arg1;
       const _Date3 = Date;
       const date = new Date(invitesDisabledUntil);

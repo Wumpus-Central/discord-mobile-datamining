@@ -1,21 +1,20 @@
 // discord_app/modules/rpc/server/commands/config.tsx
-import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG";
-import ME from "ME";
-import { dispatcher } from "../../../../Dispatcher.tsx";
-import { createRpcJoiSchemaObject } from "../../helpers/createRpcJoiSchemaObject.tsx";
-import { prototype } from "../../RPCError.tsx";
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import prototypeDefault from "prototype" /* 8752 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 8755 */;
+import RPC_SCOPE_CONFIG from "RPC_SCOPE_CONFIG" /* 4277 */;
+import ME from "ME" /* 676 */;
 
-let RPC_AUTHENTICATED_SCOPE;
-let obj1;
 ({ TransportTypes: obj1, RPC_AUTHENTICATED_SCOPE } = RPC_SCOPE_CONFIG);
 const RPCErrors = ME.RPCErrors;
-const result = require("createRpcJoiSchemaObject").fileFinishedImporting("modules/rpc/server/commands/config.tsx");
+const result = set.fileFinishedImporting("modules/rpc/server/commands/config.tsx");
 
 export default {
   [ME.RPCCommands.SET_CONFIG]: {
     scope: RPC_AUTHENTICATED_SCOPE,
     validation(boolean) {
-      let obj = createRpcJoiSchemaObject(boolean);
+      let obj = createRpcJoiSchemaObjectDefault(boolean);
       obj = { use_interactive_pip: boolean.boolean() };
       return obj.required().keys(obj);
     },
@@ -26,17 +25,17 @@ export default {
         let obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_COMMAND;
         const _HermesInternal = HermesInternal;
-        let tmp15 = prototype;
+        let tmp15 = prototypeDefault;
         tmp15 = new tmp15(obj, "command not available from \"" + socket.transport + " transport");
         throw tmp15;
       } else if (null == socket.application.id) {
         obj = { errorCode: null };
         obj[0] = RPCErrors.INVALID_COMMAND;
-        const tmp11 = new prototype(obj, "invalid application");
+        const tmp11 = new prototypeDefault(obj, "invalid application");
         throw tmp11;
       } else {
-        obj = dispatcher;
-        const obj1 = { type: "EMBEDDED_ACTIVITY_SET_CONFIG", applicationId: null, config: null };
+        obj = dispatcherDefault;
+        obj1 = { type: "EMBEDDED_ACTIVITY_SET_CONFIG", applicationId: null, config: null };
         obj1[1] = socket.application.id;
         const obj2 = { useInteractivePIP: null };
         obj2[0] = use_interactive_pip;

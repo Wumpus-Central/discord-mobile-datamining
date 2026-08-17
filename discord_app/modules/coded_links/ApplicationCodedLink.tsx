@@ -1,11 +1,11 @@
 // discord_app/modules/coded_links/ApplicationCodedLink.tsx
-import set from "makeStorefrontSKUCodedLink";
-import { isDiscordFrontendDevelopment } from "../../utils/GlobalUtils.tsx";
-import { CodedLinkType } from "CodedLink.tsx";
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import CodedLinkType from "CodedLinkType" /* 4363 */;
+import set from "set" /* 2 */;
 
-const items = [require("CodedLinkType").CodedLinkType.APP_DIRECTORY_PROFILE, require("CodedLinkType").CodedLinkType.ACTIVITY_BOOKMARK, require("CodedLinkType").CodedLinkType.APP_DIRECTORY_STOREFRONT, require("CodedLinkType").CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, require("CodedLinkType").CodedLinkType.APP_OAUTH2_LINK];
+const items = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT, CodedLinkType.CodedLinkType.APP_DIRECTORY_STOREFRONT_SKU, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
 let set = new Set(items);
-const items1 = [require("CodedLinkType").CodedLinkType.APP_DIRECTORY_PROFILE, require("CodedLinkType").CodedLinkType.ACTIVITY_BOOKMARK, require("CodedLinkType").CodedLinkType.APP_OAUTH2_LINK];
+const items1 = [CodedLinkType.CodedLinkType.APP_DIRECTORY_PROFILE, CodedLinkType.CodedLinkType.ACTIVITY_BOOKMARK, CodedLinkType.CodedLinkType.APP_OAUTH2_LINK];
 const set1 = new Set(items1);
 let result = set.fileFinishedImporting("modules/coded_links/ApplicationCodedLink.tsx");
 

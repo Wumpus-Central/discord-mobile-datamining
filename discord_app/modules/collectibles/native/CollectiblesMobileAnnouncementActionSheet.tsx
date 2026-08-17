@@ -1,22 +1,18 @@
 // discord_app/modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx
-import metadata from "metadata";
-import get_ActivityIndicator from "QUICK_SWITCHER";
-import { CollectiblesMobileShopScreen as closure_6 } from "items";
-import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
-import { metadata } from "../../../../discord_assets/assets/collectibles/frames/ea/announcement_key_1.png.js";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import metadataDefault from "metadata" /* 16165 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { CollectiblesMobileShopScreen as closure_6 } from "items" /* 678 */;
+import { ACTION_SHEET_MAX_WIDTH } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let StyleSheet;
-let c10;
-let c4;
-let c5;
-let c9;
-const require = arg1;
+require = arg1;
 function CatEarsBackdrop() {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const width = top(1494)().width;
   let obj = animatedPosition(6952);
   animatedPosition = obj.useBottomSheet().animatedPosition;
@@ -24,7 +20,7 @@ function CatEarsBackdrop() {
   const bound = Math.min(width, ACTION_SHEET_MAX_WIDTH);
   const result = (width - bound) / 2;
   const result1 = bound / 1200;
-  let obj1 = animatedPosition(4115);
+  obj1 = animatedPosition(4115);
   const fn = function t() {
     let obj = { transform: null };
     obj = { translateY: animatedPosition.get() + top - 60 };
@@ -42,20 +38,14 @@ function CatEarsBackdrop() {
   items1 = [tmp.mascotLayer, ];
   obj1 = { top: -138 * result1, left: tmp6, right: tmp6 };
   items1[1] = obj1;
-  const obj2 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  const obj3 = { uri: null };
-  obj3[0] = top(16162);
-  obj2[0] = obj3;
-  obj2[1] = tmp.mascotImage;
+  const obj2 = { source: { uri: top(16162) }, style: tmp.mascotImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   obj[1] = callback(closure_4, obj2);
   obj[1] = callback(closure_5, obj);
   return callback(top(4115).View, obj);
 }
 function FeatureRow(arg0) {
-  let icon;
-  let text;
   ({ icon, text } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.featureRow, children: null };
   const items = [icon, ];
   obj = { variant: "text-sm/medium", color: "text-subtle", style: tmp.featureText, children: text };
@@ -74,27 +64,24 @@ const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey[1] = {};
 createCacheKey[2] = { width: "100%", aspectRatio: 1.8324022346368716 };
 createCacheKey[3] = { width: "100%", aspectRatio: 3.25, resizeMode: "contain" };
-createCacheKey[4] = { padding: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_24, gap: require("Themes").space.PX_16 };
+createCacheKey[4] = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
 createCacheKey[5] = { textAlign: "center" };
 let obj1 = {};
-let obj2 = { padding: require("Themes").space.PX_16, paddingTop: require("Themes").space.PX_24, gap: require("Themes").space.PX_16 };
-createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_16 };
+let obj2 = { padding: ThemesDefault.space.PX_16, paddingTop: ThemesDefault.space.PX_24, gap: ThemesDefault.space.PX_16 };
+createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
 createCacheKey[7] = { flex: 1 };
-let obj3 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_16 };
-createCacheKey[8] = { gap: require("Themes").space.PX_32 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj3 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_16 };
+createCacheKey[8] = { gap: ThemesDefault.space.PX_32 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function CollectiblesMobileAnnouncementActionSheetTsx1(){const{animatedPosition,safeAreaTop,MASCOT_SAFE_AREA_NUDGE}=this.__closure;return{transform:[{translateY:animatedPosition.get()+safeAreaTop-MASCOT_SAFE_AREA_NUDGE}]};}" };
-let obj4 = { gap: require("Themes").space.PX_32 };
-let result = require("items").fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
+let obj4 = { gap: ThemesDefault.space.PX_32 };
+let result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesMobileAnnouncementActionSheet.tsx");
 
 export default function CollectiblesMobileAnnouncementActionSheet(markAsDismissed) {
-  let showEaNonPremiumMarketing;
-  let showEaPremiumMarketing;
-  let showGiftingMarketing;
   markAsDismissed = markAsDismissed.markAsDismissed;
-  let importDefault;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  dependencyMap = undefined;
+  const tmp = callback3();
   let obj = markAsDismissed(16163);
   const profileFramesMarketing = obj.useProfileFramesMarketing("CollectiblesMobileAnnouncementActionSheet");
   const intl = markAsDismissed(1236).intl;
@@ -126,30 +113,26 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   }, items);
   const effect1 = React.useEffect(() => () => {
     if (!ref.current) {
-      ref2.current(outer1_8.AUTO_DISMISS);
+      ref2.current(closure_1_8.AUTO_DISMISS);
     }
   }, []);
   const items1 = [markAsDismissed];
   const items2 = [markAsDismissed];
   const callback = React.useCallback(() => {
     callback.current = true;
-    markAsDismissed(outer1_8.PRIMARY);
+    markAsDismissed(closure_1_8.PRIMARY);
     let obj = markAsDismissed(5300);
-    obj = { screen: outer1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(7159).ACTION_SHEET };
+    obj = { screen: closure_1_6.FEATURED_PAGE, analyticsLocations: [], analyticsSource: callback(7159).ACTION_SHEET };
     const result = obj.openCollectiblesShopMobile(obj);
   }, items1);
   const callback1 = React.useCallback(() => {
     closure_1.current = true;
-    markAsDismissed(outer1_8.USER_DISMISS);
+    markAsDismissed(closure_1_8.USER_DISMISS);
   }, items2);
   const memo = React.useMemo(() => callback2(closure_13, {}), []);
   obj = { onDismiss: callback1, backdropChildren: memo, children: null };
   obj = { style: tmp.container, children: null };
-  const obj1 = { source: null, style: null, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
-  const obj2 = { uri: null };
-  obj2[0] = metadata;
-  obj1[0] = obj2;
-  obj1[1] = tmp.framePreviewImage;
+  obj1 = { source: { uri: metadataDefault }, style: tmp.framePreviewImage, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
   const items3 = [callback(closure_4, obj1), , , ];
   const obj3 = { variant: "heading-xl/bold", color: "text-strong", accessibilityRole: "header", style: tmp.headerText, children: null };
   const intl3 = tmp2(1236).intl;
@@ -159,7 +142,9 @@ export default function CollectiblesMobileAnnouncementActionSheet(markAsDismisse
   const obj5 = { icon: callback(markAsDismissed(5447).PaintIllocon, { size: 32 }), text: null };
   const intl4 = tmp2(1236).intl;
   obj5[1] = intl4.string(markAsDismissed(1236).t["6ZWB0C"]);
-  const items4 = [callback(FeatureRow, obj5), callback(FeatureRow, { icon: callback(markAsDismissed(5447).HeartIllocon, { size: 32 }), text: stringResult }), ];
+  const items4 = [callback(FeatureRow, obj5), , ];
+  const obj2 = { uri: metadataDefault };
+  items4[1] = callback(FeatureRow, { icon: callback(markAsDismissed(5447).HeartIllocon, { size: 32 }), text: stringResult });
   const obj6 = { icon: callback(markAsDismissed(5447).HeartIllocon, { size: 32 }), text: stringResult };
   items4[2] = callback(FeatureRow, { icon: callback(markAsDismissed(5447).ShopIllocon, { size: 32 }), text: string2Result });
   obj4[1] = items4;

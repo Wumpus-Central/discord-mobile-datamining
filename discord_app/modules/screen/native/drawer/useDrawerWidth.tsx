@@ -1,12 +1,15 @@
 // discord_app/modules/screen/native/drawer/useDrawerWidth.tsx
-import { DM_WIDTH } from "ME";
-import { useChatLayout } from "../../../chat/native/useChatLayout.tsx";
-import { useBaseAppContainerDimensions } from "../useBaseAppContainerDimensions.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import useChatLayout from "useChatLayout" /* 4232 */;
+import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 4234 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 4234 */;
 
+const DM_WIDTH = ME.DM_WIDTH;
 const sum = 260 + DM_WIDTH;
 let c3 = sum;
 let closure_4 = 300 + DM_WIDTH;
-const result = require("useChatLayout").fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
+const result = set.fileFinishedImporting("modules/screen/native/drawer/useDrawerWidth.tsx");
 
 export const DRAWER_LEFT_WIDTH_MIN = sum;
 export const getDrawerWidth = function getDrawerWidth() {
@@ -23,7 +26,7 @@ export const getDrawerWidth = function getDrawerWidth() {
   }
 };
 export const useDrawerWidth = function useDrawerWidth() {
-  const width = useBaseAppContainerDimensions().width;
+  const width = useBaseAppContainerDimensionsDefault().width;
   if (!tmp.isChatBesideChannelList) {
     return width;
   } else if (tmp2) {

@@ -1,20 +1,18 @@
 // discord_app/modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx
-import getUserAgnosticState from "getUserAgnosticState";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { useMaybeFetchCollectiblesCategoriesShared } from "useMaybeFetchCollectiblesCategoriesShared.tsx";
+import initialize from "initialize" /* 589 */;
+import useMaybeFetchCollectiblesCategoriesShared from "useMaybeFetchCollectiblesCategoriesShared" /* 8392 */;
+import closure_2 from "getUserAgnosticState" /* 4737 */;
 
-const require = arg1;
-const result = require("useMaybeFetchCollectiblesCategoriesShared").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/collectibles/hooks/useMaybeFetchCollectiblesCategories.mobile.tsx");
 
 export default function useMaybeFetchCollectiblesCategories(paymentGateway) {
-  let includeUnpublished;
-  let noCache;
   paymentGateway = undefined;
   if (paymentGateway != null) {
     paymentGateway = paymentGateway.paymentGateway;
   }
   let obj = initialize;
-  const items = [getUserAgnosticState];
+  const items = [closure_2];
   const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ noCache: store.get("shop_disable_cache"), includeUnpublished: store.get("shop_include_unpublished") }));
   ({ noCache, includeUnpublished } = stateFromStoresObject);
   obj = { noCache, includeUnpublished, paymentGateway, countryCode: null, logPerf: null };

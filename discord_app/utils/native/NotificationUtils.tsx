@@ -1,21 +1,19 @@
 // discord_app/utils/native/NotificationUtils.tsx
-import expandEventProperties from "expandEventProperties";
-import { NativeModules } from "get ActivityIndicator";
-import { PermissionStateType } from "set";
-import { AnalyticEvents } from "ME";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import createSoundForPack from "createSoundForPack" /* 10040 */;
+import NativeModulesDefault from "NativeModules" /* 11579 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import { PermissionStateType } from "set" /* 11578 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 import { getOrRefreshPushSyncToken } from "../../actions/native/PushNotificationActionCreators.tsx";
-import { NativeModules } from "../../lib/pushnotification/PushNotification.tsx";
-import { createSoundForPack } from "../../modules/sound_playback/SoundUtils.tsx";
-import { expandEventProperties } from "../AnalyticsUtils.tsx";
 
-const require = arg1;
+require = arg1;
 let result = require("set").fileFinishedImporting("utils/native/NotificationUtils.tsx");
 
 export default {
   hasPermission() {
-    return NativeModules.requestPermissions((badge) => {
-      let _alert;
-      let sound;
+    return NativeModulesDefault.requestPermissions((badge) => {
       ({ alert: _alert, sound } = badge);
       if (!_alert) {
         _alert = badge.badge;
@@ -30,12 +28,10 @@ export default {
     const _require = arg0;
     let result = _getOrRefreshPushSyncToken.setPushPermissionState(PermissionStateType.REQUESTED);
     let obj = _getOrRefreshPushSyncToken;
-    expandEventProperties.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
-    const obj2 = expandEventProperties;
-    const permissions = NativeModules.requestPermissions();
+    expandEventPropertiesDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
+    const obj2 = expandEventPropertiesDefault;
+    const permissions = NativeModulesDefault.requestPermissions();
     permissions.then((sound) => {
-      let _alert;
-      let badge;
       ({ alert: _alert, badge } = sound);
       if (!_alert) {
         _alert = sound.sound;
@@ -47,8 +43,8 @@ export default {
       if (_alert) {
         str = "accepted";
       }
-      outer1_1(outer1_2[5]).track(outer1_6.PERMISSIONS_ACKED, { type: "notification", action: str });
-      const NativePermissionManager = outer1_4.NativePermissionManager;
+      closure_1_1(closure_1_2[5]).track(closure_1_6.PERMISSIONS_ACKED, { type: "notification", action: str });
+      const NativePermissionManager = closure_1_4.NativePermissionManager;
       const notificationAuthorizationStatus = NativePermissionManager.getNotificationAuthorizationStatus();
       notificationAuthorizationStatus.then((closure_0) => {
         if (null != closure_0) {

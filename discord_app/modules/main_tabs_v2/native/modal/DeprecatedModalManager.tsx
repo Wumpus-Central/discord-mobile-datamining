@@ -1,20 +1,20 @@
 // discord_app/modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx
-import handleFormInit from "handleFormInit";
-import fetchFingerprint from "fetchFingerprint";
-import updateWithLatestInvite from "updateWithLatestInvite";
-import FormStates from "FormStates";
-import importDefaultResult from "handleRequiredAction";
-import ME from "ME";
-import "initialize";
-import { getDeprecatedModalData } from "../../../../utils/getDeprecatedModalData.tsx";
-import { isEligibleForSafetyFlowsExperiment } from "../../../safety_flows/SafetyFlowsExperiment.tsx";
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import initializeDefault from "initialize" /* 5038 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 5262 */;
+import UserRequiredActionsDefault from "UserRequiredActions" /* 8569 */;
+import isEligibleForSafetyFlowsExperiment from "isEligibleForSafetyFlowsExperiment" /* 16728 */;
+import closure_3 from "handleFormInit" /* 8875 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "updateWithLatestInvite" /* 8919 */;
+import closure_6 from "FormStates" /* 16727 */;
+import importDefaultResult from "handleRequiredAction" /* 1385 */;
+import ME from "ME" /* 676 */;
 import { handleTouch } from "../../../user_required_action/native/NewTermsModal.tsx";
 import { PhoneThenEmailInterstitial } from "../../../verification/native/components/VerificationModal.tsx";
-import { UserRequiredActions } from "../../../verification/VerificationUtils.tsx";
-import { coerceMainRoute } from "../../helpers/NavigationRouteUtils.native.tsx";
-import { getRootNavigationRef } from "../../RootNavigationRef.native.tsx";
 
-const require = arg1;
+require = arg1;
 function handlePushedModal(arg0) {
   let obj = getRootNavigationRef;
   const rootNavigationRef = obj.getRootNavigationRef();
@@ -62,13 +62,13 @@ function pushFirstOpenModal(arg0, arg1) {
     key = key.key;
     obj[0] = key;
     let num = 0;
-    component = handlePushedModal(getDeprecatedModalData(component, obj, props));
+    component = handlePushedModal(getDeprecatedModalDataDefault(component, obj, props));
   }
 }
 function createPushModalHandler(closure_15, closure_152) {
-  let closure_0 = [...arguments];
+  closure_0 = [...arguments];
   return () => {
-    outer1_12(closure_0);
+    closure_1_12(closure_0);
   };
 }
 const error = importDefaultResult;
@@ -84,7 +84,7 @@ let closure_15 = {
     if (action == null) {
       action = importDefaultResult.getAction();
     }
-    let result = UserRequiredActions.isFullScreenVerification(action);
+    let result = UserRequiredActionsDefault.isFullScreenVerification(action);
     if (result) {
       result = null != token.getToken();
     }
@@ -114,6 +114,7 @@ let closure_17 = {
     return handleTouch.default;
   }
 };
+initializeDefault;
 let prototype = function DeprecatedModalManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   obj = {
@@ -151,7 +152,7 @@ let prototype = function DeprecatedModalManager() {
   };
   obj = {
     key: "GUILD_SETTINGS_OPEN",
-    store: handleFormInit,
+    store: closure_3,
     closable: false,
     getComponent() {
       return callback(16738).default;
@@ -159,7 +160,7 @@ let prototype = function DeprecatedModalManager() {
   };
   obj = {
     key: "NOTIFICATION_SETTINGS_MODAL_OPEN",
-    store: FormStates,
+    store: closure_6,
     closable: false,
     getComponent() {
       return callback(17012).default;
@@ -171,6 +172,6 @@ let prototype = function DeprecatedModalManager() {
 class prototype extends tmp4 {
 }
 prototype = new prototype();
-let result = require("updateWithLatestInvite").fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/modal/DeprecatedModalManager.tsx");
 
 export default prototype;

@@ -1,5 +1,7 @@
 // discord_app/modules/people/Constants.tsx
-const result = require("set").fileFinishedImporting("modules/people/Constants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/people/Constants.tsx");
 
 export const RELATIONSHIP_COUNT_ANIMATION_THRESHOLD = 64;
 export const PEOPLE_LIST_ITEM_HEIGHT = 61;

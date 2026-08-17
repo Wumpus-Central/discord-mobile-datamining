@@ -1,7 +1,9 @@
 // discord_app/modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../../UserSettings.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -12,7 +14,7 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jTNPHM);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: MobileUserSettings.MobileUserSettings.VOICE,
   useValue() {
     const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
@@ -21,7 +23,7 @@ const toggle = createToggle.createToggle({
     }
     return flag;
   },
-  onValueChange: require("explicitContentFromProto").DisableStreamPreviews.updateSetting
+  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting
 });
 const obj = {
   useTitle() {
@@ -32,7 +34,7 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t.jTNPHM);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.VOICE,
+  parent: MobileUserSettings.MobileUserSettings.VOICE,
   useValue() {
     const DisableStreamPreviews = explicitContentFromProto.DisableStreamPreviews;
     let flag = DisableStreamPreviews.useSetting();
@@ -41,8 +43,8 @@ const obj = {
     }
     return flag;
   },
-  onValueChange: require("explicitContentFromProto").DisableStreamPreviews.updateSetting
+  onValueChange: explicitContentFromProto.DisableStreamPreviews.updateSetting
 };
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DisableStreamPreviewsSetting.tsx");
 
 export default toggle;

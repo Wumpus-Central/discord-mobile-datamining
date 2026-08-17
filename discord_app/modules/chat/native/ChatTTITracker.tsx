@@ -1,12 +1,10 @@
 // discord_app/modules/chat/native/ChatTTITracker.tsx
-import jsxProd from "jsxProd";
-import { TTIMeasurementView } from "../../tti_analytics/native/TTIMeasurementView.tsx";
+import set from "set" /* 2 */;
+import TTIMeasurementView from "TTIMeasurementView" /* 11076 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
-const result = require("serialize").fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
+const result = set.fileFinishedImporting("modules/chat/native/ChatTTITracker.tsx");
 
 export const ChatTTITracker = function ChatTTITracker(messages) {
   messages = messages.messages;

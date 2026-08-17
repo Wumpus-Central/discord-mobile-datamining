@@ -1,29 +1,28 @@
 // discord_app/modules/guild_settings/roles/native/InRolePromptNotice.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { RoleFlags } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/08916_registerAsset.js";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { hasFlag } from "../../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import hasFlag from "hasFlag" /* 1403 */;
+import registerAssetDefault from "registerAsset" /* 8916 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { RoleFlags } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 createCacheKey = { promptRow: null, promptText: null, icon: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_4, flexDirection: "row", alignItems: "center" };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_4, flexDirection: "row", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { marginLeft: require("Themes").space.PX_4 };
+createCacheKey[1] = { marginLeft: ThemesDefault.space.PX_4 };
 createCacheKey[2] = { height: 16, width: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { marginLeft: require("Themes").space.PX_4 };
-const result = require("ME").fileFinishedImporting("modules/guild_settings/roles/native/InRolePromptNotice.tsx");
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { marginLeft: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/InRolePromptNotice.tsx");
 
 export default function InRolePromptNotice(role) {
   role = role.role;
-  let string = createCacheKey();
+  let string = callback();
   let stringResult = dependencyMap;
   let obj = hasFlag;
   if (!obj.hasFlag(role.flags, RoleFlags.IN_PROMPT)) {
@@ -36,10 +35,10 @@ export default function InRolePromptNotice(role) {
     if (isRolePowerfulResult) {
       obj = { style: null, source: null, color: null };
       obj[0] = string.icon;
-      obj[1] = registerAsset;
-      obj[2] = Themes.unsafe_rawColors.YELLOW_300;
+      obj[1] = registerAssetDefault;
+      obj[2] = ThemesDefault.unsafe_rawColors.YELLOW_300;
       const items = [tmp6(Icon, obj), ];
-      const obj1 = { style: null, variant: "text-sm/medium", children: null };
+      obj1 = { style: null, variant: "text-sm/medium", children: null };
       obj1[0] = string.promptText;
       const intl2 = tmp(1236).intl;
       string = intl2.string;
@@ -52,7 +51,7 @@ export default function InRolePromptNotice(role) {
     } else {
       const obj2 = { style: null, source: null };
       obj2[0] = string.icon;
-      obj2[1] = registerAsset;
+      obj2[1] = registerAssetDefault;
       const items1 = [tmp6(Icon, obj2), ];
       const obj3 = { style: null, variant: "text-sm/medium", children: null };
       obj3[0] = string.promptText;

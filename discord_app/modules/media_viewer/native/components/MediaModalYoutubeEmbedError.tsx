@@ -1,20 +1,19 @@
 // discord_app/modules/media_viewer/native/components/MediaModalYoutubeEmbedError.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c4;
-let c5;
 const require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { container: null, text: null };
-obj = { backgroundColor: require("Themes").colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND, padding: require("Themes").space.PX_32, justifyContent: "center", alignItems: "center", flex: 1 };
+obj = { backgroundColor: ThemesDefault.colors.VOICE_VIDEO_VIDEO_TILE_BACKGROUND, padding: ThemesDefault.space.PX_32, justifyContent: "center", alignItems: "center", flex: 1 };
 obj[0] = obj;
-createCacheKey = { marginBottom: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_16 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_16 };
 obj[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(function MediaModalYoutubeEmbedError(videoId) {
+const memoResult = importAllResult.memo(function MediaModalYoutubeEmbedError(videoId) {
   videoId = videoId.videoId;
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };
@@ -27,12 +26,12 @@ const memoResult = require("noop").memo(function MediaModalYoutubeEmbedError(vid
   const intl2 = videoId(1236).intl;
   obj[0] = intl2.string(videoId(1236).t.LLpxJ5);
   obj[4] = function onPress() {
-    outer1_1(outer1_2[9]).openURL("https://youtube.com/watch?v=" + videoId);
+    closure_1_1(closure_1_2[9]).openURL("https://youtube.com/watch?v=" + videoId);
   };
   items[2] = callback(videoId(4745).Button, obj);
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutubeEmbedError.tsx");
+const result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaModalYoutubeEmbedError.tsx");
 
 export default memoResult;

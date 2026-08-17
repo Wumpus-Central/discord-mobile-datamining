@@ -1,15 +1,11 @@
 // discord_app/modules/keyboard/native/PortalKeyboardRendererComponent.tsx
-import importAllResult from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(function PortalKeyboardRendererComponent(item) {
-  let chatInputRef;
-  let cleanUp;
-  let state;
-  let type;
   item = item.item;
   const channelId = item.channelId;
   ({ chatInputRef, type } = item);
@@ -67,6 +63,6 @@ const memoResult = importAllResult.memo(function PortalKeyboardRendererComponent
   }
   return null;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/keyboard/native/PortalKeyboardRendererComponent.tsx");
+const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboardRendererComponent.tsx");
 
 export default memoResult;

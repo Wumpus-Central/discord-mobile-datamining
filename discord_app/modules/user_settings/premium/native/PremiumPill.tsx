@@ -1,13 +1,13 @@
 // discord_app/modules/user_settings/premium/native/PremiumPill.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 let closure_6 = createCacheKey.createStyles((arg0) => {
-  const tmp3 = Themes;
+  const tmp3 = ThemesDefault;
   if (arg0) {
     let WHITE = tmp3.unsafe_rawColors.BLACK;
     let tmp5 = tmp;
@@ -21,11 +21,9 @@ let closure_6 = createCacheKey.createStyles((arg0) => {
   obj[1] = { textAlign: "center" };
   return obj;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/premium/native/PremiumPill.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/premium/native/PremiumPill.tsx");
 
 export const PremiumPill = (discountOffer) => {
-  let style;
-  let useWhiteBackground;
   discountOffer = discountOffer.discountOffer;
   let flag = discountOffer.shouldShowDiscountUpsell;
   if (flag === undefined) {
@@ -93,14 +91,14 @@ export const PremiumPill = (discountOffer) => {
         if (premiumType === premiumTrialOfferPremiumType) {
           if (!flag3) {
             const _Number = Number;
-            if (!Number.isNaN(_undefined.days)) {
+            if (!Number.isNaN(days.days)) {
               const intl = discountOffer(flag2[8]).intl;
               obj = { days: null };
               const _Math = Math;
               obj[0] = Math.max(tmp9.days, 1);
               let formatToPlainStringResult = intl.formatToPlainString(discountOffer(flag2[8]).t["+FgdjP"], obj);
             }
-            tmp9 = _undefined;
+            tmp9 = days;
           }
           const intl2 = discountOffer(flag2[8]).intl;
           formatToPlainStringResult = intl2.string(discountOffer(flag2[8]).t.qVcfa0);

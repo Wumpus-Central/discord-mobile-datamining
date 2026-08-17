@@ -1,19 +1,19 @@
 // discord_app/modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx
-import updateSubmittedGuildJoinRequestTotal from "updateSubmittedGuildJoinRequestTotal";
-import handleGatewayJoinRequestUpdate from "handleGatewayJoinRequestUpdate";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageTypes } from "ME";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
-import { DISCORD_EPOCH } from "../../../../../utils/SnowflakeUtils.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import closure_3 from "updateSubmittedGuildJoinRequestTotal" /* 7428 */;
+import closure_4 from "handleGatewayJoinRequestUpdate" /* 4198 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { MessageTypes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
 
 export const createJoinRequestNotificationSystemMessage = function createJoinRequestNotificationSystemMessage(message) {
   message = message.message;
-  let obj = DISCORD_EPOCH;
+  let obj = DISCORD_EPOCHDefault;
   request = request.getRequest(obj.cast(message.channel_id));
   let tmp4;
   if (null != request) {
@@ -76,7 +76,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
         if (null != username) {
           if (null != name) {
             const intl2 = getSystemLocale.intl;
-            const obj1 = { username: null, guildName: null };
+            obj1 = { username: null, guildName: null };
             obj1[0] = username;
             obj1[1] = name;
             let formatToPartsResult1 = intl2.formatToParts(getSystemLocale.t.u4movT, obj1);
@@ -89,7 +89,7 @@ export const createJoinRequestNotificationSystemMessage = function createJoinReq
     }
     const obj2 = { content: null };
     obj2[0] = str;
-    const merged = Object.assign(createCommonMessage(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     return obj2;
   }
 };

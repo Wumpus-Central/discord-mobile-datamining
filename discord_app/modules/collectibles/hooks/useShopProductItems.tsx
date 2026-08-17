@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/hooks/useShopProductItems.tsx
-import noop from "noop";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "noop" /* 19 */;
 import { CollectiblesItemType } from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-const require = arg1;
+require = arg1;
 class ItemsSortingHat {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -57,17 +57,17 @@ prototype["sortByTypes"] = function sortByTypes(items) {
     return get;
   }, new Map());
 };
-let result = require("getSystemLocale").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
+let result = require("set").fileFinishedImporting("modules/collectibles/hooks/useShopProductItems.tsx");
 
 export { ItemsSortingHat };
 export const useShopProductItems = function useShopProductItems(product) {
-  let closure_0 = product;
+  closure_0 = product;
   const items = [product];
   return React.useMemo(() => {
-    if (typeof outer1_3 !== "function") {
+    if (typeof closure_1_3 !== "function") {
       HermesBuiltin.throwTypeError();
     }
-    let obj = Object.create(outer1_3.prototype);
+    let obj = Object.create(closure_1_3.prototype);
     obj.itemsByTypes = obj.sortByTypes(product.items);
     obj = { firstProfileEffect: obj.firstProfileEffect, firstAvatarDecoration: obj.firstAvatarDecoration, firstNameplate: obj.firstNameplate, firstProfileFrame: obj.firstProfileFrame };
     return obj;

@@ -1,4 +1,6 @@
 // discord_app/modules/calls/HideSelfStreamAndVideoConstants.tsx
-const result = require("set").fileFinishedImporting("modules/calls/HideSelfStreamAndVideoConstants.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/calls/HideSelfStreamAndVideoConstants.tsx");
 
 export const SelfStreamAndVideoAlertType = { STREAM: 0, [0]: "STREAM", VIDEO: 1, [1]: "VIDEO" };

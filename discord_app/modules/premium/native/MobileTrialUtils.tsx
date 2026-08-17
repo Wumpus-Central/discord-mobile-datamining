@@ -1,10 +1,12 @@
 // discord_app/modules/premium/native/MobileTrialUtils.tsx
-import { PremiumSubscriptionSKUToPremiumType as closure_2 } from "GuildFeatures";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { usePremiumTrialOffer } from "../hooks/usePremiumTrialOffer.android.tsx";
+import set from "set" /* 2 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7418 */;
 
-let result = require("UNSAFE_isDismissibleContentDismissed").fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
+let closure_2 = GuildFeatures.PremiumSubscriptionSKUToPremiumType;
+let result = set.fileFinishedImporting("modules/premium/native/MobileTrialUtils.tsx");
 
 export const useShouldShowPremiumTrialUserSettingsAvatarBadge = function useShouldShowPremiumTrialUserSettingsAvatarBadge() {
   const premiumTrialOffer = usePremiumTrialOffer.usePremiumTrialOffer();
@@ -53,7 +55,7 @@ export const useNitroTrialCtaOverride = function useNitroTrialCtaOverride(user_p
       ({ interval: obj3[0], intervalCount: obj3[1] } = subscriptionTrial);
       const result = tmpResult.formatIntervalDuration(obj);
       const intl = tmp(1236).intl;
-      const obj1 = { duration: null };
+      obj1 = { duration: null };
       obj1[0] = result;
       return intl.formatToPlainString(tmp(1236).t["6xpY54"], obj1);
     } else {

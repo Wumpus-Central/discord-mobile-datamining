@@ -1,53 +1,49 @@
 // discord_app/modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx
-import dispatcher from "dispatcher";
-import { View } from "getSystemLocale";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import getEmojiToGroupId from "getEmojiToGroupId";
-import handleConnectionOpen from "handleConnectionOpen";
-import jsxProd from "presentAddedFriendToast";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "getEmojiToGroupId" /* 6727 */;
+import closure_8 from "handleConnectionOpen" /* 4197 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
 const require = arg1;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { header: null, reactionPill: null, emoji: null, emojiText: null, reactionText: null, starIcon: null, starIconSelected: null, starIconUnselected: null };
-createCacheKey = { alignItems: "center", paddingTop: require("Themes").space.PX_8, gap: require("Themes").space.PX_16 };
+createCacheKey = { alignItems: "center", paddingTop: ThemesDefault.space.PX_8, gap: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.xl, borderWidth: 4, borderColor: require("Themes").colors.BORDER_STRONG, paddingVertical: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_8 };
+createCacheKey[1] = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xl, borderWidth: 4, borderColor: ThemesDefault.colors.BORDER_STRONG, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
 createCacheKey[2] = { width: 50, height: 50 };
 createCacheKey[3] = { fontSize: 24, lineHeight: 50, textAlign: "center" };
 createCacheKey[4] = { fontSize: 24, lineHeight: 50 };
 createCacheKey[5] = { height: 24, width: 24 };
-let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: require("Themes").colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: require("Themes").radii.xl, borderWidth: 4, borderColor: require("Themes").colors.BORDER_STRONG, paddingVertical: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_8 };
-createCacheKey[6] = { tintColor: require("Themes").colors.ICON_FEEDBACK_WARNING };
-let obj2 = { tintColor: require("Themes").colors.ICON_FEEDBACK_WARNING };
-createCacheKey[7] = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { tintColor: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx");
+let obj1 = { flexDirection: "row", alignItems: "center", justifyContent: "center", backgroundColor: ThemesDefault.colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, borderRadius: ThemesDefault.radii.xl, borderWidth: 4, borderColor: ThemesDefault.colors.BORDER_STRONG, paddingVertical: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_8 };
+createCacheKey[6] = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+let obj2 = { tintColor: ThemesDefault.colors.ICON_FEEDBACK_WARNING };
+createCacheKey[7] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+let result = require("set").fileFinishedImporting("modules/reactions/native/ReactionEmojiOptionsActionSheet.tsx");
 
 export default function ReactionEmojiOptionsActionSheet(channelId) {
-  let animated;
-  let canRemoveReactions;
-  let reaction;
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   ({ reaction, canRemoveReactions } = channelId);
-  let c2;
+  closure_2 = undefined;
   let emoji;
   let stateFromStores1;
   let isFavoriteEmoji;
   let emojiURL;
   let callback;
   let callback1;
-  const tmp = createCacheKey();
-  c2 = tmp;
+  const tmp = callback3();
+  closure_2 = tmp;
   emoji = reaction.emoji;
   const DeveloperMode = channelId(emoji[8]).DeveloperMode;
   let tidaWebformEnabled = DeveloperMode.useSetting();
   let obj = messageId(emoji[9]);
-  let obj1 = channelId(emoji[10]);
+  obj1 = channelId(emoji[10]);
   const items = [callback1];
   const stateFromStores = obj1.useStateFromStores(items, () => callback1.getGuildId());
   let obj2 = channelId(emoji[10]);
@@ -89,7 +85,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   const items4 = [tmp];
   callback1 = stateFromStores1.useCallback((arg0) => {
     const obj = {};
-    const merged = Object.assign(_undefined.starIcon);
+    const merged = Object.assign(lib.starIcon);
     if (arg0) {
       const merged1 = Object.assign(tmp.starIconSelected);
       let style = obj;
@@ -102,7 +98,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     } else {
       StarOutlineIcon = tmp9(tmp10[15]).StarOutlineIcon;
     }
-    return outer1_9(StarOutlineIcon, { style });
+    return closure_1_9(StarOutlineIcon, { style });
   }, items4);
   const items5 = [callback, stateFromStores1, isFavoriteEmoji, callback1];
   const items6 = [emoji.id, callback];
@@ -111,16 +107,16 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     if (null != stateFromStores1) {
       function content() {
         const obj = { style: { marginLeft: 8, marginTop: 2 }, variant: "text-md/bold", children: null };
-        const intl = outer1_0(outer1_3[17]).intl;
+        const intl = closure_1_0(closure_1_3[17]).intl;
         const string = intl.string;
-        const t = outer1_0(outer1_3[17]).t;
+        const t = closure_1_0(closure_1_3[17]).t;
         if (closure_5) {
           let stringResult = string(t.in1rga);
         } else {
           stringResult = string(t.mE2e8A);
         }
         obj[2] = stringResult;
-        return outer1_9(outer1_0(outer1_3[16]).Text, obj);
+        return closure_1_9(closure_1_0(closure_1_3[16]).Text, obj);
       }
       const obj5 = channelId(emoji[18]);
       if (isFavoriteEmoji) {
@@ -145,7 +141,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
     }
   }, items5);
   const items7 = [emojiURL, callback];
-  const callback3 = stateFromStores1.useCallback(() => {
+  callback3 = stateFromStores1.useCallback(() => {
     if (null != emoji.id) {
       channelId(emoji[20]).copy(tmp.id);
       const obj = channelId(emoji[20]);
@@ -166,7 +162,7 @@ export default function ReactionEmojiOptionsActionSheet(channelId) {
   }, items7);
   let str = emoji.name;
   const callback5 = stateFromStores1.useCallback(() => {
-    _undefined(emoji[22]).removeEmojiReactions(channelId, messageId, emoji);
+    lib(emoji[22]).removeEmojiReactions(channelId, messageId, emoji);
     callback();
   }, items8);
   if (str == null) {

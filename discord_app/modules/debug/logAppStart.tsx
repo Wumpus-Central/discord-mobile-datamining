@@ -1,12 +1,13 @@
 // discord_app/modules/debug/logAppStart.tsx
-import set from "serialize";
-import set from "serialize";
+import timestamp from "timestamp" /* 3 */;
+import serialize from "serialize" /* 9 */;
+import set from "set" /* 2 */;
 
 set = set.clear();
-new require("set").default("app").log("Initializing app");
-const loadIndex = require("serialize").default.loadIndex;
+new timestamp.default("app").log("Initializing app");
+const loadIndex = serialize.default.loadIndex;
 loadIndex.recordStart();
-const loadImports = require("serialize").default.loadImports;
+const loadImports = serialize.default.loadImports;
 loadImports.recordStart();
 const result = set.fileFinishedImporting("modules/debug/logAppStart.tsx");
 

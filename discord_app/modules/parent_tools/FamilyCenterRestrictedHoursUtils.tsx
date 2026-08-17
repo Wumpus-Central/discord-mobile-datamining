@@ -1,7 +1,8 @@
 // discord_app/modules/parent_tools/FamilyCenterRestrictedHoursUtils.tsx
-import set from "messagesProxy";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { messagesProxy } from "FamilyCenter.messages.js";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1940 */;
+import messagesProxyDefault from "messagesProxy" /* 2335 */;
+import set from "set" /* 2 */;
 
 function setsEqual(set, set2) {
   if (set.size !== set2.size) {
@@ -22,7 +23,7 @@ function setsEqual(set, set2) {
   }
 }
 function formatDays(days) {
-  const set = new Set(days);
+  set = new Set(days);
   if (setsEqual(set, set2)) {
     const intl3 = set(1236).intl;
     return intl3.string(dateTimeFormat(2335).bPjqd1);
@@ -70,8 +71,8 @@ function getScheduleRuleDateRange(rule) {
   }
   return str;
 }
-const items = [require("create").DayOfWeek.SUNDAY, require("create").DayOfWeek.MONDAY, require("create").DayOfWeek.TUESDAY, require("create").DayOfWeek.WEDNESDAY, require("create").DayOfWeek.THURSDAY, require("create").DayOfWeek.FRIDAY, require("create").DayOfWeek.SATURDAY];
-let set = new Set(require("getSystemLocale"));
+const items = [create.DayOfWeek.SUNDAY, create.DayOfWeek.MONDAY, create.DayOfWeek.TUESDAY, create.DayOfWeek.WEDNESDAY, create.DayOfWeek.THURSDAY, create.DayOfWeek.FRIDAY, create.DayOfWeek.SATURDAY];
+let set = new Set(require("module_1"));
 const items1 = [items[0], items[6]];
 const set1 = new Set(items1);
 const set2 = new Set(items);
@@ -94,7 +95,7 @@ export const formatDuration = function formatDuration(arg0) {
   const result = arg0 / 60;
   const intl = getSystemLocale.intl;
   const formatToPlainString = intl.formatToPlainString;
-  const tmp3 = messagesProxy;
+  const tmp3 = messagesProxyDefault;
   if (isIntegerResult) {
     let obj = { hours: null };
     obj[0] = result;
@@ -127,9 +128,9 @@ export const formatRestrictedScheduleInAppSubtitle = function formatRestrictedSc
       const endTime2 = startTime.endTime;
       const formatResult = dateTimeFormat.format(date);
       if (60 * startTime2.hours + startTime2.minutes > 60 * endTime2.hours + endTime2.minutes) {
-        ERTn_E = messagesProxy.OxveI8;
+        ERTn_E = messagesProxyDefault.OxveI8;
       } else {
-        ERTn_E = messagesProxy["ERTn+E"];
+        ERTn_E = messagesProxyDefault["ERTn+E"];
       }
       const intl = tmp6(1236).intl;
       const obj = { days: null, startTime: null, endTime: null };
@@ -182,13 +183,13 @@ export const sortRulesByStartTime = function sortRulesByStartTime(rules) {
     return sum - (result1 + num4);
   });
 };
-export const toTimeProto = function toTimeProto(outer1_10) {
-  return { hours: outer1_10.hours, minutes: outer1_10.minutes, seconds: 0, nanos: 0 };
+export const toTimeProto = function toTimeProto(closure_1_10) {
+  return { hours: closure_1_10.hours, minutes: closure_1_10.minutes, seconds: 0, nanos: 0 };
 };
 export const computeOverlappingInfo = function computeOverlappingInfo(first3, memo1, memo) {
-  let closure_0 = first3;
-  let closure_1 = memo1;
-  let closure_2 = memo;
+  closure_0 = first3;
+  closure_1 = memo1;
+  closure_2 = memo;
   const conflictingEntries = [];
   const item = conflictingEntries.forEach((arg0, arg1) => {
     if (arg0.has(arg0)) {
@@ -199,7 +200,7 @@ export const computeOverlappingInfo = function computeOverlappingInfo(first3, me
       if (null != found) {
         const obj = { dayLabel: null, timeRange: null };
         obj[0] = memo[arg1];
-        obj[1] = outer1_9(found);
+        obj[1] = closure_1_9(found);
         conflictingEntries.push(obj);
       }
     }

@@ -1,21 +1,20 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { container: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingVertical: require("Themes").space.PX_16 };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingVertical: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsMultiSelect.tsx");
 
 export default function MultiSelect(arg0) {
-  let dependencyMap;
-  let element;
-  let require;
   ({ element, onPress: require, state: dependencyMap } = arg0);
   if (null != element) {
     if ("checkbox" === element.type) {
@@ -24,15 +23,12 @@ export default function MultiSelect(arg0) {
       obj[0] = tmp.container;
       obj = { hasIcons: false, children: null };
       obj[1] = data.map((arg0) => {
-        let tmp;
-        let tmp2;
-        let tmp3;
         [tmp, tmp2, tmp3] = arg0;
-        return outer1_3(outer1_0(outer1_1[6]).TableCheckboxRow, {
+        return closure_1_3(closure_1_0(closure_1_1[6]).TableCheckboxRow, {
           label: tmp2,
           subLabel: tmp3,
           onPress() {
-            return outer1_0(closure_0, closure_1);
+            return closure_1_0(closure_0, closure_1);
           },
           checked: tmp in closure_1
         }, tmp);

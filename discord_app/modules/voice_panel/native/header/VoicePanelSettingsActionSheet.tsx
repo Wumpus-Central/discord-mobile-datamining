@@ -1,26 +1,23 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { BottomSheetModal } from "../../../../../_runtime/06952_BottomSheetModal.js";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Background } from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import { VoicePanelSettingsOverviewHeader } from "VoicePanelSettingsOverview.tsx";
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import Background from "Background" /* 6950 */;
+import BottomSheetModal from "BottomSheetModal" /* 6952 */;
+import VoicePanelSettingsOverviewHeaderDefault from "VoicePanelSettingsOverviewHeader" /* 16329 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
+require = arg1;
 let closure_4 = createCacheKey.createStyles({ wrapper: { gap: 24 } });
-const memoResult = require("noop").memo(function VoicePanelSettingsActionSheet(arg0) {
-  let channelId;
-  let guildId;
+const memoResult = importAllResult.memo(function VoicePanelSettingsActionSheet(arg0) {
   ({ guildId, channelId } = arg0);
   let obj = { startExpanded: true, scrollable: true, children: null };
   obj = { children: null };
-  obj = { bottom: true, style: callback().wrapper, children: null };
-  obj[2] = jsx(VoicePanelSettingsOverviewHeader, { guildId, channelId });
-  obj[0] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: null });
-  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: null });
-  return jsx(Background.BottomSheet, { bottom: true, style: callback().wrapper, children: null });
+  obj = { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) };
+  obj[0] = jsx(SafeAreaPaddingView.SafeAreaPaddingView, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
+  obj[2] = jsx(BottomSheetModal.BottomSheetScrollView, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
+  return jsx(Background.BottomSheet, { bottom: true, style: callback().wrapper, children: jsx(VoicePanelSettingsOverviewHeaderDefault, { guildId, channelId }) });
 });
-const result = require("createCacheKey").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/header/VoicePanelSettingsActionSheet.tsx");
 
 export default memoResult;

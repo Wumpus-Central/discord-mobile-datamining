@@ -1,8 +1,9 @@
 // discord_app/modules/threads/ThreadConstants.tsx
-import { AbortCodes } from "ME";
-import set from "set";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import set from "set" /* 2 */;
 
+const AbortCodes = ME.AbortCodes;
 let obj = { HAS_INTERACTED: 1, ALL_MESSAGES: 2, ONLY_MENTIONS: 4, NO_MESSAGES: 8 };
 let items = [, , , ];
 ({ TOO_MANY_ATTACHMENTS: arr[0], EXPLICIT_CONTENT: arr[1], ENTITY_TOO_LARGE: arr[2], EXPLICIT_CONTENT: arr[3] } = AbortCodes);

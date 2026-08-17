@@ -1,20 +1,22 @@
 // discord_app/modules/impersonate/ImpersonateStore.tsx
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { GuildSettingsSections } from "ME";
-import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES";
-import { Store } from "initialize";
-import { areArraysShallowlyEqual } from "../../utils/FunctionUtils.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
-import { ImpersonateType } from "ImpersonateTypes.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import ImpersonateType from "ImpersonateType" /* 1988 */;
+import areArraysShallowlyEqual from "areArraysShallowlyEqual" /* 1989 */;
+import closure_4 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import { GuildSettingsSections } from "ME" /* 676 */;
+import { ChannelNotificationSettingsFlags as closure_7 } from "MAX_FAVORITES" /* 685 */;
 
-const require = arg1;
+require = arg1;
 let closure_8 = {};
+const Store = initializeDefault.Store;
 class ImpersonateStore extends Store {
 }
 const prototype = ImpersonateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(createGuildRecordFromRust, createGuildRoleRecordFromRust);
+  this.waitFor(closure_5, closure_4);
 };
 prototype["hasViewingRoles"] = function hasViewingRoles() {
   return !areArraysShallowlyEqual.isPlainObjectEmpty(closure_8);
@@ -154,12 +156,10 @@ prototype["getBackNavigationSection"] = function getBackNavigationSection(arg0) 
   }
 };
 ImpersonateStore.displayName = "ImpersonateStore";
-const impersonateStore = new ImpersonateStore(require("dispatcher"), {
+const impersonateStore = new ImpersonateStore(dispatcherDefault, {
   IMPERSONATE_UPDATE: function handleImpersonateUpdate(arg0) {
-    let data;
-    let guildId;
     ({ guildId, data } = arg0);
-    let obj = DISCORD_EPOCH;
+    let obj = DISCORD_EPOCHDefault;
     const result = obj.castGuildIdAsEveryoneGuildRoleId(guildId);
     delete tmp2[tmp];
     obj = {};
@@ -175,8 +175,6 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
     }
   },
   GUILD_ROLE_DELETE: function handleGuildRoleDelete(arg0) {
-    let guildId;
-    let roleId;
     ({ guildId, roleId } = arg0);
     if (null == dependencyMap[guildId]) {
       return false;
@@ -186,8 +184,6 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
     }
   },
   USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: function handleUserGuildSettingsChannelUpdateBulk(arg0) {
-    let guildId;
-    let overrides;
     ({ guildId, overrides } = arg0);
     let optInChannels;
     if (null != guildId) {
@@ -205,7 +201,7 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
               if (num == null) {
                 num = 0;
               }
-              if (obj.hasFlag(num, outer1_7.OPT_IN_ENABLED)) {
+              if (obj.hasFlag(num, closure_1_7.OPT_IN_ENABLED)) {
                 obj2.add(arg0);
               } else {
                 obj2.delete(arg0);
@@ -221,9 +217,6 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
     return false;
   },
   GUILD_ONBOARDING_SELECT_OPTION: function handleOptionSelect(arg0) {
-    let guildId;
-    let optionId;
-    let removedOptionIds;
     ({ guildId, optionId, removedOptionIds } = arg0);
     let onboardingResponses;
     if (null != guildId) {
@@ -257,8 +250,6 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
     return false;
   },
   GUILD_MEMBER_UPDATE_LOCAL: function handleGuildMemberUpdateLocal(guildId) {
-    let flags;
-    let roles;
     guildId = guildId.guildId;
     ({ roles, flags } = guildId);
     if (null == guildId) {
@@ -268,7 +259,7 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
       if (flag) {
         if (null != roles) {
           tmp2.roles = roles.reduce((arg0, arg1) => {
-            const role = outer1_4.getRole(guildId, arg1);
+            const role = closure_1_4.getRole(guildId, arg1);
             if (null != role) {
               arg0[arg1] = role;
             }
@@ -289,6 +280,6 @@ const impersonateStore = new ImpersonateStore(require("dispatcher"), {
     }
   }
 });
-let result = require("ME").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
+let result = require("set").fileFinishedImporting("modules/impersonate/ImpersonateStore.tsx");
 
 export default impersonateStore;

@@ -1,33 +1,29 @@
 // discord_app/components_native/InAppNotificationSettingsModal.tsx
-import importAllResult from "noop";
-import { isMultiUserDM } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import updateUserGuildSettingsInternal from "updateUserGuildSettingsInternal";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import { Form } from "../design/void/Form/native/index.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
-import { computeChannelName } from "../modules/channel/useChannelName.tsx";
-import { ChannelSettingsNotificationsGuard } from "channel_settings/ChannelSettingsNotifications.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import computeChannelName from "computeChannelName" /* 4984 */;
+import Form from "Form" /* 8083 */;
+import ChannelSettingsNotificationsGuardDefault from "ChannelSettingsNotificationsGuard" /* 10082 */;
+import importAllResult from "noop" /* 19 */;
+import { isMultiUserDM } from "createChannelRecord" /* 1395 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "updateUserGuildSettingsInternal" /* 5043 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_12;
-let unpackModuleId;
-let require = arg1;
+require = arg1;
 function ConnectedInAppNotificationSettingsScreen(channel) {
   channel = channel.channel;
   let obj = channel(589);
-  const items = [updateUserGuildSettingsInternal];
+  const items = [closure_7];
   obj = {
     channel,
     isMuted: obj.useStateFromStores(items, () => {
       let isChannelMutedResult;
       if (null != channel) {
-        if (outer1_4(obj.type)) {
-          isChannelMutedResult = outer1_7.isChannelMuted(obj.getGuildId(), obj.id);
+        if (closure_1_4(obj.type)) {
+          isChannelMutedResult = closure_1_7.isChannelMuted(obj.getGuildId(), obj.id);
         }
       }
       return isChannelMutedResult;
@@ -44,15 +40,13 @@ class InAppNotificationSettingsScreen extends PureComponent {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleGroupDMMute = function handleGroupDMMute() {
-      let channel;
-      let isMuted;
       ({ channel, isMuted } = applyArgumentsResult.props);
       if (null != channel) {
-        let obj = outer1_1(outer1_2[8]);
+        let obj = closure_1_1(closure_1_2[8]);
         const guildId = channel.getGuildId();
         obj = { muted: null };
         obj[0] = !isMuted;
-        const NotificationLabel = applyArgumentsResult(outer1_2[9]).NotificationLabel;
+        const NotificationLabel = applyArgumentsResult(closure_1_2[9]).NotificationLabel;
         const result = obj.updateChannelOverrideSettings(guildId, channel.id, obj, NotificationLabel.muted(!isMuted));
       }
     };
@@ -71,11 +65,11 @@ prototype["renderGroupDMNotificationSettings"] = function renderGroupDMNotificat
     return null;
   } else {
     let obj = computeChannelName;
-    const channelName = obj.computeChannelName(channel, mergeGuildAvatar, markAllUserIdListsStale);
+    const channelName = obj.computeChannelName(channel, closure_8, closure_6);
     obj = { children: null };
     obj = { label: null, value: null, onValueChange: null };
     const intl = getSystemLocale.intl;
-    const obj1 = { name: null };
+    obj1 = { name: null };
     obj1[0] = channelName;
     obj[0] = intl.format(getSystemLocale.t["u/rEuc"], obj1);
     obj[1] = tmp2;
@@ -90,7 +84,7 @@ prototype["renderTextChannelNotificationSettings"] = function renderTextChannelN
   if (null != channel) {
     const obj = { channelId: null };
     obj[0] = channel.id;
-    tmp = callback(ChannelSettingsNotificationsGuard, obj);
+    tmp = callback(ChannelSettingsNotificationsGuardDefault, obj);
   }
   return tmp;
 };
@@ -126,7 +120,7 @@ prototype["render"] = function render() {
   obj[2] = callback(Form.FormRow.Arrow, {});
   obj[1] = callback(Form.FormRow, obj);
   items[1] = callback(Form.FormSection, obj);
-  const obj1 = { children: null };
+  obj1 = { children: null };
   const intl3 = getSystemLocale.intl;
   obj1[0] = intl3.string(getSystemLocale.t.avgbp1);
   items[2] = callback(Form.FormHint, obj1);
@@ -138,33 +132,31 @@ const memoResult = importAllResult.memo((channelId) => {
   const onClose = channelId.onClose;
   const items = [channelId, onClose];
   const screens = importAllResult.useMemo(() => {
-    channel = outer1_5.getChannel(channel);
+    channel = closure_1_5.getChannel(channel);
     let obj = { IN_APP_NOTIFICATION_SETTINGS: null };
     obj = {
       headerTitle() {
         const obj = { title: null, subtitle: null };
-        const intl = callback(outer1_2[12]).intl;
-        obj[0] = intl.string(callback(outer1_2[12]).t.h850Ss);
+        const intl = callback(closure_1_2[12]).intl;
+        obj[0] = intl.string(callback(closure_1_2[12]).t.h850Ss);
         let channelName = null;
         if (null != callback) {
-          const tmp3Result = callback(outer1_2[10]);
-          channelName = tmp3Result.computeChannelName(tmp, outer1_8, outer1_6, true);
+          const tmp3Result = callback(closure_1_2[10]);
+          channelName = tmp3Result.computeChannelName(tmp, closure_1_8, closure_1_6, true);
         }
         obj[1] = channelName;
-        return outer1_11(callback(outer1_2[16]).NavigatorHeader, obj);
+        return closure_1_11(callback(closure_1_2[16]).NavigatorHeader, obj);
       },
-      headerLeft: null,
-      render: null
-    };
-    obj[1] = channelId(outer1_2[16]).getHeaderCloseButton(onClose);
-    obj[2] = function render() {
-      return outer1_11(outer1_14, { channel: closure_0 });
+      headerLeft: channelId(closure_1_2[16]).getHeaderCloseButton(onClose),
+      render() {
+        return closure_1_11(closure_1_14, { channel: closure_0 });
+      }
     };
     obj[0] = obj;
     return obj;
   }, items);
   return callback(channelId(6312).Navigator, { screens, initialRouteName: "IN_APP_NOTIFICATION_SETTINGS" });
 });
-let result = require("ensureGuildLoaded").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
+let result = require("set").fileFinishedImporting("components_native/InAppNotificationSettingsModal.tsx");
 
 export default memoResult;

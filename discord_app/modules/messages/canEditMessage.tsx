@@ -1,13 +1,11 @@
 // discord_app/modules/messages/canEditMessage.tsx
-import ME from "ME";
-import { isSystemMessage } from "isSystemMessage.tsx";
-import { createMinimalMessageRecord } from "MessageRecordUtils.tsx";
+import set from "set" /* 2 */;
+import createMinimalMessageRecord from "createMinimalMessageRecord" /* 4803 */;
+import isSystemMessageDefault from "isSystemMessage" /* 5385 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
 ({ MessageFlags: c3, MessageStates: c4, MessageTypes: c5 } = ME);
-let result = require("createMinimalMessageRecord").fileFinishedImporting("modules/messages/canEditMessage.tsx");
+let result = set.fileFinishedImporting("modules/messages/canEditMessage.tsx");
 
 export default function canEditMessage(author) {
   let tmp = null != arg1;
@@ -16,7 +14,7 @@ export default function canEditMessage(author) {
     if (tmp3) {
       let tmp5 = author.state === constants2.SENT;
       if (tmp5) {
-        const tmp8 = isSystemMessage(author);
+        const tmp8 = isSystemMessageDefault(author);
         let tmp9 = !tmp8;
         if (!tmp8) {
           let result = createMinimalMessageRecord.canEditMessageWithStickers(author);

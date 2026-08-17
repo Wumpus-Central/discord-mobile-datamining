@@ -1,10 +1,11 @@
 // discord_app/modules/staff/StaffMemberPreloaderManager.tsx
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
 
 let require = arg1;
+initializeDefault;
 let prototype = function StaffMemberPreloaderManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
-  const require = applyArgumentsResult;
+  require = applyArgumentsResult;
   applyArgumentsResult.actions = {
     POST_CONNECTION_OPEN() {
       return applyArgumentsResult.handlePostConnectionOpen();

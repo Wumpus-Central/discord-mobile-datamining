@@ -1,30 +1,29 @@
 // discord_app/modules/user_settings/defs/native/LogoutSetting.tsx
-import jsxProd from "jsxProd";
-import createToggle from "createToggle";
-import { Storage } from "../../../../../discord_common/js/packages/storage/Storage.tsx";
-import { handleLogout } from "../../../../actions/AuthenticationActionCreators.tsx";
-import { SelectedChannelActionCreators } from "../../../../actions/SelectedChannelActionCreators.tsx";
-import { dispatcher } from "../../../../actions/UserSettingsModalActionCreators.tsx";
-import { keys } from "../../../../ConstantsIOS.tsx";
-import { getAlertModalItemKey } from "../../../../design/components/AlertModal/native/AlertModal.native.tsx";
-import { useAlertStore } from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { NativeModules } from "../../../../lib/pushnotification/PushNotification.tsx";
+import set from "set" /* 2 */;
+import Storage2 from "Storage" /* 595 */;
+import keys from "keys" /* 691 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useAlertStore from "useAlertStore" /* 4657 */;
+import getAlertModalItemKey from "getAlertModalItemKey" /* 4660 */;
+import _modDef4975 from "module_4975" /* 4975 */;
+import handleLogoutDefault from "handleLogout" /* 5256 */;
+import dispatcherDefault from "dispatcher" /* 7877 */;
+import NativeModulesDefault from "NativeModules" /* 11579 */;
+import DoorExitIcon from "DoorExitIcon" /* 12514 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let c3;
-let c4;
-let c5;
 function handleLogout() {
-  const Storage = Storage.Storage;
+  const Storage = Storage2.Storage;
   const result = Storage.set(keys.StorageKeys.LOGOUT_TIMESTAMP_KEY, new Date().getTime());
   const date = new Date();
-  SelectedChannelActionCreators.disconnect();
-  const obj2 = SelectedChannelActionCreators;
-  const result1 = NativeModules.clearAllNotifications();
-  const obj3 = NativeModules;
-  dispatcher.close();
-  const obj4 = dispatcher;
-  handleLogout.logout("confirm_logout_alert");
+  _modDef4975.disconnect();
+  const obj2 = _modDef4975;
+  const result1 = NativeModulesDefault.clearAllNotifications();
+  const obj3 = NativeModulesDefault;
+  dispatcherDefault.close();
+  const obj4 = dispatcherDefault;
+  handleLogoutDefault.logout("confirm_logout_alert");
 }
 ({ jsx: c3, Fragment: c4, jsxs: c5 } = jsxProd);
 const pressable = createToggle.createPressable({
@@ -32,7 +31,7 @@ const pressable = createToggle.createPressable({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["2jxGer"]);
   },
-  IconComponent: require("DoorExitIcon").DoorExitIcon,
+  IconComponent: DoorExitIcon.DoorExitIcon,
   parent: null,
   variant: "danger",
   onPress: function showConfirmLogoutAlert() {
@@ -43,7 +42,7 @@ const pressable = createToggle.createPressable({
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t.SUnWBB);
     obj = { children: null };
-    const obj1 = { text: null, onPress: null, variant: "destructive" };
+    obj1 = { text: null, onPress: null, variant: "destructive" };
     const intl3 = getSystemLocale.intl;
     obj1[0] = intl3.string(getSystemLocale.t["2jxGer"]);
     obj1[1] = handleLogout;
@@ -62,7 +61,7 @@ let obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["2jxGer"]);
   },
-  IconComponent: require("DoorExitIcon").DoorExitIcon,
+  IconComponent: DoorExitIcon.DoorExitIcon,
   parent: null,
   variant: "danger",
   onPress: function showConfirmLogoutAlert() {
@@ -73,7 +72,7 @@ let obj = {
     const intl2 = getSystemLocale.intl;
     obj[1] = intl2.string(getSystemLocale.t.SUnWBB);
     obj = { children: null };
-    const obj1 = { text: null, onPress: null, variant: "destructive" };
+    obj1 = { text: null, onPress: null, variant: "destructive" };
     const intl3 = getSystemLocale.intl;
     obj1[0] = intl3.string(getSystemLocale.t["2jxGer"]);
     obj1[1] = handleLogout;
@@ -87,6 +86,6 @@ let obj = {
     obj.openAlert("logout", callback(getAlertModalItemKey.AlertModal, obj));
   }
 };
-let result = require("keys").fileFinishedImporting("modules/user_settings/defs/native/LogoutSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/LogoutSetting.tsx");
 
 export default pressable;

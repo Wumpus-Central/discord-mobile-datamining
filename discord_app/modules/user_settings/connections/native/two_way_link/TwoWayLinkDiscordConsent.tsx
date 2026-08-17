@@ -1,30 +1,21 @@
 // discord_app/modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx
-import timestamp from "timestamp";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: closure_6, ScrollView: error } = get_ActivityIndicator);
-({ jsxs: metroImportAll, jsx: c9 } = jsxProd);
-let c10 = new require("get ActivityIndicator")("TwoWayLinkDiscordConsentNative");
+({ jsxs: closure_8, jsx: c9 } = jsxProd);
+let closure_10 = new timestampDefault("TwoWayLinkDiscordConsentNative");
 let closure_11 = createCacheKey.createStyles({ scroller: { alignSelf: "stretch", flexShrink: 1 }, flex: { flex: 1 } });
-const tmp4 = new require("get ActivityIndicator")("TwoWayLinkDiscordConsentNative");
-const result = require("noop").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
+const tmp4 = new timestampDefault("TwoWayLinkDiscordConsentNative");
+const result = require("set").fileFinishedImporting("modules/user_settings/connections/native/two_way_link/TwoWayLinkDiscordConsent.tsx");
 
 export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callbackCode) {
-  let appDetails;
-  let body;
-  let clientId;
-  let header;
-  let redirectUri;
-  let scopes;
   callbackCode = callbackCode.callbackCode;
   let _require = callbackCode;
   const callbackState = callbackCode.callbackState;
@@ -41,10 +32,10 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
   React = tmp5[1];
   _require = undefined;
   _require = onNext((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -77,19 +68,19 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
               let _location;
               code = undefined;
               let v0 = 1;
-              let obj1 = callbackState(platformType[8]);
+              obj1 = callbackState(platformType[8]);
               c5 = 2;
               c6 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.completeTwoWayLink(outer1_2, _location.location, _location, outer1_1);
+              obj1[0] = obj1.completeTwoWayLink(closure_1_2, _location.location, _location, closure_1_1);
               return obj1;
             }
           } else {
             if (1 === tmp8) {
               v0 = 0;
-              body = timestamp;
+              body = closure_3;
               const _HermesInternal = HermesInternal;
-              outer2_10.error("" + outer1_2 + " link error:", body);
+              closure_2_10.error("" + closure_1_2 + " link error:", body);
               body = body.body;
               code = undefined;
               if (body != null) {
@@ -109,14 +100,14 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
               v0 = 0;
             }
             if (null != _location) {
-              outer1_3();
+              closure_1_3();
             } else {
               v0(code);
             }
             c6 = 3;
           }
         } catch (tmp38) {
-          timestamp = tmp38;
+          closure_3 = tmp38;
           if (tmp4 === v0) {
             c6 = tmp2;
             throw tmp38;
@@ -149,7 +140,7 @@ export const TwoWayLinkDiscordConsent = function TwoWayLinkDiscordConsent(callba
     sendAuthorize({ isAuthorized: true });
   }, items1);
   obj = { style: tmp.flex, children: null };
-  let obj1 = { style: tmp.scroller, children: null };
+  obj1 = { style: tmp.scroller, children: null };
   const obj2 = { style: twoWayLinkStyles.body, children: null };
   const items2 = [header, ];
   const items3 = [body, appDetails];

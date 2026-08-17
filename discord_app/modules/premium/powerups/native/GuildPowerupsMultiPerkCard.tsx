@@ -1,18 +1,17 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx
-import noop from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/native/GuildPowerupsMultiPerkCard.tsx");
 
 export default function GuildPowerupsMultiPerkCard(guildId) {
-  let costDecorator;
   guildId = guildId.guildId;
   const listing = guildId.listing;
   let badge = listing(11718)(guildId, listing);
   let obj = guildId(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   obj = { guildId, powerups: listing.powerups };
   costDecorator = listing(11742)(obj);

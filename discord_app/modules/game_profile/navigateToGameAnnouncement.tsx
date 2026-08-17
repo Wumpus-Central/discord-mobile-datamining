@@ -1,24 +1,16 @@
 // discord_app/modules/game_profile/navigateToGameAnnouncement.tsx
-import generateAcceptInviteOptions from "generateAcceptInviteOptions";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import ME from "ME";
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import ME from "ME" /* 676 */;
 
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 function _navigateToGameAnnouncement() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c2;
-      let c3;
-      let c4;
-      let id;
       if (guild === 2) {
         guild = 3;
         HermesBuiltin.throwTypeError();
@@ -45,7 +37,7 @@ function _navigateToGameAnnouncement() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp5;
+              dependencyMap = tmp5;
               id = tmp2;
               let lib;
               id = undefined;
@@ -67,7 +59,7 @@ function _navigateToGameAnnouncement() {
                 throw arg1;
               } else if (arg0 === 2) {
                 guild = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -164,7 +156,7 @@ function _navigateToGameAnnouncement() {
     iter.next();
     return iter;
   });
-  const _navigateToGameAnnouncement = tmp;
+  closure_8 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -174,7 +166,7 @@ function _navigateToGameAnnouncement() {
   return applyArgumentsResult;
 }
 ({ GuildFeatures: c5, JoinGuildSources: closure_6, Routes: error } = ME);
-const result = require("ME").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
+const result = require("set").fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");
 
 export default function navigateToGameAnnouncement() {
   const self = this;

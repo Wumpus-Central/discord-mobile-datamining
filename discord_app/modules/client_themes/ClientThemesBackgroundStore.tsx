@@ -1,56 +1,57 @@
 // discord_app/modules/client_themes/ClientThemesBackgroundStore.tsx
-import initialize from "initialize";
-import handleThemeChange from "handleThemeChange";
-import CHANNEL_SIDEBAR_WIDTH from "CHANNEL_SIDEBAR_WIDTH";
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import { isGuildTextChannelType } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes";
-import { SystemThemeState } from "SystemThemeState";
-import { PersistedStore } from "initialize";
-import { DismissibleContent } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { UNSAFE_isDismissibleContentDismissed } from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../themes/experiments/MobileVisualRefreshExperiment.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getThemeForColor from "getThemeForColor" /* 1347 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import UNSAFE_isDismissibleContentDismissed from "UNSAFE_isDismissibleContentDismissed" /* 4196 */;
+import closure_5 from "initialize" /* 1303 */;
+import closure_6 from "handleThemeChange" /* 1302 */;
+import closure_7 from "CHANNEL_SIDEBAR_WIDTH" /* 1304 */;
+import closure_8 from "handleConnectionClosedOrResumed" /* 1340 */;
+import { isGuildTextChannelType } from "createChannelRecord" /* 1395 */;
+import closure_10 from "ensureGuildLoaded" /* 1391 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import { BACKGROUND_GRADIENT_PRESETS_MAP as closure_12 } from "ThemeTypes" /* 1348 */;
+import { SystemThemeState } from "SystemThemeState" /* 1305 */;
 import { isPerModeThemingActive } from "../user_settings/isPerModeThemingActive.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
-import { getThemeForColor } from "ClientThemesUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function isSyncedModeThemesEnabled() {
   return useIsMobileVisualRefreshExperimentEnabled.isMobileVisualRefreshEnabled("ClientThemesBackgroundStore");
 }
 function reset() {
   if (c14) {
-    let c3;
+    c3 = undefined;
   }
-  let c16 = false;
-  let c15 = false;
+  c16 = false;
+  c15 = false;
 }
 function handleUserStoreChange() {
-  const tmp = !getPremiumPlanItem.canUseClientThemes(currentUser.getCurrentUser());
-  if (tmp === c14) {
+  const tmp = !getPremiumPlanItemDefault.canUseClientThemes(currentUser.getCurrentUser());
+  if (tmp === closure_14) {
     return false;
   } else {
-    c14 = tmp;
-    let c16 = false;
+    closure_14 = tmp;
+    c16 = false;
   }
-  const obj = getPremiumPlanItem;
+  const obj = getPremiumPlanItemDefault;
 }
 function handleSelectivelySyncedStoreChange() {
   const ClientThemeSettings = explicitContentFromProto.ClientThemeSettings;
   const backgroundGradientPresetId = ClientThemeSettings.getSetting().backgroundGradientPresetId;
   if (null == backgroundGradientPresetId) {
-    if (null == c3) {
+    if (null == closure_3) {
       return false;
     } else {
-      c3 = undefined;
+      closure_3 = undefined;
     }
-  } else if (dependencyMap[backgroundGradientPresetId] === c3) {
+  } else if (dependencyMap[backgroundGradientPresetId] === closure_3) {
     return false;
   } else {
-    c3 = tmp2;
+    closure_3 = tmp2;
   }
 }
 function handleSyncedModeChange() {
@@ -97,6 +98,7 @@ function handleUserSettingsProtoStoreUpdate() {
 let c14 = true;
 let c15 = false;
 let c16 = false;
+const PersistedStore = initializeDefault.PersistedStore;
 class ClientThemesBackgroundStore extends PersistedStore {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -117,19 +119,19 @@ class ClientThemesBackgroundStore extends PersistedStore {
 }
 const prototype = ClientThemesBackgroundStore.prototype;
 prototype["initialize"] = function initialize(gradientPresetId) {
-  let c16 = false;
+  c16 = false;
   if (null != gradientPresetId) {
     let tmp;
     if (null != gradientPresetId.gradientPresetId) {
       tmp = dependencyMap[gradientPresetId.gradientPresetId];
     }
-    let closure_3 = tmp;
-    let closure_14 = true !== gradientPresetId.canUseClientThemes;
+    closure_3 = tmp;
+    closure_14 = true !== gradientPresetId.canUseClientThemes;
   }
-  this.waitFor(ensureGuildLoaded, initialize, handleThemeChange, CHANNEL_SIDEBAR_WIDTH, handleConnectionClosedOrResumed, mergeGuildAvatar);
-  const items = [mergeGuildAvatar];
+  this.waitFor(closure_10, closure_5, closure_6, closure_7, closure_8, closure_11);
+  const items = [closure_11];
   this.syncWith(items, handleUserStoreChange);
-  const items1 = [initialize];
+  const items1 = [closure_5];
   this.syncWith(items1, handleSelectivelySyncedStoreChange);
 };
 prototype["getState"] = function getState() {
@@ -201,15 +203,15 @@ Object.defineProperty(prototype, "mobilePendingThemeIndex", {
 });
 ClientThemesBackgroundStore.displayName = "ClientThemesBackgroundStore";
 ClientThemesBackgroundStore.persistKey = "ClientThemesBackgroundStore";
-const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dispatcher"), {
+const clientThemesBackgroundStore = new ClientThemesBackgroundStore(dispatcherDefault, {
   UPDATE_BACKGROUND_GRADIENT_PRESET: function handleUpdateBackgroundGradientPreset(presetId) {
     presetId = presetId.presetId;
-    let closure_16 = c14;
+    closure_16 = c14;
     let tmp;
     if (null != presetId) {
       tmp = dependencyMap[presetId];
     }
-    let closure_3 = tmp;
+    closure_3 = tmp;
   },
   UPDATE_MOBILE_PENDING_THEME_INDEX: function handleUpdateMobilePendingThemeIndex(mobileThemesIndex) {
     mobileThemesIndex = mobileThemesIndex.mobileThemesIndex;
@@ -217,11 +219,11 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
     if (null != mobileThemesIndex) {
       tmp = mobileThemesIndex;
     }
-    let closure_4 = tmp;
+    mobileThemesIndex = tmp;
   },
   RESET_PREVIEW_CLIENT_THEME: function handleResetPreviewClientTheme() {
-    let c3;
-    let c16 = false;
+    c3 = undefined;
+    c16 = false;
   },
   CLIENT_THEMES_EDITOR_CLOSE: reset,
   CHANNEL_SELECT: function handleChannelSelect(channelId) {
@@ -236,7 +238,7 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
               tmp4 = isGuildTextChannelType(channel.type);
             }
             if (tmp4) {
-              let c15 = true;
+              c15 = true;
             }
           }
           tmp6Result = tmp6(4219);
@@ -258,6 +260,6 @@ const clientThemesBackgroundStore = new ClientThemesBackgroundStore(require("dis
   SET_SAME_AS_DEVICE_THEME_ENABLED: handleSameAsDeviceThemeToggle,
   CLEAR_SYNCED_CLIENT_THEMES: handleSameAsDeviceThemeToggle
 });
-let result = require("CHANNEL_SIDEBAR_WIDTH").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
+let result = require("set").fileFinishedImporting("modules/client_themes/ClientThemesBackgroundStore.tsx");
 
 export default clientThemesBackgroundStore;

@@ -1,35 +1,31 @@
 // discord_app/modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import withContent from "withContent";
-import closure_7 from "withContent";
-import initializeFromUserSettings from "initializeFromUserSettings";
-import { NOOP } from "ME";
-import keys from "keys";
+import DismissibleContent from "DismissibleContent" /* 1377 */;
+import useCanShowFavoritesGuildOnboardingDefault from "useCanShowFavoritesGuildOnboarding" /* 9989 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import withContent from "withContent" /* 1383 */;
+import closure_7 from "withContent" /* 1383 */;
+import closure_8 from "initializeFromUserSettings" /* 1394 */;
+import { NOOP } from "ME" /* 676 */;
+import keys from "keys" /* 644 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { DismissibleContent } from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 import { useFavoritesAccess } from "../FavoritesHooks.tsx";
-import { useCanShowFavoritesGuildOnboarding } from "../hooks/useCanShowFavoritesGuildOnboarding.native.tsx";
 
-let c5;
-let closure_6;
-let require = arg1;
+require = arg1;
 let c4 = importAllResult;
 ({ isContentShown: c5, useIsContentShown: closure_6 } = withContent);
 let closure_10 = keys.create(() => ({ shouldShowPopover: false, markPopoverAsDismissed: NOOP }));
 let c11 = false;
 const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
-  let hasAccess;
-  let isFreemium;
-  const favoritesAccess = useFavoritesAccess.useFavoritesAccess("FavoritesGuildIntroPopover");
+  const favoritesAccess = _useFavoritesAccess.useFavoritesAccess("FavoritesGuildIntroPopover");
   ({ hasAccess, isFreemium } = favoritesAccess);
-  const obj = useFavoritesAccess;
-  const items = [initializeFromUserSettings];
-  const stateFromStores = initialize.useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
-  const obj2 = initialize;
-  const tmp5 = useCanShowFavoritesGuildOnboarding();
-  useSelectedDismissibleContent;
+  const obj = _useFavoritesAccess;
+  const items = [closure_8];
+  const stateFromStores = _initialize.useStateFromStores(items, () => false === obj.favoriteGuildVisibleSetting);
+  const obj2 = _initialize;
+  const tmp5 = useCanShowFavoritesGuildOnboardingDefault();
+  _useSelectedDismissibleContent;
   if (hasAccess) {
     if (isFreemium) {
       if (!stateFromStores) {
@@ -38,7 +34,7 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
             let items1 = [tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO];
           }
           const tmp10 = callback(tmp8(items1), 2);
-          require = tmp11;
+          _require = tmp11;
           if (tmp10[0] === tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_INTRO) {
             const items2 = [tmp(1377).DismissibleContent.FAVORITES_SERVER_ONBOARDING_MENU_ITEM];
             let items3 = items2;
@@ -50,12 +46,12 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
           const items4 = [tmp12];
           const effect = importAllResult.useEffect(() => {
             if (closure_1) {
-              const outer1_11 = true;
+              c11 = true;
             }
           }, items4);
           const items5 = [tmp12, tmp10[1]];
           const layoutEffect = importAllResult.useLayoutEffect(() => {
-            outer1_10.setState({ shouldShowPopover: closure_1, markPopoverAsDismissed: closure_0 });
+            closure_1_10.setState({ shouldShowPopover: closure_1, markPopoverAsDismissed: closure_0 });
           }, items5);
           const layoutEffect1 = importAllResult.useLayoutEffect(() => () => state.setState({ shouldShowPopover: false, markPopoverAsDismissed: closure_9 }), []);
           return null;
@@ -65,14 +61,14 @@ const memoResult = importAllResult.memo(function FavoritesGuildIntroPopover() {
   }
   items1 = [];
 });
-const result = require("withContent").fileFinishedImporting("modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx");
+const result = require("set").fileFinishedImporting("modules/favorites/onboarding/FavoritesGuildIntroPopover.tsx");
 
 export default memoResult;
 export function hasOfferedFavoritesGuildOnboarding() {
   return c11;
 }
 export function resetHasOfferedFavoritesGuildOnboarding() {
-  let c11 = false;
+  c11 = false;
 }
 export const useFavoritesIntroPopover = function useFavoritesIntroPopover() {
   return { shouldShowPopover: callback5((shouldShowPopover) => shouldShowPopover.shouldShowPopover), markPopoverAsDismissed: callback5((markPopoverAsDismissed) => markPopoverAsDismissed.markPopoverAsDismissed) };

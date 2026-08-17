@@ -1,18 +1,18 @@
 // discord_app/modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx
-import initialize from "initialize";
-import { useMemo } from "noop";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
-import { useEditStateStore } from "AllChannelAccessOptions";
-import closure_9 from "initialize";
-import { GuildFeatures } from "ME";
-import { ChannelFlags } from "set";
-import importDefaultResult from "allSettled";
+import computeGuildRoleSubscriptionSettingsVisibility from "computeGuildRoleSubscriptionSettingsVisibility" /* 7226 */;
+import GuildFeatures2 from "GuildFeatures" /* 13353 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import { useMemo } from "noop" /* 19 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import closure_7 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import { useEditStateStore } from "AllChannelAccessOptions" /* 14574 */;
+import closure_9 from "initialize" /* 14580 */;
+import { GuildFeatures } from "ME" /* 676 */;
+import { ChannelFlags } from "set" /* 1398 */;
+import importDefaultResult from "allSettled" /* 4385 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { computeGuildRoleSubscriptionSettingsVisibility } from "../feature_gating/GuildRoleSubscriptionSettingUtils.tsx";
-import { GuildFeatures } from "../GuildRoleSubscriptionsExperimentUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function getUsedTemplateChannelsForGuild(arg0) {
   let arr = useEditStateStore.getState().editStateIdsForGroup[arg0];
   const listings = useEditStateStore.getState().listings;
@@ -25,7 +25,7 @@ function getUsedTemplateChannelsForGuild(arg0) {
       }
       if (channelBenefits != null) {
         const item = channelBenefits.forEach((ref_id) => {
-          if (null != outer1_9.getChannel(ref_id.ref_id)) {
+          if (null != closure_1_9.getChannel(ref_id.ref_id)) {
             set.add(ref_id.ref_id);
           }
         });
@@ -48,10 +48,10 @@ function getUsedTemplateChannelsForGuild(arg0) {
 function _createChannelsFromTemplateTierBenefits() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0, arr) {
       if (c4 === 2) {
         c4 = 3;
@@ -83,7 +83,7 @@ function _createChannelsFromTemplateTierBenefits() {
               items = [];
               c3 = [];
               let item = closure_1.forEach((ref_id) => {
-                const channel = outer1_9.getChannel(ref_id.ref_id);
+                const channel = closure_1_9.getChannel(ref_id.ref_id);
                 if (null != channel) {
                   const obj = callback(arr[12]);
                   arr = items.push(obj.createRoleSubscriptionTemplateChannel(closure_0, channel.name, channel.type, channel.topic));
@@ -93,7 +93,7 @@ function _createChannelsFromTemplateTierBenefits() {
               if (0 !== items.length) {
                 c3 = 1;
                 c4 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = Promise.allSettled(items);
                 return obj1;
               } else {
@@ -108,8 +108,8 @@ function _createChannelsFromTemplateTierBenefits() {
               const id = arr[arg1].id;
               if ("fulfilled" === status.status) {
                 const body = status.value.body;
-                const arr2 = outer1_8.getState().editStateIdsForGroup[id];
-                const listings = outer1_8.getState().listings;
+                const arr2 = closure_1_8.getState().editStateIdsForGroup[id];
+                const listings = closure_1_8.getState().listings;
                 if (null != arr2) {
                   let item = arr2.forEach((arg0) => {
                     let channelBenefits;
@@ -142,7 +142,7 @@ function _createChannelsFromTemplateTierBenefits() {
       }
     })();
   });
-  const _createChannelsFromTemplateTierBenefits = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -151,20 +151,20 @@ function _createChannelsFromTemplateTierBenefits() {
   }
   return applyArgumentsResult;
 }
-require("allSettled").shim();
+importDefaultResult.shim();
 let closure_12 = {};
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/tier_templates/GuildRoleSubscriptionTierTemplatesUtils.tsx");
 
 export const useChannelWithTemplateFallback = function useChannelWithTemplateFallback(ref_id) {
   const _require = ref_id;
-  const items = [ensureGuildLoaded];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_6.getChannel(closure_0));
+  const items = [closure_6];
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_6.getChannel(closure_0));
   let obj = _defaultAreStatesEqual;
   const items1 = [closure_9];
-  let stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => outer1_9.getChannel(closure_0));
+  let stateFromStores1 = _defaultAreStatesEqual.useStateFromStores(items1, () => closure_1_9.getChannel(closure_0));
   let obj3 = _defaultAreStatesEqual;
-  const items2 = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores2 = _defaultAreStatesEqual.useStateFromStores(items2, () => outer1_7.getBenefitChannel(closure_0));
+  const items2 = [closure_7];
+  const stateFromStores2 = _defaultAreStatesEqual.useStateFromStores(items2, () => closure_1_7.getBenefitChannel(closure_0));
   const items3 = [stateFromStores, stateFromStores2];
   let tmp3 = useMemo(() => {
     let obj = stateFromStores;
@@ -176,9 +176,9 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
         if (null != stateFromStores2) {
           obj = { name: null, flags: null };
           obj[0] = tmp2.name;
-          obj[1] = stateFromStores2(outer1_3[10]).removeFlag(obj.flags, outer1_11.OBFUSCATED);
+          obj[1] = stateFromStores2(closure_1_3[10]).removeFlag(obj.flags, closure_1_11.OBFUSCATED);
           mergeResult = obj.merge(obj);
-          const obj3 = stateFromStores2(outer1_3[10]);
+          const obj3 = stateFromStores2(closure_1_3[10]);
         }
       }
     }
@@ -198,10 +198,10 @@ export const useChannelWithTemplateFallback = function useChannelWithTemplateFal
 };
 export const useSuggestedUnusedPrices = function useSuggestedUnusedPrices(guildId, priceTiers, price_tier) {
   const _require = guildId;
-  const items = [makeGroupListingIndexSubscriptionListingTag];
-  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => outer1_7.getSubscriptionListingsForGuild(closure_0));
+  const items = [closure_7];
+  const stateFromStores = _defaultAreStatesEqual.useStateFromStores(items, () => closure_1_7.getSubscriptionListingsForGuild(closure_0));
   const arr3 = useEditStateStore((arg0) => arg0.editStateIdsForGroup[closure_0]);
-  let closure_1 = useEditStateStore((listings) => listings.listings);
+  closure_1 = useEditStateStore((listings) => listings.listings);
   if (undefined !== price_tier) {
     if (undefined !== priceTiers) {
       const found = stateFromStores.filter((soft_deleted) => {
@@ -376,7 +376,7 @@ export const getTemplateTierCreationAnalyticsContext = function getTemplateTierC
                     return obj;
                   }
                 }
-                const obj1 = { templateCategory: null, hasChangeFromTemplate: true };
+                obj1 = { templateCategory: null, hasChangeFromTemplate: true };
                 obj1[0] = templateWithCategory.category;
                 return obj1;
               }
@@ -397,8 +397,8 @@ export const isEligibleForNewBadge = function isEligibleForNewBadge(features) {
     result = features.has(GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED);
   }
   if (result) {
-    result = GuildFeatures.isGuildEligibleForTierTemplates(features.id);
-    const tmpResult = GuildFeatures;
+    result = GuildFeatures2.isGuildEligibleForTierTemplates(features.id);
+    const tmpResult = GuildFeatures2;
   }
   return result;
 };

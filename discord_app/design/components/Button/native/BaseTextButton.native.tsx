@@ -1,24 +1,16 @@
 // discord_app/design/components/Button/native/BaseTextButton.native.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "set";
-import get_ActivityIndicator from "getNodeText";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import createCacheKey from "createCacheKey";
-import IconSizes from "IconSizes";
-import createCacheKey from "createCacheKey";
-import { LARGE_BUTTON_HEIGHT } from "MINIMUM_HIT_AREA";
-import { LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA";
-import importDefaultResult from "module_4115";
-import { styleProperties } from "ButtonHooks.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import IconSizesDefault from "IconSizes" /* 4747 */;
+import styleProperties from "styleProperties" /* 4750 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import { LARGE_BUTTON_HEIGHT, LARGE_BUTTON_HEIGHT as LARGE_BUTTON_HEIGHT2 } from "MINIMUM_HIT_AREA" /* 4749 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-let Platform;
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function CollapsingText(children) {
   const collapseText = children.collapseText;
   let sharedValue;
@@ -80,28 +72,22 @@ function CollapsingText(children) {
   fn3.__workletHash = 5824483783888;
   fn3.__initData = closure_17;
   const animatedStyle1 = sharedValue(textCollapsed[6]).useAnimatedStyle(fn3);
-  obj = { style: items1, onLayout: workletCallback, children: null };
+  obj = { style: items1, onLayout: workletCallback, children: callback(collapseText(textCollapsed[6]).View, { style: animatedStyle1, children: children.children }) };
   items1 = [tmp.container, animatedStyle];
-  obj[2] = callback(collapseText(textCollapsed[6]).View, { style: animatedStyle1, children: children.children });
   return callback(collapseText(textCollapsed[6]).View, obj);
 }
 function BaseTextButtonIcon(arg0) {
-  let icon;
-  let iconOpticalOffsetMargin;
-  let iconPosition;
-  let size;
-  let style;
   ({ icon, size, iconPosition, iconOpticalOffsetMargin, style } = arg0);
   let obj = styleProperties;
   const iconSizeStyles = obj.useIconSizeStyles(size);
   obj = { source: icon, style: null };
   const items = [style, iconSizeStyles, callback5(iconPosition, iconOpticalOffsetMargin).offset];
   obj[1] = items;
-  return callback(IconSizes, obj);
+  return callback(closure_12, obj);
 }
 let c4 = importAllResult;
 ({ Platform, Text: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0, arg1) => {
   let obj = { grow: { flexGrow: 1, alignSelf: "stretch" }, shrink: { flexShrink: 1 }, buttonText: null, icon: null, iconLeft: null, iconRight: null, expressiveButtonContainer: null };
   if (typeof getTextPlatformLineHeight !== "function") {
@@ -124,9 +110,10 @@ let closure_9 = createCacheKey.createStyles((arg0, arg1) => {
 });
 let closure_10 = createCacheKey.createStyles({ container: { flexDirection: "row", alignItems: "center", position: "relative" }, textCollapsed: { position: "absolute", left: 0 } });
 let obj = { entityWrapper: null };
-obj = { borderWidth: 1, borderRadius: require("Themes").radii.round, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden" };
+obj = { borderWidth: 1, borderRadius: ThemesDefault.radii.round, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden" };
 obj[0] = obj;
 let closure_11 = createCacheKey.createStyles(obj);
+let closure_12 = importDefaultResult.createAnimatedComponent(IconSizesDefault);
 let context = importAllResult.createContext("md");
 let closure_14 = { code: "function BaseTextButtonNativeTsx1({nativeEvent:nativeEvent}){const{containerWidth}=this.__closure;if(containerWidth.get()!==0)return;const{width:width}=nativeEvent.layout;containerWidth.set(width);}" };
 let closure_16 = { code: "function BaseTextButtonNativeTsx2(){const{containerWidth,withSpring,collapsed,SUBTLE_SPRING}=this.__closure;if(containerWidth.get()===0)return{};return{width:withSpring(collapsed.get()===1?0:containerWidth.get(),SUBTLE_SPRING,'animate-always'),opacity:withSpring(collapsed.get()===1?0:1,SUBTLE_SPRING,'animate-always')};}" };
@@ -138,7 +125,7 @@ let closure_18 = createCacheKey.createStyles((arg0, arg1) => {
     return obj;
   } else if ("start" === arg0) {
     obj = { offset: null };
-    const obj1 = { marginLeft: null };
+    obj1 = { marginLeft: null };
     obj1[0] = arg1;
     obj[0] = obj1;
     return obj;
@@ -177,7 +164,7 @@ createCacheKey = {
     const context = importAllResult.useContext(closure_13);
     let obj = styleProperties;
     obj = { source: source.source, disableColor: flag, style: obj.useIconSizeStyles(context) };
-    const tmp4 = callback(IconSizes, obj);
+    const tmp4 = callback(closure_12, obj);
     let tmp3Result = tmp4;
     if ("entity" === str) {
       obj = { style: null, children: null };
@@ -189,17 +176,6 @@ createCacheKey = {
   }
 };
 let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMargin, ref) => {
-  let accessibilityLabel;
-  let accessibilityRole;
-  let collapseText;
-  let icon;
-  let iconPosition;
-  let maxFontSizeMultiplier;
-  let pillStyle;
-  let size;
-  let style;
-  let text;
-  let textElement;
   ({ text, textElement, size } = iconOpticalOffsetMargin);
   ({ style, pillStyle } = iconOpticalOffsetMargin);
   if (undefined === size) {
@@ -241,7 +217,7 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   }
   const tmp10 = onPressIn(onLayout[13]).TextStyleSheet[textVariant];
   const tmp11 = callback2(size, tmp10.fontSize);
-  let obj1 = importAllResult;
+  obj1 = importAllResult;
   const enabled = importAllResult.useContext(onPressIn(tmp6[14]).AccessibilityPreferencesContext).reducedMotion.enabled;
   let str3 = iconOpticalOffsetMargin.variant;
   if (str3 == null) {
@@ -257,7 +233,7 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   const sharedValue = tmp9Result.useSharedValue(0);
   const startsWithResult = str3.startsWith("expressive");
   ref = obj1.useRef(null);
-  let closure_6 = obj1.useRef({ width: 0, height: 0 });
+  closure_6 = obj1.useRef({ width: 0, height: 0 });
   const tmp15 = enabled(obj1.useState({ pressed: false, posx: 0, posy: 0 }), 2);
   let callback = tmp15[1];
   const items = [onLayout, startsWithResult];
@@ -414,6 +390,6 @@ let merged = Object.assign({}, importAllResult.forwardRef((iconOpticalOffsetMarg
   obj3.children = callback(onPressIn(onLayout[18]).ButtonPill, obj4);
   return callback(onPressIn(onLayout[16]).BaseButton, obj3);
 }), createCacheKey);
-let result = require("get ActivityIndicator").fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
+let result = require("set").fileFinishedImporting("design/components/Button/native/BaseTextButton.native.tsx");
 
 export const BaseTextButton = merged;

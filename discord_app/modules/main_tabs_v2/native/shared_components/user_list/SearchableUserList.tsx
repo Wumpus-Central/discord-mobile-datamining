@@ -1,35 +1,27 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "module_8862";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { UserRowModes } from "UserRowModes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { searchBarContainer: null, searchBar: null, searchBarRowContainer: null, noResults: null };
-createCacheKey = { paddingHorizontal: require("Themes").space.PX_16, paddingBottom: require("Themes").space.PX_8, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
+createCacheKey = { paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_8, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { height: "disabled", minHeight: false };
-createCacheKey[2] = { paddingTop: require("Themes").space.PX_8 };
-let obj1 = { paddingTop: require("Themes").space.PX_8 };
-createCacheKey[3] = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { flex: 1, backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
+createCacheKey[2] = { paddingTop: ThemesDefault.space.PX_8 };
+let obj1 = { paddingTop: ThemesDefault.space.PX_8 };
+createCacheKey[3] = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { flex: 1, backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/SearchableUserList.tsx");
 
 export default function SearchableUserList(selectedUserIds) {
-  let defaultNoResultsFound;
-  let disableGradient;
-  let disableStickySections;
-  let disableThemedGradient;
-  let headerSize;
-  let renderHeader;
   selectedUserIds = selectedUserIds.selectedUserIds;
   const disabledUserIds = selectedUserIds.disabledUserIds;
   const onSelectUser = selectedUserIds.onSelectUser;
@@ -91,15 +83,15 @@ export default function SearchableUserList(selectedUserIds) {
     flag12 = false;
   }
   ({ defaultNoResultsFound, disableGradient } = selectedUserIds);
-  let c5;
+  closure_5 = undefined;
   let memo;
   ref = undefined;
   ({ disableStickySections, disableThemedGradient } = selectedUserIds);
-  const tmp2 = createCacheKey();
+  const tmp2 = callback();
   let obj = ACTIONS;
   let tmp3 = handleMessage(ACTIONS.useState(""), 2);
   const tmp6 = disabledUserIds(onSelectUser[8])({ query: tmp3[0], withGuildMembers: flag2, withAffinitySuggestions: flag3, withAlphabeticalSections: flag4, withFriends: flag5, withGameFriends: flag6, withFriendSuggestions: flag11, withFriendRequests: flag7, withFriendRequestsIncoming: flag8, withFriendRequestsOutgoing: flag9, withFriendRequestsSpam: flag10 });
-  c5 = tmp6;
+  closure_5 = tmp6;
   let items = [selectedUserIds];
   memo = ACTIONS.useMemo(() => {
     let items = selectedUserIds;
@@ -112,7 +104,7 @@ export default function SearchableUserList(selectedUserIds) {
   }, items);
   const items1 = [onSelectUser, memo];
   const items2 = [tmp6];
-  const callback = ACTIONS.useCallback((arg0) => {
+  callback = ACTIONS.useCallback((arg0) => {
     const user = memo.getUser(tmp.id);
     if (null != user) {
       onSelectUser(user);
@@ -123,21 +115,19 @@ export default function SearchableUserList(selectedUserIds) {
       AccessibilityAnnouncer.announce(intl.formatToPlainString(selectedUserIds(onSelectUser[12]).t.srlxB8, obj));
     }
   }, items1);
-  const memo1 = ACTIONS.useMemo(() => _undefined.map((items) => items.items.length), items2);
+  const memo1 = ACTIONS.useMemo(() => closure_5.map((items) => items.items.length), items2);
   const items3 = [tmp6];
   const callback1 = ACTIONS.useCallback((arg0) => {
-    const props = { title: _undefined[arg0].title };
+    const props = { title: closure_5[arg0].title };
     return { type: "section", props };
   }, items3);
   const tmp10 = tmp3[0].trim().length > 0;
   const items4 = [tmp6, disabledUserIds, onSelectUser, handleMessage, ACTIONS, selectedUserIds];
   const callback2 = ACTIONS.useCallback((arg0, arg1) => {
-    let firstMatch;
-    let user;
-    ({ user, firstMatch } = _undefined[arg0].items[arg1]);
+    ({ user, firstMatch } = closure_5[arg0].items[arg1]);
     const props = { type: tmp.type, user, nickname: null, onPress: null, handleMessage: null, disabled: null, selected: null, mode: null, start: null, end: null };
     let tmp3;
-    const diff = _undefined[arg0].items.length - 1;
+    const diff = closure_5[arg0].items.length - 1;
     if (user.username !== firstMatch) {
       tmp3 = firstMatch;
     }
@@ -215,7 +205,7 @@ export default function SearchableUserList(selectedUserIds) {
     let tmp20Result = tmp20(tmp13(tmp5[14]).UsersFastList, obj);
     let tmp27 = tmp20;
   } else {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     if (tmp19) {
       const items6 = [noResults, ];
       let prop1;
@@ -245,9 +235,9 @@ export default function SearchableUserList(selectedUserIds) {
       obj1[1] = tmp20(tmp4Result, obj2);
       tmp24 = obj1;
     }
-    tmp20Result = tmp20(c5, tmp24);
+    tmp20Result = tmp20(closure_5, tmp24);
     tmp27 = tmp20;
-    const tmp21 = c5;
+    const tmp21 = closure_5;
   }
   let tmp27Result = !disableGradient;
   if (!disableGradient) {
@@ -271,8 +261,8 @@ export default function SearchableUserList(selectedUserIds) {
       }
       obj5[4] = flag;
       obj4[1] = tmp27(tmp4Result, obj5);
-      tmp27Result = tmp27(c5, obj4);
-      const tmp32 = c5;
+      tmp27Result = tmp27(closure_5, obj4);
+      const tmp32 = closure_5;
     }
   }
   children[1] = tmp27Result;

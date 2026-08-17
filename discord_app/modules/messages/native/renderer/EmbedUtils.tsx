@@ -1,7 +1,8 @@
 // discord_app/modules/messages/native/renderer/EmbedUtils.tsx
-import { Image } from "get ActivityIndicator";
-import set from "set";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "set" /* 2 */;
 
+const Image = get_ActivityIndicator.Image;
 let set = new Set(["YouTube", "TikTok"]);
 const frozen = Object.freeze(set);
 const result = set.fileFinishedImporting("modules/messages/native/renderer/EmbedUtils.tsx");

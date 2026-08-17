@@ -1,10 +1,12 @@
 // discord_app/modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx
-import { useMemo } from "noop";
-import updateCategoriesAndProducts from "updateCategoriesAndProducts";
-import items from "items";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_3 from "updateCategoriesAndProducts" /* 5301 */;
+import closure_4 from "items" /* 5325 */;
 
+const useMemo = noop.useMemo;
 let closure_5 = {};
-const result = require("items").fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/native/useCollectiblesShopDeepLinkProps.tsx");
 
 export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeepLinkProps(categories) {
   categories = categories.categories;
@@ -39,7 +41,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
       }
     }
     const categoryForProduct = obj.getCategoryForProduct(initialProductSkuId);
-    let initialCategorySkuId;
+    initialCategorySkuId = undefined;
     if (categoryForProduct != null) {
       initialCategorySkuId = categoryForProduct.skuId;
     }
@@ -59,7 +61,7 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
         let bound;
         if (null != products) {
           const _Math = Math;
-          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === updateCategoriesAndProducts));
+          bound = Math.max(0, obj3.findIndex((skuId) => skuId.skuId === closure_3));
         }
         obj[3] = bound;
         obj = categories;
@@ -73,6 +75,6 @@ export const useCollectiblesShopDeepLinkProps = function useCollectiblesShopDeep
       }
       return obj;
     }
-    obj = outer1_5;
+    obj = closure_1_5;
   }, items1);
 };

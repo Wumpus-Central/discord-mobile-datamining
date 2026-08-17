@@ -1,24 +1,18 @@
 // discord_app/modules/nuf_channels/native/components/NUFTemplateV2.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 let closure_5 = createCacheKey.createStyles({ container: { padding: 16, alignItems: "center" }, title: { textAlign: "center", marginBottom: 8 }, description: { textAlign: "center", marginBottom: 46, paddingLeft: 18, paddingRight: 18 }, illustration: { alignSelf: "stretch", alignItems: "center", marginBottom: 32 } });
-const result = require("jsxProd").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
+const result = require("set").fileFinishedImporting("modules/nuf_channels/native/components/NUFTemplateV2.tsx");
 
 export default function NUFActionSheetTemplate(arg0) {
-  let CTALabel;
-  let description;
-  let illustration;
-  let onCTAPress;
-  let title;
   ({ title, illustration, description, onCTAPress, CTALabel } = arg0);
   const tmp = callback3();
   let obj = { style: tmp.container, children: null };

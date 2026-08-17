@@ -1,11 +1,11 @@
 // discord_app/modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx
-import getHash from "getHash";
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_2 from "getHash" /* 4288 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
 
-const require = arg1;
-let result = require("getSystemLocale").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
+require = arg1;
+let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsOnboardingGuildPickerFeatureSpec.tsx");
 
 export default {
   title() {
@@ -18,7 +18,7 @@ export default {
   },
   canCreateGuild: false,
   useIsGuildSupported() {
-    const items = [getHash];
+    const items = [closure_2];
     return initialize.useStateFromStores(items, () => (id) => {
       let result = callback2(id, arg1);
       if (result) {

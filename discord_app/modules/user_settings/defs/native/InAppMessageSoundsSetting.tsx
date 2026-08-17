@@ -1,10 +1,11 @@
 // discord_app/modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx
-import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import isInAppMessageSoundsEnabled from "isInAppMessageSoundsEnabled" /* 10039 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let setInAppMessageSoundsEnabled;
-let useInAppMessageSoundsEnabled;
 ({ setInAppMessageSoundsEnabled, useInAppMessageSoundsEnabled } = isInAppMessageSoundsEnabled);
 const toggle = createToggle.createToggle({
   useTitle() {
@@ -15,10 +16,10 @@ const toggle = createToggle.createToggle({
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["wls+Ax"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: require("isMetaQuest").isMetaQuest
+  usePredicate: isMetaQuest.isMetaQuest
 });
 const obj = {
   useTitle() {
@@ -29,11 +30,11 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["wls+Ax"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.NOTIFICATIONS,
+  parent: MobileUserSettings.MobileUserSettings.NOTIFICATIONS,
   useValue: useInAppMessageSoundsEnabled,
   onValueChange: setInAppMessageSoundsEnabled,
-  usePredicate: require("isMetaQuest").isMetaQuest
+  usePredicate: isMetaQuest.isMetaQuest
 };
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/InAppMessageSoundsSetting.tsx");
 
 export default toggle;

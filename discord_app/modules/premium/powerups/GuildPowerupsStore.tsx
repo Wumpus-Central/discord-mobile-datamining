@@ -1,18 +1,12 @@
 // discord_app/modules/premium/powerups/GuildPowerupsStore.tsx
-import _slicedToArray from "_slicedToArray";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import BoostedGuildTiers from "BoostedGuildTiers";
-import ME from "ME";
-import { PersistedStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "_slicedToArray" /* 32 */;
+import closure_1 from "createGuildRecordFromRust" /* 1910 */;
+import BoostedGuildTiers from "BoostedGuildTiers" /* 4262 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let obj1;
 function calculateAppliedBoosts(guildId) {
-  let tmp14;
-  let tmp15;
   guild = guild.getGuild(guildId);
   let hasItem;
   if (guild != null) {
@@ -87,13 +81,14 @@ function calculateAppliedBoosts(guildId) {
 ({ GUILD_POWERUP_TIER_3_OVERRIDDEN_PURCHASABLE_FEATURES: obj1, PURCHASABLE_PREMIUM_FEATURES_BOOST_INFO: c3 } = BoostedGuildTiers);
 ({ AppliedGuildBoostsRequiredForBoostedGuildTier: c4, BoostedGuildTiers: c5, GuildFeatures: closure_6 } = ME);
 let closure_7 = {};
+const PersistedStore = initializeDefault.PersistedStore;
 class GuildPowerupsStore extends PersistedStore {
 }
 const prototype = GuildPowerupsStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
-  this.waitFor(createGuildRecordFromRust);
+  this.waitFor(closure_1);
   if (null != arg0) {
-    let closure_7 = arg0;
+    closure_7 = arg0;
   }
 };
 prototype["getState"] = function getState() {
@@ -164,13 +159,10 @@ let items = [
       const _Object2 = Object;
       const entries = Object.entries(arg0);
       const found = entries.filter((arg0) => {
-        let tmp;
         [, tmp] = arg0;
         return null != tmp && typeof tmp === "object";
       });
       fromEntriesResult = Object.fromEntries(found.map((arg0) => {
-        let tmp;
-        let tmp2;
         [tmp, tmp2] = arg0;
         const items = [tmp, ];
         const obj = {};
@@ -198,13 +190,11 @@ let items = [
   }
 ];
 GuildPowerupsStore.migrations = items;
-const guildPowerupsStore = new GuildPowerupsStore(require("dispatcher"), {
+const guildPowerupsStore = new GuildPowerupsStore(dispatcherDefault, {
   LOGOUT: function handleReset() {
-    let closure_7 = {};
+    closure_7 = {};
   },
   GUILD_POWERUP_CATALOG_FETCH_SUCCESS: function handleGuildPowerupCatalogFetchSuccess(guildId) {
-    let allPowerups;
-    let powerupCatalog;
     guildId = guildId.guildId;
     ({ allPowerups, powerupCatalog } = guildId);
     if (null == obj[guildId]) {
@@ -246,11 +236,9 @@ const guildPowerupsStore = new GuildPowerupsStore(require("dispatcher"), {
     obj[guildId] = obj;
   },
   GUILD_POWERUP_ENTITLEMENTS_CREATE: function handleGuildPowerupCreated(arg0) {
-    let entitlements;
-    let guildId;
     ({ guildId, entitlements } = arg0);
-    let c0 = true;
-    let c1;
+    c0 = true;
+    closure_1 = undefined;
     if (null == obj[guildId]) {
       obj = { allPowerups: null, powerupCatalog: null, unlockedPowerups: null, appliedBoosts: null };
       obj[0] = {};
@@ -259,10 +247,10 @@ const guildPowerupsStore = new GuildPowerupsStore(require("dispatcher"), {
       obj[3] = calculateAppliedBoosts(guildId);
       obj[guildId] = obj;
     }
-    c1 = tmp3;
+    closure_1 = tmp3;
     const item = entitlements.forEach((sku_id) => {
       if (c0) {
-        _undefined.unlockedPowerups[sku_id.sku_id] = sku_id;
+        unlockedPowerups.unlockedPowerups[sku_id.sku_id] = sku_id;
       } else {
         delete tmp2[tmp];
       }
@@ -275,11 +263,9 @@ const guildPowerupsStore = new GuildPowerupsStore(require("dispatcher"), {
     obj[guildId] = obj;
   },
   GUILD_POWERUP_ENTITLEMENTS_DELETE: function handleGuildPowerupDeleted(arg0) {
-    let entitlements;
-    let guildId;
     ({ guildId, entitlements } = arg0);
-    let c0 = false;
-    let c1;
+    c0 = false;
+    closure_1 = undefined;
     if (null == obj[guildId]) {
       obj = { allPowerups: null, powerupCatalog: null, unlockedPowerups: null, appliedBoosts: null };
       obj[0] = {};
@@ -288,10 +274,10 @@ const guildPowerupsStore = new GuildPowerupsStore(require("dispatcher"), {
       obj[3] = calculateAppliedBoosts(guildId);
       obj[guildId] = obj;
     }
-    c1 = tmp3;
+    closure_1 = tmp3;
     const item = entitlements.forEach((sku_id) => {
       if (c0) {
-        _undefined.unlockedPowerups[sku_id.sku_id] = sku_id;
+        unlockedPowerups.unlockedPowerups[sku_id.sku_id] = sku_id;
       } else {
         delete tmp2[tmp];
       }
@@ -334,6 +320,6 @@ const guildPowerupsStore = new GuildPowerupsStore(require("dispatcher"), {
     dependencyMap[guildId] = obj;
   }
 });
-const result = require("BoostedGuildTiers").fileFinishedImporting("modules/premium/powerups/GuildPowerupsStore.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/GuildPowerupsStore.tsx");
 
 export default guildPowerupsStore;

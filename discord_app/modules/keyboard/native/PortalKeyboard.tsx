@@ -1,13 +1,14 @@
 // discord_app/modules/keyboard/native/PortalKeyboard.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Portal } from "../../../../_runtime/04244_Portal.js";
-import { coerceMainRoute } from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
+import noopAll from "noop" /* 19 */;
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import Portal from "Portal" /* 4244 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let c3 = "default";
 const modal = "modal";
-const result = require("coerceMainRoute").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
+const result = require("set").fileFinishedImporting("modules/keyboard/native/PortalKeyboard.tsx");
 
 export const PortalKeyboardState = { EMPTY: "empty", REQUEST_OPEN: "request_open", OPENING: "opening", OPEN: "open", REQUEST_CLOSE: "request_close", CLOSING: "closing", CLOSED: "closed" };
 export const PORTAL_HOST_NAME_DEFAULT = "default";

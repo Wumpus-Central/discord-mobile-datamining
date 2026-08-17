@@ -1,21 +1,21 @@
 // discord_app/modules/guild_sidebar/native/BaseChannelItem.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth";
-import { UnreadSetting } from "ReadStateTypes";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { Button } from "../../../design/void/native.tsx";
+import PlatformTypes from "PlatformTypes" /* 501 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import Text from "Text" /* 4734 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { CHANNEL_TITLE_LINE_HEIGHT } from "hairlineWidth" /* 10055 */;
+import { UnreadSetting } from "ReadStateTypes" /* 5044 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 class BaseChannelSubtitle {
   constructor(arg0) {
     ({ mode, subtitle } = global);
-    tmp = f51987;
-    if (mode !== f51987.UNREAD_IMPORTANT) {
+    tmp = closure_10;
+    if (mode !== closure_10.UNREAD_IMPORTANT) {
       if (mode !== tmp.RELEVANT) {
         if (mode !== tmp.SELECTED) {
           MUTED = tmp.MUTED;
@@ -42,12 +42,12 @@ class BaseChannelSubtitle {
     return;
   }
 }
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles((arg0) => {
   let obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
-  obj = { borderRadius: Themes.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: Themes.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
+  obj = { borderRadius: ThemesDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: ThemesDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
   obj[1] = obj;
-  obj = { left: -Themes.space.PX_8 };
+  obj = { left: -ThemesDefault.space.PX_8 };
   obj[2] = obj;
   let num = 1;
   let num2 = 1;
@@ -60,11 +60,11 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
     num3 = 0.5;
   }
   obj[4] = { marginRight: 8, opacity: num3 };
-  obj[5] = { tintColor: Themes.colors.CHANNEL_ICON };
-  const obj1 = { tintColor: Themes.colors.CHANNEL_ICON };
-  obj[6] = { tintColor: Themes.colors.INTERACTIVE_TEXT_ACTIVE };
-  const obj2 = { tintColor: Themes.colors.INTERACTIVE_TEXT_ACTIVE };
-  obj[7] = { tintColor: Themes.colors.ICON_MUTED };
+  obj[5] = { tintColor: ThemesDefault.colors.CHANNEL_ICON };
+  obj1 = { tintColor: ThemesDefault.colors.CHANNEL_ICON };
+  obj[6] = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+  const obj2 = { tintColor: ThemesDefault.colors.INTERACTIVE_TEXT_ACTIVE };
+  obj[7] = { tintColor: ThemesDefault.colors.ICON_MUTED };
   obj[8] = { paddingHorizontal: 8, paddingVertical: 8, flexDirection: "row", alignItems: "center", position: "relative" };
   obj[9] = { flex: 1, flexDirection: "column", alignItems: "stretch", justifyContent: "center" };
   const obj4 = { flexGrow: 1, textAlign: "left", lineHeight: CHANNEL_TITLE_LINE_HEIGHT, opacity: null };
@@ -76,14 +76,9 @@ let closure_9 = createCacheKey.createStyles((arg0) => {
   return obj;
 });
 createCacheKey = { SELECTED: "Selected", LOCKED: "Locked", MUTED: "Muted", RELEVANT: "Relevant", UNREAD_LESS_IMPORTANT: "UnreadLessImportant", UNREAD_IMPORTANT: "UnreadImportant", DEFAULT: "Default" };
-const result = require("hairlineWidth").fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/BaseChannelItem.tsx");
 
 export default function BaseChannelItem(mode) {
-  let channelInfo;
-  let children;
-  let icon;
-  let name;
-  let unread;
   mode = mode.mode;
   const hideIcon = mode.hideIcon;
   let flag = mode.disableHighlightOnPress;
@@ -96,19 +91,19 @@ export default function BaseChannelItem(mode) {
     unread = false;
   }
   const merged = Object.assign(mode, Object.create(null));
-  let dependencyMap;
+  dependencyMap = undefined;
   const tmp2 = callback2(mode);
   dependencyMap = tmp2;
   let items = [hideIcon, mode, tmp2];
   let obj = {
     style: React.useMemo(() => {
-      const items = [_undefined.channel, , ];
+      const items = [channel.channel, , ];
       let rowPaddingNoIcon = hideIcon;
       if (hideIcon) {
         rowPaddingNoIcon = tmp.rowPaddingNoIcon;
       }
       items[1] = rowPaddingNoIcon;
-      items[2] = mode === outer1_10.SELECTED && _undefined.rowSelected;
+      items[2] = mode === closure_1_10.SELECTED && channel.rowSelected;
       return items;
     }, items),
     children: null
@@ -151,12 +146,6 @@ export default function BaseChannelItem(mode) {
 export const ChannelModes = createCacheKey;
 export { BaseChannelSubtitle };
 export const BaseChannelIcon = function BaseChannelIcon(arg0) {
-  let IconComponent;
-  let disableColor;
-  let isChannelLive;
-  let mode;
-  let source;
-  let style;
   ({ disableColor, mode, IconComponent, style } = arg0);
   ({ source, isChannelLive } = arg0);
   const tmp = callback2(mode);
@@ -223,9 +212,6 @@ export const getChannelSubtitleTextProps = function getChannelSubtitleTextProps(
   }
 };
 export const BaseChannelName = function BaseChannelName(mode) {
-  let name;
-  let subtitle;
-  let textStyle;
   mode = mode.mode;
   ({ name, subtitle, textStyle } = mode);
   const tmp = callback2(mode);
@@ -247,7 +233,7 @@ export const BaseChannelName = function BaseChannelName(mode) {
     obj.style = items;
     obj.children = name;
     const items1 = [tmp4(tmp5, obj), ];
-    const obj1 = { mode: null, subtitle: null };
+    obj1 = { mode: null, subtitle: null };
     obj1[0] = mode;
     obj1[1] = subtitle;
     items1[1] = tmp4(BaseChannelSubtitle, obj1);

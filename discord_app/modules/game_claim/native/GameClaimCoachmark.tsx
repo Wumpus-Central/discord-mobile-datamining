@@ -1,43 +1,38 @@
 // discord_app/modules/game_claim/native/GameClaimCoachmark.tsx
-import closure_3 from "jsxProd";
-import { View } from "Text";
-import ME from "ME";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
-import importAllResult from "LinkExternalSmallIcon";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { MINIMUM_HIT_AREA } from "../../../design/components/Button/native/ButtonConstants.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useGameNameAndCoverImage } from "../../games/hooks/useGameNameAndCoverImage.tsx";
-import { map } from "../../screen/native/useScaledTextLineHeight.android.tsx";
-import { fetchUnclaimedGames } from "../UnclaimedGamesActionCreators.tsx";
-import { importDefaultResult1 } from "GameClaimCardStack.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MINIMUM_HIT_AREA from "MINIMUM_HIT_AREA" /* 4749 */;
+import map from "map" /* 9288 */;
+import useGameNameAndCoverImageDefault from "useGameNameAndCoverImage" /* 12183 */;
+import importDefaultResult1 from "importDefaultResult1" /* 15452 */;
+import importDefaultResult1Default from "importDefaultResult1" /* 15452 */;
+import fetchUnclaimedGames from "fetchUnclaimedGames" /* 15453 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import ME from "ME" /* 676 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 ({ GuildFeatures: c5, RelativeMarketingURLs: closure_6 } = ME);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
-const PX_8 = require("Themes").space.PX_8;
-const PX_82 = require("Themes").space.PX_8;
-let closure_12 = 2 * require("Themes").space.PX_12;
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
+const PX_8 = ThemesDefault.space.PX_8;
+const PX_82 = ThemesDefault.space.PX_8;
+let closure_12 = 2 * ThemesDefault.space.PX_12;
 let obj = { card: null, closeButton: null, centeredText: null, body: null, cta: null };
-obj = { padding: require("Themes").space.PX_12 };
+obj = { padding: ThemesDefault.space.PX_12 };
 obj[0] = obj;
-createCacheKey = { position: "absolute", top: require("Themes").space.PX_12, right: require("Themes").space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
+createCacheKey = { position: "absolute", top: ThemesDefault.space.PX_12, right: ThemesDefault.space.PX_12, width: 24, height: 24, alignItems: "center", justifyContent: "center", zIndex: 1 };
 obj[1] = createCacheKey;
 obj[2] = { textAlign: "center" };
-obj[3] = { marginTop: require("Themes").space.PX_4 };
-let obj2 = { marginTop: require("Themes").space.PX_4 };
-obj[4] = { marginTop: require("Themes").space.PX_8 };
+obj[3] = { marginTop: ThemesDefault.space.PX_4 };
+let obj2 = { marginTop: ThemesDefault.space.PX_4 };
+obj[4] = { marginTop: ThemesDefault.space.PX_8 };
 let closure_13 = createCacheKey.createStyles(obj);
-let obj3 = { marginTop: require("Themes").space.PX_8 };
+let obj3 = { marginTop: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo((arg0) => {
-  let guild;
-  let require;
   ({ guild, markAsDismissed: require } = arg0);
   const tmp = callback4();
   let obj = fetchUnclaimedGames;
@@ -47,8 +42,8 @@ const memoResult = importAllResult.memo((arg0) => {
   }
   const intl = tmp2(1236).intl;
   const tmp5 = importDefault;
-  const tmp6 = useGameNameAndCoverImage;
-  const coverImageUrl = useGameNameAndCoverImage(first, intl.string(getSystemLocale.t.VQq92a)).coverImageUrl;
+  const tmp6 = useGameNameAndCoverImageDefault;
+  const coverImageUrl = useGameNameAndCoverImageDefault(first, intl.string(getSystemLocale.t.VQq92a)).coverImageUrl;
   if (null == coverImageUrl) {
     return null;
   } else {
@@ -66,14 +61,14 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[1] = tmp.card;
     obj = { accessibilityRole: "button", onPress: null, style: null, children: null };
     obj[1] = function onPress() {
-      return callback(outer1_7.USER_DISMISS);
+      return callback(closure_1_7.USER_DISMISS);
     };
     obj[2] = tmp.closeButton;
     obj[3] = callback2(tmp2(6368).XSmallIcon, { size: "sm", color: "text-default" });
     const items = [callback2(tmp2(5433).PressableOpacity, obj), , , , ];
-    let obj1 = { imageSrc: null };
+    obj1 = { imageSrc: null };
     obj1[0] = coverImageUrl;
-    items[1] = callback2(tmp5(15452), obj1);
+    items[1] = callback2(importDefaultResult1Default, obj1);
     const obj2 = { variant: "text-md/medium", color: "text-overlay-light", style: null, children: null };
     obj2[2] = tmp.centeredText;
     const intl2 = tmp2(1236).intl;
@@ -120,12 +115,12 @@ const memoResult = importAllResult.memo((arg0) => {
               obj[0] = arg1;
               return obj;
             } else {
-              v0(outer1_7.TAKE_ACTION);
-              let obj1 = v02(outer1_2[20]);
+              v0(closure_1_7.TAKE_ACTION);
+              obj1 = v02(closure_1_2[20]);
               v02 = 1;
               v0 = 1;
               obj1 = { value: null, done: false };
-              obj1[0] = obj1.redirectDeveloperPortalWithHandoffToken(outer1_6.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
+              obj1[0] = obj1.redirectDeveloperPortalWithHandoffToken(closure_1_6.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -151,9 +146,9 @@ const memoResult = importAllResult.memo((arg0) => {
     obj[2] = items;
     return callback3(tmp2(6292).Card, obj);
   }
-  const tmp6Result = useGameNameAndCoverImage(first, intl.string(getSystemLocale.t.VQq92a));
+  const tmp6Result = useGameNameAndCoverImageDefault(first, intl.string(getSystemLocale.t.VQq92a));
 });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/game_claim/native/GameClaimCoachmark.tsx");
+let result = require("set").fileFinishedImporting("modules/game_claim/native/GameClaimCoachmark.tsx");
 
 export default memoResult;
 export const GAME_CLAIM_NOTICE_MARGIN_TOP = PX_8;
@@ -162,9 +157,9 @@ export const getScaledGameClaimNoticeHeight = function getScaledGameClaimNoticeH
   const sum = PX_8 + closure_12;
   const sum1 = sum + importDefaultResult1.CARD_STACK_HEIGHT;
   const sum2 = sum1 + map.scaleTextLineHeight("text-md/medium", fontScale);
-  const sum3 = sum2 + Themes.space.PX_4;
+  const sum3 = sum2 + ThemesDefault.space.PX_4;
   const obj = map;
   const result = 2 * map.scaleTextLineHeight("text-sm/normal", fontScale);
-  const sum4 = sum3 + result + Themes.space.PX_8;
+  const sum4 = sum3 + result + ThemesDefault.space.PX_8;
   return sum4 + MINIMUM_HIT_AREA.SMALL_BUTTON_HEIGHT + PX_82;
 };

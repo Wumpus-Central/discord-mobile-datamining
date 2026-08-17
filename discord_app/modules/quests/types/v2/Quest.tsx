@@ -1,7 +1,10 @@
 // discord_app/modules/quests/types/v2/Quest.tsx
-import { _rewardRedemptionInstructionsFromServer } from "Reward.tsx";
-import { _firstPartyTasksFromServer } from "Task.tsx";
-const result = require("questCtaConfigFromServer").fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
+import set from "set" /* 2 */;
+import _firstPartyTasksFromServer from "_firstPartyTasksFromServer" /* 7462 */;
+import _rewardRedemptionInstructionsFromServer from "_rewardRedemptionInstructionsFromServer" /* 7466 */;
+import questCtaConfigFromServer from "questCtaConfigFromServer" /* 7467 */;
+
+const result = set.fileFinishedImporting("modules/quests/types/v2/Quest.tsx");
 
 export const questFromServerV2 = function questFromServerV2(id) {
   obj = { id: id.id, configVersion: 2, startsAt: id.starts_at, expiresAt: id.expires_at, features: id.features, assets: obj, colors: obj, messages: obj1, taskConfigV2: null, rewardsConfig: null, cosponsorMetadata: null, sharePolicy: null, ctaConfig: null };
@@ -22,7 +25,7 @@ export const questFromServerV2 = function questFromServerV2(id) {
   obj[10] = tmp3;
   obj[11] = id.share_policy;
   const obj6 = _rewardRedemptionInstructionsFromServer;
-  obj[12] = tmp(7467).questCtaConfigFromServer(id.cta_config);
+  obj[12] = questCtaConfigFromServer.questCtaConfigFromServer(id.cta_config);
   return obj;
 };
 export const questCosponsorMetadataFromServer = function questCosponsorMetadataFromServer(cosponsor_metadata) {

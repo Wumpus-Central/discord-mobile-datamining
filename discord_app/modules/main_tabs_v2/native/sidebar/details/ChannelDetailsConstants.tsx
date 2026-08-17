@@ -1,6 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx
-const sum = require("MessageEmbedTypes").SEARCH_BAR_HEIGHT + 40;
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
+import set from "set" /* 2 */;
+import MessageEmbedTypes from "MessageEmbedTypes" /* 8507 */;
+
+const sum = MessageEmbedTypes.SEARCH_BAR_HEIGHT + 40;
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/sidebar/details/ChannelDetailsConstants.tsx");
 
 export const ChannelDetailsNavigatorScreens = { DETAILS: "root", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", PINNED_MESSAGES: "pinned-messages" };
 export const ChannelDetailsButtonTypes = { SEARCH: "search", MUTE: "mute", THREADS: "threads", SETTINGS: "settings", MORE: "more" };

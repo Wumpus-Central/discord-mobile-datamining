@@ -1,14 +1,13 @@
 // discord_app/modules/device/ThermalUtils.native.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import set from "set";
-import keys from "keys";
-import set from "enforcing";
-import { enforcing } from "../../../discord_common/js/packages/rtn-codegen/js/NativeDeviceThermalStateModule.tsx";
+import enforcingDefault from "enforcing" /* 8721 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import set from "set" /* 500 */;
+import keys from "keys" /* 644 */;
 import { DCDDeviceManager } from "../../utils/native/DeviceUtils.tsx";
 
 const NativeModules = get_ActivityIndicator.NativeModules;
 if (set.isAndroid()) {
-  let DCDDeviceThermalStateManager = require("enforcing");
+  let DCDDeviceThermalStateManager = enforcingDefault;
 } else {
   DCDDeviceThermalStateManager = NativeModules.DCDDeviceThermalStateManager;
 }
@@ -18,9 +17,9 @@ let closure_5 = keys.create((arg0) => {
   let thermalState = dependencyMap;
   if (obj.isAndroid()) {
     if (tmpResult.getSystemVersionMajor() >= 29) {
-      thermalState = enforcing.getThermalState();
+      thermalState = enforcingDefault.getThermalState();
       let resolved = Promise.resolve(thermalState);
-      const obj3 = enforcing;
+      const obj3 = enforcingDefault;
     } else {
       resolved = Promise.resolve(undefined);
     }
@@ -30,7 +29,7 @@ let closure_5 = keys.create((arg0) => {
     const thermalState1 = DCDDeviceThermalStateManager.getThermalState();
     thermalState1.then(function updateThermalState(arg0) {
       const callback = arg0;
-      callback(outer1_2[5]).batchUpdates(() => state((rawThermalState) => {
+      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
         let tmp = rawThermalState;
         if (rawThermalState.rawThermalState !== closure_0) {
           const obj = { rawThermalState: null };
@@ -42,7 +41,7 @@ let closure_5 = keys.create((arg0) => {
     });
     nativeEventEmitter.addListener("DeviceThermalStateDidChange", (state) => {
       state = state.state;
-      callback(outer1_2[5]).batchUpdates(() => state((rawThermalState) => {
+      callback(closure_1_2[5]).batchUpdates(() => state((rawThermalState) => {
         let tmp = rawThermalState;
         if (rawThermalState.rawThermalState !== closure_0) {
           const obj = { rawThermalState: null };

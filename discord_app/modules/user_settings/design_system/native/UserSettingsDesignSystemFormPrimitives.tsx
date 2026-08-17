@@ -1,27 +1,26 @@
 // discord_app/modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ScrollView } from "Stack";
-import { NOOP } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
+import TableRadioRow from "TableRadioRow" /* 8100 */;
+import context from "context" /* 8101 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 8558 */;
+import VoiceXIcon from "VoiceXIcon" /* 12140 */;
+import Slider from "Slider" /* 13542 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import { ScrollView } from "get ActivityIndicator" /* 17 */;
+import { NOOP } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { Checkbox } from "../../../../design/components/Checkbox/native/Checkbox.native.tsx";
-import { VoiceNormalIcon } from "../../../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import { VoiceXIcon } from "../../../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import { Slider } from "../../../../design/components/Slider/native/Slider.native.tsx";
-import { Stack } from "../../../../design/components/Stack/native/Stack.native.tsx";
-import { TableCheckboxRow } from "../../../../design/components/TableRow/native/TableCheckboxRow.native.tsx";
-import { context } from "../../../../design/components/TableRow/native/TableRadioGroup.native.tsx";
-import { TableRadioRow } from "../../../../design/components/TableRow/native/TableRadioRow.native.tsx";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
 import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
 import { Text } from "../../../../design/components/Text/native/Text.tsx";
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function Radio() {
   let obj = { children: null };
   const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Radio" }), callback2(Text.Text, { variant: "text-md/normal", children: "Select a single option from a short list of multiple options" }), ];
@@ -33,11 +32,6 @@ function Radio() {
   return callback3(closure_8, obj);
 }
 function Switch() {
-  let c0;
-  let tmp2;
-  let tmp4;
-  let tmp6;
-  let tmp8;
   [tmp2, c0] = callback(React.useState(true), 2);
   let obj = {
     value: tmp2,
@@ -92,11 +86,6 @@ function Switch() {
   return callback3(closure_8, obj2);
 }
 function InlineCheckbox(startChecked) {
-  let c0;
-  let description;
-  let label;
-  let required;
-  let tmp2;
   let flag = startChecked.startChecked;
   ({ label, description, required } = startChecked);
   if (flag === undefined) {
@@ -133,18 +122,15 @@ function SliderDemo() {
   let obj = { children: null };
   const items = [callback2(Text.Text, { variant: "heading-lg/bold", children: "Slider" }), ];
   obj = { start: true, end: true, label: "Volume", subLabel: null };
-  obj = { startIcon: null, endIcon: null, onValueChange: null };
-  obj[0] = callback2(VoiceXIcon.VoiceXIcon, {});
-  obj[1] = callback2(VoiceNormalIcon.VoiceNormalIcon, {});
-  obj[2] = NOOP;
+  obj = { startIcon: callback2(VoiceXIcon.VoiceXIcon, {}), endIcon: callback2(VoiceNormalIcon.VoiceNormalIcon, {}), onValueChange: NOOP };
   obj[3] = callback2(Slider.Slider, obj);
   items[1] = callback2(TableRowInner.TableRow, obj);
   obj[0] = items;
   return callback3(closure_8, obj);
 }
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { padding: 16, paddingBottom: 32 } });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/design_system/native/UserSettingsDesignSystemFormPrimitives.tsx");
 
 export default function UserSettingsDesignSystemFormPrimitives() {
   let obj = { children: null };

@@ -1,12 +1,11 @@
 // discord_app/lib/NetworkQuality.tsx
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import ME from "ME";
+import sleep from "sleep" /* 4548 */;
+import closure_2 from "handleConnectionInfoChange" /* 4564 */;
+import ME from "ME" /* 676 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
 ({ NetworkConnectionTypes: c3, NetworkConnectionSpeeds: c4 } = ME);
-let result = require("sleep").fileFinishedImporting("lib/NetworkQuality.tsx");
+let result = require("set").fileFinishedImporting("lib/NetworkQuality.tsx");
 class NetworkQuality {
   constructor() {
     obj = Object.create(new.target.prototype);

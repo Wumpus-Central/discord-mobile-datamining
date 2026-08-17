@@ -1,6 +1,7 @@
 // discord_app/modules/emojis/native/utils/EmojiColorUtils.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { NativeModules } from "get ActivityIndicator";
+import privDefault from "priv" /* 1405 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
 
 function _getEmojiCacheKey(name) {
   return "" + name.name + "-" + name.id;
@@ -8,15 +9,11 @@ function _getEmojiCacheKey(name) {
 function _getFromCacheOrFallback2() {
   const self = this;
   const tmp = callback((arg0) => {
-    let asyncGeneratorStep = arg0;
-    let c2 = 0;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c4 = 0;
+    c3 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c3;
       if (c4 === 2) {
         c4 = 3;
         HermesBuiltin.throwTypeError();
@@ -50,7 +47,7 @@ function _getFromCacheOrFallback2() {
               let v0;
               ({ cache: c0, cacheKey: c1, fallbackParam: c2, fallbackFunc: c3 } = store);
               c4 = undefined;
-              let closure_5;
+              closure_5 = undefined;
               c2 = 1;
               c4 = 1;
               return { value: "ct", done: true };
@@ -61,7 +58,7 @@ function _getFromCacheOrFallback2() {
               throw arg1;
             } else if (arg0 === 2) {
               c4 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -117,7 +114,7 @@ function _getFromCacheOrFallback2() {
     iter.next();
     return iter;
   });
-  const _getFromCacheOrFallback2 = tmp;
+  closure_4 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -129,12 +126,10 @@ function _getFromCacheOrFallback2() {
 function _getEmojiDominantColors() {
   let self = this;
   const tmp = callback((arg0) => {
-    let asyncGeneratorStep = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let closure_1;
       if (c5 === 2) {
         c5 = 3;
         HermesBuiltin.throwTypeError();
@@ -162,7 +157,7 @@ function _getEmojiDominantColors() {
               return obj;
             } else {
               const callback = tmp5;
-              let closure_2 = tmp2;
+              closure_2 = tmp2;
               c0 = undefined;
               let ImageManager;
               ({ emoji: c0, emojiSource: closure_1 } = c0);
@@ -176,7 +171,7 @@ function _getEmojiDominantColors() {
               throw arg1;
             } else if (arg0 === 2) {
               c5 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -227,7 +222,7 @@ function _getEmojiDominantColors() {
     iter.next();
     return iter;
   });
-  const _getEmojiDominantColors = tmp;
+  closure_5 = tmp;
   let apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -236,8 +231,9 @@ function _getEmojiDominantColors() {
   }
   return applyArgumentsResult;
 }
-const tmp2 = new require("priv")(100);
-let result = require("priv").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
+let closure_2 = new privDefault(100);
+const tmp2 = new privDefault(100);
+let result = require("set").fileFinishedImporting("modules/emojis/native/utils/EmojiColorUtils.tsx");
 
 export const getEmojiDominantColors = function getEmojiDominantColors(arg0) {
   const self = this;

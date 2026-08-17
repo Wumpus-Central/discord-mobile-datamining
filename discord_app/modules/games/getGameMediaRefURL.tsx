@@ -1,7 +1,9 @@
 // discord_app/modules/games/getGameMediaRefURL.tsx
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { isImageProxyURL } from "../image_proxy/ImageProxyUtils.tsx";
-const result = require("isImageProxyURL").fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
+import set from "set" /* 2 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import isImageProxyURL from "isImageProxyURL" /* 4508 */;
+
+const result = set.fileFinishedImporting("modules/games/getGameMediaRefURL.tsx");
 
 export default function getGameMediaRefURL(arg0, type, size) {
   if (null == type) {
@@ -15,12 +17,12 @@ export default function getGameMediaRefURL(arg0, type, size) {
         obj[0] = arg0;
         obj[1] = type.value;
         const merged = Object.assign(size);
-        let gameAssetURL = getAvatarURL.getGameAssetURL(obj);
+        let gameAssetURL = getAvatarURLDefault.getGameAssetURL(obj);
         if (gameAssetURL == null) {
           gameAssetURL = null;
         }
         tmp7 = gameAssetURL;
-        const obj4 = getAvatarURL;
+        const obj4 = getAvatarURLDefault;
       }
       return tmp7;
     } else if ("url" === type) {

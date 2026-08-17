@@ -1,27 +1,26 @@
 // discord_app/stores/game_store/EntitlementStore.tsx
-import createFromServer from "createFromServer";
-import setLibraryApplications from "setLibraryApplications";
-import addSku from "addSku";
-import ME from "ME";
-import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures";
-import { Store } from "initialize";
-import set from "addSku";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { getComboId } from "../../utils/LibraryApplicationUtils.tsx";
+import applyDefault from "apply" /* 12 */;
+import initializeAll from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getComboId from "getComboId" /* 4520 */;
+import closure_3 from "createFromServer" /* 4514 */;
+import closure_4 from "setLibraryApplications" /* 4512 */;
+import closure_5 from "addSku" /* 4521 */;
+import ME from "ME" /* 676 */;
+import { PREMIUM_SUBSCRIPTION_APPLICATION as closure_8 } from "GuildFeatures" /* 1924 */;
+import set from "set" /* 2 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function addEntitlement(entitlement) {
-  closure_9[entitlement.id] = createFromServer.createFromServer(entitlement);
+  closure_9[entitlement.id] = closure_3.createFromServer(entitlement);
   if (null == dependencyMap2[entitlement.sku_id]) {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     dependencyMap2[entitlement.sku_id] = set;
   }
   if (null == dependencyMap3[entitlement.application_id]) {
     const _Set2 = Set;
-    const set1 = new Set();
+    set1 = new Set();
     dependencyMap3[entitlement.application_id] = set1;
   }
   if (null != entitlement.subscription_id) {
@@ -37,7 +36,7 @@ function addEntitlement(entitlement) {
   dependencyMap2[entitlement.sku_id].add(entitlement.id);
 }
 function addGiftEntitlement(id) {
-  closure_10[id.id] = createFromServer.createFromServer(id);
+  closure_10[id.id] = closure_3.createFromServer(id);
 }
 function handlePurchaseSuccess(arg0) {
   while (tmp !== undefined) {
@@ -60,25 +59,26 @@ let c15 = false;
 let set = new Set();
 let set1 = new Set();
 let closure_18 = {};
+const Store = initializeAll.Store;
 class EntitlementStore extends Store {
 }
 const prototype = EntitlementStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [setLibraryApplications];
+  const items = [closure_4];
   this.syncWith(items, () => true);
 };
 prototype["get"] = function get(arg0) {
   return dependencyMap[arg0];
 };
 prototype["getGiftable"] = function getGiftable() {
-  return apply.values(closure_10);
+  return applyDefault.values(closure_10);
 };
 prototype["getForApplication"] = function getForApplication(arg0) {
   if (null == dependencyMap3[arg0]) {
     return null;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     for (const item10014 of tmp) {
       let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
@@ -92,7 +92,7 @@ prototype["getForSku"] = function getForSku(arg0) {
     return null;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     for (const item10014 of tmp) {
       let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
@@ -160,7 +160,7 @@ prototype["getForSubscription"] = function getForSubscription(arg0) {
     return null;
   } else {
     const _Set = Set;
-    const set = new Set();
+    set = new Set();
     for (const item10014 of tmp) {
       let tmp8 = dependencyMap;
       let addResult = set.add(dependencyMap[item10014]);
@@ -181,8 +181,8 @@ prototype["isEntitledToSku"] = function isEntitledToSku(arg0, arg1, applicationI
       let obj2 = tmp6;
       if (null != tmp6) {
         let tmp7 = tmp6;
-        let tmp8 = addSku;
-        if (obj2.isValid(arg0, addSku, tmp)) {
+        let tmp8 = closure_5;
+        if (obj2.isValid(arg0, closure_5, tmp)) {
           let tmp9 = obj;
           obj.return();
           let flag = true;
@@ -238,7 +238,7 @@ prototype["getFractionalPremium"] = function getFractionalPremium(arg0) {
       if (tmp) {
         tmp = endsAt.endsAt < date;
       }
-      let tmp4 = endsAt.type !== outer1_7.FRACTIONAL_REDEMPTION;
+      let tmp4 = endsAt.type !== closure_1_7.FRACTIONAL_REDEMPTION;
       if (!tmp4) {
         if (tmp) {
           tmp = !flag;
@@ -271,7 +271,7 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
   const forApplication = this.getForApplication(closure_8);
   if (forApplication != null) {
     const item = forApplication.forEach((skuId) => {
-      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(outer1_2[8]).FractionalPremiumSKUsSets.ACTIVE_FRACTIONAL_PREMIUM_SKUS;
+      const ACTIVE_FRACTIONAL_PREMIUM_SKUS = items(closure_1_2[8]).FractionalPremiumSKUsSets.ACTIVE_FRACTIONAL_PREMIUM_SKUS;
       if (tmp) {
         items.push(skuId);
       }
@@ -280,13 +280,11 @@ prototype["getUnactivatedFractionalPremiumUnits"] = function getUnactivatedFract
   return items;
 };
 EntitlementStore.displayName = "EntitlementStore";
-const entitlementStore = new EntitlementStore(require("dispatcher"), {
+const entitlementStore = new EntitlementStore(dispatcherDefault, {
   ENTITLEMENT_FETCH_APPLICATION_START: function handleEntitlementApplicationStart(applicationId) {
     set.add(applicationId.applicationId);
   },
   ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function handleEntitlementApplicationFetch(arg0) {
-    let applicationId;
-    let entitlements;
     ({ applicationId, entitlements } = arg0);
     set.delete(applicationId);
     set1.add(applicationId);
@@ -306,7 +304,7 @@ const entitlementStore = new EntitlementStore(require("dispatcher"), {
   },
   ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: function handleEntitlementsGiftableFetchSuccess(entitlements) {
     entitlements = entitlements.entitlements;
-    let closure_10 = {};
+    closure_10 = {};
     const item = entitlements.forEach(addGiftEntitlement);
   },
   SKU_PURCHASE_SUCCESS: handlePurchaseSuccess,
@@ -347,22 +345,22 @@ const entitlementStore = new EntitlementStore(require("dispatcher"), {
     }
   },
   LOGOUT: function handleLogout() {
-    let closure_9 = {};
-    let closure_11 = {};
-    let closure_12 = {};
-    let c13 = false;
-    let c14 = false;
-    let c15 = false;
-    const set = new Set();
-    const set1 = new Set();
+    closure_9 = {};
+    closure_11 = {};
+    closure_12 = {};
+    c13 = false;
+    c14 = false;
+    c15 = false;
+    set = new Set();
+    set1 = new Set();
   },
   ENTITLEMENTS_FETCH_FOR_USER_START: function handleUserEntitlementsStart() {
-    let c13 = true;
+    c13 = true;
   },
   ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: function handleUserEntitlementsSuccess(excludeEnded) {
-    let c14 = true;
-    let c13 = false;
-    let closure_15 = !excludeEnded.excludeEnded;
+    c14 = true;
+    c13 = false;
+    closure_15 = !excludeEnded.excludeEnded;
     while (tmp !== undefined) {
       let tmp3 = addEntitlement;
       let tmp4 = addEntitlement(tmp2);
@@ -370,9 +368,9 @@ const entitlementStore = new EntitlementStore(require("dispatcher"), {
     }
   },
   ENTITLEMENTS_FETCH_FOR_USER_FAIL: function handleUserEntitlementsFail() {
-    let c14 = false;
-    let c13 = false;
-    let c15 = false;
+    c14 = false;
+    c13 = false;
+    c15 = false;
   }
 });
 const result = set.fileFinishedImporting("stores/game_store/EntitlementStore.tsx");

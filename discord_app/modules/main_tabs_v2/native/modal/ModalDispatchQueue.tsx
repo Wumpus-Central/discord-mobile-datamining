@@ -1,4 +1,6 @@
 // discord_app/modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx
+import set from "set" /* 2 */;
+
 class ModalDispatchQueue {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -25,6 +27,6 @@ prototype["flush"] = function flush() {
 };
 let obj = Object.create(ModalDispatchQueue.prototype);
 obj[0] = [];
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/modal/ModalDispatchQueue.tsx");
 
 export default obj;

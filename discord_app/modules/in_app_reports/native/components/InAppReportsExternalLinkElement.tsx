@@ -1,12 +1,11 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
 function ExternalLinkItem(data) {
   data = data.data;
   const url = data.url;
@@ -19,15 +18,16 @@ function ExternalLinkItem(data) {
     obj[0] = url(12820).LinkExternalMediumIcon;
     obj[2] = callback(url(6296).TableRowIcon, obj);
     obj[3] = function onPress() {
-      outer1_1(outer1_2[8]).openURL(url);
+      closure_1_1(closure_1_2[8]).openURL(url);
     };
     tmp3 = callback(url(8086).RowButton, obj);
   }
   return tmp3;
 }
+const View = get_ActivityIndicator.View;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ linksContainer: { flex: 1, alignSelf: "stretch", paddingHorizontal: 16 }, headerText: { marginBottom: 8 } });
-const result = require("createCacheKey").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
+const result = set.fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsExternalLinkElement.tsx");
 
 export default function ExternalLinksElement(elements) {
   elements = elements.elements;

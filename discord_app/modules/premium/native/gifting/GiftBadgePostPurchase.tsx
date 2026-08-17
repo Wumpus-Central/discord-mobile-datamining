@@ -1,35 +1,30 @@
 // discord_app/modules/premium/native/gifting/GiftBadgePostPurchase.tsx
-import GiftingBadgeIcon from "GiftingBadgeIcon";
-import { View } from "HapticFeedbackTypes";
-import initialize from "initialize";
-import getTierForProgress from "getTierForProgress";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import jsxProd from "UNSAFE_isDismissibleContentDismissed";
-import createCacheKey from "createCacheKey";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { messagesProxy } from "../../gifting/GiftingBadge.messages.js";
-import { GiftingBadgeLevelUpProgress } from "../../gifting/native/views/GiftingBadgeLevelUpProgress.tsx";
-import { GiftingBadgeProgressBar } from "../../gifting/native/views/GiftingBadgeProgress.tsx";
+import initialize from "initialize" /* 589 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import messagesProxyDefault from "messagesProxy" /* 2431 */;
+import Text from "Text" /* 4734 */;
+import GiftingBadgeProgressBarDefault from "GiftingBadgeProgressBar" /* 10421 */;
+import GiftingBadgeLevelUpProgressDefault from "GiftingBadgeLevelUpProgress" /* 10422 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "initialize" /* 8936 */;
+import getTierForProgress from "getTierForProgress" /* 10420 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let closure_6;
-let error;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function PostPurchaseFooter(onSendGift) {
   onSendGift = onSendGift.onSendGift;
   const items = [onSendGift];
   const callback = React.useCallback(() => {
-    let arr = outer1_1(outer1_2[9]);
+    let arr = closure_1_1(closure_1_2[9]);
     arr = arr.pop();
     onSendGift();
   }, items);
-  let obj = { style: callback6(useSafeAreaInsets().bottom).footer, children: null };
+  let obj = { style: callback6(useSafeAreaInsetsDefault().bottom).footer, children: null };
   const callback1 = React.useCallback(() => {
     let arr = callback(5260);
     arr = arr.pop();
@@ -39,36 +34,28 @@ function PostPurchaseFooter(onSendGift) {
     }
   }, []);
   obj = { grow: true, variant: "primary", icon: null, text: null, onPress: null };
-  obj = { size: "sm", color: null };
-  obj[1] = Themes.colors.CONTROL_PRIMARY_TEXT_DEFAULT;
+  obj = { size: "sm", color: ThemesDefault.colors.CONTROL_PRIMARY_TEXT_DEFAULT };
   obj[2] = callback4(onSendGift(9589).GiftIcon, obj);
   const intl = onSendGift(1236).intl;
-  obj[3] = intl.string(messagesProxy.g86YiI);
+  obj[3] = intl.string(messagesProxyDefault.g86YiI);
   obj[4] = callback;
   const items1 = [callback4(onSendGift(4745).Button, obj), ];
-  const obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
+  obj1 = { grow: true, variant: "secondary", text: null, onPress: null };
   const intl2 = onSendGift(1236).intl;
-  obj1[2] = intl2.string(messagesProxy["sa/cfM"]);
+  obj1[2] = intl2.string(messagesProxyDefault["sa/cfM"]);
   obj1[3] = callback1;
   items1[1] = callback4(onSendGift(4745).Button, obj1);
   obj[1] = items1;
   return callback5(View, obj);
 }
 function InProgressScreen(arg0) {
-  let currentTier;
-  let description;
-  let nextTier;
-  let onSendGift;
-  let progress;
-  let progressBarTitle;
-  let title;
   ({ progress, title, progressBarTitle, description, currentTier, nextTier, onSendGift } = arg0);
-  const tmp = callback6(useSafeAreaInsets().bottom);
+  const tmp = callback6(useSafeAreaInsetsDefault().bottom);
   let obj = { style: tmp.screenContainer, children: null };
   obj = { style: tmp.content, children: null };
-  obj = { style: tmp.progressWrapper, children: callback4(GiftingBadgeProgressBar, { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) };
+  obj = { style: tmp.progressWrapper, children: callback4(GiftingBadgeProgressBarDefault, { progress, currentTier, nextTier, iconSize: 48, title: progressBarTitle }) };
   const items = [callback4(View, obj), ];
-  const obj1 = { style: tmp.messageSection, children: null };
+  obj1 = { style: tmp.messageSection, children: null };
   const items1 = [callback4(Text.Text, { variant: "heading-xxl/bold", style: tmp.centerText, children: title }), callback4(Text.Text, { variant: "text-md/medium", color: "text-subtle", style: tmp.centerText, children: description })];
   obj1[1] = items1;
   items[1] = callback5(View, obj1);
@@ -78,15 +65,9 @@ function InProgressScreen(arg0) {
   return callback5(View, obj);
 }
 function LevelUpScreen(arg0) {
-  let currentTier;
-  let giftsToNextTier;
-  let newTier;
-  let nextTier;
-  let onSendGift;
-  let simulatedProgress;
   ({ newTier, nextTier, giftsToNextTier } = arg0);
   ({ simulatedProgress, currentTier, onSendGift } = arg0);
-  const tmp3 = callback6(useSafeAreaInsets().bottom);
+  const tmp3 = callback6(useSafeAreaInsetsDefault().bottom);
   const effect = React.useEffect(() => {
     const result = callback(4343).triggerHapticFeedback(callback2(4344).IMPACT_HEAVY);
   }, []);
@@ -95,14 +76,14 @@ function LevelUpScreen(arg0) {
   obj = { style: tmp3.levelUpIconWrapper, children: null };
   let tmp7Result = null != newTier.simple_icon_url;
   if (tmp7Result) {
-    const obj1 = { icon: null, size: 140 };
+    obj1 = { icon: null, size: 140 };
     obj1[0] = newTier.simple_icon_url;
     tmp7Result = tmp7(tmp(10302), obj1);
   }
   obj[1] = tmp7Result;
   const items = [closure_10(View, obj), ];
   const obj2 = { style: tmp3.levelUpBody, children: null };
-  const items1 = [closure_10(GiftingBadgeLevelUpProgress, { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
+  const items1 = [closure_10(GiftingBadgeLevelUpProgressDefault, { progress: simulatedProgress, currentTier, newTier, style: tmp3.levelUpProgress }), ];
   const obj4 = { style: tmp3.messageSection, children: null };
   const obj5 = { variant: "heading-xxl/bold", style: tmp3.centerText, children: null };
   const intl = getSystemLocale.intl;
@@ -110,7 +91,7 @@ function LevelUpScreen(arg0) {
   if (str == null) {
     str = "";
   }
-  obj5[2] = intl.format(messagesProxy.k8MmO8, { tierName: str });
+  obj5[2] = intl.format(messagesProxyDefault.k8MmO8, { tierName: str });
   const items2 = [closure_10(Text.Text, obj5), ];
   tmp7Result = null != nextTier && null != giftsToNextTier;
   if (tmp7Result) {
@@ -140,30 +121,28 @@ function LevelUpScreen(arg0) {
   obj[1] = items3;
   return closure_11(View, obj);
 }
-({ getRemainingGiftsToNextTier: closure_6, getTierForProgress: error, getNextTierForProgress: metroImportAll } = getTierForProgress);
+({ getRemainingGiftsToNextTier: closure_6, getTierForProgress: error, getNextTierForProgress: closure_8 } = getTierForProgress);
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 let closure_12 = createCacheKey.createStyles((arg0) => {
   let obj = { screenContainer: { flex: 1 }, content: null, progressWrapper: null, messageSection: null, centerText: null, levelUpIconWrapper: null, levelUpBody: null, levelUpProgress: null, footer: null };
-  obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: Themes.space.PX_16 };
+  obj = { flex: 1, alignItems: "center", justifyContent: "center", padding: ThemesDefault.space.PX_16 };
   obj[1] = obj;
-  obj = { padding: Themes.space.PX_16, width: "100%", marginBottom: Themes.space.PX_24 };
+  obj = { padding: ThemesDefault.space.PX_16, width: "100%", marginBottom: ThemesDefault.space.PX_24 };
   obj[2] = obj;
-  obj[3] = { gap: Themes.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: Themes.space.PX_16 };
+  obj[3] = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
   obj[4] = { textAlign: "center" };
-  const obj1 = { gap: Themes.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: Themes.space.PX_16 };
-  obj[5] = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: Themes.space.PX_48 };
-  const obj2 = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: Themes.space.PX_48 };
-  obj[6] = { gap: Themes.space.PX_12, alignItems: "center", width: "100%" };
+  obj1 = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%", paddingHorizontal: ThemesDefault.space.PX_16 };
+  obj[5] = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: ThemesDefault.space.PX_48 };
+  const obj2 = { paddingVertical: 26, paddingHorizontal: 74, marginBottom: ThemesDefault.space.PX_48 };
+  obj[6] = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%" };
   obj[7] = { maxWidth: 260 };
-  const obj3 = { gap: Themes.space.PX_12, alignItems: "center", width: "100%" };
-  obj[8] = { width: "100%", gap: Themes.space.PX_12, paddingHorizontal: Themes.space.PX_16, paddingBottom: Themes.space.PX_16 + arg0 };
+  const obj3 = { gap: ThemesDefault.space.PX_12, alignItems: "center", width: "100%" };
+  obj[8] = { width: "100%", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_16, paddingBottom: ThemesDefault.space.PX_16 + arg0 };
   return obj;
 });
-let result = require("initialize").fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
+let result = require("set").fileFinishedImporting("modules/premium/native/gifting/GiftBadgePostPurchase.tsx");
 
 export default function GiftBadgePostPurchase(arg0) {
-  let currentProgress;
-  let onSendGift;
   ({ currentProgress, onSendGift } = arg0);
   const effect = React.useEffect(() => {
     let obj = callback(4196);
@@ -171,7 +150,7 @@ export default function GiftBadgePostPurchase(arg0) {
     const result = obj.UNSAFE_markDismissibleContentAsDismissed(callback(1377).DismissibleContent.NEW_GIFTING_BADGES_COACHMARK, obj);
   }, []);
   let obj = initialize;
-  const items = [initialize];
+  const items = [closure_5];
   const stateFromStores = obj.useStateFromStores(items, () => {
     badgeById = badgeById.getBadgeById(callback(8932).BadgeId.GIFTING);
     let tiers;
@@ -219,13 +198,13 @@ export default function GiftBadgePostPurchase(arg0) {
         str2 = "";
       }
       obj = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
-      const obj1 = { nextTier: null };
+      obj1 = { nextTier: null };
       obj1[0] = str2;
-      obj[0] = intl2.formatToPlainString(messagesProxy.KjdBPz, obj1);
+      obj[0] = intl2.formatToPlainString(messagesProxyDefault.KjdBPz, obj1);
       const intl3 = tmp2(1236).intl;
-      obj[1] = intl3.string(messagesProxy.oqDrEM);
+      obj[1] = intl3.string(messagesProxyDefault.oqDrEM);
       const intl4 = tmp2(1236).intl;
-      obj[2] = intl4.string(messagesProxy["Ka5s+Q"]);
+      obj[2] = intl4.string(messagesProxyDefault["Ka5s+Q"]);
       obj[3] = sum;
       obj[4] = tmp26;
       obj[5] = tmp8;
@@ -236,9 +215,9 @@ export default function GiftBadgePostPurchase(arg0) {
     } else {
       obj2 = { title: null, description: null, progressBarTitle: null, progress: null, currentTier: null, nextTier: null, onSendGift: null };
       const intl5 = tmp2(1236).intl;
-      obj2[0] = intl5.string(messagesProxy["/rBQud"]);
+      obj2[0] = intl5.string(messagesProxyDefault["/rBQud"]);
       const intl6 = tmp2(1236).intl;
-      obj2[1] = intl6.string(messagesProxy.DDQMlx);
+      obj2[1] = intl6.string(messagesProxyDefault.DDQMlx);
       let name;
       if (tmp24 != null) {
         name = tmp24.name;

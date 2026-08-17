@@ -1,28 +1,28 @@
 // discord_app/modules/instant_invite/useInviteAssignableRoles.tsx
-import noop from "noop";
-import { isEveryoneRole } from "GuildRoleRecordTypeTag";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { Permissions } from "ME";
+import closure_3 from "noop" /* 19 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { Permissions } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
+const result = require("set").fileFinishedImporting("modules/instant_invite/useInviteAssignableRoles.tsx");
 
 export default function useInviteAssignableRoles(arg0) {
   const _require = arg0;
-  const items = [createGuildRoleRecordFromRust, mergeGuildAvatar, getUncachedChannelPermissions];
+  const items = [closure_5, closure_7, closure_6];
   const items1 = [arg0];
   const stateFromStoresObject = _require(currentUser[6]).useStateFromStoresObject(items, () => {
     if (null != closure_0) {
-      let sortedRoles = outer1_5.getSortedRoles(tmp.id);
+      sortedRoles = closure_1_5.getSortedRoles(tmp.id);
     } else {
       sortedRoles = [];
     }
-    const obj = { sortedRoles, currentUser: outer1_7.getCurrentUser(), canManageRoles: null };
+    const obj = { sortedRoles, currentUser: closure_1_7.getCurrentUser(), canManageRoles: null };
     let canResult = null != tmp;
     if (canResult) {
-      canResult = outer1_6.can(outer1_8.MANAGE_ROLES, tmp);
+      canResult = closure_1_6.can(closure_1_8.MANAGE_ROLES, tmp);
     }
     obj[2] = canResult;
     return obj;
@@ -37,7 +37,7 @@ export default function useInviteAssignableRoles(arg0) {
         if (canManageRoles) {
           highestRole = sortedRoles(currentUser[7]).getHighestRole(tmp, tmp2.id);
           return sortedRoles.filter((managed) => {
-            const tmp = outer2_4(managed);
+            const tmp = closure_2_4(managed);
             let tmp2 = !tmp;
             if (!tmp) {
               managed = managed.managed;
@@ -51,7 +51,7 @@ export default function useInviteAssignableRoles(arg0) {
                 let isRoleHigherResult = undefined === guild_connections;
                 if (isRoleHigherResult) {
                   const obj = sortedRoles(currentUser[7]);
-                  isRoleHigherResult = obj.isRoleHigher(closure_0, outer1_2.id, closure_0, managed);
+                  isRoleHigherResult = obj.isRoleHigher(closure_0, closure_1_2.id, closure_0, managed);
                 }
                 tmp3 = isRoleHigherResult;
               }

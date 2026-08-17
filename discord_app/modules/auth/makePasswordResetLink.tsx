@@ -1,7 +1,9 @@
 // discord_app/modules/auth/makePasswordResetLink.tsx
-import { Routes } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
 
-const result = require("set").fileFinishedImporting("modules/auth/makePasswordResetLink.tsx");
+const Routes = ME.Routes;
+const result = set.fileFinishedImporting("modules/auth/makePasswordResetLink.tsx");
 
 export default function makePasswordResetLink(arg0) {
   return "https:" + window.GLOBAL_ENV.WEBAPP_ENDPOINT + Routes.RESET + "#token=" + arg0;

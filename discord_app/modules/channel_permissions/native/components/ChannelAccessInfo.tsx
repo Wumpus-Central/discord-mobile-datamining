@@ -1,41 +1,39 @@
 // discord_app/modules/channel_permissions/native/components/ChannelAccessInfo.tsx
-import ShieldUserIcon from "ShieldUserIcon";
-import { View } from "GroupIcon";
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "createGuildRoleRecordFromRust" /* 1983 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let metroImportAll;
 const require = arg1;
-({ jsx: metroImportAll, jsxs: c9, Fragment: c10 } = jsxProd);
+({ jsx: closure_8, jsxs: c9, Fragment: c10 } = jsxProd);
 let c11 = 100;
 createCacheKey = { section: null, sectionContent: null, avatar: null, labelDetail: null, sectionIcon: null };
-createCacheKey = { alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, borderRadius: require("Themes").radii.sm, color: require("Themes").colors.TEXT_DEFAULT, flexDirection: "row", marginBottom: 8, marginTop: 8, padding: 16 };
+createCacheKey = { alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: ThemesDefault.radii.sm, color: ThemesDefault.colors.TEXT_DEFAULT, flexDirection: "row", marginBottom: 8, marginTop: 8, padding: 16 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignItems: "center", flexDirection: "row", flexGrow: 1 };
 createCacheKey[2] = { marginRight: 8 };
 createCacheKey[3] = { marginRight: 12 };
 createCacheKey[4] = { marginRight: 6 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_12 = createCacheKey.createStyles(createCacheKey);
 let closure_13 = { MEMBERS: 0, [0]: "MEMBERS", ROLES: 1, [1]: "ROLES" };
-let result = require("GuildNSFWContentLevel").fileFinishedImporting("modules/channel_permissions/native/components/ChannelAccessInfo.tsx");
+let result = require("set").fileFinishedImporting("modules/channel_permissions/native/components/ChannelAccessInfo.tsx");
 
 export default function ChannelAccessInfo(guild) {
   guild = guild.guild;
   const channel = guild.channel;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  dependencyMap = undefined;
+  const tmp = callback2();
   dependencyMap = tmp;
   let intl = guild(1236).intl;
   const stringResult = intl.string(guild(1236).t.li1wKf);
   let obj = guild(589);
-  let items = [createGuildRoleRecordFromRust];
+  let items = [closure_7];
   const items1 = [guild, channel];
-  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => guild(_undefined[10]).getExistingRoles(guild, outer1_7.getSortedRoles(guild.id), channel, channel.accessPermissions), items1);
+  const stateFromStoresArray = obj.useStateFromStoresArray(items, () => guild(closure_2[10]).getExistingRoles(guild, closure_1_7.getSortedRoles(guild.id), channel, channel.accessPermissions), items1);
   let id;
   if (guild != null) {
     id = guild.id;
@@ -58,14 +56,14 @@ export default function ChannelAccessInfo(guild) {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
     onPress() {
-      const result = guild(_undefined[14]).openChannelMembersActionSheet(channel.id, channel.guild_id);
+      const result = guild(closure_2[14]).openChannelMembersActionSheet(channel.id, channel.guild_id);
     },
     style: tmp.section,
     children: null
   };
   obj = { style: tmp.sectionContent, children: null };
   if (null != first) {
-    let obj1 = { children: null };
+    obj1 = { children: null };
     let obj2 = { style: null, user: null, guildId: null, size: null };
     obj2[0] = tmp.avatar;
     obj2[1] = first;
@@ -88,58 +86,58 @@ export default function ChannelAccessInfo(guild) {
     function renderCounts(MEMBERS, length, arg2, GroupIcon) {
       if (0 === length) {
         return null;
-      } else if (outer1_13.MEMBERS === MEMBERS) {
-        if (length > outer1_11) {
-          const intl4 = guild(_undefined[8]).intl;
+      } else if (closure_1_13.MEMBERS === MEMBERS) {
+        if (length > closure_1_11) {
+          const intl4 = guild(closure_2[8]).intl;
           let obj = { count: null };
           obj[0] = tmp12;
-          let formatToPlainStringResult = intl4.formatToPlainString(guild(_undefined[8]).t.PR5l07, obj);
-          let tmp14 = _undefined;
+          let formatToPlainStringResult = intl4.formatToPlainString(guild(closure_2[8]).t.PR5l07, obj);
+          let tmp14 = closure_2;
           let tmp13 = guild;
         } else {
           tmp13 = guild;
-          tmp14 = _undefined;
-          const intl3 = guild(_undefined[8]).intl;
+          tmp14 = closure_2;
+          const intl3 = guild(closure_2[8]).intl;
           obj = { count: null };
           obj[0] = length;
-          formatToPlainStringResult = intl3.formatToPlainString(guild(_undefined[8]).t.bu5sya, obj);
+          formatToPlainStringResult = intl3.formatToPlainString(guild(closure_2[8]).t.bu5sya, obj);
         }
       } else {
         if (tmp28.ROLES === MEMBERS) {
-          if (length > outer1_11) {
-            const intl2 = guild(_undefined[8]).intl;
-            const obj1 = { count: null };
+          if (length > closure_1_11) {
+            const intl2 = guild(closure_2[8]).intl;
+            obj1 = { count: null };
             obj1[0] = tmp6;
-            let formatToPlainStringResult1 = intl2.formatToPlainString(guild(_undefined[8]).t["+OYnFQ"], obj1);
-            let tmp8 = _undefined;
+            let formatToPlainStringResult1 = intl2.formatToPlainString(guild(closure_2[8]).t["+OYnFQ"], obj1);
+            let tmp8 = closure_2;
             let tmp7 = guild;
           } else {
             tmp7 = guild;
-            tmp8 = _undefined;
-            const intl = guild(_undefined[8]).intl;
+            tmp8 = closure_2;
+            const intl = guild(closure_2[8]).intl;
             const obj2 = { count: null };
             obj2[0] = length;
-            formatToPlainStringResult1 = intl.formatToPlainString(guild(_undefined[8]).t.T2BEtm, obj2);
+            formatToPlainStringResult1 = intl.formatToPlainString(guild(closure_2[8]).t.T2BEtm, obj2);
           }
           let tmp2 = tmp8;
           let tmp4 = tmp7;
           const tmp5 = formatToPlainStringResult1;
         } else {
-          tmp2 = _undefined;
-          obj = guild(_undefined[11]);
+          tmp2 = closure_2;
+          obj = guild(closure_2[11]);
           obj.assertNever(MEMBERS);
           tmp4 = guild;
         }
         const obj3 = { children: null };
         const obj4 = { size: "sm", style: null };
-        obj4[1] = _undefined.sectionIcon;
-        const items = [outer1_8(GroupIcon, obj4), ];
+        obj4[1] = closure_2.sectionIcon;
+        const items = [closure_1_8(GroupIcon, obj4), ];
         const obj5 = { style: null, variant: "text-sm/medium", children: null };
-        obj5[0] = _undefined.labelDetail;
+        obj5[0] = closure_2.labelDetail;
         obj5[2] = tmp5;
-        items[1] = outer1_8(tmp4(tmp2[12]).Text, obj5);
+        items[1] = closure_1_8(tmp4(tmp2[12]).Text, obj5);
         obj3[0] = items;
-        return outer1_9(outer1_3.Fragment, obj3);
+        return closure_1_9(closure_1_3.Fragment, obj3);
       }
     }
     obj6 = { children: null };
@@ -154,10 +152,8 @@ export default function ChannelAccessInfo(guild) {
   const obj7 = { children: null };
   obj[1] = closure_9(closure_10, obj6);
   const items6 = [callback(View, obj), ];
-  const obj8 = { source: null, size: null };
-  obj8[0] = channel(11640);
-  obj8[1] = guild(1297).Icon.Sizes.SMALL;
-  items6[1] = callback(guild(1297).Icon, obj8);
+  const tmp2Result = guild(8850);
+  items6[1] = callback(guild(1297).Icon, { source: channel(11640), size: guild(1297).Icon.Sizes.SMALL });
   obj[4] = items6;
   items2[1] = closure_9(guild(5433).PressableOpacity, obj);
   obj7[0] = items2;

@@ -1,34 +1,53 @@
 // discord_app/modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx
-import "noop";
-import { SafetySettingsNoticeType } from "SafetyToastType";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import SafetySettingsNoticeDefault from "SafetySettingsNotice" /* 14104 */;
+import { SafetySettingsNoticeType } from "SafetyToastType" /* 5430 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { resolveGoreSettingWithDefaults } from "../../../explicit_media_redaction/SensitiveMediaGoreRedactionSettingsUtils.tsx";
-import { SafetySettingsNotice } from "../../../safety_common/native/SafetySettingsNotice.tsx";
 
-const require = arg1;
-let result = require("jsxProd").fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
+require = arg1;
+noopAll;
+let result = require("set").fileFinishedImporting("modules/user_settings/content_and_social/native/SensitiveContentFiltersNotices.tsx");
 
 export const SensitiveContentFiltersTeenNotice = function SensitiveContentFiltersTeenNotice() {
   let obj = _resolveGoreSettingWithDefaults;
   _require = obj.useSensitiveContentFilterHelpArticle();
-  obj = { label: null, labelHook: null, noticeType: null };
-  obj[0] = _getSystemLocale.t.EUo0yj;
-  obj[1] = function labelHook() {
-    const obj = outer1_1(outer1_2[6]);
-    obj.openURL(outer1_1(outer1_2[7]).getArticleURL(closure_0));
+  obj = {
+    label: _getSystemLocale.t.EUo0yj,
+    labelHook() {
+      const obj = closure_1_1(closure_1_2[6]);
+      obj.openURL(closure_1_1(closure_1_2[7]).getArticleURL(closure_0));
+    },
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
   };
-  obj[2] = SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE;
-  return jsx(SafetySettingsNotice, { label: null, labelHook: null, noticeType: null });
+  return jsx(SafetySettingsNoticeDefault, {
+    label: _getSystemLocale.t.EUo0yj,
+    labelHook() {
+      const obj = closure_1_1(closure_1_2[6]);
+      obj.openURL(closure_1_1(closure_1_2[7]).getArticleURL(closure_0));
+    },
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE
+  });
 };
 export const SensitiveContentFiltersAgeVerificationNotice = function SensitiveContentFiltersAgeVerificationNotice() {
-  let obj = { label: null, labelHook: null, noticeType: null };
-  obj[0] = getSystemLocale.t.OX4ybh;
-  obj[1] = function labelHook() {
-    let obj = callback2(5428);
-    obj = { entryPoint: callback(5254).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
-    const result = obj.showAgeVerificationGetStartedModal(obj);
+  let obj = {
+    label: getSystemLocale.t.OX4ybh,
+    labelHook() {
+      let obj = callback2(5428);
+      obj = { entryPoint: callback(5254).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+      const result = obj.showAgeVerificationGetStartedModal(obj);
+    },
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
   };
-  obj[2] = SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE;
-  return jsx(SafetySettingsNotice, { label: null, labelHook: null, noticeType: null });
+  return jsx(SafetySettingsNoticeDefault, {
+    label: getSystemLocale.t.OX4ybh,
+    labelHook() {
+      let obj = callback2(5428);
+      obj = { entryPoint: callback(5254).AgeVerificationModalEntryPoint.CONTENT_AND_SOCIAL_NOTICE };
+      const result = obj.showAgeVerificationGetStartedModal(obj);
+    },
+    noticeType: SafetySettingsNoticeType.SENSITIVE_CONTENT_FILTER_AGE_VERIFICATION_NOTICE
+  });
 };

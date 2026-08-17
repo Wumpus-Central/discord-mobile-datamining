@@ -1,25 +1,21 @@
 // discord_app/modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import GuildFeatures from "GuildFeatures";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 
 const require = arg1;
 const PremiumTypes = GuildFeatures.PremiumTypes;
 const SubscriptionIntervalTypes = GuildFeatures.SubscriptionIntervalTypes;
 let items = [, ];
 ({ TIER_2: arr[0], TIER_0: arr[1] } = PremiumTypes);
-let result = require("GuildFeatures").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx");
+let result = require("set").fileFinishedImporting("modules/premium_marketing/native/hooks/useBuyNitroPlanSelection.tsx");
 
 export const NITRO_PLAN_TIERS = items;
 export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) {
-  let TIER_2;
-  let discountedPriceString;
-  let discountedProduct;
-  let memo2;
   let obj = memo2(memo[4]);
   const premiumTrialOfferPremiumType = obj.usePremiumTrialOfferPremiumType();
   const NitroACOMSubscriptionExperiment = memo2(memo[5]).NitroACOMSubscriptionExperiment;
-  let obj1 = memo2(memo[6]);
+  obj1 = memo2(memo[6]);
   tier = undefined;
   if (tier != null) {
     tier = tier.tier;
@@ -34,9 +30,10 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   if (TIER_2 == null) {
     TIER_2 = priceString.TIER_2;
   }
-  const items = [TIER_2];
+  importDefault = TIER_2;
+  items = [TIER_2];
   memo = obj3.useMemo(() => {
-    let closure_0 = TIER_2;
+    closure_0 = closure_1;
     const premiumBundlesWithPredicate = memo2(memo[3]).getPremiumBundlesWithPredicate((additionalPlans) => {
       let tmp = 0 === additionalPlans.additionalPlans.length;
       if (tmp) {
@@ -88,12 +85,12 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   found = memo.find((interval) => interval.interval === priceString1.MONTH);
   found1 = memo.find((interval) => interval.interval === priceString1.YEAR);
   let basePlanId;
-  let tmp19 = TIER_2;
+  let tmp19 = importDefault;
   const tmpResult1 = memo2(memo[9]);
   if (found != null) {
     basePlanId = found.basePlanId;
   }
-  const tmp20Result = TIER_2(memo[10])(basePlanId);
+  const tmp20Result = importDefault(memo[10])(basePlanId);
   priceString = undefined;
   if (tmp20Result != null) {
     priceString = tmp20Result.priceString;
@@ -102,7 +99,7 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     priceString = null;
   }
   let basePlanId1;
-  let tmp20 = TIER_2(memo[10]);
+  let tmp20 = importDefault(memo[10]);
   if (found1 != null) {
     basePlanId1 = found1.basePlanId;
   }
@@ -116,11 +113,11 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   }
   let tmp8Result = tmp8(obj3.useState(() => new Map()), 2);
   const first = tmp8Result[0];
-  let closure_8 = tmp8Result[1];
+  closure_8 = tmp8Result[1];
   const items1 = [found, found1, priceString, priceString1, first];
   const callback = obj3.useCallback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     callback((get) => {
       if (get.get(closure_0) === closure_1) {
         return get;
@@ -134,8 +131,6 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     });
   }, []);
   const memo1 = obj3.useMemo(() => {
-    let tmp16;
-    let tmp18;
     const map = new Map();
     let tmp2 = null != found;
     if (tmp2) {
@@ -190,11 +185,11 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
   }
   tmp8Result = tmp8(obj3.useState(productId), 2);
   let first1 = tmp8Result[0];
-  let closure_11 = tmp8Result[1];
+  closure_11 = tmp8Result[1];
   const items3 = [TIER_2];
   [][0] = TIER_2;
   const callback1 = obj3.useCallback((arg0) => {
-    if (arg0 !== TIER_2) {
+    if (arg0 !== closure_1) {
       memo2(arg0);
       callback2(null);
     }
@@ -241,13 +236,13 @@ export const useBuyNitroPlanSelection = function useBuyNitroPlanSelection(tier) 
     obj1[8] = callback;
     return obj1;
   }
-  TIER_2 = isEligibleForBogoOffer ? priceString1.MONTH : priceString1.YEAR;
+  importDefault = isEligibleForBogoOffer ? priceString1.MONTH : priceString1.YEAR;
   const found3 = memo.filter((productId) => !memo2.has(productId.productId));
   let arr7 = memo;
   if (found3.length > 0) {
     arr7 = found3;
   }
-  let found4 = arr7.find((interval) => interval.interval === TIER_2);
+  let found4 = arr7.find((interval) => interval.interval === closure_1);
   if (found4 == null) {
     found4 = arr7[0];
   }

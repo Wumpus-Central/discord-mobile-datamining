@@ -1,15 +1,18 @@
 // discord_app/modules/premium/FriendAnniversaryNotificationUtils.tsx
-import { AnalyticEvents } from "ME";
-import { NotificationSettingsUpdateType as closure_4 } from "AccountNotificationFlags";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import AccountNotificationFlags from "AccountNotificationFlags" /* 4033 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
 
-const result = require("explicitContentFromProto").fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+let closure_4 = AccountNotificationFlags.NotificationSettingsUpdateType;
+const result = set.fileFinishedImporting("modules/premium/FriendAnniversaryNotificationUtils.tsx");
 
 export const onFriendAnniversaryNotificationSettingsChanged = function onFriendAnniversaryNotificationSettingsChanged(friend_anniversary_notifications) {
   const EnableFriendAnniversaryNotifications = explicitContentFromProto.EnableFriendAnniversaryNotifications;
   EnableFriendAnniversaryNotifications.updateSetting(friend_anniversary_notifications);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = { update_type: constants.ACCOUNT, friend_anniversary_notifications };
   obj.track(AnalyticEvents.NOTIFICATION_SETTINGS_UPDATED, obj);
 };

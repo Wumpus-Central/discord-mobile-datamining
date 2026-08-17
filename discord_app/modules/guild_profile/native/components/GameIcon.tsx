@@ -1,30 +1,23 @@
 // discord_app/modules/guild_profile/native/components/GameIcon.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { gameIcon: { width: 32, height: 32 }, gameIconImage: null, gameIconMask: null, fireIcon: null };
-createCacheKey = { width: 32, height: 32, borderRadius: require("Themes").radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey = { width: 32, height: 32, borderRadius: ThemesDefault.radii.xs, borderWidth: 1, borderStyle: "solid", borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, borderRadius: require("Themes").radii.sm };
+createCacheKey[2] = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.sm };
 createCacheKey[3] = { marginTop: -1, width: 14, height: 14 };
 createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER, borderRadius: require("Themes").radii.sm };
-const result = require("jsxProd").fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
+let obj1 = { position: "absolute", top: -4, right: -4, display: "flex", justifyContent: "center", alignItems: "center", padding: 2, width: 18, height: 18, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: ThemesDefault.radii.sm };
+const result = require("set").fileFinishedImporting("modules/guild_profile/native/components/GameIcon.tsx");
 
 export default function GameIcon(arg0) {
-  let activityLevel;
-  let game;
-  let onPress;
-  let style;
   ({ style, game } = arg0);
   ({ activityLevel, onPress } = arg0);
   let fireIcon = createCacheKey();
@@ -62,7 +55,7 @@ export default function GameIcon(arg0) {
       callback[0] = callback(closure_5, obj);
       if (style) {
         source = closure_4;
-        const obj1 = { style: null, children: null };
+        obj1 = { style: null, children: null };
         obj1[0] = fireIcon.gameIconMask;
         FireIcon = FireIcon(9526).FireIcon;
         const obj2 = { style: null, color: null };

@@ -1,10 +1,10 @@
 // discord_app/modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx
-import noop from "noop";
-import map from "map";
-import recomputeAffinities from "recomputeAffinities";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import { NO_SUGGESTIONS } from "items";
-import { isAllowedType } from "ALLOWED_TYPES";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "map" /* 15538 */;
+import closure_5 from "recomputeAffinities" /* 5407 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import { NO_SUGGESTIONS } from "items" /* 15464 */;
+import { isAllowedType } from "ALLOWED_TYPES" /* 7606 */;
 
 const require = arg1;
 function getAffineChannelId(channelId) {
@@ -13,7 +13,7 @@ function getAffineChannelId(channelId) {
 function getAffineUserDMId(otherUserId) {
   return dMFromUserId.getDMFromUserId(otherUserId.otherUserId);
 }
-let result = require("recomputeAffinities").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
+let result = require("set").fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildSuggestionCandidates.tsx");
 
 export default function useFavoritesGuildSuggestionCandidates(arg0) {
   let stateFromStores1 = arg0;
@@ -38,14 +38,14 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
     const userAffinitiesV2 = stateFromStores1(results[8]).fetchUserAffinitiesV2();
   }, []);
   const obj2 = stateFromStores1(results[7]);
-  const items2 = [recomputeAffinities];
+  const items2 = [closure_5];
   stateFromStores1 = stateFromStores1(results[7]).useStateFromStores(items2, () => userAffinitiesMap.getUserAffinitiesMap());
   const items3 = [stateFromStores1];
   memo1 = memo.useMemo(() => {
     array = new Array(array.size);
-    let c1 = 0;
+    c1 = 0;
     const item = array.forEach((arg0) => {
-      let closure_1 = tmp + 1;
+      closure_1 = tmp + 1;
       array[+closure_1] = arg0;
     });
     return array.sort((dmProbability, dmProbability2) => dmProbability2.dmProbability - dmProbability.dmProbability);
@@ -54,8 +54,8 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
   return memo.useMemo(() => {
     let items = [];
     const set = new Set();
-    let obj = { affinities: memo, getChannelId: outer1_9, index: 0 };
-    obj = { affinities: memo1, getChannelId: outer1_10, index: 0 };
+    let obj = { affinities: memo, getChannelId: closure_1_9, index: 0 };
+    obj = { affinities: memo1, getChannelId: closure_1_10, index: 0 };
     let num = 0;
     if (items.length < stateFromStores1) {
       while (true) {
@@ -73,16 +73,16 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
             if (null != tmp4) {
               let channelId = obj4.getChannelId(tmp4);
               if (null != channelId) {
-                let tmp6 = tmp;
+                let tmp6 = callback;
                 let tmp7 = results;
-                let tmp8 = tmp(results[11])(channelId);
+                let tmp8 = callback(results[11])(channelId);
                 if (null != tmp8) {
-                  let tmp9 = outer1_8;
-                  if (outer1_8(tmp8)) {
+                  let tmp9 = closure_1_8;
+                  if (closure_1_8(tmp8)) {
                     if (!set.has(tmp8.record.id)) {
-                      let tmp10 = tmp;
+                      let tmp10 = callback;
                       tmp3 = tmp8;
-                      if (tmp(tmp8, false)) {
+                      if (callback(tmp8, false)) {
                         break;
                       }
                     }
@@ -110,16 +110,16 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
               if (null != tmp12) {
                 let channelId1 = obj5.getChannelId(tmp12);
                 if (null != channelId1) {
-                  let tmp14 = tmp;
+                  let tmp14 = callback;
                   let tmp15 = results;
-                  let tmp16 = tmp(results[11])(channelId1);
+                  let tmp16 = callback(results[11])(channelId1);
                   if (null != tmp16) {
-                    let tmp17 = outer1_8;
-                    if (outer1_8(tmp16)) {
+                    let tmp17 = closure_1_8;
+                    if (closure_1_8(tmp16)) {
                       if (!set.has(tmp16.record.id)) {
-                        let tmp18 = tmp;
+                        let tmp18 = callback;
                         tmp11 = tmp16;
-                        if (tmp(tmp16, false)) {
+                        if (callback(tmp16, false)) {
                           break;
                         }
                       }
@@ -179,7 +179,7 @@ export default function useFavoritesGuildSuggestionCandidates(arg0) {
       }
     }
     if (items.length <= 0) {
-      items = outer1_7;
+      items = closure_1_7;
     }
     return items;
   }, items4);

@@ -1,8 +1,9 @@
 // discord_app/lib/uploader/UploaderQueue.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import set from "set";
+import timestampDefault from "timestamp" /* 3 */;
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import set from "set" /* 2 */;
 
-let closure_1 = new require("timestamp")("UploaderQueue.tsx");
+let closure_1 = new timestampDefault("UploaderQueue.tsx");
 class UploaderQueue {
   constructor() {
     obj = Object.create(new.target.prototype);
@@ -19,7 +20,7 @@ prototype["enqueue"] = function enqueue(props) {
   if (this.drainingQueue) {
     str = "yes";
   }
-  tmp2.log(`enqueue() - alreadying draining? ${str}`);
+  logger.log(`enqueue() - alreadying draining? ${str}`);
   if (!self.drainingQueue) {
     self.drainQueue();
   }
@@ -53,23 +54,23 @@ prototype["drainQueue"] = function drainQueue() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
-            let asyncGeneratorStep = tmp7;
-            asyncGeneratorStep = undefined;
-            outer1_0.drainingQueue = true;
+            closure_1 = tmp3;
+            closure_0 = tmp7;
+            closure_0 = undefined;
+            closure_1_0.drainingQueue = true;
             const _HermesInternal2 = HermesInternal;
-            outer1_1.log("drainQueue() - starting, queue length: " + outer1_0.queue.length);
-            const queue = outer1_0.queue;
+            closure_1_1.log("drainQueue() - starting, queue length: " + closure_1_0.queue.length);
+            const queue = closure_1_0.queue;
             const arr = queue.pop();
             if (null == arr) {
-              outer1_1.log("drainQueue() - No uploads left, setting drainingQueue to false");
-              outer1_0.drainingQueue = false;
+              closure_1_1.log("drainQueue() - No uploads left, setting drainingQueue to false");
+              closure_1_0.drainingQueue = false;
               c5 = 3;
               return { value: "HermesInternal", done: "HermesInternal" };
             } else {
-              let c3 = 1;
-              outer1_1.log("drainQueue() - start uploader");
-              asyncGeneratorStep = arr();
+              c3 = 1;
+              closure_1_1.log("drainQueue() - start uploader");
+              closure_0 = arr();
               const promise = new Promise((arg0) => {
                 const _aborted = arg0;
                 if (tmp) {
@@ -80,7 +81,7 @@ prototype["drainQueue"] = function drainQueue() {
               });
               c4 = 2;
               c5 = 1;
-              const obj1 = { value: null, done: false };
+              obj1 = { value: null, done: false };
               obj1[0] = promise;
               return obj1;
             }
@@ -89,15 +90,15 @@ prototype["drainQueue"] = function drainQueue() {
           if (1 === tmp7) {
             c3 = 0;
             closure_1 = closure_2;
-            outer1_1.error(closure_1);
-            asyncGeneratorStep.drainQueue();
+            closure_1_1.error(closure_1);
+            closure_0.drainQueue();
             c5 = 3;
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
           } else if (arg0 !== 2) {
             const _HermesInternal = HermesInternal;
-            outer1_1.log("drainQueue() Uploader complete - " + asyncGeneratorStep.id);
+            closure_1_1.log("drainQueue() Uploader complete - " + closure_0.id);
             c3 = 0;
           }
           c3 = 0;

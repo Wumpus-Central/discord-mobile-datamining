@@ -1,18 +1,13 @@
 // discord_app/modules/game_profile/native/components/GameProfileDetails.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { IGDB_ATTRIBUTION_LINK } from "ContentInventoryFeedKey";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { IGDB_ATTRIBUTION_LINK } from "ContentInventoryFeedKey" /* 9064 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
 const require = arg1;
 function GameProfileWebsiteButton(action) {
-  let icon;
-  let title;
   action = action.action;
   const trackAction = action.trackAction;
   const url = action.url;
@@ -22,7 +17,7 @@ function GameProfileWebsiteButton(action) {
     accessibilityRole: "button",
     accessibilityLabel: title,
     onPress: React.useCallback(() => {
-      trackAction(outer1_3[6]).openURL(url);
+      trackAction(closure_1_3[6]).openURL(url);
       trackAction(action);
     }, items),
     hitSlop: trackAction(712).space.PX_4,
@@ -30,34 +25,34 @@ function GameProfileWebsiteButton(action) {
   });
 }
 ({ View: c5, Pressable: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, headerText: null, detailsContainer: null, detailsRow: null, detailsRowValue: null, detailsRowBottomBorder: null, platformsContainer: null, linksContainer: null };
-createCacheKey = { gap: require("Themes").space.PX_8 };
+createCacheKey = { gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { paddingHorizontal: require("Themes").space.PX_8 };
-let obj1 = { paddingHorizontal: require("Themes").space.PX_8 };
-createCacheKey[2] = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj2 = { borderRadius: require("Themes").radii.lg, borderWidth: 1, borderColor: require("Themes").colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: require("Themes").space.PX_12 };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: require("Themes").space.PX_12 };
-createCacheKey[4] = { flexDirection: "column", flexShrink: 1, paddingLeft: require("Themes").space.PX_32 };
-let obj4 = { flexDirection: "column", flexShrink: 1, paddingLeft: require("Themes").space.PX_32 };
-createCacheKey[5] = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-let obj5 = { borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-let obj6 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj7 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_12 };
-const result = require("ContentInventoryFeedKey").fileFinishedImporting("modules/game_profile/native/components/GameProfileDetails.tsx");
+createCacheKey[1] = { paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj1 = { paddingHorizontal: ThemesDefault.space.PX_8 };
+createCacheKey[2] = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj2 = { borderRadius: ThemesDefault.radii.lg, borderWidth: 1, borderColor: ThemesDefault.colors.BORDER_SUBTLE, overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[3] = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", padding: ThemesDefault.space.PX_12 };
+createCacheKey[4] = { flexDirection: "column", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32 };
+let obj4 = { flexDirection: "column", flexShrink: 1, paddingLeft: ThemesDefault.space.PX_32 };
+createCacheKey[5] = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj5 = { borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+let obj6 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj7 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12 };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileDetails.tsx");
 
 export default function GameProfileDetails(game) {
   game = game.game;
   const trackAction = game.trackAction;
-  let c2;
+  closure_2 = undefined;
   let memo;
-  const tmp = createCacheKey();
-  c2 = tmp;
+  const tmp = callback3();
+  closure_2 = tmp;
   let items = [, , , ];
   ({ linksContainer: arr[0], platformsContainer: arr[1] } = tmp);
   items[2] = game;
@@ -113,7 +108,7 @@ export default function GameProfileDetails(game) {
               obj = { label: null, value: null };
               const intl7 = game(memo[8]).intl;
               obj[0] = intl7.string(game(memo[8]).t.H3mPDT);
-              let obj8 = _undefined(memo[10]);
+              let obj8 = lib(memo[10]);
               const _Date = Date;
               const date = new Date(firstReleaseDate);
               obj[1] = obj8.dateFormat(date, "LL");
@@ -147,13 +142,13 @@ export default function GameProfileDetails(game) {
                 obj = { label: null, value: null };
                 const intl10 = game(memo[8]).intl;
                 obj[0] = intl10.string(game(memo[8]).t["Oj3o1/"]);
-                const obj1 = { style: null, children: null };
-                obj1[0] = _undefined.linksContainer;
+                obj1 = { style: null, children: null };
+                obj1[0] = lib.linksContainer;
                 obj1[1] = found.map((icon) => {
                   const url = icon.url;
-                  return outer1_8(outer1_11, { icon: icon.icon, action: icon.action, title: icon.title, url, trackAction: closure_1 }, url);
+                  return closure_1_8(closure_1_11, { icon: icon.icon, action: icon.action, title: icon.title, url, trackAction: closure_1 }, url);
                 });
-                obj[1] = outer1_8(outer1_5, obj1);
+                obj[1] = closure_1_8(closure_1_5, obj1);
                 items.push(obj);
               }
               if (items.length > 0) {
@@ -162,7 +157,7 @@ export default function GameProfileDetails(game) {
                 obj2[0] = intl11.string(game(memo[8]).t["BwQ+9e"]);
                 const intl12 = game(memo[8]).intl;
                 const obj3 = { igdbLink: null };
-                obj3[0] = outer1_7;
+                obj3[0] = closure_1_7;
                 obj2[1] = intl12.format(game(memo[8]).t.XPFZVl, obj3);
                 items.push(obj2);
               }
@@ -178,13 +173,9 @@ export default function GameProfileDetails(game) {
               const obj4 = { label: null, value: null };
               obj4[0] = stringResult;
               const obj5 = { style: null, children: null };
-              obj5[0] = _undefined.platformsContainer;
-              obj5[1] = platforms.map((platform) => {
-                const obj = { platform, size: "md", color: null };
-                obj[2] = callback2(712).colors.ICON_SUBTLE;
-                return callback3(callback(12014).GameUpdatePlatformIcon, obj, platform);
-              });
-              obj4[1] = outer1_8(outer1_5, obj5);
+              obj5[0] = lib.platformsContainer;
+              obj5[1] = platforms.map((platform) => callback3(callback(12014).GameUpdatePlatformIcon, { platform, size: "md", color: callback2(712).colors.ICON_SUBTLE }, platform));
+              obj4[1] = closure_1_8(closure_1_5, obj5);
               items.push(obj4);
             }
           } else {
@@ -240,7 +231,7 @@ export default function GameProfileDetails(game) {
     obj = { style: null, children: null };
     obj[0] = tmp.detailsContainer;
     obj[1] = memo.map((children) => {
-      const items = [_undefined.detailsRow, ];
+      const items = [lib.detailsRow, ];
       let prop = null;
       if (memo.length > 1) {
         prop = null;
@@ -251,18 +242,18 @@ export default function GameProfileDetails(game) {
       let obj = { style: items, children: null };
       items[1] = prop;
       obj = { variant: "text-sm/medium", color: "text-subtle", lineClamp: 1, children: children.label };
-      const items1 = [outer1_8(game(memo[13]).Text, obj), ];
+      const items1 = [closure_1_8(game(memo[13]).Text, obj), ];
       if (typeof children.value === "string") {
         obj = { variant: "text-sm/normal", color: "text-subtle", lineClamp: 1, style: null, children: null };
         obj[3] = tmp3.detailsRowValue;
         obj[4] = children.value;
-        let value = outer1_8(game(memo[13]).Text, obj);
+        let value = closure_1_8(game(memo[13]).Text, obj);
       } else {
         value = children.value;
       }
       items1[1] = value;
       obj[1] = items1;
-      return outer1_9(outer1_5, obj, children.label);
+      return closure_1_9(closure_1_5, obj, children.label);
     });
     items1[1] = callback(closure_5, obj);
     obj[1] = items1;

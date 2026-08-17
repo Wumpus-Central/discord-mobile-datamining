@@ -1,15 +1,13 @@
 // discord_app/modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx
-import importAllResult from "trackMemberApplicationViewed";
-import { View } from "int2hslRaw";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import createdAt from "createdAt";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { EMPTY_STRING_SNOWFLAKE_ID } from "ME";
-import jsxProd from "maybeFetchUserProfile";
-import createCacheKey from "createCacheKey";
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_6 from "createdAt" /* 1930 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { EMPTY_STRING_SNOWFLAKE_ID } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
 const require = arg1;
 class JoinRequestActionSheet {
   constructor(arg0) {
@@ -17,9 +15,9 @@ class JoinRequestActionSheet {
     user = undefined;
     userId = undefined;
     guildId = undefined;
-    c4 = undefined;
-    useSharedValue = undefined;
-    tmp = jsxs();
+    closure_4 = undefined;
+    closure_5 = undefined;
+    tmp = closure_11();
     user = joinRequest.user;
     userId = joinRequest.userId;
     guildId = joinRequest.guildId;
@@ -27,18 +25,18 @@ class JoinRequestActionSheet {
     tmp3 = userId;
     obj = require("initialize");
     items = [];
-    items[0] = View;
+    items[0] = closure_7;
     items1 = [, ];
     items1[0] = user;
     items1[1] = userId;
     stateFromStores = obj.useStateFromStores(items, () => {
-      let user = outer1_7.getUser(userId);
+      user = closure_1_7.getUser(userId);
       if (null == user) {
-        user = new outer1_6(user);
+        user = new closure_1_6(user);
       }
       return user;
     }, items1);
-    c4 = stateFromStores;
+    closure_4 = stateFromStores;
     tmp5 = user;
     id = undefined;
     tmp6 = require("useDisplayProfile");
@@ -55,8 +53,8 @@ class JoinRequestActionSheet {
     ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef);
     ref = guildId.useRef(null);
     tmp2Result1 = require("module_4115");
-    sharedValue = require("noop");
-    useSharedValue = sharedValue;
+    sharedValue = require("module_0");
+    closure_5 = sharedValue;
     items2 = [];
     items2[0] = sharedValue;
     callback = guildId.useCallback((nativeEvent) => {
@@ -66,7 +64,7 @@ class JoinRequestActionSheet {
     ({ theme, secondaryColor, primaryColor } = tmp13);
     tmp2Result2 = require("initialize");
     items3 = [];
-    items3[0] = useSharedValue;
+    items3[0] = closure_5;
     stateFromStores1 = tmp2Result2.useStateFromStores(items3, () => sharedValue.syncProfileThemeWithUserTheme);
     tmp15 = require("useTheme")();
     tmp2Result3 = require("useProfileThemeValues");
@@ -154,7 +152,7 @@ class JoinRequestActionSheet {
       obj4[1] = items6;
       obj4[2] = ref;
       obj4[3] = callback;
-      tmp28 = c4;
+      tmp28 = closure_4;
       obj6 = { children: null };
       obj7 = { style: null, children: null };
       obj7[0] = tmp.profileContainer;
@@ -163,8 +161,8 @@ class JoinRequestActionSheet {
       obj8[1] = stateFromStores;
       obj8[2] = tmp6Result;
       obj7[1] = jsx(require("OpenInterviewButton"), obj8);
-      obj6[0] = jsx(c4, obj7);
-      obj4[4] = jsx(c4, obj6);
+      obj6[0] = jsx(closure_4, obj7);
+      obj4[4] = jsx(closure_4, obj6);
       items7 = [, ];
       items7[0] = jsx(require("BottomSheetModal").BottomSheetScrollView, obj4);
       obj9 = { variant: "floating", tabStyle: null, onPress: null };
@@ -184,7 +182,7 @@ let c3 = importAllResult;
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let closure_11 = createCacheKey.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 } });
 const memoResult = importAllResult.memo(JoinRequestActionSheet);
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_member_verification/native/components/JoinRequestActionSheet.tsx");
 
 export default memoResult;
 export { JoinRequestActionSheet };

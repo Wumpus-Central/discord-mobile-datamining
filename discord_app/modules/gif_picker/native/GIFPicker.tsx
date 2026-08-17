@@ -1,31 +1,18 @@
 // discord_app/modules/gif_picker/native/GIFPicker.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "module_10212";
-import { View } from "module_10207";
-import getFormatFromUrl from "getFormatFromUrl";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_4 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_7 from "getFormatFromUrl" /* 10194 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let map1;
-let metroImportAll;
-let unpackModuleId;
 const require = arg1;
 let c5 = importAllResult;
-({ AnalyticEvents: metroImportAll, ChatInputComponentViewedTypes: c9, GIF_FETCH_LIMIT_IOS: c10, GIFPickerResultTypes: unpackModuleId, TooltipNames: closure_12 } = ME);
+({ AnalyticEvents: closure_8, ChatInputComponentViewedTypes: c9, GIF_FETCH_LIMIT_IOS: c10, GIFPickerResultTypes: unpackModuleId, TooltipNames: closure_12 } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 let closure_15 = createCacheKey.createStyles({ container: { flex: 1 } });
 const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
-  let c13;
-  let columnWidth;
-  let columns;
-  let keyboardDismissMode;
-  let selectedGifSrc;
-  let tmp12;
   bottomSheetRef = bottomSheetRef.bottomSheetRef;
   const channelId = bottomSheetRef.channelId;
   const guildId = bottomSheetRef.guildId;
@@ -36,21 +23,21 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   }
   const contentHorizontalPadding = bottomSheetRef.contentHorizontalPadding;
   const onPressGIF = bottomSheetRef.onPressGIF;
-  let c6;
+  closure_6 = undefined;
   let first;
-  let closure_8;
+  closure_8 = undefined;
   let ref;
-  let closure_10;
+  closure_10 = undefined;
   let constants;
-  let closure_12;
+  closure_12 = undefined;
   let callback;
   let first1;
   let callback2;
   let first2;
-  let c17;
+  closure_17 = undefined;
   let memo1;
   let favorites;
-  let closure_20;
+  closure_20 = undefined;
   let resultItems;
   let resultQuery;
   callback2 = undefined;
@@ -72,7 +59,7 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   let tmp3 = channelId;
   let obj = initialQuery;
   const tmp4 = channelId(initialQuery[9])();
-  c6 = tmp4;
+  closure_6 = tmp4;
   const tmp5 = contentHorizontalPadding(onPressGIF.useState(0), 2);
   first = tmp5[0];
   closure_8 = tmp5[1];
@@ -82,7 +69,7 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   }, []);
   const memo = onPressGIF.useMemo(() => {
     let num = 2;
-    if (c6) {
+    if (closure_6) {
       num = 3;
     }
     const obj = { columns: num, columnWidth: null };
@@ -108,12 +95,12 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   callback2 = tmp14[1];
   const tmp16 = contentHorizontalPadding(onPressGIF.useState(""), 2);
   first2 = tmp16[0];
-  c17 = tmp17;
+  closure_17 = tmp17;
   const items2 = [ref];
   const callback1 = onPressGIF.useCallback(() => {
     callback(false);
     callback2(closure_11.SEARCH);
-    _undefined2("");
+    callback3("");
     guildId(initialQuery[7]).resetSearch();
     const current = ref.current;
     if (current != null) {
@@ -121,7 +108,7 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
     }
   }, items2);
   memo1 = onPressGIF.useMemo(() => bottomSheetRef(initialQuery[11]).debounce(guildId(initialQuery[7]).search, 200), []);
-  let obj1 = bottomSheetRef(initialQuery[10]);
+  obj1 = bottomSheetRef(initialQuery[10]);
   const favoriteGIFsMobile = obj1.useFavoriteGIFsMobile();
   favorites = favoriteGIFsMobile.favorites;
   const items3 = [favorites, first2];
@@ -130,7 +117,7 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   const items4 = [first];
   const stateFromStoresObject = obj2.useStateFromStoresObject(items4, () => {
     if (first1 !== closure_11.FAVORITES) {
-      let resultItems = first.getResultItems();
+      resultItems = first.getResultItems();
     } else {
       resultItems = closure_20;
     }
@@ -261,7 +248,7 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
         obj1[3] = flag;
         items12[1] = tmp32(tmp3(obj[19]), obj1);
         obj[2] = items12;
-        return first1(c6, obj);
+        return first1(closure_6, obj);
       }
     }
   }
@@ -277,6 +264,6 @@ const memoResult = importAllResult.memo(function GIFPicker(bottomSheetRef) {
   obj = { columns, columnWidth, loading: tmp12, inActionSheet: flag, resultItems, onPressGIF: callback3, selectedGifSrc, keyboardDismissMode, ListFooterComponent: memo2 };
   tmp32Result = tmp32(tmp3, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
+const result = require("set").fileFinishedImporting("modules/gif_picker/native/GIFPicker.tsx");
 
 export default memoResult;

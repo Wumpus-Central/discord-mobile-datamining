@@ -1,66 +1,56 @@
 // discord_app/modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx
-import _slicedToArray from "_slicedToArray";
-import SearchField from "SearchField";
-import get_ActivityIndicator from "getPermissionOptions";
-import { isGuildOwner } from "GuildNSFWContentLevel";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import ME from "ME";
-import jsxProd from "fromString";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { isGuildOwner } from "GuildNSFWContentLevel" /* 1434 */;
+import closure_10 from "getUncachedChannelPermissions" /* 4021 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_12;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_6;
-let error;
-let map1;
-let metroImportAll;
 const require = arg1;
-({ View: closure_6, Keyboard: error, SectionList: metroImportAll } = get_ActivityIndicator);
+({ View: closure_6, Keyboard: error, SectionList: closure_8 } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = ME);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
 createCacheKey = { emptyState: { backgroundColor: "transparent", paddingTop: 40 }, sectionSeparator: null, emptyStateText: null, subLabel: null };
-createCacheKey = { height: require("Themes").space.PX_24 };
+createCacheKey = { height: ThemesDefault.space.PX_24 };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { color: require("Themes").colors.TEXT_DEFAULT };
+createCacheKey[2] = { color: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[3] = { includeFontPadding: true };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { color: require("Themes").colors.TEXT_DEFAULT };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx");
+let closure_17 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { color: ThemesDefault.colors.TEXT_DEFAULT };
+const result = require("set").fileFinishedImporting("modules/guild_settings/roles/native/GuildSettingsRoleEditPermissions.tsx");
 
 export default function GuildSettingsRoleEditPermission(guild) {
-  let c10;
-  let c9;
-  let dependencyMap;
-  let importAll;
   guild = guild.guild;
   const role = guild.role;
   ({ permissions: importAll, onPermissionsChanged: dependencyMap } = guild);
   let callback;
   let highestRole;
-  let c6;
+  closure_6 = undefined;
   let first;
-  let closure_8;
-  let isGuildOwner;
+  closure_8 = undefined;
+  isGuildOwner = undefined;
   c10 = undefined;
   let currentUser;
-  let tmp = createCacheKey();
+  let tmp = callback2();
   callback = tmp;
   currentUser = currentUser.getCurrentUser();
   highestRole = undefined;
   if (null != currentUser) {
-    let obj = importAll(4026);
+    let obj = applyOverwritesAll;
     highestRole = obj.getHighestRole(guild, currentUser.id);
   }
-  let obj1 = importAll(4026);
+  obj1 = applyOverwritesAll;
   let id;
   if (currentUser != null) {
     id = currentUser.id;
   }
   const isRoleHigherResult = obj1.isRoleHigher(guild, id, highestRole, role);
-  c6 = tmp10;
+  closure_6 = tmp10;
   const tmp11 = callback(highestRole.useState(""), 2);
   first = tmp11[0];
   closure_8 = tmp11[1];
@@ -70,7 +60,7 @@ export default function GuildSettingsRoleEditPermission(guild) {
   const tmp13 = callback(highestRole.useState(false), 2);
   const tmp6 = importAll;
   obj = { permission: constants.ADMINISTRATOR, user: currentUser, context: guild };
-  const tmp6Result = importAll(4026);
+  const tmp6Result = applyOverwritesAll;
   currentUser = highestRole.useRef(false);
   let tmp18Result = tmp16;
   if (!tmp16) {
@@ -86,15 +76,15 @@ export default function GuildSettingsRoleEditPermission(guild) {
     obj1 = { onTemplateOpen: null };
     obj1[0] = function onTemplateOpen() {
       first.dismiss();
-      let obj = role(outer1_3[14]);
+      let obj = role(closure_1_3[14]);
       obj = { permissionsEdited: c9, onPermissionsChanged: closure_3, guildId: guild.id };
-      obj.openLazy(guild(outer1_3[16])(outer1_3[15], outer1_3.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
+      obj.openLazy(guild(closure_1_3[16])(closure_1_3[15], closure_1_3.paths), "role-permission-templates-" + guild.id + "-" + role.id, obj);
     };
     obj[2] = intl.format(guild(1236).t.ZhSOBy, obj1);
     tmp18Result = tmp18(guild(4734).Text, obj);
   }
   tmp18Result = tmp18(tmp19, { children: tmp18Result });
-  canResult = importAll(4026).can(obj);
+  canResult = applyOverwritesAll.can(obj);
   const guildPermissionSpec = role(16046).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
@@ -113,71 +103,66 @@ export default function GuildSettingsRoleEditPermission(guild) {
   const tmp24 = mapped1.length > 0;
   const tmp25 = closure_16;
   const tmp26 = closure_15;
-  children[1] = closure_14(c6, { children: closure_14(guild(7337).SearchField, obj3) });
+  children[1] = closure_14(closure_6, { children: closure_14(guild(7337).SearchField, obj3) });
   children[2] = tmp18Result;
   if (tmp24) {
     const obj4 = { sections: null, stickySectionHeadersEnabled: false, renderItem: null, renderSectionHeader: null, SectionSeparatorComponent: null, ItemSeparatorComponent: null, keyExtractor: null, keyboardDismissMode: "on-drag", contentContainerStyle: null };
     obj4[0] = mapped1;
     obj4[2] = function renderItem(section) {
-      let description;
-      let index;
-      let item;
-      let title;
       ({ item, index } = section);
       let flag;
       flag = item.flag;
-      let tmp2 = c6;
+      let tmp2 = closure_6;
       ({ description, title } = item);
-      if (c6) {
+      if (closure_6) {
         tmp2 = role === highestRole;
       }
       if (!tmp2) {
         tmp2 = tmp;
       }
       if (!tmp2) {
-        tmp2 = !_undefined2.can(flag, flag);
+        tmp2 = !_undefined.can(flag, flag);
       }
       if (!tmp2) {
         let obj = {};
         obj = {};
         const merged = Object.assign(role);
-        obj.permissions = outer1_2(outer1_3[21]).remove(closure_2, flag);
+        obj.permissions = closure_1_2(closure_1_3[21]).remove(closure_2, flag);
         obj[role.id] = obj;
-        tmp2 = !_undefined2.can(flag, flag, null, obj);
-        const obj3 = outer1_2(outer1_3[21]);
+        tmp2 = !_undefined.can(flag, flag, null, obj);
+        const obj3 = closure_1_2(closure_1_3[21]);
       }
-      obj = { variant: "text-xs/medium", color: "text-subtle", style: _undefined.subLabel, children: null };
-      obj[3] = guild(outer1_3[22]).renderDescription(description);
-      const obj5 = guild(outer1_3[22]);
-      tmp = c6;
-      const obj1 = { start: 0 === index, end: index === section.section.data.length - 1, value: null, disabled: null, onValueChange: null, label: null, subLabel: null };
-      const tmp21 = outer1_14(guild(outer1_3[12]).Text, obj);
-      obj1[2] = outer1_2(outer1_3[21]).has(closure_2, flag);
+      obj = { variant: "text-xs/medium", color: "text-subtle", style: closure_4.subLabel, children: guild(closure_1_3[22]).renderDescription(description) };
+      const obj5 = guild(closure_1_3[22]);
+      tmp = closure_6;
+      obj1 = { start: 0 === index, end: index === section.section.data.length - 1, value: null, disabled: null, onValueChange: null, label: null, subLabel: null };
+      const tmp21 = closure_1_14(guild(closure_1_3[12]).Text, obj);
+      obj1[2] = closure_1_2(closure_1_3[21]).has(closure_2, flag);
       obj1[3] = tmp2;
       obj1[4] = function onValueChange(arg0) {
-        const obj = outer2_2(outer2_3[21]);
+        const obj = closure_2_2(closure_2_3[21]);
         if (arg0) {
-          let addResult = obj.add(outer1_2, flag);
+          let addResult = obj.add(closure_1_2, flag);
         } else {
-          addResult = obj.remove(outer1_2, flag);
+          addResult = obj.remove(closure_1_2, flag);
         }
-        outer1_3(addResult);
-        outer1_10(true);
+        closure_1_3(addResult);
+        closure_1_10(true);
       };
       obj1[5] = title;
       obj1[6] = tmp21;
-      return outer1_14(guild(outer1_3[23]).TableSwitchRow, obj1);
+      return closure_1_14(guild(closure_1_3[23]).TableSwitchRow, obj1);
     };
     obj4[3] = function renderSectionHeader(section) {
       const title = section.section.title;
-      return callback2(c6, { accessible: true, accessibilityRole: "header", accessibilityLabel: title, children: callback2(guild(table[24]).TableRowGroupTitle, { title }) });
+      return callback2(closure_6, { accessible: true, accessibilityRole: "header", accessibilityLabel: title, children: callback2(guild(table[24]).TableRowGroupTitle, { title }) });
     };
     obj4[4] = function SectionSeparatorComponent(leadingItem) {
       let tmp = null;
       if (null != leadingItem.leadingItem) {
         const obj = { style: null };
-        obj[0] = _undefined.sectionSeparator;
-        tmp = outer1_14(c6, obj);
+        obj[0] = closure_4.sectionSeparator;
+        tmp = closure_1_14(closure_6, obj);
       }
       return tmp;
     };

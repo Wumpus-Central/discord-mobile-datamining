@@ -1,13 +1,14 @@
 // discord_app/modules/application_commands/ApplicationCommandValidators.tsx
-import _getSystemLocale from "_getSystemLocale";
-import map from "map";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { PermissionOverwriteType } from "../../flow/Server.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { toChoiceBooleanValue } from "ApplicationCommandChoiceUtils.tsx";
-import { buildCommand } from "ApplicationCommandUtils.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PermissionOverwriteType from "PermissionOverwriteType" /* 1954 */;
+import buildCommand from "buildCommand" /* 5245 */;
+import getStringAll from "getString" /* 10256 */;
+import toChoiceBooleanValue from "toChoiceBooleanValue" /* 10258 */;
+import closure_4 from "_getSystemLocale" /* 1994 */;
+import closure_5 from "map" /* 4824 */;
 
-const require = arg1;
+require = arg1;
 function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3Q_S) {
   if (null == minValue.minValue) {
     return { success: true };
@@ -26,7 +27,7 @@ function validateNumericOptionRange(NumberResult, minValue, _8Y5zsp, CyRLmH, VD3
     }
   }
   if (null != minValue.minValue) {
-    const obj1 = { success: false, error: null };
+    obj1 = { success: false, error: null };
     const intl2 = getSystemLocale.intl;
     const obj2 = { minimum: null };
     minValue = minValue.minValue;
@@ -57,7 +58,7 @@ let obj = {
     }
   },
   [arg1(1954).ApplicationCommandOptionType.STRING]: (type, type2, id) => {
-    00038__(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING, "option type must match validator type");
+    _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.STRING, "option type must match validator type");
     type = type.type;
     if ("emoji" === type) {
       let surrogate = type.surrogate;
@@ -94,7 +95,7 @@ let obj = {
           if (undefined !== type2.maxLength) {
             if (undefined !== type2.minLength) {
               if (type2.minLength === type2.maxLength) {
-                const obj1 = { success: false, error: null };
+                obj1 = { success: false, error: null };
                 const intl4 = tmp3(1236).intl;
                 const obj2 = { value: null };
                 const minLength3 = type2.minLength;
@@ -138,10 +139,10 @@ let obj = {
       }
       return { success: true };
     }
-    const tmp2 = 00038__;
+    const tmp2 = _modDef38;
   },
   [arg1(1954).ApplicationCommandOptionType.INTEGER]: (type, type2, id) => {
-    00038__(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
+    _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.INTEGER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -162,7 +163,7 @@ let obj = {
             }
           }
           const _Number = Number;
-          const NumberResult = Number(importAll(10256).normalizeNumericString(_getSystemLocale.locale, trimmed));
+          const NumberResult = Number(getStringAll.normalizeNumericString(closure_4.locale, trimmed));
           if (null != NumberResult) {
             const _isNaN = isNaN;
             if (!isNaN(NumberResult)) {
@@ -177,14 +178,14 @@ let obj = {
             }
           }
           obj = { success: false };
-          const obj2 = importAll(10256);
+          const obj2 = getStringAll;
         }
       }
     }
     return { success: false };
   },
   [arg1(1954).ApplicationCommandOptionType.NUMBER]: (type, type2, id) => {
-    00038__(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
+    _modDef38(type2.type === PermissionOverwriteType.ApplicationCommandOptionType.NUMBER, "option type must match validator type");
     let trimmed = null;
     if ("text" === type.type) {
       trimmed = type.text.trim();
@@ -205,7 +206,7 @@ let obj = {
             }
           }
           const _Number = Number;
-          const NumberResult = Number(importAll(10256).normalizeNumericString(_getSystemLocale.locale, trimmed));
+          const NumberResult = Number(getStringAll.normalizeNumericString(closure_4.locale, trimmed));
           const _isNaN = isNaN;
           if (!isNaN(NumberResult)) {
             const _Number2 = Number;
@@ -218,7 +219,7 @@ let obj = {
             }
           }
           obj = { success: false };
-          const obj2 = importAll(10256);
+          const obj2 = getStringAll;
         }
       }
     }
@@ -358,6 +359,6 @@ let obj = {
     }
   }
 };
-const result = require("PermissionOverwriteType").fileFinishedImporting("modules/application_commands/ApplicationCommandValidators.tsx");
+const result = require("set").fileFinishedImporting("modules/application_commands/ApplicationCommandValidators.tsx");
 
 export default obj;

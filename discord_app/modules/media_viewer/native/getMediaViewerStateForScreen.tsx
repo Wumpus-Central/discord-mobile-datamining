@@ -1,6 +1,8 @@
 // discord_app/modules/media_viewer/native/getMediaViewerStateForScreen.tsx
-import { isValidImageAttachment } from "MediaSourceUtil.tsx";
-let result = require("set").fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
+import set from "set" /* 2 */;
+import isValidImageAttachment from "isValidImageAttachment" /* 8994 */;
+
+let result = set.fileFinishedImporting("modules/media_viewer/native/getMediaViewerStateForScreen.tsx");
 
 export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {
   let obj = isValidImageAttachment;
@@ -34,7 +36,7 @@ export default function getMediaViewerStateForScreen(arg0, arg1, closure_1) {
     }
     if (result1 > result) {
       const result3 = arg0 / size.width;
-      const obj1 = { maximumZoomScale: null, width: null, height: null };
+      obj1 = { maximumZoomScale: null, width: null, height: null };
       obj1[0] = 1 / result3 + 1;
       const _Math3 = Math;
       obj1[1] = Math.floor(arg0);

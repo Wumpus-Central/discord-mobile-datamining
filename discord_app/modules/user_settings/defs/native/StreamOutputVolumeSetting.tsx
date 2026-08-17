@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx
-import reset from "reset";
-import fetchFingerprint from "fetchFingerprint";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createToggle from "createToggle";
-import { 00038__ } from "../../../../../_runtime/metro/00038__.js";
-import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { BaseConnectionEvent } from "../../../../../discord_common/js/packages/media-engine/index.tsx";
-import { trackDeviceChanged } from "../../../../actions/AudioActionCreators.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { apexExperiment } from "../../../media_engine/MobileAudioOutputExperiment.tsx";
+import _modDef38 from "module_38" /* 38 */;
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 4569 */;
+import trackDeviceChangedDefault from "trackDeviceChanged" /* 9654 */;
+import apexExperimentDefault from "apexExperiment" /* 12136 */;
+import closure_3 from "reset" /* 4652 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "_detectH265HardwareDecode" /* 4497 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -19,11 +19,9 @@ createToggle = {
   parent: require("MobileUserSettings").MobileUserSettings.VOICE,
   maximum: 200,
   useValue: function useStreamVolumeSettingValue() {
-    let items = [reset, fetchFingerprint, _detectH265HardwareDecode];
+    let items = [closure_3, closure_4, closure_5];
     return initialize.useStateFromStores(items, () => {
-      let obj;
-      let obj2;
-      const items = [reset, fetchFingerprint];
+      const items = [closure_3, closure_4];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -41,9 +39,7 @@ createToggle = {
     });
   },
   onValueChange: function onStreamValueSettingValueChange(arg0) {
-    let obj;
-    let obj2;
-    const items = [reset, fetchFingerprint];
+    const items = [closure_3, closure_4];
     [obj, obj2] = items;
     const lastActiveStream = obj.getLastActiveStream();
     let tmp2 = null;
@@ -53,17 +49,15 @@ createToggle = {
         tmp2 = lastActiveStream;
       }
     }
-    00038__(null != tmp2, "Can not set stream volume without active stream");
-    trackDeviceChanged.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
+    _modDef38(null != tmp2, "Can not set stream volume without active stream");
+    trackDeviceChangedDefault.setLocalVolume(tmp2.ownerId, arg0, BaseConnectionEvent.MediaEngineContextTypes.STREAM);
   },
   usePredicate: function useHasStreamVolumeSetting() {
-    const obj = apexExperiment;
-    let items = [reset, fetchFingerprint];
+    const obj = apexExperimentDefault;
+    let items = [closure_3, closure_4];
     const obj2 = initialize;
     return initialize.useStateFromStores(items, () => {
-      let obj;
-      let obj2;
-      const items = [reset, fetchFingerprint];
+      const items = [closure_3, closure_4];
       [obj, obj2] = items;
       const lastActiveStream = obj.getLastActiveStream();
       let tmp2 = null;
@@ -85,6 +79,6 @@ createToggle = {
   }
 };
 createToggle = createToggle.createVolumeSlider(createToggle);
-const result = require("_detectH265HardwareDecode").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/StreamOutputVolumeSetting.tsx");
 
 export default createToggle;

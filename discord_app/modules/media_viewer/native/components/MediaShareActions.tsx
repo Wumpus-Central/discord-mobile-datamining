@@ -1,19 +1,16 @@
 // discord_app/modules/media_viewer/native/components/MediaShareActions.tsx
-import transitionToChannel from "transitionToChannel";
-import filterStaffGuild from "filterStaffGuild";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import reinjectEphemerals from "reinjectEphemerals";
-import messages from "messages";
-import ME from "ME";
-import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY";
-import { jsx } from "ExplicitMediaObscuredFalsePositiveActionSheet";
-import { ActionSheet } from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
-import { ActionSheetRowIcon } from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
+import ActionSheet from "ActionSheet" /* 7175 */;
+import ActionSheetRowIcon from "ActionSheetRowIcon" /* 7177 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "filterStaffGuild" /* 9044 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "reinjectEphemerals" /* 4994 */;
+import closure_7 from "messages" /* 9066 */;
+import ME from "ME" /* 676 */;
+import { EXPLICIT_MEDIA_FALSE_POSITIVE_ACTION_SHEET_KEY as closure_11 } from "USER_SETTING_ACTION_SHEET_KEY" /* 5004 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function useMediaShareActions(source) {
   source = source.source;
   let disableDownload = source.disableDownload;
@@ -87,7 +84,7 @@ function useMediaShareActions(source) {
       obj = { href: null, onConfirm: null };
       obj[0] = tmp3.sourceURI;
       obj[1] = function onConfirm() {
-        outer1_1(outer1_2[17]).openURL(sourceURI.sourceURI);
+        closure_1_1(closure_1_2[17]).openURL(sourceURI.sourceURI);
       };
       source(shareable[16]).handleClick(obj);
       const obj2 = source(shareable[16]);
@@ -111,7 +108,7 @@ function useMediaShareActions(source) {
           const obj5 = source(tmp[18]);
         }
       } else {
-        let obj1 = source(tmp[18]);
+        obj1 = source(tmp[18]);
         obj1 = { message: null, source: "media-viewer", initialSelectedDestinations: "Array", forwardOptions: "M5 9H1v1h4V9ZM1 3H0v1h1V3ZM4 15H3v1h1v-1ZM6 10H5v1h1v-1Z" };
         obj1[0] = tmp3;
         const obj2 = { onlyEmbedIndices: null };
@@ -124,8 +121,6 @@ function useMediaShareActions(source) {
   }, items5);
   const items6 = [source];
   callback4 = channelId.useCallback(() => {
-    let channelId;
-    let messageId;
     let obj = disableDownload(shareable[11]);
     obj.hideActionSheet();
     if (tmp4) {
@@ -199,7 +194,7 @@ function useMediaShareActions(source) {
       obj[2] = callback1;
       items.push(obj);
     }
-    const obj1 = { IconComponent: source(shareable[28]).WindowLaunchIcon, label: null, action: null };
+    obj1 = { IconComponent: source(shareable[28]).WindowLaunchIcon, label: null, action: null };
     const intl4 = source(shareable[25]).intl;
     obj1[1] = intl4.string(source(shareable[25]).t.q5jLJB);
     obj1[2] = callback2;
@@ -223,21 +218,41 @@ function useMediaShareActions(source) {
     return items;
   }, items8);
 }
-({ AnalyticsSections: metroImportAll, GIF_RE_IOS: c9, MediaType: c10 } = ME);
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");
+({ AnalyticsSections: closure_8, GIF_RE_IOS: c9, MediaType: c10 } = ME);
+let result = require("set").fileFinishedImporting("modules/media_viewer/native/components/MediaShareActions.tsx");
 
 export default function MediaShareActionSheet(source) {
   let obj = { source: source.source, disableDownload: source.disableDownload, shareable: source.shareable };
   obj = { children: null };
-  obj = { hasIcons: true, children: null };
-  obj[1] = useMediaShareActions(obj).map((IconComponent) => {
-    let obj = { icon: null, onPress: null, label: null };
-    obj = { IconComponent: IconComponent.IconComponent };
-    obj[0] = callback2(callback(7177).ActionSheetRow.Icon, obj);
-    ({ action: obj[1], label: obj[2] } = IconComponent);
-    return callback2(callback(7177).ActionSheetRow, obj, arg1);
+  obj = {
+    hasIcons: true,
+    children: useMediaShareActions(obj).map((IconComponent) => {
+      let obj = { icon: null, onPress: null, label: null };
+      obj = { IconComponent: IconComponent.IconComponent };
+      obj[0] = callback2(callback(7177).ActionSheetRow.Icon, obj);
+      ({ action: obj[1], label: obj[2] } = IconComponent);
+      return callback2(callback(7177).ActionSheetRow, obj, arg1);
+    })
+  };
+  obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, {
+    hasIcons: true,
+    children: useMediaShareActions(obj).map((IconComponent) => {
+      let obj = { icon: null, onPress: null, label: null };
+      obj = { IconComponent: IconComponent.IconComponent };
+      obj[0] = callback2(callback(7177).ActionSheetRow.Icon, obj);
+      ({ action: obj[1], label: obj[2] } = IconComponent);
+      return callback2(callback(7177).ActionSheetRow, obj, arg1);
+    })
   });
-  obj[0] = jsx(ActionSheetRowIcon.ActionSheetRow.Group, { hasIcons: true, children: null });
-  return jsx(ActionSheet.ActionSheet, { hasIcons: true, children: null });
+  return jsx(ActionSheet.ActionSheet, {
+    hasIcons: true,
+    children: useMediaShareActions(obj).map((IconComponent) => {
+      let obj = { icon: null, onPress: null, label: null };
+      obj = { IconComponent: IconComponent.IconComponent };
+      obj[0] = callback2(callback(7177).ActionSheetRow.Icon, obj);
+      ({ action: obj[1], label: obj[2] } = IconComponent);
+      return callback2(callback(7177).ActionSheetRow, obj, arg1);
+    })
+  });
 };
 export { useMediaShareActions };

@@ -1,9 +1,9 @@
 // discord_app/modules/screen/useIsScreenLandscape.native.tsx
-import noop from "noop";
-import getDimensionsStoreStateForEntry from "getDimensionsStoreStateForEntry";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "getDimensionsStoreStateForEntry" /* 1495 */;
 
 const require = arg1;
-const result = require("context").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
+const result = require("set").fileFinishedImporting("modules/screen/useIsScreenLandscape.native.tsx");
 
 export const getIsScreenLandscape = function getIsScreenLandscape() {
   let str = arg0;

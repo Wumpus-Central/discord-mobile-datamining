@@ -1,23 +1,18 @@
 // discord_app/modules/native_permissions/mobile/NativePermissionUtils.native.tsx
-import closure_3 from "set";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import NativePermissionStatus from "NativePermissionStatus";
-import { jsx } from "jsxProd";
-import set from "set";
-import isMetaQuest from "isMetaQuest";
-import { NativePermissionBaseUtils } from "requestAuthorization";
-import set from "set";
-import set from "set";
-import set from "get ActivityIndicator";
-import { useAlertStore } from "../../../design/components/AlertModal/native/useAlertStore.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { timestamp } from "../../debug/Logger.tsx";
-import { openPrivacySettings } from "openPrivacySettings.native.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useAlertStore from "useAlertStore" /* 4657 */;
+import openPrivacySettingsDefault from "openPrivacySettings" /* 4848 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import NativePermissionStatus from "NativePermissionStatus" /* 4839 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
+import isMetaQuest from "isMetaQuest" /* 1625 */;
+import { NativePermissionBaseUtils } from "requestAuthorization" /* 4844 */;
 
-let NativePermissionTypes;
-let closure_6;
-const require = arg1;
+require = arg1;
 function combineStatuses(items) {
   const self = this;
   const apply = _combineStatuses.apply;
@@ -31,10 +26,10 @@ function combineStatuses(items) {
 function _combineStatuses() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -65,12 +60,12 @@ function _combineStatuses() {
               obj[0] = arg1;
               return obj;
             } else {
-              let noop = tmp;
-              let closure_3 = tmp2;
+              closure_4 = tmp;
+              closure_3 = tmp2;
               let tmp28 = dependencyMap;
               dependencyMap = undefined;
-              let closure_1;
-              let closure_2 = dependencyMap;
+              closure_1 = undefined;
+              closure_2 = dependencyMap;
               let tmp29 = dependencyMap;
               closure_2 = dependencyMap;
               closure_1 = dependencyMap[Symbol.iterator]();
@@ -92,12 +87,12 @@ function _combineStatuses() {
             closure_1.return();
             let num3 = 3;
             c8 = 3;
-            let obj1 = { value: null, done: true };
+            obj1 = { value: null, done: true };
             obj1[0] = arg1;
             return obj1;
           } else {
             let tmp6 = closure_3;
-            let tmp7 = noop;
+            let tmp7 = closure_4;
             closure_1 = arg1;
             let tmp8 = closure_1;
             let tmp9 = constants;
@@ -119,7 +114,7 @@ function _combineStatuses() {
           let tmp17 = closure_2;
           let tmp18 = closure_1;
           if (closure_1 === undefined) {
-            let tmp22 = noop;
+            let tmp22 = closure_4;
             let tmp23 = constants;
             let num6 = 3;
             c8 = 3;
@@ -142,7 +137,7 @@ function _combineStatuses() {
       }
     })();
   });
-  const _combineStatuses = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -200,7 +195,7 @@ prototype["hasPermissionCore"] = function hasPermissionCore(arg0, arg1) {
 };
 prototype["performRequest"] = function performRequest(hasPermissionLookup, arg1, arg2) {
   if (null == hasPermissionLookup[arg1]) {
-    const obj = new timestamp("NativePermissionUtils");
+    const obj = new timestampDefault("NativePermissionUtils");
     const _HermesInternal = HermesInternal;
     obj.error("Unable to locate permission type " + arg1);
     let resolved = Promise.resolve(false);
@@ -215,11 +210,9 @@ prototype["didHavePermission"] = function didHavePermission(arg0) {
   return storage.hasPermission(arg0);
 };
 prototype["openSettings"] = function openSettings() {
-  openPrivacySettings();
+  openPrivacySettingsDefault();
 };
 prototype["openAlertModal"] = function openAlertModal(arg0) {
-  let body;
-  let onConfirm;
   ({ body, onConfirm } = arg0);
   let obj = useAlertStore;
   obj = { title: null, body: null, onConfirm: null };

@@ -1,13 +1,13 @@
 // discord_app/modules/media_uploads/DetectedFileSize.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 function _getDetectedFileSize() {
   const self = this;
   const tmp = callback((arg0) => {
-    let asyncGeneratorStep = arg0;
-    let c2 = 0;
-    let c1 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -34,18 +34,18 @@ function _getDetectedFileSize() {
               obj = { value: null, done: true };
               obj[0] = arg1;
               return obj;
-            } else if (asyncGeneratorStep.size > 0) {
+            } else if (closure_0.size > 0) {
               c1 = 3;
-              const obj1 = { value: null, done: true };
-              obj1[0] = asyncGeneratorStep.size;
+              obj1 = { value: null, done: true };
+              obj1[0] = closure_0.size;
               return obj1;
             } else {
-              let c4 = 1;
-              const promise = new Promise((asyncGeneratorStep) => {
-                let closure_1 = arg1;
+              c4 = 1;
+              const promise = new Promise((closure_0) => {
+                closure_1 = arg1;
                 const fileReader = new FileReader();
                 const timeout = setTimeout(() => {
-                  const error = new Error("File read timeout");
+                  error = new Error("File read timeout");
                   callback2(error);
                 }, 10000);
                 fileReader.onload = (target) => {
@@ -59,16 +59,16 @@ function _getDetectedFileSize() {
                     callback(result.byteLength);
                   } else {
                     const _Error = Error;
-                    const error = new Error("Unexpected FileReader result type");
+                    error = new Error("Unexpected FileReader result type");
                     callback2(error);
                   }
                 };
                 fileReader.onerror = () => {
                   clearTimeout(closure_2);
-                  const error = new Error("Could not read file");
+                  error = new Error("Could not read file");
                   callback2(error);
                 };
-                const asArrayBuffer = fileReader.readAsArrayBuffer(asyncGeneratorStep);
+                const asArrayBuffer = fileReader.readAsArrayBuffer(closure_0);
               });
               c2 = 2;
               c1 = 1;
@@ -97,7 +97,7 @@ function _getDetectedFileSize() {
             return obj;
           }
         } catch (tmp12) {
-          let closure_3 = tmp12;
+          closure_3 = tmp12;
           if (tmp3 === c4) {
             c1 = tmp2;
             throw tmp12;
@@ -108,7 +108,7 @@ function _getDetectedFileSize() {
       }
     })();
   });
-  const _getDetectedFileSize = tmp;
+  closure_1 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);

@@ -1,16 +1,17 @@
 // discord_app/modules/notification_center/NotificationCenterItemsStore.tsx
-import getHash from "getHash";
-import { isGuildEventEnded } from "scheduledEventSort";
-import hasFlag from "hasFlag";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { RelationshipTypes } from "ME";
-import { PersistedStore } from "initialize";
-import set from "hasFlag";
-import { NotificationCenterScenes } from "NotificationCenterItemsTypes.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import NotificationCenterScenes from "NotificationCenterScenes" /* 4802 */;
+import closure_3 from "getHash" /* 4288 */;
+import { isGuildEventEnded } from "scheduledEventSort" /* 4370 */;
+import closure_5 from "hasFlag" /* 4031 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 import { getRelativeTimestamp } from "NotificationCenterUtils.tsx";
 
-const require = arg1;
+require = arg1;
 function _validate(id) {
   return null != id.id && null != id.type;
 }
@@ -22,7 +23,7 @@ function toNotificationCenterItem(item_enum) {
   if (tmp3) {
     item_enum.deeplink = "https://discord.com/feature/composeMessage";
   }
-  const obj = {};
+  obj = {};
   const merged = Object.assign(item_enum);
   obj.kind = "notification-center-item";
   let messageRecord;
@@ -48,7 +49,7 @@ function handleAddItem(type) {
     if (tmp3) {
       item2.deeplink = "https://discord.com/feature/composeMessage";
     }
-    const obj = {};
+    obj = {};
     const merged = Object.assign(item2);
     obj.kind = "notification-center-item";
     let messageRecord;
@@ -84,10 +85,6 @@ function handleAddItem(type) {
   return false;
 }
 function handleRelationshipAddOrUpdate(relationship) {
-  let c1;
-  let type;
-  let user;
-  let userIgnored;
   relationship = relationship.relationship;
   c1 = undefined;
   user = undefined;
@@ -102,7 +99,7 @@ function handleRelationshipAddOrUpdate(relationship) {
           user = authStore.getUser(user.id);
           if (null != user) {
             const items = [];
-            let obj = relationship(user[8]);
+            obj = relationship(user[8]);
             items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingFriendRequestLocalItem(user, since, tmp);
             obj.notifCenterLocalItems = items;
             const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -132,7 +129,7 @@ function handleRelationshipAddOrUpdate(relationship) {
       }
       let tmp7 = type;
       if (tmp4) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(type);
         obj.acked = true;
         obj.forceUnacked = false;
@@ -200,25 +197,26 @@ let obj = { loading: false, initialized: false, errored: false, isDataStale: fal
 let set = new Set();
 obj[6] = set;
 obj[7] = [];
+const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {
 }
 const prototype = NotificationCenterItemsStore.prototype;
 prototype["initialize"] = function initialize(notifCenterItems) {
-  this.waitFor(mergeGuildAvatar, markAllUserIdListsStale, getHash);
+  this.waitFor(closure_7, closure_6, closure_3);
   if (null != notifCenterItems) {
     notifCenterItems = notifCenterItems.notifCenterItems;
     const mapped = notifCenterItems.map((message) => {
-      const obj = {};
+      obj = {};
       const merged = Object.assign(message);
       let tmp2;
       if (null != message.message) {
-        tmp2 = new hasFlag(message.message);
+        tmp2 = new closure_5(message.message);
       }
       obj.message = tmp2;
       return obj;
     });
     if (mapped.length > 0) {
-      let obj = {};
+      obj = {};
       let merged = Object.assign(obj);
       obj.initialized = true;
       obj.isDataStale = true;
@@ -229,7 +227,7 @@ prototype["initialize"] = function initialize(notifCenterItems) {
 };
 prototype["getState"] = function getState() {
   function pack(message) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(message);
     let toJSResult;
     if (null != message.message) {
@@ -239,7 +237,7 @@ prototype["getState"] = function getState() {
     obj.message = toJSResult;
     return obj;
   }
-  let obj = {};
+  obj = {};
   let merged = Object.assign(obj);
   const notifCenterItems = obj.notifCenterItems;
   obj.notifCenterItems = notifCenterItems.map(pack);
@@ -309,25 +307,19 @@ obj = {
     const set = new Set();
     relationships = relationships.relationships;
     let item = relationships.forEach((arg0) => {
-      let id;
-      let is_spam_request;
-      let origin_application_id;
-      let since;
-      let type;
-      let user_ignored;
       ({ id, since, user_ignored, type, is_spam_request, origin_application_id } = arg0);
       if (user_ignored) {
         set.add(id);
       }
-      if (type === outer1_8.PENDING_INCOMING) {
+      if (type === closure_1_8.PENDING_INCOMING) {
         if (!is_spam_request) {
           if (!user_ignored) {
             if (null != since) {
-              const user = outer1_7.getUser(id);
+              const user = closure_1_7.getUser(id);
               if (null == user) {
                 return null;
               } else {
-                items.push(items(outer1_2[8]).incomingFriendRequestLocalItem(user, since, origin_application_id));
+                items.push(items(closure_1_2[8]).incomingFriendRequestLocalItem(user, since, origin_application_id));
               }
             }
           }
@@ -338,12 +330,12 @@ obj = {
     const gameRelationships = relationships.gameRelationships;
     const item1 = gameRelationships.forEach((id) => {
       id = id.id;
-      if (id.type === outer1_8.PENDING_INCOMING) {
+      if (id.type === closure_1_8.PENDING_INCOMING) {
         if (!set.has(id)) {
-          const user = outer1_7.getUser(id);
+          const user = closure_1_7.getUser(id);
           if (null != user) {
-            items.push(items(outer1_2[8]).incomingGameFriendRequestLocalItem(user, tmp2, tmp));
-            const obj = items(outer1_2[8]);
+            items.push(items(closure_1_2[8]).incomingGameFriendRequestLocalItem(user, tmp2, tmp));
+            obj = items(closure_1_2[8]);
           }
         }
       }
@@ -352,15 +344,15 @@ obj = {
     const item2 = guilds.forEach((guild_scheduled_events) => {
       const prop = guild_scheduled_events.guild_scheduled_events;
       const item = prop.forEach((arg0) => {
-        let closure_0 = arg0;
+        closure_0 = arg0;
         if (callback(arg0)) {
           notifCenterItems = notifCenterItems.notifCenterItems;
           notifCenterItems.notifCenterItems = notifCenterItems.map((type) => {
             let tmp = type;
-            if (type.type === lib(outer1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+            if (type.type === lib(closure_1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
               tmp = type;
               if (type.guild_scheduled_event_id === lib.id) {
-                const obj = {};
+                obj = {};
                 const merged = Object.assign(type);
                 obj.disable_action = true;
                 tmp = obj;
@@ -378,8 +370,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
-    obj[6] = new Set();
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -389,12 +380,12 @@ obj = {
   },
   NOTIFICATION_CENTER_ITEMS_ACK: function handleAck(ids) {
     ids = ids.ids;
-    let c1 = true;
+    c1 = true;
     const notifCenterItems = obj.notifCenterItems;
     const mapped = notifCenterItems.map((id) => {
       let tmp = id;
       if (ids.includes(id.id)) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(id);
         obj.acked = c1;
         tmp = obj;
@@ -405,12 +396,12 @@ obj = {
   },
   NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function handleAckFailure(ids) {
     ids = ids.ids;
-    let c1 = false;
+    c1 = false;
     const notifCenterItems = obj.notifCenterItems;
     const mapped = notifCenterItems.map((id) => {
       let tmp = id;
       if (ids.includes(id.id)) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(id);
         obj.acked = c1;
         tmp = obj;
@@ -425,10 +416,10 @@ obj = {
       const notifCenterItems = obj.notifCenterItems;
       obj.notifCenterItems = notifCenterItems.map((type) => {
         let tmp = type;
-        if (type.type === lib(outer1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
+        if (type.type === lib(closure_1_2[6]).NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED) {
           tmp = type;
           if (type.guild_scheduled_event_id === lib.id) {
-            const obj = {};
+            obj = {};
             const merged = Object.assign(type);
             obj.disable_action = true;
             tmp = obj;
@@ -461,8 +452,6 @@ obj = {
     obj.errored = true;
   },
   LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function handleLoadSuccess(arg0) {
-    let cursor;
-    let items;
     ({ items, cursor } = arg0);
     if (obj.loading) {
       obj.loading = false;
@@ -509,8 +498,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
-    obj[6] = new Set();
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -527,10 +515,10 @@ obj = {
   RELATIONSHIP_ADD: handleRelationshipAddOrUpdate,
   RELATIONSHIP_UPDATE: handleRelationshipAddOrUpdate,
   RELATIONSHIP_REMOVE: function handleRelationshipRemove(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const prop = obj.notifCenterLocalItems;
     obj.notifCenterLocalItems = prop.filter((type) => {
-      let tmp4 = type.type === callback(outer1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
+      let tmp4 = type.type === callback(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS;
       if (tmp4) {
         const other_user = type.other_user;
         let id;
@@ -541,7 +529,7 @@ obj = {
       }
       let tmp7 = !tmp4;
       if (!tmp4) {
-        let tmp9 = type.type === callback(outer1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
+        let tmp9 = type.type === callback(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
           const other_user2 = type.other_user;
           let id1;
@@ -556,9 +544,6 @@ obj = {
     });
   },
   GAME_RELATIONSHIP_ADD: function handleGameRelationshipAddOrUpdate(gameRelationship) {
-    let applicationId;
-    let since;
-    let type;
     gameRelationship = gameRelationship.gameRelationship;
     let id;
     applicationId = undefined;
@@ -570,7 +555,7 @@ obj = {
       const user = authStore.getUser(id);
       if (tmp6) {
         const items = [];
-        let obj = id(4967);
+        obj = id(4967);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(user, since, applicationId);
         obj.notifCenterLocalItems = items;
         const arraySpreadResult = HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0);
@@ -581,7 +566,7 @@ obj = {
     } else {
       const prop = obj.notifCenterLocalItems;
       obj.notifCenterLocalItems = prop.map((type) => {
-        let tmp5 = type.type === id(outer1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+        let tmp5 = type.type === id(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
         if (tmp5) {
           const other_user = type.other_user;
           id = undefined;
@@ -595,13 +580,13 @@ obj = {
         }
         let tmp8 = type;
         if (tmp5) {
-          const obj = {};
+          obj = {};
           const merged = Object.assign(type);
           obj.acked = true;
           obj.forceUnacked = false;
           const _HermesInternal = HermesInternal;
           obj.local_id = "incoming_game_friend_requests_accepted_" + tmp3 + "_" + type.id;
-          obj.type = id(outer1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+          obj.type = id(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
           tmp8 = obj;
         }
         return tmp8;
@@ -609,12 +594,10 @@ obj = {
     }
   },
   GAME_RELATIONSHIP_REMOVE: function handleGameRelationshipRemove(arg0) {
-    let importDefault;
-    let require;
     ({ userId: require, applicationId: importDefault } = arg0);
     const prop = obj.notifCenterLocalItems;
     obj.notifCenterLocalItems = prop.filter((type) => {
-      let tmp5 = type.type === outer1_0(outer1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
+      let tmp5 = type.type === closure_1_0(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS;
       if (tmp5) {
         const other_user = type.other_user;
         let id;
@@ -628,7 +611,7 @@ obj = {
       }
       let tmp8 = !tmp5;
       if (!tmp5) {
-        let tmp9 = type.type === outer1_0(outer1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
+        let tmp9 = type.type === closure_1_0(closure_1_2[6]).NotificationCenterLocalItems.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED;
         if (tmp9) {
           const other_user2 = type.other_user;
           let id1;
@@ -651,7 +634,7 @@ obj = {
     const mapped = notifCenterItems.map((item_enum) => {
       let tmp = item_enum;
       if (item_enum.item_enum === item_enum) {
-        const obj = {};
+        obj = {};
         const merged = Object.assign(item_enum);
         obj.completed = true;
         obj.acked = true;
@@ -666,8 +649,7 @@ obj = {
     if (flag === undefined) {
       flag = false;
     }
-    const obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: null, notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
-    obj[6] = new Set();
+    obj = { loading: false, initialized: false, errored: false, isDataStale: false, notifCenterItems: [], staleNotifCenterItems: [], notifCenterIds: new Set(), notifCenterLocalItems: null, paginationHasMore: true, paginationCursor: "PX_16", notifCenterActive: 2087, notifCenterTabFocused: 2088 };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
     } else {
@@ -679,7 +661,7 @@ obj = {
     newBuild = newBuild.newBuild;
     let _require;
     if (null !== newBuild) {
-      const obj = _getRelativeTimestamp;
+      obj = _getRelativeTimestamp;
       const result = obj.mobileNativeUpdateAvailableLocalItem(newBuild);
       _require = result;
       const prop = obj.notifCenterLocalItems;
@@ -708,7 +690,7 @@ obj = {
     }
   }
 };
-const notificationCenterItemsStore = new NotificationCenterItemsStore(require("dispatcher"), obj);
+const notificationCenterItemsStore = new NotificationCenterItemsStore(dispatcherDefault, obj);
 let result = set.fileFinishedImporting("modules/notification_center/NotificationCenterItemsStore.tsx");
 
 export default notificationCenterItemsStore;

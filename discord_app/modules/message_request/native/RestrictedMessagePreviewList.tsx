@@ -1,32 +1,30 @@
 // discord_app/modules/message_request/native/RestrictedMessagePreviewList.tsx
-import RestrictedBlockedMessageGroup from "RestrictedBlockedMessageGroup";
-import { View } from "DCDChatItem";
-import reinjectEphemerals from "reinjectEphemerals";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "reinjectEphemerals" /* 4994 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { CircleInformationIcon } from "../../../design/components/Icon/native/redesign/generated/CircleInformationIcon.tsx";
 import { Text } from "../../../design/components/Text/native/Text.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 function HiddenMedia(length) {
   let _require;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   _require = tmp;
   let obj = { children: null };
   let items = [
     Array.from({ length: length.count }, (arg0, arg1) => {
-      let obj = { style: _undefined.mediaPlaceholderCard, children: null };
-      const items = [outer1_6(_undefined(outer1_2[7]).ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
+      let obj = { style: lib.mediaPlaceholderCard, children: null };
+      const items = [closure_1_6(lib(closure_1_2[7]).ImageWarningIcon, { size: "lg", color: "text-muted" }), ];
       obj = { variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl = _undefined(outer1_2[9]).intl;
-      obj[2] = intl.string(_undefined(outer1_2[9]).t.B2xSxL);
-      items[1] = outer1_6(_undefined(outer1_2[8]).Text, obj);
+      const intl = lib(closure_1_2[9]).intl;
+      obj[2] = intl.string(lib(closure_1_2[9]).t.B2xSxL);
+      items[1] = closure_1_6(lib(closure_1_2[8]).Text, obj);
       obj[1] = items;
-      return outer1_7(outer1_4, obj, arg1);
+      return closure_1_7(closure_1_4, obj, arg1);
     }),
 
   ];
@@ -41,7 +39,7 @@ function HiddenMedia(length) {
   obj[0] = items;
   return callback2(View, obj);
 }
-({ jsx: closure_6, jsxs: error, Fragment: metroImportAll } = jsxProd);
+({ jsx: closure_6, jsxs: error, Fragment: closure_8 } = jsxProd);
 let closure_9 = { renderEmbeds: false, renderReactions: false, inlineEmbedMedia: false, inlineAttachmentMedia: false, animateEmoji: false, gifAutoPlay: false, timestampHourCycle: 0, renderCodedLinks: false, renderGiftCode: false, renderActivityInstanceEmbed: false, renderActivityInviteEmbed: false, renderComponents: false, renderThreadEmbeds: false, renderReplies: false, renderCommunicationDisabled: false, renderAttachments: false, renderExecutedCommands: false, renderPolls: false, renderSharedClientTheme: false, renderForumPostActions: false, ignoreMentioned: false, ignoreEmbedDescriptionCache: false, forceHideSimpleEmbedContent: false, enableSwipeActions: false, useAlternateEmbedColors: false, restrictedPreview: true };
 createCacheKey = { container: { flexDirection: "column" }, hiddenMedia: null, messageRow: null, avatarHitbox: null, dateDivider: null, dividerLine: null, mediaPlaceholderCard: null, mediaHiddenRow: null };
 createCacheKey = { marginLeft: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET };
@@ -49,30 +47,30 @@ createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { position: "relative" };
 createCacheKey[3] = { position: "absolute", top: 0, left: 0, width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE };
 let obj1 = { position: "absolute", top: 0, left: 0, width: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_CONTENT_INSET, height: require("RESTRICTED_AVATAR_SIZE").RESTRICTED_AVATAR_SIZE };
-createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_12 };
-let obj2 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, marginVertical: require("Themes").space.PX_12 };
-createCacheKey[5] = { flex: 1, height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-let obj3 = { flex: 1, height: 1, backgroundColor: require("Themes").colors.BORDER_SUBTLE };
-createCacheKey[6] = { alignItems: "center", justifyContent: "center", gap: require("Themes").space.PX_8, height: 160, marginTop: require("Themes").space.PX_8, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-let obj4 = { alignItems: "center", justifyContent: "center", gap: require("Themes").space.PX_8, height: 160, marginTop: require("Themes").space.PX_8, borderRadius: require("Themes").radii.md, backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_4 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj5 = { flexDirection: "row", alignItems: "center", gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_8, marginBottom: require("Themes").space.PX_4 };
-const result = require("reinjectEphemerals").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
+createCacheKey[4] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
+let obj2 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginVertical: ThemesDefault.space.PX_12 };
+createCacheKey[5] = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+let obj3 = { flex: 1, height: 1, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+createCacheKey[6] = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, height: 160, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+let obj4 = { alignItems: "center", justifyContent: "center", gap: ThemesDefault.space.PX_8, height: 160, marginTop: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.md, backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH };
+createCacheKey[7] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_4 };
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+const obj5 = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, marginBottom: ThemesDefault.space.PX_4 };
+const result = require("set").fileFinishedImporting("modules/message_request/native/RestrictedMessagePreviewList.tsx");
 
 export default function RestrictedMessagePreviewList(channelId) {
   channelId = channelId.channelId;
-  let importDefault;
+  importDefault = undefined;
   let analyticsLocations;
   let callback;
   let memo;
-  let reinjectEphemerals;
+  closure_5 = undefined;
   let arr5;
-  let tmp = createCacheKey();
+  let tmp = callback3();
   importDefault = tmp;
   analyticsLocations = importDefault(analyticsLocations[12])().analyticsLocations;
   let obj = channelId(analyticsLocations[13]);
-  let items = [reinjectEphemerals];
+  let items = [closure_5];
   let items1 = [channelId];
   const items2 = [channelId, analyticsLocations];
   const stateFromStoresArray = obj.useStateFromStoresArray(items, () => {
@@ -80,40 +78,40 @@ export default function RestrictedMessagePreviewList(channelId) {
     return messages.toArray();
   }, items1);
   callback = callback.useCallback((userId) => {
-    _undefined(analyticsLocations[14])({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
+    lib(analyticsLocations[14])({ userId, channelId, sourceAnalyticsLocations: analyticsLocations });
   }, items2);
   memo = callback.useMemo(() => {
-    const obj = new _undefined(analyticsLocations[15])();
+    const obj = new lib(analyticsLocations[15])();
     obj.setOptions(closure_9);
     return obj;
   }, []);
   const items3 = [tmp, memo, callback];
-  reinjectEphemerals = callback.useCallback((message) => {
-    let closure_0 = message;
-    const tmp = _undefined(analyticsLocations[16])(message);
-    let obj = { style: _undefined.messageRow, children: null };
+  closure_5 = callback.useCallback((message) => {
+    closure_0 = message;
+    const tmp = lib(analyticsLocations[16])(message);
+    let obj = { style: lib.messageRow, children: null };
     obj = { pointerEvents: "none", message, rowGenerator: memo };
-    const items = [arr5(_undefined(analyticsLocations[17]), obj), ];
-    obj = { style: _undefined.avatarHitbox, accessibilityRole: "button", accessibilityLabel: null, onPress: null };
+    const items = [arr5(lib(analyticsLocations[17]), obj), ];
+    obj = { style: lib.avatarHitbox, accessibilityRole: "button", accessibilityLabel: null, onPress: null };
     const intl = channelId(analyticsLocations[9]).intl;
     obj[2] = intl.string(channelId(analyticsLocations[9]).t.iXAna6);
     obj[3] = function onPress() {
-      return outer1_3(message.author.id);
+      return closure_1_3(message.author.id);
     };
     items[1] = arr5(channelId(analyticsLocations[18]).PressableOpacity, obj);
     obj[1] = items;
-    const children = [outer1_7(memo, obj), ];
+    const children = [closure_1_7(memo, obj), ];
     let tmp6Result = tmp > 0;
     if (tmp6Result) {
-      const obj1 = { style: null, children: null };
-      obj1[0] = _undefined.hiddenMedia;
+      obj1 = { style: null, children: null };
+      obj1[0] = lib.hiddenMedia;
       const obj2 = { count: null };
       obj2[0] = tmp;
-      obj1[1] = tmp6(outer1_11, obj2);
+      obj1[1] = tmp6(closure_1_11, obj2);
       tmp6Result = tmp6(memo, obj1);
     }
     children[1] = tmp6Result;
-    return outer1_7(outer1_8, { children });
+    return closure_1_7(closure_1_8, { children });
   }, items3);
   arr5 = (function groupMessages(stateFromStoresArray) {
     const items = [];
@@ -176,16 +174,16 @@ export default function RestrictedMessagePreviewList(channelId) {
         }
         if (tmp6Result) {
           obj = { style: null, children: null };
-          obj[0] = _undefined.dateDivider;
+          obj[0] = lib.dateDivider;
           obj = { style: null };
-          obj[0] = _undefined.dividerLine;
+          obj[0] = lib.dividerLine;
           const items = [arr5(tmp7, obj), , ];
-          const obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
+          obj1 = { variant: "text-xs/semibold", color: "text-muted", children: null };
           let obj4 = channelId(analyticsLocations[11]);
           obj1[2] = obj4.dateFormat(message.timestamp, "LL");
           items[1] = arr5(channelId(analyticsLocations[8]).Text, obj1);
           const obj2 = { style: null };
-          obj2[0] = _undefined.dividerLine;
+          obj2[0] = lib.dividerLine;
           items[2] = arr5(tmp7, obj2);
           obj[1] = items;
           tmp6Result = tmp6(tmp7, obj);
@@ -197,7 +195,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           const obj3 = { messages: null, renderMessage: null };
           obj3[0] = type.messages;
           obj3[1] = messages;
-          tmp18 = arr5(_undefined(analyticsLocations[19]), obj3);
+          tmp18 = arr5(lib(analyticsLocations[19]), obj3);
         }
         obj4 = { children: null };
         items1[1] = tmp18;
@@ -208,7 +206,7 @@ export default function RestrictedMessagePreviewList(channelId) {
           const _HermesInternal = HermesInternal;
           id = "blocked-" + message.id;
         }
-        return outer1_7(memo, obj4, id);
+        return closure_1_7(memo, obj4, id);
       } else if ("message" === tmp.type) {
         let message2 = tmp.message;
       } else {

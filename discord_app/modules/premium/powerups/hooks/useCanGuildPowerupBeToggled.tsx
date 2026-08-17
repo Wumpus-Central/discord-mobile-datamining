@@ -1,33 +1,31 @@
 // discord_app/modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx
-import noop from "noop";
-import calculateAppliedBoosts from "calculateAppliedBoosts";
-import { PowerupActiveStatusType } from "BoostedGuildTiers";
+import usePowerupActiveStatusDefault from "usePowerupActiveStatus" /* 11668 */;
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "calculateAppliedBoosts" /* 4261 */;
+import { PowerupActiveStatusType } from "BoostedGuildTiers" /* 4262 */;
 import { initialize } from "../../../../../discord_common/js/packages/flux/index.tsx";
-import { usePowerupActiveStatus } from "usePowerupActiveStatus.tsx";
 
 const require = arg1;
-const result = require("BoostedGuildTiers").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/powerups/hooks/useCanGuildPowerupBeToggled.tsx");
 
 export default function useCanGuildPowerupBeToggled(arg0, arg1, arg2) {
   const _require = arg0;
-  const importDefault = arg1;
-  const dependencyMap = arg2;
-  const items = [calculateAppliedBoosts];
-  const stateFromStores = _initialize.useStateFromStores(items, () => tmp2.getStateForGuild(closure_0));
-  const tmp2 = usePowerupActiveStatus(arg0, arg1);
-  calculateAppliedBoosts = tmp2;
+  importDefault = arg1;
+  dependencyMap = arg2;
+  const items = [closure_4];
+  const stateFromStores = _initialize.useStateFromStores(items, () => stateForGuild.getStateForGuild(closure_0));
+  const tmp2 = usePowerupActiveStatusDefault(arg0, arg1);
+  closure_4 = tmp2;
   const items1 = [stateFromStores, , , , ];
   ({ skuId: arr2[1], dependencies: arr2[2] } = arg1);
   items1[3] = arg2;
   items1[4] = tmp2.type;
   return stateFromStores.useMemo(() => {
-    let allPowerups;
-    let unlockedPowerups;
     if (null == stateFromStores) {
       return { disabled: true, reason: "a" };
     } else {
-      if (tmp2.type !== outer1_5.LEVEL_ACTIVATED) {
-        if (tmp2.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
+      if (stateForGuild.type !== closure_1_5.LEVEL_ACTIVATED) {
+        if (stateForGuild.type !== tmp15.TIER_OVERRIDE_ACTIVATED) {
           ({ allPowerups, unlockedPowerups } = tmp);
           if (dependencyMap) {
             const _Object = Object;

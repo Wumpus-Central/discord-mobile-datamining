@@ -1,11 +1,14 @@
 // discord_app/modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx
-import { MessageTypes } from "ME";
-import { COMMAND_SENTINEL } from "regExp";
-import { getApplicationCommand } from "../../../ApplicationCommands.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
-import { formatUsernameOnClick } from "formatUsernameOnClick.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import regExp from "regExp" /* 6810 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8187 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import getApplicationCommand from "getApplicationCommand" /* 8229 */;
 
-const result = require("getApplicationCommand").fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx");
+const MessageTypes = ME.MessageTypes;
+const COMMAND_SENTINEL = regExp.COMMAND_SENTINEL;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/ApplicationCommandSourceSystemMessage.tsx");
 
 export const createApplicationCommandSourceSystemMessage = function createApplicationCommandSourceSystemMessage(message) {
   message = message.message;
@@ -25,18 +28,18 @@ export const createApplicationCommandSourceSystemMessage = function createApplic
       obj[0] = message;
       obj[1] = messageAuthorWithProcessedColor;
       obj[2] = message.roleStyle;
-      obj[1] = formatUsernameOnClick(obj);
+      obj[1] = formatUsernameOnClickDefault(obj);
       if (message.type === MessageTypes.CHAT_INPUT_COMMAND) {
         const _HermesInternal = HermesInternal;
         let name2 = "" + COMMAND_SENTINEL + applicationCommand.name;
       } else {
         name2 = applicationCommand.name;
       }
-      const obj1 = { content: null };
+      obj1 = { content: null };
       obj[2] = name2;
       obj[3] = name;
       obj1[0] = intl.formatToParts(tmp(1236).t["1Zm+zw"], obj);
-      const merged = Object.assign(createCommonMessage(message));
+      const merged = Object.assign(createCommonMessageDefault(message));
       return obj1;
     }
   }

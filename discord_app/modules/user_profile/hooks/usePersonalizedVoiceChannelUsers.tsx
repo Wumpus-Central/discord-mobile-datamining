@@ -1,20 +1,20 @@
 // discord_app/modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx
-import recomputeAffinities from "recomputeAffinities";
-import hasConsented from "hasConsented";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import getVoiceStatesForGuild from "getVoiceStatesForGuild";
-import { Consents } from "ME";
+import closure_2 from "recomputeAffinities" /* 5407 */;
+import closure_3 from "hasConsented" /* 5258 */;
+import closure_4 from "mergeGuildAvatar" /* 1922 */;
+import closure_5 from "getVoiceStatesForGuild" /* 4545 */;
+import { Consents } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");
+const result = require("set").fileFinishedImporting("modules/user_profile/hooks/usePersonalizedVoiceChannelUsers.tsx");
 
 export default function usePersonalizedVoiceChannelUsers(arg0) {
   const _require = arg0;
-  const items = [getVoiceStatesForGuild];
+  const items = [closure_5];
   const items1 = [, ];
   ({ id: arr2[0], guild_id: arr2[1] } = arg0);
   stateFromStoresArray = _require(stateFromStoresArray[5]).useStateFromStoresArray(items, () => {
-    const voiceStatesForChannelAlt = outer1_5.getVoiceStatesForChannelAlt(closure_0.id, closure_0.guild_id);
+    const voiceStatesForChannelAlt = closure_1_5.getVoiceStatesForChannelAlt(closure_0.id, closure_0.guild_id);
     return voiceStatesForChannelAlt.map((user) => user.user.id);
   }, items1);
   const obj = _require(stateFromStoresArray[5]);
@@ -24,12 +24,12 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
   const items3 = [stateFromStores1];
   stateFromStores1 = _require(stateFromStoresArray[5]).useStateFromStores(items3, () => stateFromStores1.hasConsented(constants.PERSONALIZATION));
   const obj3 = _require(stateFromStoresArray[5]);
-  const items4 = [mergeGuildAvatar];
+  const items4 = [closure_4];
   const items5 = [stateFromStores1, stateFromStores, stateFromStoresArray];
   return _require(stateFromStoresArray[5]).useStateFromStoresArray(items4, () => {
     if (stateFromStores1) {
       let sorted = obj.sort((arg0, arg1) => {
-        let value = recomputeAffinities.get(arg1);
+        let value = closure_2.get(arg1);
         let num;
         if (value != null) {
           num = value.vcProbability;
@@ -37,7 +37,7 @@ export default function usePersonalizedVoiceChannelUsers(arg0) {
         if (num == null) {
           num = 0;
         }
-        value = recomputeAffinities.get(arg0);
+        value = closure_2.get(arg0);
         let num2;
         if (value != null) {
           num2 = value.vcProbability;

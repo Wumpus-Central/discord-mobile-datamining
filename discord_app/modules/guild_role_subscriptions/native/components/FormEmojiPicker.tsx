@@ -1,33 +1,31 @@
 // discord_app/modules/guild_role_subscriptions/native/components/FormEmojiPicker.tsx
-import "set";
-import { Fonts } from "ME";
-import { EmojiIntention } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importDefaultResult from "createTextStyle";
-import importDefaultResult1 from "createTextStyle";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { Fonts } from "ME" /* 676 */;
+import { EmojiIntention } from "set" /* 1925 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importDefaultResult from "createTextStyle" /* 6782 */;
 
-let c4;
-let c5;
 const require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, placeholder: null, text: null };
 createCacheKey = {};
-const merged = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_MUTED, 16));
+const merged = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_MUTED, 16));
 createCacheKey[2] = createCacheKey;
 let obj1 = {};
-const merged1 = Object.assign(require("createTextStyle")(Fonts.PRIMARY_MEDIUM, require("Themes").colors.TEXT_DEFAULT, 16));
+const merged1 = Object.assign(importDefaultResult(Fonts.PRIMARY_MEDIUM, ThemesDefault.colors.TEXT_DEFAULT, 16));
 createCacheKey[3] = obj1;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+const importDefaultResult1 = importDefaultResult;
 let result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/FormEmojiPicker.tsx");
 
 export default function FormEmojiPicker(emoji) {
-  let emojiId;
-  let emojiName;
   ({ emojiId, emojiName } = emoji.emoji);
   const guildId = emoji.guildId;
   const onChange = emoji.onChange;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   if (emojiId == null) {
     let tmp2Result = tmp2(4034);
     if (emojiName == null) {
@@ -35,7 +33,7 @@ export default function FormEmojiPicker(emoji) {
     }
     emojiId = tmp2Result.convertSurrogateToName(emojiName, false);
   }
-  let obj1 = guildId(14587);
+  obj1 = guildId(14587);
   const emojiByIdOrName = obj1.useEmojiByIdOrName(guildId, emojiId);
   if (null != emojiId) {
     let obj = { guildId: null, id: null };
@@ -54,7 +52,7 @@ export default function FormEmojiPicker(emoji) {
     style: items,
     accessibilityRole: "link",
     onPress() {
-      let obj = guildId(outer1_2[14]);
+      let obj = guildId(closure_1_2[14]);
       obj = {
         guildId,
         onPressEmoji(id) {
@@ -72,7 +70,7 @@ export default function FormEmojiPicker(emoji) {
             }
           }
         },
-        pickerIntention: outer1_3.GUILD_ROLE_BENEFIT_EMOJI
+        pickerIntention: closure_1_3.GUILD_ROLE_BENEFIT_EMOJI
       };
       const result = obj.openEmojiPickerActionSheet(obj);
     },
@@ -94,10 +92,8 @@ export default function FormEmojiPicker(emoji) {
   }
   obj2[1] = allEmojiNamesString;
   items1[1] = tmp10(guildId(1297).LegacyText, obj2);
-  const obj3 = { size: null, source: null };
-  obj3[0] = guildId(1297).Icon.Sizes.MEDIUM;
-  obj3[1] = onChange(11640);
-  items1[2] = tmp10(guildId(1297).Icon, obj3);
+  const tmp2Result1 = onChange(8910);
+  items1[2] = tmp10(guildId(1297).Icon, { size: guildId(1297).Icon.Sizes.MEDIUM, source: onChange(11640) });
   obj1[3] = items1;
-  return tmp12(onChange(8910), obj1);
+  return tmp12(tmp2Result1, obj1);
 };

@@ -1,16 +1,16 @@
 // discord_app/modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx
-import recountRelationshipTypes from "recountRelationshipTypes";
+import closure_2 from "recountRelationshipTypes" /* 5406 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
 import { useGetOrFetchApplications } from "../../applications/useGetOrFetchApplications.tsx";
 
 const require = arg1;
-const result = require("useGetOrFetchApplications").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
+const result = require("set").fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountApplication.tsx");
 
 export default function useProvisionalAccountApplication(arg0) {
   const _require = arg0;
-  const items = [recountRelationshipTypes];
+  const items = [closure_2];
   const stateFromStores = _initialize.useStateFromStores(items, () => {
-    const gameRelationshipsForUser = outer1_2.getGameRelationshipsForUser(closure_0);
+    const gameRelationshipsForUser = closure_1_2.getGameRelationshipsForUser(closure_0);
     return 0 !== gameRelationshipsForUser.length ? gameRelationshipsForUser[0].applicationId : undefined;
   });
   const obj = _initialize;

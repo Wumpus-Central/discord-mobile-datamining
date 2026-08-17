@@ -1,24 +1,17 @@
 // discord_app/design/components/TableRow/native/TableRadioRow.native.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import { useCheckboxA11yNative } from "../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import { FormRadio } from "../../Forms/native/FormRadio.native.tsx";
-import { context } from "TableRadioGroup.native.tsx";
-import { TableRowInner } from "TableRow.native.tsx";
+import useCheckboxA11yNative from "useCheckboxA11yNative" /* 4105 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import context2 from "context" /* 8101 */;
+import FormRadio from "FormRadio" /* 8102 */;
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let require = arg1;
-const result = require("context").fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRadioRow.native.tsx");
 
 export const TableRadioRow = function TableRadioRow(value) {
-  let accessibilityRole;
-  let accessibilityState;
-  let dependencyMap;
-  let disabled;
-  let label;
-  let legacyCompat_selected;
-  let subLabel;
   value = value.value;
-  const require = value;
+  require = value;
   ({ label, subLabel, disabled } = value);
   if (disabled === undefined) {
     disabled = false;
@@ -26,7 +19,7 @@ export const TableRadioRow = function TableRadioRow(value) {
   ({ legacyCompat_selected, legacyCompat_onPress: dependencyMap } = value);
   const merged = Object.assign(value, Object.create(null));
   let onSelect;
-  const context = onSelect.useContext(context.TableRadioGroupContext);
+  const context = onSelect.useContext(context2.TableRadioGroupContext);
   onSelect = context.onSelect;
   if (legacyCompat_selected == null) {
     legacyCompat_selected = context.selectedValue === value;

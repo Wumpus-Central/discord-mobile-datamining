@@ -1,35 +1,34 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx
-import _slicedToArray from "_slicedToArray";
-import Header from "Header";
-import { View } from "pickImage";
-import { GuildRoleSubscriptionsTierScenes as closure_7 } from "MAX_SUBSCRIPTION_TIERS";
-import { UPLOAD_SMALL_SIZE } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import map from "map" /* 4097 */;
+import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 14584 */;
+import HeaderDefault from "Header" /* 16954 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { GuildRoleSubscriptionsTierScenes as closure_7 } from "MAX_SUBSCRIPTION_TIERS" /* 14551 */;
+import { UPLOAD_SMALL_SIZE } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useEditStateContext } from "../../edit_state/EditStateContextProvider.tsx";
 import { useRoleSubscriptionSettingsDisabled } from "../../RoleSubscriptionSettingsDisabledContext.tsx";
 import { pickImage } from "FormImagePicker.tsx";
-import { Header } from "GuildRoleSubscriptionTierEditStep.tsx";
-import { GuildRoleSubscriptionMemberPreview } from "listing_elements/GuildRoleSubscriptionMemberPreview.tsx";
 
-let c10;
-let c9;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function MemberPreviews(role) {
   role = role.role;
-  const tmp = createCacheKey();
+  const tmp = callback4();
   let obj = map;
-  const token = obj.useToken(Themes.colors.BACKGROUND_BASE_LOW, Themes.themes.DARK);
-  const token1 = map.useToken(Themes.colors.BACKGROUND_BASE_LOW, Themes.themes.LIGHT);
+  const token = obj.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW, ThemesDefault.themes.DARK);
+  const token1 = map.useToken(ThemesDefault.colors.BACKGROUND_BASE_LOW, ThemesDefault.themes.LIGHT);
   const obj2 = map;
-  const token2 = map.useToken(Themes.colors.TEXT_DEFAULT, Themes.themes.DARK);
+  const token2 = map.useToken(ThemesDefault.colors.TEXT_DEFAULT, ThemesDefault.themes.DARK);
   const obj3 = map;
   obj = { style: tmp.memberPreviews, children: null };
-  const token3 = map.useToken(Themes.colors.TEXT_DEFAULT, Themes.themes.LIGHT);
+  const token3 = map.useToken(ThemesDefault.colors.TEXT_DEFAULT, ThemesDefault.themes.LIGHT);
   const items = [, , ];
   ({ member: arr[0], memberLight: arr[1] } = tmp);
   items[2] = { backgroundColor: token1 };
@@ -42,23 +41,19 @@ function MemberPreviews(role) {
   return callback3(View, obj);
 }
 function Content() {
-  let editStateId;
-  let guildId;
-  let tmp7;
-  let tmp8;
   const tmp3 = role(13358)();
   let obj = _useEditStateContext;
   const editStateContext = obj.useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
-  let obj1 = importAll(14573);
+  obj1 = getRoleEmojisAll;
   [tmp7, tmp8] = callback(obj1.useRoleColor(editStateId, guildId), 2);
-  let obj2 = importAll(14573);
+  let obj2 = getRoleEmojisAll;
   _require = callback(obj2.useRoleIcon(editStateId, guildId), 2)[1];
-  let obj3 = importAll(14573);
+  let obj3 = getRoleEmojisAll;
   role = obj3.useRole(editStateId, guildId);
   const items = [role];
   const customIconSrc = React.useMemo(() => {
-    let roleIconData = callback(outer1_3[13]).getRoleIconData(role);
+    let roleIconData = callback(closure_1_3[13]).getRoleIconData(role);
     if (roleIconData == null) {
       roleIconData = {};
     }
@@ -102,12 +97,12 @@ function Content() {
 }
 ({ jsx: c9, jsxs: c10, Fragment: unpackModuleId } = jsxProd);
 createCacheKey = { memberPreviews: { paddingHorizontal: 16, paddingTop: 26 }, member: null, memberLight: null, memberDark: null };
-createCacheKey = { padding: 16, borderRadius: require("Themes").radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: require("Themes").colors.BORDER_STRONG };
+createCacheKey = { padding: 16, borderRadius: ThemesDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: ThemesDefault.colors.BORDER_STRONG };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 };
 createCacheKey[3] = { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx");
+let closure_12 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierDesignModal.tsx");
 
 export default function GuildRoleSubscriptionTierDesignModal(arg0) {
   const obj = { title: null, description: null, canProceedToNextStep: true, nextStep: null };
@@ -118,7 +113,7 @@ export default function GuildRoleSubscriptionTierDesignModal(arg0) {
   obj[3] = constants.CONFIRMATION;
   const merged = Object.assign(arg0);
   obj.children = callback2(Content, {});
-  return callback2(Header, obj);
+  return callback2(HeaderDefault, obj);
 };
 export const GuildRoleSubscriptionTierDesignTab = function GuildRoleSubscriptionTierDesignTab() {
   return callback2(Content, {});

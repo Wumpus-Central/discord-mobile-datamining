@@ -1,40 +1,32 @@
 // discord_app/modules/in_app_reports/native/components/InAppReportsTextLineElement.tsx
-import closure_4 from "createCacheKey";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
-({ View: error, Linking: metroImportAll } = get_ActivityIndicator);
+({ View: error, Linking: closure_8 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { container: { marginBottom: 16, paddingHorizontal: 16 }, header: { marginBottom: 8 }, description: { marginBottom: 16 }, trailingButtonContainer: { paddingHorizontal: 8 }, smsInfoContainer: { display: "flex", flexDirection: "row", alignItems: "center" }, smsNumberContainer: null, smsNumberContainerSuccess: null, startButtonContainer: null };
-createCacheKey = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: require("Themes").radii.xs, borderColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, marginBottom: 8 };
+createCacheKey = { flex: 1, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.xs, borderColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 1, padding: 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, marginBottom: 8 };
 createCacheKey[5] = createCacheKey;
-createCacheKey[6] = { borderColor: require("Themes").colors.STATUS_POSITIVE_BACKGROUND };
+createCacheKey[6] = { borderColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
 createCacheKey[7] = { paddingHorizontal: 12, marginBottom: 8, marginLeft: 12 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { borderColor: require("Themes").colors.STATUS_POSITIVE_BACKGROUND };
-let result = require("noop").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextLineElement.tsx");
+let closure_11 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { borderColor: ThemesDefault.colors.STATUS_POSITIVE_BACKGROUND };
+let result = require("set").fileFinishedImporting("modules/in_app_reports/native/components/InAppReportsTextLineElement.tsx");
 
 export default function TextLineElement(element) {
-  let body;
-  let c2;
-  let is_localized;
-  let title;
-  let tmp3;
   const data = element.element.data;
   const sms = data.sms;
   const sms_body = data.sms_body;
   c2 = undefined;
   function _handleOpenSms() {
     const self = this;
-    const tmp = outer1_4(function*() {
+    const tmp = closure_1_4(function*() {
       if (table === 2) {
         table = 3;
         HermesBuiltin.throwTypeError();
@@ -61,10 +53,10 @@ export default function TextLineElement(element) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
-              let c0 = tmp2;
-              c0 = undefined;
-              const tmp15 = (function buildSmsUrl(outer1_0, outer1_1) {
+              closure_1 = tmp3;
+              closure_0 = tmp2;
+              closure_0 = undefined;
+              const tmp15 = (function buildSmsUrl(closure_1_0, closure_1_1) {
                 let str = "?";
                 if (obj.isIOS()) {
                   let str2 = "&";
@@ -72,22 +64,22 @@ export default function TextLineElement(element) {
                     str2 = ";";
                   }
                   str = str2;
-                  tmpResult = _undefined(table[10]);
+                  tmpResult = callback(table[10]);
                 }
                 let str3 = "";
-                const combined = "sms:" + outer1_0;
-                if (null != outer1_1) {
+                const combined = "sms:" + closure_1_0;
+                if (null != closure_1_1) {
                   const _encodeURIComponent = encodeURIComponent;
                   const _HermesInternal = HermesInternal;
-                  str3 = "" + str + "body=" + encodeURIComponent(outer1_1);
+                  str3 = "" + str + "body=" + encodeURIComponent(closure_1_1);
                 }
                 return combined + str3;
-              })(outer1_0, outer1_1);
-              c0 = tmp15;
+              })(closure_1_0, closure_1_1);
+              closure_0 = tmp15;
               c2 = 1;
               table = 1;
-              const obj1 = { value: null, done: false };
-              obj1[0] = outer1_8.canOpenURL(tmp15);
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_8.canOpenURL(tmp15);
               return obj1;
             }
           } else if (arg0 === 1) {
@@ -100,8 +92,8 @@ export default function TextLineElement(element) {
             return obj2;
           } else {
             if (arg1) {
-              obj = outer1_1(table[11]);
-              obj.openURL(c0);
+              obj = closure_1_1(table[11]);
+              obj.openURL(closure_0);
             }
             table = 3;
             return { value: "HermesInternal", done: "HermesInternal" };
@@ -112,7 +104,7 @@ export default function TextLineElement(element) {
         }
       }
     });
-    const _handleOpenSms = tmp;
+    closure_3 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -122,7 +114,7 @@ export default function TextLineElement(element) {
     return applyArgumentsResult;
   }
   ({ title, body, is_localized } = data);
-  let tmp = createCacheKey();
+  let tmp = callback3();
   [tmp3, c2] = callback(React.useState(false), 2);
   if (is_localized) {
     let obj = { style: null, children: null };
@@ -135,7 +127,7 @@ export default function TextLineElement(element) {
     obj[0] = tmp.description;
     obj[2] = tmp5(body);
     items[1] = callback2(sms(tmp4[12]).Text, obj);
-    let obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.smsInfoContainer;
     let obj2 = { style: null, children: null };
     const items1 = [tmp.smsNumberContainer, tmp3 ? tmp.smsNumberContainerSuccess : {}];

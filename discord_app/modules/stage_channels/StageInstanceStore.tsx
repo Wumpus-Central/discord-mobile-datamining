@@ -1,6 +1,8 @@
 // discord_app/modules/stage_channels/StageInstanceStore.tsx
-import { GuildScheduledEventPrivacyLevel as closure_0 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { Store } from "initialize";
+import set from "set" /* 2 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
 function handleStageInstanceCreateOrUpdate(instance) {
   instance = instance.instance;
@@ -14,13 +16,15 @@ function handleStageInstanceCreateOrUpdate(instance) {
   obj = {};
   const merged = Object.assign(obj);
   const item = items.forEach((channel_id) => {
-    outer1_2[channel_id.channel_id] = channel_id;
+    closure_1_2[channel_id.channel_id] = channel_id;
     obj[channel_id.channel_id] = channel_id;
   });
   dependencyMap[guild_id] = obj;
 }
+let closure_0 = GUILD_EVENT_MAX_NAME_LENGTH.GuildScheduledEventPrivacyLevel;
 let closure_1 = {};
 let closure_2 = {};
+const Store = initializeDefault.Store;
 class StageInstanceStore extends Store {
 }
 const prototype = StageInstanceStore.prototype;
@@ -55,14 +59,12 @@ prototype["getAllStageInstances"] = function getAllStageInstances() {
   return Object.values(closure_2);
 };
 StageInstanceStore.displayName = "StageInstanceStore";
-const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
+const stageInstanceStore = new StageInstanceStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
-    let closure_1 = {};
-    let closure_2 = {};
+    closure_1 = {};
+    closure_2 = {};
     let item = guilds.forEach((arg0) => {
-      let id;
-      let stage_instances;
       ({ id, stage_instances } = arg0);
       let obj;
       obj = table[id];
@@ -73,7 +75,7 @@ const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
       const merged = Object.assign(obj);
       if (stage_instances != null) {
         const item = stage_instances.forEach((channel_id) => {
-          outer1_2[channel_id.channel_id] = channel_id;
+          closure_1_2[channel_id.channel_id] = channel_id;
           obj[channel_id.channel_id] = channel_id;
         });
       }
@@ -81,8 +83,6 @@ const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
     });
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
-    let id;
-    let stage_instances;
     ({ id, stage_instances } = guild.guild);
     let obj;
     obj = dependencyMap[id];
@@ -93,7 +93,7 @@ const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
     const merged = Object.assign(obj);
     if (stage_instances != null) {
       const item = stage_instances.forEach((channel_id) => {
-        outer1_2[channel_id.channel_id] = channel_id;
+        closure_1_2[channel_id.channel_id] = channel_id;
         obj[channel_id.channel_id] = channel_id;
       });
     }
@@ -113,8 +113,6 @@ const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
   STAGE_INSTANCE_CREATE: handleStageInstanceCreateOrUpdate,
   STAGE_INSTANCE_UPDATE: handleStageInstanceCreateOrUpdate,
   STAGE_INSTANCE_DELETE: function handleStageInstanceDelete(instance) {
-    let channel_id;
-    let guild_id;
     ({ guild_id, channel_id } = instance.instance);
     delete tmp[tmp2];
     if (null != guild_id) {
@@ -129,8 +127,6 @@ const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
     }
   },
   CHANNEL_DELETE: function handleChannelDelete(channel) {
-    let guild_id;
-    let id;
     ({ guild_id, id } = channel.channel);
     delete tmp[tmp2];
     if (null != guild_id) {
@@ -145,10 +141,10 @@ const stageInstanceStore = new StageInstanceStore(require("dispatcher"), {
     }
   },
   LOGOUT: function handleLogout() {
-    let closure_2 = {};
-    let closure_1 = {};
+    closure_2 = {};
+    closure_1 = {};
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/stage_channels/StageInstanceStore.tsx");
+const result = set.fileFinishedImporting("modules/stage_channels/StageInstanceStore.tsx");
 
 export default stageInstanceStore;

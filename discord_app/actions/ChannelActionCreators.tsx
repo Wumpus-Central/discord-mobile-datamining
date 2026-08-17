@@ -1,37 +1,26 @@
 // discord_app/actions/ChannelActionCreators.tsx
-import _slicedToArray from "_slicedToArray";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
-import handleUserSettingsProtoStoreChange from "handleUserSettingsProtoStoreChange";
-import { createChannelRecordFromServer as closure_6 } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import closure_8 from "generateOldThreadCutoff";
-import ME from "ME";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { isChangelogChannel } from "../modules/changelog/utils/isChangelogChannel.tsx";
-import { getRootNavigationRef } from "../modules/main_tabs_v2/RootNavigationRef.native.tsx";
-import { transitionTo } from "../modules/routing/router_utils.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import transitionTo from "transitionTo" /* 1222 */;
+import getRootNavigationRef from "getRootNavigationRef" /* 4230 */;
+import transitionToChannel from "transitionToChannel" /* 4768 */;
+import _modDef4975 from "module_4975" /* 4975 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 8779 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "handleUserSettingsProtoStoreChange" /* 4771 */;
+import { createChannelRecordFromServer as closure_6 } from "createChannelRecord" /* 1395 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "generateOldThreadCutoff" /* 4772 */;
+import ME from "ME" /* 676 */;
 import { _httpGetWithCountryCodeQuery } from "../utils/StoreUtils.tsx";
-import { SelectedChannelActionCreators } from "SelectedChannelActionCreators.tsx";
 
-let c10;
-let c9;
-let closure_12;
-let closure_14;
-let closure_15;
-let map1;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 ({ AnalyticEvents: c9, AbortCodes: c10, Endpoints: unpackModuleId, Routes: closure_12, ME: map1, CURRENT_APP_CONTEXT: closure_14, ChannelTypes: closure_15 } = ME);
-let result = require("handleUserSettingsProtoStoreChange").fileFinishedImporting("actions/ChannelActionCreators.tsx");
+let result = require("set").fileFinishedImporting("actions/ChannelActionCreators.tsx");
 
 export default {
   openPrivateChannel(joinCallVideo) {
-    let _slicedToArray;
-    let generateOldThreadCutoff;
-    let joinCall;
-    let navigateToChannel;
-    let require;
     ({ recipientIds: require, joinCall } = joinCallVideo);
     if (joinCall === undefined) {
       joinCall = false;
@@ -40,7 +29,7 @@ export default {
     if (flag === undefined) {
       flag = false;
     }
-    ({ location: _slicedToArray, onBeforeTransition: generateOldThreadCutoff, navigateToChannel } = joinCallVideo);
+    ({ location: closure_3, onBeforeTransition: closure_4, navigateToChannel } = joinCallVideo);
     if (navigateToChannel === undefined) {
       navigateToChannel = true;
     }
@@ -72,7 +61,7 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let joinCallIfRequested = tmp7;
               closure_1 = undefined;
               joinCallIfRequested = function joinCallIfRequested(_openCachedDMChannelResult) {
@@ -91,28 +80,28 @@ export default {
                   }
                 }
               };
-              const _getRecipientsResult = outer1_6._getRecipients(outer1_0);
+              const _getRecipientsResult = closure_1_6._getRecipients(closure_1_0);
               if (1 === _getRecipientsResult.length) {
-                const _openCachedDMChannelResult = outer1_6._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], v02, c5);
+                const _openCachedDMChannelResult = closure_1_6._openCachedDMChannel(v0(_getRecipientsResult, 1)[0], v02, c5);
                 if (null != _openCachedDMChannelResult) {
                   joinCallIfRequested(_openCachedDMChannelResult);
                   c5 = 3;
-                  const obj1 = { value: null, done: true };
+                  obj1 = { value: null, done: true };
                   obj1[0] = Promise.resolve(_openCachedDMChannelResult.id);
                   return obj1;
                 }
               }
               v0 = 1;
-              const HTTP = outer1_0(outer1_2[8]).HTTP;
+              const HTTP = closure_1_0(closure_1_2[8]).HTTP;
               const obj2 = { url: null, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
-              obj2[0] = outer1_11.USER_CHANNELS;
+              obj2[0] = closure_1_11.USER_CHANNELS;
               const obj3 = { recipients: null };
               obj3[0] = _getRecipientsResult;
               obj2[1] = obj3;
               const obj4 = { location: null };
               obj4[0] = v0;
               obj2[2] = obj4;
-              let obj5 = outer1_0(outer1_2[8]);
+              let obj5 = closure_1_0(closure_1_2[8]);
               obj2[5] = obj5.rejectWithMigratedError();
               v02 = 2;
               c5 = 1;
@@ -129,10 +118,10 @@ export default {
                 code = body.code;
               }
             }
-            if (code === outer1_10.QUARANTINED) {
-              outer1_1(outer1_2[9])();
+            if (code === closure_1_10.QUARANTINED) {
+              closure_1_1(closure_1_2[9])();
             }
-            throw outer1_2;
+            throw closure_1_2;
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
@@ -169,10 +158,6 @@ export default {
     })();
   },
   createGroupDmShell(arg0) {
-    let dependencyMap;
-    let importDefault;
-    let navigateToChannel;
-    let require;
     ({ recipientId: require, location: importDefault, onBeforeTransition: dependencyMap, navigateToChannel } = arg0);
     if (navigateToChannel === undefined) {
       navigateToChannel = true;
@@ -206,19 +191,19 @@ export default {
               return obj;
             } else {
               let body = tmp3;
-              let closure_0 = tmp7;
+              closure_0 = tmp7;
               closure_0 = undefined;
-              let c3 = 1;
-              const HTTP = outer1_0(outer1_2[8]).HTTP;
-              const obj1 = { url: null, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
-              obj1[0] = outer1_11.USER_GROUP_DM_SHELL;
+              c3 = 1;
+              const HTTP = closure_1_0(closure_1_2[8]).HTTP;
+              obj1 = { url: null, body: null, context: null, oldFormErrors: true, retries: 3, rejectWithError: null };
+              obj1[0] = closure_1_11.USER_GROUP_DM_SHELL;
               const obj2 = { recipient_id: null };
-              obj2[0] = outer1_0;
+              obj2[0] = closure_1_0;
               obj1[1] = obj2;
               const obj3 = { location: null };
-              obj3[0] = outer1_1;
+              obj3[0] = closure_1_1;
               obj1[2] = obj3;
-              obj1[5] = outer1_0(outer1_2[8]).rejectWithMigratedError();
+              obj1[5] = closure_1_0(closure_1_2[8]).rejectWithMigratedError();
               c4 = 2;
               c5 = 1;
               const obj4 = { value: null, done: false };
@@ -235,10 +220,10 @@ export default {
                 code = body.code;
               }
             }
-            if (code === outer1_10.QUARANTINED) {
-              outer1_1(outer1_2[9])();
+            if (code === closure_1_10.QUARANTINED) {
+              closure_1_1(closure_1_2[9])();
             }
-            throw outer1_1;
+            throw closure_1_1;
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
@@ -296,9 +281,9 @@ export default {
           tmp3 = channel;
           const tmp6Result = tmp6(4768);
         } else {
-          const privateChannel = SelectedChannelActionCreators.selectPrivateChannel(channel.id);
+          const privateChannel = _modDef4975.selectPrivateChannel(channel.id);
           tmp3 = channel;
-          const obj3 = SelectedChannelActionCreators;
+          const obj3 = _modDef4975;
         }
         obj2 = getRootNavigationRef;
         tmp6 = require;
@@ -307,22 +292,22 @@ export default {
     return tmp3;
   },
   ensurePrivateChannel(id) {
-    let closure_0 = id;
+    closure_0 = id;
     const self = this;
     return callback(function*() {
-      let id = tmp5;
+      id = tmp5;
       let body = tmp2;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-      obj1[0] = outer1_11.USER_CHANNELS;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = closure_1_11.USER_CHANNELS;
       const obj2 = { recipients: null };
-      obj2[0] = outer1_1._getRecipients(outer1_0);
+      obj2[0] = closure_1_1._getRecipients(closure_1_0);
       obj1[1] = obj2;
-      const _getRecipientsResult = outer1_1._getRecipients(outer1_0);
-      obj1[3] = outer1_0(530).rejectWithMigratedError();
+      const _getRecipientsResult = closure_1_1._getRecipients(closure_1_0);
+      obj1[3] = closure_1_0(530).rejectWithMigratedError();
       body = yield HTTP.post(obj1);
-      id = outer1_6(body.body);
-      const obj = outer1_1(709);
+      id = closure_1_6(body.body);
+      const obj = closure_1_1(709);
       const obj5 = { type: "CHANNEL_CREATE", channel: null };
       obj5[1] = id;
       obj.dispatch(obj5);
@@ -358,11 +343,11 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let dMFromUserId = outer1_7.getDMFromUserId(c0);
+              let dMFromUserId = closure_1_7.getDMFromUserId(c0);
               if (null == dMFromUserId) {
                 c1 = 1;
                 c0 = 1;
-                const obj1 = { value: null, done: false };
+                obj1 = { value: null, done: false };
                 obj1[0] = c1.ensurePrivateChannel(tmp7);
                 return obj1;
               }
@@ -395,24 +380,24 @@ export default {
     return callback(function*() {
       let id = tmp2;
       let body = tmp5;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, rejectWithError: true };
-      obj1[0] = outer1_11.DM_CHANNEL(outer1_0);
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, rejectWithError: true };
+      obj1[0] = closure_1_11.DM_CHANNEL(closure_1_0);
       body = yield HTTP.get(obj1);
-      id = outer1_6(body.body);
-      const obj = outer1_1(709);
+      id = closure_1_6(body.body);
+      const obj = closure_1_1(709);
       const obj4 = { type: "CHANNEL_CREATE", channel: null };
       obj4[1] = id;
       obj.dispatch(obj4);
       return id.id;
     })();
   },
-  _getRecipients(outer1_0) {
-    if (null != outer1_0) {
+  _getRecipients(closure_1_0) {
+    if (null != closure_1_0) {
       const _Array = Array;
-      let tmp2 = outer1_0;
-      if (!Array.isArray(outer1_0)) {
-        const items = [outer1_0];
+      let tmp2 = closure_1_0;
+      if (!Array.isArray(closure_1_0)) {
+        const items = [closure_1_0];
         tmp2 = items;
       }
       let items1 = tmp2;
@@ -423,16 +408,16 @@ export default {
   },
   _openPrivateChannel(body) {
     const tmp = callback2(body);
-    dispatcher.dispatch({ type: "CHANNEL_CREATE", channel: tmp });
-    const obj = dispatcher;
+    dispatcherDefault.dispatch({ type: "CHANNEL_CREATE", channel: tmp });
+    const obj = dispatcherDefault;
     const tmp2 = importDefault;
     const tmp5 = require;
     if (null != obj2.getRootNavigationRef()) {
-      tmp5(4768).transitionToChannel(tmp.id, { navigationReplace: true });
-      const tmp5Result = tmp5(4768);
+      transitionToChannel.transitionToChannel(tmp.id, { navigationReplace: true });
+      const tmp5Result = transitionToChannel;
     } else {
-      const privateChannel = tmp2(4975).selectPrivateChannel(tmp.id);
-      const tmp2Result = tmp2(4975);
+      const privateChannel = _modDef4975.selectPrivateChannel(tmp.id);
+      const tmp2Result = _modDef4975;
     }
     return tmp;
   },
@@ -445,10 +430,10 @@ export default {
     if (arg2 === undefined) {
       flag2 = false;
     }
-    if (isChangelogChannel(id)) {
+    if (isChangelogChannelDefault(id)) {
       let tmpResult = tmp(698);
       let obj = { last_changelog_id: null, unread_count: null };
-      obj[0] = handleUserSettingsProtoStoreChange.latestChangelogId();
+      obj[0] = closure_5.latestChangelogId();
       obj[1] = unreadCount.getUnreadCount(id);
       tmpResult.track(constants.CHANGE_LOG_DM_REMOVED, obj);
     }
@@ -460,8 +445,7 @@ export default {
       const obj5 = transitionTo;
     }
     const HTTP = sendRequest.HTTP;
-    const obj1 = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    obj1[3] = sendRequest.rejectWithMigratedError();
+    obj1 = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
     const obj7 = sendRequest;
     const delResult = HTTP.del(obj1);
     return HTTP.del(obj1).then(() => {
@@ -481,18 +465,18 @@ export default {
     return HTTP.post(obj);
   },
   updatePermissionOverwrite(id, arr) {
-    let closure_0 = id;
-    let closure_1 = arr;
+    closure_0 = id;
+    closure_1 = arr;
     return callback(function*() {
-      let closure_1 = tmp2;
-      let closure_0 = tmp5;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-      obj1[0] = outer1_11.CHANNEL_PERMISSIONS_OVERWRITE(outer1_0, outer1_1.id);
-      obj1[1] = outer1_1;
-      obj1[3] = outer1_0(530).rejectWithMigratedError();
+      closure_1 = tmp2;
+      closure_0 = tmp5;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(closure_1_0, closure_1_1.id);
+      obj1[1] = closure_1_1;
+      obj1[3] = closure_1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.put(obj1);
-      const obj = outer1_1(709);
+      const obj = closure_1_1(709);
       const obj4 = { type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: null, overwrite: null };
       obj4[1] = closure_0;
       obj4[2] = closure_1;
@@ -501,16 +485,16 @@ export default {
     })();
   },
   clearPermissionOverwrite(closure_0, id) {
-    let closure_1 = id;
+    closure_1 = id;
     return callback(function*() {
-      let closure_1 = tmp2;
-      let closure_0 = tmp5;
-      const HTTP = outer1_0(530).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
-      obj1[0] = outer1_11.CHANNEL_PERMISSIONS_OVERWRITE(outer1_0, outer1_1);
-      obj1[2] = outer1_0(530).rejectWithMigratedError();
+      closure_1 = tmp2;
+      closure_0 = tmp5;
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: null };
+      obj1[0] = closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(closure_1_0, closure_1_1);
+      obj1[2] = closure_1_0(530).rejectWithMigratedError();
       closure_0 = yield HTTP.del(obj1);
-      const obj = outer1_1(709);
+      const obj = closure_1_1(709);
       const obj4 = { type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: null, overwriteId: null };
       obj4[1] = closure_0;
       obj4[2] = closure_1;
@@ -520,7 +504,7 @@ export default {
   },
   addRecipient(arg0, arg1, location) {
     const self = this;
-    let closure_1 = arg0;
+    closure_1 = arg0;
     const _require = arg3;
     const HTTP = _require(self[8]).HTTP;
     obj = { url: closure_11.CHANNEL_RECIPIENT(arg0, arg1), context: obj, oldFormErrors: true, rejectWithError: true };
@@ -548,12 +532,12 @@ export default {
   },
   addRecipients(id, arr, arg2, closure_2) {
     const self = this;
-    let closure_1 = arr;
-    let closure_0 = arg2;
+    closure_1 = arr;
+    closure_0 = arg2;
     return this.addRecipient(id, arr[0], arg2, closure_2).then((arg0) => {
-      let closure_0 = arg0;
+      closure_0 = arg0;
       const substr = arr.slice(1);
-      return Promise.all(substr.map((arg0) => outer1_2.addRecipient(closure_0, arg0, closure_0))).then(() => closure_0);
+      return Promise.all(substr.map((arg0) => closure_1_2.addRecipient(closure_0, arg0, closure_0))).then(() => closure_0);
     });
   },
   removeRecipient(arg0, arg1) {
@@ -567,17 +551,17 @@ export default {
     return HTTP.patch(obj);
   },
   setName(arg0, arg1) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
+    closure_0 = arg0;
+    closure_1 = arg1;
     return callback(function*() {
-      let closure_1 = tmp3;
+      closure_1 = tmp3;
       let channel = tmp2;
-      channel = outer1_7.getChannel(outer1_0);
-      const HTTP = outer1_0(530).HTTP;
-      let obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = outer1_11.CHANNEL(outer1_0);
+      channel = closure_1_7.getChannel(closure_1_0);
+      const HTTP = closure_1_0(530).HTTP;
+      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = closure_1_11.CHANNEL(closure_1_0);
       const obj2 = { name: null };
-      obj2[0] = outer1_1;
+      obj2[0] = closure_1_1;
       obj1[1] = obj2;
       closure_1 = yield HTTP.patch(obj1);
       if (channel != null) {
@@ -593,16 +577,16 @@ export default {
         tmp10 = isThreadResult;
       }
       if (!tmp10) {
-        obj1 = outer1_1(7286);
+        obj1 = closure_1_1(7286);
         const result = obj1.checkGuildTemplateDirty(guildId);
       }
       return closure_1;
     })();
   },
   setIcon(arg0, arg1) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -630,15 +614,15 @@ export default {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj1 = tmp3;
+              obj1 = tmp3;
               let channel = tmp7;
               channel = undefined;
               obj1 = undefined;
-              let closure_2;
-              let c3;
-              channel = outer1_7.getChannel(outer1_0);
+              closure_2 = undefined;
+              c3 = undefined;
+              channel = closure_1_7.getChannel(closure_1_0);
               obj1 = { channel_id: null, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
-              obj1[0] = outer1_0;
+              obj1[0] = closure_1_0;
               let type;
               if (channel != null) {
                 type = channel.type;
@@ -649,19 +633,19 @@ export default {
                 icon = channel.icon;
               }
               obj1[2] = null != icon;
-              obj1[3] = null != outer1_1;
-              obj1[4] = outer1_2;
-              let obj6 = outer1_1(outer1_2[15]);
+              obj1[3] = null != closure_1_1;
+              obj1[4] = closure_1_2;
+              let obj6 = closure_1_1(closure_1_2[15]);
               const obj2 = {};
               const merged = Object.assign(obj1);
               obj2.status = "initiated";
-              obj6.track(outer1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
+              obj6.track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
               c3 = 1;
-              const HTTP = outer1_0(outer1_2[8]).HTTP;
+              const HTTP = closure_1_0(closure_1_2[8]).HTTP;
               const obj3 = { url: null, body: null, oldFormErrors: true, rejectWithError: true, failImmediatelyWhenRateLimited: true };
-              obj3[0] = outer1_11.CHANNEL(outer1_0);
+              obj3[0] = closure_1_11.CHANNEL(closure_1_0);
               let obj4 = { icon: null };
-              obj4[0] = outer1_1;
+              obj4[0] = closure_1_1;
               obj3[1] = obj4;
               c4 = 2;
               c5 = 1;
@@ -671,29 +655,29 @@ export default {
             }
           } else if (1 === tmp7) {
             c3 = 0;
-            c4 = closure_2;
-            obj4 = outer1_1(outer1_2[15]);
+            closure_4 = closure_2;
+            obj4 = closure_1_1(closure_1_2[15]);
             obj6 = {};
-            const merged1 = Object.assign(outer1_1);
+            const merged1 = Object.assign(closure_1_1);
             obj6.status = "failed";
             let retry_after;
-            if (c4 != null) {
-              const body = c4.body;
+            if (closure_4 != null) {
+              const body = closure_4.body;
               if (body != null) {
                 retry_after = body.retry_after;
               }
             }
             obj6.is_rate_limited = null != retry_after;
             let message;
-            if (c4 != null) {
-              const body2 = c4.body;
+            if (closure_4 != null) {
+              const body2 = closure_4.body;
               if (body2 != null) {
                 message = body2.message;
               }
             }
             obj6.error_message = message;
-            obj4.track(outer1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj6);
-            throw c4;
+            obj4.track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj6);
+            throw closure_4;
           } else if (arg0 === 1) {
             c5 = 3;
             throw arg1;
@@ -708,7 +692,7 @@ export default {
             const obj8 = {};
             const merged2 = Object.assign(obj1);
             obj8.status = "success";
-            outer1_1(outer1_2[15]).track(outer1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+            closure_1_1(closure_1_2[15]).track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
             let guildId;
             if (channel != null) {
               guildId = channel.getGuildId();
@@ -716,21 +700,21 @@ export default {
             c3 = guildId;
             let tmp11 = null == c3;
             if (!tmp11) {
-              obj = outer1_0;
+              obj = closure_1_0;
               let isThreadResult;
-              if (outer1_0 != null) {
+              if (closure_1_0 != null) {
                 isThreadResult = obj.isThread();
               }
               tmp11 = isThreadResult;
             }
             if (!tmp11) {
-              obj1 = outer1_1(outer1_2[19]);
+              obj1 = closure_1_1(closure_1_2[19]);
               const result = obj1.checkGuildTemplateDirty(c3);
             }
             c3 = 0;
             c5 = 3;
             const obj9 = { value: null, done: true };
-            obj9[0] = outer1_2;
+            obj9[0] = closure_1_2;
             return obj9;
           }
         } catch (tmp51) {
@@ -746,9 +730,9 @@ export default {
     })();
   },
   updateChannel(arg0, arg1, arg2) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
     return callback(function*() {
       if (c5 === 2) {
         c5 = 3;
@@ -777,16 +761,16 @@ export default {
               return obj;
             } else {
               let channel = tmp3;
-              let c0 = tmp5;
-              c0 = undefined;
+              closure_0 = tmp5;
+              closure_0 = undefined;
               channel = undefined;
-              let obj1;
-              let c3;
+              obj1 = undefined;
+              c3 = undefined;
               guildId = undefined;
-              c0 = tmp73;
-              channel = outer1_7.getChannel(outer1_0);
+              closure_0 = tmp73;
+              channel = closure_1_7.getChannel(closure_1_0);
               obj1 = { channel_id: null, channel_type: null, old_icon_set: null, new_icon_set: null, location: null };
-              obj1[0] = outer1_0;
+              obj1[0] = closure_1_0;
               let type;
               if (channel != null) {
                 type = channel.type;
@@ -797,23 +781,23 @@ export default {
                 icon = channel.icon;
               }
               obj1[2] = null != icon;
-              obj1[3] = null != outer1_1.icon;
-              obj1[4] = outer1_2;
-              if ("icon" in outer1_1) {
-                let obj8 = outer1_1(outer1_2[15]);
+              obj1[3] = null != closure_1_1.icon;
+              obj1[4] = closure_1_2;
+              if ("icon" in closure_1_1) {
+                let obj8 = closure_1_1(closure_1_2[15]);
                 let obj2 = {};
                 const merged = Object.assign(obj1);
                 obj2.status = "initiated";
-                obj8.track(outer1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
+                obj8.track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj2);
               }
               c3 = 1;
-              const HTTP = outer1_0(outer1_2[8]).HTTP;
+              const HTTP = closure_1_0(closure_1_2[8]).HTTP;
               const obj3 = { context: null, url: null, body: null, oldFormErrors: true, rejectWithError: true };
               const obj4 = { location: null };
-              obj4[0] = outer1_2;
+              obj4[0] = closure_1_2;
               obj3[0] = obj4;
-              obj3[1] = outer1_11.CHANNEL(outer1_0);
-              obj3[2] = outer1_1;
+              obj3[1] = closure_1_11.CHANNEL(closure_1_0);
+              obj3[2] = closure_1_1;
               guildId = 2;
               c5 = 1;
               const obj5 = { value: null, done: false };
@@ -823,8 +807,8 @@ export default {
           } else if (1 === tmp8) {
             c3 = 0;
             c5 = obj1;
-            if (c0) {
-              let obj6 = outer1_1(outer1_2[15]);
+            if (closure_0) {
+              let obj6 = closure_1_1(closure_1_2[15]);
               obj6 = {};
               const merged1 = Object.assign(obj1);
               obj6.status = "failed";
@@ -844,7 +828,7 @@ export default {
                 }
               }
               obj6.error_message = message;
-              obj6.track(outer1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj6);
+              obj6.track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj6);
             }
             throw c5;
           } else if (arg0 === 1) {
@@ -872,15 +856,15 @@ export default {
               tmp12 = isThreadResult;
             }
             if (!tmp12) {
-              obj1 = outer1_1(outer1_2[19]);
+              obj1 = closure_1_1(closure_1_2[19]);
               const result = obj1.checkGuildTemplateDirty(guildId);
             }
-            if (c0) {
-              obj2 = outer1_1(outer1_2[15]);
+            if (closure_0) {
+              obj2 = closure_1_1(closure_1_2[15]);
               obj8 = {};
               const merged2 = Object.assign(obj1);
               obj8.status = "success";
-              obj2.track(outer1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
+              obj2.track(closure_1_9.CHANNEL_ICON_EDIT_PROGRESSED, obj8);
             }
             c3 = 0;
             c5 = 3;
@@ -905,7 +889,7 @@ export default {
     return HTTP.post({ url: closure_11.CHANNEL_CONVERT(arg0), oldFormErrors: true, rejectWithError: true });
   },
   preload(arg0, channelId) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     let tmp = null;
     if (arg0 !== closure_13) {
       tmp = arg0;
@@ -922,22 +906,22 @@ export default {
     }
     const result1 = __httpGetWithCountryCodeQuery.httpGetWithCountryCodeQuery(result);
     return result1.then((body) => {
-      let obj = outer1_1(outer1_2[13]);
+      let obj = closure_1_1(closure_1_2[13]);
       obj = { type: "STORE_LISTING_FETCH_SUCCESS", channelId: closure_0, storeListing: body.body };
       obj.dispatch(obj);
     });
   },
   createTextChannel(arg0, arg1, parent_id, formatToPlainStringResult) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = parent_id;
-    let _slicedToArray = formatToPlainStringResult;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = parent_id;
+    closure_3 = formatToPlainStringResult;
     return callback(function*() {
-      let closure_1 = tmp2;
-      let closure_0 = tmp5;
-      const obj1 = { type: null, name: null, permission_overwrites: null };
-      obj1[0] = outer1_15.GUILD_TEXT;
-      obj1[1] = outer1_1;
+      closure_1 = tmp2;
+      closure_0 = tmp5;
+      obj1 = { type: null, name: null, permission_overwrites: null };
+      obj1[0] = closure_1_15.GUILD_TEXT;
+      obj1[1] = closure_1_1;
       obj1[2] = [];
       if (null != dependencyMap) {
         obj1.parent_id = dependencyMap;
@@ -945,39 +929,39 @@ export default {
       if (null != c3) {
         obj1.topic = c3;
       }
-      const HTTP = outer1_0(530).HTTP;
+      const HTTP = closure_1_0(530).HTTP;
       const obj2 = { url: null, body: null, oldFormErrors: true, rejectWithError: null };
-      obj2[0] = outer1_11.GUILD_CHANNELS(outer1_0);
+      obj2[0] = closure_1_11.GUILD_CHANNELS(closure_1_0);
       obj2[1] = obj1;
-      const obj4 = outer1_0(530);
+      const obj4 = closure_1_0(530);
       obj2[3] = obj4.rejectWithMigratedError();
       closure_0 = yield HTTP.post(obj2);
-      const obj = outer1_1(7286);
+      const obj = closure_1_1(7286);
       const result = obj.checkGuildTemplateDirty(closure_0);
       return closure_0;
     })();
   },
   fetchChannel(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     return callback(function*() {
-      const HTTP = v0(outer1_2[8]).HTTP;
-      const obj1 = { url: null, rejectWithError: true };
-      obj1[0] = outer1_11.CHANNEL(v0);
+      const HTTP = v0(closure_1_2[8]).HTTP;
+      obj1 = { url: null, rejectWithError: true };
+      obj1[0] = closure_1_11.CHANNEL(v0);
       yield HTTP.get(obj1);
       return arg1.body;
     })();
   },
   openChannel(arg0) {
-    let closure_0 = arg0;
+    closure_0 = arg0;
     const self = this;
     return callback(function*() {
-      let closure_1 = tmp3;
+      closure_1 = tmp3;
       let table = 1;
-      yield outer1_1.fetchChannel(outer1_0);
+      yield closure_1_1.fetchChannel(closure_1_0);
       table = 0;
-      let closure_0 = yield "HermesInternal";
-      closure_1 = outer1_6(closure_0);
-      const obj = outer1_1(table[13]);
+      closure_0 = yield "HermesInternal";
+      closure_1 = closure_1_6(closure_0);
+      const obj = closure_1_1(table[13]);
       const obj3 = { type: "CHANNEL_CREATE", channel: null };
       obj3[1] = closure_1;
       obj.dispatch(obj3);

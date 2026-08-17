@@ -1,7 +1,7 @@
 // discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { NativeModules } from "get ActivityIndicator";
-import importAllResult from "setTimeout";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import importAllResult from "setTimeout" /* 1921 */;
 
 function _initLibdiscore() {
   const self = this;
@@ -40,7 +40,7 @@ function _initLibdiscore() {
       }
     }
   });
-  const _initLibdiscore = tmp;
+  closure_2 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -49,8 +49,8 @@ function _initLibdiscore() {
   }
   return applyArgumentsResult;
 }
-const result = require("setTimeout").registerTimerPolyfills();
-const result1 = require("setTimeout").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
+const result = importAllResult.registerTimerPolyfills();
+const result1 = require("set").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/initLibdiscore.native.tsx");
 
 export const isLibdiscoreInitialized = function isLibdiscoreInitialized() {
   return undefined !== NativeModules.LibDiscoreModule;

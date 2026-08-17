@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/quests/native/QuestEmbedPreview.tsx
-import noop from "noop";
-import hasFlag from "hasFlag";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { MessageTypes } from "ME";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "hasFlag" /* 4031 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import { MessageTypes } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/user_settings/quests/native/QuestEmbedPreview.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/quests/native/QuestEmbedPreview.tsx");
 
 export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
   questId = questId.questId;
@@ -17,7 +17,7 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
     return obj;
   }, []);
   let obj = questId(589);
-  let items = [mergeGuildAvatar];
+  let items = [closure_5];
   stateFromStores = obj.useStateFromStores(items, () => currentUser.getCurrentUser());
   const items1 = [questId, stateFromStores];
   const memo1 = React.useMemo(() => {
@@ -26,7 +26,7 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
       tmp2 = null;
       if (null != stateFromStores) {
         let obj = { id: "1000000000000000000", type: null, channel_id: "1000000000000000001", author: null, content: "", timestamp: null, edited_timestamp: null, tts: false, mention_everyone: false, mentions: null, mention_roles: null, attachments: null, embeds: null, reactions: null, pinned: false, webhook_id: null, codedLinks: null };
-        obj[1] = outer1_6.DEFAULT;
+        obj[1] = closure_1_6.DEFAULT;
         obj[3] = tmp3;
         const _Date = Date;
         const date = new Date();
@@ -37,13 +37,13 @@ export const QuestEmbedPreview = function QuestEmbedPreview(questId) {
         obj[12] = [];
         obj[13] = [];
         obj = { type: null, code: null, url: null };
-        obj[0] = questId(outer1_2[7]).CodedLinkType.QUESTS_EMBED;
+        obj[0] = questId(closure_1_2[7]).CodedLinkType.QUESTS_EMBED;
         obj[1] = tmp;
-        obj[2] = questId(outer1_2[8]).getQuestUrl(tmp);
+        obj[2] = questId(closure_1_2[8]).getQuestUrl(tmp);
         const items = [obj];
         obj[16] = items;
-        tmp2 = new outer1_4(obj);
-        const obj3 = questId(outer1_2[8]);
+        tmp2 = new closure_1_4(obj);
+        const obj3 = questId(closure_1_2[8]);
       }
     }
     return tmp2;

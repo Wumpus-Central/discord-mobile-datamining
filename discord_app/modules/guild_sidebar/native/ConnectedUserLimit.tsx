@@ -1,16 +1,15 @@
 // discord_app/modules/guild_sidebar/native/ConnectedUserLimit.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { useChannelVideoLimit } from "../../video_calls/useChannelVideoLimit.tsx";
-import { VoiceChannelUserLimit } from "VoiceChannelUserLimit.tsx";
+import noopAll from "noop" /* 19 */;
+import useChannelVideoLimitDefault from "useChannelVideoLimit" /* 9653 */;
+import _modDef15382 from "module_15382" /* 15382 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const result = require("useChannelVideoLimit").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/guild_sidebar/native/ConnectedUserLimit.tsx");
 
 export const ConnectedUserLimit = function ConnectedUserLimit(users) {
-  let channel;
-  let video;
   ({ channel, video } = users);
-  const limit = useChannelVideoLimit(channel).limit;
+  const limit = useChannelVideoLimitDefault(channel).limit;
   let num = -1;
   if (channel.userLimit > 0) {
     num = channel.userLimit;
@@ -30,5 +29,5 @@ export const ConnectedUserLimit = function ConnectedUserLimit(users) {
     videoLimit = num < 0 || limit < num;
     const tmp4 = num < 0 || limit < num;
   }
-  return jsx(VoiceChannelUserLimit, { users: users.userCount, total, videoLimit });
+  return jsx(_modDef15382, { users: users.userCount, total, videoLimit });
 };

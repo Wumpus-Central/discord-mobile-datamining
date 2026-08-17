@@ -1,13 +1,15 @@
 // discord_app/modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx
-import { useContext } from "noop";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { context } from "../DisplayNameStylesContext.tsx";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import context from "context" /* 4817 */;
+import closure_3 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
-const result = require("initialize").fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
+const useContext = noop.useContext;
+const result = set.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesEnabled.tsx");
 
 export const useDisplayNameStylesEnabled = function useDisplayNameStylesEnabled(arg0) {
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_3];
   let overrideSettings = initialize.useStateFromStores(items, () => obj.displayNameStylesEnabled);
   if (!overrideSettings) {
     overrideSettings = useContext(context.DisplayNameStylesContext).overrideSettings;

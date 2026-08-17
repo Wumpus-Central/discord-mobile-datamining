@@ -1,6 +1,9 @@
 // discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx
-import { LIBDISCORE_JSI } from "../../mobile/js/index.tsx";
-let result = require("_initLibdiscore").fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
+import set from "set" /* 2 */;
+import LIBDISCORE_JSI from "LIBDISCORE_JSI" /* 1918 */;
+import _initLibdiscore from "_initLibdiscore" /* 1920 */;
+
+let result = set.fileFinishedImporting("../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx");
 
 export const isBlockedDomain = function isBlockedDomain(arg0) {
   const BlockedDomainsStore = LIBDISCORE_JSI.BlockedDomainsStore;
@@ -22,8 +25,8 @@ export const getExperimentCacher = function getExperimentCacher() {
 export const getHttpClientAPI = function getHttpClientAPI() {
   return LIBDISCORE_JSI.getHttpClientAPI();
 };
-export const rustMultiply = require("LIBDISCORE_JSI").rustMultiply;
-export const crash = require("LIBDISCORE_JSI").crash;
-export const generateLaunchSignature = require("LIBDISCORE_JSI").generateLaunchSignature;
-export const getFluxApi = require("LIBDISCORE_JSI").getFluxApi;
-export const isLibdiscoreInitialized = require("_initLibdiscore").isLibdiscoreInitialized;
+export const rustMultiply = LIBDISCORE_JSI.rustMultiply;
+export const crash = LIBDISCORE_JSI.crash;
+export const generateLaunchSignature = LIBDISCORE_JSI.generateLaunchSignature;
+export const getFluxApi = LIBDISCORE_JSI.getFluxApi;
+export const isLibdiscoreInitialized = _initLibdiscore.isLibdiscoreInitialized;

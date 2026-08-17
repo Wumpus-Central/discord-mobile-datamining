@@ -1,24 +1,19 @@
 // discord_app/modules/guild_settings/integrations/native/GuildSettingsModalIntegrationSettings.tsx
-import get_ActivityIndicator from "getPlatformUserUrl";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import handleFormInit from "handleFormInit";
-import jsxProd from "Stack";
-import createCacheKey from "createCacheKey";
-import { PureComponent } from "AccessibilityAnnouncer";
-import importAllResult from "AccessibilityAnnouncer";
-import { registerAsset } from "../../../../../_runtime/16818_registerAsset.js";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
-import { TableSwitchRow } from "../../../../design/components/TableRow/native/TableSwitchRow.native.tsx";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import TableSwitchRow from "TableSwitchRow" /* 7178 */;
+import registerAssetDefault from "registerAsset" /* 16818 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "createGuildRoleRecordFromRust" /* 1983 */;
+import closure_6 from "handleFormInit" /* 8875 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let c3;
-let c4;
-let c9;
-let error;
-let metroImportAll;
-let require = arg1;
+require = arg1;
 function GraceOption(option) {
   const iter = option.option;
   const onPress = option.onPress;
@@ -40,7 +35,7 @@ function ForceSyncIcon(isSyncing) {
     obj[1] = intl.string(getSystemLocale.t["+Josox"]);
     obj[2] = tmp;
     obj = { source: null };
-    obj[0] = registerAsset;
+    obj[0] = registerAssetDefault;
     obj[3] = tmp2(TableRowInner.TableRow.Icon, obj);
     tmp2Result = tmp2(PressableBase.PressableOpacity, obj);
   }
@@ -61,38 +56,31 @@ function TwitchEmoticonsRow(integration) {
   return callback(TableRowGroupTitle.TableRowGroup, obj);
 }
 ({ Image: c3, ActivityIndicator: c4 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 createCacheKey = { integrationLabel: { fontSize: 24 }, integrationIcon: { width: 48, height: 48, marginRight: 16 }, forceSyncIcon: { marginLeft: 10 }, value: { textAlign: "right" }, stackPadding: null };
-createCacheKey = { paddingHorizontal: require("Themes").modules.mobile.TABLE_ROW_PADDING };
+createCacheKey = { paddingHorizontal: ThemesDefault.modules.mobile.TABLE_ROW_PADDING };
 createCacheKey[4] = createCacheKey;
-createCacheKey = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+let closure_10 = createCacheKey.createLegacyClassComponentStyles(createCacheKey);
+const PureComponent = importAllResult.PureComponent;
 class GuildSettingsModalIntegrationSettings extends PureComponent {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult.handleExpireBehaviorChange = function handleExpireBehaviorChange(expire_behavior) {
-      let guildId;
-      let integration;
       ({ guildId, integration } = applyArgumentsResult.props);
-      outer1_1(outer1_2[26]).updateIntegration(guildId, integration.id, expire_behavior, integration.expire_grace_period, integration.enable_emoticons);
+      closure_1_1(closure_1_2[26]).updateIntegration(guildId, integration.id, expire_behavior, integration.expire_grace_period, integration.enable_emoticons);
     };
     applyArgumentsResult.handleExpireGracePeriodChange = function handleExpireGracePeriodChange(expire_grace_period) {
-      let guildId;
-      let integration;
       ({ guildId, integration } = applyArgumentsResult.props);
-      outer1_1(outer1_2[26]).updateIntegration(guildId, integration.id, integration.expire_behavior, expire_grace_period, integration.enable_emoticons);
+      closure_1_1(closure_1_2[26]).updateIntegration(guildId, integration.id, integration.expire_behavior, expire_grace_period, integration.enable_emoticons);
     };
     applyArgumentsResult.handleToggleEmotes = function handleToggleEmotes(enable_emoticons) {
-      let guildId;
-      let integration;
       ({ guildId, integration } = applyArgumentsResult.props);
-      outer1_1(outer1_2[26]).updateIntegration(guildId, integration.id, integration.expire_behavior, integration.expire_grace_period, enable_emoticons);
+      closure_1_1(closure_1_2[26]).updateIntegration(guildId, integration.id, integration.expire_behavior, integration.expire_grace_period, enable_emoticons);
     };
     applyArgumentsResult.handleSync = function handleSync() {
-      let guildId;
-      let integration;
       ({ guildId, integration } = applyArgumentsResult.props);
-      outer1_1(outer1_2[26]).syncIntegration(guildId, integration.id);
+      closure_1_1(closure_1_2[26]).syncIntegration(guildId, integration.id);
     };
     return applyArgumentsResult;
   }
@@ -100,7 +88,7 @@ class GuildSettingsModalIntegrationSettings extends PureComponent {
 GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   let self = this;
   self = this;
-  const iter = createCacheKey(this.context);
+  const iter = callback2(this.context);
   const props = this.props;
   const integration = props.integration;
   const role_id = integration.role_id;
@@ -156,7 +144,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
       obj[1] = intl.formatToPlainString(integration(1236).t.eGjmy5, obj);
       return obj;
     });
-    const obj1 = { style: null, contentContainerStyle: null, children: null };
+    obj1 = { style: null, contentContainerStyle: null, children: null };
     obj1[0] = { flex: 1 };
     const items = [{ paddingTop: 16 }, self.props.contentContainerStyle];
     obj1[1] = items;
@@ -223,7 +211,7 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
     obj14 = { title: null, hasIcons: false, children: null };
     const intl8 = tmp15(1236).intl;
     obj14[0] = intl8.string(tmp15(1236).t.uiXMow);
-    obj14[2] = mapped.map((option) => outer1_7(outer1_11, { integration, option, onPress: self.handleExpireGracePeriodChange }, arg1));
+    obj14[2] = mapped.map((option) => closure_1_7(closure_1_11, { integration, option, onPress: self.handleExpireGracePeriodChange }, arg1));
     items1[3] = callback(tmp15(6286).TableRowGroup, obj14);
     items1[4] = tmp13;
     obj2[2] = items1;
@@ -245,23 +233,21 @@ GuildSettingsModalIntegrationSettings.prototype["render"] = function render() {
   }
 };
 GuildSettingsModalIntegrationSettings.contextType = require("ManaContext").ThemeContext;
-const result = require("createGuildRoleRecordFromRust").fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationSettings.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_settings/integrations/native/GuildSettingsModalIntegrationSettings.tsx");
 
 export default function ConnectedGuildSettingsModalIntegrationSettings(arg0) {
-  let contentContainerStyle;
-  let integrationId;
   let guild;
   ({ integrationId, contentContainerStyle } = arg0);
   let obj = guild(589);
-  const items = [handleFormInit];
+  const items = [closure_6];
   const stateFromStores = obj.useStateFromStores(items, () => props.getProps());
   guild = stateFromStores.guild;
   const integrations = stateFromStores.integrations;
-  const items1 = [createGuildRoleRecordFromRust];
+  const items1 = [closure_5];
   const stateFromStores1 = guild(589).useStateFromStores(items1, () => {
     let rolesSnapshot;
     if (null != guild) {
-      rolesSnapshot = outer1_5.getRolesSnapshot(tmp.id);
+      rolesSnapshot = closure_1_5.getRolesSnapshot(tmp.id);
     }
     return rolesSnapshot;
   });

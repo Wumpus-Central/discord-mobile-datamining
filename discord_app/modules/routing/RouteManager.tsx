@@ -1,13 +1,14 @@
 // discord_app/modules/routing/RouteManager.tsx
-import _handleConnectionOpen from "_handleConnectionOpen";
-import getMatchData from "getMatchData";
-import { Routes } from "ME";
-import set from "ME";
+import closure_2 from "_handleConnectionOpen" /* 4495 */;
+import closure_3 from "getMatchData" /* 12641 */;
+import { Routes } from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
+let set = arg1;
 class RouteManager {
   constructor() {
     obj = Object.create(new.target.prototype);
-    RouteManager = obj;
+    closure_0 = obj;
     set = new Set();
     obj.rewrites = set;
     set1 = new Set();
@@ -16,7 +17,7 @@ class RouteManager {
     obj.timer = -1;
     obj.connected = false;
     obj.handleConnectionChange = function handleConnectionChange() {
-      const isConnectedResult = outer1_2.isConnected();
+      const isConnectedResult = closure_1_2.isConnected();
       let tmp2 = isConnectedResult;
       if (isConnectedResult) {
         tmp2 = !obj.connected;
@@ -24,22 +25,22 @@ class RouteManager {
       obj.connected = isConnectedResult;
       if (tmp2) {
         obj.routeChangeCount = 0;
-        obj.executeRouteRewrites(obj(outer1_1[3]).getHistory().location, "REPLACE");
-        const obj2 = obj(outer1_1[3]);
+        obj.executeRouteRewrites(obj(closure_1_1[3]).getHistory().location, "REPLACE");
+        const obj2 = obj(closure_1_1[3]);
       }
     };
     obj.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
       if ("POP" !== REPLACE) {
         if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-          obj = obj(outer1_1[4]);
+          obj = obj(closure_1_1[4]);
           if (!obj.convertRouteToNavigation(pathname)) {
-            tmp2(tmp3[3]).replaceWith(outer1_4.ME);
+            tmp2(tmp3[3]).replaceWith(closure_1_4.ME);
           }
           tmp2 = obj;
-          tmp3 = outer1_1;
+          tmp3 = closure_1_1;
         }
       }
-      const state = outer1_3.getState();
+      const state = closure_1_3.getState();
       if (state.basePath !== pathname.pathname) {
         state.resetPath(pathname.pathname);
       }
@@ -65,9 +66,9 @@ class RouteManager {
     };
     obj.flushRoute = function flushRoute() {
       clearTimeout(obj.timer);
-      const state = outer1_3.getState();
+      const state = closure_1_3.getState();
       if (null != state.path) {
-        obj = obj(outer1_1[3]);
+        obj = obj(closure_1_1[3]);
         obj.transitionTo(state.path);
       }
     };
@@ -77,13 +78,13 @@ class RouteManager {
 const prototype = RouteManager.prototype;
 prototype["initialize"] = function initialize() {
   this.cleanup();
-  obj = obj(1222);
-  const history = obj.getHistory();
+  const history = set(1222).getHistory();
   this.unlistenHistory = history.listen(this.handleRouteChange);
-  const state = getMatchData.getState();
-  state.resetPath(obj(1222).getHistory().location.pathname);
-  this.unlistenKeyboardChange = getMatchData.subscribe(this.handleKeybindRouteChange);
-  _handleConnectionOpen.addChangeListener(this.handleConnectionChange);
+  const obj = set(1222);
+  const state = closure_3.getState();
+  state.resetPath(set(1222).getHistory().location.pathname);
+  this.unlistenKeyboardChange = closure_3.subscribe(this.handleKeybindRouteChange);
+  closure_2.addChangeListener(this.handleConnectionChange);
 };
 prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPLACE) {
   this.routeChangeCount = this.routeChangeCount + 1;
@@ -91,9 +92,9 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
     const rewrites = this.rewrites;
     let obj = rewrites[Symbol.iterator]();
     while (obj !== undefined) {
-      let tmp11 = obj;
+      let tmp11 = set;
       let tmp12 = dependencyMap;
-      let obj2 = obj(1222);
+      let obj2 = set(1222);
       let tmp9Result = tmp9(location, REPLACE);
       let tmp14 = tmp9Result;
       if (null != tmp9Result) {
@@ -115,7 +116,7 @@ prototype["executeRouteRewrites"] = function executeRouteRewrites(location, REPL
     return false;
   } else {
     const _Error = Error;
-    const error = new Error("RouteManager: Something has gone horribly wrong with rewrites");
+    error = new Error("RouteManager: Something has gone horribly wrong with rewrites");
     throw error;
   }
 };
@@ -131,14 +132,13 @@ prototype["cleanup"] = function cleanup() {
     const result = unlistenKeyboardChange();
   }
   self.unlistenKeyboardChange = undefined;
-  _handleConnectionOpen.removeChangeListener(self.handleConnectionChange);
+  closure_2.removeChangeListener(self.handleConnectionChange);
 };
 prototype["addRouteChangeListener"] = function addRouteChangeListener(hideLaunchPad) {
   const self = this;
-  let obj = hideLaunchPad;
   if (null != this.unlistenHistory) {
-    obj = obj(self[3]);
-    hideLaunchPad(obj.getHistory().location, "REPLACE");
+    hideLaunchPad(set(self[3]).getHistory().location, "REPLACE");
+    const obj = set(self[3]);
   }
   const listeners = this.listeners;
   listeners.add(hideLaunchPad);
@@ -146,17 +146,16 @@ prototype["addRouteChangeListener"] = function addRouteChangeListener(hideLaunch
 };
 prototype["addRouteRewriter"] = function addRouteRewriter(voiceRouteRewriter) {
   const self = this;
-  let obj = voiceRouteRewriter;
   if (null != this.unlistenHistory) {
-    obj = obj(self[3]);
-    const tmp3 = voiceRouteRewriter(obj.getHistory().location, obj(self[3]).getHistory().action);
+    const obj = set(self[3]);
+    const tmp = set;
+    const tmp2 = self;
+    const tmp3 = voiceRouteRewriter(obj.getHistory().location, set(self[3]).getHistory().action);
     if (null != tmp3) {
       tmp(tmp2[3]).replaceWith(tmp3.path, tmp3.state);
       const tmpResult = tmp(tmp2[3]);
     }
-    const obj2 = obj(self[3]);
-    tmp = obj;
-    tmp2 = self;
+    const obj2 = set(self[3]);
   }
   const rewrites = this.rewrites;
   rewrites.add(voiceRouteRewriter);
@@ -171,10 +170,9 @@ prototype["removeRouteRewriter"] = function removeRouteRewriter(closure_0) {
   rewrites.delete(closure_0);
 };
 prototype["getHistory"] = function getHistory() {
-  obj = obj(1222);
-  return obj.getHistory();
+  return set(1222).getHistory();
 };
-let set = Object.create(RouteManager.prototype);
+set = Object.create(RouteManager.prototype);
 set = new Set();
 set.rewrites = set;
 set.listeners = new Set();
@@ -182,7 +180,7 @@ set.routeChangeCount = 0;
 set.timer = -1;
 set.connected = false;
 set.handleConnectionChange = function handleConnectionChange() {
-  const isConnectedResult = outer1_2.isConnected();
+  const isConnectedResult = closure_1_2.isConnected();
   let tmp2 = isConnectedResult;
   if (isConnectedResult) {
     tmp2 = !obj.connected;
@@ -190,22 +188,22 @@ set.handleConnectionChange = function handleConnectionChange() {
   obj.connected = isConnectedResult;
   if (tmp2) {
     obj.routeChangeCount = 0;
-    obj.executeRouteRewrites(obj(outer1_1[3]).getHistory().location, "REPLACE");
-    const obj2 = obj(outer1_1[3]);
+    obj.executeRouteRewrites(obj(closure_1_1[3]).getHistory().location, "REPLACE");
+    const obj2 = obj(closure_1_1[3]);
   }
 };
 set.handleRouteChange = function handleRouteChange(pathname, REPLACE) {
   if ("POP" !== REPLACE) {
     if (!obj.executeRouteRewrites(pathname, REPLACE)) {
-      obj = obj(outer1_1[4]);
+      obj = obj(closure_1_1[4]);
       if (!obj.convertRouteToNavigation(pathname)) {
-        tmp2(tmp3[3]).replaceWith(outer1_4.ME);
+        tmp2(tmp3[3]).replaceWith(closure_1_4.ME);
       }
       tmp2 = obj;
-      tmp3 = outer1_1;
+      tmp3 = closure_1_1;
     }
   }
-  const state = outer1_3.getState();
+  const state = closure_1_3.getState();
   if (state.basePath !== pathname.pathname) {
     state.resetPath(pathname.pathname);
   }
@@ -231,9 +229,9 @@ set.handleKeybindRouteChange = function handleKeybindRouteChange(path) {
 };
 set.flushRoute = function flushRoute() {
   clearTimeout(obj.timer);
-  const state = outer1_3.getState();
+  const state = closure_1_3.getState();
   if (null != state.path) {
-    obj = obj(outer1_1[3]);
+    obj = obj(closure_1_1[3]);
     obj.transitionTo(state.path);
   }
 };

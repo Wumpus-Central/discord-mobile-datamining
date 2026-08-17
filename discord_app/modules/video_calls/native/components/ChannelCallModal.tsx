@@ -1,24 +1,19 @@
 // discord_app/modules/video_calls/native/components/ChannelCallModal.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "initialize";
-import getParticipants from "getParticipants";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import VoiceChatDrawerState from "VoiceChatDrawerState";
-import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH";
-import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET";
-import jsxProd from "useIsActivityFocused";
-import { CallWithVoiceChat } from "ChannelCallNavigator.tsx";
+import coerceMainRoute from "coerceMainRoute" /* 4229 */;
+import useIsConnectedToVoiceChannel from "useIsConnectedToVoiceChannel" /* 8675 */;
+import useRevealProviderValue from "useRevealProviderValue" /* 8678 */;
+import CameraPreviewDefault from "CameraPreview" /* 8681 */;
+import CallWithVoiceChatDefault from "CallWithVoiceChat" /* 12484 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import closure_5 from "getParticipants" /* 4773 */;
+import closure_6 from "ensureGuildLoaded" /* 1391 */;
+import VoiceChatDrawerState from "VoiceChatDrawerState" /* 8669 */;
+import { VoiceChatDrawerState } from "BOX_MODE_ACTIONSHEET_WIDTH" /* 8670 */;
+import PIP_GESTURE_ACTIVE_OFFSET from "PIP_GESTURE_ACTIVE_OFFSET" /* 8677 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let c9;
-let closure_14;
-let closure_15;
-let closure_16;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class ChannelCallCameraPreview {
   constructor(arg0) {
     channel = global.channel;
@@ -51,11 +46,11 @@ class ChannelCallModal {
   constructor(arg0) {
     channel = global.channel;
     obj = { channelId: channel.id, guildId: channel.guild_id };
-    return jsx(f44630, obj);
+    return jsx(closure_30, obj);
   }
 }
 let c4 = importAllResult;
-({ useChannelCallOrientationHandlers: error, resetChannelCallStore: metroImportAll, useChannelCallStore: c9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: unpackModuleId } = VoiceChatDrawerState);
+({ useChannelCallOrientationHandlers: error, resetChannelCallStore: closure_8, useChannelCallStore: c9, setVoiceChatDrawerState: c10, useIsVoiceChatFocused: unpackModuleId } = VoiceChatDrawerState);
 ({ PAN_GESTURE_FAIL_OFFSET_Y: map1, SWIPE_TO_CHAT_ACTIVE_OFFSET: closure_14 } = PIP_GESTURE_ACTIVE_OFFSET);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let closure_18 = importAllResult.memo((arg0) => {
@@ -65,7 +60,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   const items = [first];
   const effect = importAllResult.useEffect(() => {
     if (null != first) {
-      outer1_1(outer1_2[13]).initialize(tmp);
+      closure_1_1(closure_1_2[13]).initialize(tmp);
       return () => {
         callback2(12483).terminate();
         const obj = callback2(12483);
@@ -81,7 +76,7 @@ let closure_18 = importAllResult.memo((arg0) => {
   if (null != first) {
     let obj = { channel: null };
     obj[0] = first;
-    tmp4 = callback5(CallWithVoiceChat, obj);
+    tmp4 = callback5(CallWithVoiceChatDefault, obj);
   }
   return tmp4;
 });
@@ -97,8 +92,6 @@ let closure_27 = { code: "function ChannelCallModalTsx9(){const{interpolate,tran
 let closure_28 = { code: "function ChannelCallModalTsx10(){const{immediate,translateX,width,withPanGestureTiming}=this.__closure;if(immediate===true){translateX.set(-width);}else{translateX.set(withPanGestureTiming(-width));}}" };
 let closure_29 = { code: "function ChannelCallModalTsx11(){const{translateX,withPanGestureTiming}=this.__closure;translateX.set(withPanGestureTiming(0));}" };
 let closure_30 = importAllResult.memo((channelId) => {
-  let c13;
-  let tmp15;
   channelId = channelId.channelId;
   let width = channelId;
   const guildId = channelId.guildId;
@@ -112,7 +105,7 @@ let closure_30 = importAllResult.memo((channelId) => {
   let derivedValue;
   width = undefined;
   let sharedValue2;
-  let c12;
+  c12 = undefined;
   c13 = undefined;
   let obj;
   let callback5;
@@ -169,16 +162,16 @@ let closure_30 = importAllResult.memo((channelId) => {
       chatOpen = ref3.getChatOpen(channelId);
     }
     if (chatOpen) {
-      let obj = width(ref[16]);
+      obj = width(ref[16]);
       const fn = function t() {
-        const result = ensureGuildLoaded.set(-closure_10);
+        const result = closure_6.set(-closure_10);
       };
       obj = { translateX: null, width: null };
       obj[0] = sharedValue;
       obj[1] = width;
       fn.__closure = obj;
       fn.__workletHash = 15726690166344;
-      fn.__initData = outer1_22;
+      fn.__initData = closure_1_22;
       obj.runOnUI(fn)();
       width(ref[16]).runOnJS(width(ref[22]).transitionToVoiceRoute)(current.guildId, channelId);
       const obj3 = width(ref[16]);
@@ -228,7 +221,7 @@ let closure_30 = importAllResult.memo((channelId) => {
         tmp4(tmp5[16]).runOnJS(tmp4(tmp5[22]).transitionToVoiceRoute)(guildId, tmp7);
         const tmp4Result = tmp4(tmp5[16]);
       }
-      const obj = width(ref[16]);
+      obj = width(ref[16]);
       tmp7 = width;
     }
   }
@@ -251,7 +244,7 @@ let closure_30 = importAllResult.memo((channelId) => {
     }
     if (tmp2) {
       const result = sharedValue.set(width(ref[18]).withPanGestureTiming(0));
-      const obj = width(ref[18]);
+      obj = width(ref[18]);
     }
   }
   obj2 = { VoiceChatDrawerState: c12, translateX: sharedValue, withPanGestureTiming: tmp(tmp2[18]).withPanGestureTiming };
@@ -263,7 +256,7 @@ let closure_30 = importAllResult.memo((channelId) => {
   if (!tmp15) {
     tmp24 = !tmp13;
   }
-  const obj1 = { runOnJS: width(ref[16]).runOnJS, setVoiceChatDrawerState: width, channelId, VoiceChatDrawerState: c12, transitionToVoiceRoute: width(ref[22]).transitionToVoiceRoute, guildId };
+  obj1 = { runOnJS: width(ref[16]).runOnJS, setVoiceChatDrawerState: width, channelId, VoiceChatDrawerState: c12, transitionToVoiceRoute: width(ref[22]).transitionToVoiceRoute, guildId };
   const fn2 = function u() {
     const items = [0, -width];
     return items;
@@ -300,11 +293,10 @@ let closure_30 = importAllResult.memo((channelId) => {
   }, items5);
   const withRefResult1 = guildId(ref[25])(obj5).withRef(ref3);
   function oe() {
-    let obj = { flex: 1, transform: null };
-    obj = { translateY: null };
-    const items = [0, c12];
-    const items1 = [0, c12];
-    obj[0] = width(ref[16]).interpolate(sharedValue1.get(), items, items1);
+    obj = { flex: 1, transform: null };
+    obj = { translateY: width(ref[16]).interpolate(sharedValue1.get(), items, items1) };
+    items = [0, c12];
+    items1 = [0, c12];
     const items2 = [obj];
     obj[1] = items2;
     return obj;
@@ -341,7 +333,7 @@ let closure_30 = importAllResult.memo((channelId) => {
   return tmp32;
 });
 ChannelCallModal.modalConfig = { animation: require("ME").ModalAnimation.SLIDE_UP, shouldPersistUnderModals: true };
-let result = require("getParticipants").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModal.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallModal.tsx");
 
 export default ChannelCallModal;
 export { ChannelCallCameraPreview };

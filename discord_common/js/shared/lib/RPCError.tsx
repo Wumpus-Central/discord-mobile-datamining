@@ -1,4 +1,6 @@
 // discord_common/js/shared/lib/RPCError.tsx
+import set from "set" /* 2 */;
+
 const prototype = function RPCError(arg0, message) {
   const tmp = new prototype(message, new.target, new.target, arg0);
   // ThrowIfThisInitialized (0x7c)
@@ -13,6 +15,6 @@ const prototype = function RPCError(arg0, message) {
 }.prototype;
 class prototype extends Error {
 }
-const result = require("set").fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
+const result = set.fileFinishedImporting("../discord_common/js/shared/lib/RPCError.tsx");
 
 export const RPCError = prototype;

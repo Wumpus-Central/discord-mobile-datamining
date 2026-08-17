@@ -1,30 +1,28 @@
 // discord_app/modules/billing/native/BlockedPaymentsCountryDisplay.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { HelpdeskArticles } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../design/void/native.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 1297 */;
+import combinedDefault from "combined" /* 1993 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, Image: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: { alignItems: "center" }, header: null, image: null };
-createCacheKey = { fontSize: 20, fontWeight: "700", color: require("Themes").colors.TEXT_SUBTLE, marginBottom: 16 };
+createCacheKey = { fontSize: 20, fontWeight: "700", color: ThemesDefault.colors.TEXT_SUBTLE, marginBottom: 16 };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { marginTop: 38 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("ME").fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryDisplay.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/billing/native/BlockedPaymentsCountryDisplay.tsx");
 
 export default function BlockedPaymentsCountryDisplay() {
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = { style: tmp.container, children: null };
   obj = { style: tmp.header, children: null };
   const intl = getSystemLocale.intl;
@@ -32,16 +30,16 @@ export default function BlockedPaymentsCountryDisplay() {
   const items = [callback(Button.LegacyText, obj), , ];
   obj = { children: null };
   const intl2 = getSystemLocale.intl;
-  const obj1 = { helpdeskArticle: null };
-  const tmp4 = useTheme();
+  obj1 = { helpdeskArticle: null };
+  const tmp4 = useThemeDefault();
   const tmp5 = closure_7;
   const tmp6 = closure_3;
   const tmp7 = callback;
-  obj1[0] = combined.getArticleURL(HelpdeskArticles.BLOCKED_PAYMENTS);
+  obj1[0] = combinedDefault.getArticleURL(HelpdeskArticles.BLOCKED_PAYMENTS);
   obj[0] = intl2.format(getSystemLocale.t.IHxEJU, obj1);
   items[1] = callback(Button.LegacyText, obj);
   const obj2 = { style: tmp.image, source: null };
-  const obj5 = combined;
+  const obj5 = combinedDefault;
   const tmp8 = closure_4;
   if (obj7.isThemeDark(tmp4)) {
     let tmp2Result = tmp2(7690);

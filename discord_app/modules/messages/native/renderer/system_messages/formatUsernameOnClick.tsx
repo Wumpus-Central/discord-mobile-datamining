@@ -1,14 +1,9 @@
 // discord_app/modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx
-const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/formatUsernameOnClick.tsx");
 
 export default function formatUsernameOnClick(arg0) {
-  let author;
-  let colorStrings;
-  let guildId;
-  let message;
-  let messageChannelId;
-  let roleStyle;
-  let userId;
   ({ userId, message, author, roleStyle, messageChannelId } = arg0);
   const colorString = author.colorString;
   ({ colorStrings, guildId } = author);

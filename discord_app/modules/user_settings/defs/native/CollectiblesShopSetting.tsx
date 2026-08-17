@@ -1,6 +1,9 @@
 // discord_app/modules/user_settings/defs/native/CollectiblesShopSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ShopIcon from "ShopIcon" /* 11316 */;
+import createToggle from "createToggle" /* 10669 */;
 import { CollectiblesShopScreen } from "../../shop/native/CollectiblesShopScreen.tsx";
 
 obj = {
@@ -9,7 +12,7 @@ obj = {
     return intl.string(getSystemLocale.t.pWG4ze);
   },
   parent: null,
-  IconComponent: require("ShopIcon").ShopIcon,
+  IconComponent: ShopIcon.ShopIcon,
   screen: obj,
   usePreNavigationAction() {
     return () => {
@@ -24,12 +27,12 @@ obj = {
   }
 };
 obj = {
-  route: require("ME").UserSettingsSections.COLLECTIBLES_SHOP,
+  route: ME.UserSettingsSections.COLLECTIBLES_SHOP,
   getComponent() {
     return CollectiblesShopScreen.default;
   }
 };
 const route = createToggle.createRoute(obj);
-let result = require("getSystemLocale").fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopSetting.tsx");
+let result = set.fileFinishedImporting("modules/user_settings/defs/native/CollectiblesShopSetting.tsx");
 
 export default route;

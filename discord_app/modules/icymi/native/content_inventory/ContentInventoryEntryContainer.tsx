@@ -1,15 +1,13 @@
 // discord_app/modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx
-import noop from "noop";
-import { View } from "get ActivityIndicator";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import jsxProd from "jsxProd";
-import createICYMIStyles from "createICYMIStyles";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { set } from "../../../../utils/PlatformUtils.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "mergeGuildAvatar" /* 1922 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createICYMIStyles from "createICYMIStyles" /* 15708 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   let num = 0;
@@ -30,7 +28,7 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   obj[2] = num3;
   obj[1] = obj;
   obj[2] = { marginBottom: marginBottom.margin };
-  obj = { display: "flex", flexDirection: "row", alignItems: "center", gap: Themes.space.PX_12, marginBottom: marginBottom.margin };
+  obj = { display: "flex", flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_12, marginBottom: marginBottom.margin };
   obj[3] = obj;
   obj[4] = { flex: 1 };
   let num4 = 1;
@@ -40,15 +38,12 @@ const iCYMIStyles = createICYMIStyles.createICYMIStyles((marginBottom) => {
   obj[5] = { display: "flex", flexDirection: "row", alignItems: "center", gap: 6, marginBottom: num4, marginTop: 2 };
   obj4 = set;
   const tmp = importDefault;
-  obj[6] = { flexDirection: "row", alignItems: "center", gap: Themes.space.PX_8 };
+  obj[6] = { flexDirection: "row", alignItems: "center", gap: ThemesDefault.space.PX_8 };
   return obj;
 });
-const result = require("mergeGuildAvatar").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
+const result = require("set").fileFinishedImporting("modules/icymi/native/content_inventory/ContentInventoryEntryContainer.tsx");
 
 export default function ContentInventoryEntryContainer(contentId) {
-  let highlight;
-  let subtitle;
-  let title;
   contentId = contentId.contentId;
   const userId = contentId.userId;
   let flag = contentId.renderForScreenshot;
@@ -67,7 +62,7 @@ export default function ContentInventoryEntryContainer(contentId) {
     if (null != onPress) {
       let obj = userId(type[7]);
       obj.itemInteracted(contentId, type, "press");
-      let obj1 = userId(type[7]);
+      obj1 = userId(type[7]);
       obj = { itemId: null, itemType: null, actionParameters: null };
       obj[0] = contentId;
       obj[1] = type;
@@ -89,8 +84,8 @@ export default function ContentInventoryEntryContainer(contentId) {
     }
   }, items);
   let obj = contentId(type[9]);
-  const items1 = [mergeGuildAvatar];
-  const stateFromStores = obj.useStateFromStores(items1, () => outer1_5.getUser(userId));
+  const items1 = [closure_5];
+  const stateFromStores = obj.useStateFromStores(items1, () => closure_1_5.getUser(userId));
   let tmp7Result = null;
   if (null != stateFromStores) {
     obj = { unstable_pressDelay: 130, onPress: null, accessibilityRole: "button", style: null, children: null };
@@ -104,7 +99,7 @@ export default function ContentInventoryEntryContainer(contentId) {
     if (flag) {
       screenshotContainer = tmp.screenshotContainer;
     }
-    let obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     items2[1] = screenshotContainer;
     obj1[0] = items2;
     const obj2 = { style: null, children: null };

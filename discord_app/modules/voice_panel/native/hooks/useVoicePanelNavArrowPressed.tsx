@@ -1,8 +1,8 @@
 // discord_app/modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx
-import noop from "noop";
-import { VoicePanelControlsModes } from "VoicePanelControlsModes";
+import closure_2 from "noop" /* 19 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 
-const result = require("dismissPanel").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/hooks/useVoicePanelNavArrowPressed.tsx");
 
 export default function useVoicePanelNavArrowPressed() {
   const context = dismissPanel.useContext(focused(setFocused[2]));

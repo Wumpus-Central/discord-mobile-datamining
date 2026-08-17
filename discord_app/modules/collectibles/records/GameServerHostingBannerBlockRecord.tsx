@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function GameServerHostingBannerBlockRecord(is_dismissible) {
   const obj = Object.create(new.target.prototype);
@@ -16,6 +18,6 @@ prototype["fromServer"] = function fromServer(is_dismissible) {
   obj.isDismissible = is_dismissible.is_dismissible;
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/GameServerHostingBannerBlockRecord.tsx");
 
 export const GameServerHostingBannerBlockRecord = prototype;

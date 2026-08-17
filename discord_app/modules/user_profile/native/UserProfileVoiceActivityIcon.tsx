@@ -1,22 +1,23 @@
 // discord_app/modules/user_profile/native/UserProfileVoiceActivityIcon.tsx
-import "noop";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import { Permissions } from "sum";
-import { jsx } from "jsxProd";
-import { isRoleRequired } from "../../channel/isRoleRequired.tsx";
+import noopAll from "noop" /* 19 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 5287 */;
+import closure_3 from "getUncachedChannelPermissions" /* 4021 */;
+import { Permissions } from "sum" /* 505 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("sum").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileVoiceActivityIcon.tsx");
 
 export default function UserProfileVoiceActivityIcon(channel) {
   channel = channel.channel;
   const merged = Object.assign(channel, Object.create(null));
   let obj = channel(589);
-  const items = [getUncachedChannelPermissions];
+  const items = [closure_3];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let isPrivateResult = channel.isPrivate();
     if (!isPrivateResult) {
-      isPrivateResult = outer1_3.can(outer1_4.CONNECT, channel);
+      isPrivateResult = closure_1_3.can(closure_1_4.CONNECT, channel);
     }
     return isPrivateResult;
   });
@@ -25,7 +26,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
       const isGuildStageVoiceResult = channel.isGuildStageVoice();
       let tmp6 = !stateFromStores;
       if (stateFromStores) {
-        tmp6 = isRoleRequired(channel);
+        tmp6 = isRoleRequiredDefault(channel);
       }
       if (isGuildStageVoiceResult) {
         if (tmp6) {
@@ -40,7 +41,7 @@ export default function UserProfileVoiceActivityIcon(channel) {
         const merged2 = Object.assign(merged);
         tmp8Result = jsx(tmp2(6892).StageIcon, {});
       } else if (channel.isNSFW()) {
-        const obj1 = {};
+        obj1 = {};
         const merged3 = Object.assign(merged);
         tmp8Result = tmp8(tmp2(6894).VoiceWarningIcon, obj1);
       } else {

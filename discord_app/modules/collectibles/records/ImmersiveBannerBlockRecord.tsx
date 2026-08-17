@@ -1,5 +1,7 @@
 // discord_app/modules/collectibles/records/ImmersiveBannerBlockRecord.tsx
-import { ShopBlockType } from "../../../../discord_common/js/shared/shared-constants/ShopBlockType.tsx";
+import set from "set" /* 2 */;
+import ShopBlockType from "ShopBlockType" /* 5339 */;
+
 let prototype;
 prototype = function ImmersiveBannerBlockRecord(end_time) {
   const obj = Object.create(new.target.prototype);
@@ -30,6 +32,6 @@ prototype["fromServer"] = function fromServer(end_time) {
   ({ banner_url: tmp2.bannerUrl, banner_animated_url: tmp2.bannerAnimatedUrl } = end_time);
   return obj;
 };
-const result = require("set").fileFinishedImporting("modules/collectibles/records/ImmersiveBannerBlockRecord.tsx");
+const result = set.fileFinishedImporting("modules/collectibles/records/ImmersiveBannerBlockRecord.tsx");
 
 export const ImmersiveBannerBlockRecord = prototype;

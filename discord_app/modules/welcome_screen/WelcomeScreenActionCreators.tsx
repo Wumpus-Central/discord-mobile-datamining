@@ -1,22 +1,22 @@
 // discord_app/modules/welcome_screen/WelcomeScreenActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
 const require = arg1;
 function _fetchWelcomeScreen() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      const dependencyMap = tmp3;
-      outer1_1(outer1_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
-      let c4 = 1;
-      const HTTP = callback(outer1_2[3]).HTTP;
-      const obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
+      dependencyMap = tmp3;
+      closure_1_1(closure_1_2[2]).dispatch({ type: "WELCOME_SCREEN_FETCH_START" });
+      c4 = 1;
+      const HTTP = callback(closure_1_2[3]).HTTP;
+      obj1 = { url: null, oldFormErrors: true, rejectWithError: true };
       obj1[0] = c4.GUILD_WELCOME_SCREEN(callback);
       yield HTTP.get(obj1);
       c4 = 0;
@@ -32,7 +32,7 @@ function _fetchWelcomeScreen() {
       return lib.body;
     })();
   });
-  const _fetchWelcomeScreen = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -44,18 +44,18 @@ function _fetchWelcomeScreen() {
 function _saveWelcomeScreen() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
-      let asyncGeneratorStep = tmp3;
-      lib(outer1_2[2]).dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
-      let c5 = 1;
-      const HTTP = callback(outer1_2[3]).HTTP;
-      const obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
-      obj1[0] = outer1_4.GUILD_WELCOME_SCREEN(callback);
+      closure_3 = tmp3;
+      lib(closure_1_2[2]).dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
+      c5 = 1;
+      const HTTP = callback(closure_1_2[3]).HTTP;
+      obj1 = { url: null, body: null, oldFormErrors: true, rejectWithError: true };
+      obj1[0] = closure_1_4.GUILD_WELCOME_SCREEN(callback);
       ({ description: obj10[0], channels: obj10[1], enabled: obj10[2] } = lib);
       obj1[1] = { description: null, welcome_channels: null, enabled: null };
       yield HTTP.patch(obj1);
@@ -63,7 +63,7 @@ function _saveWelcomeScreen() {
         c5 = 0;
         const obj3 = lib(709);
         obj3.dispatch({ type: "WELCOME_SCREEN_SUBMIT_FAILURE" });
-        let c7 = 3;
+        c7 = 3;
       } else if (arg0 === 1) {
         c7 = 3;
         throw arg1;
@@ -80,7 +80,7 @@ function _saveWelcomeScreen() {
       return arg1;
     })();
   });
-  const _saveWelcomeScreen = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -89,14 +89,14 @@ function _saveWelcomeScreen() {
   }
   return applyArgumentsResult;
 }
-const result = require("dispatcher").fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 
 export const welcomeScreenViewed = function welcomeScreenViewed(closure_0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
   }
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "WELCOME_SCREEN_VIEW", guildId: closure_0, isLurking: flag };
   obj.dispatch(obj);
 };
@@ -111,13 +111,13 @@ export const fetchWelcomeScreen = function fetchWelcomeScreen(closure_0) {
   return applyArgumentsResult;
 };
 export const resetWelcomeScreen = function resetWelcomeScreen() {
-  dispatcher.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
+  dispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_RESET" });
 };
 export const clearWelcomeScreenSettings = function clearWelcomeScreenSettings() {
-  dispatcher.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
+  dispatcherDefault.dispatch({ type: "WELCOME_SCREEN_SETTINGS_CLEAR" });
 };
 export const updateSettings = function updateSettings(settings) {
-  let obj = dispatcher;
+  let obj = dispatcherDefault;
   obj = { type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings };
   obj.dispatch(obj);
 };

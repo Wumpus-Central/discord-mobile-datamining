@@ -1,17 +1,13 @@
 // discord_app/modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
-import { Themes } from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import { TwinButtons } from "../../../../design/components/experimental/native.tsx";
-import { map } from "../../../../design/tokens/native/useToken.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import TwinButtons from "TwinButtons" /* 8811 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
-let StyleSheet;
-let c3;
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ StyleSheet, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let obj = { wrapper: null, border: null };
@@ -21,17 +17,17 @@ obj[0] = obj;
 createCacheKey = {};
 const merged1 = Object.assign(StyleSheet.absoluteFillObject);
 createCacheKey.borderWidth = 1;
-createCacheKey.borderColor = require("Themes").colors.BORDER_SUBTLE;
-createCacheKey.borderRadius = require("Themes").modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS;
+createCacheKey.borderColor = ThemesDefault.colors.BORDER_SUBTLE;
+createCacheKey.borderRadius = ThemesDefault.modules.mobile.VOICE_PANEL_CONTROLS_BORDER_RADIUS;
 obj[1] = createCacheKey;
 let closure_6 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner(matchAppTheme) {
+const memoResult = importAllResult.memo(function VoicePanelVisualEffectViewInner(matchAppTheme) {
   let flag = matchAppTheme.matchAppTheme;
   if (flag === undefined) {
     flag = false;
   }
   let obj = map;
-  const token = obj.useToken(Themes.colors.THEME_LOCKED_BLUR_FALLBACK);
+  const token = obj.useToken(ThemesDefault.colors.THEME_LOCKED_BLUR_FALLBACK);
   const tmp2 = callback2();
   obj = { blurTheme: str, android_fallbackColor: null };
   let tmp5;
@@ -45,7 +41,7 @@ const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner
     obj = { style: null, children: null };
     obj[0] = tmp2.wrapper;
     const items = [tmp4Result, ];
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp2.border;
     items[1] = tmp4(closure_3, obj1);
     obj[1] = items;
@@ -53,6 +49,6 @@ const memoResult = require("noop").memo(function VoicePanelVisualEffectViewInner
   }
   return tmp7;
 });
-const result = require("jsxProd").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/shared/VoicePanelVisualEffectView.tsx");
 
 export const VoicePanelVisualEffectView = memoResult;

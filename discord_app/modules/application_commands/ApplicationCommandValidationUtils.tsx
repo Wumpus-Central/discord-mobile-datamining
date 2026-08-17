@@ -1,16 +1,12 @@
 // discord_app/modules/application_commands/ApplicationCommandValidationUtils.tsx
-import { getValidationErrorText } from "TRUE_OPTION_NAME";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { getString } from "ApplicationCommandOptionUtils.tsx";
-import { ApplicationCommandSectionType } from "ApplicationCommandTypes.tsx";
-import { validateNumericOptionRange } from "ApplicationCommandValidators.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import TRUE_OPTION_NAME from "TRUE_OPTION_NAME" /* 5246 */;
+import ApplicationCommandSectionType from "ApplicationCommandSectionType" /* 5248 */;
+import getString from "getString" /* 10256 */;
+import validateNumericOptionRangeDefault from "validateNumericOptionRange" /* 11334 */;
 
 function validateOptionContent(allowEmptyValues) {
-  let channelId;
-  let commandOrigin;
-  let content;
-  let guildId;
-  let option;
   ({ option, content, guildId, channelId, commandOrigin } = allowEmptyValues);
   if (commandOrigin === undefined) {
     commandOrigin = ApplicationCommandSectionType.CommandOrigin.CHAT;
@@ -29,7 +25,7 @@ function validateOptionContent(allowEmptyValues) {
       obj = { success: false, error: null };
       const intl2 = getSystemLocale.intl;
       obj[1] = intl2.string(getSystemLocale.t.JZJQL2);
-      let obj1 = obj;
+      obj1 = obj;
     } else {
       obj1 = { success: true };
     }
@@ -57,7 +53,7 @@ function validateOptionContent(allowEmptyValues) {
     } else {
       first = content[0];
     }
-    const tmp8 = validateNumericOptionRange;
+    const tmp8 = validateNumericOptionRangeDefault;
     const tmp15 = tmp8[option.type](first, option, channelId, guildId, commandOrigin);
     if (!tmp16) {
       tmp15.error = getValidationErrorText(option);
@@ -65,7 +61,8 @@ function validateOptionContent(allowEmptyValues) {
     return tmp15;
   }
 }
-const result = require("getString").fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
+const getValidationErrorText = TRUE_OPTION_NAME.getValidationErrorText;
+const result = set.fileFinishedImporting("modules/application_commands/ApplicationCommandValidationUtils.tsx");
 
 export const getValidationResults = function getValidationResults(activeCommand, optionValues, guild_id, id, arg4) {
   let obj = {};

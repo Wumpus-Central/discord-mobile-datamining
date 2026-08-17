@@ -1,17 +1,18 @@
 // discord_app/modules/stage_channels/native/components/MediaTile.tsx
-import { View } from "get ActivityIndicator";
-import getParticipants from "getParticipants";
-import { ParticipantTypes } from "ParticipantTypes";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import importAllResult from "noop";
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "getParticipants" /* 4773 */;
+import { ParticipantTypes } from "ParticipantTypes" /* 4544 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import importAllResult from "noop" /* 19 */;
 
 const require = arg1;
 let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: null };
-obj = { flex: 1, borderRadius: require("Themes").radii.sm };
+obj = { flex: 1, borderRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
 let closure_7 = createCacheKey.createStyles(obj);
-const memoResult = require("noop").memo((channel) => {
+const memoResult = importAllResult.memo((channel) => {
   channel = channel.channel;
   const participant = channel.participant;
   const size = channel.size;
@@ -21,9 +22,9 @@ const memoResult = require("noop").memo((channel) => {
   const isScreenLandscape = channel(8944).useIsScreenLandscape();
   const obj2 = channel(8944);
   const tmp5 = participant;
-  const items = [getParticipants];
+  const items = [closure_4];
   const items1 = [channel.id, participant.id];
-  const stateFromStores = channel(589).useStateFromStores(items, () => outer1_4.getParticipant(channel.id, participant.id), items1);
+  const stateFromStores = channel(589).useStateFromStores(items, () => closure_1_4.getParticipant(channel.id, participant.id), items1);
   let tmp8 = null;
   if (null != stateFromStores) {
     tmp8 = null;
@@ -47,6 +48,6 @@ const memoResult = require("noop").memo((channel) => {
   }
   return tmp8;
 });
-const result = require("getParticipants").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/MediaTile.tsx");
 
 export default memoResult;

@@ -1,14 +1,14 @@
 // discord_app/modules/guild_onboarding/useSortedOnboardingPrompts.tsx
-import noop from "noop";
-import handleUpdate from "handleUpdate";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "handleUpdate" /* 6788 */;
 
 const require = arg1;
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/useSortedOnboardingPrompts.tsx");
 
 export default function useSortedOnboardingPrompts(arg0) {
   const _require = arg0;
-  let items = [handleUpdate];
-  stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () => outer1_3.getEnabledOnboardingPrompts(closure_0));
+  let items = [closure_3];
+  stateFromStoresArray = _require(stateFromStoresArray[2]).useStateFromStoresArray(items, () => closure_1_3.getEnabledOnboardingPrompts(closure_0));
   let items1 = [stateFromStoresArray];
   return React.useMemo(() => {
     let arr5;

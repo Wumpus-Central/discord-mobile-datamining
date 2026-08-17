@@ -1,48 +1,39 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContainer.tsx
-import _slicedToArray from "_slicedToArray";
-import initialize from "initialize";
-import { StyleSheet } from "MessageRequestInAppNotification";
-import closure_6 from "initialize";
-import set from "set";
-import ME from "ME";
-import { jsx } from "CONFIG_NEVER_ANIMATE_TIMING";
-import { Easing } from "module_4115";
-import createCacheKey from "createCacheKey";
-import set from "get ActivityIndicator";
-import { BugReporterNotification } from "../../bug_reporter/native/BugReporterNotification.tsx";
-import { AlertNotification } from "AlertNotification.tsx";
-import { ForumThreadCreatedNotification } from "ForumThreadCreatedNotification.tsx";
-import { MessageFailedToSendNotification } from "MessageFailedToSendNotification.tsx";
-import { MessageNotification } from "MessageNotification.tsx";
-import { MessageRequestInAppNotification } from "MessageRequestNotification.tsx";
-import { ReactionNotificationBody } from "ReactionNotification.tsx";
-import { NotificationAvatar } from "ReminderNotification.tsx";
-import { RestrictedHoursWarningNotification } from "RestrictedHoursWarningNotification.tsx";
+import _modDef10047 from "module_10047" /* 10047 */;
+import _modDef10122 from "module_10122" /* 10122 */;
+import ForumThreadCreatedNotificationDefault from "ForumThreadCreatedNotification" /* 10125 */;
+import BugReporterNotification from "BugReporterNotification" /* 10126 */;
+import AlertNotificationDefault from "AlertNotification" /* 10157 */;
+import ReactionNotificationBodyDefault from "ReactionNotificationBody" /* 10158 */;
+import NotificationAvatarDefault from "NotificationAvatar" /* 10521 */;
+import _modDef10522 from "module_10522" /* 10522 */;
+import MessageRequestInAppNotificationDefault from "MessageRequestInAppNotification" /* 10525 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "initialize" /* 10046 */;
+import set from "set" /* 10030 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import { Easing } from "module_4115" /* 4115 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let NOTIFICATION_CONTAINER_MARGIN;
-let c10;
-let c9;
-let closure_12;
-let error;
-let map1;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function NotificationWrapper(notification) {
   notification = notification.notification;
   const type = notification.type;
   if (constants.MESSAGE === type) {
-    let obj = { notification: null };
+    obj = { notification: null };
     obj[0] = notification;
-    return jsx(MessageNotification, { notification: null });
+    return jsx(_modDef10047, { notification: null });
   } else if (tmp.MESSAGE_FAILED_TO_SEND === type) {
     obj = { notification: null };
     obj[0] = notification;
-    return jsx(MessageFailedToSendNotification, { notification: null });
+    return jsx(_modDef10122, { notification: null });
   } else if (tmp.FORUM_THREAD_CREATED === type) {
-    const obj1 = { notification: null };
+    obj1 = { notification: null };
     obj1[0] = notification;
-    return jsx(ForumThreadCreatedNotification, { notification: null });
+    return jsx(ForumThreadCreatedNotificationDefault, { notification: null });
   } else if (tmp.BUG_REPORTER === type) {
     const obj2 = { notification: null };
     obj2[0] = notification;
@@ -50,22 +41,22 @@ function NotificationWrapper(notification) {
   } else if (tmp.ALERT === type) {
     const obj3 = { notification: null };
     obj3[0] = notification;
-    return jsx(AlertNotification, { notification: null });
+    return jsx(AlertNotificationDefault, { notification: null });
   } else if (tmp.REACTION === type) {
     const obj4 = { notification: null };
     obj4[0] = notification;
-    return jsx(ReactionNotificationBody, { notification: null });
+    return jsx(ReactionNotificationBodyDefault, { notification: null });
   } else if (tmp.MESSAGE_REMINDER === type) {
     const obj5 = { notification: null };
     obj5[0] = notification;
-    return jsx(NotificationAvatar, { notification: null });
+    return jsx(NotificationAvatarDefault, { notification: null });
   } else {
     if (tmp.RESTRICTED_HOURS_WARNING !== type) {
       if (tmp.RESTRICTED_SCHEDULE_UPDATED !== type) {
         if (tmp.MESSAGE_REQUEST === type) {
           obj = { notification: null };
           obj[0] = notification;
-          return jsx(MessageRequestInAppNotification, { notification: null });
+          return jsx(MessageRequestInAppNotificationDefault, { notification: null });
         } else {
           return null;
         }
@@ -73,10 +64,10 @@ function NotificationWrapper(notification) {
     }
     const obj6 = { notification: null };
     obj6[0] = notification;
-    return jsx(RestrictedHoursWarningNotification, { notification: null });
+    return jsx(_modDef10522, { notification: null });
   }
 }
-({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: metroImportAll, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
+({ DEFAULT_ANIMATION_TIMING: error, extrapolateConfig: closure_8, MIN_SWIPE_DISTANCE: c9, MIN_SWIPE_VELOCITY: c10, PAN_INPUT_RANGE: unpackModuleId, NOTIFICATION_CONTAINER_MARGIN } = set);
 ({ InAppNotificationTypes: closure_12, AnalyticEvents: map1 } = ME);
 let obj = { duration: 200, easing: null };
 obj[1] = Easing.in(require("module_4115").Easing.ease);
@@ -101,9 +92,9 @@ export default function InAppNotificationContainer(notification) {
   let sharedValue2;
   let sharedValue3;
   let first;
-  let closure_10;
+  closure_10 = undefined;
   let first1;
-  let c12;
+  closure_12 = undefined;
   let callback;
   const tmp = callback();
   let items = [notification];
@@ -112,9 +103,9 @@ export default function InAppNotificationContainer(notification) {
   channelId = memo.channelId;
   messageId = memo.messageId;
   channelType = memo.channelType;
-  let obj = notification(channelId[7]);
+  obj = notification(channelId[7]);
   sharedValue = obj.useSharedValue(0);
-  let obj1 = notification(channelId[7]);
+  obj1 = notification(channelId[7]);
   sharedValue1 = obj1.useSharedValue(0);
   let obj2 = notification(channelId[7]);
   sharedValue2 = obj2.useSharedValue(0);
@@ -125,14 +116,14 @@ export default function InAppNotificationContainer(notification) {
   closure_10 = tmp9[1];
   const tmp11 = messageId(channelType.useState(false), 2);
   first1 = tmp11[0];
-  c12 = tmp13;
+  closure_12 = tmp13;
   let obj4 = notification(channelId[19]);
   const items1 = [sharedValue1];
   const items2 = [notification, guildId, channelId, messageId];
   const stateFromStores = obj4.useStateFromStores(items1, () => sharedValue1.isOpen());
   callback = channelType.useCallback((arg0) => {
     if (null != arg0) {
-      let obj = notification(channelId[18]);
+      obj = notification(channelId[18]);
       obj = { type: null, guildId: null, channelId: null, dismissReason: null, inAppNotificationId: null, messageId: null };
       obj[0] = notification.type;
       obj[1] = guildId;
@@ -148,21 +139,21 @@ export default function InAppNotificationContainer(notification) {
     }
   }, items2);
   guildId(channelId[20])(() => {
-    let obj = notification(channelId[21]);
+    obj = notification(channelId[21]);
     const fn = function t() {
-      return outer1_0(outer1_2[7]).runOnJS(closure_10)(true);
+      return closure_1_0(closure_1_2[7]).runOnJS(closure_10)(true);
     };
     obj = { runOnJS: notification(channelId[7]).runOnJS, setInitialized: closure_10 };
     fn.__closure = obj;
     fn.__workletHash = 16158991995287;
-    fn.__initData = outer1_18;
-    const result = sharedValue3.set(obj.withTiming(1, outer1_15, "respect-motion-settings", fn));
-    return () => outer1_0(outer1_2[7]).cancelAnimation(closure_8);
+    fn.__initData = closure_1_18;
+    const result = sharedValue3.set(obj.withTiming(1, closure_1_15, "respect-motion-settings", fn));
+    return () => closure_1_0(closure_1_2[7]).cancelAnimation(closure_8);
   });
   const items3 = [first, notification.type, guildId, channelId, notification.inAppNotificationId, messageId, channelType];
   const effect = channelType.useEffect(() => {
     if (first) {
-      let obj = guildId(channelId[22]);
+      obj = guildId(channelId[22]);
       obj = { type: null, guild_id: null, channel_id: null, in_app_notification_id: null, message_id: null, channel_type: null };
       obj[0] = notification.type;
       obj[1] = guildId;
@@ -176,10 +167,10 @@ export default function InAppNotificationContainer(notification) {
   const Gesture = notification(channelId[23]).Gesture;
   class X {
     constructor() {
-      result = c7.set(c5.get());
-      result1 = c6.set(0);
+      result = closure_7.set(closure_5.get());
+      result1 = closure_6.set(0);
       obj = notification(channelId[7]);
-      tmp3 = obj.runOnJS(c12)(true);
+      tmp3 = obj.runOnJS(closure_12)(true);
       return;
     }
   }
@@ -191,9 +182,9 @@ export default function InAppNotificationContainer(notification) {
   const tmp16 = guildId;
   class K {
     constructor(arg0) {
-      sum = c7.get() + notification.translationY;
-      result = c5.set(Math.min(sum, c7.get()));
-      result1 = c6.set(notification.velocityY);
+      sum = closure_7.get() + notification.translationY;
+      result = closure_5.set(Math.min(sum, closure_7.get()));
+      result1 = closure_6.set(notification.velocityY);
       return;
     }
   }
@@ -202,20 +193,20 @@ export default function InAppNotificationContainer(notification) {
   K.__initData = closure_21;
   const onBeginResult = Gesture.Pan().onBegin(X);
   let fn = function q(translationY) {
-    let obj = sharedValue1;
+    obj = sharedValue1;
     if (Math.abs(sharedValue1.get()) >= closure_10) {
       if (translationY.translationY <= 0) {
         let runOnJS = channelId;
         const obj5 = notification(channelId[21]);
         if (translationY.translationY > 0) {
-          let first = first1[2];
+          first = first1[2];
         } else {
           first = first1[0];
         }
         const fn = function n(arg0) {
           if (arg0) {
-            outer1_0(outer1_2[7]).runOnJS(closure_13)("swipe");
-            const obj = outer1_0(outer1_2[7]);
+            closure_1_0(closure_1_2[7]).runOnJS(closure_13)("swipe");
+            obj = closure_1_0(closure_1_2[7]);
           }
         };
         obj = { runOnJS: null, handleDismissNotification: null };
@@ -224,14 +215,14 @@ export default function InAppNotificationContainer(notification) {
         obj[1] = callback;
         fn.__closure = obj;
         fn.__workletHash = 3243235500892;
-        fn.__initData = outer1_23;
+        fn.__initData = closure_1_23;
         const result = sharedValue.set(obj5.withTiming(first, sharedValue2, "animate-always", fn));
         const tmp5 = notification;
       }
     } else {
       const _Math = Math;
     }
-    notification(channelId[7]).runOnJS(c12)(false);
+    notification(channelId[7]).runOnJS(closure_12)(false);
     const obj2 = notification(channelId[7]);
     obj = { damping: 10, mass: 1, stiffness: 100, velocity: obj.get() };
     const result1 = sharedValue.set(notification(channelId[24]).withSpring(0, obj, "animate-always"));
@@ -244,7 +235,7 @@ export default function InAppNotificationContainer(notification) {
   class Q {
     constructor() {
       obj = notification(channelId[7]);
-      tmp = obj.runOnJS(c12)(false);
+      tmp = obj.runOnJS(closure_12)(false);
       return;
     }
   }
@@ -256,21 +247,21 @@ export default function InAppNotificationContainer(notification) {
   const onFinalizeResult = Gesture.Pan().onBegin(X).onUpdate(K).onEnd(fn).onFinalize(Q);
   class Z {
     constructor() {
-      value = c5.get();
-      value1 = c8.get();
+      value = closure_5.get();
+      value1 = closure_8.get();
       items = [, ];
       items[0] = { translateY: value };
       interpolateResult = value1;
-      tmp3 = c9;
-      if (c9) {
+      tmp3 = closure_9;
+      if (closure_9) {
         tmp5 = notification;
         tmp6 = channelId;
         obj = notification(channelId[7]);
-        tmp7 = useMemo;
-        tmp8 = c8;
+        tmp7 = closure_11;
+        tmp8 = closure_8;
         tmp9 = obj;
         tmp10 = value;
-        interpolateResult = obj.interpolate(value, useMemo, [0.3, 1, 0.3], c8);
+        interpolateResult = obj.interpolate(value, closure_11, [0.3, 1, 0.3], closure_8);
       }
       obj = { transform: items, opacity: null };
       items[1] = { scale: interpolateResult };
@@ -278,11 +269,11 @@ export default function InAppNotificationContainer(notification) {
         tmp11 = notification;
         tmp12 = channelId;
         obj3 = notification(channelId[7]);
-        tmp13 = useMemo;
-        tmp14 = c8;
+        tmp13 = closure_11;
+        tmp14 = closure_8;
         tmp15 = obj3;
         tmp16 = value;
-        value1 = obj3.interpolate(value, useMemo, [0, 1, 0], c8);
+        value1 = obj3.interpolate(value, closure_11, [0, 1, 0], closure_8);
       }
       obj[1] = value1;
       return obj;
@@ -304,10 +295,9 @@ export default function InAppNotificationContainer(notification) {
   obj4[6] = str;
   let obj5 = { value: memo1, children: null };
   const obj6 = { gesture: onFinalizeResult, children: null };
-  const obj7 = { style: items5, pointerEvents: "box-none", children: null };
-  items5 = [tmp.animatedContainer, animatedStyle];
-  obj7[2] = <NotificationWrapper notification={notification} />;
-  obj6[1] = jsx(tmp16(channelId[7]).View, { style: items5, pointerEvents: "box-none", children: null });
+  const obj13 = notification(channelId[7]);
+  const items5 = [tmp.animatedContainer, animatedStyle];
+  obj6[1] = jsx(tmp16(channelId[7]).View, { style: items5, pointerEvents: "box-none", children: <NotificationWrapper notification={notification} /> });
   obj5[1] = jsx(notification(channelId[23]).GestureDetector, { gesture: onFinalizeResult, children: null });
   obj4[7] = jsx(notification(channelId[27]).InAppNotificationContext.Provider, { value: memo1, children: null });
   obj3[2] = jsx(notification(channelId[26]).SafeAreaPaddingView, { top: true, bottom: true, left: true, right: true, style: tmp.safeAreaContainer, pointerEvents: "box-none", importantForAccessibility: null, children: null });

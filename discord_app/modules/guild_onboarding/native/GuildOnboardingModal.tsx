@@ -1,16 +1,14 @@
 // discord_app/modules/guild_onboarding/native/GuildOnboardingModal.tsx
-import NavigationStack from "NavigationStack";
-import get from "get";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import handleConnectionOpen from "handleConnectionOpen";
-import handleUpdate from "handleUpdate";
-import { GuildOnboardingModalStates as closure_9 } from "GUILD_ONBOARDING_MODAL_KEY";
-import ME from "ME";
-import { jsx } from "set";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "get" /* 6801 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "createGuildRecordFromRust" /* 1910 */;
+import closure_7 from "handleConnectionOpen" /* 1979 */;
+import closure_8 from "handleUpdate" /* 6788 */;
+import { GuildOnboardingModalStates as closure_9 } from "GUILD_ONBOARDING_MODAL_KEY" /* 6785 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c10;
-let unpackModuleId;
 const require = arg1;
 function headerTitle() {
   return null;
@@ -19,7 +17,7 @@ function headerRight() {
   return null;
 }
 ({ GuildFeatures: c10, Routes: unpackModuleId } = ME);
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_onboarding/native/GuildOnboardingModal.tsx");
 
 export default function GuildOnboardingModal(guildId) {
   guildId = guildId.guildId;
@@ -39,13 +37,13 @@ export default function GuildOnboardingModal(guildId) {
     let tmp2 = null != guild;
     if (tmp2) {
       const features = guild.features;
-      let hasItem = features.has(outer1_10.MEMBER_VERIFICATION_GATE_ENABLED);
+      let hasItem = features.has(closure_1_10.MEMBER_VERIFICATION_GATE_ENABLED);
       if (hasItem) {
         const features2 = guild.features;
         hasItem = !features2.has(tmp3.MEMBER_VERIFICATION_MANUAL_APPROVAL);
       }
       tmp2 = hasItem;
-      tmp3 = outer1_10;
+      tmp3 = closure_1_10;
     }
     return tmp2;
   });

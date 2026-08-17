@@ -1,23 +1,23 @@
 // discord_app/modules/threads/native/useCreateThreadViewProps.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
+import useGetThreadDraftSettingsDefault from "useGetThreadDraftSettings" /* 10167 */;
+import closure_3 from "ensureGuildLoaded" /* 1391 */;
 import { defaultAreStatesEqual } from "../../../../discord_common/js/packages/flux/useStateFromStores.tsx";
-import { useGetThreadDraftSettings } from "../useGetThreadDraftSettings.tsx";
 
-let require = arg1;
-const result = require("defaultAreStatesEqual").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
+const require = arg1;
+const result = require("set").fileFinishedImporting("modules/threads/native/useCreateThreadViewProps.tsx");
 
 export default function useCreateThreadViewProps(arg0) {
-  const tmp = useGetThreadDraftSettings(arg0);
-  const require = tmp;
-  let obj = defaultAreStatesEqual;
-  const items = [ensureGuildLoaded];
+  const tmp = useGetThreadDraftSettingsDefault(arg0);
+  const _require = tmp;
+  let obj = _defaultAreStatesEqual;
+  const items = [closure_3];
   const items1 = [tmp];
   const stateFromStores = obj.useStateFromStores(items, () => {
     let parentChannelId;
-    if (outer1_3 != null) {
-      parentChannelId = tmp.parentChannelId;
+    if (parentChannelId != null) {
+      parentChannelId = parentChannelId.parentChannelId;
     }
-    return outer1_3.getChannel(parentChannelId);
+    return closure_1_3.getChannel(parentChannelId);
   }, items1);
   let tmp3 = null;
   if (null != tmp) {

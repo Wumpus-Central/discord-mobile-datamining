@@ -1,25 +1,24 @@
 // discord_app/modules/client_themes/native/MobileThemesUtils.tsx
-import handleThemeChange from "handleThemeChange";
-import validateSavedTheme from "validateSavedTheme";
-import reset from "reset";
-import ThemeTypes from "ThemeTypes";
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ClientThemeType from "ClientThemeType" /* 1349 */;
+import useIsMobileVisualRefreshExperimentEnabled from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import useIsMobileVisualRefreshExperimentEnabledDefault from "useIsMobileVisualRefreshExperimentEnabled" /* 1367 */;
+import messagesProxyDefault from "messagesProxy" /* 2533 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 4309 */;
+import closure_3 from "handleThemeChange" /* 1302 */;
+import closure_4 from "validateSavedTheme" /* 4308 */;
+import closure_5 from "reset" /* 1346 */;
+import ThemeTypes from "ThemeTypes" /* 1348 */;
 import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { useIsMobileVisualRefreshExperimentEnabled } from "../../themes/experiments/MobileVisualRefreshExperiment.tsx";
-import { ClientThemeType } from "../ClientThemesTypes.tsx";
-import { messagesProxy } from "../intl/ClientThemes.messages.js";
-import { useCustomThemeDisplaySettings } from "useCustomThemeDisplaySettings.tsx";
 
-let closure_6;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getCustomThemesName() {
   const intl = getSystemLocale.intl;
-  return intl.string(messagesProxy.yl1iMm);
+  return intl.string(messagesProxyDefault.yl1iMm);
 }
-({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: metroImportAll } = ThemeTypes);
-const result = require("reset").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
+({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_6, LEGACY_STANDARD_BACKGROUND_THEMES: error, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ThemeTypes);
+const result = require("set").fileFinishedImporting("modules/client_themes/native/MobileThemesUtils.tsx");
 
 export const getCustomBackgroundGradient = function getCustomBackgroundGradient() {
   const customThemeDisplaySettings = store.getCustomThemeDisplaySettings();
@@ -48,12 +47,12 @@ export const useCustomBackgroundGradient = function useCustomBackgroundGradient(
 };
 export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackgroundGradient(arg0) {
   const _require = arg0;
-  const items = [handleThemeChange];
+  const items = [closure_3];
   return _initialize.useStateFromStores(items, () => {
     if (null == mode) {
       return null;
     } else {
-      const syncedClientTheme = outer1_3.getSyncedClientTheme(tmp);
+      const syncedClientTheme = closure_1_3.getSyncedClientTheme(tmp);
       let prop;
       if (syncedClientTheme != null) {
         prop = syncedClientTheme.customUserThemeSettings;
@@ -63,9 +62,9 @@ export const usePerModeCustomBackgroundGradient = function usePerModeCustomBackg
         tmp3 = null;
         if (0 !== prop.colors.length) {
           const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-          obj[0] = mode(outer1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-          obj[1] = outer1_9;
-          obj[2] = outer1_3.themePreferenceForSystemTheme(tmp);
+          obj[0] = mode(closure_1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+          obj[1] = closure_1_9;
+          obj[2] = closure_1_3.themePreferenceForSystemTheme(tmp);
           obj[3] = prop;
           tmp3 = obj;
         }
@@ -99,7 +98,7 @@ export const getAllMobileThemes = function getAllMobileThemes() {
 };
 export const useAllMobileThemes = function useAllMobileThemes(mode) {
   let obj = _initialize;
-  const items = [validateSavedTheme];
+  const items = [closure_4];
   const stateFromStores = obj.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp4 = null;
   if (null != stateFromStores) {
@@ -117,13 +116,13 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   }
   _require = mode;
   tmpResult = tmp(589);
-  const items1 = [handleThemeChange];
+  const items1 = [closure_3];
   if (null != mode) {
     stateFromStores1 = tmpResult.useStateFromStores(items1, () => {
       if (null == mode) {
         return null;
       } else {
-        const syncedClientTheme = outer1_3.getSyncedClientTheme(tmp);
+        const syncedClientTheme = closure_1_3.getSyncedClientTheme(tmp);
         let prop;
         if (syncedClientTheme != null) {
           prop = syncedClientTheme.customUserThemeSettings;
@@ -133,9 +132,9 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
           tmp3 = null;
           if (0 !== prop.colors.length) {
             const obj = { type: null, getName: null, theme: null, customThemeSettings: null };
-            obj[0] = mode(outer1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
-            obj[1] = outer1_9;
-            obj[2] = outer1_3.themePreferenceForSystemTheme(tmp);
+            obj[0] = mode(closure_1_2[6]).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT;
+            obj[1] = closure_1_9;
+            obj[2] = closure_1_3.themePreferenceForSystemTheme(tmp);
             obj[3] = prop;
             tmp3 = obj;
           }
@@ -144,7 +143,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
       }
     });
   }
-  const tmp8 = useIsMobileVisualRefreshExperimentEnabled("MobileThemesUtils") ? closure_8 : closure_7;
+  const tmp8 = useIsMobileVisualRefreshExperimentEnabledDefault("MobileThemesUtils") ? closure_8 : closure_7;
   if (null != stateFromStores1) {
     const items2 = [];
     let arraySpreadResult = HermesBuiltin.arraySpread(tmp8, 0);
@@ -158,7 +157,7 @@ export const useAllMobileThemes = function useAllMobileThemes(mode) {
   return items3;
 };
 export const useSavedCustomTheme = function useSavedCustomTheme() {
-  const items = [validateSavedTheme];
+  const items = [closure_4];
   const stateFromStores = initialize.useStateFromStores(items, () => savedCustomTheme.getSavedCustomTheme());
   let tmp2 = null;
   if (null != stateFromStores) {

@@ -1,48 +1,43 @@
 // discord_app/modules/age_gate/native/components/NsfwGateGuild.tsx
-import noop from "noop";
-import get_ActivityIndicator from "set";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { NsfwGateSource } from "NsfwGateSource";
-import ME from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "trackCommunicationDisabled" /* 1990 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { NsfwGateSource } from "NsfwGateSource" /* 9348 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let unpackModuleId;
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ AnalyticEvents: c9, HelpdeskArticles: c10 } = ME);
 ({ jsx: unpackModuleId, jsxs: closure_12 } = jsxProd);
 createCacheKey = { container: null, header: null, description: null, image: null };
-createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
+createCacheKey = { flex: 1, alignItems: "center", justifyContent: "center", padding: 16, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { textAlign: "center", marginBottom: 8 };
 createCacheKey[2] = { textAlign: "center", marginBottom: 16 };
 createCacheKey[3] = { marginBottom: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("trackCommunicationDisabled").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuild.tsx");
+let closure_13 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/age_gate/native/components/NsfwGateGuild.tsx");
 
 export default function NsfwGateGuild(guildId) {
   guildId = guildId.guildId;
   let currentUser;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   const intl = guildId(1236).intl;
   const intl2 = guildId(1236).intl;
   const stringResult = intl.string(guildId(1236).t.vAymlG);
   const intl3 = guildId(1236).intl;
   let obj = { helpURL: null };
-  let obj1 = currentUser(1993);
+  obj1 = currentUser(1993);
   obj[0] = obj1.getArticleURL(constants.NSFW_GUILD_GUIDELINES);
   const stringResult1 = intl2.string(guildId(1236).t.Crj6eC);
   currentUser = currentUser.getCurrentUser();
   const items = [guildId, currentUser];
   const effect = React.useEffect(() => {
-    let obj = currentUser(outer1_2[11]);
+    let obj = currentUser(closure_1_2[11]);
     obj = { guild_id: guildId, user_id: null, is_member: null, is_user_opted_in_to_age_restricted_servers: null, source: null };
     let id;
     if (currentUser != null) {
@@ -53,18 +48,18 @@ export default function NsfwGateGuild(guildId) {
     if (currentUser != null) {
       id1 = tmp3.id;
     }
-    obj[2] = outer1_6.isMember(guildId, id1);
+    obj[2] = closure_1_6.isMember(guildId, id1);
     let nsfwAllowed;
     if (currentUser != null) {
       nsfwAllowed = tmp3.nsfwAllowed;
     }
     if (nsfwAllowed) {
-      nsfwAllowed = guildId(outer1_2[12]).getViewNsfwGuildsOrDefault();
-      const obj3 = guildId(outer1_2[12]);
+      nsfwAllowed = guildId(closure_1_2[12]).getViewNsfwGuildsOrDefault();
+      const obj3 = guildId(closure_1_2[12]);
     }
     obj[3] = nsfwAllowed;
-    obj[4] = outer1_8.MODAL;
-    obj.track(outer1_9.GUILD_NSFW_GATE_VIEWED, obj);
+    obj[4] = closure_1_8.MODAL;
+    obj.track(closure_1_9.GUILD_NSFW_GATE_VIEWED, obj);
   }, items);
   obj = { style: tmp.container, children: null };
   const items1 = [callback(currentUser(8612), {}), , , , , ];

@@ -1,36 +1,29 @@
 // discord_app/modules/user_profile/native/UserProfileEffectEditButton.tsx
-import Button from "Button";
-import { View } from "metadata";
-import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET";
-import { NOOP } from "sum";
-import jsxProd from "set";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { COLLECTIBLES_PREVIEW_SIZE } from "ARBITRARY_LARGE_OFFSET" /* 7186 */;
+import { NOOP } from "sum" /* 505 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { profileEffectPreviewContainer: null, sampleProfile: null, noneIcon: null };
-createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: require("Themes").radii.xs, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
+createCacheKey = { height: COLLECTIBLES_PREVIEW_SIZE, width: COLLECTIBLES_PREVIEW_SIZE, borderRadius: ThemesDefault.radii.xs, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, overflow: "hidden" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { aspectRatio: require("SAMPLE_PROFILE_ASPECT_RATIO").SAMPLE_PROFILE_ASPECT_RATIO, width: "100%" };
-createCacheKey[2] = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-const result = require("ARBITRARY_LARGE_OFFSET").fileFinishedImporting("modules/user_profile/native/UserProfileEffectEditButton.tsx");
+createCacheKey[2] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileEffectEditButton.tsx");
 
 export default function UserProfileEffectEditButton(isTryItOut) {
-  let displayProfile;
-  let guildId;
-  let isFetching;
-  let pendingProfileEffect;
-  let product;
-  let user;
   ({ displayProfile, user } = isTryItOut);
   ({ pendingProfileEffect, guildId } = isTryItOut);
   isTryItOut = isTryItOut.isTryItOut;
   let userProfileEffect;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = user(isTryItOut[8]);
   obj = { pendingValue: pendingProfileEffect, userValue: null, guildValue: null, guildId: null };
   let profileEffect;
@@ -88,7 +81,7 @@ export default function UserProfileEffectEditButton(isTryItOut) {
     }
   }
   if (isFetching) {
-    const obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
+    obj1 = { label: null, buttonText: null, onPress: null, leading: null, loading: true, disabled: true, hideArrow: true };
     const intl4 = tmp2(tmp3[13]).intl;
     obj1[0] = intl4.string(tmp2(tmp3[13]).t.wR5wOo);
     const intl5 = tmp2(tmp3[13]).intl;

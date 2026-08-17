@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx
-import noop from "noop";
+import closure_0 from "noop" /* 19 */;
 
 const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useScrollToInitialIndexOnce.tsx");
 
@@ -13,8 +13,8 @@ export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(
     num = 100;
   }
   const resetKey = initialScrollIndex.resetKey;
-  let closure_5;
-  let closure_6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   closure_5 = initialScrollIndex.useRef(false);
   closure_6 = initialScrollIndex.useRef(resetKey);
   const items = [shouldScroll, initialScrollIndex, num, flashListRef, resetKey];
@@ -34,7 +34,7 @@ export const useScrollToInitialIndexOnce = function useScrollToInitialIndexOnce(
         const current = ref.current;
         if (current != null) {
           const obj = { animated: true, index: null };
-          obj[1] = noop;
+          obj[1] = closure_0;
           current.scrollToIndex(obj);
         }
       }, num);

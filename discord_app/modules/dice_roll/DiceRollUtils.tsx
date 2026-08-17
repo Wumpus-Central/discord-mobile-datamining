@@ -1,6 +1,8 @@
 // discord_app/modules/dice_roll/DiceRollUtils.tsx
-import { getSystemLocale } from "../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/dice_roll/DiceRollUtils.tsx");
 
 export const getBarText = function getBarText(flag, results) {
   if (flag) {

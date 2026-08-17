@@ -1,8 +1,9 @@
 // discord_app/modules/age_assurance/native/AgeVerificationModal.tsx
-import noop from "noop";
-import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import { AGE_VERIFICATION_MODAL_KEY as closure_4 } from "set" /* 5427 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 function AgeVerifyScreen(uri) {
@@ -18,7 +19,7 @@ function AgeVerifyScreen(uri) {
   }, items);
   const items1 = [callback];
   const callback1 = callback.useCallback(() => {
-    if (obj.isModalOpen(outer1_4)) {
+    if (obj.isModalOpen(closure_1_4)) {
       callback();
     }
   }, items1);
@@ -53,18 +54,18 @@ function AgeVerifyScreen(uri) {
 }
 let closure_6 = { VERIFY_AGE: "VERIFY_AGE" };
 createCacheKey = { headerStyle: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWER };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWER };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/age_assurance/native/AgeVerificationModal.tsx");
 
 export default function AgeVerificationModal(webviewUrl) {
   webviewUrl = webviewUrl.webviewUrl;
   const onComplete = webviewUrl.onComplete;
   const onClose = webviewUrl.onClose;
   let React;
-  let c4;
-  const tmp = createCacheKey();
+  c4 = undefined;
+  const tmp = callback();
   React = tmp;
   let intl = webviewUrl(onClose[11]).intl;
   const stringResult = intl.string(webviewUrl(onClose[11]).t.wJVyYR);
@@ -77,17 +78,17 @@ export default function AgeVerificationModal(webviewUrl) {
       arr = arr.pop();
     }
     return {
-      [outer1_6.VERIFY_AGE]: {
+      [closure_1_6.VERIFY_AGE]: {
         headerStyle: handleClose.headerStyle,
         headerTitle: c4,
         headerLeft() {
           const obj = { onPress: handleClose, text: null };
           const intl = callback(1236).intl;
           obj[1] = intl.string(callback(1236).t.cpT0Cq);
-          return outer1_5(callback(5432).HeaderActionButton, obj);
+          return closure_1_5(callback(5432).HeaderActionButton, obj);
         },
         render() {
-          return outer1_5(outer1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });
+          return closure_1_5(closure_1_7, { webviewUrl: closure_0, onComplete: closure_1, onClose: handleClose });
         }
       }
     };

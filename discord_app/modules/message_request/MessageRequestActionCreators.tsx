@@ -1,17 +1,17 @@
 // discord_app/modules/message_request/MessageRequestActionCreators.tsx
-import handleLogout from "handleLogout";
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { handleLogout } from "../../actions/AuthenticationActionCreators.tsx";
-import { MessageRequestConsentStatusTypes } from "MessageRequestTypes.tsx";
+import sendRequest from "sendRequest" /* 530 */;
+import handleLogoutDefault from "handleLogout" /* 5256 */;
+import MessageRequestConsentStatusTypes from "MessageRequestConsentStatusTypes" /* 10000 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function _acceptMessageRequest() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c4 === 2) {
         c4 = 3;
@@ -41,13 +41,13 @@ function _acceptMessageRequest() {
             } else {
               const table = tmp2;
               const callback2 = tmp5;
-              const HTTP = callback(outer1_2[2]).HTTP;
-              const obj1 = { url: null, body: null, rejectWithError: null };
+              const HTTP = callback(closure_1_2[2]).HTTP;
+              obj1 = { url: null, body: null, rejectWithError: null };
               obj1[0] = c4.CHANNEL_RECIPIENT_ME(callback);
               const obj2 = { consent_status: null };
-              obj2[0] = callback(outer1_2[3]).MessageRequestConsentStatusTypes.ACCEPTED;
+              obj2[0] = callback(closure_1_2[3]).MessageRequestConsentStatusTypes.ACCEPTED;
               obj1[1] = obj2;
-              obj1[2] = callback(outer1_2[2]).rejectWithMigratedError();
+              obj1[2] = callback(closure_1_2[2]).rejectWithMigratedError();
               c3 = 1;
               c4 = 1;
               const obj3 = { value: null, done: false };
@@ -77,7 +77,7 @@ function _acceptMessageRequest() {
       }
     })();
   });
-  const _acceptMessageRequest = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -86,7 +86,7 @@ function _acceptMessageRequest() {
   }
   return applyArgumentsResult;
 }
-const result = require("sendRequest").fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
 
 export const acceptMessageRequest = function acceptMessageRequest(arg0) {
   const self = this;
@@ -116,8 +116,7 @@ export const markAsMessageRequest = function markAsMessageRequest(id) {
 };
 export const rejectMessageRequest = function rejectMessageRequest(closure_0) {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0), rejectWithError: null };
-  obj[1] = sendRequest.rejectWithMigratedError();
+  const obj = { url: Endpoints.CHANNEL_RECIPIENT_ME(closure_0), rejectWithError: sendRequest.rejectWithMigratedError() };
   return HTTP.del(obj);
 };
 export const rejectMessageRequestBatch = function rejectMessageRequestBatch(closure_0) {
@@ -128,5 +127,5 @@ export const rejectMessageRequestBatch = function rejectMessageRequestBatch(clos
   return HTTP.put(obj);
 };
 export const fetchUserCountryCode = function fetchUserCountryCode() {
-  const locationMetadata = handleLogout.getLocationMetadata();
+  const locationMetadata = handleLogoutDefault.getLocationMetadata();
 };

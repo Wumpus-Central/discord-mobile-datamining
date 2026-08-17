@@ -1,13 +1,13 @@
 // discord_app/modules/activity_privacy/ActivityPrivacyUpsellUtils.tsx
-import handleChannelSelect from "handleChannelSelect";
-import handleInviteData from "handleInviteData";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
-import { explicitContentFromProto } from "../user_settings/UserSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import create from "create" /* 1306 */;
+import explicitContentFromProto from "explicitContentFromProto" /* 4066 */;
+import closure_2 from "handleChannelSelect" /* 6772 */;
+import closure_3 from "handleInviteData" /* 4295 */;
+import closure_4 from "createGuildRecordFromRust" /* 1910 */;
+import closure_5 from "insertUnsortedGuilds" /* 5078 */;
 
-const require = arg1;
+require = arg1;
 function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
   if (setting === ACTIVITY_STATUS_OFF) {
     return null;
@@ -39,7 +39,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
         } else {
           EXPANDING = obj.EXPANDING;
         }
-        const dependencyMap = tmp8(7357).getSanitizedActivityRestrictedGuilds();
+        dependencyMap = tmp8(7357).getSanitizedActivityRestrictedGuilds();
         flattenedGuildIds = flattenedGuildIds.getFlattenedGuildIds();
         if (setting !== tmp8(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF) {
           if (setting !== tmp8(1306).GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS) {
@@ -58,16 +58,16 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
           str = "large_only";
         }
         const found = flattenedGuildIds.filter((arg0) => {
-          if (null == outer1_4.getGuild(arg0)) {
+          if (null == closure_1_4.getGuild(arg0)) {
             return false;
           } else {
             const hasItem = set.has(arg0);
-            if (EXPANDING === outer1_6.RESTRICTING) {
+            if (EXPANDING === closure_1_6.RESTRICTING) {
               if (hasItem) {
                 return false;
               }
             }
-            if (EXPANDING === outer1_6.EXPANDING) {
+            if (EXPANDING === closure_1_6.EXPANDING) {
               if (!hasItem) {
                 return false;
               }
@@ -75,7 +75,7 @@ function computeAffectedGuilds(setting, ACTIVITY_STATUS_OFF) {
             if ("all" === "all") {
               return true;
             } else {
-              const memberCount = outer1_3.getMemberCount(arg0);
+              const memberCount = closure_1_3.getMemberCount(arg0);
               if (null == memberCount) {
                 let tmp4 = tmp7 === tmp8.RESTRICTING;
               } else if ("large_only" === tmp) {
@@ -161,7 +161,7 @@ items1[1] = items2;
 const items3 = [require("create").ProfileVisibility.FRIENDS_ONLY, require("create").GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_ON];
 items1[2] = items3;
 const map = new Map(items1);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/activity_privacy/ActivityPrivacyUpsellUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/activity_privacy/ActivityPrivacyUpsellUtils.tsx");
 
 export const ChangeDirection = obj;
 export const getPermissiveness = function getPermissiveness(arg0) {
@@ -201,7 +201,7 @@ export { getProfileVisibilitySettingName };
 export const getProfileToActivityUpsellStrings = function getProfileToActivityUpsellStrings(arg0, settingName) {
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
-  let obj = { title: intl.string(arg0 ? t.eYDA7D : t["9jYwjo"]), subtitle: null, confirmText: null, toastContent: null };
+  obj = { title: intl.string(arg0 ? t.eYDA7D : t["9jYwjo"]), subtitle: null, confirmText: null, toastContent: null };
   const intl2 = tmp(1236).intl;
   const t2 = tmp(1236).t;
   obj = { settingName };
@@ -217,7 +217,7 @@ export const getProfileToActivityUpsellStrings = function getProfileToActivityUp
 export const getUpsellStrings = function getUpsellStrings(arg0, settingName) {
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;
-  let obj = { title: intl.string(arg0 ? t.jRx1Aa : t.S0Y0bh), subtitle: null, confirmText: null, toastContent: null };
+  obj = { title: intl.string(arg0 ? t.jRx1Aa : t.S0Y0bh), subtitle: null, confirmText: null, toastContent: null };
   const intl2 = tmp(1236).intl;
   const t2 = tmp(1236).t;
   obj = { settingName };
@@ -231,7 +231,7 @@ export const getUpsellStrings = function getUpsellStrings(arg0, settingName) {
   return obj;
 };
 export const computeProfileToActivityUpsell = function computeProfileToActivityUpsell(setting, NumberResult) {
-  let obj = map;
+  obj = map;
   let ACTIVITY_STATUS_OFF = map.get(NumberResult);
   if (ACTIVITY_STATUS_OFF == null) {
     ACTIVITY_STATUS_OFF = create.GuildActivityStatusRestrictionDefaultV2.ACTIVITY_STATUS_OFF;
@@ -309,7 +309,7 @@ export const sortGuildIdsByFrecency = function sortGuildIdsByFrecency(guildIds) 
   });
 };
 export const applyBulkGuildRestrictionChange = function applyBulkGuildRestrictionChange(direction, affectedGuildIds) {
-  const obj = set(7357);
+  obj = set(7357);
   const sanitizedActivityRestrictedGuilds = obj.getSanitizedActivityRestrictedGuilds();
   set = new Set(affectedGuildIds);
   if (direction === obj.RESTRICTING) {

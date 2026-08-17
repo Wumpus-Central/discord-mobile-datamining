@@ -1,17 +1,18 @@
 // discord_app/modules/stickers/StickerSendability.tsx
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import parseServerPackSticker from "parseServerPackSticker";
-import { Permissions } from "ME";
-import { getPremiumPlanItem } from "../../utils/PremiumUtils.tsx";
-import { getStickerExtensionFromFormatType } from "StickersUtils.tsx";
+import applyOverwritesAll from "applyOverwrites" /* 4026 */;
+import getPremiumPlanItemDefault from "getPremiumPlanItem" /* 4039 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import closure_4 from "trackCommunicationDisabled" /* 1990 */;
+import closure_5 from "parseServerPackSticker" /* 6771 */;
+import { Permissions } from "ME" /* 676 */;
 
-const require = arg1;
-function getStickerSendability(stickerById, trackCommunicationDisabled, channel) {
-  if (null == trackCommunicationDisabled) {
+require = arg1;
+function getStickerSendability(stickerById, closure_1_3, channel) {
+  if (null == closure_1_3) {
     return obj.NONSENDABLE;
   } else {
-    const result = getPremiumPlanItem.canUseCustomStickersEverywhere(trackCommunicationDisabled);
-    const obj4 = getPremiumPlanItem;
+    const result = getPremiumPlanItemDefault.canUseCustomStickersEverywhere(closure_1_3);
+    const obj4 = getPremiumPlanItemDefault;
     const tmp22 = require;
     if (obj5.isStandardSticker(stickerById)) {
       if (null == stickerPack.getStickerPack(stickerById.pack_id)) {
@@ -33,12 +34,12 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
             if (null != channel.guild_id) {
               obj = { permission: null, user: null, context: null };
               obj[0] = Permissions.USE_EXTERNAL_STICKERS;
-              obj[1] = trackCommunicationDisabled;
+              obj[1] = closure_1_3;
               obj[2] = channel;
               if (!obj2.can(obj)) {
                 const NONSENDABLE = obj.NONSENDABLE;
               }
-              obj2 = importAll(4026);
+              obj2 = applyOverwritesAll;
             }
           } else {
             SENDABLE_WITH_BOOSTED_GUILD = obj.SENDABLE_WITH_BOOSTED_GUILD;
@@ -51,7 +52,7 @@ function getStickerSendability(stickerById, trackCommunicationDisabled, channel)
   }
 }
 let obj = { SENDABLE: 0, [0]: "SENDABLE", SENDABLE_WITH_PREMIUM: 1, [1]: "SENDABLE_WITH_PREMIUM", NONSENDABLE: 2, [2]: "NONSENDABLE", SENDABLE_WITH_BOOSTED_GUILD: 3, [3]: "SENDABLE_WITH_BOOSTED_GUILD" };
-let result = require("ME").fileFinishedImporting("modules/stickers/StickerSendability.tsx");
+let result = require("set").fileFinishedImporting("modules/stickers/StickerSendability.tsx");
 
 export const StickerSendability = obj;
 export { getStickerSendability };

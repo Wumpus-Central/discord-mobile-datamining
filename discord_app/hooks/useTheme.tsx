@@ -1,11 +1,13 @@
 // discord_app/hooks/useTheme.tsx
-import { ThemeTypes } from "ME";
-import { AccessibilityAnnouncer } from "../design/shared.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import AccessibilityAnnouncer from "AccessibilityAnnouncer" /* 1363 */;
 
 function useTheme() {
   return AccessibilityAnnouncer.useThemeContext().theme;
 }
-const result = require("set").fileFinishedImporting("hooks/useTheme.tsx");
+const ThemeTypes = ME.ThemeTypes;
+const result = set.fileFinishedImporting("hooks/useTheme.tsx");
 
 export default useTheme;
 export { useTheme };

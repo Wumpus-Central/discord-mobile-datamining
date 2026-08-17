@@ -1,75 +1,64 @@
 // discord_app/modules/user_settings/premium/native/UserSettingsPremium.tsx
-import _fetchUserOffer from "_fetchUserOffer";
-import expandEventProperties from "expandEventProperties";
-import get_ActivityIndicator from "useSettingNavigationRoute";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import addSubscriptionPlan from "addSubscriptionPlan";
-import reset from "reset";
-import addEntitlement from "addEntitlement";
-import getState from "getState";
-import updateProduct from "updateProduct";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import { jsx } from "useNavigation";
-import createCacheKey from "createCacheKey";
-import { context } from "../../../app_analytics/useAnalyticsLocations.tsx";
-import { useStoreConnectionErrorAlert } from "../../../premium/native/useStoreConnectionErrorAlert.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import useMountLayoutEffectDefault from "useMountLayoutEffect" /* 4761 */;
+import contextDefault from "context" /* 7139 */;
+import QUICK_SWITCHERDefault from "QUICK_SWITCHER" /* 7159 */;
+import useStoreConnectionErrorAlertDefault from "useStoreConnectionErrorAlert" /* 7384 */;
+import BlockedPaymentsCountryDisplayDefault from "BlockedPaymentsCountryDisplay" /* 7689 */;
+import handleCancelSubscriptionDefault from "handleCancelSubscription" /* 7880 */;
+import GoogleManagementLinkDefault from "GoogleManagementLink" /* 7920 */;
+import AccountCreditTierDefault from "AccountCreditTier" /* 7922 */;
+import NitroHomeHeaderDefault from "NitroHomeHeader" /* 12848 */;
+import PremiumMarketingPageDefault from "PremiumMarketingPage" /* 12896 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_8 from "mergeGuildAvatar" /* 1922 */;
+import closure_9 from "addSubscriptionPlan" /* 4044 */;
+import closure_10 from "reset" /* 4045 */;
+import closure_11 from "addEntitlement" /* 5357 */;
+import closure_12 from "getState" /* 7383 */;
+import closure_13 from "updateProduct" /* 5319 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING;
-let c5;
-let closure_14;
-let closure_15;
-let closure_16;
-let closure_17;
-let closure_18;
-let closure_6;
-let error;
 const require = arg1;
 ({ ActivityIndicator: c5, View: closure_6, ScrollView: error } = get_ActivityIndicator);
 ({ AnalyticEvents: closure_14, AppStates: closure_15, UserSettingsSections: closure_16, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = ME);
 ({ PremiumTypes: closure_17, PREMIUM_SUBSCRIPTION_APPLICATION: closure_18 } = GuildFeatures);
 let closure_20 = createCacheKey.createStyles({ root: { flex: 1 }, container: { paddingVertical: 24, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING }, subscriptionHeader: { marginTop: 20, width: "100%" }, billingInfo: { marginTop: 20, width: "100%" }, accountCredit: { marginTop: 20, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, width: "100%" }, loadingSpinnerContainer: { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" } });
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremium.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/premium/native/UserSettingsPremium.tsx");
 
 export default function UserSettingsPremium(applicationId) {
-  let _fetchUserOffer;
-  let dependencyMap;
-  let importDefault;
-  let isFullScreenPresentation;
-  let onClose;
-  let onPaymentDismiss;
-  let onPaymentSuccess;
-  let premiumFeatureCardOrder;
-  let tmp8;
-  let tmp9;
   applicationId = applicationId.applicationId;
-  ({ activitySessionId: importDefault, channelId: dependencyMap, guildId: _fetchUserOffer, onClose, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation } = applicationId);
+  ({ activitySessionId: importDefault, channelId: dependencyMap, guildId: closure_3, onClose, premiumFeatureCardOrder, onPaymentSuccess, onPaymentDismiss, isFullScreenPresentation } = applicationId);
   if (isFullScreenPresentation === undefined) {
     isFullScreenPresentation = false;
   }
   let analyticsLocations;
-  let closure_5;
-  let closure_6;
+  closure_5 = undefined;
+  closure_6 = undefined;
   let stateFromStores;
-  let mergeGuildAvatar;
+  closure_8 = undefined;
   let premiumTrialOffer;
   let premiumDiscountOffer;
   let container = callback2();
   let tmp = importDefault;
   let tmp31Result = dependencyMap;
-  useStoreConnectionErrorAlert();
+  useStoreConnectionErrorAlertDefault();
   if (applicationId.isFromTextSection) {
-    let items = [tmp(7159).TEXT_AND_IMAGES];
+    let items = [QUICK_SWITCHERDefault.TEXT_AND_IMAGES];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const items2 = [...items1, tmp(7159).PREMIUM_MARKETING];
-  analyticsLocations = context(items2).analyticsLocations;
+  const items2 = [...items1, QUICK_SWITCHERDefault.PREMIUM_MARKETING];
+  analyticsLocations = contextDefault(items2).analyticsLocations;
   let obj = applicationId(7385);
   closure_5 = obj.useSettingNavigationRoute();
-  tmp(4761)(() => {
+  useMountLayoutEffectDefault(() => {
     const params = navigation.params;
     let analyticsLocation;
     if (params != null) {
@@ -85,13 +74,13 @@ export default function UserSettingsPremium(applicationId) {
     } else {
       obj = {};
     }
-    obj = { application_id: applicationId, location_stack: analyticsLocations, activity_session_id: closure_1, channel_id: closure_2, guild_id: _fetchUserOffer };
+    obj = { application_id: applicationId, location_stack: analyticsLocations, activity_session_id: closure_1, channel_id: closure_2, guild_id: closure_3 };
     const merged = Object.assign(obj);
-    outer1_1(outer1_2[19]).track(outer1_14.PREMIUM_MARKETING_PAGE_VIEWED, obj);
+    closure_1_1(closure_1_2[19]).track(closure_1_14.PREMIUM_MARKETING_PAGE_VIEWED, obj);
   });
-  let obj1 = applicationId(589);
+  obj1 = applicationId(589);
   const items3 = [premiumDiscountOffer];
-  const tmp4 = context;
+  const tmp4 = contextDefault;
   [tmp8, tmp9] = callback(obj1.useStateFromStoresArray(items3, () => {
     const items = [premiumDiscountOffer.getPremiumTypeSubscription(), premiumDiscountOffer.hasFetchedSubscriptions()];
     return items;
@@ -99,19 +88,19 @@ export default function UserSettingsPremium(applicationId) {
   let obj2 = applicationId(1500);
   closure_6 = obj2.useNavigation();
   let obj3 = applicationId(589);
-  const items4 = [getState];
+  const items4 = [closure_12];
   stateFromStores = obj3.useStateFromStores(items4, () => state2.getState());
-  mergeGuildAvatar = analyticsLocations.useRef(stateFromStores);
+  closure_8 = analyticsLocations.useRef(stateFromStores);
   let obj4 = applicationId(589);
-  const items5 = [addEntitlement];
+  const items5 = [closure_11];
   const stateFromStores1 = obj4.useStateFromStores(items5, () => {
     const items = [closure_18];
-    return addEntitlement.hasFetchedForApplicationIds(items);
+    return closure_11.hasFetchedForApplicationIds(items);
   });
   let obj5 = applicationId(589);
-  const items6 = [addEntitlement];
+  const items6 = [closure_11];
   const stateFromStores2 = obj5.useStateFromStores(items6, () => {
-    let forApplication = addEntitlement.getForApplication(closure_18);
+    let forApplication = closure_11.getForApplication(closure_18);
     if (forApplication == null) {
       const _Set = Set;
       forApplication = new Set();
@@ -122,10 +111,10 @@ export default function UserSettingsPremium(applicationId) {
   const items7 = [premiumTrialOffer];
   let stateFromStores3 = obj6.useStateFromStores(items7, () => premiumTrialOffer.isLoadedForPremiumSKUs());
   let obj7 = applicationId(589);
-  const items8 = [updateProduct];
+  const items8 = [closure_13];
   const stateFromStores4 = obj7.useStateFromStores(items8, () => product.getProduct(applicationId(7386).ProductIds.PREMIUM_TIER_2_MONTHLY));
   let obj8 = applicationId(589);
-  const items9 = [mergeGuildAvatar];
+  const items9 = [closure_8];
   const stateFromStores5 = obj8.useStateFromStores(items9, () => {
     const currentUser = ref.getCurrentUser();
     let flag;
@@ -146,13 +135,13 @@ export default function UserSettingsPremium(applicationId) {
   }, []);
   const items10 = [stateFromStores];
   const effect1 = analyticsLocations.useEffect(() => {
-    let tmp3 = stateFromStores === outer1_15.ACTIVE;
+    let tmp3 = stateFromStores === closure_1_15.ACTIVE;
     if (tmp3) {
       tmp3 = ref.current === tmp2.BACKGROUND;
     }
     if (tmp3) {
-      outer1_1(outer1_2[25]).wait(() => callback(table[26]).init());
-      const obj = outer1_1(outer1_2[25]);
+      closure_1_1(closure_1_2[25]).wait(() => callback(table[26]).init());
+      const obj = closure_1_1(closure_1_2[25]);
     }
     ref.current = stateFromStores;
   }, items10);
@@ -168,12 +157,12 @@ export default function UserSettingsPremium(applicationId) {
   const items11 = [premiumTrialOffer, premiumDiscountOffer];
   const effect2 = analyticsLocations.useEffect(() => {
     if (null != premiumTrialOffer) {
-      const result = outer1_1(outer1_2[31]).acknowledgeUserTrialOffer(tmp);
-      const obj = outer1_1(outer1_2[31]);
+      const result = closure_1_1(closure_1_2[31]).acknowledgeUserTrialOffer(tmp);
+      const obj = closure_1_1(closure_1_2[31]);
     }
     if (null != premiumDiscountOffer) {
-      applicationId(outer1_2[32]).acknowledgeUserOffer(undefined, tmp5);
-      const obj2 = applicationId(outer1_2[32]);
+      applicationId(closure_1_2[32]).acknowledgeUserOffer(undefined, tmp5);
+      const obj2 = applicationId(closure_1_2[32]);
     }
   }, items11);
   let tmp31Result3 = null != tmp8 && stateFromStores3 && tmp9;
@@ -200,7 +189,7 @@ export default function UserSettingsPremium(applicationId) {
     obj1 = { style: null, children: null };
     container = container.container;
     obj1[0] = container;
-    tmp = tmp(7689);
+    tmp = BlockedPaymentsCountryDisplayDefault;
     tmp31Result = tmp31(tmp, {});
     obj1[1] = tmp31Result;
     tmp31Result = tmp31(stateFromStores, obj1);
@@ -208,7 +197,7 @@ export default function UserSettingsPremium(applicationId) {
     const items12 = [container.root, ];
     let num = 0;
     if (tmp5Result1.isAndroid()) {
-      num = useSafeAreaInsets().bottom;
+      num = useSafeAreaInsetsDefault().bottom;
     }
     obj2 = { style: null, children: null };
     obj3 = { marginBottom: null };
@@ -237,7 +226,7 @@ export default function UserSettingsPremium(applicationId) {
         if (null == premiumFeatureCardOrder) {
           obj6 = { onClose: null };
           obj6[0] = onClose;
-          tmp31Result1 = tmp31(tmp(12848), obj6);
+          tmp31Result1 = tmp31(NitroHomeHeaderDefault, obj6);
         }
       }
       let TIER_2_LEADING = premiumFeatureCardOrder;
@@ -251,10 +240,10 @@ export default function UserSettingsPremium(applicationId) {
             let arr = state;
             const routes = state.getState().routes;
             const found = routes.find((name) => name.name === constants.GUILD_BOOSTING);
-            let obj = outer1_1(outer1_2[33]);
-            obj.setSection(outer1_16.GUILD_BOOSTING);
-            obj = { destinationPane: outer1_16.GUILD_BOOSTING };
-            const result = applicationId(outer1_2[34]).trackUserSettingsPaneViewed(obj);
+            let obj = closure_1_1(closure_1_2[33]);
+            obj.setSection(closure_1_16.GUILD_BOOSTING);
+            obj = { destinationPane: closure_1_16.GUILD_BOOSTING };
+            const result = applicationId(closure_1_2[34]).trackUserSettingsPaneViewed(obj);
             if (null != found) {
               arr.navigate(tmp2.GUILD_BOOSTING, undefined, { pop: true });
             } else {
@@ -265,14 +254,14 @@ export default function UserSettingsPremium(applicationId) {
           obj8[0] = container.subscriptionHeader;
           obj8[1] = handleLearnMorePremiumGuild;
           obj8[2] = tmp8;
-          tmp31Result2 = tmp31(tmp(7880), obj8);
+          tmp31Result2 = tmp31(handleCancelSubscriptionDefault, obj8);
         }
         obj7[2] = tmp31Result2;
         if (tmp31Result3) {
           obj9 = { style: null, subscription: null };
           obj9[0] = container.billingInfo;
           obj9[1] = tmp8;
-          tmp31Result3 = tmp31(tmp(7920), obj9);
+          tmp31Result3 = tmp31(GoogleManagementLinkDefault, obj9);
         }
         obj7[3] = tmp31Result3;
         if (stateFromStores3) {
@@ -281,7 +270,7 @@ export default function UserSettingsPremium(applicationId) {
           obj10[1] = tmp8;
           obj10[2] = stateFromStores2;
           obj10[3] = stateFromStores5;
-          stateFromStores3 = tmp31(tmp(7922), obj10);
+          stateFromStores3 = tmp31(AccountCreditTierDefault, obj10);
         }
         obj7[4] = stateFromStores3;
         obj7[5] = onClose;
@@ -293,8 +282,8 @@ export default function UserSettingsPremium(applicationId) {
         obj7[8] = onPaymentSuccess;
         obj7[9] = onPaymentDismiss;
         obj7[10] = isFullScreenPresentation;
-        tmp31Result1 = tmp31(tmp(12896), obj7);
-        const tmpResult = tmp(12896);
+        tmp31Result1 = tmp31(PremiumMarketingPageDefault, obj7);
+        const tmpResult = PremiumMarketingPageDefault;
       } else if (premiumTrialOfferPremiumType === closure_17.TIER_0) {
         let TIER_2_LEADING2 = tmp5(9326).PremiumFeatureCardOrder.TIER_0_LEADING;
       } else {

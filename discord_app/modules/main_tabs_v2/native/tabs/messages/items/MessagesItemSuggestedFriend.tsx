@@ -1,41 +1,35 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "Text";
-import { View } from "PressableBase";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import ME from "ME";
-import jsxProd from "SendMessageIcon";
-import createCacheKey from "createCacheKey";
-import { toNativeHorizontalOffset } from "../../../../../../../_runtime/15306_toNativeHorizontalOffset.js";
-import { noop } from "../../../../../../../discord_common/js/packages/flash-list/index.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { map } from "../../../../../screen/native/useScaledTextLineHeight.android.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import noop from "noop" /* 8029 */;
+import map from "map" /* 9288 */;
+import toNativeHorizontalOffset from "toNativeHorizontalOffset" /* 15306 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import ME from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c9;
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 let c4 = importAllResult;
-({ AnalyticEvents: error, RelationshipTypes: metroImportAll } = ME);
+({ AnalyticEvents: error, RelationshipTypes: closure_8 } = ME);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 let obj = { container: null, pressable: null, textContainer: null, avatar: null };
-obj = { paddingHorizontal: require("Themes").space.PX_8 };
+obj = { paddingHorizontal: ThemesDefault.space.PX_8 };
 obj[0] = obj;
-createCacheKey = { borderRadius: require("Themes").radii.md, flexDirection: "row", alignItems: "center", padding: require("Themes").space.PX_8 };
+createCacheKey = { borderRadius: ThemesDefault.radii.md, flexDirection: "row", alignItems: "center", padding: ThemesDefault.space.PX_8 };
 obj[1] = createCacheKey;
-obj[2] = { marginRight: require("Themes").space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
-let obj2 = { marginRight: require("Themes").space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
-obj[3] = { marginRight: require("Themes").space.PX_8 };
+obj[2] = { marginRight: ThemesDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
+let obj2 = { marginRight: ThemesDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
+obj[3] = { marginRight: ThemesDefault.space.PX_8 };
 let closure_11 = createCacheKey.createStyles(obj);
 let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(height) {
-  let addedPressed;
-  let setAddedPressed;
   height = height.height;
   const onAddFriendSuggestions = height.onAddFriendSuggestions;
   const suggestedFriend = height.suggestedFriend;
   ({ addedPressed, setAddedPressed } = height);
-  let importAllResult;
+  importAllResult = undefined;
   const tmp = callback3();
   importAllResult = tmp;
   let obj = importAllResult;
@@ -43,17 +37,17 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
   const items1 = [suggestedFriend];
   const memo = importAllResult.useMemo(() => {
     const items = [, , ];
-    ({ container: arr[0], pressable: arr[1] } = c4);
+    ({ container: arr[0], pressable: arr[1] } = closure_4);
     items[2] = { height };
     return items;
   }, items);
   const callback = importAllResult.useCallback(() => {
     height(suggestedFriend[10])(suggestedFriend[9], suggestedFriend.paths).then((arg0) => arg0.default({ userId: closure_2.user.id, localUser: closure_2.user, location: "Messages Tab User Profile" }));
   }, items1);
-  let obj1 = height(suggestedFriend[11]);
-  const items2 = [markAllUserIdListsStale];
+  obj1 = height(suggestedFriend[11]);
+  const items2 = [closure_6];
   if (!addedPressed) {
-    addedPressed = obj1.useStateFromStores(items2, () => outer1_6.getRelationshipType(suggestedFriend.user.id) === outer1_8.PENDING_OUTGOING);
+    addedPressed = obj1.useStateFromStores(items2, () => closure_1_6.getRelationshipType(suggestedFriend.user.id) === closure_1_8.PENDING_OUTGOING);
   }
   const items3 = [suggestedFriend];
   const memo1 = obj.useMemo(() => {
@@ -93,7 +87,7 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
     let obj = height(suggestedFriend[15]);
     obj.addContactSuggestion(user);
     obj = { suggested_user_id: user.id, suggestion_source: suggestedFriend.source, location: "Messages Tab" };
-    onAddFriendSuggestions(suggestedFriend[16]).track(outer1_7.FRIEND_SUGGESTION_ADDED, obj);
+    onAddFriendSuggestions(suggestedFriend[16]).track(closure_1_7.FRIEND_SUGGESTION_ADDED, obj);
     onAddFriendSuggestions((arg0) => {
       const items = [];
       items[HermesBuiltin.arraySpread(arg0, 0)] = closure_2;
@@ -130,10 +124,8 @@ let closure_12 = importAllResult.memo(function MessagesItemSuggestedFriendView(h
   obj[4] = items5;
   return closure_10(height(suggestedFriend[17]).PressableHighlight, obj);
 });
-let obj3 = { marginRight: require("Themes").space.PX_8 };
+let obj3 = { marginRight: ThemesDefault.space.PX_8 };
 const memoResult = importAllResult.memo((arg0) => {
-  let tmp2;
-  let tmp3;
   const obj = {};
   [tmp2, tmp3] = callback(importAllResult.useState(false), 2);
   const merged = Object.assign(arg0);
@@ -142,8 +134,6 @@ const memoResult = importAllResult.memo((arg0) => {
   return callback2(closure_12, obj);
 });
 const memoResult1 = importAllResult.memo((suggestedFriend) => {
-  let tmp2;
-  let tmp3;
   let obj = noop;
   const items = [suggestedFriend.suggestedFriend.user.id];
   obj = {};
@@ -154,8 +144,6 @@ const memoResult1 = importAllResult.memo((suggestedFriend) => {
   return callback2(closure_12, obj);
 });
 const memoResult2 = importAllResult.memo((arg0) => {
-  let tmp2;
-  let tmp3;
   let obj = toNativeHorizontalOffset;
   obj = {};
   [tmp2, tmp3] = callback(obj.useRecyclingState(false), 2);
@@ -164,13 +152,13 @@ const memoResult2 = importAllResult.memo((arg0) => {
   obj.setAddedPressed = tmp3;
   return callback2(closure_12, obj);
 });
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/items/MessagesItemSuggestedFriend.tsx");
 
 export const getMessagesItemSuggestedFriendHeight = function getMessagesItemSuggestedFriendHeight(fontScale) {
   const obj = map;
   const scaleTextLineHeightResult = map.scaleTextLineHeight("redesign/channel-title/semibold", fontScale);
   const sum = scaleTextLineHeightResult + map.scaleTextLineHeight("text-xs/medium", fontScale);
-  return sum + Themes.space.PX_16;
+  return sum + ThemesDefault.space.PX_16;
 };
 export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;

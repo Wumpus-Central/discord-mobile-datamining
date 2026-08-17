@@ -1,6 +1,8 @@
 // discord_app/modules/quests/native/BountiesModal/BountyCtaHelpers.tsx
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-const result = require("set").fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+
+const result = set.fileFinishedImporting("modules/quests/native/BountiesModal/BountyCtaHelpers.tsx");
 
 export const getBountyCtaInfo = function getBountyCtaInfo(bounty) {
   const obj = { label: bounty.productName, subtext: bounty.cta.buttonLabel, buttonLabel: null, iconImageUri: null };

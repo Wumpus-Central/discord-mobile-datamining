@@ -1,9 +1,12 @@
 // discord_app/modules/markup/MarkupSubtextRule.tsx
-import { t } from "../../../_runtime/04092_t.js";
+import set from "set" /* 2 */;
+import t from "t" /* 4092 */;
+import tDefault from "t" /* 4092 */;
+
 const re2 = /\n$/;
 const re3 = /^ *-# +((?!-#)[^\n]+)(?:\n|$)/;
 let obj = {
-  order: require("t").defaultRules.heading.order,
+  order: tDefault.defaultRules.heading.order,
   requiredFirstCharacters: ["-"],
   match(arg0, allowSubtext, str) {
     let tmp = null;
@@ -29,6 +32,6 @@ let obj = {
     return obj;
   }
 };
-const result = require("set").fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
+const result = set.fileFinishedImporting("modules/markup/MarkupSubtextRule.tsx");
 
 export default obj;

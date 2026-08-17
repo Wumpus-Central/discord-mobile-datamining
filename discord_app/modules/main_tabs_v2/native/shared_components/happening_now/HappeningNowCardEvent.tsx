@@ -1,20 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx
-import importAllResult from "HAPPENING_NOW_CARD_MARGIN_RIGHT";
-import get_ActivityIndicator from "getAvatarURL";
-import _getSystemLocale from "_getSystemLocale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING";
-import { AnalyticEvents } from "ME";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "_getSystemLocale" /* 1994 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import HAPPENING_NOW_PANELS_CONTAINER_PADDING from "HAPPENING_NOW_PANELS_CONTAINER_PADDING" /* 14640 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let HAPPENING_NOW_EVENT_BANNER_WIDTH;
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_12;
-let map1;
 const require = arg1;
 let c3 = importAllResult;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
@@ -22,28 +16,27 @@ const HAPPENING_NOW_CONTENT_HEIGHT = HAPPENING_NOW_PANELS_CONTAINER_PADDING.HAPP
 ({ HappeningNowCardTrackingType: c9, HAPPENING_NOW_CARD_HEIGHT: c10, HAPPENING_NOW_EVENT_BANNER_WIDTH } = HAPPENING_NOW_PANELS_CONTAINER_PADDING);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let obj = { info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 }, infoNoImage: null, decorationImage: null, dottedLineContainer: null, shortDottedLineSegment: null, dottedLineSegment: null, interestedUsersContainer: null, interestedUsersIcon: null, ticketContainer: null, avatarContainer: null };
-obj = { alignSelf: "center", justifyContent: "center", flexShrink: 1, flexGrow: 1, backgroundColor: require("Themes").colors.BACKGROUND_MOD_MUTED, height: HAPPENING_NOW_CONTENT_HEIGHT, gap: 2, marginRight: -4, paddingLeft: 8, paddingRight: 8, borderTopRightRadius: require("Themes").radii.sm, borderBottomRightRadius: require("Themes").radii.sm };
+obj = { alignSelf: "center", justifyContent: "center", flexShrink: 1, flexGrow: 1, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_MUTED, height: HAPPENING_NOW_CONTENT_HEIGHT, gap: 2, marginRight: -4, paddingLeft: 8, paddingRight: 8, borderTopRightRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm };
 obj[1] = obj;
-createCacheKey = { borderTopRightRadius: require("Themes").radii.sm, borderBottomRightRadius: require("Themes").radii.sm, alignSelf: "center", width: HAPPENING_NOW_EVENT_BANNER_WIDTH, height: HAPPENING_NOW_CONTENT_HEIGHT };
+createCacheKey = { borderTopRightRadius: ThemesDefault.radii.sm, borderBottomRightRadius: ThemesDefault.radii.sm, alignSelf: "center", width: HAPPENING_NOW_EVENT_BANNER_WIDTH, height: HAPPENING_NOW_CONTENT_HEIGHT };
 obj[2] = createCacheKey;
 obj[3] = { flexDirection: "column", gap: 4, position: "absolute", right: 0, top: 0, bottom: 0, overflow: "hidden" };
-obj[4] = { width: 2, height: 2, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-let obj2 = { width: 2, height: 2, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-obj[5] = { width: 2, height: 4, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
+obj[4] = { width: 2, height: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
+let obj2 = { width: 2, height: 2, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
+obj[5] = { width: 2, height: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
 obj[6] = { justifyContent: "center", alignItems: "center" };
-let obj3 = { width: 2, height: 4, backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
-obj[7] = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-let obj4 = { tintColor: require("Themes").colors.TEXT_SUBTLE };
-obj[8] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: require("Themes").radii.sm, borderBottomLeftRadius: require("Themes").radii.sm };
-const obj6 = { width: null };
-obj6[0] = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20];
-obj[9] = obj6;
+let obj3 = { width: 2, height: 4, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.8 };
+obj[7] = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+let obj4 = { tintColor: ThemesDefault.colors.TEXT_SUBTLE };
+obj[8] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm };
+let obj5 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: ThemesDefault.radii.sm, borderBottomLeftRadius: ThemesDefault.radii.sm };
+obj[9] = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20] };
 let closure_14 = createCacheKey.createStyles(obj);
-let obj5 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, flexDirection: "column", justifyContent: "space-between", alignItems: "center", height: HAPPENING_NOW_CONTENT_HEIGHT, padding: 6, borderTopLeftRadius: require("Themes").radii.sm, borderBottomLeftRadius: require("Themes").radii.sm };
+const obj6 = { width: require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.XSMALL_20] };
 let items = [{ shape: require("SolidCutout").CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 }];
 let closure_16 = importAllResult.memo(() => {
   const tmp = callback2();
-  const items = [];
+  items = [];
   let num = 0;
   if (0 <= HAPPENING_NOW_CONTENT_HEIGHT) {
     do {
@@ -59,8 +52,6 @@ let closure_16 = importAllResult.memo(() => {
 });
 let obj7 = { shape: require("SolidCutout").CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 const memoResult = importAllResult.memo((event) => {
-  let isLive;
-  let panelVariant;
   event = event.event;
   const index = event.index;
   ({ isLive, panelVariant } = event);
@@ -70,7 +61,7 @@ const memoResult = importAllResult.memo((event) => {
   let creator_id;
   const tmp = callback2();
   let obj = event(creator_id[11]);
-  let items = [_getSystemLocale];
+  items = [closure_6];
   creator_id = event.host_id;
   const stateFromStores = obj.useStateFromStores(items, () => locale.locale);
   if (creator_id == null) {
@@ -85,8 +76,8 @@ const memoResult = importAllResult.memo((event) => {
   }
   const ensureHydratedUsers = tmp2Result.useEnsureHydratedUsers(event.guild_id, items2);
   tmp2Result = tmp2(tmp3[11]);
-  const items3 = [mergeGuildAvatar];
-  const stateFromStores1 = tmp2Result.useStateFromStores(items3, () => outer1_7.getUser(creator_id));
+  const items3 = [closure_7];
+  const stateFromStores1 = tmp2Result.useStateFromStores(items3, () => closure_1_7.getUser(creator_id));
   let nextRecurrenceIdInEvent = null;
   if (null != event) {
     nextRecurrenceIdInEvent = tmp2(tmp3[13]).getNextRecurrenceIdInEvent(event);
@@ -97,15 +88,15 @@ const memoResult = importAllResult.memo((event) => {
   let source = null;
   const callback = importAllResult.useCallback(() => {
     let obj = index(creator_id[15]);
-    obj = { order: index, guild_id: event.guild_id, type: outer1_9.GUILD_EVENT_CARD, highlighted_user_ids: null, destination_channel_id: null };
+    obj = { order: index, guild_id: event.guild_id, type: closure_1_9.GUILD_EVENT_CARD, highlighted_user_ids: null, destination_channel_id: null };
     let tmp4 = null;
     if (null != creator_id) {
-      const items = [tmp3];
+      items = [tmp3];
       tmp4 = items;
     }
     obj[3] = tmp4;
     obj[4] = event.channel_id;
-    obj.track(outer1_11.ACTIVITY_CARD_CLICKED, obj);
+    obj.track(closure_1_11.ACTIVITY_CARD_CLICKED, obj);
     obj = { eventId: tmp2.id, event: tmp2 };
     const result = event(creator_id[16]).openGuildEventDetails(obj);
   }, items4);
@@ -137,7 +128,7 @@ const memoResult = importAllResult.memo((event) => {
   }
   obj[1] = str;
   obj[2] = panelVariant;
-  const obj1 = { cutouts: items, children: null };
+  obj1 = { cutouts: items, children: null };
   const obj2 = { style: tmp.ticketContainer, children: null };
   const obj3 = { style: tmp.avatarContainer, children: null };
   let tmp22Result = null != stateFromStores1;
@@ -209,6 +200,6 @@ const memoResult = importAllResult.memo((event) => {
   obj[3] = items9;
   return closure_13(tmp19, obj);
 });
-let result = require("_getSystemLocale").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx");
 
 export default memoResult;

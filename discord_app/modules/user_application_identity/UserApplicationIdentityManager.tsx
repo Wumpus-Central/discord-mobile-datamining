@@ -1,12 +1,13 @@
 // discord_app/modules/user_application_identity/UserApplicationIdentityManager.tsx
-import "initialize";
-import { fetchStore } from "UserApplicationIdentityActionCreators.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import fetchStore from "fetchStore" /* 12286 */;
 
-const require = arg1;
+require = arg1;
 function handleUserApplicationIdentityGatewayEvent(user_id) {
   const useUserApplicationIdentities = fetchStore.useUserApplicationIdentities;
   useUserApplicationIdentities.refetch(user_id.user_id);
 }
+initializeDefault;
 let prototype = function UserApplicationIdentityManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { USER_APPLICATION_IDENTITY_UPDATE: handleUserApplicationIdentityGatewayEvent, USER_APPLICATION_IDENTITY_REMOVE: handleUserApplicationIdentityGatewayEvent };

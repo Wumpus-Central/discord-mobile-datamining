@@ -1,17 +1,14 @@
 // discord_app/modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx
-import { jsx } from "jsxProd";
-import createNativeStackNavigator from "createNativeStackNavigator";
-import importAllResult from "noop";
-import { NavigationStack } from "../../../../design/components/Navigator/native/Navigator.native.tsx";
+import NavigationStack from "NavigationStack" /* 6312 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createNativeStackNavigator from "createNativeStackNavigator" /* 9931 */;
+import importAllResult from "noop" /* 19 */;
 
-const require = arg1;
-createNativeStackNavigator = createNativeStackNavigator.createNativeStackNavigator();
-const memoResult = require("noop").memo(function ModalStackNavigator(children) {
-  let importDefault;
-  let require;
-  let screenKey;
+require = arg1;
+let closure_4 = createNativeStackNavigator.createNativeStackNavigator();
+const memoResult = importAllResult.memo(function ModalStackNavigator(children) {
   ({ screenKey, title: require, titleIcon: importDefault } = children);
-  let dependencyMap;
+  dependencyMap = undefined;
   let obj = NavigationStack;
   dependencyMap = obj.useAccessibilityNativeStackOptions();
   obj = {
@@ -21,17 +18,16 @@ const memoResult = require("noop").memo(function ModalStackNavigator(children) {
         headerTitle(children) {
           const merged = Object.assign(children, Object.create(null));
           const merged1 = Object.assign(merged);
-          return outer1_3(outer1_0(outer1_2[4]).GenericHeaderTitle, { title: children.children, icon: closure_1 });
+          return closure_1_3(closure_1_0(closure_1_2[4]).GenericHeaderTitle, { title: children.children, icon: closure_1 });
         },
-        headerLeft: null,
+        headerLeft: closure_1_0(8492).getRenderModalCloseImage(navigation.navigation),
         headerTitleAlign: "center"
       };
-      obj[1] = outer1_0(8492).getRenderModalCloseImage(navigation.navigation);
       let merged = Object.assign(dependencyMap);
-      let merged1 = Object.assign(outer1_1(9941)());
+      let merged1 = Object.assign(closure_1_1(9941)());
       return obj;
     },
-    children: <createNativeStackNavigator.Screen {...obj} />
+    children: <closure_4.Screen {...obj} />
   };
   obj = {
     name: screenKey,
@@ -46,7 +42,7 @@ const memoResult = require("noop").memo(function ModalStackNavigator(children) {
       return obj;
     }
   };
-  return <createNativeStackNavigator.Navigator name={screenKey} options={function options() {
+  return <closure_4.Navigator name={screenKey} options={function options() {
     const obj = { title: closure_0, orientation: null };
     let str;
     if (obj2.isIOS()) {
@@ -54,8 +50,8 @@ const memoResult = require("noop").memo(function ModalStackNavigator(children) {
     }
     obj[1] = str;
     return obj;
-  }}>{arg0.render}</createNativeStackNavigator.Navigator>;
+  }}>{arg0.render}</closure_4.Navigator>;
 });
-const result = require("createNativeStackNavigator").fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/utils/ModalStackNavigator.tsx");
 
 export default memoResult;

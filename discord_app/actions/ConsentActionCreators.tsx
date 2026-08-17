@@ -1,12 +1,13 @@
 // discord_app/actions/ConsentActionCreators.tsx
-import { Endpoints } from "ME";
-import { sendRequest } from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import { dispatcher } from "../Dispatcher.tsx";
-import { getSystemLocale } from "../intl/index.native.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
 
 function handleRequestSuccess(body) {
   if (tmp) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "UPDATE_CONSENTS", consents: null };
     obj = {};
     const merged = Object.assign(body.body);
@@ -22,7 +23,7 @@ function handleRequestFailure(status) {
       let message = intl2.string(getSystemLocale.t.cvJdtg);
     }
     const _Error = Error;
-    const error = new Error(message);
+    error = new Error(message);
     throw error;
   }
   if (null != status) {
@@ -35,15 +36,15 @@ function handleRequestFailure(status) {
   const intl = getSystemLocale.intl;
   message = intl.string(getSystemLocale.t.cvJdtg);
 }
-const result = require("getSystemLocale").fileFinishedImporting("actions/ConsentActionCreators.tsx");
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("actions/ConsentActionCreators.tsx");
 
 export const fetchConsents = function fetchConsents() {
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: null };
-  obj[2] = sendRequest.rejectWithMigratedError();
+  const obj = { url: Endpoints.SETTINGS_CONSENT, oldFormErrors: true, rejectWithError: sendRequest.rejectWithMigratedError() };
   const value = HTTP.get(obj);
   return value.then(handleRequestSuccess, (body) => {
-    const error = new Error(body.body.message);
+    error = new Error(body.body.message);
     return Promise.reject(error);
   });
 };

@@ -1,9 +1,9 @@
 // discord_app/modules/collectibles/records/CollectiblesPurchaseRecord.tsx
-import fromServer from "fromServer";
-import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse";
-import { CollectiblesVariantProductRecord as closure_4 } from "fromServer";
-import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "items";
-import { PREMIUM_TYPE_NONE } from "ME";
+import closure_2 from "fromServer" /* 5304 */;
+import { createCollectiblesItemsFromServerResponse as closure_3 } from "createCollectiblesItemsFromServerResponse" /* 5305 */;
+import { CollectiblesVariantProductRecord as closure_4 } from "fromServer" /* 5303 */;
+import { REWARD_CATEGORY_AND_REWARD_SKU_IDS as closure_5 } from "items" /* 678 */;
+import { PREMIUM_TYPE_NONE } from "ME" /* 676 */;
 
 let prototype;
 prototype = function CollectiblesPurchaseRecord(arg0) {
@@ -11,22 +11,6 @@ prototype = function CollectiblesPurchaseRecord(arg0) {
   return Object.create(new.target.prototype);
 }.prototype;
 prototype["fromServer"] = function fromServer(sku_id) {
-  let base_variant_name;
-  let base_variant_sku_id;
-  let bundled_products;
-  let category_sku_id;
-  let eligible_offers;
-  let expires_at;
-  let google_sku_ids;
-  let name;
-  let premium_type;
-  let prices;
-  let purchase_type;
-  let purchased_at;
-  let type;
-  let variant_label;
-  let variant_value;
-  let variants;
   sku_id = sku_id.sku_id;
   ({ premium_type, bundled_products, variants, purchased_at, expires_at } = sku_id);
   ({ type, name, category_sku_id, prices, base_variant_name, base_variant_sku_id, variant_label, variant_value, purchase_type } = sku_id);
@@ -81,6 +65,6 @@ prototype["fromServer"] = function fromServer(sku_id) {
   obj.expiresAt = date1;
   return obj;
 };
-const result = require("fromServer").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/records/CollectiblesPurchaseRecord.tsx");
 
 export default prototype;

@@ -1,34 +1,28 @@
 // discord_app/modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/08496_registerAsset.js";
+import noopAll from "noop" /* 19 */;
+import registerAssetDefault from "registerAsset" /* 8496 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { useNavigation } from "../../../design/components/Navigator/native/useNavigation.native.tsx";
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 import { GenericHeaderTitle } from "../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import { useYouBarSettingsCustomHeaderPaddingTop } from "../../main_tabs_v2/native/you_bar/hooks/useYouBarSettingsSafeArea.tsx";
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let closure_7 = createCacheKey.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
-const result = require("jsxProd").fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/CollectiblesShopViewAllCategoryItemsHeader.tsx");
 
 export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
-  let buttonColor;
-  let categoryName;
-  let logoUrl;
   let _require;
   ({ logoUrl, buttonColor, categoryName } = arg0);
   let obj = _useNavigation;
   _require = obj.useStackNavigation();
   const tmp = callback3();
-  let obj1 = _useYouBarSettingsCustomHeaderPaddingTop;
+  obj1 = _useYouBarSettingsCustomHeaderPaddingTop;
   obj = { style: null, children: null };
   obj = {};
   const youBarSettingsCustomHeaderPaddingTop = obj1.useYouBarSettingsCustomHeaderPaddingTop();
@@ -36,9 +30,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
   obj.paddingTop = youBarSettingsCustomHeaderPaddingTop;
   obj[0] = obj;
   obj1 = { style: tmp.backButton, children: null };
-  const obj2 = { source: null, color: null, accessibilityLabel: null, onPress: null };
-  obj2[0] = registerAsset;
-  obj2[1] = buttonColor;
+  const obj2 = { source: registerAssetDefault, color: buttonColor, accessibilityLabel: null, onPress: null };
   const intl = _getSystemLocale.intl;
   obj2[2] = intl.string(_getSystemLocale.t["13/7kX"]);
   obj2[3] = function onPress() {

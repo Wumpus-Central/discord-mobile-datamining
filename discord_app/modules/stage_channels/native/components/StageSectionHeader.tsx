@@ -1,38 +1,33 @@
 // discord_app/modules/stage_channels/native/components/StageSectionHeader.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../_runtime/07129_registerAsset.js";
-import { ReanimatedRexport } from "../../../reanimated/ReanimatedRexport.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef4115 from "module_4115" /* 4115 */;
+import registerAssetDefault from "registerAsset" /* 7129 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
 const require = arg1;
+noopAll;
 ({ TouchableOpacity: c3, View: c4 } = get_ActivityIndicator);
 ({ jsxs: c5, jsx: closure_6 } = jsxProd);
 createCacheKey = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: null, audience: null };
-createCacheKey = { tintColor: require("Themes").colors.MOBILE_TEXT_HEADING_PRIMARY };
+createCacheKey = { tintColor: ThemesDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: require("Themes").radii.xs };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[4] = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: ThemesDefault.radii.xs };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
 let closure_8 = { code: "function StageSectionHeaderTsx1(){const{withTiming,collapsed}=this.__closure;return{transform:[{rotate:withTiming(collapsed?'180deg':'0deg',{duration:150})}]};}" };
-let obj1 = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: require("Themes").colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: require("Themes").radii.xs };
-const result = require("jsxProd").fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
+let obj1 = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: ThemesDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: ThemesDefault.radii.xs };
+const result = require("set").fileFinishedImporting("modules/stage_channels/native/components/StageSectionHeader.tsx");
 
 export default function StageSectionHeader(collapsed) {
-  let count;
-  let label;
-  let onToggleCollapse;
   collapsed = collapsed.collapsed;
   const children = collapsed.children;
   ({ label, count, onToggleCollapse } = collapsed);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = collapsed(4115);
   const fn = function y() {
-    let obj = collapsed(outer1_2[6]);
+    let obj = collapsed(closure_1_2[6]);
     let str = "0deg";
     if (collapsed) {
       str = "180deg";
@@ -48,7 +43,7 @@ export default function StageSectionHeader(collapsed) {
   fn.__workletHash = 13855092771739;
   fn.__initData = closure_8;
   obj = { style: tmp.section, children: null };
-  const obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
+  obj1 = { style: tmp.audience, onPress: onToggleCollapse, children: null };
   const animatedStyle = obj.useAnimatedStyle(fn);
   let items = [label, " \u2014 ", count];
   const items1 = [callback(collapsed(4734).Text, { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: items }), , ];
@@ -61,12 +56,8 @@ export default function StageSectionHeader(collapsed) {
   }
   items1[1] = tmp5Result;
   const obj3 = { style: tmp.collapseButton, children: null };
-  const obj4 = { style: animatedStyle, children: null };
-  const obj5 = { source: null, style: null };
-  obj5[0] = registerAsset;
-  obj5[1] = tmp.collapseIcon;
-  obj4[1] = closure_6(collapsed(1297).Icon, obj5);
-  obj3[1] = closure_6(ReanimatedRexport.View, obj4);
+  const obj4 = { style: animatedStyle, children: closure_6(collapsed(1297).Icon, { source: registerAssetDefault, style: tmp.collapseIcon }) };
+  obj3[1] = closure_6(_modDef4115.View, obj4);
   items1[2] = closure_6(closure_4, obj3);
   obj1[2] = items1;
   obj[1] = callback(closure_3, obj1);

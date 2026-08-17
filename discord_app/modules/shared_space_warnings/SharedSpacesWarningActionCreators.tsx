@@ -1,14 +1,16 @@
 // discord_app/modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx
-import { setDismissalTimeForChannel as closure_2 } from "useSharedSpacesWarningStore";
-import { Endpoints } from "ME";
-import { sendRequest } from "../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
+import set from "set" /* 2 */;
+import sendRequest from "sendRequest" /* 530 */;
+import ME from "ME" /* 676 */;
+import useSharedSpacesWarningStore from "useSharedSpacesWarningStore" /* 13283 */;
 
-const result = require("sendRequest").fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
+let closure_2 = useSharedSpacesWarningStore.setDismissalTimeForChannel;
+const Endpoints = ME.Endpoints;
+const result = set.fileFinishedImporting("modules/shared_space_warnings/SharedSpacesWarningActionCreators.tsx");
 
 export const dismissGdmBlockedUserWarning = function dismissGdmBlockedUserWarning(channelId) {
   callback(channelId);
   const HTTP = sendRequest.HTTP;
-  const obj = { url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId), rejectWithError: null };
-  obj[1] = sendRequest.rejectWithMigratedError();
+  const obj = { url: Endpoints.CHANNEL_BLOCKED_USER_WARNING_ACK(channelId), rejectWithError: sendRequest.rejectWithMigratedError() };
   return HTTP.post(obj);
 };

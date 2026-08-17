@@ -1,16 +1,17 @@
 // discord_app/lib/VideoSpinnerTimer.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import createRTCConnection from "createRTCConnection";
-import updateVoiceState from "updateVoiceState";
-import { AnalyticEvents } from "ME";
-import { sleep } from "../../discord_common/js/packages/time-utils/TimeUtils.tsx";
-import { expandEventProperties } from "../utils/AnalyticsUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import sleep from "sleep" /* 4548 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import closure_5 from "handleConnectionInfoChange" /* 4564 */;
+import closure_6 from "createRTCConnection" /* 4539 */;
+import closure_7 from "updateVoiceState" /* 4542 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 const map = new Map();
-let result = require("handleConnectionInfoChange").fileFinishedImporting("lib/VideoSpinnerTimer.tsx");
+let result = require("set").fileFinishedImporting("lib/VideoSpinnerTimer.tsx");
 class VideoSpinnerTimer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
@@ -78,8 +79,8 @@ prototype["trackSpinnerDuration"] = function trackSpinnerDuration(videoSpinnerCo
       obj[9] = store.getType();
       obj[10] = store.getEffectiveConnectionSpeed();
       obj[11] = store.getServiceProvider();
-      expandEventProperties.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
-      const obj2 = expandEventProperties;
+      expandEventPropertiesDefault.track(AnalyticEvents.VIDEO_SPINNER_SHOWN_V2, obj);
+      const obj2 = expandEventPropertiesDefault;
     }
     const obj4 = map;
   }

@@ -1,32 +1,28 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_5 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
 const require = arg1;
 let c3 = importAllResult;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let closure_8 = createCacheKey.createStyles((height) => {
   let obj = { row: null, rowInner: null, rowHeaderWrapper: null, placeholderAvatar: null, placeholderText: null };
-  obj = { paddingHorizontal: Themes.space.PX_16, flexDirection: "row", alignItems: "center", height };
+  obj = { paddingHorizontal: ThemesDefault.space.PX_16, flexDirection: "row", alignItems: "center", height };
   obj[0] = obj;
-  obj = { marginHorizontal: Themes.space.PX_16, flex: 1 };
+  obj = { marginHorizontal: ThemesDefault.space.PX_16, flex: 1 };
   obj[1] = obj;
   obj[2] = { alignItems: "center", flexDirection: "row" };
-  obj[3] = { width: Themes.space.PX_32, height: Themes.space.PX_32, borderRadius: Themes.radii.lg, overflow: "hidden", backgroundColor: Themes.colors.BORDER_SUBTLE };
-  const obj1 = { width: Themes.space.PX_32, height: Themes.space.PX_32, borderRadius: Themes.radii.lg, overflow: "hidden", backgroundColor: Themes.colors.BORDER_SUBTLE };
-  obj[4] = { height: 20, borderRadius: Themes.radii.sm, backgroundColor: Themes.colors.BORDER_SUBTLE };
+  obj[3] = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj1 = { width: ThemesDefault.space.PX_32, height: ThemesDefault.space.PX_32, borderRadius: ThemesDefault.radii.lg, overflow: "hidden", backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
+  obj[4] = { height: 20, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BORDER_SUBTLE };
   return obj;
 });
 let closure_9 = { code: "function UserPlaceholderRowTsx1(){const{opacity}=this.__closure;return{opacity:opacity.get()};}" };
 const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
-  let height;
-  let row;
   let flag = animate.animate;
   if (flag === undefined) {
     flag = true;
@@ -40,24 +36,24 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   const tmp3 = callback3(height);
   let obj = sharedValue(4115);
   sharedValue = obj.useSharedValue(1);
-  let obj1 = sharedValue(589);
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  obj1 = sharedValue(589);
+  const items = [closure_5];
   if (flag) {
     flag = !obj1.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
   }
   const items1 = [flag, sharedValue];
   const effect = importAllResult.useEffect(() => {
     if (flag) {
-      let obj = sharedValue(outer1_2[6]);
-      const obj2 = sharedValue(outer1_2[6]);
+      let obj = sharedValue(closure_1_2[6]);
+      const obj2 = sharedValue(closure_1_2[6]);
       obj = { duration: null };
-      obj[0] = 2 * sharedValue(outer1_2[9]).timingSlowDuration;
-      const obj3 = sharedValue(outer1_2[8]);
-      const withTimingResult = sharedValue(outer1_2[8]).withTiming(0.3, obj);
+      obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
+      const obj3 = sharedValue(closure_1_2[8]);
+      const withTimingResult = sharedValue(closure_1_2[8]).withTiming(0.3, obj);
       obj = { duration: null };
-      obj[0] = 2 * sharedValue(outer1_2[9]).timingSlowDuration;
-      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(outer1_2[8]).withTiming(1, obj)), -1, true));
-      const obj5 = sharedValue(outer1_2[8]);
+      obj[0] = 2 * sharedValue(closure_1_2[9]).timingSlowDuration;
+      const result = set(obj.withRepeat(obj2.withSequence(withTimingResult, sharedValue(closure_1_2[8]).withTiming(1, obj)), -1, true));
+      const obj5 = sharedValue(closure_1_2[8]);
     } else {
       const result1 = set(1);
     }
@@ -88,6 +84,6 @@ const memoResult = importAllResult.memo(function UserPlaceholderRow(animate) {
   obj[2] = items3;
   return callback2(flag(4115).View, obj);
 });
-let result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
+let result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UserPlaceholderRow.tsx");
 
 export default memoResult;

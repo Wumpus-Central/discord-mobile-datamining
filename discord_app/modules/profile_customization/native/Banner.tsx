@@ -1,21 +1,18 @@
 // discord_app/modules/profile_customization/native/Banner.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { BANNER_HEIGHT } from "ME";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { int2hslRaw } from "../../../../discord_common/js/shared/utils/ColorUtils.tsx";
-import { preload } from "../../../components_native/common/FastImage.tsx";
+import noopAll from "noop" /* 19 */;
+import int2hslRaw from "int2hslRaw" /* 688 */;
+import preloadDefault from "preload" /* 5449 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { BANNER_HEIGHT } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_6 = createCacheKey.createStyles({ root: { width: "100%" }, image: { width: "100%", height: "100%" } });
-const result = require("ME").fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
+const result = require("set").fileFinishedImporting("modules/profile_customization/native/Banner.tsx");
 
 export default function ProfileBanner(bannerHeight) {
-  let backgroundColor;
-  let bannerSafeArea;
-  let bannerSource;
-  let style;
   ({ bannerSource, bannerSafeArea } = bannerHeight);
   ({ style, backgroundColor } = bannerHeight);
   if (bannerSafeArea === undefined) {
@@ -26,9 +23,7 @@ export default function ProfileBanner(bannerHeight) {
     bannerHeight = BANNER_HEIGHT;
   }
   const tmp = callback();
-  let obj = { backgroundColor: null, height: null };
-  obj[0] = int2hslRaw.int2hex(backgroundColor);
-  obj[1] = bannerHeight + bannerSafeArea;
+  let obj = { backgroundColor: int2hslRaw.int2hex(backgroundColor), height: bannerHeight + bannerSafeArea };
   obj = { style: items, children: null };
   items = [tmp.root, obj, style];
   let tmp3Result = null;
@@ -36,7 +31,7 @@ export default function ProfileBanner(bannerHeight) {
     obj = { style: null, source: null };
     obj[0] = tmp.image;
     obj[1] = bannerSource;
-    tmp3Result = tmp3(preload, obj);
+    tmp3Result = tmp3(preloadDefault, obj);
   }
   obj[1] = tmp3Result;
   return <View style={items}>{null}</View>;

@@ -1,18 +1,19 @@
 // discord_app/modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/07989_registerAsset.js";
-import { createPremiumGroupInviteEmbed } from "../row_data/embeds/PremiumGroupInviteEmbed.tsx";
-import { createCommonMessage } from "createCommonMessage.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import registerAssetDefault from "registerAsset" /* 7989 */;
+import frozen from "frozen" /* 8171 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8188 */;
+import createPremiumGroupInviteEmbed from "createPremiumGroupInviteEmbed" /* 8266 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "ensureGuildLoaded" /* 1391 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
-createCacheKey = { iconTintColor: require("Themes").colors.ICON_STRONG, iconDividerColor: require("Themes").colors.ICON_STRONG };
-createCacheKey = createCacheKey.createNativeStyleProperties(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
+require = arg1;
+createCacheKey = { iconTintColor: ThemesDefault.colors.ICON_STRONG, iconDividerColor: ThemesDefault.colors.ICON_STRONG };
+let closure_5 = createCacheKey.createNativeStyleProperties(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/messages/native/renderer/system_messages/PremiumGroupInviteSystemMessage.tsx");
 
 export const createPremiumGroupInviteSystemMessage = function createPremiumGroupInviteSystemMessage(message) {
-  let theme;
   ({ message, theme } = message);
   channel = channel.getChannel(message.getChannelId());
   id = id.getId();
@@ -22,12 +23,12 @@ export const createPremiumGroupInviteSystemMessage = function createPremiumGroup
     return null;
   } else {
     obj = {};
-    const merged = Object.assign(createCommonMessage(message));
+    const merged = Object.assign(createCommonMessageDefault(message));
     obj.premiumGroupInviteInfo = premiumGroupInviteEmbed;
-    const tmp7 = createCacheKey(theme);
-    obj.iconUrl = tmp3(8171).getAssetUriForEmbed(registerAsset);
+    const tmp7 = callback(theme);
+    obj.iconUrl = frozen.getAssetUriForEmbed(registerAssetDefault);
     ({ iconTintColor: obj2.iconTintColor, iconDividerColor: obj2.iconDividerColor } = tmp7);
     return obj;
   }
-  tmp3 = require;
+  const tmp3 = require;
 };

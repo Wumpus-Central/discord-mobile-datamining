@@ -1,21 +1,13 @@
 // discord_app/modules/messages/native/renderer/transformMessageAttachments.tsx
-import { AttachmentType } from "Changeset";
-import { MessageAttachmentFlags } from "ME";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import Changeset from "Changeset" /* 8158 */;
 
-let result = require("hasFlag").fileFinishedImporting("modules/messages/native/renderer/transformMessageAttachments.tsx");
+const AttachmentType = Changeset.AttachmentType;
+const MessageAttachmentFlags = ME.MessageAttachmentFlags;
+let result = set.fileFinishedImporting("modules/messages/native/renderer/transformMessageAttachments.tsx");
 
 export default function transformMessageAttachments(arg0) {
-  let AttachmentType;
-  let MessageAttachmentFlags;
-  let attachments;
-  let closure_5;
-  let closure_6;
-  let closure_7;
-  let closure_8;
-  let closure_9;
-  let dependencyMap;
-  let importDefault;
-  let require;
   ({ attachments, uploadAttachments: require, shouldInlineAttachmentMedia: importDefault, gifAutoPlay: dependencyMap, viewImageDescriptions: AttachmentType, useReducedMotion: MessageAttachmentFlags, shouldObscureSpoiler: closure_5, themedBackgroundColor: closure_6, enabledContentHarmTypeFlags: closure_7, shouldAgeVerify: closure_8, colors: closure_9 } = arg0);
   const found = attachments.filter((flags) => {
     let tmp = null == flags.flags;
@@ -26,29 +18,16 @@ export default function transformMessageAttachments(arg0) {
     return tmp;
   });
   return found.map((arg0, arg1) => {
-    let description;
-    let duration_secs;
-    let filename;
-    let flags;
-    let height;
-    let id;
-    let placeholder;
-    let placeholder_version;
-    let proxy_url;
-    let size;
-    let url;
-    let waveform;
-    let width;
     ({ proxy_url, url, filename, width, height, flags } = arg0);
     ({ size, description, duration_secs, waveform, id, placeholder, placeholder_version } = arg0);
-    let obj = outer1_0(outer1_2[3]);
+    let obj = closure_1_0(closure_1_2[3]);
     const isImageFileResult = obj.isImageFile(filename);
-    let obj1 = outer1_0(outer1_2[3]);
+    obj1 = closure_1_0(closure_1_2[3]);
     const isAudioFileResult = obj1.isAudioFile(filename);
-    const isVideoFileResult = outer1_0(outer1_2[3]).isVideoFile(filename);
-    const obj3 = outer1_0(outer1_2[3]);
+    const isVideoFileResult = closure_1_0(closure_1_2[3]).isVideoFile(filename);
+    const obj3 = closure_1_0(closure_1_2[3]);
     let tmp7 = isImageFileResult;
-    const obj4 = outer1_0(outer1_2[3]);
+    const obj4 = closure_1_0(closure_1_2[3]);
     if (!isImageFileResult) {
       tmp7 = isVideoFileResult;
     }
@@ -59,7 +38,7 @@ export default function transformMessageAttachments(arg0) {
     if (isImageFileResult) {
       if (null != width) {
         if (null != height) {
-          const obj5 = outer1_1(tmp2[4]);
+          const obj5 = closure_1_1(tmp2[4]);
           let imageSrc = obj5.getImageSrc(proxy_url, width, height, !closure_2);
         }
         tmpResult = tmp(tmp2[5]);
@@ -112,7 +91,7 @@ export default function transformMessageAttachments(arg0) {
           flags = 0;
         }
         let tmp27;
-        if (tmpResult3.hasFlag(flags, outer1_4.IS_CLIP)) {
+        if (tmpResult3.hasFlag(flags, closure_1_4.IS_CLIP)) {
           obj = { attachmentTagText: null, attachmentTagIconType: "clip", attachmentTagBackgroundColor: null, attachmentTagTextColor: null };
           const intl = tmp(tmp2[7]).intl;
           obj[0] = intl.string(tmp(tmp2[7]).t.gESDiU);
@@ -141,12 +120,12 @@ export default function transformMessageAttachments(arg0) {
         }
         obj[1] = tmp29;
         obj[2] = tmp15;
-        obj[3] = outer1_1(tmp2[9])(arg0);
+        obj[3] = closure_1_1(tmp2[9])(arg0);
         tmpResult3 = tmp(tmp2[2]);
-        obj[4] = outer1_1(tmp2[10]).filesize(size);
+        obj[4] = closure_1_1(tmp2[10]).filesize(size);
         obj[5] = description;
         const intl2 = tmp(tmp2[7]).intl;
-        const obj13 = outer1_1(tmp2[10]);
+        const obj13 = closure_1_1(tmp2[10]);
         obj[6] = intl2.string(tmp(tmp2[7]).t.jCV1Tz).toUpperCase();
         const intl3 = tmp(tmp2[7]).intl;
         obj[7] = intl3.string(tmp(tmp2[7]).t.fSiQ3A);

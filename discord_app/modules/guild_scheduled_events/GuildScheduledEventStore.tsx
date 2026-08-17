@@ -1,16 +1,12 @@
 // discord_app/modules/guild_scheduled_events/GuildScheduledEventStore.tsx
-import fetchFingerprint from "fetchFingerprint";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { Store } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import closure_3 from "trackCommunicationDisabled" /* 1990 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
-let c4;
-let c5;
-let closure_6;
 function scheduledEventSort(status) {
-  let id;
-  let scheduled_start_time;
   ({ id, scheduled_start_time } = status);
   let tmp = null != status;
   if (tmp) {
@@ -31,8 +27,6 @@ function saveEvent(id) {
   closure_9 = closure_9 + 1;
 }
 function addGuildEventUser(guild_scheduled_event_id) {
-  let guild_scheduled_event_exception_id3;
-  let guild_scheduled_event_id2;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -87,8 +81,6 @@ function addGuildEventUser(guild_scheduled_event_id) {
   }
 }
 function removeGuildEventUser(guild_scheduled_event_exception_id, arg1) {
-  let guild_scheduled_event_exception_id3;
-  let guild_scheduled_event_id;
   let flag = arg1;
   if (arg1 === undefined) {
     flag = true;
@@ -154,7 +146,7 @@ function handleGuildScheduledEventUpdateOrCreate(guildScheduledEvent) {
 }
 function handleGuildScheduledEventExceptionCreateOrUpdate(eventException) {
   eventException = eventException.eventException;
-  let obj = secondaryIndexMap;
+  obj = secondaryIndexMap;
   const value = secondaryIndexMap.get(eventException.event_id);
   if (null == value) {
     return false;
@@ -201,9 +193,6 @@ let obj = {
   }
 };
 const secondaryIndexMap = new require("version").SecondaryIndexMap(function scheduledEventIndex(status) {
-  let channel_id;
-  let entity_id;
-  let guild_id;
   ({ guild_id, entity_id, channel_id } = status);
   const items = [guild_id];
   if (null != entity_id) {
@@ -243,11 +232,12 @@ let closure_10 = [];
 const SERIES = "SERIES";
 let closure_12 = {};
 let closure_13 = {};
+const Store = initializeDefault.Store;
 class GuildScheduledEventStore extends Store {
 }
 const prototype = GuildScheduledEventStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, trackCommunicationDisabled);
+  this.waitFor(closure_2, closure_3);
 };
 prototype["getGuildScheduledEvent"] = function getGuildScheduledEvent(closure_0) {
   let tmp = null;
@@ -271,24 +261,24 @@ prototype["getGuildScheduledEventsForGuild"] = function getGuildScheduledEventsF
   }
   return items;
 };
-prototype["getGuildScheduledEventsByIndex"] = function getGuildScheduledEventsByIndex(outer1_8) {
-  return secondaryIndexMap.values(outer1_8);
+prototype["getGuildScheduledEventsByIndex"] = function getGuildScheduledEventsByIndex(closure_1_8) {
+  return secondaryIndexMap.values(closure_1_8);
 };
 prototype["getRsvpVersion"] = function getRsvpVersion() {
   return c9;
 };
-prototype["getRsvp"] = function getRsvp(id, outer1_1, id2) {
-  if (null == id) {
+prototype["getRsvp"] = function getRsvp(closure_1_0, closure_1_1, id) {
+  if (null == closure_1_0) {
     return null;
   } else {
-    let tmp = outer1_1;
-    if (outer1_1 == null) {
+    let tmp = closure_1_1;
+    if (closure_1_1 == null) {
       tmp = SERIES;
     }
     let tmp4;
-    if (dependencyMap[id] != null) {
+    if (dependencyMap[closure_1_0] != null) {
       if (tmp3[tmp] != null) {
-        tmp4 = tmp5[id2];
+        tmp4 = tmp5[id];
       }
     }
     return tmp4;
@@ -378,7 +368,7 @@ prototype["getUsersForGuildEvent"] = function getUsersForGuildEvent(closure_0, c
     if (closure_1 == null) {
       tmp = SERIES;
     }
-    let obj;
+    obj = undefined;
     if (dependencyMap[closure_0] != null) {
       obj = tmp3[tmp];
     }
@@ -393,9 +383,9 @@ obj = {
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     secondaryIndexMap.clear();
-    let c9 = 0;
-    let closure_12 = {};
-    let closure_13 = {};
+    c9 = 0;
+    closure_12 = {};
+    closure_13 = {};
     const item = closure_10.forEach(saveEvent);
     const item1 = guilds.forEach((guild_scheduled_events) => {
       const prop = guild_scheduled_events.guild_scheduled_events;
@@ -408,15 +398,15 @@ obj = {
   },
   GUILD_CREATE: function handleGuildCreate(guild) {
     guild = guild.guild;
-    let c0 = false;
+    c0 = false;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guild.id));
     const item = values.forEach((id) => {
-      outer1_8.delete(id.id);
+      closure_1_8.delete(id.id);
       delete tmp[tmp2];
       if (c0) {
         delete tmp[tmp2];
       }
-      outer1_9 = outer1_9 + 1;
+      closure_9 = closure_9 + 1;
     });
     const prop = guild.guild_scheduled_events;
     const item1 = prop.forEach((id) => {
@@ -426,15 +416,15 @@ obj = {
     return true;
   },
   GUILD_DELETE: function handleGuildDelete(guild) {
-    let c0 = true;
+    c0 = true;
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guild.guild.id));
     const item = values.forEach((id) => {
-      outer1_8.delete(id.id);
+      closure_1_8.delete(id.id);
       delete tmp[tmp2];
       if (c0) {
         delete tmp[tmp2];
       }
-      outer1_9 = outer1_9 + 1;
+      closure_9 = closure_9 + 1;
     });
     return true;
   },
@@ -448,7 +438,7 @@ obj = {
     const values = secondaryIndexMap.values(obj.GUILD_EVENT(guildScheduledEvents.guildId), true);
     const mapped = values.map((id) => id.id);
     const mapped1 = guildScheduledEvents.map((id) => id.id);
-    obj = apply;
+    obj = applyDefault;
     const item = obj.difference(mapped, mapped1).forEach((arg0) => {
       set.delete(arg0);
       delete tmp[tmp2];
@@ -472,11 +462,6 @@ obj = {
     return true;
   },
   GUILD_SCHEDULED_EVENT_USER_ADD: function handleRsvpCreate(arg0) {
-    let guildEventExceptionId;
-    let guildEventId;
-    let guildId;
-    let response;
-    let userId;
     ({ userId, guildEventId, guildEventExceptionId } = arg0);
     let tmp = guildEventExceptionId;
     ({ guildId, response } = arg0);
@@ -492,7 +477,7 @@ obj = {
     if (null != tmp3) {
       removeGuildEventUser(tmp3, false);
     }
-    const obj = { user_id: userId, guild_scheduled_event_id: guildEventId, member: null, guild_scheduled_event_exception_id: null, response: null };
+    obj = { user_id: userId, guild_scheduled_event_id: guildEventId, member: null, guild_scheduled_event_exception_id: null, response: null };
     member = member.getMember(guildId, userId);
     obj[2] = member;
     obj[3] = guildEventExceptionId;
@@ -530,12 +515,12 @@ obj = {
       let tmp = arg0;
       const diff = counts.eventCount - counts.recurrenceCounts[arg0];
       if (arg0 == null) {
-        tmp = outer1_11;
+        tmp = closure_1_11;
       }
-      if (null == outer1_13[eventId]) {
-        outer1_13[tmp2] = {};
+      if (null == closure_1_13[eventId]) {
+        closure_1_13[tmp2] = {};
       }
-      outer1_13[eventId][tmp] = diff;
+      closure_1_13[eventId][tmp] = diff;
     });
   },
   INVITE_RESOLVE_SUCCESS: function handleInviteResolveSuccess(invite) {
@@ -552,7 +537,7 @@ obj = {
   GUILD_SCHEDULED_EVENT_EXCEPTION_UPDATE: handleGuildScheduledEventExceptionCreateOrUpdate,
   GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE: function handleGuildScheduledEventExceptionDelete(eventException) {
     eventException = eventException.eventException;
-    let obj = secondaryIndexMap;
+    obj = secondaryIndexMap;
     const value = secondaryIndexMap.get(eventException.event_id);
     if (null == value) {
       return false;
@@ -568,7 +553,7 @@ obj = {
     }
   },
   GUILD_SCHEDULED_EVENT_EXCEPTIONS_DELETE: function handleGuildScheduledEventExceptionsDelete(eventId) {
-    let obj = secondaryIndexMap;
+    obj = secondaryIndexMap;
     const value = secondaryIndexMap.get(eventId.eventId);
     let flag = null != value;
     if (flag) {
@@ -586,8 +571,8 @@ obj = {
     return true;
   }
 };
-const guildScheduledEventStore = new GuildScheduledEventStore(require("dispatcher"), obj);
-let result = require("GUILD_EVENT_MAX_NAME_LENGTH").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
+const guildScheduledEventStore = new GuildScheduledEventStore(dispatcherDefault, obj);
+let result = require("set").fileFinishedImporting("modules/guild_scheduled_events/GuildScheduledEventStore.tsx");
 
 export default guildScheduledEventStore;
 export const StaticGuildEventIndexes = obj;

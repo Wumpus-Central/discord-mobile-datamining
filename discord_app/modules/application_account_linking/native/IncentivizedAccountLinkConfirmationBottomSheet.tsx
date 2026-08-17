@@ -1,29 +1,30 @@
 // discord_app/modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx
-import "messagesProxy";
-import { Image } from "combined";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import { HelpdeskArticles } from "ME";
-import { jsx } from "jsxProd";
-import { metadata } from "../../../../discord_assets/assets/orbs/orb_coachmark_asset_2x.png.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { Button } from "../../../design/components/Button/native/Button.native.tsx";
-import { WindowLaunchIcon } from "../../../design/components/Icon/native/redesign/generated/WindowLaunchIcon.tsx";
-import { PromoSheet } from "../../../design/components/Sheet/native/PromoSheet.native.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import initialize from "initialize" /* 589 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import PromoSheet from "PromoSheet" /* 8017 */;
+import WindowLaunchIcon from "WindowLaunchIcon" /* 12049 */;
+import metadataDefault from "metadata" /* 14974 */;
+import { Image } from "get ActivityIndicator" /* 17 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let c7 = 150;
-const result = require("maybeApplyNoTextColorForLightCustomTheme").fileFinishedImporting("modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/application_account_linking/native/IncentivizedAccountLinkConfirmationBottomSheet.tsx");
 
 export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   let obj = initialize;
-  const items = [maybeApplyNoTextColorForLightCustomTheme];
+  const items = [closure_4];
   if (obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion)) {
     obj = { source: null, style: null };
     obj = { uri: null };
-    obj[0] = metadata;
+    obj[0] = metadataDefault;
     obj[0] = obj;
-    const obj1 = { width: null, height: null };
+    obj1 = { width: null, height: null };
     obj1[0] = c7;
     obj1[1] = c7;
     obj[1] = obj1;
@@ -61,15 +62,14 @@ export default function IncentivizedAccountLinkConfirmationBottomSheet() {
   const obj7 = { text: null, icon: null, iconPosition: "end", size: "lg", onPress: null };
   const intl = tmp(1236).intl;
   obj7[0] = intl.string(getSystemLocale.t.aRIFWD);
-  const obj8 = { size: "sm", color: null };
-  obj8[1] = tmp8(712).colors.WHITE;
-  obj7[1] = tmp9(WindowLaunchIcon.WindowLaunchIcon, obj8);
+  obj7[1] = tmp9(WindowLaunchIcon.WindowLaunchIcon, { size: "sm", color: tmp8(712).colors.WHITE });
   obj7[4] = function onPress() {
     callback(4342).hideActionSheet();
     const obj = callback(4342);
     const obj2 = callback(4090);
     obj2.openURL(callback(1993).getArticleURL(constants.IN_GAME_FEATURES));
   };
+  const obj8 = { size: "sm", color: tmp8(712).colors.WHITE };
   const obj9 = { title: null, description: null, actions: null, illustration: null, onDismiss: null };
   const intl2 = tmp(1236).intl;
   obj9[0] = intl2.string(tmp8(2981).ublzTG);

@@ -1,12 +1,14 @@
 // discord_app/modules/connectivity/native/ConnectivityIndicatorStateStore.tsx
-import handleClearCaches from "handleClearCaches";
-import fetchFingerprint from "fetchFingerprint";
-import reinjectEphemerals from "reinjectEphemerals";
-import handleConnectionOpen from "handleConnectionOpen";
-import getState from "getState";
-import { AppStates } from "ME";
-import { Store } from "initialize";
-import { awaitOnline } from "../../../utils/NetworkUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import awaitOnlineDefault from "awaitOnline" /* 1474 */;
+import closure_2 from "handleClearCaches" /* 5067 */;
+import closure_3 from "fetchFingerprint" /* 1218 */;
+import closure_4 from "reinjectEphemerals" /* 4994 */;
+import closure_5 from "handleConnectionOpen" /* 1979 */;
+import closure_6 from "getState" /* 7383 */;
+import { AppStates } from "ME" /* 676 */;
 
 function updateState() {
   if (!c19) {
@@ -32,9 +34,9 @@ function updateState() {
             obj[1] = c12;
             obj[0] = obj;
           } else if (tmp9.CONNECTING === UNKNOWN) {
-            const obj1 = { state: null, delayMs: null };
+            obj1 = { state: null, delayMs: null };
             obj1[0] = tmp13.WAITING_FOR_NETWORK;
-            if (handleClearCaches.hasCache()) {
+            if (closure_2.hasCache()) {
               let obj15 = state(13237);
               let num2 = obj15.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num2 == null) {
@@ -65,7 +67,7 @@ function updateState() {
           } else if (tmp9.CONNECTING === UNKNOWN) {
             const obj5 = { state: null, delayMs: null };
             obj5[0] = tmp13.WAITING_FOR_NETWORK;
-            if (handleClearCaches.hasCache()) {
+            if (closure_2.hasCache()) {
               let obj10 = state(13237);
               let num = obj10.getConfig({ location: "ConnectivityIndicatorStateStore" }).timeoutMs;
               if (num == null) {
@@ -136,19 +138,20 @@ function updateState() {
       tmp9 = constants;
     }
     if (null != obj.immediate) {
-      let immediate = obj.immediate;
+      const immediate = obj.immediate;
+      closure_13 = immediate;
       if (tmp28) {
         if (null != timeout) {
-          tmp2.verbose("clearing pending state update timer");
+          closure_8.verbose("clearing pending state update timer");
           const _clearTimeout = clearTimeout;
           clearTimeout(timeout);
           timeout = null;
         }
-        let c14 = null;
+        c14 = null;
       }
-      if (tmp !== immediate) {
+      if (tmp !== closure_13) {
         let _HermesInternal = HermesInternal;
-        tmp2.verbose("state changed immediately from " + tmp + " to " + immediate);
+        closure_8.verbose("state changed immediately from " + tmp + " to " + closure_13);
         if (connectivityIndicatorStateStore != null) {
           obj21.emitChange();
         }
@@ -160,28 +163,28 @@ function updateState() {
       const delayed = obj.delayed;
       state = delayed.state;
       if (null != timeout) {
-        tmp2.verbose("clearing existing state update timer because we're scheduling a new one");
+        closure_8.verbose("clearing existing state update timer because we're scheduling a new one");
         const _clearTimeout3 = clearTimeout;
         clearTimeout(timeout);
       }
       c14 = state;
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        let c21 = null;
-        let c14 = null;
-        const immediate = state;
-        if (immediate !== state) {
+        c21 = null;
+        c14 = null;
+        closure_13 = state;
+        if (closure_13 !== state) {
           const _HermesInternal = HermesInternal;
-          outer1_8.verbose("state changed after a delay from " + tmp + " to " + immediate);
-          if (outer1_23 != null) {
+          closure_1_8.verbose("state changed after a delay from " + tmp + " to " + closure_13);
+          if (closure_1_23 != null) {
             obj.emitChange();
           }
-          obj = outer1_23;
+          obj = closure_1_23;
         }
       }, delayed.delayMs);
     } else {
       if (null != timeout) {
-        tmp2.verbose("clearing pending state update timer");
+        closure_8.verbose("clearing pending state update timer");
         const _clearTimeout2 = clearTimeout;
         clearTimeout(timeout);
         timeout = null;
@@ -193,7 +196,7 @@ function updateState() {
   obj = obj15;
 }
 function handleConnectionClosed() {
-  let c17 = false;
+  c17 = false;
   updateState();
   return false;
 }
@@ -211,7 +214,7 @@ function handleLoadingMessagesChanged() {
   }
 }
 function handleAuthStoreChanged() {
-  const isAuthenticatedResult = fetchFingerprint.isAuthenticated();
+  const isAuthenticatedResult = closure_3.isAuthenticated();
   if (c15 !== isAuthenticatedResult) {
     c15 = isAuthenticatedResult;
     updateState();
@@ -222,15 +225,15 @@ function handleAppStateUpdate() {
   const state = store.getState();
   if (AppStates.ACTIVE === state) {
     if (state === tmp2.BACKGROUND) {
-      let c19 = true;
+      c19 = true;
       if (null != timeout) {
         const _clearTimeout2 = clearTimeout;
         clearTimeout(timeout);
       }
       const _setTimeout = setTimeout;
       timeout = setTimeout(() => {
-        let c19 = false;
-        let c22 = null;
+        c19 = false;
+        c22 = null;
         callback();
       }, 5000);
     }
@@ -246,7 +249,7 @@ function handleAppStateUpdate() {
   updateState();
   return false;
 }
-const metroImportAll = new require("handleConnectionOpen")("ConnectivityIndicatorStateStore");
+let closure_8 = new timestampDefault("ConnectivityIndicatorStateStore");
 let obj = { HIDDEN: "hidden", WAITING_FOR_NETWORK: "waiting_for_network", NO_CONNECTION: "no_connection", BACK_ONLINE: "back_online" };
 let closure_10 = { UNKNOWN: "unknown", ONLINE: "online", OFFLINE: "offline", CONNECTING: "connecting" };
 let c11 = 2000;
@@ -262,29 +265,30 @@ let c20 = null;
 let c21 = null;
 let c22 = null;
 let connectivityIndicatorStateStore = null;
+const Store = initializeDefault.Store;
 class ConnectivityIndicatorStateStore extends Store {
 }
 const prototype = ConnectivityIndicatorStateStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(fetchFingerprint, handleClearCaches, reinjectEphemerals, handleConnectionOpen, getState);
-  const items = [reinjectEphemerals];
+  this.waitFor(closure_3, closure_2, closure_4, closure_5, closure_6);
+  const items = [closure_4];
   this.syncWith(items, handleLoadingMessagesChanged);
-  const items1 = [fetchFingerprint];
+  const items1 = [closure_3];
   this.syncWith(items1, handleAuthStoreChanged);
-  const items2 = [getState];
+  const items2 = [closure_6];
   this.syncWith(items2, handleAppStateUpdate);
-  awaitOnline.addOfflineCallback(() => {
-    let c16 = true;
+  awaitOnlineDefault.addOfflineCallback(() => {
+    c16 = true;
     callback();
   });
-  const obj = awaitOnline;
-  awaitOnline.addOnlineCallback(() => {
-    let c16 = false;
+  obj = awaitOnlineDefault;
+  awaitOnlineDefault.addOnlineCallback(() => {
+    c16 = false;
     callback();
   });
-  const obj2 = awaitOnline;
-  let closure_16 = !awaitOnline.isOnline();
-  let closure_15 = fetchFingerprint.isAuthenticated();
+  const obj2 = awaitOnlineDefault;
+  closure_16 = !awaitOnlineDefault.isOnline();
+  closure_15 = closure_3.isAuthenticated();
   updateState();
 };
 prototype["getState"] = function getState() {
@@ -293,21 +297,21 @@ prototype["getState"] = function getState() {
 ConnectivityIndicatorStateStore.displayName = "ConnectivityIndicatorStateStore";
 obj = {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let c17 = true;
+    c17 = true;
     updateState();
     return false;
   },
   CONNECTION_RESUMED: function handleConnectionResumed() {
-    let c17 = true;
+    c17 = true;
     updateState();
     return false;
   },
   CONNECTION_CLOSED: handleConnectionClosed,
   CONNECTION_INTERRUPTED: handleConnectionClosed
 };
-connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(require("dispatcher"), obj);
-const tmp2 = new require("handleConnectionOpen")("ConnectivityIndicatorStateStore");
-const result = require("reinjectEphemerals").fileFinishedImporting("modules/connectivity/native/ConnectivityIndicatorStateStore.tsx");
+connectivityIndicatorStateStore = new ConnectivityIndicatorStateStore(dispatcherDefault, obj);
+const tmp2 = new timestampDefault("ConnectivityIndicatorStateStore");
+const result = require("set").fileFinishedImporting("modules/connectivity/native/ConnectivityIndicatorStateStore.tsx");
 
 export default connectivityIndicatorStateStore;
 export const ConnectivityIndicatorState = obj;

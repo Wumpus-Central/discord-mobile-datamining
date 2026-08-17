@@ -1,5 +1,5 @@
 // discord_app/design/components/Layers/native/LayerContext.native.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 class LayerContextManager {
   constructor() {
@@ -14,7 +14,7 @@ class LayerContextManager {
 }
 const prototype = LayerContextManager.prototype;
 prototype["add"] = function add(key, component) {
-  let closure_0 = key;
+  closure_0 = key;
   const items = this.items;
   this.items = items.filter((key) => key.key !== closure_0);
   const items1 = this.items;
@@ -22,7 +22,7 @@ prototype["add"] = function add(key, component) {
   this.invalidate();
 };
 prototype["remove"] = function remove(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   const items = this.items;
   this.items = items.filter((key) => key.key !== closure_0);
   this.invalidate();
@@ -36,7 +36,7 @@ obj[1] = [];
 obj[2] = function invalidate() {
   return null;
 };
-const context = require("noop").createContext(obj);
+const context = importAllResult.createContext(obj);
 const result = require("set").fileFinishedImporting("design/components/Layers/native/LayerContext.native.tsx");
 
 export { LayerContextManager };

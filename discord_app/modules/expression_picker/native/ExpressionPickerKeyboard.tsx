@@ -1,8 +1,8 @@
 // discord_app/modules/expression_picker/native/ExpressionPickerKeyboard.tsx
-import _slicedToArray from "_slicedToArray";
-import importAllResult from "noop";
-import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION";
-import { jsx } from "jsxProd";
+import closure_3 from "_slicedToArray" /* 32 */;
+import importAllResult from "noop" /* 19 */;
+import { KEYBOARD_ANIMATION_CONFIG } from "KEYBOARD_ANIMATION_DURATION" /* 11208 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c4 = importAllResult;
@@ -16,7 +16,7 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
   let ref;
   let isScreenReaderEnabled;
   let first;
-  let closure_7;
+  closure_7 = undefined;
   let minimum;
   let maximum;
   let derivedValue;
@@ -80,7 +80,7 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
   const obj5 = chatInputRef(transitionState[4]);
   class S {
     constructor() {
-      obj = { height: c10.get() ? maximum : minimum };
+      obj = { height: closure_10.get() ? maximum : minimum };
       return obj;
     }
   }
@@ -110,11 +110,10 @@ const memoResult = importAllResult.memo(function ExpressionPickerKeyboard(channe
   }, items5);
   obj = { ref, animatedIndex: sharedValue, animatedPosition: sharedValue1, forceMaxHeight: isScreenReaderEnabled, chatInputRef, animationConfigs: isScreenReaderEnabled, onClose: callback4, renderExpressionFooter: true, transitionState, children: null };
   const obj6 = chatInputRef(transitionState[4]);
-  obj = { nativeID: "expression-picker-sheet", style: animatedStyle, children: null };
-  obj[2] = first(onClose(transitionState[13]), { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: keyboardContextForType, inPortalKeyboard: true });
+  obj = { nativeID: "expression-picker-sheet", style: animatedStyle, children: first(onClose(transitionState[13]), { bottomSheetRef: ref, bottomSheetIndex: sharedValue, onBackspace: callback3, onPressEmoji: callback, onPressGIF: callback1, onPressSticker: callback2, channel: channel.channel, expressionType: keyboardContextForType, inPortalKeyboard: true }) };
   obj[9] = first(onClose(transitionState[4]).View, obj);
   return first(onClose(transitionState[12]), obj, "expression-picker-" + isScreenReaderEnabled);
 });
-let result = require("KEYBOARD_ANIMATION_DURATION").fileFinishedImporting("modules/expression_picker/native/ExpressionPickerKeyboard.tsx");
+let result = require("set").fileFinishedImporting("modules/expression_picker/native/ExpressionPickerKeyboard.tsx");
 
 export default memoResult;

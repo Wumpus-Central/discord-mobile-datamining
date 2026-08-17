@@ -1,12 +1,12 @@
 // discord_app/modules/chat_input/native/RefreshChatInputCoachmark.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { ContentDismissActionType } from "ContentDismissActionType";
-import { useCoachmark } from "../../../design/components/Coachmark/native/useCoachmark.native.tsx";
+import useCoachmark from "useCoachmark" /* 9314 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { ContentDismissActionType } from "ContentDismissActionType" /* 1388 */;
 import { useSelectedDismissibleContent } from "../../dismissible_content/hooks/useSelectedDismissibleContent.tsx";
 
-const require = arg1;
-const result = require("ContentDismissActionType").fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("modules/chat_input/native/RefreshChatInputCoachmark.tsx");
 
 export default function RefreshChatInputCoachmark(buttonRef) {
   const merged = Object.assign(buttonRef, Object.create(null));
@@ -15,7 +15,7 @@ export default function RefreshChatInputCoachmark(buttonRef) {
 };
 export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmark(disabled) {
   let _require;
-  let importDefault;
+  importDefault = undefined;
   _useSelectedDismissibleContent;
   if (tmp2) {
     if (!disabled.disabled) {
@@ -30,15 +30,15 @@ export const useRefreshChatInputCoachmark = function useRefreshChatInputCoachmar
     if (tmp9) {
       memo = React.useMemo(() => {
         let obj = { title: null, description: null, position: "top", offsetY: 4, visible: null, onDismiss: null, graphic: null };
-        const intl = _undefined(outer1_2[6]).intl;
-        obj[0] = intl.string(_undefined(outer1_2[6]).t.eqI1WA);
-        const intl2 = _undefined(outer1_2[6]).intl;
-        obj[1] = intl2.string(_undefined(outer1_2[6]).t.nxO3NK);
-        obj[4] = c1;
+        const intl = callback(closure_1_2[6]).intl;
+        obj[0] = intl.string(callback(closure_1_2[6]).t.eqI1WA);
+        const intl2 = callback(closure_1_2[6]).intl;
+        obj[1] = intl2.string(callback(closure_1_2[6]).t.nxO3NK);
+        obj[4] = closure_1;
         obj[5] = function onDismiss() {
-          callback(outer1_5.USER_DISMISS);
+          callback(closure_1_5.USER_DISMISS);
         };
-        obj = { type: "rive", rive: _undefined(outer1_2[7]).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
+        obj = { type: "rive", rive: callback(closure_1_2[7]).OmnibuttonCoachmarkRive, aspectRatio: "16/9" };
         obj[6] = obj;
         return obj;
       }, items1);

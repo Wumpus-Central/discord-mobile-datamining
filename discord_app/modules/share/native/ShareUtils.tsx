@@ -1,21 +1,18 @@
 // discord_app/modules/share/native/ShareUtils.tsx
-import dispatcher from "dispatcher";
-import { DraftType } from "handleChanged";
-import { MessageSendLocation } from "MESSAGE_GROUP_SPACING";
-import { registerAsset } from "../../../../_runtime/10455_registerAsset.js";
-import { dispatcher } from "../../toast/native/ToastActionCreators.tsx";
+import dispatcherDefault from "dispatcher" /* 4094 */;
+import registerAssetDefault from "registerAsset" /* 10455 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { DraftType } from "handleChanged" /* 4825 */;
+import { MessageSendLocation } from "MESSAGE_GROUP_SPACING" /* 4663 */;
 
 const require = arg1;
 function _sendShareMessage() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c4 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c4 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
       if (constants === 2) {
         constants = 3;
         HermesBuiltin.throwTypeError();
@@ -43,7 +40,7 @@ function _sendShareMessage() {
               return obj;
             } else {
               let id = tmp4;
-              let dependencyMap = 0;
+              dependencyMap = 0;
               let lib;
               let lib2;
               dependencyMap = undefined;
@@ -62,7 +59,7 @@ function _sendShareMessage() {
               throw arg1;
             } else if (arg0 === 2) {
               constants = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -122,7 +119,7 @@ function _sendShareMessage() {
     iter.next();
     return iter;
   });
-  const _sendShareMessage = tmp;
+  closure_6 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -131,11 +128,11 @@ function _sendShareMessage() {
   }
   return applyArgumentsResult;
 }
-const result = require("MESSAGE_GROUP_SPACING").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/share/native/ShareUtils.tsx");
 
 export const showInformationToast = function showInformationToast(intl3) {
-  let obj = dispatcher;
-  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: registerAsset };
+  let obj = dispatcherDefault;
+  obj = { key: "INFORMATION_TOAST-" + intl3, content: intl3, icon: registerAssetDefault };
   obj.open(obj);
 };
 export const sendShareMessage = function sendShareMessage(arg0) {

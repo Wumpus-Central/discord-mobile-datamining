@@ -1,43 +1,43 @@
 // discord_app/design/components/TableRow/native/TableRowIcon.native.tsx
-import _objectWithoutProperties from "_objectWithoutProperties";
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { IconSizes } from "../../../void/Icon/native/Icon.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import IconSizes from "IconSizes" /* 4747 */;
+import IconSizesDefault from "IconSizes" /* 4747 */;
+import closure_4 from "_objectWithoutProperties" /* 109 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
 let closure_3 = ["color"];
+noopAll;
 createCacheKey = { container: null, default: null, statusOnline: null, statusIdle: null, statusDND: null, statusOffline: null, xbox: null, playstation: null, danger: null, secondary: null, translucent: null };
-createCacheKey = { width: require("Themes").modules.mobile.TABLE_ROW_ICON_SIZE, height: require("Themes").modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: require("Themes").radii.lg };
+createCacheKey = { width: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: ThemesDefault.modules.mobile.TABLE_ROW_ICON_SIZE, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.lg };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { color: require("Themes").colors.TABLEROW_ICON_COLOR_DEFAULT };
-const obj1 = { color: require("Themes").colors.TABLEROW_ICON_COLOR_DEFAULT };
-createCacheKey[2] = { color: require("Themes").colors.TEXT_STATUS_ONLINE };
-const obj2 = { color: require("Themes").colors.TEXT_STATUS_ONLINE };
-createCacheKey[3] = { color: require("Themes").colors.TEXT_STATUS_IDLE };
-const obj3 = { color: require("Themes").colors.TEXT_STATUS_IDLE };
-createCacheKey[4] = { color: require("Themes").colors.TEXT_STATUS_DND };
-const obj4 = { color: require("Themes").colors.TEXT_STATUS_DND };
-createCacheKey[5] = { color: require("Themes").colors.TEXT_STATUS_OFFLINE };
-const obj5 = { color: require("Themes").colors.TEXT_STATUS_OFFLINE };
-createCacheKey[6] = { backgroundColor: require("Themes").unsafe_rawColors.PLATFORM_XBOX, color: require("Themes").colors.WHITE };
-const obj6 = { backgroundColor: require("Themes").unsafe_rawColors.PLATFORM_XBOX, color: require("Themes").colors.WHITE };
-createCacheKey[7] = { backgroundColor: require("Themes").unsafe_rawColors.PLATFORM_PLAYSTATION, color: require("Themes").colors.WHITE };
-const obj7 = { backgroundColor: require("Themes").unsafe_rawColors.PLATFORM_PLAYSTATION, color: require("Themes").colors.WHITE };
-createCacheKey[8] = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-const obj8 = { color: require("Themes").colors.TEXT_FEEDBACK_CRITICAL };
-createCacheKey[9] = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-const obj9 = { color: require("Themes").colors.INTERACTIVE_TEXT_DEFAULT };
-createCacheKey[10] = { color: require("Themes").colors.WHITE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const obj10 = { color: require("Themes").colors.WHITE };
-const result = require("get ActivityIndicator").fileFinishedImporting("design/components/TableRow/native/TableRowIcon.native.tsx");
+createCacheKey[1] = { color: ThemesDefault.colors.TABLEROW_ICON_COLOR_DEFAULT };
+const obj1 = { color: ThemesDefault.colors.TABLEROW_ICON_COLOR_DEFAULT };
+createCacheKey[2] = { color: ThemesDefault.colors.TEXT_STATUS_ONLINE };
+const obj2 = { color: ThemesDefault.colors.TEXT_STATUS_ONLINE };
+createCacheKey[3] = { color: ThemesDefault.colors.TEXT_STATUS_IDLE };
+const obj3 = { color: ThemesDefault.colors.TEXT_STATUS_IDLE };
+createCacheKey[4] = { color: ThemesDefault.colors.TEXT_STATUS_DND };
+const obj4 = { color: ThemesDefault.colors.TEXT_STATUS_DND };
+createCacheKey[5] = { color: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
+const obj5 = { color: ThemesDefault.colors.TEXT_STATUS_OFFLINE };
+createCacheKey[6] = { backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX, color: ThemesDefault.colors.WHITE };
+const obj6 = { backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_XBOX, color: ThemesDefault.colors.WHITE };
+createCacheKey[7] = { backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION, color: ThemesDefault.colors.WHITE };
+const obj7 = { backgroundColor: ThemesDefault.unsafe_rawColors.PLATFORM_PLAYSTATION, color: ThemesDefault.colors.WHITE };
+createCacheKey[8] = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+const obj8 = { color: ThemesDefault.colors.TEXT_FEEDBACK_CRITICAL };
+createCacheKey[9] = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+const obj9 = { color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
+createCacheKey[10] = { color: ThemesDefault.colors.WHITE };
+let closure_7 = createCacheKey.createStyles(createCacheKey);
+const obj10 = { color: ThemesDefault.colors.WHITE };
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowIcon.native.tsx");
 
 export const TableRowIcon = function TableRowIcon(arg0) {
-  let IconComponent;
-  let source;
-  let variant;
   ({ source, IconComponent, variant } = arg0);
   if (variant === undefined) {
     variant = "default";
@@ -99,7 +99,7 @@ export const TableRowIcon = function TableRowIcon(arg0) {
       obj[0] = color;
       obj[1] = source;
       obj[2] = REFRESH_SMALL_16;
-      tmp11Result = tmp11(IconSizes, obj);
+      tmp11Result = tmp11(IconSizesDefault, obj);
     }
     obj[1] = tmp11Result;
     tmp11Result = tmp11(tmp12, obj);

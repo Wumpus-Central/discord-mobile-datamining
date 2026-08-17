@@ -1,17 +1,17 @@
 // discord_app/actions/DefaultRouteActionCreators.tsx
-import initialize from "initialize";
-import { Routes } from "ME";
-import { dispatcher } from "../Dispatcher.tsx";
-import { matchPath } from "../modules/routing/matchPathCompat.tsx";
-import { RouteParam } from "../modules/routing/RouteUtils.tsx";
+import dispatcherDefault from "dispatcher" /* 709 */;
+import matchPath from "matchPath" /* 4202 */;
+import RouteParam2 from "RouteParam" /* 4215 */;
+import closure_3 from "initialize" /* 4022 */;
+import { Routes } from "ME" /* 676 */;
 
-const require = arg1;
-const result = require("matchPath").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
+require = arg1;
+const result = require("set").fileFinishedImporting("actions/DefaultRouteActionCreators.tsx");
 
 export const saveLastRoute = function saveLastRoute(pathname) {
   let obj = matchPath;
   obj = { path: null };
-  const RouteParam = RouteParam.RouteParam;
+  const RouteParam = RouteParam2.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(pathname, obj);
   let guildId;
@@ -23,19 +23,19 @@ export const saveLastRoute = function saveLastRoute(pathname) {
   }
   let tmp4 = null == guildId;
   if (!tmp4) {
-    tmp4 = !initialize.isLurking(guildId);
+    tmp4 = !closure_3.isLurking(guildId);
   }
   if (tmp4) {
     obj = { type: "SAVE_LAST_ROUTE", path: null };
     obj[1] = pathname;
-    dispatcher.dispatch(obj);
-    const obj3 = dispatcher;
+    dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
   }
 };
 export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
   let obj = matchPath;
   obj = { path: null };
-  const RouteParam = RouteParam.RouteParam;
+  const RouteParam = RouteParam2.RouteParam;
   obj[0] = Routes.CHANNEL(RouteParam.guildId());
   const matchPathResult = obj.matchPath(Routes, obj);
   let guildId;
@@ -47,12 +47,12 @@ export const saveLastNonVoiceRoute = function saveLastNonVoiceRoute(Routes) {
   }
   let tmp4 = null == guildId;
   if (!tmp4) {
-    tmp4 = !initialize.isLurking(guildId);
+    tmp4 = !closure_3.isLurking(guildId);
   }
   if (tmp4) {
     obj = { type: "SAVE_LAST_NON_VOICE_ROUTE", path: null };
     obj[1] = Routes;
-    dispatcher.dispatch(obj);
-    const obj3 = dispatcher;
+    dispatcherDefault.dispatch(obj);
+    const obj3 = dispatcherDefault;
   }
 };

@@ -1,31 +1,27 @@
 // discord_app/modules/safety_common/native/ObscuredSurface.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { ImageWarningIcon } from "../../../design/components/Icon/native/redesign/generated/ImageWarningIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { context } from "../ObscuredSurfaceContext.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import Text from "Text" /* 4734 */;
+import ImageWarningIcon from "ImageWarningIcon" /* 6877 */;
+import context from "context" /* 9128 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 createCacheKey = { container: { position: "relative", overflow: "hidden" }, content: { pointerEvents: "none", userSelect: "none" }, cover: null, warning: null };
-createCacheKey = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: require("Themes").colors.SPOILER_HIDDEN_BACKGROUND };
+createCacheKey = { position: "absolute", inset: 0, zIndex: 1, backgroundColor: ThemesDefault.colors.SPOILER_HIDDEN_BACKGROUND };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12, paddingVertical: require("Themes").space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_12, paddingVertical: require("Themes").space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
-const result = require("jsxProd").fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
+createCacheKey[3] = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
+let closure_6 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { position: "absolute", insetInlineStart: "50%", top: "50%", transform: "translate(-50%, -50%)", display: "flex", flexDirection: "column", alignItems: "center", gap: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_8, textAlign: "center", userSelect: "none", zIndex: 2 };
+const result = require("set").fileFinishedImporting("modules/safety_common/native/ObscuredSurface.tsx");
 
 export default function ObscuredSurface(obscured) {
-  let children;
-  let description;
-  let heading;
   ({ heading, description, children } = obscured);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let tmp3Result = children;
   if (obscured.obscured) {
     let obj = { value: null, children: null };
@@ -36,13 +32,13 @@ export default function ObscuredSurface(obscured) {
     obj[0] = tmp.content;
     obj[5] = children;
     const items = [callback(View, obj), , ];
-    const obj1 = { style: null };
+    obj1 = { style: null };
     obj1[0] = tmp.cover;
     items[1] = callback(View, obj1);
     const obj2 = { style: null, children: null };
     obj2[0] = tmp.warning;
     const obj3 = { size: "lg", color: null };
-    obj3[1] = Themes.colors.TEXT_DEFAULT;
+    obj3[1] = ThemesDefault.colors.TEXT_DEFAULT;
     const items1 = [callback(ImageWarningIcon.ImageWarningIcon, obj3), , ];
     if (heading == null) {
       const intl = tmp4(1236).intl;

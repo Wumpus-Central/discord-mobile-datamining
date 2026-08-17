@@ -1,17 +1,19 @@
 // discord_app/modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { HeaderBackImage } from "../../../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import HeaderBackImage from "HeaderBackImage" /* 6314 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 createCacheKey = { navBar: null };
-createCacheKey = { backgroundColor: require("Themes").unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
+createCacheKey = { backgroundColor: ThemesDefault.unsafe_rawColors.TRANSPARENT, borderBottomWidth: 0 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("createCacheKey").fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
+let closure_3 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/auth/native/components/atoms/AuthNavbarPlaceholder.tsx");
 
 export default function AuthNavbarPlaceholder() {
-  const tmp = createCacheKey();
-  return jsx(HeaderBackImage.FauxHeader, { style: createCacheKey().navBar, children: null });
+  const tmp = callback();
+  return jsx(HeaderBackImage.FauxHeader, { style: callback().navBar, children: null });
 };

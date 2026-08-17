@@ -1,16 +1,14 @@
 // discord_app/modules/settings/native/search/components/SettingsSearchEmptyState.tsx
-import importAllResult from "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { getNoResultsAltSource } from "../../../../../design/components/Illustration/native/redesign/generated/NoResultsAlt.tsx";
-import { Stack } from "../../../../../design/components/Stack/native/Stack.native.tsx";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Stack from "Stack" /* 4733 */;
+import Text from "Text" /* 4734 */;
+import getNoResultsAltSource from "getNoResultsAltSource" /* 8867 */;
+import importAllResult from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ container: { paddingTop: 24, justifyContent: "center", alignItems: "center" }, textContainer: { marginTop: 24 } });
 const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
@@ -27,7 +25,7 @@ const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   let intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t.zihbmv);
   const items1 = [callback(Text.Text, obj), ];
-  const obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
+  obj1 = { variant: "text-xs/medium", color: "text-muted", children: null };
   const intl2 = getSystemLocale.intl;
   obj1[2] = intl2.string(getSystemLocale.t.XclvsB);
   items1[1] = callback(Text.Text, obj1);
@@ -36,6 +34,6 @@ const memoResult = importAllResult.memo(function SettingsSearchEmptyState() {
   obj[1] = items;
   return callback2(View, obj);
 });
-const result = require("jsxProd").fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
+const result = require("set").fileFinishedImporting("modules/settings/native/search/components/SettingsSearchEmptyState.tsx");
 
 export default memoResult;

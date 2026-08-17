@@ -1,29 +1,28 @@
 // discord_app/components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx
-import _slicedToArray from "_slicedToArray";
-import registerAsset from "registerAsset";
-import get_ActivityIndicator from "keys";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import { Gradients } from "items";
-import jsxProd from "Text";
-import createCacheKey from "createCacheKey";
-import { LinearGradient } from "../../../../_runtime/04756_LinearGradient.js";
-import { initialize } from "../../../../discord_common/js/packages/flux/index.tsx";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { useTheme } from "../../../hooks/useTheme.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { componentDidMount } from "../../common/Alert.tsx";
+import initialize from "initialize" /* 589 */;
+import keys from "keys" /* 691 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useThemeDefault from "useTheme" /* 4310 */;
+import Text from "Text" /* 4734 */;
+import LinearGradientDefault from "LinearGradient" /* 4756 */;
+import componentDidMountDefault from "componentDidMount" /* 4763 */;
+import componentDidMountDefault2 from "componentDidMount" /* 13055 */;
+import _mod13056 from "module_13056" /* 13056 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_7 from "createGuildRecordFromRust" /* 1910 */;
+import { Gradients } from "items" /* 7403 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c5;
-let c9;
-let closure_6;
-const require = arg1;
+require = arg1;
 class PremiumPaymentGuildAnimation {
   constructor(arg0) {
     ({ nextScene, onSceneComplete, loop } = global);
-    tmp = jsxs();
-    obj = { nextScene, onSceneComplete, loop, sceneSegments: idle, style: tmp.animation, source: null };
+    tmp = closure_11();
+    obj = { nextScene, onSceneComplete, loop, sceneSegments: closure_12, style: tmp.animation, source: null };
     tmp2 = require("componentDidMount");
     obj[5] = require("module_13056");
     return jsx(tmp2, obj);
@@ -32,29 +31,27 @@ class PremiumPaymentGuildAnimation {
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { wrapper: { paddingHorizontal: 24, paddingBottom: 16, paddingTop: 4, alignItems: "stretch" }, animation: { width: "auto", height: 112, alignSelf: "center" }, text: { lineHeight: 18, textAlign: "center" }, activated: null, activatedBackground: null, activatedImage: null, successInfo: null };
-createCacheKey = { padding: 2, borderRadius: require("Themes").radii.xs, marginTop: 8 };
+createCacheKey = { padding: 2, borderRadius: ThemesDefault.radii.xs, marginTop: 8 };
 createCacheKey[3] = createCacheKey;
-createCacheKey[4] = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
+createCacheKey[4] = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
 createCacheKey[5] = { width: 220 };
 createCacheKey[6] = { marginTop: 24 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let obj2 = { ENTRY: "entry", IDLE: "idle" };
 let closure_12 = { [obj2.ENTRY]: { BEG: 0, END: 180 }, [obj2.IDLE]: { BEG: 180, END: 360 } };
 PremiumPaymentGuildAnimation.Scenes = obj2;
-let obj1 = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
-const result = require("get ActivityIndicator").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx");
+let obj1 = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, paddingVertical: 12, paddingHorizontal: 20, alignItems: "center" };
+const result = require("set").fileFinishedImporting("components_native/premium/premium_guild_subscribe_modal/SubscribeModalSuccessAlert.tsx");
 
 export default function SubscribeModalSuccessAlert(arg0) {
-  let guildBoostSlots;
-  let require;
   ({ guildId: require, guildBoostSlots } = arg0);
-  let importDefault;
-  let dependencyMap;
-  const tmp = createCacheKey();
+  importDefault = undefined;
+  dependencyMap = undefined;
+  const tmp = callback3();
   let obj = initialize;
-  const items = [createGuildRecordFromRust];
+  const items = [closure_7];
   let someResult = null != guildBoostSlots;
-  const stateFromStores = obj.useStateFromStores(items, () => outer1_7.getGuild(closure_0));
+  const stateFromStores = obj.useStateFromStores(items, () => closure_1_7.getGuild(closure_0));
   if (someResult) {
     someResult = guildBoostSlots.some((premiumGuildSubscription) => null != premiumGuildSubscription.premiumGuildSubscription);
   }
@@ -70,7 +67,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
   const tmp7 = callback(React.useState(false), 2);
   dependencyMap = tmp7[1];
   obj = { style: tmp.wrapper, confirmText: null, onConfirm: null, children: null };
-  const tmp9 = useTheme();
+  const tmp9 = useThemeDefault();
   const intl = tmp2(1236).intl;
   obj[1] = intl.string(getSystemLocale.t.YKxJCI);
   obj[2] = function onConfirm() {
@@ -82,7 +79,7 @@ export default function SubscribeModalSuccessAlert(arg0) {
     nextScene: tmp6[0],
     loop: tmp7[0],
     onSceneComplete(currentScene) {
-      if (outer1_13.Scenes.ENTRY === currentScene) {
+      if (closure_1_13.Scenes.ENTRY === currentScene) {
         return callback2(tmp.Scenes.IDLE);
       } else if (tmp.Scenes.IDLE === currentScene) {
         return dependencyMap(true);
@@ -90,14 +87,14 @@ export default function SubscribeModalSuccessAlert(arg0) {
     }
   };
   const items1 = [callback2(PremiumPaymentGuildAnimation, obj), ];
-  const obj1 = { style: tmp.activated, start: null, end: null, colors: null, children: null };
-  const tmp11 = componentDidMount;
+  obj1 = { style: tmp.activated, start: null, end: null, colors: null, children: null };
+  const tmp11 = componentDidMountDefault;
   obj1[1] = keys.HorizontalGradient.START;
   obj1[2] = keys.HorizontalGradient.END;
   obj1[3] = Gradients.PREMIUM_GUILD;
   const obj2 = { style: tmp.activatedBackground, children: null };
   const obj3 = { style: tmp.activatedImage, source: null };
-  const tmp14 = LinearGradient;
+  const tmp14 = LinearGradientDefault;
   const tmp15 = closure_6;
   if (tmp2Result.isThemeLight(tmp9)) {
     let tmp8Result = tmp8(13057);

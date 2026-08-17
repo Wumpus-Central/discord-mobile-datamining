@@ -1,5 +1,7 @@
 // discord_app/utils/getDevicePixelRatio.web.tsx
-const result = require("set").fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/getDevicePixelRatio.web.tsx");
 
 export default function getDevicePixelRatio() {
   let num = window.devicePixelRatio;

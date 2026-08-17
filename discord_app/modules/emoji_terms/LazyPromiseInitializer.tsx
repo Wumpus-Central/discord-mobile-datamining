@@ -1,5 +1,7 @@
 // discord_app/modules/emoji_terms/LazyPromiseInitializer.tsx
-const result = require("set").fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/emoji_terms/LazyPromiseInitializer.tsx");
 class LazyPromiseInitializer {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);

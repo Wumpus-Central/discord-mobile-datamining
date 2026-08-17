@@ -1,31 +1,31 @@
 // discord_app/modules/activities/hooks/usePlayingGameActivities.tsx
-import noop from "noop";
-import fetchFingerprint from "fetchFingerprint";
-import sortActivity from "sortActivity";
-import filterPlayingActivities from "filterPlayingActivities";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "fetchFingerprint" /* 1218 */;
+import closure_5 from "sortActivity" /* 4559 */;
+import closure_6 from "filterPlayingActivities" /* 7250 */;
 
 const require = arg1;
 let closure_7 = [];
-const result = require("sortActivity").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/hooks/usePlayingGameActivities.tsx");
 
 export default function usePlayingGameActivities(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   let flag = arg2;
   if (arg2 === undefined) {
     flag = true;
   }
   let stateFromStores;
-  const items = [filterPlayingActivities, sortActivity, fetchFingerprint];
+  const items = [closure_6, closure_5, closure_4];
   stateFromStores = _require(flag[4]).useStateFromStores(items, () => {
     if (flag) {
-      if (outer1_4.getId() === closure_0) {
-        let activities = outer1_6.getActivities();
+      if (closure_1_4.getId() === closure_0) {
+        let activities = closure_1_6.getActivities();
       } else {
-        activities = outer1_5.getActivities(tmp2, closure_1);
+        activities = closure_1_5.getActivities(tmp2, closure_1);
       }
     } else {
-      return outer1_7;
+      return closure_1_7;
     }
   });
   const items1 = [stateFromStores];

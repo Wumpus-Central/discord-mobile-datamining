@@ -1,17 +1,19 @@
 // discord_app/lib/guild/GuildMemberSubscriptions.tsx
-import { apply } from "../../../_runtime/00012_apply.js";
-import { timestamp } from "../../modules/debug/Logger.tsx";
-import { DISCORD_EPOCH } from "../../utils/SnowflakeUtils.tsx";
+import timestampDefault from "timestamp" /* 3 */;
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import applyDefault from "apply" /* 12 */;
+import setDefault from "set" /* 687 */;
+
 const require = arg1;
-const MINUTE = require("set").Millis.MINUTE;
-const result = require("DISCORD_EPOCH").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
+const MINUTE = setDefault.Millis.MINUTE;
+const result = require("set").fileFinishedImporting("lib/guild/GuildMemberSubscriptions.tsx");
 class GuildMemberSubscriptions {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
     closure_0 = obj;
     obj._subscriptions = {};
     obj._unsubscriptions = {};
-    delayedCall = new require("start").DelayedCall(c3, () => obj.flushUnsubscriptions());
+    delayedCall = new require("start").DelayedCall(closure_3, () => obj.flushUnsubscriptions());
     obj._unsubscribe = delayedCall;
     obj._onChange = global;
     return obj;
@@ -29,7 +31,7 @@ prototype["get"] = function get(arg0) {
   if (obj == null) {
     obj = {};
   }
-  return DISCORD_EPOCH.keys(obj);
+  return DISCORD_EPOCHDefault.keys(obj);
 };
 prototype["clear"] = function clear(arg0) {
   delete tmp3[tmp2];
@@ -98,7 +100,7 @@ prototype["checkForLeaks"] = function checkForLeaks(arg0, arg1) {
   }
   const diff = num - num2;
   if (diff > 5) {
-    const obj = new timestamp("GuildMemberSubscriptions");
+    const obj = new timestampDefault("GuildMemberSubscriptions");
     const _HermesInternal = HermesInternal;
     obj.warn("GuildMemberSubscriptions.subscribe(...): Potential reference leak! (" + diff + " subscriptions)");
   }
@@ -107,27 +109,27 @@ prototype["flushUnsubscriptions"] = function flushUnsubscriptions() {
   let self = this;
   self = this;
   if (!obj.isEmpty(this._unsubscriptions)) {
-    let item = apply.forEach(self._unsubscriptions, (arg0, arg1) => {
-      const self = tmp3;
-      const item = outer1_1(outer1_2[4]).forEach(arg0, (arg0, arg1) => {
-        let num = tmp3[arg1];
+    let item = applyDefault.forEach(self._unsubscriptions, (arg0, arg1) => {
+      const _self = tmp3;
+      const item = closure_1_1(closure_1_2[4]).forEach(arg0, (arg0, arg1) => {
+        let num = table[arg1];
         if (num == null) {
           num = 0;
         }
-        tmp3[arg1] = num - arg0;
-        if (tmp3[arg1] <= 0) {
+        table[arg1] = num - arg0;
+        if (table[arg1] <= 0) {
           delete tmp[tmp2];
         }
       });
-      const arr = outer1_1(outer1_2[4]);
-      if (obj2.isEmpty(self._subscriptions[arg1])) {
+      const arr = closure_1_1(closure_1_2[4]);
+      if (obj2.isEmpty(_self._subscriptions[arg1])) {
         const _subscriptions = obj._subscriptions;
         delete tmp[tmp2];
       }
-      self._onChange(arg1, self.get(arg1));
+      _self._onChange(arg1, _self.get(arg1));
     });
     self._unsubscriptions = {};
-    const tmpResult = apply;
+    const tmpResult = applyDefault;
   }
 };
 

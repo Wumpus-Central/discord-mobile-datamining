@@ -1,6 +1,9 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx
-const obj = { padding: require("Button").STATUS_PADDING - 1 };
-const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");
+import set from "set" /* 2 */;
+import Button from "Button" /* 1297 */;
+
+const obj = { padding: Button.STATUS_PADDING - 1 };
+const result = set.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowConstants.tsx");
 
 export const HAPPENING_NOW_PANELS_CONTAINER_PADDING = 8;
 export const HAPPENING_NOW_CARD_HEIGHT = 88;

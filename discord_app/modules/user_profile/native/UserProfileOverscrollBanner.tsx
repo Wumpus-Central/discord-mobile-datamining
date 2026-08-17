@@ -1,25 +1,19 @@
 // discord_app/modules/user_profile/native/UserProfileOverscrollBanner.tsx
-import "noop";
-import { StyleSheet } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import VisualEffectViewThemed from "../../visual_effect_view/native/VisualEffectViewThemed.tsx";
-import importDefaultResult from "module_4115";
-import { set } from "../../../utils/PlatformUtils.tsx";
-import { ReanimatedRexport } from "../../reanimated/ReanimatedRexport.tsx";
-import { UserProfileBanner } from "UserProfileBanner.tsx";
+import noopAll from "noop" /* 19 */;
+import set from "set" /* 500 */;
+import _modDef8986 from "module_8986" /* 8986 */;
+import UserProfileBannerDefault from "UserProfileBanner" /* 8987 */;
+import { StyleSheet } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import importDefaultResult from "module_4115" /* 4115 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
+let closure_6 = importDefaultResult.createAnimatedComponent(_modDef8986);
+const result = require("set").fileFinishedImporting("modules/user_profile/native/UserProfileOverscrollBanner.tsx");
 
 export default function UserProfileOverscrollBanner(arg0) {
-  let bannerAnimatedStyle;
-  let bannerImageAnimatedStyle;
-  let blurAnimatedProps;
-  let privateBanner;
-  let showBlur;
   ({ bannerAnimatedStyle, bannerImageAnimatedStyle, blurAnimatedProps, showBlur, privateBanner } = arg0);
   const merged = Object.assign(arg0, Object.create(null));
   let obj = { style: bannerAnimatedStyle, children: null };
@@ -27,19 +21,19 @@ export default function UserProfileOverscrollBanner(arg0) {
   obj = { style: bannerImageAnimatedStyle, children: null };
   obj = {};
   const merged1 = Object.assign(merged);
-  const items1 = [callback(UserProfileBanner, obj), ];
+  const items1 = [callback(UserProfileBannerDefault, obj), ];
   const tmp3 = callback;
-  const tmp4 = UserProfileBanner;
+  const tmp4 = UserProfileBannerDefault;
   let tmp3Result = set.isIOS() && showBlur;
   if (tmp3Result) {
-    const obj1 = { animatedProps: null, style: null };
+    obj1 = { animatedProps: null, style: null };
     obj1[0] = blurAnimatedProps;
     obj1[1] = StyleSheet.absoluteFillObject;
-    tmp3Result = tmp3(module_8986, obj1);
+    tmp3Result = tmp3(closure_6, obj1);
   }
   items1[1] = tmp3Result;
   obj[1] = items1;
-  items[1] = closure_5(ReanimatedRexport.View, obj);
+  items[1] = closure_5(importDefaultResult.View, obj);
   obj[1] = items;
-  return closure_5(ReanimatedRexport.View, obj);
+  return closure_5(importDefaultResult.View, obj);
 };

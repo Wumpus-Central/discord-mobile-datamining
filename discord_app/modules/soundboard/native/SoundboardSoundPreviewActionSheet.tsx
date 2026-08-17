@@ -1,23 +1,19 @@
 // discord_app/modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx
-import StarIcon from "StarIcon";
-import get_ActivityIndicator from "Text";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import handleSoundCreateOrUpdate from "handleSoundCreateOrUpdate";
-import { AnalyticsObjects } from "ME";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
-import set from "set";
-import set from "mergeGuildAvatar";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "handleSoundCreateOrUpdate" /* 4780 */;
+import { AnalyticsObjects } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import set from "set" /* 500 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
 const require = arg1;
 ({ View: c4, Image: c5 } = get_ActivityIndicator);
 ({ jsx: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null };
-createCacheKey = { marginTop: require("Themes").space.PX_16, width: 64, height: 64, alignSelf: "center" };
+createCacheKey = { marginTop: ThemesDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { width: 128, height: 128 };
 let num;
@@ -25,24 +21,24 @@ if (set.isIOS()) {
   num = 60;
 }
 createCacheKey[2] = { fontSize: num, lineHeight: 74 };
-createCacheKey[3] = { marginTop: require("Themes").space.PX_16, alignSelf: "center" };
-let obj1 = { marginTop: require("Themes").space.PX_16, alignSelf: "center" };
-createCacheKey[4] = { gap: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_24 };
-set = { width: 16, height: 16, tintColor: require("Themes").colors.TEXT_DEFAULT };
+createCacheKey[3] = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center" };
+let obj1 = { marginTop: ThemesDefault.space.PX_16, alignSelf: "center" };
+createCacheKey[4] = { gap: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_24 };
+set = { width: 16, height: 16, tintColor: ThemesDefault.colors.TEXT_DEFAULT };
 createCacheKey[5] = set;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 const result = set.fileFinishedImporting("modules/soundboard/native/SoundboardSoundPreviewActionSheet.tsx");
 
 export default function SoundboardSoundPreviewActionSheet(channelId) {
   channelId = channelId.channelId;
   const sound = channelId.sound;
-  let dependencyMap;
+  dependencyMap = undefined;
   let analyticsLocations;
   let isPlayingSound;
   let isFavorite;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = channelId(589);
-  const items = [mergeGuildAvatar];
+  const items = [closure_6];
   dependencyMap = obj.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let id;
@@ -52,20 +48,20 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
     return id;
   });
   analyticsLocations = sound(7139)().analyticsLocations;
-  let obj1 = channelId(589);
-  const items1 = [handleSoundCreateOrUpdate];
+  obj1 = channelId(589);
+  const items1 = [closure_7];
   const stateFromStoresObject = obj1.useStateFromStoresObject(items1, () => {
     let isUserPlayingSoundsResult = null != closure_2;
     if (isUserPlayingSoundsResult) {
-      isUserPlayingSoundsResult = outer1_7.isUserPlayingSounds(tmp);
+      isUserPlayingSoundsResult = closure_1_7.isUserPlayingSounds(tmp);
     }
-    return { isPlayingSound: isUserPlayingSoundsResult, isFavorite: outer1_7.isFavoriteSound(sound.soundId) };
+    return { isPlayingSound: isUserPlayingSoundsResult, isFavorite: closure_1_7.isFavoriteSound(sound.soundId) };
   });
   isPlayingSound = stateFromStoresObject.isPlayingSound;
   isFavorite = stateFromStoresObject.isFavorite;
   const items2 = [isFavorite, sound, analyticsLocations];
   const items3 = [channelId, sound, isPlayingSound];
-  const callback = analyticsLocations.useCallback(() => {
+  callback = analyticsLocations.useCallback(() => {
     if (isFavorite) {
       let tmpResult = tmp(7299);
       tmpResult.removeFavoriteSound(sound.soundId);
@@ -75,7 +71,7 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
       obj[0] = sound;
       obj = {};
       const merged = Object.assign(analyticsLocations);
-      obj.object = outer1_8.SOUNDBOARD_SOUND;
+      obj.object = closure_1_8.SOUNDBOARD_SOUND;
       obj[1] = obj;
       tmpResult.trackSoundFavorited(obj);
       channelId(7299).addFavoriteSound(sound.soundId);
@@ -88,12 +84,11 @@ export default function SoundboardSoundPreviewActionSheet(channelId) {
       const obj = channelId(7299);
     }
   }, items3);
-  obj = { fastImageStyle: items4, textEmojiStyle: items5, src: null, name: null };
+  obj = { fastImageStyle: items4, textEmojiStyle: items5, src: sound(11121)(sound, 64), name: null };
   items4 = [, ];
   ({ emoji: arr5[0], emojiFastImage: arr5[1] } = tmp);
   items5 = [, ];
   ({ emoji: arr6[0], emojiText: arr6[1] } = tmp);
-  obj[2] = sound(11121)(sound, 64);
   let str = sound.emojiName;
   if (str == null) {
     str = "";

@@ -1,44 +1,35 @@
 // discord_app/modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx
-import closure_4 from "MAX_STAGE_TOPIC_LENGTH";
-import _slicedToArray from "_slicedToArray";
-import StageSparkleInner from "StageSparkleInner";
-import { View } from "ACTION_SHEET_HEIGHT_HALF";
-import handleStageInstanceCreateOrUpdate from "handleStageInstanceCreateOrUpdate";
-import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH";
-import ME from "ME";
-import { GuildScheduledEventPrivacyLevel as closure_12 } from "GUILD_EVENT_MAX_NAME_LENGTH";
-import jsxProd from "getSystemLocale";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import closure_6 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_8 from "handleStageInstanceCreateOrUpdate" /* 1396 */;
+import MAX_STAGE_TOPIC_LENGTH from "MAX_STAGE_TOPIC_LENGTH" /* 4978 */;
+import ME from "ME" /* 676 */;
+import { GuildScheduledEventPrivacyLevel as closure_12 } from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let Fonts;
-let c10;
-let c9;
-let closure_14;
-let map1;
-let unpackModuleId;
 const require = arg1;
 ({ MAX_STAGE_TOPIC_LENGTH: c9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = MAX_STAGE_TOPIC_LENGTH);
 ({ AnalyticEvents: unpackModuleId, Fonts } = ME);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 createCacheKey = { container: { padding: 16 }, header: { alignItems: "center", paddingBottom: 24 }, headerTitle: { marginTop: 16, marginBottom: 8 }, headerSubtitle: { textAlign: "center" }, startButton: { marginTop: 16 }, buttonSubtitle: { paddingTop: 8, textAlign: "center" }, ageVerificationNotice: null, error: null };
-createCacheKey = { marginBottom: require("Themes").space.PX_16 };
+createCacheKey = { marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[6] = createCacheKey;
-createCacheKey[7] = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: require("Themes").unsafe_rawColors.RED_400 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: require("Themes").unsafe_rawColors.RED_400 };
-let result = require("noop").fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
+createCacheKey[7] = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { paddingTop: 8, fontSize: 12, fontFamily: Fonts.PRIMARY_MEDIUM, color: ThemesDefault.unsafe_rawColors.RED_400 };
+let result = require("set").fileFinishedImporting("modules/stage_channels/native/sheets/StartStageChannelActionSheet.tsx");
 
 export default function StartStageChannelEventActionSheet(channel) {
-  let c3;
-  let c4;
-  let obj3;
-  let tmp8;
   channel = channel.channel;
   let stateFromStores;
   let first;
-  let dependencyMap;
+  dependencyMap = undefined;
   c4 = undefined;
-  function _handleSave(StageSparkleInner, arg1) {
+  function _handleSave(closure_6, arg1) {
     const self = this;
     const tmp = _undefined2(function*() {
       if (c5 === 2) {
@@ -67,28 +58,28 @@ export default function StartStageChannelEventActionSheet(channel) {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_1 = tmp3;
+              closure_1 = tmp3;
               let aPIError = tmp7;
               aPIError = undefined;
-              if ("" !== outer1_2.trim()) {
+              if ("" !== closure_1_2.trim()) {
                 dependencyMap(true);
                 v0(null);
-                let obj3 = outer1_2(1892);
+                let obj3 = closure_1_2(1892);
                 const result = obj3.dismissGlobalKeyboard();
                 dependencyMap = 1;
-                if (null != outer1_1) {
+                if (null != closure_1_1) {
                   let tmp33Result = tmp33(8062);
                   v0 = 3;
                   c5 = 1;
-                  let obj1 = { value: null, done: false };
-                  obj1[0] = tmp33Result.editStage(outer1_0, tmp54, outer1_12.GUILD_ONLY);
+                  obj1 = { value: null, done: false };
+                  obj1[0] = tmp33Result.editStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY);
                   return obj1;
                 } else {
                   tmp33Result = tmp33(8062);
                   v0 = 2;
                   c5 = 1;
                   const obj2 = { value: null, done: false };
-                  obj2[0] = tmp33Result.startStage(outer1_0, tmp54, outer1_12.GUILD_ONLY, false);
+                  obj2[0] = tmp33Result.startStage(closure_1_0, tmp54, closure_1_12.GUILD_ONLY, false);
                   return obj2;
                 }
               }
@@ -97,7 +88,7 @@ export default function StartStageChannelEventActionSheet(channel) {
             if (1 === tmp7) {
               dependencyMap = 0;
               closure_1 = closure_2;
-              aPIError = new outer1_0(4273).APIError(closure_1);
+              aPIError = new closure_1_0(4273).APIError(closure_1);
               v0(aPIError);
               dependencyMap(false);
             } else {
@@ -116,8 +107,8 @@ export default function StartStageChannelEventActionSheet(channel) {
                 obj[0] = arg1;
                 return obj;
               }
-              obj1 = outer1_1(4342);
-              obj1.hideActionSheet(outer1_10);
+              obj1 = closure_1_1(4342);
+              obj1.hideActionSheet(closure_1_10);
               dependencyMap = 0;
             }
             dependencyMap = 0;
@@ -138,7 +129,7 @@ export default function StartStageChannelEventActionSheet(channel) {
         }
       }
     });
-    const _handleSave = tmp;
+    closure_5 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -147,11 +138,11 @@ export default function StartStageChannelEventActionSheet(channel) {
     }
     return applyArgumentsResult;
   }
-  let tmp = createCacheKey();
+  let tmp = callback2();
   let obj = channel(589);
-  const items = [handleStageInstanceCreateOrUpdate];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_8.getStageInstanceByChannel(channel.id));
-  let obj1 = React;
+  const items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getStageInstanceByChannel(channel.id));
+  obj1 = React;
   let str;
   if (stateFromStores != null) {
     str = stateFromStores.topic;
@@ -173,7 +164,7 @@ export default function StartStageChannelEventActionSheet(channel) {
       id = stateFromStores.id;
     }
     obj = { stage_instance_id: id, can_start_public_stage: false, guild_id: channel.guild_id };
-    obj.track(outer1_11.START_STAGE_OPENED, obj);
+    obj.track(closure_1_11.START_STAGE_OPENED, obj);
   });
   obj = { style: tmp.header, children: null };
   const items1 = [callback(stateFromStores(8068), {}), , ];

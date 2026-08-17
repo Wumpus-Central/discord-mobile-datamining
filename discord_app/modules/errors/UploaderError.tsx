@@ -1,6 +1,7 @@
 // discord_app/modules/errors/UploaderError.tsx
-import "prototype";
+import prototypeDefault from "prototype" /* 4274 */;
 
+prototypeDefault;
 const prototype = function UploaderError(body) {
   tmp = new tmp(body, arg1, new.target, tmp, new.target);
   // ThrowIfThisInitialized (0x7c)

@@ -1,10 +1,11 @@
 // discord_app/design/components/TableRow/native/TableRowTrailingText.native.tsx
-import "noop";
-import { jsx } from "jsxProd";
-import { Text } from "../../Text/native/Text.tsx";
+import noopAll from "noop" /* 19 */;
+import Text from "Text" /* 4734 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("Text").fileFinishedImporting("design/components/TableRow/native/TableRowTrailingText.native.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("design/components/TableRow/native/TableRowTrailingText.native.tsx");
 
 export const TableRowTrailingText = function TableRowTrailingText(children) {
   return jsx(Text.Text, { variant: "text-sm/medium", color: "text-muted", lineClamp: 1, children: children.text });

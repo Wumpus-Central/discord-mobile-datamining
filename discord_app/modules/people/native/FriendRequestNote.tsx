@@ -1,49 +1,41 @@
 // discord_app/modules/people/native/FriendRequestNote.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import { RelationshipTypes } from "ME";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import { RelationshipTypes } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let c9;
-let metroImportAll;
 const require = arg1;
 ({ Pressable: c4, View: c5 } = get_ActivityIndicator);
-({ jsx: metroImportAll, jsxs: c9 } = jsxProd);
+({ jsx: closure_8, jsxs: c9 } = jsxProd);
 createCacheKey = { container: null, spoiler: null, hidden: null };
-createCacheKey = { width: "100%", position: "relative", padding: require("Themes").space.PX_12, borderRadius: require("Themes").radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" };
+createCacheKey = { width: "100%", position: "relative", padding: ThemesDefault.space.PX_12, borderRadius: ThemesDefault.radii.md, minHeight: 56, flexDirection: "row", alignItems: "center" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: require("Themes").radii.md };
+createCacheKey[1] = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
 createCacheKey[2] = { opacity: 0 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: require("Themes").radii.md };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/people/native/FriendRequestNote.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, justifyContent: "center", alignItems: "center", borderRadius: ThemesDefault.radii.md };
+let result = require("set").fileFinishedImporting("modules/people/native/FriendRequestNote.tsx");
 
 export default function FriendRequestNote(styles) {
-  let analyticsLocation;
-  let backgroundColor;
-  let c3;
-  let require;
-  let tmp7;
   ({ userId: require, backgroundColor, analyticsLocation } = styles);
   let note;
   let React;
-  const tmp = createCacheKey();
+  const tmp = callback();
   const HideFriendRequestNotes = require(analyticsLocation[8]).HideFriendRequestNotes;
   const setting = HideFriendRequestNotes.useSetting();
   let obj = require(analyticsLocation[9]);
-  const items = [markAllUserIdListsStale];
-  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ note: outer1_6.getNote(closure_0), type: outer1_6.getRelationshipType(closure_0) }));
+  const items = [closure_6];
+  const stateFromStoresObject = obj.useStateFromStoresObject(items, () => ({ note: closure_1_6.getNote(closure_0), type: closure_1_6.getRelationshipType(closure_0) }));
   note = stateFromStoresObject.note;
   [tmp7, c3] = note(React.useState(stateFromStoresObject.type === RelationshipTypes.PENDING_OUTGOING), 2);
   const items1 = [analyticsLocation, note];
-  const callback = React.useCallback(() => {
+  callback = React.useCallback(() => {
     _undefined(true);
-    let obj = outer1_0(analyticsLocation[10]);
+    let obj = closure_1_0(analyticsLocation[10]);
     obj = { analyticsLocation, noteLength: null };
     let num;
     if (note != null) {
@@ -71,7 +63,7 @@ export default function FriendRequestNote(styles) {
         }
         obj = { style: null, children: null };
         obj[0] = hidden;
-        const obj1 = { accessible: null, accessibilityElementsHidden: null, accessibilityLabel: null, variant: "redesign/message-preview/normal", children: null };
+        obj1 = { accessible: null, accessibilityElementsHidden: null, accessibilityLabel: null, variant: "redesign/message-preview/normal", children: null };
         obj1[0] = tmp7;
         obj1[1] = !tmp7;
         obj1[2] = str;

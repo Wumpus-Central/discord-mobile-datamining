@@ -1,10 +1,11 @@
 // discord_app/modules/stickers/StickersStore.tsx
-import items from "items";
-import allGuildIds from "allGuildIds";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import parseServerGuildSticker from "parseServerGuildSticker";
-import parseServerPackSticker from "parseServerPackSticker";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import closure_4 from "allGuildIds" /* 1393 */;
+import closure_5 from "createGuildRecordFromRust" /* 1910 */;
+import closure_6 from "parseServerGuildSticker" /* 6770 */;
+import closure_7 from "parseServerPackSticker" /* 6771 */;
 
 const require = arg1;
 function loadSavedGuildStickers() {
@@ -27,7 +28,7 @@ function _loadSavedGuildStickers() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -47,20 +48,20 @@ function _loadSavedGuildStickers() {
             return obj;
           } else {
             let callback = tmp2;
-            let c0 = tmp5;
+            c0 = tmp5;
             c0 = undefined;
             callback = undefined;
-            if (outer1_9 === outer1_8.Unloaded) {
-              let obj1 = outer1_1(1955);
+            if (Loaded === closure_1_8.Unloaded) {
+              obj1 = closure_1_1(1955);
               const databaseResult = obj1.database();
               c0 = databaseResult;
               if (null != databaseResult) {
-                outer1_9 = tmp28.Loaded;
-                let obj2 = outer1_0(1974);
+                Loaded = tmp28.Loaded;
+                let obj2 = closure_1_0(1974);
                 dependencyMap = 1;
                 c3 = 1;
                 obj1 = { value: null, done: false };
-                obj1[0] = obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", () => callback(table[7]).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", () => outer1_1(outer1_2[8]).getAsync(closure_0)));
+                obj1[0] = obj2.tryLoadOrResetCacheGatewayAsync("StickerStore.loadSavedGuildStickers", () => callback(table[7]).timeAsync("\u{1F4BE}", "loadSavedGuildStickers", () => closure_1_1(closure_1_2[8]).getAsync(closure_0)));
                 return obj1;
               }
             }
@@ -88,7 +89,7 @@ function _loadSavedGuildStickers() {
       }
     }
   });
-  const _loadSavedGuildStickers = tmp;
+  closure_11 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -99,12 +100,13 @@ function _loadSavedGuildStickers() {
 }
 let obj = { Unloaded: 0, [0]: "Unloaded", Loaded: 1, [1]: "Loaded" };
 let Unloaded = obj.Unloaded;
+const Store = initializeDefault.Store;
 class StickersStore extends Store {
 }
 const prototype = StickersStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(allGuildIds, parseServerGuildSticker, createGuildRecordFromRust, parseServerPackSticker);
-  const items = [parseServerGuildSticker, parseServerPackSticker];
+  this.waitFor(closure_4, closure_6, closure_5, closure_7);
+  const items = [closure_6, closure_7];
   this.syncWith(items, () => true);
 };
 Object.defineProperty(prototype, "isLoaded", {
@@ -170,22 +172,22 @@ prototype["getStickersByGuildId"] = function getStickersByGuildId(closure_0) {
 StickersStore.displayName = "StickersStore";
 obj = {
   BACKGROUND_SYNC: function handleBackgroundSync() {
-    const Unloaded = obj.Unloaded;
+    Unloaded = obj.Unloaded;
   },
   CONNECTION_OPEN: function handleConnectionOpen(guilds) {
     guilds = guilds.guilds;
     if (0 === guilds.unavailableGuilds.length) {
       if (guilds.every((stickers) => "full_sync" === stickers.stickers.op)) {
-        let Unloaded = obj.Loaded;
+        Unloaded = obj.Loaded;
       }
     }
     Unloaded = obj.Unloaded;
   },
   LOGOUT: function handleLogout() {
-    const Unloaded = obj.Unloaded;
+    Unloaded = obj.Unloaded;
   }
 };
-const stickersStore = new StickersStore(require("dispatcher"), obj);
-const result = require("createGuildRecordFromRust").fileFinishedImporting("modules/stickers/StickersStore.tsx");
+const stickersStore = new StickersStore(dispatcherDefault, obj);
+const result = require("set").fileFinishedImporting("modules/stickers/StickersStore.tsx");
 
 export default stickersStore;

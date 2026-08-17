@@ -1,8 +1,8 @@
 // discord_app/modules/collectibles/native/hooks/useVirtualCurrencyData.tsx
-import noop from "noop";
+import closure_2 from "noop" /* 19 */;
 
 const require = arg1;
-const result = require("module_9252").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/native/hooks/useVirtualCurrencyData.tsx");
 
 export const useVirtualCurrencyData = function useVirtualCurrencyData(product, canUseShopDiscountsResult) {
   let obj = productOrbPrice(balance[1]);

@@ -1,8 +1,11 @@
 // discord_app/modules/search/managers/SearchTokensManager.tsx
-import { subscribeToIntlLoadingSuccess as closure_2 } from "_setAppLocale";
-import "initialize";
-import { SearchTokenTypes } from "../SearchUtils.tsx";
+import set from "set" /* 2 */;
+import _setAppLocale from "_setAppLocale" /* 1995 */;
+import initializeDefault from "initialize" /* 5038 */;
+import SearchTokenTypes from "SearchTokenTypes" /* 11511 */;
 
+let closure_2 = _setAppLocale.subscribeToIntlLoadingSuccess;
+initializeDefault;
 class SearchTokensManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -22,6 +25,6 @@ prototype["_terminate"] = function _terminate() {
   }
 };
 const searchTokensManager = new SearchTokensManager();
-let result = require("SearchTokenTypes").fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
+let result = set.fileFinishedImporting("modules/search/managers/SearchTokensManager.tsx");
 
 export default searchTokensManager;

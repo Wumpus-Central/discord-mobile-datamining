@@ -1,11 +1,15 @@
 // discord_app/modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx
-import { MobileUserSettings } from "MobileUserSettings";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useUserIsConsideredAdult } from "../../../parent_tools/hooks/useUserIsConsideredAdult.tsx";
-import { InappropriateConversationsDefaultOn } from "../../../self_mod/inappropriate_conversation/InappropriateConversationsDefaultOn.tsx";
-import { InappropriateConversationExperiment } from "../../../self_mod/inappropriate_conversation/SelfModInappropriateConversationExperiment.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileUserSettings2 from "MobileUserSettings" /* 8198 */;
+import InappropriateConversationExperiment from "InappropriateConversationExperiment" /* 10576 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10577 */;
+import InappropriateConversationsDefaultOn from "InappropriateConversationsDefaultOn" /* 10578 */;
+import useUserIsConsideredAdultDefault from "useUserIsConsideredAdult" /* 11057 */;
+import updateDmSafetyAlertsSetting from "updateDmSafetyAlertsSetting" /* 14192 */;
+import createToggle from "createToggle" /* 10669 */;
 
+const MobileUserSettings = MobileUserSettings2.MobileUserSettings;
 const toggle = createToggle.createToggle({
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -14,10 +18,10 @@ const toggle = createToggle.createToggle({
   parent() {
     return MobileUserSettings.CONTENT_AND_SOCIAL;
   },
-  useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
-  onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
+  useValue: useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault,
+  onValueChange: updateDmSafetyAlertsSetting.updateDmSafetyAlertsSetting,
   usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = useUserIsConsideredAdult();
+    let flag = useUserIsConsideredAdultDefault();
     if (flag == null) {
       flag = true;
     }
@@ -42,10 +46,10 @@ let obj = {
   parent() {
     return MobileUserSettings.CONTENT_AND_SOCIAL;
   },
-  useValue: require("useSafetyAlertsSettingOrDefault").useSafetyAlertsSettingOrDefault,
-  onValueChange: require("updateDmSafetyAlertsSetting").updateDmSafetyAlertsSetting,
+  useValue: useSafetyAlertsSettingOrDefault.useSafetyAlertsSettingOrDefault,
+  onValueChange: updateDmSafetyAlertsSetting.updateDmSafetyAlertsSetting,
   usePredicate: function useHasDmSafetyAlertsSetting() {
-    let flag = useUserIsConsideredAdult();
+    let flag = useUserIsConsideredAdultDefault();
     if (flag == null) {
       flag = true;
     }
@@ -62,6 +66,6 @@ let obj = {
     return tmp4;
   }
 };
-const result = require("InappropriateConversationExperiment").fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/DirectMessageSafetyAlertsSetting.tsx");
 
 export default toggle;

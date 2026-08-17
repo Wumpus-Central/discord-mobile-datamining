@@ -1,40 +1,31 @@
 // discord_app/modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { resetFocusTimer } from "VoiceChatDrawerState";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { PressableBase } from "../../../../design/void/Pressables/native/Pressables.tsx";
-import { isBlurDisabled } from "../../../visual_effect_view/native/VisualEffectView.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import isBlurDisabledDefault from "isBlurDisabled" /* 4725 */;
+import PressableBase from "PressableBase" /* 5433 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { resetFocusTimer } from "VoiceChatDrawerState" /* 8669 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ View: c3, StyleSheet: c4 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { pressableContainer: { marginHorizontal: 4 }, pressable: null, container: null, text: null, disabled: null, iconColor: null };
-createCacheKey = { borderRadius: require("Themes").radii.lg };
+createCacheKey = { borderRadius: ThemesDefault.radii.lg };
 createCacheKey[1] = createCacheKey;
-createCacheKey[2] = { flexDirection: "row", height: 32, width: 32, borderRadius: require("Themes").radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-let obj1 = { flexDirection: "row", height: 32, width: 32, borderRadius: require("Themes").radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW };
-createCacheKey[3] = { marginLeft: 4, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.WHITE };
+createCacheKey[2] = { flexDirection: "row", height: 32, width: 32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+let obj1 = { flexDirection: "row", height: 32, width: 32, borderRadius: ThemesDefault.radii.lg, alignItems: "center", justifyContent: "center", overflow: "hidden", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW };
+createCacheKey[3] = { marginLeft: 4, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.WHITE };
 createCacheKey[4] = { opacity: 0.5 };
-let obj2 = { marginLeft: 4, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: require("Themes").colors.WHITE };
-createCacheKey[5] = { color: require("Themes").colors.ICON_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj3 = { color: require("Themes").colors.ICON_SUBTLE };
-const result = require("VoiceChatDrawerState").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx");
+let obj2 = { marginLeft: 4, fontSize: 14, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, color: ThemesDefault.colors.WHITE };
+createCacheKey[5] = { color: ThemesDefault.colors.ICON_SUBTLE };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+let obj3 = { color: ThemesDefault.colors.ICON_SUBTLE };
+const result = require("set").fileFinishedImporting("modules/video_calls/native/components/ChannelCallNavigatorIcon.tsx");
 
 export default function ChannelCallNavigatorIcon(disableBackground) {
-  let accessibilityLabel;
-  let children;
-  let disabled;
-  let membersCount;
-  let require;
-  let source;
-  let theme;
   ({ onPress: require, membersCount, disabled, theme } = disableBackground);
   ({ source, accessibilityLabel, children } = disableBackground);
   if (theme === undefined) {
@@ -45,7 +36,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     flag = true;
   }
   const IconComponent = disableBackground.IconComponent;
-  const tmp = createCacheKey();
+  const tmp = callback();
   let obj = { style: tmp.pressableContainer, children: null };
   obj = {
     accessibilityRole: "button",
@@ -53,7 +44,7 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
     disabled,
     style: tmp.pressable,
     onPress() {
-      if (null != outer1_5) {
+      if (null != closure_1_5) {
         tmp();
       }
       callback();
@@ -70,9 +61,9 @@ export default function ChannelCallNavigatorIcon(disableBackground) {
   if (tmp5Result.isThemeDark(theme)) {
     tmp2Result = null;
     if (!flag) {
-      const obj1 = { blurTheme: "dark", style: null };
+      obj1 = { blurTheme: "dark", style: null };
       obj1[1] = absoluteFill.absoluteFill;
-      tmp2Result = tmp2(isBlurDisabled, obj1);
+      tmp2Result = tmp2(isBlurDisabledDefault, obj1);
     }
   }
   const items1 = [tmp2Result, , ];

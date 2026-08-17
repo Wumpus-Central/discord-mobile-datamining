@@ -1,30 +1,25 @@
 // discord_app/modules/user_profile/UserProfileAnalyticsUtils.tsx
-import initialize from "initialize";
-import recomputeFromAppTokens from "recomputeFromAppTokens";
-import { FetchState } from "recomputeFromAppTokens";
-import recomputeAffinities from "recomputeAffinities";
-import reset from "reset";
-import trackCommunicationDisabled from "trackCommunicationDisabled";
-import sortActivity from "sortActivity";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import createUserWidgetFromServer from "createUserWidgetFromServer";
-import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY";
-import ME from "ME";
-import { StatusTypes } from "sum";
-import { expandEventProperties } from "../../utils/AnalyticsUtils.tsx";
-import { getAvatarURL } from "../../utils/AvatarUtils.tsx";
-import { collectGuildAnalyticsMetadata } from "../app_analytics/AppAnalyticsUtils.tsx";
-import { isUserProfilePerformanceAnalyticsEnabled } from "experiments/UserProfilePerformanceAnalyticsExperiment.tsx";
-import { useDisplayProfile } from "hooks/useDisplayProfile.tsx";
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import collectGuildAnalyticsMetadata from "collectGuildAnalyticsMetadata" /* 5042 */;
+import useDisplayProfile from "useDisplayProfile" /* 8416 */;
+import isUserProfilePerformanceAnalyticsEnabled from "isUserProfilePerformanceAnalyticsEnabled" /* 8940 */;
+import closure_3 from "initialize" /* 8936 */;
+import closure_4 from "recomputeFromAppTokens" /* 5289 */;
+import { FetchState } from "recomputeFromAppTokens" /* 5289 */;
+import closure_6 from "recomputeAffinities" /* 5407 */;
+import closure_7 from "reset" /* 4652 */;
+import closure_8 from "trackCommunicationDisabled" /* 1990 */;
+import closure_9 from "sortActivity" /* 4559 */;
+import closure_10 from "markAllUserIdListsStale" /* 4030 */;
+import closure_11 from "mergeGuildAvatar" /* 1922 */;
+import closure_12 from "createUserWidgetFromServer" /* 5365 */;
+import { TrackUserProfileProperties as closure_13 } from "USER_PROFILE_TOOLTIP_DELAY" /* 8931 */;
+import ME from "ME" /* 676 */;
+import { StatusTypes } from "sum" /* 505 */;
 
-let closure_14;
-let closure_15;
-const require = arg1;
+require = arg1;
 function getProfileProperties(guildMemberProfile) {
-  let guildMember;
-  let user;
-  let userProfile;
   ({ user, userProfile, guildMember } = guildMemberProfile);
   if (userProfile == null) {
     userProfile = guildMemberProfile.guildMemberProfile;
@@ -106,11 +101,6 @@ function getProfileProperties(guildMemberProfile) {
   }
 }
 function getTrackUserProfileProperties(userId) {
-  let guildId;
-  let layout;
-  let sessionId;
-  let showGuildProfile;
-  let sourceSessionId;
   ({ guildId, showGuildProfile } = userId);
   ({ layout, userId, sessionId, sourceSessionId } = userId);
   if (showGuildProfile === undefined) {
@@ -152,7 +142,7 @@ function getTrackUserProfileProperties(userId) {
     }
     obj[1] = _userProfile;
     obj[3] = getProfileProperties(obj);
-    const obj1 = { guildMember: null, guildMemberProfile: null };
+    obj1 = { guildMember: null, guildMemberProfile: null };
     obj1[0] = member;
     let _guildMemberProfile;
     if (displayProfile != null) {
@@ -160,7 +150,7 @@ function getTrackUserProfileProperties(userId) {
     }
     obj1[1] = _guildMemberProfile;
     obj[4] = getProfileProperties(obj1);
-    const activities = sortActivity.getActivities(user.id);
+    const activities = closure_9.getActivities(user.id);
     const mapped = activities.map((type) => type.type);
     obj[5] = mapped.filter((arg0) => undefined !== arg0);
     let found;
@@ -231,17 +221,9 @@ function getTrackUserProfileProperties(userId) {
   }
 }
 function trackUserProfileAction(applicationId) {
-  let action;
-  let analyticsLocations;
-  let channelId;
-  let guildId;
-  let messageId;
-  let roleId;
-  let section;
-  let widgetType;
   applicationId = applicationId.applicationId;
   ({ guildId, channelId, messageId, roleId, widgetType, analyticsLocations, action, section } = applicationId);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj3 = collectGuildAnalyticsMetadata;
@@ -275,7 +257,7 @@ function trackUserProfileAction(applicationId) {
     obj[6] = communicationRank;
   }
   const merged3 = Object.assign(obj);
-  const obj1 = { application_id: applicationId, application_linked: null };
+  obj1 = { application_id: applicationId, application_linked: null };
   let tmp8 = null;
   if (null != applicationId) {
     tmp8 = null;
@@ -295,7 +277,7 @@ function trackUserProfileAction(applicationId) {
   obj.track(constants3.USER_PROFILE_ACTION, obj);
 }
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = ME);
-let result = require("recomputeAffinities").fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 
 export const getActivityType = function getActivityType(arg0) {
   let tmp = arg0;
@@ -344,15 +326,6 @@ export const getTrackUserRelationshipProperties = function getTrackUserRelations
 };
 export { trackUserProfileAction };
 export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiViewed(userId) {
-  let analyticsLocations;
-  let channelId;
-  let fetchStartedAt;
-  let guildId;
-  let profileUi;
-  let timeToFetchMs;
-  let timeToInteractiveMs;
-  let timeToLoadMs;
-  let viewStartedAt;
   let trackResult = isUserProfilePerformanceAnalyticsEnabled;
   if (trackResult.isUserProfilePerformanceAnalyticsEnabled("UserProfileAnalyticsUtils")) {
     ({ timeToInteractiveMs, timeToLoadMs, timeToFetchMs } = userId);
@@ -418,24 +391,15 @@ export const maybeTrackUserProfileUiViewed = function maybeTrackUserProfileUiVie
       trackResult.time_to_interactive_ms = timeToInteractiveMs;
       trackResult.time_to_load_ms = timeToLoadMs;
       trackResult.time_to_fetch_ms = timeToFetchMs;
-      trackResult = expandEventProperties.track(constants3.USER_PROFILE_UI_VIEWED, trackResult);
-      const obj2 = expandEventProperties;
+      trackResult = expandEventPropertiesDefault.track(constants3.USER_PROFILE_UI_VIEWED, trackResult);
+      const obj2 = expandEventPropertiesDefault;
     }
   }
 };
 export const trackUserProfileActivityJoined = function trackUserProfileActivityJoined(userId) {
-  let activityName;
-  let activityPlatform;
-  let activitySessionId;
-  let activityType;
-  let analyticsLocations;
-  let applicationId;
-  let channelId;
-  let guildId;
-  let voiceChannelId;
   ({ activityType, voiceChannelId } = userId);
   ({ guildId, channelId, analyticsLocations, activityName, activityPlatform, activitySessionId, applicationId } = userId);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj3 = collectGuildAnalyticsMetadata;
@@ -495,19 +459,9 @@ export const trackUserProfileActivityJoined = function trackUserProfileActivityJ
   obj.track(constants3.USER_PROFILE_ACTIVITY_JOINED, obj);
 };
 export const trackUserProfileActivityAction = function trackUserProfileActivityAction(userId) {
-  let action;
-  let activity;
-  let analyticsLocations;
-  let channelId;
-  let display;
-  let entry;
-  let guildId;
-  let outbox;
-  let stream;
-  let voiceChannelId;
   ({ activity, entry, outbox } = userId);
   ({ guildId, channelId, analyticsLocations, action, display, stream, voiceChannelId } = userId);
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj3 = collectGuildAnalyticsMetadata;
@@ -608,12 +562,6 @@ export const trackUserProfileActivityAction = function trackUserProfileActivityA
   obj.track(constants3.USER_PROFILE_ACTIVITY_ACTION, obj);
 };
 export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(userId) {
-  let analyticsLocations;
-  let badgeAction;
-  let badgeId;
-  let channelId;
-  let guildId;
-  let position;
   ({ badgeId, userId } = userId);
   let tmp;
   ({ guildId, channelId, analyticsLocations, badgeAction, position } = userId);
@@ -627,7 +575,7 @@ export const trackUserProfileBadgeAction = function trackUserProfileBadgeAction(
       tmp = current_tier;
     }
   }
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj3 = collectGuildAnalyticsMetadata;
@@ -677,17 +625,17 @@ export const trackDmProfileToggled = function trackDmProfileToggled(displayProfi
   }
   let findActivityResult = null;
   if (null != userId) {
-    findActivityResult = sortActivity.findActivity(userId, (type) => {
+    findActivityResult = closure_9.findActivity(userId, (type) => {
       type = type.type;
-      if (null != outer1_7.getAnyStreamForUser(userId)) {
-        let tmp2 = type === outer1_14.PLAYING;
+      if (null != closure_1_7.getAnyStreamForUser(userId)) {
+        let tmp2 = type === closure_1_14.PLAYING;
       } else {
-        tmp2 = type !== outer1_14.CUSTOM_STATUS;
+        tmp2 = type !== closure_1_14.CUSTOM_STATUS;
       }
       return tmp2;
     });
   }
-  let obj = expandEventProperties;
+  let obj = expandEventPropertiesDefault;
   obj = {};
   const merged = Object.assign(getTrackUserProfileProperties({ userId }));
   obj.is_profile_open = displayProfile.isProfileOpen;
@@ -729,15 +677,6 @@ export const trackDmProfileToggled = function trackDmProfileToggled(displayProfi
   obj.track(constants3.DM_PROFILE_TOGGLED, obj);
 };
 export const trackUserProfileEditAction = function trackUserProfileEditAction(userId) {
-  let action;
-  let analyticsLocations;
-  let applicationId;
-  let channelId;
-  let gameId;
-  let guildId;
-  let numCharacters;
-  let numResults;
-  let widgetEdited;
   ({ action, applicationId } = userId);
   let obj = {};
   ({ guildId, channelId, analyticsLocations, widgetEdited, gameId, numResults, numCharacters } = userId);
@@ -745,7 +684,7 @@ export const trackUserProfileEditAction = function trackUserProfileEditAction(us
   obj.action = action;
   trackUserProfileAction(obj);
   obj = {};
-  const obj2 = expandEventProperties;
+  const obj2 = expandEventPropertiesDefault;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj4 = collectGuildAnalyticsMetadata;
   const merged2 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadataFromId(channelId));
@@ -771,21 +710,13 @@ export const trackUserProfileEditAction = function trackUserProfileEditAction(us
   obj2.track(constants3.USER_PROFILE_EDIT_ACTION, obj);
 };
 export const trackUserProfileEditSaved = function trackUserProfileEditSaved(userId) {
-  let analyticsLocations;
-  let channelId;
-  let gameIds;
-  let guildId;
-  let isWidgetRemoved;
-  let numCharactersCommentary;
-  let tags;
-  let widgetEdited;
   let obj = {};
   ({ guildId, channelId, analyticsLocations, widgetEdited, gameIds, tags, numCharactersCommentary, isWidgetRemoved } = userId);
   const merged = Object.assign(userId);
   obj.action = "EDIT_SAVED";
   trackUserProfileAction(obj);
   obj = {};
-  const obj2 = expandEventProperties;
+  const obj2 = expandEventPropertiesDefault;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj4 = collectGuildAnalyticsMetadata;
   const merged2 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadataFromId(channelId));
@@ -799,13 +730,6 @@ export const trackUserProfileEditSaved = function trackUserProfileEditSaved(user
   obj2.track(constants3.USER_PROFILE_EDIT_SAVED, obj);
 };
 export const trackUserProfileWishlistAction = function trackUserProfileWishlistAction(userId) {
-  let action;
-  let analyticsLocations;
-  let channelId;
-  let guildId;
-  let productLines;
-  let skuId;
-  let wishlistId;
   ({ action, productLines } = userId);
   let obj = {};
   ({ guildId, channelId, analyticsLocations, wishlistId, skuId } = userId);
@@ -813,7 +737,7 @@ export const trackUserProfileWishlistAction = function trackUserProfileWishlistA
   obj.action = action;
   trackUserProfileAction(obj);
   obj = {};
-  const obj2 = expandEventProperties;
+  const obj2 = expandEventPropertiesDefault;
   const merged1 = Object.assign(collectGuildAnalyticsMetadata.collectGuildAnalyticsMetadata(guildId));
   const obj4 = collectGuildAnalyticsMetadata;
   const merged2 = Object.assign(collectGuildAnalyticsMetadata.collectChannelAnalyticsMetadataFromId(channelId));

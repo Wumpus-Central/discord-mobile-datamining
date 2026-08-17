@@ -1,9 +1,11 @@
 // discord_app/modules/applications/message_embed/utils/activityBookmarkUtils.tsx
-import { isDiscordProxiedAssetUrl } from "../../../../utils/URLUtils.tsx";
-const result = require("set").fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
+import set from "set" /* 2 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+
+const result = set.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");
 
 export const extractActivityBookmarkParams = function extractActivityBookmarkParams(url) {
-  let obj = isDiscordProxiedAssetUrl;
+  let obj = isDiscordProxiedAssetUrlDefault;
   const toURLSafeResult = obj.toURLSafe(url);
   let value;
   if (toURLSafeResult != null) {

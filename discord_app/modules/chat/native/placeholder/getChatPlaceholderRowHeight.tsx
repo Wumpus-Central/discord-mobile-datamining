@@ -1,9 +1,11 @@
 // discord_app/modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx
-const PX_24 = require("Themes").space.PX_24;
+import ThemesDefault from "Themes" /* 712 */;
+
+const PX_24 = ThemesDefault.space.PX_24;
 const tmp2 = require("Button").AVATAR_SIZE_MAP[require("Button").AvatarSizes.NORMAL];
 let closure_1 = tmp2;
-const PX_16 = require("Themes").space.PX_16;
-const PX_12 = require("Themes").space.PX_12;
+const PX_16 = ThemesDefault.space.PX_16;
+const PX_12 = ThemesDefault.space.PX_12;
 const result = require("set").fileFinishedImporting("modules/chat/native/placeholder/getChatPlaceholderRowHeight.tsx");
 
 export default function getChatPlaceholderRowHeight(arg0) {

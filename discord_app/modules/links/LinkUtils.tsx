@@ -1,13 +1,13 @@
 // discord_app/modules/links/LinkUtils.tsx
-import ensureGuildLoaded from "ensureGuildLoaded";
-import createGuildRecordFromRust from "createGuildRecordFromRust";
-import getUncachedChannelPermissions from "getUncachedChannelPermissions";
-import ME from "ME";
-import { set } from "../../utils/RegexUtils.tsx";
+import setDefault from "set" /* 4362 */;
+import closure_2 from "ensureGuildLoaded" /* 1391 */;
+import closure_3 from "createGuildRecordFromRust" /* 1910 */;
+import closure_4 from "getUncachedChannelPermissions" /* 4021 */;
+import ME from "ME" /* 676 */;
 
 ME = ME.ME;
 const Permissions = ME.Permissions;
-const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => set.escape(arg0));
+const mapped = Array.from(require("set").StaticChannelRoutes).map((arg0) => setDefault.escape(arg0));
 const joined = mapped.join("|");
 const regExp = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)?(\\d+|" + joined + ")?");
 const regExp1 = new RegExp("^/channels/(\\d+|" + ME + ")(?:/)(\\d+|" + joined + ")(?:/)(\\d+)");
@@ -18,7 +18,7 @@ const regExp5 = new RegExp("^/events/(\\d+)(?:/)(\\d+)?((?:/)(\\d+))?");
 const regExp6 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+|" + ME + ")(?:/(\\d+|[a-zA-Z-]+))?(?:/(\\d+|[a-zA-Z-]+))?");
 const regExp7 = new RegExp("^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?.com|staging\\.discord\\.co)/channels/(\\d+)(?:/)(\\d+)(?:/threads/)(\\d+)(?:/)(\\d+)");
 const arr = Array.from(require("set").StaticChannelRoutes);
-const result = require("getUncachedChannelPermissions").fileFinishedImporting("modules/links/LinkUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/links/LinkUtils.tsx");
 
 export const CHANNEL_OR_MESSAGES_URL_RE = regExp6;
 export const MEDIA_POST_URL_RE = regExp7;
@@ -83,13 +83,11 @@ export const tryParseEventDetailsPath = function tryParseEventDetailsPath(pathna
 export const canViewChannel = function canViewChannel(channel) {
   let canResult = channel.isPrivate();
   if (!canResult) {
-    canResult = getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel);
+    canResult = closure_4.can(Permissions.VIEW_CHANNEL, channel);
   }
   return canResult;
 };
 export const isAccessibleChannelPath = function isAccessibleChannelPath(arg0) {
-  let channelId;
-  let guildId;
   ({ guildId, channelId } = arg0);
   if (null == guild.getGuild(guildId)) {
     if (guildId !== ME) {
@@ -104,7 +102,7 @@ export const isAccessibleChannelPath = function isAccessibleChannelPath(arg0) {
     if (tmp3) {
       let canResult = channel.isPrivate();
       if (!canResult) {
-        canResult = getUncachedChannelPermissions.can(Permissions.VIEW_CHANNEL, channel);
+        canResult = closure_4.can(Permissions.VIEW_CHANNEL, channel);
       }
       tmp3 = canResult;
     }

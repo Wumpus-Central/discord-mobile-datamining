@@ -1,6 +1,7 @@
 // discord_app/modules/billing/records/SubscriptionTrialRecord.tsx
-import "toJS";
+import toJSDefault from "toJS" /* 1931 */;
 
+toJSDefault;
 let SubscriptionTrialRecord;
 class SubscriptionTrialRecord extends tmp2 {
   constructor(arg0) {
@@ -11,10 +12,6 @@ class SubscriptionTrialRecord extends tmp2 {
   }
 }
 SubscriptionTrialRecord["createFromServer"] = function createFromServer(arg0) {
-  let id;
-  let interval;
-  let interval_count;
-  let sku_id;
   ({ id, interval } = arg0);
   ({ interval_count, sku_id } = arg0);
   if (typeof SubscriptionTrialRecord !== "function") {

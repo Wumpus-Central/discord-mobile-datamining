@@ -1,7 +1,9 @@
 // discord_app/modules/remote_auth/QRLoginUtils.tsx
-import { isDiscordProxiedAssetUrl } from "../../utils/URLUtils.tsx";
+import set from "set" /* 2 */;
+import isDiscordProxiedAssetUrlDefault from "isDiscordProxiedAssetUrl" /* 1487 */;
+
 const re2 = /^\/ra\/([\w-]+)$/;
-const result = require("set").fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
+const result = set.fileFinishedImporting("modules/remote_auth/QRLoginUtils.tsx");
 
 export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host, pathname) {
   if (null != host) {
@@ -14,7 +16,7 @@ export const findRemoteAuthFingerprint = function findRemoteAuthFingerprint(host
         }
         return tmp6;
       }
-      obj = isDiscordProxiedAssetUrl;
+      obj = isDiscordProxiedAssetUrlDefault;
     }
   }
   return null;

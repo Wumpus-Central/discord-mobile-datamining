@@ -1,16 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx
-import importAllResult from "noop";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
 let c3 = importAllResult;
 const memoResult = importAllResult.memo(importAllResult.forwardRef(function MessagesLegendList(listItemHeight, ref) {
-  let accessibilityLabel;
-  let data;
-  let handleScrollAnimated;
-  let insetEnd;
-  let isRefreshEnabled;
-  let recycleItems;
   ({ data, insetEnd } = listItemHeight);
   const estimatedItemSize = listItemHeight.listItemHeight;
   const listItemSuggestedFriendHeight = listItemHeight.listItemSuggestedFriendHeight;
@@ -168,6 +162,6 @@ const memoResult = importAllResult.memo(importAllResult.forwardRef(function Mess
   const scrollIndicatorInsets = listLeft.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items8);
   return listRefHappeningNow(insetEnd(listItemSuggestedFriendHeight[12]).AnimatedLegendList, { ref, accessibilityLabel, contentContainerStyle, data: data.listData, estimatedHeaderSize, estimatedItemSize, getFixedItemSize, getItemType, keyExtractor, ListFooterComponent, ListHeaderComponent, onScroll, recycleItems, renderItem, scrollIndicatorInsets, stickyHeaderIndices });
 }));
-const result = require("useMessagesFlatData").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/tabs/messages/MessagesLegendList.tsx");
 
 export default memoResult;

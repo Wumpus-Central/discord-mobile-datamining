@@ -1,12 +1,12 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsUseDataToImproveDiscordSetting.tsx
-import freshTeenActivityWithMap from "freshTeenActivityWithMap";
-import { Consents } from "ME";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { maybeFetchCollectiblesForInvoices } from "../../../parent_tools/FamilyCenterActionCreators.tsx";
-import { useParentalControlledExplicitContentSettings } from "../../../parent_tools/hooks/useParentalControlSettings.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import maybeFetchCollectiblesForInvoicesDefault from "maybeFetchCollectiblesForInvoices" /* 5298 */;
+import useParentalControlledExplicitContentSettings from "useParentalControlledExplicitContentSettings" /* 14181 */;
+import closure_3 from "freshTeenActivityWithMap" /* 5296 */;
+import { Consents } from "ME" /* 676 */;
+import createToggle from "createToggle" /* 10669 */;
 
-const require = arg1;
+require = arg1;
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -30,13 +30,13 @@ createToggle = {
       } else {
         items2 = [Consents.USAGE_STATISTICS];
       }
-      maybeFetchCollectiblesForInvoices.updateTeenConsents(selectedTeenId, items1, items2);
-      const obj = maybeFetchCollectiblesForInvoices;
+      maybeFetchCollectiblesForInvoicesDefault.updateTeenConsents(selectedTeenId, items1, items2);
+      const obj = maybeFetchCollectiblesForInvoicesDefault;
     }
   },
   unsearchable: true
 };
 createToggle = createToggle.createToggle(createToggle);
-const result = require("ME").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToImproveDiscordSetting.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/defs/native/ParentalControlsUseDataToImproveDiscordSetting.tsx");
 
 export default createToggle;

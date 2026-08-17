@@ -1,26 +1,20 @@
 // discord_app/modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx
-import getSystemLocale from "getSystemLocale";
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
+import getRoleEmojisAll from "getRoleEmojis" /* 14573 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import closure_5 from "_slicedToArray" /* 32 */;
+import noop from "noop" /* 19 */;
 import { getSystemLocale } from "../../../../intl/index.native.tsx";
 import { useFetchListingsForGuild } from "../../GuildRoleSubscriptionsHooks.tsx";
 
-let closure_6;
-let error;
 const require = arg1;
 ({ useEffect: closure_6, useRef: error } = noop);
-const result = require("noop").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/guild_settings/useArchiveOrDelete.tsx");
 
 export default function useArchiveOrDelete(guildId, groupListingId, editStateId) {
-  let closure_8;
-  let error;
-  let error2;
-  let submitting;
-  let submitting2;
   const _require = guildId;
-  let closure_1 = groupListingId;
-  const importAll = editStateId;
-  const dependencyMap = arg3;
+  closure_1 = groupListingId;
+  importAll = editStateId;
+  dependencyMap = arg3;
   function _handleArchiveOrDelete() {
     const self = this;
     const tmp = callback(function*() {
@@ -50,16 +44,16 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_0 = tmp2;
-              const obj1 = { title: null, body: null, confirmText: null, confirmColor: null };
-              obj1[0] = outer1_4;
-              obj1[1] = outer1_5;
-              obj1[2] = outer1_6;
-              obj1[3] = outer1_0(outer1_3[7]).ButtonColors.RED;
+              closure_0 = tmp2;
+              obj1 = { title: null, body: null, confirmText: null, confirmColor: null };
+              obj1[0] = closure_1_4;
+              obj1[1] = closure_1_5;
+              obj1[2] = closure_1_6;
+              obj1[3] = closure_1_0(closure_1_3[7]).ButtonColors.RED;
               v0 = 1;
               c2 = 1;
               const obj2 = { value: null, done: false };
-              obj2[0] = v0(outer1_3[6]).confirm(obj1);
+              obj2[0] = v0(closure_1_3[6]).confirm(obj1);
               return obj2;
             }
           } else {
@@ -79,7 +73,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
                     navigation.goBack();
                   }
                 } else {
-                  v0(outer1_3[8])(null != v0, "group listing id cannot be null");
+                  v0(closure_1_3[8])(null != v0, "group listing id cannot be null");
                   if (closure_11) {
                     v0 = 3;
                     c2 = 1;
@@ -127,7 +121,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
         }
       }
     });
-    const _handleArchiveOrDelete = tmp;
+    closure_14 = tmp;
     const apply = tmp.apply;
     if (typeof apply === "unknown") {
       let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -139,23 +133,23 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
   let stringResult3 = dependencyMap;
   let obj = _useFetchListingsForGuild;
   const subscriptionListing = obj.useSubscriptionListing(editStateId);
-  const removeEditStateId = importAll(14573).useEditStateIds(groupListingId, guildId).removeEditStateId;
-  let obj2 = importAll(14573);
+  const removeEditStateId = getRoleEmojisAll.useEditStateIds(groupListingId, guildId).removeEditStateId;
+  let obj2 = getRoleEmojisAll;
   const deleteSubscriptionListing = _useFetchListingsForGuild.useDeleteSubscriptionListing();
   ({ error, deleteSubscriptionListing: closure_8, submitting } = deleteSubscriptionListing);
   let obj3 = _useFetchListingsForGuild;
   const archiveSubscriptionListing = _useFetchListingsForGuild.useArchiveSubscriptionListing();
-  let closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
+  closure_9 = archiveSubscriptionListing.archiveSubscriptionListing;
   ({ submitting: submitting2, error: error2 } = archiveSubscriptionListing);
-  let closure_10 = removeEditStateId(null);
+  closure_10 = removeEditStateId(null);
   let obj4 = _useFetchListingsForGuild;
-  const first = callback(importAll(14573).useName(editStateId), 1)[0];
+  const first = callback(getRoleEmojisAll.useName(editStateId), 1)[0];
   let archived;
   if (subscriptionListing != null) {
     archived = subscriptionListing.archived;
   }
-  let closure_11 = tmp8;
-  let closure_12 = tmp9;
+  closure_11 = tmp8;
+  closure_12 = tmp9;
   if (error == null) {
     error = error2;
   }
@@ -169,7 +163,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
       const intl3 = tmp(1236).intl;
       const stringResult = intl2.string(tmp(1236).t.RL0wjm);
       const intl4 = tmp(1236).intl;
-      let getSystemLocale = intl4.string(tmp(1236).t.N5AIuE);
+      closure_4 = intl4.string(tmp(1236).t.N5AIuE);
       const intl5 = tmp(1236).intl;
       callback = intl5.string(tmp(1236).t.TEKiiP);
       const intl6 = tmp(1236).intl;
@@ -219,7 +213,7 @@ export default function useArchiveOrDelete(guildId, groupListingId, editStateId)
     intl10(string.Y4KjUN);
   }
   const intl11 = tmp(1236).intl;
-  getSystemLocale = intl11.string(tmp(1236).t["4H6RLl"]);
+  closure_4 = intl11.string(tmp(1236).t["4H6RLl"]);
   intl9 = tmp(1236).intl;
   callback = intl9.string(tmp(1236).t.uG6b1w);
   intl10 = tmp(1236).intl;

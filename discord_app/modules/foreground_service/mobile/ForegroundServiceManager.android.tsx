@@ -1,24 +1,27 @@
 // discord_app/modules/foreground_service/mobile/ForegroundServiceManager.android.tsx
-import { NativeModules } from "get ActivityIndicator";
-import "initialize";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import setRequestedByAll from "setRequestedBy" /* 675 */;
+import initializeDefault from "initialize" /* 4720 */;
 
 let obj = importDefault;
+const NativeModules = get_ActivityIndicator.NativeModules;
 class ForegroundServiceManager {
   constructor() {
     obj = Object.create(new.target.prototype);
-    ForegroundServiceManager = obj;
+    closure_0 = obj;
     map = new Map();
     obj.serviceNotifications = map;
     obj.serviceNotificationIdentifier = 1;
     obj.handleChange = function handleChange() {
       if (obj.serviceNotifications.size > 0) {
-        const ForegroundServiceModule2 = outer1_3.ForegroundServiceModule;
+        const ForegroundServiceModule2 = closure_1_3.ForegroundServiceModule;
         const serviceNotifications = tmp.serviceNotifications;
         const items = [];
         HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
         ForegroundServiceModule2.startService(items);
       } else {
-        const ForegroundServiceModule = outer1_3.ForegroundServiceModule;
+        const ForegroundServiceModule = closure_1_3.ForegroundServiceModule;
         ForegroundServiceModule.stopService();
       }
     };
@@ -34,7 +37,7 @@ prototype["terminate"] = function terminate() {
 };
 prototype["addServiceHandler"] = function addServiceHandler(arg0) {
   const self = this;
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return new Promise((arg0) => {
     const serviceNotificationIdentifier = self.serviceNotificationIdentifier;
     self.serviceNotificationIdentifier = self.serviceNotificationIdentifier + 1;
@@ -48,16 +51,16 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
     const serviceNotifications2 = self.serviceNotifications;
     if (serviceNotifications2.has(arg0)) {
       const _HermesInternal3 = HermesInternal;
-      importAll(675).stopRequest("ForegroundService:" + arg0);
+      setRequestedByAll.stopRequest("ForegroundService:" + arg0);
       const serviceNotifications3 = self.serviceNotifications;
       serviceNotifications3.delete(arg0);
       self.handleChange();
-      const obj2 = importAll(675);
+      const obj2 = setRequestedByAll;
     }
   } else {
     const serviceNotifications4 = self.serviceNotifications;
     if (!tmp16(serviceNotifications4.get(arg0), usesGateway)) {
-      const obj = importAll(675);
+      obj = setRequestedByAll;
       if (usesGateway.usesGateway) {
         const _HermesInternal2 = HermesInternal;
         obj.setRequestedBy("ForegroundService:" + arg0);
@@ -84,16 +87,17 @@ obj.serviceNotifications = new Map();
 obj.serviceNotificationIdentifier = 1;
 obj.handleChange = function handleChange() {
   if (obj.serviceNotifications.size > 0) {
-    const ForegroundServiceModule2 = outer1_3.ForegroundServiceModule;
+    const ForegroundServiceModule2 = closure_1_3.ForegroundServiceModule;
     const serviceNotifications = tmp.serviceNotifications;
     const items = [];
     HermesBuiltin.arraySpread(serviceNotifications.values(), 0);
     ForegroundServiceModule2.startService(items);
   } else {
-    const ForegroundServiceModule = outer1_3.ForegroundServiceModule;
+    const ForegroundServiceModule = closure_1_3.ForegroundServiceModule;
     ForegroundServiceModule.stopService();
   }
 };
+initializeDefault;
 class ForegroundServiceLifecycleManager extends tmp4 {
 }
 const prototype2 = ForegroundServiceLifecycleManager.prototype;
@@ -117,6 +121,6 @@ prototype2["isForegroundServiceRunning"] = function isForegroundServiceRunning(a
 };
 const foregroundServiceLifecycleManager = new ForegroundServiceLifecycleManager();
 const map = new Map();
-let result = require("isUndefinedOrNull").fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManager.android.tsx");
+let result = set.fileFinishedImporting("modules/foreground_service/mobile/ForegroundServiceManager.android.tsx");
 
 export default foregroundServiceLifecycleManager;

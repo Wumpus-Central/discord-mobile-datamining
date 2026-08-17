@@ -1,19 +1,19 @@
 // discord_app/modules/polls/useVoteReactors.tsx
-import reactionKey from "reactionKey";
-import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME";
+import closure_3 from "reactionKey" /* 7509 */;
+import { DEFAULT_NUM_REACTION_USERS as closure_4 } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
+const result = require("set").fileFinishedImporting("modules/polls/useVoteReactors.tsx");
 
 export default function useVoteReactors(channelId) {
   channelId = channelId.channelId;
   const messageId = channelId.messageId;
   const reaction = channelId.reaction;
   let obj = channelId(reaction[2]);
-  let items = [reactionKey];
+  let items = [closure_3];
   const items1 = [channelId, messageId, reaction.emoji];
   const stateFromStores = obj.useStateFromStores(items, () => {
-    const reactions = outer1_3.getReactions(channelId, messageId, reaction.emoji, outer1_4, channelId(reaction[3]).ReactionTypes.VOTE);
+    const reactions = closure_1_3.getReactions(channelId, messageId, reaction.emoji, closure_1_4, channelId(reaction[3]).ReactionTypes.VOTE);
     let items;
     if (reactions != null) {
       items = reactions.values();

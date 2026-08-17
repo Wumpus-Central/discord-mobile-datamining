@@ -1,31 +1,32 @@
 // discord_app/design/void/IconButton/native/IconButton.tsx
-import noop from "noop";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_2 from "noop" /* 19 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
 const require = arg1;
 class SquareIconButton {
   constructor(arg0) {
     size = global.size;
     ({ disableColor, accessibilityHidden } = global);
-    c1 = undefined;
+    closure_1 = undefined;
     ({ onPress, source, style, iconStyle, accessibilityLabel, disabled } = global);
-    tmp = LARGE_40();
-    c1 = tmp;
+    tmp = closure_5();
+    closure_1 = tmp;
     items = [, ];
     items[0] = size;
     items[1] = tmp;
     tmp3 = jsx;
     tmp4 = size;
-    tmp5 = c1;
-    memo = noop.useMemo(() => {
-      if (outer1_4.MEDIUM_32 === size) {
-        return _undefined.medium;
+    tmp5 = closure_1;
+    memo = closure_2.useMemo(() => {
+      if (closure_1_4.MEDIUM_32 === size) {
+        return closure_1.medium;
       } else if (tmp2.LARGE_40 === tmp) {
-        return _undefined.large;
+        return closure_1.large;
       } else {
         const SMALL_24 = tmp2.SMALL_24;
-        return _undefined.small;
+        return closure_1.small;
       }
     }, items);
     tmp6 = undefined;
@@ -37,7 +38,7 @@ class SquareIconButton {
     items1[0] = tmp.container;
     items1[1] = style;
     items1[2] = memo;
-    if (size === jsx.LARGE_40) {
+    if (size === closure_4.LARGE_40) {
       REFRESH_SMALL_16 = require("Button").Icon.Sizes.MEDIUM;
     } else {
       REFRESH_SMALL_16 = require("Button").Icon.Sizes.REFRESH_SMALL_16;
@@ -62,11 +63,11 @@ class CircularIconButton {
     size = global.size;
     ({ style, disableColor } = global);
     merged = Object.assign(global, Object.create(null));
-    tmp2 = LARGE_40();
-    tmp5 = jsx;
+    tmp2 = closure_5();
+    tmp5 = closure_4;
     tmp3 = jsx;
     tmp4 = SquareIconButton;
-    if (jsx.SMALL_24 === size) {
+    if (closure_4.SMALL_24 === size) {
       largeCircular = tmp2.smallCircular;
     } else if (tmp5.MEDIUM_32 === size) {
       largeCircular = tmp2.mediumCircular;
@@ -84,7 +85,7 @@ class CircularIconButton {
 }
 let obj = { SMALL_24: 24, [24]: "SMALL_24", MEDIUM_32: 32, [32]: "MEDIUM_32", LARGE_40: 40, [40]: "LARGE_40" };
 obj = { container: null, small: null, medium: null, large: null, smallCircular: null, mediumCircular: null, largeCircular: null, icon: null };
-obj = { borderRadius: require("Themes").radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
+obj = { borderRadius: ThemesDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: require("result").DARK_PRIMARY_700_LIGHT_PRIMARY_230 };
 obj[0] = obj;
 obj[1] = { height: obj.SMALL_24, width: obj.SMALL_24 };
 obj[2] = { height: obj.MEDIUM_32, width: obj.MEDIUM_32 };
@@ -98,7 +99,7 @@ let closure_5 = createCacheKey.createStyles(obj);
 SquareIconButton.Sizes = obj;
 CircularIconButton.Sizes = obj;
 const obj2 = { tintColor: require("result").DARK_PRIMARY_300_LIGHT_PRIMARY_500 };
-const result = require("createCacheKey").fileFinishedImporting("design/void/IconButton/native/IconButton.tsx");
+const result = require("set").fileFinishedImporting("design/void/IconButton/native/IconButton.tsx");
 
 export { SquareIconButton };
 export { CircularIconButton };

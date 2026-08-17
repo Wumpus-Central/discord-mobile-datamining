@@ -1,87 +1,70 @@
 // discord_app/modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx
-import get_ActivityIndicator from "registerAsset";
-import fetchFingerprint from "fetchFingerprint";
-import updateGiftCode from "updateGiftCode";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import addSku from "addSku";
-import ME from "ME";
-import GuildFeatures from "GuildFeatures";
-import { registerAsset } from "../../../../../../../_runtime/12741_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12742_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12743_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12744_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12745_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12746_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12747_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12748_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12749_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12750_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/12751_registerAsset.js";
-import { metadata } from "../../../../../../../discord_assets/assets/premium/gifting/halloween-card-small.png.js";
+import set from "set" /* 2 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8169 */;
+import metadataDefault from "metadata" /* 11979 */;
+import registerAssetDefault from "registerAsset" /* 12741 */;
+import registerAssetDefault2 from "registerAsset" /* 12742 */;
+import registerAssetDefault3 from "registerAsset" /* 12743 */;
+import registerAssetDefault4 from "registerAsset" /* 12744 */;
+import registerAssetDefault5 from "registerAsset" /* 12745 */;
+import registerAssetDefault6 from "registerAsset" /* 12746 */;
+import registerAssetDefault7 from "registerAsset" /* 12747 */;
+import registerAssetDefault8 from "registerAsset" /* 12748 */;
+import registerAssetDefault9 from "registerAsset" /* 12749 */;
+import registerAssetDefault10 from "registerAsset" /* 12750 */;
+import registerAssetDefault11 from "registerAsset" /* 12751 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "fetchFingerprint" /* 1218 */;
+import closure_6 from "updateGiftCode" /* 10641 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "addSku" /* 4521 */;
+import ME from "ME" /* 676 */;
+import GuildFeatures from "GuildFeatures" /* 1924 */;
 import { getGradientColorByPercentage } from "../../../../../client_themes/native/ClientThemesUtils.tsx";
-import { getEmbedThemeColors } from "getEmbedThemeColors.tsx";
 
-let c10;
-let c3;
-let c4;
-let c9;
-let closure_12;
-let unpackModuleId;
 function getGiftStyleUrl(arg0) {
   if (constants.BOX === arg0) {
-    return registerAsset;
+    return registerAssetDefault;
   } else if (tmp.CUP === arg0) {
-    return registerAsset;
+    return registerAssetDefault2;
   } else if (tmp.SNOWGLOBE === arg0) {
-    return registerAsset;
+    return registerAssetDefault3;
   } else if (tmp.STANDARD_BOX === arg0) {
-    return registerAsset;
+    return registerAssetDefault4;
   } else if (tmp.COFFEE === arg0) {
-    return registerAsset;
+    return registerAssetDefault5;
   } else if (tmp.CAKE === arg0) {
-    return registerAsset;
+    return registerAssetDefault6;
   } else if (tmp.CHEST === arg0) {
-    return registerAsset;
+    return registerAssetDefault7;
   } else if (tmp.SEASONAL_STANDARD_BOX === arg0) {
-    return registerAsset;
+    return registerAssetDefault8;
   } else if (tmp.SEASONAL_CAKE === arg0) {
-    return registerAsset;
+    return registerAssetDefault9;
   } else if (tmp.SEASONAL_CHEST === arg0) {
-    return registerAsset;
+    return registerAssetDefault10;
   } else if (tmp.SEASONAL_COFFEE === arg0) {
-    return registerAsset;
+    return registerAssetDefault11;
   } else if (tmp.NITROWEEN_STANDARD === arg0) {
     const obj = { uri: null };
-    obj[0] = metadata;
+    obj[0] = metadataDefault;
     return obj;
   } else {
-    return registerAsset;
+    return registerAssetDefault4;
   }
 }
 ({ Image: c3, processColor: c4 } = get_ActivityIndicator);
 ({ AbortCodes: c9, MessageTypes: c10 } = ME);
 ({ PremiumGiftStyles: unpackModuleId, PremiumSubscriptionSKUs: closure_12 } = GuildFeatures);
-const result = require("updateGiftCode").fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx");
+const result = set.fileFinishedImporting("modules/messages/native/renderer/row_data/embeds/GiftCodeEmbed.tsx");
 
 export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedTheme) {
-  let backgroundColor;
-  let closure_10;
-  let closure_11;
-  let closure_12;
-  let closure_3;
-  let closure_4;
-  let fetchFingerprint;
-  let updateGiftCode;
-  let mergeGuildAvatar;
-  let addSku;
-  let closure_9;
-  let dependencyMap;
   const _require = message;
-  const importDefault = forcedTheme;
+  importDefault = forcedTheme;
   if (null != message.author) {
     if (0 !== message.giftCodes.length) {
-      const colors = getEmbedThemeColors(forcedTheme).colors;
-      ({ headerColor: dependencyMap, titleColor: closure_3, subtitleColor: closure_4, bodyTextColor: fetchFingerprint, backgroundColor, resolvingGradientStart: updateGiftCode, resolvingGradientEnd: mergeGuildAvatar, acceptLabelDisabledBackgroundColor: addSku, acceptLabelDisabledColor: closure_9, thumbnailBackgroundColor: closure_10, acceptLabelGreenColor: closure_11, acceptBlurpleLabelBackgroundColor: closure_12 } = colors);
+      const colors = getEmbedThemeColorsDefault(forcedTheme).colors;
+      ({ headerColor: dependencyMap, titleColor: closure_3, subtitleColor: closure_4, bodyTextColor: closure_5, backgroundColor, resolvingGradientStart: closure_6, resolvingGradientEnd: closure_7, acceptLabelDisabledBackgroundColor: closure_8, acceptLabelDisabledColor: closure_9, thumbnailBackgroundColor: closure_10, acceptLabelGreenColor: closure_11, acceptBlurpleLabelBackgroundColor: closure_12 } = colors);
       let obj = { borderColor: null, backgroundColor: null, thumbnailCornerRadius: 3 };
       obj[0] = colors.borderColor;
       let tmp4 = backgroundColor;
@@ -98,11 +81,11 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
       obj[1] = tmp4;
       const giftCodes = message.giftCodes;
       return giftCodes.map((giftCode) => {
-        let obj = outer1_6;
-        let error = outer1_6.get(giftCode);
+        obj = closure_1_6;
+        error = closure_1_6.get(giftCode);
         if (null != giftCode) {
           if (obj.getIsResolved(giftCode)) {
-            const id = outer1_5.getId();
+            const id = closure_1_5.getId();
             if (null != error) {
               let tmp13 = id === error.userId;
             } else {
@@ -114,10 +97,10 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
               if (error != null) {
                 error = error.code;
               }
-              error = outer1_9;
+              error = closure_1_9;
               error = message;
-              error = outer1_2;
-              error = outer1_3;
+              error = closure_1_2;
+              error = closure_1_3;
               error = callback;
               error = callback;
               if (obj25.isThemeDark(callback)) {
@@ -126,7 +109,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                 error = error(error[25]);
               }
               obj = { thumbnailUrl: null, headerText: null, titleText: null, titleColor: null, headerColor: null, thumbnailBackgroundColor: null, subtitle: null, subtitleColor: null };
-              obj[0] = outer1_3.resolveAssetSource(error).uri;
+              obj[0] = closure_1_3.resolveAssetSource(error).uri;
               const intl13 = error(error[23]).intl;
               const string3 = intl13.string;
               const t = error(error[23]).t;
@@ -138,8 +121,8 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
               obj[1] = str8.toUpperCase();
               const intl14 = error(error[23]).intl;
               obj[2] = intl14.string(error(error[23]).t.SdKbX2);
-              error = outer1_4;
-              error = outer1_4(error(error[26]).unsafe_rawColors.RED_400);
+              error = closure_1_4;
+              error = closure_1_4(error(error[26]).unsafe_rawColors.RED_400);
               if (error == null) {
                 error = closure_3;
               }
@@ -148,7 +131,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
               obj[4] = closure_2;
               error = closure_10;
               obj[5] = closure_10;
-              if (error === outer1_9.INVALID_GIFT_REDEMPTION_CLIENT_UPDATE_REQUIRED) {
+              if (error === closure_1_9.INVALID_GIFT_REDEMPTION_CLIENT_UPDATE_REQUIRED) {
                 const intl16 = error(error[23]).intl;
                 error = intl16.string(error(error[23]).t.QXgO5w);
               } else {
@@ -169,10 +152,10 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
               error = Object.assign(obj);
               return obj;
             } else {
-              error = outer1_8;
-              error = outer1_8.get(error.skuId);
+              error = closure_1_8;
+              error = closure_1_8.get(error.skuId);
               error = obj.getIsAccepting(giftCode);
-              error = outer1_7.getCurrentUser();
+              error = closure_1_7.getCurrentUser();
               let verified;
               if (error != null) {
                 verified = error.verified;
@@ -187,36 +170,36 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                 tmp17 = null != error.expiresAt;
               }
               if (tmp17) {
-                const intl2 = message(outer1_2[23]).intl;
+                const intl2 = message(closure_1_2[23]).intl;
                 obj = { hours: null };
                 const expiresAt = error.expiresAt;
-                obj[0] = expiresAt.diff(callback(outer1_2[27])(), "h");
-                const formatToPlainStringResult = intl2.formatToPlainString(message(outer1_2[23]).t.nZBvUR, obj);
+                obj[0] = expiresAt.diff(callback(closure_1_2[27])(), "h");
+                const formatToPlainStringResult = intl2.formatToPlainString(message(closure_1_2[23]).t.nZBvUR, obj);
               }
               if (error.redeemed) {
-                const intl5 = message(outer1_2[23]).intl;
-                let stringResult = intl5.string(message(outer1_2[23]).t["/cg57l"]);
+                const intl5 = message(closure_1_2[23]).intl;
+                let stringResult = intl5.string(message(closure_1_2[23]).t["/cg57l"]);
               } else if (error.isClaimed) {
-                const intl4 = message(outer1_2[23]).intl;
-                stringResult = intl4.string(message(outer1_2[23]).t.ARWFQX);
+                const intl4 = message(closure_1_2[23]).intl;
+                stringResult = intl4.string(message(closure_1_2[23]).t.ARWFQX);
               } else {
                 let verified1;
                 if (error != null) {
                   verified1 = error.verified;
                 }
                 if (!verified1) {
-                  const intl3 = message(outer1_2[23]).intl;
-                  stringResult = intl3.string(message(outer1_2[23]).t["j+KPkX"]);
+                  const intl3 = message(closure_1_2[23]).intl;
+                  stringResult = intl3.string(message(closure_1_2[23]).t["j+KPkX"]);
                 }
               }
               let tmp30 = null != error.giftStyle;
               if (!tmp30) {
-                tmp30 = message.type === outer1_10.CUSTOM_GIFT;
+                tmp30 = message.type === closure_1_10.CUSTOM_GIFT;
               }
               if (tmp15) {
-                const intl9 = message(outer1_2[23]).intl;
+                const intl9 = message(closure_1_2[23]).intl;
                 const string = intl9.string;
-                let TiZFqX = message(outer1_2[23]).t;
+                let TiZFqX = message(closure_1_2[23]).t;
                 if (tmp30) {
                   TiZFqX = TiZFqX.TiZFqX;
                   let stringResult1 = string(TiZFqX);
@@ -225,9 +208,9 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                 }
               } else {
                 if (error) {
-                  const intl8 = message(outer1_2[23]).intl;
-                  let stringResult2 = intl8.string(message(outer1_2[23]).t.rTeOBK);
-                  let processColorOrThrowResult = addSku;
+                  const intl8 = message(closure_1_2[23]).intl;
+                  let stringResult2 = intl8.string(message(closure_1_2[23]).t.rTeOBK);
+                  let processColorOrThrowResult = closure_8;
                   let processColorOrThrowResult1 = closure_9;
                 } else {
                   if (!error.redeemed) {
@@ -237,28 +220,28 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                         verified2 = error.verified;
                       }
                       if (!verified2) {
-                        const intl6 = message(outer1_2[23]).intl;
-                        stringResult2 = intl6.string(message(outer1_2[23]).t.v740sh);
-                        let obj3 = message(outer1_2[28]);
-                        processColorOrThrowResult = obj3.processColorOrThrow(callback(outer1_2[26]).unsafe_rawColors.BRAND_500);
-                        let obj4 = message(outer1_2[28]);
-                        processColorOrThrowResult1 = obj4.processColorOrThrow(callback(outer1_2[26]).unsafe_rawColors.WHITE);
+                        const intl6 = message(closure_1_2[23]).intl;
+                        stringResult2 = intl6.string(message(closure_1_2[23]).t.v740sh);
+                        let obj3 = message(closure_1_2[28]);
+                        processColorOrThrowResult = obj3.processColorOrThrow(callback(closure_1_2[26]).unsafe_rawColors.BRAND_500);
+                        let obj4 = message(closure_1_2[28]);
+                        processColorOrThrowResult1 = obj4.processColorOrThrow(callback(closure_1_2[26]).unsafe_rawColors.WHITE);
                       }
                     }
                   }
-                  const intl7 = message(outer1_2[23]).intl;
-                  stringResult2 = intl7.string(message(outer1_2[23]).t.BTihou);
-                  processColorOrThrowResult = addSku;
+                  const intl7 = message(closure_1_2[23]).intl;
+                  stringResult2 = intl7.string(message(closure_1_2[23]).t.BTihou);
+                  processColorOrThrowResult = closure_8;
                   processColorOrThrowResult1 = closure_9;
                 }
                 const skuId = error.skuId;
-                if (outer1_12.TIER_0 === skuId) {
+                if (closure_1_12.TIER_0 === skuId) {
                   if (tmp30) {
                     let tmp82 = obj(error.giftStyle);
                   } else {
                     tmp82 = callback(tmp80[30]);
                   }
-                  const assetUriForEmbed = message(outer1_2[29]).getAssetUriForEmbed(tmp82);
+                  const assetUriForEmbed = message(closure_1_2[29]).getAssetUriForEmbed(tmp82);
                   let tmp79Result = tmp79(tmp80[29]);
                   tmp79Result = tmp79(tmp80[21]);
                   if (tmp79Result.isThemeDark(callback)) {
@@ -269,7 +252,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     tmp88 = tmp86;
                   }
                   const assetUriForEmbed1 = tmp79Result.getAssetUriForEmbed(tmp86Result);
-                  const obj13 = message(outer1_2[29]);
+                  const obj13 = message(closure_1_2[29]);
                 } else {
                   if (tmp50.TIER_1 === skuId) {
                     if (tmp30) {
@@ -277,7 +260,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     } else {
                       tmp72 = callback(tmp70[33]);
                     }
-                    const assetUriForEmbed2 = message(outer1_2[29]).getAssetUriForEmbed(tmp72);
+                    const assetUriForEmbed2 = message(closure_1_2[29]).getAssetUriForEmbed(tmp72);
                     let tmp69Result = tmp69(tmp70[29]);
                     tmp69Result = tmp69(tmp70[21]);
                     if (tmp69Result.isThemeDark(callback)) {
@@ -292,13 +275,13 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     let tmp68 = tmp70;
                     let tmp55 = tmp69;
                     let assetUriForEmbed5 = assetUriForEmbed2;
-                    const obj10 = message(outer1_2[29]);
+                    const obj10 = message(closure_1_2[29]);
                   } else {
                     if (tmp50.TIER_2 !== skuId) {
                       if (tmp50.LEGACY !== skuId) {
                         error = message;
-                        tmp68 = outer1_2;
-                        const obj28 = message(outer1_2[29]);
+                        tmp68 = closure_1_2;
+                        const obj28 = message(closure_1_2[29]);
                         error = callback;
                         error = callback;
                         if (obj29.isThemeDark(callback)) {
@@ -309,7 +292,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                           tmp52 = error;
                         }
                         const assetUriForEmbed4 = obj28.getAssetUriForEmbed(valueResult);
-                        obj29 = message(outer1_2[21]);
+                        obj29 = message(closure_1_2[21]);
                         tmp55 = error;
                         assetUriForEmbed3 = assetUriForEmbed4;
                         assetUriForEmbed5 = error(tmp68[29]).getAssetUriForEmbed(obj(error.giftStyle));
@@ -321,7 +304,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     } else {
                       tmp61 = callback(tmp59[34]);
                     }
-                    const assetUriForEmbed6 = message(outer1_2[29]).getAssetUriForEmbed(tmp61);
+                    const assetUriForEmbed6 = message(closure_1_2[29]).getAssetUriForEmbed(tmp61);
                     let tmp58Result = tmp58(tmp59[29]);
                     tmp58Result = tmp58(tmp59[21]);
                     if (tmp58Result.isThemeDark(callback)) {
@@ -336,7 +319,7 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     tmp68 = tmp59;
                     tmp55 = tmp58;
                     assetUriForEmbed5 = assetUriForEmbed6;
-                    const obj7 = message(outer1_2[29]);
+                    const obj7 = message(closure_1_2[29]);
                   }
                   let tmp55Result = tmp55(tmp68[35]);
                   let tmp95 = assetUriForEmbed5;
@@ -352,11 +335,11 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                     }
                     tmp95 = str;
                   }
-                  const obj1 = {};
+                  obj1 = {};
                   const merged = Object.assign(obj);
                   error = message;
-                  error = outer1_10;
-                  if (message.type === outer1_10.CUSTOM_GIFT) {
+                  error = closure_1_10;
+                  if (message.type === closure_1_10.CUSTOM_GIFT) {
                     if (!tmp13) {
                       const intl10 = tmp55(tmp68[23]).intl;
                       let tmp52Result = tmp52(tmp68[19]);
@@ -396,8 +379,8 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                       obj1.titleColor = closure_3;
                       error = closure_4;
                       obj1.subtitleColor = closure_4;
-                      error = fetchFingerprint;
-                      obj1.bodyTextColor = fetchFingerprint;
+                      error = closure_5;
+                      obj1.bodyTextColor = closure_5;
                       obj1.acceptLabelBackgroundColor = processColorOrThrowResult;
                       obj1.acceptLabelColor = processColorOrThrowResult1;
                       obj1.acceptLabelText = stringResult2;
@@ -440,16 +423,16 @@ export const createGiftCodeEmbed = function createGiftCodeEmbed(message, forcedT
                   error = toUpperCase();
                 }
               }
-              obj27 = outer1_7;
+              obj27 = closure_1_7;
             }
           } else {
             obj4 = { headerText: null, headerColor: null, resolvingGradientStart: null, resolvingGradientEnd: null };
-            const intl = message(outer1_2[23]).intl;
-            str = intl.string(message(outer1_2[23]).t["E+va0m"]);
+            const intl = message(closure_1_2[23]).intl;
+            str = intl.string(message(closure_1_2[23]).t["E+va0m"]);
             obj4[0] = str.toUpperCase();
             obj4[1] = closure_2;
-            obj4[2] = updateGiftCode;
-            obj4[3] = mergeGuildAvatar;
+            obj4[2] = closure_6;
+            obj4[3] = closure_7;
             const merged1 = Object.assign(obj);
             return obj4;
           }

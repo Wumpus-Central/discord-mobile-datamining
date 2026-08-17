@@ -1,6 +1,7 @@
 // discord_app/stores/UploadStore.tsx
-import reinjectEphemerals from "reinjectEphemerals";
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_0 from "reinjectEphemerals" /* 4994 */;
 
 const re1 = /^(assets-library|ph|file):\/\//;
 const re2 = /^content:\/\//;
@@ -10,11 +11,12 @@ let closure_5 = {};
 let closure_6 = {};
 let closure_7 = {};
 let closure_8 = {};
+const Store = initializeDefault.Store;
 class UploadStore extends Store {
 }
 const prototype = UploadStore.prototype;
 prototype["initialize"] = function initialize() {
-  this.waitFor(reinjectEphemerals);
+  this.waitFor(closure_0);
 };
 prototype["getFiles"] = function getFiles(arg0) {
   let tmp = dependencyMap[arg0];
@@ -35,18 +37,14 @@ prototype["getUploadAttachments"] = function getUploadAttachments(nonce) {
   }
 };
 UploadStore.displayName = "UploadStore";
-const uploadStore = new UploadStore(require("dispatcher"), {
+const uploadStore = new UploadStore(dispatcherDefault, {
   CONNECTION_OPEN: function handleConnectionOpen() {
-    let closure_8 = {};
+    closure_8 = {};
   },
   LOGOUT: function handleLogout() {
-    let closure_8 = {};
+    closure_8 = {};
   },
   UPLOAD_START: function handleUploadStart(arg0) {
-    let channelId;
-    let file;
-    let message;
-    let uploader;
     ({ channelId, file, uploader, message } = arg0);
     if (!uploader._aborted) {
       if (!uploader._errored) {
@@ -111,8 +109,6 @@ const uploadStore = new UploadStore(require("dispatcher"), {
     }
   },
   UPLOAD_COMPRESSION_PROGRESS: function handleUploadCompressionProgress(arg0) {
-    let channelId;
-    let file;
     ({ channelId, file } = arg0);
     if (null != dependencyMap[channelId]) {
       tmp[channelId] = arr.map((id) => {
@@ -138,8 +134,6 @@ const uploadStore = new UploadStore(require("dispatcher"), {
     }
   },
   UPLOAD_PROGRESS: function handleUploadProgress(arg0) {
-    let channelId;
-    let file;
     ({ channelId, file } = arg0);
     if (null != dependencyMap[channelId]) {
       tmp[channelId] = arr.map((id) => {
@@ -189,14 +183,14 @@ const uploadStore = new UploadStore(require("dispatcher"), {
     return tmp5;
   },
   UPLOAD_CANCEL_REQUEST: function handleUploadCancel(arg0) {
-    let c0;
-    c0 = tmp;
+    closure_0 = undefined;
+    closure_0 = tmp;
     if (null == dependencyMap2[arg0.file.id]) {
       return false;
     } else {
       const _setImmediate = setImmediate;
       setImmediate(() => {
-        const cancel = _undefined.cancel;
+        cancel = cancel.cancel;
         let cancelResult;
         if (cancel != null) {
           cancelResult = cancel();
@@ -207,18 +201,16 @@ const uploadStore = new UploadStore(require("dispatcher"), {
   },
   UPLOAD_ITEM_CANCEL_REQUEST: function handleUploadItemCancel(itemId) {
     itemId = itemId.itemId;
-    let c1;
-    c1 = tmp;
+    closure_1 = undefined;
+    closure_1 = tmp;
     if (null == dependencyMap2[itemId.file.id]) {
       return false;
     } else {
       const _setImmediate = setImmediate;
-      setImmediate(() => _undefined.cancelItem(itemId));
+      setImmediate(() => closure_1.cancelItem(itemId));
     }
   },
   UPLOAD_FILE_UPDATE: function handleUploadFileUpdate(arg0) {
-    let channelId;
-    let file;
     ({ channelId, file } = arg0);
     if (null != dependencyMap3[file.id]) {
       let id = tmp2.nonce;
@@ -287,6 +279,6 @@ const uploadStore = new UploadStore(require("dispatcher"), {
     closure_7[messageId.messageId] = messageId.file;
   }
 });
-const result = require("dispatcher").fileFinishedImporting("stores/UploadStore.tsx");
+const result = require("set").fileFinishedImporting("stores/UploadStore.tsx");
 
 export default uploadStore;

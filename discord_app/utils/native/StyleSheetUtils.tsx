@@ -1,4 +1,6 @@
 // discord_app/utils/native/StyleSheetUtils.tsx
+import set from "set" /* 2 */;
+
 function getStyleProp(style, borderRadius) {
   if (null != borderRadius) {
     if ("" !== borderRadius) {
@@ -20,6 +22,6 @@ function getStyleProp(style, borderRadius) {
     }
   }
 }
-const result = require("set").fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
+const result = set.fileFinishedImporting("utils/native/StyleSheetUtils.tsx");
 
 export default { getStyleProp };

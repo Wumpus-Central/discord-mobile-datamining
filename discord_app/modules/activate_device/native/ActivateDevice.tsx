@@ -1,35 +1,32 @@
 // discord_app/modules/activate_device/native/ActivateDevice.tsx
-import _slicedToArray from "_slicedToArray";
-import SafeAreaPaddingView from "SafeAreaPaddingView";
-import get_ActivityIndicator from "getAvatarURL";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
-({ View: c5, ImageBackground: closure_6, ActivityIndicator: error, ScrollView: metroImportAll } = get_ActivityIndicator);
+({ View: c5, ImageBackground: closure_6, ActivityIndicator: error, ScrollView: closure_8 } = get_ActivityIndicator);
 createCacheKey = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
-createCacheKey = { marginVertical: 0, resizeMode: "cover", backgroundColor: require("Themes").colors.TEXT_BRAND };
+createCacheKey = { marginVertical: 0, resizeMode: "cover", backgroundColor: ThemesDefault.colors.TEXT_BRAND };
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { flex: 1, justifyContent: "center", alignItems: "center" };
-createCacheKey[3] = { maxWidth: 480, backgroundColor: require("Themes").colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: require("Themes").colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+createCacheKey[3] = { maxWidth: 480, backgroundColor: ThemesDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
 createCacheKey[4] = { alignSelf: "stretch", flexGrow: 0 };
 createCacheKey[5] = { flexDirection: "column", gap: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj1 = { maxWidth: 480, backgroundColor: require("Themes").colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: require("Themes").radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: require("Themes").colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
+let closure_10 = createCacheKey.createStyles(createCacheKey);
+let obj1 = { maxWidth: 480, backgroundColor: ThemesDefault.colors.PANEL_BG, alignItems: "center", justifyContent: "center", borderRadius: ThemesDefault.radii.lg, padding: 24, marginHorizontal: 24, marginVertical: 36, shadowColor: ThemesDefault.colors.BLACK, shadowOpacity: 0.2, shadowOffset: { width: 0, height: 4 }, shadowRadius: 4 };
+const result = require("set").fileFinishedImporting("modules/activate_device/native/ActivateDevice.tsx");
 
 export const ActivateDevice = (onClose) => {
   onClose = onClose.onClose;
   let first;
-  let importDefault;
+  importDefault = undefined;
   let first1;
   let callback;
   let deviceCodeAuthorizeCallback;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   const tmp2 = callback(deviceCodeAuthorizeCallback.useState({ type: "user-code-input", usePrefilledCode: true }), 2);
   first = tmp2[0];
   importDefault = tmp4;
@@ -40,24 +37,24 @@ export const ActivateDevice = (onClose) => {
   const activateDeviceStepTracking = obj.useActivateDeviceStepTracking(first);
   let items = [tmp2[1]];
   callback = deviceCodeAuthorizeCallback.useCallback(() => {
-    _undefined({ type: "user-code-input" });
+    callback({ type: "user-code-input" });
   }, items);
   const items1 = [tmp2[1]];
   const items2 = [tmp2[1]];
   const callback1 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
-    _undefined({ type: "success", userCodeData });
+    callback({ type: "success", userCodeData });
   }, items1);
-  const callback2 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
-    _undefined({ type: "error", userCodeData });
+  callback2 = deviceCodeAuthorizeCallback.useCallback((userCodeData) => {
+    callback({ type: "error", userCodeData });
   }, items2);
-  let obj1 = first(first1[7]);
+  obj1 = first(first1[7]);
   deviceCodeAuthorizeCallback = obj1.useDeviceCodeAuthorizeCallback(callback, callback2, callback1);
   const items3 = [deviceCodeAuthorizeCallback];
   const items4 = [first];
   const callback3 = deviceCodeAuthorizeCallback.useCallback((clientId) => {
-    let closure_0 = clientId;
+    closure_0 = clientId;
     let obj = { type: "authorization", userCodeData: clientId };
-    _undefined(obj);
+    callback(obj);
     obj = {
       clientId: clientId.clientId,
       scopes: clientId.scopes,
@@ -66,7 +63,7 @@ export const ActivateDevice = (onClose) => {
       isEmbeddedFlow: true,
       withBackPressHandler: false,
       callbackWithoutPost(arg0) {
-        return outer1_4(closure_0, arg0);
+        return closure_1_4(closure_0, arg0);
       }
     };
     first(first1[8]).openOAuth2Modal(obj);
@@ -76,11 +73,11 @@ export const ActivateDevice = (onClose) => {
       const userCodeData = first.userCodeData;
       const items = [first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, first(first1[9]).ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        callback(_undefined(tmp2[10]));
+        callback2(callback(tmp2[10]));
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((arg0) => callback(table[11]).isSocialLayerUmbrellaScope(arg0))) {
-          callback(_undefined(tmp2[12]));
+          callback2(callback(tmp2[12]));
         }
       }
     }
@@ -88,8 +85,8 @@ export const ActivateDevice = (onClose) => {
   const items5 = [first1];
   const effect1 = deviceCodeAuthorizeCallback.useEffect(() => {
     if (null != first1) {
-      _undefined(first1[13]).preload(tmp);
-      const obj = _undefined(first1[13]);
+      callback(first1[13]).preload(tmp);
+      const obj = callback(first1[13]);
     }
   }, items5);
   const type = first.type;
@@ -120,15 +117,11 @@ export const ActivateDevice = (onClose) => {
       tmp21Result = jsx(tmp7(tmp8[16]).ActivateDeviceError, { onRetry: null });
     }
   }
-  const obj2 = { source: null, imageStyle: null, style: null, children: null };
-  obj2[0] = first(first1[17]).makeSource(importDefault(first1[18]));
-  obj2[1] = tmp.imageStyle;
-  const items6 = [tmp.background];
-  obj2[2] = items6;
+  const obj2 = { source: first(first1[17]).makeSource(importDefault(first1[18])), imageStyle: tmp.imageStyle, style: items6, children: null };
+  items6 = [tmp.background];
   const obj3 = { bottom: true, top: true, style: tmp.safeArea, children: null };
-  const obj4 = { style: tmp.content, children: null };
-  obj4[1] = <closure_8 bounces={false} style={tmp.scroller} contentContainerStyle={tmp.scrollerContent}>{tmp21Result}</closure_8>;
-  obj3[3] = <closure_5 style={tmp.content}>{null}</closure_5>;
+  const tmp7Result = first(first1[17]);
+  obj3[3] = <closure_5 style={tmp.content}><closure_8 {...obj5} /></closure_5>;
   obj2[3] = jsx(first(first1[19]).SafeAreaPaddingView, { bottom: true, top: true, style: tmp.safeArea, children: null });
-  return <closure_6 source={null} imageStyle={null} style={null}>{null}</closure_6>;
+  return <closure_6 source={first(first1[17]).makeSource(importDefault(first1[18]))} imageStyle={tmp.imageStyle} style={items6}>{null}</closure_6>;
 };

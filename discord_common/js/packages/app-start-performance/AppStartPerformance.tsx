@@ -1,5 +1,5 @@
 // discord_common/js/packages/app-start-performance/AppStartPerformance.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
+import closure_0 from "asyncGeneratorStep" /* 5 */;
 
 let fn = globalThis.__getTotalRequireTime;
 if (fn == null) {
@@ -173,8 +173,6 @@ prototype["addDetail"] = function addDetail(TTI, closure_5) {
   }
 };
 prototype["time"] = function time(arg0, arg1, arg2) {
-  let mark;
-  let prefix;
   const self = this;
   if (this.isTracing) {
     const _HermesInternal = HermesInternal;
@@ -193,25 +191,25 @@ prototype["time"] = function time(arg0, arg1, arg2) {
     return arg2();
   }
 };
-prototype["timeAsync"] = function timeAsync(emoji, name, outer1_0) {
+prototype["timeAsync"] = function timeAsync(emoji, name, closure_1_0) {
   const callback = emoji;
-  let closure_1 = name;
-  let closure_2 = outer1_0;
+  closure_1 = name;
+  closure_2 = closure_1_0;
   const self = this;
   return callback(function*() {
-    let closure_1 = tmp5;
-    let asyncGeneratorStep = tmp2;
+    closure_1 = tmp5;
+    closure_0 = tmp2;
     if (!c3.isTracing) {
       return v0();
     }
     const _HermesInternal2 = HermesInternal;
-    c3.mark(outer1_0, "Start " + outer1_1);
+    c3.mark(closure_1_0, "Start " + closure_1_1);
     const _Date2 = Date;
-    asyncGeneratorStep = Date.now();
+    closure_0 = Date.now();
     closure_1 = yield v0();
     const _Date = Date;
     const _HermesInternal = HermesInternal;
-    c3.mark(asyncGeneratorStep, "Finish " + closure_1, closure_2);
+    c3.mark(closure_0, "Finish " + closure_1, closure_2);
     return closure_1;
   })();
 };

@@ -1,5 +1,5 @@
 // discord_app/modules/in_app_notifications/native/InAppNotificationContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(undefined);
@@ -10,7 +10,7 @@ export const useInAppNotificationContext = function useInAppNotificationContext(
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useInAppNotificationContext must be used within provider of InAppNotificationContext");
+    error = new Error("useInAppNotificationContext must be used within provider of InAppNotificationContext");
     throw error;
   } else {
     return context;

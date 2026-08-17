@@ -1,9 +1,17 @@
 // discord_app/modules/telemetry_ring/native/index.tsx
-const result = require("shouldRun").fileFinishedImporting("modules/telemetry_ring/native/index.tsx");
+import set from "set" /* 2 */;
+import _updateZoomedInExportDefault from "_updateZoomedInExport" /* 1211 */;
+import shouldRunDefault from "shouldRun" /* 13558 */;
+import apexExperiment from "apexExperiment" /* 13559 */;
+import TelemetryChannel from "TelemetryChannel" /* 13562 */;
+import snapshotForBreadcrumbsDefault from "snapshotForBreadcrumbs" /* 13565 */;
+import NormalTelemetryImplDefault from "NormalTelemetryImpl" /* 13566 */;
 
-export const TelemetryRingLifecycle = require("_updateZoomedInExport");
-export const ZoomedInTelemetry = require("shouldRun");
-export const SentryTelemetry = require("snapshotForBreadcrumbs");
-export const NormalTelemetry = require("NormalTelemetryImpl");
-export const isZoomedExperimentEnabled = require("apexExperiment").isZoomedExperimentEnabled;
-export const TelemetryChannel = require("TelemetryChannel").TelemetryChannel;
+const result = set.fileFinishedImporting("modules/telemetry_ring/native/index.tsx");
+
+export const TelemetryRingLifecycle = _updateZoomedInExportDefault;
+export const ZoomedInTelemetry = shouldRunDefault;
+export const SentryTelemetry = snapshotForBreadcrumbsDefault;
+export const NormalTelemetry = NormalTelemetryImplDefault;
+export const isZoomedExperimentEnabled = apexExperiment.isZoomedExperimentEnabled;
+export const TelemetryChannel = TelemetryChannel.TelemetryChannel;

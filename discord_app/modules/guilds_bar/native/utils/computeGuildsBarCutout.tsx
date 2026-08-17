@@ -1,10 +1,13 @@
 // discord_app/modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx
-import { PixelRatio } from "get ActivityIndicator";
-import { GUILD_ITEM_SIZE } from "GUILD_ITEM_SIZE";
-import { SolidCutout } from "../../../../design/components/Icon/native/ClipView.tsx";
-import { Button } from "../../../../design/void/native.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import Button from "Button" /* 1297 */;
+import SolidCutout from "SolidCutout" /* 8402 */;
+import GUILD_ITEM_SIZE2 from "GUILD_ITEM_SIZE" /* 15548 */;
 
-const result = require("Button").fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
+const PixelRatio = get_ActivityIndicator.PixelRatio;
+const GUILD_ITEM_SIZE = GUILD_ITEM_SIZE2.GUILD_ITEM_SIZE;
+const result = set.fileFinishedImporting("modules/guilds_bar/native/utils/computeGuildsBarCutout.tsx");
 
 export default function computeGuildsBarCutout(containerSize) {
   containerSize = containerSize.containerSize;
@@ -25,11 +28,7 @@ export default function computeGuildsBarCutout(containerSize) {
   }
   const roundToNearestPixelResult = PixelRatio.roundToNearestPixel(BADGE_SIZE + 2 * BADGE_PADDING);
   const roundToNearestPixelResult1 = PixelRatio.roundToNearestPixel(BADGE_SIZE2 + 2 * BADGE_PADDING);
-  const obj = { shape: null, x: 0, y: 0, width: null, height: null, cornerRadius: null };
-  obj[0] = SolidCutout.CutoutShape.RoundedRect;
-  obj[3] = roundToNearestPixelResult;
-  obj[4] = roundToNearestPixelResult1;
-  obj[5] = PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2);
+  const obj = { shape: SolidCutout.CutoutShape.RoundedRect, x: 0, y: 0, width: roundToNearestPixelResult, height: roundToNearestPixelResult1, cornerRadius: PixelRatio.roundToNearestPixel(Math.min(roundToNearestPixelResult, roundToNearestPixelResult1) / 2) };
   if ("top-right" === containerSize.position) {
     obj.x = containerSize - roundToNearestPixelResult + BADGE_PADDING;
     obj.y = -BADGE_PADDING;

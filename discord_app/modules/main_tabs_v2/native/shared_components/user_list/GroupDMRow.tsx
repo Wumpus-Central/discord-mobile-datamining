@@ -1,10 +1,10 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx
-import noop from "noop";
-import { UserRowModes } from "UserRowModes";
-import { jsx } from "jsxProd";
+import closure_3 from "noop" /* 19 */;
+import { UserRowModes } from "UserRowModes" /* 9081 */;
+import { jsx } from "jsxProd" /* 21 */;
 
 const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
+const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/GroupDMRow.tsx");
 
 export default function GroupDMRow(channel) {
   channel = channel.channel;
@@ -29,11 +29,9 @@ export default function GroupDMRow(channel) {
       tmp(channel);
     }
   }, items);
-  let obj = { size: null, channel: null };
-  obj[0] = channel(1297).AvatarSizes.REFRESH_MEDIUM_32;
-  obj[1] = channel;
+  let obj = { size: channel(1297).AvatarSizes.REFRESH_MEDIUM_32, channel };
   const tmp6 = onPress(9916);
-  let obj1 = channel(9917);
+  obj1 = channel(9917);
   const recipientsLabel = obj1.useRecipientsLabel(channel);
   obj = {};
   const merged1 = Object.assign(merged);

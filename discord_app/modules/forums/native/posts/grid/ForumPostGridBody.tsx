@@ -1,53 +1,40 @@
 // discord_app/modules/forums/native/posts/grid/ForumPostGridBody.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import { View } from "set";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../../../_runtime/10447_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11183_registerAsset.js";
-import { registerAsset } from "../../../../../../_runtime/11184_registerAsset.js";
-import { Text } from "../../../../../design/components/Text/native/Text.tsx";
-import { Button } from "../../../../../design/void/native.tsx";
-import { isDiscordFrontendDevelopment } from "../../../../../utils/GlobalUtils.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import Button from "Button" /* 1297 */;
+import isDiscordFrontendDevelopment from "isDiscordFrontendDevelopment" /* 1370 */;
+import Text from "Text" /* 4734 */;
+import registerAssetDefault from "registerAsset" /* 10447 */;
+import registerAssetDefault2 from "registerAsset" /* 11183 */;
+import registerAssetDefault3 from "registerAsset" /* 11184 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function GIFIcon() {
-  const obj = { size: null, source: null, disableColor: true, style: null };
-  obj[0] = Button.Icon.Sizes.CUSTOM;
-  obj[1] = registerAsset;
-  obj[3] = createCacheKey().gifIcon;
-  return callback(Button.Icon, obj);
+  const tmp = callback3();
+  return callback(Button.Icon, { size: Button.Icon.Sizes.CUSTOM, source: registerAssetDefault2, disableColor: true, style: callback3().gifIcon });
 }
 function PlayIcon() {
-  const obj = { size: null, source: null, disableColor: true };
-  obj[0] = Button.Icon.Sizes.SMALL_20;
-  obj[1] = registerAsset;
-  return callback(Button.Icon, obj);
+  return callback(Button.Icon, { size: Button.Icon.Sizes.SMALL_20, source: registerAssetDefault3, disableColor: true });
 }
 function ExtraMediaIcon(extraMediaCount) {
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { style: tmp.extraMediaCountContainer, children: null };
-  obj = { source: null, color: null, size: null };
-  obj[0] = registerAsset;
-  obj[1] = tmp.icon.color;
-  obj[2] = Button.Icon.Sizes.REFRESH_SMALL_16;
-  const items = [callback(Button.Icon, obj), ];
-  obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: null };
-  obj[4] = "+" + extraMediaCount.extraMediaCount;
+  obj = { source: registerAssetDefault, color: tmp.icon.color, size: Button.Icon.Sizes.REFRESH_SMALL_16 };
+  items = [callback(Button.Icon, obj), ];
+  obj = { style: tmp.extraMediaCount, lineClamp: 1, variant: "text-xs/normal", color: "text-default", children: "+" + extraMediaCount.extraMediaCount };
   items[1] = callback(Text.Text, obj);
   obj[1] = items;
   return callback2(View, obj);
 }
 function MediaGridColumn(arg0) {
-  let column;
-  let require;
   ({ column, thread: require } = arg0);
-  let c1;
-  const tmp = createCacheKey();
-  c1 = tmp;
+  closure_1 = undefined;
+  const tmp = callback3();
+  closure_1 = tmp;
   const found = column.filter(isDiscordFrontendDevelopment.isNotNullish);
   return callback(View, {
     style: tmp.column,
@@ -55,58 +42,56 @@ function MediaGridColumn(arg0) {
       let tmp2 = arg1 > 0;
       if (tmp2) {
         let obj = { style: null };
-        obj[0] = _undefined.rowSpacer;
-        tmp2 = outer1_6(outer1_5, obj);
+        obj[0] = rowSpacer.rowSpacer;
+        tmp2 = closure_1_6(closure_1_5, obj);
       }
       obj = { children: null };
-      const items = [tmp2, ];
+      items = [tmp2, ];
       obj = { channel: id, media: media.media, targetWidth: media.targetWidth, targetHeight: media.targetHeight };
-      items[1] = outer1_6(outer1_0(outer1_2[13]).ForumPostGridMedia, obj);
+      items[1] = closure_1_6(closure_1_0(closure_1_2[13]).ForumPostGridMedia, obj);
       obj[0] = items;
-      return outer1_7(outer1_4.Fragment, obj, "" + id.id + "-" + arg1);
+      return closure_1_7(closure_1_4.Fragment, obj, "" + id.id + "-" + arg1);
     })
   });
 }
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { gifIcon: null, container: null, wideAspectRatioContainer: null, mediaIconContainer: null, headerLeftContainer: null, footerLeftContainer: null, footerRightContainer: null, extraMediaCountContainer: null, extraMediaCount: null, grid: null, wideAspectRatioGrid: null, column: null, columnSpacer: null, rowSpacer: null, icon: null };
-createCacheKey = { height: 20, width: 33, backgroundColor: "black", borderRadius: require("Themes").radii.xs, resizeMode: "cover" };
+createCacheKey = { height: 20, width: 33, backgroundColor: "black", borderRadius: ThemesDefault.radii.xs, resizeMode: "cover" };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { position: "relative", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, height: 225 };
+createCacheKey[1] = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
 createCacheKey[2] = { height: 192 };
 createCacheKey[3] = { paddingLeft: 6 };
 createCacheKey[4] = { flexDirection: "row", position: "absolute", top: 4, left: 4 };
 createCacheKey[5] = { flexDirection: "row", position: "absolute", bottom: 4, left: 4, alignItems: "center", justifyContent: "flex-start" };
 createCacheKey[6] = { position: "absolute", bottom: 4, right: 4, alignItems: "center", justifyContent: "flex-start" };
-let obj1 = { position: "relative", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, height: 225 };
-createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
+let obj1 = { position: "relative", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: 225 };
+createCacheKey[7] = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
 createCacheKey[8] = { marginLeft: 2 };
-let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: require("Themes").colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
-createCacheKey[9] = { height: 225, flexDirection: "row", borderRadius: require("Themes").radii.xs, overflow: "hidden" };
+let obj2 = { flexDirection: "row", alignItems: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_SURFACE_HIGH, height: 24, paddingHorizontal: 8, borderRadius: 20 };
+createCacheKey[9] = { height: 225, flexDirection: "row", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
 createCacheKey[10] = { height: 192 };
 createCacheKey[11] = { flex: 1, flexDirection: "column" };
 createCacheKey[12] = { flex: 0, width: 2, height: "100%" };
 createCacheKey[13] = { flex: 0, height: 2, width: "100%" };
-let obj3 = { height: 225, flexDirection: "row", borderRadius: require("Themes").radii.xs, overflow: "hidden" };
-createCacheKey[14] = { color: require("Themes").colors.TEXT_SUBTLE };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj3 = { height: 225, flexDirection: "row", borderRadius: ThemesDefault.radii.xs, overflow: "hidden" };
+createCacheKey[14] = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let closure_8 = createCacheKey.createStyles(createCacheKey);
 let items = [[0, 3], [1, 2]];
-let obj4 = { color: require("Themes").colors.TEXT_SUBTLE };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridBody.tsx");
+let obj4 = { color: ThemesDefault.colors.TEXT_SUBTLE };
+let result = require("set").fileFinishedImporting("modules/forums/native/posts/grid/ForumPostGridBody.tsx");
 
 export default function ForumPostGridBody(thread) {
-  let containsGif;
-  let containsVideo;
   thread = thread.thread;
   let memo = thread;
   let media = thread.media;
   let width;
-  const tmp = createCacheKey();
+  const tmp = callback3();
   width = tmp;
   let obj = memo(width[14]);
   const tmp4 = memo1(obj.useSomeAppliedTags(thread, 2), 2);
   const first = tmp4[0];
   let tmp13Result = first.length > 0;
-  let items = [media];
+  items = [media];
   memo = React.useMemo(() => media.slice(0, 4), items);
   const bound = Math.max(0, media.length - 4);
   const isMediaPostResult = thread.isMediaPost();
@@ -116,10 +101,10 @@ export default function ForumPostGridBody(thread) {
   width = media(width[11])().width;
   const items1 = [memo];
   memo1 = React.useMemo(() => {
-    const substr = outer1_12.slice(0, Math.min(memo.length, 2));
+    const substr = closure_1_12.slice(0, Math.min(memo.length, 2));
     let mapped = substr.map((arr) => {
       const mapped = arr.map((arg0) => table[arg0]);
-      return mapped.filter(outer1_0(outer1_2[12]).isNotNullish);
+      return mapped.filter(closure_1_0(closure_1_2[12]).isNotNullish);
     });
     return mapped.filter((arg0) => arg0.length > 0);
   }, items1);
@@ -132,9 +117,9 @@ export default function ForumPostGridBody(thread) {
     return memo1.map((arr) => {
       arr.filter(memo(width[12]).isNotNullish).length;
       return arr.map((media) => {
-        const diff = (outer2_2 - 48) / length - 2 * (length - 1) / length;
+        const diff = (closure_2_2 - 48) / length - 2 * (length - 1) / length;
         const obj = { media, targetWidth: diff, targetHeight: null };
-        if (outer2_1) {
+        if (closure_2_1) {
           if (length < 2) {
             let result = diff / 1.7777777777777777;
           }
@@ -167,20 +152,20 @@ export default function ForumPostGridBody(thread) {
       if (tmp2) {
         let obj = { style: null };
         obj[0] = width.columnSpacer;
-        tmp2 = outer1_6(outer1_5, obj);
+        tmp2 = closure_1_6(closure_1_5, obj);
       }
       obj = { children: null };
-      const items = [tmp2, ];
+      items = [tmp2, ];
       obj = { column, thread: memo };
-      items[1] = outer1_6(outer1_13, obj);
+      items[1] = closure_1_6(closure_1_13, obj);
       obj[0] = items;
-      return outer1_7(outer1_4.Fragment, obj, "" + column + "-" + arg1);
+      return closure_1_7(closure_1_4.Fragment, obj, "" + column + "-" + arg1);
     })
   };
   items5[1] = wideAspectRatioGrid;
   const items6 = [closure_6(View, obj), , , ];
   if (tmp13Result) {
-    const obj1 = { style: null, children: null };
+    obj1 = { style: null, children: null };
     obj1[0] = tmp.footerLeftContainer;
     const obj2 = { appliedTags: null, additionalTagsCount: null, hasUnreads: null };
     obj2[0] = first;

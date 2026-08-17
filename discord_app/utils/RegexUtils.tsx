@@ -1,5 +1,7 @@
 // discord_app/utils/RegexUtils.tsx
-const result = require("set").fileFinishedImporting("utils/RegexUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("utils/RegexUtils.tsx");
 
 export default {
   escape(str) {

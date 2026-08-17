@@ -1,15 +1,18 @@
 // discord_app/modules/libdiscore/libdiscoreExperiments.tsx
-import { ensureValidMode } from "ensureValidMode";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
-import { isBlockedDomain } from "../../../discord_common/js/packages/libdiscore/js_shim/js/shim.native.tsx";
+import set from "set" /* 2 */;
+import timestampDefault from "timestamp" /* 3 */;
+import _modDef38 from "module_38" /* 38 */;
+import ensureValidMode2 from "ensureValidMode" /* 1915 */;
+import isBlockedDomain from "isBlockedDomain" /* 1917 */;
 
-let c4 = new require("module_38")("libdiscoreExperiments");
+const ensureValidMode = ensureValidMode2.ensureValidMode;
+let closure_4 = new timestampDefault("libdiscoreExperiments");
 let items = [];
 let closure_6 = Symbol("unknown");
 class LibdiscoreCachedExperiment {
   constructor(arg0) {
     obj = Object.create(new.target.prototype);
-    obj[1] = unknown;
+    obj[1] = closure_6;
     obj.id = global;
     arr = closure_5.push(obj);
     return obj;
@@ -47,7 +50,7 @@ prototype["setExperiment"] = function setExperiment(apexExperiment) {
   this.inner = apexExperiment;
 };
 prototype["getCurrentConfig"] = function getCurrentConfig() {
-  00038__(null != this.inner, "experiment must be set before calling getCurrentConfig");
+  _modDef38(null != this.inner, "experiment must be set before calling getCurrentConfig");
   const inner = this.inner;
   if ("getCurrentConfig" in this.inner) {
     let currentConfig = inner.getCurrentConfig({ location: "default" });
@@ -74,7 +77,7 @@ prototype2["getLabel"] = function getLabel() {
   return this.label;
 };
 prototype2["getTreatments"] = function getTreatments() {
-  const items = [{ treatmentId: 0 }, { treatmentId: 1 }];
+  items = [{ treatmentId: 0 }, { treatmentId: 1 }];
   return items;
 };
 prototype2["getCachedEnabled"] = function getCachedEnabled() {
@@ -128,7 +131,7 @@ prototype3["getLabel"] = function getLabel() {
   return "libdiscore '" + this.storeName + "' Migration";
 };
 prototype3["getTreatments"] = function getTreatments() {
-  const items = [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
+  items = [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
   return items;
 };
 const tmp7 = new "getEnabledFeatureName"("2026-01-libdiscore-batch-store-refactor", undefined, tmp4, tmp3, tmp2, tmp, require, dependencyMap, items);
@@ -147,7 +150,7 @@ prototype4["getLabel"] = function getLabel() {
   return "libdiscore Telemetry";
 };
 prototype4["getTreatments"] = function getTreatments() {
-  const items = [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
+  items = [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }, { treatmentId: 3 }];
   return items;
 };
 prototype4["getMetricsSampleRate"] = function getMetricsSampleRate() {
@@ -233,8 +236,8 @@ tmp3 = new tmp3("2026-08-android-rn-reparenting-flag", undefined, tmp4, tmp3, ne
 tmp3.label = "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions";
 tmp3.defaultValue = false;
 let c7 = false;
-const tmp6 = new require("module_38")("libdiscoreExperiments");
-const result = require("isBlockedDomain").fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
+const tmp6 = new timestampDefault("libdiscoreExperiments");
+const result = set.fileFinishedImporting("modules/libdiscore/libdiscoreExperiments.tsx");
 
 export const ALL_LIBDISCORE_EXPERIMENTS = items;
 export { LibdiscoreCachedExperiment };
@@ -253,8 +256,8 @@ export function isExperimentSyncDisabled() {
 }
 export const clearLibdiscoreExperimentCache = function clearLibdiscoreExperimentCache() {
   if (obj.isLibdiscoreInitialized()) {
-    tmp6.info("Clearing libdiscore experiment cache and disabling sync");
-    let c7 = true;
+    logger.info("Clearing libdiscore experiment cache and disabling sync");
+    c7 = true;
     const experimentCacher = isBlockedDomain.getExperimentCacher();
     experimentCacher.clearCache();
     const tmpResult = isBlockedDomain;

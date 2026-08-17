@@ -1,13 +1,16 @@
 // discord_app/modules/stickers/StickersPersistedStore.tsx
-import handleConnectionClosedOrResumed from "handleConnectionClosedOrResumed";
-import loadSavedGuildStickers from "loadSavedGuildStickers";
-import { UserSettingsTypes } from "MAX_FAVORITES";
-import { PersistedStore } from "initialize";
-import { apply } from "../../../_runtime/00012_apply.js";
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import DEFAULT_FRECENCYDefault from "DEFAULT_FRECENCY" /* 4556 */;
+import closure_2 from "handleConnectionClosedOrResumed" /* 1340 */;
+import closure_3 from "loadSavedGuildStickers" /* 6769 */;
+import { UserSettingsTypes } from "MAX_FAVORITES" /* 685 */;
 
 function handleStickersStoreUpdate() {
   if (stickerById.isLoaded) {
-    tmp2.compute();
+    closure_6.compute();
   }
 }
 function handleUserSettingsProtoStoreChange() {
@@ -19,8 +22,8 @@ function handleUserSettingsProtoStoreChange() {
   if (null == stickers) {
     return false;
   } else {
-    obj = apply;
-    tmp2.overwriteHistory(obj.mapValues(stickers, (recentUses) => {
+    obj = applyDefault;
+    closure_6.overwriteHistory(obj.mapValues(stickers, (recentUses) => {
       const obj = {};
       const merged = Object.assign(recentUses);
       recentUses = recentUses.recentUses;
@@ -43,19 +46,20 @@ let obj = {
   },
   numFrequentlyItems: 20
 };
-let closure_6 = new require("DEFAULT_FRECENCY")(obj);
+let closure_6 = new DEFAULT_FRECENCYDefault(obj);
+const PersistedStore = initializeDefault.PersistedStore;
 class StickersPersistedStore extends PersistedStore {
 }
 const prototype = StickersPersistedStore.prototype;
 prototype["initialize"] = function initialize(arg0) {
   const self = this;
-  this.waitFor(loadSavedGuildStickers, handleConnectionClosedOrResumed);
+  this.waitFor(closure_3, closure_2);
   if (null != arg0) {
-    let closure_5 = arg0;
+    closure_5 = arg0;
   }
-  const items = [loadSavedGuildStickers];
+  const items = [closure_3];
   self.syncWith(items, handleStickersStoreUpdate);
-  const items1 = [handleConnectionClosedOrResumed];
+  const items1 = [closure_2];
   self.syncWith(items1, handleUserSettingsProtoStoreChange);
 };
 prototype["getState"] = function getState() {
@@ -83,7 +87,7 @@ obj = {
       });
     }
     if (stickerById.isLoaded) {
-      tmp2.compute();
+      closure_6.compute();
     }
   },
   USER_SETTINGS_PROTO_UPDATE: function handleUserSettingsProtoUpdate(settings) {
@@ -95,9 +99,9 @@ obj = {
     return false;
   }
 };
-const stickersPersistedStore = new StickersPersistedStore(require("dispatcher"), obj);
-const tmp2 = new require("DEFAULT_FRECENCY")(obj);
-const result = require("MAX_FAVORITES").fileFinishedImporting("modules/stickers/StickersPersistedStore.tsx");
+const stickersPersistedStore = new StickersPersistedStore(dispatcherDefault, obj);
+const tmp2 = new DEFAULT_FRECENCYDefault(obj);
+const result = require("set").fileFinishedImporting("modules/stickers/StickersPersistedStore.tsx");
 
 export default stickersPersistedStore;
-export const STICKER_PACK_NEW_TIMESTAMP_THRESHOLD = require("set").Millis.DAY;
+export const STICKER_PACK_NEW_TIMESTAMP_THRESHOLD = setDefault.Millis.DAY;

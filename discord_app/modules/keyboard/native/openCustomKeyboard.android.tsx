@@ -1,13 +1,11 @@
 // discord_app/modules/keyboard/native/openCustomKeyboard.android.tsx
-import { runAfterInteractions } from "../../../utils/native/RunAfterInteractionsUtils.tsx";
-import { computeEntryState } from "KeyboardUIStore.native.tsx";
-const result = require("zustandStore").fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
+import set from "set" /* 2 */;
+import computeEntryState from "computeEntryState" /* 1498 */;
+import runAfterInteractions from "runAfterInteractions" /* 6548 */;
+
+const result = set.fileFinishedImporting("modules/keyboard/native/openCustomKeyboard.android.tsx");
 
 export default function openCustomKeyboard(secondaryTextFieldRef) {
-  let dependencyMap;
-  let importDefault;
-  let keyboardParams;
-  let require;
   ({ channelId: require, chatInputRef: importDefault, chatInputNativeRef: dependencyMap, keyboardParams } = secondaryTextFieldRef);
   secondaryTextFieldRef = secondaryTextFieldRef.secondaryTextFieldRef;
   computeEntryState.setKeyboardType(keyboardParams);
@@ -21,9 +19,9 @@ export default function openCustomKeyboard(secondaryTextFieldRef) {
         current2.blur();
       }
     }
-    outer1_0(outer1_2[2]).openPortalKeyboard(keyboardParams.type, closure_0, ref);
-    const obj = outer1_0(outer1_2[2]);
+    closure_1_0(closure_1_2[2]).openPortalKeyboard(keyboardParams.type, closure_0, ref);
+    const obj = closure_1_0(closure_1_2[2]);
     const tmp = ref;
-    outer1_1(outer1_2[3]).openCustomKeyboard(ref2.current);
+    closure_1_1(closure_1_2[3]).openCustomKeyboard(ref2.current);
   });
 };

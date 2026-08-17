@@ -1,21 +1,19 @@
 // discord_app/components_native/common/VolumeSlider.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources";
-import jsxProd from "jsxProd";
-import set from "set";
-import createCacheKey from "createCacheKey";
-import set from "DesktopSources";
-import { _getRequireWildcardCache } from "../../../_runtime/08105__getRequireWildcardCache.js";
-import { Themes } from "../../../discord_common/js/packages/tokens/native.tsx";
-import { VoiceNormalIcon } from "../../design/components/Icon/native/redesign/generated/VoiceNormalIcon.tsx";
-import { VoiceXIcon } from "../../design/components/Icon/native/redesign/generated/VoiceXIcon.tsx";
-import { map } from "../../design/tokens/native/useToken.tsx";
-import { getSystemLocale } from "../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import map from "map" /* 4097 */;
+import VoiceNormalIcon from "VoiceNormalIcon" /* 6896 */;
+import _getRequireWildcardCacheDefault from "_getRequireWildcardCache" /* 8105 */;
+import VoiceXIcon from "VoiceXIcon" /* 12140 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { MAX_EMBEDDED_VOLUME_PERCEPTUAL as closure_4 } from "DesktopSources" /* 4529 */;
+import jsxProd from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c5, jsxs: closure_6 } = jsxProd);
 let num = 16;
 if (set.isAndroid()) {
@@ -25,13 +23,9 @@ let closure_7 = createCacheKey.createStyles({ volumerSlider: { flexDirection: "r
 const result = set.fileFinishedImporting("components_native/common/VolumeSlider.tsx");
 
 export default function VolumeSlider(maxTrackTintColor) {
-  let maxVolume;
-  let onResponderGrant;
-  let require;
-  let value;
   let PRIMARY_400 = maxTrackTintColor.maxTrackTintColor;
   if (PRIMARY_400 === undefined) {
-    PRIMARY_400 = Themes.unsafe_rawColors.PRIMARY_400;
+    PRIMARY_400 = ThemesDefault.unsafe_rawColors.PRIMARY_400;
   }
   ({ maxVolume, value } = maxTrackTintColor);
   if (maxVolume === undefined) {
@@ -43,13 +37,13 @@ export default function VolumeSlider(maxTrackTintColor) {
   let obj = map;
   let minTrackColor = merged.minTrackColor;
   if (minTrackColor == null) {
-    minTrackColor = obj.useToken(Themes.colors.BACKGROUND_BRAND);
+    minTrackColor = obj.useToken(ThemesDefault.colors.BACKGROUND_BRAND);
   }
   obj = { style: items, children: null };
   items = [tmp4.volumerSlider, maxTrackTintColor.style];
   obj = { style: tmp4.leftIcon };
   const items1 = [callback(VoiceXIcon.VoiceXIcon, obj), , ];
-  const obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
+  obj1 = { style: tmp4.volumerSliderNative, value: null, minimumValue: 0, maximumValue: null, minimumTrackTintColor: null, maximumTrackTintColor: null, accessibilityLabel: null, onValueChange: null, onResponderGrant: null };
   let tmp5Result = tmp5(4782);
   obj1[1] = tmp5Result.amplitudeToPerceptual(value);
   obj1[3] = maxVolume;
@@ -58,7 +52,7 @@ export default function VolumeSlider(maxTrackTintColor) {
   const intl = tmp5(1236).intl;
   obj1[6] = intl.string(getSystemLocale.t.xPHVBs);
   obj1[7] = function onValueChange(arg0) {
-    return callback(outer1_0(outer1_2[10]).perceptualToAmplitude(arg0));
+    return callback(closure_1_0(closure_1_2[10]).perceptualToAmplitude(arg0));
   };
   if (onResponderGrant == null) {
     tmp5Result = tmp5(500);
@@ -69,7 +63,7 @@ export default function VolumeSlider(maxTrackTintColor) {
     onResponderGrant = fn;
   }
   obj1[8] = onResponderGrant;
-  items1[1] = callback(_getRequireWildcardCache, obj1);
+  items1[1] = callback(_getRequireWildcardCacheDefault, obj1);
   items1[2] = callback(VoiceNormalIcon.VoiceNormalIcon, { style: tmp4.rightIcon });
   obj[1] = items1;
   return closure_6(View, obj);

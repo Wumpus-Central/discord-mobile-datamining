@@ -1,18 +1,16 @@
 // discord_app/modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx
-import fetchSubscriptionPlansForSKU from "fetchSubscriptionPlansForSKU";
-import "noop";
-import ME from "ME";
-import { jsx } from "jsxProd";
+import noopAll from "noop" /* 19 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
 const require = arg1;
 function _openStickersPremiumUpsellAlert() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (constants === 2) {
         constants = 3;
@@ -42,14 +40,14 @@ function _openStickersPremiumUpsellAlert() {
             } else {
               const table = tmp2;
               const callback2 = tmp5;
-              const obj1 = { type: null, location: null };
-              obj1[0] = outer1_5.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
+              obj1 = { type: null, location: null };
+              obj1[0] = closure_1_5.STICKER_PREMIUM_TIER_2_UPSELL_MODAL;
               obj1[1] = callback;
-              outer1_1(outer1_2[4]).track(constants.OPEN_MODAL, obj1);
-              const obj7 = outer1_1(outer1_2[4]);
-              const items = [callback(outer1_2[5]).fetchPremiumSubscriptionPlans(), ];
-              const obj9 = callback(outer1_2[5]);
-              items[1] = callback(outer1_2[6]).fetchPaymentSources();
+              closure_1_1(closure_1_2[4]).track(constants.OPEN_MODAL, obj1);
+              const obj7 = closure_1_1(closure_1_2[4]);
+              const items = [callback(closure_1_2[5]).fetchPremiumSubscriptionPlans(), ];
+              const obj9 = callback(closure_1_2[5]);
+              items[1] = callback(closure_1_2[6]).fetchPaymentSources();
               c3 = 1;
               constants = 1;
               const obj2 = { value: null, done: false };
@@ -69,7 +67,7 @@ function _openStickersPremiumUpsellAlert() {
             const obj4 = { importer: null };
             obj4[0] = function importer() {
               return callback(tmp2[9])(tmp2[8], tmp2.paths).then((arg0) => {
-                let closure_0 = arg0.default;
+                closure_0 = arg0.default;
                 return () => { ... };
               });
             };
@@ -84,7 +82,7 @@ function _openStickersPremiumUpsellAlert() {
       }
     })();
   });
-  const _openStickersPremiumUpsellAlert = tmp;
+  closure_7 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -93,8 +91,9 @@ function _openStickersPremiumUpsellAlert() {
   }
   return applyArgumentsResult;
 }
+noopAll;
 ({ AnalyticEvents: c4, AnalyticsSections: c5 } = ME);
-const result = require("ME").fileFinishedImporting("modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/native/premium/openStickersPremiumUpsellAlert.tsx");
 
 export default function openStickersPremiumUpsellAlert() {
   const self = this;

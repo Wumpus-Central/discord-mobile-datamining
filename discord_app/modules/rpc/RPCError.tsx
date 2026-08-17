@@ -1,4 +1,7 @@
 // discord_app/modules/rpc/RPCError.tsx
-const result = require("set").fileFinishedImporting("modules/rpc/RPCError.tsx");
+import set from "set" /* 2 */;
+import prototype from "prototype" /* 8753 */;
 
-export { RPCError as default } from "prototype";
+const result = set.fileFinishedImporting("modules/rpc/RPCError.tsx");
+
+export default prototype.RPCError;

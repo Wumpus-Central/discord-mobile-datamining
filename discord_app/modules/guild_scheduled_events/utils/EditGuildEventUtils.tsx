@@ -1,16 +1,12 @@
 // discord_app/modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx
-import fetchFingerprint from "fetchFingerprint";
-import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH";
-import { getChannelFromEvent } from "EntityUtils.tsx";
-import { getRRule } from "ScheduleUtils.tsx";
+import getRRule from "getRRule" /* 8785 */;
+import getChannelFromEvent from "getChannelFromEvent" /* 8788 */;
+import closure_2 from "fetchFingerprint" /* 1218 */;
+import GUILD_EVENT_MAX_NAME_LENGTH from "GUILD_EVENT_MAX_NAME_LENGTH" /* 1397 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-const require = arg1;
+require = arg1;
 ({ GuildScheduledEventEntityTypes: c3, GuildScheduledEventStatus: c4, GuildScheduledEventPrivacyLevel: c5, FAKE_EVENT_ID: closure_6 } = GUILD_EVENT_MAX_NAME_LENGTH);
-const result = require("getRRule").fileFinishedImporting("modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_scheduled_events/utils/EditGuildEventUtils.tsx");
 
 export const EditGuildEventScreens = { CHANNEL_SELECTOR: "ChannelSelector", DETAILS: "Details", PREVIEW: "Preview" };
 export const isEditingEvent = function isEditingEvent(initialGuildEvent) {
@@ -21,7 +17,6 @@ export const isEditingEvent = function isEditingEvent(initialGuildEvent) {
   return Boolean(id);
 };
 export const recurrenceRuleToServer = function recurrenceRuleToServer(recurrenceRule) {
-  let byMonthDay;
   let tmp = null;
   if (null != recurrenceRule) {
     const obj = { start: null, end: null, frequency: null, interval: null, by_weekday: null, by_n_weekday: null, by_month: null, by_month_day: null, by_year_day: null, count: null };
@@ -70,18 +65,6 @@ export const isExistingGuildEvent = function isExistingGuildEvent(arg0) {
   return tmp;
 };
 export const convertToFakeGuildEvent = function convertToFakeGuildEvent(guildEvent, id) {
-  let byMonthDay;
-  let channelId;
-  let description;
-  let entityMetadata;
-  let entityType;
-  let eventExceptions;
-  let image;
-  let name;
-  let privacyLevel;
-  let recurrenceRule;
-  let scheduledEndTime;
-  let scheduledStartTime;
   let tmp = arg2;
   ({ description, entityMetadata, image, recurrenceRule, eventExceptions } = guildEvent);
   ({ name, privacyLevel, channelId, scheduledStartTime, scheduledEndTime, entityType } = guildEvent);

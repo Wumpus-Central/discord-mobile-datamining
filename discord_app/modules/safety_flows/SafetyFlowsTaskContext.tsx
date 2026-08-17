@@ -1,5 +1,5 @@
 // discord_app/modules/safety_flows/SafetyFlowsTaskContext.tsx
-import importAllResult from "noop";
+import importAllResult from "noop" /* 19 */;
 
 let c0 = importAllResult;
 let context = importAllResult.createContext(null);
@@ -10,7 +10,7 @@ export const useSafetyFlowTask = function useSafetyFlowTask() {
   context = importAllResult.useContext(context);
   if (null == context) {
     const _Error = Error;
-    const error = new Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
+    error = new Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     throw error;
   } else {
     return context;

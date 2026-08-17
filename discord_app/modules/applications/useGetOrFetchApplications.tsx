@@ -1,10 +1,10 @@
 // discord_app/modules/applications/useGetOrFetchApplications.tsx
-import noop from "noop";
-import addApplication from "addApplication";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "addApplication" /* 4478 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("shallowEqual").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
+const result = require("set").fileFinishedImporting("modules/applications/useGetOrFetchApplications.tsx");
 
 export default function useGetOrFetchApplications(arg0) {
   const _require = arg0;
@@ -12,7 +12,7 @@ export default function useGetOrFetchApplications(arg0) {
   if (arg1 === undefined) {
     flag = true;
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   dependencyMap = React.useRef([]);
   const items = [arg0, flag];
   const effect = React.useEffect(() => {
@@ -30,7 +30,7 @@ export default function useGetOrFetchApplications(arg0) {
       const iter = found.uniq();
     }
   }, items);
-  const items1 = [addApplication];
+  const items1 = [closure_4];
   return _initialize.useStateFromStoresArray(items1, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {
@@ -53,7 +53,7 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
   if (flag === undefined) {
     flag = true;
   }
-  let dependencyMap;
+  dependencyMap = undefined;
   dependencyMap = React.useRef([]);
   const items2 = [items1, flag];
   const effect = React.useEffect(() => {
@@ -71,7 +71,7 @@ export const useGetOrFetchApplication = function useGetOrFetchApplication(applic
       const iter = found.uniq();
     }
   }, items2);
-  const items3 = [addApplication];
+  const items3 = [closure_4];
   return items1(589).useStateFromStoresArray(items3, () => items1.map((arg0) => {
     let application;
     if (null != arg0) {

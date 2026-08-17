@@ -1,16 +1,17 @@
 // discord_app/modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx
-import "noop";
-import { SystemTheme } from "SystemThemeState";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { ThemeTypes } from "SettingsAppearanceThemePickerScreen.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ThemeTypesDefault from "ThemeTypes" /* 14612 */;
+import { SystemTheme } from "SystemThemeState" /* 1305 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("jsxProd").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/user_settings/appearance/native/SettingsAppearanceDarkModeThemePickerScreen.tsx");
 
 export default function SettingsAppearanceDarkModeThemePickerScreen() {
   const obj = { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null };
   const intl = getSystemLocale.intl;
   obj[2] = intl.string(getSystemLocale.t["EgvHH/"]);
-  return jsx(ThemeTypes, { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null });
+  return jsx(ThemeTypesDefault, { mode: SystemTheme.DARK, themeSelector: "nitro", headerTitle: null });
 };

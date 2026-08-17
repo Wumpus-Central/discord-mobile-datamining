@@ -1,13 +1,13 @@
 // discord_app/modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx
-import { processColor } from "get ActivityIndicator";
-import { processColorStrings } from "../../../../premium/enhanced_role_colors/native/EnhancedRoleColorUtils.tsx";
-import { useNullableMessageAuthor } from "../../../useMessageAuthor.tsx";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import useNullableMessageAuthor from "useNullableMessageAuthor" /* 4814 */;
+import processColorStrings from "processColorStrings" /* 8186 */;
 
-const result = require("processColorStrings").fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
+const processColor = get_ActivityIndicator.processColor;
+const result = set.fileFinishedImporting("modules/messages/native/renderer/system_messages/useAuthorWithProcessedColor.tsx");
 
 export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithProcessedColor(message) {
-  let colorStrings;
-  let guildId;
   let obj = useNullableMessageAuthor;
   const messageAuthor = obj.getMessageAuthor(message);
   const colorString = messageAuthor.colorString;
@@ -23,8 +23,6 @@ export const getMessageAuthorWithProcessedColor = function getMessageAuthorWithP
   return obj;
 };
 export const getUserAuthorWithProcessedColor = function getUserAuthorWithProcessedColor(user, channel) {
-  let colorStrings;
-  let guildId;
   let obj = useNullableMessageAuthor;
   const userAuthor = obj.getUserAuthor(user, channel);
   const colorString = userAuthor.colorString;

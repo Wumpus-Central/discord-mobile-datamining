@@ -1,27 +1,26 @@
 // discord_app/modules/quests/QuestActionCreators.tsx
-import initializeState from "initializeState";
-import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore";
-import set from "set";
-import handleConnectionInfoChange from "handleConnectionInfoChange";
-import insertUnsortedGuilds from "insertUnsortedGuilds";
-import closure_8 from "initializeState";
-import _toPropertyKey from "_toPropertyKey";
-import { FetchStatus } from "_toPropertyKey";
-import { ORBS_INTRO_QUEST_ID } from "QuestsExperimentLocations";
-import ME from "ME";
-import { dispatcher } from "../../Dispatcher.tsx";
+import setDefault from "set" /* 687 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { getVisibleGuildIdsMethod } from "SidebarVisibilityMethodStore" /* 9505 */;
+import closure_5 from "set" /* 5079 */;
+import closure_6 from "handleConnectionInfoChange" /* 4564 */;
+import closure_7 from "insertUnsortedGuilds" /* 5078 */;
+import closure_8 from "initializeState" /* 7453 */;
+import closure_9 from "_toPropertyKey" /* 7455 */;
+import { FetchStatus } from "_toPropertyKey" /* 7455 */;
+import { ORBS_INTRO_QUEST_ID } from "QuestsExperimentLocations" /* 6716 */;
+import ME from "ME" /* 676 */;
 
-let closure_12;
-let map1;
 const require = arg1;
 function _manuallyStartConsoleQuest() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     const iter = (function*(arg0, body) {
       if (c8 === 2) {
         c8 = 3;
@@ -30,7 +29,7 @@ function _manuallyStartConsoleQuest() {
         if (arg0 === 1) {
           throw body;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = body;
           return obj;
         } else {
@@ -49,7 +48,7 @@ function _manuallyStartConsoleQuest() {
               obj[0] = body;
               return obj;
             } else {
-              let closure_4 = tmp3;
+              closure_4 = tmp3;
               let anyErrorMessage = tmp7;
               let flag;
               if (flag === undefined) {
@@ -68,11 +67,11 @@ function _manuallyStartConsoleQuest() {
               throw body;
             } else if (arg0 === 2) {
               c8 = 3;
-              let obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = body;
               return obj1;
             } else {
-              let c6 = 1;
+              c6 = 1;
               const HTTP = callback(body[9]).HTTP;
               const obj2 = { url: null, query: null, failImmediatelyWhenRateLimited: true, rejectWithError: false };
               obj2[0] = closure_13.QUEST_ON_CONSOLE_START(callback);
@@ -91,7 +90,7 @@ function _manuallyStartConsoleQuest() {
             }
           } else if (2 === tmp7) {
             c6 = 0;
-            const tmp25 = new flag(body[11])(set);
+            const tmp25 = new flag(body[11])(closure_5);
             anyErrorMessage = tmp25;
             if (429 === anyErrorMessage.status) {
               const obj5 = { errorHints: null };
@@ -161,7 +160,7 @@ function _manuallyStartConsoleQuest() {
             return obj15;
           }
         } catch (tmp50) {
-          set = tmp50;
+          closure_5 = tmp50;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp50;
@@ -174,7 +173,7 @@ function _manuallyStartConsoleQuest() {
     iter.next();
     return iter;
   });
-  const _manuallyStartConsoleQuest = tmp;
+  closure_14 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -186,9 +185,9 @@ function _manuallyStartConsoleQuest() {
 function _manualStopConsoleQuest() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0) {
       if (c1 === 2) {
         c1 = 3;
@@ -197,7 +196,7 @@ function _manualStopConsoleQuest() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -217,8 +216,8 @@ function _manualStopConsoleQuest() {
               return obj;
             } else {
               const HTTP = callback(table[9]).HTTP;
-              const obj1 = { url: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUEST_ON_CONSOLE_STOP(callback);
+              obj1 = { url: null, rejectWithError: false };
+              obj1[0] = closure_1_13.QUEST_ON_CONSOLE_STOP(callback);
               table = 1;
               c1 = 1;
               const obj2 = { value: null, done: false };
@@ -244,7 +243,7 @@ function _manualStopConsoleQuest() {
       }
     })();
   });
-  const _manualStopConsoleQuest = tmp;
+  closure_15 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -263,7 +262,7 @@ function _resetRecentQuestCompletions() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -282,9 +281,9 @@ function _resetRecentQuestCompletions() {
             obj[0] = arg1;
             return obj;
           } else {
-            const HTTP = v0(outer1_2[9]).HTTP;
-            const obj1 = { url: null, rejectWithError: false };
-            obj1[0] = outer1_13.QUESTS_RESET_RECENT_QUEST_COMPLETIONS;
+            const HTTP = v0(closure_1_2[9]).HTTP;
+            obj1 = { url: null, rejectWithError: false };
+            obj1[0] = closure_1_13.QUESTS_RESET_RECENT_QUEST_COMPLETIONS;
             c1 = 1;
             v0 = 1;
             const obj2 = { value: null, done: false };
@@ -309,7 +308,7 @@ function _resetRecentQuestCompletions() {
       }
     }
   });
-  const _resetRecentQuestCompletions = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -328,7 +327,7 @@ function _fetchCurrentQuests() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -352,28 +351,28 @@ function _fetchCurrentQuests() {
             let items;
             lib = undefined;
             quests = undefined;
-            let initializeState;
-            let c4;
+            closure_3 = undefined;
+            c4 = undefined;
             c5 = undefined;
             c6 = undefined;
-            let insertUnsortedGuilds;
-            let closure_8;
-            let _toPropertyKey;
+            closure_7 = undefined;
+            closure_8 = undefined;
+            closure_9 = undefined;
             let length;
-            let closure_11;
-            let closure_12;
-            let closure_13;
-            if (!outer1_8.isFetchingCurrentQuests) {
+            closure_11 = undefined;
+            closure_12 = undefined;
+            closure_13 = undefined;
+            if (!closure_1_8.isFetchingCurrentQuests) {
               items = 0;
               quests = tmp71.quests;
               items = [];
               items = HermesBuiltin.arraySpread(quests.keys(), items);
-              let obj3 = outer1_1(outer1_2[10]);
+              let obj3 = closure_1_1(closure_1_2[10]);
               obj3.dispatch({ type: "QUESTS_FETCH_CURRENT_QUESTS_BEGIN" });
               c4 = 1;
-              const HTTP = outer1_0(outer1_2[9]).HTTP;
-              let obj1 = { url: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUESTS_CURRENT_QUESTS;
+              const HTTP = closure_1_0(closure_1_2[9]).HTTP;
+              obj1 = { url: null, rejectWithError: false };
+              obj1[0] = closure_1_13.QUESTS_CURRENT_QUESTS;
               c5 = 2;
               c6 = 1;
               const obj2 = { value: null, done: false };
@@ -384,7 +383,7 @@ function _fetchCurrentQuests() {
         } else {
           if (1 === tmp8) {
             c4 = 0;
-            let closure_14 = initializeState;
+            closure_14 = closure_3;
             obj1 = lib(quests[10]);
             obj3 = { type: "QUESTS_FETCH_CURRENT_QUESTS_FAILURE", error: null };
             const tmp20 = new lib(quests[11])(closure_14);
@@ -397,10 +396,10 @@ function _fetchCurrentQuests() {
             lib = arg1;
             quests = lib.body.quests;
             const found = quests.filter((config) => items(quests[14]).isQuestWithKnownConfigVersion(config));
-            initializeState = found.map((body) => items(quests[14]).questWithUserStatusFromServer(body));
+            closure_3 = found.map((body) => items(quests[14]).questWithUserStatusFromServer(body));
             c4 = lib.body.quest_enrollment_blocked_until;
             c5 = lib.body.quest_access_suspended_until;
-            c6 = initializeState.filter((userStatus) => {
+            c6 = closure_3.filter((userStatus) => {
               userStatus = userStatus.userStatus;
               let claimedAt;
               if (userStatus != null) {
@@ -412,20 +411,20 @@ function _fetchCurrentQuests() {
               }
               return tmp2;
             });
-            insertUnsortedGuilds = quests.map((id) => id.id);
-            closure_8 = initializeState.map((id) => id.id);
-            _toPropertyKey = insertUnsortedGuilds.filter((arg0) => !closure_8.includes(arg0));
+            closure_7 = quests.map((id) => id.id);
+            closure_8 = closure_3.map((id) => id.id);
+            closure_9 = closure_7.filter((arg0) => !closure_8.includes(arg0));
             length = c6.map((id) => id.id);
             closure_11 = closure_8.filter((arg0) => !closure_10.includes(arg0));
             closure_12 = items.filter((arg0) => !closure_10.includes(arg0));
             const obj4 = { category: "quests.fetch", message: "fetchCurrentQuests completed", data: null };
             const obj5 = { rawCount: null, rawIds: null, validCount: null, validIds: null, prevQuestIds: null, droppedByConfigVersion: null, droppedByPlatformFilter: null, removedFromStore: null };
-            obj5[0] = insertUnsortedGuilds.length;
-            obj5[1] = insertUnsortedGuilds;
+            obj5[0] = closure_7.length;
+            obj5[1] = closure_7;
             obj5[2] = length.length;
             obj5[3] = length;
             obj5[4] = items;
-            obj5[5] = _toPropertyKey;
+            obj5[5] = closure_9;
             obj5[6] = closure_11;
             obj5[7] = closure_12;
             obj4[2] = obj5;
@@ -450,7 +449,7 @@ function _fetchCurrentQuests() {
         }
         c6 = 3;
       } catch (tmp31) {
-        initializeState = tmp31;
+        closure_3 = tmp31;
         if (tmp4 === c4) {
           c6 = tmp2;
           throw tmp31;
@@ -460,7 +459,7 @@ function _fetchCurrentQuests() {
       }
     }
   });
-  const _fetchCurrentQuests = tmp;
+  closure_17 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -472,17 +471,11 @@ function _fetchCurrentQuests() {
 function _sendHeartbeat() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
-      let c0;
-      let c1;
-      let c2;
-      let c4;
-      let c5;
-      let terminal;
       if (c7 === 2) {
         c7 = 3;
         HermesBuiltin.throwTypeError();
@@ -490,7 +483,7 @@ function _sendHeartbeat() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -510,7 +503,7 @@ function _sendHeartbeat() {
               return obj;
             } else {
               terminal = tmp3;
-              let dependencyMap = tmp7;
+              dependencyMap = tmp7;
               let callback;
               let callback2;
               dependencyMap = undefined;
@@ -533,7 +526,7 @@ function _sendHeartbeat() {
               throw arg1;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
@@ -554,7 +547,7 @@ function _sendHeartbeat() {
               obj5[1] = dependencyMap;
               obj5[2] = terminal;
               const _Error = Error;
-              const error = new Error();
+              error = new Error();
               const stack = error.stack;
               callback2 = stack;
               if (stack == null) {
@@ -615,7 +608,7 @@ function _sendHeartbeat() {
     iter.next();
     return iter;
   });
-  const _sendHeartbeat = tmp;
+  closure_18 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -627,11 +620,11 @@ function _sendHeartbeat() {
 function _enrollInQuest() {
   const self = this;
   let tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -640,7 +633,7 @@ function _enrollInQuest() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -659,16 +652,16 @@ function _enrollInQuest() {
               obj[0] = arg1;
               return obj;
             } else {
-              let initializeState = tmp3;
-              let dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               let lib;
               if (null != lib.questContentCTA) {
                 const questContentCTA = tmp69.questContentCTA;
-                if (obj27.shouldMigrateToAdAnalyticsInterface(callback(outer1_2[19]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "enroll_in_quest")) {
+                if (obj27.shouldMigrateToAdAnalyticsInterface(callback(closure_1_2[19]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "enroll_in_quest")) {
                   let tmp74Result = tmp74(tmp75[20]);
-                  const obj1 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
-                  obj1[0] = callback(outer1_2[21]).AdUserActionType.CLICK_INTERNAL;
-                  obj1[1] = callback(outer1_2[22]).AdCreativeType.QUEST;
+                  obj1 = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, questContentPosition: null, questContentRowIndex: null };
+                  obj1[0] = callback(closure_1_2[21]).AdUserActionType.CLICK_INTERNAL;
+                  obj1[1] = callback(closure_1_2[22]).AdCreativeType.QUEST;
                   obj1[2] = tmp68;
                   obj1[3] = questContentCTA;
                   ({ questContent: obj9[4], sourceQuestContent: obj9[5], questContentPosition: obj9[6], questContentRowIndex: obj9[7] } = tmp69);
@@ -682,35 +675,35 @@ function _enrollInQuest() {
                   ({ questContentPosition: obj7[3], questContentRowIndex: obj7[4], sourceQuestContent: obj7[5] } = tmp69);
                   const result = tmp74Result.trackQuestContentClicked(obj2);
                 }
-                obj27 = callback(outer1_2[19]);
+                obj27 = callback(closure_1_2[19]);
               }
-              if (callback === outer1_11) {
-                let obj9 = callback(outer1_2[24]);
+              if (callback === closure_1_11) {
+                let obj9 = callback(closure_1_2[24]);
                 const result1 = obj9.dismissOrbsOnboardingExperience();
               }
-              if (outer1_8.isEnrolling(callback)) {
+              if (closure_1_8.isEnrolling(callback)) {
                 const obj3 = { type: null };
-                obj3[0] = outer1_19.PREVIOUS_IN_FLIGHT_REQUEST;
+                obj3[0] = closure_1_19.PREVIOUS_IN_FLIGHT_REQUEST;
                 c7 = 3;
                 const obj4 = { value: null, done: true };
                 obj4[0] = obj3;
                 return obj4;
               } else {
-                let obj10 = lib(outer1_2[10]);
+                let obj10 = lib(closure_1_2[10]);
                 const obj5 = { type: "QUESTS_ENROLL_BEGIN", questId: null };
                 obj5[1] = tmp68;
                 obj10.dispatch(obj5);
-                let c5 = 1;
-                let obj12 = callback(outer1_2[25]);
+                c5 = 1;
+                let obj12 = callback(closure_1_2[25]);
                 const adMetadataSealed = obj12.getAdMetadataSealed(tmp69.questContent);
-                let obj13 = callback(outer1_2[25]);
+                let obj13 = callback(closure_1_2[25]);
                 const adTrafficMetadataSealed = obj13.getAdTrafficMetadataSealed(tmp69.questContent, tmp68);
-                const HTTP = callback(outer1_2[9]).HTTP;
+                const HTTP = callback(closure_1_2[9]).HTTP;
                 const obj6 = { url: null, body: null, rejectWithError: true };
-                obj6[0] = outer1_13.QUESTS_ENROLL(tmp68);
+                obj6[0] = closure_1_13.QUESTS_ENROLL(tmp68);
                 const obj7 = { location: null };
                 obj7[0] = tmp69.questContent;
-                const merged = Object.assign(callback(outer1_2[25]).getAdDecisionData(tmp68, tmp69.questContent));
+                const merged = Object.assign(callback(closure_1_2[25]).getAdDecisionData(tmp68, tmp69.questContent));
                 let tmp47 = null;
                 if (null != adMetadataSealed) {
                   tmp47 = adMetadataSealed;
@@ -815,7 +808,7 @@ function _enrollInQuest() {
       }
     })();
   });
-  const _enrollInQuest = tmp;
+  closure_20 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -827,12 +820,12 @@ function _enrollInQuest() {
 function _claimQuestReward() {
   const self = this;
   const tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, arg1, arg2) {
       if (claimingReward === 2) {
         claimingReward = 3;
@@ -841,7 +834,7 @@ function _claimQuestReward() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -860,25 +853,25 @@ function _claimQuestReward() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_4 = tmp3;
-              let initializeState = tmp7;
+              closure_4 = tmp3;
+              closure_3 = tmp7;
               let lib;
-              let closure_2;
+              closure_2 = undefined;
               if (claimingReward.isClaimingReward(callback)) {
                 claimingReward = 3;
                 return { value: "HermesInternal", done: "HermesInternal" };
               } else {
                 let obj7 = lib(closure_2[10]);
-                const obj1 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId: null };
+                obj1 = { type: "QUESTS_CLAIM_REWARD_BEGIN", questId: null };
                 obj1[1] = tmp73;
                 obj7.dispatch(obj1);
-                let c6 = 1;
+                c6 = 1;
                 const adMetadataSealed = callback(closure_2[25]).getAdMetadataSealed(tmp75);
                 const obj10 = callback(closure_2[25]);
                 const adTrafficMetadataSealed = callback(closure_2[25]).getAdTrafficMetadataSealed(tmp75, tmp73);
                 const HTTP = callback(closure_2[9]).HTTP;
                 let obj2 = { url: null, body: null, rejectWithError: false };
-                obj2[0] = outer1_13.QUESTS_CLAIM_REWARD(tmp73);
+                obj2[0] = closure_1_13.QUESTS_CLAIM_REWARD(tmp73);
                 const obj3 = { platform: null, location: null };
                 obj3[0] = tmp74;
                 obj3[1] = tmp75;
@@ -905,14 +898,14 @@ function _claimQuestReward() {
             }
           } else if (1 === tmp7) {
             c6 = 0;
-            initializeState = set;
+            closure_3 = closure_5;
             let obj5 = lib(closure_2[10]);
             obj5 = { type: "QUESTS_CLAIM_REWARD_FAILURE", error: null, questId: null };
-            const tmp35 = new lib(closure_2[11])(initializeState);
+            const tmp35 = new lib(closure_2[11])(closure_3);
             obj5[1] = tmp35;
             obj5[2] = callback;
             obj5.dispatch(obj5);
-            throw initializeState;
+            throw closure_3;
           } else if (arg0 === 1) {
             claimingReward = 3;
             throw arg1;
@@ -943,7 +936,7 @@ function _claimQuestReward() {
             const obj18 = callback(closure_2[14]);
           }
         } catch (tmp58) {
-          set = tmp58;
+          closure_5 = tmp58;
           if (tmp4 === c6) {
             claimingReward = tmp2;
             throw tmp58;
@@ -954,7 +947,7 @@ function _claimQuestReward() {
       }
     })();
   });
-  const _claimQuestReward = tmp;
+  closure_21 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -966,10 +959,10 @@ function _claimQuestReward() {
 function _fetchQuestRewardCode() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -978,7 +971,7 @@ function _fetchQuestRewardCode() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -997,20 +990,20 @@ function _fetchQuestRewardCode() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let lib = tmp7;
               lib = undefined;
-              if (outer1_8.isFetchingRewardCode(callback)) {
+              if (closure_1_8.isFetchingRewardCode(callback)) {
                 c6 = 3;
               } else {
-                let obj6 = outer1_1(outer1_2[10]);
-                const obj1 = { type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId: null };
+                let obj6 = closure_1_1(closure_1_2[10]);
+                obj1 = { type: "QUESTS_FETCH_REWARD_CODE_BEGIN", questId: null };
                 obj1[1] = tmp47;
                 obj6.dispatch(obj1);
-                let c4 = 1;
-                const HTTP = callback(outer1_2[9]).HTTP;
+                c4 = 1;
+                const HTTP = callback(closure_1_2[9]).HTTP;
                 let obj2 = { url: null, rejectWithError: false };
-                obj2[0] = outer1_13.QUESTS_REWARD_CODE(tmp47);
+                obj2[0] = closure_1_13.QUESTS_REWARD_CODE(tmp47);
                 c5 = 2;
                 c6 = 1;
                 const obj3 = { value: null, done: false };
@@ -1020,7 +1013,7 @@ function _fetchQuestRewardCode() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            dependencyMap = initializeState;
+            dependencyMap = closure_3;
             let obj4 = lib(709);
             obj4 = { type: "QUESTS_FETCH_REWARD_CODE_FAILURE", error: null, questId: null };
             const tmp28 = new lib(4274)(dependencyMap);
@@ -1047,7 +1040,7 @@ function _fetchQuestRewardCode() {
           obj6[0] = arg1;
           return obj6;
         } catch (tmp39) {
-          initializeState = tmp39;
+          closure_3 = tmp39;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp39;
@@ -1058,7 +1051,7 @@ function _fetchQuestRewardCode() {
       }
     })();
   });
-  const _fetchQuestRewardCode = tmp;
+  closure_22 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1070,11 +1063,11 @@ function _fetchQuestRewardCode() {
 function _dismissQuestContent() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -1083,7 +1076,7 @@ function _dismissQuestContent() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -1102,25 +1095,25 @@ function _dismissQuestContent() {
               obj[0] = arg1;
               return obj;
             } else {
-              let initializeState = tmp3;
-              let dependencyMap = tmp7;
+              closure_3 = tmp3;
+              dependencyMap = tmp7;
               let lib;
-              const isDismissingContentResult = outer1_8.isDismissingContent(callback);
+              const isDismissingContentResult = closure_1_8.isDismissingContent(callback);
               if (!isDismissingContentResult) {
                 if (obj16.isDismissible(lib)) {
-                  let obj6 = lib(outer1_2[10]);
-                  const obj1 = { type: "QUESTS_DISMISS_CONTENT_BEGIN", questId: null, content: null };
+                  let obj6 = lib(closure_1_2[10]);
+                  obj1 = { type: "QUESTS_DISMISS_CONTENT_BEGIN", questId: null, content: null };
                   obj1[1] = tmp54;
                   obj1[2] = tmp55;
                   obj6.dispatch(obj1);
-                  let c5 = 1;
-                  const adTrafficMetadataSealed = callback(outer1_2[25]).getAdTrafficMetadataSealed(tmp55, tmp54);
-                  const HTTP = callback(outer1_2[9]).HTTP;
+                  c5 = 1;
+                  const adTrafficMetadataSealed = callback(closure_1_2[25]).getAdTrafficMetadataSealed(tmp55, tmp54);
+                  const HTTP = callback(closure_1_2[9]).HTTP;
                   let obj2 = { url: null, body: null, rejectWithError: false };
-                  obj2[0] = outer1_13.QUESTS_DISMISS_CONTENT(tmp54, tmp55);
+                  obj2[0] = closure_1_13.QUESTS_DISMISS_CONTENT(tmp54, tmp55);
                   const obj3 = {};
-                  const obj9 = callback(outer1_2[25]);
-                  const merged = Object.assign(callback(outer1_2[25]).getAdDecisionData(tmp54, tmp55));
+                  const obj9 = callback(closure_1_2[25]);
+                  const merged = Object.assign(callback(closure_1_2[25]).getAdDecisionData(tmp54, tmp55));
                   let tmp44 = null;
                   if (null != adTrafficMetadataSealed) {
                     tmp44 = adTrafficMetadataSealed;
@@ -1134,7 +1127,7 @@ function _dismissQuestContent() {
                   return obj4;
                 }
               }
-              obj16 = callback(outer1_2[25]);
+              obj16 = callback(closure_1_2[25]);
             }
           } else {
             if (1 === tmp7) {
@@ -1177,7 +1170,7 @@ function _dismissQuestContent() {
       }
     })();
   });
-  const _dismissQuestContent = tmp;
+  closure_23 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1189,11 +1182,11 @@ function _dismissQuestContent() {
 function _completeQuestPreview() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -1202,7 +1195,7 @@ function _completeQuestPreview() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -1221,7 +1214,7 @@ function _completeQuestPreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let initializeState = tmp3;
+              closure_3 = tmp3;
               let body = tmp7;
               let num7;
               if (num7 === undefined) {
@@ -1238,11 +1231,11 @@ function _completeQuestPreview() {
               throw arg1;
             } else if (arg0 === 2) {
               c7 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
             } else {
-              let c5 = 1;
+              c5 = 1;
               const HTTP = callback(body[9]).HTTP;
               let obj2 = { url: null, body: null, rejectWithError: false };
               obj2[0] = closure_13.QUESTS_PREVIEW_COMPLETE(callback);
@@ -1258,10 +1251,10 @@ function _completeQuestPreview() {
           } else {
             if (2 === tmp7) {
               c5 = 0;
-              initializeState = closure_4;
+              closure_3 = closure_4;
               obj4 = num7(body[10]);
               const obj5 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
-              const tmp27 = new num7(body[11])(initializeState);
+              const tmp27 = new num7(body[11])(closure_3);
               obj5[1] = tmp27;
               obj5[2] = callback;
               obj4.dispatch(obj5);
@@ -1298,7 +1291,7 @@ function _completeQuestPreview() {
     iter.next();
     return iter;
   });
-  const _completeQuestPreview = tmp;
+  closure_24 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1310,34 +1303,34 @@ function _completeQuestPreview() {
 function _resetQuestPreviewStatus() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      let dependencyMap = tmp3;
-      let c4 = 1;
-      const HTTP = callback(outer1_2[9]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: false };
-      obj1[0] = outer1_13.QUESTS_PREVIEW_STATUS(callback);
+      dependencyMap = tmp3;
+      c4 = 1;
+      const HTTP = callback(closure_1_2[9]).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: false };
+      obj1[0] = closure_1_13.QUESTS_PREVIEW_STATUS(callback);
       obj1[1] = {};
       yield HTTP.del(obj1);
       if (1 === tmp7) {
         c4 = 0;
-        dependencyMap = initializeState;
+        dependencyMap = closure_3;
         let obj4 = lib(709);
         const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
         const tmp27 = new lib(4274)(dependencyMap);
         obj3[1] = tmp27;
         obj3[2] = callback;
         obj4.dispatch(obj3);
-        let c6 = 3;
+        c6 = 3;
       } else if (arg0 === 1) {
         c6 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         lib = arg1;
-        const obj = lib(709);
+        obj = lib(709);
         obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
         const obj2 = callback(7460);
         obj4[1] = obj2.questUserStatusFromServer(lib.body);
@@ -1348,7 +1341,7 @@ function _resetQuestPreviewStatus() {
       return arg1;
     })();
   });
-  const _resetQuestPreviewStatus = tmp;
+  closure_25 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1360,35 +1353,35 @@ function _resetQuestPreviewStatus() {
 function _resetQuestDismissibilityStatus() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
-      let dependencyMap = tmp3;
-      let c4 = 1;
-      outer1_1(outer1_2[10]).dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
-      const HTTP = callback(outer1_2[9]).HTTP;
-      const obj1 = { url: null, body: null, rejectWithError: false };
-      obj1[0] = outer1_13.QUESTS_PREVIEW_DISMISSIBILITY(callback);
+      dependencyMap = tmp3;
+      c4 = 1;
+      closure_1_1(closure_1_2[10]).dispatch({ type: "QUESTS_DOCK_RESET_SOFT_DISMISSAL" });
+      const HTTP = callback(closure_1_2[9]).HTTP;
+      obj1 = { url: null, body: null, rejectWithError: false };
+      obj1[0] = closure_1_13.QUESTS_PREVIEW_DISMISSIBILITY(callback);
       obj1[1] = {};
       yield HTTP.del(obj1);
       if (1 === tmp7) {
         c4 = 0;
-        dependencyMap = initializeState;
+        dependencyMap = closure_3;
         let obj4 = lib(709);
         const obj3 = { type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: null, questId: null };
         const tmp27 = new lib(4274)(dependencyMap);
         obj3[1] = tmp27;
         obj3[2] = callback;
         obj4.dispatch(obj3);
-        let c6 = 3;
+        c6 = 3;
       } else if (arg0 === 1) {
         c6 = 3;
         throw arg1;
       } else if (arg0 !== 2) {
         lib = arg1;
-        const obj = lib(709);
+        obj = lib(709);
         obj4 = { type: "QUESTS_PREVIEW_UPDATE_SUCCESS", previewQuestUserStatus: null };
         const obj2 = callback(7460);
         obj4[1] = obj2.questUserStatusFromServer(lib.body);
@@ -1399,7 +1392,7 @@ function _resetQuestDismissibilityStatus() {
       return arg1;
     })();
   });
-  const _resetQuestDismissibilityStatus = tmp;
+  closure_26 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1418,7 +1411,7 @@ function _fetchClaimedQuests() {
       if (arg0 === 1) {
         throw arg1;
       } else if (arg0 === 2) {
-        let obj = { value: null, done: true };
+        obj = { value: null, done: true };
         obj[0] = arg1;
         return obj;
       } else {
@@ -1438,15 +1431,15 @@ function _fetchClaimedQuests() {
             return obj;
           } else {
             let callback = tmp3;
-            let closure_0 = tmp7;
+            closure_0 = tmp7;
             closure_0 = undefined;
-            if (!outer1_8.isFetchingClaimedQuests) {
-              let obj5 = outer1_1(outer1_2[10]);
+            if (!closure_1_8.isFetchingClaimedQuests) {
+              let obj5 = closure_1_1(closure_1_2[10]);
               obj5.dispatch({ type: "QUESTS_FETCH_CLAIMED_QUESTS_BEGIN" });
-              let c3 = 1;
-              const HTTP = outer1_0(outer1_2[9]).HTTP;
-              const obj1 = { url: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUESTS_CLAIMED_QUESTS;
+              c3 = 1;
+              const HTTP = closure_1_0(closure_1_2[9]).HTTP;
+              obj1 = { url: null, rejectWithError: false };
+              obj1[0] = closure_1_13.QUESTS_CLAIMED_QUESTS;
               c4 = 2;
               c5 = 1;
               const obj2 = { value: null, done: false };
@@ -1493,7 +1486,7 @@ function _fetchClaimedQuests() {
       }
     }
   });
-  const _fetchClaimedQuests = tmp;
+  closure_27 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1505,11 +1498,11 @@ function _fetchClaimedQuests() {
 function _fetchQuestToDeliver() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, body) {
       if (guildsTree === 2) {
         guildsTree = 3;
@@ -1524,7 +1517,7 @@ function _fetchQuestToDeliver() {
           if (arg0 === 1) {
             throw body;
           } else if (arg0 === 2) {
-            let obj = { value: null, done: true };
+            obj = { value: null, done: true };
             obj[0] = body;
             return obj;
           } else {
@@ -1544,49 +1537,49 @@ function _fetchQuestToDeliver() {
                 return obj;
               } else {
                 let lib = tmp3;
-                let initializeState = tmp5;
+                closure_3 = tmp5;
                 throwTypeErrorResult = callback;
                 throwTypeErrorResult = callback2;
-                let dependencyMap;
-                initializeState = undefined;
+                dependencyMap = undefined;
+                closure_3 = undefined;
                 lib = undefined;
                 let enabled;
                 let type;
                 c7 = undefined;
                 guildsTree = undefined;
-                let _toPropertyKey;
-                let c10;
-                let c11;
+                closure_9 = undefined;
+                c10 = undefined;
+                c11 = undefined;
                 let user;
                 body = undefined;
                 let creative;
                 let obj16;
-                let closure_16;
+                closure_16 = undefined;
                 let quest;
                 const _Date = Date;
                 dependencyMap = Date.now();
                 throwTypeErrorResult = callback2;
-                throwTypeErrorResult = outer1_2;
-                throwTypeErrorResult = callback2(outer1_2[26]).recordQuestRequestAttempt("/quests/decision", callback2, callback);
+                throwTypeErrorResult = closure_1_2;
+                throwTypeErrorResult = callback2(closure_1_2[26]).recordQuestRequestAttempt("/quests/decision", callback2, callback);
                 throwTypeErrorResult = callback2;
-                throwTypeErrorResult = outer1_2;
-                const obj34 = callback2(outer1_2[26]);
-                const obj1 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: null };
+                throwTypeErrorResult = closure_1_2;
+                const obj34 = callback2(closure_1_2[26]);
+                obj1 = { type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: null };
                 obj1[1] = callback;
-                throwTypeErrorResult = callback2(outer1_2[10]).dispatch(obj1);
+                throwTypeErrorResult = callback2(closure_1_2[10]).dispatch(obj1);
                 type = 1;
                 throwTypeErrorResult = callback;
-                throwTypeErrorResult = outer1_2;
-                const obj35 = callback2(outer1_2[10]);
+                throwTypeErrorResult = closure_1_2;
+                const obj35 = callback2(closure_1_2[10]);
                 c7 = 2;
                 guildsTree = 1;
                 let obj2 = { value: null, done: false };
-                obj2[0] = callback(outer1_2[27]).getSession();
+                obj2[0] = callback(closure_1_2[27]).getSession();
                 return obj2;
               }
             } else {
               if (1 === tmp8) {
-                throwTypeErrorResult = initializeState;
+                throwTypeErrorResult = closure_3;
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = enabled;
                 throwTypeErrorResult = enabled;
@@ -1615,7 +1608,7 @@ function _fetchQuestToDeliver() {
                 if (throwTypeErrorResult == null) {
                   dependencyMap = null;
                 }
-                throwTypeErrorResult = initializeState;
+                throwTypeErrorResult = closure_3;
                 throwTypeErrorResult = lib;
                 throwTypeErrorResult = dependencyMap;
                 obj4.reason = dependencyMap;
@@ -1657,9 +1650,9 @@ function _fetchQuestToDeliver() {
                   obj6[0] = body;
                   return obj6;
                 } else {
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = lib;
-                  initializeState = body;
+                  closure_3 = body;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
                   obj16 = callback(7473);
@@ -1680,7 +1673,7 @@ function _fetchQuestToDeliver() {
                   obj8[0] = body;
                   return obj8;
                 } else {
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = lib;
                   lib = body;
                   throwTypeErrorResult = callback;
@@ -1714,14 +1707,14 @@ function _fetchQuestToDeliver() {
                     }
                     obj = callback(_null[30]);
                   });
-                  _toPropertyKey = found.slice(0, 50);
+                  closure_9 = found.slice(0, 50);
                   throwTypeErrorResult = enabled;
                   throwTypeErrorResult = undefined;
                   if (enabled.enabled) {
-                    throwTypeErrorResult = initializeState;
-                    throwTypeErrorResult = _toPropertyKey;
+                    throwTypeErrorResult = closure_3;
+                    throwTypeErrorResult = closure_9;
                   }
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   c10 = throwTypeErrorResult;
                   const _URLSearchParams = URLSearchParams;
                   const obj9 = { placement: null };
@@ -1734,31 +1727,31 @@ function _fetchQuestToDeliver() {
                   throwTypeErrorResult = new URLSearchParams(obj9);
                   c11 = throwTypeErrorResult;
                   throwTypeErrorResult = undefined;
-                  if (initializeState != null) {
-                    throwTypeErrorResult = initializeState.uuid;
+                  if (closure_3 != null) {
+                    throwTypeErrorResult = closure_3.uuid;
                   }
                   if (null != throwTypeErrorResult) {
-                    throwTypeErrorResult = initializeState;
+                    throwTypeErrorResult = closure_3;
                     throwTypeErrorResult = c11;
-                    throwTypeErrorResult = initializeState;
-                    throwTypeErrorResult = c11.append("client_heartbeat_session_id", initializeState.uuid);
+                    throwTypeErrorResult = closure_3;
+                    throwTypeErrorResult = c11.append("client_heartbeat_session_id", closure_3.uuid);
                   }
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = lib;
                   if (null != lib.uuid) {
-                    throwTypeErrorResult = initializeState;
+                    throwTypeErrorResult = closure_3;
                     throwTypeErrorResult = c11;
                     throwTypeErrorResult = lib;
                     throwTypeErrorResult = c11.append("client_ad_session_id", lib.uuid);
                   }
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = c10;
                   if (null != c10) {
-                    throwTypeErrorResult = initializeState;
+                    throwTypeErrorResult = closure_3;
                     throwTypeErrorResult = c10;
                     throwTypeErrorResult = c10.forEach((arg0) => _undefined.append("visible_guild_ids", arg0));
                   }
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = lib;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = dependencyMap;
@@ -1788,7 +1781,7 @@ function _fetchQuestToDeliver() {
                 obj13[0] = body;
                 return obj13;
               } else {
-                throwTypeErrorResult = initializeState;
+                throwTypeErrorResult = closure_3;
                 body = body.body;
                 throwTypeErrorResult = body;
                 creative = body.creative;
@@ -1817,7 +1810,7 @@ function _fetchQuestToDeliver() {
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
                     if (callback(7469).AdCreativeType.BOUNTY === creative_type) {
-                      throwTypeErrorResult = initializeState;
+                      throwTypeErrorResult = closure_3;
                       throwTypeErrorResult = lib;
                       throwTypeErrorResult = callback;
                       throwTypeErrorResult = dependencyMap;
@@ -1834,12 +1827,12 @@ function _fetchQuestToDeliver() {
                     }
                   }
                 } else {
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = body;
                   quest = body.quest;
                   throwTypeErrorResult = quest;
                   if (null != quest) {
-                    throwTypeErrorResult = initializeState;
+                    throwTypeErrorResult = closure_3;
                     throwTypeErrorResult = lib;
                     throwTypeErrorResult = callback;
                     throwTypeErrorResult = dependencyMap;
@@ -1913,7 +1906,7 @@ function _fetchQuestToDeliver() {
                 obj19[3] = dependencyMap;
                 const result = obj5.recordQuestRequestApiResponse("/quests/decision", obj19);
                 if (null != user) {
-                  throwTypeErrorResult = initializeState;
+                  throwTypeErrorResult = closure_3;
                   throwTypeErrorResult = lib;
                   throwTypeErrorResult = callback;
                   throwTypeErrorResult = callback;
@@ -1952,7 +1945,7 @@ function _fetchQuestToDeliver() {
       }
     })();
   });
-  const _fetchQuestToDeliver = tmp;
+  closure_28 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -1964,12 +1957,12 @@ function _fetchQuestToDeliver() {
 function _fetchEarnedQuestToDeliver() {
   const self = this;
   let tmp = callback((arg0, arg1, arg2) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
-    let c8 = 0;
-    let c9 = 0;
-    let c7 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
+    c8 = 0;
+    c9 = 0;
+    c7 = 0;
     return (function*(arg0, arg1, arg2) {
       if (c9 === 2) {
         c9 = 3;
@@ -1978,7 +1971,7 @@ function _fetchEarnedQuestToDeliver() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -1997,15 +1990,15 @@ function _fetchEarnedQuestToDeliver() {
               obj[0] = arg1;
               return obj;
             } else {
-              let set = tmp3;
+              closure_5 = tmp3;
               let uuid = tmp5;
               const callback = prop;
               prop = undefined;
               let found;
-              let c3;
+              c3 = undefined;
               uuid = undefined;
-              set = undefined;
-              let handleConnectionInfoChange;
+              closure_5 = undefined;
+              closure_6 = undefined;
               let quests;
               response_ttl_seconds = undefined;
               c9 = undefined;
@@ -2028,7 +2021,7 @@ function _fetchEarnedQuestToDeliver() {
                   c3 = Date.now();
                   const result = callback2(10502).recordEarnedRequestAttempt(tmp74, tmp75);
                   const obj16 = callback2(10502);
-                  const obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: null };
+                  obj1 = { type: "QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN", content: null };
                   obj1[1] = tmp74;
                   callback2(709).dispatch(obj1);
                   quests = 1;
@@ -2047,7 +2040,7 @@ function _fetchEarnedQuestToDeliver() {
           } else {
             if (1 === tmp8) {
               quests = 0;
-              let closure_10 = handleConnectionInfoChange;
+              closure_10 = closure_6;
               let obj5 = prop(found[36]);
               const obj3 = { wasSuccessful: false, fetchedAt: null };
               obj3[1] = c3;
@@ -2070,14 +2063,14 @@ function _fetchEarnedQuestToDeliver() {
                 return obj5;
               } else {
                 uuid = arg1;
-                set = found.join(",");
+                closure_5 = found.join(",");
                 const HTTP = callback(found[9]).HTTP;
                 uuid = undefined;
                 if (uuid != null) {
                   uuid = uuid.uuid;
                 }
                 const obj6 = { url: null, rejectWithError: false };
-                obj6[0] = closure_13.QUEST_EARNED_DECISION(set, callback, uuid);
+                obj6[0] = closure_13.QUEST_EARNED_DECISION(closure_5, callback, uuid);
                 response_ttl_seconds = 3;
                 c9 = 1;
                 obj7 = { value: null, done: false };
@@ -2088,9 +2081,9 @@ function _fetchEarnedQuestToDeliver() {
               c9 = 3;
               throw arg1;
             } else if (arg0 !== 2) {
-              handleConnectionInfoChange = arg1;
-              quests = handleConnectionInfoChange.body.quests;
-              response_ttl_seconds = handleConnectionInfoChange.body.response_ttl_seconds;
+              closure_6 = arg1;
+              quests = closure_6.body.quests;
+              response_ttl_seconds = closure_6.body.response_ttl_seconds;
               const _Map = Map;
               const map = new Map(found.map((arg0) => {
                 let tmp;
@@ -2117,7 +2110,7 @@ function _fetchEarnedQuestToDeliver() {
               obj8[4] = response_ttl_seconds;
               prop(found[10]).dispatch(obj8);
               const obj13 = prop(found[10]);
-              const request_id = handleConnectionInfoChange.body.request_id;
+              const request_id = closure_6.body.request_id;
               c3 = request_id;
               if (request_id == null) {
                 c3 = null;
@@ -2138,7 +2131,7 @@ function _fetchEarnedQuestToDeliver() {
           }
           c9 = 3;
         } catch (tmp36) {
-          handleConnectionInfoChange = tmp36;
+          closure_6 = tmp36;
           if (tmp4 === quests) {
             c9 = tmp2;
             throw tmp36;
@@ -2149,7 +2142,7 @@ function _fetchEarnedQuestToDeliver() {
       }
     })();
   });
-  const _fetchEarnedQuestToDeliver = tmp;
+  closure_29 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2161,10 +2154,10 @@ function _fetchEarnedQuestToDeliver() {
 function _updateVideoProgress() {
   const self = this;
   const tmp = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c4 = 0;
-    let c3 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c4 = 0;
+    c3 = 0;
     return (function*(arg0, arg1) {
       if (c3 === 2) {
         c3 = 3;
@@ -2173,7 +2166,7 @@ function _updateVideoProgress() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -2192,21 +2185,21 @@ function _updateVideoProgress() {
               obj[0] = arg1;
               return obj;
             } else {
-              let obj4 = lib(outer1_2[16]);
-              const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-              obj1[0] = outer1_13.QUESTS_VIDEO_PROGRESS(callback);
+              let obj4 = lib(closure_1_2[16]);
+              obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+              obj1[0] = closure_1_13.QUESTS_VIDEO_PROGRESS(callback);
               const obj2 = { timestamp: null };
               obj2[0] = lib;
               obj1[1] = obj2;
               const obj3 = { event: null, properties: null };
-              obj3[0] = callback(outer1_2[17]).NetworkActionNames.QUEST_VIDEO_PROGRESS;
+              obj3[0] = callback(closure_1_2[17]).NetworkActionNames.QUEST_VIDEO_PROGRESS;
               obj4 = { quest_id: null, timestamp_sec: null, stack_trace: null };
               obj4[0] = callback;
               obj4[1] = lib.toString();
               const _Error = Error;
-              const error = new Error();
+              error = new Error();
               const stack = error.stack;
-              let c2 = stack;
+              c2 = stack;
               if (stack == null) {
                 c2 = "";
               }
@@ -2238,7 +2231,7 @@ function _updateVideoProgress() {
       }
     })();
   });
-  const _updateVideoProgress = tmp;
+  closure_30 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2250,11 +2243,11 @@ function _updateVideoProgress() {
 function _fetchVideoTranscript() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     const iter = (function*(arg0) {
       if (c7 === 2) {
         c7 = 3;
@@ -2263,7 +2256,7 @@ function _fetchVideoTranscript() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -2301,7 +2294,7 @@ function _fetchVideoTranscript() {
                 throw arg1;
               } else if (arg0 === 2) {
                 c7 = 3;
-                const obj1 = { value: null, done: true };
+                obj1 = { value: null, done: true };
                 obj1[0] = arg1;
                 return obj1;
               } else {
@@ -2313,7 +2306,7 @@ function _fetchVideoTranscript() {
                   obj2[0] = lib.id;
                   obj2[1] = constants.FETCHING;
                   state.setTranscriptAsset(obj2);
-                  let c5 = 1;
+                  c5 = 1;
                   const HTTP = lib(questAsset[9]).HTTP;
                   const obj3 = { url: null, rejectWithError: true };
                   obj3[0] = questAsset.url;
@@ -2361,7 +2354,7 @@ function _fetchVideoTranscript() {
             c7 = 3;
           }
         } catch (tmp41) {
-          let closure_4 = tmp41;
+          closure_4 = tmp41;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp41;
@@ -2374,7 +2367,7 @@ function _fetchVideoTranscript() {
     iter.next();
     return iter;
   });
-  const _fetchVideoTranscript = tmp;
+  closure_31 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2386,21 +2379,21 @@ function _fetchVideoTranscript() {
 function _fetchQuest() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c3 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c3 = 0;
+    c4 = 0;
     return (function*(arg0) {
       const table = tmp2;
-      let closure_1 = tmp5;
-      const HTTP = lib(outer1_2[9]).HTTP;
-      const obj1 = { url: null, rejectWithError: false };
-      obj1[0] = outer1_13.QUEST(lib);
+      closure_1 = tmp5;
+      const HTTP = lib(closure_1_2[9]).HTTP;
+      obj1 = { url: null, rejectWithError: false };
+      obj1[0] = closure_1_13.QUEST(lib);
       lib = yield HTTP.get(obj1);
-      const obj = lib(table[14]);
+      obj = lib(table[14]);
       return obj.questConfigFromServer(lib.body);
     })();
   });
-  const _fetchQuest = tmp;
+  closure_32 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2412,10 +2405,10 @@ function _fetchQuest() {
 function _fetchQuestPreview() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c5 = 0;
-    let c6 = 0;
-    let c4 = 0;
+    closure_0 = arg0;
+    c5 = 0;
+    c6 = 0;
+    c4 = 0;
     return (function*(arg0) {
       if (c6 === 2) {
         c6 = 3;
@@ -2424,7 +2417,7 @@ function _fetchQuestPreview() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -2443,20 +2436,20 @@ function _fetchQuestPreview() {
               obj[0] = arg1;
               return obj;
             } else {
-              let dependencyMap = tmp3;
+              dependencyMap = tmp3;
               let lib = tmp7;
               lib = undefined;
-              if (outer1_8.isFetchingQuestPreview(callback)) {
+              if (closure_1_8.isFetchingQuestPreview(callback)) {
                 c6 = 3;
               } else {
-                let obj6 = outer1_1(outer1_2[10]);
-                const obj1 = { type: "QUESTS_FETCH_PREVIEW_BEGIN", questId: null };
+                let obj6 = closure_1_1(closure_1_2[10]);
+                obj1 = { type: "QUESTS_FETCH_PREVIEW_BEGIN", questId: null };
                 obj1[1] = tmp47;
                 obj6.dispatch(obj1);
-                let c4 = 1;
-                const HTTP = callback(outer1_2[9]).HTTP;
+                c4 = 1;
+                const HTTP = callback(closure_1_2[9]).HTTP;
                 let obj2 = { url: null, rejectWithError: false };
-                obj2[0] = outer1_13.QUEST_PREVIEW(tmp47);
+                obj2[0] = closure_1_13.QUEST_PREVIEW(tmp47);
                 c5 = 2;
                 c6 = 1;
                 const obj3 = { value: null, done: false };
@@ -2466,7 +2459,7 @@ function _fetchQuestPreview() {
             }
           } else if (1 === tmp7) {
             c4 = 0;
-            dependencyMap = initializeState;
+            dependencyMap = closure_3;
             let obj4 = lib(709);
             obj4 = { type: "QUESTS_FETCH_PREVIEW_FAILURE", error: null, questId: null };
             const tmp28 = new lib(4274)(dependencyMap);
@@ -2493,7 +2486,7 @@ function _fetchQuestPreview() {
           obj6[0] = arg1;
           return obj6;
         } catch (tmp39) {
-          initializeState = tmp39;
+          closure_3 = tmp39;
           if (tmp4 === c4) {
             c6 = tmp2;
             throw tmp39;
@@ -2504,7 +2497,7 @@ function _fetchQuestPreview() {
       }
     })();
   });
-  const _fetchQuestPreview = tmp;
+  closure_33 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2529,7 +2522,7 @@ function _fetchQuestHomeHero() {
         if (arg0 === 1) {
           throw arg1;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = arg1;
           return obj;
         } else {
@@ -2548,53 +2541,53 @@ function _fetchQuestHomeHero() {
               obj[0] = arg1;
               return obj;
             } else {
-              let initializeState = tmp3;
-              let closure_2 = tmp5;
+              closure_3 = tmp3;
+              closure_2 = tmp5;
               let callback;
               let callback2;
               closure_2 = undefined;
-              initializeState = undefined;
-              let c4;
+              closure_3 = undefined;
+              c4 = undefined;
               let body;
               type = undefined;
               creative_type = undefined;
-              let closure_8;
-              throwTypeErrorResult = outer1_0;
-              throwTypeErrorResult = outer1_2;
-              const QUEST_HOME_BANNER_DESKTOP = outer1_0(outer1_2[12]).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+              closure_8 = undefined;
+              throwTypeErrorResult = closure_1_0;
+              throwTypeErrorResult = closure_1_2;
+              const QUEST_HOME_BANNER_DESKTOP = closure_1_0(closure_1_2[12]).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
               callback = QUEST_HOME_BANNER_DESKTOP;
-              if (!outer1_8.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
+              if (!closure_1_8.isFetchingQuestToDeliverByPlacement(QUEST_HOME_BANNER_DESKTOP)) {
                 const lastFetchedQuestHomeHero = obj22.getLastFetchedQuestHomeHero();
                 if (null != lastFetchedQuestHomeHero) {
                   const _Date = Date;
                 }
                 const _Date2 = Date;
                 callback2 = Date.now();
-                let obj1 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: null };
+                obj1 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: null };
                 obj1[1] = QUEST_HOME_BANNER_DESKTOP;
-                outer1_1(outer1_2[10]).dispatch(obj1);
+                closure_1_1(closure_1_2[10]).dispatch(obj1);
                 body = 1;
-                throwTypeErrorResult = outer1_2;
-                const obj15 = outer1_1(outer1_2[10]);
+                throwTypeErrorResult = closure_1_2;
+                const obj15 = closure_1_1(closure_1_2[10]);
                 type = 2;
                 creative_type = 1;
                 const obj2 = { value: null, done: false };
-                obj2[0] = outer1_0(outer1_2[27]).getSession();
+                obj2[0] = closure_1_0(closure_1_2[27]).getSession();
                 return obj2;
               }
               creative_type = 3;
-              obj22 = outer1_8;
+              obj22 = closure_1_8;
             }
           } else if (1 === tmp8) {
             body = 0;
-            let _toPropertyKey = c4;
+            closure_9 = c4;
             let obj12 = callback2(closure_2[10]);
             const obj3 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: null, placement: null };
-            const tmp89 = new callback2(closure_2[11])(_toPropertyKey);
+            const tmp89 = new callback2(closure_2[11])(closure_9);
             obj3[1] = tmp89;
             obj3[2] = callback;
             obj12.dispatch(obj3);
-            throw _toPropertyKey;
+            throw closure_9;
           } else if (2 === tmp8) {
             if (arg0 === 1) {
               creative_type = 3;
@@ -2626,7 +2619,7 @@ function _fetchQuestHomeHero() {
               return obj6;
             } else {
               throwTypeErrorResult = closure_2;
-              initializeState = arg1;
+              closure_3 = arg1;
               const _URLSearchParams = URLSearchParams;
               const obj7 = { placement: null, num_decisions_requested: "1" };
               const _String = String;
@@ -2644,8 +2637,8 @@ function _fetchQuestHomeHero() {
               if (null != uuid) {
                 c4.append("client_heartbeat_session_id", closure_2.uuid);
               }
-              if (null != initializeState.uuid) {
-                c4.append("client_ad_session_id", initializeState.uuid);
+              if (null != closure_3.uuid) {
+                c4.append("client_ad_session_id", closure_3.uuid);
               }
               const HTTP = callback(closure_2[9]).HTTP;
               const obj8 = { url: null, rejectWithError: false, context: null };
@@ -2790,7 +2783,7 @@ function _fetchQuestHomeHero() {
       }
     }
   });
-  const _fetchQuestHomeHero = tmp;
+  closure_35 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -2802,10 +2795,10 @@ function _fetchQuestHomeHero() {
 function _fetchQuestHomeHeroPreview() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
-    let c6 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
+    c6 = 0;
     return (function*(arg0, body) {
       if (c8 === 2) {
         c8 = 3;
@@ -2814,7 +2807,7 @@ function _fetchQuestHomeHeroPreview() {
         if (arg0 === 1) {
           throw body;
         } else if (arg0 === 2) {
-          let obj = { value: null, done: true };
+          obj = { value: null, done: true };
           obj[0] = body;
           return obj;
         } else {
@@ -2834,27 +2827,27 @@ function _fetchQuestHomeHeroPreview() {
               return obj;
             } else {
               let creative_type = tmp3;
-              let initializeState = tmp5;
+              closure_3 = tmp5;
               let QUEST_HOME_BANNER_DESKTOP;
               let callback2;
               body = undefined;
-              initializeState = undefined;
+              closure_3 = undefined;
               creative_type = undefined;
-              let set;
-              QUEST_HOME_BANNER_DESKTOP = callback(outer1_2[12]).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
+              closure_5 = undefined;
+              QUEST_HOME_BANNER_DESKTOP = callback(closure_1_2[12]).AdPlacement.QUEST_HOME_BANNER_DESKTOP;
               const _Date = Date;
               callback2 = Date.now();
-              let obj1 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: null };
+              obj1 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: null };
               obj1[1] = QUEST_HOME_BANNER_DESKTOP;
-              outer1_1(outer1_2[10]).dispatch(obj1);
-              let c6 = 1;
+              closure_1_1(closure_1_2[10]).dispatch(obj1);
+              c6 = 1;
               const _URLSearchParams = URLSearchParams;
               const str5 = new URLSearchParams();
               str5.append("ad_creative_ids", QUEST_HOME_BANNER_DESKTOP);
-              const HTTP = callback(outer1_2[9]).HTTP;
+              const HTTP = callback(closure_1_2[9]).HTTP;
               const obj2 = { url: null, rejectWithError: false };
               const _HermesInternal = HermesInternal;
-              obj2[0] = "" + outer1_13.QUESTS_CREATIVE_PREVIEW + "?" + str5.toString();
+              obj2[0] = "" + closure_1_13.QUESTS_CREATIVE_PREVIEW + "?" + str5.toString();
               c7 = 2;
               c8 = 1;
               const obj3 = { value: null, done: false };
@@ -2863,7 +2856,7 @@ function _fetchQuestHomeHeroPreview() {
             }
           } else if (1 === tmp8) {
             c6 = 0;
-            c6 = set;
+            c6 = closure_5;
             let obj5 = callback2(body[10]);
             const obj4 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_FAILURE", error: null, placement: null };
             const tmp67 = new callback2(body[11])(c6);
@@ -2891,31 +2884,31 @@ function _fetchQuestHomeHeroPreview() {
             if (first == null) {
               callback2 = null;
             }
-            initializeState = callback2;
+            closure_3 = callback2;
             let creative;
-            if (initializeState != null) {
-              creative = initializeState.creative;
+            if (closure_3 != null) {
+              creative = closure_3.creative;
             }
             body = creative;
             if (creative == null) {
               body = null;
             }
             creative_type = body;
-            set = null;
+            closure_5 = null;
             let tmp16 = null != creative_type;
             if (tmp16) {
               tmp16 = creative_type.creative_type === QUEST_HOME_BANNER_DESKTOP(body[22]).AdCreativeType.QUEST_HOME_HERO;
             }
             if (tmp16) {
               obj = QUEST_HOME_BANNER_DESKTOP(body[39]);
-              set = obj.questHomeHeroFromServer(creative_type);
+              closure_5 = obj.questHomeHeroFromServer(creative_type);
             }
             obj1 = callback2(body[10]);
             const obj6 = { type: "QUESTS_FETCH_QUEST_HOME_HERO_SUCCESS", questHomeHero: null, adDecisionData: null, metadataSealed: null, trafficMetadataSealed: null, adContext: null, responseTtlSeconds: null, placement: null, fetchedAt: null };
-            obj6[1] = set;
+            obj6[1] = closure_5;
             let ad_id;
-            if (initializeState != null) {
-              let ad_identifiers = initializeState.ad_identifiers;
+            if (closure_3 != null) {
+              let ad_identifiers = closure_3.ad_identifiers;
               if (ad_identifiers != null) {
                 ad_id = ad_identifiers.ad_id;
               }
@@ -2923,32 +2916,32 @@ function _fetchQuestHomeHeroPreview() {
             const obj7 = { ad_id: null, ad_set_id: null, campaign_id: null, creative_id: null, creative_type: null, decision_id: null, is_targeted: null };
             obj7[0] = ad_id;
             let ad_set_id;
-            if (initializeState != null) {
-              const ad_identifiers2 = initializeState.ad_identifiers;
+            if (closure_3 != null) {
+              const ad_identifiers2 = closure_3.ad_identifiers;
               if (ad_identifiers2 != null) {
                 ad_set_id = ad_identifiers2.ad_set_id;
               }
             }
             obj7[1] = ad_set_id;
             let campaign_id;
-            if (initializeState != null) {
-              const ad_identifiers3 = initializeState.ad_identifiers;
+            if (closure_3 != null) {
+              const ad_identifiers3 = closure_3.ad_identifiers;
               if (ad_identifiers3 != null) {
                 campaign_id = ad_identifiers3.campaign_id;
               }
             }
             obj7[2] = campaign_id;
             let creative_id;
-            if (initializeState != null) {
-              const ad_identifiers4 = initializeState.ad_identifiers;
+            if (closure_3 != null) {
+              const ad_identifiers4 = closure_3.ad_identifiers;
               if (ad_identifiers4 != null) {
                 creative_id = ad_identifiers4.creative_id;
               }
             }
             obj7[3] = creative_id;
             creative_type = undefined;
-            if (initializeState != null) {
-              const ad_identifiers5 = initializeState.ad_identifiers;
+            if (closure_3 != null) {
+              const ad_identifiers5 = closure_3.ad_identifiers;
               if (ad_identifiers5 != null) {
                 creative_type = ad_identifiers5.creative_type;
               }
@@ -2956,29 +2949,29 @@ function _fetchQuestHomeHeroPreview() {
             obj7[4] = creative_type;
             obj7[5] = body.request_id;
             ad_identifiers = undefined;
-            if (initializeState != null) {
-              ad_identifiers = initializeState.ad_identifiers;
+            if (closure_3 != null) {
+              ad_identifiers = closure_3.ad_identifiers;
             }
             obj7[6] = null != ad_identifiers;
             obj6[2] = obj7;
             let metadata_sealed;
-            if (initializeState != null) {
-              metadata_sealed = initializeState.metadata_sealed;
+            if (closure_3 != null) {
+              metadata_sealed = closure_3.metadata_sealed;
             }
             obj6[3] = metadata_sealed;
             let prop;
-            if (initializeState != null) {
-              prop = initializeState.traffic_metadata_sealed;
+            if (closure_3 != null) {
+              prop = closure_3.traffic_metadata_sealed;
             }
             obj6[4] = prop;
             let ad_context;
-            if (initializeState != null) {
-              ad_context = initializeState.ad_context;
+            if (closure_3 != null) {
+              ad_context = closure_3.ad_context;
             }
             obj6[5] = ad_context;
             let response_ttl_seconds;
-            if (initializeState != null) {
-              response_ttl_seconds = initializeState.response_ttl_seconds;
+            if (closure_3 != null) {
+              response_ttl_seconds = closure_3.response_ttl_seconds;
             }
             obj6[6] = response_ttl_seconds;
             obj6[7] = QUEST_HOME_BANNER_DESKTOP;
@@ -2989,7 +2982,7 @@ function _fetchQuestHomeHeroPreview() {
             return { value: "HermesInternal", done: "HermesInternal" };
           }
         } catch (tmp72) {
-          set = tmp72;
+          closure_5 = tmp72;
           if (tmp4 === c6) {
             c8 = tmp2;
             throw tmp72;
@@ -3000,7 +2993,7 @@ function _fetchQuestHomeHeroPreview() {
       }
     })();
   });
-  const _fetchQuestHomeHeroPreview = tmp;
+  closure_36 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -3011,10 +3004,10 @@ function _fetchQuestHomeHeroPreview() {
 }
 ({ AnalyticEvents: closure_12, Endpoints: map1 } = ME);
 let obj = { SUCCESS: "success", CAPTCHA_FAILED: "captcha_failed", UNKNOWN_ERROR: "unknown_error", PREVIOUS_IN_FLIGHT_REQUEST: "previous_in_flight_request" };
-let closure_34 = 5 * require("set").Millis.MINUTE;
+let closure_34 = 5 * setDefault.Millis.MINUTE;
 let result = require("set").fileFinishedImporting("modules/quests/QuestActionCreators.tsx");
 
-export const manuallyStartConsoleQuest = function manuallyStartConsoleQuest(id, outer1_1) {
+export const manuallyStartConsoleQuest = function manuallyStartConsoleQuest(id, closure_1_1) {
   const self = this;
   const apply = _manuallyStartConsoleQuest.apply;
   if (typeof apply === "unknown") {
@@ -3106,7 +3099,7 @@ export const dismissQuestContent = function dismissQuestContent(id, QUEST_BAR_MO
   return applyArgumentsResult;
 };
 export const dismissProgressTrackingFailureNotice = function dismissProgressTrackingFailureNotice(streamKey) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE", streamKey };
   obj.dispatch(obj);
 };
@@ -3141,17 +3134,17 @@ export const resetQuestDismissibilityStatus = function resetQuestDismissibilityS
   return applyArgumentsResult;
 };
 export const overrideQuestForPlacement = function overrideQuestForPlacement(placement, closure_0) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_PREVIEW_OVERRIDE", placement, questId: closure_0 };
   obj.dispatch(obj);
 };
 export const selectTaskPlatform = function selectTaskPlatform(closure_0, platform) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_SELECT_TASK_PLATFORM", questId: closure_0, platform };
   obj.dispatch(obj);
 };
 export const questsVisibleMobileMessagesChanged = function questsVisibleMobileMessagesChanged(payload) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_VISIBLE_MOBILE_MESSAGES_CHANGED", payload };
   obj.dispatch(obj);
 };
@@ -3166,12 +3159,12 @@ export const fetchClaimedQuests = function fetchClaimedQuests() {
   return applyArgumentsResult;
 };
 export const updateOptimisticProgress = function updateOptimisticProgress(id, taskType, currentTime) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS", questId: id, taskEventName: taskType, progress: currentTime };
   obj.dispatch(obj);
 };
 export const resetOptimisticProgress = function resetOptimisticProgress(questId) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId };
   obj.dispatch(obj);
 };
@@ -3186,7 +3179,7 @@ export const fetchQuestToDeliver = function fetchQuestToDeliver(QUEST_HOME_BANNE
   return applyArgumentsResult;
 };
 export const clearQuestAdDecision = function clearQuestAdDecision(placement, ttlMillis) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER", placement, fetchedAt: Date.now(), responseTtlSeconds: ttlMillis / 1000 };
   obj.dispatch(obj);
 };
@@ -3201,7 +3194,7 @@ export const fetchEarnedQuestToDeliver = function fetchEarnedQuestToDeliver() {
   return applyArgumentsResult;
 };
 export const updatePrevRestingQuestDockMode = function updatePrevRestingQuestDockMode(mode) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_PREV_RESTING_QUEST_DOCK_MODE_UPDATE", mode };
   obj.dispatch(obj);
 };
@@ -3226,7 +3219,7 @@ export const fetchVideoTranscript = function fetchVideoTranscript(arg0, arg1) {
   return applyArgumentsResult;
 };
 export const updateQuestDockVisibilityEligibility = function updateQuestDockVisibilityEligibility(isEligibleToBeVisible) {
-  dispatcher.dispatch({ type: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE", isEligibleToBeVisible: isEligibleToBeVisible.isEligibleToBeVisible });
+  dispatcherDefault.dispatch({ type: "QUESTS_DOCK_VISIBILITY_ELIGIBILITY_UPDATE", isEligibleToBeVisible: isEligibleToBeVisible.isEligibleToBeVisible });
 };
 export const fetchQuest = function fetchQuest() {
   const self = this;
@@ -3269,27 +3262,27 @@ export const fetchQuestHomeHeroPreview = function fetchQuestHomeHeroPreview() {
   return applyArgumentsResult;
 };
 export const dismissQuestActivityModal = function dismissQuestActivityModal(id) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "UNENROLLED_ACTIVITY_QUEST_DISMISS", questId: id };
   obj.dispatch(obj);
 };
 export const setAutoEnroll = function setAutoEnroll(autoEnroll) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "UNENROLLED_ACTIVITY_QUEST_AUTO_ENROLL", autoEnroll };
   obj.dispatch(obj);
 };
 export const markAdContentSeen = function markAdContentSeen(QUEST, items) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "AD_CONTENT_MARK_SEEN", adCreativeType: QUEST, contentIds: items };
   obj.dispatch(obj);
 };
 export const markAdContentUnseen = function markAdContentUnseen(QUEST, items) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "AD_CONTENT_MARK_UNSEEN", adCreativeType: QUEST, contentIds: items };
   obj.dispatch(obj);
 };
 export const markQuestDiscovered = function markQuestDiscovered(questId) {
-  let obj = dispatcher;
+  obj = dispatcherDefault;
   obj = { type: "QUESTS_MARK_DISCOVERED", questId };
   obj.dispatch(obj);
 };

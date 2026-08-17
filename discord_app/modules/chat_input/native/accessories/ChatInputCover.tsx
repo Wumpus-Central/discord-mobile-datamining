@@ -1,11 +1,8 @@
 // discord_app/modules/chat_input/native/accessories/ChatInputCover.tsx
-import importAllResult from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
+import importAllResult from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let c4;
-let c5;
 const require = arg1;
 ({ StyleSheet: c3, TouchableWithoutFeedback: c4, View: c5 } = get_ActivityIndicator);
 const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
@@ -28,21 +25,21 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
             tmp = controlsSpecs;
           }
           if (tmp) {
-            tmp = closure_1 !== outer1_0(outer1_1[4]).KeyboardTypes.SYSTEM;
+            tmp = closure_1 !== closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
           }
           if (tmp) {
             tmp = closure_3;
           }
           if (tmp) {
             const obj = { type: null };
-            obj[0] = outer1_0(outer1_1[4]).KeyboardTypes.SYSTEM;
+            obj[0] = closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM;
             callback(obj);
           }
         }
       };
     },
     openSystemKeyboard() {
-      callback({ type: outer1_0(outer1_1[4]).KeyboardTypes.SYSTEM });
+      callback({ type: closure_1_0(closure_1_1[4]).KeyboardTypes.SYSTEM });
     }
   }), items);
   const imperativeHandle = onSelectKeyboard.useImperativeHandle(ref, memo.imperativeHandle);
@@ -65,6 +62,6 @@ const forwardRefResult = importAllResult.forwardRef((enabled, ref) => {
 });
 forwardRefResult.displayName = "ChatInputCover";
 const memoResult = importAllResult.memo(forwardRefResult);
-const result = require("jsxProd").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCover.tsx");
+const result = require("set").fileFinishedImporting("modules/chat_input/native/accessories/ChatInputCover.tsx");
 
 export default memoResult;

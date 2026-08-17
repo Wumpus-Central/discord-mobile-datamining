@@ -1,8 +1,10 @@
 // discord_app/modules/interaction_components/content_inventory_entry/utils.tsx
-import { MessageEmbedFlags } from "ME";
-import { hasFlag } from "../../../../discord_common/js/shared/utils/FlagUtils.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import hasFlag from "hasFlag" /* 1403 */;
 
-const result = require("set").fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");
+const MessageEmbedFlags = ME.MessageEmbedFlags;
+const result = set.fileFinishedImporting("modules/interaction_components/content_inventory_entry/utils.tsx");
 
 export const isContentInventoryFallbackEmbed = function isContentInventoryFallbackEmbed(flags) {
   let num = flags.flags;

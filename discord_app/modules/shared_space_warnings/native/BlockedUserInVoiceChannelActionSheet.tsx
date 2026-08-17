@@ -1,50 +1,43 @@
 // discord_app/modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx
-import "UserIcon";
-import get_ActivityIndicator from "TableRowInner";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import markAllUserIdListsStale from "markAllUserIdListsStale";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import { setDismissalTimeForUser } from "useSharedSpacesWarningStore";
-import GdmWarningMedium from "GdmWarningMedium";
-import { AnalyticEvents } from "ME";
-import jsxProd from "Button";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "markAllUserIdListsStale" /* 4030 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import { setDismissalTimeForUser } from "useSharedSpacesWarningStore" /* 13283 */;
+import GdmWarningMedium from "GdmWarningMedium" /* 13286 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let c3;
-let c4;
-let c9;
-let closure_12;
-let closure_14;
-let map1;
 const require = arg1;
+noopAll;
 ({ Image: c3, View: c4 } = get_ActivityIndicator);
 ({ BlockWarningEngagements: c9, VoiceChannelWarningSurfaces: c10 } = GdmWarningMedium);
 ({ Fragment: closure_12, jsxs: map1, jsx: closure_14 } = jsxProd);
 createCacheKey = { container: null, headerImage: null, headerText: null, centerText: null, buttonGroup: null };
-createCacheKey = { paddingTop: require("Themes").space.PX_12, gap: require("Themes").space.PX_8 };
+createCacheKey = { paddingTop: ThemesDefault.space.PX_12, gap: ThemesDefault.space.PX_8 };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { alignSelf: "center", width: 73, height: 86 };
-createCacheKey[2] = { gap: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_16 };
+createCacheKey[2] = { gap: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_16 };
 createCacheKey[3] = { textAlign: "center", alignSelf: "center" };
-let obj1 = { gap: require("Themes").space.PX_4, marginBottom: require("Themes").space.PX_16 };
-createCacheKey[4] = { paddingVertical: require("Themes").space.PX_16, gap: 8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-let obj2 = { paddingVertical: require("Themes").space.PX_16, gap: 8 };
-const result = require("ensureGuildLoaded").fileFinishedImporting("modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx");
+let obj1 = { gap: ThemesDefault.space.PX_4, marginBottom: ThemesDefault.space.PX_16 };
+createCacheKey[4] = { paddingVertical: ThemesDefault.space.PX_16, gap: 8 };
+let closure_15 = createCacheKey.createStyles(createCacheKey);
+let obj2 = { paddingVertical: ThemesDefault.space.PX_16, gap: 8 };
+const result = require("set").fileFinishedImporting("modules/shared_space_warnings/native/BlockedUserInVoiceChannelActionSheet.tsx");
 
 export default function BlockedUserInVoiceChannelActionSheet(arg0) {
-  let blockedUserId;
-  let require;
   ({ channelId: require, blockedUserId } = arg0);
   let stateFromStores;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = require(stateFromStores[11]);
-  let items = [markAllUserIdListsStale];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_6.isBlocked(blockedUserId));
-  let obj1 = require(stateFromStores[11]);
-  let items1 = [ensureGuildLoaded];
-  const stateFromStores1 = obj1.useStateFromStores(items1, () => outer1_5.getChannel(closure_0));
+  let items = [closure_6];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_6.isBlocked(blockedUserId));
+  obj1 = require(stateFromStores[11]);
+  let items1 = [closure_5];
+  const stateFromStores1 = obj1.useStateFromStores(items1, () => closure_1_5.getChannel(closure_0));
   user = user.getUser(blockedUserId);
   obj = { children: null };
   const intl = require(stateFromStores[12]).intl;
@@ -64,9 +57,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
     tmp9 = obj;
   }
   obj = { style: tmp.container, children: null };
-  obj1 = { source: null, style: null };
-  obj1[0] = blockedUserId(stateFromStores[14]);
-  obj1[1] = tmp.headerImage;
+  obj1 = { source: blockedUserId(tmp3[14]), style: tmp.headerImage };
   const items4 = [callback(closure_3, obj1), , , ];
   let obj2 = { style: tmp.headerText, children: null };
   const obj3 = { variant: "heading-xl/bold", color: "mobile-text-heading-primary", style: tmp.centerText, children: null };
@@ -101,8 +92,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
   const obj8 = { hasIcons: true, children: null };
   obj6[1] = intl5.formatToPlainString(require(stateFromStores[12]).t.w0YvUo, { userName: username });
   const items6 = [callback(require(stateFromStores[17]).TableRow, obj6), ];
-  const obj9 = { icon: null, label: null };
-  obj9[0] = callback(require(stateFromStores[20]).MicrophoneIcon, {});
+  const obj9 = { icon: callback(require(stateFromStores[20]).MicrophoneIcon, {}), label: null };
   const intl6 = tmp2(tmp3[12]).intl;
   obj9[1] = intl6.string(require(stateFromStores[12]).t["+4O9nX"]);
   items6[1] = callback(require(stateFromStores[17]).TableRow, obj9);
@@ -116,7 +106,7 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
       obj.hideActionSheet();
       blockedUserId(stateFromStores[23]).disconnect();
       const obj2 = blockedUserId(stateFromStores[23]);
-      obj = { action: outer1_9.CLICK_TO_LEAVE, channel_id: closure_0, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
+      obj = { action: closure_1_9.CLICK_TO_LEAVE, channel_id: closure_0, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
       if (stateFromStores) {
         const items = [blockedUserId];
         let items1 = items;
@@ -130,8 +120,8 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
         items2 = [blockedUserId];
       }
       obj[3] = items2;
-      obj[4] = outer1_10.POST_JOIN_SHEET;
-      blockedUserId(stateFromStores[24]).track(outer1_11.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
+      obj[4] = closure_1_10.POST_JOIN_SHEET;
+      blockedUserId(stateFromStores[24]).track(closure_1_11.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
     },
     text: null
   };
@@ -144,8 +134,8 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
     onPress() {
       let obj = blockedUserId(stateFromStores[22]);
       obj.hideActionSheet();
-      outer1_8(blockedUserId);
-      obj = { action: outer1_9.CLICK_TO_STAY, channel_id: closure_0, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
+      closure_1_8(blockedUserId);
+      obj = { action: closure_1_9.CLICK_TO_STAY, channel_id: closure_0, blocked_user_ids: null, ignored_user_ids: null, warning_surface: null };
       if (stateFromStores) {
         const items = [tmp2];
         let items1 = items;
@@ -159,8 +149,8 @@ export default function BlockedUserInVoiceChannelActionSheet(arg0) {
         items2 = [tmp2];
       }
       obj[3] = items2;
-      obj[4] = outer1_10.POST_JOIN_SHEET;
-      blockedUserId(stateFromStores[24]).track(outer1_11.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
+      obj[4] = closure_1_10.POST_JOIN_SHEET;
+      blockedUserId(stateFromStores[24]).track(closure_1_11.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, obj);
     },
     text: null
   };

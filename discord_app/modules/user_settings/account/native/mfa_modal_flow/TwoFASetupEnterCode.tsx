@@ -1,27 +1,25 @@
 // discord_app/modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getState from "getState";
-import { TwoFAModalSetupSections } from "frozen";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import closure_5 from "getState" /* 7383 */;
+import { TwoFAModalSetupSections } from "frozen" /* 14140 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let error;
-let metroImportAll;
 const require = arg1;
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 let closure_9 = createCacheKey.createStyles({ container: { flex: 1, justifyContent: "center", alignItems: "center" } });
-const result = require("getState").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
+const result = require("set").fileFinishedImporting("modules/user_settings/account/native/mfa_modal_flow/TwoFASetupEnterCode.tsx");
 
 export default function TwoFASetupEnterCode(stateFromStores) {
   const _require = stateFromStores;
   let obj = _require(navigation[6]);
   const twoFASetupStyles = obj.useTwoFASetupStyles();
-  const importDefault = ref.useRef(stateFromStores);
+  importDefault = ref.useRef(stateFromStores);
   const effect = ref.useEffect(() => {
     closure_1.current = closure_0;
   });
-  let obj1 = _require(navigation[7]);
+  obj1 = _require(navigation[7]);
   navigation = obj1.useNavigation();
   let obj2 = _require(navigation[8]);
   const items = [ref1];
@@ -44,10 +42,10 @@ export default function TwoFASetupEnterCode(stateFromStores) {
       if (null != body.body) {
         let message = body.body.message;
       } else {
-        const intl = outer1_0(outer1_2[11]).intl;
-        message = intl.string(outer1_0(outer1_2[11]).t["1u5B+G"]);
+        const intl = closure_1_0(closure_1_2[11]).intl;
+        message = intl.string(closure_1_0(closure_1_2[11]).t["1u5B+G"]);
       }
-      noop.current = message;
+      closure_4.current = message;
       const current = ref.current;
       if (current != null) {
         current.clear();

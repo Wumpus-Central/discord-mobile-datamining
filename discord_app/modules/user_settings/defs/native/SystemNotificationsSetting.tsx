@@ -1,15 +1,13 @@
 // discord_app/modules/user_settings/defs/native/SystemNotificationsSetting.tsx
-import closure_3 from "EventActionType";
-import { NativeModules } from "get ActivityIndicator";
-import { AnalyticEvents } from "ME";
-import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus";
-import EventActionType from "EventActionType";
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { NativeModules } from "get ActivityIndicator" /* 17 */;
+import { AnalyticEvents } from "ME" /* 676 */;
+import { NotificationAuthorizationStatus as closure_6 } from "NativePermissionStatus" /* 4839 */;
+import EventActionType from "EventActionType" /* 11582 */;
+import createToggle from "createToggle" /* 10669 */;
 
-let error;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function _handleEnableSystemNotification() {
   const self = this;
   const tmp = callback(function*() {
@@ -40,12 +38,12 @@ function _handleEnableSystemNotification() {
             return obj;
           } else {
             const callback = tmp2;
-            let closure_0 = tmp3;
+            closure_0 = tmp3;
             closure_0 = undefined;
-            const NativePermissionManager = outer1_4.NativePermissionManager;
+            const NativePermissionManager = closure_1_4.NativePermissionManager;
             dependencyMap = 1;
             c3 = 1;
-            const obj1 = { value: null, done: false };
+            obj1 = { value: null, done: false };
             obj1[0] = NativePermissionManager.getNotificationAuthorizationStatus();
             return obj1;
           }
@@ -90,7 +88,7 @@ function _handleEnableSystemNotification() {
       }
     }
   });
-  const _handleEnableSystemNotification = tmp;
+  closure_9 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -99,7 +97,7 @@ function _handleEnableSystemNotification() {
   }
   return applyArgumentsResult;
 }
-({ EventActionType: error, EventActionLocation: metroImportAll } = EventActionType);
+({ EventActionType: error, EventActionLocation: closure_8 } = EventActionType);
 createToggle = {
   useTitle() {
     const intl = getSystemLocale.intl;
@@ -119,6 +117,6 @@ createToggle = {
   withArrow: true
 };
 createToggle = createToggle.createPressable(createToggle);
-let result = require("MobileUserSettings").fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
+let result = require("set").fileFinishedImporting("modules/user_settings/defs/native/SystemNotificationsSetting.tsx");
 
 export default createToggle;

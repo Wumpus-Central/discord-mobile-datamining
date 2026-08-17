@@ -1,33 +1,17 @@
 // discord_app/design/void/Button/native/Button.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { getThemedRippleConfig } from "semanticColor";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import hexToRgba from "hexToRgba";
-import { set } from "../../../../utils/PlatformUtils.tsx";
-import { getClass } from "../../../../utils/StylesheetUtils.tsx";
+import set from "set" /* 500 */;
+import ThemesDefault from "Themes" /* 712 */;
+import _modDef8115 from "module_8115" /* 8115 */;
+import getClass from "getClass" /* 11833 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { getThemedRippleConfig } from "semanticColor" /* 1301 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
+import hexToRgba from "hexToRgba" /* 4223 */;
 
-let c10;
-let c4;
-let c5;
-let c9;
-let closure_6;
-let metroImportAll;
-const require = arg1;
+require = arg1;
 function getTextStyles(disabled, text) {
-  let color;
-  let look;
-  let size;
   let flag = disabled.disabled;
   ({ color, look, size } = disabled);
   if (flag === undefined) {
@@ -44,10 +28,6 @@ function getTextStyles(disabled, text) {
   return items;
 }
 function getButtonStyles(shrink, button) {
-  let color;
-  let disabled;
-  let look;
-  let size;
   ({ color, disabled } = shrink);
   ({ size, look } = shrink);
   if (disabled === undefined) {
@@ -94,7 +74,7 @@ function getButtonStyles(shrink, button) {
         faded = button.faded;
       }
     }
-    tmp8Result = tmp8(500);
+    tmp8Result = set;
   }
   items[5] = faded;
   items[6] = shrink.style;
@@ -103,7 +83,7 @@ function getButtonStyles(shrink, button) {
 class ButtonText {
   constructor(arg0) {
     ({ children, color, look, size, disabled, style } = global);
-    tmp = Object();
+    tmp = closure_11();
     if (typeof children !== "function") {
       tmp2 = jsx;
       tmp3 = closure_1;
@@ -163,7 +143,7 @@ class Button {
       MEDIUM = closure_15.MEDIUM;
     }
     text = global.text;
-    noop = text;
+    closure_3 = text;
     flag = global.shrink;
     if (flag === undefined) {
       flag = false;
@@ -224,7 +204,7 @@ class Button {
     items1 = [, ];
     items1[0] = flag2;
     items1[1] = accessibilityState;
-    memo = noop.useMemo(() => {
+    memo = closure_3.useMemo(() => {
       if (flag3) {
         let obj = { color: null };
         obj[0] = FILLED(MEDIUM[12]).isThemeDark(theme) ? WHITE : PRIMARY_500;
@@ -238,8 +218,8 @@ class Button {
         obj[2] = MEDIUM;
         obj[3] = flag2;
         obj[4] = textStyle;
-        obj[5] = noop;
-        return tmp(outer1_18, obj);
+        obj[5] = closure_3;
+        return tmp(closure_1_18, obj);
       }
     }, items);
     items2 = [, , , , , , , ];
@@ -251,7 +231,7 @@ class Button {
     items2[5] = flag;
     items2[6] = style;
     items2[7] = tmp8;
-    memo1 = noop.useMemo(() => {
+    memo1 = closure_3.useMemo(() => {
       const obj = {};
       const merged = Object.assign(accessibilityState);
       obj.disabled = flag2;
@@ -260,8 +240,8 @@ class Button {
     items3 = [, ];
     items3[0] = foregroundRipple;
     items3[1] = cornerRadius;
-    callback = noop.useCallback((pressed) => outer1_17({ color: BRAND, size: MEDIUM, disabled: flag2, look: FILLED, shrink: flag, pressed: pressed.pressed, darkenOnPress, style }, c15), items2);
-    memo2 = noop.useMemo(() => {
+    callback = closure_3.useCallback((pressed) => closure_1_17({ color: BRAND, size: MEDIUM, disabled: flag2, look: FILLED, shrink: flag, pressed: pressed.pressed, darkenOnPress, style }, closure_15), items2);
+    memo2 = closure_3.useMemo(() => {
       const obj = { foreground: foregroundRipple, cornerRadius: null };
       let num = cornerRadius;
       if (cornerRadius == null) {
@@ -270,7 +250,7 @@ class Button {
       obj[1] = num;
       return WHITE(obj);
     }, items3);
-    if (noop.useContext(require("context").RedesignCompatContext)) {
+    if (closure_3.useContext(require("context").RedesignCompatContext)) {
       tmp15 = darkenOnPress;
       if (FILLED !== darkenOnPress.LINK) {
         tmp24 = PRIMARY_500;
@@ -406,60 +386,60 @@ class Button {
   }
 }
 ({ ActivityIndicator: c4, Pressable: c5, View: closure_6 } = get_ActivityIndicator);
-({ jsx: metroImportAll, Fragment: c9, jsxs: c10 } = jsxProd);
+({ jsx: closure_8, Fragment: c9, jsxs: c10 } = jsxProd);
 createCacheKey = { button: { flexDirection: "row", flexGrow: 1, justifyContent: "center", alignItems: "center", alignSelf: "stretch", borderRadius: 3 }, buttonShrink: { flexGrow: 0, alignSelf: "flex-start", paddingHorizontal: 10 }, buttonBrandDefault: null, buttonBrandDarkDefault: null, buttonRedDefault: null, buttonRedDarkDefault: null, buttonGreenDefault: null, buttonGreenDarkDefault: null, buttonGreyDarkDefault: null, buttonLightgreyDefault: null, buttonLightgreyDarkDefault: null, buttonBrandDisabled: null, buttonBrandDarkDisabled: null, buttonRedDisabled: null, buttonRedDarkDisabled: null, buttonGreenDisabled: null, buttonGreenDarkDisabled: null, buttonGreyDarkDisabled: null, buttonLightgreyDisabled: null, buttonLightgreyDarkDisabled: null, buttonTransparentDefault: null, buttonTransparentDarkDefault: null, buttonTransparentDisabled: null, buttonTransparentDarkDisabled: null, buttonWhiteDefault: null, buttonWhiteDisabled: null, buttonFilled: null, buttonLink: null, buttonLinkDefault: null, buttonOutlined: null, buttonXsmall: null, buttonSmall: null, buttonMedium: null, buttonLarge: null, text: null, textXsmall: null, textSmall: null, textMedium: null, textLarge: null, textDisabled: null, textDefault: null, textBrand: null, textRed: null, textGreen: null, textGrey: null, textLightgrey: null, textWhite: null, textFilled: null, textOutlined: null, faded: null, buttonWhiteDarkDefault: null, textLink: null, buttonPrimaryDefault: null, buttonPrimaryDarkDefault: null, buttonGreyDefault: null, textPrimary: null, textTransparent: null, buttonPrimaryDisabled: null, buttonPrimaryDarkDisabled: null, buttonGreyDisabled: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[2] = createCacheKey;
-createCacheKey[3] = { backgroundColor: require("Themes").unsafe_rawColors.BRAND_600 };
-let obj1 = { backgroundColor: require("Themes").unsafe_rawColors.BRAND_600 };
-createCacheKey[4] = { backgroundColor: require("Themes").unsafe_rawColors.RED_400 };
-let obj2 = { backgroundColor: require("Themes").unsafe_rawColors.RED_400 };
-createCacheKey[5] = { backgroundColor: require("Themes").unsafe_rawColors.RED_500 };
-let obj3 = { backgroundColor: require("Themes").unsafe_rawColors.RED_500 };
-createCacheKey[6] = { backgroundColor: require("Themes").colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
-const obj4 = { backgroundColor: require("Themes").colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
-createCacheKey[7] = { backgroundColor: require("Themes").unsafe_rawColors.GREEN_500 };
-const obj5 = { backgroundColor: require("Themes").unsafe_rawColors.GREEN_500 };
-createCacheKey[8] = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_500 };
-const obj6 = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_500 };
-createCacheKey[9] = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_500 };
-const obj7 = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_500 };
-createCacheKey[10] = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_500 };
+createCacheKey[3] = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_600 };
+let obj1 = { backgroundColor: ThemesDefault.unsafe_rawColors.BRAND_600 };
+createCacheKey[4] = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_400 };
+let obj2 = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_400 };
+createCacheKey[5] = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_500 };
+let obj3 = { backgroundColor: ThemesDefault.unsafe_rawColors.RED_500 };
+createCacheKey[6] = { backgroundColor: ThemesDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
+const obj4 = { backgroundColor: ThemesDefault.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT };
+createCacheKey[7] = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_500 };
+const obj5 = { backgroundColor: ThemesDefault.unsafe_rawColors.GREEN_500 };
+createCacheKey[8] = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
+const obj6 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
+createCacheKey[9] = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
+const obj7 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
+createCacheKey[10] = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
 const obj9 = { backgroundColor: null };
-obj9[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BRAND_500, 0.5);
+obj9[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_500, 0.5);
 createCacheKey[11] = obj9;
 const obj10 = { backgroundColor: null };
-obj10[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.BRAND_600, 0.5);
+obj10[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.BRAND_600, 0.5);
 createCacheKey[12] = obj10;
 const obj11 = { backgroundColor: null };
-obj11[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.RED_400, 0.5);
+obj11[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.RED_400, 0.5);
 createCacheKey[13] = obj11;
 hexToRgba = { backgroundColor: null };
-hexToRgba[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.RED_500, 0.5);
+hexToRgba[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.RED_500, 0.5);
 createCacheKey[14] = hexToRgba;
 const obj13 = { backgroundColor: null };
-obj13[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.GREEN_360, 0.5);
+obj13[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.GREEN_360, 0.5);
 createCacheKey[15] = obj13;
 hexToRgba = { backgroundColor: null };
-hexToRgba[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.GREEN_500, 0.5);
+hexToRgba[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.GREEN_500, 0.5);
 createCacheKey[16] = hexToRgba;
 const obj15 = { backgroundColor: null };
-obj15[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_500, 0.5);
+obj15[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_500, 0.5);
 createCacheKey[17] = obj15;
 hexToRgba = { backgroundColor: null };
-hexToRgba[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_500, 0.5);
+hexToRgba[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_500, 0.5);
 createCacheKey[18] = hexToRgba;
 const obj17 = { backgroundColor: null };
-obj17[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.PRIMARY_500, 0.5);
+obj17[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.PRIMARY_500, 0.5);
 createCacheKey[19] = obj17;
 createCacheKey[20] = { backgroundColor: "transparent" };
 createCacheKey[21] = { backgroundColor: "transparent" };
 createCacheKey[22] = { backgroundColor: "transparent" };
 createCacheKey[23] = { backgroundColor: "transparent" };
-hexToRgba = { backgroundColor: require("Themes").colors.WHITE };
+hexToRgba = { backgroundColor: ThemesDefault.colors.WHITE };
 createCacheKey[24] = hexToRgba;
 const obj19 = { backgroundColor: null };
-obj19[0] = hexToRgba.hexWithOpacity(require("Themes").unsafe_rawColors.WHITE, 0.5);
+obj19[0] = hexToRgba.hexWithOpacity(ThemesDefault.unsafe_rawColors.WHITE, 0.5);
 createCacheKey[25] = obj19;
 createCacheKey[26] = {};
 createCacheKey[27] = {};
@@ -470,37 +450,37 @@ createCacheKey[30] = { minHeight: 24 };
 createCacheKey[31] = { minHeight: 32 };
 createCacheKey[32] = { minHeight: 40 };
 createCacheKey[33] = { minHeight: 46 };
-const obj8 = { backgroundColor: require("Themes").unsafe_rawColors.PRIMARY_500 };
-createCacheKey[34] = { color: require("Themes").colors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
+const obj8 = { backgroundColor: ThemesDefault.unsafe_rawColors.PRIMARY_500 };
+createCacheKey[34] = { color: ThemesDefault.colors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
 createCacheKey[35] = { fontSize: 12 };
 createCacheKey[36] = { fontSize: 14 };
 createCacheKey[37] = { fontSize: 14 };
 createCacheKey[38] = { fontSize: 20 };
 createCacheKey[39] = { opacity: 0.6 };
 createCacheKey[40] = { opacity: 1 };
-hexToRgba = { color: require("Themes").colors.WHITE };
+hexToRgba = { color: ThemesDefault.colors.WHITE };
 createCacheKey[41] = hexToRgba;
-const obj21 = { color: require("Themes").colors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
-createCacheKey[42] = { color: require("Themes").colors.WHITE };
-hexToRgba = { color: require("Themes").colors.WHITE };
+const obj21 = { color: ThemesDefault.colors.WHITE, fontFamily: require("ME").Fonts.PRIMARY_SEMIBOLD, flexShrink: 1 };
+createCacheKey[42] = { color: ThemesDefault.colors.WHITE };
+hexToRgba = { color: ThemesDefault.colors.WHITE };
 createCacheKey[43] = hexToRgba;
-const obj23 = { color: require("Themes").colors.WHITE };
-createCacheKey[44] = { color: require("Themes").colors.WHITE };
-hexToRgba = { color: require("Themes").colors.WHITE };
+const obj23 = { color: ThemesDefault.colors.WHITE };
+createCacheKey[44] = { color: ThemesDefault.colors.WHITE };
+hexToRgba = { color: ThemesDefault.colors.WHITE };
 createCacheKey[45] = hexToRgba;
-const obj25 = { color: require("Themes").colors.WHITE };
-createCacheKey[46] = { color: require("Themes").colors.WHITE };
+const obj25 = { color: ThemesDefault.colors.WHITE };
+createCacheKey[46] = { color: ThemesDefault.colors.WHITE };
 createCacheKey[47] = {};
 hexToRgba = { color: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createCacheKey[48] = hexToRgba;
 createCacheKey[49] = { opacity: 0.5 };
-const obj27 = { color: require("Themes").colors.WHITE };
-createCacheKey[50] = { backgroundColor: require("Themes").colors.WHITE };
-const obj29 = { backgroundColor: require("Themes").colors.WHITE };
-createCacheKey[51] = { color: require("Themes").colors.TEXT_LINK };
+const obj27 = { color: ThemesDefault.colors.WHITE };
+createCacheKey[50] = { backgroundColor: ThemesDefault.colors.WHITE };
+const obj29 = { backgroundColor: ThemesDefault.colors.WHITE };
+createCacheKey[51] = { color: ThemesDefault.colors.TEXT_LINK };
 hexToRgba = { backgroundColor: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createCacheKey[52] = hexToRgba;
-const obj30 = { color: require("Themes").colors.TEXT_LINK };
+const obj30 = { color: ThemesDefault.colors.TEXT_LINK };
 createCacheKey[53] = { backgroundColor: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 const obj32 = { backgroundColor: require("result").DARK_PRIMARY_100_LIGHT_PRIMARY_500 };
 createCacheKey[54] = { backgroundColor: require("result").DARK_PRIMARY_500_LIGHT_PRIMARY_430 };
@@ -523,7 +503,7 @@ Button.Looks = obj39;
 Button.Colors = obj40;
 Button.Sizes = obj41;
 const obj38 = { backgroundColor: require("result").BUTTON_GREY_DISABLED_BACKGROUND };
-const result = require("ME").fileFinishedImporting("design/void/Button/native/Button.tsx");
+const result = require("set").fileFinishedImporting("design/void/Button/native/Button.tsx");
 
 export default Button;
 export const BUTTON_CORNER_RADIUS = 3;

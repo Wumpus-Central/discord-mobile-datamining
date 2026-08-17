@@ -1,17 +1,16 @@
 // discord_app/records/ApplicationRecord.tsx
-import "toJS";
-import createFromServer from "createFromServer";
-import createdAt from "createdAt";
-import items3 from "items3";
-import { ApplicationTypes } from "ApplicationTypes";
-import { ApplicationOverlayMethodFlags } from "../../discord_common/js/shared/shared-constants/ApplicationOverlayMethodFlags.tsx";
+import DISCORD_EPOCHDefault from "DISCORD_EPOCH" /* 11 */;
+import fromStringAll from "fromString" /* 506 */;
+import getAvatarURLDefault from "getAvatarURL" /* 1435 */;
+import toJSDefault from "toJS" /* 1931 */;
+import ApplicationOverlayMethodFlags from "ApplicationOverlayMethodFlags" /* 4485 */;
+import closure_4 from "createFromServer" /* 4480 */;
+import closure_5 from "createdAt" /* 1930 */;
+import items3 from "items3" /* 4481 */;
+import { ApplicationTypes } from "ApplicationTypes" /* 4482 */;
 import { items } from "../modules/user_application_identity/UserApplicationIdentityConstants.tsx";
-import { getAvatarURL } from "../utils/AvatarUtils.tsx";
-import { DISCORD_EPOCH } from "../utils/SnowflakeUtils.tsx";
 
-let END_GAME_APPLICATION_ID;
-let POKER_NIGHT_APPLICATION_ID;
-const require = arg1;
+require = arg1;
 function createExecutable(os) {
   const obj = { os: os.os, name: os.name };
   if (null != os.arguments) {
@@ -22,6 +21,7 @@ function createExecutable(os) {
   }
   return obj;
 }
+toJSDefault;
 ({ END_GAME_APPLICATION_ID, POKER_NIGHT_APPLICATION_ID } = items3);
 let closure_7 = { [POKER_NIGHT_APPLICATION_ID]: 7, [END_GAME_APPLICATION_ID]: 12 };
 let BasicApplicationRecord;
@@ -74,7 +74,7 @@ BasicApplicationRecord["createFromServer"] = function createFromServer(bot) {
   ({ cover_image: obj.coverImage, primary_sku_id: obj.primarySkuId } = bot);
   let tmp3 = null;
   if (null != bot.bot) {
-    tmp3 = new createdAt(bot.bot);
+    tmp3 = new closure_5(bot.bot);
   }
   obj.bot = tmp3;
   ({ third_party_skus: obj.thirdPartySkus, role_connections_verification_url: obj.roleConnectionsVerificationUrl, parent_id: obj.parentId, connection_entrypoint_url: obj._connectionEntrypointUrl, content_classification: obj.contentClassification } = bot);
@@ -100,7 +100,7 @@ Object.defineProperty(prototype, "connectionEntrypointUrl", {
 prototype["getIconURL"] = function getIconURL(arg0, arg1) {
   let gameAssetURL = null;
   if (null != this.icon) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, hash: null, size: null, format: null };
     ({ id: obj2[0], icon: obj2[1] } = this);
     obj[2] = arg0;
@@ -112,7 +112,7 @@ prototype["getIconURL"] = function getIconURL(arg0, arg1) {
 prototype["getIconSource"] = function getIconSource(arg0, arg1) {
   let gameAssetSource = null;
   if (null != this.icon) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, hash: null, size: null, format: null };
     ({ id: obj2[0], icon: obj2[1] } = this);
     obj[2] = arg0;
@@ -124,7 +124,7 @@ prototype["getIconSource"] = function getIconSource(arg0, arg1) {
 prototype["getSplashURL"] = function getSplashURL(arg0, arg1) {
   let gameAssetURL = null;
   if (null != this.splash) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, hash: null, size: null, keepAspectRatio: true, format: null };
     ({ id: obj2[0], splash: obj2[1] } = this);
     obj[2] = arg0;
@@ -136,7 +136,7 @@ prototype["getSplashURL"] = function getSplashURL(arg0, arg1) {
 prototype["getCoverImageURL"] = function getCoverImageURL(arg0) {
   let applicationIconURL = null;
   if (null != this.coverImage) {
-    let obj = getAvatarURL;
+    let obj = getAvatarURLDefault;
     obj = { id: null, icon: null, size: null, keepAspectRatio: true };
     ({ id: obj2[0], coverImage: obj2[1] } = this);
     obj[2] = arg0;
@@ -276,14 +276,12 @@ class ApplicationRecord extends BasicApplicationRecord {
 }
 const prototype2 = ApplicationRecord.prototype;
 ApplicationRecord["createFromServer"] = function createFromServer(bot) {
-  let linked_games;
-  let overlay_methods;
   let obj = {};
   let merged = Object.assign(bot);
   ({ cover_image: obj.coverImage, primary_sku_id: obj.primarySkuId } = bot);
   let tmp3 = null;
   if (null != bot.bot) {
-    tmp3 = new createdAt(bot.bot);
+    tmp3 = new closure_5(bot.bot);
   }
   obj.bot = tmp3;
   ({ third_party_skus: obj.thirdPartySkus, role_connections_verification_url: obj.roleConnectionsVerificationUrl, overlay_warn: obj.overlayWarn, overlay_compatibility_hook: obj.overlayCompatibilityHook, overlay_methods } = bot);
@@ -294,14 +292,14 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
   ({ hook: obj.hook, store_listing_sku_id: obj.storeListingSkuId, guild_id: obj.guildId, guild: obj.guild } = bot);
   if (null != bot.publishers) {
     const publishers = bot.publishers;
-    let mapped = publishers.map(createFromServer.createFromServer);
+    let mapped = publishers.map(closure_4.createFromServer);
   } else {
     mapped = [];
   }
   obj.publishers = mapped;
   if (null != bot.developers) {
     const developers = bot.developers;
-    let mapped1 = developers.map(createFromServer.createFromServer);
+    let mapped1 = developers.map(closure_4.createFromServer);
   } else {
     mapped1 = [];
   }
@@ -314,7 +312,7 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
   if (num == null) {
     num = 0;
   }
-  obj.flags = importAll(506).deserialize(num);
+  obj.flags = fromStringAll.deserialize(num);
   ({ max_participants: obj.maxParticipants, tags: obj.tags, embedded_activity_config: obj.embeddedActivityConfig } = bot);
   let fromEntriesResult;
   if (null != bot.integration_types_config) {
@@ -322,8 +320,6 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
     const _Object2 = Object;
     const entries = Object.entries(bot.integration_types_config);
     fromEntriesResult = Object.fromEntries(entries.map((arg0) => {
-      let obj;
-      let tmp;
       [tmp, obj] = arg0;
       const items = [tmp, ];
       if (obj == null) {
@@ -355,8 +351,8 @@ ApplicationRecord["createFromServer"] = function createFromServer(bot) {
 prototype2["getCanonicalGameId"] = function getCanonicalGameId() {
   const self = this;
   if (this.type === ApplicationTypes.GAME) {
-    let castResult = DISCORD_EPOCH.cast(self.id);
-    const obj = DISCORD_EPOCH;
+    let castResult = DISCORD_EPOCHDefault.cast(self.id);
+    const obj = DISCORD_EPOCHDefault;
   } else {
     const linkedGames = self.linkedGames;
     castResult = undefined;
@@ -609,7 +605,7 @@ prototype2["mergeFromApplicationUpdate"] = function mergeFromApplicationUpdate(i
     let mapped = linkedGames;
     if (null != linkedGames) {
       mapped = linkedGames.map((application) => {
-        const linkedGames = application;
+        linkedGames = application;
         if (null != application.application) {
           return application;
         } else {
@@ -687,7 +683,7 @@ ApplicationRecord["supportsOutOfProcessOverlay"] = function supportsOutOfProcess
   const OUT_OF_PROCESS = ApplicationOverlayMethodFlags.ApplicationOverlayMethodFlags.OUT_OF_PROCESS;
   return null != arg0 && (arg0 & OUT_OF_PROCESS) === OUT_OF_PROCESS;
 };
-const result = require("createdAt").fileFinishedImporting("records/ApplicationRecord.tsx");
+const result = require("set").fileFinishedImporting("records/ApplicationRecord.tsx");
 
 export default ApplicationRecord;
 export { createExecutable };

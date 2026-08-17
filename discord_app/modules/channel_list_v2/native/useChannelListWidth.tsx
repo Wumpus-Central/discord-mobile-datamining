@@ -1,18 +1,20 @@
 // discord_app/modules/channel_list_v2/native/useChannelListWidth.tsx
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { keys } from "../../../ConstantsIOS.tsx";
-import { map } from "../../../design/tokens/native/useToken.tsx";
-import { useChatLayout } from "../../chat/native/useChatLayout.tsx";
-import { sum } from "../../screen/native/drawer/useDrawerWidth.tsx";
-const result = require("map").fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
+import set from "set" /* 2 */;
+import keys from "keys" /* 691 */;
+import ThemesDefault from "Themes" /* 712 */;
+import map from "map" /* 4097 */;
+import useChatLayoutDefault from "useChatLayout" /* 4232 */;
+import sum from "sum" /* 10719 */;
+
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/useChannelListWidth.tsx");
 
 export default function useChannelListWidth() {
   const drawerWidth = sum.useDrawerWidth();
   const obj = sum;
-  const token = map.useToken(Themes.modules.mobile.CHANNEL_DRAWER_SPACING);
+  const token = map.useToken(ThemesDefault.modules.mobile.CHANNEL_DRAWER_SPACING);
   let num = 0;
   const diff = drawerWidth - keys.DM_WIDTH;
-  if (useChatLayout().isChatBesideChannelList) {
+  if (useChatLayoutDefault().isChatBesideChannelList) {
     num = token;
   }
   return diff - num;

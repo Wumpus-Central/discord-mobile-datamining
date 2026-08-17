@@ -1,10 +1,10 @@
 // discord_app/modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx
-import noop from "noop";
-import makeGroupListingIndexSubscriptionListingTag from "makeGroupListingIndexSubscriptionListingTag";
-import { AnalyticEvents } from "ME";
+import closure_3 from "noop" /* 19 */;
+import closure_4 from "makeGroupListingIndexSubscriptionListingTag" /* 4015 */;
+import { AnalyticEvents } from "ME" /* 676 */;
 
 const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");
 
 export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   guildId = guildId.guildId;
@@ -12,13 +12,13 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
   const _location = guildId.location;
   const relevantSubscriptionListingIds = guildId.relevantSubscriptionListingIds;
   let groupListingsFetchContext;
-  let c5;
+  closure_5 = undefined;
   let stateFromStoresArray;
   let analyticsLocations;
-  let closure_8;
+  closure_8 = undefined;
   groupListingsFetchContext = guildId(_location[3]).useGroupListingsFetchContext("useTrackRoleSubscriptionUpsellAnalytics");
   const tmp2 = null != groupListingId(_location[4])(groupListingId).activeSubscription;
-  c5 = tmp2;
+  closure_5 = tmp2;
   let obj = guildId(_location[3]);
   let items = [groupListingsFetchContext];
   const items1 = [relevantSubscriptionListingIds];
@@ -62,11 +62,11 @@ export default function useTrackRoleSubscriptionUpsellAnalytics(guildId) {
       obj = { role_subscription_group_listing_id: null, role_subscription_listing_ids: null, is_premium_member: null, location_stack: null, location: null };
       obj[0] = groupListingId;
       obj[1] = stateFromStoresArray;
-      obj[2] = _undefined;
+      obj[2] = constants;
       obj[3] = analyticsLocations;
       obj[4] = _location;
       const merged = Object.assign(guildId(_location[9]).collectGuildAnalyticsMetadata(guildId));
-      obj.track(_undefined.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, obj);
+      obj.track(constants.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, obj);
       const obj3 = guildId(_location[9]);
     }
   }, items2);

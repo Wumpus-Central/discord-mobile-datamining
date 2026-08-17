@@ -1,24 +1,23 @@
 // discord_app/modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx
-import RefreshIcon from "RefreshIcon";
-import useWatchTaskPressHandler from "useWatchTaskPressHandler";
-import { View } from "tinycolor";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import initializeState from "initializeState";
-import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_9 } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "formatWatchRemainingDurationShort";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { RefreshIcon } from "../../../../design/components/Icon/native/redesign/generated/RefreshIcon.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useTrackQuestEventWithImpression } from "../../lib/analytics/AnalyticsHooks.tsx";
-import { useAdContentImpressionTrackerProps } from "../../lib/analytics/ContentImpressionTrackerHooks.tsx";
-import { formatWatchRemainingDurationShort } from "../../utils/MobileQuestVideoWatchCtaCopy.tsx";
-import { useWatchTaskPressHandler } from "QuestBottomSheetHooks.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Button from "Button" /* 4745 */;
+import useAdContentImpressionTrackerProps from "useAdContentImpressionTrackerProps" /* 10687 */;
+import formatWatchRemainingDurationShort from "formatWatchRemainingDurationShort" /* 10705 */;
+import useTrackQuestEventWithImpression from "useTrackQuestEventWithImpression" /* 10953 */;
+import RefreshIcon from "RefreshIcon" /* 13952 */;
+import useWatchTaskPressHandler from "useWatchTaskPressHandler" /* 14475 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import closure_6 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
+import closure_7 from "mergeGuildAvatar" /* 1922 */;
+import closure_8 from "initializeState" /* 7453 */;
+import { ACTION_SHEET_MINIMUM_BOTTOM_PADDING as closure_9 } from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c10;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function useQuestRewardClaimHandler(quest) {
   quest = quest.quest;
   let flag = quest.hideActionSheet;
@@ -31,7 +30,7 @@ function useQuestRewardClaimHandler(quest) {
   }
   const onSuccess = quest.onSuccess;
   const sourceQuestContent = quest.sourceQuestContent;
-  let c5;
+  c5 = undefined;
   let isFetching;
   let isFetchingRewardCode;
   let stateFromStores;
@@ -127,11 +126,6 @@ function useQuestRewardClaimHandler(quest) {
   return obj;
 }
 function WatchTaskButton(arg0) {
-  let disabled;
-  let onPressDisabled;
-  let questId;
-  let sourceQuestContent;
-  let taskDetails;
   ({ questId, sourceQuestContent, taskDetails, disabled, onPressDisabled } = arg0);
   let obj = useWatchTaskPressHandler;
   obj = { grow: true, size: "lg", onPress: obj.useWatchTaskPressHandler({ questId, sourceQuestContent }), disabled, onPressDisabled, text: null };
@@ -140,8 +134,6 @@ function WatchTaskButton(arg0) {
   return callback2(Button.Button, obj);
 }
 function NextButton(arg0) {
-  let disabled;
-  let onPress;
   ({ onPress, disabled } = arg0);
   const obj = { grow: true, size: "lg", onPress, disabled, text: null };
   const intl = getSystemLocale.intl;
@@ -149,64 +141,61 @@ function NextButton(arg0) {
   return callback2(Button.Button, obj);
 }
 function DefibButton(arg0) {
-  let dependencyMap;
-  let disabled;
-  let importDefault;
-  let loading;
-  let onPressDisabled;
-  let require;
   ({ questId: require, onPress: importDefault, sourceQuestContent: dependencyMap } = arg0);
-  let RefreshIcon;
-  let useWatchTaskPressHandler;
+  closure_3 = undefined;
+  closure_4 = undefined;
   ({ loading, disabled, onPressDisabled } = arg0);
   let obj = useTrackQuestEventWithImpression;
-  RefreshIcon = obj.useTrackQuestContentClickedWithImpression();
-  useWatchTaskPressHandler = useAdContentImpressionTrackerProps.useQuestImpressionId();
-  obj = { grow: true, size: "lg", variant: "secondary", loading, disabled, onPressDisabled, icon: null, iconPosition: "end", onPress: null, text: null };
-  obj[6] = callback2(RefreshIcon.RefreshIcon, {});
-  obj[8] = function onPress(arg0) {
-    let obj = outer1_0(outer1_2[33]);
-    if (obj.shouldMigrateToAdAnalyticsInterface(outer1_0(outer1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
-      obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
-      obj[0] = tmp(tmp2[35]).AdUserActionType.CLICK_INTERNAL;
-      obj[1] = tmp(tmp2[36]).AdCreativeType.QUEST;
-      obj[2] = closure_0;
-      obj[3] = tmp(tmp2[37]).QuestContentCTA.DEFIBRILLATOR;
-      obj[4] = tmp(tmp2[10]).QuestContent.QUEST_BOTTOM_SHEET;
-      obj[5] = closure_2;
-      obj[6] = useWatchTaskPressHandler;
-      tmp(tmp2[34]).captureAdUserAction(obj);
-      const tmpResult = tmp(tmp2[34]);
-    } else {
-      obj = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
-      obj[0] = closure_0;
-      obj[1] = tmp(tmp2[10]).QuestContent.QUEST_BOTTOM_SHEET;
-      obj[2] = tmp(tmp2[37]).QuestContentCTA.DEFIBRILLATOR;
-      obj[3] = closure_2;
-      callback(obj);
-    }
-    if (closure_1 != null) {
-      tmp11(arg0);
-    }
+  closure_3 = obj.useTrackQuestContentClickedWithImpression();
+  closure_4 = useAdContentImpressionTrackerProps.useQuestImpressionId();
+  obj = {
+    grow: true,
+    size: "lg",
+    variant: "secondary",
+    loading,
+    disabled,
+    onPressDisabled,
+    icon: callback2(RefreshIcon.RefreshIcon, {}),
+    iconPosition: "end",
+    onPress(arg0) {
+      let obj = closure_1_0(closure_1_2[33]);
+      if (obj.shouldMigrateToAdAnalyticsInterface(closure_1_0(closure_1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
+        obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
+        obj[0] = tmp(tmp2[35]).AdUserActionType.CLICK_INTERNAL;
+        obj[1] = tmp(tmp2[36]).AdCreativeType.QUEST;
+        obj[2] = closure_0;
+        obj[3] = tmp(tmp2[37]).QuestContentCTA.DEFIBRILLATOR;
+        obj[4] = tmp(tmp2[10]).QuestContent.QUEST_BOTTOM_SHEET;
+        obj[5] = closure_2;
+        obj[6] = closure_4;
+        tmp(tmp2[34]).captureAdUserAction(obj);
+        const tmpResult = tmp(tmp2[34]);
+      } else {
+        obj = { questId: null, questContent: null, questContentCTA: null, sourceQuestContent: null };
+        obj[0] = closure_0;
+        obj[1] = tmp(tmp2[10]).QuestContent.QUEST_BOTTOM_SHEET;
+        obj[2] = tmp(tmp2[37]).QuestContentCTA.DEFIBRILLATOR;
+        obj[3] = closure_2;
+        callback(obj);
+      }
+      if (closure_1 != null) {
+        tmp11(arg0);
+      }
+    },
+    text: null
   };
   const intl = getSystemLocale.intl;
   obj[9] = intl.string(getSystemLocale.t.nPThNb);
   return callback2(Button.Button, obj);
 }
 function ClaimButton(arg0) {
-  let dependencyMap;
-  let disabled;
-  let importDefault;
-  let loading;
-  let onPressDisabled;
-  let require;
   ({ questId: require, onPress: importDefault, sourceQuestContent: dependencyMap } = arg0);
-  let RefreshIcon;
-  let useWatchTaskPressHandler;
+  closure_3 = undefined;
+  closure_4 = undefined;
   ({ disabled, loading, onPressDisabled } = arg0);
   let obj = useTrackQuestEventWithImpression;
-  RefreshIcon = obj.useTrackQuestContentClickedWithImpression();
-  useWatchTaskPressHandler = useAdContentImpressionTrackerProps.useQuestImpressionId();
+  closure_3 = obj.useTrackQuestContentClickedWithImpression();
+  closure_4 = useAdContentImpressionTrackerProps.useQuestImpressionId();
   obj = {
     grow: true,
     size: "lg",
@@ -214,8 +203,8 @@ function ClaimButton(arg0) {
     onPressDisabled,
     loading,
     onPress() {
-      let obj = outer1_0(outer1_2[33]);
-      if (obj.shouldMigrateToAdAnalyticsInterface(outer1_0(outer1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
+      let obj = closure_1_0(closure_1_2[33]);
+      if (obj.shouldMigrateToAdAnalyticsInterface(closure_1_0(closure_1_2[33]).AdAnalyticsInterfaceExperimentStep.STEP_2_CLICKED_INTERNAL, "quest_bottom_sheet_footer")) {
         obj = { type: null, adCreativeType: null, adCreativeId: null, questContentCTA: null, surfaceId: null, sourceQuestContent: null, impressionId: null };
         obj[0] = tmp(tmp2[35]).AdUserActionType.CLICK_INTERNAL;
         obj[1] = tmp(tmp2[36]).AdCreativeType.QUEST;
@@ -223,7 +212,7 @@ function ClaimButton(arg0) {
         obj[3] = tmp(tmp2[37]).QuestContentCTA.CLAIM_REWARD;
         obj[4] = tmp(tmp2[10]).QuestContent.QUEST_BOTTOM_SHEET;
         obj[5] = closure_2;
-        obj[6] = useWatchTaskPressHandler;
+        obj[6] = closure_4;
         tmp(tmp2[34]).captureAdUserAction(obj);
         const tmpResult = tmp(tmp2[34]);
       } else {
@@ -243,11 +232,6 @@ function ClaimButton(arg0) {
   return callback2(Button.Button, obj);
 }
 function AnimatedFooter(arg0) {
-  let backButton;
-  let ctaButton;
-  let onLayout;
-  let style;
-  let withSafeArea;
   ({ backButton, withSafeArea } = arg0);
   ({ onLayout, ctaButton, style } = arg0);
   if (withSafeArea === undefined) {
@@ -265,9 +249,9 @@ function AnimatedFooter(arg0) {
   const bottom = width(stateFromStores[38])().bottom;
   width = width(stateFromStores[39])().width;
   let obj = _require(stateFromStores[15]);
-  let items = [maybeApplyNoTextColorForLightCustomTheme];
+  let items = [closure_6];
   stateFromStores = obj.useStateFromStores(items, () => useReducedMotion.useReducedMotion);
-  let obj1 = _require(stateFromStores[40]);
+  obj1 = _require(stateFromStores[40]);
   let num = 0;
   if (tmp) {
     num = 1;
@@ -276,19 +260,19 @@ function AnimatedFooter(arg0) {
   const items1 = [tmp, stateFromStores, sharedValue];
   const effect = React.useEffect(() => {
     let num = 0;
-    if (_undefined) {
+    if (callback) {
       num = 1;
     }
     let num2 = 200;
     if (stateFromStores) {
       num2 = 0;
     }
-    const result = sharedValue.set(_undefined(stateFromStores[41]).withTiming(num, { duration: num2 }));
+    const result = sharedValue.set(callback(stateFromStores[41]).withTiming(num, { duration: num2 }));
   }, items1);
   let tmp5Result = tmp5(tmp3[40]);
   const fn = function b() {
     let obj = { opacity: sharedValue.get(), position: "absolute", top: 0, left: 0, transform: items };
-    obj = { translateX: outer1_12 };
+    obj = { translateX: closure_1_12 };
     items = [obj];
     return obj;
   };
@@ -300,11 +284,11 @@ function AnimatedFooter(arg0) {
   tmp5Result = tmp5(tmp3[40]);
   const fn2 = function y() {
     const obj = { width: null, alignSelf: "flex-end" };
-    const items = [width - 2 * outer1_12, ];
+    const items = [width - 2 * closure_1_12, ];
     const value = sharedValue.get();
-    const diff = width - 2.5 * outer1_12;
-    items[1] = diff - _undefined(stateFromStores[42]).LARGE_BUTTON_HEIGHT;
-    obj[0] = _undefined(stateFromStores[40]).interpolate(value, [0, 1], items);
+    const diff = width - 2.5 * closure_1_12;
+    items[1] = diff - callback(stateFromStores[42]).LARGE_BUTTON_HEIGHT;
+    obj[0] = callback(stateFromStores[40]).interpolate(value, [0, 1], items);
     return obj;
   };
   obj = { interpolate: tmp5(tmp3[40]).interpolate, animation: sharedValue, windowWidth: width, H_PADDING_PX: PX_16, ICON_SIZE_PX: tmp5(tmp3[42]).LARGE_BUTTON_HEIGHT };
@@ -312,7 +296,7 @@ function AnimatedFooter(arg0) {
   fn2.__workletHash = 9095621288509;
   fn2.__initData = closure_20;
   const animatedStyle1 = tmp5Result.useAnimatedStyle(fn2);
-  const items2 = [createCacheKey().container, , ];
+  const items2 = [callback3().container, , ];
   if (withSafeArea) {
     obj1 = { paddingBottom: null };
     obj1[0] = tmp11;
@@ -326,27 +310,16 @@ function AnimatedFooter(arg0) {
   return closure_11(View, obj2);
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
-const PX_16 = require("Themes").space.PX_16;
+const PX_16 = ThemesDefault.space.PX_16;
 createCacheKey = { container: null };
-createCacheKey = { display: "flex", flexGrow: 1, flexShrink: 1, paddingHorizontal: require("Themes").space.PX_16 };
+createCacheKey = { display: "flex", flexGrow: 1, flexShrink: 1, paddingHorizontal: ThemesDefault.space.PX_16 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let closure_13 = createCacheKey.createStyles(createCacheKey);
 let closure_19 = { code: "function QuestBottomSheetFooterTsx1(){const{animation,H_PADDING_PX}=this.__closure;return{opacity:animation.get(),position:'absolute',top:0,left:0,transform:[{translateX:H_PADDING_PX}]};}" };
 let closure_20 = { code: "function QuestBottomSheetFooterTsx2(){const{interpolate,animation,windowWidth,H_PADDING_PX,ICON_SIZE_PX}=this.__closure;return{width:interpolate(animation.get(),[0,1],[windowWidth-H_PADDING_PX*2,windowWidth-H_PADDING_PX*2.5-ICON_SIZE_PX]),alignSelf:'flex-end'};}" };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx");
+let result = require("set").fileFinishedImporting("modules/quests/native/QuestBottomSheet/QuestBottomSheetFooter.tsx");
 
 export default function QuestBottomSheetFooter(quest) {
-  let isDefibrilating;
-  let isMobileActivityQuest;
-  let launchMobileActivity;
-  let onBack;
-  let onConnectConsoleNext;
-  let onDefib;
-  let questApplication;
-  let sourceQuestContent;
-  let step;
-  let style;
-  let withSafeArea;
   quest = quest.quest;
   ({ step, isDefibrilating } = quest);
   if (isDefibrilating === undefined) {
@@ -358,16 +331,16 @@ export default function QuestBottomSheetFooter(quest) {
   const tmp = useQuestRewardClaimHandler({ quest, sourceQuestContent });
   let obj = quest(10684);
   const questTaskDetails = obj.useQuestTaskDetails(quest);
-  let obj1 = quest(10684);
+  obj1 = quest(10684);
   const isQuestProgressing = obj1.useIsQuestProgressing(quest);
   let obj2 = quest(10684);
   let obj3 = quest(10684);
   xboxAndPlaystationAccounts = obj3.useConnectedAccounts().xboxAndPlaystationAccounts;
   const items = [quest, xboxAndPlaystationAccounts];
   const memo = React.useMemo(() => {
-    const obj = quest(outer1_2[22]);
-    return quest(outer1_2[22]).supportedConsoles(quest).filter((arg0) => {
-      let closure_0 = arg0;
+    const obj = quest(closure_1_2[22]);
+    return quest(closure_1_2[22]).supportedConsoles(quest).filter((arg0) => {
+      closure_0 = arg0;
       return null != closure_1.find((type) => type.type === closure_0);
     });
   }, items);

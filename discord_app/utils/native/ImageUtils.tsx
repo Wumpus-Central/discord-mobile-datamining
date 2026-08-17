@@ -1,25 +1,15 @@
 // discord_app/utils/native/ImageUtils.tsx
-import _slicedToArray from "_slicedToArray";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME";
-import { parse } from "../../../_runtime/01484_parse.js";
-import { items } from "../../modules/image_upload/AttachmentImageLadder.tsx";
-import { useWindowDimensions } from "../../modules/screen/useWindowDimensions.native.tsx";
-import { getAvatarURL } from "../AvatarUtils.tsx";
-import { ensureAvatarSource } from "AvatarUtils.tsx";
+import getAvatarURL from "getAvatarURL" /* 1435 */;
+import ensureAvatarSource from "ensureAvatarSource" /* 1438 */;
+import items2 from "items" /* 1471 */;
+import parseDefault from "parse" /* 1484 */;
+import useWindowDimensions from "useWindowDimensions" /* 1494 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { MEDIA_PROXY_MAX_TARGET_RESOLUTION as closure_6 } from "ME" /* 676 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
 function getSrcWithWidthAndHeight(animated) {
-  let format;
-  let sourceHeight;
-  let sourceWidth;
-  let src;
-  let targetHeight;
-  let targetWidth;
-  let tmp5;
-  let tmp6;
   ({ src, sourceWidth, sourceHeight, targetWidth, targetHeight, format } = animated);
   if (format === undefined) {
     format = null;
@@ -30,11 +20,10 @@ function getSrcWithWidthAndHeight(animated) {
   }
   const tmp = callback(src.split("?"), 2);
   const items = [tmp[0], ];
-  let obj = parse;
+  let obj = parseDefault;
   items[1] = obj.parse(tmp[1]);
-  const tmp4 = callback(items, 2);
-  [tmp5, tmp6] = tmp4;
-  if (tmp4.test(tmp5)) {
+  [tmp5, tmp6] = callback(items, 2);
+  if (regex2.test(tmp5)) {
     tmp6.format = "webp";
   } else if (null != format) {
     tmp6.format = format;
@@ -69,10 +58,10 @@ function getSrcWithWidthAndHeight(animated) {
       obj[1] = targetHeight;
       obj[2] = sourceWidth;
       obj[3] = sourceHeight;
-      const obj2 = items;
-      obj[4] = items.getSnapDownMaxUpscale(tmp9, tmp2(1896)());
+      const obj2 = items2;
+      obj[4] = items2.getSnapDownMaxUpscale(tmp9, tmp2(1896)());
       size = obj2.snapAttachmentDimensions(obj);
-      const obj4 = items;
+      const obj4 = items2;
     }
     if (!tmp12) {
       tmp6.width = size.width | 0;
@@ -97,7 +86,7 @@ function getMobileOptimizedSrc(proxy_url, width, height, png) {
     tmp = null;
   }
   let num = 1;
-  if (tmp3.test(proxy_url)) {
+  if (regex.test(proxy_url)) {
     num = 0.3;
   }
   let obj = useWindowDimensions;
@@ -122,10 +111,10 @@ function getPaletteForAvatarMobile(closure_0) {
 }
 ({ NativeModules: c4, PixelRatio: c5 } = get_ActivityIndicator);
 const tmp3 = /\.(gif)$/i;
-const error = tmp3;
-let tmp4 = /\.(avif)$/i;
-const metroImportAll = tmp4;
-let result = require("ME").fileFinishedImporting("utils/native/ImageUtils.tsx");
+const re7 = tmp3;
+const tmp4 = /\.(avif)$/i;
+const re8 = tmp4;
+let result = require("set").fileFinishedImporting("utils/native/ImageUtils.tsx");
 
 export default { getMobileOptimizedSrc, getPaletteForAvatarMobile };
 export const GIF_RE = tmp3;

@@ -1,52 +1,47 @@
 // discord_app/modules/game_profile/native/components/GameProfileHeader.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c5;
-let closure_6;
-let error;
-let metroImportAll;
 const require = arg1;
 ({ View: c5, Image: closure_6 } = get_ActivityIndicator);
-({ jsx: error, jsxs: metroImportAll } = jsxProd);
+({ jsx: error, jsxs: closure_8 } = jsxProd);
 createCacheKey = { container: null, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, image: null, titleContainer: null, textShadow: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST };
 createCacheKey[0] = createCacheKey;
-createCacheKey[1] = { width: "100%", position: "absolute", top: 0, bottom: -require("Themes").space.PX_80, left: 0, right: 0 };
+createCacheKey[1] = { width: "100%", position: "absolute", top: 0, bottom: -ThemesDefault.space.PX_80, left: 0, right: 0 };
 createCacheKey[2] = { height: "100%", width: "100%", resizeMode: "cover" };
 createCacheKey[3] = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 };
-let obj1 = { width: "100%", position: "absolute", top: 0, bottom: -require("Themes").space.PX_80, left: 0, right: 0 };
-createCacheKey[4] = { paddingTop: require("Themes").space.PX_32, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: 520, alignSelf: "center", width: "100%" };
-let obj2 = { paddingTop: require("Themes").space.PX_32, paddingHorizontal: require("Themes").space.PX_16, gap: require("Themes").space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: 520, alignSelf: "center", width: "100%" };
-const merged = Object.assign(require("Themes").shadows.SHADOW_LOW);
-createCacheKey[5] = { borderRadius: require("Themes").radii.sm };
-const obj3 = { borderRadius: require("Themes").radii.sm };
-createCacheKey[6] = { width: 85, height: 114, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-let obj4 = { width: 85, height: 114, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-createCacheKey[7] = { width: 85, height: 85, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+let obj1 = { width: "100%", position: "absolute", top: 0, bottom: -ThemesDefault.space.PX_80, left: 0, right: 0 };
+createCacheKey[4] = { paddingTop: ThemesDefault.space.PX_32, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: 520, alignSelf: "center", width: "100%" };
+let obj2 = { paddingTop: ThemesDefault.space.PX_32, paddingHorizontal: ThemesDefault.space.PX_16, gap: ThemesDefault.space.PX_12, flexDirection: "row", alignItems: "flex-end", maxWidth: 520, alignSelf: "center", width: "100%" };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_LOW);
+createCacheKey[5] = { borderRadius: ThemesDefault.radii.sm };
+const obj3 = { borderRadius: ThemesDefault.radii.sm };
+createCacheKey[6] = { width: 85, height: 114, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+let obj4 = { width: 85, height: 114, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+createCacheKey[7] = { width: 85, height: 85, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
 createCacheKey[8] = { width: "100%", height: "100%" };
 createCacheKey[9] = { flex: 1, flexDirection: "column", alignItems: "flex-start" };
-let obj5 = { width: 85, height: 85, borderRadius: require("Themes").radii.sm, backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
-createCacheKey[10] = { textShadowColor: require("Themes").colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 1 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+let obj5 = { width: 85, height: 85, borderRadius: ThemesDefault.radii.sm, backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, overflow: "hidden" };
+createCacheKey[10] = { textShadowColor: ThemesDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 1 };
+let closure_9 = createCacheKey.createStyles(createCacheKey);
 let closure_10 = { code: "function GameProfileHeaderTsx1(){const{effectiveScrollY}=this.__closure;return{top:-Math.max(0,-effectiveScrollY.get())};}" };
-let obj6 = { textShadowColor: require("Themes").colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 1 };
-const result = require("get ActivityIndicator").fileFinishedImporting("modules/game_profile/native/components/GameProfileHeader.tsx");
+let obj6 = { textShadowColor: ThemesDefault.colors.BLACK, textShadowOffset: { width: 0, height: 0 }, textShadowRadius: 1 };
+const result = require("set").fileFinishedImporting("modules/game_profile/native/components/GameProfileHeader.tsx");
 
 export default function GameProfileHeader(game) {
-  let onHeightMeasured;
-  let scrollY;
   game = game.game;
   ({ scrollY, onHeightMeasured } = game);
   let first;
   scrollY = undefined;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = React;
   first = scrollY(React.useState(() => Math.random()), 1)[0];
-  let obj1 = game(first[6]);
+  obj1 = game(first[6]);
   if (scrollY == null) {
     scrollY = obj1.useSharedValue(0);
   }

@@ -1,20 +1,22 @@
 // discord_app/modules/native_menu/native/NativeMenuActionCreators.tsx
-import { dispatcher } from "../../../Dispatcher.tsx";
-let result = require("IMPACT_LIGHT").fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");
+import set from "set" /* 2 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+
+let result = set.fileFinishedImporting("modules/native_menu/native/NativeMenuActionCreators.tsx");
 
 export default {
   showNativeMenu(key, memo) {
-    let closure_0 = key;
-    const importDefault = memo;
-    dispatcher.wait(() => {
-      let obj = key(outer1_2[1]);
-      const result = obj.triggerHapticFeedback(memo(outer1_2[2]).IMPACT_LIGHT);
+    closure_0 = key;
+    importDefault = memo;
+    dispatcherDefault.wait(() => {
+      let obj = key(closure_1_2[1]);
+      const result = obj.triggerHapticFeedback(memo(closure_1_2[2]).IMPACT_LIGHT);
       obj = { type: "SHOW_NATIVE_MENU", key, menu: memo };
-      memo(outer1_2[0]).dispatch(obj);
+      memo(closure_1_2[0]).dispatch(obj);
     });
   },
   hideNativeMenu(key) {
-    let obj = dispatcher;
+    let obj = dispatcherDefault;
     obj = { type: "HIDE_NATIVE_MENU", key };
     obj.dispatch(obj);
   }

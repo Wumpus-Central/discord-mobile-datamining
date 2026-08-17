@@ -1,15 +1,15 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx
-import _slicedToArray from "_slicedToArray";
-import noop from "noop";
-import getRoleMemberCount from "getRoleMemberCount";
-import { isEveryoneRole } from "GuildRoleRecordTypeTag";
-import createGuildRoleRecordFromRust from "createGuildRoleRecordFromRust";
-import { DEFAULT_ROLE_COLOR_HEX } from "ME";
-import jsxProd from "jsxProd";
+import ShieldUserIcon from "ShieldUserIcon" /* 8859 */;
+import stylesDefault from "styles" /* 11357 */;
+import closure_4 from "_slicedToArray" /* 32 */;
+import closure_5 from "noop" /* 19 */;
+import closure_6 from "getRoleMemberCount" /* 6928 */;
+import { isEveryoneRole } from "GuildRoleRecordTypeTag" /* 1984 */;
+import closure_8 from "createGuildRoleRecordFromRust" /* 1983 */;
+import { DEFAULT_ROLE_COLOR_HEX } from "ME" /* 676 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c10;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 class RoleIcon {
   constructor(arg0) {
     role = global.role;
@@ -46,9 +46,9 @@ class RoleRow {
     tmp3 = closure_3;
     obj = require("initialize");
     items = [];
-    items[0] = getRoleMemberCount;
+    items[0] = closure_6;
     stateFromStores = obj.useStateFromStores(items, () => {
-      const roleMemberCount = outer1_6.getRoleMemberCount(guildId);
+      const roleMemberCount = closure_1_6.getRoleMemberCount(guildId);
       let tmp2;
       if (roleMemberCount != null) {
         tmp2 = roleMemberCount[guildRole.id];
@@ -58,14 +58,12 @@ class RoleRow {
     items1 = [];
     items1[0] = guildId;
     tmp5 = isEveryoneRole(guildRole);
-    effect = noop.useEffect(() => {
-      const memberCounts = outer1_2(outer1_3[10]).fetchMemberCounts(guildId);
+    effect = closure_5.useEffect(() => {
+      const memberCounts = closure_1_2(closure_1_3[10]).fetchMemberCounts(guildId);
     }, items1);
     tmp7 = jsx;
-    obj = { label: null, icon: null, trailing: null };
+    obj = { label: jsx(require("Text").Text, obj1), icon: jsx(RoleIcon, { role: guildRole }), trailing: null };
     obj1 = { lineClamp: 1, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: guildRole.name };
-    obj[0] = jsx(require("Text").Text, obj1);
-    obj[1] = jsx(RoleIcon, { role: guildRole });
     tmp8 = null;
     if (!tmp5) {
       tmp8 = null;
@@ -88,11 +86,9 @@ class RoleRow {
 }
 ({ jsx: c10, jsxs: unpackModuleId } = jsxProd);
 const AppLauncherRoleListActionSheet = "AppLauncherRoleListActionSheet";
-const result = require("getRoleMemberCount").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/options/role/AppLauncherRoleListActionSheet.tsx");
 
 export default function AppLauncherRoleListActionSheet(channel) {
-  let onActionSheetDismiss;
-  let require;
   ({ onRolePress: require, onActionSheetDismiss } = channel);
   let guild_id;
   let first;
@@ -106,16 +102,16 @@ export default function AppLauncherRoleListActionSheet(channel) {
   callback = tmp[1];
   ref = ref.useRef(null);
   let obj = require(first[9]);
-  const items = [createGuildRoleRecordFromRust];
-  stateFromStores = obj.useStateFromStores(items, () => outer1_8.getSortedRoles(guild_id));
+  const items = [closure_8];
+  stateFromStores = obj.useStateFromStores(items, () => closure_1_8.getSortedRoles(guild_id));
   const items1 = [stateFromStores, first];
   memo = ref.useMemo(() => stateFromStores.filter((id) => {
     let tmp = closure_3 === id.id;
     if (!tmp) {
       const trimmed = closure_3.trim();
-      tmp = outer1_1(outer1_3[14])(trimmed, id.name.toLowerCase());
+      tmp = closure_1_1(closure_1_3[14])(trimmed, id.name.toLowerCase());
       const str2 = id.name;
-      const tmp4 = outer1_1(outer1_3[14]);
+      const tmp4 = closure_1_1(closure_1_3[14]);
     }
     return tmp;
   }), items1);
@@ -133,19 +129,19 @@ export default function AppLauncherRoleListActionSheet(channel) {
   if (0 === memo.length) {
     let tmp8Result = tmp8(tmp4(tmp5[17]).AppLauncherListEmptyState, {});
   } else {
-    const obj1 = { ref: null, data: null, renderItem: null };
+    obj1 = { ref: null, data: null, renderItem: null };
     obj1[0] = ref;
     obj1[1] = memo;
     obj1[2] = function renderItem(item) {
       item = item.item;
       const index = item.index;
-      return outer1_10(outer1_14, {
+      return closure_1_10(closure_1_14, {
         guildId: guild_id,
         guildRole: item,
         onPress() {
           item({ role: item });
-          outer1_1(outer1_3[15]).hideActionSheet(outer1_12);
-          outer1_1();
+          closure_1_1(closure_1_3[15]).hideActionSheet(closure_1_12);
+          closure_1_1();
         },
         start: 0 === index,
         end: index === memo.length - 1

@@ -1,20 +1,22 @@
 // discord_app/modules/user_profile/UserProfileSettingsStore.tsx
-import ME from "ME";
-import { Store } from "initialize";
-import set from "ANALYTICS_NAME";
-import { useBioMaxLength } from "experiments/BioMaxLengthExperiment.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import INVITE from "INVITE" /* 677 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import date from "date" /* 1429 */;
+import ANALYTICS_NAME from "ANALYTICS_NAME" /* 8371 */;
+import useBioMaxLength from "useBioMaxLength" /* 8372 */;
+import ME from "ME" /* 676 */;
+import set from "set" /* 2 */;
 
-let c3;
-let c4;
 function handleFormOpen() {
   const OPEN = FormStates.OPEN;
-  let closure_13 = {};
+  closure_13 = {};
 }
 function handleReset() {
-  let closure_9 = {};
-  let closure_13 = {};
-  let closure_10 = obj;
-  const CLOSED = FormStates.CLOSED;
+  closure_9 = {};
+  closure_13 = {};
+  closure_10 = obj;
+  CLOSED = FormStates.CLOSED;
   closure_13 = {};
 }
 const FormStates = ME.FormStates;
@@ -22,12 +24,13 @@ const FormStates = ME.FormStates;
 let closure_5 = {};
 let obj = {};
 let closure_7 = {};
-let items = [...require("INVITE").PSEUDO_GUILD_IDS, require("date").FAVORITES_RAW_GUILD_ID, require("ANALYTICS_NAME").NOTIFICATIONS_INBOX_RAW_GUILD_ID];
+let items = [...INVITE.PSEUDO_GUILD_IDS, date.FAVORITES_RAW_GUILD_ID, ANALYTICS_NAME.NOTIFICATIONS_INBOX_RAW_GUILD_ID];
 let set = new Set(items);
 let closure_9 = {};
 let c11;
 let CLOSED = FormStates.CLOSED;
 let closure_13 = {};
+const Store = initializeDefault.Store;
 class UserProfileSettingsStore extends Store {
 }
 const prototype = UserProfileSettingsStore.prototype;
@@ -115,7 +118,7 @@ obj = {
       return false;
     } else {
       const OPEN = FormStates.OPEN;
-      let closure_13 = {};
+      closure_13 = {};
     }
   },
   USER_PROFILE_SETTINGS_INIT: function handleInit(guildId) {
@@ -126,9 +129,9 @@ obj = {
         tmp = guildId;
       }
     }
-    let c11 = tmp;
+    guildId = tmp;
     const OPEN = FormStates.OPEN;
-    let closure_13 = {};
+    closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SET_GUILD: function handleSetGuild(guildId) {
     guildId = guildId.guildId;
@@ -138,17 +141,17 @@ obj = {
         tmp = guildId;
       }
     }
-    let c11 = tmp;
-    let closure_13 = {};
+    guildId = tmp;
+    closure_13 = {};
   },
   USER_PROFILE_SETTINGS_CLOSE: function handleFormClose() {
-    const CLOSED = FormStates.CLOSED;
-    let closure_13 = {};
+    CLOSED = FormStates.CLOSED;
+    closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: handleReset,
   USER_PROFILE_SETTINGS_SUBMIT: function handleFormSubmit() {
     const SUBMITTING = FormStates.SUBMITTING;
-    let closure_13 = {};
+    closure_13 = {};
   },
   USER_PROFILE_SETTINGS_SUBMIT_SUCCESS: function handleFormSubmitSuccess(guildId) {
     guildId = guildId.guildId;
@@ -163,8 +166,6 @@ obj = {
     }
   },
   USER_PROFILE_SETTINGS_SUBMIT_FAILURE: function handleFormSubmitFailure(arg0) {
-    let errors;
-    let guildId;
     ({ guildId, errors } = arg0);
     if (OPEN !== FormStates.SUBMITTING) {
       return false;
@@ -180,8 +181,6 @@ obj = {
     }
   },
   USER_PROFILE_SETTINGS_SET_PENDING_CHANGES: function handleSetPendingChanges(arg0) {
-    let guildId;
-    let type;
     ({ type, guildId } = arg0);
     const merged = Object.assign(arg0, Object.create(null));
     let tmp3 = guildId;
@@ -196,41 +195,38 @@ obj = {
     closure_9[tmp3] = {};
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR: function handleSetTryItOutAvatar(avatar) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutAvatar = avatar.avatar;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_AVATAR_DECORATION: function handleSetTryItOutAvatarDecoration(avatarDecoration) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PROFILE_EFFECT: function handleSetTryItOutProfileEffect(profileEffect) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutProfileEffect = profileEffect.profileEffect;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_BANNER: function handleSetTryItOutBanner(banner) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutBanner = banner.banner;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_THEME_COLORS: function handleSetTryItOutThemeColors(themeColors) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutThemeColors = themeColors.themeColors;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_DISPLAY_NAME_STYLES: function handleSetTryItOutDisplayNameStyles(displayNameStyles) {
-    const obj = {};
+    obj = {};
     const merged = Object.assign(obj);
     obj.tryItOutDisplayNameStyles = displayNameStyles.displayNameStyles;
   },
   USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function handleSetTryItOutPreset(avatarDecoration) {
-    let banner;
-    let displayNameStyles;
-    let themeColors;
     let tryItOutAvatarDecoration = avatarDecoration.avatarDecoration;
-    const obj = {};
+    obj = {};
     ({ banner, themeColors, displayNameStyles } = avatarDecoration);
     const merged = Object.assign(obj);
     obj.tryItOutBanner = banner;
@@ -242,16 +238,14 @@ obj = {
     obj.tryItOutDisplayNameStyles = displayNameStyles;
   },
   USER_PROFILE_SETTINGS_CLEAR_ERRORS: function handleResetErrors() {
-    let closure_13 = {};
+    closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES: function handleResetPendingAccountChanges() {
     const entries = Object.entries(closure_9);
     closure_9 = Object.fromEntries(entries.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       const items = [tmp, ];
-      const obj = {};
+      obj = {};
       const merged = Object.assign(tmp2);
       obj.pendingGlobalName = undefined;
       obj.pendingNickname = undefined;
@@ -266,11 +260,9 @@ obj = {
   USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES: function handleResetPendingProfileChanges() {
     const entries = Object.entries(closure_9);
     closure_9 = Object.fromEntries(entries.map((arg0) => {
-      let tmp;
-      let tmp2;
       [tmp, tmp2] = arg0;
       const items = [tmp, ];
-      const obj = {};
+      obj = {};
       const merged = Object.assign(tmp2);
       obj.pendingPronouns = undefined;
       obj.pendingProfileEffect = undefined;
@@ -284,14 +276,14 @@ obj = {
     }));
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: function handleResetPendingChanges() {
-    let closure_9 = {};
-    let closure_13 = {};
+    closure_9 = {};
+    closure_13 = {};
   },
   USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: function handleResetTryItOutChanges() {
-    let closure_10 = obj;
+    closure_10 = obj;
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function handleResetPendingLegacyUsernameDisabled() {
-    let obj = dependencyMap[closure_3];
+    obj = dependencyMap[closure_3];
     if (obj == null) {
       obj = {};
     }
@@ -309,7 +301,7 @@ obj = {
     }
   },
   USER_PROFILE_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: function handleResetPendingPrimaryGuildChanges() {
-    let obj = dependencyMap[closure_3];
+    obj = dependencyMap[closure_3];
     if (obj == null) {
       obj = {};
     }
@@ -327,8 +319,6 @@ obj = {
     }
   },
   USER_PROFILE_UPDATE_FAILURE: function handleProfileUpdateFailure(arg0) {
-    let errors;
-    let guildId;
     ({ guildId, errors } = arg0);
     const OPEN = FormStates.OPEN;
     if (guildId == null) {
@@ -341,7 +331,7 @@ obj = {
   },
   LOGOUT: handleReset
 };
-const userProfileSettingsStore = new UserProfileSettingsStore(require("dispatcher"), obj);
+const userProfileSettingsStore = new UserProfileSettingsStore(dispatcherDefault, obj);
 const result = set.fileFinishedImporting("modules/user_profile/UserProfileSettingsStore.tsx");
 
 export default userProfileSettingsStore;

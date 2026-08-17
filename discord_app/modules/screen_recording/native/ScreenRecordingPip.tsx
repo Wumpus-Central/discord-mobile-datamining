@@ -1,20 +1,18 @@
 // discord_app/modules/screen_recording/native/ScreenRecordingPip.tsx
-import _slicedToArray from "_slicedToArray";
-import Button from "Button";
-import { View } from "PressableBase";
-import { useScreenRecordingStore } from "useScreenRecordingStore";
-import jsxProd from "StopIcon";
-import createCacheKey from "createCacheKey";
+import ThemesDefault from "Themes" /* 712 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "noop" /* 19 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { useScreenRecordingStore } from "useScreenRecordingStore" /* 15199 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c9;
-let error;
-let metroImportAll;
 const require = arg1;
 function DraggableContainer(children) {
   const x = children.x;
   const _require = x;
   const y = children.y;
-  const importDefault = y;
+  importDefault = y;
   const contentWidth = children.contentWidth;
   const contentHeight = children.contentHeight;
   let num = children.dragBoundsPadding;
@@ -24,22 +22,22 @@ function DraggableContainer(children) {
   const onChangePosition = children.onChangePosition;
   let sharedValue;
   let sharedValue1;
-  let c8;
-  let c9;
+  closure_8 = undefined;
+  closure_9 = undefined;
   let callback;
   let obj = _require(contentWidth[7]);
   sharedValue = obj.useSharedValue(x.get());
-  let obj1 = _require(contentWidth[7]);
+  obj1 = _require(contentWidth[7]);
   sharedValue1 = obj1.useSharedValue(y.get());
   const tmp4 = importDefault(contentWidth[8])();
-  c8 = tmp4;
+  closure_8 = tmp4;
   const tmp5 = importDefault(contentWidth[9])();
-  c9 = tmp5;
+  closure_9 = tmp5;
   class C {
     constructor(arg0, arg1) {
-      value = c9.get();
+      value = closure_9.get();
       ({ width, height } = value);
-      rect = c8.get();
+      rect = closure_8.get();
       obj = { x: null, y: null };
       obj2 = closure_0(contentWidth[7]);
       obj[0] = obj2.clamp(children, rect.left + c4, width - rect.right - contentWidth - c4);
@@ -74,9 +72,7 @@ function DraggableContainer(children) {
   fn2.__initData = closure_14;
   const fn3 = function f() {
     let obj = store(contentWidth[7]);
-    obj = { x: null, y: null };
-    obj[0] = store.get();
-    obj[1] = store2.get();
+    obj = { x: store.get(), y: store2.get() };
     obj.runOnJS(onChangePosition)(obj);
   };
   obj1 = { runOnJS: _require(contentWidth[7]).runOnJS, onChangePosition, x, y };
@@ -85,11 +81,11 @@ function DraggableContainer(children) {
   fn3.__initData = closure_15;
   obj[2] = fn3;
   const panGesture = obj3.usePanGesture(obj);
-  const tmp = createCacheKey();
+  const tmp = callback2();
   class X {
     constructor() {
       value = closure_0.get();
-      tmp2 = c10(value, closure_1.get());
+      tmp2 = closure_10(value, closure_1.get());
       obj = { transform: null };
       obj = { translateX: null };
       ({ x, y } = tmp2);
@@ -110,19 +106,18 @@ function DraggableContainer(children) {
   X.__workletHash = 5273315246744;
   X.__initData = closure_16;
   const animatedStyle = obj7.useAnimatedStyle(X);
-  obj3 = { gesture: panGesture, children: null };
-  const items1 = [tmp.widgetContainer, animatedStyle];
-  obj3[1] = sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children });
+  obj3 = { gesture: panGesture, children: sharedValue1(importDefault(contentWidth[7]).View, { style: items1, children: children.children }) };
+  items1 = [tmp.widgetContainer, animatedStyle];
   return sharedValue1(_require(contentWidth[10]).GestureDetector, obj3);
 }
 function ScreenRecordingPip(surveyConfig) {
   surveyConfig = surveyConfig.surveyConfig;
   let _require;
-  let importDefault;
+  importDefault = undefined;
   let point;
   let sharedValue;
   let sharedValue1;
-  const tmp = createCacheKey();
+  const tmp = callback2();
   let obj = point;
   const tmp3 = importDefault(point[9])();
   _require = tmp3;
@@ -133,13 +128,13 @@ function ScreenRecordingPip(surveyConfig) {
   const items = [tmp3, tmp4];
   const isStepCompleted = surveyConfig.useIsStepCompleted(tmp6);
   const tmp9 = sharedValue(sharedValue1.useState(sharedValue1.useCallback(() => {
-    const rect = _undefined2.get();
-    const diff = _undefined.get().width - rect.right - outer1_10;
-    return { x: diff - _undefined2(point[6]).space.PX_16, y: rect.top + _undefined2(point[6]).space.PX_16 };
+    const rect = lib2.get();
+    const diff = lib.get().width - rect.right - closure_1_10;
+    return { x: diff - lib2(point[6]).space.PX_16, y: rect.top + lib2(point[6]).space.PX_16 };
   }, items)), 2);
   point = tmp9[0];
   let Button = _require;
-  let obj1 = _require(point[7]);
+  obj1 = _require(point[7]);
   sharedValue = obj1.useSharedValue(point.x);
   let obj2 = _require(point[7]);
   sharedValue1 = obj2.useSharedValue(point.y);
@@ -211,24 +206,24 @@ function ScreenRecordingPip(surveyConfig) {
     const tmp17 = DraggableContainer;
   }
 }
-({ jsx: error, jsxs: metroImportAll, Fragment: c9 } = jsxProd);
+({ jsx: error, jsxs: closure_8, Fragment: c9 } = jsxProd);
 let c10 = 100;
 createCacheKey = { widgetContainer: { position: "absolute" }, widget: null, stepText: null, stopButton: null, doneButton: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: 100, width: 100, gap: require("Themes").space.PX_8, padding: require("Themes").space.PX_8, borderRadius: require("Themes").radii.xl };
-const merged = Object.assign(require("Themes").shadows.SHADOW_MOBILE_NAVIGATOR_X);
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND, justifyContent: "center", alignItems: "center", height: 100, width: 100, gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_8, borderRadius: ThemesDefault.radii.xl };
+const merged = Object.assign(ThemesDefault.shadows.SHADOW_MOBILE_NAVIGATOR_X);
 createCacheKey[1] = createCacheKey;
 createCacheKey[2] = { textAlign: "center", maxWidth: 68 };
-createCacheKey[3] = { padding: require("Themes").space.PX_8, borderWidth: 1, borderColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.round };
-let obj1 = { padding: require("Themes").space.PX_8, borderWidth: 1, borderColor: require("Themes").colors.WHITE, borderRadius: require("Themes").radii.round };
-createCacheKey[4] = { padding: require("Themes").space.PX_8 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
+createCacheKey[3] = { padding: ThemesDefault.space.PX_8, borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
+let obj1 = { padding: ThemesDefault.space.PX_8, borderWidth: 1, borderColor: ThemesDefault.colors.WHITE, borderRadius: ThemesDefault.radii.round };
+createCacheKey[4] = { padding: ThemesDefault.space.PX_8 };
+let closure_11 = createCacheKey.createStyles(createCacheKey);
 let closure_12 = { code: "function ScreenRecordingPipTsx1(x,y){const{windowDimensionsSharedValue,insetsSharedValue,clamp,dragBoundsPadding,contentWidth,contentHeight}=this.__closure;const{width:windowWidth,height:windowHeight}=windowDimensionsSharedValue.get();const insets=insetsSharedValue.get();return{x:clamp(x,insets.left+dragBoundsPadding,windowWidth-insets.right-contentWidth-dragBoundsPadding),y:clamp(y,insets.top+dragBoundsPadding,windowHeight-insets.bottom-contentHeight-dragBoundsPadding)};}" };
 let closure_13 = { code: "function ScreenRecordingPipTsx2(){const{originalX,x,originalY,y}=this.__closure;originalX.set(x.get());originalY.set(y.get());}" };
 let closure_14 = { code: "function ScreenRecordingPipTsx3(event){const{getClampedPosition,originalX,originalY,x,y}=this.__closure;const{x:xClamped,y:yClamped}=getClampedPosition(originalX.get()+event.translationX,originalY.get()+event.translationY);x.set(xClamped);y.set(yClamped);}" };
 let closure_15 = { code: "function ScreenRecordingPipTsx4(){const{runOnJS,onChangePosition,x,y}=this.__closure;runOnJS(onChangePosition)({x:x.get(),y:y.get()});}" };
 let closure_16 = { code: "function ScreenRecordingPipTsx5(){const{getClampedPosition,x,y,withSpring,springUnclamped}=this.__closure;const{x:translateX,y:translateY}=getClampedPosition(x.get(),y.get());return{transform:[{translateX:withSpring(translateX,springUnclamped)},{translateY:withSpring(translateY,springUnclamped)}]};}" };
-let obj2 = { padding: require("Themes").space.PX_8 };
-let result = require("get ActivityIndicator").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingPip.tsx");
+let obj2 = { padding: ThemesDefault.space.PX_8 };
+let result = require("set").fileFinishedImporting("modules/screen_recording/native/ScreenRecordingPip.tsx");
 
 export default function ScreenRecordingPipConnected() {
   const tmp = useScreenRecordingStore((currentSurveyConfig) => currentSurveyConfig.currentSurveyConfig);

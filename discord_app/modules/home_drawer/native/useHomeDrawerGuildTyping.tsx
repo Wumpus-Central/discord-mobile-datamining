@@ -1,11 +1,11 @@
 // discord_app/modules/home_drawer/native/useHomeDrawerGuildTyping.tsx
-import storeThread from "storeThread";
-import { isThread } from "createChannelRecord";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import handleTypingStart from "handleTypingStart";
-import { shallowEqual } from "../../../../discord_common/js/packages/shallow-equal/shallowEqual.tsx";
+import shallowEqual from "shallowEqual" /* 643 */;
+import closure_3 from "storeThread" /* 4023 */;
+import { isThread } from "createChannelRecord" /* 1395 */;
+import closure_5 from "ensureGuildLoaded" /* 1391 */;
+import closure_6 from "handleTypingStart" /* 11152 */;
 
-const require = arg1;
+require = arg1;
 function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) {
   let result = typingChannelId.typingChannelId === typingChannelId2.typingChannelId && typingChannelId.typingChannelName === typingChannelId2.typingChannelName;
   if (result) {
@@ -15,7 +15,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   return result;
 }
 let closure_7 = { typingChannelId: "Array", typingChannelName: "ct", typingUserIds: [] };
-let result = require("ensureGuildLoaded").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
+let result = require("set").fileFinishedImporting("modules/home_drawer/native/useHomeDrawerGuildTyping.tsx");
 
 export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   const _require = id;
@@ -23,22 +23,22 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
   let obj = _require(isHomeDrawerChannelInChannelList[5]);
   isHomeDrawerChannelInChannelList = _require(isHomeDrawerChannelInChannelList[6]).useIsHomeDrawerChannelInChannelList();
   const obj2 = _require(isHomeDrawerChannelInChannelList[6]);
-  const items = [handleTypingStart, ensureGuildLoaded, storeThread];
+  const items = [closure_6, closure_5, closure_3];
   const items1 = [id, isHomeDrawerChannelMuted, isHomeDrawerChannelInChannelList];
   return _require(isHomeDrawerChannelInChannelList[7]).useStateFromStores(items, () => {
-    const typingUsersByGuild = outer1_6.getTypingUsersByGuild(closure_0);
+    const typingUsersByGuild = closure_1_6.getTypingUsersByGuild(closure_0);
     let obj = isHomeDrawerChannelMuted(isHomeDrawerChannelInChannelList[8]);
     const keys = obj.keys(typingUsersByGuild);
     const found = keys.find((id) => {
-      const basicChannel = outer1_5.getBasicChannel(id);
+      const basicChannel = closure_1_5.getBasicChannel(id);
       let tmp2 = null != basicChannel;
       if (tmp2) {
         tmp2 = !callback(basicChannel);
       }
       if (tmp2) {
-        let tmp5 = outer1_4(basicChannel.type);
+        let tmp5 = closure_1_4(basicChannel.type);
         if (tmp5) {
-          tmp5 = !outer1_3.hasJoined(id);
+          tmp5 = !closure_1_3.hasJoined(id);
         }
         let tmp7 = !tmp5;
         if (!tmp5) {
@@ -49,11 +49,11 @@ export const useHomeDrawerGuildTyping = function useHomeDrawerGuildTyping(id) {
       return tmp2;
     });
     if (null == found) {
-      obj = outer1_7;
+      obj = closure_1_7;
     } else {
       obj = { typingChannelId: null, typingChannelName: null, typingUserIds: null };
       obj[0] = found;
-      const channel = outer1_5.getChannel(found);
+      const channel = closure_1_5.getChannel(found);
       let name;
       if (channel != null) {
         name = channel.name;

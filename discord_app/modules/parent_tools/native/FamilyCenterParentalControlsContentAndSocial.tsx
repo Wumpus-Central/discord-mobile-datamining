@@ -1,16 +1,17 @@
 // discord_app/modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { HelpdeskArticles } from "ME";
-import { MobileUserSettings } from "MobileUserSettings";
-import { jsx } from "jsxProd";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { combined } from "../../../utils/HelpdeskUtils.tsx";
-import { createToggle } from "../../settings/native/renderer/SettingBuilders.tsx";
-import { SettingLayout } from "../../settings/native/renderer/SettingLayout.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import combinedDefault from "combined" /* 1993 */;
+import createToggle from "createToggle" /* 10669 */;
+import _modDef13991 from "module_13991" /* 13991 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { HelpdeskArticles } from "ME" /* 676 */;
+import { MobileUserSettings } from "MobileUserSettings" /* 8198 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-const require = arg1;
-const result = require("ME").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
+require = arg1;
+noopAll;
+const result = require("set").fileFinishedImporting("modules/parent_tools/native/FamilyCenterParentalControlsContentAndSocial.tsx");
 
 export default function FamilyCenterParentalControlsContentAndSocial() {
   let obj = createToggle;
@@ -18,8 +19,8 @@ export default function FamilyCenterParentalControlsContentAndSocial() {
   obj = { settings: items, subLabel: null };
   items = [MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS];
   const intl = getSystemLocale.intl;
-  const obj1 = { learnMoreLink: null };
-  let obj4 = combined;
+  obj1 = { learnMoreLink: null };
+  let obj4 = combinedDefault;
   obj1[0] = obj4.getArticleURL(HelpdeskArticles.EXPLICIT_MEDIA_REDACTION);
   obj[1] = intl.format(getSystemLocale.t.dliU4j, obj1);
   const items1 = [obj, , ];
@@ -40,6 +41,6 @@ export default function FamilyCenterParentalControlsContentAndSocial() {
   obj[0] = items1;
   obj4 = { children: null };
   const list = obj.createList(obj);
-  obj4[0] = jsx(SettingLayout, { node: list });
+  obj4[0] = jsx(_modDef13991, { node: list });
   return <View>{null}</View>;
 };

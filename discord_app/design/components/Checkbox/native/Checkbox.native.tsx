@@ -1,22 +1,15 @@
 // discord_app/design/components/Checkbox/native/Checkbox.native.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
+import set from "set" /* 2 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let obj1;
 ({ Pressable: obj1, View: c3 } = get_ActivityIndicator);
 ({ jsx: c4, jsxs: c5 } = jsxProd);
 let closure_6 = createCacheKey.createStyles({ textContainer: { flex: 1 }, labelContainer: { minHeight: 24, justifyContent: "center" } });
-const result = require("createCacheKey").fileFinishedImporting("design/components/Checkbox/native/Checkbox.native.tsx");
+const result = set.fileFinishedImporting("design/components/Checkbox/native/Checkbox.native.tsx");
 
 export const Checkbox = function Checkbox(onToggle) {
-  let checked;
-  let description;
-  let label;
-  let required;
   ({ label, description, required, checked } = onToggle);
   onToggle = onToggle.onToggle;
   const tmp = callback();
@@ -42,7 +35,7 @@ export const Checkbox = function Checkbox(onToggle) {
   };
   const items = [closure_4(checked(onToggle[6]).FormCheckbox, { checked }), ];
   obj = { style: tmp.textContainer, children: null };
-  const obj1 = { style: tmp.labelContainer, children: null };
+  obj1 = { style: tmp.labelContainer, children: null };
   const items1 = [label, ];
   if (required) {
     const obj2 = { variant: "text-md/bold", color: "text-feedback-critical", "aria-label": null, children: null };

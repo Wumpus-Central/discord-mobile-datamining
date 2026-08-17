@@ -1,5 +1,7 @@
 // discord_app/modules/guild_sidebar/ChannelListUtils.tsx
-const result = require("set").fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
+import set from "set" /* 2 */;
+
+const result = set.fileFinishedImporting("modules/guild_sidebar/ChannelListUtils.tsx");
 
 export const hasStream = function hasStream(voiceStates) {
   if (null == voiceStates) {

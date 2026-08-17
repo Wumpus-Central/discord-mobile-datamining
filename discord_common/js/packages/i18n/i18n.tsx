@@ -1,37 +1,38 @@
 // discord_common/js/packages/i18n/i18n.tsx
-import 16454__ from "../../../../_runtime/metro/16454__.js";
-import 16455__ from "../../../../_runtime/metro/16455__.js";
-import 16456__ from "../../../../_runtime/metro/16456__.js";
-import 16457__ from "../../../../_runtime/metro/16457__.js";
-import 16458__ from "../../../../_runtime/metro/16458__.js";
-import 16459__ from "../../../../_runtime/metro/16459__.js";
-import 16460__ from "../../../../_runtime/metro/16460__.js";
-import 16461__ from "../../../../_runtime/metro/16461__.js";
-import 16462__ from "../../../../_runtime/metro/16462__.js";
-import 16463__ from "../../../../_runtime/metro/16463__.js";
-import 16464__ from "../../../../_runtime/metro/16464__.js";
-import 16465__ from "../../../../_runtime/metro/16465__.js";
-import 16466__ from "../../../../_runtime/metro/16466__.js";
-import 16467__ from "../../../../_runtime/metro/16467__.js";
-import 16468__ from "../../../../_runtime/metro/16468__.js";
-import 16469__ from "../../../../_runtime/metro/16469__.js";
-import 16470__ from "../../../../_runtime/metro/16470__.js";
-import 16471__ from "../../../../_runtime/metro/16471__.js";
-import 16472__ from "../../../../_runtime/metro/16472__.js";
-import 16473__ from "../../../../_runtime/metro/16473__.js";
-import 16474__ from "../../../../_runtime/metro/16474__.js";
-import 16475__ from "../../../../_runtime/metro/16475__.js";
-import 16476__ from "../../../../_runtime/metro/16476__.js";
-import 16477__ from "../../../../_runtime/metro/16477__.js";
-import 16478__ from "../../../../_runtime/metro/16478__.js";
-import 16479__ from "../../../../_runtime/metro/16479__.js";
-import 16480__ from "../../../../_runtime/metro/16480__.js";
-import 16481__ from "../../../../_runtime/metro/16481__.js";
-import { EventEmitter } from "EventEmitter";
-import { format } from "parse.tsx";
+import _modDef16445 from "module_16445" /* 16445 */;
+import format from "format" /* 16487 */;
+import 16454__ from "../../../../_runtime/metro/16454__.js" /* 16454 */;
+import 16455__ from "../../../../_runtime/metro/16455__.js" /* 16455 */;
+import 16456__ from "../../../../_runtime/metro/16456__.js" /* 16456 */;
+import 16457__ from "../../../../_runtime/metro/16457__.js" /* 16457 */;
+import 16458__ from "../../../../_runtime/metro/16458__.js" /* 16458 */;
+import 16459__ from "../../../../_runtime/metro/16459__.js" /* 16459 */;
+import 16460__ from "../../../../_runtime/metro/16460__.js" /* 16460 */;
+import 16461__ from "../../../../_runtime/metro/16461__.js" /* 16461 */;
+import 16462__ from "../../../../_runtime/metro/16462__.js" /* 16462 */;
+import 16463__ from "../../../../_runtime/metro/16463__.js" /* 16463 */;
+import 16464__ from "../../../../_runtime/metro/16464__.js" /* 16464 */;
+import 16465__ from "../../../../_runtime/metro/16465__.js" /* 16465 */;
+import 16466__ from "../../../../_runtime/metro/16466__.js" /* 16466 */;
+import 16467__ from "../../../../_runtime/metro/16467__.js" /* 16467 */;
+import 16468__ from "../../../../_runtime/metro/16468__.js" /* 16468 */;
+import 16469__ from "../../../../_runtime/metro/16469__.js" /* 16469 */;
+import 16470__ from "../../../../_runtime/metro/16470__.js" /* 16470 */;
+import 16471__ from "../../../../_runtime/metro/16471__.js" /* 16471 */;
+import 16472__ from "../../../../_runtime/metro/16472__.js" /* 16472 */;
+import 16473__ from "../../../../_runtime/metro/16473__.js" /* 16473 */;
+import 16474__ from "../../../../_runtime/metro/16474__.js" /* 16474 */;
+import 16475__ from "../../../../_runtime/metro/16475__.js" /* 16475 */;
+import 16476__ from "../../../../_runtime/metro/16476__.js" /* 16476 */;
+import 16477__ from "../../../../_runtime/metro/16477__.js" /* 16477 */;
+import 16478__ from "../../../../_runtime/metro/16478__.js" /* 16478 */;
+import 16479__ from "../../../../_runtime/metro/16479__.js" /* 16479 */;
+import 16480__ from "../../../../_runtime/metro/16480__.js" /* 16480 */;
+import 16481__ from "../../../../_runtime/metro/16481__.js" /* 16481 */;
+import { EventEmitter } from "EventEmitter" /* 652 */;
 
-let require = arg1;
-global.IntlMessageFormat = require("module_16445");
+require = arg1;
+global.IntlMessageFormat = _modDef16445;
 delete tmp2[tmp];
 if (typeof Intl === "undefined") {
   require("_default2");
@@ -55,20 +56,20 @@ class LazyPropertyProvider extends Provider {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     closure_0 = applyArgumentsResult;
     applyArgumentsResult._refresh = function _refresh(defaultMessages, _parsedMessages) {
-      let closure_0 = defaultMessages;
+      closure_0 = defaultMessages;
       let obj = _parsedMessages;
       if (_parsedMessages === undefined) {
         obj = {};
       }
       const keys = Object.keys(defaultMessages.defaultMessages);
       const item = keys.forEach((arg0) => {
-        let closure_0 = arg0;
-        const obj = {
+        closure_0 = arg0;
+        obj = {
           configurable: true,
           get() {
             delete tmp2[tmp];
             const _getParsedMessagesResult = closure_0._getParsedMessages(closure_0, closure_0, closure_0._refresh);
-            outer1_1[closure_0] = _getParsedMessagesResult;
+            closure_1_1[closure_0] = _getParsedMessagesResult;
             return _getParsedMessagesResult;
           }
         };
@@ -126,8 +127,6 @@ _instance_members_initializer_I18N_ = function() {
   this._languages = [];
   this._chosenLocale = "";
   this._getParsedMessages = function _getParsedMessages(_context, closure_0, _createProxy) {
-    let defaultMessages;
-    let locale;
     ({ defaultMessages, locale } = _context);
     if (typeof _context.messages[closure_0] || defaultMessages[closure_0] === "object") {
       let obj = { messages: null, defaultMessages: null, locale: null };
@@ -190,18 +189,18 @@ class I18N extends EventEmitter {
   }
 }
 const prototype = I18N.prototype;
-prototype["updateMessagesForExperiment"] = function updateMessagesForExperiment(outer1_2) {
+prototype["updateMessagesForExperiment"] = function updateMessagesForExperiment(closure_1_2) {
   let self = this;
   self = this;
-  let closure_1 = outer1_2;
-  let closure_0 = arg1;
-  const _fetchMessagesResult = this._fetchMessages(outer1_2);
+  closure_1 = closure_1_2;
+  closure_0 = arg1;
+  const _fetchMessagesResult = this._fetchMessages(closure_1_2);
   if (_fetchMessagesResult instanceof Promise) {
     _fetchMessagesResult.then((arg0) => {
       const result = self._applyMessagesForLocale(callback(arg0), closure_1);
     });
   } else {
-    let result = self._applyMessagesForLocale(arg1(_fetchMessagesResult), outer1_2);
+    let result = self._applyMessagesForLocale(arg1(_fetchMessagesResult), closure_1_2);
   }
 };
 prototype["setLocale"] = function setLocale(_requestedLocale) {
@@ -224,8 +223,6 @@ prototype["getAvailableLocales"] = function getAvailableLocales() {
   const _languages = this._languages;
   const found = _languages.filter((enabled) => enabled.enabled);
   const mapped = found.map((arg0) => {
-    let code;
-    let name;
     ({ code, name } = arg0);
     const obj = { value: code, name, localizedName: null };
     let tmp = self.Messages[code];
@@ -296,7 +293,7 @@ prototype["getDefaultLocale"] = function getDefaultLocale() {
 prototype["_loadMessagesForLocale"] = function _loadMessagesForLocale(_requestedLocale) {
   let self = this;
   self = this;
-  let closure_0 = _requestedLocale;
+  closure_0 = _requestedLocale;
   const _fetchMessagesResult = this._fetchMessages(_requestedLocale);
   if (_fetchMessagesResult instanceof Promise) {
     let nextPromise = _fetchMessagesResult.then((_fetchMessagesResult) => self._applyMessagesForLocale(_fetchMessagesResult, closure_0));
@@ -326,18 +323,18 @@ prototype["_findMessages"] = function _findMessages(c2) {
   const _fetchMessagesResult = this._fetchMessages(c2);
   if (_fetchMessagesResult instanceof Promise) {
     const _Error = Error;
-    const error = new Error("Messages are still loading.");
+    error = new Error("Messages are still loading.");
     throw error;
   } else {
     return _fetchMessagesResult;
   }
 };
-prototype["_fetchMessages"] = function _fetchMessages(outer1_2) {
+prototype["_fetchMessages"] = function _fetchMessages(closure_1_2) {
   let self = this;
   self = this;
-  let closure_0 = outer1_2;
+  closure_0 = closure_1_2;
   try {
-    const _getMessagesResult = self._getMessages(outer1_2);
+    const _getMessagesResult = self._getMessages(closure_1_2);
     if (_getMessagesResult instanceof Promise) {
       let catchPromise = promise.catch(tmp3);
     } else {
@@ -348,7 +345,7 @@ prototype["_fetchMessages"] = function _fetchMessages(outer1_2) {
     return tmp();
   }
 };
-let result = require("module_16455").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
+let result = require("set").fileFinishedImporting("../discord_common/js/packages/i18n/i18n.tsx");
 
 export const getSystemLocale = require("getSystemLocale").getSystemLocale;
 export { I18N };

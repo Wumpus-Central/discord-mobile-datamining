@@ -1,15 +1,16 @@
 // discord_app/modules/app_launcher/native/base_components/ViewAllRow.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let closure_4 = createCacheKey.createStyles({ expandCTALabelContainer: { alignItems: "center" } });
-const result = require("jsxProd").fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
+const result = require("set").fileFinishedImporting("modules/app_launcher/native/base_components/ViewAllRow.tsx");
 
 export default function ViewAllRow(title) {
   title = title.title;
@@ -22,7 +23,7 @@ export default function ViewAllRow(title) {
   }
   obj = { accessibilityLabel: formatToPlainStringResult, label: null, onPress: null, end: true };
   obj = { style: callback().expandCTALabelContainer, children: null };
-  const obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
+  obj1 = { color: "text-brand", variant: "text-md/semibold", children: null };
   const intl2 = tmp3(1236).intl;
   obj1[2] = intl2.format(getSystemLocale.t.gVw57p, {});
   obj[1] = jsx(Text.Text, { color: "text-brand", variant: "text-md/semibold", children: null });

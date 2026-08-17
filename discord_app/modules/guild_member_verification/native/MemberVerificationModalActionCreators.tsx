@@ -1,25 +1,25 @@
 // discord_app/modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx
-import items from "items";
-import { AnalyticEvents } from "ME";
-import { asyncRequireImpl } from "../../../../_runtime/02007_asyncRequireImpl.js";
-import { ModalActionCreators } from "../../../actions/ModalActionCreators.tsx";
-import { expandEventProperties } from "../../../utils/AnalyticsUtils.tsx";
-import { _fetchVerificationForm } from "../MemberVerificationActionCreators.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import expandEventPropertiesDefault from "expandEventProperties" /* 698 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 2007 */;
+import _modDef5260 from "module_5260" /* 5260 */;
+import _fetchVerificationFormDefault from "_fetchVerificationForm" /* 6906 */;
+import items from "items" /* 6860 */;
 
-let c3;
-let c4;
 ({ MEMBER_VERIFICATION_TYPE: c3, IN_APP_MEMBER_VERIFICATION_MODAL_KEY: c4 } = items);
-const result = require("expandEventProperties").fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
+const AnalyticEvents = ME.AnalyticEvents;
+const result = set.fileFinishedImporting("modules/guild_member_verification/native/MemberVerificationModalActionCreators.tsx");
 
 export default {
   openMemberVerificationModal(guildId, connect) {
-    let obj = _fetchVerificationForm;
+    let obj = _fetchVerificationFormDefault;
     const verificationForm = obj.fetchVerificationForm(guildId);
     obj = { type: closure_3, guild_id: guildId };
-    expandEventProperties.track(AnalyticEvents.OPEN_MODAL, obj);
-    const obj2 = expandEventProperties;
+    expandEventPropertiesDefault.track(AnalyticEvents.OPEN_MODAL, obj);
+    const obj2 = expandEventPropertiesDefault;
     obj = { guildId, onClose: connect };
-    ModalActionCreators.pushLazy(asyncRequireImpl(8524, dependencyMap.paths), obj, closure_4);
+    _modDef5260.pushLazy(asyncRequireImpl(8524, dependencyMap.paths), obj, closure_4);
   },
   closeMemberVerificationModal() {
     let flag = arg0;
@@ -27,11 +27,11 @@ export default {
       flag = false;
     }
     if (!flag) {
-      let obj = expandEventProperties;
+      let obj = expandEventPropertiesDefault;
       obj = { type: null };
       obj[0] = closure_3;
       obj.track(AnalyticEvents.MODAL_DISMISSED, obj);
     }
-    ModalActionCreators.popWithKey(closure_4);
+    _modDef5260.popWithKey(closure_4);
   }
 };

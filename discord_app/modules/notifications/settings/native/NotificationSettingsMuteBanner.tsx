@@ -1,25 +1,25 @@
 // discord_app/modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { Button } from "../../../../design/components/Button/native/Button.native.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import Text from "Text" /* 4734 */;
+import Button from "Button" /* 4745 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c3, jsxs: c4 } = jsxProd);
 createCacheKey = { card: null };
-createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: require("Themes").radii.lg + 8, backgroundColor: require("Themes").colors.BACKGROUND_BRAND };
+createCacheKey = { padding: 16, display: "flex", flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderRadius: ThemesDefault.radii.lg + 8, backgroundColor: ThemesDefault.colors.BACKGROUND_BRAND };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
+let closure_5 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/notifications/settings/native/NotificationSettingsMuteBanner.tsx");
 
 export const NotificationSettingsMuteBanner = function NotificationSettingsMuteBanner(children) {
   let obj = { style: null, children: null };
-  const items = [children.style, createCacheKey().card];
+  const items = [children.style, callback3().card];
   obj[0] = items;
   obj = { style: { flex: 1, marginRight: 8 }, children: null };
   obj = { variant: "text-md/semibold", color: "text-overlay-light", children: children.title };

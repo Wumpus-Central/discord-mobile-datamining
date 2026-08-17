@@ -1,12 +1,12 @@
 // discord_app/modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx
-import map from "map";
+import set from "set" /* 2 */;
+import noop from "noop" /* 19 */;
+import closure_4 from "map" /* 9199 */;
 
-require("noop").useCallback;
-let result = require("UserProfileAnalyticsProvider").fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
+noop.useCallback;
+let result = set.fileFinishedImporting("modules/user_profile/hooks/useTrackUserProfileActivityAction.tsx");
 
 export default function useTrackUserProfileActivityAction(activity) {
-  let display;
-  let require;
   ({ user: require, display } = activity);
   activity = activity.activity;
   const entry = activity.entry;
@@ -35,6 +35,6 @@ export default function useTrackUserProfileActivityAction(activity) {
     trackUserProfileAction(obj);
     obj = { action, display, activity, entry, stream, outbox: stateFromStores, voiceChannelId, analyticsLocations };
     const merged = Object.assign(context);
-    const result = outer1_0(activity[5]).trackUserProfileActivityAction(obj);
+    const result = closure_1_0(activity[5]).trackUserProfileActivityAction(obj);
   }, items1);
 };

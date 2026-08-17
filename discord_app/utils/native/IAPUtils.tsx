@@ -1,27 +1,24 @@
 // discord_app/utils/native/IAPUtils.tsx
-import updateProduct from "updateProduct";
-import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME";
-import mergeGuildAvatar from "mergeGuildAvatar";
-import closure_7 from "updateProduct";
-import ME from "ME";
-import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures";
-import set from "set";
-import set from "getUserAgnosticState";
-import { v1 } from "../../../_runtime/00514_v1.js";
-import { 00038__ } from "../../../_runtime/metro/00038__.js";
+import timestampDefault from "timestamp" /* 3 */;
+import _modDef38 from "module_38" /* 38 */;
+import set2 from "set" /* 500 */;
+import v1 from "v1" /* 514 */;
+import getConstantsAll from "getConstants" /* 1626 */;
+import DCDDeviceManager from "DCDDeviceManager" /* 4354 */;
+import productSK2ToIAPProductDefault from "productSK2ToIAPProduct" /* 7725 */;
+import GeneratedPaymentCurrencies from "GeneratedPaymentCurrencies" /* 7726 */;
+import closure_4 from "asyncGeneratorStep" /* 5 */;
+import { convertToAlpha2 } from "DEFAULT_COUNTRY_CODE_NAME" /* 4074 */;
+import closure_6 from "mergeGuildAvatar" /* 1922 */;
+import closure_7 from "updateProduct" /* 5319 */;
+import ME from "ME" /* 676 */;
+import { NAMESPACE_SNOWFLAKE_UUID } from "GuildFeatures" /* 1924 */;
+import set from "set" /* 500 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
-import { GeneratedPaymentCurrencies } from "../../../discord_common/js/shared/shared-constants/GeneratedPaymentCurrencies.tsx";
-import { productSK2ToIAPProduct } from "../../modules/billing/native/StorekitIAPQueue.tsx";
-import { set } from "../PlatformUtils.tsx";
-import { DCDDeviceManager } from "DeviceUtils.tsx";
 
-let IOS_BUNDLE_ID;
-let closure_12;
-let metroImportAll;
-let unpackModuleId;
-const require = arg1;
+require = arg1;
 function serializePurchaseResponse(originalTransactionDate) {
-  00038__(null != originalTransactionDate.transactionId, "should have transactionId");
+  _modDef38(null != originalTransactionDate.transactionId, "should have transactionId");
   const obj = { originalTransactionDate: originalTransactionDate.originalTransactionDateIOS, originalTransactionIdentifier: null, transactionDate: null, transactionIdentifier: null, productIdentifier: null, transactionReceipt: null, jwsRepresentation: null };
   let parsed;
   if (null != originalTransactionDate.originalTransactionIdentifierIOS) {
@@ -40,9 +37,9 @@ function convertToUUID(arg0) {
 function _restorePurchases() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c7 = 0;
-    let c8 = 0;
+    closure_0 = arg0;
+    c7 = 0;
+    c8 = 0;
     const iter = (function*(arg0) {
       if (c8 === 2) {
         c8 = 3;
@@ -70,8 +67,8 @@ function _restorePurchases() {
               obj[0] = arg1;
               return obj;
             } else {
-              let closure_3 = tmp2;
-              let updateProduct = tmp5;
+              closure_3 = tmp2;
+              closure_4 = tmp5;
               let fullRestore;
               fullRestore = fullRestore.fullRestore;
               let callback2;
@@ -87,10 +84,10 @@ function _restorePurchases() {
               throw arg1;
             } else if (arg0 === 2) {
               c8 = 3;
-              const obj1 = { value: null, done: true };
+              obj1 = { value: null, done: true };
               obj1[0] = arg1;
               return obj1;
-            } else if (outer1_17()) {
+            } else if (closure_1_17()) {
               let obj8 = closure_12;
               if (callback) {
                 c7 = 2;
@@ -121,8 +118,8 @@ function _restorePurchases() {
               obj5[0] = arg1;
               return obj5;
             } else {
-              const arr2 = outer1_1(outer1_3[14]);
-              obj4 = callback(outer1_3[8]);
+              const arr2 = closure_1_1(closure_1_3[14]);
+              obj4 = callback(closure_1_3[8]);
               c7 = 4;
               c8 = 1;
               const obj6 = { value: null, done: false };
@@ -140,14 +137,14 @@ function _restorePurchases() {
               return obj7;
             } else {
               arr4 = arg1;
-              closure_3 = outer1_1(outer1_3[14]).map(arr4, (id) => id.id);
-              arr4 = outer1_1(outer1_3[14]);
+              closure_3 = closure_1_1(closure_1_3[14]).map(arr4, (id) => id.id);
+              arr4 = closure_1_1(closure_1_3[14]);
               callback2 = arr4.filter;
-              const arr3 = outer1_1(outer1_3[14]);
+              const arr3 = closure_1_1(closure_1_3[14]);
               c7 = 5;
               c8 = 1;
               obj8 = { value: null, done: false };
-              obj8[0] = callback(outer1_3[8]).getAvailablePurchases({ onlyIncludeActiveItems: false });
+              obj8[0] = callback(closure_1_3[8]).getAvailablePurchases({ onlyIncludeActiveItems: false });
               return obj8;
             }
           } else {
@@ -229,7 +226,7 @@ function _restorePurchases() {
     iter.next();
     return iter;
   });
-  const _restorePurchases = tmp;
+  closure_16 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -239,7 +236,7 @@ function _restorePurchases() {
   return applyArgumentsResult;
 }
 function isStorekit2Available() {
-  let isIOSResult = set.isIOS();
+  let isIOSResult = set2.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_12 != null) {
@@ -256,7 +253,7 @@ function remapStorefront(countryCode) {
     if (null == GeneratedPaymentCurrencies.GeneratedPaymentCurrenciesSets.APPLE_STORE_COUNTRY_CURRENCIES[country]) {
       const _Error = Error;
       const _HermesInternal = HermesInternal;
-      const error = new Error("Unable to get currency from countryCode " + countryCode.countryCode);
+      error = new Error("Unable to get currency from countryCode " + countryCode.countryCode);
       throw error;
     }
   } else {
@@ -293,15 +290,15 @@ function _fetchStoreFront() {
             obj[0] = arg1;
             return obj;
           } else {
-            let closure_1 = tmp3;
+            closure_1 = tmp3;
             let callback = tmp7;
             callback = undefined;
-            if (outer1_17()) {
-              let dependencyMap = 1;
+            if (closure_1_17()) {
+              dependencyMap = 1;
               c4 = 2;
               c5 = 1;
-              let obj1 = { value: null, done: false };
-              obj1[0] = outer1_0(7706).getStorefront();
+              obj1 = { value: null, done: false };
+              obj1[0] = closure_1_0(7706).getStorefront();
               return obj1;
             } else {
               c5 = 3;
@@ -343,7 +340,7 @@ function _fetchStoreFront() {
       }
     }
   });
-  const _fetchStoreFront = tmp;
+  closure_19 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -352,24 +349,23 @@ function _fetchStoreFront() {
   }
   return applyArgumentsResult;
 }
-({ CurrencyCodes: metroImportAll, IOS_BUNDLE_ID } = ME);
-({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("initialize").NativeModules);
+({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = ME);
+({ InAppUtils: unpackModuleId, RNIapIosSk2: closure_12 } = require("get ActivityIndicator").NativeModules);
 let items = [require("module_7706").ErrorCode.E_USER_CANCELLED, ME.StoreKitErrors.PAYMENT_CANCELED];
 let set = new Set(items);
-new require("DEFAULT_COUNTRY_CODE_NAME")("IAPUtils.tsx");
+new timestampDefault("IAPUtils.tsx");
 let _default = {
   loadProducts() {
     if (obj.isIOS()) {
       const _Object = Object;
-      let items = [productSK2ToIAPProduct.fetchSubscriptions(Object.values(tmp(5322).ProductIds)), ];
-      const obj2 = productSK2ToIAPProduct;
+      let items = [productSK2ToIAPProductDefault.fetchSubscriptions(Object.values(tmp(5322).ProductIds)), ];
+      const obj2 = productSK2ToIAPProductDefault;
       const _Object2 = Object;
-      items[1] = productSK2ToIAPProduct.fetchProducts(Object.values(tmp(5322).ProductIds));
-      const obj3 = productSK2ToIAPProduct;
+      items[1] = productSK2ToIAPProductDefault.fetchProducts(Object.values(tmp(5322).ProductIds));
+      const obj3 = productSK2ToIAPProductDefault;
       let nextPromise = _Promise.all(items).then((arg0) => {
-        let tmp;
         [r10007, tmp] = arg0;
-        let set;
+        set = undefined;
         set = new Set();
         const items = [...tmp];
         return callback(table[14]).filter(items, (identifier) => {
@@ -389,16 +385,16 @@ let _default = {
     return nextPromise;
   },
   purchaseProduct(arg0, arg1, arg2) {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let closure_2 = arg2;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    closure_2 = arg2;
     closure_0 = undefined;
     closure_0 = callback((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
-      let c6 = 0;
-      let c7 = 0;
-      let c5 = 0;
+      closure_0 = arg0;
+      closure_1 = arg1;
+      c6 = 0;
+      c7 = 0;
+      c5 = 0;
       return (function*(arg0, arg1) {
         if (c7 === 2) {
           c7 = 3;
@@ -426,19 +422,19 @@ let _default = {
                 obj[0] = arg1;
                 return obj;
               } else {
-                let closure_3 = tmp3;
-                let closure_2 = tmp7;
+                closure_3 = tmp3;
+                closure_2 = tmp7;
                 closure_2 = undefined;
-                if (null != outer2_6.getCurrentUser()) {
-                  let c5 = 1;
+                if (null != closure_2_6.getCurrentUser()) {
+                  c5 = 1;
                   c6 = 2;
                   c7 = 1;
-                  let obj1 = { value: null, done: false };
-                  obj1[0] = callback(outer2_3[8]).clearTransactionIOS();
+                  obj1 = { value: null, done: false };
+                  obj1[0] = callback(closure_2_3[8]).clearTransactionIOS();
                   return obj1;
                 } else {
                   const _Error2 = Error;
-                  const error = new Error("purchaseProduct: no valid user");
+                  error = new Error("purchaseProduct: no valid user");
                   tmp49(error);
                 }
                 tmp49 = callback2;
@@ -446,7 +442,7 @@ let _default = {
             } else {
               if (1 === tmp7) {
                 c5 = 0;
-                callback2(updateProduct);
+                callback2(closure_4);
               } else if (2 === tmp7) {
                 if (arg0 === 1) {
                   c7 = 3;
@@ -458,10 +454,10 @@ let _default = {
                   obj2[0] = arg1;
                   return obj2;
                 } else {
-                  obj1 = callback(outer2_3[8]);
+                  obj1 = callback(closure_2_3[8]);
                   const obj3 = { sku: null, appAccountToken: null, withOffer: null };
                   obj3[0] = callback;
-                  obj3[1] = outer1_2;
+                  obj3[1] = closure_1_2;
                   obj3[2] = callback2;
                   c6 = 3;
                   c7 = 1;
@@ -476,7 +472,7 @@ let _default = {
                 closure_2 = arg1;
                 const _Object = Object;
                 if (closure_2 instanceof Object) {
-                  callback(outer2_14(closure_2));
+                  callback(closure_2_14(closure_2));
                   c5 = 0;
                 } else {
                   const _Error = Error;
@@ -492,7 +488,7 @@ let _default = {
             }
             c7 = 3;
           } catch (tmp38) {
-            updateProduct = tmp38;
+            closure_4 = tmp38;
             if (tmp4 === c5) {
               c7 = tmp2;
               throw tmp38;
@@ -516,12 +512,12 @@ let _default = {
   },
   canMakePayments() {
     return new Promise((arg0, arg1) => {
-      let closure_0 = arg0;
-      let closure_1 = arg1;
+      closure_0 = arg0;
+      closure_1 = arg1;
       closure_11.canMakePayments((arg0) => {
         if (!arg0) {
           const _Error = Error;
-          const error = new Error();
+          error = new Error();
           callback2(error);
         }
         callback(arg0);
@@ -553,7 +549,7 @@ set = set.isIOS();
 if (set) {
   let isIOSResult1 = require("set").isIOS();
   if (isIOSResult1) {
-    let Identifier = require("getConstants").getConstants().Identifier;
+    let Identifier = getConstantsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
@@ -561,7 +557,7 @@ if (set) {
       let obj6 = require("DCDDeviceManager");
     }
     isIOSResult1 = isRunningOnSimulator;
-    const importAllResult = require("getConstants");
+    const importAllResult = getConstantsAll;
   }
   let value = isIOSResult1;
   if (!value) {
@@ -574,9 +570,9 @@ if (set) {
   _default = require("items").default;
 }
 function shouldMockIAPForceEnable() {
-  let isIOSResult = set.isIOS();
+  let isIOSResult = set2.isIOS();
   if (isIOSResult) {
-    const Identifier = importAll(1626).getConstants().Identifier;
+    const Identifier = getConstantsAll.getConstants().Identifier;
     const _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
@@ -584,7 +580,7 @@ function shouldMockIAPForceEnable() {
       const tmpResult = DCDDeviceManager;
     }
     isIOSResult = isRunningOnSimulator;
-    const obj2 = importAll(1626);
+    const obj2 = getConstantsAll;
   }
   return isIOSResult;
 }
@@ -593,16 +589,16 @@ let result = set.fileFinishedImporting("utils/native/IAPUtils.tsx");
 export default _default;
 export { convertToUUID };
 export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, closure_3) {
-  let closure_0 = closure_1;
+  closure_0 = closure_1;
   closure_1 = closure_2;
   closure_2 = closure_3;
   closure_0 = undefined;
   closure_0 = callback((arg0, arg1) => {
-    let closure_0 = arg0;
-    let closure_1 = arg1;
-    let c6 = 0;
-    let c7 = 0;
-    let c5 = 0;
+    closure_0 = arg0;
+    closure_1 = arg1;
+    c6 = 0;
+    c7 = 0;
+    c5 = 0;
     return (function*(arg0, arg1) {
       if (c7 === 2) {
         c7 = 3;
@@ -631,17 +627,17 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
               return obj;
             } else {
               let code = tmp3;
-              let closure_2 = tmp7;
+              closure_2 = tmp7;
               closure_2 = undefined;
-              const currentUser = outer2_6.getCurrentUser();
+              const currentUser = closure_2_6.getCurrentUser();
               if (null != currentUser) {
-                let c5 = 1;
-                let obj3 = callback(outer2_3[8]);
-                const obj1 = { requestJSONString: null, sku: null, appAccountToken: null, andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM: null };
+                c5 = 1;
+                let obj3 = callback(closure_2_3[8]);
+                obj1 = { requestJSONString: null, sku: null, appAccountToken: null, andDangerouslyFinishTransactionAutomaticallyIOS: false, useACOM: null };
                 obj1[0] = callback;
                 obj1[1] = callback2;
-                obj1[2] = outer2_15(currentUser.id);
-                obj1[4] = outer1_2;
+                obj1[2] = closure_2_15(currentUser.id);
+                obj1[4] = closure_1_2;
                 c6 = 2;
                 c7 = 1;
                 let obj2 = { value: null, done: false };
@@ -649,7 +645,7 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
                 return obj2;
               } else {
                 const _Error2 = Error;
-                const error = new Error("purchaseProduct: no valid user");
+                error = new Error("purchaseProduct: no valid user");
                 tmp62(error);
               }
               tmp62 = callback2;
@@ -657,9 +653,9 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
           } else {
             if (1 === tmp7) {
               c5 = 0;
-              code = updateProduct;
-              if (!outer2_13.has(code.code)) {
-                obj2 = callback(outer2_3[16]);
+              code = closure_4;
+              if (!closure_2_13.has(code.code)) {
+                obj2 = callback(closure_2_3[16]);
                 const result = obj2.captureBillingException(code);
               }
               callback2(code);
@@ -671,7 +667,7 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
               const _Object = Object;
               if (closure_2 instanceof Object) {
                 obj = { purchaseResponse: null, originalPurchase: null };
-                obj[0] = outer2_14(closure_2);
+                obj[0] = closure_2_14(closure_2);
                 const _Array = Array;
                 if (Array.isArray(closure_2)) {
                   let first = tmp19[0];
@@ -696,7 +692,7 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
           }
           c7 = 3;
         } catch (tmp49) {
-          updateProduct = tmp49;
+          closure_4 = tmp49;
           if (tmp4 === c5) {
             c7 = tmp2;
             throw tmp49;
@@ -720,8 +716,8 @@ export const makeIAPRequest = function makeIAPRequest(closure_1, closure_2, clos
 };
 export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
   const _require = productId;
-  const items = [mergeGuildAvatar];
-  let closure_1 = _initialize.useStateFromStores(items, () => {
+  const items = [closure_6];
+  closure_1 = _initialize.useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
     let flag;
     if (currentUser != null) {
@@ -735,7 +731,7 @@ export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
   const obj = _initialize;
   const items1 = [closure_7];
   return !_initialize.useStateFromStores(items1, () => {
-    const isReadyResult = outer1_7.isReady();
+    const isReadyResult = closure_1_7.isReady();
     let tmp2 = !isReadyResult;
     if (isReadyResult) {
       let isBusyResult = obj.isBusy();
@@ -754,7 +750,7 @@ export const useCanPurchaseIAP = function useCanPurchaseIAP(productId) {
 export { isStorekit2Available };
 export { remapStorefront };
 export const manageSubscription = function manageSubscription() {
-  let isIOSResult = set.isIOS();
+  let isIOSResult = set2.isIOS();
   if (isIOSResult) {
     let isAvailableResult;
     if (closure_12 != null) {
@@ -767,7 +763,7 @@ export const manageSubscription = function manageSubscription() {
     let result = closure_12.showManageSubscriptions();
   } else {
     const _Error = Error;
-    const error = new Error("StoreKit 2 is not available");
+    error = new Error("StoreKit 2 is not available");
     result = Promise.reject(error);
   }
   return result;

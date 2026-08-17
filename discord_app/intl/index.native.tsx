@@ -1,17 +1,19 @@
 // discord_app/intl/index.native.tsx
-import "noop";
-import { Fonts } from "ME";
-import { jsx } from "jsxProd";
-import get_ActivityIndicator from "get ActivityIndicator";
-import set from "set";
-import getAvailableLocales from "getAvailableLocales";
-import 01274__ from "../../_runtime/metro/01274__.js";
-import set from "jsxProd";
-import { Button } from "../design/void/native.tsx";
-import { IntlLink } from "native/migration.tsx";
-import { getAvailableLocales } from "util.tsx";
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import noopAll from "noop" /* 19 */;
+import enforcing from "enforcing" /* 666 */;
+import getAvailableLocales2 from "getAvailableLocales" /* 1237 */;
+import Button from "Button" /* 1297 */;
+import IntlLink from "IntlLink" /* 13548 */;
+import messagesProxyDefault from "messagesProxy" /* 13552 */;
+import { Fonts } from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
+import set from "set" /* 500 */;
+import getAvailableLocales from "getAvailableLocales" /* 1237 */;
+import 01274__ from "../../_runtime/metro/01274__.js" /* 1274 */;
 
-const require = arg1;
+require = arg1;
+noopAll;
 let obj = { fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj = { fontFamily: Fonts.CODE_NORMAL };
 let closure_3 = { strong: obj, italic: { fontStyle: "italic" }, code: obj, del: { textDecorationLine: "line-through", textDecorationStyle: "solid" } };
@@ -26,9 +28,9 @@ if (null != LocalizationManager) {
 }
 function getSystemLocale(arg0) {
   const tmp = require;
-  const tmp3 = require("../../_runtime/00017_get_ActivityIndicator.js") /* get ActivityIndicator */ /* get ActivityIndicator */;
+  const tmp3 = get_ActivityIndicator;
   if (obj.isAndroid()) {
-    let LocalizationManager = tmp(666).default;
+    let LocalizationManager = enforcing.default;
   } else {
     LocalizationManager = tmp3.NativeModules.LocalizationManager;
   }
@@ -56,7 +58,6 @@ obj = {
     return jsx(Button.LegacyText, { style: closure_3.code, children }, arg1);
   },
   $link(children) {
-    let tmp;
     [tmp] = arg2;
     return jsx(IntlLink.IntlLink, { target: tmp, children }, arg1);
   }
@@ -72,9 +73,9 @@ export { getSystemLocale };
 export const getAvailableLocales = require("getAvailableLocales").getAvailableLocales;
 export const getLanguages = require("getAvailableLocales").getLanguages;
 export const useSyncMessages = function useSyncMessages(arg0) {
-  return getAvailableLocales.useSyncMessages(arg0, set);
+  return getAvailableLocales2.useSyncMessages(arg0, set);
 };
 export const t = require("_defaultMessages")._defaultMessages;
-export const international = require("messagesProxy");
+export const international = messagesProxyDefault;
 export const systemLocale = str;
 export const initialLocale = normalizedLocale;

@@ -1,28 +1,26 @@
 // discord_app/modules/video_calls/native/ChannelCallUtils.tsx
-import "report";
-import initialize from "initialize";
-import ME from "ME";
-import { jsx } from "showShareActionSheet";
-import { registerAsset } from "../../../../_runtime/08134_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/12565_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16428_registerAsset.js";
-import { registerAsset } from "../../../../_runtime/16429_registerAsset.js";
-import { AlertActionCreators } from "../../../actions/native/AlertActionCreators.tsx";
+import noopAll from "noop" /* 19 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import _modDef4656 from "module_4656" /* 4656 */;
+import registerAssetDefault from "registerAsset" /* 8134 */;
+import registerAssetDefault2 from "registerAsset" /* 12565 */;
+import registerAssetDefault3 from "registerAsset" /* 16428 */;
+import registerAssetDefault4 from "registerAsset" /* 16429 */;
+import closure_3 from "initialize" /* 4558 */;
+import ME from "ME" /* 676 */;
+import { jsx } from "jsxProd" /* 21 */;
 import { getSystemLocale } from "../../../intl/index.native.tsx";
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ UserSettingsSections: c4, AnalyticsPages: c5, InstantInviteSources: closure_6, RPC_APPLICATION_LOGGING_CATEGORY: error } = ME);
-let result = require("ME").fileFinishedImporting("modules/video_calls/native/ChannelCallUtils.tsx");
+let result = require("set").fileFinishedImporting("modules/video_calls/native/ChannelCallUtils.tsx");
 
 export const voiceSettings = function voiceSettings() {
   let obj = { label: null, icon: null, onPress: null };
   const intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.NiTd0e);
-  obj[1] = registerAsset;
+  obj[1] = registerAssetDefault3;
   obj[2] = function onPress() {
     let obj = callback(7360);
     obj = { screen: constants.VOICE };
@@ -33,30 +31,30 @@ export const voiceSettings = function voiceSettings() {
 };
 export const videoParticipantsHidden = function videoParticipantsHidden(arg0, arg1) {
   const _require = arg0;
-  let closure_1 = arg1;
+  closure_1 = arg1;
   const obj = { label: null, switchValue: null, onPress: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.hoZYAA);
   obj[1] = !arg1;
   obj[2] = function onPress() {
-    const result = callback(outer1_2[8]).toggleVoiceParticipantsHidden(id.id, !callback);
+    const result = callback(closure_1_2[8]).toggleVoiceParticipantsHidden(id.id, !callback);
   };
   return obj;
 };
 export const openHideSelfStreamAndVideoConfirmDialog = function openHideSelfStreamAndVideoConfirmDialog(arg0, arg1) {
-  let closure_0 = arg0;
-  const importDefault = arg1;
-  let obj = AlertActionCreators;
+  closure_0 = arg0;
+  importDefault = arg1;
+  let obj = _modDef4656;
   obj = {
     importer() {
-      return callback(outer1_2[11])(outer1_2[10], outer1_2.paths).then((arg0) => {
-        let closure_0 = arg0.default;
+      return callback(closure_1_2[11])(closure_1_2[10], closure_1_2.paths).then((arg0) => {
+        closure_0 = arg0.default;
         return (arg0) => {
           const obj = {};
           const merged = Object.assign(arg0);
           obj.type = closure_0;
-          obj.onConfirm = outer1_1;
-          return outer2_8(closure_0, obj);
+          obj.onConfirm = closure_1_1;
+          return closure_2_8(closure_0, obj);
         };
       });
     }
@@ -79,55 +77,55 @@ export const reportStreamIssue = function reportStreamIssue(stream) {
   let obj = { label: null, icon: null, onPress: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.KHGhHf);
-  obj[1] = registerAsset;
+  obj[1] = registerAssetDefault4;
   obj[2] = function onPress() {
-    let obj = stream(outer1_2[13]);
+    let obj = stream(closure_1_2[13]);
     const encodeStreamKeyResult = obj.encodeStreamKey(stream);
-    let videoStats = outer1_3.getVideoStats(encodeStreamKeyResult);
+    let videoStats = closure_1_3.getVideoStats(encodeStreamKeyResult);
     if (videoStats == null) {
       videoStats = {};
     }
     obj = { media_session_id: obj2.getMediaSessionId(encodeStreamKeyResult), rtc_connection_id: obj2.getRtcConnectionId(encodeStreamKeyResult), stream_region: obj2.getRegion(encodeStreamKeyResult), max_viewers: obj2.getMaxViewers(encodeStreamKeyResult) };
     const merged = Object.assign(videoStats);
-    const obj5 = outer1_1(outer1_2[7]);
+    const obj5 = closure_1_1(closure_1_2[7]);
     const tmp = stream;
-    obj5.openLazy(stream(outer1_2[11])(outer1_2[14], outer1_2.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj });
+    obj5.openLazy(stream(closure_1_2[11])(closure_1_2[14], closure_1_2.paths), "StreamReportProblem" + stream.ownerId, { stream, analyticsData: obj });
   };
   return obj;
 };
 export const invite = function invite(isPrivate) {
   const _require = isPrivate;
-  const importDefault = arg1;
-  const dependencyMap = arg2;
+  importDefault = arg1;
+  dependencyMap = arg2;
   if (null != arg1) {
     function onPress() {
       let obj = isPrivate(8918);
-      obj = { source: outer1_6.STREAM, stream: closure_1 };
+      obj = { source: closure_1_6.STREAM, stream: closure_1 };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     }
   } else {
     onPress = function onPress() {
       let obj = isPrivate(8918);
-      obj = { source: outer1_6.VOICE_CHANNEL };
+      obj = { source: closure_1_6.VOICE_CHANNEL };
       return obj.showInstantInviteActionSheet(isPrivate, obj);
     };
     if (null != arg2) {
       onPress = function onPress() {
         let obj = isPrivate(8918);
-        obj = { source: outer1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
+        obj = { source: closure_1_6.ACTIVITY_INVITE, targetApplicationId: dependencyMap };
         return obj.showInstantInviteActionSheet(isPrivate, obj);
       };
     }
   }
   if (isPrivate.isPrivate()) {
     onPress = function onPress() {
-      return isPrivate(4229).navigateToNewGroupDM(isPrivate.id, outer1_5.CHANNEL_CALL);
+      return isPrivate(4229).navigateToNewGroupDM(isPrivate.id, closure_1_5.CHANNEL_CALL);
     };
   }
   let obj = { label: null, icon: null, onPress: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.VINpSK);
-  obj[1] = registerAsset;
+  obj[1] = registerAssetDefault2;
   obj[2] = onPress;
   return obj;
 };
@@ -136,10 +134,10 @@ export const rtcDebugPanel = function rtcDebugPanel(arg0) {
   const obj = { label: null, icon: null, onPress: null };
   const intl = _getSystemLocale.intl;
   obj[0] = intl.string(_getSystemLocale.t.X8bCMe);
-  obj[1] = registerAsset;
+  obj[1] = registerAssetDefault;
   obj[2] = function onPress() {
     callback();
-    outer1_1(outer1_2[7]).hideActionSheet();
+    closure_1_1(closure_1_2[7]).hideActionSheet();
   };
   return obj;
 };
@@ -147,7 +145,7 @@ export const shareActivityLogs = function shareActivityLogs() {
   let obj = { label: null, icon: null, onPress: null };
   let intl = getSystemLocale.intl;
   obj[0] = intl.string(getSystemLocale.t.iQzQs3);
-  obj[1] = registerAsset;
+  obj[1] = registerAssetDefault;
   obj[2] = function onPress() {
     let obj = callback(table[19]);
     const items = [closure_7];

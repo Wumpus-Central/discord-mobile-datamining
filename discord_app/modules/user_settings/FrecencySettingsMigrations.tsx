@@ -1,17 +1,17 @@
 // discord_app/modules/user_settings/FrecencySettingsMigrations.tsx
-import MAX_FAVORITES from "MAX_FAVORITES";
-import { ID_REGEX } from "ME";
-import { apply } from "../../../_runtime/00012_apply.js";
-import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
+import set from "set" /* 2 */;
+import applyDefault from "apply" /* 12 */;
+import initializeDefault from "initialize" /* 589 */;
+import Storage4 from "Storage" /* 595 */;
+import ME from "ME" /* 676 */;
+import create from "create" /* 1341 */;
+import b64ToProto from "b64ToProto" /* 1342 */;
+import MAX_FAVORITES from "MAX_FAVORITES" /* 685 */;
 import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/frecency_user_settings.tsx";
-import { Storage } from "../../../discord_common/js/packages/storage/Storage.tsx";
-import { b64ToProto } from "UserSettingsUtils.tsx";
 
-let c3;
-let c4;
 function readFavoriteGIFs(arg0) {
-  let c0 = 1;
-  const importDefault = { IMAGE: "IMAGE", VIDEO: "VIDEO" };
+  c0 = 1;
+  importDefault = { IMAGE: "IMAGE", VIDEO: "VIDEO" };
   const PersistedStore = importDefault(state[2]).PersistedStore;
   const items = [
     (arg0) => {
@@ -67,6 +67,7 @@ function readFavoriteGIFs(arg0) {
   }
 }
 ({ MAX_FAVORITES: c3, MAX_FAVORITE_GIFS_SIZE: c4 } = MAX_FAVORITES);
+const ID_REGEX = ME.ID_REGEX;
 const selectedChannelGuildFrecency = "selectedChannelGuildFrecency";
 let items = [
   {
@@ -96,7 +97,7 @@ let items = [
   {
     version: 3,
     run(favoriteStickers) {
-      const PersistedStore = initialize.PersistedStore;
+      const PersistedStore = initializeDefault.PersistedStore;
       const items = [
         (arg0) => {
           let tmp = arg0;
@@ -150,14 +151,14 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("StickersPersistedStore");
     }
   },
   {
     version: 4,
     run(favoriteEmojis) {
-      const PersistedStore = initialize.PersistedStore;
+      const PersistedStore = initializeDefault.PersistedStore;
       const items = [
         () => {
           const Storage = callback(table[6]).Storage;
@@ -194,11 +195,11 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("EmojiStore");
-      const Storage2 = Storage.Storage;
+      const Storage2 = Storage4.Storage;
       Storage2.remove("EmojiUsageHistory");
-      const Storage3 = Storage.Storage;
+      const Storage3 = Storage4.Storage;
       Storage3.remove("EmojiDiversitySurrogate");
     }
   },
@@ -217,8 +218,8 @@ let items = [
       if (0 === arr.length) {
         return false;
       } else {
-        const values = apply(favoriteGifs.favoriteGifs.gifs).values();
-        const obj = apply(favoriteGifs.favoriteGifs.gifs);
+        const values = applyDefault(favoriteGifs.favoriteGifs.gifs).values();
+        const obj = applyDefault(favoriteGifs.favoriteGifs.gifs);
         const item = values.sortBy("order").forEach((arg0, arg1) => {
           const sum = arr.length + 1 + arg1;
           arg0.order = sum;
@@ -299,7 +300,7 @@ let items = [
   {
     version: 7,
     run(applicationCommandFrecency) {
-      const PersistedStore = initialize.PersistedStore;
+      const PersistedStore = initializeDefault.PersistedStore;
       const state = PersistedStore.migrateAndReadStoreState("ApplicationCommandFrecency", []).state;
       if (null == state) {
         return false;
@@ -317,7 +318,7 @@ let items = [
       const tmp = importDefault;
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("ApplicationCommandFrecency");
     }
   },
@@ -352,14 +353,14 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove("SoundboardFavoriteStore");
     }
   },
   {
     version: 9,
     run(guildAndChannelFrecency) {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       const value = Storage.get(selectedChannelGuildFrecency);
       if (null == value) {
         return false;
@@ -382,7 +383,7 @@ let items = [
       }
     },
     cleanup() {
-      const Storage = Storage.Storage;
+      const Storage = Storage4.Storage;
       Storage.remove(selectedChannelGuildFrecency);
     }
   },
@@ -468,6 +469,6 @@ let items = [
     }
   }
 ];
-const result = require("initialize").fileFinishedImporting("modules/user_settings/FrecencySettingsMigrations.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/FrecencySettingsMigrations.tsx");
 
 export default items;

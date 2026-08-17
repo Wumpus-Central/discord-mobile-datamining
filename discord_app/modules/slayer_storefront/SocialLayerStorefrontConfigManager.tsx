@@ -1,8 +1,9 @@
 // discord_app/modules/slayer_storefront/SocialLayerStorefrontConfigManager.tsx
-import "initialize";
-import { _fetchSocialLayerStorefront } from "SocialLayerStorefrontActionCreators.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import _fetchSocialLayerStorefront from "_fetchSocialLayerStorefront" /* 8041 */;
 
-const require = arg1;
+require = arg1;
+initializeDefault;
 class SocialLayerStorefrontConfigManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

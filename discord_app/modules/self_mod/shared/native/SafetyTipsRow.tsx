@@ -1,29 +1,22 @@
 // discord_app/modules/self_mod/shared/native/SafetyTipsRow.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import createCacheKey from "createCacheKey";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 import { TableRowInner } from "../../../../design/components/TableRow/native/TableRow.native.tsx";
 
 const require = arg1;
+noopAll;
 createCacheKey = { indexContainer: null };
-createCacheKey = { width: 32, height: 32, backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE, borderRadius: require("Themes").radii.round, alignItems: "center", justifyContent: "center", marginRight: require("Themes").space.PX_4 };
+createCacheKey = { width: 32, height: 32, backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE, borderRadius: ThemesDefault.radii.round, alignItems: "center", justifyContent: "center", marginRight: ThemesDefault.space.PX_4 };
 createCacheKey[0] = createCacheKey;
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/self_mod/shared/native/SafetyTipsRow.tsx");
+let closure_4 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/self_mod/shared/native/SafetyTipsRow.tsx");
 
 export default function SafetyTipsRow(arg0) {
-  let description;
-  let end;
-  let index;
-  let tip;
   let _require;
   ({ index, tip, description, end } = arg0);
-  _require = createCacheKey();
-  const obj = { icon: null, label: null, subLabel: null, end: null };
-  obj[0] = jsx((children) => outer1_3(outer1_2, { style: lib.indexContainer, children: outer1_3(lib(outer1_1[6]).Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index }) }), { index });
-  obj[1] = tip;
-  obj[2] = description;
-  obj[3] = end;
-  return jsx(_TableRowInner.TableRow, { icon: null, label: null, subLabel: null, end: null });
+  _require = callback();
+  return jsx(_TableRowInner.TableRow, { icon: jsx((children) => closure_1_3(closure_1_2, { style: lib.indexContainer, children: closure_1_3(lib(closure_1_1[6]).Text, { variant: "heading-md/semibold", color: "text-brand", children: children.index }) }), { index }), label: tip, subLabel: description, end });
 };

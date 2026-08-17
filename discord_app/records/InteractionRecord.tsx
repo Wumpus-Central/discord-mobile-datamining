@@ -1,10 +1,10 @@
 // discord_app/records/InteractionRecord.tsx
-import "toJS";
-import createdAt from "createdAt";
+import toJSDefault from "toJS" /* 1931 */;
+import closure_0 from "createdAt" /* 1930 */;
 
+toJSDefault;
 let prototype;
 prototype = function InteractionRecord(name) {
-  let name_localized;
   const tmp = new prototype(new.target, name, new.target);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp.id, name: tmp.name, type: tmp.type, user: tmp.user, name_localized } = name);
@@ -17,16 +17,15 @@ prototype = function InteractionRecord(name) {
 class prototype extends tmp2 {
 }
 prototype["createFromServer"] = function createFromServer(user) {
-  let name_localized;
   const obj = {};
   const merged = Object.assign(user);
   let str = user.user;
-  obj.user = new createdAt(str);
+  obj.user = new closure_0(str);
   if (typeof prototype !== "function") {
     str = "Trying to call a non-function";
     HermesBuiltin.throwTypeError();
   }
-  const tmp4 = new prototype(str, user, createdAt);
+  const tmp4 = new prototype(str, user, closure_0);
   // ThrowIfThisInitialized (0x7c)
   ({ id: tmp4.id, name: tmp4.name, type: tmp4.type, user: tmp4.user, name_localized } = obj);
   if (name_localized == null) {

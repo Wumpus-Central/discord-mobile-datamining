@@ -1,38 +1,29 @@
 // discord_app/modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx
-import noop from "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { SafeAreaPaddingView } from "../../../../components_native/common/SafeAreaView.tsx";
-import { Text } from "../../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { useSafeAreaInsets } from "../../../safe_area/useSafeAreaInsets.native.tsx";
-import { FormSeparator } from "FormSeparator.tsx";
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1629 */;
+import Text from "Text" /* 4734 */;
+import SafeAreaPaddingView from "SafeAreaPaddingView" /* 6803 */;
+import FormSeparatorDefault from "FormSeparator" /* 14563 */;
+import closure_3 from "noop" /* 19 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c4;
-let c5;
-let closure_6;
-let error;
-const require = arg1;
+require = arg1;
 function Header(arg0) {
-  let description;
-  let title;
   ({ description, title } = arg0);
-  const tmp = createCacheKey();
+  const tmp = callback3();
   let obj = { top: true, style: tmp.headerContainer, children: null };
   obj = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: title };
   const items = [callback(Text.Text, obj), , ];
   obj = { style: tmp.subtitle, variant: "text-sm/medium", color: "text-default", children: description };
   items[1] = callback(Text.Text, obj);
-  items[2] = callback(FormSeparator, { style: tmp.separator });
+  items[2] = callback(FormSeparatorDefault, { style: tmp.separator });
   obj[2] = items;
   return callback2(SafeAreaPaddingView.SafeAreaPaddingView, obj);
 }
 function Footer(arg0) {
-  let canProceedToNextStep;
-  let nextStep;
-  let onProceed;
-  let submitting;
   ({ canProceedToNextStep, nextStep, onProceed, submitting } = arg0);
   if (null == nextStep) {
     const intl2 = getSystemLocale.intl;
@@ -44,8 +35,8 @@ function Footer(arg0) {
     tmp5 = require;
   }
   let obj = { style: null, children: null };
-  const items = [createCacheKey().footerContainer, ];
-  obj = { paddingBottom: useSafeAreaInsets().bottom };
+  const items = [callback3().footerContainer, ];
+  obj = { paddingBottom: useSafeAreaInsetsDefault().bottom };
   items[1] = obj;
   obj[0] = items;
   obj = { loading: submitting, disabled: !canProceedToNextStep, text: stringResult, onPress: onProceed };
@@ -55,7 +46,7 @@ function Footer(arg0) {
 ({ View: c4, ScrollView: c5 } = get_ActivityIndicator);
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 createCacheKey = { container: null, scrollContainer: null, headerContainer: null, title: null, subtitle: null, separator: null, footerContainer: null };
-createCacheKey = { backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOW, height: "100%" };
+createCacheKey = { backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOW, height: "100%" };
 createCacheKey[0] = createCacheKey;
 createCacheKey[1] = { flexGrow: 1 };
 createCacheKey[2] = { position: "relative", paddingTop: 48, paddingBottom: 8, paddingHorizontal: 16, alignItems: "center" };
@@ -63,15 +54,15 @@ createCacheKey[3] = { marginTop: 12, textAlign: "center" };
 createCacheKey[4] = { marginTop: 8, textAlign: "center" };
 createCacheKey[5] = { marginTop: 24 };
 createCacheKey[6] = { width: "100%", padding: 16 };
-createCacheKey = createCacheKey.createStyles(createCacheKey);
-const result = require("jsxProd").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
+let closure_8 = createCacheKey.createStyles(createCacheKey);
+const result = require("set").fileFinishedImporting("modules/guild_role_subscriptions/native/components/GuildRoleSubscriptionTierEditStep.tsx");
 
 export default function GuildRoleSubscriptionTierEditStep(scrollable) {
   const merged = Object.assign(scrollable, Object.create(null));
   let navigation;
   let nextStep;
   let onProceed;
-  const tmp2 = createCacheKey();
+  const tmp2 = callback3();
   let obj = navigation(onProceed[11]);
   navigation = obj.useNavigation();
   nextStep = merged.nextStep;
@@ -90,7 +81,7 @@ export default function GuildRoleSubscriptionTierEditStep(scrollable) {
     obj = {};
     const merged1 = Object.assign(merged);
     const items1 = [callback(Header, obj), , ];
-    const obj1 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
+    obj1 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items2 = [tmp2.scrollContainer];
     obj1[3] = items2;
     obj1[4] = merged.children;

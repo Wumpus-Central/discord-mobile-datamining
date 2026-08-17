@@ -1,18 +1,18 @@
 // discord_app/modules/activities/useDeveloperActivityShelfItems.tsx
-import noop from "noop";
-import initialize from "initialize";
-import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3";
+import closure_2 from "noop" /* 19 */;
+import closure_3 from "initialize" /* 7872 */;
+import { DEFAULT_EMBEDDED_ACTIVITY_CONFIG as closure_4 } from "items3" /* 4481 */;
 
 const require = arg1;
-const result = require("items3").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
+const result = require("set").fileFinishedImporting("modules/activities/useDeveloperActivityShelfItems.tsx");
 
 export const useDeveloperActivityShelfItems = function useDeveloperActivityShelfItems() {
-  const items = [initialize];
+  const items = [closure_3];
   const stateFromStoresObject = isEnabled(lastUsedObject[3]).useStateFromStoresObject(items, () => ({ isEnabled: store.getIsEnabled(), lastUsedObject: store.getLastUsedObject() }), []);
   isEnabled = stateFromStoresObject.isEnabled;
   lastUsedObject = stateFromStoresObject.lastUsedObject;
   let obj = isEnabled(lastUsedObject[3]);
-  const items1 = [initialize];
+  const items1 = [closure_3];
   const stateFromStoresArray = isEnabled(lastUsedObject[3]).useStateFromStoresArray(items1, () => store.getDeveloperShelfItems(), []);
   const items2 = [stateFromStoresArray, isEnabled, lastUsedObject];
   return stateFromStoresArray.useMemo(() => {

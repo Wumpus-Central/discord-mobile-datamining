@@ -1,7 +1,8 @@
 // discord_app/modules/calls/native/VideoBackgroundManager.tsx
-import handleConnectionOpen from "handleConnectionOpen";
-import "initialize";
+import initializeDefault from "initialize" /* 5038 */;
+import closure_0 from "handleConnectionOpen" /* 1979 */;
 
+initializeDefault;
 let prototype = function VideoBackgroundManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   const voiceChannelId = applyArgumentsResult;

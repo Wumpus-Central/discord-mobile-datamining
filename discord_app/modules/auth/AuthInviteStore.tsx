@@ -1,16 +1,18 @@
 // discord_app/modules/auth/AuthInviteStore.tsx
-import { Store } from "initialize";
-import { fromGuildPropertiesWithAdditionalFields } from "../../utils/GuildRecordUtils.tsx";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import fromGuildPropertiesWithAdditionalFields from "fromGuildPropertiesWithAdditionalFields" /* 1430 */;
 
-const require = arg1;
+require = arg1;
 let closure_2 = {};
+const Store = initializeDefault.Store;
 class AuthInviteStore extends Store {
 }
 AuthInviteStore.prototype["getGuild"] = function getGuild(arg0) {
   return table[arg0];
 };
 AuthInviteStore.displayName = "AuthInviteStore";
-const authInviteStore = new AuthInviteStore(require("dispatcher"), {
+const authInviteStore = new AuthInviteStore(dispatcherDefault, {
   AUTH_INVITE_UPDATE: function handleAuthInviteUpdate(invite) {
     const guild = invite.invite.guild;
     if (null == guild) {
@@ -20,6 +22,6 @@ const authInviteStore = new AuthInviteStore(require("dispatcher"), {
     }
   }
 });
-const result = require("dispatcher").fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
+const result = require("set").fileFinishedImporting("modules/auth/AuthInviteStore.tsx");
 
 export default authInviteStore;

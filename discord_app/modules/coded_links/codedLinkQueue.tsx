@@ -1,12 +1,15 @@
 // discord_app/modules/coded_links/codedLinkQueue.tsx
-let c0 = new require("timestamp")("codedLinkQueue");
-const obj = new require("_isNativeReflectConstruct")({ concurrency: 5, intervalCap: 10, interval: 2000 });
+import timestampDefault from "timestamp" /* 3 */;
+import _isNativeReflectConstructDefault from "_isNativeReflectConstruct" /* 16629 */;
+
+let closure_0 = new timestampDefault("codedLinkQueue");
+const obj = new _isNativeReflectConstructDefault({ concurrency: 5, intervalCap: 10, interval: 2000 });
 obj.on("add", () => {
   if (obj.size > 0) {
-    tmp2.warn("Message link fetch queue backlog:", tmp.size);
+    logger.warn("Message link fetch queue backlog:", tmp.size);
   }
 });
-const tmp2 = new require("timestamp")("codedLinkQueue");
+const tmp2 = new timestampDefault("codedLinkQueue");
 const result = require("set").fileFinishedImporting("modules/coded_links/codedLinkQueue.tsx");
 
 export const queueMessageLinkFetch = function queueMessageLinkFetch(arg0) {

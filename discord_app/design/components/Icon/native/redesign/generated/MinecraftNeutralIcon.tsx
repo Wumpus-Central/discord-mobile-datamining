@@ -1,25 +1,22 @@
 // discord_app/design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx
-import "noop";
-import { View } from "get ActivityIndicator";
-import jsxProd from "jsxProd";
-import { registerAsset } from "../../../../../../../_runtime/09120_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/09121_registerAsset.js";
-import { registerAsset } from "../../../../../../../_runtime/09122_registerAsset.js";
-import { Themes } from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import { BaseIconImage } from "../../BaseIconImage.tsx";
+import noopAll from "noop" /* 19 */;
+import ThemesDefault from "Themes" /* 712 */;
+import BaseIconImage from "BaseIconImage" /* 4096 */;
+import registerAsset from "registerAsset" /* 9120 */;
+import registerAsset2 from "registerAsset" /* 9121 */;
+import registerAsset3 from "registerAsset" /* 9122 */;
+import { View } from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c4;
-let c5;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: c4, jsxs: c5 } = jsxProd);
-const result = require("jsxProd").fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
+const result = require("set").fileFinishedImporting("design/components/Icon/native/redesign/generated/MinecraftNeutralIcon.tsx");
 
 export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor) {
-  let color;
-  let style;
   ({ style, color } = secondaryColor);
   if (color === undefined) {
-    color = Themes.colors.INTERACTIVE_ICON_DEFAULT;
+    color = ThemesDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   let str = secondaryColor.secondaryColor;
   if (str === undefined) {
@@ -31,30 +28,20 @@ export const MinecraftNeutralIcon = function MinecraftNeutralIcon(secondaryColor
   }
   const merged = Object.assign(secondaryColor, Object.create(null));
   let obj = { children: null };
-  obj = { source: null, color: null, style: null };
-  obj[0] = registerAsset;
-  obj[1] = color;
-  obj[2] = style;
+  obj = { source: registerAsset, color, style };
   const merged1 = Object.assign(merged);
   const items = [callback(BaseIconImage.BaseIconImage, obj), , ];
-  obj = { source: null, color: null, style: null };
-  obj[0] = registerAsset;
-  obj[1] = str;
+  obj = { source: registerAsset2, color: str, style: items2 };
   const items1 = [style];
-  const items2 = [];
+  items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };
-  obj[2] = items2;
   const merged2 = Object.assign(merged);
   items[1] = callback(BaseIconImage.BaseIconImage, obj);
-  const obj1 = { source: null, color: null, style: null };
-  obj1[0] = registerAsset;
-  obj1[1] = str2;
   const items3 = [style];
   const items4 = [];
   items4[HermesBuiltin.arraySpread(items3.flat(), 0)] = { position: "absolute", top: 0 };
-  obj1[2] = items4;
   const merged3 = Object.assign(merged);
-  items[2] = callback(BaseIconImage.BaseIconImage, obj1);
+  items[2] = callback(BaseIconImage.BaseIconImage, { source: registerAsset3, color: str2, style: items4 });
   obj[0] = items;
   return callback2(View, obj);
 };

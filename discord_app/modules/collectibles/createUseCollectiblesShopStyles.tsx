@@ -1,54 +1,15 @@
 // discord_app/modules/collectibles/createUseCollectiblesShopStyles.tsx
-import _slicedToArray from "_slicedToArray";
-import maybeApplyNoTextColorForLightCustomTheme from "maybeApplyNoTextColorForLightCustomTheme";
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "maybeApplyNoTextColorForLightCustomTheme" /* 4662 */;
 
 const require = arg1;
-const result = require("getProfileTheme").fileFinishedImporting("modules/collectibles/createUseCollectiblesShopStyles.tsx");
+const result = require("set").fileFinishedImporting("modules/collectibles/createUseCollectiblesShopStyles.tsx");
 
 export default function createUseCollectiblesShopStyles(arg0) {
-  let closure_0 = arg0;
+  closure_0 = arg0;
   return (backgroundColors) => {
-    let h;
-    let h2;
-    let h3;
-    let h4;
-    let h5;
-    let h6;
-    let h7;
-    let h8;
-    let l;
-    let l2;
-    let l3;
-    let l4;
-    let l5;
-    let l6;
-    let l7;
-    let l8;
-    let obj2;
-    let obj3;
-    let obj32;
-    let obj33;
-    let obj7;
-    let obj8;
-    let s;
-    let s2;
-    let s3;
-    let s4;
-    let s5;
-    let s6;
-    let s7;
-    let s8;
-    let tmp10;
-    let tmp11;
-    let tmp16;
-    let tmp17;
-    let tmp18;
-    let tmp44;
-    let tmp45;
-    let tmp46;
-    let tmp9;
-    let obj = callback(outer1_2[4]);
-    const items = [outer1_4];
+    let obj = callback(closure_1_2[4]);
+    const items = [closure_1_4];
     const stateFromStores = obj.useStateFromStores(items, () => saturation.saturation);
     if (null == backgroundColors) {
       return {};
@@ -68,14 +29,14 @@ export default function createUseCollectiblesShopStyles(arg0) {
           } else {
             let tmp30;
             if (null != obj.backgroundColors) {
-              const obj1 = { primary: null, secondary: null, tertiary: null, border: null, label: null };
+              obj1 = { primary: null, secondary: null, tertiary: null, border: null, label: null };
               const primary = obj.backgroundColors.primary;
               ({ h, s, l } = primary.toHsl());
               obj2 = { h: null, s: null, l: null };
               obj2[0] = h;
               obj2[1] = s * stateFromStores;
               obj2[2] = l;
-              obj1[0] = outer1_1(tmp2[3])(obj2);
+              obj1[0] = closure_1_1(tmp2[3])(obj2);
               const secondary = obj.backgroundColors.secondary;
               const toHslResult = primary.toHsl();
               ({ h: h2, s: s2, l: l2 } = secondary.toHsl());
@@ -83,7 +44,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj3[0] = h2;
               obj3[1] = s2 * stateFromStores;
               obj3[2] = l2;
-              obj1[1] = outer1_1(tmp2[3])(obj3);
+              obj1[1] = closure_1_1(tmp2[3])(obj3);
               let tmp26;
               if (null != obj.backgroundColors.tertiary) {
                 const tertiary = obj.backgroundColors.tertiary;
@@ -103,7 +64,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj5[0] = h4;
               obj5[1] = s4 * stateFromStores;
               obj5[2] = l4;
-              obj1[3] = outer1_1(tmp2[3])(obj5);
+              obj1[3] = closure_1_1(tmp2[3])(obj5);
               const label = obj.backgroundColors.label;
               const toHslResult3 = border.toHsl();
               ({ h: h5, s: s5, l: l5 } = label.toHsl());
@@ -111,7 +72,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj6[0] = h5;
               obj6[1] = s5 * stateFromStores;
               obj6[2] = l5;
-              obj1[4] = outer1_1(tmp2[3])(obj6);
+              obj1[4] = closure_1_1(tmp2[3])(obj6);
               tmp30 = obj1;
               const toHslResult4 = label.toHsl();
             }
@@ -126,7 +87,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj9[0] = h6;
               obj9[1] = s6 * stateFromStores;
               obj9[2] = l6;
-              obj8[0] = outer1_1(tmp2[3])(obj9);
+              obj8[0] = closure_1_1(tmp2[3])(obj9);
               const secondary2 = obj.buttonColors.secondary;
               const toHslResult5 = primary2.toHsl();
               ({ h: h7, s: s7, l: l7 } = secondary2.toHsl());
@@ -134,7 +95,7 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj10[0] = h7;
               obj10[1] = s7 * stateFromStores;
               obj10[2] = l7;
-              obj8[1] = outer1_1(tmp2[3])(obj10);
+              obj8[1] = closure_1_1(tmp2[3])(obj10);
               const text = obj.buttonColors.text;
               const toHslResult6 = secondary2.toHsl();
               ({ h: h8, s: s8, l: l8 } = text.toHsl());
@@ -142,18 +103,15 @@ export default function createUseCollectiblesShopStyles(arg0) {
               obj11[0] = h8;
               obj11[1] = s8 * stateFromStores;
               obj11[2] = l8;
-              obj8[2] = outer1_1(tmp2[3])(obj11);
+              obj8[2] = closure_1_1(tmp2[3])(obj11);
               tmp31 = obj8;
               const toHslResult7 = text.toHsl();
             }
             obj7[1] = tmp31;
             const confettiColors = obj.confettiColors;
             obj7[2] = confettiColors.map((toHsl) => {
-              let h;
-              let l;
-              let s;
               ({ h, s, l } = toHsl.toHsl());
-              return outer1_1(outer1_2[3])({ h, s: s * stateFromStores, l });
+              return closure_1_1(closure_1_2[3])({ h, s: s * stateFromStores, l });
             });
           }
           return obj7;
@@ -170,14 +128,14 @@ export default function createUseCollectiblesShopStyles(arg0) {
             const items2 = [, , ];
             ({ r: arr10[0], g: arr10[1], b: arr10[2] } = obj33.toRgb());
             const toRgbResult1 = obj33.toRgb();
-            [tmp44, tmp45, tmp46] = outer1_3(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
+            [tmp44, tmp45, tmp46] = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
             const obj13 = { r: null, g: null, b: null };
             obj13[0] = tmp44;
             obj13[1] = tmp45;
             obj13[2] = tmp46;
-            const tmp43 = outer1_3(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
-            obj12[2] = outer1_1(tmp2[3])(obj13).isLight() ? tmp39.dark : tmp39.light;
-            const obj36 = outer1_1(tmp2[3])(obj13);
+            const tmp43 = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items1, items2, 50), 3);
+            obj12[2] = closure_1_1(tmp2[3])(obj13).isLight() ? tmp39.dark : tmp39.light;
+            const obj36 = closure_1_1(tmp2[3])(obj13);
           }
           const obj14 = { primary: null, secondary: null, text: null };
           obj14[0] = buttonColors[0];
@@ -202,15 +160,15 @@ export default function createUseCollectiblesShopStyles(arg0) {
           const items4 = [, , ];
           ({ r: arr3[0], g: arr3[1], b: arr3[2] } = obj2.toRgb());
           const toRgbResult3 = obj2.toRgb();
-          [tmp9, tmp10, tmp11] = outer1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
+          [tmp9, tmp10, tmp11] = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
           const obj16 = { r: null, g: null, b: null };
           obj16[0] = tmp9;
           obj16[1] = tmp10;
           obj16[2] = tmp11;
-          obj5 = outer1_1(tmp2[3])(obj16);
+          obj5 = closure_1_1(tmp2[3])(obj16);
           obj15[3] = obj5.setAlpha(0.4);
           [obj7, obj8] = backgroundColors;
-          const tmp8 = outer1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
+          const tmp8 = closure_1_3(tmpResult.getValueInColorGradientByPercentage(items3, items4, 50), 3);
           const toRgbResult4 = obj6.toRgb();
           const toRgbResult5 = obj7.toRgb();
           const items5 = [, , ];
@@ -218,14 +176,14 @@ export default function createUseCollectiblesShopStyles(arg0) {
           const items6 = [, , ];
           ({ r: arr5[0], g: arr5[1], b: arr5[2] } = toRgbResult5);
           const tmpResult1 = tmp(tmp2[2]);
-          [tmp16, tmp17, tmp18] = outer1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
+          [tmp16, tmp17, tmp18] = closure_1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
           const obj17 = { r: null, g: null, b: null };
           obj17[0] = tmp16;
           obj17[1] = tmp17;
           obj17[2] = tmp18;
-          obj10 = outer1_1(tmp2[3])(obj17);
+          obj10 = closure_1_1(tmp2[3])(obj17);
           obj15[4] = obj10.isLight() ? tmp39.dark : tmp39.light;
-          const tmp15 = outer1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
+          const tmp15 = closure_1_3(tmp(tmp2[2]).getValueInColorGradientByPercentage(items5, items6, 50), 3);
         }
         const obj18 = { primary: null, secondary: null, border: null, label: null };
         obj18[0] = backgroundColors[0];

@@ -1,14 +1,13 @@
 // discord_app/modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx
-import "noop";
-import jsxProd from "jsxProd";
-import { TableRowInner } from "../../../../../../design/components/TableRow/native/TableRow.native.tsx";
-import { TableRowGroupTitle } from "../../../../../../design/components/TableRow/native/TableRowGroup.native.tsx";
+import noopAll from "noop" /* 19 */;
+import TableRowGroupTitle from "TableRowGroupTitle" /* 6286 */;
+import TableRowInner from "TableRowInner" /* 6291 */;
+import jsxProd from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ jsx: obj1, jsxs: c3 } = jsxProd);
-const result = require("TableRowGroupTitle").fileFinishedImporting("modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx");
+const result = require("set").fileFinishedImporting("modules/devtools/native/components/screens/performance/BenchmarkResultsList.tsx");
 
 export default function BenchmarkResultsList(results) {
   results = results.results;
@@ -17,9 +16,6 @@ export default function BenchmarkResultsList(results) {
     let obj = { title: "Results (newest first)", hasIcons: false, children: null };
     const items = [
       results.map((kind) => {
-          let dropped;
-          let elapsedMs;
-          let frames;
           if ("mount" === kind.kind) {
             let obj = { label: null, subLabel: null };
             ({ label: obj[0], elapsedMs } = kind);

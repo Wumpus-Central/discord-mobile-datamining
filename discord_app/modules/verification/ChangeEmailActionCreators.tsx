@@ -1,20 +1,20 @@
 // discord_app/modules/verification/ChangeEmailActionCreators.tsx
-import asyncGeneratorStep from "asyncGeneratorStep";
-import { Endpoints } from "ME";
-import { encodeProperties } from "../../../discord_common/js/packages/analytics-utils/AnalyticsUtils.tsx";
-import { TrackedHTTPUtils } from "../../utils/TrackedHTTPUtils.tsx";
+import encodeProperties from "encodeProperties" /* 503 */;
+import _modDef5227 from "module_5227" /* 5227 */;
+import closure_3 from "asyncGeneratorStep" /* 5 */;
+import { Endpoints } from "ME" /* 676 */;
 
-const require = arg1;
+require = arg1;
 function _confirmEmailChange() {
   const self = this;
   const tmp = callback((arg0) => {
-    let closure_0 = arg0;
-    let c2 = 0;
-    let c1 = 0;
+    closure_0 = arg0;
+    c2 = 0;
+    c1 = 0;
     return (function*(arg0, body) {
       const obj5 = v0(5227);
-      const obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
-      obj1[0] = outer1_4.USER_EMAIL_VERIFY_CODE;
+      obj1 = { url: null, body: null, trackedActionData: null, rejectWithError: false };
+      obj1[0] = closure_1_4.USER_EMAIL_VERIFY_CODE;
       const obj2 = { code: null };
       obj2[0] = callback;
       obj1[1] = obj2;
@@ -25,7 +25,7 @@ function _confirmEmailChange() {
       return body.body;
     })();
   });
-  const _confirmEmailChange = tmp;
+  closure_5 = tmp;
   const apply = tmp.apply;
   if (typeof apply === "unknown") {
     let applyArgumentsResult = HermesBuiltin.applyArguments(self);
@@ -34,14 +34,14 @@ function _confirmEmailChange() {
   }
   return applyArgumentsResult;
 }
-const result = require("module_5227").fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
+const result = require("set").fileFinishedImporting("modules/verification/ChangeEmailActionCreators.tsx");
 
 export const sendConfirmationCode = function sendConfirmationCode() {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = false;
   }
-  let obj = TrackedHTTPUtils;
+  let obj = _modDef5227;
   obj = { url: Endpoints.USER_EMAIL, trackedActionData: null, rejectWithError: false };
   obj = { event: encodeProperties.NetworkActionNames.USER_ACCOUNT_EMAIL_CHANGE_SEND_CODE, properties: { is_resend: flag } };
   obj[1] = obj;

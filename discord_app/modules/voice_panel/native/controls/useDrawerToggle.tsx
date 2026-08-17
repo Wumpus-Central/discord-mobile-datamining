@@ -1,10 +1,10 @@
 // discord_app/modules/voice_panel/native/controls/useDrawerToggle.tsx
-import noop from "noop";
-import { VoicePanelControlsModes } from "VoicePanelControlsModes";
+import closure_3 from "noop" /* 19 */;
+import { VoicePanelControlsModes } from "VoicePanelControlsModes" /* 11438 */;
 
 const require = arg1;
 let closure_5 = { code: "function useDrawerToggleTsx1(){const{controlsSpecs,VoicePanelControlsModes}=this.__closure;return controlsSpecs.get().mode===VoicePanelControlsModes.DRAWER;}" };
-const result = require("dismissPanel").fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
+const result = require("set").fileFinishedImporting("modules/voice_panel/native/controls/useDrawerToggle.tsx");
 
 export default function useDrawerToggle(arg0) {
   const _require = arg0;
@@ -14,7 +14,7 @@ export default function useDrawerToggle(arg0) {
   dismissPanel = context.dismissPanel;
   let obj = _require(connected[3]);
   const fn = function l() {
-    return controlsSpecs.get().mode === outer1_4.DRAWER;
+    return controlsSpecs.get().mode === closure_1_4.DRAWER;
   };
   obj = { controlsSpecs, VoicePanelControlsModes };
   fn.__closure = obj;
@@ -24,7 +24,7 @@ export default function useDrawerToggle(arg0) {
   const tmp3 = controlsSpecs(connected[4])(derivedValue);
   const items = [arg0, dismissPanel, connected, controlsSpecs];
   const callback = dismissPanel.useCallback(() => {
-    if (controlsSpecs.get().mode === outer1_4.DRAWER) {
+    if (controlsSpecs.get().mode === closure_1_4.DRAWER) {
       dismissPanel();
     } else {
       const value = connected.get();

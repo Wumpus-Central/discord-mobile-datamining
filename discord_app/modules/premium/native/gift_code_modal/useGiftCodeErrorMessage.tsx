@@ -1,28 +1,28 @@
 // discord_app/modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx
-import _slicedToArray from "_slicedToArray";
-import map from "map";
-import updateGiftCode from "updateGiftCode";
+import closure_2 from "_slicedToArray" /* 32 */;
+import closure_3 from "map" /* 5324 */;
+import closure_4 from "updateGiftCode" /* 10641 */;
 
 const require = arg1;
-const result = require("updateGiftCode").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
+const result = require("set").fileFinishedImporting("modules/premium/native/gift_code_modal/useGiftCodeErrorMessage.tsx");
 
 export default function useGiftCodeErrorMessage(arg0, id) {
   const _require = arg0;
-  let items = [updateGiftCode];
+  let items = [closure_4];
   const tmp3 = callback(_require(first[3]).useStateFromStoresArray(items, () => {
-    const items = [outer1_4.get(closure_0), outer1_4.getError(closure_0)];
+    const items = [closure_1_4.get(closure_0), closure_1_4.getError(closure_0)];
     return items;
   }), 2);
   first = tmp3[0];
   const obj = _require(first[3]);
-  const items1 = [map];
+  const items1 = [closure_3];
   let userId;
   const stateFromStores = _require(first[3]).useStateFromStores(items1, () => {
     let skuId;
     if (first != null) {
       skuId = first.skuId;
     }
-    return outer1_3.getPurchase(skuId);
+    return closure_1_3.getPurchase(skuId);
   });
   if (first != null) {
     userId = first.userId;

@@ -1,9 +1,11 @@
 // discord_app/design/components/Navigator/native/useNavigation.native.tsx
-import { createStandardNavigationFactories } from "../../../../../_runtime/01501_createStandardNavigationFactories.js";
+import set from "set" /* 2 */;
+import createStandardNavigationFactories from "createStandardNavigationFactories" /* 1501 */;
+
 function useNavigation() {
   return createStandardNavigationFactories.useNavigation();
 }
-const result = require("set").fileFinishedImporting("design/components/Navigator/native/useNavigation.native.tsx");
+const result = set.fileFinishedImporting("design/components/Navigator/native/useNavigation.native.tsx");
 
 export { useNavigation };
 export const useNativeStackNavigation = function useNativeStackNavigation() {

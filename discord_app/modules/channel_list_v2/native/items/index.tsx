@@ -1,10 +1,15 @@
 // discord_app/modules/channel_list_v2/native/items/index.tsx
-const result = require("ThreadChannel").fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
+import set from "set" /* 2 */;
+import renderCategoryItem from "renderCategoryItem" /* 15369 */;
+import ThreadChannelDefault from "ThreadChannel" /* 15375 */;
+import RedesignVoiceUserSummaryDefault from "RedesignVoiceUserSummary" /* 15393 */;
 
-export const CategoryChannel = require("renderCategoryItem").CategoryChannel;
-export const SuggestedCategory = require("renderCategoryItem").SuggestedCategory;
-export const RecentlyActiveCategory = require("renderCategoryItem").RecentlyActiveCategory;
-export const renderCategoryItem = require("renderCategoryItem").renderCategoryItem;
-export const useCategoryStyles = require("renderCategoryItem").useCategoryStyles;
-export const ThreadChannel = require("ThreadChannel");
-export const RedesignVoiceUserSummary = require("RedesignVoiceUserSummary");
+const result = set.fileFinishedImporting("modules/channel_list_v2/native/items/index.tsx");
+
+export const CategoryChannel = renderCategoryItem.CategoryChannel;
+export const SuggestedCategory = renderCategoryItem.SuggestedCategory;
+export const RecentlyActiveCategory = renderCategoryItem.RecentlyActiveCategory;
+export const renderCategoryItem = renderCategoryItem.renderCategoryItem;
+export const useCategoryStyles = renderCategoryItem.useCategoryStyles;
+export const ThreadChannel = ThreadChannelDefault;
+export const RedesignVoiceUserSummary = RedesignVoiceUserSummaryDefault;

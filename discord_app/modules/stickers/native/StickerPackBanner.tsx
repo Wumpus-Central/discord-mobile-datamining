@@ -1,19 +1,15 @@
 // discord_app/modules/stickers/native/StickerPackBanner.tsx
-import "noop";
-import get_ActivityIndicator from "get ActivityIndicator";
-import { jsx } from "jsxProd";
-import { getStickerExtensionFromFormatType } from "../StickersUtils.tsx";
+import noopAll from "noop" /* 19 */;
+import getStickerExtensionFromFormatType from "getStickerExtensionFromFormatType" /* 4823 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import { jsx } from "jsxProd" /* 21 */;
 
-let c3;
-let obj1;
-const require = arg1;
+require = arg1;
+noopAll;
 ({ Image: obj1, View: c3 } = get_ActivityIndicator);
-const result = require("jsxProd").fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
+const result = require("set").fileFinishedImporting("modules/stickers/native/StickerPackBanner.tsx");
 
 export default function StickerPackBanner(arg0) {
-  let containerStyle;
-  let stickerPack;
-  let style;
   ({ containerStyle, style, stickerPack } = arg0);
   let obj = getStickerExtensionFromFormatType;
   const stickerPackBannerAssetUrl = obj.getStickerPackBannerAssetUrl(stickerPack, 1024);
@@ -22,7 +18,7 @@ export default function StickerPackBanner(arg0) {
     obj = { style: null, children: null };
     obj[0] = containerStyle;
     obj = { source: null, style: null, resizeMode: "contain" };
-    const obj1 = { uri: null };
+    obj1 = { uri: null };
     obj1[0] = stickerPackBannerAssetUrl;
     obj[0] = obj1;
     obj[1] = style;

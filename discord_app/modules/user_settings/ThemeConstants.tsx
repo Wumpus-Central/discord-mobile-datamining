@@ -1,7 +1,9 @@
 // discord_app/modules/user_settings/ThemeConstants.tsx
-import { ThemeTypes } from "ME";
-import { create } from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/preloaded_user_settings.tsx";
+import set from "set" /* 2 */;
+import ME from "ME" /* 676 */;
+import create from "create" /* 1306 */;
 
+const ThemeTypes = ME.ThemeTypes;
 let obj = { DARK: "dark", LIGHT: "light", NO_PREFERENCE: "unknown" };
 obj = { [obj.DARK]: ThemeTypes.DARKER, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARKER };
 obj = { [obj.DARK]: ThemeTypes.DARK, [obj.LIGHT]: ThemeTypes.LIGHT, [obj.NO_PREFERENCE]: ThemeTypes.DARK };
@@ -10,7 +12,7 @@ const obj2 = { [create.Theme.UNSET]: ThemeTypes.DARK, [create.Theme.DARK]: Theme
 const obj3 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
 const obj4 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARKER, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
 const obj5 = { [create.Theme.UNSET]: ThemeTypes.DARKER, [create.Theme.DARK]: ThemeTypes.DARK, [create.Theme.DARKER]: ThemeTypes.DARKER, [create.Theme.LIGHT]: ThemeTypes.LIGHT, [create.Theme.MIDNIGHT]: ThemeTypes.MIDNIGHT };
-const result = require("set").fileFinishedImporting("modules/user_settings/ThemeConstants.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/ThemeConstants.tsx");
 
 export const SystemThemeState = { UNSET: 0, [0]: "UNSET", OFF: 1, [1]: "OFF", ON: 2, [2]: "ON" };
 export const SystemTheme = obj;

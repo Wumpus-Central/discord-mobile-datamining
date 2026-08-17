@@ -1,14 +1,17 @@
 // discord_app/modules/rtc/RTCLatencyTestManager.tsx
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import initialize from "initialize";
-import { Features } from "DesktopSources";
-import "initialize";
+import timestampDefault from "timestamp" /* 3 */;
+import setDefault from "set" /* 687 */;
+import initializeDefault from "initialize" /* 5038 */;
+import closure_3 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_4 from "initialize" /* 4565 */;
+import { Features } from "DesktopSources" /* 4529 */;
 
 let require = arg1;
-const SECOND = require("set").Millis.SECOND;
-let closure_7 = 30 * require("set").Millis.SECOND;
-let obj = new require("set")("RTCLatencyTestManager");
+const SECOND = setDefault.Millis.SECOND;
+let closure_7 = 30 * setDefault.Millis.SECOND;
+let obj = new timestampDefault("RTCLatencyTestManager");
 obj.enableNativeLogger(true);
+initializeDefault;
 class RTCLatencyTestManager extends tmp3 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -20,38 +23,38 @@ class RTCLatencyTestManager extends tmp3 {
     };
     applyArgumentsResult._handleTestRegionsResponse = function _handleTestRegionsResponse(body) {
       const mapped = body.map((region) => region.region);
-      if (initialize.shouldPerformLatencyTest(mapped)) {
+      if (closure_4.shouldPerformLatencyTest(mapped)) {
         mediaEngine = mediaEngine.getMediaEngine();
         const rankRtcRegionsResult = mediaEngine.rankRtcRegions(body);
         mediaEngine.rankRtcRegions(body).then((url) => {
-          outer1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
-          const result = mapped(outer1_2[6]).completeRTCLatencyTest(url, mapped);
+          closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
+          const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
         }).catch((arg0) => logger.warn(arg0));
         const nextPromise = mediaEngine.rankRtcRegions(body).then((url) => {
-          outer1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
-          const result = mapped(outer1_2[6]).completeRTCLatencyTest(url, mapped);
+          closure_1_8.verbose("RTC region latency test completed, ranked regions are: ", url);
+          const result = mapped(closure_1_2[6]).completeRTCLatencyTest(url, mapped);
         });
       } else {
         const _HermesInternal = HermesInternal;
-        closure_8.verbose("RTC cached ranked preferred regions are " + initialize.getPreferredRegions());
+        closure_8.verbose("RTC cached ranked preferred regions are " + closure_4.getPreferredRegions());
       }
     };
     applyArgumentsResult._fetchAndScheduleRefetch = function _fetchAndScheduleRefetch() {
       let num = 1;
-      if (outer1_3.supports(outer1_5.PORT_AWARE_LATENCY_TESTING)) {
+      if (closure_1_3.supports(closure_1_5.PORT_AWARE_LATENCY_TESTING)) {
         num = 2;
       }
-      const rTCLatencyTestRegions = applyArgumentsResult(outer1_2[6]).fetchRTCLatencyTestRegions(num);
-      const obj = applyArgumentsResult(outer1_2[6]);
+      const rTCLatencyTestRegions = applyArgumentsResult(closure_1_2[6]).fetchRTCLatencyTestRegions(num);
+      obj = applyArgumentsResult(closure_1_2[6]);
       rTCLatencyTestRegions.then((body) => closure_0._handleTestRegionsResponse(body.body)).catch((arg0) => logger.warn(arg0));
-      applyArgumentsResult.refetchTimeout = setTimeout(applyArgumentsResult._fetchAndScheduleRefetch, 360 * outer1_1(outer1_2[3]).Millis.MINUTE);
+      applyArgumentsResult.refetchTimeout = setTimeout(applyArgumentsResult._fetchAndScheduleRefetch, 360 * closure_1_1(closure_1_2[3]).Millis.MINUTE);
     };
     applyArgumentsResult._handleConnectionOpen = function _handleConnectionOpen() {
       if (null != window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT) {
-        if (applyArgumentsResult(outer1_2[7]).isPlatformEmbedded) {
+        if (applyArgumentsResult(closure_1_2[7]).isPlatformEmbedded) {
           const _Math = Math;
           const _Math2 = Math;
-          const rounded = Math.floor(outer1_6 + Math.random() * outer1_7);
+          const rounded = Math.floor(closure_1_6 + Math.random() * closure_1_7);
           if (null != applyArgumentsResult.refetchTimeout) {
             const _clearTimeout = clearTimeout;
             clearTimeout(tmp4.refetchTimeout);
@@ -71,6 +74,6 @@ RTCLatencyTestManager.prototype["_terminate"] = function _terminate() {
   }
 };
 const rTCLatencyTestManager = new RTCLatencyTestManager();
-let result = require("DesktopSources").fileFinishedImporting("modules/rtc/RTCLatencyTestManager.tsx");
+let result = require("set").fileFinishedImporting("modules/rtc/RTCLatencyTestManager.tsx");
 
 export default rTCLatencyTestManager;

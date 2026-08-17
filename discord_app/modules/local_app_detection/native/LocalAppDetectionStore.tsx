@@ -1,15 +1,17 @@
 // discord_app/modules/local_app_detection/native/LocalAppDetectionStore.tsx
-import _slicedToArray from "_slicedToArray";
-import hasConsented from "hasConsented";
-import { Consents } from "ME";
-import { DeviceSettingsStore } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "hasConsented" /* 5258 */;
+import { Consents } from "ME" /* 676 */;
 
 let object = arg1;
 let closure_6 = { detected: false, lastScannedAt: "Array" };
 let closure_7 = { apps: {} };
+const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LocalAppDetectionStore extends DeviceSettingsStore {
   constructor() {
-    c0 = undefined;
+    closure_0 = undefined;
     obj = {
       POST_CONNECTION_OPEN() {
             return obj.handlePostConnectionOpen();
@@ -20,7 +22,7 @@ class LocalAppDetectionStore extends DeviceSettingsStore {
     };
     tmp2 = new tmp2(require("dispatcher"), obj, new.target, tmp2, tmp, new.target);
     // ThrowIfThisInitialized (0x7c)
-    c0 = tmp2;
+    closure_0 = tmp2;
     return tmp2;
   }
 }
@@ -31,7 +33,7 @@ prototype["initialize"] = function initialize(arg0) {
     tmp = closure_7;
   }
   closure_7 = tmp;
-  this.waitFor(hasConsented);
+  this.waitFor(closure_4);
 };
 prototype["getUserAgnosticState"] = function getUserAgnosticState() {
   return closure_7;
@@ -44,7 +46,7 @@ prototype["getAppState"] = function getAppState(nextResult) {
   return tmp;
 };
 prototype["isAppInstalled"] = function isAppInstalled(nextResult) {
-  let detected = hasConsented.hasConsented(Consents.PERSONALIZATION);
+  let detected = closure_4.hasConsented(Consents.PERSONALIZATION);
   if (detected) {
     const self = this;
     detected = this.getAppState(nextResult).detected;
@@ -99,7 +101,7 @@ prototype["handleLocalAppDetectionComplete"] = function handleLocalAppDetectionC
 };
 class DEV_resetState {
   constructor() {
-    Consents = { apps: {} };
+    closure_7 = { apps: {} };
     return;
   }
 }
@@ -107,7 +109,7 @@ prototype["DEV_resetState"] = DEV_resetState;
 LocalAppDetectionStore.displayName = "AppDetectionStore";
 LocalAppDetectionStore.persistKey = "AppDetectionStore";
 object = undefined;
-object = new Object(require("dispatcher"), {
+object = new Object(dispatcherDefault, {
   POST_CONNECTION_OPEN() {
     return obj.handlePostConnectionOpen();
   },
@@ -116,6 +118,6 @@ object = new Object(require("dispatcher"), {
   }
 }, tmp, LocalAppDetectionStore, Object, prototype, new.target, undefined, DEV_resetState);
 // ThrowIfThisInitialized (0x7c)
-const result = require("ME").fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
+const result = require("set").fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionStore.tsx");
 
 export default object;

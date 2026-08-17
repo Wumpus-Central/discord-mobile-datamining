@@ -1,17 +1,18 @@
 // discord_app/modules/guild_rooms/GuildRoomSpatialAudioManager.tsx
-import _slicedToArray from "_slicedToArray";
-import getHash from "getHash";
-import initialize from "initialize";
-import fetchFingerprint from "fetchFingerprint";
-import ensureGuildLoaded from "ensureGuildLoaded";
-import _detectH265HardwareDecode from "_detectH265HardwareDecode";
-import createRTCConnection from "createRTCConnection";
-import resolveCreatingNotes from "resolveCreatingNotes";
-import "initialize";
-import { experiment } from "GuildRoomsExperiment.tsx";
+import initializeDefault from "initialize" /* 5038 */;
+import experimentDefault from "experiment" /* 9882 */;
+import closure_3 from "_slicedToArray" /* 32 */;
+import closure_4 from "getHash" /* 4288 */;
+import closure_5 from "initialize" /* 1212 */;
+import closure_6 from "fetchFingerprint" /* 1218 */;
+import closure_7 from "ensureGuildLoaded" /* 1391 */;
+import closure_8 from "_detectH265HardwareDecode" /* 4497 */;
+import closure_9 from "createRTCConnection" /* 4539 */;
+import closure_10 from "resolveCreatingNotes" /* 9864 */;
 import { computeLivingRoomWorldPoints } from "GuildRoomSpatialAudio.tsx";
 
 let require = arg1;
+initializeDefault;
 class GuildRoomSpatialAudioManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -43,8 +44,8 @@ class GuildRoomSpatialAudioManager extends tmp2 {
           }
     };
     applyArgumentsResult.reapplyForExperimentUpdate = function reapplyForExperimentUpdate() {
-      const audioMixerSettings = outer1_8.getAudioMixerSettings();
-      const result = outer1_1(outer1_2[9]).setAudioMixerSettings(audioMixerSettings);
+      const audioMixerSettings = closure_1_8.getAudioMixerSettings();
+      const result = closure_1_1(closure_1_2[9]).setAudioMixerSettings(audioMixerSettings);
       applyArgumentsResult.apply();
     };
     return applyArgumentsResult;
@@ -52,8 +53,8 @@ class GuildRoomSpatialAudioManager extends tmp2 {
 }
 const prototype = GuildRoomSpatialAudioManager.prototype;
 prototype["_initialize"] = function _initialize() {
-  const result = new Map().set(getHash, this.reapplyForExperimentUpdate);
-  this.stores = result.set(initialize, this.reapplyForExperimentUpdate);
+  const result = new Map().set(closure_4, this.reapplyForExperimentUpdate);
+  this.stores = result.set(closure_5, this.reapplyForExperimentUpdate);
 };
 prototype["_terminate"] = function _terminate() {
 
@@ -62,7 +63,7 @@ prototype["isLivingRoomAvailable"] = function isLivingRoomAvailable() {
   const guildId = store.getGuildId();
   let interactionsEnabled = null != guildId;
   if (interactionsEnabled) {
-    let obj = experiment;
+    let obj = experimentDefault;
     obj = { guildId: null, location: "GuildRoomSpatialAudioManager" };
     obj[0] = guildId;
     interactionsEnabled = obj.getCurrentConfig(obj, { autoTrackExposure: false }).interactionsEnabled;
@@ -89,16 +90,14 @@ prototype["apply"] = function apply() {
           _require = _computeLivingRoomWorldPoints.computeLivingRoomWorldPoints(obj);
           const mediaEngine = obj.getMediaEngine();
           mediaEngine.eachConnection((setUserPosition) => {
-            let tmp6;
-            let tmp7;
             const entries = Object.entries(callback);
             while (tmp2 !== undefined) {
-              let tmp4 = outer1_3;
-              let tmp5 = outer1_3(tmp3, 2);
+              let tmp4 = closure_1_3;
+              let tmp5 = closure_1_3(tmp3, 2);
               let tmp8 = callback;
-              let tmp9 = outer1_2;
+              let tmp9 = closure_1_2;
               [tmp6, tmp7] = tmp5;
-              let obj = callback(outer1_2[11]);
+              let obj = callback(closure_1_2[11]);
               let setUserPositionResult = setUserPosition.setUserPosition(tmp6, obj.livingRoomWorldPointToMediaEnginePoint(tmp7));
               continue;
             }
@@ -110,6 +109,6 @@ prototype["apply"] = function apply() {
   }
 };
 const guildRoomSpatialAudioManager = new GuildRoomSpatialAudioManager();
-let result = require("initialize").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudioManager.tsx");
+let result = require("set").fileFinishedImporting("modules/guild_rooms/GuildRoomSpatialAudioManager.tsx");
 
 export default guildRoomSpatialAudioManager;

@@ -1,6 +1,8 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/user_list/UsersFastListConstants.tsx
-const PX_24 = require("Themes").space.PX_24;
-const PX_8 = require("Themes").space.PX_8;
+import ThemesDefault from "Themes" /* 712 */;
+
+const PX_24 = ThemesDefault.space.PX_24;
+const PX_8 = ThemesDefault.space.PX_8;
 const sum = 18 + PX_24 + PX_8;
 const result = require("set").fileFinishedImporting("modules/main_tabs_v2/native/shared_components/user_list/UsersFastListConstants.tsx");
 

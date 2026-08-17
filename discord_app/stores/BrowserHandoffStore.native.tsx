@@ -1,6 +1,8 @@
 // discord_app/stores/BrowserHandoffStore.native.tsx
-import { Store } from "initialize";
+import initializeDefault from "initialize" /* 589 */;
+import dispatcherDefault from "dispatcher" /* 709 */;
 
+const Store = initializeDefault.Store;
 class BrowserHandoffStore extends Store {
 }
 const prototype = BrowserHandoffStore.prototype;
@@ -23,7 +25,7 @@ Object.defineProperty(prototype, "key", {
   set: undefined
 });
 BrowserHandoffStore.displayName = "BrowserHandoffStore";
-const browserHandoffStore = new BrowserHandoffStore(require("dispatcher"), {});
+const browserHandoffStore = new BrowserHandoffStore(dispatcherDefault, {});
 const result = require("set").fileFinishedImporting("stores/BrowserHandoffStore.native.tsx");
 
 export default browserHandoffStore;

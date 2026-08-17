@@ -1,31 +1,25 @@
 // discord_app/modules/saved_messages/native/ForLaterIntro.tsx
-import get_ActivityIndicator from "get ActivityIndicator";
-import { ACTION_SHEET_BORDER_RADIUS } from "ACTION_SHEET_START_HEIGHT_RATIO";
-import jsxProd from "jsxProd";
-import createCacheKey from "createCacheKey";
-import { registerAsset } from "../../../../_runtime/12732_registerAsset.js";
-import { set } from "../../../../discord_assets/assets/premium/wumpus-avatar.png.js";
-import { Themes } from "../../../../discord_common/js/packages/tokens/native.tsx";
-import { BookmarkIcon } from "../../../design/components/Icon/native/redesign/generated/BookmarkIcon.tsx";
-import { ChevronSmallRightIcon } from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
-import { ClockIcon } from "../../../design/components/Icon/native/redesign/generated/ClockIcon.tsx";
-import { Text } from "../../../design/components/Text/native/Text.tsx";
-import { getSystemLocale } from "../../../intl/index.native.tsx";
-import { SavedMessageSortTypes } from "../SavedMessagesTypes.tsx";
+import set from "set" /* 2 */;
+import ThemesDefault from "Themes" /* 712 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import ClockIcon from "ClockIcon" /* 4338 */;
+import Text from "Text" /* 4734 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 6685 */;
+import ACTION_SHEET_START_HEIGHT_RATIO from "ACTION_SHEET_START_HEIGHT_RATIO" /* 6951 */;
+import SavedMessageSortTypes from "SavedMessageSortTypes" /* 8489 */;
+import BookmarkIcon from "BookmarkIcon" /* 10876 */;
+import registerAssetDefault from "registerAsset" /* 12732 */;
+import setDefault from "set" /* 12733 */;
+import get_ActivityIndicator from "get ActivityIndicator" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import createCacheKey from "createCacheKey" /* 4661 */;
 
-let c3;
-let c4;
-let c5;
-let closure_6;
-let error;
 function IntroDemo(isReminder) {
   isReminder = isReminder.isReminder;
   const tmp = callback3();
   let obj = { style: tmp.demo, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   obj = { style: tmp.messages, children: null };
-  obj = { source: null, style: null };
-  obj[0] = { uri: set };
-  obj[1] = tmp.avatar;
+  obj = { source: { uri: setDefault }, style: tmp.avatar };
   const items = [callback(closure_3, obj), ];
   const obj2 = { style: tmp.messageLines, children: null };
   const obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
@@ -66,9 +60,6 @@ function IntroDemo(isReminder) {
   return callback2(closure_5, obj);
 }
 function SheetRow(hasArrow) {
-  let highlighted;
-  let icon;
-  let label;
   let flag = hasArrow.hasArrow;
   ({ icon, label, highlighted } = hasArrow);
   if (flag === undefined) {
@@ -82,14 +73,14 @@ function SheetRow(hasArrow) {
   }
   let obj = { style: items, children: null };
   items[1] = sheetRowHighlighted;
-  obj = { size: "sm", color: Themes.colors.INTERACTIVE_TEXT_DEFAULT };
+  obj = { size: "sm", color: ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT };
   const items1 = [callback(icon, obj), , ];
   obj = { variant: "text-sm/medium", color: "text-default", style: tmp.sheetRowLabel, children: label };
   items1[1] = callback(Text.Text, obj);
   let tmp5Result = null;
   if (flag) {
-    const obj1 = { size: "sm", color: null };
-    obj1[1] = Themes.colors.INTERACTIVE_TEXT_DEFAULT;
+    obj1 = { size: "sm", color: null };
+    obj1[1] = ThemesDefault.colors.INTERACTIVE_TEXT_DEFAULT;
     tmp5Result = callback(ChevronSmallRightIcon.ChevronSmallRightIcon, obj1);
   }
   items1[2] = tmp5Result;
@@ -97,44 +88,45 @@ function SheetRow(hasArrow) {
   return closure_7(closure_5, obj);
 }
 ({ Image: c3, ScrollView: c4, View: c5 } = get_ActivityIndicator);
+const ACTION_SHEET_BORDER_RADIUS = ACTION_SHEET_START_HEIGHT_RATIO.ACTION_SHEET_BORDER_RADIUS;
 ({ jsx: closure_6, jsxs: error } = jsxProd);
 let obj = { scrollView: { flex: 1 }, pageContainer: null, container: null, upsellImage: null, textContainer: null, text: null, demo: null, messages: null, avatar: null, messageLines: null, sheet: null, grabber: null, sheetRow: null, sheetRowHighlighted: null, sheetRowLabel: null };
-obj = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: require("Themes").space.PX_32, paddingBottom: require("Themes").space.PX_32 };
+obj = { flexGrow: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: ThemesDefault.space.PX_32, paddingBottom: ThemesDefault.space.PX_32 };
 obj[1] = obj;
 obj[2] = { alignItems: "center" };
-obj[3] = { width: 180, height: 144, marginBottom: require("Themes").space.PX_16 };
-let obj1 = { width: 180, height: 144, marginBottom: require("Themes").space.PX_16 };
-obj[4] = { gap: require("Themes").space.PX_8 };
+obj[3] = { width: 180, height: 144, marginBottom: ThemesDefault.space.PX_16 };
+let obj1 = { width: 180, height: 144, marginBottom: ThemesDefault.space.PX_16 };
+obj[4] = { gap: ThemesDefault.space.PX_8 };
 obj[5] = { textAlign: "center" };
-let obj2 = { gap: require("Themes").space.PX_8 };
-obj[6] = { alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderColor: require("Themes").colors.BORDER_NORMAL, borderRadius: require("Themes").radii.md, borderWidth: 1, marginTop: require("Themes").space.PX_24, overflow: "hidden" };
-let obj3 = { alignSelf: "stretch", backgroundColor: require("Themes").colors.BACKGROUND_BASE_LOWEST, borderColor: require("Themes").colors.BORDER_NORMAL, borderRadius: require("Themes").radii.md, borderWidth: 1, marginTop: require("Themes").space.PX_24, overflow: "hidden" };
-obj[7] = { flexDirection: "row", gap: require("Themes").space.PX_8, padding: require("Themes").space.PX_12 };
-let obj4 = { flexDirection: "row", gap: require("Themes").space.PX_8, padding: require("Themes").space.PX_12 };
-obj[8] = { width: 32, height: 32, borderRadius: require("Themes").radii.round };
-let obj5 = { width: 32, height: 32, borderRadius: require("Themes").radii.round };
-obj[9] = { flex: 1, gap: require("Themes").space.PX_4 };
-let obj6 = { flex: 1, gap: require("Themes").space.PX_4 };
-obj[10] = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_8 };
-let obj7 = { backgroundColor: require("Themes").colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: require("Themes").space.PX_8, marginTop: require("Themes").space.PX_8, paddingBottom: require("Themes").space.PX_8, paddingHorizontal: require("Themes").space.PX_8 };
-obj[11] = { alignSelf: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: require("Themes").radii.round, height: 4, marginVertical: require("Themes").space.PX_8, width: 36 };
-const obj8 = { alignSelf: "center", backgroundColor: require("Themes").colors.BACKGROUND_MOD_STRONG, borderRadius: require("Themes").radii.round, height: 4, marginVertical: require("Themes").space.PX_8, width: 36 };
-obj[12] = { alignItems: "center", borderRadius: require("Themes").radii.sm, flexDirection: "row", gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_12, paddingVertical: require("Themes").space.PX_12 };
-let obj9 = { alignItems: "center", borderRadius: require("Themes").radii.sm, flexDirection: "row", gap: require("Themes").space.PX_12, paddingHorizontal: require("Themes").space.PX_12, paddingVertical: require("Themes").space.PX_12 };
-obj[13] = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
+let obj2 = { gap: ThemesDefault.space.PX_8 };
+obj[6] = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, marginTop: ThemesDefault.space.PX_24, overflow: "hidden" };
+let obj3 = { alignSelf: "stretch", backgroundColor: ThemesDefault.colors.BACKGROUND_BASE_LOWEST, borderColor: ThemesDefault.colors.BORDER_NORMAL, borderRadius: ThemesDefault.radii.md, borderWidth: 1, marginTop: ThemesDefault.space.PX_24, overflow: "hidden" };
+obj[7] = { flexDirection: "row", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12 };
+let obj4 = { flexDirection: "row", gap: ThemesDefault.space.PX_8, padding: ThemesDefault.space.PX_12 };
+obj[8] = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round };
+let obj5 = { width: 32, height: 32, borderRadius: ThemesDefault.radii.round };
+obj[9] = { flex: 1, gap: ThemesDefault.space.PX_4 };
+let obj6 = { flex: 1, gap: ThemesDefault.space.PX_4 };
+obj[10] = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8 };
+let obj7 = { backgroundColor: ThemesDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, borderTopLeftRadius: ACTION_SHEET_BORDER_RADIUS, borderTopRightRadius: ACTION_SHEET_BORDER_RADIUS, marginInline: ThemesDefault.space.PX_8, marginTop: ThemesDefault.space.PX_8, paddingBottom: ThemesDefault.space.PX_8, paddingHorizontal: ThemesDefault.space.PX_8 };
+obj[11] = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, height: 4, marginVertical: ThemesDefault.space.PX_8, width: 36 };
+const obj8 = { alignSelf: "center", backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: ThemesDefault.radii.round, height: 4, marginVertical: ThemesDefault.space.PX_8, width: 36 };
+obj[12] = { alignItems: "center", borderRadius: ThemesDefault.radii.sm, flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
+let obj9 = { alignItems: "center", borderRadius: ThemesDefault.radii.sm, flexDirection: "row", gap: ThemesDefault.space.PX_12, paddingHorizontal: ThemesDefault.space.PX_12, paddingVertical: ThemesDefault.space.PX_12 };
+obj[13] = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj[14] = { flex: 1 };
 let closure_8 = createCacheKey.createStyles(obj);
-let obj10 = { backgroundColor: require("Themes").colors.BACKGROUND_MOD_SUBTLE };
-const result = require("jsxProd").fileFinishedImporting("modules/saved_messages/native/ForLaterIntro.tsx");
+let obj10 = { backgroundColor: ThemesDefault.colors.BACKGROUND_MOD_SUBTLE };
+const result = set.fileFinishedImporting("modules/saved_messages/native/ForLaterIntro.tsx");
 
 export default function ForLaterIntro(type) {
   const tmp = callback3();
   const tmp4 = type.type === SavedMessageSortTypes.SavedMessageSortTypes.REMINDER;
   let obj = { style: tmp.scrollView, contentContainerStyle: tmp.pageContainer, children: null };
   obj = { style: tmp.container, children: null };
-  obj = { source: registerAsset, style: tmp.upsellImage };
+  obj = { source: registerAssetDefault, style: tmp.upsellImage };
   const items = [callback(closure_3, obj), , ];
-  const obj1 = { style: tmp.textContainer, children: null };
+  obj1 = { style: tmp.textContainer, children: null };
   const obj2 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", style: tmp.text, children: null };
   const intl = getSystemLocale.intl;
   const t = getSystemLocale.t;

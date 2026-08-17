@@ -1,25 +1,25 @@
 // discord_app/modules/hub/HubUnreadUtils.tsx
-import isFetching from "isFetching";
-import generateOldThreadCutoff from "generateOldThreadCutoff";
+import closure_3 from "isFetching" /* 11479 */;
+import closure_4 from "generateOldThreadCutoff" /* 4772 */;
 import { initialize } from "../../../discord_common/js/packages/flux/index.tsx";
 
 const require = arg1;
-const result = require("initialize").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
+const result = require("set").fileFinishedImporting("modules/hub/HubUnreadUtils.tsx");
 
 export const useHubUnreadCount = function useHubUnreadCount(arg0) {
   const _require = arg0;
-  const items = [isFetching, generateOldThreadCutoff];
+  const items = [closure_3, closure_4];
   const items1 = [arg0];
   return _initialize.useStateFromStores(items, () => {
     if (null == callback) {
       return 0;
     } else {
-      const ackMessageIdResult = outer1_4.ackMessageId(tmp.id);
+      const ackMessageIdResult = closure_1_4.ackMessageId(tmp.id);
       callback = ackMessageIdResult;
       if (null == ackMessageIdResult) {
         return 0;
       } else {
-        let directoryEntries = outer1_3.getDirectoryEntries(tmp.id);
+        let directoryEntries = closure_1_3.getDirectoryEntries(tmp.id);
         if (directoryEntries == null) {
           directoryEntries = {};
         }
@@ -28,9 +28,9 @@ export const useHubUnreadCount = function useHubUnreadCount(arg0) {
         const found = values.filter((createdAt) => {
           const time = new Date(createdAt.createdAt).getTime();
           const date = new Date(createdAt.createdAt);
-          return time > outer1_1(outer1_2[3]).extractTimestamp(closure_0);
+          return time > closure_1_1(closure_1_2[3]).extractTimestamp(closure_0);
         });
-        return Math.min(callback(outer1_2[4]).MAX_CATEGORY_SERVERS, found.length);
+        return Math.min(callback(closure_1_2[4]).MAX_CATEGORY_SERVERS, found.length);
       }
     }
   }, items1);

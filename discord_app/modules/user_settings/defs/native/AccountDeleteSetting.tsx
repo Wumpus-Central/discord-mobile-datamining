@@ -1,17 +1,19 @@
 // discord_app/modules/user_settings/defs/native/AccountDeleteSetting.tsx
-import createToggle from "createToggle";
-import { getSystemLocale } from "../../../../intl/index.native.tsx";
-import { handleDisableAccount } from "../../account/native/handleDisableAccount.tsx";
+import set from "set" /* 2 */;
+import getSystemLocale from "getSystemLocale" /* 1236 */;
+import MobileUserSettings from "MobileUserSettings" /* 8198 */;
+import handleDisableAccountDefault from "handleDisableAccount" /* 14168 */;
+import createToggle from "createToggle" /* 10669 */;
 
 const pressable = createToggle.createPressable({
   useTitle() {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["8lQ2rR"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    handleDisableAccount(true);
+    handleDisableAccountDefault(true);
   }
 });
 const obj = {
@@ -19,12 +21,12 @@ const obj = {
     const intl = getSystemLocale.intl;
     return intl.string(getSystemLocale.t["8lQ2rR"]);
   },
-  parent: require("MobileUserSettings").MobileUserSettings.ACCOUNT,
+  parent: MobileUserSettings.MobileUserSettings.ACCOUNT,
   variant: "danger",
   onPress: function handlePress() {
-    handleDisableAccount(true);
+    handleDisableAccountDefault(true);
   }
 };
-const result = require("createToggle").fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");
+const result = set.fileFinishedImporting("modules/user_settings/defs/native/AccountDeleteSetting.tsx");
 
 export default pressable;
